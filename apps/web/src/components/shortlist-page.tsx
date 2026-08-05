@@ -6,7 +6,7 @@ import { ScoreBars } from "@/components/score-bars";
 import { downloadText } from "@/lib/export";
 import { REGISTRARS } from "@/lib/registrars";
 import type { ShortlistItem } from "@/lib/shortlist";
-import { scoreBadgeClass, tldPrice, totalScore } from "@/types";
+import { scoreBadgeClass, tldPriceFull, tldPriceShort, totalScore } from "@/types";
 import { cn } from "@/lib/utils";
 
 function exportShortlist(items: ShortlistItem[], format: "csv" | "txt") {
@@ -142,7 +142,7 @@ export function ShortlistPage({
                           )}
                         </td>
                       ))}
-                      <td className="tnum px-3 text-right font-mono text-xs text-txt1">{tldPrice(it.tld) ?? "—"}</td>
+                      <td title={tldPriceFull(it.tld)} className="tnum px-3 text-right font-mono text-xs text-txt1">{tldPriceShort(it.tld) ?? "—"}</td>
                       <td className="whitespace-nowrap px-4 text-right">
                         <span className="inline-flex items-center gap-1">
                           <CopyButton domain={it.domain} />
@@ -183,7 +183,7 @@ export function ShortlistPage({
                   {it.meaning && <p className="mt-1 text-xs text-txt1">{it.meaning}</p>}
                   {it.scores && <ScoreBars scores={it.scores} columns={4} className="mt-3" />}
                   <div className="mt-3 flex items-center gap-2">
-                    <span className="tnum flex-1 font-mono text-xs text-txt1">{tldPrice(it.tld) ?? ""}</span>
+                    <span title={tldPriceFull(it.tld)} className="tnum flex-1 font-mono text-xs text-txt1">{tldPriceShort(it.tld) ?? ""}</span>
                     <button
                       title="移除"
                       className="grid h-11 w-11 place-items-center rounded-md border border-line text-txt2 hover:text-destructive"

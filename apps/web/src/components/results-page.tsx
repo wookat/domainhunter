@@ -17,7 +17,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { CopyButton, DomainRow, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import { exportRows } from "@/lib/export";
-import { scoreBadgeClass, tldPrice, totalScore, type Row } from "@/types";
+import { scoreBadgeClass, tldPriceFull, tldPriceShort, totalScore, type Row } from "@/types";
 import { cn } from "@/lib/utils";
 
 type StatusFilter = "available" | "all" | "taken";
@@ -82,9 +82,10 @@ function TopPickCard({
       </div>
       {row.meaning && <p className="mt-1.5 text-[13px] leading-relaxed text-txt1">{row.meaning}</p>}
       {row.scores && <ScoreBars scores={row.scores} className="mt-4" />}
+      {tldPriceFull(row.tld) && <p className="tnum mt-3 text-[11px] text-txt2">{tldPriceFull(row.tld)}</p>}
       <RegisterMenu domain={row.domain}>
-        <button className="mt-4 flex h-10 w-full items-center justify-center gap-1.5 rounded-lg bg-brand text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90">
-          去注册{tldPrice(row.tld) ? ` · ${tldPrice(row.tld)}` : ""}
+        <button className="mt-2 flex h-10 w-full items-center justify-center gap-1.5 rounded-lg bg-brand text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90">
+          去注册{tldPriceShort(row.tld) ? ` · ${tldPriceShort(row.tld)}` : ""}
           <ChevronDown className="h-4 w-4" />
         </button>
       </RegisterMenu>
@@ -421,7 +422,7 @@ export function ResultsPage({
 
       {/* 底部 sticky：锁定 + 围绕锁定再来一轮 */}
       <div className="fixed inset-x-0 bottom-0 z-20 border-t border-line bg-bg1/90 backdrop-blur-[12px]">
-        <div className="mx-auto flex h-14 max-w-6xl items-center gap-3 px-4 md:px-6">
+        <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-3 sm:gap-3 sm:px-4 md:px-6">
           {locked.size > 0 ? (
             <>
               <span className="hidden items-center gap-1.5 truncate text-xs text-txt1 md:flex">
@@ -429,26 +430,26 @@ export function ResultsPage({
                 已锁定 <b className="tnum font-mono text-txt0">{locked.size}</b> 个：
                 <span className="truncate font-mono">{lockedList.join("、")}</span>
               </span>
-              <span className="flex items-center gap-1 whitespace-nowrap text-xs text-txt1 md:hidden">
-                <Lock className="h-3.5 w-3.5 text-brand" />
+              <span className="flex items-center gap-1 whitespace-nowrap text-[11px] text-txt1 md:hidden">
+                <Lock className="h-3.5 w-3.5 shrink-0 text-brand" />
                 锁定 <b className="tnum font-mono text-txt0">{locked.size}</b>
               </span>
             </>
           ) : (
-            <span className="flex items-center gap-1.5 text-xs text-txt2">
+            <span className="flex items-center gap-1 text-[11px] text-txt2 sm:gap-1.5 sm:text-xs">
               <Lock className="h-3.5 w-3.5 shrink-0" />
               <span className="hidden sm:inline">
                 点行内 <Lock className="inline h-3 w-3" /> 锁定候选，可围绕它再猎一轮
               </span>
-              <span className="sm:hidden">锁定候选可定向再猎</span>
+              <span className="whitespace-nowrap sm:hidden">锁定后可定向再猎</span>
             </span>
           )}
           <div className="flex-1" />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 md:h-9">
+              <button title="导出" className="flex h-11 w-11 shrink-0 items-center justify-center gap-1.5 rounded-lg border border-line text-sm text-txt1 hover:bg-bg2 hover:text-txt0 sm:w-auto sm:px-3 md:h-9">
                 <Download className="h-4 w-4" />
-                导出
+                <span className="hidden sm:inline">导出</span>
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -457,7 +458,7 @@ export function ResultsPage({
             </DropdownMenuContent>
           </DropdownMenu>
           <button
-            className="flex h-11 items-center gap-1.5 whitespace-nowrap rounded-lg bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50 md:h-9"
+            className="flex h-11 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg bg-brand px-3.5 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50 sm:px-4 md:h-9"
             onClick={locked.size > 0 ? onMoreAroundLocked : onMore}
             disabled={running || moreDisabled}
           >

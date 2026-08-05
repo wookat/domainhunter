@@ -9,6 +9,7 @@ const MAX_ROUNDS = 5;
 export interface LogEntry {
   domain: string;
   status: string;
+  cached?: boolean;
 }
 
 function MicroLog({ logs, checkingDomain }: { logs: LogEntry[]; checkingDomain?: string }) {
@@ -17,6 +18,7 @@ function MicroLog({ logs, checkingDomain }: { logs: LogEntry[]; checkingDomain?:
       {logs.slice(-2).map((l) => (
         <div key={l.domain} className="truncate">
           ✓ {l.domain} — {l.status === "available" ? <span className="text-brand">available</span> : l.status}
+          {l.cached && <span className="ml-1 text-txt2/70">· 缓存</span>}
         </div>
       ))}
       {checkingDomain && <div className="dot-breathe truncate text-txt1">→ 正在核验 {checkingDomain} …</div>}
