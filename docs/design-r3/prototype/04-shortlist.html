@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DomainHunter · 候选清单（R3）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_tokens.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+.bar { height:4px; border-radius:2px; background:var(--bg-3); overflow:hidden; min-width:56px }
+.bar > i { display:block; height:100%; border-radius:2px; background:var(--brand) }
+</style>
+</head>
+<body class="min-h-screen pb-24" style="background:var(--bg-0);color:var(--txt-0)">
+
+<header class="sticky top-0 z-20 border-b" style="background:color-mix(in srgb, var(--bg-0) 85%, transparent);backdrop-filter:blur(12px);border-color:var(--line)">
+  <div class="max-w-6xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
+    <a class="flex items-center gap-2 font-bold tracking-tight">
+      <span class="w-7 h-7 rounded-lg grid place-items-center" style="background:var(--brand-dim);border:1px solid var(--brand-line)"><i data-lucide="crosshair" class="w-4 h-4" style="color:var(--brand)"></i></span>
+      DomainHunter
+    </a>
+    <div class="flex items-center gap-1.5">
+      <button class="h-9 px-3 rounded-lg text-sm flex items-center gap-1.5 border font-semibold" style="border-color:var(--brand-line);background:var(--brand-dim);color:var(--brand)">
+        <i data-lucide="bookmark-check" class="w-4 h-4"></i>候选清单 <span class="mono tnum text-[11px] px-1.5 rounded-full" style="background:var(--brand);color:var(--brand-ink)">5</span>
+      </button>
+      <button onclick="document.documentElement.classList.toggle('light')" class="h-9 w-9 rounded-lg grid place-items-center border" style="border-color:var(--line);color:var(--txt-1)"><i data-lucide="sun-moon" class="w-4 h-4"></i></button>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 md:px-6 py-6">
+  <div class="flex items-center justify-between flex-wrap gap-3 mb-1">
+    <h1 class="text-xl font-bold tracking-tight">候选清单</h1>
+    <div class="flex items-center gap-2">
+      <button class="h-9 px-3 rounded-lg border text-sm flex items-center gap-1.5" style="border-color:var(--line);color:var(--txt-1)"><i data-lucide="download" class="w-4 h-4"></i>导出 CSV / TXT</button>
+      <button class="h-9 px-4 rounded-lg text-sm font-semibold flex items-center gap-1.5" style="background:var(--brand);color:var(--brand-ink)"><i data-lucide="external-link" class="w-4 h-4"></i>批量去注册（5）</button>
+    </div>
+  </div>
+  <p class="text-xs mb-5" style="color:var(--txt-2)">来自 2 次搜索 · 本地保存（localStorage，跨会话保留）· 注册前已重新核验可用性</p>
+
+  <!-- 对比表（桌面）：并排看四维分 -->
+  <div class="card overflow-x-auto hidden md:block">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="text-left text-[11px] uppercase tracking-wide border-b" style="color:var(--txt-2);border-color:var(--line)">
+          <th class="px-4 py-3 font-medium">域名</th>
+          <th class="px-3 py-3 font-medium text-center">综合</th>
+          <th class="px-3 py-3 font-medium">长度</th>
+          <th class="px-3 py-3 font-medium">读感</th>
+          <th class="px-3 py-3 font-medium">寓意</th>
+          <th class="px-3 py-3 font-medium">品牌感</th>
+          <th class="px-3 py-3 font-medium">状态</th>
+          <th class="px-3 py-3 font-medium text-right">首年 / 续费</th>
+          <th class="px-4 py-3"></th>
+        </tr>
+      </thead>
+      <tbody class="divide-y" style="border-color:var(--line)">
+        <tr style="border-color:var(--line)">
+          <td class="px-4 py-3.5">
+            <div class="mono font-semibold text-[15px]">briefkit<span style="color:var(--txt-2)">.ai</span></div>
+            <div class="text-xs mt-0.5" style="color:var(--txt-1)">“简报工具箱”，kit 有开发者工具气质</div>
+          </td>
+          <td class="px-3 text-center"><span class="mono tnum text-xs font-bold px-2 py-0.5 rounded-md" style="background:var(--gold-dim);color:var(--gold)">92</span></td>
+          <td class="px-3"><div class="bar"><i style="width:95%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">95</span></td>
+          <td class="px-3"><div class="bar"><i style="width:90%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">90</span></td>
+          <td class="px-3"><div class="bar"><i style="width:92%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">92</span></td>
+          <td class="px-3"><div class="bar"><i style="width:89%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">89</span></td>
+          <td class="px-3"><span class="text-[11px] px-2 py-0.5 rounded-full" style="background:var(--brand-dim);color:var(--brand)">可注册</span></td>
+          <td class="px-3 text-right mono tnum text-xs" style="color:var(--txt-1)">$72 <span style="color:var(--txt-2)">/ $86</span></td>
+          <td class="px-4 text-right whitespace-nowrap">
+            <button class="w-8 h-8 rounded-md" style="color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5 inline"></i></button>
+            <button class="w-8 h-8 rounded-md" style="color:var(--txt-2)"><i data-lucide="trash-2" class="w-3.5 h-3.5 inline"></i></button>
+            <button class="h-8 px-3 rounded-md text-xs font-semibold" style="background:var(--brand-dim);color:var(--brand)">去注册</button>
+          </td>
+        </tr>
+        <tr style="border-color:var(--line)">
+          <td class="px-4 py-3.5">
+            <div class="mono font-semibold text-[15px]">weeklyloop<span style="color:var(--txt-2)">.com</span></div>
+            <div class="text-xs mt-0.5" style="color:var(--txt-1)">“每周循环”，韵律好，适合做品牌</div>
+          </td>
+          <td class="px-3 text-center"><span class="mono tnum text-xs font-bold px-2 py-0.5 rounded-md" style="background:var(--brand-dim);color:var(--brand)">84</span></td>
+          <td class="px-3"><div class="bar"><i style="width:72%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">72</span></td>
+          <td class="px-3"><div class="bar"><i style="width:88%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">88</span></td>
+          <td class="px-3"><div class="bar"><i style="width:91%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">91</span></td>
+          <td class="px-3"><div class="bar"><i style="width:86%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">86</span></td>
+          <td class="px-3"><span class="text-[11px] px-2 py-0.5 rounded-full" style="background:var(--brand-dim);color:var(--brand)">可注册</span></td>
+          <td class="px-3 text-right mono tnum text-xs" style="color:var(--txt-1)">$9.9 <span style="color:var(--txt-2)">/ $14</span></td>
+          <td class="px-4 text-right whitespace-nowrap">
+            <button class="w-8 h-8 rounded-md" style="color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5 inline"></i></button>
+            <button class="w-8 h-8 rounded-md" style="color:var(--txt-2)"><i data-lucide="trash-2" class="w-3.5 h-3.5 inline"></i></button>
+            <button class="h-8 px-3 rounded-md text-xs font-semibold" style="background:var(--brand-dim);color:var(--brand)">去注册</button>
+          </td>
+        </tr>
+        <tr style="border-color:var(--line)">
+          <td class="px-4 py-3.5">
+            <div class="mono font-semibold text-[15px]">recaply<span style="color:var(--txt-2)">.com</span></div>
+            <div class="text-xs mt-0.5" style="color:var(--txt-1)">recap + ly，“每周回顾”，SaaS 惯用后缀</div>
+          </td>
+          <td class="px-3 text-center"><span class="mono tnum text-xs font-bold px-2 py-0.5 rounded-md" style="background:var(--brand-dim);color:var(--brand)">86</span></td>
+          <td class="px-3"><div class="bar"><i style="width:88%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">88</span></td>
+          <td class="px-3"><div class="bar"><i style="width:85%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">85</span></td>
+          <td class="px-3"><div class="bar"><i style="width:90%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">90</span></td>
+          <td class="px-3"><div class="bar"><i style="width:82%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">82</span></td>
+          <td class="px-3"><span class="text-[11px] px-2 py-0.5 rounded-full" style="background:var(--brand-dim);color:var(--brand)">可注册</span></td>
+          <td class="px-3 text-right mono tnum text-xs" style="color:var(--txt-1)">$9.9 <span style="color:var(--txt-2)">/ $14</span></td>
+          <td class="px-4 text-right whitespace-nowrap">
+            <button class="w-8 h-8 rounded-md" style="color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5 inline"></i></button>
+            <button class="w-8 h-8 rounded-md" style="color:var(--txt-2)"><i data-lucide="trash-2" class="w-3.5 h-3.5 inline"></i></button>
+            <button class="h-8 px-3 rounded-md text-xs font-semibold" style="background:var(--brand-dim);color:var(--brand)">去注册</button>
+          </td>
+        </tr>
+        <tr style="border-color:var(--line)">
+          <td class="px-4 py-3.5">
+            <div class="mono font-semibold text-[15px]">weeksum<span style="color:var(--txt-2)">.com</span></div>
+            <div class="text-xs mt-0.5" style="color:var(--txt-1)">week + summary，一眼懂的组合词</div>
+          </td>
+          <td class="px-3 text-center"><span class="mono tnum text-xs font-bold px-2 py-0.5 rounded-md" style="background:var(--brand-dim);color:var(--brand)">81</span></td>
+          <td class="px-3"><div class="bar"><i style="width:90%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">90</span></td>
+          <td class="px-3"><div class="bar"><i style="width:78%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">78</span></td>
+          <td class="px-3"><div class="bar"><i style="width:84%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">84</span></td>
+          <td class="px-3"><div class="bar"><i style="width:74%"></i></div><span class="mono tnum text-[11px]" style="color:var(--txt-2)">74</span></td>
+          <td class="px-3"><span class="text-[11px] px-2 py-0.5 rounded-full" style="background:var(--brand-dim);color:var(--brand)">可注册</span></td>
+          <td class="px-3 text-right mono tnum text-xs" style="color:var(--txt-1)">$9.9 <span style="color:var(--txt-2)">/ $14</span></td>
+          <td class="px-4 text-right whitespace-nowrap">
+            <button class="w-8 h-8 rounded-md" style="color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5 inline"></i></button>
+            <button class="w-8 h-8 rounded-md" style="color:var(--txt-2)"><i data-lucide="trash-2" class="w-3.5 h-3.5 inline"></i></button>
+            <button class="h-8 px-3 rounded-md text-xs font-semibold" style="background:var(--brand-dim);color:var(--brand)">去注册</button>
+          </td>
+        </tr>
+        <tr style="border-color:var(--line)" class="opacity-60">
+          <td class="px-4 py-3.5">
+            <div class="mono font-semibold text-[15px] line-through" style="color:var(--taken)">insightly.io</div>
+            <div class="text-xs mt-0.5" style="color:var(--txt-2)">收藏后被他人注册——重核验发现</div>
+          </td>
+          <td class="px-3 text-center"><span class="mono tnum text-xs px-2 py-0.5 rounded-md" style="background:var(--taken-dim);color:var(--taken)">—</span></td>
+          <td class="px-3" colspan="4"><span class="text-xs" style="color:var(--txt-2)">已失效，建议移除或让 AI 找相似替代</span></td>
+          <td class="px-3"><span class="text-[11px] px-2 py-0.5 rounded-full" style="background:var(--taken-dim);color:var(--taken)">已注册</span></td>
+          <td class="px-3 text-right mono tnum text-xs" style="color:var(--txt-2)">—</td>
+          <td class="px-4 text-right whitespace-nowrap">
+            <button class="h-8 px-3 rounded-md text-xs border" style="border-color:var(--line);color:var(--txt-1)">找相似</button>
+            <button class="w-8 h-8 rounded-md" style="color:var(--txt-2)"><i data-lucide="trash-2" class="w-3.5 h-3.5 inline"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 移动端卡片版（<md 显示） -->
+  <div class="md:hidden space-y-3">
+    <div class="card p-4">
+      <div class="flex items-center justify-between">
+        <span class="mono font-semibold text-[15px]">briefkit<span style="color:var(--txt-2)">.ai</span></span>
+        <span class="mono tnum text-xs font-bold px-2 py-0.5 rounded-md" style="background:var(--gold-dim);color:var(--gold)">92</span>
+      </div>
+      <p class="text-xs mt-1" style="color:var(--txt-1)">“简报工具箱”，kit 有开发者工具气质</p>
+      <div class="grid grid-cols-4 gap-2 mt-3 text-[10px]" style="color:var(--txt-2)">
+        <div>长度<div class="bar mt-1"><i style="width:95%"></i></div></div>
+        <div>读感<div class="bar mt-1"><i style="width:90%"></i></div></div>
+        <div>寓意<div class="bar mt-1"><i style="width:92%"></i></div></div>
+        <div>品牌<div class="bar mt-1"><i style="width:89%"></i></div></div>
+      </div>
+      <div class="flex items-center gap-2 mt-3">
+        <span class="mono tnum text-xs flex-1" style="color:var(--txt-1)">$72 / 年</span>
+        <button class="h-9 w-9 grid place-items-center rounded-md border" style="border-color:var(--line);color:var(--txt-2)"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+        <button class="h-9 px-4 rounded-md text-xs font-semibold" style="background:var(--brand);color:var(--brand-ink)">去注册</button>
+      </div>
+    </div>
+    <div class="card p-4">
+      <div class="flex items-center justify-between">
+        <span class="mono font-semibold text-[15px]">weeklyloop<span style="color:var(--txt-2)">.com</span></span>
+        <span class="mono tnum text-xs font-bold px-2 py-0.5 rounded-md" style="background:var(--brand-dim);color:var(--brand)">84</span>
+      </div>
+      <p class="text-xs mt-1" style="color:var(--txt-1)">“每周循环”，韵律好，适合做品牌</p>
+      <div class="grid grid-cols-4 gap-2 mt-3 text-[10px]" style="color:var(--txt-2)">
+        <div>长度<div class="bar mt-1"><i style="width:72%"></i></div></div>
+        <div>读感<div class="bar mt-1"><i style="width:88%"></i></div></div>
+        <div>寓意<div class="bar mt-1"><i style="width:91%"></i></div></div>
+        <div>品牌<div class="bar mt-1"><i style="width:86%"></i></div></div>
+      </div>
+      <div class="flex items-center gap-2 mt-3">
+        <span class="mono tnum text-xs flex-1" style="color:var(--txt-1)">$9.9 首年</span>
+        <button class="h-9 w-9 grid place-items-center rounded-md border" style="border-color:var(--line);color:var(--txt-2)"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+        <button class="h-9 px-4 rounded-md text-xs font-semibold" style="background:var(--brand);color:var(--brand-ink)">去注册</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 空态提示（设计说明：清单为空时显示） -->
+  <div class="mt-6 rounded-xl border border-dashed p-5 text-center text-xs" style="border-color:var(--line);color:var(--txt-2)">
+    空态设计：<i data-lucide="bookmark" class="w-3.5 h-3.5 inline"></i> 「还没有候选。搜索结果里点收藏，就会汇总到这里，随时对比与导出。」+「开始猎取」按钮
+  </div>
+</main>
+
+<script>lucide.createIcons()</script>
+</body>
+</html>

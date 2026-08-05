@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DomainHunter · 结果页（R3）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_tokens.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+.bar { height:4px; border-radius:2px; background:var(--bg-3); overflow:hidden }
+.bar > i { display:block; height:100%; border-radius:2px; background:var(--brand) }
+</style>
+</head>
+<body class="min-h-screen pb-24" style="background:var(--bg-0);color:var(--txt-0)">
+
+<header class="sticky top-0 z-20 border-b" style="background:color-mix(in srgb, var(--bg-0) 85%, transparent);backdrop-filter:blur(12px);border-color:var(--line)">
+  <div class="max-w-6xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
+    <a class="flex items-center gap-2 font-bold tracking-tight">
+      <span class="w-7 h-7 rounded-lg grid place-items-center" style="background:var(--brand-dim);border:1px solid var(--brand-line)"><i data-lucide="crosshair" class="w-4 h-4" style="color:var(--brand)"></i></span>
+      DomainHunter
+    </a>
+    <div class="flex items-center gap-1.5">
+      <button class="h-9 px-3 rounded-lg text-sm flex items-center gap-1.5 border" style="border-color:var(--line);color:var(--txt-1)">
+        <i data-lucide="bookmark" class="w-4 h-4"></i>候选清单 <span class="mono tnum text-[11px] px-1.5 rounded-full" style="background:var(--brand-dim);color:var(--brand)">5</span>
+      </button>
+      <button onclick="document.documentElement.classList.toggle('light')" class="h-9 w-9 rounded-lg grid place-items-center border" style="border-color:var(--line);color:var(--txt-1)"><i data-lucide="sun-moon" class="w-4 h-4"></i></button>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 md:px-6 py-6">
+
+  <!-- 完成摘要 + 信任锚点 -->
+  <div class="flex items-center justify-between flex-wrap gap-3 mb-5">
+    <div>
+      <h1 class="text-xl font-bold tracking-tight">为「AI 周报工具」猎到 <span style="color:var(--brand)">12</span> 个可注册域名</h1>
+      <p class="text-xs mt-1" style="color:var(--txt-2)">3 轮 · 共核验 48 个（36 个已被注册）· 用时 52s · <button class="underline underline-offset-2">查看每轮记录</button></p>
+    </div>
+    <div class="flex items-center gap-2">
+      <button class="h-9 px-3 rounded-lg border text-sm flex items-center gap-1.5" style="border-color:var(--line);color:var(--txt-1)"><i data-lucide="download" class="w-4 h-4"></i>导出 CSV</button>
+      <button class="h-9 px-4 rounded-lg text-sm font-semibold flex items-center gap-1.5" style="background:var(--brand);color:var(--brand-ink)"><i data-lucide="rotate-cw" class="w-4 h-4"></i>再来一轮 <kbd style="background:rgba(0,0,0,.2);color:inherit;border-color:rgba(0,0,0,.25)">Space</kbd></button>
+    </div>
+  </div>
+
+  <!-- Top Picks 精选区（P1#8）：评分前 3 大卡 -->
+  <div class="flex items-center gap-2 mb-3">
+    <i data-lucide="trophy" class="w-4 h-4" style="color:var(--gold)"></i>
+    <h2 class="text-sm font-semibold">Top Picks</h2>
+    <span class="text-xs" style="color:var(--txt-2)">综合分最高的 3 个</span>
+  </div>
+  <div class="grid md:grid-cols-3 gap-4 mb-8">
+    <!-- 大卡 1 -->
+    <div class="card p-5 relative" style="border-color:var(--brand-line)">
+      <div class="flex items-start justify-between">
+        <span class="mono tnum text-sm font-bold px-2 py-0.5 rounded-md" style="background:var(--gold-dim);color:var(--gold)">92</span>
+        <div class="flex gap-1">
+          <button class="w-8 h-8 grid place-items-center rounded-md border" style="border-color:var(--brand-line);color:var(--brand)" title="锁定：再来一轮时围绕它找"><i data-lucide="lock" class="w-3.5 h-3.5"></i></button>
+          <button class="w-8 h-8 grid place-items-center rounded-md border" style="border-color:var(--line);color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+          <button class="w-8 h-8 grid place-items-center rounded-md border" style="border-color:var(--line);color:var(--brand)"><i data-lucide="bookmark-check" class="w-3.5 h-3.5"></i></button>
+        </div>
+      </div>
+      <div class="mono font-bold text-2xl mt-3 tracking-tight">briefkit<span style="color:var(--txt-2)">.ai</span></div>
+      <p class="text-[13px] mt-1.5 leading-relaxed" style="color:var(--txt-1)">“简报工具箱”——直白点题，brief 短读感干脆，kit 自带开发者工具气质。</p>
+      <!-- 四维条形微图（P1#21） -->
+      <div class="grid grid-cols-2 gap-x-4 gap-y-2 mt-4 text-[11px]" style="color:var(--txt-2)">
+        <div>长度 <span class="mono tnum float-right" style="color:var(--txt-1)">95</span><div class="bar mt-1"><i style="width:95%"></i></div></div>
+        <div>读感 <span class="mono tnum float-right" style="color:var(--txt-1)">90</span><div class="bar mt-1"><i style="width:90%"></i></div></div>
+        <div>寓意 <span class="mono tnum float-right" style="color:var(--txt-1)">92</span><div class="bar mt-1"><i style="width:92%"></i></div></div>
+        <div>品牌感 <span class="mono tnum float-right" style="color:var(--txt-1)">89</span><div class="bar mt-1"><i style="width:89%"></i></div></div>
+      </div>
+      <button class="mt-4 w-full h-10 rounded-lg font-semibold text-sm flex items-center justify-center gap-1.5" style="background:var(--brand);color:var(--brand-ink)">去注册 · $72/年 <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+    </div>
+    <!-- 大卡 2 -->
+    <div class="card p-5">
+      <div class="flex items-start justify-between">
+        <span class="mono tnum text-sm font-bold px-2 py-0.5 rounded-md" style="background:var(--brand-dim);color:var(--brand)">86</span>
+        <div class="flex gap-1">
+          <button class="w-8 h-8 grid place-items-center rounded-md border" style="border-color:var(--line);color:var(--txt-2)"><i data-lucide="lock" class="w-3.5 h-3.5"></i></button>
+          <button class="w-8 h-8 grid place-items-center rounded-md border" style="border-color:var(--line);color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+          <button class="w-8 h-8 grid place-items-center rounded-md border" style="border-color:var(--line);color:var(--txt-2)"><i data-lucide="bookmark" class="w-3.5 h-3.5"></i></button>
+        </div>
+      </div>
+      <div class="mono font-bold text-2xl mt-3 tracking-tight">recaply<span style="color:var(--txt-2)">.com</span></div>
+      <p class="text-[13px] mt-1.5 leading-relaxed" style="color:var(--txt-1)">recap + ly，“每周回顾”寓意贴合，-ly 后缀 SaaS 惯用、好读好记。</p>
+      <div class="grid grid-cols-2 gap-x-4 gap-y-2 mt-4 text-[11px]" style="color:var(--txt-2)">
+        <div>长度 <span class="mono tnum float-right" style="color:var(--txt-1)">88</span><div class="bar mt-1"><i style="width:88%"></i></div></div>
+        <div>读感 <span class="mono tnum float-right" style="color:var(--txt-1)">85</span><div class="bar mt-1"><i style="width:85%"></i></div></div>
+        <div>寓意 <span class="mono tnum float-right" style="color:var(--txt-1)">90</span><div class="bar mt-1"><i style="width:90%"></i></div></div>
+        <div>品牌感 <span class="mono tnum float-right" style="color:var(--txt-1)">82</span><div class="bar mt-1"><i style="width:82%"></i></div></div>
+      </div>
+      <button class="mt-4 w-full h-10 rounded-lg font-semibold text-sm flex items-center justify-center gap-1.5" style="background:var(--brand);color:var(--brand-ink)">去注册 · $9.9 首年 <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+    </div>
+    <!-- 大卡 3 -->
+    <div class="card p-5">
+      <div class="flex items-start justify-between">
+        <span class="mono tnum text-sm font-bold px-2 py-0.5 rounded-md" style="background:var(--brand-dim);color:var(--brand)">84</span>
+        <div class="flex gap-1">
+          <button class="w-8 h-8 grid place-items-center rounded-md border" style="border-color:var(--brand-line);color:var(--brand)"><i data-lucide="lock" class="w-3.5 h-3.5"></i></button>
+          <button class="w-8 h-8 grid place-items-center rounded-md border" style="border-color:var(--line);color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+          <button class="w-8 h-8 grid place-items-center rounded-md border" style="border-color:var(--line);color:var(--brand)"><i data-lucide="bookmark-check" class="w-3.5 h-3.5"></i></button>
+        </div>
+      </div>
+      <div class="mono font-bold text-2xl mt-3 tracking-tight">weeklyloop<span style="color:var(--txt-2)">.com</span></div>
+      <p class="text-[13px] mt-1.5 leading-relaxed" style="color:var(--txt-1)">“每周循环”——契合周报节奏感，双写 e/o 有韵律，适合做品牌。</p>
+      <div class="grid grid-cols-2 gap-x-4 gap-y-2 mt-4 text-[11px]" style="color:var(--txt-2)">
+        <div>长度 <span class="mono tnum float-right" style="color:var(--txt-1)">72</span><div class="bar mt-1"><i style="width:72%"></i></div></div>
+        <div>读感 <span class="mono tnum float-right" style="color:var(--txt-1)">88</span><div class="bar mt-1"><i style="width:88%"></i></div></div>
+        <div>寓意 <span class="mono tnum float-right" style="color:var(--txt-1)">91</span><div class="bar mt-1"><i style="width:91%"></i></div></div>
+        <div>品牌感 <span class="mono tnum float-right" style="color:var(--txt-1)">86</span><div class="bar mt-1"><i style="width:86%"></i></div></div>
+      </div>
+      <button class="mt-4 w-full h-10 rounded-lg font-semibold text-sm flex items-center justify-center gap-1.5" style="background:var(--brand);color:var(--brand-ink)">去注册 · $9.9 首年 <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+    </div>
+  </div>
+
+  <!-- 过滤工具条：状态/TLD chips + 只看可注册 + 排序 + 视图切换（P0#7 / #17） -->
+  <div class="flex items-center gap-2 flex-wrap mb-3">
+    <div class="flex items-center gap-1 p-1 rounded-lg border" style="border-color:var(--line);background:var(--bg-1)">
+      <button class="text-xs px-2.5 py-1 rounded-md font-semibold" style="background:var(--brand-dim);color:var(--brand)">可注册 12</button>
+      <button class="text-xs px-2.5 py-1 rounded-md" style="color:var(--txt-1)">全部 48</button>
+      <button class="text-xs px-2.5 py-1 rounded-md" style="color:var(--txt-1)">已注册 36</button>
+    </div>
+    <div class="flex items-center gap-1 p-1 rounded-lg border" style="border-color:var(--line);background:var(--bg-1)">
+      <button class="mono text-[11px] px-2 py-1 rounded-md font-semibold" style="background:var(--bg-3)">全部 TLD</button>
+      <button class="mono text-[11px] px-2 py-1 rounded-md" style="color:var(--txt-1)">.com 7</button>
+      <button class="mono text-[11px] px-2 py-1 rounded-md" style="color:var(--txt-1)">.ai 3</button>
+      <button class="mono text-[11px] px-2 py-1 rounded-md" style="color:var(--txt-1)">.io 2</button>
+    </div>
+    <button class="h-8 px-2.5 rounded-lg border text-xs flex items-center gap-1" style="border-color:var(--line);color:var(--txt-1)"><i data-lucide="arrow-down-wide-narrow" class="w-3.5 h-3.5"></i>评分 ↓</button>
+    <div class="flex-1"></div>
+    <span class="hidden lg:flex items-center gap-2 text-[11px]" style="color:var(--txt-2)"><kbd>↑↓</kbd>选中 <kbd>C</kbd>复制 <kbd>S</kbd>收藏 <kbd>⏎</kbd>注册</span>
+    <div class="flex items-center gap-1 p-1 rounded-lg border" style="border-color:var(--line);background:var(--bg-1)">
+      <button class="w-7 h-7 grid place-items-center rounded-md" style="background:var(--bg-3)" title="紧凑行视图（默认）"><i data-lucide="rows-3" class="w-3.5 h-3.5"></i></button>
+      <button class="w-7 h-7 grid place-items-center rounded-md" style="color:var(--txt-2)" title="卡片视图"><i data-lucide="layout-grid" class="w-3.5 h-3.5"></i></button>
+    </div>
+  </div>
+
+  <!-- 紧凑行列表（默认视图）：一行 = 分数徽章 + 等宽域名 + 状态点 + 寓意 + 价格 + 快捷操作 -->
+  <div class="card divide-y">
+    <!-- 选中行（键盘导航态） -->
+    <div class="flex items-center gap-3 px-4 h-12" style="background:var(--bg-2);box-shadow:inset 2px 0 0 var(--brand);border-color:var(--line)">
+      <span class="mono tnum text-xs font-semibold w-8 text-center py-0.5 rounded-md" style="background:var(--brand-dim);color:var(--brand)">83</span>
+      <span class="mono font-semibold text-[15px]">shipnote<span style="color:var(--txt-2)">.ai</span></span>
+      <span class="w-1.5 h-1.5 rounded-full" style="background:var(--brand)"></span>
+      <span class="text-xs truncate flex-1 hidden sm:block" style="color:var(--txt-1)">ship + note，开发者“发布笔记”气质</span>
+      <span class="mono tnum text-xs hidden md:block" style="color:var(--txt-2)">$72/年</span>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="lock" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="bookmark" class="w-3.5 h-3.5"></i></button>
+      <button class="h-8 px-3 rounded-md text-xs font-semibold" style="background:var(--brand-dim);color:var(--brand)">去注册</button>
+    </div>
+    <div class="flex items-center gap-3 px-4 h-12" style="border-color:var(--line)">
+      <span class="mono tnum text-xs font-semibold w-8 text-center py-0.5 rounded-md" style="background:var(--brand-dim);color:var(--brand)">81</span>
+      <span class="mono font-semibold text-[15px]">weeksum<span style="color:var(--txt-2)">.com</span></span>
+      <span class="w-1.5 h-1.5 rounded-full" style="background:var(--brand)"></span>
+      <span class="text-xs truncate flex-1 hidden sm:block" style="color:var(--txt-1)">week + summary，一眼懂的组合词</span>
+      <span class="mono tnum text-xs hidden md:block" style="color:var(--txt-2)">$9.9 首年</span>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="lock" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--brand)"><i data-lucide="bookmark-check" class="w-3.5 h-3.5"></i></button>
+      <button class="h-8 px-3 rounded-md text-xs font-semibold" style="background:var(--brand-dim);color:var(--brand)">去注册</button>
+    </div>
+    <div class="flex items-center gap-3 px-4 h-12" style="border-color:var(--line)">
+      <span class="mono tnum text-xs font-semibold w-8 text-center py-0.5 rounded-md" style="background:var(--brand-dim);color:var(--brand)">79</span>
+      <span class="mono font-semibold text-[15px]">devdigest<span style="color:var(--txt-2)">.io</span></span>
+      <span class="w-1.5 h-1.5 rounded-full" style="background:var(--brand)"></span>
+      <span class="text-xs truncate flex-1 hidden sm:block" style="color:var(--txt-1)">开发者摘要，目标人群直给</span>
+      <span class="mono tnum text-xs hidden md:block" style="color:var(--txt-2)">$32/年</span>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="lock" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="bookmark" class="w-3.5 h-3.5"></i></button>
+      <button class="h-8 px-3 rounded-md text-xs font-semibold" style="background:var(--brand-dim);color:var(--brand)">去注册</button>
+    </div>
+    <div class="flex items-center gap-3 px-4 h-12" style="border-color:var(--line)">
+      <span class="mono tnum text-xs font-semibold w-8 text-center py-0.5 rounded-md" style="background:var(--brand-dim);color:var(--brand)">77</span>
+      <span class="mono font-semibold text-[15px]">pulseweek<span style="color:var(--txt-2)">.com</span></span>
+      <span class="w-1.5 h-1.5 rounded-full" style="background:var(--brand)"></span>
+      <span class="text-xs truncate flex-1 hidden sm:block" style="color:var(--txt-1)">“每周脉搏”——数据感与节奏感兼具</span>
+      <span class="mono tnum text-xs hidden md:block" style="color:var(--txt-2)">$9.9 首年</span>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="lock" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="bookmark" class="w-3.5 h-3.5"></i></button>
+      <button class="h-8 px-3 rounded-md text-xs font-semibold" style="background:var(--brand-dim);color:var(--brand)">去注册</button>
+    </div>
+    <div class="flex items-center gap-3 px-4 h-12" style="border-color:var(--line)">
+      <span class="mono tnum text-xs font-semibold w-8 text-center py-0.5 rounded-md" style="background:var(--brand-dim);color:var(--brand)">76</span>
+      <span class="mono font-semibold text-[15px]">loopmail<span style="color:var(--txt-2)">.cn</span></span>
+      <span class="w-1.5 h-1.5 rounded-full" style="background:var(--brand)"></span>
+      <span class="text-xs truncate flex-1 hidden sm:block" style="color:var(--txt-1)">循环邮件——周报以邮件送达的场景词</span>
+      <span class="mono tnum text-xs hidden md:block" style="color:var(--txt-2)">¥29 首年</span>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="lock" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="bookmark" class="w-3.5 h-3.5"></i></button>
+      <button class="h-8 px-3 rounded-md text-xs font-semibold" style="background:var(--brand-dim);color:var(--brand)">去注册</button>
+    </div>
+    <div class="flex items-center gap-3 px-4 h-12" style="border-color:var(--line)">
+      <span class="mono tnum text-xs font-semibold w-8 text-center py-0.5 rounded-md" style="background:var(--bg-3);color:var(--txt-1)">68</span>
+      <span class="mono font-semibold text-[15px]">weeklybrief<span style="color:var(--txt-2)">.io</span></span>
+      <span class="w-1.5 h-1.5 rounded-full" style="background:var(--brand)"></span>
+      <span class="text-xs truncate flex-1 hidden sm:block" style="color:var(--txt-1)">直白但偏长（11 字符）</span>
+      <span class="mono tnum text-xs hidden md:block" style="color:var(--txt-2)">$32/年</span>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="lock" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="bookmark" class="w-3.5 h-3.5"></i></button>
+      <button class="h-8 px-3 rounded-md text-xs font-semibold" style="background:var(--brand-dim);color:var(--brand)">去注册</button>
+    </div>
+    <div class="flex items-center gap-3 px-4 h-12" style="border-color:var(--line)">
+      <span class="mono tnum text-xs font-semibold w-8 text-center py-0.5 rounded-md" style="background:var(--bg-3);color:var(--txt-1)">64</span>
+      <span class="mono font-semibold text-[15px]">zhoubao<span style="color:var(--txt-2)">.ai</span></span>
+      <span class="w-1.5 h-1.5 rounded-full" style="background:var(--brand)"></span>
+      <span class="text-xs truncate flex-1 hidden sm:block" style="color:var(--txt-1)">拼音直译，国内用户零解释成本</span>
+      <span class="mono tnum text-xs hidden md:block" style="color:var(--txt-2)">$72/年</span>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="lock" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="copy" class="w-3.5 h-3.5"></i></button>
+      <button class="w-8 h-8 grid place-items-center rounded-md" style="color:var(--txt-2)"><i data-lucide="bookmark" class="w-3.5 h-3.5"></i></button>
+      <button class="h-8 px-3 rounded-md text-xs font-semibold" style="background:var(--brand-dim);color:var(--brand)">去注册</button>
+    </div>
+  </div>
+
+  <!-- 已占用折叠区（#12：核验数字有体感） -->
+  <details class="mt-4">
+    <summary class="text-xs cursor-pointer flex items-center gap-1.5" style="color:var(--txt-2)">
+      <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>已被注册的 36 个候选（AI 真的筛过它们）
+    </summary>
+    <div class="card mt-2 px-4 py-3 flex flex-wrap gap-x-5 gap-y-1.5">
+      <span class="mono text-xs line-through" style="color:var(--taken)">weekly.ai</span>
+      <span class="mono text-xs line-through" style="color:var(--taken)">digest.com</span>
+      <span class="mono text-xs line-through" style="color:var(--taken)">weeklyzen.com</span>
+      <span class="mono text-xs line-through" style="color:var(--taken)">recap.io</span>
+      <span class="mono text-xs line-through" style="color:var(--taken)">briefly.ai</span>
+      <span class="mono text-xs line-through" style="color:var(--taken)">devweekly.com</span>
+      <span class="mono text-xs" style="color:var(--txt-2)">… 30 more</span>
+    </div>
+  </details>
+</main>
+
+<!-- 底部 sticky：锁定 + 再来一轮（P1#13） -->
+<div class="fixed bottom-0 inset-x-0 border-t z-20" style="background:color-mix(in srgb, var(--bg-1) 92%, transparent);backdrop-filter:blur(12px);border-color:var(--line)">
+  <div class="max-w-6xl mx-auto px-4 md:px-6 h-14 flex items-center gap-3">
+    <span class="text-xs items-center gap-1.5 hidden md:flex" style="color:var(--txt-1)">
+      <i data-lucide="lock" class="w-3.5 h-3.5" style="color:var(--brand)"></i>
+      已锁定 <b class="mono tnum" style="color:var(--txt-0)">2</b> 个：<span class="mono">briefkit.ai</span>、<span class="mono">weeklyloop.com</span>
+    </span>
+    <span class="text-xs flex items-center gap-1 md:hidden whitespace-nowrap" style="color:var(--txt-1)">
+      <i data-lucide="lock" class="w-3.5 h-3.5" style="color:var(--brand)"></i>锁定 <b class="mono tnum" style="color:var(--txt-0)">2</b>
+    </span>
+    <div class="flex-1"></div>
+    <button class="h-9 px-3 rounded-lg border text-sm hidden sm:flex items-center gap-1.5" style="border-color:var(--line);color:var(--txt-1)"><i data-lucide="download" class="w-4 h-4"></i>导出</button>
+    <button class="h-9 px-4 rounded-lg text-sm font-semibold flex items-center gap-1.5 whitespace-nowrap" style="background:var(--brand);color:var(--brand-ink)">
+      <i data-lucide="rotate-cw" class="w-4 h-4"></i><span class="hidden md:inline">围绕锁定项</span>再来一轮
+    </button>
+  </div>
+</div>
+
+<script>lucide.createIcons()</script>
+</body>
+</html>
