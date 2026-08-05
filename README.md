@@ -23,4 +23,6 @@ pnpm deploy     # 部署 Cloudflare Workers
 
 ## API
 
+`POST /api/ai-search` `{ description, tlds? }` → AI 根据自然语言描述生成候选并核验，NDJSON 流（含 `meaning` 寓意说明）。
+
 `POST /api/search` `{ roots, prefixes?, suffixes?, tlds }` → NDJSON 流，每行 `{ domain, status, method }`，`status ∈ available | taken | unknown`。
