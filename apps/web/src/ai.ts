@@ -1,6 +1,14 @@
+export interface AiScores {
+  length: number;
+  readability: number;
+  relevance: number;
+  brandability: number;
+}
+
 export interface AiCandidate {
   label: string;
   meaning: string;
+  scores: AiScores;
 }
 
 const SYSTEM_PROMPT = `你是资深域名命名专家。用户会用自然语言描述想要的域名寓意/主题/口味，你负责发散出尽可能优质的域名主体（不含 TLD）。
@@ -11,9 +19,10 @@ const SYSTEM_PROMPT = `你是资深域名命名专家。用户会用自然语言
 - 只输出小写字母组成的合法域名主体
 - 常见单词、两三个字母的组合几乎都已被注册，要敢于造词、混搭、用冷僻但好读的组合
 - 按推荐度排序
+- 同时给每个候选打四维分（0-100 整数）：length（长度，越短越好记分越高）、readability（读感，好读好拼）、relevance（寓意贴合需求程度）、brandability（品牌感，独特性与可商标性）
 
 严格输出 JSON 数组，不要输出其他任何文字：
-[{"label":"域名主体","meaning":"一句话说明寓意与读法"}]`;
+[{"label":"域名主体","meaning":"一句话说明寓意与读法","scores":{"length":90,"readability":85,"relevance":88,"brandability":80}}]`;
 
 export async function generateAiCandidates(
   description: string,
@@ -47,7 +56,7 @@ async function generateOnce(
         { role: "user", content: user },
       ],
       temperature: 1.2,
-      max_tokens: 2500,
+      max_tokens: 4000,
     }),
   });
   if (!res.ok) throw new Error(`llm-http-${res.status}`);
@@ -55,14 +64,28 @@ async function generateOnce(
   const text = data.choices[0]?.message?.content ?? "";
   const match = text.match(/\[[\s\S]*\]/);
   if (!match) throw new Error("llm-bad-output");
-  const arr = JSON.parse(match[0]) as AiCandidate[];
+  const arr = JSON.parse(match[0]) as Partial<AiCandidate>[];
   const seen = new Set<string>();
   const out: AiCandidate[] = [];
+  const clamp = (v: unknown) => {
+    const n = Math.round(Number(v));
+    return Number.isFinite(n) ? Math.min(Math.max(n, 0), 100) : 60;
+  };
   for (const c of arr) {
     const label = String(c.label ?? "").toLowerCase().replace(/[^a-z0-9-]/g, "");
     if (!label || label.length > 63 || seen.has(label)) continue;
     seen.add(label);
-    out.push({ label, meaning: String(c.meaning ?? "") });
+    const s = c.scores ?? ({} as Partial<AiScores>);
+    out.push({
+      label,
+      meaning: String(c.meaning ?? ""),
+      scores: {
+        length: clamp(s.length),
+        readability: clamp(s.readability),
+        relevance: clamp(s.relevance),
+        brandability: clamp(s.brandability),
+      },
+    });
   }
   return out;
 }
