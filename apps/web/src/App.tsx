@@ -90,7 +90,7 @@ export default function App() {
       setError("AI 服务出错，已停止本轮");
     } else if (ev.domain) {
       const status = ev.status as Status;
-      setLogs((prev) => [...prev.slice(-19), { domain: ev.domain!, status }]);
+      setLogs((prev) => [...prev.slice(-19), { domain: ev.domain!, status, cached: ev.cached }]);
       setRows((prev) => {
         const row = prev.find((r) => r.domain === ev.domain);
         if (!row) return prev;
