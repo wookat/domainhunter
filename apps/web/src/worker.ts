@@ -7,35 +7,59 @@ type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string };
 const app = new Hono<{ Bindings: Bindings }>();
 
 app.post("/api/ai-search", async (c) => {
-  const body = await c.req.json<{ description?: string; tlds?: string[] }>();
+  const body = await c.req.json<{
+    description?: string;
+    tlds?: string[];
+    target?: number;
+    excludeLabels?: string[];
+  }>();
   const description = (body.description ?? "").trim();
   const tlds = (body.tlds ?? ["com", "cn"]).map((t) => t.trim().toLowerCase().replace(/^\./, "")).filter(Boolean);
+  const target = Math.min(Math.max(body.target ?? 10, 3), 30);
+  const MAX_ROUNDS = 5;
   if (!description) return c.json({ error: "description required" }, 400);
   if (description.length > 500) return c.json({ error: "description too long" }, 400);
 
-  let candidates;
-  try {
-    candidates = await generateAiCandidates(description, c.env.DEEPSEEK_API_KEY);
-  } catch (e) {
-    return c.json({ error: "ai-failed", detail: String(e) }, 502);
-  }
-  const meaningByLabel = new Map(candidates.map((x) => [x.label, x.meaning]));
-  const domains = candidates.flatMap((x) => tlds.map((t) => `${x.label}.${t}`));
-
+  const apiKey = c.env.DEEPSEEK_API_KEY;
   const { readable, writable } = new TransformStream();
   const writer = writable.getWriter();
   const encoder = new TextEncoder();
+  const emit = (obj: unknown) => writer.write(encoder.encode(JSON.stringify(obj) + "\n"));
 
   c.executionCtx.waitUntil(
     (async () => {
+      const tried = new Set<string>((body.excludeLabels ?? []).map((l) => l.toLowerCase()));
+      const takenLabels: string[] = [...tried];
+      let availableCount = 0;
       try {
-        await writer.write(
-          encoder.encode(JSON.stringify({ type: "candidates", count: domains.length }) + "\n"),
-        );
-        await checkDomains(domains, async (r) => {
-          const meaning = meaningByLabel.get(r.domain.slice(0, r.domain.indexOf(".")));
-          await writer.write(encoder.encode(JSON.stringify({ ...r, meaning }) + "\n"));
-        }, 6);
+        for (let round = 1; round <= MAX_ROUNDS && availableCount < target; round++) {
+          await emit({ type: "round", round, availableCount, target, note: round === 1 ? "AI 正在构思名字…" : "可注册的还不够，AI 反思后继续想…" });
+          let candidates;
+          try {
+            candidates = await generateAiCandidates(description, apiKey, {
+              count: 24,
+              excludeTaken: round === 1 && takenLabels.length === 0 ? undefined : takenLabels,
+              round,
+            });
+          } catch (e) {
+            await emit({ type: "error", round, detail: String(e) });
+            break;
+          }
+          const fresh = candidates.filter((x) => !tried.has(x.label));
+          fresh.forEach((x) => tried.add(x.label));
+          const meaningByLabel = new Map(fresh.map((x) => [x.label, x.meaning]));
+          const domains = fresh.flatMap((x) => tlds.map((t) => `${x.label}.${t}`));
+          await emit({ type: "proposed", round, items: fresh, tlds });
+          const takenThisRound = new Set<string>();
+          await checkDomains(domains, async (r) => {
+            const label = r.domain.slice(0, r.domain.indexOf("."));
+            if (r.status === "available") availableCount++;
+            else if (r.status === "taken") takenThisRound.add(label);
+            await emit({ ...r, round, meaning: meaningByLabel.get(label) });
+          }, 6);
+          takenLabels.push(...takenThisRound);
+        }
+        await emit({ type: "done", availableCount, target, reachedTarget: availableCount >= target });
       } finally {
         await writer.close();
       }
