@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import { generateCandidates, checkDomains } from "@domainhunter/core";
+import { whoisFallback } from "./whois";
 import { generateAiCandidates } from "./ai";
 
 type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string };
@@ -56,7 +57,7 @@ app.post("/api/ai-search", async (c) => {
             if (r.status === "available") availableCount++;
             else if (r.status === "taken") takenThisRound.add(label);
             await emit({ ...r, round, meaning: meaningByLabel.get(label) });
-          }, 6);
+          }, 6, fetch, whoisFallback);
           takenLabels.push(...takenThisRound);
         }
         await emit({ type: "done", availableCount, target, reachedTarget: availableCount >= target });
@@ -99,7 +100,7 @@ app.post("/api/search", async (c) => {
       try {
         await checkDomains(domains, async (r) => {
           await writer.write(encoder.encode(JSON.stringify(r) + "\n"));
-        }, 6);
+        }, 6, fetch, whoisFallback);
       } finally {
         await writer.close();
       }

@@ -3,7 +3,7 @@ export type DomainStatus = "available" | "taken" | "unknown";
 export interface CheckResult {
   domain: string;
   status: DomainStatus;
-  method: "dns" | "rdap" | "none";
+  method: "dns" | "rdap" | "whois" | "none";
   detail?: string;
 }
 
@@ -77,12 +77,14 @@ export async function checkDomains(
   onResult: (r: CheckResult) => void | Promise<void>,
   concurrency = 8,
   fetchFn: typeof fetch = fetch,
+  fallback?: (r: CheckResult) => Promise<CheckResult>,
 ): Promise<void> {
   let i = 0;
   const worker = async () => {
     while (i < domains.length) {
       const domain = domains[i++];
-      const r = await checkDomain(domain, fetchFn);
+      let r = await checkDomain(domain, fetchFn);
+      if (r.status === "unknown" && fallback) r = await fallback(r);
       await onResult(r);
     }
   };
