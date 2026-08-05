@@ -4,7 +4,7 @@ import { Loader2, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { ProgressCard } from "@/components/domain-card";
+import { DomainRow } from "@/components/domain-row";
 import { friendlyError, friendlyHttpError } from "@/lib/utils";
 import type { Row, Status } from "@/types";
 
@@ -67,7 +67,7 @@ export function AdvancedPage() {
   return (
     <main className="mx-auto max-w-5xl flex-1 px-4 py-8 md:px-6">
       <h1 className="text-xl font-bold tracking-tight md:text-2xl">高级模式</h1>
-      <p className="mt-1 text-sm text-zinc-500">词根 × 前后缀 × TLD 批量组合生成，逐个核验可注册状态</p>
+      <p className="mt-1 text-sm text-txt1">词根 × 前后缀 × TLD 批量组合生成，逐个核验可注册状态</p>
 
       <Card className="mt-5 p-4 md:p-6">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -78,7 +78,7 @@ export function AdvancedPage() {
             { label: "TLD", value: tlds, set: setTlds, placeholder: "com, cn" },
           ].map((f) => (
             <div key={f.label}>
-              <label className="text-sm font-medium text-zinc-900">{f.label}</label>
+              <label className="text-sm font-medium">{f.label}</label>
               <Input className="mt-2" value={f.value} placeholder={f.placeholder} onChange={(e) => f.set(e.target.value)} />
             </div>
           ))}
@@ -89,24 +89,24 @@ export function AdvancedPage() {
         </Button>
       </Card>
 
-      {error && <p className="mt-4 text-sm text-rose-600">{error}</p>}
+      {error && <p className="mt-4 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{error}</p>}
 
       {available.length > 0 && (
         <>
-          <h2 className="mt-6 text-sm font-semibold text-emerald-700">可注册（{available.length}）</h2>
-          <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <h2 className="mt-6 text-sm font-semibold text-brand">可注册（{available.length}）</h2>
+          <div className="mt-2 divide-y divide-line rounded-xl border border-line bg-bg1">
             {available.map((r) => (
-              <ProgressCard key={r.domain} row={r} />
+              <DomainRow key={r.domain} row={r} />
             ))}
           </div>
         </>
       )}
       {rest.length > 0 && (
         <>
-          <h2 className="mt-6 text-sm font-semibold text-zinc-500">其余候选（{rest.length}）</h2>
-          <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <h2 className="mt-6 text-sm font-semibold text-txt1">其余候选（{rest.length}）</h2>
+          <div className="mt-2 divide-y divide-line rounded-xl border border-line bg-bg1">
             {rest.map((r) => (
-              <ProgressCard key={r.domain} row={r} />
+              <DomainRow key={r.domain} row={r} />
             ))}
           </div>
         </>
