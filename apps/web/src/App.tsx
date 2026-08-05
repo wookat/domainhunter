@@ -7,10 +7,11 @@ import { AgentPage, type LogEntry } from "@/components/agent-page";
 import { ResultsPage } from "@/components/results-page";
 import { ShortlistPage } from "@/components/shortlist-page";
 import { AdvancedPage } from "@/components/advanced-page";
+import { UnderstandingBar } from "@/components/understanding-bar";
 import { isMockEnabled, runMockStream } from "@/mock";
 import { useShortlist } from "@/lib/shortlist";
 import { friendlyError, friendlyHttpError } from "@/lib/utils";
-import type { Row, RoundInfo, StreamEvent, Status } from "@/types";
+import type { Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types";
 
 type Mode = "home" | "agent" | "results" | "shortlist" | "advanced";
 const TARGET = 10;
@@ -26,6 +27,8 @@ export default function App() {
   const [logs, setLogs] = useState<LogEntry[]>([]);
   const [elapsedSec, setElapsedSec] = useState<number | undefined>(undefined);
   const [locked, setLocked] = useState<Set<string>>(new Set());
+  const [aiUnderstanding, setAiUnderstanding] = useState<Understanding | null>(null);
+  const [refinements, setRefinements] = useState<string[]>([]);
   const abortRef = useRef<AbortController | null>(null);
   const triedLabelsRef = useRef<string[]>([]);
   const roundOffsetRef = useRef(0);
@@ -79,6 +82,8 @@ export default function App() {
         setRounds((rs) => rs.map((r) => (r.round === round ? { ...r, proposed: r.proposed + fresh.length } : r)));
         return [...prev, ...fresh];
       });
+    } else if (ev.type === "understanding") {
+      setAiUnderstanding({ core: ev.core ?? "", style: ev.style ?? "", scene: ev.scene ?? "" });
     } else if (ev.type === "done") {
       // no-op：running 状态在流结束时统一收尾
     } else if (ev.type === "error") {
@@ -101,8 +106,8 @@ export default function App() {
     }
   }
 
-  async function run(v: HomeValues, opts: { more?: boolean; aroundLocked?: boolean } = {}) {
-    const { more = false, aroundLocked = false } = opts;
+  async function run(v: HomeValues, opts: { more?: boolean; aroundLocked?: boolean; refinePrefs?: string[] } = {}) {
+    const { more = false, aroundLocked = false, refinePrefs = refinements } = opts;
     abortRef.current?.abort();
     const ac = new AbortController();
     abortRef.current = ac;
@@ -113,6 +118,8 @@ export default function App() {
       setRounds([]);
       setCurrentRound(0);
       setLocked(new Set());
+      setAiUnderstanding(null);
+      setRefinements([]);
       triedLabelsRef.current = [];
       roundOffsetRef.current = 0;
     }
@@ -127,6 +134,9 @@ export default function App() {
         return;
       }
       let description = v.description;
+      if (more && refinePrefs.length > 0) {
+        description += `\n\n风格微调偏好：${refinePrefs.join("、")}。请按这些偏好调整命名方向。`;
+      }
       if (aroundLocked && locked.size > 0) {
         description += `\n\n我特别喜欢这些名字的风格：${[...locked].map((d) => d.split(".")[0]).join(", ")}。请围绕它们的词根、构词方式与气质再发散相似的新名字。`;
       }
@@ -143,7 +153,14 @@ export default function App() {
         }),
         signal: ac.signal,
       });
-      if (!res.ok) throw new Error(friendlyHttpError(res.status));
+      if (!res.ok) {
+        let msg = friendlyHttpError(res.status);
+        try {
+          const j = (await res.json()) as { message?: string };
+          if (j.message) msg = j.message;
+        } catch { /* 非 JSON 响应，用默认文案 */ }
+        throw new Error(msg);
+      }
       const reader = res.body!.getReader();
       const decoder = new TextDecoder();
       let buf = "";
@@ -165,6 +182,12 @@ export default function App() {
       setElapsedSec(Math.round((Date.now() - startedAtRef.current) / 1000));
       if (!ac.signal.aborted) setMode((m) => (m === "agent" ? "results" : m));
     }
+  }
+
+  function refine(pref: string) {
+    const next = [...refinements, pref];
+    setRefinements(next);
+    void run(values, { more: true, refinePrefs: next });
   }
 
   function stop() {
@@ -225,6 +248,15 @@ export default function App() {
         <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
           <p className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{error}</p>
         </div>
+      )}
+
+      {(mode === "agent" || mode === "results") && (
+        <UnderstandingBar
+          understanding={aiUnderstanding}
+          fallback={understanding}
+          onRefine={refine}
+          running={running}
+        />
       )}
 
       {mode === "home" && (

@@ -25,7 +25,9 @@ export async function runMockStream(onEvent: (ev: StreamEvent) => void, signal: 
     });
 
   onEvent({ type: "round", round: 1, availableCount: 0, target: 10, note: "AI 正在构思名字…" });
-  await sleep(600);
+  await sleep(300);
+  onEvent({ type: "understanding", core: "体制内人才智慧拓展职业新边界", style: "商务专业、稳中求进", scene: "职业转型咨询平台" });
+  await sleep(300);
   onEvent({
     type: "proposed",
     round: 1,

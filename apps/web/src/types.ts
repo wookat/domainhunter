@@ -26,7 +26,7 @@ export interface RoundInfo {
 }
 
 export interface StreamEvent {
-  type?: "round" | "proposed" | "done" | "error";
+  type?: "round" | "proposed" | "done" | "error" | "understanding";
   round?: number;
   note?: string;
   items?: { label: string; meaning: string; scores?: Scores }[];
@@ -38,6 +38,16 @@ export interface StreamEvent {
   domain?: string;
   status?: Status;
   meaning?: string;
+  cached?: boolean;
+  core?: string;
+  style?: string;
+  scene?: string;
+}
+
+export interface Understanding {
+  core: string;
+  style: string;
+  scene: string;
 }
 
 export const STATUS_LABEL: Record<Status, string> = {
@@ -58,21 +68,39 @@ export function scoreBadgeClass(score: number): string {
   return "bg-bg3 text-txt1";
 }
 
-/** 参考首年价（按 TLD 的市场常见价，仅作参考展示） */
-const TLD_PRICES: Record<string, string> = {
-  com: "$9.9 首年",
-  cn: "¥29 首年",
-  net: "$12/年",
-  org: "$11/年",
-  io: "$32/年",
-  ai: "$72/年",
-  app: "$14/年",
-  dev: "$12/年",
-  co: "$25/年",
-  me: "$19/年",
-  xyz: "$2 首年",
+/** 主流 TLD 首年/续费参考价（人民币，参考阿里云 / Porkbun 公开价，仅作参考展示） */
+export interface TldPrice {
+  first: number;
+  renew: number;
+}
+
+const TLD_PRICES: Record<string, TldPrice> = {
+  com: { first: 69, renew: 85 },
+  net: { first: 79, renew: 99 },
+  org: { first: 79, renew: 99 },
+  io: { first: 259, renew: 419 },
+  ai: { first: 499, renew: 620 },
+  cn: { first: 29, renew: 39 },
+  cc: { first: 38, renew: 58 },
+  tv: { first: 199, renew: 268 },
+  app: { first: 99, renew: 118 },
+  dev: { first: 88, renew: 108 },
+  xyz: { first: 8, renew: 79 },
+  co: { first: 65, renew: 199 },
 };
 
-export function tldPrice(tld: string): string | undefined {
+export function tldPrice(tld: string): TldPrice | undefined {
   return TLD_PRICES[tld];
+}
+
+/** 紧凑展示：首年¥69 */
+export function tldPriceShort(tld: string): string | undefined {
+  const p = TLD_PRICES[tld];
+  return p ? `首年¥${p.first}` : undefined;
+}
+
+/** 完整展示：参考价 首年 ¥69 · 续费 ¥85/年 */
+export function tldPriceFull(tld: string): string | undefined {
+  const p = TLD_PRICES[tld];
+  return p ? `参考价 首年 ¥${p.first} · 续费 ¥${p.renew}/年` : undefined;
 }

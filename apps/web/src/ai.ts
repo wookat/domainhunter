@@ -24,6 +24,48 @@ const SYSTEM_PROMPT = `你是资深域名命名专家。用户会用自然语言
 严格输出 JSON 数组，不要输出其他任何文字：
 [{"label":"域名主体","meaning":"一句话说明寓意与读法","scores":{"length":90,"readability":85,"relevance":88,"brandability":80}}]`;
 
+export interface AiUnderstanding {
+  core: string;
+  style: string;
+  scene: string;
+}
+
+const UNDERSTANDING_PROMPT = `你是域名命名专家。把用户的需求描述提炼成三个要素，供确认「我理解你要的是什么」：
+- core：核心寓意（一短句，≤20 字）
+- style：命名风格（几个词，≤12 字）
+- scene：使用场景/目标用户（一短句，≤16 字）
+
+严格输出 JSON，不要输出其他任何文字：
+{"core":"…","style":"…","scene":"…"}`;
+
+export async function generateUnderstanding(description: string, apiKey: string): Promise<AiUnderstanding | null> {
+  try {
+    const res = await fetch("https://api.deepseek.com/chat/completions", {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}` },
+      body: JSON.stringify({
+        model: "deepseek-chat",
+        messages: [
+          { role: "system", content: UNDERSTANDING_PROMPT },
+          { role: "user", content: `需求描述：${description}` },
+        ],
+        temperature: 0.3,
+        max_tokens: 200,
+      }),
+    });
+    if (!res.ok) return null;
+    const data = (await res.json()) as { choices: { message: { content: string } }[] };
+    const match = (data.choices[0]?.message?.content ?? "").match(/\{[\s\S]*\}/);
+    if (!match) return null;
+    const obj = JSON.parse(match[0]) as Partial<AiUnderstanding>;
+    const core = String(obj.core ?? "").trim();
+    if (!core) return null;
+    return { core, style: String(obj.style ?? "").trim(), scene: String(obj.scene ?? "").trim() };
+  } catch {
+    return null;
+  }
+}
+
 export async function generateAiCandidates(
   description: string,
   apiKey: string,

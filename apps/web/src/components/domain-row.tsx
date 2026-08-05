@@ -3,7 +3,7 @@ import { Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Lock } from "lucide
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { REGISTRARS } from "@/lib/registrars";
-import { scoreBadgeClass, tldPrice, totalScore, type Row } from "@/types";
+import { scoreBadgeClass, tldPriceFull, tldPriceShort, totalScore, type Row } from "@/types";
 import { cn } from "@/lib/utils";
 
 export function DomainName({ row, className }: { row: Row; className?: string }) {
@@ -105,7 +105,11 @@ export function DomainRow({
       {isUnknown && <span className="shrink-0 rounded bg-amber2-dim px-1.5 py-0.5 text-[11px] text-amber2">未知</span>}
       <span className="hidden flex-1 truncate text-xs text-txt1 sm:block">{row.meaning}</span>
       <span className="ml-auto sm:ml-0" />
-      {tldPrice(row.tld) && <span className="tnum hidden shrink-0 font-mono text-xs text-txt2 md:block">{tldPrice(row.tld)}</span>}
+      {tldPriceShort(row.tld) && (
+        <span title={tldPriceFull(row.tld)} className="tnum hidden shrink-0 font-mono text-xs text-txt2 md:block">
+          {tldPriceShort(row.tld)}
+        </span>
+      )}
       {onToggleLock && (
         <button
           title="锁定：再来一轮时围绕它找"
