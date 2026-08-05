@@ -31,6 +31,13 @@ export default function App() {
   const roundOffsetRef = useRef(0);
   const startedAtRef = useRef(0);
   const shortlist = useShortlist();
+  const beforeShortlistRef = useRef<Mode>("home");
+
+  const openShortlist = () => {
+    if (mode !== "shortlist") beforeShortlistRef.current = mode;
+    setMode("shortlist");
+  };
+  const closeShortlist = () => setMode(beforeShortlistRef.current);
 
   const toggleLock = (domain: string) =>
     setLocked((prev) => {
@@ -185,7 +192,10 @@ export default function App() {
         高级模式
       </button>
     ) : mode === "advanced" || mode === "shortlist" ? (
-      <button className="flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0" onClick={() => setMode("home")}>
+      <button
+        className="flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0"
+        onClick={() => (mode === "shortlist" ? closeShortlist() : setMode("home"))}
+      >
         <ArrowLeft className="h-4 w-4" />
         返回
       </button>
@@ -208,7 +218,7 @@ export default function App() {
         onLogoClick={() => setMode("home")}
         shortlistCount={shortlist.items.length}
         shortlistActive={mode === "shortlist"}
-        onShortlistClick={() => setMode(mode === "shortlist" ? "home" : "shortlist")}
+        onShortlistClick={() => (mode === "shortlist" ? closeShortlist() : openShortlist())}
       />
 
       {error && (

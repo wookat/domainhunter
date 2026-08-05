@@ -435,15 +435,18 @@ export function ResultsPage({
               </span>
             </>
           ) : (
-            <span className="hidden items-center gap-1.5 text-xs text-txt2 sm:flex">
-              <Lock className="h-3.5 w-3.5" />
-              点行内 <Lock className="h-3 w-3" /> 锁定候选，可围绕它再猎一轮
+            <span className="flex items-center gap-1.5 text-xs text-txt2">
+              <Lock className="h-3.5 w-3.5 shrink-0" />
+              <span className="hidden sm:inline">
+                点行内 <Lock className="inline h-3 w-3" /> 锁定候选，可围绕它再猎一轮
+              </span>
+              <span className="sm:hidden">锁定候选可定向再猎</span>
             </span>
           )}
           <div className="flex-1" />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="hidden h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 sm:flex">
+              <button className="flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 md:h-9">
                 <Download className="h-4 w-4" />
                 导出
               </button>
