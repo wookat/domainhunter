@@ -1,0 +1,11 @@
+{
+  "name": "domainhunter",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build",
+    "deploy": "pnpm --filter web deploy",
+    "typecheck": "pnpm -r typecheck"
+  }
+}
