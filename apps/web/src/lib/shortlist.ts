@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 
-import type { Row } from "@/types";
+import type { Row, Status } from "@/types";
 
 const KEY = "domainhunter:shortlist";
 const LEGACY_KEY = "domainhunter:favorites";
+const CHECKED_AT_KEY = "domainhunter:shortlist:checkedAt";
 
 export interface ShortlistItem {
   domain: string;
@@ -12,10 +13,11 @@ export interface ShortlistItem {
   meaning?: string;
   scores?: Row["scores"];
   addedAt: number;
+  status?: Status;
 }
 
 function rowToItem(row: Row): ShortlistItem {
-  return { domain: row.domain, label: row.label, tld: row.tld, meaning: row.meaning, scores: row.scores, addedAt: Date.now() };
+  return { domain: row.domain, label: row.label, tld: row.tld, meaning: row.meaning, scores: row.scores, status: row.status, addedAt: Date.now() };
 }
 
 function load(): ShortlistItem[] {
@@ -36,8 +38,19 @@ function load(): ShortlistItem[] {
   return [];
 }
 
+function loadCheckedAt(): number | null {
+  try {
+    const raw = localStorage.getItem(CHECKED_AT_KEY);
+    if (raw) return Number(raw) || null;
+  } catch {
+    // ignore
+  }
+  return null;
+}
+
 export function useShortlist() {
   const [items, setItems] = useState<ShortlistItem[]>(load);
+  const [lastCheckedAt, setLastCheckedAt] = useState<number | null>(loadCheckedAt);
 
   useEffect(() => {
     try {
@@ -61,5 +74,17 @@ export function useShortlist() {
 
   const clear = useCallback(() => setItems([]), []);
 
-  return { items, has, toggle, remove, clear };
+  /** 重新核验后回写状态与核验时间 */
+  const applyStatuses = useCallback((statuses: Record<string, Status>) => {
+    setItems((prev) => prev.map((i) => (statuses[i.domain] ? { ...i, status: statuses[i.domain] } : i)));
+    const now = Date.now();
+    setLastCheckedAt(now);
+    try {
+      localStorage.setItem(CHECKED_AT_KEY, String(now));
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  return { items, has, toggle, remove, clear, lastCheckedAt, applyStatuses };
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Lock } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { useI18n } from "@/lib/i18n";
 import { REGISTRARS } from "@/lib/registrars";
 import { scoreBadgeClass, tldPriceFull, tldPriceShort, totalScore, type Row } from "@/types";
 import { cn } from "@/lib/utils";
@@ -34,10 +35,11 @@ export function RegisterMenu({ domain, children }: { domain: string; children: R
 }
 
 export function CopyButton({ domain, className }: { domain: string; className?: string }) {
+  const { t } = useI18n();
   const [copied, setCopied] = useState(false);
   return (
     <button
-      title="复制"
+      title={t("common.copy")}
       className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-md text-txt2 transition-colors hover:bg-bg3 hover:text-txt0", className)}
       onClick={async () => {
         await navigator.clipboard.writeText(domain);
@@ -67,6 +69,7 @@ export function DomainRow({
   favorite?: boolean;
   onToggleFavorite?: (row: Row) => void;
 }) {
+  const { t } = useI18n();
   const score = row.scores ? totalScore(row.scores) : undefined;
 
   if (row.status === "taken") {
@@ -74,7 +77,7 @@ export function DomainRow({
       <div className="flex h-12 items-center gap-3 px-4 opacity-50">
         <span className="tnum w-8 shrink-0 rounded-md bg-taken-dim py-0.5 text-center font-mono text-xs text-taken">—</span>
         <span className="truncate font-mono text-[15px] text-taken line-through">{row.domain}</span>
-        <span className="shrink-0 rounded bg-taken-dim px-1.5 py-0.5 text-[11px] text-taken">已注册</span>
+        <span className="shrink-0 rounded bg-taken-dim px-1.5 py-0.5 text-[11px] text-taken">{t("status.taken")}</span>
       </div>
     );
   }
@@ -85,7 +88,7 @@ export function DomainRow({
         <span className="tnum w-8 shrink-0 rounded-md bg-amber2-dim py-0.5 text-center font-mono text-xs text-amber2">…</span>
         <DomainName row={row} />
         <span className="dot-breathe h-1.5 w-1.5 shrink-0 rounded-full bg-amber2" />
-        <span className="hidden flex-1 truncate text-xs text-amber2 sm:block">RDAP 核验中…</span>
+        <span className="hidden flex-1 truncate text-xs text-amber2 sm:block">{t("agent.checkingRdap")}</span>
       </div>
     );
   }
@@ -102,7 +105,7 @@ export function DomainRow({
       </span>
       <DomainName row={row} />
       <span className={cn("h-1.5 w-1.5 shrink-0 rounded-full", isUnknown ? "bg-amber2" : "bg-brand")} />
-      {isUnknown && <span className="shrink-0 rounded bg-amber2-dim px-1.5 py-0.5 text-[11px] text-amber2">未知</span>}
+      {isUnknown && <span className="shrink-0 rounded bg-amber2-dim px-1.5 py-0.5 text-[11px] text-amber2">{t("status.unknown")}</span>}
       <span className="hidden flex-1 truncate text-xs text-txt1 sm:block">{row.meaning}</span>
       <span className="ml-auto sm:ml-0" />
       {tldPriceShort(row.tld) && (
@@ -112,7 +115,7 @@ export function DomainRow({
       )}
       {onToggleLock && (
         <button
-          title="锁定：再来一轮时围绕它找"
+          title={t("results.lockTitle")}
           aria-pressed={locked}
           className={cn("hidden h-8 w-8 shrink-0 place-items-center rounded-md transition-colors hover:bg-bg3 sm:grid", locked ? "text-brand" : "text-txt2 hover:text-txt0")}
           onClick={() => onToggleLock(row.domain)}
@@ -123,7 +126,7 @@ export function DomainRow({
       <CopyButton domain={row.domain} className="hidden sm:grid" />
       {onToggleFavorite && (
         <button
-          title={favorite ? "移出候选清单" : "收藏到候选清单"}
+          title={favorite ? t("results.favRemove") : t("results.favAdd")}
           aria-pressed={favorite}
           className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-md transition-colors hover:bg-bg3", favorite ? "text-brand" : "text-txt2 hover:text-txt0")}
           onClick={() => onToggleFavorite(row)}
@@ -133,7 +136,7 @@ export function DomainRow({
       )}
       <RegisterMenu domain={row.domain}>
         <button className="h-8 shrink-0 rounded-md bg-brand-dim px-3 text-xs font-semibold text-brand transition-opacity hover:opacity-80">
-          去注册
+          {t("common.register")}
         </button>
       </RegisterMenu>
     </div>

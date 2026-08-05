@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import { nanoid } from "nanoid";
 import { generateCandidates, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
 import { generateAiCandidates, generateUnderstanding } from "./ai";
@@ -10,6 +11,20 @@ const app = new Hono<{ Bindings: Bindings }>();
 const RATE_LIMIT_PER_HOUR = 20;
 const CACHE_TTL_TAKEN = 24 * 3600; // 已注册结果缓存 24h
 const CACHE_TTL_AVAILABLE = 3600; // available 缓存 1h，防抢注误导
+const SHARE_TTL = 30 * 24 * 3600; // 分享快照保留 30 天
+const MAX_SHARE_ITEMS = 100;
+const MAX_RECHECK_DOMAINS = 100;
+const STATS_KEY = "stats:checked";
+const DOMAIN_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62}))+$/;
+
+/** 累计核验计数（KV 非原子，允许少量误差） */
+async function bumpStats(kv: KVNamespace | undefined, n: number): Promise<void> {
+  if (!kv || n <= 0) return;
+  try {
+    const cur = Number((await kv.get(STATS_KEY)) ?? "0");
+    await kv.put(STATS_KEY, String(cur + n));
+  } catch { /* 计数失败不影响主流程 */ }
+}
 
 /** 按 IP 简单限流（KV 计数，按小时桶）；无 KV 绑定时不限流 */
 async function checkRateLimit(kv: KVNamespace | undefined, ip: string): Promise<boolean> {
@@ -32,9 +47,10 @@ async function checkDomainsCached(
   kv: KVNamespace | undefined,
   domains: string[],
   onResult: (r: CheckResult & { cached?: boolean }) => Promise<void>,
+  refresh = false,
 ): Promise<void> {
   let misses = domains;
-  if (kv) {
+  if (kv && !refresh) {
     misses = [];
     const hits = await Promise.all(
       domains.map(async (d) => {
@@ -61,6 +77,34 @@ async function checkDomainsCached(
     }
     await onResult(r);
   }, 6, fetch, whoisFallback);
+  await bumpStats(kv, misses.length);
+}
+
+interface ShareItem {
+  domain: string;
+  label: string;
+  tld: string;
+  meaning?: string;
+  scores?: { length: number; readability: number; relevance: number; brandability: number };
+}
+
+function sanitizeShareItem(raw: unknown): ShareItem | null {
+  if (typeof raw !== "object" || raw === null) return null;
+  const o = raw as Record<string, unknown>;
+  const domain = typeof o.domain === "string" ? o.domain.trim().toLowerCase() : "";
+  if (!DOMAIN_RE.test(domain) || domain.length > 253) return null;
+  const dot = domain.indexOf(".");
+  const item: ShareItem = { domain, label: domain.slice(0, dot), tld: domain.slice(dot + 1) };
+  if (typeof o.meaning === "string" && o.meaning) item.meaning = o.meaning.slice(0, 300);
+  const s = o.scores as Record<string, unknown> | undefined;
+  if (s && typeof s === "object") {
+    const num = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? Math.min(Math.max(Math.round(v), 0), 100) : null);
+    const length = num(s.length), readability = num(s.readability), relevance = num(s.relevance), brandability = num(s.brandability);
+    if (length !== null && readability !== null && relevance !== null && brandability !== null) {
+      item.scores = { length, readability, relevance, brandability };
+    }
+  }
+  return item;
 }
 
 app.post("/api/ai-search", async (c) => {
@@ -184,6 +228,73 @@ app.post("/api/search", async (c) => {
     headers: { "content-type": "application/x-ndjson; charset=utf-8" },
   });
 });
+
+// 候选清单分享：存快照到 KV，返回可访问的只读链接
+app.post("/api/share", async (c) => {
+  const kv = c.env.CACHE;
+  if (!kv) return c.json({ error: "share_unavailable" }, 503);
+  const body = await c.req.json<{ items?: unknown[] }>().catch(() => null);
+  const rawItems = Array.isArray(body?.items) ? body.items : [];
+  if (rawItems.length === 0) return c.json({ error: "items required" }, 400);
+  if (rawItems.length > MAX_SHARE_ITEMS) return c.json({ error: "too many items" }, 400);
+  const items = rawItems.map(sanitizeShareItem).filter((x): x is ShareItem => x !== null);
+  if (items.length === 0) return c.json({ error: "items invalid" }, 400);
+  const id = nanoid(10);
+  await kv.put(`share:${id}`, JSON.stringify({ items, createdAt: Date.now() }), { expirationTtl: SHARE_TTL });
+  const origin = new URL(c.req.url).origin;
+  return c.json({ id, url: `${origin}/s/${id}` });
+});
+
+app.get("/api/share/:id", async (c) => {
+  const kv = c.env.CACHE;
+  if (!kv) return c.json({ error: "share_unavailable" }, 503);
+  const id = c.req.param("id");
+  if (!/^[\w-]{1,32}$/.test(id)) return c.json({ error: "not_found" }, 404);
+  const snapshot = await kv.get(`share:${id}`, "text");
+  if (!snapshot) return c.json({ error: "not_found" }, 404);
+  return new Response(snapshot, { headers: { "content-type": "application/json; charset=utf-8" } });
+});
+
+// 清单复查：指定域名重新核验（refresh=1 穿透缓存），NDJSON 流式返回
+app.post("/api/check", async (c) => {
+  const body = await c.req.json<{ domains?: string[]; refresh?: boolean }>().catch(() => null);
+  const domains = [...new Set((body?.domains ?? []).map((d) => String(d).trim().toLowerCase()).filter((d) => DOMAIN_RE.test(d)))].slice(0, MAX_RECHECK_DOMAINS);
+  if (domains.length === 0) return c.json({ error: "domains required" }, 400);
+  const refresh = body?.refresh === true || c.req.query("refresh") === "1";
+
+  const ip = c.req.header("cf-connecting-ip") ?? c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  if (!(await checkRateLimit(c.env.CACHE, ip))) {
+    return c.json({ error: "rate_limited", message: `请求太频繁：每小时最多 ${RATE_LIMIT_PER_HOUR} 次，休息一会儿再来吧` }, 429);
+  }
+
+  const { readable, writable } = new TransformStream();
+  const writer = writable.getWriter();
+  const encoder = new TextEncoder();
+  c.executionCtx.waitUntil(
+    (async () => {
+      try {
+        await checkDomainsCached(c.env.CACHE, domains, async (r) => {
+          await writer.write(encoder.encode(JSON.stringify(r) + "\n"));
+        }, refresh);
+      } finally {
+        await writer.close();
+      }
+    })(),
+  );
+  return new Response(readable, { headers: { "content-type": "application/x-ndjson; charset=utf-8" } });
+});
+
+// 信任数据：累计核验域名数
+app.get("/api/stats", async (c) => {
+  let totalChecked = 0;
+  try {
+    totalChecked = Number((await c.env.CACHE?.get(STATS_KEY)) ?? "0");
+  } catch { /* KV 不可用时返回 0 */ }
+  return c.json({ totalChecked }, 200, { "cache-control": "public, max-age=60" });
+});
+
+// SPA 分享页路由：回 index.html，前端按 pathname 渲染只读清单
+app.get("/s/:id", (c) => c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw)));
 
 app.all("*", (c) => c.env.ASSETS.fetch(c.req.raw));
 
