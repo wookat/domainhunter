@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DomainHunter · Agent 检索进行中原型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: {
+      sans: ['Inter','PingFang SC','Noto Sans SC','system-ui','sans-serif'],
+      mono: ['JetBrains Mono','ui-monospace','monospace'],
+    },
+  }}
+}
+</script>
+<style>
+  body { -webkit-font-smoothing: antialiased; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .spin { animation: spin 1s linear infinite; }
+</style>
+</head>
+<body class="bg-zinc-50 text-zinc-950 font-sans min-h-screen">
+
+<header class="border-b border-zinc-200 bg-white sticky top-0 z-10">
+  <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 font-bold text-lg tracking-tight">
+      <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-600 text-white"><i data-lucide="radar" class="h-4 w-4"></i></span>
+      Domain<span class="text-emerald-600">Hunter</span>
+    </a>
+    <button class="inline-flex h-9 items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 text-sm font-medium text-zinc-600 hover:bg-zinc-100 transition-colors">
+      <i data-lucide="square" class="h-3.5 w-3.5"></i> 停止
+    </button>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 md:px-6 py-6 pb-24">
+
+  <!-- 需求理解确认：Alert -->
+  <div class="rounded-xl border border-emerald-200 bg-emerald-50/60 p-4 flex items-start gap-3">
+    <i data-lucide="brain-circuit" class="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"></i>
+    <div class="flex-1 min-w-0">
+      <p class="text-sm font-semibold text-emerald-900">AI 对需求的理解</p>
+      <p class="mt-1 text-sm text-emerald-800/90 leading-relaxed">为「帮体制内人群寻找新工作的求职平台」找域名：名字要专业可信、易读易记，偏商务风，优先 .com / .cn，长度 ≤8 字符。</p>
+    </div>
+    <button class="inline-flex h-8 items-center gap-1 rounded-lg px-2.5 text-xs font-medium text-emerald-700 hover:bg-emerald-100 transition-colors shrink-0">
+      <i data-lucide="pencil" class="h-3.5 w-3.5"></i> 修改
+    </button>
+  </div>
+
+  <!-- 分轮进度时间线 -->
+  <div class="mt-6 rounded-xl border border-zinc-200 bg-white shadow-sm p-4 md:p-5">
+    <div class="flex items-center justify-between gap-3 flex-wrap">
+      <div class="flex items-center gap-2.5">
+        <span class="relative flex h-2.5 w-2.5"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"></span></span>
+        <p class="text-sm font-semibold">第 2 轮 · 正在核验候选域名</p>
+      </div>
+      <p class="text-sm text-zinc-500">已找到 <span class="font-semibold text-emerald-600">6</span> / 目标 10 个可注册</p>
+    </div>
+    <!-- Progress -->
+    <div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-zinc-100">
+      <div class="h-full w-[60%] rounded-full bg-emerald-500 transition-all duration-500"></div>
+    </div>
+    <!-- 轮次时间线 -->
+    <ol class="mt-4 space-y-2.5">
+      <li class="flex items-center gap-2.5 text-sm">
+        <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-600 text-white shrink-0"><i data-lucide="check" class="h-3 w-3"></i></span>
+        <span class="text-zinc-500">第 1 轮：构思 12 个 → 4 个可注册；反思「.com 命中率低，改用复合词 + 拼音」</span>
+      </li>
+      <li class="flex items-center gap-2.5 text-sm">
+        <span class="inline-flex h-5 w-5 items-center justify-center rounded-full border-2 border-emerald-500 bg-white shrink-0"><i data-lucide="loader-2" class="h-3 w-3 text-emerald-600 spin"></i></span>
+        <span class="font-medium text-zinc-900">第 2 轮：已构思 10 个，核验中 3 / 10 …</span>
+      </li>
+      <li class="flex items-center gap-2.5 text-sm">
+        <span class="inline-flex h-5 w-5 items-center justify-center rounded-full border-2 border-zinc-200 bg-white shrink-0"></span>
+        <span class="text-zinc-400">第 3 轮（如仍不足 10 个自动进行）</span>
+      </li>
+    </ol>
+  </div>
+
+  <!-- 卡片流：名字+寓意先出，状态原位翻转 -->
+  <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    <!-- 已核验：可注册 -->
+    <div class="rounded-xl border border-emerald-200 bg-white shadow-sm p-4 ring-1 ring-emerald-100">
+      <div class="flex items-start justify-between gap-2">
+        <p class="font-mono text-lg font-semibold tracking-tight">zhituo<span class="text-zinc-400">.com</span></p>
+        <span class="inline-flex items-center gap-1 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-0.5 text-xs font-medium text-emerald-700 shrink-0"><i data-lucide="check" class="h-3 w-3"></i>可注册</span>
+      </div>
+      <p class="mt-1.5 text-sm text-zinc-500 leading-relaxed">「智拓」= 智慧 + 开拓，寓意为体制内人才智慧地拓展职业新边界，商务感强。</p>
+    </div>
+
+    <!-- 已核验：已注册（降透明度） -->
+    <div class="rounded-xl border border-zinc-200 bg-white shadow-sm p-4 opacity-60">
+      <div class="flex items-start justify-between gap-2">
+        <p class="font-mono text-lg font-semibold tracking-tight line-through decoration-zinc-300">newpath<span class="text-zinc-400">.com</span></p>
+        <span class="inline-flex items-center gap-1 rounded-full border border-rose-200 bg-rose-50 px-2.5 py-0.5 text-xs font-medium text-rose-600 shrink-0"><i data-lucide="x" class="h-3 w-3"></i>已注册</span>
+      </div>
+      <p class="mt-1.5 text-sm text-zinc-500 leading-relaxed">「新路径」，直白表达职业转型的新方向，可信直接。</p>
+    </div>
+
+    <!-- 检测中：amber 徽章 + pulse -->
+    <div class="rounded-xl border border-zinc-200 bg-white shadow-sm p-4">
+      <div class="flex items-start justify-between gap-2">
+        <p class="font-mono text-lg font-semibold tracking-tight">wenjin<span class="text-zinc-400">.cn</span></p>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-600 shrink-0"><span class="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse"></span>检测中</span>
+      </div>
+      <p class="mt-1.5 text-sm text-zinc-500 leading-relaxed">「稳进」，稳中求进，精准戳中体制内人群求稳又想突破的心理。</p>
+    </div>
+
+    <!-- 检测中 -->
+    <div class="rounded-xl border border-zinc-200 bg-white shadow-sm p-4">
+      <div class="flex items-start justify-between gap-2">
+        <p class="font-mono text-lg font-semibold tracking-tight">careerbridge<span class="text-zinc-400">.com</span></p>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-600 shrink-0"><span class="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse"></span>检测中</span>
+      </div>
+      <p class="mt-1.5 text-sm text-zinc-500 leading-relaxed">职业之桥，连接体制内外两个世界，国际化表达。</p>
+    </div>
+
+    <!-- 名字刚出，寓意流式中：Skeleton -->
+    <div class="rounded-xl border border-zinc-200 bg-white shadow-sm p-4">
+      <div class="flex items-start justify-between gap-2">
+        <p class="font-mono text-lg font-semibold tracking-tight">tuoye<span class="text-zinc-400">.cn</span></p>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-zinc-100 px-2.5 py-0.5 text-xs font-medium text-zinc-500 shrink-0">排队中</span>
+      </div>
+      <div class="mt-2.5 space-y-1.5">
+        <div class="h-3 w-4/5 rounded bg-zinc-100 animate-pulse"></div>
+        <div class="h-3 w-3/5 rounded bg-zinc-100 animate-pulse"></div>
+      </div>
+    </div>
+
+    <!-- 下一个占位 -->
+    <div class="rounded-xl border border-dashed border-zinc-200 bg-white/60 p-4 flex items-center justify-center min-h-[104px]">
+      <p class="text-sm text-zinc-400 flex items-center gap-2"><i data-lucide="loader-2" class="h-4 w-4 spin"></i>AI 正在构思更多名字…</p>
+    </div>
+  </div>
+</main>
+
+<!-- 底部粘性统计条（移动端友好） -->
+<div class="fixed bottom-0 inset-x-0 border-t border-zinc-200 bg-white/95 backdrop-blur">
+  <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-3">
+    <p class="text-sm text-zinc-500 truncate">第 2 轮 · 核验 3/10 · <span class="text-emerald-600 font-medium">6 个可注册</span></p>
+    <button class="inline-flex h-9 items-center gap-1.5 rounded-lg bg-emerald-600 px-4 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors shrink-0">
+      查看结果 <i data-lucide="arrow-right" class="h-4 w-4"></i>
+    </button>
+  </div>
+</div>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>
