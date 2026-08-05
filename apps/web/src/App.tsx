@@ -8,6 +8,7 @@ import { ResultsPage, ExportMenu } from "@/components/results-page";
 import { AdvancedPage } from "@/components/advanced-page";
 import { Button } from "@/components/ui/button";
 import { isMockEnabled, runMockStream } from "@/mock";
+import { friendlyError, friendlyHttpError } from "@/lib/utils";
 import type { Row, RoundInfo, StreamEvent, Status } from "@/types";
 
 type Mode = "home" | "agent" | "results" | "advanced";
@@ -33,6 +34,7 @@ export default function App() {
   const [error, setError] = useState("");
   const abortRef = useRef<AbortController | null>(null);
   const triedLabelsRef = useRef<string[]>([]);
+  const roundOffsetRef = useRef(0);
   const [favorites, setFavorites] = useState<Set<string>>(loadFavorites);
 
   useEffect(() => {
@@ -49,13 +51,25 @@ export default function App() {
 
   const availableCount = rows.filter((r) => r.status === "available").length;
 
+  function clearAiResults() {
+    abortRef.current?.abort();
+    setRunning(false);
+    setRows([]);
+    setRounds([]);
+    setCurrentRound(0);
+    setError("");
+    triedLabelsRef.current = [];
+    roundOffsetRef.current = 0;
+  }
+
   function handleEvent(ev: StreamEvent) {
+    const round = (ev.round ?? 0) + roundOffsetRef.current;
     if (ev.type === "round") {
-      setCurrentRound(ev.round!);
+      setCurrentRound(round);
       setRounds((prev) =>
-        prev.some((r) => r.round === ev.round)
+        prev.some((r) => r.round === round)
           ? prev
-          : [...prev, { round: ev.round!, note: ev.note ?? "", proposed: 0, checked: 0, available: 0 }],
+          : [...prev, { round, note: ev.note ?? "", proposed: 0, checked: 0, available: 0 }],
       );
     } else if (ev.type === "proposed") {
       const newRows: Row[] = ev.items!.flatMap((it) =>
@@ -67,13 +81,13 @@ export default function App() {
             status: "checking",
             meaning: it.meaning,
             scores: it.scores,
-            round: ev.round!,
+            round,
           }),
         ),
       );
       triedLabelsRef.current.push(...ev.items!.map((i) => i.label));
       setRows((prev) => [...prev, ...newRows]);
-      setRounds((prev) => prev.map((r) => (r.round === ev.round ? { ...r, proposed: r.proposed + newRows.length } : r)));
+      setRounds((prev) => prev.map((r) => (r.round === round ? { ...r, proposed: r.proposed + newRows.length } : r)));
     } else if (ev.type === "done") {
       // no-op：running 状态在流结束时统一收尾
     } else if (ev.type === "error") {
@@ -99,11 +113,14 @@ export default function App() {
     abortRef.current?.abort();
     const ac = new AbortController();
     abortRef.current = ac;
-    if (!more) {
+    if (more) {
+      roundOffsetRef.current = rounds.reduce((max, r) => Math.max(max, r.round), 0);
+    } else {
       setRows([]);
       setRounds([]);
       setCurrentRound(0);
       triedLabelsRef.current = [];
+      roundOffsetRef.current = 0;
     }
     setError("");
     setRunning(true);
@@ -126,7 +143,7 @@ export default function App() {
         }),
         signal: ac.signal,
       });
-      if (!res.ok) throw new Error(`请求失败（${res.status}）`);
+      if (!res.ok) throw new Error(friendlyHttpError(res.status));
       const reader = res.body!.getReader();
       const decoder = new TextDecoder();
       let buf = "";
@@ -142,7 +159,7 @@ export default function App() {
         }
       }
     } catch (e) {
-      if ((e as Error).name !== "AbortError") setError((e as Error).message);
+      if ((e as Error).name !== "AbortError") setError(friendlyError(e as Error));
     } finally {
       setRunning(false);
       if (!ac.signal.aborted) setMode((m) => (m === "agent" ? "results" : m));
@@ -166,7 +183,7 @@ export default function App() {
 
   const headerRight =
     mode === "home" ? (
-      <Button variant="ghost" size="sm" className="text-zinc-500" onClick={() => setMode("advanced")}>
+      <Button variant="ghost" size="sm" className="text-zinc-500" onClick={() => { clearAiResults(); setMode("advanced"); }}>
         <SlidersHorizontal className="h-4 w-4" /> 高级模式
       </Button>
     ) : mode === "results" ? (
@@ -215,6 +232,7 @@ export default function App() {
           onToggleFavorite={toggleFavorite}
           onMore={() => void run(values, true)}
           running={running}
+          moreDisabled={!values.description.trim()}
         />
       )}
       {mode === "advanced" && <AdvancedPage />}

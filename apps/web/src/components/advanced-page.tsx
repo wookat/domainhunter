@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ProgressCard } from "@/components/domain-card";
+import { friendlyError, friendlyHttpError } from "@/lib/utils";
 import type { Row, Status } from "@/types";
 
 const split = (s: string) => s.split(/[,，\s]+/).map((x) => x.trim()).filter(Boolean);
@@ -33,7 +34,7 @@ export function AdvancedPage() {
         body: JSON.stringify({ roots: split(roots), prefixes: split(prefixes), suffixes: split(suffixes), tlds: split(tlds) }),
         signal: ac.signal,
       });
-      if (!res.ok) throw new Error(`请求失败（${res.status}）`);
+      if (!res.ok) throw new Error(friendlyHttpError(res.status));
       const reader = res.body!.getReader();
       const decoder = new TextDecoder();
       let buf = "";
@@ -54,7 +55,7 @@ export function AdvancedPage() {
         if (rs.length) setRows((prev) => [...prev, ...rs]);
       }
     } catch (e) {
-      if ((e as Error).name !== "AbortError") setError((e as Error).message);
+      if ((e as Error).name !== "AbortError") setError(friendlyError(e as Error));
     } finally {
       setRunning(false);
     }

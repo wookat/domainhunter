@@ -16,7 +16,7 @@ app.post("/api/ai-search", async (c) => {
     style?: string;
     lengthPref?: string;
   }>();
-  let description = (body.description ?? "").trim();
+  let description = (body.description ?? "").trim().slice(0, 500);
   const style = (body.style ?? "").trim().slice(0, 50);
   const lengthPref = (body.lengthPref ?? "").trim().slice(0, 50);
   if (style) description += `\n命名风格偏好：${style}`;
@@ -25,7 +25,7 @@ app.post("/api/ai-search", async (c) => {
   const target = Math.min(Math.max(body.target ?? 10, 3), 30);
   const MAX_ROUNDS = 5;
   if (!(body.description ?? "").trim()) return c.json({ error: "description required" }, 400);
-  if (description.length > 600) return c.json({ error: "description too long" }, 400);
+  if (description.length > 620) return c.json({ error: "description too long" }, 400);
 
   const apiKey = c.env.DEEPSEEK_API_KEY;
   const { readable, writable } = new TransformStream();

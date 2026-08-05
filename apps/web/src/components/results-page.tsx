@@ -50,6 +50,7 @@ export function ResultsPage({
   onToggleFavorite,
   onMore,
   running,
+  moreDisabled,
 }: {
   rows: Row[];
   description: string;
@@ -58,6 +59,7 @@ export function ResultsPage({
   onToggleFavorite: (domain: string) => void;
   onMore: () => void;
   running: boolean;
+  moreDisabled?: boolean;
 }) {
   const [filter, setFilter] = useState<Filter>("all");
   const [onlyAvailable, setOnlyAvailable] = useState(false);
@@ -145,7 +147,7 @@ export function ResultsPage({
             variant="outline"
             className="h-10 px-5 hover:border-emerald-300 hover:text-emerald-700"
             onClick={onMore}
-            disabled={running}
+            disabled={running || moreDisabled}
           >
             <RefreshCw className={cn("h-4 w-4", running && "animate-spin")} />
             不满意？再来一批
@@ -155,7 +157,7 @@ export function ResultsPage({
 
       <div className="fixed inset-x-0 bottom-0 border-t border-zinc-200 bg-white/95 backdrop-blur md:hidden">
         <div className="flex h-16 items-center gap-2 px-4">
-          <Button className="h-11 flex-1 font-semibold" onClick={onMore} disabled={running}>
+          <Button className="h-11 flex-1 font-semibold" onClick={onMore} disabled={running || moreDisabled}>
             <RefreshCw className={cn("h-4 w-4", running && "animate-spin")} />
             再来一批
           </Button>

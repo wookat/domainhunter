@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 const EXAMPLES = ["冥想 App，安静治愈", "跨境电商选品工具", "程序员副业社区"];
 const PRESET_TLDS = ["com", "cn", "io", "ai", "app", "dev"];
-const MAX_LEN = 200;
+const MAX_LEN = 500;
 
 export const STYLE_OPTIONS = [
   { value: "none", label: "不限风格" },
