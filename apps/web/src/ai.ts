@@ -20,10 +20,22 @@ export async function generateAiCandidates(
   apiKey: string,
   opts: { count?: number; excludeTaken?: string[]; round?: number } = {},
 ): Promise<AiCandidate[]> {
+  try {
+    return await generateOnce(description, apiKey, opts);
+  } catch {
+    return await generateOnce(description, apiKey, opts);
+  }
+}
+
+async function generateOnce(
+  description: string,
+  apiKey: string,
+  opts: { count?: number; excludeTaken?: string[]; round?: number } = {},
+): Promise<AiCandidate[]> {
   const count = opts.count ?? 24;
   let user = `需求描述：${description}\n请给出 ${count} 个候选。`;
   if (opts.excludeTaken?.length) {
-    user += `\n\n这是第 ${opts.round ?? 2} 轮。以下名字已被注册或已尝试过，禁止再输出它们，并反思其共性（太常见/太直白），这一轮要更有创造性（造词、混搭、冷僻组合），但仍要好读好记、贴合需求：\n${opts.excludeTaken.slice(-120).join(", ")}`;
+    user += `\n\n这是第 ${opts.round ?? 2} 轮。以下名字已被注册或已尝试过，禁止再输出它们，并反思其共性（太常见/太直白），这一轮要更有创造性（造词、混搭、冷僻组合），但仍要好读好记、贴合需求：\n${opts.excludeTaken.slice(-60).join(", ")}`;
   }
   const res = await fetch("https://api.deepseek.com/chat/completions", {
     method: "POST",

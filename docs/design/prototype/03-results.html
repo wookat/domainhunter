@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DomainHunter · 结果列表原型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: {
+      sans: ['Inter','PingFang SC','Noto Sans SC','system-ui','sans-serif'],
+      mono: ['JetBrains Mono','ui-monospace','monospace'],
+    },
+  }}
+}
+</script>
+<style>
+  body { -webkit-font-smoothing: antialiased; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { scrollbar-width: none; }
+</style>
+</head>
+<body class="bg-zinc-50 text-zinc-950 font-sans min-h-screen">
+
+<header class="border-b border-zinc-200 bg-white sticky top-0 z-10">
+  <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 font-bold text-lg tracking-tight">
+      <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-600 text-white"><i data-lucide="radar" class="h-4 w-4"></i></span>
+      Domain<span class="text-emerald-600">Hunter</span>
+    </a>
+    <div class="flex items-center gap-2">
+      <button class="hidden md:inline-flex h-9 items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 text-sm font-medium text-zinc-600 hover:bg-zinc-100 transition-colors"><i data-lucide="download" class="h-4 w-4"></i>导出<i data-lucide="chevron-down" class="h-3.5 w-3.5 text-zinc-400"></i></button>
+      <button class="hidden md:inline-flex h-9 items-center gap-1.5 rounded-lg bg-emerald-600 px-4 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors"><i data-lucide="refresh-cw" class="h-4 w-4"></i>再来一批</button>
+      <button class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 text-zinc-600"><i data-lucide="star" class="h-4 w-4"></i></button>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 md:px-6 py-6 pb-24 md:pb-10">
+
+  <!-- 结果摘要 -->
+  <div class="flex items-start justify-between gap-3 flex-wrap">
+    <div>
+      <h1 class="text-xl md:text-2xl font-bold tracking-tight">找到 <span class="text-emerald-600">11</span> 个可注册域名</h1>
+      <p class="mt-1 text-sm text-zinc-500">「体制内求职平台」 · 2 轮 · 共核验 22 个 · 用时 48s</p>
+    </div>
+  </div>
+
+  <!-- 过滤条：徽章过滤 + 只看可注册 Switch + 排序 -->
+  <div class="mt-4 flex items-center gap-2 overflow-x-auto no-scrollbar -mx-4 px-4 md:mx-0 md:px-0 md:flex-wrap">
+    <button class="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full bg-zinc-900 px-3.5 text-xs font-medium text-white">全部 <span class="text-zinc-400">22</span></button>
+    <button class="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 text-xs font-medium text-emerald-700"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>可注册 11</button>
+    <button class="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3.5 text-xs font-medium text-zinc-500 hover:border-zinc-300"><span class="h-1.5 w-1.5 rounded-full bg-rose-400"></span>已注册 9</button>
+    <button class="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3.5 text-xs font-medium text-zinc-500 hover:border-zinc-300"><span class="h-1.5 w-1.5 rounded-full bg-zinc-400"></span>未知 2</button>
+    <span class="mx-1 hidden md:block h-5 w-px bg-zinc-200"></span>
+    <!-- Switch -->
+    <label class="inline-flex h-8 shrink-0 items-center gap-2 rounded-full border border-zinc-200 bg-white px-3.5 text-xs font-medium text-zinc-600 cursor-pointer">
+      <span class="relative inline-flex h-4.5 w-8 items-center rounded-full bg-emerald-600 p-0.5"><span class="h-3.5 w-3.5 translate-x-3.5 rounded-full bg-white shadow transition-transform" style="height:14px;width:14px"></span></span>
+      只看可注册
+    </label>
+    <button class="ml-auto hidden md:inline-flex h-8 shrink-0 items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 text-xs font-medium text-zinc-600 hover:border-zinc-300"><i data-lucide="arrow-down-wide-narrow" class="h-3.5 w-3.5"></i>按评分排序<i data-lucide="chevron-down" class="h-3.5 w-3.5 text-zinc-400"></i></button>
+  </div>
+
+  <!-- 卡片网格 -->
+  <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    <!-- 卡片 1：高分可注册（含注册商下拉展开示意） -->
+    <div class="rounded-xl border border-emerald-200 bg-white shadow-sm p-4 ring-1 ring-emerald-100 hover:shadow-md transition-shadow">
+      <div class="flex items-start gap-3">
+        <!-- 评分环 SVG -->
+        <div class="relative h-12 w-12 shrink-0">
+          <svg viewBox="0 0 40 40" class="h-12 w-12 -rotate-90">
+            <circle cx="20" cy="20" r="17" fill="none" stroke="#f4f4f5" stroke-width="4"/>
+            <circle cx="20" cy="20" r="17" fill="none" stroke="#059669" stroke-width="4" stroke-linecap="round" stroke-dasharray="106.8" stroke-dashoffset="9.6"/>
+          </svg>
+          <span class="absolute inset-0 flex items-center justify-center text-sm font-bold text-emerald-700">91</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-2">
+            <p class="font-mono text-lg font-semibold tracking-tight truncate">zhituo<span class="text-zinc-400">.com</span></p>
+            <span class="inline-flex items-center gap-1 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-0.5 text-xs font-medium text-emerald-700 shrink-0"><i data-lucide="check" class="h-3 w-3"></i>可注册</span>
+          </div>
+          <p class="mt-1 text-sm text-zinc-500 leading-relaxed">「智拓」= 智慧 + 开拓，寓意智慧地拓展职业新边界，商务感强、拼音好记。</p>
+        </div>
+      </div>
+      <!-- 评分维度 -->
+      <div class="mt-3 grid grid-cols-4 gap-2 text-center">
+        <div class="rounded-lg bg-zinc-50 py-1.5"><p class="text-[11px] text-zinc-400">长度</p><p class="text-xs font-semibold text-emerald-700">95</p></div>
+        <div class="rounded-lg bg-zinc-50 py-1.5"><p class="text-[11px] text-zinc-400">读感</p><p class="text-xs font-semibold text-emerald-700">90</p></div>
+        <div class="rounded-lg bg-zinc-50 py-1.5"><p class="text-[11px] text-zinc-400">寓意</p><p class="text-xs font-semibold text-emerald-700">92</p></div>
+        <div class="rounded-lg bg-zinc-50 py-1.5"><p class="text-[11px] text-zinc-400">品牌感</p><p class="text-xs font-semibold text-lime-700">86</p></div>
+      </div>
+      <!-- 操作行 -->
+      <div class="mt-3 flex items-center gap-2">
+        <div class="relative flex-1">
+          <button class="inline-flex h-9 w-full items-center justify-center gap-1.5 rounded-lg bg-emerald-600 px-3 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors">去注册<i data-lucide="chevron-down" class="h-4 w-4 opacity-80"></i></button>
+          <!-- DropdownMenu 展开示意 -->
+          <div class="absolute left-0 top-10 z-20 w-full rounded-lg border border-zinc-200 bg-white shadow-md py-1">
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-50">阿里云<i data-lucide="external-link" class="h-3.5 w-3.5 text-zinc-400"></i></a>
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-50">腾讯云<i data-lucide="external-link" class="h-3.5 w-3.5 text-zinc-400"></i></a>
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-50">Namecheap<i data-lucide="external-link" class="h-3.5 w-3.5 text-zinc-400"></i></a>
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-50">Cloudflare<i data-lucide="external-link" class="h-3.5 w-3.5 text-zinc-400"></i></a>
+          </div>
+        </div>
+        <button class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 text-zinc-500 hover:bg-zinc-100 hover:text-zinc-900 transition-colors" title="复制"><i data-lucide="copy" class="h-4 w-4"></i></button>
+        <button class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-amber-200 bg-amber-50 text-amber-500 transition-colors" title="已收藏"><i data-lucide="star" class="h-4 w-4 fill-current"></i></button>
+      </div>
+    </div>
+
+    <!-- 卡片 2 -->
+    <div class="rounded-xl border border-emerald-200 bg-white shadow-sm p-4 ring-1 ring-emerald-100 hover:shadow-md transition-shadow">
+      <div class="flex items-start gap-3">
+        <div class="relative h-12 w-12 shrink-0">
+          <svg viewBox="0 0 40 40" class="h-12 w-12 -rotate-90">
+            <circle cx="20" cy="20" r="17" fill="none" stroke="#f4f4f5" stroke-width="4"/>
+            <circle cx="20" cy="20" r="17" fill="none" stroke="#65a30d" stroke-width="4" stroke-linecap="round" stroke-dasharray="106.8" stroke-dashoffset="22.4"/>
+          </svg>
+          <span class="absolute inset-0 flex items-center justify-center text-sm font-bold text-lime-700">79</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-2">
+            <p class="font-mono text-lg font-semibold tracking-tight truncate">wenjin<span class="text-zinc-400">.cn</span></p>
+            <span class="inline-flex items-center gap-1 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-0.5 text-xs font-medium text-emerald-700 shrink-0"><i data-lucide="check" class="h-3 w-3"></i>可注册</span>
+          </div>
+          <p class="mt-1 text-sm text-zinc-500 leading-relaxed">「稳进」，稳中求进，精准贴合体制内人群求稳又想突破的心理诉求。</p>
+        </div>
+      </div>
+      <div class="mt-3 grid grid-cols-4 gap-2 text-center">
+        <div class="rounded-lg bg-zinc-50 py-1.5"><p class="text-[11px] text-zinc-400">长度</p><p class="text-xs font-semibold text-emerald-700">90</p></div>
+        <div class="rounded-lg bg-zinc-50 py-1.5"><p class="text-[11px] text-zinc-400">读感</p><p class="text-xs font-semibold text-lime-700">82</p></div>
+        <div class="rounded-lg bg-zinc-50 py-1.5"><p class="text-[11px] text-zinc-400">寓意</p><p class="text-xs font-semibold text-lime-700">80</p></div>
+        <div class="rounded-lg bg-zinc-50 py-1.5"><p class="text-[11px] text-zinc-400">品牌感</p><p class="text-xs font-semibold text-amber-600">64</p></div>
+      </div>
+      <div class="mt-3 flex items-center gap-2">
+        <button class="inline-flex h-9 flex-1 items-center justify-center gap-1.5 rounded-lg bg-emerald-600 px-3 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors">去注册<i data-lucide="chevron-down" class="h-4 w-4 opacity-80"></i></button>
+        <button class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 text-zinc-500 hover:bg-zinc-100 hover:text-zinc-900 transition-colors" title="复制"><i data-lucide="copy" class="h-4 w-4"></i></button>
+        <button class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 text-zinc-400 hover:bg-zinc-100 hover:text-amber-500 transition-colors" title="收藏"><i data-lucide="star" class="h-4 w-4"></i></button>
+      </div>
+    </div>
+
+    <!-- 卡片 3 -->
+    <div class="rounded-xl border border-emerald-200 bg-white shadow-sm p-4 ring-1 ring-emerald-100 hover:shadow-md transition-shadow">
+      <div class="flex items-start gap-3">
+        <div class="relative h-12 w-12 shrink-0">
+          <svg viewBox="0 0 40 40" class="h-12 w-12 -rotate-90">
+            <circle cx="20" cy="20" r="17" fill="none" stroke="#f4f4f5" stroke-width="4"/>
+            <circle cx="20" cy="20" r="17" fill="none" stroke="#65a30d" stroke-width="4" stroke-linecap="round" stroke-dasharray="106.8" stroke-dashoffset="26.7"/>
+          </svg>
+          <span class="absolute inset-0 flex items-center justify-center text-sm font-bold text-lime-700">75</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-2">
+            <p class="font-mono text-lg font-semibold tracking-tight truncate">tuoye<span class="text-zinc-400">.cn</span></p>
+            <span class="inline-flex items-center gap-1 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-0.5 text-xs font-medium text-emerald-700 shrink-0"><i data-lucide="check" class="h-3 w-3"></i>可注册</span>
+          </div>
+          <p class="mt-1 text-sm text-zinc-500 leading-relaxed">「拓业」，开拓事业，动词感强，读音干脆，适合行动导向的品牌调性。</p>
+        </div>
+      </div>
+      <div class="mt-3 grid grid-cols-4 gap-2 text-center">
+        <div class="rounded-lg bg-zinc-50 py-1.5"><p class="text-[11px] text-zinc-400">长度</p><p class="text-xs font-semibold text-emerald-700">92</p></div>
+        <div class="rounded-lg bg-zinc-50 py-1.5"><p class="text-[11px] text-zinc-400">读感</p><p class="text-xs font-semibold text-lime-700">78</p></div>
+        <div class="rounded-lg bg-zinc-50 py-1.5"><p class="text-[11px] text-zinc-400">寓意</p><p class="text-xs font-semibold text-lime-700">74</p></div>
+        <div class="rounded-lg bg-zinc-50 py-1.5"><p class="text-[11px] text-zinc-400">品牌感</p><p class="text-xs font-semibold text-amber-600">62</p></div>
+      </div>
+      <div class="mt-3 flex items-center gap-2">
+        <button class="inline-flex h-9 flex-1 items-center justify-center gap-1.5 rounded-lg bg-emerald-600 px-3 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors">去注册<i data-lucide="chevron-down" class="h-4 w-4 opacity-80"></i></button>
+        <button class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 text-zinc-500 hover:bg-zinc-100 hover:text-zinc-900 transition-colors"><i data-lucide="copy" class="h-4 w-4"></i></button>
+        <button class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 text-zinc-400 hover:bg-zinc-100 hover:text-amber-500 transition-colors"><i data-lucide="star" class="h-4 w-4"></i></button>
+      </div>
+    </div>
+
+    <!-- 卡片 4：已注册（折叠展示，排在可注册之后） -->
+    <div class="rounded-xl border border-zinc-200 bg-white shadow-sm p-4 opacity-60">
+      <div class="flex items-start gap-3">
+        <div class="relative h-12 w-12 shrink-0">
+          <svg viewBox="0 0 40 40" class="h-12 w-12 -rotate-90">
+            <circle cx="20" cy="20" r="17" fill="none" stroke="#f4f4f5" stroke-width="4"/>
+            <circle cx="20" cy="20" r="17" fill="none" stroke="#a1a1aa" stroke-width="4" stroke-linecap="round" stroke-dasharray="106.8" stroke-dashoffset="16"/>
+          </svg>
+          <span class="absolute inset-0 flex items-center justify-center text-sm font-bold text-zinc-500">85</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-2">
+            <p class="font-mono text-lg font-semibold tracking-tight truncate line-through decoration-zinc-300">newpath<span class="text-zinc-400">.com</span></p>
+            <span class="inline-flex items-center gap-1 rounded-full border border-rose-200 bg-rose-50 px-2.5 py-0.5 text-xs font-medium text-rose-600 shrink-0"><i data-lucide="x" class="h-3 w-3"></i>已注册</span>
+          </div>
+          <p class="mt-1 text-sm text-zinc-500 leading-relaxed">「新路径」，直白表达职业转型新方向。已被注册，仅供参考。</p>
+        </div>
+      </div>
+      <div class="mt-3 flex items-center gap-2">
+        <button class="inline-flex h-9 flex-1 items-center justify-center gap-1.5 rounded-lg border border-zinc-200 px-3 text-sm font-medium text-zinc-500">查 WHOIS<i data-lucide="external-link" class="h-3.5 w-3.5"></i></button>
+        <button class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200 text-zinc-400"><i data-lucide="copy" class="h-4 w-4"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 加载更多 / 再来一批（桌面在头部也有） -->
+  <div class="mt-6 flex justify-center">
+    <button class="inline-flex h-10 items-center gap-2 rounded-lg border border-zinc-200 bg-white px-5 text-sm font-medium text-zinc-600 hover:border-emerald-300 hover:text-emerald-700 transition-colors"><i data-lucide="refresh-cw" class="h-4 w-4"></i>不满意？再来一批</button>
+  </div>
+</main>
+
+<!-- 移动端底部固定操作栏 -->
+<div class="md:hidden fixed bottom-0 inset-x-0 border-t border-zinc-200 bg-white/95 backdrop-blur">
+  <div class="px-4 h-16 flex items-center gap-2">
+    <button class="inline-flex h-11 flex-1 items-center justify-center gap-1.5 rounded-lg bg-emerald-600 text-sm font-semibold text-white"><i data-lucide="refresh-cw" class="h-4 w-4"></i>再来一批</button>
+    <button class="inline-flex h-11 items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-4 text-sm font-medium text-zinc-600"><i data-lucide="download" class="h-4 w-4"></i>导出</button>
+  </div>
+</div>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

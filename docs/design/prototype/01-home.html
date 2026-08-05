@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DomainHunter · 首页原型</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: {
+      sans: ['Inter','PingFang SC','Noto Sans SC','system-ui','sans-serif'],
+      mono: ['JetBrains Mono','ui-monospace','monospace'],
+    },
+    borderRadius: { lg: '0.5rem', xl: '0.75rem' },
+  }}
+}
+</script>
+<style>
+  body { -webkit-font-smoothing: antialiased; }
+  .focus-ring:focus-within { box-shadow: 0 0 0 2px #fff, 0 0 0 4px #059669; }
+</style>
+</head>
+<body class="bg-white text-zinc-950 font-sans min-h-screen flex flex-col">
+
+<!-- 顶部导航：shadcn 布局 + Button(ghost) -->
+<header class="border-b border-zinc-200">
+  <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 font-bold text-lg tracking-tight">
+      <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-600 text-white"><i data-lucide="radar" class="h-4 w-4"></i></span>
+      Domain<span class="text-emerald-600">Hunter</span>
+    </a>
+    <nav class="flex items-center gap-1">
+      <a href="#" class="hidden sm:inline-flex h-9 items-center rounded-lg px-3 text-sm font-medium text-zinc-500 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">高级模式</a>
+      <a href="#" class="inline-flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm font-medium text-zinc-500 hover:bg-zinc-100 hover:text-zinc-900 transition-colors"><i data-lucide="github" class="h-4 w-4"></i><span class="hidden sm:inline">GitHub</span></a>
+    </nav>
+  </div>
+</header>
+
+<main class="flex-1">
+  <div class="max-w-3xl mx-auto px-4 md:px-6 pt-12 md:pt-20 pb-16">
+
+    <!-- Hero -->
+    <div class="text-center mb-10">
+      <div class="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700 mb-5">
+        <i data-lucide="sparkles" class="h-3.5 w-3.5"></i> AI Agent · 实时核验可注册
+      </div>
+      <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">
+        说出寓意，<span class="text-emerald-600">猎到</span>真正可注册的好域名
+      </h1>
+      <p class="mt-3 text-zinc-500 text-base md:text-lg">AI 分轮构思名字与寓意，逐个实时核验，不够就反思重试</p>
+    </div>
+
+    <!-- 输入卡片：Card + Textarea -->
+    <div class="rounded-xl border border-zinc-200 bg-white shadow-sm p-4 md:p-6">
+      <div class="rounded-lg border border-zinc-200 bg-white focus-ring transition-shadow">
+        <textarea rows="3" class="w-full resize-none rounded-lg px-4 py-3 text-base placeholder:text-zinc-400 focus:outline-none" placeholder="用一句话描述你想要的域名，例如：帮体制内的人找新工作的平台，希望名字读起来专业可信、好记"></textarea>
+        <div class="flex items-center justify-between px-3 pb-2.5">
+          <span class="text-xs text-zinc-400">越具体越好 · 支持中文</span>
+          <span class="text-xs text-zinc-400">0 / 200</span>
+        </div>
+      </div>
+
+      <!-- 示例 chips -->
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="text-xs text-zinc-400 self-center">试试：</span>
+        <button class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-600 hover:border-emerald-300 hover:text-emerald-700 transition-colors">冥想 App，安静治愈</button>
+        <button class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-600 hover:border-emerald-300 hover:text-emerald-700 transition-colors">跨境电商选品工具</button>
+        <button class="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-600 hover:border-emerald-300 hover:text-emerald-700 transition-colors hidden sm:inline-flex">程序员副业社区</button>
+      </div>
+
+      <!-- TLD ToggleGroup -->
+      <div class="mt-5">
+        <label class="text-sm font-medium text-zinc-900">想要的后缀（TLD）</label>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <button class="inline-flex h-9 items-center rounded-full border border-emerald-600 bg-emerald-600 px-4 text-sm font-medium text-white">.com</button>
+          <button class="inline-flex h-9 items-center rounded-full border border-emerald-600 bg-emerald-600 px-4 text-sm font-medium text-white">.cn</button>
+          <button class="inline-flex h-9 items-center rounded-full border border-zinc-200 bg-white px-4 text-sm font-medium text-zinc-600 hover:border-zinc-300">.io</button>
+          <button class="inline-flex h-9 items-center rounded-full border border-zinc-200 bg-white px-4 text-sm font-medium text-zinc-600 hover:border-zinc-300">.ai</button>
+          <button class="inline-flex h-9 items-center rounded-full border border-zinc-200 bg-white px-4 text-sm font-medium text-zinc-600 hover:border-zinc-300">.app</button>
+          <button class="inline-flex h-9 items-center rounded-full border border-zinc-200 bg-white px-4 text-sm font-medium text-zinc-600 hover:border-zinc-300">.dev</button>
+          <button class="inline-flex h-9 items-center gap-1 rounded-full border border-dashed border-zinc-300 bg-white px-3 text-sm text-zinc-500 hover:border-zinc-400"><i data-lucide="plus" class="h-3.5 w-3.5"></i>自定义</button>
+        </div>
+      </div>
+
+      <!-- 风格 Select -->
+      <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="text-sm font-medium text-zinc-900">命名风格</label>
+          <button class="mt-2 flex h-10 w-full items-center justify-between rounded-lg border border-zinc-200 bg-white px-3 text-sm text-zinc-900 hover:border-zinc-300">
+            <span class="flex items-center gap-2"><i data-lucide="briefcase" class="h-4 w-4 text-zinc-400"></i>商务专业</span>
+            <i data-lucide="chevron-down" class="h-4 w-4 text-zinc-400"></i>
+          </button>
+        </div>
+        <div>
+          <label class="text-sm font-medium text-zinc-900">名字长度偏好</label>
+          <button class="mt-2 flex h-10 w-full items-center justify-between rounded-lg border border-zinc-200 bg-white px-3 text-sm text-zinc-900 hover:border-zinc-300">
+            <span class="flex items-center gap-2"><i data-lucide="ruler" class="h-4 w-4 text-zinc-400"></i>短小精悍（≤8 字符）</span>
+            <i data-lucide="chevron-down" class="h-4 w-4 text-zinc-400"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- 主按钮 -->
+      <button class="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-emerald-600 text-base font-semibold text-white shadow-sm hover:bg-emerald-700 transition-colors">
+        <i data-lucide="sparkles" class="h-5 w-5"></i> AI 帮我找域名
+      </button>
+      <p class="mt-3 text-center text-xs text-zinc-400">通常 60 秒内给出 10+ 个可注册结果 · 免费</p>
+    </div>
+
+    <!-- 信任点 -->
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+      <div class="rounded-xl border border-zinc-200 p-4">
+        <i data-lucide="badge-check" class="h-5 w-5 mx-auto text-emerald-600"></i>
+        <p class="mt-2 text-sm font-medium">实时核验</p>
+        <p class="mt-1 text-xs text-zinc-500">RDAP + DNS + WHOIS 级联，可注册才展示</p>
+      </div>
+      <div class="rounded-xl border border-zinc-200 p-4">
+        <i data-lucide="repeat" class="h-5 w-5 mx-auto text-emerald-600"></i>
+        <p class="mt-2 text-sm font-medium">不够就重试</p>
+        <p class="mt-1 text-xs text-zinc-500">Agent 反思上一轮，自动再构思下一批</p>
+      </div>
+      <div class="rounded-xl border border-zinc-200 p-4">
+        <i data-lucide="gauge" class="h-5 w-5 mx-auto text-emerald-600"></i>
+        <p class="mt-2 text-sm font-medium">四维评分</p>
+        <p class="mt-1 text-xs text-zinc-500">长度 / 读感 / 寓意贴合 / 品牌感排序</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="border-t border-zinc-200 py-6 text-center text-xs text-zinc-400">
+  open-core · MIT · <a href="#" class="underline hover:text-zinc-600">GitHub</a>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>
