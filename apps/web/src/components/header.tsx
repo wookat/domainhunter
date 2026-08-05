@@ -36,7 +36,7 @@ export function Header({
             onClick={onShortlistClick}
             aria-pressed={shortlistActive}
             className={cn(
-              "flex h-9 items-center gap-1.5 rounded-lg border px-3 text-sm transition-colors",
+              "flex h-11 items-center gap-1.5 rounded-lg border px-3 text-sm transition-colors sm:h-9",
               shortlistActive
                 ? "border-brand-line bg-brand-dim font-semibold text-brand"
                 : "border-line text-txt1 hover:bg-bg2 hover:text-txt0",
@@ -64,7 +64,7 @@ export function Header({
           </a>
           <button
             onClick={toggleTheme}
-            className="grid h-9 w-9 place-items-center rounded-lg border border-line text-txt1 hover:bg-bg2 hover:text-txt0"
+            className="grid h-11 w-11 place-items-center rounded-lg border border-line text-txt1 hover:bg-bg2 hover:text-txt0 sm:h-9 sm:w-9"
             title="切换浅色/暗色"
           >
             <SunMoon className="h-4 w-4" />

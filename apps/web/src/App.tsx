@@ -66,8 +66,12 @@ export default function App() {
         ),
       );
       triedLabelsRef.current.push(...ev.items!.map((i) => i.label));
-      setRows((prev) => [...prev, ...newRows]);
-      setRounds((prev) => prev.map((r) => (r.round === round ? { ...r, proposed: r.proposed + newRows.length } : r)));
+      setRows((prev) => {
+        const seen = new Set(prev.map((r) => r.domain));
+        const fresh = newRows.filter((r) => !seen.has(r.domain));
+        setRounds((rs) => rs.map((r) => (r.round === round ? { ...r, proposed: r.proposed + fresh.length } : r)));
+        return [...prev, ...fresh];
+      });
     } else if (ev.type === "done") {
       // no-op：running 状态在流结束时统一收尾
     } else if (ev.type === "error") {

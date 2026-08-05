@@ -45,7 +45,7 @@ function MiniSelect({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="flex h-8 items-center gap-1 rounded-lg border border-line bg-bg1 px-2.5 text-xs text-txt1 hover:text-txt0">
+        <button className="flex h-11 items-center gap-1 rounded-lg border border-line bg-bg1 px-2.5 text-xs text-txt1 hover:text-txt0 sm:h-8">
           <Icon className="h-3.5 w-3.5" />
           {current.label}
           <ChevronDown className="h-3 w-3" />
@@ -136,7 +136,7 @@ export function HomePage({ initial, onSubmit }: { initial: HomeValues; onSubmit:
                     onClick={() => toggleTld(t)}
                     aria-pressed={active}
                     className={cn(
-                      "shrink-0 rounded-md px-2 py-1 font-mono text-xs",
+                      "flex min-h-[44px] shrink-0 items-center rounded-md px-2.5 font-mono text-xs sm:min-h-0 sm:px-2 sm:py-1",
                       active ? "bg-brand-dim font-semibold text-brand" : "text-txt1 hover:text-txt0",
                     )}
                   >
@@ -155,7 +155,7 @@ export function HomePage({ initial, onSubmit }: { initial: HomeValues; onSubmit:
                   onBlur={addCustomTld}
                 />
               ) : (
-                <button onClick={() => setShowCustom(true)} title="自定义 TLD" className="shrink-0 rounded-md px-1.5 py-1 text-xs text-txt2 hover:text-txt0">
+                <button onClick={() => setShowCustom(true)} title="自定义 TLD" className="flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-md text-xs text-txt2 hover:text-txt0 sm:min-h-0 sm:min-w-0 sm:px-1.5 sm:py-1">
                   <Plus className="h-3.5 w-3.5" />
                 </button>
               )}
@@ -169,7 +169,7 @@ export function HomePage({ initial, onSubmit }: { initial: HomeValues; onSubmit:
             <button
               disabled={!canRun}
               onClick={() => submit()}
-              className="flex h-9 items-center gap-1.5 rounded-xl bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50"
+              className="flex h-11 items-center gap-1.5 rounded-xl bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50 sm:h-9"
             >
               <Sparkles className="h-4 w-4" />
               开始猎取
@@ -185,7 +185,7 @@ export function HomePage({ initial, onSubmit }: { initial: HomeValues; onSubmit:
                 setDescription(ex);
                 submit(ex);
               }}
-              className="h-9 rounded-full border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+              className="h-11 rounded-full border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:h-9"
             >
               {ex}
             </button>
