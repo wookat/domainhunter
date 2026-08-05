@@ -1,28 +1,19 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { ArrowLeft, SlidersHorizontal } from "lucide-react";
 
 import { Header } from "@/components/header";
 import { HomePage, type HomeValues } from "@/components/home-page";
-import { AgentPage } from "@/components/agent-page";
-import { ResultsPage, ExportMenu } from "@/components/results-page";
+import { AgentPage, type LogEntry } from "@/components/agent-page";
+import { ResultsPage } from "@/components/results-page";
+import { ShortlistPage } from "@/components/shortlist-page";
 import { AdvancedPage } from "@/components/advanced-page";
-import { Button } from "@/components/ui/button";
 import { isMockEnabled, runMockStream } from "@/mock";
+import { useShortlist } from "@/lib/shortlist";
 import { friendlyError, friendlyHttpError } from "@/lib/utils";
 import type { Row, RoundInfo, StreamEvent, Status } from "@/types";
 
-type Mode = "home" | "agent" | "results" | "advanced";
+type Mode = "home" | "agent" | "results" | "shortlist" | "advanced";
 const TARGET = 10;
-const FAV_KEY = "domainhunter:favorites";
-
-function loadFavorites(): Set<string> {
-  try {
-    const raw = localStorage.getItem(FAV_KEY);
-    return new Set(raw ? (JSON.parse(raw) as string[]) : []);
-  } catch {
-    return new Set();
-  }
-}
 
 export default function App() {
   const [mode, setMode] = useState<Mode>("home");
@@ -32,17 +23,17 @@ export default function App() {
   const [currentRound, setCurrentRound] = useState(0);
   const [running, setRunning] = useState(false);
   const [error, setError] = useState("");
+  const [logs, setLogs] = useState<LogEntry[]>([]);
+  const [elapsedSec, setElapsedSec] = useState<number | undefined>(undefined);
+  const [locked, setLocked] = useState<Set<string>>(new Set());
   const abortRef = useRef<AbortController | null>(null);
   const triedLabelsRef = useRef<string[]>([]);
   const roundOffsetRef = useRef(0);
-  const [favorites, setFavorites] = useState<Set<string>>(loadFavorites);
+  const startedAtRef = useRef(0);
+  const shortlist = useShortlist();
 
-  useEffect(() => {
-    localStorage.setItem(FAV_KEY, JSON.stringify([...favorites]));
-  }, [favorites]);
-
-  const toggleFavorite = (domain: string) =>
-    setFavorites((prev) => {
+  const toggleLock = (domain: string) =>
+    setLocked((prev) => {
       const next = new Set(prev);
       if (next.has(domain)) next.delete(domain);
       else next.add(domain);
@@ -50,17 +41,6 @@ export default function App() {
     });
 
   const availableCount = rows.filter((r) => r.status === "available").length;
-
-  function clearAiResults() {
-    abortRef.current?.abort();
-    setRunning(false);
-    setRows([]);
-    setRounds([]);
-    setCurrentRound(0);
-    setError("");
-    triedLabelsRef.current = [];
-    roundOffsetRef.current = 0;
-  }
 
   function handleEvent(ev: StreamEvent) {
     const round = (ev.round ?? 0) + roundOffsetRef.current;
@@ -94,6 +74,7 @@ export default function App() {
       setError("AI 服务出错，已停止本轮");
     } else if (ev.domain) {
       const status = ev.status as Status;
+      setLogs((prev) => [...prev.slice(-19), { domain: ev.domain!, status }]);
       setRows((prev) => {
         const row = prev.find((r) => r.domain === ev.domain);
         if (!row) return prev;
@@ -109,7 +90,8 @@ export default function App() {
     }
   }
 
-  async function run(v: HomeValues, more = false) {
+  async function run(v: HomeValues, opts: { more?: boolean; aroundLocked?: boolean } = {}) {
+    const { more = false, aroundLocked = false } = opts;
     abortRef.current?.abort();
     const ac = new AbortController();
     abortRef.current = ac;
@@ -119,22 +101,29 @@ export default function App() {
       setRows([]);
       setRounds([]);
       setCurrentRound(0);
+      setLocked(new Set());
       triedLabelsRef.current = [];
       roundOffsetRef.current = 0;
     }
+    setLogs([]);
     setError("");
     setRunning(true);
     setMode("agent");
+    startedAtRef.current = Date.now();
     try {
       if (isMockEnabled()) {
         await runMockStream(handleEvent, ac.signal);
         return;
       }
+      let description = v.description;
+      if (aroundLocked && locked.size > 0) {
+        description += `\n\n我特别喜欢这些名字的风格：${[...locked].map((d) => d.split(".")[0]).join(", ")}。请围绕它们的词根、构词方式与气质再发散相似的新名字。`;
+      }
       const res = await fetch("/api/ai-search", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
-          description: v.description,
+          description,
           tlds: v.tlds,
           style: v.style,
           lengthPref: v.lengthPref,
@@ -162,65 +151,98 @@ export default function App() {
       if ((e as Error).name !== "AbortError") setError(friendlyError(e as Error));
     } finally {
       setRunning(false);
+      setElapsedSec(Math.round((Date.now() - startedAtRef.current) / 1000));
       if (!ac.signal.aborted) setMode((m) => (m === "agent" ? "results" : m));
     }
+  }
+
+  function stop() {
+    abortRef.current?.abort();
+    setRunning(false);
+    setElapsedSec(Math.round((Date.now() - startedAtRef.current) / 1000));
+    setMode(rows.length > 0 ? "results" : "home");
   }
 
   const understanding = [
     `为「${values.description}」寻找可注册域名`,
     values.style && `风格：${values.style}`,
     values.lengthPref && `长度：${values.lengthPref}`,
-    `TLD：${values.tlds.map((t) => `.${t}`).join(" / ")}`,
   ]
     .filter(Boolean)
     .join(" · ");
 
-  const backButton = (
-    <Button variant="ghost" size="sm" className="text-zinc-500" onClick={() => setMode("home")}>
-      <ArrowLeft className="h-4 w-4" /> 返回
-    </Button>
-  );
-
   const headerRight =
     mode === "home" ? (
-      <Button variant="ghost" size="sm" className="text-zinc-500" onClick={() => { clearAiResults(); setMode("advanced"); }}>
-        <SlidersHorizontal className="h-4 w-4" /> 高级模式
-      </Button>
-    ) : mode === "results" ? (
-      <div className="flex items-center gap-2">
-        <ExportMenu rows={rows} />
-        {backButton}
-      </div>
-    ) : (
-      backButton
-    );
+      <button
+        className="hidden h-9 items-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 sm:flex"
+        onClick={() => setMode("advanced")}
+      >
+        <SlidersHorizontal className="h-4 w-4" />
+        高级模式
+      </button>
+    ) : mode === "advanced" || mode === "shortlist" ? (
+      <button className="flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0" onClick={() => setMode("home")}>
+        <ArrowLeft className="h-4 w-4" />
+        返回
+      </button>
+    ) : undefined;
+
+  const headerCenter =
+    mode === "agent" && running ? (
+      <span className="mr-2 hidden items-center gap-1.5 text-xs text-txt1 md:flex">
+        <span className="dot-breathe h-1.5 w-1.5 rounded-full bg-brand" />第 {currentRound || 1} 轮进行中 · 已核验{" "}
+        <b className="tnum font-mono text-txt0">{rows.filter((r) => r.status !== "checking").length}</b> 个 · 可注册{" "}
+        <b className="tnum font-mono text-brand">{availableCount}</b> 个
+      </span>
+    ) : undefined;
 
   return (
-    <div className="flex min-h-screen flex-col bg-zinc-50 text-zinc-900">
-      <Header right={headerRight} onLogoClick={() => setMode("home")} />
+    <div className="flex min-h-screen flex-col">
+      <Header
+        center={headerCenter}
+        right={headerRight}
+        onLogoClick={() => setMode("home")}
+        shortlistCount={shortlist.items.length}
+        shortlistActive={mode === "shortlist"}
+        onShortlistClick={() => setMode(mode === "shortlist" ? "home" : "shortlist")}
+      />
 
       {error && (
-        <div className="mx-auto mt-4 w-full max-w-5xl px-4 md:px-6">
-          <p className="rounded-lg border border-rose-200 bg-rose-50 px-4 py-2.5 text-sm text-rose-700">{error}</p>
+        <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
+          <p className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{error}</p>
         </div>
       )}
 
-      {mode === "home" && <HomePage initial={values} onSubmit={(v) => { setValues(v); void run(v); }} />}
+      {mode === "home" && (
+        <HomePage
+          initial={values}
+          onSubmit={(v) => {
+            setValues(v);
+            void run(v);
+          }}
+        />
+      )}
       {mode === "agent" && (
         <AgentPage
           understanding={understanding}
+          tlds={values.tlds}
+          style={values.style}
+          lengthPref={values.lengthPref}
           rows={rows}
           rounds={rounds}
           currentRound={currentRound}
           availableCount={availableCount}
           target={TARGET}
           running={running}
+          logs={logs}
           onEdit={() => {
             abortRef.current?.abort();
             setRunning(false);
             setMode("home");
           }}
-          onViewResults={() => setMode("results")}
+          onStop={stop}
+          shortlistHas={shortlist.has}
+          onToggleFavorite={shortlist.toggle}
         />
       )}
       {mode === "results" && (
@@ -228,19 +250,26 @@ export default function App() {
           rows={rows}
           description={values.description}
           roundCount={rounds.length}
-          favorites={favorites}
-          onToggleFavorite={toggleFavorite}
-          onMore={() => void run(values, true)}
+          elapsedSec={elapsedSec}
+          locked={locked}
+          onToggleLock={toggleLock}
+          shortlistHas={shortlist.has}
+          onToggleFavorite={shortlist.toggle}
+          onMore={() => void run(values, { more: true })}
+          onMoreAroundLocked={() => void run(values, { more: true, aroundLocked: true })}
           running={running}
           moreDisabled={!values.description.trim()}
         />
       )}
+      {mode === "shortlist" && (
+        <ShortlistPage items={shortlist.items} onRemove={shortlist.remove} onClear={shortlist.clear} onStart={() => setMode("home")} />
+      )}
       {mode === "advanced" && <AdvancedPage />}
 
       {mode === "home" && (
-        <footer className="pb-8 text-center text-xs text-zinc-400">
+        <footer className="pb-8 text-center text-xs text-txt2">
           open-core · MIT ·{" "}
-          <a className="underline hover:text-zinc-600" href="https://github.com/wookat/domainhunter">
+          <a className="underline hover:text-txt1" href="https://github.com/wookat/domainhunter">
             GitHub
           </a>
         </footer>

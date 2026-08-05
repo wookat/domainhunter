@@ -51,9 +51,28 @@ export function totalScore(s: Scores): number {
   return Math.round((s.length + s.readability + s.relevance + s.brandability) / 4);
 }
 
-export function scoreColor(score: number): { text: string; stroke: string } {
-  if (score >= 85) return { text: "text-emerald-700", stroke: "#059669" };
-  if (score >= 70) return { text: "text-lime-700", stroke: "#65a30d" };
-  if (score >= 55) return { text: "text-amber-600", stroke: "#d97706" };
-  return { text: "text-zinc-400", stroke: "#a1a1aa" };
+/** 评分色阶（design-spec §2）：≥90 金 / 70–89 绿 / <70 灰 */
+export function scoreBadgeClass(score: number): string {
+  if (score >= 90) return "bg-gold-dim text-gold";
+  if (score >= 70) return "bg-brand-dim text-brand";
+  return "bg-bg3 text-txt1";
+}
+
+/** 参考首年价（按 TLD 的市场常见价，仅作参考展示） */
+const TLD_PRICES: Record<string, string> = {
+  com: "$9.9 首年",
+  cn: "¥29 首年",
+  net: "$12/年",
+  org: "$11/年",
+  io: "$32/年",
+  ai: "$72/年",
+  app: "$14/年",
+  dev: "$12/年",
+  co: "$25/年",
+  me: "$19/年",
+  xyz: "$2 首年",
+};
+
+export function tldPrice(tld: string): string | undefined {
+  return TLD_PRICES[tld];
 }
