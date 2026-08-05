@@ -1,77 +1,127 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowLeft, SlidersHorizontal } from "lucide-react";
 
-type Status = "available" | "taken" | "unknown" | "checking";
-interface Row { domain: string; label: string; status: Status; meaning?: string; round: number }
+import { Header } from "@/components/header";
+import { HomePage, type HomeValues } from "@/components/home-page";
+import { AgentPage } from "@/components/agent-page";
+import { ResultsPage, ExportMenu } from "@/components/results-page";
+import { AdvancedPage } from "@/components/advanced-page";
+import { Button } from "@/components/ui/button";
+import { isMockEnabled, runMockStream } from "@/mock";
+import type { Row, RoundInfo, StreamEvent, Status } from "@/types";
 
-const badge: Record<Status, string> = {
-  available: "bg-emerald-100 text-emerald-700",
-  taken: "bg-rose-100 text-rose-600",
-  unknown: "bg-slate-100 text-slate-500",
-  checking: "bg-amber-100 text-amber-600",
-};
-const statusLabel: Record<Status, string> = {
-  available: "可注册",
-  taken: "已注册",
-  unknown: "未知",
-  checking: "检测中",
-};
+type Mode = "home" | "agent" | "results" | "advanced";
+const TARGET = 10;
+const FAV_KEY = "domainhunter:favorites";
 
-const split = (s: string) => s.split(/[,，\s]+/).map((x) => x.trim()).filter(Boolean);
-
-interface StreamEvent {
-  type?: "round" | "proposed" | "done" | "error";
-  round?: number;
-  note?: string;
-  items?: { label: string; meaning: string }[];
-  tlds?: string[];
-  availableCount?: number;
-  target?: number;
-  reachedTarget?: boolean;
-  detail?: string;
-  domain?: string;
-  status?: Status;
-  meaning?: string;
+function loadFavorites(): Set<string> {
+  try {
+    const raw = localStorage.getItem(FAV_KEY);
+    return new Set(raw ? (JSON.parse(raw) as string[]) : []);
+  } catch {
+    return new Set();
+  }
 }
 
 export default function App() {
-  const [mode, setMode] = useState<"ai" | "advanced">("ai");
-  const [description, setDescription] = useState("");
-  const [roots, setRoots] = useState("");
-  const [suffixes, setSuffixes] = useState("");
-  const [tlds, setTlds] = useState("com,cn");
+  const [mode, setMode] = useState<Mode>("home");
+  const [values, setValues] = useState<HomeValues>({ description: "", tlds: ["com", "cn"], style: "", lengthPref: "" });
   const [rows, setRows] = useState<Row[]>([]);
+  const [rounds, setRounds] = useState<RoundInfo[]>([]);
+  const [currentRound, setCurrentRound] = useState(0);
   const [running, setRunning] = useState(false);
-  const [phase, setPhase] = useState("");
-  const [round, setRound] = useState(0);
-  const [doneMsg, setDoneMsg] = useState("");
   const [error, setError] = useState("");
   const abortRef = useRef<AbortController | null>(null);
   const triedLabelsRef = useRef<string[]>([]);
+  const [favorites, setFavorites] = useState<Set<string>>(loadFavorites);
 
-  async function run(more = false) {
+  useEffect(() => {
+    localStorage.setItem(FAV_KEY, JSON.stringify([...favorites]));
+  }, [favorites]);
+
+  const toggleFavorite = (domain: string) =>
+    setFavorites((prev) => {
+      const next = new Set(prev);
+      if (next.has(domain)) next.delete(domain);
+      else next.add(domain);
+      return next;
+    });
+
+  const availableCount = rows.filter((r) => r.status === "available").length;
+
+  function handleEvent(ev: StreamEvent) {
+    if (ev.type === "round") {
+      setCurrentRound(ev.round!);
+      setRounds((prev) =>
+        prev.some((r) => r.round === ev.round)
+          ? prev
+          : [...prev, { round: ev.round!, note: ev.note ?? "", proposed: 0, checked: 0, available: 0 }],
+      );
+    } else if (ev.type === "proposed") {
+      const newRows: Row[] = ev.items!.flatMap((it) =>
+        ev.tlds!.map(
+          (t): Row => ({
+            domain: `${it.label}.${t}`,
+            label: it.label,
+            tld: t,
+            status: "checking",
+            meaning: it.meaning,
+            scores: it.scores,
+            round: ev.round!,
+          }),
+        ),
+      );
+      triedLabelsRef.current.push(...ev.items!.map((i) => i.label));
+      setRows((prev) => [...prev, ...newRows]);
+      setRounds((prev) => prev.map((r) => (r.round === ev.round ? { ...r, proposed: r.proposed + newRows.length } : r)));
+    } else if (ev.type === "done") {
+      // no-op：running 状态在流结束时统一收尾
+    } else if (ev.type === "error") {
+      setError("AI 服务出错，已停止本轮");
+    } else if (ev.domain) {
+      const status = ev.status as Status;
+      setRows((prev) => {
+        const row = prev.find((r) => r.domain === ev.domain);
+        if (!row) return prev;
+        setRounds((rs) =>
+          rs.map((r) =>
+            r.round === row.round
+              ? { ...r, checked: r.checked + 1, available: r.available + (status === "available" ? 1 : 0) }
+              : r,
+          ),
+        );
+        return prev.map((r) => (r.domain === ev.domain ? { ...r, status, meaning: r.meaning ?? ev.meaning } : r));
+      });
+    }
+  }
+
+  async function run(v: HomeValues, more = false) {
     abortRef.current?.abort();
     const ac = new AbortController();
     abortRef.current = ac;
     if (!more) {
       setRows([]);
+      setRounds([]);
+      setCurrentRound(0);
       triedLabelsRef.current = [];
     }
     setError("");
-    setDoneMsg("");
     setRunning(true);
-    setPhase("AI 正在构思名字…");
+    setMode("agent");
     try {
-      if (mode === "advanced") {
-        await runAdvanced(ac);
+      if (isMockEnabled()) {
+        await runMockStream(handleEvent, ac.signal);
         return;
       }
       const res = await fetch("/api/ai-search", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
-          description,
-          tlds: split(tlds),
-          target: 10,
+          description: v.description,
+          tlds: v.tlds,
+          style: v.style,
+          lengthPref: v.lengthPref,
+          target: TARGET,
           excludeLabels: more ? triedLabelsRef.current : [],
         }),
         signal: ac.signal,
@@ -88,212 +138,95 @@ export default function App() {
         buf = lines.pop()!;
         for (const line of lines) {
           if (!line) continue;
-          const ev = JSON.parse(line) as StreamEvent;
-          if (ev.type === "round") {
-            setRound(ev.round!);
-            setPhase(ev.note ?? "");
-          } else if (ev.type === "proposed") {
-            const newRows: Row[] = ev.items!.flatMap((it) =>
-              ev.tlds!.map((t) => ({
-                domain: `${it.label}.${t}`,
-                label: it.label,
-                status: "checking" as Status,
-                meaning: it.meaning,
-                round: ev.round!,
-              })),
-            );
-            triedLabelsRef.current.push(...ev.items!.map((i) => i.label));
-            setRows((prev) => [...prev, ...newRows]);
-            setPhase(`第 ${ev.round} 批寓意已出，正在核验…`);
-          } else if (ev.type === "done") {
-            setDoneMsg(
-              ev.reachedTarget
-                ? `完成：找到 ${ev.availableCount} 个可注册域名`
-                : `已尽力检索（${ev.availableCount} 个可注册），可点「再来一批」继续`,
-            );
-          } else if (ev.type === "error") {
-            setError("AI 服务出错，已停止本轮");
-          } else if (ev.domain) {
-            setRows((prev) =>
-              prev.map((r) => (r.domain === ev.domain ? { ...r, status: ev.status!, meaning: r.meaning ?? ev.meaning } : r)),
-            );
-          }
+          handleEvent(JSON.parse(line) as StreamEvent);
         }
       }
     } catch (e) {
       if ((e as Error).name !== "AbortError") setError((e as Error).message);
     } finally {
       setRunning(false);
-      setPhase("");
+      if (!ac.signal.aborted) setMode((m) => (m === "agent" ? "results" : m));
     }
   }
 
-  async function runAdvanced(ac: AbortController) {
-    try {
-      const res = await fetch("/api/search", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ roots: split(roots), suffixes: split(suffixes), tlds: split(tlds) }),
-        signal: ac.signal,
-      });
-      if (!res.ok) throw new Error(`请求失败（${res.status}）`);
-      const reader = res.body!.getReader();
-      const decoder = new TextDecoder();
-      let buf = "";
-      for (;;) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        buf += decoder.decode(value, { stream: true });
-        const lines = buf.split("\n");
-        buf = lines.pop()!;
-        const rs = lines
-          .filter(Boolean)
-          .map((l) => JSON.parse(l) as { domain: string; status: Status; type?: string })
-          .filter((r) => !r.type && r.domain)
-          .map((r) => ({ domain: r.domain, label: r.domain, status: r.status, round: 1 }));
-        if (rs.length) setRows((prev) => [...prev, ...rs]);
-      }
-    } finally {
-      setRunning(false);
-      setPhase("");
-    }
-  }
+  const understanding = [
+    `为「${values.description}」寻找可注册域名`,
+    values.style && `风格：${values.style}`,
+    values.lengthPref && `长度：${values.lengthPref}`,
+    `TLD：${values.tlds.map((t) => `.${t}`).join(" / ")}`,
+  ]
+    .filter(Boolean)
+    .join(" · ");
 
-  const available = rows.filter((r) => r.status === "available");
-  const rest = rows.filter((r) => r.status !== "available");
-  const canRun = mode === "ai" ? description.trim().length > 0 : split(roots).length > 0;
+  const backButton = (
+    <Button variant="ghost" size="sm" className="text-zinc-500" onClick={() => setMode("home")}>
+      <ArrowLeft className="h-4 w-4" /> 返回
+    </Button>
+  );
 
-  return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
-      <div className="mx-auto max-w-3xl px-4 py-10">
-        <h1 className="text-3xl font-bold tracking-tight">
-          Domain<span className="text-emerald-600">Hunter</span>
-        </h1>
-        <p className="mt-1 text-slate-500">说出你想要的寓意，AI Agent 反复构思＋核验，直到找出一批真正可注册的好域名</p>
-
-        <div className="mt-6 flex gap-2 text-sm">
-          <TabButton active={mode === "ai"} onClick={() => setMode("ai")}>AI 找域名</TabButton>
-          <TabButton active={mode === "advanced"} onClick={() => setMode("advanced")}>高级模式</TabButton>
-        </div>
-
-        {mode === "ai" ? (
-          <div className="mt-4">
-            <textarea
-              className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none"
-              rows={3}
-              placeholder="用一句话描述你想要的域名，例如：帮体制内的人找新工作的平台，希望名字读起来专业可信、好记"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-            />
-            <label className="mt-2 block w-40">
-              <span className="text-xs font-medium text-slate-600">想要的 TLD</span>
-              <input
-                className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none"
-                value={tlds}
-                onChange={(e) => setTlds(e.target.value)}
-              />
-            </label>
-          </div>
-        ) : (
-          <div className="mt-4 grid gap-3 sm:grid-cols-3">
-            <Field label="词根（roots）" value={roots} onChange={setRoots} placeholder="tizhi,gwy" />
-            <Field label="后缀（suffixes）" value={suffixes} onChange={setSuffixes} placeholder="job,jobs" />
-            <Field label="TLD" value={tlds} onChange={setTlds} placeholder="com,cn" />
-          </div>
-        )}
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          <button
-            onClick={() => run(false)}
-            disabled={running || !canRun}
-            className="w-full rounded-lg bg-emerald-600 px-4 py-2.5 font-medium text-white hover:bg-emerald-700 disabled:opacity-50 sm:w-auto"
-          >
-            {running ? "检索中…" : mode === "ai" ? "AI 帮我找" : "开始检索"}
-          </button>
-          {mode === "ai" && !running && rows.length > 0 && (
-            <button
-              onClick={() => run(true)}
-              className="w-full rounded-lg border border-emerald-600 px-4 py-2.5 font-medium text-emerald-700 hover:bg-emerald-50 sm:w-auto"
-            >
-              不满意，再来一批
-            </button>
-          )}
-        </div>
-
-        {running && (
-          <p className="mt-4 text-sm text-amber-600">
-            <span className="mr-2 inline-block h-2 w-2 animate-pulse rounded-full bg-amber-500 align-middle" />
-            第 {round || 1} 轮：{phase}
-          </p>
-        )}
-        {doneMsg && <p className="mt-4 text-sm text-emerald-700">{doneMsg}</p>}
-        {error && <p className="mt-4 text-sm text-rose-600">{error}</p>}
-
-        {available.length > 0 && (
-          <>
-            <h2 className="mt-6 text-sm font-semibold text-emerald-700">可注册（{available.length}）</h2>
-            <DomainList rows={available} />
-          </>
-        )}
-        {rest.length > 0 && (
-          <>
-            <h2 className="mt-6 text-sm font-semibold text-slate-500">其余候选（{rest.length}）</h2>
-            <DomainList rows={rest} />
-          </>
-        )}
-
-        <footer className="mt-10 text-center text-xs text-slate-400">
-          open-core · MIT · <a className="underline" href="https://github.com/wookat/domainhunter">GitHub</a>
-        </footer>
+  const headerRight =
+    mode === "home" ? (
+      <Button variant="ghost" size="sm" className="text-zinc-500" onClick={() => setMode("advanced")}>
+        <SlidersHorizontal className="h-4 w-4" /> 高级模式
+      </Button>
+    ) : mode === "results" ? (
+      <div className="flex items-center gap-2">
+        <ExportMenu rows={rows} />
+        {backButton}
       </div>
+    ) : (
+      backButton
+    );
+
+  return (
+    <div className="flex min-h-screen flex-col bg-zinc-50 text-zinc-900">
+      <Header right={headerRight} onLogoClick={() => setMode("home")} />
+
+      {error && (
+        <div className="mx-auto mt-4 w-full max-w-5xl px-4 md:px-6">
+          <p className="rounded-lg border border-rose-200 bg-rose-50 px-4 py-2.5 text-sm text-rose-700">{error}</p>
+        </div>
+      )}
+
+      {mode === "home" && <HomePage initial={values} onSubmit={(v) => { setValues(v); void run(v); }} />}
+      {mode === "agent" && (
+        <AgentPage
+          understanding={understanding}
+          rows={rows}
+          rounds={rounds}
+          currentRound={currentRound}
+          availableCount={availableCount}
+          target={TARGET}
+          running={running}
+          onEdit={() => {
+            abortRef.current?.abort();
+            setRunning(false);
+            setMode("home");
+          }}
+          onViewResults={() => setMode("results")}
+        />
+      )}
+      {mode === "results" && (
+        <ResultsPage
+          rows={rows}
+          description={values.description}
+          roundCount={rounds.length}
+          favorites={favorites}
+          onToggleFavorite={toggleFavorite}
+          onMore={() => void run(values, true)}
+          running={running}
+        />
+      )}
+      {mode === "advanced" && <AdvancedPage />}
+
+      {mode === "home" && (
+        <footer className="pb-8 text-center text-xs text-zinc-400">
+          open-core · MIT ·{" "}
+          <a className="underline hover:text-zinc-600" href="https://github.com/wookat/domainhunter">
+            GitHub
+          </a>
+        </footer>
+      )}
     </div>
-  );
-}
-
-function DomainList({ rows }: { rows: Row[] }) {
-  return (
-    <ul className="mt-2 divide-y divide-slate-100 rounded-xl border border-slate-200 bg-white">
-      {rows.map((r) => (
-        <li key={r.domain} className="px-4 py-2.5">
-          <div className="flex items-center justify-between gap-2">
-            <span className="font-mono">{r.domain}</span>
-            <span className="flex items-center gap-2">
-              <span className="text-[10px] text-slate-300">R{r.round}</span>
-              <span className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${badge[r.status]}`}>
-                {statusLabel[r.status]}
-              </span>
-            </span>
-          </div>
-          {r.meaning && <p className="mt-0.5 text-xs text-slate-400">{r.meaning}</p>}
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-function TabButton(props: { active: boolean; onClick: () => void; children: React.ReactNode }) {
-  return (
-    <button
-      onClick={props.onClick}
-      className={`rounded-full px-4 py-1.5 font-medium ${
-        props.active ? "bg-emerald-600 text-white" : "bg-white text-slate-600 border border-slate-300"
-      }`}
-    >
-      {props.children}
-    </button>
-  );
-}
-
-function Field(props: { label: string; value: string; onChange: (v: string) => void; placeholder: string }) {
-  return (
-    <label className="block">
-      <span className="text-xs font-medium text-slate-600">{props.label}</span>
-      <input
-        className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none"
-        value={props.value}
-        placeholder={props.placeholder}
-        onChange={(e) => props.onChange(e.target.value)}
-      />
-    </label>
   );
 }

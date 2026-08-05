@@ -13,13 +13,19 @@ app.post("/api/ai-search", async (c) => {
     tlds?: string[];
     target?: number;
     excludeLabels?: string[];
+    style?: string;
+    lengthPref?: string;
   }>();
-  const description = (body.description ?? "").trim();
+  let description = (body.description ?? "").trim();
+  const style = (body.style ?? "").trim().slice(0, 50);
+  const lengthPref = (body.lengthPref ?? "").trim().slice(0, 50);
+  if (style) description += `\n命名风格偏好：${style}`;
+  if (lengthPref) description += `\n名字长度偏好：${lengthPref}`;
   const tlds = (body.tlds ?? ["com", "cn"]).map((t) => t.trim().toLowerCase().replace(/^\./, "")).filter(Boolean);
   const target = Math.min(Math.max(body.target ?? 10, 3), 30);
   const MAX_ROUNDS = 5;
-  if (!description) return c.json({ error: "description required" }, 400);
-  if (description.length > 500) return c.json({ error: "description too long" }, 400);
+  if (!(body.description ?? "").trim()) return c.json({ error: "description required" }, 400);
+  if (description.length > 600) return c.json({ error: "description too long" }, 400);
 
   const apiKey = c.env.DEEPSEEK_API_KEY;
   const { readable, writable } = new TransformStream();
