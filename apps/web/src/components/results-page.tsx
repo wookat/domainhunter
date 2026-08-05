@@ -17,6 +17,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { CopyButton, DomainRow, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import { exportRows } from "@/lib/export";
+import { useI18n } from "@/lib/i18n";
 import { scoreBadgeClass, tldPriceFull, tldPriceShort, totalScore, type Row } from "@/types";
 import { cn } from "@/lib/utils";
 
@@ -48,6 +49,7 @@ function TopPickCard({
   favorite: boolean;
   onToggleFavorite: (row: Row) => void;
 }) {
+  const { t } = useI18n();
   const score = row.scores ? totalScore(row.scores) : 0;
   return (
     <div className={cn("rounded-xl border bg-bg1 p-5", rank === 0 ? "border-brand-line" : "border-line")}>
@@ -55,7 +57,7 @@ function TopPickCard({
         <span className={cn("tnum rounded-md px-2 py-0.5 font-mono text-sm font-bold", scoreBadgeClass(score))}>{score}</span>
         <div className="flex gap-1">
           <button
-            title="锁定：再来一轮时围绕它找"
+            title={t("results.lockTitle")}
             aria-pressed={locked}
             onClick={() => onToggleLock(row.domain)}
             className={cn(
@@ -67,7 +69,7 @@ function TopPickCard({
           </button>
           <CopyButton domain={row.domain} className="rounded-md border border-line" />
           <button
-            title={favorite ? "移出候选清单" : "收藏到候选清单"}
+            title={favorite ? t("results.favRemove") : t("results.favAdd")}
             aria-pressed={favorite}
             onClick={() => onToggleFavorite(row)}
             className={cn("grid h-8 w-8 place-items-center rounded-md border border-line", favorite ? "text-brand" : "text-txt2 hover:text-txt0")}
@@ -85,7 +87,7 @@ function TopPickCard({
       {tldPriceFull(row.tld) && <p className="tnum mt-3 text-[11px] text-txt2">{tldPriceFull(row.tld)}</p>}
       <RegisterMenu domain={row.domain}>
         <button className="mt-2 flex h-10 w-full items-center justify-center gap-1.5 rounded-lg bg-brand text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90">
-          去注册{tldPriceShort(row.tld) ? ` · ${tldPriceShort(row.tld)}` : ""}
+          {t("common.register")}{tldPriceShort(row.tld) ? ` · ${tldPriceShort(row.tld)}` : ""}
           <ChevronDown className="h-4 w-4" />
         </button>
       </RegisterMenu>
@@ -106,6 +108,7 @@ function GridCard({
   favorite: boolean;
   onToggleFavorite: (row: Row) => void;
 }) {
+  const { t } = useI18n();
   const score = row.scores ? totalScore(row.scores) : undefined;
   return (
     <div className="rounded-xl border border-line bg-bg1 p-4">
@@ -122,7 +125,7 @@ function GridCard({
       {row.scores && <ScoreBars scores={row.scores} columns={4} className="mt-3" />}
       <div className="mt-3 flex items-center gap-1">
         <button
-          title="锁定：再来一轮时围绕它找"
+          title={t("results.lockTitle")}
           aria-pressed={locked}
           onClick={() => onToggleLock(row.domain)}
           className={cn("grid h-8 w-8 place-items-center rounded-md border", locked ? "border-brand-line text-brand" : "border-line text-txt2 hover:text-txt0")}
@@ -131,7 +134,7 @@ function GridCard({
         </button>
         <CopyButton domain={row.domain} className="rounded-md border border-line" />
         <button
-          title={favorite ? "移出候选清单" : "收藏到候选清单"}
+          title={favorite ? t("results.favRemove") : t("results.favAdd")}
           aria-pressed={favorite}
           onClick={() => onToggleFavorite(row)}
           className={cn("grid h-8 w-8 place-items-center rounded-md border border-line", favorite ? "text-brand" : "text-txt2 hover:text-txt0")}
@@ -140,7 +143,7 @@ function GridCard({
         </button>
         <div className="flex-1" />
         <RegisterMenu domain={row.domain}>
-          <button className="h-8 rounded-md bg-brand-dim px-3 text-xs font-semibold text-brand transition-opacity hover:opacity-80">去注册</button>
+          <button className="h-8 rounded-md bg-brand-dim px-3 text-xs font-semibold text-brand transition-opacity hover:opacity-80">{t("common.register")}</button>
         </RegisterMenu>
       </div>
     </div>
@@ -174,6 +177,7 @@ export function ResultsPage({
   running: boolean;
   moreDisabled?: boolean;
 }) {
+  const { t } = useI18n();
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("available");
   const [tldFilter, setTldFilter] = useState<string>("");
   const [sort, setSort] = useState<SortKey>("score");
@@ -235,12 +239,11 @@ export function ResultsPage({
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <div>
             <h1 className="text-xl font-bold tracking-tight">
-              为「{description.length > 18 ? description.slice(0, 18) + "…" : description}」猎到{" "}
-              <span className="text-brand">{availableRows.length}</span> 个可注册域名
+              {t("results.title", { desc: description.length > 18 ? description.slice(0, 18) + "…" : description, n: availableRows.length })}
             </h1>
             <p className="tnum mt-1 text-xs text-txt2">
-              {roundCount} 轮 · 共核验 {rows.length} 个（{takenRows.length} 个已被注册）
-              {elapsedSec !== undefined && ` · 用时 ${elapsedSec}s`}
+              {t("results.stats", { rounds: roundCount, total: rows.length, taken: takenRows.length })}
+              {elapsedSec !== undefined && ` · ${t("results.elapsed", { s: elapsedSec })}`}
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -248,12 +251,12 @@ export function ResultsPage({
               <DropdownMenuTrigger asChild>
                 <button className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0">
                   <Download className="h-4 w-4" />
-                  导出
+                  {t("common.export")}
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onSelect={() => exportRows(visible, "csv")}>导出 CSV</DropdownMenuItem>
-                <DropdownMenuItem onSelect={() => exportRows(visible, "txt")}>导出 TXT</DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => exportRows(visible, "csv")}>{t("common.exportCsv")}</DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => exportRows(visible, "txt")}>{t("common.exportTxt")}</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <button
@@ -262,7 +265,7 @@ export function ResultsPage({
               disabled={running || moreDisabled}
             >
               <RotateCw className={cn("h-4 w-4", running && "animate-spin")} />
-              再来一轮 <kbd className="hidden md:inline" style={{ background: "rgba(0,0,0,.2)", color: "inherit", borderColor: "rgba(0,0,0,.25)" }}>Space</kbd>
+              {t("results.more")} <kbd className="hidden md:inline" style={{ background: "rgba(0,0,0,.2)", color: "inherit", borderColor: "rgba(0,0,0,.25)" }}>Space</kbd>
             </button>
           </div>
         </div>
@@ -273,7 +276,7 @@ export function ResultsPage({
             <div className="mb-3 flex items-center gap-2">
               <Trophy className="h-4 w-4 text-gold" />
               <h2 className="text-sm font-semibold">Top Picks</h2>
-              <span className="text-xs text-txt2">综合分最高的 {topPicks.length} 个</span>
+              <span className="text-xs text-txt2">{t("results.topPicks", { n: topPicks.length })}</span>
             </div>
             <div className="mb-8 grid gap-4 md:grid-cols-3">
               {topPicks.map((r, i) => (
@@ -296,9 +299,9 @@ export function ResultsPage({
           <div className="flex items-center gap-1 rounded-lg border border-line bg-bg1 p-1">
             {(
               [
-                { key: "available", label: `可注册 ${availableRows.length}` },
-                { key: "all", label: `全部 ${rows.length}` },
-                { key: "taken", label: `已注册 ${takenRows.length}` },
+                { key: "available", label: t("results.filter.available", { n: availableRows.length }) },
+                { key: "all", label: t("results.filter.all", { n: rows.length }) },
+                { key: "taken", label: t("results.filter.taken", { n: takenRows.length }) },
               ] as { key: StatusFilter; label: string }[]
             ).map((f) => (
               <button
@@ -319,7 +322,7 @@ export function ResultsPage({
                 onClick={() => setTldFilter("")}
                 className={cn("shrink-0 rounded-md px-2 py-1 font-mono text-[11px]", !tldFilter ? "bg-bg3 font-semibold" : "text-txt1 hover:text-txt0")}
               >
-                全部 TLD
+                {t("results.filter.allTld")}
               </button>
               {tldCounts.map(([t, n]) => (
                 <button
@@ -339,28 +342,28 @@ export function ResultsPage({
             <DropdownMenuTrigger asChild>
               <button className="flex h-8 items-center gap-1 rounded-lg border border-line px-2.5 text-xs text-txt1 hover:text-txt0">
                 <ArrowDownWideNarrow className="h-3.5 w-3.5" />
-                {sort === "score" ? "评分 ↓" : "短优先"}
+                {sort === "score" ? t("results.sort.score") : t("results.sort.length")}
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
-              <DropdownMenuItem onSelect={() => setSort("score")}>按评分（高→低）</DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => setSort("length")}>按长度（短→长）</DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => setSort("score")}>{t("results.sort.byScore")}</DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => setSort("length")}>{t("results.sort.byLength")}</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           <div className="flex-1" />
           <span className="hidden items-center gap-2 text-[11px] text-txt2 lg:flex">
-            <kbd>↑↓</kbd>选中 <kbd>C</kbd>复制 <kbd>S</kbd>收藏 <kbd>⏎</kbd>注册
+            <kbd>↑↓</kbd>{t("results.kbd")} <kbd>C</kbd>{t("results.kbdCopy")} <kbd>S</kbd>{t("results.kbdFav")} <kbd>⏎</kbd>{t("results.kbdReg")}
           </span>
           <div className="flex items-center gap-1 rounded-lg border border-line bg-bg1 p-1">
             <button
-              title="紧凑行视图（默认）"
+              title={t("results.viewRows")}
               onClick={() => setView("rows")}
               className={cn("grid h-7 w-7 place-items-center rounded-md", view === "rows" ? "bg-bg3" : "text-txt2 hover:text-txt0")}
             >
               <Rows3 className="h-3.5 w-3.5" />
             </button>
             <button
-              title="卡片视图"
+              title={t("results.viewGrid")}
               onClick={() => setView("grid")}
               className={cn("grid h-7 w-7 place-items-center rounded-md", view === "grid" ? "bg-bg3" : "text-txt2 hover:text-txt0")}
             >
@@ -383,7 +386,7 @@ export function ResultsPage({
                 onToggleFavorite={r.status !== "taken" ? onToggleFavorite : undefined}
               />
             ))}
-            {visible.length === 0 && <p className="px-4 py-8 text-center text-sm text-txt2">没有符合筛选条件的域名</p>}
+            {visible.length === 0 && <p className="px-4 py-8 text-center text-sm text-txt2">{t("results.noMatch")}</p>}
           </div>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -407,7 +410,7 @@ export function ResultsPage({
           <details className="group mt-4">
             <summary className="flex cursor-pointer items-center gap-1.5 text-xs text-txt2 hover:text-txt1">
               <ChevronRight className="h-3.5 w-3.5 transition-transform group-open:rotate-90" />
-              已被注册的 {takenRows.length} 个候选（AI 真的筛过它们）
+              {t("results.takenFold", { n: takenRows.length })}
             </summary>
             <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1.5 rounded-xl border border-line bg-bg1 px-4 py-3">
               {takenRows.map((r) => (
@@ -427,34 +430,32 @@ export function ResultsPage({
             <>
               <span className="hidden items-center gap-1.5 truncate text-xs text-txt1 md:flex">
                 <Lock className="h-3.5 w-3.5 shrink-0 text-brand" />
-                已锁定 <b className="tnum font-mono text-txt0">{locked.size}</b> 个：
+                {t("results.lockedCount", { n: locked.size })}
                 <span className="truncate font-mono">{lockedList.join("、")}</span>
               </span>
               <span className="flex items-center gap-1 whitespace-nowrap text-[11px] text-txt1 md:hidden">
                 <Lock className="h-3.5 w-3.5 shrink-0 text-brand" />
-                锁定 <b className="tnum font-mono text-txt0">{locked.size}</b>
+                {t("results.lockedShort", { n: locked.size })}
               </span>
             </>
           ) : (
             <span className="flex items-center gap-1 text-[11px] text-txt2 sm:gap-1.5 sm:text-xs">
               <Lock className="h-3.5 w-3.5 shrink-0" />
-              <span className="hidden sm:inline">
-                点行内 <Lock className="inline h-3 w-3" /> 锁定候选，可围绕它再猎一轮
-              </span>
-              <span className="whitespace-nowrap sm:hidden">锁定后可定向再猎</span>
+              <span className="hidden sm:inline">{t("results.lockHint")}</span>
+              <span className="whitespace-nowrap sm:hidden">{t("results.lockHintShort")}</span>
             </span>
           )}
           <div className="flex-1" />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button title="导出" className="flex h-11 w-11 shrink-0 items-center justify-center gap-1.5 rounded-lg border border-line text-sm text-txt1 hover:bg-bg2 hover:text-txt0 sm:w-auto sm:px-3 md:h-9">
+              <button title={t("common.export")} className="flex h-11 w-11 shrink-0 items-center justify-center gap-1.5 rounded-lg border border-line text-sm text-txt1 hover:bg-bg2 hover:text-txt0 sm:w-auto sm:px-3 md:h-9">
                 <Download className="h-4 w-4" />
-                <span className="hidden sm:inline">导出</span>
+                <span className="hidden sm:inline">{t("common.export")}</span>
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem onSelect={() => exportRows(visible, "csv")}>导出 CSV</DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => exportRows(visible, "txt")}>导出 TXT</DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => exportRows(visible, "csv")}>{t("common.exportCsv")}</DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => exportRows(visible, "txt")}>{t("common.exportTxt")}</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           <button
@@ -463,7 +464,7 @@ export function ResultsPage({
             disabled={running || moreDisabled}
           >
             <RotateCw className={cn("h-4 w-4", running && "animate-spin")} />
-            {locked.size > 0 && <span className="hidden md:inline">围绕锁定项</span>}再来一轮
+            {locked.size > 0 ? t("results.moreAroundLocked") : t("results.more")}
           </button>
         </div>
       </div>

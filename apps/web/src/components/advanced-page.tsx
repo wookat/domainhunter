@@ -5,12 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { DomainRow } from "@/components/domain-row";
+import { useI18n } from "@/lib/i18n";
 import { friendlyError, friendlyHttpError } from "@/lib/utils";
 import type { Row, Status } from "@/types";
 
 const split = (s: string) => s.split(/[,，\s]+/).map((x) => x.trim()).filter(Boolean);
 
 export function AdvancedPage() {
+  const { t } = useI18n();
   const [roots, setRoots] = useState("");
   const [prefixes, setPrefixes] = useState("");
   const [suffixes, setSuffixes] = useState("");
@@ -34,7 +36,7 @@ export function AdvancedPage() {
         body: JSON.stringify({ roots: split(roots), prefixes: split(prefixes), suffixes: split(suffixes), tlds: split(tlds) }),
         signal: ac.signal,
       });
-      if (!res.ok) throw new Error(friendlyHttpError(res.status));
+      if (!res.ok) throw new Error(friendlyHttpError(res.status, t));
       const reader = res.body!.getReader();
       const decoder = new TextDecoder();
       let buf = "";
@@ -55,7 +57,7 @@ export function AdvancedPage() {
         if (rs.length) setRows((prev) => [...prev, ...rs]);
       }
     } catch (e) {
-      if ((e as Error).name !== "AbortError") setError(friendlyError(e as Error));
+      if ((e as Error).name !== "AbortError") setError(friendlyError(e as Error, t));
     } finally {
       setRunning(false);
     }

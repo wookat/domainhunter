@@ -40,6 +40,9 @@ importers:
       lucide-react:
         specifier: ^1.27.0
         version: 1.27.0(react@18.3.1)
+      nanoid:
+        specifier: ^5.1.16
+        version: 5.1.16
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -1523,6 +1526,11 @@ packages:
   nanoid@3.3.17:
     resolution: {integrity: sha512-xQLf0A3HOMlgHq0n247/LRuAOYmB7dXJ/DvAxGvsSBij45XtBSmQycu+F8ODbHwns/XyFZagyL1+J0Offw1E0g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+
+  nanoid@5.1.16:
+    resolution: {integrity: sha512-kVrnsrJqMR8+oLJnGEmSWw9BivK5mt7H3FZatVRjrc5wGqFYuBxX1yG7+A7Gi5AefkX6t/oCkizcQgpu0cY1dQ==}
+    engines: {node: ^18 || >=20}
     hasBin: true
 
   node-releases@2.0.52:
@@ -3051,6 +3059,8 @@ snapshots:
       thenify-all: 1.6.0
 
   nanoid@3.3.17: {}
+
+  nanoid@5.1.16: {}
 
   node-releases@2.0.52: {}
 

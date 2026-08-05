@@ -1,26 +1,29 @@
-import { useState } from "react";
-import { ChevronDown, Plus, Ruler, ShieldCheck, Sparkles, Wand2, Zap } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Brain, ChevronDown, Plus, Ruler, ShieldCheck, Sparkles, Wand2, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { useI18n, type I18nKey } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 const EXAMPLES = ["独立开发者的 AI 周报工具", "宠物营养订阅电商", "极简冥想 App", "跨境 SaaS 数据看板"];
+const EXAMPLES_EN = ["AI weekly-report tool for indie devs", "Pet nutrition subscription store", "Minimal meditation app", "Cross-border SaaS dashboard"];
 const PRESET_TLDS = ["com", "cn", "io", "ai", "app", "dev"];
 const MAX_LEN = 500;
 
-export const STYLE_OPTIONS = [
-  { value: "none", label: "不限风格" },
-  { value: "极客风", label: "极客风" },
-  { value: "商务专业", label: "商务专业" },
-  { value: "文艺诗意", label: "文艺诗意" },
-  { value: "中文拼音", label: "中文拼音" },
+// value 保持中文（传给 AI 的提示词），label 按语言切换
+export const STYLE_OPTIONS: { value: string; labelKey: I18nKey }[] = [
+  { value: "none", labelKey: "home.style.none" },
+  { value: "极客风", labelKey: "home.style.geek" },
+  { value: "商务专业", labelKey: "home.style.business" },
+  { value: "文艺诗意", labelKey: "home.style.poetic" },
+  { value: "中文拼音", labelKey: "home.style.pinyin" },
 ];
 
-export const LENGTH_OPTIONS = [
-  { value: "none", label: "不限长度" },
-  { value: "短小精悍（≤8 字符）", label: "≤ 8 字符" },
-  { value: "中等（9–12 字符）", label: "9–12 字符" },
-  { value: "长一点也可以（>12 字符）", label: "> 12 字符" },
+export const LENGTH_OPTIONS: { value: string; labelKey: I18nKey }[] = [
+  { value: "none", labelKey: "home.len.none" },
+  { value: "短小精悍（≤8 字符）", labelKey: "home.len.short" },
+  { value: "中等（9–12 字符）", labelKey: "home.len.mid" },
+  { value: "长一点也可以（>12 字符）", labelKey: "home.len.long" },
 ];
 
 export interface HomeValues {
@@ -38,23 +41,24 @@ function MiniSelect({
 }: {
   icon: typeof Wand2;
   value: string;
-  options: { value: string; label: string }[];
+  options: { value: string; labelKey: I18nKey }[];
   onChange: (v: string) => void;
 }) {
+  const { t } = useI18n();
   const current = options.find((o) => o.value === value) ?? options[0];
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button className="flex h-11 items-center gap-1 rounded-lg border border-line bg-bg1 px-2.5 text-xs text-txt1 hover:text-txt0 sm:h-8">
           <Icon className="h-3.5 w-3.5" />
-          {current.label}
+          {t(current.labelKey)}
           <ChevronDown className="h-3 w-3" />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start">
         {options.map((o) => (
           <DropdownMenuItem key={o.value} onSelect={() => onChange(o.value)} className={cn(o.value === value && "text-brand")}>
-            {o.label}
+            {t(o.labelKey)}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
@@ -63,7 +67,22 @@ function MiniSelect({
 }
 
 export function HomePage({ initial, onSubmit }: { initial: HomeValues; onSubmit: (v: HomeValues) => void }) {
+  const { t, lang } = useI18n();
   const [description, setDescription] = useState(initial.description);
+  const [totalChecked, setTotalChecked] = useState<number | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/stats")
+      .then((r) => (r.ok ? (r.json() as Promise<{ totalChecked: number }>) : null))
+      .then((d) => {
+        if (!cancelled && d && d.totalChecked > 0) setTotalChecked(d.totalChecked);
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
   const [tlds, setTlds] = useState<string[]>(initial.tlds);
   const [style, setStyle] = useState(initial.style || "none");
   const [lengthPref, setLengthPref] = useState(initial.lengthPref || "none");
@@ -99,23 +118,23 @@ export function HomePage({ initial, onSubmit }: { initial: HomeValues; onSubmit:
         <div className="mb-5 flex justify-center">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-line bg-brand-dim px-3 py-1.5 text-xs text-brand">
             <span className="dot-breathe h-1.5 w-1.5 rounded-full bg-brand" />
-            AI Agent · RDAP+DNS 实时核验可注册
+            {t("home.badge")}
           </span>
         </div>
 
         <h1 className="text-center text-4xl font-extrabold leading-[1.12] tracking-[-0.03em] md:text-[52px]" style={{ textWrap: "balance" }}>
-          说出寓意，<br className="md:hidden" />
-          猎到真正可注册的好域名
+          {t("home.title1")}<br className="md:hidden" />
+          {t("home.title2")}
         </h1>
         <p className="mt-4 text-center text-base text-txt1 md:text-lg">
-          描述你的想法，AI 批量构思、实时核验、逐个评分——只给你能立刻注册的。
+          {t("home.subtitle")}
         </p>
 
         <div className="mt-8 overflow-hidden rounded-2xl border border-line-strong bg-bg2 shadow-[0_24px_48px_-24px_rgba(0,0,0,.5)] focus-within:border-brand-line">
           <textarea
             rows={3}
             className="w-full resize-none bg-transparent px-5 pb-2 pt-4 text-[15px] leading-relaxed outline-none"
-            placeholder="例如：面向独立开发者的 AI 周报工具，名字要短、极客感、好读好记…"
+            placeholder={t("home.placeholder")}
             value={description}
             maxLength={MAX_LEN}
             onChange={(e) => setDescription(e.target.value)}
@@ -155,7 +174,7 @@ export function HomePage({ initial, onSubmit }: { initial: HomeValues; onSubmit:
                   onBlur={addCustomTld}
                 />
               ) : (
-                <button onClick={() => setShowCustom(true)} title="自定义 TLD" className="flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-md text-xs text-txt2 hover:text-txt0 sm:min-h-0 sm:min-w-0 sm:px-1.5 sm:py-1">
+                <button onClick={() => setShowCustom(true)} title={t("home.customTld")} className="flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-md text-xs text-txt2 hover:text-txt0 sm:min-h-0 sm:min-w-0 sm:px-1.5 sm:py-1">
                   <Plus className="h-3.5 w-3.5" />
                 </button>
               )}
@@ -172,13 +191,13 @@ export function HomePage({ initial, onSubmit }: { initial: HomeValues; onSubmit:
               className="flex h-11 items-center gap-1.5 rounded-xl bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50 sm:h-9"
             >
               <Sparkles className="h-4 w-4" />
-              开始猎取
+              {t("home.start")}
             </button>
           </div>
         </div>
 
         <div className="mt-4 flex flex-wrap justify-center gap-2">
-          {EXAMPLES.map((ex) => (
+          {(lang === "zh" ? EXAMPLES : EXAMPLES_EN).map((ex) => (
             <button
               key={ex}
               onClick={() => {
@@ -193,16 +212,43 @@ export function HomePage({ initial, onSubmit }: { initial: HomeValues; onSubmit:
         </div>
 
         <p className="mt-10 flex flex-wrap items-center justify-center gap-4 text-center text-xs text-txt2">
-          <span className="flex items-center gap-1">
-            <ShieldCheck className="h-3.5 w-3.5 text-brand" />
-            已实时核验 <b className="tnum font-mono text-txt1">128,940</b> 个域名
-          </span>
+          {totalChecked !== null && (
+            <span className="flex items-center gap-1">
+              <ShieldCheck className="h-3.5 w-3.5 text-brand" />
+              {t("home.trustChecked")} <b className="tnum font-mono text-txt1">{totalChecked.toLocaleString()}</b> {t("home.trustCheckedUnit")}
+            </span>
+          )}
           <span className="flex items-center gap-1">
             <Zap className="h-3.5 w-3.5 text-brand" />
-            结果流式返回，先到先看
+            {t("home.trustStream")}
           </span>
-          <span className="flex items-center gap-1">开源 MIT</span>
+          <span className="flex items-center gap-1">{t("home.trustOss")}</span>
         </p>
+
+        {/* 怎么用 / 为什么好用：三步说明 */}
+        <div className="mt-16">
+          <h2 className="text-center text-sm font-semibold text-txt1">{t("home.how.title")}</h2>
+          <div className="mt-5 grid gap-4 sm:grid-cols-3">
+            {(
+              [
+                { icon: Brain, title: "home.how.step1.title", desc: "home.how.step1.desc" },
+                { icon: ShieldCheck, title: "home.how.step2.title", desc: "home.how.step2.desc" },
+                { icon: Sparkles, title: "home.how.step3.title", desc: "home.how.step3.desc" },
+              ] as { icon: typeof Brain; title: I18nKey; desc: I18nKey }[]
+            ).map((s, i) => (
+              <div key={s.title} className="rounded-xl border border-line bg-bg1 p-5">
+                <div className="flex items-center gap-2">
+                  <span className="grid h-7 w-7 place-items-center rounded-lg border border-brand-line bg-brand-dim">
+                    <s.icon className="h-3.5 w-3.5 text-brand" />
+                  </span>
+                  <span className="tnum font-mono text-[11px] text-txt2">0{i + 1}</span>
+                </div>
+                <h3 className="mt-3 text-sm font-semibold">{t(s.title)}</h3>
+                <p className="mt-1.5 text-xs leading-relaxed text-txt1">{t(s.desc)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </main>
   );

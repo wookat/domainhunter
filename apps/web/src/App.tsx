@@ -5,10 +5,12 @@ import { Header } from "@/components/header";
 import { HomePage, type HomeValues } from "@/components/home-page";
 import { AgentPage, type LogEntry } from "@/components/agent-page";
 import { ResultsPage } from "@/components/results-page";
+import { SharePage } from "@/components/share-page";
 import { ShortlistPage } from "@/components/shortlist-page";
 import { AdvancedPage } from "@/components/advanced-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
 import { isMockEnabled, runMockStream } from "@/mock";
+import { useI18n } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
 import { friendlyError, friendlyHttpError } from "@/lib/utils";
 import type { Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types";
@@ -16,7 +18,14 @@ import type { Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types
 type Mode = "home" | "agent" | "results" | "shortlist" | "advanced";
 const TARGET = 10;
 
+function shareIdFromPath(): string | null {
+  const m = window.location.pathname.match(/^\/s\/([\w-]{1,32})$/);
+  return m ? m[1] : null;
+}
+
 export default function App() {
+  const { t } = useI18n();
+  const [shareId] = useState<string | null>(shareIdFromPath);
   const [mode, setMode] = useState<Mode>("home");
   const [values, setValues] = useState<HomeValues>({ description: "", tlds: ["com", "cn"], style: "", lengthPref: "" });
   const [rows, setRows] = useState<Row[]>([]);
@@ -87,7 +96,7 @@ export default function App() {
     } else if (ev.type === "done") {
       // no-op：running 状态在流结束时统一收尾
     } else if (ev.type === "error") {
-      setError("AI 服务出错，已停止本轮");
+      setError(t("error.ai"));
     } else if (ev.domain) {
       const status = ev.status as Status;
       setLogs((prev) => [...prev.slice(-19), { domain: ev.domain!, status, cached: ev.cached }]);
@@ -154,7 +163,7 @@ export default function App() {
         signal: ac.signal,
       });
       if (!res.ok) {
-        let msg = friendlyHttpError(res.status);
+        let msg = friendlyHttpError(res.status, t);
         try {
           const j = (await res.json()) as { message?: string };
           if (j.message) msg = j.message;
@@ -176,7 +185,7 @@ export default function App() {
         }
       }
     } catch (e) {
-      if ((e as Error).name !== "AbortError") setError(friendlyError(e as Error));
+      if ((e as Error).name !== "AbortError") setError(friendlyError(e as Error, t));
     } finally {
       setRunning(false);
       setElapsedSec(Math.round((Date.now() - startedAtRef.current) / 1000));
@@ -199,11 +208,24 @@ export default function App() {
 
   const understanding = [
     `为「${values.description}」寻找可注册域名`,
-    values.style && `风格：${values.style}`,
-    values.lengthPref && `长度：${values.lengthPref}`,
+    values.style && `${t("agent.style")}：${values.style}`,
+    values.lengthPref && `${t("agent.length")}：${values.lengthPref}`,
   ]
     .filter(Boolean)
     .join(" · ");
+
+  if (shareId) {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Header
+          onLogoClick={() => window.location.assign("/")}
+          shortlistCount={shortlist.items.length}
+          onShortlistClick={() => window.location.assign("/")}
+        />
+        <SharePage id={shareId} />
+      </div>
+    );
+  }
 
   const headerRight =
     mode === "home" ? (
@@ -212,7 +234,7 @@ export default function App() {
         onClick={() => setMode("advanced")}
       >
         <SlidersHorizontal className="h-4 w-4" />
-        高级模式
+        {t("header.advanced")}
       </button>
     ) : mode === "advanced" || mode === "shortlist" ? (
       <button
@@ -220,16 +242,16 @@ export default function App() {
         onClick={() => (mode === "shortlist" ? closeShortlist() : setMode("home"))}
       >
         <ArrowLeft className="h-4 w-4" />
-        返回
+        {t("common.back")}
       </button>
     ) : undefined;
 
   const headerCenter =
     mode === "agent" && running ? (
       <span className="mr-2 hidden items-center gap-1.5 text-xs text-txt1 md:flex">
-        <span className="dot-breathe h-1.5 w-1.5 rounded-full bg-brand" />第 {currentRound || 1} 轮进行中 · 已核验{" "}
-        <b className="tnum font-mono text-txt0">{rows.filter((r) => r.status !== "checking").length}</b> 个 · 可注册{" "}
-        <b className="tnum font-mono text-brand">{availableCount}</b> 个
+        <span className="dot-breathe h-1.5 w-1.5 rounded-full bg-brand" />{t("header.running", { round: currentRound || 1 })}{" "}
+        <b className="tnum font-mono text-txt0">{rows.filter((r) => r.status !== "checking").length}</b> {t("header.runningChecked")}{" "}
+        <b className="tnum font-mono text-brand">{availableCount}</b> {t("header.runningUnit")}
       </span>
     ) : undefined;
 
@@ -308,7 +330,14 @@ export default function App() {
         />
       )}
       {mode === "shortlist" && (
-        <ShortlistPage items={shortlist.items} onRemove={shortlist.remove} onClear={shortlist.clear} onStart={() => setMode("home")} />
+        <ShortlistPage
+          items={shortlist.items}
+          onRemove={shortlist.remove}
+          onClear={shortlist.clear}
+          onStart={() => setMode("home")}
+          lastCheckedAt={shortlist.lastCheckedAt}
+          onApplyStatuses={shortlist.applyStatuses}
+        />
       )}
       {mode === "advanced" && <AdvancedPage />}
 

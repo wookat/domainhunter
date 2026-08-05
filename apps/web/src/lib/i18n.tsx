@@ -1,0 +1,349 @@
+/* eslint-disable react-refresh/only-export-components */
+import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
+
+const LANG_KEY = "domainhunter:lang";
+
+export type Lang = "zh" | "en";
+
+const zh = {
+  // 通用
+  "common.back": "返回",
+  "common.copy": "复制",
+  "common.export": "导出",
+  "common.exportCsv": "导出 CSV",
+  "common.exportTxt": "导出 TXT",
+  "common.register": "去注册",
+  "common.remove": "移除",
+  "common.unlimited": "不限",
+  "common.themeToggle": "切换浅色/暗色",
+  // Header
+  "header.shortlist": "候选清单",
+  "header.advanced": "高级模式",
+  "header.running": "第 {round} 轮进行中 · 已核验",
+  "header.runningChecked": "个 · 可注册",
+  "header.runningUnit": "个",
+  // 状态
+  "status.available": "可注册",
+  "status.taken": "已注册",
+  "status.unknown": "未知",
+  "status.checking": "检测中",
+  // 评分维度
+  "score.length": "长度",
+  "score.readability": "读感",
+  "score.relevance": "寓意",
+  "score.brandability": "品牌感",
+  "score.total": "综合",
+  // 着陆页
+  "home.badge": "AI Agent · RDAP+DNS 实时核验可注册",
+  "home.title1": "说出寓意，",
+  "home.title2": "猎到真正可注册的好域名",
+  "home.subtitle": "描述你的想法，AI 批量构思、实时核验、逐个评分——只给你能立刻注册的。",
+  "home.placeholder": "例如：面向独立开发者的 AI 周报工具，名字要短、极客感、好读好记…",
+  "home.start": "开始猎取",
+  "home.customTld": "自定义 TLD",
+  "home.trustChecked": "已实时核验",
+  "home.trustCheckedUnit": "个域名",
+  "home.trustStream": "结果流式返回，先到先看",
+  "home.trustOss": "开源 MIT",
+  "home.how.title": "怎么用 / 为什么好用",
+  "home.how.step1.title": "AI 构思",
+  "home.how.step1.desc": "描述你的想法，AI 按寓意、风格、长度批量构思候选名字，并解释每个名字的寓意。",
+  "home.how.step2.title": "实时核验",
+  "home.how.step2.desc": "RDAP + DNS 双通道逐个核验注册状态，结果流式返回，不看过期数据。",
+  "home.how.step3.title": "只给你能注册的",
+  "home.how.step3.desc": "已被注册的自动排除，剩下的按四维评分排序，收藏、导出、一键去注册。",
+  "home.style.none": "不限风格",
+  "home.style.geek": "极客风",
+  "home.style.business": "商务专业",
+  "home.style.poetic": "文艺诗意",
+  "home.style.pinyin": "中文拼音",
+  "home.len.none": "不限长度",
+  "home.len.short": "≤ 8 字符",
+  "home.len.mid": "9–12 字符",
+  "home.len.long": "> 12 字符",
+  // Agent 生成中
+  "agent.params": "需求与参数",
+  "agent.understanding": "AI 理解的需求",
+  "agent.edit": "修改",
+  "agent.editRerun": "改参数并重跑",
+  "agent.style": "风格",
+  "agent.length": "长度",
+  "agent.process": "Agent 过程",
+  "agent.round": "第 {n} 轮",
+  "agent.roundDone": "构思 {proposed} → 核验 → 评分",
+  "agent.roundAvailable": "{n} 个可注册",
+  "agent.thinking": "AI 构思候选中…",
+  "agent.proposed": "构思 {n} 个候选",
+  "agent.checkStep": "RDAP + DNS 核验",
+  "agent.scoreStep": "四维评分",
+  "agent.nextRound": "第 {n} 轮 · 视缺口补充（目标 {target} 个可注册）",
+  "agent.live": "实时结果",
+  "agent.liveHint": "核验通过即插入，无需等整轮结束",
+  "agent.checked": "已核验",
+  "agent.available": "可注册",
+  "agent.stop": "停止",
+  "agent.noResults": "本轮没有产生结果",
+  "agent.cached": "缓存",
+  "agent.checkingNow": "正在核验 {domain} …",
+  "agent.checkingRdap": "RDAP 核验中…",
+  "agent.prevRound": "第 {n} 轮 · {count} 个可注册（已并入结果，完成后可按轮回看）",
+  // 结果页
+  "results.title": "为「{desc}」猎到 {n} 个可注册域名",
+  "results.stats": "{rounds} 轮 · 共核验 {total} 个（{taken} 个已被注册）",
+  "results.elapsed": "用时 {s}s",
+  "results.more": "再来一轮",
+  "results.topPicks": "综合分最高的 {n} 个",
+  "results.filter.available": "可注册 {n}",
+  "results.filter.all": "全部 {n}",
+  "results.filter.taken": "已注册 {n}",
+  "results.filter.allTld": "全部 TLD",
+  "results.sort.score": "评分 ↓",
+  "results.sort.length": "短优先",
+  "results.sort.byScore": "按评分（高→低）",
+  "results.sort.byLength": "按长度（短→长）",
+  "results.kbd": "选中",
+  "results.kbdCopy": "复制",
+  "results.kbdFav": "收藏",
+  "results.kbdReg": "注册",
+  "results.viewRows": "紧凑行视图（默认）",
+  "results.viewGrid": "卡片视图",
+  "results.noMatch": "没有符合筛选条件的域名",
+  "results.takenFold": "已被注册的 {n} 个候选（AI 真的筛过它们）",
+  "results.lockedCount": "已锁定 {n} 个：",
+  "results.lockedShort": "锁定 {n}",
+  "results.lockHint": "点行内锁定候选，可围绕它再猎一轮",
+  "results.lockHintShort": "锁定后可定向再猎",
+  "results.moreAroundLocked": "围绕锁定再来一轮",
+  "results.lockTitle": "锁定：再来一轮时围绕它找",
+  "results.favAdd": "收藏到候选清单",
+  "results.favRemove": "移出候选清单",
+  // 候选清单
+  "shortlist.title": "候选清单",
+  "shortlist.hint": "本地保存（localStorage，跨会话保留）· 注册前建议重新核验可用性",
+  "shortlist.clear": "清空",
+  "shortlist.batchRegister": "批量去注册（{n}）",
+  "shortlist.empty": "还没有候选。搜索结果里点收藏，就会汇总到这里，随时对比与导出。",
+  "shortlist.startHunt": "开始猎取",
+  "shortlist.domain": "域名",
+  "shortlist.price": "参考价",
+  "shortlist.share": "生成分享链接",
+  "shortlist.sharing": "生成中…",
+  "shortlist.shareCopied": "链接已复制",
+  "shortlist.shareFailed": "生成分享链接失败，请稍后再试",
+  "shortlist.shareReady": "分享链接（30 天有效）：",
+  "shortlist.recheck": "重新核验",
+  "shortlist.rechecking": "核验中…",
+  "shortlist.lastChecked": "上次核验：{time}",
+  "shortlist.neverChecked": "尚未复查过",
+  "shortlist.becameTaken": "已被抢注！",
+  "shortlist.becameAvailable": "已释放可注册",
+  "shortlist.recheckFailed": "重新核验失败，请稍后再试",
+  // 分享页
+  "share.title": "候选域名清单",
+  "share.subtitle": "由 DomainHunter 用户分享 · 快照生成于 {time} · 状态以实时核验为准",
+  "share.cta": "我也要猎名",
+  "share.ctaDesc": "说出你的想法，AI 批量构思并实时核验，只给你能注册的好域名。",
+  "share.loading": "加载中…",
+  "share.notFound": "分享链接不存在或已过期（快照保留 30 天）",
+  "share.goHome": "去首页猎名",
+  // 错误
+  "error.ai": "AI 服务出错，已停止本轮",
+  "error.badRequest": "请求内容不符合要求：请检查描述是否为空或过长（最多 500 字）",
+  "error.rateLimited": "请求太频繁，请稍后再试",
+  "error.server": "服务暂时不可用，请稍后再试",
+  "error.http": "请求失败，请稍后再试（错误码 {status}）",
+  "error.network": "网络连接异常，请检查网络后重试",
+  "error.unknown": "发生未知错误，请稍后再试",
+} as const;
+
+export type I18nKey = keyof typeof zh;
+
+const en: Record<I18nKey, string> = {
+  "common.back": "Back",
+  "common.copy": "Copy",
+  "common.export": "Export",
+  "common.exportCsv": "Export CSV",
+  "common.exportTxt": "Export TXT",
+  "common.register": "Register",
+  "common.remove": "Remove",
+  "common.unlimited": "Any",
+  "common.themeToggle": "Toggle light/dark",
+  "header.shortlist": "Shortlist",
+  "header.advanced": "Advanced",
+  "header.running": "Round {round} · checked",
+  "header.runningChecked": "· available",
+  "header.runningUnit": "",
+  "status.available": "Available",
+  "status.taken": "Taken",
+  "status.unknown": "Unknown",
+  "status.checking": "Checking",
+  "score.length": "Length",
+  "score.readability": "Readability",
+  "score.relevance": "Relevance",
+  "score.brandability": "Brandable",
+  "score.total": "Score",
+  "home.badge": "AI Agent · Live RDAP+DNS availability checks",
+  "home.title1": "Describe the idea, ",
+  "home.title2": "hunt domains you can actually register",
+  "home.subtitle": "Describe your idea — AI brainstorms in bulk, verifies live, and scores each name. You only see what's registrable right now.",
+  "home.placeholder": "e.g. An AI weekly-report tool for indie developers. Short, geeky, easy to read and remember…",
+  "home.start": "Start hunting",
+  "home.customTld": "Custom TLD",
+  "home.trustChecked": "Verified",
+  "home.trustCheckedUnit": "domains so far",
+  "home.trustStream": "Results stream in as they're verified",
+  "home.trustOss": "Open source · MIT",
+  "home.how.title": "How it works",
+  "home.how.step1.title": "AI brainstorms",
+  "home.how.step1.desc": "Describe your idea; AI generates candidate names in bulk by meaning, style and length — with an explanation for each.",
+  "home.how.step2.title": "Live verification",
+  "home.how.step2.desc": "Every name is checked via RDAP + DNS in real time and streamed back. No stale data.",
+  "home.how.step3.title": "Only registrable names",
+  "home.how.step3.desc": "Taken domains are filtered out automatically. The rest are scored on 4 dimensions — shortlist, export, register in one click.",
+  "home.style.none": "Any style",
+  "home.style.geek": "Geeky",
+  "home.style.business": "Professional",
+  "home.style.poetic": "Poetic",
+  "home.style.pinyin": "Chinese pinyin",
+  "home.len.none": "Any length",
+  "home.len.short": "≤ 8 chars",
+  "home.len.mid": "9–12 chars",
+  "home.len.long": "> 12 chars",
+  "agent.params": "Brief & parameters",
+  "agent.understanding": "AI's understanding",
+  "agent.edit": "Edit",
+  "agent.editRerun": "Edit & rerun",
+  "agent.style": "Style",
+  "agent.length": "Length",
+  "agent.process": "Agent progress",
+  "agent.round": "Round {n}",
+  "agent.roundDone": "Brainstorm {proposed} → verify → score",
+  "agent.roundAvailable": "{n} available",
+  "agent.thinking": "AI brainstorming…",
+  "agent.proposed": "{n} candidates proposed",
+  "agent.checkStep": "RDAP + DNS verification",
+  "agent.scoreStep": "4-dimension scoring",
+  "agent.nextRound": "Round {n} · fills the gap if needed (target: {target} available)",
+  "agent.live": "Live results",
+  "agent.liveHint": "Names appear as soon as they're verified",
+  "agent.checked": "Checked",
+  "agent.available": "available",
+  "agent.stop": "Stop",
+  "agent.noResults": "No results this round",
+  "agent.cached": "cached",
+  "agent.checkingNow": "Checking {domain} …",
+  "agent.checkingRdap": "Verifying via RDAP…",
+  "agent.prevRound": "Round {n} · {count} available (merged into results)",
+  "results.title": "Found {n} registrable domains for \"{desc}\"",
+  "results.stats": "{rounds} rounds · {total} checked ({taken} already taken)",
+  "results.elapsed": "{s}s elapsed",
+  "results.more": "One more round",
+  "results.topPicks": "Top {n} by overall score",
+  "results.filter.available": "Available {n}",
+  "results.filter.all": "All {n}",
+  "results.filter.taken": "Taken {n}",
+  "results.filter.allTld": "All TLDs",
+  "results.sort.score": "Score ↓",
+  "results.sort.length": "Shortest",
+  "results.sort.byScore": "By score (high → low)",
+  "results.sort.byLength": "By length (short → long)",
+  "results.kbd": "select",
+  "results.kbdCopy": "copy",
+  "results.kbdFav": "save",
+  "results.kbdReg": "register",
+  "results.viewRows": "Compact rows (default)",
+  "results.viewGrid": "Card view",
+  "results.noMatch": "No domains match the current filters",
+  "results.takenFold": "{n} candidates already taken (yes, AI really screened them)",
+  "results.lockedCount": "{n} locked:",
+  "results.lockedShort": "Locked {n}",
+  "results.lockHint": "Lock a candidate to hunt more names around it",
+  "results.lockHintShort": "Lock to hunt around it",
+  "results.moreAroundLocked": "More around locked",
+  "results.lockTitle": "Lock: next round explores around it",
+  "results.favAdd": "Add to shortlist",
+  "results.favRemove": "Remove from shortlist",
+  "shortlist.title": "Shortlist",
+  "shortlist.hint": "Saved locally (localStorage) · re-verify availability before registering",
+  "shortlist.clear": "Clear",
+  "shortlist.batchRegister": "Register all ({n})",
+  "shortlist.empty": "Nothing here yet. Bookmark names in results and they'll show up here for comparison and export.",
+  "shortlist.startHunt": "Start hunting",
+  "shortlist.domain": "Domain",
+  "shortlist.price": "Est. price",
+  "shortlist.share": "Share link",
+  "shortlist.sharing": "Creating…",
+  "shortlist.shareCopied": "Link copied",
+  "shortlist.shareFailed": "Failed to create share link, please retry",
+  "shortlist.shareReady": "Share link (valid 30 days):",
+  "shortlist.recheck": "Re-verify",
+  "shortlist.rechecking": "Verifying…",
+  "shortlist.lastChecked": "Last verified: {time}",
+  "shortlist.neverChecked": "Not re-verified yet",
+  "shortlist.becameTaken": "Just got taken!",
+  "shortlist.becameAvailable": "Released — available",
+  "shortlist.recheckFailed": "Re-verification failed, please retry",
+  "share.title": "Shared domain shortlist",
+  "share.subtitle": "Shared by a DomainHunter user · snapshot created {time} · verify live status before registering",
+  "share.cta": "Hunt my own domains",
+  "share.ctaDesc": "Describe your idea — AI brainstorms and verifies live, only showing registrable names.",
+  "share.loading": "Loading…",
+  "share.notFound": "This share link doesn't exist or has expired (snapshots are kept for 30 days)",
+  "share.goHome": "Go hunting",
+  "error.ai": "AI service error — this round was stopped",
+  "error.badRequest": "Invalid request: check that the description isn't empty or too long (max 500 chars)",
+  "error.rateLimited": "Too many requests, please try again later",
+  "error.server": "Service temporarily unavailable, please try again later",
+  "error.http": "Request failed, please retry (code {status})",
+  "error.network": "Network error — check your connection and retry",
+  "error.unknown": "Unknown error, please try again later",
+};
+
+const dicts: Record<Lang, Record<I18nKey, string>> = { zh, en };
+
+export type TFunc = (key: I18nKey, vars?: Record<string, string | number>) => string;
+
+interface I18nValue {
+  lang: Lang;
+  t: TFunc;
+  toggleLang: () => void;
+}
+
+const I18nContext = createContext<I18nValue>({
+  lang: "zh",
+  t: (key) => zh[key],
+  toggleLang: () => undefined,
+});
+
+function loadLang(): Lang {
+  try {
+    const v = localStorage.getItem(LANG_KEY);
+    if (v === "en" || v === "zh") return v;
+  } catch { /* ignore */ }
+  return "zh";
+}
+
+export function interpolate(template: string, vars?: Record<string, string | number>): string {
+  if (!vars) return template;
+  return template.replace(/\{(\w+)\}/g, (m, k: string) => (k in vars ? String(vars[k]) : m));
+}
+
+export function I18nProvider({ children }: { children: ReactNode }) {
+  const [lang, setLang] = useState<Lang>(loadLang);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(LANG_KEY, lang);
+    } catch { /* ignore */ }
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  }, [lang]);
+
+  const t = useCallback<TFunc>((key, vars) => interpolate(dicts[lang][key] ?? zh[key], vars), [lang]);
+  const toggleLang = useCallback(() => setLang((l) => (l === "zh" ? "en" : "zh")), []);
+
+  return <I18nContext.Provider value={{ lang, t, toggleLang }}>{children}</I18nContext.Provider>;
+}
+
+export function useI18n(): I18nValue {
+  return useContext(I18nContext);
+}

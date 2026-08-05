@@ -1,6 +1,7 @@
-import { Bookmark, BookmarkCheck, Crosshair, Star, SunMoon } from "lucide-react";
+import { Bookmark, BookmarkCheck, Crosshair, Languages, Star, SunMoon } from "lucide-react";
 import type { ReactNode } from "react";
 
+import { useI18n } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
 import { cn } from "@/lib/utils";
 
@@ -20,6 +21,7 @@ export function Header({
   onShortlistClick: () => void;
 }) {
   const [, toggleTheme] = useTheme();
+  const { lang, t, toggleLang } = useI18n();
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-bg0/85 backdrop-blur-[12px]">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 md:px-6">
@@ -43,7 +45,7 @@ export function Header({
             )}
           >
             {shortlistActive ? <BookmarkCheck className="h-4 w-4" /> : <Bookmark className="h-4 w-4" />}
-            <span className="hidden sm:inline">候选清单</span>
+            <span className="hidden sm:inline">{t("header.shortlist")}</span>
             <span
               className={cn(
                 "tnum rounded-full px-1.5 font-mono text-[11px]",
@@ -63,9 +65,18 @@ export function Header({
             <Star className="h-4 w-4" />
           </a>
           <button
+            onClick={toggleLang}
+            className="flex h-11 items-center gap-1 rounded-lg border border-line px-2.5 font-mono text-xs text-txt1 hover:bg-bg2 hover:text-txt0 sm:h-9"
+            title={lang === "zh" ? "Switch to English" : "切换到中文"}
+            aria-label={lang === "zh" ? "Switch to English" : "切换到中文"}
+          >
+            <Languages className="h-3.5 w-3.5" />
+            {lang === "zh" ? "EN" : "中"}
+          </button>
+          <button
             onClick={toggleTheme}
             className="grid h-11 w-11 place-items-center rounded-lg border border-line text-txt1 hover:bg-bg2 hover:text-txt0 sm:h-9 sm:w-9"
-            title="切换浅色/暗色"
+            title={t("common.themeToggle")}
           >
             <SunMoon className="h-4 w-4" />
           </button>
