@@ -621,6 +621,15 @@ app.get("/api/og/prices", (c) => {
   });
 });
 
+// 首页分享图（静态 og.png 为中文，英文首页用动态 SVG，平台不支持 SVG 时回退 og.png；须在 /api/og/:id 之前注册）
+app.get("/api/og/home", (c) => {
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  const title = lang === "en" ? "Describe the meaning — hunt truly available domains" : "说出寓意，猎取真正可注册的好域名";
+  return new Response(pageOgSvg("DomainHunter", title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
 app.get("/api/og/:id", async (c) => {
   const kv = c.env.CACHE;
   const id = c.req.param("id");
@@ -743,9 +752,13 @@ async function injectModulepreload(html: string, assets: Fetcher, origin: string
   }
 }
 
-/** SSR 按解析出的语言设置 <html lang>（SPA 水合后会再同步，这里保证首屏/爬虫看到的语言正确） */
+/** SSR 按解析出的语言设置 <html lang> 与 og:locale（SPA 水合后会再同步，这里保证首屏/爬虫看到的语言正确） */
 const setHtmlLang = (html: string, lang: "zh" | "en"): string =>
-  lang === "en" ? html.replace(/<html lang="[^"]*"/, '<html lang="en"') : html;
+  lang === "en"
+    ? html
+        .replace(/<html lang="[^"]*"/, '<html lang="en"')
+        .replace(/<meta property="og:locale" content="[^"]*"/, '<meta property="og:locale" content="en_US"')
+    : html;
 
 /** 未知 slug 的 SEO 路由：返回应用壳 + 404 状态 + noindex，避免软 404 被收录 */
 async function notFoundShell(res: Response): Promise<Response> {
@@ -875,7 +888,11 @@ app.get("/", async (c) => {
       .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${escapeHtml(m.ogTitle)}" />`)
       .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${escapeHtml(m.ogDesc)}" />`)
       .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${escapeHtml(m.ogTitle)}" />`)
-      .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${escapeHtml(m.ogDesc)}" />`);
+      .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${escapeHtml(m.ogDesc)}" />`)
+      .replace(
+        /<meta property="og:image" content="[^"]*" \/>/,
+        `<meta property="og:image" content="${SITE_ORIGIN}/api/og/home?lang=en" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+      );
   }
   html = injectHreflang(html, "/").replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
   html = setHtmlLang(html, lang);
