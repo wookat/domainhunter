@@ -304,6 +304,7 @@ export function HomePage({
   const [lengthPref, setLengthPref] = useState(() => initial.lengthPref || optionFromQuery("len", LENGTH_OPTIONS) || "none");
   const [customTld, setCustomTld] = useState("");
   const [showCustom, setShowCustom] = useState(false);
+  const [showAllTemplates, setShowAllTemplates] = useState(false);
 
   const customTlds = tlds.filter((t) => !PRESET_TLDS.includes(t));
   const toggleTld = (t: string) => setTlds((prev) => (prev.includes(t) ? prev.filter((x) => x !== t) : [...prev, t]));
@@ -716,11 +717,11 @@ export function HomePage({
           </div>
         )}
 
-        {/* 行业模板 chips：点击填入描述模板，用户可再编辑后搜索 */}
+        {/* 行业模板 chips：点击填入描述模板，用户可再编辑后搜索；默认收起只显示前 10 个 */}
         <div className="mt-4">
           <p className="text-center text-[11px] text-txt2">{t("home.templates")}</p>
           <div className="mt-2 flex flex-wrap justify-center gap-2">
-            {TEMPLATES.map((tpl) => (
+            {(showAllTemplates ? TEMPLATES : TEMPLATES.slice(0, 10)).map((tpl) => (
               <button
                 key={tpl.labelZh}
                 onClick={() => setDescription(lang === "zh" ? tpl.zh : tpl.en)}
@@ -729,6 +730,14 @@ export function HomePage({
                 {lang === "zh" ? tpl.labelZh : tpl.labelEn}
               </button>
             ))}
+            {!showAllTemplates && (
+              <button
+                onClick={() => setShowAllTemplates(true)}
+                className="h-11 rounded-full border border-dashed border-brand-line/60 px-3 text-xs text-txt2 transition-colors hover:border-brand-line hover:text-brand sm:h-8"
+              >
+                +{TEMPLATES.length - 10}
+              </button>
+            )}
           </div>
         </div>
 
