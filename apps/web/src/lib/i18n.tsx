@@ -587,7 +587,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     } catch { /* ignore */ }
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
     const path = window.location.pathname;
-    if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/") && path !== "/prices") document.title = dicts[lang]["meta.title"];
+    if (path === "/prices") document.title = `${dicts[lang]["prices.title"]} | DomainHunter`;
+    else if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/")) document.title = dicts[lang]["meta.title"];
   }, [lang]);
 
   const t = useCallback<TFunc>((key, vars) => interpolate(dicts[lang][key] ?? zh[key], vars), [lang]);
