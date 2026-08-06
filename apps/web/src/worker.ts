@@ -3,6 +3,7 @@ import { nanoid } from "nanoid";
 import { generateCandidates, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
 import { generateAiCandidates, generateUnderstanding } from "./ai";
+import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { TLD_GUIDES, TLD_LIST, USD_TO_CNY } from "./content/tlds";
 
 type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace };
@@ -564,8 +565,32 @@ app.get("/tld/:tld", async (c) => {
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
+// 行业命名指南页（SPA 路由 + SSR meta）：回 index.html 并按行业与语言替换 title/description
+app.get("/guide/:slug", async (c) => {
+  const slug = c.req.param("slug").toLowerCase();
+  const guide = INDUSTRY_GUIDES[slug];
+  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  if (!guide) return res;
+  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const loc = guide[lang];
+  const title = escapeHtml(`${loc.title} | DomainHunter`);
+  const desc = escapeHtml(loc.metaDescription);
+  let html = await res.text();
+  html = html
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/guide/${slug}" />`)
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/guide/${slug}" />`);
+  html = injectHreflang(html, `/guide/${slug}`);
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
+});
+
 app.get("/sitemap.xml", (c) => {
-  const paths = ["/", ...TLD_LIST.map((t) => `/tld/${t}`)];
+  const paths = ["/", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`)];
   const alt = (p: string) =>
     [
       `    <xhtml:link rel="alternate" hreflang="zh-CN" href="${SITE_ORIGIN}${p}?lang=zh" />`,
