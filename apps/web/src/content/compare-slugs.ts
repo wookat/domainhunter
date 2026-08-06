@@ -27,6 +27,12 @@ export const COMPARE_SLUGS = [
   "store-vs-online",
   "cc-vs-tv",
   "cn-vs-top",
+  "art-vs-design",
+  "studio-vs-design",
+  "live-vs-tv",
+  "fun-vs-club",
+  "space-vs-site",
+  "live-vs-online",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
