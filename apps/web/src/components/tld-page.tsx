@@ -1,6 +1,7 @@
-import { CheckCircle2, Lightbulb, Sparkles, Tag } from "lucide-react";
+import { CheckCircle2, HelpCircle, Lightbulb, Sparkles, Tag } from "lucide-react";
 
 import { TLD_COMPARES, comparesForTld } from "@/content/compares";
+import { buildTldFaq } from "@/content/tld-faq";
 import { INDUSTRY_GUIDES, guidesForTld } from "@/content/guides";
 import { TLD_GUIDES } from "@/content/tlds";
 import { TLD_LIST } from "@/content/tld-list";
@@ -30,6 +31,7 @@ export function TldPage({ tld }: { tld: string }) {
   const live = prices?.[tld];
   const relatedGuides = guidesForTld(tld);
   const relatedCompares = comparesForTld(tld);
+  const faq = buildTldFaq(tld, loc, lang);
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -85,6 +87,22 @@ export function TldPage({ tld }: { tld: string }) {
           </li>
         ))}
       </ul>
+
+      {/* FAQ：与 worker SSR 的 FAQPage JSON-LD 同源（buildTldFaq） */}
+      <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+        <HelpCircle className="h-4 w-4 text-brand" />
+        {t("tld.faq")}
+      </h2>
+      <div className="mt-3 space-y-2">
+        {faq.map((item) => (
+          <details key={item.q} className="group rounded-xl border border-line bg-bg1 px-4 py-3">
+            <summary className="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
+              {item.q}
+            </summary>
+            <p className="mt-2 text-sm leading-relaxed text-txt1">{item.a}</p>
+          </details>
+        ))}
+      </div>
 
       {/* CTA：预填该 TLD 的猎名入口 */}
       <div className="mt-10 rounded-2xl border border-brand-line bg-brand-dim p-6 text-center">
