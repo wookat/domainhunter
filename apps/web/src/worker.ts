@@ -5,6 +5,7 @@ import { whoisFallback } from "./whois";
 import { generateAiCandidates, generateUnderstanding } from "./ai";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
+import { buildGuideFaq } from "./content/guide-faq";
 import { buildTldFaq } from "./content/tld-faq";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
@@ -899,9 +900,18 @@ app.get("/guide/:slug", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/guide/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
+  const guideFaqJsonld = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: buildGuideFaq(guide, lang).map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  });
   html = injectHreflang(html, `/guide/${slug}`).replace(
     "</head>",
-    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script></head>`,
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${guideFaqJsonld}</script></head>`,
   );
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/guide-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
