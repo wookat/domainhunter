@@ -1263,6 +1263,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  music: {
+    slug: "music",
+    tlds: [
+      { tld: "live", zh: "语义即「现场」，演出、直播与 livehouse 天然匹配", en: "Literally means live — a natural fit for shows, streams, and venues" },
+      { tld: "tv", zh: "视频与频道语义，MV、现场录像与音乐内容主页都贴切", en: "Video and channel semantics — fits MVs, live footage, and music content hubs" },
+      { tld: "studio", zh: "录音室、厂牌与制作团队的身份后缀", en: "An identity suffix for recording studios, labels, and production teams" },
+    ],
+    zh: {
+      label: "音乐人",
+      title: "音乐人与厂牌怎么起名：艺名、厂牌名与域名选择",
+      metaDescription: "音乐人/厂牌命名指南：艺名造词、情绪词借用、声音意象等思路，Spotify/Bandcamp 时代的好名字拆解，推荐 TLD 与常见误区，用 AI 猎取可注册的音乐域名。",
+      intro:
+        "音乐名字的第一战场不是搜索引擎，而是口口相传和歌单封面：朋友说「你去听一下 X」，对方必须一次听清、一次拼对，才能在流媒体搜到你。这决定了音乐命名比其他行业更依赖「读音的独占性」——名字可以怪，但读出来必须唯一；撞名是灾难，流媒体搜索里你会永远排在同名者后面。同时名字要能承载气质：厂牌名是审美声明，艺名是人设外壳，最好能从名字里听出你是做氛围电子还是做地下说唱。域名层面，音乐人主页承担的是链接聚合与巡演信息，短、好拼、和艺名完全一致是硬指标。",
+      namingIdeas: [
+        "声音意象词：从听感借词——echo、drift、velvet、static 这类自带质感的词，比直接用 music/sound 的组合更有辨识度",
+        "造词艺名：把真名或母语词变形成流媒体搜索唯一的拼写（Beyoncé→Bey 无效，Grimes、Ye 有效），发布前先在 Spotify/网易云搜一遍确认无撞名",
+        "情绪+名词嫁接：厂牌名常用「情绪词+实体词」结构（Sad Club、Ghostly、Warp），两个常见词的陌生组合既好记又可注册",
+        "数字与符号克制用：MGMT、M83 类缩写/代号有神秘感，但口头传播要多解释一句，适合乐迷文化强的风格",
+        "域名与艺名严格一致：艺名叫 X 就注册 x.fm / x.live，不要 xmusic-official 这类补丁式域名——每个补丁词都在稀释品牌",
+      ],
+      cases: [
+        { name: "Bandcamp", takeaway: "band + camp：把「乐队」和「营地/据点」嫁接，一秒说清「音乐人的自留地」，平台气质与独立音乐社区完全同频" },
+        { name: "Warp Records", takeaway: "单音节动词「扭曲/跃迁」，既是声音处理术语又有科幻感——电子厂牌用一个词完成风格声明" },
+        { name: "Grimes", takeaway: "真词 grime（污垢）加 s 变形成唯一拼写：保留质感联想又拿下搜索独占，艺名造词的标准打法" },
+        { name: "88rising", takeaway: "数字 88（亚洲文化里的吉利数）+ rising：亚裔音乐厂牌的身份宣言写进名字里，受众一看便知为谁而做" },
+        { name: "Boiler Room", takeaway: "借「锅炉房」意象命名现场直播品牌：地下、拥挤、滚烫的听感与产品体验完全一致，意象词命名的教科书" },
+      ],
+      pitfalls: [
+        "撞名不查流媒体：域名可注册不等于 Spotify/Apple Music 无同名艺人，音乐圈撞名的代价是搜索永远输给对方",
+        "名字锁死曲风：叫 XX 电音、XX 说唱的名字在转型时全部作废，气质词比品类词寿命长得多",
+        "拼写读音分离：写出来酷但读不出来（或读出来拼不回去）的名字，每次口头推荐都在流失听众",
+        "官方域名后缀混乱：主页 .com、周边店 .shop、巡演页 .live 各自为政，乐迷记不住哪个是真的",
+      ],
+    },
+    en: {
+      label: "Music & labels",
+      title: "How to Name a Musician, Band, or Label: Stage Names & Domains",
+      metaDescription: "Music naming guide: coined stage names, sonic imagery, mood-word grafts, name breakdowns from the streaming era, recommended TLDs and pitfalls — then hunt registrable music domains with AI.",
+      intro:
+        "A music name's first battlefield isn't search engines — it's word of mouth and playlist covers. When a friend says \"go listen to X\", the listener must catch it in one hearing and spell it right on the first try, or they'll never find you on streaming. That makes phonetic uniqueness matter more in music than in any other field: a name can be strange, but spoken aloud it must be unmistakable, because a name collision means ranking behind your namesake forever. The name also carries aesthetic weight — a label name is a taste statement, a stage name is a persona shell. For domains, an artist page mostly serves link aggregation and tour dates: short, spellable, and exactly matching the stage name are hard requirements.",
+      namingIdeas: [
+        "Sonic imagery: borrow words with inherent texture — echo, drift, velvet, static — far more distinctive than any music/sound compound",
+        "Coined stage names: warp a real name or native-language word into a streaming-unique spelling (Grimes, Ye); search Spotify before committing to confirm zero collisions",
+        "Mood + noun grafts: labels thrive on \"feeling word + concrete word\" structures (Sad Club, Ghostly, Warp) — unfamiliar pairings of familiar words are memorable and registrable",
+        "Numbers and codes sparingly: MGMT- or M83-style handles feel mysterious but cost an extra sentence in conversation; best for scenes with strong fan culture",
+        "Domain must equal stage name exactly: if you're X, register x.fm / x.live — never xmusic-official; every patch word dilutes the brand",
+      ],
+      cases: [
+        { name: "Bandcamp", takeaway: "band + camp: grafting \"band\" onto \"basecamp\" says artist-owned home turf in one beat — platform vibe perfectly tuned to indie music culture" },
+        { name: "Warp Records", takeaway: "One monosyllabic verb that's both an audio-processing term and sci-fi shorthand — an electronic label completing its style statement in a single word" },
+        { name: "Grimes", takeaway: "Real word grime plus an s: keeps the texture, wins unique search — the standard playbook for coined stage names" },
+        { name: "88rising", takeaway: "88 (auspicious in Asian culture) + rising: an Asian music collective writing its identity into the name — the audience knows instantly who it's for" },
+        { name: "Boiler Room", takeaway: "Naming a live-stream brand after an actual boiler room: underground, packed, sweltering — imagery and product experience in perfect sync" },
+      ],
+      pitfalls: [
+        "Checking the domain but not streaming: an available .com doesn't mean no namesake on Spotify — in music, collisions cost you search forever",
+        "Locking the name to a genre: X-tronica or X-rap names die the moment you evolve; vibe words outlive category words",
+        "Spelling-sound mismatch: names that look cool but can't be spoken (or spoken but not spelled back) leak listeners on every recommendation",
+        "Scattered suffixes: homepage on .com, merch on .shop, tour page on .live with different names — fans can't tell which is real",
+      ],
+    },
+  },
+  beauty: {
+    slug: "beauty",
+    tlds: [
+      { tld: "com", zh: "美妆消费品牌的信任底线，上架电商平台前先拿下", en: "The trust baseline for beauty consumer brands — secure it before marketplace launch" },
+      { tld: "co", zh: "简洁现代，DTC 美妆新品牌的主流替代选择", en: "Clean and modern — the mainstream fallback for DTC beauty startups" },
+      { tld: "shop", zh: "语义即店铺，品牌官方商城的天然后缀", en: "Literally shop — the natural suffix for an official brand store" },
+    ],
+    zh: {
+      label: "美妆个护",
+      title: "美妆个护品牌怎么起名：质感词、成分叙事与域名选择",
+      metaDescription: "美妆个护品牌命名指南：质感词借用、成分/功效叙事、人名品牌等思路，Glossier/The Ordinary 等好名字拆解，推荐 TLD 与常见误区，用 AI 猎取可注册的美妆域名。",
+      intro:
+        "美妆名字要在货架和信息流里同时性感：印在瓶身上要有质感，出现在小红书标题里要有点击欲。这个行业的命名有一条独特的分界线——走「情绪美学」还是走「成分理性」：前者用质感词营造氛围（丝绒、晨雾、裸色），后者用直白到近乎冷酷的科学叙事建立信任（The Ordinary 直接叫「平平无奇」）。两条路都通，但混着走会人格分裂。美妆是复购与口碑驱动的品类，名字必须经得起闺蜜之间的口头转述；同时出海几乎是必选项，中文名之外最好同步锁定一个全球读得顺的英文名和 .com 域名。",
+      namingIdeas: [
+        "质感词借用：从触感与光影借词——velvet、glow、dew、bare，这类词自带皮肤联想，比 beauty 字眼高级得多",
+        "成分理性流：直接把成分或方法论写进名字（The Ordinary、Inkey List），赌的是成分党用户对「无营销感」的信任",
+        "人名/身份品牌：创始人名或虚构人设（Fenty、Glossier 的 -ier 法语尾缀），适合有内容能力、以人带货的品牌",
+        "中文品牌找「字感」：单字或双字+质感偏旁（玑、绒、汽、雾），比音译洋名更容易在国货语境里立住",
+        "反差命名：在精致品类里用朴素词制造记忆点（Ordinary、CeraVe 的药感），高端感不一定来自华丽词",
+      ],
+      cases: [
+        { name: "Glossier", takeaway: "gloss（光泽）+ 法语尾缀 -ier：把「光泽感」变成一个像姓氏的品牌词，读音柔和自带滤镜感，DTC 美妆命名的分水岭之作" },
+        { name: "The Ordinary", takeaway: "反向命名的极致：在人人自称「奇迹配方」的行业里自称「平平无奇」，用谦逊修辞完成了最傲慢的自信声明" },
+        { name: "Fenty Beauty", takeaway: "蕾哈娜姓氏 + 品类词：人名品牌的标准结构，名字本身就是信任背书与流量入口" },
+        { name: "Drunk Elephant", takeaway: "「喝醉的大象」：完全无关美妆的荒诞意象反而在货架上最跳，配上马鲁拉油的品牌故事就有了逻辑闭环" },
+        { name: "花西子", takeaway: "「花」+「西子」（西湖/西施）：把东方美学典故压进三个字，国风定位从名字开始成立，英文 Florasis 同步锁定出海读音" },
+      ],
+      pitfalls: [
+        "堆砌 beauty/cosmetics 等品类词：货架上全是同类词，等于没有名字",
+        "质感词与产品定位错位：叫「晨雾」却卖强功效酸类，用户预期错位直接反映在退货率上",
+        "只注册中文商标不锁英文域名：出海或被抢注时再补救，成本翻十倍",
+        "读音在目标市场有歧义：出海品牌名必须用当地母语者读一遍，Kolor 类拼写变形在部分语言里会读成完全不同的词",
+      ],
+    },
+    en: {
+      label: "Beauty & care",
+      title: "How to Name a Beauty or Skincare Brand: Texture Words, Ingredient Stories & Domains",
+      metaDescription: "Beauty brand naming guide: texture-word borrowing, ingredient-forward naming, founder brands, breakdowns of Glossier/The Ordinary and more, recommended TLDs and pitfalls — then hunt registrable beauty domains with AI.",
+      intro:
+        "A beauty name has to be seductive on the shelf and clickable in the feed at the same time: it must feel expensive printed on a bottle and irresistible in a social caption. This industry has a unique fork in the road — emotional aesthetics versus ingredient rationality. One path builds atmosphere with texture words (velvet, morning mist, bare); the other builds trust with almost cold scientific plainness (The Ordinary literally calls itself ordinary). Both work; mixing them splits the brand's personality. Beauty is a repurchase and word-of-mouth category, so the name must survive being passed between friends aloud — and since going global is nearly mandatory, lock a globally pronounceable English name and the .com early.",
+      namingIdeas: [
+        "Texture-word borrowing: pull from touch and light — velvet, glow, dew, bare; these carry skin associations and outclass any name containing beauty",
+        "Ingredient-forward rationality: put the ingredient or methodology in the name (The Ordinary, The Inkey List), betting on ingredient-literate customers trusting the absence of marketing",
+        "Founder and persona brands: a surname or invented persona (Fenty; Glossier's French -ier tail) — right for brands built on a person's content and following",
+        "Contrast naming: plain words in a polished category create shelf memorability (Ordinary, CeraVe's clinical feel) — premium doesn't require ornate",
+        "Say it in the target market's language: a beauty name must be road-tested by native speakers; clever spellings can turn into entirely different words abroad",
+      ],
+      cases: [
+        { name: "Glossier", takeaway: "gloss + French -ier: turns \"glossiness\" into a surname-like brand word with a soft, filtered pronunciation — the watershed of DTC beauty naming" },
+        { name: "The Ordinary", takeaway: "Reverse naming at its purest: calling yourself ordinary in an industry of self-proclaimed miracles — the humblest phrasing making the most arrogant confidence claim" },
+        { name: "Fenty Beauty", takeaway: "Rihanna's surname + category word: the standard founder-brand structure, where the name itself is both trust endorsement and traffic source" },
+        { name: "Drunk Elephant", takeaway: "An absurd image with zero beauty semantics — which is exactly why it pops on a shelf; the marula-oil origin story closes the logical loop" },
+        { name: "CeraVe", takeaway: "Ceramides + MVE delivery tech compressed into a pharmacy-sounding coinage: clinical texture as a trust signal, the rational path's flagship" },
+      ],
+      pitfalls: [
+        "Stacking beauty/cosmetics category words: on a shelf full of the same words, that's the same as having no name",
+        "Texture word contradicting the product: a name like Morning Mist on a strong-acid line misaligns expectations and shows up in your return rate",
+        "Trademarking locally but skipping the global domain: fixing it after expansion or squatting costs ten times more",
+        "One brand, many suffixes: official store, campaign site, and regional pages under different names and TLDs erode the trust the name built",
+      ],
+    },
+  },
+  nonprofit: {
+    slug: "nonprofit",
+    tlds: [
+      { tld: "org", zh: "公益与非营利的全球默认后缀，本身就是信任状", en: "The global default for nonprofits — the suffix itself is a trust credential" },
+      { tld: "com", zh: "防混淆与防抢注，建议与 .org 同时拿下并跳转", en: "Anti-confusion and anti-squatting — grab it alongside .org and redirect" },
+      { tld: "info", zh: "信息公开与透明叙事，适合倡议与知识普及类项目", en: "Transparency and information semantics — fits advocacy and public-education projects" },
+    ],
+    zh: {
+      label: "公益组织",
+      title: "公益组织与非营利项目怎么起名：使命感、信任与域名选择",
+      metaDescription: "公益/非营利命名指南：使命动词、受益人视角、去机构化等思路，charity: water 等好名字拆解，为什么 .org 是信任状，常见误区与 AI 猎名。",
+      intro:
+        "公益名字的核心资产是信任：捐赠人把钱交给一个名字之前，会先判断它是否透明、专业、可持续。这让公益命名和商业命名的评判标准几乎相反——商业名字可以炫技，公益名字必须诚恳；一个太聪明的名字反而让人怀疑钱花在了营销上。好的公益名字通常把「使命」或「受益人」放进名字里，让人第一眼就知道你为谁做什么事；同时要避免沉重的机构腔（XX 促进会、XX 联合会），年轻捐赠人对机构化命名的信任反而更低。域名上 .org 是行业信任状，几乎没有替代品；.com 建议同时注册用于跳转防混淆。",
+      namingIdeas: [
+        "使命动词化：把要做的事直接写进名字（Feeding America、code.org），动词开头的名字自带行动感",
+        "受益人视角：从受助者而非机构视角命名（Save the Children、Room to Read），捐赠人共情的是人不是组织",
+        "具体物象代替抽象概念：用 water、meal、book、tree 这类看得见摸得着的词，比 hope/future/love 更可信——具体即诚恳",
+        "去机构化：舍弃「协会/基金会/中心」等后缀词，charity: water 用一个冒号就完成了品类声明，比「净水基金会」轻十倍",
+        "中英一致的短名：跨境公益项目最好中英文语义对齐（如「一公斤盒子」），翻译后使命不打折",
+      ],
+      cases: [
+        { name: "charity: water", takeaway: "品类词 + 冒号 + 具体物象：三个元素把「我们是公益、我们做水」说得不能再清楚，去机构化命名的开山之作" },
+        { name: "Save the Children", takeaway: "动词 + 受益人：一句完整的行动号召直接当名字，一百年后依然没人误解它做什么" },
+        { name: "Room to Read", takeaway: "双关的克制用法：既是「读书的房间」又是「成长的空间」，头韵让它像口号一样好记" },
+        { name: "code.org", takeaway: "域名即品牌名：一个词加一个 .org 后缀完成全部定位——教编程、非营利，域名选择本身就是命名决策" },
+        { name: "Wikimedia Foundation", takeaway: "wiki + media 的伞形命名：为维基百科等多个项目提供统一母品牌，机构名与项目名分层的范本" },
+      ],
+      pitfalls: [
+        "抽象大词堆砌：希望、未来、爱心、阳光——每个词都正确，组合起来谁也记不住、谁也不敢信",
+        "机构腔过重：促进会/联合会/工作委员会式命名在年轻捐赠人眼里是官僚信号而非专业信号",
+        "只注册 .org 不防 .com：山寨站用 .com 收捐款的案例屡见不鲜，防御性注册是公益的必修课",
+        "名字与实际项目范围错位：叫「乡村儿童阅读」却扩展到城市职业教育，改名的信任成本远高于当初多想一步",
+      ],
+    },
+    en: {
+      label: "Nonprofit",
+      title: "How to Name a Nonprofit or Cause: Mission, Trust & the .org Question",
+      metaDescription: "Nonprofit naming guide: mission verbs, beneficiary-first naming, de-institutionalizing, breakdowns of charity: water and more, why .org is a trust credential, pitfalls — then hunt registrable names with AI.",
+      intro:
+        "A nonprofit name's core asset is trust: before donors hand money to a name, they judge whether it sounds transparent, professional, and sustainable. That makes nonprofit naming almost the inverse of commercial naming — a business name can show off; a cause name must be sincere. A too-clever name makes people suspect the money goes to marketing. The best nonprofit names put the mission or the beneficiary right in the name so anyone knows at a glance who you serve and what you do — while avoiding heavy institutional phrasing (Federation of…, Council for…), which younger donors read as bureaucracy, not credibility. On domains, .org is the sector's trust credential with essentially no substitute; register the .com too and redirect it to prevent impersonation.",
+      namingIdeas: [
+        "Verb the mission: write the action into the name (Feeding America, code.org) — verb-led names carry momentum",
+        "Beneficiary-first: name from the perspective of who you serve, not the institution (Save the Children, Room to Read) — donors empathize with people, not org charts",
+        "Concrete objects over abstractions: water, meal, book, tree beat hope/future/love — specificity reads as honesty",
+        "De-institutionalize: drop Foundation/Association/Center; charity: water declared its category with a colon — ten times lighter than \"Clean Water Foundation\"",
+        "Keep it translatable: cross-border causes need the mission to survive translation intact; short concrete names travel best",
+      ],
+      cases: [
+        { name: "charity: water", takeaway: "Category word + colon + concrete object: three elements that say \"we're a charity, we do water\" with zero ambiguity — the founding work of de-institutionalized naming" },
+        { name: "Save the Children", takeaway: "Verb + beneficiary: a complete call to action used as a name; a century later nobody misreads what it does" },
+        { name: "Room to Read", takeaway: "Restrained double meaning — a room for reading and room to grow — with alliteration that makes it chant like a slogan" },
+        { name: "code.org", takeaway: "The domain is the brand: one word plus .org completes the entire positioning — teaches coding, nonprofit; TLD choice as a naming decision" },
+        { name: "Wikimedia Foundation", takeaway: "wiki + media as an umbrella: one parent brand serving Wikipedia and sibling projects — the template for layering institution and project names" },
+      ],
+      pitfalls: [
+        "Stacking grand abstractions: hope, future, love, light — each word is correct, and the combination is unmemorable and untrustworthy",
+        "Institutional phrasing overload: Federation/Council/Committee naming signals bureaucracy to younger donors, not professionalism",
+        "Registering .org but ignoring .com: copycat .com sites collecting donations is a recurring scandal — defensive registration is mandatory hygiene",
+        "Name narrower than the mission's future: \"Rural Children's Reading\" expanding into urban vocational training pays a trust tax far larger than thinking one step ahead",
+      ],
+    },
+  },
+  parenting: {
+    slug: "parenting",
+    tlds: [
+      { tld: "com", zh: "母婴消费决策重信任，.com 是家长的默认预期", en: "Parenting purchases run on trust — .com is what parents expect by default" },
+      { tld: "co", zh: "新母婴 DTC 品牌的简洁替代，年轻父母接受度高", en: "The clean alternative for new parenting DTC brands — high acceptance among young parents" },
+      { tld: "shop", zh: "语义即店铺，母婴品牌官方商城的天然后缀", en: "Literally shop — the natural suffix for an official baby-brand store" },
+    ],
+    zh: {
+      label: "母婴亲子",
+      title: "母婴亲子品牌怎么起名：安全感、叠音与域名选择",
+      metaDescription: "母婴亲子品牌命名指南：叠音词、安全感词根、成长意象等思路，好名字拆解与推荐 TLD，避开焦虑营销式命名误区，用 AI 猎取可注册的母婴域名。",
+      intro:
+        "母婴名字的目标用户其实是两代人：付钱的家长要从名字里读出「安全、专业、被理解」，被使用的孩子要觉得名字亲切好玩。这个品类的信任门槛是所有消费品里最高的——入口的、贴身的、陪睡的，名字轻佻一分,信任就掉一档。中文母婴命名有天然优势工具：叠音（贝贝、萌萌）自带婴语感，但也最容易同质化；更高级的做法是从「成长」「陪伴」「守护」的意象里造词，让名字既柔软又有品牌骨架。警惕焦虑营销式命名（赢在起点类），监管与舆论风向都在惩罚它。",
+      namingIdeas: [
+        "叠音要有变化：纯叠音（贝贝/宝宝）已经拥挤，试试「半叠音+实词」结构（bala 摇篮、momo 星球），保留婴语感又留出品牌差异",
+        "安全感词根：从守护/怀抱/巢/棉这类意象取词，家长对材质与照护的焦虑直接被名字安抚",
+        "成长意象：豆芽、小树、星星、种子——把「慢慢长大」写进名字，比「聪明/领先」类词更符合当代育儿观",
+        "家长自称视角：用「我们家」「亲爱的」这类家庭内部语气命名（Honest、Hello Bello），像家人而不是商家在说话",
+        "英文名同步锁定：母婴品牌跨境电商比例高，中文名定稿时同步验证英文名与 .com 可注册性",
+      ],
+      cases: [
+        { name: "The Honest Company", takeaway: "把「诚实」直接当名字：在成分焦虑最重的品类里，一个形容词完成了全部品牌承诺——反华丽命名的胜利" },
+        { name: "Babycare", takeaway: "品类词直给（baby + care）：牺牲独特性换取零解释成本，靠视觉与产品力补品牌辨识——大众母婴的务实路线" },
+        { name: "Hello Bello", takeaway: "打招呼 + 押韵造词：读起来像哄孩子的语气词，把「亲切」写进了音节里，名人品牌也选择了去精英化的名字" },
+        { name: "好孩子", takeaway: "三个字说尽品类与愿望：家长买的不是推车是「好孩子」，朴素直白反而成就了三十年国民品牌" },
+        { name: "Lovevery", takeaway: "love + every：把「每一步都被爱着」压进一个造词，蒙氏教具品牌用名字先完成了教育理念声明" },
+      ],
+      pitfalls: [
+        "焦虑营销式命名：赢、领先、天才类词根正在被监管与舆论双重反噬，短期转化换长期风险不划算",
+        "纯叠音同质化：贝贝/萌萌/乖乖类名字在商标库里密度极高，注册与维权都难",
+        "只考虑婴儿期：品牌随用户成长（婴儿→儿童→青少年），名字锁死「婴」字扩展就要改名",
+        "中文可爱英文难读：拼音直转的英文名（如 Guaiguai）海外读不出可爱只读出困惑，跨境前先做读音测试",
+      ],
+    },
+    en: {
+      label: "Parenting & baby",
+      title: "How to Name a Parenting or Baby Brand: Trust, Softness & Domains",
+      metaDescription: "Parenting brand naming guide: reduplication with a twist, safety-word roots, growth imagery, name breakdowns and recommended TLDs, avoiding anxiety-marketing names — then hunt registrable baby-brand domains with AI.",
+      intro:
+        "A parenting brand's name speaks to two generations at once: the paying parent must read safety, expertise, and being understood in it, while the child who lives with the product should find it warm and playful. No consumer category has a higher trust bar — these products go in mouths, on skin, into cribs; one degree of flippancy in the name costs a full grade of trust. The strongest names draw from imagery of growth, care, and shelter, staying soft while keeping a brand backbone. And beware anxiety-marketing names (win-at-the-starting-line types): both regulators and public sentiment now punish them.",
+      namingIdeas: [
+        "Reduplication with a twist: pure baby-babble names are saturated; try half-reduplication plus a real word to keep the infant warmth while carving out difference",
+        "Safety-word roots: draw from guard, embrace, nest, cotton — the name itself soothes parents' anxiety about materials and care",
+        "Growth imagery: sprout, sapling, star, seed — writing \"growing up slowly\" into the name fits modern parenting far better than smart/ahead words",
+        "Family-voice naming: name in the household's own register (Honest, Hello Bello) — sounding like family rather than a vendor",
+        "Lock the English name early: parenting brands cross borders fast; validate global pronunciation and the .com the day the local name is chosen",
+      ],
+      cases: [
+        { name: "The Honest Company", takeaway: "Using \"honest\" as the name itself: in the most ingredient-anxious category, one adjective delivers the entire brand promise — a victory for anti-ornate naming" },
+        { name: "Hello Bello", takeaway: "A greeting plus a rhyming coinage: it reads like the tone you use to soothe a child — warmth written directly into the syllables" },
+        { name: "Lovevery", takeaway: "love + every compressed into one coinage — \"loved at every step\"; a Montessori toy brand declaring its educational philosophy in the name" },
+        { name: "Babylist", takeaway: "baby + list: naming the job-to-be-done (the registry) rather than the vibe — utility naming that made the brand synonymous with its category" },
+        { name: "Bonpoint", takeaway: "French for \"good point/stitch\": craft heritage and gentleness folded into two syllables — how premium childrenswear signals quality without saying luxury" },
+      ],
+      pitfalls: [
+        "Anxiety-marketing names: win/ahead/genius roots are being punished by regulators and parents alike — short-term conversion, long-term liability",
+        "Pure baby-babble saturation: doubled-syllable cutesy names are the densest zone in trademark registries — hard to register, harder to defend",
+        "Naming only for infancy: brands grow with their users (baby → kid → teen); a name locked to \"baby\" forces a rename at the first extension",
+        "Cute locally, confusing globally: romanized pet names often read as gibberish abroad — run pronunciation tests before crossing borders",
+      ],
+    },
+  },
+  hardware: {
+    slug: "hardware",
+    tlds: [
+      { tld: "com", zh: "硬件品牌的默认选择，包装盒与说明书上的信任标配", en: "The default for hardware brands — the trust standard on packaging and manuals" },
+      { tld: "io", zh: "IoT/开发者硬件的圈内后缀，极客受众零违和", en: "The insider suffix for IoT/developer hardware — zero friction with a geek audience" },
+      { tld: "tech", zh: "语义直给的科技后缀，适合技术驱动的硬件新品牌", en: "The literal tech suffix — fits technology-led hardware startups" },
+    ],
+    zh: {
+      label: "智能硬件",
+      title: "智能硬件与消费电子怎么起名：产品线思维与域名选择",
+      metaDescription: "智能硬件命名指南：母品牌+产品线结构、材质/物理词根、短音节原则，DJI/Anker 等好名字拆解，推荐 TLD 与常见误区，用 AI 猎取可注册的硬件域名。",
+      intro:
+        "硬件命名和软件命名最大的不同是「产品线思维」：软件一个名字打天下，硬件从第一天就要想好母品牌与产品线怎么分层——大疆（品牌）之下有 Mavic/Mini（产品线）加数字代际，这套结构不提前设计，第三代产品发布时命名体系就会崩。硬件名字还要经受物理世界的考验：刻在金属上要好看，印在包装盒上要显眼，海关文件和 FCC 认证里要唯一。音节越短越好——硬件是全球生意，Anker/DJI/Bose 这类两音节以内的名字在任何语言里都不打折。域名与商标要全球同步锁定，硬件的抢注成本比软件高一个量级（渠道商、山寨厂都在盯着）。",
+      namingIdeas: [
+        "母品牌抽象化+产品线具体化：母品牌用造词或意象词（不锁品类），产品线用功能/场景词加数字代际，两层各司其职",
+        "材质与物理词根：从 core、bolt、frame、flux 这类物理世界的词取材,硬件感自带，比抽象互联网词更贴身",
+        "两音节铁律：全球渠道口头传播 + 包装视觉空间都偏爱短名，超过三音节先自砍一刀",
+        "可刻性测试：名字定稿前用无衬线字体排在产品渲染图上看一眼——logo 刻在铝壳上不好看的名字要慎选",
+        "查全球商标与认证库：硬件出海必过 FCC/CE，名字在目标市场被注册会直接卡住整条供应链",
+      ],
+      cases: [
+        { name: "DJI（大疆）", takeaway: "三字母缩写 + 中文「大疆无垠」：英文短到极致方便全球流通，中文保留「疆域辽阔」的野心叙事，双语分工的典范" },
+        { name: "Anker", takeaway: "德语「锚」：充电品牌用「稳定可靠」的物理意象命名，两音节全球通读，从亚马逊店铺长成全球品牌名字零改动" },
+        { name: "Raspberry Pi", takeaway: "水果传统（致敬 Apple/Acorn）+ Pi（数学梗）：极客文化的双重致敬让开发板自带社区亲和力" },
+        { name: "Nest", takeaway: "「巢」：智能家居用一个字完成「家的温度」声明，被 Google 收购后名字本身成了品类代名词" },
+        { name: "Teenage Engineering", takeaway: "「青少年工程」：把玩心与工程严肃感并置的反差命名，小众硬件品牌靠名字先赢得审美认同" },
+      ],
+      pitfalls: [
+        "母品牌锁死品类：叫 XX 充电/XX 音频的品牌扩品类时名字先造反，母品牌必须比第一款产品更抽象",
+        "产品线命名无体系：第一代随口起名，第三代发现 Pro/Max/Ultra/Plus 全用完了还分不清高低",
+        "忽视全球商标检索：硬件铺货周期长、渠道深，名字在某市场被抢注的补救成本远高于软件",
+        "字母数字乱炖：X3S-Pro-II 式命名只有工程师自己记得住，零售货架上等于匿名",
+      ],
+    },
+    en: {
+      label: "Hardware & IoT",
+      title: "How to Name a Hardware or Consumer Electronics Brand: Product-Line Thinking & Domains",
+      metaDescription: "Hardware naming guide: parent-brand + product-line architecture, physical-world roots, the two-syllable rule, breakdowns of DJI/Anker/Nest, recommended TLDs and pitfalls — then hunt registrable hardware domains with AI.",
+      intro:
+        "The biggest difference between hardware and software naming is product-line thinking: software can conquer with one name, but hardware must architect parent brand versus product lines from day one — DJI (brand) over Mavic/Mini (lines) with numeric generations. Skip that design and the naming system collapses by generation three. Hardware names also face physical-world trials: they must look good engraved in metal, pop on a retail box, and be unique in customs filings and FCC certifications. Shorter is stronger — hardware is a global business, and sub-two-syllable names like Anker, DJI, and Bose lose nothing in any language. Lock domains and trademarks globally and early: squatting costs an order of magnitude more in hardware, with distributors and clone factories watching.",
+      namingIdeas: [
+        "Abstract parent + concrete lines: coin or borrow imagery for the parent brand (never category-locked), then use function/scenario words plus numeric generations for lines",
+        "Physical-world roots: mine core, bolt, frame, flux — words with mass and texture wear better on hardware than abstract internet words",
+        "The two-syllable rule: global spoken channels and packaging real estate both favor short names; anything over three syllables gets cut first",
+        "The engraving test: before finalizing, set the name in a sans-serif on a product render — a name that looks wrong milled into aluminum is the wrong name",
+        "Search trademarks and certification databases globally: hardware must clear FCC/CE; a name registered by someone else in a target market can stall the entire supply chain",
+      ],
+      cases: [
+        { name: "DJI", takeaway: "A three-letter abbreviation backed by a Chinese name meaning \"boundless frontier\": maximal global portability in English, ambition narrative preserved at home — the template for bilingual division of labor" },
+        { name: "Anker", takeaway: "German for anchor: a charging brand named for the physical image of stability — two syllables readable worldwide, scaled from an Amazon store to a global brand without touching the name" },
+        { name: "Raspberry Pi", takeaway: "The fruit tradition (a nod to Apple and Acorn) plus a math pun: a double homage to geek culture that gave a bare circuit board built-in community warmth" },
+        { name: "Nest", takeaway: "One word declaring \"the warmth of home\" for smart-home hardware — a name so right it became shorthand for the category after the Google acquisition" },
+        { name: "Teenage Engineering", takeaway: "Playfulness and engineering seriousness in deliberate contrast: a niche hardware brand winning aesthetic allegiance through the name before the product" },
+      ],
+      pitfalls: [
+        "Category-locked parent brand: an XX-Charging or XX-Audio brand mutinies against its own name at the first category extension — the parent must be more abstract than the first product",
+        "No product-line system: name generation one casually, and by generation three Pro/Max/Ultra/Plus are all spent while the lineup is still unreadable",
+        "Skipping global trademark search: hardware's long stocking cycles and deep channels make a squatted name far costlier to fix than in software",
+        "Alphanumeric stew: X3S-Pro-II naming is memorable only to its own engineers — on a retail shelf it's anonymity",
+      ],
+    },
+  },
+  security: {
+    slug: "security",
+    tlds: [
+      { tld: "com", zh: "安全厂商卖的就是信任，.com 是企业采购的默认预期", en: "Security vendors sell trust — .com is what enterprise buyers expect" },
+      { tld: "io", zh: "开发者安全工具的圈内标配，技术受众零违和", en: "The insider standard for developer security tools" },
+      { tld: "dev", zh: "面向开发者的安全产品可选，全后缀强制 HTTPS 自带安全叙事", en: "An option for developer-facing security products — zone-wide enforced HTTPS is its own security story" },
+    ],
+    zh: {
+      label: "网络安全",
+      title: "网络安全公司怎么起名：威慑感、守护感与域名选择",
+      metaDescription: "网络安全命名指南：守护/威慑双路线、神话与军事词根、避免恐吓式命名，CrowdStrike/1Password 等好名字拆解，推荐 TLD 与常见误区，用 AI 猎取可注册的安全域名。",
+      intro:
+        "安全公司的名字要同时对两群人说话：对客户传递「可靠的守护者」，对攻击者暗示「别碰我的客户」。这形成了安全命名的两条经典路线——守护系（盾、哨兵、堡垒）与威慑系（鹰、打击、猎杀）,前者卖安心，后者卖实力。第三条更现代的路线是把安全藏进产品语言里（1Password 直接说清产品形态），适合面向开发者与个人用户的工具。安全是采购决策链最长、信任要求最高的 B2B 品类，名字必须在 RFP 文档、Gartner 报告和 CISO 的邮件里都显得专业；太俏皮的名字第一轮供应商筛选就会被划掉。",
+      namingIdeas: [
+        "守护系词根：shield、sentinel、guard、vault、fort——传递「有人替你守着」的安心感，适合面向企业的防御型产品",
+        "威慑系词根：strike、hunter、falcon、recon——军事与猛禽意象传递主动出击能力，适合威胁情报与红队产品",
+        "神话与典故借力：Palo Alto 的 Cortex、Okta（斯堪的纳维亚云量单位）——冷门典故既独特又给销售一个开场故事",
+        "产品直陈式：1Password、LastPass 把产品形态写进名字，个人与开发者工具靠零解释成本赢得下载",
+        "避免 cyber 堆砌：cyber+secure+shield 的排列组合在安全展会上密度极高，等于把名字淹进背景音",
+      ],
+      cases: [
+        { name: "CrowdStrike", takeaway: "crowd（众源情报）+ strike（打击）：把「集体情报驱动的主动防御」压进两个音节，威慑系命名的旗舰" },
+        { name: "1Password", takeaway: "数字开头 + 产品直陈：「你只需要记一个密码」——名字就是产品说明书，消费级安全工具的命名天花板" },
+        { name: "Cloudflare", takeaway: "cloud + flare（照明弹）：既是「云上的防护照明」又暗合 flare 的警示语义，基础设施公司少见的意象命名" },
+        { name: "SentinelOne", takeaway: "哨兵 + One：守护系词根加统一平台叙事，名字直接对齐「一个 agent 守住全部端点」的产品主张" },
+        { name: "Have I Been Pwned", takeaway: "把黑客俚语问句直接当名字：反商业命名反而成就了全球最知名的泄露查询服务——社区工具可以打破所有规则" },
+      ],
+      pitfalls: [
+        "恐吓式命名：名字里堆 threat/attack/danger 制造恐慌，CISO 反感被恐吓营销，信任是安全品类唯一的货币",
+        "cyber 前缀依赖：CyberXX 在展会名录里一页能数出二十个，独特性为零",
+        "太俏皮进不了 RFP：面向企业的安全产品名字要经得起采购文档与董事会汇报，梗名在第一轮筛选就出局",
+        "缩写无叙事：三字母缩写没有故事支撑时，销售每次开场都要多花三分钟解释自己是谁",
+      ],
+    },
+    en: {
+      label: "Cybersecurity",
+      title: "How to Name a Cybersecurity Company: Guardian vs. Hunter & Domains",
+      metaDescription: "Cybersecurity naming guide: guardian vs. deterrence roots, myth and military borrowing, avoiding fear-mongering names, breakdowns of CrowdStrike/1Password and more, recommended TLDs and pitfalls — then hunt registrable security domains with AI.",
+      intro:
+        "A security company's name speaks to two audiences at once: it tells customers \"a reliable guardian stands here\" and tells attackers \"don't touch my clients.\" That splits security naming into two classic schools — the guardian school (shield, sentinel, fortress) selling peace of mind, and the deterrence school (falcon, strike, hunt) selling capability. A third, more modern path hides security inside plain product language (1Password states exactly what it is), which wins for developer and consumer tools. Security is the B2B category with the longest procurement chains and the highest trust bar: the name must look professional in an RFP, a Gartner report, and a CISO's inbox — anything too cute gets struck in the first vendor screen.",
+      namingIdeas: [
+        "Guardian roots: shield, sentinel, guard, vault, fort — someone is standing watch for you; right for enterprise defensive products",
+        "Deterrence roots: strike, hunter, falcon, recon — military and raptor imagery signals offensive capability; right for threat intel and red-team products",
+        "Myth and lore borrowing: Cortex, Okta (a Scandinavian cloud-cover unit) — obscure references are both ownable and a built-in sales opening story",
+        "Plain product statement: 1Password and LastPass write the product into the name — zero explanation cost wins downloads for personal and developer tools",
+        "Skip the cyber pileup: cyber+secure+shield permutations are the densest zone on any security-conference floor — that name disappears into background noise",
+      ],
+      cases: [
+        { name: "CrowdStrike", takeaway: "crowd (sourced intelligence) + strike: \"collective-intelligence-driven active defense\" compressed into two syllables — the flagship of deterrence naming" },
+        { name: "1Password", takeaway: "A digit-led plain product statement: \"you only need to remember one password\" — the name is the manual; the ceiling of consumer security naming" },
+        { name: "Cloudflare", takeaway: "cloud + flare: both \"illumination over the cloud\" and the warning-signal sense of a flare — rare imagery naming for an infrastructure company" },
+        { name: "SentinelOne", takeaway: "Guardian root plus a unified-platform narrative: the name aligns exactly with \"one agent guards every endpoint\"" },
+        { name: "Have I Been Pwned", takeaway: "A hacker-slang question used verbatim as a name: anti-commercial naming that became the world's best-known breach checker — community tools may break every rule" },
+      ],
+      pitfalls: [
+        "Fear-mongering names: stacking threat/attack/danger to manufacture panic — CISOs resent being scared into buying; trust is this category's only currency",
+        "Cyber-prefix dependence: twenty CyberSomethings per page of any conference directory — uniqueness zero",
+        "Too cute for the RFP: enterprise security names must survive procurement documents and board decks; meme names die in the first screen",
+        "Storyless acronyms: a three-letter abbreviation with no narrative costs sales three extra minutes of \"who we are\" in every opening call",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
