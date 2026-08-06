@@ -33,6 +33,22 @@
         }
       } catch (e) {}
     </script>
+    <script>
+      // 缓存的旧 HTML 引用的 hashed JS 在新部署后可能 404：主 bundle 加载失败时强制刷新一次拿新版本
+      window.addEventListener(
+        "error",
+        function (e) {
+          var el = e.target;
+          if (!el || el.tagName !== "SCRIPT" || !/\/assets\//.test(el.src || "")) return;
+          try {
+            if (sessionStorage.getItem("dh:htmlReloaded")) return;
+            sessionStorage.setItem("dh:htmlReloaded", "1");
+          } catch (err) {}
+          location.reload();
+        },
+        true
+      );
+    </script>
   </head>
   <body>
     <div id="root"></div>

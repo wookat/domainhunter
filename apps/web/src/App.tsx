@@ -14,11 +14,29 @@ import { useShortlist } from "@/lib/shortlist";
 import { friendlyError, friendlyHttpError } from "@/lib/utils";
 import type { Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types";
 
-// 按路由懒加载：这些页面不在首屏关键路径上，拆包降低首屏 JS
-const SharePage = lazy(() => import("@/components/share-page").then((m) => ({ default: m.SharePage })));
-const TldPage = lazy(() => import("@/components/tld-page").then((m) => ({ default: m.TldPage })));
-const ShortlistPage = lazy(() => import("@/components/shortlist-page").then((m) => ({ default: m.ShortlistPage })));
-const AdvancedPage = lazy(() => import("@/components/advanced-page").then((m) => ({ default: m.AdvancedPage })));
+// 按路由懒加载：这些页面不在首屏关键路径上，拆包降低首屏 JS。
+// chunk 加载失败（新部署后旧 hashed 文件 404）时自动整页刷新一次拿新版本，避免白屏。
+function lazyChunk<T, P>(load: () => Promise<T>, pick: (m: T) => React.ComponentType<P>) {
+  return lazy(async () => {
+    try {
+      const m = await load();
+      sessionStorage.removeItem("dh:chunkReloaded");
+      return { default: pick(m) };
+    } catch (e) {
+      if (!sessionStorage.getItem("dh:chunkReloaded")) {
+        sessionStorage.setItem("dh:chunkReloaded", "1");
+        window.location.reload();
+        await new Promise(() => undefined); // 等待刷新，不再渲染
+      }
+      throw e;
+    }
+  });
+}
+
+const SharePage = lazyChunk(() => import("@/components/share-page"), (m) => m.SharePage);
+const TldPage = lazyChunk(() => import("@/components/tld-page"), (m) => m.TldPage);
+const ShortlistPage = lazyChunk(() => import("@/components/shortlist-page"), (m) => m.ShortlistPage);
+const AdvancedPage = lazyChunk(() => import("@/components/advanced-page"), (m) => m.AdvancedPage);
 
 function PageFallback() {
   return <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-16" />;
