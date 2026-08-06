@@ -6,6 +6,7 @@ import { HomePage, type HomeValues } from "@/components/home-page";
 import { AgentPage, type LogEntry } from "@/components/agent-page";
 import { ResultsPage } from "@/components/results-page";
 import { SharePage } from "@/components/share-page";
+import { TldPage } from "@/components/tld-page";
 import { ShortlistPage } from "@/components/shortlist-page";
 import { AdvancedPage } from "@/components/advanced-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
@@ -23,11 +24,24 @@ function shareIdFromPath(): string | null {
   return m ? m[1] : null;
 }
 
+function tldFromPath(): string | null {
+  const m = window.location.pathname.match(/^\/tld\/([a-z0-9-]{2,24})$/i);
+  return m ? m[1].toLowerCase() : null;
+}
+
+/** 首页默认 TLD：支持 /?tld=xx 预填（TLD 指南页 CTA 入口） */
+function initialTlds(): string[] {
+  const q = new URLSearchParams(window.location.search).get("tld")?.trim().toLowerCase().replace(/^\./, "");
+  if (q && /^[a-z0-9-]{2,24}$/.test(q)) return q === "com" ? ["com"] : [q, "com"];
+  return ["com", "cn"];
+}
+
 export default function App() {
   const { t } = useI18n();
   const [shareId] = useState<string | null>(shareIdFromPath);
+  const [guideTld] = useState<string | null>(tldFromPath);
   const [mode, setMode] = useState<Mode>("home");
-  const [values, setValues] = useState<HomeValues>({ description: "", tlds: ["com", "cn"], style: "", lengthPref: "" });
+  const [values, setValues] = useState<HomeValues>(() => ({ description: "", tlds: initialTlds(), style: "", lengthPref: "" }));
   const [rows, setRows] = useState<Row[]>([]);
   const [rounds, setRounds] = useState<RoundInfo[]>([]);
   const [currentRound, setCurrentRound] = useState(0);
@@ -159,6 +173,7 @@ export default function App() {
           lengthPref: v.lengthPref,
           target: TARGET,
           excludeLabels: more ? triedLabelsRef.current : [],
+          fast: !more, // 首轮快速模式：先出少量候选降低首字节时间
         }),
         signal: ac.signal,
       });
@@ -213,6 +228,19 @@ export default function App() {
   ]
     .filter(Boolean)
     .join(" · ");
+
+  if (guideTld) {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Header
+          onLogoClick={() => window.location.assign("/")}
+          shortlistCount={shortlist.items.length}
+          onShortlistClick={() => window.location.assign("/")}
+        />
+        <TldPage tld={guideTld} />
+      </div>
+    );
+  }
 
   if (shareId) {
     return (

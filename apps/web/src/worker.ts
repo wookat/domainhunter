@@ -3,6 +3,7 @@ import { nanoid } from "nanoid";
 import { generateCandidates, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
 import { generateAiCandidates, generateUnderstanding } from "./ai";
+import { TLD_GUIDES, TLD_LIST, USD_TO_CNY } from "./content/tlds";
 
 type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace };
 
@@ -15,6 +16,10 @@ const SHARE_TTL = 30 * 24 * 3600; // 分享快照保留 30 天
 const MAX_SHARE_ITEMS = 100;
 const MAX_RECHECK_DOMAINS = 100;
 const STATS_KEY = "stats:checked";
+const PRICES_KEY = "prices:v1";
+const PRICES_TTL = 24 * 3600; // Porkbun 价格缓存 24h
+const SITE_ORIGIN = "https://hunt.zalize.com";
+const FAST_FIRST_ROUND_COUNT = 8; // fast 模式首轮候选数（更快首字节）
 const DOMAIN_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62}))+$/;
 
 /** 累计核验计数（KV 非原子，允许少量误差） */
@@ -115,7 +120,9 @@ app.post("/api/ai-search", async (c) => {
     excludeLabels?: string[];
     style?: string;
     lengthPref?: string;
+    fast?: boolean;
   }>();
+  const fast = body.fast === true;
   let description = (body.description ?? "").trim().slice(0, 500);
   const style = (body.style ?? "").trim().slice(0, 50);
   const lengthPref = (body.lengthPref ?? "").trim().slice(0, 50);
@@ -154,7 +161,7 @@ app.post("/api/ai-search", async (c) => {
           let candidates;
           try {
             candidates = await generateAiCandidates(description, apiKey, {
-              count: 24,
+              count: fast && round === 1 ? FAST_FIRST_ROUND_COUNT : 24,
               excludeTaken: round === 1 && takenLabels.length === 0 ? undefined : takenLabels,
               round,
             });
@@ -284,6 +291,49 @@ app.post("/api/check", async (c) => {
   return new Response(readable, { headers: { "content-type": "application/x-ndjson; charset=utf-8" } });
 });
 
+interface PorkbunPricing {
+  pricing?: Record<string, { registration?: string; renewal?: string }>;
+}
+
+interface PriceEntry {
+  registration: number;
+  renewal: number;
+}
+
+/** 实时价格：Porkbun 公开价格 API（美元），KV 缓存 24h */
+app.get("/api/prices", async (c) => {
+  const kv = c.env.CACHE;
+  if (kv) {
+    try {
+      const cached = await kv.get(PRICES_KEY, "text");
+      if (cached) return new Response(cached, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=3600" } });
+    } catch { /* 缓存读取失败则实时拉取 */ }
+  }
+  let data: PorkbunPricing;
+  try {
+    const res = await fetch("https://api.porkbun.com/api/json/v3/pricing/get", { method: "POST", headers: { "content-type": "application/json" }, body: "{}" });
+    if (!res.ok) return c.json({ error: "upstream_error" }, 502);
+    data = (await res.json()) as PorkbunPricing;
+  } catch {
+    return c.json({ error: "upstream_error" }, 502);
+  }
+  const prices: Record<string, PriceEntry> = {};
+  for (const tld of TLD_LIST) {
+    const p = data.pricing?.[tld];
+    const registration = Number(p?.registration);
+    const renewal = Number(p?.renewal);
+    if (Number.isFinite(registration) && Number.isFinite(renewal)) prices[tld] = { registration, renewal };
+  }
+  if (Object.keys(prices).length === 0) return c.json({ error: "upstream_error" }, 502);
+  const payload = JSON.stringify({ prices, currency: "USD", usdToCny: USD_TO_CNY, fetchedAt: Date.now() });
+  if (kv) {
+    try {
+      await kv.put(PRICES_KEY, payload, { expirationTtl: PRICES_TTL });
+    } catch { /* 缓存写入失败不影响返回 */ }
+  }
+  return new Response(payload, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=3600" } });
+});
+
 // 信任数据：累计核验域名数
 app.get("/api/stats", async (c) => {
   let totalChecked = 0;
@@ -295,6 +345,42 @@ app.get("/api/stats", async (c) => {
 
 // SPA 分享页路由：回 index.html，前端按 pathname 渲染只读清单
 app.get("/s/:id", (c) => c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw)));
+
+const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+// TLD 指南页（SPA 路由 + SSR meta）：回 index.html 并按 TLD 与语言替换 title/description
+app.get("/tld/:tld", async (c) => {
+  const tld = c.req.param("tld").toLowerCase();
+  const guide = TLD_GUIDES[tld];
+  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  if (!guide) return res;
+  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const loc = guide[lang];
+  const title = escapeHtml(`${loc.title} | DomainHunter`);
+  const desc = escapeHtml(loc.metaDescription);
+  let html = await res.text();
+  html = html
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/tld/${tld}" />`)
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/tld/${tld}" />`);
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
+});
+
+app.get("/sitemap.xml", (c) => {
+  const urls = [`${SITE_ORIGIN}/`, ...TLD_LIST.map((t) => `${SITE_ORIGIN}/tld/${t}`)];
+  const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
+    .map((u) => `  <url><loc>${u}</loc></url>`)
+    .join("\n")}\n</urlset>\n`;
+  return new Response(body, { headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=86400" } });
+});
+
+app.get("/robots.txt", (c) =>
+  new Response(`User-agent: *\nAllow: /\n\nSitemap: ${SITE_ORIGIN}/sitemap.xml\n`, {
+    headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=86400" },
+  }));
 
 app.all("*", (c) => c.env.ASSETS.fetch(c.req.raw));
 

@@ -18,7 +18,8 @@ import { CopyButton, DomainRow, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import { exportRows } from "@/lib/export";
 import { useI18n } from "@/lib/i18n";
-import { scoreBadgeClass, tldPriceFull, tldPriceShort, totalScore, type Row } from "@/types";
+import { priceFull, priceShort, usePrices } from "@/lib/prices";
+import { scoreBadgeClass, totalScore, type Row } from "@/types";
 import { cn } from "@/lib/utils";
 
 type StatusFilter = "available" | "all" | "taken";
@@ -50,6 +51,7 @@ function TopPickCard({
   onToggleFavorite: (row: Row) => void;
 }) {
   const { t, lang } = useI18n();
+  const prices = usePrices();
   const score = row.scores ? totalScore(row.scores) : 0;
   return (
     <div className={cn("rounded-xl border bg-bg1 p-5", rank === 0 ? "border-brand-line" : "border-line")}>
@@ -84,10 +86,12 @@ function TopPickCard({
       </div>
       {row.meaning && <p className="mt-1.5 text-[13px] leading-relaxed text-txt1">{row.meaning}</p>}
       {row.scores && <ScoreBars scores={row.scores} className="mt-4" />}
-      {tldPriceFull(row.tld, lang) && <p className="tnum mt-3 text-[11px] text-txt2">{tldPriceFull(row.tld, lang)}</p>}
+      {priceFull(row.tld, lang, prices) && (
+        <p title={priceFull(row.tld, lang, prices)} className="tnum mt-3 cursor-help text-[11px] text-txt2">{priceFull(row.tld, lang, prices)}</p>
+      )}
       <RegisterMenu domain={row.domain}>
         <button className="mt-2 flex h-10 w-full items-center justify-center gap-1.5 rounded-lg bg-brand text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90">
-          {t("common.register")}{tldPriceShort(row.tld, lang) ? ` · ${tldPriceShort(row.tld, lang)}` : ""}
+          {t("common.register")}{priceShort(row.tld, lang, prices) ? ` · ${priceShort(row.tld, lang, prices)}` : ""}
           <ChevronDown className="h-4 w-4" />
         </button>
       </RegisterMenu>
@@ -234,7 +238,7 @@ export function ResultsPage({
 
   return (
     <>
-      <main className="mx-auto max-w-6xl px-4 py-6 pb-24 md:px-6">
+      <main className="mx-auto max-w-6xl overflow-x-clip px-4 py-6 pb-24 md:px-6">
         {/* 摘要行 */}
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <div>

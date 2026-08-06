@@ -6,9 +6,10 @@ import { CopyButton, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import { downloadText } from "@/lib/export";
 import { useI18n, type TFunc } from "@/lib/i18n";
+import { priceFull, priceShort, usePrices } from "@/lib/prices";
 import { REGISTRARS } from "@/lib/registrars";
 import type { ShortlistItem } from "@/lib/shortlist";
-import { scoreBadgeClass, tldPriceFull, tldPriceShort, totalScore, type Status } from "@/types";
+import { scoreBadgeClass, totalScore, type Status } from "@/types";
 import { cn } from "@/lib/utils";
 
 function exportShortlist(items: ShortlistItem[], format: "csv" | "txt") {
@@ -55,6 +56,7 @@ export function ShortlistPage({
   onApplyStatuses: (statuses: Record<string, Status>) => void;
 }) {
   const { t, lang } = useI18n();
+  const prices = usePrices();
   const [sharing, setSharing] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
   const [shareCopied, setShareCopied] = useState(false);
@@ -299,7 +301,7 @@ export function ShortlistPage({
                           )}
                         </td>
                       ))}
-                      <td title={tldPriceFull(it.tld, lang)} className="tnum px-3 text-right font-mono text-xs text-txt1">{tldPriceShort(it.tld, lang) ?? "—"}</td>
+                      <td title={priceFull(it.tld, lang, prices)} className="tnum px-3 text-right font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? "—"}</td>
                       <td className="whitespace-nowrap px-4 text-right">
                         <span className="inline-flex items-center gap-1">
                           <CopyButton domain={it.domain} />
@@ -345,7 +347,7 @@ export function ShortlistPage({
                   {it.meaning && <p className="mt-1 text-xs text-txt1">{it.meaning}</p>}
                   {it.scores && <ScoreBars scores={it.scores} columns={4} className="mt-3" />}
                   <div className="mt-3 flex items-center gap-2">
-                    <span title={tldPriceFull(it.tld, lang)} className="tnum flex-1 font-mono text-xs text-txt1">{tldPriceShort(it.tld, lang) ?? ""}</span>
+                    <span title={priceFull(it.tld, lang, prices)} className="tnum flex-1 font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? ""}</span>
                     <button
                       title={t("common.remove")}
                       className="grid h-11 w-11 place-items-center rounded-md border border-line text-txt2 hover:text-destructive"
