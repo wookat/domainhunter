@@ -1,5 +1,6 @@
 import { CheckCircle2, Lightbulb, Sparkles, Tag } from "lucide-react";
 
+import { INDUSTRY_GUIDES, guidesForTld } from "@/content/guides";
 import { TLD_GUIDES, TLD_LIST } from "@/content/tlds";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, toCny, usePrices } from "@/lib/prices";
@@ -23,6 +24,7 @@ export function TldPage({ tld }: { tld: string }) {
 
   const loc = guide[lang];
   const live = prices?.[tld];
+  const relatedGuides = guidesForTld(tld);
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -108,6 +110,24 @@ export function TldPage({ tld }: { tld: string }) {
           ))}
         </div>
       </div>
+
+      {/* 相关行业命名指南互链 */}
+      {relatedGuides.length > 0 && (
+        <div className="mt-6">
+          <h2 className="text-sm font-semibold text-txt1">{t("tld.relatedGuides")}</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {relatedGuides.map((slug) => (
+              <a
+                key={slug}
+                href={`/guide/${slug}?lang=${lang}`}
+                className="flex min-h-[44px] items-center rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+              >
+                {INDUSTRY_GUIDES[slug][lang].label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </main>
   );
 }

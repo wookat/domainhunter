@@ -9,6 +9,7 @@ import { UnderstandingBar } from "@/components/understanding-bar";
 import { isMockEnabled, runMockStream } from "@/mock";
 import { loadSearch, saveSearch } from "@/lib/persist";
 import { TLD_LIST } from "@/content/tlds";
+import { GUIDE_LABELS } from "@/content/guide-labels";
 import { useI18n } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
 import { friendlyError, friendlyHttpError } from "@/lib/utils";
@@ -35,6 +36,7 @@ function lazyChunk<T, P>(load: () => Promise<T>, pick: (m: T) => React.Component
 
 const SharePage = lazyChunk(() => import("@/components/share-page"), (m) => m.SharePage);
 const TldPage = lazyChunk(() => import("@/components/tld-page"), (m) => m.TldPage);
+const GuidePage = lazyChunk(() => import("@/components/guide-page"), (m) => m.GuidePage);
 const ShortlistPage = lazyChunk(() => import("@/components/shortlist-page"), (m) => m.ShortlistPage);
 const AdvancedPage = lazyChunk(() => import("@/components/advanced-page"), (m) => m.AdvancedPage);
 
@@ -55,6 +57,11 @@ function tldFromPath(): string | null {
   return m ? m[1].toLowerCase() : null;
 }
 
+function guideFromPath(): string | null {
+  const m = window.location.pathname.match(/^\/guide\/([a-z0-9-]{2,24})$/i);
+  return m ? m[1].toLowerCase() : null;
+}
+
 /** 首页默认 TLD：支持 /?tld=xx 预填（TLD 指南页 CTA 入口） */
 function initialTlds(): string[] {
   const q = new URLSearchParams(window.location.search).get("tld")?.trim().toLowerCase().replace(/^\./, "");
@@ -66,7 +73,8 @@ export default function App() {
   const { t, lang } = useI18n();
   const [shareId] = useState<string | null>(shareIdFromPath);
   const [guideTld] = useState<string | null>(tldFromPath);
-  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() ? null : loadSearch()));
+  const [guideSlug] = useState<string | null>(guideFromPath);
+  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() ? null : loadSearch()));
   const [mode, setMode] = useState<Mode>(saved ? "results" : "home");
   const [values, setValues] = useState<HomeValues>(() => saved?.values ?? { description: "", tlds: initialTlds(), style: "", lengthPref: "" });
   const [rows, setRows] = useState<Row[]>(saved?.rows ?? []);
@@ -262,6 +270,21 @@ export default function App() {
     .filter(Boolean)
     .join(" · ");
 
+  if (guideSlug) {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Header
+          onLogoClick={() => window.location.assign("/")}
+          shortlistCount={shortlist.items.length}
+          onShortlistClick={() => window.location.assign("/")}
+        />
+        <Suspense fallback={<PageFallback />}>
+          <GuidePage slug={guideSlug} />
+        </Suspense>
+      </div>
+    );
+  }
+
   if (guideTld) {
     return (
       <div className="flex min-h-screen flex-col">
@@ -425,6 +448,17 @@ export default function App() {
               {TLD_LIST.map((tld) => (
                 <a key={tld} className="inline-flex min-h-[44px] items-center px-2 font-mono hover:text-brand hover:underline" href={`/tld/${tld}?lang=${lang}`}>
                   .{tld}
+                </a>
+              ))}
+            </div>
+          </div>
+          {/* 行业命名指南内链：SEO + 用户入口 */}
+          <div className="mx-auto mb-5 max-w-3xl px-4">
+            <p className="font-semibold text-txt1">{t("footer.industryGuides")}</p>
+            <div className="mt-1.5 flex flex-wrap justify-center gap-x-1 gap-y-0.5">
+              {GUIDE_LABELS.map((g) => (
+                <a key={g.slug} className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/guide/${g.slug}?lang=${lang}`}>
+                  {g[lang]}
                 </a>
               ))}
             </div>
