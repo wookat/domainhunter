@@ -565,7 +565,187 @@ export const TLD_GUIDES: Record<string, TldGuide> = {
       ],
     },
   },
+  shop: {
+    tld: "shop",
+    zh: {
+      title: ".shop 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".shop 语义直白，是电商与品牌商店的天然后缀。查看 .shop 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .shop 域名。",
+      intro:
+        ".shop 是语义最直白的电商后缀：看到域名就知道这是一家店。独立站、品牌官方商店、垂直品类电商用 .shop 都非常自然，「品牌词 + .shop」本身就是一句完整的行动号召。它也常被用作主品牌的商店子站——主站用 .com，商店用同名 .shop，分工清晰。库存充裕，好记的品牌词、品类词大多还能注册到；首年常有低价促销，但续费明显更高，长期持有前先看清续费价。坦率的短板：在部分用户认知里 .shop 新后缀感仍强于 .com，大额客单价或强信任场景（如奢侈品）建议搭配主流后缀使用。定位建议：独立站电商、DTC 品牌商店、线下店铺的线上入口。",
+      bestFor: ["独立站与 DTC 电商", "品牌官方商店子站", "垂直品类电商", "线下店铺线上入口"],
+      namingTips: [
+        "「品牌词 + .shop」自带行动号召，域名即广告语",
+        "品类词（coffee、sneaker 类）在 .shop 下语义顺滑",
+        "首年促销价与续费价差距大，长期持有先看续费",
+        "高客单价场景建议同时持有 .com 做信任背书",
+      ],
+    },
+    en: {
+      title: ".shop Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".shop says exactly what it means — the natural suffix for e-commerce and brand stores. See live pricing and naming advice, then hunt available .shop names with AI.",
+      intro:
+        ".shop is the most literal e-commerce suffix on the market: the domain itself tells visitors they've arrived at a store. Independent stores, official brand shops and vertical e-commerce all read naturally on .shop, and \"brand + .shop\" doubles as a call to action. It's also popular as the store companion to a main brand — .com for the site, the same name on .shop for the storefront. Inventory is healthy, so memorable brand and category words are still available; intro pricing is often cheap while renewals run noticeably higher, so check renewal costs before committing. Honest caveat: some audiences still perceive new TLDs as less established than .com, so high-ticket or trust-heavy commerce may want a mainstream suffix alongside. Best fit: independent e-commerce, DTC brand stores, and online entrances for physical shops.",
+      bestFor: ["Independent & DTC e-commerce", "Official brand storefronts", "Vertical category stores", "Online entrance for physical shops"],
+      namingTips: [
+        "\"Brand + .shop\" doubles as a call to action",
+        "Category words (coffee, sneaker) read naturally on .shop",
+        "Intro promos are cheap; renewals are much higher — check first",
+        "Pair with a .com for high-ticket, trust-heavy commerce",
+      ],
+    },
+  },
+  cloud: {
+    tld: "cloud",
+    zh: {
+      title: ".cloud 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".cloud 是云服务与 SaaS 的品类后缀，语义清晰、库存充足。查看 .cloud 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .cloud 域名。",
+      intro:
+        ".cloud 是云计算时代的品类后缀：云服务、SaaS、托管平台、DevOps 工具用它一眼即懂。相比 .io/.dev 的极客气质，.cloud 更偏「基础设施与企业服务」——面向企业客户的云产品用 .cloud 反而比 .io 更正式。不少云厂商也把 .cloud 用作产品线域名或客户实例域名（如「客户名.产品.cloud」），可扩展性好。库存充足，价格中等，主流品牌词、功能词大多还能注册到。短板是长度：6 个字母的后缀不算短，名字本体要尽量精炼，避免整体过长。定位建议：云服务与 SaaS 产品、托管与部署平台、企业 IT 服务，以及主品牌的云产品线子站。",
+      bestFor: ["云服务与 SaaS 产品", "托管与部署平台", "企业 IT 与 DevOps 服务", "主品牌的云产品线"],
+      namingTips: [
+        "后缀已表明品类，名字本体不必再带 cloud/host 类词根",
+        "后缀较长，名字本体控制在 4–8 字符更平衡",
+        "企业云产品用 .cloud 比 .io 更正式",
+        "适合做客户实例域名的根域（如 app.acme.cloud）",
+      ],
+    },
+    en: {
+      title: ".cloud Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".cloud is the category suffix for cloud services and SaaS — clear semantics, good inventory. See live pricing and naming advice, then hunt available .cloud names with AI.",
+      intro:
+        ".cloud is the category suffix of the cloud era: cloud services, SaaS products, hosting platforms and DevOps tools are instantly legible on it. Compared to the hacker vibe of .io/.dev, .cloud leans \"infrastructure and enterprise\" — for B2B cloud products it often reads more professional than .io. Many vendors also use .cloud as a product-line domain or for customer instances (customer.product.cloud), which scales nicely. Inventory is plentiful at mid-range prices, so mainstream brand and function words are still available. The trade-off is length: a six-letter suffix isn't short, so keep the name itself tight to avoid an overlong domain. Best fit: cloud services and SaaS, hosting and deployment platforms, enterprise IT services, and cloud product lines of an existing brand.",
+      bestFor: ["Cloud services & SaaS", "Hosting & deployment platforms", "Enterprise IT & DevOps", "Cloud product lines of existing brands"],
+      namingTips: [
+        "The suffix states the category — skip cloud/host roots in the name",
+        "Six-letter suffix: keep the name to 4–8 characters",
+        ".cloud reads more enterprise than .io for B2B products",
+        "Great root domain for customer instances (app.acme.cloud)",
+      ],
+    },
+  },
+  pro: {
+    tld: "pro",
+    zh: {
+      title: ".pro 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".pro 传达专业与资质感，适合专业服务、顾问与工具的 Pro 版。查看 .pro 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .pro 域名。",
+      intro:
+        ".pro 的含义是「专业」：律师、设计师、摄影师、顾问等专业服务者用它给个人品牌加一层资质感，「姓名/技能 + .pro」干净利落。它也是产品「Pro 版」的天然域名——主站在 .com，付费专业版落在同名 .pro，用户一看就懂。这个后缀历史上曾要求注册者提供职业资质，现已放开注册，但「专业」的语义沉淀保留了下来。价格低、库存充足，短名字命中率高。短板是通用信任度一般：完全陌生的品牌只用 .pro 做主站，说服力弱于 .com，更适合与主域名配合或用在明确的「专业/付费」语境里。定位建议：专业服务个人品牌、行业顾问、产品 Pro 版与付费升级页。",
+      bestFor: ["专业服务个人品牌", "行业顾问与工作室", "产品 Pro 版落地页", "技能 + pro 的组合命名"],
+      namingTips: [
+        "「姓名/技能 + .pro」适合个人专业品牌",
+        "产品付费版用同名 .pro 与主站分工清晰",
+        "价格低、库存足，短名字命中率高",
+        "陌生品牌主站慎用，配合 .com 主域更稳",
+      ],
+    },
+    en: {
+      title: ".pro Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".pro signals professionalism — great for professional services, consultants, and Pro tiers of products. See live pricing and naming advice, then hunt available .pro names with AI.",
+      intro:
+        ".pro means exactly what it says: lawyers, designers, photographers and consultants use it to add a layer of credential to a personal brand — \"name/skill + .pro\" is clean and confident. It's also the natural home for a product's Pro tier: main site on .com, the paid professional edition on the matching .pro. Historically the registry required proof of professional credentials; registration is open now, but the \"professional\" connotation stuck. Prices are low and inventory is deep, so short names hit often. The trade-off is general trust: an unknown brand running only on .pro persuades less than .com, so it works best alongside a main domain or in an explicitly \"pro/paid\" context. Best fit: professional-service personal brands, consultants and studios, and Pro-tier landing pages.",
+      bestFor: ["Professional-service personal brands", "Consultants & studios", "Pro-tier product pages", "Skill + pro combinations"],
+      namingTips: [
+        "\"Name/skill + .pro\" suits personal professional brands",
+        "Use the matching .pro for your product's paid tier",
+        "Low prices and deep inventory — short names still available",
+        "For unknown brands, pair with a .com main domain",
+      ],
+    },
+  },
+  vip: {
+    tld: "vip",
+    zh: {
+      title: ".vip 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".vip 在国内认知度高、可 ICP 备案，适合会员制产品与粉丝社群。查看 .vip 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .vip 域名。",
+      intro:
+        ".vip 是少数在国内比海外更主流的新后缀：VIP 的概念国人人人皆知，后缀已获工信部资质、可正常 ICP 备案，注册量长期位居新后缀前列。会员制产品、粉丝社群、高端服务预约、电商会员站用 .vip 语义直给——域名本身就在说「这里是会员专属」。价格亲民、库存极充足，双拼与品牌词命中率很高。坦率的短板：海外用户对 .vip 认知有限，且「VIP」气质自带营销感，严肃工具类产品不太搭。定位建议：面向国内的会员制业务、粉丝与社群运营、品牌会员中心子站（主站 .com + 会员站同名 .vip）。",
+      bestFor: ["会员制产品与订阅服务", "粉丝社群与私域运营", "高端服务与预约", "品牌会员中心子站"],
+      namingTips: [
+        "「品牌词 + .vip」天然表达会员专属语义",
+        "已获工信部资质，可正常 ICP 备案",
+        "双拼命中率高，适合国内品牌",
+        "海外业务与严肃工具类产品不建议做主域",
+      ],
+    },
+    en: {
+      title: ".vip Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".vip is unusually strong in China, ICP-filable, and fits membership products and fan communities. See live pricing and naming advice, then hunt available .vip names with AI.",
+      intro:
+        ".vip is one of the few new TLDs that's bigger in China than anywhere else: the VIP concept is universally understood there, the registry holds MIIT accreditation for ICP filing, and registration volume has ranked near the top of new TLDs for years. Membership products, fan communities, premium booking services and member stores read instantly on .vip — the domain itself says \"members only\". Prices are friendly and inventory is deep, so pinyin and brand words hit often. Honest caveats: overseas recognition is limited, and the VIP vibe carries a promotional flavor that suits marketing better than serious tooling. Best fit: China-facing membership businesses, fan and community operations, and a brand's member-center companion site (main site on .com, members on the matching .vip).",
+      bestFor: ["Membership & subscription products", "Fan communities & private ops", "Premium services & booking", "Brand member-center sites"],
+      namingTips: [
+        "\"Brand + .vip\" natively signals members-only",
+        "MIIT-accredited — ICP filing works normally",
+        "Pinyin names hit often — great for China-facing brands",
+        "Skip it as the main domain for overseas or serious tools",
+      ],
+    },
+  },
+  club: {
+    tld: "club",
+    zh: {
+      title: ".club 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".club 是社群与俱乐部的天然后缀，语义友好、价格低。查看 .club 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .club 域名。",
+      intro:
+        ".club 的语义人人秒懂：这是一个「圈子」。兴趣社群、付费社群、读书会、健身团、NFT/粉丝俱乐部用 .club 都非常自然，「主题词 + .club」念出来就是社群的名字。相比 .com 的商业感，.club 自带归属感与轻松气质，很适合把「加入我们」写进域名里。价格常年低位、库存充足，好词命中率高；曾经的 NFT 热潮让大量 .club 被注册又释放，现在正是捡漏窗口。短板：商业产品主站用 .club 显得不够正式，且部分场景与「夜店/会所」联想有歧义，选词时注意语境。定位建议：兴趣与付费社群、会员俱乐部、社区型产品，以及主品牌的社区子站（主站 .com + 社区同名 .club）。",
+      bestFor: ["兴趣社群与付费社群", "读书会与线下俱乐部", "粉丝与会员俱乐部", "主品牌的社区子站"],
+      namingTips: [
+        "「主题词 + .club」念出来就是社群名",
+        "社群产品用 .club 比 .com 更有归属感",
+        "价格低、库存足，NFT 退潮后好词回流",
+        "注意选词语境，避免歧义联想",
+      ],
+    },
+    en: {
+      title: ".club Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".club is the natural suffix for communities and clubs — friendly semantics, low prices. See live pricing and naming advice, then hunt available .club names with AI.",
+      intro:
+        "Everyone instantly understands .club: it's a circle you can join. Interest groups, paid communities, book clubs, fitness crews and fan clubs all read naturally on it — \"topic + .club\" spoken aloud is the community's name. Where .com feels commercial, .club carries belonging and warmth, which makes \"join us\" part of the domain itself. Prices stay low and inventory is deep; the NFT wave registered and then released a huge batch of .club names, so good words are flowing back. Trade-offs: a commercial product's main site on .club can feel informal, and in some contexts the word carries nightlife connotations — choose your words with the context in mind. Best fit: interest and paid communities, membership clubs, community-shaped products, and a brand's community companion site (main on .com, community on the matching .club).",
+      bestFor: ["Interest & paid communities", "Book clubs & local clubs", "Fan & membership clubs", "Brand community sites"],
+      namingTips: [
+        "\"Topic + .club\" spoken aloud is your community's name",
+        "Reads warmer and more belonging than .com for communities",
+        "NFT-era names are dropping back into availability",
+        "Mind word context to avoid nightlife connotations",
+      ],
+    },
+  },
+  link: {
+    tld: "link",
+    zh: {
+      title: ".link 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".link 语义即「链接」，适合导航页、个人主页聚合与短链服务。查看 .link 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .link 域名。",
+      intro:
+        ".link 的语义就是「链接」：个人主页聚合（link-in-bio）、导航站、短链与跳转服务、资源合集用它一眼即懂，「名字 + .link」天然表达「这里汇总了我的所有链接」。相比功能相似的 .bio/.page，.link 更中性、更技术感，也常被用作产品的分享域名——主站在 .com，分享短链用更短的同名 .link。价格亲民、续费稳定（这在新后缀里难得），库存充足。短板：语义强绑定「链接/聚合」场景，做通用品牌主站不合适；部分安全网关对陌生短链域名会多一层审查，做企业级短链服务要养域名信誉。定位建议：个人 link-in-bio 主页、导航与资源聚合站、产品分享短链域名。",
+      bestFor: ["个人主页聚合（link-in-bio）", "导航站与资源合集", "短链与分享跳转服务", "产品的分享短链域名"],
+      namingTips: [
+        "「名字 + .link」天然表达链接聚合语义",
+        "续费价稳定，适合长期持有的工具域名",
+        "做短链服务先养域名信誉，避免被安全网关拦截",
+        "通用品牌主站不适合，语义绑定链接场景",
+      ],
+    },
+    en: {
+      title: ".link Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".link literally means link — perfect for link-in-bio pages, directories and short-link services. See live pricing and naming advice, then hunt available .link names with AI.",
+      intro:
+        ".link says exactly what it does: link-in-bio pages, directories, short-link and redirect services, and resource collections are instantly legible on it — \"name + .link\" naturally reads as \"all my links live here\". Compared to .bio/.page it feels more neutral and technical, and it's popular as a product's sharing domain — main site on .com, share links on a shorter matching .link. Prices are friendly and renewals are stable, which is rare among new TLDs, and inventory is deep. Trade-offs: the semantics are tightly bound to linking/aggregation, so it's a poor fit for a general brand's main site; and some security gateways scrutinize unfamiliar short-link domains, so enterprise link services need to build domain reputation. Best fit: personal link-in-bio pages, directories and resource hubs, and share-link domains for products.",
+      bestFor: ["Link-in-bio personal pages", "Directories & resource hubs", "Short-link & redirect services", "Product share-link domains"],
+      namingTips: [
+        "\"Name + .link\" natively reads as a link hub",
+        "Stable renewals — rare among new TLDs, good for keeps",
+        "Build reputation before enterprise short-link use",
+        "Semantics are link-bound — not for general brand sites",
+      ],
+    },
+  },
 };
 
-/** 18 个指南页 TLD 列表（顺序即导航展示顺序） */
+/** 24 个指南页 TLD 列表（顺序即导航展示顺序） */
 export const TLD_LIST = Object.keys(TLD_GUIDES);
