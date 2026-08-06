@@ -3,7 +3,7 @@ import { Bell, Bookmark, Check, ChevronDown, Download, ExternalLink, Link2, Load
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Switch } from "@/components/ui/switch";
-import { fetchMonitorChanges, useMonitor, type MonitorChange } from "@/lib/monitor";
+import { fetchMonitorChanges, loadWebhook, useMonitor, type MonitorChange } from "@/lib/monitor";
 import { CopyButton, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import { downloadText } from "@/lib/export";
@@ -95,6 +95,14 @@ export function ShortlistPage({
   const [monitorChanges, setMonitorChanges] = useState<MonitorChange[] | null>(null);
   const [changesLoading, setChangesLoading] = useState(false);
   const [changesError, setChangesError] = useState("");
+  const [webhookInput, setWebhookInput] = useState(() => loadWebhook());
+  const [webhookState, setWebhookState] = useState<"idle" | "saving" | "saved" | "invalid">("idle");
+
+  async function saveWebhook() {
+    setWebhookState("saving");
+    const ok = await monitor.setWebhook(webhookInput);
+    setWebhookState(ok ? "saved" : "invalid");
+  }
 
   async function toggleMonitor(domain: string, status?: string) {
     setMonitorError("");
@@ -359,6 +367,30 @@ export function ShortlistPage({
           {changesOpen && (
             <div className="border-t border-line px-4 py-3">
               <p className="text-[11px] text-txt2">{t("monitor.changesHint")}</p>
+              {/* 通知 webhook：用户自备 https 地址，监控域名状态变化时推送 JSON */}
+              <div className="mt-2.5 flex flex-wrap items-center gap-2">
+                <input
+                  type="url"
+                  value={webhookInput}
+                  onChange={(e) => {
+                    setWebhookInput(e.target.value);
+                    setWebhookState("idle");
+                  }}
+                  placeholder={t("monitor.webhookPlaceholder")}
+                  className="h-9 min-w-0 flex-1 rounded-lg border border-line bg-bg2 px-3 font-mono text-xs text-txt0 placeholder:text-txt2 focus:border-brand-line focus:outline-none"
+                />
+                <button
+                  onClick={() => void saveWebhook()}
+                  disabled={webhookState === "saving"}
+                  className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-xs font-semibold text-txt1 transition-colors hover:border-brand-line hover:text-brand disabled:opacity-50"
+                >
+                  {webhookState === "saving" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : webhookState === "saved" ? <Check className="h-3.5 w-3.5 text-brand" /> : null}
+                  {webhookState === "saved" ? t("monitor.webhookSaved") : t("monitor.webhookSave")}
+                </button>
+              </div>
+              <p className={cn("mt-1.5 text-[11px]", webhookState === "invalid" ? "text-destructive" : "text-txt2")}>
+                {webhookState === "invalid" ? t("monitor.webhookInvalid") : t("monitor.webhookHint")}
+              </p>
               {changesLoading ? (
                 <p className="mt-2 flex items-center gap-1.5 text-xs text-txt1">
                   <Loader2 className="h-3.5 w-3.5 animate-spin text-brand" />
