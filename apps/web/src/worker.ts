@@ -743,9 +743,13 @@ async function injectModulepreload(html: string, assets: Fetcher, origin: string
   }
 }
 
-/** SSR 按解析出的语言设置 <html lang>（SPA 水合后会再同步，这里保证首屏/爬虫看到的语言正确） */
+/** SSR 按解析出的语言设置 <html lang> 与 og:locale（SPA 水合后会再同步，这里保证首屏/爬虫看到的语言正确） */
 const setHtmlLang = (html: string, lang: "zh" | "en"): string =>
-  lang === "en" ? html.replace(/<html lang="[^"]*"/, '<html lang="en"') : html;
+  lang === "en"
+    ? html
+        .replace(/<html lang="[^"]*"/, '<html lang="en"')
+        .replace(/<meta property="og:locale" content="[^"]*"/, '<meta property="og:locale" content="en_US"')
+    : html;
 
 /** 未知 slug 的 SEO 路由：返回应用壳 + 404 状态 + noindex，避免软 404 被收录 */
 async function notFoundShell(res: Response): Promise<Response> {
