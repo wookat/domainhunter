@@ -591,6 +591,17 @@ const FAQ_JSONLD = JSON.stringify({
   ].map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
 });
 
+/** BreadcrumbList 结构化数据：首页 → 当前页，供搜索结果面包屑展示 */
+const breadcrumbJsonld = (name: string, path: string, lang: "zh" | "en") =>
+  JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: lang === "en" ? "Home" : "首页", item: SITE_ORIGIN },
+      { "@type": "ListItem", position: 2, name, item: `${SITE_ORIGIN}${path}` },
+    ],
+  });
+
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
   const html = injectHreflang(await res.text(), "/").replace("</head>", `<script type="application/ld+json">${FAQ_JSONLD}</script></head>`);
@@ -617,7 +628,7 @@ app.get("/tld/:tld", async (c) => {
     .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/tld/${tld}" />`)
     .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/tld/${tld}" />`);
-  html = injectHreflang(html, `/tld/${tld}`);
+  html = injectHreflang(html, `/tld/${tld}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang)}</script></head>`);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -641,7 +652,7 @@ app.get("/guide/:slug", async (c) => {
     .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/guide/${slug}" />`)
     .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/guide/${slug}" />`);
-  html = injectHreflang(html, `/guide/${slug}`);
+  html = injectHreflang(html, `/guide/${slug}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script></head>`);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
