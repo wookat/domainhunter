@@ -51,6 +51,9 @@ export function TldPage({ tld }: { tld: string }) {
         ) : (
           <span className="text-sm text-txt1">{priceFull(tld, lang, prices) ?? t("tld.priceLoading")}</span>
         )}
+        <a href={`/prices?lang=${lang}`} className="ml-auto inline-flex min-h-[36px] items-center text-xs text-txt2 hover:text-brand hover:underline">
+          {t("prices.seeAll")}
+        </a>
       </div>
 
       <p className="mt-6 text-[15px] leading-relaxed text-txt1">{loc.intro}</p>

@@ -82,6 +82,12 @@ export function ComparePage({ slug }: { slug: string }) {
         </a>
       </div>
 
+      <p className="mt-4 text-center">
+        <a href={`/prices?lang=${lang}`} className="inline-flex min-h-[44px] items-center px-2 text-sm text-txt1 hover:text-brand hover:underline">
+          {t("prices.seeAll")}
+        </a>
+      </p>
+
       {/* 其他对比页互链 */}
       <div className="mt-10">
         <h2 className="text-sm font-semibold text-txt1">{t("vs.others")}</h2>
