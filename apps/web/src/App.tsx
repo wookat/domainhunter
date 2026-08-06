@@ -40,6 +40,7 @@ const GuidePage = lazyChunk(() => import("@/components/guide-page"), (m) => m.Gu
 const ComparePage = lazyChunk(() => import("@/components/compare-page"), (m) => m.ComparePage);
 const ShortlistPage = lazyChunk(() => import("@/components/shortlist-page"), (m) => m.ShortlistPage);
 const AdvancedPage = lazyChunk(() => import("@/components/advanced-page"), (m) => m.AdvancedPage);
+const PricesPage = lazyChunk(() => import("@/components/prices-page"), (m) => m.PricesPage);
 
 function PageFallback() {
   return <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-16" />;
@@ -63,17 +64,19 @@ function guideFromPath(): string | null {
   return m ? m[1].toLowerCase() : null;
 }
 
+const pricesFromPath = () => window.location.pathname === "/prices";
+
 function compareFromPath(): string | null {
   const m = window.location.pathname.match(/^\/vs\/([a-z0-9-]{2,48})$/i);
   return m ? m[1].toLowerCase() : null;
 }
 
-/** 首页默认 TLD：支持 /?tld=xx 或 /?tld=xx,yy 预填（TLD 指南页 / 对比页 CTA 入口）；分享搜索链接（带 q）精确还原不补 com */
+/** 首页默认 TLD：支持 /?tld=xx 或 /?tld=xx,yy 精确预填（TLD 指南页 / 对比页 CTA、分享搜索链接入口），不自动补 com */
 function initialTlds(): string[] {
   const params = new URLSearchParams(window.location.search);
   const q = params.get("tld")?.trim().toLowerCase();
   const list = (q ?? "").split(",").map((s) => s.trim().replace(/^\./, "")).filter((s) => /^[a-z0-9-]{2,24}$/.test(s));
-  if (list.length > 0) return [...new Set(params.has("q") || list.includes("com") ? list : [...list, "com"])];
+  if (list.length > 0) return [...new Set(list)];
   return ["com", "cn"];
 }
 
@@ -83,7 +86,8 @@ export default function App() {
   const [guideTld] = useState<string | null>(tldFromPath);
   const [guideSlug] = useState<string | null>(guideFromPath);
   const [compareSlug] = useState<string | null>(compareFromPath);
-  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() ? null : loadSearch()));
+  const [isPrices] = useState(pricesFromPath);
+  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() ? null : loadSearch()));
   const [mode, setMode] = useState<Mode>(saved ? "results" : "home");
   const [values, setValues] = useState<HomeValues>(() => saved?.values ?? { description: "", tlds: initialTlds(), style: "", lengthPref: "" });
   const [rows, setRows] = useState<Row[]>(saved?.rows ?? []);
@@ -309,6 +313,21 @@ export default function App() {
     );
   }
 
+  if (isPrices) {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Header
+          onLogoClick={() => window.location.assign("/")}
+          shortlistCount={shortlist.items.length}
+          onShortlistClick={() => window.location.assign("/")}
+        />
+        <Suspense fallback={<PageFallback />}>
+          <PricesPage />
+        </Suspense>
+      </div>
+    );
+  }
+
   if (guideTld) {
     return (
       <div className="flex min-h-screen flex-col">
@@ -478,6 +497,9 @@ export default function App() {
                   .{tld}
                 </a>
               ))}
+              <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/prices?lang=${lang}`}>
+                {t("footer.prices")}
+              </a>
             </div>
           </div>
           {/* 行业命名指南内链：SEO + 用户入口 */}

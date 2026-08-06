@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Brain, ChevronDown, ExternalLink, History, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
+import { ArrowRight, Brain, Check, ChevronDown, Copy, ExternalLink, History, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { addRecentSearch, clearRecentSearches, loadRecentSearches, type RecentSearch } from "@/lib/history";
@@ -131,6 +131,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一家小而美的设计咨询工作室，寓意「用专业判断帮客户把事做对」；气质要克制、可信、有方法论感；场景是印在提案封面和合同抬头上显得体面有分量。",
     en: "A small, sharp design consultancy. The name should convey professional judgment that gets things right; the vibe is restrained, credible, methodology-driven; it must carry weight on a proposal cover and a contract header.",
   },
+  {
+    slug: "photography",
+    labelZh: "摄影工作室",
+    labelEn: "Photo studio",
+    zh: "一家人像与婚礼摄影工作室，寓意「把最重要的瞬间拍得配得上回忆」；气质要温暖、有作者感、经得起印在水印和请柬上；场景是客户向闺蜜转介绍时一遍就能说清。",
+    en: "A portrait and wedding photography studio. The name should say the most important moments deserve this craft; the vibe is warm, authorial, worthy of a watermark and a wedding invitation; it must land in one telling when a client refers a friend.",
+  },
+  {
+    slug: "podcast",
+    labelZh: "播客节目",
+    labelEn: "Podcast",
+    zh: "一档聊科技与生活的双人对谈播客，寓意「认真但不正经的深夜聊天」；气质要松弛、有态度、口播念起来顺；场景是听众通勤听到节目名，晚上还能凭记忆搜到。",
+    en: "A two-host talk show on tech and life. The name should feel like earnest but playful late-night conversation; the vibe is relaxed, opinionated, smooth in a spoken intro; a commuter who hears it once must find it by memory that night.",
+  },
+  {
+    slug: "realestate",
+    labelZh: "房产家居",
+    labelEn: "Real estate",
+    zh: "一个帮年轻人找到理想住处的找房平台，寓意「安家这件事值得被认真对待」；气质要稳重、可信、带一点温度；场景是出现在中介门店招牌和 App 商店里都让人放心。",
+    en: "A home-finding platform for young renters and buyers. The name should say settling down deserves real care; the vibe is steady, trustworthy, with a touch of warmth; it must reassure on a storefront sign and in an app store alike.",
+  },
+  {
+    slug: "health",
+    labelZh: "医疗健康",
+    labelEn: "Health app",
+    zh: "一款帮用户管理睡眠与压力的健康应用，寓意「被科学而温柔地照顾」；气质要安心、专业、绝不冰冷；场景是用户愿意推荐给爸妈用，说出名字时对方不会犹豫。",
+    en: "A health app for sleep and stress. The name should feel like being cared for with science and gentleness; the vibe is reassuring, credible, never clinical-cold; users should feel comfortable recommending it to their parents by name.",
+  },
+  {
+    slug: "legal",
+    labelZh: "法律服务",
+    labelEn: "Legal service",
+    zh: "一个面向小微企业的在线法律服务平台，寓意「请律师不该让人紧张」；气质要专业、可靠、亲切不吓人；场景是印在合同模板页脚和官网首页都稳得住。",
+    en: "An online legal service for small businesses. The name should say hiring a lawyer shouldn't be intimidating; the vibe is professional, dependable, approachable; it must hold steady in a contract footer and on a homepage.",
+  },
+  {
+    slug: "newsletter",
+    labelZh: "Newsletter",
+    labelEn: "Newsletter",
+    zh: "一份每周精选科技与商业洞察的 newsletter，寓意「每周一杯高浓度的认知咖啡」；气质要聪明、有节奏感、在收件箱里一眼想点开；场景是读者向同事转发时名字自带推荐语。",
+    en: "A weekly newsletter of tech and business insight. The name should feel like a weekly shot of concentrated thinking; the vibe is smart, rhythmic, instantly clickable in an inbox; when a reader forwards it, the name itself is the endorsement.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
@@ -207,22 +249,31 @@ function MiniSelect({
   );
 }
 
-/** 可注册 chip 上的首年价（实时优先，静态参考价带 ≈）；仅在有可注册 chip 时才拉价格 */
+/** 可注册 chip 上的首年价（实时优先，静态参考价带 ≈）；续费≥3×首年时加「↑」提示续费陷阱，tooltip 显示续费价 */
 function ChipPrice({ domain }: { domain: string }) {
+  const { t } = useI18n();
   const prices = usePrices();
   const tld = domain.slice(domain.indexOf(".") + 1);
   const p = prices?.[tld];
   const s = tldPrice(tld);
   const text = p ? `$${p.registration}` : s ? `≈$${toUsd(s.first)}` : undefined;
   if (!text) return null;
-  return <i className="not-italic font-sans text-[10px] opacity-75">{text}</i>;
+  const renew = p ? p.renewal : s ? toUsd(s.renew) : undefined;
+  const trap = p !== undefined && renew !== undefined && renew >= p.registration * 3;
+  const tip = renew !== undefined ? t("quick.renewTip").replace("{price}", `${p ? "" : "≈"}$${renew}`) : undefined;
+  return (
+    <i title={tip} className="not-italic font-sans text-[10px] opacity-75">
+      {text}
+      {trap && <span className="text-amber-500">↑</span>}
+    </i>
+  );
 }
 
 /** 快速核验在所选 TLD 之外额外覆盖的主流后缀（显式 TLD 与所选优先，总数封顶 10） */
 const QUICK_EXTRA_TLDS = ["com", "io", "ai", "app", "dev", "co", "net", "me"];
 
 /** 「查更多后缀」按钮覆盖的第二批后缀（同样走 /api/search，0 AI 额度） */
-const QUICK_MORE_TLDS = ["org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top"];
+const QUICK_MORE_TLDS = ["org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link"];
 
 /** 快速核验的可注册 chip 也可收藏到候选清单 */
 function domainToRow(domain: string): Row {
@@ -262,6 +313,7 @@ export function HomePage({
   const [lengthPref, setLengthPref] = useState(() => initial.lengthPref || optionFromQuery("len", LENGTH_OPTIONS) || "none");
   const [customTld, setCustomTld] = useState("");
   const [showCustom, setShowCustom] = useState(false);
+  const [showAllTemplates, setShowAllTemplates] = useState(false);
 
   const customTlds = tlds.filter((t) => !PRESET_TLDS.includes(t));
   const toggleTld = (t: string) => setTlds((prev) => (prev.includes(t) ? prev.filter((x) => x !== t) : [...prev, t]));
@@ -279,6 +331,7 @@ export function HomePage({
   const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown" }[]>([]);
   const [quickRunning, setQuickRunning] = useState(false);
   const [quickMoreDone, setQuickMoreDone] = useState(false);
+  const [quickCopied, setQuickCopied] = useState(false);
   const quickAbortRef = useRef<AbortController | null>(null);
 
   // 变体建议：心仪名字被注册时，用前后缀组合免费核验一批变体（同样不消耗 AI 次数）
@@ -609,6 +662,23 @@ export function HomePage({
                     {t("home.quickMoreBtn", { n: QUICK_MORE_TLDS.filter((x) => !quickRows.some((r) => r.domain === `${quick.label}.${x}`)).length })}
                   </button>
                 )}
+                {!quickRunning && quickRows.filter((r) => r.status === "available").length >= 2 && (
+                  <button
+                    onClick={() => {
+                      void navigator.clipboard.writeText(
+                        quickRows.filter((r) => r.status === "available").map((r) => r.domain).join("\n"),
+                      );
+                      setQuickCopied(true);
+                      setTimeout(() => setQuickCopied(false), 1500);
+                    }}
+                    className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0"
+                  >
+                    {quickCopied ? <Check className="h-3 w-3 text-brand" /> : <Copy className="h-3 w-3" />}
+                    {quickCopied
+                      ? t("home.quickCopied")
+                      : t("home.quickCopyBtn", { n: quickRows.filter((r) => r.status === "available").length })}
+                  </button>
+                )}
               </div>
             )}
             {/* 心仪名字被注册：免费变体核验 + 一键转 AI 搜相似寓意的可注册名字 */}
@@ -674,11 +744,11 @@ export function HomePage({
           </div>
         )}
 
-        {/* 行业模板 chips：点击填入描述模板，用户可再编辑后搜索 */}
+        {/* 行业模板 chips：点击填入描述模板，用户可再编辑后搜索；默认收起只显示前 10 个 */}
         <div className="mt-4">
           <p className="text-center text-[11px] text-txt2">{t("home.templates")}</p>
           <div className="mt-2 flex flex-wrap justify-center gap-2">
-            {TEMPLATES.map((tpl) => (
+            {(showAllTemplates ? TEMPLATES : TEMPLATES.slice(0, 10)).map((tpl) => (
               <button
                 key={tpl.labelZh}
                 onClick={() => setDescription(lang === "zh" ? tpl.zh : tpl.en)}
@@ -687,6 +757,14 @@ export function HomePage({
                 {lang === "zh" ? tpl.labelZh : tpl.labelEn}
               </button>
             ))}
+            {!showAllTemplates && (
+              <button
+                onClick={() => setShowAllTemplates(true)}
+                className="h-11 rounded-full border border-dashed border-brand-line/60 px-3 text-xs text-txt2 transition-colors hover:border-brand-line hover:text-brand sm:h-8"
+              >
+                +{TEMPLATES.length - 10}
+              </button>
+            )}
           </div>
         </div>
 

@@ -64,7 +64,7 @@ const zh = {
   "home.faq.q4": "会自动帮我注册域名吗？",
   "home.faq.a4": "不会。我们只提供核验结果与注册商跳转链接（如 Porkbun），注册和付费在注册商完成。",
   "home.faq.q5": "支持哪些后缀？",
-  "home.faq.a5": "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top。",
+  "home.faq.a5": "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link。",
   "home.faq.q6": "我的搜索会被保存吗？",
   "home.faq.a6": "不保存输入内容和 IP，只记录匿名的聚合次数统计；收藏清单保存在你自己的浏览器本地。",
   "home.style.none": "不限风格",
@@ -85,6 +85,9 @@ const zh = {
   "home.quickAiDesc": "想要一个和「{label}」相似寓意、相似风格的名字，要求好记、顺口、适合做品牌。",
   "home.quickVariantsBtn": "免费查 {n} 个前后缀变体",
   "home.quickMoreBtn": "查更多后缀 +{n}",
+  "home.quickCopyBtn": "复制 {n} 个可注册",
+  "home.quickCopied": "已复制",
+  "quick.renewTip": "续费 {price}/年；带 ↑ 表示续费达首年价 3 倍以上",
   "home.quickVariantsProgress": "变体核验 {checked}/{total} · 可注册 {n} 个（不消耗 AI 次数）",
   // 高级模式
   "adv.title": "高级模式",
@@ -159,6 +162,22 @@ const zh = {
   "results.lockHintShort": "锁定后可定向再猎",
   "results.moreAroundLocked": "围绕锁定再来一轮",
   "results.lockTitle": "锁定：再来一轮时围绕它找",
+  // 价格总览页
+  "prices.kicker": "域名价格",
+  "prices.title": "域名后缀价格总览：24 个主流 TLD 注册与续费对比",
+  "prices.intro": "首年便宜不等于长期便宜——很多后缀续费是首年价的几倍。这里汇总 24 个主流后缀的注册与续费价（Porkbun 实时价优先，无报价时显示 ≈ 静态参考价），点列头可排序，点后缀可看详细指南。",
+  "prices.colTld": "后缀",
+  "prices.colReg": "注册/首年",
+  "prices.colRenew": "续费/年",
+  "prices.hunt": "猎名",
+  "prices.source": "实时价来自 Porkbun，人民币按汇率 7.2 估算；带 ≈ 为静态参考价。不同注册商价格有差异，以注册商页面为准。",
+  "prices.filter": "筛选后缀，如 shop…",
+  "prices.noMatch": "没有匹配的后缀",
+  "prices.trap": "续费↑",
+  "prices.trapTip": "续费达首年价 3 倍以上，注意长期成本",
+  "prices.ctaTitle": "不知道选哪个后缀？",
+  "prices.ctaDesc": "说出你想要的寓意与风格，AI 批量构思并实时核验，只给你真正可注册的好名字。",
+  "prices.ctaButton": "开始猎取",
   "results.copyLink": "复制搜索链接",
   "results.linkCopied": "已复制",
   "results.copyLinkTitle": "复制可分享的搜索链接（打开后自动预填描述与 TLD）",
@@ -255,6 +274,7 @@ const zh = {
   "guide.ctaButton": "开始猎取",
   "guide.others": "其他行业命名指南",
   "footer.tldGuides": "TLD 注册指南",
+  "footer.prices": "价格总览",
   "footer.industryGuides": "行业命名指南",
   // 错误
   "error.ai": "AI 服务出错，已停止本轮",
@@ -322,7 +342,7 @@ const en: Record<I18nKey, string> = {
   "home.faq.q4": "Will it register domains for me automatically?",
   "home.faq.a4": "No. We only provide verification results and registrar links (e.g. Porkbun) — registration and payment happen at the registrar.",
   "home.faq.q5": "Which TLDs are supported?",
-  "home.faq.a5": "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top via the “more TLDs” button.",
+  "home.faq.a5": "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link via the “more TLDs” button.",
   "home.faq.q6": "Do you store my searches?",
   "home.faq.a6": "We never store your input or IP — only anonymous aggregate counters. Your shortlist lives in your own browser's local storage.",
   "home.style.none": "Any style",
@@ -343,6 +363,9 @@ const en: Record<I18nKey, string> = {
   "home.quickAiDesc": "I want a name with a similar meaning and style to \"{label}\" — memorable, easy to say, and brandable.",
   "home.quickVariantsBtn": "Check {n} prefix/suffix variants free",
   "home.quickMoreBtn": "Check {n} more TLDs",
+  "home.quickCopyBtn": "Copy {n} available",
+  "home.quickCopied": "Copied",
+  "quick.renewTip": "Renews at {price}/yr; ↑ marks renewal 3×+ the first-year price",
   "home.quickVariantsProgress": "Variants checked {checked}/{total} · {n} available (no AI quota used)",
   "adv.title": "Advanced mode",
   "adv.subtitle": "Batch-generate roots × affixes × TLDs and verify availability one by one",
@@ -414,6 +437,21 @@ const en: Record<I18nKey, string> = {
   "results.lockHintShort": "Lock to hunt around it",
   "results.moreAroundLocked": "More around locked",
   "results.lockTitle": "Lock: next round explores around it",
+  "prices.kicker": "Domain Pricing",
+  "prices.title": "TLD Price Overview: Registration vs Renewal for 24 Popular Suffixes",
+  "prices.intro": "A cheap first year doesn't mean cheap forever — many suffixes renew at several times the promo price. This table compares registration and renewal for 24 popular TLDs (live Porkbun prices first, ≈ static reference when unavailable). Click headers to sort, click a suffix for its full guide.",
+  "prices.colTld": "TLD",
+  "prices.colReg": "Register / 1st yr",
+  "prices.colRenew": "Renew / yr",
+  "prices.hunt": "Hunt",
+  "prices.source": "Live prices from Porkbun; CNY estimated at 7.2. ≈ marks static reference prices. Registrar prices vary — confirm on the registrar page.",
+  "prices.filter": "Filter suffixes, e.g. shop…",
+  "prices.noMatch": "No matching suffixes",
+  "prices.trap": "renews↑",
+  "prices.trapTip": "Renewal is 3×+ the first-year price — mind the long-term cost",
+  "prices.ctaTitle": "Not sure which suffix to pick?",
+  "prices.ctaDesc": "Describe the meaning and vibe you want — AI brainstorms in batches and verifies live, showing only names you can actually register.",
+  "prices.ctaButton": "Start hunting",
   "results.copyLink": "Copy search link",
   "results.linkCopied": "Copied",
   "results.copyLinkTitle": "Copy a shareable search link (prefills description and TLDs)",
@@ -505,6 +543,7 @@ const en: Record<I18nKey, string> = {
   "guide.ctaButton": "Start hunting",
   "guide.others": "More industry naming guides",
   "footer.tldGuides": "TLD registration guides",
+  "footer.prices": "Price overview",
   "footer.industryGuides": "Industry naming guides",
   "error.ai": "AI service error — this round was stopped",
   "error.badRequest": "Invalid request — make sure the description isn't empty or over 500 characters",
@@ -562,7 +601,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     } catch { /* ignore */ }
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
     const path = window.location.pathname;
-    if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/")) document.title = dicts[lang]["meta.title"];
+    if (path === "/prices") document.title = `${dicts[lang]["prices.title"]} | DomainHunter`;
+    else if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/")) document.title = dicts[lang]["meta.title"];
   }, [lang]);
 
   const t = useCallback<TFunc>((key, vars) => interpolate(dicts[lang][key] ?? zh[key], vars), [lang]);
