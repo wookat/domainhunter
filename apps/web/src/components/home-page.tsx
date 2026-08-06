@@ -249,15 +249,24 @@ function MiniSelect({
   );
 }
 
-/** 可注册 chip 上的首年价（实时优先，静态参考价带 ≈）；仅在有可注册 chip 时才拉价格 */
+/** 可注册 chip 上的首年价（实时优先，静态参考价带 ≈）；续费≥3×首年时加「↑」提示续费陷阱，tooltip 显示续费价 */
 function ChipPrice({ domain }: { domain: string }) {
+  const { t } = useI18n();
   const prices = usePrices();
   const tld = domain.slice(domain.indexOf(".") + 1);
   const p = prices?.[tld];
   const s = tldPrice(tld);
   const text = p ? `$${p.registration}` : s ? `≈$${toUsd(s.first)}` : undefined;
   if (!text) return null;
-  return <i className="not-italic font-sans text-[10px] opacity-75">{text}</i>;
+  const renew = p ? p.renewal : s ? toUsd(s.renew) : undefined;
+  const trap = p !== undefined && renew !== undefined && renew >= p.registration * 3;
+  const tip = renew !== undefined ? t("quick.renewTip").replace("{price}", `${p ? "" : "≈"}$${renew}`) : undefined;
+  return (
+    <i title={tip} className="not-italic font-sans text-[10px] opacity-75">
+      {text}
+      {trap && <span className="text-amber-500">↑</span>}
+    </i>
+  );
 }
 
 /** 快速核验在所选 TLD 之外额外覆盖的主流后缀（显式 TLD 与所选优先，总数封顶 10） */
