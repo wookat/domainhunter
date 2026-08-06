@@ -601,6 +601,14 @@ app.get("/s/:id", async (c) => {
 });
 
 // 动态分享图：清单前 3 个域名 + 数量，品牌绿主题（SVG，1200×630）
+// 价格总览页分享图（须注册在 /api/og/:id 之前，否则被其当作分享 id）
+app.get("/api/og/prices", (c) => {
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  return new Response(pageOgSvg(lang === "en" ? "Pricing" : "域名价格", PRICES_META[lang].title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
 app.get("/api/og/:id", async (c) => {
   const kv = c.env.CACHE;
   const id = c.req.param("id");
@@ -853,13 +861,6 @@ const PRICES_META = {
     desc: "Compare registration and renewal prices (live from Porkbun) for 24 popular TLDs like com/cn/io/ai, avoid renewal traps, and hunt registrable names with AI.",
   },
 };
-
-app.get("/api/og/prices", (c) => {
-  const lang = c.req.query("lang") === "en" ? "en" : "zh";
-  return new Response(pageOgSvg(lang === "en" ? "Pricing" : "域名价格", PRICES_META[lang].title, lang), {
-    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
-  });
-});
 
 app.get("/prices", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
