@@ -3,12 +3,14 @@ import { AlertTriangle, Lightbulb, Quote, Sparkles } from "lucide-react";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "@/content/guides";
 import { useI18n } from "@/lib/i18n";
 import { priceShort, usePrices } from "@/lib/prices";
+import { usePageTitle } from "@/lib/use-page-title";
 import { cn } from "@/lib/utils";
 
 export function GuidePage({ slug }: { slug: string }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
   const guide = INDUSTRY_GUIDES[slug];
+  usePageTitle(guide?.[lang].title);
 
   if (!guide) {
     return (

@@ -5,12 +5,14 @@ import { INDUSTRY_GUIDES, guidesForTld } from "@/content/guides";
 import { TLD_GUIDES, TLD_LIST } from "@/content/tlds";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, toCny, usePrices } from "@/lib/prices";
+import { usePageTitle } from "@/lib/use-page-title";
 import { cn } from "@/lib/utils";
 
 export function TldPage({ tld }: { tld: string }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
   const guide = TLD_GUIDES[tld];
+  usePageTitle(guide?.[lang].title);
 
   if (!guide) {
     return (

@@ -4,11 +4,13 @@ import { TLD_COMPARES } from "@/content/compares";
 import { TLD_GUIDES } from "@/content/tlds";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, usePrices } from "@/lib/prices";
+import { usePageTitle } from "@/lib/use-page-title";
 
 export function ComparePage({ slug }: { slug: string }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
   const cmp = TLD_COMPARES[slug];
+  usePageTitle(cmp?.[lang].title);
 
   if (!cmp) {
     return (
