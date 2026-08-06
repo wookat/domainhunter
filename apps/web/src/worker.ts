@@ -163,8 +163,10 @@ app.post("/api/ai-search", async (c) => {
     style?: string;
     lengthPref?: string;
     fast?: boolean;
+    lang?: string;
   }>();
   const fast = body.fast === true;
+  const lang: "zh" | "en" = body.lang === "en" ? "en" : "zh";
   let description = (body.description ?? "").trim().slice(0, 500);
   const style = (body.style ?? "").trim().slice(0, 50);
   const lengthPref = (body.lengthPref ?? "").trim().slice(0, 50);
@@ -178,7 +180,11 @@ app.post("/api/ai-search", async (c) => {
 
   const ip = c.req.header("cf-connecting-ip") ?? c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
   if (!(await checkRateLimit(c.env.CACHE, ip))) {
-    return c.json({ error: "rate_limited", message: `今天猎得有点勤快了：每小时最多 ${RATE_LIMIT_PER_HOUR} 次 AI 猎名，休息一会儿再来吧` }, 429);
+    const msg =
+      lang === "en"
+        ? `You've been hunting hard today — AI hunts are capped at ${RATE_LIMIT_PER_HOUR} per hour, come back in a bit`
+        : `今天猎得有点勤快了：每小时最多 ${RATE_LIMIT_PER_HOUR} 次 AI 猎名，休息一会儿再来吧`;
+    return c.json({ error: "rate_limited", message: msg }, 429);
   }
 
   c.executionCtx.waitUntil(bumpUsage(c.env.CACHE, tlds, fast, (body.excludeLabels ?? []).length > 0));
@@ -194,7 +200,7 @@ app.post("/api/ai-search", async (c) => {
       const tried = new Set<string>((body.excludeLabels ?? []).map((l) => l.toLowerCase()));
       const takenLabels: string[] = [...tried];
       let availableCount = 0;
-      const understandingDone = generateUnderstanding(description, apiKey)
+      const understandingDone = generateUnderstanding(description, apiKey, lang)
         .then(async (u) => {
           if (u) await emit({ type: "understanding", ...u });
         })
@@ -208,6 +214,7 @@ app.post("/api/ai-search", async (c) => {
               count: fast && round === 1 ? FAST_FIRST_ROUND_COUNT : 24,
               excludeTaken: round === 1 && takenLabels.length === 0 ? undefined : takenLabels,
               round,
+              lang,
             });
           } catch (e) {
             await emit({ type: "error", round, detail: String(e) });
@@ -609,6 +616,14 @@ app.get("/s/:id", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/${id}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
+});
+
+// 候选清单页：客户端路由，直链/刷新时回 SPA 壳（个人数据页，noindex）
+app.get("/shortlist", async (c) => {
+  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  let html = await res.text();
+  html = html.replace("</head>", '<meta name="robots" content="noindex" /></head>');
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
 });
 
