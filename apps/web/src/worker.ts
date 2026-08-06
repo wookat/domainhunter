@@ -39,6 +39,27 @@ async function bumpStats(kv: KVNamespace | undefined, n: number): Promise<void> 
   } catch { /* 计数失败不影响主流程 */ }
 }
 
+/** 每日聚合使用统计（仅聚合计数，不存任何用户输入/IP；KV 非原子，允许少量误差） */
+interface DayUsage {
+  searches: number;
+  byTld: Record<string, number>;
+  fast: number;
+  refine: number;
+}
+
+async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: boolean, refine: boolean): Promise<void> {
+  if (!kv) return;
+  try {
+    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
+    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
+    cur.searches += 1;
+    if (fast) cur.fast += 1;
+    if (refine) cur.refine += 1;
+    for (const t of tlds) cur.byTld[t] = (cur.byTld[t] ?? 0) + 1;
+    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
+  } catch { /* 统计失败不影响主流程 */ }
+}
+
 /** 按 IP 简单限流（KV 计数，按小时桶）；无 KV 绑定时不限流 */
 async function checkRateLimit(kv: KVNamespace | undefined, ip: string): Promise<boolean> {
   if (!kv) return true;
@@ -153,6 +174,8 @@ app.post("/api/ai-search", async (c) => {
   if (!(await checkRateLimit(c.env.CACHE, ip))) {
     return c.json({ error: "rate_limited", message: `今天猎得有点勤快了：每小时最多 ${RATE_LIMIT_PER_HOUR} 次 AI 猎名，休息一会儿再来吧` }, 429);
   }
+
+  c.executionCtx.waitUntil(bumpUsage(c.env.CACHE, tlds, fast, (body.excludeLabels ?? []).length > 0));
 
   const apiKey = c.env.DEEPSEEK_API_KEY;
   const { readable, writable } = new TransformStream();
@@ -466,6 +489,25 @@ app.get("/api/stats", async (c) => {
     totalChecked = Number((await c.env.CACHE?.get(STATS_KEY)) ?? "0");
   } catch { /* KV 不可用时返回 0 */ }
   return c.json({ totalChecked }, 200, { "cache-control": "public, max-age=60" });
+});
+
+// 运营数据：最近 N 天的聚合使用量（仅计数，无任何用户输入/IP）
+app.get("/api/usage", async (c) => {
+  const days = Math.min(Math.max(Number(c.req.query("days") ?? "14"), 1), 45);
+  const kv = c.env.CACHE;
+  const out: Record<string, DayUsage> = {};
+  if (kv) {
+    const dates = Array.from({ length: days }, (_, i) => new Date(Date.now() - i * 86400_000).toISOString().slice(0, 10));
+    await Promise.all(
+      dates.map(async (d) => {
+        try {
+          const u = await kv.get<DayUsage>(`usage:${d}`, "json");
+          if (u) out[d] = u;
+        } catch { /* 单天读失败忽略 */ }
+      }),
+    );
+  }
+  return c.json({ days: out }, 200, { "cache-control": "public, max-age=300" });
 });
 
 // SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）
