@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { ArrowRight, Brain, ChevronDown, Plus, Ruler, ShieldCheck, Sparkles, Wand2, Zap } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowRight, Brain, ChevronDown, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Wand2, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useI18n, type I18nKey } from "@/lib/i18n";
@@ -9,6 +9,16 @@ const EXAMPLES = ["独立开发者的 AI 周报工具", "宠物营养订阅电�
 const EXAMPLES_EN = ["AI weekly-report tool for indie devs", "Pet nutrition subscription store", "Minimal meditation app", "Cross-border SaaS dashboard"];
 const PRESET_TLDS = ["com", "cn", "io", "ai", "app", "dev"];
 const MAX_LEN = 500;
+const LABEL_RE = /^[a-z0-9][a-z0-9-]{0,62}$/i;
+const EXACT_DOMAIN_RE = /^([a-z0-9][a-z0-9-]{0,62})\.([a-z0-9-]{2,24})$/i;
+
+/** 输入看起来已经是现成名字/域名时，提供免 AI 额度的直接核验 */
+function parseQuickCheck(input: string): { label: string; tld?: string } | null {
+  const d = input.trim().toLowerCase();
+  if (LABEL_RE.test(d)) return { label: d };
+  const m = EXACT_DOMAIN_RE.exec(d);
+  return m ? { label: m[1], tld: m[2] } : null;
+}
 
 // 行业模板：寓意 + 气质 + 场景 三段式描述，点击填入输入框，用户可再编辑；slug 对应 /guide/:slug 与 /?tpl= 预填入口
 const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; en: string }[] = [
@@ -168,6 +178,58 @@ export function HomePage({ initial, onSubmit, onBackToResults }: { initial: Home
 
   const canRun = description.trim().length > 0 && tlds.length > 0;
 
+  const quick = parseQuickCheck(description);
+  const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown" }[]>([]);
+  const [quickRunning, setQuickRunning] = useState(false);
+  const quickAbortRef = useRef<AbortController | null>(null);
+
+  useEffect(() => {
+    // 输入变化后清空上次快速核验结果
+    quickAbortRef.current?.abort();
+    setQuickRows([]);
+    setQuickRunning(false);
+  }, [description]);
+
+  async function runQuickCheck() {
+    if (!quick) return;
+    const checkTlds = quick.tld ? [quick.tld, ...tlds.filter((t) => t !== quick.tld)] : tlds;
+    if (checkTlds.length === 0) return;
+    quickAbortRef.current?.abort();
+    const ac = new AbortController();
+    quickAbortRef.current = ac;
+    setQuickRows(checkTlds.map((t) => ({ domain: `${quick.label}.${t}`, status: "checking" as const })));
+    setQuickRunning(true);
+    try {
+      const res = await fetch("/api/search", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ roots: [quick.label], tlds: checkTlds }),
+        signal: ac.signal,
+      });
+      if (!res.ok || !res.body) return;
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buf = "";
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buf += decoder.decode(value, { stream: true });
+        const lines = buf.split("\n");
+        buf = lines.pop()!;
+        for (const line of lines) {
+          if (!line) continue;
+          const r = JSON.parse(line) as { domain?: string; status?: "available" | "taken" | "unknown"; type?: string };
+          if (r.type || !r.domain || !r.status) continue;
+          setQuickRows((prev) => prev.map((row) => (row.domain === r.domain ? { ...row, status: r.status! } : row)));
+        }
+      }
+    } catch {
+      /* 中断/网络错误：保留已有结果 */
+    } finally {
+      if (!ac.signal.aborted) setQuickRunning(false);
+    }
+  }
+
   const submit = (desc = description) => {
     if (!desc.trim() || tlds.length === 0) return;
     onSubmit({
@@ -273,6 +335,42 @@ export function HomePage({ initial, onSubmit, onBackToResults }: { initial: Home
             </button>
           </div>
         </div>
+
+        {/* 输入像现成名字/域名：提供免 AI 额度的直接核验 */}
+        {quick && (
+          <div className="mt-3 rounded-xl border border-line bg-bg1 px-4 py-3">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs text-txt1">{t("home.quickCheckHint")}</span>
+              <button
+                onClick={() => void runQuickCheck()}
+                disabled={quickRunning}
+                className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-brand-line bg-brand-dim px-3 text-xs font-semibold text-brand transition-opacity hover:opacity-90 disabled:opacity-50 sm:h-8"
+              >
+                {quickRunning ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <SearchCheck className="h-3.5 w-3.5" />}
+                {t("home.quickCheckBtn", { label: quick.label })}
+              </button>
+            </div>
+            {quickRows.length > 0 && (
+              <div className="mt-2.5 flex flex-wrap gap-2">
+                {quickRows.map((row) => (
+                  <span
+                    key={row.domain}
+                    className={cn(
+                      "inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 font-mono text-xs",
+                      row.status === "available" && "border-brand-line bg-brand-dim text-brand",
+                      row.status === "taken" && "border-line text-txt2 line-through",
+                      row.status === "unknown" && "border-line text-txt1",
+                      row.status === "checking" && "border-line text-txt2",
+                    )}
+                  >
+                    {row.domain}
+                    <i className="not-italic font-sans text-[10px]">{t(`status.${row.status}` as I18nKey)}</i>
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* 行业模板 chips：点击填入描述模板，用户可再编辑后搜索 */}
         <div className="mt-4">
