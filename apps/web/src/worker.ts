@@ -703,6 +703,34 @@ function hreflangTags(path: string): string {
 const injectHreflang = (html: string, path: string) =>
   html.replace(/(<link rel="canonical"[^>]*\/>)/, `$1\n    ${hreflangTags(path)}`);
 
+/** Vite manifest（构建产物 hashed 文件名映射），模块级缓存 */
+type ViteManifestChunk = { file: string; imports?: string[] };
+let viteManifest: Record<string, ViteManifestChunk> | null = null;
+
+/** SEO 页 SSR 注入懒加载路由 chunk 的 modulepreload，让页面 JS 与主 bundle 并行下载（降低内容 LCP） */
+async function injectModulepreload(html: string, assets: Fetcher, origin: string, entry: string): Promise<string> {
+  try {
+    if (!viteManifest) {
+      const res = await assets.fetch(new Request(new URL("/manifest.json", origin)));
+      if (!res.ok) return html;
+      viteManifest = (await res.json()) as Record<string, ViteManifestChunk>;
+    }
+    const files: string[] = [];
+    const walk = (key: string) => {
+      const chunk = viteManifest?.[key];
+      if (!chunk || key === "index.html" || files.includes(chunk.file)) return;
+      files.push(chunk.file);
+      for (const dep of chunk.imports ?? []) walk(dep);
+    };
+    walk(entry);
+    if (files.length === 0) return html;
+    const links = files.map((f) => `<link rel="modulepreload" href="/${f}" />`).join("\n    ");
+    return html.replace("</head>", `${links}\n  </head>`);
+  } catch {
+    return html;
+  }
+}
+
 /** 未知 slug 的 SEO 路由：返回应用壳 + 404 状态 + noindex，避免软 404 被收录 */
 async function notFoundShell(res: Response): Promise<Response> {
   const html = (await res.text()).replace("</head>", `<meta name="robots" content="noindex" /></head>`);
@@ -733,6 +761,20 @@ const breadcrumbJsonld = (name: string, path: string, lang: "zh" | "en") =>
       { "@type": "ListItem", position: 1, name: lang === "en" ? "Home" : "首页", item: SITE_ORIGIN },
       { "@type": "ListItem", position: 2, name, item: `${SITE_ORIGIN}${path}` },
     ],
+  });
+
+/** Article 结构化数据：指南/对比类内容页的富摘要资格（headline/description/inLanguage/image） */
+const articleJsonld = (title: string, description: string, path: string, lang: "zh" | "en", image: string) =>
+  JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    inLanguage: lang === "en" ? "en" : "zh-CN",
+    image: `${SITE_ORIGIN}${image}`,
+    mainEntityOfPage: `${SITE_ORIGIN}${path}`,
+    author: { "@type": "Organization", name: "DomainHunter", url: SITE_ORIGIN },
+    publisher: { "@type": "Organization", name: "DomainHunter", url: SITE_ORIGIN },
   });
 
 // SEO 页动态分享图：/api/og/tld/:tld 与 /api/og/guide/:slug（lang 参数控制语言）
@@ -797,6 +839,7 @@ app.get("/tld/:tld", async (c) => {
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/tld/${tld}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
   html = injectHreflang(html, `/tld/${tld}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang)}</script></head>`);
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/tld-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -824,7 +867,11 @@ app.get("/guide/:slug", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/guide/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, `/guide/${slug}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script></head>`);
+  html = injectHreflang(html, `/guide/${slug}`).replace(
+    "</head>",
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script></head>`,
+  );
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/guide-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -852,7 +899,11 @@ app.get("/vs/:slug", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/vs/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, `/vs/${slug}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang)}</script></head>`);
+  html = injectHreflang(html, `/vs/${slug}`).replace(
+    "</head>",
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script></head>`,
+  );
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/compare-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -889,6 +940,7 @@ app.get("/prices", async (c) => {
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/prices?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
   html = injectHreflang(html, "/prices").replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/prices", lang)}</script></head>`);
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/prices-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
