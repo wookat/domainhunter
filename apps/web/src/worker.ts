@@ -963,6 +963,9 @@ app.get("/prices", async (c) => {
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
+// 内容最后更新日期（sitemap <lastmod>）：每次内容页增减/改写时更新
+const CONTENT_LASTMOD = "2026-08-06";
+
 const sitemapPaths = () => ["/", "/prices", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
 
 app.get("/sitemap.xml", (c) => {
@@ -974,7 +977,7 @@ app.get("/sitemap.xml", (c) => {
       `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_ORIGIN}${p}" />`,
     ].join("\n");
   const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${paths
-    .map((p) => `  <url>\n    <loc>${SITE_ORIGIN}${p}</loc>\n${alt(p)}\n  </url>`)
+    .map((p) => `  <url>\n    <loc>${SITE_ORIGIN}${p}</loc>\n    <lastmod>${CONTENT_LASTMOD}</lastmod>\n${alt(p)}\n  </url>`)
     .join("\n")}\n</urlset>\n`;
   return new Response(body, { headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=86400" } });
 });
@@ -1005,7 +1008,25 @@ app.get("/llms.txt", (c) => {
 });
 
 app.get("/robots.txt", (c) =>
-  new Response(`User-agent: *\nAllow: /\n\nSitemap: ${SITE_ORIGIN}/sitemap.xml\n`, {
+  new Response(
+    [
+      "User-agent: *",
+      "Allow: /",
+      "",
+      "# AI crawlers welcome \u2014 curated site guide at /llms.txt",
+      "User-agent: GPTBot",
+      "Allow: /",
+      "",
+      "User-agent: PerplexityBot",
+      "Allow: /",
+      "",
+      "User-agent: ClaudeBot",
+      "Allow: /",
+      "",
+      `Sitemap: ${SITE_ORIGIN}/sitemap.xml`,
+      "",
+    ].join("\n"),
+    {
     headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=86400" },
   }));
 
