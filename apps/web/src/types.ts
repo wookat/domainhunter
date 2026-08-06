@@ -95,6 +95,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   store: { first: 15, renew: 380 },
   site: { first: 10, renew: 220 },
   top: { first: 12, renew: 28 },
+  shop: { first: 12, renew: 260 },
+  cloud: { first: 60, renew: 160 },
+  pro: { first: 25, renew: 130 },
+  vip: { first: 40, renew: 60 },
+  club: { first: 40, renew: 120 },
+  link: { first: 70, renew: 80 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {

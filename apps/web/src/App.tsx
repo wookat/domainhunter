@@ -40,6 +40,7 @@ const GuidePage = lazyChunk(() => import("@/components/guide-page"), (m) => m.Gu
 const ComparePage = lazyChunk(() => import("@/components/compare-page"), (m) => m.ComparePage);
 const ShortlistPage = lazyChunk(() => import("@/components/shortlist-page"), (m) => m.ShortlistPage);
 const AdvancedPage = lazyChunk(() => import("@/components/advanced-page"), (m) => m.AdvancedPage);
+const PricesPage = lazyChunk(() => import("@/components/prices-page"), (m) => m.PricesPage);
 
 function PageFallback() {
   return <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-16" />;
@@ -63,6 +64,8 @@ function guideFromPath(): string | null {
   return m ? m[1].toLowerCase() : null;
 }
 
+const pricesFromPath = () => window.location.pathname === "/prices";
+
 function compareFromPath(): string | null {
   const m = window.location.pathname.match(/^\/vs\/([a-z0-9-]{2,48})$/i);
   return m ? m[1].toLowerCase() : null;
@@ -83,7 +86,8 @@ export default function App() {
   const [guideTld] = useState<string | null>(tldFromPath);
   const [guideSlug] = useState<string | null>(guideFromPath);
   const [compareSlug] = useState<string | null>(compareFromPath);
-  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() ? null : loadSearch()));
+  const [isPrices] = useState(pricesFromPath);
+  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() ? null : loadSearch()));
   const [mode, setMode] = useState<Mode>(saved ? "results" : "home");
   const [values, setValues] = useState<HomeValues>(() => saved?.values ?? { description: "", tlds: initialTlds(), style: "", lengthPref: "" });
   const [rows, setRows] = useState<Row[]>(saved?.rows ?? []);
@@ -309,6 +313,21 @@ export default function App() {
     );
   }
 
+  if (isPrices) {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Header
+          onLogoClick={() => window.location.assign("/")}
+          shortlistCount={shortlist.items.length}
+          onShortlistClick={() => window.location.assign("/")}
+        />
+        <Suspense fallback={<PageFallback />}>
+          <PricesPage />
+        </Suspense>
+      </div>
+    );
+  }
+
   if (guideTld) {
     return (
       <div className="flex min-h-screen flex-col">
@@ -478,6 +497,9 @@ export default function App() {
                   .{tld}
                 </a>
               ))}
+              <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/prices?lang=${lang}`}>
+                {t("footer.prices")}
+              </a>
             </div>
           </div>
           {/* 行业命名指南内链：SEO + 用户入口 */}
