@@ -38,7 +38,7 @@ function initialTlds(): string[] {
 }
 
 export default function App() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [shareId] = useState<string | null>(shareIdFromPath);
   const [guideTld] = useState<string | null>(tldFromPath);
   const [mode, setMode] = useState<Mode>("home");
@@ -378,7 +378,7 @@ export default function App() {
             <p className="font-semibold text-txt1">{t("footer.tldGuides")}</p>
             <div className="mt-2.5 flex flex-wrap justify-center gap-x-3 gap-y-1.5">
               {TLD_LIST.map((tld) => (
-                <a key={tld} className="font-mono hover:text-brand hover:underline" href={`/tld/${tld}`}>
+                <a key={tld} className="font-mono hover:text-brand hover:underline" href={`/tld/${tld}?lang=${lang}`}>
                   .{tld}
                 </a>
               ))}

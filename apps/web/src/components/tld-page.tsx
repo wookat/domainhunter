@@ -96,7 +96,7 @@ export function TldPage({ tld }: { tld: string }) {
           {TLD_LIST.map((other) => (
             <a
               key={other}
-              href={`/tld/${other}`}
+              href={`/tld/${other}?lang=${lang}`}
               className={cn(
                 "rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors",
                 other === tld ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand",
