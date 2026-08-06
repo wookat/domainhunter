@@ -745,7 +745,187 @@ export const TLD_GUIDES: Record<string, TldGuide> = {
       ],
     },
   },
+  live: {
+    tld: "live",
+    zh: {
+      title: ".live 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".live 语义即「直播/现场」，适合直播、活动与实时服务。查看 .live 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .live 域名。",
+      intro:
+        ".live 的语义是「正在发生」：直播频道、线上活动、演出与赛事、实时数据看板用它一眼即懂，「名字 + .live」天然带着「点进来看现场」的号召力。主播个人站、播客的直播页、发布会与线上峰会的活动页都非常合适；实时监控、状态页这类「live data」产品用它也很贴切。价格结构是典型的新后缀：首年促销便宜、续费明显上浮，注册前看清续费价。短板：语义强绑定「实时/现场」，做与直播无关的品牌主站会造成预期错位。定位建议：直播与活动场景做主域名，或主站 .com + 直播页同名 .live 的分工组合。",
+      bestFor: ["直播频道与主播个人站", "线上活动与发布会页", "实时数据与状态看板", "主站 .com + 直播页 .live 组合"],
+      namingTips: [
+        "「名字 + .live」自带「看现场」号召力",
+        "活动页可用「活动名 + .live」做短期投放域名",
+        "首年促销便宜但续费上浮，注册前看清续费",
+        "与直播/实时无关的主站不适合",
+      ],
+    },
+    en: {
+      title: ".live Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".live means happening now — built for streaming, events and real-time services. See live pricing and naming advice, then hunt available .live names with AI.",
+      intro:
+        ".live means it's happening now: streaming channels, online events, shows and matches, and real-time dashboards are instantly legible on it — \"name + .live\" carries a built-in 'come watch' call to action. Streamer personal sites, podcast live pages, launch events and online summits all fit naturally, as do live-data products like monitoring and status pages. Pricing follows the classic new-TLD pattern: cheap promo first year, noticeably higher renewals — check the renewal before you register. Trade-off: the semantics are firmly bound to live/real-time, so an unrelated brand's main site will set the wrong expectation. Best fit: streaming and events as the primary domain, or a split setup — main site on .com, live page on the matching .live.",
+      bestFor: ["Streaming channels & creator sites", "Online events & launch pages", "Real-time dashboards & status pages", "Main .com + matching .live combo"],
+      namingTips: [
+        "\"Name + .live\" is a built-in 'come watch' CTA",
+        "Event pages work great as short-run campaign domains",
+        "Cheap year one, higher renewals — check before registering",
+        "Poor fit for brands unrelated to live/real-time",
+      ],
+    },
+  },
+  space: {
+    tld: "space",
+    zh: {
+      title: ".space 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".space 语义开放百搭，适合创意空间、个人站与社区。查看 .space 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .space 域名。",
+      intro:
+        ".space 是语义最开放的新后缀之一：它可以是创作者的「小天地」、团队的协作空间、社区的聚集地，也可以是航天与太空主题的天然归属。「名字 + .space」读起来柔和不商业，很适合个人站、博客、作品集与实验项目；coworking 空间、艺术空间、虚拟社区用它也顺理成章。价格常年低位、库存深，好词命中率高。短板：认知度一般，正式商业主站用它偏轻；和多数新后缀一样首年便宜续费上浮。定位建议：个人与创意项目的主域名、社区与空间类品牌，以及航天/太空主题产品的第一选择。",
+      bestFor: ["个人站与创意实验项目", "协作空间与 coworking 品牌", "虚拟社区与兴趣空间", "航天/太空主题产品"],
+      namingTips: [
+        "「名字 + .space」读感柔和，适合个人小天地",
+        "太空主题产品用 .space 语义天然满分",
+        "价格低库存深，好词命中率高",
+        "正式商业主站偏轻，注意续费上浮",
+      ],
+    },
+    en: {
+      title: ".space Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".space is open-ended and versatile — great for creative spaces, personal sites and communities. See live pricing and naming advice, then hunt available .space names with AI.",
+      intro:
+        ".space is one of the most open-ended new TLDs: it can be a creator's corner, a team's collaborative space, a community's gathering place — or the literal home of an aerospace project. \"Name + .space\" reads soft and non-commercial, which suits personal sites, blogs, portfolios and experiments; coworking brands, art spaces and virtual communities feel equally natural. Prices stay low and inventory runs deep, so good words are very gettable. Trade-offs: recognition is middling, it reads light for a formal business site, and like most new TLDs the renewal is higher than year one. Best fit: primary domains for personal and creative projects, community and space-as-a-place brands, and the obvious first choice for anything space-themed.",
+      bestFor: ["Personal sites & creative experiments", "Coworking & collaborative-space brands", "Virtual communities & interest spaces", "Aerospace / space-themed products"],
+      namingTips: [
+        "\"Name + .space\" reads soft and personal",
+        "Space-themed products get perfect semantics for free",
+        "Low prices, deep inventory — good words are gettable",
+        "Reads light for formal business; watch renewals",
+      ],
+    },
+  },
+  fun: {
+    tld: "fun",
+    zh: {
+      title: ".fun 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".fun 语义即「好玩」，适合游戏、娱乐与活动品牌。查看 .fun 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fun 域名。",
+      intro:
+        ".fun 把「好玩」写进了域名：小游戏与休闲游戏站、娱乐内容、派对与活动策划、玩具与亲子品牌用它一眼即懂，「名字 + .fun」天然传达轻松愉快的预期。相比 .games 的垂直，.fun 更宽泛——凡是想让用户「玩起来」的产品都合适：互动营销页、趣味测试、创意小工具。首年价格常年极低（常见一两美元），库存极好；续费会上浮但幅度在新后缀里不算激进。短板：语义与「正经」相斥，金融、医疗、B2B 场景不合适；太便宜也让它被低质站用得多，品牌要靠内容撑住第一印象。定位建议：游戏与娱乐品牌主域名、活动与营销 campaign 页、趣味副项目。",
+      bestFor: ["小游戏与休闲游戏站", "娱乐内容与趣味测试", "活动策划与派对品牌", "互动营销 campaign 页"],
+      namingTips: [
+        "「名字 + .fun」自带轻松愉快预期",
+        "首年极便宜，适合 campaign 页快速上线",
+        "严肃行业（金融/医疗/B2B）不适合",
+        "低价后缀低质站多，靠内容撑住第一印象",
+      ],
+    },
+    en: {
+      title: ".fun Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".fun literally means fun — built for games, entertainment and event brands. See live pricing and naming advice, then hunt available .fun names with AI.",
+      intro:
+        ".fun writes playfulness into the domain itself: casual game sites, entertainment content, party and event planners, toy and family brands are instantly legible on it — \"name + .fun\" sets a light-hearted expectation before the page even loads. Broader than the vertical .games, it fits anything that wants users to play: interactive marketing pages, quizzes, playful side tools. Year-one pricing is consistently rock-bottom (often a dollar or two) with excellent inventory; renewals rise, but less aggressively than many new TLDs. Trade-offs: the semantics clash with seriousness — skip it for finance, health or B2B — and its cheapness attracts low-quality sites, so your content has to carry the first impression. Best fit: game and entertainment brand domains, campaign and event pages, playful side projects.",
+      bestFor: ["Casual game & entertainment sites", "Quizzes & playful content", "Party & event planner brands", "Interactive marketing campaigns"],
+      namingTips: [
+        "\"Name + .fun\" sets a playful expectation instantly",
+        "Rock-bottom year one — great for fast campaign launches",
+        "Skip for serious verticals (finance, health, B2B)",
+        "Cheap TLDs attract junk — let content carry trust",
+      ],
+    },
+  },
+  art: {
+    tld: "art",
+    zh: {
+      title: ".art 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".art 是艺术领域的专属后缀，适合艺术家、画廊与创意机构。查看 .art 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .art 域名。",
+      intro:
+        ".art 是为艺术圈量身定制的后缀：艺术家个人站与作品集、画廊与美术馆、艺术展览与博览会、设计与创意机构用它，身份一眼可辨。「名字 + .art」本身就像一张名片——比 .com 更能说明「我是做艺术的」。注册局也长期面向艺术社区运营，圈内认可度在垂直后缀里属于较高的一档。价格中等、续费稳定，好名字库存仍然充足：常见艺术家人名、风格词、媒介词多数可注册。短板：语义垂直，非艺术类品牌不适合；面向大众售卖的电商场景（卖画、卖周边）可以搭配 .shop/.store 分工。定位建议：艺术家与创意人的个人品牌主域名、画廊与机构官网、展览项目页。",
+      bestFor: ["艺术家个人站与作品集", "画廊、美术馆与艺术机构", "展览与艺术项目页", "设计与创意工作者品牌"],
+      namingTips: [
+        "「人名 + .art」是艺术家最直接的个人品牌",
+        "风格词、媒介词（oil、ink、pixel 类）库存充足",
+        "机构官网用全名，展览项目可用短代号",
+        "卖作品的电商页可搭配 .shop/.store 分工",
+      ],
+    },
+    en: {
+      title: ".art Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".art is the dedicated suffix for the art world — artists, galleries and creative institutions. See live pricing and naming advice, then hunt available .art names with AI.",
+      intro:
+        ".art is purpose-built for the art world: artist portfolios, galleries and museums, exhibitions and fairs, design and creative studios are instantly identifiable on it. \"Name + .art\" works like a business card — it says 'I make art' in a way .com never can. The registry has courted the art community for years, giving it above-average credibility among vertical TLDs. Pricing is moderate with stable renewals, and inventory remains generous: artist names, style words and medium words are mostly still available. Trade-offs: the semantics are vertical, so non-art brands don't fit; for selling work directly, pair it with .shop/.store for the commerce side. Best fit: primary domains for artists and creatives, gallery and institution sites, exhibition project pages.",
+      bestFor: ["Artist portfolios & personal sites", "Galleries, museums & institutions", "Exhibitions & art projects", "Design & creative studio brands"],
+      namingTips: [
+        "\"Yourname + .art\" is the most direct artist brand",
+        "Style and medium words (oil, ink, pixel) are still gettable",
+        "Full names for institutions, short codes for exhibitions",
+        "Pair with .shop/.store when selling work directly",
+      ],
+    },
+  },
+  design: {
+    tld: "design",
+    zh: {
+      title: ".design 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".design 是设计师与设计团队的身份后缀。查看 .design 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .design 域名。",
+      intro:
+        ".design 把职业身份直接写进域名：设计师作品集、设计工作室、设计系统文档、设计资源站用它，专业度不言自明。「名字 + .design」在简历、名片和邮件签名里的辨识度远超普通后缀，国外设计圈（尤其 UI/UX 与品牌设计）使用率很高，不少知名团队的设计子站就在 .design 下。价格偏高（垂直后缀定价），但续费相对稳定，且好名字库存充足——常见人名与风格词大多可注册。短板：7 个字母偏长，口头传播稍逊；语义垂直，非设计类品牌不适合。定位建议：设计师个人品牌、工作室官网，以及产品公司的设计团队子站（主站 .com + design 子站同名 .design）。",
+      bestFor: ["设计师作品集与个人品牌", "设计工作室与咨询", "设计系统与文档站", "产品公司的设计子站"],
+      namingTips: [
+        "「人名 + .design」是设计师简历级域名",
+        "公司设计子站可用「品牌 + .design」分工",
+        "7 字母偏长，前面的名字尽量短",
+        "价格偏高但续费稳定，库存充足",
+      ],
+    },
+    en: {
+      title: ".design Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".design puts the profession in the domain — for designers, studios and design teams. See live pricing and naming advice, then hunt available .design names with AI.",
+      intro:
+        ".design writes the profession into the domain itself: designer portfolios, studios, design-system docs and resource sites read as instantly professional. \"Name + .design\" stands out on resumes, business cards and email signatures far more than a generic suffix, and adoption in the design community — especially UI/UX and brand design — is genuinely high, with well-known companies hosting design team sites on it. Pricing sits at the premium end of vertical TLDs, but renewals are comparatively stable and inventory is strong — most personal names and style words are still available. Trade-offs: seven letters is on the long side for word-of-mouth, and the vertical semantics rule out non-design brands. Best fit: designer personal brands, studio sites, and a product company's design subdomain-style site (main on .com, design team on the matching .design).",
+      bestFor: ["Designer portfolios & personal brands", "Design studios & consultancies", "Design systems & documentation", "Company design-team sites"],
+      namingTips: [
+        "\"Yourname + .design\" is a resume-grade domain",
+        "\"Brand + .design\" works for company design teams",
+        "Seven letters — keep the name before it short",
+        "Premium pricing but stable renewals, good inventory",
+      ],
+    },
+  },
+  studio: {
+    tld: "studio",
+    zh: {
+      title: ".studio 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".studio 是创意工作室的天然后缀，适合设计、影像、游戏与内容团队。查看 .studio 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .studio 域名。",
+      intro:
+        ".studio 的语义是「工作室」：设计工作室、影像与摄影团队、游戏与动画工作室、播客与内容制作方用它，团队属性一眼可辨。「名字 + .studio」比 .com 更能传达「小而专的创作团队」气质，也天然区别于大公司的企业感。独立开发者组的小团队、两三人的创意小组用它尤其合适。价格中等、库存充足，常见的风格词、动物词、地名组合大多可注册。短板：6 个字母不短，且语义绑定「工作室」形态——个人单干或大型企业主站都不太贴。定位建议：创意与内容团队的主域名，或个人品牌升级为团队时从 .me/.design 迁移的自然去处。",
+      bestFor: ["设计与创意工作室", "影像、摄影与动画团队", "游戏与独立开发小团队", "播客与内容制作方"],
+      namingTips: [
+        "「名字 + .studio」自带小而专的团队气质",
+        "风格词、动物词组合库存充足",
+        "个人单干用 .me/.design 更贴，团队再迁 .studio",
+        "6 字母不短，前面的名字尽量短",
+      ],
+    },
+    en: {
+      title: ".studio Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".studio is the natural suffix for creative studios — design, film, games and content teams. See live pricing and naming advice, then hunt available .studio names with AI.",
+      intro:
+        ".studio says exactly what you are: design studios, film and photo teams, game and animation shops, podcast and content producers are instantly legible on it. \"Name + .studio\" conveys a small, focused creative team in a way .com's corporate neutrality can't, which is why it fits indie dev groups and two-to-three-person creative crews so well. Pricing is moderate and inventory is deep — style words, animal words and place-name combos are mostly available. Trade-offs: six letters isn't short, and the semantics are bound to the studio shape — a solo personal site or a large enterprise's main domain both fit awkwardly. Best fit: the primary domain for creative and content teams, and the natural upgrade path when a personal brand on .me/.design grows into a team.",
+      bestFor: ["Design & creative studios", "Film, photo & animation teams", "Game & indie dev teams", "Podcast & content producers"],
+      namingTips: [
+        "\"Name + .studio\" signals a small, focused team",
+        "Style and animal-word combos have deep inventory",
+        "Solo? Start on .me/.design, move here as a team",
+        "Six letters — keep the name before it short",
+      ],
+    },
+  },
 };
 
-/** 24 个指南页 TLD 列表（顺序即导航展示顺序） */
+/** 30 个指南页 TLD 列表（顺序即导航展示顺序） */
 export const TLD_LIST = Object.keys(TLD_GUIDES);
