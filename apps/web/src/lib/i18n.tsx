@@ -64,6 +64,7 @@ const zh = {
   "home.len.mid": "9–12 字符",
   "home.len.long": "> 12 字符",
   "home.templates": "不知道怎么描述？点个行业模板填入，再改成你的：",
+  "home.backToResults": "回到上次结果",
   // Agent 生成中
   "agent.params": "需求与参数",
   "agent.understanding": "AI 理解的需求",
@@ -255,6 +256,7 @@ const en: Record<I18nKey, string> = {
   "home.len.mid": "9–12 chars",
   "home.len.long": "> 12 chars",
   "home.templates": "Not sure what to write? Pick an industry template and make it yours:",
+  "home.backToResults": "Back to last results",
   "agent.params": "Brief & parameters",
   "agent.understanding": "AI's understanding",
   "agent.edit": "Edit",

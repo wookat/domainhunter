@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, SlidersHorizontal } from "lucide-react";
 
 import { Header } from "@/components/header";
@@ -11,6 +11,7 @@ import { ShortlistPage } from "@/components/shortlist-page";
 import { AdvancedPage } from "@/components/advanced-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
 import { isMockEnabled, runMockStream } from "@/mock";
+import { loadSearch, saveSearch } from "@/lib/persist";
 import { TLD_LIST } from "@/content/tlds";
 import { useI18n } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
@@ -41,20 +42,21 @@ export default function App() {
   const { t, lang } = useI18n();
   const [shareId] = useState<string | null>(shareIdFromPath);
   const [guideTld] = useState<string | null>(tldFromPath);
-  const [mode, setMode] = useState<Mode>("home");
-  const [values, setValues] = useState<HomeValues>(() => ({ description: "", tlds: initialTlds(), style: "", lengthPref: "" }));
-  const [rows, setRows] = useState<Row[]>([]);
-  const [rounds, setRounds] = useState<RoundInfo[]>([]);
+  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() ? null : loadSearch()));
+  const [mode, setMode] = useState<Mode>(saved ? "results" : "home");
+  const [values, setValues] = useState<HomeValues>(() => saved?.values ?? { description: "", tlds: initialTlds(), style: "", lengthPref: "" });
+  const [rows, setRows] = useState<Row[]>(saved?.rows ?? []);
+  const [rounds, setRounds] = useState<RoundInfo[]>(saved?.rounds ?? []);
   const [currentRound, setCurrentRound] = useState(0);
   const [running, setRunning] = useState(false);
   const [error, setError] = useState("");
   const [logs, setLogs] = useState<LogEntry[]>([]);
-  const [elapsedSec, setElapsedSec] = useState<number | undefined>(undefined);
-  const [locked, setLocked] = useState<Set<string>>(new Set());
-  const [aiUnderstanding, setAiUnderstanding] = useState<Understanding | null>(null);
-  const [refinements, setRefinements] = useState<string[]>([]);
+  const [elapsedSec, setElapsedSec] = useState<number | undefined>(saved?.elapsedSec);
+  const [locked, setLocked] = useState<Set<string>>(() => new Set(saved?.locked ?? []));
+  const [aiUnderstanding, setAiUnderstanding] = useState<Understanding | null>(saved?.aiUnderstanding ?? null);
+  const [refinements, setRefinements] = useState<string[]>(saved?.refinements ?? []);
   const abortRef = useRef<AbortController | null>(null);
-  const triedLabelsRef = useRef<string[]>([]);
+  const triedLabelsRef = useRef<string[]>(saved?.triedLabels ?? []);
   const roundOffsetRef = useRef(0);
   const startedAtRef = useRef(0);
   const shortlist = useShortlist();
@@ -75,6 +77,12 @@ export default function App() {
     });
 
   const availableCount = rows.filter((r) => r.status === "available").length;
+
+  useEffect(() => {
+    if (!running && mode === "results" && rows.length > 0) {
+      saveSearch({ values, rows, rounds, elapsedSec, aiUnderstanding, refinements, triedLabels: triedLabelsRef.current, locked: [...locked] });
+    }
+  }, [running, mode, rows, rounds, values, elapsedSec, aiUnderstanding, refinements, locked]);
 
   function handleEvent(ev: StreamEvent) {
     const round = (ev.round ?? 0) + roundOffsetRef.current;
@@ -317,6 +325,7 @@ export default function App() {
             setValues(v);
             void run(v);
           }}
+          onBackToResults={rows.length > 0 ? () => setMode("results") : undefined}
         />
       )}
       {mode === "agent" && (
