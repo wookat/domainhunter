@@ -167,6 +167,9 @@ function ChipPrice({ domain }: { domain: string }) {
 /** 快速核验在所选 TLD 之外额外覆盖的主流后缀（显式 TLD 与所选优先，总数封顶 10） */
 const QUICK_EXTRA_TLDS = ["com", "io", "ai", "app", "dev", "co", "net", "me"];
 
+/** 「查更多后缀」按钮覆盖的第二批后缀（同样走 /api/search，0 AI 额度） */
+const QUICK_MORE_TLDS = ["org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top"];
+
 /** 快速核验的可注册 chip 也可收藏到候选清单 */
 function domainToRow(domain: string): Row {
   const dot = domain.indexOf(".");
@@ -221,6 +224,7 @@ export function HomePage({
   const quick = parseQuickCheck(description);
   const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown" }[]>([]);
   const [quickRunning, setQuickRunning] = useState(false);
+  const [quickMoreDone, setQuickMoreDone] = useState(false);
   const quickAbortRef = useRef<AbortController | null>(null);
 
   // 变体建议：心仪名字被注册时，用前后缀组合免费核验一批变体（同样不消耗 AI 次数）
@@ -238,6 +242,7 @@ export function HomePage({
     variantAbortRef.current?.abort();
     setQuickRows([]);
     setQuickRunning(false);
+    setQuickMoreDone(false);
     setVariantRows([]);
     setVariantChecked(0);
     setVariantTotal(0);
@@ -248,14 +253,22 @@ export function HomePage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [description]);
 
-  async function runQuickCheck() {
+  async function runQuickCheck(more = false) {
     if (!quick) return;
-    const checkTlds = [...new Set([...(quick.tld ? [quick.tld] : []), ...tlds, ...QUICK_EXTRA_TLDS])].slice(0, 10);
+    const baseTlds = [...new Set([...(quick.tld ? [quick.tld] : []), ...tlds, ...QUICK_EXTRA_TLDS])].slice(0, 10);
+    const checkTlds = more ? QUICK_MORE_TLDS.filter((t) => !baseTlds.includes(t)) : baseTlds;
     if (checkTlds.length === 0) return;
     quickAbortRef.current?.abort();
     const ac = new AbortController();
     quickAbortRef.current = ac;
-    setQuickRows(checkTlds.map((t) => ({ domain: `${quick.label}.${t}`, status: "checking" as const })));
+    const newRows = checkTlds.map((t) => ({ domain: `${quick.label}.${t}`, status: "checking" as const }));
+    if (more) {
+      setQuickMoreDone(true);
+      setQuickRows((prev) => [...prev, ...newRows]);
+    } else {
+      setQuickMoreDone(false);
+      setQuickRows(newRows);
+    }
     setQuickRunning(true);
     try {
       const res = await fetch("/api/search", {
@@ -492,6 +505,15 @@ export function HomePage({
                       <i className="not-italic font-sans text-[10px]">{t(`status.${row.status}` as I18nKey)}</i>
                     </span>
                   ),
+                )}
+                {!quickRunning && !quickMoreDone && (
+                  <button
+                    onClick={() => void runQuickCheck(true)}
+                    className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-dashed border-line px-2.5 py-1.5 font-mono text-xs text-txt2 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0"
+                  >
+                    <Plus className="h-3 w-3" />
+                    {t("home.quickMoreBtn", { n: QUICK_MORE_TLDS.filter((x) => !quickRows.some((r) => r.domain === `${quick.label}.${x}`)).length })}
+                  </button>
                 )}
               </div>
             )}

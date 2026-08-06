@@ -79,6 +79,7 @@ const TLD_PRICES: Record<string, TldPrice> = {
   com: { first: 69, renew: 85 },
   net: { first: 79, renew: 99 },
   org: { first: 79, renew: 99 },
+  info: { first: 28, renew: 130 },
   io: { first: 259, renew: 419 },
   ai: { first: 499, renew: 620 },
   cn: { first: 29, renew: 39 },
