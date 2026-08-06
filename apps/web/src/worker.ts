@@ -979,6 +979,31 @@ app.get("/sitemap.xml", (c) => {
   return new Response(body, { headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=86400" } });
 });
 
+// llms.txt：面向 AI 搜索/回答引擎（ChatGPT、Perplexity 等）的站点导览（https://llmstxt.org 约定）
+app.get("/llms.txt", (c) => {
+  const line = (p: string, title: string) => `- [${title}](${SITE_ORIGIN}${p})`;
+  const body = [
+    "# DomainHunter",
+    "",
+    "> Free, open-source AI domain name hunter: describe your idea in natural language, the AI agent brainstorms names in rounds, verifies availability live via RDAP/DNS/WHOIS, and only surfaces domains you can actually register. Bilingual (English/Chinese), no login required.",
+    "",
+    "## Core pages",
+    line("/", "AI domain search (homepage, instant availability quick-check included)"),
+    line("/prices", "Domain price overview: registration vs renewal for 30 TLDs, live prices"),
+    "",
+    "## TLD guides",
+    ...TLD_LIST.map((t) => line(`/tld/${t}`, TLD_GUIDES[t].en.title)),
+    "",
+    "## Industry naming guides",
+    ...GUIDE_LIST.map((s) => line(`/guide/${s}`, INDUSTRY_GUIDES[s].en.title)),
+    "",
+    "## TLD comparisons",
+    ...COMPARE_LIST.map((s) => line(`/vs/${s}`, TLD_COMPARES[s].en.title)),
+    "",
+  ].join("\n");
+  return new Response(body, { headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=86400" } });
+});
+
 app.get("/robots.txt", (c) =>
   new Response(`User-agent: *\nAllow: /\n\nSitemap: ${SITE_ORIGIN}/sitemap.xml\n`, {
     headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=86400" },
