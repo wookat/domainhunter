@@ -173,6 +173,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一份每周精选科技与商业洞察的 newsletter，寓意「每周一杯高浓度的认知咖啡」；气质要聪明、有节奏感、在收件箱里一眼想点开；场景是读者向同事转发时名字自带推荐语。",
     en: "A weekly newsletter of tech and business insight. The name should feel like a weekly shot of concentrated thinking; the vibe is smart, rhythmic, instantly clickable in an inbox; when a reader forwards it, the name itself is the endorsement.",
   },
+  {
+    slug: "music",
+    labelZh: "音乐人",
+    labelEn: "Music & labels",
+    zh: "一个独立音乐厂牌与音乐人主页，寓意「把耳朵里的世界做成据点」；气质要有态度、耐听、带一点地下感；场景是歌单封面、演出海报和乐迷口口相传里都一次记住。",
+    en: "An indie music label and artist hub. The name should feel like turning the world in your ears into home turf; the vibe is opinionated, listenable, a little underground; it must stick on playlist covers, gig posters, and in word of mouth on the first hearing.",
+  },
+  {
+    slug: "beauty",
+    labelZh: "美妆个护",
+    labelEn: "Beauty brand",
+    zh: "一个主打温和护肤的美妆个护品牌，寓意「善待皮肤，也善待每一天的自己」；气质要干净、有质感、值得信赖；场景是印在瓶身和出现在小红书笔记标题里都好看好记。",
+    en: "A gentle-skincare beauty brand. The name should say be kind to your skin and to yourself; the vibe is clean, textured, trustworthy; it has to look beautiful printed on a bottle and read well in a social caption.",
+  },
+  {
+    slug: "nonprofit",
+    labelZh: "公益组织",
+    labelEn: "Nonprofit",
+    zh: "一个乡村儿童阅读公益项目，寓意「一本书就是一扇窗」；气质要真诚、透明、有行动感；场景是出现在捐赠页和媒体报道里，让人第一眼就相信钱会花在孩子身上。",
+    en: "A nonprofit bringing books to rural children. The name should say every book is a window; the vibe is sincere, transparent, action-driven; on a donation page or in press coverage it must make people trust where the money goes at first glance.",
+  },
+  {
+    slug: "parenting",
+    labelZh: "母婴亲子",
+    labelEn: "Baby & parenting",
+    zh: "一个新生代母婴用品品牌，寓意「陪孩子慢慢长大，也让父母安心」；气质要柔软、安全、有一点点童趣；场景是印在包装盒上让家长放心，说出口让孩子觉得亲切。",
+    en: "A modern baby and parenting brand. The name should feel like growing up slowly together while parents rest easy; the vibe is soft, safe, gently playful; it must reassure parents on a package and sound friendly to a child's ear.",
+  },
+  {
+    slug: "hardware",
+    labelZh: "智能硬件",
+    labelEn: "Hardware",
+    zh: "一款面向创造者的智能硬件产品，寓意「把想法握在手里」；气质要精密、克制、有工业美感；场景是刻在铝合金机身上、印在包装盒上和出现在众筹页标题里都成立。",
+    en: "A smart hardware product for makers. The name should feel like holding an idea in your hand; the vibe is precise, restrained, industrially beautiful; it must work engraved on an aluminum body, printed on a box, and in a crowdfunding headline.",
+  },
+  {
+    slug: "security",
+    labelZh: "网络安全",
+    labelEn: "Cybersecurity",
+    zh: "一家面向中小企业的网络安全服务公司，寓意「有人替你守着门」；气质要可靠、专业、有威慑力但不吓人；场景是出现在企业采购文档和安全报告里都站得住。",
+    en: "A cybersecurity service for small businesses. The name should feel like someone standing guard at your door; the vibe is dependable, professional, deterrent without fear-mongering; it must hold up in procurement documents and security reports.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
