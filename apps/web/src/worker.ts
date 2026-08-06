@@ -5,7 +5,8 @@ import { whoisFallback } from "./whois";
 import { generateAiCandidates, generateUnderstanding } from "./ai";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
-import { TLD_GUIDES, TLD_LIST, USD_TO_CNY } from "./content/tlds";
+import { TLD_GUIDES } from "./content/tlds";
+import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 
 type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace };
 
@@ -774,8 +775,26 @@ const articleJsonld = (title: string, description: string, path: string, lang: "
     image: `${SITE_ORIGIN}${image}`,
     mainEntityOfPage: `${SITE_ORIGIN}${path}`,
     author: { "@type": "Organization", name: "DomainHunter", url: SITE_ORIGIN },
-    publisher: { "@type": "Organization", name: "DomainHunter", url: SITE_ORIGIN },
+    publisher: {
+      "@type": "Organization",
+      name: "DomainHunter",
+      url: SITE_ORIGIN,
+      logo: { "@type": "ImageObject", url: `${SITE_ORIGIN}/logo.png`, width: 512, height: 512 },
+    },
   });
+
+// 首页 WebSite + SearchAction 结构化数据：/?q= 可直接预填搜索，符合 sitelinks searchbox 语义
+const WEBSITE_JSONLD = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "DomainHunter",
+  url: SITE_ORIGIN,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: { "@type": "EntryPoint", urlTemplate: `${SITE_ORIGIN}/?q={search_term_string}` },
+    "query-input": "required name=search_term_string",
+  },
+});
 
 // SEO 页动态分享图：/api/og/tld/:tld 与 /api/og/guide/:slug（lang 参数控制语言）
 app.get("/api/og/tld/:tld", (c) => {
@@ -810,7 +829,7 @@ app.get("/api/og/vs/:slug", (c) => {
 
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
-  const html = injectHreflang(await res.text(), "/").replace("</head>", `<script type="application/ld+json">${FAQ_JSONLD}</script></head>`);
+  const html = injectHreflang(await res.text(), "/").replace("</head>", `<script type="application/ld+json">${FAQ_JSONLD}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
