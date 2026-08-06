@@ -159,6 +159,18 @@ const zh = {
   "results.lockHintShort": "锁定后可定向再猎",
   "results.moreAroundLocked": "围绕锁定再来一轮",
   "results.lockTitle": "锁定：再来一轮时围绕它找",
+  // 价格总览页
+  "prices.kicker": "域名价格",
+  "prices.title": "域名后缀价格总览：18 个主流 TLD 注册与续费对比",
+  "prices.intro": "首年便宜不等于长期便宜——很多后缀续费是首年价的几倍。这里汇总 18 个主流后缀的注册与续费价（Porkbun 实时价优先，无报价时显示 ≈ 静态参考价），点列头可排序，点后缀可看详细指南。",
+  "prices.colTld": "后缀",
+  "prices.colReg": "注册/首年",
+  "prices.colRenew": "续费/年",
+  "prices.hunt": "猎名",
+  "prices.source": "实时价来自 Porkbun，人民币按汇率 7.2 估算；带 ≈ 为静态参考价。不同注册商价格有差异，以注册商页面为准。",
+  "prices.ctaTitle": "不知道选哪个后缀？",
+  "prices.ctaDesc": "说出你想要的寓意与风格，AI 批量构思并实时核验，只给你真正可注册的好名字。",
+  "prices.ctaButton": "开始猎取",
   "results.copyLink": "复制搜索链接",
   "results.linkCopied": "已复制",
   "results.copyLinkTitle": "复制可分享的搜索链接（打开后自动预填描述与 TLD）",
@@ -255,6 +267,7 @@ const zh = {
   "guide.ctaButton": "开始猎取",
   "guide.others": "其他行业命名指南",
   "footer.tldGuides": "TLD 注册指南",
+  "footer.prices": "价格总览",
   "footer.industryGuides": "行业命名指南",
   // 错误
   "error.ai": "AI 服务出错，已停止本轮",
@@ -414,6 +427,17 @@ const en: Record<I18nKey, string> = {
   "results.lockHintShort": "Lock to hunt around it",
   "results.moreAroundLocked": "More around locked",
   "results.lockTitle": "Lock: next round explores around it",
+  "prices.kicker": "Domain Pricing",
+  "prices.title": "TLD Price Overview: Registration vs Renewal for 18 Popular Suffixes",
+  "prices.intro": "A cheap first year doesn't mean cheap forever — many suffixes renew at several times the promo price. This table compares registration and renewal for 18 popular TLDs (live Porkbun prices first, ≈ static reference when unavailable). Click headers to sort, click a suffix for its full guide.",
+  "prices.colTld": "TLD",
+  "prices.colReg": "Register / 1st yr",
+  "prices.colRenew": "Renew / yr",
+  "prices.hunt": "Hunt",
+  "prices.source": "Live prices from Porkbun; CNY estimated at 7.2. ≈ marks static reference prices. Registrar prices vary — confirm on the registrar page.",
+  "prices.ctaTitle": "Not sure which suffix to pick?",
+  "prices.ctaDesc": "Describe the meaning and vibe you want — AI brainstorms in batches and verifies live, showing only names you can actually register.",
+  "prices.ctaButton": "Start hunting",
   "results.copyLink": "Copy search link",
   "results.linkCopied": "Copied",
   "results.copyLinkTitle": "Copy a shareable search link (prefills description and TLDs)",
@@ -505,6 +529,7 @@ const en: Record<I18nKey, string> = {
   "guide.ctaButton": "Start hunting",
   "guide.others": "More industry naming guides",
   "footer.tldGuides": "TLD registration guides",
+  "footer.prices": "Price overview",
   "footer.industryGuides": "Industry naming guides",
   "error.ai": "AI service error — this round was stopped",
   "error.badRequest": "Invalid request — make sure the description isn't empty or over 500 characters",
@@ -562,7 +587,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     } catch { /* ignore */ }
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
     const path = window.location.pathname;
-    if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/")) document.title = dicts[lang]["meta.title"];
+    if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/") && path !== "/prices") document.title = dicts[lang]["meta.title"];
   }, [lang]);
 
   const t = useCallback<TFunc>((key, vars) => interpolate(dicts[lang][key] ?? zh[key], vars), [lang]);
