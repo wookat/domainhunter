@@ -563,6 +563,52 @@ app.get("/api/og/:id", async (c) => {
 
 const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
+/** 标题按宽度折行（中文按 2 单位/字、英文按词），最多两行，超出加省略号 */
+function wrapTitle(s: string, maxUnits: number): string[] {
+  const width = (t: string) => [...t].reduce((n, ch) => n + (ch.charCodeAt(0) > 0x2e7f ? 2 : 1), 0);
+  if (width(s) <= maxUnits) return [s];
+  const words = /\s/.test(s.trim()) ? s.split(/\s+/) : [...s];
+  const sep = /\s/.test(s.trim()) ? " " : "";
+  const lines: string[] = [];
+  let cur = "";
+  for (const w of words) {
+    const next = cur ? cur + sep + w : w;
+    if (width(next) > maxUnits && cur) {
+      lines.push(cur);
+      cur = w;
+      if (lines.length === 2) break;
+    } else cur = next;
+  }
+  if (lines.length < 2 && cur) lines.push(cur);
+  if (lines.length === 2 && width(lines[1]) > maxUnits) {
+    let t = lines[1];
+    while (width(t) > maxUnits - 1) t = [...t].slice(0, -1).join("");
+    lines[1] = t + "…";
+  }
+  return lines.slice(0, 2);
+}
+
+/** SEO 页动态分享图：kicker 徽章 + 折行标题，品牌绿主题（SVG，1200×630） */
+function pageOgSvg(kicker: string, title: string, lang: "zh" | "en"): string {
+  const lines = wrapTitle(title, 38);
+  const rows = lines
+    .map((line, i) => `<text x="80" y="${330 + i * 76}" font-family="'Inter',system-ui,sans-serif" font-size="52" font-weight="800" fill="#f2faf6">${escapeHtml(line)}</text>`)
+    .join("\n  ");
+  const tagline = lang === "en" ? "AI naming · live RDAP+DNS checks · hunt.zalize.com" : "AI 批量构思 · RDAP+DNS 实时核验 · hunt.zalize.com";
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b1610"/>
+  <circle cx="1050" cy="-60" r="420" fill="#3ecf8e" opacity="0.08"/>
+  <circle cx="90" cy="660" r="320" fill="#3ecf8e" opacity="0.06"/>
+  <text x="80" y="110" font-family="'Inter',system-ui,sans-serif" font-size="30" font-weight="800" fill="#3ecf8e">DomainHunter</text>
+  <g>
+    <rect x="80" y="170" width="${64 + [...kicker].reduce((n, ch) => n + (ch.charCodeAt(0) > 0x2e7f ? 34 : 20), 0)}" height="58" rx="14" fill="#12261b" stroke="#1f4630" stroke-width="1.5"/>
+    <text x="112" y="209" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="32" font-weight="700" fill="#3ecf8e">${escapeHtml(kicker)}</text>
+  </g>
+  ${rows}
+  <text x="80" y="570" font-family="'Inter',system-ui,sans-serif" font-size="26" fill="#69a884">${tagline}</text>
+</svg>`;
+}
+
 /** hreflang alternate 标签：zh-CN / en / x-default，用 ?lang= 区分语言版本 */
 function hreflangTags(path: string): string {
   const base = `${SITE_ORIGIN}${path}`;
@@ -602,6 +648,27 @@ const breadcrumbJsonld = (name: string, path: string, lang: "zh" | "en") =>
     ],
   });
 
+// SEO 页动态分享图：/api/og/tld/:tld 与 /api/og/guide/:slug（lang 参数控制语言）
+app.get("/api/og/tld/:tld", (c) => {
+  const tld = c.req.param("tld").toLowerCase();
+  const guide = TLD_GUIDES[tld];
+  if (!guide) return c.notFound();
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  return new Response(pageOgSvg(`.${tld}`, guide[lang].title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
+app.get("/api/og/guide/:slug", (c) => {
+  const slug = c.req.param("slug").toLowerCase();
+  const guide = INDUSTRY_GUIDES[slug];
+  if (!guide) return c.notFound();
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  return new Response(pageOgSvg(guide[lang].label, guide[lang].title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
   const html = injectHreflang(await res.text(), "/").replace("</head>", `<script type="application/ld+json">${FAQ_JSONLD}</script></head>`);
@@ -627,7 +694,11 @@ app.get("/tld/:tld", async (c) => {
     .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
     .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/tld/${tld}" />`)
-    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/tld/${tld}" />`);
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/tld/${tld}" />`)
+    .replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/tld/${tld}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
   html = injectHreflang(html, `/tld/${tld}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang)}</script></head>`);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -651,7 +722,11 @@ app.get("/guide/:slug", async (c) => {
     .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
     .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/guide/${slug}" />`)
-    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/guide/${slug}" />`);
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/guide/${slug}" />`)
+    .replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/guide/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
   html = injectHreflang(html, `/guide/${slug}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script></head>`);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
