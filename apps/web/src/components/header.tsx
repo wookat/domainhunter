@@ -25,7 +25,7 @@ export function Header({
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-bg0/85 backdrop-blur-[12px]">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 md:px-6">
-        <button onClick={onLogoClick} className="flex items-center gap-2 font-bold tracking-tight">
+        <button onClick={onLogoClick} aria-label="DomainHunter" className="flex items-center gap-2 font-bold tracking-tight">
           <span className="grid h-7 w-7 place-items-center rounded-lg border border-brand-line bg-brand-dim">
             <Crosshair className="h-4 w-4 text-brand" />
           </span>

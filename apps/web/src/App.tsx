@@ -376,9 +376,9 @@ export default function App() {
           {/* TLD 指南页内链：SEO + 用户入口 */}
           <div className="mx-auto mb-5 max-w-3xl px-4">
             <p className="font-semibold text-txt1">{t("footer.tldGuides")}</p>
-            <div className="mt-2.5 flex flex-wrap justify-center gap-x-3 gap-y-1.5">
+            <div className="mt-1.5 flex flex-wrap justify-center gap-x-1 gap-y-0.5">
               {TLD_LIST.map((tld) => (
-                <a key={tld} className="font-mono hover:text-brand hover:underline" href={`/tld/${tld}?lang=${lang}`}>
+                <a key={tld} className="inline-flex min-h-[44px] items-center px-2 font-mono hover:text-brand hover:underline" href={`/tld/${tld}?lang=${lang}`}>
                   .{tld}
                 </a>
               ))}

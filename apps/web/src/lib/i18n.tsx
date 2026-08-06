@@ -165,6 +165,7 @@ const zh = {
   "sync.importNotFound": "同步码不存在或已过期（90 天有效）",
   "sync.importFailed": "导入失败，请稍后再试",
   "sync.importInvalid": "同步码格式不对：应为 8 位字母数字",
+  "meta.title": "DomainHunter — AI 域名猎手 | 说出寓意，猎到真正可注册的好域名",
   // 分享页
   "share.title": "候选域名清单",
   "share.subtitle": "由 DomainHunter 用户分享 · 快照生成于 {time} · 状态以实时核验为准",
@@ -350,6 +351,7 @@ const en: Record<I18nKey, string> = {
   "sync.importNotFound": "That sync code doesn't exist or has expired (codes last 90 days)",
   "sync.importFailed": "Import failed — please try again",
   "sync.importInvalid": "Invalid sync code — it should be 8 letters and digits",
+  "meta.title": "DomainHunter — AI Domain Hunter | Describe the meaning, hunt truly available names",
   "share.title": "Shared domain shortlist",
   "share.subtitle": "Shared by a DomainHunter user · snapshot from {time} · re-check availability before registering",
   "share.cta": "Hunt my own domains",
@@ -424,6 +426,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       localStorage.setItem(LANG_KEY, lang);
     } catch { /* ignore */ }
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    const path = window.location.pathname;
+    if (!path.startsWith("/tld/") && !path.startsWith("/s/")) document.title = dicts[lang]["meta.title"];
   }, [lang]);
 
   const t = useCallback<TFunc>((key, vars) => interpolate(dicts[lang][key] ?? zh[key], vars), [lang]);
