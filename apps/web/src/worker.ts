@@ -241,18 +241,31 @@ app.post("/api/search", async (c) => {
     prefixes?: string[];
     suffixes?: string[];
     tlds?: string[];
+    domains?: string[];
   }>();
   const roots = body.roots ?? [];
   const tlds = body.tlds ?? ["com"];
-  if (roots.length === 0) return c.json({ error: "roots required" }, 400);
+  // 批量粘贴模式：直接给完整域名清单（去重 + 校验，上限 200）
+  const explicit = [
+    ...new Set(
+      (Array.isArray(body.domains) ? body.domains : [])
+        .filter((d): d is string => typeof d === "string")
+        .map((d) => d.trim().toLowerCase())
+        .filter((d) => DOMAIN_RE.test(d) && d.length <= 253),
+    ),
+  ].slice(0, 200);
+  if (roots.length === 0 && explicit.length === 0) return c.json({ error: "roots required" }, 400);
 
-  const domains = generateCandidates({
-    roots,
-    prefixes: body.prefixes,
-    suffixes: body.suffixes,
-    tlds,
-    maxCandidates: 200,
-  });
+  const domains =
+    explicit.length > 0
+      ? explicit
+      : generateCandidates({
+          roots,
+          prefixes: body.prefixes,
+          suffixes: body.suffixes,
+          tlds,
+          maxCandidates: 200,
+        });
 
   const { readable, writable } = new TransformStream();
   const writer = writable.getWriter();
