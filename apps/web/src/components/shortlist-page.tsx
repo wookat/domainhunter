@@ -83,7 +83,7 @@ export function ShortlistPage({
   const [syncError, setSyncError] = useState("");
   const [importCode, setImportCode] = useState("");
   const [importing, setImporting] = useState(false);
-  const [importMsg, setImportMsg] = useState("");
+  const [importedCount, setImportedCount] = useState<number | null>(null);
   const [importError, setImportError] = useState("");
   const [recheckError, setRecheckError] = useState("");
   const [checkingDomains, setCheckingDomains] = useState<Set<string>>(new Set());
@@ -179,7 +179,7 @@ export function ShortlistPage({
   async function importSync() {
     const code = importCode.trim().toUpperCase();
     setImportError("");
-    setImportMsg("");
+    setImportedCount(null);
     if (!SYNC_CODE_RE.test(code)) {
       setImportError(t("sync.importInvalid"));
       return;
@@ -196,7 +196,7 @@ export function ShortlistPage({
       const seen = new Set(items.map((i) => i.domain));
       const fresh = incoming.filter((i) => !seen.has(i.domain));
       onMerge(incoming);
-      setImportMsg(t("sync.importDone", { n: fresh.length }));
+      setImportedCount(fresh.length);
       setImportCode("");
     } catch {
       setImportError(t("sync.importFailed"));
@@ -437,7 +437,7 @@ export function ShortlistPage({
           </p>
         )}
         {syncCode && <p className="mt-1 text-[11px] text-txt2">{t("sync.codeHint")}</p>}
-        {importMsg && <p className="mt-2 text-xs text-brand">{importMsg}</p>}
+        {importedCount !== null && <p className="mt-2 text-xs text-brand">{t("sync.importDone", { n: importedCount })}</p>}
         {(syncError || importError) && <p className="mt-2 text-xs text-destructive">{syncError || importError}</p>}
       </div>
 
