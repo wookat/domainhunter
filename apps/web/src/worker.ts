@@ -454,7 +454,7 @@ app.get("/api/prices", async (c) => {
   if (kv) {
     try {
       const cached = await kv.get(PRICES_KEY, "text");
-      if (cached) return new Response(cached, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=3600" } });
+      if (cached) return new Response(cached, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=600" } });
     } catch { /* 缓存读取失败则实时拉取 */ }
   }
   let data: PorkbunPricing;
@@ -479,7 +479,7 @@ app.get("/api/prices", async (c) => {
       await kv.put(PRICES_KEY, payload, { expirationTtl: PRICES_TTL });
     } catch { /* 缓存写入失败不影响返回 */ }
   }
-  return new Response(payload, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=3600" } });
+  return new Response(payload, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
 // 信任数据：累计核验域名数
