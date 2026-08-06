@@ -531,9 +531,375 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  travel: {
+    slug: "travel",
+    tlds: [
+      { tld: "com", zh: "预订涉及付款与行程，.com 的信任感直接影响转化", en: "Bookings involve money and itineraries — .com trust converts" },
+      { tld: "co", zh: "新锐旅行品牌的利落替身，社媒露出更轻盈", en: "A sleek stand-in for young travel brands, lighter on social" },
+      { tld: "me", zh: "个人旅行博主与行程定制师的天然人称后缀", en: "A natural personal suffix for travel bloggers and trip planners" },
+    ],
+    zh: {
+      label: "旅行",
+      title: "旅行品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "旅行品牌命名指南：目的地联想、动词化出发感、避开 travel 词根堆砌等思路，Airbnb/Klook/Booking 案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的旅行域名。",
+      intro:
+        "旅行名字卖的是「出发前的想象」：用户在下单前已经在脑中预演了那趟旅程，名字要能接住这种期待感。好的旅行品牌名自带画面——远方、风、清晨的陌生街道——而不是复述「订票订房」这个动作。同时旅行决策链路长、比价频繁，用户会在多个 tab 之间跳来跳去，名字必须在一堆比价标签页里一眼被认出来。旅行还是强口碑品类：朋友一句「我用 X 订的」抵得过十次广告，所以名字要经得起口头转述，听一遍就能拼出来。最后注意场景跨度：同一个名字要在机场广告牌、App 图标和客服电话里都成立。",
+      namingIdeas: [
+        "卖想象不卖流程：从「远方感」词库取材——wander、nomad、horizon、departure；先写下你想让用户想起的那个瞬间，再为瞬间造词",
+        "动词化出发感：能放进「走，X 一下」句式的名字自带行动号召；测试方法是把名字放进朋友约行程的对话里念",
+        "在地词升维：目的地文化词（如日语的「旅」、西语的 vamos）能瞬间定调，但要先查目标客群的认知度与发音门槛",
+        "避开 travel/trip/tour 词根堆砌：这些词根已被上万旅行社占满，搜索结果里挤不进第一屏，商标也几乎注不下来",
+        "音节控制在三个以内：机场信号差时口头报名字给同伴搜索是真实场景，长名字的错拼率随音节数陡增",
+      ],
+      cases: [
+        { name: "Airbnb", takeaway: "air bed and breakfast 的缩合：把「气垫床借宿」的寒酸出身压缩成一个完全独占的新词，随业务升级反而越来越像品牌而非描述" },
+        { name: "Klook", takeaway: "keep looking 的缩合，两个爆破音干脆利落；在中英双语市场都好念好记，是面向亚洲旅行者的音感优等生" },
+        { name: "Booking.com", takeaway: "品类词直接当品牌，赌的是规模碾压——普通品牌学不来，但它反证了「品类词打法需要垄断级预算」这条规则" },
+        { name: "Expedia", takeaway: "从 expedition（远征）造词，保留探险联想又完全可注册；-ia 结尾自带「一片新大陆」的地名感，与旅行品类天然契合" },
+      ],
+      pitfalls: [
+        "堆砌 travel/trip/tour：与上万同行撞车，SEO 与商标双输",
+        "名字锁死单一目的地或品类：业务从民宿扩到跟团游时，「XX海岛游」类名字会变成天花板",
+        "忽略多语言发音：全球旅行者会用各种口音念你的名字，含 th/r-l 混淆音的名字在亚洲市场折损明显",
+        "只查域名不查社交与商标：旅行品牌高度依赖 Instagram/小红书，同名账号被占等于名字残缺",
+      ],
+    },
+    en: {
+      label: "Travel",
+      title: "How to Name a Travel Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Travel naming guide: sell the imagination not the booking flow, verb-able departure energy, breakdowns of Airbnb/Klook/Expedia, TLD picks and pitfalls — then hunt an available travel domain with AI.",
+      intro:
+        "A travel name sells the imagination before the trip: customers have already rehearsed the journey in their heads before they pay, and the name has to catch that anticipation. Great travel names carry a picture — distance, wind, an unfamiliar street at dawn — instead of restating the booking transaction. Travel decisions are also long and comparison-heavy: users bounce between a dozen tabs, so the name must be recognizable at a glance in a row of price-comparison tabs. It's a word-of-mouth category too — one friend saying \"I booked it on X\" beats ten ads — so the name must survive spoken relay: hear it once, spell it right. Finally, mind the range of surfaces: the same name has to work on an airport billboard, an app icon, and a customer-service call.",
+      namingIdeas: [
+        "Sell the imagination, not the process: mine the far-away lexicon — wander, nomad, horizon, departure; write down the moment you want users to picture, then coin for that moment",
+        "Make it verb-able: a name that fits \"let's X it\" carries its own call to action; test it inside a real trip-planning conversation between friends",
+        "Elevate a local word: cultural words (tabi, vamos) set the tone instantly — but check recognition and pronunciation friction with your actual audience first",
+        "Avoid travel/trip/tour pile-ups: tens of thousands of agencies already squat on those roots; you'll never own search page one or the trademark",
+        "Keep it under three syllables: shouting a name to a friend over bad airport Wi-Fi is a real scenario, and typo rates climb with every syllable",
+      ],
+      cases: [
+        { name: "Airbnb", takeaway: "A contraction of \"air bed and breakfast\": the scrappy origin compressed into a fully ownable coinage that grew more brand-like as the business outgrew the description" },
+        { name: "Klook", takeaway: "From \"keep looking\", two crisp plosives; equally easy in English and Chinese-speaking markets — a phonetic straight-A for Asia-facing travel" },
+        { name: "Booking.com", takeaway: "The category word as the brand — a bet only monopoly-scale budgets can make; it proves the rule rather than offering a playbook" },
+        { name: "Expedia", takeaway: "Coined from \"expedition\": keeps the adventure association while being registrable; the -ia ending adds a new-continent, place-name feel native to travel" },
+      ],
+      pitfalls: [
+        "Stacking travel/trip/tour roots: you collide with thousands of peers and lose both SEO and trademark",
+        "Locking the name to one destination or format: \"IslandToursXX\" becomes a ceiling the day you add city trips",
+        "Ignoring multilingual pronunciation: global travelers will say your name in every accent; th-sounds and r/l ambiguity tax Asian markets",
+        "Checking the domain but not the socials: travel brands live on Instagram; a squatted matching handle leaves the name incomplete",
+      ],
+    },
+  },
+  food: {
+    slug: "food",
+    tlds: [
+      { tld: "com", zh: "外卖与到店都认的默认后缀，长辈客群尤其信任", en: "The default both delivery and dine-in customers trust" },
+      { tld: "co", zh: "新消费餐饮品牌的轻巧替身，菜单上更利落", en: "A neat stand-in for new F&B brands, cleaner on menus" },
+      { tld: "cn", zh: "国内连锁与小程序生态的合规首选", en: "The compliance-first pick for China chains and mini-programs" },
+    ],
+    zh: {
+      label: "餐饮美食",
+      title: "餐饮品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "餐饮品牌命名指南：味觉通感、场景锚定、方言人情味等思路，喜茶/Shake Shack/奈雪案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的餐饮域名。",
+      intro:
+        "餐饮名字要在三个地方同时打赢：门头（三米外一眼看清）、外卖列表（一屏几十家里被点开）、朋友的嘴（「今天吃 X 吧」说得顺口）。它是所有品类里「口头使用频率」最高的名字——用户每周都会说出它，所以顺口是硬指标，拗口的名字每天都在流失推荐。餐饮名字还要能唤起味觉与温度：好名字念出来就有画面、甚至有口水（想想「喜茶」的喜与「Shake Shack」的摇晃感）。最后别忘了扩张预留：从一家店到连锁、从单品到全品类，名字锁得太死会变成天花板。",
+      namingIdeas: [
+        "味觉通感：把口感、温度、声音写进名字——脆、烫、冒、摇（Shake）；先列出你家招牌菜入口那三秒的感受词，再从中造名",
+        "场景锚定：把「什么时候来吃」写进名字（深夜食堂式），让名字自带消费提示；适合定位鲜明的单场景品牌",
+        "情绪好彩头：中文餐饮里「喜、乐、旺、福」是经久不衰的流量密码，关键是配一个反差的现代词避免土味（喜茶 = 喜 + 茶的极简组合）",
+        "人名与方言的人情味：老板名字或方言词自带故事与地域认同（如「阿婆家」），连锁化时故事就是培训教材",
+        "念三遍测试：把名字放进「今天吃 X 吧」「帮我带一份 X」两个句式各念三遍，任何一次卡壳就换",
+      ],
+      cases: [
+        { name: "喜茶", takeaway: "「喜」的情绪价值 + 「茶」的品类词，两字组合极简到无法再减；从皇茶改名的历史反而证明：独占性是餐饮名字的生死线" },
+        { name: "Shake Shack", takeaway: "shake（奶昔/摇晃）+ shack（小棚屋）：头韵 + 双爆破音，念出来就有节奏感；小棚屋的谦逊感恰好中和了排队名店的距离感" },
+        { name: "奈雪的茶", takeaway: "创始人昵称「奈雪」+ 品类后缀：人名自带温度与故事，「的茶」把品类说清——人名 + 品类的教科书结构" },
+        { name: "Chipotle", takeaway: "直接用一种烟熏辣椒的名字：具体的食材词比抽象的「美味」可信一百倍，还顺带完成了风味教育" },
+      ],
+      pitfalls: [
+        "生僻字与多音字：门头认不出、外卖搜不到、朋友不敢念——三输",
+        "名字锁死单品：「XX烤鱼」在你上新火锅时就是天花板，除非战略上就做单品之王",
+        "谐音梗过度：第一次听会笑，第十次听会腻，连锁化后更是包袱；谐音要服务于好记，不是段子",
+        "忽略外卖平台搜索：名字里完全没有品类线索时，新客在平台里搜不到你；纯造词品牌要靠副标题补位",
+      ],
+    },
+    en: {
+      label: "Food & dining",
+      title: "How to Name a Food Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "F&B naming guide: taste synesthesia, scene anchoring, founder warmth, breakdowns of HEYTEA/Shake Shack/Chipotle, TLD picks and pitfalls — then hunt an available food domain with AI.",
+      intro:
+        "A food name has to win in three places at once: the storefront (legible from three meters), the delivery-app list (tapped among dozens on one screen), and your customers' mouths (\"let's get X today\" must roll off the tongue). No other category gets spoken this often — customers say the name weekly, so speakability is a hard requirement; a clunky name leaks referrals daily. Great food names also trigger taste and temperature: said aloud, they conjure a picture, even an appetite (feel the motion in \"Shake Shack\"). And leave room to grow: from one shop to a chain, from a single dish to a full menu, a name locked too tight becomes a ceiling.",
+      namingIdeas: [
+        "Taste synesthesia: write texture, heat and sound into the name — crisp, sizzle, shake; list the three-second sensation of your signature dish, then coin from it",
+        "Anchor a scene: bake \"when to come\" into the name (the late-night-diner move); powerful for sharply positioned single-occasion brands",
+        "Lucky-emotion words: joy, treat, golden — evergreen in food; the trick is pairing them with a modern counterweight so they read fresh, not folksy",
+        "Founder names and dialect warmth: a person's name or a local word carries story and belonging; when you franchise, the story becomes the training manual",
+        "The say-it-three-times test: put the name into \"let's get X\" and \"grab me an X\" and say each three times — one stumble and it's out",
+      ],
+      cases: [
+        { name: "HEYTEA", takeaway: "An emotion word plus the category word, reduced to the minimum; its forced rename from a squatted mark proves ownability is life-or-death in F&B" },
+        { name: "Shake Shack", takeaway: "shake + shack: alliteration and double plosives give it rhythm out loud; the humble \"shack\" neutralizes the distance of a line-out-the-door hotspot" },
+        { name: "Chipotle", takeaway: "Literally a smoked chili: a concrete ingredient word is a hundred times more credible than abstract \"delicious\" — and it teaches the flavor as it brands" },
+        { name: "Pret A Manger", takeaway: "French for \"ready to eat\": borrowed language adds café polish while the meaning stays honest — imported words work when they decode effortlessly" },
+      ],
+      pitfalls: [
+        "Obscure spellings: illegible on the storefront, unsearchable in delivery apps, unsayable by friends — a triple loss",
+        "Locking onto one dish: \"XX Grilled Fish\" caps you the day hotpot joins the menu — unless single-dish dominance is the strategy",
+        "Over-punning: funny the first time, tiring the tenth, a liability at chain scale; puns should serve memory, not comedy",
+        "Ignoring delivery-platform search: a pure coinage with zero category cue is invisible to new customers searching the platform; back it with a descriptive tagline",
+      ],
+    },
+  },
+  fitness: {
+    slug: "fitness",
+    tlds: [
+      { tld: "com", zh: "会员付费与私教预约的信任基线", en: "The trust baseline for memberships and coaching payments" },
+      { tld: "io", zh: "健身科技与数据向产品的圈内后缀", en: "The insider suffix for fitness-tech and data-driven products" },
+      { tld: "app", zh: "健身 App 的天然后缀，强制 HTTPS 加分", en: "Natural for fitness apps, with zone-wide HTTPS as a bonus" },
+    ],
+    zh: {
+      label: "健身健康",
+      title: "健身健康品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "健身健康品牌命名指南：身份感命名、能量音节、避开说教词根等思路，Peloton/Keep/Strava 案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的健身域名。",
+      intro:
+        "健身名字卖的不是器械和课程，是「用户想成为的那个自己」。人们买的是身份——更自律、更强、更轻盈的那个版本，所以好的健身名字是一枚身份徽章：说「我在用 X」时要有一点小骄傲。第二个关键是能量感：健身名字会被印在运动服上、喊在训练营里、晒在打卡贴里，音节要短促有力，念出来自带心率。同时要避开说教感——「督促、监督、燃烧脂肪」这类词让人想起被支配的恐惧，负罪感营销正在退潮，陪伴感与成就感才是主流叙事。",
+      namingIdeas: [
+        "身份徽章命名：先写下用户想成为的形容词（强、轻盈、自律），再造一个能骄傲地印在T恤上的词；测试是想象它出现在健身房自拍的标签里",
+        "能量音节：爆破音开头（p/b/k）+ 两音节以内，念出来像口号（Peloton 的节奏感）；避免绵软的鼻音收尾",
+        "动作与坚持的意象：跑、举、climb、rep、streak——把「重复与坚持」这个健身本质写进词根，Keep 是教科书",
+        "避开说教与负罪词根：burn/fat/sweat 直白但廉价，且把产品钉死在减肥叙事里；身份词的天花板远高于焦虑词",
+        "社群喊得响：健身品牌终点是社群，名字要能变成口号和 hashtag（#KeepUp）；造词前先想好它的口号形态",
+      ],
+      cases: [
+        { name: "Keep", takeaway: "一个最简单的英文词，把「坚持」这个健身的全部本质据为己有；口号 Keep Moving 与品牌名无缝一体——常见词打法的中国最佳实践" },
+        { name: "Peloton", takeaway: "自行车术语「主车群」：圈内人会心、圈外人觉得高级；三音节自带踏频节奏，把孤独的家庭健身包装成集体骑行" },
+        { name: "Strava", takeaway: "瑞典语「奋斗」：借小语种词拿到干净商标与域名，含义还精准命中运动员心理——小语种词库是健身命名的富矿" },
+        { name: "lululemon", takeaway: "无意义但音感极佳的造词，三个 l 的头韵念起来像瑜伽呼吸；证明健身名字可以完全脱离功能，只靠气质取胜" },
+      ],
+      pitfalls: [
+        "焦虑营销词根：burn/fat/skinny 类名字在品牌升级时会变成负资产，身体积极叙事已是主流",
+        "堆砌 fit/gym/muscle：与上万健身房撞名，且把想象空间锁死在器械房里",
+        "忽略口号形态：名字无法延展成 hashtag 和课程口号时，社群运营会一直别扭",
+        "医疗健康类夸大暗示：cure/therapy 类词根可能触发监管审查，健康品类命名要留合规余量",
+      ],
+    },
+    en: {
+      label: "Fitness & health",
+      title: "How to Name a Fitness Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Fitness naming guide: identity-badge names, energetic phonetics, ditching guilt words, breakdowns of Peloton/Keep/Strava, TLD picks and pitfalls — then hunt an available fitness domain with AI.",
+      intro:
+        "A fitness name doesn't sell equipment or classes — it sells the self the customer wants to become. People buy identity: the stronger, lighter, more disciplined version of themselves, so a great fitness name works like a badge — saying \"I train with X\" should carry a flicker of pride. The second key is kinetic energy: the name gets printed on apparel, shouted in boot camps and posted with workout selfies, so the syllables need punch — said aloud, it should raise the pulse. And steer clear of the lecture: burn-the-fat vocabulary evokes being policed; guilt marketing is receding while companionship and achievement carry the narrative now.",
+      namingIdeas: [
+        "Name the badge: write down the adjective your user wants to embody (strong, light, disciplined), then coin something they'd proudly wear on a shirt; the test is imagining it in a gym-selfie hashtag",
+        "Engineer the energy: open with a plosive (p/b/k), stay within two syllables, and make it chant-able; avoid soft nasal endings that dissipate",
+        "Mine motion and streaks: run, lift, climb, rep, streak — write repetition-and-persistence, the essence of training, into the root; Keep is the textbook case",
+        "Drop the guilt roots: burn/fat/sweat read cheap and nail you to a weight-loss narrative; identity words have a far higher ceiling than anxiety words",
+        "Make it shoutable: fitness brands end up as communities, so the name must extend into a slogan and hashtag (#KeepUp); design the chant before you commit",
+      ],
+      cases: [
+        { name: "Keep", takeaway: "One plain English word that claims the entire essence of training — persistence; the slogan Keep Moving fuses seamlessly with the name" },
+        { name: "Peloton", takeaway: "The cycling term for the main pack: insiders nod, outsiders hear premium; three syllables with built-in cadence, turning solo home workouts into a group ride" },
+        { name: "Strava", takeaway: "Swedish for \"strive\": a small-language borrow that secured a clean trademark and domain while nailing athlete psychology — minor languages are a rich vein for fitness names" },
+        { name: "lululemon", takeaway: "A meaningless coinage with superb mouthfeel — the triple-l alliteration flows like a yoga breath; proof a fitness name can win on vibe alone" },
+      ],
+      pitfalls: [
+        "Anxiety-marketing roots: burn/fat/skinny names turn into liabilities at rebrand time as body-positive narratives take over",
+        "Stacking fit/gym/muscle: you collide with thousands of gyms and lock the imagination inside the weight room",
+        "Forgetting the chant: if the name can't stretch into a hashtag and a class slogan, community operations will fight it forever",
+        "Implied medical claims: cure/therapy roots can trigger regulatory review — leave compliance headroom in health naming",
+      ],
+    },
+  },
+  devtools: {
+    slug: "devtools",
+    tlds: [
+      { tld: "dev", zh: "开发者工具的品类后缀，全后缀强制 HTTPS", en: "The category TLD for developer tools, HTTPS enforced zone-wide" },
+      { tld: "io", zh: "开发者生态十年惯例，圈内认知零成本", en: "A decade-long developer convention with zero explanation cost" },
+      { tld: "com", zh: "面向企业采购时仍是最稳妥的信任锚", en: "Still the safest trust anchor when selling to enterprises" },
+    ],
+    zh: {
+      label: "开发者工具",
+      title: "开发者工具怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "开发者工具命名指南：CLI 友好、极客梗与神话词、避开 dev/code 堆砌等思路，GitHub/Vercel/Rust 案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的开发者工具域名。",
+      intro:
+        "开发者工具的名字每天要被敲进终端几十次——它首先是一个命令，其次才是一个品牌。所以第一铁律是 CLI 友好：全小写不别扭、够短、无歧义字符，`npx x` 敲出来手感顺滑。第二个特殊之处是受众的反营销免疫：开发者对营销腔过敏，名字越「像大厂市场部起的」越减分；极客梗、神话典故、冷幽默反而是圈内通行证（Rust 自嘲锈蚀、Homebrew 自比家酿）。第三是生态占位：包名、GitHub org、crate/npm 名要一起拿下，工具火了之后再补注册就晚了。",
+      namingIdeas: [
+        "CLI 手感优先：全小写、4–7 字符、无连字符，想象它作为命令被敲一万次的样子；`npx 名字` 念一遍就是最好的测试",
+        "神话与典故词库：北欧神话、希腊神话、天文学词至今仍是宝库（Kubernetes 的舵手、Prometheus 的盗火者），典故与工具职责呼应时效果翻倍",
+        "自嘲与冷幽默：Rust（锈）、Homebrew（家酿）证明反差萌在开发者圈是资产；营销腔的「智能高效」反而是负资产",
+        "动词短词占位：build/ship/deploy 这类动作的同义短词（如 turbo、vite 的「快」）能把工具价值压进一个音节",
+        "生态同名预检：GitHub org、npm/crates/PyPI 包名、X handle 一起查，任何一个被占都会让文档和教程写起来别扭",
+      ],
+      cases: [
+        { name: "GitHub", takeaway: "git（工具）+ hub（枢纽）：把「代码的聚集地」说得一清二楚，又完全独占；工具名 + 场所词是开发者平台的黄金结构" },
+        { name: "Vercel", takeaway: "从 versatile/vertex 造词，两音节干净利落；从 ZEIT 改名反而证明：好念、可搜索、无歧义比酷更重要" },
+        { name: "Vite", takeaway: "法语「快」：一个音节把核心卖点说完，借小语种拿到独占性；官方文档标注发音 /vit/，主动管理读音是造词的配套动作" },
+        { name: "Rust", takeaway: "「锈」的自嘲反差：越不像营销词越像圈内人起的名字；单音节 CLI 手感满分，社区昵称 Rustacean 证明名字的延展性" },
+      ],
+      pitfalls: [
+        "堆砌 dev/code/hub 万金油：搜索撞车严重，且一眼「像域名投资人起的」",
+        "含连字符或大小写敏感拼写：在终端、URL、口头传播三个场景都是摩擦",
+        "与知名包重名或近音：用户 `npm install` 装错包不只是尴尬，还是供应链安全隐患",
+        "过度生僻的典故：梗太深需要解释时就失效了，冷知识要配一行「为什么叫这个」的 README 说明",
+      ],
+    },
+    en: {
+      label: "Dev tools",
+      title: "How to Name a Developer Tool: Strategies, Cases & Domains",
+      metaDescription:
+        "Dev-tool naming guide: CLI-friendly names, mythology and in-jokes, skipping dev/code pile-ups, breakdowns of GitHub/Vercel/Rust, TLD picks and pitfalls — then hunt an available dev-tool domain with AI.",
+      intro:
+        "A developer tool's name gets typed into a terminal dozens of times a day — it is a command first and a brand second. Rule one, therefore, is CLI ergonomics: comfortable in lowercase, short, no ambiguous characters; `npx x` should feel smooth under the fingers. The second peculiarity is the audience's marketing immunity: developers are allergic to marketing-speak, and the more a name smells like a corporate brand department, the more it costs you. In-jokes, mythology and dry humor are the insider passport instead (Rust self-deprecates, Homebrew winks). Third is ecosystem squatting: claim the package name, the GitHub org and the registry entries together — retrofitting them after the tool takes off is too late.",
+      namingIdeas: [
+        "CLI feel first: lowercase, 4–7 characters, no hyphens; imagine it typed ten thousand times as a command — saying `npx yourname` aloud is the best test",
+        "Mine mythology and lore: Norse, Greek and astronomy words remain a goldmine (Kubernetes the helmsman, Prometheus the fire-thief); the payoff doubles when the allusion mirrors the tool's job",
+        "Dry humor and self-deprecation: Rust and Homebrew prove that anti-marketing charm is an asset with developers, while \"smart & efficient\" copy is a liability",
+        "Claim a short action word: compressed synonyms of build/ship/fast (turbo, vite) pack the tool's value into one syllable",
+        "Pre-check the ecosystem: GitHub org, npm/crates/PyPI names and the X handle together — any one squatted makes every tutorial awkward forever",
+      ],
+      cases: [
+        { name: "GitHub", takeaway: "git (the tool) + hub (the place): says \"where code gathers\" with total clarity yet full ownability — tool-word + place-word is the golden structure for dev platforms" },
+        { name: "Vercel", takeaway: "Coined from versatile/vertex, two clean syllables; the rename from ZEIT proves searchable-and-unambiguous beats cool" },
+        { name: "Vite", takeaway: "French for \"fast\": one syllable carries the entire pitch, and the borrow secured ownability; the docs specify /vit/ — actively managing pronunciation is part of coining" },
+        { name: "Rust", takeaway: "The self-deprecating \"rust\": the less it sounds like marketing, the more it sounds like one of us; single-syllable CLI perfection, and \"Rustacean\" shows the name's community stretch" },
+      ],
+      pitfalls: [
+        "Filler roots like dev/code/hub: heavy search collision, and it reads like a domainer named it",
+        "Hyphens or case-sensitive spellings: friction in the terminal, the URL and every spoken referral at once",
+        "Colliding with a known package: users running `npm install` on the wrong name isn't just awkward — it's a supply-chain hazard",
+        "Over-obscure lore: a joke that needs explaining has already failed; pair deep cuts with a one-line \"why the name\" in the README",
+      ],
+    },
+  },
+  web3: {
+    slug: "web3",
+    tlds: [
+      { tld: "xyz", zh: "以太坊生态事实标配（ens.domains 亦大量采用）", en: "The de-facto pick across the Ethereum ecosystem" },
+      { tld: "io", zh: "交易所与基础设施的传统选择，技术信誉背书", en: "The legacy pick for exchanges and infra, with tech credibility" },
+      { tld: "com", zh: "面向出圈用户与监管沟通时的信任锚", en: "The trust anchor for mainstream users and regulator-facing comms" },
+    ],
+    zh: {
+      label: "Web3 加密",
+      title: "Web3 项目怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "Web3/加密项目命名指南：协议感造词、去土狗化、跨文化预检等思路，Uniswap/Solana/OpenSea 案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的 Web3 域名。",
+      intro:
+        "Web3 名字活在两个极端之间：一端是协议的严肃感——它要出现在审计报告、治理提案和交易所上币公告里；另一端是社区的梗文化——它要能做成表情包、喊进 Discord。好项目的名字往往「协议名严肃、社区昵称放飞」双轨并行。第二个现实是行业信任稀缺：土狗盘起烂了 moon/inu/pepe 类词根，正经项目要主动与之切割，名字越像基础设施越容易被认真对待。第三是全球性：加密社区天然跨时区跨语言，名字必须在英文、中文与主要小语种里都无歧义、可发音。",
+      namingIdeas: [
+        "协议感造词：uni-/meta-/proto- 类前缀 + 功能词根（Uniswap = universal + swap），读起来像白皮书里的术语，天然自带基础设施气质",
+        "物理与数学词库：链上世界爱借「确定性」意象——Solana（海滩反例，实为地名）、Polygon（多边形）、Prism、Vector；科学词自带中立与精确感",
+        "去土狗化自检：名字若与 moon/inu/safe/baby 等词根沾边，机构与交易所的第一印象直接扣分；想做正经协议就离梗币词库远一点",
+        "双轨命名：协议名严肃（Uniswap），社区吉祥物与梗放在昵称层（独角兽）；让审计报告和表情包各得其所",
+        "跨语言预检：名字在中文里的音译是否顺口、在日韩语里是否有歧义，直接影响亚洲社区的传播效率",
+      ],
+      cases: [
+        { name: "Uniswap", takeaway: "universal + swap：把「任意代币互换」压进三个音节，术语感十足；粉色独角兽把梗留给社区层——双轨命名的教科书" },
+        { name: "OpenSea", takeaway: "open（开放）+ sea（海量）：把 NFT 市场的「什么都有」说成一片公海，意象开阔又零解释成本；两个常见词的组合反而拿到了品类第一心智" },
+        { name: "Solana", takeaway: "取自创始团队常去的加州海滩 Solana Beach：地名自带阳光轻快感，与「高速公链」的技术叙事形成记忆反差——个人史词库是独占性的捷径" },
+        { name: "Chainlink", takeaway: "chain + link：预言机「连接链上链下」的职责直译成名字，功能描述式命名在基础设施层反而成立——因为它要的就是「像管道一样可靠」" },
+      ],
+      pitfalls: [
+        "梗币词根沾身：moon/inu/pepe/safe 类词根让正经项目在机构尽调时先输一步",
+        "与已有代币重名或近音：交易所里的相似 ticker 是真金白银的误买风险，也是钓鱼盘的伪装素材",
+        "过度依赖 crypto/chain/dao 品类词：牛市里同类名字批量出现，熊市后一起变成时代眼泪",
+        "忽略 ENS 与社交同名：project.eth、X handle、Discord 服务器名要与域名一起拿下，Web3 用户在链上先搜你",
+      ],
+    },
+    en: {
+      label: "Web3 & crypto",
+      title: "How to Name a Web3 Project: Strategies, Cases & Domains",
+      metaDescription:
+        "Web3 naming guide: protocol-grade coinage, de-memeing your name, cross-language checks, breakdowns of Uniswap/OpenSea/Solana, TLD picks and pitfalls — then hunt an available Web3 domain with AI.",
+      intro:
+        "A Web3 name lives between two extremes: on one end, protocol gravitas — it must hold up in audit reports, governance proposals and exchange listing announcements; on the other, meme culture — it should turn into stickers and get shouted across Discord. Strong projects usually run a dual track: a serious protocol name with an unhinged community mascot. The second reality is scarce trust: rug-pulls burned out the moon/inu/pepe lexicon, so serious projects should actively distance themselves — the more your name sounds like infrastructure, the more seriously you're taken. Third, crypto is natively global: the name must be unambiguous and pronounceable in English, Chinese and the major community languages at once.",
+      namingIdeas: [
+        "Coin protocol-grade terms: uni-/meta-/proto- prefixes plus a functional root (Uniswap = universal + swap) read like whitepaper vocabulary and carry infrastructure gravitas for free",
+        "Mine physics and math: on-chain culture loves determinism imagery — Polygon, Prism, Vector; scientific words bring built-in neutrality and precision",
+        "Run the de-meme check: any brush with moon/inu/safe/baby roots costs you points in institutional due diligence; serious protocols should keep distance from the memecoin lexicon",
+        "Name on two tracks: keep the protocol name sober (Uniswap) and park the mascot and memes at the community layer (the unicorn) — audit reports and sticker packs each get their register",
+        "Pre-check across languages: how the name transliterates into Chinese and whether it collides in Japanese or Korean directly shapes Asian community reach",
+      ],
+      cases: [
+        { name: "Uniswap", takeaway: "universal + swap: \"exchange anything\" compressed into three syllables with full terminology feel; the pink unicorn keeps the memes at the community layer — the dual-track textbook" },
+        { name: "OpenSea", takeaway: "open + sea: an NFT market's \"everything is here\" rendered as open water — expansive imagery at zero explanation cost; two common words that still captured category mindshare" },
+        { name: "Solana", takeaway: "Named after Solana Beach, the founders' California haunt: a place name radiating sunny lightness against the high-speed-chain narrative — personal history is a shortcut to ownability" },
+        { name: "Chainlink", takeaway: "chain + link: the oracle's job — connecting on-chain and off-chain — translated literally; descriptive naming works at the infrastructure layer, because \"reliable as plumbing\" is the whole point" },
+      ],
+      pitfalls: [
+        "Touching memecoin roots: moon/inu/pepe/safe vocabulary puts you a step behind in every institutional review",
+        "Colliding with an existing token: a similar ticker is a real mis-buy risk on exchanges and ready camouflage for phishing clones",
+        "Leaning on crypto/chain/dao category words: bull markets mint these names in batches, and bear markets retire them together",
+        "Forgetting ENS and socials: claim project.eth, the X handle and the Discord alongside the domain — Web3 users look you up on-chain first",
+      ],
+    },
+  },
+  agency: {
+    slug: "agency",
+    tlds: [
+      { tld: "com", zh: "客户提案与合同抬头的默认信任后缀", en: "The default trust suffix on proposals and contracts" },
+      { tld: "co", zh: "创意工作室的利落之选，名片上更轻", en: "The sleek pick for creative studios, lighter on a business card" },
+      { tld: "me", zh: "个人顾问与独立创作者的人称后缀", en: "The personal suffix for solo consultants and independents" },
+    ],
+    zh: {
+      label: "咨询工作室",
+      title: "咨询与设计工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "咨询/设计工作室命名指南：人名信誉、概念词、避开 studio 堆砌等思路，IDEO/Pentagram/麦肯锡案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的工作室域名。",
+      intro:
+        "工作室与咨询公司卖的是「人的判断力」，名字因此有两条经典路线：一是人名路线——用创始人名字担保（麦肯锡、Ogilvy），把个人信誉直接抵押给品牌，适合靠口碑与关系网获客的生意；二是概念路线——用一个抽象概念宣示方法论（IDEO 之于设计思维、Pentagram 之于五人合伙），适合想让机构大于个人的团队。选择哪条路线本质是回答：客户签合同时，信的是你这个人，还是你们这套方法？此外工作室名字出现的场景高度正式——提案封面、合同抬头、邮件签名——花哨的谐音在这些场景里会显轻浮，克制是默认审美。",
+      namingIdeas: [
+        "人名担保路线：创始人姓氏（或组合）自带信誉抵押，客户知道「出了问题找谁」；适合个人IP强、靠转介绍获客的顾问",
+        "概念词宣言：选一个能代表方法论的抽象词（原型、五边形、第一性），名字本身就是一次立场表达；配一段「为什么叫这个」的官网文案效果翻倍",
+        "拉丁词与古典词根：veritas、apex、modus 类词自带庄重感与时间感，适合法律、财务、战略类咨询；注意查同行占用密度",
+        "数字与几何意象：Pentagram（五角）、37signals 证明抽象符号可以承载合伙人叙事与团队故事",
+        "克制审美自检：把候选名放进「合同抬头」和「提案封面」两个场景预览，任何显得轻浮的候选直接淘汰",
+      ],
+      cases: [
+        { name: "IDEO", takeaway: "从 ideology/idea 截取的四字母词：把「以概念为业」写进名字，大写排版在提案封面上像一枚印章——概念路线的标杆" },
+        { name: "Pentagram", takeaway: "五角星对应五位创始合伙人：几何词把「平等合伙」的组织叙事固化成符号，五十年不过时" },
+        { name: "McKinsey", takeaway: "创始人姓氏一百年不改：人名路线的终极形态——名字本身成为行业信任的度量衡，「麦肯锡出品」即是背书" },
+        { name: "Ogilvy", takeaway: "广告教父的姓氏 + 个人方法论著作的加持：人名与思想体系互相成就，证明人名路线的天花板取决于创始人思想的传播力" },
+      ],
+      pitfalls: [
+        "堆砌 studio/lab/works 万金油：与全城设计工作室撞名，搜索里永远差一口气",
+        "过度俏皮的谐音：在合同抬头和投标文件里显轻浮，B2B 决策链里总有一个保守的审批人",
+        "人名路线不留退路：完全绑定个人的名字在出售、合伙人变动时是硬约束，可提前设计「姓氏 + 概念词」的混合结构",
+        "首字母缩写起手：三字母缩写没有故事与检索性，除非你已经像 BCG 一样有名",
+      ],
+    },
+    en: {
+      label: "Agencies & studios",
+      title: "How to Name an Agency or Studio: Strategies, Cases & Domains",
+      metaDescription:
+        "Agency naming guide: surname equity vs concept manifestos, classical roots, skipping studio/lab pile-ups, breakdowns of IDEO/Pentagram/McKinsey, TLD picks and pitfalls — then hunt an available studio domain with AI.",
+      intro:
+        "Agencies and consultancies sell human judgment, which gives their names two classic routes. The surname route pledges the founder's personal credibility to the brand (McKinsey, Ogilvy) — right for businesses won through reputation and referrals. The concept route declares a methodology through an abstract idea (IDEO for design thinking, Pentagram for a five-way partnership) — right for teams that want the institution to outgrow the individuals. Choosing between them answers one question: when the client signs, are they trusting you, or your method? Note also that agency names live on formal surfaces — proposal covers, contract headers, email signatures — where cute puns read flippant; restraint is the default aesthetic.",
+      namingIdeas: [
+        "Pledge a surname: the founder's name (or a pairing) collateralizes personal credibility — clients know exactly who answers for the work; ideal for referral-driven consultants with strong personal brands",
+        "Declare a concept: pick an abstract word that stands for your methodology (prototype, pentagon, first-principles) — the name becomes a position statement; a \"why the name\" page doubles the effect",
+        "Reach for classical roots: veritas, apex, modus carry gravity and permanence, fitting legal, financial and strategy work; check how densely peers already mine the same vein",
+        "Use numbers and geometry: Pentagram and 37signals show abstract symbols can carry a partnership's story for decades",
+        "Run the restraint check: preview every candidate on a contract header and a proposal cover; anything that reads playful there gets cut",
+      ],
+      cases: [
+        { name: "IDEO", takeaway: "Four letters cut from ideology/idea: \"concepts as the trade\" written into the name itself; set in caps on a proposal cover it stamps like a seal — the concept route's benchmark" },
+        { name: "Pentagram", takeaway: "The five-pointed star mapping five founding partners: geometry freezing an equal-partnership story into a symbol that hasn't aged in fifty years" },
+        { name: "McKinsey", takeaway: "A founder's surname unchanged for a century: the surname route's endgame — the name itself became the industry's unit of trust" },
+        { name: "Ogilvy", takeaway: "The ad legend's surname amplified by his published thinking: name and ideology reinforcing each other — the surname route's ceiling is set by how far the founder's ideas travel" },
+      ],
+      pitfalls: [
+        "Filler words like studio/lab/works: you collide with every design shop in town and never quite win search",
+        "Over-clever puns: flippant on contract headers and tender documents — there's always one conservative approver in a B2B chain",
+        "A surname with no exit: names fully bound to one person constrain sales and partner changes; consider a surname + concept hybrid from the start",
+        "Leading with initials: three-letter acronyms carry no story and no searchability — unless you're already BCG",
+      ],
+    },
+  },
 };
 
-/** 8 个行业指南 slug 列表（顺序即导航展示顺序） */
+/** 行业指南 slug 列表（顺序即导航展示顺序） */
 export const GUIDE_LIST = Object.keys(INDUSTRY_GUIDES);
 
 /** tld → 推荐该 TLD 的行业 guide slugs（用于 /tld 页底部互链，最多 3 个） */
