@@ -276,6 +276,7 @@ const zh = {
   "footer.tldGuides": "TLD 注册指南",
   "footer.prices": "价格总览",
   "footer.industryGuides": "行业命名指南",
+  "footer.compares": "后缀对比",
   // 错误
   "error.ai": "AI 服务出错，已停止本轮",
   "error.badRequest": "请求内容不符合要求：请检查描述是否为空或过长（最多 500 字）",
@@ -545,6 +546,7 @@ const en: Record<I18nKey, string> = {
   "footer.tldGuides": "TLD registration guides",
   "footer.prices": "Price overview",
   "footer.industryGuides": "Industry naming guides",
+  "footer.compares": "TLD comparisons",
   "error.ai": "AI service error — this round was stopped",
   "error.badRequest": "Invalid request — make sure the description isn't empty or over 500 characters",
   "error.rateLimited": "Too many requests — please try again in a bit",
