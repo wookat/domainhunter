@@ -491,7 +491,7 @@ export function ShortlistPage({
           <div className="hidden overflow-x-auto rounded-xl border border-line bg-bg1 md:block">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-line text-left text-[11px] uppercase tracking-wide text-txt2">
+                <tr className="whitespace-nowrap border-b border-line text-left text-[11px] uppercase tracking-wide text-txt2">
                   <th className="px-4 py-3 font-medium">{t("shortlist.domain")}</th>
                   <th className="px-3 py-3 text-center font-medium">{t("score.total")}</th>
                   {BAR_KEYS.map((k) => (

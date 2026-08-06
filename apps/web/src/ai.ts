@@ -38,7 +38,10 @@ const UNDERSTANDING_PROMPT = `你是域名命名专家。把用户的需求描�
 严格输出 JSON，不要输出其他任何文字：
 {"core":"…","style":"…","scene":"…"}`;
 
-export async function generateUnderstanding(description: string, apiKey: string): Promise<AiUnderstanding | null> {
+const EN_UNDERSTANDING_HINT = "\n\n重要：core/style/scene 的值全部用英文书写（用户界面是英文）。";
+const EN_MEANING_HINT = "\n\n重要：每个 meaning 说明全部用英文书写（用户界面是英文）。";
+
+export async function generateUnderstanding(description: string, apiKey: string, lang: "zh" | "en" = "zh"): Promise<AiUnderstanding | null> {
   try {
     const res = await fetch("https://api.deepseek.com/chat/completions", {
       method: "POST",
@@ -46,7 +49,7 @@ export async function generateUnderstanding(description: string, apiKey: string)
       body: JSON.stringify({
         model: "deepseek-chat",
         messages: [
-          { role: "system", content: UNDERSTANDING_PROMPT },
+          { role: "system", content: lang === "en" ? UNDERSTANDING_PROMPT + EN_UNDERSTANDING_HINT : UNDERSTANDING_PROMPT },
           { role: "user", content: `需求描述：${description}` },
         ],
         temperature: 0.3,
@@ -69,7 +72,7 @@ export async function generateUnderstanding(description: string, apiKey: string)
 export async function generateAiCandidates(
   description: string,
   apiKey: string,
-  opts: { count?: number; excludeTaken?: string[]; round?: number } = {},
+  opts: { count?: number; excludeTaken?: string[]; round?: number; lang?: "zh" | "en" } = {},
 ): Promise<AiCandidate[]> {
   try {
     return await generateOnce(description, apiKey, opts);
@@ -81,7 +84,7 @@ export async function generateAiCandidates(
 async function generateOnce(
   description: string,
   apiKey: string,
-  opts: { count?: number; excludeTaken?: string[]; round?: number } = {},
+  opts: { count?: number; excludeTaken?: string[]; round?: number; lang?: "zh" | "en" } = {},
 ): Promise<AiCandidate[]> {
   const count = opts.count ?? 24;
   let user = `需求描述：${description}\n请给出 ${count} 个候选。`;
@@ -94,7 +97,7 @@ async function generateOnce(
     body: JSON.stringify({
       model: "deepseek-chat",
       messages: [
-        { role: "system", content: SYSTEM_PROMPT },
+        { role: "system", content: opts.lang === "en" ? SYSTEM_PROMPT + EN_MEANING_HINT : SYSTEM_PROMPT },
         { role: "user", content: user },
       ],
       temperature: 1.2,
