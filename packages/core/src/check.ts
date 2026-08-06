@@ -56,13 +56,15 @@ export async function rdapCheck(domain: string, fetchFn: typeof fetch = fetch): 
   const base = await getRdapBase(tldOf(domain), fetchFn);
   if (!base) return { domain, status: "unknown", method: "none", detail: "no-rdap-server" };
   const url = `${base.replace(/\/$/, "")}/domain/${encodeURIComponent(domain)}`;
-  // 瞬时失败（网络错误 / 429 / 5xx）重试，退避时间尊重 Retry-After（封顶 4s）并加抖动，避免偶发「未知」
+  // 瞬时失败（网络错误 / 超时 / 429 / 5xx）重试，退避时间尊重 Retry-After（封顶 4s）并加抖动，避免偶发「未知」。
+  // 每次请求带 3s 超时：部分注册局（如 Verisign）限流时会拖住连接几十秒不回包，不如快速重试/转 WHOIS 兜底
   const MAX_ATTEMPTS = 3;
+  const ATTEMPT_TIMEOUT_MS = 3000;
   let delayMs = 700 + Math.random() * 500;
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
     if (attempt > 0) await new Promise((r) => setTimeout(r, delayMs));
     try {
-      const res = await fetchFn(url, { headers: { accept: "application/rdap+json" } });
+      const res = await fetchFn(url, { headers: { accept: "application/rdap+json" }, signal: AbortSignal.timeout(ATTEMPT_TIMEOUT_MS) });
       if (res.status === 404) return { domain, status: "available", method: "rdap" };
       if (res.ok) return { domain, status: "taken", method: "rdap" };
       if (attempt < MAX_ATTEMPTS - 1 && (res.status === 429 || res.status >= 500)) {
