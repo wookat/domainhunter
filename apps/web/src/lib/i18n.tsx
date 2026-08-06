@@ -99,6 +99,8 @@ const zh = {
   "adv.bulkPlaceholder": "mybrand\ncoolname.io\nfoo, bar",
   "adv.bulkStart": "核验 {n} 个域名",
   "adv.bulkCount": "已识别 {n} 个域名",
+  "home.recent": "最近搜过",
+  "home.recentClear": "清除最近搜索",
   "adv.available": "可注册（{n}）",
   "adv.rest": "其余候选（{n}）",
   // Agent 生成中
@@ -351,6 +353,8 @@ const en: Record<I18nKey, string> = {
   "adv.bulkPlaceholder": "mybrand\ncoolname.io\nfoo, bar",
   "adv.bulkStart": "Check {n} domains",
   "adv.bulkCount": "{n} domains recognized",
+  "home.recent": "Recent",
+  "home.recentClear": "Clear recent searches",
   "adv.available": "Available ({n})",
   "adv.rest": "Other candidates ({n})",
   "agent.params": "Brief & parameters",
