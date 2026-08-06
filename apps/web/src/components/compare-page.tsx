@@ -1,5 +1,6 @@
-import { CheckCircle2, Scale, Sparkles } from "lucide-react";
+import { CheckCircle2, HelpCircle, Scale, Sparkles } from "lucide-react";
 
+import { buildCompareFaq } from "@/content/compare-faq";
 import { TLD_COMPARES } from "@/content/compares";
 import { TLD_GUIDES } from "@/content/tlds";
 import { useI18n } from "@/lib/i18n";
@@ -26,6 +27,7 @@ export function ComparePage({ slug }: { slug: string }) {
   const loc = cmp[lang];
   const sides = [cmp.a, cmp.b] as const;
   const picks = [loc.pickA, loc.pickB] as const;
+  const faq = buildCompareFaq(cmp, lang);
 
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -69,6 +71,22 @@ export function ComparePage({ slug }: { slug: string }) {
             </section>
           );
         })}
+      </div>
+
+      {/* FAQ */}
+      <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+        <HelpCircle className="h-4 w-4 text-brand" />
+        {t("tld.faq")}
+      </h2>
+      <div className="mt-3 space-y-2">
+        {faq.map((item) => (
+          <details key={item.q} className="group rounded-xl border border-line bg-bg1 px-4 py-3">
+            <summary className="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
+              {item.q}
+            </summary>
+            <p className="mt-2 text-sm leading-relaxed text-txt1">{item.a}</p>
+          </details>
+        ))}
       </div>
 
       {/* CTA：同时在两个后缀下猎名 */}

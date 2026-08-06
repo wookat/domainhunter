@@ -14,9 +14,9 @@ export function buildGuideFaq(guide: IndustryGuide, lang: "zh" | "en"): GuideFaq
   const tlds = guide.tlds.map((t) => `.${t.tld}`).join(lang === "en" ? ", " : "、");
   if (lang === "en") {
     return [
-      { q: `How do I name a ${loc.label.toLowerCase()} brand?`, a: `${loc.intro} Practical approaches: ${loc.namingIdeas.join(" ")}` },
-      { q: `Which domain extension is best for ${loc.label.toLowerCase()}?`, a: `Recommended TLDs: ${tlds}. ${guide.tlds.map((t) => `.${t.tld} — ${t.en}`).join(" ")}` },
-      { q: `What naming mistakes should ${loc.label.toLowerCase()} brands avoid?`, a: loc.pitfalls.join(" ") },
+      { q: `How do I choose a brand name for ${loc.label}?`, a: `${loc.intro} Practical approaches: ${loc.namingIdeas.join(" ")}` },
+      { q: `Which domain extension is best for ${loc.label}?`, a: `Recommended TLDs: ${tlds}. ${guide.tlds.map((t) => `.${t.tld} — ${t.en}`).join(" ")}` },
+      { q: `What naming mistakes should I avoid for ${loc.label}?`, a: loc.pitfalls.join(" ") },
     ];
   }
   return [
