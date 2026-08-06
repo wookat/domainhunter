@@ -385,7 +385,187 @@ export const TLD_GUIDES: Record<string, TldGuide> = {
       ],
     },
   },
+  me: {
+    tld: "me",
+    zh: {
+      title: ".me 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".me 天然适合个人品牌、简历主页与开发者作品集，还能拼出动词短语域名。查看 .me 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .me 域名。",
+      intro:
+        ".me 是黑山的国家域名，但「me＝我」的英文含义让它成为个人品牌的天然后缀：个人主页、简历站、开发者作品集、独立创作者的落地页，name.me 一眼就懂。它还有一个独门玩法——动词短语域名：about.me、call.me、hire.me 这类「动词 + .me」读起来就是一句话，产品把行动指令直接写进域名里，传播效率极高。价格与 .com 接近，库存明显更充裕：常见英文名、昵称、双拼在 .me 下命中率远高于 .com。注意它的气质偏个人与轻量，大型企业官网用 .me 会显得不够正式；但对个人 IP、独立开发者和以「你/我」为叙事核心的产品（社交、效率、健康类），.me 常常比生僻的 .com 造词更出彩。",
+      bestFor: ["个人主页与简历站", "开发者作品集", "独立创作者落地页", "动词短语类产品域名（hire.me 式）"],
+      namingTips: [
+        "动词 + .me 是独门玩法：域名本身就是一句行动指令（hire.me、coach.me）",
+        "个人品牌直接用名字/昵称，.me 下库存比 .com 好得多",
+        "社交、效率、健康类产品用第二人称叙事很搭",
+        "大型企业主站不建议主用，气质偏个人",
+      ],
+    },
+    en: {
+      title: ".me Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".me is the natural home for personal brands, portfolios and verb-phrase domains like hire.me. See live pricing and naming advice, then hunt available .me names with AI.",
+      intro:
+        ".me is Montenegro's country code, but the English word made it the default suffix for personal brands: personal sites, resumes, developer portfolios and creator landing pages read instantly as \"this is about a person.\" Its signature trick is the verb-phrase domain — about.me, call.me, hire.me — where the domain itself is a call to action, which makes word-of-mouth almost free. Pricing sits near .com while inventory is far better: first names, nicknames and short words long gone on .com are often still open. The vibe is personal and lightweight, so a large corporate site on .me feels off; but for personal IP, indie developers, and products narrated in the second person (social, productivity, wellness), a clean .me regularly beats an awkward coined .com.",
+      bestFor: ["Personal sites & resumes", "Developer portfolios", "Creator landing pages", "Verb-phrase product domains (hire.me style)"],
+      namingTips: [
+        "Verb + .me turns the domain into a call to action (hire.me, coach.me)",
+        "Use your actual name or handle — availability is far better than .com",
+        "Great fit for second-person products: social, productivity, wellness",
+        "Skip it for large corporate sites; the tone is personal",
+      ],
+    },
+  },
+  tech: {
+    tld: "tech",
+    zh: {
+      title: ".tech 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".tech 把「科技」直接写进后缀，适合硬科技公司、开发者社区与科技媒体。查看 .tech 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tech 域名。",
+      intro:
+        ".tech 是含义最直白的新顶级域名之一：后缀本身就是行业声明。硬科技公司、机器人与硬件团队、开发者社区、黑客马拉松、科技媒体用 name.tech，访客不需要任何解释就知道这是科技相关。它在科技圈的接受度已被真实案例验证——CES 官网用的就是 ces.tech。库存极好：几乎任何在 .com 下绝迹的科技词、公司名在 .tech 下都能注册到，双词组合更是随便挑。注意续费价通常明显高于首年促销价，注册前看清楚续费价再决定长期持有。命名上后缀已经交代了行业，主体名反而可以放开——用一个和科技无关、有记忆点的品牌词（水果、动物、神话），比再叠一个技术词更出挑。",
+      bestFor: ["硬科技与硬件公司", "开发者社区与黑客马拉松", "科技媒体与博客", "机器人、IoT 与深科技团队"],
+      namingTips: [
+        "后缀已声明行业，主体名可以大胆用无关但有记忆点的词",
+        "首年促销价与续费价差距大，注册前确认续费价",
+        "公司名 + .tech 几乎总能注册到，适合品牌保护",
+        "避免主体名再含 tech/tek，语义重复（techxx.tech）",
+      ],
+    },
+    en: {
+      title: ".tech Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".tech puts the industry right in the suffix — built for hard-tech companies, developer communities and tech media. See live pricing and naming advice, then hunt available .tech names with AI.",
+      intro:
+        ".tech is one of the most self-explanatory new TLDs: the suffix is the industry statement. Hard-tech companies, robotics and hardware teams, developer communities, hackathons and tech media all read instantly on name.tech — no tagline needed. Credibility is proven by real adoption: CES itself runs on ces.tech. Inventory is excellent — nearly any tech word or company name extinct on .com is available here, and two-word combos are wide open. One caution: renewal prices typically run well above first-year promos, so check the renewal before committing long-term. For naming, since the suffix already declares the industry, the name itself can roam — a memorable unrelated word (fruit, animal, myth) stands out more than stacking another technical term.",
+      bestFor: ["Hard-tech & hardware companies", "Developer communities & hackathons", "Tech media and blogs", "Robotics, IoT and deep-tech teams"],
+      namingTips: [
+        "The suffix declares the industry — pick a memorable, unrelated brand word",
+        "Intro prices are heavily discounted; check the renewal price first",
+        "company-name.tech is almost always available — good for brand protection",
+        "Avoid tech/tek in the name itself; techxx.tech reads redundant",
+      ],
+    },
+  },
+  online: {
+    tld: "online",
+    zh: {
+      title: ".online 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".online 读起来就是一句话（品牌 + 上线了），适合线上服务、课程与活动页。查看 .online 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .online 域名。",
+      intro:
+        ".online 的魅力在于读出来就是一个完整短语：brand.online＝「某某上线了」。线上课程、远程服务、虚拟活动、传统品牌的数字化入口，用它都非常顺口。它是注册量最大的新顶级域名之一，认知度在同类里靠前，首年价格常常低到几美元，非常适合做活动页、发布页这类轻量场景的试错。代价同样是续费价回升明显，长期主站要先算清成本。库存几乎不设限：任何词都注册得到，这既是机会也是提醒——极低的门槛意味着它也被大量低质站使用，主体名本身要足够专业才撑得起信任。命名建议选完整、好读的品牌词，让「brand online」读成自然短语；避免缩写和生僻拼写，那会浪费这个后缀的口语优势。",
+      bestFor: ["线上课程与远程服务", "虚拟活动与发布页", "传统品牌的数字化入口", "低成本试错的轻量项目"],
+      namingTips: [
+        "选完整好读的词，让 brand.online 读成自然短语",
+        "首年常有超低促销价，适合活动页试错；长期持有先看续费价",
+        "低门槛意味着低质站多，主体名要足够专业来建立信任",
+        "避免缩写与生僻拼写，浪费口语传播优势",
+      ],
+    },
+    en: {
+      title: ".online Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".online reads as a full phrase — brand, online. Great for courses, remote services and launch pages. See live pricing and naming advice, then hunt available .online names with AI.",
+      intro:
+        ".online works because it reads as a complete sentence: brand.online = \"we're live.\" Online courses, remote services, virtual events, and digital storefronts for traditional brands all roll off the tongue. It's among the highest-volume new TLDs, so recognition is solid, and first-year pricing often drops to a few dollars — ideal for launch pages and low-cost experiments. The flip side: renewals climb back up, so budget before making it a long-term primary domain. Inventory is effectively unlimited, which cuts both ways — the low barrier means plenty of low-quality sites use it too, so your name itself has to carry the credibility. Pick a full, readable brand word so \"brand online\" sounds natural when spoken; abbreviations and odd spellings waste the suffix's spoken-phrase advantage.",
+      bestFor: ["Online courses & remote services", "Virtual events & launch pages", "Digital entries for traditional brands", "Low-cost experiments"],
+      namingTips: [
+        "Choose a full readable word so brand.online sounds like a phrase",
+        "Ultra-cheap intro pricing suits experiments; check renewals for keeps",
+        "The low barrier attracts spam — your name must carry the trust",
+        "Skip abbreviations and odd spellings; they waste the spoken advantage",
+      ],
+    },
+  },
+  store: {
+    tld: "store",
+    zh: {
+      title: ".store 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".store 直接告诉访客「这里能买东西」，适合电商、品牌商城与 DTC 独立站。查看 .store 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .store 域名。",
+      intro:
+        ".store 是为电商而生的后缀：访客还没点进来就知道这里能买东西。DTC 独立站、品牌官方商城、周边商店、线下零售的线上入口，用 brand.store 语义零损耗。很多成熟品牌把主站放在 .com、商城放在 brand.store，两个域名分工明确，这也是它最主流的用法。库存极好，几乎任何品牌词都注册得到；首年常见大幅促销，续费价明显更高，按主站标准做预算。它的边界同样清晰：内容站、工具类产品用 .store 会误导访客预期。命名上主体名就写品牌本身——后缀已经说了「商店」，主体再带 shop/store/mall 就是画蛇添足；名字短一点，因为用户最终要口头传播的是「某某 store」这个整体。",
+      bestFor: ["DTC 独立站与品牌商城", "周边与衍生品商店", "线下零售的线上入口", "多域名策略中的商城分工位"],
+      namingTips: [
+        "主体名就用品牌词，后缀已说明「商店」，别再叠 shop/mall",
+        "主站 .com + 商城 .store 的分工是最主流用法",
+        "首年促销大、续费高，按长期成本预算",
+        "名字保持短：口头传播的是「brand store」整体",
+      ],
+    },
+    en: {
+      title: ".store Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".store tells visitors they can buy here — built for e-commerce, brand shops and DTC sites. See live pricing and naming advice, then hunt available .store names with AI.",
+      intro:
+        ".store is the suffix built for commerce: visitors know they can buy before the page even loads. DTC brands, official brand shops, merch stores, and online entries for physical retail all get zero semantic loss from brand.store. A common mature pattern is running the main site on .com and the shop on brand.store — a clean division of labor that plays to the suffix's strength. Inventory is excellent, and nearly any brand word is available; intro pricing is heavily discounted while renewals run high, so budget at main-site standards. The boundary is equally clear: content sites and tools on .store set the wrong expectation. For naming, just use the brand itself — the suffix already says \"store,\" so adding shop/mall to the name is redundant; keep it short, because what people say out loud is \"brand store\" as one unit.",
+      bestFor: ["DTC brands & official shops", "Merch and spin-off stores", "Online entries for physical retail", "The shop slot in a multi-domain strategy"],
+      namingTips: [
+        "Use the bare brand word — the suffix already says store",
+        "Main site on .com, shop on .store is the proven split",
+        "Big intro discounts, high renewals — budget for the long run",
+        "Keep it short: people will say \"brand store\" as one phrase",
+      ],
+    },
+  },
+  site: {
+    tld: "site",
+    zh: {
+      title: ".site 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".site 是含义最中性的新后缀之一，什么类型的网站都装得下，价格亲民库存充裕。查看 .site 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .site 域名。",
+      intro:
+        ".site 是新顶级域名里的「白纸」：不预设行业、不限定气质，任何类型的网站都装得下。作品集、文档站、社区、小工具、临时项目——当你想要一个便宜、可注册、不带行业暗示的域名时，.site 是最省心的选择之一。它注册量长期位居新后缀前列，认知度足够；首年价格常低至一两美元，库存几乎无限，心仪的词基本都能拿下。中性是双刃剑：它不为你的品牌加分，也不减分，一切靠主体名撑——所以名字本身要么足够独特（造词、合成词），要么直接把用途写清楚（docs、wiki、lab 类组合）。同样注意首年与续费的价差。对预算敏感、需要快速上线、或者给主品牌配套子项目（工具站、文档站）的场景，.site 的性价比很难被击败。",
+      bestFor: ["作品集与文档站", "社区与小工具", "主品牌的配套子项目", "预算敏感的快速上线项目"],
+      namingTips: [
+        "后缀中性不加分，主体名要独特或直接写清用途",
+        "docs/wiki/lab 类功能词组合在 .site 下很自然",
+        "首年超低价适合快速试错，长期持有先算续费",
+        "给主品牌配套的工具站、文档站是高性价比用法",
+      ],
+    },
+    en: {
+      title: ".site Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".site is the most neutral new TLD — it fits any kind of website, with friendly pricing and deep inventory. See live pricing and naming advice, then hunt available .site names with AI.",
+      intro:
+        ".site is the blank canvas of new TLDs: no industry assumption, no personality bias — any website fits. Portfolios, docs, communities, small tools, temporary projects: whenever you want a cheap, available domain with zero industry signal, .site is one of the easiest calls. It consistently ranks among the highest-volume new TLDs, so recognition is fine; first-year pricing often drops to a dollar or two, and inventory is effectively unlimited. Neutrality cuts both ways: the suffix neither boosts nor hurts your brand, so the name does all the work — make it distinctive (a coined or compound word) or make the purpose explicit (docs, wiki, lab combos). Watch the intro-vs-renewal gap as usual. For budget-sensitive launches and companion projects to a main brand (tool sites, doc sites), .site's value is hard to beat.",
+      bestFor: ["Portfolios & documentation sites", "Communities and small tools", "Companion projects to a main brand", "Budget-sensitive quick launches"],
+      namingTips: [
+        "The neutral suffix adds nothing — the name must be distinctive or explicit",
+        "Function words like docs/wiki/lab combine naturally on .site",
+        "Dollar-level intro pricing suits experiments; check renewals for keeps",
+        "Great for tool/doc companion sites next to your main brand",
+      ],
+    },
+  },
+  top: {
+    tld: "top",
+    zh: {
+      title: ".top 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".top 注册量位居新后缀前列、在国内接受度高、价格极低。查看 .top 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .top 域名。",
+      intro:
+        ".top 是注册量常年位居全球前列的新顶级域名，在国内市场尤其活跃：它通过了工信部资质、可以正常 ICP 备案，价格常年处于最低档，这让它成为国内个人站长和中小项目的常见选择。「top＝顶尖」的含义讨喜，用在排行榜、精选集、评测类内容站上语义顺滑（best、rank、pick 类词根很搭）。库存几乎无限，双拼、行业词、品牌词基本都能注册到。需要坦率说明它的短板：极低的价格吸引了大量批量注册与低质站点，部分海外邮件服务和安全系统对 .top 的信任评分偏低，做海外业务或依赖邮件送达的产品要慎重。定位建议：国内个人项目、内容站、排行榜类产品，以及给主品牌低成本注册保护性域名——这些场景里 .top 的价格优势是实打实的。",
+      bestFor: ["国内个人站与中小项目", "排行榜与精选集内容站", "可 ICP 备案的低成本选择", "品牌保护性注册"],
+      namingTips: [
+        "排行/精选语义的词根（best、rank、pick）与 .top 天然搭配",
+        "已获工信部资质，可正常 ICP 备案",
+        "海外邮件送达场景慎用，部分系统对 .top 信任分偏低",
+        "价格极低，适合批量保护性注册品牌词",
+      ],
+    },
+    en: {
+      title: ".top Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".top ranks among the highest-volume new TLDs, is popular in China, and costs very little. See live pricing and naming advice, then hunt available .top names with AI.",
+      intro:
+        ".top consistently ranks among the world's highest-volume new TLDs and is especially active in China: it holds MIIT accreditation for ICP filing and sits in the lowest price tier, making it a staple for individual webmasters and small projects there. The \"top = best\" meaning is likable, and it reads naturally on rankings, curated lists and review sites (roots like best, rank, pick fit well). Inventory is effectively unlimited — pinyin, industry words and brand names are all up for grabs. An honest caveat: rock-bottom pricing attracts bulk registrations and low-quality sites, and some overseas mail and security systems score .top lower on trust — think twice if your product depends on international email deliverability. Where it shines: China-facing personal projects, content and ranking sites, and cheap defensive registrations of your brand word.",
+      bestFor: ["China-facing personal projects", "Ranking and curated-list sites", "Low-cost ICP-filable option", "Defensive brand registrations"],
+      namingTips: [
+        "Ranking roots (best, rank, pick) pair naturally with .top",
+        "MIIT-accredited — ICP filing works normally",
+        "Be careful if you rely on international email deliverability",
+        "Cheap enough for bulk defensive registrations of brand words",
+      ],
+    },
+  },
 };
 
-/** 12 个指南页 TLD 列表（顺序即导航展示顺序） */
+/** 18 个指南页 TLD 列表（顺序即导航展示顺序） */
 export const TLD_LIST = Object.keys(TLD_GUIDES);
