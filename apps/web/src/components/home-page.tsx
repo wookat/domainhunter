@@ -164,6 +164,9 @@ function ChipPrice({ domain }: { domain: string }) {
   return <i className="not-italic font-sans text-[10px] opacity-75">{text}</i>;
 }
 
+/** 快速核验在所选 TLD 之外额外覆盖的主流后缀（显式 TLD 与所选优先，总数封顶 10） */
+const QUICK_EXTRA_TLDS = ["com", "io", "ai", "app", "dev", "co", "net", "me"];
+
 /** 快速核验的可注册 chip 也可收藏到候选清单 */
 function domainToRow(domain: string): Row {
   const dot = domain.indexOf(".");
@@ -247,7 +250,7 @@ export function HomePage({
 
   async function runQuickCheck() {
     if (!quick) return;
-    const checkTlds = quick.tld ? [quick.tld, ...tlds.filter((t) => t !== quick.tld)] : tlds;
+    const checkTlds = [...new Set([...(quick.tld ? [quick.tld] : []), ...tlds, ...QUICK_EXTRA_TLDS])].slice(0, 10);
     if (checkTlds.length === 0) return;
     quickAbortRef.current?.abort();
     const ac = new AbortController();
