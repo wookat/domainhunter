@@ -94,18 +94,3 @@ export function tldPrice(tld: string): TldPrice | undefined {
   return TLD_PRICES[tld];
 }
 
-/** 紧凑展示：首年¥69 / 1st yr ¥69 */
-export function tldPriceShort(tld: string, lang: "zh" | "en" = "zh"): string | undefined {
-  const p = TLD_PRICES[tld];
-  if (!p) return undefined;
-  return lang === "en" ? `1st yr ¥${p.first}` : `首年¥${p.first}`;
-}
-
-/** 完整展示：参考价 首年 ¥69 · 续费 ¥85/年 / Ref. price ... */
-export function tldPriceFull(tld: string, lang: "zh" | "en" = "zh"): string | undefined {
-  const p = TLD_PRICES[tld];
-  if (!p) return undefined;
-  return lang === "en"
-    ? `Ref. price: ¥${p.first} 1st yr · ¥${p.renew}/yr renewal`
-    : `参考价 首年 ¥${p.first} · 续费 ¥${p.renew}/年`;
-}

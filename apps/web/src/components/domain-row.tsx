@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Lock } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { ScoreBars } from "@/components/score-bars";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
 import { REGISTRARS } from "@/lib/registrars";
@@ -81,6 +82,7 @@ export function DomainRow({
   const { t, lang } = useI18n();
   const prices = usePrices();
   const score = row.scores ? totalScore(row.scores) : undefined;
+  const [expanded, setExpanded] = useState(false);
 
   if (row.status === "taken") {
     return (
@@ -106,13 +108,20 @@ export function DomainRow({
   const isUnknown = row.status === "unknown";
 
   return (
-    <div
-      data-domain={row.domain}
-      className={cn("flex h-12 items-center gap-2 px-4 sm:gap-3", animate && "fade-up", selected && "bg-bg2 shadow-[inset_2px_0_0_var(--brand)]")}
-    >
-      <span className={cn("tnum w-8 shrink-0 rounded-md py-0.5 text-center font-mono text-xs font-semibold", score !== undefined ? scoreBadgeClass(score) : "bg-bg3 text-txt1")}>
-        {score ?? "—"}
-      </span>
+    <div data-domain={row.domain} className={cn(animate && "fade-up", selected && "bg-bg2 shadow-[inset_2px_0_0_var(--brand)]")}>
+    <div className="flex h-12 items-center gap-2 px-4 sm:gap-3">
+      {row.scores && score !== undefined ? (
+        <button
+          title={t("score.expandTitle")}
+          aria-expanded={expanded}
+          className={cn("tnum w-8 shrink-0 rounded-md py-0.5 text-center font-mono text-xs font-semibold transition-shadow hover:ring-1 hover:ring-line", scoreBadgeClass(score))}
+          onClick={() => setExpanded((v) => !v)}
+        >
+          {score}
+        </button>
+      ) : (
+        <span className="tnum w-8 shrink-0 rounded-md bg-bg3 py-0.5 text-center font-mono text-xs font-semibold text-txt1">—</span>
+      )}
       <DomainName row={row} />
       <span className={cn("h-1.5 w-1.5 shrink-0 rounded-full", isUnknown ? "bg-amber2" : "bg-brand")} />
       {isUnknown && <span className="shrink-0 rounded bg-amber2-dim px-1.5 py-0.5 text-[11px] text-amber2">{t("status.unknown")}</span>}
@@ -149,6 +158,13 @@ export function DomainRow({
           {t("common.register")}
         </button>
       </RegisterMenu>
+    </div>
+    {expanded && row.scores && (
+      <div className="px-4 pb-3 pl-14">
+        <ScoreBars scores={row.scores} columns={4} className="max-w-md" />
+        <p className="mt-2 max-w-xl text-[11px] leading-relaxed text-txt2">{t("score.explain")}</p>
+      </div>
+    )}
     </div>
   );
 }
