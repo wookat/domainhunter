@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 
 const KEY = "domainhunter:monitor";
+const WEBHOOK_KEY = "domainhunter:monitor-webhook";
 
 export interface MonitorChange {
   domain: string;
@@ -27,6 +28,32 @@ function save(domains: string[]) {
   }
 }
 
+export function loadWebhook(): string {
+  try {
+    return localStorage.getItem(WEBHOOK_KEY) ?? "";
+  } catch {
+    return "";
+  }
+}
+
+function saveWebhook(url: string) {
+  try {
+    if (url) localStorage.setItem(WEBHOOK_KEY, url);
+    else localStorage.removeItem(WEBHOOK_KEY);
+  } catch {
+    // ignore
+  }
+}
+
+export function isValidWebhook(url: string): boolean {
+  if (url.length > 500) return false;
+  try {
+    return new URL(url).protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
 /** 本地记录哪些域名开了监控；开关时同步到服务端监控集合 */
 export function useMonitor() {
   const [monitored, setMonitored] = useState<Set<string>>(() => new Set(load()));
@@ -38,7 +65,7 @@ export function useMonitor() {
     const res = await fetch("/api/monitor", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ domain, enabled, status }),
+      body: JSON.stringify({ domain, enabled, status, webhook: loadWebhook() }),
     }).catch(() => null);
     if (!res) return { ok: false };
     if (res.status === 429) return { ok: false, full: true };
@@ -53,7 +80,24 @@ export function useMonitor() {
     return { ok: true };
   }, [monitored]);
 
-  return { monitored, isMonitored, toggle };
+  /** 保存 webhook 并同步到已监控域名的服务端条目 */
+  const setWebhook = useCallback(async (url: string): Promise<boolean> => {
+    const trimmed = url.trim();
+    if (trimmed !== "" && !isValidWebhook(trimmed)) return false;
+    saveWebhook(trimmed);
+    await Promise.allSettled(
+      [...monitored].map((domain) =>
+        fetch("/api/monitor", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ domain, enabled: true, webhook: trimmed }),
+        }),
+      ),
+    );
+    return true;
+  }, [monitored]);
+
+  return { monitored, isMonitored, toggle, setWebhook };
 }
 
 export async function fetchMonitorChanges(): Promise<MonitorChange[]> {

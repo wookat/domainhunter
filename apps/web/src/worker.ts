@@ -3,6 +3,7 @@ import { nanoid } from "nanoid";
 import { generateCandidates, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
 import { generateAiCandidates, generateUnderstanding } from "./ai";
+import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { TLD_GUIDES, TLD_LIST, USD_TO_CNY } from "./content/tlds";
 
@@ -240,18 +241,31 @@ app.post("/api/search", async (c) => {
     prefixes?: string[];
     suffixes?: string[];
     tlds?: string[];
+    domains?: string[];
   }>();
   const roots = body.roots ?? [];
   const tlds = body.tlds ?? ["com"];
-  if (roots.length === 0) return c.json({ error: "roots required" }, 400);
+  // 批量粘贴模式：直接给完整域名清单（去重 + 校验，上限 200）
+  const explicit = [
+    ...new Set(
+      (Array.isArray(body.domains) ? body.domains : [])
+        .filter((d): d is string => typeof d === "string")
+        .map((d) => d.trim().toLowerCase())
+        .filter((d) => DOMAIN_RE.test(d) && d.length <= 253),
+    ),
+  ].slice(0, 200);
+  if (roots.length === 0 && explicit.length === 0) return c.json({ error: "roots required" }, 400);
 
-  const domains = generateCandidates({
-    roots,
-    prefixes: body.prefixes,
-    suffixes: body.suffixes,
-    tlds,
-    maxCandidates: 200,
-  });
+  const domains =
+    explicit.length > 0
+      ? explicit
+      : generateCandidates({
+          roots,
+          prefixes: body.prefixes,
+          suffixes: body.suffixes,
+          tlds,
+          maxCandidates: 200,
+        });
 
   const { readable, writable } = new TransformStream();
   const writer = writable.getWriter();
@@ -278,6 +292,20 @@ interface MonitorEntry {
   domain: string;
   status: string;
   lastChecked: number;
+  webhook?: string;
+}
+
+// 通知 webhook：仅接受 https URL，长度受限
+function sanitizeWebhook(raw: unknown): string | null {
+  if (typeof raw !== "string") return null;
+  const url = raw.trim();
+  if (url === "" || url.length > 500) return null;
+  try {
+    if (new URL(url).protocol !== "https:") return null;
+  } catch {
+    return null;
+  }
+  return url;
 }
 
 interface MonitorChange {
@@ -299,7 +327,7 @@ async function loadMonitorMap(kv: KVNamespace): Promise<Record<string, MonitorEn
 app.post("/api/monitor", async (c) => {
   const kv = c.env.CACHE;
   if (!kv) return c.json({ error: "monitor_unavailable" }, 503);
-  const body = await c.req.json<{ domain?: string; enabled?: boolean; status?: string }>().catch(() => null);
+  const body = await c.req.json<{ domain?: string; enabled?: boolean; status?: string; webhook?: string }>().catch(() => null);
   const domain = typeof body?.domain === "string" ? body.domain.trim().toLowerCase() : "";
   if (!DOMAIN_RE.test(domain) || domain.length > 253) return c.json({ error: "invalid_domain" }, 400);
   const enabled = body?.enabled !== false;
@@ -309,7 +337,13 @@ app.post("/api/monitor", async (c) => {
       return c.json({ error: "monitor_full" }, 429);
     }
     const status = typeof body?.status === "string" && ["available", "taken", "unknown"].includes(body.status) ? body.status : "unknown";
-    map[domain] = map[domain] ?? { domain, status, lastChecked: 0 };
+    const entry = map[domain] ?? { domain, status, lastChecked: 0 };
+    if (body && "webhook" in body) {
+      const webhook = sanitizeWebhook(body.webhook);
+      if (webhook) entry.webhook = webhook;
+      else delete entry.webhook;
+    }
+    map[domain] = entry;
   } else {
     delete map[domain];
   }
@@ -337,12 +371,15 @@ async function runMonitorSweep(env: Bindings): Promise<void> {
   if (domains.length === 0) return;
   const now = Date.now();
   const newChanges: MonitorChange[] = [];
+  const notifications: { webhook: string; change: MonitorChange }[] = [];
   // 缓存穿透（refresh=true）：监控复查必须拿实时状态
   await checkDomainsCached(kv, domains, async (r) => {
     const entry = map[r.domain];
     if (!entry) return;
     if (r.status !== "unknown" && entry.status !== "unknown" && r.status !== entry.status) {
-      newChanges.push({ domain: r.domain, from: entry.status, to: r.status, at: now });
+      const change = { domain: r.domain, from: entry.status, to: r.status, at: now };
+      newChanges.push(change);
+      if (entry.webhook) notifications.push({ webhook: entry.webhook, change });
     }
     if (r.status !== "unknown") entry.status = r.status;
     entry.lastChecked = now;
@@ -354,6 +391,42 @@ async function runMonitorSweep(env: Bindings): Promise<void> {
       prev = (await kv.get<MonitorChange[]>(MONITOR_CHANGES_KEY, "json")) ?? [];
     } catch { /* 旧记录读失败则只保留本次 */ }
     await kv.put(MONITOR_CHANGES_KEY, JSON.stringify([...newChanges, ...prev].slice(0, MAX_MONITOR_CHANGES)));
+  }
+  await Promise.allSettled(notifications.slice(0, 50).map(({ webhook, change }) => sendWebhookNotification(webhook, change)));
+}
+
+/** 状态变化时向用户自备的 webhook 推送一条 JSON 通知（钉钉/飞书/Slack/自建均可） */
+async function sendWebhookNotification(webhook: string, change: MonitorChange): Promise<void> {
+  const event = change.to === "available" ? "dropped" : "regained";
+  const text =
+    event === "dropped"
+      ? `🎉 DomainHunter: ${change.domain} 已释放，现在可以注册了！ / is now available to register!`
+      : `DomainHunter: ${change.domain} 已被注册 / has been registered (${change.from} → ${change.to})`;
+  const body = JSON.stringify({
+    source: "domainhunter",
+    event,
+    domain: change.domain,
+    from: change.from,
+    to: change.to,
+    at: change.at,
+    // Slack/自建服务：text 字符串
+    text,
+    // 飞书机器人：msg_type + content.text
+    msg_type: "text",
+    content: { text },
+    // 企业微信机器人：msgtype + markdown/text 需 text 为对象，此处仅提供通用字段
+    msgtype: "text",
+    url: `https://hunt.zalize.com`,
+  });
+  try {
+    await fetch(webhook, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body,
+      signal: AbortSignal.timeout(5000),
+    });
+  } catch {
+    // 通知失败不影响监控主流程
   }
 }
 
@@ -563,6 +636,52 @@ app.get("/api/og/:id", async (c) => {
 
 const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
+/** 标题按宽度折行（中文按 2 单位/字、英文按词），最多两行，超出加省略号 */
+function wrapTitle(s: string, maxUnits: number): string[] {
+  const width = (t: string) => [...t].reduce((n, ch) => n + (ch.charCodeAt(0) > 0x2e7f ? 2 : 1), 0);
+  if (width(s) <= maxUnits) return [s];
+  const words = /\s/.test(s.trim()) ? s.split(/\s+/) : [...s];
+  const sep = /\s/.test(s.trim()) ? " " : "";
+  const lines: string[] = [];
+  let cur = "";
+  for (const w of words) {
+    const next = cur ? cur + sep + w : w;
+    if (width(next) > maxUnits && cur) {
+      lines.push(cur);
+      cur = w;
+      if (lines.length === 2) break;
+    } else cur = next;
+  }
+  if (lines.length < 2 && cur) lines.push(cur);
+  if (lines.length === 2 && width(lines[1]) > maxUnits) {
+    let t = lines[1];
+    while (width(t) > maxUnits - 1) t = [...t].slice(0, -1).join("");
+    lines[1] = t + "…";
+  }
+  return lines.slice(0, 2);
+}
+
+/** SEO 页动态分享图：kicker 徽章 + 折行标题，品牌绿主题（SVG，1200×630） */
+function pageOgSvg(kicker: string, title: string, lang: "zh" | "en"): string {
+  const lines = wrapTitle(title, 38);
+  const rows = lines
+    .map((line, i) => `<text x="80" y="${330 + i * 76}" font-family="'Inter',system-ui,sans-serif" font-size="52" font-weight="800" fill="#f2faf6">${escapeHtml(line)}</text>`)
+    .join("\n  ");
+  const tagline = lang === "en" ? "AI naming · live RDAP+DNS checks · hunt.zalize.com" : "AI 批量构思 · RDAP+DNS 实时核验 · hunt.zalize.com";
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b1610"/>
+  <circle cx="1050" cy="-60" r="420" fill="#3ecf8e" opacity="0.08"/>
+  <circle cx="90" cy="660" r="320" fill="#3ecf8e" opacity="0.06"/>
+  <text x="80" y="110" font-family="'Inter',system-ui,sans-serif" font-size="30" font-weight="800" fill="#3ecf8e">DomainHunter</text>
+  <g>
+    <rect x="80" y="170" width="${64 + [...kicker].reduce((n, ch) => n + (ch.charCodeAt(0) > 0x2e7f ? 34 : 20), 0)}" height="58" rx="14" fill="#12261b" stroke="#1f4630" stroke-width="1.5"/>
+    <text x="112" y="209" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="32" font-weight="700" fill="#3ecf8e">${escapeHtml(kicker)}</text>
+  </g>
+  ${rows}
+  <text x="80" y="570" font-family="'Inter',system-ui,sans-serif" font-size="26" fill="#69a884">${tagline}</text>
+</svg>`;
+}
+
 /** hreflang alternate 标签：zh-CN / en / x-default，用 ?lang= 区分语言版本 */
 function hreflangTags(path: string): string {
   const base = `${SITE_ORIGIN}${path}`;
@@ -602,6 +721,37 @@ const breadcrumbJsonld = (name: string, path: string, lang: "zh" | "en") =>
     ],
   });
 
+// SEO 页动态分享图：/api/og/tld/:tld 与 /api/og/guide/:slug（lang 参数控制语言）
+app.get("/api/og/tld/:tld", (c) => {
+  const tld = c.req.param("tld").toLowerCase();
+  const guide = TLD_GUIDES[tld];
+  if (!guide) return c.notFound();
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  return new Response(pageOgSvg(`.${tld}`, guide[lang].title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
+app.get("/api/og/guide/:slug", (c) => {
+  const slug = c.req.param("slug").toLowerCase();
+  const guide = INDUSTRY_GUIDES[slug];
+  if (!guide) return c.notFound();
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  return new Response(pageOgSvg(guide[lang].label, guide[lang].title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
+app.get("/api/og/vs/:slug", (c) => {
+  const slug = c.req.param("slug").toLowerCase();
+  const cmp = TLD_COMPARES[slug];
+  if (!cmp) return c.notFound();
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  return new Response(pageOgSvg(`.${cmp.a} vs .${cmp.b}`, cmp[lang].title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
   const html = injectHreflang(await res.text(), "/").replace("</head>", `<script type="application/ld+json">${FAQ_JSONLD}</script></head>`);
@@ -627,7 +777,11 @@ app.get("/tld/:tld", async (c) => {
     .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
     .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/tld/${tld}" />`)
-    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/tld/${tld}" />`);
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/tld/${tld}" />`)
+    .replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/tld/${tld}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
   html = injectHreflang(html, `/tld/${tld}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang)}</script></head>`);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -651,13 +805,45 @@ app.get("/guide/:slug", async (c) => {
     .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
     .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/guide/${slug}" />`)
-    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/guide/${slug}" />`);
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/guide/${slug}" />`)
+    .replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/guide/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
   html = injectHreflang(html, `/guide/${slug}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script></head>`);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
+// TLD 对比页（SPA 路由 + SSR meta）：回 index.html 并按对比对与语言替换 title/description
+app.get("/vs/:slug", async (c) => {
+  const slug = c.req.param("slug").toLowerCase();
+  const cmp = TLD_COMPARES[slug];
+  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  if (!cmp) return res;
+  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const loc = cmp[lang];
+  const title = escapeHtml(`${loc.title} | DomainHunter`);
+  const desc = escapeHtml(loc.metaDescription);
+  let html = await res.text();
+  html = html
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/vs/${slug}" />`)
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/vs/${slug}" />`)
+    .replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/vs/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
+  html = injectHreflang(html, `/vs/${slug}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang)}</script></head>`);
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
+});
+
 app.get("/sitemap.xml", (c) => {
-  const paths = ["/", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`)];
+  const paths = ["/", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
   const alt = (p: string) =>
     [
       `    <xhtml:link rel="alternate" hreflang="zh-CN" href="${SITE_ORIGIN}${p}?lang=zh" />`,

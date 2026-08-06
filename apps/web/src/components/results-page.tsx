@@ -3,9 +3,11 @@ import {
   ArrowDownWideNarrow,
   Bookmark,
   BookmarkCheck,
+  Check,
   ChevronDown,
   ChevronRight,
   Download,
+  Link2,
   LayoutGrid,
   Lock,
   RotateCw,
@@ -154,9 +156,22 @@ function GridCard({
   );
 }
 
+/** 把当前搜索编成可分享的 /?q=…&tld=…&style=…&len=… 链接 */
+function searchLink(description: string, tlds: string[], style: string, lengthPref: string): string {
+  const params = new URLSearchParams();
+  params.set("q", description);
+  if (tlds.length > 0) params.set("tld", tlds.join(","));
+  if (style) params.set("style", style);
+  if (lengthPref) params.set("len", lengthPref);
+  return `${window.location.origin}/?${params.toString()}`;
+}
+
 export function ResultsPage({
   rows,
   description,
+  tlds,
+  style,
+  lengthPref,
   roundCount,
   elapsedSec,
   locked,
@@ -170,6 +185,9 @@ export function ResultsPage({
 }: {
   rows: Row[];
   description: string;
+  tlds: string[];
+  style: string;
+  lengthPref: string;
   roundCount: number;
   elapsedSec?: number;
   locked: Set<string>;
@@ -186,6 +204,7 @@ export function ResultsPage({
   const [tldFilter, setTldFilter] = useState<string>("");
   const [sort, setSort] = useState<SortKey>("score");
   const [view, setView] = useState<View>("rows");
+  const [linkCopied, setLinkCopied] = useState(false);
   const [selectedIdx, setSelectedIdx] = useState(-1);
   const listRef = useRef<HTMLDivElement>(null);
 
@@ -251,6 +270,18 @@ export function ResultsPage({
             </p>
           </div>
           <div className="flex items-center gap-2">
+            <button
+              className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0"
+              title={t("results.copyLinkTitle")}
+              onClick={() => {
+                void navigator.clipboard.writeText(searchLink(description, tlds, style, lengthPref));
+                setLinkCopied(true);
+                window.setTimeout(() => setLinkCopied(false), 2000);
+              }}
+            >
+              {linkCopied ? <Check className="h-4 w-4 text-brand" /> : <Link2 className="h-4 w-4" />}
+              <span className="hidden sm:inline">{linkCopied ? t("results.linkCopied") : t("results.copyLink")}</span>
+            </button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0">
