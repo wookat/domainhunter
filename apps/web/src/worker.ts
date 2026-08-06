@@ -735,6 +735,20 @@ const breadcrumbJsonld = (name: string, path: string, lang: "zh" | "en") =>
     ],
   });
 
+/** Article 结构化数据：指南/对比类内容页的富摘要资格（headline/description/inLanguage/image） */
+const articleJsonld = (title: string, description: string, path: string, lang: "zh" | "en", image: string) =>
+  JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    inLanguage: lang === "en" ? "en" : "zh-CN",
+    image: `${SITE_ORIGIN}${image}`,
+    mainEntityOfPage: `${SITE_ORIGIN}${path}`,
+    author: { "@type": "Organization", name: "DomainHunter", url: SITE_ORIGIN },
+    publisher: { "@type": "Organization", name: "DomainHunter", url: SITE_ORIGIN },
+  });
+
 // SEO 页动态分享图：/api/og/tld/:tld 与 /api/og/guide/:slug（lang 参数控制语言）
 app.get("/api/og/tld/:tld", (c) => {
   const tld = c.req.param("tld").toLowerCase();
@@ -824,7 +838,10 @@ app.get("/guide/:slug", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/guide/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, `/guide/${slug}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script></head>`);
+  html = injectHreflang(html, `/guide/${slug}`).replace(
+    "</head>",
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script></head>`,
+  );
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -852,7 +869,10 @@ app.get("/vs/:slug", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/vs/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, `/vs/${slug}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang)}</script></head>`);
+  html = injectHreflang(html, `/vs/${slug}`).replace(
+    "</head>",
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script></head>`,
+  );
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
