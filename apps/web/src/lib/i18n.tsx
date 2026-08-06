@@ -70,6 +70,8 @@ const zh = {
   "home.quickRegister": "去 Porkbun 注册 {domain}",
   "home.quickAiCta": "被注册了？让 AI 找一批相似寓意、真正可注册的名字",
   "home.quickAiDesc": "想要一个和「{label}」相似寓意、相似风格的名字，要求好记、顺口、适合做品牌。",
+  "home.quickVariantsBtn": "免费查 {n} 个前后缀变体",
+  "home.quickVariantsProgress": "变体核验 {checked}/{total} · 可注册 {n} 个（不消耗 AI 次数）",
   // 高级模式
   "adv.title": "高级模式",
   "adv.subtitle": "词根 × 前后缀 × TLD 批量组合生成，逐个核验可注册状态",
@@ -289,6 +291,8 @@ const en: Record<I18nKey, string> = {
   "home.quickRegister": "Register {domain} on Porkbun",
   "home.quickAiCta": "Taken? Let AI find similar names that are actually available",
   "home.quickAiDesc": "I want a name with a similar meaning and style to \"{label}\" — memorable, easy to say, and brandable.",
+  "home.quickVariantsBtn": "Check {n} prefix/suffix variants free",
+  "home.quickVariantsProgress": "Variants checked {checked}/{total} · {n} available (no AI quota used)",
   "adv.title": "Advanced mode",
   "adv.subtitle": "Batch-generate roots × affixes × TLDs and verify availability one by one",
   "adv.roots": "Roots",
