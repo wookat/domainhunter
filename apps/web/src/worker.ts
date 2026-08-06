@@ -7,6 +7,7 @@ import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
 import { buildGuideFaq } from "./content/guide-faq";
+import { buildPricesFaq } from "./content/prices-faq";
 import { buildTldFaq } from "./content/tld-faq";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
@@ -1039,7 +1040,19 @@ app.get("/prices", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/prices?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/prices").replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/prices", lang)}</script></head>`);
+  const pricesFaqJsonld = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: buildPricesFaq(lang).map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  });
+  html = injectHreflang(html, "/prices").replace(
+    "</head>",
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/prices", lang)}</script><script type="application/ld+json">${pricesFaqJsonld}</script></head>`,
+  );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/prices-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
