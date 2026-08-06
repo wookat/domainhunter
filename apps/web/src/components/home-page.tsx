@@ -192,10 +192,14 @@ export function HomePage({ initial, onSubmit, onBackToResults }: { initial: Home
   const quickAbortRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
-    // 输入变化后清空上次快速核验结果
+    // 输入变化后清空上次快速核验结果；停顿 800ms 后对现成名字自动核验（走缓存的 /api/search，不消耗 AI 次数）
     quickAbortRef.current?.abort();
     setQuickRows([]);
     setQuickRunning(false);
+    if (!quick || quick.label.length < 3) return;
+    const id = setTimeout(() => void runQuickCheck(), 800);
+    return () => clearTimeout(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [description]);
 
   async function runQuickCheck() {
