@@ -649,6 +649,22 @@ export function HomePage({
             ))}
           </div>
         </div>
+
+        {/* 常见问题（与 SSR 注入的 FAQPage JSON-LD 内容一致） */}
+        <div className="mt-16">
+          <h2 className="text-center text-sm font-semibold text-txt1">{t("home.faq.title")}</h2>
+          <div className="mt-5 space-y-2">
+            {([1, 2, 3, 4, 5, 6] as const).map((i) => (
+              <details key={i} className="group rounded-xl border border-line bg-bg1 px-5 py-4">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium text-txt1 [&::-webkit-details-marker]:hidden">
+                  {t(`home.faq.q${i}` as I18nKey)}
+                  <ChevronDown className="h-4 w-4 shrink-0 text-txt2 transition-transform group-open:rotate-180" />
+                </summary>
+                <p className="mt-2.5 text-xs leading-relaxed text-txt1">{t(`home.faq.a${i}` as I18nKey)}</p>
+              </details>
+            ))}
+          </div>
+        </div>
       </div>
     </main>
   );
