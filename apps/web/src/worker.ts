@@ -279,6 +279,20 @@ interface MonitorEntry {
   domain: string;
   status: string;
   lastChecked: number;
+  webhook?: string;
+}
+
+// 通知 webhook：仅接受 https URL，长度受限
+function sanitizeWebhook(raw: unknown): string | null {
+  if (typeof raw !== "string") return null;
+  const url = raw.trim();
+  if (url === "" || url.length > 500) return null;
+  try {
+    if (new URL(url).protocol !== "https:") return null;
+  } catch {
+    return null;
+  }
+  return url;
 }
 
 interface MonitorChange {
@@ -300,7 +314,7 @@ async function loadMonitorMap(kv: KVNamespace): Promise<Record<string, MonitorEn
 app.post("/api/monitor", async (c) => {
   const kv = c.env.CACHE;
   if (!kv) return c.json({ error: "monitor_unavailable" }, 503);
-  const body = await c.req.json<{ domain?: string; enabled?: boolean; status?: string }>().catch(() => null);
+  const body = await c.req.json<{ domain?: string; enabled?: boolean; status?: string; webhook?: string }>().catch(() => null);
   const domain = typeof body?.domain === "string" ? body.domain.trim().toLowerCase() : "";
   if (!DOMAIN_RE.test(domain) || domain.length > 253) return c.json({ error: "invalid_domain" }, 400);
   const enabled = body?.enabled !== false;
@@ -310,7 +324,13 @@ app.post("/api/monitor", async (c) => {
       return c.json({ error: "monitor_full" }, 429);
     }
     const status = typeof body?.status === "string" && ["available", "taken", "unknown"].includes(body.status) ? body.status : "unknown";
-    map[domain] = map[domain] ?? { domain, status, lastChecked: 0 };
+    const entry = map[domain] ?? { domain, status, lastChecked: 0 };
+    if (body && "webhook" in body) {
+      const webhook = sanitizeWebhook(body.webhook);
+      if (webhook) entry.webhook = webhook;
+      else delete entry.webhook;
+    }
+    map[domain] = entry;
   } else {
     delete map[domain];
   }
@@ -338,12 +358,15 @@ async function runMonitorSweep(env: Bindings): Promise<void> {
   if (domains.length === 0) return;
   const now = Date.now();
   const newChanges: MonitorChange[] = [];
+  const notifications: { webhook: string; change: MonitorChange }[] = [];
   // 缓存穿透（refresh=true）：监控复查必须拿实时状态
   await checkDomainsCached(kv, domains, async (r) => {
     const entry = map[r.domain];
     if (!entry) return;
     if (r.status !== "unknown" && entry.status !== "unknown" && r.status !== entry.status) {
-      newChanges.push({ domain: r.domain, from: entry.status, to: r.status, at: now });
+      const change = { domain: r.domain, from: entry.status, to: r.status, at: now };
+      newChanges.push(change);
+      if (entry.webhook) notifications.push({ webhook: entry.webhook, change });
     }
     if (r.status !== "unknown") entry.status = r.status;
     entry.lastChecked = now;
@@ -355,6 +378,42 @@ async function runMonitorSweep(env: Bindings): Promise<void> {
       prev = (await kv.get<MonitorChange[]>(MONITOR_CHANGES_KEY, "json")) ?? [];
     } catch { /* 旧记录读失败则只保留本次 */ }
     await kv.put(MONITOR_CHANGES_KEY, JSON.stringify([...newChanges, ...prev].slice(0, MAX_MONITOR_CHANGES)));
+  }
+  await Promise.allSettled(notifications.slice(0, 50).map(({ webhook, change }) => sendWebhookNotification(webhook, change)));
+}
+
+/** 状态变化时向用户自备的 webhook 推送一条 JSON 通知（钉钉/飞书/Slack/自建均可） */
+async function sendWebhookNotification(webhook: string, change: MonitorChange): Promise<void> {
+  const event = change.to === "available" ? "dropped" : "regained";
+  const text =
+    event === "dropped"
+      ? `🎉 DomainHunter: ${change.domain} 已释放，现在可以注册了！ / is now available to register!`
+      : `DomainHunter: ${change.domain} 已被注册 / has been registered (${change.from} → ${change.to})`;
+  const body = JSON.stringify({
+    source: "domainhunter",
+    event,
+    domain: change.domain,
+    from: change.from,
+    to: change.to,
+    at: change.at,
+    // Slack/自建服务：text 字符串
+    text,
+    // 飞书机器人：msg_type + content.text
+    msg_type: "text",
+    content: { text },
+    // 企业微信机器人：msgtype + markdown/text 需 text 为对象，此处仅提供通用字段
+    msgtype: "text",
+    url: `https://hunt.zalize.com`,
+  });
+  try {
+    await fetch(webhook, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body,
+      signal: AbortSignal.timeout(5000),
+    });
+  } catch {
+    // 通知失败不影响监控主流程
   }
 }
 
