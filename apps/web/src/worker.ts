@@ -963,8 +963,10 @@ app.get("/prices", async (c) => {
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
+const sitemapPaths = () => ["/", "/prices", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
+
 app.get("/sitemap.xml", (c) => {
-  const paths = ["/", "/prices", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
+  const paths = sitemapPaths();
   const alt = (p: string) =>
     [
       `    <xhtml:link rel="alternate" hreflang="zh-CN" href="${SITE_ORIGIN}${p}?lang=zh" />`,
@@ -984,9 +986,32 @@ app.get("/robots.txt", (c) =>
 
 app.all("*", (c) => c.env.ASSETS.fetch(c.req.raw));
 
+// IndexNow：向 Bing/Yandex 等搜索引擎主动推送全站 URL（key 按协议公开，对应 /<key>.txt 静态文件）
+const INDEXNOW_KEY = "024aa6c6f88245bbacdac2f60a94e333";
+const INDEXNOW_INTERVAL_MS = 24 * 3600 * 1000;
+
+async function pingIndexNow(env: Bindings): Promise<void> {
+  if (!env.CACHE) return;
+  const last = await env.CACHE.get("indexnow:last");
+  if (last && Date.now() - Number(last) < INDEXNOW_INTERVAL_MS) return;
+  await env.CACHE.put("indexnow:last", String(Date.now()));
+  const host = SITE_ORIGIN.replace(/^https?:\/\//, "");
+  await fetch("https://api.indexnow.org/indexnow", {
+    method: "POST",
+    headers: { "content-type": "application/json; charset=utf-8" },
+    body: JSON.stringify({
+      host,
+      key: INDEXNOW_KEY,
+      keyLocation: `${SITE_ORIGIN}/${INDEXNOW_KEY}.txt`,
+      urlList: sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`),
+    }),
+  });
+}
+
 export default {
   fetch: app.fetch,
   async scheduled(_event: ScheduledController, env: Bindings, ctx: ExecutionContext) {
     ctx.waitUntil(runMonitorSweep(env));
+    ctx.waitUntil(pingIndexNow(env));
   },
 };
