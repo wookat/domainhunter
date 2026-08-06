@@ -1,0 +1,66 @@
+/* DomainHunter R3 · Design Tokens（暗色默认，.light 反转同一 token 体系） */
+:root {
+  --bg-0: #0B0C0E;            /* 页面背景 */
+  --bg-1: #131519;            /* 卡片 */
+  --bg-2: #1A1D23;            /* 悬浮层/输入框 */
+  --bg-3: #22262E;            /* hover 态 */
+  --line: rgba(255,255,255,0.08);
+  --line-strong: rgba(255,255,255,0.14);
+  --txt-0: #EDEFF2;           /* 主文字 */
+  --txt-1: #9AA1AB;           /* 次要文字 */
+  --txt-2: #5C636D;           /* 弱文字 */
+  --brand: #4ADE80;           /* 猎手绿（提亮） */
+  --brand-strong: #3DDC84;
+  --brand-ink: #052E16;       /* 绿底上的文字 */
+  --brand-dim: rgba(74,222,128,0.12);
+  --brand-line: rgba(74,222,128,0.28);
+  --amber: #FBBF24;           /* 未知 */
+  --amber-dim: rgba(251,191,36,0.12);
+  --taken: #6B7280;           /* 已注册=灰（非红） */
+  --taken-dim: rgba(107,114,128,0.14);
+  --gold: #F5C044;            /* 90+ 评分徽章 */
+  --gold-dim: rgba(245,192,68,0.14);
+  --glow: radial-gradient(ellipse 60% 45% at 50% -12%, rgba(61,220,132,0.14), transparent 70%);
+}
+.light {
+  --bg-0: #FAFAF9;
+  --bg-1: #FFFFFF;
+  --bg-2: #F4F4F5;
+  --bg-3: #E9EAEC;
+  --line: rgba(0,0,0,0.08);
+  --line-strong: rgba(0,0,0,0.16);
+  --txt-0: #18181B;
+  --txt-1: #52525B;
+  --txt-2: #8E8E96;
+  --brand: #059669;
+  --brand-strong: #047857;
+  --brand-ink: #FFFFFF;
+  --brand-dim: rgba(5,150,105,0.10);
+  --brand-line: rgba(5,150,105,0.30);
+  --amber: #B45309;
+  --amber-dim: rgba(180,83,9,0.10);
+  --taken: #71717A;
+  --taken-dim: rgba(113,113,122,0.10);
+  --gold: #B7791F;
+  --gold-dim: rgba(183,121,31,0.12);
+  --glow: radial-gradient(ellipse 60% 45% at 50% -12%, rgba(5,150,105,0.10), transparent 70%);
+}
+html { background: var(--bg-0); color: var(--txt-0); }
+body { font-family: Inter, "PingFang SC", "Noto Sans SC", system-ui, sans-serif; }
+.mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace; }
+.tnum { font-variant-numeric: tabular-nums; }
+* { border-color: var(--line); }
+::placeholder { color: var(--txt-2); }
+.card { background: var(--bg-1); border: 1px solid var(--line); border-radius: 12px; }
+kbd {
+  font-family: "JetBrains Mono", monospace; font-size: 10px; color: var(--txt-1);
+  background: var(--bg-2); border: 1px solid var(--line-strong); border-bottom-width: 2px;
+  border-radius: 4px; padding: 1px 5px;
+}
+@keyframes breathe { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.45;transform:scale(.8)} }
+.dot-breathe { animation: breathe 1.6s ease-in-out infinite; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
+.fade-up { animation: fadeUp .3s ease both; }
+@keyframes spin { to{transform:rotate(360deg)} }
+.spin { animation: spin 1s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .dot-breathe,.fade-up,.spin{animation:none} }

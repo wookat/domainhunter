@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DomainHunter · 着陆页（R3）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_tokens.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen" style="background:var(--bg-0);color:var(--txt-0)">
+
+<!-- 顶部导航：Logo + 候选清单入口（P1#4 落点常驻） + GitHub + 主题切换 -->
+<header class="sticky top-0 z-20 border-b" style="background:color-mix(in srgb, var(--bg-0) 85%, transparent);backdrop-filter:blur(12px);border-color:var(--line)">
+  <div class="max-w-6xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
+    <a class="flex items-center gap-2 font-bold tracking-tight">
+      <span class="w-7 h-7 rounded-lg grid place-items-center" style="background:var(--brand-dim);border:1px solid var(--brand-line)">
+        <i data-lucide="crosshair" class="w-4 h-4" style="color:var(--brand)"></i>
+      </span>
+      DomainHunter
+    </a>
+    <div class="flex items-center gap-1.5">
+      <button class="h-9 px-3 rounded-lg text-sm flex items-center gap-1.5 border" style="border-color:var(--line);color:var(--txt-1)">
+        <i data-lucide="bookmark" class="w-4 h-4"></i>候选清单
+        <span class="mono tnum text-[11px] px-1.5 rounded-full" style="background:var(--brand-dim);color:var(--brand)">3</span>
+      </button>
+      <button class="h-9 w-9 rounded-lg grid place-items-center" style="color:var(--txt-1)"><i data-lucide="github" class="w-4 h-4"></i></button>
+      <button onclick="document.documentElement.classList.toggle('light')" class="h-9 w-9 rounded-lg grid place-items-center border" style="border-color:var(--line);color:var(--txt-1)" title="切换浅色/暗色">
+        <i data-lucide="sun-moon" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero：prompt-first 单焦点（P0#1），渐变光晕仅此一处 -->
+<main class="relative">
+  <div class="absolute inset-x-0 top-0 h-[420px] pointer-events-none" style="background:var(--glow)"></div>
+  <div class="relative max-w-3xl mx-auto px-4 pt-16 md:pt-24 pb-16">
+
+    <div class="flex justify-center mb-5">
+      <span class="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border" style="border-color:var(--brand-line);background:var(--brand-dim);color:var(--brand)">
+        <span class="w-1.5 h-1.5 rounded-full dot-breathe" style="background:var(--brand)"></span>
+        AI Agent · RDAP+DNS 实时核验可注册
+      </span>
+    </div>
+
+    <h1 class="text-center font-extrabold tracking-[-0.03em] leading-[1.12] text-4xl md:text-[52px]" style="text-wrap:balance">
+      说出寓意，<br class="md:hidden">猎到真正可注册的好域名
+    </h1>
+    <p class="text-center mt-4 text-base md:text-lg" style="color:var(--txt-1)">
+      描述你的想法，AI 批量构思、实时核验、逐个评分——只给你能立刻注册的。
+    </p>
+
+    <!-- 复合输入框（P0#2）：textarea + 底部参数工具条 + 框内发送按钮 -->
+    <div class="mt-8 rounded-2xl border overflow-hidden" style="background:var(--bg-2);border-color:var(--line-strong);box-shadow:0 0 0 1px transparent, 0 24px 48px -24px rgba(0,0,0,.5)">
+      <textarea rows="3" class="w-full bg-transparent resize-none px-5 pt-4 pb-2 text-[15px] leading-relaxed outline-none" placeholder="例如：面向独立开发者的 AI 周报工具，名字要短、极客感、好读好记…"></textarea>
+      <div class="flex items-center gap-2 px-3 pb-3 flex-wrap">
+        <!-- TLD chips（多选） -->
+        <div class="flex items-center gap-1 p-1 rounded-lg border" style="border-color:var(--line);background:var(--bg-1)">
+          <button class="mono text-xs px-2 py-1 rounded-md font-semibold" style="background:var(--brand-dim);color:var(--brand)">.com</button>
+          <button class="mono text-xs px-2 py-1 rounded-md" style="color:var(--txt-1)">.cn</button>
+          <button class="mono text-xs px-2 py-1 rounded-md font-semibold" style="background:var(--brand-dim);color:var(--brand)">.ai</button>
+          <button class="mono text-xs px-2 py-1 rounded-md" style="color:var(--txt-1)">.io</button>
+          <button class="text-xs px-1.5 py-1 rounded-md" style="color:var(--txt-2)">+3</button>
+        </div>
+        <!-- 风格迷你下拉 -->
+        <button class="h-8 px-2.5 rounded-lg border text-xs flex items-center gap-1" style="border-color:var(--line);background:var(--bg-1);color:var(--txt-1)">
+          <i data-lucide="wand-2" class="w-3.5 h-3.5"></i>极客感<i data-lucide="chevron-down" class="w-3 h-3"></i>
+        </button>
+        <!-- 长度迷你下拉 -->
+        <button class="h-8 px-2.5 rounded-lg border text-xs flex items-center gap-1" style="border-color:var(--line);background:var(--bg-1);color:var(--txt-1)">
+          <i data-lucide="ruler" class="w-3.5 h-3.5"></i>≤ 8 字符<i data-lucide="chevron-down" class="w-3 h-3"></i>
+        </button>
+        <div class="flex-1"></div>
+        <span class="hidden md:inline text-[11px]" style="color:var(--txt-2)">⌘ Enter</span>
+        <button class="h-9 px-4 rounded-xl font-semibold text-sm flex items-center gap-1.5" style="background:var(--brand);color:var(--brand-ink)">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>开始猎取
+        </button>
+      </div>
+    </div>
+
+    <!-- 示例 chips 即模板（P1#3：点击填充并自动开跑） -->
+    <div class="mt-4 flex flex-wrap justify-center gap-2">
+      <button class="text-xs px-3 py-1.5 rounded-full border hover:opacity-80" style="border-color:var(--line);color:var(--txt-1)">独立开发者的 AI 周报工具</button>
+      <button class="text-xs px-3 py-1.5 rounded-full border hover:opacity-80" style="border-color:var(--line);color:var(--txt-1)">宠物营养订阅电商</button>
+      <button class="text-xs px-3 py-1.5 rounded-full border hover:opacity-80" style="border-color:var(--line);color:var(--txt-1)">极简冥想 App</button>
+      <button class="text-xs px-3 py-1.5 rounded-full border hover:opacity-80" style="border-color:var(--line);color:var(--txt-1)">跨境 SaaS 数据看板</button>
+    </div>
+
+    <!-- 信任锚点（P1#5）：数据 + 卖点一行小字 -->
+    <p class="mt-10 text-center text-xs flex items-center justify-center gap-4 flex-wrap" style="color:var(--txt-2)">
+      <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5" style="color:var(--brand)"></i>已实时核验 <b class="mono tnum" style="color:var(--txt-1)">128,940</b> 个域名</span>
+      <span class="flex items-center gap-1"><i data-lucide="zap" class="w-3.5 h-3.5" style="color:var(--brand)"></i>结果流式返回，先到先看</span>
+      <span class="flex items-center gap-1"><i data-lucide="code-2" class="w-3.5 h-3.5" style="color:var(--brand)"></i>开源 MIT</span>
+    </p>
+  </div>
+</main>
+
+<script>lucide.createIcons()</script>
+</body>
+</html>
