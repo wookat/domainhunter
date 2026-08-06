@@ -67,7 +67,7 @@ function RoundSteps({
       <div className="min-w-0 flex-1">
         <div className="text-[13px]">
           <span className="text-txt0">{t("agent.round", { n: round.round })}</span>
-          {round.note && <span className="text-txt1"> · {round.note}</span>}
+          <span className="text-txt1"> · {t(round.noteKey)}</span>
         </div>
         <ul className="mt-2 space-y-1.5 text-xs text-txt1">
           <li className="flex items-center gap-1.5">
