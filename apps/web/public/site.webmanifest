@@ -1,0 +1,13 @@
+{
+  "name": "DomainHunter — AI 域名猎手",
+  "short_name": "DomainHunter",
+  "description": "说出寓意，AI 批量构思、实时核验、逐个评分——只给你真正可注册的好域名。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0c0e",
+  "theme_color": "#0b0c0e",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
