@@ -140,6 +140,11 @@ function templateFromQuery(lang: string): string {
   return tpl ? (lang === "zh" ? tpl.zh : tpl.en) : "";
 }
 
+/** /?q=<描述> 预填搜索描述（分享搜索链接入口），优先于 tpl */
+function descriptionFromQuery(): string {
+  return new URLSearchParams(window.location.search).get("q")?.trim().slice(0, MAX_LEN) ?? "";
+}
+
 // value 保持中文（传给 AI 的提示词），label 按语言切换
 export const STYLE_OPTIONS: { value: string; labelKey: I18nKey }[] = [
   { value: "none", labelKey: "home.style.none" },
@@ -231,7 +236,7 @@ export function HomePage({
   shortlist: { has: (domain: string) => boolean; toggle: (row: Row) => void };
 }) {
   const { t, lang } = useI18n();
-  const [description, setDescription] = useState(() => initial.description || templateFromQuery(lang));
+  const [description, setDescription] = useState(() => initial.description || descriptionFromQuery() || templateFromQuery(lang));
   const [totalChecked, setTotalChecked] = useState<number | null>(null);
 
   useEffect(() => {
