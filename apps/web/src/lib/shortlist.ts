@@ -74,6 +74,15 @@ export function useShortlist() {
 
   const clear = useCallback(() => setItems([]), []);
 
+  /** 同步码导入：按域名去重合并 */
+  const merge = useCallback((incoming: Omit<ShortlistItem, "addedAt">[]) => {
+    setItems((prev) => {
+      const seen = new Set(prev.map((i) => i.domain));
+      const fresh = incoming.filter((i) => !seen.has(i.domain)).map((i) => ({ ...i, addedAt: Date.now() }));
+      return fresh.length > 0 ? [...prev, ...fresh] : prev;
+    });
+  }, []);
+
   /** 重新核验后回写状态与核验时间 */
   const applyStatuses = useCallback((statuses: Record<string, Status>) => {
     setItems((prev) => prev.map((i) => (statuses[i.domain] ? { ...i, status: statuses[i.domain] } : i)));
@@ -86,5 +95,5 @@ export function useShortlist() {
     }
   }, []);
 
-  return { items, has, toggle, remove, clear, lastCheckedAt, applyStatuses };
+  return { items, has, toggle, remove, clear, merge, lastCheckedAt, applyStatuses };
 }

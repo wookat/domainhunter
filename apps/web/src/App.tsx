@@ -11,6 +11,7 @@ import { ShortlistPage } from "@/components/shortlist-page";
 import { AdvancedPage } from "@/components/advanced-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
 import { isMockEnabled, runMockStream } from "@/mock";
+import { TLD_LIST } from "@/content/tlds";
 import { useI18n } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
 import { friendlyError, friendlyHttpError } from "@/lib/utils";
@@ -37,7 +38,7 @@ function initialTlds(): string[] {
 }
 
 export default function App() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [shareId] = useState<string | null>(shareIdFromPath);
   const [guideTld] = useState<string | null>(tldFromPath);
   const [mode, setMode] = useState<Mode>("home");
@@ -363,6 +364,7 @@ export default function App() {
           onRemove={shortlist.remove}
           onClear={shortlist.clear}
           onStart={() => setMode("home")}
+          onMerge={shortlist.merge}
           lastCheckedAt={shortlist.lastCheckedAt}
           onApplyStatuses={shortlist.applyStatuses}
         />
@@ -371,6 +373,17 @@ export default function App() {
 
       {mode === "home" && (
         <footer className="pb-8 text-center text-xs text-txt2">
+          {/* TLD 指南页内链：SEO + 用户入口 */}
+          <div className="mx-auto mb-5 max-w-3xl px-4">
+            <p className="font-semibold text-txt1">{t("footer.tldGuides")}</p>
+            <div className="mt-2.5 flex flex-wrap justify-center gap-x-3 gap-y-1.5">
+              {TLD_LIST.map((tld) => (
+                <a key={tld} className="font-mono hover:text-brand hover:underline" href={`/tld/${tld}?lang=${lang}`}>
+                  .{tld}
+                </a>
+              ))}
+            </div>
+          </div>
           open-core · MIT ·{" "}
           <a className="underline hover:text-txt1" href="https://github.com/wookat/domainhunter">
             GitHub

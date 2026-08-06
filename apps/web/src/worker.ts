@@ -13,7 +13,10 @@ const RATE_LIMIT_PER_HOUR = 20;
 const CACHE_TTL_TAKEN = 24 * 3600; // 已注册结果缓存 24h
 const CACHE_TTL_AVAILABLE = 3600; // available 缓存 1h，防抢注误导
 const SHARE_TTL = 30 * 24 * 3600; // 分享快照保留 30 天
+const SYNC_TTL = 90 * 24 * 3600; // 同步码保留 90 天（每次推送刷新）
 const MAX_SHARE_ITEMS = 100;
+const SYNC_CODE_RE = /^[A-Z0-9]{8}$/;
+const SYNC_CODE_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"; // 去掉易混淆的 I/L/O/0/1
 const MAX_RECHECK_DOMAINS = 100;
 const STATS_KEY = "stats:checked";
 const PRICES_KEY = "prices:v1";
@@ -110,6 +113,13 @@ function sanitizeShareItem(raw: unknown): ShareItem | null {
     }
   }
   return item;
+}
+
+function genSyncCode(): string {
+  const bytes = crypto.getRandomValues(new Uint8Array(8));
+  let code = "";
+  for (const b of bytes) code += SYNC_CODE_ALPHABET[b % SYNC_CODE_ALPHABET.length];
+  return code;
 }
 
 app.post("/api/ai-search", async (c) => {
@@ -262,6 +272,33 @@ app.get("/api/share/:id", async (c) => {
   return new Response(snapshot, { headers: { "content-type": "application/json; charset=utf-8" } });
 });
 
+// 清单跨设备同步（免登录）：生成/更新同步码（PUT 语义，同码覆盖），TTL 90 天
+app.post("/api/sync", async (c) => {
+  const kv = c.env.CACHE;
+  if (!kv) return c.json({ error: "sync_unavailable" }, 503);
+  const body = await c.req.json<{ items?: unknown[]; code?: string }>().catch(() => null);
+  const rawItems = Array.isArray(body?.items) ? body.items : [];
+  if (rawItems.length === 0) return c.json({ error: "items required" }, 400);
+  if (rawItems.length > MAX_SHARE_ITEMS) return c.json({ error: "too many items" }, 400);
+  const items = rawItems.map(sanitizeShareItem).filter((x): x is ShareItem => x !== null);
+  if (items.length === 0) return c.json({ error: "items invalid" }, 400);
+  let code = typeof body?.code === "string" ? body.code.trim().toUpperCase() : "";
+  if (code && !SYNC_CODE_RE.test(code)) return c.json({ error: "invalid_code" }, 400);
+  if (!code) code = genSyncCode();
+  await kv.put(`sync:${code}`, JSON.stringify({ items, updatedAt: Date.now() }), { expirationTtl: SYNC_TTL });
+  return c.json({ code });
+});
+
+app.get("/api/sync/:code", async (c) => {
+  const kv = c.env.CACHE;
+  if (!kv) return c.json({ error: "sync_unavailable" }, 503);
+  const code = c.req.param("code").trim().toUpperCase();
+  if (!SYNC_CODE_RE.test(code)) return c.json({ error: "not_found" }, 404);
+  const snapshot = await kv.get(`sync:${code}`, "text");
+  if (!snapshot) return c.json({ error: "not_found" }, 404);
+  return new Response(snapshot, { headers: { "content-type": "application/json; charset=utf-8" } });
+});
+
 // 清单复查：指定域名重新核验（refresh=1 穿透缓存），NDJSON 流式返回
 app.post("/api/check", async (c) => {
   const body = await c.req.json<{ domains?: string[]; refresh?: boolean }>().catch(() => null);
@@ -348,6 +385,26 @@ app.get("/s/:id", (c) => c.env.ASSETS.fetch(new Request(new URL("/", c.req.url),
 
 const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
+/** hreflang alternate 标签：zh-CN / en / x-default，用 ?lang= 区分语言版本 */
+function hreflangTags(path: string): string {
+  const base = `${SITE_ORIGIN}${path}`;
+  return [
+    `<link rel="alternate" hreflang="zh-CN" href="${base}?lang=zh" />`,
+    `<link rel="alternate" hreflang="en" href="${base}?lang=en" />`,
+    `<link rel="alternate" hreflang="x-default" href="${base}" />`,
+  ].join("\n    ");
+}
+
+const injectHreflang = (html: string, path: string) =>
+  html.replace(/(<link rel="canonical"[^>]*\/>)/, `$1\n    ${hreflangTags(path)}`);
+
+// 着陆页：SSR 注入 hreflang alternate
+app.get("/", async (c) => {
+  const res = await c.env.ASSETS.fetch(c.req.raw);
+  const html = injectHreflang(await res.text(), "/");
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
+});
+
 // TLD 指南页（SPA 路由 + SSR meta）：回 index.html 并按 TLD 与语言替换 title/description
 app.get("/tld/:tld", async (c) => {
   const tld = c.req.param("tld").toLowerCase();
@@ -364,15 +421,24 @@ app.get("/tld/:tld", async (c) => {
     .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
     .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
     .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/tld/${tld}" />`)
     .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/tld/${tld}" />`);
+  html = injectHreflang(html, `/tld/${tld}`);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
 app.get("/sitemap.xml", (c) => {
-  const urls = [`${SITE_ORIGIN}/`, ...TLD_LIST.map((t) => `${SITE_ORIGIN}/tld/${t}`)];
-  const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
-    .map((u) => `  <url><loc>${u}</loc></url>`)
+  const paths = ["/", ...TLD_LIST.map((t) => `/tld/${t}`)];
+  const alt = (p: string) =>
+    [
+      `    <xhtml:link rel="alternate" hreflang="zh-CN" href="${SITE_ORIGIN}${p}?lang=zh" />`,
+      `    <xhtml:link rel="alternate" hreflang="en" href="${SITE_ORIGIN}${p}?lang=en" />`,
+      `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_ORIGIN}${p}" />`,
+    ].join("\n");
+  const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${paths
+    .map((p) => `  <url>\n    <loc>${SITE_ORIGIN}${p}</loc>\n${alt(p)}\n  </url>`)
     .join("\n")}\n</urlset>\n`;
   return new Response(body, { headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=86400" } });
 });
