@@ -897,6 +897,372 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  photography: {
+    slug: "photography",
+    tlds: [
+      { tld: "com", zh: "商业客户预订与转介绍的默认信任入口", en: "The default trust entry for commercial bookings and referrals" },
+      { tld: "me", zh: "个人摄影师品牌与作品集的自然选择", en: "The natural pick for a personal photographer brand and portfolio" },
+      { tld: "site", zh: "作品集单页站的轻量选择，首年价极低", en: "A light pick for a one-page portfolio, with a very low first-year price" },
+    ],
+    zh: {
+      label: "摄影工作室",
+      title: "摄影工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "摄影工作室与摄影师个人品牌命名指南：光影意象、人名+工艺词、情绪词等思路，Magnum/VSCO 等案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的摄影域名。",
+      intro:
+        "摄影名字的第一使命是「配得上作品」：客户看到名字的场景，几乎总是和你的照片放在一起——水印、Instagram 主页、婚礼请柬上的署名。名字气质与作品气质错位，专业感会立刻打折。第二使命是可转介绍：摄影行业的客源大头来自口碑，新人妈妈向闺蜜推荐你时，名字必须一遍说清、一遍记住。相比其他行业，摄影命名可以更「作者性」——人名入名不但不土，反而是最高级的信任背书；但要想清楚未来是个人品牌还是团队工作室，名字绑定人名后再扩张会有摩擦。",
+      namingIdeas: [
+        "光影词库：light、lumen、halo、golden（hour）、shade、grain 这些摄影母题词自带画面感，组合或变形后仍能读出行业",
+        "人名 + 工艺词：「姓氏 + Studio/Lens/Photo」是最稳的结构（Annie Leibovitz 模式），信任感直接从人身上继承",
+        "情绪定位词：拍婚礼选温暖词根（ember、dear），拍商业选精准词根（frame、focal）——名字先替客户筛选风格",
+        "地名限定：城市/街区入名（Brooklyn 模式）能吃到本地搜索红利，适合以本地客源为主的工作室",
+        "避开 4K/HD/Pro 类参数词：设备参数会过时，且把品牌拉向器材党而非创作者",
+      ],
+      cases: [
+        { name: "Magnum Photos", takeaway: "「大酒瓶/大口径」的双关：庆祝的香槟与武器的力量感同时在场，配上纪实摄影的重量恰到好处；证明摄影品牌可以只靠一个词的气场" },
+        { name: "VSCO", takeaway: "Visual Supply Company 的缩写：全称交代「视觉供给」的使命，缩写发音顺滑到成为动词（VSCO girl）；缩写要能读出来才有传播力" },
+        { name: "Unsplash", takeaway: "un + splash：反着用「泼溅」，暗示「不加修饰的真实影像」；一个否定前缀就把定位（真实、免费、开放）讲完了" },
+        { name: "500px", takeaway: "参数词入名的少数成功案例：500 像素是早期缩略图尺寸，圈内梗带来社区认同——但也把品牌锁死在「摄影社区」无法外扩" },
+      ],
+      pitfalls: [
+        "「XX视觉」「XX影像」满街跑：通用行业词无法注册商标也无法被搜索记住",
+        "花体字思维：名字里塞生僻字或复杂拼写，水印好看但客户拼不出、搜不到",
+        "绑定当前品类：叫 WeddingLens 的工作室很难接商业拍摄单",
+        "忽略 Instagram 同名：摄影获客主阵地在视觉社交平台，handle 拿不到等于白起",
+      ],
+    },
+    en: {
+      label: "Photography",
+      title: "How to Name a Photography Studio: Strategies, Cases & Domains",
+      metaDescription:
+        "Photography naming guide: light-and-shadow roots, name-plus-craft structures, emotional positioning, breakdowns of Magnum/VSCO/Unsplash, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A photography name's first duty is to deserve the work: clients almost always see your name next to your photos — in watermarks, on an Instagram grid, signed on a wedding invitation. If the name's vibe mismatches the work's vibe, perceived craft drops instantly. Its second duty is referability: photography lives on word of mouth, and when a new mother recommends you to her best friend, the name must land in one telling. Unlike most industries, photography rewards authorial names — a personal name isn't amateurish here, it's the strongest trust signal. Just decide early whether you're building a personal brand or a studio that outgrows one person; unbinding a name from a person later is friction.",
+      namingIdeas: [
+        "Mine the light lexicon: light, lumen, halo, golden (hour), shade, grain — photography's mother-words carry imagery even when combined or bent",
+        "Name + craft word: \"surname + Studio/Lens/Photo\" is the steadiest structure (the Annie Leibovitz pattern); trust inherits directly from the person",
+        "Position with emotion: wedding work suits warm roots (ember, dear); commercial work suits precise roots (frame, focal) — let the name pre-filter your style",
+        "Anchor with place: a city or neighborhood in the name (the Brooklyn pattern) captures local search — ideal when your clients are local",
+        "Skip spec words (4K/HD/Pro): equipment specs age fast and pull the brand toward gearhead, away from artist",
+      ],
+      cases: [
+        { name: "Magnum Photos", takeaway: "A double entendre — celebration champagne and raw power at once, a perfect weight for documentary photography; proof one charged word can carry a whole brand" },
+        { name: "VSCO", takeaway: "Short for Visual Supply Company: the full name states the mission, and the abbreviation reads aloud so smoothly it became a noun (VSCO girl); initials only spread when pronounceable" },
+        { name: "Unsplash", takeaway: "un + splash: negating \"splash\" to suggest unretouched, honest imagery — a single prefix carrying the whole positioning of real, free, open" },
+        { name: "500px", takeaway: "A rare spec-word success: 500 pixels was the early thumbnail size, an insider joke that built community — and also locked the brand inside 'photo community' forever" },
+      ],
+      pitfalls: [
+        "\"XX Visuals / XX Imagery\" everywhere: generic industry words can't be trademarked or remembered in search",
+        "Calligraphy thinking: obscure spellings look great in a watermark but clients can't spell or search them",
+        "Binding to today's niche: a studio called WeddingLens struggles to win commercial shoots",
+        "Ignoring the Instagram handle: visual social platforms are where photography clients come from — no handle, no name",
+      ],
+    },
+  },
+  podcast: {
+    slug: "podcast",
+    tlds: [
+      { tld: "com", zh: "节目做成品牌后的长期主站", en: "The long-term home once the show becomes a brand" },
+      { tld: "link", zh: "节目主页聚合与单集分发入口", en: "A hub for show links and episode distribution" },
+      { tld: "me", zh: "强主播人格节目的个人品牌选择", en: "The personal-brand pick for host-driven shows" },
+    ],
+    zh: {
+      label: "播客节目",
+      title: "播客节目怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "播客与音频节目命名指南：口播测试、悬念式命名、双关梗等思路，「日谈公园」/Serial 等案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的播客域名。",
+      intro:
+        "播客名字的特殊性在于：它几乎只通过「耳朵」传播。听众在通勤路上听到主播口播「欢迎收听 XX」，回家后凭记忆去搜索——名字必须经得起「只听一遍、隔八小时再搜」的考验。这决定了播客命名的铁律：读音优先于拼写，节奏感优先于信息量。好的播客名往往自带「节目感」——像一档节目的名字而不是一家公司的名字，有一点悬念、一点态度或一点幽默。同时要为节目单元留出空间：名字太窄，节目转型或加副线时会被自己框住。",
+      namingIdeas: [
+        "口播测试第一：把名字放进「欢迎收听 XX，我是 XX」念十遍，任何卡顿、歧义、需要解释拼写的名字直接淘汰",
+        "悬念式命名：用一个让人想问「为什么叫这个」的词或短语（Serial、「随机波动」），名字本身就是第一集的话题",
+        "对谈感短语：口语化短语入名（「日谈公园」「Call Her Daddy」）自带栏目气质，比正经名词更像一档节目",
+        "主播人格绑定：以主播昵称/口头禅入名适合强人格节目，但要接受「节目=人」的绑定后果",
+        "留出副线空间：加「电台/FM/Show」类后缀词而非具体题材词，转型加新栏目时不用改名",
+      ],
+      cases: [
+        { name: "Serial", takeaway: "一词双关：既是「连载」的节目形态，又暗合「连环（案件）」的题材；形式与内容压进同一个词，是播客命名的教科书" },
+        { name: "日谈公园", takeaway: "「日谈」谐音「日坛」+ 公园的松弛场景：北京地名梗 + 每日闲谈的内容承诺，中文播客命名里少见的音、义、场景三合一" },
+        { name: "The Daily", takeaway: "极简到只剩更新频率：背靠纽约时报的品牌，名字只需要说「每天来」；无靠山的新节目慎学，有靠山时这是最大气的取法" },
+        { name: "Radiolab", takeaway: "radio + lab：把「电台」与「实验室」嫁接，一词说清「用声音做实验」的节目气质；嫁接词是播客命名的高产结构" },
+      ],
+      pitfalls: [
+        "名字需要看字才懂：双关建立在拼写上而非读音上，口播传播全损耗",
+        "题材词锁死：叫「XX 财经观察」的节目做不了闲聊副线",
+        "过长的完整句：超过 5 个字/3 个单词的名字在播客客户端列表里会被截断",
+        "忽略平台搜索：各播客平台搜索是主要发现渠道，名字与已有大节目撞车等于隐身",
+      ],
+    },
+    en: {
+      label: "Podcasts",
+      title: "How to Name a Podcast: Strategies, Cases & Domains",
+      metaDescription:
+        "Podcast naming guide: the spoken-intro test, intrigue-first names, format puns, breakdowns of Serial/The Daily/Radiolab, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A podcast name travels almost exclusively by ear. Listeners hear the host say \"welcome to X\" on a commute, then search from memory hours later — the name must survive the \"heard once, searched at night\" test. That sets podcasting's iron rule: pronunciation beats spelling, rhythm beats information. Great podcast names carry show energy — they sound like a program, not a company, with a hint of intrigue, attitude or humor. And leave room to grow: a name locked to one topic boxes you in the moment the show evolves or adds a second segment.",
+      namingIdeas: [
+        "Run the spoken-intro test first: say \"welcome to X, I'm Y\" ten times — any stumble, ambiguity or need to spell it out disqualifies the name",
+        "Lead with intrigue: pick a word or phrase that makes people ask \"why is it called that?\" (Serial) — the name becomes episode one's first topic",
+        "Use conversational phrases: spoken-language names (Call Her Daddy) carry segment energy and sound more like a show than a proper noun does",
+        "Bind to host persona deliberately: naming after the host's nickname or catchphrase suits personality-driven shows — if you accept that the show equals the person",
+        "Reserve room for spin-offs: suffix with radio/FM/show rather than a topic word, so new segments never force a rename",
+      ],
+      cases: [
+        { name: "Serial", takeaway: "One word, two readings: the serialized format and the serial (crime) subject — form and content compressed into a single word; the textbook podcast name" },
+        { name: "The Daily", takeaway: "Minimal to the point of only stating cadence: with the New York Times behind it, the name only needs to say \"come back every day\" — the boldest move, only when you have the backing" },
+        { name: "Radiolab", takeaway: "radio + lab: grafting broadcast onto laboratory says \"experiments in sound\" in one word; the graft structure is podcasting's most productive pattern" },
+        { name: "99% Invisible", takeaway: "A number plus a paradox: instantly intriguing, impossible to confuse in search, and a thesis statement for the show — design you don't notice" },
+      ],
+      pitfalls: [
+        "Names that only work in writing: puns built on spelling rather than sound lose everything in spoken sharing",
+        "Topic lock-in: a show called \"X Finance Watch\" can't grow a casual second segment",
+        "Full sentences as names: anything past three words gets truncated in podcast-app lists",
+        "Ignoring in-app search: podcast platforms are the discovery channel — colliding with an established show's name means invisibility",
+      ],
+    },
+  },
+  realestate: {
+    slug: "realestate",
+    tlds: [
+      { tld: "com", zh: "大额交易行业，默认信任后缀无可替代", en: "In a big-ticket industry, the default-trust suffix is irreplaceable" },
+      { tld: "vip", zh: "高端置业顾问与会员制服务的尊享感", en: "Premium advisory and members-only service energy" },
+      { tld: "site", zh: "楼盘单页与项目落地页的轻量选择", en: "A light choice for property landers and project pages" },
+    ],
+    zh: {
+      label: "房产家居",
+      title: "房产家居品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "房产与家居品牌命名指南：安家意象、专业信任词、本地深耕等思路，Zillow/贝壳 等案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的房产域名。",
+      intro:
+        "房产家居是典型的「低频高额 + 信任决定一切」行业：客户一生只交易几次，每次金额巨大，选择服务方时极度依赖「这家靠不靠谱」的直觉。名字是这个直觉的第一个输入——它要在陌生人心里瞬间建立「专业、稳、不会坑我」的印象。同时行业高度本地化，客户搜索往往带着地名，名字要么吃到本地词的搜索红利，要么用品牌词建立跨区域的辨识度，两条路线要先想清楚。家居方向则多一层「生活方式」属性：名字可以更温暖、更有审美主张。",
+      namingIdeas: [
+        "安家意象词：home、nest、haven、壳/巢/居 这类「栖息」母题词自带温度，是房产命名的核心词库",
+        "专业信任词：compass、anchor、keystone 类「稳定/方向」意象适合经纪与顾问品牌，传递「我带你走对路」",
+        "本地深耕命名：城市/片区名 + 品类词适合区域型中介，直接承接「地名 + 买房」的搜索流量",
+        "生活方式升维：家居品牌不卖家具卖「家的样子」——用形容词与场景词（cozy、宅寂）而非品类词命名",
+        "读音要「稳」：房产名字避免俏皮变形拼写，大额决策场景里「不正经」的名字会被潜意识扣分",
+      ],
+      cases: [
+        { name: "Zillow", takeaway: "zillions（无数）+ pillow（枕头）的合成：海量房源数据 + 家的柔软感，一硬一软两个母题压进一个好读的造词；房产科技命名的标杆" },
+        { name: "贝壳", takeaway: "「壳」是最原始的栖息隐喻：动物的家 = 人的房子，一个字完成品类联想；配合「找房」动作词使用，品牌词干净且可延展" },
+        { name: "Compass", takeaway: "「指南针」直译专业价值：在最复杂的交易里给你方向；现成英文词 + 品类零重叠，靠资本与设计把通用词做成了品牌" },
+        { name: "Opendoor", takeaway: "open + door：开门即成交的字面意象 + 「敞开、透明」的价值观暗示；两个最简单的词组合出行业革新者的姿态" },
+      ],
+      pitfalls: [
+        "「XX 地产」「XX 置业」同质化：行业通用词无法差异化，也几乎注册不到干净域名",
+        "俏皮谐音梗：大额交易场景里幽默感是信任减分项，稳重比有趣重要",
+        "绑定单一城市后跨区扩张：区域名入名吃本地流量，但开第二个城市时品牌要重来",
+        "忽略中介平台已占的心智：名字与头部平台近似，会被当作山寨而非蹭到流量",
+      ],
+    },
+    en: {
+      label: "Real estate",
+      title: "How to Name a Real Estate or Home Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Real estate and home-brand naming guide: dwelling imagery, trust words, local anchoring, breakdowns of Zillow/Compass/Opendoor, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Real estate is the archetypal low-frequency, high-ticket, trust-decides-everything industry: clients transact a handful of times in a lifetime, each time with enormous sums, choosing services largely on the gut feeling of \"can I trust these people\". The name is that gut feeling's first input — it must instantly read professional, steady, and safe to a stranger. The industry is also deeply local: searches carry place names, so decide early between harvesting local-keyword traffic and building a brand word that travels across regions. Home and interior brands add a lifestyle layer — their names can afford more warmth and aesthetic point of view.",
+      namingIdeas: [
+        "Mine dwelling imagery: home, nest, haven, shell — the shelter mother-words carry warmth and are real estate's core lexicon",
+        "Use trust-and-direction words: compass, anchor, keystone suit brokerage and advisory brands, signaling \"I'll guide you right\"",
+        "Anchor locally when local: city or district plus a category word suits regional agencies and captures \"place + buy home\" searches directly",
+        "Elevate to lifestyle for home brands: sell what home feels like, not furniture — name from adjectives and scenes (cozy, calm), not categories",
+        "Keep pronunciation steady: avoid playful spelling twists; in big-ticket decisions, a \"cute\" name subconsciously costs trust points",
+      ],
+      cases: [
+        { name: "Zillow", takeaway: "zillions + pillow: massive listing data fused with the softness of home — one hard theme, one soft theme, pressed into a readable coinage; the benchmark of proptech naming" },
+        { name: "Compass", takeaway: "Professional value translated literally: direction through the most complex transaction of your life; a common word built into a brand through capital and design" },
+        { name: "Opendoor", takeaway: "open + door: the literal image of a door opening on a deal plus an implied value of transparency; two of the simplest words composing a disruptor's posture" },
+        { name: "Airbnb", takeaway: "From \"air bed and breakfast\": a founding-story name that outgrew its literal origin — proof a name can scale past its first meaning once the brand fills it" },
+      ],
+      pitfalls: [
+        "\"X Realty / X Properties\" sameness: generic industry words neither differentiate nor leave clean domains available",
+        "Witty puns: in big-ticket contexts humor subtracts trust — steady beats clever",
+        "Binding to one city then expanding: a place name harvests local traffic but forces a brand restart in city two",
+        "Shadowing a major platform's name: near-miss names read as knockoffs, not as borrowed traffic",
+      ],
+    },
+  },
+  health: {
+    slug: "health",
+    tlds: [
+      { tld: "com", zh: "健康决策高度信任敏感，.com 是基本盘", en: "Health decisions are trust-critical — .com is table stakes" },
+      { tld: "pro", zh: "医生/治疗师等专业人士个人品牌的认证感", en: "Certified-professional energy for doctors and therapists" },
+      { tld: "app", zh: "健康管理应用的品类即后缀", en: "Category-in-the-suffix for health management apps" },
+    ],
+    zh: {
+      label: "医疗健康",
+      title: "医疗健康品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "医疗健康品牌命名指南：安心词根、科学感与温度的平衡、合规红线等思路，Calm/丁香医生 等案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的健康域名。",
+      intro:
+        "健康命名要同时安抚两种焦虑：用户怕「不专业」（伤害我），也怕「太冰冷」（不在乎我）。好的健康品牌名恰好落在科学感与温度感的交叠区——太学术像论文，太可爱像玩具，都会流失信任。另一条独有的约束是合规红线：多数国家对医疗宣传用词有硬性限制，「治愈」「根治」「第一」类词不但审核过不了，还可能招来处罚，命名阶段就要避开。健康行业的口碑传播往往发生在「推荐给家人」的场景里，名字要让人愿意、也放心说给最在乎的人听。",
+      namingIdeas: [
+        "安心词根：calm、care、well、安/康/舒 这类词直接传递「你会被照顾好」，是健康命名的基本盘",
+        "科学感锚点：词根里嵌入 vita（生命）、bio、-ology 等学术信号建立专业感，再用柔和读音中和冰冷",
+        "身体部位/机能的诗意化：不直说器官，用其功能或意象（Oura 取自「光环」戴在手指上）——既暗示品类又不显医械感",
+        "普通人读得懂：医学术语入名要做「地铁测试」——地铁上随机一位乘客能否读对并大致猜到你是做什么的",
+        "合规预检：命名清单先过一遍广告法禁用词（治愈/根治/最高级），中英文市场都要查",
+      ],
+      cases: [
+        { name: "Calm", takeaway: "一个词就是产品承诺：打开 App 想要的状态直接做名字；读音本身舒缓（长元音收尾），名字的声音设计与产品体验同频" },
+        { name: "丁香医生", takeaway: "「丁香」的清苦药香 + 「医生」的专业身份：植物意象软化医疗的冰冷，后缀词直接锚定信任来源；中文健康命名的标杆结构" },
+        { name: "Oura", takeaway: "源自芬兰语与「aura/光环」的联想：戴在手指上的健康光环，完全不提「监测/健康」却让品类不言自明；北欧极简命名的代表" },
+        { name: "Hims", takeaway: "人称代词直接做品牌：把「难以启齿的男性健康」变成「这就是给他的」，去羞耻化的命名策略本身就是产品定位" },
+      ],
+      pitfalls: [
+        "疗效承诺入名：「治愈」「根治」类词踩广告法红线，全球主要市场都过不了审",
+        "拉丁术语堆砌：学术到普通用户读不出、记不住，专业感变成距离感",
+        "可爱过头：健康决策场景里，玩具感名字让用户不敢托付身体",
+        "忽略药械品类的命名法规：处方药、医疗器械有单独的命名审批规则，商业品牌名与注册名要分开规划",
+      ],
+    },
+    en: {
+      label: "Health",
+      title: "How to Name a Health Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Health brand naming guide: reassurance roots, balancing science and warmth, compliance red lines, breakdowns of Calm/Oura/Hims, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Health naming must soothe two anxieties at once: users fear \"unprofessional\" (it might harm me) and \"too cold\" (it doesn't care about me). Great health names land exactly in the overlap of scientific credibility and human warmth — too academic reads like a paper, too cute reads like a toy, and both leak trust. Health also carries a constraint no other category has: regulatory red lines. Most countries hard-limit medical marketing language — \"cure\", \"guaranteed\", superlatives — and the wrong word in a name invites rejection or penalties. And remember health referrals happen in \"I told my mom about this\" moments: the name must be one people are comfortable saying to those they love most.",
+      namingIdeas: [
+        "Build on reassurance roots: calm, care, well — words that directly say \"you'll be looked after\" are health naming's foundation",
+        "Anchor with science signals: vita, bio, -ology roots establish credibility; soften them with gentle pronunciation so precision doesn't turn cold",
+        "Poeticize the body: don't name the organ, name its function or image (Oura — an aura worn on a finger); category implied, clinical coldness avoided",
+        "Pass the subway test: any medical term in the name should be readable — and roughly decodable — by a random stranger on a train",
+        "Pre-clear compliance: run every candidate against advertising-law banned words (cure, guaranteed, #1) in every target market before falling in love with it",
+      ],
+      cases: [
+        { name: "Calm", takeaway: "The product promise as the name: the state you open the app to reach; even the sound is soothing (a long open vowel) — sonic design matching product experience" },
+        { name: "Oura", takeaway: "Finnish roots with an aura association: a halo of health worn on the finger — never says monitoring or health, yet the category explains itself; Nordic minimal naming at its best" },
+        { name: "Hims", takeaway: "A pronoun as the brand: turning unspeakable men's health into simply \"for him\" — the de-shaming strategy is the positioning, executed in four letters" },
+        { name: "23andMe", takeaway: "23 chromosome pairs + \"and me\": hard science plus personal ownership in one compact phrase; a number carrying the entire scientific story" },
+      ],
+      pitfalls: [
+        "Efficacy claims in the name: cure/heal/guaranteed cross advertising-law red lines in every major market",
+        "Latin pileups: names so academic that users can't pronounce or recall them turn credibility into distance",
+        "Overdosing on cute: in health decisions, a toy-like name makes users hesitate to trust you with their body",
+        "Ignoring drug/device naming rules: prescription products have separate regulated naming tracks — plan the commercial brand and the registered name apart",
+      ],
+    },
+  },
+  legal: {
+    slug: "legal",
+    tlds: [
+      { tld: "com", zh: "法律服务的信任基本盘，别无二选", en: "The trust baseline for legal services — no substitute" },
+      { tld: "pro", zh: "独立执业律师个人品牌的专业认证感", en: "Certified-expert energy for independent practitioners" },
+      { tld: "co", zh: "法律科技与新型法务服务的现代感", en: "A modern edge for legaltech and new-model services" },
+    ],
+    zh: {
+      label: "法律服务",
+      title: "法律服务品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "律所与法律科技命名指南：权威词根、姓氏传统的现代化、法科技去精英化等思路，LegalZoom 等案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的法律域名。",
+      intro:
+        "法律命名活在两种传统的张力里：一边是姓氏合伙人制的百年惯例——「张王律师事务所」式命名传递「有真人为结果负责」，至今仍是大额法律业务的信任密码；另一边是法律科技的去精英化浪潮——把法律服务做成产品的公司，名字要亲切、好读、不吓人，与律所的威严刻意反着来。起名前先回答定位问题：你卖的是「顶级专家的判断」还是「标准化的法律产品」？前者往姓氏与权威词走，后者往科技与日常词走，中间地带最危险——既不够权威也不够亲切。",
+      namingIdeas: [
+        "权威意象词：lex（法）、justice、counsel、衡/正/律 这类词根建立庄重感，适合传统所与高端业务",
+        "姓氏现代化：保留姓氏但去掉冗长的「XX、XX 与 XX」串联，单姓 + 简短品类词（「金杜」模式）更利传播",
+        "法科技去精英化：做法律产品就用日常词（Zoom 进 LegalZoom），把「请律师」的心理门槛在名字层面就降下来",
+        "垂直领域词根：只做一个领域就把领域装进名字（劳动法、知产），垂直词带来精准搜索与「专科医生」式信任",
+        "多语言合规：跨境业务要查名字在各法域的律师执业宣传规则——部分地区禁止暗示性词汇（best、win）",
+      ],
+      cases: [
+        { name: "LegalZoom", takeaway: "legal + zoom：把「快」嫁接到最慢的行业，一词完成「法律服务可以像网购一样简单」的宣言；法科技去精英化命名的开山之作" },
+        { name: "Clio", takeaway: "希腊神话中掌管历史的缪斯：律所软件用「记录者」的典故暗合案卷管理的产品本质，古典典故还向法律人的人文传统致意" },
+        { name: "金杜", takeaway: "两位创始人姓氏「金」与「杜」的极简组合：保留姓氏传统的信任内核，压缩到两个字的现代传播效率；中文律所命名现代化的样板" },
+        { name: "DoNotPay", takeaway: "祈使句直接做名字：「别付（罚单）」把产品价值写成一句反抗口号；争议性极强但记忆度拉满，适合消费者侧的法律工具" },
+      ],
+      pitfalls: [
+        "承诺结果的词：win/胜/包赢 类词在多数法域违反律师宣传规则，且透支信任",
+        "三姓氏以上串联：「A、B、C 与 D 事务所」没人记得住，对外传播要有短称",
+        "过度可爱：法律决策与健康同属高焦虑场景，玩笑感名字让客户不敢托付案件",
+        "忽略法域宣传规则差异：同一个名字在 A 地合规、在 B 地可能构成违规执业宣传",
+      ],
+    },
+    en: {
+      label: "Legal",
+      title: "How to Name a Legal Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Law firm and legaltech naming guide: authority roots, modernizing the surname tradition, de-elitizing legal products, breakdowns of LegalZoom/Clio/DoNotPay, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Legal naming lives in the tension between two traditions. On one side, the century-old surname partnership — \"Smith & Jones LLP\" — signals that real, accountable humans stand behind outcomes, still the trust code for high-stakes work. On the other, legaltech's de-elitization wave: companies productizing legal services need names that are friendly, readable and unintimidating — deliberately the opposite of law-firm gravitas. Answer the positioning question first: are you selling a top expert's judgment, or a standardized legal product? The former points to surnames and authority roots; the latter to tech and everyday words. The middle is the danger zone — neither authoritative enough nor approachable enough.",
+      namingIdeas: [
+        "Use authority roots: lex, justice, counsel — gravitas-bearing roots suit traditional firms and high-stakes practices",
+        "Modernize the surname: keep one name, drop the \"A, B & C\" chain — a single surname plus a short category word travels far better",
+        "De-elitize for legaltech: productized legal services should borrow everyday words (Zoom into LegalZoom), lowering the \"hiring a lawyer\" anxiety at the name layer",
+        "Own a vertical: if you practice one field, put it in the name — vertical words earn precise search traffic and specialist-doctor trust",
+        "Check advertising rules per jurisdiction: many bars ban suggestive words (best, win) in attorney marketing — clear the name everywhere you practice",
+      ],
+      cases: [
+        { name: "LegalZoom", takeaway: "legal + zoom: grafting speed onto the slowest industry — one word declaring that legal services can feel like online shopping; the founding act of de-elitized legal naming" },
+        { name: "Clio", takeaway: "The Greek muse of history: practice-management software invoking the recorder of records — a classical allusion that both fits the product and nods to law's humanist tradition" },
+        { name: "DoNotPay", takeaway: "An imperative sentence as a name: \"don't pay (that ticket)\" writes the product's value as a slogan of defiance — controversial, unforgettable, right for consumer-side legal tools" },
+        { name: "Atrium", takeaway: "An architectural word for openness and light in a famously opaque industry; also a cautionary tale — a beautiful name couldn't save a flawed model" },
+      ],
+      pitfalls: [
+        "Outcome-promising words: win/guaranteed violate attorney advertising rules in most jurisdictions and overdraw trust",
+        "Chaining three-plus surnames: nobody remembers \"A, B, C & D LLP\" — establish a short form for the outside world",
+        "Overdoing approachable: legal decisions rank with health in anxiety — a jokey name makes clients hesitate to hand over their case",
+        "Assuming one clearance fits all: a name compliant in one jurisdiction can constitute improper solicitation in another",
+      ],
+    },
+  },
+  newsletter: {
+    slug: "newsletter",
+    tlds: [
+      { tld: "com", zh: "newsletter 长成媒体品牌后的正统主站", en: "The proper home once the newsletter becomes a media brand" },
+      { tld: "me", zh: "个人作者品牌与订阅页的自然选择", en: "Natural for personal author brands and subscribe pages" },
+      { tld: "link", zh: "订阅页与往期内容聚合的轻量入口", en: "A light hub for the subscribe page and archive links" },
+    ],
+    zh: {
+      label: "Newsletter",
+      title: "Newsletter 怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "Newsletter 与订阅制内容命名指南：收件箱场景、承诺式命名、栏目感等思路，Morning Brew 等案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的 newsletter 域名。",
+      intro:
+        "Newsletter 名字的主战场是收件箱列表：它和几十封邮件挤在同一屏里，发件人名称就是你的门面——名字要在一行灰色小字里让人产生「点开」的冲动，并在第三十次出现时仍不让人烦。这决定了 newsletter 命名的两个特质：一是「承诺感」，名字最好直接说清「你每期能得到什么」（Morning Brew = 早晨那杯提神的）；二是「人格感」，订阅制内容卖的是与作者的长期关系，名字带一点态度或幽默，关系就从第一眼开始。与产品命名不同，newsletter 名可以更长、更像一个栏目名——收件箱里反而是完整短语更醒目。",
+      namingIdeas: [
+        "承诺式命名：名字=每期交付物（The Daily Digest 结构），读者订阅前就知道自己会得到什么、多久一次",
+        "时间锚点：Morning/Weekly/Sunday 类词把阅读仪式感写进名字，帮读者把你安排进生活节奏",
+        "饮品/食物隐喻：Brew、Espresso、快餐类词把「内容消费」类比成「日常饮食」，轻量感恰好匹配邮件场景",
+        "作者人格入名：个人 newsletter 用「作者名 + 栏目词」或口头禅，把「关注一个人」的订阅动机做进名字",
+        "收件箱 A/B 测试：把候选名字放进真实收件箱截图里对比，哪一个在一屏邮件里最想点开就选哪个",
+      ],
+      cases: [
+        { name: "Morning Brew", takeaway: "早晨 + 冲泡：把商业新闻做成「早上那杯咖啡」，时间锚点 + 饮品隐喻双结构；名字直接设计了阅读仪式，是 newsletter 命名的教科书" },
+        { name: "The Hustle", takeaway: "一个态度词做名字：hustle 的「拼劲」精准圈定创业者读者群；名字先完成读者筛选，内容再完成留存" },
+        { name: "Lenny's Newsletter", takeaway: "人名 + 最朴素的品类词：反命名的命名——赌的是作者本人就是品牌；适合已有个人影响力的作者，冷启动作者慎学" },
+        { name: "Dense Discovery", takeaway: "头韵 + 承诺：两个 D 的节奏感 + 「高密度发现」的内容承诺；小众审美类内容靠名字的质感先筛选同类" },
+      ],
+      pitfalls: [
+        "名字与发件人名不一致：读者记住了名字却在收件箱找不到你，订阅关系直接断链",
+        "过度玩梗：梗会过时，第三十期时名字的幽默感变成尴尬",
+        "通用词如 Insights/Digest 单独使用：搜索找不到、收件箱认不出，等于没有名字",
+        "先起名后定位：newsletter 名即选题承诺，内容方向没定就起名，转型时读者会觉得「货不对板」",
+      ],
+    },
+    en: {
+      label: "Newsletters",
+      title: "How to Name a Newsletter: Strategies, Cases & Domains",
+      metaDescription:
+        "Newsletter naming guide: inbox-first thinking, promise-based names, reading rituals, breakdowns of Morning Brew/The Hustle, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A newsletter name's battlefield is the inbox list: crammed into one screen with dozens of emails, the sender name is your storefront. It must trigger \"open me\" from one line of small gray text — and still not annoy on its thirtieth appearance. That shapes two traits. First, promise: the best names state what each issue delivers (Morning Brew — the morning pick-me-up). Second, personality: subscriptions sell a long-term relationship with a writer, and a name with attitude or humor starts that relationship at first sight. Unlike product names, newsletter names can run longer and read like a column title — in an inbox, a full phrase actually stands out more.",
+      namingIdeas: [
+        "Name the promise: name = what each issue delivers (The Daily Digest structure), so readers know the what and the cadence before subscribing",
+        "Anchor in time: Morning/Weekly/Sunday words write the reading ritual into the name, helping readers slot you into their routine",
+        "Borrow food and drink: Brew, Espresso, Snacks — framing content consumption as daily sustenance matches email's lightweight moment",
+        "Put the author in: personal newsletters thrive on \"name + column word\" or a catchphrase — the follow-a-person motive built into the name",
+        "A/B test in a real inbox: mock candidate names into an actual inbox screenshot; pick whichever you'd most want to open on a crowded screen",
+      ],
+      cases: [
+        { name: "Morning Brew", takeaway: "Time anchor + drink metaphor: business news as your morning coffee — the name designs the reading ritual itself; the textbook newsletter name" },
+        { name: "The Hustle", takeaway: "One attitude word: hustle precisely selects the founder-minded reader; the name does the audience filtering, the content does the retaining" },
+        { name: "Lenny's Newsletter", takeaway: "A first name plus the plainest category word: anti-naming as naming — betting the author is the brand; right for writers with existing followings, risky for cold starts" },
+        { name: "Dense Discovery", takeaway: "Alliteration plus a promise: the double-D rhythm and \"high-density discovery\" in one phrase; for taste-driven content, the name's texture pre-selects kindred readers" },
+      ],
+      pitfalls: [
+        "Sender name mismatching the newsletter name: readers remember one and can't find the other — the subscription silently dies",
+        "Overloading on memes: jokes expire; by issue thirty the name's humor reads as cringe",
+        "Bare generics like Insights or Digest: unsearchable and unrecognizable in an inbox — effectively nameless",
+        "Naming before positioning: a newsletter name is an editorial promise; pivot later and readers feel the bait-and-switch",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

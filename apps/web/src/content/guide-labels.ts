@@ -17,4 +17,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "devtools", zh: "开发者工具", en: "Dev tools" },
   { slug: "web3", zh: "Web3 加密", en: "Web3" },
   { slug: "agency", zh: "咨询工作室", en: "Agencies" },
+  { slug: "photography", zh: "摄影工作室", en: "Photography" },
+  { slug: "podcast", zh: "播客节目", en: "Podcasts" },
+  { slug: "realestate", zh: "房产家居", en: "Real estate" },
+  { slug: "health", zh: "医疗健康", en: "Health" },
+  { slug: "legal", zh: "法律服务", en: "Legal" },
+  { slug: "newsletter", zh: "Newsletter", en: "Newsletters" },
 ];
