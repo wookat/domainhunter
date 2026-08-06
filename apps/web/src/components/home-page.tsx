@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Brain, ChevronDown, Plus, Ruler, ShieldCheck, Sparkles, Wand2, Zap } from "lucide-react";
+import { ArrowRight, Brain, ChevronDown, Plus, Ruler, ShieldCheck, Sparkles, Wand2, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useI18n, type I18nKey } from "@/lib/i18n";
@@ -106,7 +106,7 @@ function MiniSelect({
   );
 }
 
-export function HomePage({ initial, onSubmit }: { initial: HomeValues; onSubmit: (v: HomeValues) => void }) {
+export function HomePage({ initial, onSubmit, onBackToResults }: { initial: HomeValues; onSubmit: (v: HomeValues) => void; onBackToResults?: () => void }) {
   const { t, lang } = useI18n();
   const [description, setDescription] = useState(initial.description);
   const [totalChecked, setTotalChecked] = useState<number | null>(null);
@@ -155,6 +155,17 @@ export function HomePage({ initial, onSubmit }: { initial: HomeValues; onSubmit:
     <main className="relative flex-1">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px]" style={{ background: "var(--glow)" }} />
       <div className="relative mx-auto max-w-3xl px-4 pb-16 pt-16 md:pt-24">
+        {onBackToResults && (
+          <div className="mb-4 flex justify-center">
+            <button
+              onClick={onBackToResults}
+              className="inline-flex h-11 items-center gap-1 rounded-full border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:h-8"
+            >
+              {t("home.backToResults")}
+              <ArrowRight className="h-3.5 w-3.5" />
+            </button>
+          </div>
+        )}
         <div className="mb-5 flex justify-center">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-line bg-brand-dim px-3 py-1.5 text-xs text-brand">
             <span className="dot-breathe h-1.5 w-1.5 rounded-full bg-brand" />

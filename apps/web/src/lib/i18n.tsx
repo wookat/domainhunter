@@ -33,6 +33,8 @@ const zh = {
   "score.relevance": "寓意",
   "score.brandability": "品牌感",
   "score.total": "综合",
+  "score.expandTitle": "查看评分依据",
+  "score.explain": "综合分为四维平均：长度（越短越高）、读感（是否顺口易拼）、寓意（与你的描述契合度）、品牌感（是否像一个可注册商标的品牌名）。由 AI 在生成时评估，仅供参考。",
   // 着陆页
   "home.badge": "AI Agent · RDAP+DNS 实时核验可注册",
   "home.title1": "说出寓意，",
@@ -62,6 +64,7 @@ const zh = {
   "home.len.mid": "9–12 字符",
   "home.len.long": "> 12 字符",
   "home.templates": "不知道怎么描述？点个行业模板填入，再改成你的：",
+  "home.backToResults": "回到上次结果",
   // Agent 生成中
   "agent.params": "需求与参数",
   "agent.understanding": "AI 理解的需求",
@@ -223,6 +226,8 @@ const en: Record<I18nKey, string> = {
   "score.relevance": "Relevance",
   "score.brandability": "Brandable",
   "score.total": "Score",
+  "score.expandTitle": "See score breakdown",
+  "score.explain": "The overall score averages four dimensions: Length (shorter is better), Readability (easy to say and spell), Relevance (fit with your brief), and Brandability (feels like a trademark-ready brand). Estimated by AI at generation time — for reference only.",
   "home.badge": "AI Agent · Live RDAP+DNS availability checks",
   "home.title1": "Describe the idea, ",
   "home.title2": "hunt domains you can actually register",
@@ -251,6 +256,7 @@ const en: Record<I18nKey, string> = {
   "home.len.mid": "9–12 chars",
   "home.len.long": "> 12 chars",
   "home.templates": "Not sure what to write? Pick an industry template and make it yours:",
+  "home.backToResults": "Back to last results",
   "agent.params": "Brief & parameters",
   "agent.understanding": "AI's understanding",
   "agent.edit": "Edit",
