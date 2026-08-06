@@ -703,6 +703,12 @@ function hreflangTags(path: string): string {
 const injectHreflang = (html: string, path: string) =>
   html.replace(/(<link rel="canonical"[^>]*\/>)/, `$1\n    ${hreflangTags(path)}`);
 
+/** 未知 slug 的 SEO 路由：返回应用壳 + 404 状态 + noindex，避免软 404 被收录 */
+async function notFoundShell(res: Response): Promise<Response> {
+  const html = (await res.text()).replace("</head>", `<meta name="robots" content="noindex" /></head>`);
+  return new Response(html, { status: 404, headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
+}
+
 // 着陆页：SSR 注入 hreflang alternate
 // 首页 FAQPage 结构化数据（与首页 FAQ 区块内容一致，供搜索引擎富摘要）
 const FAQ_JSONLD = JSON.stringify({
@@ -771,7 +777,7 @@ app.get("/tld/:tld", async (c) => {
   const tld = c.req.param("tld").toLowerCase();
   const guide = TLD_GUIDES[tld];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  if (!guide) return res;
+  if (!guide) return notFoundShell(res);
   const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
   const loc = guide[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
@@ -799,7 +805,7 @@ app.get("/guide/:slug", async (c) => {
   const slug = c.req.param("slug").toLowerCase();
   const guide = INDUSTRY_GUIDES[slug];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  if (!guide) return res;
+  if (!guide) return notFoundShell(res);
   const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
   const loc = guide[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
@@ -827,7 +833,7 @@ app.get("/vs/:slug", async (c) => {
   const slug = c.req.param("slug").toLowerCase();
   const cmp = TLD_COMPARES[slug];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  if (!cmp) return res;
+  if (!cmp) return notFoundShell(res);
   const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
   const loc = cmp[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
