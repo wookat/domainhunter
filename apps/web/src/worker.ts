@@ -742,6 +742,10 @@ async function injectModulepreload(html: string, assets: Fetcher, origin: string
   }
 }
 
+/** SSR 按解析出的语言设置 <html lang>（SPA 水合后会再同步，这里保证首屏/爬虫看到的语言正确） */
+const setHtmlLang = (html: string, lang: "zh" | "en"): string =>
+  lang === "en" ? html.replace(/<html lang="[^"]*"/, '<html lang="en"') : html;
+
 /** 未知 slug 的 SEO 路由：返回应用壳 + 404 状态 + noindex，避免软 404 被收录 */
 async function notFoundShell(res: Response): Promise<Response> {
   const html = (await res.text()).replace("</head>", `<meta name="robots" content="noindex" /></head>`);
@@ -880,6 +884,7 @@ app.get("/tld/:tld", async (c) => {
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang)}</script><script type="application/ld+json">${tldFaqJsonld}</script></head>`,
   );
+  html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/tld-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -921,6 +926,7 @@ app.get("/guide/:slug", async (c) => {
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${guideFaqJsonld}</script></head>`,
   );
+  html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/guide-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -962,6 +968,7 @@ app.get("/vs/:slug", async (c) => {
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${cmpFaqJsonld}</script></head>`,
   );
+  html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/compare-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -999,6 +1006,7 @@ app.get("/prices", async (c) => {
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/prices?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
   html = injectHreflang(html, "/prices").replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/prices", lang)}</script></head>`);
+  html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/prices-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
