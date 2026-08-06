@@ -2,7 +2,7 @@
   "name": "domainhunter",
   "main": "src/worker.ts",
   "compatibility_date": "2025-07-01",
-  "assets": { "directory": "./dist", "binding": "ASSETS" },
+  "assets": { "directory": "./dist", "binding": "ASSETS", "run_worker_first": ["/"] },
   "workers_dev": true,
   "kv_namespaces": [{ "binding": "CACHE", "id": "6353705515014ec08fdf693c16f45232" }]
 }

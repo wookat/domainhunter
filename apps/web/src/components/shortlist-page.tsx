@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Bookmark, Check, Download, ExternalLink, Link2, Loader2, RotateCw, Sparkles, Trash2 } from "lucide-react";
+import { Bookmark, Check, Download, ExternalLink, Link2, Loader2, MonitorSmartphone, RotateCw, Sparkles, Trash2 } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { CopyButton, RegisterMenu } from "@/components/domain-row";
@@ -30,6 +30,17 @@ function exportShortlist(items: ShortlistItem[], format: "csv" | "txt") {
 
 const BAR_KEYS = ["length", "readability", "relevance", "brandability"] as const;
 
+const SYNC_CODE_KEY = "domainhunter:sync:code";
+const SYNC_CODE_RE = /^[A-Z0-9]{8}$/;
+
+function loadSyncCode(): string {
+  try {
+    return localStorage.getItem(SYNC_CODE_KEY) ?? "";
+  } catch {
+    return "";
+  }
+}
+
 /** 复查后的状态变化：taken 高亮红，重新可注册高亮绿 */
 type StatusChange = "becameTaken" | "becameAvailable";
 
@@ -45,6 +56,7 @@ export function ShortlistPage({
   onRemove,
   onClear,
   onStart,
+  onMerge,
   lastCheckedAt,
   onApplyStatuses,
 }: {
@@ -52,6 +64,7 @@ export function ShortlistPage({
   onRemove: (domain: string) => void;
   onClear: () => void;
   onStart: () => void;
+  onMerge: (incoming: Omit<ShortlistItem, "addedAt">[]) => void;
   lastCheckedAt: number | null;
   onApplyStatuses: (statuses: Record<string, Status>) => void;
 }) {
@@ -62,6 +75,14 @@ export function ShortlistPage({
   const [shareCopied, setShareCopied] = useState(false);
   const [shareError, setShareError] = useState("");
   const [rechecking, setRechecking] = useState(false);
+  const [syncCode, setSyncCode] = useState(loadSyncCode);
+  const [pushing, setPushing] = useState(false);
+  const [pushDone, setPushDone] = useState(false);
+  const [syncError, setSyncError] = useState("");
+  const [importCode, setImportCode] = useState("");
+  const [importing, setImporting] = useState(false);
+  const [importMsg, setImportMsg] = useState("");
+  const [importError, setImportError] = useState("");
   const [recheckError, setRecheckError] = useState("");
   const [checkingDomains, setCheckingDomains] = useState<Set<string>>(new Set());
   const [changes, setChanges] = useState<Record<string, StatusChange>>({});
@@ -92,6 +113,62 @@ export function ShortlistPage({
       setShareError(t("shortlist.shareFailed"));
     } finally {
       setSharing(false);
+    }
+  }
+
+  /** 同步到其他设备：首次生成同步码，之后同码覆盖推送最新清单 */
+  async function pushSync() {
+    setPushing(true);
+    setSyncError("");
+    setPushDone(false);
+    try {
+      const res = await fetch("/api/sync", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ code: syncCode || undefined, items: items.map(({ domain, meaning, scores }) => ({ domain, meaning, scores })) }),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      const { code } = (await res.json()) as { code: string };
+      setSyncCode(code);
+      try {
+        localStorage.setItem(SYNC_CODE_KEY, code);
+      } catch { /* 存不了也仍展示码 */ }
+      setPushDone(true);
+      setTimeout(() => setPushDone(false), 3000);
+    } catch {
+      setSyncError(t("sync.pushFailed"));
+    } finally {
+      setPushing(false);
+    }
+  }
+
+  /** 输入同步码导入：合并（去重）到本地清单 */
+  async function importSync() {
+    const code = importCode.trim().toUpperCase();
+    setImportError("");
+    setImportMsg("");
+    if (!SYNC_CODE_RE.test(code)) {
+      setImportError(t("sync.importInvalid"));
+      return;
+    }
+    setImporting(true);
+    try {
+      const res = await fetch(`/api/sync/${code}`);
+      if (res.status === 404) {
+        setImportError(t("sync.importNotFound"));
+        return;
+      }
+      if (!res.ok) throw new Error(String(res.status));
+      const { items: incoming } = (await res.json()) as { items: Omit<ShortlistItem, "addedAt">[] };
+      const seen = new Set(items.map((i) => i.domain));
+      const fresh = incoming.filter((i) => !seen.has(i.domain));
+      onMerge(incoming);
+      setImportMsg(t("sync.importDone", { n: fresh.length }));
+      setImportCode("");
+    } catch {
+      setImportError(t("sync.importFailed"));
+    } finally {
+      setImporting(false);
     }
   }
 
@@ -234,6 +311,59 @@ export function ShortlistPage({
       {(shareError || recheckError) && (
         <p className="mb-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{shareError || recheckError}</p>
       )}
+
+      {/* 跨设备同步（免登录）：推送同步码 + 输入同步码导入 */}
+      <div className="mb-4 rounded-xl border border-line bg-bg1 px-4 py-3.5">
+        <p className="flex items-center gap-1.5 text-xs font-semibold text-txt1">
+          <MonitorSmartphone className="h-3.5 w-3.5 text-brand" />
+          {t("sync.title")}
+        </p>
+        <div className="mt-2.5 flex flex-wrap items-center gap-2">
+          {items.length > 0 && (
+            <button
+              className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50"
+              onClick={() => void pushSync()}
+              disabled={pushing}
+            >
+              {pushing ? <Loader2 className="h-4 w-4 animate-spin" /> : <MonitorSmartphone className="h-4 w-4" />}
+              {pushing ? t("sync.pushing") : t("sync.push")}
+            </button>
+          )}
+          <input
+            className="h-9 w-44 rounded-lg border border-line bg-bg0 px-3 font-mono text-sm uppercase tracking-widest placeholder:font-sans placeholder:normal-case placeholder:tracking-normal placeholder:text-txt2 focus:border-brand-line focus:outline-none"
+            placeholder={t("sync.importPlaceholder")}
+            value={importCode}
+            maxLength={8}
+            onChange={(e) => setImportCode(e.target.value.toUpperCase())}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") void importSync();
+            }}
+          />
+          <button
+            className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50"
+            onClick={() => void importSync()}
+            disabled={importing || importCode.length === 0}
+          >
+            {importing && <Loader2 className="h-4 w-4 animate-spin" />}
+            {importing ? t("sync.importing") : t("sync.import")}
+          </button>
+        </div>
+        {syncCode && (
+          <p className="mt-2.5 flex flex-wrap items-center gap-2 text-xs text-txt1">
+            {t("sync.codeLabel")}
+            <b className="rounded bg-brand-dim px-2 py-0.5 font-mono text-sm tracking-widest text-brand">{syncCode}</b>
+            {pushDone && (
+              <span className="flex items-center gap-1 text-brand">
+                <Check className="h-3.5 w-3.5" />
+                {t("sync.pushDone")}
+              </span>
+            )}
+          </p>
+        )}
+        {syncCode && <p className="mt-1 text-[11px] text-txt2">{t("sync.codeHint")}</p>}
+        {importMsg && <p className="mt-2 text-xs text-brand">{importMsg}</p>}
+        {(syncError || importError) && <p className="mt-2 text-xs text-destructive">{syncError || importError}</p>}
+      </div>
 
       {items.length === 0 ? (
         <div className="rounded-xl border border-dashed border-line p-10 text-center">
