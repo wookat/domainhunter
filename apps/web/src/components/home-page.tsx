@@ -88,6 +88,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一款让学习不再痛苦的在线学习工具，寓意「每天进步一点点、把知识点亮」；气质要可靠又有趣、不说教；场景是家长在付费页觉得靠谱、学习者每天打开时觉得轻松。",
     en: "An online learning tool that makes studying painless. The name should suggest steady daily progress and knowledge lighting up; the vibe is reliable yet fun, never preachy; it must reassure parents on the checkout page and feel light when learners open it every day.",
   },
+  {
+    slug: "travel",
+    labelZh: "旅行",
+    labelEn: "Travel",
+    zh: "一个帮人发现小众目的地的旅行品牌，寓意「出发去看没见过的世界」；气质要自由、开阔、有远方感；场景是朋友间口头推荐时一听就记住，机场广告牌上一眼有画面。",
+    en: "A travel brand that helps people discover offbeat destinations. The name should evoke setting off to see an unseen world; the vibe is free, open, full of wanderlust; it must stick after one spoken referral and paint a picture on an airport billboard.",
+  },
+  {
+    slug: "food",
+    labelZh: "餐饮美食",
+    labelEn: "Food & dining",
+    zh: "一个主打现做轻食的餐饮品牌，寓意「新鲜、认真做好每一餐」；气质要温暖、干净、有食欲感；场景是门头招牌三米外看得清、外卖列表里一眼被点开、朋友说「今天吃它」顺口。",
+    en: "A fresh-made casual food brand. The name should convey freshness and care in every meal; the vibe is warm, clean, appetizing; it must read from three meters on a storefront, get tapped in a delivery list, and roll off the tongue in \"let's eat there\".",
+  },
+  {
+    slug: "fitness",
+    labelZh: "健身健康",
+    labelEn: "Fitness",
+    zh: "一款帮人养成运动习惯的健身产品，寓意「每天坚持一点、成为更强的自己」；气质要有能量、正向、像一枚身份徽章；场景是印在运动服上不违和、喊在训练营里带感。",
+    en: "A fitness product that builds workout habits. The name should suggest daily persistence and becoming a stronger self; the vibe is energetic, positive, badge-like; it should look right printed on apparel and sound great shouted in a boot camp.",
+  },
+  {
+    slug: "devtools",
+    labelZh: "开发者工具",
+    labelEn: "Dev tools",
+    zh: "一款让开发者提效的命令行工具，寓意「把重复的构建部署活儿一键搞定」；气质要极客、干脆、有点冷幽默；场景是全小写敲进终端手感顺滑、在 GitHub README 里酷而不装。",
+    en: "A CLI tool that saves developers time. The name should evoke one-command builds and deploys; the vibe is hacker-ish, crisp, with a dry sense of humor; it must feel smooth typed lowercase in a terminal and look cool-but-not-trying in a GitHub README.",
+  },
+  {
+    slug: "web3",
+    labelZh: "Web3 项目",
+    labelEn: "Web3 project",
+    zh: "一个链上数据基础设施项目，寓意「像水电一样可靠的链上服务」；气质要专业、中立、有协议感、绝不土狗；场景是出现在审计报告和交易所公告里都站得住。",
+    en: "An on-chain data infrastructure project. The name should feel like utility-grade reliability for the chain; the vibe is professional, neutral, protocol-like, never memecoin-ish; it must hold up in audit reports and exchange announcements.",
+  },
+  {
+    slug: "agency",
+    labelZh: "咨询工作室",
+    labelEn: "Agency / studio",
+    zh: "一家小而美的设计咨询工作室，寓意「用专业判断帮客户把事做对」；气质要克制、可信、有方法论感；场景是印在提案封面和合同抬头上显得体面有分量。",
+    en: "A small, sharp design consultancy. The name should convey professional judgment that gets things right; the vibe is restrained, credible, methodology-driven; it must carry weight on a proposal cover and a contract header.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
