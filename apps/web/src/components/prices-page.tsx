@@ -30,12 +30,14 @@ export function PricesPage() {
   const { t, lang } = useI18n();
   const prices = usePrices();
   const [sort, setSort] = useState<SortKey>("reg");
+  const [filter, setFilter] = useState("");
 
   const rows = useMemo(() => {
-    const list = buildRows(prices);
+    const q = filter.trim().toLowerCase().replace(/^\./, "");
+    const list = buildRows(prices).filter((r) => !q || r.tld.includes(q));
     if (sort === "tld") return list.sort((a, b) => a.tld.localeCompare(b.tld));
     return list.sort((a, b) => (sort === "reg" ? a.reg - b.reg : a.renew - b.renew));
-  }, [prices, sort]);
+  }, [prices, sort, filter]);
 
   const TH = ({ k, label }: { k: SortKey; label: string }) => (
     <button
@@ -56,13 +58,21 @@ export function PricesPage() {
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{t("prices.title")}</h1>
       <p className="mt-3 text-[15px] leading-relaxed text-txt1">{t("prices.intro")}</p>
 
-      <div className="mt-8 overflow-hidden rounded-xl border border-line">
+      <input
+        value={filter}
+        onChange={(e) => setFilter(e.target.value)}
+        placeholder={t("prices.filter")}
+        className="mt-6 h-10 w-full max-w-xs rounded-lg border border-line bg-bg1 px-3 font-mono text-sm text-txt0 outline-none transition-colors placeholder:font-sans placeholder:text-txt2 focus:border-brand-line"
+      />
+
+      <div className="mt-4 overflow-hidden rounded-xl border border-line">
         <div className="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line bg-bg1 px-4 py-2.5">
           <TH k="tld" label={t("prices.colTld")} />
           <TH k="reg" label={t("prices.colReg")} />
           <TH k="renew" label={t("prices.colRenew")} />
           <span />
         </div>
+        {rows.length === 0 && <p className="px-4 py-6 text-center text-sm text-txt2">{t("prices.noMatch")}</p>}
         {rows.map((r) => (
           <div key={r.tld} className="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0 hover:bg-bg1">
             <a href={`/tld/${r.tld}?lang=${lang}`} className="font-mono text-sm font-semibold text-txt0 hover:text-brand">
@@ -72,9 +82,16 @@ export function PricesPage() {
               {r.live ? "" : "≈"}${r.reg}
               <span className="tnum ml-1 hidden text-[11px] text-txt2 sm:inline">¥{toCny(r.reg)}</span>
             </span>
-            <span className="tnum font-mono text-sm text-txt1">
-              {r.live ? "" : "≈"}${r.renew}
-              <span className="tnum ml-1 hidden text-[11px] text-txt2 sm:inline">¥{toCny(r.renew)}</span>
+            <span className="tnum flex items-center gap-1.5 font-mono text-sm text-txt1">
+              <span>
+                {r.live ? "" : "≈"}${r.renew}
+                <span className="tnum ml-1 hidden text-[11px] text-txt2 sm:inline">¥{toCny(r.renew)}</span>
+              </span>
+              {r.renew >= r.reg * 3 && r.reg > 0 && (
+                <span title={t("prices.trapTip")} className="rounded bg-amber-500/15 px-1 py-0.5 font-sans text-[10px] font-semibold text-amber-500">
+                  {t("prices.trap")}
+                </span>
+              )}
             </span>
             <a
               href={`/?tld=${r.tld}`}
