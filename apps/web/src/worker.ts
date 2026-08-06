@@ -3,6 +3,7 @@ import { nanoid } from "nanoid";
 import { generateCandidates, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
 import { generateAiCandidates, generateUnderstanding } from "./ai";
+import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { TLD_GUIDES, TLD_LIST, USD_TO_CNY } from "./content/tlds";
 
@@ -669,6 +670,16 @@ app.get("/api/og/guide/:slug", (c) => {
   });
 });
 
+app.get("/api/og/vs/:slug", (c) => {
+  const slug = c.req.param("slug").toLowerCase();
+  const cmp = TLD_COMPARES[slug];
+  if (!cmp) return c.notFound();
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  return new Response(pageOgSvg(`.${cmp.a} vs .${cmp.b}`, cmp[lang].title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
   const html = injectHreflang(await res.text(), "/").replace("</head>", `<script type="application/ld+json">${FAQ_JSONLD}</script></head>`);
@@ -731,8 +742,36 @@ app.get("/guide/:slug", async (c) => {
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
+// TLD 对比页（SPA 路由 + SSR meta）：回 index.html 并按对比对与语言替换 title/description
+app.get("/vs/:slug", async (c) => {
+  const slug = c.req.param("slug").toLowerCase();
+  const cmp = TLD_COMPARES[slug];
+  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  if (!cmp) return res;
+  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const loc = cmp[lang];
+  const title = escapeHtml(`${loc.title} | DomainHunter`);
+  const desc = escapeHtml(loc.metaDescription);
+  let html = await res.text();
+  html = html
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/vs/${slug}" />`)
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/vs/${slug}" />`)
+    .replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/vs/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
+  html = injectHreflang(html, `/vs/${slug}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang)}</script></head>`);
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
+});
+
 app.get("/sitemap.xml", (c) => {
-  const paths = ["/", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`)];
+  const paths = ["/", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
   const alt = (p: string) =>
     [
       `    <xhtml:link rel="alternate" hreflang="zh-CN" href="${SITE_ORIGIN}${p}?lang=zh" />`,

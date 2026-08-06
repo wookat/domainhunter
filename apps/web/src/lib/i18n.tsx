@@ -221,6 +221,14 @@ const zh = {
   "tld.ctaButton": "开始猎取 .{tld}",
   "tld.others": "其他 TLD 指南",
   "tld.relatedGuides": "相关行业命名指南",
+  // TLD 对比页
+  "vs.verdict": "怎么选",
+  "vs.pickWhen": "适合选 .{tld} 的情况",
+  "vs.ctaTitle": "让 AI 同时在 .{a} 和 .{b} 下猎名",
+  "vs.ctaDesc": "描述你的想法，AI 批量构思并实时核验两个后缀下的可注册好名字，直接对比。",
+  "vs.ctaButton": "开始猎取",
+  "vs.others": "其他后缀对比",
+  "vs.relatedCompares": "相关后缀对比",
   // 行业命名指南页
   "guide.notFound": "没有这个行业的命名指南",
   "guide.ideas": "命名思路",
@@ -450,6 +458,13 @@ const en: Record<I18nKey, string> = {
   "tld.ctaButton": "Start hunting .{tld}",
   "tld.others": "More TLD guides",
   "tld.relatedGuides": "Related industry naming guides",
+  "vs.verdict": "Which to pick",
+  "vs.pickWhen": "Pick .{tld} when",
+  "vs.ctaTitle": "Hunt names on .{a} and .{b} at once",
+  "vs.ctaDesc": "Describe your idea — AI brainstorms names in bulk and checks availability on both suffixes live, side by side.",
+  "vs.ctaButton": "Start hunting",
+  "vs.others": "More TLD comparisons",
+  "vs.relatedCompares": "Related TLD comparisons",
   "guide.notFound": "No naming guide for this industry",
   "guide.ideas": "Naming strategies",
   "guide.cases": "Great names, deconstructed",
@@ -517,7 +532,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     } catch { /* ignore */ }
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
     const path = window.location.pathname;
-    if (!path.startsWith("/tld/") && !path.startsWith("/s/")) document.title = dicts[lang]["meta.title"];
+    if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/")) document.title = dicts[lang]["meta.title"];
   }, [lang]);
 
   const t = useCallback<TFunc>((key, vars) => interpolate(dicts[lang][key] ?? zh[key], vars), [lang]);
