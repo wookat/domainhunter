@@ -10,45 +10,72 @@ const EXAMPLES_EN = ["AI weekly-report tool for indie devs", "Pet nutrition subs
 const PRESET_TLDS = ["com", "cn", "io", "ai", "app", "dev"];
 const MAX_LEN = 500;
 
-// 行业模板：寓意 + 气质 + 场景 三段式描述，点击填入输入框，用户可再编辑
-const TEMPLATES: { labelZh: string; labelEn: string; zh: string; en: string }[] = [
+// 行业模板：寓意 + 气质 + 场景 三段式描述，点击填入输入框，用户可再编辑；slug 对应 /guide/:slug 与 /?tpl= 预填入口
+const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; en: string }[] = [
   {
+    slug: "saas",
     labelZh: "SaaS 工具",
     labelEn: "SaaS tool",
     zh: "一款面向中小团队的协作 SaaS 工具，寓意「把繁琐的工作流理顺、让团队更快交付」；气质要专业、可靠、有效率感；场景是公司官网、产品登录页和邮件签名里都好记好读。",
     en: "A collaboration SaaS tool for small teams. The name should evoke smoothing out messy workflows and helping teams ship faster; the vibe is professional, reliable, and efficient; it needs to read well on a company homepage, a login page, and in email signatures.",
   },
   {
+    slug: "ecommerce",
     labelZh: "电商品牌",
     labelEn: "E-commerce brand",
     zh: "一个面向年轻人的生活方式电商品牌，寓意「把好物带进日常、让生活更有质感」；气质要温润、有品味、容易产生信任；场景是包装盒、购物袋和社交媒体主页上都上镜好记。",
     en: "A lifestyle e-commerce brand for young shoppers. The name should suggest bringing well-made things into everyday life; the vibe is warm, tasteful, and trustworthy; it has to look good on packaging, shopping bags, and a social media profile.",
   },
   {
+    slug: "ai",
     labelZh: "AI 产品",
     labelEn: "AI product",
     zh: "一款 AI 驱动的智能助手产品，寓意「像多了一个聪明同事，把重复劳动交给机器」；气质要聪明、前沿、有未来感但不冰冷；场景是 Product Hunt 发布、技术博客和投资人 PPT 里都站得住。",
     en: "An AI-powered assistant product. The name should feel like having a brilliant teammate who takes over the repetitive work; the vibe is smart, cutting-edge, futuristic but not cold; it should hold up on a Product Hunt launch, in tech blogs, and on an investor deck.",
   },
   {
+    slug: "blog",
     labelZh: "个人博客",
     labelEn: "Personal blog",
     zh: "一个记录思考与创作的个人博客，寓意「把想法沉淀下来、慢慢长成自己的小花园」；气质要安静、真诚、有书卷气；场景是读者在深夜读完一篇文章后，能凭名字记住并再次找到你。",
     en: "A personal blog for essays and creative work. The name should feel like a quiet garden where ideas settle and grow over time; the vibe is calm, sincere, and bookish; a reader who finishes a late-night post should remember the name and find their way back.",
   },
   {
+    slug: "pets",
     labelZh: "宠物",
     labelEn: "Pets",
     zh: "一个宠物用品与服务品牌，寓意「把毛孩子当家人，认真对待它们的每一餐每一天」；气质要温暖、活泼、让人会心一笑；场景是实体店招牌、外卖包装和小红书笔记里都可爱好认。",
     en: "A pet supplies and services brand. The name should convey treating furry kids as family and caring about every meal and every day; the vibe is warm, playful, and smile-inducing; it should charm on a storefront sign, delivery packaging, and social posts.",
   },
   {
+    slug: "fintech",
     labelZh: "金融科技",
     labelEn: "Fintech",
     zh: "一款面向年轻用户的理财记账工具，寓意「把钱管明白、让财富稳稳生长」；气质要可信、清爽、专业但不古板；场景是应用商店榜单和银行合作发布会上都拿得出手。",
     en: "A personal finance and budgeting app for younger users. The name should suggest understanding your money and letting wealth grow steadily; the vibe is trustworthy, clean, professional yet friendly; it must look credible on app store charts and at a bank partnership launch.",
   },
+  {
+    slug: "game",
+    labelZh: "游戏",
+    labelEn: "Games",
+    zh: "一款轻量多人在线小游戏，寓意「一局开黑、即点即玩的快乐」；气质要好玩、有能量、喊起来顺口；场景是主播在直播间反复喊出名字、玩家在商店列表里一眼记住。",
+    en: "A lightweight multiplayer web game. The name should evoke instant, jump-in-and-play fun with friends; the vibe is playful, energetic, and satisfying to shout; it must be memorable when streamers yell it on stream and players scroll past it in a store list.",
+  },
+  {
+    slug: "edu",
+    labelZh: "教育学习",
+    labelEn: "Education",
+    zh: "一款让学习不再痛苦的在线学习工具，寓意「每天进步一点点、把知识点亮」；气质要可靠又有趣、不说教；场景是家长在付费页觉得靠谱、学习者每天打开时觉得轻松。",
+    en: "An online learning tool that makes studying painless. The name should suggest steady daily progress and knowledge lighting up; the vibe is reliable yet fun, never preachy; it must reassure parents on the checkout page and feel light when learners open it every day.",
+  },
 ];
+
+/** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
+function templateFromQuery(lang: string): string {
+  const q = new URLSearchParams(window.location.search).get("tpl")?.trim().toLowerCase();
+  const tpl = q ? TEMPLATES.find((x) => x.slug === q) : undefined;
+  return tpl ? (lang === "zh" ? tpl.zh : tpl.en) : "";
+}
 
 // value 保持中文（传给 AI 的提示词），label 按语言切换
 export const STYLE_OPTIONS: { value: string; labelKey: I18nKey }[] = [
@@ -108,7 +135,7 @@ function MiniSelect({
 
 export function HomePage({ initial, onSubmit, onBackToResults }: { initial: HomeValues; onSubmit: (v: HomeValues) => void; onBackToResults?: () => void }) {
   const { t, lang } = useI18n();
-  const [description, setDescription] = useState(initial.description);
+  const [description, setDescription] = useState(() => initial.description || templateFromQuery(lang));
   const [totalChecked, setTotalChecked] = useState<number | null>(null);
 
   useEffect(() => {
