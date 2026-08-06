@@ -156,11 +156,13 @@ function GridCard({
   );
 }
 
-/** 把当前搜索编成可分享的 /?q=…&tld=… 链接 */
-function searchLink(description: string, tlds: string[]): string {
+/** 把当前搜索编成可分享的 /?q=…&tld=…&style=…&len=… 链接 */
+function searchLink(description: string, tlds: string[], style: string, lengthPref: string): string {
   const params = new URLSearchParams();
   params.set("q", description);
   if (tlds.length > 0) params.set("tld", tlds.join(","));
+  if (style) params.set("style", style);
+  if (lengthPref) params.set("len", lengthPref);
   return `${window.location.origin}/?${params.toString()}`;
 }
 
@@ -168,6 +170,8 @@ export function ResultsPage({
   rows,
   description,
   tlds,
+  style,
+  lengthPref,
   roundCount,
   elapsedSec,
   locked,
@@ -182,6 +186,8 @@ export function ResultsPage({
   rows: Row[];
   description: string;
   tlds: string[];
+  style: string;
+  lengthPref: string;
   roundCount: number;
   elapsedSec?: number;
   locked: Set<string>;
@@ -268,7 +274,7 @@ export function ResultsPage({
               className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0"
               title={t("results.copyLinkTitle")}
               onClick={() => {
-                void navigator.clipboard.writeText(searchLink(description, tlds));
+                void navigator.clipboard.writeText(searchLink(description, tlds, style, lengthPref));
                 setLinkCopied(true);
                 window.setTimeout(() => setLinkCopied(false), 2000);
               }}

@@ -145,6 +145,12 @@ function descriptionFromQuery(): string {
   return new URLSearchParams(window.location.search).get("q")?.trim().slice(0, MAX_LEN) ?? "";
 }
 
+/** /?style= 与 /?len= 预填风格/长度偏好（分享搜索链接入口）；对不上选项忽略 */
+function optionFromQuery(param: string, options: { value: string }[]): string {
+  const q = new URLSearchParams(window.location.search).get(param)?.trim();
+  return q && options.some((o) => o.value === q) ? q : "";
+}
+
 // value 保持中文（传给 AI 的提示词），label 按语言切换
 export const STYLE_OPTIONS: { value: string; labelKey: I18nKey }[] = [
   { value: "none", labelKey: "home.style.none" },
@@ -252,8 +258,8 @@ export function HomePage({
     };
   }, []);
   const [tlds, setTlds] = useState<string[]>(initial.tlds);
-  const [style, setStyle] = useState(initial.style || "none");
-  const [lengthPref, setLengthPref] = useState(initial.lengthPref || "none");
+  const [style, setStyle] = useState(() => initial.style || optionFromQuery("style", STYLE_OPTIONS) || "none");
+  const [lengthPref, setLengthPref] = useState(() => initial.lengthPref || optionFromQuery("len", LENGTH_OPTIONS) || "none");
   const [customTld, setCustomTld] = useState("");
   const [showCustom, setShowCustom] = useState(false);
 

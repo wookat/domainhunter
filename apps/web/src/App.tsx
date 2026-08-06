@@ -68,11 +68,12 @@ function compareFromPath(): string | null {
   return m ? m[1].toLowerCase() : null;
 }
 
-/** 首页默认 TLD：支持 /?tld=xx 或 /?tld=xx,yy 预填（TLD 指南页 / 对比页 CTA 入口） */
+/** 首页默认 TLD：支持 /?tld=xx 或 /?tld=xx,yy 预填（TLD 指南页 / 对比页 CTA 入口）；分享搜索链接（带 q）精确还原不补 com */
 function initialTlds(): string[] {
-  const q = new URLSearchParams(window.location.search).get("tld")?.trim().toLowerCase();
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get("tld")?.trim().toLowerCase();
   const list = (q ?? "").split(",").map((s) => s.trim().replace(/^\./, "")).filter((s) => /^[a-z0-9-]{2,24}$/.test(s));
-  if (list.length > 0) return [...new Set(list.includes("com") ? list : [...list, "com"])];
+  if (list.length > 0) return [...new Set(params.has("q") || list.includes("com") ? list : [...list, "com"])];
   return ["com", "cn"];
 }
 
@@ -433,6 +434,8 @@ export default function App() {
           rows={rows}
           description={values.description}
           tlds={values.tlds}
+          style={values.style}
+          lengthPref={values.lengthPref}
           roundCount={rounds.length}
           elapsedSec={elapsedSec}
           locked={locked}
