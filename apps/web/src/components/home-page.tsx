@@ -459,7 +459,7 @@ export function HomePage({
                         target="_blank"
                         rel="noreferrer"
                         title={t("home.quickRegister", { domain: row.domain })}
-                        className="inline-flex items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85"
+                        className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85 sm:min-h-0"
                       >
                         {row.domain}
                         <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
@@ -470,7 +470,7 @@ export function HomePage({
                         onClick={() => shortlist.toggle(domainToRow(row.domain))}
                         title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                         aria-pressed={shortlist.has(row.domain)}
-                        className="border-l border-brand-line/50 px-2 transition-opacity hover:opacity-85"
+                        className="border-l border-brand-line/50 px-3 transition-opacity hover:opacity-85 sm:px-2"
                       >
                         <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                       </button>
@@ -531,7 +531,7 @@ export function HomePage({
                             target="_blank"
                             rel="noreferrer"
                             title={t("home.quickRegister", { domain: row.domain })}
-                            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85"
+                            className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85 sm:min-h-0"
                           >
                             {row.domain}
                             <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
@@ -542,7 +542,7 @@ export function HomePage({
                             onClick={() => shortlist.toggle(domainToRow(row.domain))}
                             title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                             aria-pressed={shortlist.has(row.domain)}
-                            className="border-l border-brand-line/50 px-2 transition-opacity hover:opacity-85"
+                            className="border-l border-brand-line/50 px-3 transition-opacity hover:opacity-85 sm:px-2"
                           >
                             <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                           </button>
