@@ -3,9 +3,10 @@ import { ArrowRight, Brain, ChevronDown, ExternalLink, Loader2, Plus, Ruler, Sea
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useI18n, type I18nKey } from "@/lib/i18n";
+import { toUsd, usePrices } from "@/lib/prices";
 import { REGISTRARS } from "@/lib/registrars";
 import { cn } from "@/lib/utils";
-import type { Row } from "@/types";
+import { tldPrice, type Row } from "@/types";
 
 const EXAMPLES = ["独立开发者的 AI 周报工具", "宠物营养订阅电商", "极简冥想 App", "跨境 SaaS 数据看板"];
 const EXAMPLES_EN = ["AI weekly-report tool for indie devs", "Pet nutrition subscription store", "Minimal meditation app", "Cross-border SaaS dashboard"];
@@ -150,6 +151,17 @@ function MiniSelect({
       </DropdownMenuContent>
     </DropdownMenu>
   );
+}
+
+/** 可注册 chip 上的首年价（实时优先，静态参考价带 ≈）；仅在有可注册 chip 时才拉价格 */
+function ChipPrice({ domain }: { domain: string }) {
+  const prices = usePrices();
+  const tld = domain.slice(domain.indexOf(".") + 1);
+  const p = prices?.[tld];
+  const s = tldPrice(tld);
+  const text = p ? `$${p.registration}` : s ? `≈$${toUsd(s.first)}` : undefined;
+  if (!text) return null;
+  return <i className="not-italic font-sans text-[10px] opacity-75">{text}</i>;
 }
 
 /** 快速核验的可注册 chip 也可收藏到候选清单 */
@@ -451,6 +463,7 @@ export function HomePage({
                       >
                         {row.domain}
                         <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
+                        <ChipPrice domain={row.domain} />
                         <ExternalLink className="h-3 w-3" />
                       </a>
                       <button
@@ -522,6 +535,7 @@ export function HomePage({
                           >
                             {row.domain}
                             <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
+                            <ChipPrice domain={row.domain} />
                             <ExternalLink className="h-3 w-3" />
                           </a>
                           <button
