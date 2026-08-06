@@ -68,15 +68,15 @@ export function AdvancedPage() {
 
   return (
     <main className="mx-auto max-w-5xl flex-1 px-4 py-8 md:px-6">
-      <h1 className="text-xl font-bold tracking-tight md:text-2xl">高级模式</h1>
-      <p className="mt-1 text-sm text-txt1">词根 × 前后缀 × TLD 批量组合生成，逐个核验可注册状态</p>
+      <h1 className="text-xl font-bold tracking-tight md:text-2xl">{t("adv.title")}</h1>
+      <p className="mt-1 text-sm text-txt1">{t("adv.subtitle")}</p>
 
       <Card className="mt-5 p-4 md:p-6">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { label: "词根（roots）", value: roots, set: setRoots, placeholder: "tizhi, gwy" },
-            { label: "前缀（prefixes）", value: prefixes, set: setPrefixes, placeholder: "get, my" },
-            { label: "后缀（suffixes）", value: suffixes, set: setSuffixes, placeholder: "job, jobs" },
+            { label: t("adv.roots"), value: roots, set: setRoots, placeholder: "tizhi, gwy" },
+            { label: t("adv.prefixes"), value: prefixes, set: setPrefixes, placeholder: "get, my" },
+            { label: t("adv.suffixes"), value: suffixes, set: setSuffixes, placeholder: "job, jobs" },
             { label: "TLD", value: tlds, set: setTlds, placeholder: "com, cn" },
           ].map((f) => (
             <div key={f.label}>
@@ -87,7 +87,7 @@ export function AdvancedPage() {
         </div>
         <Button className="mt-5 w-full sm:w-auto" size="lg" disabled={running || split(roots).length === 0} onClick={run}>
           {running ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
-          {running ? "检索中…" : "开始检索"}
+          {running ? t("adv.running") : t("adv.start")}
         </Button>
       </Card>
 
@@ -95,7 +95,7 @@ export function AdvancedPage() {
 
       {available.length > 0 && (
         <>
-          <h2 className="mt-6 text-sm font-semibold text-brand">可注册（{available.length}）</h2>
+          <h2 className="mt-6 text-sm font-semibold text-brand">{t("adv.available", { n: available.length })}</h2>
           <div className="mt-2 divide-y divide-line rounded-xl border border-line bg-bg1">
             {available.map((r) => (
               <DomainRow key={r.domain} row={r} />
@@ -105,7 +105,7 @@ export function AdvancedPage() {
       )}
       {rest.length > 0 && (
         <>
-          <h2 className="mt-6 text-sm font-semibold text-txt1">其余候选（{rest.length}）</h2>
+          <h2 className="mt-6 text-sm font-semibold text-txt1">{t("adv.rest", { n: rest.length })}</h2>
           <div className="mt-2 divide-y divide-line rounded-xl border border-line bg-bg1">
             {rest.map((r) => (
               <DomainRow key={r.domain} row={r} />
