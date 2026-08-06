@@ -586,6 +586,10 @@ function loadLang(): Lang {
     const v = localStorage.getItem(LANG_KEY);
     if (v === "en" || v === "zh") return v;
   } catch { /* ignore */ }
+  try {
+    // 与 worker SSR 的 accept-language 检测保持一致：英文浏览器默认英文界面
+    if ((navigator.language ?? "").toLowerCase().startsWith("en")) return "en";
+  } catch { /* ignore */ }
   return "zh";
 }
 
