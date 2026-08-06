@@ -5,6 +5,10 @@ import { whoisFallback } from "./whois";
 import { generateAiCandidates, generateUnderstanding } from "./ai";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
+import { buildCompareFaq } from "./content/compare-faq";
+import { buildGuideFaq } from "./content/guide-faq";
+import { buildPricesFaq } from "./content/prices-faq";
+import { buildTldFaq } from "./content/tld-faq";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 
@@ -581,7 +585,14 @@ app.get("/api/usage", async (c) => {
       }),
     );
   }
-  return c.json({ days: out }, 200, { "cache-control": "public, max-age=300" });
+  let cronLast: number | null = null;
+  let indexnowLast: number | null = null;
+  try {
+    const [cl, il] = await Promise.all([kv?.get("cron:last"), kv?.get("indexnow:last")]);
+    cronLast = cl ? Number(cl) : null;
+    indexnowLast = il ? Number(il) : null;
+  } catch { /* 读失败返回 null */ }
+  return c.json({ days: out, cronLast, indexnowLast }, 200, { "cache-control": "public, max-age=300" });
 });
 
 // SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）
@@ -732,6 +743,10 @@ async function injectModulepreload(html: string, assets: Fetcher, origin: string
   }
 }
 
+/** SSR 按解析出的语言设置 <html lang>（SPA 水合后会再同步，这里保证首屏/爬虫看到的语言正确） */
+const setHtmlLang = (html: string, lang: "zh" | "en"): string =>
+  lang === "en" ? html.replace(/<html lang="[^"]*"/, '<html lang="en"') : html;
+
 /** 未知 slug 的 SEO 路由：返回应用壳 + 404 状态 + noindex，避免软 404 被收录 */
 async function notFoundShell(res: Response): Promise<Response> {
   const html = (await res.text()).replace("</head>", `<meta name="robots" content="noindex" /></head>`);
@@ -739,19 +754,32 @@ async function notFoundShell(res: Response): Promise<Response> {
 }
 
 // 着陆页：SSR 注入 hreflang alternate
-// 首页 FAQPage 结构化数据（与首页 FAQ 区块内容一致，供搜索引擎富摘要）
-const FAQ_JSONLD = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+// 首页 FAQPage 结构化数据（与首页 FAQ 区块内容一致，供搜索引擎富摘要；英文文案与 i18n 词典逐字一致）
+const HOME_FAQ = {
+  zh: [
     { q: "DomainHunter 是什么？", a: "用一句自然语言描述你想要的域名寓意与风格，AI 多轮构思候选并实时核验，直接给出一批真正可注册的好名字。" },
     { q: "核验结果准确吗？", a: "每个域名经 DNS + RDAP + WHOIS 三级核验，可注册状态来自注册局权威数据；注册前建议在注册商页面再确认一次。" },
     { q: "使用收费吗？", a: "完全免费。AI 搜索有每小时次数限制；即输即查、更多后缀与前后缀变体核验不限量、不消耗 AI 次数。" },
     { q: "会自动帮我注册域名吗？", a: "不会。我们只提供核验结果与注册商跳转链接（如 Porkbun），注册和付费在注册商完成。" },
     { q: "支持哪些后缀？", a: "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio。" },
     { q: "我的搜索会被保存吗？", a: "不保存输入内容和 IP，只记录匿名的聚合次数统计；收藏清单保存在你自己的浏览器本地。" },
-  ].map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
-});
+  ],
+  en: [
+    { q: "What is DomainHunter?", a: "Describe the meaning and style you want in one sentence — AI brainstorms candidates over multiple rounds, verifies each one live, and hands you a batch of genuinely registrable names." },
+    { q: "How accurate are the availability checks?", a: "Every domain goes through DNS + RDAP + WHOIS checks against authoritative registry data. We still recommend a final confirmation on the registrar's page before buying." },
+    { q: "Is it free?", a: "Completely free. AI search has an hourly rate limit; instant checks, extra-TLD checks, and prefix/suffix variants are unlimited and never use AI quota." },
+    { q: "Will it register domains for me automatically?", a: "No. We only provide verification results and registrar links (e.g. Porkbun) — registration and payment happen at the registrar." },
+    { q: "Which TLDs are supported?", a: "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio via the “more TLDs” button." },
+    { q: "Do you store my searches?", a: "We never store your input or IP — only anonymous aggregate counters. Your shortlist lives in your own browser's local storage." },
+  ],
+} as const;
+
+const homeFaqJsonld = (lang: "zh" | "en") =>
+  JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: HOME_FAQ[lang].map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
+  });
 
 /** BreadcrumbList 结构化数据：首页 → 当前页，供搜索结果面包屑展示 */
 const breadcrumbJsonld = (name: string, path: string, lang: "zh" | "en") =>
@@ -827,9 +855,30 @@ app.get("/api/og/vs/:slug", (c) => {
   });
 });
 
+// 首页英文 SSR meta（与 i18n 词典 meta.title 一致）
+const HOME_META_EN = {
+  title: "DomainHunter — AI Domain Hunter | Describe the meaning, hunt truly available names",
+  desc: "Describe your idea in one sentence — AI brainstorms domain names, verifies availability live via RDAP+DNS, and scores each one. Only names you can register right now. Free, open source, no login.",
+  ogTitle: "DomainHunter — AI Domain Hunter",
+  ogDesc: "Describe the meaning — AI brainstorms names, verifies availability live, and scores each one. Only truly registrable domains.",
+};
+
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
-  const html = injectHreflang(await res.text(), "/").replace("</head>", `<script type="application/ld+json">${FAQ_JSONLD}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
+  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  let html = await res.text();
+  if (lang === "en") {
+    const m = HOME_META_EN;
+    html = html
+      .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(m.title)}</title>`)
+      .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${escapeHtml(m.desc)}" />`)
+      .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${escapeHtml(m.ogTitle)}" />`)
+      .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${escapeHtml(m.ogDesc)}" />`)
+      .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${escapeHtml(m.ogTitle)}" />`)
+      .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${escapeHtml(m.ogDesc)}" />`);
+  }
+  html = injectHreflang(html, "/").replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
+  html = setHtmlLang(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -857,7 +906,20 @@ app.get("/tld/:tld", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/tld/${tld}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, `/tld/${tld}`).replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang)}</script></head>`);
+  const tldFaqJsonld = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: buildTldFaq(tld, loc, lang).map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  });
+  html = injectHreflang(html, `/tld/${tld}`).replace(
+    "</head>",
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang)}</script><script type="application/ld+json">${tldFaqJsonld}</script></head>`,
+  );
+  html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/tld-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -886,10 +948,20 @@ app.get("/guide/:slug", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/guide/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
+  const guideFaqJsonld = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: buildGuideFaq(guide, lang).map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  });
   html = injectHreflang(html, `/guide/${slug}`).replace(
     "</head>",
-    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script></head>`,
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${guideFaqJsonld}</script></head>`,
   );
+  html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/guide-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -918,10 +990,20 @@ app.get("/vs/:slug", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/vs/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
+  const cmpFaqJsonld = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: buildCompareFaq(cmp, lang).map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  });
   html = injectHreflang(html, `/vs/${slug}`).replace(
     "</head>",
-    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script></head>`,
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${cmpFaqJsonld}</script></head>`,
   );
+  html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/compare-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -958,7 +1040,20 @@ app.get("/prices", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/prices?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/prices").replace("</head>", `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/prices", lang)}</script></head>`);
+  const pricesFaqJsonld = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: buildPricesFaq(lang).map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  });
+  html = injectHreflang(html, "/prices").replace(
+    "</head>",
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/prices", lang)}</script><script type="application/ld+json">${pricesFaqJsonld}</script></head>`,
+  );
+  html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/prices-page.tsx");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -1057,6 +1152,8 @@ async function pingIndexNow(env: Bindings): Promise<void> {
 export default {
   fetch: app.fetch,
   async scheduled(_event: ScheduledController, env: Bindings, ctx: ExecutionContext) {
+    // 心跳：记录每次 cron 实际执行时间，便于观察调度是否生效
+    ctx.waitUntil(env.CACHE?.put("cron:last", String(Date.now())) ?? Promise.resolve());
     ctx.waitUntil(runMonitorSweep(env));
     ctx.waitUntil(pingIndexNow(env));
   },

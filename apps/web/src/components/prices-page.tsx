@@ -1,7 +1,8 @@
-import { ArrowUpDown, Sparkles, Tag } from "lucide-react";
+import { ArrowUpDown, HelpCircle, Sparkles, Tag } from "lucide-react";
 import { useMemo, useState } from "react";
 
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
+import { buildPricesFaq } from "@/content/prices-faq";
 import { TLD_LIST } from "@/content/tld-list";
 import { useI18n } from "@/lib/i18n";
 import { toCny, toUsd, usePrices } from "@/lib/prices";
@@ -104,6 +105,22 @@ export function PricesPage() {
         ))}
       </div>
       <p className="mt-3 text-[11px] text-txt2">{t("prices.source")}</p>
+
+      {/* FAQ */}
+      <h2 className="mt-10 flex items-center gap-2 text-base font-bold">
+        <HelpCircle className="h-4 w-4 text-brand" />
+        {t("tld.faq")}
+      </h2>
+      <div className="mt-3 space-y-2">
+        {buildPricesFaq(lang).map((item) => (
+          <details key={item.q} className="group rounded-xl border border-line bg-bg1 px-4 py-3">
+            <summary className="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
+              {item.q}
+            </summary>
+            <p className="mt-2 text-sm leading-relaxed text-txt1">{item.a}</p>
+          </details>
+        ))}
+      </div>
 
       {/* 对比页内链：价格看完直接进两两对比 */}
       <section className="mt-10">

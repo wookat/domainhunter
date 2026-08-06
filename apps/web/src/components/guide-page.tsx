@@ -1,5 +1,6 @@
-import { AlertTriangle, Lightbulb, Quote, Sparkles } from "lucide-react";
+import { AlertTriangle, HelpCircle, Lightbulb, Quote, Sparkles } from "lucide-react";
 
+import { buildGuideFaq } from "@/content/guide-faq";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "@/content/guides";
 import { useI18n } from "@/lib/i18n";
 import { priceShort, usePrices } from "@/lib/prices";
@@ -24,6 +25,7 @@ export function GuidePage({ slug }: { slug: string }) {
   }
 
   const loc = guide[lang];
+  const faq = buildGuideFaq(guide, lang);
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -91,6 +93,22 @@ export function GuidePage({ slug }: { slug: string }) {
           </li>
         ))}
       </ul>
+
+      {/* FAQ：与 worker SSR 的 FAQPage JSON-LD 同源（buildGuideFaq） */}
+      <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+        <HelpCircle className="h-4 w-4 text-brand" />
+        {t("tld.faq")}
+      </h2>
+      <div className="mt-3 space-y-2">
+        {faq.map((item) => (
+          <details key={item.q} className="group rounded-xl border border-line bg-bg1 px-4 py-3">
+            <summary className="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
+              {item.q}
+            </summary>
+            <p className="mt-2 text-sm leading-relaxed text-txt1">{item.a}</p>
+          </details>
+        ))}
+      </div>
 
       {/* CTA：预填该行业模板的猎名入口 */}
       <div className="mt-10 rounded-2xl border border-brand-line bg-brand-dim p-6 text-center">
