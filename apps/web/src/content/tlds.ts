@@ -2,8 +2,7 @@
  * TLD 指南页内容（/tld/:tld）。纯数据常量：前端页面与 worker（SSR meta / sitemap）共用。
  */
 
-/** 美元→人民币换算参考汇率（估算值，仅供参考展示） */
-export const USD_TO_CNY = 7.2;
+import type { Tld } from "./tld-list";
 
 export interface TldGuideLocale {
   /** 页面标题（不含站点名） */
@@ -24,7 +23,7 @@ export interface TldGuide {
   en: TldGuideLocale;
 }
 
-export const TLD_GUIDES: Record<string, TldGuide> = {
+const GUIDES = {
   com: {
     tld: "com",
     zh: {
@@ -925,7 +924,7 @@ export const TLD_GUIDES: Record<string, TldGuide> = {
       ],
     },
   },
-};
+} satisfies Record<Tld, TldGuide>;
 
-/** 30 个指南页 TLD 列表（顺序即导航展示顺序） */
-export const TLD_LIST = Object.keys(TLD_GUIDES);
+// 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
+export const TLD_GUIDES: Record<string, TldGuide> = GUIDES;

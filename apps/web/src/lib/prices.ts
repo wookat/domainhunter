@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { tldPrice } from "@/types";
-import { USD_TO_CNY } from "@/content/tlds";
+import { USD_TO_CNY } from "@/content/tld-list";
 
 export interface LivePrice {
   registration: number;
