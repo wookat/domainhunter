@@ -56,17 +56,23 @@ export async function rdapCheck(domain: string, fetchFn: typeof fetch = fetch): 
   const base = await getRdapBase(tldOf(domain), fetchFn);
   if (!base) return { domain, status: "unknown", method: "none", detail: "no-rdap-server" };
   const url = `${base.replace(/\/$/, "")}/domain/${encodeURIComponent(domain)}`;
-  // 瞬时失败（网络错误 / 429 / 5xx）重试一次，避免偶发「未知」
-  for (let attempt = 0; attempt < 2; attempt++) {
-    if (attempt > 0) await new Promise((r) => setTimeout(r, 600));
+  // 瞬时失败（网络错误 / 429 / 5xx）重试，退避时间尊重 Retry-After（封顶 2.5s），避免偶发「未知」
+  const MAX_ATTEMPTS = 3;
+  let delayMs = 700;
+  for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+    if (attempt > 0) await new Promise((r) => setTimeout(r, delayMs));
     try {
       const res = await fetchFn(url, { headers: { accept: "application/rdap+json" } });
       if (res.status === 404) return { domain, status: "available", method: "rdap" };
       if (res.ok) return { domain, status: "taken", method: "rdap" };
-      if (attempt === 0 && (res.status === 429 || res.status >= 500)) continue;
+      if (attempt < MAX_ATTEMPTS - 1 && (res.status === 429 || res.status >= 500)) {
+        const ra = Number(res.headers.get("retry-after"));
+        delayMs = Math.min(Number.isFinite(ra) && ra > 0 ? ra * 1000 : delayMs * 2, 2500);
+        continue;
+      }
       return { domain, status: "unknown", method: "rdap", detail: `http-${res.status}` };
     } catch (e) {
-      if (attempt === 0) continue;
+      if (attempt < MAX_ATTEMPTS - 1) continue;
       return { domain, status: "unknown", method: "rdap", detail: String(e) };
     }
   }
