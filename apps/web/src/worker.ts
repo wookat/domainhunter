@@ -77,7 +77,7 @@ async function checkDomainsCached(
     }
     await onResult(r);
   }, 6, fetch, whoisFallback);
-  await bumpStats(kv, misses.length);
+  await bumpStats(kv, domains.length);
 }
 
 interface ShareItem {

@@ -49,7 +49,7 @@ function TopPickCard({
   favorite: boolean;
   onToggleFavorite: (row: Row) => void;
 }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const score = row.scores ? totalScore(row.scores) : 0;
   return (
     <div className={cn("rounded-xl border bg-bg1 p-5", rank === 0 ? "border-brand-line" : "border-line")}>
@@ -84,10 +84,10 @@ function TopPickCard({
       </div>
       {row.meaning && <p className="mt-1.5 text-[13px] leading-relaxed text-txt1">{row.meaning}</p>}
       {row.scores && <ScoreBars scores={row.scores} className="mt-4" />}
-      {tldPriceFull(row.tld) && <p className="tnum mt-3 text-[11px] text-txt2">{tldPriceFull(row.tld)}</p>}
+      {tldPriceFull(row.tld, lang) && <p className="tnum mt-3 text-[11px] text-txt2">{tldPriceFull(row.tld, lang)}</p>}
       <RegisterMenu domain={row.domain}>
         <button className="mt-2 flex h-10 w-full items-center justify-center gap-1.5 rounded-lg bg-brand text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90">
-          {t("common.register")}{tldPriceShort(row.tld) ? ` · ${tldPriceShort(row.tld)}` : ""}
+          {t("common.register")}{tldPriceShort(row.tld, lang) ? ` · ${tldPriceShort(row.tld, lang)}` : ""}
           <ChevronDown className="h-4 w-4" />
         </button>
       </RegisterMenu>
@@ -108,7 +108,7 @@ function GridCard({
   favorite: boolean;
   onToggleFavorite: (row: Row) => void;
 }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const score = row.scores ? totalScore(row.scores) : undefined;
   return (
     <div className="rounded-xl border border-line bg-bg1 p-4">
@@ -177,7 +177,7 @@ export function ResultsPage({
   running: boolean;
   moreDisabled?: boolean;
 }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("available");
   const [tldFilter, setTldFilter] = useState<string>("");
   const [sort, setSort] = useState<SortKey>("score");

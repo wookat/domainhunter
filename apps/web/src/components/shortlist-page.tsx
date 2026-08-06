@@ -299,7 +299,7 @@ export function ShortlistPage({
                           )}
                         </td>
                       ))}
-                      <td title={tldPriceFull(it.tld)} className="tnum px-3 text-right font-mono text-xs text-txt1">{tldPriceShort(it.tld) ?? "—"}</td>
+                      <td title={tldPriceFull(it.tld, lang)} className="tnum px-3 text-right font-mono text-xs text-txt1">{tldPriceShort(it.tld, lang) ?? "—"}</td>
                       <td className="whitespace-nowrap px-4 text-right">
                         <span className="inline-flex items-center gap-1">
                           <CopyButton domain={it.domain} />
@@ -345,7 +345,7 @@ export function ShortlistPage({
                   {it.meaning && <p className="mt-1 text-xs text-txt1">{it.meaning}</p>}
                   {it.scores && <ScoreBars scores={it.scores} columns={4} className="mt-3" />}
                   <div className="mt-3 flex items-center gap-2">
-                    <span title={tldPriceFull(it.tld)} className="tnum flex-1 font-mono text-xs text-txt1">{tldPriceShort(it.tld) ?? ""}</span>
+                    <span title={tldPriceFull(it.tld, lang)} className="tnum flex-1 font-mono text-xs text-txt1">{tldPriceShort(it.tld, lang) ?? ""}</span>
                     <button
                       title={t("common.remove")}
                       className="grid h-11 w-11 place-items-center rounded-md border border-line text-txt2 hover:text-destructive"

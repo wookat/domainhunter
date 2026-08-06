@@ -107,8 +107,8 @@ export function SharePage({ id }: { id: string }) {
                       {score ?? "—"}
                     </span>
                   </td>
-                  <td title={tldPriceFull(it.tld)} className="tnum px-3 text-right font-mono text-xs text-txt1">
-                    {tldPriceShort(it.tld) ?? "—"}
+                  <td title={tldPriceFull(it.tld, lang)} className="tnum px-3 text-right font-mono text-xs text-txt1">
+                    {tldPriceShort(it.tld, lang) ?? "—"}
                   </td>
                   <td className="whitespace-nowrap px-4 text-right">
                     <RegisterMenu domain={it.domain}>
@@ -142,8 +142,8 @@ export function SharePage({ id }: { id: string }) {
               {it.meaning && <p className="mt-1 text-xs text-txt1">{it.meaning}</p>}
               {it.scores && <ScoreBars scores={it.scores} columns={4} className="mt-3" />}
               <div className="mt-3 flex items-center gap-2">
-                <span title={tldPriceFull(it.tld)} className="tnum flex-1 font-mono text-xs text-txt1">
-                  {tldPriceShort(it.tld) ?? ""}
+                <span title={tldPriceFull(it.tld, lang)} className="tnum flex-1 font-mono text-xs text-txt1">
+                  {tldPriceShort(it.tld, lang) ?? ""}
                 </span>
                 <RegisterMenu domain={it.domain}>
                   <button className="h-11 rounded-md bg-brand px-4 text-xs font-semibold text-brand-ink">{t("common.register")}</button>

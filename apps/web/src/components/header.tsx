@@ -29,7 +29,7 @@ export function Header({
           <span className="grid h-7 w-7 place-items-center rounded-lg border border-brand-line bg-brand-dim">
             <Crosshair className="h-4 w-4 text-brand" />
           </span>
-          DomainHunter
+          <span className="max-[430px]:hidden">DomainHunter</span>
         </button>
         <div className="flex items-center gap-1.5">
           {center}

@@ -35,7 +35,7 @@ export function RegisterMenu({ domain, children }: { domain: string; children: R
 }
 
 export function CopyButton({ domain, className }: { domain: string; className?: string }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [copied, setCopied] = useState(false);
   return (
     <button
@@ -69,7 +69,7 @@ export function DomainRow({
   favorite?: boolean;
   onToggleFavorite?: (row: Row) => void;
 }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const score = row.scores ? totalScore(row.scores) : undefined;
 
   if (row.status === "taken") {
@@ -108,9 +108,9 @@ export function DomainRow({
       {isUnknown && <span className="shrink-0 rounded bg-amber2-dim px-1.5 py-0.5 text-[11px] text-amber2">{t("status.unknown")}</span>}
       <span className="hidden flex-1 truncate text-xs text-txt1 sm:block">{row.meaning}</span>
       <span className="ml-auto sm:ml-0" />
-      {tldPriceShort(row.tld) && (
-        <span title={tldPriceFull(row.tld)} className="tnum hidden shrink-0 font-mono text-xs text-txt2 md:block">
-          {tldPriceShort(row.tld)}
+      {tldPriceShort(row.tld, lang) && (
+        <span title={tldPriceFull(row.tld, lang)} className="tnum hidden shrink-0 font-mono text-xs text-txt2 md:block">
+          {tldPriceShort(row.tld, lang)}
         </span>
       )}
       {onToggleLock && (
