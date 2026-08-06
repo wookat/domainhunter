@@ -191,11 +191,25 @@ export function HomePage({ initial, onSubmit, onBackToResults }: { initial: Home
   const [quickRunning, setQuickRunning] = useState(false);
   const quickAbortRef = useRef<AbortController | null>(null);
 
+  // 变体建议：心仪名字被注册时，用前后缀组合免费核验一批变体（同样不消耗 AI 次数）
+  const VARIANT_PREFIXES = ["get", "my", "try", "use"];
+  const VARIANT_SUFFIXES = ["app", "hq", "labs", "hub"];
+  const [variantRows, setVariantRows] = useState<{ domain: string; status: "available" | "taken" | "unknown" }[]>([]);
+  const [variantChecked, setVariantChecked] = useState(0);
+  const [variantTotal, setVariantTotal] = useState(0);
+  const [variantRunning, setVariantRunning] = useState(false);
+  const variantAbortRef = useRef<AbortController | null>(null);
+
   useEffect(() => {
     // 输入变化后清空上次快速核验结果；停顿 800ms 后对现成名字自动核验（走缓存的 /api/search，不消耗 AI 次数）
     quickAbortRef.current?.abort();
+    variantAbortRef.current?.abort();
     setQuickRows([]);
     setQuickRunning(false);
+    setVariantRows([]);
+    setVariantChecked(0);
+    setVariantTotal(0);
+    setVariantRunning(false);
     if (!quick || quick.label.length < 3) return;
     const id = setTimeout(() => void runQuickCheck(), 800);
     return () => clearTimeout(id);
@@ -239,6 +253,50 @@ export function HomePage({ initial, onSubmit, onBackToResults }: { initial: Home
       /* 中断/网络错误：保留已有结果 */
     } finally {
       if (!ac.signal.aborted) setQuickRunning(false);
+    }
+  }
+
+  async function runVariantCheck() {
+    if (!quick) return;
+    const tld = quick.tld ?? tlds[0] ?? "com";
+    variantAbortRef.current?.abort();
+    const ac = new AbortController();
+    variantAbortRef.current = ac;
+    const total = (VARIANT_PREFIXES.length + 1) * (VARIANT_SUFFIXES.length + 1) - 1; // 去掉裸 root（已在上方核验过）
+    setVariantRows([]);
+    setVariantChecked(0);
+    setVariantTotal(total);
+    setVariantRunning(true);
+    try {
+      const res = await fetch("/api/search", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ roots: [quick.label], prefixes: VARIANT_PREFIXES, suffixes: VARIANT_SUFFIXES, tlds: [tld] }),
+        signal: ac.signal,
+      });
+      if (!res.ok || !res.body) return;
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buf = "";
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buf += decoder.decode(value, { stream: true });
+        const lines = buf.split("\n");
+        buf = lines.pop()!;
+        for (const line of lines) {
+          if (!line) continue;
+          const r = JSON.parse(line) as { domain?: string; status?: "available" | "taken" | "unknown"; type?: string };
+          if (r.type || !r.domain || !r.status) continue;
+          if (r.domain === `${quick.label}.${tld}`) continue; // 裸 root 不重复计
+          setVariantChecked((n) => n + 1);
+          setVariantRows((prev) => [...prev, { domain: r.domain!, status: r.status! }]);
+        }
+      }
+    } catch {
+      /* 中断/网络错误：保留已有结果 */
+    } finally {
+      if (!ac.signal.aborted) setVariantRunning(false);
     }
   }
 
@@ -395,15 +453,55 @@ export function HomePage({ initial, onSubmit, onBackToResults }: { initial: Home
                 )}
               </div>
             )}
-            {/* 心仪名字被注册：一键转 AI 搜相似寓意的可注册名字 */}
+            {/* 心仪名字被注册：免费变体核验 + 一键转 AI 搜相似寓意的可注册名字 */}
             {!quickRunning && quickRows.length > 0 && quickRows.some((r) => r.status === "taken") && (
-              <button
-                onClick={() => submit(t("home.quickAiDesc", { label: quick.label }))}
-                className="mt-2.5 inline-flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:h-8"
-              >
-                <Sparkles className="h-3.5 w-3.5" />
-                {t("home.quickAiCta")}
-              </button>
+              <div className="mt-2.5 flex flex-wrap gap-2">
+                {variantTotal === 0 && (
+                  <button
+                    onClick={() => void runVariantCheck()}
+                    className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:h-8"
+                  >
+                    <SearchCheck className="h-3.5 w-3.5" />
+                    {t("home.quickVariantsBtn", { n: (VARIANT_PREFIXES.length + 1) * (VARIANT_SUFFIXES.length + 1) - 1 })}
+                  </button>
+                )}
+                <button
+                  onClick={() => submit(t("home.quickAiDesc", { label: quick.label }))}
+                  className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:h-8"
+                >
+                  <Sparkles className="h-3.5 w-3.5" />
+                  {t("home.quickAiCta")}
+                </button>
+              </div>
+            )}
+            {/* 变体核验进度与可注册变体 chips */}
+            {variantTotal > 0 && (
+              <div className="mt-2.5">
+                <p className="flex items-center gap-1.5 text-[11px] text-txt2">
+                  {variantRunning && <Loader2 className="h-3 w-3 animate-spin" />}
+                  {t("home.quickVariantsProgress", { checked: variantChecked, total: variantTotal, n: variantRows.filter((r) => r.status === "available").length })}
+                </p>
+                {variantRows.some((r) => r.status === "available") && (
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {variantRows
+                      .filter((r) => r.status === "available")
+                      .map((row) => (
+                        <a
+                          key={row.domain}
+                          href={REGISTRARS[0].url(row.domain)}
+                          target="_blank"
+                          rel="noreferrer"
+                          title={t("home.quickRegister", { domain: row.domain })}
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-brand-line bg-brand-dim px-2.5 py-1.5 font-mono text-xs text-brand transition-opacity hover:opacity-85"
+                        >
+                          {row.domain}
+                          <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
+                          <ExternalLink className="h-3 w-3" />
+                        </a>
+                      ))}
+                  </div>
+                )}
+              </div>
             )}
           </div>
         )}
