@@ -10,6 +10,7 @@ import { isMockEnabled, runMockStream } from "@/mock";
 import { loadSearch, saveSearch } from "@/lib/persist";
 import { TLD_LIST } from "@/content/tlds";
 import { GUIDE_LABELS } from "@/content/guide-labels";
+import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { useI18n } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
 import { friendlyError, friendlyHttpError } from "@/lib/utils";
@@ -509,6 +510,17 @@ export default function App() {
               {GUIDE_LABELS.map((g) => (
                 <a key={g.slug} className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/guide/${g.slug}?lang=${lang}`}>
                   {g[lang]}
+                </a>
+              ))}
+            </div>
+          </div>
+          {/* TLD 对比页内链：SEO + 用户入口 */}
+          <div className="mx-auto mb-5 max-w-3xl px-4">
+            <p className="font-semibold text-txt1">{t("footer.compares")}</p>
+            <div className="mt-1.5 flex flex-wrap justify-center gap-x-1 gap-y-0.5">
+              {COMPARE_SLUGS.map((slug) => (
+                <a key={slug} className="inline-flex min-h-[44px] items-center px-2 font-mono hover:text-brand hover:underline" href={`/vs/${slug}?lang=${lang}`}>
+                  {compareLabel(slug)}
                 </a>
               ))}
             </div>

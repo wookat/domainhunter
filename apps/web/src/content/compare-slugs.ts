@@ -1,0 +1,39 @@
+/**
+ * /vs/ 对比页 slug 轻量清单：给首页页脚内链用，避免把 compares.ts 的全文内容打进主 bundle。
+ * 新增对比页时需同步 compares.ts 的 TLD_COMPARES（有单测/构建校验的话以那边为准）。
+ */
+export const COMPARE_SLUGS = [
+  "com-vs-cn",
+  "com-vs-io",
+  "com-vs-net",
+  "io-vs-ai",
+  "app-vs-dev",
+  "co-vs-me",
+  "com-vs-ai",
+  "net-vs-org",
+  "com-vs-xyz",
+  "io-vs-co",
+  "ai-vs-dev",
+  "xyz-vs-top",
+  "shop-vs-store",
+  "cloud-vs-tech",
+  "pro-vs-co",
+  "vip-vs-club",
+  "link-vs-cc",
+  "shop-vs-com",
+  "com-vs-me",
+  "io-vs-tech",
+  "online-vs-site",
+  "store-vs-online",
+  "cc-vs-tv",
+  "cn-vs-top",
+  "art-vs-design",
+  "studio-vs-design",
+  "live-vs-tv",
+  "fun-vs-club",
+  "space-vs-site",
+  "live-vs-online",
+];
+
+/** slug → 「.a vs .b」显示文案 */
+export const compareLabel = (slug: string): string => slug.split("-vs-").map((t) => `.${t}`).join(" vs ");

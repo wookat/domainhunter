@@ -164,8 +164,8 @@ const zh = {
   "results.lockTitle": "锁定：再来一轮时围绕它找",
   // 价格总览页
   "prices.kicker": "域名价格",
-  "prices.title": "域名后缀价格总览：24 个主流 TLD 注册与续费对比",
-  "prices.intro": "首年便宜不等于长期便宜——很多后缀续费是首年价的几倍。这里汇总 24 个主流后缀的注册与续费价（Porkbun 实时价优先，无报价时显示 ≈ 静态参考价），点列头可排序，点后缀可看详细指南。",
+  "prices.title": "域名后缀价格总览：30 个主流 TLD 注册与续费对比",
+  "prices.intro": "首年便宜不等于长期便宜——很多后缀续费是首年价的几倍。这里汇总 30 个主流后缀的注册与续费价（Porkbun 实时价优先，无报价时显示 ≈ 静态参考价），点列头可排序，点后缀可看详细指南。",
   "prices.colTld": "后缀",
   "prices.colReg": "注册/首年",
   "prices.colRenew": "续费/年",
@@ -276,6 +276,7 @@ const zh = {
   "footer.tldGuides": "TLD 注册指南",
   "footer.prices": "价格总览",
   "footer.industryGuides": "行业命名指南",
+  "footer.compares": "后缀对比",
   // 错误
   "error.ai": "AI 服务出错，已停止本轮",
   "error.badRequest": "请求内容不符合要求：请检查描述是否为空或过长（最多 500 字）",
@@ -438,8 +439,8 @@ const en: Record<I18nKey, string> = {
   "results.moreAroundLocked": "More around locked",
   "results.lockTitle": "Lock: next round explores around it",
   "prices.kicker": "Domain Pricing",
-  "prices.title": "TLD Price Overview: Registration vs Renewal for 24 Popular Suffixes",
-  "prices.intro": "A cheap first year doesn't mean cheap forever — many suffixes renew at several times the promo price. This table compares registration and renewal for 24 popular TLDs (live Porkbun prices first, ≈ static reference when unavailable). Click headers to sort, click a suffix for its full guide.",
+  "prices.title": "TLD Price Overview: Registration vs Renewal for 30 Popular Suffixes",
+  "prices.intro": "A cheap first year doesn't mean cheap forever — many suffixes renew at several times the promo price. This table compares registration and renewal for 30 popular TLDs (live Porkbun prices first, ≈ static reference when unavailable). Click headers to sort, click a suffix for its full guide.",
   "prices.colTld": "TLD",
   "prices.colReg": "Register / 1st yr",
   "prices.colRenew": "Renew / yr",
@@ -545,6 +546,7 @@ const en: Record<I18nKey, string> = {
   "footer.tldGuides": "TLD registration guides",
   "footer.prices": "Price overview",
   "footer.industryGuides": "Industry naming guides",
+  "footer.compares": "TLD comparisons",
   "error.ai": "AI service error — this round was stopped",
   "error.badRequest": "Invalid request — make sure the description isn't empty or over 500 characters",
   "error.rateLimited": "Too many requests — please try again in a bit",
@@ -583,6 +585,10 @@ function loadLang(): Lang {
   try {
     const v = localStorage.getItem(LANG_KEY);
     if (v === "en" || v === "zh") return v;
+  } catch { /* ignore */ }
+  try {
+    // 与 worker SSR 的 accept-language 检测保持一致：英文浏览器默认英文界面
+    if ((navigator.language ?? "").toLowerCase().startsWith("en")) return "en";
   } catch { /* ignore */ }
   return "zh";
 }

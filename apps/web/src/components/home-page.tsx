@@ -332,6 +332,7 @@ export function HomePage({
   const [quickRunning, setQuickRunning] = useState(false);
   const [quickMoreDone, setQuickMoreDone] = useState(false);
   const [quickCopied, setQuickCopied] = useState(false);
+  const [variantCopied, setVariantCopied] = useState(false);
   const quickAbortRef = useRef<AbortController | null>(null);
 
   // 变体建议：心仪名字被注册时，用前后缀组合免费核验一批变体（同样不消耗 AI 次数）
@@ -737,6 +738,23 @@ export function HomePage({
                           </button>
                         </span>
                       ))}
+                    {!variantRunning && variantRows.filter((r) => r.status === "available").length >= 2 && (
+                      <button
+                        onClick={() => {
+                          void navigator.clipboard.writeText(
+                            variantRows.filter((r) => r.status === "available").map((r) => r.domain).join("\n"),
+                          );
+                          setVariantCopied(true);
+                          setTimeout(() => setVariantCopied(false), 1500);
+                        }}
+                        className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0"
+                      >
+                        {variantCopied ? <Check className="h-3 w-3 text-brand" /> : <Copy className="h-3 w-3" />}
+                        {variantCopied
+                          ? t("home.quickCopied")
+                          : t("home.quickCopyBtn", { n: variantRows.filter((r) => r.status === "available").length })}
+                      </button>
+                    )}
                   </div>
                 )}
               </div>

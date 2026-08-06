@@ -553,6 +553,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Experiments and temporary campaign pages", "Extreme first-year budget sensitivity", "No real-name verification process", "Your name is taken on .cn"],
     },
   },
+  "art-vs-design": {
+    slug: "art-vs-design",
+    a: "art",
+    b: "design",
+    zh: {
+      title: ".art 和 .design 怎么选：艺术身份与设计职业的取舍",
+      metaDescription: ".art 面向艺术家与画廊，.design 面向设计师与设计团队。对比两者的适用人群、价格与库存，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "看你的身份关键词：做「作品」的选 .art，做「职业」的选 .design。艺术家、画廊、展览项目用 .art 更像一张艺术名片；UI/UX、品牌设计师和设计工作室用 .design 则直接把职业写进域名，在简历与邮件签名里辨识度更高。价格上 .art 明显更便宜且续费稳定，.design 定价偏高但库存好；两者的人名、风格词库存都远好于 .com。跨界创意人（既做艺术也接设计单）可以 .art 做作品集、.design 做商单入口。",
+      pickA: ["艺术家个人站与作品集", "画廊、美术馆与艺术机构", "展览与艺术项目页", "预算敏感（价格更低续费稳）"],
+      pickB: ["UI/UX 与品牌设计师个人品牌", "设计工作室与咨询", "公司设计团队子站", "简历/名片上的职业身份域名"],
+    },
+    en: {
+      title: ".art vs .design: Artistic Identity or Professional Craft",
+      metaDescription:
+        ".art serves artists and galleries; .design serves designers and studios. Compare audiences, pricing and inventory, then hunt names available on both with AI.",
+      verdict:
+        "It comes down to your identity keyword: choose .art for the work, .design for the profession. Artists, galleries and exhibitions read like an art business card on .art; UI/UX and brand designers write their profession into the domain with .design, which stands out on resumes and signatures. On price, .art is notably cheaper with stable renewals, while .design sits at the premium end but with strong inventory — both have far better name availability than .com. Cross-disciplinary creatives can split: portfolio on .art, client work entry on .design.",
+      pickA: ["Artist portfolios & personal sites", "Galleries, museums & institutions", "Exhibition & art project pages", "Budget-minded (cheaper, stable renewals)"],
+      pickB: ["UI/UX & brand designer personal brands", "Design studios & consultancies", "Company design-team sites", "Resume-grade professional identity"],
+    },
+  },
+  "studio-vs-design": {
+    slug: "studio-vs-design",
+    a: "studio",
+    b: "design",
+    zh: {
+      title: ".studio 和 .design 怎么选：团队形态与职业身份的取舍",
+      metaDescription: ".studio 强调团队形态，.design 强调设计职业。对比两者的气质、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两者都是创意圈好后缀，差别在重心：.studio 说的是「我们是一个小团队」，设计、影像、游戏、播客团队都适用；.design 说的是「我们做设计」，垂直但职业辨识度更高。非设计类创意团队（影像/动画/音频）直接选 .studio；纯设计业务的工作室两个都行，.design 更垂直、.studio 更柔和。价格上 .studio 中等、.design 偏高；都比 .com 库存好得多。一个实用判断：团队名本身已含「design」语义时选 .studio 避免重复（如 mono.studio 而非 monodesign.design）。",
+      pickA: ["影像、动画与音频团队", "游戏与独立开发小团队", "多元创意业务的工作室", "团队名已含 design 语义"],
+      pickB: ["纯设计业务的工作室", "设计师个人品牌", "公司设计团队子站", "想把职业写进域名的辨识度"],
+    },
+    en: {
+      title: ".studio vs .design: Team Shape or Professional Label",
+      metaDescription:
+        ".studio signals a small creative team; .design signals the design profession. Compare vibes, pricing and fit, then hunt names available on both with AI.",
+      verdict:
+        "Both are strong creative-scene suffixes; the difference is emphasis. .studio says 'we're a small team' — it fits design, film, game and podcast crews alike. .design says 'we do design' — more vertical, with higher professional recognition. Non-design creative teams (film, animation, audio) should go straight to .studio; design-only shops can use either — .design reads more vertical, .studio softer. Pricing: .studio moderate, .design premium; both have far better inventory than .com. One practical rule: if your team name already carries design semantics, pick .studio to avoid repetition (mono.studio, not monodesign.design).",
+      pickA: ["Film, animation & audio teams", "Game & indie dev crews", "Multi-disciplinary creative shops", "Team names already containing 'design'"],
+      pickB: ["Design-only studios", "Designer personal brands", "Company design-team sites", "Profession-in-the-domain recognition"],
+    },
+  },
+  "live-vs-tv": {
+    slug: "live-vs-tv",
+    a: "live",
+    b: "tv",
+    zh: {
+      title: ".live 和 .tv 怎么选：直播现场感与视频频道感的取舍",
+      metaDescription: ".live 强调正在发生的现场，.tv 是视频频道的老牌身份。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "看内容形态：强调「正在发生」的选 .live，强调「频道/栏目」的选 .tv。直播互动、线上活动、实时看板用 .live 更贴；长期经营的视频频道、栏目化内容、主播个人频道用 .tv 更像一个「台」。价格差异明显：.live 首年便宜但续费上浮；.tv 注册与续费都偏贵但稳定，适合当长期品牌持有。Twitch 时代 .tv 在直播圈的认知度仍在，但新一代活动/实时产品更多选 .live。两个都避开了 .com 的库存枯竭。",
+      pickA: ["直播互动与线上活动页", "实时数据与状态看板", "发布会与线上峰会", "首年预算敏感的短期项目"],
+      pickB: ["长期经营的视频频道", "主播/栏目个人品牌", "影视与媒体机构", "愿为稳定续费付溢价的长期品牌"],
+    },
+    en: {
+      title: ".live vs .tv: Happening Now or Channel Brand",
+      metaDescription:
+        ".live means happening now; .tv is the veteran video-channel suffix. Compare semantics, pricing and fit, then hunt names available on both with AI.",
+      verdict:
+        "It's about content shape: pick .live for 'happening now', .tv for 'a channel'. Live interaction, online events and real-time dashboards read best on .live; long-running video channels, shows and creator brands feel like a station on .tv. Pricing differs sharply: .live is cheap year one with rising renewals, while .tv costs more but stays stable — better for a long-hold brand. Twitch-era recognition keeps .tv strong in streaming, but newer event/real-time products increasingly pick .live. Both dodge .com's exhausted inventory.",
+      pickA: ["Live interaction & online events", "Real-time dashboards & status pages", "Launches & online summits", "Budget-sensitive short-run projects"],
+      pickB: ["Long-running video channels", "Streamer & show personal brands", "Film & media organizations", "Long-hold brands that value stable renewals"],
+    },
+  },
+  "fun-vs-club": {
+    slug: "fun-vs-club",
+    a: "fun",
+    b: "club",
+    zh: {
+      title: ".fun 和 .club 怎么选：好玩体验与归属感社群的取舍",
+      metaDescription: ".fun 卖的是好玩体验，.club 卖的是圈子归属感。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "问自己一个问题：用户是来「玩一把」还是来「加入我们」？小游戏、趣味测试、互动营销页选 .fun，体验即产品；兴趣社群、付费会员、粉丝组织选 .club，归属即产品。两者都便宜、库存都好，.fun 首年更极端但续费上浮更多，.club 续费相对温和。注意语境：.fun 与严肃行业相斥，.club 在部分词搭配下有夜店联想。活动型社群（定期组局的兴趣小组）两个都行，看品牌调性：俏皮选 .fun，正经归属选 .club。",
+      pickA: ["小游戏与休闲游戏站", "趣味测试与创意小工具", "互动营销 campaign 页", "俏皮轻快的品牌调性"],
+      pickB: ["兴趣社群与付费社群", "会员修与粉丝俾乐部", "读书会与线下俾乐部", "主品牌的社区子站"],
+    },
+    en: {
+      title: ".fun vs .club: Playful Experience or Belonging",
+      metaDescription:
+        ".fun sells a playful experience; .club sells belonging. Compare semantics, pricing and fit, then hunt names available on both with AI.",
+      verdict:
+        "Ask one question: do users come to play, or to join? Casual games, quizzes and interactive campaigns belong on .fun — the experience is the product. Interest groups, paid communities and fan organizations belong on .club — belonging is the product. Both are cheap with deep inventory; .fun is more extreme year one but renews higher, .club renews more gently. Mind the context: .fun clashes with serious verticals, and .club can carry nightlife connotations with certain words. Activity-shaped communities work on either — playful brands lean .fun, membership-shaped ones lean .club.",
+      pickA: ["Casual game & entertainment sites", "Quizzes & playful tools", "Interactive marketing campaigns", "Playful, cheeky brand voice"],
+      pickB: ["Interest & paid communities", "Membership & fan clubs", "Book clubs & local clubs", "Brand community companion sites"],
+    },
+  },
+  "space-vs-site": {
+    slug: "space-vs-site",
+    a: "space",
+    b: "site",
+    zh: {
+      title: ".space 和 .site 怎么选：个人小天地与通用建站的取舍",
+      metaDescription: ".space 语义柔和适合创意空间，.site 是最通用的建站后缀。对比两者的气质、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两者都是便宜能打的通用新后缀，差在气质：.space 读起来有「地方感」——创作者的小天地、团队的空间、社区的聚集地，适合想要一点人情味的个人站与创意项目；.site 则完全中性，「名字 + .site」就是「这是我的网站」，临时页、活动页、工具站都合适但不加分。航天/太空主题产品 .space 语义满分。两者首年都很便宜、续费都上浮，注册前看清续费；库存都深，好词命中率高。要区分度选 .space，要中性百搭选 .site。",
+      pickA: ["个人站与创意实验项目", "协作空间与社区品牌", "航天/太空主题产品", "想要有记忆点的气质后缀"],
+      pickB: ["临时页与活动落地页", "工具站与实用小站", "完全中性的通用建站", "预算极度敏感的项目"],
+    },
+    en: {
+      title: ".space vs .site: A Place With Character or a Neutral Website",
+      metaDescription:
+        ".space reads soft and place-like; .site is the most neutral website suffix. Compare vibes, pricing and fit, then hunt names available on both with AI.",
+      verdict:
+        "Both are cheap, capable generic new TLDs; the difference is character. .space reads like a place — a creator's corner, a team's space, a community's gathering spot — great when you want warmth in a personal site or creative project. .site is perfectly neutral: 'name + .site' just means 'this is my website' — fine for landing pages, tools and utilities, but it adds nothing. Space-themed products get perfect semantics on .space for free. Both are cheap year one with higher renewals (check before registering) and deep inventory. Want character, pick .space; want neutral versatility, pick .site.",
+      pickA: ["Personal sites & creative experiments", "Collaborative-space & community brands", "Aerospace / space-themed products", "A suffix with memorable character"],
+      pickB: ["Landing & campaign pages", "Tools & utility sites", "Fully neutral general websites", "Extremely budget-sensitive projects"],
+    },
+  },
+  "live-vs-online": {
+    slug: "live-vs-online",
+    a: "live",
+    b: "online",
+    zh: {
+      title: ".live 和 .online 怎么选：实时现场感与线上存在感的取舍",
+      metaDescription: ".live 强调正在发生，.online 强调线上存在。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "语义强度不同：.live 是强语义——「点进来看现场」，直播、活动、实时看板用它自带号召力；.online 是弱语义——「我们在线上」，传统生意的线上化、通用官网都能用，但不制造期待。内容是实时的选 .live，内容只是「在线上」的选 .online。两者首年都便宜、续费都明显上浮（.online 续费尤其高，注意长期持有成本）；库存都好。若两个都可注册且预算有限，优先看产品是否真有「实时」属性——有则 .live 加分，无则 .online 更稳。",
+      pickA: ["直播与实时互动产品", "线上活动与发布会页", "实时数据看板", "需要「看现场」号召力的品牌"],
+      pickB: ["传统生意的线上化官网", "通用产品站与服务页", "无实时属性的线上品牌", "想要最宽泛的语义兼容性"],
+    },
+    en: {
+      title: ".live vs .online: Happening Now or Simply Online",
+      metaDescription:
+        ".live means happening now; .online just means you exist on the internet. Compare semantics, pricing and fit, then hunt names available on both with AI.",
+      verdict:
+        "The semantic strength differs: .live is strong — 'come watch now' — with a built-in call to action for streams, events and real-time dashboards. .online is weak — 'we're on the internet' — fine for a traditional business going digital or a generic site, but it sets no expectation. If your content is genuinely real-time, .live earns its keep; if it's merely online, .online is the safer neutral. Both are cheap year one with sharply higher renewals (.online especially — mind the long-term cost) and good inventory. With limited budget and both available, decide on whether your product truly has a live dimension.",
+      pickA: ["Streaming & real-time interaction", "Online events & launch pages", "Live data dashboards", "Brands that need a 'watch now' CTA"],
+      pickB: ["Traditional businesses going digital", "Generic product & service sites", "Online brands without a live dimension", "Broadest semantic compatibility"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
