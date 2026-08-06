@@ -2,7 +2,8 @@ import { CheckCircle2, Lightbulb, Sparkles, Tag } from "lucide-react";
 
 import { TLD_COMPARES, comparesForTld } from "@/content/compares";
 import { INDUSTRY_GUIDES, guidesForTld } from "@/content/guides";
-import { TLD_GUIDES, TLD_LIST } from "@/content/tlds";
+import { TLD_GUIDES } from "@/content/tlds";
+import { TLD_LIST } from "@/content/tld-list";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, toCny, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";

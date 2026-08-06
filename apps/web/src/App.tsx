@@ -8,7 +8,7 @@ import { ResultsPage } from "@/components/results-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
 import { isMockEnabled, runMockStream } from "@/mock";
 import { loadSearch, saveSearch } from "@/lib/persist";
-import { TLD_LIST } from "@/content/tlds";
+import { TLD_LIST } from "@/content/tld-list";
 import { GUIDE_LABELS } from "@/content/guide-labels";
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { useI18n } from "@/lib/i18n";
