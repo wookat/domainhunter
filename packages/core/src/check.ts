@@ -56,9 +56,9 @@ export async function rdapCheck(domain: string, fetchFn: typeof fetch = fetch): 
   const base = await getRdapBase(tldOf(domain), fetchFn);
   if (!base) return { domain, status: "unknown", method: "none", detail: "no-rdap-server" };
   const url = `${base.replace(/\/$/, "")}/domain/${encodeURIComponent(domain)}`;
-  // 瞬时失败（网络错误 / 429 / 5xx）重试，退避时间尊重 Retry-After（封顶 2.5s），避免偶发「未知」
+  // 瞬时失败（网络错误 / 429 / 5xx）重试，退避时间尊重 Retry-After（封顶 4s）并加抖动，避免偶发「未知」
   const MAX_ATTEMPTS = 3;
-  let delayMs = 700;
+  let delayMs = 700 + Math.random() * 500;
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
     if (attempt > 0) await new Promise((r) => setTimeout(r, delayMs));
     try {
@@ -67,7 +67,7 @@ export async function rdapCheck(domain: string, fetchFn: typeof fetch = fetch): 
       if (res.ok) return { domain, status: "taken", method: "rdap" };
       if (attempt < MAX_ATTEMPTS - 1 && (res.status === 429 || res.status >= 500)) {
         const ra = Number(res.headers.get("retry-after"));
-        delayMs = Math.min(Number.isFinite(ra) && ra > 0 ? ra * 1000 : delayMs * 2, 2500);
+        delayMs = Math.min(Number.isFinite(ra) && ra > 0 ? ra * 1000 : delayMs * 2, 4000);
         continue;
       }
       return { domain, status: "unknown", method: "rdap", detail: `http-${res.status}` };
