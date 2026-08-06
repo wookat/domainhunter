@@ -1,15 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { ArrowLeft, SlidersHorizontal } from "lucide-react";
 
 import { Header } from "@/components/header";
 import { HomePage, type HomeValues } from "@/components/home-page";
 import { AgentPage, type LogEntry } from "@/components/agent-page";
 import { ResultsPage } from "@/components/results-page";
-import { SharePage } from "@/components/share-page";
-import { TldPage } from "@/components/tld-page";
-import { GuidePage } from "@/components/guide-page";
-import { ShortlistPage } from "@/components/shortlist-page";
-import { AdvancedPage } from "@/components/advanced-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
 import { isMockEnabled, runMockStream } from "@/mock";
 import { loadSearch, saveSearch } from "@/lib/persist";
@@ -19,6 +14,17 @@ import { useI18n } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
 import { friendlyError, friendlyHttpError } from "@/lib/utils";
 import type { Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types";
+
+// 按路由懒加载：这些页面不在首屏关键路径上，拆包降低首屏 JS
+const SharePage = lazy(() => import("@/components/share-page").then((m) => ({ default: m.SharePage })));
+const TldPage = lazy(() => import("@/components/tld-page").then((m) => ({ default: m.TldPage })));
+const ShortlistPage = lazy(() => import("@/components/shortlist-page").then((m) => ({ default: m.ShortlistPage })));
+const AdvancedPage = lazy(() => import("@/components/advanced-page").then((m) => ({ default: m.AdvancedPage })));
+const GuidePage = lazy(() => import("@/components/guide-page").then((m) => ({ default: m.GuidePage })));
+
+function PageFallback() {
+  return <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-16" />;
+}
 
 type Mode = "home" | "agent" | "results" | "shortlist" | "advanced";
 const TARGET = 10;
@@ -254,7 +260,9 @@ export default function App() {
           shortlistCount={shortlist.items.length}
           onShortlistClick={() => window.location.assign("/")}
         />
-        <GuidePage slug={guideSlug} />
+        <Suspense fallback={<PageFallback />}>
+          <GuidePage slug={guideSlug} />
+        </Suspense>
       </div>
     );
   }
@@ -267,7 +275,9 @@ export default function App() {
           shortlistCount={shortlist.items.length}
           onShortlistClick={() => window.location.assign("/")}
         />
-        <TldPage tld={guideTld} />
+        <Suspense fallback={<PageFallback />}>
+          <TldPage tld={guideTld} />
+        </Suspense>
       </div>
     );
   }
@@ -280,7 +290,9 @@ export default function App() {
           shortlistCount={shortlist.items.length}
           onShortlistClick={() => window.location.assign("/")}
         />
-        <SharePage id={shareId} />
+        <Suspense fallback={<PageFallback />}>
+          <SharePage id={shareId} />
+        </Suspense>
       </div>
     );
   }
@@ -389,19 +401,25 @@ export default function App() {
         />
       )}
       {mode === "shortlist" && (
-        <ShortlistPage
-          items={shortlist.items}
-          onRemove={shortlist.remove}
-          onClear={shortlist.clear}
-          onStart={() => setMode("home")}
-          onMerge={shortlist.merge}
-          lastCheckedAt={shortlist.lastCheckedAt}
-          onApplyStatuses={shortlist.applyStatuses}
-        />
+        <Suspense fallback={<PageFallback />}>
+          <ShortlistPage
+            items={shortlist.items}
+            onRemove={shortlist.remove}
+            onClear={shortlist.clear}
+            onStart={() => setMode("home")}
+            onMerge={shortlist.merge}
+            lastCheckedAt={shortlist.lastCheckedAt}
+            onApplyStatuses={shortlist.applyStatuses}
+          />
+        </Suspense>
       )}
-      {mode === "advanced" && <AdvancedPage />}
+      {mode === "advanced" && (
+        <Suspense fallback={<PageFallback />}>
+          <AdvancedPage />
+        </Suspense>
+      )}
 
-      {mode === "home" && (
+      {(mode === "home" || mode === "results") && (
         <footer className="pb-8 text-center text-xs text-txt2">
           {/* TLD 指南页内链：SEO + 用户入口 */}
           <div className="mx-auto mb-5 max-w-3xl px-4">
