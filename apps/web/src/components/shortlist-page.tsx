@@ -1,7 +1,9 @@
 import { useRef, useState } from "react";
-import { Bookmark, Check, Download, ExternalLink, Link2, Loader2, MonitorSmartphone, RotateCw, Sparkles, Trash2 } from "lucide-react";
+import { Bell, Bookmark, Check, ChevronDown, Download, ExternalLink, Link2, Loader2, MonitorSmartphone, RotateCw, Sparkles, Trash2 } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Switch } from "@/components/ui/switch";
+import { fetchMonitorChanges, useMonitor, type MonitorChange } from "@/lib/monitor";
 import { CopyButton, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import { downloadText } from "@/lib/export";
@@ -81,12 +83,43 @@ export function ShortlistPage({
   const [syncError, setSyncError] = useState("");
   const [importCode, setImportCode] = useState("");
   const [importing, setImporting] = useState(false);
-  const [importMsg, setImportMsg] = useState("");
+  const [importedCount, setImportedCount] = useState<number | null>(null);
   const [importError, setImportError] = useState("");
   const [recheckError, setRecheckError] = useState("");
   const [checkingDomains, setCheckingDomains] = useState<Set<string>>(new Set());
   const [changes, setChanges] = useState<Record<string, StatusChange>>({});
   const abortRef = useRef<AbortController | null>(null);
+  const monitor = useMonitor();
+  const [monitorError, setMonitorError] = useState("");
+  const [changesOpen, setChangesOpen] = useState(false);
+  const [monitorChanges, setMonitorChanges] = useState<MonitorChange[] | null>(null);
+  const [changesLoading, setChangesLoading] = useState(false);
+  const [changesError, setChangesError] = useState("");
+
+  async function toggleMonitor(domain: string, status?: string) {
+    setMonitorError("");
+    const r = await monitor.toggle(domain, status);
+    if (!r.ok) setMonitorError(r.full ? t("monitor.full") : t("monitor.failed"));
+  }
+
+  async function openChanges() {
+    const next = !changesOpen;
+    setChangesOpen(next);
+    if (!next) return;
+    setChangesLoading(true);
+    setChangesError("");
+    try {
+      setMonitorChanges(await fetchMonitorChanges());
+    } catch {
+      setChangesError(t("monitor.changesFailed"));
+    } finally {
+      setChangesLoading(false);
+    }
+  }
+
+  // 只展示与本人清单相关的变化（前端按本地清单过滤）
+  const myDomains = new Set(items.map((i) => i.domain));
+  const relevantChanges = (monitorChanges ?? []).filter((c) => myDomains.has(c.domain));
 
   const batchRegister = () => {
     for (const it of items.slice(0, 8)) window.open(REGISTRARS[3].url(it.domain), "_blank");
@@ -146,7 +179,7 @@ export function ShortlistPage({
   async function importSync() {
     const code = importCode.trim().toUpperCase();
     setImportError("");
-    setImportMsg("");
+    setImportedCount(null);
     if (!SYNC_CODE_RE.test(code)) {
       setImportError(t("sync.importInvalid"));
       return;
@@ -163,7 +196,7 @@ export function ShortlistPage({
       const seen = new Set(items.map((i) => i.domain));
       const fresh = incoming.filter((i) => !seen.has(i.domain));
       onMerge(incoming);
-      setImportMsg(t("sync.importDone", { n: fresh.length }));
+      setImportedCount(fresh.length);
       setImportCode("");
     } catch {
       setImportError(t("sync.importFailed"));
@@ -308,8 +341,51 @@ export function ShortlistPage({
           )}
         </p>
       )}
-      {(shareError || recheckError) && (
-        <p className="mb-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{shareError || recheckError}</p>
+      {(shareError || recheckError || monitorError) && (
+        <p className="mb-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{shareError || recheckError || monitorError}</p>
+      )}
+
+      {/* 监控动态：开了监控的域名的掉落/回补记录 */}
+      {items.length > 0 && (
+        <div className="mb-4 rounded-xl border border-line bg-bg1">
+          <button className="flex w-full items-center gap-1.5 px-4 py-3.5 text-xs font-semibold text-txt1 hover:text-txt0" onClick={() => void openChanges()}>
+            <Bell className="h-3.5 w-3.5 text-brand" />
+            {t("monitor.changes")}
+            {monitor.monitored.size > 0 && (
+              <span className="tnum rounded bg-brand-dim px-1.5 py-0.5 font-mono text-[11px] text-brand">{monitor.monitored.size}</span>
+            )}
+            <ChevronDown className={cn("ml-auto h-3.5 w-3.5 transition-transform", changesOpen && "rotate-180")} />
+          </button>
+          {changesOpen && (
+            <div className="border-t border-line px-4 py-3">
+              <p className="text-[11px] text-txt2">{t("monitor.changesHint")}</p>
+              {changesLoading ? (
+                <p className="mt-2 flex items-center gap-1.5 text-xs text-txt1">
+                  <Loader2 className="h-3.5 w-3.5 animate-spin text-brand" />
+                </p>
+              ) : changesError ? (
+                <p className="mt-2 text-xs text-destructive">{changesError}</p>
+              ) : relevantChanges.length === 0 ? (
+                <p className="mt-2 text-xs text-txt2">{t("monitor.changesEmpty")}</p>
+              ) : (
+                <ul className="mt-2 space-y-1.5">
+                  {relevantChanges.map((c) => {
+                    const dropped = c.to === "available"; // 掉落：taken → available，绿色高亮
+                    return (
+                      <li key={`${c.domain}:${c.at}`} className={cn("flex flex-wrap items-center gap-2 rounded-lg px-2.5 py-1.5 text-xs", dropped ? "bg-brand-dim/40" : "bg-bg2")}>
+                        <span className="font-mono font-semibold">{c.domain}</span>
+                        <span className={cn("rounded px-1.5 py-0.5 text-[11px] font-semibold", dropped ? "bg-brand-dim text-brand" : "bg-taken-dim text-taken")}>
+                          {dropped ? t("monitor.dropped") : t("monitor.regained")}
+                        </span>
+                        <span className="tnum ml-auto font-mono text-[11px] text-txt2">{new Date(c.at).toLocaleString(lang === "zh" ? "zh-CN" : "en-US")}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </div>
+          )}
+        </div>
       )}
 
       {/* 跨设备同步（免登录）：推送同步码 + 输入同步码导入 */}
@@ -361,7 +437,7 @@ export function ShortlistPage({
           </p>
         )}
         {syncCode && <p className="mt-1 text-[11px] text-txt2">{t("sync.codeHint")}</p>}
-        {importMsg && <p className="mt-2 text-xs text-brand">{importMsg}</p>}
+        {importedCount !== null && <p className="mt-2 text-xs text-brand">{t("sync.importDone", { n: importedCount })}</p>}
         {(syncError || importError) && <p className="mt-2 text-xs text-destructive">{syncError || importError}</p>}
       </div>
 
@@ -392,6 +468,7 @@ export function ShortlistPage({
                     </th>
                   ))}
                   <th className="px-3 py-3 text-right font-medium">{t("shortlist.price")}</th>
+                  <th title={t("monitor.toggleTitle")} className="px-3 py-3 text-center font-medium">{t("monitor.column")}</th>
                   <th className="px-4 py-3" />
                 </tr>
               </thead>
@@ -432,6 +509,13 @@ export function ShortlistPage({
                         </td>
                       ))}
                       <td title={priceFull(it.tld, lang, prices)} className="tnum px-3 text-right font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? "—"}</td>
+                      <td className="px-3 text-center">
+                        <Switch
+                          title={t("monitor.toggleTitle")}
+                          checked={monitor.isMonitored(it.domain)}
+                          onCheckedChange={() => void toggleMonitor(it.domain, it.status)}
+                        />
+                      </td>
                       <td className="whitespace-nowrap px-4 text-right">
                         <span className="inline-flex items-center gap-1">
                           <CopyButton domain={it.domain} />
@@ -478,6 +562,10 @@ export function ShortlistPage({
                   {it.scores && <ScoreBars scores={it.scores} columns={4} className="mt-3" />}
                   <div className="mt-3 flex items-center gap-2">
                     <span title={priceFull(it.tld, lang, prices)} className="tnum flex-1 font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? ""}</span>
+                    <span className="flex items-center gap-1.5 text-[11px] text-txt2" title={t("monitor.toggleTitle")}>
+                      {t("monitor.column")}
+                      <Switch checked={monitor.isMonitored(it.domain)} onCheckedChange={() => void toggleMonitor(it.domain, it.status)} />
+                    </span>
                     <button
                       title={t("common.remove")}
                       className="grid h-11 w-11 place-items-center rounded-md border border-line text-txt2 hover:text-destructive"

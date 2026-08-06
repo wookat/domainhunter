@@ -19,6 +19,10 @@ const SYNC_CODE_RE = /^[A-Z0-9]{8}$/;
 const SYNC_CODE_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"; // 去掉易混淆的 I/L/O/0/1
 const MAX_RECHECK_DOMAINS = 100;
 const STATS_KEY = "stats:checked";
+const MONITOR_KEY = "monitor:domains";
+const MONITOR_CHANGES_KEY = "monitor:changes";
+const MAX_MONITOR_DOMAINS = 500; // 全局监控上限
+const MAX_MONITOR_CHANGES = 100; // 变化记录保留条数
 const PRICES_KEY = "prices:v1";
 const PRICES_TTL = 24 * 3600; // Porkbun 价格缓存 24h
 const SITE_ORIGIN = "https://hunt.zalize.com";
@@ -246,6 +250,89 @@ app.post("/api/search", async (c) => {
   });
 });
 
+interface MonitorEntry {
+  domain: string;
+  status: string;
+  lastChecked: number;
+}
+
+interface MonitorChange {
+  domain: string;
+  from: string;
+  to: string;
+  at: number;
+}
+
+async function loadMonitorMap(kv: KVNamespace): Promise<Record<string, MonitorEntry>> {
+  try {
+    return (await kv.get<Record<string, MonitorEntry>>(MONITOR_KEY, "json")) ?? {};
+  } catch {
+    return {};
+  }
+}
+
+// 监控开关：把域名加入/移出 KV 监控集合（全局上限 500）
+app.post("/api/monitor", async (c) => {
+  const kv = c.env.CACHE;
+  if (!kv) return c.json({ error: "monitor_unavailable" }, 503);
+  const body = await c.req.json<{ domain?: string; enabled?: boolean; status?: string }>().catch(() => null);
+  const domain = typeof body?.domain === "string" ? body.domain.trim().toLowerCase() : "";
+  if (!DOMAIN_RE.test(domain) || domain.length > 253) return c.json({ error: "invalid_domain" }, 400);
+  const enabled = body?.enabled !== false;
+  const map = await loadMonitorMap(kv);
+  if (enabled) {
+    if (!map[domain] && Object.keys(map).length >= MAX_MONITOR_DOMAINS) {
+      return c.json({ error: "monitor_full" }, 429);
+    }
+    const status = typeof body?.status === "string" && ["available", "taken", "unknown"].includes(body.status) ? body.status : "unknown";
+    map[domain] = map[domain] ?? { domain, status, lastChecked: 0 };
+  } else {
+    delete map[domain];
+  }
+  await kv.put(MONITOR_KEY, JSON.stringify(map));
+  return c.json({ ok: true, enabled, monitored: Object.keys(map).length });
+});
+
+// 监控动态：最近的状态变化记录（前端按本地清单过滤）
+app.get("/api/monitor/changes", async (c) => {
+  const kv = c.env.CACHE;
+  if (!kv) return c.json({ error: "monitor_unavailable" }, 503);
+  let changes: MonitorChange[] = [];
+  try {
+    changes = (await kv.get<MonitorChange[]>(MONITOR_CHANGES_KEY, "json")) ?? [];
+  } catch { /* 读失败返回空列表 */ }
+  return c.json({ changes });
+});
+
+/** Cron：批量复查监控集合，状态变化写入 monitor:changes */
+async function runMonitorSweep(env: Bindings): Promise<void> {
+  const kv = env.CACHE;
+  if (!kv) return;
+  const map = await loadMonitorMap(kv);
+  const domains = Object.keys(map);
+  if (domains.length === 0) return;
+  const now = Date.now();
+  const newChanges: MonitorChange[] = [];
+  // 缓存穿透（refresh=true）：监控复查必须拿实时状态
+  await checkDomainsCached(kv, domains, async (r) => {
+    const entry = map[r.domain];
+    if (!entry) return;
+    if (r.status !== "unknown" && entry.status !== "unknown" && r.status !== entry.status) {
+      newChanges.push({ domain: r.domain, from: entry.status, to: r.status, at: now });
+    }
+    if (r.status !== "unknown") entry.status = r.status;
+    entry.lastChecked = now;
+  }, true);
+  await kv.put(MONITOR_KEY, JSON.stringify(map));
+  if (newChanges.length > 0) {
+    let prev: MonitorChange[] = [];
+    try {
+      prev = (await kv.get<MonitorChange[]>(MONITOR_CHANGES_KEY, "json")) ?? [];
+    } catch { /* 旧记录读失败则只保留本次 */ }
+    await kv.put(MONITOR_CHANGES_KEY, JSON.stringify([...newChanges, ...prev].slice(0, MAX_MONITOR_CHANGES)));
+  }
+}
+
 // 候选清单分享：存快照到 KV，返回可访问的只读链接
 app.post("/api/share", async (c) => {
   const kv = c.env.CACHE;
@@ -380,8 +467,56 @@ app.get("/api/stats", async (c) => {
   return c.json({ totalChecked }, 200, { "cache-control": "public, max-age=60" });
 });
 
-// SPA 分享页路由：回 index.html，前端按 pathname 渲染只读清单
-app.get("/s/:id", (c) => c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw)));
+// SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）
+app.get("/s/:id", async (c) => {
+  const id = c.req.param("id");
+  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  if (!/^[\w-]{1,32}$/.test(id)) return res;
+  let html = await res.text();
+  const pageUrl = `${SITE_ORIGIN}/s/${id}`;
+  html = html
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${pageUrl}" />`)
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${pageUrl}" />`)
+    .replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/${id}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
+});
+
+// 动态分享图：清单前 3 个域名 + 数量，品牌绿主题（SVG，1200×630）
+app.get("/api/og/:id", async (c) => {
+  const kv = c.env.CACHE;
+  const id = c.req.param("id");
+  if (!kv || !/^[\w-]{1,32}$/.test(id)) return c.notFound();
+  const snapshot = await kv.get<{ items: ShareItem[] }>(`share:${id}`, "json");
+  if (!snapshot || !Array.isArray(snapshot.items) || snapshot.items.length === 0) return c.notFound();
+  const items = snapshot.items.slice(0, 3);
+  const total = snapshot.items.length;
+  const rows = items
+    .map((it, i) => {
+      const y = 268 + i * 84;
+      return `
+    <g>
+      <rect x="80" y="${y - 46}" width="1040" height="66" rx="14" fill="#12261b" stroke="#1f4630" stroke-width="1.5"/>
+      <text x="112" y="${y}" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="34" font-weight="700" fill="#e8f5ee">${escapeHtml(it.label)}<tspan fill="#69a884">.${escapeHtml(it.tld)}</tspan></text>
+      <circle cx="1064" cy="${y - 12}" r="7" fill="#3ecf8e"/>
+    </g>`;
+    })
+    .join("");
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b1610"/>
+  <circle cx="1050" cy="-60" r="420" fill="#3ecf8e" opacity="0.08"/>
+  <circle cx="90" cy="660" r="320" fill="#3ecf8e" opacity="0.06"/>
+  <text x="80" y="110" font-family="'Inter',system-ui,sans-serif" font-size="30" font-weight="800" fill="#3ecf8e">DomainHunter</text>
+  <text x="80" y="178" font-family="'Inter',system-ui,sans-serif" font-size="46" font-weight="800" fill="#f2faf6">候选域名清单 · ${total} 个</text>
+  ${rows}
+  <text x="80" y="570" font-family="'Inter',system-ui,sans-serif" font-size="26" fill="#69a884">AI 批量构思 · RDAP+DNS 实时核验 · hunt.zalize.com</text>
+</svg>`;
+  return new Response(svg, {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=3600" },
+  });
+});
 
 const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
@@ -450,4 +585,9 @@ app.get("/robots.txt", (c) =>
 
 app.all("*", (c) => c.env.ASSETS.fetch(c.req.raw));
 
-export default app;
+export default {
+  fetch: app.fetch,
+  async scheduled(_event: ScheduledController, env: Bindings, ctx: ExecutionContext) {
+    ctx.waitUntil(runMonitorSweep(env));
+  },
+};

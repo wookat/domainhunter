@@ -10,6 +10,46 @@ const EXAMPLES_EN = ["AI weekly-report tool for indie devs", "Pet nutrition subs
 const PRESET_TLDS = ["com", "cn", "io", "ai", "app", "dev"];
 const MAX_LEN = 500;
 
+// 行业模板：寓意 + 气质 + 场景 三段式描述，点击填入输入框，用户可再编辑
+const TEMPLATES: { labelZh: string; labelEn: string; zh: string; en: string }[] = [
+  {
+    labelZh: "SaaS 工具",
+    labelEn: "SaaS tool",
+    zh: "一款面向中小团队的协作 SaaS 工具，寓意「把繁琐的工作流理顺、让团队更快交付」；气质要专业、可靠、有效率感；场景是公司官网、产品登录页和邮件签名里都好记好读。",
+    en: "A collaboration SaaS tool for small teams. The name should evoke smoothing out messy workflows and helping teams ship faster; the vibe is professional, reliable, and efficient; it needs to read well on a company homepage, a login page, and in email signatures.",
+  },
+  {
+    labelZh: "电商品牌",
+    labelEn: "E-commerce brand",
+    zh: "一个面向年轻人的生活方式电商品牌，寓意「把好物带进日常、让生活更有质感」；气质要温润、有品味、容易产生信任；场景是包装盒、购物袋和社交媒体主页上都上镜好记。",
+    en: "A lifestyle e-commerce brand for young shoppers. The name should suggest bringing well-made things into everyday life; the vibe is warm, tasteful, and trustworthy; it has to look good on packaging, shopping bags, and a social media profile.",
+  },
+  {
+    labelZh: "AI 产品",
+    labelEn: "AI product",
+    zh: "一款 AI 驱动的智能助手产品，寓意「像多了一个聪明同事，把重复劳动交给机器」；气质要聪明、前沿、有未来感但不冰冷；场景是 Product Hunt 发布、技术博客和投资人 PPT 里都站得住。",
+    en: "An AI-powered assistant product. The name should feel like having a brilliant teammate who takes over the repetitive work; the vibe is smart, cutting-edge, futuristic but not cold; it should hold up on a Product Hunt launch, in tech blogs, and on an investor deck.",
+  },
+  {
+    labelZh: "个人博客",
+    labelEn: "Personal blog",
+    zh: "一个记录思考与创作的个人博客，寓意「把想法沉淀下来、慢慢长成自己的小花园」；气质要安静、真诚、有书卷气；场景是读者在深夜读完一篇文章后，能凭名字记住并再次找到你。",
+    en: "A personal blog for essays and creative work. The name should feel like a quiet garden where ideas settle and grow over time; the vibe is calm, sincere, and bookish; a reader who finishes a late-night post should remember the name and find their way back.",
+  },
+  {
+    labelZh: "宠物",
+    labelEn: "Pets",
+    zh: "一个宠物用品与服务品牌，寓意「把毛孩子当家人，认真对待它们的每一餐每一天」；气质要温暖、活泼、让人会心一笑；场景是实体店招牌、外卖包装和小红书笔记里都可爱好认。",
+    en: "A pet supplies and services brand. The name should convey treating furry kids as family and caring about every meal and every day; the vibe is warm, playful, and smile-inducing; it should charm on a storefront sign, delivery packaging, and social posts.",
+  },
+  {
+    labelZh: "金融科技",
+    labelEn: "Fintech",
+    zh: "一款面向年轻用户的理财记账工具，寓意「把钱管明白、让财富稳稳生长」；气质要可信、清爽、专业但不古板；场景是应用商店榜单和银行合作发布会上都拿得出手。",
+    en: "A personal finance and budgeting app for younger users. The name should suggest understanding your money and letting wealth grow steadily; the vibe is trustworthy, clean, professional yet friendly; it must look credible on app store charts and at a bank partnership launch.",
+  },
+];
+
 // value 保持中文（传给 AI 的提示词），label 按语言切换
 export const STYLE_OPTIONS: { value: string; labelKey: I18nKey }[] = [
   { value: "none", labelKey: "home.style.none" },
@@ -193,6 +233,22 @@ export function HomePage({ initial, onSubmit }: { initial: HomeValues; onSubmit:
               <Sparkles className="h-4 w-4" />
               {t("home.start")}
             </button>
+          </div>
+        </div>
+
+        {/* 行业模板 chips：点击填入描述模板，用户可再编辑后搜索 */}
+        <div className="mt-4">
+          <p className="text-center text-[11px] text-txt2">{t("home.templates")}</p>
+          <div className="mt-2 flex flex-wrap justify-center gap-2">
+            {TEMPLATES.map((tpl) => (
+              <button
+                key={tpl.labelZh}
+                onClick={() => setDescription(lang === "zh" ? tpl.zh : tpl.en)}
+                className="h-11 rounded-full border border-brand-line/60 bg-brand-dim/30 px-3 text-xs text-brand transition-colors hover:border-brand-line hover:bg-brand-dim sm:h-8"
+              >
+                {lang === "zh" ? tpl.labelZh : tpl.labelEn}
+              </button>
+            ))}
           </div>
         </div>
 

@@ -83,7 +83,7 @@ export default function App() {
       setRounds((prev) =>
         prev.some((r) => r.round === round)
           ? prev
-          : [...prev, { round, note: ev.note ?? "", proposed: 0, checked: 0, available: 0 }],
+          : [...prev, { round, noteKey: ev.round === 1 ? "agent.note.first" : "agent.note.more", proposed: 0, checked: 0, available: 0 } as RoundInfo],
       );
     } else if (ev.type === "proposed") {
       const newRows: Row[] = ev.items!.flatMap((it) =>
