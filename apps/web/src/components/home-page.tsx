@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Brain, ChevronDown, ExternalLink, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Wand2, Zap } from "lucide-react";
+import { ArrowRight, Brain, ChevronDown, ExternalLink, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useI18n, type I18nKey } from "@/lib/i18n";
 import { REGISTRARS } from "@/lib/registrars";
 import { cn } from "@/lib/utils";
+import type { Row } from "@/types";
 
 const EXAMPLES = ["独立开发者的 AI 周报工具", "宠物营养订阅电商", "极简冥想 App", "跨境 SaaS 数据看板"];
 const EXAMPLES_EN = ["AI weekly-report tool for indie devs", "Pet nutrition subscription store", "Minimal meditation app", "Cross-border SaaS dashboard"];
@@ -151,7 +152,23 @@ function MiniSelect({
   );
 }
 
-export function HomePage({ initial, onSubmit, onBackToResults }: { initial: HomeValues; onSubmit: (v: HomeValues) => void; onBackToResults?: () => void }) {
+/** 快速核验的可注册 chip 也可收藏到候选清单 */
+function domainToRow(domain: string): Row {
+  const dot = domain.indexOf(".");
+  return { domain, label: domain.slice(0, dot), tld: domain.slice(dot + 1), status: "available", round: 0 };
+}
+
+export function HomePage({
+  initial,
+  onSubmit,
+  onBackToResults,
+  shortlist,
+}: {
+  initial: HomeValues;
+  onSubmit: (v: HomeValues) => void;
+  onBackToResults?: () => void;
+  shortlist: { has: (domain: string) => boolean; toggle: (row: Row) => void };
+}) {
   const { t, lang } = useI18n();
   const [description, setDescription] = useState(() => initial.description || templateFromQuery(lang));
   const [totalChecked, setTotalChecked] = useState<number | null>(null);
@@ -424,18 +441,27 @@ export function HomePage({ initial, onSubmit, onBackToResults }: { initial: Home
               <div className="mt-2.5 flex flex-wrap gap-2">
                 {quickRows.map((row) =>
                   row.status === "available" ? (
-                    <a
-                      key={row.domain}
-                      href={REGISTRARS[0].url(row.domain)}
-                      target="_blank"
-                      rel="noreferrer"
-                      title={t("home.quickRegister", { domain: row.domain })}
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-brand-line bg-brand-dim px-2.5 py-1.5 font-mono text-xs text-brand transition-opacity hover:opacity-85"
-                    >
-                      {row.domain}
-                      <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
-                      <ExternalLink className="h-3 w-3" />
-                    </a>
+                    <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
+                      <a
+                        href={REGISTRARS[0].url(row.domain)}
+                        target="_blank"
+                        rel="noreferrer"
+                        title={t("home.quickRegister", { domain: row.domain })}
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85"
+                      >
+                        {row.domain}
+                        <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                      <button
+                        onClick={() => shortlist.toggle(domainToRow(row.domain))}
+                        title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
+                        aria-pressed={shortlist.has(row.domain)}
+                        className="border-l border-brand-line/50 px-2 transition-opacity hover:opacity-85"
+                      >
+                        <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
+                      </button>
+                    </span>
                   ) : (
                     <span
                       key={row.domain}
@@ -486,18 +512,27 @@ export function HomePage({ initial, onSubmit, onBackToResults }: { initial: Home
                     {variantRows
                       .filter((r) => r.status === "available")
                       .map((row) => (
-                        <a
-                          key={row.domain}
-                          href={REGISTRARS[0].url(row.domain)}
-                          target="_blank"
-                          rel="noreferrer"
-                          title={t("home.quickRegister", { domain: row.domain })}
-                          className="inline-flex items-center gap-1.5 rounded-lg border border-brand-line bg-brand-dim px-2.5 py-1.5 font-mono text-xs text-brand transition-opacity hover:opacity-85"
-                        >
-                          {row.domain}
-                          <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
-                          <ExternalLink className="h-3 w-3" />
-                        </a>
+                        <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
+                          <a
+                            href={REGISTRARS[0].url(row.domain)}
+                            target="_blank"
+                            rel="noreferrer"
+                            title={t("home.quickRegister", { domain: row.domain })}
+                            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85"
+                          >
+                            {row.domain}
+                            <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
+                            <ExternalLink className="h-3 w-3" />
+                          </a>
+                          <button
+                            onClick={() => shortlist.toggle(domainToRow(row.domain))}
+                            title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
+                            aria-pressed={shortlist.has(row.domain)}
+                            className="border-l border-brand-line/50 px-2 transition-opacity hover:opacity-85"
+                          >
+                            <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
+                          </button>
+                        </span>
                       ))}
                   </div>
                 )}
