@@ -65,6 +65,8 @@ const zh = {
   "home.len.long": "> 12 字符",
   "home.templates": "不知道怎么描述？点个行业模板填入，再改成你的：",
   "home.backToResults": "回到上次结果",
+  "home.quickCheckHint": "看起来是现成的名字？可以直接核验，不消耗 AI 次数：",
+  "home.quickCheckBtn": "直接核验 {label}.*",
   // 高级模式
   "adv.title": "高级模式",
   "adv.subtitle": "词根 × 前后缀 × TLD 批量组合生成，逐个核验可注册状态",
@@ -279,6 +281,8 @@ const en: Record<I18nKey, string> = {
   "home.len.long": "> 12 chars",
   "home.templates": "Not sure what to write? Pick an industry template and make it yours:",
   "home.backToResults": "Back to last results",
+  "home.quickCheckHint": "Looks like an exact name? Check it directly — no AI quota used:",
+  "home.quickCheckBtn": "Check {label}.* now",
   "adv.title": "Advanced mode",
   "adv.subtitle": "Batch-generate roots × affixes × TLDs and verify availability one by one",
   "adv.roots": "Roots",
