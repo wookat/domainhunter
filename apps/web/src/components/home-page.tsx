@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Brain, ChevronDown, ExternalLink, History, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
+import { ArrowRight, Brain, Check, ChevronDown, Copy, ExternalLink, History, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { addRecentSearch, clearRecentSearches, loadRecentSearches, type RecentSearch } from "@/lib/history";
@@ -331,6 +331,7 @@ export function HomePage({
   const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown" }[]>([]);
   const [quickRunning, setQuickRunning] = useState(false);
   const [quickMoreDone, setQuickMoreDone] = useState(false);
+  const [quickCopied, setQuickCopied] = useState(false);
   const quickAbortRef = useRef<AbortController | null>(null);
 
   // 变体建议：心仪名字被注册时，用前后缀组合免费核验一批变体（同样不消耗 AI 次数）
@@ -659,6 +660,23 @@ export function HomePage({
                   >
                     <Plus className="h-3 w-3" />
                     {t("home.quickMoreBtn", { n: QUICK_MORE_TLDS.filter((x) => !quickRows.some((r) => r.domain === `${quick.label}.${x}`)).length })}
+                  </button>
+                )}
+                {!quickRunning && quickRows.filter((r) => r.status === "available").length >= 2 && (
+                  <button
+                    onClick={() => {
+                      void navigator.clipboard.writeText(
+                        quickRows.filter((r) => r.status === "available").map((r) => r.domain).join("\n"),
+                      );
+                      setQuickCopied(true);
+                      setTimeout(() => setQuickCopied(false), 1500);
+                    }}
+                    className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0"
+                  >
+                    {quickCopied ? <Check className="h-3 w-3 text-brand" /> : <Copy className="h-3 w-3" />}
+                    {quickCopied
+                      ? t("home.quickCopied")
+                      : t("home.quickCopyBtn", { n: quickRows.filter((r) => r.status === "available").length })}
                   </button>
                 )}
               </div>

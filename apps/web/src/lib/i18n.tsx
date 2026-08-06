@@ -85,6 +85,8 @@ const zh = {
   "home.quickAiDesc": "想要一个和「{label}」相似寓意、相似风格的名字，要求好记、顺口、适合做品牌。",
   "home.quickVariantsBtn": "免费查 {n} 个前后缀变体",
   "home.quickMoreBtn": "查更多后缀 +{n}",
+  "home.quickCopyBtn": "复制 {n} 个可注册",
+  "home.quickCopied": "已复制",
   "quick.renewTip": "续费 {price}/年；带 ↑ 表示续费达首年价 3 倍以上",
   "home.quickVariantsProgress": "变体核验 {checked}/{total} · 可注册 {n} 个（不消耗 AI 次数）",
   // 高级模式
@@ -361,6 +363,8 @@ const en: Record<I18nKey, string> = {
   "home.quickAiDesc": "I want a name with a similar meaning and style to \"{label}\" — memorable, easy to say, and brandable.",
   "home.quickVariantsBtn": "Check {n} prefix/suffix variants free",
   "home.quickMoreBtn": "Check {n} more TLDs",
+  "home.quickCopyBtn": "Copy {n} available",
+  "home.quickCopied": "Copied",
   "quick.renewTip": "Renews at {price}/yr; ↑ marks renewal 3×+ the first-year price",
   "home.quickVariantsProgress": "Variants checked {checked}/{total} · {n} available (no AI quota used)",
   "adv.title": "Advanced mode",
