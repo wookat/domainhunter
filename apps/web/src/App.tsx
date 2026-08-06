@@ -37,6 +37,7 @@ function lazyChunk<T, P>(load: () => Promise<T>, pick: (m: T) => React.Component
 const SharePage = lazyChunk(() => import("@/components/share-page"), (m) => m.SharePage);
 const TldPage = lazyChunk(() => import("@/components/tld-page"), (m) => m.TldPage);
 const GuidePage = lazyChunk(() => import("@/components/guide-page"), (m) => m.GuidePage);
+const ComparePage = lazyChunk(() => import("@/components/compare-page"), (m) => m.ComparePage);
 const ShortlistPage = lazyChunk(() => import("@/components/shortlist-page"), (m) => m.ShortlistPage);
 const AdvancedPage = lazyChunk(() => import("@/components/advanced-page"), (m) => m.AdvancedPage);
 
@@ -62,10 +63,16 @@ function guideFromPath(): string | null {
   return m ? m[1].toLowerCase() : null;
 }
 
-/** 首页默认 TLD：支持 /?tld=xx 预填（TLD 指南页 CTA 入口） */
+function compareFromPath(): string | null {
+  const m = window.location.pathname.match(/^\/vs\/([a-z0-9-]{2,48})$/i);
+  return m ? m[1].toLowerCase() : null;
+}
+
+/** 首页默认 TLD：支持 /?tld=xx 或 /?tld=xx,yy 预填（TLD 指南页 / 对比页 CTA 入口） */
 function initialTlds(): string[] {
-  const q = new URLSearchParams(window.location.search).get("tld")?.trim().toLowerCase().replace(/^\./, "");
-  if (q && /^[a-z0-9-]{2,24}$/.test(q)) return q === "com" ? ["com"] : [q, "com"];
+  const q = new URLSearchParams(window.location.search).get("tld")?.trim().toLowerCase();
+  const list = (q ?? "").split(",").map((s) => s.trim().replace(/^\./, "")).filter((s) => /^[a-z0-9-]{2,24}$/.test(s));
+  if (list.length > 0) return [...new Set(list.includes("com") ? list : [...list, "com"])];
   return ["com", "cn"];
 }
 
@@ -74,7 +81,8 @@ export default function App() {
   const [shareId] = useState<string | null>(shareIdFromPath);
   const [guideTld] = useState<string | null>(tldFromPath);
   const [guideSlug] = useState<string | null>(guideFromPath);
-  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() ? null : loadSearch()));
+  const [compareSlug] = useState<string | null>(compareFromPath);
+  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() ? null : loadSearch()));
   const [mode, setMode] = useState<Mode>(saved ? "results" : "home");
   const [values, setValues] = useState<HomeValues>(() => saved?.values ?? { description: "", tlds: initialTlds(), style: "", lengthPref: "" });
   const [rows, setRows] = useState<Row[]>(saved?.rows ?? []);
@@ -280,6 +288,21 @@ export default function App() {
         />
         <Suspense fallback={<PageFallback />}>
           <GuidePage slug={guideSlug} />
+        </Suspense>
+      </div>
+    );
+  }
+
+  if (compareSlug) {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Header
+          onLogoClick={() => window.location.assign("/")}
+          shortlistCount={shortlist.items.length}
+          onShortlistClick={() => window.location.assign("/")}
+        />
+        <Suspense fallback={<PageFallback />}>
+          <ComparePage slug={compareSlug} />
         </Suspense>
       </div>
     );
