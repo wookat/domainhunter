@@ -23,4 +23,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "health", zh: "医疗健康", en: "Health" },
   { slug: "legal", zh: "法律服务", en: "Legal" },
   { slug: "newsletter", zh: "Newsletter", en: "Newsletters" },
+  { slug: "music", zh: "音乐人", en: "Music & labels" },
+  { slug: "beauty", zh: "美妆个护", en: "Beauty" },
+  { slug: "nonprofit", zh: "公益组织", en: "Nonprofits" },
+  { slug: "parenting", zh: "母婴亲子", en: "Parenting" },
+  { slug: "hardware", zh: "智能硬件", en: "Hardware" },
+  { slug: "security", zh: "网络安全", en: "Cybersecurity" },
 ];
