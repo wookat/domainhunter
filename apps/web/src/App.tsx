@@ -432,6 +432,7 @@ export default function App() {
         <ResultsPage
           rows={rows}
           description={values.description}
+          tlds={values.tlds}
           roundCount={rounds.length}
           elapsedSec={elapsedSec}
           locked={locked}
