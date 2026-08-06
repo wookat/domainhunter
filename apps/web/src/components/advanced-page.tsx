@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Loader2, Search } from "lucide-react";
+import { ClipboardList, Loader2, Search } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -11,18 +11,35 @@ import type { Row, Status } from "@/types";
 
 const split = (s: string) => s.split(/[,，\s]+/).map((x) => x.trim()).filter(Boolean);
 
+const LABEL_RE = /^[a-z0-9]([a-z0-9-]{0,62})$/;
+const FULL_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62}))+$/;
+const MAX_BULK = 200;
+
+/** 把粘贴名单展开成完整域名：带点的直接用，裸名字 × TLD */
+function expandBulk(input: string, tlds: string[]): string[] {
+  const out = new Set<string>();
+  for (const raw of split(input.toLowerCase())) {
+    const entry = raw.replace(/^https?:\/\//, "").replace(/\/.*$/, "");
+    if (FULL_RE.test(entry)) out.add(entry);
+    else if (LABEL_RE.test(entry)) for (const t of tlds) out.add(`${entry}.${t}`);
+    if (out.size >= MAX_BULK) break;
+  }
+  return [...out].slice(0, MAX_BULK);
+}
+
 export function AdvancedPage() {
   const { t } = useI18n();
   const [roots, setRoots] = useState("");
   const [prefixes, setPrefixes] = useState("");
   const [suffixes, setSuffixes] = useState("");
   const [tlds, setTlds] = useState("com,cn");
+  const [bulk, setBulk] = useState("");
   const [rows, setRows] = useState<Row[]>([]);
   const [running, setRunning] = useState(false);
   const [error, setError] = useState("");
   const abortRef = useRef<AbortController | null>(null);
 
-  async function run() {
+  async function run(payload?: { domains: string[] }) {
     abortRef.current?.abort();
     const ac = new AbortController();
     abortRef.current = ac;
@@ -33,7 +50,7 @@ export function AdvancedPage() {
       const res = await fetch("/api/search", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ roots: split(roots), prefixes: split(prefixes), suffixes: split(suffixes), tlds: split(tlds) }),
+        body: JSON.stringify(payload ?? { roots: split(roots), prefixes: split(prefixes), suffixes: split(suffixes), tlds: split(tlds) }),
         signal: ac.signal,
       });
       if (!res.ok) throw new Error(friendlyHttpError(res.status, t));
@@ -65,6 +82,7 @@ export function AdvancedPage() {
 
   const available = rows.filter((r) => r.status === "available");
   const rest = rows.filter((r) => r.status !== "available");
+  const bulkDomains = expandBulk(bulk, split(tlds).length > 0 ? split(tlds) : ["com"]);
 
   return (
     <main className="mx-auto max-w-5xl flex-1 px-4 py-8 md:px-6">
@@ -85,10 +103,33 @@ export function AdvancedPage() {
             </div>
           ))}
         </div>
-        <Button className="mt-5 w-full sm:w-auto" size="lg" disabled={running || split(roots).length === 0} onClick={run}>
+        <Button className="mt-5 w-full sm:w-auto" size="lg" disabled={running || split(roots).length === 0} onClick={() => void run()}>
           {running ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
           {running ? t("adv.running") : t("adv.start")}
         </Button>
+      </Card>
+
+      {/* 批量粘贴核验：现成名单直接查，不消耗 AI 次数 */}
+      <Card className="mt-4 p-4 md:p-6">
+        <p className="flex items-center gap-1.5 text-sm font-semibold">
+          <ClipboardList className="h-4 w-4 text-brand" />
+          {t("adv.bulkTitle")}
+        </p>
+        <p className="mt-1 text-xs text-txt1">{t("adv.bulkHint", { n: MAX_BULK })}</p>
+        <textarea
+          value={bulk}
+          onChange={(e) => setBulk(e.target.value)}
+          placeholder={t("adv.bulkPlaceholder")}
+          rows={5}
+          className="mt-3 w-full rounded-lg border border-line bg-bg2 px-3 py-2.5 font-mono text-sm text-txt0 placeholder:text-txt2 focus:border-brand-line focus:outline-none"
+        />
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          <Button size="lg" disabled={running || bulkDomains.length === 0} onClick={() => void run({ domains: bulkDomains })}>
+            {running ? <Loader2 className="h-4 w-4 animate-spin" /> : <ClipboardList className="h-4 w-4" />}
+            {running ? t("adv.running") : t("adv.bulkStart", { n: bulkDomains.length })}
+          </Button>
+          <span className="text-xs text-txt2">{t("adv.bulkCount", { n: bulkDomains.length })}</span>
+        </div>
       </Card>
 
       {error && <p className="mt-4 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{error}</p>}
