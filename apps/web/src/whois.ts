@@ -9,6 +9,7 @@ const WHOIS_SERVERS: Record<string, { host: string; notFound: RegExp; found: Reg
   co: { host: "whois.registry.co", notFound: /DOMAIN NOT FOUND|does not exist/i, found: /Domain Name:/i },
   me: { host: "whois.nic.me", notFound: /Domain not found/i, found: /Domain Name:/i },
   xyz: { host: "whois.nic.xyz", notFound: /DOMAIN NOT FOUND|does not exist/i, found: /Domain Name:/i },
+  shop: { host: "whois.nic.shop", notFound: /DOMAIN NOT FOUND|No match/i, found: /Domain Name:/i },
 };
 
 export async function whoisFallback(r: CheckResult): Promise<CheckResult> {
