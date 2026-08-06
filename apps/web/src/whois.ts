@@ -16,7 +16,7 @@ const WHOIS_SERVERS: Record<string, { host: string; notFound: RegExp; found: Reg
  * 两条正路都不通。兜底改用 DNS NXDOMAIN 判定：域名不在 TLD 权威区（RCODE=3）即视为可注册，
  * 已注册但未挂 NS 的极少数情况会漏判，保持「未知」不误报。
  */
-const DNS_NXDOMAIN_TLDS = new Set(["shop"]);
+const DNS_NXDOMAIN_TLDS = new Set(["shop", "art"]);
 
 async function dnsNxdomainFallback(r: CheckResult): Promise<CheckResult> {
   try {
