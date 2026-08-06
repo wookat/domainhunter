@@ -2,6 +2,8 @@ import { connect } from "cloudflare:sockets";
 import type { CheckResult } from "@domainhunter/core";
 
 const WHOIS_SERVERS: Record<string, { host: string; notFound: RegExp; found: RegExp }> = {
+  com: { host: "whois.verisign-grs.com", notFound: /No match for/i, found: /Domain Name:/i },
+  net: { host: "whois.verisign-grs.com", notFound: /No match for/i, found: /Domain Name:/i },
   cn: { host: "whois.cnnic.cn", notFound: /no matching record/i, found: /Registrant|Registration Time/i },
   io: { host: "whois.nic.io", notFound: /NOT FOUND|No Object Found/i, found: /Domain Name:/i },
   cc: { host: "ccwhois.verisign-grs.com", notFound: /No match for/i, found: /Domain Name:/i },

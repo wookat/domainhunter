@@ -5,7 +5,8 @@ import { whoisFallback } from "./whois";
 import { generateAiCandidates, generateUnderstanding } from "./ai";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
-import { TLD_GUIDES, TLD_LIST, USD_TO_CNY } from "./content/tlds";
+import { TLD_GUIDES } from "./content/tlds";
+import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 
 type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace };
 
@@ -774,8 +775,26 @@ const articleJsonld = (title: string, description: string, path: string, lang: "
     image: `${SITE_ORIGIN}${image}`,
     mainEntityOfPage: `${SITE_ORIGIN}${path}`,
     author: { "@type": "Organization", name: "DomainHunter", url: SITE_ORIGIN },
-    publisher: { "@type": "Organization", name: "DomainHunter", url: SITE_ORIGIN },
+    publisher: {
+      "@type": "Organization",
+      name: "DomainHunter",
+      url: SITE_ORIGIN,
+      logo: { "@type": "ImageObject", url: `${SITE_ORIGIN}/logo.png`, width: 512, height: 512 },
+    },
   });
+
+// 首页 WebSite + SearchAction 结构化数据：/?q= 可直接预填搜索，符合 sitelinks searchbox 语义
+const WEBSITE_JSONLD = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "DomainHunter",
+  url: SITE_ORIGIN,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: { "@type": "EntryPoint", urlTemplate: `${SITE_ORIGIN}/?q={search_term_string}` },
+    "query-input": "required name=search_term_string",
+  },
+});
 
 // SEO 页动态分享图：/api/og/tld/:tld 与 /api/og/guide/:slug（lang 参数控制语言）
 app.get("/api/og/tld/:tld", (c) => {
@@ -810,7 +829,7 @@ app.get("/api/og/vs/:slug", (c) => {
 
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
-  const html = injectHreflang(await res.text(), "/").replace("</head>", `<script type="application/ld+json">${FAQ_JSONLD}</script></head>`);
+  const html = injectHreflang(await res.text(), "/").replace("</head>", `<script type="application/ld+json">${FAQ_JSONLD}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -944,8 +963,13 @@ app.get("/prices", async (c) => {
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
+// 内容最后更新日期（sitemap <lastmod>）：每次内容页增减/改写时更新
+const CONTENT_LASTMOD = "2026-08-06";
+
+const sitemapPaths = () => ["/", "/prices", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
+
 app.get("/sitemap.xml", (c) => {
-  const paths = ["/", "/prices", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
+  const paths = sitemapPaths();
   const alt = (p: string) =>
     [
       `    <xhtml:link rel="alternate" hreflang="zh-CN" href="${SITE_ORIGIN}${p}?lang=zh" />`,
@@ -953,21 +977,87 @@ app.get("/sitemap.xml", (c) => {
       `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_ORIGIN}${p}" />`,
     ].join("\n");
   const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${paths
-    .map((p) => `  <url>\n    <loc>${SITE_ORIGIN}${p}</loc>\n${alt(p)}\n  </url>`)
+    .map((p) => `  <url>\n    <loc>${SITE_ORIGIN}${p}</loc>\n    <lastmod>${CONTENT_LASTMOD}</lastmod>\n${alt(p)}\n  </url>`)
     .join("\n")}\n</urlset>\n`;
   return new Response(body, { headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=86400" } });
 });
 
+// llms.txt：面向 AI 搜索/回答引擎（ChatGPT、Perplexity 等）的站点导览（https://llmstxt.org 约定）
+app.get("/llms.txt", (c) => {
+  const line = (p: string, title: string) => `- [${title}](${SITE_ORIGIN}${p})`;
+  const body = [
+    "# DomainHunter",
+    "",
+    "> Free, open-source AI domain name hunter: describe your idea in natural language, the AI agent brainstorms names in rounds, verifies availability live via RDAP/DNS/WHOIS, and only surfaces domains you can actually register. Bilingual (English/Chinese), no login required.",
+    "",
+    "## Core pages",
+    line("/", "AI domain search (homepage, instant availability quick-check included)"),
+    line("/prices", "Domain price overview: registration vs renewal for 30 TLDs, live prices"),
+    "",
+    "## TLD guides",
+    ...TLD_LIST.map((t) => line(`/tld/${t}`, TLD_GUIDES[t].en.title)),
+    "",
+    "## Industry naming guides",
+    ...GUIDE_LIST.map((s) => line(`/guide/${s}`, INDUSTRY_GUIDES[s].en.title)),
+    "",
+    "## TLD comparisons",
+    ...COMPARE_LIST.map((s) => line(`/vs/${s}`, TLD_COMPARES[s].en.title)),
+    "",
+  ].join("\n");
+  return new Response(body, { headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=86400" } });
+});
+
 app.get("/robots.txt", (c) =>
-  new Response(`User-agent: *\nAllow: /\n\nSitemap: ${SITE_ORIGIN}/sitemap.xml\n`, {
+  new Response(
+    [
+      "User-agent: *",
+      "Allow: /",
+      "",
+      "# AI crawlers welcome \u2014 curated site guide at /llms.txt",
+      "User-agent: GPTBot",
+      "Allow: /",
+      "",
+      "User-agent: PerplexityBot",
+      "Allow: /",
+      "",
+      "User-agent: ClaudeBot",
+      "Allow: /",
+      "",
+      `Sitemap: ${SITE_ORIGIN}/sitemap.xml`,
+      "",
+    ].join("\n"),
+    {
     headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=86400" },
   }));
 
 app.all("*", (c) => c.env.ASSETS.fetch(c.req.raw));
 
+// IndexNow：向 Bing/Yandex 等搜索引擎主动推送全站 URL（key 按协议公开，对应 /<key>.txt 静态文件）
+const INDEXNOW_KEY = "024aa6c6f88245bbacdac2f60a94e333";
+const INDEXNOW_INTERVAL_MS = 24 * 3600 * 1000;
+
+async function pingIndexNow(env: Bindings): Promise<void> {
+  if (!env.CACHE) return;
+  const last = await env.CACHE.get("indexnow:last");
+  if (last && Date.now() - Number(last) < INDEXNOW_INTERVAL_MS) return;
+  await env.CACHE.put("indexnow:last", String(Date.now()));
+  const host = SITE_ORIGIN.replace(/^https?:\/\//, "");
+  await fetch("https://api.indexnow.org/indexnow", {
+    method: "POST",
+    headers: { "content-type": "application/json; charset=utf-8" },
+    body: JSON.stringify({
+      host,
+      key: INDEXNOW_KEY,
+      keyLocation: `${SITE_ORIGIN}/${INDEXNOW_KEY}.txt`,
+      urlList: sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`),
+    }),
+  });
+}
+
 export default {
   fetch: app.fetch,
   async scheduled(_event: ScheduledController, env: Bindings, ctx: ExecutionContext) {
     ctx.waitUntil(runMonitorSweep(env));
+    ctx.waitUntil(pingIndexNow(env));
   },
 };

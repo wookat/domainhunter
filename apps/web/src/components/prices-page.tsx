@@ -2,7 +2,7 @@ import { ArrowUpDown, Sparkles, Tag } from "lucide-react";
 import { useMemo, useState } from "react";
 
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
-import { TLD_LIST } from "@/content/tlds";
+import { TLD_LIST } from "@/content/tld-list";
 import { useI18n } from "@/lib/i18n";
 import { toCny, toUsd, usePrices } from "@/lib/prices";
 import { tldPrice } from "@/types";
