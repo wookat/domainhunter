@@ -56,14 +56,21 @@ export async function rdapCheck(domain: string, fetchFn: typeof fetch = fetch): 
   const base = await getRdapBase(tldOf(domain), fetchFn);
   if (!base) return { domain, status: "unknown", method: "none", detail: "no-rdap-server" };
   const url = `${base.replace(/\/$/, "")}/domain/${encodeURIComponent(domain)}`;
-  try {
-    const res = await fetchFn(url, { headers: { accept: "application/rdap+json" } });
-    if (res.status === 404) return { domain, status: "available", method: "rdap" };
-    if (res.ok) return { domain, status: "taken", method: "rdap" };
-    return { domain, status: "unknown", method: "rdap", detail: `http-${res.status}` };
-  } catch (e) {
-    return { domain, status: "unknown", method: "rdap", detail: String(e) };
+  // 瞬时失败（网络错误 / 429 / 5xx）重试一次，避免偶发「未知」
+  for (let attempt = 0; attempt < 2; attempt++) {
+    if (attempt > 0) await new Promise((r) => setTimeout(r, 600));
+    try {
+      const res = await fetchFn(url, { headers: { accept: "application/rdap+json" } });
+      if (res.status === 404) return { domain, status: "available", method: "rdap" };
+      if (res.ok) return { domain, status: "taken", method: "rdap" };
+      if (attempt === 0 && (res.status === 429 || res.status >= 500)) continue;
+      return { domain, status: "unknown", method: "rdap", detail: `http-${res.status}` };
+    } catch (e) {
+      if (attempt === 0) continue;
+      return { domain, status: "unknown", method: "rdap", detail: String(e) };
+    }
   }
+  return { domain, status: "unknown", method: "rdap", detail: "retry-exhausted" };
 }
 
 export async function checkDomain(domain: string, fetchFn: typeof fetch = fetch): Promise<CheckResult> {
