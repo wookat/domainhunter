@@ -1,6 +1,7 @@
 import { ArrowUpDown, Sparkles, Tag } from "lucide-react";
 import { useMemo, useState } from "react";
 
+import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { TLD_LIST } from "@/content/tlds";
 import { useI18n } from "@/lib/i18n";
 import { toCny, toUsd, usePrices } from "@/lib/prices";
@@ -103,6 +104,22 @@ export function PricesPage() {
         ))}
       </div>
       <p className="mt-3 text-[11px] text-txt2">{t("prices.source")}</p>
+
+      {/* 对比页内链：价格看完直接进两两对比 */}
+      <section className="mt-10">
+        <h2 className="text-sm font-semibold text-txt0">{t("footer.compares")}</h2>
+        <div className="mt-2 flex flex-wrap gap-x-1 gap-y-0.5">
+          {COMPARE_SLUGS.map((slug) => (
+            <a
+              key={slug}
+              href={`/vs/${slug}?lang=${lang}`}
+              className="inline-flex min-h-[40px] items-center px-2 font-mono text-xs text-txt1 hover:text-brand hover:underline"
+            >
+              {compareLabel(slug)}
+            </a>
+          ))}
+        </div>
+      </section>
 
       <div className="mt-10 rounded-2xl border border-brand-line bg-brand-dim p-6 text-center">
         <h2 className="text-lg font-bold">{t("prices.ctaTitle")}</h2>
