@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Brain, ChevronDown, ExternalLink, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, Zap } from "lucide-react";
+import { ArrowRight, Brain, ChevronDown, ExternalLink, History, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { addRecentSearch, clearRecentSearches, loadRecentSearches, type RecentSearch } from "@/lib/history";
 import { useI18n, type I18nKey } from "@/lib/i18n";
 import { toUsd, usePrices } from "@/lib/prices";
 import { REGISTRARS } from "@/lib/registrars";
@@ -389,12 +390,22 @@ export function HomePage({
 
   const submit = (desc = description) => {
     if (!desc.trim() || tlds.length === 0) return;
+    setRecent(addRecentSearch({ description: desc.trim(), tlds, style, lengthPref }));
     onSubmit({
       description: desc.trim(),
       tlds,
       style: style === "none" ? "" : style,
       lengthPref: lengthPref === "none" ? "" : lengthPref,
     });
+  };
+
+  // 最近搜索：本地保存，点击回填描述/TLD/风格/长度，不自动运行
+  const [recent, setRecent] = useState<RecentSearch[]>(() => loadRecentSearches());
+  const applyRecent = (r: RecentSearch) => {
+    setDescription(r.description);
+    if (r.tlds.length > 0) setTlds(r.tlds);
+    setStyle(r.style || "none");
+    setLengthPref(r.lengthPref || "none");
   };
 
   return (
@@ -492,6 +503,36 @@ export function HomePage({
             </button>
           </div>
         </div>
+
+        {/* 最近搜索：点击回填，不自动运行 */}
+        {recent.length > 0 && (
+          <div className="mt-3 flex flex-wrap items-center gap-2">
+            <span className="flex items-center gap-1 text-[11px] text-txt2">
+              <History className="h-3 w-3" />
+              {t("home.recent")}
+            </span>
+            {recent.map((r) => (
+              <button
+                key={r.at}
+                onClick={() => applyRecent(r)}
+                title={r.description}
+                className="flex min-h-[32px] max-w-[240px] items-center truncate rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+              >
+                <span className="truncate">{r.description}</span>
+              </button>
+            ))}
+            <button
+              onClick={() => {
+                clearRecentSearches();
+                setRecent([]);
+              }}
+              title={t("home.recentClear")}
+              className="flex h-6 w-6 items-center justify-center rounded-full text-txt2 hover:text-txt0"
+            >
+              <X className="h-3 w-3" />
+            </button>
+          </div>
+        )}
 
         {/* 输入像现成名字/域名：提供免 AI 额度的直接核验 */}
         {quick && (
