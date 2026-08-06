@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Brain, ChevronDown, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Wand2, Zap } from "lucide-react";
+import { ArrowRight, Brain, ChevronDown, ExternalLink, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Wand2, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useI18n, type I18nKey } from "@/lib/i18n";
+import { REGISTRARS } from "@/lib/registrars";
 import { cn } from "@/lib/utils";
 
 const EXAMPLES = ["独立开发者的 AI 周报工具", "宠物营养订阅电商", "极简冥想 App", "跨境 SaaS 数据看板"];
@@ -11,13 +12,20 @@ const PRESET_TLDS = ["com", "cn", "io", "ai", "app", "dev"];
 const MAX_LEN = 500;
 const LABEL_RE = /^[a-z0-9][a-z0-9-]{0,62}$/i;
 const EXACT_DOMAIN_RE = /^([a-z0-9][a-z0-9-]{0,62})\.([a-z0-9-]{2,24})$/i;
+// 常见可注册 TLD：避免把拼写错误（如 baidu.iox）当作精确域名去核验
+const KNOWN_TLDS = new Set([
+  "com", "net", "org", "cn", "io", "ai", "app", "dev", "co", "cc", "tv", "xyz", "me", "info", "biz", "top", "vip", "pro", "site",
+  "online", "store", "shop", "tech", "cloud", "space", "fun", "art", "design", "studio", "agency", "digital", "live", "life", "world", "today",
+  "news", "blog", "wiki", "link", "club", "team", "work", "zone", "run", "games", "game", "gg", "so", "sh", "im", "fm", "am", "to", "ly", "is",
+  "us", "uk", "de", "jp", "hk", "tw", "sg", "eu", "in", "ca", "one", "page", "email", "group", "network", "software", "systems", "tools", "chat", "bot",
+]);
 
 /** 输入看起来已经是现成名字/域名时，提供免 AI 额度的直接核验 */
 function parseQuickCheck(input: string): { label: string; tld?: string } | null {
   const d = input.trim().toLowerCase();
   if (LABEL_RE.test(d)) return { label: d };
   const m = EXACT_DOMAIN_RE.exec(d);
-  return m ? { label: m[1], tld: m[2] } : null;
+  return m && KNOWN_TLDS.has(m[2]) ? { label: m[1], tld: m[2] } : null;
 }
 
 // 行业模板：寓意 + 气质 + 场景 三段式描述，点击填入输入框，用户可再编辑；slug 对应 /guide/:slug 与 /?tpl= 预填入口
@@ -352,22 +360,46 @@ export function HomePage({ initial, onSubmit, onBackToResults }: { initial: Home
             </div>
             {quickRows.length > 0 && (
               <div className="mt-2.5 flex flex-wrap gap-2">
-                {quickRows.map((row) => (
-                  <span
-                    key={row.domain}
-                    className={cn(
-                      "inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 font-mono text-xs",
-                      row.status === "available" && "border-brand-line bg-brand-dim text-brand",
-                      row.status === "taken" && "border-line text-txt2 line-through",
-                      row.status === "unknown" && "border-line text-txt1",
-                      row.status === "checking" && "border-line text-txt2",
-                    )}
-                  >
-                    {row.domain}
-                    <i className="not-italic font-sans text-[10px]">{t(`status.${row.status}` as I18nKey)}</i>
-                  </span>
-                ))}
+                {quickRows.map((row) =>
+                  row.status === "available" ? (
+                    <a
+                      key={row.domain}
+                      href={REGISTRARS[0].url(row.domain)}
+                      target="_blank"
+                      rel="noreferrer"
+                      title={t("home.quickRegister", { domain: row.domain })}
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-brand-line bg-brand-dim px-2.5 py-1.5 font-mono text-xs text-brand transition-opacity hover:opacity-85"
+                    >
+                      {row.domain}
+                      <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  ) : (
+                    <span
+                      key={row.domain}
+                      className={cn(
+                        "inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 font-mono text-xs",
+                        row.status === "taken" && "border-line text-txt2 line-through",
+                        row.status === "unknown" && "border-line text-txt1",
+                        row.status === "checking" && "border-line text-txt2",
+                      )}
+                    >
+                      {row.domain}
+                      <i className="not-italic font-sans text-[10px]">{t(`status.${row.status}` as I18nKey)}</i>
+                    </span>
+                  ),
+                )}
               </div>
+            )}
+            {/* 心仪名字被注册：一键转 AI 搜相似寓意的可注册名字 */}
+            {!quickRunning && quickRows.length > 0 && quickRows.some((r) => r.status === "taken") && (
+              <button
+                onClick={() => submit(t("home.quickAiDesc", { label: quick.label }))}
+                className="mt-2.5 inline-flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:h-8"
+              >
+                <Sparkles className="h-3.5 w-3.5" />
+                {t("home.quickAiCta")}
+              </button>
             )}
           </div>
         )}
