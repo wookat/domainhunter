@@ -753,19 +753,32 @@ async function notFoundShell(res: Response): Promise<Response> {
 }
 
 // 着陆页：SSR 注入 hreflang alternate
-// 首页 FAQPage 结构化数据（与首页 FAQ 区块内容一致，供搜索引擎富摘要）
-const FAQ_JSONLD = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+// 首页 FAQPage 结构化数据（与首页 FAQ 区块内容一致，供搜索引擎富摘要；英文文案与 i18n 词典逐字一致）
+const HOME_FAQ = {
+  zh: [
     { q: "DomainHunter 是什么？", a: "用一句自然语言描述你想要的域名寓意与风格，AI 多轮构思候选并实时核验，直接给出一批真正可注册的好名字。" },
     { q: "核验结果准确吗？", a: "每个域名经 DNS + RDAP + WHOIS 三级核验，可注册状态来自注册局权威数据；注册前建议在注册商页面再确认一次。" },
     { q: "使用收费吗？", a: "完全免费。AI 搜索有每小时次数限制；即输即查、更多后缀与前后缀变体核验不限量、不消耗 AI 次数。" },
     { q: "会自动帮我注册域名吗？", a: "不会。我们只提供核验结果与注册商跳转链接（如 Porkbun），注册和付费在注册商完成。" },
     { q: "支持哪些后缀？", a: "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio。" },
     { q: "我的搜索会被保存吗？", a: "不保存输入内容和 IP，只记录匿名的聚合次数统计；收藏清单保存在你自己的浏览器本地。" },
-  ].map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
-});
+  ],
+  en: [
+    { q: "What is DomainHunter?", a: "Describe the meaning and style you want in one sentence — AI brainstorms candidates over multiple rounds, verifies each one live, and hands you a batch of genuinely registrable names." },
+    { q: "How accurate are the availability checks?", a: "Every domain goes through DNS + RDAP + WHOIS checks against authoritative registry data. We still recommend a final confirmation on the registrar's page before buying." },
+    { q: "Is it free?", a: "Completely free. AI search has an hourly rate limit; instant checks, extra-TLD checks, and prefix/suffix variants are unlimited and never use AI quota." },
+    { q: "Will it register domains for me automatically?", a: "No. We only provide verification results and registrar links (e.g. Porkbun) — registration and payment happen at the registrar." },
+    { q: "Which TLDs are supported?", a: "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio via the “more TLDs” button." },
+    { q: "Do you store my searches?", a: "We never store your input or IP — only anonymous aggregate counters. Your shortlist lives in your own browser's local storage." },
+  ],
+} as const;
+
+const homeFaqJsonld = (lang: "zh" | "en") =>
+  JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: HOME_FAQ[lang].map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
+  });
 
 /** BreadcrumbList 结构化数据：首页 → 当前页，供搜索结果面包屑展示 */
 const breadcrumbJsonld = (name: string, path: string, lang: "zh" | "en") =>
@@ -841,9 +854,30 @@ app.get("/api/og/vs/:slug", (c) => {
   });
 });
 
+// 首页英文 SSR meta（与 i18n 词典 meta.title 一致）
+const HOME_META_EN = {
+  title: "DomainHunter — AI Domain Hunter | Describe the meaning, hunt truly available names",
+  desc: "Describe your idea in one sentence — AI brainstorms domain names, verifies availability live via RDAP+DNS, and scores each one. Only names you can register right now. Free, open source, no login.",
+  ogTitle: "DomainHunter — AI Domain Hunter",
+  ogDesc: "Describe the meaning — AI brainstorms names, verifies availability live, and scores each one. Only truly registrable domains.",
+};
+
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
-  const html = injectHreflang(await res.text(), "/").replace("</head>", `<script type="application/ld+json">${FAQ_JSONLD}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
+  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  let html = await res.text();
+  if (lang === "en") {
+    const m = HOME_META_EN;
+    html = html
+      .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(m.title)}</title>`)
+      .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${escapeHtml(m.desc)}" />`)
+      .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${escapeHtml(m.ogTitle)}" />`)
+      .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${escapeHtml(m.ogDesc)}" />`)
+      .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${escapeHtml(m.ogTitle)}" />`)
+      .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${escapeHtml(m.ogDesc)}" />`);
+  }
+  html = injectHreflang(html, "/").replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
+  html = setHtmlLang(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
