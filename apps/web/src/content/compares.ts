@@ -421,6 +421,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["High-ticket, trust-sensitive categories", "Long-term brand asset and resale", "Word-of-mouth-heavy brands (ads, livestreams)", "Formal primary site for every audience"],
     },
   },
+  "com-vs-me": {
+    slug: "com-vs-me",
+    a: "com",
+    b: "me",
+    zh: {
+      title: ".com 和 .me 怎么选：品牌资产与个人表达的取舍",
+      metaDescription: ".com 是品牌与商业的默认选择，.me 天然适合个人品牌与作品集。对比两者的气质、价格与语义玩法，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "看主体是「公司」还是「人」：做商业产品、公司官网，.com 的默认信任无可替代；做个人主页、作品集、简历站、newsletter，.me 语义天然——about.me、hire.me 式的表达是 .com 给不了的。价格上 .me 注册与续费都明显高于 .com，纯从成本看不占优，赢在语义。务实策略：个人品牌先用「名字.me」上线，日后商业化再补对应 .com；动词短语（find.me、read.me 类）则 .me 是唯一解。",
+      pickA: ["商业产品与公司官网", "长期品牌资产与转售", "预算敏感、在意续费成本", "面向大众的正式站点"],
+      pickB: ["个人主页、作品集、简历站", "个人 newsletter 或博客", "动词短语域名（hire.me 类）", "心仪名字 .com 已被注册"],
+    },
+    en: {
+      title: ".com vs .me: Brand Asset or Personal Expression",
+      metaDescription:
+        ".com is the default for brands and business; .me is built for personal sites and portfolios. Compare vibe, pricing and semantic hacks, then hunt names available on both.",
+      verdict:
+        "It hinges on whether the subject is a company or a person. For commercial products and company sites, .com's default trust is irreplaceable. For personal pages, portfolios, resumes and newsletters, .me is semantically native — about.me and hire.me style phrasing is something .com simply can't do. On price, .me costs more to register and renew, so it wins on meaning, not cost. Pragmatic play: launch your personal brand on name.me and pick up the matching .com if you commercialize; for verb phrases (find.me, read.me), .me is the only answer.",
+      pickA: ["Commercial products and company sites", "Long-term brand asset and resale", "Budget-sensitive, renewal-conscious", "Formal site for a broad audience"],
+      pickB: ["Personal pages, portfolios, resumes", "Personal newsletters or blogs", "Verb-phrase domains (hire.me style)", "Your name is taken on .com"],
+    },
+  },
+  "io-vs-tech": {
+    slug: "io-vs-tech",
+    a: "io",
+    b: "tech",
+    zh: {
+      title: ".io 和 .tech 怎么选：极客身份与直白语义的取舍",
+      metaDescription: ".io 是开发者圈的身份标识，.tech 语义直白且库存更好。对比两者的圈内认知、价格结构与库存差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是技术向后缀，差别在「圈内认知」与「价格结构」：.io 在开发者/开源/SaaS 圈的地位多年积累，天然带极客身份，但注册与续费都贵且好名字消耗快；.tech 语义谁都看得懂，首年常有超低促销价、库存明显更好，缺点是续费涨幅大（典型的首年便宜续费贵）、圈内辨识度不如 .io。面向开发者的产品优先 .io；面向大众讲「科技感」的品牌、黑客松、硬件团队，.tech 直白够用。两个后缀都要注意长期续费成本。",
+      pickA: ["开发者工具、API、开源项目", "SaaS 与技术圈品牌", "在意圈内身份认同", "预算能接受较高续费"],
+      pickB: ["面向大众的科技品牌", "黑客松、技术活动、社区", "首年预算敏感（促销价极低）", "心仪名字 .io 已被注册"],
+    },
+    en: {
+      title: ".io vs .tech: Hacker Cred or Literal Meaning",
+      metaDescription:
+        ".io carries developer-scene credibility; .tech is literal with better inventory. Compare in-crowd recognition, price structure and inventory, then hunt names available on both.",
+      verdict:
+        "Both are tech suffixes; the difference is in-crowd recognition versus price structure. .io has years of accumulated status in the developer, open-source and SaaS scene — instant hacker cred — but costs more to register and renew, and good names go fast. .tech is understood by everyone, often has rock-bottom first-year promos and much better inventory, but renewals jump hard (the classic cheap-year-one trap) and it carries less insider weight. Developer-facing products should default to .io; consumer-facing 'tech vibe' brands, hackathons and hardware teams do fine on .tech. Watch long-term renewal cost on both.",
+      pickA: ["Developer tools, APIs, open source", "SaaS and tech-scene brands", "In-crowd identity matters", "Budget tolerates higher renewals"],
+      pickB: ["Consumer-facing tech brands", "Hackathons, tech events, communities", "First-year budget sensitivity (deep promos)", "Your name is taken on .io"],
+    },
+  },
+  "online-vs-site": {
+    slug: "online-vs-site",
+    a: "online",
+    b: "site",
+    zh: {
+      title: ".online 和 .site 怎么选：两个通用后缀的实用对比",
+      metaDescription: ".online 和 .site 都是语义通用、库存极好的后缀。对比两者的读感、长度、价格与续费结构，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两者定位几乎重叠：语义通用、什么行业都能用、库存都极好、首年都常有低价促销。差别主要在读感与长度：.site 只有 4 个字母，更短更利落，「品牌 + site」读起来像「某某网站」；.online 7 个字母偏长，但「品牌 + online」有「上线了/在线服务」的动词感，做「传统品牌转线上」的叙事更顺。两者续费都显著高于首年促销价，注册前务必看清续费。同名都可注册时，短优先选 .site；讲「线上化」故事选 .online。",
+      pickA: ["「转线上/在线服务」叙事的品牌", "传统行业的线上入口", "首年预算敏感（促销价低）", "心仪名字 .site 已被注册"],
+      pickB: ["想要更短更利落的域名", "通用落地页与项目站", "首年预算敏感（促销价低）", "心仪名字 .online 已被注册"],
+    },
+    en: {
+      title: ".online vs .site: A Practical Comparison of Two Generic Suffixes",
+      metaDescription:
+        ".online and .site are both generic, high-inventory suffixes. Compare readability, length, pricing and renewal structure, then hunt names available on both.",
+      verdict:
+        "Their positioning almost fully overlaps: generic meaning, industry-agnostic, excellent inventory, frequent first-year promos. The real differences are readability and length. .site is just four letters — shorter and snappier, 'brand + site' reads as 'the website of X'. .online is seven letters but 'brand + online' has a verb-ish 'now live / online service' feel, which suits a brick-to-click story. Both renew far above the promo price, so check renewals before registering. When the name is free on both, pick .site for brevity or .online for the going-online narrative.",
+      pickA: ["Brands telling a going-online story", "Online entry point for offline businesses", "First-year budget sensitivity (deep promos)", "Your name is taken on .site"],
+      pickB: ["You want the shorter, snappier domain", "Generic landers and project sites", "First-year budget sensitivity (deep promos)", "Your name is taken on .online"],
+    },
+  },
+  "store-vs-online": {
+    slug: "store-vs-online",
+    a: "store",
+    b: "online",
+    zh: {
+      title: ".store 和 .online 怎么选：卖货语义与通用在线的取舍",
+      metaDescription: ".store 明确指向「商店」，.online 语义更泛。对比两者的转化语义、适用场景与续费结构，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "核心问题是「你的站点是不是商店」：如果是，.store 语义精准——「品牌 + store」用户一眼知道能买东西，转化语义比 .online 强；如果站点不止卖货（内容 + 服务 + 商城混合），.online 更泛更保险。两者库存都好、首年都有低价促销、续费都明显更贵。电商独立站优先 .store；工具站、服务站或还没想清楚形态的项目选 .online。也有品牌两个都注册：.store 直达商城页，.online 做主站。",
+      pickA: ["电商独立站与品牌商城", "「买」是核心动作的站点", "品类词 + store 的组合打法", "心仪名字 .online 已被注册"],
+      pickB: ["内容/服务/商城混合的站点", "形态未定的早期项目", "「在线服务」叙事的品牌", "心仪名字 .store 已被注册"],
+    },
+    en: {
+      title: ".store vs .online: Commerce Semantics or Generic Presence",
+      metaDescription:
+        ".store literally means shop; .online is broader. Compare conversion semantics, use cases and renewal structure, then hunt names available on both.",
+      verdict:
+        "The core question: is your site a store? If yes, .store is semantically precise — 'brand + store' tells users they can buy at a glance, stronger conversion language than .online. If the site mixes content, services and commerce, .online is broader and safer. Both have great inventory, deep first-year promos and much higher renewals. Standalone e-commerce sites should default to .store; tools, services and still-forming projects fit .online. Some brands register both: .store deep-links to the shop, .online serves as the main site.",
+      pickA: ["Standalone e-commerce and brand shops", "Sites where buying is the core action", "Category-word + store combos", "Your name is taken on .online"],
+      pickB: ["Mixed content/service/shop sites", "Early projects with undecided shape", "Brands telling an online-service story", "Your name is taken on .store"],
+    },
+  },
+  "cc-vs-tv": {
+    slug: "cc-vs-tv",
+    a: "cc",
+    b: "tv",
+    zh: {
+      title: ".cc 和 .tv 怎么选：两个「转义」国别后缀的对比",
+      metaDescription: ".cc 中性百搭常被当作 .com 替补，.tv 天然绑定视频与直播。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是被「转义」使用的国别后缀（.cc 科科斯群岛、.tv 图瓦卢），但走向完全不同：.cc 中性、无固定语义，常被当作 .com 的替补，短域名库存好、价格适中，中文圈接受度尤其高；.tv 语义被「电视/视频」牢牢锁定，做视频、直播、流媒体内容是天然选择，但价格明显更贵，且用在非视频场景会造成预期错位。做视频内容选 .tv 不用犹豫；只是想要一个短而中性的域名，.cc 性价比更好。",
+      pickA: ["想要 .com 替补的短域名", "中文圈品牌（.cc 接受度高）", "预算适中、语义中性的项目", "心仪名字 .tv 太贵或已被注册"],
+      pickB: ["视频、直播、流媒体内容", "UP 主/主播的个人频道站", "「频道感」是品牌的一部分", "预算能接受较高注册与续费"],
+    },
+    en: {
+      title: ".cc vs .tv: Two Repurposed Country Codes Compared",
+      metaDescription:
+        ".cc is neutral and versatile, often a .com understudy; .tv is locked to video and streaming. Compare semantics, pricing and use cases, then hunt names available on both.",
+      verdict:
+        "Both are repurposed country codes (.cc for Cocos Islands, .tv for Tuvalu) that took opposite paths. .cc is neutral with no fixed meaning — a common .com understudy with good short-name inventory, moderate pricing, and especially strong acceptance in Chinese-speaking markets. .tv is firmly locked to television and video: the natural pick for video, livestreaming and media content, but noticeably pricier, and using it outside video sets the wrong expectation. Making video content? Take .tv without hesitation. Just want a short neutral name? .cc is the better value.",
+      pickA: ["Short .com-understudy domains", "Chinese-market brands (.cc is well accepted)", "Neutral-meaning projects on a moderate budget", "Your name is too pricey or taken on .tv"],
+      pickB: ["Video, livestreaming, media content", "Creator channel sites", "The 'channel' feel is part of the brand", "Budget tolerates higher pricing"],
+    },
+  },
+  "cn-vs-top": {
+    slug: "cn-vs-top",
+    a: "cn",
+    b: "top",
+    zh: {
+      title: ".cn 和 .top 怎么选：两个低价后缀的实用对比",
+      metaDescription: ".cn 是国内市场标配且续费便宜，.top 首年极便宜但语义弱。对比两者的合规要求、价格结构与信任度，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都以便宜著称，但便宜的方式不同：.cn 注册与续费都稳定低价，是国内市场的标配，代价是需要实名认证、接入国内主机需 ICP 备案；.top 首年常常一两美元、无实名门槛，但语义弱（「顶级」的说服力有限）、历史上被低质站大量使用导致信任折扣，部分邮件服务对 .top 域名更严格。面向国内正经做品牌，.cn 是更稳的选择；做实验项目、临时活动页、纯测试用途，.top 的首年价格几乎无敌——但别把重要品牌押在上面。",
+      pickA: ["面向国内市场的正式品牌", "需要 ICP 备案接入国内服务器", "在意长期续费稳定低价", "拼音品牌词的天然归属"],
+      pickB: ["实验项目与临时活动页", "首年预算极度敏感", "不想做实名认证流程", "心仪名字 .cn 已被注册"],
+    },
+    en: {
+      title: ".cn vs .top: A Practical Comparison of Two Budget Suffixes",
+      metaDescription:
+        ".cn is the China-market standard with cheap renewals; .top is ultra-cheap in year one but semantically weak. Compare compliance, price structure and trust, then hunt names available on both.",
+      verdict:
+        "Both are famously cheap, but in different ways. .cn is consistently low-priced to register and renew and is the standard for the Chinese market — the trade-off is real-name verification, plus ICP filing if you host domestically. .top often costs a dollar or two in year one with no identity hurdle, but its meaning is weak, heavy historical use by low-quality sites created a trust discount, and some mail providers treat .top more strictly. Building a serious China-facing brand? .cn is the steadier pick. Experiments, temporary campaign pages, throwaway tests? .top's year-one price is unbeatable — just don't bet an important brand on it.",
+      pickA: ["Serious China-facing brands", "Need ICP filing with domestic hosting", "Stable low renewals long-term", "Natural home for pinyin brand words"],
+      pickB: ["Experiments and temporary campaign pages", "Extreme first-year budget sensitivity", "No real-name verification process", "Your name is taken on .cn"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
