@@ -584,7 +584,14 @@ app.get("/api/usage", async (c) => {
       }),
     );
   }
-  return c.json({ days: out }, 200, { "cache-control": "public, max-age=300" });
+  let cronLast: number | null = null;
+  let indexnowLast: number | null = null;
+  try {
+    const [cl, il] = await Promise.all([kv?.get("cron:last"), kv?.get("indexnow:last")]);
+    cronLast = cl ? Number(cl) : null;
+    indexnowLast = il ? Number(il) : null;
+  } catch { /* 读失败返回 null */ }
+  return c.json({ days: out, cronLast, indexnowLast }, 200, { "cache-control": "public, max-age=300" });
 });
 
 // SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）
@@ -1090,6 +1097,8 @@ async function pingIndexNow(env: Bindings): Promise<void> {
 export default {
   fetch: app.fetch,
   async scheduled(_event: ScheduledController, env: Bindings, ctx: ExecutionContext) {
+    // 心跳：记录每次 cron 实际执行时间，便于观察调度是否生效
+    ctx.waitUntil(env.CACHE?.put("cron:last", String(Date.now())) ?? Promise.resolve());
     ctx.waitUntil(runMonitorSweep(env));
     ctx.waitUntil(pingIndexNow(env));
   },
