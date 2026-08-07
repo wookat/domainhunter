@@ -1635,6 +1635,366 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  creator: {
+    slug: "creator",
+    tlds: [
+      { tld: "com", zh: "创作者要长期经营的个人品牌资产，.com 最稳", en: "A creator brand is a long-term asset — .com is the safest home for it" },
+      { tld: "tv", zh: "视频内容天然后缀，「频道感」一眼即懂", en: "The natural suffix for video — instant channel vibes" },
+      { tld: "me", zh: "个人 IP 的第一人称后缀，姓名类域名常有货", en: "The first-person suffix for personal brands; name-style domains are often still available" },
+    ],
+    zh: {
+      label: "视频创作者",
+      title: "视频创作者 / 自媒体怎么起名：频道名、个人 IP 与域名选择",
+      metaDescription: "视频创作者与自媒体命名指南：频道名 vs 真名、栏目化命名、跨平台一致性，MrBeast/李子柒等案例拆解，推荐 TLD 与常见误区，用 AI 猎取可注册的创作者域名。",
+      intro:
+        "创作者的名字是被念出来的：出现在片头口播、直播间弹幕和「记得搜索 XX」的引导里，所以它必须一听就会写、一写就搜得到。创作者命名先做一个根本选择：用真名（把人本身变成品牌，转型自由但难以出售）还是造一个频道名（内容资产可交易，但要额外养品牌）。第二个决策是宽窄：名字锁得越窄（「XX 评测」），起量越快但转型越痛——大量创作者在第三年被自己的名字困住。跨平台一致性是硬约束：B 站、YouTube、抖音、X 与域名必须同名，起名前先把所有平台的可用性一起查掉。",
+      namingIdeas: [
+        "真名+领域词：真名可信、领域词给算法与新观众定位（「老王聊车」结构），转型时换掉领域词即可",
+        "栏目化命名：把名字起成一档节目而非一个人（「日谈公园」式），天团化与商业化空间更大",
+        "口播测试：名字在片头念三遍，拗口、易错写、有多音字的直接淘汰——创作者的名字九成场景靠听",
+        "反差与记忆钩：一个意外的词组合（MrBeast 的「野兽先生」）比准确描述更能被记住，测试标准是「听完还能复述」",
+        "跨平台抢注前置：定名前一次性查 YouTube/B 站/抖音/X handle 与 .com/.tv 域名，全部拿下再官宣",
+      ],
+      cases: [
+        { name: "MrBeast", takeaway: "Mr + beast 的反差组合：既像人名又有野性张力，一听就能拼写；从游戏解说转型慈善挑战毫无违和——宽命名的胜利" },
+        { name: "李子柒", takeaway: "真名式艺名自带东方叙事，人即品牌；停更三年热度不减，证明个人 IP 命名的复利远超栏目名" },
+        { name: "Kurzgesagt", takeaway: "德语「简而言之」：外语词自带辨识度与「知识感」，副标题 In a Nutshell 解决发音门槛——难名字要配好助记" },
+        { name: "影视飓风", takeaway: "领域词（影视）+ 气势词（飓风）：定位与能量感兼得，从测评转型制作公司名字依然成立" },
+      ],
+      pitfalls: [
+        "名字锁死品类：「XX 手机评测」做到十万粉后想聊汽车，名字成了天花板——领域词要可替换或干脆不带",
+        "平台后缀入名：名字里带 TV/Tube/Tok 等平台词，跨平台分发时自相矛盾，还可能碰商标",
+        "生僻字与多音字：观众听得懂却搜不到，等于把搜索流量白白漏掉",
+        "只抢了账号没买域名：商务合作、导流落地页都需要独立域名，被抢注后赎回成本远超首年注册费",
+      ],
+    },
+    en: {
+      label: "Creators",
+      title: "How to Name a YouTube Channel or Creator Brand: Names, IP & Domains",
+      metaDescription: "Creator naming guide: real name vs. channel name, show-style naming, cross-platform consistency, breakdowns of MrBeast/Kurzgesagt and more, recommended TLDs and pitfalls — then hunt a registrable creator domain with AI.",
+      intro:
+        "A creator's name lives out loud: it's spoken in intros, typed into search bars from memory, and shouted in \"go search for X\" calls to action — so it must pass the hear-it-once, spell-it-right test above all. The first fork in creator naming is fundamental: your real name (you become the brand — free to pivot, hard to sell) or a coined channel name (a sellable content asset that needs separate brand-building). The second call is width: the narrower the name (\"X Phone Reviews\"), the faster it grows and the more it hurts to pivot — many creators hit a ceiling built from their own name by year three. Cross-platform consistency is non-negotiable: YouTube, TikTok, X, Twitch and the domain must all match, so check every handle before you announce anything.",
+      namingIdeas: [
+        "Real name + niche word: the name builds trust, the niche word positions you for algorithms and new viewers — swap the niche word when you pivot",
+        "Name it like a show, not a person: show-style names (a title, not a handle) scale to teams and are far easier to sponsor and sell",
+        "The spoken-intro test: say the name three times as a video intro — anything clumsy, ambiguous, or easily misspelled is out; creator names are heard, not read",
+        "Contrast hooks beat descriptions: an unexpected word pair (MrBeast) is more memorable than an accurate label; the test is whether a viewer can repeat it an hour later",
+        "Lock handles before you announce: check YouTube/TikTok/X/Twitch handles and the .com/.tv domain in one pass, secure everything, then go public",
+      ],
+      cases: [
+        { name: "MrBeast", takeaway: "Mr + beast: half honorific, half feral energy — instantly spellable, and wide enough to carry a pivot from gaming commentary to philanthropy stunts" },
+        { name: "Kurzgesagt", takeaway: "German for \"in a nutshell\": a foreign word is ownable and smart-sounding; the In a Nutshell subtitle solves the pronunciation barrier — hard names need a built-in mnemonic" },
+        { name: "MKBHD", takeaway: "Initials + HD: technically an acronym, but a decade of consistency made four consonants a premium tech brand — proof that ruthless repetition can beat naming theory" },
+        { name: "Good Mythical Morning", takeaway: "A show name, not a person: the format survives host absences, spin-offs, and a merch empire — the strongest case for naming the show over the human" },
+      ],
+      pitfalls: [
+        "A name that locks the niche: \"X Phone Reviews\" at 100k subs becomes a cage when you want to cover cars — keep the niche word swappable or skip it",
+        "Platform words in the name: Tube/Tok/TV in a handle contradicts itself off-platform and can trip trademark wires",
+        "Clever spellings viewers can't type: if hearing the name doesn't tell people how to search it, you're leaking discovery traffic",
+        "Grabbing handles but not the domain: sponsorship decks and landing pages need a real domain — buying it back from a squatter costs far more than year-one registration",
+      ],
+    },
+  },
+  freelance: {
+    slug: "freelance",
+    tlds: [
+      { tld: "com", zh: "客户拿到报价单时最信任的后缀，接单门面首选", en: "The suffix clients trust most on a quote — the default for a client-facing storefront" },
+      { tld: "me", zh: "个人作品集的第一人称后缀，姓名域名常有货", en: "The first-person suffix for portfolios; name domains are often available" },
+      { tld: "studio", zh: "一人也可以是工作室：给自由职业加一层专业外壳", en: "Even a team of one can be a studio — instant professional shell" },
+    ],
+    zh: {
+      label: "自由职业",
+      title: "自由职业者 / 独立开发者怎么起名：真名、工作室壳与域名选择",
+      metaDescription: "自由职业与独立开发者命名指南：真名 vs 工作室名、报价单信任感、一人公司命名，DHH/levelsio 等案例拆解，推荐 TLD 与常见误区，用 AI 猎取可注册的个人品牌域名。",
+      intro:
+        "自由职业者的名字出现在最敏感的场景里：报价单、发票和合同抬头。它的核心任务只有一个——让客户放心把钱打过来。这里的根本选择是「真名」还是「工作室壳」：真名亲切、信任成本低，适合靠口碑接单的顾问与设计师；工作室名（哪怕只有你一个人）显得规模更大、报价空间更高，也方便日后扩张成真团队。独立开发者是特殊分支：产品名与个人名要分开经营，个人号做流量，产品域名做资产。无论哪条路，名字必须在 LinkedIn 简介、邮件签名和付款页三处都成立。",
+      namingIdeas: [
+        "真名直营：姓名.me 或姓名.com 做作品集，把「人」本身当品牌——口碑型接单的最短路径",
+        "工作室壳命名：「名词 + Studio/Lab/Works」结构（一个人也能叫 Studio），报价单立刻多一层专业感",
+        "领域限定词：在名字里放一个手艺词（design/code/write），客户三秒定位你是干什么的",
+        "独立开发者双轨制：个人真名做社交流量，每个产品独立域名——产品可出售，个人 IP 永远留在自己手里",
+        "发票测试：把候选名放进发票抬头念一遍，如果客户财务可能皱眉，就换掉",
+      ],
+      cases: [
+        { name: "DHH", takeaway: "真名缩写 + 长期一致输出：三个字母因为 Rails 与 37signals 的复利变成技术圈硬通货——个人 IP 是时间的函数" },
+        { name: "levelsio", takeaway: "真名 Pieter Levels 压缩成 handle 并直接当域名（levels.io）：名字、账号、域名三位一体，独立开发者命名的教科书" },
+        { name: "Studio Ghibli", takeaway: "Studio + 造词（撒哈拉热风）：工作室壳 + 有故事的词根，从两个人起步撑起四十年品牌——壳命名的天花板" },
+        { name: "Basecamp", takeaway: "从 37signals 的咨询壳孵化出产品名 Basecamp 再反客为主：咨询与产品分开命名，产品成功后自然切换重心" },
+      ],
+      pitfalls: [
+        "用平台账号当门面：接单全挂在第三方平台 ID 上，平台一改规则客户就找不到你——独立域名是自由职业的「自由」本身",
+        "壳名夸张过头：Global/International/Group 配一人团队，客户见面后的心理落差直接扣信任分",
+        "真名难拼写却不做别名：姓名拼音复杂时要注册一个易拼别名域名 301 过去，否则口头介绍全在漏客",
+        "产品与个人绑死：产品域名挂在个人名下叙事里，出售产品时买家要的干净品牌你给不了",
+      ],
+    },
+    en: {
+      label: "Freelancers",
+      title: "How to Name a Freelance Business or Indie Studio: Real Name vs. Studio Shell",
+      metaDescription: "Freelancer and indie-hacker naming guide: real name vs. studio shell, invoice-grade trust, one-person company naming, breakdowns of DHH/levelsio/Basecamp, recommended TLDs and pitfalls — then hunt a registrable personal-brand domain with AI.",
+      intro:
+        "A freelancer's name shows up in the most sensitive places: quotes, invoices, and contract headers. Its single job is to make a client comfortable wiring money. The fundamental fork is real name versus studio shell: your real name is warm and low-friction — right for consultants and designers who live on referrals; a studio name (even for a team of one) reads bigger, supports higher rates, and scales into a real team later. Indie hackers are a special branch: run the personal name and the product names on separate tracks — the personal account builds audience, each product domain is a sellable asset. Whichever path, the name must work in three places at once: a LinkedIn headline, an email signature, and a payment page.",
+      namingIdeas: [
+        "Real-name direct: yourname.me or yourname.com as the portfolio — the shortest path when referrals are your pipeline",
+        "Studio shell: noun + Studio/Lab/Works (one person can absolutely be a studio) — an instant layer of professionalism on every quote",
+        "A craft word in the name: design/code/write tells a client in three seconds what you sell",
+        "Indie-hacker dual track: personal name for the audience, a standalone domain per product — products get sold, the personal brand never leaves you",
+        "The invoice test: read the candidate name aloud as an invoice header — if the client's finance team might raise an eyebrow, drop it",
+      ],
+      cases: [
+        { name: "DHH", takeaway: "Real-name initials compounded by decades of Rails and 37signals output: three letters became hard currency — personal brands are a function of time" },
+        { name: "levelsio", takeaway: "Pieter Levels compressed into a handle that doubles as the domain (levels.io): name, account and domain unified — the indie-hacker naming textbook" },
+        { name: "Studio Ghibli", takeaway: "Studio + a storied coinage (a Saharan wind): a shell name with narrative roots carried a two-person start for forty years — the ceiling of shell naming" },
+        { name: "Basecamp", takeaway: "The product name hatched inside the 37signals consulting shell, then took over: naming consulting and products separately lets the winner claim the spotlight" },
+      ],
+      pitfalls: [
+        "Living on a marketplace handle: if clients can only find you through a platform ID, one algorithm change erases you — an independent domain is the \"free\" in freelance",
+        "An oversized shell: Global/International/Group over a team of one costs trust the moment you meet the client",
+        "A hard-to-spell real name with no alias: register an easy-spelling alias domain and 301 it — every verbal introduction is otherwise a leak",
+        "Welding products to your person: when a product's domain and story hang off your name, you can't hand a buyer the clean brand they're paying for",
+      ],
+    },
+  },
+  fashion: {
+    slug: "fashion",
+    tlds: [
+      { tld: "com", zh: "时尚品牌的国际化门面，吊牌与包装上的默认预期", en: "The global storefront for fashion — what customers expect on a hang tag" },
+      { tld: "co", zh: "简短现代，新消费与 DTC 品牌的常见替代", en: "Short and modern — a common alternative for DTC labels" },
+      { tld: "store", zh: "直营电商语义直白，主品牌域名之外的导购入口", en: "Literal storefront semantics — a clean secondary shopping entry" },
+    ],
+    zh: {
+      label: "服饰潮牌",
+      title: "服饰品牌 / 潮牌怎么起名：审美张力、可穿戴性与域名选择",
+      metaDescription: "服饰与潮牌命名指南：创始人名、意象词、反叛词三条路线，Supreme/UNIQLO 等好名字拆解，吊牌与刺绣的「可穿戴性」测试，推荐 TLD 与常见误区，用 AI 猎取可注册的时尚域名。",
+      intro:
+        "服饰品牌的名字最终会被印在胸口、绣在袖口、挂在吊牌上——它不只是名字，它本身就是设计元素。这决定了时尚命名独有的测试标准：「可穿戴性」——这个词印在 T 恤上，消费者愿不愿意穿出门？时尚命名有三条经典路线：创始人名（Chanel、山本耀司）卖的是人的审美信用；意象词（Supreme、Off-White）卖的是态度与圈层暗号；地名与外语词（UNIQLO 的日式基因）卖的是产地叙事。潮牌尤其依赖「圈内暗号感」：名字要让圈内人会心、圈外人好奇，太直白反而掉价。",
+      namingIdeas: [
+        "创始人名路线：人名即品牌，审美信用直接背书——适合设计师主理、有个人叙事的品牌",
+        "态度词路线：一个有立场的词（Supreme 的「至高」、Obey 的「服从」反讽）——潮牌的名字就是第一句宣言",
+        "外语与产地借力：日语、法语、意大利语词根自带风格产地联想，但要确认发音门槛与真实含义",
+        "可穿戴性测试：把候选名做成胸前印花 mockup，如果自己都不愿意穿出门，立刻淘汰",
+        "大小写与字标预设计：定名时就想好全大写（SUPREME）还是小写（acne studios）——时尚品牌的名字和字体是一体的",
+      ],
+      cases: [
+        { name: "Supreme", takeaway: "一个词的宣言：「至高无上」配 Futura 斜体红底白字，名字、字体、色块三位一体——潮牌命名与视觉同体的极致" },
+        { name: "UNIQLO", takeaway: "Unique + Clothing 的合成词（注册时拼错反而成就独特拼写）：日式基因 + 全球好念，快时尚命名的国际化范本" },
+        { name: "Off-White", takeaway: "一个颜色概念当品牌：「黑白之间的灰色地带」既是设计哲学又是圈层暗号——概念命名让品牌自带策展感" },
+        { name: "Patagonia", takeaway: "远方地名承载「荒野与探索」叙事，与产品的户外基因严丝合缝——地名命名的关键是名实一致" },
+      ],
+      pitfalls: [
+        "直白描述品类：「XX 服饰」「XX 潮流」在吊牌上毫无张力，时尚消费者买的是态度不是品类说明",
+        "外语词不查含义：借来的词在原语言里有负面或滑稽含义，出海时变成笑话",
+        "字标不可穿戴：名字太长或字形笨重，印花与刺绣都难看——先做 mockup 再定名",
+        "忽略商标与海外查重：时尚是商标纠纷高发区，Supreme 的全球抢注大战就是前车之鉴",
+      ],
+    },
+    en: {
+      label: "Fashion labels",
+      title: "How to Name a Fashion Brand or Streetwear Label: Wearability & Domains",
+      metaDescription: "Fashion and streetwear naming guide: founder names, attitude words and borrowed-language routes, breakdowns of Supreme/UNIQLO/Off-White, the wearability test, recommended TLDs and pitfalls — then hunt a registrable fashion domain with AI.",
+      intro:
+        "A fashion brand's name ends up printed across chests, embroidered on cuffs, and hung from tags — it isn't just a name, it's a design element. That gives fashion naming its own unique test: wearability — would a customer actually walk outside with this word on their shirt? Three classic routes: founder names (Chanel, Yohji Yamamoto) sell a person's aesthetic credit; attitude words (Supreme, Obey) sell a stance and an in-group signal; borrowed languages and places (UNIQLO's Japanese DNA, Patagonia) sell an origin story. Streetwear especially runs on insider code: the name should make insiders nod and outsiders curious — too literal and it loses its edge.",
+      namingIdeas: [
+        "Founder-name route: the person is the brand and their aesthetic credit is the endorsement — right for designer-led labels with a personal narrative",
+        "Attitude-word route: one word with a stance (Supreme's dominance, Obey's irony) — a streetwear name is the brand's first manifesto",
+        "Borrowed language and place: Japanese, French, Italian roots carry style-origin associations for free — but verify the real meaning and the pronunciation barrier",
+        "The wearability test: mock the candidate name up as a chest print; if you wouldn't wear it out the door, kill it immediately",
+        "Design the wordmark with the name: decide all-caps (SUPREME) or lowercase (acne studios) at naming time — in fashion the name and the type are one object",
+      ],
+      cases: [
+        { name: "Supreme", takeaway: "A one-word manifesto: \"supreme\" in italic Futura on a red box — name, typeface and color block fused into one asset; the extreme of naming-as-visual" },
+        { name: "UNIQLO", takeaway: "A unique + clothing blend (a registration typo became the ownable spelling): Japanese DNA plus global pronounceability — the internationalization template for fast fashion" },
+        { name: "Off-White", takeaway: "A color concept as a brand: \"the gray area between black and white\" is both design philosophy and in-group signal — concept naming makes the label feel curated" },
+        { name: "Patagonia", takeaway: "A far-away place name carrying wilderness and exploration, perfectly aligned with the product's outdoor DNA — place naming works when the story is true" },
+      ],
+      pitfalls: [
+        "Literal category names: \"X Apparel\" has zero tension on a hang tag — fashion customers buy attitude, not category labels",
+        "Borrowing words without checking: a loanword that's negative or comical in its source language becomes a joke the day you go global",
+        "An unwearable wordmark: names too long or heavy set badly in prints and embroidery — mock it up before you commit",
+        "Skipping trademark sweeps: fashion is a trademark-litigation hot zone; Supreme's global squatting wars are the cautionary tale",
+      ],
+    },
+  },
+  coffee: {
+    slug: "coffee",
+    tlds: [
+      { tld: "com", zh: "连锁化与电商化的门面，豆袋包装上的默认后缀", en: "The default for chains and online bean sales — what belongs on a coffee-bag label" },
+      { tld: "co", zh: "与 coffee/company 双关，咖啡品牌的天然缩写", en: "A natural pun on coffee/company — the insider suffix for cafés" },
+      { tld: "shop", zh: "小店与线上豆单的直白入口，首年成本低", en: "A literal storefront for small cafés and bean lists, with a cheap first year" },
+    ],
+    zh: {
+      label: "咖啡茶饮",
+      title: "咖啡馆 / 茶饮品牌怎么起名：场所感、风味联想与域名选择",
+      metaDescription: "咖啡与茶饮品牌命名指南：场所感命名、风味词、地名与故事词根，星巴克/蓝瓶/喜茶等案例拆解，招牌与杯身的上镜测试，推荐 TLD 与常见误区，用 AI 猎取可注册的咖啡域名。",
+      intro:
+        "咖啡馆的名字是「第三空间」的门牌：它要在招牌上让路人愿意推门，在杯身上让顾客愿意拍照，在豆袋上让风味显得可信。咖啡命名的核心是场所感与风味联想的平衡——太像饮品说明（「香浓咖啡屋」）没有灵魂，太抽象（纯造词）又撑不起社区小店的温度。经典路线有三条：故事词根（星巴克取自《白鲸记》大副之名）、感官意象（蓝瓶的极简蓝）、在地叙事（以街区、山名、方言词入名）。茶饮品牌另有一层：名字要能长出产品名体系（喜茶的「多肉葡萄」们），主品牌名要留出这个语义空间。",
+      namingIdeas: [
+        "故事词根：从文学、航海、产地传说里借一个有出处的词，店员讲得出来历，名字就有了第二杯的话题",
+        "感官锚点：一个颜色、一种器物、一声拟声（蓝瓶、快乐柠檬）——顾客凭感官记忆找回你",
+        "在地入名：街区名、山名、方言词让社区店自带归属感，连锁化时用「地名+主词」结构复制",
+        "杯身上镜测试：名字与 logo 印在杯子上拍一张照，社交媒体里好不好看直接决定自传播效率",
+        "留出产品命名空间：主品牌管气质，产品名管风味——主名太具体（带「拿铁」「柠檬」）会锁死菜单",
+      ],
+      cases: [
+        { name: "星巴克 Starbucks", takeaway: "《白鲸记》大副 Starbuck 之名：与咖啡毫无字面关系，却带来航海、远方与烘焙师傅的想象——故事词根的全球范本" },
+        { name: "Blue Bottle", takeaway: "颜色+器物的感官锚点：一只蓝瓶子从名字长成 logo、杯身与整个极简美学——名字即视觉资产" },
+        { name: "喜茶 HEYTEA", takeaway: "一个「喜」字管住所有情绪场景（喜悦、喜事、欢喜），英文名 HEYTEA 音意兼得——中文茶饮出海命名的标杆" },
+        { name: "%Arabica", takeaway: "用符号 % 当名字主体：极致减法带来极致辨识，代价是口头传播要多一句解释——符号命名只适合视觉驱动的品牌" },
+      ],
+      pitfalls: [
+        "品类词堆砌：「香浓」「醇品」「咖啡屋」的组合在地图 App 里一搜一屏，毫无辨识度",
+        "拟声与谐音过度：网感谐音梗开业三个月很热闹，三年后显得尴尬——社区店的名字要经得住岁月",
+        "只有中文名没有域名与英文名：豆子电商化、品牌出海时补名字，成本远高于开业前想好",
+        "名字与定位错配：走精品路线却起了连锁感的名字（或反之），装修与名字打架最伤品牌",
+      ],
+    },
+    en: {
+      label: "Coffee & tea",
+      title: "How to Name a Café or Tea Brand: Place, Flavor & Domains",
+      metaDescription: "Coffee and tea naming guide: place-feel naming, sensory anchors, story roots, breakdowns of Starbucks/Blue Bottle/HEYTEA, the cup-photo test, recommended TLDs and pitfalls — then hunt a registrable coffee domain with AI.",
+      intro:
+        "A café's name is the doorplate of a third place: it has to pull passers-by through the door from a signboard, look good on a cup in a photo, and make the flavor notes on a bean bag feel credible. The craft is balancing place-feel against flavor association — too literal (\"Rich Aroma Coffee House\") has no soul; too abstract and a neighborhood shop loses its warmth. Three classic routes: story roots (Starbucks borrowed a first mate from Moby-Dick), sensory anchors (Blue Bottle's minimalist blue), and local narrative (blocks, mountains, dialect words). Tea brands add one more layer: the master name must leave semantic room for a product-name system to grow underneath it.",
+      namingIdeas: [
+        "Story roots: borrow a word with provenance — literature, seafaring, origin legends. If baristas can tell the story, the name earns a second-cup conversation",
+        "Sensory anchors: a color, an object, a sound (Blue Bottle, Happy Lemon) — customers find their way back by sensory memory",
+        "Local words: block names, mountains and dialect give a neighborhood shop belonging; replicate with a \"place + master word\" structure when you chain up",
+        "The cup-photo test: print the name and logo on a cup and photograph it — how it looks on social feeds decides your organic reach",
+        "Leave product-name room: the master brand carries mood, product names carry flavor — a master name containing \"latte\" or \"lemon\" locks the menu",
+      ],
+      cases: [
+        { name: "Starbucks", takeaway: "The first mate Starbuck from Moby-Dick: zero literal coffee meaning, yet it imports seafaring, distance and roaster craft — the global template for story roots" },
+        { name: "Blue Bottle", takeaway: "Color + object as a sensory anchor: one blue bottle grew from name into logo, cup and an entire minimalist aesthetic — the name is the visual asset" },
+        { name: "HEYTEA", takeaway: "From 喜茶 (\"joy tea\"): one character carries every celebratory scene, and the English name lands both sound and greeting — the benchmark for Chinese tea brands going global" },
+        { name: "%Arabica", takeaway: "A percent sign as the brand's core: extreme subtraction buys extreme recognition, at the cost of a spoken explanation every time — symbol naming only works for visually-driven brands" },
+      ],
+      pitfalls: [
+        "Category-word pileups: \"Aroma\" + \"Brew\" + \"House\" combos fill a full screen of any map app — recognition zero",
+        "Overdone puns: a meme pun is fun for the first three months and awkward by year three — a neighborhood shop's name has to age well",
+        "No domain or English name from day one: retrofitting a name when you start selling beans online or expanding abroad costs far more than deciding before opening",
+        "Name–positioning mismatch: a specialty shop with a chain-sounding name (or the reverse) — when the interior and the name argue, the brand loses",
+      ],
+    },
+  },
+  automotive: {
+    slug: "automotive",
+    tlds: [
+      { tld: "com", zh: "整车与出行平台的默认门面，大宗消费信任底线", en: "The default for vehicles and mobility platforms — big-ticket purchases demand it" },
+      { tld: "ai", zh: "自动驾驶与智能座舱公司的技术信号", en: "The tech signal for autonomous-driving and smart-cabin companies" },
+      { tld: "cn", zh: "面向中国市场的整车与后市场品牌首选", en: "First choice for China-market vehicle and aftermarket brands" },
+    ],
+    zh: {
+      label: "汽车出行",
+      title: "汽车 / 出行品牌怎么起名：速度感、信任感与域名选择",
+      metaDescription: "汽车与出行品牌命名指南：致敬式人名、自然力意象、字母数字车型体系，特斯拉/蔚来/Uber 等案例拆解，推荐 TLD 与常见误区，用 AI 猎取可注册的出行域名。",
+      intro:
+        "汽车是普通人一生中最贵的消费品之一，出行命名因此要同时解决两件事：让人心跳加速（速度、自由、远方），又让人放心把身家性命交给你（安全、可靠、有实力）。经典路线有四条：致敬式人名（特斯拉致敬发明家）、自然力意象（野马、极星）、愿景词（蔚来 = Blue Sky Coming）、以及动词化平台名（Uber 直接成为「打车」的动词）。命名时还要预留车型命名体系：主品牌定气质，车型名（字母数字或子系列）承担产品线扩张——Model S/3/X/Y 的字母游戏就是最好的示范。",
+      namingIdeas: [
+        "致敬式命名：借一位科学家、探险家之名，把人物精神注入品牌——自带故事与格调",
+        "自然力意象：风、马、星、极地（Mustang、Polestar）——速度与力量不用解释",
+        "愿景词直陈：把品牌使命写进名字（蔚来「蓝天将至」），新能源品牌的主流打法",
+        "平台动词化：出行服务名要短促可动词化（「Uber 过去」）——高频服务的名字要能进入日常口语",
+        "车型体系前置：定主品牌时同步设计车型命名规则（字母、数字、星座、山脉），避免产品线长出来后命名打架",
+      ],
+      cases: [
+        { name: "Tesla", takeaway: "致敬发明家尼古拉·特斯拉：两个音节、全球好念，且把「被低估的天才终将改变世界」的叙事免费送给了品牌" },
+        { name: "蔚来 NIO", takeaway: "「蔚蓝天空即将到来」：中文名写愿景，英文 NIO（New Day 谐音）三个字母好读好记——中英双名协同的教科书" },
+        { name: "Uber", takeaway: "德语「超越/之上」：四个字母全球零发音障碍，并完成了服务名的终极进化——变成动词" },
+        { name: "Mustang", takeaway: "北美野马：自然力意象与「自由驰骋」的美式叙事完美咬合，六十年不过时——好意象比技术参数长寿" },
+      ],
+      pitfalls: [
+        "速度词堆砌：Speed/Fast/Turbo 的组合像改装店而非品牌，速度要用意象暗示而非直陈",
+        "技术缩写当品牌：EV/AI/AUTO 拼接的名字在发布会第二年就显得过时，技术会迭代，名字不能跟着贬值",
+        "忽略全球发音与含义检查：车企必然出海，名字在主要市场语言里的发音与含义要提前排雷（经典反例：Lacrosse 在魁北克俚语中的尴尬）",
+        "主品牌与车型混命名：车型名抢了主品牌气质（或反之），产品线一多体系即乱——先定规则再造名",
+      ],
+    },
+    en: {
+      label: "Automotive",
+      title: "How to Name an Automotive or Mobility Brand: Speed, Trust & Domains",
+      metaDescription: "Automotive and mobility naming guide: tribute names, force-of-nature imagery, vision words and verb-able platform names, breakdowns of Tesla/NIO/Uber/Mustang, recommended TLDs and pitfalls — then hunt a registrable mobility domain with AI.",
+      intro:
+        "A car is one of the most expensive things most people ever buy, so mobility naming must do two jobs at once: quicken the pulse (speed, freedom, distance) and earn the trust of someone handing you their family's safety. Four classic routes: tribute names (Tesla honors the inventor), force-of-nature imagery (Mustang, Polestar), vision statements (NIO's \"Blue Sky Coming\"), and verb-able platform names (Uber became the verb for ride-hailing). Plan the model-naming system at the same time as the master brand: the brand carries character while model names (letters, numbers, sub-lines) carry the product roadmap — the Model S/3/X/Y alphabet game is the best demonstration.",
+      namingIdeas: [
+        "Tribute naming: borrow a scientist or explorer and inherit their spirit — a built-in story with built-in class",
+        "Force-of-nature imagery: wind, horses, stars, polar latitudes (Mustang, Polestar) — speed and power that need no explanation",
+        "Vision statements: write the mission into the name (NIO's blue-sky promise) — the mainstream play for EV brands",
+        "Verb-able platform names: a mobility service name should be short enough to conjugate (\"let's Uber there\") — high-frequency services live in everyday speech",
+        "Design the model system upfront: letters, numbers, constellations or mountains — decide the rule before the lineup grows, or the naming fights itself later",
+      ],
+      cases: [
+        { name: "Tesla", takeaway: "A tribute to Nikola Tesla: two syllables, globally pronounceable, and the \"underrated genius changes the world\" narrative came free with the name" },
+        { name: "NIO", takeaway: "蔚来 (\"blue sky coming\") for vision at home, NIO (echoing \"new day\") for three readable letters abroad — the textbook for bilingual name pairs" },
+        { name: "Uber", takeaway: "German for \"above/beyond\": four letters with zero pronunciation barrier anywhere, completing the final evolution of a service name — becoming a verb" },
+        { name: "Mustang", takeaway: "The wild horse of the American plains: nature imagery locked onto a freedom narrative that hasn't aged in sixty years — a good image outlives any spec sheet" },
+      ],
+      pitfalls: [
+        "Speed-word pileups: Speed/Fast/Turbo combinations read like a tuning shop, not a brand — imply velocity with imagery, don't declare it",
+        "Tech acronyms as brands: EV/AI/AUTO mashups look dated by the second product cycle — technology iterates and the name depreciates with it",
+        "Skipping global pronunciation checks: carmakers inevitably go global; sweep major-market languages early (the classic cautionary tale: what LaCrosse means in Quebec slang)",
+        "Blurring brand and model naming: when model names steal the master brand's character (or vice versa), the system collapses as the lineup grows — set the rule before coining names",
+      ],
+    },
+  },
+  community: {
+    slug: "community",
+    tlds: [
+      { tld: "com", zh: "会员收费与长期运营的门面，续费页需要的信任感", en: "The storefront for paid memberships — renewal pages need this trust" },
+      { tld: "gg", zh: "游戏与 Discord 社区的圈内后缀，gg 即「好局」", en: "The insider suffix for gaming and Discord communities — gg means good game" },
+      { tld: "club", zh: "语义即身份：「加入俱乐部」的归属感写进域名", en: "Semantics as identity — \"join the club\" belonging written into the domain" },
+    ],
+    zh: {
+      label: "社区俱乐部",
+      title: "社区 / 会员俱乐部怎么起名：归属感、身份认同与域名选择",
+      metaDescription: "社区与会员俱乐部命名指南：身份标签命名、内部黑话、地名+Club 结构，Reddit/小红书等案例拆解，成员自称测试，推荐 TLD 与常见误区，用 AI 猎取可注册的社区域名。",
+      intro:
+        "社区的名字和产品名有一个根本区别：它最终会变成成员的自我介绍——「我是 XX 的人」。所以社区命名的第一测试不是好不好听，而是成员愿不愿意用它自称。好的社区名自带身份标签（Reddit 用户自称 Redditor），甚至能长出内部黑话体系。命名路线有三条：身份词（直接描述「我们是谁」）、聚集地隐喻（营地、客厅、公园、码头）、以及暗号词（圈外人看不懂、圈内人一眼认亲）。付费社区还要多过一关：名字要让「续费」显得理所当然——归属感是会员制唯一的护城河，而名字是归属感的第一块砖。",
+      namingIdeas: [
+        "成员自称测试：把名字变成成员称谓念一遍（「我是 X 人/X er」），拗口或尴尬的直接淘汰——这是社区命名的黄金标准",
+        "聚集地隐喻：营地、公园、灯塔、码头——场所词自带「来这里聚」的邀请感，比抽象词更温暖",
+        "圈内暗号：用只有目标人群秒懂的行话、梗、缩写命名，天然完成人群筛选——精准小社区的最短路径",
+        "地名/领域 + Club 结构：语义直白且自带会员感，「加入」这个动作被名字预设好了",
+        "留出黑话空间：好社区名能派生出成员称谓、动词、周边梗（Reddit → Redditor → subreddit），造词时预演这个派生链",
+      ],
+      cases: [
+        { name: "Reddit", takeaway: "read it 的谐音造词：名字即行为（「我在 Reddit 上读到」），并派生出 Redditor/subreddit 完整黑话体系——社区命名的满分卷" },
+        { name: "小红书", takeaway: "「红宝书」式的亲切国民记忆 + 「种草笔记」的载体感，用户自称「薯友」、官方自称「薯队长」——名字长出了完整的身份体系" },
+        { name: "Discord", takeaway: "反直觉选词：「不和谐」本是负面词，却精准命中玩家「开黑吵闹」的真实氛围——社区名可以描述真实而非理想" },
+        { name: "Soho House", takeaway: "地名 + House：从伦敦 Soho 一栋房子长成全球会员俱乐部，「House」的私宅感让会员身份显得稀缺——场所隐喻的天花板" },
+      ],
+      pitfalls: [
+        "名字没有身份感：抽象科技词当社区名，成员无法自称，归属感失去语言载体",
+        "Hub/Space/Zone 万金油：这些词描述的是容器而非人群，几千个「XXHub」里没人记得你是谁",
+        "暗号选得太窄：梗名的生命周期短于社区生命周期，梗凉了名字就成了考古现场",
+        "忽略变现场景：名字在收费页与发票上要站得住——太戏谑的名字会让「付 365 元/年」显得可疑",
+      ],
+    },
+    en: {
+      label: "Communities",
+      title: "How to Name a Community or Members' Club: Belonging, Identity & Domains",
+      metaDescription: "Community and members-club naming guide: identity labels, gathering-place metaphors, insider code words, breakdowns of Reddit/Discord/Soho House, the member self-reference test, recommended TLDs and pitfalls — then hunt a registrable community domain with AI.",
+      intro:
+        "A community's name differs from a product name in one fundamental way: it ends up inside members' self-introductions — \"I'm an X person.\" So the first test isn't whether it sounds good, but whether members will happily call themselves by it. Great community names carry a built-in identity label (Reddit users are Redditors) and can grow an entire internal slang system. Three routes: identity words (describing who we are), gathering-place metaphors (camps, living rooms, parks, harbors), and code words (opaque to outsiders, instant kinship to insiders). Paid communities face one more bar: the name must make renewal feel natural — belonging is a membership's only moat, and the name is its first brick.",
+      namingIdeas: [
+        "The self-reference test: turn the name into a member label and say it aloud (\"I'm an X-er\") — anything clumsy or embarrassing is out; this is the golden rule of community naming",
+        "Gathering-place metaphors: camp, park, lighthouse, harbor — place words carry a standing invitation to gather, warmer than any abstraction",
+        "Insider code: name with jargon, memes or abbreviations only your target crowd instantly parses — natural audience filtering, the shortest path for a precise niche",
+        "Place/field + Club: literal semantics with built-in membership — the verb \"join\" is pre-installed in the name",
+        "Leave slang room: a great community name spawns member labels, verbs, and derivative memes (Reddit → Redditor → subreddit) — rehearse that derivation chain before you commit",
+      ],
+      cases: [
+        { name: "Reddit", takeaway: "A read-it pun coinage: the name is the behavior (\"I read it on Reddit\") and it spawned the full Redditor/subreddit slang system — a perfect score in community naming" },
+        { name: "Discord", takeaway: "A counterintuitive pick: a negative word that precisely captures the rowdy, chaotic energy of gaming voice chat — community names may describe the real, not the ideal" },
+        { name: "Soho House", takeaway: "Place + House: one building in London's Soho grew into a global members' club; the private-home feel of \"House\" makes membership scarce — the ceiling of place metaphors" },
+        { name: "Indie Hackers", takeaway: "A pure identity label: the name literally is the member description, so joining equals self-identification — the most direct identity-word play there is" },
+      ],
+      pitfalls: [
+        "No identity in the name: an abstract tech word gives members nothing to call themselves — belonging loses its language",
+        "Hub/Space/Zone filler: these words describe containers, not people; nobody remembers which of a thousand SomethingHubs you are",
+        "Code words cut too narrow: a meme's lifespan is shorter than a community's — when the meme dies the name becomes an archaeology site",
+        "Ignoring the checkout page: the name must hold up on a payment form and an invoice — too jokey and a $49/year renewal starts to feel suspicious",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

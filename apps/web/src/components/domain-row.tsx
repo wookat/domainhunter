@@ -18,6 +18,17 @@ export function DomainName({ row, className }: { row: Row; className?: string })
   );
 }
 
+/** 寓意里用「」括起的中文原词（拼音系候选）高亮为品牌色 */
+export function MeaningText({ text }: { text: string }) {
+  const parts = text.split(/(「[^」]+」)/);
+  if (parts.length === 1) return <>{text}</>;
+  return (
+    <>
+      {parts.map((p, i) => (p.startsWith("「") ? <span key={i} className="font-medium text-brand">{p}</span> : p))}
+    </>
+  );
+}
+
 export function RegisterMenu({ domain, children }: { domain: string; children: React.ReactNode }) {
   const prices = usePrices();
   const tld = domain.slice(domain.indexOf(".") + 1);
@@ -129,7 +140,7 @@ export function DomainRow({
       <DomainName row={row} />
       <span className={cn("h-1.5 w-1.5 shrink-0 rounded-full", isUnknown ? "bg-amber2" : "bg-brand")} />
       {isUnknown && <span className="shrink-0 rounded bg-amber2-dim px-1.5 py-0.5 text-[11px] text-amber2">{t("status.unknown")}</span>}
-      <span title={row.meaning} className="hidden flex-1 truncate text-xs text-txt1 sm:block">{row.meaning}</span>
+      <span title={row.meaning} className="hidden flex-1 truncate text-xs text-txt1 sm:block">{row.meaning && <MeaningText text={row.meaning} />}</span>
       <span className="ml-auto sm:ml-0" />
       {priceShort(row.tld, lang, prices) && (
         <span title={priceFull(row.tld, lang, prices)} className="tnum hidden shrink-0 font-mono text-xs text-txt2 md:block">
@@ -174,10 +185,10 @@ export function DomainRow({
       </RegisterMenu>
     </div>
     {/* 移动端寓意行：桌面寓意在行内，窄屏否则完全不可见 */}
-    {row.meaning && <p className="-mt-1.5 mb-2 px-4 pl-14 text-[11px] leading-snug text-txt1 line-clamp-2 sm:hidden">{row.meaning}</p>}
+    {row.meaning && <p className="-mt-1.5 mb-2 px-4 pl-14 text-[11px] leading-snug text-txt1 line-clamp-2 sm:hidden"><MeaningText text={row.meaning} /></p>}
     {expanded && row.scores && (
       <div className="px-4 pb-3 pl-14">
-        {row.meaning && <p className="mb-2 max-w-xl text-xs leading-relaxed text-txt1">{row.meaning}</p>}
+        {row.meaning && <p className="mb-2 max-w-xl text-xs leading-relaxed text-txt1"><MeaningText text={row.meaning} /></p>}
         <ScoreBars scores={row.scores} columns={4} className="max-w-md" />
         <p className="mt-2 max-w-xl text-[11px] leading-relaxed text-txt2">{t("score.explain")}</p>
       </div>

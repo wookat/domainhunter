@@ -11,6 +11,7 @@ import { buildPricesFaq } from "./content/prices-faq";
 import { buildTldFaq } from "./content/tld-faq";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
+import { tldPrice } from "./types";
 
 type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace };
 
@@ -542,6 +543,8 @@ interface PorkbunPricing {
 interface PriceEntry {
   registration: number;
   renewal: number;
+  /** 静态参考价（无实时报价时回退，仅 MCP tld_prices 补齐时使用） */
+  approx?: true;
 }
 
 /** 实时价格负载（JSON 字符串）：Porkbun 公开价格 API（美元），KV 缓存 24h */
@@ -603,7 +606,7 @@ const MCP_TOOLS = [
   {
     name: "tld_prices",
     description:
-      "Get first-year registration and renewal prices (USD, from Porkbun public pricing) for the popular TLDs DomainHunter tracks. Useful to flag renewal traps (renewal much higher than first year).",
+      "Get first-year registration and renewal prices (USD, from Porkbun public pricing) for the popular TLDs DomainHunter tracks. TLDs without a live quote (e.g. cn/so) fall back to a static reference price marked approx:true. Useful to flag renewal traps (renewal much higher than first year).",
     inputSchema: { type: "object", properties: {} },
   },
 ] as const;
@@ -648,7 +651,14 @@ app.post("/mcp", async (c) => {
   if (toolName === "tld_prices") {
     const payload = await loadPricesPayload(c.env.CACHE);
     if (!payload) return mcpText(id, "pricing upstream unavailable, try again later", true);
-    return mcpText(id, payload);
+    // Porkbun 无报价的后缀（如 cn/so）用静态参考价补齐，带 approx 标记，保证覆盖全部追踪后缀
+    const parsed = JSON.parse(payload) as { prices: Record<string, PriceEntry> };
+    for (const tld of TLD_LIST) {
+      if (parsed.prices[tld]) continue;
+      const ref = tldPrice(tld);
+      if (ref) parsed.prices[tld] = { registration: Math.round((ref.first / USD_TO_CNY) * 100) / 100, renewal: Math.round((ref.renew / USD_TO_CNY) * 100) / 100, approx: true };
+    }
+    return mcpText(id, JSON.stringify(parsed));
   }
 
   if (toolName === "check_domains") {
