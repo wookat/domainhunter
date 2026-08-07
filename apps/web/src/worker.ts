@@ -1278,12 +1278,12 @@ app.get("/vs/:slug", async (c) => {
 // 价格总览页（SPA 路由 + SSR meta）
 const PRICES_META = {
   zh: {
-    title: "域名后缀价格总览：30 个主流 TLD 注册与续费对比",
-    desc: "汇总 com/cn/io/ai 等 30 个主流后缀的注册与续费价（Porkbun 实时价），避开首年便宜续费贵的坑，并用 AI 直接猎取可注册的好名字。",
+    title: `域名后缀价格总览：${TLD_LIST.length} 个主流 TLD 注册与续费对比`,
+    desc: `汇总 com/cn/io/ai 等 ${TLD_LIST.length} 个主流后缀的注册与续费价（Porkbun 实时价），避开首年便宜续费贵的坑，并用 AI 直接猎取可注册的好名字。`,
   },
   en: {
-    title: "TLD Price Overview: Registration vs Renewal for 30 Popular Suffixes",
-    desc: "Compare registration and renewal prices (live from Porkbun) for 30 popular TLDs like com/cn/io/ai, avoid renewal traps, and hunt registrable names with AI.",
+    title: `TLD Price Overview: Registration vs Renewal for ${TLD_LIST.length} Popular Suffixes`,
+    desc: "Compare registration and renewal prices (live from Porkbun) for popular TLDs like com/cn/io/ai, avoid renewal traps, and hunt registrable names with AI.",
   },
 };
 
@@ -1395,7 +1395,7 @@ app.get("/llms.txt", (c) => {
     "",
     "## Core pages",
     line("/", "AI domain search (homepage, instant availability quick-check included)"),
-    line("/prices", "Domain price overview: registration vs renewal for 30 TLDs, live prices"),
+    line("/prices", `Domain price overview: registration vs renewal for ${TLD_LIST.length} TLDs, live prices`),
     line("/why", "Why DomainHunter: agent loop that reflects over rounds and only surfaces registrable names"),
     line("/advanced", "Bulk domain check: paste up to 200 names and stream live availability"),
     "",
