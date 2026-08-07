@@ -215,6 +215,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一家面向中小企业的网络安全服务公司，寓意「有人替你守着门」；气质要可靠、专业、有威慑力但不吓人；场景是出现在企业采购文档和安全报告里都站得住。",
     en: "A cybersecurity service for small businesses. The name should feel like someone standing guard at your door; the vibe is dependable, professional, deterrent without fear-mongering; it must hold up in procurement documents and security reports.",
   },
+  {
+    slug: "creator",
+    labelZh: "视频创作者",
+    labelEn: "Creator",
+    zh: "一个视频创作者的频道品牌，寓意「把有意思的东西讲给更多人听」；气质要鲜活、有记忆点、一听就会拼写；场景是片头口播、跨平台账号名和商务合作介绍里都好念好记。",
+    en: "A video creator's channel brand. The name should feel like telling fascinating things to a growing audience; the vibe is lively, hooky, and instantly spellable after one listen; it must work spoken in intros, as a cross-platform handle, and in sponsorship decks.",
+  },
+  {
+    slug: "freelance",
+    labelZh: "自由职业",
+    labelEn: "Freelance",
+    zh: "一个自由职业者的个人工作室品牌，寓意「一个人也能交付专业水准」；气质要专业、可信、有手艺人感；场景是报价单、发票抬头和作品集网站上都站得住。",
+    en: "A freelancer's one-person studio brand. The name should say a single craftsperson can deliver professional-grade work; the vibe is professional, trustworthy, artisan; it must hold up on quotes, invoice headers, and a portfolio site.",
+  },
+  {
+    slug: "fashion",
+    labelZh: "服饰潮牌",
+    labelEn: "Fashion label",
+    zh: "一个面向年轻人的服饰潮牌，寓意「把态度穿在身上」；气质要有张力、克制的酷、经得起印在胸口；场景是吊牌、胸前印花和电商详情页里都好看好记。",
+    en: "A streetwear label for young customers. The name should feel like wearing an attitude; the vibe is tense, coolly restrained, and worthy of a chest print; it has to look good on hang tags, prints, and a product page.",
+  },
+  {
+    slug: "coffee",
+    labelZh: "咖啡茶饮",
+    labelEn: "Coffee & tea",
+    zh: "一家社区咖啡馆兼线上豆单品牌，寓意「一杯好咖啡带来的片刻安顿」；气质要温暖、有场所感、值得拍照分享；场景是招牌、杯身和豆袋包装上都上镜好认。",
+    en: "A neighborhood café that also sells beans online. The name should evoke the settled moment a good cup brings; the vibe is warm, place-like, photo-worthy; it must charm on a signboard, a cup, and a coffee-bag label.",
+  },
+  {
+    slug: "automotive",
+    labelZh: "汽车出行",
+    labelEn: "Automotive",
+    zh: "一个新能源出行品牌，寓意「把远方变近，把出发变简单」；气质要有速度感、可靠、面向未来但不浮夸；场景是车尾标、发布会大屏和 App 图标上都立得住。",
+    en: "A new-energy mobility brand. The name should make distance feel closer and setting off feel effortless; the vibe is fast, dependable, future-facing without hype; it must hold up on a tailgate badge, a launch-event screen, and an app icon.",
+  },
+  {
+    slug: "community",
+    labelZh: "社区俱乐部",
+    labelEn: "Community",
+    zh: "一个付费会员制社区，寓意「同路人聚在一起互相点亮」；气质要有归属感、值得自称、圈内人一眼认亲；场景是成员自我介绍、社区首页和续费页里都自然得体。",
+    en: "A paid membership community. The name should feel like fellow travelers gathering to light each other up; the vibe is belonging, worth self-identifying with, instantly recognizable to insiders; it must feel natural in member intros, on the community homepage, and on the renewal page.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
