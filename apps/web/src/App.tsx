@@ -42,6 +42,7 @@ const ShortlistPage = lazyChunk(() => import("@/components/shortlist-page"), (m)
 const AdvancedPage = lazyChunk(() => import("@/components/advanced-page"), (m) => m.AdvancedPage);
 const PricesPage = lazyChunk(() => import("@/components/prices-page"), (m) => m.PricesPage);
 const WhyPage = lazyChunk(() => import("@/components/why-page"), (m) => m.WhyPage);
+const McpPage = lazyChunk(() => import("@/components/mcp-page"), (m) => m.McpPage);
 const AgentPage = lazyChunk(() => import("@/components/agent-page"), (m) => m.AgentPage);
 const ResultsPage = lazyChunk(() => import("@/components/results-page"), (m) => m.ResultsPage);
 
@@ -85,6 +86,8 @@ const pricesFromPath = () => window.location.pathname === "/prices";
 
 const whyFromPath = () => window.location.pathname === "/why";
 
+const mcpFromPath = () => window.location.pathname === "/mcp";
+
 const shortlistFromPath = () => window.location.pathname === "/shortlist";
 
 function compareFromPath(): string | null {
@@ -109,7 +112,8 @@ export default function App() {
   const [compareSlug] = useState<string | null>(compareFromPath);
   const [isPrices] = useState(pricesFromPath);
   const [isWhy] = useState(whyFromPath);
-  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() ? null : loadSearch()));
+  const [isMcp] = useState(mcpFromPath);
+  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() ? null : loadSearch()));
   const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : saved ? "results" : "home"));
   const [resumedNotice, setResumedNotice] = useState(() => Boolean(saved) && !shortlistFromPath());
   const [noticeClosing, setNoticeClosing] = useState(false);
@@ -396,6 +400,21 @@ export default function App() {
     );
   }
 
+  if (isMcp) {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Header
+          onLogoClick={() => window.location.assign("/")}
+          shortlistCount={shortlist.items.length}
+          onShortlistClick={() => window.location.assign("/")}
+        />
+        <Suspense fallback={<PageFallback />}>
+          <McpPage />
+        </Suspense>
+      </div>
+    );
+  }
+
   if (isPrices) {
     return (
       <div className="flex min-h-screen flex-col">
@@ -646,6 +665,9 @@ export default function App() {
               </a>
               <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/why?lang=${lang}`}>
                 {t("footer.why")}
+              </a>
+              <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/mcp?lang=${lang}`}>
+                {t("footer.mcp")}
               </a>
             </div>
           </div>
