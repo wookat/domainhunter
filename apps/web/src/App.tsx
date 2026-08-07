@@ -42,6 +42,7 @@ const ShortlistPage = lazyChunk(() => import("@/components/shortlist-page"), (m)
 const AdvancedPage = lazyChunk(() => import("@/components/advanced-page"), (m) => m.AdvancedPage);
 const PricesPage = lazyChunk(() => import("@/components/prices-page"), (m) => m.PricesPage);
 const WhyPage = lazyChunk(() => import("@/components/why-page"), (m) => m.WhyPage);
+const McpPage = lazyChunk(() => import("@/components/mcp-page"), (m) => m.McpPage);
 const AgentPage = lazyChunk(() => import("@/components/agent-page"), (m) => m.AgentPage);
 const ResultsPage = lazyChunk(() => import("@/components/results-page"), (m) => m.ResultsPage);
 
@@ -85,7 +86,11 @@ const pricesFromPath = () => window.location.pathname === "/prices";
 
 const whyFromPath = () => window.location.pathname === "/why";
 
+const mcpFromPath = () => window.location.pathname === "/mcp";
+
 const shortlistFromPath = () => window.location.pathname === "/shortlist";
+
+const advancedFromPath = () => window.location.pathname === "/advanced";
 
 function compareFromPath(): string | null {
   const m = window.location.pathname.match(/^\/vs\/([a-z0-9-]{2,48})$/i);
@@ -109,8 +114,9 @@ export default function App() {
   const [compareSlug] = useState<string | null>(compareFromPath);
   const [isPrices] = useState(pricesFromPath);
   const [isWhy] = useState(whyFromPath);
-  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() ? null : loadSearch()));
-  const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : saved ? "results" : "home"));
+  const [isMcp] = useState(mcpFromPath);
+  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() || advancedFromPath() ? null : loadSearch()));
+  const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : advancedFromPath() ? "advanced" : saved ? "results" : "home"));
   const [resumedNotice, setResumedNotice] = useState(() => Boolean(saved) && !shortlistFromPath());
   const [noticeClosing, setNoticeClosing] = useState(false);
   const dismissNotice = () => {
@@ -148,6 +154,14 @@ export default function App() {
   const closeShortlist = () => {
     if (shortlistFromPath()) window.history.replaceState(null, "", "/");
     setMode(beforeShortlistRef.current);
+  };
+  const openAdvanced = () => {
+    window.history.replaceState(null, "", "/advanced");
+    setMode("advanced");
+  };
+  const closeAdvanced = () => {
+    if (advancedFromPath()) window.history.replaceState(null, "", "/");
+    setMode("home");
   };
 
   const toggleDislike = (label: string) =>
@@ -396,6 +410,21 @@ export default function App() {
     );
   }
 
+  if (isMcp) {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Header
+          onLogoClick={() => window.location.assign("/")}
+          shortlistCount={shortlist.items.length}
+          onShortlistClick={() => window.location.assign("/")}
+        />
+        <Suspense fallback={<PageFallback />}>
+          <McpPage />
+        </Suspense>
+      </div>
+    );
+  }
+
   if (isPrices) {
     return (
       <div className="flex min-h-screen flex-col">
@@ -445,7 +474,7 @@ export default function App() {
     mode === "home" ? (
       <button
         className="flex h-11 items-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 sm:h-9"
-        onClick={() => setMode("advanced")}
+        onClick={openAdvanced}
         aria-label={t("header.advanced")}
         title={t("header.advanced")}
       >
@@ -455,7 +484,7 @@ export default function App() {
     ) : mode === "advanced" || mode === "shortlist" ? (
       <button
         className="flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0"
-        onClick={() => (mode === "shortlist" ? closeShortlist() : setMode("home"))}
+        onClick={() => (mode === "shortlist" ? closeShortlist() : closeAdvanced())}
       >
         <ArrowLeft className="h-4 w-4" />
         {t("common.back")}
@@ -477,7 +506,7 @@ export default function App() {
         center={headerCenter}
         right={headerRight}
         onLogoClick={() => {
-          if (shortlistFromPath()) window.history.replaceState(null, "", "/");
+          if (shortlistFromPath() || advancedFromPath()) window.history.replaceState(null, "", "/");
           setMode("home");
         }}
         shortlistCount={shortlist.items.length}
@@ -556,7 +585,7 @@ export default function App() {
             void run(v);
           }}
           onBackToResults={rows.length > 0 ? () => setMode("results") : undefined}
-          onOpenAdvanced={() => setMode("advanced")}
+          onOpenAdvanced={openAdvanced}
           shortlist={shortlist}
         />
       )}
@@ -646,6 +675,9 @@ export default function App() {
               </a>
               <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/why?lang=${lang}`}>
                 {t("footer.why")}
+              </a>
+              <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/mcp?lang=${lang}`}>
+                {t("footer.mcp")}
               </a>
             </div>
           </div>

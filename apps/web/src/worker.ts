@@ -665,8 +665,51 @@ app.post("/mcp", async (c) => {
   return mcpError(id, -32602, `unknown tool: ${toolName}`);
 });
 
-// 无 SSE 长连接：无状态 MCP，GET 返回 405
-app.get("/mcp", () => new Response("method not allowed: POST JSON-RPC 2.0 (MCP Streamable HTTP, stateless)", { status: 405, headers: { allow: "POST" } }));
+// GET /mcp：MCP 客户端的 SSE 请求（Accept: text/event-stream）仍回 405（无状态不支持长连接）；浏览器访问返回双语接入文档页
+// 文案与 mcp-page.tsx 的 COPY[lang].title/intro 逐字同源（骨架/水合一致，无跳变）
+const MCP_META = {
+  zh: {
+    title: "把域名核验接进你的 AI 助手",
+    desc: "DomainHunter 提供免费、无需鉴权的 MCP（Model Context Protocol）server。把它加进 Claude、Cursor 等支持 MCP 的 AI 工具后，AI 就能在对话里直接批量核验域名是否可注册、查询各后缀的实时注册/续费价。",
+  },
+  en: {
+    title: "Plug domain checking into your AI assistant",
+    desc: "DomainHunter ships a free, no-auth MCP (Model Context Protocol) server. Add it to Claude, Cursor or any MCP-capable AI tool and your assistant can bulk-check domain availability and look up live TLD prices right inside the conversation.",
+  },
+};
+
+app.get("/mcp", async (c) => {
+  if ((c.req.header("accept") ?? "").includes("text/event-stream")) {
+    return new Response("method not allowed: POST JSON-RPC 2.0 (MCP Streamable HTTP, stateless)", { status: 405, headers: { allow: "POST" } });
+  }
+  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const loc = MCP_META[lang];
+  const title = escapeHtml(`${loc.title} | DomainHunter`);
+  const desc = escapeHtml(loc.desc);
+  let html = await res.text();
+  html = html
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/mcp" />`)
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/mcp" />`)
+    .replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/mcp?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
+  html = injectHreflang(html, "/mcp").replace(
+    "</head>",
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/mcp", lang)}</script></head>`,
+  );
+  html = setHtmlLang(html, lang);
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/mcp-page.tsx");
+  html = injectSsrSkeleton(html, "MCP Server", loc.title, [ssrIntroBlock(loc.desc)]);
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
+});
 
 // 信任数据：累计核验域名数
 app.get("/api/stats", async (c) => {
@@ -730,11 +773,67 @@ app.get("/shortlist", async (c) => {
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
 });
 
+// 高级模式（批量粘贴核验）：客户端路由，直链/刷新时回 SPA 壳 + SSR meta
+const ADVANCED_META = {
+  zh: {
+    title: "批量域名核验：粘贴名单一键实时查可注册",
+    desc: "把现成域名名单（裸名/完整域名/带链接混排，最多 200 个）粘进来，一键流式核验可注册状态（RDAP+DNS 实时），免登录免费。",
+  },
+  en: {
+    title: "Bulk domain check: paste a list, verify availability live",
+    desc: "Paste up to 200 names (bare names, full domains or URLs mixed) and stream live availability checks (RDAP+DNS). Free, no login.",
+  },
+};
+
+app.get("/advanced", async (c) => {
+  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const loc = ADVANCED_META[lang];
+  const title = escapeHtml(`${loc.title} | DomainHunter`);
+  const desc = escapeHtml(loc.desc);
+  let html = await res.text();
+  html = html
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/advanced" />`)
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/advanced" />`)
+    .replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/advanced?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
+  html = injectHreflang(html, "/advanced");
+  html = setHtmlLang(html, lang);
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx");
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
+});
+
 // 动态分享图：清单前 3 个域名 + 数量，品牌绿主题（SVG，1200×630）
 // 价格总览页分享图（须注册在 /api/og/:id 之前，否则被其当作分享 id）
 app.get("/api/og/prices", (c) => {
   const lang = c.req.query("lang") === "en" ? "en" : "zh";
   return new Response(pageOgSvg(lang === "en" ? "Pricing" : "域名价格", PRICES_META[lang].title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
+// MCP 接入页分享图（须在 /api/og/:id 之前注册）
+app.get("/api/og/mcp", (c) => {
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  const title = lang === "en" ? "Domain checks inside your AI tools" : "把域名核验接进你的 AI 助手";
+  return new Response(pageOgSvg("MCP Server", title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
+// 高级模式（批量核验）分享图（须在 /api/og/:id 之前注册）
+app.get("/api/og/advanced", (c) => {
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  const title = lang === "en" ? "Paste a list, verify availability live" : "粘贴名单，一键实时查可注册";
+  return new Response(pageOgSvg(lang === "en" ? "Bulk check" : "批量核验", title, lang), {
     headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
   });
 });
@@ -1270,7 +1369,7 @@ app.get("/why", async (c) => {
 // 内容最后更新日期（sitemap <lastmod>）：每次内容页增减/改写时更新
 const CONTENT_LASTMOD = "2026-08-07";
 
-const sitemapPaths = () => ["/", "/prices", "/why", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
+const sitemapPaths = () => ["/", "/prices", "/why", "/mcp", "/advanced", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
 
 app.get("/sitemap.xml", (c) => {
   const paths = sitemapPaths();
@@ -1298,6 +1397,7 @@ app.get("/llms.txt", (c) => {
     line("/", "AI domain search (homepage, instant availability quick-check included)"),
     line("/prices", "Domain price overview: registration vs renewal for 30 TLDs, live prices"),
     line("/why", "Why DomainHunter: agent loop that reflects over rounds and only surfaces registrable names"),
+    line("/advanced", "Bulk domain check: paste up to 200 names and stream live availability"),
     "",
     "## TLD guides",
     ...TLD_LIST.map((t) => line(`/tld/${t}`, TLD_GUIDES[t].en.title)),
@@ -1309,6 +1409,7 @@ app.get("/llms.txt", (c) => {
     ...COMPARE_LIST.map((s) => line(`/vs/${s}`, TLD_COMPARES[s].en.title)),
     "",
     "## API (MCP)",
+    line("/mcp", "MCP server docs: plug domain checking into Claude/Cursor (check_domains + tld_prices)"),
     `- Stateless MCP server at ${SITE_ORIGIN}/mcp (POST, JSON-RPC 2.0, Streamable HTTP). Tools: check_domains (bulk availability for up to 50 exact domains) and tld_prices (live registration/renewal prices in USD). No auth required.`,
     "",
   ].join("\n");
