@@ -1995,6 +1995,372 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  wedding: {
+    slug: "wedding",
+    tlds: [
+      { tld: "com", zh: "婚庆客单价高、决策链长，.com 在父母辈与酒店渠道里信任度最高", en: "High ticket, long decision chain — .com earns the most trust with parents and venue partners" },
+      { tld: "studio", zh: "策划/摄影/花艺工作室的气质后缀，名字瞬间有作品感", en: "The suffix of planners, florists and photo studios — instant portfolio energy" },
+      { tld: "art", zh: "主打美学与定制的高端婚礼品牌，用 .art 把审美写进域名", en: "For aesthetics-led, bespoke wedding brands, .art writes taste into the address itself" },
+    ],
+    zh: {
+      label: "婚庆策划",
+      title: "婚庆策划公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "婚庆策划命名指南：仪式感词根、时刻命名、双姓组合等 5 种思路，The Knot/Zola 等案例拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的婚庆域名。",
+      intro:
+        "婚庆是典型的「一生一次 + 高客单」生意：客户没有复购来修正第一印象，名字必须在婚礼展台、小红书笔记和准新娘转发给闺蜜的那条链接里一次成立。它要同时打动两代人——新人要浪漫、有审美，付钱的父母要正规、靠谱。所以婚庆命名的核心是「仪式感 + 可托付感」的平衡：太甜腻（真爱永恒久）显得像影楼老套餐，太商务（XX婚庆服务）又杀死了憧憬。还有一个常被忽略的场景：你的名字会被印在请柬角落、签到墙和婚礼视频片尾——它本质上是要出现在别人人生纪念品上的名字，值得按「作品署名」的标准来起。",
+      namingIdeas: [
+        "时刻命名：从婚礼里最有情感浓度的瞬间取词——誓言（vow）、交换戒指、掀头纱、第一支舞；「时刻词」比「爱情词」具体十倍，也更少被同行用滥",
+        "仪式感词根：借助 fete、gala、bloom、aisle（红毯通道）等自带典礼画面的词根造词，一听就在婚礼语境里，又避开「婚庆/wedding」的直白",
+        "双姓/合名结构预留：很多新人喜欢「我们的名字」式定制，若品牌名本身是两个词根的优雅结合（如 Rose & Rye 式），等于示范了你的策划审美",
+        "质感形容词 + 品类隐喻：细节控（Detail-obsessed）是婚庆的核心卖点——用 fine、velvet、gilt 等材质词 + atelier、studio 等工坊词，传递「手工定制」而非「流水线套餐」",
+        "念给准新娘听：最终候选放进真实句子测试——「我们婚礼找的是 X」，在闺蜜群里说出来不尬、有一点点炫耀感，才算过关",
+      ],
+      cases: [
+        { name: "The Knot", takeaway: "「打结」= tie the knot（结婚）的英语习语：三个字母的日常词借习语获得了专属语义，行业词库里的顶级捡漏" },
+        { name: "Zola", takeaway: "两音节人名感造词，不含任何婚礼词汇却优雅上口：证明婚礼品牌可以靠「气质对了」成立，给了从婚礼登记扩张到家居的空间" },
+        { name: "Jose Villa", takeaway: "顶级婚礼摄影师直接用本名：婚庆是「人跟人」的生意，个人品牌名 + 作品集就是最强信任状——工作室起步期人名可用" },
+        { name: "花嫁丽舍", takeaway: "「花嫁」（日语「新娘」）+「丽舍」（美丽宅邸）：借词带来陌生化的高级感，四字结构在中文婚庆市场兼顾了正式与画面" },
+      ],
+      pitfalls: [
+        "堆砌「爱/缘/永恒/浪漫」：情感通货膨胀最严重的词区，十家婚庆九家在用，剩下一家叫「真爱永恒」",
+        "名字锁死单一服务：叫「XX婚礼跟拍」就很难接策划全案——婚庆利润在全案与增购，名字要给业务留门",
+        "只考虑新人不考虑渠道：酒店、婚礼堂引荐是重要客源，名字在渠道报价单上要显得专业，过于少女感会被渠道过滤",
+        "忽略视觉落地：婚庆名字必然要做 logo 烫金、请柬排版——定名前先把名字用衬线体排一遍，不好看的名字直接淘汰",
+      ],
+    },
+    en: {
+      label: "Wedding planners",
+      title: "How to Name a Wedding Planning Business: Ideas, Cases & Domains",
+      metaDescription:
+        "Wedding business naming guide: moment-based names, ceremony-word roots, atelier structures, breakdowns of The Knot/Zola, recommended TLDs and pitfalls — then hunt an available wedding domain with AI.",
+      intro:
+        "Weddings are the classic once-in-a-lifetime, high-ticket business: there is no repeat purchase to fix a weak first impression, so the name must land on the first encounter — at a bridal expo booth, in a Pinterest board, in the link a bride forwards to her best friend. It also has to win two generations at once: couples want romance and taste, while the parents paying the deposit want professionalism and reliability. That makes wedding naming a balance of ceremony and trustworthiness — too saccharine and you sound like a package-deal photo mill; too corporate and you kill the dream. One underrated fact: your name ends up printed on invitation corners, welcome signs and the closing frame of wedding films. It's a name that lives on other people's keepsakes — write it like a signature on your work, not a listing in a directory.",
+      namingIdeas: [
+        "Name the moment: draw from the highest-emotion beats of a wedding — the vow, the ring exchange, the first dance, the aisle. Moment-words are ten times more concrete than love-words, and far less worn out",
+        "Use ceremony roots: fete, gala, bloom, aisle — words that carry the picture of an occasion put you in wedding context without spelling out \"wedding\"",
+        "Show the two-name structure: couples adore \"our names entwined\" branding; if your own brand is an elegant pairing of two roots (the Rose & Rye pattern), it doubles as a demo of your taste",
+        "Texture word + atelier word: detail obsession is the product — pair material words (fine, velvet, gilt) with maker words (atelier, studio) to signal bespoke craft, not conveyor-belt packages",
+        "Read it to a bride: put finalists into the real sentence — \"we booked X for our wedding.\" If it sounds natural in a group chat and carries a hint of pride, it passes",
+      ],
+      cases: [
+        { name: "The Knot", takeaway: "\"Tie the knot\" — a three-letter everyday word that borrows an idiom to own the entire category; the best bargain in the wedding lexicon" },
+        { name: "Zola", takeaway: "A two-syllable, name-like coinage with zero wedding vocabulary, yet elegant and effortless: proof a wedding brand can win on vibe alone — and it left room to expand from registry into home goods" },
+        { name: "Jose Villa", takeaway: "A top wedding photographer trading under his own name: weddings are a person-to-person trust business, and a personal name plus a portfolio is the strongest credential a studio can start with" },
+        { name: "Loverly", takeaway: "lovely with a smuggled-in \"lover\": one letter of wordplay adds the romance layer while staying instantly readable — misspelling done with restraint" },
+      ],
+      pitfalls: [
+        "Stacking love/forever/eternal/romance: the most inflation-hit corner of the dictionary — nine of ten competitors are already there",
+        "Locking the name to one service: \"X Wedding Films\" struggles to sell full planning — margins live in full-service and upsells, so leave the door open",
+        "Designing only for the couple: venue and planner referrals are a major channel, and a name that reads too girlish gets filtered out of a hotel's vendor sheet",
+        "Skipping the print test: this name will be foil-stamped and set in serif on invitations — typeset every finalist first, and cut the ones that look wrong",
+      ],
+    },
+  },
+  bnb: {
+    slug: "bnb",
+    tlds: [
+      { tld: "com", zh: "OTA 之外的直订官网是民宿利润关键，.com 让客人敢直接付款", en: "Direct bookings are where the margin lives — .com makes guests comfortable paying you directly" },
+      { tld: "life", zh: "卖的是「另一种生活」的民宿品牌，.life 把主张放进后缀", en: "For stays selling \"another way to live\", .life puts the promise in the suffix" },
+      { tld: "world", zh: "多城市/多物业的短租品牌，.world 自带目的地集合感", en: "For multi-city, multi-property brands, .world signals a collection of destinations" },
+    ],
+    zh: {
+      label: "民宿短租",
+      title: "民宿短租品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "民宿短租命名指南：在地词根、栖居隐喻、房东人格等 5 种思路，Airbnb/既下山等案例拆解，推荐 TLD 与避坑清单，并用 AI 猎取可注册的民宿域名。",
+      intro:
+        "民宿的名字在两个完全不同的货架上被挑选：一个是 Airbnb/携程列表页——名字挤在照片和价格中间，几个字就要传递「这里跟连锁酒店不一样」；另一个是客人退房后的转述——「我们住的那家叫 X，老板人特别好」。这决定了民宿命名的独特逻辑：它更像给一个「有主人的地方」起名，而不是给公司起名。最好的民宿名都带着在地性（这座山、这条巷、这片海）和栖居感（居、宿、舍、院），让客人订房时就开始想象住进去的样子。连锁化的短租品牌则相反——要压制单店的随机感，名字要能装下几十个城市的物业。先想清楚你是「一家店」还是「一个品牌」，再动笔。",
+      namingIdeas: [
+        "在地词根：把民宿所在的山名、村名、老街名、方言词嵌进名字——在地词自带故事和搜索独占性，客人搜目的地时顺路撞见你",
+        "栖居字库：中文的居/宿/舍/院/里/山房，英文的 nest、den、hearth（炉边）、lodge——这类词一个字就完成「可以住」的品类说明，剩下的字负责气质",
+        "房东人格命名：以主人身份起名（某某的院子、Auntie 系），适合单店：民宿卖的一半是房子一半是主人，人格名把「有人照应」写进了品牌",
+        "反酒店命名：刻意避开酒店词汇（豪庭、国际、公馆），用小、慢、野等「去标准化」的词——客人选民宿就是在逃离标准化，名字要站在他们这边",
+        "多物业预检：若计划扩张，名字必须能加地名后缀不别扭——「X·大理店」「X Kyoto」念一遍；装不下第二家店的名字趁早换",
+      ],
+      cases: [
+        { name: "Airbnb", takeaway: "air bed and breakfast 的缩合：从「气垫床 + 早餐」的寒酸起点提炼出轻盈的品牌词，证明品类词缩合后可以完全脱离原义生长" },
+        { name: "既下山", takeaway: "取自「既见君子，云胡不喜」的古典语感 +「下山」的动作画面：三个字同时交付了目的地（山）、旅程（下山歇脚）与文人气质——中文民宿命名的天花板" },
+        { name: "Sonder", takeaway: "一个小众英文词：「意识到每个路人都有完整人生」——精准命中旅居者的情绪，把标准化公寓讲出了人文感；生僻词的风险被两音节的好读抵消" },
+        { name: "松赞", takeaway: "创始人家乡的藏语词（松赞林寺）：在地词做品牌统领多家山居酒店，每开一店都在加深「滇藏在地」的叙事——在地词根规模化的范本" },
+      ],
+      pitfalls: [
+        "堆「山水云谷」通用意象：平台搜索里几百家「云舍」「山语」，在地性为零的风景词等于没起名",
+        "名字与房源气质错位：小院平房叫「XX 豪庭」，客人到店的心理落差直接写进差评——名字是承诺，兑现不了就是负资产",
+        "只在平台起名不注册域名：直订省下的佣金是民宿的核心利润，没有官网域名等于永远给 OTA 打工",
+        "生僻字与多音字：客人打车报店名、导航搜索都会卡住——「念得出、打得出」是民宿名的硬门槛",
+      ],
+    },
+    en: {
+      label: "BnBs & stays",
+      title: "How to Name a BnB or Vacation Rental Brand: Ideas, Cases & Domains",
+      metaDescription:
+        "BnB and short-term rental naming guide: place-rooted words, dwelling metaphors, host-persona names, breakdowns of Airbnb/Sonder, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A stay brand gets chosen on two very different shelves. The first is the Airbnb or Booking listing page, where your name sits squeezed between photos and a price and has a few words to say \"this is not a chain hotel.\" The second is the retelling after checkout — \"we stayed at this place called X, the host was wonderful.\" That's why naming a stay is less like naming a company and more like naming a place with a person in it. The best BnB names carry place (this mountain, this lane, this coastline) and dwelling warmth (nest, hearth, lodge), so guests start imagining the stay at the moment of booking. Multi-property brands run the opposite play: they need a name roomy enough to hold dozens of cities. Decide whether you're naming one beloved house or a portfolio before you write a single candidate.",
+      namingIdeas: [
+        "Root it in place: fold the hill, village, old street or a dialect word into the name — place-words carry built-in story and search exclusivity, and destination searches will stumble onto you",
+        "Draw from the dwelling lexicon: nest, den, hearth, lodge, porch — one such word settles the \"you can sleep here\" question, freeing the rest of the name to carry mood",
+        "Name as the host: host-persona names (\"Marta's Courtyard\") fit single properties — a stay is half the house and half the human, and a persona name writes \"someone will look after you\" into the brand",
+        "Anti-hotel naming: deliberately avoid hotel vocabulary (grand, plaza, international) and reach for small, slow, wild — guests book a BnB to escape standardization; the name should take their side",
+        "Pre-check for portfolio: if you plan to expand, the name must take a city suffix gracefully — say \"X Kyoto\" and \"X Lisbon\" aloud; a name that can't hold a second property should be replaced now",
+      ],
+      cases: [
+        { name: "Airbnb", takeaway: "A contraction of \"air bed and breakfast\": a scrappy origin distilled into a light, ownable brand word — proof a category phrase can outgrow its literal meaning entirely" },
+        { name: "Sonder", takeaway: "An obscure coined word — \"the realization that every passerby has a life as vivid as your own\" — landing exactly on the traveler's emotion; the risk of obscurity offset by two clean syllables" },
+        { name: "Selina", takeaway: "A warm personal name for a global hostel-hotel brand: persona naming scaled up — every property feels hosted, not managed, and the name stretched across 20+ countries" },
+        { name: "The Hoxton", takeaway: "Named after its first neighborhood in London: the place-root became the brand and travelled to Paris and Brooklyn intact — the definitive case for local words scaling globally" },
+      ],
+      pitfalls: [
+        "Generic scenery words (cloud, valley, haven stacked together): platform search shows hundreds of them — a landscape word with zero place attachment is a non-name",
+        "A name your property can't live up to: calling a two-room cottage \"X Grand Estate\" writes the disappointment straight into your reviews — the name is a promise",
+        "Existing only on platforms: direct bookings are where a stay's margin lives; without your own domain you're renting your brand from the OTA forever",
+        "Hard-to-say, hard-to-type names: guests read your name to taxi drivers and type it into maps — \"sayable and typeable\" is the minimum bar",
+      ],
+    },
+  },
+  courses: {
+    slug: "courses",
+    tlds: [
+      { tld: "com", zh: "知识付费的付款页信任至关重要，.com 在成人学员里转化最稳", en: "Checkout trust is everything in paid education — .com converts adult learners most reliably" },
+      { tld: "online", zh: "在线课程用 .online 零解释成本，「品牌.online」读起来就是一句话", en: "Zero explanation for online courses — \"brand.online\" reads as a sentence" },
+      { tld: "club", zh: "社群型知识产品（训练营/会员制），.club 自带归属感与续费语境", en: "For cohort and membership products, .club bakes belonging and renewal into the address" },
+    ],
+    zh: {
+      label: "在线课程",
+      title: "在线课程与知识付费品牌怎么起名：命名思路、案例与域名选择",
+      metaDescription: "在线课程与知识付费命名指南：结果承诺、方法论命名、师徒人格等 5 种思路，MasterClass/得到等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的课程域名。",
+      intro:
+        "知识付费的名字要跨过一道其他行业没有的心理关卡：学员付钱买的是「未来的自己」，而课程质量在付款前完全不可见。名字是第一份信任凭证——它要暗示结果（学完你会变成什么样）、暗示方法（凭什么是你教）、还要在朋友圈转发海报上撑住门面。这个行业的命名分两条路线：平台路线（装得下无数门课，如 MasterClass）与 IP 路线（绑定一个老师或一套方法论，如「XX 训练营」）。路线不同名字逻辑完全不同：平台名要中性、有容量；IP 名要锋利、有立场。最常见的失败是两头摇摆——名字既没有平台的规模感，也没有 IP 的锐度，学员记不住你到底教什么。",
+      namingIdeas: [
+        "结果承诺命名：不说「教什么」，说「学完变成什么」——写作课不叫「写作训练营」叫「下笔有神」；把课程大纲最后一页的承诺提炼成名字",
+        "方法论命名：给你的教学体系起个专有名（费曼学习法式的「XX 法」），课程名 = 方法名，学员转述时自动帮你传播体系而非泛泛的品类",
+        "师徒人格：用「教练/师父/领路人」的角色词（mentor、guide、coach 词根）传递「有人带」——知识付费买的一半是监督与陪伴，名字要把人味放出来",
+        "刻度词与阶梯感：Level、阶、营、Bootcamp——带「进度感」的词暗示了从 A 到 B 的路径，比静态的「学院/课堂」多一层动起来的承诺",
+        "海报压力测试：知识付费的获客主场景是转发海报与直播间口播——把候选名放进「我报了 X 的课」这句话，以及 9:16 海报的大标题位，两个场景都成立才定稿",
+      ],
+      cases: [
+        { name: "MasterClass", takeaway: "master（大师/精通）+ class：两个词同时说清「谁来教」（大师）与「教到什么程度」（精通）——平台名的容量与承诺感兼得，教科书级组合" },
+        { name: "得到", takeaway: "一个动词补语做名字：把「知识服务」的抽象品类压缩成用户视角的结果——「我得到了」；两个字、口语化、天然带获得感，中文知识付费命名的标杆" },
+        { name: "Duolingo", takeaway: "duo（二/双语）+ lingo（语言的俚语说法）：既说品类又带俏皮感，绿色猫头鹰的人格与名字的轻快互相成就——工具型学习产品「去说教化」的典范" },
+        { name: "Skillshare", takeaway: "skill + share 的直白组合：用「分享」替代「教授」，一个词降低了 UGC 老师的门槛也软化了商业感——平台定位由名字直接完成" },
+      ],
+      pitfalls: [
+        "「学院/大学/Academy」自我加冕：无资质却叫大学有合规风险，且 00 后学员对权威词免疫——权威要靠结果证明而非自封",
+        "品类词裸奔（XX写作课/XX理财课）：搜索里和几百个同行混在一起，涨价时毫无品牌溢价支撑",
+        "名字绑死单一课程：叫「7 天短视频剪辑营」就做不了第二门课——按「课程矩阵」的容量起名，用副标题锁定单品",
+        "忽略拼音/英文双轨：中文课程名定了才发现拼音域名超长或被注册——中文名与域名要同步候选、同步核验",
+      ],
+    },
+    en: {
+      label: "Online courses",
+      title: "How to Name an Online Course or Education Brand: Ideas, Cases & Domains",
+      metaDescription:
+        "Online course and creator-education naming guide: outcome promises, named methodologies, mentor personas, breakdowns of MasterClass/Duolingo, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A course name has to clear a psychological bar most industries never face: students pay for a future version of themselves, and the product is invisible until after checkout. The name is the first proof of trust — it should hint at the outcome (what you become), the method (why this teacher), and still hold up as the headline of a shared launch graphic. Education naming splits into two routes: the platform route (roomy and neutral, built to hold endless courses — MasterClass) and the IP route (bound to one teacher or one named methodology — sharp and opinionated). The logic is opposite: platform names need capacity, IP names need edge. The classic failure is hovering in between — a name with neither the scale of a platform nor the bite of an expert, so learners can't recall what you actually teach.",
+      namingIdeas: [
+        "Promise the outcome: don't name what you teach, name what students become — distill the last page of your syllabus (the transformation) into the brand instead of the category",
+        "Name the methodology: give your teaching system a proper noun (the \"X Method\" pattern) — when the course name is the method name, every student retelling markets your system, not a generic category",
+        "Cast a mentor persona: roots like coach, guide, mentor put a human in the name — half of what people buy in paid education is accountability and company, and the name should show someone's there",
+        "Use ladder words: bootcamp, sprint, level, track — progress-flavored words imply a path from A to B, one promise richer than static words like academy or classroom",
+        "Run the launch-graphic test: paid courses are sold through shared graphics and live-stream mentions — set each finalist in \"I enrolled in X\" and in the headline slot of a story-format poster; it must work in both",
+      ],
+      cases: [
+        { name: "MasterClass", takeaway: "master + class: two words answering both \"who teaches\" (masters) and \"to what level\" (mastery) — platform capacity and outcome promise in one, a textbook pairing" },
+        { name: "Duolingo", takeaway: "duo + lingo: category and playfulness in one coinage, and the cheeky green owl persona grows straight out of the name — the model for de-lecturing an education product" },
+        { name: "Skillshare", takeaway: "skill + share: swapping \"teach\" for \"share\" lowers the bar for creator-teachers and softens the commercial edge — the platform's positioning done entirely by the name" },
+        { name: "Maven", takeaway: "A single Yiddish-rooted word for \"expert\": the cohort-course platform borrowed instant expert credibility in five letters — proof one precise word beats a descriptive phrase" },
+      ],
+      pitfalls: [
+        "Self-crowning with academy/university/institute: regulatory risk without accreditation, and younger learners are immune to authority words — authority must come from outcomes, not the name",
+        "Naked category names (\"The Writing Course\"): you'll blur into hundreds of peers in search and have zero brand equity when you raise prices",
+        "Binding the name to one course: \"7-Day Video Editing Bootcamp\" can't launch course number two — name for the catalog, and let subtitles carry the single product",
+        "Checking the name but not the handles: course sales run on social distribution — if the matching YouTube/Instagram handles are gone, keep hunting",
+      ],
+    },
+  },
+  boardgame: {
+    slug: "boardgame",
+    tlds: [
+      { tld: "com", zh: "桌游出版与众筹的主阵地在欧美，.com 是 Kickstarter 页面的标配", en: "Board game publishing lives on Kickstarter — .com is table stakes on a campaign page" },
+      { tld: "games", zh: "工作室与作品集官网用 .games，一个后缀交代整个品类", en: "Studio and portfolio sites on .games — the whole category explained by the suffix" },
+      { tld: "fun", zh: "面向家庭与派对桌游的轻快选择，域名先把气氛拉满", en: "A lighthearted pick for family and party games — the domain sets the mood first" },
+    ],
+    zh: {
+      label: "桌游工作室",
+      title: "桌游与游戏工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "桌游与游戏工作室命名指南：盒面法则、机制词根、世界观命名等 5 种思路，Wingspan/Stonemaier 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的桌游域名。",
+      intro:
+        "桌游行业有一个独特结构：玩家记住的往往是「作品名」（Wingspan、卡坦岛），而出版社/工作室名（Stonemaier）活在盒子侧面和众筹页上。所以起名前先分清你在给哪一层命名：工作室名要像出版社——沉稳、有出品感、能装下风格迥异的作品线；作品名则要遵守「盒面法则」——桌游是实体货架 + 众筹封面的生意，名字和封面图必须在三秒内共同说清「这是个关于什么的游戏」。桌游名还有一个隐藏考场：游戏之夜的口头提议——「今晚玩 X 吧」，名字要顺口到能在这句话里反复出现。众筹时代还要加一条：名字在 Kickstarter 搜索和 BGG（BoardGameGeek）词条里要能被准确拼出并唯一命中。",
+      namingIdeas: [
+        "盒面法则：作品名 + 封面图 = 三秒内讲清题材——名字负责意象（翼展、大镰刀），封面负责画面；两者重复浪费，两者脱节致命",
+        "机制词根：从核心机制取词——引擎构筑、轮抽、放置——机制词对核心玩家是精准信号（Splendor 的「璀璨」暗示收集宝石引擎），比题材词更能筛选目标受众",
+        "世界观命名：给架空世界起地名/纪元名再让作品继承（洛桑尼亚、第九世界），工作室的多部作品共享词根，粉丝自动把新作归入你的宇宙",
+        "出版社式工作室名：创始人姓氏 + 品类词（Stonemaier Games 式）或矿物/材质词——「石头感」的词让工作室显得会长期出品，而非一锤子众筹",
+        "游戏之夜测试：把候选名放进「今晚玩 X 吧」「X 再来一局」两句话大声念——桌游靠聚会口碑传播，念不顺的名字传不远",
+      ],
+      cases: [
+        { name: "Wingspan", takeaway: "「翼展」一词三层功效：题材（鸟类）、画面（展开的翅膀）、机制暗示（引擎展开）——一个具体名词完成盒面法则的满分示范" },
+        { name: "Stonemaier Games", takeaway: "两位创始人姓氏（Stone + Maier）拼合 + Games：既是「石头工匠」的误读彩蛋又是真实出处，出版社名的沉稳感与故事性兼得" },
+        { name: "卡坦岛", takeaway: "架空地名直接做名字：Catan 四个字母无实义却自成世界，扩展包全部继承（卡坦航海家）——世界观命名规模化的开山案例" },
+        { name: "Exploding Kittens", takeaway: "「爆炸猫」荒诞组合词：违和感即记忆点，精准锁定派对轻桌游受众，也证明众筹时代「名字即梗图」的传播打法成立" },
+      ],
+      pitfalls: [
+        "工作室名与作品名抢戏：工作室叫「巨龙远征」再出一款种田游戏就精神分裂——工作室名要中性容器化，锋利留给作品",
+        "题材词裸拼（Dragon/Quest/Empire 排列组合）：BGG 上几千个撞词条，搜索时你的游戏永远排在同名后面",
+        "忽略多语言发行：桌游出海是常态，名字要预检主要市场发音与含义——德语区是桌游第一市场，德语读感别忽略",
+        "名字超过盒面容量：五个词的名字在货架上只能缩小字号——名字越短，盒面字号越大，三米外的辨识度越高",
+      ],
+    },
+    en: {
+      label: "Board games",
+      title: "How to Name a Board Game or Game Studio: Ideas, Cases & Domains",
+      metaDescription:
+        "Board game and tabletop studio naming guide: the box-cover rule, mechanism roots, world-first naming, breakdowns of Wingspan/Stonemaier, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Tabletop has a peculiar structure: players remember the game's name (Wingspan, Catan) while the studio name (Stonemaier) lives on the side of the box and the Kickstarter page. So first decide which layer you're naming. A studio name should behave like a publisher's — steady, curatorial, roomy enough for wildly different product lines. A game title obeys the box-cover rule: tabletop is a retail-shelf and crowdfunding-cover business, and the title plus the cover art must jointly explain \"what this game is about\" in three seconds. There's also a hidden exam room: game night — \"let's play X tonight\" — where the title must roll off the tongue on repeat. And in the crowdfunding era, add one more check: the name must be spellable and uniquely findable in Kickstarter search and on BoardGameGeek.",
+      namingIdeas: [
+        "Apply the box-cover rule: title carries the image (a wingspan, a scythe), cover art carries the scene — if they repeat each other you've wasted one; if they disagree you've lost the shelf",
+        "Mine the mechanism: engine-building, drafting, worker placement — mechanism-flavored words are precise signals to core gamers (Splendor whispers \"collect shiny things\") and filter your audience better than theme words",
+        "Build the world first: coin a place or era name for your setting and let titles inherit it — a studio's games sharing roots means fans file every new release into your universe automatically",
+        "Name the studio like a publisher: founder surnames plus a category word (the Stonemaier Games pattern) or mineral/material words — stone-flavored names read as \"here for decades\", not one Kickstarter and gone",
+        "Run the game-night test: say \"let's play X tonight\" and \"one more round of X\" out loud — tabletop spreads through spoken invitations, and a clumsy title travels nowhere",
+      ],
+      cases: [
+        { name: "Wingspan", takeaway: "One concrete noun doing three jobs: theme (birds), image (spread wings), and a mechanism hint (an engine unfolding) — a perfect score on the box-cover rule" },
+        { name: "Stonemaier Games", takeaway: "Two founders' surnames fused (Stone + Maier): reads as \"stone maker\" by happy accident while being genuinely personal — publisher gravitas with a built-in origin story" },
+        { name: "Catan", takeaway: "An invented place name of four letters and no dictionary meaning, yet a whole world — every expansion inherits it (Catan: Seafarers), the founding case of world-first naming at scale" },
+        { name: "Exploding Kittens", takeaway: "An absurd collision of words where the wrongness is the memorability: it locked onto the party-game crowd and proved the name-as-meme playbook works in crowdfunding" },
+      ],
+      pitfalls: [
+        "A studio name that upstages the games: call the studio \"Dragon Crusade\" and your farming game looks lost — keep the studio neutral and containered; save the edge for titles",
+        "Raw fantasy-word permutations (Dragon/Quest/Empire): thousands of BGG entries collide there, and your game ranks behind every same-named predecessor forever",
+        "Ignoring localization: tabletop goes global by default — pre-check pronunciation and meaning in key markets, and don't skip German, the world's biggest board game market",
+        "A title longer than the box can afford: five words means a smaller typeface — the shorter the name, the bigger the print, the farther the shelf visibility",
+      ],
+    },
+  },
+  outdoor: {
+    slug: "outdoor",
+    tlds: [
+      { tld: "com", zh: "户外装备电商与品牌官网的默认选择，海外渠道合作也认它", en: "The default for outdoor gear stores and brand sites — overseas retail partners expect it" },
+      { tld: "world", zh: "「去更大的世界」是户外的母题，.world 与品牌叙事同频", en: "\"Out into the wider world\" is the genre's core story — .world hums the same tune" },
+      { tld: "life", zh: "露营/山系生活方式品牌用 .life，卖的不是装备是生活提案", en: "Camp-life and mountain-lifestyle brands sell a way of living, not gear — .life says so" },
+    ],
+    zh: {
+      label: "户外露营",
+      title: "户外露营品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "户外露营品牌命名指南：地貌词根、天气与火、装备人格等 5 种思路，Patagonia/Snow Peak 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的户外域名。",
+      intro:
+        "户外品牌的名字要能经受两种极端环境：一种是物理的——绣在冲锋衣胸口、压印在钛杯底部、缝在帐篷门帘上，名字本身就是装备的一部分；另一种是精神的——户外消费买的是「另一种人生的入场券」，名字要装得下山野、火塘和「逃离城市」的向往。这个品类命名有个可靠的富矿：自然专有名词。Patagonia（巴塔哥尼亚高原）、Snow Peak（雪峰）证明了地貌与山名自带辽阔感和真实性，比抽象的「野/风/行」组合词高一个量级。另一个关键取舍是硬核与生活方式的光谱定位：攀岩绳品牌与精致露营品牌的名字气质完全不同——先定你在光谱哪一端，再选词根。",
+      namingIdeas: [
+        "地貌专名：山峰、高原、峡谷、河流的真实地名是户外命名第一富矿——自带画面、辽阔感与「我们真的去过」的可信度；优先选目标用户心中有向往的地名",
+        "天气与火：风、雪、暮光、篝火、余烬（ember）——户外记忆最深的时刻都和天气与火有关，这类词唤起的是体验而非装备",
+        "装备人格化：从核心装备取魂——锚、桨、斧、结绳——器物词让品牌显得可靠耐用，适合硬核装备线",
+        "山系生活方式词：面向精致露营人群用「慢、栖、野餐、营地」等柔性词根，配 .life/.world 后缀——这半边市场买氛围，名字先把氛围给足",
+        "刺绣测试：户外名字必然出现在织物刺绣和金属压印上——候选名全大写排一遍，超过 8 个字母的词绣在胸标上就挤了；短词在这个品类是硬通货",
+      ],
+      cases: [
+        { name: "Patagonia", takeaway: "直接借用南美高原地名：五音节却全球通读，地名的辽阔与真实感撑起了品牌的环保叙事——地貌专名命名的天花板" },
+        { name: "Snow Peak", takeaway: "创始人常年攀登的「雪峰」（谷川岳）直译：两个最简单的英文词组合出画面与出处，日本品牌用英文名打开全球市场的教科书" },
+        { name: "The North Face", takeaway: "「山的北壁」——登山者都知道北壁最冷最难爬：一个行话级的方位词完成了硬核定位，圈内人秒懂，圈外人觉得酷" },
+        { name: "挪客 Naturehike", takeaway: "nature + hike 直拼 + 中文「挪客」音译带「挪动的旅客」联想：双语命名工整对应，大众露营市场「一听就懂」路线的成功样本" },
+      ],
+      pitfalls: [
+        "野/风/行/山排列组合：国产户外新品牌重灾区，两字组合词几乎穷尽——没有具体意象的自然词等于没起名",
+        "名字锁死单一场景：叫「XX 露营」就做不了徒步线和城市机能线——户外品牌的增长都靠品类扩张，名字要留出海拔跨度",
+        "忽略国际读感：户外品牌天然要出海（装备供应链与户外文化都是全球的），拼音名在海外渠道会成为发音障碍",
+        "过度硬核吓退新手：极限词（extreme、summit 堆砌）会把最大的增量人群——刚入坑的轻度玩家——挡在门外",
+      ],
+    },
+    en: {
+      label: "Outdoor & camping",
+      title: "How to Name an Outdoor or Camping Brand: Ideas, Cases & Domains",
+      metaDescription:
+        "Outdoor and camping brand naming guide: landform proper nouns, weather-and-fire words, gear personas, breakdowns of Patagonia/The North Face, recommended TLDs and pitfalls — then hunt an available outdoor domain with AI.",
+      intro:
+        "An outdoor brand's name must survive two kinds of extreme environments. The physical one: embroidered on a jacket chest, stamped into a titanium mug, sewn onto a tent flap — the name literally becomes part of the gear. And the spiritual one: outdoor spending buys a ticket to another kind of life, so the name has to hold mountains, campfires and the ache to leave the city. This category has one reliably rich vein: natural proper nouns. Patagonia and Snow Peak proved that real landforms and summits carry vastness and authenticity a synthetic \"wild/trek/peak\" mashup never will. The other decisive call is where you sit on the hardcore-to-lifestyle spectrum — a climbing-rope brand and a glamping brand need entirely different name energy, so fix your position on that spectrum before choosing roots.",
+      namingIdeas: [
+        "Mine landform proper nouns: real peaks, plateaus, canyons and rivers are the genre's first vein — built-in imagery, scale, and \"we've actually been there\" credibility; pick places your audience already dreams about",
+        "Reach for weather and fire: wind, snow, dusk, ember, campfire — the deepest outdoor memories are weather-and-fire moments, and these words summon the experience rather than the equipment",
+        "Personify the gear: anchor, axe, paddle, knot — object words read as dependable and over-built, the right register for hardcore equipment lines",
+        "Go soft for camp-life: for the glamping crowd, gentle roots (slow, nest, meadow, basecamp) with a .life or .world suffix — this half of the market buys atmosphere, so the name should pour it",
+        "Run the embroidery test: this name will live in thread and stamped metal — set every finalist in all caps; past eight letters a chest patch gets crowded. Short words are hard currency here",
+      ],
+      cases: [
+        { name: "Patagonia", takeaway: "A borrowed South American plateau: five syllables yet readable worldwide — the landform's vastness and authenticity carry the brand's environmental story. The ceiling of proper-noun naming" },
+        { name: "Snow Peak", takeaway: "A literal translation of the snowy peak its founder climbed (Mt. Tanigawa): two of the simplest English words yielding image plus provenance — the textbook for a Japanese brand naming itself into the global market" },
+        { name: "The North Face", takeaway: "Climbers know the north face is the coldest, hardest route up: one piece of insider vocabulary does the entire hardcore positioning — instant recognition inside the sport, instant cool outside it" },
+        { name: "Fjällräven", takeaway: "Swedish for \"arctic fox\": a native-language animal word that exports its origin (and the fox logo) in one move — proof a local word plus an icon travels better than invented English" },
+      ],
+      pitfalls: [
+        "Wild/trek/peak permutations: the most crowded corner of outdoor naming — a nature word with no specific image attached is a non-name",
+        "Locking into one activity: \"X Camping\" can't launch a hiking line or urban-technical apparel — outdoor brands grow by category expansion, so leave altitude range in the name",
+        "Ignoring international readability: outdoor brands go global by default (the supply chain and the culture both are) — a name that stumbles overseas becomes a distribution tax",
+        "Scaring off beginners with extremity: stacking summit/extreme words gates out the biggest growth segment — the newcomers who just bought their first tent",
+      ],
+    },
+  },
+  cleaning: {
+    slug: "cleaning",
+    tlds: [
+      { tld: "com", zh: "家政是「让陌生人进家门」的生意，.com 的正规感直接影响下单", en: "You're asking to be let into someone's home — .com's legitimacy directly moves bookings" },
+      { tld: "pro", zh: "强调持证与专业流程的服务商，.pro 一个后缀完成资质暗示", en: "For licensed, process-driven operators, .pro implies the credential in the suffix" },
+      { tld: "life", zh: "定位「生活方式服务」的家政品牌，.life 把清洁升维成生活质感", en: "For brands framing housekeeping as lifestyle care, .life elevates cleaning into quality of life" },
+    ],
+    zh: {
+      label: "家政清洁",
+      title: "家政清洁品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "家政清洁服务命名指南：焕新词根、信任人格、效率承诺等 5 种思路，Molly Maid/Handy 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的家政域名。",
+      intro:
+        "家政清洁的名字要解决一个根本问题：说服客户把家门钥匙交给陌生人。所以这个品类命名的第一关键词不是「干净」而是「可托付」——名字要像一个靠谱邻居的名字，而不是一个冰冷的平台代号。第二个特点是本地搜索主导：绝大多数订单来自「城市名 + 保洁」的搜索与地图结果，名字要在 Google 地图卡片和大众点评列表里，与五星评分并排出现时显得专业。第三是低频高信任的复购结构——客户一旦满意就长期锁定，名字承担着「被存进通讯录备注」的使命：「保洁-小王阿姨」还是你的品牌名，取决于名字够不够好记。",
+      namingIdeas: [
+        "焕新词根：fresh、sparkle、光、净、焕——描述「清洁之后的状态」而非清洁动作本身；客户买的是推门那一刻的如释重负，不是拖地过程",
+        "信任人格：人名/阿姨/管家式命名（Molly Maid 路线）——把服务拟人成一个具体的可靠角色，「让 X 来搞定」比「预约 XX 平台」的心理门槛低得多",
+        "效率承诺词：handy、swift、闪、快——上门服务的核心焦虑是等待与拖延，名字里的速度感是对痛点的直接回应；适合按次计费的即时服务",
+        "本地化前缀预留：连锁化要靠「品牌名 + 城区」扩张——候选名后面加「·朝阳站」「West Side」念一遍，装不下分站的名字要慎选",
+        "通讯录测试：家政的复购靠客户手机通讯录——把名字想象成微信备注：能被完整记住并转介绍（「你加一下 X 家政」），才算过了最重要的一关",
+      ],
+      cases: [
+        { name: "Molly Maid", takeaway: "人名 Molly + 职业词 Maid 的头韵组合：一个具体的「莫莉阿姨」形象让全球特许经营网络保持了「熟人上门」的亲切感——信任人格命名的鼻祖" },
+        { name: "Handy", takeaway: "一词双关：「顺手/方便」+「手工活（handyman）」——五个字母同时交付品类与效率承诺，平台型上门服务命名的极简答案" },
+        { name: "天鹅到家", takeaway: "「天鹅」的洁白优雅 +「到家」的服务场景：意象词负责品质联想，场景词负责说清业务——中文家政命名「气质+直白」双层结构的范本" },
+        { name: "The Maids", takeaway: "定冠词 The + 复数职业词：像球队名一样把保洁员集体品牌化，暗示「一支训练有素的队伍」而非零散钟点工——团队感即专业感" },
+      ],
+      pitfalls: [
+        "洁/净/洁士随机组合：本地生活服务重名率最高的区域，工商注册都难通过，更别说搜索独占",
+        "名字过度平台化：冷冰冰的科技感代号（XX到家云）在「让人进家门」的生意里适得其反——距离感就是流失率",
+        "只做中文名不占域名与地图主页：本地服务的官网可以简单，但「搜品牌名第一位是自己」是底线，否则评价与比价入口都在别人手里",
+        "承诺过满的极限词：「一尘不染」「零死角」写进名字等于把差评的标尺交给客户——名字可以传递焕新感，但别立军令状",
+      ],
+    },
+    en: {
+      label: "Cleaning services",
+      title: "How to Name a Cleaning or Home Services Brand: Ideas, Cases & Domains",
+      metaDescription:
+        "Cleaning and home services naming guide: after-state words, trust personas, speed promises, breakdowns of Molly Maid/Handy, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A cleaning brand's name has one fundamental job: convincing someone to hand their house keys to a stranger. So the first keyword of this category isn't \"clean\" — it's \"trustable.\" The name should sound like a dependable neighbor, not a cold platform codename. Second, this is a local-search business: most bookings come from \"cleaner near me\" queries and map results, so the name must look professional sitting inside a Google Maps card next to a star rating. Third, the purchase pattern is low-frequency, high-trust: a satisfied customer locks in for years, and the name's real mission is to survive being saved into a phone's contacts. Whether that contact reads \"cleaner - Maria\" or your brand name depends entirely on how memorable the name is.",
+      namingIdeas: [
+        "Name the after-state: fresh, sparkle, gleam, renew — describe how the home feels when the door opens, not the mopping itself; customers buy the exhale, not the process",
+        "Build a trust persona: personal-name or housekeeper-style names (the Molly Maid route) turn the service into a specific reliable character — \"have X handle it\" clears a far lower bar than \"book a platform\"",
+        "Promise speed: handy, swift, snap — the core anxiety of home services is waiting and no-shows, so tempo in the name answers the pain point directly; best for on-demand, per-job services",
+        "Reserve a locality slot: chains grow as \"brand + neighborhood\" — say each finalist with \"West Side\" or \"Brooklyn\" appended; a name that can't take a branch suffix will fight your expansion",
+        "Run the contacts test: repeat business lives in the customer's phone — imagine the name as a saved contact and a referral sentence (\"just call X\"); if it survives both, it passes the most important gate",
+      ],
+      cases: [
+        { name: "Molly Maid", takeaway: "First name + occupation in alliteration: a concrete \"Molly\" figure kept a global franchise network feeling like a trusted neighbor at the door — the founding case of trust-persona naming" },
+        { name: "Handy", takeaway: "One word, two readings: \"convenient\" plus \"handyman\" — five letters delivering both the category and the speed promise; the minimalist answer for on-demand home services" },
+        { name: "The Maids", takeaway: "Definite article + plural occupation: branding the cleaners collectively like a sports team — implying a trained crew rather than scattered gig workers; team feel is professional feel" },
+        { name: "Merry Maids", takeaway: "An emotion word bolted to the occupation: \"merry\" sells the mood of a cleaned home and the demeanor at your door — one adjective doing the differentiation in a commodity category" },
+      ],
+      pitfalls: [
+        "Sparkle/shine/clean permutations: the most collision-prone corner of local services — you'll struggle to register the business name, let alone own the search results",
+        "Over-platforming the name: a chilly tech codename backfires in a let-them-into-your-home business — distance in the name becomes churn in the funnel",
+        "Skipping the domain and map profile: a local service site can be simple, but ranking first for your own brand name is the floor — otherwise reviews and price comparisons happen on someone else's turf",
+        "Absolute promises in the name: \"Spotless\" or \"Zero Dust\" hands every customer a ruler to measure you against — convey freshness, don't sign a guarantee",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
