@@ -623,7 +623,9 @@ app.get("/s/:id", async (c) => {
 app.get("/shortlist", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
   let html = await res.text();
-  html = html.replace("</head>", '<meta name="robots" content="noindex" /></head>');
+  html = html
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/shortlist" />`)
+    .replace("</head>", '<meta name="robots" content="noindex" /></head>');
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
 });
 
