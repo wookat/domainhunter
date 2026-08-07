@@ -1081,6 +1081,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Broad tech companies (hardware/SaaS/robotics)", "Might pivot — don't lock into AI", "Budget-sensitive (several times cheaper)", "Tech parks, incubators & media brands"],
     },
   },
+  "world-vs-com": {
+    slug: "world-vs-com",
+    a: "world",
+    b: "com",
+    zh: {
+      title: ".world 和 .com 怎么选：全球化叙事与万能默认的取舍",
+      metaDescription: ".world 库存充裕、自带全球化口号感，.com 认知度无可替代但好名字几乎绝迹。对比两者的价格续费、库存与品牌策略，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "这是一场「叙事」对「默认」的对比。.world 的最大红利是库存与口号感：coffee.world、maker.world 这样的常见单词组合在 .com 下早已绝迹，在 .world 下大多还能注册，域名本身就能当一句品牌宣言念出来。.com 则是用户手指的肌肉记忆——地址栏默认补全、口头传播零解释成本。价格结构完全不同：.com 注册与续费都稳定在几十元且多年不变；.world 首年促销常见十几元，但续费跳到两百元上下（约 3–10 倍差），长期持有必须按续费价核算。务实判断：品牌故事本身围绕「世界/全球/宇宙观」（出海产品、元宇宙、跨文化社区），.world 是加分项而非妥协；若品牌词在 .com 下还能拿到，主站仍优先 .com，把 .world 留作活动页或世界观子站。",
+      pickA: ["品牌叙事围绕「世界/全球」的产品", "想要单词域名当口号（coffee.world 式）", "游戏/元宇宙与跨文化社区", "心仪单词在 .com 已绝迹"],
+      pickB: ["面向大众的正式主站品牌", "在意续费成本的长期持有（.com 续费稳定便宜）", "口头传播多、依赖用户默认补全", "长期资产与转售流动性"],
+    },
+    en: {
+      title: ".world vs .com: Global Storytelling or the Universal Default",
+      metaDescription:
+        ".world offers dictionary-word inventory and slogan-like branding; .com has unbeatable recognition but scarce names. Compare pricing, renewals and strategy, then hunt names available on both.",
+      verdict:
+        "This is narrative versus default. .world's big win is inventory and slogan power: dictionary combos like coffee.world or maker.world — long extinct on .com — are mostly still registrable, and the domain itself reads as a brand statement. .com is muscle memory: browsers autocomplete it and word-of-mouth needs zero explanation. Pricing diverges sharply: .com registration and renewal both sit stably around $10–12 year after year, while .world runs cheap promos (a few dollars) then jumps to $25–30 renewals — a 3–10x gap you must budget for. The pragmatic test: if your brand story is literally about worlds, global reach or a universe (go-global products, metaverse, cross-cultural communities), .world is a feature, not a compromise. If your brand word is still gettable on .com, keep .com as the primary site and use .world for campaigns or lore sub-sites.",
+      pickA: ["Brands whose story is about worlds/global reach", "Slogan-like dictionary domains (coffee.world style)", "Games, metaverse & cross-cultural communities", "Your word is extinct on .com"],
+      pickB: ["Mainstream primary brand sites", "Renewal-cost sensitive long-term holds (.com stays cheap)", "Heavy word-of-mouth relying on autocomplete", "Long-term asset & resale liquidity"],
+    },
+  },
+  "life-vs-me": {
+    slug: "life-vs-me",
+    a: "life",
+    b: "me",
+    zh: {
+      title: ".life 和 .me 怎么选：生活方式品牌与个人身份的对比",
+      metaDescription: ".life 语义温暖适合健康与生活方式品牌，.me 是个人主页与简历站的天然后缀。对比两者的语义指向、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个后缀都很「人味」，但指向不同：.me 指向「这个人」——个人主页、在线简历、作品集、newsletter，about.me 多年前就把这个认知焊死了；.life 指向「这种生活」——健康管理、生活方式品牌、家庭服务、心理成长，品牌 + .life 读起来像一句承诺（better.life、simple.life）。价格上 .me 是黑山国别域名，注册与续费都在百元上下且差价小；.life 是典型新顶级域结构——首年十几元促销、续费两百元档，长期要按续费算账。库存 .life 明显更好，sleep、balance、slow 这类生活词汇大多可注册，而 .me 短词已相当稀缺。判断标准：域名代表你个人（求职、自由职业、个人影响力）→ .me；域名代表一个生活方式产品或内容品牌 → .life。品牌名以 me 或 life 结尾时，各自的域名 hack 拆分（hire.me、better.life）都是加分玩法。",
+      pickA: ["健康、养生与生活方式品牌", "生活类内容站与博客", "家庭、保险与个人成长服务", "想要 better.life 式承诺感域名"],
+      pickB: ["个人主页与在线简历", "自由职业者个人品牌", "作品集与 newsletter", "品牌词以 me 结尾的域名 hack"],
+    },
+    en: {
+      title: ".life vs .me: Lifestyle Brand or Personal Identity",
+      metaDescription:
+        ".life has warm semantics for health and lifestyle brands; .me is the natural home for personal pages. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both suffixes feel human, but they point at different things. .me points at the person: homepages, online résumés, portfolios, newsletters — about.me cemented that reading years ago. .life points at a way of living: wellness, lifestyle brands, family services, personal growth — brand + .life reads like a promise (better.life, simple.life). On price, .me is Montenegro's ccTLD with registration and renewal both around $15–20 and a small gap; .life follows the classic new-gTLD curve — a few dollars the first year, then $25–30 renewals, so budget on renewal. Inventory clearly favors .life: everyday words like sleep, balance or slow are often still available, while short .me names are scarce. The test: if the domain represents you (job hunting, freelancing, personal reach) → .me; if it represents a lifestyle product or content brand → .life. And if your brand ends in \"me\" or \"life\", the respective domain hacks (hire.me, better.life) are a bonus.",
+      pickA: ["Health, wellness & lifestyle brands", "Lifestyle content sites and blogs", "Family, insurance & personal-growth services", "Promise-like domains (better.life style)"],
+      pickB: ["Personal homepages & online résumés", "Freelancer personal brands", "Portfolios & newsletters", "Domain hacks for brands ending in \"me\""],
+    },
+  },
+  "agency-vs-co": {
+    slug: "agency-vs-co",
+    a: "agency",
+    b: "co",
+    zh: {
+      title: ".agency 和 .co 怎么选：行业自述与简洁公司感的对比",
+      metaDescription: ".agency 把业务类型写进后缀，.co 是最体面的 .com 替身。对比两者的语义、长度、价格与分流风险，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "服务型公司选域名的经典两难：要说明力还是要简洁。.agency 是自我介绍式后缀——设计工作室、营销团队、公关猎头用 name.agency，客户一眼知道你是干什么的，词根可以更抽象大胆；代价是 6 字符后缀偏长，口播要念清楚。.co 只有两个字符，读起来像 company 的缩写，气质接近 .com 且更利落；代价是永远存在向 .com 分流的风险——输入时少打一个 m 的用户会落到 .com 持有者手里，选它之前务必查查对应 .com 在谁手里。价格上 .co 注册百元上下但续费明显高于 .com；.agency 首年十几元促销、续费一百多元，两者长期成本相近。库存 .agency 显著更好，几乎任何风格词都能注册到。判断标准：客户来源靠搜索与转介绍、需要后缀帮你说明业务 → .agency；品牌词本身够独特、追求名片上的简洁 → .co。",
+      pickA: ["设计/营销/公关等代理机构", "想让后缀说明业务、词根更大胆", "库存要求高（词根选择自由）", "作品集式机构官网（name.agency）"],
+      pickB: ["品牌词独特、追求简洁利落", "两字符后缀、口播与名片友好", "泛公司定位而非明确代理业态", "对应 .com 无活跃竞品、分流风险可控"],
+    },
+    en: {
+      title: ".agency vs .co: Self-Describing Suffix or Sleek Company Shorthand",
+      metaDescription:
+        ".agency writes your business type into the suffix; .co is the most respectable .com stand-in. Compare semantics, length, pricing and leak risk, then hunt names available on both.",
+      verdict:
+        "The classic dilemma for service firms: explanatory power or brevity. .agency introduces you by itself — design studios, marketing teams, PR and recruiting firms on name.agency need no tagline, freeing the root to be bold and abstract; the cost is a six-character suffix that must be spoken carefully. .co is two characters, reads as shorthand for company, and feels closest to .com; the cost is permanent leak risk — users who type the missing \"m\" land on whoever owns the .com, so check that owner before committing. On price, .co registers around $10 but renews notably higher than .com ($25–35 at many registrars); .agency runs cheap promos then renews around $20–25 — long-term costs end up similar. Inventory strongly favors .agency: nearly any word style is still available. The test: if clients come via search and referrals and you want the suffix to explain the business → .agency; if your brand word is distinctive and you want business-card sleekness → .co.",
+      pickA: ["Design/marketing/PR and other agencies", "Let the suffix explain the business, keep roots bold", "Need wide inventory and root freedom", "Portfolio-style firm sites (name.agency)"],
+      pickB: ["Distinctive brand words wanting sleekness", "Two-character suffix — spoken & card friendly", "General company positioning, not strictly an agency", "The matching .com has no active competitor"],
+    },
+  },
+  "games-vs-gg": {
+    slug: "games-vs-gg",
+    a: "games",
+    b: "gg",
+    zh: {
+      title: ".games 和 .gg 怎么选：语义完整与电竞黑话的对比",
+      metaDescription: ".games 把行业写进域名且价格亲民，.gg 是电竞圈的 good game 黑话但续费更贵。对比两者的气质、价格与库存，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同为游戏行业后缀，气质完全不同。.games 语义完整直白——工作室官网、独立游戏作品集、游戏媒体用它一眼即懂，首年百元级、续费一两百元，是游戏行业性价比最高的语义后缀。.gg 是根西岛国别域名，被电竞圈用「good game」黑话收编：战队、直播工具、对战平台用 .gg 自带圈内身份，Discord 的 discord.gg 短链更是把它焊进了玩家心智；代价是价格更高——注册与续费普遍在四五百元档，且两字符后缀好词稀缺。判断标准：面向玩家社区、电竞与直播场景，圈内认同感重要 → .gg 值回票价；工作室官网、作品集、游戏媒体这类「行业内容」载体 → .games 更划算且词根选择自由得多。预算充裕的电竞品牌常两个都拿：.gg 做社区与短链，.games 做内容站。",
+      pickA: ["游戏工作室官网与作品集", "游戏媒体与社区内容站", "预算敏感（续费便宜数倍）", "词根想用 pixel/quest 类完整单词"],
+      pickB: ["电竞战队与赛事品牌", "直播、对战与玩家社区工具", "想要圈内身份信号（good game）", "两字符短域名与短链场景"],
+    },
+    en: {
+      title: ".games vs .gg: Full-Word Clarity or Esports Slang",
+      metaDescription:
+        ".games spells out the industry at friendly prices; .gg is esports slang for good game with pricier renewals. Compare vibe, pricing and inventory, then hunt names available on both.",
+      verdict:
+        "Both are gaming suffixes with completely different vibes. .games is fully literal — studio sites, indie portfolios and gaming media read instantly, at roughly $15–20 first year and $20–25 renewal, the best-value semantic TLD in gaming. .gg is Guernsey's ccTLD adopted by esports as \"good game\" slang: teams, streaming tools and matchmaking platforms wear it as an insider badge, and Discord's discord.gg invite links welded it into player culture. The cost: registration and renewal typically run $60–80, and good words on a two-character suffix are scarce. The test: for player communities, esports and streaming where insider identity matters, .gg earns its premium; for studio sites, portfolios and media — industry content — .games is far cheaper with much freer root choice. Well-funded esports brands often take both: .gg for community and short links, .games for the content site.",
+      pickA: ["Game studio sites & portfolios", "Gaming media & community content", "Budget-sensitive (renewals several times cheaper)", "Want full-word roots like pixel/quest"],
+      pickB: ["Esports teams & tournament brands", "Streaming, matchmaking & player-community tools", "Insider identity signal (good game)", "Two-character short domains & link use"],
+    },
+  },
+  "email-vs-net": {
+    slug: "email-vs-net",
+    a: "email",
+    b: "net",
+    zh: {
+      title: ".email 和 .net 怎么选：品类精准与老牌通用的取舍",
+      metaDescription: ".email 把邮件品类写在门牌上，.net 是老牌通用技术后缀。对比两者的语义宽窄、价格与转型空间，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "这是语义宽窄的选择。.email 品类锁定极强——邮件 API、营销自动化、newsletter 平台、送达率工具用 send.email、inbox.email 这样的域名，产品说明写在门牌上，开发者与 SaaS 圈接受度不错；代价是窄：业务一旦超出邮件范畴，域名立刻变成束缚。.net 与互联网同龄，语义宽到几乎不设限——网络服务、云、基础设施都装得下，用户认知成熟，价格与 .com 接近且续费稳定（百元上下）；代价是「泛」：它不会帮你说明产品是做什么的，且经典短词早被抢空。价格结构上 .email 首年二三十元促销、续费一百多元，与 .net 长期成本接近，差别不在钱在语义。判断标准：产品核心确定长期围绕邮件（邮件 API、newsletter、反垃圾）→ .email 的品类信号是免费广告；产品是更宽的通讯/网络服务，或未来可能扩展 → .net 留足余地。注意 .email 词根别再含 mail，避免 sendmail.email 式冗余。",
+      pickA: ["邮件 API 与邮件基础设施", "邮件营销与自动化工具", "Newsletter 平台与送达率服务", "想要 send.email 式功能说明域名"],
+      pickB: ["泛通讯/网络/云服务", "业务未来可能扩展出邮件范畴", "偏好用户认知成熟的老牌后缀", "续费稳定、转售流动性更好"],
+    },
+    en: {
+      title: ".email vs .net: Category Precision or Veteran Generality",
+      metaDescription:
+        ".email puts the category on the door; .net is the veteran general-purpose tech suffix. Compare semantic width, pricing and pivot room, then hunt names available on both.",
+      verdict:
+        "This is a choice about semantic width. .email locks the category hard: email APIs, marketing automation, newsletter platforms and deliverability tools on send.email or inbox.email carry their product description in the address, with solid developer and SaaS acceptance. The cost is narrowness — outgrow email and the domain becomes a constraint. .net is as old as the internet and nearly unlimited in scope — network services, cloud and infrastructure all fit — with mature user recognition and .com-like stable pricing (around $12–15). The cost is vagueness: it explains nothing about your product, and classic short words are long gone. Long-term costs are similar (.email runs cheap promos then ~$20 renewals), so the decision is semantics, not money. The test: if email is the confirmed long-term core (email API, newsletter, anti-spam) → .email's category signal is free advertising; if you're a broader communications or network product, or might expand → .net leaves room. And keep \"mail\" out of the .email root to avoid sendmail.email redundancy.",
+      pickA: ["Email APIs & email infrastructure", "Email marketing & automation tools", "Newsletter platforms & deliverability services", "Feature-statement domains (send.email style)"],
+      pickB: ["Broader communications/network/cloud services", "Business may expand beyond email", "Prefer a veteran suffix users already trust", "Stable renewals & better resale liquidity"],
+    },
+  },
+  "network-vs-tech": {
+    slug: "network-vs-tech",
+    a: "network",
+    b: "tech",
+    zh: {
+      title: ".network 和 .tech 怎么选：协议叙事与泛科技的对比",
+      metaDescription: ".network 契合基础设施与协议叙事，.tech 覆盖全科技赛道。对比两者的语义、长度、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是技术后缀，讲的故事不同。.network 是一句完整的定位——mesh.network、relay.network 读出来就是产品说明，CDN、VPN、节点服务天然契合，区块链圈更是把它当主流选择（「协议即网络」的叙事完美对齐），行业社群与播客联盟也用得顺手。.tech 覆盖整个科技赛道——硬件、SaaS、机器人、AI 都装得下，词根不用解释行业属性，转型也不用改名，科技园区与黑客松尤其偏爱。长度是显性差异：.network 7 字符偏长，词根必须控制在短词；.tech 4 字符轻快得多。价格结构相似——两者首年都有十几二十元促销，续费都在一两百元档（.tech 略高），差别不在钱。库存都远好于 .com/.net，.network 下连 .net 绝迹的短词都常有货。判断标准：产品本质是「一张网」（基础设施、协议、节点、社群网络）→ .network 的叙事契合度无可替代；产品是泛科技公司或方向未定 → .tech 更宽、更短、更留余地。",
+      pickA: ["网络基础设施（CDN/VPN/节点）", "区块链协议与公链官网", "行业社群与人脉网络", "想要 mesh.network 式定位域名"],
+      pickB: ["泛科技公司（硬件/SaaS/机器人）", "方向可能演进、不想绑死叙事", "想要更短的后缀（4 字符 vs 7 字符）", "科技园区、黑客松与开发者社区"],
+    },
+    en: {
+      title: ".network vs .tech: Protocol Narrative or Broad-Tech Flexibility",
+      metaDescription:
+        ".network fits infrastructure and protocol narratives; .tech spans the whole technology space. Compare semantics, length, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are technical suffixes telling different stories. .network is a complete positioning statement — mesh.network or relay.network reads as a product description. CDNs, VPNs and node services fit naturally, crypto made it a mainstream choice (\"the protocol is the network\" aligns perfectly), and professional communities and podcast collectives wear it well too. .tech spans the entire technology space — hardware, SaaS, robotics and AI all fit — so the root needs no industry explanation and pivots need no rename; tech parks and hackathons especially favor it. Length is the visible difference: .network's seven characters demand a short root, while .tech's four keep things nimble. Pricing is similar — both run cheap first-year promos with renewals in the $20–30 range (.tech slightly higher) — so money isn't the deciding factor. Inventory on both far exceeds .com/.net, and .network often stocks short words extinct on .net. The test: if your product is fundamentally a network (infrastructure, protocols, nodes, community networks) → .network's narrative fit is unmatched; if you're a broad tech company or the direction may shift → .tech is wider, shorter and safer.",
+      pickA: ["Network infrastructure (CDN/VPN/nodes)", "Blockchain protocols & chain sites", "Professional communities & people networks", "Positioning domains (mesh.network style)"],
+      pickB: ["Broad tech companies (hardware/SaaS/robotics)", "Direction may evolve — don't lock the narrative", "Want a shorter suffix (4 chars vs 7)", "Tech parks, hackathons & developer communities"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
