@@ -2,6 +2,7 @@ import { CheckCircle2, HelpCircle, Scale, Sparkles } from "lucide-react";
 
 import { buildCompareFaq } from "@/content/compare-faq";
 import { TLD_COMPARES } from "@/content/compares";
+import { INDUSTRY_GUIDES, guidesForTld } from "@/content/guides";
 import { TLD_GUIDES } from "@/content/tlds";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, usePrices } from "@/lib/prices";
@@ -28,6 +29,7 @@ export function ComparePage({ slug }: { slug: string }) {
   const sides = [cmp.a, cmp.b] as const;
   const picks = [loc.pickA, loc.pickB] as const;
   const faq = buildCompareFaq(cmp, lang);
+  const relatedGuides = [...new Set([...guidesForTld(cmp.a), ...guidesForTld(cmp.b)])].slice(0, 4);
 
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -107,6 +109,24 @@ export function ComparePage({ slug }: { slug: string }) {
           {t("prices.seeAll")}
         </a>
       </p>
+
+      {/* 相关行业命名指南互链 */}
+      {relatedGuides.length > 0 && (
+        <div className="mt-10">
+          <h2 className="text-sm font-semibold text-txt1">{t("tld.relatedGuides")}</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {relatedGuides.map((gSlug) => (
+              <a
+                key={gSlug}
+                href={`/guide/${gSlug}?lang=${lang}`}
+                className="flex min-h-[44px] items-center rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+              >
+                {INDUSTRY_GUIDES[gSlug][lang].label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* 其他对比页互链 */}
       <div className="mt-10">

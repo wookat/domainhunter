@@ -1,5 +1,6 @@
 import { AlertTriangle, HelpCircle, Lightbulb, Quote, Sparkles } from "lucide-react";
 
+import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { buildGuideFaq } from "@/content/guide-faq";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "@/content/guides";
 import { useI18n } from "@/lib/i18n";
@@ -26,6 +27,7 @@ export function GuidePage({ slug }: { slug: string }) {
 
   const loc = guide[lang];
   const faq = buildGuideFaq(guide, lang);
+  const relatedCompares = [...new Set(guide.tlds.flatMap((rec) => COMPARE_SLUGS.filter((s) => s.split("-vs-").includes(rec.tld))))].slice(0, 4);
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -80,6 +82,24 @@ export function GuidePage({ slug }: { slug: string }) {
           </a>
         ))}
       </div>
+
+      {/* 相关后缀对比互链 */}
+      {relatedCompares.length > 0 && (
+        <div className="mt-6">
+          <h2 className="text-sm font-semibold text-txt1">{t("vs.relatedCompares")}</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {relatedCompares.map((cmpSlug) => (
+              <a
+                key={cmpSlug}
+                href={`/vs/${cmpSlug}?lang=${lang}`}
+                className="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+              >
+                {compareLabel(cmpSlug)}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
 
       <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
         <AlertTriangle className="h-4 w-4 text-destructive" />
