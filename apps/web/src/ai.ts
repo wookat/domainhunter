@@ -249,6 +249,46 @@ function buildRefineHint(fb: RefineFeedback, round: number): string {
   return parts.join("\n");
 }
 
+// 模型偶尔用 “”/『』/„” 等引号包中文原词，归一为「」保证前端高亮命中
+// 中文归一先跑，之后残留的英文弯引号（‘’“”）兜底归一为直引号，两条逻辑共存互不干扰
+export const normalizeQuotes = (m: string): string =>
+  m
+    .replace(/[“『„]([^“”『』„「」]{1,12}?)[”』]/g, (full, w: string) => (/[\u4e00-\u9fff]/.test(w) ? `「${w}」` : full))
+    .replace(/[‘’]/g, "'")
+    .replace(/[“”„]/g, '"');
+
+// R132：normalizeQuotes 之后的残留符号清理——清除孤立不成对的 CJK 引号
+// （「」『』，以及归一漏网的 “”‘’„ 弯引号），配对完好的「」/『』保留（前端要高亮）
+export const stripUnpairedCjkQuotes = (m: string): string => {
+  const pairs: [string, string][] = [
+    ["「", "」"],
+    ["『", "』"],
+  ];
+  const drop = new Set<number>();
+  for (const [open, close] of pairs) {
+    const stack: number[] = [];
+    for (let i = 0; i < m.length; i++) {
+      if (m[i] === open) stack.push(i);
+      else if (m[i] === close) {
+        if (stack.length > 0) stack.pop();
+        else drop.add(i); // 无开引号对应的孤立闭引号
+      }
+    }
+    for (const i of stack) drop.add(i); // 无闭引号对应的孤立开引号
+  }
+  let out = "";
+  for (let i = 0; i < m.length; i++) {
+    if (drop.has(i)) continue;
+    // 归一后理论上不该再出现的弯引号残留，一并清除
+    if (/[“”‘’„]/.test(m[i])) continue;
+    out += m[i];
+  }
+  return out;
+};
+
+/** meaning 完整清洗管线：引号归一 → 残留符号清理 → 去首尾空白 */
+export const cleanMeaning = (m: string): string => stripUnpairedCjkQuotes(normalizeQuotes(m)).trim();
+
 async function generateOnce(
   description: string,
   apiKey: string,
@@ -285,17 +325,16 @@ async function generateOnce(
     const n = Math.round(Number(v));
     return Number.isFinite(n) ? Math.min(Math.max(n, 0), 100) : 60;
   };
-  // 模型偶尔用 “”/『』/„” 等引号包中文原词，归一为「」保证前端高亮命中
-  // 中文归一先跑，之后残留的英文弯引号（‘’“”）兜底归一为直引号，两条逻辑共存互不干扰
-  const normalizeQuotes = (m: string) =>
-    m
-      .replace(/[“『„]([^“”『』„「」]{1,12}?)[”』]/g, (full, w: string) => (/[\u4e00-\u9fff]/.test(w) ? `「${w}」` : full))
-      .replace(/[‘’]/g, "'")
-      .replace(/[“”„]/g, '"');
   for (const c of arr) {
-    const label = String(c.label ?? "").toLowerCase().replace(/[^a-z0-9-]/g, "");
-    if (!label || label.length > 63 || seen.has(label)) continue;
+    // label 清洗：去首尾空白后必须整体是合法域名主体字符（小写字母/数字/连字符），
+    // 含内部空格或其他非法字符的直接丢弃，不做静默改写
+    const label = String(c.label ?? "").trim().toLowerCase();
+    if (!/^[a-z0-9-]{1,63}$/.test(label) || seen.has(label)) continue;
     seen.add(label);
+    // meaning 为空/全空白的候选直接丢弃（流截断或模型漏字段），不进核验队列；
+    // tried 由上层根据返回值累积，被丢弃项天然不计入
+    const meaning = cleanMeaning(String(c.meaning ?? ""));
+    if (!meaning) continue;
     const s = c.scores ?? ({} as Partial<AiScores>);
     const theme = String(c.theme ?? "").toLowerCase();
     // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
@@ -308,7 +347,7 @@ async function generateOnce(
     }
     out.push({
       label,
-      meaning: normalizeQuotes(String(c.meaning ?? "")),
+      meaning,
       theme: THEMES.has(theme) ? (theme as AiTheme) : undefined,
       scores: {
         length: clamp(s.length),
