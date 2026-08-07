@@ -3,8 +3,7 @@ import { ArrowLeft, SlidersHorizontal } from "lucide-react";
 
 import { Header } from "@/components/header";
 import { HomePage, type HomeValues } from "@/components/home-page";
-import { AgentPage, type LogEntry } from "@/components/agent-page";
-import { ResultsPage } from "@/components/results-page";
+import type { LogEntry } from "@/components/agent-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
 import { isMockEnabled, runMockStream } from "@/mock";
 import { loadSearch, saveSearch } from "@/lib/persist";
@@ -43,6 +42,8 @@ const ShortlistPage = lazyChunk(() => import("@/components/shortlist-page"), (m)
 const AdvancedPage = lazyChunk(() => import("@/components/advanced-page"), (m) => m.AdvancedPage);
 const PricesPage = lazyChunk(() => import("@/components/prices-page"), (m) => m.PricesPage);
 const WhyPage = lazyChunk(() => import("@/components/why-page"), (m) => m.WhyPage);
+const AgentPage = lazyChunk(() => import("@/components/agent-page"), (m) => m.AgentPage);
+const ResultsPage = lazyChunk(() => import("@/components/results-page"), (m) => m.ResultsPage);
 
 function PageFallback() {
   return <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-16" />;
@@ -523,6 +524,7 @@ export default function App() {
         />
       )}
       {mode === "agent" && (
+        <Suspense fallback={<PageFallback />}>
         <AgentPage
           understanding={understanding}
           tlds={values.tlds}
@@ -544,8 +546,10 @@ export default function App() {
           shortlistHas={shortlist.has}
           onToggleFavorite={shortlist.toggle}
         />
+        </Suspense>
       )}
       {mode === "results" && (
+        <Suspense fallback={<PageFallback />}>
         <ResultsPage
           rows={rows}
           description={values.description}
@@ -563,6 +567,7 @@ export default function App() {
           running={running}
           moreDisabled={!values.description.trim()}
         />
+        </Suspense>
       )}
       {mode === "shortlist" && (
         <Suspense fallback={<PageFallback />}>
