@@ -131,7 +131,7 @@ export function TldPage({ tld }: { tld: string }) {
               )}
             >
               .{other}
-              {priceShort(other, lang, prices) && <span className="tnum ml-1.5 text-[10px] text-txt2">{priceShort(other, lang, prices)}</span>}
+              {priceShort(other, lang, prices) && <span className="tnum ml-1.5 text-[10px] text-txt1">{priceShort(other, lang, prices)}</span>}
             </a>
           ))}
         </div>

@@ -77,6 +77,8 @@ export function ShortlistPage({
   const [shareCopied, setShareCopied] = useState(false);
   const [shareError, setShareError] = useState("");
   const [rechecking, setRechecking] = useState(false);
+  const [confirmClear, setConfirmClear] = useState(false);
+  const confirmTimer = useRef<number | undefined>(undefined);
   const [syncCode, setSyncCode] = useState(loadSyncCode);
   const [pushing, setPushing] = useState(false);
   const [pushDone, setPushDone] = useState(false);
@@ -324,9 +326,27 @@ export function ShortlistPage({
                 <DropdownMenuItem onSelect={() => exportShortlist(items, "txt")}>{t("common.exportTxt")}</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <button className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-destructive" onClick={onClear}>
+            <button
+              className={cn(
+                "flex h-9 items-center gap-1.5 rounded-lg border px-3 text-sm",
+                confirmClear
+                  ? "border-destructive bg-destructive/10 font-semibold text-destructive"
+                  : "border-line text-txt1 hover:bg-bg2 hover:text-destructive",
+              )}
+              onClick={() => {
+                if (confirmClear) {
+                  window.clearTimeout(confirmTimer.current);
+                  setConfirmClear(false);
+                  onClear();
+                } else {
+                  setConfirmClear(true);
+                  window.clearTimeout(confirmTimer.current);
+                  confirmTimer.current = window.setTimeout(() => setConfirmClear(false), 3000);
+                }
+              }}
+            >
               <Trash2 className="h-4 w-4" />
-              {t("shortlist.clear")}
+              {confirmClear ? t("shortlist.clearConfirm") : t("shortlist.clear")}
             </button>
             <button
               className="flex h-9 items-center gap-1.5 rounded-lg bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90"
@@ -500,14 +520,14 @@ export function ShortlistPage({
               <thead>
                 <tr className="whitespace-nowrap border-b border-line text-left text-[11px] uppercase tracking-wide text-txt2">
                   <th className="px-4 py-3 font-medium">{t("shortlist.domain")}</th>
-                  <th className="px-3 py-3 text-center font-medium">{t("score.total")}</th>
+                  <th className="px-2 py-3 text-center font-medium">{t("score.total")}</th>
                   {BAR_KEYS.map((k) => (
-                    <th key={k} className="px-3 py-3 font-medium">
+                    <th key={k} className="px-2 py-3 font-medium">
                       {barLabels[k]}
                     </th>
                   ))}
-                  <th className="px-3 py-3 text-right font-medium">{t("shortlist.price")}</th>
-                  <th title={t("monitor.toggleTitle")} className="px-3 py-3 text-center font-medium">{t("monitor.column")}</th>
+                  <th className="px-2 py-3 text-right font-medium">{t("shortlist.price")}</th>
+                  <th title={t("monitor.toggleTitle")} className="px-2 py-3 text-center font-medium">{t("monitor.column")}</th>
                   <th className="px-4 py-3" />
                 </tr>
               </thead>
@@ -528,13 +548,13 @@ export function ShortlistPage({
                         </div>
                         {it.meaning && <div className="mt-0.5 max-w-xs truncate text-xs text-txt1">{it.meaning}</div>}
                       </td>
-                      <td className="px-3 text-center">
+                      <td className="px-2 text-center">
                         <span className={cn("tnum rounded-md px-2 py-0.5 font-mono text-xs font-bold", score !== undefined ? scoreBadgeClass(score) : "bg-bg3 text-txt1")}>
                           {score ?? "—"}
                         </span>
                       </td>
                       {BAR_KEYS.map((k) => (
-                        <td key={k} className="px-3">
+                        <td key={k} className="px-2">
                           {it.scores ? (
                             <>
                               <div className="bar min-w-[40px]">
@@ -547,8 +567,8 @@ export function ShortlistPage({
                           )}
                         </td>
                       ))}
-                      <td title={priceFull(it.tld, lang, prices)} className="tnum px-3 text-right font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? "—"}</td>
-                      <td className="px-3 text-center">
+                      <td title={priceFull(it.tld, lang, prices)} className="tnum px-2 text-right font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? "—"}</td>
+                      <td className="px-2 text-center">
                         {monitorPending === it.domain ? (
                           <Loader2 className="inline h-4 w-4 animate-spin text-brand" />
                         ) : (
