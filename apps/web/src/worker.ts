@@ -769,6 +769,40 @@ app.get("/shortlist", async (c) => {
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
 });
 
+// 高级模式（批量粘贴核验）：客户端路由，直链/刷新时回 SPA 壳 + SSR meta
+const ADVANCED_META = {
+  zh: {
+    title: "批量域名核验：粘贴名单一键实时查可注册",
+    desc: "把现成域名名单（裸名/完整域名/带链接混排，最多 200 个）粘进来，一键流式核验可注册状态（RDAP+DNS 实时），免登录免费。",
+  },
+  en: {
+    title: "Bulk domain check: paste a list, verify availability live",
+    desc: "Paste up to 200 names (bare names, full domains or URLs mixed) and stream live availability checks (RDAP+DNS). Free, no login.",
+  },
+};
+
+app.get("/advanced", async (c) => {
+  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const loc = ADVANCED_META[lang];
+  const title = escapeHtml(`${loc.title} | DomainHunter`);
+  const desc = escapeHtml(loc.desc);
+  let html = await res.text();
+  html = html
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/advanced" />`)
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/advanced" />`);
+  html = injectHreflang(html, "/advanced");
+  html = setHtmlLang(html, lang);
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx");
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
+});
+
 // 动态分享图：清单前 3 个域名 + 数量，品牌绿主题（SVG，1200×630）
 // 价格总览页分享图（须注册在 /api/og/:id 之前，否则被其当作分享 id）
 app.get("/api/og/prices", (c) => {
@@ -1309,7 +1343,7 @@ app.get("/why", async (c) => {
 // 内容最后更新日期（sitemap <lastmod>）：每次内容页增减/改写时更新
 const CONTENT_LASTMOD = "2026-08-07";
 
-const sitemapPaths = () => ["/", "/prices", "/why", "/mcp", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
+const sitemapPaths = () => ["/", "/prices", "/why", "/mcp", "/advanced", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
 
 app.get("/sitemap.xml", (c) => {
   const paths = sitemapPaths();
@@ -1337,6 +1371,7 @@ app.get("/llms.txt", (c) => {
     line("/", "AI domain search (homepage, instant availability quick-check included)"),
     line("/prices", "Domain price overview: registration vs renewal for 30 TLDs, live prices"),
     line("/why", "Why DomainHunter: agent loop that reflects over rounds and only surfaces registrable names"),
+    line("/advanced", "Bulk domain check: paste up to 200 names and stream live availability"),
     "",
     "## TLD guides",
     ...TLD_LIST.map((t) => line(`/tld/${t}`, TLD_GUIDES[t].en.title)),

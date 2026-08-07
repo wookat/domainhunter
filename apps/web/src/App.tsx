@@ -90,6 +90,8 @@ const mcpFromPath = () => window.location.pathname === "/mcp";
 
 const shortlistFromPath = () => window.location.pathname === "/shortlist";
 
+const advancedFromPath = () => window.location.pathname === "/advanced";
+
 function compareFromPath(): string | null {
   const m = window.location.pathname.match(/^\/vs\/([a-z0-9-]{2,48})$/i);
   return m ? m[1].toLowerCase() : null;
@@ -113,8 +115,8 @@ export default function App() {
   const [isPrices] = useState(pricesFromPath);
   const [isWhy] = useState(whyFromPath);
   const [isMcp] = useState(mcpFromPath);
-  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() ? null : loadSearch()));
-  const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : saved ? "results" : "home"));
+  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() || advancedFromPath() ? null : loadSearch()));
+  const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : advancedFromPath() ? "advanced" : saved ? "results" : "home"));
   const [resumedNotice, setResumedNotice] = useState(() => Boolean(saved) && !shortlistFromPath());
   const [noticeClosing, setNoticeClosing] = useState(false);
   const dismissNotice = () => {
@@ -152,6 +154,14 @@ export default function App() {
   const closeShortlist = () => {
     if (shortlistFromPath()) window.history.replaceState(null, "", "/");
     setMode(beforeShortlistRef.current);
+  };
+  const openAdvanced = () => {
+    window.history.replaceState(null, "", "/advanced");
+    setMode("advanced");
+  };
+  const closeAdvanced = () => {
+    if (advancedFromPath()) window.history.replaceState(null, "", "/");
+    setMode("home");
   };
 
   const toggleDislike = (label: string) =>
@@ -464,7 +474,7 @@ export default function App() {
     mode === "home" ? (
       <button
         className="flex h-11 items-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 sm:h-9"
-        onClick={() => setMode("advanced")}
+        onClick={openAdvanced}
         aria-label={t("header.advanced")}
         title={t("header.advanced")}
       >
@@ -474,7 +484,7 @@ export default function App() {
     ) : mode === "advanced" || mode === "shortlist" ? (
       <button
         className="flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0"
-        onClick={() => (mode === "shortlist" ? closeShortlist() : setMode("home"))}
+        onClick={() => (mode === "shortlist" ? closeShortlist() : closeAdvanced())}
       >
         <ArrowLeft className="h-4 w-4" />
         {t("common.back")}
@@ -496,7 +506,7 @@ export default function App() {
         center={headerCenter}
         right={headerRight}
         onLogoClick={() => {
-          if (shortlistFromPath()) window.history.replaceState(null, "", "/");
+          if (shortlistFromPath() || advancedFromPath()) window.history.replaceState(null, "", "/");
           setMode("home");
         }}
         shortlistCount={shortlist.items.length}
@@ -575,7 +585,7 @@ export default function App() {
             void run(v);
           }}
           onBackToResults={rows.length > 0 ? () => setMode("results") : undefined}
-          onOpenAdvanced={() => setMode("advanced")}
+          onOpenAdvanced={openAdvanced}
           shortlist={shortlist}
         />
       )}
