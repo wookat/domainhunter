@@ -57,6 +57,12 @@ export const COMPARE_SLUGS = [
   "games-vs-gg",
   "email-vs-net",
   "network-vs-tech",
+  "life-vs-live",
+  "email-vs-cloud",
+  "dev-vs-tech",
+  "app-vs-io",
+  "info-vs-net",
+  "fun-vs-games",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

@@ -1213,6 +1213,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Broad tech companies (hardware/SaaS/robotics)", "Direction may evolve — don't lock the narrative", "Want a shorter suffix (4 chars vs 7)", "Tech parks, hackathons & developer communities"],
     },
   },
+  "life-vs-live": {
+    slug: "life-vs-live",
+    a: "life",
+    b: "live",
+    zh: {
+      title: ".life 和 .live 怎么选：生活方式与实时现场的分野",
+      metaDescription: ".life 语义温暖、面向生活方式与健康品牌，.live 主打直播与实时现场。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "只差一个字母，讲的却是两种完全不同的故事。.life 是「过好日子」——健康管理、生活方式品牌、家庭服务、心理成长，「品牌 + .life」读起来像一句承诺，生活方式博主用它比 .com 更有温度；.live 是「正在发生」——直播频道、线上活动、演出赛事、实时看板，「名字 + .live」自带「点进来看现场」的号召力。价格结构几乎相同：两者都是 Identity Digital 系新后缀，首年一二十元促销、续费两百元档，成本不构成决策因素。库存都好，常见生活词与动词短语大多可注册。判断标准很简单：内容是「陪你长期过日子」的（健康、习惯、家庭）→ .life；内容是「此刻正在发生」的（直播、活动、实时数据）→ .live。用反了会造成预期错位——直播站挂 .life 显得安静，冥想应用挂 .live 显得吵闹。",
+      pickA: ["健康、生活方式与个人成长品牌", "家庭服务、保险与养老业务", "生活方式博客与 vlog 站点", "品牌名以 life 结尾的自然拆分"],
+      pickB: ["直播频道与主播个人站", "线上活动、发布会与赛事页", "实时数据看板与状态页", "主站 .com + 直播页同名 .live 的分工"],
+    },
+    en: {
+      title: ".life vs .live: Lifestyle Brand or Real-Time Broadcast",
+      metaDescription:
+        ".life reads warm and fits lifestyle and wellness brands; .live signals streaming and real-time events. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One letter apart, two entirely different stories. .life says \"living well\" — wellness products, lifestyle brands, family services and personal growth all read like a promise as brand.life, and lifestyle bloggers often find it warmer than .com. .live says \"happening now\" — streaming channels, online events, shows and real-time dashboards, where name.live carries a built-in call to tune in. Pricing is nearly identical: both are Identity Digital-family suffixes with cheap first-year promos and renewals around $25–30, so cost won't decide this. Inventory is good on both, with common lifestyle words and verb phrases widely available. The test is simple: content that accompanies daily life long-term (health, habits, family) → .life; content that is happening right now (streams, events, live data) → .live. Swap them and expectations break — a streaming site on .life feels quiet, a meditation app on .live feels loud.",
+      pickA: ["Wellness, lifestyle & personal-growth brands", "Family services, insurance & senior care", "Lifestyle blogs and vlog sites", "Natural splits when the brand ends in life"],
+      pickB: ["Streaming channels & creator live pages", "Online events, launches & tournaments", "Real-time dashboards & status pages", ".com main site + matching .live stream page"],
+    },
+  },
+  "email-vs-cloud": {
+    slug: "email-vs-cloud",
+    a: "email",
+    b: "cloud",
+    zh: {
+      title: ".email 和 .cloud 怎么选：通信工具与云平台的定位对比",
+      metaDescription: ".email 是邮件与通信产品的品类后缀，.cloud 覆盖云服务与 SaaS 全赛道。对比两者的语义宽窄、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是「功能写进后缀」的品类域名，宽窄差一个量级。.email 语义极窄也极准：邮件客户端、邮件营销、收发件基础设施、临时邮箱工具，「产品名.email」本身就是一句产品说明，甚至能直接当品牌用（如 hey.email 式的定位）；窄的代价是转型受限——产品一旦超出邮件范畴，后缀就成了包袱。.cloud 宽得多：云主机、SaaS、托管平台、DevOps 工具都装得下，面向企业客户比 .io 更正式，还常被用作客户实例域名（客户名.产品.cloud）扩展性好。价格上两者都是中等价位的新后缀，首年促销常见、续费一两百元档，差异不大。库存都充足，主流功能词基本可注册。判断标准：产品此生只做邮件/通信 → .email 的精准无可替代；产品是云服务或未来可能长出多条产品线 → .cloud 留足余地。",
+      pickA: ["邮件客户端与收发件工具", "邮件营销与送达率服务", "临时邮箱、别名与隐私转发", "「名字.email」直接当产品定位"],
+      pickB: ["云主机、托管与部署平台", "面向企业客户的 SaaS", "DevOps 与基础设施工具", "需要客户实例子域的多租户产品"],
+    },
+    en: {
+      title: ".email vs .cloud: Messaging Niche or Cloud-Platform Breadth",
+      metaDescription:
+        ".email is the category suffix for mail and messaging products; .cloud spans hosting, SaaS and DevOps. Compare semantic breadth, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both put the function in the suffix; the difference is breadth. .email is razor-narrow and razor-accurate: mail clients, email marketing, deliverability infrastructure and disposable-inbox tools all read as product statements at name.email — the suffix can even carry the positioning by itself. The cost of that precision is lock-in: outgrow email and the suffix becomes baggage. .cloud is an order of magnitude wider — hosting, SaaS, deployment platforms and DevOps tools all fit, it reads more enterprise-appropriate than .io, and it scales into per-customer instance domains (customer.product.cloud). Pricing is comparable: mid-priced new suffixes with frequent first-year promos and renewals around $20–30. Inventory is healthy on both, with mainstream functional words still available. The test: if the product will always be about mail and messaging → .email's precision is unbeatable; if it's a cloud service or may grow product lines → .cloud leaves room to expand.",
+      pickA: ["Mail clients & inbox tools", "Email marketing & deliverability services", "Disposable inboxes, aliases & privacy relays", "Positioning domains (name.email style)"],
+      pickB: ["Hosting, deployment & managed platforms", "Enterprise-facing SaaS", "DevOps & infrastructure tooling", "Multi-tenant products needing instance subdomains"],
+    },
+  },
+  "dev-vs-tech": {
+    slug: "dev-vs-tech",
+    a: "dev",
+    b: "tech",
+    zh: {
+      title: ".dev 和 .tech 怎么选：开发者身份与泛科技声明的对比",
+      metaDescription: ".dev 由 Google 运营、强制 HTTPS，是开发者产品标配；.tech 把「科技」写进后缀、覆盖全赛道。对比两者的受众、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "都是技术后缀，说话的对象不同。.dev 对开发者说话：由 Google 运营、全后缀强制 HTTPS（HSTS 预加载），开发工具、SDK、技术博客、个人作品集用它就是圈内身份证，web.dev、Google 自家大量使用更给足了背书；但对非技术人群，「dev」三个字母未必可读。.tech 对所有人说话：硬件公司、机器人团队、科技媒体、黑客松官网用 name.tech，访客不需要任何解释——CES 官网 ces.tech 就是明证。价格上 .dev 注册续费百元上下、结构稳定；.tech 首年促销极低但续费明显上浮，长期持有要按续费算账。库存两者都远好于 .com，.tech 因为更长更宽，双词组合几乎随便挑。判断标准：产品的用户会打开终端 → .dev 的圈内信号更准；用户是投资人、媒体与大众 → .tech 的行业声明更响。",
+      pickA: ["开发工具、SDK 与 API 文档站", "个人技术博客与作品集", "开源项目官网", "在意 HTTPS 强制与 Google 背书"],
+      pickB: ["硬科技、硬件与机器人公司", "科技媒体、园区与黑客松", "面向大众/投资人的科技品牌", "想要双词组合的充足库存"],
+    },
+    en: {
+      title: ".dev vs .tech: Developer Badge or Broad Tech Statement",
+      metaDescription:
+        ".dev is Google-run, HTTPS-enforced and the developer default; .tech writes the industry into the suffix for everyone. Compare audiences, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are technical suffixes speaking to different rooms. .dev speaks to developers: run by Google with HTTPS enforced across the zone (HSTS preload), it's the insider badge for dev tools, SDKs, technical blogs and portfolios — web.dev and Google's own heavy use supply the credibility. To non-technical audiences, though, \"dev\" may not even parse. .tech speaks to everyone: hardware companies, robotics teams, tech media and hackathons need no explanation at name.tech — CES runs on ces.tech. On price, .dev sits stable around $12–15 for both registration and renewal; .tech runs deep first-year promos with noticeably higher renewals, so long-term holders should budget on the renewal price. Inventory on both far exceeds .com, and .tech's breadth means two-word combos are practically free pickings. The test: if your users open a terminal → .dev's insider signal is sharper; if your audience is investors, press and the public → .tech's industry statement carries further.",
+      pickA: ["Dev tools, SDKs & API doc sites", "Personal technical blogs & portfolios", "Open-source project homes", "Value enforced HTTPS & Google stewardship"],
+      pickB: ["Hard-tech, hardware & robotics companies", "Tech media, parks & hackathons", "Tech brands facing investors & the public", "Abundant two-word combo inventory"],
+    },
+  },
+  "app-vs-io": {
+    slug: "app-vs-io",
+    a: "app",
+    b: "io",
+    zh: {
+      title: ".app 和 .io 怎么选：应用产品与技术圈层的取舍",
+      metaDescription: ".app 语义零解释成本、强制 HTTPS，.io 是开发者圈的经典身份标签但续费更贵。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "看产品形态和说话对象。.app 的语义零解释成本：用户看到 name.app 就知道这是个应用，App 下载落地页、Web App、小工具官网用它顺理成章，Google 运营加全后缀强制 HTTPS 也让它天生「正经」；面向大众用户的应用，.app 比 .io 可读得多。.io 则是技术圈层的身份标签：开发工具、API、SaaS、开源项目用 .io 是 GitHub 生态的默认审美，还能玩 domain hack（socket.io），但对圈外用户它只是两个陌生字母。价格差异明显：.app 注册续费百元上下、结构稳定；.io 注册与续费都是数倍于此，长期成本要算清。库存两者都不错，.app 的干净产品词略多。判断标准：产品「是一个应用」且用户是大众 → .app 的直白无可替代；产品是开发者工具或技术平台 → .io 的圈内信号更值钱。注意 .app 会把品牌绑定在「应用」形态上，业务超出应用范畴（内容、电商）就不合适了。",
+      pickA: ["移动/Web 应用与下载落地页", "面向大众用户的工具产品", "在意强制 HTTPS 的安全背书", "预算敏感、在意续费成本"],
+      pickB: ["开发者工具、API 与 SaaS", "开源项目与技术社区", "想玩 domain hack 的短名字", "业务形态可能超出「应用」范畴"],
+    },
+    en: {
+      title: ".app vs .io: Product Clarity or Developer Cachet",
+      metaDescription:
+        ".app needs zero explanation and enforces HTTPS; .io is the developer scene's classic badge at a higher renewal. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "It depends on what the product is and who you're talking to. .app explains itself: users see name.app and know it's an application, so download landing pages, web apps and utility tools wear it naturally — Google's stewardship and zone-wide enforced HTTPS add built-in seriousness. For mainstream users, .app reads far better than .io. .io is the tech scene's badge: dev tools, APIs, SaaS and open source live on .io as the GitHub-era default, with domain hacks (socket.io) as a bonus — but to outsiders it's just two odd letters. Pricing splits clearly: .app sits stable around $15–20 while .io costs several times more for both registration and renewal, so long-term budgets matter. Inventory is decent on both, with .app slightly richer in clean product words. The test: if the product is an app for a general audience → .app's clarity is unbeatable; if it's a developer tool or platform → .io's insider signal is worth the premium. One caveat: .app locks the brand to the app form factor — content or commerce businesses shouldn't wear it.",
+      pickA: ["Mobile/web apps & download landing pages", "Consumer-facing utility products", "Value enforced-HTTPS security posture", "Renewal-budget sensitive"],
+      pickB: ["Developer tools, APIs & SaaS", "Open source & technical communities", "Short names with domain-hack potential", "Business may outgrow the app form factor"],
+    },
+  },
+  "info-vs-net": {
+    slug: "info-vs-net",
+    a: "info",
+    b: "net",
+    zh: {
+      title: ".info 和 .net 怎么选：信息站与技术备选的老牌对决",
+      metaDescription: ".info 是最早的信息类后缀、首年极便宜，.net 是仅次于 .com 的老牌通用域。对比两者的信任度、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是二十年以上的老后缀，气质和价格结构完全不同。.info 语义就是「信息」：资料站、行业百科、文档站、活动信息页用它顺理成章，首年常年一两美元，做内容矩阵的成本几乎可以忽略；短板是历史上被垃圾站大量使用，直接做商业主站信任感偏弱，且续费比首年高出一个量级。.net 是 .com 之外资历最老的通用域：价格稳定（注册续费都百元上下）、无信任折扣，网络服务、云工具、API 平台用它名正言顺，也常被当作 .com 被注册后的第一备选——前提是品牌词足够独特。库存 .info 明显更好，几乎任何词都能注册到。判断标准：站点是「查资料」性质的（百科、文档、指南）或低成本验证内容项目 → .info 的性价比无敌；站点是长期经营的产品或服务 → .net 的稳定信任更值得，尤其技术产品。",
+      pickA: ["资料站、百科与文档站", "活动/项目信息页", "低成本验证的内容 side project", "内容矩阵与主品牌的信息子站"],
+      pickB: ["长期经营的技术产品与服务", "网络服务、云与 API 平台", "品牌词独特、.com 被注册的备选", "在意稳定续费与无信任折扣"],
+    },
+    en: {
+      title: ".info vs .net: Information Hub or Legacy Workhorse",
+      metaDescription:
+        ".info is the original information suffix with rock-bottom first-year pricing; .net is the oldest generic after .com. Compare trust, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are twenty-plus-year-old suffixes with opposite personalities and price curves. .info means exactly what it says: reference sites, industry wikis, documentation hubs and event-info pages wear it naturally, and first-year pricing sits at a dollar or two — content networks cost almost nothing to spin up. The catch: heavy historical spam use gives it a trust discount for commercial main sites, and renewals jump an order of magnitude above year one. .net is the senior generic after .com: stable pricing (registration and renewal both around $12–15), no trust discount, and a natural home for network services, cloud tools and API platforms — plus the classic .com fallback when your brand word is distinctive. Inventory clearly favors .info, where almost any word is still available. The test: a look-it-up destination (wiki, docs, guides) or a cheap content experiment → .info's value is unbeatable; a long-lived product or service, especially technical → .net's steady trust earns the difference.",
+      pickA: ["Reference sites, wikis & documentation", "Event & project information pages", "Low-cost content side projects", "Info satellites around a main brand"],
+      pickB: ["Long-lived technical products & services", "Network, cloud & API platforms", "Distinctive-word .com fallback", "Stable renewals with no trust discount"],
+    },
+  },
+  "fun-vs-games": {
+    slug: "fun-vs-games",
+    a: "fun",
+    b: "games",
+    zh: {
+      title: ".fun 和 .games 怎么选：泛娱乐与游戏垂直的定位对比",
+      metaDescription: ".fun 语义宽泛、首年极便宜，适合一切娱乐场景；.games 是游戏行业的垂直声明。对比两者的语义宽窄、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "都是「玩」，宽窄不同。.fun 覆盖一切想让用户「玩起来」的场景：小游戏站、趣味测试、互动营销页、派对策划、玩具与亲子品牌，首年常年一两美元、库存极好，做 campaign 页和趣味副项目几乎零成本；代价是太便宜导致低质站多，品牌要靠内容撑住第一印象。.games 是游戏行业的垂直声明：游戏工作室、独立游戏官网、电竞战队、游戏媒体用 name.games，一眼就是「正经做游戏的」，行业内认知度高；价格结构上首年促销常见、续费一两百元档，比 .fun 的续费略高但差距不大。判断标准：业务核心是游戏本身（开发、发行、电竞、游戏媒体）→ .games 的垂直信号更专业；业务是泛娱乐或「游戏只是形式」（营销互动、趣味工具、活动）→ .fun 更宽、更便宜、更轻松。两个都不适合正经严肃的场景——金融、医疗别碰。",
+      pickA: ["趣味测试与互动营销页", "派对、活动与玩具亲子品牌", "创意小工具与娱乐副项目", "预算极低的轻量娱乐站"],
+      pickB: ["游戏工作室与独立游戏官网", "电竞战队与赛事", "游戏媒体与社区", "想要行业垂直信号的游戏品牌"],
+    },
+    en: {
+      title: ".fun vs .games: Broad Playfulness or Gaming-Industry Signal",
+      metaDescription:
+        ".fun is broad, cheap and fits anything entertaining; .games is the gaming industry's vertical statement. Compare semantic breadth, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both say play; the difference is breadth. .fun covers anything meant to be enjoyed: casual game portals, quizzes, interactive marketing pages, party planning, toy and family brands — with first-year pricing at a dollar or two and excellent inventory, campaign pages and playful side projects cost almost nothing. The trade-off: rock-bottom pricing attracts low-quality sites, so your content must carry the first impression. .games is the gaming industry's vertical statement: studios, indie game sites, esports teams and gaming media read instantly serious-about-games at name.games, with strong recognition inside the industry. Its pricing runs cheap first-year promos with renewals around $20–30, slightly above .fun's but not decisively. The test: if games are the business itself (development, publishing, esports, media) → .games' vertical signal reads professional; if the business is broadly entertaining and play is just the medium (marketing, quizzes, events) → .fun is wider, cheaper and lighter. Neither suits serious verticals — keep finance and healthcare away from both.",
+      pickA: ["Quizzes & interactive marketing pages", "Party, event, toy & family brands", "Creative toys & entertainment side projects", "Ultra-low-budget playful sites"],
+      pickB: ["Game studios & indie game sites", "Esports teams & tournaments", "Gaming media & communities", "Gaming brands wanting the vertical signal"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
