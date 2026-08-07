@@ -45,6 +45,16 @@ const WhyPage = lazyChunk(() => import("@/components/why-page"), (m) => m.WhyPag
 const AgentPage = lazyChunk(() => import("@/components/agent-page"), (m) => m.AgentPage);
 const ResultsPage = lazyChunk(() => import("@/components/results-page"), (m) => m.ResultsPage);
 
+/** 首屏空闲时预取搜索路径的懒 chunk，点「开始猎取」时零等待 */
+function prefetchSearchChunks() {
+  const load = () => {
+    void import("@/components/agent-page");
+    void import("@/components/results-page");
+  };
+  if (typeof window.requestIdleCallback === "function") window.requestIdleCallback(load, { timeout: 3000 });
+  else window.setTimeout(load, 2000);
+}
+
 function PageFallback() {
   return <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-16" />;
 }
@@ -144,6 +154,10 @@ export default function App() {
     });
 
   const availableCount = rows.filter((r) => r.status === "available").length;
+
+  useEffect(() => {
+    if (mode === "home") prefetchSearchChunks();
+  }, [mode]);
 
   useEffect(() => {
     if (!running && mode === "results" && rows.length > 0) {
