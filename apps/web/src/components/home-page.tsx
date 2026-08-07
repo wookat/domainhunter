@@ -377,6 +377,8 @@ export function HomePage({
   const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown" }[]>([]);
   const [quickRunning, setQuickRunning] = useState(false);
   const [quickMoreDone, setQuickMoreDone] = useState(false);
+  // quick-check 图例过滤（IDS 式）：按状态筛 chips
+  const [quickFilter, setQuickFilter] = useState<"all" | "available" | "taken" | "unknown">("all");
   const [quickCopied, setQuickCopied] = useState(false);
   const [variantCopied, setVariantCopied] = useState(false);
   const quickAbortRef = useRef<AbortController | null>(null);
@@ -397,6 +399,7 @@ export function HomePage({
     setQuickRows([]);
     setQuickRunning(false);
     setQuickMoreDone(false);
+    setQuickFilter("all");
     setVariantRows([]);
     setVariantChecked(0);
     setVariantTotal(0);
@@ -709,9 +712,37 @@ export function HomePage({
                 {t("home.quickCheckBtn", { label: quick.label })}
               </button>
             </div>
+            {/* 图例过滤：chips 多时按状态筛选（可注册/已注册/未知） */}
+            {quickRows.length >= 6 && !quickRunning && (
+              <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
+                {(
+                  [
+                    { key: "all", dot: "bg-txt2", n: quickRows.length },
+                    { key: "available", dot: "bg-brand", n: quickRows.filter((r) => r.status === "available").length },
+                    { key: "taken", dot: "bg-taken", n: quickRows.filter((r) => r.status === "taken").length },
+                    { key: "unknown", dot: "bg-txt2/50", n: quickRows.filter((r) => r.status === "unknown").length },
+                  ] as { key: typeof quickFilter; dot: string; n: number }[]
+                )
+                  .filter((f) => f.key === "all" || f.n > 0)
+                  .map((f) => (
+                    <button
+                      key={f.key}
+                      onClick={() => setQuickFilter(f.key)}
+                      aria-pressed={quickFilter === f.key}
+                      className={cn(
+                        "tnum inline-flex min-h-[32px] items-center gap-1.5 rounded-full border px-2.5 text-[11px]",
+                        quickFilter === f.key ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:text-txt0",
+                      )}
+                    >
+                      <span className={cn("h-2 w-2 rounded-sm", f.dot)} />
+                      {t(`home.quickLegend.${f.key}` as I18nKey, { n: f.n })}
+                    </button>
+                  ))}
+              </div>
+            )}
             {quickRows.length > 0 && (
               <div className="mt-2.5 flex flex-wrap gap-2">
-                {quickRows.map((row) =>
+                {quickRows.filter((row) => quickFilter === "all" || row.status === quickFilter).map((row) =>
                   row.status === "available" ? (
                     <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
                       <a

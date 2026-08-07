@@ -328,7 +328,7 @@ export function ResultsPage({
                 {t("results.stat.checked", { n: rows.length })}
               </span>
               <span className="rounded-md border border-line bg-bg1 px-2 py-0.5 text-txt1">
-                {t("results.stat.rounds", { n: roundCount })}
+                {roundCount === 1 ? t("results.stat.round1") : t("results.stat.rounds", { n: roundCount })}
               </span>
               {elapsedSec !== undefined && (
                 <span className="rounded-md border border-line bg-bg1 px-2 py-0.5 text-txt1">
