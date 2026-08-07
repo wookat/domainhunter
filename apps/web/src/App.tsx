@@ -662,7 +662,7 @@ export default function App() {
       )}
       {mode === "advanced" && (
         <Suspense fallback={<PageFallback />}>
-          <AdvancedPage />
+          <AdvancedPage shortlist={shortlist} />
         </Suspense>
       )}
       {mode === "monitors" && (
