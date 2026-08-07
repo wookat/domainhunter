@@ -7,6 +7,7 @@ import { useI18n, type I18nKey } from "@/lib/i18n";
 import { toUsd, usePrices } from "@/lib/prices";
 import { REGISTRARS } from "@/lib/registrars";
 import { cn } from "@/lib/utils";
+import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "@/lib/variants";
 import { tldPrice, type Row } from "@/types";
 
 const EXAMPLES = ["独立开发者的 AI 周报工具", "宠物营养订阅电商", "极简冥想 App", "跨境 SaaS 数据看板"];
@@ -426,8 +427,6 @@ export function HomePage({
   const quickAbortRef = useRef<AbortController | null>(null);
 
   // 变体建议：心仪名字被注册时，用前后缀组合免费核验一批变体（同样不消耗 AI 次数）
-  const VARIANT_PREFIXES = ["get", "my", "try", "use"];
-  const VARIANT_SUFFIXES = ["app", "hq", "labs", "hub"];
   const [variantRows, setVariantRows] = useState<{ domain: string; status: "available" | "taken" | "unknown" }[]>([]);
   const [variantChecked, setVariantChecked] = useState(0);
   const [variantTotal, setVariantTotal] = useState(0);
