@@ -130,7 +130,58 @@ export function segmentPinyin(label: string): string[][] {
   return results;
 }
 
-export type PinyinCheck = { ok: false } | { ok: true; ambiguous: boolean };
+// ---------------- 拼音语感风险评分（R142） ----------------
+// 在合法切分之上追加确定性「语感风险」规则：只针对高风险组合降分/淘汰，
+// 规则刻意保守（宁放过不误杀），知名品牌名（zhihu/xiaohongshu/bilibili/douban/
+// taobao/baidu/weibo/meituan/pinduoduo/xiaomi 等）必须全部零扣分通过。
+//
+// 齿龈-卷舌系声母集合：zh/ch/sh（卷舌）、z/c/s（平舌）、j/q/x（舌面）。
+// 这三组声母发音部位接近，连续出现时口腔调音来回切换极小、音色雷同，
+// 对母语者拗口、对非母语者几乎不可读（如 xian-zhao-xian 的 x/zh/x 连串）。
+const SIBILANT_INITIALS = new Set<string>(["zh", "ch", "sh", "z", "c", "s", "j", "q", "x"]);
+
+// 取音节声母：zh/ch/sh 双字母优先，其余取首字母；零声母（a/e/o 开头）与 y/w 返回 ""
+function syllableInitial(syl: string): string {
+  const two = syl.slice(0, 2);
+  if (two === "zh" || two === "ch" || two === "sh") return two;
+  const first = syl[0];
+  return /[aeiou]/.test(first) ? "" : first;
+}
+
+// 语感风险评分（确定性规则，输入为一种切分方案的音节序列）：
+// 规则 1：连续 ≥3 个音节的声母都属于齿龈-卷舌系（zh/ch/sh/z/c/s/j/q/x）→ +20
+//   依据：同发音部位声母连串缺乏调音对比，读感含混拗口（xian-zhao-xian 型）
+// 规则 2：恰好 3 音节且首尾音节完全相同（ABA 型，如 xian-zhao-xian）→ +15
+//   依据：首尾同字回环在品牌名中无叠音美感（叠音美感是 AAB/ABB 相邻重复，
+//   如 bilibili/pinduoduo），ABA 型读起来像绕口令；限定 3 音节避免误伤 4 音节叠词
+// 规则 3：≥3 音节且每个音节都 ≥4 字母（zhuang-chuang-shuang 型全长音节堆叠）→ +15
+//   依据：全词无短音节调剂，视觉与拼读负担都重（对照：xiao-hong-shu 有 shu 收尾）
+// 累计 ≥30 → 上层直接丢弃；<30 → 仅从 readability 扣除风险分
+export function pinyinQualityRisk(syllables: string[]): number {
+  let risk = 0;
+  // 规则 1：齿龈-卷舌系声母连串
+  let run = 0;
+  let maxRun = 0;
+  for (const syl of syllables) {
+    if (SIBILANT_INITIALS.has(syllableInitial(syl))) {
+      run++;
+      if (run > maxRun) maxRun = run;
+    } else {
+      run = 0;
+    }
+  }
+  if (maxRun >= 3) risk += 20;
+  // 规则 2：3 音节 ABA 型首尾重复
+  if (syllables.length === 3 && syllables[0] === syllables[2]) risk += 15;
+  // 规则 3：≥3 音节全长音节堆叠
+  if (syllables.length >= 3 && syllables.every((s) => s.length >= 4)) risk += 15;
+  return risk;
+}
+
+// 风险分淘汰阈值：单条规则命中只降分，两条以上叠加才丢弃（保守，宁放过不误杀）
+export const PINYIN_RISK_DROP_THRESHOLD = 30;
+
+export type PinyinCheck = { ok: false } | { ok: true; ambiguous: boolean; risk: number };
 
 // 校验 theme === "pinyin" 的候选：
 // - 纯辅音缩写（≤3 字符且不含元音，如 zlz）放行——AI 偶尔把声母缩写标成 pinyin，不应误杀
@@ -138,15 +189,19 @@ export type PinyinCheck = { ok: false } | { ok: true; ambiguous: boolean };
 // - 最短切分方案音节数 > 4 → 丢弃
 // - 存在 ≥2 种「音节数相同且都是最少音节数」的切分方案（如 mingan → min-gan / ming-an）→ 拼读有歧义，
 //   仅降 readability，不丢弃；带零声母元音音节的冗余长切分（如 xiao → xi-a-o）不算歧义
+// - R142：对最短切分方案做语感风险评分，风险分 ≥ 阈值 → 丢弃，< 阈值 → 从 readability 扣除
 export function checkPinyinLabel(label: string): PinyinCheck {
-  if (label.length <= 3 && !/[aeiouv]/.test(label)) return { ok: true, ambiguous: false };
+  if (label.length <= 3 && !/[aeiouv]/.test(label)) return { ok: true, ambiguous: false, risk: 0 };
   if (/[^a-z]/.test(label)) return { ok: false };
   const segs = segmentPinyin(label);
   if (segs.length === 0) return { ok: false };
   const minSyllables = Math.min(...segs.map((s) => s.length));
   if (minSyllables > 4) return { ok: false };
   const minimal = segs.filter((s) => s.length === minSyllables);
-  return { ok: true, ambiguous: minimal.length >= 2 };
+  // 语感风险按各最短切分方案取最小值：只要存在一种低风险读法就按低风险计（保守，避免误杀）
+  const risk = Math.min(...minimal.map((s) => pinyinQualityRisk(s)));
+  if (risk >= PINYIN_RISK_DROP_THRESHOLD) return { ok: false };
+  return { ok: true, ambiguous: minimal.length >= 2, risk };
 }
 
 export interface AiUnderstanding {
@@ -346,7 +401,8 @@ async function generateOnce(
     if (theme === "pinyin") {
       const check = checkPinyinLabel(label);
       if (!check.ok) continue;
-      if (check.ambiguous) readabilityPenalty = 15;
+      // 歧义切分扣 15 + 语感风险分（R142），叠加后从 readability 扣除
+      readabilityPenalty = (check.ambiguous ? 15 : 0) + check.risk;
     }
     out.push({
       label,
