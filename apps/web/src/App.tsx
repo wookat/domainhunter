@@ -99,7 +99,7 @@ export default function App() {
     window.setTimeout(() => {
       setResumedNotice(false);
       setNoticeClosing(false);
-    }, 250);
+    }, 350);
   };
   const [values, setValues] = useState<HomeValues>(() => saved?.values ?? { description: "", tlds: initialTlds(), style: "", lengthPref: "" });
   const [rows, setRows] = useState<Row[]>(saved?.rows ?? []);
@@ -482,12 +482,14 @@ export default function App() {
       )}
 
       {(mode === "agent" || mode === "results") && (
-        <UnderstandingBar
-          understanding={aiUnderstanding}
-          fallback={understanding}
-          onRefine={refine}
-          running={running}
-        />
+        <div className={noticeClosing ? "pointer-events-none" : undefined}>
+          <UnderstandingBar
+            understanding={aiUnderstanding}
+            fallback={understanding}
+            onRefine={refine}
+            running={running}
+          />
+        </div>
       )}
 
       {mode === "home" && (
