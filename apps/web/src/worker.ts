@@ -34,6 +34,9 @@ const MAX_MONITOR_DOMAINS = 500; // 全局监控上限
 const MAX_MONITOR_CHANGES = 100; // 变化记录保留条数
 const PRICES_KEY = `prices:v2:${TLD_LIST.length}`; // key 掺 TLD 数量：指南扩容后旧缓存自动失效
 const PRICES_TTL = 24 * 3600; // Porkbun 价格缓存 24h
+const PRICES_STALE_KEY = "prices:latest"; // 不带版本的 stale 兜底 key：升版冷缓存 + 上游不可达时回退
+const PRICES_STALE_TTL = 30 * 24 * 3600; // stale 兜底保留 30 天（每次成功拉取刷新）
+const PRICES_FETCH_TIMEOUT_MS = 10_000; // Porkbun 拉取超时（原依赖 Workers 默认 ~60s，收紧到 10s）
 const SITE_ORIGIN = "https://hunt.zalize.com";
 const FAST_FIRST_ROUND_COUNT = 8; // fast 模式首轮候选数（更快首字节）
 const DOMAIN_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62}))+$/;
@@ -570,7 +573,20 @@ interface PriceEntry {
   approx?: true;
 }
 
-/** 实时价格负载（JSON 字符串）：Porkbun 公开价格 API（美元），KV 缓存 24h */
+/** 上游失败/超时时回退不带版本的 stale key，响应标注 stale:true（TLD 数可少于当前，缺的走前端静态参考价） */
+async function loadStalePayload(kv: KVNamespace | undefined): Promise<string | null> {
+  if (!kv) return null;
+  try {
+    const stale = await kv.get(PRICES_STALE_KEY, "text");
+    if (!stale) return null;
+    const parsed = JSON.parse(stale) as Record<string, unknown>;
+    return JSON.stringify({ ...parsed, stale: true });
+  } catch {
+    return null;
+  }
+}
+
+/** 实时价格负载（JSON 字符串）：Porkbun 公开价格 API（美元），KV 缓存 24h；上游不可达时回退 stale key */
 async function loadPricesPayload(kv: KVNamespace | undefined): Promise<string | null> {
   if (kv) {
     try {
@@ -580,11 +596,16 @@ async function loadPricesPayload(kv: KVNamespace | undefined): Promise<string | 
   }
   let data: PorkbunPricing;
   try {
-    const res = await fetch("https://api.porkbun.com/api/json/v3/pricing/get", { method: "POST", headers: { "content-type": "application/json" }, body: "{}" });
-    if (!res.ok) return null;
+    const res = await fetch("https://api.porkbun.com/api/json/v3/pricing/get", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: "{}",
+      signal: AbortSignal.timeout(PRICES_FETCH_TIMEOUT_MS),
+    });
+    if (!res.ok) return loadStalePayload(kv);
     data = (await res.json()) as PorkbunPricing;
   } catch {
-    return null;
+    return loadStalePayload(kv);
   }
   const prices: Record<string, PriceEntry> = {};
   for (const tld of TLD_LIST) {
@@ -593,11 +614,12 @@ async function loadPricesPayload(kv: KVNamespace | undefined): Promise<string | 
     const renewal = Number(p?.renewal);
     if (Number.isFinite(registration) && Number.isFinite(renewal)) prices[tld] = { registration, renewal };
   }
-  if (Object.keys(prices).length === 0) return null;
-  const payload = JSON.stringify({ prices, currency: "USD", usdToCny: USD_TO_CNY, fetchedAt: Date.now() });
+  if (Object.keys(prices).length === 0) return loadStalePayload(kv);
+  const payload = JSON.stringify({ prices, currency: "USD", usdToCny: USD_TO_CNY, fetchedAt: Date.now(), tldCount: Object.keys(prices).length });
   if (kv) {
     try {
       await kv.put(PRICES_KEY, payload, { expirationTtl: PRICES_TTL });
+      await kv.put(PRICES_STALE_KEY, payload, { expirationTtl: PRICES_STALE_TTL });
     } catch { /* 缓存写入失败不影响返回 */ }
   }
   return payload;
@@ -605,7 +627,12 @@ async function loadPricesPayload(kv: KVNamespace | undefined): Promise<string | 
 
 app.get("/api/prices", async (c) => {
   const payload = await loadPricesPayload(c.env.CACHE);
-  if (!payload) return c.json({ error: "upstream_error" }, 502);
+  // 彻底无数据也返回 200 + 空 prices（前端全部走 ≈ 静态参考价），不再 502
+  if (!payload) {
+    return new Response(JSON.stringify({ prices: {}, currency: "USD", usdToCny: USD_TO_CNY, fetchedAt: null, stale: true }), {
+      headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" },
+    });
+  }
   return new Response(payload, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 

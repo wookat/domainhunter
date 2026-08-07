@@ -5,7 +5,7 @@ import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { buildPricesFaq } from "@/content/prices-faq";
 import { TLD_LIST } from "@/content/tld-list";
 import { useI18n } from "@/lib/i18n";
-import { toCny, toUsd, usePrices } from "@/lib/prices";
+import { toCny, toUsd, usePriceMeta, usePrices } from "@/lib/prices";
 import { tldPrice } from "@/types";
 import { cn } from "@/lib/utils";
 
@@ -31,6 +31,7 @@ function buildRows(prices: ReturnType<typeof usePrices>): PriceRow[] {
 export function PricesPage() {
   const { t, lang } = useI18n();
   const prices = usePrices();
+  const meta = usePriceMeta();
   const [sort, setSort] = useState<SortKey>("reg");
   const [desc, setDesc] = useState(false);
   const [filter, setFilter] = useState("");
@@ -68,6 +69,11 @@ export function PricesPage() {
       </p>
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{t("prices.title")}</h1>
       <p className="mt-3 text-[15px] leading-relaxed text-txt1">{t("prices.intro")}</p>
+      {meta?.stale && meta.fetchedAt !== null && (
+        <p className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-[13px] text-amber-600">
+          {t("prices.staleNote", { hours: Math.max(1, Math.round((Date.now() - meta.fetchedAt) / 3600_000)) })}
+        </p>
+      )}
 
       <input
         value={filter}
