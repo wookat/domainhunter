@@ -10,38 +10,60 @@ export interface LivePrice {
 
 export type PriceMap = Record<string, LivePrice>;
 
-let cache: PriceMap | null = null;
-let inflight: Promise<PriceMap | null> | null = null;
+export interface PriceMeta {
+  /** 后端回退了 stale 缓存（或完全无数据） */
+  stale: boolean;
+  /** 价格拉取时间（ms）；完全无数据时为 null */
+  fetchedAt: number | null;
+}
 
-async function fetchPrices(): Promise<PriceMap | null> {
+interface PricesResult {
+  prices: PriceMap | null;
+  meta: PriceMeta | null;
+}
+
+let cache: PricesResult | null = null;
+let inflight: Promise<PricesResult> | null = null;
+
+async function fetchPrices(): Promise<PricesResult> {
   try {
     const res = await fetch("/api/prices");
-    if (!res.ok) return null;
-    const data = (await res.json()) as { prices?: PriceMap };
-    return data.prices ?? null;
+    if (!res.ok) return { prices: null, meta: null };
+    const data = (await res.json()) as { prices?: PriceMap; stale?: boolean; fetchedAt?: number | null };
+    const prices = data.prices && Object.keys(data.prices).length > 0 ? data.prices : null;
+    return { prices, meta: { stale: data.stale === true, fetchedAt: data.fetchedAt ?? null } };
   } catch {
-    return null;
+    return { prices: null, meta: null };
   }
 }
 
-/** Porkbun 实时价（模块级共享缓存）；拉取失败时返回 null，由调用方回退静态参考价 */
-export function usePrices(): PriceMap | null {
-  const [prices, setPrices] = useState<PriceMap | null>(cache);
+function usePricesResult(): PricesResult | null {
+  const [result, setResult] = useState<PricesResult | null>(cache);
   useEffect(() => {
     if (cache) return;
-    inflight ??= fetchPrices().then((p) => {
-      cache = p;
-      return p;
+    inflight ??= fetchPrices().then((r) => {
+      cache = r;
+      return r;
     });
     let cancelled = false;
-    void inflight.then((p) => {
-      if (!cancelled && p) setPrices(p);
+    void inflight.then((r) => {
+      if (!cancelled) setResult(r);
     });
     return () => {
       cancelled = true;
     };
   }, []);
-  return prices;
+  return result;
+}
+
+/** Porkbun 实时价（模块级共享缓存）；拉取失败时返回 null，由调用方回退静态参考价 */
+export function usePrices(): PriceMap | null {
+  return usePricesResult()?.prices ?? null;
+}
+
+/** 价格元信息：stale 回退标记 + 拉取时间（仅 /prices 页轻提示用） */
+export function usePriceMeta(): PriceMeta | null {
+  return usePricesResult()?.meta ?? null;
 }
 
 export function toCny(usd: number): number {
