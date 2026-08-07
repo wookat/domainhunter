@@ -696,7 +696,11 @@ app.get("/mcp", async (c) => {
     .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
     .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/mcp" />`)
-    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/mcp" />`);
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/mcp" />`)
+    .replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/mcp?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
   html = injectHreflang(html, "/mcp").replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/mcp", lang)}</script></head>`,
@@ -796,7 +800,11 @@ app.get("/advanced", async (c) => {
     .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
     .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/advanced" />`)
-    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/advanced" />`);
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/advanced" />`)
+    .replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/advanced?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
   html = injectHreflang(html, "/advanced");
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx");
@@ -808,6 +816,24 @@ app.get("/advanced", async (c) => {
 app.get("/api/og/prices", (c) => {
   const lang = c.req.query("lang") === "en" ? "en" : "zh";
   return new Response(pageOgSvg(lang === "en" ? "Pricing" : "域名价格", PRICES_META[lang].title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
+// MCP 接入页分享图（须在 /api/og/:id 之前注册）
+app.get("/api/og/mcp", (c) => {
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  const title = lang === "en" ? "Domain checks inside your AI tools" : "把域名核验接进你的 AI 助手";
+  return new Response(pageOgSvg("MCP Server", title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
+// 高级模式（批量核验）分享图（须在 /api/og/:id 之前注册）
+app.get("/api/og/advanced", (c) => {
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  const title = lang === "en" ? "Paste a list, verify availability live" : "粘贴名单，一键实时查可注册";
+  return new Response(pageOgSvg(lang === "en" ? "Bulk check" : "批量核验", title, lang), {
     headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
   });
 });
