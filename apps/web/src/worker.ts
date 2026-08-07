@@ -636,6 +636,15 @@ app.get("/api/og/prices", (c) => {
   });
 });
 
+// 产品定位页分享图（须在 /api/og/:id 之前注册）
+app.get("/api/og/why", (c) => {
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  const title = lang === "en" ? "The good names are taken? Hunt differently." : "好域名都被占了？换个找法";
+  return new Response(pageOgSvg(lang === "en" ? "Why us" : "产品定位", title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
 // 首页分享图（静态 og.png 为中文，英文首页用动态 SVG，平台不支持 SVG 时回退 og.png；须在 /api/og/:id 之前注册）
 app.get("/api/og/home", (c) => {
   const lang = c.req.query("lang") === "en" ? "en" : "zh";
@@ -1090,10 +1099,51 @@ app.get("/prices", async (c) => {
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
-// 内容最后更新日期（sitemap <lastmod>）：每次内容页增减/改写时更新
-const CONTENT_LASTMOD = "2026-08-06";
+// 产品定位页（SPA 路由 + SSR meta）
+const WHY_META = {
+  zh: {
+    title: "为什么选 DomainHunter：好域名都被占了，换个找法",
+    desc: "传统域名查询只显示相似名，AI 起名工具不核验可注册。DomainHunter 用 Agent 多轮反思：理解寓意→构思→实时核验→反思再猎，直到凑够真正可注册的好名字。免费开源。",
+  },
+  en: {
+    title: "Why DomainHunter: all the good names are taken — hunt differently",
+    desc: "Classic domain search only shows look-alikes; AI name generators never verify availability. DomainHunter runs an agent loop — understand the meaning, brainstorm, verify live, reflect and hunt again — until there are enough truly registrable names. Free and open source.",
+  },
+};
 
-const sitemapPaths = () => ["/", "/prices", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
+app.get("/why", async (c) => {
+  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const loc = WHY_META[lang];
+  const title = escapeHtml(`${loc.title} | DomainHunter`);
+  const desc = escapeHtml(loc.desc);
+  let html = await res.text();
+  html = html
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/why" />`)
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}/why" />`)
+    .replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/why?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
+  html = injectHreflang(html, "/why").replace(
+    "</head>",
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/why", lang)}</script></head>`,
+  );
+  html = setHtmlLang(html, lang);
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/why-page.tsx");
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
+});
+
+// 内容最后更新日期（sitemap <lastmod>）：每次内容页增减/改写时更新
+const CONTENT_LASTMOD = "2026-08-07";
+
+const sitemapPaths = () => ["/", "/prices", "/why", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
 
 app.get("/sitemap.xml", (c) => {
   const paths = sitemapPaths();
@@ -1120,6 +1170,7 @@ app.get("/llms.txt", (c) => {
     "## Core pages",
     line("/", "AI domain search (homepage, instant availability quick-check included)"),
     line("/prices", "Domain price overview: registration vs renewal for 30 TLDs, live prices"),
+    line("/why", "Why DomainHunter: agent loop that reflects over rounds and only surfaces registrable names"),
     "",
     "## TLD guides",
     ...TLD_LIST.map((t) => line(`/tld/${t}`, TLD_GUIDES[t].en.title)),

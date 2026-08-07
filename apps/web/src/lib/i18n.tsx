@@ -38,7 +38,8 @@ const zh = {
   // 着陆页
   "home.badge": "AI Agent · 多轮反思 · RDAP+DNS 实时核验",
   "home.title1": "说出寓意，",
-  "home.title2": "猎到真正可注册的好域名",
+  "home.title2": "猎到真正可注册的",
+  "home.title2b": "好域名",
   "home.subtitle": "描述你的想法，AI 猎手构思、核验、反思再猎——多轮迭代直到凑够你能立刻注册的好名字。",
   "home.placeholder": "例如：面向独立开发者的 AI 周报工具，名字要短、极客感、好读好记…",
   "home.start": "开始猎取",
@@ -48,6 +49,7 @@ const zh = {
   "home.trustStream": "结果流式返回，先到先看",
   "home.trustOss": "开源 MIT",
   "home.how.title": "怎么用 / 为什么好用",
+  "home.whyLink": "好域名都被占了？看看我们为什么不一样 →",
   "home.how.step1.title": "AI 构思",
   "home.how.step1.desc": "描述你的想法，AI 按寓意、风格、长度批量构思候选名字，并解释每个名字的寓意。",
   "home.how.step2.title": "实时核验",
@@ -277,6 +279,7 @@ const zh = {
   "guide.others": "其他行业命名指南",
   "footer.tldGuides": "TLD 注册指南",
   "footer.prices": "价格总览",
+  "footer.why": "为什么选 DomainHunter",
   "footer.industryGuides": "行业命名指南",
   "footer.compares": "后缀对比",
   // AI 理解确认条
@@ -334,7 +337,8 @@ const en: Record<I18nKey, string> = {
   "score.explain": "The overall score averages four dimensions: Length (shorter is better), Readability (easy to say and spell), Relevance (fit with your brief), and Brandability (feels like a trademark-ready brand). Estimated by AI at generation time — for reference only.",
   "home.badge": "AI Agent · Multi-round reflection · Live RDAP+DNS checks",
   "home.title1": "Describe the idea, ",
-  "home.title2": "hunt domains you can actually register",
+  "home.title2": "hunt domains you can ",
+  "home.title2b": "actually register",
   "home.subtitle": "Describe your idea — an AI agent brainstorms, verifies live, then reflects and hunts again, round after round, until there are enough names you can register right now.",
   "home.placeholder": "e.g. An AI weekly-report tool for indie developers. Short, geeky, easy to read and remember…",
   "home.start": "Start hunting",
@@ -344,6 +348,7 @@ const en: Record<I18nKey, string> = {
   "home.trustStream": "Results stream in as they're verified",
   "home.trustOss": "Open source · MIT",
   "home.how.title": "How it works",
+  "home.whyLink": "All the good names taken? See why we hunt differently →",
   "home.how.step1.title": "AI brainstorms",
   "home.how.step1.desc": "Describe your idea and AI generates candidate names in bulk — tuned to meaning, style, and length — with the reasoning behind each one.",
   "home.how.step2.title": "Live verification",
@@ -564,6 +569,7 @@ const en: Record<I18nKey, string> = {
   "guide.others": "More industry naming guides",
   "footer.tldGuides": "TLD registration guides",
   "footer.prices": "Price overview",
+  "footer.why": "Why DomainHunter",
   "footer.industryGuides": "Industry naming guides",
   "footer.compares": "TLD comparisons",
   "understand.prefix": "I hear you're after: ",
@@ -640,6 +646,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
     const path = window.location.pathname;
     if (path === "/prices") document.title = `${dicts[lang]["prices.title"]} | DomainHunter`;
+    else if (path === "/why") document.title = `${dicts[lang]["footer.why"]} | DomainHunter`;
     else if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/")) document.title = dicts[lang]["meta.title"];
   }, [lang]);
 

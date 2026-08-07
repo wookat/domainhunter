@@ -67,8 +67,8 @@
     --brand-line: rgba(5, 150, 105, 0.3);
     --amber: #b45309;
     --amber-dim: rgba(180, 83, 9, 0.1);
-    --taken: #71717a;
-    --taken-dim: rgba(113, 113, 122, 0.1);
+    --taken: #52525b;
+    --taken-dim: rgba(113, 113, 122, 0.14);
     --gold: #b7791f;
     --gold-dim: rgba(183, 121, 31, 0.12);
     --glow: radial-gradient(ellipse 60% 45% at 50% -12%, rgba(5, 150, 105, 0.1), transparent 70%);
