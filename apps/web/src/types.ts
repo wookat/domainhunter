@@ -7,12 +7,15 @@ export interface Scores {
   brandability: number;
 }
 
+export type Theme = "pinyin" | "word" | "coined" | "blend";
+
 export interface Row {
   domain: string;
   label: string;
   tld: string;
   status: Status;
   meaning?: string;
+  theme?: Theme;
   scores?: Scores;
   round: number;
 }
@@ -30,7 +33,7 @@ export interface StreamEvent {
   type?: "round" | "proposed" | "done" | "error" | "understanding";
   round?: number;
   note?: string;
-  items?: { label: string; meaning: string; scores?: Scores }[];
+  items?: { label: string; meaning: string; theme?: Theme; scores?: Scores }[];
   tlds?: string[];
   availableCount?: number;
   target?: number;
@@ -39,6 +42,7 @@ export interface StreamEvent {
   domain?: string;
   status?: Status;
   meaning?: string;
+  theme?: Theme;
   cached?: boolean;
   core?: string;
   style?: string;

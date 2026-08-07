@@ -19,9 +19,9 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { CopyButton, DomainRow, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import { exportRows } from "@/lib/export";
-import { useI18n } from "@/lib/i18n";
+import { useI18n, type I18nKey } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
-import { scoreBadgeClass, tldPrice, totalScore, type Row } from "@/types";
+import { scoreBadgeClass, tldPrice, totalScore, type Row, type Theme } from "@/types";
 import { cn } from "@/lib/utils";
 
 type StatusFilter = "available" | "all" | "taken";
@@ -248,6 +248,7 @@ export function ResultsPage({
   const prices = usePrices();
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("available");
   const [tldFilter, setTldFilter] = useState<string>("");
+  const [themeFilter, setThemeFilter] = useState<Theme | "">("");
   const [sort, setSort] = useState<SortKey>("score");
   const [view, setView] = useState<View>("rows");
   const [linkCopied, setLinkCopied] = useState(false);
@@ -260,6 +261,13 @@ export function ResultsPage({
   const tldCounts = useMemo(() => {
     const m = new Map<string, number>();
     for (const r of availableRows) m.set(r.tld, (m.get(r.tld) ?? 0) + 1);
+    return [...m.entries()].sort((a, b) => b[1] - a[1]);
+  }, [availableRows]);
+
+  // 命名思路聚类 chips（Namelix 式）：拼音/英文词/造词/混搭
+  const themeCounts = useMemo(() => {
+    const m = new Map<Theme, number>();
+    for (const r of availableRows) if (r.theme) m.set(r.theme, (m.get(r.theme) ?? 0) + 1);
     return [...m.entries()].sort((a, b) => b[1] - a[1]);
   }, [availableRows]);
 
@@ -277,8 +285,9 @@ export function ResultsPage({
   const visible = useMemo(() => {
     let list = statusFilter === "available" ? availableRows : statusFilter === "taken" ? takenRows : rows;
     if (tldFilter) list = list.filter((r) => r.tld === tldFilter);
+    if (themeFilter) list = list.filter((r) => r.theme === themeFilter);
     return sortRows(list, sort, priceOf);
-  }, [rows, availableRows, takenRows, statusFilter, tldFilter, sort, priceOf]);
+  }, [rows, availableRows, takenRows, statusFilter, tldFilter, themeFilter, sort, priceOf]);
 
   // 键盘导航：↑↓ 选中 / C 复制 / S 收藏 / Enter 注册 / Space 再来一轮
   useEffect(() => {
@@ -437,6 +446,23 @@ export function ResultsPage({
                   )}
                 >
                   .{t} {n}
+                </button>
+              ))}
+            </div>
+          )}
+          {themeCounts.length > 1 && (
+            <div className="flex items-center gap-1 overflow-x-auto rounded-lg border border-line bg-bg1 p-1 no-scrollbar">
+              {themeCounts.map(([th, n]) => (
+                <button
+                  key={th}
+                  onClick={() => setThemeFilter(themeFilter === th ? "" : th)}
+                  aria-pressed={themeFilter === th}
+                  className={cn(
+                    "tnum shrink-0 rounded-md px-2 py-1 text-[11px]",
+                    themeFilter === th ? "bg-brand-dim font-semibold text-brand" : "text-txt1 hover:text-txt0",
+                  )}
+                >
+                  {t(`results.theme.${th}` as I18nKey)} {n}
                 </button>
               ))}
             </div>

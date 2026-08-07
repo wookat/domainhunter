@@ -196,6 +196,7 @@ export default function App() {
             tld: t,
             status: "checking",
             meaning: it.meaning,
+            theme: it.theme,
             scores: it.scores,
             round,
           }),
@@ -227,7 +228,7 @@ export default function App() {
               : r,
           ),
         );
-        return prev.map((r) => (r.domain === ev.domain ? { ...r, status, meaning: r.meaning ?? ev.meaning } : r));
+        return prev.map((r) => (r.domain === ev.domain ? { ...r, status, meaning: r.meaning ?? ev.meaning, theme: r.theme ?? ev.theme } : r));
       });
     }
   }
