@@ -1104,6 +1104,186 @@ const GUIDES = {
       ],
     },
   },
+  world: {
+    tld: "world",
+    zh: {
+      title: ".world 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".world 自带全球化与开放感，适合国际化产品、社区与元宇宙/虚拟世界项目。查看 .world 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .world 域名。",
+      intro:
+        ".world 是 Identity Digital 旗下的通用新顶级域，语义直白：全球、世界、无边界。做面向国际市场的产品、跨文化社区、旅行与移民服务，或是游戏/元宇宙里的「某某世界」，「品牌 + .world」读起来就是一句口号——hello.world 式的组合甚至自带程序员梗。知名案例如 Polkadot 生态的 polkadot.world 类社区站，以及不少 Web3 项目把 .world 当宇宙观载体。首年促销价常见十几到几十元，但续费会跳到两百元上下，预算上要按续费价核算。库存充裕，常见英文单词大多仍可注册，这是相对 .com 最大的红利。定位建议：品牌词本身含「世界/宇宙/全球」叙事的产品，或想用一个词讲完愿景的团队。",
+      bestFor: ["国际化与出海产品", "游戏与虚拟世界/元宇宙", "旅行、移民与跨文化社区", "「xx 世界」式品牌叙事"],
+      namingTips: [
+        "「名词 + .world」当口号读：coffee.world、maker.world",
+        "hello.world 式程序员梗对开发者产品加分",
+        "首年便宜续费贵（约 3–10 倍），按续费价做预算",
+        "常见单词库存充裕，别急着妥协成造词",
+      ],
+    },
+    en: {
+      title: ".world Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".world signals global reach and openness — great for international products, communities and virtual-world projects. See live pricing and naming advice, then hunt available .world names with AI.",
+      intro:
+        ".world is an Identity Digital new gTLD with self-explanatory semantics: global, borderless, expansive. For products targeting international markets, cross-cultural communities, travel or relocation services, or game/metaverse projects that literally build a \"world,\" a brand + .world domain reads like a slogan — and hello.world even carries a built-in programmer joke. Plenty of Web3 and gaming projects use .world to frame their universe. First-year promos are cheap (often a few dollars) but renewals jump to the $25–30 range, so budget on the renewal price. Inventory is the big win: most dictionary words are still available, which is unheard of on .com. Best fit: brands whose story is inherently about worlds, universes or global reach — teams that want a single word to carry the vision.",
+      bestFor: ["International & go-global products", "Games and virtual worlds / metaverse", "Travel, relocation & cross-cultural communities", "\"X world\" brand storytelling"],
+      namingTips: [
+        "Noun + .world reads like a slogan: coffee.world, maker.world",
+        "hello.world-style puns land well with developer audiences",
+        "Cheap first year, 3–10x renewal — budget on renewal",
+        "Dictionary-word inventory is plentiful; don't settle for a coined name too fast",
+      ],
+    },
+  },
+  life: {
+    tld: "life",
+    zh: {
+      title: ".life 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".life 语义温暖，适合健康、生活方式、家庭与个人成长类产品。查看 .life 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .life 域名。",
+      intro:
+        ".life 是语义最「柔软」的新顶级域之一：健康管理、生活方式品牌、家庭服务、心理与个人成长、保险与养老，凡是和「过好日子」相关的业务，「品牌 + .life」都像一句承诺。它也是内容创作者的好选择——生活方式博客、vlog 站点用 .life 比 .com 更有温度。注册局同为 Identity Digital，RDAP/注册链路成熟。价格结构是典型的新顶级域模式：首年常有一二十元的促销，续费在两百元档，长期持有要按续费算账。库存好，常见生活词汇（sleep、balance、slow 这类）大多可注册。注意 .life 偏 to C 情感向，硬核 B2B 工具用它会显得错位。定位建议：健康与生活方式产品的主域名，或品牌名以 life 结尾时的自然拆分（如 betterlife → better.life）。",
+      bestFor: ["健康与养生产品", "生活方式品牌与博客", "家庭、保险与养老服务", "心理与个人成长社区"],
+      namingTips: [
+        "品牌名以 life 结尾时直接拆分：better.life、simple.life",
+        "生活动词/形容词库存充足：slow、calm、bright 类词可入手",
+        "情感向 to C 气质强，B2B 工具慎用",
+        "首年促销价与续费价差大，按续费价做长期预算",
+      ],
+    },
+    en: {
+      title: ".life Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".life has warm, human semantics — ideal for health, lifestyle, family and personal-growth brands. See live pricing and naming advice, then hunt available .life names with AI.",
+      intro:
+        ".life is one of the warmest new gTLDs: health and wellness, lifestyle brands, family services, mental health and personal growth, insurance and retirement — any business about living well turns brand + .life into a promise. It's also a natural home for creators: a lifestyle blog on .life feels more personal than .com. The registry is Identity Digital, so RDAP and registrar support are mature. Pricing follows the classic new-gTLD pattern: first-year promos around a few dollars, renewals near $25–30, so long-term holders should budget on renewal. Inventory is good — everyday words like sleep, balance or slow are often still available. One caveat: .life is emotionally consumer-facing; a hardcore B2B tool on .life feels off. Best fit: health and lifestyle products, or brands ending in \"life\" that split naturally (betterlife → better.life).",
+      bestFor: ["Health & wellness products", "Lifestyle brands and blogs", "Family, insurance & retirement services", "Mental health & personal growth communities"],
+      namingTips: [
+        "Brands ending in \"life\" split naturally: better.life, simple.life",
+        "Everyday lifestyle words (slow, calm, bright) still have inventory",
+        "Strongly consumer-emotional — avoid for hardcore B2B tools",
+        "Big gap between promo and renewal price — budget on renewal",
+      ],
+    },
+  },
+  agency: {
+    tld: "agency",
+    zh: {
+      title: ".agency 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".agency 直接说明「我是一家代理/机构」，适合设计、营销、公关与创意服务公司。查看 .agency 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .agency 域名。",
+      intro:
+        ".agency 是行业自我介绍式的后缀：设计工作室、营销与增长团队、公关公司、招聘猎头、旅行社——只要商业形态是「机构/代理」，域名后缀本身就完成了一半的自我介绍。对服务型小团队尤其友好：品牌词 + .agency 组合下，客户一眼知道你是干什么的，比在 .com 里挤一个带 studio/media 后缀的长名字干净得多。海外创意圈用得很普遍，不少独立工作室直接用 name.agency 当作品集主站。价格上首年促销常见十几元，续费一百多元，属于新顶级域的中间档。库存极好，几乎任何风格词都能注册到。短板：后缀较长（6 字符），口播时要念清楚；面向国内传统企业客户时认知度一般，建议名片和物料上把完整域名写出来。",
+      bestFor: ["设计与创意工作室", "营销、增长与公关公司", "招聘猎头与人力服务", "旅行社与各类代理业务"],
+      namingTips: [
+        "品牌词 + .agency 自带业务说明，词根可以更抽象大胆",
+        "避免再叠加 agency/studio 语义的词根，防止重复（badcase：agencyx.agency）",
+        "6 字符后缀偏长，词根尽量短（≤7 字符）保证整体不拖沓",
+        "面向国内客户时在物料上写全域名，弥补认知度",
+      ],
+    },
+    en: {
+      title: ".agency Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".agency says exactly what you are — built for design, marketing, PR and creative service firms. See live pricing and naming advice, then hunt available .agency names with AI.",
+      intro:
+        ".agency is a self-introducing TLD: design studios, marketing and growth teams, PR firms, recruiting agencies, travel agencies — if your business is an agency, the suffix does half the positioning for you. It's especially good for small service teams: brand + .agency tells clients instantly what you do, far cleaner than cramming \"studio\" or \"media\" into a long .com. It's widely adopted in the creative world, with many independent shops running their portfolio on name.agency. Pricing sits mid-tier for new gTLDs: promo first years around a few dollars, renewals around $20–25. Inventory is excellent — nearly any style of word is still available. Trade-offs: at six characters the suffix is long, so keep the root short, and spell out the full domain in materials for audiences less familiar with new TLDs.",
+      bestFor: ["Design & creative studios", "Marketing, growth & PR firms", "Recruiting & staffing services", "Travel and other agency businesses"],
+      namingTips: [
+        "Brand + .agency explains the business — the root can be bold and abstract",
+        "Don't stack agency/studio semantics in the root (avoid agencyx.agency)",
+        "Six-character suffix is long — keep roots ≤7 characters",
+        "Write the full domain on materials for audiences new to nTLDs",
+      ],
+    },
+  },
+  games: {
+    tld: "games",
+    zh: {
+      title: ".games 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".games 是游戏行业的语义后缀，适合游戏工作室、独立游戏、电竞与游戏媒体。查看 .games 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .games 域名。",
+      intro:
+        ".games 把行业写进了域名里：游戏工作室官网、独立游戏作品站、电竞战队、游戏媒体与社区，用 .games 一眼即懂。相比单数的 .game（注册局定价极高，续费常上千元），复数 .games 价格亲民得多——首年百元级、续费一两百元，是游戏行业里性价比最高的语义后缀。海外案例不少：Epic 旗下产品页、众多 Steam 独立开发者的作品集都在用 .games。命名上它特别适合「工作室名 + .games」与「游戏名 + .games」两种形态，词根不需要再解释行业属性，可以专注表达世界观或风格。库存良好，游戏语感的词（pixel、quest、arcade 类）大多可注册。注意区分：做单款重度品牌可能仍需要拿下 .com 防御，社区与作品集则 .games 可以直接当主域名。",
+      bestFor: ["游戏工作室官网", "独立游戏与作品集", "电竞战队与赛事", "游戏媒体与社区"],
+      namingTips: [
+        "工作室名/游戏名 + .games 即成品，词根专注世界观",
+        "比单数 .game 便宜一个数量级，预算有限选复数",
+        "pixel/quest/arcade 类游戏语感词库存充足",
+        "重度单品牌建议同时防御 .com，社区可直接主用 .games",
+      ],
+    },
+    en: {
+      title: ".games Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".games puts the industry in the domain — for game studios, indie games, esports and gaming media. See live pricing and naming advice, then hunt available .games names with AI.",
+      intro:
+        ".games writes the industry into the address: studio sites, indie game portfolios, esports teams, gaming media and communities all read instantly on .games. Unlike the singular .game — premium-priced by its registry with renewals often in the hundreds of dollars — the plural .games is affordable: roughly $15–20 first year and $20–25 renewal, making it the best-value semantic TLD in gaming. Adoption is real, from publisher product pages to countless indie developers' portfolio sites. It shines in two shapes: studio-name + .games and game-title + .games — the suffix explains the industry, freeing the root to express your world and style. Inventory is good; gaming-flavored words (pixel, quest, arcade) are largely available. One nuance: a flagship single-game brand may still want the .com defensively, but for communities and portfolios .games works as the primary domain.",
+      bestFor: ["Game studio websites", "Indie games & portfolios", "Esports teams & events", "Gaming media & communities"],
+      namingTips: [
+        "Studio or title + .games is complete — spend the root on your world",
+        "An order of magnitude cheaper than singular .game",
+        "Gaming-flavored words (pixel, quest, arcade) still available",
+        "Flagship single-game brands: also grab the .com defensively",
+      ],
+    },
+  },
+  email: {
+    tld: "email",
+    zh: {
+      title: ".email 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".email 语义唯一指向邮件，适合邮件服务、营销工具与通讯类产品。查看 .email 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .email 域名。",
+      intro:
+        ".email 是语义最聚焦的新顶级域之一：邮件收发服务、邮件营销与自动化工具、newsletter 平台、反垃圾与送达率服务，用 .email 等于把产品类目写在门牌上。开发者与 SaaS 圈接受度不错——不少邮件 API、临时邮箱和 newsletter 工具用 name.email 当主站或文档站。它还有一个独特玩法：产品的「联系我们」或状态页可以放在 contact.email、status.email 这类语义直白的域名上。价格首年二三十元、续费一百多元，中间档。库存很好，邮件生态的词根（send、inbox、reply 类）多数可注册。短板同样明显：语义太窄，业务一旦超出邮件范畴，域名会变成束缚；建议只在产品核心确定长期围绕邮件时选它。词根避免再含 mail/email，防止 sendmail.email 式冗余。",
+      bestFor: ["邮件服务与邮件 API", "邮件营销与自动化工具", "Newsletter 平台", "送达率与反垃圾服务"],
+      namingTips: [
+        "词根别再含 mail/email，避免 sendmail.email 式冗余",
+        "send/inbox/reply 类动词词根 + .email 读起来像功能说明",
+        "语义极窄：业务可能扩展出邮件范畴就别选",
+        "首年便宜续费贵，按续费价做预算",
+      ],
+    },
+    en: {
+      title: ".email Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".email means exactly one thing — perfect for email services, marketing tools and messaging products. See live pricing and naming advice, then hunt available .email names with AI.",
+      intro:
+        ".email is one of the most focused new gTLDs: email services, marketing automation, newsletter platforms, deliverability and anti-spam tools — the TLD puts your product category on the door. Developer and SaaS adoption is solid, with email APIs, disposable-inbox tools and newsletter products running on name.email as their main or docs site. It also enables a unique pattern: semantically literal domains like contact.email or status.email for a product's touchpoints. Pricing is mid-tier — a few dollars first year, around $20 renewal. Inventory is strong; email-ecosystem roots (send, inbox, reply) are mostly available. The flip side is the narrowness: if your business ever outgrows email, the domain becomes a constraint — choose it only when email is the long-term core. And keep mail/email out of the root to avoid sendmail.email-style redundancy.",
+      bestFor: ["Email services & email APIs", "Email marketing & automation", "Newsletter platforms", "Deliverability & anti-spam tools"],
+      namingTips: [
+        "Keep mail/email out of the root — avoid sendmail.email redundancy",
+        "Verb roots (send, inbox, reply) + .email read like a feature statement",
+        "Very narrow semantics — skip it if the business may outgrow email",
+        "Cheap first year, pricier renewal — budget on renewal",
+      ],
+    },
+  },
+  network: {
+    tld: "network",
+    zh: {
+      title: ".network 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".network 适合网络基础设施、去中心化协议与社群网络类产品。查看 .network 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .network 域名。",
+      intro:
+        ".network 的语义横跨两个热门领域：一是技术意义上的网络——CDN、VPN、节点服务、监控与网络安全工具；二是社会意义上的网络——行业社群、人脉平台、播客与媒体联盟。近几年它在区块链圈尤其流行：大量公链与协议把官网放在 name.network 上（如多个知名 L1/L2 项目），因为「协议即网络」的叙事天然契合。相比 .net 的老牌通用，.network 语义更完整、更像一句话——mesh.network 读出来就是产品定位。价格首年常见十几二十元、续费一百多元。库存充足，连很多 .net 下早已绝迹的短词在 .network 下仍可注册。短板是后缀长（7 字符），整体域名容易偏长，词根务必控制在短词。定位建议：基础设施与协议类项目的主域名，或行业社群网络的品牌载体。",
+      bestFor: ["网络基础设施与节点服务", "区块链协议与公链", "行业社群与人脉平台", "媒体与播客联盟"],
+      namingTips: [
+        "「协议/产品词 + .network」自带定位：mesh.network、relay.network",
+        "区块链项目主流选择之一，叙事契合「协议即网络」",
+        "后缀 7 字符偏长，词根控制在 ≤6 字符",
+        ".net 下绝迹的短词这里常有货，先查再造词",
+      ],
+    },
+    en: {
+      title: ".network Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".network fits infrastructure, decentralized protocols and community networks. See live pricing and naming advice, then hunt available .network names with AI.",
+      intro:
+        ".network spans two hot territories: technical networks — CDNs, VPNs, node services, monitoring and security tools — and social networks — industry communities, professional platforms, podcast and media collectives. It's become especially popular in crypto, where many chains and protocols run their site on name.network because \"the protocol is the network\" fits the narrative perfectly. Compared with the venerable .net, .network is a complete word — mesh.network reads as a positioning statement, not an abbreviation. Pricing runs a few dollars first year and around $20 renewal. Inventory is generous: short words long extinct on .net are often still available on .network. The trade-off is length — seven characters of suffix means the root must stay short. Best fit: infrastructure and protocol projects, or the brand home of a professional community network.",
+      bestFor: ["Network infrastructure & node services", "Blockchain protocols & chains", "Industry communities & professional networks", "Media and podcast collectives"],
+      namingTips: [
+        "Product word + .network states the positioning: mesh.network, relay.network",
+        "A mainstream pick for blockchain protocols — the narrative fits",
+        "Seven-character suffix — keep roots ≤6 characters",
+        "Short words gone on .net are often available here; check before coining",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
