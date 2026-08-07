@@ -51,8 +51,12 @@ function prefetchSearchChunks() {
     void import("@/components/agent-page");
     void import("@/components/results-page");
   };
-  if (typeof window.requestIdleCallback === "function") window.requestIdleCallback(load, { timeout: 3000 });
-  else window.setTimeout(load, 2000);
+  const idle = () => {
+    if (typeof window.requestIdleCallback === "function") window.requestIdleCallback(load);
+    else window.setTimeout(load, 3000);
+  };
+  if (document.readyState === "complete") idle();
+  else window.addEventListener("load", idle, { once: true });
 }
 
 function PageFallback() {
