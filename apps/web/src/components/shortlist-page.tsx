@@ -77,6 +77,8 @@ export function ShortlistPage({
   const [shareCopied, setShareCopied] = useState(false);
   const [shareError, setShareError] = useState("");
   const [rechecking, setRechecking] = useState(false);
+  const [confirmClear, setConfirmClear] = useState(false);
+  const confirmTimer = useRef<number | undefined>(undefined);
   const [syncCode, setSyncCode] = useState(loadSyncCode);
   const [pushing, setPushing] = useState(false);
   const [pushDone, setPushDone] = useState(false);
@@ -324,9 +326,27 @@ export function ShortlistPage({
                 <DropdownMenuItem onSelect={() => exportShortlist(items, "txt")}>{t("common.exportTxt")}</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <button className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-destructive" onClick={onClear}>
+            <button
+              className={cn(
+                "flex h-9 items-center gap-1.5 rounded-lg border px-3 text-sm",
+                confirmClear
+                  ? "border-destructive bg-destructive/10 font-semibold text-destructive"
+                  : "border-line text-txt1 hover:bg-bg2 hover:text-destructive",
+              )}
+              onClick={() => {
+                if (confirmClear) {
+                  window.clearTimeout(confirmTimer.current);
+                  setConfirmClear(false);
+                  onClear();
+                } else {
+                  setConfirmClear(true);
+                  window.clearTimeout(confirmTimer.current);
+                  confirmTimer.current = window.setTimeout(() => setConfirmClear(false), 3000);
+                }
+              }}
+            >
               <Trash2 className="h-4 w-4" />
-              {t("shortlist.clear")}
+              {confirmClear ? t("shortlist.clearConfirm") : t("shortlist.clear")}
             </button>
             <button
               className="flex h-9 items-center gap-1.5 rounded-lg bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90"
