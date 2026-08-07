@@ -38,6 +38,43 @@ function sortRows(rows: Row[], sort: SortKey, priceOf?: (tld: string) => number)
   });
 }
 
+// 品牌卡预览：按名字哈希确定性选配色与字形，纯 CSS 轻量模拟 logo 视觉（Namelix 式）
+const BRAND_GRADIENTS = [
+  "linear-gradient(135deg,#0ea5e9,#6366f1)",
+  "linear-gradient(135deg,#10b981,#0d9488)",
+  "linear-gradient(135deg,#f59e0b,#ef4444)",
+  "linear-gradient(135deg,#8b5cf6,#ec4899)",
+  "linear-gradient(135deg,#334155,#0f172a)",
+  "linear-gradient(135deg,#14b8a6,#3b82f6)",
+] as const;
+
+function brandHash(label: string): number {
+  let h = 0;
+  for (let i = 0; i < label.length; i++) h = (h * 31 + label.charCodeAt(i)) >>> 0;
+  return h;
+}
+
+function BrandMark({ label }: { label: string }) {
+  const h = brandHash(label);
+  const bg = BRAND_GRADIENTS[h % BRAND_GRADIENTS.length];
+  const variant = (h >> 3) % 3;
+  const text = variant === 0 ? label.toUpperCase() : variant === 1 ? label.charAt(0).toUpperCase() + label.slice(1) : label;
+  return (
+    <div className="grid h-20 place-items-center rounded-lg" style={{ background: bg }} aria-hidden>
+      <span
+        className={cn(
+          "max-w-full truncate px-3 text-white",
+          variant === 0 && "text-sm font-extrabold tracking-[0.22em]",
+          variant === 1 && "font-serif text-xl font-semibold tracking-tight",
+          variant === 2 && "font-mono text-lg font-bold lowercase tracking-tight",
+        )}
+      >
+        {text}
+      </span>
+    </div>
+  );
+}
+
 function TopPickCard({
   row,
   rank,
@@ -82,6 +119,9 @@ function TopPickCard({
             {favorite ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}
           </button>
         </div>
+      </div>
+      <div className="mt-3">
+        <BrandMark label={row.label} />
       </div>
       <div className="mt-3 truncate font-mono text-2xl font-bold tracking-tight">
         {row.label}
@@ -279,10 +319,23 @@ export function ResultsPage({
             <h1 className="text-xl font-bold tracking-tight">
               {t("results.title", { desc: description.length > 18 ? description.slice(0, 18) + "…" : description, n: availableRows.length })}
             </h1>
-            <p className="tnum mt-1 text-xs text-txt2">
-              {t("results.stats", { rounds: roundCount, total: rows.length, taken: takenRows.length })}
-              {elapsedSec !== undefined && ` · ${t("results.elapsed", { s: elapsedSec })}`}
-            </p>
+            {/* 统计条：可注册 / 已核验 / 轮次 / 耗时 一眼可读（Lean Domain Search 式） */}
+            <div className="tnum mt-1.5 flex flex-wrap items-center gap-1.5 text-[11px]">
+              <span className="rounded-md border border-brand-line bg-brand-dim px-2 py-0.5 font-semibold text-brand">
+                {t("results.stat.available", { n: availableRows.length })}
+              </span>
+              <span className="rounded-md border border-line bg-bg1 px-2 py-0.5 text-txt1">
+                {t("results.stat.checked", { n: rows.length })}
+              </span>
+              <span className="rounded-md border border-line bg-bg1 px-2 py-0.5 text-txt1">
+                {t("results.stat.rounds", { n: roundCount })}
+              </span>
+              {elapsedSec !== undefined && (
+                <span className="rounded-md border border-line bg-bg1 px-2 py-0.5 text-txt1">
+                  {t("results.stat.elapsed", { s: elapsedSec })}
+                </span>
+              )}
+            </div>
           </div>
           <div className="flex items-center gap-2">
             <button

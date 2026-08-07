@@ -327,11 +327,13 @@ export function HomePage({
   initial,
   onSubmit,
   onBackToResults,
+  onOpenAdvanced,
   shortlist,
 }: {
   initial: HomeValues;
   onSubmit: (v: HomeValues) => void;
   onBackToResults?: () => void;
+  onOpenAdvanced: () => void;
   shortlist: { has: (domain: string) => boolean; toggle: (row: Row) => void };
 }) {
   const { t, lang } = useI18n();
@@ -356,6 +358,8 @@ export function HomePage({
   const [customTld, setCustomTld] = useState("");
   const [showCustom, setShowCustom] = useState(false);
   const [showAllTemplates, setShowAllTemplates] = useState(false);
+  // 搜索模式分段器：AI 猎名（默认）/ 精确核验（免 AI 额度直接核验现成名字）；批量核验直达高级模式
+  const [searchMode, setSearchMode] = useState<"ai" | "exact">("ai");
 
   const customTlds = tlds.filter((t) => !PRESET_TLDS.includes(t));
   const toggleTld = (t: string) => setTlds((prev) => (prev.includes(t) ? prev.filter((x) => x !== t) : [...prev, t]));
@@ -547,18 +551,51 @@ export function HomePage({
           {t("home.subtitle")}
         </p>
 
-        <div className="mt-8 overflow-hidden rounded-2xl border border-line-strong bg-bg2 shadow-[0_24px_48px_-24px_rgba(0,0,0,.5)] focus-within:border-brand-line">
+        <div className="mt-8 flex justify-center">
+          <div className="inline-flex items-center gap-1 rounded-full border border-line bg-bg1 p-1" role="tablist" aria-label={t("home.mode.ai")}>
+            {(
+              [
+                { key: "ai" as const, label: "home.mode.ai" as I18nKey },
+                { key: "exact" as const, label: "home.mode.exact" as I18nKey },
+              ]
+            ).map((m) => (
+              <button
+                key={m.key}
+                role="tab"
+                aria-selected={searchMode === m.key}
+                onClick={() => setSearchMode(m.key)}
+                className={cn(
+                  "h-9 rounded-full px-3.5 text-xs transition-colors sm:h-7",
+                  searchMode === m.key ? "bg-brand-dim font-semibold text-brand" : "text-txt1 hover:text-txt0",
+                )}
+              >
+                {t(m.label)}
+              </button>
+            ))}
+            <button
+              role="tab"
+              aria-selected={false}
+              onClick={onOpenAdvanced}
+              className="h-9 rounded-full px-3.5 text-xs text-txt1 transition-colors hover:text-txt0 sm:h-7"
+            >
+              {t("home.mode.bulk")}
+            </button>
+          </div>
+        </div>
+
+        <div className="mt-4 overflow-hidden rounded-2xl border border-line-strong bg-bg2 shadow-[0_24px_48px_-24px_rgba(0,0,0,.5)] focus-within:border-brand-line">
           <textarea
             rows={3}
             className="w-full resize-none bg-transparent px-5 pb-2 pt-4 text-[15px] leading-relaxed outline-none"
-            placeholder={t("home.placeholder")}
+            placeholder={t(searchMode === "exact" ? "home.placeholderExact" : "home.placeholder")}
             value={description}
             maxLength={MAX_LEN}
             onChange={(e) => setDescription(e.target.value)}
             onKeyDown={(e) => {
-              if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) {
+              if (e.key === "Enter" && (searchMode === "exact" || e.metaKey || e.ctrlKey)) {
                 e.preventDefault();
-                submit();
+                if (searchMode === "exact") void runQuickCheck();
+                else submit();
               }
             }}
           />
@@ -596,20 +633,35 @@ export function HomePage({
                 </button>
               )}
             </div>
-            <MiniSelect icon={Wand2} value={style} options={STYLE_OPTIONS} onChange={setStyle} />
-            <MiniSelect icon={Ruler} value={lengthPref} options={LENGTH_OPTIONS} onChange={setLengthPref} />
+            {searchMode === "ai" && (
+              <>
+                <MiniSelect icon={Wand2} value={style} options={STYLE_OPTIONS} onChange={setStyle} />
+                <MiniSelect icon={Ruler} value={lengthPref} options={LENGTH_OPTIONS} onChange={setLengthPref} />
+              </>
+            )}
             <div className="flex-1" />
             <span className="tnum hidden text-[11px] text-txt2 md:inline">
-              {description.length > 0 && `${description.length}/${MAX_LEN} · `}⌘ Enter
+              {description.length > 0 && `${description.length}/${MAX_LEN} · `}{searchMode === "exact" ? "Enter" : "⌘ Enter"}
             </span>
-            <button
-              disabled={!canRun}
-              onClick={() => submit()}
-              className="flex h-11 items-center gap-1.5 rounded-xl bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50 sm:h-9"
-            >
-              <Sparkles className="h-4 w-4" />
-              {t("home.start")}
-            </button>
+            {searchMode === "exact" ? (
+              <button
+                disabled={!quick || quick.label.length < 3 || quickRunning}
+                onClick={() => void runQuickCheck()}
+                className="flex h-11 items-center gap-1.5 rounded-xl bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50 sm:h-9"
+              >
+                {quickRunning ? <Loader2 className="h-4 w-4 animate-spin" /> : <SearchCheck className="h-4 w-4" />}
+                {t("home.exactCheck")}
+              </button>
+            ) : (
+              <button
+                disabled={!canRun}
+                onClick={() => submit()}
+                className="flex h-11 items-center gap-1.5 rounded-xl bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50 sm:h-9"
+              >
+                <Sparkles className="h-4 w-4" />
+                {t("home.start")}
+              </button>
+            )}
           </div>
         </div>
 
