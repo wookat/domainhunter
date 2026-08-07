@@ -1016,7 +1016,7 @@ const HOME_FAQ = {
     { q: "核验结果准确吗？", a: "每个域名经 DNS + RDAP + WHOIS 三级核验，可注册状态来自注册局权威数据；注册前建议在注册商页面再确认一次。" },
     { q: "使用收费吗？", a: "完全免费。AI 搜索有每小时次数限制；即输即查、更多后缀与前后缀变体核验不限量、不消耗 AI 次数。" },
     { q: "会自动帮我注册域名吗？", a: "不会。我们只提供核验结果与注册商跳转链接（如 Porkbun），注册和付费在注册商完成。" },
-    { q: "支持哪些后缀？", a: "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio。" },
+    { q: "支持哪些后缀？", a: "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in。" },
     { q: "我的搜索会被保存吗？", a: "不保存输入内容和 IP，只记录匿名的聚合次数统计；收藏清单保存在你自己的浏览器本地。" },
   ],
   en: [
@@ -1024,7 +1024,7 @@ const HOME_FAQ = {
     { q: "How accurate are the availability checks?", a: "Every domain goes through DNS + RDAP + WHOIS checks against authoritative registry data. We still recommend a final confirmation on the registrar's page before buying." },
     { q: "Is it free?", a: "Completely free. AI search has an hourly rate limit; instant checks, extra-TLD checks, and prefix/suffix variants are unlimited and never use AI quota." },
     { q: "Will it register domains for me automatically?", a: "No. We only provide verification results and registrar links (e.g. Porkbun) — registration and payment happen at the registrar." },
-    { q: "Which TLDs are supported?", a: "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio via the “more TLDs” button." },
+    { q: "Which TLDs are supported?", a: "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in via the “more TLDs” button." },
     { q: "Do you store my searches?", a: "We never store your input or IP — only anonymous aggregate counters. Your shortlist lives in your own browser's local storage." },
   ],
 } as const;
@@ -1278,12 +1278,12 @@ app.get("/vs/:slug", async (c) => {
 // 价格总览页（SPA 路由 + SSR meta）
 const PRICES_META = {
   zh: {
-    title: "域名后缀价格总览：30 个主流 TLD 注册与续费对比",
-    desc: "汇总 com/cn/io/ai 等 30 个主流后缀的注册与续费价（Porkbun 实时价），避开首年便宜续费贵的坑，并用 AI 直接猎取可注册的好名字。",
+    title: `域名后缀价格总览：${TLD_LIST.length} 个主流 TLD 注册与续费对比`,
+    desc: `汇总 com/cn/io/ai 等 ${TLD_LIST.length} 个主流后缀的注册与续费价（Porkbun 实时价），避开首年便宜续费贵的坑，并用 AI 直接猎取可注册的好名字。`,
   },
   en: {
-    title: "TLD Price Overview: Registration vs Renewal for 30 Popular Suffixes",
-    desc: "Compare registration and renewal prices (live from Porkbun) for 30 popular TLDs like com/cn/io/ai, avoid renewal traps, and hunt registrable names with AI.",
+    title: `TLD Price Overview: Registration vs Renewal for ${TLD_LIST.length} Popular Suffixes`,
+    desc: "Compare registration and renewal prices (live from Porkbun) for popular TLDs like com/cn/io/ai, avoid renewal traps, and hunt registrable names with AI.",
   },
 };
 
@@ -1395,7 +1395,7 @@ app.get("/llms.txt", (c) => {
     "",
     "## Core pages",
     line("/", "AI domain search (homepage, instant availability quick-check included)"),
-    line("/prices", "Domain price overview: registration vs renewal for 30 TLDs, live prices"),
+    line("/prices", `Domain price overview: registration vs renewal for ${TLD_LIST.length} TLDs, live prices`),
     line("/why", "Why DomainHunter: agent loop that reflects over rounds and only surfaces registrable names"),
     line("/advanced", "Bulk domain check: paste up to 200 names and stream live availability"),
     "",

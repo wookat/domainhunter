@@ -1,5 +1,8 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
+import { TLD_LIST } from "@/content/tld-list";
+
+const TLD_COUNT = TLD_LIST.length;
 
 const LANG_KEY = "domainhunter:lang";
 
@@ -71,7 +74,7 @@ const zh = {
   "home.faq.q4": "会自动帮我注册域名吗？",
   "home.faq.a4": "不会。我们只提供核验结果与注册商跳转链接（如 Porkbun），注册和付费在注册商完成。",
   "home.faq.q5": "支持哪些后缀？",
-  "home.faq.a5": "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio。",
+  "home.faq.a5": "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in。",
   "home.faq.q6": "我的搜索会被保存吗？",
   "home.faq.a6": "不保存输入内容和 IP，只记录匿名的聚合次数统计；收藏清单保存在你自己的浏览器本地。",
   "home.style.none": "不限风格",
@@ -186,14 +189,14 @@ const zh = {
   "results.lockTitle": "锁定：再来一轮时围绕它找",
   // 价格总览页
   "prices.kicker": "域名价格",
-  "prices.title": "域名后缀价格总览：30 个主流 TLD 注册与续费对比",
-  "prices.intro": "首年便宜不等于长期便宜——很多后缀续费是首年价的几倍。这里汇总 30 个主流后缀的注册与续费价（Porkbun 实时价优先，无报价时显示 ≈ 静态参考价），点列头可排序，点后缀可看详细指南。",
+  "prices.title": `域名后缀价格总览：${TLD_COUNT} 个主流 TLD 注册与续费对比`,
+  "prices.intro": `首年便宜不等于长期便宜——很多后缀续费是首年价的几倍。这里汇总 ${TLD_COUNT} 个主流后缀的注册与续费价（Porkbun 实时价优先，无报价时显示 ≈ 静态参考价），点列头可排序，点后缀可看详细指南。`,
   "prices.colTld": "后缀",
   "prices.colReg": "注册/首年",
   "prices.colRenew": "续费/年",
   "prices.hunt": "猎名",
   "prices.source": "实时价来自 Porkbun，人民币按汇率 7.2 估算；带 ≈ 为静态参考价。不同注册商价格有差异，以注册商页面为准。",
-  "prices.seeAll": "查看全部 30 个后缀价格 →",
+  "prices.seeAll": `查看全部 ${TLD_COUNT} 个后缀价格 →`,
   "prices.filter": "筛选后缀，如 shop…",
   "prices.noMatch": "没有匹配的后缀",
   "prices.trap": "续费↑",
@@ -392,7 +395,7 @@ const en: Record<I18nKey, string> = {
   "home.faq.q4": "Will it register domains for me automatically?",
   "home.faq.a4": "No. We only provide verification results and registrar links (e.g. Porkbun) — registration and payment happen at the registrar.",
   "home.faq.q5": "Which TLDs are supported?",
-  "home.faq.a5": "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio via the “more TLDs” button.",
+  "home.faq.a5": "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in via the “more TLDs” button.",
   "home.faq.q6": "Do you store my searches?",
   "home.faq.a6": "We never store your input or IP — only anonymous aggregate counters. Your shortlist lives in your own browser's local storage.",
   "home.style.none": "Any style",
@@ -503,14 +506,14 @@ const en: Record<I18nKey, string> = {
   "results.moreAroundLocked": "More around locked",
   "results.lockTitle": "Lock: next round explores around it",
   "prices.kicker": "Domain Pricing",
-  "prices.title": "TLD Price Overview: Registration vs Renewal for 30 Popular Suffixes",
-  "prices.intro": "A cheap first year doesn't mean cheap forever — many suffixes renew at several times the promo price. This table compares registration and renewal for 30 popular TLDs (live Porkbun prices first, ≈ static reference when unavailable). Click headers to sort, click a suffix for its full guide.",
+  "prices.title": `TLD Price Overview: Registration vs Renewal for ${TLD_COUNT} Popular Suffixes`,
+  "prices.intro": `A cheap first year doesn't mean cheap forever — many suffixes renew at several times the promo price. This table compares registration and renewal for ${TLD_COUNT} popular TLDs (live Porkbun prices first, ≈ static reference when unavailable). Click headers to sort, click a suffix for its full guide.`,
   "prices.colTld": "TLD",
   "prices.colReg": "Register / 1st yr",
   "prices.colRenew": "Renew / yr",
   "prices.hunt": "Hunt",
   "prices.source": "Live prices from Porkbun; CNY estimated at 7.2. ≈ marks static reference prices. Registrar prices vary — confirm on the registrar page.",
-  "prices.seeAll": "See prices for all 30 TLDs →",
+  "prices.seeAll": `See prices for all ${TLD_COUNT} TLDs →`,
   "prices.filter": "Filter suffixes, e.g. shop…",
   "prices.noMatch": "No matching suffixes",
   "prices.trap": "renews↑",

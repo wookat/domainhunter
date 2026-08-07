@@ -817,6 +817,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Generic online businesses & sites", "Traditional businesses going digital", "Budget-sensitive landing pages", "Avoiding industry-specific semantics"],
     },
   },
+  "sh-vs-dev": {
+    slug: "sh-vs-dev",
+    a: "sh",
+    b: "dev",
+    zh: {
+      title: ".sh 和 .dev 怎么选：极客暗号与官方认证的取舍",
+      metaDescription: ".sh 是 shell 梗的开发者暗号，.dev 是 Google 运营的开发者官方后缀。对比两者的气质、价格与 HTTPS 要求，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是开发者后缀，气质完全不同。.sh 是圈内梗：两个字母极短，「动词 + .sh」读起来像一条命令，CLI/终端工具用它最出彩，但价格贵好几倍且是国家后缀。.dev 是 Google 运营的通用后缀，语义直白官方，强制 HTTPS（HSTS 预载），价格便宜续费稳，适合更「正式」的开发者产品——文档站、开发者平台、个人技术品牌。判断标准：产品越靠近终端和脚本，.sh 的梗越值钱；越靠近平台和大众开发者，.dev 越稳妥。",
+      pickA: ["CLI 与终端工具", "「动词.sh」能读成命令的名字", "极短域名优先（2 字母后缀）", "圈内梗带来的品牌加成"],
+      pickB: ["开发者平台与文档站", "预算敏感、在意续费", "需要 HTTPS 强制的安全形象", "更大众的开发者受众"],
+    },
+    en: {
+      title: ".sh vs .dev: Insider Pun or the Official Developer TLD",
+      metaDescription:
+        ".sh is the shell-script insider pun; .dev is Google's official developer TLD with forced HTTPS. Compare vibes, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are developer suffixes with completely different personalities. .sh is the insider handshake: two letters, and \"verb + .sh\" reads like a command — unbeatable for CLI and terminal tools, but several times pricier and technically a ccTLD. .dev is Google-operated, semantically literal and official, with forced HTTPS via HSTS preload, cheap and stable — the safer home for more \"formal\" developer products: docs sites, platforms, personal tech brands. The test: the closer your product lives to the terminal, the more the .sh pun is worth; the closer to a platform and mainstream developers, the more .dev makes sense.",
+      pickA: ["CLI & terminal tools", "Names where \"verb.sh\" reads as a command", "Shortest possible domain (2-letter suffix)", "Insider-pun brand equity"],
+      pickB: ["Developer platforms & docs sites", "Budget-sensitive, renewal-conscious", "Forced-HTTPS security posture", "Broader developer audiences"],
+    },
+  },
+  "gg-vs-tv": {
+    slug: "gg-vs-tv",
+    a: "gg",
+    b: "tv",
+    zh: {
+      title: ".gg 和 .tv 怎么选：游戏圈暗号与直播视频的取舍",
+      metaDescription: ".gg 是游戏电竞圈的 good game 暗号，.tv 是直播与视频内容的经典后缀。对比两者的受众、价格与语义边界，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "重叠区在直播——但受众信号不同。.gg 说的是「游戏」：电竞战队、Discord 工具、游戏数据站用它圈内认同拉满，游戏主播用它也顺；.tv 说的是「视频/频道」：直播平台、视频内容、播客视频版用它更直白，非游戏类主播和内容品牌 .tv 明显更贴。价格上两者都是中上档的国家后缀。判断标准：内容以游戏为核心选 .gg，以「频道/节目」为核心选 .tv；两个都做的头部主播，通常 .gg 做社区、.tv 做内容站。",
+      pickA: ["游戏与电竞产品/战队", "Discord 社区与工具", "游戏数据与攻略站", "游戏主播个人品牌"],
+      pickB: ["直播平台与视频内容", "非游戏类主播/频道", "播客与节目品牌", "「频道感」大于「游戏感」的内容"],
+    },
+    en: {
+      title: ".gg vs .tv: Gaming Cred or Streaming Heritage",
+      metaDescription:
+        ".gg is the good-game badge of gaming and esports; .tv is the classic suffix for streaming and video. Compare audiences and semantics, then hunt names available on both.",
+      verdict:
+        "They overlap on streaming — but signal different things. .gg says \"gaming\": esports teams, Discord tools and game-stats sites get maximum insider credibility, and gaming streamers wear it naturally. .tv says \"video/channel\": streaming platforms, video content and video podcasts read instantly, and non-gaming streamers and content brands fit .tv much better. Both are mid-to-high-priced ccTLDs. The test: if the content is gaming-first, take .gg; if it's channel-first, take .tv. Big streamers doing both often run community on .gg and the content site on .tv.",
+      pickA: ["Games & esports products/teams", "Discord communities & tools", "Game stats & guide sites", "Gaming streamer personal brands"],
+      pickB: ["Streaming platforms & video content", "Non-gaming streamers/channels", "Podcast & show brands", "Channel-feel over gaming-feel"],
+    },
+  },
+  "so-vs-io": {
+    slug: "so-vs-io",
+    a: "so",
+    b: "io",
+    zh: {
+      title: ".so 和 .io 怎么选：Notion 系新贵与技术圈老牌的取舍",
+      metaDescription: ".so 因 Notion.so 走红、适合效率工具，.io 是技术圈身份标识但更贵。对比两者的认知度、价格与库存，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是被明星产品带火的国家后缀。.io 更早更普及：开发者工具、API、开源项目的默认选项，圈内认知无需教育，代价是注册续费都贵、短词也被抢得差不多了。.so 是效率工具赛道的「Notion 认证」：单词能连读成短语（do.so 式）时特别出彩，库存明显更好，价格相近或略低。判断标准：纯开发者产品优先 .io（受众默认）；效率/协作/AI 工具且名字能读成短语，.so 的品牌记忆点更强。两个都要防守时，注意同名 .com 是否可得。",
+      pickA: ["效率与协作工具", "名字能连读成短语（word.so）", "Notion 系受众的新产品", ".io 上心仪短词已绝迹"],
+      pickB: ["开发者工具、API、开源项目", "技术圈默认认知（无需教育）", "更活跃的二手交易市场", "圈内投资人/用户的熟悉感"],
+    },
+    en: {
+      title: ".so vs .io: The Notion-Era Upstart or the Dev-Scene Classic",
+      metaDescription:
+        ".so rose with Notion.so and fits productivity tools; .io is the developer-scene badge but pricier. Compare recognition, pricing and inventory, then hunt names available on both.",
+      verdict:
+        "Both are ccTLDs made famous by flagship products. .io came first and runs deeper: the default for developer tools, APIs and open source, requiring zero audience education — at the cost of expensive registration and renewals, with short words largely gone. .so carries the \"Notion stamp\" in productivity: it shines when the name chains into a phrase (do.so style), inventory is visibly better, and pricing is similar or slightly lower. The test: developer-first products default to .io; productivity, collaboration and AI tools whose name reads as a phrase get more brand recall from .so. Either way, check whether the matching .com is gettable for defense.",
+      pickA: ["Productivity & collaboration tools", "Names that chain into a phrase (word.so)", "Notion-era product audiences", "Your short word is long gone on .io"],
+      pickB: ["Developer tools, APIs & open source", "Default dev-scene recognition", "More liquid aftermarket", "Investor/user familiarity in tech"],
+    },
+  },
+  "us-vs-com": {
+    slug: "us-vs-com",
+    a: "us",
+    b: "com",
+    zh: {
+      title: ".us 和 .com 怎么选：美国本土信号与全球通用的取舍",
+      metaDescription: ".us 便宜且可玩「与我们」短语梗但注册需美国关联，.com 全球通用。对比两者的注册限制、隐私政策与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "先看资格再看品牌。.us 注册要求美国关联（公民/居民/企业，需申报 Nexus），且注册局禁止 WHOIS 隐私——注册人信息公开，这两条就排除了很多人。资格没问题的话，.us 有独特优势：价格便宜，且「join.us、near.us」式短语域名把后缀读进品牌里，社区和本地服务用起来非常出彩。.com 则是不需要任何解释的全球默认：面向国际、长期品牌资产、转售流动性都是它赢。判断标准：美国本土业务 + 短语梗成立选 .us；其余场景 .com 仍是第一选择。",
+      pickA: ["美国本土产品与服务", "「动词.us」短语域名（join.us 式）", "预算敏感（便宜续费稳）", "社区与协作类品牌"],
+      pickB: ["面向全球用户", "需要 WHOIS 隐私保护", "无美国关联（不符合 .us 资格）", "长期品牌资产与转售"],
+    },
+    en: {
+      title: ".us vs .com: The Domestic Signal or the Global Default",
+      metaDescription:
+        ".us is cheap with a built-in \"us = we\" wordplay but requires a US nexus; .com is the global default. Compare eligibility, privacy and fit, then hunt names available on both.",
+      verdict:
+        "Check eligibility before branding. .us requires a genuine US nexus (citizen, resident or US business, declared at registration) and the registry forbids WHOIS privacy — registrant details are public, which alone rules out many buyers. If you qualify, .us has real upside: budget pricing, and phrase domains like join.us or near.us read the suffix straight into the brand — brilliant for communities and local services. .com remains the explanation-free global default: international reach, long-term brand equity and resale liquidity all favor it. The test: US-domestic business plus a working phrase pun → .us; everything else still starts at .com.",
+      pickA: ["US-domestic products & services", "\"Verb.us\" phrase domains (join.us)", "Budget-sensitive, stable renewals", "Community & collaboration brands"],
+      pickB: ["Global audiences", "Need WHOIS privacy", "No US nexus (ineligible for .us)", "Long-term brand asset & resale"],
+    },
+  },
+  "in-vs-com": {
+    slug: "in-vs-com",
+    a: "in",
+    b: "com",
+    zh: {
+      title: ".in 和 .com 怎么选：印度市场与短语梗 vs 全球默认",
+      metaDescription: ".in 面向印度市场且可玩介词短语梗（check.in 式），.com 全球通用。对比两者的受众、价格与创意空间，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        ".in 有两条独立的胜负手：一是印度市场——本地化产品、跨境电商在印度用户眼里 .in 就是「本土」信号，且对所有人开放注册、价格便宜；二是介词梗——「check.in、log.in、move.in」式短语在全球都成立，签到、入驻、打卡类产品能把后缀读进品牌。除这两条外，.com 的全球默认地位仍然碾压：认知零成本、资产流动性最好。判断标准：主攻印度市场，或名字恰好能补全一个「in」短语，选 .in；否则 .com。成熟品牌进印度通常两个都持有。",
+      pickA: ["面向印度市场的产品", "「动词.in」短语域名（check.in 式）", "签到/入驻/打卡类语义", "预算敏感（便宜且开放注册）"],
+      pickB: ["面向全球用户", "长期品牌资产与转售", "不依赖短语梗的普通品牌词", "认知零成本的默认选择"],
+    },
+    en: {
+      title: ".in vs .com: India Reach and Phrase Puns vs the Global Default",
+      metaDescription:
+        ".in targets India and doubles as the preposition \"in\" (check.in style); .com is the global default. Compare audiences, pricing and creative room, then hunt names available on both.",
+      verdict:
+        ".in wins on two independent fronts: India — for localized products and cross-border commerce, .in reads as \"domestic\" to Indian users, registration is open to anyone and pricing is cheap; and the preposition pun — check.in, log.in, move.in phrases work worldwide, letting check-in and onboarding products read the suffix into the brand. Outside those two, .com's global-default status still dominates: zero-cost recognition and the most liquid aftermarket. The test: India-first market or a name that completes an \"in\" phrase → .in; otherwise .com. Brands entering India at scale usually hold both.",
+      pickA: ["India-market products", "\"Verb.in\" phrase domains (check.in)", "Check-in / onboarding semantics", "Budget-friendly, open registration"],
+      pickB: ["Global audiences", "Long-term brand asset & resale", "Ordinary brand words without the pun", "Zero-education default choice"],
+    },
+  },
+  "info-vs-org": {
+    slug: "info-vs-org",
+    a: "info",
+    b: "org",
+    zh: {
+      title: ".info 和 .org 怎么选：信息站与公信力的取舍",
+      metaDescription: ".info 便宜适合资料站，.org 自带非营利公信力。对比两者的信任感、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是「非商业感」后缀，信任层级不同。.org 二十多年积累的公信力仍在：非营利组织、开源基金会、行业协会、公共服务用它，用户默认「这不是来卖货的」。.info 语义直白但历史包袱重——低价导致的垃圾站历史让它的信任感明显弱一档，适合资料站、文档、活动页这类不需要背书的信息发布。价格上 .info 首年极便宜但续费翻数倍，.org 全程稳定。判断标准：需要公信力背书（组织、社区、公益）选 .org；纯信息发布、低成本试验选 .info。",
+      pickA: ["资料站与行业百科", "产品文档与帮助站", "活动与信息发布页", "低成本内容试验"],
+      pickB: ["非营利组织与公益项目", "开源项目与基金会", "行业协会与社区", "需要中立公信力背书"],
+    },
+    en: {
+      title: ".info vs .org: Information Utility or Institutional Trust",
+      metaDescription:
+        ".info is cheap and fits resource sites; .org carries nonprofit-grade credibility. Compare trust, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both read \"non-commercial,\" at different trust tiers. .org still carries two decades of institutional credibility: nonprofits, open-source foundations, industry associations and public services get an automatic \"not here to sell you\" from users. .info is semantically literal but carries baggage — its bargain pricing attracted years of spam, leaving trust a clear notch lower; it suits resource sites, docs and event pages that don't need endorsement. On price, .info's first year is nearly free but renewals multiply, while .org stays flat. The test: need institutional trust (organizations, communities, causes) → .org; pure information publishing or low-cost experiments → .info.",
+      pickA: ["Resource sites & industry wikis", "Product docs & help sites", "Event & information pages", "Low-cost content experiments"],
+      pickB: ["Nonprofits & causes", "Open-source projects & foundations", "Associations & communities", "Neutral institutional credibility"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

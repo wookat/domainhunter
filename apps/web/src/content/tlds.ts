@@ -924,6 +924,186 @@ const GUIDES = {
       ],
     },
   },
+  info: {
+    tld: "info",
+    zh: {
+      title: ".info 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".info 是最早的「信息类」通用后缀，适合资料站、文档、百科与项目信息页。查看 .info 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .info 域名。",
+      intro:
+        ".info 是 2001 年第一批新通用后缀之一，语义就是「信息」：资料站、行业百科、开源项目文档、活动信息页、产品说明站用它顺理成章。二十多年历史让它的认知度在新后缀里名列前茅，且首年价常年极低（经常一两美元），做内容矩阵、给主品牌配一个信息子站的成本几乎可以忽略。短板也来自低价：历史上被大量垃圾站使用过，直接做商业主站的信任感弱于 .com/.co，且续费价明显高于首年。定位建议：主站之外的资料/文档/百科类站点，或验证内容型 side project 的低成本起步——跑通了再升级主后缀。",
+      bestFor: ["资料站与行业百科", "开源项目与产品文档", "活动与信息发布页", "低成本内容型试验项目"],
+      namingTips: [
+        "「主题词 + .info」语义自解释（如 visa.info 式结构）",
+        "首年极便宜但续费翻数倍，长期持有先看续费价",
+        "不建议做商业主站：信任感弱于 .com/.co",
+        "给主品牌配同名 .info 做文档/帮助站是经典分工",
+      ],
+    },
+    en: {
+      title: ".info Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".info is the original \"information\" TLD — great for resource sites, docs, wikis and info pages. See live pricing and naming advice, then hunt available .info names with AI.",
+      intro:
+        ".info launched in 2001 as one of the first new generic TLDs and its meaning is right in the name: resource sites, industry wikis, open-source project docs, event pages and product information sites all read naturally on it. Two decades of history give it better recognition than most newer suffixes, and first-year pricing is routinely a dollar or two — spinning up an info companion site for your main brand costs almost nothing. The cheapness cuts both ways: heavy historical spam usage means a commercial main site on .info carries less trust than .com/.co, and renewal prices run several times the first-year teaser. Best fit: docs, wikis and resource sites alongside a main brand, or the lowest-cost way to validate a content side project before upgrading the suffix.",
+      bestFor: ["Resource sites & industry wikis", "Open-source & product docs", "Event & information pages", "Low-cost content experiments"],
+      namingTips: [
+        "\"Topic + .info\" is self-explanatory by design",
+        "Cheap first year, renewals several times higher — check both",
+        "Skip it for a commercial main site; trust trails .com/.co",
+        "Matching .info for your brand's docs/help site is a classic split",
+      ],
+    },
+  },
+  sh: {
+    tld: "sh",
+    zh: {
+      title: ".sh 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".sh 是开发者最爱的极客后缀之一（shell 梗），适合 CLI 工具、开发者产品与技术博客。查看 .sh 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .sh 域名。",
+      intro:
+        ".sh 本是圣赫勒拿岛的国家后缀，却因为撞上 Unix shell 的 .sh 脚本扩展名成了开发者圈的身份暗号：CLI 工具、终端产品、DevOps 服务、技术博客用它，目标用户一眼会心。知名先例不少（如 fig.sh、warp.sh 一类终端产品），「动词 + .sh」读起来就像一条命令，品牌感和记忆点都很强。只有两个字母的后缀让整个域名极短。短板：价格偏高（几十美元/年），非技术受众不理解梗；且作为国家后缀，理论上受注册局政策变动影响。定位建议：纯开发者产品的主域名，尤其是 CLI/终端/脚本类工具——受众对味时它比 .com 更出彩。",
+      bestFor: ["CLI 与终端工具", "DevOps 与基础设施服务", "技术博客与个人站", "开源项目官网"],
+      namingTips: [
+        "「动词 + .sh」读起来像一条命令（install.sh 式联想）",
+        "两字母后缀，配 3–6 字母短词整体极短",
+        "只对开发者受众有效，大众产品别用",
+        "价格偏高且是国家后缀，注册前看清续费价",
+      ],
+    },
+    en: {
+      title: ".sh Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".sh is a developer favorite (the shell-script pun) — great for CLI tools, dev products and tech blogs. See live pricing and naming advice, then hunt available .sh names with AI.",
+      intro:
+        ".sh is technically the country code of Saint Helena, but colliding with the Unix shell-script extension turned it into an insider handshake for developers: CLI tools, terminal products, DevOps services and tech blogs on .sh are instantly legible to their audience. There are plenty of well-known precedents among terminal-adjacent products, and \"verb + .sh\" reads like a command — strong branding with a built-in mnemonic. At two letters it also keeps the whole domain extremely short. Trade-offs: pricing runs a few tens of dollars a year, the pun means nothing to non-technical audiences, and as a ccTLD it is nominally subject to registry policy shifts. Best fit: the primary domain for developer-only products — especially CLI, terminal and scripting tools — where it out-brands .com with the right crowd.",
+      bestFor: ["CLI & terminal tools", "DevOps & infrastructure services", "Tech blogs & personal sites", "Open-source project sites"],
+      namingTips: [
+        "\"Verb + .sh\" reads like a shell command",
+        "Two-letter suffix — pair with a 3–6 letter word for a tiny domain",
+        "Only works for developer audiences; skip for consumer products",
+        "Pricier ccTLD — check the renewal before committing",
+      ],
+    },
+  },
+  gg: {
+    tld: "gg",
+    zh: {
+      title: ".gg 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".gg 是游戏与电竞圈的标志性后缀（good game 梗），适合游戏、社区与直播相关产品。查看 .gg 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .gg 域名。",
+      intro:
+        ".gg 是根西岛的国家后缀，但在游戏圈它只有一个含义——「good game」。游戏工作室、电竞战队、Discord 社区工具、直播与陪玩平台、游戏数据站用它，圈内认同感拉满：op.gg、dotabuff 一代的数据站与大量 Discord 生态工具都选了 .gg。两个字母的后缀 + 游戏梗，让它在年轻用户里的传播力甚至超过 .com。短板：语义强绑定游戏/电竞，圈外产品不适合；价格中上，且同为国家后缀。定位建议：一切与游戏、电竞、玩家社区相关的产品主域名——这个圈子里 .gg 就是「自己人」的信号。",
+      bestFor: ["游戏与电竞产品", "Discord 社区与工具", "直播、陪玩与玩家平台", "游戏数据与攻略站"],
+      namingTips: [
+        "游戏圈内 .gg 认同感高于 .com，圈外则相反",
+        "「战队/社区名 + .gg」是电竞标配",
+        "两字母后缀，短词组合整体极短好记",
+        "国家后缀价格中上，注意续费价",
+      ],
+    },
+    en: {
+      title: ".gg Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".gg is the signature TLD of gaming and esports (the \"good game\" pun) — for games, communities and streaming products. See live pricing and naming advice, then hunt available .gg names with AI.",
+      intro:
+        ".gg belongs to Guernsey on paper, but in gaming it means exactly one thing: \"good game.\" Game studios, esports teams, Discord community tools, streaming platforms and game-stats sites wear it as a badge — the op.gg generation of stats sites and a large slice of the Discord tool ecosystem chose it. A two-letter suffix plus the gaming pun gives it word-of-mouth power that can beat .com with younger audiences. Trade-offs: the semantics are hard-bound to gaming and esports, so it fits poorly outside the scene; pricing is mid-to-high and it is likewise a ccTLD. Best fit: the primary domain for anything touching games, esports or player communities — inside that world, .gg is the insider signal.",
+      bestFor: ["Games & esports products", "Discord communities & tools", "Streaming & player platforms", "Game stats & guide sites"],
+      namingTips: [
+        "Inside gaming .gg outranks .com for credibility; outside it, the reverse",
+        "\"Team/community + .gg\" is the esports standard",
+        "Two-letter suffix — short-word combos stay tiny and memorable",
+        "Mid-to-high ccTLD pricing; check renewals",
+      ],
+    },
+  },
+  so: {
+    tld: "so",
+    zh: {
+      title: ".so 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".so 因 Notion.so 走红，适合效率工具与初创产品，也是共享库文件名的极客梗。查看 .so 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .so 域名。",
+      intro:
+        ".so 是索马里的国家后缀，被 Notion.so 一举带火：效率工具、笔记与协作产品、初创 SaaS 用它，自带「新一代产品」的联想。它还有一层极客梗——Linux 下共享库文件就是 .so，开发者工具用它也说得通。两个字母极短，读音顺口，「单词 + .so」在英语里常能连读成短语（如 do.so、say.so 式结构），品牌记忆点很强。短板：认知度仍靠 Notion 一个头部案例撑着，大众用户可能误输 .com；国家后缀价格中上。定位建议：效率/协作/AI 工具类初创产品的主域名，尤其当你的品牌词短且 .com 已无货时——Notion 已经帮你完成了用户教育。",
+      bestFor: ["效率与协作工具", "笔记与知识管理产品", "初创 SaaS 与 AI 工具", "开发者库与工具"],
+      namingTips: [
+        "「单词 + .so」能连读成短语的名字最出彩",
+        "效率工具赛道用户已被 Notion 教育过，接受度高",
+        "防守性注册同名 .com 转发，接住误输流量",
+        "国家后缀价格中上，注意续费价",
+      ],
+    },
+    en: {
+      title: ".so Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".so was put on the map by Notion.so — a fit for productivity tools and startups, with a shared-library pun for developers. See live pricing and naming advice, then hunt available .so names with AI.",
+      intro:
+        ".so is Somalia's country code, made famous by Notion.so: productivity tools, note-taking and collaboration products, and startup SaaS wear it with a \"next-generation product\" connotation. There's a developer pun layered in too — .so is the shared-library extension on Linux, so dev tools read naturally on it. Two letters, easy to say, and \"word + .so\" often chains into a phrase in English, which makes for strong brand recall. Trade-offs: recognition still leans on one flagship example, mainstream users may type .com by reflex, and ccTLD pricing is mid-to-high. Best fit: the primary domain for productivity, collaboration and AI-tool startups — especially when your brand word is short and the .com is gone; Notion already did the user education for you.",
+      bestFor: ["Productivity & collaboration tools", "Notes & knowledge management", "Startup SaaS & AI tools", "Developer libraries & tools"],
+      namingTips: [
+        "Names where \"word + .so\" reads as a phrase shine brightest",
+        "Productivity users are pre-educated by Notion — adoption is easy",
+        "Defensively register the matching .com to catch typed-in traffic",
+        "Mid-to-high ccTLD pricing; check renewals",
+      ],
+    },
+  },
+  us: {
+    tld: "us",
+    zh: {
+      title: ".us 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".us 是美国国家后缀，便宜且可玩「与我们」的语义梗，适合面向美国市场的产品与社区。查看 .us 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .us 域名。",
+      intro:
+        ".us 是美国的国家后缀，价格常年在最便宜一档，而且有一个独特的语言优势：us 在英语里就是「我们」，「join.us、near.us」式的域名能把后缀读进品牌短语里，社区、协作与本地服务类产品用起来非常出彩。面向美国市场的业务用 .us 也天然传达「本土」信号。短板必须了解：注册 .us 要求与美国有真实关联（美国公民/居民/企业或在美业务，注册时需申报 Nexus 信息），且注册局不允许 WHOIS 隐私保护——注册人信息公开可查，介意隐私的个人开发者要慎重。定位建议：面向美国用户的产品、社区与本地服务，或能把「us=我们」读进品牌的创意域名。",
+      bestFor: ["面向美国市场的产品", "社区与协作类品牌", "美国本地服务", "「与我们」语义的创意域名"],
+      namingTips: [
+        "「动词/介词 + .us」连读成短语（join.us 式）最出彩",
+        "注册需申报美国关联（Nexus），纯海外主体不合规",
+        "注册局禁止 WHOIS 隐私，注册人信息公开",
+        "价格便宜续费也稳，是最实惠的两字母后缀之一",
+      ],
+    },
+    en: {
+      title: ".us Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".us is America's country code — cheap, with a built-in \"us = we\" wordplay. Great for US-market products and communities. See live pricing and naming advice, then hunt available .us names with AI.",
+      intro:
+        ".us is the United States country code, consistently among the cheapest TLDs, with a unique linguistic bonus: \"us\" is a real English word, so domains like join.us or near.us read the suffix straight into the brand phrase — a gift for communities, collaboration products and local services. For US-market businesses it also signals \"domestic\" by default. Know the constraints before you commit: registration requires a genuine US nexus (citizen, resident, US company or US-based activity, declared at registration), and the registry forbids WHOIS privacy — registrant details are publicly visible, which privacy-minded indie developers should weigh seriously. Best fit: products and communities aimed at US users, local services, or any name where \"us = we\" completes the phrase.",
+      bestFor: ["US-market products", "Community & collaboration brands", "US local services", "\"Us = we\" phrase domains"],
+      namingTips: [
+        "\"Verb/preposition + .us\" phrase reads (join.us) are the standout play",
+        "US nexus required at registration — purely offshore entities don't qualify",
+        "Registry forbids WHOIS privacy; registrant info is public",
+        "Cheap with stable renewals — one of the best-value two-letter TLDs",
+      ],
+    },
+  },
+  in: {
+    tld: "in",
+    zh: {
+      title: ".in 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".in 是印度国家后缀，也是英语介词 in 的语义梗，适合面向印度市场的产品与「in」短语域名。查看 .in 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .in 域名。",
+      intro:
+        ".in 是印度的国家后缀，背后是全球增速最快的互联网市场之一：做印度本地化产品、跨境电商、外包与开发者服务，.in 是身份标配。它同时还是英语介词 in，「check.in、log.in、move.in」式的短语域名读起来浑然一体，全球通用的创意玩法。对任何人开放注册、无本地存在要求，价格也在便宜一档，两个字母让整体域名很短。短板：在印度市场之外，.in 的第一联想仍是「印度」，非印度业务用它要靠短语梗撑住语义；印地语系用户拼写英文品牌词的习惯也值得在起名时考虑。定位建议：印度市场业务的主域名，或能把介词 in 读进品牌的全球产品（签到、打卡、入驻类语义尤其贴）。",
+      bestFor: ["面向印度市场的产品", "「in」短语创意域名", "签到/打卡/入驻类产品", "跨境与外包服务"],
+      namingTips: [
+        "「动词 + .in」短语（check.in 式）全球通用",
+        "对所有人开放注册，无本地存在要求",
+        "非印度业务要靠短语梗撑语义，否则第一联想是印度",
+        "价格便宜、两字母极短，性价比高",
+      ],
+    },
+    en: {
+      title: ".in Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".in is India's country code and the English preposition \"in\" — for India-market products and phrase domains. See live pricing and naming advice, then hunt available .in names with AI.",
+      intro:
+        ".in is the country code of India — one of the fastest-growing internet markets on earth — and the default identity for India-localized products, cross-border commerce, and outsourcing or developer services there. It doubles as the English preposition \"in,\" so phrase domains like check.in, log.in or move.in read as one seamless expression, a creative play that travels globally. Registration is open to anyone with no local-presence requirement, pricing sits in the budget tier, and two letters keep domains short. Trade-offs: outside India the first association is still \"India,\" so non-Indian businesses need the phrase pun to carry the meaning; if you do target India, consider how English brand words transliterate for Hindi-first users. Best fit: the primary domain for India-market businesses, or global products whose brand completes an \"in\" phrase — check-in, move-in and onboarding semantics fit especially well.",
+      bestFor: ["India-market products", "\"In\" phrase domains", "Check-in / onboarding products", "Cross-border & outsourcing services"],
+      namingTips: [
+        "\"Verb + .in\" phrases (check.in style) work worldwide",
+        "Open registration, no local presence required",
+        "Outside India, lean on the phrase pun or the association is \"India\"",
+        "Budget pricing and two letters — strong value",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

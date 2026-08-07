@@ -11,6 +11,11 @@ const WHOIS_SERVERS: Record<string, { host: string; notFound: RegExp; found: Reg
   co: { host: "whois.registry.co", notFound: /DOMAIN NOT FOUND|does not exist/i, found: /Domain Name:/i },
   me: { host: "whois.nic.me", notFound: /Domain not found/i, found: /Domain Name:/i },
   xyz: { host: "whois.nic.xyz", notFound: /DOMAIN NOT FOUND|does not exist/i, found: /Domain Name:/i },
+  // 以下四个后缀不在 IANA RDAP bootstrap 中，WHOIS 是唯一权威通道
+  sh: { host: "whois.nic.sh", notFound: /NOT FOUND|No Object Found/i, found: /Domain Name:/i },
+  gg: { host: "whois.gg", notFound: /NOT FOUND|Domain not found/i, found: /Domain:|Domain Name:/i },
+  so: { host: "whois.nic.so", notFound: /Domain not found|NOT FOUND|No Object Found/i, found: /Domain Name:/i },
+  us: { host: "whois.nic.us", notFound: /No Data Found|Domain not found|NOT FOUND/i, found: /Domain Name:/i },
 };
 
 /**
