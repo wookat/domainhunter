@@ -300,6 +300,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个上门家政清洁服务品牌，寓意「推开家门那一刻焕然一新的如释重负」；气质要可靠、亲切、值得托付钥匙；场景是地图搜索卡片、客户通讯录备注和邻里转介绍里都专业好记。",
     en: "An on-demand home cleaning service brand. The name should capture the fresh relief of opening the door to a spotless home; the vibe is reliable, friendly, key-trustworthy; it must look professional in a map listing, survive being saved in contacts, and travel in neighbor referrals.",
   },
+  {
+    slug: "marketing",
+    labelZh: "数字营销",
+    labelEn: "Digital marketing",
+    zh: "一个数字营销机构/MCN 品牌，寓意「让品牌被看见、让增长有方法」；气质要专业、有创意锋芒、比稿会议上念出来有底气；场景是提案封面、邮件签名和「我们请了 X 来做投放」的转述里都立得住。",
+    en: "A digital marketing agency or creator-network brand. The name should promise visibility and methodical growth; the vibe is sharp, creative, boardroom-credible; it must hold up on a proposal cover, in an email signature, and in \"we hired X for our campaigns\".",
+  },
+  {
+    slug: "therapy",
+    labelZh: "心理咨询",
+    labelEn: "Therapy & mental health",
+    zh: "一个心理咨询与心理健康服务品牌，寓意「一个不被评判的安全所在」；气质要温和、可信赖、零威胁感；场景是深夜搜索的结果页、朋友间的推荐和「我在用 X」的坦然表达里都让人安心。",
+    en: "A therapy and mental wellness brand. The name should feel like a safe, unjudging place; the vibe is gentle, trustworthy, zero-threat; it must reassure on a late-night search results page, in a friend's recommendation, and in saying \"I've been using X\" out loud.",
+  },
+  {
+    slug: "resale",
+    labelZh: "二手循环",
+    labelEn: "Resale & recommerce",
+    zh: "一个二手交易/循环经济平台品牌，寓意「让好东西再流转一次，淘到即是缘分」；气质要轻快、有寻宝感、不显旧；场景是闲置转让的对话、开箱分享和「我在 X 上淘到的」炫耀里都好玩好记。",
+    en: "A resale and circular-economy marketplace brand. The name should evoke good things finding a second life and the thrill of the find; the vibe is playful, treasure-hunty, never shabby; it must sparkle in listing chats, unboxing posts, and \"I scored this on X\" brags.",
+  },
+  {
+    slug: "recruiting",
+    labelZh: "招聘人力",
+    labelEn: "Recruiting & HR",
+    zh: "一个招聘平台/HR 服务品牌，寓意「让人与机会彼此找到」；气质要专业、有机遇感、对求职者尊重对企业可靠；场景是「我在 X 上找到这份工作」的口碑、HR 采购清单和职场社交里都自然顺口。",
+    en: "A recruiting platform or HR services brand. The name should evoke people and opportunities finding each other; the vibe is professional, opportunity-charged, respectful to candidates and credible to employers; it must flow in \"I found this job on X\", on procurement lists, and across professional networks.",
+  },
+  {
+    slug: "eldercare",
+    labelZh: "养老服务",
+    labelEn: "Senior care",
+    zh: "一个养老服务与银发生活品牌，寓意「岁月向晚，生活继续体面而丰盛」；气质要有尊严、温暖、值得托付；场景是子女在家庭群里的推荐、长辈「我住在 X」的自豪表达和亲友转述里都安心得体。",
+    en: "A senior care and later-life brand. The name should promise life continuing with dignity and abundance; the vibe is dignified, warm, worthy of a family's trust; it must reassure in a family group chat, sound proud in \"I live at X\", and travel gracefully in word of mouth.",
+  },
+  {
+    slug: "logistics",
+    labelZh: "物流货运",
+    labelEn: "Logistics & freight",
+    zh: "一个物流货运/跨境供应链品牌，寓意「使命必达，每一件货都被稳稳送到」；气质要可靠、高效、有网络感；场景是货车车身、快递面单和「发 X 的货，放心」的口碑里都清晰响亮。",
+    en: "A logistics, freight or cross-border supply-chain brand. The name should promise every shipment arriving surely and on time; the vibe is dependable, efficient, network-strong; it must read clearly on a truck side, a shipping label, and in \"ship it with X, don't worry\".",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

@@ -2361,6 +2361,372 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  marketing: {
+    slug: "marketing",
+    tlds: [
+      { tld: "agency", zh: "后缀即业态：营销服务商用 .agency 一眼说清「我们是代理机构」", en: "The suffix is the business model — .agency tells clients instantly you're the shop they hire" },
+      { tld: "media", zh: "MCN 与内容营销公司天然匹配 .media，品牌名+媒体属性一步到位", en: "A natural fit for MCNs and content studios — brand plus media identity in one stroke" },
+      { tld: "com", zh: "接大客户比稿时 .com 仍是提案封面上最稳的一行字", en: "When pitching enterprise accounts, .com is still the safest line on the proposal cover" },
+    ],
+    zh: {
+      label: "数字营销",
+      title: "数字营销机构与 MCN 怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "数字营销机构/MCN 命名指南：增长动词、结果承诺、反行话命名等 5 种思路，Ogilvy/Wpromote 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的营销机构域名。",
+      intro:
+        "营销机构的名字有一个天然悖论：你的本行就是给别人起名做品牌，所以自己的名字就是能力证明——客户会默认「连自己名字都起不好的机构，凭什么给我做增长」。这决定了营销公司命名的第一原则：名字本身要展示你信奉的方法论。信增长黑客就叫出增长感，信内容为王就叫出编辑部气质，信品牌溢价就起一个有品牌感的造词。第二个特点是比稿场景主导：名字会出现在提案封面、邮件签名和客户内部转述里（「我们请了 XX 来做投放」），要在甲方会议室里念出来不尴尬。第三是人才市场同样看名字——机构靠人，名字太土会直接影响招聘。MCN 还要多考虑一层：名字要能罩住旗下达人矩阵，像厂牌而不是像某个人的工作室。",
+      namingIdeas: [
+        "增长动词化：grow、boost、lift、scale、冲、涨——营销客户买的是结果，动词名字把结果写在门脸上；适合效果导向的投放型机构",
+        "反行话命名：行业黑话（synergy、omni、matrix）已被用烂，反着来用大白话或生活词（Wieden+Kennedy 直接用人名）反而在一排「XX 互动」里跳出来",
+        "厂牌式造词：MCN 学唱片公司命名——短、酷、抽象（Motown 路线），名字是给达人背书的厂牌 logo，不锁定任何内容品类，签约什么类型的达人都装得下",
+        "创始人姓名制：广告业百年传统（Ogilvy、BBDO 是四个姓的缩写）——个人 IP 就是获客渠道时，姓名制让「找 XX 做营销」和「找 XX 公司」合二为一",
+        "数据词+人文词混搭：一半理性一半创意是营销机构的自我定位——把 signal、metric 类词与 story、craft 类词各列一排交叉组合，撞出「既懂数据又懂内容」的名字",
+      ],
+      cases: [
+        { name: "Ogilvy", takeaway: "创始人大卫·奥格威的姓：个人方法论（《一个广告人的自白》）成了行业圣经，姓氏随之成为「品牌广告」的代名词——姓名制命名的天花板" },
+        { name: "Wpromote", takeaway: "W + promote（推广）：把最直白的行业动词收进名字，前缀 W 制造独占性——「我们是干推广的」一秒说清，效果型机构命名的务实样本" },
+        { name: "无忧传媒", takeaway: "「无忧」说给两端听：达人签我无忧、品牌投我无忧——一个情绪承诺同时覆盖 MCN 的双边市场，中文机构命名「情绪词+传媒」结构的头部案例" },
+        { name: "VaynerMedia", takeaway: "Gary Vaynerchuk 的姓 + Media：创始人本人就是全网顶流，名字直接把个人 IP 的流量导给机构——个人品牌时代姓名制的现代升级版" },
+      ],
+      pitfalls: [
+        "堆砌 digital/interactive/360：上一个十年的机构命名遗产，今天读起来像老旧的官网轮播图——时代感错位比土更致命",
+        "承诺极限效果的词（爆量、必火）：甲方第一次复盘不达标时，名字就成了会议室里的靶子",
+        "MCN 用当家达人的名字命名机构：达人解约即品牌塌方——厂牌名必须独立于任何单一签约者",
+        "只查中文名不查英文与域名：接国际品牌比稿时，没有像样的英文名和官网域名，第一轮就出局",
+      ],
+    },
+    en: {
+      label: "Digital marketing",
+      title: "How to Name a Marketing Agency or MCN: Strategies, Cases & Domains",
+      metaDescription:
+        "Marketing agency and creator-network naming guide: growth verbs, anti-jargon names, label-style coinages, breakdowns of Ogilvy/VaynerMedia, recommended TLDs and pitfalls — then hunt an available agency domain with AI.",
+      intro:
+        "A marketing agency's name carries a built-in paradox: naming and branding is literally your product, so your own name is the portfolio piece every prospect judges first — \"if they can't name themselves well, why would they grow my brand?\" That sets the first rule: the name must demonstrate the methodology you sell. Growth shops should sound like growth, content studios should sound editorial, brand consultancies should carry a coined name with obvious brand craft. Second, the name lives in pitch rooms: it sits on proposal covers, email signatures and the client's internal retelling (\"we hired X for paid media\"), so it has to sound credible spoken aloud in a boardroom. Third, agencies are talent businesses — a cringeworthy name quietly taxes recruiting too. MCNs add one more layer: the name must umbrella a roster of creators, reading like a record label rather than one person's studio.",
+      namingIdeas: [
+        "Verb the growth: grow, boost, lift, scale — performance clients buy outcomes, and a verb name puts the outcome on the storefront; best for paid-media and growth shops",
+        "Go anti-jargon: synergy, omni and matrix are landfill by now — plain words or human names (the Wieden+Kennedy route) pop precisely because every competitor sounds like a martech deck",
+        "Coin a label name: MCNs should name like record labels — short, cool, abstract (the Motown route); the name is a logo that endorses creators, and locking onto no content genre keeps every future signing inside the tent",
+        "Use founder surnames: advertising's century-old convention (Ogilvy; BBDO is four surnames) — when the founder's personal brand is the sales channel, a surname merges \"hire this person\" and \"hire this firm\" into one",
+        "Cross data words with craft words: agencies sell left brain plus right brain — list signal/metric-type words against story/craft-type words and combine until a pairing says \"we do both\" in one breath",
+      ],
+      cases: [
+        { name: "Ogilvy", takeaway: "The founder's surname: David Ogilvy's methodology became the industry's scripture, and the surname became shorthand for brand advertising itself — the ceiling of surname naming" },
+        { name: "Wpromote", takeaway: "W + promote: the bluntest industry verb, made ownable by one prefix letter — \"we promote things\" lands in a second; a pragmatic template for performance agencies" },
+        { name: "VaynerMedia", takeaway: "Gary Vaynerchuk's surname + Media: the founder is the traffic engine and the name pipes his personal audience straight into the firm — the surname convention upgraded for the creator era" },
+        { name: "Dentsu", takeaway: "Literally \"telegraph agency\" in Japanese, fossilized from a 1901 wire service into a two-syllable global brand — proof that a dated literal name can outgrow its meaning once the work speaks" },
+      ],
+      pitfalls: [
+        "Stacking digital/interactive/360: the naming residue of a previous decade — reading dated is deadlier than reading plain",
+        "Promising extremes in the name (Viral, Guaranteed): the first missed KPI review turns your own name into the exhibit against you",
+        "Naming the MCN after its top creator: one contract dispute and the brand collapses — the label must stand independent of any single roster member",
+        "Skipping the English name and domain: for international pitches, no credible English name and matching domain means elimination before the first meeting",
+      ],
+    },
+  },
+  therapy: {
+    slug: "therapy",
+    tlds: [
+      { tld: "com", zh: "求助者处于脆弱时刻，.com 的熟悉感就是第一层安全感", en: "Help-seekers arrive vulnerable — .com's familiarity is the first layer of safety" },
+      { tld: "life", zh: "把咨询定位成「生活的一部分」而非治病，.life 温和去病耻", en: "Frames therapy as part of life rather than treatment — gently destigmatizing" },
+      { tld: "me", zh: "个人执业咨询师的第一人称后缀，「关于我、为了你」的亲密感", en: "For solo practitioners, a first-person suffix with \"about me, for you\" intimacy" },
+    ],
+    zh: {
+      label: "心理咨询",
+      title: "心理咨询品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "心理咨询与心理健康服务命名指南：庇护意象、成长隐喻、去病耻化等 5 种思路，BetterHelp/Calm/简单心理 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的心理健康域名。",
+      intro:
+        "心理咨询的名字是在一个人最脆弱的时刻被读到的：深夜搜索「总是失眠焦虑怎么办」的人，点开你的页面之前，先读到的就是名字。所以这个品类的命名底线是「零威胁感」——任何居高临下（治疗、矫正）、贩卖焦虑（抑郁自查）或过度医疗化的字眼都会让求助者在门口转身。好的心理品牌名字更像一个安全的所在：一片林间空地、一间亮着灯的房间、一句「没关系」。第二个关键是去病耻化：让「我在用 X」可以被自然说出口，名字越像生活方式产品，用户越敢向朋友提起。第三是信任的资质感——名字可以温柔，但官网和域名必须专业，因为用户下一步就会核实你是否靠谱。",
+      namingIdeas: [
+        "庇护意象：港湾、林地、屋檐、灯——空间安全感的词根让「点进来」这个动作本身就像走进一个不被评判的地方；适合咨询室与平台型品牌",
+        "成长隐喻：sprout、bloom、抽芽、向阳——把心理工作从「修复问题」重述为「继续生长」，回避病理化叙事的同时给了用户一个愿意认同的自我形象",
+        "陪伴人格：名字像一个温和的朋友（「简单心理」的「简单」、Woebot 的 bot 伙伴感）——求助的本质是找人说话，名字拟人化能显著降低第一次预约的门槛",
+        "状态词直给：calm、rest、安、静——用户搜索的就是他们想要的状态，名字直接等于结果；适合冥想、睡眠等工具型心理产品",
+        "「更好」句式：BetterHelp 路线——比较级承诺改善但不承诺治愈，既给了希望又守住了专业边界；比较级词根在心理品类里是被验证过的安全区",
+      ],
+      cases: [
+        { name: "BetterHelp", takeaway: "better + help：不说 therapy 说 help，用日常词消解就医感；比较级 better 承诺方向而非结果——全球最大在线咨询平台的名字里没有一个医疗词" },
+        { name: "Calm", takeaway: "一个词直给目标状态：用户想要什么名字就是什么，搜索意图与品牌名完全重合；配合 calm.com 域名成为「冥想」的品类默认词" },
+        { name: "简单心理", takeaway: "「简单」二字对冲了心理咨询在中文语境里的沉重与病耻——「把心理问题变简单」的承诺让预约咨询像订一节课一样自然" },
+        { name: "Headspace", takeaway: "head + space：「给头脑一点空间」的具象隐喻，说清冥想价值又完全不医疗化；两个最常用的英文词组合出完全独占的品牌资产" },
+      ],
+      pitfalls: [
+        "医疗化重词（诊疗、康复中心）：未持牌机构用会有合规风险，持牌机构用会吓退轻症与预防型用户——两头不讨好",
+        "贩卖焦虑的名字（抑郁测试网）：靠病耻词引流违背行业伦理，平台与应用商店的审核也越来越严",
+        "过度诗化导致说不出口：名字太抽象（「彼岸花开心灵驿站」类），用户无法向朋友转述，口碑链路直接断裂",
+        "忽略隐私感的域名细节：心理品类用户对「被看到」极度敏感——域名过长、带连字符或杂牌后缀都会放大「这个网站安全吗」的疑虑",
+      ],
+    },
+    en: {
+      label: "Therapy & mental health",
+      title: "How to Name a Therapy or Mental Health Brand: Ideas, Cases & Domains",
+      metaDescription:
+        "Therapy and mental-health naming guide: shelter imagery, growth metaphors, destigmatized language, breakdowns of BetterHelp/Calm/Headspace, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A mental-health name gets read at someone's most vulnerable moment: the person searching \"why can't I stop feeling anxious\" at 2 a.m. reads your name before anything else on the page. That sets the category's hard floor: zero threat. Anything clinical-condescending (treatment, correction), fear-selling (depression self-test) or over-medicalized makes help-seekers turn around at the door. A good mental-health name feels like a safe place — a clearing in the woods, a lit room, a voice saying \"it's okay.\" The second key is destigmatization: the name should make \"I've been using X\" sayable out loud; the more it reads like a lifestyle product, the more users dare mention it to friends. Third, trust still needs credentials: the name can be soft, but the domain and site must look professional, because verifying your legitimacy is the user's very next click.",
+      namingIdeas: [
+        "Use shelter imagery: haven, grove, harbor, lantern — spatial-safety roots make clicking through feel like stepping somewhere unjudged; suits practices and platforms alike",
+        "Reframe with growth metaphors: sprout, bloom, tend — recasting the work from \"fixing what's broken\" to \"continuing to grow\" avoids pathologizing while offering users a self-image they want to claim",
+        "Build a companion persona: names that feel like a gentle friend (Woebot's bot-buddy framing) — help-seeking is at heart finding someone to talk to, and a personable name lowers the bar to the first session",
+        "Name the desired state: calm, rest, ease — users search for the state they want, so the name equals the outcome; strongest for meditation, sleep and other tool-type products",
+        "Use the comparative: the BetterHelp pattern — a comparative promises improvement without promising cure, offering hope while respecting clinical boundaries; a proven safe zone in this category",
+      ],
+      cases: [
+        { name: "BetterHelp", takeaway: "better + help: \"help\" instead of \"therapy\" strips the clinical weight; the comparative promises direction, not outcome — the world's largest therapy platform has zero medical words in its name" },
+        { name: "Calm", takeaway: "One word, the exact goal state: search intent and brand name fully overlap; with calm.com it became the category default for meditation itself" },
+        { name: "Headspace", takeaway: "head + space: a concrete metaphor — \"give your mind some room\" — that explains meditation's value with no medical framing; two of the commonest English words combined into a fully ownable asset" },
+        { name: "Talkspace", takeaway: "talk + space: names the mechanism (talking) and the safety (a space for it) in two syllables — therapy described by what you do, not what's wrong with you" },
+      ],
+      pitfalls: [
+        "Heavy clinical words (treatment center, disorder clinic): risky compliance-wise without licenses, and they scare off the preventive, mild-symptom majority even with them",
+        "Fear-selling names (DepressionTest style): stigma-bait traffic violates professional ethics, and platform review policies are tightening against it every year",
+        "Over-poeticizing into unsayability: a name too abstract to retell (\"Lotus Beyond Soul Sanctuary\") breaks the referral chain — word of mouth requires words people can actually say",
+        "Ignoring privacy cues in the domain: this audience is acutely sensitive to being seen — long domains, hyphens or obscure suffixes all amplify the \"is this site safe?\" doubt",
+      ],
+    },
+  },
+  resale: {
+    slug: "resale",
+    tlds: [
+      { tld: "com", zh: "二手交易的核心是陌生人信任，.com 的正规感直接影响成交", en: "Peer-to-peer trade runs on stranger trust — .com's legitimacy moves transactions" },
+      { tld: "shop", zh: "循环时尚与中古店的天然后缀，一眼说清「这里能买」", en: "A natural fit for circular fashion and vintage stores — instantly says \"you can buy here\"" },
+      { tld: "club", zh: "强调会员制与社群氛围的循环平台，.club 自带圈子感", en: "For membership-driven circular platforms, .club carries the community feel built in" },
+    ],
+    zh: {
+      label: "二手循环",
+      title: "二手交易与循环经济品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "二手交易/循环经济品牌命名指南：再生词根、寻宝感、价值观词等 5 种思路，Vinted/ThredUp/多抓鱼 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的循环经济域名。",
+      intro:
+        "二手品牌的名字要完成一次心智翻转：把「旧的、别人不要的」翻译成「有故事的、聪明的、更酷的」。这个品类最大的敌人不是竞品而是心理门槛——买家怕「捡别人剩的」没面子，卖家怕麻烦。好名字要同时给两端递台阶：让买二手听起来像淘到宝（寻宝感），让卖闲置听起来像聪明的生活方式（断舍离、可持续）。第二个特点是双边平台属性：名字要同时对买家和卖家成立，偏向任何一端都会伤害另一端的参与感。第三是价值观红利：循环经济自带环保叙事，名字里恰当的「再生/循环」暗示能吸引价值观驱动的年轻用户，但要克制——说教感一重，购物的乐趣就没了。",
+      namingIdeas: [
+        "再生词根：re- 前缀家族（renew、reloop、再、循环）——一个前缀就把商业模式说清；注意 re- 开头的域名消耗快，配合创意词根才拿得到",
+        "寻宝感命名：treasure、finds、淘、觅——把二手购物重述为「发现的乐趣」，直接对冲「捡剩」的心理负担；适合中古、古着与收藏向平台",
+        "轻快动词：swap、flip、转、闪——交易动作本身当名字，暗示「卖闲置很简单」；解决的是卖家端「怕麻烦」这个二手平台最大的供给瓶颈",
+        "价值观词轻量植入：green、loop、地球——环保暗示放在词根或尾缀即可（ThredUp 的 up 有升级循环 upcycle 的影子），整句口号式的名字会显得说教",
+        "品类昵称化：把品类词变亲昵（多抓鱼谐音 déjà vu、「鱼」自带水循环意象）——昵称感让平台像朋友而不是市场，社区型二手平台的独门打法",
+      ],
+      cases: [
+        { name: "Vinted", takeaway: "vintage 的过去分词式造词：一个词根携带「中古、有年头的好东西”联想，-ed 结尾像一个完成的动作——「被淘到了」；欧洲最大二手时尚平台的名字只有 6 个字母" },
+        { name: "多抓鱼", takeaway: "法语 déjà vu（似曾相识）的中文谐音：二手书「与旧物重逢」的诗意被藏进一个好玩的名字里，抓鱼的动作感又让「淘」变得具体——中文二手命名的天花板" },
+        { name: "ThredUp", takeaway: "thread（衣线）变形 + up（向上）：拼写变形拿到独占性，up 同时暗示 upcycle（升级再造）与「变好」——循环时尚的价值主张被压缩进 7 个字母" },
+        { name: "闲鱼", takeaway: "「闲置」+「咸鱼翻身」的双关：把卖二手说成让闲置资产翻身，自嘲又励志；语出粤语俗语，天然自带传播梗——本土化双关命名的教科书" },
+      ],
+      pitfalls: [
+        "强调「旧」的字眼（旧货、废品）：一字之差，用户从「淘宝藏」变成「捡破烂」——二手品类的措辞敏感度是所有电商里最高的",
+        "环保说教式命名（拯救地球二手店）：价值观是加分项不是卖点，说教感会赶走只想省钱和淘货的主流用户",
+        "只对一端说话：名字全是卖家视角（快卖、闪出）会让买家觉得这里是清仓场——双边平台的名字要两端念着都舒服",
+        "忽略品类扩张：从二手书起家最终会卖万物（多抓鱼从书到百货）——名字锁死单一品类，扩张时就要付出改名的代价",
+      ],
+    },
+    en: {
+      label: "Resale & recommerce",
+      title: "How to Name a Resale or Circular Economy Brand: Ideas, Cases & Domains",
+      metaDescription:
+        "Resale and circular-economy naming guide: re- roots, treasure-hunt framing, values-light words, breakdowns of Vinted/ThredUp/Depop, recommended TLDs and pitfalls — then hunt an available recommerce domain with AI.",
+      intro:
+        "A resale brand's name has to perform a mental flip: translating \"old, someone's castoffs\" into \"storied, smart, cooler than new.\" The category's biggest enemy isn't competitors — it's psychological friction: buyers fear the stigma of secondhand, sellers fear the hassle. A good name hands both sides a ladder: it makes buying used sound like scoring a find (treasure-hunt framing) and selling clutter sound like a smart lifestyle (decluttering, sustainability). Second, this is a two-sided marketplace: the name must work for buyers and sellers simultaneously — tilt toward either side and the other's participation drops. Third, there's a values dividend: circularity carries a built-in sustainability story, and a light \"re-\" hint in the name attracts values-driven younger users — but restraint matters, because the moment a name preaches, the fun of shopping dies.",
+      namingIdeas: [
+        "Mine the re- family: renew, reloop, revive — one prefix explains the entire business model; note that re- domains burn fast, so pair the prefix with an inventive root to find one you can register",
+        "Frame the treasure hunt: treasure, finds, thrift, trove — recast secondhand shopping as the joy of discovery, directly neutralizing the castoff stigma; strongest for vintage and collector-leaning platforms",
+        "Pick a light verb: swap, flip, spin — naming the transaction itself signals \"selling your stuff is easy,\" which attacks the supply side's hassle fear — the biggest bottleneck of every resale marketplace",
+        "Plant values lightly: loop, green, planet — keep the eco hint inside a root or suffix (ThredUp's \"up\" echoes upcycle); slogan-length virtue names read as lecturing, not shopping",
+        "Nickname the category: make the category word affectionate (Depop reads like a pop of discovery) — a nickname makes the platform feel like a friend rather than a flea market; the signature move of community-driven resale apps",
+      ],
+      cases: [
+        { name: "Vinted", takeaway: "A coined past participle of \"vintage\": one root carries the aged-goodness association, and the -ed ending reads like a completed action — \"it got found\"; Europe's biggest secondhand fashion platform in six letters" },
+        { name: "ThredUp", takeaway: "thread bent into thred + up: the misspelling buys ownability while \"up\" whispers upcycle and improvement — circular fashion's entire value proposition compressed into seven letters" },
+        { name: "Depop", takeaway: "Short, bouncy, meaning nothing in particular — which let a resale app feel like a social network; the name's pop-culture energy recruited Gen Z sellers who'd never say they \"deal in used clothes\"" },
+        { name: "Back Market", takeaway: "back + market: \"back\" carries the whole model (goods coming back, devices brought back to life) while \"market\" sets the expectation of choice and price — refurbished electronics explained in two plain words" },
+      ],
+      pitfalls: [
+        "Words that emphasize \"old\" (junk, used-goods): one word shifts the user from treasure hunter to rag picker — wording sensitivity in resale is the highest of any commerce category",
+        "Eco-preaching names (SaveThePlanetShop style): values are a bonus, not the pitch — moralizing drives away the mainstream who came to save money and score finds",
+        "Speaking to only one side: an all-seller name (QuickSell, FlashOfferz) makes buyers read the place as a liquidation bin — a marketplace name must sit comfortably in both mouths",
+        "Locking the category: resale platforms expand (books to everything, phones to appliances) — a name welded to one category charges a renaming tax exactly when growth arrives",
+      ],
+    },
+  },
+  recruiting: {
+    slug: "recruiting",
+    tlds: [
+      { tld: "com", zh: "企业 HR 与候选人两端都要信任你，.com 是双边信任的最大公约数", en: "Both employers and candidates must trust you — .com is the common denominator of two-sided trust" },
+      { tld: "io", zh: "招聘 SaaS 与 HR Tech 工具的圈内标配，技术买家零违和", en: "The insider standard for recruiting SaaS and HR-tech tools — zero friction with technical buyers" },
+      { tld: "works", zh: "「工作」语义直给的后缀，人才平台用它一眼说清品类", en: "A suffix that literally says work — talent platforms use it to declare the category at a glance" },
+    ],
+    zh: {
+      label: "招聘人力",
+      title: "招聘与人力资源品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "招聘平台/HR SaaS 命名指南：机遇词根、连接隐喻、效率承诺等 5 种思路，LinkedIn/Indeed/BOSS直聘 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的招聘域名。",
+      intro:
+        "招聘品牌的名字要同时说服天平的两端：候选人这端，找工作是人生高压时刻，名字要传递机遇与尊重，不能有一丝「把人当货」的中介味；企业这端，HR 采购看重的是专业与效率，名字要经得起出现在采购合同和 HR 系统集成清单里。这个双重人格是招聘命名的核心难题——太活泼显得不专业，太企业化又让求职者觉得冰冷。第二个特点是场景的口语化：「我在 X 上找到这份工作的」是招聘品牌最有力的传播句式，名字必须在这句话里念得自然。第三是品类演进的押注：从职位板到社交招聘到 AI 匹配，名字最好绑定「人与机会的连接」这个不变的本质，而不是某一代产品形态。",
+      namingIdeas: [
+        "机遇词根：机会、跃迁、hire、offer——把找工作重述为「向上的一步」，候选人端的情绪价值直接写进名字；适合面向求职者的平台品牌",
+        "连接隐喻：link、bridge、桥、聘——招聘的本质是双边匹配，连接类词根同时对两端成立（LinkedIn 的 linked 就是招聘业务的全部隐喻）",
+        "结果直给：indeed（确实找到了）、录取、直聘——跳过过程承诺结果，「上来就是谈 offer」的直给感是对招聘链路冗长这个行业痛点的回应",
+        "对话人格化：BOSS直聘的「BOSS」把「和老板直接聊」的产品机制放进名字——机制即卖点时，名字就是最短的产品说明书",
+        "HR SaaS 走工具系命名：面向企业的招聘管理工具按 SaaS 惯例起名（-ly、-hub、greenhouse 的培育隐喻）——买家是 HR 与工程团队，名字要像开发者工具一样干净",
+      ],
+      cases: [
+        { name: "LinkedIn", takeaway: "linked（被连接的）+ in（进入圈子）：两个词说清「职业关系网」的全部价值；in 还暗合「找到门路」的俚语——B2B 与 C 端双边通吃的命名范本" },
+        { name: "Indeed", takeaway: "副词「确实/的确」：在一排职位板名字里唯一不描述功能的——它承诺的是确定性（确实有工作）；常见词+品类第一的执行力=名字变成品类入口" },
+        { name: "BOSS直聘", takeaway: "「BOSS」+「直聘」四个字压缩了完整产品机制（跳过 HR 和老板直接谈）：机制命名法的极致——广告语都省了，名字就是差异化本身" },
+        { name: "Greenhouse", takeaway: "温室隐喻：把招聘从「填坑」重述为「培育人才生长的环境」——HR SaaS 里罕见的价值观命名，一个词让产品在采购清单里有了温度" },
+      ],
+      pitfalls: [
+        "中介感词汇（人力派遣、劳务）：合规品类另当别论，但面向白领市场的品牌沾上派遣感，候选人质量立刻分层",
+        "job/hr/talent 的直白堆砌：JobHubPro 式名字在 SEO 上撞满同行，在候选人心里毫无品牌记忆点——双输",
+        "只考虑求职者忘了企业端：名字太网感（「躺平找活」类），HR 无法在采购会上说出口——B 端付费的生意，名字要过采购关",
+        "锁定单一岗位品类：从程序员招聘扩展到全行业是常见路径——名字里焊死「码农」「蓝领」，扩张即改名",
+      ],
+    },
+    en: {
+      label: "Recruiting & HR",
+      title: "How to Name a Recruiting or HR Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Recruiting platform and HR SaaS naming guide: opportunity roots, connection metaphors, outcome-first words, breakdowns of LinkedIn/Indeed/Greenhouse, recommended TLDs and pitfalls — then hunt an available recruiting domain with AI.",
+      intro:
+        "A recruiting brand must persuade both pans of the scale at once. For candidates, job hunting is a high-stress life moment — the name must radiate opportunity and respect, with zero whiff of \"people as inventory\" staffing-agency energy. For employers, HR buyers judge professionalism and efficiency — the name must survive procurement contracts and an HRIS integration list. This split personality is the category's core naming problem: too playful reads unprofessional, too corporate reads cold to job seekers. Second, the category's strongest marketing sentence is spoken: \"I found this job on X\" — the name must sit naturally inside it. Third, bet on the invariant: job boards became social recruiting became AI matching, so anchor the name to \"connecting people with opportunity\" — the essence that survives every product-form shift — rather than to this generation's mechanics.",
+      namingIdeas: [
+        "Mine opportunity roots: hire, offer, leap, rise — recast job hunting as a step upward, writing the candidate-side emotional payoff into the name; strongest for seeker-facing platforms",
+        "Use connection metaphors: link, bridge, match — recruiting is two-sided matching at heart, and connection roots work for both sides at once (LinkedIn's \"linked\" is the entire business in one participle)",
+        "Promise the outcome: indeed, hired, direct — skip the process and name the result; \"straight to the offer\" energy answers the industry's defining pain of drawn-out pipelines",
+        "Name the mechanism: when the product mechanic is the differentiator (chat directly with the hiring manager), put it in the name — the name becomes the shortest possible product explainer",
+        "Name HR SaaS like dev tools: employer-side tooling follows SaaS conventions (-ly, -hub, Greenhouse's cultivation metaphor) — the buyers are HR and engineering teams, so keep the name as clean as a developer tool's",
+      ],
+      cases: [
+        { name: "LinkedIn", takeaway: "linked + in: two words covering the whole value of a professional graph, with \"in\" echoing the idiom of having an in somewhere — a naming template that works B2B and consumer simultaneously" },
+        { name: "Indeed", takeaway: "An adverb of certainty — the only major job board whose name describes no feature; it promises sureness (there are indeed jobs). Common word + category-winning execution = the name becomes the category's front door" },
+        { name: "Greenhouse", takeaway: "The cultivation metaphor: reframing hiring from \"filling seats\" to \"an environment where talent grows\" — rare values-led naming in HR SaaS that gives a procurement line item actual warmth" },
+        { name: "Lever", takeaway: "A simple machine as a hiring metaphor — leverage, moving something heavy with less force; one crisp syllable that flatters both the recruiter's craft and the engineer-buyer's taste" },
+      ],
+      pitfalls: [
+        "Staffing-agency vocabulary (labor dispatch, manpower): fine for compliance-heavy niches, but a whiff of temp-agency in a white-collar brand instantly tiers down candidate quality",
+        "Literal job/hr/talent pileups: JobHubPro-style names collide with thousands of peers in search and leave zero memory trace with candidates — losing on both fronts",
+        "Optimizing only for seekers: a name too meme-flavored for an HR director to say in a procurement meeting will cap your B2B revenue — the employer side signs the checks",
+        "Welding the name to one vertical: expanding from developer hiring to all industries is the standard path — a name with \"coder\" or \"blue-collar\" baked in schedules its own rebrand",
+      ],
+    },
+  },
+  eldercare: {
+    slug: "eldercare",
+    tlds: [
+      { tld: "com", zh: "决策者是子女，付款前会反复核实——.com 的正规感是第一道信任关", en: "Adult children are the decision makers and they verify before paying — .com's legitimacy is the first trust gate" },
+      { tld: "life", zh: "把养老定位成「生活的延续」而非照护机构，.life 温和有尊严", en: "Frames senior care as life continuing, not institutional care — gentle and dignified" },
+      { tld: "org", zh: "非营利养老机构与行业协会的标准后缀，公益感自带公信力", en: "The standard for nonprofit senior-care organizations — the civic feel carries credibility" },
+    ],
+    zh: {
+      label: "养老服务",
+      title: "养老服务品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "养老服务与银发经济命名指南：尊严词根、家园意象、双代际沟通等 5 种思路，Honor/Papa/泰康之家 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的养老品牌域名。",
+      intro:
+        "养老品牌的名字要同时打动两代人：付钱的子女和接受服务的父母。子女在愧疚与焦虑中搜索「靠谱的养老服务」，名字要让他们放心（专业、正规、孝心的代理人）；父母则抗拒「被养老」——任何暗示衰老、失能、被照顾的字眼都会触发抵触。这决定了养老命名的第一原则：写尊严，不写衰老。好名字把服务重述为「继续好好生活」而不是「被人照顾」。第二个特点是信任密度要求极高：这是把父母交给陌生人的决定，名字必须经得起子女的反复审视与亲友转述。第三是文化敏感：中文语境里「孝」与「家」的分量、忌讳词的雷区（谐音不吉利的字），都比其他行业敏感一个数量级。",
+      namingIdeas: [
+        "尊严词根：honor、尊、颐、康——把「被照顾」重述为「被尊重」；Honor 直接用「敬意」命名居家养老，一个词完成整个品类的叙事翻转",
+        "家园意象：home、之家、院、里——机构养老最大的心理障碍是「离开家」，名字里的家园感是对这个恐惧的直接安抚；适合社区与机构型品牌",
+        "活力叙事：金色、夕阳红之外找新词——silver、prime、颐年——把老年重述为「黄金阶段」；面向活力老人的旅居、教育、社交产品尤其适用",
+        "代际连接词：陪、伴、Papa 的亲昵称谓——服务本质是「替子女陪伴」，亲属称谓类名字让品牌像家庭成员而不是服务商",
+        "双语双检：中文名过「子女转述测试」（在家庭群里发出来自然吗），同时查谐音忌讳（音近「死、病、终」的字一票否决）——养老品类的文化雷区密度全行业最高",
+      ],
+      cases: [
+        { name: "Honor", takeaway: "一个词「敬意」：把居家照护从「雇人看护」升维成「向长辈致敬」——服务没变，叙事全变；美国最大居家养老网络的名字里没有 care 也没有 senior" },
+        { name: "Papa", takeaway: "亲昵称谓当品牌名：「陪伴孙辈式的年轻人」服务被一个称呼说清——像家人一样的陪伴；亲属称谓命名在信任密集品类里的降维打击" },
+        { name: "泰康之家", takeaway: "「泰康」（安泰健康）+「之家」：保险母品牌的信任资产 + 家园意象的心理安抚——中文养老命名「大品牌背书+家」结构的标准答案" },
+        { name: "A Place for Mom", takeaway: "一句话命名：「给妈妈找个地方」直接说出子女搜索时心里的那句话——搜索意图即品牌名，转介绍时一字不用改" },
+      ],
+      pitfalls: [
+        "衰老暗示词（夕阳、暮年、护老）：父母端直接抵触——「我还没到要被『护』的地步」；写尊严与生活，别写衰老与照护",
+        "谐音忌讳失检：中文养老品牌的死穴——候选名必须逐字过谐音关，音近不吉利字眼的名字在家庭决策链里一票否决",
+        "过度机构化（XX 老年公寓管理中心）：名字像文件标题，子女在朋友圈都不好意思转发——信任要专业感，不要衙门感",
+        "只对子女说话忽略老人意愿：入住决策日益由老人本人参与——名字让老人自己念着舒服（「我住在 X」说出口有面子），成交率完全不同",
+      ],
+    },
+    en: {
+      label: "Senior care",
+      title: "How to Name a Senior Care or Aging-Economy Brand: Ideas, Cases & Domains",
+      metaDescription:
+        "Senior care and aging-economy naming guide: dignity roots, home imagery, two-generation messaging, breakdowns of Honor/Papa/A Place for Mom, recommended TLDs and pitfalls — then hunt an available senior-care domain with AI.",
+      intro:
+        "A senior-care name must move two generations at once: the adult children who pay and the parents who receive. The children search \"trustworthy senior care\" through guilt and anxiety — the name must reassure them (professional, legitimate, a worthy proxy for their devotion). The parents resist \"being aged\" — any word implying decline, frailty or being managed triggers refusal. That sets the category's first rule: write dignity, never decline. A good name recasts the service as \"continuing to live well,\" not \"being looked after.\" Second, the trust bar is the highest in consumer services: this is the decision to hand a parent to strangers, and the name must survive the children's repeated scrutiny and family-group retelling. Third, cultural sensitivity runs an order of magnitude hotter here — taboo homophones and the weight of words like home and honor matter more than in any other category.",
+      namingIdeas: [
+        "Lead with dignity roots: honor, grace, esteem — recast \"being cared for\" as \"being respected\"; Honor named an entire home-care network with one word and flipped the category's story",
+        "Use home imagery: home, house, place, village — the deepest fear of institutional care is leaving home, and hearth-words in the name answer that fear directly; strongest for communities and residences",
+        "Tell a vitality story: silver, prime, golden — reframe later life as a peak stage rather than a decline; best for travel, learning and social products aimed at active seniors",
+        "Borrow kinship words: names like Papa make the brand feel like family rather than a vendor — the service is companionship by proxy, and a kinship name says so in one word",
+        "Run the two-generation test: the name must sound natural retold in a family group chat by the children AND feel dignified spoken by the parent (\"I live at X\") — plus a strict homophone-taboo check; this category's cultural minefield is the densest anywhere",
+      ],
+      cases: [
+        { name: "Honor", takeaway: "One word — respect: elevating home care from \"hiring a caregiver\" to \"honoring your elders.\" The service didn't change; the story did. America's largest home-care network has neither \"care\" nor \"senior\" in its name" },
+        { name: "Papa", takeaway: "A kinship nickname as the brand: \"grandkids on demand\" companionship explained by a single term of endearment — kinship naming as a category-killer in trust-dense services" },
+        { name: "A Place for Mom", takeaway: "A whole sentence as a name: it repeats verbatim what the adult child is thinking while searching — when search intent equals the brand name, referrals need zero translation" },
+        { name: "Brookdale", takeaway: "brook + dale: two pastoral landscape words composing a serene address — the community sounds like a place you'd retire to by choice, not a facility you're placed in; the standard template for residence naming" },
+      ],
+      pitfalls: [
+        "Decline vocabulary (sunset, twilight, nursing): the parent generation rejects it outright — \"I'm not there yet\"; write living and dignity, not aging and care",
+        "Skipping the homophone-taboo check: in many cultures a candidate name that sounds like death or illness words is a one-vote veto in the family decision chain — screen every syllable",
+        "Over-institutionalizing (Senior Housing Management Center): a name that reads like a file header embarrasses the children who must share it — trust needs professionalism, not bureaucracy",
+        "Speaking only to the children: residents increasingly co-decide — a name the parent enjoys saying (\"I live at X\" with pride) converts at a completely different rate",
+      ],
+    },
+  },
+  logistics: {
+    slug: "logistics",
+    tlds: [
+      { tld: "com", zh: "货主与货代的采购决策保守，.com 是物流 B2B 的默认信任线", en: "Shippers and forwarders buy conservatively — .com is the default trust line in logistics B2B" },
+      { tld: "network", zh: "干线、仓配、专线的本质是网络，.network 把资产属性写进域名", en: "Linehaul, warehousing and lanes are a network at heart — .network writes the asset into the domain" },
+      { tld: "io", zh: "物流 SaaS 与货运数字化平台的技术感后缀，融资叙事更顺", en: "The tech-flavored suffix for logistics SaaS and digital freight — smoother for the venture story" },
+    ],
+    zh: {
+      label: "物流货运",
+      title: "物流货运品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "物流/货运/跨境供应链命名指南：速度词根、可靠承诺、网络隐喻等 5 种思路，FedEx/Flexport/顺丰 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的物流域名。",
+      intro:
+        "物流品牌的名字要回答客户唯一关心的问题：「我的货交给你，放心吗？」这个行业卖的不是运输而是确定性——货能不能按时、完好、可追踪地到达。所以物流命名的两大主词根永远是速度与可靠：快是表层卖点，稳是深层承诺，好名字往往两者兼备（顺丰=顺利+丰盛，FedEx=联邦级的快递）。第二个特点是 B2B 决策链的保守性：货代、电商卖家、供应链经理选服务商时极度风险厌恶，名字要经得起出现在报关单、提单和保险合同上。第三是场景的高频出镜：物流名字印在面单、货车车身和跟踪页面上，是曝光量最大的品牌资产之一——名字要短、清晰、在车身上隔 50 米能认出来。",
+      namingIdeas: [
+        "速度词根：ex（express 家族）、flash、迅、达——快递类品牌的默认武器库；ex 尾缀（FedEx、SF Express）已成品类识别符，用它等于自带「快递」标签",
+        "可靠承诺词：顺、安、诚、sure——货主的核心焦虑是丢货与延误，稳定感词根是对焦虑的直接回应；中文物流命名「顺/达/通」的高频不是巧合而是需求",
+        "网络隐喻：port、link、bridge、通——物流的竞争力本质是网络密度，港口/桥梁/通道类意象把基础设施感写进名字；适合货代、专线与供应链平台",
+        "数字化前后缀：flex、smart、cargo+tech 组合——货运数字化品牌用「传统品类词+科技词」的嫁接结构（Flexport=灵活+港口），一个名字同时说清「做什么」和「哪里不同」",
+        "车身测试：把候选名想象成印在货车侧面与快递面单上——50 米外能否认出、司机口中能否顺口说出（「叫个 X 的车」）；物流名字的第一媒介是车身不是官网",
+      ],
+      cases: [
+        { name: "FedEx", takeaway: "Federal Express 的缩写再造：Fed 的「联邦级可靠」+ Ex 的「快」，缩写后反而更强——箭头 logo 藏在字母间隙里，名字与视觉一体化的教科书" },
+        { name: "顺丰", takeaway: "「顺」（顺利，可靠承诺）+「丰」（丰盛，生意兴隆的祝福）：两个字同时安抚货主并讨彩头——中文物流命名「稳+吉」双词根结构的标杆" },
+        { name: "Flexport", takeaway: "flex（灵活）+ port（港口）：传统基建词嫁接科技气质词，「数字化货代」的定位一词说清——货运科技命名的模板级答案" },
+        { name: "Maersk", takeaway: "创始家族姓氏：150 年家族信誉直接作为品牌资产，七个字母印在全球最大的集装箱船队上——B2B 重资产行业里，姓氏=承诺人格化的终极形式" },
+      ],
+      pitfalls: [
+        "通/达/捷的随机排列：中文物流重名重灾区——「XX 通达」类名字在工商与商标库里几乎穷尽，独占性为零",
+        "只有速度没有可靠：极限速度词（闪电、秒达）在延误发生时反噬品牌——承诺快之前先确保名字里有稳的成分",
+        "国际化拼写障碍：跨境物流的名字要被海外仓、海关与外国客户拼写——拼音声调丢失后歧义大的名字（如 Xieda）会在国际单据上制造事故",
+        "锁定单一运输方式：从快递到仓配到供应链是标准扩张路径——名字里焊死「卡车」「空运」，业务扩张时名不副实",
+      ],
+    },
+    en: {
+      label: "Logistics & freight",
+      title: "How to Name a Logistics or Freight Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Logistics, freight and supply-chain naming guide: speed roots, reliability promises, network metaphors, breakdowns of FedEx/Flexport/Maersk, recommended TLDs and pitfalls — then hunt an available logistics domain with AI.",
+      intro:
+        "A logistics name must answer the only question customers actually have: \"if I hand you my cargo, can I stop worrying?\" This industry doesn't sell transportation — it sells certainty: on time, intact, trackable. So the two master roots of logistics naming are speed and reliability: fast is the surface pitch, steady is the deeper promise, and the best names carry both (FedEx — federal-grade express). Second, the B2B decision chain is deeply conservative: forwarders, e-commerce sellers and supply-chain managers are risk-averse buyers, and the name must hold up on customs declarations, bills of lading and insurance contracts. Third, the name is the industry's highest-exposure asset: printed on shipping labels, truck sides and tracking pages — it must be short, legible, and recognizable on a trailer from fifty meters.",
+      namingIdeas: [
+        "Mine speed roots: the ex- family (express), flash, dash, swift — the default arsenal of parcel brands; the -ex suffix (FedEx, SF Express) has become a category identifier that labels you \"express\" for free",
+        "Promise reliability: sure, true, anchor, steady — the shipper's core anxiety is loss and delay, and stability roots answer it head-on; speed gets attention, steadiness signs the annual contract",
+        "Use network metaphors: port, link, bridge, lane — logistics competes on network density, and infrastructure imagery writes that asset into the name; strongest for forwarders, lanes and supply-chain platforms",
+        "Graft tech onto freight: flex, smart, cargo + a tech-flavored word — digital-freight brands use the traditional-category-word + tech-word structure (Flexport = flexible + port) to say what you do and why you're different in one name",
+        "Run the truck test: picture each finalist painted on a trailer side and printed on a waybill — recognizable at fifty meters, sayable by a driver (\"book an X truck\"); a logistics name's first medium is the truck, not the website",
+      ],
+      cases: [
+        { name: "FedEx", takeaway: "Federal Express recompressed: Fed's federal-grade reliability plus Ex's speed, stronger as an abbreviation — with the arrow hidden between the letters, the textbook of name-and-mark integration" },
+        { name: "Flexport", takeaway: "flex + port: a tech-temperament word grafted onto an infrastructure word — \"digital freight forwarder\" explained in one coinage; the template answer for freight-tech naming" },
+        { name: "Maersk", takeaway: "The founding family's surname: 150 years of family reputation deployed as brand equity, seven letters painted on the world's largest container fleet — in asset-heavy B2B, a surname is a promise made personal" },
+        { name: "DHL", takeaway: "Three founders' initials (Dalsey, Hillblom, Lynn): meaningless letters made valuable purely by decades of delivery — proof that in logistics, the name is a vessel the service fills; initials work only if you can wait that long" },
+      ],
+      pitfalls: [
+        "Random express/trans/link permutations: the most collision-saturated corner of B2B naming — TransLinkExpress-style names have zero ownability in registries or search",
+        "All speed, no steadiness: extreme velocity words (Lightning, InstantShip) turn against you at the first delay — before promising fast, make sure the name carries something solid",
+        "Ignoring cross-border spellability: your name will be spelled by overseas warehouses, customs officers and foreign clients — a romanization that collapses without tones creates real incidents on international documents",
+        "Welding the name to one mode: parcel to warehousing to supply chain is the standard expansion path — a name with \"truck\" or \"air\" baked in expires exactly when the business grows",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
