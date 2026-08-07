@@ -537,7 +537,7 @@ export function ShortlistPage({
                         <td key={k} className="px-3">
                           {it.scores ? (
                             <>
-                              <div className="bar min-w-[56px]">
+                              <div className="bar min-w-[48px]">
                                 <i style={{ width: `${it.scores[k]}%` }} />
                               </div>
                               <span className="tnum font-mono text-[11px] text-txt2">{it.scores[k]}</span>

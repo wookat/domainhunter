@@ -540,6 +540,7 @@ export function HomePage({
         <h1 className="text-center text-4xl font-extrabold leading-[1.12] tracking-[-0.03em] md:text-[52px]" style={{ textWrap: "balance" }}>
           {t("home.title1")}<br className="md:hidden" />
           {t("home.title2")}
+          <span className="whitespace-nowrap">{t("home.title2b")}</span>
         </h1>
         <p className="mt-4 text-center text-base text-txt1 md:text-lg">
           {t("home.subtitle")}
