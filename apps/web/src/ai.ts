@@ -29,6 +29,9 @@ const SYSTEM_PROMPT = `你是资深域名命名专家。用户会用自然语言
 - meaning 必须是定稿文案：一次成稿、语气笃定；禁止问号式犹豫、禁止「其实/等等」式自我修正、禁止括号内猜测拆词；对寓意拆解没把握，就换一个你能笃定解释的候选
   好例子：「木舟」muzhou，双字全拼，寓意稳载远行，声调平缓，读一遍就能拼出来
   坏例子：murory，可能是 mu(木?)+rory？也许取自某个人名（不太确定）
+- 禁止在 meaning 里用括号（()（）[]【】）内嵌拆字/注音/补充解释；拆字与寓意必须融进一句通顺的定稿文案直接说清
+  好例子：「慕远」muyuan，mu 取「慕」的向往、yuan 取「远」的辽阔，寓意心怀远方，全拼顺口好记
+  坏例子：「慕远」mu(慕:向往)加yuan【远】，寓意远行（大概）
 
 严格输出 JSON 数组，不要输出其他任何文字：
 [{"label":"域名主体","meaning":"一句话说明寓意与读法","theme":"coined","scores":{"length":90,"readability":85,"relevance":88,"brandability":80}}]`;
@@ -226,9 +229,10 @@ const EN_NAMING_HINT = `
 
 英文命名路线强化（用户是英文 indie hacker，coined/blend 系候选质量优先）：
 - 四种英文命名路线都要覆盖：① portmanteau 词混造（Pinterest=pin+interest、Instagram=instant+telegram 式，两个词各取有辨识度的片段拼接）；② 拉丁/希腊词根改造（Spotify、Sonos 式，取 son/lum/vox/nov 等词根加轻量后缀，短而有质感）；③ 真实短词的错拼/变体（Lyft、Tumblr 式，去元音或换字母，但整体仍要一眼能读出来）；④ 隐喻词（Amazon、Apple 式，用一个现成的具象词，与需求语义有一层聪明的关联，meaning 里必须点破这层关联）
-- meaning 质量要求：说清词源拆解（由哪两个词/哪个词根构成、为什么贴合需求）+ 读音顺口的理由（如两音节重音在前、开音节收尾），不要用 catchy/modern/memorable 这类空洞形容词充数，例如：Lumora = Latin "lumen" (light) + soft -ora ending, evokes clarity for a journaling app; two open syllables, reads instantly
+- meaning 质量要求：说清词源拆解（由哪两个词/哪个词根构成、为什么贴合需求）+ 读音顺口的理由（如两音节重音在前、开音节收尾），不要用 catchy/modern/memorable 这类空洞形容词充数，例如：Lumora = Latin "lumen" meaning light + soft -ora ending, evokes clarity for a journaling app; two open syllables, reads instantly
 - 英文自筛淘汰标准（不达标的直接不要输出）：≥4 音节；含难读辅音簇（如 xq、zv、tsk）；与知名品牌只差一个字母（有法律风险，如 gooogle、spotifi）；直白到像域名占位词的组合（如 bestXXXhub、XXXonline、getXXXapp）
 - meaning 必须是定稿文案：一次成稿、语气笃定；禁止问号式犹豫（如 "lo(quacious?)"）、禁止 "Actually…" 式自我修正、禁止括号内猜测拆词；如果对词源拆解没把握，就换一个你能笃定解释的候选
+- Never embed parenthetical annotations — (), （）, [], 【】 — inside meaning for letter-splitting, phonetic glosses, or side notes; fold the gloss into one polished sentence instead (write Latin "lumen" meaning light, not "lumen (light)")
 - theme 标注硬规则（逐条判断，不看走的是哪条命名路线）：
   ① label 本身就是词典里存在的完整英文单词（含隐喻词，如 castloom 不是、amazon 是）→ 必须标 word
   ② label 能拆成两个可辨认的英文单词/词段拼接（如 castloom = cast + loom、verbloom = verb + bloom）→ 必须标 blend
@@ -237,7 +241,7 @@ const EN_NAMING_HINT = `
 - theme 标注 few-shot 示例（严格模仿这种判断方式）：
 [{"label":"anvil","meaning":"A real English word: the blacksmith's anvil, metaphor for a solid build tool where ideas get forged; one heavy stressed syllable, reads instantly","theme":"word","scores":{"length":92,"readability":95,"relevance":85,"brandability":82}},
 {"label":"verbloom","meaning":"verb + bloom: words that blossom, fits a writing app; two recognizable words joined, stress on the first syllable","theme":"blend","scores":{"length":85,"readability":88,"relevance":90,"brandability":86}},
-{"label":"lumora","meaning":"Latin \"lumen\" (light) + soft -ora ending, evokes clarity for a journaling app; two open syllables, reads instantly","theme":"coined","scores":{"length":88,"readability":90,"relevance":84,"brandability":89}}]`;
+{"label":"lumora","meaning":"Latin \"lumen\" meaning light + soft -ora ending, evokes clarity for a journaling app; two open syllables, reads instantly","theme":"coined","scores":{"length":88,"readability":90,"relevance":84,"brandability":89}}]`;
 
 export async function generateUnderstanding(description: string, apiKey: string, lang: "zh" | "en" = "zh"): Promise<AiUnderstanding | null> {
   try {
@@ -344,8 +348,39 @@ export const stripUnpairedCjkQuotes = (m: string): string => {
   return out;
 };
 
-/** meaning 完整清洗管线：引号归一 → 残留符号清理 → 去首尾空白 */
-export const cleanMeaning = (m: string): string => stripUnpairedCjkQuotes(normalizeQuotes(m)).trim();
+// R149：括号注释剥离——中文 meaning 偶发「mu(慕:向往)加yuan踏石…」式括号内嵌拆字/注音，
+// 整条丢弃误杀成本高，改为剥离括号及其内容后保留。处理范围：()（）[]【】 四类括号，
+// 括号类型不要求成对同型（模型偶发「（…)」混用），按最近开括号配对；嵌套按最外层整段剥离；
+// 孤立闭括号只删该字符；孤立开括号视为截断的注释开头，从该处剥到串尾。
+// 成对「」『』不在处理范围，前端高亮不受影响。
+export const PAREN_RE = /[()（）[\]【】]/;
+export const stripParentheticalAnnotations = (m: string): string => {
+  const opens = new Set(["(", "（", "[", "【"]);
+  const closes = new Set([")", "）", "]", "】"]);
+  const drop = new Set<number>();
+  const stack: number[] = [];
+  for (let i = 0; i < m.length; i++) {
+    const ch = m[i];
+    if (opens.has(ch)) {
+      stack.push(i);
+    } else if (closes.has(ch)) {
+      if (stack.length > 0) {
+        const start = stack.pop()!;
+        // 栈清空说明回到最外层，整段（含嵌套）标记剥离
+        if (stack.length === 0) for (let j = start; j <= i; j++) drop.add(j);
+      } else {
+        drop.add(i); // 孤立闭括号
+      }
+    }
+  }
+  if (stack.length > 0) for (let j = stack[0]; j < m.length; j++) drop.add(j); // 孤立开括号剥到串尾
+  let out = "";
+  for (let i = 0; i < m.length; i++) if (!drop.has(i)) out += m[i];
+  return out.replace(/\s{2,}/g, " ").trim();
+};
+
+/** meaning 完整清洗管线：引号归一 → 残留符号清理 → 括号注释剥离 → 去首尾空白 */
+export const cleanMeaning = (m: string): string => stripParentheticalAnnotations(stripUnpairedCjkQuotes(normalizeQuotes(m))).trim();
 
 async function generateOnce(
   description: string,
@@ -391,8 +426,11 @@ async function generateOnce(
     seen.add(label);
     // meaning 为空/全空白的候选直接丢弃（流截断或模型漏字段），不进核验队列；
     // tried 由上层根据返回值累积，被丢弃项天然不计入
-    const meaning = cleanMeaning(String(c.meaning ?? ""));
+    const rawMeaning = String(c.meaning ?? "");
+    const meaning = cleanMeaning(rawMeaning);
     if (!meaning) continue;
+    // R149：括号注释剥离后过短（<6 字符）说明有效寓意几乎全在括号里，整条丢弃
+    if (meaning.length < 6 && PAREN_RE.test(rawMeaning)) continue;
     const s = c.scores ?? ({} as Partial<AiScores>);
     const theme = String(c.theme ?? "").toLowerCase();
     // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
