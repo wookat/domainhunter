@@ -152,7 +152,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .dot-breathe,
-  .fade-up {
+  .fade-up,
+  .animate-pulse {
     animation: none;
   }
 }

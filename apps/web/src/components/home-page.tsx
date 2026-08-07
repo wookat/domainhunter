@@ -597,7 +597,7 @@ export function HomePage({
         </p>
 
         <div className="mt-8 flex justify-center">
-          <div className="inline-flex items-center gap-1 rounded-full border border-line bg-bg1 p-1" role="tablist" aria-label={t("home.mode.ai")}>
+          <div className="inline-flex items-center gap-1 rounded-full border border-line bg-bg1 p-1" role="group" aria-label={t("home.mode.aria")}>
             {(
               [
                 { key: "ai" as const, label: "home.mode.ai" as I18nKey },
@@ -606,11 +606,10 @@ export function HomePage({
             ).map((m) => (
               <button
                 key={m.key}
-                role="tab"
-                aria-selected={searchMode === m.key}
+                aria-pressed={searchMode === m.key}
                 onClick={() => setSearchMode(m.key)}
                 className={cn(
-                  "h-9 rounded-full px-3.5 text-xs transition-colors sm:h-7",
+                  "h-11 rounded-full px-3.5 text-xs transition-colors sm:h-7",
                   searchMode === m.key ? "bg-brand-dim font-semibold text-brand" : "text-txt1 hover:text-txt0",
                 )}
               >
@@ -618,10 +617,8 @@ export function HomePage({
               </button>
             ))}
             <button
-              role="tab"
-              aria-selected={false}
               onClick={onOpenAdvanced}
-              className="h-9 rounded-full px-3.5 text-xs text-txt1 transition-colors hover:text-txt0 sm:h-7"
+              className="h-11 rounded-full px-3.5 text-xs text-txt1 transition-colors hover:text-txt0 sm:h-7"
             >
               {t("home.mode.bulk")}
             </button>
@@ -722,7 +719,7 @@ export function HomePage({
                 key={r.at}
                 onClick={() => applyRecent(r)}
                 title={r.description}
-                className="flex min-h-[32px] max-w-[240px] items-center truncate rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+                className="flex min-h-[44px] max-w-[240px] items-center truncate rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-[32px]"
               >
                 <span className="truncate">{r.description}</span>
               </button>
@@ -733,7 +730,7 @@ export function HomePage({
                 setRecent([]);
               }}
               title={t("home.recentClear")}
-              className="flex h-6 w-6 items-center justify-center rounded-full text-txt2 hover:text-txt0"
+              className="flex h-11 w-11 items-center justify-center rounded-full text-txt2 hover:text-txt0 sm:h-6 sm:w-6"
             >
               <X className="h-3 w-3" />
             </button>
@@ -754,6 +751,12 @@ export function HomePage({
                 {t("home.quickCheckBtn", { label: quick.label })}
               </button>
             </div>
+            {/* 读屏状态播报：仅在整批核验结束后播报一次汇总，避免逐行流式轰炸 */}
+            {!quickRunning && quickRows.length > 0 && (
+              <p role="status" className="sr-only">
+                {t("home.quickDoneStatus", { available: quickRows.filter((r) => r.status === "available").length, total: quickRows.length })}
+              </p>
+            )}
             {/* 图例过滤：chips 多时按状态筛选（可注册/已注册/未知） */}
             {quickRows.length >= 6 && !quickRunning && (
               <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
@@ -772,7 +775,7 @@ export function HomePage({
                       onClick={() => setQuickFilter(f.key)}
                       aria-pressed={quickFilter === f.key}
                       className={cn(
-                        "tnum inline-flex min-h-[32px] items-center gap-1.5 rounded-full border px-2.5 text-[11px]",
+                        "tnum inline-flex min-h-[44px] items-center gap-1.5 rounded-full border px-2.5 text-[11px] sm:min-h-[32px]",
                         quickFilter === f.key ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:text-txt0",
                       )}
                     >
