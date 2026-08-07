@@ -29,4 +29,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "parenting", zh: "母婴亲子", en: "Parenting" },
   { slug: "hardware", zh: "智能硬件", en: "Hardware" },
   { slug: "security", zh: "网络安全", en: "Cybersecurity" },
+  { slug: "creator", zh: "视频创作者", en: "Creators" },
+  { slug: "freelance", zh: "自由职业", en: "Freelancers" },
+  { slug: "fashion", zh: "服饰潮牌", en: "Fashion labels" },
+  { slug: "coffee", zh: "咖啡茶饮", en: "Coffee & tea" },
+  { slug: "automotive", zh: "汽车出行", en: "Automotive" },
+  { slug: "community", zh: "社区俱乐部", en: "Communities" },
 ];
