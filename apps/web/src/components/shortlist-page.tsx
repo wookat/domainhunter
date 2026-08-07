@@ -500,14 +500,14 @@ export function ShortlistPage({
               <thead>
                 <tr className="whitespace-nowrap border-b border-line text-left text-[11px] uppercase tracking-wide text-txt2">
                   <th className="px-4 py-3 font-medium">{t("shortlist.domain")}</th>
-                  <th className="px-3 py-3 text-center font-medium">{t("score.total")}</th>
+                  <th className="px-2 py-3 text-center font-medium">{t("score.total")}</th>
                   {BAR_KEYS.map((k) => (
-                    <th key={k} className="px-3 py-3 font-medium">
+                    <th key={k} className="px-2 py-3 font-medium">
                       {barLabels[k]}
                     </th>
                   ))}
-                  <th className="px-3 py-3 text-right font-medium">{t("shortlist.price")}</th>
-                  <th title={t("monitor.toggleTitle")} className="px-3 py-3 text-center font-medium">{t("monitor.column")}</th>
+                  <th className="px-2 py-3 text-right font-medium">{t("shortlist.price")}</th>
+                  <th title={t("monitor.toggleTitle")} className="px-2 py-3 text-center font-medium">{t("monitor.column")}</th>
                   <th className="px-4 py-3" />
                 </tr>
               </thead>
@@ -528,13 +528,13 @@ export function ShortlistPage({
                         </div>
                         {it.meaning && <div className="mt-0.5 max-w-xs truncate text-xs text-txt1">{it.meaning}</div>}
                       </td>
-                      <td className="px-3 text-center">
+                      <td className="px-2 text-center">
                         <span className={cn("tnum rounded-md px-2 py-0.5 font-mono text-xs font-bold", score !== undefined ? scoreBadgeClass(score) : "bg-bg3 text-txt1")}>
                           {score ?? "—"}
                         </span>
                       </td>
                       {BAR_KEYS.map((k) => (
-                        <td key={k} className="px-3">
+                        <td key={k} className="px-2">
                           {it.scores ? (
                             <>
                               <div className="bar min-w-[40px]">
@@ -547,8 +547,8 @@ export function ShortlistPage({
                           )}
                         </td>
                       ))}
-                      <td title={priceFull(it.tld, lang, prices)} className="tnum px-3 text-right font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? "—"}</td>
-                      <td className="px-3 text-center">
+                      <td title={priceFull(it.tld, lang, prices)} className="tnum px-2 text-right font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? "—"}</td>
+                      <td className="px-2 text-center">
                         {monitorPending === it.domain ? (
                           <Loader2 className="inline h-4 w-4 animate-spin text-brand" />
                         ) : (
