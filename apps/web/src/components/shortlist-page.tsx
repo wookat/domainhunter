@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Bell, Bookmark, Check, ChevronDown, Download, ExternalLink, Link2, Loader2, MonitorSmartphone, RotateCw, Sparkles, Trash2 } from "lucide-react";
+import { Bell, Bookmark, Check, ChevronDown, Copy, Download, ExternalLink, Link2, Loader2, MonitorSmartphone, RotateCw, Sparkles, Trash2 } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Switch } from "@/components/ui/switch";
@@ -10,6 +10,7 @@ import { downloadText } from "@/lib/export";
 import { useI18n, type TFunc } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
 import { REGISTRARS } from "@/lib/registrars";
+import { addMyShare, loadMyShares, removeMyShare, type MyShare } from "@/lib/my-shares";
 import type { ShortlistItem } from "@/lib/shortlist";
 import { scoreBadgeClass, totalScore, type Status } from "@/types";
 import { cn } from "@/lib/utils";
@@ -100,6 +101,52 @@ export function ShortlistPage({
   const [changesError, setChangesError] = useState("");
   const [webhookInput, setWebhookInput] = useState(() => loadWebhook());
   const [webhookState, setWebhookState] = useState<"idle" | "saving" | "saved" | "invalid">("idle");
+  const [myShares, setMyShares] = useState<MyShare[]>(loadMyShares);
+  const [shareCopiedId, setShareCopiedId] = useState("");
+  const [confirmDeleteId, setConfirmDeleteId] = useState("");
+  const deleteConfirmTimer = useRef<number | undefined>(undefined);
+  const [deletingId, setDeletingId] = useState("");
+  const [deleteError, setDeleteError] = useState("");
+
+  async function copyShareUrl(record: MyShare) {
+    try {
+      await navigator.clipboard.writeText(record.url);
+      setShareCopiedId(record.id);
+      setTimeout(() => setShareCopiedId((cur) => (cur === record.id ? "" : cur)), 2000);
+    } catch { /* 剪贴板不可用时链接仍可手动选中 */ }
+  }
+
+  async function deleteShare(record: MyShare) {
+    if (confirmDeleteId !== record.id) {
+      setConfirmDeleteId(record.id);
+      window.clearTimeout(deleteConfirmTimer.current);
+      deleteConfirmTimer.current = window.setTimeout(() => setConfirmDeleteId(""), 3000);
+      return;
+    }
+    window.clearTimeout(deleteConfirmTimer.current);
+    setConfirmDeleteId("");
+    setDeleteError("");
+    if (!record.token) {
+      // 旧记录无撤销凭证：仅移除本地记录
+      setMyShares(removeMyShare(record.id));
+      return;
+    }
+    setDeletingId(record.id);
+    try {
+      const res = await fetch(`/api/share/${encodeURIComponent(record.id)}`, {
+        method: "DELETE",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ token: record.token }),
+      });
+      // 404（已过期）也视为删除成功，同步移除本地记录
+      if (!res.ok && res.status !== 404) throw new Error(String(res.status));
+      setMyShares(removeMyShare(record.id));
+    } catch {
+      setDeleteError(t("myShares.deleteFailed"));
+    } finally {
+      setDeletingId("");
+    }
+  }
 
   async function saveWebhook() {
     setWebhookState("saving");
@@ -152,8 +199,9 @@ export function ShortlistPage({
         body: JSON.stringify({ items: items.map(({ domain, meaning, scores }) => ({ domain, meaning, scores })) }),
       });
       if (!res.ok) throw new Error(String(res.status));
-      const { url } = (await res.json()) as { url: string };
+      const { id, url, revokeToken } = (await res.json()) as { id: string; url: string; revokeToken?: string };
       setShareUrl(url);
+      setMyShares(addMyShare({ id, url, createdAt: Date.now(), count: items.length, token: revokeToken }));
       try {
         await navigator.clipboard.writeText(url);
         setShareCopied(true);
@@ -450,6 +498,52 @@ export function ShortlistPage({
               )}
             </div>
           )}
+        </div>
+      )}
+
+      {/* 我的分享链接：本地记录的已生成分享，可复制/删除（删除需两步确认） */}
+      {myShares.length > 0 && (
+        <div className="mb-4 rounded-xl border border-line bg-bg1 px-4 py-3.5">
+          <p className="flex items-center gap-1.5 text-xs font-semibold text-txt1">
+            <Link2 className="h-3.5 w-3.5 text-brand" />
+            {t("myShares.title")}
+          </p>
+          <p className="mt-1 text-[11px] text-txt2">{t("myShares.hint")}</p>
+          {deleteError && <p className="mt-2 text-xs text-destructive">{deleteError}</p>}
+          <ul className="mt-2.5 space-y-2">
+            {myShares.map((s) => (
+              <li key={s.id} className="flex flex-wrap items-center gap-2 rounded-lg bg-bg2 px-3 py-2">
+                <span className="tnum font-mono text-[11px] text-txt2">{new Date(s.createdAt).toLocaleString(lang === "zh" ? "zh-CN" : "en-US")}</span>
+                <span className="rounded bg-brand-dim px-1.5 py-0.5 text-[11px] font-semibold text-brand">{t("myShares.item", { n: s.count })}</span>
+                <a href={s.url} target="_blank" rel="noreferrer" className="min-w-0 break-all font-mono text-xs text-brand underline">
+                  {s.url}
+                </a>
+                {!s.token && <span className="text-[11px] text-txt2">{t("myShares.localOnly")}</span>}
+                <span className="ml-auto flex items-center gap-1.5">
+                  <button
+                    className="flex h-11 items-center gap-1 rounded-lg border border-line px-3 text-xs text-txt1 hover:bg-bg3 hover:text-txt0 md:h-9"
+                    onClick={() => void copyShareUrl(s)}
+                  >
+                    {shareCopiedId === s.id ? <Check className="h-3.5 w-3.5 text-brand" /> : <Copy className="h-3.5 w-3.5" />}
+                    {shareCopiedId === s.id ? t("myShares.copied") : t("myShares.copy")}
+                  </button>
+                  <button
+                    className={cn(
+                      "flex h-11 items-center gap-1 rounded-lg border px-3 text-xs md:h-9",
+                      confirmDeleteId === s.id
+                        ? "border-destructive bg-destructive/10 font-semibold text-destructive"
+                        : "border-line text-txt1 hover:bg-bg3 hover:text-destructive",
+                    )}
+                    onClick={() => void deleteShare(s)}
+                    disabled={deletingId === s.id}
+                  >
+                    {deletingId === s.id ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Trash2 className="h-3.5 w-3.5" />}
+                    {confirmDeleteId === s.id ? t("myShares.deleteConfirm") : t("myShares.delete")}
+                  </button>
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 

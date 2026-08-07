@@ -17,7 +17,7 @@ interface ShareSnapshot {
   createdAt: number;
 }
 
-type LoadState = { kind: "loading" } | { kind: "notFound" } | { kind: "ready"; data: ShareSnapshot };
+type LoadState = { kind: "loading" } | { kind: "notFound" } | { kind: "revoked" } | { kind: "ready"; data: ShareSnapshot };
 
 export function SharePage({ id }: { id: string }) {
   const { t, lang } = useI18n();
@@ -30,6 +30,10 @@ export function SharePage({ id }: { id: string }) {
     (async () => {
       try {
         const res = await fetch(`/api/share/${encodeURIComponent(id)}`);
+        if (res.status === 410) {
+          if (!cancelled) setState({ kind: "revoked" });
+          return;
+        }
         if (!res.ok) throw new Error(String(res.status));
         const data = (await res.json()) as ShareSnapshot;
         if (!cancelled) setState({ kind: "ready", data });
@@ -53,12 +57,12 @@ export function SharePage({ id }: { id: string }) {
     );
   }
 
-  if (state.kind === "notFound") {
+  if (state.kind === "notFound" || state.kind === "revoked") {
     return (
       <main className="grid flex-1 place-items-center px-4 py-24">
         <div className="text-center">
           <Crosshair className="mx-auto h-8 w-8 text-txt2" />
-          <p className="mt-4 text-sm text-txt1">{t("share.notFound")}</p>
+          <p className="mt-4 text-sm text-txt1">{t(state.kind === "revoked" ? "share.revoked" : "share.notFound")}</p>
           <a
             href="/"
             className="mt-6 inline-flex h-10 items-center gap-1.5 rounded-lg bg-brand px-5 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90"
