@@ -1284,6 +1284,186 @@ const GUIDES = {
       ],
     },
   },
+  digital: {
+    tld: "digital",
+    zh: {
+      title: ".digital 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".digital 适合数字化转型服务、数字营销机构与一切「数字化」叙事的产品。查看 .digital 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .digital 域名。",
+      intro:
+        ".digital 把「数字化」写进了域名：数字化转型咨询、数字营销与广告机构、数字产品工作室、线上教育与数字藏品平台，用 .digital 等于把行业标签挂在门口。它在海外机构圈接受度很高——大量 digital agency 直接用 name.digital 当官网，省掉了在 .com 里挤 digital 一词的长域名。注册局是 Identity Digital，RDAP/注册链路成熟，主流注册商都支持。价格是典型新顶级域结构：首年常见十几到三十元促销，续费两百多元，长期持有按续费核算。库存充裕，行业词与风格词大多可注册。短板：后缀 7 字符偏长，且语义与「数字」强绑定，传统实体业务用它会错位。定位建议：数字服务机构的主域名，或品牌名本身含 digital 时的自然拆分（如 godigital → go.digital）。",
+      bestFor: ["数字化转型与咨询服务", "数字营销与广告机构", "数字产品工作室", "线上教育与数字内容平台"],
+      namingTips: [
+        "品牌名含 digital 时直接拆分：go.digital、we.digital",
+        "机构类词根 + .digital 自带业务说明，词根可更大胆",
+        "后缀 7 字符偏长，词根控制在 ≤6 字符",
+        "首年促销续费贵，按续费价做长期预算",
+      ],
+    },
+    en: {
+      title: ".digital Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".digital fits digital-transformation services, marketing agencies and anything with a digital story. See live pricing and naming advice, then hunt available .digital names with AI.",
+      intro:
+        ".digital writes the industry into the address: digital-transformation consultancies, marketing and ad agencies, digital product studios, online education and digital-collectible platforms all read instantly on it. Adoption among agencies is real — many run their site on name.digital rather than cramming \"digital\" into a long .com. The registry is Identity Digital, so RDAP and registrar support are mature. Pricing follows the classic new-gTLD pattern: promo first years of a few dollars, renewals in the $30–40 range — budget on the renewal. Inventory is generous, with most industry and style words still available. Trade-offs: the seven-character suffix is long, and the semantics bind you to \"digital\" — a poor fit for traditional physical businesses. Best fit: the primary domain for digital service firms, or a natural split when the brand contains the word (godigital → go.digital).",
+      bestFor: ["Digital transformation & consulting", "Digital marketing & ad agencies", "Digital product studios", "Online education & digital content"],
+      namingTips: [
+        "Brands containing \"digital\" split naturally: go.digital, we.digital",
+        "Agency-style roots + .digital explain the business — the root can be bold",
+        "Seven-character suffix — keep roots ≤6 characters",
+        "Cheap first year, pricier renewal — budget on renewal",
+      ],
+    },
+  },
+  media: {
+    tld: "media",
+    zh: {
+      title: ".media 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".media 是内容与媒体行业的语义后缀，适合媒体公司、播客、视频团队与内容工作室。查看 .media 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .media 域名。",
+      intro:
+        ".media 一词覆盖了整个内容行业：新媒体公司、播客网络、视频制作团队、内容营销工作室、独立创作者联盟，「品牌 + .media」读出来就是公司全称。相比在 .com 里注册 xxmedia 的长域名，直接用 xx.media 更短更现代，这也是海外大量制作公司与播客网络的选择。注册局 Identity Digital，链路成熟。价格属于新顶级域的中高档：首年常见几十到一百元，续费两百多元。库存良好，风格词、地名词、题材词大多可注册。命名上它极适合「题材/风格 + .media」的组合——词根说内容方向，后缀说行业形态。短板：语义绑定内容行业，工具类 SaaS 用它会让用户误以为是媒体；另外 media 一词在国内偏机构语感，个人博客用 .blog/.site 可能更贴。定位建议：内容公司与制作团队的主域名，或品牌名以 media 结尾时的自然拆分。",
+      bestFor: ["新媒体与内容公司", "播客网络与视频团队", "内容营销与制作工作室", "创作者联盟与内容品牌"],
+      namingTips: [
+        "品牌名以 media 结尾时直接拆分：bright.media、north.media",
+        "题材/风格词 + .media 自带定位：true.media、slow.media",
+        "工具型 SaaS 慎用，易被误认为媒体公司",
+        "首年与续费价差明显，按续费价核算",
+      ],
+    },
+    en: {
+      title: ".media Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".media is the content industry's suffix — for media companies, podcasts, video teams and content studios. See live pricing and naming advice, then hunt available .media names with AI.",
+      intro:
+        ".media covers the whole content industry in one word: new-media companies, podcast networks, video production teams, content-marketing studios and creator collectives all read naturally as brand + .media — the domain is the company name. Compared with registering a long xxmedia .com, xx.media is shorter and more modern, which is exactly why many production companies and podcast networks abroad chose it. The registry is Identity Digital with mature RDAP support. Pricing sits mid-to-upper tier for new gTLDs: roughly $10–15 first year and $35–40 renewal. Inventory is good — style words, place words and topic words are largely available. It shines as topic/style + .media: the root states the content direction, the suffix states the industry. Trade-offs: the semantics bind you to content — a SaaS tool on .media risks being mistaken for a media company. Best fit: primary domains for content companies and production teams, or a natural split for brands ending in \"media\".",
+      bestFor: ["New-media & content companies", "Podcast networks & video teams", "Content marketing & production studios", "Creator collectives & content brands"],
+      namingTips: [
+        "Brands ending in \"media\" split naturally: bright.media, north.media",
+        "Topic/style word + .media states the positioning: true.media, slow.media",
+        "Avoid for SaaS tools — users may assume you're a media company",
+        "Noticeable promo-to-renewal gap — budget on renewal",
+      ],
+    },
+  },
+  group: {
+    tld: "group",
+    zh: {
+      title: ".group 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".group 适合集团公司、控股企业与多品牌矩阵的母品牌官网。查看 .group 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .group 域名。",
+      intro:
+        ".group 的气质天然偏企业：集团公司、控股平台、多品牌矩阵的母品牌，「品牌 + .group」读出来就是「某某集团」，比 xxgroup.com 的长域名干净得多。海外不少家族企业与投资集团直接用 name.group 当集团官网，旗下品牌再各自持有独立域名。它也适合另一个方向：社群与兴趣小组——微信群、Telegram 群、学习小组的落地页用 .group 语义同样自然。注册局 Identity Digital。价格在新顶级域里属于友好档：首年几十元，续费一百多元，价差比多数新顶级域小。库存很好，姓氏、行业词、地名词大多可注册。短板：后缀 5 字符适中但认知度在国内一般，正式集团用途建议物料写全域名。定位建议：集团/控股母品牌官网、多品牌企业的品牌枢纽页，或社群组织的落地页。",
+      bestFor: ["集团与控股公司官网", "多品牌矩阵的母品牌", "家族企业与投资集团", "社群与兴趣小组落地页"],
+      namingTips: [
+        "品牌名以 group 结尾时直接拆分：nova.group、lee.group",
+        "姓氏 + .group 适合家族企业与投资集团",
+        "续费价差比多数新顶级域小，适合长期持有",
+        "国内正式场合建议物料写全域名，弥补认知度",
+      ],
+    },
+    en: {
+      title: ".group Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".group suits holding companies, multi-brand parents and community groups. See live pricing and naming advice, then hunt available .group names with AI.",
+      intro:
+        ".group has a naturally corporate feel: holding companies, conglomerates and the parent brand of a multi-brand portfolio read as brand + .group — literally \"the X Group\" — far cleaner than a long xxgroup.com. Family businesses and investment groups abroad run their corporate site on name.group while each subsidiary keeps its own domain. It also works in a second direction: communities and interest groups — a landing page for a study group, club or messaging community reads just as naturally. The registry is Identity Digital. Pricing is friendly for a new gTLD: several dollars first year, renewals under $20, with a smaller promo-to-renewal gap than most peers — good for long-term holding. Inventory is strong: surnames, industry words and place names are largely available. Trade-off: recognition is still growing, so spell out the full domain on formal materials. Best fit: corporate parent sites, brand hub pages, and community landing pages.",
+      bestFor: ["Holding & group company websites", "Parent brands of multi-brand portfolios", "Family businesses & investment groups", "Community and interest-group pages"],
+      namingTips: [
+        "Brands ending in \"group\" split naturally: nova.group, lee.group",
+        "Surname + .group fits family businesses and investment firms",
+        "Smaller renewal gap than most new gTLDs — good for long-term holding",
+        "Spell out the full domain on formal materials for recognition",
+      ],
+    },
+  },
+  center: {
+    tld: "center",
+    zh: {
+      title: ".center 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".center 适合帮助中心、资源中心、培训与服务中心类站点。查看 .center 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .center 域名。",
+      intro:
+        ".center 的语义是「中心/枢纽」：帮助中心、资源下载中心、培训与考试中心、医疗与健身中心、社区服务中心，凡是业务形态叫「某某中心」的，域名后缀直接完成命名。它有一个对开发者友好的独特用法：产品的支持站、文档站、状态页可以放在 help.center、docs.center 这类语义直白的域名上，与主域名分工清晰。注册局 Identity Digital，价格是新顶级域里的亲民档：首年十几二十元，续费一百多元。库存极好，行业词、地名词、功能词几乎随便挑。短板：拼写上美式 center 与英式 centre 有差异，面向英联邦用户时要考虑防御性注册或明确物料拼写；语义偏「场所/枢纽」，抽象品牌用它不加分。定位建议：实体中心类机构的官网、产品的支持/资源子站，或「聚合 + 分发」形态的内容枢纽。",
+      bestFor: ["帮助中心与文档站", "培训、考试与服务中心", "医疗、健身等实体中心", "资源聚合与内容枢纽"],
+      namingTips: [
+        "功能词 + .center 语义直白：help.center、data.center",
+        "实体机构直接用业务词：yoga.center、test.center",
+        "注意 center/centre 拼写差异，必要时防御注册",
+        "价格亲民库存极好，常见词优先于造词",
+      ],
+    },
+    en: {
+      title: ".center Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".center fits help centers, resource hubs, training and service centers. See live pricing and naming advice, then hunt available .center names with AI.",
+      intro:
+        ".center means hub: help centers, resource and download hubs, training and testing centers, medical and fitness centers, community service centers — if your business is called \"the X Center,\" the suffix finishes the name for you. It also has a developer-friendly pattern: a product's support site, docs or status page reads perfectly on semantically literal domains like help.center or docs.center, cleanly separated from the main domain. The registry is Identity Digital, and pricing sits in the budget tier: a few dollars first year, renewals around $20. Inventory is excellent — industry words, place words and function words are nearly all available. Trade-offs: mind the center/centre spelling split for Commonwealth audiences (consider a defensive registration), and the \"place/hub\" semantics add little to abstract brands. Best fit: physical center-style institutions, product support/resource subdomains, and aggregation-style content hubs.",
+      bestFor: ["Help centers & documentation sites", "Training, testing & service centers", "Medical, fitness & physical centers", "Resource aggregation & content hubs"],
+      namingTips: [
+        "Function word + .center is self-explanatory: help.center, data.center",
+        "Physical institutions can use the business word directly: yoga.center",
+        "Mind the center/centre spelling split — register defensively if needed",
+        "Budget pricing and deep inventory — prefer real words over coinages",
+      ],
+    },
+  },
+  works: {
+    tld: "works",
+    zh: {
+      title: ".works 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".works 语义双关「作品」与「能用」，适合工作室、作品集与实干型工具产品。查看 .works 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .works 域名。",
+      intro:
+        ".works 是少数自带双关的后缀：既是「作品/工坊」（design works、iron works 的传统用法），也是「it works（能用）」的口语肯定。这让它同时适合两类用户：一是工作室与作品集——设计工坊、木工坊、独立开发者的项目集，name.works 读起来像老字号招牌；二是实干型工具产品——「品牌 + .works」暗示「这东西真的能用」，对开发者工具与自动化产品是天然的口播广告（如 zapier 式的自动化工具用 flow.works）。注册局 Identity Digital。价格首年十几二十元、续费两百多元，典型新顶级域结构。库存很好，动词、工艺词、工具词大多可注册。短板：语义偏具体执行，抽象品牌与金融类产品用它不贴；后缀 5 字符适中但复数 s 口播时要念清。定位建议：工作室/工坊官网、个人作品集、以及强调「可靠能用」的工具产品。",
+      bestFor: ["设计与手作工作室", "个人与团队作品集", "开发者工具与自动化产品", "工程与制造类品牌"],
+      namingTips: [
+        "「品牌 + .works」自带「能用」暗示：flow.works、ship.works",
+        "工艺词/材料词适合工坊：wood.works、pixel.works",
+        "口播时注意复数 s，物料写全域名",
+        "首年便宜续费贵，按续费价做预算",
+      ],
+    },
+    en: {
+      title: ".works Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".works puns on \"works of craft\" and \"it works\" — great for studios, portfolios and dependable tools. See live pricing and naming advice, then hunt available .works names with AI.",
+      intro:
+        ".works is one of the few TLDs with a built-in double meaning: the traditional \"works\" of craftsmanship (design works, iron works) and the colloquial \"it works.\" That serves two audiences at once. Studios and portfolios — design shops, maker spaces, indie developers' project collections — read like a heritage signboard on name.works. And pragmatic tool products get a free slogan: brand + .works implies the thing actually works, a natural word-of-mouth hook for developer tools and automation products (think flow.works for an automation tool). The registry is Identity Digital. Pricing is the classic pattern: a few dollars first year, renewals in the $30 range. Inventory is strong — verbs, craft words and tool words are largely available. Trade-offs: the semantics are concrete and hands-on, a poor match for abstract or financial brands, and the plural \"s\" needs care when spoken. Best fit: studio and workshop sites, portfolios, and tools that stake their brand on reliability.",
+      bestFor: ["Design & craft studios", "Personal and team portfolios", "Developer tools & automation products", "Engineering and manufacturing brands"],
+      namingTips: [
+        "Brand + .works implies \"it works\": flow.works, ship.works",
+        "Craft and material words suit workshops: wood.works, pixel.works",
+        "Mind the plural \"s\" when spoken — spell out the domain on materials",
+        "Cheap first year, pricier renewal — budget on renewal",
+      ],
+    },
+  },
+  zone: {
+    tld: "zone",
+    zh: {
+      title: ".zone 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".zone 语义是「地带/专区」，适合游戏社区、主题站与开发者试验场。查看 .zone 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .zone 域名。",
+      intro:
+        ".zone 的语义是「地带/专区/领域」：游戏社区（战区、竞技区）、主题内容站（某某专区）、粉丝站、开发者的试验场与沙盒项目，用 .zone 都非常自然——「主题 + .zone」读出来就是「某某地带」。它在技术圈还有一层亲切感：DNS 里的 zone 文件让 dns.zone、edge.zone 这类域名对开发者自带梗。知名案例如 CNCF 生态里不少工具的演示站。注册局 Identity Digital。价格首年十几二十元、续费两百元上下。库存极好，主题词、游戏词、技术词几乎随便挑。短板：语义偏「围起来的区域」，正式企业官网用它显得随意；「zone」在中文语境里认知度一般，面向国内大众的产品要斟酌。定位建议：游戏与兴趣社区、主题内容站、开发者 side project 与沙盒环境——在这些场景里 .zone 比 .com 更有氛围感。",
+      bestFor: ["游戏社区与竞技站", "主题内容与粉丝专区", "开发者试验场与沙盒", "兴趣圈子与主题活动页"],
+      namingTips: [
+        "主题词 + .zone 即「某某地带」：war.zone、fan.zone",
+        "DNS zone 的技术梗对开发者产品加分：dns.zone、edge.zone",
+        "正式企业官网慎用，气质偏随意",
+        "库存极好价格亲民，适合 side project 批量注册",
+      ],
+    },
+    en: {
+      title: ".zone Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".zone means a dedicated space — great for gaming communities, topic hubs and developer playgrounds. See live pricing and naming advice, then hunt available .zone names with AI.",
+      intro:
+        ".zone means a dedicated space or territory: gaming communities (battle zones, arenas), topic hubs, fan sites and developer playgrounds all read naturally — topic + .zone literally names the place. It carries an extra wink for technical audiences: DNS zone files make domains like dns.zone or edge.zone an insider joke, and plenty of developer tools run demos on .zone. The registry is Identity Digital. Pricing runs a few dollars first year with renewals around $30. Inventory is excellent — theme words, gaming words and tech words are nearly all available. Trade-offs: the \"fenced-off area\" semantics feel casual for a formal corporate site, and recognition among mainstream audiences is still growing. Best fit: gaming and interest communities, topic content hubs, side projects and sandbox environments — places where .zone brings more atmosphere than a generic .com ever could.",
+      bestFor: ["Gaming communities & arenas", "Topic hubs & fan zones", "Developer playgrounds & sandboxes", "Interest circles & event pages"],
+      namingTips: [
+        "Topic + .zone names the place: war.zone, fan.zone",
+        "The DNS-zone pun lands with developers: dns.zone, edge.zone",
+        "Feels casual — think twice for formal corporate sites",
+        "Deep inventory and budget pricing — great for side projects",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
