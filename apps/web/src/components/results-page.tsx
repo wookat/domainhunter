@@ -19,7 +19,8 @@ import {
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { CopyButton, DomainRow, MeaningText, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
-import { downloadText, exportRows } from "@/lib/export";
+import { exportRows } from "@/lib/export";
+import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
 import { useI18n, type I18nKey } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
 import { scoreBadgeClass, tldPrice, totalScore, type Row, type Theme } from "@/types";
@@ -253,7 +254,7 @@ export function ResultsPage({
   const [sort, setSort] = useState<SortKey>("score");
   const [view, setView] = useState<View>("rows");
   const [linkCopied, setLinkCopied] = useState(false);
-  const [availCopied, setAvailCopied] = useState(false);
+  const { copied: availCopied, copy: copyAvailable } = useCopyAvailable();
   const [selectedIdx, setSelectedIdx] = useState(-1);
   const listRef = useRef<HTMLDivElement>(null);
 
@@ -293,28 +294,7 @@ export function ResultsPage({
 
   const visibleAvailable = useMemo(() => visible.filter((r) => r.status === "available"), [visible]);
 
-  function exportFilteredCsv() {
-    const esc = (v: string) => `"${v.replace(/"/g, '""')}"`;
-    const header = "domain,status,meaning,theme,score,length,readability,relevance,brandability,first_year_price";
-    const lines = visible.map((r) => {
-      const s = r.scores;
-      return [
-        r.domain,
-        r.status,
-        esc(r.meaning ?? ""),
-        r.theme ?? "",
-        s ? totalScore(s) : "",
-        s?.length ?? "",
-        s?.readability ?? "",
-        s?.relevance ?? "",
-        s?.brandability ?? "",
-        esc(priceShort(r.tld, lang, prices) ?? ""),
-      ].join(",");
-    });
-    const d = new Date();
-    const ymd = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
-    downloadText([header, ...lines].join("\n"), `domainhunter-results-${ymd}.csv`, "text/csv;charset=utf-8");
-  }
+
 
   // 键盘导航：↑↓ 选中 / C 复制 / S 收藏 / Enter 注册 / Space 再来一轮
   useEffect(() => {
@@ -373,11 +353,7 @@ export function ResultsPage({
               )}
               {visibleAvailable.length >= 2 && (
                 <button
-                  onClick={() => {
-                    void navigator.clipboard.writeText(visibleAvailable.map((r) => r.domain).join("\n"));
-                    setAvailCopied(true);
-                    setTimeout(() => setAvailCopied(false), 1500);
-                  }}
+                  onClick={() => copyAvailable(visibleAvailable.map((r) => r.domain))}
                   className="inline-flex items-center gap-1 rounded-md border border-line bg-bg1 px-2 py-0.5 font-mono text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
                   {availCopied ? <Check className="h-3 w-3 text-brand" /> : <Copy className="h-3 w-3" />}
@@ -386,7 +362,7 @@ export function ResultsPage({
               )}
               {visible.length > 0 && (
                 <button
-                  onClick={exportFilteredCsv}
+                  onClick={() => exportResultsCsv(visible, lang, prices)}
                   className="inline-flex items-center gap-1 rounded-md border border-line bg-bg1 px-2 py-0.5 font-mono text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
                   <Download className="h-3 w-3" />

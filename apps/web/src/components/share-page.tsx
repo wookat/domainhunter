@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Crosshair, Loader2, Sparkles } from "lucide-react";
+import { Check, Copy, Crosshair, Download, Loader2, Sparkles } from "lucide-react";
 
 import { RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
+import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
 import type { ShortlistItem } from "@/lib/shortlist";
 import { scoreBadgeClass, totalScore } from "@/types";
 import { cn } from "@/lib/utils";
@@ -22,6 +23,7 @@ export function SharePage({ id }: { id: string }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
   const [state, setState] = useState<LoadState>({ kind: "loading" });
+  const { copied: availCopied, copy: copyAvailable } = useCopyAvailable();
 
   useEffect(() => {
     let cancelled = false;
@@ -70,6 +72,7 @@ export function SharePage({ id }: { id: string }) {
   }
 
   const { items, createdAt } = state.data;
+  const csvRows = items.map((it) => ({ ...it, status: "available" as const }));
   const timeStr = new Date(createdAt).toLocaleDateString(lang === "zh" ? "zh-CN" : "en-US", {
     year: "numeric",
     month: "short",
@@ -80,6 +83,27 @@ export function SharePage({ id }: { id: string }) {
     <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 md:px-6">
       <h1 className="text-xl font-bold tracking-tight">{t("share.title")}</h1>
       <p className="mt-1 text-xs text-txt2">{t("share.subtitle", { time: timeStr })}</p>
+
+      {items.length > 0 && (
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          {items.length >= 2 && (
+            <button
+              onClick={() => copyAvailable(items.map((it) => it.domain))}
+              className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:h-9"
+            >
+              {availCopied ? <Check className="h-3.5 w-3.5 text-brand" /> : <Copy className="h-3.5 w-3.5" />}
+              {availCopied ? t("results.copiedAvail") : t("results.copyAvailBtn", { n: items.length })}
+            </button>
+          )}
+          <button
+            onClick={() => exportResultsCsv(csvRows, lang, prices)}
+            className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:h-9"
+          >
+            <Download className="h-3.5 w-3.5" />
+            {t("results.exportCsvBtn")}
+          </button>
+        </div>
+      )}
 
       {/* 桌面表格 */}
       <div className="mt-5 hidden overflow-x-auto rounded-xl border border-line bg-bg1 md:block">
