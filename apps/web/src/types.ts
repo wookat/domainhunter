@@ -111,6 +111,11 @@ const TLD_PRICES: Record<string, TldPrice> = {
   art: { first: 90, renew: 110 },
   design: { first: 280, renew: 380 },
   studio: { first: 80, renew: 220 },
+  sh: { first: 320, renew: 380 },
+  gg: { first: 480, renew: 520 },
+  so: { first: 480, renew: 520 },
+  us: { first: 45, renew: 80 },
+  in: { first: 60, renew: 75 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
