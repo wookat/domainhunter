@@ -42,6 +42,7 @@ const ComparePage = lazyChunk(() => import("@/components/compare-page"), (m) => 
 const ShortlistPage = lazyChunk(() => import("@/components/shortlist-page"), (m) => m.ShortlistPage);
 const AdvancedPage = lazyChunk(() => import("@/components/advanced-page"), (m) => m.AdvancedPage);
 const PricesPage = lazyChunk(() => import("@/components/prices-page"), (m) => m.PricesPage);
+const WhyPage = lazyChunk(() => import("@/components/why-page"), (m) => m.WhyPage);
 
 function PageFallback() {
   return <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-16" />;
@@ -67,6 +68,8 @@ function guideFromPath(): string | null {
 
 const pricesFromPath = () => window.location.pathname === "/prices";
 
+const whyFromPath = () => window.location.pathname === "/why";
+
 const shortlistFromPath = () => window.location.pathname === "/shortlist";
 
 function compareFromPath(): string | null {
@@ -90,7 +93,8 @@ export default function App() {
   const [guideSlug] = useState<string | null>(guideFromPath);
   const [compareSlug] = useState<string | null>(compareFromPath);
   const [isPrices] = useState(pricesFromPath);
-  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() ? null : loadSearch()));
+  const [isWhy] = useState(whyFromPath);
+  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() ? null : loadSearch()));
   const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : saved ? "results" : "home"));
   const [resumedNotice, setResumedNotice] = useState(() => Boolean(saved) && !shortlistFromPath());
   const [noticeClosing, setNoticeClosing] = useState(false);
@@ -340,6 +344,21 @@ export default function App() {
     );
   }
 
+  if (isWhy) {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Header
+          onLogoClick={() => window.location.assign("/")}
+          shortlistCount={shortlist.items.length}
+          onShortlistClick={() => window.location.assign("/")}
+        />
+        <Suspense fallback={<PageFallback />}>
+          <WhyPage />
+        </Suspense>
+      </div>
+    );
+  }
+
   if (isPrices) {
     return (
       <div className="flex min-h-screen flex-col">
@@ -580,6 +599,9 @@ export default function App() {
               ))}
               <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/prices?lang=${lang}`}>
                 {t("footer.prices")}
+              </a>
+              <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/why?lang=${lang}`}>
+                {t("footer.why")}
               </a>
             </div>
           </div>

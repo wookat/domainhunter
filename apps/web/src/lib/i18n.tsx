@@ -277,6 +277,7 @@ const zh = {
   "guide.others": "其他行业命名指南",
   "footer.tldGuides": "TLD 注册指南",
   "footer.prices": "价格总览",
+  "footer.why": "为什么选 DomainHunter",
   "footer.industryGuides": "行业命名指南",
   "footer.compares": "后缀对比",
   // AI 理解确认条
@@ -564,6 +565,7 @@ const en: Record<I18nKey, string> = {
   "guide.others": "More industry naming guides",
   "footer.tldGuides": "TLD registration guides",
   "footer.prices": "Price overview",
+  "footer.why": "Why DomainHunter",
   "footer.industryGuides": "Industry naming guides",
   "footer.compares": "TLD comparisons",
   "understand.prefix": "I hear you're after: ",
@@ -640,6 +642,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
     const path = window.location.pathname;
     if (path === "/prices") document.title = `${dicts[lang]["prices.title"]} | DomainHunter`;
+    else if (path === "/why") document.title = `${dicts[lang]["footer.why"]} | DomainHunter`;
     else if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/")) document.title = dicts[lang]["meta.title"];
   }, [lang]);
 
