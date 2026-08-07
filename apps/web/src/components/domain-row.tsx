@@ -174,7 +174,7 @@ export function DomainRow({
       </RegisterMenu>
     </div>
     {/* 移动端寓意行：桌面寓意在行内，窄屏否则完全不可见 */}
-    {row.meaning && <p className="-mt-1.5 px-4 pb-2 pl-14 text-[11px] leading-snug text-txt1 line-clamp-2 sm:hidden">{row.meaning}</p>}
+    {row.meaning && <p className="-mt-1.5 mb-2 px-4 pl-14 text-[11px] leading-snug text-txt1 line-clamp-2 sm:hidden">{row.meaning}</p>}
     {expanded && row.scores && (
       <div className="px-4 pb-3 pl-14">
         {row.meaning && <p className="mb-2 max-w-xl text-xs leading-relaxed text-txt1">{row.meaning}</p>}
