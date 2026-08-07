@@ -691,6 +691,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     const path = window.location.pathname;
     if (path === "/prices") document.title = `${dicts[lang]["prices.title"]} | DomainHunter`;
     else if (path === "/why") document.title = `${dicts[lang]["footer.why"]} | DomainHunter`;
+    else if (path === "/advanced") document.title = `${dicts[lang]["adv.title"]} | DomainHunter`;
     else if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/") && path !== "/mcp") document.title = dicts[lang]["meta.title"];
   }, [lang]);
 
