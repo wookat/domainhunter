@@ -258,6 +258,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个付费会员制社区，寓意「同路人聚在一起互相点亮」；气质要有归属感、值得自称、圈内人一眼认亲；场景是成员自我介绍、社区首页和续费页里都自然得体。",
     en: "A paid membership community. The name should feel like fellow travelers gathering to light each other up; the vibe is belonging, worth self-identifying with, instantly recognizable to insiders; it must feel natural in member intros, on the community homepage, and on the renewal page.",
   },
+  {
+    slug: "wedding",
+    labelZh: "婚庆策划",
+    labelEn: "Wedding planning",
+    zh: "一个高端婚礼策划工作室，寓意「把一生一次的时刻办得郑重又动人」；气质要浪漫、有审美、值得托付；场景是婚礼展台、请柬落款和准新娘转发给闺蜜的链接里都优雅得体。",
+    en: "A high-end wedding planning studio. The name should convey making a once-in-a-lifetime moment solemn and moving; the vibe is romantic, tasteful, and trustworthy; it must look elegant on an expo booth, an invitation footer, and in the link a bride forwards to her best friend.",
+  },
+  {
+    slug: "bnb",
+    labelZh: "民宿短租",
+    labelEn: "BnB & stays",
+    zh: "一个有主人温度的民宿品牌，寓意「推开门就是另一种生活」；气质要在地、温暖、有栖居感；场景是订房平台列表里一眼与连锁酒店区分开，客人退房后向朋友转述时顺口好记。",
+    en: "A boutique BnB brand with a host's warmth. The name should feel like opening a door into another way of living; the vibe is local, warm, and homelike; it must stand apart from chain hotels in a booking list and roll off the tongue when guests retell it to friends.",
+  },
+  {
+    slug: "courses",
+    labelZh: "在线课程",
+    labelEn: "Online courses",
+    zh: "一个在线课程与知识付费品牌，寓意「学完就能看见更好的自己」；气质要专业、有结果感、值得付费；场景是转发海报的大标题、付款页和学员说「我报了它的课」时都站得住。",
+    en: "An online course and creator-education brand. The name should promise a better self on the other side of the course; the vibe is expert, outcome-driven, worth paying for; it must hold up as a launch-graphic headline, on the checkout page, and in \"I enrolled in X\".",
+  },
+  {
+    slug: "boardgame",
+    labelZh: "桌游工作室",
+    labelEn: "Board games",
+    zh: "一个原创桌游工作室，寓意「把朋友聚到一张桌子上创造回忆」；气质要有想象力、有出品感、喊起来顺口；场景是游戏盒封面、众筹页标题和「今晚玩它吧」的提议里都响亮好记。",
+    en: "An indie tabletop game studio. The name should evoke gathering friends around one table to make memories; the vibe is imaginative, well-crafted, and satisfying to say; it must ring out on a game box cover, a crowdfunding headline, and in \"let's play it tonight\".",
+  },
+  {
+    slug: "outdoor",
+    labelZh: "户外露营",
+    labelEn: "Outdoor & camping",
+    zh: "一个户外露营装备与生活方式品牌，寓意「离开城市，去更大的世界扎营」；气质要辽阔、可靠、有山野气；场景是绣在冲锋衣胸口、压印在钛杯上和营地口碑推荐里都经得起打量。",
+    en: "An outdoor gear and camp-life brand. The name should evoke leaving the city to pitch camp in a wider world; the vibe is vast, dependable, mountain-worn; it must hold up embroidered on a jacket chest, stamped on a titanium mug, and in campsite word of mouth.",
+  },
+  {
+    slug: "cleaning",
+    labelZh: "家政清洁",
+    labelEn: "Cleaning services",
+    zh: "一个上门家政清洁服务品牌，寓意「推开家门那一刻焕然一新的如释重负」；气质要可靠、亲切、值得托付钥匙；场景是地图搜索卡片、客户通讯录备注和邻里转介绍里都专业好记。",
+    en: "An on-demand home cleaning service brand. The name should capture the fresh relief of opening the door to a spotless home; the vibe is reliable, friendly, key-trustworthy; it must look professional in a map listing, survive being saved in contacts, and travel in neighbor referrals.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
