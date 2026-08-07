@@ -91,6 +91,7 @@ export function ShortlistPage({
   const abortRef = useRef<AbortController | null>(null);
   const monitor = useMonitor();
   const [monitorError, setMonitorError] = useState("");
+  const [monitorPending, setMonitorPending] = useState<string | null>(null);
   const [changesOpen, setChangesOpen] = useState(false);
   const [monitorChanges, setMonitorChanges] = useState<MonitorChange[] | null>(null);
   const [changesLoading, setChangesLoading] = useState(false);
@@ -105,9 +106,15 @@ export function ShortlistPage({
   }
 
   async function toggleMonitor(domain: string, status?: string) {
+    if (monitorPending) return;
     setMonitorError("");
-    const r = await monitor.toggle(domain, status);
-    if (!r.ok) setMonitorError(r.full ? t("monitor.full") : t("monitor.failed"));
+    setMonitorPending(domain);
+    try {
+      const r = await monitor.toggle(domain, status);
+      if (!r.ok) setMonitorError(r.full ? t("monitor.full") : t("monitor.failed"));
+    } finally {
+      setMonitorPending(null);
+    }
   }
 
   async function openChanges() {
@@ -491,7 +498,7 @@ export function ShortlistPage({
           <div className="hidden overflow-x-auto rounded-xl border border-line bg-bg1 md:block">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-line text-left text-[11px] uppercase tracking-wide text-txt2">
+                <tr className="whitespace-nowrap border-b border-line text-left text-[11px] uppercase tracking-wide text-txt2">
                   <th className="px-4 py-3 font-medium">{t("shortlist.domain")}</th>
                   <th className="px-3 py-3 text-center font-medium">{t("score.total")}</th>
                   {BAR_KEYS.map((k) => (
@@ -542,11 +549,16 @@ export function ShortlistPage({
                       ))}
                       <td title={priceFull(it.tld, lang, prices)} className="tnum px-3 text-right font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? "—"}</td>
                       <td className="px-3 text-center">
-                        <Switch
-                          title={t("monitor.toggleTitle")}
-                          checked={monitor.isMonitored(it.domain)}
-                          onCheckedChange={() => void toggleMonitor(it.domain, it.status)}
-                        />
+                        {monitorPending === it.domain ? (
+                          <Loader2 className="inline h-4 w-4 animate-spin text-brand" />
+                        ) : (
+                          <Switch
+                            title={t("monitor.toggleTitle")}
+                            disabled={monitorPending !== null}
+                            checked={monitor.isMonitored(it.domain)}
+                            onCheckedChange={() => void toggleMonitor(it.domain, it.status)}
+                          />
+                        )}
                       </td>
                       <td className="whitespace-nowrap px-4 text-right">
                         <span className="inline-flex items-center gap-1">
@@ -596,7 +608,11 @@ export function ShortlistPage({
                     <span title={priceFull(it.tld, lang, prices)} className="tnum flex-1 font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? ""}</span>
                     <span className="flex items-center gap-1.5 text-[11px] text-txt2" title={t("monitor.toggleTitle")}>
                       {t("monitor.column")}
-                      <Switch checked={monitor.isMonitored(it.domain)} onCheckedChange={() => void toggleMonitor(it.domain, it.status)} />
+                      {monitorPending === it.domain ? (
+                        <Loader2 className="h-4 w-4 animate-spin text-brand" />
+                      ) : (
+                        <Switch disabled={monitorPending !== null} checked={monitor.isMonitored(it.domain)} onCheckedChange={() => void toggleMonitor(it.domain, it.status)} />
+                      )}
                     </span>
                     <button
                       title={t("common.remove")}

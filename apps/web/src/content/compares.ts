@@ -685,6 +685,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Traditional businesses going digital", "Generic product & service sites", "Online brands without a live dimension", "Broadest semantic compatibility"],
     },
   },
+  "com-vs-app": {
+    slug: "com-vs-app",
+    a: "com",
+    b: "app",
+    zh: {
+      title: ".com 和 .app 怎么选：通用信任与应用属性的取舍",
+      metaDescription: ".com 是万能默认，.app 一眼说明「这是个应用」且全后缀强制 HTTPS。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "产品核心是一个 App（移动端或 Web 应用），.app 几乎零解释成本——名字+后缀直接完成自我介绍，且 Google 注册局强制全后缀 HTTPS，安全底线自带；产品不止是应用（内容、服务、电商、公司官网），.com 的通用性更稳。价格上 .app 注册与续费都适中且稳定。常见组合：主品牌 .com 做公司站，产品线用 name.app 做下载/落地页。若两个都可注册且产品确实是应用，.app 的语义加成值得优先考虑。",
+      pickA: ["公司官网与多产品品牌", "内容、电商等非应用业务", "追求最大通用性与转售价值", "面向不熟悉新后缀的大众用户"],
+      pickB: ["移动/Web 应用本体", "应用下载与落地页", "看重强制 HTTPS 的安全属性", "name.com 已被注册但 name.app 可用"],
+    },
+    en: {
+      title: ".com vs .app: Universal Trust or Built-in App Semantics",
+      metaDescription:
+        ".com is the universal default; .app says 'this is an app' at a glance and enforces HTTPS zone-wide. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "If your product is an app (mobile or web), .app introduces itself for free — name plus suffix does the explaining — and Google's registry enforces HTTPS across the whole zone. If you're more than an app (content, commerce, a company site), .com's universality is the safer long-term asset. .app pricing is moderate and stable on both registration and renewal. A common split: the company lives on .com while each product ships on name.app as its download/landing page. If both are free and the product genuinely is an app, the semantic boost of .app is worth taking.",
+      pickA: ["Company sites & multi-product brands", "Content, commerce and non-app businesses", "Maximum universality and resale value", "Mainstream audiences unfamiliar with new TLDs"],
+      pickB: ["The app itself (mobile or web)", "Download & landing pages", "Zone-wide enforced HTTPS", "name.com is taken but name.app is free"],
+    },
+  },
+  "com-vs-dev": {
+    slug: "com-vs-dev",
+    a: "com",
+    b: "dev",
+    zh: {
+      title: ".com 和 .dev 怎么选：大众品牌与开发者身份的取舍",
+      metaDescription: ".com 面向所有人，.dev 是开发者品牌的身份标识且强制 HTTPS。对比两者的受众、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "看受众是谁：面向开发者的工具、文档、个人技术站，.dev 自带圈内身份——看到后缀就知道「这是给写代码的人的」，且与 .app 同属 Google 注册局、全后缀强制 HTTPS；面向大众或企业客户，.com 仍是默认信任。价格上 .dev 注册续费都适中。很多开发者工具的打法：产品站 name.dev，公司站 name.com，文档 docs.name.dev。若你的用户全是开发者，.dev 不是妥协而是加分项。",
+      pickA: ["面向大众或企业客户的产品", "非技术业务与公司官网", "追求最大认知度与转售流动性", "品牌计划超出开发者圈层"],
+      pickB: ["开发者工具与 API 产品", "技术文档与开源项目站", "个人技术博客与作品集", "圈内身份与强制 HTTPS 加分"],
+    },
+    en: {
+      title: ".com vs .dev: Mainstream Brand or Developer Identity",
+      metaDescription:
+        ".com speaks to everyone; .dev is a badge for developer-facing brands with enforced HTTPS. Compare audiences, pricing and fit, then hunt names available on both.",
+      verdict:
+        "It comes down to who you serve. For developer tools, docs and personal tech sites, .dev is an identity badge — the suffix alone says 'built for people who code' — and like .app it's a Google registry zone with enforced HTTPS. For mainstream or enterprise audiences, .com remains the default trust signal. .dev pricing is moderate on both registration and renewal. A common developer-tool pattern: product on name.dev, company on name.com, docs on docs.name.dev. If your entire audience writes code, .dev is an upgrade, not a compromise.",
+      pickA: ["Mainstream or enterprise-facing products", "Non-technical businesses & company sites", "Maximum recognition and resale liquidity", "Brands that will outgrow the developer niche"],
+      pickB: ["Developer tools & API products", "Docs sites & open-source projects", "Personal tech blogs & portfolios", "Insider identity plus enforced HTTPS"],
+    },
+  },
+  "io-vs-dev": {
+    slug: "io-vs-dev",
+    a: "io",
+    b: "dev",
+    zh: {
+      title: ".io 和 .dev 怎么选：极客老牌与开发者新贵的对比",
+      metaDescription: ".io 是技术圈十余年的老牌身份，.dev 语义更直白且便宜得多。对比两者的气质、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两者都是开发者品牌的主流选择，差异在气质与成本：.io 资历更老、创业圈联想更强（YC 系产品的默认气质），但注册与续费都明显更贵；.dev 语义更直白（就是「开发」）、价格便宜一半以上，且强制 HTTPS。库存上两者的短词都比 .com 好得多。务实建议：预算敏感或产品语义就是「给开发者用的」，选 .dev；想要创业圈的老牌极客气质、且预算允许，.io 依然是硬通货。两个都可注册时，先看每年续费差价是否值得为气质买单。",
+      pickA: ["创业公司与 YC 系气质品牌", "已有 .io 生态联想的产品线", "看重后缀资历与转售流动性", "预算充足、气质优先"],
+      pickB: ["预算敏感的开发者工具", "语义直白的「开发」类产品", "看重强制 HTTPS", "长期持有、在意续费成本"],
+    },
+    en: {
+      title: ".io vs .dev: The Veteran Hacker Suffix or the Purpose-Built One",
+      metaDescription:
+        ".io has a decade of startup credibility; .dev is semantically literal and much cheaper. Compare vibes, pricing and fit, then hunt names available on both with AI.",
+      verdict:
+        "Both are mainstream choices for developer brands; the difference is vibe versus cost. .io has seniority — the default YC-startup aesthetic — but registers and renews at a clear premium. .dev is literal ('this is for development'), costs less than half as much, and enforces HTTPS zone-wide. Short-word inventory is far better than .com on both. Pragmatically: if you're budget-conscious or the product is literally for developers, take .dev; if you want the veteran startup credibility and the budget allows, .io is still hard currency. When both are available, ask whether the yearly renewal gap is worth paying for vibe.",
+      pickA: ["Startups with YC-adjacent branding", "Products already in the .io ecosystem", "Suffix seniority and resale liquidity", "Budget allows paying for vibe"],
+      pickB: ["Budget-conscious developer tools", "Literally development-focused products", "Zone-wide enforced HTTPS", "Long-term holds sensitive to renewal cost"],
+    },
+  },
+  "ai-vs-app": {
+    slug: "ai-vs-app",
+    a: "ai",
+    b: "app",
+    zh: {
+      title: ".ai 和 .app 怎么选：AI 光环与应用属性的取舍",
+      metaDescription: ".ai 是 AI 产品的品类信号但价格昂贵，.app 说明产品形态且便宜稳定。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个后缀回答的是不同问题：.ai 回答「你是做什么的」（AI 品类信号），.app 回答「你是什么形态」（一个应用）。产品的核心卖点是 AI 能力、且融资/获客都吃 AI 光环，.ai 的品类溢价值得付——但注意它注册与续费都贵出一个量级。产品形态是应用、AI 只是内部实现，.app 更诚实也便宜得多。判断标准：如果三年后 AI 不再是卖点你会不会想换域名？会，就选 .app；不会（AI 就是产品本体），选 .ai。",
+      pickA: ["AI 原生产品与模型服务", "融资叙事依赖 AI 品类", "AI 光环直接影响获客", "预算能承受高续费"],
+      pickB: ["形态是应用、AI 只是实现", "预算敏感的独立开发者", "看重强制 HTTPS 与价格稳定", "担心 AI 标签三年后过时"],
+    },
+    en: {
+      title: ".ai vs .app: The AI Halo or the App Identity",
+      metaDescription:
+        ".ai signals the AI category at a premium price; .app states the product form cheaply and stably. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The two suffixes answer different questions: .ai answers 'what do you do' (the AI category), .app answers 'what are you' (an application). If AI capability is the core pitch — for fundraising and acquisition alike — the .ai category premium can be worth paying, but registration and renewal both cost an order of magnitude more. If the product is an app and AI is just the implementation detail, .app is more honest and far cheaper. A useful test: if AI stopped being a selling point in three years, would you want to change domains? If yes, take .app; if AI is the product itself, take .ai.",
+      pickA: ["AI-native products & model services", "Fundraising narratives built on AI", "The AI halo directly drives acquisition", "Budget absorbs the premium renewal"],
+      pickB: ["Apps where AI is an implementation detail", "Budget-conscious indie developers", "Enforced HTTPS and stable pricing", "Worried the AI label ages badly"],
+    },
+  },
+  "pro-vs-vip": {
+    slug: "pro-vs-vip",
+    a: "pro",
+    b: "vip",
+    zh: {
+      title: ".pro 和 .vip 怎么选：专业感与会员感的取舍",
+      metaDescription: ".pro 传递专业资质，.vip 传递会员尊享。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "语义方向完全不同：.pro 是「我很专业」——咨询、设计、法律、自由职业者的资质名片；.vip 是「你很尊贵」——会员制、私域、粉丝俱乐部的门牌。面向客户展示专业能力，选 .pro；面向会员营造归属感与稀缺感，选 .vip。.vip 在中文互联网的认知度尤其高（「贵宾」直觉），出海品牌则 .pro 的通用性更好。两者价格都亲民，续费注意各自的上浮幅度。同一品牌也可组合：主站 .pro 展示专业，会员区 .vip 做私域入口。",
+      pickA: ["咨询、法律、设计等专业服务", "自由职业者个人品牌", "需要传递资质与信任", "面向国际市场的专业站"],
+      pickB: ["会员制与订阅制业务", "粉丝俱乐部与私域社群", "中文市场（VIP 认知度高）", "营造尊享与稀缺感"],
+    },
+    en: {
+      title: ".pro vs .vip: Professional Credentials or Member Exclusivity",
+      metaDescription:
+        ".pro signals professional expertise; .vip signals member privilege. Compare semantics, pricing and fit, then hunt names available on both with AI.",
+      verdict:
+        "The semantics point in opposite directions: .pro says 'I am a professional' — a credentials badge for consulting, design, legal and freelance brands; .vip says 'you are special' — a door sign for memberships, fan clubs and private communities. To showcase expertise to clients, take .pro; to make members feel exclusive, take .vip. Note .vip enjoys unusually strong recognition in the Chinese-speaking internet, while .pro travels better globally. Both are affordable; check each one's renewal markup. They even combine well within one brand: the main site on .pro, the members' area on .vip.",
+      pickA: ["Consulting, legal, design & professional services", "Freelancer personal brands", "Trust and credentials messaging", "International professional audiences"],
+      pickB: ["Membership & subscription businesses", "Fan clubs & private communities", "Chinese-market brands (high VIP recognition)", "Exclusivity and scarcity positioning"],
+    },
+  },
+  "cloud-vs-online": {
+    slug: "cloud-vs-online",
+    a: "cloud",
+    b: "online",
+    zh: {
+      title: ".cloud 和 .online 怎么选：云服务属性与通用线上存在的取舍",
+      metaDescription: ".cloud 自带云服务与基础设施联想，.online 是最中性的线上后缀。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "语义精确度不同：.cloud 是行业词——云服务、SaaS、基础设施、托管产品用它一眼对味，非云业务用则显得牵强；.online 是万金油——任何「在线上」的业务都能用，但也不传递任何专业信号。产品与云/托管/基础设施相关，.cloud 的语义加成明显；只是需要一个便宜的通用后缀，.online 库存深、首年便宜（注意续费上浮明显）。判断标准很简单：向别人介绍产品时会不会自然说出「云」这个字？会，选 .cloud；不会，.online 或其他中性后缀更合适。",
+      pickA: ["云服务与托管产品", "SaaS 与基础设施工具", "DevOps 与企业 IT 品牌", "「云」是产品叙事的一部分"],
+      pickB: ["通用线上业务与官网", "传统生意的线上化", "预算敏感的落地页", "不想被行业语义绑定"],
+    },
+    en: {
+      title: ".cloud vs .online: Cloud-Native Semantics or Neutral Web Presence",
+      metaDescription:
+        ".cloud carries cloud-service and infrastructure connotations; .online is the most neutral web suffix. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The difference is semantic precision. .cloud is an industry word — cloud services, SaaS, infrastructure and hosting products feel instantly at home on it, while unrelated businesses feel forced. .online is the all-purpose neutral: any business that exists on the internet can use it, but it signals nothing. If your product touches cloud, hosting or infrastructure, .cloud's semantic boost is real; if you just need a cheap generic suffix, .online has deep inventory and low first-year pricing (mind the steep renewal). The test is simple: would you naturally say the word 'cloud' when describing the product? If yes, take .cloud; if not, .online or another neutral suffix fits better.",
+      pickA: ["Cloud services & hosting products", "SaaS & infrastructure tools", "DevOps & enterprise IT brands", "'Cloud' is part of the product story"],
+      pickB: ["Generic online businesses & sites", "Traditional businesses going digital", "Budget-sensitive landing pages", "Avoiding industry-specific semantics"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

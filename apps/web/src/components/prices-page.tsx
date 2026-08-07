@@ -97,7 +97,7 @@ export function PricesPage() {
             </span>
             <a
               href={`/?tld=${r.tld}`}
-              className="flex min-h-[36px] items-center rounded-lg border border-line px-2.5 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+              className="flex min-h-[44px] items-center rounded-lg border border-line px-2.5 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-[36px]"
             >
               {t("prices.hunt")}
             </a>

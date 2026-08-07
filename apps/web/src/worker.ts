@@ -163,8 +163,10 @@ app.post("/api/ai-search", async (c) => {
     style?: string;
     lengthPref?: string;
     fast?: boolean;
+    lang?: string;
   }>();
   const fast = body.fast === true;
+  const lang: "zh" | "en" = body.lang === "en" ? "en" : "zh";
   let description = (body.description ?? "").trim().slice(0, 500);
   const style = (body.style ?? "").trim().slice(0, 50);
   const lengthPref = (body.lengthPref ?? "").trim().slice(0, 50);
@@ -178,7 +180,11 @@ app.post("/api/ai-search", async (c) => {
 
   const ip = c.req.header("cf-connecting-ip") ?? c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
   if (!(await checkRateLimit(c.env.CACHE, ip))) {
-    return c.json({ error: "rate_limited", message: `今天猎得有点勤快了：每小时最多 ${RATE_LIMIT_PER_HOUR} 次 AI 猎名，休息一会儿再来吧` }, 429);
+    const msg =
+      lang === "en"
+        ? `You've been hunting hard today — AI hunts are capped at ${RATE_LIMIT_PER_HOUR} per hour, come back in a bit`
+        : `今天猎得有点勤快了：每小时最多 ${RATE_LIMIT_PER_HOUR} 次 AI 猎名，休息一会儿再来吧`;
+    return c.json({ error: "rate_limited", message: msg }, 429);
   }
 
   c.executionCtx.waitUntil(bumpUsage(c.env.CACHE, tlds, fast, (body.excludeLabels ?? []).length > 0));
@@ -194,7 +200,7 @@ app.post("/api/ai-search", async (c) => {
       const tried = new Set<string>((body.excludeLabels ?? []).map((l) => l.toLowerCase()));
       const takenLabels: string[] = [...tried];
       let availableCount = 0;
-      const understandingDone = generateUnderstanding(description, apiKey)
+      const understandingDone = generateUnderstanding(description, apiKey, lang)
         .then(async (u) => {
           if (u) await emit({ type: "understanding", ...u });
         })
@@ -208,6 +214,7 @@ app.post("/api/ai-search", async (c) => {
               count: fast && round === 1 ? FAST_FIRST_ROUND_COUNT : 24,
               excludeTaken: round === 1 && takenLabels.length === 0 ? undefined : takenLabels,
               round,
+              lang,
             });
           } catch (e) {
             await emit({ type: "error", round, detail: String(e) });
@@ -612,11 +619,28 @@ app.get("/s/:id", async (c) => {
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
 });
 
+// 候选清单页：客户端路由，直链/刷新时回 SPA 壳（个人数据页，noindex）
+app.get("/shortlist", async (c) => {
+  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  let html = await res.text();
+  html = html.replace("</head>", '<meta name="robots" content="noindex" /></head>');
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
+});
+
 // 动态分享图：清单前 3 个域名 + 数量，品牌绿主题（SVG，1200×630）
 // 价格总览页分享图（须注册在 /api/og/:id 之前，否则被其当作分享 id）
 app.get("/api/og/prices", (c) => {
   const lang = c.req.query("lang") === "en" ? "en" : "zh";
   return new Response(pageOgSvg(lang === "en" ? "Pricing" : "域名价格", PRICES_META[lang].title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
+// 首页分享图（静态 og.png 为中文，英文首页用动态 SVG，平台不支持 SVG 时回退 og.png；须在 /api/og/:id 之前注册）
+app.get("/api/og/home", (c) => {
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  const title = lang === "en" ? "Describe the meaning — hunt truly available domains" : "说出寓意，猎取真正可注册的好域名";
+  return new Response(pageOgSvg("DomainHunter", title, lang), {
     headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
   });
 });
@@ -743,9 +767,13 @@ async function injectModulepreload(html: string, assets: Fetcher, origin: string
   }
 }
 
-/** SSR 按解析出的语言设置 <html lang>（SPA 水合后会再同步，这里保证首屏/爬虫看到的语言正确） */
+/** SSR 按解析出的语言设置 <html lang> 与 og:locale（SPA 水合后会再同步，这里保证首屏/爬虫看到的语言正确） */
 const setHtmlLang = (html: string, lang: "zh" | "en"): string =>
-  lang === "en" ? html.replace(/<html lang="[^"]*"/, '<html lang="en"') : html;
+  lang === "en"
+    ? html
+        .replace(/<html lang="[^"]*"/, '<html lang="en"')
+        .replace(/<meta property="og:locale" content="[^"]*"/, '<meta property="og:locale" content="en_US"')
+    : html;
 
 /** 未知 slug 的 SEO 路由：返回应用壳 + 404 状态 + noindex，避免软 404 被收录 */
 async function notFoundShell(res: Response): Promise<Response> {
@@ -858,9 +886,9 @@ app.get("/api/og/vs/:slug", (c) => {
 // 首页英文 SSR meta（与 i18n 词典 meta.title 一致）
 const HOME_META_EN = {
   title: "DomainHunter — AI Domain Hunter | Describe the meaning, hunt truly available names",
-  desc: "Describe your idea in one sentence — AI brainstorms domain names, verifies availability live via RDAP+DNS, and scores each one. Only names you can register right now. Free, open source, no login.",
+  desc: "Describe your idea in one sentence — an AI agent brainstorms names, verifies availability live via RDAP+DNS, then reflects and hunts again until there are enough names you can register right now. Free, open source, no login.",
   ogTitle: "DomainHunter — AI Domain Hunter",
-  ogDesc: "Describe the meaning — AI brainstorms names, verifies availability live, and scores each one. Only truly registrable domains.",
+  ogDesc: "Describe the meaning — an AI agent reflects over multiple rounds and verifies live. Only truly registrable domains.",
 };
 
 app.get("/", async (c) => {
@@ -875,7 +903,11 @@ app.get("/", async (c) => {
       .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${escapeHtml(m.ogTitle)}" />`)
       .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${escapeHtml(m.ogDesc)}" />`)
       .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${escapeHtml(m.ogTitle)}" />`)
-      .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${escapeHtml(m.ogDesc)}" />`);
+      .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${escapeHtml(m.ogDesc)}" />`)
+      .replace(
+        /<meta property="og:image" content="[^"]*" \/>/,
+        `<meta property="og:image" content="${SITE_ORIGIN}/api/og/home?lang=en" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+      );
   }
   html = injectHreflang(html, "/").replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
   html = setHtmlLang(html, lang);

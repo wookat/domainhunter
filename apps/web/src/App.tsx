@@ -67,6 +67,8 @@ function guideFromPath(): string | null {
 
 const pricesFromPath = () => window.location.pathname === "/prices";
 
+const shortlistFromPath = () => window.location.pathname === "/shortlist";
+
 function compareFromPath(): string | null {
   const m = window.location.pathname.match(/^\/vs\/([a-z0-9-]{2,48})$/i);
   return m ? m[1].toLowerCase() : null;
@@ -89,7 +91,16 @@ export default function App() {
   const [compareSlug] = useState<string | null>(compareFromPath);
   const [isPrices] = useState(pricesFromPath);
   const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() ? null : loadSearch()));
-  const [mode, setMode] = useState<Mode>(saved ? "results" : "home");
+  const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : saved ? "results" : "home"));
+  const [resumedNotice, setResumedNotice] = useState(() => Boolean(saved) && !shortlistFromPath());
+  const [noticeClosing, setNoticeClosing] = useState(false);
+  const dismissNotice = () => {
+    setNoticeClosing(true);
+    window.setTimeout(() => {
+      setResumedNotice(false);
+      setNoticeClosing(false);
+    }, 350);
+  };
   const [values, setValues] = useState<HomeValues>(() => saved?.values ?? { description: "", tlds: initialTlds(), style: "", lengthPref: "" });
   const [rows, setRows] = useState<Row[]>(saved?.rows ?? []);
   const [rounds, setRounds] = useState<RoundInfo[]>(saved?.rounds ?? []);
@@ -105,14 +116,19 @@ export default function App() {
   const triedLabelsRef = useRef<string[]>(saved?.triedLabels ?? []);
   const roundOffsetRef = useRef(0);
   const startedAtRef = useRef(0);
+  const lastRunRef = useRef<{ v: HomeValues; opts: { more?: boolean; aroundLocked?: boolean; refinePrefs?: string[] } } | null>(null);
   const shortlist = useShortlist();
-  const beforeShortlistRef = useRef<Mode>("home");
+  const beforeShortlistRef = useRef<Mode>(saved ? "results" : "home");
 
   const openShortlist = () => {
     if (mode !== "shortlist") beforeShortlistRef.current = mode;
+    window.history.replaceState(null, "", "/shortlist");
     setMode("shortlist");
   };
-  const closeShortlist = () => setMode(beforeShortlistRef.current);
+  const closeShortlist = () => {
+    if (shortlistFromPath()) window.history.replaceState(null, "", "/");
+    setMode(beforeShortlistRef.current);
+  };
 
   const toggleLock = (domain: string) =>
     setLocked((prev) => {
@@ -186,6 +202,8 @@ export default function App() {
 
   async function run(v: HomeValues, opts: { more?: boolean; aroundLocked?: boolean; refinePrefs?: string[] } = {}) {
     const { more = false, aroundLocked = false, refinePrefs = refinements } = opts;
+    lastRunRef.current = { v, opts };
+    setResumedNotice(false);
     abortRef.current?.abort();
     const ac = new AbortController();
     abortRef.current = ac;
@@ -213,10 +231,17 @@ export default function App() {
       }
       let description = v.description;
       if (more && refinePrefs.length > 0) {
-        description += `\n\n风格微调偏好：${refinePrefs.join("、")}。请按这些偏好调整命名方向。`;
+        description +=
+          lang === "en"
+            ? `\n\nStyle preferences: ${refinePrefs.join(", ")}. Please adjust the naming direction accordingly.`
+            : `\n\n风格微调偏好：${refinePrefs.join("、")}。请按这些偏好调整命名方向。`;
       }
       if (aroundLocked && locked.size > 0) {
-        description += `\n\n我特别喜欢这些名字的风格：${[...locked].map((d) => d.split(".")[0]).join(", ")}。请围绕它们的词根、构词方式与气质再发散相似的新名字。`;
+        const names = [...locked].map((d) => d.split(".")[0]).join(", ");
+        description +=
+          lang === "en"
+            ? `\n\nI especially like the style of these names: ${names}. Please riff on their roots, word-building, and vibe to explore similar new names.`
+            : `\n\n我特别喜欢这些名字的风格：${names}。请围绕它们的词根、构词方式与气质再发散相似的新名字。`;
       }
       const res = await fetch("/api/ai-search", {
         method: "POST",
@@ -226,6 +251,7 @@ export default function App() {
           tlds: v.tlds,
           style: v.style,
           lengthPref: v.lengthPref,
+          lang,
           target: TARGET,
           excludeLabels: more ? triedLabelsRef.current : [],
           fast: !more, // 首轮快速模式：先出少量候选降低首字节时间
@@ -277,9 +303,9 @@ export default function App() {
   }
 
   const understanding = [
-    `为「${values.description}」寻找可注册域名`,
-    values.style && `${t("agent.style")}：${values.style}`,
-    values.lengthPref && `${t("agent.length")}：${values.lengthPref}`,
+    t("understand.fallback", { desc: values.description }),
+    values.style && `${t("agent.style")}${lang === "en" ? ": " : "："}${values.style}`,
+    values.lengthPref && `${t("agent.length")}${lang === "en" ? ": " : "："}${values.lengthPref}`,
   ]
     .filter(Boolean)
     .join(" · ");
@@ -394,7 +420,10 @@ export default function App() {
       <Header
         center={headerCenter}
         right={headerRight}
-        onLogoClick={() => setMode("home")}
+        onLogoClick={() => {
+          if (shortlistFromPath()) window.history.replaceState(null, "", "/");
+          setMode("home");
+        }}
         shortlistCount={shortlist.items.length}
         shortlistActive={mode === "shortlist"}
         onShortlistClick={() => (mode === "shortlist" ? closeShortlist() : openShortlist())}
@@ -402,17 +431,65 @@ export default function App() {
 
       {error && (
         <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
-          <p className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{error}</p>
+          <div className="flex items-center justify-between gap-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5">
+            <p className="text-sm text-destructive">{error}</p>
+            {!running && lastRunRef.current && (
+              <button
+                type="button"
+                className="shrink-0 rounded-md border border-destructive/40 px-3 py-1.5 text-sm font-semibold text-destructive transition-colors hover:bg-destructive/20"
+                onClick={() => {
+                  const last = lastRunRef.current!;
+                  setError("");
+                  void run(last.v, last.opts);
+                }}
+              >
+                {t("error.retry")}
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
+      {resumedNotice && mode === "results" && (
+        <div
+          className={`mx-auto w-full max-w-6xl overflow-hidden px-4 transition-all duration-200 ease-out md:px-6 ${noticeClosing ? "mt-0 max-h-0 opacity-0" : "mt-4 max-h-24"}`}
+        >
+          <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-line bg-bg1 px-4 py-2 text-[13px] text-txt1">
+            <span>{t("resume.notice")}</span>
+            <span className="flex items-center gap-2">
+              <button
+                type="button"
+                className="rounded-md border border-line px-2.5 py-1 text-xs font-medium text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+                onClick={() => {
+                  setResumedNotice(false);
+                  setNoticeClosing(false);
+                  setMode("home");
+                }}
+              >
+                {t("resume.newSearch")}
+              </button>
+              <button
+                type="button"
+                aria-label={t("resume.dismiss")}
+                className="rounded-md px-2 py-1 text-xs text-txt2 transition-colors hover:text-txt0"
+                onClick={dismissNotice}
+              >
+                ✕
+              </button>
+            </span>
+          </div>
         </div>
       )}
 
       {(mode === "agent" || mode === "results") && (
-        <UnderstandingBar
-          understanding={aiUnderstanding}
-          fallback={understanding}
-          onRefine={refine}
-          running={running}
-        />
+        <div className={noticeClosing ? "pointer-events-none" : undefined}>
+          <UnderstandingBar
+            understanding={aiUnderstanding}
+            fallback={understanding}
+            onRefine={refine}
+            running={running}
+          />
+        </div>
       )}
 
       {mode === "home" && (
@@ -474,7 +551,10 @@ export default function App() {
             items={shortlist.items}
             onRemove={shortlist.remove}
             onClear={shortlist.clear}
-            onStart={() => setMode("home")}
+            onStart={() => {
+              if (shortlistFromPath()) window.history.replaceState(null, "", "/");
+              setMode("home");
+            }}
             onMerge={shortlist.merge}
             lastCheckedAt={shortlist.lastCheckedAt}
             onApplyStatuses={shortlist.applyStatuses}
