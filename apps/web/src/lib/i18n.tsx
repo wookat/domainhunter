@@ -310,6 +310,21 @@ const zh = {
   "footer.prices": "价格总览",
   "footer.why": "为什么选 DomainHunter",
   "footer.mcp": "MCP 接入",
+  "footer.monitors": "监控管理",
+  "monitors.title": "监控管理",
+  "monitors.hint": "开了监控的域名每 6 小时自动复查，掉落/被注册会记录在监控动态并推送 webhook 通知",
+  "monitors.quota": "全局监控名额",
+  "monitors.mine": "我的监控 {n} 个",
+  "monitors.domain": "域名",
+  "monitors.status": "当前状态",
+  "monitors.lastChecked": "最后检查",
+  "monitors.never": "尚未检查",
+  "monitors.cancel": "取消监控",
+  "monitors.cancelConfirm": "确认取消？",
+  "monitors.empty": "还没有监控任何域名。在搜索结果或候选清单里给已注册域名打开「监控」开关，域名释放时第一时间知道。",
+  "monitors.goShortlist": "去候选清单",
+  "monitors.loadFailed": "监控清单加载失败，请稍后重试",
+  "monitors.manage": "管理监控",
   "footer.industryGuides": "行业命名指南",
   "footer.compares": "后缀对比",
   // AI 理解确认条
@@ -627,6 +642,21 @@ const en: Record<I18nKey, string> = {
   "footer.prices": "Price overview",
   "footer.why": "Why DomainHunter",
   "footer.mcp": "MCP server",
+  "footer.monitors": "Monitors",
+  "monitors.title": "Monitors",
+  "monitors.hint": "Monitored domains are re-checked every 6 hours — drops and registrations are recorded in Monitor updates and pushed to your webhook",
+  "monitors.quota": "Global monitoring capacity",
+  "monitors.mine": "My monitors: {n}",
+  "monitors.domain": "Domain",
+  "monitors.status": "Status",
+  "monitors.lastChecked": "Last checked",
+  "monitors.never": "Not checked yet",
+  "monitors.cancel": "Stop monitoring",
+  "monitors.cancelConfirm": "Confirm?",
+  "monitors.empty": "No monitored domains yet. Flip the Monitor switch on a taken domain in your results or shortlist, and we'll tell you the moment it drops.",
+  "monitors.goShortlist": "Go to shortlist",
+  "monitors.loadFailed": "Couldn't load your monitors — please try again",
+  "monitors.manage": "Manage monitors",
   "footer.industryGuides": "Industry naming guides",
   "footer.compares": "TLD comparisons",
   "understand.prefix": "I hear you're after: ",
@@ -705,6 +735,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     if (path === "/prices") document.title = `${dicts[lang]["prices.title"]} | DomainHunter`;
     else if (path === "/why") document.title = `${dicts[lang]["footer.why"]} | DomainHunter`;
     else if (path === "/advanced") document.title = `${dicts[lang]["adv.title"]} | DomainHunter`;
+    else if (path === "/monitors") document.title = `${dicts[lang]["monitors.title"]} | DomainHunter`;
     else if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/") && path !== "/mcp") document.title = dicts[lang]["meta.title"];
   }, [lang]);
 

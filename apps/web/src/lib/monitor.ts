@@ -100,6 +100,34 @@ export function useMonitor() {
   return { monitored, isMonitored, toggle, setWebhook };
 }
 
+export interface MonitorListEntry {
+  domain: string;
+  status: string;
+  lastChecked: number;
+}
+
+export interface MonitorList {
+  entries: MonitorListEntry[];
+  monitored: number;
+  limit: number;
+}
+
+/** 按本地清单批量查服务端监控条目 + 全局名额占用 */
+export async function fetchMonitorList(domains: string[]): Promise<MonitorList> {
+  const res = await fetch("/api/monitor/list", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ domains }),
+  });
+  if (!res.ok) throw new Error(String(res.status));
+  const data = (await res.json()) as MonitorList;
+  return {
+    entries: Array.isArray(data.entries) ? data.entries : [],
+    monitored: typeof data.monitored === "number" ? data.monitored : 0,
+    limit: typeof data.limit === "number" ? data.limit : 0,
+  };
+}
+
 export async function fetchMonitorChanges(): Promise<MonitorChange[]> {
   const res = await fetch("/api/monitor/changes");
   if (!res.ok) throw new Error(String(res.status));
