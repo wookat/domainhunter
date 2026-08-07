@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Lock } from "lucide-react";
+import { Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Lock, ThumbsDown } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { ScoreBars } from "@/components/score-bars";
@@ -70,6 +70,8 @@ export function DomainRow({
   onToggleLock,
   favorite,
   onToggleFavorite,
+  disliked,
+  onToggleDislike,
 }: {
   row: Row;
   selected?: boolean;
@@ -78,6 +80,8 @@ export function DomainRow({
   onToggleLock?: (domain: string) => void;
   favorite?: boolean;
   onToggleFavorite?: (row: Row) => void;
+  disliked?: boolean;
+  onToggleDislike?: (label: string) => void;
 }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
@@ -143,6 +147,16 @@ export function DomainRow({
         </button>
       )}
       <CopyButton domain={row.domain} className="hidden sm:grid" />
+      {onToggleDislike && (
+        <button
+          title={disliked ? t("results.dislikeActive") : t("results.dislike")}
+          aria-pressed={disliked}
+          className={cn("hidden h-8 w-8 shrink-0 place-items-center rounded-md transition-colors hover:bg-bg3 sm:grid", disliked ? "text-destructive" : "text-txt2 hover:text-txt0")}
+          onClick={() => onToggleDislike(row.label)}
+        >
+          <ThumbsDown className="h-3.5 w-3.5" />
+        </button>
+      )}
       {onToggleFavorite && (
         <button
           title={favorite ? t("results.favRemove") : t("results.favAdd")}

@@ -21,16 +21,17 @@ import { ScoreBars } from "@/components/score-bars";
 import { exportRows } from "@/lib/export";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
-import { scoreBadgeClass, totalScore, type Row } from "@/types";
+import { scoreBadgeClass, tldPrice, totalScore, type Row } from "@/types";
 import { cn } from "@/lib/utils";
 
 type StatusFilter = "available" | "all" | "taken";
-type SortKey = "score" | "length";
+type SortKey = "score" | "length" | "price";
 type View = "rows" | "grid";
 
-function sortRows(rows: Row[], sort: SortKey): Row[] {
+function sortRows(rows: Row[], sort: SortKey, priceOf?: (tld: string) => number): Row[] {
   return [...rows].sort((a, b) => {
     if (sort === "length") return a.label.length - b.label.length;
+    if (sort === "price" && priceOf) return priceOf(a.tld) - priceOf(b.tld);
     const sa = a.scores ? totalScore(a.scores) : -1;
     const sb = b.scores ? totalScore(b.scores) : -1;
     return sb - sa;
@@ -182,6 +183,8 @@ export function ResultsPage({
   onMoreAroundLocked,
   running,
   moreDisabled,
+  dislikedHas,
+  onToggleDislike,
 }: {
   rows: Row[];
   description: string;
@@ -198,8 +201,11 @@ export function ResultsPage({
   onMoreAroundLocked: () => void;
   running: boolean;
   moreDisabled?: boolean;
+  dislikedHas: (label: string) => boolean;
+  onToggleDislike: (label: string) => void;
 }) {
   const { t, lang } = useI18n();
+  const prices = usePrices();
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("available");
   const [tldFilter, setTldFilter] = useState<string>("");
   const [sort, setSort] = useState<SortKey>("score");
@@ -219,11 +225,20 @@ export function ResultsPage({
 
   const topPicks = useMemo(() => sortRows(availableRows, "score").slice(0, 3), [availableRows]);
 
+  const priceOf = useMemo(() => {
+    return (tld: string) => {
+      const live = prices?.[tld];
+      if (live) return live.registration;
+      const s = tldPrice(tld);
+      return s ? s.first / 7.2 : Number.POSITIVE_INFINITY;
+    };
+  }, [prices]);
+
   const visible = useMemo(() => {
     let list = statusFilter === "available" ? availableRows : statusFilter === "taken" ? takenRows : rows;
     if (tldFilter) list = list.filter((r) => r.tld === tldFilter);
-    return sortRows(list, sort);
-  }, [rows, availableRows, takenRows, statusFilter, tldFilter, sort]);
+    return sortRows(list, sort, priceOf);
+  }, [rows, availableRows, takenRows, statusFilter, tldFilter, sort, priceOf]);
 
   // 键盘导航：↑↓ 选中 / C 复制 / S 收藏 / Enter 注册 / Space 再来一轮
   useEffect(() => {
@@ -377,12 +392,13 @@ export function ResultsPage({
             <DropdownMenuTrigger asChild>
               <button className="flex h-8 items-center gap-1 rounded-lg border border-line px-2.5 text-xs text-txt1 hover:text-txt0">
                 <ArrowDownWideNarrow className="h-3.5 w-3.5" />
-                {sort === "score" ? t("results.sort.score") : t("results.sort.length")}
+                {sort === "score" ? t("results.sort.score") : sort === "length" ? t("results.sort.length") : t("results.sort.price")}
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
               <DropdownMenuItem onSelect={() => setSort("score")}>{t("results.sort.byScore")}</DropdownMenuItem>
               <DropdownMenuItem onSelect={() => setSort("length")}>{t("results.sort.byLength")}</DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => setSort("price")}>{t("results.sort.byPrice")}</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           <div className="flex-1" />
@@ -419,6 +435,8 @@ export function ResultsPage({
                 onToggleLock={r.status === "available" ? onToggleLock : undefined}
                 favorite={shortlistHas(r.domain)}
                 onToggleFavorite={r.status !== "taken" ? onToggleFavorite : undefined}
+                disliked={dislikedHas(r.label)}
+                onToggleDislike={r.status !== "taken" ? onToggleDislike : undefined}
               />
             ))}
             {visible.length === 0 && <p className="px-4 py-8 text-center text-sm text-txt2">{t("results.noMatch")}</p>}

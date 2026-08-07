@@ -117,6 +117,7 @@ export default function App() {
   const [locked, setLocked] = useState<Set<string>>(() => new Set(saved?.locked ?? []));
   const [aiUnderstanding, setAiUnderstanding] = useState<Understanding | null>(saved?.aiUnderstanding ?? null);
   const [refinements, setRefinements] = useState<string[]>(saved?.refinements ?? []);
+  const [disliked, setDisliked] = useState<Set<string>>(new Set());
   const abortRef = useRef<AbortController | null>(null);
   const triedLabelsRef = useRef<string[]>(saved?.triedLabels ?? []);
   const roundOffsetRef = useRef(0);
@@ -134,6 +135,14 @@ export default function App() {
     if (shortlistFromPath()) window.history.replaceState(null, "", "/");
     setMode(beforeShortlistRef.current);
   };
+
+  const toggleDislike = (label: string) =>
+    setDisliked((prev) => {
+      const next = new Set(prev);
+      if (next.has(label)) next.delete(label);
+      else next.add(label);
+      return next;
+    });
 
   const toggleLock = (domain: string) =>
     setLocked((prev) => {
@@ -221,6 +230,7 @@ export default function App() {
       setLocked(new Set());
       setAiUnderstanding(null);
       setRefinements([]);
+      setDisliked(new Set());
       triedLabelsRef.current = [];
       roundOffsetRef.current = 0;
     }
@@ -240,6 +250,13 @@ export default function App() {
           lang === "en"
             ? `\n\nStyle preferences: ${refinePrefs.join(", ")}. Please adjust the naming direction accordingly.`
             : `\n\n风格微调偏好：${refinePrefs.join("、")}。请按这些偏好调整命名方向。`;
+      }
+      if (more && disliked.size > 0) {
+        const names = [...disliked].join(", ");
+        description +=
+          lang === "en"
+            ? `\n\nI dislike these names and their style: ${names}. Avoid similar roots, word-building, and vibe.`
+            : `\n\n我不喜欢这些名字及其风格：${names}。请避开类似的词根、构词方式与气质。`;
       }
       if (aroundLocked && locked.size > 0) {
         const names = [...locked].map((d) => d.split(".")[0]).join(", ");
@@ -566,6 +583,8 @@ export default function App() {
           onMoreAroundLocked={() => void run(values, { more: true, aroundLocked: true })}
           running={running}
           moreDisabled={!values.description.trim()}
+          dislikedHas={(label) => disliked.has(label)}
+          onToggleDislike={toggleDislike}
         />
         </Suspense>
       )}
