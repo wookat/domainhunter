@@ -878,6 +878,11 @@ export function HomePage({
               </div>
             ))}
           </div>
+          <p className="mt-4 text-center">
+            <a href={`/why?lang=${lang}`} className="inline-flex min-h-[44px] items-center px-2 text-xs text-txt2 hover:text-brand hover:underline">
+              {t("home.whyLink")}
+            </a>
+          </p>
         </div>
 
         {/* 常见问题（与 SSR 注入的 FAQPage JSON-LD 内容一致） */}
