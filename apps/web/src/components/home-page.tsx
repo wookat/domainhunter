@@ -360,10 +360,10 @@ const QUICK_EXTRA_TLDS = ["com", "io", "ai", "app", "dev", "co", "net", "me"];
 /** 「查更多后缀」按钮覆盖的第二批后缀（同样走 /api/search，0 AI 额度） */
 const QUICK_MORE_TLDS = ["org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network"];
 
-/** 快速核验的可注册 chip 也可收藏到候选清单 */
-function domainToRow(domain: string): Row {
+/** 快速核验的 chip（可注册/已注册）都可收藏到候选清单 */
+function domainToRow(domain: string, status: Row["status"] = "available"): Row {
   const dot = domain.indexOf(".");
-  return { domain, label: domain.slice(0, dot), tld: domain.slice(dot + 1), status: "available", round: 0 };
+  return { domain, label: domain.slice(0, dot), tld: domain.slice(dot + 1), status, round: 0 };
 }
 
 export function HomePage({
@@ -810,12 +810,27 @@ export function HomePage({
                         <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                       </button>
                     </span>
+                  ) : row.status === "taken" ? (
+                    <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-line font-mono text-xs text-txt2">
+                      <span className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
+                        <span className="line-through">{row.domain}</span>
+                        <i className="not-italic font-sans text-[10px] text-taken">{t("status.taken")}</i>
+                      </span>
+                      <button
+                        onClick={() => shortlist.toggle(domainToRow(row.domain, "taken"))}
+                        title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
+                        aria-label={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
+                        aria-pressed={shortlist.has(row.domain)}
+                        className={cn("border-l border-line/70 px-3 transition-colors hover:text-txt0 sm:px-2", shortlist.has(row.domain) && "text-taken")}
+                      >
+                        <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
+                      </button>
+                    </span>
                   ) : (
                     <span
                       key={row.domain}
                       className={cn(
                         "inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 font-mono text-xs",
-                        row.status === "taken" && "border-line text-txt2 line-through",
                         row.status === "unknown" && "border-line text-txt1",
                         row.status === "checking" && "border-line text-txt2",
                       )}
@@ -924,6 +939,30 @@ export function HomePage({
                           : t("home.quickCopyBtn", { n: variantRows.filter((r) => r.status === "available").length })}
                       </button>
                     )}
+                  </div>
+                )}
+                {/* 已注册变体也可收藏（进候选清单后可开监控） */}
+                {variantRows.some((r) => r.status === "taken") && (
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {variantRows
+                      .filter((r) => r.status === "taken")
+                      .map((row) => (
+                        <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-line font-mono text-xs text-txt2">
+                          <span className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
+                            <span className="line-through">{row.domain}</span>
+                            <i className="not-italic font-sans text-[10px] text-taken">{t("status.taken")}</i>
+                          </span>
+                          <button
+                            onClick={() => shortlist.toggle(domainToRow(row.domain, "taken"))}
+                            title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
+                            aria-label={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
+                            aria-pressed={shortlist.has(row.domain)}
+                            className={cn("border-l border-line/70 px-3 transition-colors hover:text-txt0 sm:px-2", shortlist.has(row.domain) && "text-taken")}
+                          >
+                            <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
+                          </button>
+                        </span>
+                      ))}
                   </div>
                 )}
               </div>

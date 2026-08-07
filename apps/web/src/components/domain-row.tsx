@@ -105,6 +105,17 @@ export function DomainRow({
         <span className="tnum w-8 shrink-0 rounded-md bg-taken-dim py-0.5 text-center font-mono text-xs text-taken">—</span>
         <span className="truncate font-mono text-[15px] text-taken line-through">{row.domain}</span>
         <span className="shrink-0 rounded bg-taken-dim px-1.5 py-0.5 text-[11px] text-taken">{t("status.taken")}</span>
+        {onToggleFavorite && (
+          <button
+            title={favorite ? t("results.favRemove") : t("results.favAdd")}
+            aria-label={favorite ? t("results.favRemove") : t("results.favAdd")}
+            aria-pressed={favorite}
+            className={cn("ml-auto grid h-11 w-11 shrink-0 place-items-center rounded-md transition-colors hover:bg-bg3 sm:h-8 sm:w-8", favorite ? "text-taken" : "text-txt2 hover:text-txt0")}
+            onClick={() => onToggleFavorite(row)}
+          >
+            {favorite ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}
+          </button>
+        )}
       </div>
     );
   }

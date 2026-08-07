@@ -545,6 +545,9 @@ export function ShortlistPage({
                           </span>
                           {checkingDomains.has(it.domain) && <Loader2 className="h-3.5 w-3.5 animate-spin text-amber2" />}
                           {change && <StatusBadge change={change} t={t} />}
+                          {!change && it.status === "taken" && (
+                            <span className="shrink-0 rounded bg-taken-dim px-1.5 py-0.5 text-[11px] font-semibold text-taken">{t("status.taken")}</span>
+                          )}
                         </div>
                         {it.meaning && <div className="mt-0.5 max-w-xs truncate text-xs text-txt1">{it.meaning}</div>}
                       </td>
@@ -617,6 +620,9 @@ export function ShortlistPage({
                     <span className="flex shrink-0 items-center gap-1.5">
                       {checkingDomains.has(it.domain) && <Loader2 className="h-3.5 w-3.5 animate-spin text-amber2" />}
                       {change && <StatusBadge change={change} t={t} />}
+                      {!change && it.status === "taken" && (
+                        <span className="shrink-0 rounded bg-taken-dim px-1.5 py-0.5 text-[11px] font-semibold text-taken">{t("status.taken")}</span>
+                      )}
                       {score !== undefined && (
                         <span className={cn("tnum shrink-0 rounded-md px-2 py-0.5 font-mono text-xs font-bold", scoreBadgeClass(score))}>{score}</span>
                       )}

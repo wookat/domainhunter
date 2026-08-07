@@ -27,7 +27,7 @@ function expandBulk(input: string, tlds: string[]): string[] {
   return [...out].slice(0, MAX_BULK);
 }
 
-export function AdvancedPage() {
+export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string) => boolean; toggle: (row: Row) => void } }) {
   const { t } = useI18n();
   const [roots, setRoots] = useState("");
   const [prefixes, setPrefixes] = useState("");
@@ -139,7 +139,7 @@ export function AdvancedPage() {
           <h2 className="mt-6 text-sm font-semibold text-brand">{t("adv.available", { n: available.length })}</h2>
           <div className="mt-2 divide-y divide-line rounded-xl border border-line bg-bg1">
             {available.map((r) => (
-              <DomainRow key={r.domain} row={r} />
+              <DomainRow key={r.domain} row={r} favorite={shortlist.has(r.domain)} onToggleFavorite={shortlist.toggle} />
             ))}
           </div>
         </>
@@ -149,7 +149,7 @@ export function AdvancedPage() {
           <h2 className="mt-6 text-sm font-semibold text-txt1">{t("adv.rest", { n: rest.length })}</h2>
           <div className="mt-2 divide-y divide-line rounded-xl border border-line bg-bg1">
             {rest.map((r) => (
-              <DomainRow key={r.domain} row={r} />
+              <DomainRow key={r.domain} row={r} favorite={shortlist.has(r.domain)} onToggleFavorite={shortlist.toggle} />
             ))}
           </div>
         </>
