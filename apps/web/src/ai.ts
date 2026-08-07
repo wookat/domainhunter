@@ -71,7 +71,16 @@ const EN_NAMING_HINT = `
 - 四种英文命名路线都要覆盖：① portmanteau 词混造（Pinterest=pin+interest、Instagram=instant+telegram 式，两个词各取有辨识度的片段拼接）；② 拉丁/希腊词根改造（Spotify、Sonos 式，取 son/lum/vox/nov 等词根加轻量后缀，短而有质感）；③ 真实短词的错拼/变体（Lyft、Tumblr 式，去元音或换字母，但整体仍要一眼能读出来）；④ 隐喻词（Amazon、Apple 式，用一个现成的具象词，与需求语义有一层聪明的关联，meaning 里必须点破这层关联）
 - meaning 质量要求：说清词源拆解（由哪两个词/哪个词根构成、为什么贴合需求）+ 读音顺口的理由（如两音节重音在前、开音节收尾），不要用 catchy/modern/memorable 这类空洞形容词充数，例如：Lumora = Latin "lumen" (light) + soft -ora ending, evokes clarity for a journaling app; two open syllables, reads instantly
 - 英文自筛淘汰标准（不达标的直接不要输出）：≥4 音节；含难读辅音簇（如 xq、zv、tsk）；与知名品牌只差一个字母（有法律风险，如 gooogle、spotifi）；直白到像域名占位词的组合（如 bestXXXhub、XXXonline、getXXXapp）
-- theme 标注映射：路线①③ 标 coined 或 blend；路线② 标 coined；路线④ 标 word`;
+- meaning 必须是定稿文案：一次成稿、语气笃定；禁止问号式犹豫（如 "lo(quacious?)"）、禁止 "Actually…" 式自我修正、禁止括号内猜测拆词；如果对词源拆解没把握，就换一个你能笃定解释的候选
+- theme 标注硬规则（逐条判断，不看走的是哪条命名路线）：
+  ① label 本身就是词典里存在的完整英文单词（含隐喻词，如 castloom 不是、amazon 是）→ 必须标 word
+  ② label 能拆成两个可辨认的英文单词/词段拼接（如 castloom = cast + loom、verbloom = verb + bloom）→ 必须标 blend
+  ③ 其余纯造词（词根改造、错拼变体，如 lumora、tumblr）→ 标 coined
+  注意：blend 在中文语境另指拼音+英文混合，英文语境下按上面②执行
+- theme 标注 few-shot 示例（严格模仿这种判断方式）：
+[{"label":"anvil","meaning":"A real English word: the blacksmith's anvil, metaphor for a solid build tool where ideas get forged; one heavy stressed syllable, reads instantly","theme":"word","scores":{"length":92,"readability":95,"relevance":85,"brandability":82}},
+{"label":"verbloom","meaning":"verb + bloom: words that blossom, fits a writing app; two recognizable words joined, stress on the first syllable","theme":"blend","scores":{"length":85,"readability":88,"relevance":90,"brandability":86}},
+{"label":"lumora","meaning":"Latin \"lumen\" (light) + soft -ora ending, evokes clarity for a journaling app; two open syllables, reads instantly","theme":"coined","scores":{"length":88,"readability":90,"relevance":84,"brandability":89}}]`;
 
 export async function generateUnderstanding(description: string, apiKey: string, lang: "zh" | "en" = "zh"): Promise<AiUnderstanding | null> {
   try {
@@ -178,8 +187,12 @@ async function generateOnce(
     return Number.isFinite(n) ? Math.min(Math.max(n, 0), 100) : 60;
   };
   // 模型偶尔用 “”/『』/„” 等引号包中文原词，归一为「」保证前端高亮命中
+  // 中文归一先跑，之后残留的英文弯引号（‘’“”）兜底归一为直引号，两条逻辑共存互不干扰
   const normalizeQuotes = (m: string) =>
-    m.replace(/[“『„]([^“”『』„「」]{1,12}?)[”』]/g, (full, w: string) => (/[\u4e00-\u9fff]/.test(w) ? `「${w}」` : full));
+    m
+      .replace(/[“『„]([^“”『』„「」]{1,12}?)[”』]/g, (full, w: string) => (/[\u4e00-\u9fff]/.test(w) ? `「${w}」` : full))
+      .replace(/[‘’]/g, "'")
+      .replace(/[“”„]/g, '"');
   for (const c of arr) {
     const label = String(c.label ?? "").toLowerCase().replace(/[^a-z0-9-]/g, "");
     if (!label || label.length > 63 || seen.has(label)) continue;
