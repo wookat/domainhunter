@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { nanoid } from "nanoid";
-import { generateCandidates, checkDomains, type CheckResult } from "@domainhunter/core";
+import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
 import { generateAiCandidates, generateUnderstanding } from "./ai";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
@@ -11,6 +11,7 @@ import { buildPricesFaq } from "./content/prices-faq";
 import { buildTldFaq } from "./content/tld-faq";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
+import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
 import { tldPrice } from "./types";
 
 type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace };
@@ -609,6 +610,20 @@ const MCP_TOOLS = [
       "Get first-year registration and renewal prices (USD, from Porkbun public pricing) for the popular TLDs DomainHunter tracks. TLDs without a live quote (e.g. cn/so) fall back to a static reference price marked approx:true. Useful to flag renewal traps (renewal much higher than first year).",
     inputSchema: { type: "object", properties: {} },
   },
+  {
+    name: "suggest_variants",
+    description:
+      "Given a name whose exact domain is taken, generate prefix/suffix variants (get/my/try/use + name, name + app/hq/labs/hub — the same rules as the site's variant check) and bulk-check their live availability. Returns [{domain, status, firstYearPriceUSD?}] with available domains first. No AI calls involved.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        name: { type: "string", description: "Base name (bare label without TLD), e.g. acme" },
+        tlds: { type: "array", items: { type: "string" }, description: `TLDs to check, each must be one of the ${TLD_LIST.length} tracked TLDs (default [\"com\"])` },
+        limit: { type: "number", description: "Max variants to check (default 24, cap 48)" },
+      },
+      required: ["name"],
+    },
+  },
 ] as const;
 
 function mcpResult(id: unknown, result: unknown): Response {
@@ -638,7 +653,7 @@ app.post("/mcp", async (c) => {
       capabilities: { tools: {} },
       serverInfo: { name: "domainhunter", version: "1.0.0" },
       instructions:
-        "DomainHunter MCP: check exact-domain availability in bulk (check_domains) and fetch live TLD registration/renewal prices (tld_prices). For AI-powered name hunting from a meaning description, use https://hunt.zalize.com directly.",
+        "DomainHunter MCP: check exact-domain availability in bulk (check_domains), fetch live TLD registration/renewal prices (tld_prices), and suggest+check prefix/suffix variants when a name is taken (suggest_variants). For AI-powered name hunting from a meaning description, use https://hunt.zalize.com directly.",
     });
   }
   if (method === "ping") return mcpResult(id, {});
@@ -679,6 +694,58 @@ app.post("/mcp", async (c) => {
     await checkDomainsCached(c.env.CACHE, domains, async (r) => {
       results.push({ domain: r.domain, status: r.status });
     });
+    return mcpText(id, JSON.stringify({ results }));
+  }
+
+  if (toolName === "suggest_variants") {
+    const name = normalizeLabel(String(args.name ?? ""));
+    if (!name || name.length < 2) return mcpText(id, "invalid name: pass a bare label of 2+ chars like acme (no TLD)", true);
+    const rawTlds = Array.isArray(args.tlds) && args.tlds.length > 0 ? args.tlds : ["com"];
+    const tlds: string[] = [];
+    for (const raw of rawTlds) {
+      const t = String(raw).trim().toLowerCase().replace(/^\./, "");
+      if (!(TLD_LIST as readonly string[]).includes(t)) {
+        return mcpText(id, `invalid tld: "${t}" — must be one of: ${TLD_LIST.join(", ")}`, true);
+      }
+      if (!tlds.includes(t)) tlds.push(t);
+    }
+    const rawLimit = Number(args.limit ?? 24);
+    const limit = Number.isFinite(rawLimit) ? Math.min(Math.max(Math.floor(rawLimit), 1), 48) : 24;
+    const ip = c.req.header("cf-connecting-ip") ?? c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+    if (!(await checkRateLimit(c.env.CACHE, ip))) {
+      return mcpText(id, `rate limited: max ${RATE_LIMIT_PER_HOUR} requests per hour, try again later`, true);
+    }
+    // 与首页「变体核验」同一套规则：前后缀组合，去掉裸 root（调用方通常已核验过）
+    const bare = new Set(tlds.map((t) => `${name}.${t}`));
+    const domains = generateCandidates({ roots: [name], prefixes: VARIANT_PREFIXES, suffixes: VARIANT_SUFFIXES, tlds, maxCandidates: 200 })
+      .filter((d) => !bare.has(d))
+      .slice(0, limit);
+    if (domains.length === 0) return mcpText(id, "no variants could be generated for this name", true);
+    // 首年注册价（美元）：实时价优先，静态参考价兜底（与 tld_prices 同口径）
+    const priceByTld: Record<string, number> = {};
+    try {
+      const payload = await loadPricesPayload(c.env.CACHE);
+      if (payload) {
+        const parsed = JSON.parse(payload) as { prices: Record<string, PriceEntry> };
+        for (const t of tlds) if (parsed.prices[t]) priceByTld[t] = parsed.prices[t].registration;
+      }
+    } catch { /* 查价失败不影响核验结果 */ }
+    for (const t of tlds) {
+      if (priceByTld[t] !== undefined) continue;
+      const ref = tldPrice(t);
+      if (ref) priceByTld[t] = Math.round((ref.first / USD_TO_CNY) * 100) / 100;
+    }
+    const results: { domain: string; status: string; firstYearPriceUSD?: number }[] = [];
+    await checkDomainsCached(c.env.CACHE, domains, async (r) => {
+      const item: { domain: string; status: string; firstYearPriceUSD?: number } = { domain: r.domain, status: r.status };
+      if (r.status === "available") {
+        const price = priceByTld[r.domain.slice(r.domain.indexOf(".") + 1)];
+        if (price !== undefined) item.firstYearPriceUSD = price;
+      }
+      results.push(item);
+    });
+    const rank = (s: string) => (s === "available" ? 0 : s === "taken" ? 1 : 2);
+    results.sort((a, b) => rank(a.status) - rank(b.status));
     return mcpText(id, JSON.stringify({ results }));
   }
 
@@ -1429,8 +1496,8 @@ app.get("/llms.txt", (c) => {
     ...COMPARE_LIST.map((s) => line(`/vs/${s}`, TLD_COMPARES[s].en.title)),
     "",
     "## API (MCP)",
-    line("/mcp", "MCP server docs: plug domain checking into Claude/Cursor (check_domains + tld_prices)"),
-    `- Stateless MCP server at ${SITE_ORIGIN}/mcp (POST, JSON-RPC 2.0, Streamable HTTP). Tools: check_domains (bulk availability for up to 50 exact domains) and tld_prices (live registration/renewal prices in USD). No auth required.`,
+    line("/mcp", "MCP server docs: plug domain checking into Claude/Cursor (check_domains + tld_prices + suggest_variants)"),
+    `- Stateless MCP server at ${SITE_ORIGIN}/mcp (POST, JSON-RPC 2.0, Streamable HTTP). Tools: check_domains (bulk availability for up to 50 exact domains), tld_prices (live registration/renewal prices in USD) and suggest_variants (prefix/suffix variants with live availability when a name is taken). No auth required.`,
     "",
   ].join("\n");
   return new Response(body, { headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=86400" } });

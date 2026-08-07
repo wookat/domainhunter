@@ -37,6 +37,10 @@ const CURL_EXAMPLE = `curl -X POST ${ENDPOINT} \\
   -H 'content-type: application/json' \\
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"check_domains","arguments":{"domains":["acme.com","acme.io"]}}}'`;
 
+const CURL_VARIANTS_EXAMPLE = `curl -X POST ${ENDPOINT} \\
+  -H 'content-type: application/json' \\
+  -d '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"suggest_variants","arguments":{"name":"acme","tlds":["com","io"],"limit":24}}}'`;
+
 const COPY: Record<"zh" | "en", McpCopy> = {
   zh: {
     kicker: "MCP Server",
@@ -49,6 +53,7 @@ const COPY: Record<"zh" | "en", McpCopy> = {
     tools: [
       { name: "check_domains", desc: "批量核验最多 50 个完整域名（如 acme.com）的实时可注册状态：available / taken / unknown。走 RDAP + DNS + WHOIS 三级核验，与网站同一套逻辑。" },
       { name: "tld_prices", desc: `查询 ${TLD_LIST.length} 个主流后缀的首年注册价与续费价（美元，Porkbun 实时价），用于识别「首年便宜续费贵」的坑。` },
+      { name: "suggest_variants", desc: "心仪名字被注册时，用与网站一致的前后缀规则（get/my/try/use + 名字、名字 + app/hq/labs/hub）生成变体并批量实时核验，可注册的排前面并附首年价（美元）。零 AI 调用。" },
     ],
     connectTitle: "接入方法",
     connectDesc: "在 Claude Code / Cursor 等客户端的 MCP 配置（如 .mcp.json）中加入：",
@@ -73,6 +78,7 @@ const COPY: Record<"zh" | "en", McpCopy> = {
     tools: [
       { name: "check_domains", desc: "Live availability for up to 50 exact domains (e.g. acme.com): available / taken / unknown. Same RDAP + DNS + WHOIS pipeline the site uses." },
       { name: "tld_prices", desc: `First-year registration vs renewal prices (USD, live from Porkbun) for the ${TLD_LIST.length} popular TLDs we track — handy for spotting renewal traps.` },
+      { name: "suggest_variants", desc: "When a name is taken, generates prefix/suffix variants (get/my/try/use + name, name + app/hq/labs/hub — same rules as the site) and bulk-checks them live. Available domains come first with first-year prices (USD). Zero AI calls." },
     ],
     connectTitle: "Connect",
     connectDesc: "Add this to your client's MCP config (e.g. .mcp.json in Claude Code / Cursor):",
@@ -150,6 +156,7 @@ export function McpPage() {
         {c.curlTitle}
       </h2>
       <CodeBlock code={CURL_EXAMPLE} copyLabel={c.copy} copiedLabel={c.copied} />
+      <CodeBlock code={CURL_VARIANTS_EXAMPLE} copyLabel={c.copy} copiedLabel={c.copied} />
 
       <h2 className="mt-10 text-xl font-bold">{c.notesTitle}</h2>
       <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-txt1">
