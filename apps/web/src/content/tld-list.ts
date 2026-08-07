@@ -8,6 +8,7 @@ export const TLD_LIST = [
   "tv", "cn", "me", "tech", "online", "store", "site", "top", "shop", "cloud",
   "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio",
   "info", "sh", "gg", "so", "us", "in",
+  "world", "life", "agency", "games", "email", "network",
 ] as const;
 
 export type Tld = (typeof TLD_LIST)[number];
