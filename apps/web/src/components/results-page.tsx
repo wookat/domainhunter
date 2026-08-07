@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { CopyButton, DomainRow, RegisterMenu } from "@/components/domain-row";
+import { CopyButton, DomainRow, MeaningText, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import { exportRows } from "@/lib/export";
 import { useI18n, type I18nKey } from "@/lib/i18n";
@@ -127,7 +127,7 @@ function TopPickCard({
         {row.label}
         <span className="text-txt2">.{row.tld}</span>
       </div>
-      {row.meaning && <p className="mt-1.5 text-[13px] leading-relaxed text-txt1">{row.meaning}</p>}
+      {row.meaning && <p className="mt-1.5 text-[13px] leading-relaxed text-txt1"><MeaningText text={row.meaning} /></p>}
       {row.scores && <ScoreBars scores={row.scores} className="mt-4" />}
       {priceFull(row.tld, lang, prices) && (
         <p title={priceFull(row.tld, lang, prices)} className="tnum mt-3 cursor-help text-[11px] text-txt2">{priceFull(row.tld, lang, prices)}</p>
@@ -168,7 +168,7 @@ function GridCard({
           <span className={cn("tnum shrink-0 rounded-md px-2 py-0.5 font-mono text-xs font-bold", scoreBadgeClass(score))}>{score}</span>
         )}
       </div>
-      {row.meaning && <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-txt1">{row.meaning}</p>}
+      {row.meaning && <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-txt1"><MeaningText text={row.meaning} /></p>}
       {row.scores && <ScoreBars scores={row.scores} columns={4} className="mt-3" />}
       <div className="mt-3 flex items-center gap-1">
         <button

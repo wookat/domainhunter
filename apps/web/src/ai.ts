@@ -30,6 +30,13 @@ const SYSTEM_PROMPT = `你是资深域名命名专家。用户会用自然语言
 严格输出 JSON 数组，不要输出其他任何文字：
 [{"label":"域名主体","meaning":"一句话说明寓意与读法","theme":"coined","scores":{"length":90,"readability":85,"relevance":88,"brandability":80}}]`;
 
+const ZH_PINYIN_HINT = `
+
+拼音候选强化（用户是中文创业者，拼音系候选质量优先）：
+- 三种拼音路线都要覆盖：① 简短双字拼（哔哩哔哩 bilibili、知乎 zhihu、豆瓣 douban 式，追求双拼声调节奏与叠音美感）；② 全拼（小红书 xiaohongshu 式，寓意完整直白）；③ 声母缩写或拼音+英文混搭（zlz、tao+bao+hub 式，短而有记忆点）
+- 每个 theme 为 pinyin 或 blend 的候选，meaning 必须包含用「」括起的中文原词，并说明为什么这个拼音好读好记（如声调顺口、叠音、无歧义拼读），例如：「知舟」zhizhou，双字全拼，齿音开头声调上扬，读一遍就能拼出来
+- 拼音自筛淘汰标准（不达标的直接不要输出）：x/q/zh/c/s 等易歧义声母连串（老外读不出，如 xiqizhi）；超过 4 个音节；含 iu/ui、in/ing、an/ang 等易混易错拼写；整体拼读有多种可能切分产生歧义的组合`;
+
 export interface AiUnderstanding {
   core: string;
   style: string;
@@ -103,7 +110,7 @@ async function generateOnce(
     body: JSON.stringify({
       model: "deepseek-chat",
       messages: [
-        { role: "system", content: opts.lang === "en" ? SYSTEM_PROMPT + EN_MEANING_HINT : SYSTEM_PROMPT },
+        { role: "system", content: opts.lang === "en" ? SYSTEM_PROMPT + EN_MEANING_HINT : SYSTEM_PROMPT + ZH_PINYIN_HINT },
         { role: "user", content: user },
       ],
       temperature: 1.2,
