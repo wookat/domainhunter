@@ -99,6 +99,8 @@ const zh = {
   "home.quickCopied": "已复制",
   "quick.renewTip": "续费 {price}/年；带 ↑ 表示续费达首年价 3 倍以上",
   "home.quickVariantsProgress": "变体核验 {checked}/{total} · 可注册 {n} 个（不消耗 AI 次数）",
+  "home.quickDoneStatus": "核验完成：共 {total} 个，{available} 个可注册",
+  "home.mode.aria": "搜索模式",
   // 高级模式
   "adv.title": "高级模式",
   "adv.subtitle": "词根 × 前后缀 × TLD 批量组合生成，逐个核验可注册状态",
@@ -420,6 +422,8 @@ const en: Record<I18nKey, string> = {
   "home.quickCopied": "Copied",
   "quick.renewTip": "Renews at {price}/yr; ↑ marks renewal 3×+ the first-year price",
   "home.quickVariantsProgress": "Variants checked {checked}/{total} · {n} available (no AI quota used)",
+  "home.quickDoneStatus": "Check complete: {available} of {total} available",
+  "home.mode.aria": "Search mode",
   "adv.title": "Advanced mode",
   "adv.subtitle": "Batch-generate roots × affixes × TLDs and verify availability one by one",
   "adv.roots": "Roots",

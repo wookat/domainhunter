@@ -161,14 +161,14 @@ export function DomainRow({
         <button
           title={favorite ? t("results.favRemove") : t("results.favAdd")}
           aria-pressed={favorite}
-          className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-md transition-colors hover:bg-bg3", favorite ? "text-brand" : "text-txt2 hover:text-txt0")}
+          className={cn("grid h-11 w-11 shrink-0 place-items-center rounded-md transition-colors hover:bg-bg3 sm:h-8 sm:w-8", favorite ? "text-brand" : "text-txt2 hover:text-txt0")}
           onClick={() => onToggleFavorite(row)}
         >
           {favorite ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}
         </button>
       )}
       <RegisterMenu domain={row.domain}>
-        <button className="h-8 shrink-0 rounded-md bg-brand-dim px-3 text-xs font-semibold text-brand transition-opacity hover:opacity-80">
+        <button className="h-11 shrink-0 rounded-md bg-brand-dim px-3 text-xs font-semibold text-brand transition-opacity hover:opacity-80 sm:h-8">
           {t("common.register")}
         </button>
       </RegisterMenu>
