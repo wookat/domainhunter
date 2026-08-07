@@ -534,22 +534,21 @@ interface PriceEntry {
   renewal: number;
 }
 
-/** 实时价格：Porkbun 公开价格 API（美元），KV 缓存 24h */
-app.get("/api/prices", async (c) => {
-  const kv = c.env.CACHE;
+/** 实时价格负载（JSON 字符串）：Porkbun 公开价格 API（美元），KV 缓存 24h */
+async function loadPricesPayload(kv: KVNamespace | undefined): Promise<string | null> {
   if (kv) {
     try {
       const cached = await kv.get(PRICES_KEY, "text");
-      if (cached) return new Response(cached, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=600" } });
+      if (cached) return cached;
     } catch { /* 缓存读取失败则实时拉取 */ }
   }
   let data: PorkbunPricing;
   try {
     const res = await fetch("https://api.porkbun.com/api/json/v3/pricing/get", { method: "POST", headers: { "content-type": "application/json" }, body: "{}" });
-    if (!res.ok) return c.json({ error: "upstream_error" }, 502);
+    if (!res.ok) return null;
     data = (await res.json()) as PorkbunPricing;
   } catch {
-    return c.json({ error: "upstream_error" }, 502);
+    return null;
   }
   const prices: Record<string, PriceEntry> = {};
   for (const tld of TLD_LIST) {
@@ -558,15 +557,116 @@ app.get("/api/prices", async (c) => {
     const renewal = Number(p?.renewal);
     if (Number.isFinite(registration) && Number.isFinite(renewal)) prices[tld] = { registration, renewal };
   }
-  if (Object.keys(prices).length === 0) return c.json({ error: "upstream_error" }, 502);
+  if (Object.keys(prices).length === 0) return null;
   const payload = JSON.stringify({ prices, currency: "USD", usdToCny: USD_TO_CNY, fetchedAt: Date.now() });
   if (kv) {
     try {
       await kv.put(PRICES_KEY, payload, { expirationTtl: PRICES_TTL });
     } catch { /* 缓存写入失败不影响返回 */ }
   }
+  return payload;
+}
+
+app.get("/api/prices", async (c) => {
+  const payload = await loadPricesPayload(c.env.CACHE);
+  if (!payload) return c.json({ error: "upstream_error" }, 502);
   return new Response(payload, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
+
+/* ---------- MCP server（Streamable HTTP，无状态） ---------- */
+
+const MCP_PROTOCOL_VERSION = "2025-03-26";
+
+const MCP_TOOLS = [
+  {
+    name: "check_domains",
+    description:
+      "Check real-time registration availability for up to 50 exact domains (e.g. acme.com). Returns status per domain: available / taken / unknown. Uses live RDAP/WHOIS/DNS checks with short-lived caching.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        domains: { type: "array", items: { type: "string" }, description: "Full domain names like acme.com (max 50)" },
+      },
+      required: ["domains"],
+    },
+  },
+  {
+    name: "tld_prices",
+    description:
+      "Get first-year registration and renewal prices (USD, from Porkbun public pricing) for the popular TLDs DomainHunter tracks. Useful to flag renewal traps (renewal much higher than first year).",
+    inputSchema: { type: "object", properties: {} },
+  },
+] as const;
+
+function mcpResult(id: unknown, result: unknown): Response {
+  return Response.json({ jsonrpc: "2.0", id, result });
+}
+
+function mcpError(id: unknown, code: number, message: string): Response {
+  return Response.json({ jsonrpc: "2.0", id, error: { code, message } });
+}
+
+function mcpText(id: unknown, text: string, isError = false): Response {
+  return mcpResult(id, { content: [{ type: "text", text }], isError });
+}
+
+app.post("/mcp", async (c) => {
+  const body = (await c.req.json().catch(() => null)) as { jsonrpc?: string; id?: unknown; method?: string; params?: Record<string, unknown> } | null;
+  if (!body || body.jsonrpc !== "2.0" || typeof body.method !== "string") {
+    return mcpError(null, -32600, "invalid JSON-RPC 2.0 request");
+  }
+  const { id, method, params } = body;
+  // 通知（无 id）：直接 202 确认
+  if (id === undefined || id === null) return new Response(null, { status: 202 });
+
+  if (method === "initialize") {
+    return mcpResult(id, {
+      protocolVersion: MCP_PROTOCOL_VERSION,
+      capabilities: { tools: {} },
+      serverInfo: { name: "domainhunter", version: "1.0.0" },
+      instructions:
+        "DomainHunter MCP: check exact-domain availability in bulk (check_domains) and fetch live TLD registration/renewal prices (tld_prices). For AI-powered name hunting from a meaning description, use https://hunt.zalize.com directly.",
+    });
+  }
+  if (method === "ping") return mcpResult(id, {});
+  if (method === "tools/list") return mcpResult(id, { tools: MCP_TOOLS });
+  if (method !== "tools/call") return mcpError(id, -32601, `method not found: ${method}`);
+
+  const toolName = String(params?.name ?? "");
+  const args = (params?.arguments ?? {}) as Record<string, unknown>;
+
+  if (toolName === "tld_prices") {
+    const payload = await loadPricesPayload(c.env.CACHE);
+    if (!payload) return mcpText(id, "pricing upstream unavailable, try again later", true);
+    return mcpText(id, payload);
+  }
+
+  if (toolName === "check_domains") {
+    const domains = [
+      ...new Set(
+        (Array.isArray(args.domains) ? args.domains : [])
+          .filter((d): d is string => typeof d === "string")
+          .map((d) => d.trim().toLowerCase())
+          .filter((d) => DOMAIN_RE.test(d) && d.length <= 253),
+      ),
+    ].slice(0, 50);
+    if (domains.length === 0) return mcpText(id, "no valid domains given: pass full domain names like acme.com", true);
+    const ip = c.req.header("cf-connecting-ip") ?? c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+    if (!(await checkRateLimit(c.env.CACHE, ip))) {
+      return mcpText(id, `rate limited: max ${RATE_LIMIT_PER_HOUR} requests per hour, try again later`, true);
+    }
+    const results: { domain: string; status: string }[] = [];
+    await checkDomainsCached(c.env.CACHE, domains, async (r) => {
+      results.push({ domain: r.domain, status: r.status });
+    });
+    return mcpText(id, JSON.stringify({ results }));
+  }
+
+  return mcpError(id, -32602, `unknown tool: ${toolName}`);
+});
+
+// 无 SSE 长连接：无状态 MCP，GET 返回 405
+app.get("/mcp", () => new Response("method not allowed: POST JSON-RPC 2.0 (MCP Streamable HTTP, stateless)", { status: 405, headers: { allow: "POST" } }));
 
 // 信任数据：累计核验域名数
 app.get("/api/stats", async (c) => {
