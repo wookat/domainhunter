@@ -37,7 +37,7 @@ const brandCases = [
 
 // R142 已知坏例：合法切分但语感差，断言被扣分（risk > 0）或直接淘汰
 const badCases = [
-  ["xianzhaoxian", true], // xian-zhao-xian：x/zh/x 齿龈-卷舌连串 + ABA 首尾重复 → 35 分丢弃
+  ["xianzhaoxian", true], // xian-zhao-xian：x/zh/x 齿龈-卷舌连串 + ABA 首尾重复 + 全长音节 → 50 分丢弃
   ["zhuangchuangshuang", true], // 全长音节堆叠 + zh/ch/sh 连串 → 35 分丢弃
   ["shanchashan", true], // ABA + sh/ch/sh 连串 → 35 分丢弃
   ["cuancuancuan", true], // AAA（含 ABA）+ c/c/c 连串 + 全长音节 → 50 分丢弃
