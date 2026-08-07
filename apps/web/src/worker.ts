@@ -727,6 +727,7 @@ app.get("/mcp", async (c) => {
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/mcp-page.tsx");
+  html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
   html = injectSsrSkeleton(html, "MCP Server", loc.title, [ssrIntroBlock(loc.desc)]);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -828,6 +829,7 @@ app.get("/advanced", async (c) => {
   html = injectHreflang(html, "/advanced");
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx");
+  html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -971,12 +973,12 @@ const injectHreflang = (html: string, path: string) =>
   html.replace(/(<link rel="canonical"[^>]*\/>)/, `$1\n    ${hreflangTags(path)}`);
 
 /** SEO 页 SSR 首屏骨架：把 kicker/标题/首段直接渲染进 #root，LCP 文本不再等 JS 水合（React 挂载后整体替换） */
-function injectSsrSkeleton(html: string, kicker: string, title: string, blocks: string[]): string {
+function injectSsrSkeleton(html: string, kicker: string, title: string, blocks: string[], kickerHtml?: string): string {
   const skeleton = [
     `<div class="flex min-h-screen flex-col">`,
     `<header class="sticky top-0 z-20 border-b border-line bg-bg0/85"><div class="mx-auto flex h-14 max-w-7xl items-center px-4 md:px-6"><span class="flex items-center gap-2 font-bold tracking-tight"><span class="grid h-7 w-7 place-items-center rounded-lg border border-brand-line bg-brand-dim"></span><span class="max-[430px]:hidden">DomainHunter</span></span></div></header>`,
     `<main class="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">`,
-    `<p class="font-mono text-sm text-brand">${escapeHtml(kicker)}</p>`,
+    kickerHtml ?? `<p class="font-mono text-sm text-brand">${escapeHtml(kicker)}</p>`,
     `<h1 class="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">${escapeHtml(title)}</h1>`,
     ...blocks,
     `</main></div>`,
@@ -985,6 +987,28 @@ function injectSsrSkeleton(html: string, kicker: string, title: string, blocks: 
 }
 
 const ssrIntroBlock = (intro: string) => `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(intro)}</p>`;
+
+/** 主样式表内容（hashed 文件名 → CSS 文本），模块级缓存 */
+const inlineCssCache = new Map<string, string>();
+
+/** 把唯一的 render-blocking 样式表内联进 HTML：省掉一次关键路径请求（CSS 在 <style> 里首绘前即生效，无 FOUC） */
+async function inlineStylesheet(html: string, assets: Fetcher, origin: string): Promise<string> {
+  const m = html.match(/<link rel="stylesheet" crossorigin href="(\/assets\/[^"]+\.css)">/);
+  if (!m) return html;
+  const href = m[1];
+  let css = inlineCssCache.get(href);
+  if (css === undefined) {
+    try {
+      const res = await assets.fetch(new Request(new URL(href, origin)));
+      if (!res.ok) return html;
+      css = await res.text();
+      inlineCssCache.set(href, css);
+    } catch {
+      return html;
+    }
+  }
+  return html.replace(m[0], `<style>${css}</style>`);
+}
 
 /** Vite manifest（构建产物 hashed 文件名映射），模块级缓存 */
 type ViteManifestChunk = { file: string; imports?: string[] };
@@ -1200,6 +1224,7 @@ app.get("/tld/:tld", async (c) => {
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/tld-page.tsx");
+  html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
   html = injectSsrSkeleton(html, `.${tld}`, loc.title, [
     `<div class="mt-6 rounded-xl border border-line bg-bg1 px-5 py-4"><span class="text-sm text-txt1">${lang === "en" ? "Loading prices\u2026" : "\u4ef7\u683c\u52a0\u8f7d\u4e2d\u2026"}</span></div>`,
     ssrIntroBlock(loc.intro),
@@ -1246,6 +1271,7 @@ app.get("/guide/:slug", async (c) => {
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/guide-page.tsx");
+  html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
   html = injectSsrSkeleton(html, guide[lang].label, loc.title, [ssrIntroBlock(loc.intro)]);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -1289,6 +1315,7 @@ app.get("/vs/:slug", async (c) => {
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/compare-page.tsx");
+  html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
   html = injectSsrSkeleton(html, `.${cmp.a} vs .${cmp.b}`, loc.title, [
     `<div class="mt-6 rounded-xl border border-line bg-bg1 px-5 py-4"><h2 class="flex items-center gap-2 text-base font-bold">${lang === "en" ? "Which to pick" : "\u600e\u4e48\u9009"}</h2><p class="mt-2.5 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.verdict)}</p></div>`,
   ]);
@@ -1296,16 +1323,25 @@ app.get("/vs/:slug", async (c) => {
 });
 
 // 价格总览页（SPA 路由 + SSR meta）
+// kicker/intro 与 i18n 词典 prices.kicker / prices.intro 逐字同源（骨架/水合一致，无跳变）
 const PRICES_META = {
   zh: {
     title: `域名后缀价格总览：${TLD_LIST.length} 个主流 TLD 注册与续费对比`,
     desc: `汇总 com/cn/io/ai 等 ${TLD_LIST.length} 个主流后缀的注册与续费价（Porkbun 实时价），避开首年便宜续费贵的坑，并用 AI 直接猎取可注册的好名字。`,
+    kicker: "域名价格",
+    intro: `首年便宜不等于长期便宜——很多后缀续费是首年价的几倍。这里汇总 ${TLD_LIST.length} 个主流后缀的注册与续费价（Porkbun 实时价优先，无报价时显示 ≈ 静态参考价），点列头可排序，点后缀可看详细指南。`,
   },
   en: {
     title: `TLD Price Overview: Registration vs Renewal for ${TLD_LIST.length} Popular Suffixes`,
     desc: "Compare registration and renewal prices (live from Porkbun) for popular TLDs like com/cn/io/ai, avoid renewal traps, and hunt registrable names with AI.",
+    kicker: "Domain Pricing",
+    intro: `A cheap first year doesn't mean cheap forever — many suffixes renew at several times the promo price. This table compares registration and renewal for ${TLD_LIST.length} popular TLDs (live Porkbun prices first, ≈ static reference when unavailable). Click headers to sort, click a suffix for its full guide.`,
   },
 };
+
+// prices-page.tsx 里 lucide Tag 图标的等价 SVG（与 lucide-react v1.27 tag 图标同 path），骨架里保持 kicker 布局一致
+const PRICES_KICKER_SVG =
+  '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag h-4 w-4"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>';
 
 app.get("/prices", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
@@ -1342,6 +1378,14 @@ app.get("/prices", async (c) => {
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/prices-page.tsx");
+  html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
+  html = injectSsrSkeleton(
+    html,
+    loc.kicker,
+    loc.title,
+    [`<p class="mt-3 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.intro)}</p>`],
+    `<p class="flex items-center gap-1.5 font-mono text-sm text-brand">${PRICES_KICKER_SVG}${escapeHtml(loc.kicker)}</p>`,
+  );
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -1383,6 +1427,7 @@ app.get("/why", async (c) => {
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/why-page.tsx");
+  html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
