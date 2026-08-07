@@ -393,7 +393,13 @@ export function ShortlistPage({
           </button>
           {changesOpen && (
             <div className="border-t border-line px-4 py-3">
-              <p className="text-[11px] text-txt2">{t("monitor.changesHint")}</p>
+              <p className="text-[11px] text-txt2">
+                {t("monitor.changesHint")}
+                {" · "}
+                <a href="/monitors" className="text-brand underline hover:opacity-80">
+                  {t("monitors.manage")}
+                </a>
+              </p>
               {/* 通知 webhook：用户自备 https 地址，监控域名状态变化时推送 JSON */}
               <div className="mt-2.5 flex flex-wrap items-center gap-2">
                 <input

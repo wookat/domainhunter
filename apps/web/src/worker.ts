@@ -376,6 +376,28 @@ app.post("/api/monitor", async (c) => {
   return c.json({ ok: true, enabled, monitored: Object.keys(map).length });
 });
 
+// 监控清单：按客户端本地清单批量查服务端监控条目（监控集合是单 key 全局 map，无账号体系，「我的监控」以客户端本地清单为准）
+app.post("/api/monitor/list", async (c) => {
+  const kv = c.env.CACHE;
+  if (!kv) return c.json({ error: "monitor_unavailable" }, 503);
+  const body = await c.req.json<{ domains?: unknown[] }>().catch(() => null);
+  const raw = Array.isArray(body?.domains) ? body.domains : [];
+  if (raw.length > MAX_MONITOR_DOMAINS) return c.json({ error: "too_many_domains" }, 400);
+  const domains = [
+    ...new Set(
+      raw
+        .filter((d): d is string => typeof d === "string")
+        .map((d) => d.trim().toLowerCase())
+        .filter((d) => DOMAIN_RE.test(d) && d.length <= 253),
+    ),
+  ];
+  const map = await loadMonitorMap(kv);
+  const entries = domains
+    .filter((d) => map[d])
+    .map((d) => ({ domain: d, status: map[d].status, lastChecked: map[d].lastChecked }));
+  return c.json({ entries, monitored: Object.keys(map).length, limit: MAX_MONITOR_DOMAINS });
+});
+
 // 监控动态：最近的状态变化记录（前端按本地清单过滤）
 app.get("/api/monitor/changes", async (c) => {
   const kv = c.env.CACHE;
@@ -857,6 +879,16 @@ app.get("/shortlist", async (c) => {
   let html = await res.text();
   html = html
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/shortlist" />`)
+    .replace("</head>", '<meta name="robots" content="noindex" /></head>');
+  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
+});
+
+// 监控管理页：客户端路由，直链/刷新时回 SPA 壳（个人数据页，noindex）
+app.get("/monitors", async (c) => {
+  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  let html = await res.text();
+  html = html
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/monitors" />`)
     .replace("</head>", '<meta name="robots" content="noindex" /></head>');
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
 });

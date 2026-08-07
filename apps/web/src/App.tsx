@@ -39,6 +39,7 @@ const TldPage = lazyChunk(() => import("@/components/tld-page"), (m) => m.TldPag
 const GuidePage = lazyChunk(() => import("@/components/guide-page"), (m) => m.GuidePage);
 const ComparePage = lazyChunk(() => import("@/components/compare-page"), (m) => m.ComparePage);
 const ShortlistPage = lazyChunk(() => import("@/components/shortlist-page"), (m) => m.ShortlistPage);
+const MonitorsPage = lazyChunk(() => import("@/components/monitors-page"), (m) => m.MonitorsPage);
 const AdvancedPage = lazyChunk(() => import("@/components/advanced-page"), (m) => m.AdvancedPage);
 const PricesPage = lazyChunk(() => import("@/components/prices-page"), (m) => m.PricesPage);
 const WhyPage = lazyChunk(() => import("@/components/why-page"), (m) => m.WhyPage);
@@ -64,7 +65,7 @@ function PageFallback() {
   return <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-16" />;
 }
 
-type Mode = "home" | "agent" | "results" | "shortlist" | "advanced";
+type Mode = "home" | "agent" | "results" | "shortlist" | "advanced" | "monitors";
 const TARGET = 10;
 
 function shareIdFromPath(): string | null {
@@ -92,6 +93,8 @@ const shortlistFromPath = () => window.location.pathname === "/shortlist";
 
 const advancedFromPath = () => window.location.pathname === "/advanced";
 
+const monitorsFromPath = () => window.location.pathname === "/monitors";
+
 function compareFromPath(): string | null {
   const m = window.location.pathname.match(/^\/vs\/([a-z0-9-]{2,48})$/i);
   return m ? m[1].toLowerCase() : null;
@@ -116,8 +119,8 @@ export default function App() {
   const [isWhy] = useState(whyFromPath);
   const [isMcp] = useState(mcpFromPath);
   const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() || advancedFromPath() ? null : loadSearch()));
-  const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : advancedFromPath() ? "advanced" : saved ? "results" : "home"));
-  const [resumedNotice, setResumedNotice] = useState(() => Boolean(saved) && !shortlistFromPath());
+  const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : monitorsFromPath() ? "monitors" : advancedFromPath() ? "advanced" : saved ? "results" : "home"));
+  const [resumedNotice, setResumedNotice] = useState(() => Boolean(saved) && !shortlistFromPath() && !monitorsFromPath());
   const [noticeClosing, setNoticeClosing] = useState(false);
   const dismissNotice = () => {
     setNoticeClosing(true);
@@ -154,6 +157,10 @@ export default function App() {
   const closeShortlist = () => {
     if (shortlistFromPath()) window.history.replaceState(null, "", "/");
     setMode(beforeShortlistRef.current);
+  };
+  const closeMonitors = () => {
+    if (monitorsFromPath()) window.history.replaceState(null, "", "/");
+    setMode(saved || rows.length > 0 ? "results" : "home");
   };
   const openAdvanced = () => {
     window.history.replaceState(null, "", "/advanced");
@@ -481,10 +488,10 @@ export default function App() {
         <SlidersHorizontal className="h-4 w-4" />
         <span className="hidden sm:inline">{t("header.advanced")}</span>
       </button>
-    ) : mode === "advanced" || mode === "shortlist" ? (
+    ) : mode === "advanced" || mode === "shortlist" || mode === "monitors" ? (
       <button
         className="flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0"
-        onClick={() => (mode === "shortlist" ? closeShortlist() : closeAdvanced())}
+        onClick={() => (mode === "shortlist" ? closeShortlist() : mode === "monitors" ? closeMonitors() : closeAdvanced())}
       >
         <ArrowLeft className="h-4 w-4" />
         {t("common.back")}
@@ -506,7 +513,7 @@ export default function App() {
         center={headerCenter}
         right={headerRight}
         onLogoClick={() => {
-          if (shortlistFromPath() || advancedFromPath()) window.history.replaceState(null, "", "/");
+          if (shortlistFromPath() || advancedFromPath() || monitorsFromPath()) window.history.replaceState(null, "", "/");
           setMode("home");
         }}
         shortlistCount={shortlist.items.length}
@@ -658,6 +665,16 @@ export default function App() {
           <AdvancedPage />
         </Suspense>
       )}
+      {mode === "monitors" && (
+        <Suspense fallback={<PageFallback />}>
+          <MonitorsPage
+            onStart={() => {
+              if (monitorsFromPath()) window.history.replaceState(null, "", "/shortlist");
+              setMode("shortlist");
+            }}
+          />
+        </Suspense>
+      )}
 
       {(mode === "home" || mode === "results") && (
         <footer className="pb-8 text-center text-xs text-txt2">
@@ -678,6 +695,9 @@ export default function App() {
               </a>
               <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/mcp?lang=${lang}`}>
                 {t("footer.mcp")}
+              </a>
+              <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href="/monitors">
+                {t("footer.monitors")}
               </a>
             </div>
           </div>

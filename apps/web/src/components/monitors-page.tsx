@@ -1,0 +1,148 @@
+import { useEffect, useRef, useState } from "react";
+import { Bell, BellOff, Loader2 } from "lucide-react";
+
+import { fetchMonitorList, useMonitor, type MonitorListEntry } from "@/lib/monitor";
+import { useI18n } from "@/lib/i18n";
+import { cn } from "@/lib/utils";
+
+function statusBadgeClass(status: string): string {
+  if (status === "available") return "bg-brand-dim text-brand";
+  if (status === "taken") return "bg-taken-dim text-taken";
+  return "bg-bg3 text-txt1";
+}
+
+export function MonitorsPage({ onStart }: { onStart: () => void }) {
+  const { t, lang } = useI18n();
+  const monitor = useMonitor();
+  const [entries, setEntries] = useState<Record<string, MonitorListEntry>>({});
+  const [quota, setQuota] = useState<{ monitored: number; limit: number } | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [pending, setPending] = useState<string | null>(null);
+  const [confirming, setConfirming] = useState<string | null>(null);
+  const confirmTimer = useRef<number | undefined>(undefined);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const list = await fetchMonitorList([...monitor.monitored]);
+        if (cancelled) return;
+        setEntries(Object.fromEntries(list.entries.map((e) => [e.domain, e])));
+        setQuota({ monitored: list.monitored, limit: list.limit });
+      } catch {
+        if (!cancelled) setError(t("monitors.loadFailed"));
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+    // 仅首次加载拉服务端条目；取消监控后本地即时更新，不重复拉取
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  async function cancel(domain: string) {
+    if (pending) return;
+    if (confirming !== domain) {
+      setConfirming(domain);
+      window.clearTimeout(confirmTimer.current);
+      confirmTimer.current = window.setTimeout(() => setConfirming(null), 3000);
+      return;
+    }
+    window.clearTimeout(confirmTimer.current);
+    setConfirming(null);
+    setError("");
+    setPending(domain);
+    try {
+      const r = await monitor.toggle(domain);
+      if (!r.ok) {
+        setError(t("monitor.failed"));
+        return;
+      }
+      setQuota((q) => (q ? { ...q, monitored: Math.max(0, q.monitored - 1) } : q));
+    } finally {
+      setPending(null);
+    }
+  }
+
+  const domains = [...monitor.monitored].sort();
+  const fmtTime = (ts: number) => new Date(ts).toLocaleString(lang === "zh" ? "zh-CN" : "en-US");
+
+  return (
+    <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-6 md:px-6">
+      <div className="mb-1 flex flex-wrap items-center justify-between gap-3">
+        <h1 className="text-xl font-bold tracking-tight">{t("monitors.title")}</h1>
+        {quota && (
+          <span className="tnum rounded-lg bg-bg2 px-3 py-1.5 font-mono text-xs text-txt1" title={t("monitors.quota")}>
+            {t("monitors.quota")} {quota.monitored}/{quota.limit}
+          </span>
+        )}
+      </div>
+      <p className="mb-2 text-xs text-txt2">{t("monitors.hint")}</p>
+      {domains.length > 0 && <p className="tnum mb-3 text-xs text-txt2">{t("monitors.mine", { n: domains.length })}</p>}
+
+      {error && <p className="mb-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{error}</p>}
+
+      {domains.length === 0 ? (
+        <div className="rounded-xl border border-dashed border-line p-10 text-center">
+          <Bell className="mx-auto h-6 w-6 text-txt2" />
+          <p className="mt-3 text-sm text-txt1">{t("monitors.empty")}</p>
+          <button
+            className="mt-5 inline-flex h-11 items-center gap-1.5 rounded-lg bg-brand px-5 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90"
+            onClick={onStart}
+          >
+            {t("monitors.goShortlist")}
+          </button>
+        </div>
+      ) : (
+        <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line bg-bg1">
+          {domains.map((domain) => {
+            const entry = entries[domain];
+            const confirmed = confirming === domain;
+            return (
+              <li key={domain} className="flex flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3.5">
+                <span className="min-w-0 break-all font-mono text-[15px] font-semibold">{domain}</span>
+                {loading ? (
+                  <Loader2 className="h-3.5 w-3.5 animate-spin text-txt2" />
+                ) : (
+                  entry && (
+                    <span className={cn("shrink-0 rounded px-1.5 py-0.5 text-[11px] font-semibold", statusBadgeClass(entry.status))}>
+                      {t(entry.status === "available" ? "status.available" : entry.status === "taken" ? "status.taken" : "status.unknown")}
+                    </span>
+                  )
+                )}
+                <span className="ml-auto flex items-center gap-2">
+                  {!loading && entry && (
+                    <span className="tnum hidden font-mono text-[11px] text-txt2 sm:inline" title={t("monitors.lastChecked")}>
+                      {entry.lastChecked > 0 ? `${t("monitors.lastChecked")} ${fmtTime(entry.lastChecked)}` : t("monitors.never")}
+                    </span>
+                  )}
+                  <button
+                    className={cn(
+                      "flex h-11 items-center gap-1.5 rounded-lg border px-3 text-sm sm:h-9",
+                      confirmed
+                        ? "border-destructive bg-destructive/10 font-semibold text-destructive"
+                        : "border-line text-txt1 hover:bg-bg2 hover:text-destructive",
+                    )}
+                    disabled={pending !== null}
+                    onClick={() => void cancel(domain)}
+                  >
+                    {pending === domain ? <Loader2 className="h-4 w-4 animate-spin" /> : <BellOff className="h-4 w-4" />}
+                    {confirmed ? t("monitors.cancelConfirm") : t("monitors.cancel")}
+                  </button>
+                </span>
+                {!loading && entry && (
+                  <span className="tnum w-full font-mono text-[11px] text-txt2 sm:hidden">
+                    {entry.lastChecked > 0 ? `${t("monitors.lastChecked")} ${fmtTime(entry.lastChecked)}` : t("monitors.never")}
+                  </span>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </main>
+  );
+}
