@@ -555,6 +555,7 @@ export default function App() {
             void run(v);
           }}
           onBackToResults={rows.length > 0 ? () => setMode("results") : undefined}
+          onOpenAdvanced={() => setMode("advanced")}
           shortlist={shortlist}
         />
       )}
