@@ -639,7 +639,8 @@ app.get("/api/og/prices", (c) => {
 // 产品定位页分享图（须在 /api/og/:id 之前注册）
 app.get("/api/og/why", (c) => {
   const lang = c.req.query("lang") === "en" ? "en" : "zh";
-  return new Response(pageOgSvg(lang === "en" ? "Why us" : "产品定位", WHY_META[lang].title, lang), {
+  const title = lang === "en" ? "The good names are taken? Hunt differently." : "好域名都被占了？换个找法";
+  return new Response(pageOgSvg(lang === "en" ? "Why us" : "产品定位", title, lang), {
     headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
   });
 });
