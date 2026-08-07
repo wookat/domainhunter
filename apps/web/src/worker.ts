@@ -200,6 +200,8 @@ app.post("/api/ai-search", async (c) => {
     (async () => {
       const tried = new Set<string>((body.excludeLabels ?? []).map((l) => l.toLowerCase()));
       const takenLabels: string[] = [...tried];
+      // 被注册主体的命名思路分布，供 refine 轮总结失败模式
+      const takenThemes: Partial<Record<string, number>> = {};
       let availableCount = 0;
       const understandingDone = generateUnderstanding(description, apiKey, lang)
         .then(async (u) => {
@@ -213,7 +215,11 @@ app.post("/api/ai-search", async (c) => {
           try {
             candidates = await generateAiCandidates(description, apiKey, {
               count: fast && round === 1 ? FAST_FIRST_ROUND_COUNT : 24,
-              excludeTaken: round === 1 && takenLabels.length === 0 ? undefined : takenLabels,
+              // 跨轮去重：把已核验过的全部名字和被注册模式一起反馈给 refine 轮
+              feedback:
+                round === 1 && tried.size === 0
+                  ? undefined
+                  : { tried: [...tried], taken: takenLabels, takenThemes },
               round,
               lang,
             });
@@ -235,6 +241,10 @@ app.post("/api/ai-search", async (c) => {
             await emit({ ...r, round, meaning: meaningByLabel.get(label), theme: themeByLabel.get(label) });
           });
           takenLabels.push(...takenThisRound);
+          for (const label of takenThisRound) {
+            const theme = themeByLabel.get(label);
+            if (theme) takenThemes[theme] = (takenThemes[theme] ?? 0) + 1;
+          }
         }
         await understandingDone;
         await emit({ type: "done", availableCount, target, reachedTarget: availableCount >= target });

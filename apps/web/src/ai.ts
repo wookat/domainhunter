@@ -30,6 +30,16 @@ const SYSTEM_PROMPT = `你是资深域名命名专家。用户会用自然语言
 严格输出 JSON 数组，不要输出其他任何文字：
 [{"label":"域名主体","meaning":"一句话说明寓意与读法","theme":"coined","scores":{"length":90,"readability":85,"relevance":88,"brandability":80}}]`;
 
+/** refine 轮反馈：跨轮去重 + 被注册名的模式总结素材 */
+export interface RefineFeedback {
+  /** 已核验过的全部主体（无论结果），refine 轮严禁重复输出 */
+  tried: string[];
+  /** 其中已被注册的主体 */
+  taken: string[];
+  /** 被注册主体的命名思路分布（仅统计已知 theme 的） */
+  takenThemes: Partial<Record<AiTheme, number>>;
+}
+
 const ZH_PINYIN_HINT = `
 
 拼音候选强化（用户是中文创业者，拼音系候选质量优先）：
@@ -85,28 +95,57 @@ export async function generateUnderstanding(description: string, apiKey: string,
 export async function generateAiCandidates(
   description: string,
   apiKey: string,
-  opts: { count?: number; excludeTaken?: string[]; round?: number; lang?: "zh" | "en" } = {},
+  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en" } = {},
 ): Promise<AiCandidate[]> {
   try {
     return await generateOnce(description, apiKey, opts);
   } catch {
+    // 瞬时错误/超时自动重试一次：带 jitter 退避，避免整次搜索直接报错
+    await new Promise((r) => setTimeout(r, 400 + Math.random() * 600));
     return await generateOnce(description, apiKey, opts);
   }
+}
+
+const THEME_NAMES: Record<string, string> = { pinyin: "拼音/缩写", word: "现成英文单词", coined: "英文造词", blend: "拼音+英文混合" };
+
+/** 把上一轮的失败模式总结成具体反思提示，而非简单罗列名单 */
+function buildRefineHint(fb: RefineFeedback, round: number): string {
+  const parts: string[] = [`这是第 ${round} 轮。`];
+  if (fb.taken.length > 0) {
+    const themeSummary = Object.entries(fb.takenThemes)
+      .filter(([, n]) => n > 0)
+      .sort((a, b) => b[1] - a[1])
+      .map(([t, n]) => `${THEME_NAMES[t] ?? t} ${n} 个`)
+      .join("、");
+    const shortCount = fb.taken.filter((l) => l.length <= 6).length;
+    const facts: string[] = [];
+    if (themeSummary) facts.push(`命名思路分布：${themeSummary}`);
+    if (shortCount > 0) facts.push(`≤6 字符的短名占 ${shortCount} 个`);
+    parts.push(`此前已有 ${fb.taken.length} 个候选查出被注册${facts.length ? `（${facts.join("；")}）` : ""}。`);
+    parts.push(
+      "请先反思这些被注册名的共性模式（哪些词根太常见、哪种构词太直白、哪个长度段竞争太激烈），这一轮明确避开这些模式：更大胆地造词、混搭、用冷僻但好读的组合，或适当加长 1-2 个字符换取独特性，但仍要好读好记、贴合需求。",
+    );
+  }
+  if (fb.tried.length > 0) {
+    parts.push(`以下名字全部已经核验过（无论结果如何），严禁重复输出其中任何一个：\n${fb.tried.slice(-120).join(", ")}`);
+  }
+  return parts.join("\n");
 }
 
 async function generateOnce(
   description: string,
   apiKey: string,
-  opts: { count?: number; excludeTaken?: string[]; round?: number; lang?: "zh" | "en" } = {},
+  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en" } = {},
 ): Promise<AiCandidate[]> {
   const count = opts.count ?? 24;
   let user = `需求描述：${description}\n请给出 ${count} 个候选。`;
-  if (opts.excludeTaken?.length) {
-    user += `\n\n这是第 ${opts.round ?? 2} 轮。以下名字已被注册或已尝试过，禁止再输出它们，并反思其共性（太常见/太直白），这一轮要更有创造性（造词、混搭、冷僻组合），但仍要好读好记、贴合需求：\n${opts.excludeTaken.slice(-60).join(", ")}`;
+  if (opts.feedback && (opts.feedback.tried.length > 0 || opts.feedback.taken.length > 0)) {
+    user += `\n\n${buildRefineHint(opts.feedback, opts.round ?? 2)}`;
   }
   const res = await fetch("https://api.deepseek.com/chat/completions", {
     method: "POST",
     headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}` },
+    signal: AbortSignal.timeout(60_000), // 单次 LLM 调用超时上限，超时走上层重试
     body: JSON.stringify({
       model: "deepseek-chat",
       messages: [
@@ -129,6 +168,9 @@ async function generateOnce(
     const n = Math.round(Number(v));
     return Number.isFinite(n) ? Math.min(Math.max(n, 0), 100) : 60;
   };
+  // 模型偶尔用 “”/『』/„” 等引号包中文原词，归一为「」保证前端高亮命中
+  const normalizeQuotes = (m: string) =>
+    m.replace(/[“『„]([^“”『』„「」]{1,12}?)[”』]/g, (full, w: string) => (/[\u4e00-\u9fff]/.test(w) ? `「${w}」` : full));
   for (const c of arr) {
     const label = String(c.label ?? "").toLowerCase().replace(/[^a-z0-9-]/g, "");
     if (!label || label.length > 63 || seen.has(label)) continue;
@@ -137,7 +179,7 @@ async function generateOnce(
     const theme = String(c.theme ?? "").toLowerCase();
     out.push({
       label,
-      meaning: String(c.meaning ?? ""),
+      meaning: normalizeQuotes(String(c.meaning ?? "")),
       theme: THEMES.has(theme) ? (theme as AiTheme) : undefined,
       scores: {
         length: clamp(s.length),
