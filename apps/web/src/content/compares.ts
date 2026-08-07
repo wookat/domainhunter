@@ -949,6 +949,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Nonprofits & causes", "Open-source projects & foundations", "Associations & communities", "Neutral institutional credibility"],
     },
   },
+  "com-vs-org": {
+    slug: "com-vs-org",
+    a: "com",
+    b: "org",
+    zh: {
+      title: ".com 和 .org 怎么选：商业默认与公益公信力的分界",
+      metaDescription: ".com 是商业世界的默认后缀，.org 自带非营利公信力。对比两者的信任语义、价格与误用风险，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "这对组合的分界线最清晰：卖东西、做产品、追求增长，用 .com；组织、社区、公益、开源基金会，用 .org。两者价格接近（.org 续费略高一点），真正的差异在语义承诺——用户看到 .org 会默认「这不是来卖货的」，商业产品硬套 .org 会显得违和甚至误导；反过来非营利组织用 .com 会削弱捐赠者信任。唯一的灰色地带是开源项目：社区主导选 .org（如 mozilla.org），公司主导的商业开源选 .com 并把 .org 留给基金会。成熟组织通常两个都注册防混淆。",
+      pickA: ["商业产品与付费服务", "创业公司主站", "电商与增长导向业务", "长期品牌资产与转售"],
+      pickB: ["非营利组织与公益项目", "开源基金会与社区", "行业协会与标准组织", "需要「非商业」信任背书"],
+    },
+    en: {
+      title: ".com vs .org: Commercial Default or Nonprofit Credibility",
+      metaDescription:
+        ".com is the commercial default; .org signals nonprofit-grade trust. Compare semantics, pricing and misuse risk, then hunt names available on both.",
+      verdict:
+        "This pair has the cleanest dividing line of any comparison: selling something, building a product, chasing growth → .com; organizations, communities, causes and open-source foundations → .org. Pricing is close (.org renews slightly higher), so the real difference is the semantic promise — users read .org as \"not here to sell you,\" and a commercial product wearing it feels off or even misleading; conversely a nonprofit on .com quietly erodes donor trust. The one grey zone is open source: community-led projects fit .org (mozilla.org), while company-led commercial open source belongs on .com with .org reserved for the foundation. Established organizations usually register both to prevent confusion.",
+      pickA: ["Commercial products & paid services", "Startup primary sites", "E-commerce & growth-driven businesses", "Long-term brand asset & resale"],
+      pickB: ["Nonprofits & causes", "Open-source foundations & communities", "Associations & standards bodies", "Need the \"non-commercial\" trust signal"],
+    },
+  },
+  "com-vs-co": {
+    slug: "com-vs-co",
+    a: "com",
+    b: "co",
+    zh: {
+      title: ".com 和 .co 怎么选：一个字母的分流代价",
+      metaDescription: ".co 是创业圈认可的 .com 替身，但少一个字母意味着持续分流。对比两者的信任度、价格与防混淆策略，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        ".co 是所有 .com 替身里最像 .com 的——「company」的联想干净利落，创业圈与投资人早已接受（angel.co 时代确立的认知）。但它的最大风险恰恰来自这份相似：用户手滑补全 .com 是肌肉记忆，如果对应 .com 在别人手里且在运营，你会永久性分流流量，广告和口头传播的损耗尤其明显。价格上 .co 续费比 .com 贵一截，且没有 .com 的转售流动性。判断标准：心仪短名字 .com 已被注册且对方只是停放（而非运营），.co 可放心上；对方在运营同类业务，宁可换名字也别用 .co。",
+      pickA: ["面向大众、依赖口头传播", "对应 .com 被同行运营中", "长期品牌资产与转售流动性", "不想为防分流多买域名"],
+      pickB: ["创业公司与融资叙事", "心仪短名 .com 仅被停放", "「company/co.」语义入名（xx.co）", "接受略高续费换更好库存"],
+    },
+    en: {
+      title: ".com vs .co: What One Missing Letter Costs You",
+      metaDescription:
+        ".co is the most .com-like alternative, accepted across startup circles — but one missing letter means permanent traffic leak risk. Compare trust, pricing and defense strategy, then hunt names available on both.",
+      verdict:
+        ".co is the most convincing .com stand-in there is — the \"company\" association is clean, and startup circles accepted it long ago (the angel.co era settled that). Its biggest risk comes from that very similarity: typing .com is muscle memory, so if the matching .com is owned and operated by someone else, you leak traffic permanently — worst in ads and word-of-mouth. On price, .co renews noticeably higher than .com and lacks its aftermarket liquidity. The test: if the .com you want is merely parked, .co is safe to build on; if it's an operating business — especially a similar one — change the name rather than take .co.",
+      pickA: ["Mainstream audience, word-of-mouth heavy", "Matching .com runs a live business", "Long-term asset & resale liquidity", "Don't want to buy extra defensive domains"],
+      pickB: ["Startups & fundraising narrative", "The .com you want is only parked", "\"Company/co.\" wordplay names (xx.co)", "Accept higher renewal for better inventory"],
+    },
+  },
+  "club-vs-gg": {
+    slug: "club-vs-gg",
+    a: "club",
+    b: "gg",
+    zh: {
+      title: ".club 和 .gg 怎么选：泛社区与游戏圈的身份对比",
+      metaDescription: ".club 泛社区通用且便宜，.gg 是游戏圈的身份标识但续费更贵。对比两者的圈层语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是社区后缀，圈层完全不同。.gg 源自游戏术语「good game」，在电竞、游戏公会、Discord 社区里就是身份证——战队官网、赛事平台用 .gg 无需解释，圈外后缀反而显得外行。.club 语义更泛：会员制社区、兴趣小组、付费社群、线下俱乐部都成立，且注册和续费都便宜得多。价格是关键取舍：.gg 续费是 .club 的数倍，非游戏社区为 .gg 买单不值。判断标准：游戏/电竞相关，闭眼选 .gg；其他类型社区（读书会、会员制、兴趣圈），.club 性价比高得多。",
+      pickA: ["会员制社区与付费社群", "兴趣小组与线下俱乐部", "预算敏感（注册续费都便宜）", "非游戏类社区品牌"],
+      pickB: ["电竞战队与游戏公会", "游戏工具与赛事平台", "Discord 社区与直播周边", "圈内身份信号（gg 即 good game）"],
+    },
+    en: {
+      title: ".club vs .gg: General Community or Gaming Credibility",
+      metaDescription:
+        ".club is the affordable all-purpose community suffix; .gg is gaming's identity badge at a premium renewal. Compare tribe semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are community suffixes serving entirely different tribes. .gg comes from the gaming sign-off \"good game\" — in esports, guilds and Discord communities it IS the badge: team sites and tournament platforms on .gg need zero explanation, while an outsider suffix reads amateur. .club is broader: membership communities, hobby groups, paid circles and offline clubs all fit, and both registration and renewal cost far less. Price is the real trade-off — .gg renews at several times .club's rate, hard to justify outside gaming. The test: anything gaming or esports → .gg without hesitation; every other community type (book clubs, memberships, hobby circles) → .club wins on value.",
+      pickA: ["Membership & paid communities", "Hobby groups & offline clubs", "Budget-sensitive (cheap to register and renew)", "Non-gaming community brands"],
+      pickB: ["Esports teams & gaming guilds", "Gaming tools & tournament platforms", "Discord communities & streaming brands", "In-group signal (gg = good game)"],
+    },
+  },
+  "studio-vs-co": {
+    slug: "studio-vs-co",
+    a: "studio",
+    b: "co",
+    zh: {
+      title: ".studio 和 .co 怎么选：作品气质与公司气质的取舍",
+      metaDescription: ".studio 直接把「工作室」写进域名，.co 更短更商业。对比两者的气质、长度代价与价格，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "定位差异一目了然：.studio 把「工作室」三个字写进域名，设计工作室、独立游戏团队、摄影/影像机构用它自带作品集气质，客户还没点开就知道你是创作者；.co 短、商业感强，适合想被当作「公司」而非「小团队」的品牌。代价在长度与输入成本——.studio 六个字母偏长，口头传播略吃亏；.co 则要防 .com 手滑分流。价格上两者续费接近，都不算便宜。判断标准：卖创意与作品（设计、影像、游戏），.studio 的语义红利大于长度代价；卖服务与产品、强调专业公司形象，选 .co。",
+      pickA: ["设计/品牌工作室与作品集", "独立游戏与影像团队", "摄影与创意机构", "「名字+studio」读起来自然的品牌"],
+      pickB: ["想被当作公司而非小团队", "追求短域名与输入效率", "商业服务与产品品牌", "创业公司通用备选"],
+    },
+    en: {
+      title: ".studio vs .co: Portfolio Vibe or Company Polish",
+      metaDescription:
+        ".studio writes your identity into the domain; .co is shorter and more corporate. Compare vibe, length cost and pricing, then hunt names available on both.",
+      verdict:
+        "The positioning gap is obvious at a glance: .studio writes what you are into the address — design studios, indie game teams and photo/video shops get instant portfolio credibility before the page even loads. .co is short and corporate, for brands that want to read as a company rather than a small team. The cost is length versus leak: .studio's six letters are a mouthful in spoken channels, while .co must guard against .com typo drift. Renewal pricing is similar and neither is bargain-tier. The test: selling creativity and portfolio work (design, video, games) → .studio's semantic payoff beats the length tax; selling services and products with a professional-company image → .co.",
+      pickA: ["Design & branding studios with portfolios", "Indie game & video teams", "Photography & creative shops", "Names where \"x.studio\" reads naturally"],
+      pickB: ["Want to read as a company, not a crew", "Short domain & typing efficiency", "Business services & product brands", "General-purpose startup fallback"],
+    },
+  },
+  "me-vs-io": {
+    slug: "me-vs-io",
+    a: "me",
+    b: "io",
+    zh: {
+      title: ".me 和 .io 怎么选：个人品牌与技术身份的对比",
+      metaDescription: ".me 是个人品牌与作品集的天然后缀，.io 是开发者圈的技术标识。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同是个人开发者，两个后缀讲的是不同的故事。.me 讲「我这个人」：个人主页、简历站、作品集、newsletter，「名字.me」读起来就是自我介绍，about.me 确立的认知至今有效；.io 讲「我做的东西」：开源项目、side project、开发者工具，挂 .io 天然像个产品。价格上 .me 续费明显更便宜，.io 贵但短名库存更好。判断标准：域名指向「人」（找工作、接案、个人影响力）选 .me；指向「产品」（希望项目被当作正经工具而非个人练手）选 .io。很多开发者两个都持有：.me 放简历，.io 放项目。",
+      pickA: ["个人主页与在线简历", "作品集与 newsletter", "自由职业者接案品牌", "续费预算敏感"],
+      pickB: ["开源项目与 side project", "开发者工具与 API", "希望被当作产品而非个人站", "技术圈身份信号"],
+    },
+    en: {
+      title: ".me vs .io: Personal Brand or Technical Identity",
+      metaDescription:
+        ".me is the natural suffix for personal brands and portfolios; .io is the developer world's badge. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "For the same indie developer, these suffixes tell different stories. .me is about the person: homepage, résumé site, portfolio, newsletter — \"yourname.me\" reads as a self-introduction, a perception about.me cemented years ago. .io is about the thing you built: open-source projects, side projects and dev tools on .io read as products by default. On price, .me renews noticeably cheaper, while .io costs more but has better short-name inventory. The test: if the domain points at you (job hunting, freelancing, personal reach) → .me; if it points at a product you want taken seriously as a tool rather than a hobby page → .io. Many developers hold both: .me for the résumé, .io for the projects.",
+      pickA: ["Personal homepages & online résumés", "Portfolios & newsletters", "Freelancer brands", "Renewal-budget sensitive"],
+      pickB: ["Open-source & side projects", "Developer tools & APIs", "Want it read as a product, not a personal page", "Tech-circle identity signal"],
+    },
+  },
+  "ai-vs-tech": {
+    slug: "ai-vs-tech",
+    a: "ai",
+    b: "tech",
+    zh: {
+      title: ".ai 和 .tech 怎么选：品类信号与泛科技的取舍",
+      metaDescription: ".ai 精准锁定 AI 品类但价格高昂，.tech 覆盖全科技赛道且便宜得多。对比两者的信号强度、价格与转型空间，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "信号精度换价格：.ai 把品类写死在后缀上，AI 产品用它用户与投资人零解释成本，但注册两年起步、续费显著昂贵，且产品一旦转向非 AI 方向后缀就成了包袱；.tech 覆盖整个科技赛道——硬件、SaaS、机器人、AI 都装得下，价格便宜数倍，转型不用改名。库存上两者的短名字都远好于 .com/.io。判断标准：产品核心叙事就是 AI，且预算撑得起长期续费，.ai 的信号红利值回票价；产品是「科技公司但不只做 AI」，或想给方向留余地，.tech 更稳。别忽视一个细节：.ai 域名删除后有溢价拍卖机制，捡漏成本比 .tech 高得多。",
+      pickA: ["核心卖点是 AI 的产品", "融资叙事需要品类信号", "预算能覆盖高额续费", "短品牌词在主流后缀均被注册"],
+      pickB: ["泛科技公司（硬件/SaaS/机器人）", "方向可能演进、不想绑死 AI", "预算敏感（便宜数倍）", "科技园区/孵化器/媒体品牌"],
+    },
+    en: {
+      title: ".ai vs .tech: Category Precision or Broad-Tech Flexibility",
+      metaDescription:
+        ".ai locks in the AI category at a premium; .tech covers the whole technology space for far less. Compare signal strength, pricing and pivot room, then hunt names available on both.",
+      verdict:
+        "You're trading signal precision for price. .ai hard-codes the category into the suffix — zero explanation needed for users or investors — but registration starts at two years, renewals are steep, and if the product pivots away from AI the suffix becomes baggage. .tech spans the entire technology space — hardware, SaaS, robotics and AI all fit — at a fraction of the cost, with no rename needed when direction shifts. Short-name inventory on both beats .com/.io comfortably. The test: if AI is the core narrative and the budget sustains premium renewals for years, .ai's signal pays for itself; if you're a tech company that does more than AI, or want pivot room, .tech is the safer hold. One detail worth knowing: expired .ai domains go through premium auctions, so bargain-hunting drops costs far more than on .tech.",
+      pickA: ["Products whose core value is AI", "Fundraising narrative needs the category signal", "Budget sustains premium renewals", "Short brand word taken on mainstream suffixes"],
+      pickB: ["Broad tech companies (hardware/SaaS/robotics)", "Might pivot — don't lock into AI", "Budget-sensitive (several times cheaper)", "Tech parks, incubators & media brands"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
