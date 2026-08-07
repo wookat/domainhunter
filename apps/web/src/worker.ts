@@ -886,9 +886,9 @@ app.get("/api/og/vs/:slug", (c) => {
 // 首页英文 SSR meta（与 i18n 词典 meta.title 一致）
 const HOME_META_EN = {
   title: "DomainHunter — AI Domain Hunter | Describe the meaning, hunt truly available names",
-  desc: "Describe your idea in one sentence — AI brainstorms domain names, verifies availability live via RDAP+DNS, and scores each one. Only names you can register right now. Free, open source, no login.",
+  desc: "Describe your idea in one sentence — an AI agent brainstorms names, verifies availability live via RDAP+DNS, then reflects and hunts again until there are enough names you can register right now. Free, open source, no login.",
   ogTitle: "DomainHunter — AI Domain Hunter",
-  ogDesc: "Describe the meaning — AI brainstorms names, verifies availability live, and scores each one. Only truly registrable domains.",
+  ogDesc: "Describe the meaning — an AI agent reflects over multiple rounds and verifies live. Only truly registrable domains.",
 };
 
 app.get("/", async (c) => {
