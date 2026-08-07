@@ -1,4 +1,4 @@
-import { ArrowUpDown, HelpCircle, Sparkles, Tag } from "lucide-react";
+import { ArrowDown, ArrowUp, ArrowUpDown, HelpCircle, Sparkles, Tag } from "lucide-react";
 import { useMemo, useState } from "react";
 
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
@@ -32,22 +32,31 @@ export function PricesPage() {
   const { t, lang } = useI18n();
   const prices = usePrices();
   const [sort, setSort] = useState<SortKey>("reg");
+  const [desc, setDesc] = useState(false);
   const [filter, setFilter] = useState("");
 
   const rows = useMemo(() => {
     const q = filter.trim().toLowerCase().replace(/^\./, "");
     const list = buildRows(prices).filter((r) => !q || r.tld.includes(q));
-    if (sort === "tld") return list.sort((a, b) => a.tld.localeCompare(b.tld));
-    return list.sort((a, b) => (sort === "reg" ? a.reg - b.reg : a.renew - b.renew));
-  }, [prices, sort, filter]);
+    if (sort === "tld") list.sort((a, b) => a.tld.localeCompare(b.tld));
+    else list.sort((a, b) => (sort === "reg" ? a.reg - b.reg : a.renew - b.renew));
+    return desc ? list.reverse() : list;
+  }, [prices, sort, desc, filter]);
 
+  // 再点同一列切换升/降序，切换列时重置为升序
   const TH = ({ k, label }: { k: SortKey; label: string }) => (
     <button
-      onClick={() => setSort(k)}
-      className={cn("flex items-center gap-1 text-xs font-semibold", sort === k ? "text-brand" : "text-txt1 hover:text-txt0")}
+      onClick={() => {
+        if (sort === k) setDesc((d) => !d);
+        else {
+          setSort(k);
+          setDesc(false);
+        }
+      }}
+      className={cn("flex min-h-[32px] items-center gap-1 text-xs font-semibold", sort === k ? "text-brand" : "text-txt1 hover:text-txt0")}
     >
       {label}
-      <ArrowUpDown className="h-3 w-3" />
+      {sort === k ? (desc ? <ArrowDown className="h-3 w-3" /> : <ArrowUp className="h-3 w-3" />) : <ArrowUpDown className="h-3 w-3" />}
     </button>
   );
 
