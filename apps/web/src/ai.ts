@@ -168,6 +168,9 @@ async function generateOnce(
     const n = Math.round(Number(v));
     return Number.isFinite(n) ? Math.min(Math.max(n, 0), 100) : 60;
   };
+  // 模型偶尔用 “”/『』/„” 等引号包中文原词，归一为「」保证前端高亮命中
+  const normalizeQuotes = (m: string) =>
+    m.replace(/[“『„]([^“”『』„「」]{1,12}?)[”』]/g, (full, w: string) => (/[\u4e00-\u9fff]/.test(w) ? `「${w}」` : full));
   for (const c of arr) {
     const label = String(c.label ?? "").toLowerCase().replace(/[^a-z0-9-]/g, "");
     if (!label || label.length > 63 || seen.has(label)) continue;
@@ -176,7 +179,7 @@ async function generateOnce(
     const theme = String(c.theme ?? "").toLowerCase();
     out.push({
       label,
-      meaning: String(c.meaning ?? ""),
+      meaning: normalizeQuotes(String(c.meaning ?? "")),
       theme: THEMES.has(theme) ? (theme as AiTheme) : undefined,
       scores: {
         length: clamp(s.length),
