@@ -45,6 +45,12 @@ export const COMPARE_SLUGS = [
   "us-vs-com",
   "in-vs-com",
   "info-vs-org",
+  "com-vs-org",
+  "com-vs-co",
+  "club-vs-gg",
+  "studio-vs-co",
+  "me-vs-io",
+  "ai-vs-tech",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
