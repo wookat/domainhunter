@@ -666,14 +666,15 @@ app.post("/mcp", async (c) => {
 });
 
 // GET /mcp：MCP 客户端的 SSE 请求（Accept: text/event-stream）仍回 405（无状态不支持长连接）；浏览器访问返回双语接入文档页
+// 文案与 mcp-page.tsx 的 COPY[lang].title/intro 逐字同源（骨架/水合一致，无跳变）
 const MCP_META = {
   zh: {
-    title: "MCP Server：把域名核验接进你的 AI 助手",
-    desc: "DomainHunter 提供免费无鉴权的 MCP server：接入 Claude、Cursor 等 AI 工具后，在对话里直接批量核验域名可注册状态、查询实时注册/续费价。",
+    title: "把域名核验接进你的 AI 助手",
+    desc: "DomainHunter 提供免费、无需鉴权的 MCP（Model Context Protocol）server。把它加进 Claude、Cursor 等支持 MCP 的 AI 工具后，AI 就能在对话里直接批量核验域名是否可注册、查询各后缀的实时注册/续费价。",
   },
   en: {
-    title: "MCP Server: plug domain checking into your AI assistant",
-    desc: "DomainHunter ships a free, no-auth MCP server: add it to Claude, Cursor or any MCP-capable tool and bulk-check domain availability and live TLD prices right inside the conversation.",
+    title: "Plug domain checking into your AI assistant",
+    desc: "DomainHunter ships a free, no-auth MCP (Model Context Protocol) server. Add it to Claude, Cursor or any MCP-capable AI tool and your assistant can bulk-check domain availability and look up live TLD prices right inside the conversation.",
   },
 };
 
