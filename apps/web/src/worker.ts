@@ -851,6 +851,22 @@ function hreflangTags(path: string): string {
 const injectHreflang = (html: string, path: string) =>
   html.replace(/(<link rel="canonical"[^>]*\/>)/, `$1\n    ${hreflangTags(path)}`);
 
+/** SEO 页 SSR 首屏骨架：把 kicker/标题/首段直接渲染进 #root，LCP 文本不再等 JS 水合（React 挂载后整体替换） */
+function injectSsrSkeleton(html: string, kicker: string, title: string, blocks: string[]): string {
+  const skeleton = [
+    `<div class="flex min-h-screen flex-col">`,
+    `<header class="sticky top-0 z-20 border-b border-line bg-bg0/85"><div class="mx-auto flex h-14 max-w-7xl items-center px-4 md:px-6"><span class="flex items-center gap-2 font-bold tracking-tight"><span class="grid h-7 w-7 place-items-center rounded-lg border border-brand-line bg-brand-dim"></span><span class="max-[430px]:hidden">DomainHunter</span></span></div></header>`,
+    `<main class="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">`,
+    `<p class="font-mono text-sm text-brand">${escapeHtml(kicker)}</p>`,
+    `<h1 class="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">${escapeHtml(title)}</h1>`,
+    ...blocks,
+    `</main></div>`,
+  ].join("");
+  return html.replace('<div id="root"></div>', `<div id="root">${skeleton}</div>`);
+}
+
+const ssrIntroBlock = (intro: string) => `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(intro)}</p>`;
+
 /** Vite manifest（构建产物 hashed 文件名映射），模块级缓存 */
 type ViteManifestChunk = { file: string; imports?: string[] };
 let viteManifest: Record<string, ViteManifestChunk> | null = null;
@@ -1065,6 +1081,10 @@ app.get("/tld/:tld", async (c) => {
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/tld-page.tsx");
+  html = injectSsrSkeleton(html, `.${tld}`, loc.title, [
+    `<div class="mt-6 rounded-xl border border-line bg-bg1 px-5 py-4"><span class="text-sm text-txt1">${lang === "en" ? "Loading prices\u2026" : "\u4ef7\u683c\u52a0\u8f7d\u4e2d\u2026"}</span></div>`,
+    ssrIntroBlock(loc.intro),
+  ]);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -1107,6 +1127,7 @@ app.get("/guide/:slug", async (c) => {
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/guide-page.tsx");
+  html = injectSsrSkeleton(html, guide[lang].label, loc.title, [ssrIntroBlock(loc.intro)]);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -1149,6 +1170,9 @@ app.get("/vs/:slug", async (c) => {
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/compare-page.tsx");
+  html = injectSsrSkeleton(html, `.${cmp.a} vs .${cmp.b}`, loc.title, [
+    `<div class="mt-6 rounded-xl border border-line bg-bg1 px-5 py-4"><h2 class="flex items-center gap-2 text-base font-bold">${lang === "en" ? "Which to pick" : "\u600e\u4e48\u9009"}</h2><p class="mt-2.5 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.verdict)}</p></div>`,
+  ]);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
