@@ -223,6 +223,7 @@ app.post("/api/ai-search", async (c) => {
           const fresh = candidates.filter((x) => !tried.has(x.label));
           fresh.forEach((x) => tried.add(x.label));
           const meaningByLabel = new Map(fresh.map((x) => [x.label, x.meaning]));
+          const themeByLabel = new Map(fresh.map((x) => [x.label, x.theme]));
           const domains = fresh.flatMap((x) => tlds.map((t) => `${x.label}.${t}`));
           await emit({ type: "proposed", round, items: fresh, tlds });
           const takenThisRound = new Set<string>();
@@ -230,7 +231,7 @@ app.post("/api/ai-search", async (c) => {
             const label = r.domain.slice(0, r.domain.indexOf("."));
             if (r.status === "available") availableCount++;
             else if (r.status === "taken") takenThisRound.add(label);
-            await emit({ ...r, round, meaning: meaningByLabel.get(label) });
+            await emit({ ...r, round, meaning: meaningByLabel.get(label), theme: themeByLabel.get(label) });
           });
           takenLabels.push(...takenThisRound);
         }
