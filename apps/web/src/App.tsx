@@ -194,10 +194,12 @@ export default function App() {
   }, [mode]);
 
   useEffect(() => {
-    if (!running && mode === "results" && rows.length > 0) {
+    // 只要有已落地（非 checking）的结果就覆盖快照，与所在页面/是否运行中无关：
+    // 搜索每轮结果落地与最终完成都会写入，恢复条恢复的永远是最近一次搜索。
+    if (rows.some((r) => r.status !== "checking")) {
       saveSearch({ values, rows, rounds, elapsedSec, aiUnderstanding, refinements, triedLabels: triedLabelsRef.current, locked: [...locked] });
     }
-  }, [running, mode, rows, rounds, values, elapsedSec, aiUnderstanding, refinements, locked]);
+  }, [rows, rounds, values, elapsedSec, aiUnderstanding, refinements, locked]);
 
   function handleEvent(ev: StreamEvent) {
     const round = (ev.round ?? 0) + roundOffsetRef.current;
