@@ -1284,6 +1284,9 @@ app.get("/llms.txt", (c) => {
     "## TLD comparisons",
     ...COMPARE_LIST.map((s) => line(`/vs/${s}`, TLD_COMPARES[s].en.title)),
     "",
+    "## API (MCP)",
+    `- Stateless MCP server at ${SITE_ORIGIN}/mcp (POST, JSON-RPC 2.0, Streamable HTTP). Tools: check_domains (bulk availability for up to 50 exact domains) and tld_prices (live registration/renewal prices in USD). No auth required.`,
+    "",
   ].join("\n");
   return new Response(body, { headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=86400" } });
 });
