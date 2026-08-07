@@ -93,6 +93,14 @@ export default function App() {
   const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() ? null : loadSearch()));
   const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : saved ? "results" : "home"));
   const [resumedNotice, setResumedNotice] = useState(() => Boolean(saved) && !shortlistFromPath());
+  const [noticeClosing, setNoticeClosing] = useState(false);
+  const dismissNotice = () => {
+    setNoticeClosing(true);
+    window.setTimeout(() => {
+      setResumedNotice(false);
+      setNoticeClosing(false);
+    }, 250);
+  };
   const [values, setValues] = useState<HomeValues>(() => saved?.values ?? { description: "", tlds: initialTlds(), style: "", lengthPref: "" });
   const [rows, setRows] = useState<Row[]>(saved?.rows ?? []);
   const [rounds, setRounds] = useState<RoundInfo[]>(saved?.rounds ?? []);
@@ -443,7 +451,9 @@ export default function App() {
       )}
 
       {resumedNotice && mode === "results" && (
-        <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
+        <div
+          className={`mx-auto w-full max-w-6xl overflow-hidden px-4 transition-all duration-200 ease-out md:px-6 ${noticeClosing ? "mt-0 max-h-0 opacity-0" : "mt-4 max-h-24"}`}
+        >
           <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-line bg-bg1 px-4 py-2 text-[13px] text-txt1">
             <span>{t("resume.notice")}</span>
             <span className="flex items-center gap-2">
@@ -452,6 +462,7 @@ export default function App() {
                 className="rounded-md border border-line px-2.5 py-1 text-xs font-medium text-txt1 transition-colors hover:border-brand-line hover:text-brand"
                 onClick={() => {
                   setResumedNotice(false);
+                  setNoticeClosing(false);
                   setMode("home");
                 }}
               >
@@ -461,7 +472,7 @@ export default function App() {
                 type="button"
                 aria-label={t("resume.dismiss")}
                 className="rounded-md px-2 py-1 text-xs text-txt2 transition-colors hover:text-txt0"
-                onClick={() => setResumedNotice(false)}
+                onClick={dismissNotice}
               >
                 ✕
               </button>

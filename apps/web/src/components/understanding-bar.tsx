@@ -43,7 +43,7 @@ export function UnderstandingBar({
             <span className="min-w-0 truncate">{fallback}</span>
           )}
         </span>
-        <span className="flex items-center gap-1.5">
+        <span className="flex flex-wrap items-center gap-x-1.5 gap-y-2">
           <Wand2 className="hidden h-3.5 w-3.5 text-txt2 sm:block" />
           {REFINE_KEYS.map((k) => {
             const label = t(k);
