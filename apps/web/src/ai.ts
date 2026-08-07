@@ -26,6 +26,9 @@ const SYSTEM_PROMPT = `你是资深域名命名专家。用户会用自然语言
 - 按推荐度排序
 - 给每个候选标注命名思路 theme，取值只能是：pinyin（中文拼音/缩写）、word（现成英文单词）、coined（英文合成词/造词）、blend（拼音+英文混合）
 - 同时给每个候选打四维分（0-100 整数）：length（长度，越短越好记分越高）、readability（读感，好读好拼）、relevance（寓意贴合需求程度）、brandability（品牌感，独特性与可商标性）
+- meaning 必须是定稿文案：一次成稿、语气笃定；禁止问号式犹豫、禁止「其实/等等」式自我修正、禁止括号内猜测拆词；对寓意拆解没把握，就换一个你能笃定解释的候选
+  好例子：「木舟」muzhou，双字全拼，寓意稳载远行，声调平缓，读一遍就能拼出来
+  坏例子：murory，可能是 mu(木?)+rory？也许取自某个人名（不太确定）
 
 严格输出 JSON 数组，不要输出其他任何文字：
 [{"label":"域名主体","meaning":"一句话说明寓意与读法","theme":"coined","scores":{"length":90,"readability":85,"relevance":88,"brandability":80}}]`;
