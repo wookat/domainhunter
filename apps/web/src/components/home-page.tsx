@@ -722,27 +722,25 @@ export function HomePage({
                       : t("home.quickCopyBtn", { n: quickRows.filter((r) => r.status === "available").length })}
                   </button>
                 )}
-              </div>
-            )}
-            {/* 心仪名字被注册：免费变体核验 + 一键转 AI 搜相似寓意的可注册名字 */}
-            {!quickRunning && quickRows.length > 0 && quickRows.some((r) => r.status === "taken") && (
-              <div className="mt-2.5 flex flex-wrap gap-2">
-                {variantTotal === 0 && (
+                {/* 心仪名字被注册：免费变体核验 + 一键转 AI 搜相似寓意的可注册名字（与 chips 同行，展开更多后缀后也可见） */}
+                {!quickRunning && quickRows.some((r) => r.status === "taken") && variantTotal === 0 && (
                   <button
                     onClick={() => void runVariantCheck()}
-                    className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:h-8"
+                    className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-brand-line/60 bg-brand-dim/30 px-2.5 py-1.5 font-mono text-xs font-semibold text-brand transition-colors hover:border-brand-line hover:bg-brand-dim sm:min-h-0"
                   >
-                    <SearchCheck className="h-3.5 w-3.5" />
+                    <SearchCheck className="h-3 w-3" />
                     {t("home.quickVariantsBtn", { n: (VARIANT_PREFIXES.length + 1) * (VARIANT_SUFFIXES.length + 1) - 1 })}
                   </button>
                 )}
-                <button
-                  onClick={() => submit(t("home.quickAiDesc", { label: quick.label }))}
-                  className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:h-8"
-                >
-                  <Sparkles className="h-3.5 w-3.5" />
-                  {t("home.quickAiCta")}
-                </button>
+                {!quickRunning && quickRows.some((r) => r.status === "taken") && (
+                  <button
+                    onClick={() => submit(t("home.quickAiDesc", { label: quick.label }))}
+                    className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0"
+                  >
+                    <Sparkles className="h-3 w-3" />
+                    {t("home.quickAiCta")}
+                  </button>
+                )}
               </div>
             )}
             {/* 变体核验进度与可注册变体 chips */}
