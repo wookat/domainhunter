@@ -62,7 +62,16 @@ const UNDERSTANDING_PROMPT = `你是域名命名专家。把用户的需求描�
 {"core":"…","style":"…","scene":"…"}`;
 
 const EN_UNDERSTANDING_HINT = "\n\n重要：core/style/scene 的值全部用英文书写（用户界面是英文）。";
-const EN_MEANING_HINT = "\n\n重要：每个 meaning 说明全部用英文书写（用户界面是英文）。";
+// 英文界面追加的 hint：语言要求 + 英文命名路线强化（indie hacker 用户，避免平庸词典词组合）
+const EN_NAMING_HINT = `
+
+重要：每个 meaning 说明全部用英文书写（用户界面是英文）。
+
+英文命名路线强化（用户是英文 indie hacker，coined/blend 系候选质量优先）：
+- 四种英文命名路线都要覆盖：① portmanteau 词混造（Pinterest=pin+interest、Instagram=instant+telegram 式，两个词各取有辨识度的片段拼接）；② 拉丁/希腊词根改造（Spotify、Sonos 式，取 son/lum/vox/nov 等词根加轻量后缀，短而有质感）；③ 真实短词的错拼/变体（Lyft、Tumblr 式，去元音或换字母，但整体仍要一眼能读出来）；④ 隐喻词（Amazon、Apple 式，用一个现成的具象词，与需求语义有一层聪明的关联，meaning 里必须点破这层关联）
+- meaning 质量要求：说清词源拆解（由哪两个词/哪个词根构成、为什么贴合需求）+ 读音顺口的理由（如两音节重音在前、开音节收尾），不要用 catchy/modern/memorable 这类空洞形容词充数，例如：Lumora = Latin "lumen" (light) + soft -ora ending, evokes clarity for a journaling app; two open syllables, reads instantly
+- 英文自筛淘汰标准（不达标的直接不要输出）：≥4 音节；含难读辅音簇（如 xq、zv、tsk）；与知名品牌只差一个字母（有法律风险，如 gooogle、spotifi）；直白到像域名占位词的组合（如 bestXXXhub、XXXonline、getXXXapp）
+- theme 标注映射：路线①③ 标 coined 或 blend；路线② 标 coined；路线④ 标 word`;
 
 export async function generateUnderstanding(description: string, apiKey: string, lang: "zh" | "en" = "zh"): Promise<AiUnderstanding | null> {
   try {
@@ -149,7 +158,7 @@ async function generateOnce(
     body: JSON.stringify({
       model: "deepseek-chat",
       messages: [
-        { role: "system", content: opts.lang === "en" ? SYSTEM_PROMPT + EN_MEANING_HINT : SYSTEM_PROMPT + ZH_PINYIN_HINT },
+        { role: "system", content: opts.lang === "en" ? SYSTEM_PROMPT + EN_NAMING_HINT : SYSTEM_PROMPT + ZH_PINYIN_HINT },
         { role: "user", content: user },
       ],
       temperature: 1.2,
