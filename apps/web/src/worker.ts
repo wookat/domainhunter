@@ -491,19 +491,48 @@ app.post("/api/share", async (c) => {
   const items = rawItems.map(sanitizeShareItem).filter((x): x is ShareItem => x !== null);
   if (items.length === 0) return c.json({ error: "items invalid" }, 400);
   const id = nanoid(10);
-  await kv.put(`share:${id}`, JSON.stringify({ items, createdAt: Date.now() }), { expirationTtl: SHARE_TTL });
+  // revoke token 仅返回给创建者，用于后续撤销；不随 GET 暴露
+  const revokeToken = nanoid(24);
+  await kv.put(`share:${id}`, JSON.stringify({ items, createdAt: Date.now(), revokeToken }), { expirationTtl: SHARE_TTL });
   const origin = new URL(c.req.url).origin;
-  return c.json({ id, url: `${origin}/s/${id}` });
+  return c.json({ id, url: `${origin}/s/${id}`, revokeToken });
 });
+
+interface ShareSnapshotStored {
+  items?: ShareItem[];
+  createdAt?: number;
+  revokeToken?: string;
+  revoked?: boolean;
+}
 
 app.get("/api/share/:id", async (c) => {
   const kv = c.env.CACHE;
   if (!kv) return c.json({ error: "share_unavailable" }, 503);
   const id = c.req.param("id");
   if (!/^[\w-]{1,32}$/.test(id)) return c.json({ error: "not_found" }, 404);
-  const snapshot = await kv.get(`share:${id}`, "text");
+  const snapshot = await kv.get<ShareSnapshotStored>(`share:${id}`, "json");
   if (!snapshot) return c.json({ error: "not_found" }, 404);
-  return new Response(snapshot, { headers: { "content-type": "application/json; charset=utf-8" } });
+  if (snapshot.revoked) return c.json({ error: "revoked" }, 410);
+  return c.json({ items: snapshot.items ?? [], createdAt: snapshot.createdAt ?? 0 });
+});
+
+// 撤销分享：必须携带创建时下发的 revoke token；旧分享无 token 不可远程撤销
+app.delete("/api/share/:id", async (c) => {
+  const kv = c.env.CACHE;
+  if (!kv) return c.json({ error: "share_unavailable" }, 503);
+  const id = c.req.param("id");
+  if (!/^[\w-]{1,32}$/.test(id)) return c.json({ error: "not_found" }, 404);
+  const body = await c.req.json<{ token?: string }>().catch(() => null);
+  const token = typeof body?.token === "string" ? body.token : "";
+  if (!token) return c.json({ error: "token_required" }, 400);
+  const snapshot = await kv.get<ShareSnapshotStored>(`share:${id}`, "json");
+  if (!snapshot) return c.json({ error: "not_found" }, 404);
+  if (snapshot.revoked) return c.json({ ok: true });
+  if (!snapshot.revokeToken) return c.json({ error: "not_revocable" }, 403);
+  if (snapshot.revokeToken !== token) return c.json({ error: "forbidden" }, 403);
+  // 保留占位标记而非直接删除，让 /s/:id 呈现「链接已失效」而非裸 404
+  await kv.put(`share:${id}`, JSON.stringify({ revoked: true, revokedAt: Date.now() }), { expirationTtl: SHARE_TTL });
+  return c.json({ ok: true });
 });
 
 // 清单跨设备同步（免登录）：生成/更新同步码（PUT 语义，同码覆盖），TTL 90 天
