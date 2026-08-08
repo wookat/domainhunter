@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Brain, Check, ChevronDown, Copy, ExternalLink, History, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { ExpiryNote } from "@/components/domain-row";
+import { ExpiryNote, WatchCta } from "@/components/domain-row";
 import { addRecentSearch, clearRecentSearches, loadRecentSearches, type RecentSearch } from "@/lib/history";
 import { useI18n, type I18nKey } from "@/lib/i18n";
 import { toUsd, usePrices } from "@/lib/prices";
@@ -953,6 +953,16 @@ export function HomePage({
                       >
                         <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                       </button>
+                      {row.expiresAt && (
+                        <WatchCta
+                          domain={row.domain}
+                          expiresAt={row.expiresAt}
+                          variant="chip"
+                          onAddShortlist={() => {
+                            if (!shortlist.has(row.domain)) shortlist.toggle(domainToRow(row.domain, "taken"));
+                          }}
+                        />
+                      )}
                     </span>
                   ) : (
                     <span
