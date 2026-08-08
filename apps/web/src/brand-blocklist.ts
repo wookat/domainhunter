@@ -44,7 +44,7 @@ export const BRAND_BLOCKLIST: readonly string[] = [
   "obsidian", "office", "openai", "opera", "oppo", "oracle", "outlook",
   // P
   "panasonic", "patreon", "paypal", "pepsi", "philips", "pinduoduo", "pinterest",
-  "playstation", "porsche", "postman", "prada", "python",
+  "playstation", "porsche", "postman", "prada", "privado", "privyr", "python",
   // Q
   "qualcomm", "quora", "qzone",
   // R
