@@ -3459,6 +3459,372 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  yoga: {
+    slug: "yoga",
+    tlds: [
+      { tld: "com", zh: "会员长期续费的信任基线，馆名印在会员卡上十年不换", en: "The trust baseline for long-term memberships — the name on the card for a decade" },
+      { tld: "studio", zh: "「工作室」直给业态，小而美的精品馆定位一步到位", en: "States the studio format outright — instant boutique positioning" },
+      { tld: "life", zh: "瑜伽卖的是生活方式，.life 把定位写进后缀", en: "Yoga sells a lifestyle — .life writes the positioning into the suffix" },
+    ],
+    zh: {
+      label: "瑜伽普拉提",
+      title: "瑜伽馆/普拉提工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "瑜伽馆/普拉提工作室命名指南：身心词根、空间感命名、会员转述测试等 5 种思路，lululemon/Alo/梵音等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的瑜伽域名。",
+      intro:
+        "瑜伽和普拉提卖的不是课程，是「一小时属于自己的状态」。名字的第一使命是把这份状态感提前发放：会员还没进馆，名字就该让人呼吸慢半拍。这个行业的命名有个独特的张力——既要有灵性（贴合瑜伽的身心传统），又不能玄到让普拉提器械课的用户觉得不专业；精品馆越来越强调「训练感」而非「疗愈感」，名字的气质定位直接筛选客群。第二个特点是会员制经济：瑜伽馆的收入靠年卡与续费，名字要经得起「我在 X 练了五年」的长期转述，追风潮的名字会先于会员关系过期。第三是私教与团课的口碑场景：小红书笔记、朋友圈打卡照、闺蜜间的口头推荐是获客主渠道，名字要在照片水印和口播里都好看好念。最后注意梵语词的使用边界：Namaste、Asana、Prana 这类词自带行业识别度，但也高度同质化——用梵语词根造新词，比直接用梵语词更容易独占。",
+      namingIdeas: [
+        "身心状态词根：息、流、栖、静、balance、flow、breathe——把练完瑜伽的身体感受写进名字；测试方法是深呼吸后念一遍，名字应该和呼气的节奏合拍",
+        "空间感命名：小馆、Studio、Room、舍——瑜伽馆卖的是「一个想回去的空间」，场所词让年卡的归属感从名字开始",
+        "梵语词根造词而非直用：从 prana（气息）、asana（体式）、om 等词根变形造词（如 Alo 源自 air/land/ocean 首字母），既保留行业识别又拿得到域名与商标",
+        "训练感与疗愈感二选一：普拉提器械馆用 core、form、align 等精准词传递专业训练；疗愈系用软音节与自然意象——两种气质混搭会让客群定位模糊",
+        "会员转述测试：把名字放进「我每周去 X 上三次课」念一遍——五年后这句话还自然吗？瑜伽是十年会员生意，名字要比风潮活得久",
+      ],
+      cases: [
+        { name: "lululemon", takeaway: "刻意造的无意义词：创始人想要一个日本市场难以发音的名字制造「西方进口感」，三个 l 的视觉韵律意外成就了辨识度——证明瑜伽服饰命名可以完全脱离梵语套路" },
+        { name: "Alo Yoga", takeaway: "air/land/ocean 三词首字母合成：三个字母装下整个自然意象，读音轻盈像一次呼气；配 Yoga 品类词直给行业——短造词 + 品类词的教科书结构" },
+        { name: "梵音", takeaway: "「梵」（瑜伽的印度源流）+「音」（唱诵与静心）：两个字同时完成行业识别与意境营造，中文瑜伽馆命名里雅而不玄的平衡范本" },
+        { name: "CorePower Yoga", takeaway: "core（核心力量）+ power：旗帜鲜明地把瑜伽往「训练」而非「疗愈」定位，健身人群零门槛理解——气质定位筛选客群的典型执行" },
+      ],
+      pitfalls: [
+        "直接用 Namaste/Zen/Chakra 当名字：行业最高频词汇，同城重名率极高，地图搜索和商标注册都会撞车",
+        "玄学浓度过高：「能量」「疗愈」「宇宙」堆叠会劝退只想练核心的普拉提用户，客群越练越窄",
+        "中英文气质割裂：中文名走禅意、英文名走健身房风，会员卡和小红书笔记里同时出现时人设分裂",
+        "忽略同城地图重名排查：瑜伽馆是三公里生意，同名馆互相污染点评评分——签约前先搜大众点评与地图",
+      ],
+    },
+    en: {
+      label: "Yoga & Pilates",
+      title: "How to Name a Yoga or Pilates Studio: Strategies, Cases & Domains",
+      metaDescription:
+        "Yoga and Pilates studio naming guide: breath-and-balance roots, space-first naming, the member-retell test, breakdowns of lululemon/Alo/CorePower, recommended TLDs and pitfalls — then hunt an available yoga domain with AI.",
+      intro:
+        "A yoga or Pilates studio doesn't sell classes — it sells an hour of belonging to yourself. The name's first job is to issue that state in advance: before a member ever steps on a mat, the name should slow their breathing by half a beat. The trade has a peculiar naming tension: it needs enough spirit to honor yoga's tradition, but not so much mysticism that a reformer-Pilates client doubts your professionalism — boutique studios increasingly sell training, not healing, and the name's temperament filters the clientele. Second, this is a membership economy: revenue lives in annual passes and renewals, so the name must survive years of \"I've practiced at X since 2020\" — trend-surfing names expire faster than member relationships. Third, acquisition runs on Instagram posts, check-in photos and friend referrals: the name must look good in a photo watermark and sound good spoken between friends. Finally, mind the Sanskrit boundary: Namaste, Asana and Prana carry instant category recognition but are hopelessly crowded — coining from Sanskrit roots beats borrowing Sanskrit words whole.",
+      namingIdeas: [
+        "Root in body states: flow, breathe, balance, still, align — write the post-practice feeling into the name; test it by saying the name on an exhale — it should match the rhythm",
+        "Name the space, not the service: Studio, Room, House, Nest — a studio sells a place worth returning to; place words start the annual-pass sense of belonging at the name",
+        "Coin from Sanskrit, don't borrow it: mutate roots like prana, asana, om into ownable coinages (Alo compresses air/land/ocean) — you keep the category signal and can actually register the mark",
+        "Pick training or healing, not both: reformer studios win with precision words (core, form, align); healing brands win with soft syllables and nature imagery — mixing the two blurs who the studio is for",
+        "Run the member-retell test: say \"I take three classes a week at X\" — does it still sound natural in year five? Yoga is a ten-year membership trade; the name must outlive the trend cycle",
+      ],
+      cases: [
+        { name: "lululemon", takeaway: "A deliberately meaningless coinage — the founder wanted a name hard to pronounce in Japanese to signal Western import; the triple-l visual rhythm became accidental brand equity. Proof yoga naming can skip Sanskrit entirely" },
+        { name: "Alo Yoga", takeaway: "air/land/ocean compressed into three letters: an entire nature palette in one exhale-light syllable, with Yoga as the category word — the textbook short-coinage + category structure" },
+        { name: "CorePower Yoga", takeaway: "core + power: plants the flag on training over healing, instantly legible to gym-goers — temperament-as-filter naming executed without apology" },
+        { name: "Barry's", takeaway: "A founder's first name with a possessive: boutique fitness as a person's house style, not a franchise format — the pattern transfers directly to instructor-led Pilates studios" },
+      ],
+      pitfalls: [
+        "Naming the studio Namaste/Zen/Chakra: the category's most-used words collide in map search and trademark registers in every city",
+        "Overdosing on mysticism: stacking energy/healing/cosmic repels the reformer crowd who just want a stronger core — the clientele narrows with every incense word",
+        "Splitting temperament across languages: a zen name in one language and a gym name in another reads as two brands on the same membership card",
+        "Skipping the same-city duplicate check: studios are a 3-km-radius trade; identically named studios cross-contaminate reviews — search maps before signing the lease",
+      ],
+    },
+  },
+  vet: {
+    slug: "vet",
+    tlds: [
+      { tld: "com", zh: "急诊时刻的搜索入口，宠物主慌乱中只信最熟的后缀", en: "The emergency-search default — panicked owners trust the most familiar suffix" },
+      { tld: "center", zh: "「中心」的机构感承接转诊与重症，VCA 式体系命名的后缀版", en: "Institutional center energy built to receive referrals and critical cases — the VCA pattern as a suffix" },
+      { tld: "pro", zh: "「持证专业」直写进后缀，中和宠物行业的玩具感", en: "Writes the licensed professional into the suffix — offsetting the pet industry's toy register" },
+    ],
+    zh: {
+      label: "宠物医院",
+      title: "宠物医院/动物诊所怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "宠物医院/动物诊所命名指南：安心词根、医者人名、深夜急诊测试等 5 种思路，Banfield/瑞鹏/VCA 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的宠物医疗域名。",
+      intro:
+        "宠物医院的名字要在两个极端场景里同时成立：日常疫苗时它是「楼下那家靠谱的医院」，深夜急诊时它是慌乱的主人在搜索框里打出的救命词。这决定了宠物医疗命名与宠物用品命名（详见宠物品牌指南）的根本分野——用品可以可爱俏皮，医院必须先专业后温暖：名字里的萌感一旦压过医疗感，主人在大病时会本能地换「更正规」的医院。第二个特点是「医生即品牌」：宠物医疗的信任最终落在具体的医生身上，人名 + 动物医院的结构（张医生动物医院）在社区口碑里最抗过时，连锁化时才需要品牌名接棒。第三是本地搜索的生死线：「附近的宠物医院」「24 小时宠物急诊」是行业最大流量入口，名字与招牌要让地图搜索和路过的主人都能瞬间归类。最后是情感的不对称：主人在这里经历过最揪心的夜晚，也经历过痊愈的喜悦——名字承载的情感浓度远超一般本地生意，轻浮的谐音梗在这里格外危险。",
+      namingIdeas: [
+        "安心词根优先：安、康、护、爱心、care、trust、haven——主人挂号时的心理状态是焦虑，名字先做情绪稳定剂；测试方法是想象凌晨两点在搜索框里打出这个名字",
+        "医者人名结构：创始医生姓氏 + 动物医院（张医生宠物医院、Dr. X Vet）——「有具体的人为医术负责」是医疗信任的最强结构，社区口碑十年不衰",
+        "专业词根建立医疗感：仁、济、维特（vet 音译）、pet hospital 而非 pet shop 系词汇——名字要先回答「这里是医院」，再谈温度",
+        "萌感克制使用：爪、尾巴、毛孩子等元素可以出现在副标语与视觉里，主名保持医疗专业——大病托付的信任来自专业感而非可爱感",
+        "急诊场景测试：把名字放进「快送 X 医院！」念一遍——紧急时刻喊得出、打得快、不会拼错的名字才配得上 24 小时急诊灯箱",
+      ],
+      cases: [
+        { name: "Banfield", takeaway: "创始人 Warren J. Banfield 的姓氏：人名背书起家，随连锁化沉淀为品牌资产，如今是全美最大宠物医院网络——「医者人名 → 连锁品牌」路径的完整样本" },
+        { name: "瑞鹏", takeaway: "「瑞」（吉祥安心）+「鹏」（规模与格局）：两个字既给主人吉利的心理暗示，又撑得起全国连锁的体量——中文宠物医疗命名里安心词根的规模化执行" },
+        { name: "VCA", takeaway: "Veterinary Centers of America 缩写：机构感命名路线，用「中心」而非「小店」的姿态承接转诊与重症——缩写名冷但专业，适合以医疗深度为卖点的体系" },
+        { name: "BluePearl", takeaway: "blue（冷静专业的医疗蓝）+ pearl（珍贵之物）：专做急诊与转诊重症，名字用色彩与珍宝意象说出「你最珍贵的家人在专业的手里」——情感与专业平衡的高分卷" },
+      ],
+      pitfalls: [
+        "萌系谐音梗当主名（汪喵天堂类）：日常没问题，重症托付时刻主人会本能怀疑专业度——「天堂」在医院语境里更是致命歧义",
+        "用 pet shop 系词汇命名医院：店与院一字之差，客单价与信任度天差地别，名字自降医疗等级",
+        "忽略 24 小时急诊的搜索适配：招牌与线上名不一致（大众点评叫 A 门头叫 B），急诊主人找错门的代价是生命",
+        "连锁前不查商标与域名：宠物医疗正处并购整合期，名字做大后发现被抢注，改名成本是所有行业里最伤口碑的",
+      ],
+    },
+    en: {
+      label: "Vet clinics",
+      title: "How to Name a Veterinary Clinic or Animal Hospital: Strategies, Cases & Domains",
+      metaDescription:
+        "Veterinary clinic and animal hospital naming guide: reassurance roots, doctor-name structures, the midnight-emergency test, breakdowns of Banfield/VCA/BluePearl, recommended TLDs and pitfalls — then hunt an available vet domain with AI.",
+      intro:
+        "A vet clinic's name must work at two emotional extremes: at vaccine time it's \"the good clinic downstairs\", and at 2 a.m. it's the word a panicked owner types into a search box. That splits veterinary naming decisively from pet-brand naming (see the pet brands guide) — supplies can be adorable, but a hospital must be professional first, warm second: the moment cuteness outweighs clinical credibility, owners will instinctively switch to somewhere \"more serious\" when the diagnosis is bad. Second, the doctor is the brand: trust in veterinary care ultimately attaches to a specific clinician, so founder-name structures (Dr. Chen Animal Hospital) age best in neighborhood word of mouth, with a brand name taking over only at chain scale. Third, local search is the survival line: \"vet near me\" and \"24-hour pet emergency\" are the category's biggest funnels — the name and signage must classify you instantly for both the map algorithm and the owner rushing past. Finally, the emotional stakes are asymmetric: owners live their worst nights and best recoveries in your waiting room; a flippant pun carries more risk here than in almost any other local trade.",
+      namingIdeas: [
+        "Lead with reassurance roots: care, trust, haven, mercy, guardian — the owner's state at booking is anxiety, and the name is the first sedative; test each candidate by imagining typing it at 2 a.m.",
+        "Use the doctor's name: founder surname + animal hospital (the Dr. X pattern) — a named human answering for the medicine is the strongest trust structure in healthcare, and it compounds for a decade in neighborhood referrals",
+        "Establish the hospital register: hospital, clinic, veterinary — the name must first answer \"this is medicine, not retail\"; warmth comes after credibility",
+        "Ration the cuteness: paws, tails and whiskers belong in the tagline and visuals, not the primary name — major-illness trust is built on competence signals, not charm",
+        "Run the emergency test: say \"get her to X, now!\" out loud — a name that can be shouted, typed fast and never misspelled is the one that deserves the 24-hour lightbox",
+      ],
+      cases: [
+        { name: "Banfield", takeaway: "Founder Warren J. Banfield's surname: personal accountability at the start, compounding into brand equity as it scaled into America's largest vet network — the complete doctor-name-to-chain-brand arc" },
+        { name: "VCA", takeaway: "Veterinary Centers of America, abbreviated: institutional naming that positions centers over shops, built to receive referrals and critical cases — cold but credible; right for depth-of-medicine systems" },
+        { name: "BluePearl", takeaway: "blue (calm clinical authority) + pearl (a treasured thing): emergency and specialty care whose name promises \"your most precious family member is in expert hands\" — the emotion-competence balance at its best" },
+        { name: "Bond Vet", takeaway: "bond (the human-animal relationship) + the category word: names the reason owners come — the relationship, not the procedure — in one warm syllable; modern urban clinic naming done cleanly" },
+      ],
+      pitfalls: [
+        "A cutesy pun as the primary name: fine at vaccine time, credibility poison at diagnosis time — and anything echoing \"heaven\" is a fatal ambiguity on a hospital sign",
+        "Retail-register words (pet shop, pet store) on a medical business: one word's difference collapses the trust and price positioning the clinic depends on",
+        "Mismatched names across map, reviews and signage: an emergency owner who finds the wrong door pays the highest price imaginable — audit every listing",
+        "Skipping trademark and domain clearance before scaling: veterinary care is consolidating fast; renaming a beloved clinic mid-growth burns more goodwill than in any other trade",
+      ],
+    },
+  },
+  esports: {
+    slug: "esports",
+    tlds: [
+      { tld: "gg", zh: "电竞的原生问候语（good game），圈内识别度即品牌资产", en: "The native salute of gaming (good game) — insider recognition as brand equity" },
+      { tld: "com", zh: "商务合作与赞助商尽调的信任门面，俱乐部化必备", en: "The trust front for sponsors and business development — essential at club scale" },
+      { tld: "team", zh: "「战队」直写进后缀，招募页与粉丝站零解释", en: "Writes the squad into the suffix — zero explanation on recruiting and fan pages" },
+    ],
+    zh: {
+      label: "电竞战队",
+      title: "电竞战队/电竞俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "电竞战队/电竞俱乐部命名指南：战意词根、缩写设计、解说喊名测试等 5 种思路，T1/EDG/Fnatic 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的电竞域名。",
+      intro:
+        "电竞战队的名字生存在三个高压场景里：解说在决胜团战时的嘶吼、比分牌上的 2–4 个字母缩写、以及粉丝弹幕里的刷屏应援。这决定了电竞命名的第一铁律——名字与缩写必须同时设计：EDG、T1、G2 这些缩写本身就是品牌，全称反而少有人念全。第二个特点是「战意与人格」的平衡：名字要有攻击性与胜负欲（粉丝要能喊得热血），但纯凶狠词已经通货膨胀，顶级俱乐部越来越像潮牌——Fnatic 卖卫衣、T1 做内容，名字要撑得起队服印花与联名周边。第三是全球赛场的适配：国际赛事解说来自各个语种，名字要在英语解说嘴里不变形、在中文弹幕里有昵称空间（「厂长」「阿水」式的人物昵称文化同样作用于队名）。最后是资本视角：电竞俱乐部的终局是体育经纪与内容公司，名字要经得起从「网吧五连坐」到「上市公司财报」的十年跨度，梗名与游戏版本词会最先过时。",
+      namingIdeas: [
+        "战意词根：锋、刃、焰、Fury、Strike、Titan——胜负欲是电竞的母语，但要在凶狠词之上叠加独特性（Fnatic = fanatic 变形），纯 Killer/Dragon 类已严重同质化",
+        "缩写先行设计：先定 2–3 个字母的缩写（比分牌与弹幕的实际载体），再反推全称——EDG（Edward Gaming）、RNG（Royal Never Give Up）都是缩写比全称更有名的正面案例",
+        "喊名测试：把名字放进解说词「X 拿下这一局！」和粉丝应援「X 加油！」里喊三遍——爆破音开头、两音节以内的名字在嘶吼场景里最响亮",
+        "潮牌气质预留：名字要能印在队服、卫衣与外设联名上好看——字母组合的视觉对称性（G2、T1 的字母+数字结构）本身就是设计资产",
+        "跨语种适配：国际赛场解说来自多语种，避开 th、r/l 混淆等发音陷阱；同时给中文粉丝留昵称空间——能被亲切化的名字才有弹幕生命力",
+      ],
+      cases: [
+        { name: "T1", takeaway: "SK Telecom T1 简化而来：一个字母一个数字，比分牌上的极简暴力美学，Faker 王朝让 T1 两个字符承载了整个电竞史的重量——「缩写即品牌」的终极形态" },
+        { name: "EDG", takeaway: "Edward Gaming 缩写：创始人英文名 + Gaming 的朴素结构，但 EDG 三个字母经 S11 夺冠一夜封神——证明缩写的品牌价值由战绩注入，名字只需好喊不出错" },
+        { name: "Fnatic", takeaway: "fanatic（狂热者）删一个字母：把粉丝的狂热写进队名又完全独占，橙黑视觉 + 潮牌化运营让它成为欧洲电竞的文化符号——变形造词在电竞的教科书执行" },
+        { name: "Royal Never Give Up", takeaway: "皇族（Royal）血统 + Never Give Up 的叙事重生：全称是一句战斗宣言，缩写 RNG 又暗合游戏术语（随机数）自带话题——全称讲故事、缩写造梗的双层设计" },
+      ],
+      pitfalls: [
+        "梗名与版本词命名：当年的热梗three年后就是「时代的眼泪」，俱乐部化、招商时更显儿戏",
+        "缩写撞车不排查：电竞缩写空间极挤（三字母组合有限），撞上已有强队等于永远活在别人阴影里——定名前先查各大赛事数据库",
+        "只顾凶狠不留潮牌空间：Killer/Blood 系名字印在联名卫衣上像盗版货，错失电竞俱乐部最大的衍生收入",
+        "忽略 .gg 与社交账号统一：电竞粉丝的入口是 Twitter/Twitch/B 站，@ 名与域名拿不齐会被假号截流——官宣前一次性锁齐",
+      ],
+    },
+    en: {
+      label: "Esports teams",
+      title: "How to Name an Esports Team or Gaming Org: Strategies, Cases & Domains",
+      metaDescription:
+        "Esports team and gaming org naming guide: battle roots, abbreviation-first design, the caster-scream test, breakdowns of T1/Fnatic/G2, recommended TLDs and pitfalls — then hunt an available esports domain with AI.",
+      intro:
+        "An esports team name lives in three high-pressure venues: a caster's scream during the deciding teamfight, a 2–4 letter tag on the scoreboard, and fan spam scrolling up the chat. That dictates the first iron law of esports naming: design the name and the tag together — EDG, T1 and G2 are brands as abbreviations; almost nobody says the full name. Second, balance aggression with personality: the name needs fight (fans must be able to scream it), but pure menace is inflated currency — top orgs now behave like streetwear labels, and Fnatic sells more hoodies than tickets, so the name must look right on a jersey print and a collab drop. Third, the stage is global: casters speak every language, so the name must survive non-native pronunciation and leave room for fan nicknames — chat culture affectionately mutates names, and a name that can't be nicknamed has no chat life. Finally, think like the cap table: the endgame of an esports org is a sports-and-content company, and the name must stretch from five friends in a LAN café to an earnings report — meme names and game-patch vocabulary expire first.",
+      namingIdeas: [
+        "Draw from battle roots: blade, fury, titan, strike, ember — competitive hunger is the category's native tongue, but stack distinctiveness on top (Fnatic mutates fanatic); plain Killer/Dragon combos are exhausted",
+        "Design the tag first: lock the 2–3 letter abbreviation (the scoreboard's and chat's actual payload), then reverse-engineer the full name — EDG and RNG are both more famous as tags than as full names",
+        "Run the caster-scream test: shout \"X takes the series!\" three times — plosive openings and two syllables or fewer carry best at full volume",
+        "Reserve streetwear headroom: the name must look good foil-printed on a jersey and a collab hoodie — letter-number symmetry (G2, T1) is a design asset in itself",
+        "Clear it across languages: avoid th-sounds and r/l ambiguity for international casters, and leave nickname room for fan communities — affectionate mutations are free marketing",
+      ],
+      cases: [
+        { name: "T1", takeaway: "Distilled from SK Telecom T1: one letter, one digit — scoreboard minimalism at its most brutal, and the Faker dynasty loaded two characters with the weight of esports history. The terminal form of tag-as-brand" },
+        { name: "Fnatic", takeaway: "fanatic minus one letter: fan devotion written into the team name yet fully ownable, with orange-black visuals and streetwear operations making it a European esports icon — mutation coinage executed to textbook standard" },
+        { name: "G2 Esports", takeaway: "Gamers2 compressed to G2: letter-plus-digit symmetry that prints beautifully, plus an owner whose personal brand fuels the org's content engine — proof the tag and the personality are the product" },
+        { name: "Royal Never Give Up", takeaway: "A dynasty word (Royal) reborn through a battle vow (Never Give Up): the full name is a narrative, while the tag RNG doubles as gaming slang for randomness — story in the long form, meme energy in the short" },
+      ],
+      pitfalls: [
+        "Meme and patch-note naming: this season's joke is next era's cringe — and it reads amateur in every sponsorship deck",
+        "Skipping the tag-collision sweep: three-letter space is brutally crowded; colliding with an established org means living in their shadow forever — search league databases before announcing",
+        "All menace, no merch: Blood/Killer-tier names look like bootlegs on a collab hoodie, forfeiting the org's biggest revenue line",
+        "Fragmented handles: fans arrive via Twitter, Twitch and YouTube — announce only after locking the matching @handles and the .gg, or impostor accounts will farm your hype",
+      ],
+    },
+  },
+  drone: {
+    slug: "drone",
+    tlds: [
+      { tld: "com", zh: "商业航拍接单与企业客户尽调的信任基线", en: "The trust baseline for commercial gigs and enterprise client vetting" },
+      { tld: "studio", zh: "航拍工作室的作品集气质，创意服务定位直给", en: "Portfolio energy for aerial studios — states the creative-service positioning" },
+      { tld: "pro", zh: "「专业飞手」一词入后缀，资质与保险齐备的暗示", en: "Writes the professional pilot into the suffix — implies licenses and insurance in order" },
+    ],
+    zh: {
+      label: "无人机航拍",
+      title: "无人机航拍/飞行服务怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "无人机航拍工作室/飞行服务命名指南：视角词根、飞行意象、片尾署名测试等 5 种思路，DJI/Skydio/星图等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的航拍域名。",
+      intro:
+        "无人机行业的名字横跨两种生意：一头是航拍工作室与飞行服务（婚礼跟拍、地产航拍、影视航拍、巡检测绘），另一头是飞行硬件与软件品牌。两者的共同命名资产是「上帝视角」——人类对俯瞰视角的本能迷恋是这个行业最大的意象库：天空、云端、鹰眼、掠过、之上，名字只要唤起「从未见过的角度」，就赢了第一步。服务型工作室的名字要通过「片尾署名测试」：航拍作品的传播场景是视频片尾字幕、婚礼成片角标和甲方 PPT 的素材来源栏，名字要在这些地方专业且好认。第二个行业特性是资质与信任：低空经济监管趋严，商业飞行需要执照、空域报备与保险，名字带出「持证专业」的暗示（而非玩具感）直接影响企业客户的询价意愿。第三是技术演进的赌注：无人机正在从「会飞的相机」变成「低空机器人」，巡检、物流、测绘的想象空间比婚礼航拍大得多——名字锁死「拍摄」一个场景，转型时就会打脸自己。",
+      namingIdeas: [
+        "视角词根：瞰、临、之上、aerial、above、vista——「从没见过的角度看世界」是行业的情感内核，视角词让客户瞬间脑补出画面",
+        "飞行动词与意象：掠、翔、悬停、soar、glide、hover——动词自带运动画面，配合作品集网站的开屏航拍视频，名字与内容互相成就",
+        "片尾署名测试：把名字放进「航拍：X 工作室」的片尾字幕与成片角标里看三秒——在小字号里依然清晰专业的名字才配得上传播场景",
+        "专业感压过玩具感：企业巡检、测绘、影视订单的决策人要看到「持证、保险、流程」的暗示——避开 toy、fun 系词汇，用 aero、flight、systems 等词根建立工程感",
+        "给「低空机器人」留门：名字别锁死「拍摄」——用飞行与空间词而非相机词命名，巡检/物流/测绘的转型空间就都在（DJI 的「大疆创新」从未提拍摄）",
+      ],
+      cases: [
+        { name: "DJI 大疆", takeaway: "「大疆」取自「大疆无垠」：中文名格局辽阔且不锁定任何品类，英文 DJI 三字母工程感十足——双语各司其职，从航模配件走到全球无人机霸主没改过名，命名留白的最佳证明" },
+        { name: "Skydio", takeaway: "sky + studio 的融合造词：天空即工作室，一个词说清「自主飞行的影像工具」；-io 尾缀带科技感，AI 自主飞行的定位与名字的合成感互相印证" },
+        { name: "Zipline", takeaway: "「滑索」：借一个既有的高速运输意象命名无人机物流——不提无人机、不提飞行，只说「东西嗖地送到」；用结果而非技术命名的典范" },
+        { name: "Parrot", takeaway: "「鹦鹉」：会飞、聪明、亲人的鸟类意象，把无人机从军工语境拉进消费客厅——动物隐喻降低品类的技术门槛，消费级定位从名字开始" },
+      ],
+      pitfalls: [
+        "名字里塞 drone 加通用词（DronePro、BestDrone 类）：全球几万家同行同一个套路，搜索与商标都挤不进去",
+        "玩具感词汇接商业订单：fun/toy 系名字让巡检与测绘的企业采购直接跳过——低空经济的钱在 B 端，名字先要过尽调那关",
+        "锁死「拍摄」场景：aerial photo 系名字在转向巡检物流时自我设限，行业正处品类扩张期，名字要比当前业务大一号",
+        "忽略资质暗示与重名排查：商业飞行要执照报备，名字与持证主体不一致会在投标时添麻烦；同城航拍工作室重名也会互抢作品署名",
+      ],
+    },
+    en: {
+      label: "Drone & aerial",
+      title: "How to Name a Drone or Aerial Services Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Drone services and aerial photography naming guide: vantage-point roots, flight imagery, the end-credits test, breakdowns of DJI/Skydio/Zipline, recommended TLDs and pitfalls — then hunt an available drone domain with AI.",
+      intro:
+        "Drone-industry names straddle two businesses: aerial service studios (weddings, real estate, film work, inspection and mapping) on one side, and flight hardware or software brands on the other. Their shared naming asset is the god's-eye view — humanity's instinctive love of looking down from above is the category's richest image bank: sky, summit, hawk, sweep, above. A name that evokes \"an angle you've never seen\" wins the first frame. Service studios must pass the end-credits test: aerial work travels as a caption in video credits, a corner watermark on wedding films, and a source line in a client's deck — the name must stay crisp and professional at small font sizes. Second, this is a licensed trade: low-altitude regulation is tightening, and commercial flight means certificates, airspace filings and insurance — a name that implies \"licensed professional\" rather than \"expensive toy\" directly moves enterprise inquiry rates. Third, place your bet on where the category is going: drones are evolving from flying cameras into low-altitude robots, and inspection, logistics and mapping dwarf wedding shoots — a name locked to \"photo\" will contradict your own pivot.",
+      namingIdeas: [
+        "Root in the vantage point: aerial, above, vista, summit, overlook — the emotional core of the trade is seeing the world from an impossible angle; vantage words make clients picture the shot instantly",
+        "Fly with verbs and flight imagery: soar, glide, hover, sweep — motion verbs carry the showreel's energy into the name; the portfolio's opening drone shot and the name reinforce each other",
+        "Run the end-credits test: set the name in \"Aerial: X Studio\" at credits size for three seconds — if it stays legible and professional in small type, it earns the distribution the work gets",
+        "Let competence outweigh cuteness: inspection, mapping and film buyers scan for licenses, insurance and process — skip toy/fun vocabulary and build engineering register with roots like aero, flight, systems",
+        "Leave the robot door open: name with flight and space words, not camera words — inspection, delivery and mapping stay reachable (DJI's name never mentions photography at all)",
+      ],
+      cases: [
+        { name: "DJI", takeaway: "From the Chinese for \"boundless frontiers\": vast in scope, locked to no category, with the three-letter DJI adding engineering crispness — from hobby parts to global dominance without a rename; the definitive proof of naming headroom" },
+        { name: "Skydio", takeaway: "sky + studio fused into one coinage: the sky as your studio, autonomy as the product; the -io ending adds tech register that matches the AI-pilot positioning — blend naming with the story built in" },
+        { name: "Zipline", takeaway: "An existing fast-transit image borrowed for drone logistics: no drone, no flight, just \"things arrive in a whoosh\" — naming the outcome instead of the technology at its very best" },
+        { name: "Parrot", takeaway: "A bird that flies, thinks and lives with people: the animal metaphor pulled drones out of military register and into the living room — consumer positioning that starts at the name" },
+      ],
+      pitfalls: [
+        "drone + generic word (DronePro, BestDrone): tens of thousands of peers run the same formula — unwinnable in search and unregistrable as a mark",
+        "Toy-register names chasing enterprise work: inspection and mapping procurement filters out anything that sounds like a gadget — B2B money requires a name that survives vendor due diligence",
+        "Locking onto photography: aerial-photo names self-limit exactly as the category expands into inspection and delivery — name one size bigger than today's business",
+        "Skipping license alignment and duplicate checks: commercial flight runs on certificates filed under a legal name — mismatches complicate bids, and same-city studio name clashes contaminate portfolio credits",
+      ],
+    },
+  },
+  hanfu: {
+    slug: "hanfu",
+    tlds: [
+      { tld: "com", zh: "从淘宝店走向独立品牌站的必经门面，出海汉服尤其需要", en: "The storefront for graduating from marketplace shop to standalone brand — essential for hanfu going global" },
+      { tld: "shop", zh: "国潮电商直给的店铺入口，年轻客群零违和", en: "A straight-shot store entrance for guochao e-commerce — native to young shoppers" },
+      { tld: "art", zh: "把「东方美学」写进后缀，高定与文化品牌的气质延伸", en: "Writes the aesthetic into the suffix — a natural extension for couture and culture brands" },
+    ],
+    zh: {
+      label: "汉服国潮",
+      title: "汉服/国潮品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "汉服/国潮品牌命名指南：古典词重组、诗词化用、出圈度平衡等 5 种思路，花西子/织造司/十三余等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的国潮域名。",
+      intro:
+        "汉服与国潮的命名是一场「古今平衡术」：名字太白话就丢了文化纵深（客人买的正是那份古意），太古奥又出不了圈（生僻字连输入法都打不出来，怎么在直播间刷弹幕？）。这个行业最独特的命名资产是五千年的公版词库——诗词、典籍、织造术语、地名官署都可化用，但也正因人人都在翻《诗经》，「云想」「锦绣」「山河」系词汇已高度拥挤，好名字要在古典词库里找到还没被用滥的角落。第二个特点是圈层与出圈的双重身份：核心同袍（汉服爱好者）看重形制考据与文化诚意，泛国潮消费者要的是「上身好看、拍照好发」——名字要让圈内人觉得懂行、圈外人觉得好念。第三是内容平台的传播介质：汉服品牌的主战场在抖音、小红书与直播间，名字要经得起主播口播、话题标签与评论区@，四字以内、无生僻字是硬约束。最后是出海的新变量：汉服正在成为文化出口品类，名字的拼音形态是否好读、是否有对应英文表达，决定了海外站与 TikTok 的传播上限。",
+      namingIdeas: [
+        "古典词重组：从织造、色彩、节气词库里取词重新组合（织造司 = 织造 + 官署名）——比直接用「锦绣」「霓裳」等高频词更独占，古意反而更足",
+        "诗词化用而非照搬：取诗句中的两三字重组（十三余出自「娉娉袅袅十三余」）——既有出处可讲，又不会和照搬全词的同行撞车；品牌故事页自带内容",
+        "传统色与织物词根：月白、黛、缃、罗、绮、缂——传统色谱与织物名是审美浓度最高且相对未被用滥的词库，天然适配产品视觉体系",
+        "出圈度测试：名字让完全不懂汉服的朋友念一遍、打一遍字——念不顺、打不出的名字在直播间和话题标签里传播断链；生僻字的文化感抵不过传播损耗",
+        "拼音形态预检：出海与注册域名都靠拼音——四声连读是否顺口、拼音是否与不雅英文词撞车、TikTok 主播能否读对，定名前逐项过一遍",
+      ],
+      cases: [
+        { name: "花西子", takeaway: "「花」（东方美学意象）+「西子」（西湖与美人典故）：三个字有出处、有画面、好念好打，英文 Florasis（flora + oasis）同样雅致——国潮命名双语齐备的天花板" },
+        { name: "织造司", takeaway: "明清官营织造机构名的挪用：「司」字自带皇家工坊的品质暗示，行业词 + 官署词的结构既考据又独占——古典公版词库里找冷门角落的教科书案例" },
+        { name: "十三余", takeaway: "化用杜牧「娉娉袅袅十三余」：三个字装下少女感与诗词出处，品牌故事从定名那天就写好了——诗词化用而非照搬的范本" },
+        { name: "重回汉唐", takeaway: "四个字直陈品牌使命：汉唐盛世的服章之美值得重回——宣言式命名在同袍社群里情感动员力极强，证明圈层品牌可以用价值观直接命名" },
+      ],
+      pitfalls: [
+        "堆砌高频古风词（云想、锦绣、山河系）：古风词库的头部词汇已严重同质化，混在同行里像白牌",
+        "生僻字当卖点：「䌽」「黼」类字文化浓度再高，输入法打不出就等于放弃了话题标签、弹幕与口碑转述的全部传播链",
+        "只有中文名没有拼音/英文预案：出海站、域名与商标都需要拉丁形态，事后补救常发现拼音域名早被抢注",
+        "形制考据与名字气质错位：名字号称「正统形制」产品却是汉元素改良——同袍社群的考据审判会让名字成为反噬的靶子",
+      ],
+    },
+    en: {
+      label: "Hanfu & guochao",
+      title: "How to Name a Hanfu or Guochao Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Hanfu and China-chic (guochao) brand naming guide: classical-word remixing, poetry-drawn names, the crossover test, breakdowns of Florasis/Shisanyu, recommended TLDs and pitfalls — then hunt an available brand domain with AI.",
+      intro:
+        "Naming a hanfu or guochao brand is a balancing act across centuries: too plain and the name loses the cultural depth customers are actually buying; too archaic and it can't cross over — a character nobody can type kills the hashtag before it starts. The category's singular naming asset is a five-thousand-year public-domain lexicon: poetry, classics, weaving terminology, imperial place and office names are all fair game. But precisely because everyone is mining the same anthologies, the front-page words (clouds, brocade, mountains-and-rivers) are exhausted — great names come from the unmined corners of the classical corpus. Second, the brand lives a double life: core hanfu devotees judge historical fidelity and cultural sincerity, while mainstream guochao shoppers want \"looks great, posts well\" — the name must read as erudite to insiders and effortless to outsiders. Third, the medium is short video and livestream: the name must survive a host's rapid-fire pronunciation, a hashtag, and comment-section mentions — four characters max, no rare characters, non-negotiable. Finally, hanfu is becoming a cultural export: whether the romanized form reads smoothly and an English rendering exists sets the ceiling for the overseas site and TikTok reach.",
+      namingIdeas: [
+        "Remix the classical lexicon: recombine words from weaving, color and solar-term vocabularies rather than borrowing whole famous phrases — a workshop-and-office compound reads more authentic and is far more ownable than another \"Brocade\" brand",
+        "Draw from poetry, don't transcribe it: lift two or three characters from a verse and recombine (Shisanyu compresses a Du Mu line) — you keep the literary provenance for the brand-story page without colliding with everyone quoting the same couplet",
+        "Mine traditional colors and textiles: moon-white, indigo-black, gauze, damask — the traditional color spectrum and fabric names are the highest-aesthetic, least-exhausted corner of the corpus, and they map straight onto product visuals",
+        "Run the crossover test: have a friend who knows nothing about hanfu say and type the name — if it stumbles on the tongue or the keyboard, the livestream chat and hashtag chain break; rare-character erudition never outweighs transmission loss",
+        "Pre-clear the romanized form: the overseas site, domain and trademark all ride on pinyin — check the tonal flow, screen for unfortunate English collisions, and confirm a TikTok host can say it right before committing",
+      ],
+      cases: [
+        { name: "Florasis (花西子)", takeaway: "Three characters carrying flora imagery and a West Lake allusion, paired with Florasis (flora + oasis) in English — provenance, picture and pronounceability in both languages; the ceiling of bilingual guochao naming" },
+        { name: "织造司 (Weaving Bureau)", takeaway: "An imperial weaving-office title repurposed as a brand: the bureaucratic suffix implies royal-workshop quality, trade word + office word reading both scholarly and ownable — the textbook find in the classical corpus's cold corners" },
+        { name: "十三余 (Shisanyu)", takeaway: "Compressed from a Du Mu verse about a girl of thirteen: girlhood and literary provenance in three characters, the brand story written on naming day — adaptation over transcription, done right" },
+        { name: "重回汉唐 (Return to Han & Tang)", takeaway: "A four-character mission statement: the sartorial glory of the Han and Tang deserves a return — manifesto naming with enormous emotional pull inside the devotee community; proof a community brand can name its values outright" },
+      ],
+      pitfalls: [
+        "Stacking front-page archaic words (clouds/brocade/rivers): the classical lexicon's greatest hits are saturated — the name disappears into the marketplace like an unbranded listing",
+        "Rare characters as a badge of depth: a glyph the input method can't produce forfeits hashtags, chat and word of mouth in one stroke — the entire distribution chain snaps at the keyboard",
+        "No romanized plan: the overseas site, domain and mark all need a Latin form — brands that defer it routinely find the pinyin domain already squatted",
+        "Fidelity mismatch: a name claiming orthodox authenticity on modernized hanfu-element clothing invites the devotee community's citation tribunal — the name becomes the target of the backlash",
+      ],
+    },
+  },
+  dental: {
+    slug: "dental",
+    tlds: [
+      { tld: "com", zh: "高客单医疗决策的信任基线，家庭牙医十年不换名", en: "The trust baseline for high-ticket medical decisions — a family dentist's name for a decade" },
+      { tld: "studio", zh: "美学牙科与 tend 式生活方式诊所的气质后缀", en: "The temperament suffix for aesthetic dentistry and tend-style lifestyle clinics" },
+      { tld: "pro", zh: "「专业执业」写进后缀，数万元种植决策的信任加分", en: "Writes professional practice into the suffix — a trust bonus for five-figure implant decisions" },
+    ],
+    zh: {
+      label: "口腔诊所",
+      title: "口腔诊所/牙科品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "口腔诊所/牙科品牌命名指南：安心词根、微笑意象、恐惧中和测试等 5 种思路，瑞尔/通策/tend 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的口腔域名。",
+      intro:
+        "牙科命名的头号对手不是同行，是恐惧——多数人对牙科的默认情绪是「怕」，名字是患者接触诊所的第一针麻药。这决定了口腔命名的核心策略：用安心与微笑意象中和钻头与疼痛的联想，「让人想笑」比「让人敬畏」更值钱。第二个特点是客单价的双轨制：基础诊疗靠医保与社区信任，种植正畸动辄数万靠专业权威——名字要同时接住「楼下洗牙」的亲切与「十万种植」的郑重，这也是家庭牙科与专科机构命名分野的根源。第三是「医生即品牌」的行业底色：牙科的复购与转介绍高度绑定具体医生，人名 + 口腔的结构在社区里最稳；连锁化后品牌名接棒，但要给医生个人 IP 留位置。最后是正畸与美学牙科的消费化趋势：隐形矫正把牙科从「治病」拉进「变美」，这一侧的命名语言更靠近消费品牌——smile 系词汇的走红正是牙科命名消费化的信号。",
+      namingIdeas: [
+        "微笑与安心词根：笑、悦、皓、smile、bright、gentle——把治疗结果（自信的笑容）而非治疗过程写进名字，恐惧中和从第一印象开始",
+        "恐惧中和测试：把名字放进「明天要去 X 看牙」念一遍——如果这句话听起来让人放松而非紧张，名字就完成了第一疗程；钻、切、锐利系字眼一票否决",
+        "医生人名结构：创始医生姓氏 + 口腔（李医生口腔）——牙科转介绍的信任落点是具体的人，人名结构在社区口碑里复利最高；连锁预期强再上品牌名",
+        "双轨气质选边：家庭全科用亲切词（家、邻、悦），种植正畸专科用权威词（雅、瑞、专研感）——数万元的种植决策需要名字先立住专业人设",
+        "美学侧消费化命名：隐形矫正与美白业务可以用消费品牌逻辑起名（tend、Candid 式的日常词）——把「看牙」重构成「变美的例行仪式」，名字先改变叙事",
+      ],
+      cases: [
+        { name: "瑞尔齿科", takeaway: "「瑞」（安心吉祥）+「尔」（亲切的你）：两个字把高端定位说得温和不倨傲，Arrail 的英文形态同步立住涉外客群——中文牙科连锁命名安心词根的标杆" },
+        { name: "tend", takeaway: "「照料」一词小写呈现：把牙科从医疗语境拉进生活方式语境，配合水疗风门店设计重构「看牙体验」——动词命名 + 视觉一体化的牙科消费化范本" },
+        { name: "SmileDirectClub", takeaway: "smile + direct + club 三词直陈模式：结果（微笑）+ 渠道（直达）+ 归属（俱乐部），DTC 正畸的商业模式全写在名字里——功能命名在消费医疗的极致执行" },
+        { name: "美奥口腔", takeaway: "「美」（美学牙科定位）+「奥」（深奥专业）：两个字同时按下变美与权威两个按钮，匹配种植正畸的高客单决策——双轨气质在一个名字里的平衡样本" },
+      ],
+      pitfalls: [
+        "器械与疼痛联想入名（钻、快、锐系）：牙科命名的头号大忌，名字先把患者吓跑一半",
+        "过度承诺疗效（「无痛」「立得」入名）：医疗广告法的雷区，监管处罚之外，一次疼痛体验就让名字变成差评证词",
+        "家庭全科用奢侈品腔调命名：社区牙科的信任来自亲切与医保友好，名字太贵气会让洗牙客人担心被推销种植",
+        "忽略医生 IP 与诊所名的关系：主诊医生离开后名字还成立吗？人名结构要配股权与合约设计，否则口碑资产随人流失",
+      ],
+    },
+    en: {
+      label: "Dental clinics",
+      title: "How to Name a Dental Clinic or Oral Care Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Dental clinic and orthodontics naming guide: smile-and-calm roots, fear-neutralizing tests, doctor-name structures, breakdowns of tend/SmileDirectClub, recommended TLDs and pitfalls — then hunt an available dental domain with AI.",
+      intro:
+        "Dental naming's chief opponent isn't the competition — it's fear. Most people's default emotion toward dentistry is dread, and the name is the first anesthetic a patient encounters. That sets the core strategy: neutralize the drill-and-pain association with smile and calm imagery — a name that makes people want to smile beats one that commands respect. Second, the economics run on two tracks: routine care rides on neighborhood trust and insurance, while implants and orthodontics are five-figure decisions that ride on authority — the name must hold both the warmth of a downstairs cleaning and the gravity of a $10,000 implant, which is exactly where family-practice and specialist naming diverge. Third, the dentist is the brand: repeat visits and referrals attach to a specific clinician, so doctor-name structures compound best in a community, with a brand name taking over at chain scale — but always leaving room for the doctor's personal reputation. Finally, aligners and aesthetic dentistry are consumerizing the category: invisible orthodontics reframed dental care from treatment to self-improvement, and that side of the business names like a consumer brand — the boom in smile-words is the clearest signal.",
+      namingIdeas: [
+        "Root in smiles and calm: smile, bright, gentle, glow — name the outcome (a confident smile), never the procedure; fear neutralization starts at first impression",
+        "Run the fear test: say \"I'm going to X tomorrow for my tooth\" — if the sentence relaxes rather than tightens, the name has done its first treatment; anything echoing drills, cutting or sharpness is an automatic veto",
+        "Use the doctor's name: founder surname + dental (the Dr. X pattern) — referral trust in dentistry lands on a person, and name structures compound for years in local word of mouth; layer a brand name only when chain ambitions are real",
+        "Pick your track: family practices win with warm, neighborly words; implant and orthodontic specialists need authority register — a five-figure implant decision requires the name to establish expertise before the consult",
+        "Consumerize the aesthetic side: aligner and whitening lines can name like consumer brands (tend, Candid — everyday lowercase words) — reframing the visit as a self-care ritual starts with the name changing the narrative",
+      ],
+      cases: [
+        { name: "tend", takeaway: "The verb \"to tend\", set in lowercase: dentistry pulled from medical register into lifestyle register, with spa-like studios completing the reframe — verb naming plus visual identity as one system; the benchmark of consumerized dental" },
+        { name: "SmileDirectClub", takeaway: "smile + direct + club: outcome, channel and belonging — the entire DTC aligner business model written into one name; functional naming at its most literal, and it worked at category-creation scale" },
+        { name: "Candid", takeaway: "\"Honest\" and \"a candid smile\" in one word: the double meaning covers both the transparent-pricing pitch and the product's result — a dictionary word whose ambiguity is the strategy" },
+        { name: "Aspen Dental", takeaway: "A calm nature word + the category: aspen carries clean mountain-air associations with zero dental fear baggage, scaling across hundreds of locations without localization problems — nature-word + category as the chain-safe formula" },
+      ],
+      pitfalls: [
+        "Instrument and pain echoes (drill/sharp/fast roots): the cardinal sin of dental naming — the name scares off half the patients before the first call",
+        "Promising outcomes in the name (painless, instant): a regulatory minefield in medical advertising — and one painful visit turns the name into review-section evidence",
+        "Luxury register on a family practice: neighborhood dentistry trusts warm and insurance-friendly; a name that sounds expensive makes cleaning patients brace for an implant upsell",
+        "Ignoring the doctor-name dependency: does the name survive the lead dentist leaving? Personal-name structures need matching equity and contract design, or the goodwill walks out the door",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

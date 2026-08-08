@@ -1245,6 +1245,26 @@ async function inlineStylesheet(html: string, assets: Fetcher, origin: string): 
 type ViteManifestChunk = { file: string; imports?: string[] };
 let viteManifest: Record<string, ViteManifestChunk> | null = null;
 
+/** 资产字节大小（file → bytes），模块级缓存 */
+const assetSizeCache = new Map<string, number>();
+
+async function assetSize(file: string, assets: Fetcher, origin: string): Promise<number> {
+  const cached = assetSizeCache.get(file);
+  if (cached !== undefined) return cached;
+  try {
+    const res = await assets.fetch(new Request(new URL(`/${file}`, origin)));
+    const size = res.ok ? (await res.arrayBuffer()).byteLength : 0;
+    assetSizeCache.set(file, size);
+    return size;
+  } catch {
+    return 0;
+  }
+}
+
+/** 超过该体积的共享数据 chunk（如全量 TLD/行业指南文案）不做 modulepreload：
+ *  正文已全文 SSR，这些数据只在水合时才需要；提前抢占带宽会显著推迟移动端 LCP。 */
+const MODULEPRELOAD_MAX_BYTES = 100_000;
+
 /** SEO 页 SSR 注入懒加载路由 chunk 的 modulepreload，让页面 JS 与主 bundle 并行下载（降低内容 LCP） */
 async function injectModulepreload(html: string, assets: Fetcher, origin: string, entry: string): Promise<string> {
   try {
@@ -1261,8 +1281,10 @@ async function injectModulepreload(html: string, assets: Fetcher, origin: string
       for (const dep of chunk.imports ?? []) walk(dep);
     };
     walk(entry);
-    if (files.length === 0) return html;
-    const links = files.map((f) => `<link rel="modulepreload" href="/${f}" />`).join("\n    ");
+    const sizes = await Promise.all(files.map((f) => assetSize(f, assets, origin)));
+    const preloadable = files.filter((_, i) => sizes[i] <= MODULEPRELOAD_MAX_BYTES);
+    if (preloadable.length === 0) return html;
+    const links = preloadable.map((f) => `<link rel="modulepreload" href="/${f}" />`).join("\n    ");
     return html.replace("</head>", `${links}\n  </head>`);
   } catch {
     return html;
@@ -1291,7 +1313,7 @@ const HOME_FAQ = {
     { q: "核验结果准确吗？", a: "每个域名经 DNS + RDAP + WHOIS 三级核验，可注册状态来自注册局权威数据；注册前建议在注册商页面再确认一次。" },
     { q: "使用收费吗？", a: "完全免费。AI 搜索有每小时次数限制；即输即查、更多后缀与前后缀变体核验不限量、不消耗 AI 次数。" },
     { q: "会自动帮我注册域名吗？", a: "不会。我们只提供核验结果与注册商跳转链接（如 Porkbun），注册和付费在注册商完成。" },
-    { q: "支持哪些后缀？", a: "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host。" },
+    { q: "支持哪些后缀？", a: "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu。" },
     { q: "我的搜索会被保存吗？", a: "不保存输入内容和 IP，只记录匿名的聚合次数统计；收藏清单保存在你自己的浏览器本地。" },
   ],
   en: [
@@ -1299,7 +1321,7 @@ const HOME_FAQ = {
     { q: "How accurate are the availability checks?", a: "Every domain goes through DNS + RDAP + WHOIS checks against authoritative registry data. We still recommend a final confirmation on the registrar's page before buying." },
     { q: "Is it free?", a: "Completely free. AI search has an hourly rate limit; instant checks, extra-TLD checks, and prefix/suffix variants are unlimited and never use AI quota." },
     { q: "Will it register domains for me automatically?", a: "No. We only provide verification results and registrar links (e.g. Porkbun) — registration and payment happen at the registrar." },
-    { q: "Which TLDs are supported?", a: "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host via the “more TLDs” button." },
+    { q: "Which TLDs are supported?", a: "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu via the “more TLDs” button." },
     { q: "Do you store my searches?", a: "We never store your input or IP — only anonymous aggregate counters. Your shortlist lives in your own browser's local storage." },
   ],
 } as const;

@@ -59,4 +59,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "insurance", zh: "保险经纪", en: "Insurance" },
   { slug: "farm", zh: "农场生鲜", en: "Farms & fresh food" },
   { slug: "barber", zh: "美发理容", en: "Barbershops & salons" },
+  { slug: "yoga", zh: "瑜伽普拉提", en: "Yoga & Pilates" },
+  { slug: "vet", zh: "宠物医院", en: "Vet clinics" },
+  { slug: "esports", zh: "电竞战队", en: "Esports teams" },
+  { slug: "drone", zh: "无人机航拍", en: "Drone & aerial" },
+  { slug: "hanfu", zh: "汉服国潮", en: "Hanfu & guochao" },
+  { slug: "dental", zh: "口腔诊所", en: "Dental clinics" },
 ];

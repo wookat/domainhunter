@@ -14,10 +14,18 @@ export interface ShortlistItem {
   scores?: Row["scores"];
   addedAt: number;
   status?: Status;
+  /** 到期时间（ISO 字符串），仅 taken 且数据可得时存在 */
+  expiresAt?: string;
+}
+
+/** 重新核验后的单域名回写结果 */
+export interface RecheckResult {
+  status: Status;
+  expiresAt?: string;
 }
 
 function rowToItem(row: Row): ShortlistItem {
-  return { domain: row.domain, label: row.label, tld: row.tld, meaning: row.meaning, scores: row.scores, status: row.status, addedAt: Date.now() };
+  return { domain: row.domain, label: row.label, tld: row.tld, meaning: row.meaning, scores: row.scores, status: row.status, expiresAt: row.expiresAt, addedAt: Date.now() };
 }
 
 function load(): ShortlistItem[] {
@@ -92,9 +100,17 @@ export function useShortlist() {
     });
   }, []);
 
-  /** 重新核验后回写状态与核验时间 */
-  const applyStatuses = useCallback((statuses: Record<string, Status>) => {
-    setItems((prev) => prev.map((i) => (statuses[i.domain] ? { ...i, status: statuses[i.domain] } : i)));
+  /** 重新核验后回写状态、到期时间与核验时间 */
+  const applyStatuses = useCallback((results: Record<string, RecheckResult>) => {
+    setItems((prev) =>
+      prev.map((i) => {
+        const r = results[i.domain];
+        if (!r) return i;
+        if (r.status === "taken") return { ...i, status: r.status, ...(r.expiresAt ? { expiresAt: r.expiresAt } : {}) };
+        const { expiresAt: _drop, ...rest } = i;
+        return { ...rest, status: r.status };
+      }),
+    );
     const now = Date.now();
     setLastCheckedAt(now);
     try {

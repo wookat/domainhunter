@@ -1741,6 +1741,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Event pages and product-information sites", "Info satellites for a main brand (near-zero cost)", "One-way static reference sites", "Two decades of suffix recognition"],
     },
   },
+  "blog-vs-com": {
+    slug: "blog-vs-com",
+    a: "blog",
+    b: "com",
+    zh: {
+      title: ".blog 和 .com 怎么选：写作者身份与万能默认的对比",
+      metaDescription: ".blog 是写作者的身份后缀、好名字库存充裕，.com 是万能默认但好词绝迹。对比两者的语义、价格与库存差异，并用 AI 猎取可注册的名字。",
+      verdict:
+        "先问一个问题：这个站的核心是「读内容」还是「做生意」？答案是前者，.blog 几乎总是更优——它由 WordPress 母公司 Automattic 旗下注册局运营，name.blog 天然读成「某某的博客」，人名、笔名、主题词在这里大多还能注册（yourname.blog、coffee.blog 这类在 .com 下早已绝迹），首年 $3 上下、续费约 $21/年，对个人创作者可长期负担。答案是后者，.com 仍是无可替代的默认：电商、SaaS、企业主站挂在 .blog 上会显得业余，用户口头传播时也默认补全 .com。价格上 .com 注册与续费都便宜稳定，但代价是好名字几乎要靠收购。成熟的组合玩法是分工：brand.com 做产品主站，brand.blog 做内容分站——内容营销越重的品牌越值得两个都拿。",
+      pickA: ["个人博客与独立写作者", "Newsletter 网页版与专栏", "品牌的内容营销分站（brand.blog）", "人名/主题词在 .com 已绝迹"],
+      pickB: ["电商、SaaS 与企业主站", "口头传播场景多（用户默认补全 .com）", "长期品牌资产与转售", "内容只是站点的一部分而非全部"],
+    },
+    en: {
+      title: ".blog vs .com: Writer Identity vs the Universal Default",
+      metaDescription:
+        ".blog is the writer's identity suffix with great inventory; .com is the universal default with good words long gone. Compare semantics, pricing and inventory, then hunt available names.",
+      verdict:
+        "Ask one question first: is this site primarily for reading content or for doing business? If reading, .blog nearly always wins — run by a registry under Automattic (the WordPress company), name.blog literally parses as \"NAME's blog\", and real names, pen names and topic words are mostly still open here (yourname.blog and coffee.blog went extinct on .com years ago), at about $3 first year and $21/yr renewal — sustainable for individual creators. If business, .com remains the irreplaceable default: e-commerce, SaaS and corporate main sites look amateur on .blog, and word-of-mouth autocompletes to .com. .com is cheap and stable to hold, but good names are effectively acquisition-only. The mature play is division of labor: brand.com for the product, brand.blog for the content hub — the heavier your content marketing, the more it pays to own both.",
+      pickA: ["Personal blogs & independent writers", "Newsletter web homes and columns", "Brand content hubs (brand.blog)", "Your name or topic word is extinct on .com"],
+      pickB: ["E-commerce, SaaS and corporate main sites", "Heavy word-of-mouth (users autocomplete .com)", "Long-term brand asset and resale", "Content is one part of the site, not all of it"],
+    },
+  },
+  "team-vs-com": {
+    slug: "team-vs-com",
+    a: "team",
+    b: "com",
+    zh: {
+      title: ".team 和 .com 怎么选：讲「人」的后缀与讲「产品」的默认",
+      metaDescription: ".team 把「团队」写进域名，适合协作工具、招聘页与战队；.com 是产品主站的默认。对比两者的分工、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "这组对比的正解往往不是二选一，而是分工：.com 讲产品，.team 讲人。协作与团队管理 SaaS 把「为团队而生」直接写进域名（name.team 一眼即懂）、公司招聘与雇主品牌页（join.team 式表达比 careers 子页面更有态度）、电竞战队与运动俱乐部主页——这些「人」维度的场景 .team 都名正言顺，且 dream.team 这类现成短语在 .com 里根本不存在。价格上 .team 首年 $5 上下、续费约 $29/年，中等价位；.com 便宜稳定但好名字绝迹。什么时候只选 .com：产品主站、面向大众的正式品牌、口头传播多的场景——单独用 .team 做公司主站语义偏窄，且「team」在中文语境认知度不如 com 直白。预算允许时，产品主站 .com + 招聘/团队页 .team 是海外成熟玩法。",
+      pickA: ["协作与团队管理工具", "招聘与雇主品牌页（join.team 式）", "电竞战队与运动俱乐部", "dream.team 类现成短语可遇不可求"],
+      pickB: ["产品主站与正式品牌", "面向大众、口头传播多", "长期品牌资产与转售", "面向纯国内用户（认知度更稳）"],
+    },
+    en: {
+      title: ".team vs .com: The People Suffix vs the Product Default",
+      metaDescription:
+        ".team writes the team into the domain — for collaboration tools, hiring pages and squads; .com is the product-site default. Compare roles, pricing and fit, then hunt available names.",
+      verdict:
+        "The right answer here is often not either/or but division of labor: .com speaks for the product, .team speaks for the people. Collaboration and team-management SaaS write \"built for teams\" into the domain itself (name.team is instantly legible), hiring and employer-brand pages get more attitude from join.team than a buried careers subpage, and esports squads and sports clubs wear it natively — plus ready-made phrases like dream.team simply don't exist on .com. On price, .team runs about $5 first year with $29/yr renewals — mid-tier; .com is cheap and stable but good names are gone. When to pick only .com: the product main site, mainstream consumer brands, heavy word-of-mouth — .team alone reads narrow as a corporate main site. With budget, the established pattern abroad is brand.com for the product plus a .team for hiring and the people story.",
+      pickA: ["Collaboration & team-management tools", "Hiring & employer-brand pages (join.team style)", "Esports squads and sports clubs", "Ready-made phrases like dream.team"],
+      pickB: ["Product main sites and formal brands", "Mainstream audience, heavy word-of-mouth", "Long-term brand asset and resale", "Best default recognition everywhere"],
+    },
+  },
+  "chat-vs-app": {
+    slug: "chat-vs-app",
+    a: "chat",
+    b: "app",
+    zh: {
+      title: ".chat 和 .app 怎么选：对话形态与应用形态的信号对比",
+      metaDescription: ".chat 说「点进来能对话」，.app 说「这是个应用」。对比两者的语义精度、价格与强制 HTTPS 等差异，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀都在描述产品形态，分界线是交互方式。产品的核心体验是「对话」——AI 助手、Chatbot、客服与在线咨询、社区群聊——.chat 的语义精度无可替代：用户看到 name.chat 就预期点进去能聊，转化路径最短；ChatGPT 之后它更成了 AI 对话产品的性价比之选（比 .ai 便宜得多）。产品是更广义的「应用」——工具、效率、任何 App 形态——.app 更稳：Google 运营、全后缀强制 HTTPS（HSTS 预加载），name.app 零解释成本，且不把产品绑死在「聊天」这一种形态上。价格上 .app 注册与续费都适中；.chat 首年 $6 上下、续费约 $37/年，中等偏上。判断标准：打开产品第一屏是对话框 → .chat；对话只是功能之一或未来可能转型 → .app 留足余地。反向错配都伤：非对话产品用 .chat 误导预期，纯聊天产品用 .app 又浪费了品类信号。",
+      pickA: ["AI 对话助手与 Chatbot", "客服与在线咨询工具（support.chat 式）", "社区与群聊产品", "AI 产品预算有限（.ai 的高性价比替身）"],
+      pickB: ["工具与效率类应用", "对话只是功能之一的产品", "看重强制 HTTPS 的安全背书", "未来可能扩展形态、不想绑死「聊天」"],
+    },
+    en: {
+      title: ".chat vs .app: Conversation Signal vs Application Signal",
+      metaDescription:
+        ".chat says \"talk to it\"; .app says \"it's an application\". Compare semantic precision, pricing and enforced HTTPS, then hunt available names.",
+      verdict:
+        "Both suffixes describe a product's form factor; the dividing line is the interaction. If the core experience is conversation — AI assistants, chatbots, customer support and live consultation, community chat — .chat's precision is unmatched: visitors seeing name.chat expect to talk to something the moment they land, the shortest conversion path there is; after ChatGPT it also became the value pick for AI conversation products (far cheaper than .ai). If the product is an application in the broader sense — tools, productivity, anything app-shaped — .app is the safer badge: Google-operated with zone-wide enforced HTTPS (HSTS preload), name.app costs zero explanation and doesn't chain you to the chat form factor. On price .app is moderate both ways; .chat runs about $6 first year with $37/yr renewals, mid-to-upper. The test: if the first screen is a chat box → .chat; if conversation is one feature among several or a pivot is possible → .app leaves room. Both mismatches hurt: .chat on a non-conversational product misleads, .app on a pure chat product wastes the category signal.",
+      pickA: ["AI assistants & chatbots", "Customer support & live consultation (support.chat)", "Community & group-chat products", "AI products on a budget (.ai's value alternative)"],
+      pickB: ["Tools and productivity apps", "Products where chat is one feature of many", "Enforced-HTTPS security endorsement", "Room to pivot beyond the chat form factor"],
+    },
+  },
+  "finance-vs-com": {
+    slug: "finance-vs-com",
+    a: "finance",
+    b: "com",
+    zh: {
+      title: ".finance 和 .com 怎么选：品类信号与通用信任的对比",
+      metaDescription: ".finance 把「金融」写进后缀、DeFi 圈已成惯例，.com 是金融机构的传统默认。对比两者的信任来源、价格与合规预期，并用 AI 猎取可注册的名字。",
+      verdict:
+        "金融产品选域名，本质是在选「信任的来源」。.com 的信任来自资历：银行、券商、持牌机构的用户预期就是 .com，面向大众的理财与支付产品用它最不需要解释。.finance 的信任来自语义：后缀本身就在说「我是做金融的」，金融科技创业公司、记账与预算工具、B2B 财务 SaaS 用它名正言顺；DeFi 圈更是把它用成了行业惯例——yearn.finance 等头部协议完成了用户教育，加密金融项目选 .finance 几乎零解释成本，甚至比 .com 更「圈内」。价格差异明显：.finance 首年 $7 上下、续费约 $52/年，偏高；.com 便宜稳定但金融类好词几乎绝迹。两点提醒：金融语义自带监管预期，.finance 站点务必展示合规信息与真实主体，否则「像钓鱼站」的怀疑会反噬；传统持牌业务（银行、保险）用户习惯 .com，别用 .finance 挑战预期。",
+      pickA: ["金融科技创业公司", "DeFi 与加密金融协议（行业惯例）", "记账/预算/报销工具", "金融词根在 .com 已被注册"],
+      pickB: ["银行、券商与持牌机构", "面向大众的理财与支付产品", "长期品牌资产与转售", "续费预算敏感（.finance 续费偏高）"],
+    },
+    en: {
+      title: ".finance vs .com: Category Signal vs Universal Trust",
+      metaDescription:
+        ".finance spells the industry into the suffix and rules DeFi; .com is the traditional default of financial institutions. Compare trust sources, pricing and compliance expectations, then hunt available names.",
+      verdict:
+        "Choosing a domain for a financial product is really choosing where the trust comes from. .com's trust comes from seniority: users expect banks, brokers and licensed institutions on .com, and mainstream money and payment products need zero explanation there. .finance's trust comes from semantics: the suffix itself says \"we do finance\" — fintech startups, budgeting and expense tools and B2B finance SaaS all wear it legitimately, and DeFi went further and made it the industry convention: protocols like yearn.finance finished the user education, so crypto-finance projects pay zero explanation cost — on .finance they can read even more native than on .com. The price gap is real: .finance runs about $7 first year with $52/yr renewals; .com is cheap and stable but finance words are effectively extinct. Two cautions: financial semantics invite regulatory expectations — a .finance site must show compliance details and a real legal entity or risk reading as phishing; and traditional licensed businesses (banks, insurance) should not challenge the .com habit their users already have.",
+      pickA: ["Fintech startups", "DeFi & crypto-finance protocols (the convention)", "Budgeting/expense/invoicing tools", "Your finance word is taken on .com"],
+      pickB: ["Banks, brokers and licensed institutions", "Mainstream money and payment products", "Long-term brand asset and resale", "Renewal-budget sensitive (.finance renews high)"],
+    },
+  },
+  "global-vs-world": {
+    slug: "global-vs-world",
+    a: "global",
+    b: "world",
+    zh: {
+      title: ".global 和 .world 怎么选：企业宣言与叙事画布的对比",
+      metaDescription: ".global 是跨国业务的正式宣言、定价高门槛，.world 是开放叙事的画布、首年便宜。对比两者的气质、价格结构与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀都在说「不止一个市场」，气质却分得很开。.global 是企业宣言：跨国公司的国际主站、集团品牌页、国际组织与联盟，brand.global 读出来就是「某某的全球站」，正式、克制、面向 B2B；注册约 $31、续费约 $78/年的高定价本身就在筛选认真做国际业务的注册者——投机囤积少，好词存量反而比价格更低的后缀好。.world 是叙事画布：游戏与元宇宙的「某某世界」、跨文化社区、旅行与移民服务，「名词 + .world」当口号读（coffee.world、maker.world），hello.world 式组合还自带程序员梗；首年促销价常见十几到几十元，但续费会跳到两百元上下，预算要按续费价核算。判断标准：主体是公司、要传达的是「我们在全球做生意」→ .global 的正式感撑得起；主体是产品/社区、要传达的是「这是一个世界」→ .world 的想象力更值钱。反向提醒：小团队用 .global 口气大于实力会反噬，严肃 B2B 用 .world 又显得轻。",
+      pickA: ["跨国公司国际主站与集团品牌页", "国际组织与行业联盟", "全球物流/支付/招聘服务", "高定价筛选后的好词存量"],
+      pickB: ["游戏与虚拟世界/元宇宙项目", "跨文化社区与旅行/移民服务", "「xx 世界」式品牌叙事", "首年预算有限（促销价便宜）"],
+    },
+    en: {
+      title: ".global vs .world: Corporate Statement vs Narrative Canvas",
+      metaDescription:
+        ".global is the formal declaration of multinational business at premium pricing; .world is the open narrative canvas with cheap first years. Compare vibe, price structure and fit, then hunt available names.",
+      verdict:
+        "Both suffixes say \"more than one market\", but their temperaments split cleanly. .global is a corporate statement: multinational main sites, group brand pages, international organizations and alliances — brand.global reads as \"BRAND, worldwide\": formal, restrained, B2B-facing. Its premium pricing (about $31 to register, $78/yr to renew) itself filters for serious international registrants, keeping speculation low and word inventory surprisingly good. .world is a narrative canvas: game and metaverse \"worlds\", cross-cultural communities, travel and immigration services — noun + .world reads like a slogan (coffee.world, maker.world), and hello.world combos carry a built-in programmer wink. First-year promos run a few dollars, but renewals jump to roughly $28/yr, so budget on the renewal price. The test: if the entity is a company and the message is \"we do business globally\" → .global's formality carries it; if the entity is a product or community and the message is \"this is a world\" → .world's imagination is worth more. Mind the reverse mismatches: a small team on .global overclaims and invites backlash, while serious B2B on .world reads light.",
+      pickA: ["Multinational main sites & group brand pages", "International orgs and alliances", "Global logistics/payments/hiring services", "Premium-filtered word inventory"],
+      pickB: ["Game and metaverse world projects", "Cross-cultural communities, travel & immigration", "\"X world\" brand narratives", "Tight first-year budget (cheap promos)"],
+    },
+  },
+  "host-vs-cloud": {
+    slug: "host-vs-cloud",
+    a: "host",
+    b: "cloud",
+    zh: {
+      title: ".host 和 .cloud 怎么选：托管行业词与云品类词的对比",
+      metaDescription: ".host 精准指向主机托管行业但续费最贵，.cloud 覆盖更广的云与 SaaS 且价格中等。对比两者的语义宽度、价格结构与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀同属基础设施赛道，差别在语义的宽度和钱包的深度。.host 窄而准：虚拟主机与 VPS 服务商、游戏服务器托管、静态托管与部署平台、homelab 自建服务门户，name.host 读出来就是「某某托管」，「我们帮你跑起来」的定位不言自明；但价格结构要看清——首年常有 $5 上下的促销，续费约 $82/年，是典型的「首年便宜续费贵」，认真商用前先算多年成本。.cloud 宽而稳：云服务、SaaS、DevOps 工具、企业 IT 服务都装得下，面向企业客户时比 .io 更正式，价格中等、库存充足，还适合做客户实例域名的根域（app.acme.cloud）。判断标准：业务就是「托管」本身（卖主机、跑服务器）→ .host 的行业词精准且库存极好；业务是更广义的云产品或 SaaS → .cloud 的宽语义和低续费更稳。两个都别给非基础设施业务用——语义错位只会困惑用户。",
+      pickA: ["虚拟主机与 VPS 服务商", "游戏服务器托管", "静态托管与部署平台", "以 host 结尾的 domain hack（g.host 式）"],
+      pickB: ["云服务与 SaaS 产品", "企业 IT 与 DevOps 服务", "客户实例域名的根域（app.acme.cloud）", "续费预算敏感（.host 续费最贵档）"],
+    },
+    en: {
+      title: ".host vs .cloud: The Hosting Trade Word vs the Cloud Category Word",
+      metaDescription:
+        ".host points squarely at the hosting trade but renews steep; .cloud covers the broader cloud/SaaS category at mid-range prices. Compare semantic width, price structure and fit, then hunt available names.",
+      verdict:
+        "Both suffixes live on the infrastructure track; the difference is semantic width versus wallet depth. .host is narrow and precise: web hosts and VPS providers, game-server hosting, static-hosting and deployment platforms, homelab portals — name.host reads as \"the NAME host\", making \"we run it for you\" self-evident. But read the price structure: first-year promos around $5 snap to roughly $82/yr renewals, a textbook cheap-year-one suffix, so price multi-year costs before committing commercially. .cloud is wide and steady: cloud services, SaaS, DevOps tools and enterprise IT all fit, it reads more professional than .io for B2B, pricing is mid-range with plentiful inventory, and it makes a great root domain for customer instances (app.acme.cloud). The test: if the business is hosting itself — selling servers, running workloads → .host's trade word is precise and its inventory excellent; if it's a broader cloud product or SaaS → .cloud's width and lower renewals are the safer hold. Neither belongs on a non-infrastructure business — mismatched semantics just confuse users.",
+      pickA: ["Web hosts & VPS providers", "Game-server hosting", "Static hosting & deployment platforms", "Domain hacks on words ending in host (g.host)"],
+      pickB: ["Cloud services & SaaS products", "Enterprise IT & DevOps services", "Root domain for customer instances (app.acme.cloud)", "Renewal-budget sensitive (.host renews steepest)"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
