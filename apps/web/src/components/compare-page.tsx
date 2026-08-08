@@ -3,6 +3,7 @@ import { CheckCircle2, HelpCircle, Scale, Sparkles } from "lucide-react";
 import { buildCompareFaq } from "@/content/compare-faq";
 import { TLD_COMPARES } from "@/content/compares";
 import { INDUSTRY_GUIDES, guidesForTld } from "@/content/guides";
+import { NotFoundPage } from "@/components/not-found-page";
 import { TLD_GUIDES } from "@/content/tlds";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, usePrices } from "@/lib/prices";
@@ -14,16 +15,7 @@ export function ComparePage({ slug }: { slug: string }) {
   const cmp = TLD_COMPARES[slug];
   usePageTitle(cmp?.[lang].title);
 
-  if (!cmp) {
-    return (
-      <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-16 text-center md:px-6">
-        <p className="text-sm text-txt1">{t("tld.notFound")}</p>
-        <a href="/" className="mt-4 inline-block rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-brand-ink">
-          {t("share.goHome")}
-        </a>
-      </main>
-    );
-  }
+  if (!cmp) return <NotFoundPage />;
 
   const loc = cmp[lang];
   const sides = [cmp.a, cmp.b] as const;

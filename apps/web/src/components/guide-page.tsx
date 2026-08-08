@@ -3,6 +3,7 @@ import { AlertTriangle, HelpCircle, Lightbulb, Quote, Sparkles } from "lucide-re
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { buildGuideFaq } from "@/content/guide-faq";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "@/content/guides";
+import { NotFoundPage } from "@/components/not-found-page";
 import { useI18n } from "@/lib/i18n";
 import { priceShort, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";
@@ -14,16 +15,7 @@ export function GuidePage({ slug }: { slug: string }) {
   const guide = INDUSTRY_GUIDES[slug];
   usePageTitle(guide?.[lang].title);
 
-  if (!guide) {
-    return (
-      <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-16 text-center md:px-6">
-        <p className="text-sm text-txt1">{t("guide.notFound")}</p>
-        <a href="/" className="mt-4 inline-block rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-brand-ink">
-          {t("share.goHome")}
-        </a>
-      </main>
-    );
-  }
+  if (!guide) return <NotFoundPage />;
 
   const loc = guide[lang];
   const faq = buildGuideFaq(guide, lang);
