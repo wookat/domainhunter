@@ -691,7 +691,7 @@ export function HomePage({
   };
 
   return (
-    <main className="relative flex-1">
+    <main className="relative min-w-0 flex-1">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px]" style={{ background: "var(--glow)" }} />
       <div className="relative mx-auto max-w-3xl px-4 pb-16 pt-16 md:pt-24">
         {onBackToResults && (
@@ -915,15 +915,15 @@ export function HomePage({
               <div className="mt-2.5 flex flex-wrap gap-2">
                 {quickRows.filter((row) => quickFilter === "all" || row.status === quickFilter).map((row) =>
                   row.status === "available" ? (
-                    <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
+                    <span key={row.domain} className="inline-flex max-w-full items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
                       <a
                         href={REGISTRARS[0].url(row.domain)}
                         target="_blank"
                         rel="noreferrer"
                         title={t("home.quickRegister", { domain: row.domain })}
-                        className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85 sm:min-h-0"
+                        className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85 sm:min-h-0"
                       >
-                        {row.domain}
+                        <span className="min-w-0 truncate">{row.domain}</span>
                         <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
                         <ChipPrice domain={row.domain} />
                         <ExternalLink className="h-3 w-3" />
@@ -938,9 +938,9 @@ export function HomePage({
                       </button>
                     </span>
                   ) : row.status === "taken" ? (
-                    <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-line font-mono text-xs text-txt2">
-                      <span className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
-                        <span className="line-through">{row.domain}</span>
+                    <span key={row.domain} className="inline-flex max-w-full items-stretch overflow-hidden rounded-lg border border-line font-mono text-xs text-txt2">
+                      <span className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
+                        <span title={row.domain} className="min-w-0 truncate line-through">{row.domain}</span>
                         <i className="not-italic font-sans text-[10px] text-taken">{t("status.taken")}</i>
                         {row.expiresAt && <ExpiryNote iso={row.expiresAt} className="font-sans" />}
                       </span>
@@ -958,12 +958,12 @@ export function HomePage({
                     <span
                       key={row.domain}
                       className={cn(
-                        "inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 font-mono text-xs",
+                        "inline-flex max-w-full items-center gap-1.5 rounded-lg border px-2.5 py-1.5 font-mono text-xs",
                         row.status === "unknown" && "border-line text-txt1",
                         row.status === "checking" && "border-line text-txt2",
                       )}
                     >
-                      {row.domain}
+                      <span title={row.domain} className="min-w-0 truncate">{row.domain}</span>
                       <i className="not-italic font-sans text-[10px]">{t(`status.${row.status}` as I18nKey)}</i>
                     </span>
                   ),
@@ -1027,15 +1027,15 @@ export function HomePage({
                     {variantRows
                       .filter((r) => r.status === "available")
                       .map((row) => (
-                        <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
+                        <span key={row.domain} className="inline-flex max-w-full items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
                           <a
                             href={REGISTRARS[0].url(row.domain)}
                             target="_blank"
                             rel="noreferrer"
                             title={t("home.quickRegister", { domain: row.domain })}
-                            className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85 sm:min-h-0"
+                            className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85 sm:min-h-0"
                           >
-                            {row.domain}
+                            <span className="min-w-0 truncate">{row.domain}</span>
                             <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
                             <ChipPrice domain={row.domain} />
                             <ExternalLink className="h-3 w-3" />
@@ -1075,9 +1075,9 @@ export function HomePage({
                     {variantRows
                       .filter((r) => r.status === "taken")
                       .map((row) => (
-                        <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-line font-mono text-xs text-txt2">
-                          <span className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
-                            <span className="line-through">{row.domain}</span>
+                        <span key={row.domain} className="inline-flex max-w-full items-stretch overflow-hidden rounded-lg border border-line font-mono text-xs text-txt2">
+                          <span className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
+                            <span title={row.domain} className="min-w-0 truncate line-through">{row.domain}</span>
                             <i className="not-italic font-sans text-[10px] text-taken">{t("status.taken")}</i>
                           </span>
                           <button

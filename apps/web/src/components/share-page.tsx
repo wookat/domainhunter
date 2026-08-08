@@ -84,7 +84,7 @@ export function SharePage({ id }: { id: string }) {
   });
 
   return (
-    <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 md:px-6">
+    <main className="mx-auto w-full min-w-0 max-w-6xl flex-1 px-4 py-8 md:px-6">
       <h1 className="text-xl font-bold tracking-tight">{t("share.title")}</h1>
       <p className="mt-1 text-xs text-txt2">{t("share.subtitle", { time: timeStr })}</p>
 
@@ -161,7 +161,7 @@ export function SharePage({ id }: { id: string }) {
           return (
             <div key={it.domain} className="rounded-xl border border-line bg-bg1 p-4">
               <div className="flex items-center justify-between gap-2">
-                <span className="truncate font-mono text-[15px] font-semibold">
+                <span title={it.domain} className="min-w-0 truncate font-mono text-[15px] font-semibold">
                   {it.label}
                   <span className="text-txt2">.{it.tld}</span>
                 </span>

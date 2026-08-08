@@ -11,7 +11,7 @@ import { cn, formatExpiry, isExpiringSoon } from "@/lib/utils";
 
 export function DomainName({ row, className }: { row: Row; className?: string }) {
   return (
-    <span className={cn("truncate font-mono text-[15px] font-semibold", className)}>
+    <span title={row.domain} className={cn("min-w-0 truncate font-mono text-[15px] font-semibold", className)}>
       {row.label}
       <span className="text-txt2">.{row.tld}</span>
     </span>
@@ -119,7 +119,7 @@ export function DomainRow({
     return (
       <div className="flex h-12 items-center gap-3 px-4 opacity-60">
         <span className="tnum w-8 shrink-0 rounded-md bg-taken-dim py-0.5 text-center font-mono text-xs text-taken">—</span>
-        <span className="truncate font-mono text-[15px] text-taken line-through">{row.domain}</span>
+        <span title={row.domain} className="min-w-0 truncate font-mono text-[15px] text-taken line-through">{row.domain}</span>
         <span className="shrink-0 rounded bg-taken-dim px-1.5 py-0.5 text-[11px] text-taken">{t("status.taken")}</span>
         {row.expiresAt && <ExpiryNote iso={row.expiresAt} />}
         {onToggleFavorite && (
