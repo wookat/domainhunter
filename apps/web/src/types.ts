@@ -167,6 +167,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   cafe: { first: 33, renew: 300 },
   money: { first: 78, renew: 204 },
   gold: { first: 41, renew: 597 },
+  band: { first: 115, renew: 182 },
+  cash: { first: 70, renew: 226 },
+  city: { first: 33, renew: 167 },
+  estate: { first: 59, renew: 226 },
+  expert: { first: 48, renew: 360 },
+  farm: { first: 56, renew: 226 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {

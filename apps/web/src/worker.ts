@@ -960,7 +960,7 @@ app.get("/mcp", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/mcp?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/mcp").replace(
+  html = injectHreflang(html, "/mcp", c.req.query("lang") === "en").replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/mcp", lang)}</script></head>`,
   );
@@ -1075,7 +1075,7 @@ app.get("/advanced", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/advanced?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/advanced");
+  html = injectHreflang(html, "/advanced", c.req.query("lang") === "en");
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
@@ -1218,8 +1218,11 @@ function hreflangTags(path: string): string {
   ].join("\n    ");
 }
 
-const injectHreflang = (html: string, path: string) =>
-  html.replace(/(<link rel="canonical"[^>]*\/>)/, `$1\n    ${hreflangTags(path)}`);
+const injectHreflang = (html: string, path: string, explicitEn = false) => {
+  // 显式 ?lang=en 访问时 canonical 自指英文版，与 hreflang alternate 一致（仅认 query，不认 Accept-Language）
+  if (explicitEn) html = html.replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}${path}?lang=en" />`);
+  return html.replace(/(<link rel="canonical"[^>]*\/>)/, `$1\n    ${hreflangTags(path)}`);
+};
 
 /** SEO 页 SSR 首屏骨架：把 kicker/标题/首段直接渲染进 #root，LCP 文本不再等 JS 水合（React 挂载后整体替换） */
 function injectSsrSkeleton(html: string, kicker: string, title: string, blocks: string[], kickerHtml?: string, mainWidth = "max-w-3xl"): string {
@@ -1331,7 +1334,7 @@ const HOME_FAQ = {
     { q: "核验结果准确吗？", a: "每个域名经 DNS + RDAP + WHOIS 三级核验，可注册状态来自注册局权威数据；注册前建议在注册商页面再确认一次。" },
     { q: "使用收费吗？", a: "完全免费。AI 搜索有每小时次数限制；即输即查、更多后缀与前后缀变体核验不限量、不消耗 AI 次数。" },
     { q: "会自动帮我注册域名吗？", a: "不会。我们只提供核验结果与注册商跳转链接（如 Porkbun），注册和付费在注册商完成。" },
-    { q: "支持哪些后缀？", a: "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu/page/bio/ink/moe/lol/uk/fm/one/cool/red/today/best/wtf/pizza/bar/cafe/money/gold。" },
+    { q: "支持哪些后缀？", a: "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu/page/bio/ink/moe/lol/uk/fm/one/cool/red/today/best/wtf/pizza/bar/cafe/money/gold/band/cash/city/estate/expert/farm。" },
     { q: "我的搜索会被保存吗？", a: "不保存输入内容和 IP，只记录匿名的聚合次数统计；收藏清单保存在你自己的浏览器本地。" },
   ],
   en: [
@@ -1339,7 +1342,7 @@ const HOME_FAQ = {
     { q: "How accurate are the availability checks?", a: "Every domain goes through DNS + RDAP + WHOIS checks against authoritative registry data. We still recommend a final confirmation on the registrar's page before buying." },
     { q: "Is it free?", a: "Completely free. AI search has an hourly rate limit; instant checks, extra-TLD checks, and prefix/suffix variants are unlimited and never use AI quota." },
     { q: "Will it register domains for me automatically?", a: "No. We only provide verification results and registrar links (e.g. Porkbun) — registration and payment happen at the registrar." },
-    { q: "Which TLDs are supported?", a: "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu/page/bio/ink/moe/lol/uk/fm/one/cool/red/today/best/wtf/pizza/bar/cafe/money/gold via the “more TLDs” button." },
+    { q: "Which TLDs are supported?", a: "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu/page/bio/ink/moe/lol/uk/fm/one/cool/red/today/best/wtf/pizza/bar/cafe/money/gold/band/cash/city/estate/expert/farm via the “more TLDs” button." },
     { q: "Do you store my searches?", a: "We never store your input or IP — only anonymous aggregate counters. Your shortlist lives in your own browser's local storage." },
   ],
 } as const;
@@ -1451,7 +1454,7 @@ app.get("/", async (c) => {
         `<meta property="og:image" content="${SITE_ORIGIN}/api/og/home?lang=en" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
       );
   }
-  html = injectHreflang(html, "/").replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
+  html = injectHreflang(html, "/", c.req.query("lang") === "en").replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
   html = setHtmlLang(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -1489,7 +1492,7 @@ app.get("/tld/:tld", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, `/tld/${tld}`).replace(
+  html = injectHreflang(html, `/tld/${tld}`, c.req.query("lang") === "en").replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang)}</script><script type="application/ld+json">${tldFaqJsonld}</script></head>`,
   );
@@ -1533,7 +1536,7 @@ app.get("/guide/:slug", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, `/guide/${slug}`).replace(
+  html = injectHreflang(html, `/guide/${slug}`, c.req.query("lang") === "en").replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${guideFaqJsonld}</script></head>`,
   );
@@ -1577,7 +1580,7 @@ app.get("/vs/:slug", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, `/vs/${slug}`).replace(
+  html = injectHreflang(html, `/vs/${slug}`, c.req.query("lang") === "en").replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${cmpFaqJsonld}</script></head>`,
   );
@@ -1638,7 +1641,7 @@ app.get("/prices", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, "/prices").replace(
+  html = injectHreflang(html, "/prices", c.req.query("lang") === "en").replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/prices", lang)}</script><script type="application/ld+json">${pricesFaqJsonld}</script></head>`,
   );
@@ -1687,7 +1690,7 @@ app.get("/why", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/why?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/why").replace(
+  html = injectHreflang(html, "/why", c.req.query("lang") === "en").replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/why", lang)}</script></head>`,
   );
