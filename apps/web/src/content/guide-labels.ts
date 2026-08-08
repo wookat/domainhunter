@@ -125,4 +125,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "optician", zh: "眼镜视光", en: "Opticians & eyewear" },
   { slug: "massage", zh: "按摩推拿", en: "Massage & bodywork" },
   { slug: "mealprep", zh: "轻食健康餐", en: "Meal prep & healthy eats" },
+  { slug: "petphoto", zh: "宠物摄影", en: "Pet photography" },
+  { slug: "campgear", zh: "露营装备", en: "Camping gear" },
+  { slug: "careercoach", zh: "职业规划咨询", en: "Career coaching" },
+  { slug: "fragrance", zh: "香氛蜡烛", en: "Home fragrance & candles" },
+  { slug: "diving", zh: "潜水俱乐部", en: "Diving & scuba" },
+  { slug: "carwash", zh: "汽车美容洗车", en: "Car wash & detailing" },
 ];
