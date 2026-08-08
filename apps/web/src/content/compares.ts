@@ -1345,6 +1345,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Game studios & indie game sites", "Esports teams & tournaments", "Gaming media & communities", "Gaming brands wanting the vertical signal"],
     },
   },
+  "digital-vs-tech": {
+    slug: "digital-vs-tech",
+    a: "digital",
+    b: "tech",
+    zh: {
+      title: ".digital 和 .tech 怎么选：数字服务与科技品牌的定位对比",
+      metaDescription: ".digital 说的是「数字化业务」，.tech 说的是「科技本身」。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个后缀都很「现代」，但说的不是一回事。.digital 描述业务形态：数字化转型咨询、数字营销机构、数字产品工作室——「我们做的是数字化生意」，海外 digital agency 用 name.digital 当官网已是常态。.tech 描述行业属性：科技公司、硬件品牌、技术社区与黑客松——「我们是搞技术的」，语义更宽也更抽象。价格结构相似：都是首年低价促销、续费两百元档，长期成本按续费算。库存两边都充裕。判断标准：客户买的是「数字化服务」（营销、转型、数字内容）→ .digital 把业务写进域名；产品本身是技术或面向技术圈 → .tech 的行业信号更准。注意 .digital 后缀 7 字符明显偏长，词根要短；.tech 则要小心与 .io/.dev 的开发者气质区分——它更偏「泛科技」而非「写代码的」。",
+      pickA: ["数字化转型与咨询服务", "数字营销与广告机构", "数字产品与内容工作室", "品牌名含 digital 的自然拆分"],
+      pickB: ["泛科技公司与硬件品牌", "技术社区、大会与黑客松", "科技媒体与内容站", "词根较长、需要短后缀平衡"],
+    },
+    en: {
+      title: ".digital vs .tech: Digital Services or Tech Identity",
+      metaDescription:
+        ".digital describes a digital-services business; .tech claims the technology industry itself. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both suffixes read modern, but they say different things. .digital describes what the business does: digital-transformation consulting, marketing agencies, digital product studios — 'we run a digital business', and agencies abroad routinely run their site on name.digital. .tech describes what the business is: tech companies, hardware brands, technical communities and hackathons — 'we are technology people', a broader and more abstract claim. Pricing follows the same curve on both: cheap promo first years with renewals in the $30–40 range, so budget on renewals. Inventory is generous on both sides. The test: if clients buy digital services (marketing, transformation, content) → .digital writes the offering into the address; if the product is technology itself or targets the tech crowd → .tech sends the sharper industry signal. Two cautions: .digital is a long seven-character suffix, so keep roots short; and .tech reads 'general technology' rather than 'developer' — for developer tools, .io or .dev still carry more insider weight.",
+      pickA: ["Digital transformation & consulting firms", "Digital marketing & ad agencies", "Digital product & content studios", "Brands containing the word 'digital'"],
+      pickB: ["General tech companies & hardware brands", "Tech communities, conferences & hackathons", "Tech media & content sites", "Longer roots that need a short suffix"],
+    },
+  },
+  "media-vs-studio": {
+    slug: "media-vs-studio",
+    a: "media",
+    b: "studio",
+    zh: {
+      title: ".media 和 .studio 怎么选：内容公司与创作工作室的对比",
+      metaDescription: ".media 是内容行业的公司级后缀，.studio 是创作团队的工坊招牌。对比两者的语感、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在内容创意圈，规模感不同。.media 读起来是「一家媒体公司」：播客网络、视频厂牌、新媒体矩阵、内容营销公司，name.media 就是公司全称，气质偏机构与发行方。.studio 读起来是「一间工作室」：设计工作室、动画与游戏团队、摄影棚、独立创作者，name.studio 像挂在门口的工坊招牌，气质偏创作与手艺。价格上 .studio 首年促销常见、续费两百元上下，.media 略贵一档，两者差距不大。库存两边都好，风格词与题材词大多可注册。判断标准：业务核心是「做内容并分发」（节目、频道、媒体矩阵）→ .media 的发行方气质更对；业务核心是「接案创作与交付作品」（设计、动画、影像制作）→ .studio 的工坊感更亲切。同一团队两条业务线并行时，也常见 name.studio 做作品集、name.media 做内容厂牌的分工。",
+      pickA: ["播客网络与视频厂牌", "新媒体公司与内容矩阵", "内容营销与发行机构", "品牌名以 media 结尾的拆分"],
+      pickB: ["设计与动画工作室", "摄影、影像与制作团队", "独立创作者与小团队作品集", "强调手艺与创作气质的品牌"],
+    },
+    en: {
+      title: ".media vs .studio: Content Company or Creative Workshop",
+      metaDescription:
+        ".media reads like a content company; .studio reads like a creative workshop's signboard. Compare vibe, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in the content and creative world; the difference is scale and posture. .media reads institutional: podcast networks, video labels, new-media portfolios and content-marketing firms — name.media sounds like the full company name, with a publisher's air. .studio reads artisanal: design studios, animation and game teams, photo studios and independent creators — name.studio hangs like a workshop sign on the door, all craft and making. On price, .studio runs frequent first-year promos with renewals around $25–30, while .media sits one notch higher; the gap is small. Inventory is good on both, with style and topic words widely available. The test: if the core business is producing and distributing content (shows, channels, media brands) → .media's publisher posture fits; if it's client work and crafted deliverables (design, animation, film production) → .studio's workshop warmth wins. Teams running both lines often split them: name.studio for the portfolio, name.media for the content label.",
+      pickA: ["Podcast networks & video labels", "New-media companies & content portfolios", "Content marketing & distribution firms", "Brands ending in 'media'"],
+      pickB: ["Design & animation studios", "Photo, film & production teams", "Indie creators & small-team portfolios", "Brands built on craft and making"],
+    },
+  },
+  "group-vs-agency": {
+    slug: "group-vs-agency",
+    a: "group",
+    b: "agency",
+    zh: {
+      title: ".group 和 .agency 怎么选：集团母牌与服务机构的对比",
+      metaDescription: ".group 是集团与多品牌母公司的后缀，.agency 是服务机构的行业声明。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个说「我们是谁」，一个说「我们干什么」。.group 是组织形态的声明：集团公司、控股平台、家族企业、多品牌矩阵的母品牌，name.group 读出来就是「某某集团」，旗下品牌再各持独立域名——它回答的是结构问题。.agency 是业务形态的声明：广告、公关、设计、招聘、营销机构，name.agency 一眼说明「我们是接案服务方」——它回答的是生意问题。价格上两者都属新顶级域友好档：.group 续费一百多元且价差小、适合长期持有，.agency 首年促销多、续费两百元上下。库存两边都好，姓氏与行业词大多可注册。判断标准：实体是控股/母公司、需要一个品牌枢纽 → .group；实体靠承接客户项目吃饭、要在域名里完成自我介绍 → .agency。注意组合陷阱：服务机构用 .group 会显得像控股集团，反而模糊定位；集团母牌用 .agency 则直接错位。",
+      pickA: ["集团与控股公司官网", "多品牌矩阵的母品牌枢纽", "家族企业与投资集团", "长期持有、在意续费稳定"],
+      pickB: ["广告、公关与营销机构", "设计与创意服务公司", "招聘与人才服务机构", "想在域名里说清「服务方」身份"],
+    },
+    en: {
+      title: ".group vs .agency: Corporate Parent or Service Shop",
+      metaDescription:
+        ".group declares corporate structure; .agency declares a client-services business. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One says who we are, the other says what we do. .group declares structure: holding companies, conglomerates, family businesses and the parent of a multi-brand portfolio — name.group literally reads 'the X Group', with subsidiaries keeping their own domains. .agency declares the business model: advertising, PR, design, recruiting and marketing shops — name.agency introduces you as the client-services firm at a glance. Both price in the friendly new-gTLD tier: .group renews under $20 with a small promo gap, ideal for long holds, while .agency runs cheap first-year promos with renewals around $25–30. Inventory is strong on both — surnames and industry words are widely available. The test: a holding entity or brand hub → .group; a firm that lives on client work and wants the domain to do the introduction → .agency. Mind the mismatch trap: a services shop on .group reads like a holding company and blurs its pitch, while a corporate parent on .agency is simply miscast.",
+      pickA: ["Holding & group company websites", "Parent-brand hubs of multi-brand portfolios", "Family businesses & investment groups", "Long-term holds valuing stable renewals"],
+      pickB: ["Advertising, PR & marketing agencies", "Design & creative service firms", "Recruiting & talent agencies", "Domains that introduce a services firm"],
+    },
+  },
+  "center-vs-club": {
+    slug: "center-vs-club",
+    a: "center",
+    b: "club",
+    zh: {
+      title: ".center 和 .club 怎么选：服务枢纽与会员社群的对比",
+      metaDescription: ".center 语义是「中心/枢纽」，.club 语义是「会员与归属」。对比两者的语感、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "问一个问题：用户来这里是「办事/获取资源」还是「加入圈子」？.center 是场所与枢纽的语义：帮助中心、培训与考试中心、健身与医疗中心、资源下载站，业务形态叫「某某中心」的，后缀直接完成命名；开发者还能把支持站放在 help.center、docs.center 这类分工明确的域名上。.club 是归属感的语义：兴趣社群、付费会员、粉丝组织、俱乐部品牌，name.club 天然带「加入我们」的号召。价格都在亲民档：两者首年都常见十几二十元促销，.club 续费略低一档。库存两边都极好。判断标准：提供服务与资源、用户「来了就走」→ .center 的枢纽感更专业；经营会员关系、用户「留下来玩」→ .club 的社群感更贴。注意各自短板：.center 有 center/centre 拼写分歧，面向英联邦用户要防御注册；.club 搭配某些词会有夜店联想，正式机构慎用。",
+      pickA: ["帮助中心与文档支持站", "培训、考试与服务中心", "健身、医疗等实体中心", "资源聚合与下载枢纽"],
+      pickB: ["兴趣社群与粉丝组织", "付费会员与订阅制社区", "俱乐部与圈子品牌", "运营「归属感」的产品"],
+    },
+    en: {
+      title: ".center vs .club: Service Hub or Member Community",
+      metaDescription:
+        ".center means a hub people visit for services; .club means belonging and membership. Compare vibe, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Ask one question: do users come to get something done, or to belong? .center is the semantics of place and hub: help centers, training and testing centers, fitness and medical centers, resource and download hubs — if the business is called 'the X Center', the suffix finishes the name, and developers get literal domains like help.center or docs.center for support sites. .club is the semantics of belonging: interest communities, paid memberships, fan organizations and club brands — name.club carries a built-in 'join us'. Both price in the budget tier with promo first years of a few dollars; .club renews slightly cheaper. Inventory is excellent on both. The test: serving visitors who arrive, get value and leave → .center's hub posture reads professional; cultivating members who stay and participate → .club's community warmth fits. Mind each one's catch: .center has the center/centre spelling split for Commonwealth audiences (register defensively), and .club can carry nightlife connotations with certain words — formal institutions should check the pairing.",
+      pickA: ["Help centers & documentation sites", "Training, testing & service centers", "Fitness, medical & physical centers", "Resource aggregation & download hubs"],
+      pickB: ["Interest communities & fan organizations", "Paid memberships & subscription communities", "Club and circle brands", "Products built on belonging"],
+    },
+  },
+  "works-vs-studio": {
+    slug: "works-vs-studio",
+    a: "works",
+    b: "studio",
+    zh: {
+      title: ".works 和 .studio 怎么选：工坊双关与创作招牌的对比",
+      metaDescription: ".works 双关「作品」与「能用」，.studio 是创作团队的经典招牌。对比两者的语感、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是「做东西的人」的后缀，气质一实一雅。.works 自带双关：既是传统的「工坊/作品」（iron works、design works），也是口语的「it works（能用）」——这让它对工具型产品格外友好，flow.works、ship.works 读出来就是「这东西真的能用」的口播广告；工程、制造、自动化品牌用它同样名正言顺。.studio 则是创意行业的经典招牌：设计、动画、摄影、游戏工作室，name.studio 优雅、安静、有作品感。价格结构接近：都是首年促销、续费两百元上下档。库存两边都好，动词与工艺词大多可注册。判断标准：品牌想强调「可靠、能跑、出活」——开发者工具、自动化、工程制造 → .works 的实干双关更值钱；品牌想强调「审美、创作、作品集」——设计与影像团队 → .studio 的气质更对。同名两个都能注册时，工具产品选 .works、创意团队选 .studio，几乎不会错。",
+      pickA: ["开发者工具与自动化产品", "工程、制造与硬件品牌", "手作工坊与「能用」叙事的产品", "想把口碑写进域名的工具"],
+      pickB: ["设计与动画工作室", "摄影与影像创作团队", "个人与团队作品集", "审美驱动的创意品牌"],
+    },
+    en: {
+      title: ".works vs .studio: It-Works Pun or Creative Signboard",
+      metaDescription:
+        ".works puns on craftsmanship and 'it works'; .studio is the creative team's classic signboard. Compare vibe, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both belong to people who make things; one reads hands-on, the other refined. .works carries a built-in double meaning: the traditional works of craftsmanship (iron works, design works) and the colloquial 'it works' — which makes it unusually good for tools, where flow.works or ship.works doubles as a spoken slogan that the thing actually runs; engineering, manufacturing and automation brands wear it just as naturally. .studio is the creative industry's classic signboard: design, animation, photography and game studios read quiet, elegant and portfolio-ready on name.studio. Pricing curves are similar — promo first years with renewals in the $25–35 range — and inventory is strong on both, with verbs and craft words widely available. The test: a brand staking itself on reliability and output (developer tools, automation, engineering) → .works' pragmatic pun earns its keep; a brand staking itself on aesthetics and craft (design and film teams) → .studio's posture fits. When the same name is free on both, tools take .works and creative teams take .studio — that split rarely misses.",
+      pickA: ["Developer tools & automation products", "Engineering, manufacturing & hardware brands", "Workshops with an 'it works' story", "Tools that want the slogan in the domain"],
+      pickB: ["Design & animation studios", "Photography & film teams", "Personal and team portfolios", "Aesthetics-driven creative brands"],
+    },
+  },
+  "zone-vs-site": {
+    slug: "zone-vs-site",
+    a: "zone",
+    b: "site",
+    zh: {
+      title: ".zone 和 .site 怎么选：主题地带与通用建站的对比",
+      metaDescription: ".zone 语义是「专区/地带」、自带氛围感，.site 是最中性的通用建站后缀。对比两者的语义强弱、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "一个有性格，一个求百搭。.zone 语义鲜明：「某某地带/专区」——游戏社区、粉丝站、主题内容站、开发者沙盒用它自带氛围感，fan.zone、war.zone 读出来就是「入场」的感觉；技术圈还有 DNS zone 文件的梗加成（dns.zone、edge.zone）。.site 则是最中性的「网站」后缀：任何类型的站点都不违和，也不加分——它的价值在于价格与命中率，几乎任何词根都能注册到，首年常年一两美元。续费上两者都要按两百元上下核算（.site 价差尤其大，首年便宜别当长期成本）。判断标准：站点有明确的「圈子/主题/领地」属性——社区、粉丝站、游戏、沙盒 → .zone 的氛围感是免费的品牌资产；站点只是「需要一个网址」——落地页、临时项目、通用官网 → .site 的中性与低价更务实。注意 .zone 对正式企业官网偏随意，.site 则要靠内容自证质量——两者都不是大众市场的信任型后缀。",
+      pickA: ["游戏社区与竞技站", "粉丝专区与主题内容站", "开发者沙盒与试验场", "想要「领地感」的圈子品牌"],
+      pickB: ["快速上线的落地页", "临时活动与 campaign 站", "通用官网与个人主页", "预算极低、追求命中率"],
+    },
+    en: {
+      title: ".zone vs .site: Themed Territory or Neutral Website",
+      metaDescription:
+        ".zone names a themed territory with built-in atmosphere; .site is the most neutral website suffix. Compare semantic strength, pricing and fit, then hunt available names.",
+      verdict:
+        "One has personality, the other aims for universal fit. .zone is vivid: topic + .zone literally names a territory — gaming communities, fan sites, themed hubs and developer sandboxes get free atmosphere (fan.zone, war.zone read like an entrance sign), plus the DNS zone-file pun lands with technical audiences (dns.zone, edge.zone). .site is the most neutral 'website' suffix: nothing clashes with it and nothing gains from it — its value is price and availability, with almost any root registrable and first years at a dollar or two. Renewals on both should be budgeted around $25–35 (.site's promo-to-renewal gap is especially steep — don't mistake year one for the long-term cost). The test: a site with a real circle, theme or territory — communities, fan zones, games, sandboxes → .zone's atmosphere is free brand equity; a site that just needs an address — landing pages, temporary projects, generic homepages → .site's neutrality and price are the pragmatic pick. Note that .zone reads casual for formal corporate sites, and .site must prove its quality through content — neither is a mainstream trust suffix.",
+      pickA: ["Gaming communities & arenas", "Fan zones & themed content hubs", "Developer sandboxes & playgrounds", "Circle brands that want territory vibes"],
+      pickB: ["Fast-launch landing pages", "Temporary campaigns & event sites", "Generic homepages & personal sites", "Ultra-low budgets chasing availability"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
