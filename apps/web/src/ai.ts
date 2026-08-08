@@ -772,6 +772,56 @@ export function citesPhantomWord(label: string, meaning: string): boolean {
   return false;
 }
 
+// ---------------- ZH meaning 幻影 ASCII 引用检测（R246，R239 P2-4） ----------------
+// 生产坏例（ref2 refine 轮）：meaning 引用 label 中不存在的 ASCII 串但不带「取自/源自」句式——
+// tibeirock「tedeck 落音笃定」、kinwalk「kino 指尖溜过石板」、duanyou「wrin 前缀强调直结声」，
+// ZH_SOURCE_CITE_RE 的句式门未覆盖，全部上线。
+// 规则：zh meaning 中嵌在中文语境里的独立 ASCII 词（≥3 字母，紧邻 CJK 文字/标点）若既不是
+// label 的子串（label 反向包含也放行），也不是常见英文白名单词（tech/cloud/app 等通用词、
+// TLD 名、语言名），判为臆造引用 → 整条丢弃。纯英文句子里的词（两侧都非 CJK）不判，
+// 避免误杀合法的英文释义句。
+// 已被词源句式引用的来源词（"rio 取自 curious" 的 curious、"X 与 Y 结合" 的 X/Y）先剥离——
+// 它们由 citesPhantomWord 按各自句式校验，不在本防线重复判定（避免误杀合法来源词）。
+const ZH_ASCII_ALLOWED_WORDS = new Set([
+  // 语言/词源修饰词（与 SOURCE_LANG_WORDS 同源）
+  "latin", "greek", "english", "french", "italian", "spanish", "german", "japanese", "sanskrit", "norse", "hebrew", "old", "ancient", "the", "word", "root",
+  // 常见 TLD 名（meaning 里解释后缀观感时会出现）
+  "com", "net", "org", "app", "dev", "top", "xyz", "site", "online", "store", "shop", "club", "vip", "fun", "art", "live", "life", "link", "one", "run", "work", "world", "zone", "group", "team", "ltd", "wiki", "info", "biz", "pro", "tech", "cloud",
+  // 通用科技/品牌描述词（zh meaning 常借英文词点题）
+  "web", "data", "saas", "api", "seo", "logo", "brand", "startup", "studio", "lab", "labs", "hub", "home", "smart", "max", "mini", "plus", "digital", "mobile", "global", "media", "design", "style", "code", "box", "base", "core", "flow", "pay", "game", "play", "book", "note", "blog", "mail", "chat", "news", "mall", "star", "sun", "sky", "sea", "eco", "bio", "tea", "cafe", "farm", "city", "land", "space",
+]);
+const ZH_ASCII_WORD_RE = /[a-z]{3,}/gi;
+// 先剥离已有句式门校验过的来源词：「X 取自/源自/来自 Y1 (Y2)」的 Y 侧、「X 与/和/加/+ Y 结合…」整段
+const ZH_CITE_SOURCE_STRIP_RE = /(?:取自|源自|来自)\s*(?:拉丁语?|希腊语?|英语|英文|法语|法文|西班牙语|德语|意大利语|日语|梵语)?\s*["「『']?\s*[a-z]{3,}(?:\s+[a-z]{3,})?/gi;
+// 中文语言名引导的外语词（"法语 croustillant 的酥脆"）同样是被点名的来源词，剥离后不判
+const ZH_LANG_LEAD_STRIP_RE = /(?:拉丁语?|希腊语?|英语|英文|法语|法文|西班牙语|德语|意大利语|日语|梵语)\s*["「『']?\s*[a-z]{3,}/gi;
+const ZH_PAIR_STRIP_RE = /[a-z]{3,}\s*(?:与|和|加|\+)\s*[a-z]{3,}\s*的?\s*(?:结合|组合|混合|拼接|合成)/gi;
+
+const CJK_CONTEXT_RE = /[\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uff01-\uffe5]/;
+
+function nearestNonSpace(s: string, i: number, step: -1 | 1): string {
+  for (let j = i; j >= 0 && j < s.length; j += step) {
+    if (s[j] !== " ") return s[j];
+  }
+  return "";
+}
+
+export function zhCitesPhantomAscii(label: string, meaning: string): boolean {
+  const stripped = meaning.replace(ZH_CITE_SOURCE_STRIP_RE, " ").replace(ZH_LANG_LEAD_STRIP_RE, " ").replace(ZH_PAIR_STRIP_RE, " ");
+  ZH_ASCII_WORD_RE.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = ZH_ASCII_WORD_RE.exec(stripped)) !== null) {
+    const w = m[0].toLowerCase();
+    if (label.includes(w) || w.includes(label)) continue;
+    if (ZH_ASCII_ALLOWED_WORDS.has(w)) continue;
+    // 只判嵌在中文语境里的词（任一侧紧邻 CJK）；纯英文句子中的词不判
+    const before = nearestNonSpace(stripped, m.index - 1, -1);
+    const after = nearestNonSpace(stripped, m.index + m[0].length, 1);
+    if (CJK_CONTEXT_RE.test(before) || CJK_CONTEXT_RE.test(after)) return true;
+  }
+  return false;
+}
+
 // ---------------- LLM 候选数组解析 + 截断修复（R197） ----------------
 // 生产坏例（R195 审计 P1-2）：候选数组 JSON 被截断/格式坏 → SyntaxError → 整轮 0 结果。
 // 解析失败先做截断修复：按括号深度扫描，截到最后一个完整的顶层对象再补 "]"；
@@ -867,12 +917,27 @@ export function enMeaningIncoherent(label: string, meaning: string): boolean {
     }
   }
   if (!fragmentOk && label.length >= 3) {
-    // 与 label 共享 ≥3 字母单词前缀的实词（词首匹配，避免 "small" 命中 "all"；
-    // 命中的整词若是停用词，如 label "theora" 前缀 "the" 命中冠词 the，同样不算锤点）
+    // 与 label 共享字母前缀的实词（词首匹配，避免 "small" 命中 "all"；
+    // 命中的整词若是停用词，如 label "theora" 前缀 "the" 命中冠词 the，同样不算锤点）。
+    // R246（R239 P2-3）：公共前缀仅 3 字母的命中被 anchors（ancryst）、opairein（oparior，
+    // 幻觉词自证）、linen（lintow）击穿——收紧为公共前缀 ≥4 才算锤点；公共前缀恰为 3 时，
+    // 仅当命中词处于明确词源引用语境（引号包裹，或紧跟 latin/greek 等语言名之后，
+    // 如 lumora ↔ Latin "lumen"）才保留为锤点
     for (const m of lower.matchAll(new RegExp(`\\b${label.slice(0, 3)}[a-z]*`, "g"))) {
-      if (!EN_FRAGMENT_STOPWORDS.has(m[0])) {
+      const w = m[0];
+      if (EN_FRAGMENT_STOPWORDS.has(w)) continue;
+      let common = 0;
+      while (common < w.length && common < label.length && w[common] === label[common]) common++;
+      if (common >= 4) {
         fragmentOk = true;
         break;
+      }
+      if (common >= 3) {
+        const before = lower.slice(Math.max(0, (m.index ?? 0) - 16), m.index ?? 0);
+        if (/["'\u201c\u201d\u300c\u300e]\s*$/.test(before) || /\b(?:latin|greek|french|italian|spanish|german|norse|sanskrit|hebrew|japanese|english)\s+["'\u201c\u300c]?$/.test(before)) {
+          fragmentOk = true;
+          break;
+        }
       }
     }
   }
@@ -1059,6 +1124,11 @@ async function generateOnce(
     }
     // R183：meaning 声称的词源片段与 label 拼写不符（"play 与 grow 结合" for plangrow）→ 整条丢弃
     if (citesPhantomWord(label, meaning)) {
+      dropped.phantomEtymology++;
+      continue;
+    }
+    // R246（R239 P2-4）：zh meaning 引用 label 中不存在且非白名单的独立 ASCII 词（「tedeck 落音笃定」式幻影引用）→ 整条丢弃
+    if ((opts.lang ?? "zh") === "zh" && zhCitesPhantomAscii(label, meaning)) {
       dropped.phantomEtymology++;
       continue;
     }
