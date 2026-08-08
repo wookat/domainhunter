@@ -65,7 +65,8 @@ check("pinyin-quote bad: sanvei/「山味」", pinyinQuoteMismatch("sanvei", "�
 check("pinyin-quote good: muzhou/「木舟」", pinyinQuoteMismatch("muzhou", "「木舟」双字全拼，寓意稳载远行"), false);
 check("pinyin-quote good: zhihu/「知乎」", pinyinQuoteMismatch("zhihu", "「知乎」全拼，求知问答"), false);
 check("pinyin-quote good: lvcheng/「绿城」ü 写作 v", pinyinQuoteMismatch("lvcheng", "「绿城」全拼，绿色之城"), false);
-check("pinyin-quote good: 表外字放行 yerang/「野莨」", pinyinQuoteMismatch("yerang", "「野莨」全拼，野趣"), false);
+// R222：莨（lang/liang）已随 GB2312 扩表收录，ye+lang ≠ yerang → 拼写错配拦截（原表外放行语义由 verify-r222.mjs 覆盖）
+check("pinyin-quote: yerang/「野莨」扩表后错配拦截", pinyinQuoteMismatch("yerang", "「野莨」全拼，野趣"), true);
 check("pinyin-quote good: 未声称全拼不判", pinyinQuoteMismatch("tangfang", "「探方」拼读顺口"), false);
 check("pinyin-quote good: 多音字 lecheng/「乐城」", pinyinQuoteMismatch("lecheng", "「乐城」全拼，欢乐之城"), false);
 
