@@ -668,6 +668,7 @@ export default function App() {
               setMode("home");
             }}
             onMerge={shortlist.merge}
+            onSetNote={shortlist.setNote}
             lastCheckedAt={shortlist.lastCheckedAt}
             onApplyStatuses={shortlist.applyStatuses}
           />

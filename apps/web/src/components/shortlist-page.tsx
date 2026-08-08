@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { Bell, Bookmark, Check, ChevronDown, Copy, Download, ExternalLink, Link2, Loader2, MonitorSmartphone, RotateCw, Sparkles, Trash2 } from "lucide-react";
+import { useMemo, useRef, useState } from "react";
+import { ArrowDown, ArrowUp, ArrowUpDown, Bell, Bookmark, Check, ChevronDown, Copy, Download, ExternalLink, Link2, Loader2, MonitorSmartphone, RotateCw, Sparkles, StickyNote, Trash2 } from "lucide-react";
 
 import { ConfirmLabel } from "@/components/confirm-label";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -9,30 +9,47 @@ import { CopyButton, ExpiryNote, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import { downloadText } from "@/lib/export";
 import { useI18n, type TFunc } from "@/lib/i18n";
-import { priceFull, priceShort, usePrices } from "@/lib/prices";
+import { priceFull, priceShort, toUsd, usePrices, type PriceMap } from "@/lib/prices";
 import { REGISTRARS } from "@/lib/registrars";
+import { exportResultsCsv } from "@/lib/results-export";
 import { addMyShare, loadMyShares, removeMyShare, type MyShare } from "@/lib/my-shares";
-import type { RecheckResult, ShortlistItem } from "@/lib/shortlist";
-import { scoreBadgeClass, totalScore, type Status } from "@/types";
+import { NOTE_MAX_LENGTH, type RecheckResult, type ShortlistItem } from "@/lib/shortlist";
+import { scoreBadgeClass, tldPrice, totalScore, type Status } from "@/types";
 import { cn, formatExpiry } from "@/lib/utils";
 
-function exportShortlist(items: ShortlistItem[], format: "csv" | "txt") {
-  let content: string;
+function exportShortlist(items: ShortlistItem[], format: "csv" | "txt", lang: "zh" | "en", prices: PriceMap | null) {
   if (format === "csv") {
-    const header = "domain,score,length,readability,relevance,brandability,meaning,expiresAt";
-    const lines = items.map((it) => {
-      const s = it.scores;
-      const meaning = `"${(it.meaning ?? "").replace(/"/g, '""')}"`;
-      return [it.domain, s ? totalScore(s) : "", s?.length ?? "", s?.readability ?? "", s?.relevance ?? "", s?.brandability ?? "", meaning, it.expiresAt ? formatExpiry(it.expiresAt) ?? "" : ""].join(",");
-    });
-    content = [header, ...lines].join("\n");
-  } else {
-    content = items.map((it) => it.domain).join("\n");
+    exportResultsCsv(
+      items.map((it) => ({
+        domain: it.domain,
+        tld: it.tld,
+        meaning: it.meaning,
+        scores: it.scores,
+        status: it.status,
+        expiresAt: it.expiresAt ? formatExpiry(it.expiresAt) ?? undefined : undefined,
+        note: it.note,
+      })),
+      lang,
+      prices,
+      "domainhunter-shortlist",
+      { expiresAt: true, note: true },
+    );
+    return;
   }
-  downloadText(content, `domainhunter-shortlist.${format}`, format === "csv" ? "text/csv;charset=utf-8" : "text/plain;charset=utf-8");
+  downloadText(items.map((it) => it.domain).join("\n"), "domainhunter-shortlist.txt", "text/plain;charset=utf-8");
 }
 
 const BAR_KEYS = ["length", "readability", "relevance", "brandability"] as const;
+
+type SortKey = "added" | "domain" | "price" | "expiry";
+
+/** 首年价（美元）用于排序：实时价优先，回退静态参考价，无价排末尾 */
+function sortPriceUsd(tld: string, prices: PriceMap | null): number {
+  const p = prices?.[tld];
+  if (p) return p.registration;
+  const s = tldPrice(tld);
+  return s ? toUsd(s.first) : Number.MAX_SAFE_INTEGER;
+}
 
 const SYNC_CODE_KEY = "domainhunter:sync:code";
 const SYNC_CODE_RE = /^[A-Z0-9]{8}$/;
@@ -61,6 +78,7 @@ export function ShortlistPage({
   onClear,
   onStart,
   onMerge,
+  onSetNote,
   lastCheckedAt,
   onApplyStatuses,
 }: {
@@ -69,11 +87,96 @@ export function ShortlistPage({
   onClear: () => void;
   onStart: () => void;
   onMerge: (incoming: Omit<ShortlistItem, "addedAt">[]) => void;
+  onSetNote: (domain: string, note: string) => void;
   lastCheckedAt: number | null;
   onApplyStatuses: (results: Record<string, RecheckResult>) => void;
 }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
+  const [sort, setSort] = useState<SortKey>("added");
+  const [desc, setDesc] = useState(false);
+  const [noteEditing, setNoteEditing] = useState<string | null>(null);
+  const [noteDraft, setNoteDraft] = useState("");
+  const noteCancelRef = useRef(false);
+
+  const sorted = useMemo(() => {
+    const list = [...items];
+    if (sort === "added") list.sort((a, b) => a.addedAt - b.addedAt);
+    else if (sort === "domain") list.sort((a, b) => a.domain.localeCompare(b.domain));
+    else if (sort === "price") list.sort((a, b) => sortPriceUsd(a.tld, prices) - sortPriceUsd(b.tld, prices));
+    else list.sort((a, b) => (a.expiresAt ? Date.parse(a.expiresAt) : Number.MAX_SAFE_INTEGER) - (b.expiresAt ? Date.parse(b.expiresAt) : Number.MAX_SAFE_INTEGER));
+    return desc ? list.reverse() : list;
+  }, [items, sort, desc, prices]);
+
+  // 对齐 /prices 的排序交互：再点同一列切换升/降序，切换列时重置为升序
+  const SortBtn = ({ k, label }: { k: SortKey; label: string }) => (
+    <button
+      onClick={() => {
+        if (sort === k) setDesc((d) => !d);
+        else {
+          setSort(k);
+          setDesc(false);
+        }
+      }}
+      className={cn("flex min-h-[32px] items-center gap-1 text-xs font-semibold", sort === k ? "text-brand" : "text-txt1 hover:text-txt0")}
+    >
+      {label}
+      {sort === k ? (desc ? <ArrowDown className="h-3 w-3" /> : <ArrowUp className="h-3 w-3" />) : <ArrowUpDown className="h-3 w-3" />}
+    </button>
+  );
+
+  const startNote = (it: ShortlistItem) => {
+    setNoteEditing(it.domain);
+    setNoteDraft(it.note ?? "");
+  };
+
+  const commitNote = (domain: string) => {
+    onSetNote(domain, noteDraft);
+    setNoteEditing(null);
+  };
+
+  // 行内备注：点击即编辑，Enter/失焦保存，Esc 放弃；仅存本地，不随分享外发。
+  // 普通函数而非内联组件：避免每次渲染重建组件身份导致输入框失焦
+  const noteLine = (it: ShortlistItem) =>
+    noteEditing === it.domain ? (
+      <input
+        autoFocus
+        maxLength={NOTE_MAX_LENGTH}
+        value={noteDraft}
+        onChange={(e) => setNoteDraft(e.target.value)}
+        onBlur={() => {
+          if (noteCancelRef.current) {
+            noteCancelRef.current = false;
+            setNoteEditing(null);
+            return;
+          }
+          commitNote(it.domain);
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") commitNote(it.domain);
+          else if (e.key === "Escape") {
+            noteCancelRef.current = true;
+            (e.target as HTMLInputElement).blur();
+          }
+        }}
+        placeholder={t("shortlist.notePlaceholder")}
+        className="mt-1 h-8 w-full max-w-xs rounded-md border border-brand-line bg-bg0 px-2 text-xs text-txt0 placeholder:text-txt2 focus:outline-none"
+      />
+    ) : it.note ? (
+      <button
+        title={t("shortlist.noteEdit")}
+        onClick={() => startNote(it)}
+        className="mt-1 flex min-w-0 max-w-xs items-center gap-1 text-left text-xs text-txt1 hover:text-txt0"
+      >
+        <StickyNote className="h-3 w-3 shrink-0 text-brand" />
+        <span className="truncate">{it.note}</span>
+      </button>
+    ) : (
+      <button onClick={() => startNote(it)} className="mt-1 flex items-center gap-1 text-xs text-txt2 hover:text-brand">
+        <StickyNote className="h-3 w-3" />
+        {t("shortlist.addNote")}
+      </button>
+    );
   const [sharing, setSharing] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
   const [shareCopied, setShareCopied] = useState(false);
@@ -371,8 +474,8 @@ export function ShortlistPage({
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onSelect={() => exportShortlist(items, "csv")}>{t("common.exportCsv")}</DropdownMenuItem>
-                <DropdownMenuItem onSelect={() => exportShortlist(items, "txt")}>{t("common.exportTxt")}</DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => exportShortlist(items, "csv", lang, prices)}>{t("common.exportCsv")}</DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => exportShortlist(items, "txt", lang, prices)}>{t("common.exportTxt")}</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <button
@@ -615,6 +718,14 @@ export function ShortlistPage({
         </div>
       ) : (
         <>
+          {/* 排序控制：样式对齐 /prices，桌面与移动端共用 */}
+          <div className="mb-2 flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span className="text-xs text-txt2">{t("shortlist.sortBy")}</span>
+            <SortBtn k="added" label={t("shortlist.sortAdded")} />
+            <SortBtn k="domain" label={t("shortlist.domain")} />
+            <SortBtn k="price" label={t("shortlist.sortPrice")} />
+            <SortBtn k="expiry" label={t("shortlist.sortExpiry")} />
+          </div>
           {/* 对比表（桌面） */}
           <div className="hidden overflow-x-auto rounded-xl border border-line bg-bg1 md:block">
             <table className="w-full text-sm">
@@ -633,7 +744,7 @@ export function ShortlistPage({
                 </tr>
               </thead>
               <tbody className="divide-y divide-line">
-                {items.map((it) => {
+                {sorted.map((it) => {
                   const score = it.scores ? totalScore(it.scores) : undefined;
                   const change = changes[it.domain];
                   return (
@@ -652,6 +763,7 @@ export function ShortlistPage({
                           {it.status === "taken" && it.expiresAt && <ExpiryNote iso={it.expiresAt} className="shrink truncate" />}
                         </div>
                         {it.meaning && <div className="mt-0.5 max-w-xs truncate text-xs text-txt1">{it.meaning}</div>}
+                        {noteLine(it)}
                       </td>
                       <td className="px-2 text-center">
                         <span className={cn("tnum rounded-md px-2 py-0.5 font-mono text-xs font-bold", score !== undefined ? scoreBadgeClass(score) : "bg-bg3 text-txt1")}>
@@ -709,7 +821,7 @@ export function ShortlistPage({
 
           {/* 移动端卡片版 */}
           <div className="space-y-3 md:hidden">
-            {items.map((it) => {
+            {sorted.map((it) => {
               const score = it.scores ? totalScore(it.scores) : undefined;
               const change = changes[it.domain];
               return (
@@ -736,6 +848,7 @@ export function ShortlistPage({
                     </p>
                   )}
                   {it.meaning && <p className="mt-1 text-xs text-txt1">{it.meaning}</p>}
+                  {noteLine(it)}
                   {it.scores && <ScoreBars scores={it.scores} columns={4} className="mt-3" />}
                   <div className="mt-3 flex items-center gap-2">
                     <span title={priceFull(it.tld, lang, prices)} className="tnum flex-1 font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? ""}</span>

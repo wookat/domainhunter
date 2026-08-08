@@ -4197,6 +4197,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  coach: {
+    slug: "coach",
+    tlds: [
+      { tld: "com", zh: "私教课单价高、按期付费，.com 是学员付款前的信任底线", en: "High-ticket packages paid up front — .com is the trust floor before a client pays" },
+      { tld: "studio", zh: "私教工作室的空间感直给，小而精的定位一眼成立", en: "The studio positioning at a glance — small, focused, premium" },
+      { tld: "me", zh: "教练个人品牌的天然人称后缀，「跟我练」的语气自带", en: "The natural personal suffix for a coach brand — \"train with me\" built in" },
+    ],
+    zh: {
+      label: "健身私教",
+      title: "健身私教/私教工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "健身私教与私教工作室命名指南：教练人名背书、成果词根、社群口号化等 5 种思路，超级猩猩/Barry's/F45 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的私教域名。",
+      intro:
+        "私教生意的本质是「把身体交给一个人」，所以私教命名和健身 App、运动品牌走的是完全不同的路：App 卖的是工具，私教卖的是承诺——每周三次、持续半年、见证你变化的那个人。名字必须先回答信任问题：这个教练/这家工作室专业吗、靠谱吗、值这个课时费吗。私教获客几乎全靠两条路——学员转介绍与本地搜索（「XX 附近私教」），名字要在朋友的一句「你去找 X 练」里一遍说清，也要在地图和大众点评的列表里一眼跳出来。还要想清楚个人品牌与工作室品牌的分岔：绑定教练人名信任来得快，但开分店、带团队时名字就是天花板；用工作室品牌名扩张顺，但冷启动期少了人名的背书。这个选择决定了你三年后的生意形态，最好在起名那天就想清楚。",
+      namingIdeas: [
+        "教练人名背书：「人名 + Fitness/Training/工作室」是冷启动最快的结构（Barry's 模式），课卖的就是这个人；确定走个人 IP 路线再用，团队化会有摩擦",
+        "成果词根：学员买的是改变——strong、shape、form、蜕变、燃——把训练结果写进名字，比器械词（iron、gym）更接近购买动机",
+        "时间与方法入名：F45（45 分钟功能训练）把课程方法写进名字，一个词讲清「练什么、练多久」；有独特方法论的工作室值得效仿",
+        "反健身房命名：私教工作室的对手是大健身房的推销与办卡焦虑，名字可以刻意反着来——轻松、不吓人、无门槛感（超级猩猩的萌感就是策略）",
+        "社群口号化：私教续课靠社群黏性，名字要能变成打卡 hashtag 和训练营口号；造词前先想好它喊出来的形态（#跟着X练）",
+      ],
+      cases: [
+        { name: "超级猩猩", takeaway: "用一只萌感猩猩反打健身行业的肌肉焦虑：不办年卡、按次付费的模式配一个零压迫感的名字，把「怕被推销」的用户直接接住——命名与商业模式互为表达" },
+        { name: "Barry's", takeaway: "创始人 Barry 的名字加所有格：一个人名撑起全球连锁精品训练营，「去 Barry's」像去朋友家——私教行业人名信任的天花板样本" },
+        { name: "F45", takeaway: "Functional 45：方法（功能训练）+ 时长（45 分钟）压缩成三个字符，课程产品化命名的极致——名字本身就是课程说明书" },
+        { name: "乐刻运动", takeaway: "「乐」（快乐）+「刻」（时刻/24 小时）：两个字同时携带情绪承诺与营业模式，对抗传统健身房「受苦式训练」的叙事——中文健身命名里少见的双关精度" },
+        { name: "Ultimate Performance", takeaway: "直白到极致的结果承诺：瞄准高客单的严肃客群，名字像一份训练合同——当目标用户是「要结果的人」，直给比巧思更有效" },
+      ],
+      pitfalls: [
+        "堆砌 fitness/gym/健身 通用词：本地搜索里和几百家同行同名，地图列表里永远刷不出辨识度",
+        "肌肉恐吓式命名（暴汗、魔鬼、地狱营）：吓跑了占市场大头的初学者与女性客群，只留下本就不缺私教的老手",
+        "人名绑定想都不想：用教练名字起名后再开店、带徒弟，品牌与个人解绑的成本远超重新起名",
+        "只查大众点评不查域名与商标：私教工作室做大后必然线上化，名字被抢注的补救成本是当初核验的百倍",
+      ],
+    },
+    en: {
+      label: "Personal training",
+      title: "How to Name a Personal Training Studio: Strategies, Cases & Domains",
+      metaDescription:
+        "Personal trainer and PT studio naming guide: coach-name trust, outcome roots, method-in-the-name, breakdowns of Barry's/F45/Ultimate Performance, recommended TLDs and pitfalls — then hunt an available training domain with AI.",
+      intro:
+        "Personal training is the business of handing your body to one person, so its naming runs on different rails from fitness apps and sportswear: an app sells a tool, a trainer sells a promise — three sessions a week, six months, one person witnessing your change. The name must answer the trust question first: is this coach professional, reliable, worth the session rate? Client acquisition is almost entirely referrals plus local search (\"personal trainer near me\"), so the name has to survive a friend's one-liner — \"just train with X\" — and jump out of a map listing at the same time. Then there's the fork every trainer faces: a coach-name brand builds trust fastest but caps you the day you open a second location or hire other coaches; a studio brand scales cleanly but cold-starts without the personal endorsement. That choice shapes what your business looks like in three years — make it on naming day, not after the lease is signed.",
+      namingIdeas: [
+        "Put the coach's name on it: \"Name + Training/Fitness\" is the fastest cold-start structure (the Barry's model) because the person is the product; commit to the personal-brand path before you use it — teams and franchises will strain it",
+        "Name the outcome: clients buy change — strong, shape, form, forge; outcome roots sit closer to the purchase motive than equipment words (iron, gym) ever will",
+        "Write the method into the name: F45 packs functional training and 45 minutes into three characters — if you have a real methodology, the name can be the syllabus",
+        "Counter-position against big gyms: your competitor is the hard-sell membership factory, so the name can deliberately read friendly, low-pressure, un-scary — warmth is a strategy, not a weakness",
+        "Design for the community shout: retention lives in the group chat and the workout hashtag; before coining, imagine the name chanted at a bootcamp and typed as #TrainWithX",
+      ],
+      cases: [
+        { name: "Barry's", takeaway: "A founder's first name with a possessive: one human name carrying a global boutique-fitness chain — \"going to Barry's\" feels like visiting a friend; the ceiling case for coach-name trust" },
+        { name: "F45", takeaway: "Functional 45: method plus duration compressed into three characters — productized-course naming at its purest, where the name is the class description" },
+        { name: "SuperMonkey (超级猩猩)", takeaway: "A cuddly gorilla against an industry of muscle intimidation: pay-per-class with no membership pressure, matched by a zero-pressure name — naming and business model expressing each other" },
+        { name: "Ultimate Performance", takeaway: "A results promise stated at maximum bluntness: aimed at high-ticket, outcome-driven clients, the name reads like a training contract — when your buyer wants results, direct beats clever" },
+        { name: "CrossFit", takeaway: "cross (disciplines) + fit: a coined method name that became a category, a community and a suffix (every \"box\" carries it) — the endgame where the brand name turns into the sport itself" },
+      ],
+      pitfalls: [
+        "Stacking fitness/gym/fit generics: you'll share a name with hundreds of local rivals and never surface in map results",
+        "Intimidation naming (Beast, Inferno, No Mercy): it scares off the beginners and returning exercisers who are the actual market, keeping only veterans who don't need you",
+        "Defaulting to the coach's name without deciding: unbinding a personal name from a grown studio costs far more than choosing a brand name on day one",
+        "Checking only the local listing app: a growing studio inevitably goes online — clearing the domain and trademark now costs a fraction of reclaiming them later",
+      ],
+    },
+  },
+  codingschool: {
+    slug: "codingschool",
+    tlds: [
+      { tld: "com", zh: "学费动辄上万的决策，家长与学员的信任默认值", en: "Four-figure tuition decisions — the default trust for parents and learners" },
+      { tld: "codes", zh: "「代码」写进后缀，编程培训的品类识别零成本", en: "Code in the suffix — category recognition at zero cost" },
+      { tld: "tech", zh: "技术教育的气质直给，职业向课程的天然选择", en: "Tech-education energy at a glance — natural for career-track courses" },
+    ],
+    zh: {
+      label: "编程培训",
+      title: "编程培训/少儿编程怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "编程培训与少儿编程机构命名指南：造物动词、去恐惧化、职业结果词根等 5 种思路，Codecademy/freeCodeCamp/Le Wagon 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的编程教育域名。",
+      intro:
+        "编程培训命名要同时解决两种恐惧：成人学员怕「我学不会」，付钱的家长怕「学了没用」。所以好名字的第一任务是去恐惧化——把编程从高墙后的黑魔法翻译成「动手做东西」的乐趣，code、camp、maker、造物感的词根都在做这件事。第二任务是结果可见：职业向训练营卖的是转行与涨薪，名字里要能读出通往工作的路径感；少儿向卖的是思维与升学筹码，名字要让家长在群里转发时不尴尬。这个行业还有个特殊约束：目标用户横跨「完全不懂技术的家长」与「即将成为工程师的学员」，名字太极客吓跑前者，太幼态留不住后者——大多数成功者选择站在「学习的乐趣」这个中间地带。最后，编程教育天然线上化、天然出海，域名就是校门，名字定稿前必须核验 .com 与主流后缀的可注册性。",
+      namingIdeas: [
+        "造物动词优先：code、build、make、hack（善意义）——编程教育卖的是「亲手做出东西」的成就感，动词词根比 academy/institute 类机构词更有吸引力",
+        "camp/lab 的轻量场景词：camp（训练营）、lab（实验室）自带「短期、动手、不严肃」的气质（freeCodeCamp、Le Wagon 的车厢感），精准对冲学历教育的沉重",
+        "职业结果词根：面向转行的机构可把跳板、发射、起飞（launch、spring）写进名字——学员买的不是课程是新工作，名字直面这个动机",
+        "少儿向的思维词：面向家长时用思维、逻辑、创造类词根替代硬核技术词——家长买的是「聪明的大脑」，不是某门语言的语法",
+        "避开语言与框架名：把 Python/AI 等具体技术写进机构名，技术栈一过时名字就成负债——用「编程/代码」层级的词根保持课程迭代自由",
+      ],
+      cases: [
+        { name: "Codecademy", takeaway: "code + academy 无缝合成：品类与机构感一词说尽，拼写只比 academy 多两个字母——合成词「零学习成本」的教科书，全球学员一眼懂" },
+        { name: "freeCodeCamp", takeaway: "免费 + 代码 + 训练营：三个词把商业模式、品类、形式全部说清，「free」写进名字成了最强获客钩子——透明命名建立的社区信任无可替代" },
+        { name: "Le Wagon", takeaway: "法语「车厢」：一群人同乘一节车厢驶向新职业的隐喻，法语形态自带精品气质——证明编程教育可以完全不用 code 词根，靠意象立品牌" },
+        { name: "42", takeaway: "《银河系漫游指南》里「一切问题的答案」：极客彩票式命名，不解释时是悬念，解释后是身份暗号——精准筛选它想要的自驱型学员" },
+        { name: "编程猫", takeaway: "「编程」品类直给 +「猫」的萌感中和：硬核词被一只猫软化，家长与孩子同时接住——中文少儿编程去恐惧化命名的标准答案" },
+      ],
+      pitfalls: [
+        "机构词堆砌（XX 教育/学院/Institute）：和万千培训机构同质，且自带「应试补习」的陈旧气质，线上获客毫无记忆点",
+        "具体技术入名：Python 培训、AI 学院——技术热点轮换比校区租约还快，名字锁死课程方向等于给自己判刑",
+        "恐吓式卖点命名（速成、包就业）：监管对教培宣传词高度敏感，写进名字的承诺就是写给监管的把柄",
+        "少儿向名字过度幼态：小学员会长大，太幼的名字留不住进阶课程；「思维/创造」类词根的年龄带宽远宽于「宝宝/娃」类",
+      ],
+    },
+    en: {
+      label: "Coding bootcamps",
+      title: "How to Name a Coding School or Bootcamp: Strategies, Cases & Domains",
+      metaDescription:
+        "Coding bootcamp and kids-coding naming guide: maker verbs, de-fearing the category, career-outcome roots, breakdowns of Codecademy/freeCodeCamp/Le Wagon/42, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Naming a coding school means disarming two fears at once: adult learners fear \"I won't get it\", and paying parents fear \"it won't matter\". So a good name's first job is de-fearing — translating programming from dark art behind a wall into the joy of making things with your hands; code, camp, maker and build roots all work that shift. The second job is visible outcomes: career bootcamps sell job changes and salary jumps, so the name should carry a runway-to-work feeling; kids' programs sell thinking skills and future options, so the name must survive being forwarded in a parents' group chat without embarrassment. The category also has an unusual constraint: your audience spans tech-illiterate parents and soon-to-be engineers — too geeky loses the former, too cutesy loses the latter, and most winners settle on the middle ground of \"learning is fun\". Finally, coding education is online-first and global by default: the domain is your campus gate, so verify the .com and major suffixes before the name ships.",
+      namingIdeas: [
+        "Lead with maker verbs: code, build, make, ship — the product is the thrill of making something real, and verb roots outsell institutional words (academy, institute) with every audience",
+        "Borrow light venue words: camp and lab carry short, hands-on, unstuffy energy (freeCodeCamp, Le Wagon's shared carriage) — the exact counterweight to degree-program heaviness",
+        "Name the career outcome: for career-changer schools, springboard roots (launch, spring, lift) face the real motive — students buy a new job, not a curriculum",
+        "Use thinking words for kids' programs: parents buy \"a smarter brain\", not a language syntax — creativity and logic roots outlast any technology on the syllabus",
+        "Keep languages and frameworks out: a Python or AI in the name welds you to a technology cycle that turns faster than your lease — name at the \"code\" level and keep curriculum freedom",
+      ],
+      cases: [
+        { name: "Codecademy", takeaway: "code + academy fused seamlessly: category and institution in one word, two letters longer than \"academy\" itself — the textbook zero-learning-cost blend, instantly readable worldwide" },
+        { name: "freeCodeCamp", takeaway: "Business model + category + format in three plain words, with \"free\" as the strongest acquisition hook ever put in a name — transparency naming that built an unmatched community trust" },
+        { name: "Le Wagon", takeaway: "French for \"the carriage\": a cohort riding the same car toward a new career, with a French word-shape that reads boutique — proof a coding school can skip the code root entirely and stand on imagery" },
+        { name: "42", takeaway: "The answer to everything, from The Hitchhiker's Guide: an inside-joke name that is a mystery until explained and a badge afterward — self-selecting exactly the self-driven learners it wants" },
+        { name: "Codemao (编程猫)", takeaway: "The category word softened by a cat: hardcore \"coding\" neutralized by cuteness so parents and kids both relax — China's standard answer to de-fearing kids' coding" },
+      ],
+      pitfalls: [
+        "Institutional word-stacking (X Education, X Institute): indistinguishable from a thousand tutoring shops, with a stale test-prep aftertaste and zero online recall",
+        "Putting a technology in the name: Python Academy ages the day the hype cycle turns — a name that locks the syllabus is a sentence, not a brand",
+        "Promise words that regulators read (job-guaranteed, fast-track): education advertising is heavily policed in most markets, and a promise in the name is evidence you hand over yourself",
+        "Over-cutesifying kids' brands: your students grow up, and a toddler-toned name can't carry advanced courses — thinking/creating roots span far more ages than baby-talk ones",
+      ],
+    },
+  },
+  jewelry: {
+    slug: "jewelry",
+    tlds: [
+      { tld: "com", zh: "高客单珠宝消费的信任底座，礼盒与证书上的默认后缀", en: "The trust base for high-ticket jewelry — the default on gift boxes and certificates" },
+      { tld: "shop", zh: "语义即店铺，珠宝独立站的直白之选", en: "Literally shop — the straightforward pick for a jewelry storefront" },
+      { tld: "design", zh: "设计师珠宝的身份表达，原创定位一眼成立", en: "The identity suffix for designer jewelry — original positioning at a glance" },
+    ],
+    zh: {
+      label: "珠宝首饰",
+      title: "珠宝首饰品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "珠宝首饰品牌命名指南：创始人姓氏、神话借词、日常轻奢词根等 5 种思路，Tiffany/Pandora/Mejuri/周大福等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的珠宝域名。",
+      intro:
+        "珠宝名字的特殊之处在于它会被刻在实物上、印在礼盒上、写进求婚故事里——它是极少数会被用户「佩戴」的品牌名。这决定了珠宝命名的第一标准：优雅耐看，十年后刻在戒圈内侧依然不过时。第二个关键是价格锚定：名字直接参与定价——Tiffany 三个音节承载着蓝盒子的溢价，而「XX 银饰」这样的名字天然把自己钉在低价带。要想清楚品牌站在哪个价格带，名字的气质必须与之匹配。第三是场景分野：传统珠宝卖婚庆与投资（周大福模式，信任与保值），新锐轻奢卖日常自我表达（Mejuri 模式，「every day fine jewelry」），两条路的命名语言完全不同——前者要姓氏与老字号的厚重，后者要轻盈的造词与亲密感。最后别忘了刻字场景：名字太长，戒指内圈刻不下。",
+      namingIdeas: [
+        "创始人姓氏传统：珠宝是少数「姓氏 = 品质背书」的行业（Tiffany、Cartier、周大福都是人名），姓氏入名自带工匠与传承叙事，走高端线首选",
+        "神话与宝石词库：Pandora（潘多拉）、Hera、Luna——神话人名与月亮星辰词根自带珍贵感与故事性，且比宝石名（Diamond 类）留有更多商标空间",
+        "日常轻奢造词：面向自购女性的新锐品牌用轻盈亲密的造词（Mejuri 的柔软音节），刻意避开婚庆珠宝的仪式感——「给自己买」的名字要像闺蜜不像柜姐",
+        "材质与工艺升维：不用「金银钻」直给，用工艺与光泽的意象（琢、辉、gleam、facet）——材质词锁死品类，工艺词留出扩张空间",
+        "刻字与礼盒测试：名字定稿前做两个实物测试——刻在戒圈内侧是否优雅、印在礼盒上是否配得上价格；珠宝名字的最终考场是实物而非屏幕",
+      ],
+      cases: [
+        { name: "Tiffany & Co.", takeaway: "创始人姓氏 + Co. 的克制组合：Tiffany 三音节的柔美读感先于品牌存在，配合蓝盒子完成「名字即奢侈品」的闭环——姓氏命名在珠宝行业的天花板" },
+        { name: "Pandora", takeaway: "潘多拉之盒的神话借词：「打开盒子」的意象与珠宝开盒瞬间完美重叠，全球读音无障碍——神话词库在珠宝业的最佳实践，故事感直接写进名字" },
+        { name: "Mejuri", takeaway: "无实义的柔软造词：me 开头暗示「为自己而买」，日常轻奢的定位从音节气质里长出来——新一代珠宝去仪式化命名的代表作" },
+        { name: "周大福", takeaway: "创始人名 +「福」的世俗吉祥：把中式珠宝消费的真实动机（喜庆、保值、福气）写进名字，近百年不过时——中文姓氏命名与吉祥文化的合流样本" },
+        { name: "Swarovski", takeaway: "奥地利姓氏的原样保留：拼写与读音都不「友好」，却因此自带欧洲工坊的血统感——证明珠宝行业里，异域姓氏的陌生感本身就是奢侈叙事" },
+      ],
+      pitfalls: [
+        "材质词直给（XX 银饰/XX Diamond）：名字把品牌钉死在单一材质与低价带，升级产品线时名字先造反",
+        "奢华词堆砌（Royal/Luxury/皇家）：真正的高端从不自称奢华，名字里的「贵」恰恰暴露了不贵",
+        "忽略刻字场景：超过 8 个字符的名字在戒圈、吊坠背面刻不下或刻不美——珠宝名字要按毫米设计",
+        "婚庆与日常定位混用：求婚戒指要仪式感，日常首饰要松弛感，一个名字很难同时承载——定位不清的名字两头客群都接不住",
+      ],
+    },
+    en: {
+      label: "Jewelry",
+      title: "How to Name a Jewelry Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Jewelry brand naming guide: founder surnames, mythic borrowings, everyday-luxury coinages, breakdowns of Tiffany/Pandora/Mejuri/Chow Tai Fook, recommended TLDs and pitfalls — then hunt an available jewelry domain with AI.",
+      intro:
+        "A jewelry name is one of the very few brand names customers physically wear: it gets engraved inside ring bands, printed on gift boxes, and written into proposal stories. That sets the first bar — elegance that survives a decade, because it will still be inside the ring in ten years. The second force is price anchoring: the name participates in pricing directly — Tiffany's three syllables carry the blue-box premium, while a \"Best Silver\" style name nails itself to the bargain shelf; decide your price band first and make the name's register match. Third, the category splits in two: heritage jewelers sell weddings and stored value (the Chow Tai Fook lane — trust, surnames, permanence), while new everyday-luxury brands sell self-expression (the Mejuri lane — soft coinages, intimacy, \"bought it for myself\"); the two lanes barely share a vocabulary, so pick your lane before you pick your words. And never forget the engraving test: a long name doesn't fit inside a ring band.",
+      namingIdeas: [
+        "Use the founder-surname tradition: jewelry is one of the few industries where a surname is quality collateral (Tiffany, Cartier, Chow Tai Fook) — a name carries craft-and-heritage narrative for free on the premium lane",
+        "Borrow from myth and sky: Pandora, Hera, Luna — mythic names and celestial roots carry preciousness and story, with far more trademark room than literal gem words",
+        "Coin soft everyday-luxury words: for self-purchase buyers, intimate coinages with soft syllables (Mejuri) deliberately shed bridal ceremony — the name should sound like a best friend, not a sales counter",
+        "Elevate material into craft: skip gold/silver/diamond literals for imagery of light and workmanship (gleam, facet, lumen) — material words lock the category, craft words leave room to grow",
+        "Run the physical tests: before locking the name, engrave it inside a ring band and print it on the gift box — a jewelry name's final exam happens on objects, not screens",
+      ],
+      cases: [
+        { name: "Tiffany & Co.", takeaway: "A founder's surname with a restrained \"& Co.\": three soft syllables that read beautiful before the brand even loads, completing the name-as-luxury loop with the blue box — the ceiling of surname naming in jewelry" },
+        { name: "Pandora", takeaway: "The myth of the box, overlapping perfectly with the moment a jewelry box opens; pronounceable everywhere — the best practice of mythic borrowing in the category, with the story built into the word" },
+        { name: "Mejuri", takeaway: "A meaning-free soft coinage: the \"me\" opening whispers self-purchase, and the everyday-luxury positioning grows straight out of the syllables — the defining name of de-ceremonialized fine jewelry" },
+        { name: "Chow Tai Fook (周大福)", takeaway: "A founder's name ending in \"fortune\" (福): the real motives of Chinese jewelry buying — celebration, blessing, stored value — written into the name itself, unfaded for nearly a century" },
+        { name: "Swarovski", takeaway: "An Austrian surname kept intact: unfriendly to spell, and precisely therefore dripping with European-workshop pedigree — proof that in jewelry, foreignness itself is a luxury narrative" },
+      ],
+      pitfalls: [
+        "Literal material names (X Silver, X Diamond): the name welds you to one material and one price band, and mutinies the day you extend the line",
+        "Luxury-word stacking (Royal, Luxury, Elite): genuinely premium brands never call themselves luxurious — \"expensive\" in the name reads as the opposite",
+        "Ignoring the engraving constraint: past eight characters, the name won't fit — or won't look right — inside a ring band or on a pendant back; jewelry names are designed in millimeters",
+        "Straddling bridal and everyday: proposals need ceremony, daily wear needs ease, and one name rarely carries both — an unpositioned name loses both audiences",
+      ],
+    },
+  },
+  toys: {
+    slug: "toys",
+    tlds: [
+      { tld: "com", zh: "家长下单与海外分销的信任默认，玩具电商的主阵地", en: "The trust default for parents and overseas distribution — where toy commerce lives" },
+      { tld: "fun", zh: "「好玩」写进后缀，玩具品牌的气质零解释", en: "Fun in the suffix — the toy-brand vibe with zero explanation" },
+      { tld: "shop", zh: "语义即店铺，玩具独立站与周边商城的直白之选", en: "Literally shop — straightforward for a toy storefront and merch" },
+    ],
+    zh: {
+      label: "玩具品牌",
+      title: "玩具品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "玩具与潮玩品牌命名指南：欢乐造词、双客群兼容、IP 延展性等 5 种思路，LEGO/泡泡玛特/Jellycat 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的玩具域名。",
+      intro:
+        "玩具命名的底层矛盾是「玩的人不付钱，付钱的人不玩」：名字要让孩子念着开心，也要让家长读出安全与益智的暗示——LEGO（丹麦语「玩得好」）恰好两头都占。而潮玩的崛起改写了规则：泡泡玛特的核心客群是成年人，名字卖的不是益智而是惊喜与收藏欲，「拆盒瞬间」成了命名的新母题。所以起名前先回答：你的付钱用户是家长还是大孩子？两条路的词库几乎不重叠。玩具还是天然的 IP 生意，名字要预留宇宙扩张的空间——今天的一只毛绒兔子可能是明天的动画主角，品牌名太窄（绑定单一品类或形象）会在 IP 化那天成为镣铐。最后是全球化刚性：玩具供应链天然出海，名字必须在主要市场语言里无歧义、好发音，且通过各国儿童产品的商标审查。",
+      namingIdeas: [
+        "欢乐音节造词：玩具行业享有最大的造词自由——叠音、爆破音、-o/-y 结尾的弹跳感音节（LEGO、Bobo）念出来就像玩具落地的声音",
+        "双客群兼容测试：孩子念着好玩 + 家长读出安心，两个测试都过才算及格；纯幼态词（娃娃腔）会让家长觉得廉价",
+        "拆盒与惊喜词根：面向潮玩客群，把 pop、surprise、blind、box 的「揭晓感」写进名字——泡泡玛特把「泡泡」的轻盈与 mart 的商店感焊在一起",
+        "IP 延展预留：名字别绑死单一品类（XX 积木/XX 毛绒）——用世界观词根（星球、乐园、宇宙）给未来的动画、周边、乐园留门",
+        "触感与材质入名：毛绒与解压类玩具可以把触感写进名字（Jellycat 的 jelly 果冻感、Squishmallows 的 squish）——手感即卖点的品类，名字先让人「摸到」",
+      ],
+      cases: [
+        { name: "LEGO", takeaway: "丹麦语 leg godt（玩得好）的缩合：两音节爆破音开头，全球儿童都能喊；「玩得好」同时安抚了家长——玩具命名两头兼顾的百年标杆" },
+        { name: "泡泡玛特", takeaway: "「泡泡」的轻盈梦幻 +「玛特」（mart 音译）的商店感：中文潮玩命名的开山样本，POP MART 英文形态同步成立，全球化形态在起名时就已设计好" },
+        { name: "Jellycat", takeaway: "jelly（果冻）+ cat：触感与萌物的直接拼接，念出来就软——毛绒玩具「手感写进名字」的教科书，成年人送礼场景同样成立" },
+        { name: "Hasbro", takeaway: "Hassenfeld Brothers 的缩合：家族企业名压缩成两音节现代词，从铅笔盒卖到变形金刚——证明「无实义缩合词」给品类扩张留出的空间最大" },
+        { name: "万代", takeaway: "「万代」取自「万代不易」，永恒之意：玩具公司用一个庄重的词承载 IP 帝国（高达、奥特曼），名字的厚重感支撑了收藏级产品线——潮玩化时代反而更显前瞻" },
+      ],
+      pitfalls: [
+        "品类词锁死（XX 积木/XX 娃娃）：产品线一扩张名字就穿帮，IP 化路径直接被堵死",
+        "纯幼态命名：叠字娃娃腔让家长读出廉价感，也无法承载成人潮玩与收藏线——「童趣」与「幼稚」隔着一个品牌溢价",
+        "忽略全球商标与发音：玩具必然出海，名字在目标市场的儿童商标类目（尼斯 28 类）近似驳回率极高，定名前必查",
+        "蹭 IP 词根：名字刻意贴近乐高、宝可梦等大 IP 的词形，短期蹭流量，长期吃律师函——玩具巨头的商标团队是全行业最凶的",
+      ],
+    },
+    en: {
+      label: "Toy brands",
+      title: "How to Name a Toy Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Toy and designer-toy naming guide: joyful coinages, dual-audience names, IP headroom, breakdowns of LEGO/Pop Mart/Jellycat/Hasbro, recommended TLDs and pitfalls — then hunt an available toy domain with AI.",
+      intro:
+        "Toy naming's founding tension is that the player doesn't pay and the payer doesn't play: the name must be fun in a child's mouth and reassuring in a parent's read — LEGO (Danish for \"play well\") nails both at once. Designer toys then rewrote the rules: Pop Mart's core buyers are adults, and the name sells surprise and collectibility rather than education — the unboxing moment became naming's new motif. So answer this first: is your paying customer a parent or a grown-up kid? The two vocabularies barely overlap. Toys are also a native IP business: today's plush rabbit may be tomorrow's animated lead, so the name needs universe-sized headroom — a name welded to one category or one character becomes handcuffs on the day you franchise. Finally, globalization is non-negotiable: toy supply chains export by default, so the name must be clean and pronounceable in major markets and survive children's-goods trademark scrutiny everywhere you ship.",
+      namingIdeas: [
+        "Coin joyful syllables: toys enjoy the widest coinage freedom of any industry — reduplication, plosives, bouncy -o/-y endings (LEGO, Bobo) that sound like a toy hitting the floor",
+        "Pass the dual-audience test: fun when a child says it and reassuring when a parent reads it — pure baby-talk fails the second test and reads cheap on the shelf",
+        "Name the reveal for designer toys: pop, surprise, blind, box — the unboxing jolt belongs in the name; Pop Mart welds bubble-light \"pop\" to the storefront plainness of \"mart\"",
+        "Reserve IP headroom: don't weld the name to one category (X Blocks, X Dolls) — worldview roots (planet, land, universe) keep the door open for shows, merch and parks",
+        "Put texture in the name for plush: Jellycat's jelly, Squishmallows' squish — in categories where the product is the feel, let the name be touchable",
+      ],
+      cases: [
+        { name: "LEGO", takeaway: "A contraction of Danish leg godt, \"play well\": two plosive-led syllables every child on earth can shout, with a parent-soothing meaning underneath — the century benchmark of dual-audience toy naming" },
+        { name: "Pop Mart (泡泡玛特)", takeaway: "Bubble-light \"pop\" fused to the storefront candor of \"mart\": the founding sample of Chinese designer-toy naming, with the English form working from day one — global word-shape designed at birth" },
+        { name: "Jellycat", takeaway: "jelly + cat: texture spliced to cuteness so the name itself feels soft — the textbook of touch-first plush naming, working equally in the adult gifting scene" },
+        { name: "Hasbro", takeaway: "Hassenfeld Brothers compressed into two modern syllables: a family firm's name turned meaning-free and therefore infinitely stretchable — from pencil boxes to Transformers without the name ever objecting" },
+        { name: "Bandai (万代)", takeaway: "From \"eternal, for ten thousand generations\": a solemn word carrying an IP empire (Gundam, Ultraman) — the name's gravitas is exactly what lets a toy company sell collector-grade product lines" },
+      ],
+      pitfalls: [
+        "Category-locked names (X Blocks, X Dolls): the first line extension breaks the name, and the IP path is blocked before it starts",
+        "Pure baby-talk naming: reduplication-only cutesiness reads cheap to parents and can't carry adult designer or collector lines — childlike and childish are a brand premium apart",
+        "Skipping global trademark and phonetics: toys export by default, and children's-goods trademark classes are refusal minefields — clear target markets before the name ships",
+        "IP-adjacent word shapes: names engineered to sit near LEGO or Pokémon win short-term search and long-term lawyers' letters — toy giants run the fiercest trademark teams in consumer goods",
+      ],
+    },
+  },
+  brewery: {
+    slug: "brewery",
+    tlds: [
+      { tld: "com", zh: "分销、电商与出海贴标的信任默认，酒饮品牌的主域", en: "The trust default for distribution, e-commerce and export labels" },
+      { tld: "club", zh: "会员制酒饮与品鉴社群的天然后缀，复购生意的形态", en: "Natural for membership bottle clubs and tasting communities — the repeat-purchase shape" },
+      { tld: "shop", zh: "语义即店铺，精酿电商与品牌周边商城的直白之选", en: "Literally shop — straightforward for a drinks store and brand merch" },
+    ],
+    zh: {
+      label: "精酿酒饮",
+      title: "精酿啤酒/酒饮品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "精酿啤酒与新酒饮品牌命名指南：反叛态度词、在地文化梗、酒标视觉词等 5 种思路，BrewDog/京A/江小白等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的酒饮域名。",
+      intro:
+        "精酿命名和工业啤酒是两种语言：工业啤酒卖「大众无风险」（雪花、百威的中性大词），精酿卖的恰恰是态度与身份——喝精酿的人在用杯子里的东西宣告「我和喝工业水啤的不一样」。所以精酿名字可以坏、可以怪、可以有梗（BrewDog 的挑衅是策略不是任性），平庸反而是最大风险。第二个特点是酒标场景：精酿的第一销售现场是冰柜与货架，名字与酒标是一体设计——好的精酿名自带画面，设计师看到名字就能画出酒标。第三是在地性：精酿天然是本地生意，城市梗、方言词、街区名是最好的词库（京A 把北京车牌喝进了酒里）。最后一定要过合规这关：酒类商标是全行业驳回率最高的类目之一，谐音梗与名人梗尤其危险，起名当天就该查商标。",
+      namingIdeas: [
+        "态度词先行：精酿买的是身份宣言，名字可以反叛、幽默、自嘲（BrewDog、Evil Genius）——先写下你的品牌想「怼」谁，再从那个对立面取词",
+        "在地文化梗：城市代号、方言、老地名是精酿最肥沃的词库（京A 的车牌梗）——本地人会心一笑，外地人多问一句，两种反应都是传播",
+        "酒标画面词：选一个能直接画出来的词（狗、鬼、灯塔、火箭）——精酿在冰柜里靠酒标肉搏，名字与视觉一体的品牌货架胜率翻倍",
+        "工艺与原料的克制使用：hop（酒花）、malt、brew 词根圈内人秒懂，但已高度拥挤——用它们做后缀词根可以，做主词根很难注册也难差异化",
+        "新酒饮的情绪命名：低度酒与果酒客群买的是微醺情绪不是酒精度，用情绪词（微醺、落日、气泡感）替代酒类词根，江小白证明了「情绪瓶身」的威力",
+      ],
+      cases: [
+        { name: "BrewDog", takeaway: "brew + dog：酿造词根配一条不听话的狗，两个单音节词把「反叛精酿」的全部态度说完——名字、酒标、营销互为弹药的品牌样本" },
+        { name: "京A", takeaway: "北京车牌代号直接入名：本地人瞬间会心，一个字符组合同时完成「北京的、街头的、有梗的」三重定位——在地命名的中文天花板" },
+        { name: "江小白", takeaway: "「江」（水/长江）+「小白」（人格化的普通青年）：把白酒从宴席拉到一个人的深夜，人名感让瓶身文案有了说话的主体——中式酒饮人格化命名的开创者" },
+        { name: "Athletic Brewing", takeaway: "「运动的」+ 酿造：无酒精精酿把「喝完还能跑步」的矛盾感写进名字，品类反差即定位——功能性新酒饮命名的教科书" },
+        { name: "Lagunitas", takeaway: "加州小镇 Lagunitas 之名：产地即故事，五个音节的西语感读起来像一次旅行——地名命名让「从哪来」替品牌回答「你是谁」" },
+      ],
+      pitfalls: [
+        "平庸安全牌：精酿名字最大的失败不是冒犯而是无聊——「XX 精酿」式命名在冰柜里等于隐身",
+        "谐音与名人梗踩线：酒类广告法与商标审查全行业最严，打擦边球的梗名字轻则驳回重则下架，爽一时赔一批酒标",
+        "锁死单一酒种：名字绑定 IPA 或啤酒（XX Beer），出果酒、气泡酒、无酒精线时名字先过期——用 brewing/酿造层级的词根保持酒单自由",
+        "忽略出口市场语言检查：精酿出海与代工常态化，名字在目标市场语言里的歧义与酒类禁忌词必须提前排查",
+      ],
+    },
+    en: {
+      label: "Craft beer & drinks",
+      title: "How to Name a Brewery or Drinks Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Craft beer and new-drinks naming guide: attitude words, local in-jokes, label-ready imagery, breakdowns of BrewDog/Jing-A/Athletic Brewing, recommended TLDs and pitfalls — then hunt an available drinks domain with AI.",
+      intro:
+        "Craft naming speaks a different language from industrial beer: macro lagers sell mass safety (neutral big words), while craft sells attitude and identity — the person holding the glass is announcing they're not drinking watery lager. So a craft name is allowed to be bad-mannered, weird, or an inside joke (BrewDog's provocation is strategy, not tantrum); in this category, bland is the real risk. Second, the label is the battlefield: craft's first point of sale is the fridge door and the shelf, where name and label art are designed as one — a good craft name is a picture, and your designer should be able to sketch the label from the word alone. Third, craft is local by nature: city codes, dialect words and neighborhood names are the richest vocabulary (Jing-A poured Beijing's license plate into a can). Last, clear compliance early: alcohol has one of the highest trademark-refusal rates of any category, puns and celebrity winks are the most dangerous of all, and the day to search the trademark is the day you coin the name.",
+      namingIdeas: [
+        "Lead with attitude: craft buyers purchase an identity statement, so the name can rebel, joke, or self-deprecate (BrewDog, Evil Genius) — write down who the brand is against, then coin from the opposite bank",
+        "Mine the local in-joke: city codes, dialect, old street names — locals smile, visitors ask, and both reactions are distribution; Jing-A's license-plate wink is the ceiling of the move",
+        "Pick a word you can draw: a dog, a ghost, a lighthouse, a rocket — craft fights hand-to-hand on the shelf, and brands whose name and label art are one image win the fridge twice as often",
+        "Ration the craft jargon: hop, malt and brew roots read instantly to insiders but are fully crowded — fine as a suffix, nearly unregistrable and undifferentiated as the main root",
+        "Name the mood for new drinks: low-ABV and non-alc buyers purchase a feeling, not a proof number — mood words (golden hour, fizz, glow) beat alcohol roots, and the sober-adjacent shelf is the fastest-growing one",
+      ],
+      cases: [
+        { name: "BrewDog", takeaway: "brew + dog: the craft root plus a disobedient dog — two single syllables carrying the entire rebel-craft posture; name, label and marketing feeding each other ammunition" },
+        { name: "Jing-A (京A)", takeaway: "Beijing's license-plate prefix as the name: instant recognition for locals, and one character-pair delivering \"Beijing, street-level, in on the joke\" all at once — the Chinese ceiling of place-based naming" },
+        { name: "Athletic Brewing", takeaway: "\"Athletic\" welded to brewing: the non-alcoholic contradiction — drink a beer, then go run — written straight into the name; category tension as positioning, the textbook of functional drinks naming" },
+        { name: "Lagunitas", takeaway: "A tiny California town's name: provenance as story, five Spanish-tinged syllables that read like a road trip — letting \"where we're from\" answer \"who we are\"" },
+        { name: "Liquid Death", takeaway: "Maximum-attitude naming on… canned water: heavy-metal menace welded to the least dangerous drink on earth — proof that in beverages, the register of the name can be the entire brand" },
+      ],
+      pitfalls: [
+        "Playing it safe: a craft name's worst failure isn't offense but boredom — \"X Craft Brewing\" is camouflage on a fridge shelf",
+        "Pun and celebrity winks that cross the line: alcohol advertising law and trademark review are the strictest in consumer goods — an edgy pun costs a refusal at best and a recalled label run at worst",
+        "Locking to one liquid: a name welded to IPA or beer expires the day you launch cider, hard seltzer or a non-alc line — name at the brewing level and keep the menu free",
+        "Skipping export-language checks: craft brands ship and contract-brew across borders by default — clear the name's meanings and alcohol-taboo words in target markets before the first pallet leaves",
+      ],
+    },
+  },
+  furniture: {
+    slug: "furniture",
+    tlds: [
+      { tld: "com", zh: "大件高客单的信任默认，家具电商与出海分销的主域", en: "The trust default for big-ticket purchases — where furniture commerce and export live" },
+      { tld: "design", zh: "原创设计定位直给，设计师家具品牌的身份后缀", en: "Original-design positioning at a glance — the identity suffix for designer furniture" },
+      { tld: "store", zh: "语义即卖场，家具独立站与体验店的直白表达", en: "Literally the store — direct for a furniture storefront and showroom" },
+    ],
+    zh: {
+      label: "家具品牌",
+      title: "家具品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "家具与家居品牌命名指南：栖居感词根、材质工艺词、设计师姓氏等 5 种思路，IKEA/源氏木语/Herman Miller 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的家具域名。",
+      intro:
+        "家具名字的独特语境是「住进生活里」：一张床要陪用户十年，名字也会在这十年里被反复看到——搬家时、朋友问「这沙发哪买的」时、二手转卖时。所以家具命名第一要务是耐看：潮词与热梗会过时，栖居、木、光、家的词根不会。第二是价格带与风格的双重锚定：家具市场从宜家平价到设计师高端跨度极大，名字气质必须与定价匹配——「XX 家具城」接不住万元单品，过度设计的名字也卖不动平价快消款。第三是信任具象化：大件家具决策重、退换难，名字里的材质与工艺暗示（实木、原木感）直接参与转化。最后是出海语境：中国家具供应链全球最强，DTC 出海品牌的名字要在英语市场里读得顺、记得住，且避开「中国制造 = 廉价」的刻板暗示——名字是供应链品牌化的第一步。",
+      namingIdeas: [
+        "栖居感词根：家、巢、居、nest、dwell、haven——家具卖的是「住得好」的想象，栖居词根比家具品类词更接近购买动机",
+        "材质与工艺入名：木、原木、oak、walnut、匠——大件消费的信任来自材质，名字先把「实木的、认真做的」暗示传递出去（源氏木语的「木语」）",
+        "设计师姓氏路线：高端线用「姓氏 + 品类/工坊」结构（Herman Miller 模式），设计师的人格与审美直接为溢价背书；走原创设计路线首选",
+        "风格词定调：北欧、侘寂、中古——风格词入名能精准召回目标客群，但要确认品牌只做这一种风格，否则风格一扩名字就窄",
+        "组合词的宜家启示：IKEA 是创始人姓名与农场地名的缩合——无实义缩合词全球好读、商标好注、品类无限，适合志在全品类的品牌",
+      ],
+      cases: [
+        { name: "IKEA", takeaway: "创始人 Ingvar Kamprad + 农场 Elmtaryd + 村庄 Agunnaryd 的首字母缩合：无实义、两音节、全球好读，品类与价格带永不设限——家具业最成功的「空白画布」命名" },
+        { name: "源氏木语", takeaway: "「源」（本源）+「木语」（木头会说话）：四个字把实木、原木、自然的全部暗示说尽，电商搜索里自带「实木」联想——中文家具材质命名的标杆" },
+        { name: "Herman Miller", takeaway: "创始人岳父之名：一个姓氏从家具工厂长成设计史符号（Eames 椅的出品方），证明家具高端线的终极信任来自「人」而非概念词" },
+        { name: "Muji 無印良品", takeaway: "「无品牌的好东西」：反命名的命名——把「不强调品牌」本身做成最强的品牌主张，家居杂货的去风格化哲学从名字贯穿到产品" },
+        { name: "Article", takeaway: "「一件（家具）」的英文单数：用最日常的词做品牌，读起来像把家具还原成生活本身——DTC 家具去卖场化命名的代表，域名 article.com 的干净加成了气质" },
+      ],
+      pitfalls: [
+        "卖场式命名（XX 家具城/家私广场）：名字自带批发市场气质，线上化与品牌化的路一开始就被堵死",
+        "潮词热梗入名：家具一用十年，网感词三年就过时——耐看度是家具名字的第一考核项，流行语是反指标",
+        "风格词绑定过早：名字里写死「北欧/中古」，产品线扩到其他风格时名字先违和——确定只做一种风格再让风格入名",
+        "出海拼写不友好：拼音直出的名字在英语市场常常读不出、记不住——供应链出海品牌应设计双语形态，中文名与英文名同步锁定域名与商标",
+      ],
+    },
+    en: {
+      label: "Furniture",
+      title: "How to Name a Furniture Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Furniture and home brand naming guide: dwelling roots, material and craft words, designer surnames, breakdowns of IKEA/Herman Miller/Article/Muji, recommended TLDs and pitfalls — then hunt an available furniture domain with AI.",
+      intro:
+        "A furniture name lives inside people's homes: a bed stays ten years, and the name gets re-read for all of them — at every move, every \"where's this sofa from?\", every resale listing. So the first requirement is wearing well: trend words and memes date, while dwelling roots — home, nest, timber, light — don't. Second, furniture spans the widest price-and-style range in consumer goods, from flat-pack value to collectible design, and the name's register must match the tag: a \"Furniture Warehouse\" name can't carry a four-figure armchair, and an over-designed name can't move value flat-packs. Third, trust needs to be concrete: furniture is a heavy, hard-to-return decision, and material hints in the name (solid wood, oak, crafted) participate directly in conversion. Finally, the export context: China's furniture supply chain is the world's strongest, and a DTC brand going global needs a name that reads smoothly in English, sticks after one hearing, and sidesteps the made-cheap stereotype — the name is step one of turning a supply chain into a brand.",
+      namingIdeas: [
+        "Root the name in dwelling: home, nest, dwell, haven — furniture sells the imagination of living well, and dwelling roots sit closer to the purchase motive than category words like \"furniture\" ever will",
+        "Put material and craft in the name: oak, walnut, timber, crafted — big-ticket trust starts with what it's made of, so let the name whisper \"solid wood, made seriously\" before the product page loads",
+        "Take the designer-surname lane for premium: \"Surname + Studio/Co.\" (the Herman Miller model) lets a person's taste underwrite the price — the first choice for original-design positioning",
+        "Use style words with commitment: Nordic, wabi, mid-century in the name recalls exactly the right customer — but only if that's the only style you'll ever make; style expansion breaks a style-locked name",
+        "Learn from IKEA's contraction: a meaning-free blend of a founder's initials and place names — globally readable, easily trademarked, infinitely extensible; the right shape for a brand that wants every room of the house",
+      ],
+      cases: [
+        { name: "IKEA", takeaway: "Ingvar Kamprad + Elmtaryd + Agunnaryd contracted into two meaning-free syllables: readable everywhere, welded to no category or price band — furniture's most successful blank-canvas name" },
+        { name: "Herman Miller", takeaway: "A founder's father-in-law's name grown into a design-history symbol (the house of the Eames chair): proof that premium furniture's deepest trust comes from a person, not a concept word" },
+        { name: "Muji (無印良品)", takeaway: "\"No-brand quality goods\": the anti-name as a name — making the refusal of branding itself the strongest brand claim, with the de-styled philosophy running from the name through every product" },
+        { name: "Article", takeaway: "The most ordinary English word for \"one piece\": furniture returned to everyday life rather than the showroom — the defining de-warehoused DTC furniture name, with the clean article.com amplifying the effect" },
+        { name: "Genji Wood Language (源氏木语)", takeaway: "\"Origin\" plus \"the language of wood\": four characters exhausting every solid-wood, natural association a shopper could want, with built-in search recall for \"solid wood\" — China's benchmark of material-first furniture naming" },
+      ],
+      pitfalls: [
+        "Warehouse-style naming (X Furniture City, X Home Plaza): the name arrives smelling of wholesale — the brand-building and DTC paths are blocked from day one",
+        "Trend words in a ten-year product: furniture outlives memes by seven years — wearing well is the first test of a furniture name, and internet slang is a negative signal",
+        "Locking a style too early: Nordic or mid-century in the name breaks the day the line expands — let style into the name only if it's the only style you'll ever ship",
+        "Export-unfriendly spellings: raw romanizations often can't be pronounced or recalled in English markets — design the bilingual forms together and lock domains and trademarks for both at once",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
