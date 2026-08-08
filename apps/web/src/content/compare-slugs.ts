@@ -87,6 +87,12 @@ export const COMPARE_SLUGS = [
   "finance-vs-com",
   "global-vs-world",
   "host-vs-cloud",
+  "social-vs-com",
+  "video-vs-tv",
+  "fund-vs-finance",
+  "land-vs-com",
+  "click-vs-link",
+  "icu-vs-xyz",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
