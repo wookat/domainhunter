@@ -613,13 +613,27 @@ export function parseCandidateArray(text: string): Partial<AiCandidate>[] {
 //   from/plus/word/root/short for/named after/combines 等）——词语沙拉恰恰缺乏这类谓语骨架
 const EN_PREDICATE_RE = /\b(?:mean(?:s|ing)?|evokes?|suggest(?:s|ing)?|from|plus|words?|roots?|short\s+for|named\s+after|combin(?:es|ed|ing)|echoes|joined|blend(?:s|ed)?|derived|refers?|reads?|sounds?|nod\s+to)\b/i;
 
+// R223（R218 P2-2）：label 片段若本身是高频英文停用词/功能词（with/that/from 等），
+// 在任何词语沙拉里都会自然出现，不能算词源锤点——besowith 型穿透正是靠子串 "with"。
+// 只收 ≥3 字母的条目（片段匹配下限为 3/4 字母，更短的词不会参与判定）
+const EN_FRAGMENT_STOPWORDS = new Set([
+  "and", "are", "but", "for", "had", "has", "have", "been", "her", "him", "his", "how",
+  "into", "its", "just", "like", "may", "more", "most", "not", "now", "off", "one", "only",
+  "our", "out", "over", "own", "per", "some", "such", "than", "that", "the", "them", "then",
+  "they", "this", "too", "under", "upon", "very", "was", "well", "were", "what", "when",
+  "where", "which", "who", "why", "will", "with", "within", "would", "you", "your", "there",
+  "their", "about", "these", "those", "here", "from", "does", "did", "can", "could", "should",
+]);
+
 export function enMeaningIncoherent(label: string, meaning: string): boolean {
   const lower = meaning.toLowerCase();
   let fragmentOk = lower.includes(label);
   if (!fragmentOk && label.length >= 4) {
     for (let len = Math.min(label.length, 8); len >= 4 && !fragmentOk; len--) {
       for (let i = 0; i + len <= label.length; i++) {
-        if (lower.includes(label.slice(i, i + len))) {
+        const frag = label.slice(i, i + len);
+        if (EN_FRAGMENT_STOPWORDS.has(frag)) continue;
+        if (lower.includes(frag)) {
           fragmentOk = true;
           break;
         }
@@ -627,8 +641,14 @@ export function enMeaningIncoherent(label: string, meaning: string): boolean {
     }
   }
   if (!fragmentOk && label.length >= 3) {
-    // 与 label 共享 ≥3 字母前缀的单词（词首匹配，避免 "small" 命中 "all"）
-    fragmentOk = new RegExp(`\\b${label.slice(0, 3)}[a-z]*`, "i").test(meaning);
+    // 与 label 共享 ≥3 字母单词前缀的实词（词首匹配，避免 "small" 命中 "all"；
+    // 命中的整词若是停用词，如 label "theora" 前缀 "the" 命中冠词 the，同样不算锤点）
+    for (const m of lower.matchAll(new RegExp(`\\b${label.slice(0, 3)}[a-z]*`, "g"))) {
+      if (!EN_FRAGMENT_STOPWORDS.has(m[0])) {
+        fragmentOk = true;
+        break;
+      }
+    }
   }
   const predicateOk = EN_PREDICATE_RE.test(meaning);
   return !fragmentOk || !predicateOk;
