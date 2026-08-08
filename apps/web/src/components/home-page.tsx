@@ -17,6 +17,9 @@ const PRESET_TLDS = ["com", "cn", "io", "ai", "app", "dev"];
 const MAX_LEN = 500;
 const LABEL_RE = /^[a-z0-9][a-z0-9-]{0,62}$/i;
 const EXACT_DOMAIN_RE = /^([a-z0-9][a-z0-9-]{0,62})\.([a-z0-9-]{2,24})$/i;
+const MULTI_DOMAIN_RE = /^([a-z0-9][a-z0-9-]{0,62})\.([a-z0-9-]{2,24}(?:\.[a-z0-9-]{2,24})+)$/i;
+// 站内核验通道已支持的两级后缀（需同时在 QUICK_MORE_TLDS 与 whois.ts 有对应通道）
+const KNOWN_MULTI_TLDS = ["com.cn"];
 // 常见可注册 TLD：避免把拼写错误（如 baidu.iox）当作精确域名去核验
 const KNOWN_TLDS = new Set([
   "com", "net", "org", "cn", "io", "ai", "app", "dev", "co", "cc", "tv", "xyz", "me", "info", "biz", "top", "vip", "pro", "site",
@@ -26,11 +29,14 @@ const KNOWN_TLDS = new Set([
 ]);
 
 /** 输入看起来已经是现成名字/域名时，提供免 AI 额度的直接核验 */
-function parseQuickCheck(input: string): { label: string; tld?: string } | null {
+function parseQuickCheck(input: string): { label: string; tld?: string } | { unsupportedTld: string } | null {
   const d = input.trim().toLowerCase();
   if (LABEL_RE.test(d)) return { label: d };
   const m = EXACT_DOMAIN_RE.exec(d);
-  return m && KNOWN_TLDS.has(m[2]) ? { label: m[1], tld: m[2] } : null;
+  if (m) return KNOWN_TLDS.has(m[2]) ? { label: m[1], tld: m[2] } : null;
+  const mm = MULTI_DOMAIN_RE.exec(d);
+  if (mm) return KNOWN_MULTI_TLDS.includes(mm[2]) ? { label: mm[1], tld: mm[2] } : { unsupportedTld: mm[2] };
+  return null;
 }
 
 // 行业模板：寓意 + 气质 + 场景 三段式描述，点击填入输入框，用户可再编辑；slug 对应 /guide/:slug 与 /?tpl= 预填入口
@@ -1031,7 +1037,7 @@ function ChipPrice({ domain }: { domain: string }) {
 const QUICK_EXTRA_TLDS = ["com", "io", "ai", "app", "dev", "co", "net", "me"];
 
 /** 「查更多后缀」按钮覆盖的第二批后缀（同样走 /api/search，0 AI 额度） */
-const QUICK_MORE_TLDS = ["cn", "com.cn", "org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "page", "bio", "ink", "moe", "lol", "uk", "fm", "one", "cool", "red", "today", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "software", "marketing", "systems", "ventures", "capital", "guru", "tips", "directory", "exchange", "institute", "international", "partners", "support"];
+const QUICK_MORE_TLDS = ["cn", ...KNOWN_MULTI_TLDS, "org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "page", "bio", "ink", "moe", "lol", "uk", "fm", "one", "cool", "red", "today", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "software", "marketing", "systems", "ventures", "capital", "guru", "tips", "directory", "exchange", "institute", "international", "partners", "support"];
 
 /** 快速核验的 chip（可注册/已注册）都可收藏到候选清单 */
 function domainToRow(domain: string, status: Row["status"] = "available", expiresAt?: string): Row {
@@ -1089,7 +1095,9 @@ export function HomePage({
 
   const canRun = description.trim().length > 0 && tlds.length > 0;
 
-  const quick = parseQuickCheck(description);
+  const quickParsed = parseQuickCheck(description);
+  const quick = quickParsed && "label" in quickParsed ? quickParsed : null;
+  const quickUnsupportedTld = quickParsed && "unsupportedTld" in quickParsed ? quickParsed.unsupportedTld : null;
   const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown"; expiresAt?: string }[]>([]);
   const [quickRunning, setQuickRunning] = useState(false);
   const [quickMoreDone, setQuickMoreDone] = useState(false);
@@ -1669,6 +1677,13 @@ export function HomePage({
                 )}
               </div>
             )}
+          </div>
+        )}
+
+        {/* 输入多级后缀但站内核验通道不支持：给出友好提示而非静默无响应 */}
+        {quickUnsupportedTld && (
+          <div className="mt-3 rounded-xl border border-line bg-bg1 px-4 py-3">
+            <p className="text-xs text-txt1">{t("home.quickUnsupportedTld", { tld: quickUnsupportedTld })}</p>
           </div>
         )}
 
