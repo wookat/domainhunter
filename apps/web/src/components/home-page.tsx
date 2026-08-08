@@ -679,6 +679,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个滑雪装备与雪友社群品牌，寓意「山就在那里，雪季永远值得」；气质要野、有速度感、又撑得起专业信任；场景是雪道上的呼喊、雪具吊牌和雪友群「去 X 家拿板」的安利里都一遍听清。",
     en: "A ski gear and snow community brand. The name should feel like the mountain is calling and the season is always worth it; the vibe is wild, fast, yet safety-grade trustworthy; it must carry through a shout across the slope, on a gear hangtag, and in \"grab your board at X\" crew chats.",
   },
+  {
+    slug: "aiart",
+    labelZh: "AI 绘画",
+    labelEn: "AI art tool",
+    zh: "一款 AI 绘画与图像生成工具，寓意「把脑海里的画面念咒成像」；气质要有魔法感、想象力、又像一件可靠的创作工具；场景是作品水印、社区话题标签和「用 X 跑的」口播安利里都短小好搜。",
+    en: "An AI image generation tool. The name should feel like conjuring the picture in your head into pixels; the vibe is magical, imaginative, yet dependable as a creative tool; it must stay short and searchable as a watermark, in hashtags, and in \"made with X\" mentions.",
+  },
+  {
+    slug: "campsite",
+    labelZh: "露营地",
+    labelEn: "Campground",
+    zh: "一个露营地与营地运营品牌，寓意「离开城市，把日子搬到星空下」；气质要野而不糙、有画面感、让人想立刻出发；场景是小红书定位标签、导航目的地和「这周末去 X」的召唤里都好记好搜。",
+    en: "A campground and camp operations brand. The name should feel like moving life under the stars, away from the city; the vibe is wild yet polished, scenic, instantly wanderlust-inducing; it must work as a location tag, a navigation destination, and in \"X this weekend?\" group chats.",
+  },
+  {
+    slug: "tcm",
+    labelZh: "中医养生",
+    labelEn: "TCM wellness",
+    zh: "一个中医养生与草本理疗品牌，寓意「顺着节气把身体慢慢养回来」；气质要温润专业、有东方底蕴、又不老气说教；场景是预约小程序、门店招牌和年轻人「去 X 做个推拿」的安利里都可信顺口。",
+    en: "A TCM wellness and herbal therapy brand. The name should feel like gently nursing the body back in rhythm with the seasons; the vibe is warm, professional, deeply Eastern yet never musty; it must sound credible on a booking page, a storefront sign, and in \"let's get a massage at X\" referrals.",
+  },
+  {
+    slug: "deskcraft",
+    labelZh: "桌面文创",
+    labelEn: "Desk & stationery",
+    zh: "一个桌面文创与文具周边品牌，寓意「把 8 小时的案头过成自己喜欢的样子」；气质要有审美立场、治愈、值得收集；场景是桌搭笔记、开箱视频和市集摊位招牌上入镜都好看好记。",
+    en: "A stationery and desk accessories brand. The name should feel like making your eight desk-bound hours your own; the vibe is aesthetically opinionated, soothing, collectible; it must look good on camera in desk-setup posts, unboxing videos, and on a market-stall sign.",
+  },
+  {
+    slug: "petmemorial",
+    labelZh: "宠物殡葬",
+    labelEn: "Pet memorial",
+    zh: "一个宠物殡葬与纪念服务品牌，寓意「温柔地送毛孩子走完最后一程」；气质要温暖、庄重而不冰冷、值得托付；场景是深夜含泪的搜索、宠物医院的转介绍和纪念品包装上都温柔可信。",
+    en: "A pet aftercare and memorial service brand. The name should promise a gentle send-off for the furry family member; the vibe is warm, dignified without coldness, worthy of trust; it must feel tender in a tearful 2 a.m. search, a vet's referral, and on keepsake packaging.",
+  },
+  {
+    slug: "postpartum",
+    labelZh: "月子中心",
+    labelEn: "Postpartum care",
+    zh: "一个月子中心与产后护理品牌，寓意「新手妈妈被温柔地接住」；气质要轻奢温暖、有医护级专业感、全家人都放心；场景是妈妈群转介绍、参观预约页和长辈口中念出来都顺口吉利。",
+    en: "A postpartum retreat and maternal care brand. The name should feel like a new mother being gently caught; the vibe is softly luxurious, nurse-grade professional, reassuring to the whole family; it must work in mom-group referrals, on the tour booking page, and sound auspicious when grandparents say it aloud.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
