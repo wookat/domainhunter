@@ -34,7 +34,10 @@ export function ComparePage({ slug }: { slug: string }) {
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 md:px-6">
       <p className="font-mono text-sm text-brand">
-        .{cmp.a} vs .{cmp.b}
+        <a href={`/vs?lang=${lang}`} className="text-txt2 hover:text-brand hover:underline">
+          {t("hub.allVs")}
+        </a>
+        <span className="mx-1.5 text-txt2">/</span>.{cmp.a} vs .{cmp.b}
       </p>
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{loc.title}</h1>
 

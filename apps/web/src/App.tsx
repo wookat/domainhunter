@@ -43,6 +43,9 @@ const MonitorsPage = lazyChunk(() => import("@/components/monitors-page"), (m) =
 const AdvancedPage = lazyChunk(() => import("@/components/advanced-page"), (m) => m.AdvancedPage);
 const PricesPage = lazyChunk(() => import("@/components/prices-page"), (m) => m.PricesPage);
 const WhyPage = lazyChunk(() => import("@/components/why-page"), (m) => m.WhyPage);
+const TldHubPage = lazyChunk(() => import("@/components/tld-hub-page"), (m) => m.TldHubPage);
+const GuideHubPage = lazyChunk(() => import("@/components/guide-hub-page"), (m) => m.GuideHubPage);
+const CompareHubPage = lazyChunk(() => import("@/components/compare-hub-page"), (m) => m.CompareHubPage);
 const McpPage = lazyChunk(() => import("@/components/mcp-page"), (m) => m.McpPage);
 const AgentPage = lazyChunk(() => import("@/components/agent-page"), (m) => m.AgentPage);
 const ResultsPage = lazyChunk(() => import("@/components/results-page"), (m) => m.ResultsPage);
@@ -85,6 +88,12 @@ function guideFromPath(): string | null {
 
 const pricesFromPath = () => window.location.pathname === "/prices";
 
+const tldHubFromPath = () => window.location.pathname === "/tld";
+
+const guideHubFromPath = () => window.location.pathname === "/guide";
+
+const compareHubFromPath = () => window.location.pathname === "/vs";
+
 const whyFromPath = () => window.location.pathname === "/why";
 
 const mcpFromPath = () => window.location.pathname === "/mcp";
@@ -116,10 +125,13 @@ export default function App() {
   const [guideSlug] = useState<string | null>(guideFromPath);
   const [compareSlug] = useState<string | null>(compareFromPath);
   const [isPrices] = useState(pricesFromPath);
+  const [isTldHub] = useState(tldHubFromPath);
+  const [isGuideHub] = useState(guideHubFromPath);
+  const [isCompareHub] = useState(compareHubFromPath);
   const [isWhy] = useState(whyFromPath);
   const [isMcp] = useState(mcpFromPath);
   const [saved] = useState(() => {
-    if (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() || advancedFromPath()) return null;
+    if (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() || advancedFromPath() || tldHubFromPath() || guideHubFromPath() || compareHubFromPath()) return null;
     // /?q= 或 /?tpl= 是显式预填入口（分享搜索链接 / 指南页 CTA），直接进首页预填，不恢复上次结果
     const params = new URLSearchParams(window.location.search);
     if (params.get("q") || params.get("tpl")) return null;
@@ -383,6 +395,21 @@ export default function App() {
   ]
     .filter(Boolean)
     .join(" · ");
+
+  if (isTldHub || isGuideHub || isCompareHub) {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Header
+          onLogoClick={() => window.location.assign("/")}
+          shortlistCount={shortlist.items.length}
+          onShortlistClick={() => window.location.assign("/")}
+        />
+        <Suspense fallback={<PageFallback />}>
+          {isTldHub ? <TldHubPage /> : isGuideHub ? <GuideHubPage /> : <CompareHubPage />}
+        </Suspense>
+      </div>
+    );
+  }
 
   if (guideSlug) {
     return (
@@ -696,6 +723,9 @@ export default function App() {
           <div className="mx-auto mb-5 max-w-3xl px-4">
             <p className="font-semibold text-txt1">{t("footer.tldGuides")}</p>
             <div className="mt-1.5 flex flex-wrap justify-center gap-x-1 gap-y-0.5">
+              <a className="inline-flex min-h-[44px] items-center px-2 text-brand hover:underline" href={`/tld?lang=${lang}`}>
+                {t("footer.browseAll")}
+              </a>
               {TLD_LIST.map((tld) => (
                 <a key={tld} className="inline-flex min-h-[44px] items-center px-2 font-mono hover:text-brand hover:underline" href={`/tld/${tld}?lang=${lang}`}>
                   .{tld}
@@ -719,6 +749,9 @@ export default function App() {
           <div className="mx-auto mb-5 max-w-3xl px-4">
             <p className="font-semibold text-txt1">{t("footer.industryGuides")}</p>
             <div className="mt-1.5 flex flex-wrap justify-center gap-x-1 gap-y-0.5">
+              <a className="inline-flex min-h-[44px] items-center px-2 text-brand hover:underline" href={`/guide?lang=${lang}`}>
+                {t("footer.browseAll")}
+              </a>
               {GUIDE_LABELS.map((g) => (
                 <a key={g.slug} className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/guide/${g.slug}?lang=${lang}`}>
                   {g[lang]}
@@ -730,6 +763,9 @@ export default function App() {
           <div className="mx-auto mb-5 max-w-3xl px-4">
             <p className="font-semibold text-txt1">{t("footer.compares")}</p>
             <div className="mt-1.5 flex flex-wrap justify-center gap-x-1 gap-y-0.5">
+              <a className="inline-flex min-h-[44px] items-center px-2 text-brand hover:underline" href={`/vs?lang=${lang}`}>
+                {t("footer.browseAll")}
+              </a>
               {COMPARE_SLUGS.map((slug) => (
                 <a key={slug} className="inline-flex min-h-[44px] items-center px-2 font-mono hover:text-brand hover:underline" href={`/vs/${slug}?lang=${lang}`}>
                   {compareLabel(slug)}
