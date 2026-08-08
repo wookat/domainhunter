@@ -3093,6 +3093,372 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  interior: {
+    slug: "interior",
+    tlds: [
+      { tld: "com", zh: "装修是十万元级决策，.com 的信任感直接影响到店率", en: "Renovation is a five-figure decision — .com trust directly moves consult bookings" },
+      { tld: "design", zh: "设计工作室的定位后缀，域名本身就是一句自我介绍", en: "The positioning suffix for design studios — the domain is its own introduction" },
+      { tld: "studio", zh: "小而美的独立设计室气质，作品集站点的天然选择", en: "Boutique independent-studio energy — a natural home for portfolio sites" },
+    ],
+    zh: {
+      label: "装修设计",
+      title: "装修/室内设计公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "装修公司/室内设计工作室命名指南：空间意象、材质词根、业主转述测试等 5 种思路，尚层/Studio McGee/土巴兔等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的装修设计域名。",
+      intro:
+        "装修行业的名字要跨过一道特殊的信任门槛：客户要把家的钥匙和几十万预算交给你，工期还长达数月。这决定了装修命名的第一原则是「像一家能负责到底的公司」——过于俏皮或网感的名字，在签合同那一刻会被业主的家人质疑。第二个特点是获客链路的分裂：设计工作室靠作品集与转介绍，名字要有审美暗示；施工队与整装公司靠本地搜索与平台流量，名字要好搜好记。第三是「业主转述场景」的高频：装修决策几乎必然经过邻居、亲戚、业主群的多轮转述——「我家是 X 做的」这句话就是你最大的广告位，名字必须在方言和微信语音里都不走样。最后，行业口碑两极分化严重，一个中性偏正面的名字是口碑资产的容器，别让名字先替你许下兑现不了的承诺。",
+      namingIdeas: [
+        "空间与光线意象：宅、舍、居、间、light、space、nest——装修卖的是「未来的家」，名字先给客户一个画面；测试方法是问自己「这个词让我想住进去吗」",
+        "材质与工艺词根：木、砼、素、原、oak、stone、craft——材质词自带质感与工艺暗示，适合主打自然风或极简风的设计工作室",
+        "「负责感」命名：整装与施工公司优先传递可靠——层、匠、诚、方圆这类有分量的字眼，比创意造词更能过业主家人那一关",
+        "业主群转述测试：把名字放进「我家是 X 做的，你要不要也找他们看看」念一遍——拗口、歧义、记不住的名字在转介绍链条上每传一次折损一次",
+        "设计室用人名要配作品：以主案设计师命名（如 Studio McGee 模式）能积累个人 IP，但域名与社交账号必须全套拿下，且要接受「公司卖不掉」的代价",
+      ],
+      cases: [
+        { name: "尚层", takeaway: "「尚」（崇尚/高尚）+「层」（空间的层次/阶层）：两个字同时说出审美追求与高端定位，别墅装饰的目标客群一听就知道是为自己开的——中文装修命名里定位精准的范本" },
+        { name: "Studio McGee", takeaway: "studio + 创始人姓氏：作品与人绑定，Instagram 上的每一张美图都在为名字积累信任，最终反向输出电视节目与家居产品线——设计工作室「个人 IP 命名」的天花板" },
+        { name: "土巴兔", takeaway: "土巴（泥土的方言感）+ 兔（亲和吉祥物）：把「装修」这个又土又累的品类变得憨厚可亲，三个字在下沉市场的记忆度远超英文名——平台型获客的名字要的是国民度不是格调" },
+        { name: "Houzz", takeaway: "house + buzz 的变形拼写：一个词说清「围绕房子的热闹社区」，双 z 结尾自带互联网产品感——品类词轻变形在家居平台命名里的经典执行" },
+      ],
+      pitfalls: [
+        "堆砌「豪」「皇」「至尊」类字眼：高端感不是喊出来的，这类名字反而暗示审美不可信",
+        "用「XX 装饰工程有限公司」全称当品牌：注册名与品牌名要分开，品牌名超过 4 个字就很难进业主群的日常转述",
+        "设计工作室起施工队的名：名字气质与目标客单价错位，作品集再好也约不来对的客户",
+        "忽略本地搜索与地图入口：装修获客高度本地化，名字在地图、点评与本地平台上的可搜索性要提前验证，别与本地同行撞名",
+      ],
+    },
+    en: {
+      label: "Interior & renovation",
+      title: "How to Name an Interior Design or Renovation Firm: Strategies, Cases & Domains",
+      metaDescription:
+        "Interior design and renovation naming guide: spatial imagery, material roots, the homeowner-referral test, breakdowns of Studio McGee/Houzz/Havenly, recommended TLDs and pitfalls — then hunt an available design domain with AI.",
+      intro:
+        "A renovation firm's name must clear an unusual trust bar: clients hand you their house keys and a five-figure budget, then live with your work for months of construction and years after. That sets principle one — sound like a company that finishes what it starts; a too-cute, too-clever name gets second-guessed by the client's whole family at contract time. Second, the industry's funnels are split: design studios win on portfolios and referrals, so the name should whisper taste; contractors and full-service firms win on local search, so the name must be findable and instantly memorable. Third, renovation decisions travel through neighbors, relatives and homeowner group chats — \"X did our place\" is your biggest ad placement, and the name must survive being said aloud across accents and voice messages. Finally, this is a reputation-polarized trade: a calm, quietly positive name is a container for accumulated word of mouth — don't let the name make promises your crews have to live down.",
+      namingIdeas: [
+        "Draw on space and light: haven, nest, dwell, atelier, light, room — you're selling the client's future home, so the name should paint a picture first; ask yourself \"does this word make me want to live in it?\"",
+        "Mine material and craft roots: oak, stone, timber, plaster, craft — material words carry texture and workmanship, ideal for studios with a natural or minimalist signature",
+        "Name for accountability: contractors and design-build firms should lead with reliability — solid, weighty words (True, Foundry, Beam) pass the client's-family test better than clever coinages",
+        "Run the group-chat referral test: say \"X did our place — want their number?\" out loud; a name that stumbles, puns awkwardly, or fades from memory decays at every hop of the referral chain",
+        "Use founder names only with a portfolio engine: the Studio McGee model compounds personal brand into the firm, but you must own the domain and every social handle — and accept that the company becomes harder to sell",
+      ],
+      cases: [
+        { name: "Studio McGee", takeaway: "studio + the founders' surname: work and person fused, every Instagram photo compounding trust into the name — eventually spinning out a Netflix show and product lines; the ceiling of personal-brand naming for design studios" },
+        { name: "Houzz", takeaway: "house + buzz in one mutated spelling: an entire \"community buzzing around homes\" in five letters, with the double-z lending product energy — the classic light-twist-on-category-word play for home platforms" },
+        { name: "Havenly", takeaway: "haven + -ly: the outcome (a home that feels like a refuge) packaged with a soft adverbial ending — outcome-first naming that positions online design services as comfort, not construction" },
+        { name: "Block Renovation", takeaway: "A blunt construction word + the category: deliberately unpoetic, signaling process and predictability in an industry famous for chaos — proof that in renovation, sounding boring can be a trust strategy" },
+      ],
+      pitfalls: [
+        "Piling on \"luxury/royal/elite\": prestige is shown in the portfolio, not shouted in the name — these words read as a taste warning, not a promise",
+        "Trading as the full legal name (\"XYZ Decoration Engineering Co.\"): keep the registered entity and the brand separate; anything over three words dies in homeowner group chats",
+        "A contractor-sounding name on a design studio (or vice versa): temperament–price mismatch means even a great portfolio attracts the wrong briefs",
+        "Skipping the local search check: renovation demand is fiercely local — verify the name on maps and review platforms first, and make sure a nearby rival isn't already one letter away",
+      ],
+    },
+  },
+  studyabroad: {
+    slug: "studyabroad",
+    tlds: [
+      { tld: "com", zh: "家长掏几十万学费前会反复核实，.com 是尽调的第一关", en: "Parents vet you hard before wiring tuition — .com is the first credibility check" },
+      { tld: "co", zh: "面向学生端的年轻化品牌替身，短而利落不失专业", en: "A younger-feeling stand-in for student-facing brands — short, sharp, still professional" },
+      { tld: "online", zh: "语培与网课业务直给定位，服务形态一目了然", en: "Says the delivery model outright for test-prep and online programs" },
+    ],
+    zh: {
+      label: "留学教育",
+      title: "留学机构/国际教育品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "留学中介/国际教育/语培机构命名指南：桥梁意象、目的地词根、双客户测试等 5 种思路，新东方/启德/IDP 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的留学教育域名。",
+      intro:
+        "留学服务的名字要同时说服两代人：付钱的家长要看到「靠谱、专业、有出路」，实际使用服务的学生要觉得「不土、懂我」。两代人的审美几乎是对立的——这是留学命名最独特的约束。第二个特点是决策周期长、客单价高：从初次咨询到签约往往数月，家长会反复搜索你的名字查口碑，一个搜索结果干净、无歧义的名字是尽调环节的隐形加分项。第三是天然的跨语言场景：名字会出现在中文的家长群、英文的申请文书邮件署名和目的地院校的合作名录里，双语都要立得住。最后注意行业的信任敏感性：留学中介的负面口碑传播极快，名字要中性稳健，切忌「保录」「直通」这类把承诺写进名字的做法——监管与舆情迟早找上门。",
+      namingIdeas: [
+        "桥梁与航程意象：bridge、pathway、compass、启、途、帆——留学的本质是「从此岸到彼岸」，方位与航程词根既有画面又不锁定具体国家",
+        "目的地词根慎用：名字里带 UK/US/藤（Ivy）能精准获客，但业务扩到其他国家线时名字就成了天花板——除非战略上就做单一目的地",
+        "两代人测试：把候选名分别念给一位家长和一位高中生听——家长觉得可信、学生不觉得尴尬才算过关；只过一边的名字会在签约桌上被另一边否决",
+        "教育感词根嫁接：academy、scholar、mentor、德、思、博——嫁接一个教育词根让专业性直给，再配一个气质词避免呆板（如「启德」的启 + 德）",
+        "查目的地语言歧义：名字会出现在英文邮件与院校合作场景——确认拼音或英文名在目的地语言里无歧义、好发音，最好让母语者念一遍",
+      ],
+      cases: [
+        { name: "新东方", takeaway: "「新」+「东方」：在出国潮起点喊出「东方学生的新出路」，地理词自带身份认同，两个常用字组合出全国性的记忆度——时代情绪注入名字的经典案例" },
+        { name: "启德", takeaway: "「启」（开启/启程）+「德」（品德/德才）：一个字给行动一个字给信任，家长听到的是「靠谱」，学生听到的是「出发」——两代人测试双通过的中文范本" },
+        { name: "IDP", takeaway: "International Development Program 的缩写：机构背景（澳洲高校联合创办）让三个字母自带官方信任，还持有雅思合股方身份——缩写命名只在「有硬背书」时才成立" },
+        { name: "Crimson Education", takeaway: "crimson 是哈佛校色：一个颜色词把「藤校」写进名字却不落俗套，比直接叫 Ivy 高一个段位——用文化暗号替代直白承诺的高级做法" },
+      ],
+      pitfalls: [
+        "把承诺写进名字（保录、直通、100%）：监管红线加舆情火药桶，一单纠纷就全网反噬",
+        "堆砌「国际」「环球」「海外」：三个词加起来等于没说，搜索结果里和几百家同行糊成一片",
+        "只顾中文响亮不查英文观感：名字要出现在申请邮件与院校合作名录里，拼音在英文语境里拗口或有歧义都是隐形减分",
+        "用创始人头衔命名（X 老师留学）：个人 IP 获客快，但机构化扩张与转让时名字就是枷锁，且头衔真实性会被反复审视",
+      ],
+    },
+    en: {
+      label: "Study abroad",
+      title: "How to Name a Study Abroad or International Education Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Study abroad and international education naming guide: journey imagery, destination roots, the two-generation test, breakdowns of IDP/Crimson Education/Kaplan, recommended TLDs and pitfalls — then hunt an available education domain with AI.",
+      intro:
+        "A study-abroad brand must persuade two generations at once: the parents paying tuition need to hear \"credible, professional, well-connected\", while the students actually using the service need it to feel current and on their side. Those two tastes are nearly opposites — the defining constraint of this category. Second, the sales cycle is long and the ticket is high: families research you for months, searching the name repeatedly to check reviews, so a clean, unambiguous search footprint is an invisible advantage in their due diligence. Third, the name lives natively in two languages — in parents' group chats, in application email signatures, and in partner universities' agent directories — and must stand up in both. Finally, respect the trust sensitivity of the trade: bad news travels fastest in education, so keep the name steady and neutral, and never write a promise into it — \"guaranteed admission\" naming is a regulatory and reputational time bomb.",
+      namingIdeas: [
+        "Use bridge and voyage imagery: bridge, pathway, compass, horizon, sail — studying abroad is a crossing, and journey roots paint the picture without locking you to one destination",
+        "Handle destination roots with care: UK/US/Ivy in the name targets precisely but caps expansion the moment you add country lines — only commit if single-destination is the strategy",
+        "Run the two-generation test: read the shortlist to a parent and a teenager separately — it passes only if the parent finds it trustworthy and the student isn't embarrassed to say it; a name that wins one side gets vetoed by the other at signing",
+        "Graft an education root: academy, scholar, mentor, prep — one root for authority, paired with a temperament word so it doesn't read institutional and stiff",
+        "Clear the destination language: the name will appear in English emails and university partner lists — confirm it's easy to pronounce and free of odd meanings for native speakers before committing",
+      ],
+      cases: [
+        { name: "IDP", takeaway: "An acronym of International Development Program: co-founded by Australian universities and a co-owner of IELTS — three letters that work only because hard institutional backing stands behind them; acronym naming needs collateral" },
+        { name: "Crimson Education", takeaway: "Crimson is Harvard's color: one word writes \"Ivy League\" into the name as a cultural password rather than a blunt claim — a class above naming yourself Ivy-anything" },
+        { name: "Kaplan", takeaway: "The founder's surname scaled into a global education group: decades of test-prep results turned a family name into category shorthand — surname naming works when the product compounds reputation for years" },
+        { name: "Flywire", takeaway: "fly + wire: cross-border tuition payments compressed into two syllables of speed and connection — adjacent-category proof that international education names win by evoking the crossing, not the paperwork" },
+      ],
+      pitfalls: [
+        "Writing the promise into the name (Guaranteed, Direct-Admit, 100%): a regulatory red line and a PR powder keg — one dispute detonates it",
+        "Stacking \"international/global/overseas\": three fillers that say nothing and blur you into hundreds of rivals on the results page",
+        "Clearing only the Chinese name: the brand appears in application emails and partner directories — a romanization that's clumsy or ambiguous in English quietly costs credibility",
+        "Naming after the founder's title (\"Teacher X Abroad\"): fast for personal-brand acquisition, but a shackle for institutional growth — and the title itself will be scrutinized forever",
+      ],
+    },
+  },
+  usedcar: {
+    slug: "usedcar",
+    tlds: [
+      { tld: "com", zh: "二手车最缺的就是信任，.com 是打消疑虑的第一步", en: "Trust is the scarcest asset in used cars — .com is step one of dispelling doubt" },
+      { tld: "cn", zh: "国内车源与线下门店业务，备案合规 .cn 最顺", en: "For China-based inventory and showrooms, .cn clears ICP filing smoothest" },
+      { tld: "net", zh: "车源网络与交易平台的气质后缀，行业沉淀已久", en: "A long-established fit for inventory networks and trading platforms" },
+    ],
+    zh: {
+      label: "二手车",
+      title: "二手车品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "二手车电商/车行/检测服务命名指南：信任词根、透明意象、砍价场景测试等 5 种思路，瓜子/Carvana/CarMax 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的二手车域名。",
+      intro:
+        "二手车是经济学教科书里「柠檬市场」的原型：信息不对称让买家默认卖家在隐瞒什么。所以二手车命名的第一使命不是好听，而是对冲怀疑——名字要传递透明、检测、有据可查的信号。第二个特点是客单价与决策焦虑齐高：几万到几十万的支出，买家会把你的名字连同「靠谱吗」「坑不坑」一起搜索，名字的口碑联想会被放大检视。第三是场景的烟火气：二手车交易发生在车贩子的口头报价、本地车友群和短视频探店里，名字要经得起方言念、经得起砍价场景的反复提及。最后注意业务分层：C2C 平台要国民度与好念，精品车行要格调与专业，检测评估服务要中立与权威——名字的气质选错层，广告费就白花。",
+      namingIdeas: [
+        "信任与透明词根：真、诚、透、check、true、fair——直接对冲柠檬市场的默认怀疑；配合「没有中间商」类的透明主张，名字与卖点互相加固",
+        "生活化比喻降低戒备：瓜子、豆瓣式的日常词汇让交易显得轻松无套路——大宗焦虑型消费反而适合举重若轻的名字，但要配得上真实的服务水准",
+        "车轮与旅程意象：drive、wheel、途、程、road——绕开「旧车」的贬值感，把叙事引向「下一段旅程」；适合精品车行与出口贸易商",
+        "砍价场景测试：想象买家在电话里说「我在 X 看了一辆」——名字要在方言、语音消息和车友群转述里不走样；三个字以内的中文名在这个行业有明显优势",
+        "检测服务要中立感：第三方检测评估的名字避免站买卖任何一边——用「数据、标准、实验室」类词根（如 carfax 的 fax 档案感）建立裁判形象",
+      ],
+      cases: [
+        { name: "瓜子二手车", takeaway: "「瓜子」：用嗑瓜子的日常轻松感消解大宗交易的紧张，两个字国民度拉满，配合「没有中间商赚差价」的口号名实互锁——C2C 平台命名的中文教科书" },
+        { name: "Carvana", takeaway: "car + nirvana 的合成：「买车的极乐体验」写进名字，配合玻璃塔提车的仪式感落地——名字先许诺体验，再用产品兑现，体验型电商命名的完整示范" },
+        { name: "CarMax", takeaway: "car + max 的直给结构：最大选择、最大确定性，一口价政策与名字互相印证——在充满套路的行业里，「简单直接」本身就是差异化定位" },
+        { name: "Carfax", takeaway: "car + fax（传真/档案）：一辆车的历史像档案一样可调取，名字即产品说明——第三方数据服务命名的黄金标准，中立感与权威感兼得" },
+      ],
+      pitfalls: [
+        "名字里带「豪」「尊」「皇家」：二手车买家最警惕被包装，浮夸字眼等于自我举报",
+        "用「旧车」「淘车」等贬值词根定调：把叙事锁死在「便宜旧货」，精品车源与售后服务的溢价空间被名字提前放弃",
+        "平台名与车行名错位：三个字国民风的名字开精品车行显得廉价，英文格调名做下沉市场没人记得住——先想清楚做哪一层",
+        "忽略搜索联想词：买家必然搜「X 靠谱吗」——起名前先搜一遍候选名的联想词，避开已有负面沉淀的相似名",
+      ],
+    },
+    en: {
+      label: "Used cars",
+      title: "How to Name a Used Car Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Used car marketplace, dealership and inspection naming guide: trust roots, transparency imagery, the haggling-call test, breakdowns of Carvana/CarMax/Carfax, recommended TLDs and pitfalls — then hunt an available auto domain with AI.",
+      intro:
+        "Used cars are the textbook \"market for lemons\": information asymmetry makes every buyer assume the seller is hiding something. So the first job of a used-car name isn't beauty — it's counteracting suspicion, signaling transparency, inspection, and verifiable history. Second, ticket size and anxiety rise together: on a five-figure purchase, buyers will google your name next to \"scam\" and \"reviews\", so the name's reputation associations get examined under a microscope. Third, the trade lives in gritty, spoken contexts — phone haggling, local car groups, walk-around videos — and the name must survive accents, voice notes and being repeated mid-negotiation. Finally, pick your layer before you pick your name: C2C marketplaces need household memorability, boutique dealers need polish, inspection services need referee-grade neutrality — a name pitched at the wrong layer wastes every ad dollar.",
+      namingIdeas: [
+        "Lead with trust and transparency roots: true, fair, clear, check, vault — directly offsetting the lemon-market default of doubt; pair with a transparency promise so name and pitch reinforce each other",
+        "Disarm with everyday words: casual, snackable names make a tense transaction feel routine — big-ticket anxiety purchases reward lightness, provided the service actually delivers",
+        "Steer to the journey, not the age: drive, wheel, road, miles — sidestep the depreciation frame of \"old car\" and point the story at the next chapter; ideal for boutique dealers and exporters",
+        "Run the haggling-call test: picture a buyer saying \"I saw one at X\" over a bad phone line — the name must survive accents, voice messages and group-chat retelling; short beats clever in this trade",
+        "Keep inspection brands neutral: third-party inspectors must not sound like they work for either side — data, record and lab roots (the fax in Carfax) build the referee persona",
+      ],
+      cases: [
+        { name: "Carvana", takeaway: "car + nirvana: \"the blissful way to buy a car\" written into the name, then made literal with glass vending towers — promise the experience in the name, deliver it in the product; the full playbook of experience-first commerce naming" },
+        { name: "CarMax", takeaway: "car + max, maximally blunt: biggest selection, most certainty, with no-haggle pricing echoing the name's directness — in a trade famous for games, plain-dealing itself is the differentiator" },
+        { name: "Carfax", takeaway: "car + fax: a vehicle's history retrievable like a filed document — the name is the product spec; the gold standard for third-party data services, neutral and authoritative at once" },
+        { name: "Cazoo", takeaway: "car + zoo(m) energy in a coined two-syllable word: playful, ownable, made for TV ads — proof that even lemons-market brands can win attention with lightness, though the name must be backed by real guarantees" },
+      ],
+      pitfalls: [
+        "Royal/luxury/elite in the name: used-car buyers are hyper-alert to dressing-up — grandiose words read as a confession",
+        "Anchoring on depreciation roots (\"old\", \"cheap\", \"bargain\"): the name pre-surrenders any premium for certified inventory and after-sale service",
+        "Layer mismatch: a folksy marketplace name on a boutique dealership reads cheap; a polished English name in a mass local market gets forgotten — choose your layer first",
+        "Ignoring search association: buyers will search \"is X legit\" — google every shortlisted name first and steer clear of lookalikes with existing baggage",
+      ],
+    },
+  },
+  insurance: {
+    slug: "insurance",
+    tlds: [
+      { tld: "com", zh: "保险卖的是几十年的承诺，.com 的稳重感无可替代", en: "Insurance sells decades-long promises — nothing substitutes for .com gravitas" },
+      { tld: "life", zh: "寿险与健康险业务定位直给，后缀即品类声明", en: "States the life & health category outright — the suffix is the positioning" },
+      { tld: "pro", zh: "经纪人个人品牌与专业顾问站点的利落选择", en: "A clean fit for broker personal brands and advisory practices" },
+    ],
+    zh: {
+      label: "保险经纪",
+      title: "保险经纪/保险科技品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "保险经纪/保险科技/代理人团队命名指南：庇护意象、确定性词根、理赔场景测试等 5 种思路，Lemonade/蚂蚁保/Oscar 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的保险域名。",
+      intro:
+        "保险是「先付钱、后兑现、希望永远用不上」的反直觉商品，名字承担的是整个交易里最稀缺的东西：对遥远承诺的信任。传统保险命名走「庞大机构」路线（人寿、平安、太平），用体量感背书兑付能力；保险科技新品牌则反其道而行——用轻松、人性的名字（Lemonade、Oscar）对冲行业「冷漠、拖赔」的刻板印象。两条路线都成立，关键是与商业模式匹配：靠资产负债表吃饭的要稳重，靠体验与效率吃饭的要新鲜。第二个特点是场景的严肃性不对称：投保时可以轻松，理赔时刻名字会被焦虑的客户反复念叨——名字要经得起「人生最糟的一天」的检视。第三是监管与合规敏感：名字不能暗示收益承诺或官方背景，展业物料上名字旁边永远跟着牌照编号，起名前先查监管的命名负面清单。",
+      namingIdeas: [
+        "庇护与守护意象：伞、盾、港、shield、cover、haven——保险的原型意象最直觉也最耐用；测试标准是「出险那天看到这个名字，是安心还是讽刺」",
+        "确定性词根：安、稳、诚、sure、trust、solid——把「一定赔」的承诺感写进音节里；sure 词根在英文保险命名里几乎是行业暗号（Insure/Assurance）",
+        "反差人性化：用日常温暖的词（柠檬水、人名）对冲行业冷漠感——适合主打体验与快赔的科技品牌，但要有真实的体验支撑，否则反差变反讽",
+        "理赔场景测试：想象客户在医院走廊或事故现场打开你的 App——名字与图标在那个时刻要传递「有人管」的确定感，俏皮过头的名字此刻会显得轻浮",
+        "经纪人个人品牌配结构词：独立经纪人与团队用「人名/地名 + 保险经纪/顾问」的结构最稳——获客靠人的信任，名字只需专业不添乱",
+      ],
+      cases: [
+        { name: "Lemonade", takeaway: "「柠檬水」：把最坏的遭遇酿成清爽的补偿（when life gives you lemons），一个词完成「反保险刻板印象」的定位，配合秒级理赔的产品兑现——行业颠覆者命名的标杆" },
+        { name: "蚂蚁保", takeaway: "「蚂蚁」（微小但众多）+「保」：品类字直给，蚂蚁的渺小反而暗合「普惠、人人买得起」的定位，背靠支付宝的分发生态——平台型保险入口命名的范本" },
+        { name: "Oscar", takeaway: "用一个亲切的人名做健康险：像朋友而不像机构，官网与理赔信都以第一人称写作——名字定调了整个品牌的说话方式，人格化命名的完整执行" },
+        { name: "众安", takeaway: "「众」（众人/互联网的连接）+「安」（平安/安心）：两个字同时说出互联网基因与保险本质，读音干脆利落——中文保险科技命名里新旧平衡的典型" },
+      ],
+      pitfalls: [
+        "暗示收益或官方背景（国字头、XX 联合）：监管命名负面清单直接卡死，备案都过不了",
+        "俏皮过头没有兑现：轻松的名字必须配得上真实的理赔体验，否则出险客户的每一条差评都会引用你的名字反讽",
+        "用缩写堆专业感（XX 保经、XX 保代）：合规全称留给牌照，品牌名要让家人群里转发时念得出、记得住",
+        "忽略谐音与歧义排查：保险名字最怕不吉利联想——候选名用各主要方言念一遍，「赔」「损」「险」的谐音雷区要逐个排掉",
+      ],
+    },
+    en: {
+      label: "Insurance",
+      title: "How to Name an Insurance or Insurtech Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Insurance brokerage and insurtech naming guide: shelter imagery, certainty roots, the claim-day test, breakdowns of Lemonade/Oscar/Root, recommended TLDs and pitfalls — then hunt an available insurance domain with AI.",
+      intro:
+        "Insurance is the counterintuitive product you pay for first, redeem later, and hope never to use — so the name carries the scarcest asset in the deal: trust in a distant promise. Legacy naming goes institutional (Prudential, Allianz) — sheer mass vouching for the balance sheet. Insurtech challengers run the opposite play: warm, human names (Lemonade, Oscar) to offset the industry's cold, claim-denying stereotype. Both work; what matters is matching the model — balance-sheet businesses should sound like granite, experience businesses like fresh air. Second, the emotional stakes are asymmetric: buying can be lighthearted, but on claim day an anxious customer will repeat your name in a hospital corridor — it must hold up on the worst day of someone's life. Third, this is a regulated namespace: no implied returns, no official-sounding prefixes, and your trading name will sit next to a license number on every document — check the regulator's naming blacklist before falling in love with anything.",
+      namingIdeas: [
+        "Reach for shelter imagery: shield, cover, haven, umbrella, harbor — insurance's archetypal images are the most intuitive and most durable; test: on claim day, does the name feel reassuring or ironic?",
+        "Build on certainty roots: sure, true, solid, root, anchor — write the \"we will pay\" promise into the syllables; the sure root is practically the industry's password (Insure, Assurance)",
+        "Humanize by contrast: an everyday warm word or a first name offsets institutional coldness — right for experience-led insurtechs, but only if claims actually feel that friendly; unearned contrast curdles into sarcasm",
+        "Run the claim-day test: picture a customer opening your app at a crash site or a hospital corridor — name and icon must radiate \"someone's got you\"; a too-jokey name reads flippant in that moment",
+        "Keep broker brands structural: independent brokers and agencies do best with name/place + insurance advisors — the trust lives in the person; the name just needs to stay professional and out of the way",
+      ],
+      cases: [
+        { name: "Lemonade", takeaway: "When life gives you lemons: the worst event brewed into fresh compensation — one word repositions the entire category, backed by seconds-fast claims; the benchmark for disruptor naming in insurance" },
+        { name: "Oscar", takeaway: "A friendly first name on health insurance: a company that talks like a person, with claims letters written in first person — the name set the voice for the whole brand; personification executed end to end" },
+        { name: "Root", takeaway: "A grounding one-syllable noun for usage-based car insurance: fairness from first principles (priced from how you actually drive) — certainty-root naming with a tech-native accent" },
+        { name: "Policygenius", takeaway: "policy + genius: the smart friend who reads the fine print for you — comparison marketplaces win by naming the buyer's wish (expertise on their side), not the product" },
+      ],
+      pitfalls: [
+        "Implying returns or official status (State-, National-, Guaranteed-): regulators' naming blacklists will stop the registration before the market ever judges it",
+        "Whimsy without delivery: a playful name writes a check the claims department must cash — every denied claim becomes an ironic screenshot of your brand",
+        "Acronym armor (XYZ B&A Ltd.): leave the compliance name to the license; the brand must survive being said aloud in a family group chat",
+        "Skipping the bad-association sweep: insurance names live and die on connotation — read every candidate aloud for unlucky homophones and \"loss/risk\" echoes across your customers' languages",
+      ],
+    },
+  },
+  farm: {
+    slug: "farm",
+    tlds: [
+      { tld: "com", zh: "生鲜复购靠信任沉淀，.com 承接品牌搜索最稳", en: "Fresh-food repeat orders run on trust — .com anchors branded search best" },
+      { tld: "life", zh: "把「生活方式」写进后缀，农场品牌的气质延伸", en: "Writes the lifestyle into the suffix — a natural extension for farm brands" },
+      { tld: "shop", zh: "农场直供电商与周期购业务的直给入口", en: "A straight-shot storefront for farm-direct e-commerce and subscriptions" },
+    ],
+    zh: {
+      label: "农场生鲜",
+      title: "农场/生鲜品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "农场/生鲜电商/农产品品牌命名指南：土地意象、时令词根、产地故事等 5 种思路，褚橙/盒马/Oatly 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的农场生鲜域名。",
+      intro:
+        "农产品是典型的「信任品」：好不好吃、安不安全，买之前看不出来，吃过之后才知道。名字的第一使命就是提前发放信任——产地、时令、种植者的脸，都是名字可以携带的信任信号。第二个特点是「同质化突围」：白菜就是白菜，鸡蛋就是鸡蛋，农产品本身难以差异化，名字与品牌几乎是唯一的溢价来源——褚橙与普通冰糖橙的价差，大半是名字里那个人背的书。第三是渠道决定名字气质：地头批发靠产地名，社区团购靠亲切好念，精品商超与出口靠品牌感，同一颗草莓在三个渠道需要三种名字策略。最后是天然的内容红利：农场有四季、有生长、有收获，名字若自带叙事感，短视频与直播的内容素材取之不尽。",
+      namingIdeas: [
+        "土地与时令词根：田、垄、鲜、集、farm、harvest、dawn——泥土与清晨的画面感是农产品命名的母语，城市消费者买的正是这份「离土地近」的想象",
+        "人名背书命名：用种植者/创始人的真名（褚橙模式）——「一个具体的人为品质负责」是农产品最强的信任结构，但人设与品质必须真实经得起追溯",
+        "产地地名要有授权意识：五常大米、赣南脐橙式的地理标志自带信任，但区域公共品牌人人可用——地名之上还要叠加自有品牌名，否则永远在为产地打工",
+        "时令与新鲜感直给：晨摘、daily、季节词——生鲜的核心卖点就是「新鲜」，名字里预装时间感，让「今早刚摘」的叙事顺理成章",
+        "社区团购要好念好转发：团长在群里发「今天开团 X」——名字超过三个字、有生僻字、不好打字，转发链条上每一环都在流失",
+      ],
+      cases: [
+        { name: "褚橙", takeaway: "创始人姓氏 + 品类字：一个「褚」字背后是人生起落的故事，把普通冰糖橙卖出人格溢价——农产品「人名背书」命名的天花板，证明信任品的名字要有人的温度" },
+        { name: "盒马", takeaway: "「盒」（到家的载体）+「马」（速度与吉祥物）：两个具体名词拼出「快速到家的生鲜」，河马形象让冷链生意有了亲和入口——渠道品牌用具象词降低理解成本的范本" },
+        { name: "Oatly", takeaway: "oat + -ly：品类词加一个轻快尾缀，把燕麦奶从原料变成生活方式宣言，包装文案与名字一体化人格输出——农产品深加工品牌「品类即品牌」的经典执行" },
+        { name: "十月稻田", takeaway: "「十月」（收获时令）+「稻田」（土地画面）：四个字自带丰收画面与时间戳，在电商货架上比产地名更有品牌独占性——时令 + 土地意象组合的教科书" },
+      ],
+      pitfalls: [
+        "堆砌「绿色」「有机」「天然」：认证词不是品牌名，没有证书支撑还会引来监管与打假",
+        "只用地理标志不建自有品牌：区域公共品牌人人可用，你的复购与口碑最终沉淀不到自己身上",
+        "名字画面与实际品控脱节：「晨摘」「现捞」写进名字，冷链却做不到——生鲜差评的杀伤力会让名字变成呈堂证供",
+        "忽略平台搜索习惯：消费者在电商与团购平台搜品类词（草莓、大米）——名字要能与品类词自然组合出现，生僻字与纯英文名在货架搜索里天然吃亏",
+      ],
+    },
+    en: {
+      label: "Farms & fresh food",
+      title: "How to Name a Farm or Fresh Food Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Farm, fresh produce and CSA naming guide: land imagery, harvest roots, grower-story naming, breakdowns of Oatly/Misfits Market/Bowery, recommended TLDs and pitfalls — then hunt an available farm domain with AI.",
+      intro:
+        "Fresh food is the archetypal trust good: you can't tell how it tastes or how safely it was grown until after you've bought it. A farm brand's name must therefore issue trust in advance — origin, season, and the grower's face are all signals a name can carry. Second, produce is brutally commoditized: a tomato is a tomato, so the name and brand are nearly the only sources of premium — the price gap between a branded orange and a generic one is mostly the story the name carries. Third, channel dictates temperament: wholesale runs on origin names, community group-buys on short friendly ones, premium grocers and export on polished brands — the same strawberry needs three naming strategies in three channels. Finally, farms hold a content dividend: seasons, growth, and harvest give a narrative-rich name endless material for short video and live streams.",
+      namingIdeas: [
+        "Root in land and season: field, acre, harvest, dawn, grove — soil-and-morning imagery is the native tongue of food naming; urban customers are buying exactly that closeness to the land",
+        "Name after the grower: a real founder's name on the produce (the branded-orange play) is the strongest trust structure in food — one identifiable person answering for quality; but the story must survive scrutiny",
+        "Treat origin names as a floor, not a brand: protected origins carry built-in trust but belong to everyone in the region — stack your own brand on top or you'll forever be marketing the place, not the farm",
+        "Pre-install freshness: dawn-picked, daily, season words — freshness is the entire pitch, so put the timestamp in the name and let \"harvested this morning\" tell itself",
+        "Keep group-buy names forwardable: the organizer types \"today's deal: X\" into a group chat — long names, hard spellings and foreign words leak customers at every forward",
+      ],
+      cases: [
+        { name: "Oatly", takeaway: "oat + -ly: a category word with a breezy suffix that turned an ingredient into a lifestyle statement, with packaging copy extending the name's voice — the classic category-as-brand execution for processed farm goods" },
+        { name: "Misfits Market", takeaway: "Naming the product's flaw: \"misfit\" ugly produce reframed as charming rescue — the name does the entire positioning of fighting food waste at a discount; flaw-first naming at its bravest" },
+        { name: "Bowery", takeaway: "A New York street name on vertical farming: urban provenance made literal — locally grown indoors, blocks from the buyer; place-borrowing that signals the model, not just the mood" },
+        { name: "Vital Farms", takeaway: "vital + farms: ethics (pasture-raised vitality) fused with the category word, certification claims echoing the name on every carton — value-word + category structure for premium commodity goods" },
+      ],
+      pitfalls: [
+        "Stacking green/organic/natural: certification words aren't brand names — without the certificates they attract regulators, not customers",
+        "Riding an origin name without building your own: the regional brand belongs to every neighbor; your repeat customers end up loyal to the place instead of you",
+        "A name that outruns the cold chain: dawn-picked in the brand, wilted on arrival — in fresh food, bad reviews quote your name back as evidence",
+        "Ignoring how shoppers search: buyers type category words (strawberries, eggs) into marketplace search — pick a name that pairs naturally with them; obscure spellings lose the shelf before the taste test",
+      ],
+    },
+  },
+  barber: {
+    slug: "barber",
+    tlds: [
+      { tld: "com", zh: "本地搜索与地图入口的信任基线，连锁扩张不换名", en: "The trust baseline for local search and maps — no rename needed when you scale" },
+      { tld: "studio", zh: "发型工作室的气质后缀，预约制高客单价定位直给", en: "Salon-studio energy — states the appointment-only, premium positioning outright" },
+      { tld: "club", zh: "理发店的会员制与社群感，男士理容品牌尤其贴切", en: "Membership and clubhouse feel — especially apt for men's grooming brands" },
+    ],
+    zh: {
+      label: "美发理容",
+      title: "理发店/美发工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "理发店/美发沙龙/男士理容品牌命名指南：手艺词根、场所感命名、熟客转述测试等 5 种思路，Toni&Guy/星客多/Rudy's 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的美发域名。",
+      intro:
+        "理发是半径五百米的生意，也是信任浓度极高的生意——客人把「接下来一个月的形象」交到你手里。名字的第一战场是地图与门头：本地搜索里能不能被找到、路过时能不能被记住，决定了新店的生死。第二个特点是「熟客经济」的命名逻辑：美发的复购靠发型师与客人的关系，名字要经得起「我一直在 X 剪」的长期转述——太潮的名字三年就过时，而客人与你的关系可能十年。第三是业态的光谱：快剪店要效率感与低决策成本，设计师沙龙要审美与格调，男士理容馆（barbershop）要复古与仪式感——三种业态的命名语言几乎不通用。最后别忘了发型师个人 IP 的时代背景：客人越来越多是先在短视频里认识发型师、再找到店，店名与发型师个人品牌要能互相成就而不是互相打架。",
+      namingIdeas: [
+        "手艺与工具词根：剪、修、theory、razor、fade、blade——工具与手法词自带专业暗示，男士理容尤其吃这一套（fade 渐变、razor 剃刀都是圈内暗号）",
+        "场所感命名：Club、Parlor、工作室、小馆——把店命名成「一个想待着的地方」而不是「一次服务」，预约制与会员制的溢价从名字开始",
+        "复古绅士路线：男士理容馆借用老式理发店的黄金时代意象（1920s、barber pole、老板名字 + Sons）——复古感即仪式感，支撑高客单价",
+        "熟客转述测试：把名字放进「我一直在 X 剪头」念一遍——十年后这句话还自然吗？追热词的名字（如带当年流行语）会先于你的手艺过时",
+        "发型师 IP 联动：店名要给发型师个人品牌留位置——「X 老师 @ 店名」的结构要顺口；若主打单一创始人，直接用人名 + 场所词（Rudy's 模式）最经得起时间",
+      ],
+      cases: [
+        { name: "Toni&Guy", takeaway: "两位创始人兄弟的名字 + &：人名直给「手艺有人负责」，& 符号自带工坊传承感，从伦敦一家店走到全球连锁没换过名——人名命名在手艺行业的持久力证明" },
+        { name: "星客多", takeaway: "「星客」（把顾客当明星）+「多」（快剪的高流转）：三个字同时说出体验承诺与商业模式，配合「不办卡」的定位反行业套路——快剪业态命名与模式互锁的范本" },
+        { name: "Rudy's Barbershop", takeaway: "创始人名 + 品类词：Rudy's 的所有格结构像邻居家的店，barbershop 直给业态——从西雅图一家店到跨城连锁，「人名 + 品类」是社区生意最抗过时的公式" },
+        { name: "Chatters", takeaway: "「闲聊」：把理发椅上的社交属性写进名字——剪发半小时的闲聊正是熟客关系的粘合剂；一个词说出行业里最真实的用户体验，亲切且无地域限制" },
+      ],
+      pitfalls: [
+        "生造「高级感」英文名却拼不出：门头是本地生意的第一入口，路人念不出的名字连口碑转述的资格都没有",
+        "追热词命名（当年流行语、网红梗）：美发是十年熟客生意，梗过时的速度远快于客人换发型师的速度",
+        "「XX 造型」「XX 形象设计」的模糊定位：既不像快剪也不像沙龙，价格预期混乱，客人进门前就开始防备被推销",
+        "忽略地图与点评平台的重名排查：同城同名的理发店会互相污染评分与口碑——开店前先在地图与点评平台搜一遍候选名",
+      ],
+    },
+    en: {
+      label: "Barbershops & salons",
+      title: "How to Name a Barbershop or Hair Salon: Strategies, Cases & Domains",
+      metaDescription:
+        "Barbershop and hair salon naming guide: craft roots, place-based naming, the loyal-client test, breakdowns of Toni&Guy/Rudy's/Chatters, recommended TLDs and pitfalls — then hunt an available salon domain with AI.",
+      intro:
+        "A haircut is a 500-meter-radius business with an outsized trust transaction: the client hands you their appearance for the next month. The name's first battlefield is the map and the shopfront — being findable in local search and memorable to foot traffic decides whether a new shop survives. Second, this is a regulars economy: retention lives in the stylist–client relationship, so the name must survive years of \"I've been going to X forever\" — a too-trendy name expires in three years while the relationship can last ten. Third, the trade spans a spectrum: express cuts need efficiency and zero decision cost, designer salons need taste, barbershops need ritual and vintage gravity — the three naming languages barely overlap. Finally, the stylist-as-creator era changes the equation: clients increasingly discover the barber on short video before the shop — the shop name and the stylist's personal brand must lift each other, not compete.",
+      namingIdeas: [
+        "Cut with craft and tool roots: fade, blade, razor, shears, theory — technique words carry instant professional cred, and in men's grooming they double as insider passwords",
+        "Name the place, not the service: Club, Parlor, Room, Studio — frame the shop as somewhere to be rather than something done to you; appointment-book and membership premiums start in the name",
+        "Go heritage for barbershops: golden-age imagery — the barber pole era, \"& Sons\", a founder's name over the door — vintage is ritual, and ritual justifies the premium cut",
+        "Run the loyal-client test: say \"I've been going to X for years\" — does it still sound natural a decade out? Names built on this year's slang expire faster than clients switch barbers",
+        "Design for stylist personal brands: leave room for \"Alex @ X\" to roll off the tongue; if one founder is the draw, name + place word (the Rudy's pattern) is the most time-proof formula in the trade",
+      ],
+      cases: [
+        { name: "Toni&Guy", takeaway: "Two founding brothers' first names joined by &: craftsmanship with people answering for it, the ampersand adding workshop heritage — one London shop to a global chain without ever renaming; proof of personal names' durability in craft trades" },
+        { name: "Rudy's Barbershop", takeaway: "Founder's name + category word: the possessive reads like a neighbor's shop while barbershop states the trade — from one Seattle shop to a multi-city chain; name + category is the most obsolescence-proof formula for neighborhood businesses" },
+        { name: "Chatters", takeaway: "Naming the chair-side chat: the half-hour of small talk is the real glue of the regulars economy — one word capturing the truest moment of the customer experience, warm and geography-free" },
+        { name: "Great Clips", takeaway: "Plain adjective + the product: no mystery, no waitlist energy — pure efficiency signaling for walk-in express cuts; at the value end of the spectrum, instant comprehension is the whole brand" },
+      ],
+      pitfalls: [
+        "An unpronounceable \"premium\" coinage over the door: the shopfront is a local business's first funnel — a name passers-by can't say forfeits word of mouth entirely",
+        "Meme and slang naming: hair is a ten-year regulars trade; the joke expires long before your clients would have left",
+        "Vague \"styling & image design\" positioning: neither express nor salon, so price expectations blur and clients walk in braced for the upsell",
+        "Skipping the same-city duplicate check: identically named shops cross-contaminate each other's map ratings and reviews — search maps and review apps before signing the lease",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

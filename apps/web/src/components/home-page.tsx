@@ -384,6 +384,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个花店/花艺工作室品牌，寓意「把心意开成一束花」；气质要诗意、美好、配得上被当作礼物送出；场景是贺卡署名、节日订花搜索和客户晒花束的照片里都添一分心意。",
     en: "A florist or floral design studio brand. The name should read like sentiment arranged into a bouquet; the vibe is poetic, beautiful, worthy of being given; it must add grace to a gift-card signature, holiday flower searches, and customers' bouquet photos.",
   },
+  {
+    slug: "interior",
+    labelZh: "装修设计",
+    labelEn: "Interior & renovation",
+    zh: "一个装修/室内设计品牌，寓意「把毛坯变成想回去的家」；气质要可靠、有审美、值得托付钥匙和预算；场景是作品集封面、业主群转介绍和「我家是 X 做的」的口碑里都专业立得住。",
+    en: "An interior design or renovation brand. The name should evoke turning bare walls into a home worth coming back to; the vibe is dependable, tasteful, worthy of keys and budget; it must hold up on a portfolio cover, in homeowner group referrals, and in \"X did our place\".",
+  },
+  {
+    slug: "studyabroad",
+    labelZh: "留学教育",
+    labelEn: "Study abroad",
+    zh: "一个留学咨询/国际教育品牌，寓意「从此岸到彼岸的可靠引路人」；气质要专业、有出路感、家长信任学生不嫌土；场景是家长群推荐、申请邮件署名和院校合作名录里双语都立得住。",
+    en: "A study-abroad consultancy or international education brand. The name should feel like a trusted guide across the crossing; the vibe is professional, opportunity-rich, credible to parents yet cool enough for students; it must work in parent group chats, application email signatures, and university partner lists in both languages.",
+  },
+  {
+    slug: "usedcar",
+    labelZh: "二手车",
+    labelEn: "Used cars",
+    zh: "一个二手车品牌/车行，寓意「每一辆车的过去都查得清、买得放心」；气质要透明、实在、无套路；场景是电话报价、本地车友群和「我在 X 看了一辆」的转述里都可信顺口。",
+    en: "A used car marketplace or dealership brand. The name should promise every car's history is checkable and the deal is safe; the vibe is transparent, straight-dealing, no games; it must sound credible in a phone quote, a local car group, and in \"I saw one at X\".",
+  },
+  {
+    slug: "insurance",
+    labelZh: "保险经纪",
+    labelEn: "Insurance",
+    zh: "一个保险经纪/保险科技品牌，寓意「出事那天真的有人管」；气质要稳重、可信、又不冷冰冰；场景是家人群里的推荐、理赔时刻打开的 App 和「我买的是 X 家」的坦然表达里都安心。",
+    en: "An insurance brokerage or insurtech brand. The name should promise someone's really got you on the bad day; the vibe is steady, trustworthy, yet human not cold; it must reassure in a family group recommendation, on the app opened at claim time, and in \"I'm covered by X\".",
+  },
+  {
+    slug: "farm",
+    labelZh: "农场生鲜",
+    labelEn: "Farms & fresh food",
+    zh: "一个农场/生鲜品牌，寓意「离土地最近的新鲜与实在」；气质要自然、时令、有产地故事；场景是包装箱面、社区团购开团文案和「我家一直吃 X」的复购口碑里都可信好念。",
+    en: "A farm or fresh food brand. The name should carry the freshness and honesty of being close to the land; the vibe is natural, seasonal, rich with provenance; it must read true on a produce box, in a group-buy announcement, and in \"we've always bought from X\".",
+  },
+  {
+    slug: "barber",
+    labelZh: "美发理容",
+    labelEn: "Barbershops & salons",
+    zh: "一个理发店/美发工作室品牌，寓意「把接下来一个月的形象放心交给它」；气质要有手艺感、亲切、经得起十年熟客；场景是门头招牌、地图搜索和「我一直在 X 剪」的长期转述里都顺口耐听。",
+    en: "A barbershop or hair salon brand. The name should feel worth trusting with next month's look; the vibe is craft-forward, friendly, built for ten-year regulars; it must wear well on a shopfront sign, in map search, and in \"I've been going to X for years\".",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
