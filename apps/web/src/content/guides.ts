@@ -3825,6 +3825,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  accounting: {
+    slug: "accounting",
+    tlds: [
+      { tld: "com", zh: "财税服务的信任基线，企业客户与银行尽调都默认查它", en: "The trust baseline for financial services — corporate clients and bank due diligence check it by default" },
+      { tld: "tax", zh: "行业词直接写进后缀，税务专项服务零解释成本", en: "The industry word in the suffix itself — zero explanation for tax-focused practices" },
+      { tld: "pro", zh: "「持证执业」的气质后缀，注册会计师与税务师的专业背书", en: "The licensed-professional suffix — a credential signal for CPAs and tax advisors" },
+    ],
+    zh: {
+      label: "会计财税",
+      title: "会计事务所/财税服务品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "会计财税品牌命名指南：稳健词根、数字联想、合伙人姓氏结构等 5 种思路，德勤/用友/Bench 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的财税域名。",
+      intro:
+        "财税命名卖的是一个字：稳。客户把公司的账本、税务合规甚至现金流命脉交给你，名字必须先于任何资质证书传递「这家不会出错」的信号——花哨、俏皮、互联网腔在这个行业是减分项而非加分项。第二个特点是双客群分野：服务中小微企业的代理记账走亲切效率路线（快、省、帮），服务中大型企业的审计税务筹划走权威庄重路线（信、诚、正）——两条路线的命名语言几乎不重叠，选边比创意更重要。第三是「合伙人即品牌」的行业传统：四大与老牌所全是姓氏连缀（Deloitte、普华永道），姓氏结构自带「有人对结果负责」的担保感；新一代云财税 SaaS 则反其道用轻快词（Bench、Pilot）把记账重构成订阅服务。最后注意监管红线：「会计师事务所」等字样有准入门槛，名字里的承诺性词汇（避税、包过）更是执业纪律的雷区。",
+      namingIdeas: [
+        "稳健信任词根：信、诚、正、衡、准、solid、true、ledger——把「不会出错」写进名字，财税客户对稳的敏感远高于对新的兴奋",
+        "合伙人姓氏结构：创始合伙人姓氏 + 财税/会计（张氏财税）——审计与筹划业务的信任落点是具体的人，姓氏连缀是全球会计业百年验证的结构",
+        "数字与账本意象：账、算、balance、count、book、digit——行业符号一眼识别，配合轻快词根可以做出「不像传统事务所」的云财税气质",
+        "双客群选边测试：把名字放进「审计报告署名」和「小老板微信转介绍」两个场景各念一遍——庄重场景不掉价、日常场景不拗口，只能占一头时按主力客群选",
+        "云财税走 SaaS 命名：面向中小微的代理记账/报税工具可用 Bench、Pilot 式的单词命名——把「找会计」重构成「开个账户」，名字先完成服务产品化的叙事",
+      ],
+      cases: [
+        { name: "德勤", takeaway: "Deloitte 音译成「德 + 勤」：两个字恰好是中文商业伦理的核心美德，音译同时完成了本土化的价值观翻译——外来姓氏品牌中文化的教科书" },
+        { name: "用友", takeaway: "「用户之友」缩合成两个字：把企业软件的服务姿态写进名字，亲切不失专业，三十年从财务软件长成 ERP 巨头名字始终兼容——功能中性命名的长期红利" },
+        { name: "Bench", takeaway: "「工作台」一词命名云记账：把会计从「穿西装的事务所」拉到「你身边的工作台」，单音节好读好拼——传统行业 SaaS 化命名的标杆" },
+        { name: "Pilot", takeaway: "「领航员」隐喻财务掌舵：不提账、税、算任何行业词，却精准传达「有人替你盯着财务航向」——隐喻命名在财税行业的高级执行" },
+        { name: "普华永道", takeaway: "PwC 三姓氏中文化成「普华 + 永道」：普遍繁华、永恒正道，四个字把审计行业的公信力愿景说满——姓氏结构本土化再创作的范本" },
+      ],
+      pitfalls: [
+        "承诺性词汇入名（避税、包过、零风险）：执业纪律与广告法双重雷区，一次稽查风波就让名字变成呈堂证供",
+        "互联网俏皮腔用在审计筹划业务：给上市公司出审计报告的名字不能像奶茶店，庄重场景掉价直接损失高客单客户",
+        "「会计师事务所」字样未取得资质先占用：事务所名称有严格准入与核名要求，品牌名与执业主体名要提前分层设计",
+        "只注册中文忽略拼音/英文形态：企业客户的银行流水、发票抬头、跨境业务都需要稳定的拉丁字母形态，出海更是必查同名商标",
+      ],
+    },
+    en: {
+      label: "Accounting & tax",
+      title: "How to Name an Accounting Firm or Tax Service: Strategies, Cases & Domains",
+      metaDescription:
+        "Accounting and tax brand naming guide: trust-and-rigor roots, partner-surname structures, ledger imagery, breakdowns of Deloitte/Bench/Pilot, recommended TLDs and pitfalls — then hunt an available accounting domain with AI.",
+      intro:
+        "Accounting naming sells one word: steadiness. Clients hand you their books, their tax compliance, sometimes their cash-flow lifeline — the name must signal \"this firm does not make mistakes\" before any credential can. Clever, quirky or startup-cute registers subtract trust here rather than add personality. Second, the market splits in two: bookkeeping for small businesses names warm and efficient (help, save, easy), while audit and tax planning for larger clients names grave and authoritative (true, trust, rigor) — the two vocabularies barely overlap, and picking a side matters more than being creative. Third, the partner is the brand: the Big Four and every legacy firm are chains of surnames (Deloitte, PwC), a structure that carries a built-in guarantee — a named human answers for the result. The new generation of cloud accounting flips it entirely, using light everyday words (Bench, Pilot) to reframe bookkeeping as a subscription product. Finally, mind the regulatory line: \"CPA firm\" designations have licensing requirements, and promise-words in a name (tax-free, guaranteed) are professional-conduct landmines.",
+      namingIdeas: [
+        "Root in steadiness and trust: true, solid, ledger, balance, anchor — write \"we don't make mistakes\" into the name; accounting clients respond to steady far more than to novel",
+        "Use partner surnames: founding partner's name + accounting/tax (the Smith & Co pattern) — audit trust lands on a person, and surname chains are the century-tested structure of the global profession",
+        "Borrow ledger imagery: book, count, digit, balance, figure — instantly category-legible, and paired with a light root it produces the \"not your father's firm\" cloud-accounting register",
+        "Run the two-room test: say the name as an audit report signature, then in a small-business owner's referral text — it must hold gravity in one and roll easily in the other; if it only works in one room, choose by your core clientele",
+        "Name cloud accounting like SaaS: bookkeeping and tax tools for small businesses can take single-word names (Bench, Pilot) — reframing \"hiring an accountant\" as \"opening an account\" starts with the name productizing the service",
+      ],
+      cases: [
+        { name: "Deloitte", takeaway: "A founder's surname carried for 180 years: the name means nothing and therefore everything — proof that in professional services, consistency itself becomes the brand asset; the surname structure at maximum compounding" },
+        { name: "Bench", takeaway: "A workbench, one syllable: bookkeeping pulled from suit-and-tie offices to the desk beside you; easy to say, spell and trust — the benchmark for SaaS-ifying a legacy profession's naming" },
+        { name: "Pilot", takeaway: "A navigation metaphor with zero industry words: no book, no tax, no count — yet it lands precisely on \"someone is watching your financial course\"; metaphor naming executed at the premium end of fintech" },
+        { name: "Xero", takeaway: "\"Zero\" respelled with an X: zero errors, zero paperwork, inbox-zero for your books — one letter swap creates trademark ownership while keeping instant pronunciation; disciplined spelling variation done right" },
+        { name: "FreshBooks", takeaway: "fresh + books: the category word anchored by a feeling word — invoicing for freelancers that sounds like relief rather than bureaucracy; the classic mood-plus-category blend applied to accounting" },
+      ],
+      pitfalls: [
+        "Promise-words in the name (tax-free, guaranteed, zero-risk): a dual minefield of professional conduct rules and advertising law — one audit controversy turns the name into evidence",
+        "Startup-cute register on audit work: a name signing public-company audit opinions cannot sound like a bubble-tea shop; lost gravity is lost high-ticket clients",
+        "Using protected designations without the license: \"CPA firm\" and equivalents carry registration requirements — design the brand name and the licensed entity name as separate layers from day one",
+        "Ignoring the Latin-alphabet form: bank records, invoices and cross-border work all need a stable romanized identity, and overseas expansion demands a trademark check on it first",
+      ],
+    },
+  },
+  livestream: {
+    slug: "livestream",
+    tlds: [
+      { tld: "com", zh: "直播电商供应链与品牌方合作的信任门面，商务对接必查", en: "The trust front for supply-chain and brand partnerships — business development checks it first" },
+      { tld: "live", zh: "「直播」写进后缀，行业属性零解释成本", en: "Live in the suffix itself — zero explanation for what you do" },
+      { tld: "shop", zh: "带货属性直给，直播间跳转链路里天然顺手", en: "Commerce-forward and natural in the livestream-to-checkout link path" },
+    ],
+    zh: {
+      label: "直播电商",
+      title: "直播电商/主播品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "直播电商与主播 IP 命名指南：口播友好测试、人设词根、场景词嫁接等 5 种思路，东方甄选/交个朋友等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的直播域名。",
+      intro:
+        "直播电商的名字是用「喊」的不是用「看」的：主播每场要口播品牌名几十次，观众在嘈杂的信息流里靠听觉记住你——名字必须两秒内喊得响、听得清、记得住，任何需要解释拼写的名字都在浪费口播成本。第二个特点是「人设即品牌」：直播间的信任先落在主播人设上再迁移到供应链，名字要么直接承载人设（交个朋友的坦诚人设），要么给人设留出叙事空间（东方甄选的文化人设）——名字和人设错位，观众会本能觉得违和。第三是平台依附与出走的张力：抖音、快手的流量是租来的，名字是少数真正属于你的资产，起名时就要考虑跨平台迁移甚至独立站形态——纯平台梗命名会把品牌锁死在单一生态。最后是信任修复的行业课题：直播带货的翻车史让观众对「甄选」「严选」类词汇既依赖又警惕，名字承诺的品控标准必须真的兜得住。",
+      namingIdeas: [
+        "口播友好测试：让三个人各喊十遍品牌名——喊不响、容易听岔、超过四个字的名字直接淘汰；直播间里名字的第一职责是被听清",
+        "人设词根命名：把主播人设写进名字（朋友、甄选、老铁、掌柜）——直播信任先认人再认货，名字与人设同构能让每次口播都在强化人设",
+        "场景词嫁接：货、仓、工厂、源头、直供——把「没有中间商」的供应链叙事直接写进名字，价格敏感型观众一听就懂卖点",
+        "留出品类扩张空间：今天播美妆明天可能播食品，名字锁死单一品类会限制选品——用气质词而非品类词命名，让供应链跟着流量走",
+        "全平台可用性预检：抖音、快手、视频号、小红书同名账号 + 商标 35 类/38 类 + 域名一次查齐——直播 IP 的名字资产分散在多平台，任何一处被抢注都是长期隐患",
+      ],
+      cases: [
+        { name: "东方甄选", takeaway: "「东方」（文化底色）+「甄选」（品控承诺）：双语带货的文化人设与供应链信任一次说满，从直播间长成独立电商品牌名字无需更换——人设命名给转型留足空间的范本" },
+        { name: "交个朋友", takeaway: "四个字的口语短句当品牌名：把「不赚差价的坦诚感」写进名字，口播时自带社交姿态——句子式命名在直播场景的独特优势，喊出来就是一次人设宣言" },
+        { name: "辛选", takeaway: "主播姓氏「辛」+「选」：一个字绑定个人 IP，一个字承诺选品，两个字完成「人 + 货」的最短表达——极简人名结构在直播电商的高效执行" },
+        { name: "遥望科技", takeaway: "「遥望」的开阔意象配「科技」的基建定位：不绑定任何主播个人，给多主播矩阵与供应链中台留足叙事空间——MCN 机构命名与主播 IP 命名分层的清晰示范" },
+      ],
+      pitfalls: [
+        "名字依赖平台梗或热词：热词半衰期以月计，平台梗出圈即失效——名字过气比人设过气更难挽回",
+        "口播拗口或谐音歧义：直播间每场口播几十次，任何发音磕绊都在指数级放大；谐音负面联想在弹幕文化里会被无限玩梗",
+        "「甄选/严选」类承诺词滥用：名字写了品控承诺就要真的兜底，一次翻车名字本身就成了嘲讽素材",
+        "只注册账号不注册商标与域名：直播 IP 火起来的速度远快于维权速度，35 类商标与主域名必须在起号当天锁定",
+      ],
+    },
+    en: {
+      label: "Livestream commerce",
+      title: "How to Name a Livestream Commerce or Creator Shop Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Livestream commerce naming guide: shout-out friendly tests, persona roots, supply-chain words, breakdowns of Whatnot/NTWRK and creator shops, recommended TLDs and pitfalls — then hunt an available livestream domain with AI.",
+      intro:
+        "A livestream commerce name is shouted, not read: hosts say the brand name dozens of times per show, and viewers remember it by ear inside a noisy feed — it must ring clear in two seconds, and any name that needs its spelling explained is leaking airtime. Second, the persona is the brand: livestream trust lands on the host first and transfers to the merchandise second, so the name either carries the persona directly or leaves room for its story — a name that clashes with the on-camera character feels instantly off to viewers. Third, there's the platform-tenancy tension: traffic on TikTok or Twitch is rented, and the name is one of the few assets you actually own — name for cross-platform migration and an eventual standalone store, because platform-meme names lock the brand inside a single ecosystem. Finally, the category has a trust deficit to repair: after years of livestream-shopping scandals, viewers both crave and distrust curation words like \"select\" and \"verified\" — whatever quality promise the name makes, the sourcing must actually keep.",
+      namingIdeas: [
+        "Run the shout test: have three people yell the name ten times — anything that doesn't carry, gets misheard, or runs past three syllables is out; a livestream name's first job is being heard correctly",
+        "Root the name in the persona: friend, picks, vault, den — livestream trust attaches to a character before a catalog, and a name built from the persona reinforces it with every shout-out",
+        "Graft supply-chain words: source, direct, factory, depot — writing \"no middlemen\" into the name lets price-driven viewers hear the pitch before the pitch",
+        "Leave room to switch categories: today's beauty stream is next year's food stream — name with temperament words rather than category words so sourcing can follow the audience",
+        "Pre-check every platform at once: matching handles on TikTok/Instagram/YouTube, the trademark classes, and the domain in one sweep — a livestream brand's name assets scatter across platforms, and any squatted corner becomes a permanent leak",
+      ],
+      cases: [
+        { name: "Whatnot", takeaway: "A casual everyday phrase — \"cards, collectibles and whatnot\": the name performs the flea-market browsing feeling that is the product; conversational naming that sounds like the experience it sells" },
+        { name: "NTWRK", takeaway: "\"Network\" with the vowels stripped: streetwear-coded compression that signals drop culture to exactly its audience — spelling variation as a tribal password, accepting the spell-out cost for the aesthetic" },
+        { name: "TalkShopLive", takeaway: "talk + shop + live: the entire format in three words — conversation, commerce, real time; functional naming at maximum literalness, trading brandability for instant comprehension in a young category" },
+        { name: "Poshmark", takeaway: "posh + mark(et): an upscale feeling word fused with the marketplace category — social selling that sounds aspirational rather than thrift; the mood-plus-category blend tuned for seller pride" },
+      ],
+      pitfalls: [
+        "Naming off platform memes or trending slang: meme half-lives are measured in months — a dated name is harder to recover from than a dated persona",
+        "Tongue-twisters and unfortunate homophones: a name said fifty times per show amplifies every stumble exponentially, and chat culture will meme any awkward sound-alike forever",
+        "Overusing curation promises (select, verified, vetted): a quality promise in the name must be backed by sourcing — one scandal turns the name itself into the punchline",
+        "Registering handles but not trademarks and domains: livestream brands blow up faster than enforcement works; lock the trademark and primary domain the day the account is created",
+      ],
+    },
+  },
+  translation: {
+    slug: "translation",
+    tlds: [
+      { tld: "com", zh: "跨国企业客户采购本地化服务的默认信任后缀", en: "The default trust suffix when global enterprises procure localization" },
+      { tld: "io", zh: "本地化平台与开发者工具（i18n SDK/API）的圈内标配", en: "The insider standard for localization platforms and i18n developer tools" },
+      { tld: "ai", zh: "机器翻译与 AI 本地化时代的技术定位后缀", en: "The technology-positioning suffix in the machine-translation and AI localization era" },
+    ],
+    zh: {
+      label: "翻译本地化",
+      title: "翻译公司/本地化服务怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "翻译与本地化品牌命名指南：跨语言可读测试、桥梁意象、词根国际化等 5 种思路，DeepL/Smartling/传神等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的本地化域名。",
+      intro:
+        "翻译行业的名字有个天然的自反性考验：一个声称精通多语言的品牌，名字必须自己先通过多语言测试——在英语、中文、西语、日语里都好读不歧义，否则名字本身就是反面案例。这决定了本地化命名的第一原则：选全球音系友好的词根（开音节、避免辅音丛），名字要像产品承诺的那样「无国界」。第二个特点是行业的双层结构：人工翻译服务卖「信达雅」的专业信任，名字偏庄重（传神、精艺达）；本地化技术平台卖「规模与自动化」，名字走 SaaS 路线（Smartling、Lokalise）——AI 翻译浪潮正把重心从前者推向后者，命名语言也随之从「译」转向「智能」。第三是隐形行业的可见性难题：翻译做得越好越隐形，客户记住的是内容不是译者——名字需要主动争取存在感，桥、链、通等连接意象是这个行业最诚实也最拥挤的隐喻，用它们时必须叠加差异化词根。",
+      namingIdeas: [
+        "跨语言可读测试：把名字放进英西中日四种语言念一遍——有辅音丛、闭音节堆叠或负面谐音的直接淘汰；翻译品牌的名字自己必须先「翻译得过去」",
+        "桥梁连接意象差异化使用：bridge、link、通、传——行业最诚实的隐喻但也最拥挤，必须叠加独特词根（如 DeepL 的 deep）才有商标性",
+        "技术平台走 i18n 命名：面向开发者的本地化工具用 -ise/-ly/Loka- 等 SaaS 词根（Lokalise、Smartling）——名字先声明「我是平台不是翻译社」",
+        "语言符号巧用：字母 L、双语双关、Unicode 意象——行业符号一眼识别（DeepL 的 L 即 Language），且对语言从业者有会心一击的传播力",
+        "人工服务立专业人设：翻译公司用信、达、雅、精、传等质量词根——高客单的法律医学翻译客户买的是「不会错」，名字先立准确性人设",
+      ],
+      cases: [
+        { name: "DeepL", takeaway: "deep（deep learning）+ L（Language）：五个字母同时声明技术路线与行业属性，全球音系零障碍——技术命名压缩到极致的教科书，机器翻译时代的命名标杆" },
+        { name: "Smartling", takeaway: "smart + -ling（语言学词缀，如 linguist）：聪明与语言两个词根无缝焊接，SaaS 气质拉满——词缀嫁接让行业属性藏在词形里的高级做法" },
+        { name: "传神语联", takeaway: "「传神」直接取自翻译最高标准（传神达意）：行业黑话变品牌名，客户与译者双向会心——中文翻译业命名借力千年译论的独有资产" },
+        { name: "Lokalise", takeaway: "localise 的 k 化变形：一个字母的改动同时完成商标独占与「更技术更北欧」的气质暗示，开发者受众零违和——克制拼写变形的标准执行" },
+        { name: "Duolingo", takeaway: "duo（双）+ lingo（语言俚语词）：拉丁词根全球通读，绿色猫头鹰把名字人格化——语言品牌命名兼顾学术感与亲和力的平衡样本" },
+      ],
+      pitfalls: [
+        "名字自己过不了多语言测试：辅音丛、闭音节、某语言里的负面谐音——翻译品牌的名字读不顺，等于餐厅门口的苍蝇",
+        "桥/通/联意象裸用不加差异化：行业里几百家「X 桥翻译」「Y 通传译」，商标近似驳回率极高，搜索结果永远挤不进第一屏",
+        "锁死「翻译」品类词：AI 时代业务必然扩到本地化、多语内容生成、语音克隆——名字里写死 translate 会限制叙事升级",
+        "忽略目标语市场的商标检索：本地化公司的客户遍布多法域，名字在主要目标市场（美欧日）的商标近似必须提前查",
+      ],
+    },
+    en: {
+      label: "Translation & localization",
+      title: "How to Name a Translation or Localization Company: Strategies, Cases & Domains",
+      metaDescription:
+        "Translation and localization naming guide: cross-language readability tests, bridge imagery done right, i18n platform roots, breakdowns of DeepL/Smartling/Lokalise, recommended TLDs and pitfalls — then hunt an available localization domain with AI.",
+      intro:
+        "Translation naming carries a built-in reflexive test: a brand claiming to master languages must have a name that passes the multilingual exam itself — readable and clean in English, Spanish, Chinese and Japanese alike, or the name becomes its own counterexample. That sets the first principle: choose globally phonology-friendly roots (open syllables, no consonant clusters) so the name is as borderless as the service promises. Second, the industry runs on two layers: human translation services sell professional fidelity and name gravely (precision, fidelity roots), while localization platforms sell scale and automation and name like SaaS (Smartling, Lokalise) — and the AI wave is shifting the center of gravity from the former to the latter, pulling naming language from \"translate\" toward \"intelligence\". Third, there's the invisibility problem: the better translation gets, the more invisible the translator — clients remember the content, not the conduit. The name has to fight for presence, and connection imagery (bridge, link, tongue) is the industry's most honest but most crowded metaphor: usable only when fused with a differentiating root.",
+      namingIdeas: [
+        "Run the cross-language exam: read the name aloud in English, Spanish, Chinese and Japanese — consonant clusters, stacked closed syllables or a bad homophone in any target market is an automatic veto; a translation brand's name must translate first",
+        "Differentiate the bridge metaphor: bridge, link, lingua — the category's most honest imagery is also its most crowded; it only earns trademark strength fused with a distinctive root (DeepL's deep)",
+        "Name platforms like i18n tools: developer-facing localization products take SaaS morphology (-ise, -ly, Loka-) — the name should declare \"platform, not agency\" before the pitch does",
+        "Play with language symbols: the letter L, bilingual puns, script imagery — instantly legible to the industry (DeepL's L is Language), with insider resonance that makes linguists your best amplifiers",
+        "Give human services a fidelity persona: agencies serving legal and medical clients need accuracy-register roots (true, verbatim, fidelity) — five-figure translation buyers are buying \"never wrong\", and the name makes that claim first",
+      ],
+      cases: [
+        { name: "DeepL", takeaway: "deep (learning) + L (Language): five letters declaring both the technology and the category, frictionless in every phonology — technical naming compressed to its limit; the naming benchmark of the machine-translation era" },
+        { name: "Smartling", takeaway: "smart + -ling (the linguistics suffix, as in linguist): intelligence and language welded at the morpheme level with full SaaS energy — hiding the category inside word-shape, the sophisticated version of category naming" },
+        { name: "Lokalise", takeaway: "\"localise\" with a k: one letter earns trademark ownership plus a technical, vaguely Nordic accent that developers read as native — disciplined spelling variation executed by the book" },
+        { name: "Duolingo", takeaway: "duo + lingo: Latin roots readable worldwide, then a green owl to personify them — the balance of academic credibility and mass-market warmth that language brands chase" },
+        { name: "Phrase", takeaway: "A bare dictionary word for a localization platform: maximum category clarity at the cost of searchability — the common-word gamble, workable only with a clean .com and enterprise sales motion" },
+      ],
+      pitfalls: [
+        "A name that fails its own multilingual test: consonant clusters or a slur-adjacent homophone in a target language — for a translation brand, an unpronounceable name is the cracked window of the storefront",
+        "Bare bridge/link/global naming: hundreds of \"X-Bridge Translations\" already exist — trademark refusal risk is high and page one of search is permanently out of reach",
+        "Locking \"translate\" into the name: the AI era pushes every player toward localization, multilingual content generation and voice — a name welded to translation caps the story you can tell",
+        "Skipping trademark checks in target-language markets: localization clients span jurisdictions — clear the name in the US, EU and Japan before the first enterprise deal, not after",
+      ],
+    },
+  },
+  gardening: {
+    slug: "gardening",
+    tlds: [
+      { tld: "com", zh: "园艺电商与订阅服务的信任基线，复购品牌的长期门面", en: "The trust baseline for garden e-commerce and subscriptions — the long-term face of a repeat-purchase brand" },
+      { tld: "garden", zh: "行业词直接做后缀，花园品牌的完整表达", en: "The category word as the suffix itself — a complete expression for garden brands" },
+      { tld: "green", zh: "「绿色」写进后缀，植物与可持续定位一步到位", en: "Green in the suffix — plants and sustainability positioning in one step" },
+    ],
+    zh: {
+      label: "园艺绿植",
+      title: "园艺绿植品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "园艺绿植品牌命名指南：生长意象、治愈系词根、节气花时等 5 种思路，The Sill/Patch 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的园艺域名。",
+      intro:
+        "园艺品牌卖的从来不是植物，是「照料生活的感觉」：都市人买绿植买的是治愈、陪伴与一平米的自然，名字必须先传递这份情绪价值——生长、呼吸、光合、时节等意象是这个行业的母语。第二个特点是「怕养死」的核心焦虑：新手对园艺的最大障碍是「我会把它养死」，名字若能暗示「好养活、有人教、养死包赔」（Patch 的陪伴感、Easyplant 的直白），就直接拆掉了下单的心理门槛。第三是客群的代际分野：传统园艺客群（花友、庭院族）认专业与品种权威，新一代室内绿植客群（租房青年、办公室人群）认颜值与生活方式——两代人刷的平台、说的黑话、付的价钱完全不同，名字选边决定品牌坐标。最后是复购生意的本质：植物会死、会长大、会需要新盆新土，园艺是天然的订阅制品类，名字要经得起包裹上、推送里、月复一月的反复出现。",
+      namingIdeas: [
+        "生长与光的意象：生长、萌、芽、光、sprout、bloom、sunny——把植物的生命动词写进名字，情绪价值先于产品到货",
+        "治愈陪伴词根：伴、栖、居、patch、nest——都市绿植买的是陪伴感，名字像室友的昵称而非园艺公司的招牌",
+        "拆「养死焦虑」：easy、hardy、无忧、好养——新手最大心理门槛是怕养死，名字直接承诺好养活等于替客服回答了最高频问题",
+        "节气与花时词库：立春、花信、时令、季——中文园艺独有的时间美学词库，既有文化厚度又自带内容日历（节气营销）",
+        "选边代际客群：面向花友庭院族用品种与专业词（月季、蔷薇、园圃），面向租房青年用生活方式词（角落、窗台、一平米）——两代客群的语言体系不通用",
+      ],
+      cases: [
+        { name: "The Sill", takeaway: "「窗台」一词命名室内绿植电商：植物在都市家庭的真实位置，一秒唤起「窗边有绿」的画面——场景词命名让产品自动进入用户的生活空间" },
+        { name: "Patch", takeaway: "「一小块地」的谦逊表达：不承诺花园只承诺一小块绿意，精准匹配都市阳台的现实，单音节好读好记——低承诺高共鸣的命名心法" },
+        { name: "Bloomscape", takeaway: "bloom（绽放）+ scape（景观）：从一盆花到一片景的想象升级，词形自带 landscape 的空间感——合成词把客单价天花板悄悄抬高的示范" },
+        { name: "花点时间", takeaway: "「花点时间」一语双关：花（植物）+ 花时间（生活态度），把每周一花的订阅制写成生活提案——中文双关命名与商业模式同构的经典案例" },
+      ],
+      pitfalls: [
+        "堆砌绿/植/花的通用组合（绿植家、花花世界类）：行业同质化重灾区，商标近似驳回率高，搜索里永远淹没",
+        "名字过度承诺「永远鲜活」：植物会死是行业事实，名字把话说满后每一次养死体验都在反噬品牌",
+        "只面向线下花店思维起名：园艺电商的名字要在快递箱、App 推送、订阅邮件里反复出现——门头思维的名字往往在数字触点上失灵",
+        "忽略拉丁学名与品种名的商标雷区：品种名（如特定月季品种）可能有植物新品种权，直接拿品种名当品牌名有侵权风险",
+      ],
+    },
+    en: {
+      label: "Gardening & plants",
+      title: "How to Name a Gardening or Plant Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Gardening and plant brand naming guide: growth imagery, kill-proof reassurance roots, scene words, breakdowns of The Sill/Patch/Bloomscape, recommended TLDs and pitfalls — then hunt an available garden domain with AI.",
+      intro:
+        "A plant brand never really sells plants — it sells the feeling of tending to a life: urban buyers purchase calm, companionship and a square meter of nature, so the name must deliver that emotional payload first, in the industry's native imagery of growth, light, breath and seasons. Second, the category's core anxiety is \"I'll kill it\": the biggest barrier for beginners isn't price but fear of failure, and a name that whispers hardy, guided or guaranteed (Patch's companionship, Easyplant's bluntness) dismantles the purchase hesitation before the FAQ page does. Third, the audience splits by generation: traditional gardeners trust variety expertise and horticultural authority, while the new houseplant crowd — renters, desk workers — buys aesthetics and lifestyle; they scroll different platforms, speak different slang and pay different prices, and the name picks which world the brand lives in. Finally, this is a repeat-purchase business at heart: plants die, outgrow pots, need soil and seasonal swaps — gardening is a natural subscription category, and the name must wear well on a shipping box, in a push notification, month after month.",
+      namingIdeas: [
+        "Reach for growth and light: sprout, bloom, sunny, flourish — write the plant's life-verbs into the name so the emotional value arrives before the parcel does",
+        "Root in companionship: patch, nest, sill, corner — urban plant buyers want a housemate, not a horticulture supplier; the name should sound like a nickname, not a nursery",
+        "Defuse the kill-anxiety: easy, hardy, fool-proof roots — beginners' biggest barrier is fear of failure, and a name that promises survivability answers the top support question preemptively",
+        "Name the scene, not the product: windowsill, balcony, corner — placing the name inside the buyer's actual living space makes the product self-locate in their home",
+        "Pick your generation: variety and expertise words (rose, grove, heirloom) for serious gardeners; lifestyle and space words for the renter houseplant crowd — the two audiences don't share a vocabulary",
+      ],
+      cases: [
+        { name: "The Sill", takeaway: "The windowsill — exactly where urban plants actually live: one scene word conjures the image of green by the window; scene naming that installs the product into the customer's home before checkout" },
+        { name: "Patch", takeaway: "A humble \"small patch of ground\": promising a corner of green rather than a garden, perfectly calibrated to balcony reality; one syllable, high resonance — the under-promise, over-connect school of naming" },
+        { name: "Bloomscape", takeaway: "bloom + scape: upgrading the imagination from a single pot to a whole scene, with landscape's spatial feel built into the word-shape — a blend that quietly raises the price ceiling" },
+        { name: "Fast Growing Trees", takeaway: "The entire value proposition as the name: maximum SEO capture and instant comprehension, traded against zero brand mystique — the functional-naming extreme, viable in high-intent search categories" },
+      ],
+      pitfalls: [
+        "Generic green/plant/flower mashups (PlantWorld, GreenLife): the category's worst homogeneity zone — high trademark-refusal risk and permanent burial in search results",
+        "Over-promising immortality in the name: plants die — that's the business; a name that promises forever turns every dead fern into brand damage",
+        "Naming with shopfront thinking only: a plant e-commerce name lives on shipping boxes, app pushes and subscription emails — names designed for a storefront sign often fail at digital touchpoints",
+        "Ignoring plant-variety rights: specific cultivar names can be protected by plant breeders' rights — lifting a variety name as your brand name is an infringement risk, not a shortcut",
+      ],
+    },
+  },
+  coworking: {
+    slug: "coworking",
+    tlds: [
+      { tld: "com", zh: "企业客户签年约工位的信任基线，行政采购必查", en: "The trust baseline when companies sign annual desk contracts — corporate procurement checks it" },
+      { tld: "space", zh: "「空间」写进后缀，联合办公的完整语义闭环", en: "Space in the suffix — the complete semantic loop for coworking" },
+      { tld: "work", zh: "行业词直给，工位预订链路里零解释成本", en: "The category word itself — zero explanation in the desk-booking flow" },
+    ],
+    zh: {
+      label: "联合办公",
+      title: "联合办公/共享空间品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "联合办公与共享空间命名指南：社群归属词根、空间意象、专业与活力平衡等 5 种思路，WeWork/优客工场等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的空间域名。",
+      intro:
+        "联合办公卖的不是工位是归属感：自由职业者与初创团队租的是「一群同路人」的氛围，名字必须先传递社群感——We、Hub、Club 系词根统治这个行业不是巧合。但 WeWork 的暴雷给全行业上了一课：名字画的饼越大，兑现不了时摔得越重——「改变世界的工作方式」的叙事崩塌后，行业命名明显转向务实（空间、场所、效率词根）。第二个特点是双客群张力：自由职业者要活力与社交（咖啡香、活动墙），企业分部要专业与安静（会议室、隐私）——名字的气质选边直接筛选入驻者构成，进而决定空间的真实氛围。第三是空间即媒介的本地属性：联合办公是重线下的生意，名字要在楼宇招牌、地图搜索、「我在 X 上班」的日常表达里都顺口——员工向朋友说出空间名字时的微妙自豪感，是这个行业最便宜的获客渠道。",
+      namingIdeas: [
+        "社群归属词根：we、club、house、hub、社、聚——联合办公的核心卖点是同路人氛围，名字先发出「加入我们」的邀请",
+        "空间场所意象：场、所、间、space、studio、campus——务实系命名的主词库，WeWork 之后行业叙事回归空间本身的价值",
+        "专业活力平衡测试：把名字放进「跟投资人约在 X 见」和「周五在 X 有个酒会」两个场景各念一遍——都不违和的名字才能同时接住企业客户与自由职业者",
+        "在地化词根嫁接：城市地标、街区名、方言词 + 空间词——联合办公是本地生意，在地词根让名字自带「这是我们街区的空间」的亲近感",
+        "「我在 X 上班」测试：员工向朋友介绍工作地点时说出名字——有微妙自豪感的名字是最便宜的获客渠道，尴尬拗口的名字每天都在流失转介绍",
+      ],
+      cases: [
+        { name: "WeWork", takeaway: "we + work 两个最简单的词：归属感与场景一次说满，全球扩张零翻译成本——命名本身近乎满分，品牌的崩塌恰恰证明名字画的饼必须由运营兑现" },
+        { name: "优客工场", takeaway: "「优客」（优质创客）+「工场」（生产感的空间词）：四个字同时锚定人群与场所，比直译 coworking 更接中国创业语境——本土化命名不照搬外来概念的示范" },
+        { name: "Industrious", takeaway: "「勤奋的」一词直接当名：把入驻者最想要的自我标签写进品牌，企业客户听到的是「专业高效」——形容词命名让用户自我投射的高级做法" },
+        { name: "Soho House", takeaway: "街区名 Soho + house：在地词根与私宅意象叠加出「会员制俱乐部」的稀缺感——联合办公向社交俱乐部升维时，命名同步升维的参照系" },
+      ],
+      pitfalls: [
+        "宏大叙事词透支信任（革命、改变世界系）：WeWork 之后投资人与客户对大词免疫甚至警惕，名字承诺的必须是空间能兑现的",
+        "创意词堆砌牺牲可搜索性：过度抽象的造词在「城市 + 联合办公」的搜索场景里毫无捕获力，本地生意输掉地图搜索等于输掉一半客源",
+        "气质错位筛错客群：名字太派对感会吓退企业客户，太写字楼感会失去自由职业者——先想清楚主力营收来自谁再选词",
+        "忽略多城扩张的名字兼容性：带单一城市/街区词根的名字扩张到第二城就尴尬，连锁预期强的品牌要用可复制的词根结构",
+      ],
+    },
+    en: {
+      label: "Coworking spaces",
+      title: "How to Name a Coworking or Shared Space Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Coworking and shared space naming guide: belonging roots, place imagery, the professional-vs-social balance test, breakdowns of WeWork/Industrious/Soho House, recommended TLDs and pitfalls — then hunt an available space domain with AI.",
+      intro:
+        "Coworking doesn't sell desks — it sells belonging: freelancers and startup teams rent the company of fellow travelers, so the name must radiate community first; the dominance of We, Hub and Club roots in this industry is no accident. But WeWork's implosion taught the category a lesson: the bigger the story a name tells, the harder the fall when operations can't cash it — since the \"transform how we work\" narrative collapsed, naming has visibly turned pragmatic, back to space, place and productivity roots. Second, there's the two-audience tension: freelancers want energy and social texture (espresso, events), while corporate satellite teams want professionalism and quiet (meeting rooms, privacy) — the name's register filters who moves in, which then becomes the space's actual atmosphere. Third, this is a deeply local, physical business: the name must work on building signage, in map search, and in the everyday sentence \"I work out of X\" — the flicker of pride when a member tells a friend where they work is the cheapest acquisition channel the industry has.",
+      namingIdeas: [
+        "Root in belonging: we, club, house, hub, commons — the core product is the company of peers, and the name should extend the invitation before the tour does",
+        "Anchor in place: space, studio, works, campus, yard — the pragmatic school's vocabulary; post-WeWork, the industry narrative returned to the value of the room itself",
+        "Run the two-scene test: say \"meeting an investor at X\" and \"Friday drinks at X\" — only a name that fits both sentences can hold corporate clients and freelancers under one roof",
+        "Graft local roots: neighborhood names, landmarks, city shorthand + a place word — coworking is local business, and a name from the block carries built-in \"this is our neighborhood's spot\" warmth",
+        "Apply the \"I work out of X\" test: a name that gives members a flicker of pride when they say it is free marketing every day; an awkward one leaks referrals just as constantly",
+      ],
+      cases: [
+        { name: "WeWork", takeaway: "we + work, the two simplest possible words: belonging and use-case in one breath, zero translation cost worldwide — near-perfect naming whose brand collapse proves the name's promise must be cashed by operations, not vision decks" },
+        { name: "Industrious", takeaway: "A plain adjective as the brand: the self-image members most want, and what corporate buyers hear is \"professional and productive\" — adjective naming that lets users project themselves into the word" },
+        { name: "Soho House", takeaway: "A neighborhood name + house: local root and private-residence imagery compound into members-club scarcity — the naming reference point when a space brand moves upmarket into social club territory" },
+        { name: "The Wing", takeaway: "A wing — of a building, and of taking flight: architectural fact and aspiration in one word, with the definite article adding club-like singularity; double-meaning naming tuned precisely to its community" },
+      ],
+      pitfalls: [
+        "Grand-narrative words (revolution, transform, future-of-work): post-WeWork, investors and tenants are immune or allergic — promise only what the space itself can deliver",
+        "Abstract coinages that lose map search: an over-clever name captures nothing in \"coworking near me\" queries, and losing local search means losing half the funnel of a local business",
+        "Register mismatch filtering the wrong crowd: too party and corporate clients flee; too corporate and freelancers never arrive — decide who pays the rent before choosing the vibe",
+        "Single-city roots that break at expansion: a name welded to one neighborhood gets awkward in the second city — chains need replicable root structures from day one",
+      ],
+    },
+  },
+  solar: {
+    slug: "solar",
+    tlds: [
+      { tld: "com", zh: "动辄数十万的光伏工程决策，业主与银行融资都认它", en: "Five-figure installation decisions — homeowners and financing banks both default to it" },
+      { tld: "energy", zh: "「能源」写进后缀，光伏与储能业务的完整表达", en: "Energy in the suffix — the complete expression for solar and storage" },
+      { tld: "green", zh: "可持续定位直给，环保导向客群的第一眼共鸣", en: "Sustainability positioning at a glance — instant resonance with eco-driven buyers" },
+    ],
+    zh: {
+      label: "光伏新能源",
+      title: "光伏/新能源品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "光伏与新能源品牌命名指南：光与太阳意象、可靠承诺词根、科技与环保平衡等 5 种思路，隆基/阳光电源/Sunrun 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的新能源域名。",
+      intro:
+        "光伏命名的核心资产是「光」：太阳、光、晒、sun、solar、ray——这个行业拥有全人类最正面的意象库，但也因此最拥挤，差异化必须来自光意象之外的第二词根。第二个特点是超长决策周期与信任门槛：户用光伏动辄十几万、质保二十五年，业主签约签的是「这家公司二十五年后还在」的判断——名字必须传递可靠、长期、有实力的信号，轻飘的互联网腔在这个行业直接损失签约率。第三是双市场的命名分野：To B 的组件制造与电站开发商走工业与技术权威路线（隆基、晶科），To C 的户用安装与储能走亲和与省钱叙事（Sunrun 的「跑起来」、阳光家庭）——同一条产业链上下游的命名语言几乎是两个行业。最后是政策与出海的双重语境：中国光伏企业天然面向全球市场，名字的拼音形态与英文形态要同步设计，且要避开各国对「绿色宣称」的监管雷区——greenwashing 的指控往往从名字开始。",
+      namingIdeas: [
+        "光意象 + 第二词根差异化：太阳/光/晒是行业母语但已拥挤，必须叠加差异化词根——隆基（人名致敬）、Sunrun（动词）、阳光电源（品类词）各有第二支点",
+        "可靠长期词根：基、恒、久、稳、run、last——二十五年质保的生意，名字先回答「你们公司能活那么久吗」",
+        "科技与环保平衡：纯环保腔（绿、生态）易被质疑虚，纯科技腔（芯、能效比）难亲近——户用市场的最优解是「科技让省钱可信」的混合气质",
+        "省钱叙事入名：省、赚、零电费、run——户用光伏的真实购买动机是电费账单而非环保理想，名字直面钱的品牌转化率更诚实",
+        "拼音/英文形态同步设计：中国光伏天然出海，中文名定稿前先验证拼音形态的可读性与英文近似商标——LONGi 的大小写设计就是全球化形态的示范",
+      ],
+      cases: [
+        { name: "隆基绿能", takeaway: "「隆基」取自老校长江隆基之名：人名致敬赋予名字厚重的精神叙事，配「绿能」品类词完成行业定位——中国光伏龙头用一个名字同时承载传承与赛道" },
+        { name: "阳光电源", takeaway: "「阳光」（行业意象）+「电源」（品类直给）：四个字把「太阳变电」的商业本质说尽，B 端客户零理解成本——工业品牌功能命名的标准执行" },
+        { name: "Sunrun", takeaway: "sun + run：太阳「跑起来」的动感让光伏从工程品变成生活方式，两个单音节词全球好读——户用光伏消费化命名的标杆，动词给行业注入轻快感" },
+        { name: "Tesla Energy", takeaway: "特斯拉之名（科学家致敬）延伸到能源业务：主品牌的科技光环直接为储能背书——品牌延伸命名的势能样本，也解释了为何光伏新品牌难与之正面竞争" },
+        { name: "晶科能源", takeaway: "「晶」（硅晶体的材料词根）+「科」（科技）：把光伏制造的技术本体写进名字，供应链客户一眼识别专业身份——To B 命名用材料词根立信的示范" },
+      ],
+      pitfalls: [
+        "裸用光/阳/晒不加差异化：行业同名重灾区，「XX 阳光」「阳光 XX」商标近似驳回率极高，搜索与投标场景都被淹没",
+        "绿色宣称过度（零碳、100% 清洁入名）：各国 greenwashing 监管趋严，名字里的环保承诺若与实际不符，监管与舆论双重反噬",
+        "轻飘互联网腔损失信任：二十五年质保的生意用「太阳酱」式命名，业主签约时的犹豫都写在脸上——重决策行业名字必须有分量",
+        "忽略英文/拼音形态的全球验证：光伏必然出海，中文名的拼音在英语里的可读性、目标市场的商标近似必须在定名前查清",
+      ],
+    },
+    en: {
+      label: "Solar & clean energy",
+      title: "How to Name a Solar or Clean Energy Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Solar and clean energy naming guide: sun imagery with a second root, reliability signals for 25-year warranties, savings-forward names, breakdowns of Sunrun/LONGi/Tesla Energy, recommended TLDs and pitfalls — then hunt an available energy domain with AI.",
+      intro:
+        "Solar naming's core asset is light: sun, ray, bright, solar — this industry owns humanity's most positive image bank, which also makes it the most crowded; differentiation must come from a second root beyond the sun. Second, the decision cycle is long and the trust bar is high: a residential system costs five figures and carries a 25-year warranty, so what the homeowner really signs is a bet that \"this company still exists in 2050\" — the name must signal solid, long-lived and well-capitalized, and a flimsy startup register directly costs signatures. Third, the value chain names in two languages: B2B module makers and utility-scale developers use industrial-technical authority (materials roots, engineering gravity), while residential installers and storage brands use warmth and savings narratives (Sunrun's motion, sunshine-home warmth) — upstream and downstream barely share a vocabulary. Finally, there's the regulatory backdrop: green-claim rules are tightening worldwide, and greenwashing accusations often start with the name — an eco-promise in the brand name must be one the products can prove.",
+      namingIdeas: [
+        "Sun imagery plus a second root: sun/light/ray is the category's mother tongue but fully crowded — differentiation needs a second anchor (Sunrun's verb, a founder's name, a materials root); the sun alone is no longer a name",
+        "Signal decades of reliability: run, last, anchor, granite roots — in a 25-year-warranty business, the name's first job is answering \"will you still exist when my panels age?\"",
+        "Balance tech and green: pure eco register invites skepticism, pure tech register feels cold — the residential sweet spot is \"technology that makes the savings believable\"",
+        "Put the savings in the name: the honest purchase driver for home solar is the utility bill, not the planet — names that face the money (save, run, zero) convert on the real motivation",
+        "Design the global form early: solar is a born-global industry — validate the romanized form's readability and target-market trademarks before locking the name; LONGi's casing is a masterclass in global word-shape",
+      ],
+      cases: [
+        { name: "Sunrun", takeaway: "sun + run: the sun set in motion — solar pulled from engineering project to lifestyle subscription; two single syllables readable worldwide, the benchmark of consumerized residential solar naming" },
+        { name: "LONGi", takeaway: "Named in tribute to a revered educator, cased as LONGi: a heritage story inside a globally distinctive word-shape — proof that a Chinese manufacturer can carry founder-honoring depth into a worldwide B2B brand" },
+        { name: "Tesla Energy", takeaway: "A scientist's surname extended into energy: the parent brand's technology halo underwrites batteries and roofs directly — brand-extension naming at maximum leverage, and why standalone solar brands avoid competing head-on" },
+        { name: "First Solar", takeaway: "first + the category word: a leadership claim fused to maximum clarity, ideal for utility-scale procurement where clarity beats charm — functional naming with a built-in superlative" },
+        { name: "Enphase", takeaway: "energy + phase: the electrical-engineering term doubles as the brand root, instantly credible to installers and engineers — hiding technical authority inside the morphology, the B2B counterpart to consumer sun-names" },
+      ],
+      pitfalls: [
+        "Bare sun/solar/bright naming: the industry's worst collision zone — \"X Solar\" trademark refusals are routine, and search plus bid shortlists bury the undifferentiated",
+        "Over-claiming green (zero-carbon, 100% clean in the name): greenwashing enforcement is tightening in every major market — an eco-promise the products can't prove invites regulators and headlines together",
+        "Flimsy startup register on a 25-year promise: a cutesy name on a five-figure, decades-long contract makes homeowners hesitate at the signature line — heavy decisions need names with weight",
+        "Skipping global-form validation: solar exports by default — check the romanized form's pronunciation in English and trademark conflicts in target markets before the name ships on a panel",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
