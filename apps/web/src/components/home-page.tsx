@@ -469,6 +469,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一家口腔诊所/牙科品牌，寓意「看牙不再可怕，笑容值得被认真对待」；气质要安心、专业、有微笑感不冰冷；场景是家庭群推荐、诊所招牌和「明天去 X 看牙」的日常表达里都让人放松。",
     en: "A dental clinic or oral care brand. The name should make dental visits feel safe and smiles worth caring for; the vibe is reassuring, professional, smile-warm rather than clinical-cold; it must relax people in a family group recommendation, on the clinic sign, and in \"I'm going to X tomorrow\".",
   },
+  {
+    slug: "accounting",
+    labelZh: "会计财税",
+    labelEn: "Accounting & tax",
+    zh: "一家会计事务所/财税服务品牌，寓意「账本交给它就不会出错」；气质要稳健、专业、值得托付不轻飘；场景是审计报告署名、企业客户尽调和「记账找 X」的老板圈转介绍里都立得住。",
+    en: "An accounting firm or tax service brand. The name should promise that the books are in hands that don't make mistakes; the vibe is steady, professional, trustworthy rather than flashy; it must hold up as an audit report signature, in client due diligence, and in \"use X for your books\" referrals.",
+  },
+  {
+    slug: "livestream",
+    labelZh: "直播电商",
+    labelEn: "Livestream commerce",
+    zh: "一个直播电商/主播 IP 品牌，寓意「进直播间就像逛一个信得过的好店」；气质要响亮、有人设、口播喊得出；场景是主播口播、弹幕刷屏和「去 X 直播间蹲折扣」的日常转述里都好听好记。",
+    en: "A livestream commerce or creator shop brand. The name should feel like walking into a trusted store that happens to be live; the vibe is loud-friendly, persona-driven, made to be shouted; it must ring out in host shout-outs, chat spam, and \"catch the drop at X tonight\".",
+  },
+  {
+    slug: "translation",
+    labelZh: "翻译本地化",
+    labelEn: "Translation & localization",
+    zh: "一个翻译/本地化服务品牌，寓意「跨过语言的墙，意思一点不丢」；气质要专业、国际化、名字自己先经得起多语言念读；场景是跨国合同署名、开发者文档和「本地化交给 X」的采购推荐里都可信顺口。",
+    en: "A translation or localization brand. The name should promise that meaning crosses the language wall intact; the vibe is professional, international, and the name itself must read cleanly in every major language; it must hold up on cross-border contracts, in developer docs, and in \"we use X for localization\".",
+  },
+  {
+    slug: "gardening",
+    labelZh: "园艺绿植",
+    labelEn: "Gardening & plants",
+    zh: "一个园艺绿植品牌，寓意「给生活留一平米会呼吸的绿」；气质要治愈、有生长感、好养活不娇气；场景是快递包裹、窗台打卡照和「我在 X 买的绿萝一直活着」的口碑转述里都温暖耐看。",
+    en: "A gardening or plant brand. The name should evoke a square meter of breathing green in everyday life; the vibe is soothing, growth-minded, hardy rather than precious; it must wear well on a shipping box, in windowsill photos, and in \"my plant from X is still thriving\".",
+  },
+  {
+    slug: "coworking",
+    labelZh: "联合办公",
+    labelEn: "Coworking space",
+    zh: "一个联合办公/共享空间品牌，寓意「和一群同路人把事做成的地方」；气质要有归属感、专业不失活力；场景是楼宇招牌、地图搜索和「我在 X 上班」的日常介绍里都体面顺口。",
+    en: "A coworking or shared space brand. The name should feel like the place where fellow travelers get things done; the vibe is belonging-first, professional yet energetic; it must look right on building signage, in map search, and sound good in \"I work out of X\".",
+  },
+  {
+    slug: "solar",
+    labelZh: "光伏新能源",
+    labelEn: "Solar & clean energy",
+    zh: "一个光伏/新能源品牌，寓意「把阳光变成每个月省下的电费」；气质要可靠、有科技感、扛得住二十五年质保的托付；场景是屋顶工程合同、投标书和「装光伏找 X」的邻里转介绍里都有分量。",
+    en: "A solar or clean energy brand. The name should turn sunlight into a lower bill every month; the vibe is dependable, engineered, solid enough for a 25-year warranty; it must carry weight on an installation contract, in a project bid, and in \"get your panels from X\" neighbor referrals.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

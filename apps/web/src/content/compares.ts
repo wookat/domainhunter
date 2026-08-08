@@ -1873,6 +1873,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Cloud services & SaaS products", "Enterprise IT & DevOps services", "Root domain for customer instances (app.acme.cloud)", "Renewal-budget sensitive (.host renews steepest)"],
     },
   },
+  "social-vs-com": {
+    slug: "social-vs-com",
+    a: "social",
+    b: "com",
+    zh: {
+      title: ".social 和 .com 怎么选：社区身份词与通用默认值的对比",
+      metaDescription: ".social 把社区语义写进后缀且是联邦宇宙惯例，.com 认知度最高但好名字近乎绝迹。对比两者的语义、价格与库存差异，并用 AI 猎取可注册的名字。",
+      verdict:
+        "先问一句：你做的是「社区」还是「公司」？做社区论坛、兴趣社群、Mastodon/Misskey 等联邦宇宙实例、创作者粉丝阵地，.social 的语义加成是 .com 给不了的——mastodon.social 已经完成了全网用户教育，圈内看到 .social 天然默认「这是个人聚起来的地方」，而同样的社区名在 .com 里九成已被注册或标着四五位数的溢价。反过来，做面向大众的正式公司主站、电商或需要口头传播的品牌，.com 的默认补全与信任度仍是最优解。价格上 .social 注册约 $7、续费约 $33/年，比 .com（约 $10/年）贵一档但可长期负担。务实的组合打法：社区阵地用 name.social 当主域，品牌起量后再收购对应 .com 做跳转——反着来（先守着贵价 .com 等社区长大）通常不划算。",
+      pickA: ["社区论坛与兴趣社群", "Mastodon 等联邦宇宙实例", "创作者粉丝阵地与私域", "心仪社区名在 .com 已被注册"],
+      pickB: ["面向大众的正式公司主站", "电商与线下业务", "口头传播场景多（广告、播客）", "长期品牌资产与转售价值"],
+    },
+    en: {
+      title: ".social vs .com: Community Badge vs Universal Default",
+      metaDescription:
+        ".social writes community into the suffix and rules the Fediverse; .com has universal recognition but empty shelves. Compare semantics, pricing and inventory, then hunt available names.",
+      verdict:
+        "Start with one question: are you building a community or a company? For forums, interest groups, Mastodon/Misskey instances and creator fan hubs, .social carries a semantic bonus .com can't match — mastodon.social educated the whole internet, so insiders read name.social as \"a place where people gather\" by default, while the same community names on .com are long registered or priced at four-figure premiums. Conversely, for a mainstream company site, e-commerce or any brand spread by word of mouth, .com's autocomplete reflex and trust remain unbeatable. On price, .social runs about $7 to register and $33/yr to renew — a tier above .com's ~$10/yr but sustainable long-term. The pragmatic play: run the community on name.social as the primary domain, and acquire the matching .com for redirects once the brand has traction — waiting on an expensive .com before the community exists rarely pays.",
+      pickA: ["Community forums & interest groups", "Mastodon / Fediverse instances", "Creator fan hubs & memberships", "Your community name is taken on .com"],
+      pickB: ["Mainstream corporate main sites", "E-commerce and offline businesses", "Heavy word-of-mouth channels (ads, podcasts)", "Long-term brand asset and resale value"],
+    },
+  },
+  "video-vs-tv": {
+    slug: "video-vs-tv",
+    a: "video",
+    b: "tv",
+    zh: {
+      title: ".video 和 .tv 怎么选：内容形态词与频道气质词的对比",
+      metaDescription: ".video 语义直白、价格温和、库存大开，.tv 有 Twitch 级行业地位但溢价更高。对比两者的气质、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀都指向视频，分野在气质与钱包。.tv 是「频道感」：Twitch.tv 一个案例就奠定了它在直播与流媒体圈的行业地位，做直播平台、视频栏目、主播个人品牌，name.tv 读出来就像一个频道号，用户看到就期待「有内容可看」——代价是价格高于 .com 一截（为图瓦卢财政做贡献的溢价）。.video 是「形态感」：视频托管与剪辑工具、字幕与转码服务、课程平台、企业的视频专区（brand.video 放产品演示与教程库），语义更工具化、更中性；注册约 $8、续费约 $29/年，在行业词后缀里属温和一档，且库存大片空着——「xx视频」类词根在 .tv 与 .com 里早被抢完，.video 里命中率高得多。判断标准：品牌是「一个频道/一个节目」→ .tv 的频道气质与行业惯例更值；产品是「处理视频的工具或视频内容库」→ .video 更准更便宜。",
+      pickA: ["视频托管/剪辑/字幕工具", "课程与视频 SaaS 平台", "品牌视频专区（brand.video）", "续费预算敏感、想要更高命中率"],
+      pickB: ["直播平台与流媒体品牌", "视频栏目与节目名", "主播与频道个人品牌", "看重 Twitch 级行业惯例背书"],
+    },
+    en: {
+      title: ".video vs .tv: The Format Word vs the Channel Vibe",
+      metaDescription:
+        ".video is literal, moderately priced and wide open; .tv carries Twitch-grade industry status at a premium. Compare vibe, pricing and fit, then hunt available names.",
+      verdict:
+        "Both suffixes point at video; the split is vibe versus wallet. .tv is channel energy: Twitch.tv single-handedly settled its status in streaming, so live platforms, video shows and streamer personal brands read name.tv like a channel handle — viewers expect something to watch. The cost is a real premium over .com (your contribution to Tuvalu's treasury). .video is format energy: hosting and editing tools, subtitle and transcoding services, course platforms, and corporate video hubs (brand.video for demos and tutorials) wear its more neutral, tool-like semantics well. At about $8 to register and $29/yr to renew it sits in the moderate tier, and inventory is wide open — video-flavored roots were hoarded on .tv and .com years ago but score dramatically better here. The test: if the brand is a channel or a show → .tv's vibe and industry convention earn the premium; if the product is a tool that processes video or a video library → .video is more precise and cheaper.",
+      pickA: ["Video hosting / editing / subtitle tools", "Course & video SaaS platforms", "Corporate video hubs (brand.video)", "Renewal-sensitive with better availability odds"],
+      pickB: ["Live-streaming platforms & media brands", "Video shows and program titles", "Streamer & channel personal brands", "Twitch-grade industry convention matters"],
+    },
+  },
+  "fund-vs-finance": {
+    slug: "fund-vs-finance",
+    a: "fund",
+    b: "finance",
+    zh: {
+      title: ".fund 和 .finance 怎么选：一只基金与一个行业的对比",
+      metaDescription: ".fund 精准指向基金与募资，.finance 覆盖更宽的金融品类且是 DeFi 惯例。对比两者的语义宽度、价格与合规注意点，并用 AI 猎取可注册的名字。",
+      verdict:
+        "同属金融赛道的行业词，差别在语义的口径。.fund 窄而准：风投与私募基金官网（brand.fund 比 xxxcapital.com 短一截还更专业，VC 圈已有惯例）、加密基金与 DAO 金库、公益筹款页、奖学金计划——它说的是「一笔聚起来的钱」。.finance 宽而正：金融科技创业公司、记账与预算工具、财务咨询、企业财务 SaaS 都装得下，且 DeFi 圈已把它用成行业惯例（yearn.finance 完成了用户教育）。价格接近：.fund 注册约 $9、续费约 $57/年；.finance 首年 $7 上下、续费约 $52/年——都属续费偏高档，对管理真金白银的团队不值一提，副业试水要算清。共同的注意点：金融语义自带监管预期，页面必须放清楚主体信息与合规声明，否则会被当作募资骗局。判断标准：业务是「一只基金/一个募资计划」→ .fund 点题最准；业务是更广义的金融产品或工具 → .finance 的宽语义与 DeFi 惯例更稳。",
+      pickA: ["风投与私募基金官网", "加密基金与 DAO 金库", "公益筹款与奖学金计划", "想要比 xxxcapital.com 更短的表达"],
+      pickB: ["金融科技创业公司", "DeFi 与加密金融协议", "记账/预算/报销工具", "财务咨询与企业财务 SaaS"],
+    },
+    en: {
+      title: ".fund vs .finance: One Fund vs a Whole Industry",
+      metaDescription:
+        ".fund points precisely at funds and fundraising; .finance covers the broader money category and rules DeFi. Compare semantic width, pricing and compliance, then hunt available names.",
+      verdict:
+        "Both are financial trade words; the difference is semantic aperture. .fund is narrow and precise: VC and private-equity fund sites (brand.fund beats the clunky xxxcapital.com — shorter and already a VC convention), crypto funds and DAO treasuries, charity fundraising pages and grant programs — it names \"a pool of money\". .finance is wide and formal: fintech startups, budgeting tools, advisory firms and corporate finance SaaS all fit, and DeFi made it an industry convention (yearn.finance educated the users). Pricing is comparable: .fund runs about $9 to register with renewals near $57/yr; .finance about $7 in year one with renewals near $52/yr — both renew steep, trivial for teams managing real money, worth budgeting for side projects. The shared caution: financial semantics invite regulatory expectations, so publish your legal entity and compliance details or risk reading like a scam. The test: if the business is a fund or a fundraising program → .fund names it exactly; if it's a broader financial product or tool → .finance's width and DeFi convention are the safer hold.",
+      pickA: ["VC & private-equity fund sites", "Crypto funds & DAO treasuries", "Charity fundraising & grant programs", "A shorter read than xxxcapital.com"],
+      pickB: ["Fintech startups", "DeFi & crypto-finance protocols", "Budgeting / expense / payment tools", "Advisory firms & corporate finance SaaS"],
+    },
+  },
+  "land-vs-com": {
+    slug: "land-vs-com",
+    a: "land",
+    b: "com",
+    zh: {
+      title: ".land 和 .com 怎么选：世界感行业词与通用默认值的对比",
+      metaDescription: ".land 兼具「土地」与「乐园」双重语义且库存大开，.com 信任度最高但好名字绝迹。对比两者的语义、价格与断词玩法，并用 AI 猎取可注册的名字。",
+      verdict:
+        ".land 的胜负手是它的双重语义。字面层是「土地」：房产与土地交易平台、农场与农业项目、露营地与户外目的地，name.land 直接点题；引申层是「乐园/世界」：英语 -land 本就是「某某之地」的构词法（Disneyland 式），游戏世界、虚拟社区、元宇宙项目用它自带想象力，还有断词 hack 的加成（wonderland → wonder.land）。这些场景里，同样的词根在 .com 早被囤完或标着溢价，.land 却大片空着且中档价位（注册约 $9、续费约 $33/年）。.com 的优势依旧是那两条：用户默认补全、长期资产流动性最好——面向大众的正式品牌、与「土地/空间/世界」不沾边的业务，仍应首选 .com，硬用 .land 只会显得莫名其妙。判断标准：业务或品牌叙事里有「地」的意象 → .land 的语义与库存都是红利；没有 → 回到 .com 的安全区。",
+      pickA: ["房产与土地交易平台", "农业与户外目的地项目", "游戏世界与元宇宙", "-land 结尾词的断词 hack（wonder.land）"],
+      pickB: ["面向大众的正式品牌主站", "业务与土地/空间/世界无关", "长期资产与转售流动性", "口头传播多、怕拼写解释成本"],
+    },
+    en: {
+      title: ".land vs .com: The World-Building Word vs the Universal Default",
+      metaDescription:
+        ".land carries both real-estate and theme-park semantics with wide-open inventory; .com has maximum trust but empty shelves. Compare semantics, pricing and domain hacks, then hunt available names.",
+      verdict:
+        ".land's edge is its double reading. The literal layer is land: real-estate and land marketplaces, farms and agriculture ventures, campgrounds and outdoor destinations — name.land says it outright. The figurative layer is worlds: English builds \"a place of X\" with -land (think Disneyland), so game worlds, virtual communities and metaverse projects wear it with built-in imagination, plus the domain-hack bonus (wonderland → wonder.land). In these niches the same roots are long hoarded or premium-priced on .com while .land sits wide open at mid-tier prices (about $9 to register, $33/yr to renew). .com's case remains the classic two: autocomplete reflex and the best long-term asset liquidity — mainstream brands, and any business unrelated to land, space or worlds, should still default to .com; forcing .land there just reads as random. The test: if your business or brand story carries the imagery of a place → .land's semantics and inventory are pure upside; if not → stay in .com's safety zone.",
+      pickA: ["Real-estate & land marketplaces", "Agriculture & outdoor destinations", "Game worlds & metaverse projects", "Domain hacks on -land words (wonder.land)"],
+      pickB: ["Mainstream consumer brand sites", "Businesses unrelated to land or worlds", "Long-term asset and resale liquidity", "Heavy word-of-mouth, low explanation budget"],
+    },
+  },
+  "click-vs-link": {
+    slug: "click-vs-link",
+    a: "click",
+    b: "link",
+    zh: {
+      title: ".click 和 .link 怎么选：动作号召与聚合语义的对比",
+      metaDescription: ".click 念出来就是指令、价格全场最低，.link 语义即「链接聚合」且续费稳定。对比两者的语义、价格与信誉注意点，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀都活在「跳转」的世界里，分工其实很清楚。.click 是动词：念出来就是一个指令——点它。营销活动落地页、下载/购买按钮背后的追踪域、campaign 专属短域用它自带行动号召（try.click、save.click），而且它是价格谷底：注册约 $2、续费约 $11/年，便宜到可以给每个 campaign 配一个专属域。.link 是名词：语义即「链接的聚合处」，link-in-bio 个人主页、导航站、资源合集、产品的分享短链域（主站 .com + 同名 .link 分享域）用它一眼即懂，价格亲民且续费稳定。共同的短板要认清：便宜后缀历来被垃圾邮件与钓鱼滥用，两者在部分邮件网关与安全网关的信誉分都偏低——都别做主品牌或发件域，养域名信誉是企业级用法的前置功课。判断标准：域名本身要当「按钮」用 → .click 的动作感无可替代；域名是「链接的家」→ .link 的聚合语义更准。",
+      pickA: ["营销活动落地页与追踪域", "campaign 专属短域（每个活动一个）", "动词/口号型域名（try.click）", "预算极致敏感（全场最低价档）"],
+      pickB: ["link-in-bio 个人主页聚合", "导航站与资源合集", "产品分享短链域（主站 .com 分工）", "看重续费长期稳定"],
+    },
+    en: {
+      title: ".click vs .link: Call-to-Action vs Link-Hub Semantics",
+      metaDescription:
+        ".click reads as a spoken instruction at rock-bottom prices; .link means the place links live, with steady renewals. Compare semantics, pricing and reputation caveats, then hunt available names.",
+      verdict:
+        "Both suffixes live in the redirect business, and the division of labor is clean. .click is a verb: spoken aloud it's literally an instruction — click it. Campaign landing pages, tracking domains behind download/buy buttons and per-campaign short domains get a built-in call to action (try.click, save.click), and it's the price floor: about $2 to register and $11/yr to renew — cheap enough to give every campaign its own domain. .link is a noun: it means \"where the links live\" — link-in-bio hubs, navigation sites, resource collections and a product's share domain (main site on .com, the matching .link for shares) all read instantly, at friendly prices with unusually steady renewals. Own the shared weakness: bargain suffixes attract spam and phishing, and both score lower with some mail and security gateways — use neither as a primary brand or sending domain, and warm up reputation before enterprise-grade use. The test: if the domain itself is a button → .click's action feel is unmatched; if the domain is a home for links → .link's hub semantics are more precise.",
+      pickA: ["Campaign landing pages & tracking domains", "A dedicated short domain per campaign", "Verb/slogan domains (try.click)", "Rock-bottom budget (cheapest tier)"],
+      pickB: ["Link-in-bio personal hubs", "Navigation sites & resource collections", "Product share domains (paired with a .com)", "Long-term renewal stability matters"],
+    },
+  },
+  "icu-vs-xyz": {
+    slug: "icu-vs-xyz",
+    a: "icu",
+    b: "xyz",
+    zh: {
+      title: ".icu 和 .xyz 怎么选：低价三字母梗与年轻反叛旗帜的对比",
+      metaDescription: ".icu 读作 I see you、长期持有成本几乎最低，.xyz 有 Alphabet 背书与 Web3 亚文化地位。对比两者的气质、价格结构与信誉注意点，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是「便宜且有态度」的后缀，态度的方向不同。.xyz 的资本是文化地位：Alphabet 用 abc.xyz 做官网给了它最高背书，Web3 与加密圈把它用成了亚文化旗帜——造词、梗词、实验代号配 .xyz 都很自由；但价格结构要看清，首年常常只要几块钱，续费会回到约首年十倍的正常水平。.icu 的资本是梗加长期成本：官方读法「I see you」自带社交彩蛋，监控/观测类工具与个人主页用它出彩（yourname.icu = 「看见你」），注册约 $3、续费约 $16/年——三字母后缀里几乎最低的长期持有成本，比 .xyz 的续费还友好。共同的暗面：两者都上过垃圾邮件统计的榜单，部分邮件服务与企业防火墙更敏感，严肃商业主站都要三思。中文用户再记一条：icu 在中文互联网常指「重症监护室」，医疗歧义要避开。判断标准：要 Web3/创意圈的身份信号 → .xyz；要梗、要三字母、要最低长期成本 → .icu。",
+      pickA: ["监控与观测工具（玩 I see you 梗）", "个人主页与联系页", "低成本三字母短域刚需", "长期持有成本敏感（续费约 $16/年）"],
+      pickB: ["Web3 与加密项目（圈内旗帜）", "创意实验与造词品牌", "看重 Alphabet（abc.xyz）级背书", "首年批量验证想法（几块钱一个）"],
+    },
+    en: {
+      title: ".icu vs .xyz: The Bargain Three-Letter Pun vs the Young Rebel Flag",
+      metaDescription:
+        ".icu reads \"I see you\" with nearly the lowest holding cost; .xyz has Alphabet's endorsement and Web3 subculture status. Compare vibe, price structure and reputation caveats, then hunt available names.",
+      verdict:
+        "Both are cheap suffixes with attitude — pointed in different directions. .xyz's asset is cultural standing: Alphabet's abc.xyz gave it the ultimate endorsement, and Web3 turned it into a subculture flag — coined words, meme words and experiment codenames all fly free on .xyz. But read the price structure: first years often cost a few dollars while renewals snap back to roughly ten times that. .icu's asset is the pun plus holding cost: it officially reads \"I see you\", a built-in social wink that makes monitoring/observability tools and personal pages shine (yourname.icu = \"see you\"), at about $3 to register and $16/yr to renew — nearly the lowest long-term cost of any three-letter TLD, friendlier than .xyz's renewal. The shared shadow: both have appeared on spam-volume charts, so some mail services and corporate firewalls treat them warily — think twice for a serious commercial main site. One more note: in hospital contexts ICU means intensive care, so avoid medical-adjacent branding. The test: Web3/creative identity signal → .xyz; a pun, three letters and the lowest holding cost → .icu.",
+      pickA: ["Monitoring & observability tools (the \"I see you\" pun)", "Personal home & contact pages", "Budget three-letter short domains", "Holding-cost sensitive (~$16/yr renewals)"],
+      pickB: ["Web3 & crypto projects (the insider flag)", "Creative experiments & coined brands", "Alphabet-grade endorsement (abc.xyz)", "Bulk idea validation on cheap first years"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
