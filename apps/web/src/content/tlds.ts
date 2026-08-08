@@ -3444,6 +3444,186 @@ const GUIDES = {
       ],
     },
   },
+  photography: {
+    tld: "photography",
+    zh: {
+      title: ".photography 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".photography 把快门声写进域名，适合摄影师作品集、摄影工作室、婚礼与商业摄影品牌。查看 .photography 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .photography 域名。",
+      intro:
+        ".photography 是摄影行业的全拼后缀：摄影师个人作品集、婚礼与人像工作室、商业与产品摄影、摄影课程与器材评测内容用 name.photography，专业身份从域名开始。它与 .photos 的分工微妙——.photos 短、偏「照片本身」（图库、相册、分享），.photography 长、偏「摄影这门手艺」：强调专业服务与个人品牌时它更准。Identity Digital 运营，注册约 $6（约 ¥41），续费约 $29/年（约 ¥211），在行业后缀里属温和档。库存极好：人名、城市名、风格词命中率都高。注意三点：一是 photography 十一个字母是本站最长后缀，主体名务必短，人名或单词最佳；二是长域名口播成本高，名片与作品集水印是它的主场，社交简介放短链接；三是摄影获客重平台与口碑，域名的角色是作品集官网与档期预约入口。命名上「人名 + .photography」最自然（摄影师个人品牌的标准写法），工作室用「品牌词 + .photography」，垂类用「风格/题材 + .photography」（film、street 类）也很出彩。",
+      bestFor: ["摄影师个人作品集", "婚礼与人像工作室", "商业与产品摄影", "摄影课程与器材内容"],
+      namingTips: [
+        "「人名 + .photography」是摄影师个人品牌标准写法",
+        "注册约 $6、续费约 $29/年，行业后缀温和档",
+        "十一个字母是最长后缀，主体名务必短",
+        "强调手艺与服务用 .photography，图库相册用 .photos",
+      ],
+    },
+    en: {
+      title: ".photography Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".photography writes the craft into the address — for photographer portfolios, wedding and commercial studios, and photo education brands. See live pricing and naming advice, then hunt available .photography names with AI.",
+      intro:
+        ".photography spells the craft in full: photographer portfolios, wedding and portrait studios, commercial and product shooters, photo courses and gear-review content on name.photography read as professionals from the address itself. The split with .photos is subtle — .photos is short and about \"the pictures\" (galleries, albums, sharing), while .photography is about \"the craft\": sharper when you sell professional service and personal brand. Operated by Identity Digital, about $6 to register and $29/yr to renew — the mild tier among industry suffixes. Inventory is excellent: personal names, city names and style words all hit. Three cautions: photography is eleven letters — the longest suffix here — so keep the front word short, a name or single word at best; long domains cost more when spoken, so business cards and portfolio watermarks are its home turf, with a short link for social bios; and photographers win clients on platforms and word of mouth, so the domain's job is the portfolio site and booking front door. Naming: personal name + .photography is the standard photographer pattern; studios go brand word + .photography; niches shine as style or subject + .photography (film, street).",
+      bestFor: ["Photographer portfolios", "Wedding & portrait studios", "Commercial & product shooters", "Photo courses & gear content"],
+      namingTips: [
+        "Name + .photography is the photographer standard",
+        "About $6 to register, $29/yr to renew",
+        "Eleven letters — keep the front word short",
+        "Craft & service? .photography; galleries? .photos",
+      ],
+    },
+  },
+  events: {
+    tld: "events",
+    zh: {
+      title: ".events 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".events 把活动排期写进域名，适合活动策划、会展公司、演出售票与社群聚会品牌。查看 .events 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .events 域名。",
+      intro:
+        ".events 是活动行业的原生后缀：活动策划与执行公司、会展与峰会主办方、演出与售票平台、婚礼与派对策划、社群聚会与线下沙龙用 name.events，域名读出来就是一张活动日历。它天然带复数——「这里有很多场活动」，做系列活动、年度大会、城市活动指南尤其顺口。Identity Digital 运营，注册约 $10（约 ¥70），续费约 $37/年（约 ¥263），对活动行业客单价来说负担很轻。库存极好：城市名、品牌词、主题词命中率都高。注意三点：一是 events 天然复数，单场大会更适合「大会名 + 年份」的独立域名，.events 适合做长期活动品牌的总入口；二是活动获客重社交裂变与售票平台，域名的角色是品牌官网与报名入口，配合票务系统食用最佳；三是活动有强时效性，域名要选能跨活动复用的名字，别把日期写进主体。命名上「品牌/公司 + .events」最自然，城市指南用「城市 + .events」归拢本地活动，垂类用「主题 + .events」（tech、music 类）也很出彩。",
+      bestFor: ["活动策划与执行公司", "会展与峰会主办方", "演出售票与活动日历", "婚礼派对与社群聚会"],
+      namingTips: [
+        "「品牌/公司 + .events」读出来就是活动日历",
+        "注册约 $10、续费约 $37/年，活动行业无压力",
+        "配合票务系统，域名做品牌官网与报名入口",
+        "别把日期写进主体，选能跨活动复用的名字",
+      ],
+    },
+    en: {
+      title: ".events Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".events puts the calendar into the address — for event planners, conference organizers, ticketing and community meetup brands. See live pricing and naming advice, then hunt available .events names with AI.",
+      intro:
+        ".events is the native suffix of the events trade: planning and production agencies, conference and summit organizers, shows and ticketing platforms, wedding and party planners, community meetups and offline salons on name.events read like a calendar of things happening. The plural is built in — \"there are many events here\" — so series, annual conferences and city event guides roll off the tongue. Operated by Identity Digital, about $10 to register and $37/yr to renew — light against event-industry ticket sizes. Inventory is excellent: city names, brand words and theme words all hit. Three cautions: the plural suits an ongoing events brand as the umbrella front door, while a single conference often wants its own name-plus-year domain; events win attendees through social sharing and ticketing platforms, so the domain's job is the brand site and registration front door — pair it with a ticketing system; and events are time-bound, so pick a front word that outlives any one date — never bake the date in. Naming: brand or company + .events is the natural pattern; city guides unify local happenings as city + .events; verticals shine as theme + .events (tech, music).",
+      bestFor: ["Event planning & production", "Conference & summit organizers", "Ticketing & event calendars", "Weddings, parties & meetups"],
+      namingTips: [
+        "Brand/company + .events reads like a calendar",
+        "About $10 to register, $37/yr to renew",
+        "Pair with ticketing — the domain is the front door",
+        "Never bake a date in — pick a reusable name",
+      ],
+    },
+  },
+  solutions: {
+    tld: "solutions",
+    zh: {
+      title: ".solutions 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".solutions 把「解决方案」写进域名，适合 IT 服务商、咨询公司、B2B 方案商与系统集成商，首年注册很便宜。查看 .solutions 实时价格与命名建议，用 AI 猎取可注册的 .solutions 域名。",
+      intro:
+        ".solutions 是 B2B 服务商的常用后缀：IT 服务与系统集成、软件定制开发、企业咨询、行业解决方案商用 name.solutions，域名直接回答客户的问题——「你们卖什么？卖解决方案」。它在企业官网语境里几乎是行话级别的存在，英文市场认知度高，招投标文件与企业邮箱里都不违和。Identity Digital 运营，注册约 $4（约 ¥26）是本站便宜档，续费约 $25/年（约 ¥182）也温和，B2B 客单价下几乎无感。库存极好：行业词、技术词、公司名命中率都高。注意三点：一是 solutions 一词在英文营销里被用得很泛，主体名要具体（行业或技术领域），「泛词 + solutions」会显得空洞；二是它是复数商务词，面向消费者的品牌气质不合，2C 产品另选后缀；三是企业采购决策链长，域名的角色是官网与企业邮箱，稳定与专业感比花哨重要。命名上「行业 + .solutions」最自然（fintech、logistics 类），公司用「品牌词 + .solutions」，技术商用「技术栈 + .solutions」也很顺。",
+      bestFor: ["IT 服务与系统集成商", "软件定制与外包开发", "企业咨询与行业方案商", "B2B 技术服务品牌"],
+      namingTips: [
+        "「行业 + .solutions」直接回答「你们卖什么」",
+        "注册约 $4、续费约 $25/年，B2B 成本无感",
+        "主体名要具体，「泛词 + solutions」显得空洞",
+        "商务气质浓，2C 消费品牌另选后缀",
+      ],
+    },
+    en: {
+      title: ".solutions Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".solutions says what you sell right in the address — for IT services, consultancies, B2B vendors and systems integrators, with a cheap first year. See live pricing and naming advice, then hunt available .solutions names with AI.",
+      intro:
+        ".solutions answers the client's first question in the address: IT services and systems integrators, custom software shops, consultancies and industry vendors on name.solutions say \"we sell solutions\" before the page loads. In corporate-site English it is practically trade vocabulary — at home in RFPs, tender documents and company email addresses. Operated by Identity Digital, about $4 to register — among the cheap tier here — and a mild $25/yr to renew, invisible against B2B deal sizes. Inventory is excellent: industry words, technology words and company names all hit. Three cautions: \"solutions\" is worn thin in marketing English, so make the front word concrete (an industry or technology) — vague word + solutions reads hollow; it is plural business-speak, wrong register for consumer brands — 2C products want another suffix; and enterprise buying cycles are long, so the domain's job is a stable, professional web and email presence, not flash. Naming: industry + .solutions is the natural pattern (fintech, logistics); firms go brand word + .solutions; tech vendors work stack + .solutions nicely.",
+      bestFor: ["IT services & systems integrators", "Custom software & dev shops", "Consultancies & industry vendors", "B2B technology brands"],
+      namingTips: [
+        "Industry + .solutions answers \"what do you sell\"",
+        "About $4 to register, $25/yr to renew",
+        "Keep the front word concrete — vague reads hollow",
+        "Business register — consumer brands look elsewhere",
+      ],
+    },
+  },
+  services: {
+    tld: "services",
+    zh: {
+      title: ".services 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".services 把服务清单写进域名，适合专业服务公司、家政维修、企业外包与本地服务商。查看 .services 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .services 域名。",
+      intro:
+        ".services 是服务行业的直白后缀：专业服务公司（会计、法务、人力）、家政保洁与维修安装、企业外包与托管运维、本地生活服务商用 name.services，域名读出来就是一份服务清单。它比 .solutions 更朴素——solutions 说「我帮你解决问题」，services 说「我提供这些服务」，蓝领与本地服务用它反而更实在可信。Identity Digital 运营，注册约 $9（约 ¥63），续费约 $31/年（约 ¥226），服务业客单价下负担很轻。库存极好：行业词、动词、地名命中率都高。注意三点：一是 services 复数商务词，主体名要说清「什么服务」，行业词或动词最佳；二是本地服务获客重地图与平台评价，域名的角色是官网与报价入口，NAP 信息（名称地址电话）要与地图一致；三是英文里 services 也是政府与机构常用词，页面视觉要快速表明你是商业服务商。命名上「行业 + .services」最自然（cleaning、moving 类），公司用「品牌词 + .services」，本地生意用「城市 + 行业 + .services」精准命中搜索意图。",
+      bestFor: ["会计法务等专业服务", "家政保洁与维修安装", "企业外包与托管运维", "本地生活服务商"],
+      namingTips: [
+        "「行业 + .services」读出来就是服务清单",
+        "注册约 $9、续费约 $31/年，服务业无压力",
+        "「城市 + 行业 + .services」精准命中本地搜索",
+        "比 .solutions 朴素实在，蓝领服务更可信",
+      ],
+    },
+    en: {
+      title: ".services Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".services puts the offering into the address — for professional firms, home services, outsourcing and local providers. See live pricing and naming advice, then hunt available .services names with AI.",
+      intro:
+        ".services is the plainspoken suffix of the service economy: professional firms (accounting, legal, HR), cleaning, repair and installation trades, outsourcing and managed operations, local providers on name.services read like a straightforward menu of what you do. It is humbler than .solutions — solutions says \"we fix your problem\", services says \"here is what we offer\" — which makes it more credible for trades and local businesses. Operated by Identity Digital, about $9 to register and $31/yr to renew — light against service-industry ticket sizes. Inventory is excellent: trade words, verbs and place names all hit. Three cautions: it is a plural business word, so the front word must say which services — a trade word or verb works best; local providers win customers on maps and review platforms, so the domain's job is the brand site and quote front door, with NAP details matching your map listings; and \"services\" is also government-agency vocabulary in English, so make the visuals say commercial fast. Naming: trade + .services is the natural pattern (cleaning, moving); firms go brand word + .services; local businesses nail search intent as city + trade + .services.",
+      bestFor: ["Accounting, legal & HR firms", "Cleaning, repair & installation", "Outsourcing & managed ops", "Local service providers"],
+      namingTips: [
+        "Trade + .services reads like a service menu",
+        "About $9 to register, $31/yr to renew",
+        "City + trade + .services nails local search intent",
+        "Plainer than .solutions — credible for trades",
+      ],
+    },
+  },
+  consulting: {
+    tld: "consulting",
+    zh: {
+      title: ".consulting 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".consulting 把咨询身份写进域名，适合独立顾问、精品咨询公司、战略与管理咨询品牌。查看 .consulting 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .consulting 域名。",
+      intro:
+        ".consulting 把「顾问」的身份直接写进域名：独立顾问个人品牌、精品咨询公司、战略/管理/IT/营销咨询、教练与专家服务用 name.consulting，名片递出去就是职业说明。它与 .expert 的差别在语气——expert 说「我很懂」，consulting 说「我以此为业」，后者在企业采购语境里更正式可信。Identity Digital 运营，注册约 $21（约 ¥152），续费约 $44/年（约 ¥315），对咨询业客单价来说九牛一毛。库存极好：人名、领域词、公司名命中率都高。注意三点：一是 consulting 十个字母偏长，主体名务必短，姓氏或领域词最佳；二是咨询获客靠人脉与内容（领英、行业文章），域名的角色是专业官网与企业邮箱——name@name.consulting 的邮箱签名本身就是广告；三是独立顾问慎用泛词，「姓氏 + .consulting」比「泛行业词」更有辨识度与信任感。命名上「姓氏/人名 + .consulting」最自然（麦肯锡式传统），公司用「品牌词 + .consulting」，垂类用「领域 + .consulting」（tech、hr 类）也很顺。",
+      bestFor: ["独立顾问个人品牌", "精品咨询公司", "战略/IT/营销咨询", "教练与专家服务"],
+      namingTips: [
+        "「姓氏 + .consulting」是麦肯锡式传统写法",
+        "注册约 $21、续费约 $44/年，咨询客单价无感",
+        "name@name.consulting 的邮箱签名本身就是广告",
+        "十个字母偏长，主体名用姓氏或领域词",
+      ],
+    },
+    en: {
+      title: ".consulting Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".consulting writes the profession into the address — for independent consultants, boutique firms, and strategy or management advisory brands. See live pricing and naming advice, then hunt available .consulting names with AI.",
+      intro:
+        ".consulting states the profession in the address: independent consultants, boutique firms, strategy, management, IT and marketing advisories, coaches and expert services on name.consulting hand over a business card that explains itself. The contrast with .expert is tone — expert says \"I know this well\", consulting says \"this is my profession\" — and the latter reads more formal and credible in enterprise procurement. Operated by Identity Digital, about $21 to register and $44/yr to renew — a rounding error against consulting fees. Inventory is excellent: surnames, domain words and firm names all hit. Three cautions: consulting is ten letters, so keep the front word short — a surname or field word works best; consultants win work through networks and content (LinkedIn, industry writing), so the domain's job is the professional site and company email — a name@name.consulting signature is an ad in itself; and independents should avoid generic words — surname + .consulting builds more recognition and trust than a vague industry term. Naming: surname or personal name + .consulting is the classic pattern (the McKinsey tradition); firms go brand word + .consulting; verticals work field + .consulting (tech, hr).",
+      bestFor: ["Independent consultants", "Boutique consulting firms", "Strategy, IT & marketing advisory", "Coaches & expert services"],
+      namingTips: [
+        "Surname + .consulting — the McKinsey tradition",
+        "About $21 to register, $44/yr to renew",
+        "name@name.consulting email is an ad in itself",
+        "Ten letters — keep the front word short",
+      ],
+    },
+  },
+  software: {
+    tld: "software",
+    zh: {
+      title: ".software 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".software 把产品形态写进域名，适合软件公司、开发工具、桌面应用与软件外包团队。查看 .software 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .software 域名。",
+      intro:
+        ".software 把产品形态直接写进域名：软件公司官网、桌面与企业应用、开发工具与中间件、软件外包与定制团队用 name.software，访客不用猜你卖什么。它与 .app/.dev 的分工清晰——.app 偏移动与轻应用、.dev 偏开发者与技术品牌，.software 偏「正经软件产品与公司」：企业软件、桌面工具、行业系统用它气质最合。Identity Digital 运营，注册约 $16（约 ¥115），续费约 $33/年（约 ¥241），软件业成本结构下无感。库存极好：产品词、领域词、公司名命中率都高。注意三点：一是 software 八个字母偏长，主体名务必短，产品名或领域词最佳；二是它没有 .app 的 HTTPS 强制预载，但生产环境全站 HTTPS 本就是标配，别省；三是开源项目与个人开发者用 .dev/.io 更顺口，.software 的正式感更适合商业产品与公司主体。命名上「产品名 + .software」最自然，公司用「品牌词 + .software」，行业系统用「行业 + .software」（dental、logistics 类）精准命中采购搜索。",
+      bestFor: ["软件公司与产品官网", "桌面与企业应用", "开发工具与中间件", "软件外包与定制团队"],
+      namingTips: [
+        "「产品名 + .software」访客不用猜你卖什么",
+        "注册约 $16、续费约 $33/年，软件业成本无感",
+        "「行业 + .software」精准命中企业采购搜索",
+        "移动轻应用用 .app、开发者品牌用 .dev，正经软件用它",
+      ],
+    },
+    en: {
+      title: ".software Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".software says the product category in the address — for software companies, dev tools, desktop apps and custom development teams. See live pricing and naming advice, then hunt available .software names with AI.",
+      intro:
+        ".software states the product category in the address: software company sites, desktop and enterprise applications, developer tools and middleware, outsourcing and custom-dev teams on name.software leave no guessing about what you sell. The division of labor with .app and .dev is clean — .app leans mobile and lightweight, .dev leans developer and tech brands, .software leans \"serious software products and companies\": enterprise systems, desktop tools and industry software wear it best. Operated by Identity Digital, about $16 to register and $33/yr to renew — invisible in a software cost structure. Inventory is excellent: product words, domain words and company names all hit. Three cautions: software is eight letters, so keep the front word short — a product or field word works best; it lacks .app's enforced HTTPS preload, but production sites should be fully HTTPS anyway — don't skimp; and open-source projects and indie developers roll more naturally on .dev or .io — .software's formality suits commercial products and company entities. Naming: product name + .software is the natural pattern; companies go brand word + .software; industry systems nail procurement searches as industry + .software (dental, logistics).",
+      bestFor: ["Software companies & products", "Desktop & enterprise apps", "Developer tools & middleware", "Outsourcing & custom dev teams"],
+      namingTips: [
+        "Product + .software — no guessing what you sell",
+        "About $16 to register, $33/yr to renew",
+        "Industry + .software nails procurement searches",
+        "Mobile? .app; dev brand? .dev; serious software? here",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
