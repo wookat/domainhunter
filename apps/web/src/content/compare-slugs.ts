@@ -99,6 +99,12 @@ export const COMPARE_SLUGS = [
   "moe-vs-fun",
   "lol-vs-gg",
   "uk-vs-com",
+  "io-vs-sh",
+  "blog-vs-me",
+  "org-vs-co",
+  "app-vs-site",
+  "com-vs-top",
+  "info-vs-com",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

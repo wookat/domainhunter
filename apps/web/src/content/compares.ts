@@ -2137,6 +2137,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Global audience or expansion plans", "Primary brand site and long-term asset", "Heavy word-of-mouth, autocomplete reflex", "Best resale liquidity"],
     },
   },
+  "io-vs-sh": {
+    slug: "io-vs-sh",
+    a: "io",
+    b: "sh",
+    zh: {
+      title: ".io 和 .sh 怎么选：开发者两大极客后缀的对比",
+      metaDescription: ".io 是开发者工具的主流身份后缀，.sh 撞上 shell 脚本梗、更小众也更锋利。对比两者的圈层认知、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是开发者圈的身份后缀，区别在宽度与锐度。.io 是主流：I/O（输入/输出）的联想加上 GitHub Pages（github.io）多年的用户教育，让它成为开发者工具、SaaS、API 服务的默认技术后缀——圈内圈外都认识，投资人和媒体也见怪不怪，是技术产品里最「安全」的非 .com 选择。.sh 更锋利也更小众：圣赫勒拿岛的国家后缀撞上 Unix shell 的 .sh 脚本扩展名，CLI 工具、终端产品、DevOps 服务用「动词 + .sh」读起来就像一条命令（类似 fig.sh、warp.sh 的玩法），对味的用户一眼会心，但圈外人完全不懂梗。价格上两者都不便宜（均为几十美元/年量级），.sh 通常还略贵一点。判断标准：产品面向广义技术用户（SaaS、API、平台）→ .io 的普适技术认知更稳；产品就是给终端里的人用的（CLI、脚本、DevOps）→ .sh 的命令感是 .io 给不了的，且同样的短词 .sh 下库存更好。两个都是国家后缀，理论上受注册局政策影响，重要品牌注意续费与政策动向。",
+      pickA: ["开发者工具与 SaaS 平台", "API 服务与技术社区", "需要圈外（投资人/媒体）也认识", "主流技术品牌的长期主域名"],
+      pickB: ["CLI 与终端工具", "DevOps 与脚本类产品", "「动词 + .sh」命令感命名", "心仪短词在 .io 已被注册"],
+    },
+    en: {
+      title: ".io vs .sh: Developer Suffix Showdown",
+      metaDescription:
+        ".io is the mainstream developer badge; .sh rides the shell-script pun — sharper but nichier. Compare recognition, pricing and fit, then hunt available names.",
+      verdict:
+        "Both are developer identity suffixes; the difference is breadth versus edge. .io is mainstream: the I/O association plus years of GitHub Pages (github.io) education made it the default technical suffix for dev tools, SaaS and API services — recognized inside and outside the community, unremarkable to investors and press, the safest non-.com choice for a technical product. .sh is sharper and nichier: Saint Helena's ccTLD collides with the Unix shell's .sh script extension, so CLI tools, terminal products and DevOps services on a verb + .sh domain read like a literal command (the fig.sh / warp.sh play) — insiders smile instantly, outsiders miss the joke entirely. Neither is cheap (both run tens of dollars a year), with .sh usually slightly pricier. The test: a product for the broad technical audience (SaaS, APIs, platforms) → .io's universal tech recognition is steadier; a product for people who live in a terminal (CLI, scripts, DevOps) → .sh delivers a command-line vibe .io can't, and the same short words are far more available on .sh. Both are ccTLDs, so keep an eye on registry policy and renewals for critical brands.",
+      pickA: ["Developer tools & SaaS platforms", "API services & tech communities", "Recognition beyond the community (investors, press)", "Long-term primary domain for a tech brand"],
+      pickB: ["CLI & terminal tools", "DevOps & scripting products", "Verb + .sh command-style naming", "Your short word is taken on .io"],
+    },
+  },
+  "blog-vs-me": {
+    slug: "blog-vs-me",
+    a: "blog",
+    b: "me",
+    zh: {
+      title: ".blog 和 .me 怎么选：写作者与个人品牌后缀的对比",
+      metaDescription: ".blog 一眼读成「某某的博客」、专为写作者而生，.me 是个人品牌的通用后缀、还能拼动词短语。对比两者的定位、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是「个人」后缀，回答的问题不同。.blog 回答「这里是什么」：由 WordPress 母公司 Automattic 旗下注册局运营，name.blog 天然读成「某某的博客」，读者零解释就知道来这里是读内容的——个人博客、独立写作者、Newsletter 网页版、品牌内容分站（brand.blog 配 brand.com）都名正言顺；首年常见 $3 上下、续费约 $21/年，对个人创作者可长期负担。.me 回答「这里是谁」：黑山国家后缀借「me＝我」成为个人品牌的通用后缀，个人主页、简历站、作品集用 name.me 一眼就懂，且不把你锁死在「博客」这一种形态——今天写博客、明天放作品集、后天挂产品都不违和；还有独门的动词短语玩法（hire.me、about.me 一类）。价格与 .com 接近，常见人名昵称的库存远好于 .com。判断标准：内容写作就是主体、希望域名自带「来读我」的信号 → .blog 语义更准；做的是完整的个人 IP（写作只是其中一块）或想要动词短语域名 → .me 的弹性更大。两个都别用来做企业官网——它们的气质就是个人的。",
+      pickA: ["个人博客与独立写作者", "Newsletter 的网页版", "品牌内容分站（brand.blog）", "以「读内容」为核心的站点"],
+      pickB: ["个人主页与简历站", "开发者/设计师作品集", "动词短语域名（hire.me 类）", "形态会演进的个人 IP 主阵地"],
+    },
+    en: {
+      title: ".blog vs .me: The Writer's Suffix vs the Personal Brand Suffix",
+      metaDescription:
+        ".blog parses instantly as \"NAME's blog\" — built for writers; .me is the all-purpose personal-brand suffix with verb-phrase tricks. Compare fit and pricing, then hunt available names.",
+      verdict:
+        "Both are personal suffixes answering different questions. .blog answers \"what is this place\": run by a registry under Automattic (the WordPress company), name.blog literally parses as \"NAME's blog\" — readers need zero explanation that this is where you read. Personal blogs, independent writers, the web home of a newsletter, and brand content satellites (brand.blog alongside brand.com) all wear it naturally; around $3 for year one and roughly $21/yr to renew, sustainable for individual creators. .me answers \"who is this\": Montenegro's ccTLD turned universal personal-brand suffix via the me = I reading — personal homepages, résumé sites and portfolios on name.me are instantly clear, and it doesn't lock you into the blog format: write today, showcase a portfolio tomorrow, launch a product later, all without friction; plus the signature verb-phrase play (hire.me, about.me style). Pricing sits near .com with far better availability for real names and nicknames. The test: writing is the product and you want the domain itself to say \"come read\" → .blog is semantically sharper; you're building a whole personal brand where writing is one piece, or want a verb-phrase domain → .me flexes further. Neither belongs on a corporate main site — their vibe is personal by design.",
+      pickA: ["Personal blogs & independent writers", "Web home of a newsletter", "Brand content satellites (brand.blog)", "Sites whose core action is reading"],
+      pickB: ["Personal homepages & résumé sites", "Developer/designer portfolios", "Verb-phrase domains (hire.me style)", "Evolving personal-brand home bases"],
+    },
+  },
+  "org-vs-co": {
+    slug: "org-vs-co",
+    a: "org",
+    b: "co",
+    zh: {
+      title: ".org 和 .co 怎么选：公信力与商业感的对比",
+      metaDescription: ".org 自带非营利与公益的公信力，.co 是「company」的现代商业速记。对比两者的气质、信任来源与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀的信任来源完全相反。.org 的信任来自「不为赚钱」：三十多年的历史让用户默认 .org 背后是非营利组织、开源项目、行业协会或公益机构——维基百科（wikipedia.org）与无数开源官网完成了全球用户教育，捐款页、志愿者招募、标准组织用 .org 天然可信；价格与 .com 相当，好词库存明显更好。.co 的信任来自「就是生意」：哥伦比亚国家后缀被全球重塑为 company 的速记，比 .com 少一个字母、气质更轻更现代，创业公司、品牌先行的商业产品用 .co 显得利落。把它们用反是真实的伤害：商业产品挂 .org 会让用户产生「这是公益？」的错位感，甚至有借公信力营销的嫌疑；非营利组织用 .co 则平白丢掉品类信任。还有两条实操注意：.co 的输入流量会漏向同名 .com（注册前先查 .com 在谁手里）；.org 虽无注册限制、商业公司也能注册，但语义惯性极强，别硬顶。判断标准：组织的叙事是使命与公益 → .org 的公信力是花钱买不到的；叙事是产品与增长 → .co 的商业感更顺。",
+      pickA: ["非营利组织与基金会", "开源项目与技术社区", "行业协会与标准组织", "公益活动与捐赠页"],
+      pickB: ["创业公司与商业品牌", "品牌词独特、.com 已被注册", "想要比 .com 更短更现代", "产品与增长叙事的主站"],
+    },
+    en: {
+      title: ".org vs .co: Institutional Trust vs Startup Energy",
+      metaDescription:
+        ".org carries nonprofit-grade credibility; .co is modern shorthand for company. Compare where each suffix's trust comes from and which fits, then hunt available names.",
+      verdict:
+        "The two suffixes earn trust from opposite directions. .org's trust comes from not being about money: three decades of history taught users that .org means a nonprofit, an open-source project, an industry association or a public-interest institution — Wikipedia and countless open-source homepages finished the global education, so donation pages, volunteer drives and standards bodies read instantly credible on .org; pricing sits near .com with far better availability. .co's trust comes from being exactly about business: Colombia's ccTLD rebranded globally as shorthand for company, one letter shorter than .com and lighter, more modern in tone — startups and brand-first commercial products look sharp on .co. Crossing them does real damage: a commercial product on .org confuses users (\"is this a charity?\") and can smell like borrowed credibility, while a nonprofit on .co throws away category trust for nothing. Two practical notes: .co leaks type-in traffic to the matching .com (check who holds it first), and while .org has no registration restrictions — companies can register it — the semantic gravity is strong, so don't fight it. The test: if your story is mission and public good → .org's institutional credibility can't be bought elsewhere; if your story is product and growth → .co fits the pitch.",
+      pickA: ["Nonprofits & foundations", "Open-source projects & communities", "Industry associations & standards bodies", "Campaigns & donation pages"],
+      pickB: ["Startups & commercial brands", "Distinctive brand word whose .com is taken", "Shorter, more modern than .com", "Product-and-growth main sites"],
+    },
+  },
+  "app-vs-site": {
+    slug: "app-vs-site",
+    a: "app",
+    b: "site",
+    zh: {
+      title: ".app 和 .site 怎么选：产品信号与万能白纸的对比",
+      metaDescription: ".app 语义即应用、还强制 HTTPS，.site 是不预设行业的中性后缀、价格极低。对比两者的语义强度、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "一个语义极强，一个语义为零。.app 由 Google 运营，是少数带硬性安全保证的后缀——整个区强制 HSTS 预载，浏览器直接拒绝不安全连接；语义上零解释成本：用户看到 name.app 就知道是个应用，下载落地页、Web App、PWA、效率工具用它天生合身，价格适中（续费略高于 .com）、干净的产品词库存远好于 .com。.site 则是「白纸」：不预设行业、不限定气质，什么网站都装得下——作品集、文档站、社区、临时项目都行；首年常低至一两美元、库存几乎无限，但中性也意味着它不为品牌加分，一切靠主体名撑，且首年与续费价差大要算清。判断标准：产品就是一个应用、希望域名本身完成定位 → .app 的品类信号与安全背书是 .site 给不了的；还在验证想法、要快速上线、或做主品牌的配套子站（文档、工具、活动页）→ .site 的成本几乎可以忽略。注意 .app 的边界同样清晰：不是应用的业务（内容站、电商、企业官网）硬用 .app 会错位；而认真的长期产品用 .site 做主域名，气质上会显得临时。",
+      pickA: ["移动/桌面应用的官网与下载页", "Web App 与 PWA", "效率与实用工具产品", "看重强制 HTTPS 的安全背书"],
+      pickB: ["快速验证的想法与临时项目", "主品牌的配套子站（文档/工具）", "预算敏感、要立刻上线", "不带行业暗示的中性站点"],
+    },
+    en: {
+      title: ".app vs .site: The Product Signal vs the Blank Canvas",
+      metaDescription:
+        ".app means application and enforces HTTPS; .site presumes nothing and costs almost nothing. Compare semantic strength, pricing and fit, then hunt available names.",
+      verdict:
+        "One suffix is all signal, the other is deliberately blank. .app, operated by Google, is among the few TLDs with a hard security guarantee — the whole zone is HSTS-preloaded, so browsers refuse insecure connections outright; semantically it costs zero explanation: users see name.app and know it's an application. Download landing pages, web apps, PWAs and utility tools fit natively, at moderate prices (renewals slightly above .com) with far better inventory of clean product words than .com. .site is the blank canvas: no industry assumption, no vibe — portfolios, docs sites, communities and temporary projects all fit; year one often costs a dollar or two with near-infinite inventory, but neutrality means it adds nothing to your brand — the name must carry everything — and the first-year-to-renewal price gap deserves a look. The test: your product is an app and you want the domain to do the positioning → .app's category signal and security pedigree are things .site can't offer; you're validating an idea, need to ship today, or want a satellite site for a main brand (docs, tools, campaign pages) → .site's cost rounds to zero. Mind .app's boundary too: non-app businesses (content, e-commerce, corporate sites) look misplaced on it — and a serious long-term product on a .site main domain reads temporary.",
+      pickA: ["App homepages & download pages", "Web apps & PWAs", "Utility & productivity products", "HSTS-enforced security pedigree matters"],
+      pickB: ["Quick idea validation & temporary projects", "Satellite sites for a main brand (docs/tools)", "Budget-sensitive, ship-today launches", "Neutral sites with no industry hint"],
+    },
+  },
+  "com-vs-top": {
+    slug: "com-vs-top",
+    a: "com",
+    b: "top",
+    zh: {
+      title: ".com 和 .top 怎么选：全球默认值与极致性价比的对比",
+      metaDescription: ".com 是全球默认后缀但好名字绝迹，.top 注册量位居新后缀前列、价格极低且可正常备案。对比两者的信任、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "这是「信任溢价」与「极致性价比」的选择。.com 的优势不用重复：全球默认补全、最强转售流动性、跨行业跨地域通吃——代价是好名字几乎绝迹，心仪的词大概率要花大钱收购。.top 走另一条路：注册量常年位居新后缀前列，在国内市场尤其活跃——通过工信部资质、可正常 ICP 备案，价格常年处于最低档，双拼、行业词、品牌词基本都能注册到，「top＝顶尖」的含义用在排行榜、精选、评测类站点上还很顺滑。但要坦率算上它的隐性成本：极低的价格吸引了大量批量注册与低质站点，部分海外邮件服务和安全系统对 .top 的信任评分偏低——依赖邮件送达或面向海外用户的业务要慎重。判断标准：面向国际用户、品牌要长期持有转售 → .com 的信任溢价值得付；国内个人项目、内容站、排行榜类产品、或给主品牌批量注册保护性域名 → .top 的价格优势是实打实的。折中策略也常见：主站用 .com（或收购预算内的其他主流后缀），.top 做活动页、内容矩阵与防御性注册。",
+      pickA: ["面向国际用户或计划出海", "品牌主站与长期资产", "依赖邮件送达的业务", "希望转售流动性最好"],
+      pickB: ["国内个人项目与内容站", "排行榜、精选、评测类站点", "预算极致敏感的起步项目", "批量注册保护性域名"],
+    },
+    en: {
+      title: ".com vs .top: The Global Default vs Rock-Bottom Pricing",
+      metaDescription:
+        ".com is the global default with empty shelves; .top leads new-gTLD registration charts at rock-bottom prices. Compare trust, cost and fit, then hunt available names.",
+      verdict:
+        "This is a trade between trust premium and raw value. .com's case needs no repeating: universal autocomplete, the best resale liquidity, works across every industry and geography — the cost is that good names are essentially extinct, and the word you want likely means an expensive acquisition. .top runs the opposite play: perennially near the top of new-gTLD registration charts and especially active in the Chinese market — it's MIIT-accredited so ICP filing works normally, prices sit in the lowest tier year-round, and pinyin pairs, industry words and brand words are almost all still available; the top = best reading even fits ranking, curation and review sites naturally. Be honest about the hidden cost though: rock-bottom pricing attracts bulk registrations and low-quality sites, so some overseas mail services and security systems score .top's trust lower — think twice if your business depends on email deliverability or targets international users. The test: international audience, long-term brand asset → .com's trust premium is worth paying; China-focused personal projects, content sites, ranking products, or bulk defensive registrations for a main brand → .top's price advantage is real money saved. The hybrid play is common too: .com (or another mainstream suffix within budget) as the main site, .top for campaign pages, content networks and defensive coverage.",
+      pickA: ["International or global audience", "Primary brand site and long-term asset", "Email-deliverability-dependent businesses", "Best resale liquidity"],
+      pickB: ["China-focused personal projects & content sites", "Ranking, curation & review sites", "Rock-bottom budget launches", "Bulk defensive registrations"],
+    },
+  },
+  "info-vs-com": {
+    slug: "info-vs-com",
+    a: "info",
+    b: "com",
+    zh: {
+      title: ".info 和 .com 怎么选：信息站专属与商业默认值的对比",
+      metaDescription: ".info 语义即「信息」、首年极便宜，适合资料站与文档；.com 是商业主站的默认值。对比两者的语义、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀各守一个场景，重叠比想象中少。.info 是 2001 年第一批新通用后缀之一，语义就是「信息」：资料站、行业百科、开源项目文档、活动信息页、产品说明站用它顺理成章，二十多年历史让它的认知度在非 .com 后缀里名列前茅；首年价常年极低（经常一两美元），给主品牌配一个信息子站（brand.info 放文档与说明）的成本几乎可以忽略。但它的短板同样来自低价与历史：曾被大量垃圾站使用，直接做商业主站的信任感明显弱于 .com，且续费价比首年高数倍。.com 则是商业主站的默认值：用户口头传播时默认补全、跨行业通吃、长期资产流动性最好——如果站点要收钱、要建立品牌、要长期经营，.com 的信任基础难以替代。判断标准：站点的角色是「提供信息」（百科、文档、指南、活动页）→ .info 语义精准且起步成本极低；站点的角色是「经营生意」→ 别为省首年几美元把主品牌放在 .info 上，信任折价会一直伴随你。最常见的正确用法其实是组合：.com 做主站，.info 做配套的资料/文档分站。",
+      pickA: ["行业百科与资料站", "开源项目与产品文档", "活动与会议信息页", "主品牌的信息子站（brand.info）"],
+      pickB: ["商业主站与品牌官网", "电商与需要收款的业务", "长期品牌资产与转售", "口头传播场景多（广告、播客）"],
+    },
+    en: {
+      title: ".info vs .com: The Information Suffix vs the Commercial Default",
+      metaDescription:
+        ".info literally means information — dirt-cheap year one, ideal for docs and reference sites; .com is the commercial default. Compare semantics, pricing and fit, then hunt available names.",
+      verdict:
+        "Each suffix owns one scenario, and they overlap less than you'd think. .info was in the first wave of new gTLDs back in 2001 and means exactly what it says: reference sites, industry wikis, open-source docs, event information pages and product manuals wear it naturally, with two decades of history putting its recognition near the top of non-.com suffixes; first-year pricing is perennially tiny (often a dollar or two), so giving a main brand an information satellite (brand.info for docs and guides) costs nearly nothing. Its weakness comes from the same cheapness and history: heavy past spam usage means noticeably weaker trust than .com for a commercial main site, and renewals run several times the intro price. .com is the commercial default: word-of-mouth autocompletes to it, it works across every industry, and it holds the best long-term asset liquidity — if the site takes money, builds a brand and runs for years, .com's trust base is hard to replace. The test: the site's job is providing information (wikis, docs, guides, event pages) → .info is semantically precise with near-zero startup cost; the site's job is running a business → don't park your main brand on .info to save a few first-year dollars, because the trust discount follows you forever. The most common right answer is the combo: .com as the main site, .info as the companion reference/docs satellite.",
+      pickA: ["Industry wikis & reference sites", "Open-source & product documentation", "Event & conference info pages", "Information satellites for a main brand (brand.info)"],
+      pickB: ["Commercial main sites & brand homes", "E-commerce & payment-taking businesses", "Long-term brand asset and resale", "Heavy word-of-mouth channels (ads, podcasts)"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
