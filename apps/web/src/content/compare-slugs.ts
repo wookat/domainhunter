@@ -69,6 +69,12 @@ export const COMPARE_SLUGS = [
   "center-vs-club",
   "works-vs-studio",
   "zone-vs-site",
+  "site-vs-com",
+  "tech-vs-com",
+  "store-vs-com",
+  "vip-vs-top",
+  "art-vs-studio",
+  "media-vs-tv",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
