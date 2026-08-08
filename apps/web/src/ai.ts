@@ -27,12 +27,16 @@ const MEANING_REDLINES_ZH = `- meaning 必须是定稿文案：一次成稿、�
 - meaning 只使用中文与英文书写，禁止混入韩文、日文假名、西里尔字母、IPA 音标等其他文字
 - 禁止在 meaning 里用括号（()（）[]【】）内嵌拆字/注音/补充解释；拆字与寓意必须融进一句通顺的定稿文案直接说清
   好例子：「慕远」muyuan，mu 取「慕」的向往、yuan 取「远」的辽阔，寓意心怀远方，全拼顺口好记
-  坏例子：「慕远」mu(慕:向往)加yuan【远】，寓意远行（大概）`;
+  坏例子：「慕远」mu(慕:向往)加yuan【远】，寓意远行（大概）
+- meaning 是给用户看的品牌寓意文案，禁止出现命名路线分类元词（blend/coined/portmanteau/造词/混搭/拼音路线 等中英元词）与「这是一个…名字」「这个名字属于…」类元话术；直接讲寓意与读法本身
+- 声称的词源拆解必须与 label 拼写逐字吻合：说「X 与 Y 结合」时，X、Y 的拼写片段必须真实出现在 label 中（plangrow 只能说 plan 与 grow 结合，不能说 play 与 grow；label 不含 beix 对应拼音就不能声称拼音变体）`;
 
 const MEANING_REDLINES_EN = `- meaning must be final copy: one polished, confident, grammatical sentence; no question-mark hedging (like "lo(quacious?)"), no "Actually…" self-correction, no parenthetical guessed splits; if unsure about the etymology, swap in a candidate you can explain with confidence
 - Etymology must be real: only cite words, roots, or fragments that actually exist — never invent a fake source word (no "winards", no "brósene"); never cite a letter or fragment that is not present in the label (if the label has no z, do not claim "z from zeus")
 - Write meaning in plain English only: no IPA phonetic symbols, no non-Latin scripts
-- Never embed parenthetical annotations — (), （）, [], 【】 — inside meaning for letter-splitting, phonetic glosses, or side notes; fold the gloss into one polished sentence instead (write Latin "lumen" meaning light, not "lumen (light)")`;
+- Never embed parenthetical annotations — (), （）, [], 【】 — inside meaning for letter-splitting, phonetic glosses, or side notes; fold the gloss into one polished sentence instead (write Latin "lumen" meaning light, not "lumen (light)")
+- meaning is user-facing brand copy: never include naming-route category words (blend, coined, portmanteau) or meta phrasing like "this is a blend" / "this name is a coined word"; describe the meaning and sound directly
+- Any claimed word split must match the label's spelling letter for letter: if you say "X + Y", the fragments of X and Y must actually appear in the label (plangrow can only be plan + grow, never play + grow)`;
 
 const SYSTEM_PROMPT = `你是资深域名命名专家。用户会用自然语言描述想要的域名寓意/主题/口味，你负责发散出尽可能优质的域名主体（不含 TLD）。
 
@@ -464,6 +468,59 @@ export function citesPhantomLetter(label: string, meaning: string): boolean {
   return false;
 }
 
+// ---------------- meaning 元语言泄漏检测（R183） ----------------
+// 生产坏例：maybeix 的 meaning 自称「这是 blend」。meaning 是给用户看的品牌寓意文案，
+// 不应出现 blend/coined/造词/混搭 等命名路线分类元词或「这是一个…名字」类元话术。
+// 规则保守：只匹配明确的分类元词与元话术句式，命中整条丢弃。
+const META_LANGUAGE_RES: RegExp[] = [
+  /\b(?:blend|coined|portmanteau)\b/i, // 英文路线分类元词
+  /造词|混搭|拼音路线|命名路线|组合词/, // 中文路线分类元词
+  /这是.{0,6}(?:blend|组合|造词|混搭|拼音)/i, // 「这是（一个）blend/组合…」元话术
+  /这个名字(?:属于|是)/, // 「这个名字属于…」元话术
+];
+export function containsMetaLanguage(meaning: string): boolean {
+  return META_LANGUAGE_RES.some((re) => re.test(meaning));
+}
+
+// ---------------- 臆造词源片段检测（R183，扩展 R179 的单字母版） ----------------
+// 生产坏例：plangrow 的 meaning 声称 "play 与 grow 结合"（实为 plan+grow）。
+// 匹配「X 与/和/加/+ Y 结合/组合/混合/拼接/合成」（中文句式）与 meaning 开头的 "X + Y"
+// （英文 few-shot 惯用的 "verb + bloom: …" 引导式）两类词源引用，X/Y 为 ≥3 字母的 ASCII 词。
+// 淘汰规则刻意保守（宁放过不误杀）：
+// - 一级：引用词既不整词出现于 label，其首 3 字母与末 3 字母也都不出现 → 丢弃（凭空引用）
+// - 二级：两词中恰有一个整词出现于 label 时，从 label 中去掉该词得到剩余片段（≥3 字母），
+//   另一词若也不整词出现，则要求它与剩余片段互为前缀（verb↔ver 合法）；
+//   否则拼写对不上（plan↔play）→ 丢弃
+const ZH_ETYMOLOGY_PAIR_RE = /([a-z]{3,})\s*(?:与|和|加|\+)\s*([a-z]{3,})\s*的?\s*(?:结合|组合|混合|拼接|合成)/gi;
+const EN_LEADING_PAIR_RE = /^\s*([a-z]{3,})\s*\+\s*([a-z]{3,})\b/i;
+
+function fragmentAbsent(label: string, word: string): boolean {
+  return !label.includes(word) && !label.includes(word.slice(0, 3)) && !label.includes(word.slice(-3));
+}
+
+function pairMismatch(label: string, x: string, y: string): boolean {
+  if (fragmentAbsent(label, x) || fragmentAbsent(label, y)) return true;
+  const xIn = label.includes(x);
+  const yIn = label.includes(y);
+  if (xIn === yIn) return false; // 两词都整词命中（合法）或都只有片段命中（不做二级判断，保守放行）
+  const exact = xIn ? x : y;
+  const other = (xIn ? y : x).toLowerCase();
+  const rest = label.replace(exact, "");
+  if (rest.length < 3 || /[^a-z]/.test(rest)) return false; // 剩余片段太短/含非字母，无法可靠判断，放行
+  return !other.startsWith(rest) && !rest.startsWith(other);
+}
+
+export function citesPhantomWord(label: string, meaning: string): boolean {
+  ZH_ETYMOLOGY_PAIR_RE.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = ZH_ETYMOLOGY_PAIR_RE.exec(meaning)) !== null) {
+    if (pairMismatch(label, m[1].toLowerCase(), m[2].toLowerCase())) return true;
+  }
+  const lead = EN_LEADING_PAIR_RE.exec(meaning);
+  if (lead && pairMismatch(label, lead[1].toLowerCase(), lead[2].toLowerCase())) return true;
+  return false;
+}
+
 async function generateOnce(
   description: string,
   apiKey: string,
@@ -519,6 +576,10 @@ async function generateOnce(
     if (!meaningCharsetOk(meaning, opts.lang ?? "zh")) continue;
     // R179：meaning 引用 label 中不存在的字母（"z from zeus" 式臆造词源）→ 整条丢弃
     if (citesPhantomLetter(label, meaning)) continue;
+    // R183：meaning 出现命名路线分类元词/元话术（「这是 blend」式）→ 整条丢弃
+    if (containsMetaLanguage(meaning)) continue;
+    // R183：meaning 声称的词源片段与 label 拼写不符（"play 与 grow 结合" for plangrow）→ 整条丢弃
+    if (citesPhantomWord(label, meaning)) continue;
     const s = c.scores ?? ({} as Partial<AiScores>);
     const theme = String(c.theme ?? "").toLowerCase();
     // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
