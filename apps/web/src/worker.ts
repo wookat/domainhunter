@@ -712,17 +712,39 @@ app.get("/api/prices", async (c) => {
 
 const MCP_PROTOCOL_VERSION = "2025-03-26";
 
+/** taken 域到期预警窗口：≤ 90 天视为 expiringSoon */
+const EXPIRING_SOON_MS = 90 * 24 * 3600 * 1000;
+
 const MCP_TOOLS = [
   {
     name: "check_domains",
     description:
-      "Check real-time registration availability for up to 50 exact domains (e.g. acme.com). Returns status per domain: available / taken / unknown. Uses live RDAP/WHOIS/DNS checks with short-lived caching.",
+      "Check real-time registration availability for up to 50 exact domains (e.g. acme.com). Returns status per domain: available / taken / unknown. Taken domains also include expiresAt (registration expiry, ISO 8601, omitted when unknown) and expiringSoon (true when expiring within 90 days — worth watching for a drop-catch). Uses live RDAP/WHOIS/DNS checks with short-lived caching.",
     inputSchema: {
       type: "object",
       properties: {
         domains: { type: "array", items: { type: "string" }, description: "Full domain names like acme.com (max 50)" },
       },
       required: ["domains"],
+    },
+    outputSchema: {
+      type: "object",
+      properties: {
+        results: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              domain: { type: "string" },
+              status: { type: "string", enum: ["available", "taken", "unknown"] },
+              expiresAt: { type: "string", description: "Registration expiry (ISO 8601); only for taken domains when known" },
+              expiringSoon: { type: "boolean", description: "true when the taken domain expires within 90 days" },
+            },
+            required: ["domain", "status"],
+          },
+        },
+      },
+      required: ["results"],
     },
   },
   {
@@ -757,6 +779,11 @@ function mcpError(id: unknown, code: number, message: string): Response {
 
 function mcpText(id: unknown, text: string, isError = false): Response {
   return mcpResult(id, { content: [{ type: "text", text }], isError });
+}
+
+/** 声明了 outputSchema 的工具必须同时返回 structuredContent（严格 MCP 客户端如 python SDK 会校验） */
+function mcpStructured(id: unknown, structured: Record<string, unknown>): Response {
+  return mcpResult(id, { content: [{ type: "text", text: JSON.stringify(structured) }], structuredContent: structured, isError: false });
 }
 
 app.post("/mcp", async (c) => {
@@ -811,11 +838,17 @@ app.post("/mcp", async (c) => {
     if (!(await checkRateLimit(c.env.CACHE, ip))) {
       return mcpText(id, `rate limited: max ${RATE_LIMIT_PER_HOUR} requests per hour, try again later`, true);
     }
-    const results: { domain: string; status: string }[] = [];
+    const results: { domain: string; status: string; expiresAt?: string; expiringSoon?: boolean }[] = [];
     await checkDomainsCached(c.env.CACHE, domains, async (r) => {
-      results.push({ domain: r.domain, status: r.status });
+      const item: { domain: string; status: string; expiresAt?: string; expiringSoon?: boolean } = { domain: r.domain, status: r.status };
+      if (r.status === "taken" && r.expiresAt) {
+        item.expiresAt = r.expiresAt;
+        const ts = Date.parse(r.expiresAt);
+        if (Number.isFinite(ts)) item.expiringSoon = ts - Date.now() <= EXPIRING_SOON_MS;
+      }
+      results.push(item);
     });
-    return mcpText(id, JSON.stringify({ results }));
+    return mcpStructured(id, { results });
   }
 
   if (toolName === "suggest_variants") {
@@ -1668,7 +1701,7 @@ app.get("/llms.txt", (c) => {
     "",
     "## API (MCP)",
     line("/mcp", "MCP server docs: plug domain checking into Claude/Cursor (check_domains + tld_prices + suggest_variants)"),
-    `- Stateless MCP server at ${SITE_ORIGIN}/mcp (POST, JSON-RPC 2.0, Streamable HTTP). Tools: check_domains (bulk availability for up to 50 exact domains), tld_prices (live registration/renewal prices in USD) and suggest_variants (prefix/suffix variants with live availability when a name is taken). No auth required.`,
+    `- Stateless MCP server at ${SITE_ORIGIN}/mcp (POST, JSON-RPC 2.0, Streamable HTTP). Tools: check_domains (bulk availability for up to 50 exact domains; taken domains include expiresAt in ISO 8601 and expiringSoon when expiring within 90 days), tld_prices (live registration/renewal prices in USD) and suggest_variants (prefix/suffix variants with live availability when a name is taken). No auth required.`,
     "",
   ].join("\n");
   return new Response(body, { headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=86400" } });
