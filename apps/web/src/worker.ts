@@ -1833,7 +1833,15 @@ app.get("/robots.txt", (c) =>
     headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=86400" },
   }));
 
-app.all("*", (c) => c.env.ASSETS.fetch(c.req.raw));
+app.all("*", async (c) => {
+  const res = await c.env.ASSETS.fetch(c.req.raw);
+  if (res.status !== 404) return res;
+  // 未知顶层路径：GET 页面请求返回品牌 404 壳（noindex），其余保持原样
+  const accept = c.req.header("accept") ?? "";
+  if (c.req.method !== "GET" || !accept.includes("text/html")) return res;
+  const shell = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  return notFoundShell(shell);
+});
 
 // IndexNow：向 Bing/Yandex 等搜索引擎主动推送全站 URL（key 按协议公开，对应 /<key>.txt 静态文件）
 const INDEXNOW_KEY = "024aa6c6f88245bbacdac2f60a94e333";
