@@ -123,6 +123,12 @@ export const COMPARE_SLUGS = [
   "estate-vs-land",
   "expert-vs-pro",
   "farm-vs-cafe",
+  "ninja-vs-dev",
+  "pet-vs-shop",
+  "blue-vs-red",
+  "black-vs-gold",
+  "rocks-vs-fun",
+  "pink-vs-me",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

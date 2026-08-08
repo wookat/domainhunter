@@ -2665,6 +2665,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Independent coffee shops and roasteries", "Themed café spaces (cat cafés, book cafés)", "Online community living rooms (book clubs, dev communities)", "Laid-back lifestyle gathering brands"],
     },
   },
+  "ninja-vs-dev": {
+    slug: "ninja-vs-dev",
+    a: "ninja",
+    b: "dev",
+    zh: {
+      title: ".ninja 和 .dev 怎么选：梗后缀与开发者正装的对比",
+      metaDescription: ".ninja 玩「某领域高手」的梗且注册极便宜，.dev 是 Google 系的开发者正装后缀。对比两者的调性、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都面向技术人，穿的是完全不同的衣服。.ninja 是梗——「X ninja」在英语里就是「X 领域的高手」，api.ninja、css.ninja 这样的「技能词 + .ninja」自带幽默与个性，注册约 $6、续费约 $25/年，试错成本几乎可以忽略，个人项目、side project、电竞战队用它轻松又出挑。.dev 是正装——Google 注册局运营、全区强制 HTTPS，开发者工具、SDK、文档站、技术博客用它是圈内公认的专业信号，客户与雇主一眼认账。判断标准：项目要的是个性与传播梗（个人品牌、社区、游戏向）→ .ninja 更便宜也更好玩；项目要的是专业信任（商业工具、企业客户、长期品牌）→ .dev 的正装感与 HTTPS 强制是加分项。注意 .ninja 的梗在英语圈最强、严肃 B2B 场景会打折扣；.dev 则要求全站配好证书才能访问，部署时别忘了。",
+      pickA: ["个人技术品牌与 side project", "电竞战队与游戏社区", "「技能词 + .ninja」的梗式招牌", "注册与续费预算敏感"],
+      pickB: ["开发者工具、CLI 与 SDK", "文档站与技术博客", "面向企业客户的商业工具", "看重强制 HTTPS 的安全信号"],
+    },
+    en: {
+      title: ".ninja vs .dev: Meme Badge or Developer Formalwear",
+      metaDescription:
+        ".ninja plays the \"master of X\" meme at a rock-bottom price; .dev is Google's buttoned-up developer suffix. Compare tone, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both speak to technical people in completely different outfits. .ninja is the meme — \"X ninja\" means a master of X, and skill-word combos like api.ninja or css.ninja carry built-in humor and personality; at about $6 to register and $25/yr to renew, the trial cost is nearly negligible, perfect for personal projects, side projects and esports teams. .dev is the formalwear — run by Google's registry with HTTPS enforced zone-wide, it's the recognized professional signal for developer tools, SDKs, docs sites and technical blogs; clients and employers credit it at a glance. The test: the project trades on personality and meme-ability (personal brands, communities, gaming) → .ninja is cheaper and more fun; the project trades on professional trust (commercial tools, enterprise customers, long-term brands) → .dev's polish and enforced HTTPS earn their keep. Note the ninja meme lands strongest in English-speaking markets and discounts in serious B2B contexts, and .dev sites simply won't load without a valid certificate — plan deployment accordingly.",
+      pickA: ["Personal tech brands and side projects", "Esports teams and gaming communities", "Skill-word meme shingles (api.ninja)", "Registration and renewal budget sensitive"],
+      pickB: ["Developer tools, CLIs and SDKs", "Docs sites and technical blogs", "Commercial tools for enterprise customers", "Enforced-HTTPS security signal"],
+    },
+  },
+  "pet-vs-shop": {
+    slug: "pet-vs-shop",
+    a: "pet",
+    b: "shop",
+    zh: {
+      title: ".pet 和 .shop 怎么选：行业专属与电商通用的对比",
+      metaDescription: ".pet 三个字母写清宠物行业，.shop 是电商通用后缀覆盖所有品类。对比两者的语义精度、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个说「卖什么」，一个说「在卖」。.pet 是行业指向最明确的后缀之一——宠物用品电商、宠物医院、美容寄养、宠物科技用 name.pet，三个字母把行业写清，比 petsomething.com 的拼接短得多，mars.pet（玛氏宠物）这样的品牌延伸就是背书；注册约 $11、续费约 $21/年，对客单价可观的宠物行业毫无压力。.shop 更宽——它只说「这里能买东西」，不限品类，宠物店能用、服装店也能用，全球电商采用量大、用户认知成熟，商品词与品牌词的库存也深。判断标准：业务垂直在宠物赛道且打算长期深耕 → .pet 的行业精度是 .shop 给不了的，域名本身就是定位；业务品类多元、或未来可能扩品 → .shop 不会把品牌锁死在单一行业。组合打法也常见：品牌主站用 .shop 承接全品类，宠物子品牌线用 .pet 做垂直入口。注意 .pet 对国内大众认知度一般，建议配合中文品牌词；.shop 则要靠品牌词本身把「卖什么」讲清楚。",
+      pickA: ["宠物用品电商与线下门店", "宠物医院、美容与寄养服务", "宠物科技与智能硬件", "深耕宠物赛道的垂直品牌"],
+      pickB: ["多品类电商与集合店", "未来可能扩品的零售品牌", "看重用户对后缀的成熟认知", "商品词入名的通用网店"],
+    },
+    en: {
+      title: ".pet vs .shop: Industry Precision or E-commerce Generic",
+      metaDescription:
+        ".pet says the pet industry in three letters; .shop covers every retail category. Compare semantic precision, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One says what you sell; the other says that you sell. .pet is among the most industry-explicit suffixes anywhere — pet-supply stores, vet clinics, grooming and boarding, and pet tech on name.pet declare the trade in three letters, far shorter than any petsomething.com compound, with corporate extensions like mars.pet (Mars Petcare) endorsing it at the highest level; about $11 to register and $21/yr to renew is trivial for an industry with healthy ticket sizes. .shop is broader — it only says \"you can buy here\", category-agnostic, with huge global adoption, mature user recognition and deep inventory of product and brand words. The test: the business is vertical in pets and staying there → .pet's precision is something .shop can't match — the domain is the positioning; the business spans categories or may expand → .shop won't lock the brand into one industry. The combo play is common too: main store on .shop for the full catalog, the pet line on a matching .pet as a vertical entry. Note .pet's recognition among mainland-Chinese consumers is moderate — pair it with a strong Chinese brand name — while .shop leans on the brand word itself to say what's sold.",
+      pickA: ["Pet-supply e-commerce and stores", "Vet clinics, grooming and boarding", "Pet tech and smart hardware", "Vertical brands committed to the pet space"],
+      pickB: ["Multi-category stores and marketplaces", "Retail brands that may expand categories", "Mature user recognition of the suffix", "Generic storefronts with product-word names"],
+    },
+  },
+  "blue-vs-red": {
+    slug: "blue-vs-red",
+    a: "blue",
+    b: "red",
+    zh: {
+      title: ".blue 和 .red 怎么选：冷静信任与热情流量的颜色对比",
+      metaDescription: ".blue 传达专业冷静的信任感，.red 自带热情醒目与中文「走红」寓意。对比两个颜色后缀的气质、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同属 Identity Digital 的颜色系后缀、定价都温和，选择只看品牌要传达的情绪。.blue 是颜色系里最商务的——蓝色代表专业、冷静与信任，金融、科技、医疗类品牌的主色十有八九是蓝，jet.blue 式的「品牌词 + .blue」等于把 VI 写进域名；注册约 $13、续费约 $20/年，续费比注册没贵多少。.red 是热情与流量——红色跨文化通吃醒目与能量，中文语境更叠加喜庆、走红、网红的意味，「红」本身就是流量词，婚庆节庆、美妆潮流、内容项目都有天然的解释空间；注册约 $8、续费约 $19/年。判断标准：品牌卖「靠谱」（专业服务、工具、健康）且主视觉是蓝 → .blue 的冷静气质更配；品牌卖「热闹」（节庆、潮流、内容流量）或面向中文用户玩「走红」梗 → .red 更有戏。共同注意：颜色后缀不自带行业指向，首屏要快速讲清业务；且后缀要服务品牌故事——主视觉不是这个颜色就别硬凑。",
+      pickA: ["以蓝色为主视觉的专业品牌", "金融、科技与健康类项目", "海洋、天空与航空主题", "看重「冷静信任」的品牌气质"],
+      pickB: ["婚庆节庆与喜庆业务", "美妆潮流与内容流量项目", "面向中文用户玩「走红」寓意", "以红色为主视觉的品牌"],
+    },
+    en: {
+      title: ".blue vs .red: Calm Trust or Hot Energy in a Color",
+      metaDescription:
+        ".blue signals professional calm and trust; .red brings heat, visibility and festive energy. Compare the two color suffixes on vibe, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are Identity Digital color TLDs with gentle pricing, so the choice is purely about the emotion your brand leads with. .blue is the businesslike one — blue means professionalism, calm and trust, the primary color of most finance, tech and healthcare brands, and jet.blue-style combos write the brand book into the address bar; about $13 to register, $20/yr to renew, barely above registration. .red is heat and attention — red reads energetic and eye-catching across cultures, and in Chinese contexts it stacks festive and viral connotations (\"going red\" means going viral), giving wedding and festival businesses, beauty and trend brands, and content projects a story for free; about $8 to register, $19/yr to renew. The test: the brand sells reliability (professional services, tools, health) with a blue-first identity → .blue's calm fits; the brand sells excitement (festivals, trends, content virality) or plays the Chinese \"going red\" card → .red has more theater. Shared caution: color suffixes carry no industry signal, so the homepage must say what you do fast — and the suffix should serve the brand story; don't force a color that isn't yours.",
+      pickA: ["Blue-first professional brand identities", "Finance, tech and health projects", "Ocean, sky and aviation themes", "Brands leading with calm trust"],
+      pickB: ["Wedding, festival and celebration businesses", "Beauty, trend and content-virality projects", "Chinese-market \"going red\" wordplay", "Red-first brand identities"],
+    },
+  },
+  "black-vs-gold": {
+    slug: "black-vs-gold",
+    a: "black",
+    b: "gold",
+    zh: {
+      title: ".black 和 .gold 怎么选：黑金两色的高端叙事对比",
+      metaDescription: ".black 自带奢华神秘的黑卡气质，.gold 一词双关黄金实物与金牌品质。对比两个高端后缀的语义、续费成本与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "黑与金是高端品牌语言里的两大主色，两个后缀讲的高端却不同款。.black 讲「克制的奢华」——设计师品牌、黑卡级会员体系、威士忌与精品咖啡、暗黑美学的游戏与潮牌用 name.black，把调性焊死在域名上；注册约 $16、续费约 $52/年，只配认真经营的品牌主域。.gold 讲「货真价实」——本义黄金让金店、珠宝、贵金属业务一秒传达行业，引申义「金牌/顶级」让会员最高档、精品推荐也用得顺；注册约 $6 很低，但续费约 $83/年是更高档，预算同样要按续费核算。判断标准：品牌卖「神秘感与身份」（会员制、暗色系美学、小众精品）→ .black 的黑卡气质更准；品牌卖「实物或金牌品质」（珠宝贵金属、高端服务的品质承诺）→ .gold 的双关更实。两者共同点：续费都贵、都只适合旗舰域名而非囤名；高端语义都是承诺，产品与视觉撑不起反而显得廉价。另注意「black」有黑市联想、金融交易类慎用，「gold」的贵金属交易属强监管领域、注意合规。",
+      pickA: ["设计师品牌与小众精品", "黑卡级会员体系与私享服务", "威士忌、精品咖啡等鉴赏品牌", "暗黑美学游戏与潮牌"],
+      pickB: ["金店、珠宝与贵金属业务", "金牌品质承诺的高端服务", "会员体系的最高档命名", "金色系视觉的品牌主域"],
+    },
+    en: {
+      title: ".black vs .gold: Two Colors of Premium",
+      metaDescription:
+        ".black carries black-card luxury and mystique; .gold puns on physical gold and gold-tier quality. Compare the two premium suffixes on semantics, renewal cost and fit, then hunt names available on both.",
+      verdict:
+        "Black and gold are the two lead colors of premium brand language, and the suffixes sell different kinds of premium. .black sells restrained luxury — designer labels, black-card membership tiers, whisky and specialty-coffee brands, and dark-aesthetic games or streetwear weld the tone into name.black; about $16 to register and $52/yr to renew, it only pays as a flagship domain you'll seriously run. .gold sells the real thing — literal gold makes jewelers, bullion and precious-metals businesses instantly legible, while the gold-tier metaphor suits top membership levels and curated picks; about $6 to register but ~$83/yr to renew, so budget strictly on the renewal here too. The test: the brand trades on mystique and status (memberships, dark aesthetics, niche luxury) → .black's black-card register is sharper; the brand trades on the physical metal or a gold-standard quality promise → .gold's double meaning does more work. They share the caveats: both renew expensive and fit flagship domains, not hoarding; and premium semantics are a promise — thin products and visuals make either read cheap. Also note \"black\" can evoke black markets (weigh it for finance and trading), and precious-metals trading is heavily regulated — compliance first.",
+      pickA: ["Designer labels and niche luxury", "Black-card membership tiers", "Whisky, specialty coffee and connoisseur brands", "Dark-aesthetic games and streetwear"],
+      pickB: ["Jewelers, bullion and precious metals", "Gold-standard premium service promises", "Top-tier membership naming", "Gold-first flagship brand domains"],
+    },
+  },
+  "rocks-vs-fun": {
+    slug: "rocks-vs-fun",
+    a: "rocks",
+    b: "fun",
+    zh: {
+      title: ".rocks 和 .fun 怎么选：喝彩表达与娱乐气质的对比",
+      metaDescription: ".rocks 把「X 真棒」写进域名适合粉丝站与社区，.fun 直接标注娱乐属性。对比两个表达型后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是「气氛组」后缀，喊的口号不同。.rocks 是一句喝彩——「X rocks!」就是「X 真棒！」，粉丝站与应援站、乐队与音乐现场、开源项目社区（vuejs.rocks 式）用它热情溢出，还有地质、攀岩、矿石收藏的字面双关；注册约 $4、续费约 $18/年，几乎零门槛。.fun 是一块招牌——它不夸谁，只说「这里好玩」，游戏娱乐站、活动派对、儿童向产品、休闲小工具挂上 .fun，用户预期立刻对齐。判断标准：站点围绕「热爱的对象」（偶像、球队、乐队、开源项目）→ .rocks 的喝彩语义更带感，「对象 + .rocks」读出来要顺口才有梗；站点围绕「好玩的体验」（游戏、活动、玩乐内容）→ .fun 的品类标注更直接。共同注意：两者都是口语化后缀，正式商务主域会显得随意，更适合社区、副项目与品牌的玩乐分线；低价后缀历史上垃圾站占比偏高，认真项目要靠内容质量把信任拉回来。",
+      pickA: ["粉丝站与应援站", "乐队、音乐现场与巡演站", "开源项目与社区（vuejs.rocks 式）", "攀岩馆与地质科普的双关"],
+      pickB: ["游戏与娱乐内容站", "活动、派对与线下玩乐", "儿童向产品与休闲工具", "品牌的玩乐向子站"],
+    },
+    en: {
+      title: ".rocks vs .fun: A Cheer or an Amusement Sign",
+      metaDescription:
+        ".rocks puts \"X rocks!\" in the domain for fan sites and communities; .fun labels entertainment outright. Compare the two expressive suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are mood suffixes shouting different lines. .rocks is a cheer — \"X rocks!\" is pure enthusiasm, so fan and supporter sites, bands and live-music venues, and open-source communities (the vuejs.rocks pattern) wear it with the exclamation mark built in, plus a free pun for climbing gyms and geology projects; about $4 to register and $18/yr to renew — nearly zero barrier. .fun is a sign over the door — it praises nothing, it just says \"this is where the fun is\": games and entertainment sites, events and parties, kids' products and playful tools align user expectations instantly. The test: the site orbits something you love (an idol, a team, a band, a project) → .rocks lands the cheer, as long as name + rocks reads smoothly aloud; the site orbits a fun experience (games, events, playful content) → .fun's category label is more direct. Shared caution: both read colloquial — better for communities, side projects and a brand's playful sub-site than a formal corporate flagship — and cheap TLDs historically attract spam, so serious projects must earn trust back with content quality.",
+      pickA: ["Fan sites and supporter hubs", "Bands, venues and tour sites", "Open-source communities (vuejs.rocks style)", "Climbing and geology puns"],
+      pickB: ["Games and entertainment content", "Events, parties and offline fun", "Kids' products and playful tools", "A brand's playful sub-site"],
+    },
+  },
+  "pink-vs-me": {
+    slug: "pink-vs-me",
+    a: "pink",
+    b: "me",
+    zh: {
+      title: ".pink 和 .me 怎么选：甜美调性与个人身份的对比",
+      metaDescription: ".pink 一眼定调甜美少女感，.me 天然指向个人品牌与作品集。对比两者的气质、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都常被个人与小品牌选中，说的却是不同的话。.pink 说「我是什么调性」——甜美、柔软、少女感，美妆美甲、甜品烘焙、婚礼花艺、少女感设计用 name.pink，用户还没进站脑海里已有粉色画面，粉红丝带公益项目用它也名正言顺；注册约 $8、续费约 $21/年，成本温和。.me 说「这是我本人」——个人站、简历、作品集、newsletter 的经典后缀，还能玩 hire.me、about.me 式的语义梗，不限调性、不限行业。判断标准：主体是「品牌的视觉气质」且这个气质就是粉色系（美妆、甜品、婚礼）→ .pink 把 VI 写进域名，一眼定调是行业后缀给不了的；主体是「你这个人」（作品集、个人 IP、简历页）→ .me 的身份语义更普适，跟着人走不跟着调性走。注意 .pink 的气质即限制——严肃行业用它显得轻佻，面向男性为主的客群也要斟酌；.me 则是个人属性强于公司属性，公司主站另选。",
+      pickA: ["美妆美甲与时尚品牌", "甜品烘焙与下午茶", "婚礼花艺与少女感设计", "粉红丝带公益项目"],
+      pickB: ["个人品牌、简历与作品集", "newsletter 与个人博客", "语义梗域名（hire.me 类）", "不想被单一调性绑定的个人站"],
+    },
+    en: {
+      title: ".pink vs .me: A Color Mood or a Personal Identity",
+      metaDescription:
+        ".pink sets a sweet, feminine tone at a glance; .me points straight at personal brands and portfolios. Compare vibe, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both attract individuals and small brands, but they say different things. .pink says what mood I am — sweet, soft, feminine: beauty and nail brands, bakeries and afternoon-tea shops, wedding florists and girly design studios on name.pink put the pink picture in the visitor's head before the page loads, and pink-ribbon charity projects wear it with full legitimacy; about $8 to register and $21/yr to renew keeps costs gentle. .me says this is me — the classic suffix for personal sites, résumés, portfolios and newsletters, with room for semantic plays like hire.me, unbound by tone or industry. The test: the subject is a brand's visual mood and that mood is pink (beauty, desserts, weddings) → .pink writes the brand book into the domain in a way no industry suffix can; the subject is you as a person (portfolio, personal IP, résumé page) → .me's identity semantics travel with the person, not the palette. Note .pink's vibe is also its limit — it reads flippant in serious industries and needs weighing for male-skewing audiences — while .me suits people better than company homepages.",
+      pickA: ["Beauty, nail and fashion brands", "Bakeries and afternoon-tea shops", "Wedding florists and girly design", "Pink-ribbon charity projects"],
+      pickB: ["Personal brands, résumés, portfolios", "Newsletters and personal blogs", "Semantic-pun domains (hire.me style)", "Personal sites avoiding a single tone lock-in"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
