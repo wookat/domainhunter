@@ -26,7 +26,7 @@ export function ComparePage({ slug }: { slug: string }) {
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 md:px-6">
       <p className="font-mono text-sm text-brand">
-        <a href={`/vs?lang=${lang}`} className="text-txt2 hover:text-brand hover:underline">
+        <a href={`/vs?lang=${lang}`} className="tap-target inline-block text-txt2 hover:text-brand hover:underline">
           {t("hub.allVs")}
         </a>
         <span className="mx-1.5 text-txt2">/</span>.{cmp.a} vs .{cmp.b}
@@ -48,7 +48,7 @@ export function ComparePage({ slug }: { slug: string }) {
           const guide = TLD_GUIDES[tld];
           return (
             <section key={tld} className="rounded-2xl border border-line bg-bg1 p-5">
-              <a href={`/tld/${tld}?lang=${lang}`} className="font-mono text-lg font-bold text-brand hover:underline">
+              <a href={`/tld/${tld}?lang=${lang}`} className="tap-target inline-block font-mono text-lg font-bold text-brand hover:underline">
                 .{tld}
               </a>
               <p className="tnum mt-1 text-xs text-txt2">{priceFull(tld, lang, prices) ?? t("tld.priceLoading")}</p>

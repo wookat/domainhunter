@@ -27,7 +27,7 @@ export function TldHubPage() {
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{meta.title}</h1>
       <p className="mt-6 text-[15px] leading-relaxed text-txt1">
         {meta.intro}
-        <a href={`/prices?lang=${lang}`} className="text-brand hover:underline">
+        <a href={`/prices?lang=${lang}`} className="tap-target inline-block text-brand hover:underline">
           {meta.pricesLink}
         </a>
         {lang === "zh" ? "。" : "."}

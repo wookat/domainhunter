@@ -137,7 +137,7 @@ export function pricesTableSkeleton(lang: Lang): string {
   const rowsHtml = rows
     .map(
       ({ tld }) =>
-        `<div class="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0"><a href="/tld/${tld}?lang=${lang}" class="font-mono text-sm font-semibold text-txt0 hover:text-brand">.${tld}</a><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><a href="/?tld=${tld}" class="flex min-h-[44px] items-center rounded-lg border border-line px-2.5 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-[36px]">${escapeHtml(s.hunt)}</a></div>`,
+        `<div class="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0"><a href="/tld/${tld}?lang=${lang}" class="tap-target font-mono text-sm font-semibold text-txt0 hover:text-brand">.${tld}</a><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><a href="/?tld=${tld}" class="flex min-h-[44px] items-center rounded-lg border border-line px-2.5 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-[36px]">${escapeHtml(s.hunt)}</a></div>`,
     )
     .join("");
   return (
@@ -176,7 +176,7 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
   const faq = buildTldFaq(tld, loc, lang);
   const relatedGuides = guidesForTld(tld);
   const relatedCompares = comparesForTld(tld);
-  const priceCard = `<div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-line bg-bg1 px-5 py-4">${ICON_TAG}<span class="text-sm text-txt1">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</span><a href="/prices?lang=${lang}" class="ml-auto inline-flex min-h-[36px] items-center text-xs text-txt2 hover:text-brand hover:underline">${escapeHtml(s.seeAll)}</a></div>`;
+  const priceCard = `<div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-line bg-bg1 px-5 py-4">${ICON_TAG}<span class="text-sm text-txt1">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</span><a href="/prices?lang=${lang}" class="ml-auto inline-flex min-h-[44px] items-center text-xs text-txt2 hover:text-brand hover:underline sm:min-h-[36px]">${escapeHtml(s.seeAll)}</a></div>`;
   const bestFor = sectionH2(ICON_CHECK, s.bestFor) +
     `<ul class="mt-3 grid gap-2 sm:grid-cols-2">${loc.bestFor.map((it) => `<li class="rounded-lg border border-line bg-bg1 px-3.5 py-2.5 text-sm text-txt1">${escapeHtml(it)}</li>`).join("")}</ul>`;
   const naming = sectionH2(ICON_BULB, s.naming) + dotList(loc.namingTips);
@@ -185,7 +185,7 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
     TLD_LIST.map((other) => {
       const cls = other === tld ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand";
       const price = staticPriceShort(other, lang);
-      return `<a href="/tld/${other}?lang=${lang}" class="rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors ${cls}">.${other}${price ? `<span class="tnum ml-1.5 text-[10px] text-txt1">${escapeHtml(price)}</span>` : ""}</a>`;
+      return `<a href="/tld/${other}?lang=${lang}" class="inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0 ${cls}">.${other}${price ? `<span class="tnum ml-1.5 text-[10px] text-txt1">${escapeHtml(price)}</span>` : ""}</a>`;
     }).join(""),
     "mt-10",
   );
@@ -231,7 +231,7 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang): string[] {
     .map((tld, i) => {
       const guide = TLD_GUIDES[tld];
       const firstSentence = guide ? guide[lang].intro.split(lang === "zh" ? "。" : ". ")[0] + (lang === "zh" ? "。" : ".") : "";
-      return `<section class="rounded-2xl border border-line bg-bg1 p-5"><a href="/tld/${tld}?lang=${lang}" class="font-mono text-lg font-bold text-brand hover:underline">.${tld}</a><p class="tnum mt-1 text-xs text-txt2">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</p>${guide ? `<p class="mt-3 text-sm leading-relaxed text-txt1">${escapeHtml(firstSentence)}</p>` : ""}<h3 class="mt-4 flex items-center gap-1.5 text-sm font-semibold">${ICON_CHECK_SM}${escapeHtml(s.pickWhen(tld))}</h3><ul class="mt-2 space-y-1.5">${picks[i]
+      return `<section class="rounded-2xl border border-line bg-bg1 p-5"><a href="/tld/${tld}?lang=${lang}" class="tap-target inline-block font-mono text-lg font-bold text-brand hover:underline">.${tld}</a><p class="tnum mt-1 text-xs text-txt2">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</p>${guide ? `<p class="mt-3 text-sm leading-relaxed text-txt1">${escapeHtml(firstSentence)}</p>` : ""}<h3 class="mt-4 flex items-center gap-1.5 text-sm font-semibold">${ICON_CHECK_SM}${escapeHtml(s.pickWhen(tld))}</h3><ul class="mt-2 space-y-1.5">${picks[i]
         .map((it) => `<li class="flex gap-2 text-sm leading-relaxed text-txt1"><span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand"></span>${escapeHtml(it)}</li>`)
         .join("")}</ul></section>`;
     })
@@ -327,7 +327,7 @@ const HUB_CRUMB = {
 } as const;
 
 export const hubCrumbKicker = (hub: "tld" | "guide" | "vs", current: string, lang: Lang): string =>
-  `<p class="font-mono text-sm text-brand"><a href="/${hub}?lang=${lang}" class="text-txt2 hover:text-brand hover:underline">${escapeHtml(HUB_CRUMB[lang][hub])}</a><span class="mx-1.5 text-txt2">/</span>${escapeHtml(current)}</p>`;
+  `<p class="font-mono text-sm text-brand"><a href="/${hub}?lang=${lang}" class="tap-target inline-block text-txt2 hover:text-brand hover:underline">${escapeHtml(HUB_CRUMB[lang][hub])}</a><span class="mx-1.5 text-txt2">/</span>${escapeHtml(current)}</p>`;
 
 export const hubCrumbLabel = (hub: "tld" | "guide" | "vs", lang: Lang): string => HUB_CRUMB[lang][hub];
 
@@ -343,7 +343,7 @@ const hubCard = (href: string, title: string, oneLiner: string, titleCls: string
 /** /tld 全文正文（tld-hub-page.tsx 首次渲染的静态部分） */
 export function tldHubBlocks(lang: Lang): string[] {
   const meta = HUB_META.tld[lang];
-  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}<a href="/prices?lang=${lang}" class="text-brand hover:underline">${escapeHtml(meta.pricesLink)}</a>${lang === "zh" ? "。" : "."}</p>${HUB_FILTER_PLACEHOLDER}`;
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}<a href="/prices?lang=${lang}" class="tap-target inline-block text-brand hover:underline">${escapeHtml(meta.pricesLink)}</a>${lang === "zh" ? "。" : "."}</p>${HUB_FILTER_PLACEHOLDER}`;
   const sections = tldHubGroups().map((g) =>
     hubSection(
       g[lang],
