@@ -2401,6 +2401,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Member-based commerce & clubs", "Premium services & upscale positioning", "Campaign member entrances (brand.vip)", "Broader suffix recognition"],
     },
   },
+  "bar-vs-cafe": {
+    slug: "bar-vs-cafe",
+    a: "bar",
+    b: "cafe",
+    zh: {
+      title: ".bar 和 .cafe 怎么选：酒吧夜场与咖啡日常的后缀对比",
+      metaDescription: ".bar 覆盖酒吧、清吧与鸡尾酒场景，.cafe 是咖啡馆与烘焙品牌的天然后缀。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是把「业态」直接写进域名的行业后缀，选择只看你开的是什么店。.bar 的语义是酒吧、清吧、鸡尾酒与夜间经济——mixology.bar、jazz.bar 这类组合读起来就是门牌；它还有一层隐藏彩蛋：bar 在技术圈是经典占位词（foo.bar），开发者向的小工具偶尔也借它玩梗。.cafe 则牢牢绑定咖啡与日间业态：咖啡馆、烘焙工作室、猫咖、书店咖啡角，甚至线上社区也爱用「某某咖啡馆」的意象营造轻松氛围。两者注册量都不大，好词库存充足、价格温和，本地店铺完全可以拿到「品类词+后缀」的黄金组合。判断标准很简单：卖酒精与夜场体验 → .bar；卖咖啡与日常第三空间 → .cafe。业态混合（日咖夜酒）就看主打时段与品牌气质，或者两个都注册分别做入口。",
+      pickA: ["酒吧、清吧与鸡尾酒品牌", "夜间经济与演出场地", "酒类电商与订阅（威士忌、精酿）", "开发者玩梗域名（foo.bar 类）"],
+      pickB: ["咖啡馆与连锁咖啡品牌", "烘焙工作室与甜品店", "猫咖、书店咖啡角等复合空间", "轻松氛围的线上社区"],
+    },
+    en: {
+      title: ".bar vs .cafe: Nightlife or Daytime Coffee Culture",
+      metaDescription:
+        ".bar covers bars, lounges and cocktail culture; .cafe is the natural home for coffee shops and bakeries. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both suffixes put the venue type right in the domain, so the choice is simply what you're pouring. .bar means bars, lounges, cocktails and the night economy — mixology.bar or jazz.bar reads like the sign above the door. It also carries a hidden bonus: bar is the classic programmer placeholder (foo.bar), so developer-facing toys occasionally borrow it for the pun. .cafe is firmly bound to coffee and daytime hospitality: coffee shops, roasteries, cat cafés, bookstore corners — even online communities use the café metaphor for a relaxed vibe. Registration volume is modest on both, so category-word-plus-suffix gems are still available at moderate prices — gold for local venues. The test is simple: selling alcohol and nightlife → .bar; selling coffee and the daytime third place → .cafe. Hybrid day-café-night-bar concepts should follow the flagship daypart, or register both as separate entrances.",
+      pickA: ["Bars, lounges and cocktail brands", "Nightlife venues and live-music spots", "Alcohol e-commerce and subscriptions", "Developer pun domains (foo.bar style)"],
+      pickB: ["Coffee shops and café chains", "Roasteries, bakeries and dessert bars", "Cat cafés and hybrid third places", "Relaxed-vibe online communities"],
+    },
+  },
+  "cafe-vs-shop": {
+    slug: "cafe-vs-shop",
+    a: "cafe",
+    b: "shop",
+    zh: {
+      title: ".cafe 和 .shop 怎么选：场景氛围与电商通用的对比",
+      metaDescription: ".cafe 传达咖啡馆的场景与氛围，.shop 是电商通用后缀、认知度大得多。对比两者的语义宽度、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "这是「窄而准」与「宽而稳」的典型取舍。.cafe 语义极窄但极准：域名本身就把「咖啡馆」三个字说完了，线下门店、烘焙品牌、咖啡订阅用它，用户看一眼就知道你卖什么；代价是业务一旦扩张到咖啡之外，后缀会变成天花板。.shop 则是新后缀里电商认知度最高的通用选项，全球注册量长期领先，卖什么都不违和——咖啡豆电商用 .shop 同样成立，只是少了一层氛围感。价格上两者接近，好词库存 .cafe 明显更宽裕。判断标准：品牌核心是「咖啡馆」这个场景与身份（门店、空间、社区）→ .cafe 的氛围无可替代；品牌核心是「卖货」（多品类、扩张预期、纯线上）→ .shop 的宽容度与认知度更稳。连锁品牌常见组合：主站 .shop 做电商，门店/会员社区用 .cafe。",
+      pickA: ["线下咖啡馆与连锁门店", "咖啡订阅与烘焙品牌", "强调空间与社区氛围的品牌", "「品类词.cafe」黄金组合仍可注册"],
+      pickB: ["多品类电商与零售", "有扩张预期、不想被品类锁死", "纯线上店铺（认知度优先）", "全球市场（.shop 注册量领先）"],
+    },
+    en: {
+      title: ".cafe vs .shop: Venue Vibe or E-commerce Default",
+      metaDescription:
+        ".cafe carries the atmosphere of a coffee shop; .shop is the general e-commerce suffix with far broader recognition. Compare semantic width, pricing and fit, then hunt names on both.",
+      verdict:
+        "A classic narrow-and-precise versus wide-and-safe trade-off. .cafe is extremely narrow but extremely accurate: the domain itself says coffee shop, so physical venues, roastery brands and coffee subscriptions are instantly legible; the cost is a ceiling — expand beyond coffee and the suffix starts to pinch. .shop is the most recognized commerce suffix of the new-gTLD wave, with globally leading registration volume, and nothing looks out of place on it — a coffee-bean store on .shop works fine, just without the atmospheric layer. Pricing is similar; short-word inventory is clearly better on .cafe. The test: if the brand's core is the café as a place and identity (venue, space, community) → .cafe's vibe is irreplaceable; if the core is selling things (multi-category, expansion plans, online-only) → .shop's flexibility and recognition are safer. Chains often run both: .shop for the store, .cafe for venues and the member community.",
+      pickA: ["Physical coffee shops and chains", "Coffee subscriptions and roastery brands", "Space- and community-first brands", "Category-word .cafe gems still available"],
+      pickB: ["Multi-category e-commerce and retail", "Expansion plans beyond one category", "Online-only stores (recognition first)", "Global markets (.shop leads registrations)"],
+    },
+  },
+  "pizza-vs-com": {
+    slug: "pizza-vs-com",
+    a: "pizza",
+    b: "com",
+    zh: {
+      title: ".pizza 和 .com 怎么选：品类直给与通用信任的对比",
+      metaDescription: ".pizza 把品类直接写进域名、好词库存充足，.com 认知度最高但餐饮好名字早已绝迹。对比两者的记忆点、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "对披萨店与餐饮品牌来说，这是「记忆点」与「默认信任」的取舍。.pizza 的优势是域名即菜单：tony.pizza、napoli.pizza 念出来就是广告词，口头传播零损耗，而且注册量小、城市名/人名/风格词的好组合仍大量可注册；短板是续费比 .com 贵一截，且出了餐饮场景后缀就失去意义。.com 的信任与自动补全无可替代，但现实是餐饮类常见词的 .com 几乎全部有主，可注册的往往是加了 -pizzeria、城市前后缀的长域名，反而不好记。判断标准：独立披萨店、本地连锁、外卖品牌——域名主要靠口碑与线下传播 → .pizza 的记忆点是碾压性的；全国性连锁或计划多品类扩张的餐饮集团 → 主品牌仍应收 .com，.pizza 适合做产品线或活动入口。预算允许时两个都拿：.pizza 印在菜单上，.com 做跳转兜底。",
+      pickA: ["独立披萨店与本地连锁", "外卖与预订入口（域名即广告）", "城市名/人名组合仍可注册", "口头与线下传播为主的获客"],
+      pickB: ["全国性餐饮集团主品牌", "多品类扩张预期", "需要最大信任与自动补全", "长期品牌资产与转售价值"],
+    },
+    en: {
+      title: ".pizza vs .com: Category Punch or Universal Trust",
+      metaDescription:
+        ".pizza puts the category right in the domain with plenty of good names left; .com has maximum trust but food-service names are long gone. Compare memorability, pricing and fit, then hunt available names.",
+      verdict:
+        "For pizzerias and food brands this is memorability versus default trust. .pizza's superpower is that the domain is the menu: tony.pizza or napoli.pizza spoken aloud is a finished ad, word-of-mouth carries it losslessly, and with low registration volume, city names, family names and style words are still widely available; the trade-offs are renewal pricing above .com and a suffix that means nothing outside food. .com's trust and autocomplete are unbeatable, but in practice every common food word on .com is taken — what's left are long compounds with -pizzeria or city prefixes that are harder to remember, not easier. The test: independent pizzerias, local chains and delivery brands living on word-of-mouth and offline exposure → .pizza's memorability wins by a mile; national chains or groups planning multi-category expansion → keep the main brand on .com and use .pizza for product lines or campaigns. With budget, take both: print .pizza on the menu, keep .com as the redirect backstop.",
+      pickA: ["Independent pizzerias and local chains", "Delivery and booking entrances (domain as ad)", "City/family-name combos still available", "Word-of-mouth and offline-first acquisition"],
+      pickB: ["National restaurant-group main brands", "Multi-category expansion plans", "Maximum trust and autocomplete", "Long-term brand asset and resale value"],
+    },
+  },
+  "money-vs-finance": {
+    slug: "money-vs-finance",
+    a: "money",
+    b: "finance",
+    zh: {
+      title: ".money 和 .finance 怎么选：直白钱味与专业金融感的对比",
+      metaDescription: ".money 直白有冲击力、适合消费金融与理财内容，.finance 更正式、适合机构与 B2B。对比两者的气质、合规观感与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀都姓「钱」，气质却差一个衣柜。.money 直白、口语、有冲击力——省钱攻略、返现工具、个人理财社区、加密钱包用它顺口又好记，get.money 这类组合自带传播力；代价是「money」的直白在严肃金融场景里容易显得轻浮，甚至触发用户对「快速致富」套路的警惕。.finance 则是西装革履的那一个：财务顾问、资管机构、企业金融 SaaS、DeFi 协议用它立刻多三分专业感，DeFi 世界里 .finance 甚至已经成了协议命名的惯例后缀之一。两者价格相近、库存都宽裕。判断标准：面向大众、讲「钱怎么省怎么赚」的消费级产品与内容 → .money 的直白是资产；面向机构或高客单、讲「资产怎么管」的专业服务 → .finance 的正式感更配。合规敏感业务（借贷、投资建议）建议一律偏向 .finance，第一印象即专业。",
+      pickA: ["省钱/返现/比价工具", "个人理财内容与社区", "加密钱包与消费级 fintech", "需要口语传播力的产品"],
+      pickB: ["财务顾问与资管机构", "企业金融与 B2B SaaS", "DeFi 协议（惯例后缀之一）", "合规敏感的借贷与投资业务"],
+    },
+    en: {
+      title: ".money vs .finance: Blunt Cash Appeal or Institutional Polish",
+      metaDescription:
+        ".money is blunt and punchy — great for consumer finance and money content; .finance reads formal and institutional. Compare vibe, compliance optics and fit, then hunt available names.",
+      verdict:
+        "Both suffixes are about money, but they dress very differently. .money is blunt, colloquial and punchy — savings hacks, cashback tools, personal-finance communities and crypto wallets wear it memorably, and combos like get.money spread themselves; the cost is that bluntness reads flippant in serious financial contexts and can even trigger get-rich-quick suspicion. .finance is the one in the suit: advisors, asset managers, corporate-finance SaaS and DeFi protocols gain instant professionalism, and in DeFi, .finance has become one of the conventional protocol suffixes. Pricing and inventory are similar on both. The test: consumer products and content about saving and making money for a mass audience → .money's bluntness is an asset; professional services for institutions or high-ticket clients about managing assets → .finance matches the required formality. For compliance-sensitive businesses (lending, investment advice), default to .finance — the first impression is the professional one.",
+      pickA: ["Savings, cashback and comparison tools", "Personal-finance content and communities", "Crypto wallets and consumer fintech", "Products that spread by word of mouth"],
+      pickB: ["Advisors and asset managers", "Corporate finance and B2B SaaS", "DeFi protocols (a conventional suffix)", "Compliance-sensitive lending and investing"],
+    },
+  },
+  "gold-vs-vip": {
+    slug: "gold-vs-vip",
+    a: "gold",
+    b: "vip",
+    zh: {
+      title: ".gold 和 .vip 怎么选：贵金属质感与会员尊贵感的对比",
+      metaDescription: ".gold 自带贵金属与「金牌」语义，.vip 传达会员尊贵感且注册量大得多。对比两者的语义、认知度与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀都在卖「高端感」，但来源不同。.gold 的底色是实物与等级：黄金珠宝、贵金属投资、奢侈品用它是字面意义的精准；「金牌服务」「gold tier」的等级语义又让它能延伸到会员体系的最高档与竞技领域的冠军叙事。注册量小，好词库存充足。.vip 的底色是身份与圈层：三个字母全球通读，会员制电商、俱乐部、尊享服务一眼即懂，在中国市场注册量长期位居新后缀前列、可正常备案，认知度远超 .gold；代价是 vip 气质偏营销，且大量促销页用它，稀缺感反而被稀释。判断标准：业务与黄金/贵金属/奢侈品直接相关，或想借「金牌/冠军」叙事 → .gold 字面精准且更稀缺；业务核心是会员体系与身份圈层 → .vip 的认知度直给。两者都是强场景后缀，中性业务请回到通用后缀。",
+      pickA: ["黄金珠宝与贵金属投资", "奢侈品与高端礼品", "会员体系最高档（gold tier）", "「金牌/冠军」叙事的品牌"],
+      pickB: ["会员制电商与俱乐部", "尊享服务与身份圈层运营", "中国市场（认知度高、可备案）", "大促会员入口（brand.vip）"],
+    },
+    en: {
+      title: ".gold vs .vip: Precious-Metal Weight or Members-Only Status",
+      metaDescription:
+        ".gold carries precious-metal and gold-tier semantics; .vip signals membership status with far larger registration volume. Compare semantics, recognition and fit, then hunt available names.",
+      verdict:
+        "Both suffixes sell premium, but from different sources. .gold is grounded in the physical and the ranked: gold jewelry, precious-metal investment and luxury goods wear it with literal precision, while the gold-tier and gold-medal readings extend it to top membership levels and champion narratives. Registration volume is small, so good words remain plentiful. .vip is about identity and inner circles: three letters read the same worldwide, member-based commerce, clubs and premium services are instantly legible, and in China its registration volume has long led the new-gTLD pack with full ICP-filing accreditation — recognition far beyond .gold. The catch: .vip's promotional flavor, amplified by countless campaign pages, dilutes the exclusivity it promises. The test: business tied to gold, precious metals or luxury, or a brand built on gold-medal narratives → .gold is literal and scarcer; business built on membership and status circles → .vip's recognition is more direct. Both are strongly scenario-bound — neutral businesses should return to a generic suffix.",
+      pickA: ["Gold jewelry and precious-metal investment", "Luxury goods and premium gifts", "Top membership tiers (gold tier)", "Gold-medal and champion brand narratives"],
+      pickB: ["Member-based commerce and clubs", "Premium services and status circles", "China market (recognition + ICP filing)", "Campaign member entrances (brand.vip)"],
+    },
+  },
+  "wtf-vs-lol": {
+    slug: "wtf-vs-lol",
+    a: "wtf",
+    b: "lol",
+    zh: {
+      title: ".wtf 和 .lol 怎么选：荒诞冲击与轻松好笑的对比",
+      metaDescription: ".wtf 主打荒诞与冲击力，.lol 传达轻松好笑的网络文化。对比两种网络梗后缀的气质、风险与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是把网络俚语做成后缀的「态度域名」，差别在情绪的方向。.wtf 的情绪是惊讶与荒诞——猎奇内容站、吐槽合集、离谱产品博物馆、故意反差的营销活动页用它，域名本身就是标题党；它的冲击力也是双刃剑：粗口缩写的底色让它天然进不了正式场合，企业邮箱用 .wtf 会非常灾难。.lol 的情绪是轻松与好笑——梗图站、搞笑内容、休闲小游戏、整蛊礼物用它明快无害，比 .wtf 安全得多；英雄联盟（League of Legends 缩写 LoL）的玩家社区与周边内容也常借它一语双关。两者注册量都小、价格温和、好词充足。判断标准：内容主打「离谱到必须点开」的冲击力 → .wtf 的态度更烈；主打「好笑无害」的日常娱乐 → .lol 更耐用。两者都只适合娱乐与创意场景，正经业务请绕行。",
+      pickA: ["猎奇与吐槽内容站", "反差营销活动页", "离谱产品/失败案例合集", "需要标题党冲击力的创意项目"],
+      pickB: ["梗图与搞笑内容站", "休闲小游戏与整蛊礼物", "英雄联盟社区（LoL 双关）", "轻松无害的娱乐品牌"],
+    },
+    en: {
+      title: ".wtf vs .lol: Absurd Shock Value or Harmless Fun",
+      metaDescription:
+        ".wtf trades in absurdity and shock value; .lol reads light and funny. Compare the two internet-slang suffixes on vibe, risk and fit, then hunt available names.",
+      verdict:
+        "Both are attitude domains built from internet slang; the difference is which emotion they load. .wtf runs on surprise and absurdity — weird-content sites, rant collections, museums of ridiculous products and deliberately jarring campaign pages wear it as a built-in clickbait headline. That punch cuts both ways: the profanity underneath keeps it out of anything formal, and a corporate email on .wtf is a disaster. .lol runs on lightness — meme sites, comedy content, casual games and gag gifts wear it brightly and harmlessly, making it much safer than .wtf; League of Legends communities also borrow it for the obvious double meaning. Both have small registration bases, moderate prices and plentiful inventory. The test: content that wins on so-absurd-you-must-click energy → .wtf hits harder; everyday entertainment that wins on harmless fun → .lol wears longer. Both belong strictly to entertainment and creative projects — serious businesses should steer clear.",
+      pickA: ["Weird-content and rant sites", "Deliberately jarring campaign pages", "Ridiculous-product and fail collections", "Creative projects that need shock value"],
+      pickB: ["Meme and comedy content sites", "Casual games and gag gifts", "League of Legends communities (LoL pun)", "Light, harmless entertainment brands"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
