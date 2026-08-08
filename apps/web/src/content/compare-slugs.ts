@@ -105,6 +105,12 @@ export const COMPARE_SLUGS = [
   "app-vs-site",
   "com-vs-top",
   "info-vs-com",
+  "cc-vs-com",
+  "tv-vs-com",
+  "fm-vs-tv",
+  "one-vs-me",
+  "cool-vs-fun",
+  "red-vs-vip",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

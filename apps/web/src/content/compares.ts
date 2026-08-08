@@ -2269,6 +2269,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Commercial main sites & brand homes", "E-commerce & payment-taking businesses", "Long-term brand asset and resale", "Heavy word-of-mouth channels (ads, podcasts)"],
     },
   },
+  "cc-vs-com": {
+    slug: "cc-vs-com",
+    a: "cc",
+    b: "com",
+    zh: {
+      title: ".cc 和 .com 怎么选：最像 .com 的替补与默认值本尊的对比",
+      metaDescription: ".cc 视觉上最接近 .com、库存好得多；.com 是全球默认值但好名字绝迹。对比两者的信任、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "在所有 .com 替补里，.cc 是「长得最像」的一个：同样两个字母、同样干净利落，口头念出来也顺（cc 常被解读为 company/community/creative content）。它本是科科斯群岛的国家代码，但早已全球开放注册、按通用后缀运营，国内可正常备案，短域名与双拼库存远好于 .com——同一份名单在 .cc 下的命中率高出一大截，价格也常年温和。但要诚实面对差距：用户口头传播时默认补全的仍是 .com，如果你的 .cc 对应的 .com 在别人手里且在运营，分流与品牌混淆会长期存在；转售市场上 .cc 的流动性也远不及 .com（顶级短 .cc 除外）。判断标准：品牌词足够独特、或者你要的短名字 / 双拼在 .com 下只能高价收购 → .cc 是性价比最高的平替，先上线再图 .com 完全可行；品牌词常见、依赖口碑传播、或者要做长期持有的核心资产 → 咬牙上 .com，替补省下的钱迟早要在品牌混淆上还回去。",
+      pickA: ["心仪短名字/双拼在 .com 已被注册", "预算有限先上线的新项目", "创意、社区、内容类品牌（cc 语义顺）", "想要更高的可注册命中率"],
+      pickB: ["品牌词常见、怕分流混淆", "长期品牌资产与转售", "口头传播场景多（广告、播客）", "面向大众的正式商业品牌"],
+    },
+    en: {
+      title: ".cc vs .com: The Closest Lookalike vs the Real Default",
+      metaDescription:
+        ".cc looks the most like .com with far better inventory; .com is the global default with empty shelves. Compare trust, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Among all .com substitutes, .cc is the closest lookalike: the same two letters, the same clean read, and it says well out loud (cc is often read as company, community or creative content). Technically the country code of the Cocos Islands, it has long been open to global registration and run like a generic suffix, with short names and brandable words in far better supply than .com — the same shortlist scores dramatically more hits on .cc, at consistently moderate prices. Be honest about the gap though: word-of-mouth still autocompletes to .com, so if the matching .com is owned and operated by someone else, traffic leakage and brand confusion never fully go away; resale liquidity for .cc also trails .com by a wide margin (elite short .cc names excepted). The test: your brand word is distinctive, or the short name you want on .com means an expensive acquisition → .cc is the best-value stand-in, and launching on it now while eyeing the .com later is a legitimate play; your brand word is common, you lean on word-of-mouth, or the domain is a core long-term asset → pay up for .com, because the money a substitute saves tends to come back as confusion costs.",
+      pickA: ["Your short name is taken on .com", "Budget-conscious launches", "Creative, community & content brands (cc reads well)", "Better availability odds for the same list"],
+      pickB: ["Common brand words at risk of confusion", "Long-term brand asset and resale", "Heavy word-of-mouth channels (ads, podcasts)", "Mainstream commercial brands"],
+    },
+  },
+  "tv-vs-com": {
+    slug: "tv-vs-com",
+    a: "tv",
+    b: "com",
+    zh: {
+      title: ".tv 和 .com 怎么选：视频品类信号与商业默认值的对比",
+      metaDescription: ".tv 一眼可读作「电视/视频」，是直播与视频品牌的品类信号；.com 是商业默认值。对比两者的语义、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "先明确一点：.tv 是图瓦卢的国家代码，但全世界都把它读成 television——这份「天然误读」让它成为视频与直播赛道最强的品类后缀，Twitch.tv 把这条路走通了。如果你的产品核心是视频内容、直播、影视娱乐，.tv 让品牌名和品类信号一次说完，短名与好词的库存也远比 .com 充裕；代价是注册与续费明显更贵，且离开视频语境后这个后缀的说服力会打折。.com 的逻辑正相反：不传达任何品类，但在任何品类都可信，用户默认补全、转售流动性最好。判断标准：产品名会不会出现在「今晚八点直播，上 xxx.tv」这样的句子里？会——.tv 的品类信号值回票价；产品是综合平台、工具或电商，视频只是功能之一——用 .com 保住普适信任，别把品牌绑死在单一媒介上。预算充足的视频品牌通常两个都要：.tv 做主域名立人设，.com 防守跳转。",
+      pickA: ["直播平台与主播个人品牌", "视频内容、影视、流媒体产品", "希望后缀直接传达「视频」品类", "心仪短名字在 .com 已被注册"],
+      pickB: ["综合平台与多品类业务", "视频只是功能之一的产品", "续费预算敏感", "长期品牌资产与转售"],
+    },
+    en: {
+      title: ".tv vs .com: The Video Category Signal vs the Commercial Default",
+      metaDescription:
+        ".tv reads instantly as television — the strongest category suffix for video and streaming brands; .com is the commercial default. Compare semantics, pricing and fit, then hunt available names.",
+      verdict:
+        "First the fun fact: .tv is Tuvalu's country code, but the whole world reads it as television — and that built-in misreading makes it the strongest category suffix in video and streaming, a path Twitch.tv proved at scale. If your product's core is video content, live streaming or entertainment, .tv says the brand and the category in one breath, and short names plus good words are in far better supply than on .com; the trade-off is noticeably higher registration and renewal prices, and a suffix whose persuasive power fades outside video contexts. .com runs the opposite logic: it signals no category but is trusted in every category, with default autocomplete and the best resale liquidity. The test: will your name appear in sentences like 'going live tonight at yourname.tv'? Then the category signal pays for itself. If you're a general platform, tool or store where video is just one feature, keep the universal trust of .com and don't chain the brand to a single medium. Well-funded video brands usually take both: .tv as the identity-defining primary, .com as the defensive redirect.",
+      pickA: ["Streaming platforms & creator brands", "Video content, film & entertainment products", "Category signal right in the suffix", "Your short name is taken on .com"],
+      pickB: ["General platforms & multi-category businesses", "Products where video is one feature among many", "Renewal-budget sensitive", "Long-term brand asset and resale"],
+    },
+  },
+  "fm-vs-tv": {
+    slug: "fm-vs-tv",
+    a: "fm",
+    b: "tv",
+    zh: {
+      title: ".fm 和 .tv 怎么选：音频电台感与视频直播感的对比",
+      metaDescription: ".fm 自带电台/播客气质，.tv 是视频直播的品类信号。对比两个媒体后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "这是媒体产品里最经典的一对「品类后缀」，选择标准出奇地简单：你的内容进耳朵还是进眼睛？.fm 是密克罗尼西亚的国家代码，但全世界都读成调频电台——播客、音乐、电台、语音社交用它一步到位，Last.fm 与 Anchor.fm 早已把认知铺好；.tv 则被普遍读作 television，是直播与视频内容的默认品类后缀。两者都比主流后缀贵（.fm 的注册续费尤其高），买的都是「后缀即定位」的表达效率。容易被忽略的坑：内容形态会迁移——不少播客后来做起了视频节目，视频主播也常出音频版，后缀绑得太死会让扩张时略显别扭。判断标准：品牌核心资产是声音（播客、音乐、电台）→ .fm，短好记且圈内认同度高；核心资产是画面（直播、剧集、视频节目）→ .tv；两栖内容或还没想清楚 → 考虑 .com/.me 等中性后缀，把品类留给产品本身去说。",
+      pickA: ["播客与电台品牌", "音乐、音频内容平台", "语音社交与音频社区", "圈内认同（Last.fm/Anchor.fm 先例）"],
+      pickB: ["直播平台与主播个人品牌", "视频节目与影视内容", "游戏直播与电竞内容", "希望后缀直接传达「视频」品类"],
+    },
+    en: {
+      title: ".fm vs .tv: Radio Vibes vs Streaming Vibes",
+      metaDescription:
+        ".fm carries built-in radio and podcast energy; .tv is the category signal for video and live streaming. Compare the two media suffixes, then hunt names available on both.",
+      verdict:
+        "This is the classic pairing of media category suffixes, and the test is surprisingly simple: does your content go into ears or eyes? .fm is Micronesia's country code but reads universally as FM radio — podcasts, music, radio and voice-social products get instant positioning from it, with Last.fm and Anchor.fm having paved the recognition; .tv reads as television and is the default category suffix for live streaming and video. Both cost more than mainstream suffixes (.fm renewals especially), and what you're buying is the expressive efficiency of suffix-as-positioning. The overlooked trap: content formats migrate — plenty of podcasts grow video shows, and streamers ship audio feeds, so a suffix bound too tightly to one medium can feel awkward at expansion time. The test: your brand's core asset is sound (podcasts, music, radio) → .fm, short, memorable and respected in the audio world; your core asset is picture (streams, shows, video) → .tv; amphibious content or still deciding → consider a neutral suffix like .com or .me and let the product state the category.",
+      pickA: ["Podcast & radio brands", "Music & audio content platforms", "Voice-social & audio communities", "Audio-world recognition (Last.fm/Anchor.fm precedent)"],
+      pickB: ["Streaming platforms & creator brands", "Video shows & entertainment content", "Game streaming & esports content", "Category signal right in the suffix"],
+    },
+  },
+  "one-vs-me": {
+    slug: "one-vs-me",
+    a: "one",
+    b: "me",
+    zh: {
+      title: ".one 和 .me 怎么选：极简品牌词与个人化后缀的对比",
+      metaDescription: ".one 语义是「唯一/首选」、价格低且库存好；.me 是个人品牌与工具类产品的经典后缀。对比两者的语义、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀都短、都好念，分野在语义指向：.one 读作「唯一、第一、合而为一」，天然适合做品牌陈述——brand.one 读起来像一句口号（XX 首选），全家桶入口、账号中心（account.one 类用法）、极简品牌都顺；作为 2015 年才开放的新后缀，好词库存充足且注册续费常年便宜。.me 是黑山的国家代码，但全世界读成「我」：个人主页、简历站、link-in-bio、以及「动词.me」的工具类命名（remind.me 式祈使句）是它的主场，二十年个人品牌场景的积累让它在这个赛道的认知度无可替代。判断标准：域名主语是「品牌」——想表达唯一与首选 → .one 便宜、干净、库存好；域名主语是「用户自己」——个人站、作品集、或产品名想玩「动词 + me」的句式 → .me 的语义没有对手。都不沾的通用业务，两者都不如老老实实回到 .com/.co 的普适信任。",
+      pickA: ["极简品牌与「首选」定位（brand.one）", "全家桶入口与账号中心", "预算敏感、要低续费", "好词在 .me/.com 已被注册"],
+      pickB: ["个人主页、简历与作品集", "link-in-bio 与个人品牌", "「动词.me」式产品命名", "面向个人用户的工具与社区"],
+    },
+    en: {
+      title: ".one vs .me: The Minimalist Brand Word vs the Personal Suffix",
+      metaDescription:
+        ".one means the one — cheap with good inventory; .me is the classic suffix for personal brands and verb-style product names. Compare semantics, pricing and fit, then hunt available names.",
+      verdict:
+        "Both suffixes are short and say well; the split is in what they point at. .one reads as the one, number one, all-in-one — a natural brand statement where brand.one lands like a slogan, fitting suite entry points, account hubs (the account.one pattern) and minimalist brands; as a 2015-wave new gTLD it still has deep inventory of good words at perennially low registration and renewal prices. .me is Montenegro's country code but reads universally as me: personal homepages, résumé sites, link-in-bio pages and imperative verb.me product names (the remind.me pattern) are its home turf, with two decades of personal-brand usage making its recognition in that lane irreplaceable. The test: the domain's subject is the brand — you want to say the one, the first choice → .one is cheap, clean and well-stocked; the domain's subject is the user — a personal site, portfolio, or a product name playing the verb-plus-me sentence → .me's semantics have no rival. For generic businesses that fit neither story, both lose to the universal trust of plain .com or .co.",
+      pickA: ["Minimalist brands & 'the one' positioning (brand.one)", "Suite entry points & account hubs", "Budget-sensitive with low renewals", "Your word is taken on .me/.com"],
+      pickB: ["Personal homepages, résumés & portfolios", "Link-in-bio & personal branding", "verb.me style product names", "Consumer tools & communities"],
+    },
+  },
+  "cool-vs-fun": {
+    slug: "cool-vs-fun",
+    a: "cool",
+    b: "fun",
+    zh: {
+      title: ".cool 和 .fun 怎么选：酷感调性与玩乐气质的对比",
+      metaDescription: ".cool 传达酷感与态度，适合潮牌与创意工作室；.fun 主打玩乐与娱乐场景。对比两个情绪后缀的语义、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "这是一对「情绪后缀」：都不描述行业，只传达气质，选哪个取决于品牌想让人产生什么感受。.cool 是形容词，读起来像一句评价——brand.cool 自带「这玩意儿很酷」的态度，潮牌、设计师品牌、创意工作室、亚文化社区用它能把调性钉死；它的注册量不大，反而意味着好词库存充足。.fun 是名词也是承诺——「来这儿玩」，游戏、活动、派对、娱乐平台、儿童向产品用它一眼即懂，注册量比 .cool 大一个量级，首年价常年极低（续费会回到正常档，注册前先查续费价）。共同的坑：情绪后缀撑不起严肃场景，金融、医疗、企业服务放在 .cool/.fun 上会显得不可信；且两者的转售流动性都有限，别当投资品囤。判断标准：品牌的核心气质是「有态度、有审美」→ .cool；核心气质是「好玩、热闹」→ .fun；说不清是哪种 → 说明你需要的其实是中性后缀。",
+      pickA: ["潮牌与设计师品牌", "创意工作室与作品集", "亚文化社区与内容站", "想要「酷」的品牌态度"],
+      pickB: ["游戏与娱乐平台", "活动、派对与线下娱乐", "儿童向与家庭向产品", "首年预算极致敏感"],
+    },
+    en: {
+      title: ".cool vs .fun: Attitude vs Playfulness",
+      metaDescription:
+        ".cool signals attitude and taste — great for streetwear and studios; .fun promises play and entertainment. Compare the two mood suffixes, then hunt available names.",
+      verdict:
+        "This is a pair of mood suffixes: neither describes an industry — they transmit a feeling, and the choice is about what you want people to feel. .cool is an adjective that lands like a verdict — brand.cool carries built-in 'this thing is cool' attitude, nailing the tone for streetwear, designer brands, creative studios and subculture communities; its modest registration volume means good words are still plentiful. .fun is both a noun and a promise — 'come play' — instantly legible for games, events, parties, entertainment platforms and kid-facing products, with registration volume an order of magnitude larger than .cool and rock-bottom first-year pricing (renewals return to normal tiers, so check before registering). The shared trap: mood suffixes can't carry serious contexts — finance, healthcare or enterprise services on .cool/.fun read untrustworthy — and neither has meaningful resale liquidity, so don't hoard them as investments. The test: your brand's core vibe is attitude and taste → .cool; it's play and energy → .fun; if you can't say which, what you actually need is a neutral suffix.",
+      pickA: ["Streetwear & designer brands", "Creative studios & portfolios", "Subculture communities & content sites", "Brands built on attitude"],
+      pickB: ["Games & entertainment platforms", "Events, parties & offline fun", "Kid- & family-facing products", "Rock-bottom first-year budgets"],
+    },
+  },
+  "red-vs-vip": {
+    slug: "red-vs-vip",
+    a: "red",
+    b: "vip",
+    zh: {
+      title: ".red 和 .vip 怎么选：红色喜庆感与会员尊贵感的对比",
+      metaDescription: ".red 主打红色与喜庆语义，在中文语境格外讨喜；.vip 传达会员与尊贵感、注册量更大。对比两者的语义、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀在中文互联网语境里都有独特的化学反应。.red 的字面是颜色，但在中文语境自动叠加「红火、喜庆、网红」的联想——喜庆礼品、婚庆、国潮品牌、红色主题内容用它格外顺，donuts 系新后缀里它注册量不大，好词库存充足且价格温和；短板是出了中文语境，red 就只是一种颜色，海外用户读不出额外含义。.vip 则是全球通用的三个字母：会员体系、尊享服务、高端定位一眼即懂，中国市场注册量长期位居新后缀前列、通过工信部资质可正常备案，电商大促场景（xx.vip 会员入口）已被反复验证；代价是 vip 的气质偏营销，放在需要克制感的品牌上会显得用力过猛。判断标准：品牌吃「喜庆红火」的情绪红利（礼品、婚庆、国潮、节庆营销）→ .red 讨喜且便宜；品牌卖「会员与尊贵」（会员制电商、俱乐部、高端服务）→ .vip 的语义直给且认知度更广。两者都强依赖具体场景，通用业务请回到中性后缀。",
+      pickA: ["喜庆礼品与婚庆品牌", "国潮与红色主题内容", "节庆营销活动页", "中文语境的「红火」联想"],
+      pickB: ["会员制电商与俱乐部", "尊享服务与高端定位", "大促会员入口（xx.vip）", "需要更大后缀认知度"],
+    },
+    en: {
+      title: ".red vs .vip: Festive Red vs Members-Only Prestige",
+      metaDescription:
+        ".red owns the color and its festive readings — especially strong in Chinese contexts; .vip signals membership and prestige with far larger registration volume. Compare and hunt available names.",
+      verdict:
+        "Both suffixes have special chemistry in the Chinese internet context. .red is literally the color, but in Chinese it auto-loads associations of festivity, prosperity and internet fame — gift brands, wedding services, guochao (China-chic) labels and red-themed content wear it beautifully; among the Donuts-wave gTLDs its registration base is small, so good words remain plentiful at moderate prices. The catch: outside Chinese contexts, red is just a color and carries no extra meaning for international users. .vip is three letters the whole world reads the same way: membership systems, premium services and upscale positioning are instantly legible, its registration volume has long ranked near the top of new gTLDs in China, it's MIIT-accredited for ICP filing, and the member-entrance pattern (brand.vip) is battle-tested in e-commerce campaigns; the cost is a promotional flavor that reads try-hard on brands aiming for restraint. The test: your brand feeds on festive-red emotional energy (gifts, weddings, guochao, seasonal campaigns) → .red is charming and cheap; your brand sells membership and prestige (member-based commerce, clubs, premium services) → .vip is more direct with broader recognition. Both are heavily scenario-dependent — generic businesses should return to a neutral suffix.",
+      pickA: ["Festive gift & wedding brands", "Guochao & red-themed content", "Seasonal campaign pages", "Chinese-context festive readings"],
+      pickB: ["Member-based commerce & clubs", "Premium services & upscale positioning", "Campaign member entrances (brand.vip)", "Broader suffix recognition"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
