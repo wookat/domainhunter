@@ -1327,7 +1327,7 @@ export function HomePage({
                   {t(`home.faq.q${i}` as I18nKey)}
                   <ChevronDown className="h-4 w-4 shrink-0 text-txt2 transition-transform group-open:rotate-180" />
                 </summary>
-                <p className="mt-2.5 text-xs leading-relaxed text-txt1">{t(`home.faq.a${i}` as I18nKey)}</p>
+                <p className="mt-2.5 text-xs leading-relaxed text-txt1 [overflow-wrap:anywhere]">{t(`home.faq.a${i}` as I18nKey)}</p>
               </details>
             ))}
           </div>
