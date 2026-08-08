@@ -298,6 +298,8 @@ export interface GuardStats {
   supplementDropped: GuardDropCounts;
   /** LLM 调用瞬时失败后的退避重试次数 */
   retries: number;
+  /** charsetViolation 首个违规字符的 Unicode 码点样本（如 "U+D55C"，R245；只留码点不留候选文本） */
+  charsetSample?: string;
 }
 
 function newGuardDropCounts(): GuardDropCounts {
@@ -688,8 +690,11 @@ export const cleanMeaning = (m: string): string => stripParentheticalAnnotations
 // ---------------- meaning 字符白名单（R179） ----------------
 // 生产审计发现反思轮 meaning 偶发混入韩文（코더）、IPA 音标（gɪt）等异文字，整条丢弃。
 // zh：ASCII 可打印（meaning 常含英文单词）+ 汉字（含扩展A）+ CJK 标点（「」『』、。等）
-//   + 全角标点 + 通用标点（—…·）；不含谚文/假名/西里尔等区段
-const ZH_MEANING_ALLOWED_RE = /^[\x20-\x7E\u00b7\u2000-\u206f\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uff01-\uff5e\uffe0-\uffe5]*$/;
+//   + 全角标点 + 通用标点（—…·）+ 拼音声调字符（R245）——偏拼音需求下 meaning 常含带声调注音：
+//   一声/三声在 Latin Extended-A（āēīōū）与 \u01cd-\u01dc（ǎǐǒǔ 及 ǖǘǚǜ），
+//   二声/四声元音（áàéèíìóòúù）与 ü/Ü/ê 在 Latin-1 补充区；
+//   不含谚文/假名/西里尔等区段
+const ZH_MEANING_ALLOWED_RE = /^[\x20-\x7E\u00b7\u00dc\u00e0\u00e1\u00e8\u00e9\u00ea\u00ec\u00ed\u00f2\u00f3\u00f9\u00fa\u00fc\u0100-\u017f\u01cd-\u01dc\u2000-\u206f\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uff01-\uff5e\uffe0-\uffe5]*$/;
 // en：ASCII 可打印 + Latin-1 变音字母（é/ü 类）+ Latin Extended-A（ā/ō 类）+ 通用标点（—…）；
 //   刻意不含 IPA Extensions（\u0250-\u02af，如 ɪ/ə）与任何非拉丁文字
 const EN_MEANING_ALLOWED_RE = /^[\x20-\x7E\u00c0-\u00ff\u0100-\u017f\u2000-\u206f]*$/;
@@ -697,6 +702,16 @@ const EN_MEANING_ALLOWED_RE = /^[\x20-\x7E\u00c0-\u00ff\u0100-\u017f\u2000-\u206
 /** meaning 字符集校验：出现目标语言白名单之外的文字（韩文/西里尔/IPA 等）返回 false */
 export function meaningCharsetOk(meaning: string, lang: "zh" | "en"): boolean {
   return (lang === "en" ? EN_MEANING_ALLOWED_RE : ZH_MEANING_ALLOWED_RE).test(meaning);
+}
+
+/** 首个白名单外字符的 Unicode 码点（如 "U+D55C"）；全部合法时返回 undefined。
+ *  只暴露码点不暴露候选文本，供 charsetViolation 观测采样（R245，只留码点避免内容泄漏）。 */
+export function firstCharsetViolation(meaning: string, lang: "zh" | "en"): string | undefined {
+  const re = lang === "en" ? EN_MEANING_ALLOWED_RE : ZH_MEANING_ALLOWED_RE;
+  for (const ch of meaning) {
+    if (!re.test(ch)) return `U+${(ch.codePointAt(0) as number).toString(16).toUpperCase().padStart(4, "0")}`;
+  }
+  return undefined;
 }
 
 // ---------------- 臆造字母引用检测（R179） ----------------
@@ -778,6 +793,56 @@ export function citesPhantomWord(label: string, meaning: string): boolean {
     const first = m[2]?.toLowerCase();
     const y = first && SOURCE_LANG_WORDS.has(first) ? m[3]?.toLowerCase() : first;
     if (y && !SOURCE_LANG_WORDS.has(y) && !y.includes(x)) return true; // "rio 取自 curious" 型：来源词里没有该片段
+  }
+  return false;
+}
+
+// ---------------- ZH meaning 幻影 ASCII 引用检测（R246，R239 P2-4） ----------------
+// 生产坏例（ref2 refine 轮）：meaning 引用 label 中不存在的 ASCII 串但不带「取自/源自」句式——
+// tibeirock「tedeck 落音笃定」、kinwalk「kino 指尖溜过石板」、duanyou「wrin 前缀强调直结声」，
+// ZH_SOURCE_CITE_RE 的句式门未覆盖，全部上线。
+// 规则：zh meaning 中嵌在中文语境里的独立 ASCII 词（≥3 字母，紧邻 CJK 文字/标点）若既不是
+// label 的子串（label 反向包含也放行），也不是常见英文白名单词（tech/cloud/app 等通用词、
+// TLD 名、语言名），判为臆造引用 → 整条丢弃。纯英文句子里的词（两侧都非 CJK）不判，
+// 避免误杀合法的英文释义句。
+// 已被词源句式引用的来源词（"rio 取自 curious" 的 curious、"X 与 Y 结合" 的 X/Y）先剥离——
+// 它们由 citesPhantomWord 按各自句式校验，不在本防线重复判定（避免误杀合法来源词）。
+const ZH_ASCII_ALLOWED_WORDS = new Set([
+  // 语言/词源修饰词（与 SOURCE_LANG_WORDS 同源）
+  "latin", "greek", "english", "french", "italian", "spanish", "german", "japanese", "sanskrit", "norse", "hebrew", "old", "ancient", "the", "word", "root",
+  // 常见 TLD 名（meaning 里解释后缀观感时会出现）
+  "com", "net", "org", "app", "dev", "top", "xyz", "site", "online", "store", "shop", "club", "vip", "fun", "art", "live", "life", "link", "one", "run", "work", "world", "zone", "group", "team", "ltd", "wiki", "info", "biz", "pro", "tech", "cloud",
+  // 通用科技/品牌描述词（zh meaning 常借英文词点题）
+  "web", "data", "saas", "api", "seo", "logo", "brand", "startup", "studio", "lab", "labs", "hub", "home", "smart", "max", "mini", "plus", "digital", "mobile", "global", "media", "design", "style", "code", "box", "base", "core", "flow", "pay", "game", "play", "book", "note", "blog", "mail", "chat", "news", "mall", "star", "sun", "sky", "sea", "eco", "bio", "tea", "cafe", "farm", "city", "land", "space",
+]);
+const ZH_ASCII_WORD_RE = /[a-z]{3,}/gi;
+// 先剥离已有句式门校验过的来源词：「X 取自/源自/来自 Y1 (Y2)」的 Y 侧、「X 与/和/加/+ Y 结合…」整段
+const ZH_CITE_SOURCE_STRIP_RE = /(?:取自|源自|来自)\s*(?:拉丁语?|希腊语?|英语|英文|法语|法文|西班牙语|德语|意大利语|日语|梵语)?\s*["「『']?\s*[a-z]{3,}(?:\s+[a-z]{3,})?/gi;
+// 中文语言名引导的外语词（"法语 croustillant 的酥脆"）同样是被点名的来源词，剥离后不判
+const ZH_LANG_LEAD_STRIP_RE = /(?:拉丁语?|希腊语?|英语|英文|法语|法文|西班牙语|德语|意大利语|日语|梵语)\s*["「『']?\s*[a-z]{3,}/gi;
+const ZH_PAIR_STRIP_RE = /[a-z]{3,}\s*(?:与|和|加|\+)\s*[a-z]{3,}\s*的?\s*(?:结合|组合|混合|拼接|合成)/gi;
+
+const CJK_CONTEXT_RE = /[\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uff01-\uffe5]/;
+
+function nearestNonSpace(s: string, i: number, step: -1 | 1): string {
+  for (let j = i; j >= 0 && j < s.length; j += step) {
+    if (s[j] !== " ") return s[j];
+  }
+  return "";
+}
+
+export function zhCitesPhantomAscii(label: string, meaning: string): boolean {
+  const stripped = meaning.replace(ZH_CITE_SOURCE_STRIP_RE, " ").replace(ZH_LANG_LEAD_STRIP_RE, " ").replace(ZH_PAIR_STRIP_RE, " ");
+  ZH_ASCII_WORD_RE.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = ZH_ASCII_WORD_RE.exec(stripped)) !== null) {
+    const w = m[0].toLowerCase();
+    if (label.includes(w) || w.includes(label)) continue;
+    if (ZH_ASCII_ALLOWED_WORDS.has(w)) continue;
+    // 只判嵌在中文语境里的词（任一侧紧邻 CJK）；纯英文句子中的词不判
+    const before = nearestNonSpace(stripped, m.index - 1, -1);
+    const after = nearestNonSpace(stripped, m.index + m[0].length, 1);
+    if (CJK_CONTEXT_RE.test(before) || CJK_CONTEXT_RE.test(after)) return true;
   }
   return false;
 }
@@ -883,12 +948,27 @@ export function enMeaningIncoherent(label: string, meaning: string, opts: { word
     }
   }
   if (!fragmentOk && label.length >= 3) {
-    // 与 label 共享 ≥3 字母单词前缀的实词（词首匹配，避免 "small" 命中 "all"；
-    // 命中的整词若是停用词，如 label "theora" 前缀 "the" 命中冠词 the，同样不算锤点）
+    // 与 label 共享字母前缀的实词（词首匹配，避免 "small" 命中 "all"；
+    // 命中的整词若是停用词，如 label "theora" 前缀 "the" 命中冠词 the，同样不算锤点）。
+    // R246（R239 P2-3）：公共前缀仅 3 字母的命中被 anchors（ancryst）、opairein（oparior，
+    // 幻觉词自证）、linen（lintow）击穿——收紧为公共前缀 ≥4 才算锤点；公共前缀恰为 3 时，
+    // 仅当命中词处于明确词源引用语境（引号包裹，或紧跟 latin/greek 等语言名之后，
+    // 如 lumora ↔ Latin "lumen"）才保留为锤点
     for (const m of lower.matchAll(new RegExp(`\\b${label.slice(0, 3)}[a-z]*`, "g"))) {
-      if (!EN_FRAGMENT_STOPWORDS.has(m[0])) {
+      const w = m[0];
+      if (EN_FRAGMENT_STOPWORDS.has(w)) continue;
+      let common = 0;
+      while (common < w.length && common < label.length && w[common] === label[common]) common++;
+      if (common >= 4) {
         fragmentOk = true;
         break;
+      }
+      if (common >= 3) {
+        const before = lower.slice(Math.max(0, (m.index ?? 0) - 16), m.index ?? 0);
+        if (/["'\u201c\u201d\u300c\u300e]\s*$/.test(before) || /\b(?:latin|greek|french|italian|spanish|german|norse|sanskrit|hebrew|japanese|english)\s+["'\u201c\u300c]?$/.test(before)) {
+          fragmentOk = true;
+          break;
+        }
       }
     }
   }
@@ -924,8 +1004,25 @@ function readingVariants(p: string): string[] {
 const FULL_PINYIN_CLAIM_RE = /全拼/;
 const QUOTED_CJK_RE = /「([\u3400-\u4dbf\u4e00-\u9fff]{2,4})」/g;
 
-// 枚举引用词的所有逐字拼接读法，判断是否有一种等于 label（组合数设上限防爆炸）
-function quotedWordMatchesLabel(word: string, label: string): boolean {
+// 单字在 label 中允许的贡献形态：全拼各读音（含 ü 写法变体）；宽松模式下再加
+// 首字母与首声母（zh/ch/sh 双字母声母），覆盖「取字首」类合法造型（云慕 → y+m）
+function charContributions(readings: string[], allowInitials: boolean): string[] {
+  const out: string[] = [];
+  for (const r of readings) {
+    for (const v of readingVariants(r)) out.push(v);
+    if (allowInitials) {
+      out.push(r[0]);
+      if (r.length >= 2 && (r[1] === "h") && (r[0] === "z" || r[0] === "c" || r[0] === "s")) {
+        out.push(r.slice(0, 2));
+      }
+    }
+  }
+  return [...new Set(out)];
+}
+
+// 枚举引用词的所有逐字拼接读法，判断是否有一种等于 label（组合数设上限防爆炸）。
+// allowInitials：宽松模式（未声称「全拼」）下每字还可只取首字母/首声母参与拼接
+function quotedWordMatchesLabel(word: string, label: string, allowInitials = false): boolean {
   const table = pinyinTable();
   let joins: string[] = [""];
   for (const ch of word) {
@@ -933,12 +1030,10 @@ function quotedWordMatchesLabel(word: string, label: string): boolean {
     if (!readings) return false; // 表外字（GB2312 外生僻字）→ 保守拒绝，视为不匹配
     const next: string[] = [];
     for (const j of joins) {
-      for (const r of readings) {
-        for (const v of readingVariants(r)) {
-          // 前缀剪枝：拼接中途就必须是 label 前缀，否则丢弃该分支
-          const cand = j + v;
-          if (label.startsWith(cand)) next.push(cand);
-        }
+      for (const v of charContributions(readings, allowInitials)) {
+        // 前缀剪枝：拼接中途就必须是 label 前缀，否则丢弃该分支
+        const cand = j + v;
+        if (label.startsWith(cand)) next.push(cand);
       }
     }
     if (next.length === 0) return false;
@@ -947,14 +1042,17 @@ function quotedWordMatchesLabel(word: string, label: string): boolean {
   return joins.includes(label);
 }
 
-// theme 为 pinyin 且 meaning 声称「全拼」：「」内存在可判引用词但全部与 label 拼写不符 → true（丢弃）
+// theme 为 pinyin 且 meaning 含「」中文引用词：引用词与 label 做拼音一致性校验 → 全部不符则 true（丢弃）。
+// R244（R239 审计 P2-1）：「全拼」声明从必要条件改为加严条件——声称全拼时 label 必须等于
+// 逐字全拼拼接（严格）；未声称时放宽为「全拼或首字母/首声母的逐字组合」能完整拼出 label
+// 即放行（弱声称），仍对不上（shuqi「漱石」/pinen「品芩」/duanyou「韫岩」型）才拒绝
 export function pinyinQuoteMismatch(label: string, meaning: string): boolean {
-  if (!FULL_PINYIN_CLAIM_RE.test(meaning)) return false;
+  const strict = FULL_PINYIN_CLAIM_RE.test(meaning);
   QUOTED_CJK_RE.lastIndex = 0;
   let m: RegExpExecArray | null;
   let judged = 0;
   while ((m = QUOTED_CJK_RE.exec(meaning)) !== null) {
-    if (quotedWordMatchesLabel(m[1], label)) return false;
+    if (quotedWordMatchesLabel(m[1], label, !strict)) return false;
     judged++;
   }
   return judged > 0;
@@ -1043,6 +1141,9 @@ async function generateOnce(
     // R179：meaning 混入目标语言白名单外的文字（韩文/西里尔/IPA 等）→ 整条丢弃
     if (!meaningCharsetOk(meaning, opts.lang ?? "zh")) {
       dropped.charsetViolation++;
+      if (guardStats.charsetSample === undefined) {
+        guardStats.charsetSample = firstCharsetViolation(meaning, opts.lang ?? "zh");
+      }
       continue;
     }
     // R179：meaning 引用 label 中不存在的字母（"z from zeus" 式臆造词源）→ 整条丢弃
@@ -1057,6 +1158,11 @@ async function generateOnce(
     }
     // R183：meaning 声称的词源片段与 label 拼写不符（"play 与 grow 结合" for plangrow）→ 整条丢弃
     if (citesPhantomWord(label, meaning)) {
+      dropped.phantomEtymology++;
+      continue;
+    }
+    // R246（R239 P2-4）：zh meaning 引用 label 中不存在且非白名单的独立 ASCII 词（「tedeck 落音笃定」式幻影引用）→ 整条丢弃
+    if ((opts.lang ?? "zh") === "zh" && zhCitesPhantomAscii(label, meaning)) {
       dropped.phantomEtymology++;
       continue;
     }

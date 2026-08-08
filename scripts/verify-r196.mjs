@@ -67,7 +67,8 @@ check("pinyin-quote good: zhihu/「知乎」", pinyinQuoteMismatch("zhihu", "「
 check("pinyin-quote good: lvcheng/「绿城」ü 写作 v", pinyinQuoteMismatch("lvcheng", "「绿城」全拼，绿色之城"), false);
 // R222：莨（lang/liang）已随 GB2312 扩表收录，ye+lang ≠ yerang → 拼写错配拦截（原表外放行语义由 verify-r222.mjs 覆盖）
 check("pinyin-quote: yerang/「野莨」扩表后错配拦截", pinyinQuoteMismatch("yerang", "「野莨」全拼，野趣"), true);
-check("pinyin-quote good: 未声称全拼不判", pinyinQuoteMismatch("tangfang", "「探方」拼读顺口"), false);
+// R244：未声称「全拼」也做弱声称校验——tangfang 无法由 探/方 的拼音或首字母组合拼出 → 拦截
+check("pinyin-quote: 未声称全拼也拦错配（R244）", pinyinQuoteMismatch("tangfang", "「探方」拼读顺口"), true);
 check("pinyin-quote good: 多音字 lecheng/「乐城」", pinyinQuoteMismatch("lecheng", "「乐城」全拼，欢乐之城"), false);
 
 // ---------- P1-1：问号丢弃（在 generateOnce 内联，规则等价断言） ----------
