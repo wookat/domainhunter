@@ -37,11 +37,17 @@ export interface RoundInfo {
 export interface GuardMeta {
   dropped: Record<string, number>;
   wordSupplement: boolean;
+  /** 补发轮发起次数（R243，旧快照无此字段） */
+  supplementAttempts?: number;
+  /** 补发轮各防线丢弃计数（R243，与主轮 dropped 分开，旧快照无此字段） */
+  supplementDropped?: Record<string, number>;
   retries: number;
 }
 
 export interface StreamEvent {
-  type?: "round" | "proposed" | "done" | "error" | "understanding";
+  type?: "round" | "proposed" | "done" | "error" | "understanding" | "hint";
+  /** hint 事件的类型（R247，目前仅 lowYield：连续低产出建议拓宽后缀/命名路线） */
+  kind?: "lowYield";
   round?: number;
   note?: string;
   items?: { label: string; meaning: string; theme?: Theme; scores?: Scores }[];
