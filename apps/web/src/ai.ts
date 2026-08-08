@@ -1,3 +1,5 @@
+import { isBrandCollision } from "./brand-blocklist";
+
 export interface AiScores {
   length: number;
   readability: number;
@@ -8,6 +10,7 @@ export interface AiScores {
 export type AiTheme = "pinyin" | "word" | "coined" | "blend";
 
 const THEMES = new Set<string>(["pinyin", "word", "coined", "blend"]);
+export const AI_THEMES: ReadonlySet<string> = THEMES;
 
 export interface AiCandidate {
   label: string;
@@ -15,6 +18,21 @@ export interface AiCandidate {
   theme?: AiTheme;
   scores: AiScores;
 }
+
+// meaning 质量红线（R179）：首轮 system prompt 与反思轮 refine hint 共享同一份文案，避免措辞漂移
+const MEANING_REDLINES_ZH = `- meaning 必须是定稿文案：一次成稿、语气笃定、语法通顺；禁止问号式犹豫、禁止「其实/等等」式自我修正、禁止括号内猜测拆词；对寓意拆解没把握，就换一个你能笃定解释的候选
+  好例子：「木舟」muzhou，双字全拼，寓意稳载远行，声调平缓，读一遍就能拼出来
+  坏例子：murory，可能是 mu(木?)+rory？也许取自某个人名（不太确定）
+- 词源/拆字必须真实：只引用真实存在的汉字、英文单词或词根，禁止臆造不存在的词充当词源；禁止引用 label 中不存在的字母或音节（label 里没有 z 就不能说 z 取自某词）
+- meaning 只使用中文与英文书写，禁止混入韩文、日文假名、西里尔字母、IPA 音标等其他文字
+- 禁止在 meaning 里用括号（()（）[]【】）内嵌拆字/注音/补充解释；拆字与寓意必须融进一句通顺的定稿文案直接说清
+  好例子：「慕远」muyuan，mu 取「慕」的向往、yuan 取「远」的辽阔，寓意心怀远方，全拼顺口好记
+  坏例子：「慕远」mu(慕:向往)加yuan【远】，寓意远行（大概）`;
+
+const MEANING_REDLINES_EN = `- meaning must be final copy: one polished, confident, grammatical sentence; no question-mark hedging (like "lo(quacious?)"), no "Actually…" self-correction, no parenthetical guessed splits; if unsure about the etymology, swap in a candidate you can explain with confidence
+- Etymology must be real: only cite words, roots, or fragments that actually exist — never invent a fake source word (no "winards", no "brósene"); never cite a letter or fragment that is not present in the label (if the label has no z, do not claim "z from zeus")
+- Write meaning in plain English only: no IPA phonetic symbols, no non-Latin scripts
+- Never embed parenthetical annotations — (), （）, [], 【】 — inside meaning for letter-splitting, phonetic glosses, or side notes; fold the gloss into one polished sentence instead (write Latin "lumen" meaning light, not "lumen (light)")`;
 
 const SYSTEM_PROMPT = `你是资深域名命名专家。用户会用自然语言描述想要的域名寓意/主题/口味，你负责发散出尽可能优质的域名主体（不含 TLD）。
 
@@ -26,15 +44,16 @@ const SYSTEM_PROMPT = `你是资深域名命名专家。用户会用自然语言
 - 按推荐度排序
 - 给每个候选标注命名思路 theme，取值只能是：pinyin（中文拼音/缩写）、word（现成英文单词）、coined（英文合成词/造词）、blend（拼音+英文混合）
 - 同时给每个候选打四维分（0-100 整数）：length（长度，越短越好记分越高）、readability（读感，好读好拼）、relevance（寓意贴合需求程度）、brandability（品牌感，独特性与可商标性）
-- meaning 必须是定稿文案：一次成稿、语气笃定；禁止问号式犹豫、禁止「其实/等等」式自我修正、禁止括号内猜测拆词；对寓意拆解没把握，就换一个你能笃定解释的候选
-  好例子：「木舟」muzhou，双字全拼，寓意稳载远行，声调平缓，读一遍就能拼出来
-  坏例子：murory，可能是 mu(木?)+rory？也许取自某个人名（不太确定）
-- 禁止在 meaning 里用括号（()（）[]【】）内嵌拆字/注音/补充解释；拆字与寓意必须融进一句通顺的定稿文案直接说清
-  好例子：「慕远」muyuan，mu 取「慕」的向往、yuan 取「远」的辽阔，寓意心怀远方，全拼顺口好记
-  坏例子：「慕远」mu(慕:向往)加yuan【远】，寓意远行（大概）
+${MEANING_REDLINES_ZH}
 
 严格输出 JSON 数组，不要输出其他任何文字：
 [{"label":"域名主体","meaning":"一句话说明寓意与读法","theme":"coined","scores":{"length":90,"readability":85,"relevance":88,"brandability":80}}]`;
+
+/** 用户点踩的候选（label + 命名思路），refine 轮据此规避同风格 */
+export interface DislikedItem {
+  label: string;
+  theme?: AiTheme;
+}
 
 /** refine 轮反馈：跨轮去重 + 被注册名的模式总结素材 */
 export interface RefineFeedback {
@@ -44,13 +63,17 @@ export interface RefineFeedback {
   taken: string[];
   /** 被注册主体的命名思路分布（仅统计已知 theme 的） */
   takenThemes: Partial<Record<AiTheme, number>>;
+  /** 用户点踩的候选（可选，旧 payload 无此字段） */
+  disliked?: DislikedItem[];
 }
 
 const ZH_PINYIN_HINT = `
 
 拼音候选强化（用户是中文创业者，拼音系候选质量优先）：
-- 三种拼音路线都要覆盖：① 简短双字拼（哔哩哔哩 bilibili、知乎 zhihu、豆瓣 douban 式，追求双拼声调节奏与叠音美感）；② 全拼（小红书 xiaohongshu 式，寓意完整直白）；③ 声母缩写或拼音+英文混搭（zlz、tao+bao+hub 式，短而有记忆点）
+- 路线配额硬要求：每轮候选中 theme 为 pinyin 或 blend 的合计必须 ≥40%（如 24 个候选中至少 10 个），其余才是 word/coined；不足配额视为不合格输出
+- 三种拼音路线都要覆盖，每种至少 2 个：① 简短双字拼（哔哩哔哩 bilibili、知乎 zhihu、豆瓣 douban 式，追求双拼声调节奏与叠音美感）；② 全拼（小红书 xiaohongshu 式，寓意完整直白）；③ 声母缩写或拼音+英文混搭（zlz、tao+bao+hub 式，短而有记忆点）
 - 每个 theme 为 pinyin 或 blend 的候选，meaning 必须包含用「」括起的中文原词，并说明为什么这个拼音好读好记（如声调顺口、叠音、无歧义拼读），例如：「知舟」zhizhou，双字全拼，齿音开头声调上扬，读一遍就能拼出来
+- 「」内的汉字必须优先用常用字（现代汉语常用 3500 字范围内的直觉），普通人看到拼音要能反推出汉字：木/舟/云/星/禾/悦/途 好，岑/蕨/飏/麓/隰/珩 这类生僻字不要；组词语义要自然（「木舟」「星河」好，「续夸」式牵强搭配不要）
 - 拼音自筛淘汰标准（不达标的直接不要输出）：x/q/zh/c/s 等易歧义声母连串（老外读不出，如 xiqizhi）；超过 4 个音节；含 iu/ui、in/ing、an/ang 等易混易错拼写；整体拼读有多种可能切分产生歧义的组合`;
 
 // ---------------- 拼音合法性校验（R124） ----------------
@@ -207,6 +230,27 @@ export function checkPinyinLabel(label: string): PinyinCheck {
   return { ok: true, ambiguous: minimal.length >= 2, risk };
 }
 
+// ---------------- 生僻字启发式（R182） ----------------
+// 拼音系候选的 meaning 「」内汉字应是普通人能由拼音反推的常用字。
+// 维护一份小型生僻字黑名单（命名场景中 LLM 高频产出、但远在常用 3500 字之外的
+// 雅字/地名用字/古字），命中只降 readability 不丢弃（启发式不可靠，宁放过不误杀）。
+const RARE_CJK_BLACKLIST = new Set<string>(
+  "岑蕨飏麓隰珩岫崧翀昶垚犇淼焱燊滢潆澍泠浥沚洄湮芃荇菡蘅芩荻莜菀蓁玥珉璟瑭霈翊珞彧赟旻嵘峤郴滁黔黟".split(""),
+);
+
+export const RARE_CHAR_PENALTY_PER_CHAR = 10;
+
+// 统计 meaning 中「」内出现的黑名单生僻字个数（每个命中字计一次，重复字不重复计）
+export function countRareQuotedChars(meaning: string): number {
+  const hits = new Set<string>();
+  const re = /「([^「」]{1,12})」/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(meaning)) !== null) {
+    for (const ch of m[1]) if (RARE_CJK_BLACKLIST.has(ch)) hits.add(ch);
+  }
+  return hits.size;
+}
+
 export interface AiUnderstanding {
   core: string;
   style: string;
@@ -231,8 +275,7 @@ const EN_NAMING_HINT = `
 - 四种英文命名路线都要覆盖：① portmanteau 词混造（Pinterest=pin+interest、Instagram=instant+telegram 式，两个词各取有辨识度的片段拼接）；② 拉丁/希腊词根改造（Spotify、Sonos 式，取 son/lum/vox/nov 等词根加轻量后缀，短而有质感）；③ 真实短词的错拼/变体（Lyft、Tumblr 式，去元音或换字母，但整体仍要一眼能读出来）；④ 隐喻词（Amazon、Apple 式，用一个现成的具象词，与需求语义有一层聪明的关联，meaning 里必须点破这层关联）
 - meaning 质量要求：说清词源拆解（由哪两个词/哪个词根构成、为什么贴合需求）+ 读音顺口的理由（如两音节重音在前、开音节收尾），不要用 catchy/modern/memorable 这类空洞形容词充数，例如：Lumora = Latin "lumen" meaning light + soft -ora ending, evokes clarity for a journaling app; two open syllables, reads instantly
 - 英文自筛淘汰标准（不达标的直接不要输出）：≥4 音节；含难读辅音簇（如 xq、zv、tsk）；与知名品牌只差一个字母（有法律风险，如 gooogle、spotifi）；直白到像域名占位词的组合（如 bestXXXhub、XXXonline、getXXXapp）
-- meaning 必须是定稿文案：一次成稿、语气笃定；禁止问号式犹豫（如 "lo(quacious?)"）、禁止 "Actually…" 式自我修正、禁止括号内猜测拆词；如果对词源拆解没把握，就换一个你能笃定解释的候选
-- Never embed parenthetical annotations — (), （）, [], 【】 — inside meaning for letter-splitting, phonetic glosses, or side notes; fold the gloss into one polished sentence instead (write Latin "lumen" meaning light, not "lumen (light)")
+${MEANING_REDLINES_EN}
 - theme 标注硬规则（逐条判断，不看走的是哪条命名路线）：
   ① label 本身就是词典里存在的完整英文单词（含隐喻词，如 castloom 不是、amazon 是）→ 必须标 word
   ② label 能拆成两个可辨认的英文单词/词段拼接（如 castloom = cast + loom、verbloom = verb + bloom）→ 必须标 blend
@@ -288,7 +331,7 @@ export async function generateAiCandidates(
 const THEME_NAMES: Record<string, string> = { pinyin: "拼音/缩写", word: "现成英文单词", coined: "英文造词", blend: "拼音+英文混合" };
 
 /** 把上一轮的失败模式总结成具体反思提示，而非简单罗列名单 */
-function buildRefineHint(fb: RefineFeedback, round: number): string {
+function buildRefineHint(fb: RefineFeedback, round: number, lang: "zh" | "en"): string {
   const parts: string[] = [`这是第 ${round} 轮。`];
   if (fb.taken.length > 0) {
     const themeSummary = Object.entries(fb.takenThemes)
@@ -305,9 +348,20 @@ function buildRefineHint(fb: RefineFeedback, round: number): string {
       "请先反思这些被注册名的共性模式（哪些词根太常见、哪种构词太直白、哪个长度段竞争太激烈），这一轮明确避开这些模式：更大胆地造词、混搭、用冷僻但好读的组合，或适当加长 1-2 个字符换取独特性，但仍要好读好记、贴合需求。",
     );
   }
+  if (fb.disliked && fb.disliked.length > 0) {
+    const items = fb.disliked
+      .map((d) => (d.theme ? `${d.label}（${THEME_NAMES[d.theme] ?? d.theme}）` : d.label))
+      .join("、");
+    parts.push(
+      `用户明确点踩了这些候选及其风格：${items}。请逐个分析它们的词根与构词模式（共同的词根片段、前后缀改造套路、命名思路），本轮严禁输出使用相同词根或相同构词模式的名字（例如点踩了 loggist 这类 log+后缀造词，就不要再出任何含 log 词根或同套路后缀改造的候选），换用完全不同的词根与构词方向。`,
+    );
+  }
   if (fb.tried.length > 0) {
     parts.push(`以下名字全部已经核验过（无论结果如何），严禁重复输出其中任何一个：\n${fb.tried.slice(-120).join(", ")}`);
   }
+  // R179：反思轮重申 meaning 质量红线——生产审计发现轮≥2 时 meaning 大面积劣化（臆造词源、
+  // 引用 label 中不存在的字母、语法不通、混入异文字），与首轮共享同一份红线文案
+  parts.push(`无论第几轮，meaning 质量红线不放松，重申如下：\n${lang === "en" ? MEANING_REDLINES_EN : MEANING_REDLINES_ZH}`);
   return parts.join("\n");
 }
 
@@ -382,6 +436,34 @@ export const stripParentheticalAnnotations = (m: string): string => {
 /** meaning 完整清洗管线：引号归一 → 残留符号清理 → 括号注释剥离 → 去首尾空白 */
 export const cleanMeaning = (m: string): string => stripParentheticalAnnotations(stripUnpairedCjkQuotes(normalizeQuotes(m))).trim();
 
+// ---------------- meaning 字符白名单（R179） ----------------
+// 生产审计发现反思轮 meaning 偶发混入韩文（코더）、IPA 音标（gɪt）等异文字，整条丢弃。
+// zh：ASCII 可打印（meaning 常含英文单词）+ 汉字（含扩展A）+ CJK 标点（「」『』、。等）
+//   + 全角标点 + 通用标点（—…·）；不含谚文/假名/西里尔等区段
+const ZH_MEANING_ALLOWED_RE = /^[\x20-\x7E\u00b7\u2000-\u206f\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uff01-\uff5e\uffe0-\uffe5]*$/;
+// en：ASCII 可打印 + Latin-1 变音字母（é/ü 类）+ Latin Extended-A（ā/ō 类）+ 通用标点（—…）；
+//   刻意不含 IPA Extensions（\u0250-\u02af，如 ɪ/ə）与任何非拉丁文字
+const EN_MEANING_ALLOWED_RE = /^[\x20-\x7E\u00c0-\u00ff\u0100-\u017f\u2000-\u206f]*$/;
+
+/** meaning 字符集校验：出现目标语言白名单之外的文字（韩文/西里尔/IPA 等）返回 false */
+export function meaningCharsetOk(meaning: string, lang: "zh" | "en"): boolean {
+  return (lang === "en" ? EN_MEANING_ALLOWED_RE : ZH_MEANING_ALLOWED_RE).test(meaning);
+}
+
+// ---------------- 臆造字母引用检测（R179） ----------------
+// 生产坏例：versurence 的 meaning 声称 "z from zeus" 但 label 里没有 z。
+// 保守启发式：只匹配「单字母 + from/in/stands for」的英文词源引用句式，引用的字母
+// 不在 label 中即判为臆造词源；排除 a/i（是英文单词，易误伤正常句子）
+const LETTER_CITE_RE = /(?:^|[^a-z])([b-hj-z])\s+(?:from|in|stands\s+for)\s/gi;
+export function citesPhantomLetter(label: string, meaning: string): boolean {
+  LETTER_CITE_RE.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = LETTER_CITE_RE.exec(meaning)) !== null) {
+    if (!label.includes(m[1].toLowerCase())) return true;
+  }
+  return false;
+}
+
 async function generateOnce(
   description: string,
   apiKey: string,
@@ -390,7 +472,7 @@ async function generateOnce(
   const count = opts.count ?? 24;
   let user = `需求描述：${description}\n请给出 ${count} 个候选。`;
   if (opts.feedback && (opts.feedback.tried.length > 0 || opts.feedback.taken.length > 0)) {
-    user += `\n\n${buildRefineHint(opts.feedback, opts.round ?? 2)}`;
+    user += `\n\n${buildRefineHint(opts.feedback, opts.round ?? 2, opts.lang ?? "zh")}`;
   }
   const res = await fetch("https://api.deepseek.com/chat/completions", {
     method: "POST",
@@ -423,6 +505,8 @@ async function generateOnce(
     // 含内部空格或其他非法字符的直接丢弃，不做静默改写
     const label = String(c.label ?? "").trim().toLowerCase();
     if (!/^[a-z0-9-]{1,63}$/.test(label) || seen.has(label)) continue;
+    // R180：知名品牌撞名过滤（完全同名，或长度 ≥5 且编辑距离 ≤1），规避商标法律风险
+    if (isBrandCollision(label)) continue;
     seen.add(label);
     // meaning 为空/全空白的候选直接丢弃（流截断或模型漏字段），不进核验队列；
     // tried 由上层根据返回值累积，被丢弃项天然不计入
@@ -431,6 +515,10 @@ async function generateOnce(
     if (!meaning) continue;
     // R149：括号注释剥离后过短（<6 字符）说明有效寓意几乎全在括号里，整条丢弃
     if (meaning.length < 6 && PAREN_RE.test(rawMeaning)) continue;
+    // R179：meaning 混入目标语言白名单外的文字（韩文/西里尔/IPA 等）→ 整条丢弃
+    if (!meaningCharsetOk(meaning, opts.lang ?? "zh")) continue;
+    // R179：meaning 引用 label 中不存在的字母（"z from zeus" 式臆造词源）→ 整条丢弃
+    if (citesPhantomLetter(label, meaning)) continue;
     const s = c.scores ?? ({} as Partial<AiScores>);
     const theme = String(c.theme ?? "").toLowerCase();
     // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
@@ -442,10 +530,15 @@ async function generateOnce(
       // 歧义切分扣 15 + 语感风险分（R142），叠加后从 readability 扣除
       readabilityPenalty = (check.ambiguous ? 15 : 0) + check.risk;
     }
+    // R182：拼音系候选「」内命中生僻字黑名单，按字数从 readability 扣分（不丢弃）
+    if (theme === "pinyin" || theme === "blend") {
+      readabilityPenalty += countRareQuotedChars(meaning) * RARE_CHAR_PENALTY_PER_CHAR;
+    }
     out.push({
       label,
       meaning,
-      theme: THEMES.has(theme) ? (theme as AiTheme) : undefined,
+      // R179：theme 缺失/非法时强制归入 coined，保证 theme 永不为空
+      theme: THEMES.has(theme) ? (theme as AiTheme) : "coined",
       scores: {
         length: clamp(s.length),
         readability: Math.max(clamp(s.readability) - readabilityPenalty, 0),
