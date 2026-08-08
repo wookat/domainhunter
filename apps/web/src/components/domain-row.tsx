@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { Bell, BellRing, Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Loader2, Lock, ThumbsDown } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Bell, BellOff, BellRing, Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Loader2, Lock, ThumbsDown } from "lucide-react";
 
+import { ConfirmLabel } from "@/components/confirm-label";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { ScoreBars } from "@/components/score-bars";
 import { useI18n } from "@/lib/i18n";
@@ -46,7 +47,9 @@ export function ExpiryNote({ iso, className }: { iso: string; className?: string
   );
 }
 
-/** 临期 taken 域名的就地一键监控 CTA：点击 = 加入 shortlist + 开监控；监控中再点跳 /monitors 管理 */
+const WATCH_CONFIRM_TIMEOUT_MS = 5000;
+
+/** 临期 taken 域名的就地一键监控 CTA：点击 = 加入 shortlist + 开监控；监控中点击两步确认就地取消，旁边小图标跳 /monitors 管理 */
 export function WatchCta({
   domain,
   expiresAt,
@@ -62,8 +65,28 @@ export function WatchCta({
   const { isMonitored, toggle } = useMonitor();
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<"full" | "failed" | null>(null);
+  const [confirming, setConfirming] = useState(false);
+  const [confirmLeft, setConfirmLeft] = useState(0);
+  const confirmTimer = useRef<number | undefined>(undefined);
+  const confirmTick = useRef<number | undefined>(undefined);
+
+  useEffect(
+    () => () => {
+      window.clearTimeout(confirmTimer.current);
+      window.clearInterval(confirmTick.current);
+    },
+    [],
+  );
+
   if (!isExpiringSoon(expiresAt)) return null;
   const watched = isMonitored(domain);
+
+  function clearConfirm() {
+    window.clearTimeout(confirmTimer.current);
+    window.clearInterval(confirmTick.current);
+    setConfirming(false);
+    setConfirmLeft(0);
+  }
 
   async function start() {
     if (pending) return;
@@ -81,21 +104,76 @@ export function WatchCta({
     }
   }
 
+  async function stop() {
+    if (pending) return;
+    if (!confirming) {
+      window.clearTimeout(confirmTimer.current);
+      window.clearInterval(confirmTick.current);
+      setConfirming(true);
+      setConfirmLeft(Math.ceil(WATCH_CONFIRM_TIMEOUT_MS / 1000));
+      confirmTimer.current = window.setTimeout(clearConfirm, WATCH_CONFIRM_TIMEOUT_MS);
+      confirmTick.current = window.setInterval(() => setConfirmLeft((s) => Math.max(0, s - 1)), 1000);
+      return;
+    }
+    clearConfirm();
+    setError(null);
+    setPending(true);
+    try {
+      const r = await toggle(domain, "taken");
+      if (!r.ok) {
+        setError("failed");
+        setTimeout(() => setError(null), 3000);
+      }
+    } finally {
+      setPending(false);
+    }
+  }
+
   const chip = variant === "chip";
   if (watched) {
     return (
-      <a
-        href="/monitors"
-        title={t("watch.watchingTitle")}
-        aria-label={t("watch.watchingTitle")}
-        className={cn(
-          "inline-flex shrink-0 items-center gap-1 font-sans text-[11px] font-medium text-brand transition-opacity hover:opacity-80",
-          chip ? "border-l border-line/70 px-3 sm:px-2" : "h-11 rounded-md px-2 hover:bg-bg3 sm:h-8",
-        )}
-      >
-        <BellRing className="h-3.5 w-3.5" />
-        <span className="hidden sm:inline">{t("watch.watching")}</span>
-      </a>
+      <span className={cn("inline-flex shrink-0 items-stretch", chip && "border-l border-line/70")}>
+        <button
+          onClick={() => void stop()}
+          disabled={pending}
+          title={confirming ? t("monitors.confirmCountdown", { s: confirmLeft }) : t("watch.watchingTitle")}
+          aria-label={confirming ? t("monitors.cancelConfirm") : t("watch.watchingTitle")}
+          className={cn(
+            "inline-flex h-11 items-center gap-1 font-sans text-[11px] font-medium transition-colors",
+            confirming ? "text-destructive" : "text-brand hover:opacity-80",
+            chip ? "px-3 sm:px-2" : "rounded-md px-2 hover:bg-bg3 sm:h-8",
+          )}
+        >
+          {pending ? (
+            <Loader2 className="h-3.5 w-3.5 animate-spin" />
+          ) : confirming ? (
+            <BellOff className="h-3.5 w-3.5" />
+          ) : (
+            <BellRing className="h-3.5 w-3.5" />
+          )}
+          <ConfirmLabel
+            confirmed={confirming}
+            label={<span className="hidden sm:inline">{t("watch.watching")}</span>}
+            confirmLabel={
+              <>
+                <span className="hidden sm:inline">{t("monitors.cancelConfirm")}</span>
+                <span className="tnum w-[1ch] font-mono text-[11px] opacity-70">{confirmLeft}</span>
+              </>
+            }
+          />
+        </button>
+        <a
+          href="/monitors"
+          title={t("watch.manageTitle")}
+          aria-label={t("watch.manageTitle")}
+          className={cn(
+            "inline-flex h-11 w-8 items-center justify-center text-txt2 transition-colors hover:text-txt0",
+            !chip && "rounded-md hover:bg-bg3 sm:h-8",
+          )}
+        >
+          <ExternalLink className="h-3 w-3" />
+        </a>
+      </span>
     );
   }
   return (
