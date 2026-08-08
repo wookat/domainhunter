@@ -25,7 +25,8 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
   const [lastRefreshedAt, setLastRefreshedAt] = useState<number | null>(null);
   const [now, setNow] = useState(() => Date.now());
   const [error, setError] = useState("");
-  const [notice, setNotice] = useState("");
+  // 存 retryAfter 而非文案：渲染时翻译，切换语言后提示语言同步
+  const [rateLimitedFor, setRateLimitedFor] = useState<number | null>(null);
   const [pending, setPending] = useState<string | null>(null);
   const [confirming, setConfirming] = useState<string | null>(null);
   const [confirmLeft, setConfirmLeft] = useState(0);
@@ -39,7 +40,7 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
     refreshingRef.current = true;
     setRefreshing(true);
     setError("");
-    setNotice("");
+    setRateLimitedFor(null);
     try {
       const domains = [...monitor.monitored];
       const list = recheck ? await recheckMonitors(domains) : await fetchMonitorList(domains);
@@ -47,7 +48,7 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
       setQuota({ monitored: list.monitored, limit: list.limit });
       setLastRefreshedAt(Date.now());
     } catch (err) {
-      if (err instanceof RecheckRateLimitError) setNotice(t("monitors.rateLimited", { s: err.retryAfter }));
+      if (err instanceof RecheckRateLimitError) setRateLimitedFor(err.retryAfter);
       else setError(t("monitors.refreshFailed"));
     } finally {
       refreshingRef.current = false;
@@ -157,7 +158,9 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
 
       {error && <p className="mb-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{error}</p>}
 
-      {notice && <p className="mb-3 rounded-lg border border-line bg-bg2 px-4 py-2.5 text-sm text-txt1">{notice}</p>}
+      {rateLimitedFor !== null && (
+        <p className="mb-3 rounded-lg border border-line bg-bg2 px-4 py-2.5 text-sm text-txt1">{t("monitors.rateLimited", { s: rateLimitedFor })}</p>
+      )}
 
       {domains.length === 0 ? (
         <div className="rounded-xl border border-dashed border-line p-10 text-center">
