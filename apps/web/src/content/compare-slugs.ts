@@ -111,6 +111,12 @@ export const COMPARE_SLUGS = [
   "one-vs-me",
   "cool-vs-fun",
   "red-vs-vip",
+  "bar-vs-cafe",
+  "cafe-vs-shop",
+  "pizza-vs-com",
+  "money-vs-finance",
+  "gold-vs-vip",
+  "wtf-vs-lol",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
