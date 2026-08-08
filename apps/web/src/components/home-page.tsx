@@ -989,7 +989,7 @@ function ChipPrice({ domain }: { domain: string }) {
 const QUICK_EXTRA_TLDS = ["com", "io", "ai", "app", "dev", "co", "net", "me"];
 
 /** 「查更多后缀」按钮覆盖的第二批后缀（同样走 /api/search，0 AI 额度） */
-const QUICK_MORE_TLDS = ["org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "page", "bio", "ink", "moe", "lol", "uk", "fm", "one", "cool", "red", "today", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "software", "marketing", "systems", "ventures", "capital", "guru", "tips"];
+const QUICK_MORE_TLDS = ["cn", "com.cn", "org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "page", "bio", "ink", "moe", "lol", "uk", "fm", "one", "cool", "red", "today", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "software", "marketing", "systems", "ventures", "capital", "guru", "tips"];
 
 /** 快速核验的 chip（可注册/已注册）都可收藏到候选清单 */
 function domainToRow(domain: string, status: Row["status"] = "available", expiresAt?: string): Row {
@@ -1085,18 +1085,27 @@ export function HomePage({
   async function runQuickCheck(more = false) {
     if (!quick) return;
     const baseTlds = [...new Set([...(quick.tld ? [quick.tld] : []), ...tlds, ...QUICK_EXTRA_TLDS])].slice(0, 10);
-    const checkTlds = more ? QUICK_MORE_TLDS.filter((t) => !baseTlds.includes(t)) : baseTlds;
+    // 与「查更多后缀 +{n}」按钮计数同口径：排除已有 chip 的后缀
+    const checkTlds = more ? QUICK_MORE_TLDS.filter((t) => !quickRows.some((r) => r.domain === `${quick.label}.${t}`)) : baseTlds;
     if (checkTlds.length === 0) return;
     quickAbortRef.current?.abort();
     const ac = new AbortController();
     quickAbortRef.current = ac;
+    const checkDomains = new Set(checkTlds.map((t) => `${quick.label}.${t}`));
     const newRows = checkTlds.map((t) => ({ domain: `${quick.label}.${t}`, status: "checking" as const }));
     if (more) {
       setQuickMoreDone(true);
-      setQuickRows((prev) => [...prev, ...newRows]);
+      setQuickRows((prev) => [...prev.filter((r) => !checkDomains.has(r.domain)), ...newRows]);
     } else {
       setQuickMoreDone(false);
-      setQuickRows(newRows);
+      // 重复核验：已有结果的 chip 保持原结果等待刷新，不退回「检测中」
+      setQuickRows((prev) => {
+        const prevByDomain = new Map(prev.map((r) => [r.domain, r]));
+        return newRows.map((row) => {
+          const p = prevByDomain.get(row.domain);
+          return p && p.status !== "checking" ? p : row;
+        });
+      });
     }
     setQuickRunning(true);
     try {
@@ -1118,7 +1127,12 @@ export function HomePage({
         buf = lines.pop()!;
         for (const line of lines) {
           if (!line) continue;
-          const r = JSON.parse(line) as { domain?: string; status?: "available" | "taken" | "unknown"; expiresAt?: string; type?: string };
+          let r: { domain?: string; status?: "available" | "taken" | "unknown"; expiresAt?: string; type?: string };
+          try {
+            r = JSON.parse(line) as typeof r;
+          } catch {
+            continue; // 单行损坏不影响其余结果
+          }
           if (r.type || !r.domain || !r.status) continue;
           setQuickRows((prev) => prev.map((row) => (row.domain === r.domain ? { ...row, status: r.status!, expiresAt: r.expiresAt } : row)));
         }
@@ -1126,7 +1140,11 @@ export function HomePage({
     } catch {
       /* 中断/网络错误：保留已有结果 */
     } finally {
-      if (!ac.signal.aborted) setQuickRunning(false);
+      if (!ac.signal.aborted) {
+        setQuickRunning(false);
+        // 流失败/中断兜底：本轮仍为「检测中」的 chip 标记为未知，不永久卡住
+        setQuickRows((prev) => prev.map((row) => (checkDomains.has(row.domain) && row.status === "checking" ? { ...row, status: "unknown" } : row)));
+      }
     }
   }
 
