@@ -3061,6 +3061,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Artist identity domains", "Gallery, museum & institution sites", "Exhibition & art project pages", "Creative professionals' business cards"],
     },
   },
+  "salon-vs-studio": {
+    slug: "salon-vs-studio",
+    a: "salon",
+    b: "studio",
+    zh: {
+      title: ".salon 和 .studio 怎么选：美业门店与创作团队的对比",
+      metaDescription: ".salon 把美业门店写进域名，.studio 是创作团队的经典招牌。对比两个工作室后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都叫「工作室」，说的是两种手艺。.salon 是美业的门店——美发、美甲、美容、化妆造型、美睫美肤、宠物美容用 name.salon，读出来就是「椅子、镜子、预约表」的到店场景；美业店名多是人名与风格词，.com 早被占光，同名 .salon 库存极好；Identity Digital 运营，注册约 $11、续费约 $46/年，对美业客单价与复购负担很轻；salon 还有「文艺沙龙」的雅义，读书会与播客沙龙用它也出彩。.studio 是创作团队的招牌——设计、影像、动画、游戏工作室用 name.studio，「小而专的创作团队」气质从域名立住；首年常有促销、续费约 $25–35/年更省，通用性也更广，不绑定行业。判断标准：业务是「进店做造型/护理」的美业服务 → .salon 的行业精度无可替代，访客一秒懂你卖什么；业务是「交付作品」的创意生产（拍摄、设计、剪辑）→ .studio 的通用创作感更准，还更便宜。模糊地带看重心：美发师转型做教学与内容，主站可以 .studio、门店线用 .salon 分线。共同注意：两个词都不短（五与六个字母），主体名务必短促；美业与创意获客都重社交平台，域名的角色是品牌官网与预约/作品集入口。",
+      pickA: ["美发美甲与美容门店", "化妆造型与美睫美肤", "宠物美容工作室", "读书会与文艺沙龙"],
+      pickB: ["设计与影像工作室", "动画与游戏团队", "摄影与内容制作方", "不绑定行业的创作品牌"],
+    },
+    en: {
+      title: ".salon vs .studio: The Beauty Storefront or the Creative Workshop",
+      metaDescription:
+        ".salon writes the beauty trade into the address; .studio is the classic creative-team signboard. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both mean a workshop; they name two different crafts. .salon is the beauty storefront — hair, nails, skin care, makeup and styling, lashes and pet grooming on name.salon read instantly as chairs, mirrors and an appointment book; beauty shops name themselves with personal names and style words whose .coms vanished long ago, while the same name + .salon is wide open; run by Identity Digital at about $11 to register and $46/yr to renew — light against beauty ticket sizes and repeat visits; the word also keeps its artsy salon sense, so reading circles and podcast salons wear it elegantly. .studio is the creative signboard — design, film, animation and game teams on name.studio establish the small-and-focused maker register from the address; frequent first-year promos with renewals around $25–35/yr make it cheaper, and it binds to no single industry. The test: a come-in-for-a-treatment beauty business → .salon's precision is unmatched, visitors know what you sell in a second; a deliver-the-work creative practice (shoots, design, editing) → .studio's general maker register fits and costs less. In the overlap — a stylist pivoting to teaching and content — run the main site on .studio and the shop line on .salon. Shared notes: at five and six letters keep the front word short; both trades win clients on social platforms, so the domain is the brand site and the booking or portfolio front door.",
+      pickA: ["Hair, nail & beauty shops", "Makeup, styling & lash artists", "Pet grooming studios", "Reading circles & creative salons"],
+      pickB: ["Design & film studios", "Animation & game teams", "Photo & content production", "Industry-agnostic maker brands"],
+    },
+  },
+  "yoga-vs-fitness": {
+    slug: "yoga-vs-fitness",
+    a: "yoga",
+    b: "fitness",
+    zh: {
+      title: ".yoga 和 .fitness 怎么选：垂直流派与全场馆的对比",
+      metaDescription: ".yoga 垂直到瑜伽一个流派，.fitness 覆盖整个健身行业。对比两个运动后缀的语义精度、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在运动赛道，一个说流派、一个说行业。.yoga 垂直到不能再垂直——瑜伽馆、瑜伽老师个人品牌、教培认证、线上课程、冥想与正念应用用 name.yoga，受众一眼知道你做什么；气质是呼吸、拉伸与平静，普拉提与身心疗愈品牌借它也顺；GoDaddy Registry 运营，注册续费同价约 $26/年，平进平出没有涨价陷阱；yoga 还是全球通用词，出海教培零翻译成本。.fitness 覆盖整个行业——健身房、CrossFit 场馆、团课、线上健身课程与 App 用 name.fitness，力量感与场馆感直给；注册约 $6 更便宜、续费约 $33/年也温和。判断标准：业务就是瑜伽（或借瑜伽气质的身心项目）→ .yoga 的垂直精度无可替代，四个字母还更短；业务是综合健身、器械力量、或未来会扩品类 → .fitness 的行业宽度更稳，改卖操课加私教都不用换域名。要小心的反向错位：纯瑜伽馆用 .fitness 会稀释「平静专注」的调性，综合健身房用 .yoga 则直接误导。共同注意：运动获客重社交与口碑，域名是品牌官网、课表与预约入口；行业热词（flow、om、fit 类）在两个后缀下都被大量注册，先查再爱。",
+      pickA: ["瑜伽馆与工作室", "瑜伽老师个人品牌与教培", "线上课程与冥想应用", "普拉提与身心疗愈品牌"],
+      pickB: ["综合健身房与团课场馆", "CrossFit 与力量训练", "线上健身课程与 App", "会扩品类的运动品牌"],
+    },
+    en: {
+      title: ".yoga vs .fitness: One Practice Deep or the Whole Gym Floor",
+      metaDescription:
+        ".yoga goes all-in on one practice; .fitness covers the whole industry. Compare precision, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in the movement economy; one names a practice, the other an industry. .yoga is as vertical as it gets — studios, teacher personal brands, trainings, online courses, meditation and mindfulness apps on name.yoga tell the audience exactly what you do; the register is breath, stretch and calm, and pilates and mind-body brands borrow it naturally; run by GoDaddy Registry at a flat ~$26/yr for registration and renewal — no teaser, no trap; and yoga is a global word with zero translation cost for international teacher-training brands. .fitness spans the floor — gyms, CrossFit boxes, group classes, online programs and apps on name.fitness flex venue and strength; about $6 to register and a mild $33/yr to renew. The test: the business is yoga (or a mind-body practice borrowing its calm) → .yoga's vertical precision is unmatched, and at four letters it's shorter too; the business is general fitness, strength training, or plans to widen the offering → .fitness's industry breadth is safer — add classes or personal training without changing domains. Watch the mismatch in both directions: a pure yoga studio on .fitness dilutes the calm; a full gym on .yoga misleads outright. Shared notes: the industry wins students on social and word of mouth, so the domain is the brand site, schedule and booking home; and hot words (flow, om, fit) are heavily registered on both — check before you fall in love.",
+      pickA: ["Yoga studios", "Teacher brands & trainings", "Online courses & meditation apps", "Pilates & mind-body brands"],
+      pickB: ["Full gyms & group-class venues", "CrossFit & strength training", "Online programs & fitness apps", "Brands planning to widen the offering"],
+    },
+  },
+  "coffee-vs-cafe": {
+    slug: "coffee-vs-cafe",
+    a: "coffee",
+    b: "cafe",
+    zh: {
+      title: ".coffee 和 .cafe 怎么选：咖啡这件事与那家店的对比",
+      metaDescription: ".coffee 指「咖啡本身」，.cafe 指「那家店」。对比两个咖啡后缀的语义分工、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一杯咖啡，两个视角。.coffee 说「这件事」——烘焙工作室、咖啡豆与器具电商、咖啡订阅、测评与内容社区用 name.coffee，卖的是咖啡本身而不是某家店；「let's grab coffee」还是英语社交邀约的通用语，约聊工具借这层意思很妙；Identity Digital 运营，注册约 $11、续费约 $35/年，行业后缀温和档。.cafe 说「那家店」——独立咖啡店、烘焙店、猫咖书咖用 name.cafe，域名和店招完全同构，菜单预约外卖链接印上去毫无违和；「cafe」在互联网语境里还是「轻松聚集地」的代名词，读书会与开发者社区拿它做线上客厅比 .com 更有温度；注册约 $5 更便宜、续费约 $42/年略高。判断标准最简单：卖豆子、做订阅、做内容 → .coffee 指物更准；开门迎客的空间（线下店或线上社区）→ .cafe 指地更亲。两条业务线都有的品牌分线也顺：门店用 name.cafe，电商与豆子用 name.coffee，一个品牌两个入口互不打架。共同注意：coffee 双写字母（ff、ee）口播要多提醒，cafe 四个字母几乎零拼写成本；本地门店获客靠地图与社交平台，域名做品牌官网与线上商城/预约入口。",
+      pickA: ["烘焙工作室与咖啡豆电商", "咖啡订阅与器具商店", "咖啡测评与内容社区", "约聊与社交产品（grab coffee 梗）"],
+      pickB: ["独立咖啡馆与烘焙店", "猫咖书咖等主题空间", "线上社区与读书会", "本地生活方式品牌"],
+    },
+    en: {
+      title: ".coffee vs .cafe: The Thing Itself or the Place You Sit",
+      metaDescription:
+        ".coffee names the thing; .cafe names the place. Compare the two coffee suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same cup, two viewpoints. .coffee names the thing — roasteries, bean and gear e-commerce, subscriptions, review sites and content communities on name.coffee sell coffee itself rather than any one shop; English keeps \"let's grab coffee\" as the universal social invite, a layer chat products borrow cleverly; run by Identity Digital at about $11 to register and $35/yr to renew, the mild tier among industry suffixes. .cafe names the place — independent coffee shops, bakeries, cat and book cafés on name.cafe match the shop sign exactly, with menu, booking and delivery links printing naturally; \"cafe\" also doubles online as the cozy gathering spot, so reading circles and developer communities run warmer on name.cafe than on .com; about $5 to register, with renewal near $42/yr a notch higher. The test could not be simpler: selling beans, subscriptions or content → .coffee points at the thing; a space that welcomes people (a physical shop or an online living room) → .cafe points at the place. Brands running both lines split cleanly: the shop on name.cafe, the beans and e-commerce on name.coffee — one brand, two doors, no conflict. Shared notes: coffee doubles two letters (ff, ee) so spell it out when spoken, while cafe's four letters cost nothing; and local shops win customers on maps and social, so the domain is the brand site and the store or booking front door.",
+      pickA: ["Roasteries & bean e-commerce", "Subscriptions & gear stores", "Reviews & content communities", "Social products (the grab-coffee pun)"],
+      pickB: ["Indie cafés & bakeries", "Cat & book café spaces", "Online communities & reading circles", "Local lifestyle brands"],
+    },
+  },
+  "wine-vs-bar": {
+    slug: "wine-vs-bar",
+    a: "wine",
+    b: "bar",
+    zh: {
+      title: ".wine 和 .bar 怎么选：产业链与夜场门店的对比",
+      metaDescription: ".wine 覆盖葡萄酒整条产业链，.bar 是夜生活门店的霓虹招牌。对比两个酒类后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都跟酒有关，一个说产业、一个说门店。.wine 覆盖整条产业链——酒庄官网、葡萄酒电商与订阅、进口商、侍酒师个人品牌、酒评与品鉴内容用 name.wine，风土从域名开始，种植酿造贸易内容体验全都装得下；Identity Digital 运营，注册约 $6 便宜、续费约 $48/年是首年数倍，预算按续费核算。.bar 是门店的霓虹——鸡尾酒吧、清吧、livehouse、夜生活品牌用 name.bar，三个字母印上海报和霓虹灯就是完整店名；Team Internet 系运营，首年常见约 $3 引流价、续费约 $52/年，保留与溢价词较多，下单前看实时报价。判断标准：业务围绕「酒这个产品」——卖酒、评酒、酿酒、教人喝酒 → .wine 的产业语义更准；业务是「喝酒这个场所」——坐下来社交的夜场 → .bar 的门店感与短促更帅。葡萄酒吧（wine bar）正好卡在中间：以卖酒零售与品鉴课为主用 .wine，以夜场社交为主用 .bar，或者干脆 name.wine 做电商、name.bar 做门店分线。共同注意：酒类电商与广告在多数市场有牌照与年龄门槛，合规是第一课；欧洲产区名（champagne 类）受地理标志保护，起名避开；两个后缀续费都不便宜，都按续费价核算长期成本。",
+      pickA: ["酒庄与葡萄园官网", "葡萄酒电商与订阅", "进口商与侍酒师品牌", "酒评与品鉴内容"],
+      pickB: ["鸡尾酒吧与清吧", "livehouse 与夜生活品牌", "霓虹灯招牌式短域名", "开发者工具站（bar 双关）"],
+    },
+    en: {
+      title: ".wine vs .bar: The Whole Chain or the Neon Doorway",
+      metaDescription:
+        ".wine spans the whole wine trade; .bar is the neon sign over a nightlife venue. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both pour a drink; one names an industry, the other a doorway. .wine spans the whole chain — winery sites, wine e-commerce and subscriptions, importers, sommelier personal brands, review and tasting content on name.wine carry terroir from the address, with room for growing, making, trading, writing and tasting alike; run by Identity Digital at a cheap ~$6 first year but ~$48/yr renewal, several times the teaser — budget on the renewal. .bar is the neon — cocktail bars, lounges, livehouses and nightlife brands wear name.bar as the complete shop sign in three letters on posters and signage; run by the Team Internet family with a frequent ~$3 first year and ~$52/yr renewal, plus a large premium-reserve list — confirm live registrar pricing before ordering. The test: the business orbits the product — selling, reviewing, making or teaching wine → .wine's industry semantics are sharper; the business is the venue — a sit-down, social drinking spot → .bar's doorway register and punch win. The wine bar sits exactly in between: retail and tastings lean .wine, nightlife leans .bar, or split cleanly with name.wine for e-commerce and name.bar for the venue. Shared cautions: alcohol e-commerce and advertising carry licensing and age-gate duties in most markets — compliance first; European appellations (champagne and kin) are GI-protected, steer clear; and neither renewal is cheap, so price the long hold on renewal rates.",
+      pickA: ["Wineries & vineyards", "Wine e-commerce & subscriptions", "Importers & sommelier brands", "Wine reviews & tasting content"],
+      pickB: ["Cocktail bars & lounges", "Livehouses & nightlife brands", "Neon-sign-ready short domains", "Developer tool sites (the bar pun)"],
+    },
+  },
+  "kitchen-vs-restaurant": {
+    slug: "kitchen-vs-restaurant",
+    a: "kitchen",
+    b: "restaurant",
+    zh: {
+      title: ".kitchen 和 .restaurant 怎么选：做菜的地方与堂食的店的对比",
+      metaDescription: ".kitchen 是「做菜的地方」，.restaurant 是「堂食的店」。对比两个餐饮后缀的场景分工、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在餐饮赛道，分工看场景。.kitchen 是「做菜的地方」——私厨与定制餐饮、不设堂食的云厨房与外卖品牌、烹饪课程与美食工作室、食谱与美食内容用 name.kitchen，烟火气直给；「test kitchen」还是美食媒体的经典栏目名，内容品牌借它很顺；Identity Digital 运营，注册约 $8、续费约 $52/年是首年数倍，预算按续费核算。.restaurant 是「堂食的店」——全服务餐厅、连锁品牌、餐饮集团、预订平台用 name.restaurant，正餐身份一目了然，「店名 + .restaurant」库存极好，多品牌集团归拢旗下官网也优雅；注册约 $13、续费约 $52/年，价格结构平稳。判断标准就一句话：客人来店里坐下吃 → .restaurant 的正式感与语义精度更配；客人不进店（外卖、上门私厨、看内容学做菜）→ .kitchen 的场景更准还更亲。长度都是硬约束：kitchen 七个字母、restaurant 十个字母，主体名务必短促。成长路径也常见：云厨房做出堂食店后，从 .kitchen 升级 .restaurant 或两线并行。共同注意：餐饮获客靠外卖平台、地图与社交内容，域名的角色是品牌官网、菜单与订座入口；两个续费价相同，按业态选就好，不用纠结价格。",
+      pickA: ["私厨与云厨房品牌", "烹饪课程与美食工作室", "食谱与美食内容", "厨房用品与橱柜定制"],
+      pickB: ["全服务餐厅与连锁品牌", "餐饮集团多品牌官网", "菜系与主题正餐厅", "预订与点评平台"],
+    },
+    en: {
+      title: ".kitchen vs .restaurant: Where You Cook or Where They Dine",
+      metaDescription:
+        ".kitchen is the place you cook; .restaurant is the place they dine. Compare the two food suffixes on scene, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both feed people; the split is the scene. .kitchen is where you cook — private chefs and catering, delivery-only cloud kitchens, cooking classes and food studios, recipe and food content on name.kitchen feel warm from the address; \"test kitchen\" remains a classic food-media franchise that content brands borrow naturally; run by Identity Digital at about $8 to register but ~$52/yr to renew, several times the first year — budget on the renewal. .restaurant is where they dine — full-service restaurants, chains, hospitality groups and booking platforms on name.restaurant are unmistakably in the dining business, name + .restaurant inventory stays wide open, and multi-brand groups gather their sites elegantly under one suffix; about $13 to register and $52/yr to renew, with a flat price structure. The test fits in one line: guests sit down at your tables → .restaurant's formality and precision fit; guests never enter (delivery, private-chef visits, learning to cook from your content) → .kitchen's scene is truer and warmer. Length binds both: kitchen is seven letters and restaurant ten, so keep the front word short and punchy. The growth path is common too: a cloud kitchen that opens a dining room graduates to .restaurant or runs both lines. Shared notes: food businesses win customers on delivery platforms, maps and social content — the domain is the brand site, menu and reservations home; and with identical renewals, choose by format, not price.",
+      pickA: ["Private chefs & cloud kitchens", "Cooking classes & food studios", "Recipe & food content", "Kitchenware & cabinetry brands"],
+      pickB: ["Full-service restaurants & chains", "Hospitality group brand sites", "Cuisine & theme dining", "Booking & review platforms"],
+    },
+  },
+  "garden-vs-farm": {
+    slug: "garden-vs-farm",
+    a: "garden",
+    b: "farm",
+    zh: {
+      title: ".garden 和 .farm 怎么选：花园意象与农场直供的对比",
+      metaDescription: ".garden 卖「花园」的绿意与意象，.farm 卖「农场直供」的信任。对比两个绿色后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都长在土里，卖的东西不同。.garden 卖意象——园艺电商与苗圃、景观设计与庭院施工、植物养护内容、花店与植物生活方式品牌用 name.garden，绿意从域名开始；它还有数字世界的妙用：「digital garden」是知识管理圈的流行隐喻，个人知识库与博客用 name.garden 自带圈内身份；GoDaddy Registry 运营，注册约 $2 是最便宜档之一、续费约 $26/年也温和，试错成本几乎为零。.farm 卖信任——家庭农场与农产品直销、有机食品品牌、农家乐与休闲农业、农业科技用 name.farm，「从农场到餐桌」的故事从域名讲起，比 .com 更强化产地直供；技术圈还拿它玩 render farm、server farm 的梗；Identity Digital 运营，注册约 $8、续费约 $31/年。判断标准：卖「美与生活方式」——观赏植物、庭院设计、花艺、知识花园 → .garden 的意象更准还更便宜；卖「吃与产地」——食材直销、有机品牌、农业生产 → .farm 的直供信任感无可替代。城市农场与市民菜园卡在中间：以观赏休闲为主用 .garden，以产出食材为主用 .farm。共同注意：两个词都是六字母上下，主体名短一点读起来才像门牌；园艺农产都是季节性生意，内容与电商结合比纯货架更有粘性。",
+      pickA: ["园艺电商与苗圃", "景观设计与庭院施工", "植物内容与花店品牌", "数字花园与个人知识库"],
+      pickB: ["家庭农场与农产品直销", "有机食品与产地品牌", "农家乐与休闲农业", "农业科技与算力农场（farm 梗）"],
+    },
+    en: {
+      title: ".garden vs .farm: Green Imagery or Farm-to-Table Trust",
+      metaDescription:
+        ".garden sells greenery and imagery; .farm sells farm-to-table trust. Compare the two green suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both grow from the soil; they sell different things. .garden sells the imagery — garden e-commerce and nurseries, landscaping and yard design, plant-care content, florists and plant lifestyle brands on name.garden feel green from the address; it also has a lovely digital-world use: the \"digital garden\" is a beloved metaphor in the personal-knowledge-management scene, so a wiki or blog on name.garden carries instant identity there; run by GoDaddy Registry at about $2 to register — among the cheapest tiers — and a mild $26/yr to renew, practically zero cost to try. .farm sells the trust — family farms and direct-to-consumer produce, organic food brands, agritourism and agtech on name.farm start the farm-to-table story at the domain, reinforcing origin better than any .com; the tech crowd even puns on render farms and server farms; run by Identity Digital at about $8 to register and $31/yr to renew. The test: selling beauty and lifestyle — ornamental plants, yard design, floristry, knowledge gardens → .garden's imagery is truer and cheaper; selling food and origin — produce, organic brands, agricultural production → .farm's direct-supply trust is unmatched. Urban farms and community plots sit in between: leisure-led picks .garden, harvest-led picks .farm. Shared notes: both words run about six letters, so a short front word reads like a gate sign; and both trades are seasonal — content plus commerce beats bare shelves for retention.",
+      pickA: ["Garden e-commerce & nurseries", "Landscaping & yard design", "Plant content & florist brands", "Digital gardens & personal wikis"],
+      pickB: ["Family farms & direct-to-consumer produce", "Organic & origin food brands", "Agritourism & leisure farming", "Agtech & compute farms (the farm pun)"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
