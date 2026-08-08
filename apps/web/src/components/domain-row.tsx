@@ -8,7 +8,7 @@ import { priceFull, priceShort, usePrices } from "@/lib/prices";
 import { REGISTRARS } from "@/lib/registrars";
 import { scoreBadgeClass, totalScore, type Row } from "@/types";
 import { useMonitor } from "@/lib/monitor";
-import { cn, formatExpiry, isExpiringSoon } from "@/lib/utils";
+import { cn, formatExpiry, isExpiringSoon, isPlausibleExpiry } from "@/lib/utils";
 
 export function DomainName({ row, className }: { row: Row; className?: string }) {
   return (
@@ -34,7 +34,7 @@ export function MeaningText({ text }: { text: string }) {
 export function ExpiryNote({ iso, className }: { iso: string; className?: string }) {
   const { t } = useI18n();
   const date = formatExpiry(iso);
-  if (!date) return null;
+  if (!date || !isPlausibleExpiry(iso)) return null;
   const soon = isExpiringSoon(iso);
   return (
     <span
