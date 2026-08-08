@@ -89,4 +89,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "travelshoot", zh: "旅拍摄影", en: "Travel photography" },
   { slug: "forwarder", zh: "跨境物流", en: "Cross-border logistics" },
   { slug: "mcn", zh: "短视频 MCN", en: "Short-video MCN" },
+  { slug: "opensource", zh: "开源项目", en: "Open source" },
+  { slug: "indiegame", zh: "独立游戏", en: "Indie games" },
+  { slug: "gearrental", zh: "影棚器材租赁", en: "Gear & studio rentals" },
+  { slug: "sourcing", zh: "电商选品", en: "Product sourcing" },
+  { slug: "fleamarket", zh: "线下市集", en: "Markets & pop-ups" },
+  { slug: "ski", zh: "滑雪户外", en: "Ski & snow" },
 ];
