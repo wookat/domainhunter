@@ -7189,6 +7189,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  pottery: {
+    slug: "pottery",
+    tlds: [
+      { tld: "com", zh: "作品电商与课程预约的信任底线，礼品客单也稳", en: "The trust baseline for shop orders and class bookings" },
+      { tld: "studio", zh: "「工作室」气质直给，手作陶艺坊的天然后缀", en: "Atelier register outright — the pottery studio's native suffix" },
+      { tld: "art", zh: "艺术家路线的身份声明，走作者品牌首选", en: "The artist's statement suffix — first pick for a maker brand" },
+    ],
+    zh: {
+      label: "陶艺手作",
+      title: "陶艺工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "陶艺工作室与手作品牌命名指南：泥土窑火词根、器物哲学、慢生活叙事等 5 种思路，Heath Ceramics/乐天陶社/East Fork 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的陶艺品牌域名。",
+      intro:
+        "陶艺工作室的名字要先想清楚卖的是「体验」还是「器物」：体验课卖的是一下午的治愈——客群是约会情侣与解压白领，名字要松弛、温暖、发得出朋友圈；器物电商卖的是作者审美与日用美学——客群看的是风格与稀缺，名字要像一个器物品牌而不是兴趣班。命名的第一素材库是材料与工艺词根：泥、土、陶、窑、釉、拉坯都在谱系上，「窑」字尤其有火的仪式感——开窑如开盲盒的期待感是这门手艺最独特的叙事资产。第二个抓手是器物哲学：手作陶器卖的从来不是完美是「不完美的温度」，侘寂、手感、痕迹这类意象让名字有了审美主张——日本金缮与 wabi-sabi 的全球流行证明这套叙事有溢价能力。第三个抓手是慢生活反差：在快节奏城市里，「捏泥巴」是成年人少有的专注时刻，慢、静、拾光这类词根击中的是解压需求——体验课的转介绍常常始于「那种感觉」而不是「那个杯子」。还要过内容关：陶艺是天然的视频品类（拉坯的旋转、开窑的揭晓），小红书与抖音是获客主场，名字要在话题标签与「我在 XX 做了个碗」的口播里顺口好记。最后留半径：工作室普遍延展器物零售、企业团建与儿童手工课，名字锁死「体验课」气质，做电商线时品牌要重塑。",
+      namingIdeas: [
+        "材料工艺词根：泥、陶、窑、釉——品类直给，「窑」的火候仪式感与开窑盲盒叙事是独家资产",
+        "器物哲学：侘寂、手感、痕迹——手作卖的是不完美的温度，审美主张让器物线有溢价空间",
+        "慢生活反差：慢、静、拾光——捏泥巴是成年人的专注时刻，解压叙事击中体验课客群的真需求",
+        "作者名即品牌：人名+陶社/窑——器物电商信的是作者审美，人格化命名与艺术家路线天然匹配",
+        "地名+窑口叙事：借景德镇式的产地势能——窑口地名自带工艺血统，产地故事是现成的信任背书",
+      ],
+      cases: [
+        { name: "Heath Ceramics", takeaway: "创始人 Edith Heath 的姓氏+品类直给：加州七十年日用陶瓷品牌，证明「人名+ceramics」的作者品牌路线可以从工作室做到全国连锁" },
+        { name: "乐天陶社", takeaway: "「乐天」的松弛心态+「陶社」的社群感：华人陶艺教育的老字号把「玩泥巴的快乐」写进名字——体验路线命名的直球打法" },
+        { name: "East Fork", takeaway: "以北卡罗来纳州的河流命名：地方感与手作温度一次到位，从柴窑工作室做成美国最热的餐具品牌——地名叙事的当代范本" },
+        { name: "Ghost Wares", takeaway: "「幽灵」的记忆意象+「器物」的老词根：墨尔本工作室用超现实名字在同质化的 pottery studio 里一眼跳出——反差命名的胆量示范" },
+        { name: "半窑", takeaway: "「半」的留白哲学+「窑」的工艺词根：不满则虚、留一半给火——两个字把东方器物美学说透，中文陶艺命名的意境天花板" },
+      ],
+      pitfalls: [
+        "体验班脸与器物品牌骑墙：兴趣班要松弛、器物电商要审美格调，名字骑墙两边客群都觉得不对味",
+        "锁死体验课气质：器物零售、企业团建、儿童课都在延展路上，名字太「班课」，做电商线时要重塑品牌",
+        "陶字扎堆不查重：同城「XX 陶艺」高度同质，不查工商与商标，做起来才发现名字撞车换招牌",
+        "只有意境没有记忆点：生僻字与四字文言名有格调但难念难传，朋友圈口播与话题标签就先输一程",
+      ],
+    },
+    en: {
+      label: "Pottery & ceramics",
+      title: "How to Name a Pottery Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Pottery studio and ceramics brand naming guide: clay-and-kiln roots, wabi-sabi object philosophy, slow-living narratives, breakdowns of Heath Ceramics/East Fork/Ghost Wares, recommended TLDs and pitfalls — then hunt an available pottery brand domain with AI.",
+      intro:
+        "A pottery studio's name must first decide what it sells: the experience or the object. The class sells a healing afternoon — date-night couples and stressed office workers — so the name should feel relaxed, warm and postable; the ceramics shop sells a maker's taste and everyday aesthetics — buyers filter on style and scarcity — so the name should read like an object brand, not a hobby class. The first material bin is craft roots: clay, earth, kiln, glaze and wheel all live natively on the spectrum, and kiln carries a fire ritual all its own — the opening-the-kiln reveal, part lottery and part ceremony, is this craft's most distinctive narrative asset. The second lever is object philosophy: handmade ceramics never sell perfection, they sell the warmth of imperfection — wabi-sabi, touch and trace give a name an aesthetic stance, and the global run of kintsugi proves the story commands a premium. The third is the slow-living contrast: in a fast city, an afternoon at the wheel is a rare stretch of adult focus, and slow, still and quiet roots hit the real need — referrals start with \"that feeling,\" not \"that cup.\" Mind the content test: pottery is a native video category — the spinning wheel, the kiln reveal — and Instagram is the acquisition arena, so the name must survive hashtags and \"I threw a bowl at X\" voiceovers. Finally, leave radius: studios expand into retail, corporate team-building and kids' classes, and a name welded to the class vibe forces a rebrand when the shop line launches.",
+      namingIdeas: [
+        "Craft roots: clay, kiln, glaze, wheel — category register served straight, with the kiln-reveal ritual as an exclusive narrative asset",
+        "Object philosophy: wabi-sabi, touch, trace — handmade sells the warmth of imperfection, and an aesthetic stance earns the shop line its premium",
+        "Slow-living contrast: slow, still, quiet — the wheel is a rare stretch of adult focus, and the decompression story hits the class crowd's real need",
+        "Maker's name as brand: a surname plus ceramics or kiln — object buyers trust the maker's taste, and personal naming fits the artist route natively",
+        "Place-and-kiln narratives: borrowing a locale's craft lineage — a kiln-town name carries pedigree, and the origin story is a ready-made trust anchor",
+      ],
+      cases: [
+        { name: "Heath Ceramics", takeaway: "A founder's surname plus the plain category word: seven decades of California dinnerware proving the maker-brand route scales from studio to national institution" },
+        { name: "East Fork", takeaway: "Named for a North Carolina river: place and handmade warmth in two words, from a wood-kiln studio to America's most coveted dinnerware — the contemporary template of place naming" },
+        { name: "Ghost Wares", takeaway: "A spectral image plus the old word for vessels: the Melbourne studio leaping out of a sea of same-sounding pottery studios — a masterclass in daring contrast naming" },
+        { name: "Leach Pottery", takeaway: "Bernard Leach's surname anchoring a century-old St Ives workshop: the East-meets-West lineage brand proving pottery trusts the potter before the place" },
+        { name: "Ban Yao (半窑)", takeaway: "\"Half\" as negative space plus the kiln root: leave half to the fire — two characters distilling Eastern object aesthetics, the poetic ceiling of Chinese pottery naming" },
+      ],
+      pitfalls: [
+        "Straddling class and object registers: hobby classes need ease, ceramic shops need aesthetic authority, and a fence-sitting name feels off to both crowds",
+        "Welding the name to the class vibe: retail, team-building and kids' lines are all on the roadmap, and a name too \"workshop-night\" forces a rebrand at the shop launch",
+        "Joining the clay-name pile-up without a search: same-city pottery studios sound alike, and skipping trademark checks means repainting the sign after you've grown",
+        "All mood, no memory: obscure characters and four-word poetry read elegant but resist saying — and lose the hashtag and word-of-mouth game before the first post",
+      ],
+    },
+  },
+  billiards: {
+    slug: "billiards",
+    tlds: [
+      { tld: "com", zh: "会员卡与赛事报名的信任底线，商务客群也稳", en: "The trust baseline for memberships and event sign-ups" },
+      { tld: "club", zh: "「球房即圈子」的会所感，台球社群的天然后缀", en: "The members-room register — cue sports' native community suffix" },
+      { tld: "zone", zh: "空间感直给，年轻化娱乐球房的轻快选择", en: "The venue suffix outright — a playful pick for the entertainment hall" },
+    ],
+    zh: {
+      label: "台球桌球馆",
+      title: "台球馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "台球馆与桌球俱乐部命名指南：球杆词根、绅士运动叙事、传奇人物借势等 5 种思路，星牌/乔氏/Break 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的球房品牌域名。",
+      intro:
+        "台球馆的名字要先选定气质坐标：是「绅士运动」还是「街头娱乐」？斯诺克血统的球房卖的是西装马甲的仪式感——商务应酬与专业训练客群要的是格调，名字往会所感走（皇家、绅士、club）；黑八娱乐球房卖的是朋友聚会的松弛——学生与年轻人要的是「好玩不装」，名字往潮流感走。两条路线定价与装修逻辑完全不同，名字骑墙客群画像就乱了。命名的第一素材库是器材与术语词根：杆、袋、球、案、break、147 都在谱系上，「147」满分杆是斯诺克独有的图腾数字——懂球的人一眼会心，不懂的人也好奇一问。第二个抓手是传奇借势：这项运动的偶像资产极厚——丁俊晖让中国台球热了二十年，奥沙利文的「火箭」绰号本身就是命名素材库——冠军叙事给球房镀专业金边。第三个抓手是港式情怀：华人台球文化半条根在香港桌球室与《龙的传人》式港片记忆里，霓虹灯、老板娘、计时钟的怀旧意象是现成的场景故事。还要过本地搜索关：球房是纯线下生意，获客主链路是地图搜索「附近台球」与美团点评，名字要让人一眼知道「这是打球的地方」，太抽象的名字在列表页就被划走了。最后留半径：球房普遍延展棋牌、酒饮与电竞混业，名字锁死「桌球」，混业扩张时招牌要重做。",
+      namingIdeas: [
+        "器材术语词根：杆、袋、break、147——「147」满分杆是斯诺克的图腾数字，懂球人一眼会心",
+        "绅士会所叙事：皇家、绅士、club——斯诺克的西装仪式感值钱，商务客群为格调付台费溢价",
+        "传奇人物借势：冠军名+台球俱乐部——丁俊晖式的偶像资产给球房镀专业金边，训练线尤其吃这套",
+        "港式情怀意象：桌球室、霓虹、旺角——华人台球的港片记忆是现成的怀旧场景故事",
+        "潮流反差命名：把球房说成夜店与游乐场——年轻客群要「好玩不装」，松弛感就是黑八娱乐线的转化率",
+      ],
+      cases: [
+        { name: "星牌", takeaway: "「星」的冠军意象+「牌」的器材血统：从球台制造商到世锦赛官方用台，器材品牌反向背书球房连锁——中国台球产业链命名的教科书" },
+        { name: "乔氏", takeaway: "创始人姓氏+「氏」的老字号后缀：中式八球的赛事与球台标准制定者，姓氏命名把个人信誉做成了行业标准" },
+        { name: "Hollywood Billiards", takeaway: "「好莱坞」的娱乐圣地词根+品类直给：旧金山百年球房借地名的声色势能，把打球说成一场夜生活——娱乐路线的直球打法" },
+        { name: "147 Club", takeaway: "斯诺克满分杆的图腾数字做馆名：三个字符完成专业度自证与圈层筛选——术语命名的极简范本" },
+        { name: "Rocket", takeaway: "奥沙利文的绰号即品牌资产：「火箭」把出杆速度与天才叙事压进两个音节——传奇绰号是台球命名的现成素材库" },
+      ],
+      pitfalls: [
+        "绅士与街头骑墙：斯诺克会所要格调、黑八娱乐要松弛，两套装修与定价逻辑不同，名字骑墙客群画像就乱",
+        "抽象名输掉列表页：球房靠地图与点评获客，名字看不出「是打球的」，在「附近台球」列表页就被划走",
+        "锁死单一品类：棋牌、酒饮、电竞混业是球房的普遍归宿，名字带死「斯诺克」，混业时要重做招牌",
+        "土味谐音自降身价：「球来球往」式谐音热闹但廉价，商务与训练客群看到名字就把客单预期砍半",
+      ],
+    },
+    en: {
+      label: "Billiards & pool halls",
+      title: "How to Name a Billiards Hall: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Billiards hall and pool club naming guide: cue-and-break roots, gentleman's-sport narratives, legend borrowing, breakdowns of Xingpai/Hollywood Billiards/147 Club, recommended TLDs and pitfalls — then hunt an available pool hall domain with AI.",
+      intro:
+        "A billiards hall's name must first pick its register: gentleman's sport or street entertainment? The snooker room sells waistcoat ritual — business entertaining and serious training crowds want polish, so the name leans members-club (royal, gentleman, club); the eight-ball hall sells the ease of a night out with friends — students and young groups want fun without pretension, so the name leans playful. The two routes price and decorate differently, and a fence-sitting name muddles the customer picture. The first material bin is gear and jargon roots: cue, pocket, rack, break and 147 all live natively on the spectrum — and 147, snooker's maximum break, is the sport's totem number: insiders smile on sight, outsiders ask and remember. The second lever is legend borrowing: the sport's idol capital runs deep — Ding Junhui powered a twenty-year Chinese boom, and O'Sullivan's \"Rocket\" nickname is a naming asset in itself — champion narratives gild a hall with professional credibility. The third is Hong Kong nostalgia: half the root system of Chinese cue culture lives in old Hong Kong snooker parlours and their neon-sign movie memory, a ready-made scene story. Mind the local-search test: a pool hall is a purely offline business acquired through \"billiards near me\" maps and review platforms, so the name must read instantly as a place to play — an abstract name gets swiped past in the list view. Finally, leave radius: halls routinely blend into board games, drinks and esports, and a name welded to snooker forces a new sign at every expansion.",
+      namingIdeas: [
+        "Gear and jargon roots: cue, pocket, break, 147 — the maximum-break totem number self-certifies expertise to insiders at a glance",
+        "Members-club narratives: royal, gentleman, club — snooker's waistcoat ritual commands premium table rates from the business crowd",
+        "Legend borrowing: a champion's name over the door — idol capital gilds the hall, and the training line feeds on it most",
+        "Hong Kong nostalgia: parlour, neon, Kowloon imagery — Chinese cue culture's movie memory is a ready-made scene story",
+        "Playful contrast: pitch the hall as a night out, not a sport — the eight-ball crowd wants fun without pretension, and ease converts",
+      ],
+      cases: [
+        { name: "Xingpai (星牌)", takeaway: "A star image plus a maker's suffix: from table manufacturer to the World Championship's official table, gear pedigree reverse-endorsing a hall chain — the industry-chain naming textbook" },
+        { name: "Hollywood Billiards", takeaway: "The entertainment shrine root plus the plain category word: San Francisco's century-old hall borrowing a place-name's glamour to sell pool as nightlife — the entertainment route played straight" },
+        { name: "147 Club", takeaway: "Snooker's maximum break as the marquee: three characters completing expertise self-certification and tribe filtering at once — the minimalist template of jargon naming" },
+        { name: "Joy Billiards (乔氏)", takeaway: "A founder's surname built into the standard: the company that codified Chinese eight-ball rules and tables, personal-name naming turned industry authority" },
+        { name: "Rocket", takeaway: "O'Sullivan's nickname as brand capital: cue speed and genius compressed into two syllables — legend nicknames are cue sports' ready-made naming bin" },
+      ],
+      pitfalls: [
+        "Straddling gentleman and street registers: the snooker club needs polish, the eight-ball hall needs ease — different pricing, different decor, and a fence-sitting name muddles both",
+        "Abstract names losing the list view: halls live on \"billiards near me\" searches, and a name that doesn't read as a place to play gets swiped past",
+        "Welding the name to one code: board games, drinks and esports blends are the common endgame, and a snooker-locked name repaints the sign at every expansion",
+        "Bargain puns capping the ticket: cutesy rhyming names read cheap, and the business and training crowds halve their spend expectations on sight",
+      ],
+    },
+  },
+  drivingschool: {
+    slug: "drivingschool",
+    tlds: [
+      { tld: "com", zh: "报名缴费的信任底线，大额学费决策必须稳", en: "The trust baseline for enrollment — tuition-sized payments demand it" },
+      { tld: "school", zh: "「学校」语义直给，驾培机构的天然后缀", en: "The school register outright — driver training's native suffix" },
+      { tld: "academy", zh: "机构感与教学体系背书，走品质路线首选", en: "The institutional suffix — credentialing a structured curriculum" },
+    ],
+    zh: {
+      label: "驾校驾培",
+      title: "驾校怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "驾校与驾培机构命名指南：通过率承诺、安全信任词根、陪伴叙事等 5 种思路，东方时尚/AAA/RED 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的驾培品牌域名。",
+      intro:
+        "驾校的名字要先解决一个行业性的信任赤字：学员对驾校的集体印象是「教练凶、吃拿卡要、隐形收费」，名字的第一使命不是响亮而是让人放心——服务承诺（一费到底、不骂人）说在名字与口号里，比任何广告都省钱。命名的第一素材库是结果词根：驾照是典型的结果导向消费，通、达、顺、easy pass 这类词根直击「一次过」的核心诉求——但要留意广告法红线，「包过」不能说，「顺利」可以想。第二个抓手是安全与专业叙事：家长给孩子报名、企业做班车培训，看的是教学体系与安全记录，「安捷、稳达」式的安全词根与「学院、驾培中心」的机构感是大客单的信任底座。第三个抓手是服务反差：这个行业的差评太统一（态度差），反着做就是品牌——「不骂人的驾校」是现成的传播点，温柔、耐心、陪伴叙事在小红书上是自带流量的反差人设。词库上，驾、行、道、路、车都在谱系上，「行」字一语双关（行车/行得通）是中文驾培命名的万能字。还要过本地搜索关：驾校是重本地生意，获客链路是「城市+驾校」搜索与老学员转介绍，名字要好念好转述——「我在 XX 学的车，教练不错」这句话就是最大的获客渠道。最后留半径：驾培普遍延展陪练、增驾、货运资格证与考后租车，名字锁死「学车」，扩线时要重讲故事。",
+      namingIdeas: [
+        "结果词根：通、达、顺——学员要的是「一次过」，结果承诺直击核心诉求（注意广告法，别写「包过」）",
+        "安全专业叙事：安、稳、学院——家长与企业客户看教学体系与安全记录，机构感是大客单的信任底座",
+        "服务反差人设：温柔、耐心、不骂人——行业差评太统一，反着做就是自带流量的品牌记忆点",
+        "「行」字双关：行车与行得通一语双关——中文驾培命名的万能字，吉利话与品类词一次到位",
+        "效率承诺：快、直通、speed——上班族要的是拿证效率，时间承诺是白领客群的第一筛选条件",
+      ],
+      cases: [
+        { name: "东方时尚", takeaway: "把「驾校」说成「时尚」：北京最大驾培品牌用反品类词重新定义学车体验——服务升级叙事让它成了驾培第一股" },
+        { name: "AAA", takeaway: "三个字母排在电话簿最前：美国汽车协会的名字本身就是检索策略——本地服务业「排序即流量」的祖师爷示范" },
+        { name: "RED Driving School", takeaway: "「红色」的信号灯意象+品类直给：英国连锁用一个颜色词完成品牌记忆与安全联想——颜色命名的轻巧范本" },
+        { name: "猪兼强", takeaway: "「猪都能学会」的自嘲式谐音（珠江+兼职+强）：广东互联网驾校用无厘头人设降低学车焦虑——反差命名的流量打法（后经营暴雷，人设救不了现金流）" },
+        { name: "Zutobi", takeaway: "造词+游戏化学车 App：全球驾考理论陪练把「刷题」做成闯关——驾培数字化产品命名往轻快走的示范" },
+      ],
+      pitfalls: [
+        "「包过」踩广告法红线：结果承诺只能暗示不能明说，写进名字与广告的「包过」是现成的处罚证据",
+        "锁死「学车」品类：陪练、增驾、货运资格与考后租车都在延展路上，名字太窄扩线时要重讲故事",
+        "土味谐音降低信任：学费是大额预付费决策，名字太搞笑，家长与上班族反而担心机构不正规",
+        "忽略转介绍口播：老学员转介绍是最大获客渠道，名字拗口，「我在 XX 学的车」这句话就传不动",
+      ],
+    },
+    en: {
+      label: "Driving schools",
+      title: "How to Name a Driving School: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Driving school naming guide: pass-rate promise roots, safety-trust registers, patient-instructor narratives, breakdowns of AAA/RED/Zutobi, recommended TLDs and pitfalls — then hunt an available driving school domain with AI.",
+      intro:
+        "A driving school's name must first pay down an industry-wide trust deficit: the public's default image is gruff instructors, hidden fees and upsells at the wheel, so the name's first job is reassurance, not flash — a service promise (one price, no yelling) carried in the name and slogan beats any ad budget. The first material bin is outcome roots: a licence is the textbook results-driven purchase, and pass, through and smooth roots hit the \"first attempt\" desire directly — mind the advertising line, though: guarantee-to-pass claims invite regulators, while smooth-journey imagery stays safe. The second lever is safety and professionalism: parents enrolling teenagers and companies training fleet drivers buy curriculum and safety records, and steady, secure roots plus institutional registers (academy, training centre) form the trust floor for big-ticket enrollment. The third is the service contrast: this industry's bad reviews all say the same thing — the attitude — so inverting it is a brand in itself: \"the driving school that never yells\" is a ready-made hook, and patience narratives carry their own social traffic. On the local-search test: driver training is a heavily local business acquired through \"driving school near me\" and alumni referrals, so the name must survive the sentence \"I learned at X — great instructor\" — that sentence is the biggest acquisition channel. Finally, leave radius: schools expand into refresher coaching, licence upgrades, commercial certifications and graduate car rental, and a name welded to \"learn to drive\" retells its story at every new line.",
+      namingIdeas: [
+        "Outcome roots: pass, through, smooth — learners buy \"first attempt,\" and outcome promises hit the core desire (imply, never guarantee — regulators read names too)",
+        "Safety registers: steady, secure, academy — parents and fleet clients buy curriculum and safety records, and institutional weight floors the big-ticket decision",
+        "Service-contrast personas: patient, calm, no-yelling — the industry's complaints all match, so inverting them is a self-propelling brand hook",
+        "Efficiency promises: fast-track, direct, express — commuters filter on time-to-licence first, and a tempo word wins the working crowd",
+        "Road imagery: road, lane, mile, drive — category register served straight, keeping the name instantly legible in map listings and referrals",
+      ],
+      cases: [
+        { name: "AAA", takeaway: "Three letters engineered to top the phone book: the auto association's name as a retrieval strategy — the founding demonstration that in local services, sort order is traffic" },
+        { name: "RED Driving School", takeaway: "A traffic-light colour plus the plain category words: the UK chain buying brand recall and safety association with one syllable — the light-touch template of colour naming" },
+        { name: "Oriental Fashion (东方时尚)", takeaway: "Calling a driving school \"fashion\": Beijing's biggest driver-training brand redefining the experience with an anti-category word — service-upgrade naming that carried it to an IPO" },
+        { name: "Zutobi", takeaway: "A coined name for gamified theory prep: the global driving-test app turning question drills into levels — how digital driver training names itself lighter than the schools" },
+        { name: "Young Drivers of Canada", takeaway: "The audience in the name: four plain words claiming the teen-training niche and the parents' trust that funds it — descriptive naming doing segmentation's whole job" },
+      ],
+      pitfalls: [
+        "Guarantee-to-pass claims crossing the advertising line: outcome promises may be implied, never stated — a \"guaranteed pass\" name is pre-packaged evidence for regulators",
+        "Welding the name to \"learn to drive\": refreshers, upgrades, commercial licences and graduate rentals are all on the roadmap, and a narrow name retells its story each time",
+        "Jokey puns eroding trust: tuition is a large prepaid decision, and a name too funny makes parents and commuters doubt the paperwork",
+        "Ignoring the referral sentence: alumni word of mouth is the biggest channel, and a clumsy name breaks \"I learned at X\" before it spreads",
+      ],
+    },
+  },
+  optician: {
+    slug: "optician",
+    tlds: [
+      { tld: "com", zh: "验光配镜大额消费的信任底线，医疗感客群必备", en: "The trust baseline for prescription-grade purchases" },
+      { tld: "store", zh: "零售属性直给，潮流眼镜买手店的轻快选择", en: "The retail register outright — a playful pick for the eyewear boutique" },
+      { tld: "care", zh: "「视力关怀」的医疗温度，视光中心路线首选", en: "The eye-care suffix — first pick for the optometry route" },
+    ],
+    zh: {
+      label: "眼镜视光",
+      title: "眼镜店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "眼镜店与视光中心命名指南：光学词根、医疗信任叙事、潮流配饰路线等 5 种思路，Warby Parker/宝岛/JINS 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的眼镜品牌域名。",
+      intro:
+        "眼镜店的名字要先回答行业的身份分裂：眼镜到底是「医疗器械」还是「时尚配饰」？视光中心路线卖的是专业——验光准、镜片好、儿童近视防控有体系，家长与高度数客群要的是医疗信任，名字往「视光、眼科」的专业感走；潮牌买手店路线卖的是「眼镜是脸上的穿搭」——年轻客群一年换三副，要的是设计与个性，名字往时尚品牌走。两条路线毛利结构完全不同，名字骑墙就两头不靠。命名的第一素材库是光学词根：光、明、目、瞳、镜、visio、optic 都在谱系上，「明」字是中文眼镜命名的万能字——既是看得清的功能承诺又是亮堂堂的吉利话。第二个抓手是医疗信任叙事：儿童近视防控是这个行业增速最快的高客单业务，家长决策看的是专业背书，「视光中心、眼健康」的医疗感命名直接决定客单天花板。第三个抓手是潮流反差：把「戴眼镜」从缺陷矫正说成风格表达——日本 JINS、Zoff 用轻快的无意义短名把眼镜做成了快消，证明「去医疗化」命名能打开换购频次。还要过本地搜索关：配镜是重本地生意，「城市+配眼镜」搜索与商场招牌是获客主场，名字要一眼读出品类。最后留半径：眼镜店普遍延展隐形眼镜、太阳镜与听力等大健康品类，名字锁死「镜」，扩品时要重做认知。",
+      namingIdeas: [
+        "光学词根：光、明、瞳、optic——「明」字双关看得清与亮堂堂，是中文眼镜命名的万能字",
+        "医疗信任叙事：视光、眼科、eye care——儿童近视防控是高客单增长引擎，专业感直接决定客单天花板",
+        "潮流配饰路线：轻快短名、无意义造词——把眼镜说成脸上的穿搭，去医疗化命名打开年轻客群换购频次",
+        "人名老字号：姓氏+眼镜——验光是手艺活，人名命名自带「老师傅」的手艺信任，区域老店尤其吃这套",
+        "科技感命名：轻、薄、air、zero——镜片科技是差异化卖点，材质叙事让「舒适」变得可感知",
+      ],
+      cases: [
+        { name: "Warby Parker", takeaway: "从凯鲁亚克笔记本里两个角色名拼出的文青品牌：眼镜电商颠覆者用文学感命名把「买眼镜」从医疗采购变成生活方式消费" },
+        { name: "宝岛眼镜", takeaway: "「宝岛」的台湾产地情怀+品类直给：华人市场最大眼镜连锁用地缘词根做了四十年信任资产——产地叙事的长期价值" },
+        { name: "JINS", takeaway: "四个字母的轻快日式短名：快时尚眼镜的定价革命者，无意义短名让「快速换新」显得理所当然——去医疗化命名的教科书" },
+        { name: "LensCrafters", takeaway: "「镜片」+「工匠」的复合词：一小时取镜的服务承诺藏在「crafter」的手艺感里——功能与匠心一次说清" },
+        { name: "木九十", takeaway: "「木」的材质温度+「九十」的数字留白：中国设计师眼镜品牌用拆字游戏（木+九十≈「杦」）做出记忆点——材质叙事与文字游戏的结合" },
+      ],
+      pitfalls: [
+        "医疗与潮流骑墙：视光中心要专业、潮牌店要个性，两套毛利与陈列逻辑不同，名字骑墙两头不靠",
+        "锁死「镜」字品类：隐形眼镜、太阳镜、听力健康都在延展路上，名字太窄扩品时要重做认知",
+        "「明」字扎堆不查重：同城「XX 明」眼镜高度同质，不查商标做大了才发现撞名换招牌",
+        "只有时尚没有专业锚点：配镜的钱最终花在验光与镜片上，名字太潮，家长客群担心「验光不专业」",
+      ],
+    },
+    en: {
+      label: "Opticians & eyewear",
+      title: "How to Name an Optical Shop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Optical shop and eyewear brand naming guide: optics roots, medical-trust narratives, fashion-accessory routes, breakdowns of Warby Parker/JINS/LensCrafters, recommended TLDs and pitfalls — then hunt an available eyewear domain with AI.",
+      intro:
+        "An optical shop's name must first resolve the industry's split identity: are glasses a medical device or a fashion accessory? The optometry route sells expertise — precise refraction, premium lenses, structured myopia control for kids — and parents plus high-prescription customers buy medical trust, so the name leans clinical (vision, optometry, eye care); the boutique route sells eyewear as the outfit on your face — young customers rotate three pairs a year and buy design, so the name leans fashion label. The two routes run entirely different margin structures, and a fence-sitting name reaches neither. The first material bin is optics roots: light, sight, lens, iris, optic and visio all live natively on the spectrum — and in Chinese, ming (bright/clear) is the master key, a functional promise and a good omen in one character. The second lever is the medical-trust narrative: children's myopia control is the industry's fastest-growing big-ticket line, parents decide on credentials, and a clinical register directly sets the ticket ceiling. The third is the fashion contrast: reframing glasses from defect correction to style expression — Japan's JINS and Zoff used breezy, meaning-free short names to turn eyewear into fast fashion, proof that de-medicalised naming unlocks repurchase frequency. Mind the local-search test: fitting glasses is a heavily local business won on \"optician near me\" and mall storefronts, so the name must read as eyewear at a glance. Finally, leave radius: optical shops expand into contacts, sunglasses and hearing care, and a name welded to \"glasses\" rebuilds its meaning at every new category.",
+      namingIdeas: [
+        "Optics roots: light, sight, lens, iris — category register served straight, with \"bright/clear\" doubling as promise and omen",
+        "Medical-trust narratives: vision, optometry, eye care — kids' myopia control is the big-ticket growth engine, and clinical weight sets the ticket ceiling",
+        "Fashion-accessory routes: breezy coined short names — eyewear as the outfit on your face, de-medicalised naming unlocking the rotation habit",
+        "Craftsman surnames: a name plus opticians — refraction is a craft, and personal naming carries the old-master trust that anchors regional institutions",
+        "Material-tech registers: air, zero, thin, titan — lens technology is the differentiator, and material narratives make comfort feel tangible",
+      ],
+      cases: [
+        { name: "Warby Parker", takeaway: "Two characters lifted from a Kerouac journal: the eyewear disruptor using literary naming to move glasses from medical purchase to lifestyle brand — the D2C naming landmark" },
+        { name: "JINS", takeaway: "Four breezy letters from Japan: the fast-fashion eyewear pricing revolutionary whose meaning-free short name makes frequent frame swaps feel natural — the de-medicalising textbook" },
+        { name: "LensCrafters", takeaway: "Lens plus craftsman in one compound: the one-hour-glasses service promise smuggled inside the craft register — function and workmanship said at once" },
+        { name: "Formosa Optical (宝岛)", takeaway: "A homeland word plus the plain category: the Chinese-speaking world's biggest optical chain compounding four decades of trust on a place root — the long-term value of origin naming" },
+        { name: "Mujosh (木九十)", takeaway: "Wood's material warmth plus a numeric riddle: the Chinese designer eyewear label building recall on a character-splitting game — material narrative meeting wordplay" },
+      ],
+      pitfalls: [
+        "Straddling clinic and catwalk: optometry needs credentials, boutiques need edge — different margins, different displays, and a fence-sitting name reaches neither",
+        "Welding the name to \"glasses\": contacts, sunglasses and hearing care are all on the roadmap, and a lens-locked name rebuilds its meaning at every category",
+        "Joining the \"bright\" pile-up unchecked: same-city optical names sound alike, and skipping trademark checks means re-signing the storefront after you've scaled",
+        "All fashion, no clinical anchor: the money is ultimately in refraction and lenses, and a name too trendy makes parents doubt the exam room",
+      ],
+    },
+  },
+  massage: {
+    slug: "massage",
+    tlds: [
+      { tld: "com", zh: "会员卡与预约小程序的信任底线，高客单必备", en: "The trust baseline for memberships and booking flows" },
+      { tld: "care", zh: "「身体关怀」语义直给，健康调理路线的天然后缀", en: "The body-care register outright — the wellness route's native suffix" },
+      { tld: "life", zh: "生活方式感，把按摩说成日常自我关照的轻快选择", en: "The lifestyle suffix — framing massage as everyday self-care" },
+    ],
+    zh: {
+      label: "按摩推拿",
+      title: "按摩推拿店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "按摩推拿与养生 SPA 命名指南：手法词根、中医经络叙事、都市减压路线等 5 种思路，常乐/富侨/Massage Envy 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的按摩品牌域名。",
+      intro:
+        "按摩推拿店的名字要先解决一个行业特有的观感问题：这个品类长期被灰色联想污染，名字的第一使命是「正规感」——健康、调理、门店连锁的气质要从名字就立住，让写字楼白领敢把店名发进家庭群。命名的第一素材库是手法与身体词根：推、拿、揉、捏、松、通都在谱系上，「松」字是当代按摩命名的核心字——肩颈松、筋膜松、精神松，一个字说透都市人的全部诉求。第二个抓手是中医经络叙事：推拿本就是中医外治法，经络、气血、通则不痛的话语体系自带千年信任背书——「通、和、堂」这类老字号词根让调理线有了专业纵深，适合做高客单的疗程卡。第三个抓手是都市减压反差：新一代连锁把按摩从「养生」重新定义为「都市人的日常充电」——常乐式的「快乐」叙事、按摩椅进商场的「15 分钟自我关照」，名字越轻快越去油腻，年轻客群越敢进门。词库上要留意气质分寸：「帝王养生」式的浮夸命名自带灰色联想，反而是「小而美」的生活化命名更显正规。还要过本地搜索关：按摩是重本地复购生意，获客靠「附近按摩」地图搜索与点评榜单，名字要好念好记好转述。最后留半径：门店普遍延展艾灸、正骨、头疗与足浴，名字锁死单一手法，扩项时招牌要重做。",
+      namingIdeas: [
+        "手法身体词根：推、揉、松、通——「松」字一字三关（肩颈/筋膜/精神），说透都市人的全部诉求",
+        "中医经络叙事：通、和、堂——千年话语体系自带信任背书，老字号词根撑起高客单疗程卡",
+        "都市减压反差：快乐、充电、回血——把按摩从「养生」说成「日常自我关照」，轻快感让年轻人敢进门",
+        "正规感优先：连锁感、生活化、小而美——品类被灰色联想污染，名字的清爽度就是写字楼客群的转化率",
+        "场景时间命名：午间、下班、深夜——按摩是即时性消费，时段词根直接对位「现在就想去」的冲动",
+      ],
+      cases: [
+        { name: "常乐", takeaway: "「常来常乐」的快乐叙事：新连锁把按摩从中年养生重新定义为年轻人的日常充电——两个字的松弛感就是品类革新宣言" },
+        { name: "重庆富侨", takeaway: "「富」的吉利词根+「侨」的江湖出身：从路边足浴做到全国万店的初代连锁——中文按摩命名野蛮生长期的活化石" },
+        { name: "Massage Envy", takeaway: "「羡慕」的情绪词根+品类直给：美国最大按摩连锁把「别人做了你没做」的心理写进名字——订阅制养生的命名范本" },
+        { name: "泰笛", takeaway: "泰式手法+「笛」的轻盈音感：把泰式按摩的异域感做成年轻化品牌——品类借势与音感设计的结合" },
+        { name: "Gua Sha House", takeaway: "刮痧的拼音直接出海：中医手法词根在欧美养生市场成了流量密码——文化输出时代，母语术语就是最好的品牌资产" },
+      ],
+      pitfalls: [
+        "浮夸命名招灰色联想：「帝王、至尊」式名字自带观感风险，白领客群不敢把店名发进家庭群",
+        "锁死单一手法：艾灸、正骨、头疗、足浴都在延展路上，名字带死「足道」，扩项时要重做招牌",
+        "只有老气没有松弛感：年轻客群把按摩当日常充电，名字太「养生馆」，30 岁以下客群觉得不是给自己开的",
+        "忽略点评榜单场景：获客靠「附近按摩」与点评排行，名字拗口难记，回头客想推荐都转述不清",
+      ],
+    },
+    en: {
+      label: "Massage & bodywork",
+      title: "How to Name a Massage Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Massage and bodywork studio naming guide: touch-and-release roots, TCM meridian narratives, urban-recharge routes, breakdowns of Massage Envy/Changle/Gua Sha House, recommended TLDs and pitfalls — then hunt an available massage brand domain with AI.",
+      intro:
+        "A massage studio's name must first solve a perception problem unique to the category: long polluted by seedy associations, the name's first job is legitimacy — a clean, chain-grade, wellness register that an office worker can post in the family group chat without a second thought. The first material bin is touch and body roots: knead, press, release, ease and flow all live natively on the spectrum — and release is the category's master word, covering shoulders, fascia and mind in one stroke of urban longing. The second lever is the TCM meridian narrative: tuina is classical Chinese external medicine, and the meridian vocabulary — flow, balance, \"where there is flow there is no pain\" — carries a millennium of built-in trust; heritage-hall registers give the therapeutic line the professional depth that sells big-ticket treatment packages. The third is the urban-recharge contrast: the new chains have reframed massage from old-folk wellness to the city worker's daily recharge — joy narratives, fifteen-minute self-care in the mall — and the breezier the name, the more the young crowd dares to walk in. Watch the register carefully: imperial-spa grandiosity invites exactly the seedy reading the industry fights, while small, life-scale naming reads legitimate. Mind the local-search test: massage is a heavily local repeat business won on \"massage near me\" maps and review rankings, so the name must be easy to say, recall and retell. Finally, leave radius: studios expand into moxibustion, bone-setting, head spas and foot baths, and a name welded to one technique re-signs the storefront at every new service.",
+      namingIdeas: [
+        "Touch and release roots: knead, ease, flow, release — the master word covers shoulders, fascia and mind in one stroke of urban longing",
+        "TCM meridian narratives: flow, balance, heritage-hall registers — a millennium of built-in trust that supports big-ticket treatment packages",
+        "Urban-recharge contrast: joy, recharge, reset — massage reframed as daily self-care, and the breezier the name, the younger the walk-ins",
+        "Legitimacy first: clean, chain-grade, life-scale naming — the category fights seedy associations, and a fresh register is the office crowd's conversion rate",
+        "Time-slot naming: lunchtime, after-hours, midnight — massage is an impulse purchase, and a moment word meets \"I need this now\" head-on",
+      ],
+      cases: [
+        { name: "Massage Envy", takeaway: "An emotion root plus the plain category word: America's biggest massage chain writing \"everyone's getting one but you\" into the marquee — the subscription-wellness naming template" },
+        { name: "Changle (常乐)", takeaway: "\"Ever-joyful\" in two characters: the new-generation chain reframing massage from middle-aged wellness to the young worker's daily recharge — ease as a category manifesto" },
+        { name: "Gua Sha House", takeaway: "A TCM technique in pinyin as a Western brand: the mother-tongue term turned traffic magnet in the global wellness market — in the culture-export era, the original word is the asset" },
+        { name: "The NOW", takeaway: "A single mindfulness word as the brand: the LA boutique chain selling presence, not pressure — massage naming that borrows meditation's register to go premium" },
+        { name: "Chongqing Fuqiao (重庆富侨)", takeaway: "A fortune root plus a place-name prefix: the first-generation chain that scaled from roadside foot baths to ten thousand stores — a living fossil of the category's wild-growth naming era" },
+      ],
+      pitfalls: [
+        "Grandiose registers inviting the seedy reading: imperial and supreme names carry exactly the association the industry fights — and the office crowd won't post them in the family chat",
+        "Welding the name to one technique: moxibustion, bone-setting, head spas and foot baths are all on the roadmap, and a technique-locked name re-signs at every expansion",
+        "All heritage, no ease: the young crowd treats massage as a daily recharge, and a name too \"wellness hall\" tells under-30s the store isn't for them",
+        "Ignoring the review-ranking scene: acquisition lives on \"massage near me\" and top-ten lists, and a clumsy name breaks the regular's recommendation mid-sentence",
+      ],
+    },
+  },
+  mealprep: {
+    slug: "mealprep",
+    tlds: [
+      { tld: "com", zh: "周期订阅扣款的信任底线，健康餐决策必备", en: "The trust baseline for recurring meal subscriptions" },
+      { tld: "kitchen", zh: "「厨房」语义直给，现制健康餐的天然后缀", en: "The kitchen register outright — fresh-made meals' native suffix" },
+      { tld: "fitness", zh: "健身语境直连，减脂餐与增肌餐路线首选", en: "The fitness suffix — first pick for macro-counted meal lines" },
+    ],
+    zh: {
+      label: "轻食健康餐",
+      title: "轻食健康餐怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "轻食店与健康餐订阅命名指南：清爽词根、营养数字叙事、自律人设等 5 种思路，Sweetgreen/超级碗/Factor 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的轻食品牌域名。",
+      intro:
+        "轻食健康餐的名字要先破一个品类魔咒：在大众心智里「健康=难吃」，名字的第一使命是让人觉得「好吃又不负罪」——清爽感要有，食欲感更要有，太「代餐感」的名字自己劝退客人。命名的第一素材库是清爽词根：轻、鲜、绿、纤、fresh、green 都在谱系上，「轻」字是品类核心字——轻卡、轻负担、轻生活一字三关。第二个抓手是营养数字叙事：健康餐的客群一半是「计算派」——健身减脂人群看的是卡路里与蛋白质克数，数字与营养词根（卡、蛋白、marco）自带专业感，适合做健身房联名与周期订阅线。第三个抓手是自律人设反差：把「吃草」说成「掌控生活」——沙拉品牌最成功的叙事从来不是减肥是「自律给我自由」，名字带一点生活方式宣言（好好吃饭、认真生活），客群买的是身份认同。还要留意食欲平衡：Sweetgreen 的「sweet」放在「green」前面是刻意的——先让人想吃，再让人觉得健康，顺序反了就成了药。渠道上，轻食是外卖平台主场，名字要在外卖列表的小图旁边一眼读出「健康+好吃」，太抽象的名字在滑动流里就被划过了。最后留半径：轻食品牌普遍延展烘焙轻甜品、代餐零食与企业团餐，名字锁死「沙拉」，扩品时要重讲故事。",
+      namingIdeas: [
+        "清爽词根：轻、鲜、绿、fresh——「轻」字一字三关（轻卡/轻负担/轻生活），是品类的核心字",
+        "营养数字叙事：卡路里、蛋白、macro——计算派客群看数字下单，专业感撑起健身联名与订阅线",
+        "自律人设：好好吃饭、掌控、自由——卖的不是减肥是身份认同，生活方式宣言让复购有了情感理由",
+        "食欲优先排序：sweet 在 green 前面——先让人想吃再让人觉得健康，顺序反了名字就成了药",
+        "场景时段命名：工作日午餐、健身后、深夜轻食——健康餐是习惯性消费，时段词根直接绑定日程",
+      ],
+      cases: [
+        { name: "Sweetgreen", takeaway: "「甜」在「绿」前的刻意排序：先食欲后健康，美国沙拉第一品牌用一个词序把「吃草」卖成了潮流生活方式" },
+        { name: "超级碗", takeaway: "借「Super Bowl」的赛事双关+「碗」的品类直给：中国轻食连锁用一个谐音梗同时说清产品形态与能量感" },
+        { name: "Factor", takeaway: "「要素」的科学词根：美国头部健康餐订阅把营养说成可计算的变量——计算派命名的教科书，配 factor75 的数字域名策略" },
+        { name: "gaga 鲜语", takeaway: "「gaga」的轻快叠音+「鲜语」的清爽意象：华南轻食先行者把沙拉店做成都市白领的社交空间——音感与场景升维的结合" },
+        { name: "Daily Harvest", takeaway: "「每日」的习惯词根+「收获」的田园意象：冷冻健康餐订阅把「按时吃饭」说成每天的小丰收——订阅制命名的情感范本" },
+      ],
+      pitfalls: [
+        "代餐感劝退食欲：健康=难吃的品类魔咒还在，名字太「功能」（纤体、代餐系），客人还没点开就没了食欲",
+        "锁死「沙拉」品类：烘焙轻甜品、代餐零食、企业团餐都在延展路上，名字太窄扩品时要重讲故事",
+        "只有理念没有记忆点：「健康生活」式大词千店一面，外卖列表里没有辨识度，滑动流里就被划过",
+        "数字承诺过头：名字里写死「500 卡」式数字，菜单一调整名字就成了虚假宣传的证据",
+      ],
+    },
+    en: {
+      label: "Meal prep & healthy eats",
+      title: "How to Name a Healthy Meal Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Salad bar and meal-prep subscription naming guide: fresh-and-light roots, macro-number narratives, discipline personas, breakdowns of Sweetgreen/Factor/Daily Harvest, recommended TLDs and pitfalls — then hunt an available healthy-food domain with AI.",
+      intro:
+        "A healthy meal brand's name must first break the category curse: in the mass mind, healthy equals bland, so the name's first job is to promise delicious without guilt — freshness yes, but appetite first, because a name that smells of diet powder turns customers away before the menu loads. The first material bin is fresh-and-light roots: light, fresh, green, crisp and pure all live natively on the spectrum — and light is the category's master word, covering calories, conscience and lifestyle in one syllable. The second lever is the macro-number narrative: half this audience are calculators — lifters and cutters ordering by protein grams and calorie counts — and numeric, nutritional roots carry the professional weight that wins gym partnerships and subscription lines. The third is the discipline persona: the most successful salad narratives never sell weight loss, they sell \"discipline sets me free\" — a name with a hint of lifestyle manifesto (eat well, own your day) sells identity, and identity is what makes subscriptions renew. Watch the appetite ordering: Sweetgreen putting sweet before green is deliberate — crave first, virtue second; reverse the order and the name reads like medicine. On channels: healthy eating lives on delivery apps, where the name must read \"healthy and delicious\" beside a thumbnail in a scrolling feed — abstract names get swiped past. Finally, leave radius: healthy brands expand into light bakery, snack lines and corporate catering, and a name welded to salad retells its story at every new shelf.",
+      namingIdeas: [
+        "Fresh-and-light roots: light, fresh, green, crisp — the master word covers calories, conscience and lifestyle in one syllable",
+        "Macro-number narratives: calories, protein, macro — the calculator crowd orders by the numbers, and professional weight wins gym deals and subscriptions",
+        "Discipline personas: eat well, own, free — sell identity rather than weight loss, and give renewal an emotional reason",
+        "Appetite-first ordering: sweet before green — crave first, virtue second; reverse it and the name reads like medicine",
+        "Time-slot naming: weekday lunch, post-workout, late-night light — healthy eating is a habit purchase, and a moment word binds the name to the calendar",
+      ],
+      cases: [
+        { name: "Sweetgreen", takeaway: "Sweet deliberately ahead of green: appetite first, virtue second — America's defining salad brand selling \"eating grass\" as a lifestyle with one word order" },
+        { name: "Factor", takeaway: "A science root as the brand: the leading US meal subscription framing nutrition as a computable variable — the calculator-crowd textbook, numeric domain strategy included" },
+        { name: "Daily Harvest", takeaway: "A habit root plus a pastoral image: the frozen-wellness subscription turning eating on time into a small daily harvest — the emotional template of subscription naming" },
+        { name: "Super Bowl (超级碗)", takeaway: "A sports-event pun landing on the category word bowl: the Chinese salad chain saying product form and energy in one borrowed phrase — pun naming that actually informs" },
+        { name: "Pret A Manger", takeaway: "\"Ready to eat\" in borrowed French: fast food dressed in bistro register since 1986 — proof that a foreign-language root can lift a grab-and-go category upmarket" },
+      ],
+      pitfalls: [
+        "Diet-powder registers killing appetite: the healthy-equals-bland curse still runs, and a name too functional loses the customer before the menu loads",
+        "Welding the name to salad: light bakery, snack lines and corporate catering are all on the roadmap, and a bowl-locked name retells its story at every shelf",
+        "All virtue, no hook: \"healthy living\" platitudes look identical in a delivery feed, and a name without teeth gets swiped past the thumbnail",
+        "Overcommitting to numbers: a \"500 kcal\" name becomes false-advertising evidence the day the menu changes — keep the math in the macros, not the marquee",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
