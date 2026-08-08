@@ -1,4 +1,4 @@
-import { Brain, Check, History, ListChecks, Loader2, Pencil, SlidersHorizontal, Square } from "lucide-react";
+import { Brain, Check, History, Lightbulb, ListChecks, Loader2, Pencil, SlidersHorizontal, Square } from "lucide-react";
 
 import { DomainRow, SkeletonRow } from "@/components/domain-row";
 import { useI18n } from "@/lib/i18n";
@@ -113,6 +113,7 @@ export function AgentPage({
   target,
   running,
   logs,
+  lowYieldHint,
   onEdit,
   onStop,
   shortlistHas,
@@ -129,6 +130,8 @@ export function AgentPage({
   target: number;
   running: boolean;
   logs: LogEntry[];
+  /** R247：多轮低产出提示（建议勾选更多后缀或放宽命名路线） */
+  lowYieldHint?: boolean;
   onEdit: () => void;
   onStop: () => void;
   shortlistHas: (domain: string) => boolean;
@@ -224,6 +227,12 @@ export function AgentPage({
               </li>
             )}
           </ol>
+          {lowYieldHint && (
+            <div className="mt-3 flex items-start gap-2 rounded-lg border border-gold/30 bg-gold-dim px-3 py-2.5 text-xs leading-relaxed text-txt1">
+              <Lightbulb className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold" />
+              <span>{t("agent.lowYieldHint")}</span>
+            </div>
+          )}
         </div>
       </aside>
 

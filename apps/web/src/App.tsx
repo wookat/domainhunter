@@ -175,6 +175,8 @@ export default function App() {
   const [currentRound, setCurrentRound] = useState(0);
   const [running, setRunning] = useState(false);
   const [error, setError] = useState("");
+  // R247：多轮低产出提示（worker 每次搜索至多发一次 hint 事件）
+  const [lowYieldHint, setLowYieldHint] = useState(false);
   const [logs, setLogs] = useState<LogEntry[]>([]);
   const [elapsedSec, setElapsedSec] = useState<number | undefined>(saved?.elapsedSec);
   const [locked, setLocked] = useState<Set<string>>(() => new Set(saved?.locked ?? []));
@@ -276,6 +278,8 @@ export default function App() {
         setRounds((rs) => rs.map((r) => (r.round === round ? { ...r, proposed: r.proposed + fresh.length } : r)));
         return [...prev, ...fresh];
       });
+    } else if (ev.type === "hint") {
+      if (ev.kind === "lowYield") setLowYieldHint(true);
     } else if (ev.type === "understanding") {
       setAiUnderstanding({ core: ev.core ?? "", style: ev.style ?? "", scene: ev.scene ?? "" });
     } else if (ev.type === "done") {
@@ -322,6 +326,7 @@ export default function App() {
     }
     setLogs([]);
     setError("");
+    setLowYieldHint(false);
     setRunning(true);
     setMode("agent");
     startedAtRef.current = Date.now();
@@ -690,6 +695,7 @@ export default function App() {
           target={TARGET}
           running={running}
           logs={logs}
+          lowYieldHint={lowYieldHint}
           onEdit={() => {
             abortRef.current?.abort();
             setRunning(false);
