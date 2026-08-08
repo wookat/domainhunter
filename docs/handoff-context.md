@@ -1,6 +1,6 @@
 # DomainHunter 交接文档（handoff-context）
 
-> 依 company-os 交接上下文制度维护。换会话/换负责人时把本文档注入新会话即可接手。最后更新：2026-08-08（R178，最新已合并批次 R169，进行中批次见文末）。
+> 依 company-os 交接上下文制度维护。换会话/换负责人时把本文档注入新会话即可接手。最后更新：2026-08-08（R250，生产在线版本为集成分支 `deploy/r192-r195` + R222–R246 系列修复，进行中批次见文末）。
 
 ## 1. 项目一页纸
 
@@ -26,9 +26,9 @@
 | `/prices` | prices-page.tsx | TLD 价格总览（Porkbun 实时 + ≈ 静态参考价兜底） |
 | `/why` | why-page.tsx | 产品定位页 |
 | `/mcp` | mcp-page.tsx | MCP 接入文档页（GET）；同路径 POST 是 MCP server |
-| `/tld/:tld` | tld-page.tsx | TLD 指南内容页（数据 `content/tlds.ts`，60 个） |
-| `/guide/:slug` | guide-page.tsx | 行业命名指南（`content/guides.ts`，62 个含在途） |
-| `/vs/:slug` | compare-page.tsx | TLD 对比页（`content/compares.ts`，84 个含在途） |
+| `/tld/:tld` | tld-page.tsx | TLD 指南内容页（数据 `content/tlds.ts`，120 个，截至 R237） |
+| `/guide/:slug` | guide-page.tsx | 行业命名指南（`content/guides.ts`，116 个，截至 R240） |
+| `/vs/:slug` | compare-page.tsx | TLD 对比页（`content/compares.ts`，150 个，截至 R241） |
 | `/s/:id` | share-page.tsx | 分享快照只读页（SSR 注入动态 og:image） |
 
 SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 worker 侧做 SSR meta 替换 + hreflang（`?lang=zh|en`）+ JSON-LD（FAQPage/Article/Breadcrumb）+ 首屏 SSR 骨架（`injectSsrSkeleton`）+ CSS 内联 + modulepreload。
@@ -105,13 +105,25 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 - **LCP**：R150 做内容页 SSR 骨架后 /tld LCP 曾持平未改善，R174 用延迟挂载 + 跳过数据 chunk preload 修复；后续改动注意别回退。
 - **旧 KV 核验缓存无 expiresAt**：R160 之前写入的 `d:{domain}` 无 expiresAt 字段，靠 TTL（≤24h）自然过期自愈，无需迁移。
 - sitemap `<lastmod>` 是手写常量 `CONTENT_LASTMOD`（worker.ts），增删内容页记得更新。
+- **R239 审计遗留观察项**（报告见 `docs/qa/audit-r239.md`，修复后待下一轮生产审计复验）：
+  - P1-1 EN word 配额补发失效 → R243 已加二次重试 + 补发轮独立 guard 计数，未经生产复验；
+  - P3-4 zh 偏拼音场景产品结果差（5 轮仅 1 个可注册，双字全拼 .com/.cn 存量枯竭）→ 产品层未动，待评估自动扩 TLD 或提前提示；
+  - refine 轮点踩依从性（P3-2）与 theme 标注（P3-3）已在 R250 做 prompt 级强化 + 解析后降级兜底，同样待生产复验。
+- **verify 脚本回归基线**：`scripts/verify-r196/r222–r225/r238/r243–r246/r250.mjs` 全绿；`verify-pinyin.mjs` 与 `verify-meaning-paren.mjs` 用 transformSync 不打包，ai.ts 引入相对依赖（brand-blocklist 等）后已无法单文件加载，属历史遗留失效（其用例已被后续 bundle 式脚本覆盖）。
 
 ## 6. 进行中与工作惯例
 
 - **批次迭代**：短周期批次 Rxxx 编号（commit/PR 标题带 `(rNNN)`）。惯常一批 = 多个并行子会话，各自独立分支 + PR → 集成分支 `deploy/<batch>` 构建部署 → 生产真实回归（`?cb=` 防缓存）→ PR 合回 main。
+- **R231–R250 重大变化速览**：
+  - **内容量**：TLD 指南 120 个（R233/R237）、行业命名指南 116 篇（R235/R240）、/vs 对比页 150 个（R234/R236/R241）。
+  - **可靠性/UX**：R230/R231 未知路径与未知 slug 显式 404（noindex）；R232 移动端触控目标 ≥44px。
+  - **guard 可观测性（R238）**：`/api/ai-search` 每轮 proposed 事件带 GuardStats（各防线丢弃计数 + 补发/重试触发），支撑首轮定量审计。
+  - **审计**：R239 AI 猎名质量审计 v4（`docs/qa/audit-r239.md`，首轮 guard 定量，总拦截率 28.3%）；R242 零 AI 全站生产审计。
+  - **R243–R246 防线修复（针对 R239 发现）**：R243 word 补发二次重试 + 补发轮 guard 独立计数（P1-1/P3-1）；R244 拼音引用校验不再被缺失「全拼」声明绕过（P2-1）；R245 zh 字符白名单纳入拼音声调字符 + charsetViolation 码点样本（P2-2）；R246 EN 前缀锤点收紧 + zh 幻影 ASCII 引用防线（P2-3/P2-4）。
+  - **R250 prompt 微调**：theme 标注 few-shot 反例（nundina/canaryio/ledgeledger）+ word 内嵌 TLD 解析后降级 coined 兜底（P3-3）；refine 点踩形态硬禁令前置到 hint 开头 + 强命令式（P3-2）。
+  - **部署状态**：生产在线版本 = `deploy/r192-r195` 集成分支 + R222–R246 系列提交（R250 尚未部署）；新工作从该分支切出，PR base 仍为 main。
 - **四道把关**（company-os）：qa-engineer 测试 → user-experience-officer 体验走查 → 内部交叉测试 → 合规与安全审计，全过才交付。
-- **截至本文档提交时的在途 PR**（已开发未合 main，部分可能已通过 deploy 分支上线）：
-  - #146 perf(r174) /tld LCP、#145 feat(r172) 行业指南 56→62、#144 feat(r173) 对比页 78→84、#143 fix(r171) 哨兵到期日裁剪、#142 fix(r170) /prices 全静态参考价 notice、#141 docs(r167) 零 AI 生产审计报告。
+- **截至本文档更新时的在途工作**（部分已通过 deploy/r192-r195 集成分支上线、PR 待合回 main）：R243–R246 防线修复、R250 prompt 微调（本批，未部署）；用 `gh pr list` 确认实时状态与最新 Rxxx 编号。
 
 ## 7. 新会话接手 checklist
 
