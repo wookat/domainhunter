@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const KEY = "domainhunter:monitor";
 const WEBHOOK_KEY = "domainhunter:monitor-webhook";
@@ -20,12 +20,20 @@ function load(): string[] {
   return [];
 }
 
-function save(domains: string[]) {
+const SYNC_EVENT = "domainhunter:monitor-sync";
+
+/** 基于最新存储合并写入，并通知同页其他 useMonitor 实例 */
+function mutate(domain: string, enabled: boolean): Set<string> {
+  const next = new Set(load());
+  if (enabled) next.add(domain);
+  else next.delete(domain);
   try {
-    localStorage.setItem(KEY, JSON.stringify(domains));
+    localStorage.setItem(KEY, JSON.stringify([...next]));
   } catch {
     // ignore
   }
+  window.dispatchEvent(new Event(SYNC_EVENT));
+  return next;
 }
 
 export function loadWebhook(): string {
@@ -58,10 +66,20 @@ export function isValidWebhook(url: string): boolean {
 export function useMonitor() {
   const [monitored, setMonitored] = useState<Set<string>>(() => new Set(load()));
 
+  useEffect(() => {
+    const sync = () => setMonitored(new Set(load()));
+    window.addEventListener(SYNC_EVENT, sync);
+    window.addEventListener("storage", sync);
+    return () => {
+      window.removeEventListener(SYNC_EVENT, sync);
+      window.removeEventListener("storage", sync);
+    };
+  }, []);
+
   const isMonitored = useCallback((domain: string) => monitored.has(domain), [monitored]);
 
   const toggle = useCallback(async (domain: string, status?: string): Promise<{ ok: boolean; full?: boolean }> => {
-    const enabled = !monitored.has(domain);
+    const enabled = !load().includes(domain);
     const res = await fetch("/api/monitor", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -70,15 +88,9 @@ export function useMonitor() {
     if (!res) return { ok: false };
     if (res.status === 429) return { ok: false, full: true };
     if (!res.ok) return { ok: false };
-    setMonitored((prev) => {
-      const next = new Set(prev);
-      if (enabled) next.add(domain);
-      else next.delete(domain);
-      save([...next]);
-      return next;
-    });
+    setMonitored(mutate(domain, enabled));
     return { ok: true };
-  }, [monitored]);
+  }, []);
 
   /** 保存 webhook 并同步到已监控域名的服务端条目 */
   const setWebhook = useCallback(async (url: string): Promise<boolean> => {
