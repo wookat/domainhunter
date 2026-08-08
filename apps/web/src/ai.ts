@@ -240,7 +240,7 @@ export function checkPinyinLabel(label: string): PinyinCheck {
 // 维护一份小型生僻字黑名单（命名场景中 LLM 高频产出、但远在常用 3500 字之外的
 // 雅字/地名用字/古字），命中只降 readability 不丢弃（启发式不可靠，宁放过不误杀）。
 const RARE_CJK_BLACKLIST = new Set<string>(
-  "岑蕨飏麓隰珩岫崧翀昶垚犇淼焱燊滢潆澍泠浥沚洄湮芃荇菡蘅芩荻莜菀蓁玥珉璟瑭霈翊珞彧赟旻嵘峤郴滁黔黟".split(""),
+  "岑蕨飏麓隰珩岫崧翀昶垚犇淼焱燊滢潆澍泠浥沚洄湮芃荇菡蘅芩荻莜菀蓁玥珉璟瑭霈翊珞彧赟旻嵘峤郴滁黔黟莨撅瑟谧".split(""),
 );
 
 export const RARE_CHAR_PENALTY_PER_CHAR = 10;
@@ -546,6 +546,64 @@ export function citesPhantomWord(label: string, meaning: string): boolean {
   return false;
 }
 
+// ---------------- LLM 候选数组解析 + 截断修复（R197） ----------------
+// 生产坏例（R195 审计 P1-2）：候选数组 JSON 被截断/格式坏 → SyntaxError → 整轮 0 结果。
+// 解析失败先做截断修复：按括号深度扫描，截到最后一个完整的顶层对象再补 "]"；
+// 修复后仍失败才抛 llm-bad-json，走 generateAiCandidates 既有的一次退避重试；
+// 重试仍失败时 worker 向流内 emit error 事件，前端据此展示「重试本轮」CTA。
+
+/** 数组文本中每个顶层对象闭合 "}" 的下标（跳过字符串内的括号/引号） */
+export function topLevelObjectEnds(raw: string): number[] {
+  let depth = 0;
+  let inString = false;
+  let escaped = false;
+  const ends: number[] = [];
+  for (let i = 0; i < raw.length; i++) {
+    const ch = raw[i];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (ch === "\\") escaped = true;
+      else if (ch === '"') inString = false;
+      continue;
+    }
+    if (ch === '"') inString = true;
+    else if (ch === "{" || ch === "[") depth++;
+    else if (ch === "}" || ch === "]") {
+      depth--;
+      // 深度回到 1 说明刚闭合一个数组顶层对象
+      if (ch === "}" && depth === 1) ends.push(i);
+    }
+  }
+  return ends;
+}
+
+/** 从 LLM 回复文本中解析候选数组；坏 JSON 先截断修复，仍失败抛错交由上层重试 */
+export function parseCandidateArray(text: string): Partial<AiCandidate>[] {
+  const match = text.match(/\[[\s\S]*\]/);
+  // 截断输出可能缺失收尾 "]"，正则不命中时从首个 "[" 起取到串尾进修复
+  const bracket = text.indexOf("[");
+  const raw = match ? match[0] : bracket >= 0 ? text.slice(bracket) : null;
+  if (raw === null) throw new Error("llm-bad-output");
+  try {
+    const v = JSON.parse(raw) as unknown;
+    if (Array.isArray(v)) return v as Partial<AiCandidate>[];
+  } catch {
+    // 从最后一个顶层对象闭合处往前逐个尝试截断 + 补 "]"：
+    // 输出被截断时最后一个闭合处即可修复；对象间缺逗号等坏格式时
+    // 往前回退能抢救出坏点之前的完整对象
+    const ends = topLevelObjectEnds(raw);
+    for (let k = ends.length - 1; k >= 0; k--) {
+      try {
+        const v = JSON.parse(raw.slice(0, ends[k] + 1) + "]") as unknown;
+        if (Array.isArray(v) && v.length > 0) return v as Partial<AiCandidate>[];
+      } catch {
+        // 该截断点仍坏，继续往前尝试
+      }
+    }
+  }
+  throw new Error("llm-bad-json");
+}
+
 // ---------------- EN meaning 连贯性启发式（R196，P1-1） ----------------
 // 生产坏例：反思轮（round≥2）EN meaning 大面积词语碎片堆砌（"alapa vein memory,
 // floor n look, for times shaded privately" 型）。两条保守条件同时不满足才丢弃（宁放过不误杀）：
@@ -666,9 +724,7 @@ async function generateOnce(
   if (!res.ok) throw new Error(`llm-http-${res.status}`);
   const data = (await res.json()) as { choices: { message: { content: string } }[] };
   const text = data.choices[0]?.message?.content ?? "";
-  const match = text.match(/\[[\s\S]*\]/);
-  if (!match) throw new Error("llm-bad-output");
-  const arr = JSON.parse(match[0]) as Partial<AiCandidate>[];
+  const arr = parseCandidateArray(text);
   const seen = new Set<string>();
   const out: AiCandidate[] = [];
   const clamp = (v: unknown) => {
