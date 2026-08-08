@@ -70,9 +70,11 @@ export function PricesPage() {
       </p>
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{t("prices.title")}</h1>
       <p className="mt-3 text-[15px] leading-relaxed text-txt1">{t("prices.intro")}</p>
-      {meta?.stale && meta.fetchedAt !== null && (
+      {meta?.stale && (
         <p className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-[13px] text-amber-600">
-          {t("prices.staleNote", { hours: Math.max(1, Math.round((Date.now() - meta.fetchedAt) / 3600_000)) })}
+          {meta.fetchedAt !== null
+            ? t("prices.staleNote", { hours: Math.max(1, Math.round((Date.now() - meta.fetchedAt) / 3600_000)) })
+            : t("prices.staleNoteNoData")}
         </p>
       )}
 
