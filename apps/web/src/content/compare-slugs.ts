@@ -153,6 +153,12 @@ export const COMPARE_SLUGS = [
   "consulting-vs-expert",
   "software-vs-app",
   "services-vs-agency",
+  "marketing-vs-agency",
+  "capital-vs-fund",
+  "guru-vs-expert",
+  "systems-vs-network",
+  "ventures-vs-capital",
+  "tips-vs-blog",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

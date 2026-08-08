@@ -3325,6 +3325,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Advertising & brand agencies", "Design & digital marketing studios", "PR & growth teams", "Insurance, realty & recruiting brokers"],
     },
   },
+  "marketing-vs-agency": {
+    slug: "marketing-vs-agency",
+    a: "marketing",
+    b: "agency",
+    zh: {
+      title: ".marketing 和 .agency 怎么选：专业能力与机构身份的对比",
+      metaDescription: ".marketing 说「我们做的是营销」，.agency 说「我们是一家机构」。对比两个乙方后缀的焦点、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一批客户，两种自我介绍。.marketing 报专业——营销代理、增长与投放团队、营销 SaaS、营销博客与课程用 name.marketing，域名直接说「营销是我们的手艺」，卖专业能力时最点题，「领域 + .marketing」（content、email 类）还能精准命中垂类搜索；Identity Digital 运营，注册约 $6、续费约 $33/年；代价是九个字母偏长，主体名务必短。.agency 报身份——广告与品牌代理、设计工作室、公关与增长团队用 name.agency，agency 一词自带「创意 + 团队作战」的行业气质，且不锁定营销一个领域，设计、公关、招聘中介都能用；首年促销常见十几块钱、续费约 $24/年，比 .marketing 便宜。判断标准：卖「营销这门专业」——增长顾问、投放服务、营销工具 → .marketing 的点题更准；卖「机构与团队」——全案代理、多业务线、创意比稿 → .agency 的身份更配。业务未来可能超出营销范围的，选 .agency 不锁死；只做营销且想吃垂类搜索的，选 .marketing。共同注意：两个都是乙方后缀，获客靠案例与口碑，域名的角色是作品集官网与线索入口，首屏放案例比放形容词有用。",
+      pickA: ["营销代理与增长团队", "营销 SaaS 与投放工具", "营销博客与课程", "想吃垂类搜索的营销专家"],
+      pickB: ["广告与品牌全案代理", "设计与公关工作室", "业务多元的创意团队", "想要更便宜续费的乙方"],
+    },
+    en: {
+      title: ".marketing vs .agency: The Expertise or The Firm",
+      metaDescription:
+        ".marketing says \"marketing is what we do\"; .agency says \"we are a firm\". Compare the two vendor suffixes on focus, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same clients, two introductions. .marketing states the expertise — marketing agencies, growth and performance teams, martech SaaS, marketing blogs and courses on name.marketing spell out \"marketing is our craft\", sharpest when you sell the skill itself, and field + .marketing (content, email) nails vertical searches; run by Identity Digital at about $6 to register and $33/yr to renew; the cost is nine letters, so keep the front word short. .agency states the identity — advertising and brand agencies, design studios, PR and growth teams on name.agency inherit the word's built-in vibe of creativity and teamwork, and it doesn't lock you to marketing: design, PR and recruiting firms wear it too; promo first years often run a couple of dollars with renewal near $24/yr — cheaper than .marketing. The test: selling the marketing discipline — growth consulting, paid media, martech tools → .marketing's precision fits; selling the firm and the team — full-service accounts, multiple practice lines, creative pitches → .agency's badge is truer. If the business may outgrow marketing, .agency keeps the door open; if marketing is the whole game and vertical search matters, .marketing earns its length. Shared notes: both are vendor suffixes — clients come through portfolios and referrals, so the domain is the case-study site and lead front door; lead with work, not adjectives.",
+      pickA: ["Marketing agencies & growth teams", "Martech SaaS & media tools", "Marketing blogs & courses", "Vertical-search-hungry specialists"],
+      pickB: ["Full-service ad & brand agencies", "Design & PR studios", "Multi-line creative firms", "Cheaper renewal for vendors"],
+    },
+  },
+  "capital-vs-fund": {
+    slug: "capital-vs-fund",
+    a: "capital",
+    b: "fund",
+    zh: {
+      title: ".capital 和 .fund 怎么选：机构全名与一只基金的对比",
+      metaDescription: ".capital 是资管机构的正装全名，.fund 指向一只具体的基金或募资计划。对比两个资本后缀的语义、价格与合规注意，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在管钱，指向不同。.capital 是机构——私募与风投基金、资产管理与量化机构、家族办公室用 name.capital，英文基金名以 Capital 结尾是行业惯例，「品牌词 + .capital」读出来就是注册主体全名，管理规模越大越合身；Identity Digital 运营，注册约 $6、续费约 $57/年，对资管行业完全无感。.fund 是那只基金——单一基金、主题募资计划、公益与社区基金用 name.fund，「主题 + .fund」（climate.fund 类）直接说明钱往哪去，比 .capital 更具体也更亲民；注册约 $9、续费约 $57/年，与 .capital 同档。判断标准：域名代表「管理公司」——多只基金、长期机构品牌、对 LP 的正式门面 → .capital 的机构感更配；域名代表「一笔钱」——单一主题基金、募资落地页、捐赠与资助计划 → .fund 的指向更准。不少机构两个都用：管理公司在 name.capital，旗下主题基金用 theme.fund 分站。共同注意：金融语义自带监管预期，页面要放清楚主体信息与合规声明，否则容易被当作募资骗局；主体名务必稳重，姓氏与意象词是主流，轻佻词毁掉信任感。",
+      pickA: ["私募与风投管理公司", "资产管理与量化机构", "家族办公室", "面向 LP 的机构门面"],
+      pickB: ["单一主题基金与募资计划", "公益与社区基金", "捐赠与资助落地页", "「主题 + .fund」的具体叙事"],
+    },
+    en: {
+      title: ".capital vs .fund: The Firm or The Pool of Money",
+      metaDescription:
+        ".capital reads as the asset manager's full name; .fund points at one specific fund or raise. Compare the two finance suffixes on semantics, pricing and compliance, then hunt names available on both.",
+      verdict:
+        "Both manage money; they point at different things. .capital is the firm — PE and VC managers, asset managers and quant shops, family offices on name.capital ride the industry convention of fund names ending in \"Capital\", so brand word + .capital reads out as the registered entity's full name, and the bigger the AUM the better it fits; run by Identity Digital at about $6 to register and $57/yr to renew — invisible to an asset manager. .fund is the pool — a single fund, a thematic raise, charity and community funds on name.fund say where the money goes, and theme + .fund (think climate.fund) is more concrete and approachable than .capital; about $9 to register and $57/yr to renew, the same tier. The test: the domain represents the management company — multiple funds, a long-term institutional brand, the formal front door for LPs → .capital's institutional register fits; the domain represents one pot of money — a thematic fund, a raise landing page, grants and endowments → .fund's specificity is truer. Many firms run both: the manager on name.capital, thematic vehicles on theme + .fund satellites. Shared notes: financial semantics invite regulatory scrutiny — publish your legal entity and compliance details or risk reading like a scam; and front words must be steady — surnames and imagery words dominate, flippancy kills trust.",
+      pickA: ["PE & VC management firms", "Asset managers & quant shops", "Family offices", "Institutional front door for LPs"],
+      pickB: ["Single thematic funds & raises", "Charity & community funds", "Grant & endowment pages", "Theme + .fund storytelling"],
+    },
+  },
+  "guru-vs-expert": {
+    slug: "guru-vs-expert",
+    a: "guru",
+    b: "expert",
+    zh: {
+      title: ".guru 和 .expert 怎么选：亲切人设与一本正经的对比",
+      metaDescription: ".guru 带一点自嘲的亲切专家人设，.expert 是一本正经的能力断言。对比两个专家后缀的语气、价格陷阱与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在说「这事问我」，语气差一档。.guru 是笑着说的——教程与攻略站、修理与生活技能达人、兴趣领域 KOL 用 name.guru，自带一点幽默的专家人设，面向大众的内容用它更好记更易传播（fitness.guru 比 fitness.expert 顺口）；Identity Digital 运营，注册约 $3 是便宜档，续费约 $35/年，注意差价。.expert 是板着脸说的——细分领域专家、技术顾问、付费问答与专业咨询用 name.expert，断言更正式，企业客户与严肃场景里更立得住；注册约 $7 很低，但续费约 $50/年是高档——两个都是典型的首年引流定价，预算必须按续费核算。判断标准：面向大众、内容轻快、靠传播起量 → .guru 的亲切更配；面向企业、客单价高、靠履历背书 → .expert 的正式更准。监管行业（法律、医疗、金融）的「专家」表述可能触碰广告合规，两个后缀都要谨慎措辞，正式 B2B 咨询用 .consulting 更稳。共同注意：两个都是「自封」的形容词，内容深度与案例撑不起人设时会反噬——空壳站用专家后缀只会放大质疑；获客靠内容与口碑，域名的角色是个人品牌门面，首屏放真实履历与案例。",
+      pickA: ["教程与攻略内容站", "生活技能与修理达人", "兴趣领域 KOL 与自媒体", "想要便宜首年与传播度"],
+      pickB: ["细分领域技术顾问", "付费问答与专业咨询", "面向企业的严肃场景", "想要更正式的断言"],
+    },
+    en: {
+      title: ".guru vs .expert: The Wink or The Straight Face",
+      metaDescription:
+        ".guru wears expertise with a wink; .expert asserts it straight-faced. Compare the two expert suffixes on tone, pricing traps and fit, then hunt names available on both.",
+      verdict:
+        "Both say \"ask me about this\"; the delivery differs by one notch. .guru says it smiling — how-to and tutorial sites, repair and life-skill teachers, hobby authorities on name.guru wear a self-aware expert persona, and for mass-audience content it's more memorable and shareable (fitness.guru rolls better than fitness.expert); run by Identity Digital at about $3 to register — the cheap tier — and about $35/yr to renew, so mind the gap. .expert says it straight-faced — niche specialists, technical advisors, paid Q&A and professional consulting on name.expert make the more formal claim, which stands up better with corporate clients and serious contexts; about $7 to register but ~$50/yr to renew — the high tier. Both are classic first-year-bait pricing, so budget strictly on the renewal. The test: mass audience, light content, growth through sharing → .guru's warmth fits; corporate clients, high ticket sizes, credential-backed trust → .expert's formality is truer. In regulated fields (legal, medical, financial), \"expert\" claims can trip advertising rules on either suffix — word carefully, and for formal B2B consulting .consulting reads safer still. Shared notes: both are self-awarded adjectives that backfire without real depth behind them — a thin site on an expert suffix amplifies doubt; clients come through content and word of mouth, so the domain is the personal-brand front door — lead with real credentials and cases.",
+      pickA: ["How-to & tutorial content sites", "Life-skill & repair teachers", "Hobby authorities & creators", "Cheap first year, shareable name"],
+      pickB: ["Niche technical advisors", "Paid Q&A & professional advice", "Corporate-facing serious contexts", "The more formal claim"],
+    },
+  },
+  "systems-vs-network": {
+    slug: "systems-vs-network",
+    a: "systems",
+    b: "network",
+    zh: {
+      title: ".systems 和 .network 怎么选：成套工程与互联叙事的对比",
+      metaDescription: ".systems 卖「我们造的是正经系统」的工程气质，.network 卖「协议即网络」的互联叙事。对比两个基建后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是基建后缀，叙事分两路。.systems 说「我们造系统」——基础设施与 DevOps 团队、企业系统集成商、IoT 与嵌入式公司、安全与监控平台用 name.systems，域名自带工程房间的嗡嗡声，「单音节词 + .systems」是基建初创的标准写法；Identity Digital 运营，注册约 $12、续费约 $28/年，温和档。.network 说「我们连节点」——CDN、VPN 与节点服务、区块链协议与公链、行业社群与人脉平台用 name.network，「协议即网络」的叙事让它成为链圈主流选择，mesh.network 读出来就是产品定位；首年常见几美元、续费约 $20/年，比 .systems 还便宜。判断标准：产品是「一套自成体系的工程」——数据库、操作系统、监控系统、嵌入式 → .systems 的成套感更准；产品是「连接节点的网络」——协议、P2P、社群、联盟 → .network 的互联叙事更配。社会意义的网络（行业社群、播客联盟）只有 .network 能接，.systems 接不了。共同注意：两个后缀都是七字母偏长，主体名务必短；都偏冷硬工程气质，2C 产品另选后缀；这类团队获客靠技术声誉（GitHub、技术博客、会议演讲），域名的角色是工程品牌门面与文档站。",
+      pickA: ["基础设施与 DevOps 团队", "企业系统集成与行业系统", "IoT 与嵌入式公司", "安全与监控平台"],
+      pickB: ["区块链协议与公链", "CDN/VPN 与节点服务", "行业社群与人脉平台", "媒体与播客联盟"],
+    },
+    en: {
+      title: ".systems vs .network: The Machine or The Mesh",
+      metaDescription:
+        ".systems hums \"we build serious systems\"; .network tells the \"protocol is the network\" story. Compare the two infrastructure suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are infrastructure suffixes; the stories fork. .systems says \"we build the machine\" — infrastructure and DevOps teams, enterprise integrators, IoT and embedded companies, security and monitoring platforms on name.systems hum like a server room, and one syllable + .systems is the infra-startup standard; run by Identity Digital at about $12 to register and $28/yr to renew — the mild tier. .network says \"we connect the nodes\" — CDNs, VPNs and node services, blockchain protocols and chains, industry communities and professional platforms on name.network ride the \"protocol is the network\" narrative that made it a crypto mainstay; mesh.network reads as a positioning statement; a few dollars first year and around $20/yr to renew — cheaper than .systems. The test: the product is a self-contained engineered whole — databases, operating systems, monitoring stacks, embedded → .systems' completeness is truer; the product is a mesh of connected nodes — protocols, P2P, communities, collectives → .network's story fits. And the social sense of \"network\" (industry communities, podcast collectives) only works on .network — .systems can't carry it. Shared notes: both suffixes run seven letters, so front words must stay short; both wear a cold engineering register — consumer brands look elsewhere; and these teams win business on technical reputation (GitHub, engineering blogs, conference talks), so the domain is the engineering brand front door and docs site.",
+      pickA: ["Infrastructure & DevOps teams", "Enterprise integrators & industry systems", "IoT & embedded companies", "Security & monitoring platforms"],
+      pickB: ["Blockchain protocols & chains", "CDN/VPN & node services", "Industry communities & platforms", "Media & podcast collectives"],
+    },
+  },
+  "ventures-vs-capital": {
+    slug: "ventures-vs-capital",
+    a: "ventures",
+    b: "capital",
+    zh: {
+      title: ".ventures 和 .capital 怎么选：早期押注与机构规模的对比",
+      metaDescription: ".ventures 偏早期与冒险的押注语气，.capital 偏机构与规模的正装语气。对比两个基金后缀的阶段感、价格与命名传统，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是基金后缀，阶段感不同。.ventures 是押注——风投与天使基金、创业工作室、孵化器与加速器、连续创业者的控股主体用 name.ventures，英文基金名带 ventures 是行业标准写法（Sequoia、a16z 全名都有），域名直接用后缀省掉主体里的重复，语气偏早期与冒险；Identity Digital 运营，注册约 $6、续费约 $48/年。.capital 是正装——私募与风投管理公司、资产管理与量化机构、家族办公室用 name.capital，Capital 结尾同样是行业惯例（Benchmark Capital 类），但语气更机构、更规模化，管理规模越大越合身；注册约 $6、续费约 $57/年，比 .ventures 略贵。判断标准：品牌想传达「我们押注未来」——早期基金、venture studio、孵化器 → .ventures 的冒险感更准；品牌想传达「我们管理资本」——成长期与并购基金、资管机构、家办 → .capital 的分量更配。同一家机构做大后从 .ventures 换到 .capital 的叙事也常见——先按十年后的定位选，省一次换域名。命名传统两边一致：姓氏与合伙人组合最主流，主题基金用「领域 + 后缀」（climate、bio 类）一眼点明赛道。共同注意：机构与资本语气，单一产品或 2C 品牌都不合适；基金品牌重信任，主体名稳重为先，页面放清楚主体与合规信息。",
+      pickA: ["风投与天使基金", "创业工作室与孵化器", "连续创业者控股主体", "早期与冒险的品牌语气"],
+      pickB: ["成长期与并购基金", "资产管理与量化机构", "家族办公室", "机构与规模的品牌分量"],
+    },
+    en: {
+      title: ".ventures vs .capital: The Bet or The Institution",
+      metaDescription:
+        ".ventures leans early-stage and adventurous; .capital leans institutional and scaled. Compare the two fund suffixes on stage, pricing and naming tradition, then hunt names available on both.",
+      verdict:
+        "Both are fund suffixes; the stage differs. .ventures is the bet — VC and angel funds, venture studios, incubators and accelerators, serial founders' holdcos on name.ventures ride the industry-standard trailing word (Sequoia and a16z both carry \"ventures\" in their full names), the TLD saves repeating it in the name, and the register leans early and adventurous; run by Identity Digital at about $6 to register and $48/yr to renew. .capital is the suit — PE and VC management firms, asset managers and quant shops, family offices on name.capital ride the equally traditional \"Capital\" ending (think Benchmark Capital), but the register is institutional and scaled: the bigger the AUM, the better it fits; about $6 to register and $57/yr to renew, slightly above .ventures. The test: the brand says \"we bet on the future\" — early-stage funds, venture studios, incubators → .ventures' adventure fits; the brand says \"we manage capital\" — growth and buyout funds, asset managers, family offices → .capital's weight is truer. Graduating from .ventures to .capital as a firm scales is a familiar story — pick for where you'll be in ten years and skip the rebrand. Naming tradition is shared: surnames and partner combinations dominate, and thesis funds say the lane as field + suffix (climate, bio). Shared notes: both carry an institutional-capital register — wrong for a single product or consumer brand; fund brands trade on trust, so keep front words steady and publish entity and compliance details.",
+      pickA: ["VC & angel funds", "Venture studios & incubators", "Serial founders' holdcos", "Early-stage, adventurous register"],
+      pickB: ["Growth & buyout funds", "Asset managers & quant shops", "Family offices", "Institutional, scaled weight"],
+    },
+  },
+  "tips-vs-blog": {
+    slug: "tips-vs-blog",
+    a: "tips",
+    b: "blog",
+    zh: {
+      title: ".tips 和 .blog 怎么选：实用承诺与写作园地的对比",
+      metaDescription: ".tips 承诺「点开就有实用建议」，.blog 承诺「这里有人持续在写」。对比两个内容后缀的预期、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是内容后缀，承诺不同。.tips 承诺有用——攻略与技巧站、垂类内容博客、工具型 newsletter、生活妙招与省钱指南用 name.tips，「领域 + .tips」（travel.tips、tax.tips 类）读出来就是搜索框里的查询词，天然贴合搜索意图；Identity Digital 运营，注册约 $8、续费约 $25/年，温和档。.blog 承诺有人——个人写作者、品牌内容分站、长文与观点输出用 name.blog，格式一眼即懂：这里是持续更新的写作园地，深度长文与个人叙事都装得下；注册约 $3、续费约 $21/年，比 .tips 还便宜，对个人创作者可长期负担。判断标准：内容是「一条条可执行的建议」——攻略、清单、妙招、速查 → .tips 的实用预期更准；内容是「一个人的持续输出」——观点、随笔、深度文章、个人品牌 → .blog 的园地感更配。SEO 玩法也分两路：.tips 吃「领域 + tips」的长尾搜索词，.blog 吃作者名与品牌词的认知积累。注意 .tips 设定了轻内容预期，严肃研究站用 .blog 更合；.blog 则不适合做电商或 SaaS 主站，两个都定位内容资产。共同注意：内容站的域名是承诺，更新频率与质量撑不起时任何后缀都救不了；起量靠搜索与订阅，首屏放最好的内容而不是自我介绍。",
+      pickA: ["攻略与技巧站", "生活妙招与省钱指南", "工具型 newsletter", "吃长尾搜索的垂类站"],
+      pickB: ["个人写作者主阵地", "品牌内容分站（brand.blog）", "深度长文与观点输出", "想要最便宜的续费"],
+    },
+    en: {
+      title: ".tips vs .blog: The Promise of Useful or The Promise of Writing",
+      metaDescription:
+        ".tips promises useful advice on click; .blog promises a living writing home. Compare the two content suffixes on expectations, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are content suffixes; the promises differ. .tips promises useful — how-to and technique sites, niche blogs, utility newsletters, life hacks and savings guides on name.tips read like the search query itself (travel.tips, tax.tips), naturally aligned with search intent; run by Identity Digital at about $8 to register and $25/yr to renew — the mild tier. .blog promises a person — independent writers, brand content satellites, long-form and opinion writing on name.blog carry an instantly understood format: a living, updating writing home that fits deep essays and personal narrative alike; about $3 to register and $21/yr to renew — cheaper than .tips and sustainable for individual creators. The test: the content is actionable items — guides, checklists, hacks, quick answers → .tips' utility expectation is truer; the content is one voice writing over time — opinions, essays, deep dives, a personal brand → .blog's home-base feel fits. The SEO games differ too: .tips harvests field + tips long-tail queries, while .blog compounds recognition around an author or brand name. Note .tips sets a light-content expectation — serious research sites wear .blog better; and .blog looks amateur on an e-commerce or SaaS main site — both are content assets, not storefronts. Shared notes: a content domain is a promise, and no suffix survives thin or stale content; growth comes from search and subscriptions, so lead the first screen with your best work, not an about page.",
+      pickA: ["How-to & technique sites", "Life hacks & savings guides", "Utility newsletters", "Long-tail-search vertical sites"],
+      pickB: ["Independent writers' home base", "Brand content satellites (brand.blog)", "Long-form essays & opinion", "Cheapest renewal for creators"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
