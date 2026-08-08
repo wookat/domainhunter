@@ -331,6 +331,9 @@ export const hubCrumbKicker = (hub: "tld" | "guide" | "vs", current: string, lan
 
 export const hubCrumbLabel = (hub: "tld" | "guide" | "vs", lang: Lang): string => HUB_CRUMB[lang][hub];
 
+/** hub 页过滤输入框的等高占位（输入框水合后才出现，预留 44px 高度避免布局跳动） */
+const HUB_FILTER_PLACEHOLDER = `<div class="mt-6 h-11"></div>`;
+
 const hubSection = (heading: string, count: number, itemsHtml: string, headingCls = "text-base font-bold") =>
   `<section class="mt-8"><h2 class="${headingCls}">${escapeHtml(heading)}<span class="tnum ml-2 font-mono text-xs font-normal text-txt2">${count}</span></h2>${itemsHtml}</section>`;
 
@@ -340,7 +343,7 @@ const hubCard = (href: string, title: string, oneLiner: string, titleCls: string
 /** /tld 全文正文（tld-hub-page.tsx 首次渲染的静态部分） */
 export function tldHubBlocks(lang: Lang): string[] {
   const meta = HUB_META.tld[lang];
-  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}<a href="/prices?lang=${lang}" class="text-brand hover:underline">${escapeHtml(meta.pricesLink)}</a>${lang === "zh" ? "。" : "."}</p>`;
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}<a href="/prices?lang=${lang}" class="text-brand hover:underline">${escapeHtml(meta.pricesLink)}</a>${lang === "zh" ? "。" : "."}</p>${HUB_FILTER_PLACEHOLDER}`;
   const sections = tldHubGroups().map((g) =>
     hubSection(
       g[lang],
@@ -354,7 +357,7 @@ export function tldHubBlocks(lang: Lang): string[] {
 /** /guide 全文正文（guide-hub-page.tsx 首次渲染的静态部分） */
 export function guideHubBlocks(lang: Lang): string[] {
   const meta = HUB_META.guide[lang];
-  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>`;
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>${HUB_FILTER_PLACEHOLDER}`;
   const sections = guideHubGroups().map((g) =>
     hubSection(
       g[lang],
@@ -368,7 +371,7 @@ export function guideHubBlocks(lang: Lang): string[] {
 /** /vs 全文正文（compare-hub-page.tsx 首次渲染的静态部分） */
 export function compareHubBlocks(lang: Lang): string[] {
   const meta = HUB_META.vs[lang];
-  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>`;
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>${HUB_FILTER_PLACEHOLDER}`;
   const sections = compareHubGroups().map((g) =>
     `<section class="mt-8"><h2 class="font-mono text-base font-bold">.${g.tld}<span class="tnum ml-2 text-xs font-normal text-txt2">${g.slugs.length}</span></h2><div class="mt-3 flex flex-wrap gap-2">${g.slugs
       .map((slug) => `<a href="/vs/${slug}?lang=${lang}" class="flex min-h-[44px] items-center rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">.${TLD_COMPARES[slug].a} vs .${TLD_COMPARES[slug].b}</a>`)

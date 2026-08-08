@@ -1,13 +1,25 @@
+import { useMemo, useState } from "react";
 import { HUB_META, tldHubGroups, tldOneLiner } from "@/content/hubs";
 import { useI18n } from "@/lib/i18n";
 import { usePageTitle } from "@/lib/use-page-title";
+import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
 
 /** /tld 索引 hub：全部 TLD 注册指南，按用途分组。DOM 与 worker 的 tldHubBlocks 骨架逐字一致。 */
 export function TldHubPage() {
   const { lang } = useI18n();
   const meta = HUB_META.tld[lang];
   usePageTitle(meta.title);
-  const groups = tldHubGroups();
+  const [query, setQuery] = useState("");
+  const groups = useMemo(() => tldHubGroups(), []);
+  const total = useMemo(() => groups.reduce((n, g) => n + g.tlds.length, 0), [groups]);
+  const filtered = useMemo(
+    () =>
+      groups
+        .map((g) => ({ ...g, tlds: g.tlds.filter((tld) => hubMatch(query, [tld, `.${tld}`, tldOneLiner(tld, "zh"), tldOneLiner(tld, "en")])) }))
+        .filter((g) => g.tlds.length > 0),
+    [groups, query],
+  );
+  const shown = filtered.reduce((n, g) => n + g.tlds.length, 0);
 
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -20,7 +32,9 @@ export function TldHubPage() {
         </a>
         {lang === "zh" ? "。" : "."}
       </p>
-      {groups.map((g) => (
+      <HubFilter placeholder={lang === "zh" ? "筛选后缀…" : "Filter TLDs…"} value={query} onChange={setQuery} shown={shown} total={total} />
+      {filtered.length === 0 && <HubFilterEmpty lang={lang} onClear={() => setQuery("")} />}
+      {filtered.map((g) => (
         <section key={g.id} className="mt-8">
           <h2 className="text-base font-bold">
             {g[lang]}
