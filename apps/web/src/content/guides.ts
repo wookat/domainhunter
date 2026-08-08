@@ -5677,6 +5677,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  aiart: {
+    slug: "aiart",
+    tlds: [
+      { tld: "ai", zh: "AI 绘画工具的品类后缀，一眼说清「这是 AI 产品」", en: "The category suffix for AI art tools — instantly signals what you are" },
+      { tld: "art", zh: "语义直给「艺术」，把创作属性写进域名里", en: "Literally \"art\" — the creative promise written into the domain itself" },
+      { tld: "com", zh: "面向订阅付费的信任默认值，商业化阶段最稳", en: "The trust default once you charge subscriptions" },
+    ],
+    zh: {
+      label: "AI 绘画",
+      title: "AI 绘画工具怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "AI 绘画与生成式创作工具命名指南：造物动词、艺术意象、模型代号感等 5 种思路，Midjourney/DALL·E/Krea 等好名字拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的 AI 绘画工具域名。",
+      intro:
+        "AI 绘画工具的名字要同时讨好两群完全不同的人：把它当生产力的设计师，和把它当魔法的普通用户。前者在意专业与可控——名字要像一件靠谱的工具；后者在意惊奇与想象力——名字要像一扇通往异世界的门。Midjourney 选了后者：它不描述「文生图」这个功能，而是把「旅程中途」的诗意悬在那里，让每一张生成图都像旅途中的风景。这揭示了 AI 绘画命名的核心洞察：功能会被下一代模型碾平，唯有想象力的许诺不会过期。同时这个赛道更新极快、同质化极重，「AI + 画/Art/Gen」的组合名已经泛滥成灾，搜索结果里挤满了 AIArtGen 式的名字——起这种名字等于自愿匿名。另一个现实约束是内容平台传播：AI 绘画作品在小红书、X、Discord 里裂变，名字会以水印、话题标签和「用 X 跑的」口播形式出现，必须短、独特、可搜索——搜出来第一屏全是你，才接得住每一次作品带来的流量。",
+      namingIdeas: [
+        "造物动词化：用 dream、imagine、conjure、render 等「无中生有」的动词做词根——AI 绘画的核心体验是念咒成像，动词名把魔法感写进品牌（Imagine、DreamUp）",
+        "艺术史借词：借 muse（缪斯）、atelier（画室）、canvas（画布）、fresco（壁画）等艺术传统词汇——让新技术站在旧艺术的肩膀上，气质瞬间高级",
+        "模型代号感：像 DALL·E、SDXL 那样起一个带科幻感的代号——面向开发者与专业用户的工具用代号名反而显得硬核可信",
+        "旅程与异世界意象：Midjourney 式的「过程感」命名——生成的乐趣一半在等待与抽卡，名字可以许诺一段旅程而非一个结果",
+        "水印测试：名字会以水印和「用 X 跑的」形式出现在每张作品上——6 个字母以内、无歧义拼写、搜索结果可独占，三条全过再定名",
+      ],
+      cases: [
+        { name: "Midjourney", takeaway: "「旅程中途」：完全不描述功能，把生成过程诗化成一段旅途——AI 绘画命名里想象力许诺压倒功能描述的标杆之作" },
+        { name: "DALL·E", takeaway: "Dalí（达利）+ WALL·E（瓦力）的双重致敬：超现实主义大师与皮克斯机器人，一个名字同时说清「艺术」与「AI」两个基因" },
+        { name: "Krea", takeaway: "从 create 削出的四字母造词：实时生成工具用最短的「创造」词根，配 krea.ai 域名——短、可搜、品类后缀直给的教科书组合" },
+        { name: "Leonardo", takeaway: "直接借达·芬奇之名：文艺复兴通才的名字给游戏资产生成工具注入「大师工坊」气质——艺术史人名是这个品类独有的可用词库" },
+        { name: "Firefly", takeaway: "萤火虫：Adobe 给 AI 生成起了个轻盈的自然意象名，刻意避开 AI/Gen 字眼——大厂用意象名把新技术驯化成温和的创作伙伴" },
+      ],
+      pitfalls: [
+        "AI + Art/Gen/画 的万金油组合：AIArtGen 式名字已泛滥成灾，搜索结果永远挤不进第一屏，等于自愿匿名",
+        "蹭知名模型名：名字里带 Stable/Diffusion/GPT 等他人商标，做大之日就是收律师函之时——平台方对生态命名的容忍度正在收紧",
+        "锁死「绘画」品类：模型正在长出视频、3D、音乐能力，名字焊死「画/draw/image」，扩品类时就得改名重来",
+        "忽略水印场景：名字太长或拼写有歧义，作品裂变时观众搜不到你——每一次传播都在漏水",
+      ],
+    },
+    en: {
+      label: "AI art tools",
+      title: "How to Name an AI Art Tool: Strategies, Case Studies & Domains",
+      metaDescription:
+        "AI image generation tool naming guide: creation verbs, art-history borrowings, model-codename energy, breakdowns of Midjourney/DALL·E/Krea, recommended TLDs and pitfalls — then hunt an available AI art tool domain with AI.",
+      intro:
+        "An AI art tool's name has to charm two very different crowds at once: designers who treat it as production gear, and everyone else who treats it as magic. The first crowd wants professional control — the name should feel like a dependable tool; the second wants wonder — the name should feel like a door to another world. Midjourney chose wonder: it never describes text-to-image, it suspends the poetry of being \"mid-journey,\" so every render feels like scenery along the way. That is the core insight of this category: features get flattened by the next model generation, but a promise of imagination never expires. Meanwhile the space moves brutally fast and looks brutally alike — \"AI + Art/Gen\" mashups have flooded search results, and naming yourself AIArtGen is volunteering for anonymity. The other hard constraint is distribution: AI art spreads through X, Discord and image feeds as watermarks, hashtags and \"made with X\" voice-overs — the name must be short, distinctive and searchable, owning page one so every shared image sends traffic home.",
+      namingIdeas: [
+        "Verb the act of creation: dream, imagine, conjure, render — the core experience is incantation-to-image, and creation verbs write the magic into the brand (Imagine, DreamUp)",
+        "Borrow from art history: muse, atelier, canvas, fresco — let the new technology stand on old art's shoulders and the name instantly reads cultured",
+        "Channel model-codename energy: a sci-fi-tinged codename à la DALL·E or SDXL reads hardcore and credible to developers and pro users",
+        "Promise a journey, not an output: Midjourney-style process naming — half the joy is the wait and the gacha pull, so the name can sell the voyage rather than the result",
+        "Run the watermark test: the name lives on every shared image as a watermark and a \"made with X\" mention — six letters or fewer, unambiguous spelling, ownable search results; pass all three before committing",
+      ],
+      cases: [
+        { name: "Midjourney", takeaway: "\"Mid-journey\": zero feature description, the generation process poeticized into a voyage — the benchmark for imagination-promise beating feature-description in this category" },
+        { name: "DALL·E", takeaway: "A double homage — Dalí plus WALL·E: the surrealist master and the Pixar robot, one name carrying both the \"art\" and the \"AI\" gene" },
+        { name: "Krea", takeaway: "Four letters carved from \"create\": the real-time generation tool took the shortest creation root and paired it with krea.ai — the textbook short + searchable + category-TLD combo" },
+        { name: "Leonardo", takeaway: "Borrowing da Vinci outright: the Renaissance polymath's name gives a game-asset generator a master's-workshop aura — art-history names are a word bank only this category can raid" },
+        { name: "Firefly", takeaway: "A weightless nature image: Adobe deliberately avoided AI/Gen words entirely — the big-company play of domesticating new technology into a gentle creative companion" },
+      ],
+      pitfalls: [
+        "The AI + Art/Gen filler mashup: AIArtGen-style names have flooded the space — you'll never own page one of search, which is volunteering for anonymity",
+        "Riding a famous model's name: Stable/Diffusion/GPT in your name invites a cease-and-desist the day you matter — platform tolerance for ecosystem naming is tightening",
+        "Welding the name to \"image\": models are growing video, 3D and audio limbs — a name locked to draw/image forces a rename at every category expansion",
+        "Ignoring the watermark scene: a long or ambiguously spelled name means viewers can't find you when work goes viral — every share leaks",
+      ],
+    },
+  },
+  campsite: {
+    slug: "campsite",
+    tlds: [
+      { tld: "com", zh: "预订与付费场景的信任默认值，订单转化最稳", en: "The trust default for bookings — converts most reliably" },
+      { tld: "fun", zh: "露营卖的就是快乐，语义直给的氛围后缀", en: "Camping sells joy — the vibe suffix says it outright" },
+      { tld: "land", zh: "「营地即一片天地」，土地语义与营地生意天然契合", en: "A campground is literally a piece of land — the semantics fit natively" },
+    ],
+    zh: {
+      label: "露营地",
+      title: "露营地怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "露营地与营地运营品牌命名指南：山野意象、栖居动词、在地文化词等 5 种思路，ACAMPO/大热荒野/Hipcamp 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的露营地域名。",
+      intro:
+        "露营地的名字是整个体验的第一根营钉：客人在小红书刷到的定位标签、在导航里输入的目的地、在朋友圈晒图时打的话题，都是这个名字。露营生意的本质是「贩卖一段离开城市的时光」，名字必须先于照片完成氛围铺垫——听到名字的一瞬间，帐篷、篝火、星空就该在脑海里支起来。这决定了露营地命名与普通民宿的分野：民宿卖房间，营地卖场景，名字的画面感权重远高于舒适感。同时露营地是强 LBS 生意，客人用「城市 + 露营」搜索，名字要与在地地名、山名、水名产生绑定——「XX 山谷」「XX 溪畔」既是名字也是搜索入口。还要预判业态延展：如今的营地早已不止帐篷，飞盘、桨板、亲子自然教育、企业团建都在菜单上，名字若锁死「露营」二字，业态长出来后反而被名字困住。最后是复购逻辑：露营客群高度社群化，营地要做的是「回头客的据点」，名字要经得起「这周末还去 X」的日常召唤。",
+      namingIdeas: [
+        "山野意象词根：谷、溪、丘、野、荒、星空——营地卖的是场景，意象词让名字自带画面，听一遍就能脑补出帐篷与篝火",
+        "栖居动词：扎营、落脚、栖、宿、camp、nest——「住下来」的动作感让名字有了归属感与召唤力",
+        "在地绑定：把山名、水名、村名嵌进名字（XX 谷营地）——露营是 LBS 生意，在地词既是名字也是「城市+露营」的搜索入口",
+        "反差修辞：「大热荒野」式的冷热对撞——荒野本该冷清，偏用「大热」点燃它；反差词让名字在一排「XX 营地」里跳出来",
+        "业态留白：用「野/营/地/谷」等大词根替代「露营」二字——飞盘、桨板、团建长出来后，名字依然装得下",
+      ],
+      cases: [
+        { name: "大热荒野", takeaway: "「大热」与「荒野」的温度对撞：荒野本该人迹罕至，偏许诺它会大热——反差修辞制造记忆点，同时暗合「把露营做成大众生意」的野心" },
+        { name: "Hipcamp", takeaway: "hip（时髦）+ camp：两个词根说清「年轻人的露营」，把老派户外翻新成生活方式——气质词+品类词的标准合成打法" },
+        { name: "ACAMPO", takeaway: "西语「露营」的异域拼写：比 camp 多一层旅行感与陌生化，五个字母朗朗上口——借外语词根做品牌差异化的轻巧示范" },
+        { name: "KOA", takeaway: "Kampgrounds of America 的三字母缩写：把长机构名压缩成可呼喊的符号，配黄色 logo 沉淀七十年——连锁营地网络用缩写建立体系感的鼻祖" },
+        { name: "嗨King", takeaway: "「嗨」的情绪+「King」的戏谑：中英混搭直给快乐属性，在亲子与团建客群里一遍记住——娱乐向营地把情绪词当品牌资产" },
+      ],
+      pitfalls: [
+        "名字锁死「露营」：业态必然向飞盘、桨板、团建、自然教育延展，「XX露营地」会让新业务师出无名",
+        "意象美但无法导航：过于诗意的名字在地图 App 里搜不到、念不清，客人在山路上迷路时会诅咒这个名字",
+        "忽略在地搜索：客人用「城市+露营」找营地，名字与所在地毫无绑定，等于把搜索流量拱手让人",
+        "与网红营地撞名蹭名：露营圈小红书传播集中，撞名会把自己的好评导给别人、把别人的差评引给自己",
+      ],
+    },
+    en: {
+      label: "Campgrounds",
+      title: "How to Name a Campground: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Campground and camp-operations naming guide: wilderness imagery, dwelling verbs, local-place binding, breakdowns of Hipcamp/KOA and more, recommended TLDs and pitfalls — then hunt an available campground domain with AI.",
+      intro:
+        "A campground's name is the first tent stake of the whole experience: it's the location tag guests scroll past, the destination they type into navigation, the hashtag on their photo dump. The business sells a stretch of time away from the city, so the name must set the scene before any photo loads — tents, campfire and stars should pitch themselves in the mind at first hearing. That's what separates campground naming from lodging naming: a guesthouse sells rooms, a campground sells scenery, so imagery outweighs comfort in the name. It's also a fiercely local-search business — guests search \"camping near [city],\" so binding the name to a valley, creek or hill makes it both a brand and a search entrance. Plan for expansion too: modern campgrounds serve frisbee, paddleboards, family nature education and corporate retreats — a name welded to \"camping\" becomes a cage once the menu grows. And since campers are intensely communal and repeat-driven, the name must survive the weekly summons: \"back to X this weekend?\"",
+      namingIdeas: [
+        "Wilderness imagery roots: valley, creek, ridge, wild, starfield — you're selling scenery, and imagery words come with the tent and campfire pre-rendered",
+        "Dwelling verbs: camp, nest, roost, settle — the act of staying gives the name belonging and a built-in call to action",
+        "Bind to the place: weave the mountain, river or village name in (X Valley Camp) — camping is local-search business, and place words are both brand and \"camping near [city]\" entrance",
+        "Contrast rhetoric: collide temperatures the way 大热荒野 (\"Red-Hot Wilderness\") does — the wilderness should be desolate, so promising heat makes the name jump out of a row of generic camps",
+        "Leave room for the menu: prefer big roots (wild, grounds, valley) over the word \"camping\" — when frisbee, paddleboards and retreats arrive, the name still fits",
+      ],
+      cases: [
+        { name: "Hipcamp", takeaway: "hip + camp: two roots that say \"camping for the young,\" renovating old-school outdoors into a lifestyle — the standard quality-word + category-word blend" },
+        { name: "KOA", takeaway: "Kampgrounds of America compressed to three shoutable letters: seventy years of yellow-sign equity — the founding example of a camp network building system-feel on an acronym" },
+        { name: "ACAMPO", takeaway: "The Spanish-flavored spelling of \"camp\": one layer more wanderlust and estrangement than plain camp, five letters that roll off the tongue — a light touch of foreign-root differentiation" },
+        { name: "大热荒野", takeaway: "\"Red-hot\" colliding with \"wilderness\": the wild should be empty, yet the name promises it will be packed — contrast rhetoric as memory hook, and a statement of ambition to mainstream camping" },
+        { name: "Autocamp", takeaway: "auto + camp: airstream-and-drive-up glamping explained in two syllables — when the model itself is novel, a literal blend does the education for free" },
+      ],
+      pitfalls: [
+        "Welding the name to \"camping\": the menu will grow frisbee, paddleboards, retreats and nature school — \"X Campground\" leaves the new lines nameless",
+        "Poetry that can't navigate: a name too lyrical to type into a maps app gets cursed on a dark mountain road — beauty must survive the search box",
+        "Ignoring local search: guests hunt \"camping near [city]\" — a name with zero place binding hands that traffic to the campground next door",
+        "Shadowing a viral campground's name: camping spreads through concentrated social feeds — a near-collision routes your praise to them and their complaints to you",
+      ],
+    },
+  },
+  tcm: {
+    slug: "tcm",
+    tlds: [
+      { tld: "com", zh: "健康消费决策重信任，.com 仍是最稳的选择", en: "Health purchases run on trust — .com converts most reliably" },
+      { tld: "life", zh: "养生即生活方式，语义与品牌主张天然同频", en: "Wellness is a lifestyle — the suffix says it natively" },
+      { tld: "center", zh: "线下馆所的机构感后缀，预约场景顺理成章", en: "The institutional suffix for clinics and studios — bookings feel natural" },
+    ],
+    zh: {
+      label: "中医养生",
+      title: "中医养生品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "中医养生馆、艾灸推拿与草本品牌命名指南：经典借词、草本意象、堂号传统等 5 种思路，同仁堂/固生堂/东阿阿胶等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的养生品牌域名。",
+      intro:
+        "中医养生品牌的名字站在两个时代的接缝处：一端是《黄帝内经》与百年堂号的厚重传统，一端是 90 后带着保温杯泡枸杞的新养生消费。名字必须同时完成两件事：借传统建立专业信任——中医的信任逻辑是「越老越可信」，堂、号、斋这些字自带年份感；又要卸下传统的门槛感——年轻人怕的不是中医，是「老气、苦、说教」，名字要把养生翻译成轻盈的生活方式。这个品类还有一条独特的红线：医疗广告合规。名字与文案不能暗示疗效，「治」「愈」「灵」类字眼在注册与投放两端都会踩雷，命名时就要避开。词库上，中医是被严重低估的宝藏：本草纲目里的草木名（当归、茯苓、青黛）、经络穴位（涌泉、百会）、节气时令（谷雨、白露）都是自带文化底蕴又未被商标占尽的富矿。最后想清楚客群分层：面向阿姨们的社区艾灸馆和面向白领的都市理疗空间，名字的「中药浓度」应该完全不同——前者越传统越可信，后者要把中医包装成一杯好喝的草本拿铁。",
+      namingIdeas: [
+        "堂号传统：堂、号、斋、庐收尾（同仁堂、固生堂）——中医信任逻辑是越老越可信，堂号字自带百年老店的年份感",
+        "本草借词：当归、茯苓、青黛、半夏——本草纲目是未被商标占尽的富矿，草木名自带东方美学与药香",
+        "节气时令：谷雨、白露、冬至——节气词把「顺时养生」的中医哲学写进名字，且天然适合做内容营销日历",
+        "身体动词白话化：面向年轻客群用「松、疏、通、养」等轻盈动词——把经络推拿翻译成「给身体松绑」的生活方式语言",
+        "合规预检：避开治、愈、灵、特效类字眼——医疗广告法在注册与投放两端都设了雷区，名字合规是这个品类的第一道门槛",
+      ],
+      cases: [
+        { name: "同仁堂", takeaway: "「同修仁德，济世养生」压缩成两个字+堂号：仁字立价值观，堂字立年份——三百年品牌证明堂号传统是中医信任的最强载体" },
+        { name: "固生堂", takeaway: "「固本生元」的功效承诺+堂号背书：连锁中医馆把疗愈逻辑压进两个字，又借堂字接上老字号谱系——新品牌嫁接传统信任的标准打法" },
+        { name: "东阿阿胶", takeaway: "产地+品类的双料绑定：东阿县的水熬阿胶是地理标志，产地名即品质证书——道地药材品牌把「哪里产」变成最硬的信任状" },
+        { name: "小罐茶", takeaway: "器物+品类的极简白话：不借文化大词，用「小罐」的具象降低传统品类门槛——给中医养生年轻化命名的跨界参照", },
+        { name: "Herbivore", takeaway: "「食草动物」的俏皮借词：欧美草本护肤品牌把 herb 藏进一个有画面的单词——中医品牌出海时「草本」概念的轻盈表达范本" },
+      ],
+      pitfalls: [
+        "疗效暗示踩合规红线：治、愈、灵、根治类字眼在商标注册与广告投放两端都会被卡，名字先合规再谈美感",
+        "老气到劝退年轻人：面向都市白领还起「XX 老中医养生堂」，目标客群在门口就掉头——中药浓度要匹配客群",
+        "玄学感透支信任：过度堆砌阴阳五行玄学词，在监管趋严与科学化审视下反而显得不专业",
+        "生僻字自设门槛：本草词库里的燚、蘡、薁类生僻字念不出打不出，口碑传播与搜索两头堵死",
+      ],
+    },
+    en: {
+      label: "TCM & wellness",
+      title: "How to Name a TCM Wellness Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Traditional Chinese medicine and herbal wellness naming guide: heritage hall names, materia-medica borrowings, solar-term words, breakdowns of Tong Ren Tang and more, recommended TLDs and pitfalls — then hunt an available wellness domain with AI.",
+      intro:
+        "A TCM wellness brand's name stands at the seam of two eras: on one side the weight of classical texts and century-old pharmacy halls, on the other a generation of young urbanites steeping goji berries in thermos cups. The name must do two jobs at once: borrow tradition to earn clinical trust — in Chinese medicine, older reads truer, and hall-name characters like 堂 (tang) carry built-in decades — while shedding tradition's intimidation, because what young customers fear isn't the medicine but the mustiness, bitterness and lecturing; the name must translate wellness into a light lifestyle. The category also has a unique red line: health-advertising compliance. Names implying cures or miracle effects trip both trademark review and ad platforms, so screen the wording early. As for raw material, TCM is an underrated treasury: herb names from the classical materia medica (angelica, poria, indigo), meridian points, and the 24 solar terms are culture-dense word banks not yet strip-mined by trademarks. Finally, segment your audience: a neighborhood moxibustion studio for retirees and a downtown meridian spa for office workers demand completely different \"herbal density\" — for the former, more tradition means more trust; for the latter, package the medicine like a well-made herbal latte.",
+      namingIdeas: [
+        "End with a hall name: 堂/号/斋 suffixes (Tong Ren Tang, Gushengtang) — TCM trust compounds with age, and hall characters carry century-old-shop patina for free",
+        "Borrow from the materia medica: angelica (danggui), poria (fuling), pinellia (banxia) — the classical herb canon is a trademark-rich, culture-dense word bank still barely mined",
+        "Use the solar terms: Grain Rain, White Dew, Winter Solstice — seasonal-timing words write the \"live with the seasons\" philosophy into the name and gift you a content calendar",
+        "Translate to light verbs for the young: loosen, unknot, flow, nourish — sell meridian massage as \"untying the body,\" lifestyle language instead of clinic language",
+        "Pre-screen for compliance: avoid cure/heal/miracle words — health-advertising law mines both trademark registration and ad delivery; compliance is this category's first gate",
+      ],
+      cases: [
+        { name: "Tong Ren Tang", takeaway: "\"Shared benevolence\" compressed into two characters plus the hall suffix: one character stakes the values, one stakes the years — three centuries proving hall-name tradition is TCM's strongest trust vehicle" },
+        { name: "Gushengtang", takeaway: "A consolidate-the-root efficacy promise plus hall-name endorsement: the clinic chain packs its therapeutic logic into two characters and grafts onto the heritage lineage via 堂 — the standard play for new brands borrowing old trust" },
+        { name: "Dong'e Ejiao", takeaway: "Place plus product, doubly bound: donkey-hide gelatin simmered in Dong'e county water is a geographic indication — provenance brands turn \"where it's made\" into the hardest possible credential" },
+        { name: "Xiao Guan Cha", takeaway: "A vessel plus the category, in plain words: no grand culture-speak, just \"little can tea\" lowering a heritage category's threshold — the cross-category reference for youthifying TCM naming" },
+        { name: "Herbivore", takeaway: "A playful borrowed word with herb hidden inside: the Western botanical skincare brand shows how lightly the \"herbal\" concept can travel — the template for TCM brands naming for export" },
+      ],
+      pitfalls: [
+        "Implying cures and tripping compliance: cure/heal/miracle wording gets blocked at both trademark review and ad platforms — clear compliance before chasing beauty",
+        "Mustiness that repels the young: naming a downtown meridian spa \"Old Doctor Wang's Longevity Hall\" turns the target customer around at the door — match herbal density to the audience",
+        "Mysticism that overdraws trust: piling on yin-yang-five-elements jargon reads unprofessional under tightening regulation and scientific scrutiny",
+        "Obscure characters as self-sabotage: unpronounceable, untypeable rare characters from the herb canon choke both word of mouth and search",
+      ],
+    },
+  },
+  deskcraft: {
+    slug: "deskcraft",
+    tlds: [
+      { tld: "shop", zh: "文创零售语义直给，线上店的顺手选择", en: "Retail literalism — the natural pick for a creative goods store" },
+      { tld: "ink", zh: "「墨水」与文具纸品天然同频，文艺感直给", en: "Ink is stationery's native element — the suffix reads literary by default" },
+      { tld: "com", zh: "电商信任默认值，独立站付费转化最稳", en: "The trust default for an independent store — converts most reliably" },
+    ],
+    zh: {
+      label: "桌面文创",
+      title: "桌面文创品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "桌面周边与文创品牌命名指南：器物拟人、纸墨意象、生活切片等 5 种思路，九口山/TRAVELER'S COMPANY/LAMY 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的文创品牌域名。",
+      intro:
+        "桌面文创卖的从来不是笔和本子，是「理想生活的切片」：一个手帐胶带品牌贩卖的是把日子过成杂志的幻想，一个键帽工作室贩卖的是打工人对 8 小时案头的温柔反抗。所以文创命名的第一原则是气质先行——名字要先成为一种审美立场，再成为一个商标。这个品类的传播场景高度视觉化：小红书的桌搭笔记、开箱视频、市集摊位的招牌，名字会和产品一起入镜，要经得起「印在包装上好不好看」的凝视。同时文创消费是典型的收集型复购：用户买的第三卷胶带和第一卷之间隔着「成为这个品牌的人」的身份认同，名字要能撑起一个可归属的小宇宙——九口山、TRAVELER'S COMPANY 都自带世界观。词库上，纸、墨、字、印、案、格这些器物词根自带文房传统，而「山、月、日常、房间」类生活意象词能把器物升维成生活方式。最后注意价格带匹配：九块九的贴纸店和三百块的手工笔记本，名字的「精致浓度」完全不同——前者要亲切好记，后者要有作品署名感。",
+      namingIdeas: [
+        "器物词根活化：纸、墨、印、格、案——文房词自带书桌传统，组合出的名字天然「像文创」（纸品牌用纸字，印章品牌用印字）",
+        "生活切片意象：山、月、房间、日常、周末——把器物升维成生活方式，名字先贩卖一种过日子的理想",
+        "世界观命名：像 TRAVELER'S COMPANY 那样直接命名一个身份或世界——收集型消费需要归属感，名字就是小宇宙的入口",
+        "数字+名词的陌生化：九口山式的无理据组合——毫无逻辑反而独占记忆，且商标与域名几乎必然可注册",
+        "包装凝视测试：名字印在胶带轴、笔杆、包装盒上是否好看——文创名字的字形本身就是设计资产，中文字形与英文字母形都要过审美关",
+      ],
+      cases: [
+        { name: "九口山", takeaway: "数字+量词+名词的无理据组合：完全不解释、无从联想，反而在一排「XX 纸品」里独占记忆——陌生化命名让小品牌拿到大独占" },
+        { name: "TRAVELER'S COMPANY", takeaway: "直接命名一种身份：买本子的人买的是「旅人」人设——世界观命名的极致，产品只是这个身份的道具" },
+        { name: "LAMY", takeaway: "创始人姓氏截短成四字母：德国工业设计的克制美学从名字开始——文具品牌用短姓氏名建立「设计器物」而非「文具耗材」的定位" },
+        { name: "Midori", takeaway: "日语「绿色」的罗马字：一个颜色词承载自然、生长与纸的联想，全球用户都念得出——借非英语常见词做全球化文创品牌的范本" },
+        { name: "Moleskine", takeaway: "借传奇复活的名字：查特文笔下海明威们用的「鼹鼠皮本子」，品牌把文学传说注册成了商标——文创命名里叙事资产变品牌资产的孤例" },
+      ],
+      pitfalls: [
+        "文艺词撞车重灾区：拾光、慢生活、时光类名字在文创圈已泛滥，看似有气质实则匿名",
+        "精致浓度与价格带错配：九块九贴纸店起了个奢侈品名，或三百块手工本叫「可爱多多」——名字要匹配客单价的心理预期",
+        "忽略字形审美：名字要印在产品与包装上，字形笨重或字母组合难看，等于给设计师埋雷",
+        "锁死单一品类：从胶带做到笔再做到桌面收纳是文创品牌的宿命，名字带「贴/胶/纸」字，扩品时处处别扭",
+      ],
+    },
+    en: {
+      label: "Desk & stationery",
+      title: "How to Name a Stationery & Desk Goods Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Stationery and desk accessories brand naming guide: scholar's-object roots, life-slice imagery, worldview naming, breakdowns of TRAVELER'S COMPANY/LAMY/Moleskine, recommended TLDs and pitfalls — then hunt an available stationery brand domain with AI.",
+      intro:
+        "Desk goods brands never sell pens and notebooks — they sell slices of an ideal life: a washi tape brand sells the fantasy of living like a magazine spread, a keycap studio sells the office worker's gentle rebellion against eight desk-bound hours. So the first law of stationery naming is vibe before commerce — the name must be an aesthetic stance before it is a trademark. Distribution is intensely visual: desk-setup posts, unboxing videos, market-stall signs — the name appears on camera next to the product and must survive the \"does it look good printed on the packaging\" stare. The category also runs on collector's repurchase: between a customer's first tape roll and their third sits the identity of becoming this brand's person, so the name should open a small universe worth belonging to — TRAVELER'S COMPANY ships an entire worldview in its name. For raw material, scholar's-object roots (paper, ink, print, grid, desk) carry the stationery tradition natively, while life-slice words (mountain, moon, room, weekend) elevate objects into a way of living. Finally match refinement to price band: a $2 sticker shop and a $50 handbound notebook need entirely different name registers — approachable and catchy for one, an artist's-signature gravity for the other.",
+      namingIdeas: [
+        "Activate scholar's-object roots: paper, ink, print, grid, desk — stationery-native words make a name feel like the category instantly (paper brands wear \"paper,\" stamp brands wear \"print\")",
+        "Sell a life-slice: mountain, moon, room, weekend, everyday — elevate the object into a way of living; the name markets an ideal day before it markets a product",
+        "Name a worldview: like TRAVELER'S COMPANY, name an identity outright — collector's commerce needs belonging, and the name is the door to the small universe",
+        "Estrange with number + noun: 九口山-style unmotivated combinations — zero logic means total memorability, and the trademark and domain are almost guaranteed available",
+        "Run the packaging stare test: the name lives printed on tape spools, pen barrels and boxes — its letterforms are a design asset, so both the glyphs and the Latin spelling must pass an aesthetic review",
+      ],
+      cases: [
+        { name: "TRAVELER'S COMPANY", takeaway: "Naming an identity outright: notebook buyers are buying the \"traveler\" persona — worldview naming at its purest, with the product as a prop for the identity" },
+        { name: "LAMY", takeaway: "A founder surname clipped to four letters: German industrial restraint starting from the name itself — the short-surname play that positions pens as designed objects, not office consumables" },
+        { name: "Midori", takeaway: "Japanese for \"green,\" romanized: one color word carrying nature, growth and paper associations, pronounceable worldwide — the template for globalizing a stationery brand on a non-English common word" },
+        { name: "Moleskine", takeaway: "A name resurrected from legend: the \"moleskin\" notebooks of Chatwin's Hemingway lore, registered into a trademark — the singular case of narrative assets converted into brand assets in stationery" },
+        { name: "Field Notes", takeaway: "The object's use case as the name: two plain words promising pockets, fieldwork and honest utility — Americana literalism proving plain language can out-brand poetry" },
+      ],
+      pitfalls: [
+        "The artsy pile-up: \"slow living\" and \"lost time\" names have flooded the category — they feel tasteful and function as anonymity",
+        "Refinement mismatched to price: a luxury-register name on a $2 sticker shop, or a cutesy name on a $50 handbound notebook — the name must match the wallet's expectations",
+        "Ignoring letterform aesthetics: the name gets printed on product and packaging — clumsy glyphs or ugly letter clusters are landmines buried for your own designer",
+        "Welding to one category: tape brands grow into pens and desk organizers as destiny — a name carrying \"tape/sticker/paper\" chafes at every expansion",
+      ],
+    },
+  },
+  petmemorial: {
+    slug: "petmemorial",
+    tlds: [
+      { tld: "com", zh: "重决策的殡葬服务需要最大信任，.com 是底线配置", en: "A high-stakes farewell service needs maximum trust — .com is the baseline" },
+      { tld: "life", zh: "「纪念一生」的语义反差，温柔化解殡葬的沉重", en: "Commemorating a life — the suffix softens the weight with warmth" },
+      { tld: "art", zh: "纪念品与爪印画等衍生服务的艺术化表达", en: "For paw-print art and keepsake lines — the artistic register" },
+    ],
+    zh: {
+      label: "宠物殡葬",
+      title: "宠物殡葬品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "宠物殡葬与纪念服务命名指南：彼岸意象、告别动词、纪念词根等 5 种思路，彩虹桥/Lap of Love 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的宠物纪念品牌域名。",
+      intro:
+        "宠物殡葬是所有行业里命名容错率最低的一个：客户在人生最脆弱的时刻搜索你、拨通你、把毛孩子的最后一程托付给你，名字里任何一丝轻佻、商业气或阴冷感都会立刻出局。这个品类的命名要完成一次艰难的平衡：既不能像人类殡葬那样肃穆到冰冷——宠物主需要的是「送别家人」的温度而非仪式的威严；也不能像宠物用品那样活泼——彩虹色的可爱名字在悲伤面前是冒犯。全球宠物圈已经给出了共同的情感锚点：「彩虹桥」——宠物离世后先去桥那头等主人的传说，是这个行业最重要的意象资产，围绕桥、彼岸、星星、云朵、回家的词根都在这个情感谱系上。命名视角也很关键：好名字往往站在宠物的视角（「等你」「回家」）或陪伴者的视角（「陪你走完最后一程」），而不是服务商视角（「XX 宠物殡葬服务中心」）。最后是搜索现实：客户在深夜哭着搜「宠物火化 城市名」，品牌名之外要预留服务词+城市词的搜索承接——名字负责被记住与被信任，落地页负责被搜到。",
+      namingIdeas: [
+        "彼岸意象：彩虹桥、星、云、月、彼岸——全球宠物圈共同的情感锚点，这个谱系上的词自带「它只是先走一步」的安慰",
+        "告别动词温柔化：送、别、归、眠、安——把「火化/殡葬」的硬词翻译成「送它回家」「安然入眠」的温柔动作",
+        "宠物视角命名：等你、回家、门口——站在毛孩子的视角说话，比服务商视角的「XX 服务中心」动人一个量级",
+        "纪念词根：忆、念、印、永恒、keepsake——殡葬只是开始，爪印画、毛发纪念品、周年追思都在「纪念」的品牌伞下",
+        "深夜测试：想象主人在深夜哭着搜索与拨号——名字念出来是否足够温柔、拼写是否足够简单、听一遍能否记住",
+      ],
+      cases: [
+        { name: "彩虹桥", takeaway: "全球宠物圈共同传说的直接借用：宠物先到桥那头等主人重逢——一个名字完成安慰、解释与盼头三重任务，是这个行业最强的公共意象资产" },
+        { name: "Lap of Love", takeaway: "「爱的膝头」：美国居家宠物安宁疗护品牌，用宠物最爱趴的地方定格最后的温柔——具象场景词把「安乐死出诊」翻译成了告别的拥抱" },
+        { name: "Paws into Grace", takeaway: "爪印+优雅/恩典的双关：paws 谐音 pass（离去），grace 承接尊严——英文双关命名在殡葬语境里做到了轻而不佻" },
+        { name: "宠安", takeaway: "宠物+安息/安心的双字压缩：对主人许诺「安心」，对宠物许诺「安息」——中文单字复用的效率范本，念一遍就懂" },
+        { name: "Pet Cremation Services", takeaway: "反面教材式的纯功能名：搜索友好但零温度，客户在最脆弱时刻需要的是品牌的拥抱而非服务的清单——功能词留给落地页，名字留给情感" },
+      ],
+      pitfalls: [
+        "轻佻与可爱化：宠物用品式的活泼名字（毛球乐园类）在悲伤语境里是冒犯，同理心是这个行业的第一命名法则",
+        "阴冷的殡葬直译：火化、殡仪、墓园等硬词直接入名，深夜搜索的主人会本能回避——用「送别/纪念/安眠」的温柔词系替代",
+        "宗教意象越界：轮回、往生、天堂类词在多元信仰客群里可能冒犯——彼岸意象要选普世的（桥、星、云），避开教义专属词",
+        "忽略服务词搜索承接：品牌名太抽象且落地页没有「宠物火化+城市」承接，深夜搜索的客户根本找不到你",
+      ],
+    },
+    en: {
+      label: "Pet memorial",
+      title: "How to Name a Pet Memorial Service: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Pet aftercare and memorial service naming guide: rainbow-bridge imagery, gentle farewell verbs, keepsake roots, breakdowns of Lap of Love/Paws into Grace, recommended TLDs and pitfalls — then hunt an available pet memorial domain with AI.",
+      intro:
+        "Pet aftercare has the lowest naming error tolerance of any industry: customers find you at their most fragile hour, call you in tears, and entrust you with a family member's final journey — a trace of flippancy, salesiness or coldness in the name is instant disqualification. The naming challenge is a hard balance: it can't be as solemn as human funeral services — pet parents need the warmth of \"seeing family off,\" not the gravity of ritual; nor can it be as playful as pet retail — a rainbow-cute name is an offense in the presence of grief. The global pet community has already supplied the emotional anchor: the Rainbow Bridge — the legend that pets cross first and wait for their humans — is the industry's central imagery asset, and roots along that spectrum (bridge, stars, clouds, coming home) carry built-in consolation. Perspective matters too: the best names speak from the pet's point of view (\"waiting for you,\" \"going home\") or the companion's (\"walking the last mile with you\"), never the vendor's (\"X Pet Cremation Center\"). And respect the search reality: grieving owners search \"pet cremation [city]\" at 2 a.m. — let the brand name carry memory and trust, and let landing pages carry the service-plus-city keywords.",
+      namingIdeas: [
+        "Draw from the far shore: rainbow bridge, star, cloud, moon — the pet world's shared emotional anchor; words on this spectrum whisper \"they've only gone ahead\"",
+        "Soften the farewell verbs: send off, rest, return, sleep — translate the hard words (cremation, mortuary) into \"seeing them home\" and \"laying them to rest\"",
+        "Name from the pet's perspective: waiting, homeward, at the door — speaking as the furry family member moves people an order of magnitude more than any \"service center\"",
+        "Build on keepsake roots: memory, imprint, forever, keepsake — the farewell is only the start; paw-print art, fur mementos and anniversary remembrance all live under a \"remembrance\" brand umbrella",
+        "Run the 2 a.m. test: imagine an owner searching and dialing through tears — is the name gentle to say aloud, trivially easy to spell, and memorable from a single hearing?",
+      ],
+      cases: [
+        { name: "Rainbow Bridge", takeaway: "The pet world's shared legend, borrowed whole: pets cross first and wait to reunite — one name doing three jobs at once (consolation, explanation, hope), the industry's strongest piece of public imagery" },
+        { name: "Lap of Love", takeaway: "The pet's favorite resting place, frozen as the final tenderness: the US in-home pet hospice brand translated \"euthanasia house calls\" into a farewell embrace — concrete-scene naming at its most humane" },
+        { name: "Paws into Grace", takeaway: "A double pun that stays reverent: paws echoes \"pass,\" grace carries dignity — proof that wordplay can survive a funeral context when the register stays gentle" },
+        { name: "Resting Rainbow", takeaway: "Rest plus the rainbow-bridge anchor in two alliterative words: soft consonants, shared imagery, zero mortuary chill — the compact template for this category's tone" },
+        { name: "Pet Cremation Services", takeaway: "The cautionary counter-example: search-friendly and emotionally void — at the customer's most fragile hour they need a brand's embrace, not a service list; leave function words to the landing page and give the name to the feeling" },
+      ],
+      pitfalls: [
+        "Flippancy and cuteness: pet-retail playfulness (furball-funland registers) offends in a grief context — empathy is this industry's first law of naming",
+        "Cold mortuary literalism: cremation/mortuary/cemetery hard words in the name make 2 a.m. searchers flinch away — substitute the gentle register: farewell, remembrance, rest",
+        "Overstepping religious imagery: reincarnation, heaven and doctrine-specific words can offend across faiths — pick the universal far-shore images (bridge, stars, clouds) instead",
+        "No service-keyword net under an abstract name: if landing pages don't catch \"pet cremation + city,\" the grieving searcher never finds the beautiful brand you built",
+      ],
+    },
+  },
+  postpartum: {
+    slug: "postpartum",
+    tlds: [
+      { tld: "com", zh: "高客单重决策的信任底线，家人共同决策时最稳", en: "The trust baseline for a high-ticket family decision" },
+      { tld: "center", zh: "月子中心的机构感后缀，专业护理语义直给", en: "The institutional suffix — professional care, said outright" },
+      { tld: "life", zh: "「新生活的起点」，与迎接新生命的语义同频", en: "The start of a new life — semantically native to the category" },
+    ],
+    zh: {
+      label: "月子中心",
+      title: "月子中心怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "月子中心与产后护理品牌命名指南：守护意象、新生词根、专业背书等 5 种思路，圣贝拉/巍阁/Boram 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的产后护理品牌域名。",
+      intro:
+        "月子中心的名字要同时通过三个人的审核：付钱的丈夫要觉得专业可靠不被宰，入住的妈妈要感到被温柔接住，拍板参谋的长辈要念得顺、听着吉利。这是一门高客单、重决策、全家参与的生意——名字是第一轮筛选，任何一个决策人被名字劝退，后面的参观与试住都不会发生。命名的情感基调要拿捏「专业」与「温柔」的配比：太医疗化（XX 产后康复医院）会吓跑想要度假感的年轻妈妈，太酒店化（XX 悦榕庄式）又会让家人怀疑护理专业度——头部品牌普遍走「轻奢酒店感+医护背书」的双轨，名字负责温柔，副标语负责专业。词库上，「守护、迎接、新生、初、月、贝、稚」这些词根都在母婴情感谱系上；国际化品牌则偏爱女性名字（圣贝拉 SAINT BELLA）制造「闺蜜般的照护者」人设。还要过长辈的口彩关：谐音吉利是加分项，谐音不吉是一票否决——「月」「悦」「孕」的谐音网络要逐个排查。最后预留业态延展：月子中心正在向产后修复、育儿嫂、母婴零售延展，名字锁死「月子」二字会限制品牌半径。",
+      namingIdeas: [
+        "守护意象：抱、怀、巢、港湾、umbrella——产后妈妈需要「被接住」的安全感，守护词根把服务承诺写进名字",
+        "新生词根：初、新、稚、芽、晨——迎接新生命的喜悦是这个品类独有的情感资产，新生词自带晨光感",
+        "女性名字人设：圣贝拉式的「闺蜜照护者」——一个温柔的女性名字比机构名更能建立「有人懂我」的亲密感",
+        "轻奢+医护双轨：名字走温柔轻奢，副标语补专业背书（XX·医护级产后护理）——同时通过妈妈的心动关与家人的放心关",
+        "长辈口彩排查：「月/悦/孕/贝」的谐音网络逐个念给长辈听——谐音吉利加分，谐音不吉一票否决，这是全家决策生意的特殊关卡",
+      ],
+      cases: [
+        { name: "圣贝拉", takeaway: "SAINT（神圣守护）+ BELLA（美好女性名）：一个名字同时完成守护承诺与闺蜜人设，中文「贝拉」又谐音「宝贝」——高端月子品牌双语命名的标杆" },
+        { name: "巍阁", takeaway: "「巍」的稳重+「阁」的私密尊贵：不用任何母婴字眼却让人安心——用建筑意象传递「托付」感的老牌打法，长辈缘极好" },
+        { name: "Boram", takeaway: "韩语「值得的收获」：纽约产后护理中心借韩国坐月子文化东渡美国，用韩语词根做正宗性背书——文化输出型命名的新样本" },
+        { name: "禾苗", takeaway: "「禾苗」的生长意象：把新生儿比作破土的苗，把护理比作耕作——农耕词根在母婴语境里意外地温柔且好记" },
+        { name: "Frida Mom", takeaway: "从婴儿用品品牌 Frida 延展的妈妈线：先有信任母体再做产后品类——名字证明「守护婴儿的品牌来守护妈妈」这条信任迁移路径成立" },
+      ],
+      pitfalls: [
+        "过度医疗化吓跑妈妈：「XX 产后康复医院」式命名让想要度假感的年轻妈妈望而却步——专业感交给副标语与资质墙",
+        "谐音不吉被长辈一票否决：全家决策的生意里，名字谐音有任何不吉联想（「散」「离」「殇」音近字）都可能直接出局",
+        "锁死「月子」限制半径：产后修复、育儿服务、母婴零售都在延展路上，名字带死「月子」二字，扩业务时品牌要重来",
+        "崇洋名与本地信任错位：三四线城市市场用生僻外文名，长辈念不出、传不了，口碑链路在第一环就断掉",
+      ],
+    },
+    en: {
+      label: "Postpartum care",
+      title: "How to Name a Postpartum Care Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Postpartum retreat and maternal care naming guide: guardianship imagery, newborn roots, feminine-name personas, breakdowns of Saint Bella/Boram/Frida Mom, recommended TLDs and pitfalls — then hunt an available postpartum brand domain with AI.",
+      intro:
+        "A postpartum care brand's name must pass three different reviewers at once: the partner paying the bill needs it to sound professional and fairly priced, the mother moving in needs to feel gently caught, and the grandparents weighing in need it easy to say and auspicious to hear. This is a high-ticket, whole-family purchase — the name is the first filter, and if any one decision-maker flinches at it, the tour and trial stay never happen. The emotional register is a careful blend of clinical and tender: over-medicalize (\"X Postpartum Rehabilitation Hospital\") and you scare off mothers dreaming of a retreat; over-hotel it and the family doubts the nursing credentials — leading brands run twin tracks, a soft luxury name up front with medical-grade endorsement in the tagline. For raw material, guardianship and newborn roots (embrace, nest, harbor, dawn, sprout) live natively on this emotional spectrum, and international brands favor feminine names (SAINT BELLA) to build a \"caregiver who feels like a best friend\" persona. In markets with confinement traditions, run the elder-auspiciousness check: lucky homophones earn points, unlucky ones are a single-vote veto. And leave room to grow — postpartum brands stretch into recovery programs, childcare services and mother-baby retail, so a name welded to \"confinement\" caps the brand's radius.",
+      namingIdeas: [
+        "Guardianship imagery: embrace, nest, harbor, haven — a new mother needs to feel caught, and guardianship roots write the service promise into the name",
+        "Newborn roots: dawn, sprout, first, new — the joy of a new life is this category's exclusive emotional asset, and the words carry morning light for free",
+        "A feminine-name persona: the Saint Bella play — a gentle woman's name builds \"someone who gets me\" intimacy that no institutional name can",
+        "Run twin tracks: a soft-luxury name plus a medical-grade tagline (X · nurse-led postpartum care) — passing the mother's heart test and the family's trust test simultaneously",
+        "Do the elder auspiciousness check: read the name aloud to grandparents and map its homophones — lucky echoes earn points, unlucky ones veto the name outright in a whole-family purchase",
+      ],
+      cases: [
+        { name: "Saint Bella", takeaway: "SAINT (sacred guardianship) + BELLA (a lovely feminine name): one name delivering both the protection promise and the best-friend persona, with the Chinese 贝拉 echoing \"baby\" — the benchmark of bilingual naming in premium postpartum care" },
+        { name: "Boram", takeaway: "Korean for \"a rewarding fruition\": the New York postpartum retreat imported Korea's confinement culture with a Korean root as its authenticity credential — a fresh template for culture-export naming" },
+        { name: "Wei Ge (巍阁)", takeaway: "The steadiness of a mountain plus the privacy of a pavilion: not one mother-baby word, yet deeply reassuring — the veteran play of architectural imagery carrying \"entrustment,\" beloved by grandparents" },
+        { name: "Frida Mom", takeaway: "The mom line extended from baby-care brand Frida: trust built on the infant side migrating to the mother — proof the \"the brand that guards your baby now guards you\" path works" },
+        { name: "Sprout & Nest", takeaway: "A newborn root plus a guardianship root in one breath: growth for the baby, shelter for the mother — the compact formula this category's naming reduces to" },
+      ],
+      pitfalls: [
+        "Over-medicalizing and scaring the mother: hospital-register names repel mothers dreaming of a retreat — park the credentials in the tagline and the license wall",
+        "Unlucky homophones vetoed by elders: in a whole-family purchase, any inauspicious echo in the name (sounds near \"scatter,\" \"part,\" \"grieve\") can kill the deal outright",
+        "Welding the name to \"confinement\": recovery programs, childcare and retail are all on the expansion path — a confinement-locked name forces a rebrand at each step",
+        "Exotic names misfiring in local-trust markets: an obscure foreign name grandparents can't pronounce breaks the referral chain at its very first link",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
