@@ -17,6 +17,9 @@ const PRESET_TLDS = ["com", "cn", "io", "ai", "app", "dev"];
 const MAX_LEN = 500;
 const LABEL_RE = /^[a-z0-9][a-z0-9-]{0,62}$/i;
 const EXACT_DOMAIN_RE = /^([a-z0-9][a-z0-9-]{0,62})\.([a-z0-9-]{2,24})$/i;
+const MULTI_DOMAIN_RE = /^([a-z0-9][a-z0-9-]{0,62})\.([a-z0-9-]{2,24}(?:\.[a-z0-9-]{2,24})+)$/i;
+// 站内核验通道已支持的两级后缀（需同时在 QUICK_MORE_TLDS 与 whois.ts 有对应通道）
+const KNOWN_MULTI_TLDS = ["com.cn"];
 // 常见可注册 TLD：避免把拼写错误（如 baidu.iox）当作精确域名去核验
 const KNOWN_TLDS = new Set([
   "com", "net", "org", "cn", "io", "ai", "app", "dev", "co", "cc", "tv", "xyz", "me", "info", "biz", "top", "vip", "pro", "site",
@@ -26,11 +29,14 @@ const KNOWN_TLDS = new Set([
 ]);
 
 /** 输入看起来已经是现成名字/域名时，提供免 AI 额度的直接核验 */
-function parseQuickCheck(input: string): { label: string; tld?: string } | null {
+function parseQuickCheck(input: string): { label: string; tld?: string } | { unsupportedTld: string } | null {
   const d = input.trim().toLowerCase();
   if (LABEL_RE.test(d)) return { label: d };
   const m = EXACT_DOMAIN_RE.exec(d);
-  return m && KNOWN_TLDS.has(m[2]) ? { label: m[1], tld: m[2] } : null;
+  if (m) return KNOWN_TLDS.has(m[2]) ? { label: m[1], tld: m[2] } : null;
+  const mm = MULTI_DOMAIN_RE.exec(d);
+  if (mm) return KNOWN_MULTI_TLDS.includes(mm[2]) ? { label: mm[1], tld: mm[2] } : { unsupportedTld: mm[2] };
+  return null;
 }
 
 // 行业模板：寓意 + 气质 + 场景 三段式描述，点击填入输入框，用户可再编辑；slug 对应 /guide/:slug 与 /?tpl= 预填入口
@@ -931,6 +937,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个洗车与汽车美容品牌，寓意「开走时像提新车」；气质要干净利落、效率与仪式感兼顾、连锁招牌统一得起来；场景是「附近洗车」地图搜索、路过招牌和「我在 XX 办的月卡，顺路就洗」的车主安利里都好认好记。",
     en: "A car wash and detailing brand. The name should feel like driving away in a brand-new car; the vibe is clean and efficient with room for ritual, ready to unify across chain storefronts; it must stand out in \"car wash near me\" maps, read from a drive-by sign, and carry in \"I got the monthly pass at X\" owner recs.",
   },
+  {
+    slug: "studytour",
+    labelZh: "研学营地",
+    labelEn: "Study camps & tours",
+    zh: "一个研学旅行与营地教育品牌，寓意「行走的课堂，孩子回来不一样了」；气质要稳重可信有书卷气、又让孩子觉得好玩有冒险感；场景是家长群「XX 研学怎么样」的讨论、学校合作洽谈和公众号转介绍里都好念可信。",
+    en: "A study camp and educational travel brand. The name should feel like a walking classroom your kid comes back changed from; the vibe balances scholarly credibility for parents with adventure for kids; it must sound trustworthy in parent group chats, school partnership pitches, and \"has anyone tried X?\" referrals.",
+  },
+  {
+    slug: "petboarding",
+    labelZh: "宠物寄养",
+    labelEn: "Pet boarding",
+    zh: "一个宠物寄养与宠物酒店品牌，寓意「主人不在的日子，它在过自己的假期」；气质要有家的温度、看得见的安心、不像仓库像乐园；场景是「附近宠物寄养」地图搜索、小区宠物群「十一寄哪家」的讨论和每日视频分享里都好认好传。",
+    en: "A pet boarding and pet hotel brand. The name should feel like the furry kid is on her own holiday while you're away; the vibe is homey and reassuring — a playground, never a warehouse; it must stand out in \"pet boarding near me\" maps, neighborhood pet-group threads, and daily-video captions.",
+  },
+  {
+    slug: "upcycling",
+    labelZh: "旧物改造",
+    labelEn: "Upcycling & rework",
+    zh: "一个旧物改造与升级再造品牌，寓意「本来要被扔掉的东西，成了独一无二的那件」；气质要酷而有故事感、设计感压过二手感、克制不说教；场景是市集摊位、小红书图文和「这个包居然是篷布做的」的种草转述里都好念好记。",
+    en: "An upcycling and rework brand. The name should feel like something headed for landfill becoming the most special piece in the room; the vibe is cool and storied, design-first over secondhand, never preachy; it must carry at market stalls, in visual posts, and in \"this bag is made of WHAT?\" retellings.",
+  },
+  {
+    slug: "zine",
+    labelZh: "独立杂志",
+    labelEn: "Indie magazines & zines",
+    zh: "一本独立杂志，寓意「一种可以想象的生活提案」；气质要有品味有立场、克制留白、印在封面和帆布包上都好看；场景是独立书店平摊、同好「你看过 XX 吗」的接头转述和周边咖啡杯上都有辨识度。",
+    en: "An indie magazine. The name should propose an imaginable way of living; the vibe is tasteful and opinionated, restrained with room to interpret, beautiful on a cover and a tote; it must stand out on bookstore tables, in \"have you read X?\" exchanges, and on merch coffee cups.",
+  },
+  {
+    slug: "locksmith",
+    labelZh: "开锁换锁",
+    labelEn: "Locksmiths",
+    zh: "一个开锁换锁与安防升级服务品牌，寓意「深夜救急也敢放心开门的正规军」；气质要快、专业、规范可信、不江湖气；场景是「附近开锁」地图搜索、物业公告栏推荐和「我家换锁芯找的 XX」的邻里转介绍里都好认可信。",
+    en: "A locksmith and lock-security brand. The name should feel like the licensed pro you'd trust to open your door at 2 a.m.; the vibe is fast, professional and by-the-book, never shady; it must stand out in \"locksmith near me\" maps, on property notice boards, and in neighborly \"I used X for my rekey\" referrals.",
+  },
+  {
+    slug: "skateshop",
+    labelZh: "滑板店",
+    labelEn: "Skate shops",
+    zh: "一个滑板店与滑板品牌，寓意「真实不装的态度，街头自己人的接头点」；气质要横得真诚、永远年轻但不装嫩、经得起印在板底和卫衣上；场景是滑手圈「去 XX 买板」的口碑、视频片尾鸣谢和 IG 标签里都好认好拼。",
+    en: "A skate shop and skate brand. The name should feel like an authentic, unapologetic meeting point for the local scene; the vibe is earned swagger, forever young without faking it, print-ready for deck bottoms and hoodies; it must read cleanly in \"get your deck at X\" word of mouth, video credits, and IG tags.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
@@ -1031,7 +1079,7 @@ function ChipPrice({ domain }: { domain: string }) {
 const QUICK_EXTRA_TLDS = ["com", "io", "ai", "app", "dev", "co", "net", "me"];
 
 /** 「查更多后缀」按钮覆盖的第二批后缀（同样走 /api/search，0 AI 额度） */
-const QUICK_MORE_TLDS = ["cn", "com.cn", "org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "page", "bio", "ink", "moe", "lol", "uk", "fm", "one", "cool", "red", "today", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "software", "marketing", "systems", "ventures", "capital", "guru", "tips", "directory", "exchange", "institute", "international", "partners", "support", "plus", "house", "market", "watch", "style", "show"];
+const QUICK_MORE_TLDS = ["cn", ...KNOWN_MULTI_TLDS, "org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "page", "bio", "ink", "moe", "lol", "uk", "fm", "one", "cool", "red", "today", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "software", "marketing", "systems", "ventures", "capital", "guru", "tips", "directory", "exchange", "institute", "international", "partners", "support", "plus", "house", "market", "watch", "style", "show"];
 
 /** 快速核验的 chip（可注册/已注册）都可收藏到候选清单 */
 function domainToRow(domain: string, status: Row["status"] = "available", expiresAt?: string): Row {
@@ -1089,7 +1137,9 @@ export function HomePage({
 
   const canRun = description.trim().length > 0 && tlds.length > 0;
 
-  const quick = parseQuickCheck(description);
+  const quickParsed = parseQuickCheck(description);
+  const quick = quickParsed && "label" in quickParsed ? quickParsed : null;
+  const quickUnsupportedTld = quickParsed && "unsupportedTld" in quickParsed ? quickParsed.unsupportedTld : null;
   const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown"; expiresAt?: string }[]>([]);
   const [quickRunning, setQuickRunning] = useState(false);
   const [quickMoreDone, setQuickMoreDone] = useState(false);
@@ -1669,6 +1719,13 @@ export function HomePage({
                 )}
               </div>
             )}
+          </div>
+        )}
+
+        {/* 输入多级后缀但站内核验通道不支持：给出友好提示而非静默无响应 */}
+        {quickUnsupportedTld && (
+          <div className="mt-3 rounded-xl border border-line bg-bg1 px-4 py-3">
+            <p className="text-xs text-txt1">{t("home.quickUnsupportedTld", { tld: quickUnsupportedTld })}</p>
           </div>
         )}
 
