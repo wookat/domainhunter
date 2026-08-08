@@ -113,4 +113,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "3dprint", zh: "3D 打印", en: "3D printing" },
   { slug: "vending", zh: "无人零售", en: "Vending & unattended retail" },
   { slug: "kidsart", zh: "少儿美术", en: "Kids' art schools" },
+  { slug: "danceschool", zh: "舞蹈工作室", en: "Dance studios" },
+  { slug: "martialarts", zh: "武术格斗馆", en: "Martial arts gyms" },
+  { slug: "bikeshop", zh: "骑行单车", en: "Bike shops & cycling" },
+  { slug: "fishing", zh: "垂钓渔具", en: "Fishing & tackle" },
+  { slug: "foodtruck", zh: "餐车小吃", en: "Food trucks & street food" },
+  { slug: "repair", zh: "维修服务", en: "Repair & handyman services" },
 ];

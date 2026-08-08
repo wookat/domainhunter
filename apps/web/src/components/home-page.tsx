@@ -805,6 +805,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个少儿美术与创意教育品牌，寓意「保护每个孩子敢想敢画的天性」；气质要色彩明快、童趣专业、家长觉得有体系；场景是家长群转介绍、试听课海报和孩子喊出「我要去 XX 画画」时都欢快好念。",
     en: "A children's art education brand. The name should feel like protecting every child's daring to imagine and paint; the vibe is colorful, playful yet professional, structured enough for parents; it must charm in parent-group referrals, on trial-class posters, and when a child shouts \"I want to paint at X!\"",
   },
+  {
+    slug: "danceschool",
+    labelZh: "舞蹈工作室",
+    labelEn: "Dance studios",
+    zh: "一个舞蹈工作室与舞蹈培训品牌，寓意「在节拍里遇见更自信的自己」；气质要有律动感、有厂牌范儿、对新手友好；场景是短视频话题标签、课堂喊队名和「你在哪学跳舞」的口播里都带节拍好记。",
+    en: "A dance studio brand. The name should feel like meeting a bolder you inside the beat; the vibe is rhythmic, label-cool, welcoming to beginners; it must carry a beat in short-video hashtags, in class chants, and in \"where do you take dance?\" word of mouth.",
+  },
+  {
+    slug: "martialarts",
+    labelZh: "武术格斗馆",
+    labelEn: "Martial arts gyms",
+    zh: "一个武术格斗馆品牌，寓意「练的是拳，修的是自己」；气质要专业血性但不戾气、师承有据、家长也放心；场景是体验课转介绍、少儿班招生页和「我在 XX 练拳」的口播里都立得住。",
+    en: "A martial arts gym brand. The name should feel like training the fist to forge the self; the vibe is credible and gritty without malice, lineage-backed, reassuring to parents; it must stand up in trial-class referrals, on the kids' program page, and in \"I train at X.\"",
+  },
+  {
+    slug: "bikeshop",
+    labelZh: "骑行单车",
+    labelEn: "Bike shops & cycling",
+    zh: "一个骑行品牌与单车店，寓意「用自己的力量抵达」；气质要有风的速度感、圈内格调、对通勤家庭客也友好；场景是周末约骑的车队名、装备电商详情页和「去 XX 保养车」的口播里都顺口有型。",
+    en: "A cycling brand or bike shop. The name should feel like arriving under your own power; the vibe is wind-fast, insider-stylish, yet friendly to commuters and families; it must sound sharp as a weekend ride crew name, on a gear product page, and in \"take it to X for a tune-up.\"",
+  },
+  {
+    slug: "fishing",
+    labelZh: "垂钓渔具",
+    labelEn: "Fishing & tackle",
+    zh: "一个垂钓渔具品牌，寓意「静得下心，也钓得上鱼」；气质要硬核可靠、有水边的宁静感、对新手钓客也友好；场景是钓友圈装备推荐、直播间口播和「用的 XX 的竿」的爆护分享里都立得住。",
+    en: "A fishing and tackle brand. The name should feel like stillness that lands the fish; the vibe is hardcore-reliable, waterside-calm, welcoming to new anglers; it must hold up in tackle recommendations among fishing buddies, in livestream shoutouts, and in \"caught it on an X rod.\"",
+  },
+  {
+    slug: "foodtruck",
+    labelZh: "餐车小吃",
+    labelEn: "Food trucks & street food",
+    zh: "一个餐车与街头小吃品牌，寓意「烟火气开到哪，香到哪」；气质要香辣诱人、有人情味、一瞥就知道卖什么；场景是夜市招牌远看、排队拍照发圈和「今天车停哪」的社媒追踪里都好认好传。",
+    en: "A food truck and street food brand. The name should smell delicious wherever the wheels stop; the vibe is sizzling, warm-hearted, instantly clear about what's cooking; it must read from across a night market, look great in queue photos, and travel in \"where's the truck today?\" posts.",
+  },
+  {
+    slug: "repair",
+    labelZh: "维修服务",
+    labelEn: "Repair & handyman services",
+    zh: "一个家电维修与上门服务品牌，寓意「一次修好，明码实价」；气质要诚信靠谱、师傅专业、快而不敲竹杠；场景是邻里群转介绍、上门工单和「我认识个 XX，靠谱」这句话里都让人放心开门。",
+    en: "An appliance repair and handyman brand. The name should promise fixed right the first time, priced honestly; the vibe is trustworthy, craftsman-professional, fast without gouging; it must reassure in neighborhood referrals, on a service work order, and in \"I know a guy at X — reliable.\"",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

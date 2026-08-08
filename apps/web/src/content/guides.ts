@@ -6811,6 +6811,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  danceschool: {
+    slug: "danceschool",
+    tlds: [
+      { tld: "com", zh: "课程包与年卡的信任底线，家长与成人学员决策最稳", en: "The trust baseline for class packs and annual memberships" },
+      { tld: "studio", zh: "「工作室」气质直给，舞蹈室的天然后缀", en: "Atelier register outright — the dance studio's native suffix" },
+      { tld: "academy", zh: "机构感与考级体系的背书，走专业路线首选", en: "The institutional suffix — credentialing a graded curriculum" },
+    ],
+    zh: {
+      label: "舞蹈工作室",
+      title: "舞蹈工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "舞蹈工作室与舞蹈培训命名指南：律动意象、舞种流派标签、身体叙事等 5 种思路，Steezy/舞极限/Broadway Dance Center 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的舞蹈品牌域名。",
+      intro:
+        "舞蹈工作室的名字要先回答一个身份问题：你是「培训机构」还是「舞团文化空间」？前者卖考级与课程包，家长要的是体系与正规，名字往「学院、艺术中心」的机构感走；后者卖街舞、爵士、韩舞的酷与社群，学员要的是「这里有我的同类」，名字往厂牌感走（crew、lab、zone）。两条路线的词库几乎不重叠，骑墙的名字两边客群都抓不住。命名的第一素材库是律动词根：舞、跳、拍、beat、groove、flow 都在谱系上，节奏感强的名字自带品类气质——念出来带节拍的名字（双音节重复、爆破音开头）在课堂喊队名与短视频口播里天然占优。第二个抓手是舞种流派：街舞馆的 breaking、popping 黑话，芭蕾室的法语优雅词根（plié、étoile），拉丁舞室的热带意象——流派是学员的第一筛选条件，名字先亮流派能吸来同频客群。第三个抓手是身体与自信叙事：成人舞蹈课卖的从来不是舞技是自信，「遇见更好的自己」的转变故事让「光、燃、绽放」这类词根有了落点。还要过短视频关：舞蹈是天然的内容品类，抖音与小红书是获客主场，名字要能做话题标签——太长、有生僻字的名字在 #标签 里就输了。最后留半径：工作室普遍延展少儿线、艺考集训与演出经纪，名字锁死单一舞种或年龄段，扩线时招牌要重做。",
+      namingIdeas: [
+        "律动词根：舞、跳、beat、groove——品类气质直给，念出来带节拍的名字在课堂口号与短视频口播里天然占优",
+        "舞种流派前置：breaking 黑话、芭蕾法语词、拉丁热带意象——流派是学员的第一筛选条件，名字先亮流派吸来同频客群",
+        "厂牌感命名：crew、lab、zone、studio——街舞线卖的是社群与酷，名字像厂牌不像培训班，学员才有归属感",
+        "自信转变叙事：光、燃、绽放、shine——成人舞蹈课卖的是自信不是舞技，转变故事让名字有情绪落点",
+        "机构感背书：学院、艺术中心、academy——考级与艺考线要的是正规与体系，家长为机构感付高客单",
+      ],
+      cases: [
+        { name: "Broadway Dance Center", takeaway: "「百老汇」的圣地词根+直白品类词：借纽约剧院区的品牌势能做专业背书，四十年老店证明地标借势命名的长期价值" },
+        { name: "Steezy", takeaway: "街舞俚语 steez（style + ease，毫不费力的风格感）造词：在线舞蹈课平台用一个圈内词完成客群筛选——黑话命名的教科书" },
+        { name: "舞极限", takeaway: "「舞」的品类直给+「极限」的挑战叙事：把街舞说成一场自我突破，热血感与少年气一次到位——中文街舞厂牌命名的直球打法" },
+        { name: "Alvin Ailey", takeaway: "编舞大师的人名即品牌：现代舞团以创始人艺术遗产为核心资产，证明舞蹈行业「人即品牌」的信任逻辑与纹身、摄影一脉相承" },
+        { name: "1MILLION", takeaway: "首尔编舞工作室的数字野心：「一百万」既是订阅量的目标宣言又极易传播，YouTube 时代舞室做成全球内容 IP 的命名起点" },
+      ],
+      pitfalls: [
+        "机构脸与厂牌感骑墙：培训机构要正规、街舞厂牌要酷，两套词库几乎不重叠——名字骑墙两边客群都不认",
+        "锁死单一舞种：少儿线、艺考集训、演出经纪都在延展路上，名字带死「街舞」或「芭蕾」，扩线时要重讲故事",
+        "忽略话题标签场景：抖音小红书是获客主场，名字太长或有生僻字，#标签 与口播传播就先输一程",
+        "只有酷没有安全感：少儿家长决策看的是正规与师资，名字太地下，家长在门口就犹豫了",
+      ],
+    },
+    en: {
+      label: "Dance studios",
+      title: "How to Name a Dance Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Dance studio naming guide: rhythm roots, style-scene signaling, confidence narratives, breakdowns of Steezy/Broadway Dance Center/1MILLION, recommended TLDs and pitfalls — then hunt an available dance brand domain with AI.",
+      intro:
+        "A dance studio's name must first answer an identity question: are you a training school or a crew culture space? The school sells graded curricula and class packs — parents want structure and legitimacy, so the name leans institutional (academy, arts center); the crew space sells the cool and community of hip-hop, jazz and K-pop choreography — students want to find their tribe, so the name leans label-like (crew, lab, zone). The two vocabularies barely overlap, and a name that straddles them convinces neither crowd. The first material bin is rhythm roots: dance, beat, groove and flow live natively on the spectrum, and a name that carries a beat when spoken — doubled syllables, plosive openings — wins for free in class chants and short-video voiceovers. The second lever is style-scene signaling: breaking and popping slang for the hip-hop studio, elegant French roots (plié, étoile) for ballet, tropical imagery for Latin — style is the student's first filter, and a name that declares its scene attracts exactly the right tribe. The third is the confidence narrative: adult dance classes never really sell technique, they sell transformation — \"meet a bolder you\" — which gives shine, bloom and glow roots their emotional landing. Mind the hashtag test: dance is a native content category and TikTok is the acquisition arena, so the name must work as a tag — long or hard-to-spell names lose before the first post. Finally, leave radius: studios expand into kids' programs, audition prep and performance management, and a name welded to one style or age group forces a rebrand at every new line.",
+      namingIdeas: [
+        "Rhythm roots: dance, beat, groove, flow — category register served straight, and a name that carries a beat wins class chants and voiceovers for free",
+        "Style-scene signaling: breaking slang, ballet French, Latin heat — style is the student's first filter, so declare your scene in the name",
+        "Label-like naming: crew, lab, zone — the street-dance line sells community and cool, and a name that reads like a record label earns belonging",
+        "Confidence narratives: shine, bloom, glow — adult classes sell transformation, not technique, and glow roots give the story an emotional landing",
+        "Institutional registers: academy, arts center — the graded and audition-prep lines need legitimacy, and parents pay premium tuition for structure",
+      ],
+      cases: [
+        { name: "Broadway Dance Center", takeaway: "A shrine root plus plain category words: borrowing the theater district's brand gravity as a professional credential — four decades proving the long-term value of landmark naming" },
+        { name: "Steezy", takeaway: "Street slang steez (style plus ease) coined into a brand: the online dance platform filtering its audience with a single insider word — hashtag-ready slang naming at its best" },
+        { name: "1MILLION", takeaway: "A Seoul choreography studio naming its ambition: \"one million\" doubles as a subscriber goal and a viral handle — the naming starting point of a studio built into a global content IP" },
+        { name: "Alvin Ailey", takeaway: "A choreographer's name as the brand: the modern dance company built on a founder's artistic legacy, proof that dance trusts the person before the place — same logic as tattoo and photography" },
+        { name: "Wu Jixian (舞极限)", takeaway: "The category root \"dance\" plus an \"extreme\" challenge narrative: street dance framed as self-conquest, all heat and youth in three characters — the Chinese street-dance label played straight" },
+      ],
+      pitfalls: [
+        "Straddling school and crew registers: institutions need legitimacy, crews need cool, and the vocabularies barely overlap — a fence-sitting name convinces neither",
+        "Welding the name to one style: kids' programs, audition prep and performance management are all on the roadmap, and a style-locked name forces a new story each time",
+        "Ignoring the hashtag arena: TikTok and Instagram drive acquisition, and a long or unspellable name loses the tag game before the first post",
+        "All cool, no reassurance: parents of young dancers decide on legitimacy and faculty, and a name too underground stalls them at the door",
+      ],
+    },
+  },
+  martialarts: {
+    slug: "martialarts",
+    tlds: [
+      { tld: "com", zh: "私教包与年卡的信任底线，家长与成人学员都稳", en: "The trust baseline for coaching packs and annual passes" },
+      { tld: "club", zh: "「拳馆即圈子」的圈层感，格斗社群的天然后缀", en: "The community register — fight culture's native members-club suffix" },
+      { tld: "academy", zh: "「学院」的段位体系背书，传统武术与巴西柔术通用", en: "The belt-system suffix — credentialing traditional arts and BJJ alike" },
+    ],
+    zh: {
+      label: "武术格斗馆",
+      title: "武术格斗馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "武术馆与格斗健身房命名指南：武学词根、师承门派叙事、强者隐喻等 5 种思路，Gracie/UFC Gym/精武门等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的武馆品牌域名。",
+      intro:
+        "武术格斗馆的名字要在「威慑力」与「亲和力」之间走钢丝：核心格斗爱好者要的是血性与专业——名字太温和，拳台老炮觉得这馆不能打；但增速最快的客群是送孩子学防身与专注力的家长、把搏击当减压健身的白领女性，名字太凶悍（血、杀、狂暴系），这两拨人在门口就转身了。头部品牌的解法是往「武学」而非「打斗」走：功夫、武道、道场这类词根自带修身叙事，把「学打人」升维成「修自己」，威慑力与家长缘就能兼得。命名的第二个抓手是师承与门派：这个行业的信任高度绑定教练的段位与血统——巴西柔术的 Gracie 家族把姓氏做成全球连锁，中国武馆借「精武、咏春」的门派势能立正统——师承叙事是天然的专业背书。第三个抓手是强者隐喻：虎、狼、狮、铁、锋这类词根直给力量感，但要留意气质分寸——「铁」系的坚毅比「杀」系的戾气渠道友好得多。词库上，拳、武、斗、道、fight、combat 都在谱系上，「道」字是东方武学的万能钥匙：既有哲学纵深又对家长零威胁。还要过场景关：获客主链路是「城市+搏击/柔术」的搜索与体验课转介绍，名字要在「我在 XX 练拳」这句口播里立得住。最后留半径：拳馆普遍延展少儿武术、女子防身与减脂团课，名字锁死单一拳种，扩线时招牌要重做。",
+      namingIdeas: [
+        "武学词根：武、道、功夫、道场——把「学打人」升维成「修自己」，威慑力与家长缘兼得的万能路线",
+        "师承门派叙事：姓氏+柔术、门派+拳馆——这个行业信教练的段位与血统，师承是天然的专业背书",
+        "强者隐喻：虎、狼、铁、锋——力量感直给，但「铁」系的坚毅比「杀」系的戾气渠道友好得多",
+        "拳种直给：柔术、泰拳、拳击、MMA——品类词根吃「城市+拳种」的搜索流量，客群自带筛选",
+        "反差亲和：把格斗说成健身与游戏——女子防身与少儿线要的是「不吓人」，名字的松弛感就是转化率",
+      ],
+      cases: [
+        { name: "Gracie Jiu-Jitsu", takeaway: "巴西柔术第一家族的姓氏即品牌：师承血统直接做成全球连锁的信任资产——格斗行业「人即门派」的终极形态" },
+        { name: "UFC Gym", takeaway: "顶级赛事 IP 下沉做健身房：借 UFC 的暴力美学势能，卖的却是白领减脂团课——赛事品牌与大众健身嫁接的命名范本" },
+        { name: "精武门", takeaway: "「精武」的百年门派势能+「门」的师承仪式感：霍元甲的精神遗产做正统背书——中文武馆借势命名的天花板" },
+        { name: "Tiger Muay Thai", takeaway: "「虎」的强者隐喻+泰拳品类直给：普吉岛训练营用一只虎把度假式训练卖向全球——强者意象与目的地生意的结合" },
+        { name: "9round", takeaway: "「九回合」的赛制词根做健身连锁：拳击的仪式感被拆成 30 分钟循环课——把专业术语翻译成大众健身语言的轻巧示范" },
+      ],
+      pitfalls: [
+        "戾气词根吓跑增量客群：血、杀、狂暴系名字让家长与健身客群门口转身——威慑力要来自专业不是凶相",
+        "太温和丢掉核心玩家：拳台老炮认的是能打与血性，纯健身房式命名让核心客群觉得这馆不专业",
+        "锁死单一拳种：少儿武术、女子防身、减脂团课都在延展路上，名字带死「泰拳」，扩线时要重讲故事",
+        "忽略师承背书：这个行业信段位与血统，名字里没有任何专业锚点，体验课转化时要多费十分口舌",
+      ],
+    },
+    en: {
+      label: "Martial arts gyms",
+      title: "How to Name a Martial Arts Gym: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Martial arts and combat gym naming guide: warrior-path roots, lineage narratives, strength metaphors, breakdowns of Gracie/UFC Gym/Tiger Muay Thai, recommended TLDs and pitfalls — then hunt an available martial arts brand domain with AI.",
+      intro:
+        "A martial arts gym's name walks a tightrope between menace and welcome: core fighters want grit and credibility — too soft a name and the ring veterans doubt the gym can fight; but the fastest-growing customers are parents enrolling kids for discipline and self-defense, and professionals boxing away office stress — too savage a name (blood, kill, rage registers) and both turn around at the door. The leaders solve it by naming the art, not the violence: dojo, warrior-path and discipline roots carry a self-cultivation narrative that upgrades \"learning to fight\" into \"forging yourself,\" winning menace and parent-appeal at once. The second lever is lineage: trust in this trade attaches to the coach's belt and bloodline — the Gracie family turned a surname into Brazilian jiu-jitsu's global franchise, and Chinese schools borrow the gravitas of established houses — so lineage narrative is the native professional credential. The third is strength metaphor: tiger, wolf, iron and edge roots deliver power directly, but mind the register — iron's resolve travels through channels far better than kill's malice. For raw material, fight, combat, fist and the \"way/do\" root all live on the spectrum, and the East Asian \"do\" (the way) is the skeleton key: philosophical depth for adults, zero threat for parents. Mind the acquisition path: \"city + BJJ/boxing\" search and trial-class referrals drive growth, and the name must stand up in \"I train at X.\" Finally, leave radius: gyms expand into kids' programs, women's self-defense and conditioning classes, so a name welded to one discipline forces a rebrand at every new line.",
+      namingIdeas: [
+        "Warrior-path roots: dojo, discipline, the \"do/way\" register — upgrade \"learning to fight\" into \"forging yourself,\" winning grit and parent-appeal at once",
+        "Lineage narratives: surname plus art, house plus gym — this trade trusts belts and bloodlines, and lineage is the native professional credential",
+        "Strength metaphors: tiger, wolf, iron, edge — power served straight, with iron's resolve traveling far better than kill's malice",
+        "Discipline declared: jiu-jitsu, Muay Thai, boxing, MMA — category roots ride \"city + discipline\" search and pre-filter the clientele",
+        "Contrast softening: frame combat as fitness and play — the women's and kids' lines want unintimidating, and the name's ease is the conversion rate",
+      ],
+      cases: [
+        { name: "Gracie Jiu-Jitsu", takeaway: "BJJ's first family with the surname as the brand: lineage itself franchised into a global trust asset — the ultimate form of \"the person is the house\" in combat sports" },
+        { name: "UFC Gym", takeaway: "A top fight promotion descending into fitness retail: borrowing the octagon's edge while actually selling office-worker conditioning classes — the template for grafting event IP onto mass fitness" },
+        { name: "Tiger Muay Thai", takeaway: "A tiger's strength metaphor plus the discipline declared: the Phuket camp selling destination training worldwide on one animal — power imagery fused with a travel business" },
+        { name: "Jing Wu (\u7cbe\u6b66\u95e8)", takeaway: "A century-old Chinese martial house as the credential: Huo Yuanjia's legacy borrowed as orthodoxy itself — the ceiling of lineage-borrowing in Chinese school naming" },
+        { name: "9Round", takeaway: "A fight-format root turned fitness chain: boxing's ritual unpacked into a 30-minute circuit — professional vocabulary translated into mass-fitness language with one number" },
+      ],
+      pitfalls: [
+        "Malice registers repelling the growth market: blood, kill and rage names turn parents and fitness clients around at the door — menace must come from credibility, not cruelty",
+        "Too soft for the core: ring veterans respect grit, and plain fitness-center naming reads as \"this gym can't fight\" to the people who matter most",
+        "Welding the name to one discipline: kids' martial arts, women's self-defense and conditioning are all on the roadmap, and a discipline-locked name forces a new story each time",
+        "Skipping the lineage anchor: this trade trusts belts and bloodlines, and a name with no professional signal makes every trial-class conversion harder",
+      ],
+    },
+  },
+  bikeshop: {
+    slug: "bikeshop",
+    tlds: [
+      { tld: "com", zh: "整车与装备客单价高，交易信任的默认选择", en: "High-ticket bikes and gear — the default for transaction trust" },
+      { tld: "shop", zh: "「店」语义直给，零售身份一秒说清", en: "Retail semantics outright — the storefront identity in one word" },
+      { tld: "club", zh: "「骑行即社群」的圈层感，周末约骑文化的天然后缀", en: "The community register — weekend-ride culture's native suffix" },
+    ],
+    zh: {
+      label: "骑行单车",
+      title: "骑行品牌与单车店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "骑行品牌与自行车店命名指南：轮与风的意象、速度隐喻、社群圈层感等 5 种思路，Rapha/Specialized/喜德盛等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的骑行品牌域名。",
+      intro:
+        "骑行生意的名字要先想清楚你在哪个价位段说话：公路车玩家是消费力惊人的装备党，一辆车五位数起步，他们要的是名字有「圈内格调」——Rapha 这种带欧洲手工气质的名字能让骑行服卖出轻奢价；而通勤车与亲子车客群要的是皮实与性价比，名字太端着反而有距离感。命名的第一素材库是轮与风的意象：轮、辐、链、踏、wheel、spoke、gear 是品类直给，风、疾、驰则把骑行的体感——风从耳边过——写进名字。第二个抓手是速度与自由隐喻：骑行卖的是「用自己的力量抵达」的自由感，飞、驰、escape、velo（法语「自行车」，欧洲骑行文化的词根钥匙）都在谱系上；velo 系造词（Velofix、Velosophy）在圈内自带血统认证。第三个抓手是社群感：骑行是强社群运动，周末约骑、骑友俱乐部是复购与转介绍的主链路，「车队、俱乐部、works」词根呼应「买车送圈子」的隐性价值。本地车店还要吃「城市+车店/修车」的搜索流量，名字里埋品类词根能省广告费；线上品牌则要过出海关——中国是全球自行车供应链腹地，跨境卖车与装备的名字要全球读得顺。最后留半径：车店普遍延展维修保养、租赁与骑行旅行，名字锁死「卖车」会让服务业务的招牌很尴尬。",
+      namingIdeas: [
+        "轮与链意象：轮、辐、链、gear、spoke——品类词根直给，本地店还能吃「城市+车店」的搜索流量",
+        "风与速度体感：风、疾、驰、swift——把「风从耳边过」的骑行体感写进名字，画面感就是记忆点",
+        "velo 系血统词：velo、cycle、ride 造词——欧洲骑行文化的词根钥匙，圈内人一眼认出格调",
+        "自由抵达叙事：飞、越、escape、journey——骑行卖的是用自己的力量抵达的自由感，隐喻比功能词高级",
+        "社群车队感：车队、俱乐部、works——买车送圈子是复购的隐性价值，社群词根呼应周末约骑文化",
+      ],
+      cases: [
+        { name: "Rapha", takeaway: "借 1960 年代传奇车队 St. Raphaël 的名字：两音节的欧洲手工气质让骑行服卖出轻奢价——圈内血统词根撑起品牌溢价的范本" },
+        { name: "Specialized", takeaway: "「专门化」的直白宣言：一个形容词把「我们只做自行车」的专业主义说满——品类专注做成品牌资产的直球打法" },
+        { name: "Brompton", takeaway: "伦敦地名 Brompton Oratory 做折叠车品牌：英伦血统与通勤场景天然绑定，地名的克制感反而成了格调——在地词根的全球化胜利" },
+        { name: "喜德盛", takeaway: "「喜、德、盛」的吉祥字组合：主打性价比的国民车品牌用传统商号式命名下沉市场——中文单车命名务实路线的代表" },
+        { name: "Velofix", takeaway: "velo（自行车）+ fix（修）：上门修车服务把品类与服务压进四个音节——velo 系造词在服务赛道的标准操作" },
+      ],
+      pitfalls: [
+        "价位段气质错位：轻奢装备党要圈内格调，通勤客群要皮实实惠——名字端错了段位，两边都不买账",
+        "锁死「卖车」限制半径：维修保养、租赁、骑行旅行都在延展路上，名字带死零售，服务业务招牌要重做",
+        "忽略 velo/cycle 的全球语感：跨境卖车与装备是中国供应链的天然机会，名字只有中文语境，出海时要重来",
+        "太硬核丢掉家庭客群：亲子车与通勤车是走量基本盘，名字全是竞速黑话，家庭客户进店就有距离感",
+      ],
+    },
+    en: {
+      label: "Bike shops & cycling",
+      title: "How to Name a Cycling Brand or Bike Shop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Cycling brand and bike shop naming guide: wheel and wind imagery, speed metaphors, club culture signaling, breakdowns of Rapha/Specialized/Brompton, recommended TLDs and pitfalls — then hunt an available cycling brand domain with AI.",
+      intro:
+        "A cycling name must first decide which price tier it speaks to: road cyclists are gear obsessives with astonishing wallets — bikes start in five figures — and they want insider pedigree; a name with European-workshop character like Rapha lets a jersey sell at near-luxury prices. Commuter and family bike customers want the opposite — sturdiness and value — and a name too precious creates distance. The first material bin is wheel and wind imagery: wheel, spoke, chain, gear and pedal serve the category straight, while wind and swift roots write the ride's sensation — air rushing past your ears — into the name itself. The second lever is the freedom metaphor: cycling sells \"arriving under your own power,\" and escape, journey and the velo root (French for bicycle, the skeleton key of European cycling culture) all live on the spectrum — velo coinages (Velofix, Velosophy) carry pedigree certification inside the tribe for free. The third is club culture: cycling is a deeply social sport, and weekend group rides drive retention and referrals, so club, works and squadra roots echo the hidden value of \"buy a bike, join a tribe.\" Local shops should also ride \"city + bike shop/repair\" search traffic with a category root in the name, while online brands must clear the global test — China is the world's bicycle supply-chain heartland, and a cross-border gear brand needs a name that reads smoothly everywhere. Finally, leave radius: shops expand into repair, rental and cycling tours, and a name welded to \"selling bikes\" makes every service line awkward.",
+      namingIdeas: [
+        "Wheel and chain imagery: wheel, spoke, gear, chain — category roots served straight, riding \"city + bike shop\" search traffic for local stores",
+        "Wind and speed sensation: swift, gale, rush — write the feeling of air rushing past your ears into the name; the imagery is the memory hook",
+        "Velo pedigree coinages: velo, cycle, ride blends — the skeleton key of European cycling culture, instantly legible as insider pedigree",
+        "Freedom-of-arrival narrative: escape, journey, beyond — cycling sells arriving under your own power, and the metaphor outranks any feature word",
+        "Club and squadra signaling: club, works, team — buy a bike, join a tribe; community roots echo the weekend-ride culture that drives retention",
+      ],
+      cases: [
+        { name: "Rapha", takeaway: "Borrowed from the legendary 1960s St. Raphaël racing team: two syllables of European-workshop character that let jerseys sell at near-luxury prices — the template of pedigree roots funding brand premium" },
+        { name: "Specialized", takeaway: "A plain adjective as a manifesto: one word declaring \"we only do bikes,\" turning category focus itself into brand equity — professionalism played completely straight" },
+        { name: "Brompton", takeaway: "A London place name (Brompton Oratory) on a folding bike: British pedigree welded to the commuting scene, with the place name's restraint becoming the style — a local root's global victory" },
+        { name: "Canyon", takeaway: "A landscape word full of descent and scale: evoking where great rides happen rather than what the product is — and the direct-to-consumer giant proving imagery beats specification" },
+        { name: "Velofix", takeaway: "Velo plus fix: mobile bike repair compressed into four syllables, category and service welded together — the standard velo-coinage move in the service lane" },
+      ],
+      pitfalls: [
+        "Tier mismatch: gear obsessives want insider pedigree, commuters want sturdy value — a name pitched at the wrong tier convinces neither wallet",
+        "Welding the name to retail: repair, rental and cycling tours are all on the expansion path, and a \"bike sales\" name makes every service line a retrofit",
+        "Ignoring the global read: cross-border bikes and gear are the supply chain's natural play, and a name that only works in one language restarts the brand at the border",
+        "Too race-core for families: commuter and kids' bikes are the volume base, and a name built from racing slang keeps family customers at the door",
+      ],
+    },
+  },
+  fishing: {
+    slug: "fishing",
+    tlds: [
+      { tld: "com", zh: "渔具客单价与复购都高，电商信任的默认选择", en: "High-ticket, high-repeat tackle — the default for commerce trust" },
+      { tld: "club", zh: "「钓友圈子」的圈层感，约钓文化的天然后缀", en: "The community register — angling-buddy culture's native suffix" },
+      { tld: "fun", zh: "「玩」的语义直给，把垂钓说成周末乐趣", en: "Play semantics outright — framing fishing as weekend joy" },
+    ],
+    zh: {
+      label: "垂钓渔具",
+      title: "垂钓渔具品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "垂钓渔具与钓鱼服务命名指南：水域意象、渔获叙事、耐心哲学等 5 种思路，Shimano/汉鼎/Bass Pro Shops 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的渔具品牌域名。",
+      intro:
+        "钓鱼是被严重低估的命名赛道：中国有上亿垂钓人口，渔具客单价与复购率双高，「一入钓坑深似海」的装备党文化让品牌忠诚度堪比数码圈。这个品类命名要先认清客群的两副面孔：老钓客信「专业与耐用」——竿子断在大鱼上是不可原谅的，名字要有硬核可靠感（鼎、钢、precision 系词根）；而增量客群是把钓鱼当解压休闲的年轻人与亲子家庭，路亚、飞钓的潮流化让「玩」的叙事有了空间，名字可以轻快带梗。命名的第一素材库是水域意象：江、湖、海、溪、浪、渊都在谱系上，水域词根自带场景画面，「渊、深」还暗合「高手在民间」的圈内气质。第二个抓手是渔获叙事：鱼、竿、饵、钩、猎、bass、catch 品类直给，「爆护」（渔获满桶）这类黑话做品牌自带钓友会心一笑。第三个抓手是耐心哲学：钓鱼在文化里从来不只是抓鱼——姜太公、庄子的典故给中文命名留了一整层文化纵深，「静、渔、闲」系名字把垂钓卖成一种生活态度，恰好接住解压经济的叙事。渠道上，抖音钓鱼直播与钓场点评是获客主场，「城市+钓场/渔具店」的搜索词值得埋；跨境渠道上，中国是全球渔具制造腹地，出海品牌的名字要全球读得顺。最后留半径：渔具品牌普遍延展钓场运营、约钓社群与户外服饰，名字锁死单一钓法（如「路亚 XX」），扩线时要重讲故事。",
+      namingIdeas: [
+        "水域意象：江、湖、溪、渊、浪——水域词根自带场景画面，「渊、深」还暗合高手在民间的圈内气质",
+        "渔获直给：鱼、竿、饵、猎、bass、catch——品类词根吃搜索流量，「爆护」类黑话自带钓友会心一笑",
+        "耐心哲学：静、渔、闲、zen——姜太公与庄子给中文命名留了文化纵深，把垂钓卖成生活态度接住解压经济",
+        "硬核可靠感：鼎、钢、锋、precision——老钓客信专业与耐用，竿子断在大鱼上是不可原谅的",
+        "潮流轻量化：路亚、飞钓的玩感词根——年轻钓客把钓鱼当解压游戏，名字轻快带梗降低入坑门槛",
+      ],
+      cases: [
+        { name: "Shimano", takeaway: "创始人岛野庄三郎的姓氏：从自行车变速器到渔轮，精密制造的家族姓氏跨品类通用——「工匠姓氏即品质」的日式命名逻辑" },
+        { name: "汉鼎", takeaway: "「汉」的民族自信+「鼎」的重器意象：国产鱼竿用两个字说满「可靠的国货重器」——硬核可靠感命名的中文范本" },
+        { name: "Bass Pro Shops", takeaway: "目标鱼种（bass）+专业（pro）+零售（shops）三词直给：美国钓具零售巨头把客群、段位、业态一次说清——功能命名做到极致也是护城河" },
+        { name: "Rapala", takeaway: "芬兰渔夫 Lauri Rapala 的姓氏做路亚饵品牌：手工削饵的创始人传说随名字流传近百年——渔具行业「人即工艺」的活化石" },
+        { name: "钓鱼人", takeaway: "最大的垂钓内容平台直接叫「钓鱼人」：品类人群词做名字零解释成本，内容与工具生态的入口感拉满——人群命名的直球打法" },
+      ],
+      pitfalls: [
+        "锁死单一钓法：路亚、台钓、海钓客群与装备差异巨大，名字带死钓法，扩品类时品牌要重来",
+        "只有硬核没有玩感：年轻钓客与亲子家庭是增量基本盘，名字太老炮，新人入坑的第一站就不会选你",
+        "忽略全球语感：中国是渔具制造与跨境出海的腹地，名字只在中文语境成立，出海时要重建品牌",
+        "文化梗用力过猛：姜太公类典故好用但易撞车，全行业都在「渔翁、太公」里打转，差异化反而丢了",
+      ],
+    },
+    en: {
+      label: "Fishing & tackle",
+      title: "How to Name a Fishing Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Fishing tackle and angling brand naming guide: water imagery, catch narratives, patience philosophy, breakdowns of Shimano/Rapala/Bass Pro Shops, recommended TLDs and pitfalls — then hunt an available fishing brand domain with AI.",
+      intro:
+        "Fishing is a wildly underrated naming arena: hundreds of millions fish worldwide, tackle carries both high tickets and high repeat rates, and the gear-obsession culture — \"the tackle rabbit hole has no bottom\" — breeds brand loyalty that rivals consumer electronics. The category's clientele wears two faces: veteran anglers trust professionalism and durability — a rod snapping on a big fish is unforgivable — so names need hardcore reliability (iron, precision, pro registers); the growth market, meanwhile, is young lure and fly anglers plus families who fish to decompress, where the sport's fashionable turn makes room for playful, meme-friendly names. The first material bin is water imagery: river, lake, creek, tide and deep all live on the spectrum, painting the scene by themselves — and \"deep\" roots carry the insider register of quiet mastery. The second lever is the catch narrative: fish, rod, lure, hook, bass and catch serve the category straight, riding \"city + tackle shop/fishing spot\" search, while angling slang as a brand earns a knowing grin from the tribe. The third is patience philosophy: fishing has never been just about catching fish — the contemplative register (still, zen, drift) sells angling as a way of life, landing squarely on the decompression economy. Distribution runs on fishing livestreams and spot-review apps, and since China is the world's tackle manufacturing heartland, a cross-border brand needs a name that reads smoothly everywhere. Finally, leave radius: tackle brands expand into managed fishing venues, angling communities and outdoor apparel, so a name welded to one technique forces a new story at every expansion.",
+      namingIdeas: [
+        "Water imagery: river, creek, tide, deep — waterside roots paint the scene by themselves, and \"deep\" carries the insider register of quiet mastery",
+        "Catch narratives: rod, lure, hook, bass, catch — category roots ride search traffic, and angling slang earns a knowing grin from the tribe",
+        "Patience philosophy: still, zen, drift — sell angling as a way of life, not a harvest, and land squarely on the decompression economy",
+        "Hardcore reliability: iron, precision, pro — veterans trust durability above all, because a rod snapping on a big fish is unforgivable",
+        "Playful modern registers: lure and fly-fishing's fashionable turn — light, meme-friendly names lower the entry bar for young anglers and families",
+      ],
+      cases: [
+        { name: "Shimano", takeaway: "Founder Shozaburo Shimano's surname: from bicycle derailleurs to fishing reels, a precision-manufacturing family name traveling across categories — the Japanese logic of \"the craftsman's surname is the quality mark\"" },
+        { name: "Rapala", takeaway: "Finnish fisherman Lauri Rapala's surname on the lure: the founder's hand-carved-minnow legend traveling with the name for nearly a century — the living fossil of \"the person is the craft\" in tackle" },
+        { name: "Bass Pro Shops", takeaway: "Target species plus skill tier plus storefront, three words served straight: the American retail giant declaring audience, level and business in one breath — functional naming pushed to where it becomes a moat" },
+        { name: "Handing (\u6c49\u9f0e)", takeaway: "National pride plus the bronze-cauldron gravitas: a Chinese rod maker saying \"reliable heavy craft\" in two characters — the Chinese template of hardcore-reliability naming" },
+        { name: "Orvis", takeaway: "Founder Charles Orvis's surname carrying 160 years of fly-fishing heritage: proof that in a patience sport, a name's age is itself the trust asset" },
+      ],
+      pitfalls: [
+        "Welding the name to one technique: lure, coarse and saltwater anglers differ hugely in gear and culture, and a technique-locked name restarts the brand at every expansion",
+        "All hardcore, no play: young anglers and families are the growth base, and a name pitched only at grizzled veterans loses the newcomer's first purchase",
+        "Ignoring the global read: China is the tackle manufacturing and cross-border heartland, and a name that only works in one language rebuilds the brand at the border",
+        "Overplaying the cultural allusion: the contemplative-fisherman trope is powerful but crowded — when the whole industry circles the same legend, the differentiation is gone",
+      ],
+    },
+  },
+  foodtruck: {
+    slug: "foodtruck",
+    tlds: [
+      { tld: "com", zh: "连锁化与加盟扩张的信任底线", en: "The trust baseline for chains and franchising" },
+      { tld: "kitchen", zh: "「厨房」语义直给，移动餐饮的手作感后缀", en: "Kitchen semantics outright — the craft register for mobile food" },
+      { tld: "city", zh: "「城市」的街头在地感，流动摊位的天然舞台", en: "The street register — the city is the food truck's native stage" },
+    ],
+    zh: {
+      label: "餐车小吃",
+      title: "餐车与小吃品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "餐车与街头小吃品牌命名指南：招牌单品直给、烟火气人设、车轮梗等 5 种思路，Kogi/夸父炸串/Halal Guys 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的小吃品牌域名。",
+      intro:
+        "餐车与小吃摊的名字是全行业「决策距离」最短的：客人从看见招牌到掏钱往往不到十秒，名字必须在一瞥之间说清「卖什么+为什么好吃」。所以这个品类命名的第一法则是单品直给：把招牌产品写进名字（炸串、烤冷面、taco、lobster roll），让名字自己当菜单——Kogi 用一个韩语词根「烤肉」定义了韩墨融合餐车，夸父炸串把品类写进名字后连锁到千店。第二个抓手是烟火气人设：小吃的信任来自「人」的温度，老王、阿婆、大叔系的人名前缀自带「做了三十年」的手艺暗示，比任何品牌故事都短平快。第三个抓手是车轮与流动梗：餐车的移动属性本身就是命名素材——wheels、roaming、「开到哪吃到哪」的追逐感是固定门店给不了的稀缺叙事，社交媒体时代「追餐车」（今天在哪停）本身就是内容钩子。词库上，香、辣、脆、烫这类通感词根在小吃赛道格外值钱：名字能让人分泌唾液就是转化率。还要过两道现实关：一是招牌可读性——餐车招牌就是最大的广告位，名字要在车身上远看清楚、夜市灯下好认；二是连锁化预留——小吃是加盟扩张最快的赛道，名字里的人设与故事要经得起千店复制，太依赖「本人在场」的名字连锁时会稀释。最后留半径：餐车普遍延展预包装零售与商场店，名字锁死「摊」的气质，进商场时要重新包装。",
+      namingIdeas: [
+        "招牌单品直给：把爆款写进名字——炸串、taco、lobster roll，名字自己当菜单，十秒决策场景的最优解",
+        "烟火气人设：老王、阿婆、大叔系前缀——人名自带「做了三十年」的手艺暗示，比品牌故事短平快",
+        "车轮流动梗：wheels、roaming、追餐车——移动属性是固定门店给不了的稀缺叙事，社媒时代自带内容钩子",
+        "通感词根：香、辣、脆、烫——能让人分泌唾液的名字就是转化率，小吃赛道通感词格外值钱",
+        "在地街头暗号：城市老地名、夜市黑话——小吃是城市记忆的载体，在地词根让本地人认亲、游客打卡",
+      ],
+      cases: [
+        { name: "Kogi BBQ", takeaway: "韩语「烤肉」（kogi）直接做名字：一个词根定义韩墨融合餐车品类，推特追车文化的鼻祖——单品直给+社媒流动叙事的开山之作" },
+        { name: "夸父炸串", takeaway: "「夸父追日」的神话人设+「炸串」品类直给：文化梗给街头小吃镀了层叙事金身，千店连锁证明单品命名的复制力" },
+        { name: "The Halal Guys", takeaway: "「清真+伙计们」的人设直给：纽约街头推车用最朴素的自称做成全球连锁——摊主人设经得起复制的罕见范本" },
+        { name: "阿甘锅盔", takeaway: "「阿甘」的憨厚人设+「锅盔」地方小吃直给：人名的温度+品类的稀缺性，把湖北街头饼做进全国商场——人设+单品的标准公式" },
+        { name: "Cousins Maine Lobster", takeaway: "「表兄弟」的家族人设+「缅因龙虾」产地直给：创业真人秀出身的餐车用亲情与产地双背书扩成特许经营帝国" },
+      ],
+      pitfalls: [
+        "名字不当菜单：十秒决策场景里还要客人猜你卖什么，摊位前的犹豫就是流失——单品直给是第一法则",
+        "人设依赖本人在场：「阿婆手作」类名字连锁复制时会稀释，加盟店没有阿婆，故事就穿帮了",
+        "招牌可读性差：餐车车身是最大广告位，笔画繁复、字号挤压的名字在夜市灯下就是隐形",
+        "锁死摊位气质：预包装零售与商场店是利润延展线，名字太「摊」，进商场时要重新包装",
+      ],
+    },
+    en: {
+      label: "Food trucks & street food",
+      title: "How to Name a Food Truck or Street Food Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Food truck and street food naming guide: signature-dish naming, vendor personas, wheels-and-roaming hooks, breakdowns of Kogi/Halal Guys/Cousins Maine Lobster, recommended TLDs and pitfalls — then hunt an available street food domain with AI.",
+      intro:
+        "A food truck's name works the shortest decision distance in all of commerce: from spotting the sign to paying rarely takes ten seconds, so the name must declare \"what we sell and why it's delicious\" in a single glance. Hence the category's first law — name the signature dish: put the hero product in the name (tacos, lobster rolls, fried skewers) and let the name be the menu. Kogi defined the Korean-Mexican truck genre with one word meaning grilled meat; the biggest Chinese skewer chains scaled to a thousand stores with the dish in the name. The second lever is the vendor persona: street food trust comes from a person's warmth, and folk-name prefixes (Uncle, Grandma, the Guys) imply thirty years of craft faster than any brand story could. The third is the wheels narrative: mobility itself is naming material — roaming, wheels and chase-the-truck registers offer a scarcity story no fixed storefront can, and \"where's the truck today?\" is a built-in social content hook, the engine that made food trucks famous in the first place. In the word bin, synesthetic roots — sizzle, crisp, smoke, spice — earn outsized returns here: a name that makes mouths water is the conversion rate. Two practical gates remain: sign legibility, because the truck body is your biggest ad and the name must read from across a night market; and franchise headroom, because street food scales faster than any restaurant format, and a persona too dependent on the founder's physical presence dilutes at the hundredth location. Finally, leave radius: trucks expand into packaged retail and mall counters, so a name locked into stall grit needs repackaging the day you go indoors.",
+      namingIdeas: [
+        "Name the signature dish: tacos, lobster roll, skewers — let the name be the menu; in a ten-second decision window, literal wins",
+        "Vendor personas: Uncle, Grandma, the Guys — folk prefixes imply thirty years of craft faster than any brand story",
+        "Wheels and roaming hooks: roaming, rolling, chase-the-truck — mobility is a scarcity narrative no storefront can copy, with a built-in content hook",
+        "Synesthetic roots: sizzle, crisp, smoke, spice — a name that makes mouths water is the conversion rate itself",
+        "Street-corner codes: old district names, night-market slang — street food carries city memory, earning locals' kinship and tourists' pilgrimage",
+      ],
+      cases: [
+        { name: "Kogi BBQ", takeaway: "Korean for grilled meat as the whole name: one root defining the Korean-Mexican truck genre, and the original Twitter chase-the-truck phenomenon — signature-dish naming fused with the mobility narrative at its birth" },
+        { name: "The Halal Guys", takeaway: "Persona served plain: a New York cart's humble self-description scaled into a global franchise — the rare vendor persona that survives replication because it names a team, not one irreplaceable person" },
+        { name: "Cousins Maine Lobster", takeaway: "Family persona plus provenance plus dish, three trust signals in three words: the reality-show truck franchising nationwide on kinship and origin — the complete street food naming formula" },
+        { name: "Kwafu Fried Skewers (\u5938\u7236\u70b8\u4e32)", takeaway: "A sun-chasing mythological hero plus the dish declared: a cultural legend gilding street skewers with narrative, and a thousand-store chain proving dish-first naming replicates" },
+        { name: "A'gan Guokui (阿甘锅盔)", takeaway: "A warm-hearted folk persona plus a regional flatbread declared: the person's warmth and the dish's scarcity carrying a Hubei street snack into malls nationwide — the persona-plus-dish formula" },
+      ],
+      pitfalls: [
+        "A name that isn't a menu: making customers guess what you sell inside a ten-second window — the hesitation at the counter is the lost sale",
+        "Personas needing the founder present: \"Grandma's handmade\" dilutes at franchise scale when there's no grandma at store forty — name a team or a story, not a body",
+        "Illegible signage: the truck body is the biggest ad you own, and an ornate, cramped name is invisible under night-market lights",
+        "Locking into stall grit: packaged retail and mall counters are the margin expansion, and a name too raw for indoors forces a repackage at the door",
+      ],
+    },
+  },
+  repair: {
+    slug: "repair",
+    tlds: [
+      { tld: "com", zh: "上门服务的信任底线，让客人放心开门", en: "The trust baseline that gets the front door opened" },
+      { tld: "services", zh: "「服务」语义直给，家庭服务业的标准后缀", en: "Service semantics outright — the home-services standard suffix" },
+      { tld: "pro", zh: "「专业」的师傅背书，手艺活的段位证明", en: "The professional register — a craftsman's rank in the suffix" },
+    ],
+    zh: {
+      label: "维修服务",
+      title: "维修服务品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "家电维修与上门服务命名指南：靠谱承诺、师傅人设、速度叙事等 5 种思路，啄木鸟/Mr. Handyman/uBreakiFix 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的维修品牌域名。",
+      intro:
+        "维修生意的名字要先化解一种独特的戒备：客人是在「家里出了状况」的焦虑时刻找到你，还要为陌生人打开家门——乱收费、小病大修的行业污名让「靠谱」成了这个品类唯一的硬通货。所以维修命名的第一任务是把「可信」写进名字：透明、诚、正、快修快好，直接回应客人最深的顾虑；啄木鸟家庭维修用一只「为树木治病」的益鸟做品牌，把上门维修的信任问题用一个意象讲透。第二个抓手是师傅人设：手艺活的信任落在「人」身上，Mr. Handyman、王师傅系的人名与称谓命名自带「手艺人对结果负责」的承诺——「师傅」二字在中文语境里就是段位背书。第三个抓手是速度与确定性叙事：维修是应急需求，「今日达、一次修好」的确定感比便宜更打动人，fix、rescue、快系词根都在谱系上——uBreakiFix 用一句「你弄坏我修好」把服务承诺压进一个名字。词库上，修、匠、能、helper 与工具意象（扳手、锤、螺丝）都是品类直给，工具词根在 logo 视觉化时格外好用。渠道上，本地搜索与平台点评是获客主场，「城市+家电维修」的搜索词值得埋，名字要在邻里群转介绍的「我认识一个 XX，靠谱」这句话里立得住。最后留半径：维修普遍延展安装、保养、家庭焕新的全屋服务，名字锁死单一品类（如「空调维修」），扩品类时招牌要重做。",
+      namingIdeas: [
+        "靠谱承诺直给：诚、正、透明、trust——乱收费是行业最大污名，名字先回应「你会不会坑我」的深层顾虑",
+        "师傅人设：王师傅、Mr. Handyman——手艺活的信任落在人身上，「师傅」的称谓在中文语境就是段位背书",
+        "速度确定性：快、fix、rescue、今日达——维修是应急需求，「一次修好」的确定感比便宜更打动人",
+        "工具与匠意象：扳手、锤、匠、works——品类直给且 logo 视觉化极佳，工具词根是维修行业的天然图腾",
+        "益友隐喻：啄木鸟式的守护意象——把「修东西」升维成「守护你的家」，信任叙事的最高形态",
+      ],
+      cases: [
+        { name: "啄木鸟家庭维修", takeaway: "一只「为树木治病」的益鸟做品牌：把上门维修的信任问题用守护意象讲透，全国连锁证明隐喻命名在蓝领服务业的天花板" },
+        { name: "Mr. Handyman", takeaway: "「多面手先生」的称谓人设：Mr. 的礼貌感+handyman 的全能感，北美最大上门维修特许经营用一声称呼建立信任" },
+        { name: "uBreakiFix", takeaway: "「你弄坏，我修好」压进一个名字：主谓宾俱全的服务承诺，手机维修连锁用一句话完成定位——承诺式命名的极致压缩" },
+        { name: "Roto-Rooter", takeaway: "旋转（roto）+疏通（rooter）的押韵合成词：1935 年发明疏通机的公司用拟声节奏统治下水道行业九十年——功能+韵律的老牌范本" },
+        { name: "万能小哥", takeaway: "「万能」的全品类承诺+「小哥」的邻家亲切：互联网维修平台用称谓拉近距离——师傅人设年轻化的中文样本" },
+      ],
+      pitfalls: [
+        "忽略信任顾虑：名字里只有「快、便宜」没有「诚、正」，客人最深的「会不会坑我」顾虑没被回应",
+        "锁死单一品类：安装、保养、全屋焕新都在延展路上，「空调维修」式名字扩品类时招牌要重做",
+        "太廉价感伤客单：维修的利润在高客单的安装与保养，名字太地摊气，报价一高客人就觉得被宰",
+        "人设无法复制：靠创始人「张师傅」本人口碑起家，连锁扩张时每个门店都没有张师傅——人设要设计成可复制的称谓",
+      ],
+    },
+    en: {
+      label: "Repair & handyman services",
+      title: "How to Name a Repair or Handyman Business: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Appliance repair and handyman naming guide: trust anchors, craftsman personas, speed promises, breakdowns of Mr. Handyman/uBreakiFix/Roto-Rooter, recommended TLDs and pitfalls — then hunt an available repair brand domain with AI.",
+      intro:
+        "A repair business's name must first disarm a unique wariness: customers find you in the anxious moment when something at home has broken, and then must open their front door to a stranger — and the industry's reputation for padded bills and invented faults makes \"trustworthy\" the only hard currency in the category. So the first naming job is writing credibility into the name itself: honest, true, transparent and fixed-right-first-time registers answer the customer's deepest worry before the phone call. The second lever is the craftsman persona: trust in manual trades lands on a person, and title-based names (Mr. Handyman, Master Wang) carry the promise that a named craftsman answers for the result — the courteous \"Mr.\" plus the all-capable \"handyman\" built North America's biggest home-repair franchise on a form of address. The third is the speed-and-certainty narrative: repair is an emergency purchase, and the certainty of \"today, fixed once\" persuades more than cheapness ever will — fix, rescue and rapid roots all live on the spectrum, and uBreakiFix compresses the entire service contract into one name: you break it, we fix it. In the word bin, wrench, hammer and craftsman imagery serve the category straight and visualize beautifully in a logo — tool roots are the trade's natural totem. Distribution runs on local search and review platforms, so \"city + appliance repair\" keywords earn their keep, and the name must stand up in the neighborhood referral sentence: \"I know a guy at X — reliable.\" Finally, leave radius: repair shops expand into installation, maintenance and whole-home refresh services, so a name welded to one appliance forces a new signboard at every category expansion.",
+      namingIdeas: [
+        "Trust anchors: honest, true, transparent — padded bills are the industry's stigma, so answer \"will you rip me off?\" right in the name",
+        "Craftsman personas: Mr., Master, the named tradesman — trust in manual trades lands on a person, and a title is a rank badge in itself",
+        "Speed and certainty: fix, rescue, same-day — repair is an emergency purchase, and \"fixed once, today\" persuades more than cheap",
+        "Tool and craft imagery: wrench, hammer, works — category served straight, and tool roots visualize into logos better than any abstraction",
+        "Guardian metaphors: the woodpecker model — upgrade \"fixing things\" into \"guarding your home,\" the highest form of the trust narrative",
+      ],
+      cases: [
+        { name: "Mr. Handyman", takeaway: "A form of address as the brand: the courtesy of \"Mr.\" plus the all-capability of \"handyman\" — North America's biggest home-repair franchise built on a respectful title" },
+        { name: "uBreakiFix", takeaway: "The whole service contract in one name — you break it, we fix it: subject, verb and promise compressed into a device-repair chain's entire positioning" },
+        { name: "Roto-Rooter", takeaway: "A rhyming blend of rotary and rooting: the company that invented the drain machine in 1935 ruling the pipes for ninety years on onomatopoeic rhythm — the veteran template of function plus cadence" },
+        { name: "Woodpecker (\u5544\u6728\u9e1f)", takeaway: "A bird that heals trees as the brand: China's home-repair giant solving the open-your-door trust problem with a single guardian image — the ceiling of metaphor naming in blue-collar services" },
+        { name: "Handy", takeaway: "One adjective as the platform: capable, nearby, ready — the on-demand marketplace compressing the entire home-services promise into five letters" },
+      ],
+      pitfalls: [
+        "Skipping the trust anchor: a name all speed and price with no honesty signal leaves the customer's deepest worry — \"will you rip me off?\" — unanswered",
+        "Welding the name to one appliance: installation, maintenance and whole-home services are the expansion path, and an \"AC repair\" name repaints the van at every new line",
+        "Bargain-bin registers capping the ticket: the margin lives in high-ticket installation and maintenance, and a cut-rate name makes every serious quote feel like a scam",
+        "Personas that don't replicate: a business built on one Master Zhang's personal reputation has no Master Zhang at branch forty — design the persona as a replicable title, not a person",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
