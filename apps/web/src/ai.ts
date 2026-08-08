@@ -1,3 +1,5 @@
+import { isBrandCollision } from "./brand-blocklist";
+
 export interface AiScores {
   length: number;
   readability: number;
@@ -8,6 +10,7 @@ export interface AiScores {
 export type AiTheme = "pinyin" | "word" | "coined" | "blend";
 
 const THEMES = new Set<string>(["pinyin", "word", "coined", "blend"]);
+export const AI_THEMES: ReadonlySet<string> = THEMES;
 
 export interface AiCandidate {
   label: string;
@@ -36,6 +39,12 @@ const SYSTEM_PROMPT = `你是资深域名命名专家。用户会用自然语言
 严格输出 JSON 数组，不要输出其他任何文字：
 [{"label":"域名主体","meaning":"一句话说明寓意与读法","theme":"coined","scores":{"length":90,"readability":85,"relevance":88,"brandability":80}}]`;
 
+/** 用户点踩的候选（label + 命名思路），refine 轮据此规避同风格 */
+export interface DislikedItem {
+  label: string;
+  theme?: AiTheme;
+}
+
 /** refine 轮反馈：跨轮去重 + 被注册名的模式总结素材 */
 export interface RefineFeedback {
   /** 已核验过的全部主体（无论结果），refine 轮严禁重复输出 */
@@ -44,6 +53,8 @@ export interface RefineFeedback {
   taken: string[];
   /** 被注册主体的命名思路分布（仅统计已知 theme 的） */
   takenThemes: Partial<Record<AiTheme, number>>;
+  /** 用户点踩的候选（可选，旧 payload 无此字段） */
+  disliked?: DislikedItem[];
 }
 
 const ZH_PINYIN_HINT = `
@@ -305,6 +316,14 @@ function buildRefineHint(fb: RefineFeedback, round: number): string {
       "请先反思这些被注册名的共性模式（哪些词根太常见、哪种构词太直白、哪个长度段竞争太激烈），这一轮明确避开这些模式：更大胆地造词、混搭、用冷僻但好读的组合，或适当加长 1-2 个字符换取独特性，但仍要好读好记、贴合需求。",
     );
   }
+  if (fb.disliked && fb.disliked.length > 0) {
+    const items = fb.disliked
+      .map((d) => (d.theme ? `${d.label}（${THEME_NAMES[d.theme] ?? d.theme}）` : d.label))
+      .join("、");
+    parts.push(
+      `用户明确点踩了这些候选及其风格：${items}。请逐个分析它们的词根与构词模式（共同的词根片段、前后缀改造套路、命名思路），本轮严禁输出使用相同词根或相同构词模式的名字（例如点踩了 loggist 这类 log+后缀造词，就不要再出任何含 log 词根或同套路后缀改造的候选），换用完全不同的词根与构词方向。`,
+    );
+  }
   if (fb.tried.length > 0) {
     parts.push(`以下名字全部已经核验过（无论结果如何），严禁重复输出其中任何一个：\n${fb.tried.slice(-120).join(", ")}`);
   }
@@ -423,6 +442,8 @@ async function generateOnce(
     // 含内部空格或其他非法字符的直接丢弃，不做静默改写
     const label = String(c.label ?? "").trim().toLowerCase();
     if (!/^[a-z0-9-]{1,63}$/.test(label) || seen.has(label)) continue;
+    // R180：知名品牌撞名过滤（完全同名，或长度 ≥5 且编辑距离 ≤1），规避商标法律风险
+    if (isBrandCollision(label)) continue;
     seen.add(label);
     // meaning 为空/全空白的候选直接丢弃（流截断或模型漏字段），不进核验队列；
     // tried 由上层根据返回值累积，被丢弃项天然不计入

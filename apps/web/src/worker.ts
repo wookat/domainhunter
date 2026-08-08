@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { nanoid } from "nanoid";
 import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
-import { generateAiCandidates, generateUnderstanding } from "./ai";
+import { AI_THEMES, generateAiCandidates, generateUnderstanding, type AiTheme, type DislikedItem } from "./ai";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
@@ -169,6 +169,7 @@ app.post("/api/ai-search", async (c) => {
     tlds?: string[];
     target?: number;
     excludeLabels?: string[];
+    disliked?: { label?: string; theme?: string }[];
     style?: string;
     lengthPref?: string;
     fast?: boolean;
@@ -207,6 +208,15 @@ app.post("/api/ai-search", async (c) => {
   c.executionCtx.waitUntil(
     (async () => {
       const tried = new Set<string>((body.excludeLabels ?? []).map((l) => l.toLowerCase()));
+      // R180：点踩候选（label + theme），refine 轮生成风格规避提示；旧 payload 无此字段，天然向后兼容
+      const disliked: DislikedItem[] = (Array.isArray(body.disliked) ? body.disliked : [])
+        .map((d) => {
+          const label = String(d?.label ?? "").trim().toLowerCase();
+          const theme = String(d?.theme ?? "").toLowerCase();
+          return { label, theme: AI_THEMES.has(theme) ? (theme as AiTheme) : undefined };
+        })
+        .filter((d) => /^[a-z0-9-]{1,63}$/.test(d.label))
+        .slice(0, 40);
       const takenLabels: string[] = [...tried];
       // 被注册主体的命名思路分布，供 refine 轮总结失败模式
       const takenThemes: Partial<Record<string, number>> = {};
@@ -227,7 +237,7 @@ app.post("/api/ai-search", async (c) => {
               feedback:
                 round === 1 && tried.size === 0
                   ? undefined
-                  : { tried: [...tried], taken: takenLabels, takenThemes },
+                  : { tried: [...tried], taken: takenLabels, takenThemes, disliked: disliked.length > 0 ? disliked : undefined },
               round,
               lang,
             });
