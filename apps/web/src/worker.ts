@@ -1583,7 +1583,7 @@ app.get("/why", async (c) => {
 });
 
 // 内容最后更新日期（sitemap <lastmod>）：每次内容页增减/改写时更新
-const CONTENT_LASTMOD = "2026-08-07";
+const CONTENT_LASTMOD = "2026-08-08";
 
 const sitemapPaths = () => ["/", "/prices", "/why", "/mcp", "/advanced", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
 

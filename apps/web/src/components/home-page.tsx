@@ -342,6 +342,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个物流货运/跨境供应链品牌，寓意「使命必达，每一件货都被稳稳送到」；气质要可靠、高效、有网络感；场景是货车车身、快递面单和「发 X 的货，放心」的口碑里都清晰响亮。",
     en: "A logistics, freight or cross-border supply-chain brand. The name should promise every shipment arriving surely and on time; the vibe is dependable, efficient, network-strong; it must read clearly on a truck side, a shipping label, and in \"ship it with X, don't worry\".",
   },
+  {
+    slug: "agent",
+    labelZh: "AI 智能体",
+    labelEn: "AI agents",
+    zh: "一个 AI 智能体/Agent 产品品牌，寓意「一个可以放心把活交给它的 AI 同事」；气质要拟人、可托付、稳重不轻佻；场景是「让 X 帮我处理一下」的日常委托、企业安全审查清单和开发者社区讨论里都立得住。",
+    en: "An AI agent product brand. The name should feel like an AI coworker you can hand work to; the vibe is human-like, delegation-worthy, steady not gimmicky; it must work in \"let X handle it\", on an enterprise security-review list, and in developer-community threads.",
+  },
+  {
+    slug: "crossborder",
+    labelZh: "跨境电商",
+    labelEn: "Cross-border e-commerce",
+    zh: "一个跨境电商/出海品牌，寓意「无国界的好货与信任」；气质要国际化、好读好拼、无文化歧义；场景是海外社交广告、亚马逊搜索框和不同母语客人的口口相传里都念得出、记得住。",
+    en: "A cross-border e-commerce brand going global. The name should carry borderless quality and trust; the vibe is international, easy to read and spell, free of cultural landmines; it must survive social ads abroad, the Amazon search box, and word of mouth across native languages.",
+  },
+  {
+    slug: "escaperoom",
+    labelZh: "剧本杀密室",
+    labelEn: "Escape rooms",
+    zh: "一个剧本杀/密室逃脱/沉浸式娱乐品牌，寓意「推开门就进入另一个世界」；气质要有悬念、有戏剧感、让人好奇；场景是「周六去 X 玩不玩」的组局邀约、点评平台搜索和玩家探店笔记里都抓人好记。",
+    en: "An escape room or immersive entertainment venue brand. The name should feel like a doorway into another world; the vibe is mysterious, theatrical, curiosity-sparking; it must hook in \"anyone up for X on Saturday?\", stand out in review-app search, and stick in players' visit notes.",
+  },
+  {
+    slug: "bakery",
+    labelZh: "烘焙甜品",
+    labelEn: "Bakeries & desserts",
+    zh: "一个烘焙甜品/私房蛋糕品牌，寓意「出炉那一刻的香气与庆祝时刻的甜」；气质要温暖、手作、上镜好看；场景是礼盒丝带、生日贺卡和「我在 X 订的蛋糕」的晒图里都甜而不腻。",
+    en: "A bakery or dessert brand. The name should carry the aroma of fresh-from-the-oven and the sweetness of celebration; the vibe is warm, handcrafted, camera-ready; it must look right on a gift-box ribbon, a birthday card, and in \"I ordered it from X\" posts.",
+  },
+  {
+    slug: "bookstore",
+    labelZh: "书店出版",
+    labelEn: "Bookstores & publishing",
+    zh: "一个书店/独立出版品牌，寓意「一个可以安放精神的地方」；气质要有书卷气、有立场、经得起读书人审视；场景是书脊、门头灯箱和读者「我常去 X」的归属感表达里都隽永耐看。",
+    en: "A bookstore or independent press brand. The name should feel like a place for the mind to dwell; the vibe is literary, principled, able to survive well-read scrutiny; it must age well on a book spine, a storefront sign, and in a reader's \"I'm a regular at X\".",
+  },
+  {
+    slug: "florist",
+    labelZh: "花店花艺",
+    labelEn: "Florists",
+    zh: "一个花店/花艺工作室品牌，寓意「把心意开成一束花」；气质要诗意、美好、配得上被当作礼物送出；场景是贺卡署名、节日订花搜索和客户晒花束的照片里都添一分心意。",
+    en: "A florist or floral design studio brand. The name should read like sentiment arranged into a bouquet; the vibe is poetic, beautiful, worthy of being given; it must add grace to a gift-card signature, holiday flower searches, and customers' bouquet photos.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

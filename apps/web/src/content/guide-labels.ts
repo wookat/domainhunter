@@ -47,4 +47,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "recruiting", zh: "招聘人力", en: "Recruiting & HR" },
   { slug: "eldercare", zh: "养老服务", en: "Senior care" },
   { slug: "logistics", zh: "物流货运", en: "Logistics & freight" },
+  { slug: "agent", zh: "AI 智能体", en: "AI agents" },
+  { slug: "crossborder", zh: "跨境电商", en: "Cross-border e-commerce" },
+  { slug: "escaperoom", zh: "剧本杀密室", en: "Escape rooms" },
+  { slug: "bakery", zh: "烘焙甜品", en: "Bakeries & desserts" },
+  { slug: "bookstore", zh: "书店出版", en: "Bookstores & publishing" },
+  { slug: "florist", zh: "花店花艺", en: "Florists" },
 ];
