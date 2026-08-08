@@ -493,7 +493,7 @@ export function ShortlistPage({
                 } else {
                   setConfirmClear(true);
                   window.clearTimeout(confirmTimer.current);
-                  confirmTimer.current = window.setTimeout(() => setConfirmClear(false), 3000);
+                  confirmTimer.current = window.setTimeout(() => setConfirmClear(false), 5000);
                 }
               }}
             >
