@@ -96,7 +96,7 @@ export function PricesPage() {
         {!settled &&
           rows.map((r) => (
             <div key={r.tld} className="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0">
-              <a href={`/tld/${r.tld}?lang=${lang}`} className="font-mono text-sm font-semibold text-txt0 hover:text-brand">
+              <a href={`/tld/${r.tld}?lang=${lang}`} className="tap-target font-mono text-sm font-semibold text-txt0 hover:text-brand">
                 .{r.tld}
               </a>
               <span className="h-5 w-14 animate-pulse rounded bg-bg1" />
@@ -112,7 +112,7 @@ export function PricesPage() {
         {settled &&
           rows.map((r) => (
           <div key={r.tld} className="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0 hover:bg-bg1">
-            <a href={`/tld/${r.tld}?lang=${lang}`} className="font-mono text-sm font-semibold text-txt0 hover:text-brand">
+            <a href={`/tld/${r.tld}?lang=${lang}`} className="tap-target font-mono text-sm font-semibold text-txt0 hover:text-brand">
               .{r.tld}
             </a>
             <span className="tnum font-mono text-sm">

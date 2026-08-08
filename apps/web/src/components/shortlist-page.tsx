@@ -166,13 +166,13 @@ export function ShortlistPage({
       <button
         title={t("shortlist.noteEdit")}
         onClick={() => startNote(it)}
-        className="mt-1 flex min-w-0 max-w-xs items-center gap-1 text-left text-xs text-txt1 hover:text-txt0"
+        className="mt-1 flex min-h-[44px] min-w-0 max-w-xs items-center gap-1 text-left text-xs text-txt1 hover:text-txt0 md:min-h-0"
       >
         <StickyNote className="h-3 w-3 shrink-0 text-brand" />
         <span className="truncate">{it.note}</span>
       </button>
     ) : (
-      <button onClick={() => startNote(it)} className="mt-1 flex items-center gap-1 text-xs text-txt2 hover:text-brand">
+      <button onClick={() => startNote(it)} className="mt-1 flex min-h-[44px] items-center gap-1 text-xs text-txt2 hover:text-brand md:min-h-0">
         <StickyNote className="h-3 w-3" />
         {t("shortlist.addNote")}
       </button>

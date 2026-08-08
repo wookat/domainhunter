@@ -172,6 +172,20 @@
   }
 }
 
+/* 内联小链接/按钮的触达热区扩展：不改变布局，以伪元素把可点击区域垂直扩到 44px */
+.tap-target {
+  position: relative;
+}
+.tap-target::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 44px;
+  transform: translateY(-50%);
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
