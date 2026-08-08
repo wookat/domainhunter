@@ -292,28 +292,38 @@ export interface GuardStats {
   dropped: GuardDropCounts;
   /** EN word 路线配额补发是否触发（R224） */
   wordSupplement: boolean;
+  /** 补发轮实际发起次数（R243，0–2；主轮丢弃计数不含补发轮） */
+  supplementAttempts: number;
+  /** 补发轮各防线丢弃计数（R243，与主轮 dropped 分开，修复 R239 P3-1 盲区） */
+  supplementDropped: GuardDropCounts;
   /** LLM 调用瞬时失败后的退避重试次数 */
   retries: number;
   /** charsetViolation 首个违规字符的 Unicode 码点样本（如 "U+D55C"，R245；只留码点不留候选文本） */
   charsetSample?: string;
 }
 
+function newGuardDropCounts(): GuardDropCounts {
+  return {
+    invalidLabel: 0,
+    brandCollision: 0,
+    emptyMeaning: 0,
+    charsetViolation: 0,
+    phantomEtymology: 0,
+    metaLanguage: 0,
+    questionMark: 0,
+    meaningIncoherent: 0,
+    pinyinInvalid: 0,
+    pinyinMismatch: 0,
+    dislikedMorphology: 0,
+  };
+}
+
 export function newGuardStats(): GuardStats {
   return {
-    dropped: {
-      invalidLabel: 0,
-      brandCollision: 0,
-      emptyMeaning: 0,
-      charsetViolation: 0,
-      phantomEtymology: 0,
-      metaLanguage: 0,
-      questionMark: 0,
-      meaningIncoherent: 0,
-      pinyinInvalid: 0,
-      pinyinMismatch: 0,
-      dislikedMorphology: 0,
-    },
+    dropped: newGuardDropCounts(),
     wordSupplement: false,
+    supplementAttempts: 0,
+    supplementDropped: newGuardDropCounts(),
     retries: 0,
   };
 }
@@ -396,6 +406,8 @@ export async function generateUnderstanding(description: string, apiKey: string,
 export const EN_WORD_QUOTA_MIN_CANDIDATES = 8;
 /** 补发请求的候选数：word 路线软配额要求「各至少 2 个」，按 4 个请求留过滤余量 */
 export const EN_WORD_SUPPLEMENT_COUNT = 4;
+/** 补发总次数上限（R243）：首次补发全灭时再重试一次，第二次 prompt 加硬 */
+export const EN_WORD_SUPPLEMENT_MAX_ATTEMPTS = 2;
 
 /** 统计候选的 theme 分布 */
 export function countThemes(candidates: AiCandidate[]): Record<AiTheme, number> {
@@ -409,14 +421,21 @@ export function needsWordSupplement(candidates: AiCandidate[]): boolean {
   return candidates.length >= EN_WORD_QUOTA_MIN_CANDIDATES && countThemes(candidates).word === 0;
 }
 
-/** 补发轮硬指令：每条 label 必须是词典真实存在的完整英文单词，theme 全部标 word */
-export function buildWordSupplementDirective(count: number, exclude: string[]): string {
-  return [
+/** 补发轮硬指令：每条 label 必须是词典真实存在的完整英文单词，theme 全部标 word；
+ * attempt=2（R243 二次重试）时对 meaning 句式加硬指令，避免短句式 meaning 被质量防线拦截 */
+export function buildWordSupplementDirective(count: number, exclude: string[], attempt = 1): string {
+  const lines = [
     `路线配额补发（硬指令）：上一批候选的 theme 分布中 word（现成英文单词）路线为 0，不满足配额。`,
     `现在请再给出 ${count} 个候选，每一条都必须满足：label 是词典里真实存在的完整英文单词（隐喻词路线，如 amazon/anvil 式，与需求语义有一层聪明的关联），theme 必须全部标注为 "word"。`,
     `禁止造词、禁止错拼变体、禁止两词拼接。`,
     `严禁重复输出以下已出现过的名字：${exclude.join(", ")}`,
-  ].join("\n");
+  ];
+  if (attempt >= 2) {
+    lines.push(
+      `二次补发加硬要求：上一批补发候选全部被质量校验拦截。每条 meaning 必须是一个主谓完整的英文句子（含 means/evokes/suggests/metaphor for 等谓语），先复述这个单词本身（如 "anvil" is a real English word meaning …），再点破它与需求的隐喻关联，禁止只写碎片短语。`,
+    );
+  }
+  return lines.join("\n");
 }
 
 /** 合并补发结果：只收 theme 为 word 且 label 未出现过的候选，追加到主结果之后 */
@@ -440,18 +459,24 @@ export async function generateAiCandidates(
     await new Promise((r) => setTimeout(r, 400 + Math.random() * 600));
     out = await generateOnce(description, apiKey, opts);
   }
-  // R224：EN word 路线配额失守时补发一次（上限 1 次，失败不阻塞主结果）
+  // R224：EN word 路线配额失守时补发（R243：过滤后 word 仍为 0 时再重试一次，总上限 2 次；
+  // 第二次 prompt 加硬明确要求完整句式 meaning；两次仍 0 不阻塞主结果，失败静默）
   if ((opts.lang ?? "zh") === "en" && needsWordSupplement(out)) {
     if (opts.guard) opts.guard.wordSupplement = true;
-    try {
-      const extra = await generateOnce(description, apiKey, {
-        ...opts,
-        count: EN_WORD_SUPPLEMENT_COUNT,
-        wordSupplementExclude: out.map((c) => c.label),
-      });
-      out = mergeWordSupplement(out, extra);
-    } catch {
-      // 补发失败不影响主结果
+    for (let attempt = 1; attempt <= EN_WORD_SUPPLEMENT_MAX_ATTEMPTS; attempt++) {
+      if (opts.guard) opts.guard.supplementAttempts = attempt;
+      try {
+        const extra = await generateOnce(description, apiKey, {
+          ...opts,
+          count: EN_WORD_SUPPLEMENT_COUNT,
+          wordSupplementExclude: out.map((c) => c.label),
+          wordSupplementAttempt: attempt,
+        });
+        out = mergeWordSupplement(out, extra);
+      } catch {
+        // 补发失败不影响主结果
+      }
+      if (countThemes(out).word > 0) break;
     }
   }
   return out;
@@ -901,7 +926,13 @@ const EN_FRAGMENT_STOPWORDS = new Set([
   "their", "about", "these", "those", "here", "from", "does", "did", "can", "could", "should",
 ]);
 
-export function enMeaningIncoherent(label: string, meaning: string): boolean {
+// R243（R239 P1-1）：word 隐喻词补发轮的 meaning 天然短句式（"A real English word: …, metaphor for …"），
+// 常不含 EN_PREDICATE_RE 的词源谓语骨架而被误杀。补发轮不放弃红线（词源锤点条件 A 不变），
+// 仅对谓语锤点条件 B 追加隐喻/释义信号词（metaphor/symbolizes/represents 等）作为等效谓语。
+const EN_WORD_METAPHOR_PREDICATE_RE =
+  /\b(?:metaphor|symbol(?:s|ize[sd]?|izing)?|represent(?:s|ing)?|stands?\s+for|captures?|convey(?:s|ing)?|calls?\s+to\s+mind|real\s+(?:english\s+)?word|dictionary\s+word|literally|imagery?|invokes?|conjures?)\b/i;
+
+export function enMeaningIncoherent(label: string, meaning: string, opts: { wordMetaphor?: boolean } = {}): boolean {
   const lower = meaning.toLowerCase();
   let fragmentOk = lower.includes(label);
   if (!fragmentOk && label.length >= 4) {
@@ -941,7 +972,8 @@ export function enMeaningIncoherent(label: string, meaning: string): boolean {
       }
     }
   }
-  const predicateOk = EN_PREDICATE_RE.test(meaning);
+  const predicateOk =
+    EN_PREDICATE_RE.test(meaning) || (opts.wordMetaphor === true && EN_WORD_METAPHOR_PREDICATE_RE.test(meaning));
   return !fragmentOk || !predicateOk;
 }
 
@@ -1035,6 +1067,7 @@ async function generateOnce(
     round?: number;
     lang?: "zh" | "en";
     wordSupplementExclude?: string[];
+    wordSupplementAttempt?: number;
     guard?: GuardStats;
   } = {},
 ): Promise<AiCandidate[]> {
@@ -1046,7 +1079,7 @@ async function generateOnce(
   // R224：word 路线配额补发轮，追加硬指令（每条必须是真实英文单词且 theme 标 word）
   const isWordSupplement = opts.wordSupplementExclude !== undefined;
   if (isWordSupplement) {
-    user += `\n\n${buildWordSupplementDirective(count, opts.wordSupplementExclude ?? [])}`;
+    user += `\n\n${buildWordSupplementDirective(count, opts.wordSupplementExclude ?? [], opts.wordSupplementAttempt ?? 1)}`;
   }
   const res = await fetch("https://api.deepseek.com/chat/completions", {
     method: "POST",
@@ -1067,9 +1100,10 @@ async function generateOnce(
   const data = (await res.json()) as { choices: { message: { content: string } }[] };
   const text = data.choices[0]?.message?.content ?? "";
   const arr = parseCandidateArray(text);
-  // R238：防线统计——各 continue 丢弃路径按防线归类计数（只计数，不记录被丢弃候选内容）
+  // R238：防线统计——各 continue 丢弃路径按防线归类计数（只计数，不记录被丢弃候选内容）；
+  // R243：补发轮丢弃计入 supplementDropped，与主轮分开可观测
   const guardStats = opts.guard ?? newGuardStats();
-  const dropped = guardStats.dropped;
+  const dropped = isWordSupplement ? guardStats.supplementDropped : guardStats.dropped;
   const seen = new Set<string>();
   const out: AiCandidate[] = [];
   const clamp = (v: unknown) => {
@@ -1138,7 +1172,7 @@ async function generateOnce(
       continue;
     }
     // R196（P1-1）：EN meaning 连贯性启发式——无 label 词源锤点且无谓语骨架的词语沙拉 → 整条丢弃
-    if ((opts.lang ?? "zh") === "en" && enMeaningIncoherent(label, meaning)) {
+    if ((opts.lang ?? "zh") === "en" && enMeaningIncoherent(label, meaning, { wordMetaphor: isWordSupplement })) {
       dropped.meaningIncoherent++;
       continue;
     }
