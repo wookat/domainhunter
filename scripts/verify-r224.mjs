@@ -118,7 +118,7 @@ try {
   out = await generateAiCandidates("desc", "test-key", { lang: "zh" });
   check("zh 场景不补发：仅 1 次调用", calls.length, 1);
 
-  // 场景 4：补发请求失败 → 不阻塞，主结果原样返回
+  // 场景 4：补发请求失败 → 不阻塞，主结果原样返回（R243：失败后再重试 1 次，补发上限 2 次 → 共 3 次调用）
   calls = [];
   globalThis.fetch = async (_url, init) => {
     calls.push(JSON.parse(init.body).messages[1].content);
@@ -127,7 +127,7 @@ try {
   };
   out = await generateAiCandidates("desc", "test-key", { lang: "en" });
   check("补发失败不阻塞：主结果原样返回", out.length, noWord.length);
-  check("补发失败：仍只补 1 次（共 2 次调用）", calls.length, 2);
+  check("补发失败：重试至上限 2 次（共 3 次调用，R243）", calls.length, 3);
 
   // 场景 5：补发轮 LLM 漏标 theme → 兜底归入 word 并入结果
   calls = [];
