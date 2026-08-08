@@ -31,10 +31,10 @@ export function buildResultsCsv(rows: ResultsCsvRow[], lang: "zh" | "en", prices
   return [CSV_HEADER, ...lines].join("\n");
 }
 
-export function exportResultsCsv(rows: ResultsCsvRow[], lang: "zh" | "en", prices: PriceMap | null) {
+export function exportResultsCsv(rows: ResultsCsvRow[], lang: "zh" | "en", prices: PriceMap | null, filenamePrefix = "domainhunter-results") {
   const d = new Date();
   const ymd = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
-  downloadText(buildResultsCsv(rows, lang, prices), `domainhunter-results-${ymd}.csv`, "text/csv;charset=utf-8");
+  downloadText(buildResultsCsv(rows, lang, prices), `${filenamePrefix}-${ymd}.csv`, "text/csv;charset=utf-8");
 }
 
 /** 复制可注册域名列表（换行分隔），带 1.5s 已复制反馈 */
