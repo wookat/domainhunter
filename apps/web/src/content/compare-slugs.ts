@@ -117,6 +117,12 @@ export const COMPARE_SLUGS = [
   "money-vs-finance",
   "gold-vs-vip",
   "wtf-vs-lol",
+  "band-vs-fm",
+  "cash-vs-money",
+  "city-vs-world",
+  "estate-vs-land",
+  "expert-vs-pro",
+  "farm-vs-cafe",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

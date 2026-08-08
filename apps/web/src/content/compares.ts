@@ -2533,6 +2533,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Meme and comedy content sites", "Casual games and gag gifts", "League of Legends communities (LoL pun)", "Light, harmless entertainment brands"],
     },
   },
+  "band-vs-fm": {
+    slug: "band-vs-fm",
+    a: "band",
+    b: "fm",
+    zh: {
+      title: ".band 和 .fm 怎么选：乐队身份与音频行业标签的对比",
+      metaDescription: ".band 是乐队与音乐团体的专属后缀，.fm 是播客与音频产品的行业标签但价格贵得多。对比两者的语义、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是音乐圈后缀，但指向完全不同的主体。.band 指向「人」——乐队、合唱团、管乐团这些表演团体，yourname.band 天然读作乐队官网，巡演日程、周边商店、粉丝社群都顺理成章；注册约 $16、续费约 $25/年，价差小无钓鱼，独立乐队长期持有毫无压力。.fm 指向「内容」——播客、电台、音乐流媒体这些「能听的东西」，Anchor（anchor.fm）、Last.fm 把它做成了音频产品的身份标签，两字符短后缀好念好记；代价是注册与续费都在 $88 上下，是 .band 的三倍多。判断标准：主体是一支乐队或表演团体、卖的是「我们这群人」→ .band 语义更准且便宜得多；主体是一档节目或音频平台、卖的是「这个声音产品」→ .fm 的行业认知无可替代。乐队若同时做播客，务实做法是官网用 .band、节目用 .fm 分工。",
+      pickA: ["乐队与表演团体官网", "巡演日程与售票落地页", "粉丝社群与周边商店", "续费预算敏感的独立乐队"],
+      pickB: ["播客与电台节目", "音乐流媒体与音频平台", "音频社区与声音产品", "需要行业身份标签（.fm 圈内感）"],
+    },
+    en: {
+      title: ".band vs .fm: Band Identity or Audio-Industry Badge",
+      metaDescription:
+        ".band is the purpose-built suffix for bands and music groups; .fm is the audio industry's badge at a much higher price. Compare semantics, pricing and fit, then hunt available names.",
+      verdict:
+        "Both are music-world suffixes, but they point at different subjects. .band points at people — bands, choirs and performing groups; yourname.band reads as the official band site by default, with tour dates, merch and fan communities all fitting naturally. At about $16 to register and $25/yr to renew with no first-year bait, it's comfortable for independent bands to hold long term. .fm points at content — podcasts, radio and streaming, the things you listen to; Anchor (anchor.fm) and Last.fm made it the identity badge of audio products, and the two-letter suffix keeps domains short and speakable. The cost: registration and renewal both sit around $88, more than triple .band. The test: the subject is a band or performing group selling \"us as a group\" → .band is semantically precise and far cheaper; the subject is a show or audio platform selling \"this sound product\" → .fm's industry recognition is irreplaceable. A band that also runs a podcast can split the work: .band for the band site, .fm for the show.",
+      pickA: ["Band and performing-group websites", "Tour dates and ticketing pages", "Fan communities and merch stores", "Renewal-budget-sensitive independent bands"],
+      pickB: ["Podcasts and radio shows", "Music streaming and audio platforms", "Audio communities and sound products", "Industry badge recognition (.fm insider signal)"],
+    },
+  },
+  "cash-vs-money": {
+    slug: "cash-vs-money",
+    a: "cash",
+    b: "money",
+    zh: {
+      title: ".cash 和 .money 怎么选：到手的钱与理财叙事的对比",
+      metaDescription: ".cash 强调即时到手的钱，适合支付与返现；.money 偏理财与规划叙事，适合财务内容与工具。对比两者的语义、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都把「钱」写在脸上，差别在钱的状态。.cash 是「到手的钱」——支付与转账工具、返现与优惠平台、点数变现、加密货币产品用它，强调即时、直给：秒到账、立返现、当天结算，动词 + .cash（get、send、swap 类）读出来就是一个动作指令。.money 是「打理中的钱」——理财博客、预算记账工具、比价服务、面向个人的财务内容用它，smart.money、save.money 读出来像一句理财建议。价格接近：.cash 注册约 $10、续费约 $31/年；.money 注册约 $11、续费约 $28/年，都属温和档。共同的坑也一样：金钱主题是钓鱼与诈骗重灾区，两个后缀的新站都要用真实主体信息、HTTPS 与清晰的资金流说明对冲怀疑；受强监管的持牌业务（券商、银行）用哪个都不够正式，仍建议 .com。判断标准：产品卖「钱的流动」（支付、返现、变现）→ .cash 更直给；产品卖「钱的管理」（理财、预算、比价）→ .money 更耐读。",
+      pickA: ["支付与转账工具", "返现与优惠平台", "加密货币与数字资产产品", "强调即时到账的结算服务"],
+      pickB: ["理财内容与财务博客", "预算与记账工具", "比价与省钱服务", "面向个人的财务规划产品"],
+    },
+    en: {
+      title: ".cash vs .money: Money in Hand or Money Managed",
+      metaDescription:
+        ".cash means money in hand — payments and cashback; .money reads as personal finance and planning. Compare semantics, pricing and fit, then hunt available names.",
+      verdict:
+        "Both wear money on their sleeve; the difference is the money's state. .cash is money in hand — payment and transfer tools, cashback platforms, points-to-cash services and crypto products use it to promise immediacy: instant settlement, cash back now; verb + .cash combos (get, send, swap) read as action commands. .money is money being managed — personal-finance blogs, budgeting tools, price-comparison and savings services; smart.money or save.money reads like a piece of financial advice. Pricing is close: .cash runs about $10 to register and $31/yr to renew, .money about $11 and $28/yr — both moderate. They share the same trap: money is phishing's favorite theme, so new sites on either suffix need real entity info, HTTPS and a clear explanation of where funds flow; and licensed, regulated businesses (brokers, banks) look under-dressed on either — stick with .com there. The test: the product sells money moving (payments, cashback, cash-out) → .cash is more direct; the product sells money managed (planning, budgeting, comparison) → .money wears longer.",
+      pickA: ["Payment and transfer tools", "Cashback and deals platforms", "Crypto and digital-asset products", "Instant-settlement services"],
+      pickB: ["Personal-finance content and blogs", "Budgeting and bookkeeping tools", "Price-comparison and savings services", "Individual financial-planning products"],
+    },
+  },
+  "city-vs-world": {
+    slug: "city-vs-world",
+    a: "city",
+    b: "world",
+    zh: {
+      title: ".city 和 .world 怎么选：本地指向与全球叙事的对比",
+      metaDescription: ".city 指向具体城市与本地服务，.world 传达全球化与「某某世界」的宏大叙事。对比两者的语义、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是「地方感」后缀，尺度完全相反。.city 往小处收——城市指南、本地新闻、活动日历、生活服务聚合用「城市名 + .city」，对本地用户的指向性无可替代；比喻用法「××之城」也成立，把游戏社区、垂直内容站做成一座主题之城。注册约 $5、续费约 $23/年，长期成本很低。.world 往大处放——「brand.world」读作「某某的世界」，跨境品牌、多语言平台、元宇宙与虚拟世界项目、想传达包罗万象的社区用它，叙事一步到位。判断标准：用户在一个具体的地理范围内、内容围绕一座城 → .city 的本地指向更准且更便宜；用户跨地域、品牌想讲「一个完整世界」的故事 → .world 的格局感是 .city 给不了的。注意两端的坑：.city 用城市名可能触碰地方政府与商标口径，先查清楚；.world 的宏大承诺需要内容体量撑住，单薄的站点用它反而显得空。",
+      pickA: ["城市指南与本地新闻", "本地生活服务与活动日历", "主题「之城」社区（游戏、垂直内容）", "长期成本敏感的本地项目"],
+      pickB: ["跨境与多语言品牌", "元宇宙与虚拟世界项目", "「brand.world」式品牌叙事", "包罗万象的大型社区与平台"],
+    },
+    en: {
+      title: ".city vs .world: Local Focus or Global Narrative",
+      metaDescription:
+        ".city points at a specific city and local services; .world tells a global, everything-inside story. Compare semantics, pricing and fit, then hunt available names.",
+      verdict:
+        "Both are place suffixes at opposite ends of the zoom. .city zooms in — city guides, local news, event calendars and local-services aggregators on cityname.city speak to local users like nothing else, and the metaphorical \"city of X\" also works for gaming communities and vertical content hubs. At about $5 to register and $23/yr to renew, long-term cost is among the lowest. .world zooms out — brand.world reads as \"the world of X\": cross-border brands, multilingual platforms, metaverse and virtual-world projects, and communities that want to feel all-encompassing get the narrative in one word. The test: your users live in one geography and the content orbits one city → .city is more precise and cheaper; your users span regions and the brand sells a whole universe → .world delivers a scale .city can't. Mind each end's trap: city names can touch municipal-government and trademark protections, so check first; and .world's grand promise needs real content volume behind it — a thin site wears it hollow.",
+      pickA: ["City guides and local news", "Local services and event calendars", "Themed \"city of X\" communities", "Cost-sensitive local projects"],
+      pickB: ["Cross-border and multilingual brands", "Metaverse and virtual-world projects", "brand.world naming narratives", "Large all-encompassing communities and platforms"],
+    },
+  },
+  "estate-vs-land": {
+    slug: "estate-vs-land",
+    a: "estate",
+    b: "land",
+    zh: {
+      title: ".estate 和 .land 怎么选：房产品牌与土地语义的对比",
+      metaDescription: ".estate 面向房产经纪与豪宅项目自带高端感，.land 覆盖土地交易与「乐园/世界」双重语义。对比两者的气质、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都能做房地产，气质与延展方向不同。.estate 是行业招牌——经纪人与中介品牌、豪宅与庄园项目、物业与资产管理用 name.estate，行业属性一目了然（real.estate 是注册局自己的旗舰组合），smith.estate 比 smithrealestate.com 短一半且更显高端；它还有「遗产/资产」第二层语义，家族办公室与遗产规划用得顺。注册约 $8、续费约 $31/年。.land 更宽——字面的「土地」覆盖地块交易、农场、露营地与户外目的地；引申的「-land 之地」（Disneyland 式构词）让游戏世界、虚拟社区、元宇宙地块项目也用得自然，Sandbox 带火过一波 .land 注册。注册约 $9、续费约 $33/年，价格几乎相同。判断标准：业务是房产经纪、豪宅、资产管理这类「高端服务」→ .estate 的庄园气质与行业指向更准；业务围绕土地本身（地块、农场、户外）或想玩「某某乐园」的想象 → .land 的延展性更强。共同注意：两者对国内大众认知度都低，更适合涉外或海外业务；平价刚需盘用 .estate 会有气质落差。",
+      pickA: ["房产经纪与中介品牌", "豪宅与庄园项目", "物业与资产管理", "家族办公室与遗产规划"],
+      pickB: ["土地与地块交易平台", "农场、露营地与户外目的地", "游戏世界与元宇宙地块项目", "「-land 乐园」式品牌命名"],
+    },
+    en: {
+      title: ".estate vs .land: Property Brand or Land Semantics",
+      metaDescription:
+        ".estate reads upscale for agents and luxury property; .land covers literal land plus the \"-land\" world-building metaphor. Compare vibe, pricing and fit, then hunt available names.",
+      verdict:
+        "Both can carry real estate; they differ in register and reach. .estate is the industry shingle — agent and brokerage brands, luxury property projects and asset-management firms on name.estate declare the trade at a glance (real.estate is the registry's own flagship), and smith.estate is half the length of smithrealestate.com while reading more upscale; the second meaning — estates as legacy — suits family offices and estate planning. About $8 to register, $31/yr to renew. .land is broader — literal land covers plot marketplaces, farms, campgrounds and outdoor destinations, while the \"-land\" word-building metaphor (Disneyland-style) makes game worlds, virtual communities and metaverse land projects feel native; Sandbox drove a wave of .land registrations. About $9 and $33/yr — pricing is nearly identical. The test: the business is upscale service around property (agents, luxury, asset management) → .estate's manor-house register and industry precision win; the business orbits land itself (plots, farms, outdoors) or plays the \"world of X\" card → .land stretches further. Shared caution: both have low recognition among mainland-Chinese consumers, so they fit international-facing businesses best — and budget listings clash with .estate's upscale tone.",
+      pickA: ["Real-estate agents and brokerages", "Luxury property projects", "Property and asset management", "Family offices and estate planning"],
+      pickB: ["Land and plot marketplaces", "Farms, campgrounds and outdoor destinations", "Game worlds and metaverse land projects", "\"-land\" world-building brand names"],
+    },
+  },
+  "expert-vs-pro": {
+    slug: "expert-vs-pro",
+    a: "expert",
+    b: "pro",
+    zh: {
+      title: ".expert 和 .pro 怎么选：权威个体与泛专业感的对比",
+      metaDescription: ".expert 把「专家」身份写进域名但续费贵，.pro 传达泛专业感且价格低。对比两者的语义强度、价格结构与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都卖「专业」，浓度不同。.expert 是一句自我介绍——name.expert 直接告诉访客「这是某领域的专家」，seo.expert、tax.expert 这样的「领域词 + .expert」就是数字招牌，适合独立顾问、律师会计等专业人士把个人 IP 做成品牌。代价在价格结构：首年约 $7 很低，但续费约 $50/年是典型的「首年引流、续费收割」，预算必须按续费核算。.pro 更泛也更便宜——「专业」的语义沉淀（历史上曾要求职业资质）让它给个人品牌加一层资质感，同时它还是产品「Pro 版」的天然域名：主站在 .com，付费专业版落在同名 .pro。判断标准：卖的是「我这个人/团队的权威」、内容深度撑得起「expert」的承诺 → .expert 的招牌感更强，但要认真经营才值回续费；卖的是泛专业服务、或给产品做 Pro 版/付费升级页 → .pro 更便宜更百搭。共同提醒：「专家」是承诺，空壳站用 .expert 反而放大质疑；监管行业（法律、医疗、金融）的「专家」表述注意广告合规。",
+      pickA: ["独立顾问与咨询师个人 IP", "「领域词 + .expert」数字招牌", "垂直评测与知识付费站", "内容深度撑得起权威承诺的站点"],
+      pickB: ["泛专业服务与工作室", "产品 Pro 版与付费升级页", "续费预算敏感的个人品牌", "与主域名配合的专业子品牌"],
+    },
+    en: {
+      title: ".expert vs .pro: Named Authority or Generic Professionalism",
+      metaDescription:
+        ".expert puts the expert claim in the domain but renews high; .pro signals generic professionalism at a low price. Compare signal strength, pricing and fit, then hunt available names.",
+      verdict:
+        "Both sell professionalism at different concentrations. .expert is an introduction — name.expert tells visitors exactly who you claim to be, and field-word combos like seo.expert or tax.expert are digital shingles, ideal for consultants, lawyers and accountants building a personal brand into a name. The catch is the pricing structure: about $7 the first year but ~$50/yr to renew — classic promo-then-harvest, so budget strictly on the renewal. .pro is broader and cheaper — its professional semantics (it once required credentials to register) add a layer of qualification to personal brands, and it's also the natural home for a product's Pro tier: main site on .com, the paid version on the matching .pro. The test: you sell the authority of a named person or team, with content deep enough to back the \"expert\" claim → .expert's shingle is stronger, but only pays if you run the practice seriously; you sell general professional services or need a Pro-tier landing page → .pro is cheaper and more versatile. Shared caution: \"expert\" is a promise — thin content amplifies skepticism — and in regulated fields (law, medicine, finance) expert claims can trip advertising rules.",
+      pickA: ["Consultant and advisor personal brands", "Field-word digital shingles (seo.expert)", "Vertical review and paid-knowledge sites", "Sites with depth to back the expert claim"],
+      pickB: ["General professional services and studios", "Product Pro tiers and paid-upgrade pages", "Renewal-budget-sensitive personal brands", "Professional sub-brands beside a main domain"],
+    },
+  },
+  "farm-vs-cafe": {
+    slug: "farm-vs-cafe",
+    a: "farm",
+    b: "cafe",
+    zh: {
+      title: ".farm 和 .cafe 怎么选：产地直供与场所空间的对比",
+      metaDescription: ".farm 讲「从农场到餐桌」的产地故事，.cafe 指向咖啡馆与线上「聚集地」。对比两个食物系后缀的语义、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是食物系后缀，讲的故事不同。.farm 讲「源头」——家庭农场直销、有机食品品牌、农家乐与农业科技用 name.farm，「从农场到餐桌」的故事从域名就开始讲，对被 .com 占名的小生产者格外友好；技术圈还有一层梗：render farm、server farm 的集群语义让算力与自动化项目用它自带幽默。注册约 $8、续费约 $31/年。.cafe 讲「场所」——独立咖啡店、烘焙工作室、猫咖书咖用 name.cafe，域名和店招完全同构；「cafe」在互联网语境里更是「轻松聚集地」的代名词，读书会、语言角、开发者社区拿它做线上客厅比 .com 更有温度。注册约 $5、续费约 $42/年，首年友好但续费更高。判断标准：卖的是「东西从哪来」（农产品、食材、产地信任）→ .farm 的源头叙事更准；卖的是「人来哪聚」（店面、空间、社区客厅）→ .cafe 的场所感无可替代。共同注意：两者行业气质都浓，业务不沾边硬用会错位；食品生鲜先备好许可证，内容站则要避开「content farm」的负面联想。",
+      pickA: ["家庭农场与农产品直销", "有机食品与生鲜品牌", "休闲农业与农家乐", "算力集群与自动化项目（server farm 梗）"],
+      pickB: ["独立咖啡店与烘焙工作室", "猫咖、书咖等主题空间", "线上社区「客厅」（读书会、开发者社区）", "轻松聚集气质的生活方式品牌"],
+    },
+    en: {
+      title: ".farm vs .cafe: Source Story or Gathering Place",
+      metaDescription:
+        ".farm tells the farm-to-table source story; .cafe points at coffee shops and cozy online gathering places. Compare the two food-world suffixes on semantics, pricing and fit, then hunt available names.",
+      verdict:
+        "Both are food-world suffixes telling different stories. .farm tells the source story — family farms selling direct, organic food brands, farm stays and agtech on name.farm start the farm-to-table narrative in the address bar, and it's especially kind to small producers whose names are taken on .com; tech culture adds a wink, since render farms and server farms make .farm a natural fit for compute and automation projects. About $8 to register, $31/yr to renew. .cafe tells the place story — independent coffee shops, roasteries and themed cafés wear name.cafe as a domain identical to the shop sign, and since \"cafe\" doubles as internet shorthand for a cozy gathering spot, book clubs, language corners and developer communities use it as a warmer online living room than .com. About $5 to register but $42/yr to renew — friendly first year, higher carry. The test: you sell where things come from (produce, ingredients, source trust) → .farm's origin story is more precise; you sell where people gather (a shop, a space, a community living room) → .cafe's sense of place is irreplaceable. Shared caution: both carry strong industry flavor that miscasts unrelated businesses; food commerce needs licenses first, and content sites should weigh the \"content farm\" pejorative.",
+      pickA: ["Family farms and direct selling", "Organic and fresh food brands", "Farm stays and agritourism", "Compute clusters and automation (server-farm wink)"],
+      pickB: ["Independent coffee shops and roasteries", "Themed café spaces (cat cafés, book cafés)", "Online community living rooms (book clubs, dev communities)", "Laid-back lifestyle gathering brands"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
