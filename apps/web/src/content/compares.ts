@@ -2929,6 +2929,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Cocktail bars & lounges", "Livehouses & nightlife brands", "Neon-sign-ready short domains", "Developer tool sites (the bar pun)"],
     },
   },
+  "clinic-vs-care": {
+    slug: "clinic-vs-care",
+    a: "clinic",
+    b: "care",
+    zh: {
+      title: ".clinic 和 .care 怎么选：门诊场所与服务温度的对比",
+      metaDescription: ".clinic 把「诊所」这个场所写进域名，.care 把「关怀」这份温度写进域名。对比两个健康类后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在大健康赛道，一个说「这里是诊所」，一个说「我们在乎你」。.clinic 是场所——口腔、眼科、皮肤、医美、理疗、宠物诊所这类「门诊制」业务用 name.clinic，读出来就是一家诊所，连锁门诊归拢多城市站点也顺；英语里 clinic 还有「诊断式服务」的引申义，SEO clinic、resume clinic 式咨询生意用它自带专业感；注册约 $11、续费约 $52/年。.care 是温度——养老护理、居家照护、心理健康、母婴与宠物护理用 name.care，服务属性一秒传达，国际大牌还把 brand.care 用作客服售后入口；注册约 $12 与 .clinic 相当，续费约 $36/年明显更省。判断标准：业务有「门诊/场所」属性、用户是来「看诊」的 → .clinic 的机构感更准；业务是持续性「照护/关怀」、卖的是陪伴与服务 → .care 的温度更对，续费也更轻。两者常常都能用的模糊地带（心理咨询、宠物健康）就看你想强调场所还是关系。共同注意：医疗语境都涉及执业资质与广告合规，资质信息必须页面清晰呈现；两个词都不短（六与四个字母），主体名尽量短。",
+      pickA: ["口腔眼科医美等专科诊所", "连锁门诊与多城市站点", "宠物诊所与理疗门诊", "诊断式咨询（X clinic）品牌"],
+      pickB: ["养老护理与居家照护", "心理健康与母婴护理", "持续性关怀型服务", "品牌客户关怀入口"],
+    },
+    en: {
+      title: ".clinic vs .care: The Place You Visit or the Way You're Treated",
+      metaDescription:
+        ".clinic names the place where patients walk in; .care names the warmth of ongoing service. Compare the two health suffixes on semantics, renewal cost and fit, then hunt names available on both.",
+      verdict:
+        "Both live in the health space; one says \"this is a clinic\", the other says \"we care about you\". .clinic is the place — dental, eye, skin, medspa, physio and veterinary practices on name.clinic read as exactly what they are, and chains can gather multi-city sites under one suffix; English also lends clinic a diagnostic-service sense, so SEO clinics and resume clinics wear it with instant authority; about $11 to register and $52/yr to renew. .care is the warmth — elder care, home care, mental health, maternal and pet care on name.care communicate the service in one word, and global brands even run brand.care as the customer-care door; registration (~$12) matches .clinic while renewal around $36/yr is clearly lighter. The test: the business has a walk-in, appointment-based venue → .clinic's institutional precision fits; the business is ongoing caregiving where the product is the relationship → .care's warmth is truer and cheaper to keep. In the overlap zone (counseling, pet health) pick by what you want to emphasize: the place or the relationship. Shared cautions: medical contexts demand licensing and advertising compliance shown clearly on the page; and with six and four letters respectively, keep the front word short.",
+      pickA: ["Dental, eye & medspa practices", "Clinic chains & multi-city sites", "Veterinary & physio clinics", "Diagnostic-consulting (X clinic) brands"],
+      pickB: ["Elder & home care services", "Mental-health & maternal care", "Ongoing caregiving businesses", "Brand customer-care portals"],
+    },
+  },
+  "dental-vs-doctor": {
+    slug: "dental-vs-doctor",
+    a: "dental",
+    b: "doctor",
+    zh: {
+      title: ".dental 和 .doctor 怎么选：垂直科室与执业身份的对比",
+      metaDescription: ".dental 垂直到牙科一个科室，.doctor 覆盖所有医生的执业身份。对比两个医疗后缀的语义精度、续费成本与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个垂直到科室，一个覆盖整个职业。.dental 只说牙科——牙科诊所、正畸种植品牌、儿牙、口腔护理产品、技工所用 name.dental，零解释成本；牙科是本地获客竞争最激烈的医疗细分，店名几乎都是「名字/地名 + Dental」，对应 .com 早被扫光，同名 .dental 库存极好还省去重复打 dental；注册与续费均约 $62/年，平进平出没有首年甜头，但对牙科客单价毫无压力。.doctor 说的是「医生」这个身份——各科医生个人品牌、私人诊所、在线问诊用 name.doctor，专业权威从域名开始，「X 医生」的引申义还让 bike doctor、plant doctor 式维修养护生意自带亲切感；注册约 $8 门槛很低，但续费约 $93/年是高价档，典型「首年甜、续费贵」。判断标准：业务就是牙科 → .dental 的垂直精度无可替代，预算也更可控；主体是「医生个人」或跨科室的诊疗品牌 → .doctor 的身份感更广，但必须按续费核算。共同注意：都涉及执业资质与广告合规，种植正畸类宣传监管尤其严格，资质要页面清晰呈现；.doctor 在医疗场景更有暗示资质之嫌，非医疗的比喻用法反而没这个包袱。",
+      pickA: ["牙科诊所与连锁", "正畸种植与儿牙品牌", "口腔护理产品", "牙科技工所与供应商"],
+      pickB: ["医生个人品牌与私人诊所", "在线问诊与跨科室平台", "「X 医生」式维修养护生意", "把域名当门面资产的执业者"],
+    },
+    en: {
+      title: ".dental vs .doctor: One Specialty Deep or the Whole Profession",
+      metaDescription:
+        ".dental goes all-in on one specialty; .doctor covers every physician's professional identity. Compare precision, renewal cost and fit, then hunt names available on both.",
+      verdict:
+        "One drills into a single specialty; the other spans the whole profession. .dental says dentistry and nothing else — practices, ortho and implant brands, pediatric dentistry, oral-care products and labs on name.dental carry zero explanation cost; dentistry is among the most competitive local-acquisition niches, practice names are overwhelmingly \"name/place + Dental\" with those .coms long gone, while the same name + .dental is wide open and even saves typing dental twice; about $62/yr flat for both registration and renewal — no teaser, but painless against dental ticket sizes. .doctor names the identity — physician personal brands, private practices and telemedicine on name.doctor start from authority, and the \"X doctor\" metaphor gives bike-doctor and plant-doctor repair businesses instant charm; registration around $8 is a low door, but renewal near $93/yr sits in the premium tier — classic sweet-year, pricey-renewal. The test: the business is dentistry → .dental's vertical precision is unmatched and the budget more predictable; the subject is a physician's personal brand or a cross-specialty practice → .doctor's identity signal reaches wider, but budget on the renewal. Shared cautions: both carry licensing and advertising compliance duties — implant and ortho claims are especially regulated, so show credentials clearly; and .doctor risks implying credentials in medical contexts, a burden the non-medical metaphor uses don't carry.",
+      pickA: ["Dental practices & chains", "Ortho, implant & pediatric brands", "Oral-care product brands", "Dental labs & suppliers"],
+      pickB: ["Physician personal brands & practices", "Telemedicine & cross-specialty platforms", "\"X doctor\" repair & maintenance businesses", "Practitioners treating the domain as a facade asset"],
+    },
+  },
+  "fitness-vs-coach": {
+    slug: "fitness-vs-coach",
+    a: "fitness",
+    b: "coach",
+    zh: {
+      title: ".fitness 和 .coach 怎么选：场馆项目与教练个人的对比",
+      metaDescription: ".fitness 强调场馆与课程项目，.coach 强调带练的教练本人。对比两个健身类后缀的语义、续费成本与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在健身赛道，卖的东西不同。.fitness 卖「场馆与项目」——健身房、瑜伽普拉提馆、CrossFit 场馆、线上健身课程与健身 App 用 name.fitness，行业身份一目了然；健身生意的名字大多是气质词与人名，.com 几乎必然被占，同名 .fitness 库存极好；注册约 $6 很便宜、续费约 $33/年也温和，对月卡收入可以忽略。.coach 卖「人」——健身私教、跑步教练、人生教练、高管教练用 name.coach，获客靠个人信任，「人名/细分领域 + .coach」把身份写进域名比任何 slogan 都高效；注册约 $11，但续费约 $62/年接近 .fitness 的两倍，预算按续费核算。判断标准：开店、做课程产品、做 App → .fitness 的场馆感更配也更省；卖「你这个人」的一对一带练与陪伴 → .coach 的身份感更准。成长路径也常见：私教做大开馆后从 .coach 升级到 .fitness，两个后缀正好是业务的两个阶段。共同注意：健身获客重度依赖短视频与本地平台，域名的角色是品牌官网与课程预约的稳定入口；fitness 七个字母、coach 五个字母，主体名都要短促有力。",
+      pickA: ["健身房与瑜伽普拉提馆", "CrossFit 与团课场馆", "线上健身课程与 App", "运动补剂与健康品牌"],
+      pickB: ["健身私教与跑步教练", "人生教练与高管教练", "一对一与小班带练", "「人名 + .coach」的个人 IP"],
+    },
+    en: {
+      title: ".fitness vs .coach: The Venue and Program or the Person Training You",
+      metaDescription:
+        ".fitness emphasizes the venue and the program; .coach emphasizes the person doing the training. Compare semantics, renewal cost and fit, then hunt names available on both.",
+      verdict:
+        "Both live in the fitness economy; they sell different things. .fitness sells the venue and the program — gyms, yoga and pilates spaces, CrossFit boxes, online programs and fitness apps on name.fitness are unmistakable; fitness businesses name themselves with mood words and personal names whose .coms vanished long ago, while the same name + .fitness is wide open; about $6 to register and $33/yr to renew — a rounding error against membership revenue. .coach sells the person — personal trainers, running coaches, life and executive coaches on name.coach acquire clients on personal trust, and writing the identity into the domain (your name or niche + .coach) beats any slogan; registration around $11, but renewal near $62/yr runs almost double .fitness — budget on the renewal. The test: opening a venue, building a program or an app → .fitness's institutional register fits and costs less to keep; selling you — one-on-one training, accountability, feedback → .coach's identity signal is sharper. The growth path is common: a solo trainer who opens a gym graduates from .coach to .fitness — two suffixes, two stages of the same business. Shared notes: fitness client acquisition leans on short video and local platforms, so the domain's job is the brand site and booking home; and at seven and five letters, keep the front word short and punchy.",
+      pickA: ["Gyms, yoga & pilates spaces", "CrossFit & group-class venues", "Online programs & fitness apps", "Supplement & health brands"],
+      pickB: ["Personal trainers & running coaches", "Life & executive coaches", "One-on-one & small-group training", "Your-name + .coach personal IP"],
+    },
+  },
+  "photos-vs-gallery": {
+    slug: "photos-vs-gallery",
+    a: "photos",
+    b: "gallery",
+    zh: {
+      title: ".photos 和 .gallery 怎么选：照片交付与策展陈列的对比",
+      metaDescription: ".photos 直白说「这里是照片」，.gallery 暗示「这里在展出」。对比两个创意后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同是视觉创作者的后缀，说的是两个动作。.photos 说「照片在这里」——摄影师作品集、婚礼与人像工作室、活动跟拍、照片交付站点用 name.photos，复数名词天然带所有格感，「人名 + .photos」读作「某某的照片」最顺；它还有独特的实用玩法：按项目/客户开「照片交付页」，链接发出去客户秒懂；注册约 $8、续费约 $24/年是创意后缀里的温和档。.gallery 说「作品在展出」——实体画廊、策展人、把作品集当展览做的创作者、NFT 与数字艺术展厅用 name.gallery，「白墙射灯」的安静高级感从域名开始；注册与续费均约 $23/年，平进平出没有首年甜头，但绝对价格不高。判断标准：卖「拍摄与交付」的服务（婚礼、人像、活动）→ .photos 的直白与交付玩法更实用；有「策展/陈列」动作、想立艺术调性 → .gallery 的展览感更高级。摄影师两者都合适时看客群：接单生意用 .photos，办展卖作品用 .gallery。共同注意：视觉创作者获客主阵地在 Instagram 与小红书，域名是作品集与交付的稳定入口；photos 六个字母、gallery 七个字母，主体名尽量短，艺术家全名偏长时用姓氏或艺名。",
+      pickA: ["摄影师作品集与接单", "婚礼与人像工作室", "活动跟拍与照片交付页", "图库与照片社区"],
+      pickB: ["实体画廊与策展机构", "作品集即展览的创作者", "NFT 与数字艺术展厅", "设计作品与主题展"],
+    },
+    en: {
+      title: ".photos vs .gallery: Delivering Pictures or Curating a Show",
+      metaDescription:
+        ".photos says pictures live here; .gallery says work is on exhibition. Compare the two creative suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both serve visual creators; they describe two different acts. .photos says the pictures live here — portfolios, wedding and portrait studios, event shooters and client-delivery sites on name.photos read naturally possessive, \"someone's photos\", which is exactly the charm; it also enables a uniquely practical pattern: per-project or per-client delivery pages where the link explains itself the moment it's sent; about $8 to register and $24/yr to renew — the mild tier among creative suffixes. .gallery says the work is on show — physical galleries, curators, creators who treat the portfolio as an exhibition, and NFT or digital-art showrooms on name.gallery whisper quiet white-wall sophistication from the address; about $23/yr flat for both registration and renewal — no teaser, but the absolute price sits low. The test: selling shoot-and-deliver services (weddings, portraits, events) → .photos's literalness and delivery pattern are more practical; a curatorial act or an art-register positioning → .gallery reads more refined. When a photographer fits both, pick by audience: client work takes .photos, exhibiting and selling prints takes .gallery. Shared notes: visual creators win clients on Instagram and social platforms, so the domain is the stable portfolio and delivery home; and at six and seven letters, keep the front word short — long full names read better as a surname or artist name.",
+      pickA: ["Photographer portfolios & client work", "Wedding & portrait studios", "Event shooting & delivery pages", "Stock libraries & photo communities"],
+      pickB: ["Art galleries & curators", "Portfolio-as-exhibition creators", "NFT & digital-art showrooms", "Design showcases & themed shows"],
+    },
+  },
+  "boutique-vs-shop": {
+    slug: "boutique-vs-shop",
+    a: "boutique",
+    b: "shop",
+    zh: {
+      title: ".boutique 和 .shop 怎么选：策展精品与货架电商的对比",
+      metaDescription: ".boutique 自带小而美的策展感，.shop 是最直白的电商货架。对比两个零售后缀的气质、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是开店，气质两个方向。.boutique 是策展感——独立设计师品牌、买手店、古着首饰小店、手作工作室、精品民宿用 name.boutique，「小而美、卖审美与稀缺」的定位从域名立住，客单价越高越合适；法语血统自带「贵」的暗示，平价走量的店用它气质错位；注册约 $3 是最便宜档之一、续费约 $26/年也温和，试错成本几乎为零。.shop 是货架感——独立站、DTC 品牌商店、垂直品类电商用 name.shop，语义最直白，「品牌 + .shop」本身就是一句行动号召，全球注册量大、认知广；首年常有低价促销但续费明显更高，长期持有先看清续费价。判断标准：卖策展、审美与稀缺，客单价高 → .boutique 的精品感更准，续费还更省；卖转化、走量与直白的「来买」→ .shop 的行动号召更强。折中玩法也常见：品牌主站用 .shop 走量，高端线或买手系列用 .boutique 分线。共同注意：boutique 八个字母且 -que 结尾拼写有门槛，主体名务必短；高客单价场景两者都建议搭配 .com 做信任背书。",
+      pickA: ["独立设计品牌与买手店", "古着首饰与手作工作室", "精品民宿与精品咨询", "高客单价的审美生意"],
+      pickB: ["DTC 独立站与日常电商", "品牌官方商店子站", "垂直品类电商", "线下店铺线上入口"],
+    },
+    en: {
+      title: ".boutique vs .shop: Curated Taste or Conversion Shelf",
+      metaDescription:
+        ".boutique carries small-and-beautiful curation; .shop is the most literal e-commerce shelf. Compare vibe, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both open a store; the registers point opposite ways. .boutique is curation — independent design labels, concept and curated stores, vintage and jewelry shops, artisan studios and boutique guesthouses on name.boutique establish \"curated, not mass\" from the address, and the higher the ticket size the better the fit; its French pedigree whispers expensive, so a discount volume store on .boutique feels mismatched; registration around $3 is among the cheapest tiers and renewal near $26/yr stays mild — practically zero cost to try. .shop is the shelf — DTC sites, official brand stores and category e-commerce on name.shop say exactly what they mean, \"brand + .shop\" reads like a call to action, and its global registration base gives it the widest recognition; first-year promos run cheap but renewals are clearly higher, so check renewal pricing before holding long-term. The test: selling taste, scarcity and high tickets → .boutique's register is truer and cheaper to keep; selling conversion, volume and a plain \"come buy\" → .shop's call-to-action is stronger. The hybrid play: run the main store on .shop and a premium or curated line on .boutique. Shared cautions: boutique is eight letters and the -que ending trips spellers, so keep the front word short; for high-ticket commerce, pair either with a .com for trust.",
+      pickA: ["Indie design labels & concept stores", "Vintage, jewelry & artisan studios", "Boutique guesthouses & consultancies", "High-ticket taste-led businesses"],
+      pickB: ["DTC and everyday e-commerce sites", "Official brand store sub-sites", "Category e-commerce", "Offline stores moving online"],
+    },
+  },
+  "gallery-vs-art": {
+    slug: "gallery-vs-art",
+    a: "gallery",
+    b: "art",
+    zh: {
+      title: ".gallery 和 .art 怎么选：展出动作与艺术身份的对比",
+      metaDescription: ".gallery 说「这里在展出」，.art 说「这是艺术」。对比两个艺术后缀的语义角色、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同为艺术圈的后缀，角色不同：.art 说「这是艺术」，.gallery 说「这里在展出」。.art 是身份——艺术家个人站与作品集、画廊美术馆、展览博览会、设计与创意机构用 name.art，「名字 + .art」本身就像一张名片，注册局长期面向艺术社区运营，圈内认可度在垂直后缀里属于较高一档；三个字母极短，价格中等、续费稳定，好名字库存充足。.gallery 是动作——有「陈列/策展」行为的主体更配：画廊主、策展人、把作品集当展览做的创作者、NFT 与数字艺术展厅，name.gallery 的「白墙射灯」气质从域名开始；注册与续费均约 $23/年，平进平出。判断标准：主体是「艺术家/机构」的身份主域名 → .art 更短更通用，当名片用最顺；主体是「一个展览空间」（实体或数字）→ .gallery 的场所感与策展暗示更准。两者也常配合：艺术家主站用 name.art，个展或系列展用 theme.gallery 分线。共同注意：gallery 七个字母，主体名尽量短，全名偏长用姓氏或艺名；卖作品的电商功能可搭配 .shop/.store 分工，交易合规要想清楚。",
+      pickA: ["实体画廊与策展机构", "作品集即展览的创作者", "NFT 与数字艺术展厅", "主题展与系列展分线"],
+      pickB: ["艺术家个人品牌主域名", "画廊美术馆与艺术机构官网", "展览与艺术项目页", "设计与创意工作者名片"],
+    },
+    en: {
+      title: ".gallery vs .art: The Act of Exhibiting or the Identity of Art",
+      metaDescription:
+        ".gallery says work is being exhibited here; .art says this is art. Compare the two art-world suffixes on role, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both belong to the art world; the roles differ — .art says \"this is art\", .gallery says \"this is being exhibited\". .art is the identity: artist personal sites and portfolios, galleries and museums, fairs and creative agencies on name.art read like a business card, the registry has long cultivated the art community, and recognition inside the scene ranks high among vertical suffixes; at three letters it's extremely short, with moderate pricing, stable renewals and plenty of good names left. .gallery is the act: anyone with a curatorial gesture fits better — gallerists, curators, creators who treat the portfolio as a show, and NFT or digital-art showrooms — with name.gallery whispering quiet white-wall sophistication; about $23/yr flat for registration and renewal. The test: the subject is an artist's or institution's identity domain → .art is shorter and more universal, the natural business card; the subject is an exhibition space, physical or digital → .gallery's sense of place and curation is truer. They also pair well: run the artist's main site on name.art and solo or themed shows on theme.gallery. Shared notes: gallery is seven letters, so keep the front word short — long full names read better as a surname or artist name; and selling work is better split onto .shop/.store, with trading compliance thought through.",
+      pickA: ["Art galleries & curators", "Portfolio-as-exhibition creators", "NFT & digital-art showrooms", "Solo & themed show lines"],
+      pickB: ["Artist identity domains", "Gallery, museum & institution sites", "Exhibition & art project pages", "Creative professionals' business cards"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
