@@ -511,6 +511,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个光伏/新能源品牌，寓意「把阳光变成每个月省下的电费」；气质要可靠、有科技感、扛得住二十五年质保的托付；场景是屋顶工程合同、投标书和「装光伏找 X」的邻里转介绍里都有分量。",
     en: "A solar or clean energy brand. The name should turn sunlight into a lower bill every month; the vibe is dependable, engineered, solid enough for a 25-year warranty; it must carry weight on an installation contract, in a project bid, and in \"get your panels from X\" neighbor referrals.",
   },
+  {
+    slug: "coach",
+    labelZh: "健身私教",
+    labelEn: "Personal training",
+    zh: "一个健身私教/私教工作室品牌，寓意「把身体交给一个真正靠谱的人」；气质要专业、有能量、不吓人不推销；场景是学员转介绍口播、地图搜索和「你去找 X 练」的朋友推荐里都可信顺口。",
+    en: "A personal trainer or PT studio brand. The name should feel like handing your body to someone truly reliable; the vibe is professional, energetic, never intimidating or salesy; it must hold up in client referrals, map search, and a friend's \"just train with X\".",
+  },
+  {
+    slug: "codingschool",
+    labelZh: "编程培训",
+    labelEn: "Coding bootcamp",
+    zh: "一家编程培训/少儿编程机构品牌，寓意「让代码从黑魔法变成亲手做东西的乐趣」；气质要聪明、有趣、不像应试补习班；场景是家长群转发、学员简历和「我在 X 学的编程」的转介绍里都体面好记。",
+    en: "A coding school or bootcamp brand. The name should turn code from dark art into the joy of making things; the vibe is smart, fun, nothing like a test-prep shop; it must look right forwarded in a parents' group, on a graduate's resume, and in \"I learned to code at X\".",
+  },
+  {
+    slug: "jewelry",
+    labelZh: "珠宝首饰",
+    labelEn: "Jewelry",
+    zh: "一个珠宝首饰品牌，寓意「值得刻在戒圈内侧、写进故事里的名字」；气质要优雅、有故事感、十年不过时；场景是礼盒印字、求婚讲述和「她戴的是 X」的转述里都配得上价格。",
+    en: "A jewelry brand. The name should deserve to be engraved inside a ring and written into a story; the vibe is elegant, storied, timeless for a decade; it must earn its price on a gift box, in a proposal retelling, and in \"she wears X\".",
+  },
+  {
+    slug: "toys",
+    labelZh: "玩具品牌",
+    labelEn: "Toy brand",
+    zh: "一个玩具/潮玩品牌，寓意「孩子念着开心、大人拆盒惊喜」；气质要欢乐、有弹跳感、留得住 IP 想象；场景是货架包装、拆盒视频和「给娃买 X」的家长转述里都好念好记。",
+    en: "A toy or designer-toy brand. The name should be fun in a child's mouth and a thrill at unboxing for adults; the vibe is joyful, bouncy, with room for an IP universe; it must pop on shelf packaging, in unboxing videos, and in \"get the kids an X\".",
+  },
+  {
+    slug: "brewery",
+    labelZh: "精酿酒饮",
+    labelEn: "Craft beer & drinks",
+    zh: "一个精酿啤酒/新酒饮品牌，寓意「杯子里装的是态度不是水啤」；气质要有梗、敢反叛、酒标画得出来；场景是酒吧口播点单、冰柜货架和「尝尝 X 的新款」的酒友安利里都响亮带感。",
+    en: "A craft brewery or drinks brand. The name should put attitude in the glass, not watery lager; the vibe is witty, rebellious, drawable as label art; it must ring out when ordered at the bar, stand out on the fridge shelf, and carry \"try the new one from X\".",
+  },
+  {
+    slug: "furniture",
+    labelZh: "家具品牌",
+    labelEn: "Furniture",
+    zh: "一个家具/家居品牌，寓意「一件陪你住十年的东西，名字也要耐看十年」；气质要温润、有材质感、经得起岁月；场景是新家开箱、朋友问「这沙发哪买的」和二手转卖页里都体面耐看。",
+    en: "A furniture or home brand. The name should wear as well as a piece that lives with you for a decade; the vibe is warm, material-honest, built to age gracefully; it must look right at a housewarming, in \"where's this sofa from?\", and even on a resale listing.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
