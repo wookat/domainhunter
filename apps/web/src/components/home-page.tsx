@@ -721,6 +721,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个月子中心与产后护理品牌，寓意「新手妈妈被温柔地接住」；气质要轻奢温暖、有医护级专业感、全家人都放心；场景是妈妈群转介绍、参观预约页和长辈口中念出来都顺口吉利。",
     en: "A postpartum retreat and maternal care brand. The name should feel like a new mother being gently caught; the vibe is softly luxurious, nurse-grade professional, reassuring to the whole family; it must work in mom-group referrals, on the tour booking page, and sound auspicious when grandparents say it aloud.",
   },
+  {
+    slug: "pettraining",
+    labelZh: "宠物训练",
+    labelEn: "Pet training",
+    zh: "一个宠物训练与行为矫正品牌，寓意「让人和毛孩子学会互相理解」；气质要温柔专业、正向不打骂、像犬校一样可信；场景是遛狗时的转介绍、预约小程序和训犬师认证墙上都顺口可靠。",
+    en: "A pet training and behavior brand. The name should feel like helping humans and their dogs learn to understand each other; the vibe is gentle, professional, positive-method, credible like a proper school; it must roll off the tongue in dog-park referrals, on the booking page, and beside the trainer certification wall.",
+  },
+  {
+    slug: "nailsalon",
+    labelZh: "美甲美睫",
+    labelEn: "Nail & lash studios",
+    zh: "一个美甲美睫工作室品牌，寓意「把方寸指尖过成自己的审美」；气质要有风格立场、精致治愈、像闺蜜的工作室；场景是小红书主页、预约链接和「你指甲在哪做的」的口播转介绍里都好念好记。",
+    en: "A nail and lash studio brand. The name should feel like making the two-centimeter canvas your own aesthetic; the vibe is stylistically opinionated, polished, soothing, like a best friend's atelier; it must look good on an Instagram bio, a booking link, and travel well in \"where did you get your nails done?\"",
+  },
+  {
+    slug: "laundry",
+    labelZh: "洗衣洗护",
+    labelEn: "Laundry & garment care",
+    zh: "一个洗衣与衣物护理品牌，寓意「让心爱的衣物穿回第一天的样子」；气质要干净利落、专业可托付、有焕新感；场景是小程序下单、取送短信和写字楼电梯广告里都清爽可信。",
+    en: "A laundry and garment care brand. The name should promise beloved garments worn like day one; the vibe is crisp, professional, entrustable, with a sense of renewal; it must feel clean and credible in an ordering app, a pickup notification, and an office-tower elevator ad.",
+  },
+  {
+    slug: "rvtravel",
+    labelZh: "房车旅行",
+    labelEn: "RV travel",
+    zh: "一个房车租赁与房车旅行品牌，寓意「带着家去看世界」；气质要自由松弛、又靠谱安心、全家都喜欢；场景是亲子游攻略、租车比价页和营地招牌上都好记顺口。",
+    en: "An RV rental and camper travel brand. The name should feel like taking your home to see the world; the vibe is free and easygoing yet reliable and reassuring, loved by the whole family; it must be memorable in family trip guides, on rental comparison pages, and on a campground sign.",
+  },
+  {
+    slug: "knowledgepay",
+    labelZh: "知识付费",
+    labelEn: "Paid knowledge",
+    zh: "一个知识付费与付费社群品牌，寓意「学了真的有收获，还遇见同路人」；气质要有获得感、体系专业、不割韭菜；场景是直播口播「搜 X 加入」、社群裂变海报和年费续订页上都清晰可信。",
+    en: "A paid courses and membership community brand. The name should promise real takeaways and finding your people; the vibe is outcome-driven, structured, professional, never grifty; it must be unambiguous in a live-stream \"search X to join,\" on referral posters, and on the annual renewal page.",
+  },
+  {
+    slug: "matchmaking",
+    labelZh: "婚恋相亲",
+    labelEn: "Matchmaking & dating",
+    zh: "一个婚恋相亲与高端匹配服务品牌，寓意「认真的人遇见认真的人」；气质要真诚郑重、有缘分感、父母听着也放心；场景是会员注册页、红娘回访电话和家庭饭桌上的提起都得体可信。",
+    en: "A matchmaking and dating service brand. The name should feel like serious people meeting serious people; the vibe is sincere, respectful, touched with destiny, reassuring even to parents; it must sound proper on the membership page, in a matchmaker's follow-up call, and when mentioned at the family dinner table.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
