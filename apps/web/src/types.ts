@@ -37,6 +37,10 @@ export interface RoundInfo {
 export interface GuardMeta {
   dropped: Record<string, number>;
   wordSupplement: boolean;
+  /** 补发轮发起次数（R243，旧快照无此字段） */
+  supplementAttempts?: number;
+  /** 补发轮各防线丢弃计数（R243，与主轮 dropped 分开，旧快照无此字段） */
+  supplementDropped?: Record<string, number>;
   retries: number;
 }
 
@@ -213,6 +217,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   services: { first: 63, renew: 226 },
   consulting: { first: 152, renew: 315 },
   software: { first: 115, renew: 241 },
+  marketing: { first: 41, renew: 241 },
+  systems: { first: 85, renew: 204 },
+  ventures: { first: 41, renew: 345 },
+  capital: { first: 41, renew: 412 },
+  guru: { first: 19, renew: 248 },
+  tips: { first: 59, renew: 182 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {

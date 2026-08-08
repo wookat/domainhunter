@@ -3624,6 +3624,186 @@ const GUIDES = {
       ],
     },
   },
+  marketing: {
+    tld: "marketing",
+    zh: {
+      title: ".marketing 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".marketing 把营销专业写进域名，适合营销代理机构、增长团队、营销 SaaS 与自媒体营销人。查看 .marketing 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .marketing 域名。",
+      intro:
+        ".marketing 把行业身份直接写进域名：营销代理与广告公司、增长与投放团队、营销 SaaS 工具、营销博客与课程用 name.marketing，客户看一眼就知道你干什么。它与 .agency 的分工在焦点——agency 说「我们是一家机构」，marketing 说「我们做的是营销」：卖专业能力时后者更点题。Identity Digital 运营，注册约 $6（约 ¥41），续费约 $33/年（约 ¥241），对营销行业客单价来说很轻。库存极好：行业词、动词、品牌名命中率都高。注意三点：一是 marketing 九个字母偏长，主体名务必短，品牌词或垂类词最佳；二是营销人自己的域名就是作品——别选生僻拼写，客户拼错就是失单；三是获客渠道在内容与案例（领英、公众号、案例库），域名的角色是专业官网与线索表单入口。命名上「品牌词 + .marketing」最自然，垂类用「领域 + .marketing」（content、email 类）精准点题，个人营销顾问用「人名 + .marketing」也很顺。",
+      bestFor: ["营销代理与广告公司", "增长与投放团队", "营销 SaaS 与工具", "营销博客与课程"],
+      namingTips: [
+        "「品牌词 + .marketing」客户一眼知道你干什么",
+        "注册约 $6、续费约 $33/年，行业客单价无感",
+        "「领域 + .marketing」精准点题（content、email 类）",
+        "九个字母偏长，主体名务必短、拼写别生僻",
+      ],
+    },
+    en: {
+      title: ".marketing Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".marketing writes the profession into the address — for agencies, growth teams, martech SaaS and marketing creators. See live pricing and naming advice, then hunt available .marketing names with AI.",
+      intro:
+        ".marketing states the trade in the address: agencies and ad shops, growth and performance teams, martech SaaS, marketing blogs and courses on name.marketing tell clients what you do at a glance. The split with .agency is focus — agency says \"we are a firm\", marketing says \"marketing is what we do\": sharper when you sell the expertise itself. Operated by Identity Digital, about $6 to register and $33/yr to renew — light against marketing-industry ticket sizes. Inventory is excellent: trade words, verbs and brand names all hit. Three cautions: marketing is nine letters, so keep the front word short — a brand or vertical word works best; a marketer's own domain is a portfolio piece, so avoid clever misspellings that clients will fumble; and clients come through content and case studies (LinkedIn, newsletters), so the domain's job is the professional site and lead-form front door. Naming: brand word + .marketing is the natural pattern; verticals nail the pitch as field + .marketing (content, email); independent consultants roll well on personal name + .marketing.",
+      bestFor: ["Agencies & ad shops", "Growth & performance teams", "Martech SaaS & tools", "Marketing blogs & courses"],
+      namingTips: [
+        "Brand + .marketing says what you do at a glance",
+        "About $6 to register, $33/yr to renew",
+        "Field + .marketing nails the pitch (content, email)",
+        "Nine letters — keep the front word short",
+      ],
+    },
+  },
+  systems: {
+    tld: "systems",
+    zh: {
+      title: ".systems 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".systems 把工程气质写进域名，适合基础设施与运维团队、企业系统集成商、IoT 与嵌入式公司。查看 .systems 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .systems 域名。",
+      intro:
+        ".systems 自带工程房间的嗡嗡声：基础设施与 DevOps 团队、企业系统集成商、IoT 与嵌入式公司、安全与监控平台用 name.systems，域名读出来就是「我们造的是正经系统」。它与 .software 的分野在层次——software 偏「一款产品」，systems 偏「一套底层/成体系的工程」：数据库、操作系统、分布式基建团队用它气质最合，业内不少基建初创直接选 .systems 做官网。Identity Digital 运营，注册约 $12（约 ¥85），续费约 $28/年（约 ¥204），温和档。库存极好：技术词、动物词、复合词命中率都高。注意三点：一是 systems 天然复数且偏冷硬，2C 产品别用，它是给工程品牌的；二是七个字母不算短，主体名选短词，单音节词 + .systems 的组合极有极客范；三是这类公司获客靠技术声誉（GitHub、技术博客、会议演讲），域名的角色是工程品牌门面与文档站。命名上「短词 + .systems」最自然（初创基建公司标准写法），垂类用「领域 + .systems」（trading、energy 类），个人技术品牌用「代号 + .systems」也很酷。",
+      bestFor: ["基础设施与 DevOps 团队", "企业系统集成商", "IoT 与嵌入式公司", "安全与监控平台"],
+      namingTips: [
+        "「短词 + .systems」是基建初创的标准写法",
+        "注册约 $12、续费约 $28/年，温和档",
+        "单音节词 + .systems 组合极有极客范",
+        "偏冷硬工程气质，2C 产品另选后缀",
+      ],
+    },
+    en: {
+      title: ".systems Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".systems hums like an engineering room — for infrastructure and DevOps teams, integrators, IoT companies and security platforms. See live pricing and naming advice, then hunt available .systems names with AI.",
+      intro:
+        ".systems hums like a server room: infrastructure and DevOps teams, enterprise integrators, IoT and embedded companies, security and monitoring platforms on name.systems read as \"we build serious systems\". The split with .software is the layer — software leans \"a product\", systems leans \"foundational, engineered plumbing\": database, OS and distributed-infra teams wear it best, and plenty of infra startups pick .systems for their homepage. Operated by Identity Digital, about $12 to register and $28/yr to renew — the mild tier. Inventory is excellent: technical words, animal words and compounds all hit. Three cautions: systems is plural and cold-blooded — wrong register for consumer products, this one belongs to engineering brands; seven letters isn't short, so pick a short front word — a single syllable + .systems is peak hacker chic; and these companies win business on technical reputation (GitHub, engineering blogs, conference talks), so the domain's job is the engineering brand front door and docs site. Naming: short word + .systems is the infra-startup standard; verticals work field + .systems (trading, energy); personal tech brands look sharp as codename + .systems.",
+      bestFor: ["Infrastructure & DevOps teams", "Enterprise integrators", "IoT & embedded companies", "Security & monitoring platforms"],
+      namingTips: [
+        "Short word + .systems — the infra-startup standard",
+        "About $12 to register, $28/yr to renew",
+        "One syllable + .systems is peak hacker chic",
+        "Cold engineering register — consumer brands look elsewhere",
+      ],
+    },
+  },
+  ventures: {
+    tld: "ventures",
+    zh: {
+      title: ".ventures 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ventures 把创业野心写进域名，适合风投基金、创业工作室、孵化器与连续创业者。查看 .ventures 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ventures 域名。",
+      intro:
+        ".ventures 把「押注未来」写进域名：风投与天使基金、创业工作室（venture studio）、孵化器与加速器、连续创业者的控股主体用 name.ventures，域名本身就是一句投资宣言。英文里 ventures 是基金命名的标准后缀词（Sequoia、a16z 的全名都带 ventures），域名直接用 .ventures 反而省掉了主体里的重复。Identity Digital 运营，注册约 $6（约 ¥41），续费约 $48/年（约 ¥345），对基金管理费来说可以忽略。库存极好：姓氏、地名、意象词命中率都高。注意三点：一是它偏机构与资本语气，单一产品或 2C 品牌不合适；二是基金品牌重信任，主体名用姓氏、合伙人组合或稳重意象词，别用轻佻词；三是八个字母偏长，配短主体名读起来才利落。命名上「姓氏/合伙人 + .ventures」最自然（基金业传统），创业工作室用「品牌词 + .ventures」，主题基金用「领域 + .ventures」（climate、bio 类）一眼点明赛道。",
+      bestFor: ["风投与天使基金", "创业工作室与孵化器", "连续创业者控股主体", "企业创新投资部门"],
+      namingTips: [
+        "「姓氏/合伙人 + .ventures」是基金业传统写法",
+        "注册约 $6、续费约 $48/年，管理费下无感",
+        "「领域 + .ventures」一眼点明赛道（climate、bio 类）",
+        "机构与资本语气，单一 2C 产品别用",
+      ],
+    },
+    en: {
+      title: ".ventures Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ventures writes the bet on the future into the address — for VC funds, venture studios, accelerators and serial founders. See live pricing and naming advice, then hunt available .ventures names with AI.",
+      intro:
+        ".ventures writes the bet into the address: VC and angel funds, venture studios, incubators and accelerators, serial founders' holding entities on name.ventures make the domain itself an investment thesis. In fund naming, \"ventures\" is already the standard trailing word — using the TLD saves repeating it in the name. Operated by Identity Digital, about $6 to register and $48/yr to renew — a rounding error against management fees. Inventory is excellent: surnames, place names and imagery words all hit. Three cautions: the register is institutional capital — wrong for a single product or consumer brand; fund brands trade on trust, so front words should be surnames, partner combinations or steady imagery, never flippant; and eight letters isn't short, so a short front word keeps it crisp. Naming: surname or partners + .ventures is the fund-industry classic; venture studios go brand word + .ventures; thesis funds say the lane instantly as field + .ventures (climate, bio).",
+      bestFor: ["VC & angel funds", "Venture studios & incubators", "Serial founders' holdcos", "Corporate venture arms"],
+      namingTips: [
+        "Surname + .ventures — the fund-industry classic",
+        "About $6 to register, $48/yr to renew",
+        "Field + .ventures says the lane (climate, bio)",
+        "Institutional register — consumer brands look elsewhere",
+      ],
+    },
+  },
+  capital: {
+    tld: "capital",
+    zh: {
+      title: ".capital 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".capital 把资本身份写进域名，适合私募与风投基金、资产管理公司、家族办公室与投资机构。查看 .capital 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .capital 域名。",
+      intro:
+        ".capital 是资本行业的正装后缀：私募与风投基金、资产管理与量化机构、家族办公室、投行与并购顾问用 name.capital，域名念出来就是公司全名——英文基金名以 Capital 结尾是行业惯例（Benchmark Capital 类），.capital 让「品牌词 + 后缀」直接等于注册主体名。它与 .ventures 的语气差异在阶段——ventures 偏早期与冒险，capital 偏机构与规模：管理规模越大越适合后者。Identity Digital 运营，注册约 $6（约 ¥41），续费约 $57/年（约 ¥412），续费在本站偏高档，但对资管行业完全无感。库存极好：姓氏、地名、意象词命中率都高。注意三点：一是金融属性强，合规要求高的地区注意展示牌照信息，域名越正式越要经得起尽调；二是主体名务必稳重，姓氏、山川意象是基金命名主流，轻佻词会毁掉信任感；三是七个字母配短主体名读起来最有分量。命名上「姓氏/意象词 + .capital」最自然（基金业标准），量化机构用「策略词 + .capital」，区域基金用「城市 + .capital」一语双关（capital 也是「首府」）。",
+      bestFor: ["私募与风投基金", "资产管理与量化机构", "家族办公室", "投行与并购顾问"],
+      namingTips: [
+        "「姓氏/意象词 + .capital」等于基金全名",
+        "注册约 $6、续费约 $57/年，资管行业无感",
+        "「城市 + .capital」一语双关（capital 也是首府）",
+        "主体名务必稳重，轻佻词毁掉信任感",
+      ],
+    },
+    en: {
+      title: ".capital Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".capital is the suit-and-tie suffix — for PE and VC funds, asset managers, family offices and investment firms. See live pricing and naming advice, then hunt available .capital names with AI.",
+      intro:
+        ".capital is the suit-and-tie suffix of finance: PE and VC funds, asset managers and quant shops, family offices, M&A advisories on name.capital read out as the firm's full name — fund names ending in \"Capital\" are the industry convention (think Benchmark Capital), and the TLD makes brand word + suffix equal the registered entity. The tone gap with .ventures is stage — ventures leans early and adventurous, capital leans institutional and scaled: the bigger the AUM, the better it fits. Operated by Identity Digital, about $6 to register and $57/yr to renew — high-tier renewal here, invisible to an asset manager. Inventory is excellent: surnames, place names and imagery words all hit. Three cautions: the financial register invites scrutiny — display licensing information where regulation requires, because a formal domain must survive due diligence; front words must be steady — surnames and landscape imagery dominate fund naming, and flippant words destroy trust; and seven letters carries best with a short front word. Naming: surname or imagery + .capital is the fund standard; quant shops work strategy word + .capital; regional funds pun nicely as city + .capital (capital city included).",
+      bestFor: ["PE & VC funds", "Asset managers & quant shops", "Family offices", "M&A & investment advisories"],
+      namingTips: [
+        "Surname + .capital reads as the firm's full name",
+        "About $6 to register, $57/yr to renew",
+        "City + .capital puns on the capital city",
+        "Steady front words only — flippancy kills trust",
+      ],
+    },
+  },
+  guru: {
+    tld: "guru",
+    zh: {
+      title: ".guru 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".guru 把专家人设写进域名，适合独立专家、教程与攻略站、咨询顾问与兴趣领域达人。查看 .guru 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .guru 域名。",
+      intro:
+        ".guru 自带一点幽默的专家人设：独立专家与顾问、教程与攻略站、修理与生活技能达人、兴趣领域 KOL 用 name.guru，域名读出来就是「这事问我」。它与 .expert 的差别在温度——expert 一本正经，guru 带自嘲式的亲切：面向大众的教程与攻略内容用 guru 反而更好记、更易传播（fitness.guru 比 fitness.expert 顺口）。Identity Digital 运营，注册约 $3（约 ¥19）是本站便宜档，续费约 $35/年（约 ¥248）注意差价。库存极好：领域词、动词、爱好词命中率都高。注意三点：一是 guru 的语气轻，正式 B2B 咨询与金融法务场景慎用，用 .consulting/.expert 更稳；二是首年超便宜续费翻十倍，做长期品牌先算清续费账；三是「领域 + .guru」的组合极其点题，但也意味着你得真的「guru」——内容质量撑不起人设时域名会反噬。命名上「领域 + .guru」最自然（excel、bbq 类一眼懂），个人品牌用「昵称 + .guru」，工具站用「动词 + .guru」也很顺。",
+      bestFor: ["独立专家与顾问", "教程与攻略站", "修理与生活技能达人", "兴趣领域 KOL"],
+      namingTips: [
+        "「领域 + .guru」读出来就是「这事问我」",
+        "注册约 $3 超便宜，续费约 $35/年注意差价",
+        "语气轻松亲切，正式 B2B 场景用 .consulting",
+        "人设要立得住——内容撑不起 guru 会反噬",
+      ],
+    },
+    en: {
+      title: ".guru Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".guru wears expertise with a wink — for independent experts, how-to sites, consultants and hobby authorities. See live pricing and naming advice, then hunt available .guru names with AI.",
+      intro:
+        ".guru wears expertise with a wink: independent experts and consultants, how-to and tutorial sites, repair and life-skill teachers, hobby authorities on name.guru say \"ask me about this\" right in the address. The temperature gap with .expert matters — expert is straight-faced, guru is self-aware and friendly: for mass-audience tutorials and guides, guru is more memorable and shareable (fitness.guru rolls better than fitness.expert). Operated by Identity Digital, about $3 to register — the cheap tier here — and about $35/yr to renew, so mind the gap. Inventory is excellent: field words, verbs and hobby words all hit. Three cautions: the tone is light — for formal B2B consulting, finance or legal, .consulting or .expert reads safer; the first year is ten times cheaper than renewal, so budget the long game; and field + .guru is deliciously on the nose, which means you must actually deliver — a guru domain with thin content backfires. Naming: field + .guru is the natural pattern (excel, bbq — instantly clear); personal brands go nickname + .guru; tool sites roll nicely as verb + .guru.",
+      bestFor: ["Independent experts & consultants", "How-to & tutorial sites", "Repair & life-skill teachers", "Hobby authorities & creators"],
+      namingTips: [
+        "Field + .guru says \"ask me about this\"",
+        "About $3 to register — but $35/yr to renew",
+        "Light tone — formal B2B fits .consulting better",
+        "Deliver real expertise or the name backfires",
+      ],
+    },
+  },
+  tips: {
+    tld: "tips",
+    zh: {
+      title: ".tips 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".tips 把实用建议写进域名，适合攻略与技巧站、垂类内容博客、工具型 newsletter 与生活妙招品牌。查看 .tips 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tips 域名。",
+      intro:
+        ".tips 把内容承诺写进域名：攻略与技巧站、垂类内容博客、工具型 newsletter、生活妙招与省钱指南用 name.tips，访客点开之前就知道能得到什么——「这里有实用建议」。它是内容站里最「言出必行」的后缀之一：travel.tips、tax.tips 这类组合读出来就是搜索框里的查询词，天然贴合搜索意图。Identity Digital 运营，注册约 $8（约 ¥59），续费约 $25/年（约 ¥182），温和档。库存极好：领域词、场景词、动词命中率都高。注意三点：一是 tips 设定了「实用、轻量」的预期，深度长文与严肃研究站用 .blog/.wiki 气质更合；二是它是复数轻内容词，电商与 SaaS 主站不合适，适合做内容资产或引流站；三是英文里 tips 也有「小费」义，餐饮场景可以玩双关但要想清楚歧义。命名上「领域 + .tips」最自然（读出来就是搜索词），个人博主用「昵称 + .tips」，场景站用「场景 + .tips」（interview、moving 类）精准命中长尾搜索。",
+      bestFor: ["攻略与技巧站", "垂类内容博客", "工具型 newsletter", "生活妙招与省钱指南"],
+      namingTips: [
+        "「领域 + .tips」读出来就是搜索框里的查询词",
+        "注册约 $8、续费约 $25/年，温和档",
+        "「场景 + .tips」精准命中长尾搜索（interview 类）",
+        "轻内容预期，深度研究站用 .blog/.wiki",
+      ],
+    },
+    en: {
+      title: ".tips Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".tips promises useful advice right in the address — for how-to sites, niche blogs, utility newsletters and life-hack brands. See live pricing and naming advice, then hunt available .tips names with AI.",
+      intro:
+        ".tips writes the content promise into the address: how-to and technique sites, niche blogs, utility newsletters, life hacks and money-saving guides on name.tips tell visitors exactly what they'll get before the click. It is one of the most self-fulfilling content suffixes — travel.tips or tax.tips reads like the search query itself, naturally aligned with search intent. Operated by Identity Digital, about $8 to register and $25/yr to renew — the mild tier. Inventory is excellent: field words, scenario words and verbs all hit. Three cautions: tips sets a \"useful and light\" expectation — long-form research sites wear .blog or .wiki better; it's a plural content word, wrong for an e-commerce or SaaS main site — think content asset or traffic property; and in English tips also means gratuities, a pun restaurants can play with as long as the ambiguity is deliberate. Naming: field + .tips is the natural pattern (it reads as the search query); personal writers go nickname + .tips; scenario sites nail long-tail search as scenario + .tips (interview, moving).",
+      bestFor: ["How-to & technique sites", "Niche content blogs", "Utility newsletters", "Life hacks & savings guides"],
+      namingTips: [
+        "Field + .tips reads as the search query itself",
+        "About $8 to register, $25/yr to renew",
+        "Scenario + .tips nails long-tail search (interview)",
+        "Light-content register — research sites fit .blog/.wiki",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
