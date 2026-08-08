@@ -3264,6 +3264,186 @@ const GUIDES = {
       ],
     },
   },
+  salon: {
+    tld: "salon",
+    zh: {
+      title: ".salon 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".salon 把美业身份写进域名，适合美发、美甲、美容、造型工作室与连锁品牌。查看 .salon 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .salon 域名。",
+      intro:
+        ".salon 是美业的全拼后缀：美发、美甲、美容、化妆造型、美睫美肤、宠物美容——凡是「进店做造型/护理」的生意，name.salon 读出来就是一家门店。它与 .boutique 的精品零售感不同，salon 一词自带「手艺与服务」的场景：椅子、镜子、预约表。词源上 salon 还有「文艺沙龙」的雅义，读书会、艺术沙龙、播客沙龙用它也很出彩。Identity Digital 运营，注册约 $11（约 ¥78），续费约 $46/年（约 ¥330），对美业客单价与复购频率来说负担很轻。库存极好：风格词、人名、地名命中率都高。注意三点：一是 salon 五个字母不长，但主体名仍建议短，读起来才像招牌；二是美业获客主要在本地平台与社交媒体，域名的角色是品牌官网与预约入口，配合线上预约系统食用最佳；三是「沙龙」的双关虽雅，页面视觉要明确行业，避免访客误会。命名上「人名/品牌 + .salon」最自然，连锁用「城市/街区 + .salon」归拢分店，文艺沙龙用「主题 + .salon」也很顺。",
+      bestFor: ["美发美甲与美容工作室", "化妆造型与美睫美肤", "宠物美容门店", "读书会与文艺沙龙"],
+      namingTips: [
+        "「人名/品牌 + .salon」读出来就是一家店",
+        "注册约 $11、续费约 $46/年，美业客单价无压力",
+        "配合线上预约系统，域名做品牌官网与预约入口",
+        "「主题 + .salon」的文艺沙龙用法也很出彩",
+      ],
+    },
+    en: {
+      title: ".salon Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".salon spells the beauty business into the address — for hair, nail, skin and styling studios, plus creative salons. See live pricing and naming advice, then hunt available .salon names with AI.",
+      intro:
+        ".salon spells the trade right into the domain: hair, nails, skin care, makeup and styling, lashes, even pet grooming — any \"come in for a treatment\" business on name.salon reads as a storefront. Unlike the curated-retail air of .boutique, salon carries the scene of craft and service: chairs, mirrors, an appointment book. The word also keeps its older, artsy sense — a literary or art salon — so reading circles, podcast salons and creative gatherings wear it elegantly too. Operated by Identity Digital, about $11 to register and $46/yr to renew — light against beauty-industry ticket sizes and repeat visits. Inventory is excellent: style words, personal names and place names all hit. Three cautions: salon is only five letters, but keep the front word short so it reads like a shop sign; beauty businesses win clients on local platforms and social media, so the domain's job is the brand site and booking front door — pair it with an online booking system; and the artsy double meaning is charming, but make the page visuals state the industry clearly. Naming: personal or brand name + .salon is the natural pattern; chains unify branches as city or neighborhood + .salon; creative salons shine as theme + .salon.",
+      bestFor: ["Hair, nail & beauty studios", "Makeup, styling & lash artists", "Pet grooming shops", "Reading circles & creative salons"],
+      namingTips: [
+        "Name/brand + .salon reads like a shop sign",
+        "About $11 to register, $46/yr to renew",
+        "Pair with online booking — the domain is the front door",
+        "Theme + .salon also works for creative salons",
+      ],
+    },
+  },
+  yoga: {
+    tld: "yoga",
+    zh: {
+      title: ".yoga 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".yoga 把瑜伽写进域名，适合瑜伽馆、教培与线上课程品牌，注册续费同价无涨价陷阱。查看 .yoga 实时价格与命名建议，用 AI 猎取可注册的 .yoga 域名。",
+      intro:
+        ".yoga 是垂直到不能再垂直的后缀：瑜伽馆、瑜伽老师个人品牌、教培认证、线上课程、冥想与正念应用用 name.yoga，受众一眼知道你做什么。相比 .fitness 的力量感，.yoga 的气质是呼吸、拉伸与平静，普拉提、冥想、身心疗愈类品牌借它的气场也很顺。GoDaddy Registry 运营，注册与续费同价约 $26/年（约 ¥189）——平进平出没有首年甜头，但也没有续费陷阱，对课时费定价的瑜伽生意来说负担很轻。库存极好：风格词、体式词、人名、城市名命中率都高。注意三点：一是 yoga 全球通用无翻译成本，出海教培与英文内容品牌尤其合适；二是瑜伽获客重社交与口碑，域名的角色是品牌官网、课表与预约入口；三是行业里 studio/flow/om 类词已被大量注册，起名时先查再爱。命名上「人名/品牌 + .yoga」最自然，场馆用「城市/街区 + .yoga」，线上品牌用「风格词 + .yoga」（flow、calm 类）也很出彩。",
+      bestFor: ["瑜伽馆与工作室", "瑜伽老师个人品牌与教培", "线上课程与冥想应用", "普拉提与身心疗愈品牌"],
+      namingTips: [
+        "「人名/品牌 + .yoga」受众一眼懂",
+        "注册续费同价约 $26/年，无涨价陷阱",
+        "全球通用词，出海教培与英文内容尤其合适",
+        "flow/om 类热词已被大量注册，先查再爱",
+      ],
+    },
+    en: {
+      title: ".yoga Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".yoga puts the practice in the address — for studios, teachers, trainings and online course brands, with flat renewal pricing. See live pricing and naming advice, then hunt available .yoga names with AI.",
+      intro:
+        ".yoga is as vertical as a suffix gets: studios, teacher personal brands, trainings and certifications, online courses, meditation and mindfulness apps on name.yoga tell the audience exactly what you do. Where .fitness flexes strength, .yoga breathes — stretch, calm, presence — and pilates, meditation and mind-body healing brands borrow that register naturally. Operated by GoDaddy Registry at about $26/yr for both registration and renewal — no first-year teaser, but no renewal trap either, light against class-pack pricing. Inventory is excellent: style words, pose names, personal names and city names all hit. Three cautions: yoga is a global word with zero translation cost, ideal for international teacher-training and English content brands; the industry wins students through social and word of mouth, so the domain's job is the brand site, schedule and booking front door; and popular words like studio, flow and om are heavily registered — check before you fall in love. Naming: personal or brand name + .yoga is the natural pattern; studios go city or neighborhood + .yoga; online brands shine as mood word + .yoga (flow, calm).",
+      bestFor: ["Yoga studios", "Teacher brands & trainings", "Online courses & meditation apps", "Pilates & mind-body brands"],
+      namingTips: [
+        "Name/brand + .yoga tells the audience instantly",
+        "Flat ~$26/yr — no renewal trap",
+        "Global word, zero translation cost for international brands",
+        "flow/om-style words go fast — check before you commit",
+      ],
+    },
+  },
+  coffee: {
+    tld: "coffee",
+    zh: {
+      title: ".coffee 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".coffee 把咖啡香写进域名，适合咖啡馆、烘焙工作室、咖啡豆电商与咖啡内容品牌。查看 .coffee 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .coffee 域名。",
+      intro:
+        ".coffee 是咖啡生意的原生后缀：独立咖啡馆、连锁品牌、烘焙工作室、咖啡豆与器具电商、咖啡订阅、咖啡测评与内容社区用 name.coffee，从域名开始就闻得到味道。它与 .cafe 的区别很微妙——.cafe 指「那家店」，.coffee 指「这件事」：卖豆子、做内容、开订阅的用 .coffee 更准，实体门店两者皆宜。英语里 \"let's grab coffee\" 还是社交邀约的通用语，约聊工具与社区产品借这层意思也很妙。Identity Digital 运营，注册约 $11（约 ¥78），续费约 $35/年（约 ¥248），在行业后缀里属温和档。库存极好：产地词、风味词、人名命中率都高。注意三点：一是 coffee 双写字母（ff、ee）拼写要留意，口播场景多提醒一次；二是咖啡电商竞争激烈，域名只是起点，供应链与内容才是护城河；三是本地门店获客靠地图与社交平台，域名做品牌官网与线上商城入口。命名上「品牌词 + .coffee」最自然，烘焙商用「产地/风味 + .coffee」，内容品牌用「动词短语 + .coffee」（brew、pour 类）也很顺。",
+      bestFor: ["独立咖啡馆与连锁品牌", "烘焙工作室与咖啡豆电商", "咖啡订阅与器具商店", "咖啡测评与内容社区"],
+      namingTips: [
+        "「品牌词 + .coffee」从域名开始闻到味道",
+        "注册约 $11、续费约 $35/年，行业后缀温和档",
+        "ff/ee 双写字母口播时多提醒一次",
+        "卖豆子做内容用 .coffee，指「那家店」用 .cafe",
+      ],
+    },
+    en: {
+      title: ".coffee Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".coffee brews the aroma into the address — for cafés, roasters, bean e-commerce and coffee content brands. See live pricing and naming advice, then hunt available .coffee names with AI.",
+      intro:
+        ".coffee is the native suffix of the coffee trade: independent cafés, chains, roasteries, bean and gear e-commerce, subscriptions, review sites and content communities on name.coffee smell right from the address. The split with .cafe is subtle — .cafe means \"the place\", .coffee means \"the thing\": if you sell beans, run a subscription or make content, .coffee is the sharper pick, while physical shops wear either well. English also keeps \"let's grab coffee\" as the universal social invite, a layer that chat and community products can borrow cleverly. Operated by Identity Digital, about $11 to register and $35/yr to renew — the mild tier among industry suffixes. Inventory is excellent: origin words, flavor words and personal names all hit. Three cautions: coffee doubles two letters (ff, ee), so spell it out once in spoken contexts; coffee e-commerce is fiercely competitive — the domain is a start, supply chain and content are the moat; and local shops win customers on maps and social, so the domain's job is the brand site and online store. Naming: brand word + .coffee is the natural pattern; roasters go origin or flavor + .coffee; content brands shine as verb phrase + .coffee (brew, pour).",
+      bestFor: ["Indie cafés & chains", "Roasteries & bean e-commerce", "Coffee subscriptions & gear stores", "Coffee reviews & communities"],
+      namingTips: [
+        "Brand + .coffee smells right from the address",
+        "About $11 to register, $35/yr to renew",
+        "Double letters (ff, ee) — spell it out when spoken",
+        "Selling beans/content? .coffee; \"the place\"? .cafe",
+      ],
+    },
+  },
+  wine: {
+    tld: "wine",
+    zh: {
+      title: ".wine 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".wine 把酒香写进域名，适合酒庄、葡萄酒电商、侍酒师与酒评内容品牌。查看 .wine 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .wine 域名。",
+      intro:
+        ".wine 是葡萄酒世界的原生后缀：酒庄官网、葡萄酒电商与订阅、进口商与经销商、侍酒师个人品牌、酒评与品鉴内容、酒窖与酒具生意用 name.wine，风土从域名开始。相比 .bar 的门店感，.wine 覆盖的是整条产业链——种植、酿造、贸易、内容、体验。Identity Digital 运营，注册约 $6（约 ¥41）很便宜，续费约 $48/年（约 ¥345）是首年的数倍，下手前把续费算进预算。库存极好：产区词、品种词、庄园名命中率都高。注意三点：一是酒类电商与广告在多数市场有牌照与年龄门槛，合规是第一课；二是 wine 一词的联想是「佐餐与品味」，烈酒与精酿啤酒品牌另有更准的词；三是欧洲产区名（champagne、bordeaux 类）受地理标志保护，起名避开受保护词。命名上「庄园/品牌 + .wine」最自然，电商用「场景词 + .wine」（daily、house 类），内容品牌用「动词/形容词 + .wine」也很出彩。",
+      bestFor: ["酒庄与葡萄园官网", "葡萄酒电商与订阅", "进口商与侍酒师品牌", "酒评与品鉴内容"],
+      namingTips: [
+        "「庄园/品牌 + .wine」风土从域名开始",
+        "注册约 $6 但续费约 $48/年，预算算清再下手",
+        "酒类电商牌照与年龄门槛是第一课",
+        "champagne 类产区名受地理标志保护，起名避开",
+      ],
+    },
+    en: {
+      title: ".wine Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".wine pours the terroir into the address — for wineries, wine e-commerce, sommeliers and tasting content brands. See live pricing and naming advice, then hunt available .wine names with AI.",
+      intro:
+        ".wine is the native suffix of the wine world: winery sites, wine e-commerce and subscriptions, importers and distributors, sommelier personal brands, review and tasting content, cellar and glassware businesses on name.wine carry terroir from the address itself. Where .bar reads as a venue, .wine spans the whole chain — growing, making, trading, writing, tasting. Operated by Identity Digital, about $6 to register is genuinely cheap, but renewal near $48/yr runs several times the first year — budget the renewal before you commit. Inventory is excellent: region words, grape varieties and estate names all hit. Three cautions: alcohol e-commerce and advertising carry licensing and age-gate duties in most markets — compliance comes first; \"wine\" connotes table and taste, so spirits and craft-beer brands have sharper words elsewhere; and European appellations (champagne, bordeaux and kin) enjoy geographical-indication protection — steer clear of protected names. Naming: estate or brand + .wine is the natural pattern; e-commerce shines as occasion word + .wine (daily, house); content brands work as verb or adjective + .wine.",
+      bestFor: ["Wineries & vineyards", "Wine e-commerce & subscriptions", "Importers & sommelier brands", "Wine reviews & tasting content"],
+      namingTips: [
+        "Estate/brand + .wine carries terroir in the address",
+        "About $6 first year but $48/yr renewal — budget it",
+        "Alcohol licensing and age gates come first",
+        "Appellations like champagne are GI-protected — avoid",
+      ],
+    },
+  },
+  kitchen: {
+    tld: "kitchen",
+    zh: {
+      title: ".kitchen 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".kitchen 把厨房搬进域名，适合私厨、云厨房、烹饪课程、食谱内容与厨房用品品牌。查看 .kitchen 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .kitchen 域名。",
+      intro:
+        ".kitchen 把「厨房」这个场景直接搬进域名：私厨与定制餐饮、云厨房与外卖品牌、烹饪课程与美食工作室、食谱与美食内容、厨房用品与橱柜定制用 name.kitchen，烟火气从域名开始。它与 .restaurant 的区别在场景——.restaurant 是「堂食的店」，.kitchen 是「做菜的地方」：不设堂食的云厨房、美食内容与课程用 .kitchen 更准。英语里 test kitchen（试菜厨房）还是美食媒体的经典栏目名，内容品牌借这层意思很顺。Identity Digital 运营，注册约 $8（约 ¥59），续费约 $52/年（约 ¥374）是首年的数倍，预算算清再下手。库存极好：菜系词、人名、风格词命中率都高。注意三点：一是 kitchen 七个字母，主体名务必短；二是餐饮获客靠外卖平台与社交内容，域名做品牌官网与菜单入口；三是家装橱柜生意也用这个词，页面视觉要快速表明你是「做菜」还是「装厨房」。命名上「人名/品牌 + .kitchen」最自然（mama、nonna 类亲切词尤佳），云厨房用「菜系 + .kitchen」，内容品牌用「test/home + .kitchen」式也很出彩。",
+      bestFor: ["私厨与云厨房品牌", "烹饪课程与美食工作室", "食谱与美食内容", "厨房用品与橱柜定制"],
+      namingTips: [
+        "「人名/品牌 + .kitchen」烟火气直给",
+        "注册约 $8 但续费约 $52/年，预算算清再下手",
+        "kitchen 七个字母，主体名务必短",
+        "不设堂食用 .kitchen，堂食的店用 .restaurant",
+      ],
+    },
+    en: {
+      title: ".kitchen Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".kitchen moves the cooking into the address — for private chefs, cloud kitchens, cooking classes, recipe content and kitchenware brands. See live pricing and naming advice, then hunt available .kitchen names with AI.",
+      intro:
+        ".kitchen moves the room where food happens into the address: private chefs and catering, cloud kitchens and delivery brands, cooking classes and food studios, recipe and food content, kitchenware and cabinetry businesses on name.kitchen feel warm from the domain itself. The split with .restaurant is the scene — .restaurant is \"the place you dine\", .kitchen is \"the place you cook\": delivery-only kitchens, food content and classes are sharper on .kitchen. English also keeps \"test kitchen\" as a classic food-media franchise, a layer content brands borrow naturally. Operated by Identity Digital, about $8 to register but renewal near $52/yr runs several times the first year — budget it before you commit. Inventory is excellent: cuisine words, personal names and style words all hit. Three cautions: kitchen is seven letters, so keep the front word short; food businesses win customers on delivery platforms and social content, so the domain's job is the brand site and menu front door; and cabinetry businesses use the same word — make your visuals say \"cooking\" or \"remodeling\" fast. Naming: personal or brand name + .kitchen is the natural pattern (warm words like mama, nonna shine); cloud kitchens go cuisine + .kitchen; content brands work the test/home + .kitchen angle.",
+      bestFor: ["Private chefs & cloud kitchens", "Cooking classes & food studios", "Recipe & food content", "Kitchenware & cabinetry brands"],
+      namingTips: [
+        "Name/brand + .kitchen feels warm instantly",
+        "About $8 first year but $52/yr renewal — budget it",
+        "Seven letters — keep the front word short",
+        "Delivery-only? .kitchen; dine-in? .restaurant",
+      ],
+    },
+  },
+  garden: {
+    tld: "garden",
+    zh: {
+      title: ".garden 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".garden 把花园写进域名，适合园艺电商、景观设计、植物内容社区与数字花园，首年注册极便宜。查看 .garden 实时价格与命名建议，用 AI 猎取可注册的 .garden 域名。",
+      intro:
+        ".garden 把「花园」的意象带进域名：园艺电商与苗圃、景观设计与庭院施工、植物养护内容与社区、花店与植物生活方式品牌用 name.garden，绿意从域名开始。它还有一层数字世界的妙用——「digital garden」是知识管理圈的流行隐喻（笔记像植物一样生长），个人知识库与博客用 name.garden 在这个圈子里自带身份。GoDaddy Registry 运营，注册约 $2（约 ¥11）是本站最便宜档之一，续费约 $26/年（约 ¥189）也温和，试错成本几乎为零。库存极好：植物词、风格词、人名命中率都高。注意三点：一是 garden 六个字母，主体名短一点读起来才像门牌；二是园艺是季节性生意，内容与电商结合（养护指南带货）比纯货架更有粘性；三是数字花园的用法在中文圈认知度还在成长期，面向国内用户时页面要交代清楚。命名上「植物/风格 + .garden」最自然（secret、zen 类意境词尤佳），本地生意用「城市 + .garden」，知识库用「人名 + .garden」很有辨识度。",
+      bestFor: ["园艺电商与苗圃", "景观设计与庭院施工", "植物内容与花店品牌", "数字花园与个人知识库"],
+      namingTips: [
+        "「植物/风格 + .garden」绿意直给，secret/zen 类意境词尤佳",
+        "注册约 $2、续费约 $26/年，试错成本极低",
+        "「人名 + .garden」做数字花园/知识库自带圈内身份",
+        "园艺季节性强，内容带货比纯货架更有粘性",
+      ],
+    },
+    en: {
+      title: ".garden Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".garden grows greenery into the address — for garden e-commerce, landscaping, plant content and digital gardens, with a very cheap first year. See live pricing and naming advice, then hunt available .garden names with AI.",
+      intro:
+        ".garden grows the imagery right into the address: garden e-commerce and nurseries, landscaping and yard design, plant-care content and communities, florists and plant lifestyle brands on name.garden feel green from the domain itself. It also has a lovely digital-world use — the \"digital garden\" is a beloved metaphor in the personal-knowledge-management scene (notes that grow like plants), so a personal wiki or blog on name.garden carries instant identity there. Operated by GoDaddy Registry, about $2 to register is among the cheapest here, with renewal near $26/yr — practically zero cost to try. Inventory is excellent: plant words, mood words and personal names all hit. Three cautions: garden is six letters, so a short front word reads best, like a gate sign; gardening is seasonal — content plus commerce (care guides that sell) beats bare shelves for retention; and the digital-garden sense is niche outside the PKM crowd, so explain it if your audience is broader. Naming: plant or mood word + .garden is the natural pattern (secret, zen shine); local businesses go city + .garden; knowledge bases are unmistakable as personal name + .garden.",
+      bestFor: ["Garden e-commerce & nurseries", "Landscaping & yard design", "Plant content & florist brands", "Digital gardens & personal wikis"],
+      namingTips: [
+        "Plant/mood + .garden — secret and zen shine",
+        "About $2 to register, $26/yr to renew — cheap to try",
+        "Name + .garden is instant identity for digital gardens",
+        "Seasonal trade — content that sells beats bare shelves",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

@@ -191,6 +191,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   fitness: { first: 41, renew: 241 },
   photos: { first: 59, renew: 174 },
   gallery: { first: 167, renew: 167 },
+  salon: { first: 78, renew: 330 },
+  yoga: { first: 189, renew: 189 },
+  coffee: { first: 78, renew: 248 },
+  wine: { first: 41, renew: 345 },
+  kitchen: { first: 59, renew: 374 },
+  garden: { first: 11, renew: 189 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
