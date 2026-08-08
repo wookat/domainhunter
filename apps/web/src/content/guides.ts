@@ -4941,6 +4941,742 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  indiehacker: {
+    slug: "indiehacker",
+    tlds: [
+      { tld: "dev", zh: "独立开发者的身份后缀，圈内看到即懂「一个人的作品」", en: "The identity suffix for indie builders — insiders read 'built by one person' instantly" },
+      { tld: "app", zh: "产品即应用零解释成本，且全后缀强制 HTTPS", en: "Zero explanation when the product is an app; HTTPS enforced zone-wide" },
+      { tld: "sh", zh: "命令行气质的极客后缀，CLI 工具与开发者产品的暗号", en: "Shell-flavored geek suffix — the insider badge for CLI tools and dev-facing products" },
+    ],
+    zh: {
+      label: "独立开发者",
+      title: "独立开发者产品怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "独立开发者（indie hacker）产品命名指南：一人品牌、build in public、可搜索造词等 5 种思路，Nomad List/Plausible/Bear 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的独立产品域名。",
+      intro:
+        "独立开发者的名字和大公司产品名走的是两条路：你没有市场预算把一个平庸的名字砸出知名度，名字本身必须承担获客功能。独立产品的传播链路极短——一条 X 帖子、一次 Product Hunt 发布、一个 Hacker News 标题，用户从看到名字到访问网站往往只隔一次点击，名字要在这一眼里同时完成「说清是什么」和「显得值得点」。第二个差异是「一人品牌」：独立开发者的个人账号往往比产品账号粉丝多，产品名要能自然地出现在你的个人叙事里——「我做了 X」念起来要顺。第三是组合拳思维：多数独立开发者不止一个产品，名字之间最好有气质延续（同一后缀、同一命名结构），让老用户看到新产品名就知道是你出品。预算方面务实一点：独立产品验证期死亡率高，先用 .dev/.app/.sh 等几十美元的域名跑通需求，赚到钱再升级 .com 是圈内标准打法。",
+      namingIdeas: [
+        "功能直给 + 一个记忆点：独立产品没有教育市场的预算，名字直接说清品类再加一个小巧思（Plausible Analytics：一个形容词让「统计工具」有了人格）",
+        "身份词根：indie、maker、solo、ship、build 等圈内词自带社区认同，出现在 X 简介和 Product Hunt 标签里毫无违和",
+        "可搜索造词：独立产品高度依赖搜索与口碑，造词前先搜一遍——结果页干净的两音节造词，比撞车的常见词更容易占领品牌搜索",
+        "「我做了 X」测试：把名字放进「I built X」「我做了 X」的句式里念三遍，别扭就换——这句话是独立开发者说得最多的话",
+        "产品线气质延续：规划同一结构的名字家族（同后缀、同词根风格），让第二、第三个产品自动继承第一个的信任",
+      ],
+      cases: [
+        { name: "Nomad List", takeaway: "品类词 + 形式词的极简直给：数字游民名单，看名字就知道产品是什么、给谁用——独立产品「名字即落地页」的教科书" },
+        { name: "Plausible", takeaway: "一个形容词「可信的」做统计工具名：直接把「隐私友好、数据可信」的卖点写进名字，与 Google Analytics 的差异化立场一词表明" },
+        { name: "Bear", takeaway: "单音节常见词做笔记应用：赌品牌感压过可搜索性，靠 bear.app 精准域名与极简设计立住——常见词+气质 TLD 的独立开发经典打法" },
+        { name: "Tally", takeaway: "本义「计数」的四字母短词做表单工具：轻快、好念、能当动词——「用 Tally 收一下报名」，把工具名说进了工作流" },
+      ],
+      pitfalls: [
+        "起一个需要解释的名字：独立产品的每次曝光都只有一句话的机会，名字本身讲不清就等于把机会浪费在解释上",
+        "过早重金买 .com：验证期产品九死一生，先用 .dev/.app 跑通需求再升级，别让域名成为最贵的沉没成本",
+        "忽略 X/GitHub 同名账号：独立开发者的主阵地在社交与开源社区，@handle 拿不到的名字传播时处处折损",
+        "名字与个人品牌脱节：用户因为你关注产品，名字风格与你的个人叙事割裂，等于放弃独立开发最大的分发杠杆",
+      ],
+    },
+    en: {
+      label: "Indie hackers",
+      title: "How to Name an Indie Hacker Product: Strategies, Cases & Domains",
+      metaDescription:
+        "Indie hacker product naming guide: name-as-landing-page, build-in-public identity, searchable coinages, breakdowns of Nomad List/Plausible/Bear, recommended TLDs and pitfalls — then hunt an available indie product domain with AI.",
+      intro:
+        "Indie product names play a different game from big-company names: you have no marketing budget to hammer a mediocre name into recognition, so the name itself must do acquisition work. The indie distribution chain is brutally short — one X post, one Product Hunt launch, one Hacker News title — and users go from seeing the name to visiting the site in a single click. In that one glance the name must both explain what the thing is and look worth clicking. Second, indie is personal-brand business: your personal account usually out-follows the product account, so the name has to sit naturally inside your own narrative — \"I built X\" must roll off the tongue. Third, think in portfolios: most indie hackers ship more than one product, and names that share a structure (same suffix, same coinage style) let every new launch inherit the trust of the last one. On budget, be pragmatic: most experiments die in validation, so shipping on a $20 .dev or .app and upgrading to the .com after revenue is the standard indie play, not a compromise.",
+      namingIdeas: [
+        "Say the function, add one hook: with zero education budget, state the category plainly and attach one memorable twist — Plausible Analytics turns a stats tool into a stance with a single adjective",
+        "Use identity roots: indie, maker, solo, ship, build — community code words that read natively in an X bio or a Product Hunt tag",
+        "Coin for searchability: indie growth runs on search and word of mouth — a two-syllable coinage with a clean results page beats a collision-prone dictionary word for owning branded search",
+        "Run the \"I built X\" test: say it aloud three times inside the sentence you'll say most as an indie hacker; if it stumbles, move on",
+        "Design a name family: plan a shared structure (same suffix, same root style) so your second and third products automatically inherit the first one's trust",
+      ],
+      cases: [
+        { name: "Nomad List", takeaway: "Category word + format word, maximally literal: a list for nomads — what it is and who it's for in two words; the textbook of name-as-landing-page indie naming" },
+        { name: "Plausible", takeaway: "A single adjective as an analytics brand: the privacy-friendly, trustworthy positioning is written into the name itself — a one-word differentiation statement against Google Analytics" },
+        { name: "Bear", takeaway: "A one-syllable dictionary word for a notes app: betting brand feel over searchability, anchored by the exact-match bear.app — the classic indie common-word + precise-TLD play" },
+        { name: "Tally", takeaway: "A four-letter word meaning \"to count\" for a form builder: light, pronounceable, verb-able — \"collect signups with Tally\" slots the name straight into the workflow" },
+      ],
+      pitfalls: [
+        "Choosing a name that needs explaining: every indie exposure is a one-sentence chance — if the name can't carry it, the explanation eats the pitch",
+        "Overpaying for the .com too early: validation-stage products mostly die; ship on a .dev or .app, upgrade after revenue — don't let the domain become your priciest sunk cost",
+        "Skipping the X and GitHub handle check: indie distribution lives on social and open source — a name whose @handle is taken leaks reach at every mention",
+        "Detaching the name from your personal brand: users follow the product because of you; a name that clashes with your narrative abandons indie's biggest distribution lever",
+      ],
+    },
+  },
+  petsupplies: {
+    slug: "petsupplies",
+    tlds: [
+      { tld: "com", zh: "复购型电商的信任底座，订阅制宠粮尤其需要", en: "The trust base for repeat-purchase commerce — subscription pet food especially" },
+      { tld: "shop", zh: "语义即卖场，宠物用品店的直白后缀", en: "Storefront semantics built in — the literal suffix for a pet supplies store" },
+      { tld: "store", zh: "品类电商的另一直给选择，与品牌词组合空间大", en: "Another literal commerce pick with wide pairing room for brand words" },
+    ],
+    zh: {
+      label: "宠物用品电商",
+      title: "宠物用品电商怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "宠物用品电商命名指南：拟宠语气、复购信任感、品类升维等 5 种思路，Chewy/BarkBox/pidan 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的宠物电商域名。",
+      intro:
+        "宠物用品电商和宠物服务品牌（详见宠物品牌指南）的命名重心不同：服务卖的是「这家店靠谱」，电商卖的是「这个牌子值得月月回购」。宠物主粮、猫砂、零食是典型的订阅型消费——用户一旦信任就极少更换，所以名字的第一要务是复购信任感：听起来像一个会长期认真做产品的品牌，而不是一个赚快钱的白牌店铺。第二个特点是「代宠发言」的情感结构：下单的是人，享用的是宠物，最打动人的名字往往站在宠物视角说话——Chewy（爱啃咬的）、BarkBox（汪汪叫的盒子），把宠物的快乐直接写进名字，主人看到就会心一笑。第三是平台货架逻辑：宠物用品的主战场在电商平台与直播间，名字要在搜索结果的一排店铺里一眼跳出来，且念出来不与竞品混淆。最后注意品类宽度：从猫粮做到用品全品类是常见路径，名字锁死单一物种（如「X 猫舍严选」）会在扩品时自缚手脚。",
+      namingIdeas: [
+        "拟宠视角命名：站在宠物立场选词——啃、追、摇尾巴、呼噜（Chewy、BarkBox），主人下单时买的就是宠物的这份快乐",
+        "复购信任词根：日常、每日、鲜、严选等词根传递「长期认真做产品」的信号，适配订阅制宠粮与耗材的消费心理",
+        "萌感音节设计：叠音与圆唇音（pidan、Fluffy 类）天然带萌感，在直播口播与社交种草里更容易被记住与复述",
+        "品类升维预留：用「伙伴、家人、生活」等上位词代替具体物种词，从猫粮扩到全品类时名字不用推倒重来",
+        "平台货架测试：把候选名放进电商搜索结果页与直播间话术里各念一遍——三米外看得清、一秒内不与竞品混淆才算过关",
+      ],
+      cases: [
+        { name: "Chewy", takeaway: "「爱啃咬的」一词站在宠物视角：把狗狗拿到零食的快乐写进名字，两音节全球好念——宠物电商情感命名的天花板" },
+        { name: "BarkBox", takeaway: "bark（汪汪）+ box（订阅盒）：拟声词说清受众、品类词说清模式，头韵 B-B 朗朗上口——订阅制宠物电商的结构范本" },
+        { name: "pidan", takeaway: "「皮蛋」的拼音做猫用品品牌：一个自带画面的中文昵称，萌感与记忆点兼得，小写字母的极简排版又添了设计感——中文宠物品牌出海命名的聪明解法" },
+        { name: "Wild One", takeaway: "「小野兽」的宠称做用品品牌：用主人对宠物的爱称当名字，情感浓度拉满且不锁物种——生活方式化宠物品牌的命名方向" },
+      ],
+      pitfalls: [
+        "白牌感命名（X 宠优选、PetGoodBuy 类）：堆砌「优选/严选/好物」显得像贴牌店铺，恰恰摧毁了订阅型消费最需要的长期信任",
+        "锁死单一物种或品类：从猫砂扩到主粮、从狗市场进猫市场是常态，名字锁死等于给增长上锁",
+        "萌过头失去信任感：主粮与保健品是「入口的东西」，纯搞笑名字在食品安全敏感的品类里反而让人不敢下单",
+        "忽略平台搜索与商标：电商平台品牌名撞车会被淹没在搜索结果里，且平台入驻要求商标——名字定稿前先查商标可注册性",
+      ],
+    },
+    en: {
+      label: "Pet supplies e-commerce",
+      title: "How to Name a Pet Supplies Store: Strategies, Cases & Domains",
+      metaDescription:
+        "Pet supplies e-commerce naming guide: pet's-eye-view words, repeat-purchase trust, category headroom, breakdowns of Chewy/BarkBox/Wild One, recommended TLDs and pitfalls — then hunt an available pet store domain with AI.",
+      intro:
+        "Pet supplies commerce and pet services (see the pet brands guide) put their naming weight in different places: services sell \"this shop is dependable\", commerce sells \"this brand deserves a monthly reorder\". Pet food, litter and treats are subscription-shaped spending — once owners trust a brand they rarely switch — so the name's first job is repeat-purchase credibility: it should sound like a company that will still be making the product carefully in five years, not a white-label storefront chasing a trend. Second, the category has a proxy-emotion structure: humans pay, pets enjoy — and the names that land hardest speak from the pet's point of view. Chewy and BarkBox write the animal's joy directly into the brand, and owners smile on sight. Third, this is marketplace-shelf warfare: pet supplies live in platform search results and live-stream shout-outs, so the name must pop out of a row of lookalike stores and never be misheard as a competitor. Finally, protect category width: growing from cat litter into full-line supplies is the standard path, and a species-locked name handcuffs the expansion.",
+      namingIdeas: [
+        "Name from the pet's point of view: chew, fetch, wag, purr — the owner is really buying the animal's happiness, so put it in the name (Chewy, BarkBox)",
+        "Signal repeat-purchase trust: roots like daily, fresh, true and honest carry the \"still carefully made in five years\" promise that subscription food and consumables demand",
+        "Engineer the cute phonetics: reduplication and rounded sounds (pidan, Fluffy-type names) carry built-in charm and survive live-stream shout-outs and social retelling",
+        "Reserve category headroom: name with companion/family/life-level words rather than species words, so the cat-litter brand can become the everything-pet brand without a rename",
+        "Run the marketplace-shelf test: read the candidate inside a platform search results page and a live-stream script — legible at three meters, unconfusable with rivals in one second",
+      ],
+      cases: [
+        { name: "Chewy", takeaway: "One word from the dog's perspective — the joy of getting the treat, written into the brand; two syllables readable worldwide: the ceiling of emotional naming in pet commerce" },
+        { name: "BarkBox", takeaway: "bark + box: an onomatopoeia names the audience, a format word names the business model, and the B-B alliteration makes it chantable — the structural template for subscription pet commerce" },
+        { name: "pidan", takeaway: "The pinyin of a beloved Chinese pet nickname (\"century egg\") as a cat-goods brand: instant imagery, charm and memorability, with lowercase minimalism adding design cred — a smart export play for a Chinese pet brand" },
+        { name: "Wild One", takeaway: "An owner's affectionate epithet as the brand: maximum emotional warmth with zero species lock-in — the naming direction for lifestyle-tier pet goods" },
+      ],
+      pitfalls: [
+        "White-label naming (PetGoodBuy et al.): stacking select/premium/best filler reads as a reseller storefront — exactly the impression that kills subscription trust",
+        "Locking onto one species or category: litter-to-food and dog-to-cat expansion is the default growth path; a locked name locks the growth",
+        "Overdosing on cute: food and supplements go in the pet's mouth — a purely jokey name undermines confidence in a safety-sensitive category",
+        "Ignoring marketplace search and trademarks: a colliding name drowns in platform results, and marketplaces require registered marks — clear the trademark before you fall in love",
+      ],
+    },
+  },
+  preschool: {
+    slug: "preschool",
+    tlds: [
+      { tld: "com", zh: "家长付费决策的信任底座，教育品类尤其看重", en: "The trust base for parents' purchase decisions — education leans on it hardest" },
+      { tld: "fun", zh: "「玩中学」的品类气质直接写进后缀", en: "Learning-through-play written straight into the suffix" },
+      { tld: "cn", zh: "面向国内家长与机构备案，.cn 合规最顺", en: "For China-facing programs needing ICP filing, .cn is smoothest" },
+    ],
+    zh: {
+      label: "儿童早教",
+      title: "儿童早教品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "儿童早教与少儿启蒙品牌命名指南：双重受众、成长意象、安全信任感等 5 种思路，Khan Academy Kids/Lingokids/小步在家早教等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的早教域名。",
+      intro:
+        "儿童早教命名的独特难题是「双重受众」：付钱的是家长，使用的是孩子，名字要同时通过两套完全不同的审查。对家长，名字要传递专业与安全——这是把孩子交出去的生意，一个轻佻的名字在报名页就会被划走；对孩子，名字要有趣、好念、最好能喊出来——孩子主动说「我要玩 X」是早教产品最强的续费理由。两套标准的交集是「温暖的专业感」：像一位既懂教育学又会讲故事的幼儿园老师。第二个特点是成长叙事：早教卖的本质是「孩子的可能性」，名字带成长、种子、启蒙、探索意象的品牌天然契合家长的期待结构。第三是口碑传播场景：早教获客高度依赖家长社群与转介绍，名字要在妈妈群的聊天记录里好打字、好转述，还要在幼儿园门口的口头推荐里一听就记住。政策合规也影响命名：K12 学科培训受严格监管，名字与宣传语要贴紧「素质教育、启蒙、亲子」的定位，避免学科补习联想。",
+      namingIdeas: [
+        "成长意象词根：种子、萌芽、小步、星星、探索——把「孩子的可能性」写进名字，精准命中家长为期待付费的心理结构",
+        "孩子念得出测试：两三岁孩子能跟读的名字才是好名字——叠音与开口音（多多、Lingokids 的 -kids）让孩子把品牌名喊成日常",
+        "温暖专业感平衡：纯卡通名过不了家长的付费审查，纯学术名吓跑孩子——「亲切词根 + 教育词缀」的组合是安全解",
+        "家长社群传播测试：把名字放进妈妈群聊天记录与幼儿园门口对话里各试一遍——好打字、好转述、不需要解释拼写才算过关",
+        "合规定位预检：名字与 slogan 贴紧素质教育、启蒙、亲子定位，避开「提分、培优、超前学习」等学科培训联想——这既是合规也是信任",
+      ],
+      cases: [
+        { name: "Khan Academy Kids", takeaway: "权威教育品牌 + Kids 后缀：直接继承主品牌的信任资产，家长零决策成本——教育品牌做儿童线的标准命名结构" },
+        { name: "Lingokids", takeaway: "lingo（语言）+ kids：品类与受众各占一半，孩子念得出、家长看得懂——双重受众命名里教科书级的平衡" },
+        { name: "小步在家早教", takeaway: "「小步」的成长隐喻 + 「在家早教」的场景直给：品牌词管情感、描述词管搜索，中文早教命名「隐喻+场景」的范本" },
+        { name: "Duck Duck Moose", takeaway: "从儿童游戏「duck duck goose」变形：名字本身就是一个孩子熟悉的游戏梗，读三个词就完成了「我们懂孩子」的自我介绍" },
+      ],
+      pitfalls: [
+        "轻佻或纯搞笑命名：早教是「把孩子交出去」的信任生意，家长在报名页的第一反应是安全感，名字轻佻等于自我出局",
+        "学科培训联想：名字或宣传带「提分、培优、抢跑」暗示，在监管环境下是合规风险，在家长端也日益减分",
+        "孩子念不出的复杂名：孩子喊不出的品牌进不了家庭日常对话，续费与转介绍都少了最有力的代言人",
+        "锁死单一年龄段（X 三岁早教类）：用户会长大，品类会延伸——名字锁死年龄等于每两年流失一次全部用户",
+      ],
+    },
+    en: {
+      label: "Early childhood education",
+      title: "How to Name an Early Childhood Education Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Early learning brand naming guide: dual-audience names, growth imagery, warm expertise, breakdowns of Khan Academy Kids/Lingokids/Duck Duck Moose, recommended TLDs and pitfalls — then hunt an available early education domain with AI.",
+      intro:
+        "Early childhood education naming has a puzzle most categories don't: a dual audience. Parents pay, children use — and the name must pass two utterly different reviews. For parents it must radiate expertise and safety: this is a hand-over-your-child business, and a flippant name gets swiped away on the enrollment page. For children it must be fun, sayable, shoutable — a toddler demanding \"I want to play X\" is the strongest renewal engine an early-learning product can have. The intersection of the two standards is warm expertise: the register of a kindergarten teacher who knows pedagogy and tells great stories. Second, the category runs on a growth narrative: early education really sells a child's possibilities, so names carrying seed, sprout, step and explore imagery slot straight into what parents are paying for. Third, distribution is referral-shaped: growth lives in parent group chats and school-gate conversations, so the name must type easily in a messaging thread and survive one spoken recommendation intact. Regulation shapes naming too: position the name and tagline around play, enrichment and family — away from test-prep and tutoring connotations that trigger both compliance risk and parental fatigue.",
+      namingIdeas: [
+        "Root in growth imagery: seed, sprout, step, star, explore — write the child's possibilities into the name; that is precisely what parents are buying",
+        "Run the toddler test: a good name is one a three-year-old can repeat — reduplication and open vowels (the -kids of Lingokids, doubled syllables) turn the brand into household speech",
+        "Balance warm and expert: pure cartoon names fail the parent's payment review, pure academic names scare the child — a friendly root plus an education signal is the safe structure",
+        "Test in the parent group chat: type it in a messaging thread and say it at the school gate — easy to type, easy to retell, no spelling required, or keep looking",
+        "Pre-clear the positioning: keep the name and slogan on the play/enrichment/family side and away from test-score and get-ahead connotations — compliance and trust point the same way here",
+      ],
+      cases: [
+        { name: "Khan Academy Kids", takeaway: "An authority education brand + the Kids suffix: the children's line inherits the parent brand's trust wholesale, cutting parents' decision cost to zero — the standard structure for education brands extending downward" },
+        { name: "Lingokids", takeaway: "lingo + kids: category in the first half, audience in the second; the child can say it and the parent can parse it — the textbook dual-audience balance" },
+        { name: "Duck Duck Moose", takeaway: "A riff on the playground game duck-duck-goose: the name itself is a game the child already knows — three words that say \"we understand children\" before the product loads" },
+        { name: "Sago Mini", takeaway: "A soft coined word + mini: gentle phonetics carry the preschool warmth while mini names the audience — a coinage route that stays ownable without losing the category signal" },
+      ],
+      pitfalls: [
+        "Flippant or purely jokey names: this is a trust-first, hand-over-your-child category — parents' first scan on the enrollment page is for safety, and a careless name self-eliminates",
+        "Test-prep connotations: names hinting at scores, cramming or getting ahead carry regulatory risk in some markets and growing parental resistance everywhere",
+        "Names children can't say: a brand the child can't shout never enters family conversation — losing the household's most persuasive spokesperson",
+        "Locking onto one age band (ToddlerAcademy-type names): children grow and product lines stretch — an age-locked name churns its entire audience every two years",
+      ],
+    },
+  },
+  travelshoot: {
+    slug: "travelshoot",
+    tlds: [
+      { tld: "com", zh: "高客单的目的地服务，信任后缀撑起预订底气", en: "Big-ticket destination services — the trust suffix underwrites the booking" },
+      { tld: "studio", zh: "摄影工作室的身份后缀，作品集站点气质吻合", en: "The identity suffix for a photo studio — a natural fit for portfolio sites" },
+      { tld: "art", zh: "把旅拍作品当艺术呈现的气质后缀，作品集与客片交付页都衬", en: "An artistic register for travel-shoot portfolios and gallery delivery pages" },
+    ],
+    zh: {
+      label: "旅拍摄影",
+      title: "旅拍摄影品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "旅拍摄影品牌命名指南：目的地意象、纪念感词根、社交种草传播等 5 种思路，Flytographer/Localgrapher 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的旅拍域名。",
+      intro:
+        "旅拍是摄影行业里传播链路最「社交化」的细分（通用摄影命名详见摄影工作室指南）：客人飞到目的地拍一组照片，成片天然会发到小红书、Instagram 和朋友圈——每一单都自带一次公开展示，名字会跟着水印、定位标签和「摄影师是谁」的评论区问答反复曝光。所以旅拍命名第一要务是「种草场景可复述」：在评论区被 @ 出来时好记好搜，别人搜一次就能找到你。第二个特点是目的地情绪：旅拍卖的不是照片是「此刻在此地」的纪念——名字带远方、光线、海岛、街角等目的地意象，能在客人还没出发时就完成情绪预售。第三是信任结构特殊：客人在陌生城市把最重要的纪念交给一个没见过面的摄影师，名字要有「专业团队」的稳定感，纯个人昵称式的名字在跨城市预订时信任折损明显。最后是扩张预留：旅拍品牌常从一个城市做到多目的地，名字锁死单一地名（如「X 三亚旅拍」）会在扩张时被迫改名重来。",
+      namingIdeas: [
+        "目的地意象词根：光、海、屿、街角、远方、flight——把「此刻在此地」的旅行情绪写进名字，在客人订机票时就完成预售",
+        "纪念感升维：不说「拍照」说「留住」——moment、memory、纪念、定格等词根把服务从拍摄升维到「把旅行变成可以带走的东西」",
+        "评论区搜索测试：把名字放进「摄影师是谁求 @」的评论区场景——被打出来不出错、搜一次就命中，是旅拍获客链路的生死关",
+        "专业感结构：「意象词 + studio/photo/影像」的组合兼顾情绪与专业，缓解跨城市预订「没见过面」的信任焦虑",
+        "多目的地预留：用意象词而非地名做品牌主体，城市名只做副标题（X 影像 · 三亚站）——扩张时品牌资产全部带走",
+      ],
+      cases: [
+        { name: "Flytographer", takeaway: "fly + photographer 的合成词：一个词说清「飞到哪都有摄影师」的商业模式，造词独占性强——旅拍平台命名的教科书" },
+        { name: "Localgrapher", takeaway: "local + photographer：把「本地摄影师」的核心卖点直接焊进名字，与 Flytographer 同赛道不同侧重——合成词表达差异化定位的范本" },
+        { name: "Shoott", takeaway: "shoot 加一个 t 的变形造词：保留「拍摄」语义又拿到独占域名与商标，双 t 的视觉记忆点让品牌搜索零流失" },
+        { name: "唯路时", takeaway: "「唯有路上的时光」的缩合：把旅拍卖的「此刻在此地」情绪浓缩成三个字，中文旅拍命名里情绪升维的代表作" },
+      ],
+      pitfalls: [
+        "锁死单一目的地：旅拍扩张的标准路径是多城市多海岛，名字绑死地名等于每开一站都从零积累",
+        "纯个人昵称命名：跨城市预订的客人没见过你，昵称式名字缺少「专业团队」的信任托底，高客单订单尤其明显",
+        "拼写复杂的英文名：旅拍获客靠评论区与搜索，名字被 @ 错一个字母就是丢一单——好打字比好看重要",
+        "忽略水印与定位标签场景：名字太长在照片水印上显得笨重，在 Instagram 定位标签里也容易被截断——上镜长度是旅拍命名的硬约束",
+      ],
+    },
+    en: {
+      label: "Travel photography",
+      title: "How to Name a Travel Photography Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Travel photography brand naming guide: destination imagery, keepsake framing, comment-section searchability, breakdowns of Flytographer/Localgrapher/Shoott, recommended TLDs and pitfalls — then hunt an available travel photo domain with AI.",
+      intro:
+        "Travel shoots are the most social-native corner of photography (for general studio naming, see the photography guide): clients fly to a destination, get photographed, and the gallery goes straight to Instagram and every feed they own — each booking ships with a built-in public showcase, and the name rides along in watermarks, location tags and \"who's your photographer?\" comment threads. So the first job of a travel-shoot name is comment-section survivability: when someone @-mentions you under a viral photo, the name must be typed right and found in one search. Second, the category sells destination emotion: clients aren't buying photos, they're buying proof of this moment, in this place — names carrying light, coast, island and faraway imagery pre-sell the feeling before the flight is booked. Third, the trust structure is unusual: a client in a foreign city hands their most important memories to a photographer they've never met, so the name needs a professional-outfit steadiness — nickname-style personal brands leak trust badly on cross-city bookings. Finally, reserve room to expand: travel-shoot brands grow from one city to many, and a name welded to a single place name forces a restart at every new destination.",
+      namingIdeas: [
+        "Root in destination imagery: light, coast, isle, corner, faraway, flight — write the this-moment-in-this-place feeling into the name and pre-sell it at flight-booking time",
+        "Elevate to the keepsake: don't say photos, say keeping — moment, memory, hold and their kin lift the service from a shoot to \"the trip, made take-home-able\"",
+        "Run the comment-thread test: put the name inside a \"who shot this? tag them!\" thread — typed correctly first try and found in one search, or the acquisition loop breaks",
+        "Structure for professionalism: imagery word + studio/photo signals emotion and competence at once, easing the never-met-you anxiety of cross-city bookings",
+        "Reserve multi-destination room: brand on an imagery word and demote city names to subtitles (X Studio · Santorini) — expansion then carries every unit of brand equity along",
+      ],
+      cases: [
+        { name: "Flytographer", takeaway: "fly + photographer: the entire business model — a photographer wherever you fly — in one ownable coinage; the textbook of travel-shoot platform naming" },
+        { name: "Localgrapher", takeaway: "local + photographer: the core selling point welded into the name, same category as Flytographer with a different emphasis — a model of positioning-through-blend" },
+        { name: "Shoott", takeaway: "shoot with one extra t: keeps the category semantics while capturing an ownable domain and trademark, and the double-t visual hook makes branded search lossless" },
+        { name: "Golden Hour Co.", takeaway: "The photographer's favorite light as the brand: a term insiders love and clients instantly feel — destination emotion and craft credibility in a single borrowed phrase" },
+      ],
+      pitfalls: [
+        "Welding the name to one destination: multi-city expansion is the standard growth path — a place-locked name starts from zero at every new stop",
+        "Nickname-only personal brands: cross-city clients have never met you, and a casual handle lacks the professional-outfit reassurance big-ticket bookings need",
+        "Hard-to-spell English names: acquisition runs on comment threads and search — one misspelled @-mention is one lost booking; typeability beats cleverness",
+        "Ignoring the watermark and geotag: long names look clumsy on photo watermarks and truncate in location tags — on-camera length is a hard constraint in this trade",
+      ],
+    },
+  },
+  forwarder: {
+    slug: "forwarder",
+    tlds: [
+      { tld: "com", zh: "B2B 履约生意的默认后缀，货主与海外代理都认", en: "The B2B default — shippers and overseas agents alike trust it" },
+      { tld: "global", zh: "「全球履约网络」的定位直接写进后缀", en: "The global-fulfillment positioning written straight into the suffix" },
+      { tld: "network", zh: "货代本质是网络生意，语义与商业模式同构", en: "Freight forwarding is a network business — the suffix mirrors the model" },
+    ],
+    zh: {
+      label: "跨境物流",
+      title: "跨境物流货代怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "跨境物流与货代品牌命名指南：确定性词根、全球网络感、时效承诺等 5 种思路，Flexport/Maersk/菜鸟等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的跨境物流域名。",
+      intro:
+        "跨境物流的名字要在一个高度不信任的环境里工作：货主把几十万的货交给你，横跨海关、干线、清关、尾程四段黑箱，任何一段出问题都是真金白银的损失。所以名字的第一要务是确定性——听起来像「货一定会到、时效一定兑现」的组织，稳定感词根（如 flex 之外的 anchor、bridge、link）远比创意巧思重要（国内物流命名详见物流货运指南，本文聚焦跨境场景）。第二个特点是双语工作场景：跨境货代的客户是中国卖家，协作方是海外代理、船公司与海外仓，名字要在中英文场景里同时顺口——英文名拗口会让海外代理记不住，中文名太土会让卖家怀疑你的海外网络成色。第三是网络感：货代的核心资产是覆盖网络与渠道资源，名字带 global、link、port、桥、达等词根能直接传递「网络在手」的信号。最后注意专业分层：做 FBA 头程、跨境电商小包、传统海运整柜的客群与话术完全不同，名字的气质要与主营航线和客群档次匹配。",
+      namingIdeas: [
+        "确定性词根：达、通、稳、anchor、bridge——跨境履约卖的是「一定会到」，名字先把这份底气说出来",
+        "全球网络意象：global、port、link、洲、航——货代的核心资产是网络，名字直接展示覆盖能力的信号",
+        "中英双语顺口测试：分别放进卖家的中文询价微信与海外代理的英文邮件里念一遍，两边都不打磕绊才算过关",
+        "时效与航线暗示：主打美线、欧线或东南亚专线的，可把方向感写进名字（west、euro、南洋）——垂直专线的信任来自「够专」",
+        "科技感分寸：数字货代（Flexport 式）用 tech、data、flex 词根传递效率升级，但要有真系统撑腰——名字先行、产品跟不上反而砸口碑",
+      ],
+      cases: [
+        { name: "Flexport", takeaway: "flex（灵活）+ port（港口）：传统行业词根嫁接科技气质词，一个名字说清「用软件重做货代」的定位——数字货代命名的开山范本" },
+        { name: "Maersk", takeaway: "创始人家族姓氏：一百多年航运史沉淀成行业信任本身——B2B 履约生意里「时间即品牌」的极致案例，新品牌学的是其人格化路径" },
+        { name: "菜鸟", takeaway: "自嘲式反差命名：物流巨头用「菜鸟」自称，低姿态反而成就高记忆度——中文物流命名里打破「宏大词汇内卷」的经典手筋" },
+        { name: "Shippo", takeaway: "ship + 昵称化尾音 -po：把冷冰冰的运输 API 变得亲切好念，两音节全球无障碍——物流科技工具命名的轻量化解法" },
+      ],
+      pitfalls: [
+        "宏大空词内卷（环球、寰宇、intl 堆砌）：与几千家同行撞车，且没有网络实力支撑时显得虚张声势",
+        "英文名拗口或歧义：海外代理与船公司天天要念你的名字，拗口的名字在国际协作链路里处处折损",
+        "锁死单一航线或模式：从美线做到欧线、从海运做到空派是常态，名字锁死等于扩航线时品牌清零",
+        "忽略合规与备案：跨境物流涉及 NVOCC、货代资质与海外实体注册，名字定稿前先确认目标市场的公司名与商标可注册",
+      ],
+    },
+    en: {
+      label: "Cross-border logistics",
+      title: "How to Name a Freight Forwarding Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Cross-border logistics and freight forwarder naming guide: certainty roots, global network signals, bilingual pronounceability, breakdowns of Flexport/Maersk/Shippo, recommended TLDs and pitfalls — then hunt an available logistics domain with AI.",
+      intro:
+        "A cross-border logistics name has to work in a low-trust environment: shippers hand you six figures of cargo that will cross four black boxes — customs, linehaul, clearance, final mile — and any failure is real money lost. So the name's first job is certainty: it should sound like an organization whose cargo always arrives and whose lead times always hold, which makes steadiness roots (anchor, bridge, link) worth more than cleverness (for domestic logistics naming, see the logistics guide; this one focuses on cross-border). Second, the work happens bilingually: your customers are e-commerce sellers on one side, and your partners are overseas agents, carriers and warehouses on the other — the name must run smoothly in both languages, because an unpronounceable English name dies in agents' emails and a parochial name makes sellers doubt your overseas network. Third, signal the network: a forwarder's core asset is coverage and channel depth, and roots like global, port and link broadcast \"the network is in hand\" before the sales call starts. Finally, match the register to your lane: FBA first-leg, cross-border parcel and traditional FCL ocean serve different customers with different vocabularies — the name's temperament should match your main trade lane and customer tier.",
+      namingIdeas: [
+        "Root in certainty: anchor, bridge, arrive, true — cross-border fulfillment sells \"it will get there\", so let the name say it first",
+        "Signal the global network: global, port, link, trans — the forwarder's core asset is coverage, and the name is the cheapest place to broadcast it",
+        "Run the bilingual test: read the candidate inside a seller's Chinese quote request and an overseas agent's English email — it must flow in both, or keep looking",
+        "Hint at the lane: dedicated US-line, Europe-line or Southeast-Asia services can write the direction into the name (west, euro, austral) — vertical lanes earn trust by sounding specialized",
+        "Ration the tech flavor: digital-forwarder naming (the Flexport pattern) uses flex/data/tech roots to promise efficiency — but only with a real system behind it; a name that outruns the product burns credibility",
+      ],
+      cases: [
+        { name: "Flexport", takeaway: "flex + port: a tech-temperament word grafted onto the industry's root noun — \"freight forwarding, rebuilt as software\" in one coinage; the founding template of digital-forwarder naming" },
+        { name: "Maersk", takeaway: "The founding family's surname: a century of shipping history compounded into trust itself — the extreme case of time-as-brand in B2B fulfillment, and the personification path new brands can learn from" },
+        { name: "Cainiao", takeaway: "Literally \"rookie\": a logistics giant naming itself with self-deprecation — the low posture bought outsized memorability, breaking the grandiose-word arms race that traps most logistics naming" },
+        { name: "Shippo", takeaway: "ship + a pet-name -po ending: a cold shipping API made friendly and sayable in two globally safe syllables — the lightweight play for logistics-tech tools" },
+      ],
+      pitfalls: [
+        "Joining the grandiose-word arms race (Global/Universal/Intl stacking): you collide with thousands of forwarders, and without real network depth it reads as bluster",
+        "Clunky or ambiguous English names: overseas agents and carriers say your name daily — every stumble in the international chain leaks a little credibility",
+        "Locking onto one lane or mode: US-line to Europe-line, ocean to air-parcel expansion is the norm; a lane-locked name zeroes the brand at every extension",
+        "Skipping compliance checks: cross-border logistics touches NVOCC licensing, forwarder qualifications and overseas entity registration — confirm company-name and trademark availability in target markets before committing",
+      ],
+    },
+  },
+  mcn: {
+    slug: "mcn",
+    tlds: [
+      { tld: "com", zh: "与品牌方谈商单的信任底座，商务邮箱后缀要稳", en: "The trust base for brand-deal negotiations — the business email suffix must hold" },
+      { tld: "media", zh: "内容机构的身份后缀，语义与商业模式同构", en: "The identity suffix for content houses — semantics that mirror the model" },
+      { tld: "video", zh: "短视频主业直给，提案与片尾署名都顺", en: "Short-video literalism — reads right on pitch decks and end-credit bylines" },
+    ],
+    zh: {
+      label: "短视频 MCN",
+      title: "短视频 MCN 机构怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "短视频 MCN 与内容机构命名指南：造星工厂感、内容宇宙意象、B 端信任等 5 种思路，无忧传媒/遥望/Papitube 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的 MCN 域名。",
+      intro:
+        "MCN 的名字要同时面对三种人：想签约的达人、要投放的品牌方、以及平台的机构后台——三个场景对名字的要求各不相同。对达人，名字要有「造星能力」的想象空间：签约 MCN 本质是把职业生涯托付出去，机构名要听起来像一个能把人做火的组织；对品牌方，名字要经得起商务链路的审视——出现在报价单、合同抬头和发票上不掉价，「传媒/文化/互娱」类后缀在 B 端场景里自带正规军信号；对平台与行业，名字要在机构榜单里好认好记。第二个特点是「机构隐身」的行业结构：用户只认达人不认机构，MCN 名字很少直接面对 C 端——所以不必追求大众传播度，但必须在行业内（招商会、行业群、平台后台）辨识度拉满。第三是内容宇宙感：头部 MCN 的护城河是「可复制的账号矩阵」，名字带宇宙、星、系、works 等意象能传递「不止一个爆款、而是一套造号系统」的机构叙事。最后注意资本与合规视角：MCN 走到融资与挂牌阶段，名字要能注册成正经公司主体，谐音梗与擦边名字会在尽调时变成负资产。",
+      namingIdeas: [
+        "造星意象词根：星、耀、望、火——对达人讲「我们能把你做火」的故事，签约谈判从名字就开始",
+        "内容宇宙结构：宇宙、系、矩阵、works——传递「可复制的账号工厂」而非「一个爆款工作室」的机构叙事，估值逻辑也在其中",
+        "B 端正规军后缀：传媒、文化、互娱、media——报价单与合同抬头上的信任感，是商单转化链路里最便宜的增信",
+        "达人品牌联动预留：机构名与旗下账号命名体系留出结构关系（Papitube 之于 papi酱），签新人时能直接继承头部账号的势能",
+        "行业场景测试：把名字放进招商会自我介绍与平台机构榜单里各念一遍——三秒内被记住、不与同行混淆才算过关",
+      ],
+      cases: [
+        { name: "无忧传媒", takeaway: "「无忧」+ 传媒：对达人承诺「签我们就不用愁」，对品牌方承诺「投我们就放心」——一个词同时服务两端客户，B 端命名一石二鸟的范本" },
+        { name: "Papitube", takeaway: "头部 IP papi酱 + tube（视频管道）：把顶流账号的势能直接铸进机构名，旗下新账号自动继承信任——达人系 MCN 命名的标准解法" },
+        { name: "遥望科技", takeaway: "「遥望」的远方意象 + 科技后缀：情绪词管想象空间，「科技」定位直播电商的系统能力——MCN 向科技公司升维的命名路径" },
+        { name: "Whalar", takeaway: "whale（鲸）的造词变形：用巨物意象暗示头部创作者资源，造词独占性让全球商标与域名一步到位——海外 creator economy 机构的命名思路" },
+      ],
+      pitfalls: [
+        "谐音梗与擦边命名：短期好记，但过不了品牌方尽调与资本审视——MCN 是要签合同开发票的生意，名字先要像个公司",
+        "锁死单一平台（X 抖音传媒类）：平台策略随流量迁移，名字绑死平台等于把机构命运押注在别人的算法上",
+        "「文化传媒」大词裸奔：没有记忆点的通用后缀组合在工商系统里有几十万家，招商会上自我介绍三秒就被忘掉",
+        "忽略公司主体与商标注册：MCN 走融资与挂牌路线时名字就是资产，谐音与撞名在尽调阶段的更名成本远高于起名时多想一晚",
+      ],
+    },
+    en: {
+      label: "Short-video MCN",
+      title: "How to Name a Short-Video MCN: Strategies, Cases & Domains",
+      metaDescription:
+        "Short-video MCN and creator-network naming guide: star-maker imagery, content-universe structure, B2B credibility, breakdowns of Papitube/Whalar and more, recommended TLDs and pitfalls — then hunt an available MCN domain with AI.",
+      intro:
+        "An MCN's name faces three audiences at once — creators deciding whether to sign, brands deciding whether to spend, and platforms listing you in an agency dashboard — and each reads it differently. For creators, the name needs star-maker gravity: signing with an MCN means entrusting a career, and the agency should sound like an organization that manufactures fame. For brands, the name must survive the commercial paper trail — it appears on rate cards, contract headers and invoices, where media/entertainment-register naming signals a real company rather than a group chat. For platforms and the industry, it must be instantly recognizable on agency leaderboards. Second, the category has an invisible-agency structure: audiences follow creators, not agencies, so the name rarely needs consumer reach — but it must max out recognition inside the industry, at pitch events and in platform consoles. Third, tell the content-universe story: a top MCN's moat is a replicable account matrix, and names carrying universe, constellation, matrix and works imagery say \"a system that makes hits, not one lucky channel\" — which is also the valuation narrative. Finally, name for diligence: MCNs that reach fundraising or listing need the name to work as a legal entity — pun-heavy or edgy names turn into liabilities in due diligence.",
+      namingIdeas: [
+        "Root in star-maker imagery: star, shine, rise, blaze — the signing negotiation starts with a name that tells creators \"we can make you famous\"",
+        "Structure for the content universe: universe, constellation, matrix, works — signal a replicable account factory rather than a one-hit studio; that story is also the valuation story",
+        "Wear the B2B register: media, entertainment, collective — trust on the rate card and the contract header is the cheapest conversion aid in the brand-deal pipeline",
+        "Reserve creator-brand linkage: leave a structural bridge between the agency name and flagship accounts (Papitube to papi酱), so new signings inherit the top account's momentum",
+        "Run the industry-scene test: introduce the name at a pitch event and find it on an agency leaderboard — memorable in three seconds and unconfusable with peers, or keep looking",
+      ],
+      cases: [
+        { name: "Papitube", takeaway: "Flagship IP papi酱 + tube: the top account's momentum cast directly into the agency name, so every new channel inherits its trust — the standard play for creator-anchored MCNs" },
+        { name: "Whalar", takeaway: "A coinage bent from whale: megafauna imagery hints at top-tier creator supply, and the invented word clears global trademarks and domains in one move — the naming route for international creator-economy firms" },
+        { name: "Night Media", takeaway: "A short evocative word + the category suffix: night carries the after-hours, chronically-online culture of its creator roster while media holds the B2B register — mood plus legitimacy in two words" },
+        { name: "100 Thieves", takeaway: "A crew name rather than a company name: it reads like a collective creators want to belong to — proof that in talent businesses, naming the tribe can outperform naming the firm" },
+      ],
+      pitfalls: [
+        "Pun-heavy or edgy names: memorable for a week, fatal in brand due diligence — an MCN signs contracts and issues invoices, so the name must read like a company first",
+        "Locking onto one platform (XTokMedia-type names): platform strategy migrates with traffic, and a platform-locked name bets the firm on someone else's algorithm",
+        "Generic media-word streaking: uninflected Culture/Media combinations exist by the hundred thousand in company registries — at a pitch event you're forgotten in three seconds",
+        "Skipping entity and trademark checks: on the fundraising path the name becomes an asset — renaming during diligence costs far more than one extra night of naming",
+      ],
+    },
+  },
+  opensource: {
+    slug: "opensource",
+    tlds: [
+      { tld: "dev", zh: "开发者身份后缀，README 徽章与文档站上都顺眼", en: "The developer identity suffix — looks right on README badges and doc sites" },
+      { tld: "io", zh: "开源基础设施的圈内惯例，GitHub 一代项目的默认审美", en: "The convention for open-source infra — the default aesthetic of the GitHub generation" },
+      { tld: "org", zh: "社区治理与基金会叙事的正统后缀，中立感最强", en: "The canonical suffix for community governance and foundation narratives — maximally neutral" },
+    ],
+    zh: {
+      label: "开源项目",
+      title: "开源项目怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "开源项目命名指南：包管理器可用性、CLI 输入成本、隐喻与彩蛋文化等 5 种思路，Kubernetes/Vite/Rust 等好名字拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的开源项目域名。",
+      intro:
+        "开源项目的名字有一个其他品类都没有的硬约束：它同时是品牌、命令行指令和包名。用户每天要 `npm install` 它、`import` 它、在 issue 与聊天里敲它——名字的「输入成本」被放大了几百倍，所以短、全小写、无歧义拼写几乎是硬性要求。第二个特点是命名冲突空间极其拥挤：npm、PyPI、crates.io、GitHub org 四处同时查重才算数，包名被占等于名字作废。第三是社区文化：开源圈欣赏有出处的名字——神话、双关、致敬与彩蛋（Kubernetes 是希腊语「舵手」，Rust 致敬一种真菌）能让贡献者产生归属感，比商业感十足的造词更容易被社区接纳。最后要为「毕业」留余地：个人玩具项目长成基金会项目的例子比比皆是，名字最好从第一天就经得起商标注册与公司化——GIMP 类的尴尬名字在企业采购清单上吃过的亏，是开源命名史上最著名的反面教材。",
+      namingIdeas: [
+        "包名优先核验：定名前先查 npm/PyPI/crates.io/GitHub org 四处可用性——包管理器里的名字是唯一标识，被占即出局，比域名核验更优先",
+        "CLI 输入成本测试：名字就是命令，5–8 个全小写字母、不夹连字符数字，闭眼盲打三遍不出错才算过关（vite、bun、deno 都是范本）",
+        "神话与外语借词：Kubernetes（希腊语舵手）、Prometheus（盗火者）——有出处的词自带故事与深度，社区讲得出来历，商标独占性也远好于功能词",
+        "功能隐喻一步到位：用一个意象说清项目做什么——Vite（法语「快」）、Tailwind（顺风）、Cargo（Rust 的包管理叫「货运」）；隐喻词比 fast-build-tool 类描述词更耐版本迭代",
+        "生态命名体系预留：主项目定名时给周边工具留出词根延展空间（Jest→jest-dom、Vue→Vite/Vitest/VitePress），名字成为生态的姓氏",
+      ],
+      cases: [
+        { name: "Kubernetes", takeaway: "希腊语「舵手」：掌舵容器船队的隐喻精准到不需要解释，k8s 缩写又解决了长名字的输入成本——长名配短缩写的经典双层结构" },
+        { name: "Vite", takeaway: "法语「快」：一个音节把核心卖点钉死，非英语借词避开了 fast/quick 词根的拥挤赛道，还给 Vitest/VitePress 留出了家族词根" },
+        { name: "Rust", takeaway: "致敬锈菌（一种极其顽强的真菌）：反直觉地用「锈」命名追求可靠性的语言，粗粝质感与系统编程的气质意外契合，4 个字母盲打零成本" },
+        { name: "Tailwind", takeaway: "「顺风」的航空意象：把「让你写 CSS 更快」翻译成一个有画面的词，比 utility-css 类直白名有品牌纵深，命令行里也好敲" },
+        { name: "Prettier", takeaway: "比较级形容词直接当名字：「更漂亮」就是全部功能承诺，敢用常见词的底气来自品类里的绝对占位——工具做到事实标准，通用词反而成了护城河" },
+      ],
+      pitfalls: [
+        "只查域名不查包名：npm/PyPI 里撞名等于项目改名，包管理器查重必须先于域名查重",
+        "名字里塞 js/py/lib 等技术栈后缀：跨语言移植或范围扩张时立刻过时（node-sass 的尴尬），技术栈标签留给 topic 标签就好",
+        "大小写与连字符混搭（MyToolKit、my-tool-kit 并存）：文档、包名、命令行三处写法不一，社区引用时永远在纠错",
+        "忽略商标与公司化余地：项目长大后要成立公司或进基金会，戏谑名与侵权名的更名成本是社区分裂级别的",
+      ],
+    },
+    en: {
+      label: "Open source",
+      title: "How to Name an Open Source Project: Strategies, Cases & Domains",
+      metaDescription:
+        "Open source naming guide: package-registry checks first, CLI typing cost, myth and Easter-egg culture, breakdowns of Kubernetes/Vite/Rust, recommended TLDs and pitfalls — then hunt an available project domain with AI.",
+      intro:
+        "An open source name carries a constraint no other category has: it is simultaneously a brand, a shell command and a package name. Users `npm install` it, `import` it and type it into issues and chats every day — the typing cost of the name is amplified hundreds of times, which makes short, all-lowercase, unambiguous spelling close to mandatory. Second, the collision space is brutally crowded: a name only counts after clearing npm, PyPI, crates.io and the GitHub org at the same time — a taken package name kills the name outright. Third, community culture matters: open source rewards names with provenance — mythology, puns, tributes and Easter eggs (Kubernetes is Greek for helmsman; Rust honors a famously resilient fungus) give contributors something to belong to, and land far better than slick commercial coinages. Finally, leave room to graduate: toy projects become foundation projects all the time, so pick a name that can survive trademark registration and incorporation from day one — the procurement-meeting awkwardness of names like GIMP is open source naming's most famous cautionary tale.",
+      namingIdeas: [
+        "Clear the registries first: check npm, PyPI, crates.io and the GitHub org before anything else — the package name is the identifier, and a collision is an instant veto that outranks the domain check",
+        "Run the CLI typing test: the name is the command — 5–8 lowercase letters, no hyphens or digits, and you can type it blind three times without a typo (vite, bun, deno all pass)",
+        "Borrow from myth and other languages: Kubernetes (Greek for helmsman), Prometheus (the fire-bringer) — words with provenance carry a story the community can retell, and trademark far better than feature words",
+        "Land the metaphor in one image: Vite (French for fast), Tailwind, Cargo (Rust's package manager as freight) — one evocative word outlives version churn better than any fast-build-tool description",
+        "Reserve a family root: name the core project so satellites inherit the surname (Jest→jest-dom, Vue→Vite/Vitest/VitePress) — the name becomes the ecosystem's family name",
+      ],
+      cases: [
+        { name: "Kubernetes", takeaway: "Greek for \"helmsman\": steering a fleet of containers needs no further explanation, and the k8s abbreviation solves the typing cost — the classic long-name-plus-short-alias two-layer structure" },
+        { name: "Vite", takeaway: "French for \"fast\": one syllable nails the core promise, the non-English borrowing sidesteps the crowded fast/quick namespace, and it seeded a family root for Vitest and VitePress" },
+        { name: "Rust", takeaway: "A tribute to rust fungi — famously hard to kill: counterintuitively naming a reliability-obsessed language after corrosion, with a gritty texture that fits systems programming; four letters, zero typing cost" },
+        { name: "Tailwind", takeaway: "The aviation image of a tailwind: \"you'll write CSS faster\" translated into a picture, with more brand depth than any utility-css literalism — and it types cleanly in a terminal" },
+        { name: "Prettier", takeaway: "A comparative adjective as the whole name: \"prettier\" is the entire promise. Daring to use a common word works when you become the de facto standard — then genericness turns into a moat" },
+      ],
+      pitfalls: [
+        "Checking the domain but not the registries: a collision on npm or PyPI means renaming the project — registry checks come before domain checks, always",
+        "Baking the tech stack into the name (js/py/lib suffixes): the first port or scope expansion makes it obsolete — node-sass-style awkwardness is entirely avoidable",
+        "Mixing cases and hyphens (MyToolKit vs my-tool-kit): docs, package name and command drift apart, and the community spends forever correcting citations",
+        "Ignoring trademark and incorporation headroom: successful projects grow companies and join foundations — renaming a jokey or infringing name later costs community-schism money",
+      ],
+    },
+  },
+  indiegame: {
+    slug: "indiegame",
+    tlds: [
+      { tld: "com", zh: "玩家搜索与媒体报道的默认落点，工作室官网首选", en: "Where players and press expect to land — first choice for the studio site" },
+      { tld: "games", zh: "语义直给的品类后缀，工作室与作品集站都合身", en: "The category suffix that says it all — fits both studio and portfolio sites" },
+      { tld: "io", zh: "独立游戏与 web 游戏的圈内惯例，itch.io 一代的审美", en: "The indie and web-game convention — the itch.io generation's aesthetic" },
+    ],
+    zh: {
+      label: "独立游戏",
+      title: "独立游戏怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "独立游戏与工作室命名指南：情绪钩子、玩法直译、造词世界观等 5 种思路，Hollow Knight/Celeste/Stardew Valley 等好名字拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的游戏域名。",
+      intro:
+        "独立游戏的名字要在两个完全不同的货架上成立：Steam 搜索框和主播的嘴里。Steam 上名字是搜索入口——太通用会淹没在几万个同类里，太生僻玩家拼不出来就搜不到；直播与短视频时代，名字还要经得起口播——主播说「今天玩 X」时，观众听一遍就能去搜到才算合格。独立游戏命名与商业大作最大的不同是「作者性」：玩家买独立游戏买的是一种独特体验的承诺，名字可以也应该更有文学性与情绪浓度——Hollow Knight（空洞骑士）、Celeste（塞莱斯特山）这类名字自带氛围，比功能描述型名字更能传递「这是一件作品」。另一个现实约束是工作室名与作品名的双线命名：作品名可以为每部作品单独起，但工作室名要能装下未来十年的所有作品——把工作室绑死在第一部作品的题材上是最常见的新手错误。最后，独立游戏出海是默认设定，名字要在英语市场无歧义、在目标语言里无恶意谐音，Steam 页面与商标一起查才算定名。",
+      namingIdeas: [
+        "情绪钩子词：先定游戏想留下的那种情绪（孤独、治愈、压迫、狂欢），再找承载它的词——Celeste 的圣洁感、Inside 的幽闭感，名字是玩家进入游戏前的第一段配乐",
+        "玩法/世界观直译：把核心玩法或世界设定压缩成 1–2 个词——Stardew Valley（星露谷）直接给出田园幻想，Slay the Spire（杀戮尖塔）动词开头把玩法钉死",
+        "造词命世界：为架空世界造专名（Hyper Light Drifter 的 Drifter、Hades 借神话）——造词自带独占性，商标、域名、社交账号一步到位",
+        "口播与搜索双测试：名字念给朋友听一遍，让对方去 Steam 搜——搜得到、拼得对才算过关；「今天玩 X」这句话顺不顺口决定了主播愿不愿意提你",
+        "工作室名留白：工作室名避开具体题材词，用气质词或意象词（Team Cherry、Supergiant）——第一部是像素农场游戏不代表第十部还是",
+      ],
+      cases: [
+        { name: "Hollow Knight", takeaway: "「空洞」+「骑士」：两个常见词的组合精准传递哀伤史诗的氛围，形容词选得好，通用词也能拼出独占性——Steam 搜索里几乎零撞车" },
+        { name: "Stardew Valley", takeaway: "star + dew 造词 + valley：三个音节画出一幅田园画，造词部分保证独占，valley 保证品类联想——模拟经营命名的教科书" },
+        { name: "Celeste", takeaway: "既是山名又是人名，拉丁词根「天空的」：登山玩法、剧情主题与词义三层同构，一个词把玩法和情绪全说完" },
+        { name: "Undertale", takeaway: "under + tale：「地下的故事」直译世界观，tale 一词预告叙事驱动——玩家看到名字就知道这不是动作爽游，预期管理从命名开始" },
+        { name: "Supergiant Games", takeaway: "工作室命名范本：「超巨星」的天文意象只定气质不锁题材，从 Bastion 到 Hades 十几年跨题材都装得下" },
+      ],
+      pitfalls: [
+        "名字太通用（Dark Fantasy Adventure 类）：Steam 搜索直接淹没，媒体写报道时都没法把你和同名内容区分开",
+        "生僻拼写与特殊字符：主播口播后观众搜不到，愿望单转化在名字这一步就漏光了",
+        "工作室名绑死首作题材：Pixel Farm Studio 做第二部太空游戏时名字就成了包袱",
+        "不查 Steam 与商标撞名：Steam 上已有近似名会被玩家买错、被平台判定混淆，上架前改名等于把积累的愿望单清零",
+      ],
+    },
+    en: {
+      label: "Indie games",
+      title: "How to Name an Indie Game: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Indie game naming guide: emotion hooks, mechanic-literal names, coined worlds, breakdowns of Hollow Knight/Celeste/Stardew Valley, recommended TLDs and pitfalls — then hunt an available game domain with AI.",
+      intro:
+        "An indie game's name has to work on two very different shelves: the Steam search box and a streamer's mouth. On Steam the name is the search entry point — too generic and you drown among tens of thousands of peers; too obscure and players who hear about you can't spell their way to your page. In the streaming era the name must also survive being said aloud: when a streamer says \"today we're playing X,\" viewers should find it after one hearing. What separates indie naming from AAA naming is authorship: players buy indie games as a promise of a singular experience, so the name can — and should — carry more literary weight and emotional density. Hollow Knight and Celeste set a mood before the first frame renders; feature-description names never do. There's also the two-track reality: each game can get its own name, but the studio name must hold a decade of unmade games — welding the studio to your first game's theme is the classic first-timer mistake. And since shipping worldwide is the default, clear the name for unfortunate meanings in target languages and check Steam plus trademarks together before you commit.",
+      namingIdeas: [
+        "Lead with the emotion hook: decide the feeling the game should leave (lonely, cozy, oppressive, euphoric), then find the word that carries it — the name is the first bar of the soundtrack",
+        "Translate the mechanic or world literally: compress the core loop or setting into one or two words — Stardew Valley hands you the pastoral fantasy; Slay the Spire opens with a verb and nails the loop",
+        "Coin a proper noun for your world: invented names (Hyper Light Drifter) or mythic borrowings (Hades) come with built-in ownability — trademark, domain and handles clear in one move",
+        "Run the say-it-then-search-it test: speak the name to a friend once and have them find it on Steam — findable and spellable, or keep iterating; whether \"today we're playing X\" rolls off the tongue decides whether streamers mention you",
+        "Keep the studio name theme-free: choose vibe over subject matter (Team Cherry, Supergiant) — your first game being a pixel farm sim doesn't mean your tenth will be",
+      ],
+      cases: [
+        { name: "Hollow Knight", takeaway: "Two common words composing a melancholy epic: pick the right adjective and even dictionary words become ownable — near-zero collision in Steam search" },
+        { name: "Stardew Valley", takeaway: "star + dew coined, plus valley: three syllables paint the pastoral picture — the coinage guarantees ownability, the category word guarantees the association; textbook sim naming" },
+        { name: "Celeste", takeaway: "A mountain's name, a person's name, and Latin for \"heavenly\" at once: the climbing mechanic, the story's theme and the word's meaning are one — a single word doing all the work" },
+        { name: "Undertale", takeaway: "under + tale: the setting translated literally, with \"tale\" promising narrative over action — expectation management that starts at the title" },
+        { name: "Supergiant Games", takeaway: "The studio-naming exemplar: an astronomical image that sets a register without locking a genre — from Bastion to Hades, one name held a decade of different worlds" },
+      ],
+      pitfalls: [
+        "Generic titles (Dark Fantasy Adventure et al.): you drown in Steam search and the press can't distinguish you from same-name noise",
+        "Exotic spellings and special characters: viewers who hear the name can't find it, and your wishlist funnel leaks at the very first step",
+        "Welding the studio to the first game's theme: Pixel Farm Studio becomes baggage the day you announce a space game",
+        "Skipping the Steam and trademark collision check: a near-match on Steam means mistaken purchases and confusion flags — renaming before launch resets your wishlists to zero",
+      ],
+    },
+  },
+  gearrental: {
+    slug: "gearrental",
+    tlds: [
+      { tld: "com", zh: "对公租赁与押金交易的信任底座，报价单抬头要稳", en: "The trust base for B2B rentals and deposits — the quote header must hold" },
+      { tld: "studio", zh: "影棚业务语义直给，摄影圈里一眼懂", en: "Studio-business literalism — instantly understood in the photo trade" },
+      { tld: "pro", zh: "专业服务身份后缀，对制片与广告公司客户的信任加成", en: "The professional-services suffix — a trust bonus with production and agency clients" },
+    ],
+    zh: {
+      label: "影棚器材租赁",
+      title: "摄影棚与器材租赁怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "摄影棚与摄影器材租赁命名指南：专业信任感、地标场景词、器材圈黑话等 5 种思路，Lensrentals/KitSplit 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的租赁品牌域名。",
+      intro:
+        "器材租赁与影棚生意的名字，本质上是在给「押金与信任」定价。客户把几万块的拍摄计划押在你的设备靠不靠谱、棚期排得准不准上——名字要先像一家「出了问题找得到人」的正规公司，再谈风格。这个行业的客户是专业摄影师、制片与广告公司，命名可以大胆使用圈内词汇：光圈、快门、焦段、色温这些词对大众是术语，对目标客户是接头暗号，用得准能瞬间建立「懂行」的信任。第二个特点是本地属性与线上预订并存：影棚是重资产本地生意，名字带城市或区域词能吃到「城市+影棚」的搜索流量；而器材租赁越来越走线上下单同城闪送，名字又要经得起 App 与小程序的界面呈现。第三是双端场景：名字会同时出现在摄影师的朋友圈转介绍（「棚我订的 X」）和制片公司的项目报价单上——口语里要顺，纸面上要正。最后注意器材更新极快，名字不要绑定具体设备型号或品类（「单反租赁」类名字已经被无反时代淘汰了一轮），用「拍摄/影像/棚」这类稳定词根更耐久。",
+      namingIdeas: [
+        "器材黑话词根：光圈、快门、焦点、raw、灯位——圈内词是专业信任的接头暗号，f2.8、50mm 这类符号感元素也能化进名字",
+        "空间与场景词：棚、场、仓、studio、stage——影棚生意卖的是空间与档期，名字里给出「有个专业地方」的画面感",
+        "城市锚点组合：城市/区域词 + 品类词（尽量放在副标或域名前缀）——本地搜索「XX市 摄影棚」是最大自然流量入口，但主品牌名留出跨城扩张余地",
+        "「稳」字辈气质词：靠谱、准时、在场——租赁生意的核心焦虑是掉链子，名字直接回应「设备到、灯亮、棚开门」的确定性",
+        "双场景朗读测试：把名字放进「棚我订的 X」的微信语音和报价单抬头各念一遍——口语顺口、纸面正规，两关都过才定名",
+      ],
+      cases: [
+        { name: "Lensrentals", takeaway: "lens + rentals 直白到极致：品类词组合牺牲了品牌感换来搜索意图的精准匹配——租赁这类高意图低频生意，直给名的转化效率常常赢过品牌名" },
+        { name: "KitSplit", takeaway: "kit（器材圈对装备的统称）+ split（分摊）：两个词讲清「共享器材」的模式，圈内词 kit 的选用让摄影师一眼认同「这是给我们做的」" },
+        { name: "ShareGrid", takeaway: "share + grid（灯光网格/电网的双关）：共享模式 + 影视灯光的行业意象，谐音双关做得克制，B 端客户读得懂也记得住" },
+        { name: "Aputure", takeaway: "aperture（光圈）改一个字母的造词：器材品牌的命名思路同样适用于租赁——圈内词变形既保留专业联想又拿到独占性，影视灯光圈无人不识" },
+      ],
+      pitfalls: [
+        "绑定具体器材品类（单反/DV 类词根）：设备代际更替比你想象的快，名字跟着旧品类一起被淘汰",
+        "过度文艺牺牲正规感：租赁要收押金签合同，名字太飘会让客户在转账时犹豫——文艺可以放在影棚空间名，主体品牌要稳",
+        "忽略本地搜索词布局：「城市+影棚/器材租赁」是自然流量大头，官网标题与域名结构要给本地词留位置",
+        "只做微信生态不留域名：同城生意起于微信，但接广告公司与剧组订单时，一个正规官网与对公邮箱是报价单过审的隐形门槛",
+      ],
+    },
+    en: {
+      label: "Gear & studio rentals",
+      title: "How to Name a Studio & Camera Gear Rental Business: Strategies & Domains",
+      metaDescription:
+        "Photo studio and camera gear rental naming guide: trade-jargon trust, space words, city anchors, breakdowns of Lensrentals/KitSplit/ShareGrid, recommended TLDs and pitfalls — then hunt an available rental brand domain with AI.",
+      intro:
+        "A gear rental or photo studio name is really pricing trust and deposits. Clients stake five-figure shoot days on whether your equipment shows up working and your studio slots hold — so the name must first read like a company that answers the phone when something breaks, and only then worry about style. Your customers are working photographers, producers and agencies, which means trade jargon is an asset, not a barrier: aperture, shutter, focal length and color temperature are terminology to the public but a secret handshake to your buyers — used precisely, they buy instant insider credibility. Second, this business is local-heavy but books online: a studio is a fixed asset that feeds on \"city + photo studio\" searches, while gear rental increasingly runs on same-day app orders — the name must carry a local anchor yet survive an app interface. Third, it lives in two registers at once: a photographer's voice note (\"I booked the studio at X\") and a production company's quote header — casual in speech, formal on paper. Finally, gear generations turn over fast: don't weld the name to a device category (DSLR-era rental names already aged out once); stable roots like shoot, image and stage outlast any camera mount.",
+      namingIdeas: [
+        "Mine the trade jargon: aperture, shutter, focus, raw, key light — insider words are the handshake of professional trust, and symbols like f2.8 or 50mm can melt into a name",
+        "Use space and stage words: studio, stage, bay, depot — a studio business sells square meters and calendar slots; the name should conjure \"a professional place exists\"",
+        "Anchor to the city carefully: city or district + category (ideally in the domain prefix or tagline) — \"city + photo studio\" search is your biggest organic channel, but keep the master brand expandable to the next city",
+        "Signal reliability outright: rental anxiety is the no-show — names that promise the gear arrives, the lights fire and the door opens (steady, on-set, standby roots) answer the customer's core fear",
+        "Run the two-register read test: say it in a voice note (\"I booked X\") and print it on a quote header — it must pass as both casual speech and formal paper before you commit",
+      ],
+      cases: [
+        { name: "Lensrentals", takeaway: "lens + rentals, maximally literal: category words trade brand feel for perfect search-intent match — in high-intent, low-frequency rental, the literal name often out-converts the clever one" },
+        { name: "KitSplit", takeaway: "kit (the trade's word for gear) + split: two words explaining the sharing model, and choosing the insider word \"kit\" tells photographers \"this was built for us\" at a glance" },
+        { name: "ShareGrid", takeaway: "share + grid — a restrained double meaning on lighting grids and the power grid: the sharing model plus a film-lighting image, legible and memorable to B2B clients" },
+        { name: "Aputure", takeaway: "aperture with one letter changed: the gear-brand playbook applies to rentals too — a mutated trade word keeps the professional association while becoming fully ownable" },
+      ],
+      pitfalls: [
+        "Welding the name to a device category (DSLR-era roots): equipment generations turn over faster than brands — the name expires with the mount",
+        "Over-poeticizing away the formality: rentals mean deposits and contracts; a name that floats makes clients hesitate at the bank transfer — save the poetry for individual studio room names",
+        "Ignoring local search structure: \"city + studio / gear rental\" is the organic traffic backbone — leave room for local words in titles and domain structure",
+        "Living only inside chat apps with no domain: local business starts on WeChat or DMs, but agency and production orders quietly require a real website and a company email on the quote",
+      ],
+    },
+  },
+  sourcing: {
+    slug: "sourcing",
+    tlds: [
+      { tld: "com", zh: "工具订阅与跨境客户的默认信任后缀，付费转化最稳", en: "The default trust suffix for tool subscriptions and cross-border clients" },
+      { tld: "io", zh: "数据工具气质直给，卖家圈对 SaaS 后缀零违和", en: "Reads as a data tool instantly — sellers expect SaaS suffixes" },
+      { tld: "shop", zh: "电商语义直白，选品社区与导购内容站都合身", en: "Commerce literalism — fits sourcing communities and curation sites alike" },
+    ],
+    zh: {
+      label: "电商选品",
+      title: "电商选品工具怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "电商选品与市场分析工具命名指南：数据雷达意象、淘金隐喻、卖家黑话等 5 种思路，Jungle Scout/Helium 10 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的选品工具域名。",
+      intro:
+        "选品工具的名字要对一群最精明的用户成立——电商卖家每天都在计算 ROI，他们看到名字的第一反应是「这工具能帮我赚多少」。所以选品命名的核心是把「信息差变现」的承诺压进一个词：雷达、侦察、金矿、风口，这些意象直接回应卖家的核心欲望——比别人早一步看到爆款。第二个特点是黑话浓度高：选品、爆款、蓝海、类目、listing，卖家圈的行话体系成熟，名字用对一个圈内词就能让目标用户瞬间归队，但对圈外人的不友好也要有意识地权衡——如果产品要破圈到新手卖家，名字反而要更白话。第三是工具属性决定的搜索场景：卖家在 YouTube 教程、卖家论坛和知识星球里被安利工具，名字要经得起「口播安利+回头搜索」的链路，拼写复杂的名字在这条链路上漏水严重。最后是矩阵扩张预期：选品工具几乎都会长成卖家全家桶（选品→关键词→广告→财务），名字别锁死在「选品」单一功能上，留出平台化的余地。",
+      namingIdeas: [
+        "侦察与雷达意象：scout、radar、spy、镜头与望远镜词根——「比别人早看到」是选品的核心卖点，侦察系词根直接把卖点写进名字",
+        "淘金与机会隐喻：金矿、nugget、蓝海、风口——把「信息差=钱」的行业信仰压进名字，卖家看到就懂这工具是干嘛的",
+        "卖家黑话破圈权衡：面向老卖家用圈内词（类目、listing 词根）建立「懂行」信任；面向新手卖家反而要白话化，一个词决定用户画像",
+        "数据工具气质词：lens、graph、metric、insight 词根——选品本质是数据产品，理性词根撑得起订阅制 SaaS 的付费心智",
+        "口播链路测试：把名字放进「我用的是 X，链接在评论区」的教程口播里念三遍——听得清、拼得出、搜得到，YouTube 安利链路才不漏水",
+      ],
+      cases: [
+        { name: "Jungle Scout", takeaway: "jungle（亚马逊雨林双关平台名）+ scout（侦察兵）：平台隐喻与「替你侦察」的价值主张一词双关，选品工具命名的天花板级案例" },
+        { name: "Helium 10", takeaway: "氦气（让 listing「升起来」的轻元素）+ 数字：化学梗自带记忆点，10 暗示工具矩阵——名字从第一天就为全家桶扩张留好了位" },
+        { name: "AMZScout", takeaway: "AMZ（卖家圈对亚马逊的黑话缩写）+ scout：用圈内缩写精准锁定目标用户，代价是品牌永远绑在单一平台上——黑话命名的收益与风险同框" },
+        { name: "SellerSprite", takeaway: "seller + sprite（精灵）：「卖家的小精灵」把工具人格化，中文名「卖家精灵」直译同构——中英一体的命名让跨境团队两个市场共用一套品牌资产" },
+      ],
+      pitfalls: [
+        "名字锁死单一平台（Amazon/TikTok 词根）：平台政策与流量迁移是选品行业最大变量，绑定平台等于把工具命运交给别人",
+        "锁死「选品」单一功能：工具必然长成全家桶，FindProduct 类名字在扩张到广告与财务模块时就成了天花板",
+        "拼写复杂漏掉口播流量：选品工具靠教程与社群安利获客，听一遍拼不出的名字在安利链路上层层漏水",
+        "夸大承诺踩红线：名字里塞「爆款保证/躺赚」类词，广告平台审核与卖家信任双双翻车——雷达可以有，保证不能有",
+      ],
+    },
+    en: {
+      label: "Product sourcing",
+      title: "How to Name a Product Research & Sourcing Tool: Strategies & Domains",
+      metaDescription:
+        "E-commerce product research tool naming guide: scout and radar imagery, gold-rush metaphors, seller jargon trade-offs, breakdowns of Jungle Scout/Helium 10, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A product research tool's name has to convince the most ROI-obsessed audience on the internet: e-commerce sellers, whose first reaction to any name is \"how much money does this make me?\" So the core job is compressing the promise of monetized information asymmetry into one word — radar, scout, goldmine, trend: images that answer the seller's core desire to see the winning product one step before everyone else. Second, this niche runs on jargon: sourcing, winning product, blue ocean, listing — the seller vocabulary is mature, and one well-chosen insider word makes your target user feel instantly at home. But weigh the outsider cost consciously: if the product must reach first-time sellers, plainer language wins. Third, distribution shapes the name: sellers discover tools through YouTube tutorials, forums and paid communities, so the name must survive the hear-it-in-a-video-then-search-it funnel — complicated spellings leak users at every step. Finally, plan for the suite: nearly every research tool grows into a seller platform (research → keywords → ads → finance), so don't lock the name to the single \"find products\" feature.",
+      namingIdeas: [
+        "Scout and radar imagery: scout, radar, spy, lens and telescope roots — \"see it before everyone else\" is the entire value proposition, and reconnaissance words write it into the name",
+        "Gold-rush metaphors: goldmine, nugget, blue-ocean and trend roots — the industry's core belief that information asymmetry equals money, compressed into a word sellers decode instantly",
+        "Weigh the jargon trade-off: insider words (listing, niche roots) buy instant credibility with veteran sellers but alienate beginners — one word choice effectively picks your user persona",
+        "Carry a data-tool register: lens, graph, metric, insight roots — research is a data product, and rational roots support subscription-SaaS pricing psychology",
+        "Run the tutorial-funnel test: say the name three times inside \"I use X, link in the description\" — hearable, spellable and searchable, or the YouTube referral funnel leaks",
+      ],
+      cases: [
+        { name: "Jungle Scout", takeaway: "jungle (the Amazon, both meanings) + scout: platform metaphor and \"we scout for you\" fused in a double meaning — the ceiling of research-tool naming" },
+        { name: "Helium 10", takeaway: "The element that lifts listings, plus a number hinting at a tool suite: a chemistry pun with built-in memorability — a name that reserved room for the full-stack expansion from day one" },
+        { name: "AMZScout", takeaway: "AMZ (seller slang for Amazon) + scout: insider shorthand that locks the target user precisely — at the price of welding the brand to one platform; jargon naming's reward and risk in a single frame" },
+        { name: "SellerSprite", takeaway: "seller + sprite: personifying the tool as the seller's familiar, with a Chinese name that translates one-to-one — a bilingual-native name letting a cross-border team run both markets on one brand asset" },
+      ],
+      pitfalls: [
+        "Welding the name to one platform (Amazon/TikTok roots): platform policy and traffic shifts are this industry's biggest variable — a platform-locked name bets the company on someone else's rules",
+        "Locking onto the single research feature: every tool grows into a suite, and FindProduct-style names become the ceiling the day you ship the ads module",
+        "Complicated spellings that leak the tutorial funnel: research tools grow through video and community referrals — a name you can't spell after one hearing loses users at every hop",
+        "Over-promising in the name (guaranteed-winner, passive-income roots): ad-platform review and seller trust both fail you — radar is fine, guarantees are not",
+      ],
+    },
+  },
+  fleamarket: {
+    slug: "fleamarket",
+    tlds: [
+      { tld: "com", zh: "主理人招商与品牌合作的信任底座，对公沟通要稳", en: "The trust base for vendor recruitment and brand collabs" },
+      { tld: "fun", zh: "市集的快乐属性直给，海报与票务页上气质合拍", en: "The fun is the point — reads right on posters and ticketing pages" },
+      { tld: "art", zh: "市集的创意文化属性直给，主理人与文创品牌的语义加成", en: "The creative-culture suffix — a semantic bonus for curators and maker brands" },
+    ],
+    zh: {
+      label: "线下市集",
+      title: "线下市集与快闪活动怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "线下市集与快闪活动命名指南：在地文化词、节令时间词、社群暗号等 5 种思路，伍德吃托克/Smorgasburg 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的市集品牌域名。",
+      intro:
+        "市集的名字首先是一张海报——它要在小红书封面、朋友圈九宫格和地铁灯箱上被三秒读懂，并让人产生「这个周末想去」的冲动。市集卖的不是摊位上的商品，而是一种「有趣的人在有趣地聚集」的城市生活提案，名字的气质浓度直接决定招商与客流：主理人们会用名字判断「这个市集配不配得上我的摊位」，年轻人会用名字判断「发在社交媒体上够不够酷」。市集命名的第二个维度是在地性：好的市集名往往长在城市的方言、地名与集体记忆里——在地词让本地人会心一笑，也让市集从可复制的商业活动升维成城市文化品牌。第三是系列化结构：市集是重复举办的生意，名字要能装下「春季场/夜市场/圣诞场」的系列延展，主名+场次副题的结构从第一天就要设计好。最后是双端受众：名字同时面对来逛的年轻人与来摆摊的主理人、来赞助的品牌方——对 C 端要好玩上镜，对 B 端的招商函与场地合同要正规可信，一个名字两副面孔。",
+      namingIdeas: [
+        "在地词挖掘：方言、老地名、城市梗——本地人会心一笑的词是市集在地性的最强背书，也天然区隔于连锁复制的商业活动",
+        "节令与时间词：周末、黄昏、夜、季节词根——市集是「特定时间才有」的稀缺体验，时间词自带「错过等一年」的紧迫感",
+        "吃喝玩词根直给：吃、逛、淘、玩——市集的快乐很具体，动词开头的名字（「来 X 逛逛」）在口语传播里最顺",
+        "社群暗号感：给核心客群一个圈内梗（复古圈、宠物圈、二次元圈的黑话）——市集的第一批客流永远来自一个具体的兴趣社群",
+        "主名+场次结构预设：主品牌名保持稳定，场次用副题延展（X 市集·夜光场/圣诞场）——系列化命名让每一场的传播都在给主品牌攒资产",
+      ],
+      cases: [
+        { name: "伍德吃托克", takeaway: "Woodstock 的谐音汉化 +「吃」的植入：音乐节的自由气质嫁接到美食市集，谐音梗做出了文化厚度——中文市集命名的现象级案例" },
+        { name: "Smorgasburg", takeaway: "smorgasbord（自助餐盛宴）+ Williamsburg（布鲁克林街区）：一个造词同时锁定「吃个够」与在地身份，从街区市集长成城市名片的命名范本" },
+        { name: "凡几", takeaway: "「凡几」取自诗经「不日成之，经始勿亟」的雅致语感：两个字把「日常美好之物不可胜数」说尽，文艺气质精准筛选了目标客群" },
+        { name: "Brick Lane Market", takeaway: "直接以街道命名：伦敦砖巷的名字就是市集的全部品牌——当市集与街区共生共长，地名即品牌是在地性的终极形态" },
+      ],
+      pitfalls: [
+        "通用词裸奔（XX 创意市集类）：全国有几千个「创意市集」，名字无法在社交媒体搜索与转述中被识别",
+        "只顾好玩不留正规名：招商函、场地租赁合同与政府报批都需要一个拿得出手的主体名，纯梗名在 B 端场景寸步难行",
+        "名字锁死单一场地：与商场或园区深度绑定的名字，在换场地时等于品牌清零——场地是合作方不是品牌本体",
+        "忽略社交平台搜索占位：小红书与大众点评的同名话题被占，现场再火客流沉淀不下来——定名时话题页与账号名要一起查",
+      ],
+    },
+    en: {
+      label: "Markets & pop-ups",
+      title: "How to Name a Flea Market or Pop-up Event: Strategies, Cases & Domains",
+      metaDescription:
+        "Flea market and pop-up naming guide: local-culture words, seasonal timing, community codes, breakdowns of Smorgasburg/Brick Lane, recommended TLDs and pitfalls — then hunt an available market brand domain with AI.",
+      intro:
+        "A market's name is a poster first: it must be understood in three seconds on a social feed cover, a story grid and a subway lightbox, and trigger \"I want to go this weekend.\" What a market sells isn't the goods on the stalls — it's a proposal for urban life where interesting people gather interestingly, and the name's vibe density directly drives both vendor recruitment and footfall: stallholders judge \"is this market worthy of my booth\" by the name, and young visitors judge \"is this cool enough to post\" the same way. The second dimension is locality: the best market names grow out of a city's dialect, old place names and collective memory — a local word earns the knowing smile that elevates a market from a replicable commercial event into a city-culture brand. Third, markets are a recurring business: design the series structure on day one — a stable master name plus edition subtitles (night edition, holiday edition), so every event compounds the brand. Finally, the name faces two audiences at once: playful and photogenic for visitors, yet formal enough for vendor letters, venue contracts and permits — one name, two faces.",
+      namingIdeas: [
+        "Dig into local words: dialect, old street names, city in-jokes — the word that makes locals smile is the strongest proof of locality, and separates you from copy-paste commercial events",
+        "Use seasonal and time words: weekend, dusk, night, season roots — a market is a scarce, time-boxed experience, and time words carry built-in \"miss it, wait a year\" urgency",
+        "Lead with the pleasure verbs: eat, browse, hunt, play — market joy is concrete, and verb-forward names travel best in speech (\"let's go browse X\")",
+        "Encode a community password: give the core crowd an insider reference (vintage, pet, anime scenes) — a market's first thousand visitors always come from one specific interest community",
+        "Pre-design the master + edition structure: keep the master brand stable and extend with edition subtitles (X Market: Night Edition) — serialized naming makes every event deposit equity into the brand",
+      ],
+      cases: [
+        { name: "Smorgasburg", takeaway: "smorgasbord + Williamsburg: one coinage locking in both \"eat everything\" and the neighborhood identity — the naming exemplar of a street market growing into a city landmark" },
+        { name: "Brick Lane Market", takeaway: "Named for the street itself: when a market and its neighborhood grow together, the place name becomes the brand — locality's ultimate form" },
+        { name: "Renegade Craft", takeaway: "An attitude word + the category: \"renegade\" filters for indie makers and against mall-craft energy — one adjective doing the entire curation statement" },
+        { name: "Wudongchituoke (伍德吃托克)", takeaway: "A Chinese homophonic riff on Woodstock with \"eat\" planted inside: festival freedom grafted onto a food market — proof a pun can carry real cultural depth" },
+      ],
+      pitfalls: [
+        "Generic-word streaking (Creative Market #4517): thousands of identically named events mean you can't be found or retold on social platforms",
+        "Fun-only naming with no formal register: vendor letters, venue contracts and permits need a presentable entity name — a pure meme name stalls in every B2B scene",
+        "Welding the name to one venue: a name fused to a specific mall or park resets to zero when you move — the venue is a partner, not the brand",
+        "Ignoring social-platform squatting: if the hashtag and handles are taken, a packed event leaves no online sediment — clear topic pages and account names when you clear the domain",
+      ],
+    },
+  },
+  ski: {
+    slug: "ski",
+    tlds: [
+      { tld: "com", zh: "装备电商与雪场预订的信任默认值，付费转化最稳", en: "The trust default for gear stores and resort bookings" },
+      { tld: "shop", zh: "装备零售语义直给，滑雪装备电商的顺手选择", en: "Retail literalism — a natural fit for ski gear stores" },
+      { tld: "club", zh: "雪友社群与俱乐部组织的身份后缀，归属感直给", en: "The identity suffix for ski crews and clubs — belonging built in" },
+    ],
+    zh: {
+      label: "滑雪户外",
+      title: "滑雪品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "滑雪装备、雪场服务与雪友社群命名指南：山雪意象、速度词根、雪圈黑话等 5 种思路，Burton/Salomon/GOSKI 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的滑雪品牌域名。",
+      intro:
+        "滑雪品牌的名字要经得住两种极端场景：雪道上的呼喊与电商详情页的凝视。雪圈是强社群文化——雪友互相喊的是「走，去 X 家拿板」，教练在缆车上安利装备，名字要在风雪与头盔的阻隔下一遍听清；而滑雪装备客单价高、决策重，详情页与吊牌上的名字又要撑得起专业与安全的信任感。滑雪命名的情绪原料极其丰厚：山、雪、粉雪、落差、速度、燃——这个品类天然自带肾上腺素与浪漫，名字可以比大多数行业更「野」。但要注意雪圈黑话的分层：粉雪、刻滑、平花、野雪对老雪友是接头暗号，对每年新增的体验型雪客则是天书——目标客群是「发烧友」还是「新雪季人群」，决定了名字该用黑话还是白话。另一个中国市场特有的维度是季节反差：滑雪是强季节生意，越来越多品牌向四季户外延展（滑雪+露营+徒步），名字若锁死「雪」字，夏天的生意就没了名分——想清楚品牌边界再决定雪的浓度。",
+      namingIdeas: [
+        "山雪意象词根：峰、岭、粉雪、silhouette of mountains——雪山是这个品类的图腾，意象词自带海报画面感与远方感",
+        "速度与落差词：飞、冲、坠、fall line（滚落线）——滑雪的核心快感是重力，动感词根把肾上腺素写进名字",
+        "雪圈黑话分层使用：面向发烧友用刻滑、粉雪、野雪等暗号建立圈内信任；面向新雪季人群用白话降低门槛——先定客群再定黑话浓度",
+        "四季边界预判：品牌若要延展到露营徒步，用「山/户外/野」等全季词根替代「雪」字——雪的浓度决定夏天的生意名分",
+        "雪道呼喊测试：想象隔着风雪与头盔喊出名字——两个音节、开口音、爆破音开头的名字在雪场口碑传播里存活率最高",
+      ],
+      cases: [
+        { name: "Burton", takeaway: "创始人 Jake Burton 的姓氏：单板文化的开创者用人名做品牌，把个人传奇沉淀为行业图腾——运动品类里创始人名的信任复利最典型的案例" },
+        { name: "Salomon", takeaway: "同样是创始人姓氏，但靠阿尔卑斯产地叙事升维：人名+产地故事让品牌从装备商变成「山地文化」的代言者，四季户外延展毫无违和" },
+        { name: "GOSKI", takeaway: "go + ski 的动词短语直给：「去滑雪」三个字就是品牌全部主张，App、社区与雪具店一体的中国雪圈品牌用最白话的名字降低了新雪友门槛" },
+        { name: "Black Crows", takeaway: "黑乌鸦的意象：法国自由滑雪品牌用一种「盘旋在雪山上空」的野性图腾区隔于大厂的工程叙事——小众滑雪品牌靠气质词建立忠诚社群的范本" },
+      ],
+      pitfalls: [
+        "名字锁死「雪」字导致夏季失语：向四季户外延展时品牌名成了天花板——先想清楚品牌边界再决定雪的浓度",
+        "黑话浓度错配客群：对新雪季人群用「刻滑/平花」类黑话，获客端直接筑起门槛；对发烧友用大白话又显得不懂行",
+        "安全感缺位的过度激进：装备关乎人身安全，名字野过头（坠/疯/失控类词根）会在家长与新手的购买决策里扣分",
+        "忽略国际雪具品牌撞名：滑雪装备是全球供应链生意，中文名定了才发现拼音与国际品牌近似，出海与联名都被卡住",
+      ],
+    },
+    en: {
+      label: "Ski & snow",
+      title: "How to Name a Ski Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Ski gear, resort service and snow community naming guide: mountain imagery, speed roots, slope-slang layering, breakdowns of Burton/Salomon/Black Crows, recommended TLDs and pitfalls — then hunt an available ski brand domain with AI.",
+      intro:
+        "A ski brand's name has to survive two opposite scenes: being shouted across a slope and being stared at on a product page. Snow culture is intensely communal — riders yell \"grab your board at X,\" instructors pitch gear on chairlifts, and the name must land in one hearing through wind, goggles and a helmet. Yet ski gear is a high-ticket, high-stakes purchase, so the same name must hold up professional, safety-grade trust on a hangtag. The emotional raw material here is richer than almost any category: mountains, powder, fall lines, speed, adrenaline — ski naming can afford to be wilder than most industries. But mind the slang layers: powder, carving and backcountry are secret handshakes to lifers and gibberish to each season's wave of first-timers — whether you serve enthusiasts or newcomers decides your jargon dosage. And there's the seasonality trap: snow is a seasonal business, and more brands are stretching into year-round outdoor (ski + camp + hike) — a name welded to \"snow\" leaves your summer business nameless, so settle the brand boundary before you settle the snow content.",
+      namingIdeas: [
+        "Mountain and snow imagery: peak, ridge, powder, alpenglow roots — the mountain is this category's totem, and imagery words come with the poster built in",
+        "Speed and gravity words: fall line, descent, rush roots — the core thrill of skiing is gravity, and kinetic roots write the adrenaline into the name",
+        "Layer the slang deliberately: carving, powder and backcountry buy instant credibility with lifers; plain words lower the gate for each season's newcomers — pick the customer before picking the jargon dosage",
+        "Pre-judge the four-season boundary: if the brand will stretch to camping and hiking, use all-season roots (mountain, wild, alpine) instead of \"snow\" — snow density in the name decides whether summer revenue has a home",
+        "Run the slope-shout test: imagine yelling the name through wind and a helmet — two syllables, open vowels and a plosive opening survive word-of-mouth on the mountain best",
+      ],
+      cases: [
+        { name: "Burton", takeaway: "The founder's surname: snowboarding's pioneer turned a personal legend into the sport's totem — the clearest case of founder-name trust compounding in an equipment category" },
+        { name: "Salomon", takeaway: "Also a founder surname, elevated by Alpine provenance: name plus origin story turned a gear maker into a spokesman for mountain culture — and made the four-season stretch feel natural" },
+        { name: "Black Crows", takeaway: "A wild totem circling above the peaks: the French freeride brand used imagery to split from big-factory engineering narratives — the exemplar of a niche ski brand building a loyal tribe on vibe alone" },
+        { name: "GOSKI", takeaway: "go + ski, maximally plain: the whole proposition in a verb phrase — the Chinese snow-community brand chose the lowest-jargon name possible to lower the gate for each season's newcomers" },
+      ],
+      pitfalls: [
+        "Welding the name to \"snow\" and losing summer: the four-season outdoor stretch hits the name as a ceiling — settle the brand boundary first",
+        "Mismatching jargon to audience: carving-slang names wall out newcomers at acquisition; over-plain names read amateur to lifers — the dosage must match the customer",
+        "Wildness that erodes safety trust: gear protects bodies, and names built on crash/out-of-control roots lose points in parents' and beginners' purchase decisions",
+        "Skipping the international collision check: ski gear is a global supply-chain business — discovering your pinyin name shadows an international brand blocks both export and collabs",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
