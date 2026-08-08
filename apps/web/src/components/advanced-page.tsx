@@ -8,7 +8,7 @@ import { DomainRow } from "@/components/domain-row";
 import { useI18n } from "@/lib/i18n";
 import { usePrices } from "@/lib/prices";
 import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
-import { friendlyError, friendlyHttpError } from "@/lib/utils";
+import { formatExpiry, friendlyError, friendlyHttpError } from "@/lib/utils";
 import type { Row, Status } from "@/types";
 
 const split = (s: string) => s.split(/[,，\s]+/).map((x) => x.trim()).filter(Boolean);
@@ -150,7 +150,15 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
             </button>
           )}
           <button
-            onClick={() => exportResultsCsv(rows, lang, prices, "domainhunter-bulk")}
+            onClick={() =>
+              exportResultsCsv(
+                rows.map((r) => ({ ...r, expiresAt: r.expiresAt ? formatExpiry(r.expiresAt) ?? undefined : undefined })),
+                lang,
+                prices,
+                "domainhunter-bulk",
+                { expiresAt: true },
+              )
+            }
             className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:h-9"
           >
             <Download className="h-3.5 w-3.5" />
