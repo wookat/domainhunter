@@ -1609,6 +1609,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Live channels and streamer sites", "Video shows and streaming projects", "Sports and event broadcasting brands", "Products that open straight into video"],
     },
   },
+  "news-vs-media": {
+    slug: "news-vs-media",
+    a: "news",
+    b: "media",
+    zh: {
+      title: ".news 和 .media 怎么选：资讯站招牌与内容公司门牌的对比",
+      metaDescription: ".news 语义精准指向「资讯」，.media 覆盖整个内容行业。对比两者的语义宽窄、价格与更新预期，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是内容行业的后缀，分界线在「产品」还是「公司」。.news 指向的是内容产品本身：垂直资讯站、行业周报、付费 newsletter、公司 newsroom，「主题 + .news」读出来就是完整的站名（ai.news 式），用户点进去的预期就是看最新资讯——这个精准度是 .media 给不了的。但它也带着隐性契约：挂在 .news 上的站必须持续更新，半年不动的 .news 域名比任何后缀都伤信任。.media 指向的是内容公司这个主体：播客网络、视频制作团队、内容营销工作室，「品牌 + .media」是公司全称而非某个站，内容形态换了、产品线加了都不违和。价格上 .news 续费约 $26/年（约 ¥190），.media 略贵一档（两百多元），都属温和。判断标准：交付物是一个持续出内容的资讯产品 → .news 的精准语义直接帮转化；主体是一家做多种内容业务的公司或团队 → .media 的宽口径不锁死方向。两者都做时也有成熟分法：公司官网挂 .media，旗下资讯产品挂 .news。",
+      pickA: ["垂直行业资讯与独立媒体", "付费 newsletter 与行业周报", "公司官方 newsroom（brand.news）", "「主题词+news」即站名的赛道站"],
+      pickB: ["播客网络与视频制作团队", "内容营销与社媒代运营公司", "多形态内容工作室的公司主站", "内容方向还会扩展的新品牌"],
+    },
+    en: {
+      title: ".news vs .media: Publication Sign or Content-Company Nameplate",
+      metaDescription:
+        ".news points precisely at journalism and updates; .media covers the whole content industry. Compare semantic breadth, pricing and update expectations, then hunt available names.",
+      verdict:
+        "Both live in the content industry; the dividing line is product versus company. .news names the content product itself: vertical publications, industry digests, paid newsletters and corporate newsrooms — 'topic + .news' reads as a complete site name (think ai.news), and visitors arrive expecting fresh coverage, a precision .media can't match. That precision carries an implicit contract though: a .news site must keep publishing — six stale months hurt trust more here than on any other suffix. .media names the company behind the content: podcast networks, video production teams and content-marketing studios wear 'brand + .media' as a full company name, and nothing clashes when formats change or product lines grow. On price, .news renews around $26/year with .media a notch higher ($25–35) — both moderate. The test: your deliverable is one continuously publishing news product → .news's precise semantics convert directly; your subject is a company running several content businesses → .media's breadth keeps options open. Running both is a mature split too: the company site on .media, its publications on .news.",
+      pickA: ["Vertical publications and independent media", "Paid newsletters and industry digests", "Official corporate newsrooms (brand.news)", "Topic + news as the complete site name"],
+      pickB: ["Podcast networks and video production teams", "Content-marketing and social-media agencies", "Multi-format content studios' company home", "New brands whose content direction will grow"],
+    },
+  },
+  "tools-vs-app": {
+    slug: "tools-vs-app",
+    a: "tools",
+    b: "app",
+    zh: {
+      title: ".tools 和 .app 怎么选：工具箱招牌与应用产品的对比",
+      metaDescription: ".tools 是工具聚合站的天然招牌，.app 是 Google 运营的强制 HTTPS 应用后缀。对比两者的语义、价格与安全属性，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀都在说「拿来干活的东西」，差别在单数还是复数、轻还是重。.tools 的语义是「一箱工具」：在线转换器合集、生成器矩阵、开发者工具链、设计资源站，「功能词 + .tools」读出来就是某某工具箱，独立开发者的工具聚合站近年大量选它，用户点进去就知道是来干活的，转化路径极短。.app 指向「一个应用」：有完整产品形态的 Web App、移动应用官网、需要注册登录的 SaaS——而且它是 Google 运营、全后缀 HSTS 预加载强制 HTTPS，浏览器直接拒绝不安全连接，对正经产品是隐性的信任加分。价格上 .tools 首年 $10 上下、续费约 $29/年（约 ¥210）；.app 适中、续费略高于 .com，两者差距不大。判断标准：产品是「一堆小工具的集合」或纯前端的实用站 → .tools 的复数语义与工具箱气质更贴；产品是「一个有名字的应用」、有账号体系与持续迭代 → .app 的单数指向和安全背书更对。别反着用：单一产品挂 .tools 显得杂，工具合集挂 .app 又抬高了用户对「完整应用」的预期。",
+      pickA: ["在线工具聚合站（转换器/生成器合集）", "开发者工具链与 CLI 集合", "设计/办公资源站", "独立开发者的多工具矩阵"],
+      pickB: ["有完整产品形态的 Web/移动应用", "需要注册登录的 SaaS 产品", "看重强制 HTTPS 安全背书", "App 下载落地页与产品官网"],
+    },
+    en: {
+      title: ".tools vs .app: Toolbox Sign or Application Product",
+      metaDescription:
+        ".tools is the natural sign for utility collections; .app is Google's HTTPS-enforced application suffix. Compare semantics, pricing and security, then hunt available names.",
+      verdict:
+        "Both suffixes say 'things that get work done'; the difference is plural versus singular, light versus heavy. .tools means a toolbox: converter collections, generator matrices, developer toolchains and design-resource sites — 'function word + .tools' reads as a literal toolkit, indie developers have adopted it heavily for utility hubs, and visitors arrive knowing they came to get something done, which keeps conversion paths short. .app points at one application: a full-fledged web app, a mobile app's home, a SaaS with accounts — and it's Google-operated with the whole zone HSTS-preloaded, so browsers refuse insecure connections outright, a quiet trust bonus for serious products. Pricing is close: .tools runs about $10 first year and $29 renewal; .app is moderate with renewals slightly above .com. The test: your product is a collection of small utilities or a front-end-only helper site → .tools's plural, workbench character fits; your product is one named application with accounts and ongoing iteration → .app's singular focus and security backing win. Don't cross them: a single product on .tools reads scattered, while a utility collection on .app over-promises a full application.",
+      pickA: ["Online utility hubs (converters, generators)", "Developer toolchains and CLI collections", "Design and productivity resource sites", "Indie developers' multi-tool matrices"],
+      pickB: ["Full-fledged web or mobile applications", "SaaS products with accounts and login", "HTTPS-enforced security as a trust signal", "App download landing pages and product homes"],
+    },
+  },
+  "run-vs-club": {
+    slug: "run-vs-club",
+    a: "run",
+    b: "club",
+    zh: {
+      title: ".run 和 .club 怎么选：跑步双关与社群归属感的对比",
+      metaDescription: ".run 一词双关「运行」与「跑步」，.club 是社群的通用后缀。对比两者在运动与技术场景下的语义、价格与适用边界，并用 AI 猎取可注册的名字。",
+      verdict:
+        "这对组合在两个场景相遇。运动场景里两者短兵相接：跑团选 name.run 是把「跑」写进域名——短、动感、名字即动作；选 name.club 则强调「这是个圈子」——归属感、会员制、线下活动的气质更浓。判断只看重心：以跑步这件事为核心（赛事、训练计划、装备）→ .run；以人群和会员关系为核心（付费社群、俱乐部运营）→ .club。技术场景则只有 .run 在场：它的「运行」双关让运行时、部署平台、沙盒 demo 站用 name.run 暗示「点开就能跑」，cloud.run 已经完成了用户教育，.club 在这里帮不上忙。价格两者都亲民：.run 首年 $4 左右、续费约 $22/年（约 ¥160）；.club 常年低位、库存充足，NFT 热潮释放的好词正是捡漏窗口。还有一条通用提醒：.club 语义绑定「圈子」，正式商业产品用它会显得轻；.run 语义绑定「动」，静态内容站用它则浪费了双关。",
+      pickA: ["跑步赛事、训练计划与装备品牌", "运行时、部署平台与沙盒环境", "「点开就能跑」的 demo/playground 站", "想要三字母短后缀的动感命名"],
+      pickB: ["付费社群与会员制业务", "兴趣圈子、读书会与线下俱乐部", "粉丝俱乐部与 NFT 社区", "「加入我们」气质的归属感品牌"],
+    },
+    en: {
+      title: ".run vs .club: The Running Pun or Community Belonging",
+      metaDescription:
+        ".run puns on both 'execute' and 'running'; .club is the universal community suffix. Compare semantics, pricing and fit across sports and tech, then hunt available names.",
+      verdict:
+        "These two meet in two different arenas. In sports they compete head-on: a running crew on name.run writes the action into the domain — short, kinetic, name-as-verb; on name.club it emphasizes the circle — belonging, membership, offline meetups. Judge by your center of gravity: if the activity itself is the core (races, training plans, gear) → .run; if the people and membership relationship are the core (paid communities, club operations) → .club. In tech only .run shows up: its 'execute' reading lets runtimes, deploy platforms and sandbox demos on name.run whisper 'click and it runs' — cloud.run finished the user education — while .club has nothing to offer here. Both are budget-friendly: .run registers around $4 with ~$22 renewals; .club stays cheap year-round with deep inventory, and the NFT boom's released names make this a bargain window. One caution each: .club's circle semantics read light for formal commercial products, and .run's kinetic pun is wasted on static content sites.",
+      pickA: ["Races, training plans and running-gear brands", "Runtimes, deploy platforms and sandboxes", "Click-and-it-runs demo/playground sites", "Kinetic naming on a three-letter suffix"],
+      pickB: ["Paid communities and membership businesses", "Interest circles, book clubs and offline clubs", "Fan clubs and NFT communities", "Brands built around 'join us' belonging"],
+    },
+  },
+  "codes-vs-dev": {
+    slug: "codes-vs-dev",
+    a: "codes",
+    b: "dev",
+    zh: {
+      title: ".codes 和 .dev 怎么选：双赛道后缀与开发者标配的对比",
+      metaDescription: ".codes 同时吃「代码」与「优惠码」两个赛道但续费最贵，.dev 是 Google 运营的开发者标配。对比两者的语义、价格结构与圈内认知，并用 AI 猎取可注册的名字。",
+      verdict:
+        "先说结论：纯开发者场景下 .dev 几乎总是更优。它是 Google 运营、全后缀强制 HTTPS，web.dev、kubernetes.dev 早已完成圈内教育，个人站 yourname.dev 是干净专业的标配，续费适中。.codes 在开发者场景是「另一种口味」：name.codes 当个人作品集在海外开发者圈是成熟玩法，复数形式带点手工感和个性——但要为此付出真金白银：首年 $5 便宜，续费约 $57/年（约 ¥410），是收录后缀里续费最贵的新顶级域之一，长期持有要想清楚。.codes 真正的独占赛道是「优惠码/兑换码」：折扣码聚合站、游戏兑换码、promo codes 站点的流量词本身就带 codes，brand.codes 域名即品类，这个场景 .dev 完全帮不上忙。判断标准：开发者工具、技术博客、开源主页 → .dev 的圈内认知和价格都更稳；折扣码/兑换码内容站 → .codes 是唯一的语义正解；个人作品集两者都行，预算优先 .dev、个性优先 .codes。",
+      pickA: ["折扣码/兑换码聚合站（域名即品类）", "游戏兑换码与 promo codes 内容站", "想要复数手工感的个人作品集", "「codes」本身就是流量词的场景"],
+      pickB: ["开发者工具、CLI 与 SDK", "技术博客与开源项目主页", "个人开发者品牌（yourname.dev）", "续费预算敏感的长期持有"],
+    },
+    en: {
+      title: ".codes vs .dev: The Two-Track Suffix or the Developer Standard",
+      metaDescription:
+        ".codes plays both the code and promo-code tracks but renews expensive; .dev is Google's developer standard. Compare semantics, price structure and credibility, then hunt available names.",
+      verdict:
+        "Verdict first: in purely developer scenarios .dev nearly always wins. It's Google-operated with zone-wide enforced HTTPS, web.dev and kubernetes.dev finished the community education long ago, yourname.dev is the clean professional standard for personal sites, and renewals are moderate. .codes in developer land is an alternate flavor: name.codes as a portfolio is an established pattern among developers abroad, and the plural adds a handcrafted personality — but you pay real money for it: $5 first year snaps to roughly $57/year renewal, among the steepest of any new gTLD, so think hard before holding long-term. Where .codes owns the field outright is promo and redemption codes: discount-code aggregators, game redemption codes and promo-codes sites carry 'codes' in their own traffic keywords, making brand.codes a domain-as-category — a scenario where .dev is useless. The test: developer tools, technical blogs, open-source homes → .dev's credibility and pricing are safer; discount/redemption-code content sites → .codes is the only semantically correct answer; for portfolios either works — budget favors .dev, personality favors .codes.",
+      pickA: ["Discount-code aggregators (domain-as-category)", "Game redemption and promo-codes sites", "Portfolios wanting the plural, handcrafted feel", "Scenarios where 'codes' is the traffic keyword"],
+      pickB: ["Developer tools, CLIs and SDKs", "Technical blogs and open-source homes", "Personal developer brands (yourname.dev)", "Renewal-budget-sensitive long-term holds"],
+    },
+  },
+  "company-vs-group": {
+    slug: "company-vs-group",
+    a: "company",
+    b: "group",
+    zh: {
+      title: ".company 和 .group 怎么选：一家公司与一个集团的门牌对比",
+      metaDescription: ".company 把「公司」写进域名且续费便宜，.group 自带「集团」气质适合多品牌矩阵。对比两者的语义级别、价格与适用主体，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀都在给「企业主体」挂门牌，分界线是主体的级别。.company 说的是「一家公司」：中小企业官网、工作室的正式主体页、「the XX company」式的复古品牌命名（The Coffee Company 这种格式），brand.company 读出来自然又完整；它还是收录后缀里最便宜的一档——首年 $3 左右、续费约 $17/年（约 ¥125），比 .com 续费还低，把正式感和低成本难得地放在了一起。.group 说的是「一个集团」：控股平台、多品牌矩阵的母品牌、家族企业与投资集团，name.group 当集团官网、旗下品牌各自持有独立域名是海外成熟玩法；它还有第二语义——社群与兴趣小组（微信群、Telegram 群的落地页），这是 .company 没有的方向。判断标准：单一经营主体、一家店/一个工作室/一家公司 → .company 的级别刚好且成本最低；名下有多个品牌或计划做控股结构 → .group 的「集团」语义撑得起来。反向错配要避免：个人小站用 .group 显得虚张声势，真正的集团用 .company 又降了级。",
+      pickA: ["中小企业与工作室官网", "「The XX Company」式复古品牌", "控股结构里的子公司主体页", "想要正式感但预算敏感（续费最低档）"],
+      pickB: ["集团公司与控股平台母站", "多品牌矩阵的母品牌门牌", "家族企业与投资集团", "社群/兴趣小组的落地页"],
+    },
+    en: {
+      title: ".company vs .group: Nameplate for a Company or a Group",
+      metaDescription:
+        ".company writes 'company' into the domain at bargain renewals; .group carries holding-company gravitas for multi-brand portfolios. Compare semantic level, pricing and fit, then hunt available names.",
+      verdict:
+        "Both suffixes hang a nameplate on a business entity; the dividing line is the entity's level. .company says one company: small-business sites, a studio's formal corporate page, and retro 'the XX company' branding (The Coffee Company format) all read naturally as brand.company — and it's among the cheapest suffixes listed anywhere: roughly $3 first year and $17/year renewal, below even .com, a rare pairing of formality and low cost. .group says a group: holding platforms, the parent brand of a multi-brand portfolio, family businesses and investment groups — name.group as the group's home with each brand on its own domain is an established pattern abroad. It also carries a second meaning .company lacks: communities and interest groups (landing pages for chat groups and clubs). The test: a single operating entity — one shop, one studio, one company → .company sits at exactly the right level at the lowest cost; multiple brands under one roof or a holding structure in the plans → .group's gravitas carries it. Avoid the reverse mismatch: a personal site on .group reads as posturing, while a genuine conglomerate on .company undersells itself.",
+      pickA: ["Small-business and studio corporate sites", "Retro 'The XX Company' branding", "Subsidiary entity pages in a holding structure", "Formality on a budget (bottom-tier renewals)"],
+      pickB: ["Conglomerates and holding-platform homes", "Parent nameplate of multi-brand portfolios", "Family businesses and investment groups", "Community and interest-group landing pages"],
+    },
+  },
+  "wiki-vs-info": {
+    slug: "wiki-vs-info",
+    a: "wiki",
+    b: "info",
+    zh: {
+      title: ".wiki 和 .info 怎么选：百科招牌与信息老将的对比",
+      metaDescription: ".wiki 借维基之名自带「百科/知识库」语义，.info 是 2001 年首批新后缀的信息老将。对比两者的语义强度、历史包袱与价格，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀都在说「这里有资料」，差别在语义的形状。.wiki 的语义是「结构化的知识库」：借维基百科之名，「主题 + .wiki」读出来就是某某百科——产品文档站、游戏/动漫粉丝百科、开源项目 wiki、团队知识库对外版，用户点进去的预期就是查资料，而且隐含「可协作、会更新」的活文档气质；首年 $2 左右、续费约 $26/年（约 ¥190），注册局 Top Level Design。.info 的语义更泛也更老：2001 年首批新后缀，二十多年历史让它的认知度在新后缀里名列前茅，资料站、活动信息页、产品说明站都装得下，首年常年一两美元、给主品牌配信息子站的成本几乎可以忽略。但历史也是包袱：.info 曾被大量垃圾站使用，直接做商业主站的信任感偏弱，更适合当配角。判断标准：内容是结构化、持续维护的知识体系（词条、文档、攻略库）→ .wiki 的百科招牌精准且现代；内容是单向发布的静态信息（活动页、说明站、品牌信息子站）→ .info 的低成本和老资格够用。别把 .wiki 挂在不更新的静态站上——「wiki」暗示的活文档预期落空比 .info 更伤。",
+      pickA: ["产品文档与开发者知识库", "游戏/动漫粉丝百科（fandom 式）", "开源项目 wiki 与攻略库", "结构化、持续维护的知识体系"],
+      pickB: ["活动信息页与产品说明站", "主品牌的信息子站（成本近乎零）", "单向发布的静态资料站", "看重二十年老后缀的认知度"],
+    },
+    en: {
+      title: ".wiki vs .info: The Encyclopedia Sign or the Information Veteran",
+      metaDescription:
+        ".wiki borrows Wikipedia's name for built-in knowledge-base semantics; .info is the 2001 first-wave information veteran. Compare semantic strength, legacy baggage and pricing, then hunt available names.",
+      verdict:
+        "Both suffixes say 'reference material here'; the difference is the shape of the semantics. .wiki means a structured knowledge base: borrowing Wikipedia's name, 'topic + .wiki' reads as an encyclopedia — product docs, game and fandom wikis, open-source project wikis, public team knowledge bases — visitors arrive expecting to look things up, with an implied living-document promise of collaboration and updates. It runs about $2 first year and $26/year renewal under registry Top Level Design. .info is broader and older: part of 2001's first new-gTLD wave, its two decades give it top-tier recognition among alternative suffixes, it fits reference sites, event pages and product-information satellites, and first years routinely cost a dollar or two — a near-zero cost to give a main brand an info companion site. But the history is also baggage: heavy historical spam use leaves .info's trust too weak for a primary commercial site; it works best in a supporting role. The test: structured, continuously maintained knowledge (entries, docs, guides) → .wiki's encyclopedia sign is precise and modern; one-way static information (event pages, spec sites, brand info satellites) → .info's low cost and seniority suffice. Never park a stale static site on .wiki — the broken living-document expectation hurts more there than on .info.",
+      pickA: ["Product docs and developer knowledge bases", "Game and fandom wikis", "Open-source project wikis and guide libraries", "Structured, continuously maintained knowledge"],
+      pickB: ["Event pages and product-information sites", "Info satellites for a main brand (near-zero cost)", "One-way static reference sites", "Two decades of suffix recognition"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
