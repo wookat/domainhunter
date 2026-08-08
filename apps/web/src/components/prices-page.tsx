@@ -5,7 +5,7 @@ import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { buildPricesFaq } from "@/content/prices-faq";
 import { TLD_LIST } from "@/content/tld-list";
 import { useI18n } from "@/lib/i18n";
-import { toCny, toUsd, usePriceMeta, usePrices } from "@/lib/prices";
+import { toCny, toUsd, usePriceMeta, usePrices, usePricesSettled } from "@/lib/prices";
 import { tldPrice } from "@/types";
 import { cn } from "@/lib/utils";
 
@@ -31,6 +31,7 @@ function buildRows(prices: ReturnType<typeof usePrices>): PriceRow[] {
 export function PricesPage() {
   const { t, lang } = useI18n();
   const prices = usePrices();
+  const settled = usePricesSettled();
   const meta = usePriceMeta();
   const [sort, setSort] = useState<SortKey>("reg");
   const [desc, setDesc] = useState(false);
@@ -92,7 +93,24 @@ export function PricesPage() {
           <span />
         </div>
         {rows.length === 0 && <p className="px-4 py-6 text-center text-sm text-txt2">{t("prices.noMatch")}</p>}
-        {rows.map((r) => (
+        {!settled &&
+          rows.map((r) => (
+            <div key={r.tld} className="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0">
+              <a href={`/tld/${r.tld}?lang=${lang}`} className="font-mono text-sm font-semibold text-txt0 hover:text-brand">
+                .{r.tld}
+              </a>
+              <span className="h-5 w-14 animate-pulse rounded bg-bg1" />
+              <span className="h-5 w-14 animate-pulse rounded bg-bg1" />
+              <a
+                href={`/?tld=${r.tld}`}
+                className="flex min-h-[44px] items-center rounded-lg border border-line px-2.5 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-[36px]"
+              >
+                {t("prices.hunt")}
+              </a>
+            </div>
+          ))}
+        {settled &&
+          rows.map((r) => (
           <div key={r.tld} className="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0 hover:bg-bg1">
             <a href={`/tld/${r.tld}?lang=${lang}`} className="font-mono text-sm font-semibold text-txt0 hover:text-brand">
               .{r.tld}

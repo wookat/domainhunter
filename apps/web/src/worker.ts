@@ -9,7 +9,7 @@ import { buildCompareFaq } from "./content/compare-faq";
 import { buildGuideFaq } from "./content/guide-faq";
 import { buildPricesFaq } from "./content/prices-faq";
 import { buildTldFaq } from "./content/tld-faq";
-import { compareContentBlocks, guideContentBlocks, tldContentBlocks } from "./content/ssr-html";
+import { compareContentBlocks, guideContentBlocks, pricesTableSkeleton, tldContentBlocks } from "./content/ssr-html";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
@@ -1649,7 +1649,7 @@ app.get("/prices", async (c) => {
     html,
     loc.kicker,
     loc.title,
-    [`<p class="mt-3 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.intro)}</p>`],
+    [`<p class="mt-3 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.intro)}</p>`, pricesTableSkeleton(lang)],
     `<p class="flex items-center gap-1.5 font-mono text-sm text-brand">${PRICES_KICKER_SVG}${escapeHtml(loc.kicker)}</p>`,
   );
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
