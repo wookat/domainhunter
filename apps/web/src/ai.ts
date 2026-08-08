@@ -800,10 +800,11 @@ export function enMeaningIncoherent(label: string, meaning: string): boolean {
 
 // ---------------- 拼音引用词与 label 一致性校验（R196，P2-2） ----------------
 // 生产坏例：tangfang 声称「探方」双全拼（实为 tanfang）、sanvei 声称「山味」全拼（实为 shanwei）。
-// 基于内嵌常用字拼音表（3500 字，含多音字）校验：theme 为 pinyin 且 meaning 声称「全拼」时，
-// 「」内引用词的逐字拼音拼接必须能等于 label（多音字任一读音、ü 允许 v/u/ue 写法）。
-// 保守规则：引用词含表外字 → 无法判断，放行；存在任一可判引用词匹配 label → 放行；
-// 仅当「有可判引用词且全部不匹配」才丢弃。
+// 基于内嵌常用字拼音表（R222 扩至 GB2312 全集 6765 字，含多音字）校验：theme 为 pinyin 且
+// meaning 声称「全拼」时，「」内引用词的逐字拼音拼接必须能等于 label（多音字任一读音、ü 允许 v/u/ue 写法）。
+// R222（R218 审计 P2-1）：表外字策略从「放行」改为保守拒绝——生产坏例 yuncu「云萃」因 萃 在旧 3500
+// 字表外被放行、实际拼写错配上线。扩表后表外字仅剩 GB2312 外的生僻字，本就违反「常用字」prompt 红线，
+// 含表外字的引用词按「无法匹配」处理；存在任一引用词匹配 label 仍放行。
 let PINYIN_TABLE: Map<string, string[]> | null = null;
 function pinyinTable(): Map<string, string[]> {
   if (!PINYIN_TABLE) {
@@ -830,7 +831,7 @@ function quotedWordMatchesLabel(word: string, label: string): boolean {
   let joins: string[] = [""];
   for (const ch of word) {
     const readings = table.get(ch);
-    if (!readings) return true; // 表外字 → 无法判断，视为匹配（放行）
+    if (!readings) return false; // 表外字（GB2312 外生僻字）→ 保守拒绝，视为不匹配
     const next: string[] = [];
     for (const j of joins) {
       for (const r of readings) {
