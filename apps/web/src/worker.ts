@@ -1245,6 +1245,26 @@ async function inlineStylesheet(html: string, assets: Fetcher, origin: string): 
 type ViteManifestChunk = { file: string; imports?: string[] };
 let viteManifest: Record<string, ViteManifestChunk> | null = null;
 
+/** 资产字节大小（file → bytes），模块级缓存 */
+const assetSizeCache = new Map<string, number>();
+
+async function assetSize(file: string, assets: Fetcher, origin: string): Promise<number> {
+  const cached = assetSizeCache.get(file);
+  if (cached !== undefined) return cached;
+  try {
+    const res = await assets.fetch(new Request(new URL(`/${file}`, origin)));
+    const size = res.ok ? (await res.arrayBuffer()).byteLength : 0;
+    assetSizeCache.set(file, size);
+    return size;
+  } catch {
+    return 0;
+  }
+}
+
+/** 超过该体积的共享数据 chunk（如全量 TLD/行业指南文案）不做 modulepreload：
+ *  正文已全文 SSR，这些数据只在水合时才需要；提前抢占带宽会显著推迟移动端 LCP。 */
+const MODULEPRELOAD_MAX_BYTES = 100_000;
+
 /** SEO 页 SSR 注入懒加载路由 chunk 的 modulepreload，让页面 JS 与主 bundle 并行下载（降低内容 LCP） */
 async function injectModulepreload(html: string, assets: Fetcher, origin: string, entry: string): Promise<string> {
   try {
@@ -1261,8 +1281,10 @@ async function injectModulepreload(html: string, assets: Fetcher, origin: string
       for (const dep of chunk.imports ?? []) walk(dep);
     };
     walk(entry);
-    if (files.length === 0) return html;
-    const links = files.map((f) => `<link rel="modulepreload" href="/${f}" />`).join("\n    ");
+    const sizes = await Promise.all(files.map((f) => assetSize(f, assets, origin)));
+    const preloadable = files.filter((_, i) => sizes[i] <= MODULEPRELOAD_MAX_BYTES);
+    if (preloadable.length === 0) return html;
+    const links = preloadable.map((f) => `<link rel="modulepreload" href="/${f}" />`).join("\n    ");
     return html.replace("</head>", `${links}\n  </head>`);
   } catch {
     return html;
