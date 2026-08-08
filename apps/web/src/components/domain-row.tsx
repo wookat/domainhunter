@@ -190,9 +190,9 @@ export function DomainRow({
     return (
       <div className="flex h-12 items-center gap-3 px-4 opacity-60">
         <span className="tnum w-8 shrink-0 rounded-md bg-taken-dim py-0.5 text-center font-mono text-xs text-taken">—</span>
-        <span title={row.domain} className="min-w-0 truncate font-mono text-[15px] text-taken line-through">{row.domain}</span>
+        <span title={row.domain} className="min-w-16 truncate font-mono text-[15px] text-taken line-through">{row.domain}</span>
         <span className="shrink-0 rounded bg-taken-dim px-1.5 py-0.5 text-[11px] text-taken">{t("status.taken")}</span>
-        {row.expiresAt && <ExpiryNote iso={row.expiresAt} />}
+        {row.expiresAt && <ExpiryNote iso={row.expiresAt} className="shrink truncate" />}
         {row.expiresAt && onToggleFavorite && (
           <WatchCta
             domain={row.domain}
