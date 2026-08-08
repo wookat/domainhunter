@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Bell, BellOff, ExternalLink, Loader2, RotateCw, Search } from "lucide-react";
 
+import { ConfirmLabel } from "@/components/confirm-label";
 import { ExpiryNote } from "@/components/domain-row";
 import { fetchMonitorList, recheckMonitors, RecheckRateLimitError, useMonitor, type MonitorListEntry } from "@/lib/monitor";
 import { REGISTRARS } from "@/lib/registrars";
@@ -212,7 +213,7 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
                     className={cn(
                       "relative flex h-11 items-center gap-1.5 overflow-hidden rounded-lg border px-3 text-sm sm:h-9",
                       confirmed
-                        ? "border-destructive bg-destructive/10 font-semibold text-destructive"
+                        ? "border-destructive bg-destructive/10 text-destructive"
                         : "border-line text-txt1 hover:bg-bg2 hover:text-destructive",
                     )}
                     disabled={pending !== null}
@@ -220,8 +221,16 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
                     onClick={() => void cancel(domain)}
                   >
                     {pending === domain ? <Loader2 className="h-4 w-4 animate-spin" /> : <BellOff className="h-4 w-4" />}
-                    {confirmed ? t("monitors.cancelConfirm") : t("monitors.cancel")}
-                    {confirmed && <span className="tnum font-mono text-[11px] opacity-70">{confirmLeft}</span>}
+                    <ConfirmLabel
+                      confirmed={confirmed}
+                      label={t("monitors.cancel")}
+                      confirmLabel={
+                        <>
+                          {t("monitors.cancelConfirm")}
+                          <span className="tnum w-[1ch] font-mono text-[11px] opacity-70">{confirmLeft}</span>
+                        </>
+                      }
+                    />
                     {confirmed && <span aria-hidden className="confirm-countdown absolute inset-x-0 bottom-0 h-0.5 bg-destructive" />}
                   </button>
                 </span>

@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Bell, Bookmark, Check, ChevronDown, Copy, Download, ExternalLink, Link2, Loader2, MonitorSmartphone, RotateCw, Sparkles, Trash2 } from "lucide-react";
 
+import { ConfirmLabel } from "@/components/confirm-label";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Switch } from "@/components/ui/switch";
 import { fetchMonitorChanges, loadWebhook, useMonitor, type MonitorChange } from "@/lib/monitor";
@@ -378,7 +379,7 @@ export function ShortlistPage({
               className={cn(
                 "flex h-9 items-center gap-1.5 rounded-lg border px-3 text-sm",
                 confirmClear
-                  ? "border-destructive bg-destructive/10 font-semibold text-destructive"
+                  ? "border-destructive bg-destructive/10 text-destructive"
                   : "border-line text-txt1 hover:bg-bg2 hover:text-destructive",
               )}
               onClick={() => {
@@ -394,7 +395,7 @@ export function ShortlistPage({
               }}
             >
               <Trash2 className="h-4 w-4" />
-              {confirmClear ? t("shortlist.clearConfirm") : t("shortlist.clear")}
+              <ConfirmLabel confirmed={confirmClear} label={t("shortlist.clear")} confirmLabel={t("shortlist.clearConfirm")} />
             </button>
             <button
               className="flex h-9 items-center gap-1.5 rounded-lg bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90"
@@ -531,14 +532,14 @@ export function ShortlistPage({
                     className={cn(
                       "flex h-11 items-center gap-1 rounded-lg border px-3 text-xs md:h-9",
                       confirmDeleteId === s.id
-                        ? "border-destructive bg-destructive/10 font-semibold text-destructive"
+                        ? "border-destructive bg-destructive/10 text-destructive"
                         : "border-line text-txt1 hover:bg-bg3 hover:text-destructive",
                     )}
                     onClick={() => void deleteShare(s)}
                     disabled={deletingId === s.id}
                   >
                     {deletingId === s.id ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Trash2 className="h-3.5 w-3.5" />}
-                    {confirmDeleteId === s.id ? t("myShares.deleteConfirm") : t("myShares.delete")}
+                    <ConfirmLabel confirmed={confirmDeleteId === s.id} label={t("myShares.delete")} confirmLabel={t("myShares.deleteConfirm")} />
                   </button>
                 </span>
               </li>
