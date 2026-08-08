@@ -2004,6 +2004,186 @@ const GUIDES = {
       ],
     },
   },
+  page: {
+    tld: "page",
+    zh: {
+      title: ".page 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".page 是 Google 运营的「页面」后缀，全站强制 HTTPS，适合个人主页、产品落地页与文档站。查看 .page 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .page 域名。",
+      intro:
+        ".page 由 Google Registry 运营，和 .app/.dev 同属一族：整个后缀写进了 HSTS 预加载列表，所有 .page 站点强制 HTTPS，浏览器直接拒绝不安全连接——这条硬性规定反而成了信任背书。语义上「page = 页面」几乎万能：个人主页与简历页（yourname.page）、产品落地页、文档与更新日志站（docs.page、changelog.page 式）、活动与发布页都名正言顺。注册约 $11（约 ¥78），续费同价——首年不打折但续费不涨价，长期持有成本可预期，这在新后缀里是难得的诚实定价。库存很好：常用词、人名、品牌词命中率高。注意两点：一是上线前必须配好 HTTPS 证书（托管平台基本自动搞定），裸 HTTP 直接打不开；二是 .page 语义是「一页」，做大型多功能平台显得错位，轻量、单一目的的站点才是它的主场。命名上「名字/用途 + .page」最顺（如 yourname.page、launch.page），读起来就是「某某的页面」。",
+      bestFor: ["个人主页与简历页", "产品落地页", "文档与更新日志站", "活动与发布页"],
+      namingTips: [
+        "名字/用途 + .page 读起来就是「某某的页面」：yourname.page、launch.page",
+        "全后缀强制 HTTPS：上线前配好证书，托管平台基本自动搞定",
+        "首年续费同价、不搞低价钩子，长期成本可预期",
+        "语义是「一页」：轻量单页站最贴，大型平台显得错位",
+      ],
+    },
+    en: {
+      title: ".page Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".page is Google's HTTPS-only \"page\" suffix — for personal pages, landing pages and docs sites. See live pricing and naming advice, then hunt available .page names with AI.",
+      intro:
+        ".page is run by Google Registry and belongs to the same family as .app and .dev: the entire TLD is on the HSTS preload list, so every .page site is HTTPS-only and browsers refuse insecure connections — a hard rule that doubles as a trust signal. Semantically \"page\" is near-universal: personal home and résumé pages (yourname.page), product landing pages, docs and changelog sites, event and launch pages all read naturally. It costs about $11 to register and the same to renew — no first-year teaser, no renewal jump — refreshingly honest pricing among new TLDs, with predictable long-term cost. Inventory is strong: common words, personal names and brand words hit often. Two cautions: you must have an HTTPS certificate before launch (hosting platforms handle this automatically), since plain HTTP simply won't load; and the semantics say \"a page\", so a sprawling multi-product platform feels mismatched — lightweight single-purpose sites are its home turf. Name/purpose + .page flows best (yourname.page, launch.page) — it literally reads as \"someone's page\".",
+      bestFor: ["Personal home & résumé pages", "Product landing pages", "Docs & changelog sites", "Event & launch pages"],
+      namingTips: [
+        "Name/purpose + .page reads as \"someone's page\": yourname.page, launch.page",
+        "HTTPS-only TLD: have a certificate ready — hosts usually automate it",
+        "Same price to register and renew — predictable long-term cost",
+        "Semantics say \"a page\": best for lightweight single-purpose sites",
+      ],
+    },
+  },
+  bio: {
+    tld: "bio",
+    zh: {
+      title: ".bio 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".bio 一词双关「个人简介」与「生物/有机」，适合创作者主页、link-in-bio 与生物科技。查看 .bio 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .bio 域名。",
+      intro:
+        ".bio 是个一词双关的后缀：互联网语境里 bio 就是「个人简介」——社交平台人人都有一栏 bio，「link in bio」更是创作者经济的通用暗号，yourname.bio 天然就是你的个人主页与链接聚合页；另一层含义是「生物/有机」（biology/organic），生物科技公司、有机农产品品牌用它也名正言顺，欧盟不少有机食品品牌就在用 .bio。Identity Digital 运营，首年注册常有约 $6（约 ¥41）的低价，续费约 $58/年（约 ¥419）——典型的低价引流、续费回正定价，注册前把长期成本算进预算。库存极好：人名、品牌词、生物类词汇基本随便挑。注意：.bio 的两层语义最好只占一层，个人主页向就往「简介/链接页」做，生物向就往「科技/有机」做，混着用会让访客困惑。命名上人名直接上最自然（yourname.bio），生物科技则「词根 + .bio」（如 gene.bio、lab.bio 式）。",
+      bestFor: ["创作者个人主页与 link-in-bio", "个人简历与名片页", "生物科技公司", "有机食品与农业品牌"],
+      namingTips: [
+        "人名直接上最自然：yourname.bio 就是你的简介页",
+        "生物科技用「词根 + .bio」：gene.bio、lab.bio 式",
+        "首年低价、续费回正（约 $58/年），长期成本先算清",
+        "两层语义只占一层：简介向或生物向，别混用",
+      ],
+    },
+    en: {
+      title: ".bio Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".bio puns on \"personal bio\" and \"biology/organic\" — for creator pages, link-in-bio hubs and biotech. See live pricing and naming advice, then hunt available .bio names with AI.",
+      intro:
+        ".bio is a double-meaning suffix. In internet culture a bio is your profile blurb — every social platform has one, and \"link in bio\" is the creator economy's universal catchphrase — so yourname.bio is a born personal homepage and link hub. The second meaning is biology/organic: biotech startups and organic food brands wear it legitimately, and plenty of EU organic brands already do. Run by Identity Digital with a typical teaser price around $6 for year one, then about $58/yr to renew — classic cheap-in, full-price-later economics, so budget the long-term cost before committing. Inventory is superb: personal names, brand words and bio-science roots are wide open. One rule: pick a single meaning and commit — a profile-style site should lean \"bio = about me\", a science company should lean \"bio = biology\"; mixing the two confuses visitors. For naming, a bare personal name is most natural (yourname.bio); biotech works best as root + .bio (gene.bio, lab.bio-style).",
+      bestFor: ["Creator pages & link-in-bio hubs", "Personal résumé / profile pages", "Biotech startups", "Organic food & farming brands"],
+      namingTips: [
+        "A bare personal name is most natural: yourname.bio is your profile page",
+        "Biotech works as root + .bio: gene.bio, lab.bio-style",
+        "Teaser first year, ~$58/yr renewal — budget the long-term cost",
+        "Commit to one meaning — profile or biology, not both",
+      ],
+    },
+  },
+  ink: {
+    tld: "ink",
+    zh: {
+      title: ".ink 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ink 语义是「墨水」，适合纹身工作室、作家、插画师与出版内容站。查看 .ink 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ink 域名。",
+      intro:
+        ".ink 的语义是「墨水」，指向所有「用墨」的行当：纹身圈把 ink 当行话（get inked = 去纹身），纹身工作室与刺青师用 name.ink 是最正统的用法；作家、书法家、插画师、漫画作者的作品集，以及杂志、出版与写作工具类产品也都贴切。Top Level Design 运营，首年注册常见约 $2（约 ¥15）的引流价，续费约 $26/年（约 ¥189）——首年几乎白送，长期成本中等偏低。还有个天然优势：ink 只有三个字母、一个音节，加在名字后面几乎不增加长度，name.ink 整体往往比对应的 .com 短一截。库存很好：纹身风格词、艺术词、人名基本可挑。注意两点：一是 .ink 语义强绑「墨/书写/纹身」，科技工具硬蹭会显得莫名其妙（除非产品本身叫 Ink）；二是与 .in（印度）仅差一个字母，口头传播时说清楚「i-n-k」。命名上「风格/主题词 + .ink」最出效果（如 black.ink、story.ink 式），刺青师直接用艺名也很飒。",
+      bestFor: ["纹身工作室与刺青师", "作家与写作项目", "插画师与漫画作者", "杂志与出版内容站"],
+      namingTips: [
+        "纹身圈行话直接用：get inked 的语境里 name.ink 最正统",
+        "三字母单音节后缀，整域名往往比 .com 更短",
+        "首年约 $2 引流价、续费约 $26/年，长期成本中等",
+        "口头传播说清 i-n-k，避免与 .in 混淆",
+      ],
+    },
+    en: {
+      title: ".ink Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ink means ink — for tattoo studios, writers, illustrators and publishing sites. See live pricing and naming advice, then hunt available .ink names with AI.",
+      intro:
+        ".ink points at every trade that works in ink. Tattoo culture owns the word — \"get inked\" is the idiom — so studios and tattoo artists on name.ink wear the most authentic use of the suffix; writers, calligraphers, illustrators and comic artists' portfolios fit just as well, along with magazines, publishing projects and writing tools. Run by Top Level Design with a teaser price around $2 for year one and about $26/yr to renew — nearly free to try, moderate to hold. It has a structural bonus too: ink is three letters and one syllable, so name.ink often ends up shorter than the matching .com. Inventory is strong: tattoo-style words, art words and personal names are wide open. Two cautions: the semantics are hard-bound to ink/writing/tattoos, so a random tech tool borrowing it feels arbitrary (unless the product is literally called Ink); and it's one letter away from .in (India), so spell out \"i-n-k\" when saying it aloud. Style/theme word + .ink lands best (black.ink, story.ink-style); a tattoo artist's handle alone is effortlessly cool.",
+      bestFor: ["Tattoo studios & artists", "Writers & writing projects", "Illustrators & comic artists", "Magazines & publishing sites"],
+      namingTips: [
+        "Tattoo culture owns the word — name.ink reads authentically \"inked\"",
+        "Three letters, one syllable: often shorter than the matching .com",
+        "~$2 teaser year, ~$26/yr renewal — cheap to try, moderate to hold",
+        "Spell out i-n-k aloud to avoid confusion with .in",
+      ],
+    },
+  },
+  moe: {
+    tld: "moe",
+    zh: {
+      title: ".moe 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".moe 源自日语「萌え」，是 ACG 圈的文化后缀，适合动漫站、同人项目与二次元社区。查看 .moe 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .moe 域名。",
+      intro:
+        ".moe 源自日语「萌え（moe）」——ACG 文化里形容对角色「萌」的那种喜爱，由日本注册局 Interlink 专门为二次元文化推出。它是少数「文化身份」型后缀：动漫资讯与评论站、同人社团与画师主页、VTuber 与虚拟偶像企划、二次元向工具与社区，用 name.moe 等于亮明圈内身份，目标用户一眼共鸣。圈内已有大量真实用例（动漫数据库、字幕组、图站长期在用 .moe），文化认同度在小众后缀里数一数二。注册约 $13（约 ¥94），续费同价——没有低价钩子也没有续费陷阱，定价诚实。库存极好：角色名、作品梗、日语罗马音词基本随便挑。注意两点：一是 .moe 的文化属性极强，圈外业务用它毫无意义，反而让人困惑；二是商用要注意作品版权，域名蹭知名 IP 名称有法律风险。命名上「日语罗马音/圈内梗 + .moe」最地道（如 sakura.moe、kawaii.moe 式），社团名直接上也顺。",
+      bestFor: ["动漫资讯与评论站", "同人社团与画师主页", "VTuber 与虚拟偶像企划", "二次元社区与工具"],
+      namingTips: [
+        "日语罗马音/圈内梗 + .moe 最地道：sakura.moe、kawaii.moe 式",
+        "亮明二次元身份：圈内共鸣强，圈外业务别用",
+        "注册续费同价（约 $13），无低价钩子也无续费陷阱",
+        "别蹭知名 IP 名称，同人商用注意版权边界",
+      ],
+    },
+    en: {
+      title: ".moe Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".moe comes from Japanese \"moe\" — the anime-culture suffix for fan sites, doujin projects and otaku communities. See live pricing and naming advice, then hunt available .moe names with AI.",
+      intro:
+        ".moe comes from the Japanese word 萌え (moe) — the anime-culture term for finding a character adorable — and was launched by Japanese registry Interlink specifically for otaku culture. It's one of the few genuinely cultural TLDs: anime news and review sites, doujin circles and illustrator pages, VTuber and virtual-idol projects, and anime-adjacent tools and communities all use name.moe as an identity badge that their audience recognizes instantly. Real-world adoption inside the scene is deep — anime databases, fansub groups and art boards have run on .moe for years — giving it top-tier cultural credibility among niche suffixes. It costs about $13 to register and the same to renew: no teaser, no renewal trap, honest pricing. Inventory is superb: character names, fandom in-jokes and romanized Japanese words are wide open. Two cautions: the cultural identity is so strong that non-anime businesses gain nothing and only confuse visitors; and commercial fan projects should mind IP rights — squatting famous franchise names invites legal trouble. Romanized Japanese or fandom slang + .moe is the most authentic pattern (sakura.moe, kawaii.moe-style); a circle's name alone works too.",
+      bestFor: ["Anime news & review sites", "Doujin circles & illustrator pages", "VTuber & virtual idol projects", "Otaku communities & tools"],
+      namingTips: [
+        "Romanized Japanese / fandom slang + .moe is most authentic: sakura.moe, kawaii.moe",
+        "An identity badge for the anime scene — pointless outside it",
+        "Same ~$13 to register and renew — no teaser, no trap",
+        "Mind IP rights: don't squat famous franchise names",
+      ],
+    },
+  },
+  lol: {
+    tld: "lol",
+    zh: {
+      title: ".lol 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".lol 就是「laughing out loud」，自带幽默基因，适合梗图站、搞笑内容与游戏社区。查看 .lol 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .lol 域名。",
+      intro:
+        ".lol 就是网络用语 LOL（laughing out loud）——全世界最通用的「哈哈哈」，XYZ Registry 运营。它是幽默感最强的后缀：梗图与段子站、搞笑视频与整活企划、恶搞与愚人节页面、游戏社区（尤其 LOL 玩家圈的双关）用 name.lol 都自带笑点，域名本身就是内容的一部分。首年注册常见约 $2（约 ¥11）的引流价，续费约 $26/年（约 ¥189）——首年几乎白送，做个整活页面的成本忽略不计。库存极好：梗词、口头禅、游戏词基本随便挑。三字母单音节，读起来朗朗上口，name.lol 整体极短。注意两点：一是幽默定位是把双刃剑，严肃业务（金融、医疗、B2B）用它直接损伤可信度，别硬蹭；二是低价后缀难免有垃圾注册的历史包袱，重要项目建议同时持有一个主流后缀做正式入口。命名上「梗/口头禅 + .lol」效果拉满（如 bruh.lol、oops.lol 式），越短越好笑。",
+      bestFor: ["梗图与段子站", "搞笑视频与整活企划", "游戏社区与战队页", "恶搞与愚人节页面"],
+      namingTips: [
+        "梗/口头禅 + .lol 自带笑点：bruh.lol、oops.lol 式",
+        "首年约 $2、续费约 $26/年，整活成本忽略不计",
+        "LOL 玩家圈可玩双关，游戏社区天然贴合",
+        "严肃业务别碰：幽默后缀直接损伤可信度",
+      ],
+    },
+    en: {
+      title: ".lol Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".lol is literally \"laughing out loud\" — built-in humor for meme sites, comedy content and gaming communities. See live pricing and naming advice, then hunt available .lol names with AI.",
+      intro:
+        ".lol is the internet's universal laugh — laughing out loud — run by XYZ Registry, and it's the funniest suffix on the market. Meme and joke sites, comedy video projects, prank and April Fools' pages, and gaming communities (with a bonus pun for League of Legends circles) all get a built-in punchline from name.lol: the domain itself is part of the content. Year one typically costs about $2 with renewal around $26/yr — practically free to launch a gag page. Inventory is superb: meme words, catchphrases and gaming slang are wide open, and at three letters and one syllable, name.lol stays extremely short and speakable. Two cautions: humor cuts both ways — finance, healthcare or B2B on .lol actively damages credibility, so don't force it; and bargain suffixes carry some spam-registration baggage, so serious projects should hold a mainstream domain as the formal front door alongside the fun one. Meme/catchphrase + .lol maximizes the joke (bruh.lol, oops.lol-style) — the shorter, the funnier.",
+      bestFor: ["Meme & joke sites", "Comedy video projects", "Gaming communities & team pages", "Prank & April Fools' pages"],
+      namingTips: [
+        "Meme/catchphrase + .lol is a built-in punchline: bruh.lol, oops.lol",
+        "~$2 first year, ~$26/yr renewal — gag pages cost nothing",
+        "Bonus pun for League of Legends communities",
+        "Never for serious business — humor undercuts credibility",
+      ],
+    },
+  },
+  uk: {
+    tld: "uk",
+    zh: {
+      title: ".uk 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".uk 是英国国家域名，本地信任度极高，适合面向英国市场的品牌与业务。查看 .uk 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .uk 域名。",
+      intro:
+        ".uk 是英国的国家域名，由非营利注册局 Nominet 运营超过 25 年，是全球注册量最大的 ccTLD 之一（上千万注册量）。对英国消费者而言 .uk/.co.uk 是「本地生意」的默认信号，信任度远超一般新后缀——面向英国市场的电商、本地服务、媒体与品牌用它几乎是标配；对英国用户搜索，Google 也会把 .uk 站点与英国地区相关联，本地 SEO 有天然加成。2014 年起开放直接注册二级 .uk（不必再挂 .co.uk），name.uk 比 name.co.uk 短一截也更现代。注册约 $6（约 ¥41），续费同价——ccTLD 里的良心价，无引流钩子。注意两点：一是 Nominet 要求注册人提供英国境内的送达地址（address for service），海外注册人通常由注册商代理提供，注册前确认注册商支持；二是对应的 .co.uk 若被他人持有，建议评估品牌混淆风险，最好两个一起拿。命名上英国业务品牌词直接上（brand.uk），本地服务可用「城市/行业 + .uk」。",
+      bestFor: ["面向英国市场的电商", "英国本地服务与商铺", "英国媒体与内容站", "在英品牌与机构"],
+      namingTips: [
+        "品牌词直接上：name.uk 比 name.co.uk 短且现代",
+        "英国本地 SEO 天然加成，本地业务几乎标配",
+        "需英国送达地址，海外注册确认注册商代理支持",
+        "对应 .co.uk 被他人持有时评估混淆风险，最好一起拿",
+      ],
+    },
+    en: {
+      title: ".uk Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".uk is the United Kingdom's country domain with unmatched local trust — for brands and businesses targeting the UK. See live pricing and naming advice, then hunt available .uk names with AI.",
+      intro:
+        ".uk is the United Kingdom's country-code domain, run by non-profit registry Nominet for over 25 years and one of the largest ccTLDs on earth with registrations in the tens of millions. To British consumers, .uk/.co.uk is the default signal of a local business — trust levels far beyond any new gTLD — so UK-facing e-commerce, local services, media and brands treat it as near-mandatory; Google also geo-associates .uk sites with the UK, a free boost for local SEO. Since 2014 you can register directly at the second level (name.uk, no .co.uk needed) — shorter and more modern than name.co.uk. It costs about $6 to register with the same renewal — honest ccTLD pricing, no teaser games. Two cautions: Nominet requires registrants to provide a UK address for service — overseas registrants usually rely on their registrar to proxy this, so confirm support before buying; and if someone else holds the matching .co.uk, weigh the brand-confusion risk — ideally secure both. For naming, a straight brand word works (brand.uk); local services can use city/trade + .uk.",
+      bestFor: ["UK-facing e-commerce", "Local UK services & shops", "British media & content sites", "UK brands & institutions"],
+      namingTips: [
+        "Straight brand word: name.uk is shorter and more modern than name.co.uk",
+        "Free local-SEO boost — near-mandatory for UK-local business",
+        "UK address for service required — confirm your registrar proxies it",
+        "If .co.uk is taken by someone else, weigh confusion risk; ideally get both",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
