@@ -71,6 +71,17 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
     return () => window.clearInterval(id);
   }, []);
 
+  // 限频倒数每秒递减，归零后清除提示并恢复刷新按钮
+  useEffect(() => {
+    if (rateLimitedFor === null) return;
+    if (rateLimitedFor <= 0) {
+      setRateLimitedFor(null);
+      return;
+    }
+    const id = window.setTimeout(() => setRateLimitedFor((s) => (s !== null && s > 1 ? s - 1 : null)), 1000);
+    return () => window.clearTimeout(id);
+  }, [rateLimitedFor]);
+
   useEffect(
     () => () => {
       window.clearTimeout(confirmTimer.current);
@@ -139,7 +150,7 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
         <button
           className="flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50 sm:h-9"
           onClick={() => void refresh(true)}
-          disabled={refreshing || loading}
+          disabled={refreshing || loading || rateLimitedFor !== null}
         >
           <RotateCw className={cn("h-4 w-4", refreshing && "animate-spin")} />
           {refreshing ? t("monitors.refreshing") : t("monitors.refresh")}

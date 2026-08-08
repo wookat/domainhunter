@@ -25,7 +25,7 @@ export function buildResultsCsv(rows: ResultsCsvRow[], lang: "zh" | "en", prices
       s?.readability ?? "",
       s?.relevance ?? "",
       s?.brandability ?? "",
-      esc(priceShort(r.tld, lang, prices) ?? ""),
+      r.status === "available" ? esc(priceShort(r.tld, lang, prices) ?? "") : "",
     ].join(",");
   });
   return [CSV_HEADER, ...lines].join("\n");
