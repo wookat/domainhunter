@@ -97,6 +97,7 @@ export function ShortlistPage({
   const [desc, setDesc] = useState(false);
   const [noteEditing, setNoteEditing] = useState<string | null>(null);
   const [noteDraft, setNoteDraft] = useState("");
+  const noteCancelRef = useRef(false);
 
   const sorted = useMemo(() => {
     const list = [...items];
@@ -143,11 +144,18 @@ export function ShortlistPage({
         maxLength={NOTE_MAX_LENGTH}
         value={noteDraft}
         onChange={(e) => setNoteDraft(e.target.value)}
-        onBlur={() => commitNote(it.domain)}
+        onBlur={() => {
+          if (noteCancelRef.current) {
+            noteCancelRef.current = false;
+            setNoteEditing(null);
+            return;
+          }
+          commitNote(it.domain);
+        }}
         onKeyDown={(e) => {
           if (e.key === "Enter") commitNote(it.domain);
           else if (e.key === "Escape") {
-            setNoteDraft(it.note ?? "");
+            noteCancelRef.current = true;
             (e.target as HTMLInputElement).blur();
           }
         }}
