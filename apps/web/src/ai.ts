@@ -256,6 +256,71 @@ export function countRareQuotedChars(meaning: string): number {
   return hits.size;
 }
 
+// ---------------- 防线统计元数据（R238） ----------------
+// R222–R225 上线的多道候选防线只有「结果无坏例」的间接证据，无法直证防线拦截了坏例。
+// GuardStats 按请求聚合各防线的丢弃计数与补发/重试触发情况，随流事件返回给前端与回归脚本。
+// 只计数、不含被丢弃候选的任何内容（label/meaning 一概不带），不含用户数据。
+
+/** 各防线丢弃计数（仅计数，不含被丢弃候选内容） */
+export interface GuardDropCounts {
+  /** label 非法字符/超长（清洗不通过） */
+  invalidLabel: number;
+  /** 知名品牌撞名（R180） */
+  brandCollision: number;
+  /** meaning 为空或括号剥离后过短（R149） */
+  emptyMeaning: number;
+  /** meaning 混入目标语言白名单外文字（R179） */
+  charsetViolation: number;
+  /** 臆造词源：引用 label 中不存在的字母/词源片段（R179/R183） */
+  phantomEtymology: number;
+  /** meaning 泄漏命名路线分类元词/元话术（R183） */
+  metaLanguage: number;
+  /** meaning 含问号（犹豫/不成句信号，R196） */
+  questionMark: number;
+  /** EN meaning 词语沙拉（无词源锤点且无谓语骨架，R196） */
+  meaningIncoherent: number;
+  /** 拼音候选无法切分为合法音节/音节过多/语感风险超阈（R124/R142） */
+  pinyinInvalid: number;
+  /** 声称「全拼」但「」内引用词拼音与 label 拼写不符，含表外字保守拒绝（R196/R222） */
+  pinyinMismatch: number;
+  /** 与点踩集共享词根前缀或同后缀模式（R225） */
+  dislikedMorphology: number;
+}
+
+/** 单次 AI 生成请求的防线统计：各防线丢弃数 + word 配额补发/重试是否触发 */
+export interface GuardStats {
+  dropped: GuardDropCounts;
+  /** EN word 路线配额补发是否触发（R224） */
+  wordSupplement: boolean;
+  /** LLM 调用瞬时失败后的退避重试次数 */
+  retries: number;
+}
+
+export function newGuardStats(): GuardStats {
+  return {
+    dropped: {
+      invalidLabel: 0,
+      brandCollision: 0,
+      emptyMeaning: 0,
+      charsetViolation: 0,
+      phantomEtymology: 0,
+      metaLanguage: 0,
+      questionMark: 0,
+      meaningIncoherent: 0,
+      pinyinInvalid: 0,
+      pinyinMismatch: 0,
+      dislikedMorphology: 0,
+    },
+    wordSupplement: false,
+    retries: 0,
+  };
+}
+
+/** 各防线丢弃数合计（前端「本轮过滤 N 个低质候选」展示用） */
+export function guardDroppedTotal(guard: GuardStats): number {
+  return Object.values(guard.dropped).reduce((a, b) => a + b, 0);
+}
+
 export interface AiUnderstanding {
   core: string;
   style: string;
@@ -362,18 +427,20 @@ export function mergeWordSupplement(main: AiCandidate[], extra: AiCandidate[]): 
 export async function generateAiCandidates(
   description: string,
   apiKey: string,
-  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en" } = {},
+  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; guard?: GuardStats } = {},
 ): Promise<AiCandidate[]> {
   let out: AiCandidate[];
   try {
     out = await generateOnce(description, apiKey, opts);
   } catch {
     // 瞬时错误/超时自动重试一次：带 jitter 退避，避免整次搜索直接报错
+    if (opts.guard) opts.guard.retries++;
     await new Promise((r) => setTimeout(r, 400 + Math.random() * 600));
     out = await generateOnce(description, apiKey, opts);
   }
   // R224：EN word 路线配额失守时补发一次（上限 1 次，失败不阻塞主结果）
   if ((opts.lang ?? "zh") === "en" && needsWordSupplement(out)) {
+    if (opts.guard) opts.guard.wordSupplement = true;
     try {
       const extra = await generateOnce(description, apiKey, {
         ...opts,
@@ -864,7 +931,14 @@ export function pinyinQuoteMismatch(label: string, meaning: string): boolean {
 async function generateOnce(
   description: string,
   apiKey: string,
-  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; wordSupplementExclude?: string[] } = {},
+  opts: {
+    count?: number;
+    feedback?: RefineFeedback;
+    round?: number;
+    lang?: "zh" | "en";
+    wordSupplementExclude?: string[];
+    guard?: GuardStats;
+  } = {},
 ): Promise<AiCandidate[]> {
   const count = opts.count ?? 24;
   let user = `需求描述：${description}\n请给出 ${count} 个候选。`;
@@ -895,6 +969,8 @@ async function generateOnce(
   const data = (await res.json()) as { choices: { message: { content: string } }[] };
   const text = data.choices[0]?.message?.content ?? "";
   const arr = parseCandidateArray(text);
+  // R238：防线统计——各 continue 丢弃路径按防线归类计数（只计数，不记录被丢弃候选内容）
+  const dropped = (opts.guard ?? newGuardStats()).dropped;
   const seen = new Set<string>();
   const out: AiCandidate[] = [];
   const clamp = (v: unknown) => {
@@ -905,29 +981,60 @@ async function generateOnce(
     // label 清洗：去首尾空白后必须整体是合法域名主体字符（小写字母/数字/连字符），
     // 含内部空格或其他非法字符的直接丢弃，不做静默改写
     const label = String(c.label ?? "").trim().toLowerCase();
-    if (!/^[a-z0-9-]{1,63}$/.test(label) || seen.has(label)) continue;
+    if (!/^[a-z0-9-]{1,63}$/.test(label)) {
+      dropped.invalidLabel++;
+      continue;
+    }
+    if (seen.has(label)) continue; // 同轮重复不算防线拦截，不计数
     // R180：知名品牌撞名过滤（完全同名，或长度 ≥5 且编辑距离 ≤1），规避商标法律风险
-    if (isBrandCollision(label)) continue;
+    if (isBrandCollision(label)) {
+      dropped.brandCollision++;
+      continue;
+    }
     seen.add(label);
     // meaning 为空/全空白的候选直接丢弃（流截断或模型漏字段），不进核验队列；
     // tried 由上层根据返回值累积，被丢弃项天然不计入
     const rawMeaning = String(c.meaning ?? "");
     const meaning = cleanMeaning(rawMeaning);
-    if (!meaning) continue;
+    if (!meaning) {
+      dropped.emptyMeaning++;
+      continue;
+    }
     // R149：括号注释剥离后过短（<6 字符）说明有效寓意几乎全在括号里，整条丢弃
-    if (meaning.length < 6 && PAREN_RE.test(rawMeaning)) continue;
+    if (meaning.length < 6 && PAREN_RE.test(rawMeaning)) {
+      dropped.emptyMeaning++;
+      continue;
+    }
     // R179：meaning 混入目标语言白名单外的文字（韩文/西里尔/IPA 等）→ 整条丢弃
-    if (!meaningCharsetOk(meaning, opts.lang ?? "zh")) continue;
+    if (!meaningCharsetOk(meaning, opts.lang ?? "zh")) {
+      dropped.charsetViolation++;
+      continue;
+    }
     // R179：meaning 引用 label 中不存在的字母（"z from zeus" 式臆造词源）→ 整条丢弃
-    if (citesPhantomLetter(label, meaning)) continue;
+    if (citesPhantomLetter(label, meaning)) {
+      dropped.phantomEtymology++;
+      continue;
+    }
     // R183：meaning 出现命名路线分类元词/元话术（「这是 blend」式）→ 整条丢弃
-    if (containsMetaLanguage(meaning)) continue;
+    if (containsMetaLanguage(meaning)) {
+      dropped.metaLanguage++;
+      continue;
+    }
     // R183：meaning 声称的词源片段与 label 拼写不符（"play 与 grow 结合" for plangrow）→ 整条丢弃
-    if (citesPhantomWord(label, meaning)) continue;
+    if (citesPhantomWord(label, meaning)) {
+      dropped.phantomEtymology++;
+      continue;
+    }
     // R196（P1-1）：meaning 含问号（犹豫/不成句的确定性信号，现只有 prompt 级约束）→ 整条丢弃
-    if (meaning.includes("?") || meaning.includes("\uff1f")) continue;
+    if (meaning.includes("?") || meaning.includes("\uff1f")) {
+      dropped.questionMark++;
+      continue;
+    }
     // R196（P1-1）：EN meaning 连贯性启发式——无 label 词源锤点且无谓语骨架的词语沙拉 → 整条丢弃
-    if ((opts.lang ?? "zh") === "en" && enMeaningIncoherent(label, meaning)) continue;
+    if ((opts.lang ?? "zh") === "en" && enMeaningIncoherent(label, meaning)) {
+      dropped.meaningIncoherent++;
+      continue;
+    }
     const s = c.scores ?? ({} as Partial<AiScores>);
     const theme = String(c.theme ?? "").toLowerCase();
     // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
@@ -935,11 +1042,17 @@ async function generateOnce(
     let readabilityPenalty = 0;
     if (theme === "pinyin") {
       const check = checkPinyinLabel(label);
-      if (!check.ok) continue;
+      if (!check.ok) {
+        dropped.pinyinInvalid++;
+        continue;
+      }
       // 歧义切分扣 15 + 语感风险分（R142），叠加后从 readability 扣除
       readabilityPenalty = (check.ambiguous ? 15 : 0) + check.risk;
       // R196（P2-2）：声称「全拼」但「」内引用词的逐字拼音与 label 拼写不符（「探方」≠tangfang）→ 整条丢弃
-      if (pinyinQuoteMismatch(label, meaning)) continue;
+      if (pinyinQuoteMismatch(label, meaning)) {
+        dropped.pinyinMismatch++;
+        continue;
+      }
     }
     // R182：拼音系候选「」内命中生僻字黑名单，按字数从 readability 扣分（不丢弃）
     if (theme === "pinyin" || theme === "blend") {
@@ -962,6 +1075,10 @@ async function generateOnce(
   // R225：点踩形态硬过滤兜底——prompt 级禁止（buildRefineHint）之外，对解析后的新候选
   // 跑与点踩集的形态相似度检查，共享词根前缀或同后缀模式即丢弃；过滤后不足再回填仅后缀冲突项
   const disliked = opts.feedback?.disliked;
-  if (disliked && disliked.length > 0) return filterDislikedMorphology(out, disliked);
+  if (disliked && disliked.length > 0) {
+    const kept = filterDislikedMorphology(out, disliked);
+    dropped.dislikedMorphology += out.length - kept.length;
+    return kept;
+  }
   return out;
 }

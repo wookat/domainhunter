@@ -251,6 +251,10 @@ export default function App() {
           : [...prev, { round, noteKey: ev.round === 1 ? "agent.note.first" : "agent.note.more", proposed: 0, checked: 0, available: 0 } as RoundInfo],
       );
     } else if (ev.type === "proposed") {
+      const filtered = ev.guard ? Object.values(ev.guard.dropped).reduce((a, b) => a + b, 0) : 0;
+      if (filtered > 0) {
+        setRounds((rs) => rs.map((r) => (r.round === round ? { ...r, filtered: (r.filtered ?? 0) + filtered } : r)));
+      }
       const newRows: Row[] = ev.items!.flatMap((it) =>
         ev.tlds!.map(
           (t): Row => ({

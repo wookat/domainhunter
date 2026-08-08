@@ -73,6 +73,7 @@ function RoundSteps({
           <li className="flex items-center gap-1.5">
             {proposing ? <Loader2 className="h-3 w-3 animate-spin text-brand" /> : <Check className="h-3 w-3 text-brand" />}
             {proposing ? t("agent.thinking") : t("agent.proposed", { n: round.proposed })}
+            {!proposing && (round.filtered ?? 0) > 0 && <span className="text-txt2">· {t("agent.filtered", { n: round.filtered! })}</span>}
           </li>
           <li className={cn("flex items-center gap-1.5", proposing && "text-txt2")}>
             {checking ? (
