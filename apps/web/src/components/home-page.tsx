@@ -22,7 +22,7 @@ const KNOWN_TLDS = new Set([
   "com", "net", "org", "cn", "io", "ai", "app", "dev", "co", "cc", "tv", "xyz", "me", "info", "biz", "top", "vip", "pro", "site",
   "online", "store", "shop", "tech", "cloud", "space", "fun", "art", "design", "studio", "agency", "digital", "live", "life", "world", "today", "media", "center", "works",
   "news", "blog", "wiki", "link", "club", "team", "work", "zone", "run", "games", "game", "gg", "so", "sh", "im", "fm", "am", "to", "ly", "is",
-  "us", "uk", "de", "jp", "hk", "tw", "sg", "eu", "in", "ca", "one", "page", "email", "group", "network", "software", "systems", "tools", "chat", "bot", "codes", "company", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "bio", "ink", "moe", "lol", "cool", "red", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "marketing", "ventures", "capital", "guru", "tips",
+  "us", "uk", "de", "jp", "hk", "tw", "sg", "eu", "in", "ca", "one", "page", "email", "group", "network", "software", "systems", "tools", "chat", "bot", "codes", "company", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "bio", "ink", "moe", "lol", "cool", "red", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "marketing", "ventures", "capital", "guru", "tips", "directory", "exchange", "institute", "international", "partners", "support",
 ]);
 
 /** 输入看起来已经是现成名字/域名时，提供免 AI 额度的直接核验 */
@@ -889,6 +889,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个轻食与健康餐品牌，寓意「好好吃饭，轻装上阵」；气质要清爽有食欲、健康不苦行、自律而松弛；场景是外卖列表小图旁、健身房联名海报和「中午吃 XX，下午不困」的同事安利里都清爽好记。",
     en: "A healthy meal and salad brand. The name should feel like eating well and traveling light; the vibe is fresh but appetizing, disciplined without the diet gloom; it must pop beside a delivery-app thumbnail, on a gym partnership poster, and in \"X for lunch — no afternoon slump\" coworker recs.",
   },
+  {
+    slug: "petphoto",
+    labelZh: "宠物摄影",
+    labelEn: "Pet photography",
+    zh: "一个宠物摄影工作室品牌，寓意「把毛孩子的每个瞬间定格成家庭纪念」；气质要温暖专业、拟人视角、拍的是家人不是动物；场景是小红书作品流标签、预约咨询和「我家孩子在 XX 拍的写真」的家长转述里都好念好记。",
+    en: "A pet photography studio brand. The name should feel like freezing a fur kid's every moment into a family keepsake; the vibe is warm and professional, shooting family members rather than animals; it must work as an Instagram hashtag, in booking chats, and in \"we got our baby's portraits at X\" pet-parent word of mouth.",
+  },
+  {
+    slug: "campgear",
+    labelZh: "露营装备",
+    labelEn: "Camping gear",
+    zh: "一个露营装备品牌，寓意「可靠的装备是通往山野的门票」；气质要结实可信又带荒野浪漫、雪峰篝火感；场景是装备评测视频、海淘清单和「我这顶帐篷是 XX 的，暴雨没漏」的圈内口碑里都好认好记。",
+    en: "A camping gear brand. The name should feel like reliable gear as the ticket to the wild; the vibe is rugged and trustworthy with a streak of wilderness romance — snow peaks and campfires; it must hold up in gear review videos, cross-border shopping lists, and \"my X tent survived the storm\" campfire word of mouth.",
+  },
+  {
+    slug: "careercoach",
+    labelZh: "职业规划咨询",
+    labelEn: "Career coaching",
+    zh: "一个职业规划与生涯咨询品牌，寓意「帮人在职业迷雾里找到北极星」；气质要专业可信、有方向感、卖终点不卖焦虑；场景是公众号标题、播客片头和「我找 XX 做了职业咨询，思路清晰多了」的转介绍里都顺口可信。",
+    en: "A career planning and coaching brand. The name should feel like finding your north star in a career fog; the vibe is credible and directional, selling destinations rather than anxiety; it must sit naturally in a post headline, a podcast intro, and \"I did a session with X — so much clearer now\" referrals.",
+  },
+  {
+    slug: "fragrance",
+    labelZh: "香氛蜡烛",
+    labelEn: "Home fragrance & candles",
+    zh: "一个香氛蜡烛与家居香品牌，寓意「点燃一支蜡烛，回到某个想念的时刻」；气质要有通感画面、轻奢克制、好念但有距离感；场景是礼盒烫金、朋友圈晒单和「这支雪松香是 XX 家的」的种草转述里都得体好记。",
+    en: "A candle and home fragrance brand. The name should feel like lighting a candle and returning to a moment you miss; the vibe is synesthetic, quietly luxurious, pronounceable but slightly distant; it must emboss well on a gift box, share easily in a caption, and carry in \"that cedar candle is from X\" recommendations.",
+  },
+  {
+    slug: "diving",
+    labelZh: "潜水俱乐部",
+    labelEn: "Diving & scuba",
+    zh: "一个潜水俱乐部与潜店品牌，寓意「潜入深蓝，像飞一样自由」；气质要向往感与专业感并存、深蓝浪漫但安全可信；场景是考证攻略搜索、出行社群召集和「我在 XX 考的证，教练特别细」的老带新转述里都好读好记。",
+    en: "A dive shop and scuba club brand. The name should feel like sinking into deep blue and flying free; the vibe balances longing with professionalism — ocean romance backed by safety credibility; it must read well in certification-guide searches, trip group invites, and \"I got certified at X — great instructors\" buddy referrals.",
+  },
+  {
+    slug: "carwash",
+    labelZh: "汽车美容洗车",
+    labelEn: "Car wash & detailing",
+    zh: "一个洗车与汽车美容品牌，寓意「开走时像提新车」；气质要干净利落、效率与仪式感兼顾、连锁招牌统一得起来；场景是「附近洗车」地图搜索、路过招牌和「我在 XX 办的月卡，顺路就洗」的车主安利里都好认好记。",
+    en: "A car wash and detailing brand. The name should feel like driving away in a brand-new car; the vibe is clean and efficient with room for ritual, ready to unify across chain storefronts; it must stand out in \"car wash near me\" maps, read from a drive-by sign, and carry in \"I got the monthly pass at X\" owner recs.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
@@ -989,7 +1031,7 @@ function ChipPrice({ domain }: { domain: string }) {
 const QUICK_EXTRA_TLDS = ["com", "io", "ai", "app", "dev", "co", "net", "me"];
 
 /** 「查更多后缀」按钮覆盖的第二批后缀（同样走 /api/search，0 AI 额度） */
-const QUICK_MORE_TLDS = ["cn", "com.cn", "org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "page", "bio", "ink", "moe", "lol", "uk", "fm", "one", "cool", "red", "today", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "software", "marketing", "systems", "ventures", "capital", "guru", "tips"];
+const QUICK_MORE_TLDS = ["cn", "com.cn", "org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "page", "bio", "ink", "moe", "lol", "uk", "fm", "one", "cool", "red", "today", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "software", "marketing", "systems", "ventures", "capital", "guru", "tips", "directory", "exchange", "institute", "international", "partners", "support"];
 
 /** 快速核验的 chip（可注册/已注册）都可收藏到候选清单 */
 function domainToRow(domain: string, status: Row["status"] = "available", expiresAt?: string): Row {
