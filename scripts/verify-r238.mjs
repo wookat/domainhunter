@@ -119,7 +119,7 @@ try {
   check("dislikedMorphology 计数", guard.dropped.dislikedMorphology, 1);
   check("refine 轮：moyu 被过滤", out.some((c) => c.label === "moyu"), false);
 
-  // 场景 4：EN word 配额失守 → wordSupplement 标记为 true，补发轮丢弃也并入同一 guard
+  // 场景 4：EN word 配额失守 → wordSupplement 标记为 true，补发轮丢弃计入 supplementDropped（R243）
   const noWord = ["alpha", "bravo", "cider", "delta", "eagle", "maple", "gale", "haven"].map((l, i) =>
     cand(l, i % 2 === 0 ? "coined" : "blend"),
   );
@@ -131,7 +131,8 @@ try {
   guard = newGuardStats();
   out = await generateAiCandidates("desc", "test-key", { lang: "en", guard });
   check("补发触发：wordSupplement=true", guard.wordSupplement, true);
-  check("补发轮防线丢弃并入同一 guard", guard.dropped.brandCollision, 1);
+  check("补发轮防线丢弃计入 supplementDropped（R243）", guard.supplementDropped.brandCollision, 1);
+  check("主轮 dropped 不含补发轮丢弃（R243）", guard.dropped.brandCollision, 0);
   check("补发候选并入结果", out.some((c) => c.label === "anvil"), true);
 
   // 场景 5：首次调用瞬时失败 → retries 计 1，重试成功后正常返回
