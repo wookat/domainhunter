@@ -135,6 +135,12 @@ export const COMPARE_SLUGS = [
   "restaurant-vs-cafe",
   "academy-vs-coach",
   "restaurant-vs-bar",
+  "clinic-vs-care",
+  "dental-vs-doctor",
+  "fitness-vs-coach",
+  "photos-vs-gallery",
+  "boutique-vs-shop",
+  "gallery-vs-art",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
