@@ -2727,6 +2727,372 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  agent: {
+    slug: "agent",
+    tlds: [
+      { tld: "ai", zh: "智能体产品的身份后缀，域名本身就是定位声明", en: "The identity suffix for agent products — the domain itself states the positioning" },
+      { tld: "com", zh: "当智能体要卖给企业客户时，.com 让采购与安全审查少一道疑问", en: "When agents sell to enterprises, .com removes one question from procurement and security review" },
+      { tld: "dev", zh: "面向开发者的 agent 框架与工具链，.dev 圈内认同度最高", en: "For developer-facing agent frameworks and tooling, .dev earns instant peer credibility" },
+    ],
+    zh: {
+      label: "AI 智能体",
+      title: "AI 智能体产品怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "AI 智能体/Agent 应用命名指南：拟人化命名、能力动词、协作隐喻等 5 种思路，Devin/Manus/Cursor 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的智能体域名。",
+      intro:
+        "智能体命名和上一代 AI 工具命名有个本质区别：工具是「被使用的东西」，智能体是「被委托的同事」。用户对工具说「我用 X 处理了」，对智能体说「我让 X 去做了」——名字要撑得起这个「让」字。所以拟人化是智能体命名的第一主线：一个像人名的名字（Devin、Claude）天然携带「它会自己干活」的暗示，而 TaskAutoBot 式的机器名反而在削弱产品最核心的卖点。第二条线是信任：你要把邮箱、代码库、日程的权限交给它，名字不能轻佻——「委托感」来自稳重的音节而非炫技的缩写。第三，这个赛道正在以周为单位涌入新玩家，agent/copilot/pilot 词根的碰撞率已经饱和，起名时先搜一遍同类产品列表再动手，比任何技巧都省钱。",
+      namingIdeas: [
+        "拟人名路线：直接用或造一个像人名的词（Devin、Claude、Jarvis 式）——「雇一个 X」的句式立刻成立；测试方法是造句「让 X 帮我处理一下」，自然就对了",
+        "能力动词化：选一个描述委托动作的短动词或其变形（dispatch、delegate、run）——智能体的核心交互是「派活」，名字里带动作感能强化「它会执行」的预期",
+        "协作隐喻：借用同事/副手/管家类意象——copilot、mate、butler、幕僚；注意 copilot 已被微软大规模占用，直接用等于给别人做品牌联想",
+        "词根+agent 变体要克制：-agent、-gpt、-ai 后缀堆砌已是重灾区，2025 年后注册的同类名字在搜索结果里几乎无法出头；若用 .ai 后缀，主体词就不要再含 ai",
+        "留出能力扩张空间：今天的客服 agent 明天可能接管整个工作流——名字锁死单一任务（EmailReplyBot）等于给自己的路线图上枷锁",
+      ],
+      cases: [
+        { name: "Devin", takeaway: "一个普通的英文人名做「AI 软件工程师」：拟人名让「雇佣一个 AI 同事」的叙事零成本成立——智能体命名拟人化路线的标杆案例" },
+        { name: "Manus", takeaway: "拉丁语「手」：不像人名却有「替你动手」的隐喻，学术气质的词根在一片 -GPT 命名里辨识度极高——冷僻语源是差异化的捷径" },
+        { name: "Cursor", takeaway: "光标是「你正在工作的位置」：把 AI 编辑器命名为工作现场本身，产品与名字在同一个画面里——比任何 AI 前缀都更有代入感" },
+        { name: "Claude", takeaway: "复古人名自带温和可信的性格设定：Anthropic 用一个名字完成了「安全、克制、像人」的品牌定调——名字即人设的教科书" },
+      ],
+      pitfalls: [
+        "堆砌 AI/GPT/bot 词根：同质化最严重的命名区，且 GPT 是 OpenAI 的商标，含 GPT 的名字有直接法律风险",
+        "机器味太重（AutoTaskBot 类）：智能体卖的是「像人一样可托付」，机器名在自我拆台",
+        "轻佻或玩笑名接管严肃权限：要访问用户邮箱与代码库的产品，名字必须经得起企业安全审查会议",
+        "不查竞品就定名：agent 赛道每周都有新品牌，pilot/copilot/agent 变体几乎穷尽——定名前先搜 Product Hunt 与 GitHub",
+      ],
+    },
+    en: {
+      label: "AI agents",
+      title: "How to Name an AI Agent Product: Strategies, Cases & Domains",
+      metaDescription:
+        "AI agent naming guide: human-like names, delegation verbs, coworker metaphors, breakdowns of Devin/Manus/Cursor/Claude, recommended TLDs and pitfalls — then hunt an available agent domain with AI.",
+      intro:
+        "Naming an agent is fundamentally different from naming last-generation AI tools: a tool is something you use, an agent is someone you delegate to. Users say \"I processed it with X\" about tools, but \"I had X do it\" about agents — and the name has to carry that \"had\". So personification is the master line of agent naming: a human-sounding name (Devin, Claude) implies \"it works on its own\" for free, while a machine-sounding TaskAutoBot actively undermines the product's core promise. The second line is trust: you're asking users to hand over email, codebase and calendar permissions — the name can't be flippant; delegation-worthiness comes from steady syllables, not clever abbreviations. Third, this market adds new entrants weekly and the agent/copilot/pilot root space is saturated: searching existing product lists before naming saves more money than any technique.",
+      namingIdeas: [
+        "Go human-name: use or coin a name that sounds like a person (Devin, Claude, Jarvis-style) — \"hire an X\" instantly works; test with \"let X handle it\" out loud, natural means right",
+        "Verb the delegation: pick a short verb of assignment (dispatch, delegate, run) or a coined variant — the core interaction is handing off work, and an action-charged name reinforces \"it will execute\"",
+        "Borrow coworker metaphors: mate, butler, chief-of-staff imagery — but note copilot is now massively owned by Microsoft; using it donates your brand associations to someone else",
+        "Ration the -agent/-gpt/-ai suffixes: the most collision-saturated corner of naming since 2023, and near-invisible in search results; if you take a .ai domain, keep \"ai\" out of the name itself",
+        "Leave room to grow: today's support agent may run the whole workflow tomorrow — a task-locked name (EmailReplyBot) handcuffs your own roadmap",
+      ],
+      cases: [
+        { name: "Devin", takeaway: "An ordinary human first name for an \"AI software engineer\": the personification makes the hire-an-AI-coworker narrative land at zero cost — the benchmark case of the human-name route" },
+        { name: "Manus", takeaway: "Latin for \"hand\": not a person's name, yet carries the does-it-for-you metaphor; a scholarly root that stands out sharply in a sea of -GPT names — obscure etymology is a shortcut to distinctiveness" },
+        { name: "Cursor", takeaway: "The cursor is where you're working right now: naming the AI editor after the workplace itself puts product and name in the same picture — more immersive than any AI prefix" },
+        { name: "Claude", takeaway: "A vintage human name with a built-in gentle, trustworthy persona: Anthropic set the whole \"safe, restrained, human\" brand tone with one name — the textbook of name-as-character" },
+      ],
+      pitfalls: [
+        "Stacking AI/GPT/bot roots: the most homogenized naming zone — and GPT is OpenAI's trademark, so names containing it carry direct legal risk",
+        "Sounding too mechanical (AutoTaskBot et al.): agents sell human-like delegability, and a machine name argues against your own pitch",
+        "A jokey name holding serious permissions: a product that reads your email and codebase must survive an enterprise security-review meeting",
+        "Naming without a competitor sweep: new agent brands ship weekly and pilot/copilot/agent variants are nearly exhausted — search Product Hunt and GitHub before committing",
+      ],
+    },
+  },
+  crossborder: {
+    slug: "crossborder",
+    tlds: [
+      { tld: "com", zh: "跨境卖全球，.com 是唯一在所有市场都不用解释的后缀", en: "Selling everywhere means .com — the only suffix that needs no explanation in any market" },
+      { tld: "shop", zh: "独立站语义直给，主名被占时的体面替补", en: "Says storefront outright — a dignified fallback when the .com is taken" },
+      { tld: "co", zh: "品牌感强的 DTC 出海品牌常用，短一个字母更利落", en: "A favorite of brand-first DTC labels going global — one letter sleeker" },
+    ],
+    zh: {
+      label: "跨境电商",
+      title: "跨境电商品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "跨境电商/出海品牌命名指南：无国界造词、多语言避雷、发音全球化等 5 种思路，Anker/Shein/Temu 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的出海域名。",
+      intro:
+        "跨境品牌的名字要在你从未去过的国家、被你从未听过的口音念出来——这是它和国内品牌命名最大的不同。第一原则是发音全球化：名字必须在英语、西语、德语、阿拉伯语使用者嘴里都念得出且大致一致，元音结尾的双音节词（Anker、Temu）是全球通行的安全结构。第二是文化排雷：一个词在目标市场语言里的俚语含义、宗教联想、历史包袱都可能引爆——出海命名的尽调清单比国内长一倍。第三是去来源地化的选择题：是隐藏原产地做「全球品牌」（Anker 路线），还是把原产地做成卖点？多数品类里前者转化更好，这意味着名字里不要出现明显的拼音痕迹。最后，跨境获客重度依赖品牌搜索与社交广告，名字的搜索独占性直接等于广告费的回收率。",
+      namingIdeas: [
+        "无国界造词：造一个不属于任何语言的短词（Temu、Shein 式）——没有母语就没有文化包袱，全球商标注册的通过率也更高；结构上首选辅音+元音交替的双音节",
+        "元音结尾安全结构：以 a/o/u 结尾的词在罗曼语系、日语、西语里都自然（Anker 是例外中的经典，k+er 在主要市场都清晰）——列出候选后请 5 个不同母语的人念一遍",
+        "多语言排雷清单：西语、法语、德语、阿拉伯语、日语五种语言的俚语含义必查——经典反例 Nova 在西语区谐音「不走」；用母语者社区（Reddit 语言版块）比翻译软件可靠",
+        "商标先行于域名：跨境品牌被商标流氓抢注的损失远大于域名——名字候选出来先查 USPTO/EUIPO/WIPO，亚马逊品牌备案要求注册商标，这一步没法跳",
+        "平台搜索测试：把候选名放进亚马逊/TikTok 搜索框——若结果被既有品牌或通用词淹没，你的广告费将持续为别人打工",
+      ],
+      cases: [
+        { name: "Anker", takeaway: "德语「锚」：在充电品类里暗示「稳定可靠」，而德语词源自带工程精密的联想——中国品牌借欧洲语源完成全球化人设的标杆" },
+        { name: "Shein", takeaway: "she + in 的无国界合成词：4 个音素全球可读，没有任何文化包袱——快时尚出海「名字即物流」的证明：越轻越快" },
+        { name: "Temu", takeaway: "刻意造的无意义双音节：t-e-m-u 在任何语言里都能读且无歧义，全球商标一路绿灯——低成本大规模投放时代，「零解释成本」就是最大的名字资产" },
+        { name: "Aliexpress", takeaway: "母品牌 Ali + 品类词 express：借集团信任背书又说清「快速直邮」——平台型出海的复合命名结构，代价是名字永远长了一截" },
+      ],
+      pitfalls: [
+        "拼音直出做全球名：声调丢失后的拼音（如 Xingfu）在海外既难读又难记，还暴露来源地——除非原产地就是卖点，否则重造一个词",
+        "只查英语含义：西语、法语、阿拉伯语市场的俚语雷区各不相同——五大语言排雷是出海命名的最低尽调标准",
+        "先做品牌后注商标：亚马逊品牌备案、TikTok Shop 入驻都要求注册商标——商标被抢注后赎回的价格以十万计",
+        "名字含地域或品类限定词：AsiaBags 式名字在扩品类、扩市场时立刻过期——出海品牌的名字要为「下一个市场」留白",
+      ],
+    },
+    en: {
+      label: "Cross-border e-commerce",
+      title: "How to Name a Cross-border E-commerce Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Cross-border and global DTC naming guide: borderless coinages, multilingual clearance, global pronunciation, breakdowns of Anker/Shein/Temu, recommended TLDs and pitfalls — then hunt an available global domain with AI.",
+      intro:
+        "A cross-border brand name will be pronounced in countries you've never visited, by accents you've never heard — that's what separates it from domestic naming. Principle one is global pronunciation: the name must come out roughly the same in English, Spanish, German and Arabic mouths; vowel-ending two-syllable words (Temu) are the universally safe structure. Principle two is cultural clearance: a word's slang meaning, religious connotation or historical baggage in any target market can detonate — the due-diligence checklist for global names is twice as long as a domestic one. Third comes the origin question: hide the country of origin and play global brand (the Anker route), or make origin the selling point? In most categories the former converts better, which means no visible romanization traces in the name. Finally, cross-border acquisition runs on branded search and social ads: the name's search ownability is literally your ad-spend recovery rate.",
+      namingIdeas: [
+        "Coin a borderless word: invent a short word belonging to no language (Temu, Shein style) — no mother tongue means no cultural baggage, and global trademark filings clear more easily; consonant-vowel alternating two-syllable structures travel best",
+        "End in a vowel: words ending in a/o/u sit naturally in Romance languages, Japanese and Spanish — shortlist your candidates, then have five native speakers of different languages read them aloud",
+        "Run the five-language sweep: check slang meanings in Spanish, French, German, Arabic and Japanese — the classic Nova-doesn't-go trap in Spanish; native-speaker communities beat translation software for this",
+        "File trademarks before buying domains: brand-registry programs (Amazon) require a registered mark, and buying your name back from a trademark squatter costs six figures — clear USPTO/EUIPO/WIPO first",
+        "Test in the platform search box: type each candidate into Amazon and TikTok search — if existing brands or generic results drown you out, your ad budget will keep working for someone else",
+      ],
+      cases: [
+        { name: "Anker", takeaway: "German for \"anchor\": implies stability in the charging category, and the Germanic root carries engineering-precision associations — the benchmark of a Chinese brand borrowing European etymology for a global persona" },
+        { name: "Shein", takeaway: "she + in, a borderless blend: four phonemes readable worldwide with zero cultural baggage — proof that in fast-fashion exports, the name is logistics: the lighter, the faster" },
+        { name: "Temu", takeaway: "A deliberately meaningless two-syllable coinage: t-e-m-u reads unambiguously in any language and cleared trademarks globally — in the era of mass ad spend, zero explanation cost is the biggest naming asset" },
+        { name: "AliExpress", takeaway: "Parent brand Ali + category word express: borrows group-level trust while stating fast direct shipping — the compound structure of platform-scale exports, at the permanent cost of extra length" },
+      ],
+      pitfalls: [
+        "Raw romanization as a global name: pinyin stripped of tones (Xingfu) is hard to read, hard to recall, and broadcasts origin — unless origin is the pitch, coin something new",
+        "Clearing English only: Spanish, French and Arabic markets each have different slang minefields — the five-language sweep is the minimum due diligence for going global",
+        "Building the brand before filing the mark: Amazon Brand Registry and TikTok Shop onboarding require a registered trademark — squatters move faster than you and charge accordingly",
+        "Locking region or category into the name: AsiaBags-style names expire the moment you expand categories or markets — a global name must leave room for the next market",
+      ],
+    },
+  },
+  escaperoom: {
+    slug: "escaperoom",
+    tlds: [
+      { tld: "fun", zh: "娱乐属性直给，本地娱乐业态里辨识度高又便宜", en: "Says entertainment outright — distinctive and affordable for local venues" },
+      { tld: "com", zh: "美团/大众点评之外的官网入口，连锁化后必备", en: "Your owned front door beyond listing platforms — essential once you franchise" },
+      { tld: "club", zh: "会员制剧本杀社群与玩家俱乐部的气质后缀", en: "The natural suffix for member-based murder-mystery communities and player clubs" },
+    ],
+    zh: {
+      label: "剧本杀密室",
+      title: "剧本杀/密室逃脱怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "剧本杀/密室逃脱/沉浸式娱乐命名指南：悬念词根、世界观命名、组局口播测试等 5 种思路，NAZA/惊人院 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的娱乐域名。",
+      intro:
+        "剧本杀和密室的名字有个独特的传播场景：组局。「周六去 X 玩不玩？」——名字要在微信群的一句邀约里就传递出「好玩、刺激、值得专门跑一趟」的预期。这决定了第一原则：名字本身要有戏。悬念感（谜、雾、局）、世界观感（馆、境、屋）、肾上腺素感（逃、惊、暗）都是合法武器，平铺直叙的「XX 密室体验馆」等于放弃了免费的想象力广告位。第二个特点是场景消费的地域性：客人搜的是「城市+剧本杀」，名字的独特性决定你在点评平台搜索结果和玩家口碑里能否被准确找到。第三，这个行业连锁化是主流出路——名字要预留多店、多主题、多城市的扩展空间，锁死单一主题（如「民国公馆」）会在换主题时连招牌一起换。",
+      namingIdeas: [
+        "悬念词根：谜、雾、影、局、匣——名字先埋一个钩子，让人问「什么意思？」就赢了第一步；英文同理：cipher、veil、riddle",
+        "世界观容器词：馆、院、境、屋、Studio——把店名做成一个「可以进入的世界」的入口，多主题店尤其适用：容器不变，里面的世界随主题更换",
+        "肾上腺素词根：逃、惊、暗、夜——恐怖/刺激主题的直接信号，客群自筛选：胆小的不来，来的都是对的人；全年龄店慎用",
+        "组局口播测试：把候选名放进真实邀约句式「周六去 X 啊？」念三遍——绕口、歧义、念不出氛围的直接淘汰；剧本杀名字的第一媒介是微信群不是招牌",
+        "预留连锁与换主题空间：名字定位在「体验容器」而非「单一剧本」——主题会换、城市会扩，名字要跟得上（「惊人院」可以装任何惊悚主题，「1943 谍影」只能演谍战）",
+      ],
+      cases: [
+        { name: "NAZA密室", takeaway: "无意义音节造词：四个字母在点评搜索里零撞车，读音干脆有电子感——本地娱乐品牌用无意义短词换取搜索独占的教科书" },
+        { name: "惊人院", takeaway: "「惊」（惊吓）+「人院」（谐「精神病院」）：一语双关，名字本身就是恐怖主题的预告片——中文谐音梗在娱乐命名里的天花板级用法" },
+        { name: "谜之屋", takeaway: "谜（悬念钩子）+屋（世界容器）：三个字完成「有谜可解、有屋可进」的完整预期——悬念词根+容器词的标准结构，任何主题都装得下" },
+        { name: "Sleep No More", takeaway: "借《麦克白》台词做沉浸式戏剧品牌：文学出处自带世界观纵深，「不眠之夜」的字面义又直接许诺体验强度——引用式命名的全球标杆" },
+      ],
+      pitfalls: [
+        "直接叫「XX 密室体验馆」：品类词当名字，在点评平台搜索里和几百家同行混在一起，口碑传播时无法被准确转述",
+        "锁死单一主题：剧本杀主题半年一换——名字焊死具体剧本或年代，换主题时等于重开一家店",
+        "恐怖过头吓跑全客群：名字太重口（血、尸、咒）会把团建、亲子、约会客群全部筛掉——除非定位纯恐怖，留一点想象空间更聪明",
+        "忽略线上入口：客人从美团/点评/小红书找店——名字里有生僻字或无法输入的符号，等于在搜索框里消失",
+      ],
+    },
+    en: {
+      label: "Escape rooms",
+      title: "How to Name an Escape Room or Immersive Venue: Strategies, Cases & Domains",
+      metaDescription:
+        "Escape room and immersive entertainment naming guide: mystery roots, world-container names, the group-chat invite test, breakdowns of Sleep No More and more, recommended TLDs and pitfalls — then hunt an available venue domain with AI.",
+      intro:
+        "Escape room names have a unique distribution channel: the group invite. \"Anyone up for X on Saturday?\" — the name must convey fun, thrill and worth-the-trip inside a single group-chat message. That sets principle one: the name itself must have drama. Mystery roots (cipher, veil, enigma), world-building containers (house, chamber, realm) and adrenaline words (escape, dark, panic) are all legal weapons; a flat \"City Escape Room Experience\" surrenders the free imagination billboard. Second, this is location-based entertainment: customers search \"escape room + city\", so name distinctiveness decides whether reviews and word of mouth route people accurately to you. Third, chains are the industry's growth path — the name needs room for more rooms, themes and cities; welding it to one theme (\"1943 Spy House\") means changing the sign every time you change the script.",
+      namingIdeas: [
+        "Plant a mystery root: cipher, veil, riddle, enigma — a name that makes people ask \"what does that mean?\" has already won the first move",
+        "Use a world-container word: house, chamber, society, studio — frame the venue as a doorway into a world; ideal for multi-theme venues, where the container stays and the world inside rotates",
+        "Deploy adrenaline roots: escape, dark, panic, midnight — direct signals for horror and thrill themes that self-select the audience; use sparingly if you also want team-building and family bookings",
+        "Run the invite test: put each candidate into a real sentence — \"anyone up for X on Saturday?\" — and say it three times; tongue-twisters, ambiguity, or zero atmosphere means cut it. The name's first medium is the group chat, not the storefront sign",
+        "Name the container, not the script: themes rotate every season and cities multiply — Sleep No More can host any dark story; a name locked to one plot expires with it",
+      ],
+      cases: [
+        { name: "Sleep No More", takeaway: "A Macbeth line as an immersive-theatre brand: the literary source lends world-depth while the literal meaning promises intensity — the global benchmark of quotation naming" },
+        { name: "The Crystal Maze", takeaway: "crystal (a concrete, glittering image) + maze (the category promise): a physical picture and a challenge in three syllables — a TV-born name that works because you can see it" },
+        { name: "Punchdrunk", takeaway: "A single English word meaning dazed-from-blows: names the exact state their immersive shows induce — naming the audience's feeling instead of the product is the cleverest shortcut" },
+        { name: "Secret Cinema", takeaway: "secret (the hook) + cinema (the category): two common words, one irresistible question — \"what's the secret?\"; proof that mystery + category beats invented words when both slots are chosen well" },
+      ],
+      pitfalls: [
+        "Naming by category (\"City Escape Experience\"): you'll blur into hundreds of rivals on review platforms and be impossible to retell accurately in word of mouth",
+        "Welding the name to one theme: scripts rotate seasonally — a name baked into a specific plot or era means reopening under a new sign at every rotation",
+        "Overdosing on horror: blood-and-corpse names filter out team-building, family and date-night bookings — unless you're a pure horror venue, leave room for imagination",
+        "Forgetting the search box: customers find venues through maps and review apps — obscure characters or untypeable symbols make you vanish from search",
+      ],
+    },
+  },
+  bakery: {
+    slug: "bakery",
+    tlds: [
+      { tld: "com", zh: "线上订单与本地搜索的默认入口，烘焙电商化后更重要", en: "The default door for online orders and local search — vital once you ship" },
+      { tld: "shop", zh: "甜品电商语义直给，主名被占时的甜美替补", en: "Says storefront sweetly — a graceful fallback when the .com is taken" },
+      { tld: "studio", zh: "手作工作室与私房烘焙的气质后缀，小而美定位加分", en: "The artisan suffix for home bakeries and dessert studios — small-and-beautiful energy" },
+    ],
+    zh: {
+      label: "烘焙甜品",
+      title: "烘焙甜品品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "烘焙/甜品/私房蛋糕命名指南：通感词根、手作叙事、包装上镜测试等 5 种思路，好利来/Lady M/Paris Baguette 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的烘焙域名。",
+      intro:
+        "烘焙品牌的名字要在客人看到实物之前就先「闻」到——这是甜品命名的核心命题：通感。黄油的香、出炉的暖、糖霜的甜，好名字用声音唤起味觉与嗅觉（想想「好利来」的喜庆与「原麦山丘」的麦香画面）。第二个特点是场景的仪式感：蛋糕出现在生日、婚礼、纪念日——名字要配得上被写在贺卡旁边、被印在礼盒上、出现在「我在 X 订的蛋糕」的炫耀里。第三是私房与连锁的分野：私房烘焙靠主理人人设与朋友圈传播，名字可以更个人化更有故事；连锁品牌要考虑门头识别、商标注册与跨城市复制。共同的底线是上镜——甜品是社交媒体食物链顶端的品类，名字与包装的合影会出现在小红书与 Instagram 的每一次开箱里。",
+      namingIdeas: [
+        "通感词根：软、暖、酥、麦、奶、糖——用字音直接触发味觉记忆；英文同理：butter、crumb、whisk、oven 都自带香气",
+        "手作与出处叙事：主理人名字、街道名、家传配方的出处（「外婆的方子」式）——私房烘焙的信任来自「谁做的」，名字里带人带故事，朋友圈传播时自带内容",
+        "仪式感升维：不叫「蛋糕店」，叫值得庆祝的时刻——甜品消费一半是买给情绪的；想想 Lady M 的优雅感如何撑起千层蛋糕的溢价",
+        "法语/日语借词要节制：Pâtisserie、抹茶系日文词自带工艺联想，但生僻拼写会杀死口碑传播——借气质可以，确保中文语境里念得顺",
+        "包装上镜测试：把候选名想象成印在礼盒丝带与蛋糕插牌上——好看吗？开箱视频里读出来顺口吗？甜品名字的第一媒介是包装与短视频，不是门头",
+      ],
+      cases: [
+        { name: "好利来", takeaway: "「好运、吉利、到来」三字全是喜庆词根：把蛋糕的庆祝场景直接写进名字，婚寿宴订单的心智默认项——中文喜庆命名的长青标杆" },
+        { name: "原麦山丘", takeaway: "「原麦」（原料叙事）+「山丘」（面包出炉的形状画面）：四个字同时说清「真材实料」与「松软饱满」——通感命名的教科书级构图" },
+        { name: "Lady M", takeaway: "贵妇人设 + 单字母悬念：优雅气质撑起千层蛋糕的高溢价，M 的留白让人好奇——甜品高端化「名字即定价权」的证明" },
+        { name: "Paris Baguette", takeaway: "产地借势（巴黎）+ 品类词（法棍）：韩国品牌借法式烘焙圣地完成气质背书——原产地联想是烘焙业最硬的通货，用别人的也行" },
+      ],
+      pitfalls: [
+        "「XX 烘焙坊」式品类命名：和每条街的同行撞名，外卖平台搜索里永远排在连锁品牌后面",
+        "生僻法语词直接做主名：Pâtisserie 类拼写客人读不出也搜不到——口碑传播链在第一次转述时就断了",
+        "私房烘焙不留连锁余地：以自己小名命名很温暖，但开第二家店、上电商时要想清楚这个名字能否跟着走",
+        "忽略商标与外卖平台重名：烘焙是商标抢注重灾区——美团/饿了么上重名的店会直接分流你的订单",
+      ],
+    },
+    en: {
+      label: "Bakeries & desserts",
+      title: "How to Name a Bakery or Dessert Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Bakery and dessert naming guide: synesthetic roots, maker stories, the gift-box test, breakdowns of Lady M/Paris Baguette/Milk Bar, recommended TLDs and pitfalls — then hunt an available bakery domain with AI.",
+      intro:
+        "A bakery name should be smelled before the pastry is seen — that's the core brief: synesthesia. Butter, warm ovens, sugar dust: the best names trigger taste and smell through sound alone (crumb, whisk and butter all carry aroma before meaning). Second, dessert is ritual: cakes appear at birthdays, weddings and anniversaries — the name must deserve its place next to a greeting card, printed on a ribbon, and in the brag \"I ordered it from X\". Third, home bakers and chains diverge: a home bakery runs on the maker's persona and friend-circle referrals, so the name can be personal and story-rich; a chain needs sign-legibility, trademark clearance and cross-city repeatability. The shared bottom line is camera-readiness — dessert sits atop the social-media food chain, and your name will co-star in every unboxing on Instagram.",
+      namingIdeas: [
+        "Mine synesthetic roots: butter, crumb, whisk, oven, honey — words whose sound alone releases aroma; the name should make people hungry before they see a photo",
+        "Tell the maker's story: the baker's name, the street, the family recipe's provenance — home-bakery trust comes from who made it, and a story-bearing name is self-propelling content in referrals",
+        "Elevate to the occasion: don't name the shop, name the moment worth celebrating — half of dessert spending is emotional; note how Lady M's elegance underwrites a premium for what is, technically, crepe cake",
+        "Borrow French or Japanese sparingly: pâtisserie and matcha-adjacent words carry craft associations, but obscure spellings kill word of mouth — borrow the air, keep it pronounceable",
+        "Run the gift-box test: picture the name on a ribbon and a cake topper — does it look right? Does it read smoothly in an unboxing video? A dessert name's first media are packaging and short video, not the storefront",
+      ],
+      cases: [
+        { name: "Lady M", takeaway: "An aristocratic persona plus a single-letter mystery: elegance that supports luxury pricing for crepe cake, with the M's blank space inviting curiosity — proof that in dessert, the name is pricing power" },
+        { name: "Paris Baguette", takeaway: "Borrowed provenance (Paris) + category word (baguette): a Korean brand endorsing itself with the holy land of French baking — origin association is the hardest currency in baking, and you can borrow someone else's" },
+        { name: "Milk Bar", takeaway: "Two plain words made mischievous: milk (childhood comfort) + bar (adult nightlife) — the collision names their playful cereal-milk aesthetic exactly; common words, uncommon pairing" },
+        { name: "Dominique Ansel", takeaway: "The pastry chef's full name as the brand: when the product is craft, the maker is the guarantee — the Cronut inventor's name-as-signature is the endgame of maker-story naming" },
+      ],
+      pitfalls: [
+        "Category naming (\"Sweet Treats Bakery\"): you'll collide with every street's rivals and rank behind chains in delivery-app search forever",
+        "Leading with an unspellable French word: customers who can't say pâtisserie can't search it either — the referral chain breaks at the first retelling",
+        "Boxing in a home bakery: naming after your own nickname is warm, but check the name can travel before the second location or the online store arrives",
+        "Skipping trademark and delivery-platform checks: bakery names are squatter magnets — a same-name shop on the delivery app siphons your orders directly",
+      ],
+    },
+  },
+  bookstore: {
+    slug: "bookstore",
+    tlds: [
+      { tld: "com", zh: "线上书店与出版品牌的默认门牌，发行渠道都认", en: "The default address for online bookstores and presses — every channel recognizes it" },
+      { tld: "store", zh: "独立书店的线上店语义直给，实体与电商一名两用", en: "Says shop outright for indie bookstores — one name serving both the counter and the cart" },
+      { tld: "club", zh: "读书会与会员制书店的社群后缀，归属感直给", en: "The community suffix for book clubs and member bookstores — belonging built in" },
+    ],
+    zh: {
+      label: "书店出版",
+      title: "书店/独立出版怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "书店/独立出版/读书社群命名指南：文学出处、空间意象、书脊测试等 5 种思路，诚品/单向街/Shakespeare and Company 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的书店域名。",
+      intro:
+        "书店和出版品牌的名字有一个别的行业没有的资源库：全部人类文学。一句诗、一个典故、一位作家的致敬（Shakespeare and Company）都可以成为名字的出处——而出处本身就是品牌故事的第一页。这决定了书业命名的独特标准：名字要经得起「有文化的人」的审视，一个用典精准的名字是暗号，能瞬间筛选出同类。第二个特点是空间与精神的双重性：书店卖的从来不只是书，是「一个可以待着的地方」——名字要同时是地理坐标（单向街）和精神坐标（诚品的「诚」）。对独立出版而言还有书脊测试：社名会印在每一本书的书脊上，在书架上被一眼认出的名字才是好名字。这个行业利润薄、情怀重，名字是最便宜也最重要的资产——它决定了你在读者心里是一家店，还是一种立场。",
+      namingIdeas: [
+        "文学出处命名：从诗句、典故、致敬对象里取名（Shakespeare and Company 致敬原版巴黎书店）——出处即故事，开业那天品牌叙事已经写好；注意查原文版权与译名通行度",
+        "空间意象词：街、岛、灯塔、屋、角落——书店首先是「一个地方」，名字里的空间感邀请人进入并停留；独立书店的「岛」系命名（岛上书店们）正是此理",
+        "立场与主张命名：单向街（本雅明《单向街》，也是一种人生态度）——独立书业卖的是选书品味与价值立场，名字直接亮明主张能吸引同类、劝退错的人",
+        "书脊测试：把候选社名想象成印在书脊侧面的 2 厘米宽度里——够短吗？字形好认吗？出版社的名字每天在书架上被扫视，书脊是它最高频的广告位",
+        "留出业态延展空间：今天的书店明天可能是出版品牌、播客、文创与咖啡——名字定位在「精神坐标」而非「卖书的店」，业态长出来时名字不必换",
+      ],
+      cases: [
+        { name: "诚品", takeaway: "「诚」（诚恳的价值观）+「品」（品味与品物双关）：两个字同时立起道德感与审美感——中文书业命名「一字千金」的天花板，支撑起从书店到百货的业态扩张" },
+        { name: "单向街", takeaway: "本雅明《单向街》的直接借用：文学出处+「只此一个方向」的人生态度双重编码——读过的人会心一笑，没读过的人记住了独特意象；用典命名的标杆" },
+        { name: "Shakespeare and Company", takeaway: "致敬巴黎原版书店的再命名：名字本身就是一部书业传奇的续写——出处的厚度直接变成品牌的厚度，全球游客专程打卡的原因一半在名字" },
+        { name: "Penguin", takeaway: "一只和书毫无关系的企鹅：亲切、好记、图形化——1935 年用它宣告「好书可以平价」，动物图腾让严肃出版有了平易近人的脸；反差命名的世纪案例" },
+      ],
+      pitfalls: [
+        "直接叫「XX 书店/书屋」：品类词命名在地图搜索里和所有同行混排——书业的名字要能被单独记住与转述",
+        "用典太深无人能解：出处生僻到需要三段解释的名字，故事讲不出去——好的用典是「查得到」而非「猜不着」",
+        "书脊与门头不兼容：名字太长在书脊上印不下、在门头上远看不清——先做视觉测试再定名",
+        "锁死「卖书」业态：书店的生存之道是复合业态（咖啡、文创、活动）——名字里焊死「书」字未必错，但要确认它撑得起未来的空间",
+      ],
+    },
+    en: {
+      label: "Bookstores & publishing",
+      title: "How to Name a Bookstore or Indie Press: Strategies, Cases & Domains",
+      metaDescription:
+        "Bookstore and independent publishing naming guide: literary provenance, place imagery, the spine test, breakdowns of Shakespeare and Company/Penguin/Verso, recommended TLDs and pitfalls — then hunt an available bookstore domain with AI.",
+      intro:
+        "Bookstores and presses can draw on a naming resource no other industry has: the whole of literature. A line of verse, an allusion, an homage (Shakespeare and Company) can be the name's provenance — and provenance is page one of the brand story. That sets the trade's peculiar standard: the name must survive scrutiny by well-read people; a precisely chosen allusion works as a password that instantly finds your tribe. Second, a bookstore is both a place and a position: it never sold only books but somewhere to be — the name should work as a geographic coordinate and a spiritual one at once. For indie presses there's also the spine test: the imprint's name is printed on every spine, and only a name recognizable in a two-centimeter strip on a shelf earns its keep. This is a thin-margin, thick-conviction business — the name is its cheapest and most important asset: it decides whether readers see a shop or a stance.",
+      namingIdeas: [
+        "Name from literature: a verse, an allusion, an homage — provenance is a ready-made brand story on opening day; verify the source's copyright status and how well the reference travels",
+        "Use place imagery: street, island, lighthouse, corner, attic — a bookstore is first of all somewhere, and spatial words invite people in to stay",
+        "Name the stance: indie bookselling and publishing sell taste and conviction — a name that states the position (Verso: the left-hand page, and the left) attracts your readers and politely repels the wrong ones",
+        "Run the spine test: picture the imprint in a two-centimeter strip on a book spine — short enough? Recognizable at a glance? The spine is a publisher's highest-frequency ad slot",
+        "Leave room beyond books: today's bookstore becomes tomorrow's press, podcast, café and events brand — anchor the name to a spiritual coordinate, not to \"a shop that sells books\", so the name survives the expansion",
+      ],
+      cases: [
+        { name: "Shakespeare and Company", takeaway: "A renaming in homage to the original Paris shop: the name itself continues a legend of bookselling — the provenance's depth becomes the brand's depth; half the pilgrimage traffic is for the name" },
+        { name: "Penguin", takeaway: "A bird with nothing to do with books: friendly, memorable, instantly graphic — in 1935 it announced that good books could be cheap, giving serious publishing an approachable face; the century's best contrast naming" },
+        { name: "Verso", takeaway: "The technical term for a book's left-hand page, doubling as \"the left\": one word encoding both bookmaking craft and political stance — the sharpest pun in publishing" },
+        { name: "City Lights", takeaway: "Borrowed from Chaplin's film: urban glow, a beacon for wanderers, and Beat-generation rebellion in two common words — a bookstore name that became a literary movement's address" },
+      ],
+      pitfalls: [
+        "Category naming (\"The Book Nook\" et al.): blends into every map search — a bookstore's name must be individually memorable and retellable",
+        "Allusions too obscure to land: a reference needing three paragraphs of explanation tells no story — good allusions are lookable-up, not unguessable",
+        "Failing the spine and the signboard: a name too long for a book spine or illegible on a storefront from across the street — run the visual test before committing",
+        "Welding the name to bookselling alone: survival runs through cafés, events and publishing — a \"books\"-locked name isn't wrong, but confirm it can hold the future you're planning",
+      ],
+    },
+  },
+  florist: {
+    slug: "florist",
+    tlds: [
+      { tld: "com", zh: "节日订花的搜索高峰全在线上，.com 接住品牌搜索", en: "Holiday flower searches peak online — .com catches your branded traffic" },
+      { tld: "studio", zh: "花艺工作室的气质后缀，手作与设计感直给", en: "The natural suffix for floral design studios — craft and taste built in" },
+      { tld: "art", zh: "把花艺当作品的定位宣言，高端定制工作室加分", en: "A statement that floristry is art — extra credit for high-end bespoke studios" },
+    ],
+    zh: {
+      label: "花店花艺",
+      title: "花店/花艺工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "花店/花艺工作室/订阅鲜花命名指南：花语词根、诗意意象、贺卡署名测试等 5 种思路，野兽派/花点时间/Bloom & Wild 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的花艺域名。",
+      intro:
+        "花店的名字有个隐蔽而关键的出镜场景：贺卡。「XX 出品」印在卡片角落，随花束抵达收花人手里——名字是礼物的一部分，它要配得上被送出去。这决定了花艺命名的第一原则：名字本身要美，直白的「XX 鲜花店」在贺卡上等于没有署名。第二个特点是情绪价值的浓度：买花的人买的是心意的载体——爱意、歉意、纪念、自我取悦——名字带诗意与花语感，等于给每一束花预装了一句情话。第三是业态的分层：街边花店靠地图搜索与节日流量，订阅制鲜花靠品牌与复购，高端花艺工作室靠作品集与转介绍——名字的气质要匹配你要的那一层。共同点是这个行业的社交媒体依赖度极高：花是天生的镜头宠儿，名字会和作品一起出现在每一次客户晒图里。",
+      namingIdeas: [
+        "花语与植物词根：bloom、petal、flora、野、朵、栖——自带画面与香气的词根是花艺命名的母语；中文里「野」字近年尤其出彩（野兽派的「野」）",
+        "诗意意象借用：从诗句、节气、自然现象里取词（暮色、初雪、南风）——花是情绪的载体，名字先给情绪定调；确认意象与你的花艺风格一致",
+        "反差感命名：野兽派用粗犷艺术流派命名精致花艺——反差制造记忆点与话题性；温柔品类配一个有力量的名字，往往比温柔配温柔更出挑",
+        "贺卡署名测试：把候选名印在贺卡角落想象一下——收花的人看到这个名字，对花束的心意加分还是减分？花店名字的第一媒介是贺卡与晒图，不是门头",
+        "订阅制要好念好续：订阅鲜花品牌的名字出现在每月扣款单与续订提醒里——要短、正面、无歧义（「花点时间」一语双关还自带行动号召，是订阅命名的范本）",
+      ],
+      cases: [
+        { name: "野兽派", takeaway: "借马蒂斯的艺术流派命名花店：粗犷词配精致花艺的反差制造话题，艺术出处又抬高审美预期——从微博卖花到生活方式品牌，名字的容量决定了扩张的容量" },
+        { name: "花点时间", takeaway: "「花」字双关（花朵/花费）+「点时间」的生活主张：品牌名同时是订阅制的使用说明与情绪广告——中文双关命名在订阅电商里的教科书" },
+        { name: "Bloom & Wild", takeaway: "bloom（绽放）+ wild（野性）：两个词定调「自然而不匠气」的英式花艺审美，& 结构自带精品店气质——英文花艺命名「气质词对仗」的标准结构" },
+        { name: "FlowerPlus", takeaway: "品类词+Plus 的直给结构：牺牲诗意换取「鲜花，更多一点」的秒懂——订阅制大众市场的务实选择，证明命名策略要匹配客单价与规模野心" },
+      ],
+      pitfalls: [
+        "「XX 鲜花店」式品类命名：地图搜索里和每个街角的同行混排，贺卡上毫无心意加成",
+        "意象与风格错位：名字走「野」系，作品却是标准韩式包装——名与实的落差会在第一次开箱时透支信任",
+        "生僻字与拗口拼写：花店订单一半靠口头与微信转述——念不出、打不出的名字在转介绍链条上必然折损",
+        "忽略节日流量入口：情人节、母亲节的搜索高峰决定全年营收——名字在地图与外卖平台上的可搜索性要提前验证",
+      ],
+    },
+    en: {
+      label: "Florists",
+      title: "How to Name a Florist or Floral Studio: Strategies, Cases & Domains",
+      metaDescription:
+        "Florist and floral design naming guide: botanical roots, poetic imagery, the gift-card signature test, breakdowns of Bloom & Wild/The Beast Shop/Interflora, recommended TLDs and pitfalls — then hunt an available florist domain with AI.",
+      intro:
+        "A florist's name has a hidden but decisive stage: the gift card. Printed in the corner of a card, it travels with the bouquet into the recipient's hands — the name is part of the gift, and it must deserve to be given. That sets principle one: the name itself must be beautiful; a flat \"City Flower Shop\" on a gift card is no signature at all. Second, flowers carry the highest emotional concentration in retail — love, apology, remembrance, self-care — so a name with poetry pre-installs a sentiment into every bouquet. Third, the trade is layered: corner shops live on map search and holiday spikes, subscription brands on retention, high-end studios on portfolios and referrals — the name's temperament must match the layer you're aiming at. All layers share one dependency: flowers are born camera darlings, and your name will co-star in every customer's post.",
+      namingIdeas: [
+        "Mine botanical roots: bloom, petal, flora, stem, wild — words that carry scent and image before meaning; the mother tongue of floral naming",
+        "Borrow poetic imagery: dusk, first snow, south wind — flowers are emotional vessels, and the name sets the feeling first; make sure the image matches your actual arranging style",
+        "Try contrast naming: a fierce name on delicate work creates memorability and talkability (naming a floral house after Fauvism is the classic move) — soft category + strong name often beats soft + soft",
+        "Run the gift-card test: picture the name printed in a card's corner — does it add to the sentiment of the bouquet or subtract? A florist's first media are gift cards and customers' posts, not the shopfront",
+        "Keep subscriptions short and sweet: a subscription flower brand's name appears on every monthly charge and renewal notice — short, positive, unambiguous (Bloom & Wild reads like a promise, not a transaction)",
+      ],
+      cases: [
+        { name: "Bloom & Wild", takeaway: "bloom + wild: two words setting the natural-not-fussy tone of British floristry, with the ampersand lending boutique polish — the standard structure of paired temperament words" },
+        { name: "The Beast Shop", takeaway: "Fauvism (the \"wild beasts\" of art) naming refined floristry: contrast creates talkability while the art provenance raises aesthetic expectations — the name's capacity enabled expansion from bouquets to a lifestyle brand" },
+        { name: "Interflora", takeaway: "inter (between) + flora: a name that is literally the business model — flowers delivered across distances through a florist network; infrastructure naming from 1923 that still reads modern" },
+        { name: "FlowerPlus", takeaway: "Category word + Plus: trading poetry for instant comprehension — \"flowers, and a bit more\"; the pragmatic choice for mass-market subscriptions, proof that naming strategy must match price point and scale ambition" },
+      ],
+      pitfalls: [
+        "Category naming (\"City Flower Shop\"): blends into every corner rival on the map and adds nothing on a gift card",
+        "Image-style mismatch: a wild, untamed name over standard-issue wrapped bouquets — the gap between name and work spends trust at the very first unboxing",
+        "Obscure spellings and tongue-twisters: half of florist orders travel by voice and chat referral — a name that can't be said or typed decays at every hop",
+        "Ignoring the holiday search spike: Valentine's and Mother's Day decide the year's revenue — verify the name's searchability on maps and delivery platforms before committing",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
