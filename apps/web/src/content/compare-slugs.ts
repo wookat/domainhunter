@@ -147,6 +147,12 @@ export const COMPARE_SLUGS = [
   "wine-vs-bar",
   "kitchen-vs-restaurant",
   "garden-vs-farm",
+  "photography-vs-photos",
+  "events-vs-live",
+  "solutions-vs-services",
+  "consulting-vs-expert",
+  "software-vs-app",
+  "services-vs-agency",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

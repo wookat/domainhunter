@@ -3193,6 +3193,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Family farms & direct-to-consumer produce", "Organic & origin food brands", "Agritourism & leisure farming", "Agtech & compute farms (the farm pun)"],
     },
   },
+  "photography-vs-photos": {
+    slug: "photography-vs-photos",
+    a: "photography",
+    b: "photos",
+    zh: {
+      title: ".photography 和 .photos 怎么选：手艺身份与照片本身的对比",
+      metaDescription: ".photography 卖「摄影这门手艺」的专业身份，.photos 卖「照片本身」的轻快直白。对比两个摄影后缀的语义、长度与价格差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一个行业的两副面孔。.photography 卖手艺——摄影师个人作品集、婚礼与人像工作室、商业与产品摄影用 name.photography，全拼写出「摄影是我的职业」，名片与作品集水印上最见功力；Identity Digital 运营，注册约 $6、续费约 $29/年，行业后缀温和档；代价是十一个字母的长度，主体名必须短，口播成本也高。.photos 卖照片——图库与相册站、活动照片交付、照片打印与周边、图片分享社区用 name.photos，六个字母轻快直白，「这里有照片看」的意思秒懂；注册约 $8、续费约 $24/年，比 .photography 还便宜一点。判断标准：卖「服务与专业身份」——接单拍摄、档期预约、个人品牌 → .photography 的正式感更准；卖「照片这个东西」——看图、存图、买图、晒图 → .photos 更短更顺口。不少摄影师两个都用：name.photography 做作品集官网，客片交付走 gallery.photos 式的短域名。共同注意：摄影获客重平台与口碑，域名的角色是作品集与预约入口；两个后缀认知度都不如 .com，首屏视觉要立刻像个摄影站。",
+      pickA: ["摄影师个人作品集与预约", "婚礼与人像工作室", "商业与产品摄影服务", "摄影课程与手艺内容"],
+      pickB: ["图库与在线相册", "客片交付与照片分享", "照片打印与周边电商", "图片社区与照片墙"],
+    },
+    en: {
+      title: ".photography vs .photos: The Craft or The Pictures",
+      metaDescription:
+        ".photography sells the craft and professional identity; .photos sells the pictures themselves. Compare the two photo suffixes on semantics, length and pricing, then hunt names available on both.",
+      verdict:
+        "Two faces of the same trade. .photography sells the craft — photographer portfolios, wedding and portrait studios, commercial and product shooters on name.photography spell out \"photography is my profession\" in full, strongest on business cards and portfolio watermarks; run by Identity Digital at about $6 to register and $29/yr to renew, the mild tier among industry suffixes; the cost is length — eleven letters means the front word must stay short, and spoken-out-loud friction is real. .photos sells the pictures — galleries and album sites, client-photo delivery, print and merch shops, photo-sharing communities on name.photos read instantly as \"pictures live here\" in a brisk six letters; about $8 to register and $24/yr to renew, slightly cheaper than .photography. The test: selling service and professional identity — bookings, availability, personal brand → .photography's formality is truer; selling the photos as the thing — viewing, storing, buying, sharing → .photos is shorter and smoother. Many photographers run both: the portfolio on name.photography, client delivery on a short gallery-style .photos. Shared notes: photographers win clients on platforms and word of mouth, so the domain is the portfolio and booking front door; and neither suffix carries .com-level recognition, so the first screen must look like a photo site immediately.",
+      pickA: ["Photographer portfolios & bookings", "Wedding & portrait studios", "Commercial & product shooting", "Photo courses & craft content"],
+      pickB: ["Stock galleries & online albums", "Client-photo delivery & sharing", "Print & photo merch shops", "Photo communities & walls"],
+    },
+  },
+  "events-vs-live": {
+    slug: "events-vs-live",
+    a: "events",
+    b: "live",
+    zh: {
+      title: ".events 和 .live 怎么选：活动日历与正在直播的对比",
+      metaDescription: ".events 卖「活动排期」的日历感，.live 卖「正在进行」的即时感。对比两个现场后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都指向「现场」，时态不同。.events 是日历——活动策划与执行公司、会展与峰会主办方、演出售票与城市活动指南、婚礼派对策划用 name.events，天然复数读出来就是「这里有很多场活动」，做系列活动与年度大会尤其顺；Identity Digital 运营，注册约 $10、续费约 $37/年，活动行业客单价下无压力。.live 是进行时——直播主播与直播平台、线上演出与电竞赛事、24 小时电台式内容用 name.live，「正在播」的即时感从域名开始；首年促销常见几块钱、续费约 $25/年，价格更轻，但语义强绑定「实时」，做录播与图文内容会名不副实。判断标准：卖「排期与组织」——观众看日历、买票、报名 → .events 的日历感更准；卖「此刻与陪伴」——观众点开就看、追直播间 → .live 的即时感无可替代。线上活动平台卡在中间：以议程与报名为主用 .events，以直播观看为主用 .live。共同注意：两个行业获客都重社交裂变与平台分发，域名的角色是品牌官网与入口；活动与直播都有强时效性，主体名选能长期复用的品牌词，别把日期或单场活动名写进域名。",
+      pickA: ["活动策划与会展公司", "峰会与系列活动品牌", "演出售票与活动日历", "婚礼派对与社群聚会"],
+      pickB: ["直播主播与直播平台", "线上演出与电竞赛事", "实时数据与直播工具", "24 小时电台式内容"],
+    },
+    en: {
+      title: ".events vs .live: The Calendar or The Broadcast",
+      metaDescription:
+        ".events sells the calendar of what's coming; .live sells the thrill of what's happening now. Compare the two showtime suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both point at the stage; the tense differs. .events is the calendar — event planners and production companies, conference and summit hosts, ticketing and city event guides, wedding and party planners on name.events read as \"many happenings live here\" thanks to the natural plural, perfect for series and annual gatherings; run by Identity Digital at about $10 to register and $37/yr to renew, painless against event-industry ticket sizes. .live is the present tense — streamers and live platforms, online concerts and esports broadcasts, always-on radio-style content on name.live start the \"we're on air\" feeling at the address; promo first years often run a few dollars with renewal near $25/yr, lighter on price, but the semantics bind hard to real-time — recorded or text content on .live rings false. The test: selling schedule and organization — audiences browse a calendar, buy tickets, register → .events is truer; selling right-now and presence — audiences click in and watch → .live's immediacy is unmatched. Online event platforms sit in between: agenda-and-registration-led picks .events, watch-the-stream-led picks .live. Shared notes: both trades win audiences through social virality and platform distribution, so the domain is the brand home and entry point; and both are time-sensitive businesses — pick a reusable brand word, never a date or a single show's name.",
+      pickA: ["Event planners & production firms", "Conference & summit brands", "Ticketing & event calendars", "Weddings, parties & meetups"],
+      pickB: ["Streamers & live platforms", "Online concerts & esports", "Real-time data & live tooling", "Always-on radio-style content"],
+    },
+  },
+  "solutions-vs-services": {
+    slug: "solutions-vs-services",
+    a: "solutions",
+    b: "services",
+    zh: {
+      title: ".solutions 和 .services 怎么选：解决问题与提供服务的对比",
+      metaDescription: ".solutions 说「我帮你解决问题」，.services 说「我提供这些服务」。对比两个商务后缀的语气、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一对近义词，语气差一档。.solutions 是顾问腔——IT 服务与系统集成、定制软件、咨询公司与行业方案商用 name.solutions，在 RFP 与投标文件里就是行业黑话本话，说的是「你有问题，我有方案」；Identity Digital 运营，注册约 $4 是便宜档、续费约 $25/年也温和，B2B 客单价下几乎隐形。.services 是清单腔——会计法务人力等专业服务、家政维修安装、企业外包与本地服务商用 name.services，说的是「我提供这些服务，明码标价」，蓝领与本地生意用它反而更实在可信；注册约 $9、续费约 $31/年。判断标准：客户买的是「结果与方案」——项目制、定制化、按方案报价 → .solutions 的顾问感更配；客户买的是「服务本身」——按次按月、标准化、看菜单下单 → .services 的直白更可信。两个都要避免空洞：主体名务必具体（行业词、技术词、动词），「泛词 + solutions/services」是企业官网最容易显得空洞的写法。共同注意：两个都是复数商务词、2C 品牌慎用；企业采购周期长，域名的角色是稳定专业的官网与企业邮箱，别指望域名本身带来流量。",
+      pickA: ["IT 服务与系统集成", "定制软件与开发外包", "咨询公司与行业方案商", "B2B 技术品牌"],
+      pickB: ["会计法务等专业服务", "家政维修与安装服务", "企业外包与托管运维", "本地生活服务商"],
+    },
+    en: {
+      title: ".solutions vs .services: We Fix Problems or We Offer Services",
+      metaDescription:
+        ".solutions says \"we fix your problem\"; .services says \"here's what we offer\". Compare the two business suffixes on tone, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Near-synonyms, one register apart. .solutions is consultant-speak — IT services and systems integrators, custom software shops, consultancies and industry vendors on name.solutions talk the native language of RFPs and tenders: \"you have a problem, we have the answer\"; run by Identity Digital at about $4 to register — the cheap tier — and a mild $25/yr to renew, invisible against B2B deal sizes. .services is menu-speak — accounting, legal and HR firms, cleaning, repair and installation trades, outsourcing and local providers on name.services say \"here is what we offer, priced and listed\", which reads more credible for trades and local businesses precisely because it is humbler; about $9 to register and $31/yr to renew. The test: clients buy outcomes and proposals — project-based, customized, quoted per solution → .solutions' consulting tone fits; clients buy the service itself — per-visit or monthly, standardized, ordered off a menu → .services' plainness earns more trust. Both punish vagueness: make the front word concrete (an industry, technology or trade word) — vague word + solutions/services is the fastest way to sound hollow. Shared notes: both are plural business words, wrong register for consumer brands; and enterprise buying cycles are long, so the domain's job is a stable, professional site and email — don't expect the suffix itself to bring traffic.",
+      pickA: ["IT services & systems integrators", "Custom software & dev shops", "Consultancies & industry vendors", "B2B technology brands"],
+      pickB: ["Accounting, legal & HR firms", "Cleaning, repair & installation", "Outsourcing & managed ops", "Local service providers"],
+    },
+  },
+  "consulting-vs-expert": {
+    slug: "consulting-vs-expert",
+    a: "consulting",
+    b: "expert",
+    zh: {
+      title: ".consulting 和 .expert 怎么选：职业身份与专业断言的对比",
+      metaDescription: ".consulting 说「我以此为业」，.expert 说「我很懂这个」。对比两个专家后缀的语气、价格与续费差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在卖专业，宣称方式不同。.consulting 是职业陈述——独立顾问、精品咨询公司、战略/IT/营销咨询用 name.consulting，「姓氏 + .consulting」是麦肯锡式传统写法，企业采购语境里正式可信，name@name.consulting 的邮箱签名本身就是广告；Identity Digital 运营，注册约 $21、续费约 $44/年，对咨询客单价九牛一毛；代价是十个字母偏长，主体名用姓氏或领域词。.expert 是能力断言——细分领域专家、技术顾问、评测与攻略内容、付费问答用 name.expert，六个字母更短更响，「领域词 + .expert」读出来就是定位宣言；注意价格结构：注册约 $7 很低，但续费约 $50/年比 .consulting 还贵——典型的首年引流定价，按续费核算预算。判断标准：卖「咨询这门生意」——按项目签约、出报告、进采购流程 → .consulting 的职业感更配；卖「我这个人的判断」——个人 IP、内容变现、付费咨询 → .expert 的断言更响亮。还有一层语气差：expert 是自封的形容词，配合真实履历与案例才立得住，否则容易显得王婆卖瓜；consulting 是中性的行业词，没有这个风险。共同注意：两个行业获客都靠人脉与内容，域名的角色是专业官网与信任背书，首屏放案例与资质比放口号有用。",
+      pickA: ["独立顾问与精品咨询公司", "战略/IT/营销咨询", "企业采购与投标场景", "顾问企业邮箱与官网"],
+      pickB: ["细分领域个人专家 IP", "评测攻略与专业内容", "付费问答与专家咨询", "想要更短更响的域名"],
+    },
+    en: {
+      title: ".consulting vs .expert: The Profession or The Claim",
+      metaDescription:
+        ".consulting states a profession; .expert asserts mastery. Compare the two expertise suffixes on tone, pricing and renewal traps, then hunt names available on both.",
+      verdict:
+        "Both sell expertise; they claim it differently. .consulting states a profession — independent consultants, boutique firms, strategy, IT and marketing advisories on name.consulting follow the McKinsey tradition of surname + .consulting, read formal and credible in enterprise procurement, and a name@name.consulting email signature is an ad in itself; run by Identity Digital at about $21 to register and $44/yr to renew, a rounding error against consulting fees; the cost is ten letters — keep the front word to a surname or field word. .expert asserts mastery — niche specialists, technical advisors, review and how-to content, paid Q&A on name.expert get a shorter, punchier six letters where field word + .expert reads as a positioning statement; watch the pricing though: about $7 to register but ~$50/yr to renew — more than .consulting — classic first-year-bait pricing, so budget on the renewal. The test: selling consulting as a business — project contracts, reports, procurement processes → .consulting's professional register fits; selling your personal judgment — personal brand, content monetization, paid advice → .expert's claim rings louder. One more tonal note: \"expert\" is a self-awarded adjective that only stands up with real credentials and case studies behind it, while \"consulting\" is neutral trade vocabulary with no such risk. Shared notes: both trades win work through networks and content, so the domain is the professional site and trust anchor — lead the first screen with cases and credentials, not slogans.",
+      pickA: ["Independent consultants & boutiques", "Strategy, IT & marketing advisory", "Enterprise procurement contexts", "Professional email & firm sites"],
+      pickB: ["Niche personal expert brands", "Reviews & how-to content", "Paid Q&A & advice products", "Shorter, punchier domain"],
+    },
+  },
+  "software-vs-app": {
+    slug: "software-vs-app",
+    a: "software",
+    b: "app",
+    zh: {
+      title: ".software 和 .app 怎么选：正经软件与轻快应用的对比",
+      metaDescription: ".software 卖「正经软件产品与公司」的正式感，.app 卖「装了就用」的轻快。对比两个软件后缀的气质、HTTPS 要求与价格，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都卖软件，体感不同。.software 是西装——软件公司官网、桌面与企业应用、行业系统、软件外包团队用 name.software，访客不用猜你卖什么，「行业 + .software」还能精准命中企业采购搜索；Identity Digital 运营，注册约 $16、续费约 $33/年；代价是八个字母偏长，主体名务必短。.app 是 T 恤——移动应用、小工具、独立开发者产品用 name.app，Google 运营的这个后缀自带开发者圈认知，三个字母短促轻快，「下载我」的意思从域名开始；注册约 $14、续费约 $16/年，续费比 .software 便宜一半，且强制 HTTPS 预载（浏览器拒绝非加密访问），安全基线直接拉满。判断标准：卖给企业、按席位或授权收费、有采购流程 → .software 的正式感更配；卖给个人、应用商店分发、点开就用 → .app 的轻快更准。桌面工具卡在中间：面向开发者与极客用 .app 也顺（很多 Mac 独立应用就是 name.app），面向企业 IT 用 .software 更稳。共同注意：.app 的 HTTPS 强制意味着必须配好证书才能上线，别拿它做纯跳转域名；两个后缀在应用商店与搜索里都不加分，域名的角色是官网、文档与下载入口。",
+      pickA: ["软件公司与产品官网", "桌面与企业级应用", "行业系统与采购场景", "软件外包与定制团队"],
+      pickB: ["移动应用与小工具", "独立开发者产品", "应用商店分发的产品", "想要更短更便宜的续费"],
+    },
+    en: {
+      title: ".software vs .app: The Suit or The T-Shirt",
+      metaDescription:
+        ".software reads formal — serious products and companies; .app reads instant — tap and use. Compare the two software suffixes on vibe, HTTPS rules and pricing, then hunt names available on both.",
+      verdict:
+        "Both sell software; they feel different. .software is the suit — software company sites, desktop and enterprise applications, industry systems and custom-dev teams on name.software leave no guessing about what you sell, and industry + .software nails enterprise procurement searches; run by Identity Digital at about $16 to register and $33/yr to renew; the cost is eight letters, so keep the front word short. .app is the T-shirt — mobile apps, utilities and indie-developer products on name.app ride Google's suffix with built-in developer recognition, three brisk letters that whisper \"install me\" from the address; about $14 to register and $16/yr to renew — half of .software's renewal — plus enforced HTTPS preload (browsers refuse unencrypted connections), which sets the security baseline for free. The test: selling to companies, priced per seat or license, with a procurement process → .software's formality fits; selling to individuals, distributed through app stores, tap-and-use → .app's lightness is truer. Desktop tools sit in between: developer- and geek-facing ones wear .app naturally (plenty of indie Mac apps live on name.app), enterprise-IT-facing ones read steadier on .software. Shared notes: .app's HTTPS enforcement means certificates must be ready before launch — don't use it for bare redirects; and neither suffix boosts app-store or search rankings, so the domain's job is the product site, docs and download page.",
+      pickA: ["Software companies & product sites", "Desktop & enterprise applications", "Industry systems & procurement", "Outsourcing & custom dev teams"],
+      pickB: ["Mobile apps & utilities", "Indie developer products", "App-store-distributed products", "Shorter name, cheaper renewal"],
+    },
+  },
+  "services-vs-agency": {
+    slug: "services-vs-agency",
+    a: "services",
+    b: "agency",
+    zh: {
+      title: ".services 和 .agency 怎么选：服务清单与创意团队的对比",
+      metaDescription: ".services 卖「明码标价的服务清单」，.agency 卖「有创意的专业团队」。对比两个乙方后缀的气质、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是乙方，气质两路。.services 是清单——会计法务人力等专业服务、家政保洁与维修安装、企业外包与本地服务商用 name.services，读出来就是「我提供这些服务」，朴素直白反而可信，「城市 + 行业 + .services」还能精准命中本地搜索；Identity Digital 运营，注册约 $9、续费约 $31/年。.agency 是团队——广告与品牌代理、设计工作室、数字营销、公关与增长团队用 name.agency，agency 一词自带「创意 + 专业 + 团队作战」的行业身份，创意行业的乙方用它比 .com 更圈内；首年促销常见十几块钱、续费约 $24/年，比 .services 还便宜。判断标准：卖「标准化的活」——按次按月计费、流程清晰、看菜单下单 → .services 的实在感更配；卖「创意与策略」——比稿、提案、按项目或月费服务 → .agency 的行业身份更准。中介类生意（保险、房产、招聘）两个都通：偏流程与清单用 .services，偏撮合与代理用 .agency 更贴词源。共同注意：两个都要求主体名说清「做什么的」，行业词或城市词入名最有效；乙方获客靠案例与口碑，域名的角色是作品集官网与询价入口，首屏放案例比放形容词有用。",
+      pickA: ["会计法务等专业服务", "家政维修与本地服务", "企业外包与托管运维", "标准化按单计费的生意"],
+      pickB: ["广告与品牌代理", "设计与数字营销工作室", "公关与增长团队", "保险房产招聘等中介"],
+    },
+    en: {
+      title: ".services vs .agency: The Menu or The Team",
+      metaDescription:
+        ".services sells a priced menu of what you do; .agency sells a creative professional team. Compare the two vendor suffixes on vibe, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are vendors; the vibes fork. .services is the menu — accounting, legal and HR firms, cleaning, repair and installation trades, outsourcing and local providers on name.services read as \"here is what we offer\", and the plainness earns trust; city + trade + .services even nails local search intent; run by Identity Digital at about $9 to register and $31/yr to renew. .agency is the team — advertising and brand agencies, design studios, digital marketing, PR and growth teams on name.agency inherit the word's built-in identity of creativity, professionalism and teamwork; in creative industries it reads more native than .com; promo first years often run a couple of dollars with renewal near $24/yr — cheaper than .services. The test: selling standardized work — per-visit or monthly billing, clear processes, ordered off a menu → .services' matter-of-factness fits; selling creativity and strategy — pitches, proposals, project or retainer engagements → .agency's industry badge is truer. Brokerage businesses (insurance, real estate, recruiting) can go either way: process-and-menu-led picks .services, matchmaking-and-representation-led picks .agency, closer to the word's root. Shared notes: both demand a front word that says what you do — trade or city words work hardest; and vendors win clients on portfolios and referrals, so the domain is the case-study site and quote front door — lead with work, not adjectives.",
+      pickA: ["Accounting, legal & HR firms", "Home repair & local services", "Outsourcing & managed ops", "Standardized per-job businesses"],
+      pickB: ["Advertising & brand agencies", "Design & digital marketing studios", "PR & growth teams", "Insurance, realty & recruiting brokers"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
