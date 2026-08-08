@@ -16,7 +16,11 @@ export interface ShortlistItem {
   status?: Status;
   /** 到期时间（ISO 字符串），仅 taken 且数据可得时存在 */
   expiresAt?: string;
+  /** 用户备注（≤120 字符），仅存本地，不随分享/同步外发 */
+  note?: string;
 }
+
+export const NOTE_MAX_LENGTH = 120;
 
 /** 重新核验后的单域名回写结果 */
 export interface RecheckResult {
@@ -91,6 +95,21 @@ export function useShortlist() {
 
   const clear = useCallback(() => setItems([]), []);
 
+  /** 设置/清除某条收藏的备注（空串即清除） */
+  const setNote = useCallback((domain: string, note: string) => {
+    setItems((prev) =>
+      prev.map((i) => {
+        if (i.domain !== domain) return i;
+        const trimmed = note.trim().slice(0, NOTE_MAX_LENGTH);
+        if (!trimmed) {
+          const { note: _drop, ...rest } = i;
+          return rest;
+        }
+        return { ...i, note: trimmed };
+      }),
+    );
+  }, []);
+
   /** 同步码导入：按域名去重合并 */
   const merge = useCallback((incoming: Omit<ShortlistItem, "addedAt">[]) => {
     setItems((prev) => {
@@ -120,5 +139,5 @@ export function useShortlist() {
     }
   }, []);
 
-  return { items, has, toggle, addMany, remove, clear, merge, lastCheckedAt, applyStatuses };
+  return { items, has, toggle, addMany, remove, clear, setNote, merge, lastCheckedAt, applyStatuses };
 }
