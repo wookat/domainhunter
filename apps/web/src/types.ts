@@ -225,6 +225,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   capital: { first: 41, renew: 412 },
   guru: { first: 19, renew: 248 },
   tips: { first: 59, renew: 182 },
+  directory: { first: 33, renew: 159 },
+  exchange: { first: 44, renew: 226 },
+  institute: { first: 56, renew: 159 },
+  international: { first: 59, renew: 182 },
+  partners: { first: 56, renew: 412 },
+  support: { first: 48, renew: 159 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
