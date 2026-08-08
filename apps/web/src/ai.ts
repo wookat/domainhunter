@@ -320,18 +320,72 @@ export async function generateUnderstanding(description: string, apiKey: string,
   }
 }
 
+// ---------------- EN word 路线配额硬保障（R224，修复 R218 P2-3） ----------------
+// EN_NAMING_HINT 的 prompt 级软配额对 LLM 不可靠（R218 en2 整轮 word=0，R195/R196 也有波动）。
+// 后端兜底：一轮解析完成后统计 theme 分布，word 为 0 且候选数达阈值时，追加一次带硬指令的
+// 补充请求（仅限 1 次，失败不阻塞主结果）。仅在配额失守时触发，正常路径 0 额外成本。
+
+/** 触发补发的最小候选数：整轮产出太少时（如流截断）word=0 属于正常波动，不补发 */
+export const EN_WORD_QUOTA_MIN_CANDIDATES = 8;
+/** 补发请求的候选数：word 路线软配额要求「各至少 2 个」，按 4 个请求留过滤余量 */
+export const EN_WORD_SUPPLEMENT_COUNT = 4;
+
+/** 统计候选的 theme 分布 */
+export function countThemes(candidates: AiCandidate[]): Record<AiTheme, number> {
+  const counts: Record<AiTheme, number> = { pinyin: 0, word: 0, coined: 0, blend: 0 };
+  for (const c of candidates) if (c.theme) counts[c.theme]++;
+  return counts;
+}
+
+/** word 路线配额是否失守：word 为 0 且候选数 ≥ 阈值时返回 true（需要补发） */
+export function needsWordSupplement(candidates: AiCandidate[]): boolean {
+  return candidates.length >= EN_WORD_QUOTA_MIN_CANDIDATES && countThemes(candidates).word === 0;
+}
+
+/** 补发轮硬指令：每条 label 必须是词典真实存在的完整英文单词，theme 全部标 word */
+export function buildWordSupplementDirective(count: number, exclude: string[]): string {
+  return [
+    `路线配额补发（硬指令）：上一批候选的 theme 分布中 word（现成英文单词）路线为 0，不满足配额。`,
+    `现在请再给出 ${count} 个候选，每一条都必须满足：label 是词典里真实存在的完整英文单词（隐喻词路线，如 amazon/anvil 式，与需求语义有一层聪明的关联），theme 必须全部标注为 "word"。`,
+    `禁止造词、禁止错拼变体、禁止两词拼接。`,
+    `严禁重复输出以下已出现过的名字：${exclude.join(", ")}`,
+  ].join("\n");
+}
+
+/** 合并补发结果：只收 theme 为 word 且 label 未出现过的候选，追加到主结果之后 */
+export function mergeWordSupplement(main: AiCandidate[], extra: AiCandidate[]): AiCandidate[] {
+  const seen = new Set(main.map((c) => c.label));
+  const picked = extra.filter((c) => c.theme === "word" && !seen.has(c.label));
+  return picked.length > 0 ? [...main, ...picked] : main;
+}
+
 export async function generateAiCandidates(
   description: string,
   apiKey: string,
   opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en" } = {},
 ): Promise<AiCandidate[]> {
+  let out: AiCandidate[];
   try {
-    return await generateOnce(description, apiKey, opts);
+    out = await generateOnce(description, apiKey, opts);
   } catch {
     // 瞬时错误/超时自动重试一次：带 jitter 退避，避免整次搜索直接报错
     await new Promise((r) => setTimeout(r, 400 + Math.random() * 600));
-    return await generateOnce(description, apiKey, opts);
+    out = await generateOnce(description, apiKey, opts);
   }
+  // R224：EN word 路线配额失守时补发一次（上限 1 次，失败不阻塞主结果）
+  if ((opts.lang ?? "zh") === "en" && needsWordSupplement(out)) {
+    try {
+      const extra = await generateOnce(description, apiKey, {
+        ...opts,
+        count: EN_WORD_SUPPLEMENT_COUNT,
+        wordSupplementExclude: out.map((c) => c.label),
+      });
+      out = mergeWordSupplement(out, extra);
+    } catch {
+      // 补发失败不影响主结果
+    }
+  }
+  return out;
 }
 
 const THEME_NAMES: Record<string, string> = { pinyin: "拼音/缩写", word: "现成英文单词", coined: "英文造词", blend: "拼音+英文混合" };
@@ -719,12 +773,17 @@ export function pinyinQuoteMismatch(label: string, meaning: string): boolean {
 async function generateOnce(
   description: string,
   apiKey: string,
-  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en" } = {},
+  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; wordSupplementExclude?: string[] } = {},
 ): Promise<AiCandidate[]> {
   const count = opts.count ?? 24;
   let user = `需求描述：${description}\n请给出 ${count} 个候选。`;
   if (opts.feedback && (opts.feedback.tried.length > 0 || opts.feedback.taken.length > 0)) {
     user += `\n\n${buildRefineHint(opts.feedback, opts.round ?? 2, opts.lang ?? "zh")}`;
+  }
+  // R224：word 路线配额补发轮，追加硬指令（每条必须是真实英文单词且 theme 标 word）
+  const isWordSupplement = opts.wordSupplementExclude !== undefined;
+  if (isWordSupplement) {
+    user += `\n\n${buildWordSupplementDirective(count, opts.wordSupplementExclude ?? [])}`;
   }
   const res = await fetch("https://api.deepseek.com/chat/completions", {
     method: "POST",
@@ -798,8 +857,9 @@ async function generateOnce(
     out.push({
       label,
       meaning,
-      // R179：theme 缺失/非法时强制归入 coined，保证 theme 永不为空
-      theme: THEMES.has(theme) ? (theme as AiTheme) : "coined",
+      // R179：theme 缺失/非法时强制归入 coined，保证 theme 永不为空；
+      // R224：补发轮硬指令要求全部为 word 路线，漏标时兜底归入 word（漏标即被丢弃会让补发白跑）
+      theme: THEMES.has(theme) ? (theme as AiTheme) : isWordSupplement ? "word" : "coined",
       scores: {
         length: clamp(s.length),
         readability: Math.max(clamp(s.readability) - readabilityPenalty, 0),
