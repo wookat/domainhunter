@@ -129,6 +129,12 @@ export const COMPARE_SLUGS = [
   "black-vs-gold",
   "rocks-vs-fun",
   "pink-vs-me",
+  "academy-vs-school",
+  "care-vs-doctor",
+  "coach-vs-expert",
+  "restaurant-vs-cafe",
+  "academy-vs-coach",
+  "restaurant-vs-bar",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

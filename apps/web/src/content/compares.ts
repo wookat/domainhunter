@@ -2797,6 +2797,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Personal brands, résumés, portfolios", "Newsletters and personal blogs", "Semantic-pun domains (hire.me style)", "Personal sites avoiding a single tone lock-in"],
     },
   },
+  "academy-vs-school": {
+    slug: "academy-vs-school",
+    a: "academy",
+    b: "school",
+    zh: {
+      title: ".academy 和 .school 怎么选：体系化学院与日常学校的对比",
+      metaDescription: ".academy 自带体系化、专业化的进阶感，.school 直白亲切适合面向孩子与家长。对比两个教育后缀的气质、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同属 Identity Digital 的教育后缀，说的却是两种「教」。.academy 讲「体系」——academy 一词在英语里自带成建制、专业化的意味，Khan Academy 把它在教育界的认知推到顶点：在线课程平台、编程训练营、企业培训与品牌学院（brand academy）用 name.academy，传达的是「一套课程体系」而非单节课；注册约 $12、续费约 $38/年。.school 讲「日常」——它是教育后缀里最直白的一个，name.school 读出来就是一所学校，气质亲切，幼儿园、K12 课外班、驾校舞校、兴趣班这类面向孩子与家长的场景刚好，「学一门手艺」的项目（sourdough.school 式）用它也出彩；注册约 $6、续费约 $29/年，两头都比 .academy 便宜。判断标准：课程成体系、面向成人或企业、想立「专业进阶」人设 → .academy 的进阶感更配；面向孩子家长、气质要亲切、或预算敏感 → .school 更实。共同注意：两者都不是办学资质，正规资质要页面另行呈现；且都是长后缀（7 与 6 个字母），主体名务必要短。",
+      pickA: ["在线课程平台与训练营", "企业培训与品牌学院", "面向成人的体系化课程", "「专业进阶」的品牌人设"],
+      pickB: ["幼儿园与 K12 课外班", "驾校舞校与兴趣班", "「学一门手艺」的轻量项目", "预算敏感的教育创业"],
+    },
+    en: {
+      title: ".academy vs .school: Structured Curriculum or Everyday Classroom",
+      metaDescription:
+        ".academy signals structured, professional curriculum; .school reads warm and literal for kids-and-parents audiences. Compare vibe, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are Identity Digital education suffixes, but they teach in different registers. .academy says structure — the word carries a sense of organized, professional curriculum, an association Khan Academy pushed to its peak: online course platforms, coding bootcamps, corporate training and brand academies on name.academy promise a program, not a single lesson; about $12 to register and $38/yr to renew. .school says everyday — the most literal education suffix there is, name.school reads as exactly what it is, warm and approachable: kindergartens, after-school programs, driving and dance schools, and hobby classes aimed at kids and parents fit perfectly, and learn-a-craft projects (the sourdough.school pattern) charm on it too; about $6 to register and $29/yr to renew — cheaper on both ends. The test: a structured curriculum for adults or companies, positioning as professional advancement → .academy's register fits; a kids-and-parents audience, a warm tone, or a tight budget → .school does more with less. Shared cautions: neither is an accreditation — formal credentials belong on the page; and both are long suffixes (seven and six letters), so keep the subject word short.",
+      pickA: ["Online course platforms & bootcamps", "Corporate training & brand academies", "Structured programs for adults", "Professional-advancement positioning"],
+      pickB: ["Kindergartens & K-12 after-school programs", "Driving, dance & hobby schools", "Learn-a-craft side projects", "Budget-sensitive education startups"],
+    },
+  },
+  "care-vs-doctor": {
+    slug: "care-vs-doctor",
+    a: "care",
+    b: "doctor",
+    zh: {
+      title: ".care 和 .doctor 怎么选：服务温度与专业身份的对比",
+      metaDescription: ".care 把「关怀」写进域名传达服务温度，.doctor 把医生身份写进域名建立专业权威。对比两个健康类后缀的语义、续费成本与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在大健康赛道，一个讲「我们在乎你」，一个讲「我是专业的」。.care 是温度——养老护理、居家照护、心理健康、母婴与宠物护理用 name.care，服务属性一秒传达，home.care 式组合本身就是搜索品类词，国际大牌还把 brand.care 用作客服售后入口；注册约 $12、续费约 $36/年，成本温和。.doctor 是身份——医生个人品牌、私人诊所、在线问诊、专科门诊用 name.doctor，专业权威从域名开始，「X 医生」的引申义还让 bike doctor、plant doctor 式维修养护生意自带亲切感；但注册约 $8 的低门槛背后是续费约 $93/年的高价，典型「首年甜、续费贵」。判断标准：主体是「机构与服务」（护理、照护、关怀型业务）→ .care 的温度更准、成本更省；主体是「执业者个人或诊所」要立专业人设 → .doctor 的身份感是 .care 给不了的，但预算必须按续费核算。共同注意：医疗语境都涉及执业资质与广告合规，资质信息必须页面清晰呈现；.doctor 在医疗场景更有暗示资质之嫌，非医疗的比喻用法反而没这个包袱。",
+      pickA: ["养老护理与居家照护", "心理健康与母婴护理", "宠物护理与关怀型服务", "品牌客户关怀入口"],
+      pickB: ["医生个人品牌与私人诊所", "在线问诊与专科服务", "口腔眼科等专科门诊", "维修养护类「X 医生」品牌"],
+    },
+    en: {
+      title: ".care vs .doctor: Service Warmth or Professional Authority",
+      metaDescription:
+        ".care puts compassion in the domain; .doctor puts the white coat in it. Compare the two health suffixes on semantics, renewal cost and fit, then hunt names available on both.",
+      verdict:
+        "Both live in the health economy; one says \"we care about you\", the other says \"I'm the professional\". .care is warmth — senior and home care, mental health, mother-and-baby and pet care on name.care declare the service instantly, combos like home.care read as search-category keywords, and global brands use brand.care as a customer-care portal; about $12 to register and $36/yr to renew keeps costs gentle. .doctor is identity — physician personal brands, private clinics, telehealth and specialist practices on name.doctor build authority from the address itself, and the \"X doctor\" metaphor gives bike-doctor or plant-doctor style repair businesses instant charm; but the modest ~$8 registration hides a ~$93/yr renewal — the classic cheap-first-year, expensive-renewal suffix. The test: the subject is an organization and its service (care, caregiving, compassion-led businesses) → .care is warmer and far cheaper to keep; the subject is a practitioner or clinic staking a professional identity → .doctor carries an authority .care can't, budgeted strictly on the renewal. Shared cautions: medical contexts carry licensing and advertising-compliance obligations — credentials must be displayed clearly; and .doctor can imply licensure in medical use, a burden the metaphorical uses don't carry.",
+      pickA: ["Senior & home care services", "Mental health & baby care", "Pet care & compassion-led brands", "Brand customer-care portals"],
+      pickB: ["Physician brands & private clinics", "Telehealth & specialist services", "Dental, eye & specialty practices", "\"X doctor\" repair & care brands"],
+    },
+  },
+  "coach-vs-expert": {
+    slug: "coach-vs-expert",
+    a: "coach",
+    b: "expert",
+    zh: {
+      title: ".coach 和 .expert 怎么选：带练身份与权威招牌的对比",
+      metaDescription: ".coach 说「我带你变强」，.expert 说「我是这个领域的权威」。对比两个专业身份后缀的语义、续费成本与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是把专业身份写进域名的后缀，姿态却不同。.coach 说「我带你变强」——健身私教、人生教练、职业教练、高管教练，凡是一对一带练的生意，name.coach 都是身份即域名，life.coach 这样的组合本身就是品类词；注册约 $11、续费约 $62/年。.expert 说「我是权威」——独立顾问、律师会计等专业人士、垂直咨询、深度评测与知识付费用 name.expert，seo.expert、tax.expert 式的「领域词 + .expert」就是一块数字招牌；注册约 $7 很低、续费约 $50/年，同样是首年甜续费贵。判断标准：交付形态是「陪伴式带练」（课程、训练营、一对一辅导），客户买的是过程 → .coach 的动作感更准；交付形态是「权威输出」（咨询意见、深度内容、专业服务），客户买的是判断 → .expert 的招牌感更配。两者续费都不便宜，只适合认真经营的获客主域而非囤货；且都是承诺型后缀——内容与案例撑不起时反而放大质疑，教练要挂 ICF 等认证，专家要有作品与案例，监管行业（法律、医疗、金融）的「专家」表述还要注意广告合规。",
+      pickA: ["健身私教与运动教练", "人生教练与职业教练", "高管教练与企业教练", "陪伴式课程与训练营"],
+      pickB: ["独立顾问与垂直咨询", "律师会计等专业人士", "深度评测与知识付费", "「领域词 + 权威」的数字招牌"],
+    },
+    en: {
+      title: ".coach vs .expert: Training Partner or Authority Sign",
+      metaDescription:
+        ".coach says \"I make you better\"; .expert says \"I'm the authority\". Compare the two professional-identity suffixes on semantics, renewal cost and fit, then hunt names available on both.",
+      verdict:
+        "Both weld a professional identity into the domain, in different postures. .coach says I make you better — personal trainers, life coaches, career and executive coaches, any one-on-one improvement business turns identity into address with name.coach, and combos like life.coach are category keywords outright; about $11 to register, $62/yr to renew. .expert says I'm the authority — independent consultants, lawyers and accountants, vertical consultancies, deep reviews and paid-knowledge sites on name.expert hang a digital shingle, with domain-word combos like seo.expert or tax.expert doing the positioning by themselves; about $7 to register but $50/yr to renew — cheap first year, real renewal. The test: the deliverable is guided practice (programs, bootcamps, one-on-one coaching) and clients buy the process → .coach's verb energy fits; the deliverable is authoritative judgment (advice, deep content, professional services) and clients buy the verdict → .expert's shingle fits. Both renew expensive — flagship client-acquisition domains only, no stockpiling — and both are promises: thin content amplifies doubt, so coaches should display certifications (ICF and the like), experts need work and case studies, and \"expert\" claims in regulated industries (law, medicine, finance) need compliance care.",
+      pickA: ["Personal trainers & sports coaches", "Life & career coaches", "Executive & business coaches", "Guided programs & bootcamps"],
+      pickB: ["Independent consultants & vertical advisory", "Lawyers, accountants & professionals", "Deep reviews & paid knowledge", "Field-word digital shingles (seo.expert)"],
+    },
+  },
+  "restaurant-vs-cafe": {
+    slug: "restaurant-vs-cafe",
+    a: "restaurant",
+    b: "cafe",
+    zh: {
+      title: ".restaurant 和 .cafe 怎么选：正餐门面与轻食空间的对比",
+      metaDescription: ".restaurant 全拼写清全服务餐厅的身份，.cafe 短小温暖适合咖啡馆与轻松聚集地。对比两个餐饮后缀的长度、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是把餐饮身份写进域名，选择先看业态、再看长度。.restaurant 是正餐门面——全服务餐厅、连锁品牌、餐饮集团、预订平台用 name.restaurant，行业身份一目了然；餐厅店名多是人名地名，.com 早被占光，而「店名 + .restaurant」库存极好，多品牌集团用统一后缀归拢旗下官网也优雅；注册约 $13、续费约 $52/年，对正经餐厅可忽略。但 restaurant 十个字母是最长后缀之一，店名必须短。.cafe 是轻食空间——四个字母短小温暖，独立咖啡店、烘焙工作室、猫咖书咖用 name.cafe，域名和店招完全同构；「cafe」在互联网语境里还是「轻松聚集地」的代名词，读书会、开发者社区拿它做线上客厅也顺；注册约 $5、续费约 $42/年，两头更便宜。判断标准：全服务正餐、多品牌集团、要「餐厅」二字的正式感 → .restaurant；咖啡轻食、休闲空间、或线上社区的温度感 → .cafe 更短更亲。共同注意：食客多从地图与点评平台进店，域名的角色是菜单、订座与品牌的稳定入口；快餐酒吧另有更贴的 .pizza/.bar 可选。",
+      pickA: ["全服务餐厅与连锁品牌", "餐饮集团多品牌官网", "预订与点评平台", "菜系与主题正餐厅"],
+      pickB: ["独立咖啡店与烘焙工作室", "猫咖书咖等主题空间", "轻食简餐与下午茶", "读书会与社区的线上客厅"],
+    },
+    en: {
+      title: ".restaurant vs .cafe: Full-Service Storefront or Cozy Corner",
+      metaDescription:
+        ".restaurant spells out a full-service dining identity; .cafe is short and warm for coffee shops and casual hangouts. Compare length, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both write the food business into the domain; choose by format first, length second. .restaurant is the full-service storefront — restaurants, chains, hospitality groups and booking platforms on name.restaurant are unmistakable; restaurant names are typically personal names or places whose .com vanished decades ago, while name + .restaurant inventory is wide open, and groups can unify multiple brand sites under one suffix; about $13 to register and $52/yr to renew is a rounding error for a real restaurant. The catch: at ten letters it's one of the longest suffixes anywhere, so the name in front must be short. .cafe is the cozy corner — four letters, warm and short: independent coffee shops, bakery studios, cat and book cafés on name.cafe make the domain and the shop sign one and the same, and since \"cafe\" doubles as internet shorthand for a relaxed gathering place, book clubs and developer communities use it as an online living room; about $5 to register and $42/yr to renew — cheaper on both ends. The test: full-service dining, multi-brand groups, the formality of the word \"restaurant\" → .restaurant; coffee, light meals, casual spaces or community warmth → .cafe is shorter and friendlier. Shared note: diners mostly arrive via maps and review platforms, so the domain's job is a stable home for menu, reservations and brand — and fast food or bars have tighter fits in .pizza and .bar.",
+      pickA: ["Full-service restaurants & chains", "Hospitality group brand sites", "Booking & review platforms", "Cuisine & theme dining"],
+      pickB: ["Independent coffee shops & bakeries", "Cat & book cafés and themed spaces", "Light meals & afternoon tea", "Community \"online living rooms\""],
+    },
+  },
+  "academy-vs-coach": {
+    slug: "academy-vs-coach",
+    a: "academy",
+    b: "coach",
+    zh: {
+      title: ".academy 和 .coach 怎么选：课程体系与个人带练的对比",
+      metaDescription: ".academy 卖一套课程体系，.coach 卖一个带练的人。对比两个培训类后缀的语义、续费成本与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同做「教人变强」的生意，卖的东西不同。.academy 卖「体系」——name.academy 传达的是成建制的课程：在线课程平台、编程训练营、企业培训与品牌学院用它，用户预期是一套教学产品，规模化交付、多讲师、有课程表；注册约 $12、续费约 $38/年，在培训类后缀里性价比高。.coach 卖「人」——name.coach 传达的是一对一带练的教练本人：健身私教、人生教练、高管教练用它，获客靠个人信任，「人名/细分领域 + .coach」把身份写进域名比任何 slogan 都高效；注册约 $11 与 .academy 相当，但续费约 $62/年明显更贵，预算要按续费核算。判断标准：产品是「课程」（可复制、可规模化、卖内容体系）→ .academy 的机构感更配，也更省；产品是「你这个人」（一对一、小班带练、卖陪伴与反馈）→ .coach 的身份感更准。成长路径也常见：个人教练做大后用 .academy 升级成课程品牌，两个后缀正好是业务的两个阶段。共同注意：都不是资质证明，教练认证（ICF 等）与课程口碑要页面呈现；主体名都要短，academy 七个字母、coach 五个字母，域名整体别过长。",
+      pickA: ["在线课程平台与训练营", "企业培训与品牌学院", "多讲师规模化教学产品", "从个人教练升级的课程品牌"],
+      pickB: ["健身私教与运动教练", "人生教练与高管教练", "一对一与小班带练", "「人名 + .coach」的个人 IP"],
+    },
+    en: {
+      title: ".academy vs .coach: A Curriculum or a Person",
+      metaDescription:
+        ".academy sells a structured program; .coach sells the person training you. Compare the two training suffixes on semantics, renewal cost and fit, then hunt names available on both.",
+      verdict:
+        "Both are in the business of making people better; they sell different products. .academy sells the program — name.academy promises an organized curriculum: online course platforms, coding bootcamps, corporate training and brand academies use it when the product is a teaching system with scale, multiple instructors and a syllabus; about $12 to register and $38/yr to renew, good value among training suffixes. .coach sells the person — name.coach promises the one-on-one trainer themselves: personal trainers, life coaches and executive coaches acquire clients on personal trust, and writing the identity into the domain (your name or niche + .coach) beats any slogan; registration (~$11) matches .academy, but renewal around $62/yr is clearly higher — budget on the renewal. The test: the product is a course (replicable, scalable, content-led) → .academy's institutional register fits and costs less to keep; the product is you (one-on-one, small groups, accountability and feedback) → .coach's identity signal is sharper. The growth path is common too: a solo coach who scales into a course brand graduates from .coach to .academy — the two suffixes map to two stages of the same business. Shared cautions: neither certifies anything — display coaching credentials (ICF etc.) and course outcomes on the page; and both are long-ish (seven and five letters), so keep the front word short.",
+      pickA: ["Online course platforms & bootcamps", "Corporate training & brand academies", "Scalable multi-instructor programs", "Course brands graduating from solo coaching"],
+      pickB: ["Personal trainers & sports coaches", "Life & executive coaches", "One-on-one & small-group training", "Your-name + .coach personal IP"],
+    },
+  },
+  "restaurant-vs-bar": {
+    slug: "restaurant-vs-bar",
+    a: "restaurant",
+    b: "bar",
+    zh: {
+      title: ".restaurant 和 .bar 怎么选：正餐招牌与夜生活霓虹的对比",
+      metaDescription: ".restaurant 全拼写清正餐身份，.bar 短促上口自带夜生活霓虹感。对比两个餐饮后缀的长度、价格结构与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个是白天的招牌，一个是夜里的霓虹。.restaurant 写清「正餐」——全服务餐厅、连锁品牌、餐饮集团用 name.restaurant，身份一目了然，店名词的 .com 被占也不愁，「店名 + .restaurant」库存极好；注册约 $13、续费约 $52/年，Identity Digital 运营，价格结构平稳。但它十个字母，店名必须短。.bar 是霓虹灯上的三个字母——鸡尾酒吧、清吧、livehouse、夜生活品牌用 name.bar，海报和霓虹灯上「XX.bar」就是完整店名，短促上口正是夜生活口头传播要的；开发者还能玩「条/栏」的双关做工具站。Team Internet 系运营，首年常见约 $3 的引流价、续费约 $52/年——首年便宜续费跳档，预算按续费核算，且保留与溢价词较多，下单前以注册商实时报价为准。判断标准：业态是坐下来吃饭的正餐 → .restaurant 的正式感与语义精度更配；业态是喝酒社交的夜场、或名字要印上霓虹灯 → .bar 的短促更帅。折中提示：既做正餐又做酒吧的 bistro 类业态，可主域用 .restaurant、酒吧线用 .bar 分线。共同注意：食客多从地图与点评进店，域名是菜单订座与品牌的稳定入口，名字都要好读好拼。",
+      pickA: ["全服务餐厅与连锁品牌", "餐饮集团多品牌官网", "菜系与主题正餐厅", "预订与点评平台"],
+      pickB: ["鸡尾酒吧与清吧", "livehouse 与夜生活品牌", "霓虹灯招牌式短域名", "开发者工具站（bar 双关）"],
+    },
+    en: {
+      title: ".restaurant vs .bar: Daytime Sign or Neon Lights",
+      metaDescription:
+        ".restaurant spells out full-service dining; .bar is three neon-ready letters for nightlife. Compare length, price structure and fit, then hunt names available on both.",
+      verdict:
+        "One is the daytime sign, the other the neon at night. .restaurant spells out full-service dining — restaurants, chains and hospitality groups on name.restaurant are unmistakable, and with restaurant-name .coms long gone, name + .restaurant inventory stays wide open; about $13 to register and $52/yr to renew under Identity Digital, with a flat price structure. The cost is length: ten letters means the name in front must be short. .bar is three letters made for neon — cocktail bars, lounges, livehouses and nightlife brands wear name.bar as the complete shop sign on posters and signage, and the short, punchy read is exactly what word-of-mouth nightlife needs; developers even pun on the UI \"bar\" for tool sites. Run by the Team Internet family, the first year is often a ~$3 teaser while renewal runs ~$52/yr — budget on the renewal, and note the registry holds back premium words, so confirm live registrar pricing before ordering. The test: a sit-down dining format → .restaurant's formality and precision fit; a drinks-and-social night venue, or a name destined for a neon sign → .bar is cooler and shorter. The hybrid play: bistro-style venues can run the main site on .restaurant with the bar line on .bar. Shared note: diners arrive via maps and review platforms — the domain is the stable home for menu, reservations and brand, and either way the name must read aloud easily.",
+      pickA: ["Full-service restaurants & chains", "Hospitality group brand sites", "Cuisine & theme dining", "Booking & review platforms"],
+      pickB: ["Cocktail bars & lounges", "Livehouses & nightlife brands", "Neon-sign-ready short domains", "Developer tool sites (the bar pun)"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
