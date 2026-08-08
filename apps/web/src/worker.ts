@@ -1544,11 +1544,11 @@ app.get("/prices", async (c) => {
 const WHY_META = {
   zh: {
     title: "为什么选 DomainHunter：好域名都被占了，换个找法",
-    desc: "传统域名查询只显示相似名，AI 起名工具不核验可注册。DomainHunter 用 Agent 多轮反思：理解寓意→构思→实时核验→反思再猎，直到凑够真正可注册的好名字。免费开源。",
+    desc: `传统域名查询只显示相似名，AI 起名工具不核验可注册。DomainHunter 用 Agent 多轮反思：四路线构思→${TLD_LIST.length} TLD 实时核验→跨轮去重反思再猎，配比价、到期监控、收藏分享、CSV 导出与 MCP 工具链。免费开源。`,
   },
   en: {
     title: "Why DomainHunter: all the good names are taken — hunt differently",
-    desc: "Classic domain search only shows look-alikes; AI name generators never verify availability. DomainHunter runs an agent loop — understand the meaning, brainstorm, verify live, reflect and hunt again — until there are enough truly registrable names. Free and open source.",
+    desc: `Classic domain search only shows look-alikes; AI name generators never verify availability. DomainHunter runs an agent loop — four naming routes, live checks across ${TLD_LIST.length} TLDs, cross-round dedup and reflection — plus price comparison, expiry monitoring, shortlist sharing, CSV export and an MCP server. Free and open source.`,
   },
 };
 
