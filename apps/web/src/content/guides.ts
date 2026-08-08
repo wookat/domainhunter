@@ -4575,6 +4575,372 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  crossfit: {
+    slug: "crossfit",
+    tlds: [
+      { tld: "com", zh: "会员按年付费的信任基线，箱体馆名在口碑里流通十年", en: "The trust baseline for annual memberships — a box's name circulates in word of mouth for a decade" },
+      { tld: "club", zh: "「俱乐部」直给社群属性，功能性训练馆的归属感后缀", en: "States the club outright — the belonging suffix for a functional-fitness community" },
+      { tld: "fun", zh: "训练可以很苦，品牌可以很燃——反差后缀替小馆记忆加分", en: "Training is brutal, the brand can be fun — a contrast suffix that makes a small box memorable" },
+    ],
+    zh: {
+      label: "CrossFit 综合体能",
+      title: "CrossFit/综合体能馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "CrossFit/综合体能馆命名指南：力量词根、部落感命名、白板喊名测试等 5 种思路，CrossFit/F45/Barry's 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的体能馆域名。",
+      intro:
+        "综合体能馆卖的不是器械使用权，是「一群人互相打气把自己练崩再练强」的部落归属感。这决定了它的命名逻辑与传统健身房（详见健身健康指南）截然不同：健身房名字要显得设备齐全服务周到，体能馆名字要有汗味、有战意、有社群图腾感——会员会把馆名印在队服上、纹在打卡照的话题标签里。第一个要点是商标红线：CrossFit 是注册商标，未挂靠授权（affiliate）不能把 CrossFit 写进馆名与域名，独立馆要用「功能性训练/体能」等品类词或干脆造词。第二是白板文化：每天的 WOD 写在白板上，教练喊着馆名口号带开场——名字必须喊得响、单音节或双音节最佳。第三是社群裂变获客：会员拉朋友来「免费体验课」是最大增长渠道，名字要在「周六来 X 玩一场」的邀约里自然带感。最后，体能馆是三公里生意但品牌是全网生意：赛事、周边、线上课都挂在同一个名字下，起名时就要按「小馆起步、品牌收尾」的规格选。",
+      namingIdeas: [
+        "力量与锻造词根：forge（锻造）、iron、grit（韧劲）、raw、力量、淬炼——名字先散发汗味与金属感；测试方法是想象它被吼出来当开场口号",
+        "部落图腾命名：动物与战斗意象（wolf、bison、斯巴达系）给社群一个可以穿在身上的图腾，队服、奖牌、话题标签都有了现成素材",
+        "避开 CrossFit 商标：未授权就用 fitness/strength/athletics 等品类词或自造词收尾，商标与域名一起查——挂靠转独立时名字还能无缝延续",
+        "白板喊名测试：教练喊「X 的兄弟们，3、2、1，开干！」——两个音节内、爆破音开头的名字最带劲；念着泄气的名字撑不起一节课的气势",
+        "社群邀约测试：把名字放进「周六来 X 体验一节课」——听起来像邀请去玩而非推销年卡的名字，才配得上裂变获客的主渠道",
+      ],
+      cases: [
+        { name: "CrossFit", takeaway: "cross（交叉）+ fit：「交叉训练」的品类词直接封为品牌，靠先发与社群运营把通用词做成全球商标——后来者学不了它的名字，但要学它「品类即品牌」的野心" },
+        { name: "F45", takeaway: "Functional（功能性）45 分钟：名字就是产品说明书——45 分钟功能性团课；字母+数字的极简结构全球连锁零翻译成本，课程制健身命名的教科书" },
+        { name: "Barry's", takeaway: "创始人名 + 所有格：精品团课的「某人家的训练场」气质，红灯房与队服文化让人名沉淀为图腾——人名命名在体能社群里格外抗过时" },
+        { name: "Gymshark", takeaway: "gym + shark：健身房里的鲨鱼——从车库缝纫机起家的体能服饰品牌，用「猛兽 + 场景」的组合词让训练者一秒代入猎手心态" },
+      ],
+      pitfalls: [
+        "未授权把 CrossFit 写进馆名或域名：商标函是行业最常见的开局劫难，挂靠资格变动时连招牌都要换",
+        "堆砌 elite/beast/extreme 自夸词：吓退恰恰是增长主力的小白体验客，气势要从社群来而非从形容词来",
+        "名字锁死单一课程：以 HIIT 或某赛事命名，课程体系一扩就打脸——品类会变，图腾不会",
+        "忽略同城重名与话题标签冲突：会员打卡靠话题标签聚合，标签被别的馆占了等于口碑流量替人做嫁衣",
+      ],
+    },
+    en: {
+      label: "CrossFit & functional fitness",
+      title: "How to Name a CrossFit Box or Functional Fitness Gym: Strategies, Cases & Domains",
+      metaDescription:
+        "CrossFit box and functional fitness gym naming guide: strength roots, tribe totems, the whiteboard shout test, breakdowns of CrossFit/F45/Barry's, recommended TLDs and pitfalls — then hunt an available gym domain with AI.",
+      intro:
+        "A functional fitness box doesn't sell equipment access — it sells the tribal belonging of a group cheering each other through workouts that break them down and build them back. That splits its naming logic from a traditional gym's (see the fitness guide): a gym name signals full-service facilities; a box name needs sweat, fight and totem energy — members will print it on team shirts and hashtag it under every workout photo. First, the trademark line: CrossFit is a registered mark, and non-affiliates cannot put it in the gym's name or domain — independent boxes should use category words like strength or athletics, or coin something ownable. Second, whiteboard culture: the day's WOD goes on the board and the coach shouts the gym's name to open class — the name must be shoutable, ideally one or two syllables. Third, growth runs on member referrals: \"come try a free Saturday class at X\" is the biggest funnel, and the name has to sound like an invitation, not a sales pitch. Finally, a box is a 3-km business but the brand is global: competitions, merch and online programming all hang off the same name — pick one built to outgrow the first lease.",
+      namingIdeas: [
+        "Root in strength and forging: forge, iron, grit, raw — the name should smell of chalk and steel before the tour starts; test each candidate by imagining it roared as a class opener",
+        "Pick a tribe totem: animal and battle imagery (wolf, bison, the Spartan register) gives the community a symbol to wear — shirts, medals and hashtags come pre-designed",
+        "Stay clear of the CrossFit mark: without affiliation, close with category words (fitness, strength, athletics) or a coinage; clear the trademark and domain together so the name survives an affiliation change",
+        "Run the whiteboard shout test: \"X crew — 3, 2, 1, go!\" — plosive openings within two syllables carry a class; a name that deflates when shouted can't hold the room",
+        "Run the invitation test: say \"come try a class at X on Saturday\" — the referral channel only works if the name sounds like fun being offered, not a membership being sold",
+      ],
+      cases: [
+        { name: "CrossFit", takeaway: "cross + fit: a category description crowned as a brand, turned into a global trademark by first-mover community building — you can't copy the name, but you can copy the category-as-brand ambition" },
+        { name: "F45", takeaway: "Functional training, 45 minutes: the name is the product spec; a letter-plus-number structure that franchises worldwide with zero translation cost — the textbook of class-format fitness naming" },
+        { name: "Barry's", takeaway: "A founder's first name with a possessive: boutique group training as one person's house style; the red-lit rooms and team merch turned a name into a totem — personal names age remarkably well in fitness tribes" },
+        { name: "Gymshark", takeaway: "gym + shark: an apex predator loose in the weight room — a garage-sewing-machine apparel brand whose beast-plus-place blend drops every lifter straight into hunter mindset" },
+      ],
+      pitfalls: [
+        "Using CrossFit in the name or domain without affiliation: the cease-and-desist letter is the category's most common opening disaster, and an affiliation change forces a full rebrand",
+        "Stacking elite/beast/extreme: self-praise words scare off the beginners who drive referral growth — intensity should come from the community, not the adjectives",
+        "Welding the name to one class format: naming after HIIT or a single competition breaks the day the programming expands — formats change, totems don't",
+        "Skipping the same-city and hashtag check: member check-ins aggregate under the hashtag; if another gym owns it, your word of mouth waters their garden",
+      ],
+    },
+  },
+  language: {
+    slug: "language",
+    tlds: [
+      { tld: "com", zh: "全球学习者的信任默认，语言产品天生跨国界", en: "The global learners' trust default — language products are born cross-border" },
+      { tld: "app", zh: "打卡型学习产品即应用，后缀零解释且全站强制 HTTPS", en: "A streak-based learning product is an app — zero explanation, HTTPS enforced zone-wide" },
+      { tld: "io", zh: "面向开发者与极客学习者的语言工具圈内标配", en: "The insider pick for language tools aimed at developers and power learners" },
+    ],
+    zh: {
+      label: "语言学习",
+      title: "语言学习产品怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "语言学习产品命名指南：跨语言易读、吉祥物人格、打卡传播测试等 5 种思路，Duolingo/多邻国/Babbel 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的语言学习域名。",
+      intro:
+        "语言学习产品的名字有个天然的悖论测试：你的用户按定义不精通你名字所用的语言——一个西班牙语学习者可能看不懂英文双关，一个学中文的美国人念不准四声。所以第一铁律是跨语言易读：名字要在目标学员的母语音系里也能轻松读出，元音开口大、音节结构简单的名字（Duolingo、Babbel）全球通吃。第二个特点是习惯经济：语言学习的生死线是每日打卡留存，名字连同吉祥物一起构成「每天来找我」的人格化提醒——绿色猫头鹰的威力证明名字与 IP 形象要当成一体来设计。第三是场景的双面性：对内是枯燥的记忆劳动，对外是「我在学 X 语」的社交展示——名字要让打卡分享显得轻盈有趣而非苦行。最后是品类扩张预留：从单一语种到多语种、从背单词到口语陪练，产品几乎必然扩科，名字锁死具体语种或技能（如 SpanishVocab）会成为路线图的天花板。",
+      namingIdeas: [
+        "跨语言音系测试：候选名让说西语、日语、阿拉伯语的朋友各念一遍——元音结尾、无辅音连缀的名字（-o、-a、-i 收尾）在全球市场错读率最低",
+        "语言词根玩变形：lingo、parla、habla、词、说——从各语言的「说/语」词根造词（Duolingo = duo + lingo），行业识别与独占性兼得",
+        "吉祥物先行命名：把名字和 IP 形象一起设计——能画成角色的名字（动物、拟人词）在打卡提醒、表情包与社交传播里天然占优",
+        "轻盈感优先：学语言够苦了，名字别再增加负担——避开 master/academy 的沉重感，用游戏感词根让「每天五分钟」的承诺显得可信",
+        "扩科压力测试：把名字放进「X 上新了日语口语课」——名字若含具体语种或技能词，扩科时就是自我打脸；用「说话/连接/世界」级别的意象留足空间",
+      ],
+      cases: [
+        { name: "Duolingo", takeaway: "duo（双/二重奏）+ lingo（语言）：既指「双语」又自带韵律感，五个音节全是开元音，任何母语者都能顺利念出——跨语言易读的满分示范" },
+        { name: "多邻国", takeaway: "Duolingo 的中文名不走音译走意译再造：「多个相邻的国家」把多语言学习翻译成地理意象，信达雅俱全——出海与入华的双语命名要各自为战再互相呼应" },
+        { name: "Babbel", takeaway: "源自 babble（牙牙学语）与巴别塔（Babel）的双重联想：既是婴儿学语的零门槛暗示，又是「重建巴别塔」的宏大叙事，双音节重复结构全球好念" },
+        { name: "italki", takeaway: "i + talk + i：「我说」的镜像结构暗合一对一真人对话的产品形态，全小写视觉像一句悄悄话——真人陪练赛道里人味十足的命名" },
+      ],
+      pitfalls: [
+        "名字锁死具体语种（LearnSpanishFast 类）：扩科即过期，且描述性命名毫无商标强度",
+        "用学员看不懂的双关：英文梗对英语学习者是障碍不是彩蛋——双关只在用户已精通的语言里成立",
+        "沉重的学术腔（Academy/Institute）：与「每天五分钟游戏化打卡」的产品承诺气质相悖，吓退最大众的休闲学习者",
+        "忽略目标市场的音译与商标：进入中日韩等市场需要本地名，出海前中英文名与商标要一起设计一起注册",
+      ],
+    },
+    en: {
+      label: "Language learning",
+      title: "How to Name a Language Learning App: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Language learning product naming guide: cross-language readability, mascot-first personas, the streak-share test, breakdowns of Duolingo/Babbel/italki, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Language learning names face a built-in paradox test: your users, by definition, aren't fluent in the language your name is written in — a Spanish learner may miss the English pun, and an American learning Chinese can't hit the tones. So rule one is cross-language readability: the name must pronounce easily in your learners' native phonologies, which is why open-vowel, simple-syllable names (Duolingo, Babbel) win globally. Second, this is a habit economy: daily-streak retention is the survival metric, and the name works alongside a mascot as a personified \"come back to me\" — the green owl proves name and character should be designed as one asset. Third, the category is two-faced: privately it's memorization labor, publicly it's the social flex of \"I'm learning X\" — the name should make streak-sharing feel light and playful, not penitential. Finally, leave room to expand: almost every product grows from one language to many and from vocabulary to speaking practice, so a name welded to a specific language or skill (SpanishVocab) becomes the roadmap's ceiling.",
+      namingIdeas: [
+        "Run the phonology test: have Spanish, Japanese and Arabic speakers read each candidate aloud — vowel endings and zero consonant clusters (-o, -a, -i) misread least across markets",
+        "Coin from speech roots: lingo, parla, habla, talk — blending \"speak/language\" roots from different tongues (Duolingo = duo + lingo) buys category signal and ownability at once",
+        "Design mascot-first: pick a name that can be drawn as a character — animal and persona names dominate in streak reminders, sticker packs and social shares",
+        "Keep it light: learning a language is hard enough — skip the heavy master/academy register and use playful roots that make \"five minutes a day\" sound believable",
+        "Stress-test expansion: say \"X just launched Japanese speaking practice\" — if the name contains a language or skill word, every expansion contradicts it; name at the altitude of speech, connection or world",
+      ],
+      cases: [
+        { name: "Duolingo", takeaway: "duo + lingo: hints at bilingualism with a built-in rhythm; five syllables of open vowels that any native speaker can pronounce — a perfect score on cross-language readability" },
+        { name: "Babbel", takeaway: "A double allusion to babble (a baby's first speech) and the Tower of Babel: zero-barrier learning on one level, rebuilding Babel on another — with a reduplicated two-syllable shape that travels everywhere" },
+        { name: "italki", takeaway: "i + talk + i: a mirrored \"I talk\" structure echoing the one-on-one human conversation at the product's core, lowercased like a whisper — the most human name in the tutoring lane" },
+        { name: "Anki", takeaway: "Japanese for \"memorization\" (暗記): borrowing the term of art from the language-learning community it serves — two crisp syllables that became the generic verb for spaced repetition" },
+      ],
+      pitfalls: [
+        "Welding the name to one language (LearnSpanishFast et al.): the first expansion expires it, and descriptive names carry zero trademark strength",
+        "Puns your learners can't parse: an English pun is a barrier, not an Easter egg, to someone still learning English — wordplay only works in languages your users already own",
+        "The heavy academic register (Academy, Institute): it contradicts the gamified five-minutes-a-day promise and scares off the casual majority",
+        "Skipping local names and marks for target markets: entering China, Japan or Korea needs a designed local name — build and register the bilingual pair together before launch",
+      ],
+    },
+  },
+  resume: {
+    slug: "resume",
+    tlds: [
+      { tld: "com", zh: "求职者把职业前途交给你，信任后缀不容打折", en: "Job seekers hand you their career — the trust suffix is non-negotiable" },
+      { tld: "io", zh: "简历构建器与求职 SaaS 的技术感标配，工具属性直给", en: "The technical standard for resume builders and job-search SaaS — tool energy built in" },
+      { tld: "me", zh: "「我的简历/我的主页」语义天成，个人品牌工具的巧后缀", en: "\"My resume, my page\" — semantically perfect for personal-brand tools" },
+    ],
+    zh: {
+      label: "简历求职",
+      title: "简历/求职工具怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "简历与求职工具命名指南：职业动词、信心词根、焦虑时刻测试等 5 种思路，LinkedIn/Indeed/BOSS 直聘等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的求职工具域名。",
+      intro:
+        "求职工具的用户处在人生压力最大的时刻之一：深夜改第八版简历、投出去石沉大海、面试前手心冒汗。名字的第一使命是做情绪的「定心丸」——它要传递「用了我，你更有底气」的信心感，而不是放大焦虑的「饥饿感」。第二个特点是场景的私密性与展示性并存：改简历是私密的自我审视，但工具名会出现在简历导出页脚、个人主页域名里被 HR 看到——名字要让求职者敢于「被看见在用」，廉价感或投机感（QuickJob 类）会连累使用者的专业形象。第三是双边市场的语感兼容：很多求职产品同时服务求职者与招聘方，名字要在「我在 X 上找工作」与「我们在 X 上招人」两句话里都成立。最后是全球通用性：求职是全球刚需，动词化、短音节的名字（LinkedIn 的 in、Indeed 的确实）能跨市场复用，而依赖本地梗的名字出不了国门。",
+      namingIdeas: [
+        "职业动词与前进意象：hire、land（拿下 offer）、rise、leap、启程、上岸——把「求职成功那一刻」的动作写进名字，用户每次打开都被提醒终点在哪",
+        "信心词根替代焦虑词根：boost、edge、prime、底气——测试方法是想象凌晨一点投完简历看到这个名字，它应该像教练拍肩而不是倒计时闹钟",
+        "身份升维命名：不叫「简历工具」叫「职业主页/个人品牌」——resume 只是载体，用户买的是「更好的职业自己」；意象选 profile、story、path 级别",
+        "HR 可见性测试：把名字放进简历页脚「Made with X」——HR 看到这个名字会加分、无感还是扣分？敢印在简历上的名字才是好名字",
+        "双边语感测试：「我在 X 上找工作」和「我们用 X 招人」各念一遍——只在一边成立的名字，天花板就是单边工具",
+      ],
+      cases: [
+        { name: "LinkedIn", takeaway: "linked（被连接的）+ in（圈内）：两个最简单的词说清「职业人脉网络」，还自带「in 了没」的圈层暗示——双关词根在求职赛道的天花板之作" },
+        { name: "Indeed", takeaway: "副词「确实/的确」做品牌：在充斥承诺的求职市场里用一个「说到做到」的词建立笃定感，四个字母的常见词靠先发做成全球最大招聘搜索" },
+        { name: "BOSS 直聘", takeaway: "「BOSS」+「直聘」：五个字把「跳过 HR 直接和老板谈」的产品机制说完，机制即卖点的命名——洗脑广告能奏效的前提是名字本身就是电梯演讲" },
+        { name: "Canva", takeaway: "canvas（画布）去尾造词：虽非求职专属，但它吃掉简历模板市场证明了「空白画布」类意象的扩张力——工具名不锁场景，场景自己会来" },
+      ],
+      pitfalls: [
+        "投机感速成词（QuickJob、EasyOffer 类）：求职是人生大事，「快」与「易」的承诺显得廉价，HR 看到更是负分",
+        "锁死「简历」单场景：简历只是入口，求职产品几乎必然扩到面试、内推、职业主页——名字含 resume/CV 就是给路线图上锁",
+        "焦虑营销词根（急、抢、拼）：短期抓眼球，长期伤品牌——用户不想被提醒自己在挣扎，想被暗示自己在上升",
+        "双语市场只顾一头：中文名响亮但拼音域名与英文形象没设计，出海或融资时重新起名等于口碑清零",
+      ],
+    },
+    en: {
+      label: "Resume & job search",
+      title: "How to Name a Resume Builder or Job Search Tool: Strategies, Cases & Domains",
+      metaDescription:
+        "Resume and job-search tool naming guide: career verbs, confidence roots, the recruiter-visibility test, breakdowns of LinkedIn/Indeed/Canva, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Job-search users are living one of life's highest-pressure moments: the eighth resume revision at midnight, applications vanishing into the void, sweaty palms before an interview. The name's first job is emotional ballast — it should transmit \"with me, you walk in taller\", never amplify the desperation. Second, the category is both private and public: editing a resume is private self-examination, but the tool's name shows up in exported footers and personal-page domains where recruiters see it — users must be proud to be seen using you, and a cheap or gimmicky name (QuickJob et al.) taxes their professional image. Third, many job products serve both sides of the market, so the name must work in \"I'm job-hunting on X\" and \"we hire through X\" alike. Finally, job seeking is a global constant: verb-able, short-syllable names (LinkedIn's in, Indeed's certainty) travel across markets, while names built on local slang never leave home.",
+      namingIdeas: [
+        "Use career verbs and forward motion: hire, land, rise, leap — write the moment of getting the offer into the name, so every open reminds the user where this ends",
+        "Choose confidence roots over anxiety roots: boost, edge, prime — test each candidate by imagining it at 1 a.m. after the tenth application; it should feel like a coach's hand on the shoulder, not a countdown clock",
+        "Name the identity, not the document: you're not a resume tool, you're a career page or professional story — resumes are the vehicle; users are buying a better professional self",
+        "Run the recruiter-visibility test: put the name in a footer — \"Made with X\" — does a recruiter reading it add points, feel nothing, or subtract? Only a name you'd print on a resume qualifies",
+        "Run the two-sided test: say \"I'm job-hunting on X\" and \"we hire through X\" — a name that only works on one side caps you as a one-sided tool",
+      ],
+      cases: [
+        { name: "LinkedIn", takeaway: "linked + in: two of the simplest words capturing the professional network, with the bonus insider connotation of being \"in\" — the ceiling of double-duty roots in the career lane" },
+        { name: "Indeed", takeaway: "An adverb of certainty as a brand: in a market drowning in promises, one word that means \"truly\" builds quiet conviction — a four-letter common word ridden to the world's largest job search engine" },
+        { name: "Glassdoor", takeaway: "glass + door: a door you can see through — corporate transparency compressed into one image; proof a job brand can be named for the information asymmetry it removes" },
+        { name: "Canva", takeaway: "canvas, clipped: not a career tool by birth, yet it ate the resume-template market — evidence that blank-canvas imagery expands into scenes a scene-locked name never reaches" },
+      ],
+      pitfalls: [
+        "Get-hired-quick names (QuickJob, EasyOffer): careers are high-stakes; promising fast and easy reads cheap to users and worse to recruiters",
+        "Locking onto the resume document: resumes are the entry point — job products inevitably expand to interviews, referrals and profiles, and a name containing resume/CV padlocks the roadmap",
+        "Anxiety-marketing roots (urgent, grab, race): they win a glance and lose the brand — users don't want to be reminded they're struggling; they want to be told they're rising",
+        "Designing only one language's name: a strong local name with no thought-out global twin means renaming at expansion or fundraising time — building brand equity twice",
+      ],
+    },
+  },
+  events: {
+    slug: "events",
+    tlds: [
+      { tld: "com", zh: "企业客户走采购流程，主域名的正式感是入场券", en: "Corporate clients run procurement — a .com's formality is the entry ticket" },
+      { tld: "live", zh: "「现场」写进后缀，活动行业的气氛组后缀首选", en: "Writes the live moment into the suffix — the event trade's atmosphere pick" },
+      { tld: "studio", zh: "创意策划工作室的精品定位，小团队接大单的气质加持", en: "Boutique creative-studio positioning — small-team credibility for big briefs" },
+    ],
+    zh: {
+      label: "活动策划",
+      title: "活动策划公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "活动策划公司命名指南：时刻词根、幕后专业感、提案页测试等 5 种思路，Eventbrite/Live Nation 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的活动策划域名。",
+      intro:
+        "活动策划卖的是「一个不容有失的时刻」：年会、发布会、婚礼、音乐节——客户把一年一次甚至一生一次的场面交到你手里。名字要同时向两种人证明两件事：向客户证明「交给你我放心」（专业感、执行力），向来宾暗示「这场活动会很精彩」（创意感、氛围感）。这个行业的命名张力在于幕前与幕后：活动公司是幕后角色，名字却要出现在提案封面、场地背板与合同抬头上——太张扬会抢客户品牌的风头，太平庸又接不到创意型大单。第二个特点是提案获客：活动公司靠比稿吃饭，名字印在提案 PPT 封面上的那一眼就是第一轮评分——「X 创意」与「X 活动执行」给评委的预期完全不同。第三是口碑转介绍：办砸一场臭十年，办好一场客户会把你的名字连同「靠谱」二字一起转介绍——名字要经得起「找 X 办准没错」的口碑句式。最后是品类跨度：从企业年会到婚礼到市集，很多公司多线作战，名字锁死单一活动类型会自断财路。",
+      namingIdeas: [
+        "时刻与光的词根：moment、spark、glow、flare、盛、燃——活动的本质是制造高光时刻，名字先把那道光打出来；测试方法是想象名字出现在暗场亮灯的瞬间",
+        "幕后专业感词根：produce、craft、stage、承制——面向企业客户的公司用「制作/出品」系词根传递执行力，创意是给的惊喜，靠谱是给的承诺",
+        "提案封面测试：把名字放上比稿 PPT 封面念一遍「X 团队为您呈现」——评委第一眼的预期就是名字定的调，太玩闹接不到年会，太刻板接不到音乐节",
+        "口碑句式测试：「公司年会？找 X 准没错」——名字要在转介绍的口语里顺口且自带担保感，拗口的名字在酒桌推荐环节就被换成了「有一家还行的」",
+        "品类留白：用「时刻/现场/体验」级别的意象而非「婚庆/年会」等品类词——活动类型会随团队扩张，名字的意象要罩得住所有场面",
+      ],
+      cases: [
+        { name: "Eventbrite", takeaway: "event + brite（bright 的变体拼写）：「让活动发光」一词说清平台价值，变体拼写换来域名与商标独占——功能词 + 气质词的稳妥结构" },
+        { name: "Live Nation", takeaway: "live（现场）+ nation（国度）：把「现场娱乐」升维成一个国家级图景，气势足以覆盖演唱会到音乐节的全部体量——大词要配得上大生意才不显空" },
+        { name: "Superfly", takeaway: "俚语「超酷的」：体验营销公司用一个自带节奏感的词把「我们办的活动很酷」写进名字——创意型公司的名字本身就该是创意的作品集首页" },
+        { name: "C2 (C2 Montréal)", takeaway: "Commerce + Creativity 双 C：商业创意大会把「跨界碰撞」的主张压缩成一个代号式短名——代号感命名在高端会展里反而显得先锋" },
+      ],
+      pitfalls: [
+        "品类词锁死（X 婚庆、X 年会策划）：业务一扩名字就穿帮，客户也默认你只会做一种活动",
+        "浮夸词堆砌（完美、梦幻、至尊）：把交付压力全押在形容词上，一次失误就成反讽——担保感要来自案例而非名字自夸",
+        "与客户品牌抢风头：活动公司名出现在背板上应是「出品方署名」的克制存在，名字太张扬会让甲方市场部不舒服",
+        "忽略工商与域名的同步核验：活动行业重合同重发票，工商名、品牌名、域名三者不一致会在对公打款时反复解释",
+      ],
+    },
+    en: {
+      label: "Event planning",
+      title: "How to Name an Event Planning Company: Strategies, Cases & Domains",
+      metaDescription:
+        "Event planning company naming guide: moment-and-light roots, backstage professionalism, the pitch-deck test, breakdowns of Eventbrite/Live Nation/Superfly, recommended TLDs and pitfalls — then hunt an available events domain with AI.",
+      intro:
+        "Event planners sell a moment that cannot be allowed to fail: the annual gala, the product launch, the wedding, the festival — clients hand over occasions that happen once a year or once in a life. The name must prove two things to two audiences at once: to the client, \"you can hand this to me and sleep\" (professionalism, execution); to the guests, \"this is going to be spectacular\" (creativity, atmosphere). The category's naming tension is front-of-house versus backstage: planners are backstage players, yet the name sits on pitch covers, venue backdrops and contract headers — too loud and it upstages the client's brand, too plain and the creative briefs go elsewhere. Second, business is won in competitive pitches: the name on the deck's cover sets the jury's expectations before slide two. Third, referrals carry the trade: one botched event stains a decade, one great one gets your name passed along welded to the word \"reliable\" — the name must survive \"for the gala? just call X.\" Finally, most firms straddle corporate events, weddings and festivals: a name locked to one event type cuts off its own bookings.",
+      namingIdeas: [
+        "Root in moments and light: moment, spark, glow, flare — events exist to manufacture highlights, so let the name throw that light first; test candidates by imagining them at the lights-up instant",
+        "Add backstage professionalism: produce, craft, stage — production-register roots tell corporate buyers the show will run on time; creativity is the surprise, reliability is the promise",
+        "Run the pitch-cover test: put the name on a deck — \"presented by X\" — the jury's first-glance expectation is set right there; too playful loses the gala, too stiff loses the festival",
+        "Run the referral test: \"company retreat? just call X\" — the name must roll off the tongue with a built-in guarantee; a clumsy name gets replaced by \"some agency we used\" at the dinner table",
+        "Leave category room: name at the altitude of moments, live or experience rather than wedding or gala — event types multiply as the team grows, and the imagery must cover every stage you'll ever build",
+      ],
+      cases: [
+        { name: "Eventbrite", takeaway: "event + brite (a respelled bright): \"making events shine\" in one word, with the spelling twist buying domain and trademark ownability — the reliable function-word + quality-word structure" },
+        { name: "Live Nation", takeaway: "live + nation: elevating live entertainment to the scale of a country — a big word that earns its size by matching the business's ambition, from arena tours to festivals" },
+        { name: "Superfly", takeaway: "Slang for effortlessly cool: an experiential agency writing \"our events are cool\" into its own name with built-in rhythm — a creative shop's name is the first page of its portfolio" },
+        { name: "C2", takeaway: "Commerce plus Creativity, compressed to a call sign: the business-creativity conference proving that codename minimalism reads avant-garde, not cold, in premium events" },
+      ],
+      pitfalls: [
+        "Category-locked names (X Weddings, X Galas): the first expansion breaks the name, and clients assume you only do one kind of room",
+        "Stacking grandiose words (perfect, dream, supreme): betting the delivery pressure on adjectives turns one slip into irony — the guarantee should come from case studies, not self-praise",
+        "Upstaging the client's brand: on the backdrop, your name is a producer's credit — a name that shouts makes the client's marketing team quietly uncomfortable",
+        "Skipping the legal-name, brand-name, domain alignment: events run on contracts and invoices; three mismatched names mean explaining yourself at every wire transfer",
+      ],
+    },
+  },
+  moving: {
+    slug: "moving",
+    tlds: [
+      { tld: "com", zh: "陌生人进家门搬走全部家当，信任后缀不容妥协", en: "Strangers carry everything you own — the trust suffix is non-negotiable" },
+      { tld: "pro", zh: "「持证专业」直写进后缀，中和搬运行业的游击队印象", en: "Writes licensed professionalism into the suffix — offsetting the trade's fly-by-night image" },
+      { tld: "co", zh: "品牌化的城市搬家新势力常用，短一字母更利落", en: "The pick of branded urban moving upstarts — one letter sleeker" },
+    ],
+    zh: {
+      label: "搬家服务",
+      title: "搬家公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "搬家公司命名指南：托付感词根、力量与轻盈的平衡、电话报价测试等 5 种思路，Two Men and a Truck/货拉拉等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的搬家域名。",
+      intro:
+        "搬家是把全部身家交给陌生人的低频高信任决策：用户一生搬不了几次家，每次都在和焦虑赛跑——怕被坐地起价、怕家具磕碰、怕师傅放鸽子。名字的第一使命是在比价的十分钟里传递「这家不会坑我」：透明、稳当、有人情味的名字比酷炫的名字转化率高得多。第二个特点是搜索主导获客：「附近搬家公司」「跨市搬家多少钱」是流量入口，名字要让搜索结果页的一行标题就完成「专业 + 本地 + 可信」三连击。第三是场景的体力与情感双重性：搬家既是体力活也是「告别旧生活开启新生活」的情感节点——高端化的机会恰恰在后者，「搬新家」的仪式感值得写进名字。最后是口碑的极端性：搬坏一件传家具就是差评置顶，全程利落就是「搬家就找他家」的终身推荐——名字要经得起这两种评价的检验。",
+      namingIdeas: [
+        "托付感词根：稳、安、妥、care、safe、trust——用户最怕的是失控，名字先把「放心交给我」说出口；测试方法是想象在报价电话里自报家门的那一句",
+        "力量与轻盈并举：牛、象、大力士传递「搬得动」，swift、breeze、轻松传递「不费劲」——前者给老式货运感，后者给城市服务感，按客群二选一",
+        "新生活意象升维：不叫「搬运」叫「安家/启程」——nest、fresh、新居把服务从「扛箱子」升维到「开启新生活」，客单价与溢价空间跟着名字走",
+        "电话报价测试：「您好，这里是 X 搬家」——名字要在电话里一遍听清、挂了电话还记得住；师傅工服和货车车身上印出来也要一眼可读",
+        "本地 + 全国的两级预留：起步是三公里生意，做大是全国连锁——城市名可以进副标语别进主名，否则跨城扩张时名字就是天花板",
+      ],
+      cases: [
+        { name: "Two Men and a Truck", takeaway: "「两个人一辆卡车」：把创业第一天的全部家当写成名字，坦诚到极致反而建立了最强信任——如今是全球最大搬家连锁，证明实在感就是搬家业的品牌资产" },
+        { name: "货拉拉", takeaway: "「货」+「拉拉」叠词：品类词加口语化叠词，三个字把「拉货」说得亲切好记，司机与用户两端都零理解成本——蓝领服务命名的中文范本" },
+        { name: "Bellhop", takeaway: "酒店行李员的旧称：借「五星级酒店服务生」的意象给搬家注入服务业基因——从「货运」赛道跳进「服务」赛道，名字先完成了定位跃迁" },
+        { name: "U-Haul", takeaway: "you + haul：「你自己拉」三个音节说清自助搬家的商业模式，名字即产品说明书——模式创新型公司让名字替市场部干活的经典案例" },
+      ],
+      pitfalls: [
+        "游击队既视感（X 兄弟搬运、快搬王类）：正是用户最怕的「不正规」印象，报价再低也过不了信任关",
+        "只有力量没有温度：纯猛兽系名字（大力神、蛮牛）传递「搬得动」却也暗示「不细心」——家有钢琴与婴儿床的客户会犹豫",
+        "城市名锁死主名（X 城搬家）：跨城单与连锁扩张时名字自相矛盾，本地信息放副标语与落地页即可",
+        "忽略电话与车身的双场景：搬家决策大量发生在电话里，拗口的名字报一遍记不住；货车是移动广告牌，名字太长车身上印不下",
+      ],
+    },
+    en: {
+      label: "Moving services",
+      title: "How to Name a Moving Company: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Moving company naming guide: trust-first roots, strength versus lightness, the phone-quote test, breakdowns of Two Men and a Truck/U-Haul/Bellhop, recommended TLDs and pitfalls — then hunt an available moving domain with AI.",
+      intro:
+        "Moving is a low-frequency, high-trust decision: customers hand everything they own to strangers a handful of times in a life, racing anxiety the whole way — surprise charges, dinged furniture, crews that never show. The name's first job is to say \"we won't burn you\" inside the ten minutes of quote comparison: transparent, steady, human names out-convert clever ones in this trade. Second, acquisition is search-driven: \"movers near me\" and \"cost of moving across town\" are the funnels, and the name must land professional, local and trustworthy in a single results-page line. Third, the job is both muscle and milestone: a move is heavy lifting and the emotional threshold between an old life and a new one — the premium opportunity lives in the second reading, and \"new home\" ceremony belongs in the name. Finally, reviews here are extreme: one cracked heirloom is a pinned one-star; one flawless day is a lifetime of \"just use these guys\" — the name has to stand up under both.",
+      namingIdeas: [
+        "Lead with trust roots: safe, steady, care, true — the customer's core fear is losing control, so the name should say \"in good hands\" first; test it as the opening line of a quote call",
+        "Balance strength with lightness: oxen and titans say \"we can lift it\", while swift, breeze and easy say \"it won't hurt\" — the first reads freight, the second reads service; choose for your clientele",
+        "Elevate to the new-life register: don't name the hauling, name the arrival — nest, fresh, threshold move the service from carrying boxes to starting a chapter, and pricing power follows the name",
+        "Run the phone-quote test: \"hi, this is X Moving\" — the name must land in one hearing and survive until the callback; it also has to read at a glance on a crew shirt and a truck door",
+        "Reserve the two-stage name: moving starts as a 3-km business and scales into a national chain — keep the city in the tagline, not the primary name, or expansion breaks the brand",
+      ],
+      cases: [
+        { name: "Two Men and a Truck", takeaway: "The founding inventory as the name: radical honesty that became the strongest trust signal in the trade — now the world's largest moving franchise; proof that plainspokenness is brand equity here" },
+        { name: "U-Haul", takeaway: "you + haul: the entire self-service business model in three syllables — the name is the product spec, doing the marketing department's job since 1945" },
+        { name: "Bellhop", takeaway: "Borrowing the hotel porter: importing five-star service DNA into a freight-register industry — the name alone jumps the brand from hauling into hospitality" },
+        { name: "Gentle Giant", takeaway: "Strength and care fused in one alliterative pair: exactly the two promises a piano owner needs to hear, resolving the trade's core tension inside the name itself" },
+      ],
+      pitfalls: [
+        "Fly-by-night energy (Fast Cheap Movers et al.): precisely the rogue-crew impression customers fear most — no quote is low enough to cross a broken trust bar",
+        "All muscle, no warmth: pure beast names (Hercules, Brute) promise lifting power while whispering carelessness — the customer with a piano and a crib hesitates",
+        "Welding a city into the primary name: cross-town and franchise expansion contradicts it — keep geography in the tagline and the landing page",
+        "Ignoring the phone and the truck door: moving is sold by phone, where a clumsy name dies after one hearing — and the truck is your billboard, where a long name doesn't fit",
+      ],
+    },
+  },
+  aquarium: {
+    slug: "aquarium",
+    tlds: [
+      { tld: "com", zh: "高客单的活体与设备生意，信任后缀撑起下单底气", en: "Big-ticket livestock and gear — the trust suffix underwrites the checkout" },
+      { tld: "shop", zh: "水族器材与造景素材电商的直白后缀，语义即卖场", en: "Literal storefront energy for aquascaping gear and supplies commerce" },
+      { tld: "life", zh: "「缸中生态」的生活方式感，水族圈层的气质后缀", en: "The tank-as-ecosystem lifestyle written into the suffix" },
+    ],
+    zh: {
+      label: "水族爬宠",
+      title: "水族/爬宠品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "水族与爬宠品牌命名指南：生态词根、圈层黑话、玻璃缸美学等 5 种思路，ADA/Fluval/Exo Terra 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的水族爬宠域名。",
+      intro:
+        "水族与爬宠是宠物行业里最「硬核圈层化」的细分：玩家不叫养鱼叫「开缸」，不叫养蜥蜴叫「养爬」，水质参数、造景流派、温湿度梯度张口就来。名字的第一要务是圈内认同——外行觉得普通的词（如「草缸」「雨林缸」）在圈内是精准的身份暗号，用对黑话等于秒过身份验证；用错则暴露「不懂行」，硬核玩家一眼划走。第二个特点是「静观美学」的气质：水族箱与雨林缸本质是活的造景艺术，玩家追求的是「一缸一世界」的沉浸感——名字要有静谧、通透、生态感，与猫狗品牌的活泼萌系（详见宠物品牌指南）完全两个方向。第三是知识型消费：从水质稳定到爬宠温控，玩家高度依赖专业内容做购买决策，名字带专业感的品牌天然获得「懂行」溢价。最后注意品类跨度：水族与爬宠常在同一家店经营，但两个圈子黑话不同——名字要么升维到「生态/自然」罩住两边，要么干脆分品牌运营。",
+      namingIdeas: [
+        "生态与微观世界词根：aqua、terra、biotope（原生态）、微澜、雨林、生态——把「一缸一世界」的沉浸感写进名字；测试方法是想象名字印在开缸分享帖的标题里",
+        "圈层黑话借力：造景、开缸、爬圈的词汇（scape、reef、gecko）自带身份验证功能——但要确认目标客群是硬核玩家还是新手，黑话对新手是门槛",
+        "静谧美学气质：水族命名忌吵闹——通透感词根（clear、still、玻璃、澄）配合软音节，让名字读起来像看缸时的呼吸节奏",
+        "专业背书结构：创始人 + 专业词（ADA = Aqua Design Amano）——知识型消费的圈子里，「有具体的人为专业负责」的名字最容易沉淀口碑与溢价",
+        "品类升维预留：水族、爬宠、两栖常同店经营且黑话互不相通——用 nature、terra、生态等上位词命名，或从第一天就规划双品牌",
+      ],
+      cases: [
+        { name: "ADA (Aqua Design Amano)", takeaway: "水草造景之父天野尚的姓氏 + 专业词：人名背书 + 品类定义的双重结构，把「自然水景」流派与品牌焊死——知识型圈层里创始人即品牌的天花板案例" },
+        { name: "Fluval", takeaway: "flu（flow 水流）+ val 的造词：读音圆润如水流过滤材，两音节全球好念——水族设备命名「音感即产品」的典范" },
+        { name: "Exo Terra", takeaway: "exo（外部）+ terra（大地）：「把外面的大地搬进屋里」一词说清爬宠生态缸的产品本质——拉丁词根让专业感与异域感一步到位" },
+        { name: "疯狂水草", takeaway: "「疯狂」+ 品类词：用发烧友的自我调侃做品牌，精准戳中「为一缸草一掷千金」的圈层心理——中文水族命名里圈层共鸣的直球打法" },
+      ],
+      pitfalls: [
+        "黑话用错圈子：拿海缸术语卖草缸、拿养龟词汇卖守宫，硬核玩家一眼识破——黑话是双刃剑，用之前先确认自己真的在圈内",
+        "萌系词汇错位：水族爬宠的气质是静观与专业，套用猫狗系的「萌宠」「毛孩子」话术会显得完全不懂行",
+        "锁死单一物种（X 龟舍、X 虾庄）：圈子玩家的兴趣会迁移（草缸→雨林缸→爬宠），名字锁死物种等于放弃玩家的终身价值",
+        "忽略活体贸易的合规敏感：部分爬宠与观赏鱼涉及物种保护法规，名字与宣传语避免「野采」「稀有走私感」联想——合规印象也是信任的一部分",
+      ],
+    },
+    en: {
+      label: "Aquariums & reptiles",
+      title: "How to Name an Aquarium or Reptile Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Aquarium and reptile brand naming guide: ecosystem roots, hobbyist code words, glass-box aesthetics, breakdowns of ADA/Fluval/Exo Terra, recommended TLDs and pitfalls — then hunt an available aquatics domain with AI.",
+      intro:
+        "Aquatics and herpetoculture are the most insider-coded corners of the pet world: hobbyists don't keep fish, they \"start a tank\"; they don't own a lizard, they \"keep herps\" — and they speak fluently in water parameters, aquascaping schools and thermal gradients. The name's first job is insider recognition: words that look ordinary to outsiders (biotope, scape, vivarium) are precise identity badges inside the hobby — the right code word passes verification instantly, the wrong one outs you as a tourist and the serious keepers scroll past. Second, the category's temperament is contemplative: a planted tank or rainforest vivarium is living landscape art, and keepers chase the immersion of a world in a glass box — names need stillness, clarity and ecosystem feel, the opposite direction from the playful cuteness of dog-and-cat brands (see the pet brands guide). Third, this is knowledge-driven spending: from water chemistry to reptile thermoregulation, buyers lean on expertise to decide — names that signal competence collect a \"they know their stuff\" premium. Finally, mind the two-hobby span: fish and reptiles often share a shop but not a vocabulary — name at the altitude of nature and terra to cover both, or plan two brands from day one.",
+      namingIdeas: [
+        "Root in ecosystems and miniature worlds: aqua, terra, biotope, reef, canopy — write the world-in-a-glass-box immersion into the name; test candidates by imagining them titling a tank-journal post",
+        "Borrow hobbyist code deliberately: scape, reef, gecko and their kin double as identity verification — but decide first whether you serve hardcore keepers or beginners; code words are a badge to one and a wall to the other",
+        "Keep the temperament still: aquatics naming hates noise — clarity roots (clear, still, crystal) with soft syllables should read at the breathing pace of watching a tank",
+        "Use the expert-endorsement structure: founder plus discipline (ADA = Aqua Design Amano) — in a knowledge-driven hobby, a named human answering for the expertise earns the deepest loyalty and margin",
+        "Reserve altitude across species: keepers migrate (planted tanks → paludariums → herps), and shops straddle both hobbies — name at the nature/terra level or split brands, but don't lock onto one species",
+      ],
+      cases: [
+        { name: "ADA (Aqua Design Amano)", takeaway: "Takashi Amano's surname plus the discipline: founder endorsement welded to category definition, binding the Nature Aquarium school to the brand — the ceiling of person-as-brand in an expertise-driven hobby" },
+        { name: "Fluval", takeaway: "flu (from flow) + val: a coinage that sounds like water moving through filter media; two globally pronounceable syllables — aquatics gear naming where the sound is the spec" },
+        { name: "Exo Terra", takeaway: "exo + terra: \"the outside earth, brought indoors\" — the entire premise of a reptile vivarium in two Latin roots, landing expertise and exoticism in one move" },
+        { name: "Aqueon", takeaway: "aqua melted into an -eon ending: category signal with a clean, coined finish — the pragmatic middle path between raw Latin and full abstraction for mass-market aquatics" },
+      ],
+      pitfalls: [
+        "Using the wrong hobby's code: reef vocabulary on a planted-tank brand or turtle terms on a gecko line — hardcore keepers spot it instantly; code words cut both ways, so be sure you're actually inside",
+        "Misplaced cuteness: this hobby's register is contemplative expertise — importing fur-baby language from dog-and-cat branding reads as not knowing the water",
+        "Locking onto one species (X Turtles, X Shrimp Co.): keepers' interests migrate across tanks and taxa — a species-locked name forfeits their lifetime value",
+        "Ignoring livestock-trade compliance optics: some reptiles and ornamental fish sit under species-protection rules — avoid any wild-caught or grey-market connotation; a lawful impression is part of the trust",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
