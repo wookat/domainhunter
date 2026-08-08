@@ -1,5 +1,6 @@
 import { isBrandCollision } from "./brand-blocklist";
 import { COMMON_CHAR_PINYIN_DATA } from "./pinyin-table";
+import { TLD_LIST } from "./content/tld-list";
 
 export interface AiScores {
   length: number;
@@ -48,6 +49,7 @@ const SYSTEM_PROMPT = `你是资深域名命名专家。用户会用自然语言
 - 常见单词、两三个字母的组合几乎都已被注册，要敢于造词、混搭、用冷僻但好读的组合
 - 按推荐度排序
 - 给每个候选标注命名思路 theme，取值只能是：pinyin（中文拼音/缩写）、word（现成英文单词）、coined（英文合成词/造词）、blend（拼音+英文混合）
+- theme 标注反例（不要犯）：word 仅限现代英文词典里日常在用的常用词——拉丁语/古语词（如 nundina，源自拉丁 nundinae）不是 word，应标 coined；label 内嵌 TLD 名的造型（如 canaryio 内嵌 io，组成 canaryio.com 观感怪异）与同词根叠拼（如 ledgeledger）都是低质造型，直接不要输出
 - 同时给每个候选打四维分（0-100 整数）：length（长度，越短越好记分越高）、readability（读感，好读好拼）、relevance（寓意贴合需求程度）、brandability（品牌感，独特性与可商标性）
 ${MEANING_REDLINES_ZH}
 
@@ -292,28 +294,38 @@ export interface GuardStats {
   dropped: GuardDropCounts;
   /** EN word 路线配额补发是否触发（R224） */
   wordSupplement: boolean;
+  /** 补发轮实际发起次数（R243，0–2；主轮丢弃计数不含补发轮） */
+  supplementAttempts: number;
+  /** 补发轮各防线丢弃计数（R243，与主轮 dropped 分开，修复 R239 P3-1 盲区） */
+  supplementDropped: GuardDropCounts;
   /** LLM 调用瞬时失败后的退避重试次数 */
   retries: number;
   /** charsetViolation 首个违规字符的 Unicode 码点样本（如 "U+D55C"，R245；只留码点不留候选文本） */
   charsetSample?: string;
 }
 
+function newGuardDropCounts(): GuardDropCounts {
+  return {
+    invalidLabel: 0,
+    brandCollision: 0,
+    emptyMeaning: 0,
+    charsetViolation: 0,
+    phantomEtymology: 0,
+    metaLanguage: 0,
+    questionMark: 0,
+    meaningIncoherent: 0,
+    pinyinInvalid: 0,
+    pinyinMismatch: 0,
+    dislikedMorphology: 0,
+  };
+}
+
 export function newGuardStats(): GuardStats {
   return {
-    dropped: {
-      invalidLabel: 0,
-      brandCollision: 0,
-      emptyMeaning: 0,
-      charsetViolation: 0,
-      phantomEtymology: 0,
-      metaLanguage: 0,
-      questionMark: 0,
-      meaningIncoherent: 0,
-      pinyinInvalid: 0,
-      pinyinMismatch: 0,
-      dislikedMorphology: 0,
-    },
+    dropped: newGuardDropCounts(),
     wordSupplement: false,
+    supplementAttempts: 0,
+    supplementDropped: newGuardDropCounts(),
     retries: 0,
   };
 }
@@ -357,7 +369,11 @@ ${MEANING_REDLINES_EN}
 - theme 标注 few-shot 示例（严格模仿这种判断方式）：
 [{"label":"anvil","meaning":"A real English word: the blacksmith's anvil, metaphor for a solid build tool where ideas get forged; one heavy stressed syllable, reads instantly","theme":"word","scores":{"length":92,"readability":95,"relevance":85,"brandability":82}},
 {"label":"verbloom","meaning":"verb + bloom: words that blossom, fits a writing app; two recognizable words joined, stress on the first syllable","theme":"blend","scores":{"length":85,"readability":88,"relevance":90,"brandability":86}},
-{"label":"lumora","meaning":"Latin \"lumen\" meaning light + soft -ora ending, evokes clarity for a journaling app; two open syllables, reads instantly","theme":"coined","scores":{"length":88,"readability":90,"relevance":84,"brandability":89}}]`;
+{"label":"lumora","meaning":"Latin \"lumen\" meaning light + soft -ora ending, evokes clarity for a journaling app; two open syllables, reads instantly","theme":"coined","scores":{"length":88,"readability":90,"relevance":84,"brandability":89}}]
+- theme 标注 few-shot 反例（这些都是错误示范，不要犯）：
+  ✗ nundina 标 word —— nundinae 是拉丁词，不在现代英文词典中；word 仅限现代英文常用词（anvil/amazon 式），拉丁/希腊/古语词一律标 coined
+  ✗ canaryio 标 word —— label 内嵌 TLD 名 io，组成 canaryio.com 观感怪异，这类内嵌 TLD 名的候选直接不要输出
+  ✗ ledgeledger —— 同词根叠拼（ledger+ledger）低质，不要输出任何同词根叠拼的候选`;
 
 export async function generateUnderstanding(description: string, apiKey: string, lang: "zh" | "en" = "zh"): Promise<AiUnderstanding | null> {
   try {
@@ -396,6 +412,30 @@ export async function generateUnderstanding(description: string, apiKey: string,
 export const EN_WORD_QUOTA_MIN_CANDIDATES = 8;
 /** 补发请求的候选数：word 路线软配额要求「各至少 2 个」，按 4 个请求留过滤余量 */
 export const EN_WORD_SUPPLEMENT_COUNT = 4;
+/** 补发总次数上限（R243）：首次补发全灭时再重试一次，第二次 prompt 加硬 */
+export const EN_WORD_SUPPLEMENT_MAX_ATTEMPTS = 2;
+
+// ---------------- word theme 内嵌 TLD 降级兜底（R250，R239 P3-3） ----------------
+// 生产坏例：canaryio 标 word——label 内嵌 TLD 名 io，不是词典词。prompt 级反例之外，
+// 解析后兜底：label 以内嵌易发的已收录科技系 TLD 名结尾且 theme=word 时降级为 coined（不删除）。
+// 只挑 TLD_LIST 中品牌域名常内嵌的科技系后缀；farm/city/art/one 等本身是英文常用词结尾的
+// TLD 不入列（smart/chart/ozone 等真实词尾撞概率高，误降级会吃掉 word 配额）。
+const EMBED_PRONE_TLDS = ["io", "ai", "app", "dev", "xyz", "tech", "cloud", "site", "shop", "store", "online"];
+export const WORD_TLD_EMBED_SUFFIXES: readonly string[] = EMBED_PRONE_TLDS.filter((t) => (TLD_LIST as readonly string[]).includes(t));
+// 真实英文词恰好以这些字母结尾的白名单（studio 等 word 合法候选放行）
+const WORD_TLD_SUFFIX_ALLOW = new Set([
+  "audio", "studio", "radio", "ratio", "patio", "folio", "portfolio", "trio", "curio", "scenario",
+  "bonsai",
+  "website", "campsite", "parasite", "opposite",
+  "workshop",
+  "restore", "bookstore", "drugstore", "superstore",
+]);
+
+/** theme=word 但 label 内嵌已收录 TLD 名结尾（canaryio 型）→ true（应降级为 coined） */
+export function wordThemeEmbedsTld(label: string): boolean {
+  if (WORD_TLD_SUFFIX_ALLOW.has(label)) return false;
+  return WORD_TLD_EMBED_SUFFIXES.some((t) => label.length > t.length && label.endsWith(t));
+}
 
 /** 统计候选的 theme 分布 */
 export function countThemes(candidates: AiCandidate[]): Record<AiTheme, number> {
@@ -409,14 +449,21 @@ export function needsWordSupplement(candidates: AiCandidate[]): boolean {
   return candidates.length >= EN_WORD_QUOTA_MIN_CANDIDATES && countThemes(candidates).word === 0;
 }
 
-/** 补发轮硬指令：每条 label 必须是词典真实存在的完整英文单词，theme 全部标 word */
-export function buildWordSupplementDirective(count: number, exclude: string[]): string {
-  return [
+/** 补发轮硬指令：每条 label 必须是词典真实存在的完整英文单词，theme 全部标 word；
+ * attempt=2（R243 二次重试）时对 meaning 句式加硬指令，避免短句式 meaning 被质量防线拦截 */
+export function buildWordSupplementDirective(count: number, exclude: string[], attempt = 1): string {
+  const lines = [
     `路线配额补发（硬指令）：上一批候选的 theme 分布中 word（现成英文单词）路线为 0，不满足配额。`,
     `现在请再给出 ${count} 个候选，每一条都必须满足：label 是词典里真实存在的完整英文单词（隐喻词路线，如 amazon/anvil 式，与需求语义有一层聪明的关联），theme 必须全部标注为 "word"。`,
     `禁止造词、禁止错拼变体、禁止两词拼接。`,
     `严禁重复输出以下已出现过的名字：${exclude.join(", ")}`,
-  ].join("\n");
+  ];
+  if (attempt >= 2) {
+    lines.push(
+      `二次补发加硬要求：上一批补发候选全部被质量校验拦截。每条 meaning 必须是一个主谓完整的英文句子（含 means/evokes/suggests/metaphor for 等谓语），先复述这个单词本身（如 "anvil" is a real English word meaning …），再点破它与需求的隐喻关联，禁止只写碎片短语。`,
+    );
+  }
+  return lines.join("\n");
 }
 
 /** 合并补发结果：只收 theme 为 word 且 label 未出现过的候选，追加到主结果之后 */
@@ -440,18 +487,24 @@ export async function generateAiCandidates(
     await new Promise((r) => setTimeout(r, 400 + Math.random() * 600));
     out = await generateOnce(description, apiKey, opts);
   }
-  // R224：EN word 路线配额失守时补发一次（上限 1 次，失败不阻塞主结果）
+  // R224：EN word 路线配额失守时补发（R243：过滤后 word 仍为 0 时再重试一次，总上限 2 次；
+  // 第二次 prompt 加硬明确要求完整句式 meaning；两次仍 0 不阻塞主结果，失败静默）
   if ((opts.lang ?? "zh") === "en" && needsWordSupplement(out)) {
     if (opts.guard) opts.guard.wordSupplement = true;
-    try {
-      const extra = await generateOnce(description, apiKey, {
-        ...opts,
-        count: EN_WORD_SUPPLEMENT_COUNT,
-        wordSupplementExclude: out.map((c) => c.label),
-      });
-      out = mergeWordSupplement(out, extra);
-    } catch {
-      // 补发失败不影响主结果
+    for (let attempt = 1; attempt <= EN_WORD_SUPPLEMENT_MAX_ATTEMPTS; attempt++) {
+      if (opts.guard) opts.guard.supplementAttempts = attempt;
+      try {
+        const extra = await generateOnce(description, apiKey, {
+          ...opts,
+          count: EN_WORD_SUPPLEMENT_COUNT,
+          wordSupplementExclude: out.map((c) => c.label),
+          wordSupplementAttempt: attempt,
+        });
+        out = mergeWordSupplement(out, extra);
+      } catch {
+        // 补发失败不影响主结果
+      }
+      if (countThemes(out).word > 0) break;
     }
   }
   return out;
@@ -530,7 +583,40 @@ export function filterDislikedMorphology(candidates: AiCandidate[], disliked: Di
 
 /** 把上一轮的失败模式总结成具体反思提示，而非简单罗列名单 */
 function buildRefineHint(fb: RefineFeedback, round: number, lang: "zh" | "en"): string {
-  const parts: string[] = [`这是第 ${round} 轮。`];
+  const parts: string[] = [];
+  // R250（R239 P3-2）：点踩形态禁令前置到 hint 最开头 + 强命令式——R239 实测 refine 轮 33% 产出
+  // 仍撞点踩形态、全靠硬过滤兜底吃掉，禁令排在 hint 尾部权重不足；硬过滤保持不动，仅降低 token 浪费
+  if (fb.disliked && fb.disliked.length > 0) {
+    const roots = new Set<string>();
+    const suffixes = new Set<string>();
+    for (const d of fb.disliked) {
+      roots.add(dislikeRootOf(d.label));
+      const s = dislikeSuffixOf(d.label);
+      if (s) suffixes.add(s);
+    }
+    if (lang === "en") {
+      const enRoots = [...roots].join(", ");
+      const enSufs = [...suffixes].map((s) => `-${s}`).join(", ");
+      let line = `TOP-PRIORITY HARD BAN — read this before anything else and re-check every single candidate against it right before you output: NEVER start any candidate with the root fragment(s) ${enRoots} (disliking "moji" bans "moyu"/"moxu" — same root, same vibe)`;
+      if (suffixes.size > 0) line += `; NEVER end any candidate with the suffix pattern(s) ${enSufs} (disliking "forgex" bans "gleanix" — same -x coinage suffix)`;
+      line += `. Any violating candidate WILL be discarded by the system unseen — every violation is a wasted slot, so produce ZERO of them.`;
+      parts.push(line);
+    } else {
+      const rootList = [...roots].join("、");
+      const sufList = [...suffixes].map((s) => `-${s}`).join("、");
+      let line = `【最高优先级硬禁令——先读这条，输出前逐条对照自查】任何候选的词首都严禁出现词根片段 ${rootList}（点踩了 moji 就绝不能再出 moyu、moxu 这类同词根名）`;
+      if (suffixes.size > 0) line += `；严禁以 ${sufList} 结尾（点踩了 forgex 就绝不能再出 gleanix 这类同后缀造词）`;
+      line += `。违规候选会被系统直接丢弃、你看不到任何效果——每出一条违规就是白白浪费一个名额，必须做到零违规。`;
+      parts.push(line);
+    }
+    const items = fb.disliked
+      .map((d) => (d.theme ? `${d.label}（${THEME_NAMES[d.theme] ?? d.theme}）` : d.label))
+      .join("、");
+    parts.push(
+      `以上禁令来自用户明确点踩的候选及其风格：${items}。请逐个分析它们的词根与构词模式（共同的词根片段、前后缀改造套路、命名思路），本轮换用完全不同的词根与构词方向（例如点踩了 loggist 这类 log+后缀造词，就不要再出任何含 log 词根或同套路后缀改造的候选）。`,
+    );
+  }
+  parts.push(`这是第 ${round} 轮。`);
   if (fb.taken.length > 0) {
     const themeSummary = Object.entries(fb.takenThemes)
       .filter(([, n]) => n > 0)
@@ -545,35 +631,6 @@ function buildRefineHint(fb: RefineFeedback, round: number, lang: "zh" | "en"): 
     parts.push(
       "请先反思这些被注册名的共性模式（哪些词根太常见、哪种构词太直白、哪个长度段竞争太激烈），这一轮明确避开这些模式：更大胆地造词、混搭、用冷僻但好读的组合，或适当加长 1-2 个字符换取独特性，但仍要好读好记、贴合需求。",
     );
-  }
-  if (fb.disliked && fb.disliked.length > 0) {
-    const items = fb.disliked
-      .map((d) => (d.theme ? `${d.label}（${THEME_NAMES[d.theme] ?? d.theme}）` : d.label))
-      .join("、");
-    parts.push(
-      `用户明确点踩了这些候选及其风格：${items}。请逐个分析它们的词根与构词模式（共同的词根片段、前后缀改造套路、命名思路），本轮严禁输出使用相同词根或相同构词模式的名字（例如点踩了 loggist 这类 log+后缀造词，就不要再出任何含 log 词根或同套路后缀改造的候选），换用完全不同的词根与构词方向。`,
-    );
-    // R225：从点踩名提取形态特征，显式列出硬性禁止项（词根片段 + 后缀模式），双语给出反例
-    const roots = new Set<string>();
-    const suffixes = new Set<string>();
-    for (const d of fb.disliked) {
-      roots.add(dislikeRootOf(d.label));
-      const s = dislikeSuffixOf(d.label);
-      if (s) suffixes.add(s);
-    }
-    const rootList = [...roots].join("、");
-    const sufList = [...suffixes].map((s) => `-${s}`).join("、");
-    if (lang === "en") {
-      const enRoots = [...roots].join(", ");
-      const enSufs = [...suffixes].map((s) => `-${s}`).join(", ");
-      let line = `Hard morphological bans extracted from the disliked names (violations will be discarded by the system, do not waste slots): never start a candidate with the root fragment(s) ${enRoots} (disliking "moji" bans "moyu"/"moxu" — same root, same vibe)`;
-      if (suffixes.size > 0) line += `; never end a candidate with the suffix pattern(s) ${enSufs} (disliking "forgex" bans "gleanix" — same -x coinage suffix)`;
-      parts.push(line + ".");
-    } else {
-      let line = `已从点踩名中提取出以下形态特征，本轮硬性禁止（违规候选会被系统直接丢弃，不要浪费名额）：词首禁止出现词根片段 ${rootList}（点踩了 moji 就不能再出 moyu、moxu 这类同词根名）`;
-      if (suffixes.size > 0) line += `；禁止以 ${sufList} 结尾（点踩了 forgex 就不能再出 gleanix 这类同后缀造词）`;
-      parts.push(line + "。");
-    }
   }
   if (fb.tried.length > 0) {
     parts.push(`以下名字全部已经核验过（无论结果如何），严禁重复输出其中任何一个：\n${fb.tried.slice(-120).join(", ")}`);
@@ -901,7 +958,13 @@ const EN_FRAGMENT_STOPWORDS = new Set([
   "their", "about", "these", "those", "here", "from", "does", "did", "can", "could", "should",
 ]);
 
-export function enMeaningIncoherent(label: string, meaning: string): boolean {
+// R243（R239 P1-1）：word 隐喻词补发轮的 meaning 天然短句式（"A real English word: …, metaphor for …"），
+// 常不含 EN_PREDICATE_RE 的词源谓语骨架而被误杀。补发轮不放弃红线（词源锤点条件 A 不变），
+// 仅对谓语锤点条件 B 追加隐喻/释义信号词（metaphor/symbolizes/represents 等）作为等效谓语。
+const EN_WORD_METAPHOR_PREDICATE_RE =
+  /\b(?:metaphor|symbol(?:s|ize[sd]?|izing)?|represent(?:s|ing)?|stands?\s+for|captures?|convey(?:s|ing)?|calls?\s+to\s+mind|real\s+(?:english\s+)?word|dictionary\s+word|literally|imagery?|invokes?|conjures?)\b/i;
+
+export function enMeaningIncoherent(label: string, meaning: string, opts: { wordMetaphor?: boolean } = {}): boolean {
   const lower = meaning.toLowerCase();
   let fragmentOk = lower.includes(label);
   if (!fragmentOk && label.length >= 4) {
@@ -941,7 +1004,8 @@ export function enMeaningIncoherent(label: string, meaning: string): boolean {
       }
     }
   }
-  const predicateOk = EN_PREDICATE_RE.test(meaning);
+  const predicateOk =
+    EN_PREDICATE_RE.test(meaning) || (opts.wordMetaphor === true && EN_WORD_METAPHOR_PREDICATE_RE.test(meaning));
   return !fragmentOk || !predicateOk;
 }
 
@@ -1035,6 +1099,7 @@ async function generateOnce(
     round?: number;
     lang?: "zh" | "en";
     wordSupplementExclude?: string[];
+    wordSupplementAttempt?: number;
     guard?: GuardStats;
   } = {},
 ): Promise<AiCandidate[]> {
@@ -1046,7 +1111,7 @@ async function generateOnce(
   // R224：word 路线配额补发轮，追加硬指令（每条必须是真实英文单词且 theme 标 word）
   const isWordSupplement = opts.wordSupplementExclude !== undefined;
   if (isWordSupplement) {
-    user += `\n\n${buildWordSupplementDirective(count, opts.wordSupplementExclude ?? [])}`;
+    user += `\n\n${buildWordSupplementDirective(count, opts.wordSupplementExclude ?? [], opts.wordSupplementAttempt ?? 1)}`;
   }
   const res = await fetch("https://api.deepseek.com/chat/completions", {
     method: "POST",
@@ -1067,9 +1132,10 @@ async function generateOnce(
   const data = (await res.json()) as { choices: { message: { content: string } }[] };
   const text = data.choices[0]?.message?.content ?? "";
   const arr = parseCandidateArray(text);
-  // R238：防线统计——各 continue 丢弃路径按防线归类计数（只计数，不记录被丢弃候选内容）
+  // R238：防线统计——各 continue 丢弃路径按防线归类计数（只计数，不记录被丢弃候选内容）；
+  // R243：补发轮丢弃计入 supplementDropped，与主轮分开可观测
   const guardStats = opts.guard ?? newGuardStats();
-  const dropped = guardStats.dropped;
+  const dropped = isWordSupplement ? guardStats.supplementDropped : guardStats.dropped;
   const seen = new Set<string>();
   const out: AiCandidate[] = [];
   const clamp = (v: unknown) => {
@@ -1138,7 +1204,7 @@ async function generateOnce(
       continue;
     }
     // R196（P1-1）：EN meaning 连贯性启发式——无 label 词源锤点且无谓语骨架的词语沙拉 → 整条丢弃
-    if ((opts.lang ?? "zh") === "en" && enMeaningIncoherent(label, meaning)) {
+    if ((opts.lang ?? "zh") === "en" && enMeaningIncoherent(label, meaning, { wordMetaphor: isWordSupplement })) {
       dropped.meaningIncoherent++;
       continue;
     }
@@ -1165,12 +1231,15 @@ async function generateOnce(
     if (theme === "pinyin" || theme === "blend") {
       readabilityPenalty += countRareQuotedChars(meaning) * RARE_CHAR_PENALTY_PER_CHAR;
     }
+    // R179：theme 缺失/非法时强制归入 coined，保证 theme 永不为空；
+    // R224：补发轮硬指令要求全部为 word 路线，漏标时兜底归入 word（漏标即被丢弃会让补发白跑）
+    let resolvedTheme: AiTheme = THEMES.has(theme) ? (theme as AiTheme) : isWordSupplement ? "word" : "coined";
+    // R250（R239 P3-3）：label 内嵌已收录 TLD 名结尾却标 word（canaryio 型）→ 降级为 coined（不删除）
+    if (resolvedTheme === "word" && wordThemeEmbedsTld(label)) resolvedTheme = "coined";
     out.push({
       label,
       meaning,
-      // R179：theme 缺失/非法时强制归入 coined，保证 theme 永不为空；
-      // R224：补发轮硬指令要求全部为 word 路线，漏标时兜底归入 word（漏标即被丢弃会让补发白跑）
-      theme: THEMES.has(theme) ? (theme as AiTheme) : isWordSupplement ? "word" : "coined",
+      theme: resolvedTheme,
       scores: {
         length: clamp(s.length),
         readability: Math.max(clamp(s.readability) - readabilityPenalty, 0),
