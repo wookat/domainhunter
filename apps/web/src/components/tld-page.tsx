@@ -35,7 +35,12 @@ export function TldPage({ tld }: { tld: string }) {
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
-      <p className="font-mono text-sm text-brand">.{tld}</p>
+      <p className="font-mono text-sm text-brand">
+        <a href={`/tld?lang=${lang}`} className="text-txt2 hover:text-brand hover:underline">
+          {t("hub.allTld")}
+        </a>
+        <span className="mx-1.5 text-txt2">/</span>.{tld}
+      </p>
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{loc.title}</h1>
 
       {/* 价格卡：实时 Porkbun 价，失败回退静态参考价 */}

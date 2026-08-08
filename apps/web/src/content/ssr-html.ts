@@ -11,6 +11,7 @@ import { buildGuideFaq } from "./guide-faq";
 import { buildTldFaq } from "./tld-faq";
 import { COMPARE_SLUGS, compareLabel } from "./compare-slugs";
 import { GUIDE_LIST, INDUSTRY_GUIDES, guidesForTld, type IndustryGuide } from "./guides";
+import { HUB_META, compareHubGroups, guideHubGroups, guideOneLiner, tldHubGroups, tldOneLiner } from "./hubs";
 import { TLD_GUIDES, type TldGuide } from "./tlds";
 import { TLD_LIST, USD_TO_CNY } from "./tld-list";
 import { tldPrice } from "../types";
@@ -315,4 +316,63 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
     ctaBlock(s.guideCtaTitle, s.guideCtaDesc, `/?tpl=${guide.slug}`, s.guideCtaButton),
     others,
   ];
+}
+
+/* ---------- 内容枢纽 hub 页（/tld、/guide、/vs） ---------- */
+
+/* 内容页 hub 面包屑 kicker：与 tld-page/guide-page/compare-page 的 kicker DOM 逐字一致（i18n hub.allTld / hub.allGuide / hub.allVs） */
+const HUB_CRUMB = {
+  zh: { tld: "TLD 指南", guide: "行业指南", vs: "后缀对比" },
+  en: { tld: "TLD guides", guide: "Industry guides", vs: "TLD comparisons" },
+} as const;
+
+export const hubCrumbKicker = (hub: "tld" | "guide" | "vs", current: string, lang: Lang): string =>
+  `<p class="font-mono text-sm text-brand"><a href="/${hub}?lang=${lang}" class="text-txt2 hover:text-brand hover:underline">${escapeHtml(HUB_CRUMB[lang][hub])}</a><span class="mx-1.5 text-txt2">/</span>${escapeHtml(current)}</p>`;
+
+export const hubCrumbLabel = (hub: "tld" | "guide" | "vs", lang: Lang): string => HUB_CRUMB[lang][hub];
+
+const hubSection = (heading: string, count: number, itemsHtml: string, headingCls = "text-base font-bold") =>
+  `<section class="mt-8"><h2 class="${headingCls}">${escapeHtml(heading)}<span class="tnum ml-2 font-mono text-xs font-normal text-txt2">${count}</span></h2>${itemsHtml}</section>`;
+
+const hubCard = (href: string, title: string, oneLiner: string, titleCls: string) =>
+  `<a href="${href}" class="flex min-h-[44px] flex-col justify-center rounded-lg border border-line bg-bg1 px-3.5 py-2.5 transition-colors hover:border-brand-line"><span class="${titleCls}">${escapeHtml(title)}</span><span class="mt-0.5 text-xs leading-relaxed text-txt1">${escapeHtml(oneLiner)}</span></a>`;
+
+/** /tld 全文正文（tld-hub-page.tsx 首次渲染的静态部分） */
+export function tldHubBlocks(lang: Lang): string[] {
+  const meta = HUB_META.tld[lang];
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}<a href="/prices?lang=${lang}" class="text-brand hover:underline">${escapeHtml(meta.pricesLink)}</a>${lang === "zh" ? "。" : "."}</p>`;
+  const sections = tldHubGroups().map((g) =>
+    hubSection(
+      g[lang],
+      g.tlds.length,
+      `<div class="mt-3 grid gap-2 sm:grid-cols-2">${g.tlds.map((tld) => hubCard(`/tld/${tld}?lang=${lang}`, `.${tld}`, tldOneLiner(tld, lang), "font-mono text-sm font-semibold text-brand")).join("")}</div>`,
+    ),
+  );
+  return [intro, ...sections];
+}
+
+/** /guide 全文正文（guide-hub-page.tsx 首次渲染的静态部分） */
+export function guideHubBlocks(lang: Lang): string[] {
+  const meta = HUB_META.guide[lang];
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>`;
+  const sections = guideHubGroups().map((g) =>
+    hubSection(
+      g[lang],
+      g.slugs.length,
+      `<div class="mt-3 grid gap-2 sm:grid-cols-2">${g.slugs.map((slug) => hubCard(`/guide/${slug}?lang=${lang}`, INDUSTRY_GUIDES[slug][lang].label, guideOneLiner(slug, lang), "text-sm font-semibold text-brand")).join("")}</div>`,
+    ),
+  );
+  return [intro, ...sections];
+}
+
+/** /vs 全文正文（compare-hub-page.tsx 首次渲染的静态部分） */
+export function compareHubBlocks(lang: Lang): string[] {
+  const meta = HUB_META.vs[lang];
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>`;
+  const sections = compareHubGroups().map((g) =>
+    `<section class="mt-8"><h2 class="font-mono text-base font-bold">.${g.tld}<span class="tnum ml-2 text-xs font-normal text-txt2">${g.slugs.length}</span></h2><div class="mt-3 flex flex-wrap gap-2">${g.slugs
+      .map((slug) => `<a href="/vs/${slug}?lang=${lang}" class="flex min-h-[44px] items-center rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">.${TLD_COMPARES[slug].a} vs .${TLD_COMPARES[slug].b}</a>`)
+      .join("")}</div></section>`,
+  );
+  return [intro, ...sections];
 }

@@ -9,7 +9,8 @@ import { buildCompareFaq } from "./content/compare-faq";
 import { buildGuideFaq } from "./content/guide-faq";
 import { buildPricesFaq } from "./content/prices-faq";
 import { buildTldFaq } from "./content/tld-faq";
-import { compareContentBlocks, guideContentBlocks, pricesTableSkeleton, tldContentBlocks } from "./content/ssr-html";
+import { compareContentBlocks, compareHubBlocks, guideContentBlocks, guideHubBlocks, hubCrumbKicker, hubCrumbLabel, pricesTableSkeleton, tldContentBlocks, tldHubBlocks } from "./content/ssr-html";
+import { HUB_META } from "./content/hubs";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
@@ -1109,6 +1110,17 @@ app.get("/api/og/advanced", (c) => {
   });
 });
 
+// 内容枢纽 hub 页分享图（/tld /guide /vs 索引页；路径多一级，不会被 /api/og/:id 误匹配）
+app.get("/api/og/hub/:kind", (c) => {
+  const kind = c.req.param("kind") as "tld" | "guide" | "vs";
+  if (!(kind in HUB_META)) return c.notFound();
+  const lang = c.req.query("lang") === "en" ? "en" : "zh";
+  const meta = HUB_META[kind][lang];
+  return new Response(pageOgSvg(meta.kicker, meta.title, lang), {
+    headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
+  });
+});
+
 // 产品定位页分享图（须在 /api/og/:id 之前注册）
 app.get("/api/og/why", (c) => {
   const lang = c.req.query("lang") === "en" ? "en" : "zh";
@@ -1354,14 +1366,15 @@ const homeFaqJsonld = (lang: "zh" | "en") =>
     mainEntity: HOME_FAQ[lang].map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
   });
 
-/** BreadcrumbList 结构化数据：首页 → 当前页，供搜索结果面包屑展示 */
-const breadcrumbJsonld = (name: string, path: string, lang: "zh" | "en") =>
+/** BreadcrumbList 结构化数据：首页 →（可选 hub）→ 当前页，供搜索结果面包屑展示 */
+const breadcrumbJsonld = (name: string, path: string, lang: "zh" | "en", hub?: { name: string; path: string }) =>
   JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: lang === "en" ? "Home" : "首页", item: SITE_ORIGIN },
-      { "@type": "ListItem", position: 2, name, item: `${SITE_ORIGIN}${path}` },
+      ...(hub ? [{ "@type": "ListItem", position: 2, name: hub.name, item: `${SITE_ORIGIN}${hub.path}` }] : []),
+      { "@type": "ListItem", position: hub ? 3 : 2, name, item: `${SITE_ORIGIN}${path}` },
     ],
   });
 
@@ -1494,12 +1507,12 @@ app.get("/tld/:tld", async (c) => {
   });
   html = injectHreflang(html, `/tld/${tld}`, c.req.query("lang") === "en").replace(
     "</head>",
-    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang)}</script><script type="application/ld+json">${tldFaqJsonld}</script></head>`,
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang, { name: hubCrumbLabel("tld", lang), path: "/tld" })}</script><script type="application/ld+json">${tldFaqJsonld}</script></head>`,
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/tld-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
-  html = injectSsrSkeleton(html, `.${tld}`, loc.title, tldContentBlocks(tld, guide, lang));
+  html = injectSsrSkeleton(html, `.${tld}`, loc.title, tldContentBlocks(tld, guide, lang), hubCrumbKicker("tld", `.${tld}`, lang));
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -1538,12 +1551,12 @@ app.get("/guide/:slug", async (c) => {
   });
   html = injectHreflang(html, `/guide/${slug}`, c.req.query("lang") === "en").replace(
     "</head>",
-    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${guideFaqJsonld}</script></head>`,
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang, { name: hubCrumbLabel("guide", lang), path: "/guide" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${guideFaqJsonld}</script></head>`,
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/guide-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
-  html = injectSsrSkeleton(html, guide[lang].label, loc.title, guideContentBlocks(guide, lang));
+  html = injectSsrSkeleton(html, guide[lang].label, loc.title, guideContentBlocks(guide, lang), hubCrumbKicker("guide", guide[lang].label, lang));
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -1582,14 +1595,58 @@ app.get("/vs/:slug", async (c) => {
   });
   html = injectHreflang(html, `/vs/${slug}`, c.req.query("lang") === "en").replace(
     "</head>",
-    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang)}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${cmpFaqJsonld}</script></head>`,
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang, { name: hubCrumbLabel("vs", lang), path: "/vs" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${cmpFaqJsonld}</script></head>`,
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/compare-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
-  html = injectSsrSkeleton(html, `.${cmp.a} vs .${cmp.b}`, loc.title, compareContentBlocks(cmp, lang), undefined, "max-w-4xl");
+  html = injectSsrSkeleton(html, `.${cmp.a} vs .${cmp.b}`, loc.title, compareContentBlocks(cmp, lang), hubCrumbKicker("vs", `.${cmp.a} vs .${cmp.b}`, lang), "max-w-4xl");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
+
+// 内容枢纽 hub 页（/tld /guide /vs 索引，SPA 路由 + SSR meta + 全文骨架）
+const HUB_ENTRIES = {
+  tld: { entry: "src/components/tld-hub-page.tsx", blocks: tldHubBlocks },
+  guide: { entry: "src/components/guide-hub-page.tsx", blocks: guideHubBlocks },
+  vs: { entry: "src/components/compare-hub-page.tsx", blocks: compareHubBlocks },
+} as const;
+
+const serveHub = (kind: "tld" | "guide" | "vs") =>
+  async (c: { env: Bindings; req: { raw: Request; url: string; query: (k: string) => string | undefined; header: (k: string) => string | undefined } }) => {
+    const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+    const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+    const meta = HUB_META[kind][lang];
+    const title = escapeHtml(`${meta.title} | DomainHunter`);
+    const desc = escapeHtml(meta.desc);
+    const path = `/${kind}`;
+    let html = await res.text();
+    html = html
+      .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+      .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
+      .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
+      .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+      .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
+      .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
+      .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}${path}" />`)
+      .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${SITE_ORIGIN}${path}" />`)
+      .replace(
+        /<meta property="og:image" content="[^"]*" \/>/,
+        `<meta property="og:image" content="${SITE_ORIGIN}/api/og/hub/${kind}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+      );
+    html = injectHreflang(html, path, c.req.query("lang") === "en").replace(
+      "</head>",
+      `<script type="application/ld+json">${breadcrumbJsonld(meta.title, path, lang)}</script></head>`,
+    );
+    html = setHtmlLang(html, lang);
+    html = await injectModulepreload(html, c.env.ASSETS, c.req.url, HUB_ENTRIES[kind].entry);
+    html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
+    html = injectSsrSkeleton(html, meta.kicker, meta.title, HUB_ENTRIES[kind].blocks(lang), undefined, "max-w-4xl");
+    return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
+  };
+
+app.get("/tld", serveHub("tld"));
+app.get("/guide", serveHub("guide"));
+app.get("/vs", serveHub("vs"));
 
 // 价格总览页（SPA 路由 + SSR meta）
 // kicker/intro 与 i18n 词典 prices.kicker / prices.intro 逐字同源（骨架/水合一致，无跳变）
@@ -1703,7 +1760,7 @@ app.get("/why", async (c) => {
 // 内容最后更新日期（sitemap <lastmod>）：每次内容页增减/改写时更新
 const CONTENT_LASTMOD = "2026-08-08";
 
-const sitemapPaths = () => ["/", "/prices", "/why", "/mcp", "/advanced", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
+const sitemapPaths = () => ["/", "/prices", "/why", "/mcp", "/advanced", "/tld", "/guide", "/vs", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
 
 app.get("/sitemap.xml", (c) => {
   const paths = sitemapPaths();
@@ -1734,12 +1791,15 @@ app.get("/llms.txt", (c) => {
     line("/advanced", "Bulk domain check: paste up to 200 names and stream live availability"),
     "",
     "## TLD guides",
+    line("/tld", HUB_META.tld.en.title),
     ...TLD_LIST.map((t) => line(`/tld/${t}`, TLD_GUIDES[t].en.title)),
     "",
     "## Industry naming guides",
+    line("/guide", HUB_META.guide.en.title),
     ...GUIDE_LIST.map((s) => line(`/guide/${s}`, INDUSTRY_GUIDES[s].en.title)),
     "",
     "## TLD comparisons",
+    line("/vs", HUB_META.vs.en.title),
     ...COMPARE_LIST.map((s) => line(`/vs/${s}`, TLD_COMPARES[s].en.title)),
     "",
     "## API (MCP)",
