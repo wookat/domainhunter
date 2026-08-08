@@ -336,6 +336,75 @@ export async function generateAiCandidates(
 
 const THEME_NAMES: Record<string, string> = { pinyin: "拼音/缩写", word: "现成英文单词", coined: "英文造词", blend: "拼音+英文混合" };
 
+// ---------------- 点踩形态规避（R225） ----------------
+// 生产坏例（R218 审计 P2-4）：点踩 moji/moxiang（墨 mo 词根）后仍产出 moyu/moxu；
+// 点踩 traxen/forgex（-x 后缀 coined）后仍产出 gleanix。R180 的规避只在「完全同名」层面生效。
+// 两层修复：① buildRefineHint 从点踩名提取形态特征（词首词根、尾部后缀模式）写进 prompt 显式禁止；
+// ② 解析后硬过滤兜底——新候选与点踩集共享词根前缀或同后缀模式即丢弃。
+
+// 尾部后缀模式：域名造词常见改造后缀，长模式优先匹配；单独的尾字母 x 也算模式（traxen/forgex/gleanix 型）
+const DISLIKE_SUFFIX_PATTERNS = ["ify", "ily", "ora", "io", "ly", "x"] as const;
+
+/** 点踩 label 的尾部后缀模式（无匹配返回 null） */
+export function dislikeSuffixOf(label: string): string | null {
+  for (const p of DISLIKE_SUFFIX_PATTERNS) {
+    if (label.length > p.length && label.endsWith(p)) return p;
+  }
+  return null;
+}
+
+/** label 词首的合法拼音音节（2–4 字符，长音节优先；无则返回 null）——moji → mo、moxiang → mo */
+export function leadingPinyinSyllable(label: string): string | null {
+  for (let len = Math.min(4, label.length - 1); len >= 2; len--) {
+    const head = label.slice(0, len);
+    if (PINYIN_SYLLABLES.has(head)) return head;
+  }
+  return null;
+}
+
+/** 点踩 label 的词根片段：词首合法拼音音节优先（mo），否则取首 3 字符（gleanix → gle） */
+export function dislikeRootOf(label: string): string {
+  return leadingPinyinSyllable(label) ?? label.slice(0, 3);
+}
+
+/**
+ * 候选与点踩集的形态冲突判定：
+ * - "root"：与任一点踩 label 共享 ≥3 字符词首前缀，或词首拼音音节与点踩词首音节相同（mo ↔ moyu）
+ * - "suffix"：尾部后缀模式与任一点踩 label 相同（-x ↔ gleanix）
+ * - null：无冲突
+ */
+export function dislikedMorphologyConflict(label: string, disliked: DislikedItem[]): "root" | "suffix" | null {
+  for (const d of disliked) {
+    let common = 0;
+    while (common < label.length && common < d.label.length && label[common] === d.label[common]) common++;
+    if (common >= 3) return "root";
+    const root = leadingPinyinSyllable(d.label);
+    if (root && label.startsWith(root) && leadingPinyinSyllable(label) === root) return "root";
+  }
+  for (const d of disliked) {
+    const suf = dislikeSuffixOf(d.label);
+    if (suf && label.length > suf.length && label.endsWith(suf)) return "suffix";
+  }
+  return null;
+}
+
+// 硬过滤兜底的候选量权衡：过滤后不足此数时，按原顺序回填「仅后缀冲突」的候选
+// （后缀模式误杀成本高于词根——-ly/-io 是常见合法结尾；词根级冲突不回填）
+export const DISLIKE_FILTER_MIN_KEEP = 6;
+
+/** refine 轮硬过滤：丢弃与点踩集形态冲突的候选，不足 MIN_KEEP 时回填仅后缀冲突项 */
+export function filterDislikedMorphology(candidates: AiCandidate[], disliked: DislikedItem[]): AiCandidate[] {
+  const kept: AiCandidate[] = [];
+  const suffixOnly: AiCandidate[] = [];
+  for (const c of candidates) {
+    const kind = dislikedMorphologyConflict(c.label, disliked);
+    if (kind === null) kept.push(c);
+    else if (kind === "suffix") suffixOnly.push(c);
+  }
+  while (kept.length < DISLIKE_FILTER_MIN_KEEP && suffixOnly.length > 0) kept.push(suffixOnly.shift()!);
+  return kept;
+}
+
 /** 把上一轮的失败模式总结成具体反思提示，而非简单罗列名单 */
 function buildRefineHint(fb: RefineFeedback, round: number, lang: "zh" | "en"): string {
   const parts: string[] = [`这是第 ${round} 轮。`];
@@ -361,6 +430,27 @@ function buildRefineHint(fb: RefineFeedback, round: number, lang: "zh" | "en"): 
     parts.push(
       `用户明确点踩了这些候选及其风格：${items}。请逐个分析它们的词根与构词模式（共同的词根片段、前后缀改造套路、命名思路），本轮严禁输出使用相同词根或相同构词模式的名字（例如点踩了 loggist 这类 log+后缀造词，就不要再出任何含 log 词根或同套路后缀改造的候选），换用完全不同的词根与构词方向。`,
     );
+    // R225：从点踩名提取形态特征，显式列出硬性禁止项（词根片段 + 后缀模式），双语给出反例
+    const roots = new Set<string>();
+    const suffixes = new Set<string>();
+    for (const d of fb.disliked) {
+      roots.add(dislikeRootOf(d.label));
+      const s = dislikeSuffixOf(d.label);
+      if (s) suffixes.add(s);
+    }
+    const rootList = [...roots].join("、");
+    const sufList = [...suffixes].map((s) => `-${s}`).join("、");
+    if (lang === "en") {
+      const enRoots = [...roots].join(", ");
+      const enSufs = [...suffixes].map((s) => `-${s}`).join(", ");
+      let line = `Hard morphological bans extracted from the disliked names (violations will be discarded by the system, do not waste slots): never start a candidate with the root fragment(s) ${enRoots} (disliking "moji" bans "moyu"/"moxu" — same root, same vibe)`;
+      if (suffixes.size > 0) line += `; never end a candidate with the suffix pattern(s) ${enSufs} (disliking "forgex" bans "gleanix" — same -x coinage suffix)`;
+      parts.push(line + ".");
+    } else {
+      let line = `已从点踩名中提取出以下形态特征，本轮硬性禁止（违规候选会被系统直接丢弃，不要浪费名额）：词首禁止出现词根片段 ${rootList}（点踩了 moji 就不能再出 moyu、moxu 这类同词根名）`;
+      if (suffixes.size > 0) line += `；禁止以 ${sufList} 结尾（点踩了 forgex 就不能再出 gleanix 这类同后缀造词）`;
+      parts.push(line + "。");
+    }
   }
   if (fb.tried.length > 0) {
     parts.push(`以下名字全部已经核验过（无论结果如何），严禁重复输出其中任何一个：\n${fb.tried.slice(-120).join(", ")}`);
@@ -788,5 +878,9 @@ async function generateOnce(
       },
     });
   }
+  // R225：点踩形态硬过滤兜底——prompt 级禁止（buildRefineHint）之外，对解析后的新候选
+  // 跑与点踩集的形态相似度检查，共享词根前缀或同后缀模式即丢弃；过滤后不足再回填仅后缀冲突项
+  const disliked = opts.feedback?.disliked;
+  if (disliked && disliked.length > 0) return filterDislikedMorphology(out, disliked);
   return out;
 }
