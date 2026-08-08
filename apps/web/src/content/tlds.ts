@@ -2904,6 +2904,186 @@ const GUIDES = {
       ],
     },
   },
+  academy: {
+    tld: "academy",
+    zh: {
+      title: ".academy 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".academy 把「学院」写进域名，适合在线课程、培训机构与技能学习社区。查看 .academy 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .academy 域名。",
+      intro:
+        ".academy 把「学院」两个字直接写进域名：在线课程平台、编程训练营、企业培训、体育与艺术培训机构用 name.academy，「这里教东西」的定位一秒传达。它比 .school 更「进阶」——academy 一词在英语里自带体系化、专业化的意味，适合成建制的课程体系而非单节课；Khan Academy 把这个词在教育界的认知推到了顶点，很多品牌学院（brand academy）式的企业培训站也爱用它。Identity Digital 运营，注册约 $12（约 ¥85），续费约 $38/年（约 ¥271），对客单价高的教育产品完全无压力。库存很好：学科词、技能词、城市名基本都有货。注意三点：一是 academy 一共七个字母，配的主体名要短，否则域名整体过长；二是它不是学历教育的资质证明，正规院校资质要在页面上另行呈现；三是面向纯国内用户认知度一般，建议中文品牌词同步露出。命名上「学科/技能 + .academy」最自然（code、design、yoga 类），品牌学院用「品牌词 + .academy」也顺。",
+      bestFor: ["在线课程与训练营", "企业培训与品牌学院", "体育艺术培训机构", "技能学习社区"],
+      namingTips: [
+        "「学科/技能词 + .academy」定位一秒传达",
+        "academy 已有七个字母，主体名要短",
+        "注册约 $12、续费约 $38/年，教育产品无压力",
+        "不是办学资质，正规资质要页面另行呈现",
+      ],
+    },
+    en: {
+      title: ".academy Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".academy puts structured learning in the domain — for online courses, bootcamps and training programs. See live pricing and naming advice, then hunt available .academy names with AI.",
+      intro:
+        ".academy writes \"we teach this\" straight into the domain: online course platforms, coding bootcamps, corporate training programs, and sports or arts academies on name.academy communicate their purpose instantly. It reads a notch more advanced than .school — \"academy\" carries a sense of structured, professional curriculum rather than a single lesson, and Khan Academy pushed the word's education association to its peak; brand-academy style corporate training sites love it too. Operated by Identity Digital, registration runs about $12 with renewal around $38/yr — trivial for education products with real ticket sizes. Inventory is strong: subject words, skill words and city names are mostly open. Three cautions: at seven letters, .academy needs a short subject word or the whole domain gets long; it is not an accreditation — formal credentials belong on the page, not in the TLD; and recognition among non-English audiences is moderate. Naming: subject or skill + .academy is the natural pattern (code, design, yoga); brand word + .academy fits corporate academies.",
+      bestFor: ["Online courses & bootcamps", "Corporate training & brand academies", "Sports & arts academies", "Skill-learning communities"],
+      namingTips: [
+        "Subject/skill + .academy says what you teach instantly",
+        "Seven letters already — keep the subject word short",
+        "About $12 to register, $38/yr to renew",
+        "Not an accreditation — show credentials on the page",
+      ],
+    },
+  },
+  school: {
+    tld: "school",
+    zh: {
+      title: ".school 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".school 是教育行业的直白后缀，适合学校官网、课外班与在线学习项目，注册价很低。查看 .school 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .school 域名。",
+      intro:
+        ".school 是教育后缀里最直白的一个：不管是实体学校、课外培训班、驾校舞校，还是在线学习项目，name.school 读出来就是「一所学校」。相比 .academy 的进阶感，.school 更亲切日常，适合面向孩子与家长的场景——幼儿园、K12 课外班、兴趣班的气质刚好；「学一门手艺」类的在线项目（如 sourdough.school 式的烘焙教学）用它也很出彩。Identity Digital 运营，注册约 $6（约 ¥41）是教育后缀里的低位，续费约 $29/年（约 ¥211）也温和，试错成本低。库存极好：学科、技能、城市与品牌词命中率都高。注意三点：一是它不代表办学资质，正规学历教育机构的资质信息要另行呈现，部分家长会先看资质再看域名；二是 school 六个字母不算短，主体名尽量短；三是国内公办学校体系有专属域名习惯（.edu.cn），.school 更适合民办与市场化教育品牌。命名上「学科/技能 + .school」最自然，实体学校用「校名/地名 + .school」也顺。",
+      bestFor: ["课外班与兴趣班", "驾校舞校等技能学校", "在线学习项目", "民办学校与教育品牌"],
+      namingTips: [
+        "「学科/技能 + .school」读出来就是一所学校",
+        "注册约 $6、续费约 $29/年，教育后缀低位",
+        "不代表办学资质，正规资质另行呈现",
+        "国内学历教育习惯 .edu.cn，.school 适合市场化品牌",
+      ],
+    },
+    en: {
+      title: ".school Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".school is education's most literal suffix — for schools, classes and online learning projects, at a low entry price. See live pricing and naming advice, then hunt available .school names with AI.",
+      intro:
+        ".school is the most literal education suffix there is: a physical school, an after-school program, a driving or dance school, or an online learning project on name.school reads exactly as what it is. Where .academy leans structured and advanced, .school feels warm and everyday — right for anything aimed at kids and parents, and charming for learn-a-craft projects (the sourdough.school pattern for baking instruction is a classic). Operated by Identity Digital, registration around $6 is the low end among education suffixes, with renewal near $29/yr — cheap to try. Inventory is excellent: subjects, skills, city and brand words all hit well. Three cautions: the TLD is not an accreditation — formal institutions should present credentials separately, since parents check those first; school is six letters, so keep the subject word short; and state education systems often have their own conventions (like .edu), making .school best for private and market-facing education brands. Naming: subject or skill + .school is the natural pattern; physical schools can use name or place + .school.",
+      bestFor: ["After-school & hobby classes", "Driving, dance & trade schools", "Online learning projects", "Private schools & education brands"],
+      namingTips: [
+        "Subject/skill + .school reads as exactly what it is",
+        "About $6 to register, $29/yr to renew — cheap to try",
+        "Not an accreditation — present credentials separately",
+        "Best for private, market-facing education brands",
+      ],
+    },
+  },
+  coach: {
+    tld: "coach",
+    zh: {
+      title: ".coach 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".coach 是教练经济的专属后缀，适合私教、人生教练与体育教练的个人品牌。查看 .coach 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .coach 域名。",
+      intro:
+        ".coach 踩中了「教练经济」的爆发：健身私教、人生教练（life coach）、职业教练、体育教练、企业高管教练——凡是「一对一带你变强」的生意，name.coach 都是身份即域名。教练行业的获客核心是个人信任，域名里直接写明「我是教练」比任何 slogan 都高效；life.coach 这样的组合甚至本身就是品类词。Identity Digital 运营，注册约 $11（约 ¥78）不高，但续费约 $62/年（约 ¥449）在本站后缀里偏贵，适合把域名当获客资产而非囤货的从业者。库存很好：细分领域词、人名、动词组合命中率高。注意三点：一是续费价要提前算进年度预算，个人从业者别注册一堆闲置；二是「coach」在英语里也指长途大巴与奢侈品牌 Coach，但教练语境下歧义很小；三是教练资质认证（ICF 等）是信任的另一半，域名之外要把认证挂出来。命名上「细分领域 + .coach」最强（fitness、career、mindset 类），个人品牌用「人名 + .coach」最直接。",
+      bestFor: ["健身私教与运动教练", "人生教练与职业教练", "高管教练与企业教练", "教练课程与社区"],
+      namingTips: [
+        "「细分领域 + .coach」身份即域名",
+        "注册约 $11、续费约 $62/年，续费要算进预算",
+        "「人名 + .coach」最适合个人品牌",
+        "ICF 等资质认证与域名配合建立信任",
+      ],
+    },
+    en: {
+      title: ".coach Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".coach is the coaching economy's own suffix — for personal trainers, life coaches and sports coaches. See live pricing and naming advice, then hunt available .coach names with AI.",
+      intro:
+        ".coach rides the coaching-economy boom: personal trainers, life coaches, career coaches, sports coaches, executive coaches — any one-on-one \"I make you better\" business turns identity into a domain with name.coach. Client acquisition in coaching runs on personal trust, and stating \"I am a coach\" in the domain itself beats any slogan; combos like life.coach are practically category keywords. Operated by Identity Digital, registration is a reasonable ~$11, but renewal around $62/yr sits at the pricier end here — best for practitioners treating the domain as a client-acquisition asset rather than a collectible. Inventory is strong: niche words, personal names and verb combos hit well. Three cautions: budget the renewal up front and don't stockpile idle names; \"coach\" also means a bus and the luxury brand Coach in English, though coaching context leaves little ambiguity; and certifications (ICF and the like) are the other half of trust — display them alongside the domain. Naming: niche + .coach is the strongest play (fitness, career, mindset); your own name + .coach is the most direct personal brand.",
+      bestFor: ["Personal trainers & sports coaches", "Life & career coaches", "Executive & business coaches", "Coaching courses & communities"],
+      namingTips: [
+        "Niche + .coach turns identity into the domain",
+        "About $11 to register, $62/yr to renew — budget it",
+        "Your name + .coach is the most direct personal brand",
+        "Pair the domain with certifications (ICF etc.) for trust",
+      ],
+    },
+  },
+  care: {
+    tld: "care",
+    zh: {
+      title: ".care 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".care 把「关怀」写进域名，适合医疗健康、养老护理与客户服务品牌。查看 .care 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .care 域名。",
+      intro:
+        ".care 是温度最高的后缀之一：医疗健康服务、养老与居家护理、心理健康、母婴护理、宠物护理，甚至企业的客户关怀入口（support/care 页），name.care 都把「我们在乎你」写进了域名。护理经济随老龄化持续扩张，home.care、senior care 类的组合本身就是搜索品类词；企业侧把 brand.care 用作客服与售后入口也是国际大牌的成熟玩法。Identity Digital 运营，注册约 $12（约 ¥85），续费约 $36/年（约 ¥256），对医疗与护理行业的客单价来说毫无压力。库存很好：人群词、场景词、品牌词命中率高。注意三点：一是医疗类站点涉及执业资质与合规（广告法对医疗宣传的限制），资质信息必须清晰呈现；二是「care」语义偏服务与情感，硬科技或工具类产品用它气质错位；三是面向国内用户认知度一般，配合中文品牌词更稳。命名上「人群/场景 + .care」最自然（senior、home、baby 类），品牌客服入口用「品牌词 + .care」。",
+      bestFor: ["医疗健康与诊所", "养老护理与居家照护", "心理健康与母婴护理", "品牌客户关怀入口"],
+      namingTips: [
+        "「人群/场景 + .care」是天然品类词",
+        "注册约 $12、续费约 $36/年，护理行业无压力",
+        "医疗站点资质与合规信息必须清晰呈现",
+        "「品牌词 + .care」可做客服售后入口",
+      ],
+    },
+    en: {
+      title: ".care Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".care puts compassion in the domain — for healthcare, senior care and customer-care brands. See live pricing and naming advice, then hunt available .care names with AI.",
+      intro:
+        ".care is one of the warmest suffixes on the market: healthcare services, senior and home care, mental health, mother-and-baby care, pet care — and even a brand's customer-care portal — all say \"we care about you\" right in the domain with name.care. The care economy keeps expanding with aging populations, and combos like home.care read as search-category keywords in themselves; global brands also use brand.care as a mature pattern for support and after-sales portals. Operated by Identity Digital, about $12 to register and $36/yr to renew — negligible against healthcare-grade ticket sizes. Inventory is strong: audience words, scenario words and brand words all hit well. Three cautions: medical sites carry licensing and advertising-compliance obligations, so credentials must be presented clearly; \"care\" reads service-oriented and emotional — a hard-tech or developer-tool product on .care feels mismatched; and recognition in non-English markets is moderate. Naming: audience or scenario + .care is the natural pattern (senior, home, baby); brand word + .care works for customer-care portals.",
+      bestFor: ["Healthcare services & clinics", "Senior & home care", "Mental health & baby care", "Brand customer-care portals"],
+      namingTips: [
+        "Audience/scenario + .care reads as a category keyword",
+        "About $12 to register, $36/yr to renew",
+        "Medical sites must present licensing clearly",
+        "Brand + .care works as a support portal",
+      ],
+    },
+  },
+  doctor: {
+    tld: "doctor",
+    zh: {
+      title: ".doctor 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".doctor 把医生身份写进域名，适合诊所、医生个人品牌与在线问诊服务。查看 .doctor 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .doctor 域名。",
+      intro:
+        ".doctor 是身份感最强的后缀之一：医生个人品牌、私人诊所、在线问诊、口腔眼科等专科服务用 name.doctor，专业身份从域名开始建立。它的妙处还在引申义——「X 医生」在中英文里都是「解决 X 问题的专家」的通用比喻，bike doctor、plant doctor 式的维修与养护生意用它自带亲切感，family.doctor 这样的组合更是天然品类词。Identity Digital 运营，注册约 $8（约 ¥59）不高，但续费约 $93/年（约 ¥671）是本站最贵档之一——它适合把域名当门面资产的执业者，不适合囤货。库存很好：科室词、人名、维修类比喻词命中率高。注意三点：一是续费价必须提前算进预算，这是典型的「首年甜、续费贵」后缀；二是医疗语境下用 .doctor 有暗示执业资质之嫌，真实资质信息必须在页面清晰呈现，非医疗的比喻用法反而没这个包袱；三是国内在线问诊受严格监管，合规先行。命名上「科室/专长 + .doctor」最自然，维修养护生意用「对象 + .doctor」的比喻也讨喜。",
+      bestFor: ["医生个人品牌与诊所", "在线问诊与专科服务", "口腔眼科等专科门诊", "维修养护类「X 医生」品牌"],
+      namingTips: [
+        "「科室/专长 + .doctor」身份从域名开始",
+        "注册约 $8 但续费约 $93/年，必须算进预算",
+        "医疗站点资质必须清晰呈现，避免资质暗示争议",
+        "「对象 + .doctor」的维修比喻（bike doctor 式）很讨喜",
+      ],
+    },
+    en: {
+      title: ".doctor Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".doctor puts the white coat in the domain — for clinics, physician brands and telehealth, plus \"X doctor\" repair brands. See live pricing and naming advice, then hunt available .doctor names with AI.",
+      intro:
+        ".doctor carries more identity than almost any suffix: physician personal brands, private clinics, telehealth services and specialist practices on name.doctor start building authority from the address itself. The metaphorical layer is just as useful — \"X doctor\" universally means \"the expert who fixes X\", so bike doctor or plant doctor style repair and maintenance businesses get instant warmth, and combos like family.doctor are category keywords outright. Operated by Identity Digital, registration is a modest ~$8, but renewal around $93/yr is among the priciest here — for practitioners treating the domain as a storefront asset, not for stockpiling. Inventory is strong: specialty words, names and repair metaphors all hit. Three cautions: this is the classic cheap-first-year, expensive-renewal suffix — budget it; in medical contexts a .doctor domain can imply licensure, so real credentials must be displayed clearly (metaphorical uses carry no such burden); and telehealth is heavily regulated in many markets — compliance first. Naming: specialty + .doctor is the natural pattern; object + .doctor makes charming repair brands.",
+      bestFor: ["Physician brands & clinics", "Telehealth & specialist services", "Dental, eye & specialty practices", "\"X doctor\" repair & care brands"],
+      namingTips: [
+        "Specialty + .doctor builds authority from the address",
+        "About $8 to register but $93/yr to renew — budget it",
+        "Medical sites must display real credentials clearly",
+        "Object + .doctor makes charming repair brands (bike doctor)",
+      ],
+    },
+  },
+  restaurant: {
+    tld: "restaurant",
+    zh: {
+      title: ".restaurant 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".restaurant 把餐厅身份写进域名，适合实体餐厅、连锁品牌与餐饮预订平台。查看 .restaurant 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .restaurant 域名。",
+      intro:
+        ".restaurant 是餐饮行业的全拼后缀：实体餐厅、连锁品牌、餐饮集团、预订与点评平台用 name.restaurant，行业身份一目了然。餐厅命名的痛点是店名往往是人名、地名或常见词——这些词的 .com 几乎必然被占，而「店名 + .restaurant」组合的库存极好，几乎随便挑；对多品牌餐饮集团来说，用统一的 .restaurant 后缀归拢旗下品牌官网也很优雅。Identity Digital 运营，注册约 $13（约 ¥93），续费约 $52/年（约 ¥374），对一家正经餐厅的经营成本来说可以忽略。注意三点：一是 restaurant 十个字母是本站最长后缀，店名必须短，否则域名难拼难念；二是食客更多从地图与点评平台进店，域名的角色是菜单、订座与品牌官网的稳定入口，配合 Google Maps/大众点评的主页链接使用；三是快餐、咖啡、酒吧等细分业态有更贴的后缀（.cafe、.bar、.pizza），全服务餐厅才最适合 .restaurant。命名上「店名 + .restaurant」最自然，本地生意用「地名/菜系 + .restaurant」也顺。",
+      bestFor: ["实体餐厅与连锁品牌", "餐饮集团多品牌官网", "预订与点评平台", "菜系与主题餐厅"],
+      namingTips: [
+        "「店名 + .restaurant」行业身份一目了然",
+        "restaurant 十个字母，店名必须短",
+        "注册约 $13、续费约 $52/年，餐厅成本可忽略",
+        "快餐咖啡酒吧有更贴的 .cafe/.bar/.pizza",
+      ],
+    },
+    en: {
+      title: ".restaurant Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".restaurant spells the business out in full — for restaurants, chains and dining platforms. See live pricing and naming advice, then hunt available .restaurant names with AI.",
+      intro:
+        ".restaurant spells the whole business into the domain: restaurants, chains, hospitality groups, and booking or review platforms on name.restaurant are unmistakable. It solves a real naming pain — restaurant names are typically personal names, places or common words whose .com vanished decades ago, while name + .restaurant inventory is wide open; hospitality groups can also elegantly unify multiple brand sites under one suffix. Operated by Identity Digital, about $13 to register and $52/yr to renew — a rounding error against real restaurant operating costs. Three cautions: at ten letters this is the longest suffix on this site, so the name in front must be short or the domain becomes unwieldy; diners mostly arrive via maps and review platforms, so the domain's job is a stable home for the menu, reservations and brand — link it from Google Maps and the like; and fast food, coffee and bars have tighter fits (.cafe, .bar, .pizza) — full-service restaurants benefit most. Naming: the restaurant's name + .restaurant is the natural pattern; place or cuisine + .restaurant works for local businesses.",
+      bestFor: ["Restaurants & chains", "Hospitality group brand sites", "Booking & review platforms", "Cuisine & theme restaurants"],
+      namingTips: [
+        "Name + .restaurant makes the business unmistakable",
+        "Ten letters — the name in front must be short",
+        "About $13 to register, $52/yr to renew",
+        "Coffee/bars/pizza have tighter fits: .cafe/.bar/.pizza",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
