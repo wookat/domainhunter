@@ -77,4 +77,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "toys", zh: "玩具品牌", en: "Toy brands" },
   { slug: "brewery", zh: "精酿酒饮", en: "Craft beer & drinks" },
   { slug: "furniture", zh: "家具品牌", en: "Furniture" },
+  { slug: "crossfit", zh: "CrossFit 综合体能", en: "CrossFit & functional fitness" },
+  { slug: "language", zh: "语言学习", en: "Language learning" },
+  { slug: "resume", zh: "简历求职", en: "Resume & job search" },
+  { slug: "events", zh: "活动策划", en: "Event planning" },
+  { slug: "moving", zh: "搬家服务", en: "Moving services" },
+  { slug: "aquarium", zh: "水族爬宠", en: "Aquariums & reptiles" },
 ];

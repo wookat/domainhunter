@@ -155,6 +155,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   moe: { first: 94, renew: 94 },
   lol: { first: 11, renew: 189 },
   uk: { first: 41, renew: 41 },
+  fm: { first: 632, renew: 632 },
+  one: { first: 48, renew: 145 },
+  cool: { first: 41, renew: 263 },
+  red: { first: 59, renew: 137 },
+  today: { first: 19, renew: 167 },
+  best: { first: 12, renew: 135 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
