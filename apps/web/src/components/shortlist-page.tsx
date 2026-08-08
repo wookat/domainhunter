@@ -4,25 +4,25 @@ import { Bell, Bookmark, Check, ChevronDown, Copy, Download, ExternalLink, Link2
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Switch } from "@/components/ui/switch";
 import { fetchMonitorChanges, loadWebhook, useMonitor, type MonitorChange } from "@/lib/monitor";
-import { CopyButton, RegisterMenu } from "@/components/domain-row";
+import { CopyButton, ExpiryNote, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import { downloadText } from "@/lib/export";
 import { useI18n, type TFunc } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
 import { REGISTRARS } from "@/lib/registrars";
 import { addMyShare, loadMyShares, removeMyShare, type MyShare } from "@/lib/my-shares";
-import type { ShortlistItem } from "@/lib/shortlist";
+import type { RecheckResult, ShortlistItem } from "@/lib/shortlist";
 import { scoreBadgeClass, totalScore, type Status } from "@/types";
 import { cn } from "@/lib/utils";
 
 function exportShortlist(items: ShortlistItem[], format: "csv" | "txt") {
   let content: string;
   if (format === "csv") {
-    const header = "domain,score,length,readability,relevance,brandability,meaning";
+    const header = "domain,score,length,readability,relevance,brandability,meaning,expiresAt";
     const lines = items.map((it) => {
       const s = it.scores;
       const meaning = `"${(it.meaning ?? "").replace(/"/g, '""')}"`;
-      return [it.domain, s ? totalScore(s) : "", s?.length ?? "", s?.readability ?? "", s?.relevance ?? "", s?.brandability ?? "", meaning].join(",");
+      return [it.domain, s ? totalScore(s) : "", s?.length ?? "", s?.readability ?? "", s?.relevance ?? "", s?.brandability ?? "", meaning, it.expiresAt ?? ""].join(",");
     });
     content = [header, ...lines].join("\n");
   } else {
@@ -69,7 +69,7 @@ export function ShortlistPage({
   onStart: () => void;
   onMerge: (incoming: Omit<ShortlistItem, "addedAt">[]) => void;
   lastCheckedAt: number | null;
-  onApplyStatuses: (statuses: Record<string, Status>) => void;
+  onApplyStatuses: (results: Record<string, RecheckResult>) => void;
 }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
@@ -279,7 +279,7 @@ export function ShortlistPage({
     setChanges({});
     setCheckingDomains(new Set(items.map((i) => i.domain)));
     const prevStatus = new Map(items.map((i) => [i.domain, i.status]));
-    const statuses: Record<string, Status> = {};
+    const statuses: Record<string, RecheckResult> = {};
     const newChanges: Record<string, StatusChange> = {};
     try {
       const res = await fetch("/api/check?refresh=1", {
@@ -300,8 +300,8 @@ export function ShortlistPage({
         buf = lines.pop()!;
         for (const line of lines) {
           if (!line) continue;
-          const r = JSON.parse(line) as { domain: string; status: Status };
-          statuses[r.domain] = r.status;
+          const r = JSON.parse(line) as { domain: string; status: Status; expiresAt?: string };
+          statuses[r.domain] = { status: r.status, ...(r.status === "taken" && r.expiresAt ? { expiresAt: r.expiresAt } : {}) };
           const prev = prevStatus.get(r.domain);
           if (r.status === "taken" && prev != null && prev !== "taken") newChanges[r.domain] = "becameTaken";
           else if (r.status === "available" && prev === "taken") newChanges[r.domain] = "becameAvailable";
@@ -648,6 +648,7 @@ export function ShortlistPage({
                           {!change && it.status === "taken" && (
                             <span className="shrink-0 rounded bg-taken-dim px-1.5 py-0.5 text-[11px] font-semibold text-taken">{t("status.taken")}</span>
                           )}
+                          {it.status === "taken" && it.expiresAt && <ExpiryNote iso={it.expiresAt} className="shrink truncate" />}
                         </div>
                         {it.meaning && <div className="mt-0.5 max-w-xs truncate text-xs text-txt1">{it.meaning}</div>}
                       </td>
@@ -728,6 +729,11 @@ export function ShortlistPage({
                       )}
                     </span>
                   </div>
+                  {it.status === "taken" && it.expiresAt && (
+                    <p className="mt-1 flex min-w-0">
+                      <ExpiryNote iso={it.expiresAt} className="shrink truncate" />
+                    </p>
+                  )}
                   {it.meaning && <p className="mt-1 text-xs text-txt1">{it.meaning}</p>}
                   {it.scores && <ScoreBars scores={it.scores} columns={4} className="mt-3" />}
                   <div className="mt-3 flex items-center gap-2">

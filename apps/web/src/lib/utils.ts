@@ -23,6 +23,15 @@ export function formatExpiry(iso: string): string | null {
   return new Date(ts).toISOString().slice(0, 10);
 }
 
+const PLAUSIBLE_MIN_TS = Date.UTC(1990, 0, 1);
+const PLAUSIBLE_MAX_YEARS_MS = 50 * 365 * 24 * 60 * 60 * 1000;
+
+/** 注册局哨兵值（如 1970-01-01、9999-12-31）不是真实到期时间，不予展示 */
+export function isPlausibleExpiry(iso: string): boolean {
+  const ts = Date.parse(iso);
+  return Number.isFinite(ts) && ts >= PLAUSIBLE_MIN_TS && ts - Date.now() < PLAUSIBLE_MAX_YEARS_MS;
+}
+
 /** 是否在 90 天内到期（已过期也算），用于琥珀色提示 */
 export function isExpiringSoon(iso: string): boolean {
   const ts = Date.parse(iso);
