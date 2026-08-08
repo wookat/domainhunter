@@ -173,6 +173,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   estate: { first: 59, renew: 226 },
   expert: { first: 48, renew: 360 },
   farm: { first: 56, renew: 226 },
+  blue: { first: 93, renew: 145 },
+  pink: { first: 59, renew: 152 },
+  black: { first: 115, renew: 374 },
+  ninja: { first: 41, renew: 182 },
+  rocks: { first: 26, renew: 130 },
+  pet: { first: 78, renew: 152 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
