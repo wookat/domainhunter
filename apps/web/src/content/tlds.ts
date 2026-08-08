@@ -2724,6 +2724,186 @@ const GUIDES = {
       ],
     },
   },
+  blue: {
+    tld: "blue",
+    zh: {
+      title: ".blue 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".blue 把品牌色写进域名，适合以蓝色为主视觉的品牌、海洋与航空主题项目。查看 .blue 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .blue 域名。",
+      intro:
+        ".blue 是「颜色系」后缀里最商务的一个：蓝色在视觉语言里代表专业、冷静与信任，金融、科技、医疗类品牌的主色十有八九是蓝。如果你的品牌视觉以蓝为主，name.blue 等于把 VI 写进了域名——jet.blue 式的组合就是教科书案例（JetBlue 真的把 jetblue.com 之外的品牌延伸做到了颜色域名上）。第二层是字面语义：海洋保护组织、潜水俱乐部、航空航天项目、爵士与布鲁斯音乐（blues）站点都能借「blue」的意象。Identity Digital 运营，注册约 $13（约 ¥93），续费约 $20/年（约 ¥145）——续费比注册没贵多少，是颜色系里定价最厚道的档位。库存极好：常用词、品牌词基本随便挑。注意两点：一是颜色后缀的指向性弱于行业后缀，用户看到 .blue 猜不出你做什么，品牌解释成本要靠首屏补齐；二是「feeling blue」在英语里有忧郁的意思，情感健康类项目用它反而可以借题发挥，但普通商务站要避免负面歧义。命名上「品牌词 + .blue」最自然，海洋/天空类项目用「意象词 + .blue」也顺。",
+      bestFor: ["以蓝色为主视觉的品牌", "海洋保护与潜水项目", "航空航天与天空主题", "爵士/布鲁斯音乐站点"],
+      namingTips: [
+        "「品牌词 + .blue」把 VI 写进域名：jet.blue 式",
+        "注册约 $13、续费约 $20/年，颜色系里定价最厚道",
+        "颜色后缀不自带行业指向，首屏要讲清你做什么",
+        "「feeling blue」有忧郁义，普通商务站注意语境",
+      ],
+    },
+    en: {
+      title: ".blue Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".blue writes your brand color into the domain — for blue-first brands, ocean and aviation projects. See live pricing and naming advice, then hunt available .blue names with AI.",
+      intro:
+        ".blue is the most businesslike of the color TLDs: blue signals professionalism, calm and trust, and it's the primary color of most finance, tech and healthcare brands. If your visual identity leads with blue, name.blue writes the brand book into the address bar — jet.blue is the textbook case (JetBlue really does extend its brand onto the color domain). The literal layer works too: ocean conservation groups, dive clubs, aviation and aerospace projects, and jazz or blues music sites all borrow the imagery. Operated by Identity Digital, about $13 to register and $20/yr to renew — renewal barely above registration, the fairest pricing in the color family. Inventory is excellent: common words and brand roots are largely wide open. Two cautions: color suffixes carry no industry signal, so visitors can't guess what you do from .blue alone — the homepage must close that gap fast; and \"feeling blue\" means melancholy in English, which mental-wellness projects can play on deliberately but ordinary business sites should mind. Naming: brand word + .blue is the natural pattern; imagery word + .blue suits ocean and sky projects.",
+      bestFor: ["Blue-first brand identities", "Ocean conservation & diving", "Aviation & sky-themed projects", "Jazz & blues music sites"],
+      namingTips: [
+        "Brand word + .blue writes the VI into the domain: jet.blue",
+        "About $13 to register, $20/yr to renew — fairest color-TLD pricing",
+        "Color TLDs carry no industry signal — explain yourself above the fold",
+        "\"Feeling blue\" means melancholy — mind the context",
+      ],
+    },
+  },
+  pink: {
+    tld: "pink",
+    zh: {
+      title: ".pink 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".pink 适合美妆时尚、甜品烘焙与少女感品牌，也是公益粉红丝带项目的天然后缀。查看 .pink 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .pink 域名。",
+      intro:
+        ".pink 的气质极其鲜明：甜美、柔软、少女感。美妆与美甲品牌、时尚饰品与小众设计、甜品烘焙与下午茶、婚礼与花艺工作室用 name.pink，视觉调性从域名就开始统一——用户还没进站，脑海里已经有了粉色的画面。这份「一眼定调」是行业后缀给不了的。它还有一层公益语义：粉红丝带（乳腺癌防治）相关的公益项目与健康科普站用 .pink 名正言顺。Identity Digital 运营，注册约 $8（约 ¥59），续费约 $21/年（约 ¥152），入门与长期成本都很温和。库存极好：品牌词、昵称、叠词几乎都有货。注意三点：一是气质即限制——.pink 的甜美调性放在严肃行业（法律、金融）会显得轻佻，选它前先确认品牌真的要这个味道；二是颜色后缀不自带行业指向，首屏要快速讲清业务；三是面向男性为主的客群时要斟酌，别让后缀劝退一半用户。命名上「品牌词/昵称 + .pink」最自然，公益项目用「主题词 + .pink」也顺。",
+      bestFor: ["美妆美甲与时尚品牌", "甜品烘焙与下午茶", "婚礼花艺与少女感设计", "粉红丝带公益项目"],
+      namingTips: [
+        "「品牌词/昵称 + .pink」一眼定调，视觉从域名开始统一",
+        "注册约 $8、续费约 $21/年，长期成本温和",
+        "甜美气质即限制：严肃行业慎用",
+        "颜色后缀无行业指向，首屏快速讲清业务",
+      ],
+    },
+    en: {
+      title: ".pink Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".pink suits beauty, fashion, bakeries and sweet-toned brands — and pink-ribbon causes. See live pricing and naming advice, then hunt available .pink names with AI.",
+      intro:
+        ".pink has the most vivid personality of any color TLD: sweet, soft, playful. Beauty and nail brands, fashion accessories and indie designers, bakeries and afternoon-tea rooms, wedding and floral studios on name.pink set their visual tone before the visitor even arrives — the domain paints the picture. No industry suffix can do that. There's a cause layer too: pink-ribbon breast-cancer awareness projects and women's-health education sites wear .pink with full legitimacy. Operated by Identity Digital, about $8 to register and $21/yr to renew — gentle entry and long-term costs. Inventory is excellent: brand words, nicknames and doubled cute forms are nearly all open. Three cautions: the personality is also the constraint — .pink's sweetness reads flippant in serious industries like law or finance, so confirm the brand really wants this flavor; color suffixes carry no industry signal, so the homepage must state the business fast; and think twice if your audience skews male — don't let the suffix turn away half your users. Naming: brand word or nickname + .pink is the natural pattern; theme word + .pink fits cause projects.",
+      bestFor: ["Beauty, nails & fashion brands", "Bakeries & afternoon tea", "Wedding, floral & cute-toned design", "Pink-ribbon awareness causes"],
+      namingTips: [
+        "Brand word/nickname + .pink sets the tone at a glance",
+        "About $8 to register, $21/yr to renew — gentle long-term cost",
+        "The sweetness is the constraint: skip it for serious industries",
+        "No industry signal in a color — state your business above the fold",
+      ],
+    },
+  },
+  black: {
+    tld: "black",
+    zh: {
+      title: ".black 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".black 自带高级感与神秘感，适合奢侈品牌、黑金会员体系与暗黑美学项目。查看 .black 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .black 域名。",
+      intro:
+        ".black 是颜色系里的「高定款」：黑色在品牌语言里代表高级、克制与神秘，奢侈品与设计师品牌、高端会员体系（黑卡、黑金）、威士忌与咖啡（深烘）、暗黑美学的游戏与潮牌都能用 name.black 把调性焊死在域名上。「Black Friday」促销专题站、black-tie 级别的活动品牌也顺手。相比 .blue/.pink 的活泼，.black 的溢价感更强，也因此定价更高：Identity Digital 运营，注册约 $16（约 ¥115），续费约 $52/年（约 ¥374）——续费是本批最高档，预算必须按续费核算，认真经营的品牌才值得。库存极好：高级词汇、品牌词大多可注册。注意三点：一是「black」在部分语境有负面联想（黑市、黑名单），金融与交易类项目要谨慎；二是高续费决定了它只适合品牌主域或核心营销域，不适合囤域名；三是颜色后缀无行业指向，首屏要讲清业务。命名上「品牌词 + .black」最自然，「品类词 + .black」适合黑金版/尊享版产品线。",
+      bestFor: ["奢侈品与设计师品牌", "黑卡/黑金会员体系", "威士忌、深烘咖啡等品鉴品牌", "暗黑美学游戏与潮牌"],
+      namingTips: [
+        "「品牌词 + .black」把高级感焊死在域名上",
+        "注册约 $16 但续费约 $52/年，本批最高，按续费核算",
+        "「black」有黑市/黑名单联想，金融交易类慎用",
+        "高续费只配品牌主域，不适合囤名",
+      ],
+    },
+    en: {
+      title: ".black Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".black carries built-in luxury and mystique — for premium brands, black-tier memberships and dark-aesthetic projects. See live pricing and naming advice, then hunt available .black names with AI.",
+      intro:
+        ".black is the couture piece of the color family: black means luxury, restraint and mystique in brand language, so designer labels, premium membership tiers (black cards), whisky and dark-roast coffee brands, and dark-aesthetic games or streetwear can weld their tone into name.black. Black Friday campaign sites and black-tie event brands fit naturally too. That premium feel comes with premium pricing: operated by Identity Digital, about $16 to register and $52/yr to renew — the highest renewal in this batch, so budget strictly on the renewal; it only pays for a brand you'll seriously run. Inventory is excellent: premium words and brand roots are mostly open. Three cautions: \"black\" carries negative senses in some contexts (black market, blacklist), so finance and trading projects should weigh it; the renewal price makes it a flagship-domain play, not a hoarding play; and color suffixes carry no industry signal — state your business above the fold. Naming: brand word + .black is the natural pattern; category + .black suits black-tier product lines.",
+      bestFor: ["Luxury & designer brands", "Black-card membership tiers", "Whisky, dark-roast & connoisseur brands", "Dark-aesthetic games & streetwear"],
+      namingTips: [
+        "Brand word + .black welds luxury into the domain",
+        "~$16 to register but ~$52/yr renewal — highest here, budget on renewal",
+        "\"Black\" can read black-market — mind finance/trading contexts",
+        "The renewal price fits flagship domains only, not hoarding",
+      ],
+    },
+  },
+  ninja: {
+    tld: "ninja",
+    zh: {
+      title: ".ninja 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ninja 是「某领域高手」的梗后缀，适合开发者工具、个人技术品牌与游戏电竞项目。查看 .ninja 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ninja 域名。",
+      intro:
+        ".ninja 是互联网俚语进后缀的代表作：英语里「X ninja」就是「X 领域的高手」，code ninja、data ninja 早已是招聘启事里的熟词。开发者工具与 API 服务（api.ninja 式）、个人技术品牌与作品集、游戏电竞战队、效率工具都能借这个梗——它比 .expert 年轻、比 .pro 有趣，天然适合极客与游戏文化的受众。Identity Digital 运营，注册约 $6（约 ¥41）很低，续费约 $25/年（约 ¥182）也温和，试错成本几乎可以忽略。库存极好：技能词、工具词、昵称几乎随便挑。注意三点：一是梗后缀的调性偏轻，严肃 B2B 或面向传统企业的产品用它会打折扣；二是「ninja」的高手隐喻在英语圈最强，非英语市场的用户未必接得住梗；三是有声音认为用忍者比喻职场技能对日本文化不够严肃，大品牌营销要斟酌。命名上「技能/领域词 + .ninja」最强（api、css、seo 类），个人品牌用「昵称 + .ninja」也顺。",
+      bestFor: ["开发者工具与 API 服务", "个人技术品牌与作品集", "游戏电竞战队与社区", "效率工具与自动化项目"],
+      namingTips: [
+        "「技能词 + .ninja」= 某领域高手：api.ninja 式",
+        "注册约 $6、续费约 $25/年，试错成本极低",
+        "梗后缀调性轻，严肃 B2B 慎用",
+        "「ninja」的梗在英语圈最强，非英语市场要斟酌",
+      ],
+    },
+    en: {
+      title: ".ninja Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ninja is the \"master of X\" meme suffix — for developer tools, personal tech brands and gaming projects. See live pricing and naming advice, then hunt available .ninja names with AI.",
+      intro:
+        ".ninja is internet slang graduated into a TLD: \"X ninja\" means a master of X, and code ninja or data ninja have been job-listing clichés for a decade. Developer tools and API services (the api.ninja pattern), personal tech brands and portfolios, esports teams and productivity tools all ride the meme — younger than .expert, more fun than .pro, and native to geek and gaming culture. Operated by Identity Digital, registration is a low ~$6 with renewal around $25/yr — trial cost is nearly negligible. Inventory is excellent: skill words, tool words and nicknames are wide open. Three cautions: meme suffixes read casual, so serious B2B products or traditional-enterprise audiences will discount it; the \"ninja = master\" metaphor is strongest in English-speaking markets and may not land elsewhere; and some argue the ninja-as-job-skill trope treats Japanese culture too lightly — big-brand marketing should weigh that. Naming: skill or field word + .ninja is the strongest play (api, css, seo); nickname + .ninja fits personal brands.",
+      bestFor: ["Developer tools & API services", "Personal tech brands & portfolios", "Esports teams & gaming communities", "Productivity & automation tools"],
+      namingTips: [
+        "Skill word + .ninja = master of the field: api.ninja",
+        "About $6 to register, $25/yr to renew — negligible trial cost",
+        "Meme suffixes read casual — weigh it for serious B2B",
+        "The ninja meme is strongest in English markets",
+      ],
+    },
+  },
+  rocks: {
+    tld: "rocks",
+    zh: {
+      title: ".rocks 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".rocks 把「X 真棒」写进域名，适合粉丝站、乐队与社区项目，注册价极低。查看 .rocks 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .rocks 域名。",
+      intro:
+        ".rocks 是一句喝彩：英语里「X rocks!」就是「X 真棒！」，name.rocks 读出来自带感叹号。粉丝站与应援站（偶像、球队、开源项目）、乐队与音乐现场、社区与聚会组织用它，热情从域名就溢出来——vue 社区的 vuejs.rocks 式用法就是典型。它还有字面层：地质与矿石科普、攀岩馆、宝石与矿物收藏站用 .rocks 一语双关。Identity Digital 运营，注册约 $4（约 ¥26）是本批最低价，续费约 $18/年（约 ¥130）也在低位——几乎是零门槛的表达型后缀。库存极好：人名、项目名、城市名基本都有货。注意三点：一是「X rocks」是口语化表达，正式商务场景会显得随意，它更适合社区与副项目而非公司主域；二是表达型后缀的语义全靠主体名撑，「名字 + rocks」要读得通顺才有梗（球队名、偶像名最顺）；三是低价后缀历史上垃圾站占比偏高，认真项目要靠内容质量把信任拉回来。命名上「你喜爱的对象 + .rocks」最自然，攀岩/地质项目用字面义也顺。",
+      bestFor: ["粉丝站与应援站", "乐队与音乐现场", "开源项目与社区站", "攀岩馆与地质科普"],
+      namingTips: [
+        "「对象 + .rocks」= 一句喝彩，读出来要顺口",
+        "注册约 $4、续费约 $18/年，本批最低门槛",
+        "口语化表达，适合社区与副项目而非公司主域",
+        "低价后缀信任分靠内容质量拉回",
+      ],
+    },
+    en: {
+      title: ".rocks Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".rocks puts \"X rocks!\" in the domain — for fan sites, bands and communities, at rock-bottom prices. See live pricing and naming advice, then hunt available .rocks names with AI.",
+      intro:
+        ".rocks is a cheer in a domain: \"X rocks!\" is pure enthusiasm, and name.rocks reads with a built-in exclamation mark. Fan sites (idols, sports teams, open-source projects), bands and live-music venues, communities and meetup groups wear it naturally — the vuejs.rocks pattern is the canonical open-source example. The literal layer works too: geology education, climbing gyms, and gem or mineral collections get a pun for free. Operated by Identity Digital, registration around $4 is the lowest in this batch, and renewal at ~$18/yr stays low — an almost zero-barrier expressive suffix. Inventory is excellent: names, project names and city names are mostly open. Three cautions: \"X rocks\" is colloquial and reads casual in formal business contexts — it suits communities and side projects more than corporate flagships; expressive suffixes lean entirely on the subject word, so name + rocks must read smoothly to land the joke (team and idol names work best); and cheap TLDs historically attract spam, so serious projects must earn trust back with content quality. Naming: the thing you love + .rocks is the natural pattern; climbing and geology projects can play it literal.",
+      bestFor: ["Fan sites & supporter hubs", "Bands & live-music venues", "Open-source projects & communities", "Climbing gyms & geology education"],
+      namingTips: [
+        "Subject + .rocks is a cheer — it must read smoothly aloud",
+        "About $4 to register, $18/yr to renew — lowest barrier here",
+        "Colloquial tone: for communities and side projects, not corporate flagships",
+        "Cheap TLDs attract spam — earn trust back with content",
+      ],
+    },
+  },
+  pet: {
+    tld: "pet",
+    zh: {
+      title: ".pet 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".pet 是宠物行业的专属后缀，适合宠物店、宠物医疗与宠物科技品牌。查看 .pet 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .pet 域名。",
+      intro:
+        ".pet 是行业指向最明确的后缀之一：三个字母写清「这是宠物生意」。宠物用品电商与线下门店、宠物医院与上门服务、宠物美容与寄养、宠物科技（智能喂食器、定位器）用 name.pet，行业属性一秒传达，且比 petsomething.com 的拼接短得多——mars.pet（玛氏宠物）这样的大公司品牌延伸就是背书。宠物经济是持续增长的赛道，「它经济」下新品牌层出不穷，而好记的 pet 组合在 .com 上早被占光，.pet 的库存优势非常实在。Identity Digital 运营，注册约 $11（约 ¥78），续费约 $21/年（约 ¥152），对客单价可观的宠物行业毫无压力。库存极好：动物名、昵称、服务词命中率高。注意三点：一是宠物医疗涉及执业资质，诊疗类站点要把资质挂上首屏；二是「pet」在英语里也有「爱称/抚摸」的义项，但语境极少歧义，可放心用；三是面向国内用户 .pet 认知度一般，建议配合中文品牌词强化记忆。命名上「品牌词/动物名 + .pet」最自然，服务类用「动词/服务词 + .pet」也顺。",
+      bestFor: ["宠物用品电商与门店", "宠物医院与上门服务", "宠物美容寄养与训练", "宠物科技与智能硬件"],
+      namingTips: [
+        "「品牌词/动物名 + .pet」三个字母写清行业",
+        "注册约 $11、续费约 $21/年，宠物行业毫无压力",
+        "诊疗类站点把执业资质挂上首屏",
+        "国内认知度一般，配合中文品牌词强化记忆",
+      ],
+    },
+    en: {
+      title: ".pet Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".pet is the pet industry's own suffix — for pet shops, vet services and pet-tech brands. See live pricing and naming advice, then hunt available .pet names with AI.",
+      intro:
+        ".pet is among the most industry-explicit suffixes anywhere: three letters that say \"this is a pet business\". Pet-supply e-commerce and physical stores, veterinary clinics and mobile services, grooming and boarding, and pet tech (smart feeders, GPS trackers) on name.pet communicate the industry instantly — and far shorter than any petsomething.com compound. Corporate brand extensions like mars.pet (Mars Petcare) endorse the suffix at the highest level. The pet economy keeps compounding, new brands launch constantly, and the memorable pet-word combos were strip-mined from .com long ago — .pet's inventory advantage is real. Operated by Identity Digital, about $11 to register and $21/yr to renew — trivial for an industry with healthy ticket sizes. Inventory is excellent: animal names, nicknames and service words hit well. Three cautions: veterinary services require licensing, so clinical sites should put credentials above the fold; \"pet\" has minor secondary senses in English (a term of endearment) but context makes ambiguity vanishingly rare; and recognition among mainland-Chinese consumers is moderate, so pair it with a strong Chinese brand name there. Naming: brand word or animal name + .pet is the natural pattern; verb or service word + .pet suits service businesses.",
+      bestFor: ["Pet-supply e-commerce & stores", "Vet clinics & mobile services", "Grooming, boarding & training", "Pet tech & smart hardware"],
+      namingTips: [
+        "Brand/animal name + .pet says the industry in three letters",
+        "About $11 to register, $21/yr to renew — trivial for this industry",
+        "Clinical sites need licensing credentials above the fold",
+        "Pair with a Chinese brand name for mainland recognition",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
