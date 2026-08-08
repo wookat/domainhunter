@@ -104,6 +104,7 @@ export interface MonitorListEntry {
   domain: string;
   status: string;
   lastChecked: number;
+  expiresAt?: string;
 }
 
 export interface MonitorList {
@@ -119,6 +120,38 @@ export async function fetchMonitorList(domains: string[]): Promise<MonitorList> 
     headers: { "content-type": "application/json" },
     body: JSON.stringify({ domains }),
   });
+  if (!res.ok) throw new Error(String(res.status));
+  const data = (await res.json()) as MonitorList;
+  return {
+    entries: Array.isArray(data.entries) ? data.entries : [],
+    monitored: typeof data.monitored === "number" ? data.monitored : 0,
+    limit: typeof data.limit === "number" ? data.limit : 0,
+  };
+}
+
+/** 手动刷新：对本地清单中的监控域立即执行一次真实核验；限频时抛 RecheckRateLimitError */
+export class RecheckRateLimitError extends Error {
+  retryAfter: number;
+  constructor(retryAfter: number) {
+    super("rate_limited");
+    this.retryAfter = retryAfter;
+  }
+}
+
+export async function recheckMonitors(domains: string[]): Promise<MonitorList> {
+  const res = await fetch("/api/monitor/recheck", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ domains }),
+  });
+  if (res.status === 429) {
+    let retryAfter = Number(res.headers.get("Retry-After") ?? "0");
+    if (!Number.isFinite(retryAfter) || retryAfter <= 0) {
+      const data = (await res.json().catch(() => null)) as { retryAfter?: number } | null;
+      retryAfter = typeof data?.retryAfter === "number" ? data.retryAfter : 60;
+    }
+    throw new RecheckRateLimitError(retryAfter);
+  }
   if (!res.ok) throw new Error(String(res.status));
   const data = (await res.json()) as MonitorList;
   return {

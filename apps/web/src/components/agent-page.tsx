@@ -143,7 +143,7 @@ export function AgentPage({
   const prevRounds = rounds.filter((r) => r.round !== currentRound);
 
   return (
-    <main className="mx-auto grid max-w-7xl gap-6 px-4 py-6 md:px-6 lg:grid-cols-[320px_1fr]">
+    <main className="mx-auto grid w-full min-w-0 max-w-7xl gap-6 px-4 py-6 md:px-6 lg:grid-cols-[320px_1fr]">
       {/* ◀ 左栏 */}
       <aside className="space-y-4 self-start lg:sticky lg:top-20">
         <details className="rounded-xl border border-line bg-bg1" open>

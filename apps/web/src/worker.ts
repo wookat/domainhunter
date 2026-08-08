@@ -33,6 +33,7 @@ const MONITOR_KEY = "monitor:domains";
 const MONITOR_CHANGES_KEY = "monitor:changes";
 const MAX_MONITOR_DOMAINS = 500; // 全局监控上限
 const MAX_MONITOR_CHANGES = 100; // 变化记录保留条数
+const MONITOR_RECHECK_COOLDOWN_S = 60; // 手动刷新限频：每 IP 60 秒一次
 const PRICES_KEY = `prices:v2:${TLD_LIST.length}`; // key 掺 TLD 数量：指南扩容后旧缓存自动失效
 const PRICES_TTL = 24 * 3600; // Porkbun 价格缓存 24h
 const PRICES_STALE_KEY = "prices:latest"; // 不带版本的 stale 兜底 key：升版冷缓存 + 上游不可达时回退
@@ -86,7 +87,7 @@ async function checkRateLimit(kv: KVNamespace | undefined, ip: string): Promise<
   return true;
 }
 
-type CachedCheck = Pick<CheckResult, "domain" | "status" | "method">;
+type CachedCheck = Pick<CheckResult, "domain" | "status" | "method" | "expiresAt">;
 
 /** 带 KV 缓存的域名核验：命中直接回放，未命中走实时核验并回写 */
 async function checkDomainsCached(
@@ -118,7 +119,9 @@ async function checkDomainsCached(
     if (kv && (r.status === "available" || r.status === "taken")) {
       const ttl = r.status === "available" ? CACHE_TTL_AVAILABLE : CACHE_TTL_TAKEN;
       try {
-        await kv.put(`d:${r.domain}`, JSON.stringify({ domain: r.domain, status: r.status, method: r.method }), { expirationTtl: ttl });
+        const cached: CachedCheck = { domain: r.domain, status: r.status, method: r.method };
+        if (r.expiresAt) cached.expiresAt = r.expiresAt;
+        await kv.put(`d:${r.domain}`, JSON.stringify(cached), { expirationTtl: ttl });
       } catch { /* 缓存失败不影响主流程 */ }
     }
     await onResult(r);
@@ -322,6 +325,7 @@ interface MonitorEntry {
   status: string;
   lastChecked: number;
   webhook?: string;
+  expiresAt?: string;
 }
 
 // 通知 webhook：仅接受 https URL，长度受限
@@ -398,7 +402,7 @@ app.post("/api/monitor/list", async (c) => {
   const map = await loadMonitorMap(kv);
   const entries = domains
     .filter((d) => map[d])
-    .map((d) => ({ domain: d, status: map[d].status, lastChecked: map[d].lastChecked }));
+    .map((d) => ({ domain: d, status: map[d].status, lastChecked: map[d].lastChecked, ...(map[d].expiresAt ? { expiresAt: map[d].expiresAt } : {}) }));
   return c.json({ entries, monitored: Object.keys(map).length, limit: MAX_MONITOR_DOMAINS });
 });
 
@@ -413,12 +417,8 @@ app.get("/api/monitor/changes", async (c) => {
   return c.json({ changes });
 });
 
-/** Cron：批量复查监控集合，状态变化写入 monitor:changes */
-async function runMonitorSweep(env: Bindings): Promise<void> {
-  const kv = env.CACHE;
-  if (!kv) return;
-  const map = await loadMonitorMap(kv);
-  const domains = Object.keys(map);
+/** 监控核验共用逻辑：实时复查指定域名，更新 KV 条目（含 expiresAt），状态变化写入 monitor:changes 并推送 webhook */
+async function recheckMonitorDomains(kv: KVNamespace, map: Record<string, MonitorEntry>, domains: string[]): Promise<void> {
   if (domains.length === 0) return;
   const now = Date.now();
   const newChanges: MonitorChange[] = [];
@@ -433,6 +433,8 @@ async function runMonitorSweep(env: Bindings): Promise<void> {
       if (entry.webhook) notifications.push({ webhook: entry.webhook, change });
     }
     if (r.status !== "unknown") entry.status = r.status;
+    if (r.status === "taken" && r.expiresAt) entry.expiresAt = r.expiresAt;
+    else if (r.status === "available") delete entry.expiresAt;
     entry.lastChecked = now;
   }, true);
   await kv.put(MONITOR_KEY, JSON.stringify(map));
@@ -445,6 +447,46 @@ async function runMonitorSweep(env: Bindings): Promise<void> {
   }
   await Promise.allSettled(notifications.slice(0, 50).map(({ webhook, change }) => sendWebhookNotification(webhook, change)));
 }
+
+/** Cron：批量复查监控集合，状态变化写入 monitor:changes */
+async function runMonitorSweep(env: Bindings): Promise<void> {
+  const kv = env.CACHE;
+  if (!kv) return;
+  const map = await loadMonitorMap(kv);
+  await recheckMonitorDomains(kv, map, Object.keys(map));
+}
+
+// 手动刷新：对本地清单中的监控域立即执行一次真实核验（复用 cron sweep 逻辑），限频每 IP 60 秒一次
+app.post("/api/monitor/recheck", async (c) => {
+  const kv = c.env.CACHE;
+  if (!kv) return c.json({ error: "monitor_unavailable" }, 503);
+  const ip = c.req.header("cf-connecting-ip") ?? c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  const rlKey = `rl:recheck:${ip}`;
+  try {
+    const last = Number((await kv.get(rlKey)) ?? "0");
+    if (last > 0) {
+      const retryAfter = Math.max(1, Math.ceil((last + MONITOR_RECHECK_COOLDOWN_S * 1000 - Date.now()) / 1000));
+      return c.json({ error: "rate_limited", retryAfter }, 429, { "Retry-After": String(retryAfter) });
+    }
+    await kv.put(rlKey, String(Date.now()), { expirationTtl: MONITOR_RECHECK_COOLDOWN_S });
+  } catch { /* 限流读写失败不阻塞刷新 */ }
+  const body = await c.req.json<{ domains?: unknown[] }>().catch(() => null);
+  const raw = Array.isArray(body?.domains) ? body.domains : [];
+  if (raw.length > MAX_MONITOR_DOMAINS) return c.json({ error: "too_many_domains" }, 400);
+  const domains = [
+    ...new Set(
+      raw
+        .filter((d): d is string => typeof d === "string")
+        .map((d) => d.trim().toLowerCase())
+        .filter((d) => DOMAIN_RE.test(d) && d.length <= 253),
+    ),
+  ];
+  const map = await loadMonitorMap(kv);
+  const targets = domains.filter((d) => map[d]);
+  await recheckMonitorDomains(kv, map, targets);
+  const entries = targets.map((d) => ({ domain: d, status: map[d].status, lastChecked: map[d].lastChecked, ...(map[d].expiresAt ? { expiresAt: map[d].expiresAt } : {}) }));
+  return c.json({ entries, monitored: Object.keys(map).length, limit: MAX_MONITOR_DOMAINS });
+});
 
 /** 状态变化时向用户自备的 webhook 推送一条 JSON 通知（钉钉/飞书/Slack/自建均可） */
 async function sendWebhookNotification(webhook: string, change: MonitorChange): Promise<void> {

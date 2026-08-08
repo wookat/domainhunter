@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Bell, BellOff, ExternalLink, Loader2, RotateCw, Search } from "lucide-react";
 
-import { fetchMonitorList, useMonitor, type MonitorListEntry } from "@/lib/monitor";
+import { ExpiryNote } from "@/components/domain-row";
+import { fetchMonitorList, recheckMonitors, RecheckRateLimitError, useMonitor, type MonitorListEntry } from "@/lib/monitor";
 import { REGISTRARS } from "@/lib/registrars";
 import { useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -24,6 +25,7 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
   const [lastRefreshedAt, setLastRefreshedAt] = useState<number | null>(null);
   const [now, setNow] = useState(() => Date.now());
   const [error, setError] = useState("");
+  const [notice, setNotice] = useState("");
   const [pending, setPending] = useState<string | null>(null);
   const [confirming, setConfirming] = useState<string | null>(null);
   const [confirmLeft, setConfirmLeft] = useState(0);
@@ -31,18 +33,22 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
   const confirmTick = useRef<number | undefined>(undefined);
   const refreshingRef = useRef(false);
 
-  const refresh = useCallback(async () => {
+  // 初次加载：只拉服务端现有条目；手动刷新：触发服务端实时核验
+  const refresh = useCallback(async (recheck: boolean) => {
     if (refreshingRef.current) return;
     refreshingRef.current = true;
     setRefreshing(true);
     setError("");
+    setNotice("");
     try {
-      const list = await fetchMonitorList([...monitor.monitored]);
+      const domains = [...monitor.monitored];
+      const list = recheck ? await recheckMonitors(domains) : await fetchMonitorList(domains);
       setEntries(Object.fromEntries(list.entries.map((e) => [e.domain, e])));
       setQuota({ monitored: list.monitored, limit: list.limit });
       setLastRefreshedAt(Date.now());
-    } catch {
-      setError(t("monitors.refreshFailed"));
+    } catch (err) {
+      if (err instanceof RecheckRateLimitError) setNotice(t("monitors.rateLimited", { s: err.retryAfter }));
+      else setError(t("monitors.refreshFailed"));
     } finally {
       refreshingRef.current = false;
       setRefreshing(false);
@@ -53,7 +59,7 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
   }, [monitor.monitored]);
 
   useEffect(() => {
-    void refresh();
+    void refresh(false);
     // 仅首次加载拉服务端条目；取消监控后本地即时更新，不重复拉取
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -131,7 +137,7 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
       <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2">
         <button
           className="flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50 sm:h-9"
-          onClick={() => void refresh()}
+          onClick={() => void refresh(true)}
           disabled={refreshing || loading}
         >
           <RotateCw className={cn("h-4 w-4", refreshing && "animate-spin")} />
@@ -150,6 +156,8 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
       )}
 
       {error && <p className="mb-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{error}</p>}
+
+      {notice && <p className="mb-3 rounded-lg border border-line bg-bg2 px-4 py-2.5 text-sm text-txt1">{notice}</p>}
 
       {domains.length === 0 ? (
         <div className="rounded-xl border border-dashed border-line p-10 text-center">
@@ -179,6 +187,7 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
                     </span>
                   )
                 )}
+                {!loading && entry?.status === "taken" && entry.expiresAt && <ExpiryNote iso={entry.expiresAt} />}
                 <span className="ml-auto flex items-center gap-2">
                   {!loading && entry && (
                     <span className="tnum hidden font-mono text-[11px] text-txt2 sm:inline" title={t("monitors.lastChecked")}>

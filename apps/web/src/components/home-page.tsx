@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Brain, Check, ChevronDown, Copy, ExternalLink, History, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { ExpiryNote, WatchCta } from "@/components/domain-row";
 import { addRecentSearch, clearRecentSearches, loadRecentSearches, type RecentSearch } from "@/lib/history";
 import { useI18n, type I18nKey } from "@/lib/i18n";
 import { toUsd, usePrices } from "@/lib/prices";
@@ -543,7 +544,7 @@ export function HomePage({
   const canRun = description.trim().length > 0 && tlds.length > 0;
 
   const quick = parseQuickCheck(description);
-  const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown" }[]>([]);
+  const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown"; expiresAt?: string }[]>([]);
   const [quickRunning, setQuickRunning] = useState(false);
   const [quickMoreDone, setQuickMoreDone] = useState(false);
   // quick-check 图例过滤（IDS 式）：按状态筛 chips
@@ -613,9 +614,9 @@ export function HomePage({
         buf = lines.pop()!;
         for (const line of lines) {
           if (!line) continue;
-          const r = JSON.parse(line) as { domain?: string; status?: "available" | "taken" | "unknown"; type?: string };
+          const r = JSON.parse(line) as { domain?: string; status?: "available" | "taken" | "unknown"; expiresAt?: string; type?: string };
           if (r.type || !r.domain || !r.status) continue;
-          setQuickRows((prev) => prev.map((row) => (row.domain === r.domain ? { ...row, status: r.status! } : row)));
+          setQuickRows((prev) => prev.map((row) => (row.domain === r.domain ? { ...row, status: r.status!, expiresAt: r.expiresAt } : row)));
         }
       }
     } catch {
@@ -690,7 +691,7 @@ export function HomePage({
   };
 
   return (
-    <main className="relative flex-1">
+    <main className="relative min-w-0 flex-1">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px]" style={{ background: "var(--glow)" }} />
       <div className="relative mx-auto max-w-3xl px-4 pb-16 pt-16 md:pt-24">
         {onBackToResults && (
@@ -914,15 +915,15 @@ export function HomePage({
               <div className="mt-2.5 flex flex-wrap gap-2">
                 {quickRows.filter((row) => quickFilter === "all" || row.status === quickFilter).map((row) =>
                   row.status === "available" ? (
-                    <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
+                    <span key={row.domain} className="inline-flex max-w-full items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
                       <a
                         href={REGISTRARS[0].url(row.domain)}
                         target="_blank"
                         rel="noreferrer"
                         title={t("home.quickRegister", { domain: row.domain })}
-                        className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85 sm:min-h-0"
+                        className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85 sm:min-h-0"
                       >
-                        {row.domain}
+                        <span className="min-w-0 truncate">{row.domain}</span>
                         <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
                         <ChipPrice domain={row.domain} />
                         <ExternalLink className="h-3 w-3" />
@@ -937,10 +938,11 @@ export function HomePage({
                       </button>
                     </span>
                   ) : row.status === "taken" ? (
-                    <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-line font-mono text-xs text-txt2">
-                      <span className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
-                        <span className="line-through">{row.domain}</span>
+                    <span key={row.domain} className="inline-flex max-w-full items-stretch overflow-hidden rounded-lg border border-line font-mono text-xs text-txt2">
+                      <span className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
+                        <span title={row.domain} className="min-w-0 truncate line-through">{row.domain}</span>
                         <i className="not-italic font-sans text-[10px] text-taken">{t("status.taken")}</i>
+                        {row.expiresAt && <ExpiryNote iso={row.expiresAt} className="font-sans" />}
                       </span>
                       <button
                         onClick={() => shortlist.toggle(domainToRow(row.domain, "taken"))}
@@ -951,17 +953,27 @@ export function HomePage({
                       >
                         <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                       </button>
+                      {row.expiresAt && (
+                        <WatchCta
+                          domain={row.domain}
+                          expiresAt={row.expiresAt}
+                          variant="chip"
+                          onAddShortlist={() => {
+                            if (!shortlist.has(row.domain)) shortlist.toggle(domainToRow(row.domain, "taken"));
+                          }}
+                        />
+                      )}
                     </span>
                   ) : (
                     <span
                       key={row.domain}
                       className={cn(
-                        "inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 font-mono text-xs",
+                        "inline-flex max-w-full items-center gap-1.5 rounded-lg border px-2.5 py-1.5 font-mono text-xs",
                         row.status === "unknown" && "border-line text-txt1",
                         row.status === "checking" && "border-line text-txt2",
                       )}
                     >
-                      {row.domain}
+                      <span title={row.domain} className="min-w-0 truncate">{row.domain}</span>
                       <i className="not-italic font-sans text-[10px]">{t(`status.${row.status}` as I18nKey)}</i>
                     </span>
                   ),
@@ -1025,15 +1037,15 @@ export function HomePage({
                     {variantRows
                       .filter((r) => r.status === "available")
                       .map((row) => (
-                        <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
+                        <span key={row.domain} className="inline-flex max-w-full items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
                           <a
                             href={REGISTRARS[0].url(row.domain)}
                             target="_blank"
                             rel="noreferrer"
                             title={t("home.quickRegister", { domain: row.domain })}
-                            className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85 sm:min-h-0"
+                            className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85 sm:min-h-0"
                           >
-                            {row.domain}
+                            <span className="min-w-0 truncate">{row.domain}</span>
                             <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
                             <ChipPrice domain={row.domain} />
                             <ExternalLink className="h-3 w-3" />
@@ -1073,9 +1085,9 @@ export function HomePage({
                     {variantRows
                       .filter((r) => r.status === "taken")
                       .map((row) => (
-                        <span key={row.domain} className="inline-flex items-stretch overflow-hidden rounded-lg border border-line font-mono text-xs text-txt2">
-                          <span className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
-                            <span className="line-through">{row.domain}</span>
+                        <span key={row.domain} className="inline-flex max-w-full items-stretch overflow-hidden rounded-lg border border-line font-mono text-xs text-txt2">
+                          <span className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
+                            <span title={row.domain} className="min-w-0 truncate line-through">{row.domain}</span>
                             <i className="not-italic font-sans text-[10px] text-taken">{t("status.taken")}</i>
                           </span>
                           <button

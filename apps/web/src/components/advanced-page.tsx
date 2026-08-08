@@ -69,11 +69,11 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
         buf = lines.pop()!;
         const rs = lines
           .filter(Boolean)
-          .map((l) => JSON.parse(l) as { domain: string; status: Status; type?: string })
+          .map((l) => JSON.parse(l) as { domain: string; status: Status; expiresAt?: string; type?: string })
           .filter((r) => !r.type && r.domain)
           .map((r): Row => {
             const dot = r.domain.indexOf(".");
-            return { domain: r.domain, label: r.domain.slice(0, dot), tld: r.domain.slice(dot + 1), status: r.status, round: 1 };
+            return { domain: r.domain, label: r.domain.slice(0, dot), tld: r.domain.slice(dot + 1), status: r.status, round: 1, expiresAt: r.expiresAt };
           });
         if (rs.length) setRows((prev) => [...prev, ...rs]);
       }
@@ -89,7 +89,7 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
   const bulkDomains = expandBulk(bulk, split(tlds).length > 0 ? split(tlds) : ["com"]);
 
   return (
-    <main className="mx-auto max-w-5xl flex-1 px-4 py-8 md:px-6">
+    <main className="mx-auto w-full min-w-0 max-w-5xl flex-1 px-4 py-8 md:px-6">
       <h1 className="text-xl font-bold tracking-tight md:text-2xl">{t("adv.title")}</h1>
       <p className="mt-1 text-sm text-txt1">{t("adv.subtitle")}</p>
 
