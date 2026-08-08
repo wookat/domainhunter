@@ -1,4 +1,5 @@
 import { isBrandCollision } from "./brand-blocklist";
+import { COMMON_CHAR_PINYIN_DATA } from "./pinyin-table";
 
 export interface AiScores {
   length: number;
@@ -279,6 +280,7 @@ const EN_NAMING_HINT = `
 - 四种英文命名路线都要覆盖：① portmanteau 词混造（Pinterest=pin+interest、Instagram=instant+telegram 式，两个词各取有辨识度的片段拼接）；② 拉丁/希腊词根改造（Spotify、Sonos 式，取 son/lum/vox/nov 等词根加轻量后缀，短而有质感）；③ 真实短词的错拼/变体（Lyft、Tumblr 式，去元音或换字母，但整体仍要一眼能读出来）；④ 隐喻词（Amazon、Apple 式，用一个现成的具象词，与需求语义有一层聪明的关联，meaning 里必须点破这层关联）
 - meaning 质量要求：说清词源拆解（由哪两个词/哪个词根构成、为什么贴合需求）+ 读音顺口的理由（如两音节重音在前、开音节收尾），不要用 catchy/modern/memorable 这类空洞形容词充数，例如：Lumora = Latin "lumen" meaning light + soft -ora ending, evokes clarity for a journaling app; two open syllables, reads instantly
 - 英文自筛淘汰标准（不达标的直接不要输出）：≥4 音节；含难读辅音簇（如 xq、zv、tsk）；与知名品牌只差一个字母（有法律风险，如 gooogle、spotifi）；直白到像域名占位词的组合（如 bestXXXhub、XXXonline、getXXXapp）
+- 路线配额要求（每轮自查）：word 与 blend（两个可辨认词段拼接）合计必须 ≥30%（如 24 个候选中至少 7 个），word / blend / coined 三类各至少 2 个；整轮几乎全是 coined 造词视为不合格输出，输出前统计各 theme 数量并补足缺口
 ${MEANING_REDLINES_EN}
 - theme 标注硬规则（逐条判断，不看走的是哪条命名路线）：
   ① label 本身就是词典里存在的完整英文单词（含隐喻词，如 castloom 不是、amazon 是）→ 必须标 word
@@ -366,6 +368,13 @@ function buildRefineHint(fb: RefineFeedback, round: number, lang: "zh" | "en"): 
   // R179：反思轮重申 meaning 质量红线——生产审计发现轮≥2 时 meaning 大面积劣化（臆造词源、
   // 引用 label 中不存在的字母、语法不通、混入异文字），与首轮共享同一份红线文案
   parts.push(`无论第几轮，meaning 质量红线不放松，重申如下：\n${lang === "en" ? MEANING_REDLINES_EN : MEANING_REDLINES_ZH}`);
+  // R196：反思轮 meaning 连贯性红线——生产审计发现轮≥2 时 meaning 大面积不成句（词语碎片堆砌），
+  // 在红线之外单独强调「必须成句」并给出自查标准
+  parts.push(
+    lang === "en"
+      ? `Coherence red line for this round: every meaning must read as ONE grammatical English sentence a native speaker would naturally write — subject, verb, and a clear point. Before outputting, read each meaning aloud in your head; if it reads like disconnected word fragments strung together (e.g. "yonkle as a knoll taken to third power hand, your ridge from low months"), discard that candidate and write a different one you can explain in a plain, coherent sentence.`
+      : `本轮 meaning 连贯性红线：每条 meaning 必须是母语者会自然写出的一句通顺中文——主谓完整、意思明确。输出前逐条默读一遍，读起来像词语碎片拼凑、不成句的（如「带给幼想出格的好奇色彩」），直接弃用该候选，换一个你能用一句通顺话讲清楚的。`,
+  );
   return parts.join("\n");
 }
 
@@ -510,6 +519,14 @@ function pairMismatch(label: string, x: string, y: string): boolean {
   return !other.startsWith(rest) && !rest.startsWith(other);
 }
 
+// R196（P2-1）：中文单片段词源句式「X 取自/源自/来自 Y」——
+// X 必须是 label 的子串；Y 若是 ASCII 词（如 "rio 取自 curious"），X 还必须是 Y 的子串。
+// Y 为中文时不做 Y 侧判断（无法可靠校验，保守放行）；Y 前的语言/修饰词（latin/greek/
+// ancient/word 等）跳过后再取来源词（"lum 源自 latin lumen" 校验的是 lumen 而非 latin）。
+const ZH_SOURCE_CITE_RE = /([a-z]{2,})\s*(?:取自|源自|来自)\s*["「『']?(?:([a-z]{3,})(?:\s+([a-z]{3,}))?)?/gi;
+// 语言/修饰词不作为来源词参与子串判断（"lum 源自 latin lumen" 校验 lumen；"lum 源自 latin" 不判）
+const SOURCE_LANG_WORDS = new Set(["latin", "greek", "english", "french", "italian", "spanish", "german", "japanese", "sanskrit", "norse", "hebrew", "old", "ancient", "the", "word", "root"]);
+
 export function citesPhantomWord(label: string, meaning: string): boolean {
   ZH_ETYMOLOGY_PAIR_RE.lastIndex = 0;
   let m: RegExpExecArray | null;
@@ -518,7 +535,107 @@ export function citesPhantomWord(label: string, meaning: string): boolean {
   }
   const lead = EN_LEADING_PAIR_RE.exec(meaning);
   if (lead && pairMismatch(label, lead[1].toLowerCase(), lead[2].toLowerCase())) return true;
+  ZH_SOURCE_CITE_RE.lastIndex = 0;
+  while ((m = ZH_SOURCE_CITE_RE.exec(meaning)) !== null) {
+    const x = m[1].toLowerCase();
+    if (!label.includes(x)) return true; // 引用片段不在 label 中（臆造）
+    const first = m[2]?.toLowerCase();
+    const y = first && SOURCE_LANG_WORDS.has(first) ? m[3]?.toLowerCase() : first;
+    if (y && !SOURCE_LANG_WORDS.has(y) && !y.includes(x)) return true; // "rio 取自 curious" 型：来源词里没有该片段
+  }
   return false;
+}
+
+// ---------------- EN meaning 连贯性启发式（R196，P1-1） ----------------
+// 生产坏例：反思轮（round≥2）EN meaning 大面积词语碎片堆砌（"alapa vein memory,
+// floor n look, for times shaded privately" 型）。两条保守条件同时不满足才丢弃（宁放过不误杀）：
+// 条件 A（词源锤点）：meaning 需包含 label 本身、label 的 ≥4 字母连续片段，
+//   或含一个与 label 共享 ≥3 字母前缀的单词（lumora ↔ "lumen"）——正常的词源拆解总会提及词源片段
+// 条件 B（谓语锤点）：meaning 需含至少一个词源/释义常见谓语词（means/evokes/suggests/
+//   from/plus/word/root/short for/named after/combines 等）——词语沙拉恰恰缺乏这类谓语骨架
+const EN_PREDICATE_RE = /\b(?:mean(?:s|ing)?|evokes?|suggest(?:s|ing)?|from|plus|words?|roots?|short\s+for|named\s+after|combin(?:es|ed|ing)|echoes|joined|blend(?:s|ed)?|derived|refers?|reads?|sounds?|nod\s+to)\b/i;
+
+export function enMeaningIncoherent(label: string, meaning: string): boolean {
+  const lower = meaning.toLowerCase();
+  let fragmentOk = lower.includes(label);
+  if (!fragmentOk && label.length >= 4) {
+    for (let len = Math.min(label.length, 8); len >= 4 && !fragmentOk; len--) {
+      for (let i = 0; i + len <= label.length; i++) {
+        if (lower.includes(label.slice(i, i + len))) {
+          fragmentOk = true;
+          break;
+        }
+      }
+    }
+  }
+  if (!fragmentOk && label.length >= 3) {
+    // 与 label 共享 ≥3 字母前缀的单词（词首匹配，避免 "small" 命中 "all"）
+    fragmentOk = new RegExp(`\\b${label.slice(0, 3)}[a-z]*`, "i").test(meaning);
+  }
+  const predicateOk = EN_PREDICATE_RE.test(meaning);
+  return !fragmentOk || !predicateOk;
+}
+
+// ---------------- 拼音引用词与 label 一致性校验（R196，P2-2） ----------------
+// 生产坏例：tangfang 声称「探方」双全拼（实为 tanfang）、sanvei 声称「山味」全拼（实为 shanwei）。
+// 基于内嵌常用字拼音表（3500 字，含多音字）校验：theme 为 pinyin 且 meaning 声称「全拼」时，
+// 「」内引用词的逐字拼音拼接必须能等于 label（多音字任一读音、ü 允许 v/u/ue 写法）。
+// 保守规则：引用词含表外字 → 无法判断，放行；存在任一可判引用词匹配 label → 放行；
+// 仅当「有可判引用词且全部不匹配」才丢弃。
+let PINYIN_TABLE: Map<string, string[]> | null = null;
+function pinyinTable(): Map<string, string[]> {
+  if (!PINYIN_TABLE) {
+    PINYIN_TABLE = new Map();
+    for (const entry of COMMON_CHAR_PINYIN_DATA.split(";")) {
+      const [ch, ps] = entry.split(":");
+      if (ch && ps) PINYIN_TABLE.set(ch, ps.split(","));
+    }
+  }
+  return PINYIN_TABLE;
+}
+
+// 单字读音展开 ü 的两种域名写法（表内已写作 v：lv → lv/lue；jun/qu 类表内已是 u 写法）
+function readingVariants(p: string): string[] {
+  return p.includes("v") ? [p, p.replace("v", "ue"), p.replace("v", "u")] : [p];
+}
+
+const FULL_PINYIN_CLAIM_RE = /全拼/;
+const QUOTED_CJK_RE = /「([\u3400-\u4dbf\u4e00-\u9fff]{2,4})」/g;
+
+// 枚举引用词的所有逐字拼接读法，判断是否有一种等于 label（组合数设上限防爆炸）
+function quotedWordMatchesLabel(word: string, label: string): boolean {
+  const table = pinyinTable();
+  let joins: string[] = [""];
+  for (const ch of word) {
+    const readings = table.get(ch);
+    if (!readings) return true; // 表外字 → 无法判断，视为匹配（放行）
+    const next: string[] = [];
+    for (const j of joins) {
+      for (const r of readings) {
+        for (const v of readingVariants(r)) {
+          // 前缀剪枝：拼接中途就必须是 label 前缀，否则丢弃该分支
+          const cand = j + v;
+          if (label.startsWith(cand)) next.push(cand);
+        }
+      }
+    }
+    if (next.length === 0) return false;
+    joins = next.slice(0, 64);
+  }
+  return joins.includes(label);
+}
+
+// theme 为 pinyin 且 meaning 声称「全拼」：「」内存在可判引用词但全部与 label 拼写不符 → true（丢弃）
+export function pinyinQuoteMismatch(label: string, meaning: string): boolean {
+  if (!FULL_PINYIN_CLAIM_RE.test(meaning)) return false;
+  QUOTED_CJK_RE.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  let judged = 0;
+  while ((m = QUOTED_CJK_RE.exec(meaning)) !== null) {
+    if (quotedWordMatchesLabel(m[1], label)) return false;
+    judged++;
+  }
+  return judged > 0;
 }
 
 async function generateOnce(
@@ -541,7 +658,8 @@ async function generateOnce(
         { role: "system", content: opts.lang === "en" ? SYSTEM_PROMPT + EN_NAMING_HINT : SYSTEM_PROMPT + ZH_PINYIN_HINT },
         { role: "user", content: user },
       ],
-      temperature: 1.2,
+      // R196（P1-1）：反思轮（round≥2）降温——高温叠加长上下文是词语沙拉的主要来源，首轮保持 1.2 不变
+      temperature: (opts.round ?? 1) > 1 ? 0.9 : 1.2,
       max_tokens: 4000,
     }),
   });
@@ -580,6 +698,10 @@ async function generateOnce(
     if (containsMetaLanguage(meaning)) continue;
     // R183：meaning 声称的词源片段与 label 拼写不符（"play 与 grow 结合" for plangrow）→ 整条丢弃
     if (citesPhantomWord(label, meaning)) continue;
+    // R196（P1-1）：meaning 含问号（犹豫/不成句的确定性信号，现只有 prompt 级约束）→ 整条丢弃
+    if (meaning.includes("?") || meaning.includes("\uff1f")) continue;
+    // R196（P1-1）：EN meaning 连贯性启发式——无 label 词源锤点且无谓语骨架的词语沙拉 → 整条丢弃
+    if ((opts.lang ?? "zh") === "en" && enMeaningIncoherent(label, meaning)) continue;
     const s = c.scores ?? ({} as Partial<AiScores>);
     const theme = String(c.theme ?? "").toLowerCase();
     // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
@@ -590,6 +712,8 @@ async function generateOnce(
       if (!check.ok) continue;
       // 歧义切分扣 15 + 语感风险分（R142），叠加后从 readability 扣除
       readabilityPenalty = (check.ambiguous ? 15 : 0) + check.risk;
+      // R196（P2-2）：声称「全拼」但「」内引用词的逐字拼音与 label 拼写不符（「探方」≠tangfang）→ 整条丢弃
+      if (pinyinQuoteMismatch(label, meaning)) continue;
     }
     // R182：拼音系候选「」内命中生僻字黑名单，按字数从 readability 扣分（不丢弃）
     if (theme === "pinyin" || theme === "blend") {
