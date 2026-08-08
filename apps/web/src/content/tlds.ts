@@ -2544,6 +2544,186 @@ const GUIDES = {
       ],
     },
   },
+  band: {
+    tld: "band",
+    zh: {
+      title: ".band 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".band 是乐队与音乐团体的专属后缀，适合乐队官网、巡演信息与粉丝社群。查看 .band 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .band 域名。",
+      intro:
+        ".band 的指向性在所有新顶级域名里数一数二：看到 name.band，用户默认这是一支乐队——官网、巡演日程、新专辑、周边商店、粉丝社群都顺理成章。独立乐队尤其受益：乐队名在 .com 上常被同名者占走，而 yourname.band 几乎总有货，且比 yournameband.com 更干净。它也能延伸到更广的「团体」语义——合唱团、管乐团、播客组合、甚至取「一伙人」意象的社区品牌都用得顺。Identity Digital 运营，注册约 $16（约 ¥115），续费约 $25/年（约 ¥182），价差小、无「首年钓鱼」，长期持有安心。注意两点：一是 .band 语义太具体，非音乐类正式企业用它会显得错位；二是乐队名本身要避开在世艺人与厂牌商标，改名的代价远大于换域名。命名上直接用乐队名最好（the 前缀在 .band 下反而自然，如 the.band 早已被注册），或「城市/风格 + band」做地方性组合。",
+      bestFor: ["乐队与音乐团体官网", "巡演日程与售票落地页", "粉丝社群与周边商店", "合唱团/管乐团等表演团体"],
+      namingTips: [
+        "直接用乐队名：yourname.band 几乎总有货且最干净",
+        "「风格/城市 + band」适合地方性团体（jazz、brass 类词根）",
+        "注册约 $16、续费约 $25/年，价差小可长期持有",
+        "非音乐类正式企业慎用，语义错位",
+      ],
+    },
+    en: {
+      title: ".band Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".band is the purpose-built TLD for bands and music groups — sites, tours, merch and fan communities. See live pricing and naming advice, then hunt available .band names with AI.",
+      intro:
+        ".band is one of the most self-explanatory new TLDs: see name.band and you assume a band — official site, tour dates, new record, merch store, fan community all fit without explanation. Independent bands benefit most: band names are routinely squatted on .com by namesakes, while yourname.band is almost always available and reads cleaner than yournameband.com. The semantics stretch naturally to any performing group — choirs, brass ensembles, podcast duos, even community brands playing on the \"a band of...\" image. Operated by Identity Digital, about $16 to register and $25/yr to renew — a small gap with no first-year bait, comfortable to hold long term. Two cautions: the semantics are so specific that a non-music business on .band feels miscast; and clear the band name itself against active artists and label trademarks — renaming a band costs far more than a domain. Naming is simple: use the band name directly, or a style/city + band compound for local groups.",
+      bestFor: ["Band & music group websites", "Tour dates & ticketing pages", "Fan communities & merch stores", "Choirs, ensembles & performing groups"],
+      namingTips: [
+        "Use the band name directly — yourname.band is almost always free",
+        "Style/city + band works for local groups (jazz, brass roots)",
+        "About $16 to register, $25/yr to renew — safe to hold long term",
+        "Skip it for non-music businesses; the semantics are too specific",
+      ],
+    },
+  },
+  cash: {
+    tld: "cash",
+    zh: {
+      title: ".cash 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".cash 直白传达「钱」的语义，适合支付工具、返现优惠与加密货币产品。查看 .cash 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .cash 域名。",
+      intro:
+        ".cash 是把「钱」写在脸上的后缀：支付与转账工具、返现与优惠平台、点数变现、加密货币产品（coin.cash 式）用它，价值主张一秒到位。它比 .money 更口语、更直接——.money 偏理财与规划叙事，.cash 就是「到手的钱」，适合强调即时、直给的产品：秒到账、立返现、当天结算。Identity Digital 运营，注册约 $10（约 ¥70），续费约 $31/年（约 ¥226），中规中矩。库存不错：动词与场景词命中率高。三点提醒：一是「cash」在垃圾邮件与诈骗页里出现频率高，新品牌要用真实主体信息、HTTPS 与清晰的资金流说明对冲怀疑；二是支付与借贷是强监管行业，合规资质比域名更早准备；三是它天然带「快钱」气质，主打稳健长期的理财品牌反而不合适。命名上「动词 + cash」是黄金结构（get、send、swap 类），或品牌词直接 + .cash 做支付子品牌。",
+      bestFor: ["支付与转账工具", "返现与优惠平台", "加密货币与数字资产产品", "点数变现与结算服务"],
+      namingTips: [
+        "「动词 + cash」最直给：get/send/swap 类词根",
+        "注册约 $10、续费约 $31/年，预算按续费核算",
+        "「cash」易被联想诈骗：真实主体信息 + HTTPS 必备",
+        "支付借贷强监管，资质合规先于域名",
+      ],
+    },
+    en: {
+      title: ".cash Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".cash says money out loud — for payment tools, cashback platforms and crypto products. See live pricing and naming advice, then hunt available .cash names with AI.",
+      intro:
+        ".cash wears money on its sleeve: payment and transfer tools, cashback and deals platforms, points-to-cash services and crypto products (coin.cash-style) land their value proposition in one second. It's blunter and more colloquial than .money — .money tells a planning and personal-finance story, .cash is money in hand, which suits products selling immediacy: instant payouts, same-day settlement, cash back now. Operated by Identity Digital, about $10 to register and $31/yr to renew. Inventory is decent, with verbs and scenario words hitting well. Three cautions: \"cash\" shows up disproportionately in spam and scam pages, so a new brand needs real entity information, HTTPS and a clear money-flow explanation to offset suspicion; payments and lending are heavily regulated — sort licensing before the domain; and the fast-money vibe cuts against brands selling prudent long-term wealth building. The golden pattern is verb + .cash (get, send, swap), or your brand word + .cash as a payments sub-brand.",
+      bestFor: ["Payment & transfer tools", "Cashback & deals platforms", "Crypto & digital asset products", "Points redemption & settlement services"],
+      namingTips: [
+        "Verb + .cash is the golden pattern: get/send/swap roots",
+        "About $10 to register, $31/yr to renew — budget on the renewal",
+        "\"Cash\" attracts scam suspicion — real entity info + HTTPS are table stakes",
+        "Payments and lending are regulated: licenses before domains",
+      ],
+    },
+  },
+  city: {
+    tld: "city",
+    zh: {
+      title: ".city 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".city 适合城市指南、本地生活服务与「××之城」式主题社区。查看 .city 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .city 域名。",
+      intro:
+        ".city 有两条清晰的用法。第一条是地理：城市指南、本地新闻、活动日历、生活服务聚合，用「城市名 + .city」（smart.city 式的组合早被注册局与机构盯上），对本地用户的指向性无可替代。第二条是比喻：「××之城」——把某个主题做成一座城，游戏社区、垂直内容站、电商专区都能借这个意象（模式类似 vitamin.city 式的品类之城）。Identity Digital 运营，注册约 $5（约 ¥33）非常亲民，续费约 $23/年（约 ¥167），是本批里长期成本最低的选择之一。库存好：多数中文城市拼音、英文城市名与品类词都还有货。注意三点：一是城市名可能涉及地方政府与商标保护，官方口径的名称要先查清；二是地理型站点重在持续运营，内容停更的城市站衰减极快；三是比喻用法要在首屏把「城」的概念讲清楚，否则用户会误以为是地理站。命名上「城市拼音 + .city」或「品类词 + .city」都自然。",
+      bestFor: ["城市指南与本地资讯", "本地生活与活动服务", "「××之城」主题社区", "智慧城市与市政科技项目"],
+      namingTips: [
+        "「城市名/拼音 + .city」指向性最强，先查政府与商标口径",
+        "注册约 $5、续费约 $23/年，本批长期成本最低档",
+        "品类词 + .city 的「之城」比喻要在首屏讲清楚",
+        "本地站重在持续运营，停更衰减快",
+      ],
+    },
+    en: {
+      title: ".city Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".city fits city guides, local services and themed \"city of X\" communities. See live pricing and naming advice, then hunt available .city names with AI.",
+      intro:
+        ".city has two clean use cases. The literal one is geography: city guides, local news, event calendars and local-services aggregators on cityname.city speak to local users like nothing else (institutional players grabbed combos like smart.city early). The figurative one is the \"city of X\": build a theme into a metropolis — gaming communities, vertical content hubs, e-commerce districts all borrow the image. Operated by Identity Digital, registration is a friendly ~$5 with renewal around $23/yr — among the lowest long-term costs in this batch. Inventory is good: most city names, pinyin forms and category words are still available. Three cautions: city names can touch municipal-government and trademark protections, so check the official stance first; geographic sites live or die on sustained publishing — an abandoned city site decays fast; and the metaphorical use must explain the \"city\" concept above the fold or visitors will expect a map. Naming: city name + .city for the literal play, category word + .city for the metaphor.",
+      bestFor: ["City guides & local news", "Local services & event calendars", "Themed \"city of X\" communities", "Smart-city & civic-tech projects"],
+      namingTips: [
+        "City name + .city is unbeatable locally — clear municipal/trademark issues first",
+        "About $5 to register, $23/yr to renew — lowest long-term tier here",
+        "Category + .city metaphors must explain themselves above the fold",
+        "Local sites need sustained publishing; abandoned ones decay fast",
+      ],
+    },
+  },
+  estate: {
+    tld: "estate",
+    zh: {
+      title: ".estate 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".estate 面向房地产经纪、豪宅项目与资产管理，real.estate 的组合自带行业招牌。查看 .estate 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .estate 域名。",
+      intro:
+        ".estate 是房地产行业的天然后缀：经纪人与中介品牌、豪宅与庄园项目、物业与资产管理公司用 name.estate，行业属性一目了然，real.estate 这样的组合更是被注册局当招牌展示。相比挤破头的 realty/realestate .com 组合，.estate 让品牌词保持干净：smith.estate 比 smithrealestate.com 短一半且更显高端。它还有一层「遗产/资产」语义——家族办公室、遗产规划、数字资产管理也用得顺。Identity Digital 运营，注册约 $8（约 ¥59），续费约 $31/年（约 ¥226），对客单价极高的房地产行业可忽略不计。库存好：姓氏、地名、楼盘词命中率高。注意三点：一是房产交易强监管且重信任，站点要挂牌照与真实办公信息；二是「estate」在英语里偏高端庄园气质，刚需平价盘用它有落差；三是面向国内用户时 .estate 认知度低，更适合海外或涉外业务。命名上「姓氏/品牌 + .estate」最自然，地名 + estate 适合区域深耕的中介。",
+      bestFor: ["房产经纪与中介品牌", "豪宅与庄园项目", "物业与资产管理", "家族办公室与遗产规划"],
+      namingTips: [
+        "「姓氏/品牌 + .estate」干净高端：smith.estate 式",
+        "注册约 $8、续费约 $31/年，对房产行业成本可忽略",
+        "房产交易重信任：牌照与真实办公信息上首屏",
+        "「estate」偏高端庄园气质，平价盘慎用",
+      ],
+    },
+    en: {
+      title: ".estate Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".estate is built for real-estate agents, luxury properties and asset management — real.estate is the registry's own showcase. See live pricing and naming advice, then hunt available .estate names with AI.",
+      intro:
+        ".estate is real estate's native suffix: agent and brokerage brands, luxury property projects, and property or asset management firms on name.estate declare the industry at a glance — the registry showcases real.estate itself as the flagship combo. Against the scrum for realty/realestate .com compounds, .estate keeps the brand word clean: smith.estate is half the length of smithrealestate.com and reads more upscale. There's a second meaning too — estates as legacy and assets — which suits family offices, estate planning and digital-asset custody. Operated by Identity Digital, about $8 to register and $31/yr to renew — a rounding error in an industry with real-estate ticket sizes. Inventory is strong: surnames, place names and development names hit well. Three cautions: property transactions are regulated and trust-driven, so put licenses and a real office address up front; \"estate\" carries a manor-house register in English that clashes with budget listings; and recognition among mainland-Chinese consumers is low, so it fits international-facing businesses best. Naming: surname or brand + .estate is the natural pattern; place + estate suits agencies focused on one area.",
+      bestFor: ["Real-estate agents & brokerages", "Luxury property projects", "Property & asset management", "Family offices & estate planning"],
+      namingTips: [
+        "Surname/brand + .estate reads clean and upscale: smith.estate",
+        "About $8 to register, $31/yr to renew — negligible for this industry",
+        "Trust-driven industry: licenses and office address above the fold",
+        "\"Estate\" sounds manor-house — a mismatch for budget listings",
+      ],
+    },
+  },
+  expert: {
+    tld: "expert",
+    zh: {
+      title: ".expert 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".expert 把专业身份写进域名，适合顾问、咨询师与垂直领域权威站。查看 .expert 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .expert 域名。",
+      intro:
+        ".expert 是一句自我介绍：name.expert 直接告诉访客「这是某领域的专家」。独立顾问、律师与会计等专业人士、垂直咨询公司、深度评测与知识付费站用它，定位一秒立住——seo.expert、tax.expert 这样的「领域词 + .expert」组合就是一块数字招牌。相比 .pro 的泛专业感，.expert 更聚焦「权威个体/团队」，适合把个人 IP 或小团队的专业能力做成品牌。Identity Digital 运营，注册约 $7（约 ¥48）很低，但续费约 $50/年（约 ¥360）是本批最高——这是典型的「首年引流、续费收割」定价，预算必须按续费核算，认真经营的专业站才值得。库存极好：绝大多数领域词、姓氏组合都有货。注意两点：一是「expert」是承诺，内容深度与案例撑不起时反而招致反感——空壳站用这个后缀会放大质疑；二是监管行业（法律、医疗、金融）的「专家」表述可能触碰广告合规，谨慎措辞。命名上「领域词 + .expert」最强，姓氏或个人品牌 + .expert 适合个人 IP。",
+      bestFor: ["独立顾问与咨询师", "律师/会计等专业服务", "垂直领域评测与知识站", "个人专业 IP 品牌"],
+      namingTips: [
+        "「领域词 + .expert」是数字招牌：seo.expert 式",
+        "首年约 $7 但续费约 $50/年，本批最高，按续费核算",
+        "「expert」是承诺：内容深度撑不起会放大质疑",
+        "监管行业「专家」表述注意广告合规",
+      ],
+    },
+    en: {
+      title: ".expert Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".expert puts professional authority in the domain — for consultants, advisors and vertical authority sites. See live pricing and naming advice, then hunt available .expert names with AI.",
+      intro:
+        ".expert is an introduction in a domain: name.expert tells visitors exactly who you claim to be. Independent consultants, lawyers, accountants and other professionals, boutique advisory firms, deep-dive review and paid-knowledge sites all land their positioning instantly — field word + .expert combos like seo.expert or tax.expert are digital shingles. Where .pro signals generic professionalism, .expert points at an authoritative individual or team, ideal for turning a personal brand or small practice into a name. Operated by Identity Digital: registration is a low ~$7, but renewal at ~$50/yr is the highest in this batch — classic promo-then-harvest pricing, so budget strictly on the renewal; it only pays for a practice you'll actually run. Inventory is excellent: most field words and surname combos are open. Two cautions: \"expert\" is a promise — thin content under this suffix amplifies skepticism rather than authority; and in regulated fields (law, medicine, finance) the word \"expert\" itself can trip advertising rules, so phrase claims carefully. Naming: field word + .expert is the strongest play; surname or personal brand + .expert fits individual practitioners.",
+      bestFor: ["Independent consultants & advisors", "Legal, accounting & professional services", "Vertical review & knowledge sites", "Personal professional brands"],
+      namingTips: [
+        "Field word + .expert is a digital shingle: seo.expert",
+        "~$7 first year but ~$50/yr renewal — highest here, budget on renewal",
+        "\"Expert\" is a promise: thin content amplifies skepticism",
+        "Mind advertising rules around \"expert\" claims in regulated fields",
+      ],
+    },
+  },
+  farm: {
+    tld: "farm",
+    zh: {
+      title: ".farm 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".farm 适合农场直销、农业科技与「农场直达餐桌」品牌，也被开发者用作服务器集群昵称。查看 .farm 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .farm 域名。",
+      intro:
+        ".farm 的第一层用法是字面：家庭农场与农产品直销、有机食品品牌、农家乐与休闲农业、农业科技公司用 name.farm，「从农场到餐桌」的故事从域名就开始讲。它对小生产者格外友好——本地农场的名字在 .com 上常被占，而 .farm 下几乎总有货，且比 .com 更强化「产地直供」的信任感。第二层是极客文化：「farm」在技术圈是集群的代名词（render farm、server farm），渲染农场、GPU 算力池、自动化流水线用 .farm 反而有梗。Identity Digital 运营，注册约 $8（约 ¥56），续费约 $31/年（约 ¥226）。库存很好：农产品品类词、地名、姓氏农场都命中率高。注意两点：一是食品与生鲜电商涉及许可证与冷链，域名之外先把资质备齐；二是「content farm」「click farm」是贬义词，内容类站点用 .farm 要避免负面联想。命名上「姓氏/地名 + .farm」最自然，品类词 + .farm（如 berry、dairy 类）适合单品牌。",
+      bestFor: ["家庭农场与农产品直销", "有机食品与生鲜品牌", "休闲农业与农家乐", "农业科技与算力集群项目"],
+      namingTips: [
+        "「姓氏/地名 + .farm」最自然，本地信任感强",
+        "注册约 $8、续费约 $31/年，小生产者可负担",
+        "食品生鲜先备许可证，域名之外资质更重要",
+        "内容站慎用：避免 content farm 负面联想",
+      ],
+    },
+    en: {
+      title: ".farm Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".farm suits farm-to-table brands, agtech and direct-selling growers — plus developer culture's server farms. See live pricing and naming advice, then hunt available .farm names with AI.",
+      intro:
+        ".farm works literally first: family farms selling direct, organic food brands, farm-stay tourism and agtech companies on name.farm start telling the farm-to-table story in the address bar. It's especially kind to small producers — local farm names are routinely taken on .com, while .farm almost always has stock and reinforces the direct-from-the-source trust signal better than .com would. The second layer is geek culture: \"farm\" means a cluster in tech (render farm, server farm), so rendering services, GPU pools and automation pipelines wear .farm with a wink. Operated by Identity Digital, about $8 to register and $31/yr to renew. Inventory is strong: produce categories, place names and surname-farms all hit well. Two cautions: food and grocery e-commerce involve licensing and cold chains — get credentials sorted beyond the domain; and \"content farm\" and \"click farm\" are pejoratives, so content sites should weigh the association. Naming: surname or place + .farm is the natural pattern; category + .farm (berry, dairy) fits single-product brands.",
+      bestFor: ["Family farms & direct selling", "Organic & fresh food brands", "Farm stays & agritourism", "Agtech & compute-cluster projects"],
+      namingTips: [
+        "Surname/place + .farm feels native and builds local trust",
+        "About $8 to register, $31/yr to renew — affordable for small producers",
+        "Food e-commerce needs licenses and cold chain — credentials first",
+        "Content sites beware the \"content farm\" connotation",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
