@@ -137,6 +137,11 @@ export async function checkDomains(
       const domain = domains[i++];
       let r = await checkDomain(domain, fetchFn);
       if (r.status === "unknown" && fallback) r = await fallback(r);
+      else if (r.status === "taken" && !r.expiresAt && fallback) {
+        // RDAP 拿不到到期时间时再问一次 WHOIS，仅在确认仍为 taken 且解析出日期时采用
+        const f = await fallback(r);
+        if (f.status === "taken" && f.expiresAt) r = f;
+      }
       await onResult(r);
     }
   };
