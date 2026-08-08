@@ -18,6 +18,8 @@ export interface Row {
   theme?: Theme;
   scores?: Scores;
   round: number;
+  /** 到期时间（ISO 字符串），仅 taken 且数据可得时存在 */
+  expiresAt?: string;
 }
 
 export interface RoundInfo {
@@ -44,6 +46,7 @@ export interface StreamEvent {
   meaning?: string;
   theme?: Theme;
   cached?: boolean;
+  expiresAt?: string;
   core?: string;
   style?: string;
   scene?: string;

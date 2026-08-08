@@ -5,6 +5,10 @@ export interface CheckResult {
   status: DomainStatus;
   method: "dns" | "rdap" | "whois" | "none";
   detail?: string;
+  /** 到期时间（ISO 字符串），仅 taken 且注册数据可解析时提供 */
+  expiresAt?: string;
+  /** 注册时间（ISO 字符串），仅 taken 且注册数据可解析时提供 */
+  registeredAt?: string;
 }
 
 const IANA_BOOTSTRAP_URL = "https://data.iana.org/rdap/dns.json";
@@ -31,6 +35,28 @@ export async function getRdapBase(tld: string, fetchFn: typeof fetch = fetch): P
     bootstrapCache = { map, fetchedAt: now };
   }
   return bootstrapCache.map.get(tld.toLowerCase()) ?? null;
+}
+
+interface RdapEvent {
+  eventAction?: string;
+  eventDate?: string;
+}
+
+/** 从 RDAP 响应的 events 数组提取到期/注册时间（无法解析则返回空对象） */
+export function extractRdapDates(data: unknown): { expiresAt?: string; registeredAt?: string } {
+  const out: { expiresAt?: string; registeredAt?: string } = {};
+  if (typeof data !== "object" || data === null) return out;
+  const events = (data as { events?: unknown }).events;
+  if (!Array.isArray(events)) return out;
+  for (const ev of events as RdapEvent[]) {
+    if (typeof ev?.eventAction !== "string" || typeof ev?.eventDate !== "string") continue;
+    const ts = Date.parse(ev.eventDate);
+    if (!Number.isFinite(ts)) continue;
+    const iso = new Date(ts).toISOString();
+    if (ev.eventAction === "expiration") out.expiresAt = iso;
+    else if (ev.eventAction === "registration") out.registeredAt = iso;
+  }
+  return out;
 }
 
 export function tldOf(domain: string): string {
@@ -66,7 +92,13 @@ export async function rdapCheck(domain: string, fetchFn: typeof fetch = fetch): 
     try {
       const res = await fetchFn(url, { headers: { accept: "application/rdap+json" }, signal: AbortSignal.timeout(ATTEMPT_TIMEOUT_MS) });
       if (res.status === 404) return { domain, status: "available", method: "rdap" };
-      if (res.ok) return { domain, status: "taken", method: "rdap" };
+      if (res.ok) {
+        let dates: { expiresAt?: string; registeredAt?: string } = {};
+        try {
+          dates = extractRdapDates(await res.json());
+        } catch { /* 响应体解析失败不影响状态判定 */ }
+        return { domain, status: "taken", method: "rdap", ...dates };
+      }
       if (attempt < MAX_ATTEMPTS - 1 && (res.status === 429 || res.status >= 500)) {
         const ra = Number(res.headers.get("retry-after"));
         delayMs = Math.min(Number.isFinite(ra) && ra > 0 ? ra * 1000 : delayMs * 2, 4000);
@@ -83,7 +115,12 @@ export async function rdapCheck(domain: string, fetchFn: typeof fetch = fetch): 
 
 export async function checkDomain(domain: string, fetchFn: typeof fetch = fetch): Promise<CheckResult> {
   const hasNs = await dnsHasNs(domain, fetchFn);
-  if (hasNs === true) return { domain, status: "taken", method: "dns" };
+  if (hasNs === true) {
+    // DNS 已确认被占，再查一次 RDAP 拿到期/注册时间；RDAP 不可用时仍按 DNS 结果返回
+    const r = await rdapCheck(domain, fetchFn);
+    if (r.status === "taken") return r;
+    return { domain, status: "taken", method: "dns" };
+  }
   return rdapCheck(domain, fetchFn);
 }
 

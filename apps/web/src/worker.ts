@@ -86,7 +86,7 @@ async function checkRateLimit(kv: KVNamespace | undefined, ip: string): Promise<
   return true;
 }
 
-type CachedCheck = Pick<CheckResult, "domain" | "status" | "method">;
+type CachedCheck = Pick<CheckResult, "domain" | "status" | "method" | "expiresAt">;
 
 /** 带 KV 缓存的域名核验：命中直接回放，未命中走实时核验并回写 */
 async function checkDomainsCached(
@@ -118,7 +118,9 @@ async function checkDomainsCached(
     if (kv && (r.status === "available" || r.status === "taken")) {
       const ttl = r.status === "available" ? CACHE_TTL_AVAILABLE : CACHE_TTL_TAKEN;
       try {
-        await kv.put(`d:${r.domain}`, JSON.stringify({ domain: r.domain, status: r.status, method: r.method }), { expirationTtl: ttl });
+        const cached: CachedCheck = { domain: r.domain, status: r.status, method: r.method };
+        if (r.expiresAt) cached.expiresAt = r.expiresAt;
+        await kv.put(`d:${r.domain}`, JSON.stringify(cached), { expirationTtl: ttl });
       } catch { /* 缓存失败不影响主流程 */ }
     }
     await onResult(r);
@@ -322,6 +324,7 @@ interface MonitorEntry {
   status: string;
   lastChecked: number;
   webhook?: string;
+  expiresAt?: string;
 }
 
 // 通知 webhook：仅接受 https URL，长度受限
@@ -398,7 +401,7 @@ app.post("/api/monitor/list", async (c) => {
   const map = await loadMonitorMap(kv);
   const entries = domains
     .filter((d) => map[d])
-    .map((d) => ({ domain: d, status: map[d].status, lastChecked: map[d].lastChecked }));
+    .map((d) => ({ domain: d, status: map[d].status, lastChecked: map[d].lastChecked, ...(map[d].expiresAt ? { expiresAt: map[d].expiresAt } : {}) }));
   return c.json({ entries, monitored: Object.keys(map).length, limit: MAX_MONITOR_DOMAINS });
 });
 
@@ -433,6 +436,8 @@ async function runMonitorSweep(env: Bindings): Promise<void> {
       if (entry.webhook) notifications.push({ webhook: entry.webhook, change });
     }
     if (r.status !== "unknown") entry.status = r.status;
+    if (r.status === "taken" && r.expiresAt) entry.expiresAt = r.expiresAt;
+    else if (r.status === "available") delete entry.expiresAt;
     entry.lastChecked = now;
   }, true);
   await kv.put(MONITOR_KEY, JSON.stringify(map));

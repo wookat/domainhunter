@@ -7,7 +7,7 @@ import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
 import { REGISTRARS } from "@/lib/registrars";
 import { scoreBadgeClass, totalScore, type Row } from "@/types";
-import { cn } from "@/lib/utils";
+import { cn, formatExpiry, isExpiringSoon } from "@/lib/utils";
 
 export function DomainName({ row, className }: { row: Row; className?: string }) {
   return (
@@ -26,6 +26,22 @@ export function MeaningText({ text }: { text: string }) {
     <>
       {parts.map((p, i) => (p.startsWith("「") ? <span key={i} className="font-medium text-brand">{p}</span> : p))}
     </>
+  );
+}
+
+/** taken 域名的到期时间（低调次要文本；90 天内到期琥珀色提示） */
+export function ExpiryNote({ iso, className }: { iso: string; className?: string }) {
+  const { t } = useI18n();
+  const date = formatExpiry(iso);
+  if (!date) return null;
+  const soon = isExpiringSoon(iso);
+  return (
+    <span
+      title={soon ? t("expiry.soonTitle") : undefined}
+      className={cn("tnum shrink-0 whitespace-nowrap font-mono text-[10px]", soon ? "text-amber2" : "text-txt2", className)}
+    >
+      {t("expiry.on", { date })}
+    </span>
   );
 }
 
@@ -105,6 +121,7 @@ export function DomainRow({
         <span className="tnum w-8 shrink-0 rounded-md bg-taken-dim py-0.5 text-center font-mono text-xs text-taken">—</span>
         <span className="truncate font-mono text-[15px] text-taken line-through">{row.domain}</span>
         <span className="shrink-0 rounded bg-taken-dim px-1.5 py-0.5 text-[11px] text-taken">{t("status.taken")}</span>
+        {row.expiresAt && <ExpiryNote iso={row.expiresAt} />}
         {onToggleFavorite && (
           <button
             title={favorite ? t("results.favRemove") : t("results.favAdd")}

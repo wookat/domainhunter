@@ -30,6 +30,8 @@ const zh = {
   "status.taken": "已注册",
   "status.unknown": "未知",
   "status.checking": "检测中",
+  "expiry.on": "{date} 到期",
+  "expiry.soonTitle": "90 天内到期，可关注释放",
   // 评分维度
   "score.length": "长度",
   "score.readability": "读感",
@@ -397,6 +399,8 @@ const en: Record<I18nKey, string> = {
   "status.taken": "Taken",
   "status.unknown": "Unknown",
   "status.checking": "Checking",
+  "expiry.on": "expires {date}",
+  "expiry.soonTitle": "Expires within 90 days — worth monitoring",
   "score.length": "Length",
   "score.readability": "Readability",
   "score.relevance": "Relevance",
