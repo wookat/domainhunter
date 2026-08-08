@@ -81,6 +81,44 @@ const ZH_PINYIN_HINT = `
 - 「」内的汉字必须优先用常用字（现代汉语常用 3500 字范围内的直觉），普通人看到拼音要能反推出汉字：木/舟/云/星/禾/悦/途 好，岑/蕨/飏/麓/隰/珩 这类生僻字不要；组词语义要自然（「木舟」「星河」好，「续夸」式牵强搭配不要）
 - 拼音自筛淘汰标准（不达标的直接不要输出）：x/q/zh/c/s 等易歧义声母连串（老外读不出，如 xiqizhi）；超过 4 个音节；含 iu/ui、in/ing、an/ang 等易混易错拼写；整体拼读有多种可能切分产生歧义的组合`;
 
+// ---------------- 偏拼音需求检测与变体拓宽（R247，R239 审计 P3-4） ----------------
+// 生产观测：偏拼音需求（描述强调拼音/中文名）诱发模型集中输出双字全拼，而双字全拼
+// .com/.cn 存量高度枯竭（zh2/zh3 均 5 轮仅猎得 1 个可注册）。检测到此类需求时在
+// system prompt 追加拓宽指令，把变体空间从双字全拼扩到三字全拼/双拼缩合/混搭等。
+
+const PINYIN_FOCUS_RE = /拼音|全拼|双拼|中文名|汉字名|声母|注音/;
+
+/** 需求描述是否强调拼音/中文名（仅 zh 生效，由调用方保证） */
+export function detectPinyinFocus(description: string): boolean {
+  return PINYIN_FOCUS_RE.test(description);
+}
+
+export const ZH_PINYIN_BROADEN_HINT = `
+
+偏拼音需求变体拓宽（检测到用户强调拼音/中文名）：双字全拼在 .com/.cn 下存量已高度枯竭，常见双字组合几乎全被注册。不要把候选集中在双字全拼上，请把变体空间拓宽到以下路线，双字全拼候选每轮不超过 1/3，其余名额分给：
+- 三字全拼：三个常用字的自然组词（如「木星河」muxinghe 式），寓意完整且存量远比双字充裕
+- 双拼缩合/声母缩合变体：在全拼基础上做紧凑缩合（如「知舟」→ zhizhou 之外再给 zhzhou、zzhou 式短变体），短而有记忆点
+- 拼音+英文混搭：拼音词根接 hub/kit/lab/go 等轻量英文词（如 yunkit、taolab 式），theme 标 blend
+- 叠音与轻改拼：叠音（momo 式）或在合法音节内做轻微改拼换取独特性，仍要好读可反推`;
+
+// ---------------- 多轮低产出检测（R247，R239 审计 P3-4） ----------------
+// 连续多轮可注册增量极低且用户只选了少量 TLD 时，提示用户勾选更多后缀或放宽命名
+// 路线（只提示一次，不自动改用户的 TLD 选择）。
+
+/** 触发提示需要的连续低产出轮数 */
+export const LOW_YIELD_CONSECUTIVE_ROUNDS = 2;
+/** 单轮可注册增量 ≤ 此值视为低产出 */
+export const LOW_YIELD_MAX_GAIN = 1;
+/** 已选 TLD 数 ≤ 此值才提示（选得多说明用户已自行拓宽，无需提示） */
+export const LOW_YIELD_MAX_TLDS = 2;
+
+/** roundGains：各轮可注册增量（按轮次顺序）；连续两轮增量 ≤1 且 TLD 少时返回 true */
+export function isLowYield(roundGains: number[], tldCount: number): boolean {
+  if (tldCount > LOW_YIELD_MAX_TLDS) return false;
+  if (roundGains.length < LOW_YIELD_CONSECUTIVE_ROUNDS) return false;
+  return roundGains.slice(-LOW_YIELD_CONSECUTIVE_ROUNDS).every((g) => g <= LOW_YIELD_MAX_GAIN);
+}
+
 // ---------------- 拼音合法性校验（R124） ----------------
 // 合法无调拼音音节表（约 410 个），整理自《现代汉语词典》附录普通话音节表 /《汉语拼音方案》。
 // 说明：ü 按域名习惯写作 v（lv/nv）或 ue（lue/nue），两种写法都收录；含少量口语音节（如 lo、dia、rua、den、kei、zhei、shei）。
@@ -1088,7 +1126,14 @@ async function generateOnce(
     body: JSON.stringify({
       model: "deepseek-chat",
       messages: [
-        { role: "system", content: opts.lang === "en" ? SYSTEM_PROMPT + EN_NAMING_HINT : SYSTEM_PROMPT + ZH_PINYIN_HINT },
+        {
+          role: "system",
+          content:
+            opts.lang === "en"
+              ? SYSTEM_PROMPT + EN_NAMING_HINT
+              : // R247：偏拼音需求追加变体拓宽指令，降低双字全拼存量枯竭命中率
+                SYSTEM_PROMPT + ZH_PINYIN_HINT + (detectPinyinFocus(description) ? ZH_PINYIN_BROADEN_HINT : ""),
+        },
         { role: "user", content: user },
       ],
       // R196（P1-1）：反思轮（round≥2）降温——高温叠加长上下文是词语沙拉的主要来源，首轮保持 1.2 不变

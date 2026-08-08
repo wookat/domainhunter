@@ -149,6 +149,7 @@ const zh = {
   "agent.prevRound": "第 {n} 轮 · {count} 个可注册（已并入结果，完成后可按轮回看）",
   "agent.note.first": "AI 正在构思名字…",
   "agent.note.more": "可注册的还不够，AI 反思后继续想…",
+  "agent.lowYieldHint": "连续几轮可注册结果很少：当前后缀下存量可能已接近枯竭。建议回到首页勾选更多后缀（如 .io / .co / .net / .top），或放宽命名路线（如允许三字拼音、拼音+英文混搭）再试。",
   // 结果页
   "results.title": "为「{desc}」猎到 {n} 个可注册域名",
   "results.stat.available": "{n} 个可注册",
@@ -540,6 +541,7 @@ const en: Record<I18nKey, string> = {
   "agent.prevRound": "Round {n} · {count} available (merged into results)",
   "agent.note.first": "AI is brainstorming names…",
   "agent.note.more": "Not enough available yet — AI is reflecting and trying again…",
+  "agent.lowYieldHint": "Very few available names for several rounds — inventory under the selected TLDs may be nearly exhausted. Try checking more TLDs (like .io / .co / .net / .top) on the home page, or loosen the naming style (e.g. allow longer pinyin or pinyin+English mixes).",
   "results.title": "Found {n} registrable domains for \"{desc}\"",
   "results.stat.available": "{n} available",
   "results.stat.checked": "{n} checked",

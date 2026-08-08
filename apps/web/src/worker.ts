@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { nanoid } from "nanoid";
 import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
-import { AI_THEMES, generateAiCandidates, generateUnderstanding, newGuardStats, type AiTheme, type DislikedItem } from "./ai";
+import { AI_THEMES, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiTheme, type DislikedItem } from "./ai";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
@@ -222,6 +222,10 @@ app.post("/api/ai-search", async (c) => {
       // 被注册主体的命名思路分布，供 refine 轮总结失败模式
       const takenThemes: Partial<Record<string, number>> = {};
       let availableCount = 0;
+      // R247（R239 审计 P3-4）：多轮低产出检测——各轮可注册增量，连续低产出且 TLD 少时发一次性提示
+      const roundGains: number[] = [];
+      let prevAvailableCount = 0;
+      let lowYieldHintSent = false;
       const understandingDone = generateUnderstanding(description, apiKey, lang)
         .then(async (u) => {
           if (u) await emit({ type: "understanding", ...u });
@@ -267,6 +271,13 @@ app.post("/api/ai-search", async (c) => {
           for (const label of takenThisRound) {
             const theme = themeByLabel.get(label);
             if (theme) takenThemes[theme] = (takenThemes[theme] ?? 0) + 1;
+          }
+          // R247：连续低产出提示——不自动改用户 TLD 选择，只提示一次（前端渲染双语文案）
+          roundGains.push(availableCount - prevAvailableCount);
+          prevAvailableCount = availableCount;
+          if (!lowYieldHintSent && availableCount < target && isLowYield(roundGains, tlds.length)) {
+            lowYieldHintSent = true;
+            await emit({ type: "hint", kind: "lowYield", round });
           }
         }
         await understandingDone;
