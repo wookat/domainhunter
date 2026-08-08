@@ -546,7 +546,15 @@ app.post("/api/share", async (c) => {
   const id = nanoid(10);
   // revoke token 仅返回给创建者，用于后续撤销；不随 GET 暴露
   const revokeToken = nanoid(24);
-  await kv.put(`share:${id}`, JSON.stringify({ items, createdAt: Date.now(), revokeToken }), { expirationTtl: SHARE_TTL });
+  // KV put 偶发静默丢失（同 colo 立即读也取不到），写后读回校验，失败重写
+  const key = `share:${id}`;
+  const payload = JSON.stringify({ items, createdAt: Date.now(), revokeToken });
+  let written = false;
+  for (let attempt = 0; attempt < 3 && !written; attempt++) {
+    await kv.put(key, payload, { expirationTtl: SHARE_TTL });
+    written = (await kv.get(key)) !== null;
+  }
+  if (!written) return c.json({ error: "share_write_failed" }, 503);
   const origin = new URL(c.req.url).origin;
   return c.json({ id, url: `${origin}/s/${id}`, revokeToken });
 });
