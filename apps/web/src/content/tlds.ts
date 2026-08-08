@@ -1824,6 +1824,186 @@ const GUIDES = {
       ],
     },
   },
+  social: {
+    tld: "social",
+    zh: {
+      title: ".social 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".social 是社区、社交产品与创作者阵地的行业后缀。查看 .social 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .social 域名。",
+      intro:
+        ".social 把「社交/社区」直接写进后缀，语义一目了然：社区论坛、去中心化社交实例、创作者的粉丝阵地、社群运营工具用 name.social 都不需要解释。它在联邦宇宙（Fediverse）里已经是事实惯例——Mastodon 官方实例 mastodon.social 完成了全网用户教育，自建 Mastodon/Misskey 实例、Bluesky 周边工具选 .social 几乎是圈内正统。Identity Digital 运营，注册约 $7（约 ¥48），续费约 $33/年（约 ¥240），属中档价位，认真做社区可以长期负担。库存很好：社区名、品牌词、城市/兴趣词基本随便挑。注意两点：一是 .social 语义偏「人聚在一起」，纯工具类产品用它会显得错位；二是 6 字符后缀不算短，前面的名字尽量控制在两个音节内。命名上「社群主题词 + .social」最自然（如 indie.social、pixel.social），品牌词直接上也完全成立。",
+      bestFor: ["社区论坛与兴趣社群", "Mastodon 等联邦宇宙实例", "创作者粉丝阵地", "社群运营与私域工具"],
+      namingTips: [
+        "社群主题词 + .social 最自然：indie.social、pixel.social",
+        "自建 Fediverse 实例选 .social 是圈内惯例，零解释成本",
+        "后缀已含「社交」语义，别再叠加 hub/club 等冗余词",
+        "6 字符后缀不短，名字控制在两个音节内更好读",
+      ],
+    },
+    en: {
+      title: ".social Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".social is the industry suffix for communities, social products and creator hubs. See live pricing and naming advice, then hunt available .social names with AI.",
+      intro:
+        ".social writes \"community\" straight into the suffix: forums, decentralized social instances, creator fan hubs and community-management tools all read instantly as name.social. In the Fediverse it's already the de-facto convention — Mastodon's flagship instance mastodon.social educated the entire internet, so self-hosted Mastodon/Misskey instances and Bluesky-adjacent tools choosing .social get insider legitimacy for free. Operated by Identity Digital at a mid-tier price — about $7 to register and $33/yr to renew — sustainable for a serious community. Inventory is excellent: community names, brand words and interest words are wide open. Two cautions: the semantics lean \"people gathering\", so a pure utility product on .social feels off; and at six characters the suffix isn't short, so keep the name to two syllables. Theme word + .social is the most natural pattern (indie.social, pixel.social); a straight brand word works just as well.",
+      bestFor: ["Community forums & interest groups", "Mastodon / Fediverse instances", "Creator fan hubs", "Community management tools"],
+      namingTips: [
+        "Theme word + .social reads naturally: indie.social, pixel.social",
+        "For Fediverse instances .social is the established convention",
+        "The suffix already says \"social\" — skip redundant hub/club words",
+        "Six-character suffix: keep the name to two syllables",
+      ],
+    },
+  },
+  video: {
+    tld: "video",
+    zh: {
+      title: ".video 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".video 语义直指视频内容与视频工具，适合创作者、视频平台与视频类 SaaS。查看 .video 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .video 域名。",
+      intro:
+        ".video 的语义再直白不过：视频创作者的作品集主页、视频托管与剪辑工具、课程与直播平台、企业的视频官网入口，用 name.video 一眼就知道你是干什么的。视频是当下互联网最大的内容形态，但对应的好 .com 几乎绝迹——「xx视频」类的名字在 .com 里早被囤完，.video 里却大片空着，同一个词根命中率天差地别。Identity Digital 运营，注册约 $8（约 ¥60），续费约 $29/年（约 ¥210），在行业词后缀里属于价格温和的一档。它还有个隐藏用法：brand.video 做品牌的视频专区（产品演示、教程库），与主站分工明确，很多海外企业就这么用。注意：.video 是 5 字符后缀，念出来三个音节，名字本体要短；纯图文/音频产品别蹭这个后缀，语义错位反而减分。命名上「内容主题 + .video」或「工具动词 + .video」都很顺（如 cook.video、edit.video）。",
+      bestFor: ["视频创作者作品集", "视频托管/剪辑/字幕工具", "课程与直播平台", "品牌视频专区（brand.video）"],
+      namingTips: [
+        "主题词 + .video 一眼看懂：cook.video、edit.video",
+        "brand.video 可做品牌视频专区，与主站分工",
+        "后缀念出来三个音节，名字本体尽量单音节或双音节",
+        "非视频业务别蹭，语义错位减分",
+      ],
+    },
+    en: {
+      title: ".video Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".video points straight at video content and video tools — for creators, platforms and video SaaS. See live pricing and naming advice, then hunt available .video names with AI.",
+      intro:
+        ".video couldn't be more literal: a creator's portfolio, a hosting or editing tool, a course or live-streaming platform, or a company's video hub all read instantly as name.video. Video is the internet's dominant content format, yet the matching .com inventory is long gone — video-related names were hoarded years ago — while .video sits wide open, so the same shortlist scores dramatically more hits. Operated by Identity Digital at a friendly price for an industry suffix: about $8 to register, $29/yr to renew. There's also a clever pattern: brand.video as a company's dedicated video hub (demos, tutorials) cleanly separated from the main site — plenty of companies do exactly this. Caveats: the suffix is five characters and three spoken syllables, so keep the name itself short; and text- or audio-only products shouldn't borrow it — mismatched semantics subtract credibility. Theme word + .video or verb + .video both flow well (cook.video, edit.video).",
+      bestFor: ["Video creator portfolios", "Hosting / editing / caption tools", "Course & live-streaming platforms", "Brand video hubs (brand.video)"],
+      namingTips: [
+        "Theme word + .video is self-explanatory: cook.video, edit.video",
+        "Use brand.video as a dedicated video hub beside the main site",
+        "Three spoken syllables in the suffix — keep the name to one or two",
+        "Skip it for non-video products; mismatched semantics hurt",
+      ],
+    },
+  },
+  fund: {
+    tld: "fund",
+    zh: {
+      title: ".fund 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".fund 语义直指基金与募资，适合投资基金、众筹项目与公益筹款。查看 .fund 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fund 域名。",
+      intro:
+        ".fund 是「基金/资金」的行业后缀，指向性极强：风投与私募基金的官网（如 name.fund 直接就是「某某基金」）、加密与 DAO 金库、公益与社区筹款页、奖学金与资助计划，用它都名正言顺。VC 圈已经有不少标杆用法——很多小型基金嫌 xxxcapital.com 冗长，直接用 brand.fund，短一截还更专业。Identity Digital 运营，注册约 $9（约 ¥63），续费约 $57/年（约 ¥410）——续费在本批里偏高，但对管理真金白银的基金而言不值一提；个人side project 要掂量。库存很好：基金常用词、主题词基本可挑。两个注意点：一是金融语义自带监管预期，页面要放清楚主体信息与合规声明，否则容易被当作募资骗局；二是 .fund 适合「一只基金/一个募资计划」，泛金融工具（记账、支付）用 .finance 或 .app 更贴。命名上品牌词直接上最干净，或「主题 + .fund」表达资金用途（如 climate.fund、oss.fund）。",
+      bestFor: ["风投与私募基金官网", "加密基金与 DAO 金库", "公益与社区筹款", "奖学金与资助计划"],
+      namingTips: [
+        "brand.fund 比 xxxcapital.com 短且专业，VC 圈已有惯例",
+        "主题 + .fund 表达资金用途：climate.fund、oss.fund",
+        "金融语义引监管预期：主体信息与合规声明要放全",
+        "续费约 $57/年偏高，个人项目先算长期成本",
+      ],
+    },
+    en: {
+      title: ".fund Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".fund points straight at funds and fundraising — for investment funds, crowdfunding and grant programs. See live pricing and naming advice, then hunt available .fund names with AI.",
+      intro:
+        ".fund is the industry suffix for money pools, and its aim is precise: venture and private-equity fund sites (name.fund literally reads \"the NAME fund\"), crypto funds and DAO treasuries, charity and community fundraising pages, scholarship and grant programs. The VC world already set the pattern — plenty of small funds skip the clunky xxxcapital.com and go straight to brand.fund: shorter and more professional. Operated by Identity Digital; about $9 to register with renewals near $57/yr — high for this batch, trivial for anyone managing real money, worth budgeting for side projects. Inventory is rich: fund-adjacent words and theme words remain open. Two cautions: financial semantics invite regulatory expectations — publish your legal entity and compliance details or risk reading like a scam; and .fund fits \"a fund / a fundraising program\", while general finance tools (budgeting, payments) sit better on .finance or .app. Name with the brand word alone, or theme + .fund to state the money's purpose (climate.fund, oss.fund).",
+      bestFor: ["VC & private-equity fund sites", "Crypto funds & DAO treasuries", "Charity & community fundraising", "Scholarship & grant programs"],
+      namingTips: [
+        "brand.fund beats xxxcapital.com — shorter and already a VC convention",
+        "Theme + .fund states the purpose: climate.fund, oss.fund",
+        "Financial semantics invite scrutiny — show your entity and compliance",
+        "Renewals near $57/yr — do the math for side projects",
+      ],
+    },
+  },
+  land: {
+    tld: "land",
+    zh: {
+      title: ".land 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".land 语义指向土地、地产与虚拟世界，适合房产地产、农业与元宇宙项目。查看 .land 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .land 域名。",
+      intro:
+        ".land 的语义有两层，都好用。第一层是字面的「土地」：房产与土地交易平台、农场与农业项目、露营地与户外目的地、地块信息服务，用 name.land 直接点题。第二层是引申的「乐园/世界」：英语里 -land 本来就是「某某之地」的构词法（Disneyland 式），游戏世界、虚拟社区、元宇宙地块项目用它自带想象力——Sandbox 等项目带火过一波 .land 注册。Identity Digital 运营，注册约 $9（约 ¥63），续费约 $33/年（约 ¥240），中档价位。库存很好，双语玩法也多：中文品牌可以把「XX之地/XX乐园」直译成 brand.land。注意：.land 不是通用后缀，业务和「土地/空间/世界」完全不沾边时用它会显得莫名其妙；另外以 -land 结尾的英文词可以玩断词 hack（如 wonderland → wonder.land），好记度直接拉满。命名上「地名/主题 + .land」和「品牌词 + .land」都成立。",
+      bestFor: ["房产与土地交易平台", "农业与农场项目", "游戏世界与元宇宙", "露营地与户外目的地"],
+      namingTips: [
+        "字面用法点题：farm.land 式的地产/农业命名",
+        "引申用法造世界：主题词 + .land 自带乐园感",
+        "-land 结尾的词可玩断词 hack：wonder.land",
+        "业务与「土地/空间/世界」不沾边就别用",
+      ],
+    },
+    en: {
+      title: ".land Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".land evokes real estate, farmland and virtual worlds — for property, agriculture and metaverse projects. See live pricing and naming advice, then hunt available .land names with AI.",
+      intro:
+        ".land carries two useful readings. The literal one: real-estate and land marketplaces, farms and agriculture ventures, campgrounds and outdoor destinations, parcel-data services — name.land says it outright. The figurative one: English builds \"a place of X\" with -land (think Disneyland), so game worlds, virtual communities and metaverse land projects wear it with built-in imagination — Sandbox-era projects drove a whole wave of .land registrations. Operated by Identity Digital at a mid-tier price: about $9 to register, $33/yr to renew. Inventory is strong, and words ending in -land make superb domain hacks (wonderland → wonder.land) that max out memorability. The caveat: .land is not a generic suffix — if your business has nothing to do with land, space or worlds, it reads as random. Both place/theme + .land and brand + .land work well.",
+      bestFor: ["Real-estate & land marketplaces", "Farms & agriculture ventures", "Game worlds & metaverse projects", "Campgrounds & outdoor destinations"],
+      namingTips: [
+        "Literal naming states the trade: farm.land-style property names",
+        "Figurative naming builds worlds: theme + .land feels like a park",
+        "Words ending in -land split into great hacks: wonder.land",
+        "Skip it if your business has nothing to do with land or worlds",
+      ],
+    },
+  },
+  click: {
+    tld: "click",
+    zh: {
+      title: ".click 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".click 便宜且动作感强，适合短链跳转、落地页与营销活动页。查看 .click 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .click 域名。",
+      intro:
+        ".click 是「动作后缀」的代表：它念出来就是一个指令——点它。短链与跳转服务、营销活动落地页、创作者的 link-in-bio 主页、下载/购买按钮背后的追踪域，用 name.click 天然带行动号召。它也是本批最便宜的后缀之一：GoDaddy Registry 运营，注册约 $2（约 ¥11），续费约 $11/年（约 ¥78）——首年续费都便宜，批量注册活动域、给每个 campaign 配一个专属域名毫无压力。库存近乎全开：动词、品牌词、口号词随便挑。代价也要认清：便宜后缀历来被垃圾邮件与钓鱼滥用，.click 在部分邮件网关的信誉分偏低，拿它做主品牌或发件域要三思——更稳的用法是主站用 .com/.app，营销跳转用 .click 分工。命名上「动词/口号 + .click」最能发挥它的动作感（如 try.click、save.click），短促有力是第一原则。",
+      bestFor: ["短链与跳转服务", "营销活动落地页", "link-in-bio 个人主页", "campaign 专属追踪域"],
+      namingTips: [
+        "动词/口号 + .click 自带行动号召：try.click、save.click",
+        "便宜到可以每个 campaign 配一个专属域",
+        "别做主品牌或发件域：便宜后缀邮件信誉分偏低",
+        "短促有力是第一原则，名字最好单音节",
+      ],
+    },
+    en: {
+      title: ".click Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".click is cheap and action-charged — for short links, landing pages and marketing campaigns. See live pricing and naming advice, then hunt available .click names with AI.",
+      intro:
+        ".click is the archetypal action suffix: spoken aloud, it's literally an instruction. Short-link and redirect services, campaign landing pages, creator link-in-bio hubs and tracking domains behind download/buy buttons all gain a built-in call to action as name.click. It's also among the cheapest in this batch: run by GoDaddy Registry at about $2 to register and $11/yr to renew — cheap in year one and every year after, so registering a dedicated domain per campaign costs nothing. Inventory is essentially wide open: verbs, brand words, slogans, take your pick. Know the trade-off: cheap suffixes attract spam and phishing, and .click scores lower with some mail gateways — think twice before making it your primary brand or sending domain. The robust pattern is division of labor: main site on .com/.app, marketing redirects on .click. Verb/slogan + .click exploits the action feel best (try.click, save.click); punchy and short is rule number one.",
+      bestFor: ["Short-link & redirect services", "Campaign landing pages", "Link-in-bio hubs", "Per-campaign tracking domains"],
+      namingTips: [
+        "Verb/slogan + .click is a built-in CTA: try.click, save.click",
+        "Cheap enough for a dedicated domain per campaign",
+        "Avoid it as a primary brand or sending domain — mail reputation is weaker",
+        "Punchy and short wins — one-syllable names work best",
+      ],
+    },
+  },
+  icu: {
+    tld: "icu",
+    zh: {
+      title: ".icu 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".icu 读作 I see you，超低价且有梗，适合个人主页、实验项目与创意短域。查看 .icu 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .icu 域名。",
+      intro:
+        ".icu 官方读法是「I see you（我看见你）」——一个自带社交梗的三字母后缀。它曾靠超低价冲进全球注册量前列，如今定位更清晰：个人主页与联系我页面（yourname.icu = 「看见你」）、实验与 demo 项目、监控/观测类工具（「I see you」的语义和 watch/monitor 天然契合）、以及任何想要三字母短后缀又不想付 .io/.ai 价格的场景。ShortDot 运营，注册约 $3（约 ¥18），续费约 $16/年（约 ¥115）——三字母后缀里几乎最便宜的长期持有成本。要认清两面性：低价后缀历史上被批量滥用过，.icu 在垃圾邮件统计里榜上有名，严肃商业主站慎用；但反过来，个人项目、极客玩具、内部工具用它毫无包袱，短、便宜、有梗全占。中文用户还有一层谐音注意：icu 在中文互联网常指「重症监护室」，品牌向命名要避开医疗歧义。命名上「名字/动词 + .icu」玩「看见」的梗最出彩（如 nowyou.icu 式）。",
+      bestFor: ["个人主页与联系页", "实验与 demo 项目", "监控与观测工具", "低成本三字母短域需求"],
+      namingTips: [
+        "玩 I see you 的梗：监控工具、个人主页都出彩",
+        "三字母后缀里长期成本几乎最低，实验项目无压力",
+        "严肃商业主站慎用：低价后缀垃圾邮件信誉差",
+        "中文语境注意「重症监护室」歧义，医疗向命名避开",
+      ],
+    },
+    en: {
+      title: ".icu Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".icu reads \"I see you\" — ultra-cheap with a built-in pun, for personal pages, experiments and creative short domains. See live pricing and naming advice, then hunt available .icu names with AI.",
+      intro:
+        ".icu officially reads \"I see you\" — a three-letter suffix with a pun baked in. It once rocketed up the global registration charts on rock-bottom pricing; today its niche is clearer: personal home and contact pages (yourname.icu = \"see you\"), experiments and demos, monitoring and observability tools (the \"I see you\" semantics fit watch/monitor products perfectly), and anyone who wants a three-letter suffix without paying .io/.ai prices. Run by ShortDot at about $3 to register and $16/yr to renew — nearly the lowest long-term cost of any three-letter TLD. Be clear-eyed about both sides: bargain suffixes get bulk-abused, and .icu has appeared on spam-volume charts, so think twice for a serious commercial main site; conversely, personal projects, hacker toys and internal tools wear it with zero baggage — short, cheap and witty all at once. One more note: in hospital contexts ICU means intensive care, so avoid medical-adjacent branding. Name/verb + .icu playing on \"see\" lands best (nowyou.icu-style).",
+      bestFor: ["Personal home & contact pages", "Experiments & demo projects", "Monitoring & observability tools", "Budget three-letter short domains"],
+      namingTips: [
+        "Play the \"I see you\" pun — monitoring tools and personal pages shine",
+        "Nearly the cheapest three-letter TLD to hold long-term",
+        "Think twice for serious commercial main sites — spam reputation",
+        "ICU also means intensive care — avoid medical-adjacent branding",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
