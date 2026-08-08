@@ -781,6 +781,11 @@ function mcpText(id: unknown, text: string, isError = false): Response {
   return mcpResult(id, { content: [{ type: "text", text }], isError });
 }
 
+/** 声明了 outputSchema 的工具必须同时返回 structuredContent（严格 MCP 客户端如 python SDK 会校验） */
+function mcpStructured(id: unknown, structured: Record<string, unknown>): Response {
+  return mcpResult(id, { content: [{ type: "text", text: JSON.stringify(structured) }], structuredContent: structured, isError: false });
+}
+
 app.post("/mcp", async (c) => {
   const body = (await c.req.json().catch(() => null)) as { jsonrpc?: string; id?: unknown; method?: string; params?: Record<string, unknown> } | null;
   if (!body || body.jsonrpc !== "2.0" || typeof body.method !== "string") {
@@ -843,7 +848,7 @@ app.post("/mcp", async (c) => {
       }
       results.push(item);
     });
-    return mcpText(id, JSON.stringify({ results }));
+    return mcpStructured(id, { results });
   }
 
   if (toolName === "suggest_variants") {
