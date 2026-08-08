@@ -118,7 +118,13 @@ export default function App() {
   const [isPrices] = useState(pricesFromPath);
   const [isWhy] = useState(whyFromPath);
   const [isMcp] = useState(mcpFromPath);
-  const [saved] = useState(() => (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() || advancedFromPath() ? null : loadSearch()));
+  const [saved] = useState(() => {
+    if (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() || advancedFromPath()) return null;
+    // /?q= 或 /?tpl= 是显式预填入口（分享搜索链接 / 指南页 CTA），直接进首页预填，不恢复上次结果
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("q") || params.get("tpl")) return null;
+    return loadSearch();
+  });
   const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : monitorsFromPath() ? "monitors" : advancedFromPath() ? "advanced" : saved ? "results" : "home"));
   const [resumedNotice, setResumedNotice] = useState(() => Boolean(saved) && !shortlistFromPath() && !monitorsFromPath());
   const [noticeClosing, setNoticeClosing] = useState(false);

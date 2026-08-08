@@ -464,7 +464,7 @@ export function HomePage({
   shortlist: { has: (domain: string) => boolean; toggle: (row: Row) => void };
 }) {
   const { t, lang } = useI18n();
-  const [description, setDescription] = useState(() => initial.description || descriptionFromQuery() || templateFromQuery(lang));
+  const [description, setDescription] = useState(() => descriptionFromQuery() || initial.description || templateFromQuery(lang));
   const [totalChecked, setTotalChecked] = useState<number | null>(null);
 
   useEffect(() => {
