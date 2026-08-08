@@ -49,8 +49,10 @@ export interface RefineFeedback {
 const ZH_PINYIN_HINT = `
 
 拼音候选强化（用户是中文创业者，拼音系候选质量优先）：
-- 三种拼音路线都要覆盖：① 简短双字拼（哔哩哔哩 bilibili、知乎 zhihu、豆瓣 douban 式，追求双拼声调节奏与叠音美感）；② 全拼（小红书 xiaohongshu 式，寓意完整直白）；③ 声母缩写或拼音+英文混搭（zlz、tao+bao+hub 式，短而有记忆点）
+- 路线配额硬要求：每轮候选中 theme 为 pinyin 或 blend 的合计必须 ≥40%（如 24 个候选中至少 10 个），其余才是 word/coined；不足配额视为不合格输出
+- 三种拼音路线都要覆盖，每种至少 2 个：① 简短双字拼（哔哩哔哩 bilibili、知乎 zhihu、豆瓣 douban 式，追求双拼声调节奏与叠音美感）；② 全拼（小红书 xiaohongshu 式，寓意完整直白）；③ 声母缩写或拼音+英文混搭（zlz、tao+bao+hub 式，短而有记忆点）
 - 每个 theme 为 pinyin 或 blend 的候选，meaning 必须包含用「」括起的中文原词，并说明为什么这个拼音好读好记（如声调顺口、叠音、无歧义拼读），例如：「知舟」zhizhou，双字全拼，齿音开头声调上扬，读一遍就能拼出来
+- 「」内的汉字必须优先用常用字（现代汉语常用 3500 字范围内的直觉），普通人看到拼音要能反推出汉字：木/舟/云/星/禾/悦/途 好，岑/蕨/飏/麓/隰/珩 这类生僻字不要；组词语义要自然（「木舟」「星河」好，「续夸」式牵强搭配不要）
 - 拼音自筛淘汰标准（不达标的直接不要输出）：x/q/zh/c/s 等易歧义声母连串（老外读不出，如 xiqizhi）；超过 4 个音节；含 iu/ui、in/ing、an/ang 等易混易错拼写；整体拼读有多种可能切分产生歧义的组合`;
 
 // ---------------- 拼音合法性校验（R124） ----------------
@@ -205,6 +207,27 @@ export function checkPinyinLabel(label: string): PinyinCheck {
   const risk = Math.min(...minimal.map((s) => pinyinQualityRisk(s)));
   if (risk >= PINYIN_RISK_DROP_THRESHOLD) return { ok: false };
   return { ok: true, ambiguous: minimal.length >= 2, risk };
+}
+
+// ---------------- 生僻字启发式（R182） ----------------
+// 拼音系候选的 meaning 「」内汉字应是普通人能由拼音反推的常用字。
+// 维护一份小型生僻字黑名单（命名场景中 LLM 高频产出、但远在常用 3500 字之外的
+// 雅字/地名用字/古字），命中只降 readability 不丢弃（启发式不可靠，宁放过不误杀）。
+const RARE_CJK_BLACKLIST = new Set<string>(
+  "岑蕨飏麓隰珩岫崧翀昶垚犇淼焱燊滢潆澍泠浥沚洄湮芃荇菡蘅芩荻莜菀蓁玥珉璟瑭霈翊珞彧赟旻嵘峤郴滁黔黟".split(""),
+);
+
+export const RARE_CHAR_PENALTY_PER_CHAR = 10;
+
+// 统计 meaning 中「」内出现的黑名单生僻字个数（每个命中字计一次，重复字不重复计）
+export function countRareQuotedChars(meaning: string): number {
+  const hits = new Set<string>();
+  const re = /「([^「」]{1,12})」/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(meaning)) !== null) {
+    for (const ch of m[1]) if (RARE_CJK_BLACKLIST.has(ch)) hits.add(ch);
+  }
+  return hits.size;
 }
 
 export interface AiUnderstanding {
@@ -441,6 +464,10 @@ async function generateOnce(
       if (!check.ok) continue;
       // 歧义切分扣 15 + 语感风险分（R142），叠加后从 readability 扣除
       readabilityPenalty = (check.ambiguous ? 15 : 0) + check.risk;
+    }
+    // R182：拼音系候选「」内命中生僻字黑名单，按字数从 readability 扣分（不丢弃）
+    if (theme === "pinyin" || theme === "blend") {
+      readabilityPenalty += countRareQuotedChars(meaning) * RARE_CHAR_PENALTY_PER_CHAR;
     }
     out.push({
       label,
