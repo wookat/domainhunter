@@ -22,7 +22,7 @@ const KNOWN_TLDS = new Set([
   "com", "net", "org", "cn", "io", "ai", "app", "dev", "co", "cc", "tv", "xyz", "me", "info", "biz", "top", "vip", "pro", "site",
   "online", "store", "shop", "tech", "cloud", "space", "fun", "art", "design", "studio", "agency", "digital", "live", "life", "world", "today", "media", "center", "works",
   "news", "blog", "wiki", "link", "club", "team", "work", "zone", "run", "games", "game", "gg", "so", "sh", "im", "fm", "am", "to", "ly", "is",
-  "us", "uk", "de", "jp", "hk", "tw", "sg", "eu", "in", "ca", "one", "page", "email", "group", "network", "software", "systems", "tools", "chat", "bot", "codes", "company", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "bio", "ink", "moe", "lol",
+  "us", "uk", "de", "jp", "hk", "tw", "sg", "eu", "in", "ca", "one", "page", "email", "group", "network", "software", "systems", "tools", "chat", "bot", "codes", "company", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "bio", "ink", "moe", "lol", "cool", "red", "best", "wtf", "pizza", "bar", "cafe", "money", "gold",
 ]);
 
 /** 输入看起来已经是现成名字/域名时，提供免 AI 额度的直接核验 */
@@ -553,6 +553,90 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个家具/家居品牌，寓意「一件陪你住十年的东西，名字也要耐看十年」；气质要温润、有材质感、经得起岁月；场景是新家开箱、朋友问「这沙发哪买的」和二手转卖页里都体面耐看。",
     en: "A furniture or home brand. The name should wear as well as a piece that lives with you for a decade; the vibe is warm, material-honest, built to age gracefully; it must look right at a housewarming, in \"where's this sofa from?\", and even on a resale listing.",
   },
+  {
+    slug: "crossfit",
+    labelZh: "CrossFit 综合体能",
+    labelEn: "CrossFit & functional fitness",
+    zh: "一个 CrossFit/综合体能馆品牌，寓意「一群人互相打气把自己练崩再练强」；气质要有汗味、有战意、有部落图腾感；场景是教练开场口号、队服背印和「周六来 X 玩一场」的会员邀约里都喊得响。",
+    en: "A CrossFit box or functional fitness gym. The name should carry the tribe that cheers each other through brutal workouts; the vibe is sweaty, battle-ready, totem-like; it must roar in a coach's class opener, print well on team shirts, and carry \"come try a class at X on Saturday\".",
+  },
+  {
+    slug: "language",
+    labelZh: "语言学习",
+    labelEn: "Language learning",
+    zh: "一个语言学习产品，寓意「每天五分钟，离另一种语言更近一点」；气质要轻盈、游戏感、跨语言都好念；场景是打卡分享、应用商店搜索和「我在用 X 学日语」的朋友转述里都轻松上口。",
+    en: "A language learning product. The name should make \"five minutes a day\" feel believable; the vibe is light, playful, pronounceable in any native tongue; it must shine in streak shares, app-store search, and \"I'm learning Japanese on X\".",
+  },
+  {
+    slug: "resume",
+    labelZh: "简历求职",
+    labelEn: "Resume & job search",
+    zh: "一个简历/求职工具，寓意「用了它，面试敲门更有底气」；气质要专业、给人信心、敢被 HR 看见；场景是简历页脚署名、深夜投递和「我靠 X 拿到 offer」的转述里都体面加分。",
+    en: "A resume builder or job-search tool. The name should make users walk into interviews taller; the vibe is professional, confidence-giving, proud to be seen by recruiters; it must look right in a resume footer, at a midnight application, and in \"I landed the offer with X\".",
+  },
+  {
+    slug: "events",
+    labelZh: "活动策划",
+    labelEn: "Event planning",
+    zh: "一个活动策划公司，寓意「不容有失的时刻，交给我准没错」；气质要专业稳当、又藏着创意火花；场景是比稿 PPT 封面、场地背板署名和「年会找 X 办准没错」的转介绍里都撑得住场。",
+    en: "An event planning company. The name should promise a moment that cannot fail is in good hands; the vibe is dependable with a creative spark; it must hold up on a pitch-deck cover, a venue backdrop credit, and \"for the gala, just call X\".",
+  },
+  {
+    slug: "moving",
+    labelZh: "搬家服务",
+    labelEn: "Moving services",
+    zh: "一个搬家服务品牌，寓意「全部家当交给它，稳稳当当搬进新生活」；气质要可靠、利落、有人情味；场景是电话报价自报家门、货车车身和「搬家就找 X」的邻里推荐里都一听就放心。",
+    en: "A moving services brand. The name should promise everything you own arrives safely in the new life; the vibe is reliable, brisk, human; it must land in one hearing on a quote call, read at a glance on the truck, and carry \"just use X\" between neighbors.",
+  },
+  {
+    slug: "aquarium",
+    labelZh: "水族爬宠",
+    labelEn: "Aquariums & reptiles",
+    zh: "一个水族/爬宠品牌，寓意「一缸一世界的静观生态美学」；气质要静谧、通透、专业懂行；场景是开缸分享帖标题、器材包装和爬友圈的口碑安利里都显得内行。",
+    en: "An aquarium or reptile brand. The name should hold a world in a glass box; the vibe is still, crystal-clear, quietly expert; it must read right titling a tank-journal post, on gear packaging, and in word of mouth among serious keepers.",
+  },
+  {
+    slug: "indiehacker",
+    labelZh: "独立开发者",
+    labelEn: "Indie hacker",
+    zh: "一款独立开发者做的效率小工具，寓意「一个人也能做出很多人爱用的产品」；气质要轻巧、真诚、有极客味；场景是 Product Hunt 发布页、X 帖子和「我做了 X」的自我介绍里都顺口好记。",
+    en: "A productivity tool built by an indie hacker. The name should feel like one person shipping something many people love; the vibe is light, sincere, quietly geeky; it must roll off the tongue on a Product Hunt launch, in an X post, and in \"I built X\".",
+  },
+  {
+    slug: "petsupplies",
+    labelZh: "宠物用品电商",
+    labelEn: "Pet supplies store",
+    zh: "一个宠物用品电商品牌，寓意「毛孩子的每一餐每一个玩具都值得认真挑」；气质要温暖、可信、让人愿意月月回购；场景是电商搜索结果、快递箱面单和铲屎官群里的安利都好认好念。",
+    en: "A pet supplies e-commerce brand. The name should promise every meal and toy for the furry kid is carefully chosen; the vibe is warm, trustworthy, worth reordering monthly; it must stand out in marketplace search, on the shipping box, and in pet-owner group chats.",
+  },
+  {
+    slug: "preschool",
+    labelZh: "儿童早教",
+    labelEn: "Early education",
+    zh: "一个儿童早教与启蒙品牌，寓意「像种子发芽一样，陪孩子一点点长大」；气质要温暖专业、让家长放心、让孩子喜欢；场景是妈妈群转介绍、报名页和孩子喊「我要玩 X」时都成立。",
+    en: "An early childhood education brand. The name should feel like a seed sprouting — growing with the child day by day; the vibe is warm yet expert, reassuring to parents, delightful to kids; it must work in parent group referrals, on the enrollment page, and when a toddler shouts \"I want to play X\".",
+  },
+  {
+    slug: "travelshoot",
+    labelZh: "旅拍摄影",
+    labelEn: "Travel photography",
+    zh: "一个旅拍摄影品牌，寓意「把此刻在此地的时光定格带走」；气质要浪漫、通透、有远方感又显专业；场景是照片水印、小红书定位标签和评论区「摄影师是谁求 @」里都好记好搜。",
+    en: "A travel photography brand. The name should promise this moment, in this place, kept forever; the vibe is romantic, luminous, wanderlust-tinged yet professional; it must read well as a photo watermark, in a location tag, and in \"who's the photographer? tag them!\" comments.",
+  },
+  {
+    slug: "forwarder",
+    labelZh: "跨境物流",
+    labelEn: "Cross-border logistics",
+    zh: "一个跨境物流货代品牌，寓意「货一定安全准时到达世界任何角落」；气质要稳、专业、有全球网络感；场景是卖家询价微信、海外代理英文邮件和报价单抬头上都可信顺口。",
+    en: "A cross-border freight forwarding brand. The name should promise cargo arrives safely and on time anywhere in the world; the vibe is steady, professional, globally networked; it must sound credible in a seller's quote request, an overseas agent's email, and on the rate card header.",
+  },
+  {
+    slug: "mcn",
+    labelZh: "短视频 MCN",
+    labelEn: "Short-video MCN",
+    zh: "一家短视频 MCN 机构，寓意「一套能把达人做火的造星系统」；气质要有能量、正规、有内容宇宙感；场景是达人签约谈判、品牌方报价单和平台机构榜单里都拿得出手。",
+    en: "A short-video MCN agency. The name should feel like a star-making system that turns creators into hits; the vibe is energetic, legitimate, universe-scale; it must impress in creator signing talks, on a brand's rate card, and on platform agency leaderboards.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
@@ -653,7 +737,7 @@ function ChipPrice({ domain }: { domain: string }) {
 const QUICK_EXTRA_TLDS = ["com", "io", "ai", "app", "dev", "co", "net", "me"];
 
 /** 「查更多后缀」按钮覆盖的第二批后缀（同样走 /api/search，0 AI 额度） */
-const QUICK_MORE_TLDS = ["org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "page", "bio", "ink", "moe", "lol", "uk"];
+const QUICK_MORE_TLDS = ["org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "page", "bio", "ink", "moe", "lol", "uk", "fm", "one", "cool", "red", "today", "best", "wtf", "pizza", "bar", "cafe", "money", "gold"];
 
 /** 快速核验的 chip（可注册/已注册）都可收藏到候选清单 */
 function domainToRow(domain: string, status: Row["status"] = "available", expiresAt?: string): Row {

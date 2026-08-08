@@ -2184,6 +2184,366 @@ const GUIDES = {
       ],
     },
   },
+  fm: {
+    tld: "fm",
+    zh: {
+      title: ".fm 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".fm 自带电台与音频基因，是播客、音乐与音频产品的标志性后缀。查看 .fm 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fm 域名。",
+      intro:
+        ".fm 本是密克罗尼西亚联邦的国别域名，却因为与调频广播（FM radio）同名被音频行业彻底认领：播客平台、音乐电台、音频社区大量使用 .fm，Anchor（anchor.fm）、Last.fm 这些标杆让它成了「声音产品」的身份标签。用户看到 name.fm 会本能地联想到「能听的东西」，行业契合度在 ccTLD 借义用法里数一数二。它只有两个字符，域名整体短而好念，很多在 .com 下无货的音乐词、节目名在 .fm 下仍可注册。代价是价格明显偏高——注册与续费都在 $88 上下（约 ¥632/年），没有低价钩子但长期成本不低，适合认真经营的音频品牌而非试水项目。如果你做播客、电台、音乐工具或语音社区，.fm 比任何解释都省事：后缀本身就在替你说「我是做声音的」。命名上节目名、频道名直接上最自然，还能玩 domain hack（如 relay.fm 式的短词组合）。",
+      bestFor: ["播客节目与网络", "音乐电台与流媒体", "音频工具与语音社区", "声音内容创作者"],
+      namingTips: [
+        "节目名/频道名直接上：name.fm 一眼可听，无需解释",
+        "短词 + .fm 是经典组合（relay、anchor、last 类词根）",
+        "注册续费均约 $88/年，成本不低，适合长期经营的音频品牌",
+        "非音频业务慎用：电台联想太强，气质错位",
+      ],
+    },
+    en: {
+      title: ".fm Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".fm carries built-in radio and audio DNA — the signature suffix for podcasts, music and voice products. See live pricing and naming advice, then hunt available .fm names with AI.",
+      intro:
+        ".fm is technically the country domain of the Federated States of Micronesia, but its FM-radio association let the audio industry claim it outright: podcast platforms, music stations and audio communities live on .fm, and landmarks like Anchor (anchor.fm) and Last.fm made it the identity badge of things you listen to. Visitors see name.fm and instinctively expect audio — among repurposed ccTLDs, few fit their industry this cleanly. At two characters it keeps domains short and speakable, and plenty of music words and show names long gone on .com are still open here. The trade-off is price: registration and renewal both run around $88/yr — no teaser games, but real long-term cost, which suits committed audio brands rather than throwaway experiments. If you're building a podcast, station, music tool or voice community, .fm says \"we make sound\" before you say a word. Show and channel names work verbatim, and short-word domain hacks (relay.fm-style) are a classic.",
+      bestFor: ["Podcasts & podcast networks", "Music stations & streaming", "Audio tools & voice communities", "Sound-first creators"],
+      namingTips: [
+        "Use the show/channel name verbatim — name.fm reads as audio instantly",
+        "Short word + .fm is the classic combo (relay, anchor, last)",
+        "~$88/yr to register and renew — budget for a committed audio brand",
+        "Avoid for non-audio businesses: the radio association is too strong",
+      ],
+    },
+  },
+  one: {
+    tld: "one",
+    zh: {
+      title: ".one 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".one 寓意「第一、唯一、合而为一」，短而好记，适合个人品牌与一体化产品。查看 .one 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .one 域名。",
+      intro:
+        ".one 是一个真正的英文单词后缀：「第一」「唯一」「合而为一」的含义让它天然适合个人品牌、旗舰产品与一体化平台——name.one 读出来就是一句口号（the one）。它只有三个字符，整体域名短而干净，还能玩语义组合：number.one、all-in.one 式的读法自带记忆点。云服务商 One.com 推出的这个后缀在欧洲有不少真实用例，主流浏览器与邮件客户端识别无障碍。价格是亮点：首年约 $7（约 ¥48），续费约 $20/年（约 ¥145）——首年便宜、续费也不算陷阱，个人试水与长期持有都负担得起。库存极好：常见词、人名、品牌词大多可注册。注意两点：一是 .one 认知度仍不如 .com/.io，面向大众的正式业务建议同时持有主流后缀；二是语义强依赖英文语感，纯中文受众未必能立刻领会「one」的巧思。命名上「品牌词/人名 + .one」最顺（如 kai.one），强调唯一性、一体化的产品用它加分。",
+      bestFor: ["个人品牌与个人主页", "一体化平台与旗舰产品", "会员与身份类服务", "短域名爱好者"],
+      namingTips: [
+        "品牌词/人名直接上：name.one 读出来就是「the one」",
+        "可玩语义组合：number.one、all-in.one 式自带记忆点",
+        "首年约 $7、续费约 $20/年，长期持有无压力",
+        "面向大众的正式业务建议同时持有主流后缀",
+      ],
+    },
+    en: {
+      title: ".one Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".one means first, only, all-in-one — short and memorable for personal brands and unified products. See live pricing and naming advice, then hunt available .one names with AI.",
+      intro:
+        ".one is a real English word as a suffix, and the meanings — first, the only, all-in-one — make it a natural fit for personal brands, flagship products and unified platforms: name.one reads out loud as a slogan (\"the one\"). At three characters the full domain stays short and clean, and semantic plays like number.one or all-in.one carry built-in memorability. Launched by cloud provider One.com, it has solid real-world adoption in Europe and is recognized without issue by browsers and mail clients. Pricing is a genuine strength: about $7 for the first year and around $20/yr to renew — cheap to try, honest to keep. Inventory is excellent: common words, first names and brand words are largely open. Two cautions: recognition still trails .com/.io, so mainstream-facing businesses should hold a major TLD alongside; and the wordplay depends on English fluency — audiences who don't parse \"one\" miss the trick. Brand word or first name + .one is the smoothest pattern (kai.one), and products selling unity or singularity get a free boost.",
+      bestFor: ["Personal brands & profile pages", "All-in-one platforms & flagship products", "Membership & identity services", "Short-domain lovers"],
+      namingTips: [
+        "Brand word or first name verbatim: name.one reads as \"the one\"",
+        "Semantic plays work: number.one, all-in.one style",
+        "~$7 first year, ~$20/yr renewal — cheap to try, honest to keep",
+        "Mainstream businesses should hold a major TLD alongside",
+      ],
+    },
+  },
+  cool: {
+    tld: "cool",
+    zh: {
+      title: ".cool 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".cool 自带态度与年轻感，适合潮流品牌、创意工作室与个性化项目。查看 .cool 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .cool 域名。",
+      intro:
+        ".cool 是把「酷」直接写进域名的后缀，由 Identity Digital 运营。它是态度最鲜明的通用词后缀之一：潮流品牌、创意工作室、设计师作品集、青年向社区用 name.cool，域名本身就在替你定调——「我们不走寻常路」。整域读出来是一句自我评价（something is cool），口头传播时自带笑点与记忆点。首年注册常见约 $6（约 ¥41）的引流价，续费约 $37/年（约 ¥263），是典型的「首年便宜、续费回归」定价，长期成本要算清楚。库存极好：品牌词、口头禅、形容词组合基本随便挑。注意两点：一是「酷」的定位是把双刃剑，金融、法律、医疗等需要严肃感的业务用它会损伤可信度；二是刻意扮酷容易翻车——名字本身要撑得起这个后缀，太平庸的词配 .cool 反而尴尬。命名上「短品牌词/态度词 + .cool」最出彩（如 stay.cool、very.cool 式），潮牌与创意项目直接上品牌名也顺。",
+      bestFor: ["潮流品牌与街头文化", "创意工作室与作品集", "青年社区与活动企划", "个性化周边与副业项目"],
+      namingTips: [
+        "短品牌词/态度词 + .cool 最出彩：stay.cool、very.cool 式",
+        "首年约 $6、续费约 $37/年，长期成本要算清",
+        "名字要撑得起「酷」：平庸词配 .cool 反而尴尬",
+        "严肃行业（金融/法律/医疗）别碰，气质冲突",
+      ],
+    },
+    en: {
+      title: ".cool Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".cool wears its attitude in the domain — for streetwear brands, creative studios and personality-first projects. See live pricing and naming advice, then hunt available .cool names with AI.",
+      intro:
+        ".cool puts the attitude straight into the address, run by Identity Digital. It's one of the most opinionated dictionary-word suffixes: streetwear brands, creative studios, designer portfolios and youth communities use name.cool to set the tone before the page even loads — \"we don't do ordinary.\" Read aloud, the whole domain is a self-review (something is cool), which makes word-of-mouth genuinely fun. Year one typically costs about $6 with renewal around $37/yr — the classic cheap-teaser-then-regular-price pattern, so budget the long game. Inventory is superb: brand words, catchphrases and adjective combos are wide open. Two cautions: coolness cuts both ways — finance, legal or healthcare on .cool undercuts credibility; and trying too hard backfires — the name itself has to earn the suffix, because a bland word + .cool reads as awkward, not edgy. Short brand or attitude words shine brightest (stay.cool, very.cool-style), and streetwear or creative projects can drop their brand name in verbatim.",
+      bestFor: ["Streetwear & culture brands", "Creative studios & portfolios", "Youth communities & event projects", "Personality-first side projects"],
+      namingTips: [
+        "Short attitude words shine: stay.cool, very.cool style",
+        "~$6 first year, ~$37/yr renewal — budget the long game",
+        "The name must earn the suffix — bland word + .cool reads awkward",
+        "Skip it for serious industries (finance, legal, healthcare)",
+      ],
+    },
+  },
+  red: {
+    tld: "red",
+    zh: {
+      title: ".red 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".red 以颜色入名，红色寓意热情、喜庆与醒目，适合品牌色为红的产品与中文场景。查看 .red 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .red 域名。",
+      intro:
+        ".red 是把颜色写进域名的后缀（同系列还有 .blue/.pink），最早由 Afilias 推出、现归 Identity Digital 运营。红色的联想跨文化通吃：热情、能量、醒目，在中文语境里更叠加了喜庆、走红、网红的意味——「红」本身就是流量词，面向中文用户的品牌用 .red 有天然的解释空间。适合品牌主色是红色的产品、婚庆与节庆业务、美妆与潮流品牌，以及想玩「XX红了」梗的内容项目。注册约 $8（约 ¥59），续费约 $19/年（约 ¥137）——续费不到注册价的三倍，在新后缀里算定价温和的，长期持有无压力。库存极好：颜色词、品牌词、中文拼音大多可注册。注意两点：一是 .red 认知度一般，用户第一次见可能需要适应，重要业务建议搭配主流后缀；二是红色联想虽广，但与品牌无关时就只是装饰——后缀要服务品牌故事，不要为了颜色而颜色。命名上「品牌词 + .red」直接呼应品牌色最顺，中文项目可用拼音玩「走红」寓意（如 hong、huo 类词根）。",
+      bestFor: ["品牌色为红的产品", "婚庆节庆与礼品业务", "美妆潮流与消费品牌", "中文「走红」概念项目"],
+      namingTips: [
+        "品牌主色是红时最顺：name.red 直接呼应视觉识别",
+        "中文场景可玩「走红/喜庆」寓意，拼音词根加分",
+        "注册约 $8、续费约 $19/年，新后缀里定价温和",
+        "颜色与品牌无关时别硬凑，后缀要服务品牌故事",
+      ],
+    },
+    en: {
+      title: ".red Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".red puts a color in the address — passion, celebration and visibility, with extra meaning for Chinese audiences. See live pricing and naming advice, then hunt available .red names with AI.",
+      intro:
+        ".red writes a color into the domain (siblings: .blue and .pink), originally launched by Afilias and now run by Identity Digital. Red's associations travel across cultures — passion, energy, standing out — and in Chinese contexts they compound: 红 (red) also means festive, trending, going viral, so brands facing Chinese audiences get a built-in story. It suits products whose brand color is red, wedding and festival businesses, beauty and fashion labels, and content projects playing on the \"going viral\" idea. Registration runs about $8 with renewal around $19/yr — renewal less than three times the teaser, which counts as gentle pricing among new TLDs, so holding long-term is painless. Inventory is excellent: color words, brand words and pinyin are largely open. Two cautions: recognition is middling, so first-time visitors may need a beat — pair important businesses with a mainstream TLD; and if red has nothing to do with your brand, the color is mere decoration — the suffix should serve the brand story, not the other way around. Brand word + .red echoing your visual identity is the smoothest pattern; Chinese projects can lean on pinyin roots (hong, huo) for the viral connotation.",
+      bestFor: ["Brands whose color is red", "Wedding, festival & gift businesses", "Beauty & fashion labels", "Chinese \"going viral\" concepts"],
+      namingTips: [
+        "Best when red is your brand color: name.red echoes the identity",
+        "Chinese contexts add festive/viral meaning — pinyin roots work",
+        "~$8 to register, ~$19/yr renewal — gentle pricing for a new TLD",
+        "Don't force the color if it's unrelated to the brand",
+      ],
+    },
+  },
+  today: {
+    tld: "today",
+    zh: {
+      title: ".today 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".today 自带时效感与行动力，适合资讯站、日更内容与「今天就开始」的产品。查看 .today 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .today 域名。",
+      intro:
+        ".today 是时效感最强的单词后缀，由 Identity Digital 运营，USA Today 的 usa.today 更给它做了顶级背书。它有两层好用的语义：一是「今日资讯」——新闻站、行业日报、天气与数据看板用 name.today 一眼可懂；二是「今天就行动」——健身、学习、习惯养成类产品用它自带号召力（start.today 式读法就是一句广告语）。首年注册常见约 $3（约 ¥19）的引流价，续费约 $23/年（约 ¥167），首年几乎白送、续费回归常价，试项目的成本可以忽略。库存极好：行业词、城市名、动词短语基本随便挑。注意两点：一是时效感是承诺——挂着 .today 的站点若内容长期不更新，落差会伤害信任，日更能力跟不上就别选它；二是认知度一般，正式业务建议搭配主流后缀。命名上「行业/城市 + .today」做资讯最顺（如 crypto.today 式），「动词 + .today」做行动号召最出彩，读出来就是口号。",
+      bestFor: ["资讯站与行业日报", "数据看板与天气服务", "习惯养成与自我提升产品", "「今天就开始」型营销页"],
+      namingTips: [
+        "行业/城市 + .today 做资讯一眼可懂：crypto.today 式",
+        "动词 + .today 自带号召力：start.today 读出来就是广告语",
+        "首年约 $3、续费约 $23/年，试水成本忽略不计",
+        "时效感是承诺：内容长期不更新会伤害信任",
+      ],
+    },
+    en: {
+      title: ".today Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".today carries urgency and freshness — for news sites, daily content and start-now products. See live pricing and naming advice, then hunt available .today names with AI.",
+      intro:
+        ".today is the most time-charged dictionary suffix, run by Identity Digital — and usa.today (USA Today) gave it a landmark endorsement at the highest level. It works on two frequencies: \"today's news\" — news sites, industry dailies, weather and data dashboards read instantly on name.today; and \"act today\" — fitness, learning and habit products get a built-in call to action (start.today reads out loud as ad copy). Year one typically costs about $3 with renewal around $23/yr — practically free to launch, regular price to keep, so experiments cost nothing. Inventory is superb: industry words, city names and verb phrases are wide open. Two cautions: freshness is a promise — a .today site that visibly stopped updating breaks trust harder than a neutral domain, so skip it if you can't sustain the cadence; and recognition is middling, so pair serious businesses with a mainstream TLD. Industry/city + .today is the natural news pattern (crypto.today-style), while verb + .today makes the sharpest call to action — the domain is the slogan.",
+      bestFor: ["News sites & industry dailies", "Data dashboards & weather services", "Habit & self-improvement products", "Start-now marketing pages"],
+      namingTips: [
+        "Industry/city + .today reads as news instantly: crypto.today",
+        "Verb + .today is a built-in call to action: start.today",
+        "~$3 first year, ~$23/yr renewal — experiments cost nothing",
+        "Freshness is a promise — don't pick it if you can't keep updating",
+      ],
+    },
+  },
+  best: {
+    tld: "best",
+    zh: {
+      title: ".best 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".best 把「最佳」写进域名，适合评测榜单、精选推荐与主打品质的品牌。查看 .best 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .best 域名。",
+      intro:
+        ".best 把最高级形容词直接做成了后缀：「最好的」——评测与榜单站、精选推荐、比价导购用 name.best 一眼可懂，域名本身就是价值主张（the best X）。主打品质的品牌、作品集与个人主页用它也顺：读出来自带自信。首年注册常见约 $2（约 ¥12）的引流价，是全表最便宜的后缀之一，续费约 $19/年（约 ¥135）——首年几乎白送、长期成本也温和，试项目毫无压力。库存极好：品类词、行业词、品牌词基本随便挑，「XX.best」的好组合大量无主。注意三点：一是「最佳」是重承诺，内容撑不起排名与推荐的质量时反而显得浮夸；二是低价后缀有垃圾注册的历史包袱，部分邮件过滤器和用户会多一分戒心，重要业务建议搭配主流后缀；三是广告法语境下「最佳」类宣传在部分地区有合规讲究，商用文案注意边界。命名上「品类词 + .best」做榜单最顺（如 laptops.best 式），品牌词直接上也行——前提是你真敢称 best。",
+      bestFor: ["评测与榜单站", "精选推荐与比价导购", "主打品质的品牌", "个人作品集与简历页"],
+      namingTips: [
+        "品类词 + .best 做榜单一眼可懂：laptops.best 式",
+        "首年约 $2、续费约 $19/年，全表最便宜梯队",
+        "「最佳」是重承诺：内容质量撑不起就显得浮夸",
+        "重要业务搭配主流后缀，低价后缀有垃圾注册包袱",
+      ],
+    },
+    en: {
+      title: ".best Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".best puts a superlative in the address — for review sites, curated picks and quality-first brands. See live pricing and naming advice, then hunt available .best names with AI.",
+      intro:
+        ".best turns a superlative into a suffix: review and ranking sites, curated recommendation lists and price-comparison guides read instantly on name.best — the domain is the value proposition (the best X). Quality-first brands, portfolios and personal pages wear it well too: read aloud, it's pure confidence. Year one typically costs about $2 — among the cheapest anywhere — with renewal around $19/yr, so both launching and holding stay painless. Inventory is superb: category words, industry words and brand words are wide open, with plenty of strong \"X.best\" combos unclaimed. Three cautions: \"best\" is a heavy promise — thin content under a superlative domain reads as puffery, not authority; bargain suffixes carry spam-registration baggage, so some mail filters and users add a grain of caution — pair serious businesses with a mainstream TLD; and superlative claims in commercial copy face advertising-law limits in some jurisdictions, so mind the marketing side. Category word + .best is the natural ranking pattern (laptops.best-style); a straight brand word works too — if you genuinely dare to claim it.",
+      bestFor: ["Review & ranking sites", "Curated picks & buying guides", "Quality-first brands", "Portfolios & personal pages"],
+      namingTips: [
+        "Category word + .best reads as a ranking instantly: laptops.best",
+        "~$2 first year, ~$19/yr renewal — cheapest tier on the board",
+        "\"Best\" is a heavy promise — thin content reads as puffery",
+        "Pair serious businesses with a mainstream TLD; mind ad-law limits on superlatives",
+      ],
+    },
+  },
+  wtf: {
+    tld: "wtf",
+    zh: {
+      title: ".wtf 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".wtf 自带惊叹与吐槽气质，适合梗文化项目、猎奇内容与敢玩的品牌营销。查看 .wtf 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .wtf 域名。",
+      intro:
+        ".wtf 把互联网最经典的惊叹语直接做成了后缀——它天生自带情绪：惊讶、吐槽、忍俊不禁。梗文化项目、猎奇合集、匿名吐槽墙、恶搞活动页用 name.wtf 一眼入戏；敢玩的品牌拿它做营销 campaign（比如「这价格.wtf」式的落地页）传播力极强。Identity Digital 运营，首年注册常见约 $3（约 ¥19）的引流价，续费约 $29/年（约 ¥211）——试个梗项目几乎零成本，长期持有也不贵。库存极好：短词、口号词、品牌词大量无主，好组合随便挑。代价要想清楚：wtf 是粗俗缩写，正式企业、金融、教育、政府相关场景绝对不合适，部分企业内网和家长过滤器可能直接拦截；它的价值恰恰在「不正经」，用对场景是记忆点，用错场景是事故。命名上「让人惊叹的事物 + .wtf」最出效果（如 prices.wtf、physics.wtf 式），短促、口语化、读出来像一句吐槽是第一原则。",
+      bestFor: ["梗文化与恶搞项目", "猎奇内容与合集站", "敢玩的品牌营销活动", "匿名吐槽与趣味社区"],
+      namingTips: [
+        "「惊叹对象 + .wtf」读出来就是一句吐槽：prices.wtf 式",
+        "首年约 $3、续费约 $29/年，试梗项目几乎零成本",
+        "正式企业与金融教育场景绝对回避，粗俗缩写有拦截风险",
+        "短促口语化第一，越像一句真实感叹越有传播力",
+      ],
+    },
+    en: {
+      title: ".wtf Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".wtf carries built-in shock value — for meme projects, curiosity content and brands bold enough to play. See live pricing and naming advice, then hunt available .wtf names with AI.",
+      intro:
+        ".wtf turns the internet's most famous exclamation into a suffix — it ships with emotion built in: surprise, snark, disbelief. Meme projects, curiosity collections, anonymous rant walls and parody campaign pages read instantly on name.wtf, and bold brands use it for marketing stunts (a \"these-prices.wtf\" landing page spreads itself). Operated by Identity Digital, first-year pricing is often around $3 with renewal near $29/yr — a meme experiment costs almost nothing and holding long-term stays cheap. Inventory is superb: short words, catchphrases and brand words are wide open. Know the trade-off: wtf is a profane abbreviation — corporate, finance, education and government contexts are out of the question, and some workplace networks and parental filters may block it outright. Its value lies precisely in being irreverent: the right context makes it unforgettable, the wrong one makes it an incident. The winning pattern is \"astonishing thing + .wtf\" (prices.wtf, physics.wtf-style); keep it short, spoken-language casual, and sounding like a genuine exclamation.",
+      bestFor: ["Meme & parody projects", "Curiosity content & collections", "Bold brand marketing stunts", "Rant walls & playful communities"],
+      namingTips: [
+        "Astonishing thing + .wtf reads as a genuine exclamation: prices.wtf",
+        "~$3 first year, ~$29/yr renewal — meme experiments cost nothing",
+        "Never for corporate/finance/education — profanity gets filtered",
+        "Short and conversational wins; the more it sounds spoken, the better it spreads",
+      ],
+    },
+  },
+  pizza: {
+    tld: "pizza",
+    zh: {
+      title: ".pizza 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".pizza 是披萨店与美食品牌的行业专属后缀，域名即菜单。查看 .pizza 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .pizza 域名。",
+      intro:
+        ".pizza 是最直白的行业后缀之一：披萨店、连锁餐饮、外卖品牌用 name.pizza，域名读出来就是招牌——店名 + 卖什么，一个不落。独立披萨店抢不到 name.com 时，name.pizza 反而更短更好记；美食博主、评测榜单（best.pizza 式）、配方站用它也顺理成章。它还意外地适合科技圈玩梗：不少开发者拿 .pizza 做团队内部工具或趣味项目，「代码与披萨」的梗自带亲切感。Identity Digital 运营，注册约 $11（约 ¥78），续费约 $52/年（约 ¥374）——行业后缀的典型定价，对实体店一年一顿外卖的成本不算负担，但纯玩票项目要掂量续费。库存极好：城市名、口味词、店名组合基本随便注册。注意两点：一是行业绑定极强，业务扩展到披萨之外就不合身了；二是主域名之外建议同时持有 .com 做跳转，方便口头传播时兜底。命名上「店名/城市 + .pizza」最自然（如 tonys.pizza、brooklyn.pizza 式），短店名直接上，读出来就是完整招牌。",
+      bestFor: ["披萨店与连锁餐饮", "外卖与本地美食品牌", "美食评测与榜单站", "开发者趣味项目"],
+      namingTips: [
+        "「店名/城市 + .pizza」读出来就是完整招牌：tonys.pizza 式",
+        "注册约 $11、续费约 $52/年，实体店成本可忽略",
+        "行业绑定极强：业务超出披萨范围就不合身",
+        "建议同时持有 .com 做跳转，口头传播兜底",
+      ],
+    },
+    en: {
+      title: ".pizza Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".pizza is the industry TLD where the domain is the menu — for pizzerias, food brands and delivery. See live pricing and naming advice, then hunt available .pizza names with AI.",
+      intro:
+        ".pizza is one of the most literal industry suffixes: pizzerias, restaurant chains and delivery brands on name.pizza read as a complete storefront sign — the name and what you sell in one breath. When an independent pizzeria can't get name.com, name.pizza is often shorter and more memorable; food bloggers, ranking sites (best.pizza-style) and recipe hubs fit naturally too. It also has a surprising second life in tech: developers grab .pizza for internal tools and playful side projects, riding the timeless code-and-pizza connection. Operated by Identity Digital at typical industry-TLD pricing — about $11 to register, $52/yr to renew — trivial for a real restaurant, worth weighing for a pure joke project. Inventory is superb: city names, flavor words and shop-name combos are wide open. Two cautions: the industry binding is total — expand beyond pizza and the domain no longer fits; and keep a matching .com redirect as a spoken-word fallback. The natural pattern is shop or city + .pizza (tonys.pizza, brooklyn.pizza) — a short shop name alone reads as the full sign.",
+      bestFor: ["Pizzerias & restaurant chains", "Delivery & local food brands", "Food review & ranking sites", "Playful developer projects"],
+      namingTips: [
+        "Shop/city + .pizza reads as a complete storefront sign: tonys.pizza",
+        "About $11 to register, $52/yr to renew — trivial for a real restaurant",
+        "Total industry binding: expand beyond pizza and it stops fitting",
+        "Keep a matching .com redirect as a spoken-word fallback",
+      ],
+    },
+  },
+  bar: {
+    tld: "bar",
+    zh: {
+      title: ".bar 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".bar 适合酒吧、餐饮夜生活品牌，也被开发者玩出工具站气质。查看 .bar 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .bar 域名。",
+      intro:
+        ".bar 一词两面：本义是酒吧——鸡尾酒吧、清吧、livehouse、夜生活品牌用 name.bar 招牌感十足，海报与霓虹灯上「XX.bar」就是完整店名；引申义是「条/栏」——开发者拿它做工具站也很顺（searchbar、statusbar 式的联想），甚至法律行业还有 bar（律师资格）的双关。Team Internet（原 CentralNic）系运营，首年注册常见约 $3（约 ¥19）的引流价，续费约 $52/年（约 ¥374）——首年便宜续费跳档明显，按续费价核算预算是必修课。库存很好：酒吧类好名、短词、城市词大量无主。注意三点：一是 .bar 注册局保留与溢价词较多，部分好词 RDAP 查询显示未注册但实际不可注册或要溢价，下单前以注册商实时报价为准；二是夜生活场景口头传播多，名字务必好读好拼；三是非餐饮/工具场景用 .bar 语义模糊，不如行业更贴的后缀。命名上「店名/情绪词 + .bar」最自然（如 luna.bar、mojito.bar 式），短促上口、霓虹灯上好看是第一原则。",
+      bestFor: ["酒吧与夜生活品牌", "餐饮与烘焙店（能量棒/甜品吧）", "开发者工具站（bar 双关）", "城市生活指南"],
+      namingTips: [
+        "「店名/情绪词 + .bar」霓虹灯上就是招牌：luna.bar 式",
+        "首年约 $3、续费约 $52/年，按续费价核算预算",
+        "保留与溢价词多：下单前以注册商实时报价为准",
+        "夜生活靠口头传播，名字务必好读好拼",
+      ],
+    },
+    en: {
+      title: ".bar Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".bar suits bars and nightlife brands, with a developer-tool double meaning on the side. See live pricing and naming advice, then hunt available .bar names with AI.",
+      intro:
+        ".bar cuts two ways. The literal sense is the venue: cocktail bars, lounges, live houses and nightlife brands on name.bar carry instant signboard energy — \"NAME.bar\" on a poster or in neon is the complete brand. The extended sense is the UI element: developers ride the searchbar/statusbar association for tool sites, and lawyers even get a bar-exam pun for free. Operated in the Team Internet (formerly CentralNic) family, first-year promos often run around $3 while renewal jumps to about $52/yr — budget on the renewal price, not the promo. Inventory is strong: bar-worthy names, short words and city words are wide open. Three cautions: the .bar registry holds back and premium-prices many good words — some names look unregistered in RDAP but aren't actually available at base price, so confirm with a registrar's live quote before committing; nightlife brands travel by word of mouth, so the name must be easy to say and spell; and outside venues or tools the semantics blur — a tighter industry TLD may serve better. The natural pattern is venue or mood word + .bar (luna.bar, mojito.bar) — short, punchy, and good-looking in neon.",
+      bestFor: ["Bars & nightlife brands", "Cafés, dessert & snack bars", "Developer tool sites (the UI pun)", "City nightlife guides"],
+      namingTips: [
+        "Venue/mood word + .bar is the sign itself: luna.bar",
+        "~$3 first year but ~$52/yr renewal — budget on the renewal",
+        "Many reserved/premium words: confirm registrar's live quote first",
+        "Nightlife travels by word of mouth — keep it easy to say and spell",
+      ],
+    },
+  },
+  cafe: {
+    tld: "cafe",
+    zh: {
+      title: ".cafe 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".cafe 是咖啡馆与休闲空间的行业后缀，也适合社区型线上聚集地。查看 .cafe 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .cafe 域名。",
+      intro:
+        ".cafe 给咖啡馆量身定做：独立咖啡店、烘焙工作室、猫咖书咖用 name.cafe，域名和店招完全同构——菜单、预约页、外卖链接印上去毫无违和。它的气质还能外溢到线上：「cafe」在互联网语境里早就是「轻松聚集地」的代名词，读书会、语言角、开发者社区拿 name.cafe 做线上客厅，比 .com 更有温度。Identity Digital 运营，注册约 $5（约 ¥33），续费约 $42/年（约 ¥300）——首年友好，续费是行业后缀常规水平，对实体店成本可忽略。库存很好：店名、意象词、街区名组合命中率高。注意两点：一是与 .coffee 后缀分工——.cafe 指「场所与空间」，.coffee 指「咖啡本身」，卖豆子选 .coffee、开店选 .cafe 更贴；二是行业气质浓，严肃 B2B 或与「休闲聚集」无关的业务用它会显得错位。命名上「店名/意象词 + .cafe」最自然（如 corner.cafe、luna.cafe 式），读出来像一句「来我们店坐坐」的邀请是最好的效果。",
+      bestFor: ["独立咖啡馆与烘焙店", "猫咖书咖等主题空间", "线上社区与读书会", "本地生活方式品牌"],
+      namingTips: [
+        "「店名/意象词 + .cafe」就是店招：corner.cafe 式",
+        "注册约 $5、续费约 $42/年，实体店成本可忽略",
+        "卖豆子选 .coffee、开店选 .cafe，两个后缀分工明确",
+        "线上社区用它自带「轻松聚集地」气质，比 .com 更有温度",
+      ],
+    },
+    en: {
+      title: ".cafe Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".cafe is the industry TLD for coffee shops and cozy spaces — and for warm online gathering spots. See live pricing and naming advice, then hunt available .cafe names with AI.",
+      intro:
+        ".cafe is tailor-made for coffee shops: independent cafés, roastery studios, cat cafés and book bars on name.cafe make the domain and the shop sign one and the same — menus, booking pages and delivery links all read naturally. The vibe extends online too: in internet culture \"cafe\" has long meant a relaxed gathering place, so book clubs, language corners and developer communities use name.cafe as a virtual living room with more warmth than any .com. Operated by Identity Digital — about $5 to register, $42/yr to renew — friendly up front, standard industry-TLD renewal, negligible for a real shop. Inventory is strong: shop names, imagery words and neighborhood names hit at a high rate. Two things to note: the division of labor with .coffee — .cafe means the place, .coffee means the bean, so sell beans on .coffee and run a shop on .cafe; and the vibe is strongly casual — serious B2B or anything unrelated to relaxed gathering will feel misplaced. The natural pattern is shop or imagery word + .cafe (corner.cafe, luna.cafe) — the best names read like an invitation to come sit down.",
+      bestFor: ["Independent cafés & roasteries", "Cat cafés & themed spaces", "Online communities & book clubs", "Local lifestyle brands"],
+      namingTips: [
+        "Shop/imagery word + .cafe is the shop sign: corner.cafe",
+        "About $5 to register, $42/yr to renew — negligible for a real shop",
+        "Sell beans on .coffee, run the place on .cafe — clear division",
+        "Online communities get built-in warmth a .com can't offer",
+      ],
+    },
+  },
+  money: {
+    tld: "money",
+    zh: {
+      title: ".money 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".money 直白宣示金钱主题，适合理财内容、个人财务工具与加密金融项目。查看 .money 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .money 域名。",
+      intro:
+        ".money 是最直白的金钱后缀：理财博客与新闻站、预算与记账工具、比价与返现服务、加密钱包与 DeFi 项目用 name.money，主题一秒传达——smart.money、save.money 这样的组合读出来就是口号。相比 .finance 的机构正式感，.money 更口语、更贴近个人：面向普通人的财务内容与工具用它比 .finance 亲切得多。Identity Digital 运营，注册约 $11（约 ¥78），续费约 $28/年（约 ¥204）——续费在行业后缀里算温和，长期持有压力小。库存很好：动词、形容词、人群词组合大量无主。注意三点：一是金钱主题是钓鱼与骗局重灾区，.money 站点要靠品牌与内容自证清白，正规业务务必配好 HTTPS、备案与真实主体信息；二是受监管的金融业务（券商、银行、支付）用 .money 显得不够正式，牌照类业务仍建议 .com；三是「money」6 字符不短，前缀务必短。命名上「动词/形容词 + .money」最出效果（如 smart.money、grow.money 式），读出来像一句理财建议是最好的状态。",
+      bestFor: ["理财内容与新闻站", "预算记账与个人财务工具", "比价返现与省钱服务", "加密钱包与 DeFi 项目"],
+      namingTips: [
+        "「动词/形容词 + .money」读出来就是口号：smart.money 式",
+        "注册约 $11、续费约 $28/年，续费在行业后缀里算温和",
+        "金钱主题钓鱼多：HTTPS 与真实主体信息是信任底线",
+        "持牌金融业务仍建议 .com，.money 适合内容与工具",
+      ],
+    },
+    en: {
+      title: ".money Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".money says the topic out loud — for personal finance content, budgeting tools and crypto projects. See live pricing and naming advice, then hunt available .money names with AI.",
+      intro:
+        ".money is the most literal finance suffix: money blogs and news sites, budgeting and expense tools, price-comparison and cashback services, crypto wallets and DeFi projects on name.money communicate the topic in one second — combos like smart.money and save.money read as slogans. Compared with .finance's institutional formality, .money is conversational and personal: consumer-facing financial content and tools feel far more approachable here. Operated by Identity Digital — about $11 to register, $28/yr to renew — one of the gentler renewals among industry TLDs, easy to hold long-term. Inventory is strong: verbs, adjectives and audience words are wide open. Three cautions: money is phishing's favorite topic, so a .money site must earn trust through brand and content — proper HTTPS and verifiable identity are table stakes; regulated financial businesses (brokerages, banks, payments) read under-dressed on .money — licensed operations still belong on .com; and \"money\" is six characters, so keep the prefix short. The winning pattern is verb or adjective + .money (smart.money, grow.money) — the best names sound like a piece of financial advice.",
+      bestFor: ["Personal finance content & news", "Budgeting & money-management tools", "Cashback & money-saving services", "Crypto wallets & DeFi projects"],
+      namingTips: [
+        "Verb/adjective + .money reads as a slogan: smart.money",
+        "About $11 to register, $28/yr to renew — gentle for an industry TLD",
+        "Money attracts phishing — HTTPS and verifiable identity are table stakes",
+        "Licensed financial businesses still belong on .com",
+      ],
+    },
+  },
+  gold: {
+    tld: "gold",
+    zh: {
+      title: ".gold 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".gold 自带贵金属与「金牌品质」双重语义，适合珠宝、贵金属交易与高端品牌。查看 .gold 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .gold 域名。",
+      intro:
+        ".gold 一词双关：本义是黄金——金店、珠宝品牌、贵金属交易与回收、金价行情站用 name.gold，行业属性一秒传达；引申义是「金牌/顶级」——把 .gold 当品质徽章用，会员体系的最高档（member.gold 式）、精品推荐、高端服务都能借它抬升质感。Identity Digital 运营，注册约 $6（约 ¥41），续费约 $83/年（约 ¥597）——首年友好但续费是本批最高档，预算务必按续费核算，适合认真经营的业务而非批量囤域名。库存很好：品牌词、品类词、城市词命中率高。注意三点：一是贵金属交易与投资是强监管领域，行情与交易类站点注意合规与资质展示；二是「gold」的高端语义是承诺，产品与视觉撑不起「金」字招牌反而显得廉价；三是它和 .money 分工明确——.gold 偏实物与品质叙事，.money 偏理财与工具。命名上「品牌/品类 + .gold」最自然（如 aurum.gold、bridal.gold 式），配合金色系视觉，域名与品牌气质浑然一体。",
+      bestFor: ["金店与珠宝品牌", "贵金属交易与回收", "金价行情与投资内容", "高端会员与精品服务"],
+      namingTips: [
+        "「品牌/品类 + .gold」自带金字招牌：aurum.gold 式",
+        "注册约 $6、续费约 $83/年，按续费核算预算",
+        "贵金属交易强监管：行情与交易站注意资质合规",
+        "高端语义是承诺：产品与视觉要撑得起「金」字",
+      ],
+    },
+    en: {
+      title: ".gold Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".gold carries both the precious metal and the gold-standard meaning — for jewelry, bullion and premium brands. See live pricing and naming advice, then hunt available .gold names with AI.",
+      intro:
+        ".gold works as a double entendre. The literal sense is the metal: jewelers, bullion dealers, gold-recycling services and price-tracking sites on name.gold communicate the industry in one second. The figurative sense is the medal: .gold as a quality badge lifts top membership tiers (member.gold-style), curated picks and premium services. Operated by Identity Digital — about $6 to register but $83/yr to renew, the priciest tier in this batch — budget strictly on the renewal, which makes it a suffix for businesses you mean to run, not domains to hoard. Inventory is strong: brand words, category words and city words hit at a high rate. Three cautions: bullion trading and investment are heavily regulated — price and trading sites must mind compliance and display credentials; the premium semantics are a promise — if product and visuals can't live up to \"gold\", the name cheapens rather than elevates; and the division with .money is clean — .gold tells a physical-goods and quality story, .money a personal-finance and tools one. The natural pattern is brand or category + .gold (aurum.gold, bridal.gold); pair it with golden visuals and the domain and brand fuse into one.",
+      bestFor: ["Jewelers & gold brands", "Bullion trading & recycling", "Gold price & investment content", "Premium memberships & services"],
+      namingTips: [
+        "Brand/category + .gold is a built-in gold seal: aurum.gold",
+        "About $6 to register but $83/yr to renew — budget on the renewal",
+        "Bullion is heavily regulated — show credentials on trading sites",
+        "The premium promise cuts both ways: visuals must live up to \"gold\"",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

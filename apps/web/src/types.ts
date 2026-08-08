@@ -155,6 +155,18 @@ const TLD_PRICES: Record<string, TldPrice> = {
   moe: { first: 94, renew: 94 },
   lol: { first: 11, renew: 189 },
   uk: { first: 41, renew: 41 },
+  fm: { first: 632, renew: 632 },
+  one: { first: 48, renew: 145 },
+  cool: { first: 41, renew: 263 },
+  red: { first: 59, renew: 137 },
+  today: { first: 19, renew: 167 },
+  best: { first: 12, renew: 135 },
+  wtf: { first: 19, renew: 211 },
+  pizza: { first: 78, renew: 374 },
+  bar: { first: 19, renew: 374 },
+  cafe: { first: 33, renew: 300 },
+  money: { first: 78, renew: 204 },
+  gold: { first: 41, renew: 597 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
