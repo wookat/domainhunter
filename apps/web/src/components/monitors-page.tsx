@@ -1,9 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-import { Bell, BellOff, Loader2 } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { Bell, BellOff, ExternalLink, Loader2, RotateCw, Search } from "lucide-react";
 
 import { fetchMonitorList, useMonitor, type MonitorListEntry } from "@/lib/monitor";
+import { REGISTRARS } from "@/lib/registrars";
 import { useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
+
+const CONFIRM_TIMEOUT_MS = 6000;
 
 function statusBadgeClass(status: string): string {
   if (status === "available") return "bg-brand-dim text-brand";
@@ -17,42 +20,77 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
   const [entries, setEntries] = useState<Record<string, MonitorListEntry>>({});
   const [quota, setQuota] = useState<{ monitored: number; limit: number } | null>(null);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
+  const [lastRefreshedAt, setLastRefreshedAt] = useState<number | null>(null);
+  const [now, setNow] = useState(() => Date.now());
   const [error, setError] = useState("");
   const [pending, setPending] = useState<string | null>(null);
   const [confirming, setConfirming] = useState<string | null>(null);
+  const [confirmLeft, setConfirmLeft] = useState(0);
   const confirmTimer = useRef<number | undefined>(undefined);
+  const confirmTick = useRef<number | undefined>(undefined);
+  const refreshingRef = useRef(false);
+
+  const refresh = useCallback(async () => {
+    if (refreshingRef.current) return;
+    refreshingRef.current = true;
+    setRefreshing(true);
+    setError("");
+    try {
+      const list = await fetchMonitorList([...monitor.monitored]);
+      setEntries(Object.fromEntries(list.entries.map((e) => [e.domain, e])));
+      setQuota({ monitored: list.monitored, limit: list.limit });
+      setLastRefreshedAt(Date.now());
+    } catch {
+      setError(t("monitors.refreshFailed"));
+    } finally {
+      refreshingRef.current = false;
+      setRefreshing(false);
+      setLoading(false);
+    }
+    // t 随语言变化但刷新逻辑不变
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [monitor.monitored]);
 
   useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        const list = await fetchMonitorList([...monitor.monitored]);
-        if (cancelled) return;
-        setEntries(Object.fromEntries(list.entries.map((e) => [e.domain, e])));
-        setQuota({ monitored: list.monitored, limit: list.limit });
-      } catch {
-        if (!cancelled) setError(t("monitors.loadFailed"));
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
+    void refresh();
     // 仅首次加载拉服务端条目；取消监控后本地即时更新，不重复拉取
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // 「最后刷新 xx 前」相对时间每 30s 走一格
+  useEffect(() => {
+    const id = window.setInterval(() => setNow(Date.now()), 30_000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  useEffect(
+    () => () => {
+      window.clearTimeout(confirmTimer.current);
+      window.clearInterval(confirmTick.current);
+    },
+    [],
+  );
+
+  function clearConfirm() {
+    window.clearTimeout(confirmTimer.current);
+    window.clearInterval(confirmTick.current);
+    setConfirming(null);
+    setConfirmLeft(0);
+  }
+
   async function cancel(domain: string) {
     if (pending) return;
     if (confirming !== domain) {
-      setConfirming(domain);
       window.clearTimeout(confirmTimer.current);
-      confirmTimer.current = window.setTimeout(() => setConfirming(null), 3000);
+      window.clearInterval(confirmTick.current);
+      setConfirming(domain);
+      setConfirmLeft(Math.ceil(CONFIRM_TIMEOUT_MS / 1000));
+      confirmTimer.current = window.setTimeout(clearConfirm, CONFIRM_TIMEOUT_MS);
+      confirmTick.current = window.setInterval(() => setConfirmLeft((s) => Math.max(0, s - 1)), 1000);
       return;
     }
-    window.clearTimeout(confirmTimer.current);
-    setConfirming(null);
+    clearConfirm();
     setError("");
     setPending(domain);
     try {
@@ -69,6 +107,14 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
 
   const domains = [...monitor.monitored].sort();
   const fmtTime = (ts: number) => new Date(ts).toLocaleString(lang === "zh" ? "zh-CN" : "en-US");
+  const relTime = (ts: number): string => {
+    const mins = Math.floor(Math.max(0, now - ts) / 60_000);
+    if (mins < 1) return t("monitors.justNow");
+    if (mins < 60) return t("monitors.minutesAgo", { n: mins });
+    return t("monitors.hoursAgo", { n: Math.floor(mins / 60) });
+  };
+  const quotaFull = quota !== null && quota.limit > 0 && quota.monitored >= quota.limit;
+  const porkbun = REGISTRARS[0];
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-6 md:px-6">
@@ -81,7 +127,27 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
         )}
       </div>
       <p className="mb-2 text-xs text-txt2">{t("monitors.hint")}</p>
-      {domains.length > 0 && <p className="tnum mb-3 text-xs text-txt2">{t("monitors.mine", { n: domains.length })}</p>}
+
+      <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+        <button
+          className="flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50 sm:h-9"
+          onClick={() => void refresh()}
+          disabled={refreshing || loading}
+        >
+          <RotateCw className={cn("h-4 w-4", refreshing && "animate-spin")} />
+          {refreshing ? t("monitors.refreshing") : t("monitors.refresh")}
+        </button>
+        {lastRefreshedAt !== null && (
+          <span className="tnum text-xs text-txt2">{t("monitors.lastRefreshed", { time: relTime(lastRefreshedAt) })}</span>
+        )}
+        {domains.length > 0 && <span className="tnum text-xs text-txt2">{t("monitors.mine", { n: domains.length })}</span>}
+      </div>
+
+      {quotaFull && (
+        <p className="mb-3 rounded-lg border border-line bg-bg2 px-4 py-2.5 text-sm text-txt1">
+          {t("monitors.quotaFull", { limit: quota.limit })}
+        </p>
+      )}
 
       {error && <p className="mb-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{error}</p>}
 
@@ -121,23 +187,46 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
                   )}
                   <button
                     className={cn(
-                      "flex h-11 items-center gap-1.5 rounded-lg border px-3 text-sm sm:h-9",
+                      "relative flex h-11 items-center gap-1.5 overflow-hidden rounded-lg border px-3 text-sm sm:h-9",
                       confirmed
                         ? "border-destructive bg-destructive/10 font-semibold text-destructive"
                         : "border-line text-txt1 hover:bg-bg2 hover:text-destructive",
                     )}
                     disabled={pending !== null}
+                    title={confirmed ? t("monitors.confirmCountdown", { s: confirmLeft }) : undefined}
                     onClick={() => void cancel(domain)}
                   >
                     {pending === domain ? <Loader2 className="h-4 w-4 animate-spin" /> : <BellOff className="h-4 w-4" />}
                     {confirmed ? t("monitors.cancelConfirm") : t("monitors.cancel")}
+                    {confirmed && <span className="tnum font-mono text-[11px] opacity-70">{confirmLeft}</span>}
+                    {confirmed && <span aria-hidden className="confirm-countdown absolute inset-x-0 bottom-0 h-0.5 bg-destructive" />}
                   </button>
                 </span>
-                {!loading && entry && (
-                  <span className="tnum w-full font-mono text-[11px] text-txt2 sm:hidden">
-                    {entry.lastChecked > 0 ? `${t("monitors.lastChecked")} ${fmtTime(entry.lastChecked)}` : t("monitors.never")}
-                  </span>
-                )}
+                <span className="flex w-full items-center gap-x-4 gap-y-1">
+                  <a
+                    className="flex h-11 items-center gap-1 text-xs text-txt1 underline-offset-2 hover:text-txt0 hover:underline sm:h-auto sm:py-1"
+                    href={`/?q=${encodeURIComponent(domain)}`}
+                  >
+                    <Search className="h-3.5 w-3.5" />
+                    {t("monitors.checkAvailability")}
+                  </a>
+                  {!loading && entry?.status === "available" && (
+                    <a
+                      className="flex h-11 items-center gap-1 text-xs text-brand underline-offset-2 hover:underline sm:h-auto sm:py-1"
+                      href={porkbun.url(domain)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="h-3.5 w-3.5" />
+                      {t("common.register")} · {porkbun.name}
+                    </a>
+                  )}
+                  {!loading && entry && (
+                    <span className="tnum ml-auto font-mono text-[11px] text-txt2 sm:hidden">
+                      {entry.lastChecked > 0 ? `${t("monitors.lastChecked")} ${fmtTime(entry.lastChecked)}` : t("monitors.never")}
+                    </span>
+                  )}
+                </span>
               </li>
             );
           })}
