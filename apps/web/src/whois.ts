@@ -42,6 +42,18 @@ async function dnsNxdomainFallback(r: CheckResult): Promise<CheckResult> {
   }
 }
 
+// WHOIS 到期字段写法各家不一：Registry Expiry Date / Expiration Date / Expiry Date / Expiration Time / paid-till 等
+const EXPIRY_RE = /^[ \t]*(?:paid-till|(?:registry |registrar registration )?(?:expiry|expiration|expire)(?: date| time|s? on)?)[ \t]*:[ \t]*(.+)$/im;
+
+/** 从 WHOIS 文本宽松解析到期时间，解析不出返回 undefined（不报错） */
+export function parseWhoisExpiry(text: string): string | undefined {
+  const m = EXPIRY_RE.exec(text);
+  if (!m) return undefined;
+  const ts = Date.parse(m[1].trim());
+  if (!Number.isFinite(ts)) return undefined;
+  return new Date(ts).toISOString();
+}
+
 export async function whoisFallback(r: CheckResult): Promise<CheckResult> {
   const tld = r.domain.slice(r.domain.indexOf(".") + 1).toLowerCase();
   if (DNS_NXDOMAIN_TLDS.has(tld)) return dnsNxdomainFallback(r);
@@ -64,7 +76,10 @@ export async function whoisFallback(r: CheckResult): Promise<CheckResult> {
     }
     try { await socket.close(); } catch { /* already closed */ }
     if (cfg.notFound.test(text)) return { domain: r.domain, status: "available", method: "whois" };
-    if (cfg.found.test(text)) return { domain: r.domain, status: "taken", method: "whois" };
+    if (cfg.found.test(text)) {
+      const expiresAt = parseWhoisExpiry(text);
+      return { domain: r.domain, status: "taken", method: "whois", ...(expiresAt ? { expiresAt } : {}) };
+    }
     return { domain: r.domain, status: "unknown", method: "whois", detail: "unparsed" };
   } catch (e) {
     return { domain: r.domain, status: "unknown", method: "whois", detail: String(e) };

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Brain, Check, ChevronDown, Copy, ExternalLink, History, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { ExpiryNote } from "@/components/domain-row";
 import { addRecentSearch, clearRecentSearches, loadRecentSearches, type RecentSearch } from "@/lib/history";
 import { useI18n, type I18nKey } from "@/lib/i18n";
 import { toUsd, usePrices } from "@/lib/prices";
@@ -543,7 +544,7 @@ export function HomePage({
   const canRun = description.trim().length > 0 && tlds.length > 0;
 
   const quick = parseQuickCheck(description);
-  const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown" }[]>([]);
+  const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown"; expiresAt?: string }[]>([]);
   const [quickRunning, setQuickRunning] = useState(false);
   const [quickMoreDone, setQuickMoreDone] = useState(false);
   // quick-check 图例过滤（IDS 式）：按状态筛 chips
@@ -613,9 +614,9 @@ export function HomePage({
         buf = lines.pop()!;
         for (const line of lines) {
           if (!line) continue;
-          const r = JSON.parse(line) as { domain?: string; status?: "available" | "taken" | "unknown"; type?: string };
+          const r = JSON.parse(line) as { domain?: string; status?: "available" | "taken" | "unknown"; expiresAt?: string; type?: string };
           if (r.type || !r.domain || !r.status) continue;
-          setQuickRows((prev) => prev.map((row) => (row.domain === r.domain ? { ...row, status: r.status! } : row)));
+          setQuickRows((prev) => prev.map((row) => (row.domain === r.domain ? { ...row, status: r.status!, expiresAt: r.expiresAt } : row)));
         }
       }
     } catch {
@@ -941,6 +942,7 @@ export function HomePage({
                       <span className="inline-flex min-h-[44px] items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
                         <span className="line-through">{row.domain}</span>
                         <i className="not-italic font-sans text-[10px] text-taken">{t("status.taken")}</i>
+                        {row.expiresAt && <ExpiryNote iso={row.expiresAt} className="font-sans" />}
                       </span>
                       <button
                         onClick={() => shortlist.toggle(domainToRow(row.domain, "taken"))}

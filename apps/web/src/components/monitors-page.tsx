@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Bell, BellOff, ExternalLink, Loader2, RotateCw, Search } from "lucide-react";
 
+import { ExpiryNote } from "@/components/domain-row";
 import { fetchMonitorList, useMonitor, type MonitorListEntry } from "@/lib/monitor";
 import { REGISTRARS } from "@/lib/registrars";
 import { useI18n } from "@/lib/i18n";
@@ -179,6 +180,7 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
                     </span>
                   )
                 )}
+                {!loading && entry?.status === "taken" && entry.expiresAt && <ExpiryNote iso={entry.expiresAt} />}
                 <span className="ml-auto flex items-center gap-2">
                   {!loading && entry && (
                     <span className="tnum hidden font-mono text-[11px] text-txt2 sm:inline" title={t("monitors.lastChecked")}>

@@ -257,7 +257,7 @@ export default function App() {
               : r,
           ),
         );
-        return prev.map((r) => (r.domain === ev.domain ? { ...r, status, meaning: r.meaning ?? ev.meaning, theme: r.theme ?? ev.theme } : r));
+        return prev.map((r) => (r.domain === ev.domain ? { ...r, status, meaning: r.meaning ?? ev.meaning, theme: r.theme ?? ev.theme, expiresAt: ev.expiresAt ?? r.expiresAt } : r));
       });
     }
   }

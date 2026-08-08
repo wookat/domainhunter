@@ -104,6 +104,7 @@ export interface MonitorListEntry {
   domain: string;
   status: string;
   lastChecked: number;
+  expiresAt?: string;
 }
 
 export interface MonitorList {
