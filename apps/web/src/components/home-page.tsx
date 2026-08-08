@@ -763,6 +763,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个婚恋相亲与高端匹配服务品牌，寓意「认真的人遇见认真的人」；气质要真诚郑重、有缘分感、父母听着也放心；场景是会员注册页、红娘回访电话和家庭饭桌上的提起都得体可信。",
     en: "A matchmaking and dating service brand. The name should feel like serious people meeting serious people; the vibe is sincere, respectful, touched with destiny, reassuring even to parents; it must sound proper on the membership page, in a matchmaker's follow-up call, and when mentioned at the family dinner table.",
   },
+  {
+    slug: "tattoo",
+    labelZh: "纹身工作室",
+    labelEn: "Tattoo studios",
+    zh: "一个纹身工作室品牌，寓意「把值得纪念的故事郑重地留在身上」；气质要有风格立场、专业卫生、带一点永恒的仪式感；场景是作品集主页、预约私信和「你这是在哪纹的」的口播转介绍里都好记有型。",
+    en: "A tattoo studio brand. The name should feel like stories worth keeping, marked with ceremony; the vibe is stylistically opinionated, professional, hygienic, with a touch of permanence; it must look sharp on a portfolio page, in booking DMs, and travel well in \"where did you get that done?\"",
+  },
+  {
+    slug: "climbing",
+    labelZh: "攀岩馆",
+    labelEn: "Climbing gyms",
+    zh: "一个攀岩馆与抱石馆品牌，寓意「每个人都能爬出自己的高度」；气质要有社群归属感、街头工业风、对新手友好；场景是「周末去哪爬」的岩友邀约、体验课预约页和馆内墙面招牌上都顺口带劲。",
+    en: "A climbing and bouldering gym brand. The name should feel like everyone can climb to their own height; the vibe is community-driven, industrial-street, beginner-friendly; it must roll off the tongue in \"where are you climbing this weekend?\", on the intro-class booking page, and on the gym wall.",
+  },
+  {
+    slug: "swimschool",
+    labelZh: "游泳培训",
+    labelEn: "Swim schools",
+    zh: "一个游泳培训与亲子水育品牌，寓意「让孩子像小鱼一样自在」；气质要安全专业、童趣欢快、家长放心；场景是妈妈群转介绍、课程包续费页和孩子喊出「我要去 XX 游泳」时都顺口好记。",
+    en: "A swim school and baby-swimming brand. The name should promise kids swimming as freely as little fish; the vibe is safe, professional, playfully cheerful, reassuring to parents; it must work in mom-group referrals, on the class-pack renewal page, and when a child shouts \"I want to go swim at X!\"",
+  },
+  {
+    slug: "3dprint",
+    labelZh: "3D 打印",
+    labelEn: "3D printing",
+    zh: "一个 3D 打印与按需制造服务品牌，寓意「想得出就做得出」；气质要专业快速、有造物的科技感、工程师与个人客户都信任；场景是对公报价单、创客社区口碑和「打样明天就能拿」的承诺里都干脆可信。",
+    en: "A 3D printing and on-demand manufacturing brand. The name should promise that anything imaginable can be made; the vibe is professional, fast, maker-tech, trusted by engineers and hobbyists alike; it must look solid on a B2B quote, in maker-community word of mouth, and behind a next-day prototype promise.",
+  },
+  {
+    slug: "vending",
+    labelZh: "无人零售",
+    labelEn: "Vending & unattended retail",
+    zh: "一个自动售货与无人零售品牌，寓意「你需要的时候它都在」；气质要便利可靠、聪明高效、带一点人情味；场景是写字楼机身贴纸、点位合作提案和扫码小程序上都清爽好认。",
+    en: "A vending and unattended retail brand. The name should promise it's always there when you need it; the vibe is convenient, reliable, smartly efficient, with a touch of warmth; it must read cleanly on a machine wrap in an office lobby, in a site-partnership deck, and on the scan-to-pay mini app.",
+  },
+  {
+    slug: "kidsart",
+    labelZh: "少儿美术",
+    labelEn: "Kids' art schools",
+    zh: "一个少儿美术与创意教育品牌，寓意「保护每个孩子敢想敢画的天性」；气质要色彩明快、童趣专业、家长觉得有体系；场景是家长群转介绍、试听课海报和孩子喊出「我要去 XX 画画」时都欢快好念。",
+    en: "A children's art education brand. The name should feel like protecting every child's daring to imagine and paint; the vibe is colorful, playful yet professional, structured enough for parents; it must charm in parent-group referrals, on trial-class posters, and when a child shouts \"I want to paint at X!\"",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

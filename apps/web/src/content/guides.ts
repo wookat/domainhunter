@@ -6433,6 +6433,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  tattoo: {
+    slug: "tattoo",
+    tlds: [
+      { tld: "com", zh: "预约与作品集展示的信任底线，跨城客人查店最稳", en: "The trust baseline for bookings and portfolio browsing" },
+      { tld: "ink", zh: "「墨水」后缀与品类零距离，纹身行业的天然签名", en: "The ink suffix — zero distance from the craft, tattooing's native signature" },
+      { tld: "studio", zh: "「工作室」气质直给，预约制手作店的标准后缀", en: "Atelier register outright — the standard suffix for appointment-only craft shops" },
+    ],
+    zh: {
+      label: "纹身工作室",
+      title: "纹身工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "纹身工作室命名指南：墨与针意象、风格流派标签、纹身师个人 IP 等 5 种思路，Bang Bang/Shamrock Social Club 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的纹身品牌域名。",
+      intro:
+        "纹身工作室的名字是一份风格宣言：客人把皮肤交给你之前，先用名字判断「这家店的审美配不配得上我的身体」。这是一门作品即广告、风格即客群的生意——老传统（old school）、日式、水墨、极简线条、写实各有拥趸，名字的流派气质错位等于把对的客人挡在门外。命名的第一素材库是品类词根：墨、针、皮、刺、青、ink、needle 都在谱系上，「刺青」二字自带的东方庄重感与「tattoo」的街头感是两种完全不同的定位选择。第二个抓手是纹身师个人 IP：这个行业的信任高度绑定「找谁纹」而不是「在哪纹」，头部工作室大多以主理人艺名为核心（Bang Bang 之于 Justin Bieber 的御用纹身师），店名给个人 IP 让路是常见且正确的选择。第三个抓手是仪式感：纹身是极少数「终身携带」的消费决策，名字带一点郑重与永恒感（永、恒、forever）能呼应客人内心的仪式期待，纯玩梗的名字撑不起「跟我一辈子」的心理重量。还要过合规与搜索关：纹身行业在部分平台是限制类目，名字太挑衅（血、痛、恶魔系）会加大内容分发与商场招租的阻力；而小红书与 Google Maps 是获客主场，城市+风格+tattoo 的搜索组合值得在品牌资产里留位置。最后留半径：工作室普遍延展穿孔、皮肤管理与美学培训，名字锁死「纹身」会让副业务的招牌很尴尬。",
+      namingIdeas: [
+        "墨与针意象：墨、针、刺、青、ink——品类词根直给，「刺青」的东方庄重与「tattoo」的街头感是两种定位的分水岭",
+        "风格流派前置：老传统、水墨、fine line——风格是客人的第一筛选条件，名字先亮流派能吸来审美同频的客群",
+        "纹身师个人 IP：主理人艺名+studio——这个行业信「找谁纹」不信「在哪纹」，店名给个人品牌让路是头部通行做法",
+        "永恒与仪式感：永、恒、forever、eternal——终身携带的消费决策，名字的郑重感呼应客人内心的仪式期待",
+        "在地暗号：城市老地名、街区俚语——纹身店是街区文化地标，在地词根让本地客有认同、外地客有打卡欲",
+      ],
+      cases: [
+        { name: "Bang Bang", takeaway: "纹身师 Keith McCurdy 的艺名直接做店名：两声枪响般的节奏感好记好传，个人 IP 与店牌合一——明星纹身师时代「人即品牌」的标杆" },
+        { name: "Shamrock Social Club", takeaway: "「三叶草社交俱乐部」：好莱坞日落大道的传奇老店，用俱乐部的圈层感取代「纹身店」的江湖气——把街头手艺做成名流社交场的命名升维" },
+        { name: "刺青堂", takeaway: "「堂」字的老铺庄重感配「刺青」的东方词根：一秒立起水墨与传统题材的风格预期——中文纹身命名吃文化底蕴的直球打法" },
+        { name: "Fleur Noire", takeaway: "法语「黑色花朵」：暗黑与柔美的矛盾修辞精准锁定 fine line 花草题材的女性客群——异国词根做风格筛选器的轻巧示范" },
+        { name: "Three Kings Tattoo", takeaway: "三位创始人自封「三王」：扑克牌意象自带老传统美学，纽约多店连锁证明江湖气的名字也能撑起品牌化扩张" },
+      ],
+      pitfalls: [
+        "流派气质错位：极简线条工作室配「恶龙、暴血」系名字，目标客群直接划走——名字的审美段位必须与作品集一致",
+        "挑衅词根加大合规阻力：血、痛、魔系词在平台分发与商场招租时处处受限——酷可以，但别酷到进不了渠道",
+        "玩梗名撑不起终身决策：纹身是「跟我一辈子」的消费，段子体店名让客人在郑重时刻心里打鼓",
+        "锁死「纹身」限制半径：穿孔、美学培训、皮肤管理都在延展路上，名字带死品类，扩业务时招牌要重做",
+      ],
+    },
+    en: {
+      label: "Tattoo studios",
+      title: "How to Name a Tattoo Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Tattoo studio naming guide: ink and needle imagery, style-school signaling, artist personal branding, breakdowns of Bang Bang/Shamrock Social Club/Fleur Noire, recommended TLDs and pitfalls — then hunt an available tattoo brand domain with AI.",
+      intro:
+        "A tattoo studio's name is a style manifesto: before a client trusts you with their skin, the name tells them whether your aesthetic deserves their body. This is a business where the work is the ad and the style picks the clientele — American traditional, Japanese irezumi, blackwork, fine line and realism each pull different tribes, and a name pitched at the wrong school locks the right clients out. The first material bin is category roots: ink, needle, iron and skin all live natively on the spectrum, and the register you choose — street-culture \"tattoo\" versus ceremonious craft words — is itself a positioning decision. The second lever is artist IP: trust in this trade attaches to \"who's tattooing me,\" not \"which shop,\" and the top studios worldwide are built on an artist's working name (Bang Bang, celebrity tattooer to Justin Bieber), so letting the personal brand lead the shop name is common and correct. The third lever is gravitas: a tattoo is one of the only purchases carried for life, and a name with a touch of permanence (forever, eternal, true) answers the client's inner ceremony — a pure-joke name can't hold the weight of \"this is on me forever.\" Mind distribution too: tattooing is a restricted category on several platforms, and aggressively edgy names (blood, pain, demon registers) add friction with content channels and mall landlords, while Google Maps and Instagram are the acquisition arena where city-plus-style search terms earn their keep. Finally, leave radius: studios routinely add piercing, skin care and art classes, and a name welded to \"tattoo\" makes every sideline awkward.",
+      namingIdeas: [
+        "Ink and needle imagery: ink, needle, iron, stain — category roots served straight, with the register choice between street \"tattoo\" and ceremonious craft words doing the positioning",
+        "Style school up front: traditional, blackwork, fine line — style is the client's first filter, and a name that declares its school attracts exactly the right tribe",
+        "Artist personal IP: the tattooer's working name plus studio — this trade trusts \"who,\" not \"where,\" and the biggest shops are built on an artist's name",
+        "Permanence and ceremony: forever, eternal, true — a lifelong purchase deserves a name with gravitas that answers the client's inner ritual",
+        "Neighborhood code: old street names, local slang — tattoo shops are block-culture landmarks, and local roots earn belonging from locals and pilgrimage from visitors",
+      ],
+      cases: [
+        { name: "Bang Bang", takeaway: "Tattooer Keith McCurdy's working name as the shop name: a two-beat gunshot rhythm that's impossible to forget, artist IP and storefront fused into one — the flagship of the celebrity-tattooer era where the person is the brand" },
+        { name: "Shamrock Social Club", takeaway: "A Sunset Strip legend named like a members' club: swapping tattoo-parlor grit for curated-circle mystique — elevating street craft into a celebrity salon by register alone" },
+        { name: "Fleur Noire", takeaway: "French for \"black flower\": the dark-meets-delicate oxymoron precisely targets the fine-line botanical clientele — an exotic root working as a style filter" },
+        { name: "Three Kings Tattoo", takeaway: "Three founders crowned in playing-card imagery: the name carries American-traditional aesthetics natively, and the multi-city expansion proves a street-register name can scale into a chain" },
+        { name: "Saved Tattoo", takeaway: "One loaded word — salvation, keeping, preserving: a Brooklyn studio naming the emotional function of tattoos rather than the tool, proof that meaning beats hardware in this category" },
+      ],
+      pitfalls: [
+        "Style mismatch: a fine-line studio wearing a \"Dragon's Blood\" name loses its tribe at first glance — the name's aesthetic register must match the portfolio",
+        "Edgy roots blocking distribution: blood, pain and demon words add friction with platforms and landlords — be cool, but not too cool for your own channels",
+        "Joke names failing the forever test: a tattoo is carried for life, and a punchline shop name makes clients flinch at the most ceremonious moment",
+        "Welding the name to \"tattoo\": piercing, skin care and art classes are all on the expansion path, and a category-locked name makes every new line a retrofit",
+      ],
+    },
+  },
+  climbing: {
+    slug: "climbing",
+    tlds: [
+      { tld: "com", zh: "会员卡与课程包的信任底线，团课预约最稳", en: "The trust baseline for memberships and class packs" },
+      { tld: "fitness", zh: "健身语义直给，把攀岩说进大健身赛道的后缀", en: "Fitness semantics outright — placing climbing squarely in the workout market" },
+      { tld: "club", zh: "「岩馆即社群」的圈层感，攀岩文化的天然后缀", en: "The community register — climbing culture's native members-club suffix" },
+    ],
+    zh: {
+      label: "攀岩馆",
+      title: "攀岩馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "攀岩馆与抱石馆命名指南：岩壁意象、向上隐喻、社群圈层感等 5 种思路，Movement/岩时/Touchstone 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的攀岩品牌域名。",
+      intro:
+        "攀岩馆的名字要同时接住两拨完全不同的客人：核心攀岩爱好者要的是「懂行」，他们对岩点、线路、抱石黑话如数家珍，名字带圈内词根（岩、抱石、beta、crux）能一眼认亲；而增量客群是把攀岩当新潮健身的小白，他们要的是「不吓人」，名字太硬核（绝壁、坠落系）会让第一次体验的门槛更高。头部品牌的解法是往「向上」的普世隐喻走：攀登、登顶、summit、ascend 既保留品类联想，又把攀岩包装成人人可共情的自我挑战叙事。命名的第二个抓手是社群感：岩馆的复购本质是「馆友文化」，攀岩者互相保护、共享 beta 的社群传统让「俱乐部、部落、camp」词根天然适配——卖的不是场地是归属。第三个抓手是空间气质：抱石馆普遍走工业风与街头文化路线，名字的街头感（岩、砖、block）与咖啡吧、瑜伽区的复合业态要能兼容。还要考虑搜索与转介绍：「城市+攀岩馆」是获客主搜索词，名字里埋「岩」字或 climb 词根能吃到品类流量；口播场景是「周末去哪爬」，名字要在这句话里顺口。最后留半径：岩馆普遍延展青少年培训、户外领队与团建业务，名字锁死「抱石」会漏掉增速最快的儿童攀岩课。",
+      namingIdeas: [
+        "岩壁意象：岩、石、壁、block——品类词根直给，圈内人一眼认亲，「城市+岩」的搜索组合还能吃品类流量",
+        "向上隐喻：攀、登、summit、ascend——把攀岩包装成普世的自我挑战叙事，对健身小白零门槛",
+        "社群圈层感：俱乐部、部落、camp——岩馆卖的是馆友文化与归属感，社群词根呼应攀岩互相保护的传统",
+        "圈内黑话：beta、crux、v0、chalk——抱石黑话做名字自带会心一笑，核心玩家的认同感拉满",
+        "街头工业气质：砖、仓、block、yard——抱石馆的工业风空间与街头文化，名字的粗粝感要与场馆气质同频",
+      ],
+      cases: [
+        { name: "Movement", takeaway: "「运动/动作」的一词双关：既是攀岩的动作序列（movement）又是健身大品类的通用词——全美最大岩馆连锁用一个词同时接住核心玩家与健身小白" },
+        { name: "Touchstone Climbing", takeaway: "「试金石」的双关：touch（触碰岩点）+ stone（岩石）拼出品类，本义「检验标准」又暗示这里是攀岩者的试炼场——加州老牌连锁的命名巧思" },
+        { name: "岩时", takeaway: "「岩」的品类词根+「时」的时光感：把攀岩说成一种生活方式的时间，而不是一次撸铁——中文岩馆命名去硬核化的示范" },
+        { name: "The Crag", takeaway: "户外岩场的俚语直接做馆名：把室内墙与真实山野接通，承诺「从馆内爬向户外」的进阶路径——用词根讲清业务闭环" },
+        { name: "Brooklyn Boulders", takeaway: "街区+品类的双 B 头韵：在地感与抱石品类一次说清，社区文化空间的定位从名字就开始——城市岩馆在地命名的范本" },
+      ],
+      pitfalls: [
+        "太硬核吓跑小白：绝壁、坠落、极限系名字让第一次体验的客人心里打鼓——增量客群要的是「不吓人」",
+        "太泛化丢掉圈内认同：纯健身房式命名（XX 运动中心）让核心攀岩者觉得不懂行——两拨客人都要接住",
+        "锁死「抱石」漏掉儿童课：青少年攀岩培训是增速最快的现金流业务，名字太街头，家长决策时会犹豫",
+        "忽略「周末去哪爬」的口播：岩友社群转介绍是获客主链路，名字拗口，最重要的那句邀约就接不住",
+      ],
+    },
+    en: {
+      label: "Climbing gyms",
+      title: "How to Name a Climbing Gym: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Climbing and bouldering gym naming guide: rock imagery, upward metaphors, community signaling, breakdowns of Movement/Touchstone/Brooklyn Boulders, recommended TLDs and pitfalls — then hunt an available climbing brand domain with AI.",
+      intro:
+        "A climbing gym's name must catch two very different crowds at once: core climbers want insider credibility — they speak fluent beta, crux and crimp, and a name carrying category roots earns instant tribal recognition; the growth market, meanwhile, is fitness-curious beginners who want the opposite — a name that doesn't intimidate, because anything too hardcore (cliff-edge, free-fall registers) raises the bar for a first visit. The leaders solve it by climbing up the metaphor ladder: ascend, summit and elevation keep the category association while packaging climbing as a universal self-challenge story anyone can join. The second lever is community: gym retention is really crew culture — climbers belay each other and share beta, a cooperative tradition that makes club, tribe and camp roots natively fitting, because what's sold is belonging, not wall time. The third is space register: bouldering gyms trend industrial-street in design, often hybridized with cafés and yoga studios, so the name's grit level must match the room. Mind search and referrals too: \"city + climbing gym\" is the acquisition query, so a rock or climb root in the name rides category traffic, and the spoken test is \"where are you climbing this weekend?\" — the name must roll in that sentence. Finally, leave radius: gyms expand into youth programs, outdoor guiding and corporate events, and a name welded to \"bouldering\" caps the fastest-growing revenue line — kids' classes.",
+      namingIdeas: [
+        "Rock imagery: rock, stone, crag, block — category roots served straight earn insider recognition and ride \"city + climbing\" search traffic",
+        "Upward metaphors: ascend, summit, elevation — package climbing as a universal self-challenge story with zero intimidation for beginners",
+        "Community signaling: club, tribe, camp — gyms sell belonging and crew culture, and cooperative roots echo climbing's belay-partner tradition",
+        "Insider slang: beta, crux, chalk, send — bouldering vocabulary as a brand earns a knowing smile from core climbers for free",
+        "Industrial-street grit: brick, yard, works, block — bouldering spaces trend raw and urban, and the name's texture must match the room",
+      ],
+      cases: [
+        { name: "Movement", takeaway: "One word, two readings: the climber's movement sequence and the fitness industry's biggest umbrella term — America's largest gym chain catching core climbers and beginners with a single word" },
+        { name: "Touchstone Climbing", takeaway: "A double pun: touch plus stone spells the category, while the word's own meaning — a standard to test against — casts the gym as the climber's proving ground; California's veteran chain at its cleverest" },
+        { name: "Brooklyn Boulders", takeaway: "Borough plus category in a double-B alliteration: locality and bouldering declared in one breath, with the community-space positioning starting from the name itself — the template for neighborhood-anchored gym naming" },
+        { name: "The Crag", takeaway: "Outdoor climbers' slang for a climbing spot, applied to an indoor wall: connecting plastic holds to real mountains and promising the indoor-to-outdoor progression in a single word" },
+        { name: "Sender One", takeaway: "\"Send\" — climber slang for completing a route — built into an achievement name: insider vocabulary and aspiration fused, legible to the core and aspirational to the new" },
+      ],
+      pitfalls: [
+        "Too hardcore for beginners: cliff, free-fall and extreme registers make a first-timer's palms sweat before arrival — the growth market wants approachable",
+        "Too generic for the core: plain \"XX Fitness Center\" naming reads as clueless to real climbers — the name must catch both crowds",
+        "Street grit scaring off parents: youth programs are the fastest-growing revenue line, and a name too edgy makes the family decision harder",
+        "Failing the \"where are you climbing?\" test: crew referrals are the acquisition engine, and a clunky name breaks the invitation sentence where it matters most",
+      ],
+    },
+  },
+  swimschool: {
+    slug: "swimschool",
+    tlds: [
+      { tld: "com", zh: "课程包与年卡的信任底线，家长决策最稳", en: "The trust baseline for class packs and annual passes" },
+      { tld: "school", zh: "「学校」语义直给，把游泳课包装成正经教育", en: "School semantics outright — framing swim lessons as proper education" },
+      { tld: "academy", zh: "机构感与体系感的后缀，进阶课程体系的背书", en: "The institutional suffix — credentialing a structured curriculum" },
+    ],
+    zh: {
+      label: "游泳培训",
+      title: "游泳培训机构怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "游泳培训与亲子游泳机构命名指南：水的意象、安全承诺、小鱼儿人设等 5 种思路，Goldfish/SwimJim/海帆等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的游泳品牌域名。",
+      intro:
+        "游泳培训机构的名字要先安抚一种最原始的恐惧：家长把不会水的孩子交给你，脑海里挥之不去的是溺水新闻。所以这个品类命名的第一任务是传递安全与专业——「安、护、盾」的守护词根，或「学院、academy」的机构感背书，都在直接回应「孩子在你手里安不安全」这个最大决策因子。第二任务是消解怕水情绪：儿童游泳教学的第一关不是动作是心理，名字往「玩水」方向走（小鱼、泡泡、浪花、splash）能把「上课」说成「去玩」，降低孩子的抗拒与家长的心疼。头部品牌深谙此道：Goldfish Swim School 用一条金鱼把泳池变成鱼缸乐园，SwimJim 用押韵的人名做出邻家教练的亲切感。词库上，「水、游、泳、浪、鱼、蓝」都在品类谱系上，「鱼」系词根（小鱼、飞鱼、美人鱼）是儿童线的万能钥匙。第三个抓手是成长叙事：游泳课卖的是「从怕水到自由泳」的进阶体系，名字带成长感（跃、飞、progression）能呼应课程包的升级销售。还要过家长社群关：获客主链路是妈妈群转介绍与点评搜索，「城市+少儿游泳」的搜索词值得埋，名字要在「你家娃在哪学游泳」这句对话里顺口。最后留半径：机构普遍延展亲子水育、成人私教与赛事俱乐部，名字锁死「少儿」会限制客群延展。",
+      namingIdeas: [
+        "水的意象：水、浪、泡泡、splash——把泳池说成乐园，先消解孩子怕水的心理门槛",
+        "鱼系人设：小鱼、飞鱼、金鱼、美人鱼——儿童线的万能词根，「像鱼一样自在」就是课程的效果承诺",
+        "安全守护词根：安、护、盾、safe——溺水恐惧是家长最大决策因子，名字先回应「孩子在你手里安不安全」",
+        "机构感背书：学院、swim school、academy——把游泳课包装成正经教育，家长愿意为体系化课程付高客单",
+        "成长叙事：跃、飞、进阶、stroke——游泳课卖的是从怕水到自由泳的进阶体系，名字的成长感呼应升级销售",
+      ],
+      cases: [
+        { name: "Goldfish Swim School", takeaway: "一条金鱼把泳池变成鱼缸乐园：品类（swim school）直给保证搜索，「goldfish」的意象消解怕水——全美最大少儿游泳连锁的教科书组合" },
+        { name: "SwimJim", takeaway: "押韵人名的邻家感：swim 与 Jim 的韵脚让名字自带节奏，教练的个人温度盖过机构的冰冷——小而美游泳学校的人格化打法" },
+        { name: "海帆亲子游泳", takeaway: "「海帆」的远航意象+「亲子」的品类限定：把婴幼儿水育说成一场亲子远航，成长叙事与客群定位一次完成——中文水育命名的范本" },
+        { name: "British Swim School", takeaway: "「英式」的教学体系背书：借国家词根暗示课程的正统与严谨，特许经营扩张时品牌感稳定——体系背书型命名的直球" },
+        { name: "AquaTots", takeaway: "aqua（水）+ tots（幼儿）的合成词：客群与品类压缩进四个音节，全球特许经营的名字资产——合成词命名在婴幼儿赛道的标准操作" },
+      ],
+      pitfalls: [
+        "竞技气质吓跑启蒙客群：「冠军、竞速、鲨鱼」系名字让怕水的孩子与心疼的家长望而却步——启蒙线要的是玩水不是训练",
+        "锁死「少儿」限制半径：亲子水育、成人私教、赛事俱乐部都在延展路上，名字带死年龄段，扩客群时品牌要重来",
+        "缺安全锚点：溺水恐惧是这个品类的底层情绪，名字里没有任何守护感，家长决策时要多问十个问题",
+        "忽略妈妈群口播：获客靠妈妈群转介绍，名字拗口难念，「你家娃在哪学游泳」这句最值钱的对话就接不住",
+      ],
+    },
+    en: {
+      label: "Swim schools",
+      title: "How to Name a Swim School: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Swim school and baby-swimming naming guide: water-play imagery, safety anchors, fish personas, breakdowns of Goldfish/SwimJim/AquaTots, recommended TLDs and pitfalls — then hunt an available swim brand domain with AI.",
+      intro:
+        "A swim school's name must first soothe a primal fear: parents handing over a child who can't swim are haunted by drowning headlines, so the category's first naming job is signaling safety and professionalism — guardian roots (safe, shield, harbor) and institutional registers (academy, school) directly answer the biggest decision factor: \"is my child safe in your hands?\" The second job is dissolving water fear: the first hurdle in teaching children isn't technique but psychology, and a name that leans into water play (splash, bubbles, waves) reframes \"lessons\" as \"playtime,\" lowering both the child's resistance and the parent's heartache. The leaders know this cold: Goldfish Swim School turns the pool into a fishbowl playground with a single fish, while SwimJim's rhyming coach name radiates neighborly warmth. For raw material, water, wave, fish and blue roots live natively on the spectrum, and the fish family (goldfish, flying fish, mermaid) is the skeleton key of the kids' segment — \"swim like a fish\" is the outcome promise itself. The third lever is progression narrative: swim schools sell a laddered journey from water-shy to freestyle, and growth roots (leap, soar, stroke) echo the upsell path of level-based class packs. Mind the parent-group test: acquisition runs on mom-group referrals and local search, so \"city + swim lessons\" keywords earn their keep, and the name must roll in \"where does your kid swim?\" Finally, leave radius: schools expand into baby-and-me classes, adult coaching and swim clubs, so an age-locked name caps the market.",
+      namingIdeas: [
+        "Water-play imagery: splash, bubbles, waves — recast the pool as a playground and dissolve the child's water fear before the first lesson",
+        "Fish personas: goldfish, flying fish, mermaid — the kids' segment's skeleton key, where \"swim like a fish\" is the outcome promise in a single image",
+        "Safety anchors: safe, shield, harbor — drowning fear is the parent's biggest decision factor, and a guardian root answers it right in the name",
+        "Institutional registers: academy, swim school — frame lessons as proper education, and parents pay premium tuition for a structured curriculum",
+        "Progression narrative: leap, soar, stroke — swim schools sell a laddered journey, and growth roots echo the level-based upsell path",
+      ],
+      cases: [
+        { name: "Goldfish Swim School", takeaway: "One goldfish turns the pool into a fishbowl playground: the literal category (swim school) secures search while the fish image dissolves water fear — America's biggest kids' swim chain running the textbook combination" },
+        { name: "SwimJim", takeaway: "A rhyming coach name with next-door warmth: swim and Jim lock into a beat that children chant, and the human touch outweighs institutional chill — the personified play for boutique schools" },
+        { name: "AquaTots", takeaway: "Aqua plus tots compressed into four syllables: audience and category welded into one franchisable asset — the standard blend-word move in the early-childhood lane" },
+        { name: "British Swim School", takeaway: "A nationality root as curriculum credential: borrowing \"British\" to imply rigor and pedigree, keeping the brand stable across franchise expansion — system-endorsement naming played straight" },
+        { name: "Big Blue Swim School", takeaway: "The ocean's nickname scaled down for kids: \"big blue\" promises vast confidence in friendly monosyllables, with the literal category attached for search — imagery and findability in balance" },
+      ],
+      pitfalls: [
+        "Competitive registers scaring off beginners: champion, racing and shark names intimidate water-shy kids and their anxious parents — the entry segment wants play, not training camp",
+        "Age-locking the name: baby-and-me classes, adult coaching and swim clubs are all on the expansion path, and a kids-locked name forces a rebrand to reach them",
+        "No safety anchor: drowning fear is the category's bedrock emotion, and a name carrying zero guardianship makes every parent ask ten more questions",
+        "Failing the mom-group test: acquisition runs on parent referrals, and a clunky name drops the most valuable sentence — \"where does your kid swim?\"",
+      ],
+    },
+  },
+  "3dprint": {
+    slug: "3dprint",
+    tlds: [
+      { tld: "com", zh: "对公报价与批量订单的信任底线，采购走流程最稳", en: "The trust baseline for B2B quotes and batch orders" },
+      { tld: "tech", zh: "技术属性直给，增材制造的极客气质天然适配", en: "Tech identity outright — natively fitting additive manufacturing's geek register" },
+      { tld: "works", zh: "「工坊/工厂」语义后缀，制造业务的实干签名", en: "The workshop suffix — a maker's-hands signature for manufacturing" },
+    ],
+    zh: {
+      label: "3D 打印",
+      title: "3D 打印服务怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "3D 打印与增材制造服务命名指南：层积意象、从图到物承诺、材料词根等 5 种思路，Shapeways/未来工场/Protolabs 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的 3D 打印品牌域名。",
+      intro:
+        "3D 打印服务的名字要在两类完全不同的客户面前都成立：工程师客户拿着 STL 文件来比价，他们要的是「专业、快、公差可控」，名字的技术感（proto、fab、精度词根）是信任的第一道背书；而消费级客户拿着一张图片来定制手办，他们要的是「想得出就做得出」的魔法感，名字太工业（XX 机械加工）会让他们以为走错了门。头部品牌各有取舍：Shapeways 用「shape+ways」承诺「万物皆可成形」，Protolabs 用「原型+实验室」锁死工程师心智，未来工场直接把「未来制造」写进招牌。命名的核心素材是「从无到有」的过程感：层积、成形、生长、造物都在谱系上，3D 打印一层层「长」出实物的过程本身就是最好的品牌故事。第二个抓手是速度承诺：打样快是这门生意最硬的卖点，「快、即、rapid、instant」词根直接回应「明天能不能拿到」的核心问题。第三个抓手是材料与工艺暗示：树脂、尼龙、钛合金、光固化各有客群，垂直工艺的名字（如专做金属的）能吃到细分搜索流量。还要留业务半径：打印服务普遍延展逆向扫描、小批量注塑与设计代建模，名字锁死「打印」会让「一站式制造」的升级叙事变别扭。最后过拼写关：目标客户在搜索引擎和 B2B 平台找你，名字要经得起「听一遍就能拼出来」的测试。",
+      namingIdeas: [
+        "层积与成形意象：层、积、形、shape——3D 打印一层层「长」出实物的过程就是最好的品牌故事",
+        "从图到物的魔法感：造物、成真、make it real——消费级客户要的是「想得出就做得出」的承诺",
+        "速度词根：快、即、rapid、proto——打样快是最硬卖点，名字直接回应「明天能不能拿到」",
+        "材料与工艺暗示：钛、树脂、光、metal——垂直工艺命名吃细分搜索流量，专业客户按工艺找供应商",
+        "工坊实干感：工场、fab、works、lab——制造业务的名字要有机器轰鸣声，实验室词根兼顾研发气质",
+      ],
+      cases: [
+        { name: "Shapeways", takeaway: "shape（成形）+ ways（万法）：「万物皆可成形」的承诺压进两个音节，消费级 3D 打印平台化的开山命名" },
+        { name: "Protolabs", takeaway: "proto（原型）+ labs（实验室）：精准锁死工程师的打样心智，从 3D 打印扩到注塑与 CNC 名字依然成立——留足半径的教科书" },
+        { name: "未来工场", takeaway: "「未来」的技术叙事+「工场」的实干落地：把增材制造说成下一代制造业的入口，B 端听着可靠、媒体写着顺手——中文智造命名的范本" },
+        { name: "Formlabs", takeaway: "form（形）+ labs：从桌面光固化打印机起家，名字只锁「成形」不锁工艺，硬件、材料、软件全线延展毫无违和" },
+        { name: "Xometry", takeaway: "几何（geometry）的变形造词：把「按几何图纸报价」的按需制造平台气质写进名字——造词保留词根联想的高阶操作" },
+      ],
+      pitfalls: [
+        "锁死「打印」限制升级叙事：逆向扫描、小批量注塑、设计代建模都在延展路上，名字带死工艺，做「一站式制造」时要重讲故事",
+        "太工业吓跑消费客群：「XX 机械加工」式命名让定制手办的个人客户以为走错门——两类客户的气质要兼容",
+        "极客梗名过不了采购关：纯圈内梗（层高 0.1、G-code 系）工程师会心一笑，但采购流程里的对公转账需要正经供应商名",
+        "拼写复杂断掉搜索链路：B2B 客户靠搜索与平台比价找供应商，听一遍拼不出的名字等于把询盘让给同行",
+      ],
+    },
+    en: {
+      label: "3D printing",
+      title: "How to Name a 3D Printing Service: Strategies, Case Studies & Domains",
+      metaDescription:
+        "3D printing and additive manufacturing naming guide: layer-built imagery, idea-to-object promises, material roots, breakdowns of Shapeways/Protolabs/Formlabs, recommended TLDs and pitfalls — then hunt an available 3D printing domain with AI.",
+      intro:
+        "A 3D printing service's name must work for two very different customers at once: engineers arriving with STL files to compare quotes want professionalism, speed and tolerance control, and a technical register (proto, fab, precision roots) is the first credential; consumer customers arriving with a picture to turn into a figurine want magic — \"if you can imagine it, we can make it\" — and an industrial machine-shop name makes them think they've walked into the wrong door. The leaders each picked a lane: Shapeways compresses \"everything can take shape\" into two syllables, Protolabs welds itself to the engineer's prototyping mindset, Formlabs locks only onto \"form\" and expands freely across hardware, materials and software. The category's core material is the something-from-nothing process: layer, build, grow and form all live on the spectrum, because watching an object grow layer by layer is the brand story itself. The second lever is the speed promise: fast turnaround is this trade's hardest selling point, and rapid or instant roots answer the customer's real question — \"can I have it tomorrow?\" The third is material and process hints: resin, nylon, titanium and SLA each pull their own buyers, and process-vertical names ride niche search traffic. Leave radius too: print bureaus routinely expand into 3D scanning, low-volume injection molding and design services, so a name welded to \"printing\" cramps the one-stop-manufacturing story. Finally, pass the spelling test: customers find you through search engines and B2B platforms, and a name that can't survive \"hear it once, spell it right\" hands inquiries to competitors.",
+      namingIdeas: [
+        "Layer-built imagery: layer, build, form, shape — an object growing layer by layer is the brand story, so write the process into the name",
+        "Idea-to-object magic: make it real, materialize — consumer customers buy the promise that anything imaginable can be manufactured",
+        "Speed roots: rapid, instant, proto — fast turnaround is the hardest selling point, and the name should answer \"can I have it tomorrow?\"",
+        "Material and process hints: titanium, resin, light, metal — process-vertical names ride niche search traffic where professionals shop by technology",
+        "Workshop registers: works, fab, forge, lab — a manufacturing name needs the hum of machines, with lab roots adding R&D credibility",
+      ],
+      cases: [
+        { name: "Shapeways", takeaway: "Shape plus ways: \"everything can take shape\" compressed into two syllables — the founding name of consumer 3D printing as a platform" },
+        { name: "Protolabs", takeaway: "Proto plus labs: welded precisely to the engineer's prototyping mindset, yet the name held as the company expanded into injection molding and CNC — the textbook of radius left in reserve" },
+        { name: "Formlabs", takeaway: "Form plus labs: locking onto \"form\" rather than any single process let the desktop-SLA pioneer stretch across hardware, resins and software without a seam" },
+        { name: "Xometry", takeaway: "A coinage bent out of \"geometry\": the on-demand platform's quote-by-geometry model written into the name itself — the advanced move of coining while keeping the root's association" },
+        { name: "Sculpteo", takeaway: "Sculpt plus a Latinate tail: casting digital manufacturing as sculpture elevates the service from job shop to craft — a register upgrade in nine letters" },
+      ],
+      pitfalls: [
+        "Welding the name to \"printing\": scanning, injection molding and design services are the expansion path, and a process-locked name forces a new story to sell one-stop manufacturing",
+        "Too industrial for consumers: machine-shop naming makes figurine customers think they're in the wrong place — the name must hold both audiences",
+        "Insider jokes failing procurement: a G-code pun earns an engineer's smile, but the purchase order needs a vendor name that looks serious on an invoice",
+        "Complex spellings breaking the search chain: B2B buyers find vendors through search and platform listings, and an unspellable name hands the inquiry to a competitor",
+      ],
+    },
+  },
+  vending: {
+    slug: "vending",
+    tlds: [
+      { tld: "com", zh: "点位合作与加盟招商的信任底线，B 端谈判最稳", en: "The trust baseline for site partnerships and franchising" },
+      { tld: "store", zh: "「商店」语义直给，无人零售的品类后缀", en: "Store semantics outright — the retail category suffix" },
+      { tld: "tech", zh: "智能硬件与系统能力的背书，无人零售的科技底色", en: "Crediting the smart-hardware stack — unattended retail's tech backbone" },
+    ],
+    zh: {
+      label: "无人零售",
+      title: "无人零售品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "自动售货机与无人零售品牌命名指南：随时随地承诺、盒子意象、点位信任等 5 种思路，友宝/丰e足食/Farmer's Fridge 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的无人零售品牌域名。",
+      intro:
+        "无人零售品牌的名字要同时说服三种人：掏钱的消费者、给点位的物业与买机器的加盟商。消费者场景里，自动售货机的交易只有十几秒，名字要在机身贴纸上一眼传达「近、快、随时有」——「便利、即、24h」的可得性词根是品类底色；但光有便利不够，无人零售的最大心理障碍是「机器背后没有人」，出了问题找谁？所以头部品牌都在名字里补人情味：友宝用「友」字给冰冷的机器装上朋友人设，丰e足食用「丰衣足食」的成语改造承诺员工福利的温饱感。第二个战场是 B 端：点位方（写字楼、医院、工厂）和加盟商看的是「运营能力与靠谱程度」，名字太网红会让物业觉得不长久，机构感与科技感（智、云、link）是谈判桌上的隐形资产。词库上，「盒、柜、站、仓、格」的容器词根自带品类联想，「鲜、暖、补给」则按品类细分（鲜食柜、咖啡机、补给站）各有谱系。命名还要考虑场景延展：无人零售从零食饮料延展到鲜食、咖啡、药品甚至美妆，名字锁死单一品类（XX 饮料机）会限制点位的坪效想象。最后过搜索与售后关：机身上的名字是最大的广告位，也是消费者投诉退款时搜索的关键词，好念好拼、搜得到公众号或小程序，是这门「无人」生意最重要的「有人」通道。",
+      namingIdeas: [
+        "随时随地承诺：便利、即、24h、anytime——可得性是品类底色，名字先说清「你需要时我都在」",
+        "容器意象：盒、柜、站、仓——容器词根自带品类联想，「补给站」的场景感比「售货机」的设备感更亲人",
+        "人情味补丁：友、暖、伙伴——「机器背后没有人」是最大心理障碍，名字里的人设让冰冷的柜子有了客服脸",
+        "科技与运营背书：智、云、link、fresh——点位方与加盟商看的是运营能力，科技词根是谈判桌上的隐形资产",
+        "品类升维词根：鲜、食、补给——从零食柜升维到鲜食与补给平台，名字别锁死单一 SKU",
+      ],
+      cases: [
+        { name: "友宝", takeaway: "「友」字给自动售货机装上朋友人设，「宝」的亲昵感消解机器的冰冷：中国无人零售第一股的名字先解决「没有人」的信任问题" },
+        { name: "丰e足食", takeaway: "成语「丰衣足食」的一字改造：e 字埋进数字化基因，成语自带的温饱承诺精准匹配企业零食柜场景——顺丰系命名改造的教科书" },
+        { name: "Farmer's Fridge", takeaway: "「农夫的冰箱」：把自动售货机重新定义为装满新鲜沙拉的冰箱，农夫词根对冲「机器食品」的不新鲜偏见——品类再定义的命名标杆" },
+        { name: "小e微店", takeaway: "「小 e」的数字化昵称+「微店」的轻量感：无人值守便利架进办公室，名字的轻盈匹配「信任经济」的轻交付——场景化命名的示范" },
+        { name: "Byte", takeaway: "「字节/一口」的双关：科技词根与食物场景一词双吃，智能鲜食柜的名字资产——英文双关命名在无人零售的轻巧落地" },
+      ],
+      pitfalls: [
+        "锁死单一品类：「XX 饮料机」式名字在扩鲜食、咖啡、药品时处处别扭——点位的坪效想象力不该被名字限制",
+        "只讨好 C 端丢了 B 端：太网红的名字让物业与加盟商怀疑运营的长久性——点位谈判桌上需要机构感",
+        "缺人情味锚点：「无人」是效率卖点也是信任负债，名字里没有任何温度，售后投诉时消费者的火气会更大",
+        "忽略机身搜索场景：名字难拼难搜，消费者扫码出问题时找不到公众号客服——「无人」生意最贵的是「找不到人」",
+      ],
+    },
+    en: {
+      label: "Vending & unattended retail",
+      title: "How to Name a Vending or Unattended Retail Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Vending machine and unattended retail naming guide: always-there promises, container imagery, trust patches, breakdowns of Farmer's Fridge/Byte/友宝, recommended TLDs and pitfalls — then hunt an available vending brand domain with AI.",
+      intro:
+        "An unattended retail brand's name must persuade three audiences at once: the consumer paying at the machine, the property manager granting the location, and the operator buying the franchise. At the consumer end, a vending transaction lasts fifteen seconds, so the name on the machine wrap must instantly say \"near, fast, always stocked\" — availability roots (instant, 24/7, anytime) are the category's base coat. But convenience alone isn't enough: unattended retail's biggest psychological barrier is that there's no human behind the machine — who do I call when my snack jams? — so the leaders patch warmth into the name itself: China's 友宝 (\"friend treasure\") gives the cold cabinet a friendly persona, while Farmer's Fridge redefines the vending machine as a farmer's refrigerator full of fresh salads. The second battlefield is B2B: office towers, hospitals and factories judge operational credibility, and a name too meme-y makes landlords doubt you'll last — institutional and tech registers (smart, cloud, link) are silent assets at the negotiating table. For raw material, container roots (box, fridge, station, depot) carry the category natively, while fresh, fuel and supply roots segment by product line. Leave category radius too: unattended retail stretches from snacks into fresh food, coffee, pharmacy and beauty, and a name locked to one SKU (\"XX Soda Machine\") caps the revenue-per-location story. Finally, mind the machine-wrap search test: the name on the cabinet is both the biggest ad slot and the keyword a frustrated customer searches for a refund — pronounceable, spellable and findable is the \"unattended\" trade's most important human channel.",
+      namingIdeas: [
+        "Always-there promises: instant, 24/7, anytime — availability is the category's base coat, so the name should say \"whenever you need it, I'm here\"",
+        "Container imagery: box, fridge, station, depot — container roots carry the category natively, and \"supply station\" feels warmer than \"vending machine\"",
+        "Warmth patches: friend, buddy, fresh-faced personas — \"no human behind the machine\" is the biggest barrier, and a persona in the name gives the cold cabinet a customer-service face",
+        "Tech and operations credentials: smart, cloud, link — landlords and franchisees judge operational credibility, and tech roots are silent assets at the site-negotiation table",
+        "Category headroom: fresh, food, supply — name the platform, not the SKU, so the brand survives the stretch from snacks into fresh food and coffee",
+      ],
+      cases: [
+        { name: "Farmer's Fridge", takeaway: "A farmer's refrigerator, not a vending machine: the agricultural root counters the \"machine food is stale\" prejudice while \"fridge\" promises freshness — the benchmark of category redefinition by naming" },
+        { name: "Byte", takeaway: "One word biting two ways: the tech byte and the food bite fused in four letters — smart-fridge branding that carries both the hardware stack and the appetite" },
+        { name: "Youbao (\u53cb\u5b9d)", takeaway: "\"Friend treasure\": a warmth patch on a cold cabinet, solving the no-human trust problem right in the name — China's first listed vending operator leading with persona over hardware" },
+        { name: "Feng-e Zushi (\u4e30e\u8db3\u98df)", takeaway: "A four-character idiom for \"well-fed and well-clothed\" with one character swapped for \"e\": digital DNA embedded in a prosperity promise, perfectly pitched at office snack cabinets — the textbook of idiom-hacking" },
+        { name: "Vengo", takeaway: "Vending bent toward \"I come\" in Spanish: a compact coinage that keeps the category root while sounding like arrival and availability — a naming two-for-one in five letters" },
+      ],
+      pitfalls: [
+        "Locking the name to one SKU: \"XX Soda Machine\" turns awkward the day you add fresh food, coffee or pharmacy — don't let the name cap the revenue-per-location story",
+        "Winning consumers but losing landlords: a meme-grade name makes property managers doubt your operational longevity — the site-negotiation table needs institutional weight",
+        "No warmth anchor: \"unattended\" is an efficiency pitch and a trust liability at once, and a name with zero temperature makes every refund complaint angrier",
+        "Failing the machine-wrap search test: when the snack jams, the customer searches the name on the cabinet — unfindable support is the most expensive failure in an unattended business",
+      ],
+    },
+  },
+  kidsart: {
+    slug: "kidsart",
+    tlds: [
+      { tld: "com", zh: "课程包与续费决策的信任底线，家长查机构最稳", en: "The trust baseline for class packs and renewal decisions" },
+      { tld: "art", zh: "品类后缀直给，艺术机构的天然签名", en: "The category suffix outright — an art institution's native signature" },
+      { tld: "academy", zh: "机构感背书，把兴趣班包装成体系化美育", en: "The institutional suffix — framing hobby classes as structured art education" },
+    ],
+    zh: {
+      label: "少儿美术",
+      title: "少儿美术机构怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "少儿美术与创意教育机构命名指南：色彩意象、想象力叙事、大师致敬等 5 种思路，杨梅红/画啦啦/番茄田等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的少儿美术品牌域名。",
+      intro:
+        "少儿美术机构的名字要同时讨好两代人：孩子看到名字要觉得「好玩」，家长听到名字要觉得「有用」。这个品类的决策链路很典型——孩子被色彩和贴纸吸引进门，家长为「培养创造力、审美与专注力」的教育叙事买单，续费则取决于孩子「还想不想去」。所以命名的第一素材是色彩与童趣：红、彩虹、蜡笔、番茄、杨梅这些高饱和度的词根自带儿童缘，头部品牌（杨梅红、番茄田、画啦啦）几乎都在这条谱系上。第二个抓手是想象力叙事：美术教育的卖点早已从「画得像」升级为「敢想敢画」，名字往创造、想象、探索方向走（想象乐、创想）能精准接住新一代家长「保护创造力」的教育焦虑。第三个抓手是专业背书：客单价上探的机构需要「学院、美院、大师」的体系感——用艺术大师词根（毕加索说「每个孩子都是艺术家」是全行业的精神图腾）或「美育」的教育定位词，能把兴趣班升维成艺术素养教育。还要考虑口播与搜索：获客主链路是家长群转介绍与「城市+少儿美术」搜索，名字要让孩子念得出、愿意念——孩子主动说「我要去 XX」是最强的续费信号。最后留半径：美术机构普遍延展书法、手工、艺术研学与考级培训，名字锁死「画画」会限制素质教育全科的延展想象。",
+      namingIdeas: [
+        "高饱和色彩意象：红、彩虹、蜡笔、番茄——高饱和词根自带儿童缘，孩子看到名字就想推门",
+        "想象力叙事：创、想、探索、wonder——「敢想敢画」取代「画得像」，接住新一代家长保护创造力的教育焦虑",
+        "大师与美育背书：美院、大师、艺术家——客单价上探需要体系感，把兴趣班升维成艺术素养教育",
+        "童言童语节奏：叠字、啦啦、嘟嘟——孩子念得出、愿意念的名字，「我要去 XX」是最强续费信号",
+        "自然生长词根：田、园、树、芽——把美术教育说成一场自然生长，去功利化的名字反而让家长更安心",
+      ],
+      cases: [
+        { name: "杨梅红", takeaway: "一颗高饱和度的水果做品牌：颜色（红）与酸甜的童年味觉双重联想，全球连锁的少儿美院用一个词完成「儿童缘」的原始积累" },
+        { name: "番茄田艺术", takeaway: "「番茄」的童趣+「田」的生长隐喻：把美术教育说成一块让创造力自然生长的田地——去功利化叙事的命名范本" },
+        { name: "画啦啦", takeaway: "动词「画」+拟声「啦啦」：孩子一念就上口的欢快节奏，在线少儿美术的名字自带课堂气氛——童言童语命名的直球打法" },
+        { name: "Art Attack", takeaway: "BBC 经典少儿美术节目：「艺术来袭」的双 A 头韵把画画说成一场冒险，屏幕内外通用的能量感——英文儿童美术 IP 命名的标杆" },
+        { name: "小央美", takeaway: "「央美」（中央美术学院）的少儿化改造：借顶级美院的品牌势能做专业背书，「小」字完成年龄段定位——借势命名的轻巧示范" },
+      ],
+      pitfalls: [
+        "太成人化没儿童缘：「XX 艺术中心」的机构脸孩子无感——进门靠孩子被吸引，名字先过孩子这一关",
+        "锁死「画画」限制全科延展：书法、手工、研学、考级都在路线图上，名字带死单一品类，扩科时要重讲故事",
+        "应试气质吓跑素质型家长：「考级、集训」系名字与「保护创造力」的新叙事背道而驰——两类定位不能骑墙",
+        "孩子念不出的名字：续费信号是孩子主动说「我要去 XX」，拗口的名字连这句话都接不住",
+      ],
+    },
+    en: {
+      label: "Kids' art schools",
+      title: "How to Name a Kids' Art School: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Children's art education naming guide: saturated-color imagery, imagination narratives, master endorsements, breakdowns of 杨梅红/Art Attack/番茄田, recommended TLDs and pitfalls — then hunt an available kids' art brand domain with AI.",
+      intro:
+        "A kids' art school's name must charm two generations at once: children should hear it and think \"fun,\" parents should hear it and think \"worthwhile.\" The category's decision chain is textbook — the child is drawn in by color and stickers, the parent pays for the creativity-and-focus education story, and renewal hinges on whether the child still wants to go. So the first material bin is color and whimsy: saturated roots like red, rainbow, crayon and tomato carry native kid-appeal, and the Chinese category leaders (杨梅红 \"red bayberry,\" 番茄田 \"tomato field,\" 画啦啦 \"paint-lala\") all live on this spectrum. The second lever is the imagination narrative: art education's pitch has shifted from \"draw it right\" to \"dare to imagine,\" and creation, wonder and explore roots catch the new generation of parents anxious to protect creativity rather than drill technique. The third is professional endorsement: schools moving upmarket need academy and master registers — Picasso's \"every child is an artist\" is the whole industry's totem — to elevate a hobby class into structured art literacy. Mind the playground test: acquisition runs on parent-group referrals and \"city + kids art class\" search, and the name must be one a child can say and wants to say — \"I want to go to X\" is the strongest renewal signal in the business. Finally, leave radius: art schools routinely add calligraphy, crafts, art trips and portfolio prep, so a name welded to \"painting\" caps the whole-arts expansion story.",
+      namingIdeas: [
+        "Saturated-color imagery: red, rainbow, crayon, tomato — high-saturation roots carry native kid-appeal, pulling children toward the door by name alone",
+        "Imagination narratives: create, wonder, explore — \"dare to imagine\" has replaced \"draw it right,\" and creativity roots catch the new parenting anxiety head-on",
+        "Master and academy endorsements: atelier, academy, artist — moving upmarket needs institutional weight, elevating hobby classes into art literacy education",
+        "Child-mouth rhythms: reduplication, sing-song syllables — a name children can say and want to say, because \"I want to go to X\" is the strongest renewal signal",
+        "Organic-growth roots: field, garden, sprout — casting art education as natural growth de-pressurizes the pitch, and paradoxically reassures parents more",
+      ],
+      cases: [
+        { name: "Yangmeihong (\u6768\u6885\u7ea2)", takeaway: "A saturated fruit as the brand: the color red plus the sweet-sour taste of childhood in one word — the global kids' art chain that built its kid-appeal on a single berry" },
+        { name: "Tomato Field (\u756a\u8304\u7530)", takeaway: "Tomato whimsy plus field-as-growth metaphor: art education recast as a plot of land where creativity grows naturally — the naming template of the de-pressurized pitch" },
+        { name: "Art Attack", takeaway: "The BBC's classic kids' art show: double-A alliteration turning art into an adventure, with energy that travels from screen to classroom — the benchmark of English kids' art IP naming" },
+        { name: "Hualala (\u753b\u5566\u5566)", takeaway: "The verb \"paint\" plus a sing-song \"lala\": a rhythm children chant on first hearing, carrying classroom cheer into an online brand — child-mouth naming played straight" },
+        { name: "The Art Studio NY", takeaway: "Plain category words plus city anchor: zero cleverness, maximum findability — proof that in local-search-driven education, a literal name is a defensible strategy" },
+      ],
+      pitfalls: [
+        "Too grown-up for kids: an \"XX Art Center\" institutional face leaves children cold — the child chooses the door, so the name must pass the child first",
+        "Welding the name to \"painting\": calligraphy, crafts, art trips and portfolio prep are all on the roadmap, and a single-craft name forces a new story at every expansion",
+        "Exam registers repelling enrichment parents: grading-and-bootcamp names contradict the protect-creativity narrative — the two positionings cannot be straddled",
+        "A name children can't say: the renewal signal is the child announcing \"I want to go to X,\" and a clunky name drops the most valuable sentence in the business",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

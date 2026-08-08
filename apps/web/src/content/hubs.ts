@@ -47,14 +47,14 @@ export function tldHubGroups(): { id: string; zh: string; en: string; tlds: stri
 /* ---------- /guide 分组：按行业大类归类，未列出的 slug 自动进「更多行业」 ---------- */
 
 const GUIDE_CATEGORY_DEFS: { id: string; zh: string; en: string; members: string[] }[] = [
-  { id: "tech", zh: "科技与互联网", en: "Tech & internet", members: ["saas", "ai", "agent", "devtools", "web3", "security", "hardware", "opensource", "indiehacker", "indiegame", "drone", "solar"] },
-  { id: "ecommerce", zh: "电商与零售", en: "E-commerce & retail", members: ["ecommerce", "crossborder", "livestream", "resale", "fleamarket", "sourcing", "forwarder", "usedcar", "fashion", "jewelry", "toys", "furniture", "hanfu", "petsupplies", "gearrental"] },
+  { id: "tech", zh: "科技与互联网", en: "Tech & internet", members: ["saas", "ai", "agent", "devtools", "web3", "security", "hardware", "opensource", "indiehacker", "indiegame", "drone", "solar", "3dprint"] },
+  { id: "ecommerce", zh: "电商与零售", en: "E-commerce & retail", members: ["ecommerce", "crossborder", "livestream", "resale", "fleamarket", "sourcing", "forwarder", "usedcar", "fashion", "jewelry", "toys", "furniture", "hanfu", "petsupplies", "gearrental", "vending"] },
   { id: "food", zh: "餐饮与食品", en: "Food & beverage", members: ["food", "coffee", "bakery", "brewery", "farm"] },
   { id: "content", zh: "内容与创作", en: "Content & creators", members: ["blog", "podcast", "newsletter", "creator", "music", "photography", "travelshoot", "mcn", "boardgame"] },
-  { id: "edu", zh: "教育与知识", en: "Education & knowledge", members: ["edu", "courses", "studyabroad", "codingschool", "language", "preschool", "bookstore", "translation", "knowledgepay"] },
-  { id: "health", zh: "健康与运动", en: "Health & fitness", members: ["fitness", "health", "yoga", "coach", "crossfit", "therapy", "dental", "eldercare", "ski"] },
+  { id: "edu", zh: "教育与知识", en: "Education & knowledge", members: ["edu", "courses", "studyabroad", "codingschool", "language", "preschool", "bookstore", "translation", "knowledgepay", "swimschool", "kidsart"] },
+  { id: "health", zh: "健康与运动", en: "Health & fitness", members: ["fitness", "health", "yoga", "coach", "crossfit", "therapy", "dental", "eldercare", "ski", "climbing"] },
   { id: "travel", zh: "旅行与出行", en: "Travel & mobility", members: ["travel", "bnb", "outdoor", "automotive", "moving", "logistics", "rvtravel"] },
-  { id: "local", zh: "生活服务", en: "Local services", members: ["pets", "vet", "aquarium", "cleaning", "barber", "beauty", "wedding", "florist", "gardening", "interior", "events", "escaperoom", "parenting", "pettraining", "nailsalon", "laundry", "matchmaking"] },
+  { id: "local", zh: "生活服务", en: "Local services", members: ["pets", "vet", "aquarium", "cleaning", "barber", "beauty", "wedding", "florist", "gardening", "interior", "events", "escaperoom", "parenting", "pettraining", "nailsalon", "laundry", "matchmaking", "tattoo"] },
   { id: "business", zh: "商业与专业服务", en: "Business & professional", members: ["fintech", "legal", "accounting", "insurance", "recruiting", "realestate", "agency", "freelance", "marketing", "coworking", "resume", "nonprofit", "community", "game", "esports"] },
 ];
 
