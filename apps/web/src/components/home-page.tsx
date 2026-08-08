@@ -637,6 +637,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一家短视频 MCN 机构，寓意「一套能把达人做火的造星系统」；气质要有能量、正规、有内容宇宙感；场景是达人签约谈判、品牌方报价单和平台机构榜单里都拿得出手。",
     en: "A short-video MCN agency. The name should feel like a star-making system that turns creators into hits; the vibe is energetic, legitimate, universe-scale; it must impress in creator signing talks, on a brand's rate card, and on platform agency leaderboards.",
   },
+  {
+    slug: "opensource",
+    labelZh: "开源项目",
+    labelEn: "Open source",
+    zh: "一个开源项目，寓意「一群人一起把一个好工具做到极致」；气质要简洁、有极客彩蛋感、全小写好敲；场景是 npm install 命令、README 标题和技术分享里的「我们用 X 替换了它」都顺手顺口。",
+    en: "An open source project. The name should feel like a community polishing one great tool together; the vibe is minimal, quietly witty, all-lowercase and typeable; it must work as an npm install command, a README title, and in \"we replaced it with X\" conference talks.",
+  },
+  {
+    slug: "indiegame",
+    labelZh: "独立游戏",
+    labelEn: "Indie games",
+    zh: "一款独立游戏或游戏工作室，寓意「一段只有这里才有的独特体验」；气质要有情绪浓度、有世界观想象、一听就想搜；场景是 Steam 搜索框、主播口播「今天玩 X」和玩家安利帖里都好找好记。",
+    en: "An indie game or studio. The name should promise an experience found nowhere else; the vibe is emotionally dense, world-evoking, instantly searchable; it must be findable in the Steam search box, in a streamer's \"today we're playing X\", and in fan recommendation posts.",
+  },
+  {
+    slug: "gearrental",
+    labelZh: "影棚器材租赁",
+    labelEn: "Gear & studio rentals",
+    zh: "一个摄影棚与摄影器材租赁品牌，寓意「设备准时到、灯全亮、棚准点开门」；气质要专业、靠谱、有圈内懂行感；场景是摄影师的「棚我订的 X」转介绍、报价单抬头和同城闪送面单上都可信顺口。",
+    en: "A photo studio and camera gear rental brand. The name should promise the gear arrives, the lights fire, the studio opens on time; the vibe is professional, dependable, insider-fluent; it must sound right in a photographer's referral, on a quote header, and on a same-day delivery label.",
+  },
+  {
+    slug: "sourcing",
+    labelZh: "电商选品",
+    labelEn: "Product sourcing",
+    zh: "一个电商选品与市场分析工具，寓意「比别人早一步看到爆款」；气质要敏锐、数据感、像一台选品雷达；场景是卖家教程口播「我用的是 X」、卖家社群安利和订阅付费页上都可信好记。",
+    en: "An e-commerce product research tool. The name should feel like seeing the winning product one step before everyone else; the vibe is sharp, data-driven, radar-like; it must land in tutorial voice-overs (\"I use X\"), seller community referrals, and on the subscription pricing page.",
+  },
+  {
+    slug: "fleamarket",
+    labelZh: "线下市集",
+    labelEn: "Markets & pop-ups",
+    zh: "一个线下市集与快闪活动品牌，寓意「有趣的人在有趣地聚集」；气质要好玩、上镜、有在地文化感；场景是小红书封面海报、朋友圈「这周末去 X」和主理人招商函里都亮眼可信。",
+    en: "A flea market and pop-up event brand. The name should feel like interesting people gathering interestingly; the vibe is playful, photogenic, rooted in local culture; it must pop on a poster, in \"let's hit X this weekend\" messages, and in vendor recruitment letters.",
+  },
+  {
+    slug: "ski",
+    labelZh: "滑雪户外",
+    labelEn: "Ski & snow",
+    zh: "一个滑雪装备与雪友社群品牌，寓意「山就在那里，雪季永远值得」；气质要野、有速度感、又撑得起专业信任；场景是雪道上的呼喊、雪具吊牌和雪友群「去 X 家拿板」的安利里都一遍听清。",
+    en: "A ski gear and snow community brand. The name should feel like the mountain is calling and the season is always worth it; the vibe is wild, fast, yet safety-grade trustworthy; it must carry through a shout across the slope, on a gear hangtag, and in \"grab your board at X\" crew chats.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
