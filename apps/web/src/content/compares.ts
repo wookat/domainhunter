@@ -1477,6 +1477,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Fast-launch landing pages", "Temporary campaigns & event sites", "Generic homepages & personal sites", "Ultra-low budgets chasing availability"],
     },
   },
+  "site-vs-com": {
+    slug: "site-vs-com",
+    a: "site",
+    b: "com",
+    zh: {
+      title: ".site 和 .com 怎么选：一美元起步与黄金标准的取舍",
+      metaDescription: ".site 首年常见一两美元、几乎什么词都能注册到，.com 是无需解释的黄金标准。对比两者的信任度、续费成本与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "这是「起步成本」与「长期信任」的经典对决。.site 的优势全在入场端：首年常年一两美元，且因为库存深，几乎任何词根都能原样注册——同一份名单在 .site 下的命中率是 .com 的许多倍。但代价有两个：一是续费跳价明显（要按两百元上下核算，别被首年价格骗了），二是信任折扣——用户对陌生 .site 域名的第一反应偏谨慎，冷启动投放和邮件触达都要多花力气自证。.com 反过来：好名字几乎绝迹、要么加长要么加钱收购，但拿到之后就是零解释成本的资产，口播、名片、投资人邮件全都顺。判断标准：验证期项目、落地页、campaign 站——.site 的低成本试错完全合理；一旦确认要长期经营品牌，尽早把 .com 收下做主站，.site 可以留着做活动短链或 301。",
+      pickA: ["快速验证的 MVP 与落地页", "临时活动与 campaign 站", "预算极低、追求注册命中率", "名单里的词根在 .com 全军覆没"],
+      pickB: ["长期经营的品牌主站", "口头传播多的场景（广告、播客、销售）", "需要用户零犹豫信任（支付、注册转化）", "计划持有增值或转售"],
+    },
+    en: {
+      title: ".site vs .com: One-Dollar Entry or the Gold Standard",
+      metaDescription:
+        ".site starts at a dollar or two with deep inventory; .com is the zero-explanation gold standard. Compare trust, renewal costs and fit, then hunt names available on both.",
+      verdict:
+        "This is the classic entry-cost versus long-term-trust trade. .site wins entirely at the door: first years run a dollar or two, and inventory is so deep that almost any root registers as-is — the same shortlist scores many times more hits on .site than on .com. The costs are twofold: renewals jump steeply (budget $25–35 and don't let year one fool you), and there's a trust discount — users approach an unfamiliar .site with mild caution, so cold ads and outreach emails work harder to prove legitimacy. .com is the inverse: good names are effectively gone — you lengthen the name or pay an aftermarket price — but once secured it's a zero-explanation asset that works in speech, on business cards and in investor emails. The test: validation-stage projects, landing pages and campaigns → .site's cheap iteration is entirely rational; the moment a brand is confirmed for the long haul, secure the .com as the primary site and keep .site for campaign short links or a 301.",
+      pickA: ["MVPs and landing pages under validation", "Temporary campaigns and event sites", "Ultra-low budgets chasing availability", "Your whole shortlist is dead on .com"],
+      pickB: ["Long-term primary brand site", "Heavy word-of-mouth channels (ads, podcasts, sales)", "Zero-hesitation trust (payments, signup conversion)", "Hold-and-appreciate or resale plans"],
+    },
+  },
+  "tech-vs-com": {
+    slug: "tech-vs-com",
+    a: "tech",
+    b: "com",
+    zh: {
+      title: ".tech 和 .com 怎么选：行业标签与万能默认的对比",
+      metaDescription: ".tech 把「科技公司」写进后缀，.com 是所有行业的万能默认。对比两者的语义价值、价格与转化差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "问题不是「哪个更好」，而是「行业标签值不值得换掉万能默认」。.tech 的价值在语义：name.tech 一眼就是科技公司，黑客松、硬件创业、技术博客用它省一句自我介绍，而且短词库存远好于 .com——心仪的词大概率还能原样注册。短板同样明显：大众用户的地址栏肌肉记忆仍是 .com，口播场景要多说一句「点 tech」；续费也比 .com 贵（首年促销后回到百元以上量级）。.com 则没有语义加成但也没有解释成本，任何行业、任何受众都不违和。判断标准：受众是技术圈内（开发者、极客、行业媒体）且品牌词与科技强绑定 → .tech 的标签价值真实存在；受众是大众市场或企业采购 → .com 的默认信任更值钱。折中方案也常见：.tech 做产品/开发者站点，.com 留给公司主站。",
+      pickA: ["科技创业公司与硬件品牌", "黑客松、技术大会与社区", "开发者与极客受众的产品", "心仪短词 .com 已被注册"],
+      pickB: ["大众市场与企业客户", "口头传播多、怕拼错后缀", "多业务线的公司主站", "长期品牌资产与转售流动性"],
+    },
+    en: {
+      title: ".tech vs .com: Industry Label or Universal Default",
+      metaDescription:
+        ".tech writes 'technology company' into the suffix; .com is every industry's default. Compare semantic value, pricing and conversion, then hunt names available on both.",
+      verdict:
+        "The question isn't which is better — it's whether an industry label is worth trading away the universal default. .tech's value is semantic: name.tech reads as a technology company at a glance, saving hackathons, hardware startups and engineering blogs a line of introduction, and short-word inventory is far better than .com — your favorite word is probably still registrable as-is. The weaknesses are equally clear: mainstream muscle memory still autocompletes .com, spoken mentions need an extra 'dot tech', and renewals cost more than .com (promo first years snap back to the $40–50 range). .com carries no semantic bonus but also no explanation cost — nothing clashes with it in any industry. The test: a tech-native audience (developers, geeks, industry press) with a brand genuinely bound to technology → .tech's label earns its keep; a mainstream or enterprise-procurement audience → .com's default trust is worth more. The hybrid is common too: .tech for the product or developer site, .com reserved for the corporate home.",
+      pickA: ["Tech startups and hardware brands", "Hackathons, conferences and communities", "Developer and geek audiences", "Your short word is taken on .com"],
+      pickB: ["Mainstream and enterprise customers", "Heavy spoken mentions, suffix-typo averse", "Multi-line corporate homepages", "Long-term brand asset and resale liquidity"],
+    },
+  },
+  "store-vs-com": {
+    slug: "store-vs-com",
+    a: "store",
+    b: "com",
+    zh: {
+      title: ".store 和 .com 怎么选：把「商店」写进域名值不值",
+      metaDescription: ".store 让品牌词直接变成「某某商店」，.com 是电商的默认信任后缀。对比两者的转化认知、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "电商选域名的核心是「买家敢不敢下单」。.com 在这一点上仍是基准线：消费者对陌生店铺本来就警惕，.com 至少不额外扣分。.store 的打法不同——它把「这是家店」写进域名本身，brand.store 读出来就是店铺招牌，品牌词 + .store 的组合库存极好，短词、品类词大多还能原样注册；国际大牌（emirates.store 这类官方商店）也在用它做旗舰店副站，认知度在电商圈内不断累积。真正要小心的是价格曲线：.store 首年常见一两美元，续费却要按三四百元核算，是所有新后缀里价差最陡的之一。判断标准：独立站主站、需要投放冷流量、买家决策重（高客单）→ .com 的默认信任直接影响转化；品牌店铺副站、DTC 新品牌、社交流量为主（粉丝本来就认识你）→ .store 的语义与库存优势可以放心用。",
+      pickA: ["DTC 新品牌与独立站", "社交/私域流量为主的店铺", "大品牌的官方商店副站", "品类词+store 的组合还可注册"],
+      pickB: ["冷流量投放为主的电商主站", "高客单、买家决策重的品类", "长期品牌资产与转售", "怕续费跳价的预算敏感卖家"],
+    },
+    en: {
+      title: ".store vs .com: Is Writing 'Store' into the Domain Worth It",
+      metaDescription:
+        ".store turns your brand word into a literal storefront; .com is e-commerce's default trust suffix. Compare buyer perception, pricing and fit, then hunt names available on both.",
+      verdict:
+        "For e-commerce the core question is whether buyers dare to check out. .com remains the baseline there: consumers are wary of unfamiliar shops by default, and .com at least deducts nothing. .store plays a different game — it writes 'this is a shop' into the domain itself: brand.store reads like a storefront sign, inventory for brand-word + .store combinations is excellent with short and category words widely registrable, and global brands (think official shops like emirates.store) keep building its recognition in commerce circles. The real caution is the price curve: .store first years run a dollar or two while renewals should be budgeted around $50–60 — one of the steepest promo-to-renewal gaps of any new suffix. The test: a primary independent store running cold-traffic ads with high-consideration purchases → .com's default trust directly moves conversion; a DTC newcomer, a brand's official-shop satellite, or social/community-driven traffic where buyers already know you → .store's semantics and inventory are safe to lean on.",
+      pickA: ["DTC newcomers and independent shops", "Social and community-driven storefronts", "Official-shop satellites of larger brands", "Category word + store still registrable"],
+      pickB: ["Cold-traffic ad-driven primary stores", "High-ticket, high-consideration categories", "Long-term brand asset and resale", "Renewal-gap-averse budget sellers"],
+    },
+  },
+  "vip-vs-top": {
+    slug: "vip-vs-top",
+    a: "vip",
+    b: "top",
+    zh: {
+      title: ".vip 和 .top 怎么选：会员感与性价比的国内市场对比",
+      metaDescription: ".vip 自带会员/尊享语义且在国内认知度高，.top 是价格最低的通用后缀之一。对比两者的语义、价格与口碑差异，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是国内市场保有量靠前的新后缀，但气质完全不同。.vip 的语义是真资产：「会员、尊享、贵宾」在中文互联网里无需解释，会员制电商、私域社群、粉丝俱乐部用 brand.vip 等于把定位写进域名，且三字母后缀短、好念好记；价格适中，续费在几十元量级。.top 的优势只有一个但很硬：便宜——首年和续费都在个位数到十几元，是批量注册和试错成本最低的选择之一，「top/顶级」的语义也算正面。但要正视口碑问题：因为太便宜，.top 历史上被垃圾站大量使用，部分邮件网关和用户对它的第一印象偏谨慎，正式品牌用它要靠内容和备案自证。判断标准：会员制、私域、粉丝经济等「身份感」业务 → .vip 的语义溢价值得付；域名投资批量注册、个人项目、极限预算 → .top 的成本优势无可替代。两者都建议同时核验 .com 防未来被动。",
+      pickA: ["会员制电商与订阅业务", "私域社群与粉丝俱乐部", "「尊享/贵宾」定位的品牌", "想要三字母短后缀的好记域名"],
+      pickB: ["批量注册与域名投资", "个人项目与试验站", "极限预算的起步项目", "「顶级/第一」语义能用上的品牌"],
+    },
+    en: {
+      title: ".vip vs .top: Membership Cachet vs Rock-Bottom Price",
+      metaDescription:
+        ".vip carries built-in membership semantics with strong recognition in China; .top is one of the cheapest suffixes anywhere. Compare semantics, pricing and reputation, then hunt available names.",
+      verdict:
+        "Both rank among China's most-registered new suffixes, but their characters couldn't differ more. .vip's semantics are a real asset: 'member, exclusive, VIP' needs zero explanation on the Chinese internet, so membership commerce, private communities and fan clubs get their positioning written into brand.vip — and the three-letter suffix is short and easy to say, with renewals in the moderate $10–20 range. .top has exactly one advantage, but it's hard: price — registration and renewal both sit in the low single digits, making it one of the cheapest options for bulk registration and throwaway experiments, with a mildly positive 'top-tier' meaning. Face the reputation issue squarely though: precisely because it's cheap, .top has been heavily used by spam sites, so some mail gateways and users approach it with caution — a serious brand on .top must prove itself through content. The test: identity-driven businesses (memberships, private communities, fan economies) → .vip's semantic premium is worth paying; bulk registration, personal projects and extreme budgets → .top's cost advantage is unmatched. In both cases, check the matching .com to avoid future hostage situations.",
+      pickA: ["Membership commerce and subscriptions", "Private communities and fan clubs", "Brands positioned around exclusivity", "Short, memorable three-letter suffix"],
+      pickB: ["Bulk registration and domain investing", "Personal projects and experiments", "Extreme starter budgets", "Brands that can use the 'top-tier' pun"],
+    },
+  },
+  "art-vs-studio": {
+    slug: "art-vs-studio",
+    a: "art",
+    b: "studio",
+    zh: {
+      title: ".art 和 .studio 怎么选：作品身份与工作室招牌的对比",
+      metaDescription: ".art 是艺术圈的身份后缀（博物馆与画廊都在用），.studio 是创意团队的经典招牌。对比两者的气质、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都属于创意行业，分界线在「作品」还是「团队」。.art 的语义指向作品与艺术身份本身：艺术家个人站、作品集、画廊、NFT/数字艺术项目用 name.art 等于自我声明「这是艺术」，而且这个后缀有真实的机构背书——全球不少博物馆和画廊在用，圈内认知度扎实；四个字母也够短。.studio 指向的是「一间工作室」：设计、动画、摄影、游戏团队挂 name.studio 像挂了块含蓄的招牌，重点是「我们承接创作」而非「这是作品」。价格上两者续费都在中档（百元量级），库存都好，常用词大多可注册。判断标准：主体是艺术家个人或作品本身（画廊、收藏、策展、数字艺术）→ .art 的身份感更纯粹；主体是接案团队或创意服务（设计工作室、影像团队、独立游戏）→ .studio 的「营业中」气质更对。同名两个都能注册时，个人作品集拿 .art、团队官网拿 .studio 是最不出错的分法。",
+      pickA: ["艺术家个人站与作品集", "画廊、策展与收藏机构", "数字艺术与 NFT 项目", "「这是艺术」的身份声明"],
+      pickB: ["设计与动画工作室", "摄影与影像团队", "独立游戏工作室", "承接创作服务的团队招牌"],
+    },
+    en: {
+      title: ".art vs .studio: Artistic Identity or Studio Signboard",
+      metaDescription:
+        ".art is the art world's identity suffix (used by real museums and galleries); .studio is the creative team's classic signboard. Compare vibe, pricing and fit, then hunt available names.",
+      verdict:
+        "Both belong to the creative industry; the dividing line is work versus team. .art points at the work and the artistic identity itself: artist portfolios, galleries and digital-art or NFT projects on name.art are self-declarations that this is art — and the suffix carries real institutional backing, with museums and galleries worldwide using it, so recognition inside the art world is solid; four letters keep it short. .studio points at a workshop: design, animation, photography and game teams hang name.studio like an understated signboard whose message is 'we take on creative work', not 'this is the work'. Pricing is similar — mid-range renewals around $20–35 on both — and inventory is strong, with common words widely registrable. The test: the subject is an individual artist or the work itself (galleries, curation, collections, digital art) → .art's identity reads purer; the subject is a client-serving team (design studios, film crews, indie game shops) → .studio's open-for-business posture fits better. When the same name is free on both, portfolios take .art and team sites take .studio — that split rarely misses.",
+      pickA: ["Artist portfolios and personal sites", "Galleries, curation and collections", "Digital art and NFT projects", "An explicit 'this is art' identity"],
+      pickB: ["Design and animation studios", "Photography and film teams", "Indie game studios", "Client-facing creative service signboards"],
+    },
+  },
+  "media-vs-tv": {
+    slug: "media-vs-tv",
+    a: "media",
+    b: "tv",
+    zh: {
+      title: ".media 和 .tv 怎么选：全媒体品牌与视频频道的对比",
+      metaDescription: ".media 覆盖全媒体形态，.tv 是视频/直播的专属信号且价格更高。对比两者的语义宽窄、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "分界线是内容形态的宽窄。.media 是个宽口径后缀：图文、播客、视频、社媒代运营全都装得下，媒体集团、内容工作室、营销机构用 name.media 像一块「我们做内容」的通用招牌，续费中档（百元量级），常用词库存好。.tv 则窄而锋利：它在大众心智里就等于「电视/视频」，直播频道、视频栏目、流媒体项目用 name.tv 一眼可懂——Twitch 主播圈和体育直播已经把这个认知打得很透。代价是价格：.tv 续费明显更贵（两三百元量级），而且它本质是图瓦卢的国家后缀，语义之外没有折扣。判断标准：内容形态多元或还没定型（图文+播客+视频混合）→ .media 的宽口径不锁死方向；核心产品就是视频/直播频道 → .tv 的信号精准且值这个溢价。要注意反向错配：纯图文媒体用 .tv 会让用户期待视频，视频频道用 .media 则浪费了 .tv 的即时可懂——按主形态选，别按「以后可能做」选。",
+      pickA: ["多形态内容工作室与媒体集团", "营销与社媒代运营机构", "播客与图文为主的媒体", "内容方向还没定型的新品牌"],
+      pickB: ["直播频道与主播个人站", "视频栏目与流媒体项目", "体育/赛事直播品牌", "「打开就是看视频」的产品"],
+    },
+    en: {
+      title: ".media vs .tv: Full-Stack Media Brand or Video Channel",
+      metaDescription:
+        ".media covers every content format; .tv is the dedicated video/streaming signal at a premium. Compare semantic breadth, pricing and fit, then hunt available names.",
+      verdict:
+        "The dividing line is how wide your content format runs. .media is a broad suffix: articles, podcasts, video and social-media services all fit, so media groups, content studios and marketing agencies wear name.media like a general 'we make content' signboard, with mid-range renewals around $25–35 and good inventory on common words. .tv is narrow and sharp: in the public mind it simply means television/video, so live channels, video shows and streaming projects on name.tv are understood at a glance — Twitch streamers and sports broadcasting have hammered that recognition home. The cost is price: .tv renewals run noticeably higher ($30–45 range), and it's technically Tuvalu's country suffix with no discount beyond the semantics. The test: diverse or still-forming content formats (articles + podcast + video mixed) → .media's breadth doesn't lock your direction; the core product is a video or live channel → .tv's precision earns its premium. Watch the reverse mismatch too: a text-first publication on .tv sets false video expectations, while a video channel on .media wastes .tv's instant readability — choose by your primary format, not by what you might do someday.",
+      pickA: ["Multi-format content studios and media groups", "Marketing and social-media agencies", "Podcast and article-first publications", "New brands with unsettled content direction"],
+      pickB: ["Live channels and streamer sites", "Video shows and streaming projects", "Sports and event broadcasting brands", "Products that open straight into video"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
