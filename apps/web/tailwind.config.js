@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "PingFang SC", "Noto Sans SC", "system-ui", "sans-serif"],
+        sans: ["Inter", "Inter Fallback", "PingFang SC", "Noto Sans SC", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "ui-monospace", "monospace"],
       },
       colors: {
