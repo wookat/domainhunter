@@ -89,7 +89,7 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
   const bulkDomains = expandBulk(bulk, split(tlds).length > 0 ? split(tlds) : ["com"]);
 
   return (
-    <main className="mx-auto max-w-5xl flex-1 px-4 py-8 md:px-6">
+    <main className="mx-auto w-full min-w-0 max-w-5xl flex-1 px-4 py-8 md:px-6">
       <h1 className="text-xl font-bold tracking-tight md:text-2xl">{t("adv.title")}</h1>
       <p className="mt-1 text-sm text-txt1">{t("adv.subtitle")}</p>
 

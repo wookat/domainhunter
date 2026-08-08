@@ -341,7 +341,7 @@ export function ShortlistPage({
         : undefined;
 
   return (
-    <main className="mx-auto max-w-6xl flex-1 px-4 py-6 md:px-6">
+    <main className="mx-auto w-full min-w-0 max-w-6xl flex-1 px-4 py-6 md:px-6">
       <div className="mb-1 flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-xl font-bold tracking-tight">{t("shortlist.title")}</h1>
         {items.length > 0 && (
@@ -713,7 +713,7 @@ export function ShortlistPage({
               return (
                 <div key={it.domain} className={cn("rounded-xl border border-line bg-bg1 p-4", rowHighlight(change))}>
                   <div className="flex items-center justify-between gap-2">
-                    <span className={cn("truncate font-mono text-[15px] font-semibold", change === "becameTaken" && "text-taken line-through")}>
+                    <span title={it.domain} className={cn("min-w-0 truncate font-mono text-[15px] font-semibold", change === "becameTaken" && "text-taken line-through")}>
                       {it.label}
                       <span className="text-txt2">.{it.tld}</span>
                     </span>
