@@ -22,7 +22,7 @@ const KNOWN_TLDS = new Set([
   "com", "net", "org", "cn", "io", "ai", "app", "dev", "co", "cc", "tv", "xyz", "me", "info", "biz", "top", "vip", "pro", "site",
   "online", "store", "shop", "tech", "cloud", "space", "fun", "art", "design", "studio", "agency", "digital", "live", "life", "world", "today", "media", "center", "works",
   "news", "blog", "wiki", "link", "club", "team", "work", "zone", "run", "games", "game", "gg", "so", "sh", "im", "fm", "am", "to", "ly", "is",
-  "us", "uk", "de", "jp", "hk", "tw", "sg", "eu", "in", "ca", "one", "page", "email", "group", "network", "software", "systems", "tools", "chat", "bot", "codes", "company", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "bio", "ink", "moe", "lol", "cool", "red", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting",
+  "us", "uk", "de", "jp", "hk", "tw", "sg", "eu", "in", "ca", "one", "page", "email", "group", "network", "software", "systems", "tools", "chat", "bot", "codes", "company", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "bio", "ink", "moe", "lol", "cool", "red", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "marketing", "ventures", "capital", "guru", "tips",
 ]);
 
 /** 输入看起来已经是现成名字/域名时，提供免 AI 额度的直接核验 */
@@ -847,6 +847,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个家电维修与上门服务品牌，寓意「一次修好，明码实价」；气质要诚信靠谱、师傅专业、快而不敲竹杠；场景是邻里群转介绍、上门工单和「我认识个 XX，靠谱」这句话里都让人放心开门。",
     en: "An appliance repair and handyman brand. The name should promise fixed right the first time, priced honestly; the vibe is trustworthy, craftsman-professional, fast without gouging; it must reassure in neighborhood referrals, on a service work order, and in \"I know a guy at X — reliable.\"",
   },
+  {
+    slug: "pottery",
+    labelZh: "陶艺手作",
+    labelEn: "Pottery & ceramics",
+    zh: "一个陶艺工作室与手作器物品牌，寓意「把一下午的专注烧成一件器物」；气质要温润安静、有手作的不完美温度、发得出朋友圈；场景是体验课转介绍、器物电商详情页和「我在 XX 做了个碗」的分享里都好念好记。",
+    en: "A pottery studio and handmade ceramics brand. The name should feel like an afternoon of focus fired into an object; the vibe is warm, quiet, alive with handmade imperfection, postable; it must carry in class referrals, on a ceramics shop page, and in \"I threw a bowl at X.\"",
+  },
+  {
+    slug: "billiards",
+    labelZh: "台球桌球馆",
+    labelEn: "Billiards & pool halls",
+    zh: "一个台球馆与桌球俱乐部品牌，寓意「一杆进袋的干脆利落」；气质要有会所格调也不失松弛、懂球的人会心、朋友聚会想得起；场景是「附近台球」地图搜索、球友约局口播和店招远看里都一眼认出是打球的地方。",
+    en: "A billiards hall and pool club brand. The name should feel like the clean snap of a perfect pot; the vibe is club-polished yet easygoing, knowing to insiders, first to mind for a night out; it must read as a place to play in map searches, in \"rack 'em at X\" invites, and on the sign from across the street.",
+  },
+  {
+    slug: "drivingschool",
+    labelZh: "驾校驾培",
+    labelEn: "Driving schools",
+    zh: "一个驾校与驾培品牌，寓意「一次学好，一路顺遂」；气质要正规靠谱、教练耐心不吼人、家长与上班族都放心；场景是「城市+驾校」搜索、老学员转介绍和「我在 XX 学的车，教练不错」这句口播里都立得住。",
+    en: "A driving school brand. The name should promise learned right once, smooth roads after; the vibe is legitimate, patient, no-yelling, reassuring to parents and commuters alike; it must hold up in \"driving school near me\" searches, in alumni referrals, and in \"I learned at X — great instructor.\"",
+  },
+  {
+    slug: "optician",
+    labelZh: "眼镜视光",
+    labelEn: "Opticians & eyewear",
+    zh: "一个眼镜店与视光中心品牌，寓意「把世界重新调回高清」；气质要专业可信、验光有体系、镜框又有设计感；场景是商场招牌、儿童近视防控咨询和「我在 XX 配的镜，验光很细」的转介绍里都让人放心。",
+    en: "An optical shop and eyewear brand. The name should feel like the world tuned back to high definition; the vibe is clinically credible with designer frames on top; it must reassure on a mall storefront, in a kids' myopia-control consult, and in \"I got fitted at X — thorough exam.\"",
+  },
+  {
+    slug: "massage",
+    labelZh: "按摩推拿",
+    labelEn: "Massage & bodywork",
+    zh: "一个按摩推拿与身体调理品牌，寓意「把绷了一周的肩颈松回来」；气质要正规清爽、手法专业、白领敢把店名发进家庭群；场景是「附近按摩」搜索、下班顺路进店和「XX 家手法真不错」的回头客转述里都好念好记。",
+    en: "A massage and bodywork brand. The name should feel like a week of shoulder tension finally released; the vibe is clean, legitimate, professionally skilled — a name you'd post in the family group chat; it must work in \"massage near me\" searches, after-work walk-ins, and regulars' word of mouth.",
+  },
+  {
+    slug: "mealprep",
+    labelZh: "轻食健康餐",
+    labelEn: "Meal prep & healthy eats",
+    zh: "一个轻食与健康餐品牌，寓意「好好吃饭，轻装上阵」；气质要清爽有食欲、健康不苦行、自律而松弛；场景是外卖列表小图旁、健身房联名海报和「中午吃 XX，下午不困」的同事安利里都清爽好记。",
+    en: "A healthy meal and salad brand. The name should feel like eating well and traveling light; the vibe is fresh but appetizing, disciplined without the diet gloom; it must pop beside a delivery-app thumbnail, on a gym partnership poster, and in \"X for lunch — no afternoon slump\" coworker recs.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
@@ -947,7 +989,7 @@ function ChipPrice({ domain }: { domain: string }) {
 const QUICK_EXTRA_TLDS = ["com", "io", "ai", "app", "dev", "co", "net", "me"];
 
 /** 「查更多后缀」按钮覆盖的第二批后缀（同样走 /api/search，0 AI 额度） */
-const QUICK_MORE_TLDS = ["org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "page", "bio", "ink", "moe", "lol", "uk", "fm", "one", "cool", "red", "today", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "software"];
+const QUICK_MORE_TLDS = ["org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu", "page", "bio", "ink", "moe", "lol", "uk", "fm", "one", "cool", "red", "today", "best", "wtf", "pizza", "bar", "cafe", "money", "gold", "band", "cash", "city", "estate", "expert", "farm", "blue", "pink", "black", "ninja", "rocks", "pet", "academy", "school", "coach", "care", "doctor", "restaurant", "boutique", "clinic", "dental", "fitness", "photos", "gallery", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "photography", "events", "solutions", "services", "consulting", "software", "marketing", "systems", "ventures", "capital", "guru", "tips"];
 
 /** 快速核验的 chip（可注册/已注册）都可收藏到候选清单 */
 function domainToRow(domain: string, status: Row["status"] = "available", expiresAt?: string): Row {

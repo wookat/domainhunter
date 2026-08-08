@@ -45,7 +45,9 @@ export interface GuardMeta {
 }
 
 export interface StreamEvent {
-  type?: "round" | "proposed" | "done" | "error" | "understanding";
+  type?: "round" | "proposed" | "done" | "error" | "understanding" | "hint";
+  /** hint 事件的类型（R247，目前仅 lowYield：连续低产出建议拓宽后缀/命名路线） */
+  kind?: "lowYield";
   round?: number;
   note?: string;
   items?: { label: string; meaning: string; theme?: Theme; scores?: Scores }[];
@@ -217,6 +219,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   services: { first: 63, renew: 226 },
   consulting: { first: 152, renew: 315 },
   software: { first: 115, renew: 241 },
+  marketing: { first: 41, renew: 241 },
+  systems: { first: 85, renew: 204 },
+  ventures: { first: 41, renew: 345 },
+  capital: { first: 41, renew: 412 },
+  guru: { first: 19, renew: 248 },
+  tips: { first: 59, renew: 182 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
