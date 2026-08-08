@@ -221,6 +221,7 @@ export function ResultsPage({
   onToggleLock,
   shortlistHas,
   onToggleFavorite,
+  onAddFavorites,
   onMore,
   onMoreAroundLocked,
   running,
@@ -239,6 +240,7 @@ export function ResultsPage({
   onToggleLock: (domain: string) => void;
   shortlistHas: (domain: string) => boolean;
   onToggleFavorite: (row: Row) => void;
+  onAddFavorites: (rows: Row[]) => void;
   onMore: () => void;
   onMoreAroundLocked: () => void;
   running: boolean;
@@ -255,6 +257,7 @@ export function ResultsPage({
   const [view, setView] = useState<View>("rows");
   const [linkCopied, setLinkCopied] = useState(false);
   const { copied: availCopied, copy: copyAvailable } = useCopyAvailable();
+  const [starredCount, setStarredCount] = useState(0);
   const [selectedIdx, setSelectedIdx] = useState(-1);
   const listRef = useRef<HTMLDivElement>(null);
 
@@ -293,6 +296,16 @@ export function ResultsPage({
   }, [rows, availableRows, takenRows, statusFilter, tldFilter, themeFilter, sort, priceOf]);
 
   const visibleAvailable = useMemo(() => visible.filter((r) => r.status === "available"), [visible]);
+
+  const unstarredAvailable = useMemo(() => visibleAvailable.filter((r) => !shortlistHas(r.domain)), [visibleAvailable, shortlistHas]);
+
+  const starAllAvailable = () => {
+    const toAdd = unstarredAvailable;
+    if (toAdd.length === 0) return;
+    onAddFavorites(toAdd);
+    setStarredCount(toAdd.length);
+    window.setTimeout(() => setStarredCount(0), 1500);
+  };
 
 
 
@@ -358,6 +371,20 @@ export function ResultsPage({
                 >
                   {availCopied ? <Check className="h-3 w-3 text-brand" /> : <Copy className="h-3 w-3" />}
                   {availCopied ? t("results.copiedAvail") : t("results.copyAvailBtn", { n: visibleAvailable.length })}
+                </button>
+              )}
+              {visibleAvailable.length >= 2 && (
+                <button
+                  onClick={starAllAvailable}
+                  disabled={starredCount === 0 && unstarredAvailable.length === 0}
+                  className="inline-flex items-center gap-1 rounded-md border border-line bg-bg1 px-2 py-0.5 font-mono text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-60"
+                >
+                  {starredCount > 0 || unstarredAvailable.length === 0 ? <BookmarkCheck className="h-3 w-3 text-brand" /> : <Bookmark className="h-3 w-3" />}
+                  {starredCount > 0
+                    ? t("results.starAllDone", { n: starredCount })
+                    : unstarredAvailable.length === 0
+                      ? t("results.starAllAll")
+                      : t("results.starAllBtn")}
                 </button>
               )}
               {visible.length > 0 && (

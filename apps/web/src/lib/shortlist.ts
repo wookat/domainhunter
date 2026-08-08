@@ -68,6 +68,15 @@ export function useShortlist() {
     );
   }, []);
 
+  /** 批量收藏：按域名去重，只加入未收藏的行 */
+  const addMany = useCallback((rows: Row[]) => {
+    setItems((prev) => {
+      const seen = new Set(prev.map((i) => i.domain));
+      const fresh = rows.filter((r) => !seen.has(r.domain)).map(rowToItem);
+      return fresh.length > 0 ? [...prev, ...fresh] : prev;
+    });
+  }, []);
+
   const remove = useCallback((domain: string) => {
     setItems((prev) => prev.filter((i) => i.domain !== domain));
   }, []);
@@ -95,5 +104,5 @@ export function useShortlist() {
     }
   }, []);
 
-  return { items, has, toggle, remove, clear, merge, lastCheckedAt, applyStatuses };
+  return { items, has, toggle, addMany, remove, clear, merge, lastCheckedAt, applyStatuses };
 }

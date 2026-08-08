@@ -637,6 +637,7 @@ export default function App() {
           onToggleLock={toggleLock}
           shortlistHas={shortlist.has}
           onToggleFavorite={shortlist.toggle}
+          onAddFavorites={shortlist.addMany}
           onMore={() => void run(values, { more: true })}
           onMoreAroundLocked={() => void run(values, { more: true, aroundLocked: true })}
           running={running}
