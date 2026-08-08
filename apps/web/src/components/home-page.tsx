@@ -614,9 +614,9 @@ const QUICK_EXTRA_TLDS = ["com", "io", "ai", "app", "dev", "co", "net", "me"];
 const QUICK_MORE_TLDS = ["org", "xyz", "info", "cc", "tv", "tech", "online", "store", "site", "top", "shop", "cloud", "pro", "vip", "club", "link", "live", "space", "fun", "art", "design", "studio", "sh", "gg", "so", "us", "in", "world", "life", "agency", "games", "email", "network", "digital", "media", "group", "center", "works", "zone", "news", "tools", "run", "codes", "company", "wiki", "blog", "team", "chat", "finance", "global", "host", "social", "video", "fund", "land", "click", "icu"];
 
 /** 快速核验的 chip（可注册/已注册）都可收藏到候选清单 */
-function domainToRow(domain: string, status: Row["status"] = "available"): Row {
+function domainToRow(domain: string, status: Row["status"] = "available", expiresAt?: string): Row {
   const dot = domain.indexOf(".");
-  return { domain, label: domain.slice(0, dot), tld: domain.slice(dot + 1), status, round: 0 };
+  return { domain, label: domain.slice(0, dot), tld: domain.slice(dot + 1), status, round: 0, expiresAt };
 }
 
 export function HomePage({
@@ -680,7 +680,7 @@ export function HomePage({
   const quickAbortRef = useRef<AbortController | null>(null);
 
   // 变体建议：心仪名字被注册时，用前后缀组合免费核验一批变体（同样不消耗 AI 次数）
-  const [variantRows, setVariantRows] = useState<{ domain: string; status: "available" | "taken" | "unknown" }[]>([]);
+  const [variantRows, setVariantRows] = useState<{ domain: string; status: "available" | "taken" | "unknown"; expiresAt?: string }[]>([]);
   const [variantChecked, setVariantChecked] = useState(0);
   const [variantTotal, setVariantTotal] = useState(0);
   const [variantRunning, setVariantRunning] = useState(false);
@@ -782,11 +782,11 @@ export function HomePage({
         buf = lines.pop()!;
         for (const line of lines) {
           if (!line) continue;
-          const r = JSON.parse(line) as { domain?: string; status?: "available" | "taken" | "unknown"; type?: string };
+          const r = JSON.parse(line) as { domain?: string; status?: "available" | "taken" | "unknown"; expiresAt?: string; type?: string };
           if (r.type || !r.domain || !r.status) continue;
           if (r.domain === `${quick.label}.${tld}`) continue; // 裸 root 不重复计
           setVariantChecked((n) => n + 1);
-          setVariantRows((prev) => [...prev, { domain: r.domain!, status: r.status! }]);
+          setVariantRows((prev) => [...prev, { domain: r.domain!, status: r.status!, expiresAt: r.expiresAt }]);
         }
       }
     } catch {
@@ -1071,7 +1071,7 @@ export function HomePage({
                         {row.expiresAt && <ExpiryNote iso={row.expiresAt} className="font-sans" />}
                       </span>
                       <button
-                        onClick={() => shortlist.toggle(domainToRow(row.domain, "taken"))}
+                        onClick={() => shortlist.toggle(domainToRow(row.domain, "taken", row.expiresAt))}
                         title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                         aria-label={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                         aria-pressed={shortlist.has(row.domain)}
@@ -1085,7 +1085,7 @@ export function HomePage({
                           expiresAt={row.expiresAt}
                           variant="chip"
                           onAddShortlist={() => {
-                            if (!shortlist.has(row.domain)) shortlist.toggle(domainToRow(row.domain, "taken"));
+                            if (!shortlist.has(row.domain)) shortlist.toggle(domainToRow(row.domain, "taken", row.expiresAt));
                           }}
                         />
                       )}
@@ -1217,7 +1217,7 @@ export function HomePage({
                             <i className="not-italic font-sans text-[10px] text-taken">{t("status.taken")}</i>
                           </span>
                           <button
-                            onClick={() => shortlist.toggle(domainToRow(row.domain, "taken"))}
+                            onClick={() => shortlist.toggle(domainToRow(row.domain, "taken", row.expiresAt))}
                             title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                             aria-label={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                             aria-pressed={shortlist.has(row.domain)}
