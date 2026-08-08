@@ -427,6 +427,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个理发店/美发工作室品牌，寓意「把接下来一个月的形象放心交给它」；气质要有手艺感、亲切、经得起十年熟客；场景是门头招牌、地图搜索和「我一直在 X 剪」的长期转述里都顺口耐听。",
     en: "A barbershop or hair salon brand. The name should feel worth trusting with next month's look; the vibe is craft-forward, friendly, built for ten-year regulars; it must wear well on a shopfront sign, in map search, and in \"I've been going to X for years\".",
   },
+  {
+    slug: "yoga",
+    labelZh: "瑜伽普拉提",
+    labelEn: "Yoga & Pilates",
+    zh: "一个瑜伽馆/普拉提工作室品牌，寓意「一小时属于自己的呼吸与平衡」；气质要安静、有灵性又专业不玄；场景是会员卡、小红书打卡照和「我每周去 X 上三次课」的长期转述里都顺口耐听。",
+    en: "A yoga or Pilates studio brand. The name should evoke an hour of breath and balance that belongs to you; the vibe is calm, soulful yet professionally grounded; it must wear well on a membership card, in check-in photos, and in \"I take three classes a week at X\".",
+  },
+  {
+    slug: "vet",
+    labelZh: "宠物医院",
+    labelEn: "Vet clinics",
+    zh: "一家宠物医院/动物诊所品牌，寓意「毛孩子生病的那天，真的有专业的人管」；气质要专业安心、温暖不轻浮；场景是深夜急诊搜索、诊所门头和「快送 X 医院」的紧急呼喊里都可信好认。",
+    en: "A veterinary clinic or animal hospital brand. The name should promise that on the day a furry kid gets sick, real professionals have it handled; the vibe is clinically credible, warm, never flippant; it must hold up in a midnight emergency search, on the clinic sign, and in \"get her to X, now!\".",
+  },
+  {
+    slug: "esports",
+    labelZh: "电竞战队",
+    labelEn: "Esports team",
+    zh: "一支电竞战队/电竞俱乐部品牌，寓意「为胜利而战、让粉丝喊得热血」；气质要有战意、够潮、缩写好看；场景是解说嘶吼、比分牌缩写和粉丝弹幕应援里都响亮带感。",
+    en: "An esports team or gaming org brand. The name should burn with the will to win and give fans something to scream; the vibe is fierce, streetwear-cool, with a great-looking tag; it must ring out in a caster's shoutcall, on the scoreboard abbreviation, and in fan chat spam.",
+  },
+  {
+    slug: "drone",
+    labelZh: "无人机航拍",
+    labelEn: "Drone & aerial",
+    zh: "一个无人机航拍/飞行服务品牌，寓意「用从未见过的角度看世界」；气质要专业、开阔、有技术感不像玩具；场景是片尾署名、作品集网站和企业巡检投标书里都立得住。",
+    en: "A drone services or aerial photography brand. The name should evoke seeing the world from an angle no one has seen; the vibe is professional, expansive, engineered rather than toy-like; it must hold up in video end credits, on a portfolio site, and in an enterprise inspection bid.",
+  },
+  {
+    slug: "hanfu",
+    labelZh: "汉服国潮",
+    labelEn: "Hanfu & guochao",
+    zh: "一个汉服/国潮品牌，寓意「把千年的美穿回日常」；气质要有古意、有出处、好念好打不生僻；场景是直播间口播、话题标签和出海独立站的拼音形态里都雅致好传播。",
+    en: "A hanfu or China-chic (guochao) brand. The name should carry a millennium of beauty back into everyday wear; the vibe is classical, well-sourced, easy to say and type; it must stay graceful in livestream shout-outs, hashtags, and the romanized form on an overseas store.",
+  },
+  {
+    slug: "dental",
+    labelZh: "口腔诊所",
+    labelEn: "Dental clinic",
+    zh: "一家口腔诊所/牙科品牌，寓意「看牙不再可怕，笑容值得被认真对待」；气质要安心、专业、有微笑感不冰冷；场景是家庭群推荐、诊所招牌和「明天去 X 看牙」的日常表达里都让人放松。",
+    en: "A dental clinic or oral care brand. The name should make dental visits feel safe and smiles worth caring for; the vibe is reassuring, professional, smile-warm rather than clinical-cold; it must relax people in a family group recommendation, on the clinic sign, and in \"I'm going to X tomorrow\".",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
