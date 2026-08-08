@@ -150,9 +150,23 @@
   animation: fadeUp 0.3s ease both;
 }
 
+@keyframes countdownShrink {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+.confirm-countdown {
+  transform-origin: left;
+  animation: countdownShrink 6s linear forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .dot-breathe,
   .fade-up,
+  .confirm-countdown,
   .animate-pulse {
     animation: none;
   }
