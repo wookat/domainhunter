@@ -1644,6 +1644,186 @@ const GUIDES = {
       ],
     },
   },
+  blog: {
+    tld: "blog",
+    zh: {
+      title: ".blog 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".blog 语义直白，是个人博客与内容创作者的身份后缀。查看 .blog 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .blog 域名。",
+      intro:
+        ".blog 由 WordPress 母公司 Automattic 旗下注册局运营（Knock Knock WHOIS There），血统与用途完全一致：它就是为写作者准备的。个人博客、独立写作者、公司内容站、Newsletter 的网页版用 .blog，读者不需要任何解释就知道这里是「读内容的地方」——name.blog 天然读成「某某的博客」。相比在 .com 里给博客造词，.blog 让人名、笔名、主题词直接可用：yourname.blog、coffee.blog 这类在 .com 下早已绝迹的名字这里大多还在。首年注册常见 $3 上下（约 ¥20），续费约 $21/年（约 ¥155），对个人创作者是可长期负担的价位。边界也清楚：电商、SaaS、企业主站用 .blog 会显得业余；它适合做品牌的内容分站（brand.blog 与 brand.com 分工）或独立写作者的主阵地。命名上清晰第一——用真名、笔名或垂直主题词，别造生僻词。",
+      bestFor: ["个人博客与独立写作者", "Newsletter 网页版", "公司内容营销分站", "垂直主题内容站"],
+      namingTips: [
+        "人名/笔名直接上：yourname.blog 就是个人品牌",
+        "垂直主题词很出彩：coffee.blog、climbing.blog",
+        "公司内容站用 brand.blog，与 brand.com 主站分工",
+        "别在名字里重复 blog 字样，避免 myblog.blog",
+      ],
+    },
+    en: {
+      title: ".blog Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".blog says exactly what it is — the identity suffix for writers and content creators. See live pricing and naming advice, then hunt available .blog names with AI.",
+      intro:
+        ".blog is run by a registry under Automattic, the company behind WordPress — pedigree and purpose in perfect alignment: it exists for writers. Personal blogs, independent authors, company content hubs and the web home of your newsletter all read instantly on .blog: name.blog literally parses as \"NAME's blog\", zero explanation needed. Instead of contorting a coined .com, .blog lets real names, pen names and topic words work directly — yourname.blog or coffee.blog, long extinct on .com, are mostly still open here. First-year registration runs around $3 with renewals near $21/yr, sustainable for individual creators. The boundary is equally clear: e-commerce, SaaS or corporate main sites look amateur on .blog; it shines as a brand's content satellite (brand.blog alongside brand.com) or as an independent writer's home base. Name for clarity — your real name, pen name or vertical topic beats any invented word.",
+      bestFor: ["Personal blogs & independent writers", "Newsletter web homes", "Company content-marketing hubs", "Vertical topic sites"],
+      namingTips: [
+        "Real or pen names work as-is: yourname.blog is the personal brand",
+        "Vertical topic words shine: coffee.blog, climbing.blog",
+        "Use brand.blog as the content satellite of brand.com",
+        "Never repeat \"blog\" in the name — avoid myblog.blog",
+      ],
+    },
+  },
+  team: {
+    tld: "team",
+    zh: {
+      title: ".team 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".team 语义是「团队」，适合协作工具、招聘页、战队与俱乐部主页。查看 .team 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .team 域名。",
+      intro:
+        ".team 是 Identity Digital 运营的语义后缀，含义人人秒懂：这是一个「团队」的家。用法比看上去宽：协作与团队管理 SaaS（把「为团队而生」写进域名）、公司招聘与雇主品牌页（join.team 式表达比 careers 子页面更有态度）、电竞战队与运动俱乐部主页、开源核心团队站。brand.team 与 brand.com 分工——主站讲产品，.team 讲人。首年注册 $5 上下（约 ¥35），续费约 $29/年（约 ¥212），中等价位。库存充足：常见团队名、动词短语大多可注册。注意两点：单独作为公司主站语义偏窄，更适合做「人」维度的分站；「team」在中文语境认知度不如 app/shop 直白，面向纯国内用户要权衡。命名上「动词 + .team」和「品牌 + .team」都自然，dream.team 这类现成短语更是可遇不可求的记忆点。",
+      bestFor: ["协作与团队管理工具", "招聘与雇主品牌页", "电竞战队与运动俱乐部", "开源项目核心团队站"],
+      namingTips: [
+        "招聘页用 join + 品牌或 work + 品牌的组合表达",
+        "现成短语是宝：dream.team、a.team 式的可遇不可求",
+        "brand.team 做「人」的分站，与 brand.com 产品主站分工",
+        "战队/俱乐部直接用队名，短且好喊",
+      ],
+    },
+    en: {
+      title: ".team Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".team means exactly that — built for collaboration tools, hiring pages, esports squads and clubs. See live pricing and naming advice, then hunt available .team names with AI.",
+      intro:
+        ".team, operated by Identity Digital, needs no translation: it's the home of a team. Its range is wider than it looks — collaboration and team-management SaaS (writing \"built for teams\" into the domain itself), hiring and employer-brand pages (join.team beats a buried careers subpage for attitude), esports squads and sports clubs, and open-source core-team sites. The natural split: brand.com tells the product story, brand.team tells the people story. Registration runs about $5 first year with renewals near $29/yr — mid-tier pricing. Inventory is healthy: common team names and verb phrases are largely open. Two cautions: as a company's only domain the semantics are narrow — it works best as the people-facing satellite; and ready-made phrases are the jackpot, dream.team-style names are once-in-a-lifetime memorable. Verb + .team and brand + .team both read naturally.",
+      bestFor: ["Collaboration & team-management tools", "Hiring & employer-brand pages", "Esports squads & sports clubs", "Open-source core-team sites"],
+      namingTips: [
+        "Hiring pages: join + brand or work + brand compounds",
+        "Ready-made phrases are gold: dream.team-style names",
+        "Use brand.team as the people satellite of brand.com",
+        "Squads and clubs: the team name itself, short and chantable",
+      ],
+    },
+  },
+  chat: {
+    tld: "chat",
+    zh: {
+      title: ".chat 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".chat 是 AI 对话产品与社区聊天工具的天然后缀。查看 .chat 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .chat 域名。",
+      intro:
+        ".chat 在 ChatGPT 之后彻底翻红：AI 对话产品把「聊」写进域名，name.chat 读出来就是产品形态本身。除了 AI 助手与 Chatbot，它同样适合客服与在线咨询工具（support.chat 式表达）、社区与群聊产品、语音/视频聊天应用。语义强是它最大的资产——用户看到 .chat 就预期「点进去能对话」，转化路径清晰。Identity Digital 运营，首年注册 $6 上下（约 ¥40），续费约 $37/年（约 ¥265），中等偏上但远低于 .ai。对 AI 创业者它是 .ai 之外性价比最高的表达：brand.chat 比 brandai.com 更直接说明「这是个对话产品」。库存好：大量单词与造词可注册。边界同样清晰：非对话形态的产品用 .chat 会误导用户预期。命名建议用品牌词或场景词直接组合，让「和谁聊、聊什么」一目了然。",
+      bestFor: ["AI 对话助手与 Chatbot", "客服与在线咨询工具", "社区与群聊产品", "语音/视频聊天应用"],
+      namingTips: [
+        "品牌 + .chat 直接说明产品形态：brand.chat",
+        "场景词表达「聊什么」：legal.chat、doctor.chat 类组合",
+        "AI 产品预算有限时，.chat 是 .ai 的高性价比替身",
+        "非对话产品别用，会误导用户预期",
+      ],
+    },
+    en: {
+      title: ".chat Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".chat is the natural suffix for AI conversation products and community chat tools. See live pricing and naming advice, then hunt available .chat names with AI.",
+      intro:
+        ".chat found its moment after ChatGPT: AI conversation products write the interaction itself into the domain — name.chat is the product form factor spoken aloud. Beyond AI assistants and chatbots it fits customer support and live-consultation tools (support.chat-style), community and group-chat products, and voice/video chat apps. Strong semantics are its biggest asset: visitors seeing .chat expect to talk to something the moment they land, which makes conversion paths obvious. Operated by Identity Digital; registration runs about $6 first year, renewals near $37/yr — mid-to-upper tier but far below .ai. For AI founders it's the best value statement after .ai: brand.chat says \"this is a conversational product\" more directly than brandai.com. Inventory is good, with plenty of words and coined names open. The boundary is just as sharp — non-conversational products on .chat mislead expectations. Name with a brand word or scenario word so \"who you talk to and about what\" is instant.",
+      bestFor: ["AI assistants & chatbots", "Customer support & live consultation", "Community & group-chat products", "Voice/video chat apps"],
+      namingTips: [
+        "Brand + .chat states the form factor: brand.chat",
+        "Scenario words say what you talk about: legal.chat, doctor.chat",
+        "On a budget, .chat is the value alternative to .ai for AI products",
+        "Skip it for non-conversational products — it misleads",
+      ],
+    },
+  },
+  finance: {
+    tld: "finance",
+    zh: {
+      title: ".finance 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".finance 语义严肃专业，适合金融科技、DeFi 与财务工具。查看 .finance 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .finance 域名。",
+      intro:
+        ".finance 把「金融」两个字写进后缀，气质严肃、专业、值钱——这正是金融类产品最需要传递的信号。金融科技创业公司、记账与预算工具、财务咨询机构、面向企业的财务 SaaS 用它都名正言顺；DeFi 圈更是把 .finance 用成了行业惯例（yearn.finance 等头部协议完成了用户教育），加密金融项目选它几乎零解释成本。Identity Digital 运营，首年 $7 上下（约 ¥48），续费约 $52/年（约 ¥375）——续费在本批里偏高，认真做金融品牌的团队通常不在乎这个量级，但副业试水要算清。库存充裕：大量金融相关词、品牌词可注册。两点提醒：金融语义带监管预期，页面要有合规信息与真实主体背书，否则「看起来像钓鱼站」的怀疑会反噬；8 个字符偏长，口头传播不如短后缀利落。命名建议品牌词直接上，或「场景词 + .finance」讲清服务对象。",
+      bestFor: ["金融科技创业公司", "DeFi 与加密金融协议", "记账/预算/报销工具", "财务咨询与企业财务 SaaS"],
+      namingTips: [
+        "DeFi 项目用 .finance 已是行业惯例，圈内零解释成本",
+        "金融语义自带监管预期：页面务必有合规信息与真实主体",
+        "续费约 $52/年偏高，长期持有先算总成本",
+        "8 字符偏长，品牌词要短，避免整体过长",
+      ],
+    },
+    en: {
+      title: ".finance Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".finance reads serious and professional — built for fintech, DeFi and money tools. See live pricing and naming advice, then hunt available .finance names with AI.",
+      intro:
+        ".finance spells the industry into the suffix — serious, professional, monied, exactly the signal financial products need to send. Fintech startups, budgeting and expense tools, advisory firms and B2B finance SaaS all wear it legitimately; the DeFi world went further and made .finance an industry convention — protocols like yearn.finance finished the user education, so crypto-finance projects pay zero explanation cost here. Operated by Identity Digital; about $7 first year with renewals near $52/yr — the highest renewal in this batch, trivial for a serious finance brand but worth budgeting for side projects. Inventory is rich: plenty of finance-adjacent words and brand names remain open. Two cautions: financial semantics invite regulatory expectations — publish compliance details and a real legal entity or risk looking like a phishing page; and at 8 characters the suffix is long, so keep the brand word short. Name with the brand directly, or scenario word + .finance to state who you serve.",
+      bestFor: ["Fintech startups", "DeFi & crypto-finance protocols", "Budgeting/expense/invoicing tools", "Advisory firms & B2B finance SaaS"],
+      namingTips: [
+        "For DeFi, .finance is the established convention — zero explanation",
+        "Financial semantics invite scrutiny: show compliance and a real entity",
+        "Renewals near $52/yr — price the long haul for side projects",
+        "The suffix is 8 characters — keep the brand word short",
+      ],
+    },
+  },
+  global: {
+    tld: "global",
+    zh: {
+      title: ".global 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".global 一词表达全球化定位，适合跨国业务、国际组织与出海品牌。查看 .global 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .global 域名。",
+      intro:
+        ".global 用一个词完成全球化宣言：brand.global 读出来就是「某某的全球站」。它最自然的用法是跨国公司的国际主站或集团品牌页（把区域站点收拢到 brand.global 之下）、国际组织与联盟、出海品牌的海外阵地、以及任何以「全球服务」为卖点的业务（物流、支付、招聘、留学）。相比国别后缀的地域绑定，.global 反其道而行——它明确告诉用户「我们不属于任何单一市场」。Identity Digital 运营，价格是本批最高档：注册约 $31（约 ¥225），续费约 $78/年（约 ¥560），定价本身就在筛选认真做国际业务的注册者，投机囤积少、好词存量比价格更低的后缀反而好。风险与代价：6 字符不算短，且「global」对小团队可能显得口气大于实力——名不副实时用户反感更强。适合确实有多市场布局或以国际化为核心叙事的品牌；命名用品牌词直接上，别再叠加 world/international 等冗余词。",
+      bestFor: ["跨国公司国际主站", "出海品牌海外阵地", "国际组织与行业联盟", "全球物流/支付/招聘服务"],
+      namingTips: [
+        "brand.global 做国际主站，区域站点归拢其下",
+        "别叠加冗余词：worldx.global 是双重表达",
+        "小团队慎用——「global」口气大，名不副实会反噬",
+        "注册约 $31、续费约 $78/年，属高价后缀，预算先行",
+      ],
+    },
+    en: {
+      title: ".global Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".global declares worldwide positioning in one word — for multinationals, international orgs and expanding brands. See live pricing and naming advice, then hunt available .global names with AI.",
+      intro:
+        ".global makes the globalization statement in a single word: brand.global reads as \"BRAND, worldwide\". Its natural homes are the international main site of a multinational (folding regional sites under brand.global), international organizations and alliances, the overseas base of an expanding brand, and any business whose pitch is global service — logistics, payments, hiring, education. Where country-code TLDs bind you to one market, .global does the opposite: it tells users you belong to no single one. Operated by Identity Digital at this batch's premium tier — about $31 to register and $78/yr to renew — pricing that itself filters for serious international registrants, which keeps speculation low and word inventory surprisingly good. The trade-offs: six characters isn't short, and \"global\" can sound bigger than a small team's reality — overclaiming invites backlash. Choose it when multi-market presence or an international narrative is genuinely core. Name with the brand word alone; stacking world/international on top is redundant.",
+      bestFor: ["Multinational main sites", "Brands expanding overseas", "International orgs & alliances", "Global logistics/payments/hiring services"],
+      namingTips: [
+        "Use brand.global as the international hub over regional sites",
+        "Don't stack redundant words — worldx.global says it twice",
+        "Small teams beware: overclaiming \"global\" invites backlash",
+        "About $31 to register, $78/yr to renew — budget first",
+      ],
+    },
+  },
+  host: {
+    tld: "host",
+    zh: {
+      title: ".host 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".host 是主机托管与基础设施服务的行业后缀。查看 .host 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .host 域名。",
+      intro:
+        ".host 由 Radix 运营（与 .online/.site/.store 同门），语义精准指向托管与基础设施行业：虚拟主机与 VPS 服务商、游戏服务器托管、静态托管与部署平台、家庭实验室（homelab）玩家的自建服务门户，用 name.host 都一目了然——它就是「某某托管」。对基础设施创业者它有一层巧思：产品名 + .host 让「我们帮你跑起来」的定位不言自明，比在 .com 里挤一个 hosting 词根优雅得多。价格结构要看清：首年常有 $5 上下的促销价（约 ¥35），但续费约 $82/年（约 ¥590）——本批续费最高，是典型的「首年便宜续费贵」后缀，认真商用前先把多年成本算清。库存极好：主机行业常用词、品牌词几乎随便挑。边界很窄是它的特点：非托管/基础设施业务用 .host 会让用户困惑。domain hack 也有玩法：以 host 结尾的词可断词（如 ghost → g.host 式创意）。",
+      bestFor: ["虚拟主机与 VPS 服务商", "游戏服务器托管", "静态托管与部署平台", "自建服务与 homelab 门户"],
+      namingTips: [
+        "产品词 + .host 定位不言自明：deploy.host、pixel.host",
+        "首年 $5 续费 $82 是典型促销结构，多年成本先算清",
+        "以 host 结尾的词可玩 domain hack（g.host 式断词）",
+        "非托管/基础设施业务别用，语义太窄会困惑用户",
+      ],
+    },
+    en: {
+      title: ".host Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".host is the industry suffix for hosting and infrastructure services. See live pricing and naming advice, then hunt available .host names with AI.",
+      intro:
+        ".host is run by Radix (the registry behind .online/.site/.store) and points squarely at the hosting and infrastructure trade: web hosts and VPS providers, game-server hosting, static-hosting and deployment platforms, and homelab self-hosting portals all read instantly as name.host — \"the NAME host\". For infrastructure founders there's an elegant trick: product word + .host makes \"we run it for you\" self-evident, far cleaner than cramming a hosting root into a .com. Read the price structure carefully: first-year promos often run around $5, but renewals sit near $82/yr — the highest in this batch and a textbook cheap-year-one suffix, so price multi-year costs before committing commercially. Inventory is excellent: industry words and brand names are wide open. Its narrowness is the point — non-hosting businesses on .host just confuse people. Domain hacks work too: words ending in \"host\" split neatly (ghost → g.host).",
+      bestFor: ["Web hosts & VPS providers", "Game-server hosting", "Static hosting & deployment platforms", "Self-hosting & homelab portals"],
+      namingTips: [
+        "Product word + .host states the positioning: deploy.host, pixel.host",
+        "$5 year one, ~$82 renewal — classic promo structure, do the math",
+        "Words ending in \"host\" make clean domain hacks (g.host)",
+        "Skip it outside hosting/infrastructure — the semantics are narrow",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
