@@ -892,8 +892,25 @@ function readingVariants(p: string): string[] {
 const FULL_PINYIN_CLAIM_RE = /全拼/;
 const QUOTED_CJK_RE = /「([\u3400-\u4dbf\u4e00-\u9fff]{2,4})」/g;
 
-// 枚举引用词的所有逐字拼接读法，判断是否有一种等于 label（组合数设上限防爆炸）
-function quotedWordMatchesLabel(word: string, label: string): boolean {
+// 单字在 label 中允许的贡献形态：全拼各读音（含 ü 写法变体）；宽松模式下再加
+// 首字母与首声母（zh/ch/sh 双字母声母），覆盖「取字首」类合法造型（云慕 → y+m）
+function charContributions(readings: string[], allowInitials: boolean): string[] {
+  const out: string[] = [];
+  for (const r of readings) {
+    for (const v of readingVariants(r)) out.push(v);
+    if (allowInitials) {
+      out.push(r[0]);
+      if (r.length >= 2 && (r[1] === "h") && (r[0] === "z" || r[0] === "c" || r[0] === "s")) {
+        out.push(r.slice(0, 2));
+      }
+    }
+  }
+  return [...new Set(out)];
+}
+
+// 枚举引用词的所有逐字拼接读法，判断是否有一种等于 label（组合数设上限防爆炸）。
+// allowInitials：宽松模式（未声称「全拼」）下每字还可只取首字母/首声母参与拼接
+function quotedWordMatchesLabel(word: string, label: string, allowInitials = false): boolean {
   const table = pinyinTable();
   let joins: string[] = [""];
   for (const ch of word) {
@@ -901,12 +918,10 @@ function quotedWordMatchesLabel(word: string, label: string): boolean {
     if (!readings) return false; // 表外字（GB2312 外生僻字）→ 保守拒绝，视为不匹配
     const next: string[] = [];
     for (const j of joins) {
-      for (const r of readings) {
-        for (const v of readingVariants(r)) {
-          // 前缀剪枝：拼接中途就必须是 label 前缀，否则丢弃该分支
-          const cand = j + v;
-          if (label.startsWith(cand)) next.push(cand);
-        }
+      for (const v of charContributions(readings, allowInitials)) {
+        // 前缀剪枝：拼接中途就必须是 label 前缀，否则丢弃该分支
+        const cand = j + v;
+        if (label.startsWith(cand)) next.push(cand);
       }
     }
     if (next.length === 0) return false;
@@ -915,14 +930,17 @@ function quotedWordMatchesLabel(word: string, label: string): boolean {
   return joins.includes(label);
 }
 
-// theme 为 pinyin 且 meaning 声称「全拼」：「」内存在可判引用词但全部与 label 拼写不符 → true（丢弃）
+// theme 为 pinyin 且 meaning 含「」中文引用词：引用词与 label 做拼音一致性校验 → 全部不符则 true（丢弃）。
+// R244（R239 审计 P2-1）：「全拼」声明从必要条件改为加严条件——声称全拼时 label 必须等于
+// 逐字全拼拼接（严格）；未声称时放宽为「全拼或首字母/首声母的逐字组合」能完整拼出 label
+// 即放行（弱声称），仍对不上（shuqi「漱石」/pinen「品芩」/duanyou「韫岩」型）才拒绝
 export function pinyinQuoteMismatch(label: string, meaning: string): boolean {
-  if (!FULL_PINYIN_CLAIM_RE.test(meaning)) return false;
+  const strict = FULL_PINYIN_CLAIM_RE.test(meaning);
   QUOTED_CJK_RE.lastIndex = 0;
   let m: RegExpExecArray | null;
   let judged = 0;
   while ((m = QUOTED_CJK_RE.exec(meaning)) !== null) {
-    if (quotedWordMatchesLabel(m[1], label)) return false;
+    if (quotedWordMatchesLabel(m[1], label, !strict)) return false;
     judged++;
   }
   return judged > 0;
