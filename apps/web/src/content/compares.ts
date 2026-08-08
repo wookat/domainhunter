@@ -2005,6 +2005,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Web3 & crypto projects (the insider flag)", "Creative experiments & coined brands", "Alphabet-grade endorsement (abc.xyz)", "Bulk idea validation on cheap first years"],
     },
   },
+  "page-vs-com": {
+    slug: "page-vs-com",
+    a: "page",
+    b: "com",
+    zh: {
+      title: ".page 和 .com 怎么选：Google 系诚实定价与通用默认值的对比",
+      metaDescription: ".page 由 Google 运营、全后缀强制 HTTPS 且注册续费同价，.com 认知度最高但好名字绝迹。对比两者的信任机制、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两者的信任来源完全不同。.com 的信任来自三十年的用户习惯：口头传播时用户默认补全 .com，正式品牌主站、长期资产与转售流动性它仍是无可争议的第一——问题只有一个，好名字几乎绝迹，短词要么被囤要么标着溢价。.page 的信任来自技术强制：Google Registry 把整个后缀写进 HSTS 预加载列表，所有 .page 站点强制 HTTPS，浏览器直接拒绝不安全连接，这条硬规矩本身就是安全背书；语义上「page = 页面」，个人主页与简历页（yourname.page）、产品落地页、文档与更新日志站用它名正言顺，且库存大开、常用词命中率高。价格同样是 .page 的加分项：注册约 $11、续费同价——不打首年折扣也不涨续费，长期成本可预期，与 .com 的十来美元属同一量级。判断标准：做的是轻量、单一目的的「一页」（主页、落地页、文档）→ .page 的语义、库存与强制 HTTPS 都是红利；做面向大众的正式品牌主站、要长期持有与转售 → .com 的默认值地位仍然无可替代。",
+      pickA: ["个人主页与简历页", "产品落地页与发布页", "文档与更新日志站", "心仪短词在 .com 已被注册"],
+      pickB: ["面向大众的正式品牌主站", "长期品牌资产与转售流动性", "口头传播多、依赖默认补全", "多产品线的大型平台"],
+    },
+    en: {
+      title: ".page vs .com: Google's Honest Pricing vs the Universal Default",
+      metaDescription:
+        ".page is Google-run, HTTPS-only, with identical registration and renewal pricing; .com has maximum recognition but empty shelves. Compare trust models, pricing and fit, then hunt available names.",
+      verdict:
+        "The two earn trust in completely different ways. .com's trust is thirty years of habit: users autocomplete .com when they hear a name, and for a formal brand site, a long-term asset or resale liquidity it remains the undisputed first choice — the only problem is that good names are essentially gone, hoarded or premium-priced. .page's trust is technically enforced: Google Registry put the entire TLD on the HSTS preload list, so every .page site is HTTPS-only and browsers refuse insecure connections — a hard rule that doubles as a security endorsement. Semantically \"page\" fits personal home and résumé pages (yourname.page), product landing pages, and docs or changelog sites naturally, with wide-open inventory where common words still hit. Pricing is another point for .page: about $11 to register and the same to renew — no first-year teaser, no renewal jump — predictable long-term cost in the same ballpark as .com. The test: building a lightweight single-purpose \"page\" (home page, landing page, docs) → .page's semantics, inventory and enforced HTTPS are pure upside; building a mainstream brand's primary site to hold and resell → .com's default status is still irreplaceable.",
+      pickA: ["Personal home & résumé pages", "Product landing & launch pages", "Docs & changelog sites", "Your short word is taken on .com"],
+      pickB: ["Mainstream consumer brand sites", "Long-term asset and resale liquidity", "Heavy word-of-mouth, autocomplete reflex", "Sprawling multi-product platforms"],
+    },
+  },
+  "bio-vs-me": {
+    slug: "bio-vs-me",
+    a: "bio",
+    b: "me",
+    zh: {
+      title: ".bio 和 .me 怎么选：创作者简介页与个人品牌的对比",
+      metaDescription: ".bio 是「link in bio」时代的创作者暗号，.me 是最经典的个人品牌后缀。对比两者的语义、价格结构与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是「个人」后缀，分界线在场景的具体程度。.bio 精准踩中创作者经济的暗号：社交平台人人都有一栏 bio，「link in bio」是全球创作者的通用话术，yourname.bio 天然就是你的链接聚合页与简介页——做的就是这件事时，语义精准度无可替代；它还有一层「生物/有机」语义，生物科技公司与有机品牌也用得名正言顺。.me 则是更宽的个人品牌画布：个人主页、简历站、开发者作品集、博客都装得下，还能拼动词短语域名（about.me、visit.me 式），二十年积累的认知度也更稳。价格结构差别要算清：.bio 首年常见约 $6 引流价但续费约 $58/年，长期持有明显更贵；.me 首年常有低价促销、续费约 $20/年量级，长期成本友好得多。判断标准：站点本体就是「简介 + 链接聚合」、面向粉丝与社交流量 → .bio 的场景语义直接命中；要做完整的个人站、博客、作品集并长期持有 → .me 的宽语义和低续费更划算。两者都想要时，成熟分法是 .me 做个人主站、.bio 挂链接聚合页。",
+      pickA: ["创作者 link-in-bio 聚合页", "社交主页导流的简介页", "生物科技与有机品牌", "「bio」话术贴合的粉丝场景"],
+      pickB: ["完整的个人主站与博客", "简历与开发者作品集", "动词短语域名（visit.me 式）", "长期持有、续费成本敏感"],
+    },
+    en: {
+      title: ".bio vs .me: The Creator Bio Page vs the Personal Brand Classic",
+      metaDescription:
+        ".bio is the creator economy's \"link in bio\" password; .me is the classic personal-brand suffix. Compare semantics, price structure and fit, then hunt available names.",
+      verdict:
+        "Both are personal suffixes; the divide is how specific the scene is. .bio lands exactly on the creator economy's password: every social profile has a bio field, \"link in bio\" is the universal creator phrase, and yourname.bio reads instantly as your link hub and intro page — when that's literally what you're building, no other suffix matches the semantics; it also carries a second biology/organic reading that biotech companies and organic brands wear legitimately. .me is the wider personal-brand canvas: full personal sites, résumé pages, developer portfolios and blogs all fit, plus verb-phrase domain hacks (about.me, visit.me-style), backed by two decades of recognition. Do the price math: .bio often teases around $6 for year one but renews near $58/yr — noticeably expensive to hold; .me runs cheap first-year promos with renewals around the $20/yr tier, far friendlier long term. The test: if the site is a bio-plus-links hub fed by social traffic → .bio's scene-specific semantics hit directly; for a full personal site, blog or portfolio held for years → .me's broader meaning and lower renewals win. Want both? The mature split: .me for the personal main site, .bio for the link hub.",
+      pickA: ["Creator link-in-bio hubs", "Intro pages fed by social profiles", "Biotech & organic brands", "Fan-facing scenes where \"bio\" is the word"],
+      pickB: ["Full personal sites & blogs", "Résumés & developer portfolios", "Verb-phrase hacks (visit.me-style)", "Long-term holds, renewal-cost sensitive"],
+    },
+  },
+  "ink-vs-art": {
+    slug: "ink-vs-art",
+    a: "ink",
+    b: "art",
+    zh: {
+      title: ".ink 和 .art 怎么选：用墨的手艺与艺术圈名片的对比",
+      metaDescription: ".ink 语义是「墨水」，纹身与写作行当的行话；.art 是艺术圈的通用名片。对比两者的语义口径、价格与圈层认同，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是创意后缀，口径一窄一宽。.ink 是行话：语义死死绑定「用墨的行当」——纹身圈把 ink 当自己人暗号（get inked = 去纹身），纹身工作室与刺青师用 name.ink 是最正统的用法；作家、书法家、插画与漫画作者、杂志出版项目也都贴切。它还有结构红利：三字母单音节，name.ink 往往比同名 .com 更短；首年约 $2 引流价、续费约 $26/年，试错几乎免费。.art 是名片：为整个艺术圈量身定制，艺术家作品集、画廊与美术馆、展览与创意机构用它身份一眼可辨，注册局长期面向艺术社区运营，圈内认可度在垂直后缀里属较高一档；语义比 .ink 宽得多——数字艺术、NFT、摄影、策展都装得下。价格上 .art 首年也常见低价、续费中档量级，两者长期成本相近。判断标准：业务与「墨」强相关（纹身、书写、插画、出版）→ .ink 的行话身份与短域名是独有红利；更宽的艺术创作与机构身份 → .art 的通用名片更稳。注意 .ink 与 .in 一字母之差，口头传播记得说清 i-n-k。",
+      pickA: ["纹身工作室与刺青师", "作家与写作项目", "插画师与漫画作者", "三字母短域名刚需（name.ink 更短）"],
+      pickB: ["艺术家作品集与个人站", "画廊、美术馆与展览", "设计与创意机构", "数字艺术与策展项目"],
+    },
+    en: {
+      title: ".ink vs .art: The Ink Trade's Slang vs the Art World's Business Card",
+      metaDescription:
+        ".ink means ink — the tattoo and writing trades' slang; .art is the art world's universal badge. Compare semantic width, pricing and community credibility, then hunt available names.",
+      verdict:
+        "Both are creative suffixes; one is narrow, one is wide. .ink is trade slang: hard-bound to crafts that work in ink — tattoo culture owns the word (\"get inked\"), so studios and tattoo artists on name.ink wear the most authentic use; writers, calligraphers, illustrators, comic artists and publishing projects fit just as naturally. It also has a structural bonus: three letters, one syllable, so name.ink often beats the matching .com on length; at about $2 for year one and $26/yr to renew, trying it is nearly free. .art is the business card: purpose-built for the whole art world — artist portfolios, galleries and museums, exhibitions and creative agencies read instantly, and the registry has courted the art community for years, earning top-tier credibility among vertical suffixes; its semantics are far wider than .ink's, covering digital art, NFTs, photography and curation. .art also runs cheap first years with mid-tier renewals, so long-term costs are comparable. The test: if the work is literally about ink (tattoos, writing, illustration, publishing) → .ink's insider identity and shorter domain are unique upside; for broader artistic practice or institutional identity → .art's universal badge is the safer fit. One caution: .ink is one letter from .in — spell out i-n-k aloud.",
+      pickA: ["Tattoo studios & artists", "Writers & writing projects", "Illustrators & comic artists", "Three-letter short-domain needs (name.ink)"],
+      pickB: ["Artist portfolios & personal sites", "Galleries, museums & exhibitions", "Design & creative agencies", "Digital art & curation projects"],
+    },
+  },
+  "moe-vs-fun": {
+    slug: "moe-vs-fun",
+    a: "moe",
+    b: "fun",
+    zh: {
+      title: ".moe 和 .fun 怎么选：二次元身份牌与泛娱乐后缀的对比",
+      metaDescription: ".moe 源自日语「萌え」、是 ACG 圈的文化身份牌，.fun 语义即「好玩」、覆盖一切泛娱乐。对比两者的圈层深度、价格与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是「快乐」后缀，深度完全不同。.moe 是文化身份牌：源自日语「萌え」，由日本注册局 Interlink 专为二次元文化推出——动漫资讯站、同人社团与画师主页、VTuber 企划、字幕组与图站用 name.moe 等于亮明圈内身份，目标用户一眼共鸣，圈内真实用例的积累让它的文化认同度在小众后缀里数一数二；注册约 $13、续费同价，定价诚实无陷阱。.fun 是泛娱乐通配符：语义即「好玩」，小游戏站、互动营销页、趣味测试、派对与活动策划、玩具品牌都装得下，不挑圈层、谁都看得懂；首年常见一两美元的引流价，但续费会回到二十多美元的正常水平，长期成本要算清。判断标准很直接：受众是二次元圈内人 → .moe 的身份信号是 .fun 给不了的，圈内人看到 .moe 会心一笑、看到 .fun 只觉得普通；受众是泛大众、内容是广义的「好玩」→ .fun 的通用语义更稳，硬用 .moe 反而把圈外用户挡在门外。还要记住 .moe 的反面：文化属性极强，非 ACG 业务用它毫无意义；同人商用注意 IP 版权边界。",
+      pickA: ["动漫资讯与评论站", "同人社团与画师主页", "VTuber 与虚拟偶像企划", "二次元社区与工具"],
+      pickB: ["小游戏与休闲游戏站", "互动营销与趣味测试", "派对与活动策划", "面向泛大众的娱乐品牌"],
+    },
+    en: {
+      title: ".moe vs .fun: The Anime Identity Badge vs the General Entertainment Suffix",
+      metaDescription:
+        ".moe comes from Japanese \"moe\" — the ACG culture badge; .fun means fun and covers all entertainment. Compare community depth, pricing and fit, then hunt available names.",
+      verdict:
+        "Both are happy suffixes at completely different depths. .moe is a cultural identity badge: born from Japanese 萌え and launched by registry Interlink specifically for otaku culture — anime news sites, doujin circles and illustrator pages, VTuber projects, fansub groups and art boards use name.moe as an insider signal their audience recognizes instantly, and years of real adoption give it top-tier cultural credibility among niche suffixes; about $13 to register and the same to renew — honest, no traps. .fun is the general entertainment wildcard: it just means fun, so casual game sites, interactive marketing pages, quizzes, party and event planning, and toy brands all fit — no subculture required, everyone gets it; year one often costs a dollar or two, but renewals snap back to the twenty-something range, so budget the hold. The test is blunt: if your audience lives inside anime culture → .moe sends a signal .fun never can — insiders smile at .moe and shrug at .fun; if your audience is the general public and the content is broadly \"fun\" → .fun's universal reading is safer, and forcing .moe would lock outsiders out. Remember .moe's flip side: the cultural identity is so strong that non-ACG businesses gain nothing, and commercial fan projects should mind franchise IP rights.",
+      pickA: ["Anime news & review sites", "Doujin circles & illustrator pages", "VTuber & virtual idol projects", "Otaku communities & tools"],
+      pickB: ["Casual & mini-game sites", "Interactive marketing & quizzes", "Party & event planning", "Mass-audience entertainment brands"],
+    },
+  },
+  "lol-vs-gg": {
+    slug: "lol-vs-gg",
+    a: "lol",
+    b: "gg",
+    zh: {
+      title: ".lol 和 .gg 怎么选：梗后缀与电竞行货的对比",
+      metaDescription: ".lol 就是「laughing out loud」、自带笑点且价格便宜，.gg 是游戏电竞圈的行货后缀（good game）。对比两者的气质、价格与信任差异，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀在游戏圈有交集（LOL 既是「大笑」也是英雄联盟），但气质完全不同。.lol 是梗：XYZ Registry 运营，语义就是全世界最通用的「哈哈哈」——梗图与段子站、搞笑视频、恶搞与愚人节页面用 name.lol 域名本身就是内容的一部分；首年约 $2、续费约 $26/年，整活成本忽略不计，英雄联盟社区还能玩双关。.gg 是行货：源自电竞礼仪「good game」，Discord（discord.gg）把它用成了游戏圈基础设施的一部分，游戏工作室、战队与赛事、游戏工具与社区用 .gg 是圈内公认的正式选择——它传达的是「认真做游戏」，而非玩笑。代价是价格：.gg 是根西岛国家后缀，注册与续费都明显偏贵（几十美元一年量级），首年也没有低价钩子。判断标准：内容以幽默、整活、梗为核心 → .lol 的笑点与白菜价无可替代；做正式的游戏产品、战队、工具或社区 → .gg 的圈内信任值回票价。反着用都亏：严肃游戏产品挂 .lol 显得不专业，纯整活页面用 .gg 又白花钱。预算允许的战队/厂牌可以两个都拿：.gg 做正式门面，.lol 做梗营销页。",
+      pickA: ["梗图与段子站", "搞笑视频与整活企划", "恶搞与愚人节页面", "预算极致敏感的趣味项目"],
+      pickB: ["游戏工作室与产品官网", "战队与电竞赛事", "游戏工具与社区（Discord 生态）", "看重圈内正式信任感"],
+    },
+    en: {
+      title: ".lol vs .gg: The Meme Suffix vs Esports Standard Issue",
+      metaDescription:
+        ".lol is literally \"laughing out loud\" — built-in humor at bargain prices; .gg is gaming's standard-issue suffix (good game). Compare vibe, pricing and trust, then hunt available names.",
+      verdict:
+        "The two overlap in gaming (LOL is both the laugh and League of Legends) but wear completely different vibes. .lol is the meme: run by XYZ Registry, it's the internet's universal laugh — meme and joke sites, comedy video projects, prank and April Fools' pages get a built-in punchline where the domain is part of the content; at about $2 for year one and $26/yr to renew, a gag page costs nothing, with a bonus pun for League communities. .gg is standard issue: born from the esports courtesy \"good game\" and cemented by Discord (discord.gg) as part of gaming's infrastructure, it's the recognized formal choice for game studios, esports teams and events, gaming tools and communities — it says \"serious about games\", not \"joking\". The price is the price: .gg is Guernsey's ccTLD and costs noticeably more to register and renew (tens of dollars a year, no teaser). The test: if humor and memes are the content → .lol's punchline and bargain price are unmatched; building a real game product, team, tool or community → .gg's insider trust earns its cost. Cross them and you lose both ways: a serious game on .lol reads unprofessional, a gag page on .gg wastes money. Teams with budget take both: .gg as the formal front door, .lol for meme marketing.",
+      pickA: ["Meme & joke sites", "Comedy video projects", "Prank & April Fools' pages", "Rock-bottom budget fun projects"],
+      pickB: ["Game studios & product sites", "Esports teams & events", "Gaming tools & communities (Discord ecosystem)", "Formal insider trust matters"],
+    },
+  },
+  "uk-vs-com": {
+    slug: "uk-vs-com",
+    a: "uk",
+    b: "com",
+    zh: {
+      title: ".uk 和 .com 怎么选：英国本地信任与全球默认值的对比",
+      metaDescription: ".uk 是英国国家域名、本地信任度与本地 SEO 双加成，.com 全球通用但好名字绝迹。对比两者的市场定位、合规要求与品牌策略，并用 AI 猎取可注册的名字。",
+      verdict:
+        "和所有「ccTLD vs .com」的选择一样，看用户在哪里。主攻英国市场时 .uk 几乎是标配：Nominet 运营超过 25 年、上千万注册量，英国消费者把 .uk/.co.uk 当「本地生意」的默认信号，信任度远超一般新后缀；Google 也会把 .uk 站点与英国地区相关联，本地 SEO 有天然加成。2014 年起可直接注册二级 .uk，name.uk 比 name.co.uk 短一截也更现代；注册约 $6、续费同价，ccTLD 里的良心价。面向全球用户或计划出海，.com 的认知度无可替代——口头传播默认补全、长期资产流动性最好。预算允许的成熟英国品牌通常两个都拿：.uk（连同 .co.uk）做本地门面或防抢注，.com 做国际主站。两条 .uk 特有的注意事项：Nominet 要求注册人提供英国境内送达地址，海外注册人需确认注册商代理支持；同名 .co.uk 若在他人手里，先评估品牌混淆风险再入场。判断标准：用户、物流、合规都在英国 → .uk 的本地信任是 .com 给不了的；全球市场 → .com 仍是安全区。",
+      pickA: ["面向英国市场的电商", "英国本地服务与商铺", "英国媒体与内容站", "在英品牌与机构官网"],
+      pickB: ["面向全球用户或计划出海", "品牌主站与长期资产", "口头传播多、依赖默认补全", "转售流动性最好"],
+    },
+    en: {
+      title: ".uk vs .com: British Local Trust vs the Global Default",
+      metaDescription:
+        ".uk is the UK's country domain with local trust and local-SEO upside; .com is the global default with empty shelves. Compare market focus, compliance and brand strategy, then hunt available names.",
+      verdict:
+        "As with every ccTLD-versus-.com call, it comes down to where your users are. For a UK-focused business, .uk is near-mandatory: run by Nominet for over 25 years with registrations in the tens of millions, British consumers read .uk/.co.uk as the default signal of a local business — trust far beyond any new gTLD — and Google geo-associates .uk sites with the UK, a free local-SEO boost. Since 2014 you can register directly at the second level, and name.uk is shorter and more modern than name.co.uk; about $6 to register with the same renewal — honest ccTLD pricing. For a global audience, .com's recognition is irreplaceable — autocomplete reflex and the best long-term asset liquidity. Established UK brands with budget usually take both: .uk (plus .co.uk) as the local front door or defensively, .com as the international main site. Two .uk-specific cautions: Nominet requires a UK address for service, so overseas registrants must confirm their registrar proxies it; and if someone else holds the matching .co.uk, weigh the brand-confusion risk before committing. The test: users, logistics and compliance all in the UK → .uk delivers local trust .com can't; global market → .com remains the safety zone.",
+      pickA: ["UK-facing e-commerce", "Local UK services & shops", "British media & content sites", "UK brand & institution sites"],
+      pickB: ["Global audience or expansion plans", "Primary brand site and long-term asset", "Heavy word-of-mouth, autocomplete reflex", "Best resale liquidity"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
