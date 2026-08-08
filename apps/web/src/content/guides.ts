@@ -6055,6 +6055,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  pettraining: {
+    slug: "pettraining",
+    tlds: [
+      { tld: "com", zh: "高客单课程包的信任底线，家长型宠主查资质时最稳", en: "The trust baseline for high-ticket training packages" },
+      { tld: "pet", zh: "品类后缀直给，宠物行业语义零解释成本", en: "The category suffix — pet-industry semantics at zero explanation cost" },
+      { tld: "academy", zh: "「犬校」的机构感，把训练课程包装成正经教育", en: "The dog-school suffix — framing training as proper education" },
+    ],
+    zh: {
+      label: "宠物训练",
+      title: "宠物训练机构怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "宠物训练与行为矫正机构命名指南：服从/默契意象、犬校人设、正向训练理念等 5 种思路，帕特/Zak George/SIRIUS 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的宠物训练品牌域名。",
+      intro:
+        "宠物训练机构的名字要同时安抚两种焦虑：狗主人怕「训练=打骂」，怕把毛孩子送进军训营；又怕不训练，拆家、扑人、分离焦虑越来越糟。所以名字的第一任务是传递训练理念——正向训练（positive reinforcement）已是行业共识，名字里任何「服从、管教、驯服」的强权词根都会吓跑年轻宠主，而「默契、伙伴、沟通、翻译」这类平权词根则精准踩中「我想更懂它」的真实需求。第二任务是建立专业背书：宠物训练是典型的「资质看不见」行业，无证驯犬师泛滥，名字带「学院、学堂、academy」的机构感，配合训犬师认证展示，能把专业度写在门面上。词库上，「懂、通、译、伴、爪、尾巴」都在人宠关系谱系上；英文品牌偏爱「good dog、sit、fetch」这类指令词的俏皮化改造。还要考虑场景延展：训练机构普遍向寄养、行为咨询、宠物幼儿园延展，名字锁死「训犬」会漏掉猫行为咨询这个增速最快的细分。最后过传播关：宠主转介绍发生在遛狗社交里，名字要在「你家狗在哪训的」这句对话里顺口好答。",
+      namingIdeas: [
+        "默契意象：懂、通、心有灵犀、best friend——把「训练」重新定义为「学会互相理解」，精准安抚「怕狗受委屈」的核心焦虑",
+        "犬校人设：学堂、学院、academy、school——机构感词根把训练包装成正经教育，家长型宠主愿意为「上学」付高客单",
+        "指令词俏皮化：sit、fetch、good boy 的品牌化改造——行业黑话自带会心一笑，英文市场的经典打法",
+        "正向理念前置：positive、gentle、kind 直接入名——训练理念是这个品类最大的决策因子，名字先表态能赢得筛选",
+        "人宠平权词根：伙伴、搭档、partner、pack——把狗放在「家人」位置的名字，比把狗放在「服从者」位置的名字更贴近当代宠主",
+      ],
+      cases: [
+        { name: "SIRIUS Dog Training", takeaway: "天狼星（大犬座最亮的星）：用「狗星座」的天文梗完成品类暗示，又自带「明星学员」的期许——全美最早的幼犬课程品牌，名字的巧思服役四十年" },
+        { name: "Zak George's Dog Training Revolution", takeaway: "「Revolution」宣战旧式高压训练：个人 IP+理念宣言的组合，把 YouTube 频道名变成正向训练运动的旗帜——理念型命名的教科书" },
+        { name: "帕特训犬", takeaway: "「帕特」谐音 pat（轻拍）：一个安抚动作做品牌名，温柔理念不言自明——中文市场音译词根藏理念的轻巧示范" },
+        { name: "The Good Dog", takeaway: "把所有宠主的终极愿望直接做成名字：「好狗」是训练的结果承诺——大白话命名在效果导向品类里的直球打法" },
+        { name: "Puppy Kindergarten", takeaway: "「幼犬幼儿园」：借用人类教育的年龄分级，让「三个月大就该上学」变成常识——品类教育与命名一次完成" },
+      ],
+      pitfalls: [
+        "强权词根吓跑年轻宠主：「驯服、管教、服从」让人联想电击项圈与军训营——正向训练时代这些词是负资产",
+        "锁死「犬」漏掉猫生意：猫行为咨询是增速最快的细分，名字带死「犬、狗」字，扩品类时品牌要重来",
+        "俏皮过头压垮专业感：纯玩梗的名字（拆家整治办）能火一时，但高客单课程包需要「学院感」背书，玩笑名撑不起价格",
+        "忽略遛狗社交的口播场景：名字拗口难拼，「你家狗在哪训的」这句最重要的转介绍就接不住——念不顺=转不动",
+      ],
+    },
+    en: {
+      label: "Pet training",
+      title: "How to Name a Pet Training Business: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Pet training and behavior brand naming guide: rapport imagery, dog-school personas, positive-method signaling, breakdowns of SIRIUS/Zak George/The Good Dog, recommended TLDs and pitfalls — then hunt an available pet training domain with AI.",
+      intro:
+        "A pet training brand's name must soothe two anxieties at once: owners fear that \"training\" means drill-sergeant dominance — and they equally fear what happens without it, as the chewing, jumping and separation anxiety compound. So the name's first job is signaling method: positive reinforcement is now the industry consensus, and any dominance root (obey, command, tame) scares off modern owners, while rapport roots (understand, connect, translate, partner) land squarely on the real desire — \"I want to understand my dog better.\" The second job is credentialing: pet training is a classic invisible-qualifications business flooded with uncertified trainers, so school-register roots (academy, school, kindergarten) put professionalism on the storefront, backed by certification walls. For raw material, mutual-understanding words and playful remixes of command vocabulary (sit, fetch, good boy) are the category's native wit. Leave room to grow: training businesses stretch into boarding, behavior consulting and puppy daycare, and cat behavior work is the fastest-growing niche — a name welded to \"dog\" caps that. Finally, pass the dog-park test: referrals happen mid-walk, so the name must roll off the tongue in \"where did you train her?\"",
+      namingIdeas: [
+        "Rapport imagery: understand, connect, in sync, best friend — redefine training as learning to understand each other, defusing the \"will my dog suffer\" anxiety head-on",
+        "The dog-school persona: academy, school, kindergarten — institutional roots frame training as proper education, and parent-type owners pay premium tuition for \"school\"",
+        "Playful command words: sit, fetch, good boy remixed into a brand — the category's insider vocabulary earns a knowing smile for free",
+        "Method up front: positive, gentle, kind straight into the name — training philosophy is this category's biggest decision factor, and a name that declares it wins the shortlist",
+        "Equal-partner roots: partner, pack, sidekick — names that seat the dog as family beat names that seat the dog as a subordinate with today's owners",
+      ],
+      cases: [
+        { name: "SIRIUS Dog Training", takeaway: "The brightest star in Canis Major: an astronomy pun that hints the category and promises star pupils at once — America's pioneering puppy-class brand, one clever name serving four decades" },
+        { name: "Zak George's Dog Training Revolution", takeaway: "\"Revolution\" declares war on old-school dominance methods: personal IP plus a manifesto, turning a YouTube channel name into the flag of the positive-training movement — the textbook of ideology naming" },
+        { name: "The Good Dog", takeaway: "Every owner's end goal made into the name itself: \"good dog\" is the outcome promise — plain-words naming playing a straight ball in a results-driven category" },
+        { name: "Puppy Kindergarten", takeaway: "Borrowing human education's age-grading to make \"school at three months old\" common sense — category education and naming accomplished in one stroke" },
+        { name: "Sit Happens", takeaway: "A command word folded into an idiom: one pun carrying both the service and the personality — proof the category's insider vocabulary is a naming goldmine" },
+      ],
+      pitfalls: [
+        "Dominance roots repelling modern owners: obey, tame, command evoke shock collars and boot camps — negative equity in the positive-reinforcement era",
+        "Welding the name to \"dog\": cat behavior consulting is the fastest-growing niche, and a dog-locked name forces a rebrand to catch it",
+        "Over-joking past the price point: a pure-meme name goes viral once, but premium training packages need academy-grade gravitas — a punchline can't carry the tuition",
+        "Failing the dog-park test: referrals happen mid-walk, and a name that stumbles in \"where did you train her?\" breaks the referral chain at its strongest link",
+      ],
+    },
+  },
+  nailsalon: {
+    slug: "nailsalon",
+    tlds: [
+      { tld: "com", zh: "预约与储值卡业务的信任底线，老客复购最稳", en: "The trust baseline for bookings and stored-value cards" },
+      { tld: "studio", zh: "「工作室」气质直给，小而美的手作感与预约制暗示", en: "Atelier vibes made explicit — crafted, intimate, by-appointment" },
+      { tld: "pink", zh: "把品类色写进后缀，甜美系美甲品牌的天然签名", en: "The category color as a suffix — a native signature for sweet aesthetics" },
+    ],
+    zh: {
+      label: "美甲美睫",
+      title: "美甲美睫店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "美甲美睫工作室命名指南：指尖意象、审美人设、闺蜜昵称感等 5 种思路，OPI/Olive & June/树獭很忙等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的美甲品牌域名。",
+      intro:
+        "美甲美睫店的名字是审美简历的第一行：顾客还没看到款式图，先通过名字判断「这家店的审美跟我搭不搭」。这是一门极度依赖风格标签的生意——甜美系、极简系、暗黑系、日式手绘各有客群，名字的气质错位等于把目标客群拒之门外，比如走高级极简风的工作室叫「魅惑美甲」，小红书主页再精致也救不回来。命名的第二个抓手是关系人设：美甲是两小时的强制社交，回头客的本质是「跟这个美甲师聊得来」，所以名字往闺蜜昵称方向走（小X家、X酱、X's nails）能提前建立亲密预期，比机构感的「XX 美甲中心」更贴近这门手艺人生意的本质。词库上，「指尖、甲、瓣、釉、绘、junco」都在品类谱系上；日系罗马音与法语词根是风格溢价的常规操作，但要过「顾客能不能念出来」这一关——预约要靠口播转介绍，念不出的名字转不动。还要考虑平台搜索：小红书与大众点评是获客主场，名字里埋「美甲」或城市+风格关键词的组合能吃到搜索流量，纯抽象名则要靠内容硬打。最后留业务半径：美甲店普遍延展美睫、纹绣、手部护理，名字锁死「甲」会让扩项目时的招牌很尴尬。",
+      namingIdeas: [
+        "指尖意象：指尖、瓣、釉、月牙——把方寸画布的精致感写进名字，品类联想与审美暗示一次完成",
+        "闺蜜昵称感：小X家、X酱、X's——两小时强制社交的生意，名字先建立「跟朋友坐一下午」的亲密预期",
+        "风格标签前置：极简、雾面、手绘、niji——风格是这个品类的第一筛选条件，名字先表态能吸来对的客群",
+        "日法词根做溢价：罗马音、法语小词（atelier、ongle）——异国词根自带风格溢价，但必须过「顾客念得出」这一关",
+        "搜索词组合：城市/商圈+风格+美甲——小红书与点评是获客主场，名字里埋搜索词等于常驻免费广告位",
+      ],
+      cases: [
+        { name: "OPI", takeaway: "三个字母的极致压缩（Odontorium Products Inc. 的缩写逆袭）：从牙科材料公司到全球美甲色号之王，证明短名+色号命名体系（I'm Not Really a Waitress）才是记忆资产" },
+        { name: "Olive & June", takeaway: "两个人名的组合：像介绍两位闺蜜，把 DIY 美甲品牌做出「朋友教你涂指甲」的亲切感——人名组合在美妆品类的降维温柔" },
+        { name: "树獭很忙", takeaway: "反差萌命名：树獭（慢）×很忙（快）的矛盾修辞自带段子体质，小红书标题即品牌名——内容平台时代店名先做梗的新打法" },
+        { name: "Paintbucket", takeaway: "「油漆桶」的工业词根做美甲：故意去甜美化，配工业风门店与中性色系——反品类审美的命名让极简客群一眼认亲" },
+        { name: "指甲盖计划", takeaway: "把身体部位大白话+「计划」的项目感组合：认真对待方寸之地的宣言感——大白话+反差词根的中文命名样本" },
+      ],
+      pitfalls: [
+        "气质与风格错位：极简工作室配「魅惑、女王」系名字，目标客群直接划走——名字的审美段位必须与款式图一致",
+        "念不出的异国名：法语与罗马音拼不出、念不准，口播转介绍与点评搜索双双断链——异国溢价的前提是可发音",
+        "机构感疏远手艺人生意：「XX 美甲美睫中心」的连锁感，稀释了顾客最看重的「专属美甲师」亲密关系",
+        "锁死「甲」字限制半径：美睫、纹绣、手护都在延展路上，名字带死「甲」，扩项目时招牌与主页都要重做",
+      ],
+    },
+    en: {
+      label: "Nail & lash studios",
+      title: "How to Name a Nail Salon: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Nail and lash studio naming guide: fingertip imagery, aesthetic-tribe signaling, best-friend intimacy, breakdowns of OPI/Olive & June/Paintbucket, recommended TLDs and pitfalls — then hunt an available nail brand domain with AI.",
+      intro:
+        "A nail studio's name is the first line of its aesthetic résumé: before a client sees a single design photo, the name tells her whether this studio's taste matches hers. This is a business ruled by style tribes — soft-girl pastels, stark minimalism, dark editorial, Japanese hand-painting each pull different clients — and a name pitched at the wrong tribe locks the right one out; no amount of Instagram polish rescues a minimalist studio named \"Seduction Nails.\" The second lever is relational persona: a manicure is two hours of enforced conversation, and repeat business is really \"I click with this tech,\" so best-friend register names (X's Nails, Chez X) set the intimacy expectation better than institutional \"XX Nail Center.\" For raw material, fingertip, petal, glaze and crescent-moon roots live natively on the category spectrum; Japanese romaji and French atelier words buy style premium — if clients can actually pronounce them, because bookings travel by word of mouth and an unpronounceable name doesn't travel. Mind platform search too: Instagram, TikTok and local review apps are the acquisition arena, and a name carrying \"nails\" or a neighborhood-plus-style combination rides free search traffic that a purely abstract name must buy with content. Finally, leave expansion room: nail studios routinely add lashes, brows and hand care, and a name welded to \"nails\" makes every added service line awkward.",
+      namingIdeas: [
+        "Fingertip imagery: tip, petal, glaze, crescent — write the preciousness of a two-centimeter canvas into the name, hinting category and aesthetic in one stroke",
+        "Best-friend register: X's, Chez X, diminutives — in a two-hour-conversation business, the name should promise an afternoon with a friend, not an appointment at an institution",
+        "Style tribe up front: matte, minimal, hand-painted — style is this category's first filter, and a name that declares its tribe attracts exactly the right clients",
+        "French and Japanese roots for premium: atelier, ongle, romaji words — exotic roots buy style premium, gated strictly on whether clients can pronounce them",
+        "Search-term combos: neighborhood + style + nails — review apps and social search are the acquisition arena, and keywords in the name are a permanent free ad slot",
+      ],
+      cases: [
+        { name: "OPI", takeaway: "Three letters distilled from \"Odontorium Products Inc.\": a dental-supply company became the world's nail-color king, proving a short name plus a witty shade-naming system (I'm Not Really a Waitress) is the real memory asset" },
+        { name: "Olive & June", takeaway: "Two first names joined like an introduction to your best friends: the DIY nail brand feels like a friend teaching you to paint — the disarming warmth of paired human names in beauty" },
+        { name: "Paintbucket", takeaway: "An industrial root for a nail studio: deliberately de-sweetened, matched with raw-concrete interiors and neutral palettes — anti-category naming that lets minimalist clients recognize their tribe at a glance" },
+        { name: "Chillhouse", takeaway: "Naming the feeling, not the service: \"chill\" sells the self-care afternoon of which nails are one part — the lifestyle-first play that expands naturally across services" },
+        { name: "Têtu (\u5934\u94c1)", takeaway: "A French word doubling as local slang: bilingual wordplay that photographs well on a storefront and travels in conversation — the exotic-root premium done with a pronunciation escape hatch" },
+      ],
+      pitfalls: [
+        "Aesthetic mismatch: a minimalist studio wearing a \"Queen/Seduction\" name loses its tribe at first sight — the name's taste level must match the design portfolio",
+        "Unpronounceable exotica: French or romaji names clients can't say or spell break both word-of-mouth referrals and review-app search — premium requires pronounceability",
+        "Institutional chill in an artisan business: \"XX Nail Center\" chain-register naming dilutes the one relationship clients value most — their personal tech",
+        "Welding the name to \"nails\": lashes, brows and hand care are all on the expansion path, and a nails-locked name makes every new service line an awkward retrofit",
+      ],
+    },
+  },
+  laundry: {
+    slug: "laundry",
+    tlds: [
+      { tld: "com", zh: "连锁与小程序下单的信任底线，办卡储值最稳", en: "The trust baseline for chains and stored-value memberships" },
+      { tld: "care", zh: "「护理」语义直给，从洗衣升维到衣物护理的后缀", en: "Care semantics outright — elevating laundry into garment care" },
+      { tld: "city", zh: "城市生活服务的在地感，社区连锁的天然签名", en: "Urban-service locality — a native signature for neighborhood chains" },
+    ],
+    zh: {
+      label: "洗衣洗护",
+      title: "洗衣洗护品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "洗衣店与衣物洗护品牌命名指南：焕新意象、护理升维、时间承诺等 5 种思路，泰笛/福奈特/Rinse 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的洗护品牌域名。",
+      intro:
+        "洗衣洗护品牌的名字要完成一次品类升维：在顾客心里，「洗衣店」是把脏衣服变干净的低价刚需，而「衣物护理」是把心爱的大衣、球鞋、奢侈品包养护如新的专业服务——两者客单价差十倍，名字站在哪一侧，价格带就锁在哪一侧。传统夫妻店命名（XX 干洗店）自带低价心智，新品牌普遍借「护理、养护、SPA、管家」完成升维叙事。命名的第二个抓手是信任：顾客交出的是有感情与价值的衣物，丢了、洗坏了是最大恐惧，所以名字要有「托付感」——稳重的品牌名+透明的流程承诺，比俏皮的谐音梗更能接住高客单。第三个抓手是时间：上门取送与 24 小时自助是这个品类的两大新业态，名字里埋「快、及时、随时」的时间承诺（Rinse 的清爽利落、泰笛的「上门」联想）能直接命中懒人经济的爽点。词库上，「净、洁、焕、新、泡、氧、白」都在品类谱系上，「焕新」比「洗净」更有升维感；英文品牌偏爱 fresh、press、fold 这类动作词根。还要留业务半径：洗护品牌普遍延展修鞋、改衣、皮具养护，名字锁死「洗」会限制这条利润更厚的延展线。",
+      namingIdeas: [
+        "焕新意象：焕、新、fresh、revive——「穿回第一天的样子」比「洗干净」贵十倍，升维词根直接改写价格带",
+        "护理升维：护理、养护、SPA、管家——把洗衣重新定义为衣物护理，名字先站上高客单的叙事位",
+        "时间承诺：快、及时、随时、次日达——取送与自助业态的核心卖点是时间，名字里的时间词直接命中懒人经济",
+        "托付感词根：稳、诚、老字号感的姓氏牌——顾客交出的是有感情的衣物，名字的可靠感是高客单的前提",
+        "动作词根俏皮化：press、fold、rinse、tumble——洗衣动作的品牌化改造，英文市场清爽利落的经典打法",
+      ],
+      cases: [
+        { name: "Rinse", takeaway: "一个动作词的极致清爽：rinse（漂洗）短促干净，读音自带水声——把「取送洗衣」这门物流生意做出轻盈感的命名标杆" },
+        { name: "泰笛 Taidi", takeaway: "「泰笛」谐音 tidy（整洁）：中文念着像人名般亲切，英文词根埋着品类承诺——音译藏义的双语命名轻巧示范" },
+        { name: "福奈特 Fornet", takeaway: "「福」的口彩+「奈特」的洋气：九十年代中外合资干洗品牌的经典命名公式，吉利字打底、音译字增信——下沉市场至今好用" },
+        { name: "The Laundress", takeaway: "「洗衣女工」的复古人设：一个旧职业名做高端洗护剂品牌，手工与讲究的联想扑面而来——旧词新用的升维魔法" },
+        { name: "e 袋洗", takeaway: "「按袋计费」的商业模式直接写进名字：e（线上）+袋（计价单位）+洗（品类），三个字说完一门生意——模式即名字的教科书" },
+      ],
+      pitfalls: [
+        "「干洗店」词根锁死低价心智：XX 干洗店的命名自带夫妻店联想，客单价天花板被名字焊死——升维要从名字开始",
+        "俏皮谐音撑不起托付感：顾客交的是心爱衣物，玩梗名字在「丢了怎么办」的焦虑面前减分——信任品类慎用段子",
+        "锁死「洗」限制利润线：修鞋、改衣、皮具养护是更厚的利润延展，名字带死「洗衣」，扩项目时招牌要重做",
+        "忽略小程序搜索场景：下单入口在微信/美团搜索框，名字与「洗衣、洗鞋」搜索词完全绝缘的抽象名，获客全靠地推硬打",
+      ],
+    },
+    en: {
+      label: "Laundry & garment care",
+      title: "How to Name a Laundry & Garment Care Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Laundry and garment care naming guide: renewal imagery, care-tier elevation, time promises, breakdowns of Rinse/The Laundress/e-Daixi, recommended TLDs and pitfalls — then hunt an available laundry brand domain with AI.",
+      intro:
+        "A laundry brand's name must pull off a category upgrade: in the customer's mind, a \"laundromat\" turns dirty clothes clean at commodity prices, while \"garment care\" restores a beloved coat, sneaker or designer bag to day-one condition — a tenfold price gap, and the name decides which side of it you live on. Legacy mom-and-pop naming (\"XX Dry Cleaning\") carries budget associations for free, so new brands climb via care, spa, valet and concierge roots. The second lever is trust: customers hand over garments with emotional and monetary value, and losing or ruining them is the category's core fear — a steady, entrusted-feeling name catches high tickets better than a pun. The third lever is time: pickup-and-delivery and 24-hour self-service are the category's growth engines, and a name promising speed and anytime access (the crisp splash of \"Rinse\") lands squarely on the convenience economy's pleasure center. For raw material, clean, fresh, revive and renew roots live on the category spectrum — \"renew\" prices higher than \"clean\" — and English brands favor action roots like press, fold and tumble. Leave room to grow: laundry brands stretch into shoe repair, alterations and leather care, the fatter-margin lines, so a name welded to \"wash\" caps the climb.",
+      namingIdeas: [
+        "Renewal imagery: revive, renew, fresh, day-one — \"wear it like the first day\" prices ten times higher than \"get it clean,\" and the upgrade starts in the name",
+        "Care-tier elevation: care, spa, valet, concierge — redefine laundry as garment care and the name claims the premium narrative slot before the first order",
+        "Time promises: same-day, anytime, express — pickup and self-service run on time as the core sell, and a time word in the name hits the convenience economy directly",
+        "Entrusted-feeling roots: steady surname brands, heritage registers — customers hand over garments they love, and reliability in the name is the precondition of high tickets",
+        "Playful action roots: press, fold, rinse, tumble — laundry verbs branded with a wink, the crisp classic of the English-speaking market",
+      ],
+      cases: [
+        { name: "Rinse", takeaway: "One action word at maximum crispness: short, clean, with the sound of water built into the phonetics — the naming benchmark for making a logistics business feel weightless" },
+        { name: "The Laundress", takeaway: "A vintage occupation as a premium brand: an old word for a washerwoman summons handwork and fastidiousness instantly — the elevation magic of old-word-new-use" },
+        { name: "e-Daixi (e\u888b\u6d17)", takeaway: "The business model written straight into the name: e (online) + bag (the pricing unit) + wash (the category) — three characters explaining an entire per-bag business, the textbook of model-as-name" },
+        { name: "Taidi (\u6cf0\u7b1b)", takeaway: "A Chinese name that sounds like a friendly given name while transliterating \"tidy\": the category promise buried in the phonetics — the light touch of meaning-in-transliteration bilingual naming" },
+        { name: "Press", takeaway: "A single garment-care verb doubling as \"press a button\": the app-era double entendre where the action of the service and the action of ordering collapse into one word" },
+      ],
+      pitfalls: [
+        "Dry-cleaner roots welding you to budget prices: \"XX Dry Cleaning\" carries mom-and-pop associations that cap the ticket — the upgrade must start in the name",
+        "Puns undercutting entrustment: customers hand over clothes they love, and a joke name loses points against the \"what if they lose it\" anxiety — trust categories spend humor carefully",
+        "Welding the name to \"wash\": shoe repair, alterations and leather care are the fatter-margin expansions, and a wash-locked name forces a rebrand to reach them",
+        "Ignoring in-app search: orders start in super-app search boxes, and an abstract name with zero overlap with \"laundry\" queries pays for every customer with ground promotion",
+      ],
+    },
+  },
+  rvtravel: {
+    slug: "rvtravel",
+    tlds: [
+      { tld: "com", zh: "高客单租赁与整车销售的信任底线，比价决策时最稳", en: "The trust baseline for high-ticket rentals and vehicle sales" },
+      { tld: "world", zh: "「带着家看世界」的语义同频，旅行半径写进后缀", en: "Semantically native to taking your home to see the world" },
+      { tld: "fun", zh: "度假租赁的轻快气质，家庭出游决策的情绪后缀", en: "The holiday-rental register — an emotional suffix for family trips" },
+    ],
+    zh: {
+      label: "房车旅行",
+      title: "房车旅行品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "房车租赁与房车旅行品牌命名指南：移动的家、在路上、营地生态等 5 种思路，Cruise America/Roadsurfer/途居 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的房车品牌域名。",
+      intro:
+        "房车旅行品牌的名字要同时卖两样东西：自由与安心。「自由」是这个品类的购买理由——说走就走、睡在山野、把家开到海边，名字里的公路词根（road、途、驰、行）与远方意象负责点燃向往；「安心」是这个品类的成交前提——房车租赁客单价高、驾驶门槛高、行程不可控，首租用户的核心顾虑是「车靠不靠谱、坏在路上怎么办」，名字的品牌感与服务承诺负责接住这层焦虑。头部品牌普遍在两者间配平：Cruise America 用「巡航+国名」把自由感与规模背书一次说完，Roadsurfer 用「公路冲浪者」的轻快人设吸引年轻首租客群。词库上，「途、驰、栖、野、风、屋」都在品类谱系上，「移动的家」是最强的情感钩子——房车与酒店的本质区别就是「带着家出发」。还要考虑生态延展：房车品牌普遍横跨租赁、销售、营地、改装四条线，名字锁死「租」或「车」都会限制半径；营地与目的地业务尤其需要名字里有「栖、居、营」的落脚感。最后过家庭决策关：房车游的主力是亲子家庭，名字要让「这个周末去哪」的家庭会议里，孩子也念得出、记得住。",
+      namingIdeas: [
+        "移动的家：屋、居、巢、home on wheels——房车与酒店的本质区别是「带着家出发」，家的词根是品类最强情感钩子",
+        "在路上意象：途、驰、road、drift——说走就走的公路自由是购买理由，动感词根负责点燃向往",
+        "栖居落脚感：栖、营、宿、camp——营地与目的地业务的延展需要「停下来」的词根，与公路词根配平互补",
+        "轻快人设：surfer、happy、camper 的度假腔——年轻首租客群怕「专业门槛」，名字越轻快，尝试门槛越低",
+        "规模与靠谱背书：America、途者联盟式的体系感——高客单+怕抛锚的品类，名字的规模感直接降低首租焦虑",
+      ],
+      cases: [
+        { name: "Cruise America", takeaway: "「巡航」的松弛+「America」的规模背书：一个名字同时说完自由感与全国网点——房车租赁双重诉求配平的教科书" },
+        { name: "Roadsurfer", takeaway: "「公路冲浪者」：把开房车说成冲浪，轻快人设精准吸引年轻首租客群——欧洲增长最快的房车租赁品牌用名字降低尝试门槛" },
+        { name: "途居", takeaway: "「途」的在路上+「居」的落脚感：两个字配平自由与安心，还直接覆盖营地业务——中文房车生态命名的紧凑范本" },
+        { name: "Airstream", takeaway: "「气流」：1930 年代以流线型车身命名，九十年后名字依然像风一样轻——产品特征升华成品牌资产的百年案例" },
+        { name: "Happier Camper", takeaway: "比较级的巧思：happier 暗示「比酒店游更快乐」，camper 双关露营者与房车——一个名字完成品类对比与情绪承诺" },
+      ],
+      pitfalls: [
+        "只卖自由不接安心：纯远方意象的名字点燃向往，却接不住「坏在路上怎么办」的首租焦虑——高客单品类要留信任锚点",
+        "锁死「租」或「车」：销售、营地、改装都在生态延展路上，名字带死单一业务，扩线时品牌要重来",
+        "专业腔吓退新手：「XX 房车装备」的硬核命名让首租家庭望而却步——主力客群是亲子家庭，不是越野玩家",
+        "忽略孩子的传播力：亲子游决策里孩子有一票，名字拗口难记，「上次那个房车」就替代了你的品牌名",
+      ],
+    },
+    en: {
+      label: "RV travel",
+      title: "How to Name an RV Travel Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "RV rental and camper travel naming guide: home-on-wheels imagery, open-road roots, scale reassurance, breakdowns of Cruise America/Roadsurfer/Airstream, recommended TLDs and pitfalls — then hunt an available RV brand domain with AI.",
+      intro:
+        "An RV travel brand's name must sell two things at once: freedom and reassurance. Freedom is the purchase reason — leave on a whim, sleep in the mountains, drive your home to the sea — and open-road roots (road, cruise, drift) with far-horizon imagery light that longing. Reassurance is the closing condition — RV rental is high-ticket with a real driving barrier, and the first-time renter's core worry is \"is the rig reliable, and what if it breaks down out there,\" which the name's brand weight and service promise must catch. Leading brands balance the two: Cruise America says ease and nationwide scale in one breath; Roadsurfer's playful persona lowers the trying barrier for young first-timers. For raw material, journey, roam, nest and wind roots live on the category spectrum, and \"home on wheels\" is the strongest emotional hook — the essential difference from a hotel trip is that your home comes along. Mind the ecosystem too: RV brands straddle rental, sales, campgrounds and conversion, so a name welded to \"rent\" or \"van\" caps the radius, and campground lines especially want settling-down roots (nest, camp, stay) to balance the road ones. Finally, pass the family council: RV trips are decided at the dinner table, and the kids get a vote — the name must be one a child can say and remember.",
+      namingIdeas: [
+        "Home on wheels: home, nest, den — the essential difference from hotels is bringing your home along, and home roots are the category's strongest emotional hook",
+        "Open-road imagery: road, cruise, drift, roam — leave-on-a-whim freedom is the purchase reason, and motion roots do the longing-ignition work",
+        "Settling-down roots: camp, stay, nest — campground and destination lines need a stopping-place word to balance the road words",
+        "A playful persona: surfer, happy, camper in holiday register — young first-timers fear the expertise barrier, and the lighter the name, the lower the barrier to trying",
+        "Scale reassurance: nationwide, fleet-scale registers — in a high-ticket, fear-of-breakdown category, institutional weight in the name directly lowers first-rental anxiety",
+      ],
+      cases: [
+        { name: "Cruise America", takeaway: "The ease of \"cruise\" plus the scale endorsement of \"America\": one name delivering both the freedom feeling and the nationwide network — the textbook of the category's dual-demand balance" },
+        { name: "Roadsurfer", takeaway: "Driving a camper reframed as surfing the road: a playful persona precisely tuned to young first-time renters — Europe's fastest-growing RV rental brand lowering the trying barrier with its name alone" },
+        { name: "Airstream", takeaway: "Named in the 1930s for its streamlined shell: ninety years later the name still moves like wind — the century case of a product trait sublimated into brand equity" },
+        { name: "Happier Camper", takeaway: "The wit of a comparative: \"happier\" implies happier-than-hotels, while \"camper\" puns the person and the vehicle — one name doing category comparison and emotional promise together" },
+        { name: "Tuju (\u9014\u5c45)", takeaway: "\"On the road\" plus \"a place to dwell\" in two characters: freedom and reassurance balanced, with campground business covered for free — the compact Chinese template for RV ecosystem naming" },
+      ],
+      pitfalls: [
+        "Selling freedom without catching reassurance: pure far-horizon names ignite longing but drop the \"what if it breaks down\" first-rental anxiety — high-ticket categories need a trust anchor in the name",
+        "Welding the name to \"rent\" or \"van\": sales, campgrounds and conversions are all on the ecosystem path, and a single-business name forces a rebrand at each expansion",
+        "Expert register scaring off beginners: hardcore \"XX Overland Gear\" naming repels first-time families — the core market is parents with kids, not off-road veterans",
+        "Ignoring the kids' vote: family trips are decided at the dinner table, and if children can't say the name, \"that RV place from last time\" replaces your brand",
+      ],
+    },
+  },
+  knowledgepay: {
+    slug: "knowledgepay",
+    tlds: [
+      { tld: "com", zh: "年费订阅与高价训练营的信任底线，付费转化最稳", en: "The trust baseline for annual subscriptions and premium cohorts" },
+      { tld: "club", zh: "付费社群的归属感直给，「入圈」语义零解释成本", en: "Membership belonging outright — join-the-circle semantics for free" },
+      { tld: "academy", zh: "体系化课程的机构感，把知识产品包装成正经教育", en: "Institutional weight for structured curricula — knowledge framed as education" },
+    ],
+    zh: {
+      label: "知识付费",
+      title: "知识付费品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "知识付费与付费社群命名指南：认知升级意象、圈层归属感、IP 人设延伸等 5 种思路，得到/樊登读书/知识星球等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的知识产品域名。",
+      intro:
+        "知识付费品牌的名字要回答一个尖锐的问题：凭什么为免费信息付钱？这个品类卖的从来不是信息本身——搜索引擎与 AI 都免费——而是三样更贵的东西：筛选（帮你省时间）、陪伴（帮你坚持）、圈层（帮你遇到同路人）。名字站在哪一样上，产品的定价逻辑就立在哪里。「得到」站在获得感上，两个字把「学了就有收获」的承诺说尽；「知识星球」站在圈层上，「星球」的封闭宇宙感让「入圈」本身成为价值；樊登读书站在陪伴上，人名+行为的组合让「有人陪你读完」具象可信。命名的第二个抓手是 IP 关系：知识付费大多长在个人 IP 上，名字要处理好「人与产品」的绑定深度——全绑（樊登读书）转化最强但难卖难传承，半绑（XX 出品的独立品牌名）留出团队化与转售空间。词库上，「知、识、见、洞察、升维、圈、营」都在品类谱系上，动词化词根（得到、在行）比名词更有行动感。还要过「付费口令」关：知识产品靠社群裂变与直播口播卖，名字要在「搜 XX 加入」这句转化话术里无歧义、好输入。最后避开「割韭菜」联想：这个品类信任危机频发，名字里任何「暴富、逆袭、躺赚」的味道都是负资产。",
+      namingIdeas: [
+        "获得感动词：得到、在行、learn、master——把「学了就有收获」写进名字，动词词根比名词更有行动承诺",
+        "圈层归属感：星球、营、会、circle——付费社群卖的是「入圈」，封闭宇宙感的词根让会员身份本身成为价值",
+        "陪伴人设：人名+行为（樊登读书式）——「有人陪你坚持」是完课率的核心，IP 名入品牌转化最强但要想好传承",
+        "认知升维意象：见识、洞察、升维、lens——目标用户买的是「看得更远」，视野词根精准踩中认知焦虑",
+        "半绑 IP 留退路：XX 出品的独立品牌名——全绑人名难转售难团队化，独立名+IP 背书兼顾转化与半径",
+      ],
+      cases: [
+        { name: "得到", takeaway: "一个动词补语的极致压缩：「得到」把知识付费的全部承诺——学了就有收获——说成两个字，还自带完成时态的确定感——中文知识产品命名的天花板" },
+        { name: "知识星球", takeaway: "「星球」的封闭宇宙感：每个创作者一颗星球，入圈即价值——把付费社群的圈层逻辑直接做成名字的空间隐喻" },
+        { name: "樊登读书", takeaway: "人名+行为的全绑定：「樊登陪你读书」具象可信，转化最强——但品牌与人不可分割，后来更名「帆书」的成本就是教训" },
+        { name: "MasterClass", takeaway: "「大师课」两个词根的强强组合：master 给背书、class 给形态，名字即定位——高端知识产品命名的英文标杆" },
+        { name: "混沌学园", takeaway: "「混沌」的哲学意象+「学园」的机构感：用一个反直觉的抽象词筛选目标用户——敢用哲学词根的名字自带认知门槛，恰好是卖点" },
+      ],
+      pitfalls: [
+        "「暴富逆袭」味的负资产：割韭菜联想是这个品类的信任死穴，名字里任何躺赚气息都在劝退理性用户",
+        "全绑人名难传承：品牌与创始人 IP 不可分割，团队化、转售、IP 塌房时全部被动——樊登读书更名帆书是前车之鉴",
+        "宏大空词没有获得感：「智慧、赋能、认知」堆砌的名字说不清用户能得到什么——获得感缺位，付费转化就缺临门一脚",
+        "忽略口播转化场景：直播间与社群裂变靠「搜 XX」这句话成交，名字有歧义、难输入，转化漏斗在最后一环漏光",
+      ],
+    },
+    en: {
+      label: "Paid knowledge & communities",
+      title: "How to Name a Paid Knowledge Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Paid courses, cohorts and membership community naming guide: outcome verbs, belonging imagery, IP-binding strategy, breakdowns of MasterClass/Maven/知识星球, recommended TLDs and pitfalls — then hunt an available knowledge brand domain with AI.",
+      intro:
+        "A paid knowledge brand's name must answer a pointed question: why pay for what's free? This category never really sells information — search engines and AI give that away — it sells three costlier things: curation (saving your time), accountability (keeping you going) and belonging (finding your people). Whichever one the name stands on becomes the product's pricing logic. MasterClass stands on curation — master-grade teachers, said in one breath; cohort brands stand on accountability — the promise that you'll actually finish; membership communities stand on belonging, where joining the circle is itself the value. The second lever is IP binding: paid knowledge mostly grows on personal brands, and the name must set the binding depth — fully bound (creator's name in the brand) converts hardest but resists team-scaling, succession and sale; half bound (a standalone name endorsed by the creator) trades a little conversion for radius. For raw material, insight, lens, compass and elevation roots ride the aspiration spectrum, and verb roots (learn, master, grow) out-promise nouns. Pass the spoken-checkout test too: these products sell through live streams and community referrals, so the name must be unambiguous and typable in \"search X to join.\" Finally, stay clear of get-rich-quick registers — this category runs on fragile trust, and any whiff of \"passive income overnight\" in the name is negative equity with exactly the customers worth having.",
+      namingIdeas: [
+        "Outcome verbs: learn, master, grow — write \"you will actually get something\" into the name; verb roots out-promise noun roots on action",
+        "Belonging imagery: circle, club, guild, campus — memberships sell joining, and closed-world roots make the member identity itself the value",
+        "Accountability personas: creator name + activity — \"someone keeps you going\" drives completion rates; full IP binding converts hardest but demands a succession plan",
+        "Elevation imagery: insight, lens, compass, summit — the buyer wants to see further, and vision roots land squarely on that aspiration",
+        "Half-bind the IP: a standalone brand endorsed by the creator — full name-binding resists sale and team-scaling; a separate name keeps conversion and radius both",
+      ],
+      cases: [
+        { name: "MasterClass", takeaway: "Two power roots joined: \"master\" endorses the teachers, \"class\" declares the format — the name is the positioning, the English benchmark of premium knowledge naming" },
+        { name: "Maven", takeaway: "A Yiddish word for \"one who understands\": the cohort-course platform picked a single erudite root that flatters both instructor and student — vocabulary as velvet rope" },
+        { name: "Zhishi Xingqiu (\u77e5\u8bc6\u661f\u7403)", takeaway: "\"Knowledge Planet\": every creator gets a planet, and joining the closed little universe is itself the value — the belonging logic of paid communities made into a spatial metaphor" },
+        { name: "Dedao (\u5f97\u5230)", takeaway: "A verb-complement meaning \"to obtain\": the category's entire promise — learn and you will gain — compressed into two characters with built-in perfective certainty, the ceiling of Chinese knowledge-product naming" },
+        { name: "The Tim Ferriss Show", takeaway: "Full IP binding at maximum conversion: the trust in one name carries books, podcast and courses — and illustrates the binding trade-off, since none of it transfers without him" },
+      ],
+      pitfalls: [
+        "Get-rich-quick registers: grift associations are this category's trust kill-switch, and any \"passive income overnight\" whiff in the name repels exactly the rational buyers worth having",
+        "Full name-binding without a succession plan: the brand and the founder become inseparable — team-scaling, sale and reputation shocks all turn passive, as veteran rebrands attest",
+        "Grand empty words with no outcome: names stacked from \"wisdom, empower, cognition\" never say what the buyer gets — and without felt gain, checkout loses its final push",
+        "Failing the spoken checkout: live streams and referrals close with \"search X to join,\" and an ambiguous, hard-to-type name leaks the funnel at its very last step",
+      ],
+    },
+  },
+  matchmaking: {
+    slug: "matchmaking",
+    tlds: [
+      { tld: "com", zh: "高客单会员服务的信任底线，人生大事的决策最稳", en: "The trust baseline for high-ticket membership services" },
+      { tld: "me", zh: "「遇见更好的我」的第一人称后缀，情感品类天然亲密", en: "The first-person suffix — natively intimate for matters of the heart" },
+      { tld: "club", zh: "高端相亲会所的圈层感，「入会」语义直给", en: "The members-club register — curated-circle semantics outright" },
+    ],
+    zh: {
+      label: "婚恋相亲",
+      title: "婚恋相亲品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "婚恋相亲与高端匹配服务命名指南：缘分意象、真诚背书、圈层筛选等 5 种思路，世纪佳缘/Hinge/二狗等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的婚恋品牌域名。",
+      intro:
+        "婚恋相亲品牌的名字要跨过一道独特的心理门槛：用户使用它，等于向自己承认「我在认真找对象」——这份羞耻感与期待感的混合物，决定了名字的分寸感。太直白（XX 相亲网）让人不好意思打开，太隐晦又说不清自己是干什么的。头部品牌各有解法：世纪佳缘用「缘」字把功利的匹配包装成天意，Hinge 用「铰链」的连接隐喻绕开 dating 字眼还埋下「delete this app」的反 app 叙事，Tinder（火种）干脆只卖心动瞬间。命名的第二个抓手是信任：婚恋是照骗、杀猪盘频发的重灾区，「真实、认证、严肃」的信任词根（真爱、only、青藤之恋的学历圈层感）直接回应最大恐惧。第三个抓手是圈层筛选：高端婚恋卖的是「你能遇到什么样的人」，名字里的圈层暗示（学历、职业、审美）本身就是筛选器与卖点。词库上，「缘、遇、相、伴、糖、心动」都在品类谱系上；中式命名吃「缘分天注定」的文化红利，西式命名偏爱连接与火花的物理隐喻。还要过父母关：相亲决策常有长辈参与甚至代办，名字要让父母辈觉得正经靠谱，「玩暧昧」气质的名字进不了家庭对话。最后留半径：婚恋品牌普遍延展婚礼策划、情感咨询，名字锁死「相亲」会限制这条情感全周期的延展线。",
+      namingIdeas: [
+        "缘分意象：缘、遇、相逢、fate——把功利的匹配包装成天意，中式婚恋命名最深的文化红利",
+        "连接隐喻：hinge、bond、link、牵——用物理连接词绕开「相亲」的羞耻感，西式命名的经典解法",
+        "真诚背书：真、only、诚——照骗与杀猪盘是品类最大恐惧，信任词根在名字里直接回应",
+        "圈层筛选感：藤、阶、select——高端婚恋卖「你能遇到谁」，名字的圈层暗示本身就是筛选器与卖点",
+        "心动瞬间：火种、spark、心动、糖——只卖遇见那一刻的悸动，轻量词根降低「认真找对象」的心理门槛",
+      ],
+      cases: [
+        { name: "世纪佳缘", takeaway: "「佳缘」把匹配算法说成天意安排，「世纪」给足郑重感：一个名字同时过用户的心理关与父母的正经关——中式婚恋命名的元老范本" },
+        { name: "Hinge", takeaway: "「铰链」的连接隐喻：绕开 dating 字眼的羞耻感，再用「designed to be deleted」把反 app 叙事焊进品牌——概念自洽的命名教科书" },
+        { name: "Tinder", takeaway: "「火种」只卖心动瞬间：不承诺婚姻只承诺火花，名字的轻量精准匹配滑动交互的轻量——产品形态与名字气质同频的标杆" },
+        { name: "青藤之恋", takeaway: "「青藤」暗指藤校的学历圈层：名字本身就是用户筛选器，说清「你能遇到谁」——高端婚恋圈层命名的直球打法" },
+        { name: "二狗", takeaway: "用最土的乳名做严肃婚恋 app：反差萌消解相亲的羞耻感，「让介绍人回归」的熟人逻辑藏在土味里——反类型命名的大胆实验" },
+      ],
+      pitfalls: [
+        "太直白触发羞耻感：「XX 相亲网」式命名让用户不好意思打开、更不好意思被看到——分寸感是这个品类命名的生命线",
+        "暧昧气质进不了家庭对话：相亲决策常有父母参与，名字带「玩暧昧」味道，长辈一票否决——正经感是隐形门槛",
+        "缺信任锚点：照骗与杀猪盘频发的品类，名字里没有任何真诚背书，获客成本全花在自证清白上",
+        "锁死「相亲」限制半径：婚礼策划、情感咨询都在情感全周期延展线上，名字带死「相亲」，扩业务时品牌要重来",
+      ],
+    },
+    en: {
+      label: "Matchmaking & dating",
+      title: "How to Name a Matchmaking or Dating Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Matchmaking and dating service naming guide: fate imagery, connection metaphors, trust anchors, breakdowns of Hinge/Tinder/世纪佳缘, recommended TLDs and pitfalls — then hunt an available dating brand domain with AI.",
+      intro:
+        "A matchmaking brand's name must clear a psychological bar unique to this category: using the product means admitting to yourself \"I'm seriously looking\" — and that blend of hope and embarrassment sets the name's required delicacy. Too literal (\"XX Dating Site\") and users are ashamed to open it in public; too oblique and nobody knows what you do. The leaders each found an angle: Hinge's connection metaphor sidesteps the word \"dating\" entirely while its \"designed to be deleted\" narrative welds anti-app sincerity into the brand; Tinder sells only the spark, promising a moment rather than a marriage; Chinese giant 世纪佳缘 wraps algorithmic matching in the word \"缘\" — destiny — converting utility into fate. The second lever is trust: this category is the disaster zone of fake photos and romance scams, so sincerity roots (true, real, verified) answer the biggest fear right in the name. The third is circle-signaling: premium matchmaking sells \"who you'll get to meet,\" and educational or professional circle hints in the name work as both filter and pitch. For raw material, fate, encounter, spark, bond and companion roots live on the category spectrum — Eastern naming mines the destiny tradition, Western naming favors physical metaphors of connection and ignition. Mind the parent test where family weighs in on the search: the name must sound respectable at the family dinner table. And leave radius: matchmaking brands stretch into wedding planning and relationship coaching, so a name welded to \"dating\" caps the full-lifecycle expansion.",
+      namingIdeas: [
+        "Fate imagery: destiny, encounter, serendipity — wrap utilitarian matching in the language of \"meant to be,\" the deepest cultural asset of matchmaking naming",
+        "Connection metaphors: hinge, bond, thread, bridge — physical linking words sidestep the embarrassment of the word \"dating,\" the classic Western solve",
+        "Trust anchors: true, real, verified — fake photos and romance scams are the category's biggest fear, and sincerity roots answer it right in the name",
+        "Circle signaling: ivy, select, league — premium matchmaking sells who you'll meet, and a circle hint in the name is simultaneously the filter and the pitch",
+        "The spark moment: tinder, spark, flutter — sell only the ignition instant; lightweight roots lower the \"I'm seriously looking\" psychological bar",
+      ],
+      cases: [
+        { name: "Hinge", takeaway: "The connection metaphor that never says \"dating\": a hinge joins two things, and \"designed to be deleted\" welds anti-app sincerity into the brand — the textbook of a self-consistent naming concept" },
+        { name: "Tinder", takeaway: "Kindling for a fire that may or may not catch: no marriage promised, only the spark — a name whose lightness precisely matches the lightness of a swipe" },
+        { name: "Shiji Jiayuan (\u4e16\u7eaa\u4f73\u7f18)", takeaway: "\"A beautiful destiny of the century\": algorithmic matching dressed as heaven's arrangement, with enough gravitas to pass the parents' respectability test — the founding template of Chinese matchmaking naming" },
+        { name: "The League", takeaway: "Circle signaling at full volume: the name itself is the velvet rope, telling users exactly who they'll meet — and filtering applicants before the first screen loads" },
+        { name: "Coffee Meets Bagel", takeaway: "Two breakfast items on a date: the whimsy defuses the category's embarrassment, and the everyday imagery promises low-pressure encounters — naming the vibe instead of the transaction" },
+      ],
+      pitfalls: [
+        "Too literal, triggering shame: \"XX Dating Site\" naming makes users embarrassed to open the app in public — delicacy is this category's naming lifeline",
+        "Flirty registers failing the family table: parents often weigh in on the search, and a name with a hookup vibe gets vetoed before the profile is even made",
+        "No trust anchor in a scam-scarred category: with fake photos and romance fraud rampant, a name carrying zero sincerity spends its whole acquisition budget proving innocence",
+        "Welding the name to \"dating\": wedding planning and relationship coaching are the full-lifecycle expansions, and a dating-locked name forces a rebrand to reach them",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

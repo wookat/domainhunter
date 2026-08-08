@@ -101,4 +101,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "deskcraft", zh: "桌面文创", en: "Desk & stationery" },
   { slug: "petmemorial", zh: "宠物殡葬", en: "Pet memorial" },
   { slug: "postpartum", zh: "月子中心", en: "Postpartum care" },
+  { slug: "pettraining", zh: "宠物训练", en: "Pet training" },
+  { slug: "nailsalon", zh: "美甲美睫", en: "Nail & lash studios" },
+  { slug: "laundry", zh: "洗衣洗护", en: "Laundry & garment care" },
+  { slug: "rvtravel", zh: "房车旅行", en: "RV travel" },
+  { slug: "knowledgepay", zh: "知识付费", en: "Paid knowledge" },
+  { slug: "matchmaking", zh: "婚恋相亲", en: "Matchmaking & dating" },
 ];
