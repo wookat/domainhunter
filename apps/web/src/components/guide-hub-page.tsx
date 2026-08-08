@@ -1,21 +1,40 @@
+import { useMemo, useState } from "react";
 import { INDUSTRY_GUIDES } from "@/content/guides";
 import { HUB_META, guideHubGroups, guideOneLiner } from "@/content/hubs";
 import { useI18n } from "@/lib/i18n";
 import { usePageTitle } from "@/lib/use-page-title";
+import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
 
 /** /guide 索引 hub：全部行业命名指南，按大类分组。DOM 与 worker 的 guideHubBlocks 骨架逐字一致。 */
 export function GuideHubPage() {
   const { lang } = useI18n();
   const meta = HUB_META.guide[lang];
   usePageTitle(meta.title);
-  const groups = guideHubGroups();
+  const [query, setQuery] = useState("");
+  const groups = useMemo(() => guideHubGroups(), []);
+  const total = useMemo(() => groups.reduce((n, g) => n + g.slugs.length, 0), [groups]);
+  const filtered = useMemo(
+    () =>
+      groups
+        .map((g) => ({
+          ...g,
+          slugs: g.slugs.filter((slug) =>
+            hubMatch(query, [slug, INDUSTRY_GUIDES[slug].zh.label, INDUSTRY_GUIDES[slug].en.label, guideOneLiner(slug, "zh"), guideOneLiner(slug, "en")]),
+          ),
+        }))
+        .filter((g) => g.slugs.length > 0),
+    [groups, query],
+  );
+  const shown = filtered.reduce((n, g) => n + g.slugs.length, 0);
 
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 md:px-6">
       <p className="font-mono text-sm text-brand">{meta.kicker}</p>
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{meta.title}</h1>
       <p className="mt-6 text-[15px] leading-relaxed text-txt1">{meta.intro}</p>
-      {groups.map((g) => (
+      <HubFilter placeholder={lang === "zh" ? "筛选行业…" : "Filter industries…"} value={query} onChange={setQuery} shown={shown} total={total} />
+      {filtered.length === 0 && <HubFilterEmpty lang={lang} onClear={() => setQuery("")} />}
+      {filtered.map((g) => (
         <section key={g.id} className="mt-8">
           <h2 className="text-base font-bold">
             {g[lang]}
