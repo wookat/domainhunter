@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { nanoid } from "nanoid";
 import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
-import { AI_THEMES, generateAiCandidates, generateUnderstanding, type AiTheme, type DislikedItem } from "./ai";
+import { AI_THEMES, generateAiCandidates, generateUnderstanding, newGuardStats, type AiTheme, type DislikedItem } from "./ai";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
@@ -231,6 +231,9 @@ app.post("/api/ai-search", async (c) => {
         for (let round = 1; round <= MAX_ROUNDS && availableCount < target; round++) {
           await emit({ type: "round", round, availableCount, target, note: round === 1 ? "AI 正在构思名字…" : "可注册的还不够，AI 反思后继续想…" });
           let candidates;
+          // R238：防线统计元数据——按轮汇总各防线丢弃计数与补发/重试触发情况，
+          // 随 proposed 事件返回（新增字段，旧前端忽略，不破坏现有结构）；只计数，不含被丢弃候选内容
+          const guard = newGuardStats();
           try {
             candidates = await generateAiCandidates(description, apiKey, {
               count: fast && round === 1 ? FAST_FIRST_ROUND_COUNT : 24,
@@ -241,9 +244,10 @@ app.post("/api/ai-search", async (c) => {
                   : { tried: [...tried], taken: takenLabels, takenThemes, disliked: disliked.length > 0 ? disliked : undefined },
               round,
               lang,
+              guard,
             });
           } catch (e) {
-            await emit({ type: "error", round, detail: String(e) });
+            await emit({ type: "error", round, detail: String(e), guard });
             break;
           }
           const fresh = candidates.filter((x) => !tried.has(x.label));
@@ -251,7 +255,7 @@ app.post("/api/ai-search", async (c) => {
           const meaningByLabel = new Map(fresh.map((x) => [x.label, x.meaning]));
           const themeByLabel = new Map(fresh.map((x) => [x.label, x.theme]));
           const domains = fresh.flatMap((x) => tlds.map((t) => `${x.label}.${t}`));
-          await emit({ type: "proposed", round, items: fresh, tlds });
+          await emit({ type: "proposed", round, items: fresh, tlds, guard });
           const takenThisRound = new Set<string>();
           await checkDomainsCached(c.env.CACHE, domains, async (r) => {
             const label = r.domain.slice(0, r.domain.indexOf("."));

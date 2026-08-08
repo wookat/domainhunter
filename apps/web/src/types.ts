@@ -29,6 +29,15 @@ export interface RoundInfo {
   proposed: number;
   checked: number;
   available: number;
+  /** 本轮各防线丢弃的低质候选数合计（R238，旧快照无此字段） */
+  filtered?: number;
+}
+
+/** 防线统计元数据（R238）：各防线丢弃计数 + 补发/重试触发，只计数不含候选内容 */
+export interface GuardMeta {
+  dropped: Record<string, number>;
+  wordSupplement: boolean;
+  retries: number;
 }
 
 export interface StreamEvent {
@@ -50,6 +59,7 @@ export interface StreamEvent {
   core?: string;
   style?: string;
   scene?: string;
+  guard?: GuardMeta;
 }
 
 export interface Understanding {
