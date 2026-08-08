@@ -3084,6 +3084,186 @@ const GUIDES = {
       ],
     },
   },
+  boutique: {
+    tld: "boutique",
+    zh: {
+      title: ".boutique 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".boutique 自带精品小店气质，适合独立设计品牌、买手店与手作工作室，首年注册极便宜。查看 .boutique 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .boutique 域名。",
+      intro:
+        ".boutique 一词天生带着「小而美」的气质：独立设计师品牌、买手店、古着与首饰小店、手作工作室、精品民宿用 name.boutique，「精品小店」的定位从域名开始就立住了。它与 .shop/.store 的区别在气质——后两者是货架感，.boutique 是策展感，卖的是审美与稀缺，客单价越高越合适。Identity Digital 运营，注册约 $3（约 ¥19）是本站最便宜档之一，续费约 $26/年（约 ¥189）也温和，试错成本几乎为零。库存极好：风格词、人名、材质词命中率都高。注意三点：一是 boutique 八个字母且拼写对非母语者略有门槛（-que 结尾），主体名务必短；二是它的法语血统自带「贵」的暗示，平价走量的店用它气质错位；三是词义也覆盖精品酒店与精品咨询（boutique agency/hotel），不限于零售。命名上「风格/品类 + .boutique」最自然（vintage、silk 类），主理人品牌用「人名 + .boutique」也很直接。",
+      bestFor: ["独立设计品牌与买手店", "古着首饰与手作工作室", "精品民宿与精品酒店", "精品咨询与小型工作室"],
+      namingTips: [
+        "「风格/品类 + .boutique」策展感直给",
+        "注册约 $3、续费约 $26/年，试错成本极低",
+        "-que 结尾拼写有门槛，主体名务必短",
+        "平价走量的店气质错位，客单价越高越合适",
+      ],
+    },
+    en: {
+      title: ".boutique Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".boutique carries small-and-beautiful curation in the name — for indie labels, concept stores and artisan studios, with a very cheap first year. See live pricing and naming advice, then hunt available .boutique names with AI.",
+      intro:
+        ".boutique is born with a small-and-beautiful air: independent design labels, concept and curated stores, vintage and jewelry shops, artisan studios and boutique guesthouses on name.boutique establish the \"curated, not mass\" positioning from the address itself. The contrast with .shop/.store is all about register — those read like shelves, .boutique reads like curation, selling taste and scarcity; the higher the ticket size, the better the fit. Operated by Identity Digital, registration around $3 is among the cheapest here, with renewal near $26/yr — practically zero cost to try. Inventory is excellent: style words, names and material words all hit. Three cautions: boutique is eight letters and the -que ending trips up non-native spellers, so keep the front word short; its French pedigree whispers \"expensive\" — a discount volume store on .boutique feels mismatched; and the word also covers boutique hotels and boutique agencies, not just retail. Naming: style or category + .boutique is the natural pattern (vintage, silk); founder name + .boutique is the most direct personal label.",
+      bestFor: ["Indie design labels & concept stores", "Vintage, jewelry & artisan studios", "Boutique guesthouses & hotels", "Boutique agencies & small studios"],
+      namingTips: [
+        "Style/category + .boutique reads as curation",
+        "About $3 to register, $26/yr to renew — cheap to try",
+        "The -que ending trips spellers — keep the name short",
+        "Wrong fit for discount volume; right for high-ticket taste",
+      ],
+    },
+  },
+  clinic: {
+    tld: "clinic",
+    zh: {
+      title: ".clinic 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".clinic 把诊所身份写进域名，适合口腔、医美、宠物等各类诊所与门诊品牌。查看 .clinic 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .clinic 域名。",
+      intro:
+        ".clinic 是诊所生意的全拼后缀：口腔、眼科、皮肤、医美、理疗、心理咨询、宠物诊所——凡是「门诊制」的健康服务，name.clinic 读出来就是一家诊所。与 .care 的温度感、.doctor 的个人身份感相比，.clinic 强调的是「机构与场所」，连锁门诊用它归拢多城市站点也很顺。它还有个讨喜的引申义：英语里 clinic 也指「诊断式服务」，SEO clinic、resume clinic 式的咨询生意用它自带专业感。Identity Digital 运营，注册约 $11（约 ¥78），续费约 $52/年（约 ¥374），对诊所客单价来说毫无压力。库存很好：科室词、地名、品牌词命中率高。注意三点：一是医疗机构涉及执业许可与广告合规，资质信息必须清晰呈现；二是 clinic 一词偏「治疗」，健康管理与养生类品牌可对比 .care 的气质；三是国内就医心智以平台与公众号为主，域名更多承担品牌官网与海外患者入口。命名上「科室/专长 + .clinic」最自然，连锁品牌用「品牌词 + .clinic」，咨询生意用「问题域 + .clinic」的比喻也出彩。",
+      bestFor: ["口腔眼科皮肤等专科诊所", "医美与理疗门诊", "宠物诊所与心理咨询", "诊断式咨询（X clinic）品牌"],
+      namingTips: [
+        "「科室/专长 + .clinic」读出来就是一家诊所",
+        "注册约 $11、续费约 $52/年，诊所客单价无压力",
+        "医疗执业资质与广告合规信息必须清晰呈现",
+        "「问题域 + .clinic」的咨询比喻（SEO clinic 式）很专业",
+      ],
+    },
+    en: {
+      title: ".clinic Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".clinic spells the practice out in full — for dental, medspa, physio and veterinary clinics, plus \"X clinic\" consulting brands. See live pricing and naming advice, then hunt available .clinic names with AI.",
+      intro:
+        ".clinic spells the whole business into the domain: dental, eye, skin, medspa, physio, mental-health and veterinary practices — any walk-in health service on name.clinic reads as exactly what it is. Where .care leans warm and .doctor leans personal, .clinic emphasizes the institution and the place, and chains can neatly unify multi-city sites under it. It also has a charming extended sense: in English a \"clinic\" is any diagnostic session, so SEO clinic or resume clinic style consulting brands get instant professionalism. Operated by Identity Digital, about $11 to register and $52/yr to renew — negligible against clinic-grade ticket sizes. Inventory is strong: specialty words, place names and brand words all hit. Three cautions: medical practices carry licensing and advertising-compliance duties, so credentials must be presented clearly; \"clinic\" reads treatment-oriented — wellness and lifestyle brands may prefer the warmth of .care; and in markets where patients book via platforms, the domain's job is the brand site and international front door. Naming: specialty + .clinic is the natural pattern; brand + .clinic for chains; problem-domain + .clinic makes sharp consulting brands.",
+      bestFor: ["Dental, eye & skin clinics", "Medspa & physio practices", "Veterinary & mental-health clinics", "\"X clinic\" consulting brands"],
+      namingTips: [
+        "Specialty + .clinic reads as exactly what it is",
+        "About $11 to register, $52/yr to renew",
+        "Medical sites must present licensing clearly",
+        "Problem + .clinic makes sharp consulting brands (SEO clinic)",
+      ],
+    },
+  },
+  dental: {
+    tld: "dental",
+    zh: {
+      title: ".dental 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".dental 是口腔行业的专属后缀，适合牙科诊所、正畸种植品牌与口腔护理产品。查看 .dental 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .dental 域名。",
+      intro:
+        ".dental 是垂直到牙齿的行业后缀：牙科诊所、正畸与种植品牌、儿童齿科、口腔护理产品、牙科技工所与耗材供应商用 name.dental，行业身份从域名开始零解释成本。牙科是本地获客竞争最激烈的医疗细分之一，诊所名大多是「人名/地名 + Dental」——这些组合的 .com 早被占光，而「同样的名字 + .dental」库存极好，还比 xxxdental.com 少打一次 dental。Identity Digital 运营，注册与续费均约 $62/年（约 ¥449）——没有首年甜头，是「平进平出」的定价，对牙科客单价来说依然不痛，但不适合囤货。注意三点：一是价格恒定意味着预算好算，也意味着没有低价试错空间，想清楚再注册；二是医疗执业资质与广告合规必须清晰呈现，种植正畸类宣传尤其受监管；三是面向消费者的口腔护理产品（牙刷牙膏类）用它也顺，但快消品牌更依赖电商平台入口。命名上「人名/地名 + .dental」最自然（smile、bright 类气质词也常用），产品品牌用「品牌词 + .dental」。",
+      bestFor: ["牙科诊所与连锁门诊", "正畸种植与儿童齿科", "口腔护理产品品牌", "技工所与牙科耗材商"],
+      namingTips: [
+        "「人名/地名 + .dental」比 xxxdental.com 更短更顺",
+        "注册与续费均约 $62/年，平进平出好算预算",
+        "种植正畸宣传监管严，资质合规必须清晰",
+        "smile/bright 类气质词是牙科命名常青树",
+      ],
+    },
+    en: {
+      title: ".dental Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".dental is dentistry's own suffix — for dental practices, ortho and implant brands, and oral-care products. See live pricing and naming advice, then hunt available .dental names with AI.",
+      intro:
+        ".dental drills all the way down to one vertical: dental practices, orthodontic and implant brands, pediatric dentistry, oral-care products, labs and suppliers on name.dental carry zero explanation cost. Dentistry is among the most competitive local-acquisition niches in healthcare, and practice names are overwhelmingly \"name/place + Dental\" — those .coms vanished long ago, while the same name + .dental is wide open and even saves typing \"dental\" twice versus xxxdental.com. Operated by Identity Digital at about $62/yr for both registration and renewal — no first-year teaser, flat in and out; painless against dental ticket sizes but wrong for stockpiling. Three cautions: flat pricing means predictable budgets but no cheap trial — decide before you buy; licensing and advertising compliance must be presented clearly, with implant and ortho claims especially regulated; and consumer oral-care brands fit too, though FMCG lives mostly on marketplace storefronts. Naming: name or place + .dental is the natural pattern — with evergreen mood words like smile and bright — and product brands can go brand + .dental.",
+      bestFor: ["Dental practices & chains", "Ortho, implant & pediatric brands", "Oral-care product brands", "Dental labs & suppliers"],
+      namingTips: [
+        "Name/place + .dental beats typing dental twice",
+        "About $62/yr flat — predictable, but no cheap trial",
+        "Implant/ortho claims are regulated — show credentials",
+        "Smile/bright mood words are dentistry's evergreens",
+      ],
+    },
+  },
+  fitness: {
+    tld: "fitness",
+    zh: {
+      title: ".fitness 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".fitness 把健身身份写进域名，适合健身房、私教工作室与线上健身课程，首年注册很便宜。查看 .fitness 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fitness 域名。",
+      intro:
+        ".fitness 是健身行业的全拼后缀：健身房、私教工作室、瑜伽普拉提馆、CrossFit 场馆、线上健身课程与健身 App 用 name.fitness，行业身份从域名开始一目了然。健身生意的名字大多是气质词与人名——这些词的 .com 几乎必然被占，而「同样的名字 + .fitness」库存极好；与 .coach 相比，.fitness 强调的是「场馆与项目」而非「教练个人」，开店的用 .fitness、做个人品牌的用 .coach 是自然分工。Identity Digital 运营，注册约 $6（约 ¥41）很便宜，续费约 $33/年（约 ¥241）也温和，对健身房月卡收入来说可以忽略。库存极好：风格词、地名、动词组合命中率都高。注意三点：一是 fitness 七个字母不算短，主体名尽量短促有力，运动感的名字读起来要「带劲」；二是健身行业获客重度依赖短视频与本地平台，域名的角色是品牌官网与课程预约的稳定入口；三是补剂与健康食品类电商用它也顺，但保健声明的合规要留意。命名上「风格/流派 + .fitness」最自然（iron、flow 类），场馆用「店名/地名 + .fitness」最直接。",
+      bestFor: ["健身房与私教工作室", "瑜伽普拉提与 CrossFit 馆", "线上健身课程与 App", "运动补剂与健康品牌"],
+      namingTips: [
+        "「风格/流派 + .fitness」行业身份一目了然",
+        "注册约 $6、续费约 $33/年，月卡收入可忽略",
+        "开店用 .fitness、个人品牌用 .coach 是自然分工",
+        "主体名要短促有力，读起来「带劲」",
+      ],
+    },
+    en: {
+      title: ".fitness Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".fitness spells the business out in full — for gyms, training studios and online fitness programs, at a cheap entry price. See live pricing and naming advice, then hunt available .fitness names with AI.",
+      intro:
+        ".fitness spells the whole industry into the domain: gyms, personal-training studios, yoga and pilates spaces, CrossFit boxes, online programs and fitness apps on name.fitness are unmistakable. Fitness businesses name themselves with mood words and personal names — .coms that vanished long ago — while the same name + .fitness is wide open. Versus .coach, .fitness emphasizes the venue and the program over the individual: open a gym on .fitness, build a personal brand on .coach — a natural division of labor. Operated by Identity Digital, registration around $6 is cheap and renewal near $33/yr is mild — a rounding error against membership revenue. Inventory is excellent: style words, places and verb combos all hit. Three cautions: fitness is seven letters, so keep the front word short and punchy — a fitness name should sound energetic read aloud; client acquisition leans heavily on short video and local platforms, so the domain's job is the brand site and class-booking home; and supplement or health-food stores fit too, but mind health-claim compliance. Naming: style or discipline + .fitness is the natural pattern (iron, flow); venues go name or place + .fitness.",
+      bestFor: ["Gyms & training studios", "Yoga, pilates & CrossFit spaces", "Online programs & fitness apps", "Supplement & health brands"],
+      namingTips: [
+        "Style/discipline + .fitness is unmistakable",
+        "About $6 to register, $33/yr to renew",
+        "Venues take .fitness; personal brands take .coach",
+        "Keep the front word short and punchy — it should sound energetic",
+      ],
+    },
+  },
+  photos: {
+    tld: "photos",
+    zh: {
+      title: ".photos 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".photos 把照片写进域名，适合摄影师作品集、婚礼摄影与图片交付站点，价格温和。查看 .photos 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .photos 域名。",
+      intro:
+        ".photos 是摄影行业最直白的后缀：摄影师作品集、婚礼与人像工作室、活动跟拍、图库与照片交付站点用 name.photos，「这里是照片」从域名开始就说清了。它有个独特的实用玩法——按项目/客户开子域或独立域做「照片交付页」（wedding.photos/客户名 式），链接发出去客户秒懂；对比 .photography（11 个字母）它短得多，对比 .gallery 它更偏「照片」而非「展览」。Identity Digital 运营，注册约 $8（约 ¥59），续费约 $24/年（约 ¥174）是创意后缀里的温和档，摄影师订单客单价完全无压力。库存极好：风格词、城市名、人名命中率都高。注意三点：一是 photos 是复数名词，读作「某某的照片」最顺，「人名/工作室名 + .photos」天然带所有格感；二是摄影师获客主阵地在 Instagram 与小红书，域名的角色是作品集与交付的稳定入口；三是纯商业图库要考虑与平台（Getty 类）的分工，独立站更适合品牌与直客。命名上「人名/城市 + .photos」最自然，婚礼与活动摄影用「场景词 + .photos」也顺。",
+      bestFor: ["摄影师作品集", "婚礼与人像工作室", "活动跟拍与照片交付", "图库与照片社区"],
+      namingTips: [
+        "「人名/城市 + .photos」自带所有格感",
+        "注册约 $8、续费约 $24/年，创意后缀温和档",
+        "比 .photography 短得多，比 .gallery 更偏「照片」",
+        "照片交付页玩法：链接发出去客户秒懂",
+      ],
+    },
+    en: {
+      title: ".photos Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".photos puts the pictures in the address — for photographer portfolios, wedding studios and client-delivery sites, at a mild price. See live pricing and naming advice, then hunt available .photos names with AI.",
+      intro:
+        ".photos is photography's most literal suffix: portfolios, wedding and portrait studios, event shooters, stock libraries and client-delivery sites on name.photos say \"pictures live here\" from the address itself. It enables a uniquely practical pattern — per-project or per-client delivery pages (the wedding.photos/client style) where the link explains itself the moment it's sent. Against .photography (eleven letters) it's far shorter; against .gallery it reads \"photos\" rather than \"exhibition\". Operated by Identity Digital, about $8 to register and $24/yr to renew — the mild tier among creative suffixes, trivial against photography ticket sizes. Inventory is excellent: style words, city names and personal names all hit. Three cautions: photos is a plural noun, so name + .photos naturally reads possessive — \"someone's photos\" — which is exactly the charm; photographers win clients on Instagram and social platforms, so the domain's job is the stable portfolio and delivery home; and pure stock businesses should weigh the split with platforms like Getty — independent sites suit brands and direct clients best. Naming: your name or city + .photos is the natural pattern; wedding and event shooters can use scenario + .photos.",
+      bestFor: ["Photographer portfolios", "Wedding & portrait studios", "Event shooting & client delivery", "Stock libraries & photo communities"],
+      namingTips: [
+        "Name/city + .photos reads naturally possessive",
+        "About $8 to register, $24/yr to renew",
+        "Far shorter than .photography; more literal than .gallery",
+        "Client-delivery links explain themselves when sent",
+      ],
+    },
+  },
+  gallery: {
+    tld: "gallery",
+    zh: {
+      title: ".gallery 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".gallery 自带展览气质，适合画廊、艺术家作品集与 NFT/数字艺术展厅。查看 .gallery 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .gallery 域名。",
+      intro:
+        ".gallery 把「展厅」搬进了域名：实体画廊、艺术家作品集、摄影展、设计作品陈列、NFT 与数字艺术展厅用 name.gallery，「这里是策展过的作品」的暗示从域名开始。它与 .art 的区别在角色——.art 说「这是艺术」，.gallery 说「这里在展出」，后者更适合有「陈列/策展」动作的主体：画廊主、策展人、把作品集当展览做的创作者。Identity Digital 运营，注册与续费均约 $23/年（约 ¥167）——平进平出没有首年甜头，但绝对价格在创意后缀里不高，对画廊与艺术家来说负担很轻。库存极好：艺术家人名、风格词、城市名命中率都高。注意三点：一是 gallery 七个字母，主体名尽量短，艺术家全名偏长时用姓氏或艺名更顺；二是它的气质是「白墙射灯」的安静高级感，热闹的电商大促气质不合；三是数字艺术与 NFT 展厅用它很顺，但交易功能的合规与平台分工要想清楚。命名上「艺术家名 + .gallery」最自然，实体画廊用「馆名/地名 + .gallery」，主题展用「主题词 + .gallery」也出彩。",
+      bestFor: ["实体画廊与策展机构", "艺术家与摄影师作品集", "NFT 与数字艺术展厅", "设计作品与主题展"],
+      namingTips: [
+        "「艺术家名 + .gallery」作品集即展览",
+        "注册与续费均约 $23/年，平进平出负担轻",
+        "气质是白墙射灯的安静高级感，大促气质不合",
+        "全名偏长用姓氏或艺名，主体名尽量短",
+      ],
+    },
+    en: {
+      title: ".gallery Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".gallery brings the white-wall space into the domain — for art galleries, artist portfolios and digital-art showrooms. See live pricing and naming advice, then hunt available .gallery names with AI.",
+      intro:
+        ".gallery moves the exhibition space into the address: physical galleries, artist portfolios, photo exhibitions, design showcases and NFT or digital-art showrooms on name.gallery whisper \"curated work on display\" from the domain itself. The contrast with .art is about role — .art says \"this is art\", .gallery says \"this is being exhibited\", which suits anyone with a curatorial act: gallerists, curators, and creators who treat the portfolio as a show. Operated by Identity Digital at about $23/yr for both registration and renewal — flat pricing with no first-year teaser, but the absolute price sits low among creative suffixes, light for galleries and artists alike. Inventory is excellent: artist names, style words and city names all hit. Three cautions: gallery is seven letters, so keep the front word short — long full names read better as a surname or artist name; the register is quiet white-wall sophistication, mismatched with loud e-commerce energy; and digital-art or NFT showrooms fit naturally, but think through trading compliance and the split with marketplaces. Naming: artist name + .gallery is the natural pattern; physical spaces go venue or place + .gallery; themed shows shine as theme + .gallery.",
+      bestFor: ["Art galleries & curators", "Artist & photographer portfolios", "NFT & digital-art showrooms", "Design showcases & themed shows"],
+      namingTips: [
+        "Artist name + .gallery turns a portfolio into a show",
+        "About $23/yr flat — light for galleries and artists",
+        "Quiet white-wall register — loud commerce doesn't fit",
+        "Long full names read better as surname or artist name",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

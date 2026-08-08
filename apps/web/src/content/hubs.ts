@@ -26,11 +26,11 @@ export const guideOneLiner = (slug: string, lang: Lang): string => firstSentence
 const TLD_CATEGORY_DEFS: { id: string; zh: string; en: string; members: string[] }[] = [
   { id: "general", zh: "通用主流", en: "General & mainstream", members: ["com", "net", "org", "co", "me", "info", "pro", "one", "top", "xyz", "icu", "link", "click", "best", "today", "cool"] },
   { id: "tech", zh: "科技与开发", en: "Tech & developers", members: ["io", "ai", "app", "dev", "tech", "cloud", "codes", "tools", "run", "host", "network", "digital", "sh", "gg", "so", "zone", "wiki"] },
-  { id: "creative", zh: "创意与设计", en: "Creative & design", members: ["art", "design", "studio", "ink", "moe", "lol", "wtf", "red", "page", "bio"] },
+  { id: "creative", zh: "创意与设计", en: "Creative & design", members: ["art", "design", "studio", "ink", "moe", "lol", "wtf", "red", "page", "bio", "photos", "gallery"] },
   { id: "media", zh: "内容与媒体", en: "Content & media", members: ["blog", "news", "media", "video", "tv", "fm", "chat", "social", "email", "live", "band"] },
-  { id: "commerce", zh: "商业与电商", en: "Business & commerce", members: ["shop", "store", "online", "site", "company", "group", "agency", "team", "works", "center", "global", "expert"] },
+  { id: "commerce", zh: "商业与电商", en: "Business & commerce", members: ["shop", "store", "online", "site", "company", "group", "agency", "team", "works", "center", "global", "expert", "boutique"] },
   { id: "finance", zh: "金融与资产", en: "Finance & assets", members: ["finance", "fund", "money", "cash", "gold", "estate", "land"] },
-  { id: "lifestyle", zh: "生活与行业", en: "Lifestyle & industries", members: ["life", "world", "club", "vip", "space", "fun", "games", "pizza", "bar", "cafe", "restaurant", "city", "farm", "academy", "school", "coach", "care", "doctor"] },
+  { id: "lifestyle", zh: "生活与行业", en: "Lifestyle & industries", members: ["life", "world", "club", "vip", "space", "fun", "games", "pizza", "bar", "cafe", "restaurant", "city", "farm", "academy", "school", "coach", "care", "doctor", "clinic", "dental", "fitness"] },
   { id: "geo", zh: "国别与地域", en: "Country & regional", members: ["cn", "us", "uk", "in", "cc"] },
 ];
 
