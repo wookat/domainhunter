@@ -128,6 +128,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   center: { first: 20, renew: 160 },
   works: { first: 25, renew: 240 },
   zone: { first: 25, renew: 240 },
+  news: { first: 70, renew: 190 },
+  tools: { first: 70, renew: 210 },
+  run: { first: 30, renew: 160 },
+  codes: { first: 35, renew: 410 },
+  company: { first: 20, renew: 125 },
+  wiki: { first: 15, renew: 190 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {

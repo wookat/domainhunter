@@ -1464,6 +1464,186 @@ const GUIDES = {
       ],
     },
   },
+  news: {
+    tld: "news",
+    zh: {
+      title: ".news 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".news 语义直白「新闻/资讯」，适合媒体、行业资讯站与 newsletter。查看 .news 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .news 域名。",
+      intro:
+        ".news 是语义最直白的内容类后缀：看到域名就知道这是资讯站。独立媒体、垂直行业资讯（如 ai.news 类的赛道站）、地方新闻、公司新闻中心（brand.news 当官方 newsroom）、以及付费 newsletter 都非常合适——「主题 + .news」本身就是完整的产品名，省掉了在名字里再塞 daily、report 这类词。注册局 Identity Digital，运营稳定。价格首年几美元到十美元、续费 $26 左右（约 ¥190/年），在内容类后缀里属于温和水平。库存好：行业词、地名、赛道词大多可注册。短板：语义强绑定「资讯」，做工具或电商用它会误导用户预期；「新闻」属性也意味着内容更新频率要跟上，挂一个半年不更新的站在 .news 上观感很差。定位建议：真的持续产出资讯内容的站——垂直媒体、行业周报、公司 newsroom，在这些场景 .news 比 .com 更精准。",
+      bestFor: ["垂直行业资讯与独立媒体", "付费 newsletter 与行业周报", "公司官方新闻中心（newsroom）", "地方与社区新闻站"],
+      namingTips: [
+        "行业/主题词 + .news 就是完整站名：ai.news、crypto.news 式命名",
+        "地名 + .news 适合地方媒体，认知零成本",
+        "品牌 newsroom 用 brand.news，与主站 .com 分工清晰",
+        "确保内容会持续更新——.news 挂静态站会伤害信任",
+      ],
+    },
+    en: {
+      title: ".news Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".news says exactly what it means — built for media sites, industry news hubs and newsletters. See live pricing and naming advice, then hunt available .news names with AI.",
+      intro:
+        ".news is the most literal content TLD there is: one glance at the domain and readers know it's a news destination. Independent media, vertical industry coverage (think ai.news-style niche sites), local news, corporate newsrooms (brand.news as the official press hub) and paid newsletters all fit naturally — topic + .news is a complete product name on its own, no need to cram daily or report into the name. The registry is Identity Digital and operations are stable. Pricing runs a few dollars to $10 first year with renewals around $26/yr — moderate for a content TLD. Inventory is good: industry words, place names and niche terms are mostly available. Trade-offs: the semantics are hard-bound to journalism, so tools or shops on .news mislead expectations, and a .news site that hasn't published in six months looks worse than a stale .com. Best fit: sites that genuinely publish — vertical media, industry digests, corporate newsrooms — where .news is more precise than any .com.",
+      bestFor: ["Vertical media & independent journalism", "Paid newsletters & industry digests", "Corporate newsrooms", "Local & community news sites"],
+      namingTips: [
+        "Topic + .news is a complete site name: ai.news, crypto.news",
+        "Place + .news works instantly for local media",
+        "Use brand.news as a newsroom alongside your .com main site",
+        "Commit to publishing — a stale .news site erodes trust fast",
+      ],
+    },
+  },
+  tools: {
+    tld: "tools",
+    zh: {
+      title: ".tools 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".tools 语义是「工具集」，适合在线工具站、开发者工具与实用软件。查看 .tools 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tools 域名。",
+      intro:
+        ".tools 对工具类产品是量身定做：在线工具站（转换器、生成器、计算器合集）、开发者工具链、设计资源站，「品牌/功能词 + .tools」读出来就是「某某工具箱」。近几年独立开发者做的工具聚合站大量选择它，用户看到 .tools 就知道点进去是拿来干活的，转化路径极短。注册局 Identity Digital。价格首年 $10 上下、续费 $29 左右（约 ¥210/年）。库存很好：功能词（pdf、image、text）、赛道词（seo、dev、ai）大多有货。短板：复数形式暗示「一组工具」，如果产品是单一功能的 SaaS，用 .tools 会显得名不副实；正式企业官网也不适合。定位建议：工具合集站、开发者工具箱、面向创作者的实用套件——名字里不用再出现 tool 字样，后缀已经说明一切。",
+      bestFor: ["在线工具合集站", "开发者工具与 CLI 套件", "设计与创作者资源站", "效率与自动化小工具"],
+      namingTips: [
+        "功能词 + .tools 即是产品名：pdf.tools、seo.tools 式命名",
+        "名字里不要再带 tool/toolkit——后缀已经说了",
+        "复数语义适合「一组工具」，单一功能 SaaS 慎用",
+        "开发者向可用技术栈词：rust.tools、api.tools",
+      ],
+    },
+    en: {
+      title: ".tools Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".tools is purpose-built for utility sites, developer toolchains and practical software. See live pricing and naming advice, then hunt available .tools names with AI.",
+      intro:
+        ".tools is tailor-made for utility products: online tool collections (converters, generators, calculators), developer toolchains and design resource hubs all read perfectly as brand + .tools — literally \"someone's toolbox\". Indie hackers have adopted it heavily for tool aggregator sites because the suffix sets expectations instantly: visitors know they're clicking through to get something done, which keeps the conversion path short. The registry is Identity Digital. Pricing runs around $10 first year with renewals near $29/yr. Inventory is strong — function words (pdf, image, text) and niche words (seo, dev, ai) are widely available. Trade-offs: the plural implies a collection, so a single-feature SaaS on .tools can feel mislabeled, and it's too casual for a formal corporate site. Best fit: tool collections, developer toolboxes and creator utility suites — and you can drop \"tool\" from the name itself, because the suffix already says it.",
+      bestFor: ["Online tool collections", "Developer tools & CLI suites", "Design & creator resource hubs", "Productivity & automation utilities"],
+      namingTips: [
+        "Function word + .tools is the product name: pdf.tools, seo.tools",
+        "Never repeat tool/toolkit in the name — the suffix says it",
+        "The plural implies a collection; single-feature SaaS may misfit",
+        "Stack words work for dev audiences: rust.tools, api.tools",
+      ],
+    },
+  },
+  run: {
+    tld: "run",
+    zh: {
+      title: ".run 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".run 语义双关「运行」与「跑步」，适合开发者运行时/部署产品与运动健身品牌。查看 .run 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .run 域名。",
+      intro:
+        ".run 自带双关：技术圈读作「运行」——运行时、部署平台、沙盒环境、demo 站，「品牌 + .run」暗示「点开就能跑」，知名先例如 Google Cloud Run 的官方域名 cloud.run 与 val.town 类的代码运行平台；运动圈读作「跑步」——跑团、马拉松赛事、跑步装备与训练计划，语义同样零解释成本。注册局 Identity Digital。价格是本站收录里最亲民的一档：首年 $4 左右、续费 $22 上下（约 ¥160/年），做 side project 几乎无负担。库存极好，动词、品牌词、赛事名大多可注册。短板：3 字符后缀简短好记，但双关也意味着模糊——不看内容猜不出你是代码平台还是跑步社区；正式企业站不适合。定位建议：开发者的部署/运行时产品、在线 demo 与 playground，以及跑步赛事与社群——两个圈子里它都是气质后缀。",
+      bestFor: ["运行时与部署平台（cloud.run 式）", "在线 demo 与代码 playground", "跑团、马拉松与训练计划", "运动装备与健身品牌"],
+      namingTips: [
+        "技术产品用「品牌 + .run」暗示即点即跑：app.run、demo.run",
+        "跑步场景用赛事/城市名：cityname.run 是天然赛事域名",
+        "3 字符后缀本身短，前缀可以稍长仍好记",
+        "双关是特色也是模糊点——落地页第一屏要立刻说清你是谁",
+      ],
+    },
+    en: {
+      title: ".run Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".run puns on executing code and running sports — great for runtimes, deploy platforms and running brands. See live pricing and naming advice, then hunt available .run names with AI.",
+      intro:
+        ".run carries a built-in double meaning. To developers it says execute: runtimes, deploy platforms, sandboxes and live demos — brand + .run implies \"click and it runs\", with Google's cloud.run as the flagship precedent. To athletes it says running: race events, running clubs, gear and training plans read just as naturally. The registry is Identity Digital. Pricing is among the friendliest we track: around $4 first year with renewals near $22/yr, so side projects carry almost no cost. Inventory is excellent — verbs, brand words and event names are mostly open. Trade-offs: the 3-character suffix is short and memorable, but the pun cuts both ways — without seeing the content, nobody knows if you're a code platform or a running community; it's also too playful for formal corporate sites. Best fit: developer deploy/runtime products, online demos and playgrounds, plus race events and running communities — it's a personality suffix in both worlds.",
+      bestFor: ["Runtimes & deploy platforms (cloud.run style)", "Live demos & code playgrounds", "Running clubs, races & training plans", "Sports gear & fitness brands"],
+      namingTips: [
+        "For dev products, brand + .run implies instant execution: app.run, demo.run",
+        "For sports, city or event names work: cityname.run is a natural race domain",
+        "The suffix is only 3 chars — a slightly longer prefix stays memorable",
+        "The pun is charming but ambiguous — clarify who you are above the fold",
+      ],
+    },
+  },
+  codes: {
+    tld: "codes",
+    zh: {
+      title: ".codes 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".codes 语义覆盖「代码」与「优惠码」，适合开发者个人站、代码产品与折扣码聚合站。查看 .codes 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .codes 域名。",
+      intro:
+        ".codes 一个后缀吃两个赛道：一是「代码」——开发者个人站（name.codes 当作品集在海外开发者圈是成熟玩法）、代码教学、开源项目展示；二是「优惠码/兑换码」——折扣码聚合站、游戏兑换码、promo codes 站点，这类站的流量词本身就带 codes。注册局 Identity Digital。价格结构要特别注意：首年 $5 左右很便宜，但续费约 $57/年（约 ¥410），是本站收录里续费最贵的新顶级域之一，长期持有成本接近 .io。库存很好，人名、技术词、赛道词大多可注册。短板：除了续费贵，复数形式对单一产品也稍显泛化；面向国内大众的认知度低。定位建议：开发者个人品牌站（name.codes 的签名感很强）、优惠码内容站这类能直接吃语义红利的项目——但注册前务必想清楚续费成本，只打算玩一年的 side project 反而合适，长期主站建议先比价。",
+      bestFor: ["开发者个人站与作品集（name.codes）", "优惠码与兑换码聚合站", "代码教学与开源项目展示", "编程社区与黑客松活动页"],
+      namingTips: [
+        "人名/ID + .codes 是开发者个人品牌成熟玩法",
+        "优惠码站直接用品类词：game.codes、travel.codes 式命名",
+        "续费约 $57/年是硬成本——注册前按 3 年总价算账",
+        "面向国内大众认知度低，主打海外或开发者圈更稳",
+      ],
+    },
+    en: {
+      title: ".codes Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".codes covers both source code and promo codes — great for developer portfolios, code products and coupon sites. See live pricing and naming advice, then hunt available .codes names with AI.",
+      intro:
+        ".codes serves two audiences with one suffix. For developers it means source code: name.codes is an established pattern for personal portfolio sites in the dev community, and it suits coding education and open-source showcases. For commerce it means promo codes: coupon aggregators, game redemption codes and discount sites — niches where \"codes\" is literally the search keyword. The registry is Identity Digital. Watch the pricing structure carefully: around $5 for the first year, but renewals run about $57/yr — one of the priciest renewals among new TLDs we track, approaching .io territory for long-term holding. Inventory is strong: personal names, tech words and niche terms are mostly open. Trade-offs: beyond the renewal cost, the plural feels generic for a single product, and mainstream recognition is limited. Best fit: developer personal brands (name.codes has real signature energy) and coupon content sites that ride the semantics directly — but do the 3-year math before registering; a one-year side project is fine, a long-term main site deserves a price comparison first.",
+      bestFor: ["Developer portfolios (name.codes)", "Coupon & promo code aggregators", "Coding education & open-source showcases", "Programming communities & hackathon pages"],
+      namingTips: [
+        "Name/handle + .codes is the established developer-portfolio pattern",
+        "Coupon sites should use category words: game.codes, travel.codes",
+        "Renewals near $57/yr are the real cost — budget 3 years upfront",
+        "Recognition skews to dev and deal-hunter circles — lean into them",
+      ],
+    },
+  },
+  company: {
+    tld: "company",
+    zh: {
+      title: ".company 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".company 语义是「公司」，适合中小企业官网、控股主体与品牌旗下公司页。查看 .company 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .company 域名。",
+      intro:
+        ".company 把「公司」两个字直接写进域名：中小企业官网、工作室的正式主体页、控股结构里的母公司站（brand.company 挂公司信息，产品各自用产品域名）、以及「the XX company」式的复古品牌命名（美国不少精品品牌喜欢自称 The Coffee Company 这种格式），用它都很顺。注册局 Identity Digital。价格是本站收录里最便宜的一档：首年 $3 左右、续费约 $17/年（约 ¥125），比 .com 续费还便宜，作为长期持有的企业域名成本极低。库存极好，公司名、姓氏、行业词几乎随便注册。短板：后缀 7 字符偏长，口播时不如 .com 顺；在中文语境「.company」认知度一般，面向国内客户的企业更常选 .com/.cn。定位建议：海外中小企业与工作室官网、集团/控股主体页、以及「The XX Company」式品牌——预算敏感又要正式感时，它是被低估的选择。",
+      bestFor: ["中小企业与工作室官网", "集团母公司与控股主体页", "「The XX Company」式品牌", "企业信息与招聘页"],
+      namingTips: [
+        "公司名 + .company 语义完整：acme.company 读作「Acme 公司」",
+        "「The XX Company」式品牌天然匹配：coffee.company",
+        "续费比 .com 还便宜，适合长期持有的正式主体页",
+        "7 字符偏长，口播场景多的品牌要权衡",
+      ],
+    },
+    en: {
+      title: ".company Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".company literally says what you are — great for SMB websites, holding entities and \"The X Company\" brands. See live pricing and naming advice, then hunt available .company names with AI.",
+      intro:
+        ".company writes your legal nature straight into the domain: small-business websites, studios wanting a formal entity page, holding structures (brand.company for corporate info while products live on their own domains), and retro \"The X Company\" branding — a format plenty of boutique brands love — all read naturally. The registry is Identity Digital. Pricing is among the cheapest we track: around $3 first year and roughly $17/yr renewal — cheaper than a .com renewal — making it one of the lowest-cost domains for long-term corporate holding. Inventory is superb: company names, surnames and industry words are nearly all open. Trade-offs: at 7 characters the suffix is on the long side and less punchy than .com when spoken aloud, and mainstream recognition still trails the classics. Best fit: SMB and studio websites, group/holding entity pages, and \"The X Company\" brands — an underrated pick when you want formality on a budget.",
+      bestFor: ["SMB & studio websites", "Group & holding entity pages", "\"The X Company\" style brands", "Corporate info & careers pages"],
+      namingTips: [
+        "Company name + .company completes the sentence: acme.company",
+        "\"The X Company\" brands map perfectly: coffee.company",
+        "Renews cheaper than .com — great for long-term corporate holding",
+        "7 characters is long — weigh it if word-of-mouth matters",
+      ],
+    },
+  },
+  wiki: {
+    tld: "wiki",
+    zh: {
+      title: ".wiki 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".wiki 语义是「百科/知识库」，适合产品文档、粉丝百科与团队知识库。查看 .wiki 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .wiki 域名。",
+      intro:
+        ".wiki 借维基百科之名把「知识库」语义焊死在后缀上：产品文档站（docs 的另一种选择）、游戏/动漫粉丝百科（fandom 式社区自建站）、开源项目 wiki、团队内部知识库对外版，「主题 + .wiki」读出来就是「某某百科」，用户预期精准——点进去就是查资料的。注册局 Top Level Design（rdap.nic.wiki），是本批里少数非 Identity Digital 的后缀。价格首年 $2 左右极便宜、续费约 $26/年（约 ¥190）。库存很好：游戏名、产品名、领域词大多可注册。短板：语义强绑定「协作百科/资料站」，拿来做产品官网或电商会错位；「wiki」一词自带 UGC 联想，纯官方单向输出的文档站用它要接受这层预期。定位建议：粉丝百科、游戏攻略库、开源项目文档、垂直领域知识库——内容型站点里它是少数「后缀即产品定位」的选择。",
+      bestFor: ["游戏与动漫粉丝百科", "产品文档与开源项目 wiki", "垂直领域知识库", "团队知识库对外版"],
+      namingTips: [
+        "主题 + .wiki 就是站名：gamename.wiki、topic.wiki",
+        "游戏/IP 名注册要避开商标风险，粉丝站注明非官方",
+        "文档站可用 product.wiki 与主站分工",
+        "「wiki」自带协作联想——纯官方文档要在页面说明定位",
+      ],
+    },
+    en: {
+      title: ".wiki Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".wiki means knowledge base — built for product docs, fan wikis and team knowledge hubs. See live pricing and naming advice, then hunt available .wiki names with AI.",
+      intro:
+        ".wiki borrows Wikipedia's mindshare to weld \"knowledge base\" onto the suffix itself: product documentation (a fresh alternative to docs subdomains), game and fandom wikis (the self-hosted answer to Fandom.com), open-source project wikis and public team knowledge bases all read as topic + .wiki — literally \"the encyclopedia of X\". Visitor expectations are laser-precise: they're coming to look something up. The registry is Top Level Design (rdap.nic.wiki), one of the few non-Identity-Digital suffixes in this batch. Pricing runs about $2 first year with renewals near $26/yr. Inventory is strong: game names, product names and domain words are mostly open. Trade-offs: the semantics are hard-bound to reference content, so product homepages or shops on .wiki feel misplaced, and the word carries a UGC/collaboration connotation that a strictly official docs site should be ready to manage. Best fit: fan wikis, game guide hubs, open-source docs and vertical knowledge bases — one of the rare suffixes where the TLD is the product positioning.",
+      bestFor: ["Game & fandom wikis", "Product docs & open-source wikis", "Vertical knowledge bases", "Public team knowledge hubs"],
+      namingTips: [
+        "Topic + .wiki is the site name: gamename.wiki, topic.wiki",
+        "Watch trademarks on game/IP names — label fan sites unofficial",
+        "Use product.wiki for docs, cleanly split from the main site",
+        "\"Wiki\" implies collaboration — clarify if it's official-only docs",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
