@@ -3984,6 +3984,186 @@ const GUIDES = {
       ],
     },
   },
+  plus: {
+    tld: "plus",
+    zh: {
+      title: ".plus 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".plus 把「增强版」写进域名，适合产品 Pro/会员版、增值服务、社区加强版与升级套餐页。查看 .plus 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .plus 域名。",
+      intro:
+        ".plus 把「更进一步」写进域名：产品的 Pro/会员版、增值服务与升级套餐、社区加强版、工具的扩展版用 name.plus，读出来就是「同一个东西，更好的那档」。流媒体时代 Plus 后缀早已深入人心（各大平台的 + 订阅版都是这个语感），brand.plus 天然让用户联想到付费升级入口。Identity Digital 运营，注册约 $10（约 ¥70），续费约 $44/年（约 ¥315），续费偏高档，适合真正承载付费业务的入口而非闲置注册。库存极好：品牌词、品类词命中率都高。注意三点：一是它是修饰词不是品牌词，主站放品牌主域，.plus 做会员/升级版专属入口最顺；二是既然域名喊了 plus，落地页要立刻讲清「比普通版多什么」，否则名不副实；三是四个字母短而顺口，但拼写时注意别与 + 号混淆，口头传播要说清「p-l-u-s」。命名上「品牌 + .plus」最自然（会员版标准写法），服务商用「品类 + .plus」表达增强定位，套餐页用「产品 + .plus」直接当升级跳转页。",
+      bestFor: ["产品 Pro/会员版入口", "增值服务与升级套餐", "社区与内容加强版", "工具扩展与插件版"],
+      namingTips: [
+        "「品牌 + .plus」是会员/升级版标准写法",
+        "注册约 $10、续费约 $44/年，注意续费档",
+        "落地页要立刻讲清比普通版多什么",
+        "口头传播说清 p-l-u-s，别与 + 号混淆",
+      ],
+    },
+    en: {
+      title: ".plus Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".plus writes the upgrade into the address — for Pro/member tiers, value-added services, enhanced community editions and upgrade pages. See live pricing and naming advice, then hunt available .plus names with AI.",
+      intro:
+        ".plus writes \"one step up\" into the address: a product's Pro or member tier, value-added services and upgrade bundles, enhanced community editions, extended tool versions on name.plus read as \"the same thing, but the better tier\". The streaming era made the Plus suffix a household pattern (every major platform's + subscription), so brand.plus instantly reads as the paid-upgrade door. Operated by Identity Digital, about $10 to register and $44/yr to renew — a higher renewal tier, best for a door that actually carries paid business rather than an idle registration. Inventory is excellent: brand words and category words all hit. Three cautions: it's a modifier, not a brand word — keep the main site on the brand domain and let .plus be the member/upgrade entrance; if the domain shouts plus, the landing page must immediately say what's extra over the standard tier; and while four letters are short and smooth, spell out p-l-u-s aloud so it isn't confused with the + sign. Naming: brand + .plus is the member-tier standard; providers position as category + .plus; bundle pages jump straight from product + .plus.",
+      bestFor: ["Pro/member tier entrances", "Value-added services & upgrades", "Enhanced community editions", "Tool extensions & add-ons"],
+      namingTips: [
+        "Brand + .plus is the member-tier standard",
+        "About $10 to register, $44/yr to renew — mind the renewal",
+        "The landing page must say what's extra, fast",
+        "Spell out p-l-u-s — don't get confused with +",
+      ],
+    },
+  },
+  house: {
+    tld: "house",
+    zh: {
+      title: ".house 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".house 把「家宅」写进域名，适合房产经纪与租售平台、家居装修品牌、民宿与设计工作室（House 命名传统）。查看 .house 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .house 域名。",
+      intro:
+        ".house 把房子写进域名：房产经纪与租售信息平台、家装与家居品牌、民宿与短租、建筑与室内设计工作室用 name.house，域名一眼就是「跟住有关」。它还有一层妙用——英文里创意机构、唱片公司、出版社惯用 House 结尾（design house、publishing house），brand.house 让「品牌词 + 后缀」直接等于机构全名，比 .studio 更多一分「宅邸感」。与 .estate 的分工：estate 偏资产与地产投资，house 偏「一栋一栋的房子」与居住场景，2C 的租售和家装用它更亲切。Identity Digital 运营，注册约 $15（约 ¥107），续费约 $36/年（约 ¥256），中档价位。库存极好：城市词、风格词、姓氏命中率都高。注意三点：一是房产是强本地生意，「城市/街区 + .house」比泛词更能接住本地搜索；二是它是场景词不是资质词，房产中介的执照与备案信息照样要在页面讲清；三是拼写零门槛，但英文语境里 house 也可能被理解为机构名，定位要靠首屏文案钉死。命名上「城市 + .house」最自然（本地租售一眼懂），家装品牌用「风格词 + .house」，工作室用「品牌词 + .house」念出来就是全名。",
+      bestFor: ["房产经纪与租售平台", "家装与家居品牌", "民宿与短租", "建筑与设计工作室"],
+      namingTips: [
+        "「城市 + .house」接住本地租售搜索",
+        "注册约 $15、续费约 $36/年，中档",
+        "「品牌词 + .house」念出来就是机构全名",
+        "场景词非资质词，中介资质照样要展示",
+      ],
+    },
+    en: {
+      title: ".house Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".house writes home into the address — for real-estate agents and rental platforms, home & interior brands, guesthouses, and \"house\"-named studios. See live pricing and naming advice, then hunt available .house names with AI.",
+      intro:
+        ".house writes the home into the address: real-estate agents and rental platforms, home-improvement and furnishing brands, guesthouses and short-term rentals, architecture and interior studios on name.house are instantly \"about living\". There's a bonus register: creative agencies, record labels and publishers traditionally end in House (design house, publishing house), so brand.house makes brand word + suffix equal the organization's full name — one notch homier than .studio. The split with .estate: estate leans assets and property investment, house leans individual homes and living scenarios — consumer rentals and home brands read warmer here. Operated by Identity Digital, about $15 to register and $36/yr to renew — the mid tier. Inventory is excellent: city words, style words and surnames all hit. Three cautions: property is a fiercely local business, so city or neighborhood + .house catches local search better than generic words; it's a scenario word, not a credential — agents still need licenses and disclosures on the page; and while spelling is effortless, English readers may parse house as an institution name, so pin the positioning in the hero copy. Naming: city + .house is the natural local-rental pattern; home brands go style word + .house; studios read out their full name as brand + .house.",
+      bestFor: ["Real-estate agents & rental platforms", "Home & furnishing brands", "Guesthouses & short-term rentals", "Architecture & design studios"],
+      namingTips: [
+        "City + .house catches local rental search",
+        "About $15 to register, $36/yr to renew",
+        "Brand + .house reads as the org's full name",
+        "Scenario word, not a credential — show licenses",
+      ],
+    },
+  },
+  market: {
+    tld: "market",
+    zh: {
+      title: ".market 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".market 把「市集」写进域名，适合垂类电商市场、二手与本地市集、数字资产商店与农夫市集。查看 .market 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .market 域名。",
+      intro:
+        ".market 把市集写进域名：垂类电商市场、二手与本地市集、数字资产与模板商店、农夫市集与周末集市用 name.market，访客点开之前就知道「这里能逛能买」。它与 .exchange 的分工在方向——exchange 偏双向撮合与流通，market 偏「陈列售卖」的多商家市集：聚合多个卖家的平台用它最点题。与 .store 的差异在规模感：store 是「一家店」，market 是「一片市集」，做 marketplace 模式选后者语义更准。Identity Digital 运营，注册约 $36（约 ¥256），续费约 $36/年（约 ¥256）——注册续费同价，没有首年甜头但也没有续费陷阱，长期持有成本透明。库存极好：品类词、城市词命中率都高。注意三点：一是六个字母不算长但读音靠后重音，主体名选短词更利落；二是市集的生命线是两侧供需，域名负责定位，冷启动还得靠运营；三是「品类 + .market」在英文里就是个通顺短语（art.market、nft.market 的语感），SEO 语义红利实打实。命名上「品类 + .market」最自然，本地市集用「城市/街区 + .market」，数字商店用「资产类型 + .market」一眼点题。",
+      bestFor: ["垂类电商市场", "二手与本地市集", "数字资产与模板商店", "农夫市集与周末集市"],
+      namingTips: [
+        "「品类 + .market」读出来就是通顺短语",
+        "注册续费同价约 $36/年，成本透明",
+        "marketplace 模式用它比 .store 语义更准",
+        "市集靠两侧供需，域名管定位不管流量",
+      ],
+    },
+    en: {
+      title: ".market Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".market writes the marketplace into the address — for vertical marketplaces, secondhand and local markets, digital-asset stores and farmers markets. See live pricing and naming advice, then hunt available .market names with AI.",
+      intro:
+        ".market writes the bazaar into the address: vertical e-commerce marketplaces, secondhand and local markets, digital-asset and template stores, farmers and weekend markets on name.market tell visitors \"browse and buy here\" before the click. The split with .exchange is direction — exchange leans two-way matching and flow, market leans multi-vendor display and sale: platforms aggregating many sellers read truest here. Against .store the difference is scale: store is one shop, market is a whole marketplace — marketplace businesses get the more accurate word. Operated by Identity Digital, about $36 to register and $36/yr to renew — same price both ways: no first-year sweetener, but no renewal trap either, so the long-term cost is transparent. Inventory is excellent: category words and city names all hit. Three cautions: six letters isn't long but keep the front word short for rhythm; a marketplace lives or dies by supply and demand on both sides — the domain does positioning, not cold-start; and category + .market is a natural English phrase (the art.market, nft.market cadence), a real semantic-SEO dividend. Naming: category + .market is the natural pattern; local markets go city or neighborhood + .market; digital stores say it instantly as asset type + .market.",
+      bestFor: ["Vertical marketplaces", "Secondhand & local markets", "Digital-asset & template stores", "Farmers & weekend markets"],
+      namingTips: [
+        "Category + .market reads as a natural phrase",
+        "Same ~$36 to register and renew — transparent cost",
+        "Marketplace businesses fit it better than .store",
+        "Two-sided supply is on you — the domain just positions",
+      ],
+    },
+  },
+  watch: {
+    tld: "watch",
+    zh: {
+      title: ".watch 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".watch 一词双关「观看」与「腕表」，适合视频与直播站、监测与预警工具、腕表电商与钟表社区。查看 .watch 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .watch 域名。",
+      intro:
+        ".watch 一词双关：动词是「观看」，名词是「腕表」，还引申出「监测哨」——视频与直播聚合站、赛事与影视观看指南、价格与舆情监测工具（英文里 price watch、whale watch 的语感）、腕表电商与钟表爱好者社区用 name.watch 都点题。这种一后缀三场景的弹性在新 TLD 里少见。Identity Digital 运营，注册约 $3（约 ¥22），续费约 $36/年（约 ¥256）——首年是全站最便宜档之一，但续费翻十倍，验证想法便宜、长期持有要认续费账。库存极好：内容词、品牌词、监测对象词命中率都高。注意三点：一是双关是资产也是歧义，首屏要立刻讲清你是「看视频」「盯数据」还是「卖表」；二是影视聚合站注意版权边界，域名越点题越容易被盯上；三是监测工具用「对象 + .watch」是英文惯用语（storm.watch 语感），这类组合读起来最顺。命名上「内容/赛事 + .watch」做观看站，「监测对象 + .watch」做预警工具，「品牌/风格词 + .watch」做腕表生意，三条路都通。",
+      bestFor: ["视频与直播聚合站", "监测与预警工具", "腕表电商与钟表社区", "赛事与影视观看指南"],
+      namingTips: [
+        "「监测对象 + .watch」是英文惯用语",
+        "注册约 $3 超便宜，续费约 $36/年要认账",
+        "双关有歧义，首屏立刻讲清哪个场景",
+        "影视聚合注意版权，域名点题更易被盯",
+      ],
+    },
+    en: {
+      title: ".watch Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".watch puns on viewing and wristwatches — for video and streaming sites, monitoring and alert tools, watch retailers and horology communities. See live pricing and naming advice, then hunt available .watch names with AI.",
+      intro:
+        ".watch is a built-in pun: the verb is viewing, the noun is the wristwatch, and the idiom is the lookout — video and streaming aggregators, sports and show viewing guides, price and sentiment monitors (the price watch, whale watch cadence), watch retailers and horology communities all land on name.watch. Few new TLDs stretch across three scenes like this. Operated by Identity Digital, about $3 to register and $36/yr to renew — one of the cheapest first years on this site, but renewal is 10x, so it's cheap to validate an idea and a real line item to hold. Inventory is excellent: content words, brand words and monitoring targets all hit. Three cautions: the pun is an asset and an ambiguity — the hero section must instantly say whether you stream, monitor, or sell timepieces; streaming aggregators should mind copyright, and the more on-the-nose the domain, the more attention it draws; and target + .watch is native English idiom (the storm.watch cadence) — those combinations read smoothest. Naming: content or event + .watch for viewing sites, target + .watch for alert tools, brand or style word + .watch for the watch trade — all three roads run.",
+      bestFor: ["Video & streaming aggregators", "Monitoring & alert tools", "Watch retailers & horology communities", "Sports & show viewing guides"],
+      namingTips: [
+        "Target + .watch is native English idiom",
+        "About $3 to register, $36/yr to renew — 10x jump",
+        "The pun is ambiguous — pin the scene in the hero",
+        "Streaming sites: mind copyright exposure",
+      ],
+    },
+  },
+  style: {
+    tld: "style",
+    zh: {
+      title: ".style 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".style 把「风格」写进域名，适合时尚穿搭博主、造型师与形象顾问、美妆美发品牌与生活方式媒体。查看 .style 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .style 域名。",
+      intro:
+        ".style 把风格写进域名：时尚穿搭博主、造型师与形象顾问、美妆美发与服饰品牌、生活方式媒体用 name.style，域名本身就带着「审美在线」的气场。它比 .fashion 更宽——fashion 锁死服装行业，style 覆盖穿搭、家居、文字、代码风格指南（brand style guide 也是它的地盘），个人品牌用「名字 + .style」念出来就是「某某的风格」，比 .com 上加 fashion/official 词缀优雅得多。Identity Digital 运营，注册约 $7（约 ¥52），续费约 $31/年（约 ¥226），温和档。库存极好：人名、风格词、城市词命中率都高。注意三点：一是它气质偏轻快时尚，严肃 B2B 与金融不合适；二是「风格」是主观承诺，站点视觉必须跟上——挂 .style 的网站设计粗糙比普通域名更减分；三是企业的品牌规范站用 brand.style 放 style guide 是设计圈的经典用法，值得保护性注册。命名上「人名 + .style」最自然（个人风格主页标准写法），品牌用「品牌词 + .style」，垂类媒体用「场景词 + .style」（street、home 类）一眼点题。",
+      bestFor: ["时尚穿搭博主与造型师", "美妆美发与服饰品牌", "生活方式媒体", "品牌规范与设计系统站"],
+      namingTips: [
+        "「人名 + .style」念出来就是个人风格主页",
+        "注册约 $7、续费约 $31/年，温和档",
+        "brand.style 放品牌规范是设计圈经典用法",
+        "挂 .style 视觉必须在线，粗糙更减分",
+      ],
+    },
+    en: {
+      title: ".style Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".style writes the aesthetic into the address — for fashion bloggers, stylists and image consultants, beauty brands and lifestyle media. See live pricing and naming advice, then hunt available .style names with AI.",
+      intro:
+        ".style writes the aesthetic into the address: fashion and outfit bloggers, stylists and image consultants, beauty and apparel brands, lifestyle media on name.style carry a \"taste included\" air in the domain itself. It's broader than .fashion — fashion locks you into apparel, style spans outfits, interiors, writing, even code conventions (the brand style guide is its turf too). A personal brand on yourname.style reads out as \"so-and-so's style\" — far more elegant than bolting fashion or official onto a .com. Operated by Identity Digital, about $7 to register and $31/yr to renew — the mild tier. Inventory is excellent: first names, style words and city names all hit. Three cautions: the register is light and fashionable — wrong for sober B2B and finance; style is a subjective promise, so the site's visuals must deliver — a rough-looking site hurts more under .style than under a plain domain; and brand.style hosting the company style guide is a design-community classic worth a defensive registration. Naming: first name + .style is the personal-style standard; brands go brand word + .style; niche media nail it as scene word + .style (street, home).",
+      bestFor: ["Fashion bloggers & stylists", "Beauty & apparel brands", "Lifestyle media", "Brand style guides & design systems"],
+      namingTips: [
+        "First name + .style reads as a personal style page",
+        "About $7 to register, $31/yr to renew",
+        "brand.style for the style guide is a design classic",
+        "Visuals must deliver — rough sites hurt more here",
+      ],
+    },
+  },
+  show: {
+    tld: "show",
+    zh: {
+      title: ".show 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".show 把「节目」写进域名，适合播客与视频节目、演出与展览、直播秀与作品展示页。查看 .show 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .show 域名。",
+      intro:
+        ".show 把节目写进域名：播客与视频节目、脱口秀与综艺、演出与展览、直播秀与作品集展示页用 name.show，域名念出来就是节目全名——英文里节目名以 Show 结尾是百年传统（The Tonight Show 的语感），.show 让「节目名 + 后缀」直接等于完整名称，播客尤其受用。它与 .live 的分工在时态：live 强调「正在直播」，show 强调「这是一档节目」，有固定栏目感、可回放的内容用后者更准。Identity Digital 运营，注册约 $8（约 ¥59），续费约 $36/年（约 ¥256），中档。库存极好：节目词、人名、主题词命中率都高。注意三点：一是四个字母短而好记，但 show 也有「展示」义，作品集用它时首屏要立住「这是我的 show」的语气；二是节目是持续承诺，停更的 .show 域名比停更的博客更显眼；三是演出与展览的售票页用「活动名 + .show」做专属入口很顺，档期过后记得续期或归档。命名上「节目名/人名 + .show」最自然（The XX Show 传统），演出用「活动名 + .show」，作品展示用「品牌词 + .show」把「秀」的姿态摆足。",
+      bestFor: ["播客与视频节目", "脱口秀与综艺", "演出与展览售票页", "直播秀与作品展示"],
+      namingTips: [
+        "「人名/节目名 + .show」等于节目全名",
+        "注册约 $8、续费约 $36/年，中档",
+        "有栏目感的内容用它比 .live 更准",
+        "节目是持续承诺，停更比停博客更显眼",
+      ],
+    },
+    en: {
+      title: ".show Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".show writes the program into the address — for podcasts and video shows, performances and exhibitions, live shows and showcase pages. See live pricing and naming advice, then hunt available .show names with AI.",
+      intro:
+        ".show writes the program into the address: podcasts and video shows, talk shows and variety formats, performances and exhibitions, live shows and portfolio showcases on name.show read out as the show's full name — ending a program in \"Show\" is a century-old convention (The Tonight Show cadence), and the TLD makes show name + suffix equal the complete title. Podcasters benefit most. The split with .live is tense: live stresses \"streaming right now\", show stresses \"this is a program\" — recurring, replayable formats read truer here. Operated by Identity Digital, about $8 to register and $36/yr to renew — the mid tier. Inventory is excellent: show words, host names and topic words all hit. Three cautions: four letters are short and memorable, but show also means \"showcase\" — portfolios must own the \"this is my show\" tone in the hero; a show is an ongoing promise, and an abandoned .show reads worse than an abandoned blog; and event or exhibition ticket pages roll nicely as event name + .show — renew or archive once the run ends. Naming: host or show name + .show is the tradition (The XX Show); performances go event name + .show; showcases strike the pose as brand + .show.",
+      bestFor: ["Podcasts & video shows", "Talk shows & variety formats", "Performance & exhibition pages", "Live shows & showcases"],
+      namingTips: [
+        "Host/show name + .show equals the full title",
+        "About $8 to register, $36/yr to renew",
+        "Recurring formats fit it better than .live",
+        "A show is a promise — abandonment shows",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
