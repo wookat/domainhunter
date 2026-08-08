@@ -13,7 +13,7 @@ import { REGISTRARS } from "@/lib/registrars";
 import { addMyShare, loadMyShares, removeMyShare, type MyShare } from "@/lib/my-shares";
 import type { RecheckResult, ShortlistItem } from "@/lib/shortlist";
 import { scoreBadgeClass, totalScore, type Status } from "@/types";
-import { cn } from "@/lib/utils";
+import { cn, formatExpiry } from "@/lib/utils";
 
 function exportShortlist(items: ShortlistItem[], format: "csv" | "txt") {
   let content: string;
@@ -22,7 +22,7 @@ function exportShortlist(items: ShortlistItem[], format: "csv" | "txt") {
     const lines = items.map((it) => {
       const s = it.scores;
       const meaning = `"${(it.meaning ?? "").replace(/"/g, '""')}"`;
-      return [it.domain, s ? totalScore(s) : "", s?.length ?? "", s?.readability ?? "", s?.relevance ?? "", s?.brandability ?? "", meaning, it.expiresAt ?? ""].join(",");
+      return [it.domain, s ? totalScore(s) : "", s?.length ?? "", s?.readability ?? "", s?.relevance ?? "", s?.brandability ?? "", meaning, it.expiresAt ? formatExpiry(it.expiresAt) ?? "" : ""].join(",");
     });
     content = [header, ...lines].join("\n");
   } else {
