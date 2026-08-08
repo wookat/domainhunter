@@ -109,6 +109,42 @@ const STR = {
   },
 } as const;
 
+/* prices-page.tsx 表头排序图标（lucide v1.27 arrow-up / arrow-up-down，同 path） */
+const ICON_ARROW_UP = icon("arrow-up", "h-3 w-3", '<path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path>');
+const ICON_ARROW_UP_DOWN = icon("arrow-up-down", "h-3 w-3", '<path d="m21 16-4 4-4-4"></path><path d="M17 20V4"></path><path d="m3 8 4-4 4 4"></path><path d="M7 4v16"></path>');
+
+/* /prices 骨架文案：与 lib/i18n.tsx 词典逐字同源（prices.colTld / colReg / colRenew / hunt / filter） */
+const PRICES_STR = {
+  zh: { colTld: "后缀", colReg: "注册/首年", colRenew: "续费/年", hunt: "猎名", filter: "筛选后缀，如 shop…" },
+  en: { colTld: "TLD", colReg: "Register / 1st yr", colRenew: "Renew / yr", hunt: "Hunt", filter: "Filter suffixes, e.g. shop…" },
+} as const;
+
+/**
+ * /prices 首屏骨架：筛选框 + 表头 + 全量骨架行（价格单元为脉冲占位）。
+ * DOM/类名与 prices-page.tsx 在 /api/prices 未返回时的首次渲染逐字一致（React 挂载零跳变），
+ * 行序同 buildRows 默认排序（静态参考价升序，稳定排序）。
+ */
+export function pricesTableSkeleton(lang: Lang): string {
+  const s = PRICES_STR[lang];
+  const th = (label: string, active: boolean) =>
+    `<button class="flex min-h-[32px] items-center gap-1 text-xs font-semibold ${active ? "text-brand" : "text-txt1 hover:text-txt0"}">${escapeHtml(label)}${active ? ICON_ARROW_UP : ICON_ARROW_UP_DOWN}</button>`;
+  const rows = TLD_LIST.map((tld) => {
+    const p = tldPrice(tld);
+    return { tld, reg: p ? toUsd(p.first) : Number.MAX_SAFE_INTEGER };
+  });
+  rows.sort((a, b) => a.reg - b.reg);
+  const rowsHtml = rows
+    .map(
+      ({ tld }) =>
+        `<div class="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0"><a href="/tld/${tld}?lang=${lang}" class="font-mono text-sm font-semibold text-txt0 hover:text-brand">.${tld}</a><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><a href="/?tld=${tld}" class="flex min-h-[44px] items-center rounded-lg border border-line px-2.5 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-[36px]">${escapeHtml(s.hunt)}</a></div>`,
+    )
+    .join("");
+  return (
+    `<input placeholder="${escapeHtml(s.filter)}" class="mt-6 h-10 w-full max-w-xs rounded-lg border border-line bg-bg1 px-3 font-mono text-sm text-txt0 outline-none transition-colors placeholder:font-sans placeholder:text-txt2 focus:border-brand-line" />` +
+    `<div class="mt-4 overflow-hidden rounded-xl border border-line"><div class="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line bg-bg1 px-4 py-2.5">${th(s.colTld, false)}${th(s.colReg, true)}${th(s.colRenew, false)}<span></span></div>${rowsHtml}</div>`
+  );
+}
+
 const sectionH2 = (iconSvg: string, label: string) =>
   `<h2 class="mt-8 flex items-center gap-2 text-base font-bold">${iconSvg}${escapeHtml(label)}</h2>`;
 

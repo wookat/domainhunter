@@ -61,6 +61,11 @@ export function usePrices(): PriceMap | null {
   return usePricesResult()?.prices ?? null;
 }
 
+/** /api/prices 请求是否已结束（成功或失败）；false 表示仍在加载中，可渲染骨架占位 */
+export function usePricesSettled(): boolean {
+  return usePricesResult() !== null;
+}
+
 /** 价格元信息：stale 回退标记 + 拉取时间（仅 /prices 页轻提示用） */
 export function usePriceMeta(): PriceMeta | null {
   return usePricesResult()?.meta ?? null;
