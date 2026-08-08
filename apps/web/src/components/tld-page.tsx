@@ -36,7 +36,7 @@ export function TldPage({ tld }: { tld: string }) {
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
       <p className="font-mono text-sm text-brand">
-        <a href={`/tld?lang=${lang}`} className="text-txt2 hover:text-brand hover:underline">
+        <a href={`/tld?lang=${lang}`} className="tap-target inline-block text-txt2 hover:text-brand hover:underline">
           {t("hub.allTld")}
         </a>
         <span className="mx-1.5 text-txt2">/</span>.{tld}
@@ -61,7 +61,7 @@ export function TldPage({ tld }: { tld: string }) {
         ) : (
           <span className="text-sm text-txt1">{priceFull(tld, lang, prices) ?? t("tld.priceLoading")}</span>
         )}
-        <a href={`/prices?lang=${lang}`} className="ml-auto inline-flex min-h-[36px] items-center text-xs text-txt2 hover:text-brand hover:underline">
+        <a href={`/prices?lang=${lang}`} className="ml-auto inline-flex min-h-[44px] items-center text-xs text-txt2 hover:text-brand hover:underline sm:min-h-[36px]">
           {t("prices.seeAll")}
         </a>
       </div>
@@ -131,7 +131,7 @@ export function TldPage({ tld }: { tld: string }) {
               key={other}
               href={`/tld/${other}?lang=${lang}`}
               className={cn(
-                "rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors",
+                "inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0",
                 other === tld ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand",
               )}
             >

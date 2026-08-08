@@ -32,7 +32,7 @@ export function GuidePage({ slug }: { slug: string }) {
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
       <p className="font-mono text-sm text-brand">
-        <a href={`/guide?lang=${lang}`} className="text-txt2 hover:text-brand hover:underline">
+        <a href={`/guide?lang=${lang}`} className="tap-target inline-block text-txt2 hover:text-brand hover:underline">
           {t("hub.allGuide")}
         </a>
         <span className="mx-1.5 text-txt2">/</span>
