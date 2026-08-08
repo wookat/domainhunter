@@ -49,6 +49,7 @@ const CompareHubPage = lazyChunk(() => import("@/components/compare-hub-page"), 
 const McpPage = lazyChunk(() => import("@/components/mcp-page"), (m) => m.McpPage);
 const AgentPage = lazyChunk(() => import("@/components/agent-page"), (m) => m.AgentPage);
 const ResultsPage = lazyChunk(() => import("@/components/results-page"), (m) => m.ResultsPage);
+const NotFoundPage = lazyChunk(() => import("@/components/not-found-page"), (m) => m.NotFoundPage);
 
 /** 首屏空闲时预取搜索路径的懒 chunk，点「开始猎取」时零等待 */
 function prefetchSearchChunks() {
@@ -109,6 +110,26 @@ function compareFromPath(): string | null {
   return m ? m[1].toLowerCase() : null;
 }
 
+/** 未知顶层路径：不匹配任何已知路由时渲染客户端 404 页（HTTP 状态码/noindex 由 worker 负责） */
+function notFoundFromPath(): boolean {
+  return (
+    window.location.pathname !== "/" &&
+    !shareIdFromPath() &&
+    !tldFromPath() &&
+    !guideFromPath() &&
+    !compareFromPath() &&
+    !pricesFromPath() &&
+    !tldHubFromPath() &&
+    !guideHubFromPath() &&
+    !compareHubFromPath() &&
+    !whyFromPath() &&
+    !mcpFromPath() &&
+    !shortlistFromPath() &&
+    !advancedFromPath() &&
+    !monitorsFromPath()
+  );
+}
+
 /** 首页默认 TLD：支持 /?tld=xx 或 /?tld=xx,yy 精确预填（TLD 指南页 / 对比页 CTA、分享搜索链接入口），不自动补 com */
 function initialTlds(): string[] {
   const params = new URLSearchParams(window.location.search);
@@ -129,6 +150,7 @@ export default function App() {
   const [isGuideHub] = useState(guideHubFromPath);
   const [isCompareHub] = useState(compareHubFromPath);
   const [isWhy] = useState(whyFromPath);
+  const [isNotFound] = useState(notFoundFromPath);
   const [isMcp] = useState(mcpFromPath);
   const [saved] = useState(() => {
     if (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() || advancedFromPath() || tldHubFromPath() || guideHubFromPath() || compareHubFromPath()) return null;
@@ -395,6 +417,21 @@ export default function App() {
   ]
     .filter(Boolean)
     .join(" · ");
+
+  if (isNotFound) {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Header
+          onLogoClick={() => window.location.assign("/")}
+          shortlistCount={shortlist.items.length}
+          onShortlistClick={() => window.location.assign("/")}
+        />
+        <Suspense fallback={<PageFallback />}>
+          <NotFoundPage />
+        </Suspense>
+      </div>
+    );
+  }
 
   if (isTldHub || isGuideHub || isCompareHub) {
     return (
