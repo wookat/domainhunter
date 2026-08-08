@@ -324,6 +324,10 @@ export default function App() {
           lang,
           target: TARGET,
           excludeLabels: more ? triedLabelsRef.current : [],
+          // 点踩候选带 theme 一起回传，worker 据此在 refine prompt 中生成风格规避提示
+          disliked: more
+            ? [...disliked].map((label) => ({ label, theme: rows.find((r) => r.label === label)?.theme }))
+            : [],
           fast: !more, // 首轮快速模式：先出少量候选降低首字节时间
         }),
         signal: ac.signal,
