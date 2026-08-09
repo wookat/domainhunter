@@ -17,6 +17,36 @@ const EXAMPLES_EN = ["AI weekly-report tool for indie devs", "Pet nutrition subs
 const PRESET_TLDS = ["com", "cn", "io", "ai", "app", "dev"];
 const MAX_LEN = 500;
 const ONBOARD_KEY = "dh:onboardDismissed:v1";
+// 引导关闭后记忆 30 天，过期后再次展示
+const ONBOARD_DISMISS_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+
+// 关闭记忆是否仍然有效：值为关闭时间戳；旧格式（非时间戳）视为刚关闭并升级写入
+function onboardDismissActive(): boolean {
+  let raw: string | null;
+  try {
+    raw = localStorage.getItem(ONBOARD_KEY);
+  } catch {
+    return true;
+  }
+  if (!raw) return false;
+  const ts = Number(raw);
+  // 非毫秒时间戳（含旧格式 "1"）视为刚关闭并升级写入
+  if (!Number.isFinite(ts) || ts < 1e12) {
+    try {
+      localStorage.setItem(ONBOARD_KEY, String(Date.now()));
+    } catch {
+      /* 存储满/隐私模式，忽略 */
+    }
+    return true;
+  }
+  if (Date.now() - ts < ONBOARD_DISMISS_TTL_MS) return true;
+  try {
+    localStorage.removeItem(ONBOARD_KEY);
+  } catch {
+    /* 忽略 */
+  }
+  return false;
+}
 const LABEL_RE = /^[a-z0-9][a-z0-9-]{0,62}$/i;
 const EXACT_DOMAIN_RE = /^([a-z0-9][a-z0-9-]{0,62})\.([a-z0-9-]{2,24})$/i;
 const MULTI_DOMAIN_RE = /^([a-z0-9][a-z0-9-]{0,62})\.([a-z0-9-]{2,24}(?:\.[a-z0-9-]{2,24})+)$/i;
@@ -1707,19 +1737,15 @@ export function HomePage({
   // 最近搜索：本地保存，点击回填描述/TLD/风格/长度，不自动运行
   const [recent, setRecent] = useState<RecentSearch[]>(() => loadRecentSearches());
 
-  // 首访轻量引导：老用户（有最近搜索或本标签页已有结果）或已关闭过的不再显示
+  // 首访轻量引导：老用户（有最近搜索或本标签页已有结果）或 30 天内关闭过的不再显示
   const [showOnboard, setShowOnboard] = useState<boolean>(() => {
-    try {
-      if (localStorage.getItem(ONBOARD_KEY)) return false;
-    } catch {
-      return false;
-    }
+    if (onboardDismissActive()) return false;
     return loadRecentSearches().length === 0 && !hasSavedSearch();
   });
   const dismissOnboard = () => {
     setShowOnboard(false);
     try {
-      localStorage.setItem(ONBOARD_KEY, "1");
+      localStorage.setItem(ONBOARD_KEY, String(Date.now()));
     } catch {
       /* 存储满/隐私模式，忽略 */
     }
