@@ -4164,6 +4164,186 @@ const GUIDES = {
       ],
     },
   },
+  website: {
+    tld: "website",
+    zh: {
+      title: ".website 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".website 把「网站」两个字直接写进域名，适合个人主页与作品集、小微企业官网、落地页与临时活动站。查看 .website 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .website 域名。",
+      intro:
+        ".website 是最「说人话」的后缀：name.website 念出来就是「某某的网站」，个人主页与作品集、小微企业官网、产品落地页与临时活动站用它零解释成本。它与 .site 是同门兄弟（都由 Radix 运营），差别在语感——site 短但抽象，website 长两个音节却是完整单词，非技术人群一听就懂，面向大众的小生意用它更稳。注册约 $2（约 ¥14），续费约 $21/年（约 ¥152）——首年是全站最便宜档之一，验证想法几乎零成本，但续费是首年十倍，长期持有前先想清楚。库存极好：人名、店名、品类词命中率都高。注意三点：一是七个字母偏长，主体名务必选短词，否则整个域名冗长；二是「便宜后缀」历史上垃圾站多，新站要靠内容质量与 HTTPS、备案信息尽快建立信任；三是它是描述词不是行业词，不给你任何行业暗示，定位全靠主体名与首屏文案。命名上「人名/品牌 + .website」最自然（就是「我的网站」），本地小店用「店名 + .website」，活动站用「活动名 + .website」用完即弃也不心疼。",
+      bestFor: ["个人主页与作品集", "小微企业官网", "产品落地页", "临时活动与专题站"],
+      namingTips: [
+        "「人名/品牌 + .website」念出来就是「某某的网站」",
+        "注册约 $2 超便宜，续费约 $21/年是十倍",
+        "七个字母偏长，主体名选短词",
+        "便宜后缀要靠内容质量建立信任",
+      ],
+    },
+    en: {
+      title: ".website Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".website spells out exactly what it is — for personal pages and portfolios, small-business sites, landing pages and one-off event sites. See live pricing and naming advice, then hunt available .website names with AI.",
+      intro:
+        ".website is the most literal suffix there is: name.website reads out as \"so-and-so's website\" — personal pages and portfolios, small-business sites, product landing pages and one-off event sites get zero explanation cost. It's a sibling of .site (both run by Radix); the difference is register — site is shorter but abstract, website is two syllables longer yet a complete word that non-technical audiences parse instantly, so consumer-facing small businesses read safer here. About $2 to register (one of the cheapest first years on this site) and $21/yr to renew — a 10x jump, so it's nearly free to validate an idea but a real line item to hold. Inventory is excellent: first names, shop names and category words all hit. Three cautions: seven letters is on the long side, so keep the front word short or the whole domain drags; cheap suffixes historically attract spam, so a new site must earn trust fast with real content and HTTPS; and it's a descriptor, not an industry word — it gives no vertical signal, so positioning rides entirely on the name and hero copy. Naming: first name or brand + .website is the natural \"my website\" pattern; local shops go shop name + .website; event sites are cheap enough to use and retire as event name + .website.",
+      bestFor: ["Personal pages & portfolios", "Small-business sites", "Product landing pages", "One-off event sites"],
+      namingTips: [
+        "Name + .website reads as \"so-and-so's website\"",
+        "About $2 to register, $21/yr to renew — 10x jump",
+        "Seven letters — keep the front word short",
+        "Cheap suffixes must earn trust with real content",
+      ],
+    },
+  },
+  technology: {
+    tld: "technology",
+    zh: {
+      title: ".technology 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".technology 把「技术」完整拼出来，适合科技公司官网、技术团队博客、深科技与硬科技品牌。查看 .technology 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .technology 域名。",
+      intro:
+        ".technology 把技术两个字完整拼出来：科技公司官网、技术团队博客、深科技与硬科技品牌、研究机构用 name.technology，域名本身就是一句正式的自我介绍。它与 .tech 的分工在语气——tech 短促、创业感强，technology 是完整单词，读起来更正式稳重，做企业官网、面向政企客户的技术公司用后者气质更合。英文里公司全名带 Technology 的（XX Technology Co.）用 brand.technology 等于把注册名直接搬上域名，比 .com 上加 tech 词缀更体面。Identity Digital 运营，注册约 $10（约 ¥70），续费约 $23/年（约 ¥167），温和档，比 .tech 的续费便宜不少。库存极好：品牌词、技术品类词命中率都高。注意三点：一是十个字母是全站最长档之一，主体名必须够短，两三个音节封顶；二是正式感是双刃剑，轻快的消费级产品用它反而显得笨重，那种场景 .tech/.app 更合适；三是长域名在名片与口头传播时成本高，配套短域名跳转是常见做法。命名上「品牌 + .technology」最自然（等于公司全名），深科技公司用「领域词 + .technology」（quantum、bio 类）一眼点题，研究团队用「实验室名 + .technology」正式得体。",
+      bestFor: ["科技公司官网", "技术团队博客", "深科技与硬科技品牌", "研究机构与实验室"],
+      namingTips: [
+        "「品牌 + .technology」等于公司注册全名",
+        "注册约 $10、续费约 $23/年，比 .tech 续费便宜",
+        "十个字母超长，主体名两三个音节封顶",
+        "正式稳重，轻快消费级产品选 .tech 更合",
+      ],
+    },
+    en: {
+      title: ".technology Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".technology spells the word out in full — for tech company sites, engineering blogs, deep-tech and hard-tech brands. See live pricing and naming advice, then hunt available .technology names with AI.",
+      intro:
+        ".technology spells the whole word out: tech company sites, engineering team blogs, deep-tech and hard-tech brands, research institutes on name.technology carry a formal self-introduction in the address itself. The split with .tech is tone — tech is clipped and startup-flavored, technology is the complete word and reads statelier, so corporate sites and firms selling to enterprise or government fit better here. Companies whose registered name ends in Technology (XX Technology Co.) can put the full name straight into brand.technology — more dignified than bolting tech onto a .com. Operated by Identity Digital, about $10 to register and $23/yr to renew — the mild tier, and notably cheaper to renew than .tech. Inventory is excellent: brand words and technical category words all hit. Three cautions: ten letters is one of the longest suffixes on this site, so the front word must stay short — two or three syllables at most; formality cuts both ways — a playful consumer product looks heavy here, where .tech or .app fits better; and long domains cost more on business cards and in conversation, so a short redirect domain is common practice. Naming: brand + .technology is the natural pattern (it equals the registered name); deep-tech firms nail it as field + .technology (quantum, bio); research groups stay proper as lab name + .technology.",
+      bestFor: ["Tech company sites", "Engineering team blogs", "Deep-tech & hard-tech brands", "Research institutes & labs"],
+      namingTips: [
+        "Brand + .technology equals the registered name",
+        "About $10 to register, $23/yr — cheaper renewal than .tech",
+        "Ten letters — keep the front word to 2-3 syllables",
+        "Formal register; playful products fit .tech better",
+      ],
+    },
+  },
+  community: {
+    tld: "community",
+    zh: {
+      title: ".community 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".community 把「社区」写进域名，适合兴趣社群与论坛、开源项目社区、本地社区组织与会员制社群。查看 .community 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .community 域名。",
+      intro:
+        ".community 把社区写进域名：兴趣社群与论坛、开源项目的用户社区、本地社区组织、会员制社群用 name.community，访客点开之前就知道「这里是一群人的地方」。它的经典用法是给品牌或项目开专属社区站——主站放官网，brand.community 放论坛与用户讨论区，职责分明（不少开源项目与 SaaS 都是这个套路），比在主域名下挂 /forum 路径更有「独立家园」感。Identity Digital 运营，注册约 $8（约 ¥59），续费约 $37/年（约 ¥263），续费中偏上档。库存极好：兴趣词、城市词、项目名命中率都高。注意三点：一是九个字母偏长，主体名选短词，读起来才不拖沓；二是「社区」是承诺不是装饰，挂这个后缀就要有真实的成员互动，空壳社区比没有更伤品牌；三是本地组织用「地名 + .community」在英文里就是通顺短语（riverside.community 语感），本地搜索红利实打实。命名上「品牌/项目 + .community」最自然（官方社区标准写法），兴趣社群用「主题词 + .community」，本地组织用「地名 + .community」一眼点题。",
+      bestFor: ["兴趣社群与论坛", "开源项目用户社区", "本地社区组织", "会员制社群"],
+      namingTips: [
+        "「品牌 + .community」是官方社区标准写法",
+        "注册约 $8、续费约 $37/年，续费中偏上",
+        "九个字母偏长，主体名选短词",
+        "社区是承诺，空壳社区比没有更伤品牌",
+      ],
+    },
+    en: {
+      title: ".community Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".community writes belonging into the address — for interest groups and forums, open-source project communities, local organizations and membership clubs. See live pricing and naming advice, then hunt available .community names with AI.",
+      intro:
+        ".community writes belonging into the address: interest groups and forums, open-source user communities, local neighborhood organizations, membership clubs on name.community tell visitors \"this is a place for people\" before the click. The classic play is the dedicated community site: keep the main site on the brand domain and put the forum on brand.community — a clean division many open-source projects and SaaS companies use, and it feels more like a home of its own than a /forum path. Operated by Identity Digital, about $8 to register and $37/yr to renew — an upper-mid renewal tier. Inventory is excellent: hobby words, place names and project names all hit. Three cautions: nine letters is on the long side, so keep the front word short for rhythm; community is a promise, not decoration — the suffix demands real member activity, and a ghost-town community hurts the brand more than none at all; and place + .community is a natural English phrase (the riverside.community cadence), a real local-search dividend. Naming: brand or project + .community is the official-community standard; interest groups go topic + .community; local organizations nail it as place + .community.",
+      bestFor: ["Interest groups & forums", "Open-source user communities", "Local neighborhood organizations", "Membership clubs"],
+      namingTips: [
+        "Brand + .community is the official-community standard",
+        "About $8 to register, $37/yr to renew",
+        "Nine letters — keep the front word short",
+        "Community is a promise — ghost towns hurt the brand",
+      ],
+    },
+  },
+  education: {
+    tld: "education",
+    zh: {
+      title: ".education 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".education 把「教育」写进域名，适合培训机构与在线课程、教育科技产品、学校项目与教育内容站。查看 .education 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .education 域名。",
+      intro:
+        ".education 把教育写进域名：培训机构与在线课程平台、教育科技（EdTech）产品、学校的对外项目、教育内容与家长资讯站用 name.education，域名一眼就是「做教育的」。它最大的价值是解决 .edu 的门槛——.edu 只对美国认证高等教育机构开放，普通机构拿不到，而 .education 任何人可注册，是「教育感」域名里最正式的平替。与 .academy/.school 的分工：academy 偏机构与品牌名，school 偏具体学校，education 是行业大词，做平台、做媒体、做 EdTech 用它格局更大。Identity Digital 运营，注册约 $21（约 ¥152），续费约 $28/年（约 ¥204）——注册续费接近同价，没有低价钩子也没有续费陷阱，成本透明。库存极好：品类词、地区词、理念词命中率都高。注意三点：一是九个字母偏长，主体名选短词；二是它不是资质，办学许可、课程认证照样要在页面讲清，别让后缀替你背书；三是教育是强信任行业，域名之外，师资展示与学员评价才是转化关键。命名上「品类 + .education」最自然（stem、music 类一眼懂），机构用「品牌 + .education」，地区服务用「城市 + .education」接住本地搜索。",
+      bestFor: ["培训机构与在线课程", "教育科技（EdTech）产品", "学校对外项目", "教育内容与家长资讯站"],
+      namingTips: [
+        "「品类 + .education」一眼点题（stem、music 类）",
+        "注册约 $21、续费约 $28/年，成本透明",
+        "拿不到 .edu 时它是最正式的平替",
+        "后缀不是资质，办学许可照样要展示",
+      ],
+    },
+    en: {
+      title: ".education Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".education writes learning into the address — for training providers and online courses, EdTech products, school programs and education media. See live pricing and naming advice, then hunt available .education names with AI.",
+      intro:
+        ".education writes learning into the address: training providers and online course platforms, EdTech products, schools' outreach programs, education media and parent resources on name.education are instantly \"in education\". Its biggest value is solving the .edu problem — .edu is restricted to accredited US higher-education institutions, while .education is open to everyone: the most formal substitute in the education-flavored family. The split with .academy and .school: academy leans institution and brand names, school leans actual schools, education is the industry word — platforms, media and EdTech carry more scale here. Operated by Identity Digital, about $21 to register and $28/yr to renew — nearly the same both ways: no cheap hook, no renewal trap, transparent cost. Inventory is excellent: subject words, place names and philosophy words all hit. Three cautions: nine letters is on the long side, so keep the front word short; the suffix is not a credential — licenses and accreditations still belong on the page, don't let the TLD vouch for you; and education is a high-trust business — beyond the domain, teacher credentials and student reviews drive conversion. Naming: subject + .education is the natural pattern (stem, music read instantly); institutions go brand + .education; local services catch nearby search as city + .education.",
+      bestFor: ["Training providers & online courses", "EdTech products", "School outreach programs", "Education media & parent resources"],
+      namingTips: [
+        "Subject + .education reads instantly (stem, music)",
+        "About $21 to register, $28/yr — transparent cost",
+        "The most formal substitute when .edu is out of reach",
+        "Not a credential — show licenses & accreditation",
+      ],
+    },
+  },
+  training: {
+    tld: "training",
+    zh: {
+      title: ".training 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".training 把「培训」写进域名，适合职业技能培训、企业内训服务、健身与体能训练、认证课程站。查看 .training 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .training 域名。",
+      intro:
+        ".training 把培训写进域名：职业技能培训机构、企业内训与团队赋能服务、健身与体能训练、认证备考课程用 name.training，访客点开之前就知道「这里教真本事」。它与 .education 的分工在动手感——education 是行业大词、偏体系与理念，training 是动词性的「练」，强调实操、见效、拿证，职业培训与健身教练用它更点题。英文里「对象 + training」本来就是通顺短语（dog training、strength training），这类组合放进域名读起来零违和，语义 SEO 红利实打实。Identity Digital 运营，注册约 $12（约 ¥85），续费约 $33/年（约 ¥241），中档。库存极好：技能词、品类词、认证名命中率都高。注意三点：一是八个字母不算短，主体名选短词更利落；二是培训承诺效果，页面要有课程大纲、学员案例与结果数据，光喊口号转化不动；三是健身与职业培训都是本地强需求，「城市 + 技能 + .training」能同时接住两层搜索意图。命名上「技能/品类 + .training」最自然（读出来就是通顺短语），机构用「品牌 + .training」，企业服务用「领域 + .training」一眼点题。",
+      bestFor: ["职业技能培训机构", "企业内训与团队赋能", "健身与体能训练", "认证备考课程"],
+      namingTips: [
+        "「技能 + .training」读出来就是通顺短语",
+        "注册约 $12、续费约 $33/年，中档",
+        "偏实操与拿证，体系化教育选 .education",
+        "页面要有大纲与学员结果，光喊口号不行",
+      ],
+    },
+    en: {
+      title: ".training Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".training writes practice into the address — for vocational skills training, corporate training services, fitness coaching and certification prep. See live pricing and naming advice, then hunt available .training names with AI.",
+      intro:
+        ".training writes practice into the address: vocational skills providers, corporate training and team-enablement services, fitness and strength coaching, certification prep courses on name.training tell visitors \"real skills taught here\" before the click. The split with .education is hands-on-ness — education is the industry word, leaning systems and philosophy; training is the verb-flavored \"drill\", stressing practice, results and certificates, so vocational providers and fitness coaches read truer here. Target + training is already a natural English phrase (dog training, strength training), so those combinations read friction-free in a domain — a real semantic-SEO dividend. Operated by Identity Digital, about $12 to register and $33/yr to renew — the mid tier. Inventory is excellent: skill words, category words and certification names all hit. Three cautions: eight letters isn't short, so keep the front word tight; training promises outcomes — the page needs syllabi, student results and data, slogans alone won't convert; and both fitness and vocational training are strongly local, so city + skill + .training catches both layers of search intent. Naming: skill or category + .training is the natural phrase; institutions go brand + .training; corporate services nail it as field + .training.",
+      bestFor: ["Vocational skills providers", "Corporate training & enablement", "Fitness & strength coaching", "Certification prep courses"],
+      namingTips: [
+        "Skill + .training reads as a natural phrase",
+        "About $12 to register, $33/yr to renew",
+        "Practice & certificates; systems fit .education",
+        "Show syllabi and student results — slogans don't convert",
+      ],
+    },
+  },
+  love: {
+    tld: "love",
+    zh: {
+      title: ".love 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".love 把「爱」写进域名，适合婚礼与求婚站、情侣纪念页、公益与粉丝应援、宠物与兴趣「热爱」品牌。查看 .love 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .love 域名。",
+      intro:
+        ".love 把爱写进域名：婚礼与求婚站、情侣纪念页、公益与慈善项目、粉丝应援站、宠物与兴趣向的「热爱」品牌用 name.love，域名自带情感温度——这是极少数「读出来就有情绪」的后缀。它的两个经典语法：一是「名字 + .love」（emma.love 的语感，婚礼站标准写法），二是「我爱的东西 + .love」（coffee.love、cats.love），后者让品类词直接变成情感宣言，情感营销的先天素材。注册约 $9（约 ¥63），续费约 $23/年（约 ¥167），温和档。库存极好：人名、品类词、城市词命中率都高。注意三点：一是情感浓度高是双刃剑，严肃 B2B、金融、法务用它明显违和，那是 .com/.pro 的地盘；二是婚礼与纪念站有「保质期」，档期过后记得续期或做成永久纪念页，别让 .love 域名过期落到别人手里；三是四个字母短而好记，但全球通用的是英文 love，纯中文受众场景要确认用户能拼对。命名上「两人名字 + .love」最自然（婚礼站经典），品牌用「品类 + .love」把热爱摆足，公益项目用「主题 + .love」传播零成本。",
+      bestFor: ["婚礼与求婚站", "情侣与家庭纪念页", "公益与粉丝应援", "宠物与兴趣「热爱」品牌"],
+      namingTips: [
+        "「两人名字 + .love」是婚礼站经典写法",
+        "注册约 $9、续费约 $23/年，温和档",
+        "「品类 + .love」直接变成情感宣言",
+        "严肃 B2B 与金融违和，别硬凑",
+      ],
+    },
+    en: {
+      title: ".love Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".love writes the feeling into the address — for wedding and proposal sites, couple pages, charities and fan projects, and passion brands. See live pricing and naming advice, then hunt available .love names with AI.",
+      intro:
+        ".love writes the feeling into the address: wedding and proposal sites, couple and family pages, charities and fan projects, pet and hobby \"passion\" brands on name.love carry warmth in the domain itself — one of the very few suffixes that lands an emotion on first read. Two classic grammars: name + .love (the emma.love cadence, the wedding-site standard), and thing-I-love + .love (coffee.love, cats.love), which turns a plain category word into a declaration — born material for emotional marketing. About $9 to register and $23/yr to renew — the mild tier. Inventory is excellent: first names, category words and city names all hit. Three cautions: high emotional voltage cuts both ways — sober B2B, finance and legal read plainly wrong here, that's .com and .pro turf; wedding and tribute sites have a shelf life — renew or convert to a permanent keepsake page after the big day, and never let a .love domain lapse into a stranger's hands; and while four letters are short and memorable, love is the English word — check your audience can spell it if they aren't English-first. Naming: couple's names + .love is the wedding classic; brands strike the pose as category + .love; charities spread at zero cost as cause + .love.",
+      bestFor: ["Wedding & proposal sites", "Couple & family pages", "Charities & fan projects", "Pet & hobby passion brands"],
+      namingTips: [
+        "Couple's names + .love is the wedding classic",
+        "About $9 to register, $23/yr to renew",
+        "Category + .love reads as a declaration",
+        "Wrong register for sober B2B and finance",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
