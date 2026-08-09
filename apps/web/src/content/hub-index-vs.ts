@@ -196,4 +196,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "toys-vs-games", a: "toys", b: "games", title: { zh: ".toys 和 .games 怎么选：实体玩具与游戏行业的对比", en: ".toys vs .games: Physical Play or The Games Industry" } },
   { slug: "menu-vs-cafe", a: "menu", b: "cafe", title: { zh: ".menu 和 .cafe 怎么选：一张菜单与一间咖啡馆的对比", en: ".menu vs .cafe: The Card or The Corner Shop" } },
   { slug: "law-vs-expert", a: "law", b: "expert", title: { zh: ".law 和 .expert 怎么选：行业门牌与权威人设的对比", en: ".law vs .expert: The Trade Plaque or The Authority Claim" } },
+  { slug: "com-vs-travel", a: "com", b: "travel", title: { zh: ".com 和 .travel 怎么选：万能牌与行业老牌的取舍", en: ".com vs .travel: The Universal Card or The Industry Veteran" } },
+  { slug: "travel-vs-tours", a: "travel", b: "tours", title: { zh: ".travel 和 .tours 怎么选：行业词与产品词的分工", en: ".travel vs .tours: The Industry Word or The Product Word" } },
+  { slug: "vacations-vs-holiday", a: "vacations", b: "holiday", title: { zh: ".vacations 和 .holiday 怎么选：度假场景与节庆语义的分野", en: ".vacations vs .holiday: The Getaway Word or The Festive Word" } },
+  { slug: "flights-vs-travel", a: "flights", b: "travel", title: { zh: ".flights 和 .travel 怎么选：垂直航段与行业全域的取舍", en: ".flights vs .travel: The Vertical Leg or The Whole Industry" } },
+  { slug: "tours-vs-vacations", a: "tours", b: "vacations", title: { zh: ".tours 和 .vacations 怎么选：走线路与住下来的场景分工", en: ".tours vs .vacations: The Route or The Stay" } },
+  { slug: "taxi-vs-city", a: "taxi", b: "city", title: { zh: ".taxi 和 .city 怎么选：接送专线与城市门户的分工", en: ".taxi vs .city: The Ride Service or The City Portal" } },
 ];
