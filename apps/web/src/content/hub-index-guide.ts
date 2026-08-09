@@ -204,4 +204,10 @@ export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized 
   { slug: "hockey", label: { zh: "冰球俱乐部", en: "Hockey clubs" }, oneLiner: { zh: "冰球俱乐部、冰上运动培训与冰场命名指南：冰雪意象、速度词根、北境气质等 5 种思路。", en: "Hockey club, ice sports academy and rink naming guide: ice-and-north imagery." } },
   { slug: "pickleball", label: { zh: "匹克球", en: "Pickleball" }, oneLiner: { zh: "匹克球俱乐部与场馆命名指南：趣味词根、社交属性、新运动占位等 5 种思路。", en: "Pickleball club and venue naming guide: humor-first roots." } },
   { slug: "pilates", label: { zh: "普拉提馆", en: "Pilates studios" }, oneLiner: { zh: "普拉提工作室命名指南：身体词根、器械意象、精品工作室质感等 5 种思路。", en: "Pilates studio naming guide: body-word roots." } },
+  { slug: "companyreg", label: { zh: "公司注册代办", en: "Company formation services" }, oneLiner: { zh: "公司注册代办与企业服务命名指南：起点叙事、合规信任感、流程减负词等 5 种思路。", en: "Company formation and business services naming guide: starting-line narratives." } },
+  { slug: "consulting", label: { zh: "管理咨询", en: "Management consulting" }, oneLiner: { zh: "管理咨询与顾问公司命名指南：姓氏资产、抽象造词、方法论词根等 5 种思路。", en: "Management consulting naming guide: surname equity, abstract coinage." } },
+  { slug: "wholesale", label: { zh: "B2B 批发平台", en: "B2B wholesale platforms" }, oneLiner: { zh: "B2B 批发平台命名指南：市场意象、规模词根、生意人语感等 5 种思路。", en: "B2B wholesale platform naming guide: marketplace imagery, scale roots." } },
+  { slug: "trading", label: { zh: "外贸公司", en: "Import & export trading" }, oneLiner: { zh: "外贸公司与进出口贸易命名指南：航海意象、桥梁词根、双语同构等 5 种思路。", en: "Import-export trading company naming guide: maritime imagery, bridge roots." } },
+  { slug: "coupon", label: { zh: "优惠券导购", en: "Coupon & deals platforms" }, oneLiner: { zh: "优惠券与折扣导购平台命名指南：省钱直给、精明人格、情报站叙事等 5 种思路。", en: "Coupon and deals platform naming guide: savings-first roots, savvy-shopper personas." } },
+  { slug: "flashsale", label: { zh: "限时特卖电商", en: "Flash sale e-commerce" }, oneLiner: { zh: "限时特卖与闪购电商命名指南：时间紧迫感、会员特权感、正品信任锚等 5 种思路。", en: "Flash sale e-commerce naming guide: urgency roots, members-only privilege." } },
 ];

@@ -203,7 +203,7 @@
     ]
   },
   "guide": {
-    "count": 194,
+    "count": 200,
     "slugs": [
       "saas",
       "ecommerce",
@@ -398,7 +398,13 @@
       "football",
       "hockey",
       "pickleball",
-      "pilates"
+      "pilates",
+      "companyreg",
+      "consulting",
+      "wholesale",
+      "trading",
+      "coupon",
+      "flashsale"
     ]
   },
   "vs": {
