@@ -4117,6 +4117,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Independent consultants & advisories", "Deep reviews & paid knowledge", "Expert brands beyond the bar", "Digital-shingle naming (seo.expert)"],
     },
   },
+  "com-vs-travel": {
+    slug: "com-vs-travel",
+    a: "com",
+    b: "travel",
+    zh: {
+      title: ".com 和 .travel 怎么选：万能牌与行业老牌的取舍",
+      metaDescription: ".com 认知度最高，.travel 是 2005 年就有的旅游行业专属后缀。对比两者的信任来源、价格与命名空间差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "看信任从哪来：.com 的信任来自二十多年的大众认知，任何行业都通用，续费便宜、转售流动性最好，但旅游类好名字几乎绝迹——目的地词、玩法词在 .com 下不是天价就是被停放。.travel 的信任来自行业身份：2005 年就诞生、早年仅限旅游行业实名注册，沉淀的行业站点让它的「圈内感」远超一般新后缀，japan.travel 式官方先例遍地，目的地词与玩法词库存都很好。代价是价格结构反过来——注册约 $16 不贵，续费约 $119/年 是明显的行业身份溢价，预算必须按续费算。务实策略：旅行社、目的地内容站、预订平台这类一眼旅游的业务，用「目的地/玩法 + .travel」拿到点题短名先跑起来；面向大众的品牌主站、或计划扩到旅游之外的公司，.com 仍是不可替代的底牌，成熟品牌通常两个都持有——.travel 做行业站，.com 防流失并 301。",
+      pickA: ["面向大众的品牌主站", "业务可能扩到旅游之外", "在意续费成本与转售流动性", "用户以口口相传/直接输入为主"],
+      pickB: ["旅行社与定制游工作室", "目的地攻略与旅游内容站", "心仪的目的地词 .com 已绝迹", "想要行业老牌后缀的圈内信任"],
+    },
+    en: {
+      title: ".com vs .travel: The Universal Card or The Industry Veteran",
+      metaDescription:
+        ".com has universal recognition; .travel is the tourism industry's dedicated TLD since 2005. Compare trust sources, pricing and inventory, then hunt names available on both.",
+      verdict:
+        "It comes down to where trust originates. .com earns it from two decades of universal recognition — works in any industry, renews cheap, resells best — but good travel names are gone: destination and activity words under .com are parked or priced for ransom. .travel earns it from industry identity: launched in 2005 and restricted to verified travel businesses in its early years, its namespace accumulated genuine industry sites and carries more insider credibility than typical new suffixes, with official japan.travel-style precedents everywhere and deep inventory of destination and activity words. The price structure inverts: about $16 to register but $119/yr to renew — a clear industry-identity premium, so budget strictly on the renewal. The pragmatic play: unmistakably travel businesses — agencies, destination content, booking platforms — grab the on-target destination + .travel name and launch; consumer brand homes or companies that may expand beyond travel keep .com as the irreplaceable base card. Established brands hold both — .travel for the industry site, .com defensively with a 301.",
+      pickA: ["Consumer-facing brand homes", "Business may expand beyond travel", "Renewal-cost and resale sensitive", "Word-of-mouth or type-in traffic"],
+      pickB: ["Travel agencies & tour studios", "Destination guides & travel content", "Your destination word is extinct on .com", "Want the veteran suffix's insider trust"],
+    },
+  },
+  "travel-vs-tours": {
+    slug: "travel-vs-tours",
+    a: "travel",
+    b: "tours",
+    zh: {
+      title: ".travel 和 .tours 怎么选：行业词与产品词的分工",
+      metaDescription: ".travel 泛指旅游行业，.tours 专指线路与导览产品。对比两者的语义颗粒度、价格结构与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在颗粒度：.travel 是行业词——旅行社、目的地内容站、预订平台、签证服务，只要生意属于旅游业都装得下，2005 年老牌后缀的信任底子也更厚；.tours 是产品词——一日游、包车路线、徒步向导、美食团，卖的就是「带你走一趟」这件事，本地向导与体验运营商用它指向更准，「目的地 + .tours」读出来就是「某地的团」。价格差异同样明显：.travel 注册约 $16、续费约 $119/年，是六个字母换行业身份的溢价；.tours 注册约 $6、续费约 $50/年，首年便宜、续费跳档但仍不到 .travel 的一半。判断标准：业务线多于「带团」这一种——做内容、订房、签证、定制游的综合旅游生意 → .travel 的行业词覆盖面才够；产品就是线路与导览本身——城市走读、美食团、登山向导 → .tours 更点题也更省钱。注意 .tours 天然复数，暗示多条线路；单一签名式体验用 .travel 或单数语义的名字反而更贴。两个后缀都是 Identity Digital 运营、库存都好，先想清楚卖的是行业还是产品，再去猎名。",
+      pickA: ["综合旅游业务（内容+预订+定制）", "目的地攻略与旅游媒体", "想要 2005 老牌后缀的信任底子", "品牌词计划长期覆盖多条业务线"],
+      pickB: ["一日游与包车路线", "城市走读与美食团", "徒步登山等户外向导", "预算敏感、按产品线建站"],
+    },
+    en: {
+      title: ".travel vs .tours: The Industry Word or The Product Word",
+      metaDescription:
+        ".travel means the tourism industry at large; .tours means routes and guided experiences. Compare semantic granularity, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is granularity. .travel is the industry word — agencies, destination content, booking platforms, visa services: anything inside tourism fits, and the 2005 veteran's trust base runs deeper. .tours is the product word — day trips, chartered routes, hiking guides, food tours: it sells exactly the thing itself, so local guides and experience operators aim truer here; destination + .tours reads out as \"tours of that place\". Pricing diverges just as clearly: .travel is about $16 to register and $119/yr to renew — a premium for industry identity; .tours is about $6 and $50/yr — a cheap first year with a renewal jump that still lands under half of .travel. The test: the business spans more than guided trips — content, lodging, visas, bespoke planning → only .travel's industry word covers it all; the product is the route or guided experience itself — city walks, food tours, mountain guides → .tours is more on-target and cheaper. Note .tours is inherently plural, implying multiple routes; a single signature experience may read better on .travel or a singular-flavored name. Both run on Identity Digital with excellent inventory — decide whether you're selling the industry or the product, then hunt.",
+      pickA: ["Full-stack travel businesses", "Destination guides & travel media", "Want the 2005 veteran's trust base", "Brand spans multiple business lines"],
+      pickB: ["Day trips & chartered routes", "City walks & food tours", "Hiking & outdoor guides", "Budget-sensitive, per-product sites"],
+    },
+  },
+  "vacations-vs-holiday": {
+    slug: "vacations-vs-holiday",
+    a: "vacations",
+    b: "holiday",
+    zh: {
+      title: ".vacations 和 .holiday 怎么选：度假场景与节庆语义的分野",
+      metaDescription: ".vacations 专指度假旅行，.holiday 还覆盖节庆礼赠与假日营销。对比两者的语义、价格与续费差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个词都带「放假」的情绪，分野在语义宽度：.vacations 专指度假旅行——度假套餐、海岛游、度假村与民宿集群、亲子蜜月主题游，用户搜度假产品时的心理状态正好被这个词接住；.holiday 一词两义——英式语境是「度假」，更普适的语义是「节日」，圣诞新年礼品电商、假日营销活动页、节庆策划用它反而比 vacations 更贴，节日氛围从域名就开始。价格差异值得算清：两者注册都约 $6，但 .vacations 续费约 $31/年、在行业后缀里算温和，.holiday 续费约 $52/年、跳档明显——长期持有 .vacations 压力小得多。判断标准：卖的是「住下来慢慢玩」的旅行产品 → .vacations 语义更专一、续费更便宜；做节庆礼赠、假日限定企划、活动页矩阵 → .holiday 的节日语义是 vacations 完全覆盖不了的。两个注意：.holiday 是单数，别与 .holidays 拼混；美式语境里 holiday 首先指节日，面向北美用户按节庆语义命名更稳。命名上「目的地 + .vacations」（maldives.vacations 式）与「节日 + .holiday」（christmas.holiday 式）各是两边最强的模式。",
+      pickA: ["度假套餐与海岛游", "度假村与民宿集群", "亲子与蜜月主题游", "在意续费成本的长期持有"],
+      pickB: ["节日礼品与假日营销", "节庆活动策划", "假日限定企划与活动页", "英式「度假」语境的出行产品"],
+    },
+    en: {
+      title: ".vacations vs .holiday: The Getaway Word or The Festive Word",
+      metaDescription:
+        ".vacations strictly means leisure travel; .holiday also covers seasonal gifting and festive campaigns. Compare semantics, pricing and renewals, then hunt names available on both.",
+      verdict:
+        "Both words carry the time-off mood; the split is semantic width. .vacations strictly means leisure travel — vacation packages, island trips, resorts and lodging clusters, family and honeymoon themes — catching exactly the state of mind of someone shopping for a getaway. .holiday carries two meanings: the British getaway, and the more universal festive one — Christmas and New Year gift shops, holiday marketing pages and festive event planners fit .holiday better than vacations ever could, with the celebration starting from the address itself. Do the pricing math: both register at about $6, but .vacations renews at about $31/yr — among the gentler industry renewals — while .holiday jumps to about $52/yr, so .vacations is meaningfully cheaper to hold long term. The test: selling settle-in-and-unwind travel products → .vacations is the purer word with the cheaper renewal; selling seasonal gifting, festive limited runs or a campaign-page fleet → .holiday's festive sense is something vacations cannot cover. Two cautions: .holiday is singular — don't blur it with .holidays; and in American usage holiday means the festival first, so name by the festive sense for North American audiences. Naming: destination + .vacations (maldives.vacations) and festival + .holiday (christmas.holiday) are each side's strongest patterns.",
+      pickA: ["Vacation packages & island trips", "Resorts & lodging clusters", "Family & honeymoon themes", "Renewal-cost-sensitive long holds"],
+      pickB: ["Seasonal gifts & holiday marketing", "Festive event planning", "Limited-run holiday campaigns", "British-sense getaway products"],
+    },
+  },
+  "flights-vs-travel": {
+    slug: "flights-vs-travel",
+    a: "flights",
+    b: "travel",
+    zh: {
+      title: ".flights 和 .travel 怎么选：垂直航段与行业全域的取舍",
+      metaDescription: ".flights 只管「飞」这一段，.travel 覆盖整个旅游行业。对比两者的指向精度、价格结构与合规注意，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在覆盖面：.flights 是旅游家族里最垂直的后缀——机票比价、航线攻略、里程玩法社区、包机与商务航空，只管天上这一段，「目的地 + .flights」直接接住「飞某地」的搜索意图；.travel 是行业全域——旅行社、目的地内容、订房、签证都装得下，2005 年老牌后缀的信任底子也更厚。价格结构是少见的反差：.flights 注册约 $31、续费约 $47/年，首年偏贵但续费平缓；.travel 注册约 $16 便宜、续费约 $119/年 是明显溢价——按五年总持有成本算，.flights 反而便宜一半以上。判断标准：产品就是机票与航空周边——比价、低价订阅、里程内容、包机 → .flights 指向最准、长期成本更低；业务覆盖行程多个环节、或以目的地内容为主 → .travel 的行业词才够宽。两个注意：机票分销有资质门槛（IATA/代理协议），无资质先做内容与比价导流更稳；机票比价巨头林立，独立站要靠里程玩法、错峰攻略这类差异化内容立足。命名上「目的地 + .flights」（tokyo.flights 式）与「目的地 + .travel」（japan.travel 式）各是两边最点题的模式。",
+      pickA: ["机票比价与低价订阅提醒", "航线攻略与里程玩法社区", "包机与商务航空", "按五年持有成本算更省"],
+      pickB: ["综合旅游业务（内容+预订+签证）", "目的地攻略与旅游媒体", "旅行社与定制游", "想要行业老牌的圈内信任"],
+    },
+    en: {
+      title: ".flights vs .travel: The Vertical Leg or The Whole Industry",
+      metaDescription:
+        ".flights covers only the airborne leg; .travel covers the tourism industry at large. Compare targeting precision, pricing structure and compliance notes, then hunt names available on both.",
+      verdict:
+        "The split is coverage. .flights is the most vertical suffix in the travel family — fare comparison, route guides, miles-hacking communities, charter and business aviation: it covers only the airborne leg, and destination + .flights catches \"flights to that place\" search intent head-on. .travel is the whole industry — agencies, destination content, lodging, visas all fit, with the 2005 veteran's deeper trust base. The pricing structure is an unusual inversion: .flights is about $31 to register but a gentle $47/yr to renew; .travel is a cheap $16 in but a premium $119/yr — over a five-year hold, .flights costs less than half. The test: the product is airfare and aviation-adjacent — comparison, cheap-fare alerts, miles content, charters → .flights aims truest and holds cheaper; the business spans multiple legs of the trip or leads with destination content → only .travel's industry word is wide enough. Two cautions: airfare distribution is licence-gated (IATA/agency agreements) — without credentials, content and comparison referral is the safer entry; and fare comparison is giant-dominated (Google Flights, Skyscanner), so independents win on differentiated content like miles hacking and off-peak guides. Naming: destination + .flights (tokyo.flights) and destination + .travel (japan.travel) are each side's on-target patterns.",
+      pickA: ["Fare comparison & cheap-fare alerts", "Route guides & miles hacking", "Charter & business aviation", "Cheaper on five-year holding cost"],
+      pickB: ["Full-stack travel businesses", "Destination guides & travel media", "Agencies & bespoke tours", "Want the veteran's insider trust"],
+    },
+  },
+  "tours-vs-vacations": {
+    slug: "tours-vs-vacations",
+    a: "tours",
+    b: "vacations",
+    zh: {
+      title: ".tours 和 .vacations 怎么选：走线路与住下来的场景分工",
+      metaDescription: ".tours 是带你走线路的产品词，.vacations 是住下来度假的场景词。对比两者的语义、价格与续费差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是旅游产品词，分工在场景：.tours 是「带你走一趟」——一日游、包车路线、城市走读、美食团、徒步向导，卖的是路线与导览这件具体的事，「目的地 + .tours」读出来就是「某地的团」；.vacations 是「住下来慢慢玩」——度假套餐、海岛游、度假村与民宿集群、亲子蜜月主题，后缀自带「放松、犒赏自己」的情绪价值。价格上两者注册都约 $6，续费差一档：.tours 约 $50/年，.vacations 约 $31/年——vacations 是行业后缀里少有的温和续费，长期持有压力更小。判断标准：产品按「行程」卖——有集合时间、路线图、向导带队 → .tours 更点题；产品按「假期」卖——住宿为核心、节奏自由、套餐打包 → .vacations 情绪更对。两个注意：.tours 天然复数暗示多条线路，单一签名体验用单数语义的名字更贴；.vacations 九个字母偏长，适合线上获客与广告落地页，口头传播弱。命名上「目的地 + .tours」（paris.tours 式）、「主题 + .tours」（food.tours 式）与「目的地 + .vacations」（maldives.vacations 式）、「主题 + .vacations」（ski.vacations 式）各是两边最强的模式，同一目的地词不妨两边都查一下库存。",
+      pickA: ["一日游与包车路线", "城市走读与美食团", "徒步登山等户外向导", "按行程/路线组织的产品"],
+      pickB: ["度假套餐与海岛游", "度假村与民宿集群", "亲子与蜜月主题游", "在意续费成本的长期持有"],
+    },
+    en: {
+      title: ".tours vs .vacations: The Route or The Stay",
+      metaDescription:
+        ".tours sells the guided route; .vacations sells the settle-in getaway. Compare semantics, pricing and renewals, then hunt names available on both.",
+      verdict:
+        "Both are travel product words; the split is the scenario. .tours means taking you on a trip — day trips, chartered routes, city walks, food tours, hiking guides: it sells the route and the guiding itself, and destination + .tours reads out as \"tours of that place\". .vacations means settling in and unwinding — vacation packages, island trips, resorts and lodging clusters, family and honeymoon themes — with built-in emotional value of relaxation and treating yourself. Both register at about $6; renewals differ by a tier: .tours at about $50/yr versus .vacations at about $31/yr — one of the gentler industry renewals, cheaper to hold long term. The test: the product is sold as an itinerary — meeting points, route maps, a guide leading the way → .tours is on-target; the product is sold as a holiday — lodging at the core, free-form pace, bundled packages → .vacations hits the mood. Two cautions: .tours is inherently plural and implies multiple routes, so a single signature experience may read better under a singular-flavored name; and .vacations runs nine letters — strong for online acquisition and ad landing pages, weak by word of mouth. Naming: destination + .tours (paris.tours) and theme + .tours (food.tours) versus destination + .vacations (maldives.vacations) and theme + .vacations (ski.vacations) are each side's strongest patterns — check the same destination word on both.",
+      pickA: ["Day trips & chartered routes", "City walks & food tours", "Hiking & outdoor guides", "Itinerary-shaped products"],
+      pickB: ["Vacation packages & island trips", "Resorts & lodging clusters", "Family & honeymoon themes", "Renewal-cost-sensitive long holds"],
+    },
+  },
+  "taxi-vs-city": {
+    slug: "taxi-vs-city",
+    a: "taxi",
+    b: "city",
+    zh: {
+      title: ".taxi 和 .city 怎么选：接送专线与城市门户的分工",
+      metaDescription: ".taxi 把打车接送写进域名，.city 是城市门户与本地生活的地理词。对比两者的语义、价格与本地打法，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都吃本地流量，分工在业务形态：.taxi 是服务词——本地车队、机场接送、景区酒店接驳、代驾小车队，「城市 + .taxi」读出来就是「某城打车」，且 taxi 在几十种语言里拼法几乎一致，是少有的天然无语言门槛的行业词；.city 是地理词——城市指南、本地新闻、活动日历、生活服务聚合，「城市名 + .city」做的是一座城的门户，还有「××之城」的比喻用法可以把主题做成一座城。价格上 .taxi 注册约 $6、续费约 $50/年，首年便宜续费跳档；.city 注册约 $5、续费约 $23/年，是长期成本最低的档位之一。判断标准：卖的是「送你去」这项服务——预约接送、企业包车、机场专线 → .taxi 点题且有 berlin.taxi 式大量同行先例；做的是「这座城」的内容与聚合——指南、活动、本地商户 → .city 覆盖面宽、续费便宜得多。两个注意：即时叫车主战场在超级 App（Uber、滴滴），.taxi 独立站适合预约制直客生意，别硬拼即时叫车；城市名可能涉及地方政府与商标保护，.city 官方口径的名称要先查清。命名上「城市 + .taxi」「机场码 + .taxi」（jfk.taxi 式）与「城市拼音 + .city」「品类词 + .city」各是两边最自然的模式。",
+      pickA: ["本地出租车与网约车队", "机场接送与包车专线", "景区与酒店接驳", "面向多语言游客的接送服务"],
+      pickB: ["城市指南与本地门户", "活动日历与本地新闻", "生活服务聚合", "「××之城」主题社区"],
+    },
+    en: {
+      title: ".taxi vs .city: The Ride Service or The City Portal",
+      metaDescription:
+        ".taxi writes the ride into the address; .city is the geographic word for city portals and local life. Compare semantics, pricing and local playbooks, then hunt names available on both.",
+      verdict:
+        "Both feed on local traffic; the split is the business shape. .taxi is the service word — local fleets, airport transfers, resort and hotel shuttles, designated-driver crews: city + .taxi reads out as \"a cab in that city\", and taxi is spelled nearly identically across dozens of languages — one of the rare industry words with no language barrier. .city is the geographic word — city guides, local news, event calendars, life-service aggregators: cityname + .city builds the portal of a place, plus the metaphorical \"city of X\" pattern that turns any theme into a town. Pricing: .taxi is about $6 to register and $50/yr to renew — cheap in, renewal jump; .city is about $5 and $23/yr — one of the cheapest long-term holds around. The test: selling the ride itself — scheduled transfers, corporate charters, airport routes → .taxi is on-target with plenty of berlin.taxi-style industry precedent; building content and aggregation about the place — guides, events, local merchants → .city covers far more ground at less than half the renewal. Two cautions: on-demand hailing belongs to the super-apps (Uber, Didi) — a .taxi independent site wins at scheduled direct bookings, not instant rides; and city names can implicate local governments and trademarks, so clear official-sounding names first. Naming: city + .taxi and airport code + .taxi (jfk.taxi) versus city + .city and category word + .city are each side's most natural patterns.",
+      pickA: ["Local cab & ride-hail fleets", "Airport transfers & charters", "Resort & hotel shuttles", "Multilingual tourist-facing rides"],
+      pickB: ["City guides & local portals", "Event calendars & local news", "Life-service aggregators", "\"City of X\" theme communities"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

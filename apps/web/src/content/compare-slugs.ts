@@ -189,6 +189,12 @@ export const COMPARE_SLUGS = [
   "toys-vs-games",
   "menu-vs-cafe",
   "law-vs-expert",
+  "com-vs-travel",
+  "travel-vs-tours",
+  "vacations-vs-holiday",
+  "flights-vs-travel",
+  "tours-vs-vacations",
+  "taxi-vs-city",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
