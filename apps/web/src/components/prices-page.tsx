@@ -79,13 +79,6 @@ export function PricesPage() {
       </p>
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{t("prices.title")}</h1>
       <p className="mt-3 text-[15px] leading-relaxed text-txt1">{t("prices.intro")}</p>
-      {meta?.stale && (
-        <p className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-[13px] text-amber-600">
-          {meta.fetchedAt !== null
-            ? t("prices.staleNote", { hours: Math.max(1, Math.round((Date.now() - meta.fetchedAt) / 3600_000)) })
-            : t("prices.staleNoteNoData")}
-        </p>
-      )}
 
       <input
         value={filter}
@@ -104,7 +97,7 @@ export function PricesPage() {
         {rows.length === 0 && <p className="px-4 py-6 text-center text-sm text-txt2">{t("prices.noMatch")}</p>}
         {!settled &&
           rows.map((r) => (
-            <div key={r.tld} className="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0">
+            <div key={r.tld} className="cv-row grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0">
               <a href={`/tld/${r.tld}?lang=${lang}`} className="tap-target font-mono text-sm font-semibold text-txt0 hover:text-brand">
                 .{r.tld}
               </a>
@@ -120,7 +113,7 @@ export function PricesPage() {
           ))}
         {settled &&
           rows.map((r) => (
-          <div key={r.tld} className="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0 hover:bg-bg1">
+          <div key={r.tld} className="cv-row grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0 hover:bg-bg1">
             <a href={`/tld/${r.tld}?lang=${lang}`} className="tap-target font-mono text-sm font-semibold text-txt0 hover:text-brand">
               .{r.tld}
             </a>
@@ -148,6 +141,13 @@ export function PricesPage() {
           </div>
         ))}
       </div>
+      {meta?.stale && (
+        <p className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-[13px] text-amber-600">
+          {meta.fetchedAt !== null
+            ? t("prices.staleNote", { hours: Math.max(1, Math.round((Date.now() - meta.fetchedAt) / 3600_000)) })
+            : t("prices.staleNoteNoData")}
+        </p>
+      )}
       <p className="mt-3 text-[11px] text-txt2">{t("prices.source")}</p>
 
       {/* FAQ */}

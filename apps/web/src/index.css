@@ -108,6 +108,12 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* 长列表行：视口外跳过渲染，占位高度与实际行高一致避免滚动条抖动 */
+.cv-row {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 69px;
+}
+
 .bar {
   height: 4px;
   border-radius: 2px;
