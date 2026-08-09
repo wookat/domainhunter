@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { HUB_META, compareHubGroups, compareHubPair, compareHubTitle } from "@/content/hubs";
+import { VS_HUB_META, compareHubGroups, compareHubPair, compareHubTitle } from "@/content/hubs-vs";
 import { useI18n } from "@/lib/i18n";
 import { usePageTitle } from "@/lib/use-page-title";
 import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
@@ -7,7 +7,7 @@ import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
 /** /vs 索引 hub：全部 TLD 对比页，按左侧后缀分组。DOM 与 worker 的 compareHubBlocks 骨架逐字一致。 */
 export function CompareHubPage() {
   const { lang } = useI18n();
-  const meta = HUB_META.vs[lang];
+  const meta = VS_HUB_META[lang];
   usePageTitle(meta.title);
   const [query, setQuery] = useState("");
   const groups = useMemo(() => compareHubGroups(), []);

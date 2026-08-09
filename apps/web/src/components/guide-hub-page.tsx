@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { HUB_META, guideHubGroups, guideHubLabel, guideOneLiner } from "@/content/hubs";
+import { GUIDE_HUB_META, guideHubGroups, guideHubLabel, guideOneLiner } from "@/content/hubs-guide";
 import { useI18n } from "@/lib/i18n";
 import { usePageTitle } from "@/lib/use-page-title";
 import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
@@ -7,7 +7,7 @@ import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
 /** /guide 索引 hub：全部行业命名指南，按大类分组。DOM 与 worker 的 guideHubBlocks 骨架逐字一致。 */
 export function GuideHubPage() {
   const { lang } = useI18n();
-  const meta = HUB_META.guide[lang];
+  const meta = GUIDE_HUB_META[lang];
   usePageTitle(meta.title);
   const [query, setQuery] = useState("");
   const groups = useMemo(() => guideHubGroups(), []);
