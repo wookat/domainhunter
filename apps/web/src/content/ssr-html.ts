@@ -13,15 +13,14 @@ import { COMPARE_SLUGS, compareLabel } from "./compare-slugs";
 import { GUIDE_LIST, INDUSTRY_GUIDES, guidesForTld, type IndustryGuide } from "./guides";
 import { HUB_META, compareHubGroups, guideHubGroups, guideOneLiner, tldHubGroups, tldOneLiner } from "./hubs";
 import { TLD_GUIDES, type TldGuide } from "./tlds";
-import { TLD_LIST, USD_TO_CNY } from "./tld-list";
+import { TLD_LIST } from "./tld-list";
+import { toUsd } from "../lib/currency";
 import { tldPrice } from "../types";
 
 type Lang = "zh" | "en";
 
 export const escapeHtml = (s: string): string =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-
-const toUsd = (cny: number) => Math.round(cny / USD_TO_CNY);
 
 /** lib/prices.ts priceFull 的静态参考价分支（prices 未加载时的首次渲染文案，逐字一致） */
 function staticPriceFull(tld: string, lang: Lang): string | undefined {
