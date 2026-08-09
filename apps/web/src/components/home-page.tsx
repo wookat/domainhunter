@@ -1135,12 +1135,14 @@ export function HomePage({
   onBackToResults,
   onOpenAdvanced,
   shortlist,
+  quotaExhausted,
 }: {
   initial: HomeValues;
   onSubmit: (v: HomeValues) => void;
   onBackToResults?: () => void;
   onOpenAdvanced: () => void;
   shortlist: { has: (domain: string) => boolean; toggle: (row: Row) => void };
+  quotaExhausted?: boolean;
 }) {
   const { t, lang } = useI18n();
   const [description, setDescription] = useState(() => descriptionFromQuery() || initial.description || templateFromQuery(lang));
@@ -1714,7 +1716,9 @@ export function HomePage({
                 {!quickRunning && quickRows.some((r) => r.status === "taken") && (
                   <button
                     onClick={() => submit(t("home.quickAiDesc", { label: quick.label }))}
-                    className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0"
+                    disabled={quotaExhausted}
+                    title={quotaExhausted ? t("results.moreQuota") : undefined}
+                    className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand disabled:pointer-events-none disabled:opacity-50 sm:min-h-0"
                   >
                     <Sparkles className="h-3 w-3" />
                     {t("home.quickAiCta")}
