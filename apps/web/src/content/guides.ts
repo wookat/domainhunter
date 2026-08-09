@@ -10213,6 +10213,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  hotel: {
+    slug: "hotel",
+    tlds: [
+      { tld: "com", zh: "OTA 之外直订渠道的信任底线，品牌官网与会员体系的默认选择", en: "The trust baseline for direct booking beyond OTAs — the default for the brand site and loyalty program" },
+      { tld: "travel", zh: "「旅行」语义直给，旅宿品牌与目的地内容站零解释", en: "Travel semantics stated plainly — zero explanation for lodging brands and destination content" },
+      { tld: "holiday", zh: "「度假」的松弛感，度假酒店与休闲线品牌的气质后缀", en: "The ease of holiday — the register suffix for resort and leisure lines" },
+    ],
+    zh: {
+      label: "酒店旅宿",
+      title: "酒店与旅宿品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "酒店与旅宿品牌命名指南：栖居意象、在地叙事、服务承诺等 5 种思路，亚朵/全季/Airbnb 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的旅宿品牌域名。",
+      intro:
+        "酒店的名字要在客人按下「预订」之前完成一次自我介绍：OTA 列表里几十家同价位酒店排成一列，名字是照片之外唯一的差异化位。第一素材库是栖居与休憩意象：宿、栖、居、汀、山、云——「亚朵」取自云南怒江边的亚朵村，把「远方的村落」装进两个字，商旅客人在钢筋城市里订的是一晚「有人情味的栖居」。第二个抓手是在地叙事：酒店是目的地的一部分，名字里带山、湖、巷、镇，等于把「住这里」升级成「体验这里」——民宿与度假线尤其吃这一套，客人发朋友圈时名字就是定位。第三个抓手是服务承诺与情绪定位：全季的「全」与「季」说的是四季如一的稳定品质，汉庭、如家把「家」的安心写进名字——商旅连锁卖的不是惊喜，是确定性。要注意档次语感的校准：名字的贵气要与房价段位匹配，经济型连锁起「府」「邸」「奢」会让客人进门就失望，反过来高端线用口语小名则撑不起溢价。场景上，酒店的名字活在 OTA 搜索结果的三秒扫视、行政前台的电话报名和客人「我住在 XX」的转述里。渠道上，名字要两三个字好念好搜、在「城市+酒店」的搜索里立得住、招牌在夜里亮起来隔着马路可认——每一块灯箱都是订单入口。",
+      namingIdeas: [
+        "栖居休憩意象：宿、栖、居、汀、云——客人订的不是床位，是一晚有人情味的栖居，名字先给出松弛感",
+        "在地叙事：山、湖、巷、镇入名——把「住这里」升级成「体验这里」，民宿与度假线的朋友圈定位就是名字",
+        "确定性承诺：全季的四季如一、如家的家的安心——商旅连锁卖确定性，名字与品质承诺一体化",
+        "档次语感校准：名字贵气要配房价段位——经济型起「府邸」进门就失望，高端线用小名撑不起溢价",
+        "灯箱测试：两三个字好念好搜、「城市+酒店」搜索立得住、夜里隔着马路可认——每块灯箱都是订单入口",
+      ],
+      cases: [
+        { name: "亚朵", takeaway: "一个真实村落入名：取自怒江边的亚朵村，把「远方的人情味」装进两个字——人文酒店的定位从名字就开始叙事，读书与摄影的空间调性顺着名字自然长出来" },
+        { name: "全季", takeaway: "「全」+「季」两个字说尽中端定位：四季如一的稳定品质，不惊艳但绝不失手——商旅客人要的确定性被压进名字，华住系中端主力的教科书命名" },
+        { name: "Airbnb", takeaway: "Air bed and breakfast 的压缩：从「气垫床+早餐」的窘迫创业史里长出的名字——缩写抹掉了寒酸感留下了亲切感，把「住进当地人家里」做成了全球品类词" },
+        { name: "Four Seasons", takeaway: "四季：奢华酒店用一个自然时间词说「任何季节都完美」——不堆贵气词而借自然意象立高端，与全季分处两个市场却共享同一命名智慧" },
+        { name: "花间堂", takeaway: "「花间」的诗意+「堂」的宅院感：三个字把江南园林的意境搬进品牌——度假民宿线用古典语感做差异化，名字本身就是目的地体验的预告片" },
+      ],
+      pitfalls: [
+        "档次错位：经济型连锁起「府」「邸」「皇家」——名字抬高预期，客房落差直接变差评，贵气词要配得上房价",
+        "锁死单一物业：名字绑定某条街某栋楼，第二家店就没法开——连锁野心要在名字里预留地图",
+        "谐音撞车头部：「X 家」「X 季」满街跑——头部连锁的语感已被占住，擦边名在 OTA 列表里只给对手导流",
+        "忽略 OTA 场景：名字在搜索列表里与照片抢三秒注意力——生僻字念不出、十个字记不住，收藏夹里就找不回",
+      ],
+    },
+    en: {
+      label: "Hotels & lodging",
+      title: "How to Name a Hotel or Lodging Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Hotel and lodging naming guide: dwelling imagery, sense of place and certainty promises, breakdowns of Atour/Airbnb/Four Seasons, recommended TLDs and pitfalls — then hunt an available lodging domain with AI.",
+      intro:
+        "A hotel's name must introduce itself before the guest taps \"book\": in an OTA list of thirty same-price properties, the name is the only differentiator besides photos. The first material bin is dwelling and rest imagery: stay, nest, lodge, haven, cloud — Atour took its name from a real village by the Nu River, packing \"a faraway village's warmth\" into two characters; the business traveler in a concrete city is booking one night of humane dwelling. The second lever is sense of place: a hotel is part of its destination, and a name carrying mountain, lake, lane or town upgrades \"staying here\" into \"experiencing here\" — guesthouses and resort lines feed on this, because the name is the geotag when guests post. The third is the certainty promise: JI Hotel's \"all seasons\" says consistent quality year-round, and Home Inn writes home's reassurance into the name — business chains don't sell surprise, they sell certainty. Mind register calibration: the name's luxury must match the room rate — a budget chain named \"Manor\" or \"Palace\" disappoints at check-in, while a luxury line with a cutesy nickname can't hold its premium. On scenarios: the name lives in the three-second OTA scan, the phone spelling at the front desk, and the guest's retelling of \"I'm staying at X\". On channels: two or three syllables easy to say and search, findable in city-plus-hotel queries, and legible across the street when the sign lights up at night — every lightbox is a booking funnel.",
+      namingIdeas: [
+        "Dwelling imagery: stay, nest, lodge, haven, cloud — guests book a night of humane dwelling, and the name should exhale ease first",
+        "Sense of place: mountain, lake, lane, town — upgrade staying here into experiencing here; the name is the geotag when guests post",
+        "Certainty promise: all-seasons consistency, home's reassurance — business chains sell certainty; fuse the quality promise into the name",
+        "Register calibration: the name's luxury must match the room rate — palace words on a budget chain turn check-in into disappointment",
+        "The lightbox test: two or three syllables, findable in city-plus-hotel searches, legible across the street at night — every lightbox is a funnel",
+      ],
+      cases: [
+        { name: "Atour (亚朵)", takeaway: "A real village as a name: taken from Yadu village by the Nu River, packing faraway warmth into two characters — the humanist-hotel positioning starts its storytelling from the name, and the book-and-photography spaces grow naturally out of it" },
+        { name: "JI Hotel (全季)", takeaway: "Two characters that exhaust the midscale brief: all-seasons consistency, never dazzling and never failing — the certainty business travelers want, compressed into a name; the textbook of China's midscale chains" },
+        { name: "Airbnb", takeaway: "Air bed and breakfast compressed: a name grown from the scrappy air-mattress origin story — the abbreviation erased the shabbiness and kept the warmth, turning \"stay in a local's home\" into a global category word" },
+        { name: "Four Seasons", takeaway: "One natural time-word says \"perfect in any season\": luxury built on nature imagery instead of stacked luxe words — sharing one naming insight with JI Hotel across two market tiers" },
+        { name: "Blossom Hill (花间堂)", takeaway: "Poetic \"amid flowers\" plus a courtyard suffix: three characters carry a classical-garden mood into the brand — resort guesthouses differentiating on literary register, the name itself a trailer for the stay" },
+      ],
+      pitfalls: [
+        "Register mismatch: palace and manor words on a budget chain — the name raises expectations the room can't meet, converting straight into bad reviews",
+        "Welding to one property: a name bound to one street or building blocks the second location — chain ambition needs map headroom in the name",
+        "Sound-alike drafting off incumbents: the home-and-seasons register is taken — a near-imitation in the OTA list only routes demand to the leader",
+        "Ignoring the OTA scan: the name fights the photo for three seconds of attention — obscure characters and ten-syllable names never get found again in favorites",
+      ],
+    },
+  },
+  karaoke: {
+    slug: "karaoke",
+    tlds: [
+      { tld: "com", zh: "连锁扩张与团购平台入驻的信任底线，娱乐品牌默认选择", en: "The trust baseline for chain expansion and group-buy platforms — the default for an entertainment brand" },
+      { tld: "fun", zh: "「玩乐」语义直给，娱乐场景的情绪后缀零解释", en: "Fun semantics stated plainly — the zero-explanation mood suffix for entertainment venues" },
+      { tld: "club", zh: "「俱乐部」的聚会感，包房与会员制玩法的气质后缀", en: "The gathering feel of club — the register suffix for private rooms and membership plays" },
+    ],
+    zh: {
+      label: "量贩KTV",
+      title: "量贩 KTV 与唱歌品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "量贩 KTV 与唱歌品牌命名指南：声音意象、聚会情绪、青春记忆等 5 种思路，钱柜/纯K/魅KTV 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的 KTV 品牌域名。",
+      intro:
+        "KTV 的名字要在两个瞬间被喊出来：一个是「今晚去哪唱」的群聊投票——名字要顺口到不用打字纠错；一个是散场后「下次还来 XX」的口头承诺——名字要轻快到带着回声。第一素材库是声音与旋律意象：麦、声、唱、调、音——名字里自带声浪，招牌还没亮，耳朵先到了；「纯K」两个字把「纯粹唱歌」的定位说到底，砍掉陪侍联想，年轻客群进门先安心。第二个抓手是聚会情绪：欢、聚、嗨、乐——KTV 卖的不是包房是情绪出口，周五晚上的第一杯酒和最后一首歌都要有名字作背景板。第三个抓手是青春记忆：钱柜是一代人的青春坐标，「回忆杀」是娱乐品牌最贵的资产——新品牌可以反着做，用「新青春」的语感接住下一代人。要注意干净定位的显性化：量贩 KTV 与商务 KTV 是两个物种，名字要主动切割——明亮、直给、无暧昧的语感是家长放心让高中生去、公司敢订团建的前提。场景上，KTV 的名字活在商场中庭的巨型招牌、团购平台的套餐列表和「麦霸之夜」的朋友圈定位里。渠道上，名字要两个字喊得响、在「城市+KTV」的搜索和点评的娱乐榜里立得住、包房号播报时不拗口——每一次跟唱都是名字的复读机。",
+      namingIdeas: [
+        "声音旋律意象：麦、声、唱、调——名字里自带声浪，招牌未亮耳朵先到，品类识别零成本",
+        "聚会情绪词：欢、聚、嗨、乐——KTV 卖的是情绪出口，名字要接得住周五晚上的第一杯酒",
+        "青春记忆卡位：钱柜是一代人的坐标——新品牌用「新青春」语感接住下一代，回忆杀是最贵资产",
+        "干净定位显性化：量贩与商务是两个物种——明亮直给的语感让家长放心、团建敢订",
+        "群聊测试：两个字喊得响、打字不纠错、「今晚去哪唱」的投票里第一个被提名——顺口就是流量",
+      ],
+      cases: [
+        { name: "钱柜", takeaway: "「钱柜」两个字自带派对的阔气：从台北唱到大陆，一代人的青春坐标——名字的记忆资产深到停业多年仍是「爷青回」的头号触发词，娱乐品牌情感复利的极致样本" },
+        { name: "纯K", takeaway: "一个「纯」字完成品类切割：纯粹唱歌、无陪侍无暧昧——把量贩 KTV 的干净定位压进名字，年轻客群与家长同时安心，定位即命名的教科书" },
+        { name: "魅KTV", takeaway: "「魅」的时尚感+品类词直给：单字定调性、KTV 保搜索——商场店模型配上易记的两段式结构，连锁扩张时名字在每个中庭招牌上都立得住" },
+        { name: "唱吧麦颂", takeaway: "线上 App「唱吧」的流量反哺线下：名字直接继承国民级唱歌 App 的心智——「麦颂」补足线下派对感，线上线下同名导流的 O2O 命名样本" },
+        { name: "Karaoke Kan", takeaway: "东京老牌把品类词做成品牌：《迷失东京》取景加持，karaoke 的日语原产地语感就是最大资产——品类即品牌在原产地市场的特权玩法" },
+      ],
+      pitfalls: [
+        "暧昧语感踩线：「夜」「醉」「花」堆出商务会所联想——量贩客群与家长直接劝退，干净定位是生意的地基",
+        "生僻字装酷：招牌认不出、群聊打不出——「今晚去哪唱」的投票里被打字成本淘汰，顺口才有提名权",
+        "锁死唱歌单场景：剧本杀、桌游、生日派对都在往包房里长——名字绑死 K 歌，多元娱乐装不进来",
+        "忽略商场招牌场景：中庭巨型招牌是最大广告位——纤细字体与英文花体在三楼往下看就糊成一团",
+      ],
+    },
+    en: {
+      label: "Karaoke lounges",
+      title: "How to Name a Karaoke Lounge: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Karaoke lounge naming guide: sound imagery, party moods and youth nostalgia, breakdowns of Cashbox/Pure K/Karaoke Kan, recommended TLDs and pitfalls — then hunt an available karaoke brand domain with AI.",
+      intro:
+        "A karaoke lounge's name must be shouted at two moments: the group-chat vote of \"where are we singing tonight\" — where the name must roll off thumbs without a typo — and the post-show promise of \"next time, X again\", where it needs a ring that echoes. The first material bin is sound and melody imagery: mic, voice, sing, tune, note — a name that carries its own sound wave reaches the ear before the sign lights up; Pure K says \"purely singing\" to the letter, cutting off hostess-bar associations so young groups walk in reassured. The second lever is party mood: joy, gather, high, cheer — karaoke sells an emotional outlet, not a room, and the name is the backdrop for Friday's first drink and last song. The third is youth nostalgia: Cashbox was a generation's coordinate of youth, and memory is an entertainment brand's most expensive asset — a new brand can play the reverse card, catching the next generation with a new-youth register. Mind making the clean positioning explicit: family karaoke and business KTV are different species, and the name must actively cut loose — a bright, direct, unambiguous register is why parents let teenagers go and companies book team-building nights. On scenarios: the name lives on the mall-atrium mega sign, in group-buy package lists, and in the \"mic-hog night\" geotag. On channels: two syllables that shout well, findable in city-plus-karaoke searches and entertainment rankings, smooth when the room number is announced — every singalong replays the name.",
+      namingIdeas: [
+        "Sound imagery: mic, voice, sing, tune — a name with its own sound wave reaches the ear before the sign lights up",
+        "Party-mood words: joy, gather, high, cheer — karaoke sells an emotional outlet; the name must hold Friday's first drink",
+        "Youth-nostalgia positioning: Cashbox was a generation's coordinate — a new brand catches the next cohort with a new-youth register",
+        "Explicit clean positioning: family karaoke and business KTV are different species — a bright, direct register wins parents and team bookings",
+        "The group-chat test: two syllables that shout well and type without typos — first nominated in the where-are-we-singing vote",
+      ],
+      cases: [
+        { name: "Cashbox (钱柜)", takeaway: "Two characters with party swagger: from Taipei across the mainland, a generation's coordinate of youth — memory equity so deep that years after closing it still triggers \"my youth is back\", the extreme sample of emotional compounding" },
+        { name: "Pure K (纯K)", takeaway: "One character completes the category cut: purely singing, no hostesses, no ambiguity — family karaoke's clean positioning pressed into the name, reassuring young groups and parents at once; positioning-as-naming, the textbook" },
+        { name: "Mei KTV (魅KTV)", takeaway: "A stylish single character plus the category word: one character sets the register, KTV secures the search — a mall-store model with a memorable two-part structure that holds on every atrium sign as the chain scales" },
+        { name: "Changba Maisong (唱吧麦颂)", takeaway: "An online singing app's traffic feeding offline rooms: the name directly inherits a national karaoke app's mindshare — the O2O sample of same-name funneling from screen to private room" },
+        { name: "Karaoke Kan", takeaway: "A Tokyo veteran making the category word the brand: blessed by Lost in Translation, the Japanese origin register of karaoke is the asset itself — category-as-brand, a privilege of the home market" },
+      ],
+      pitfalls: [
+        "Ambiguous register: night-, tipsy- and blossom-words stack into hostess-bar associations — family customers and parents walk away; clean positioning is the foundation",
+        "Obscure characters for cool: illegible on the sign, untypeable in the group chat — eliminated from the where-are-we-singing vote by typing cost",
+        "Welding to singing alone: murder-mystery games, board games and birthday parties are growing into the room — a name locked to karaoke can't hold multi-entertainment",
+        "Ignoring the atrium sign: the mall mega sign is the biggest ad slot — thin fonts and cursive English blur into mush from the third floor down",
+      ],
+    },
+  },
+  bubbletea: {
+    slug: "bubbletea",
+    tlds: [
+      { tld: "com", zh: "连锁加盟与出海扩张的信任底线，茶饮品牌默认选择", en: "The trust baseline for franchising and overseas expansion — the default for a tea brand" },
+      { tld: "cafe", zh: "「饮品店」语义直给，门店官网与菜单页零解释", en: "Café semantics stated plainly — zero explanation for the shop site and menu page" },
+      { tld: "shop", zh: "「店」的直白后缀，点单小程序与周边商城的入口感", en: "The plain shop suffix — an entry feel for ordering apps and merch stores" },
+    ],
+    zh: {
+      label: "奶茶茶饮",
+      title: "奶茶与新茶饮品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "奶茶与新茶饮品牌命名指南：茶意象、情绪治愈、国风叙事等 5 种思路，喜茶/茶颜悦色/蜜雪冰城等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的茶饮品牌域名。",
+      intro:
+        "奶茶的名字要在三个高频瞬间被念出来：点单口播、外卖搜索、举杯拍照——每天成千上万次的重复曝光，让茶饮成为对名字复利最敏感的品类。第一素材库是茶意象的再翻译：茶、乳、雪、雾、山、露——「喜茶」把「喜」的情绪与「茶」的品类焊死，两个字完成定位；「茶颜悦色」四个字自带国风滤镜，长沙排队三小时的文化景观一半归功于名字。第二个抓手是情绪治愈：奶茶是「今天辛苦了」的自我犒赏，名字里的甜、悦、乐、暖是购买理由的直接翻译——年轻人买的不是三十克糖，是三分钟的好心情。第三个抓手是价格带语感：蜜雪冰城的「蜜雪」甜得直白、「冰城」透着实惠的爽快，名字与十元价格带严丝合缝——高端线反着走，单字或雅词立格调。要注意出海与商标的前置检查：新茶饮集体出海，名字的拼音在英语里是否好念、在东南亚是否有歧义、商标 43 类与 30 类是否干净，都要在起名当天查完。场景上，奶茶的名字活在点单屏的三秒扫视、外卖 App 的搜索框和举杯自拍的 logo 特写里。渠道上，名字要两三个字口播不拗口、杯身 logo 隔着奶盖可认、在「城市+奶茶」与小红书的种草笔记里都立得住——每一杯都是移动广告位。",
+      namingIdeas: [
+        "茶意象再翻译：茶、雪、雾、露、山——品类词配情绪字或自然意象，两个字完成定位与滤镜",
+        "情绪治愈直译：甜、悦、乐、暖——年轻人买的是三分钟好心情，名字就是购买理由的翻译",
+        "价格带语感：蜜雪冰城与十元价格带严丝合缝——高端线用单字雅词立格调，名字要配得上定价",
+        "国风叙事：茶颜悦色的国风滤镜自带排队景观——文化叙事是茶饮最深的差异化护城河",
+        "出海前置检查：拼音在英语好念、东南亚无歧义、30/43 类商标干净——起名当天查完再爱上",
+      ],
+      cases: [
+        { name: "喜茶", takeaway: "「喜」+「茶」两个字焊死情绪与品类：从「皇茶」被迫改名的意外收获——改名反而换来可注册可出海的干净资产，HEYTEA 的英文名同样两音节直给" },
+        { name: "茶颜悦色", takeaway: "四字成语改一字：「察言观色」变「茶颜悦色」——国风滤镜、记忆钩子与品类词一次到位，长沙文化名片级的排队景观一半归功于名字" },
+        { name: "蜜雪冰城", takeaway: "「蜜雪」的甜+「冰城」的爽快实惠：名字与十元价格带严丝合缝——雪王 IP 顺着名字长出来，两万家店的下沉扩张名字从不拖后腿" },
+        { name: "霸王茶姬", takeaway: "「霸王」的戏剧张力+「茶姬」的东方人格：国风大女主叙事压进四个字——CHAGEE 的出海名同步规划，原叶鲜奶茶的品类升级由名字先声夺人" },
+        { name: "Gong cha (贡茶)", takeaway: "「贡」字借皇家进贡的品质暗示：中文语义+好念的两音节拼音——从台湾到全球两千店，出海友好的发音是名字国际化的第一性原理" },
+      ],
+      pitfalls: [
+        "堆砌「网红」流行语：名字追热梗——梗过气门店还在，茶饮迭代快但名字要能穿越三个夏天",
+        "生僻字装格调：点单口播念不出、外卖搜索打不出——每天几千次的口播场景容不下认字成本",
+        "商标裸奔：30 类（茶饮）与 43 类（餐饮服务）没查干净——加盟扩张时被抢注方反手收割，改名等于清零",
+        "忽略杯身场景：logo 在杯身与奶盖之间只有拇指大——纤细笔画拍照糊成一团，举杯自拍是最大免费媒介",
+      ],
+    },
+    en: {
+      label: "Bubble tea shops",
+      title: "How to Name a Bubble Tea Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Bubble tea naming guide: tea imagery, mood-lift promises and heritage storytelling, breakdowns of HEYTEA/Mixue/CHAGEE, recommended TLDs and pitfalls — then hunt an available tea brand domain with AI.",
+      intro:
+        "A bubble tea name gets spoken at three high-frequency moments: the counter call-out, the delivery-app search, and the raised-cup selfie — thousands of daily repetitions make tea the category most sensitive to naming compound interest. The first material bin is retranslated tea imagery: tea, milk, snow, mist, mountain, dew — HEYTEA welds the emotion of joy to the category word in two characters, and Chayan Yuese's four characters carry a built-in heritage filter, owing half of Changsha's three-hour-queue spectacle to the name. The second lever is the mood lift: bubble tea is the \"you worked hard today\" self-reward, and sweetness, delight and warmth in the name translate the purchase reason directly — young customers aren't buying thirty grams of sugar, they're buying three minutes of good mood. The third is price-band register: Mixue's honey-snow reads plainly sweet and its ice-city reads cheerfully affordable, sealing the name to the budget band — premium lines go the other way, holding register with a single elegant character. Mind the pre-flight checks for going global: with the category expanding overseas, whether the romanization reads well in English, carries no slang in Southeast Asia, and clears trademark classes 30 and 43 should all be checked the day you fall in love with a name. On scenarios: the name lives in the three-second menu-screen scan, the delivery search box, and the logo close-up of the raised-cup selfie. On channels: two or three syllables smooth to call out, a cup logo legible over the foam, findable in city-plus-bubble-tea searches and seeding posts — every cup is a mobile billboard.",
+      namingIdeas: [
+        "Retranslated tea imagery: tea, snow, mist, dew, mountain — category word plus an emotion or nature character finishes positioning in two characters",
+        "Mood-lift translation: sweet, delight, cheer, warm — customers buy three minutes of good mood; the name is the purchase reason translated",
+        "Price-band register: Mixue seals its name to the budget band — premium lines hold register with a single elegant character; the name must match the price tag",
+        "Heritage storytelling: Chayan Yuese's classical filter generates queue spectacles — cultural narrative is the deepest moat in tea",
+        "Pre-flight checks: romanization reads well in English, no slang abroad, classes 30/43 clear — check the day you fall in love",
+      ],
+      cases: [
+        { name: "HEYTEA (喜茶)", takeaway: "Joy welded to tea in two characters: the accidental windfall of being forced off the original name — the rename bought a clean, registrable, exportable asset, with a two-syllable English name equally direct" },
+        { name: "Chayan Yuese (茶颜悦色)", takeaway: "A four-character idiom with one character swapped: heritage filter, memory hook and category word landed in one stroke — half of the Changsha queue spectacle belongs to the name" },
+        { name: "Mixue (蜜雪冰城)", takeaway: "Honey-snow sweetness plus ice-city affordability: the name sealed to the budget band — the Snow King mascot grew straight out of it, and across twenty thousand stores the name never drags" },
+        { name: "CHAGEE (霸王茶姬)", takeaway: "The drama of a warlord plus an oriental tea-maiden persona: a heritage heroine narrative in four characters — the export name CHAGEE planned in parallel, letting the premium fresh-milk-tea upgrade announce itself" },
+        { name: "Gong cha (贡茶)", takeaway: "The tribute character borrowing imperial quality connotations: Chinese semantics plus an easy two-syllable romanization — from Taiwan to two thousand global stores, export-friendly pronunciation is naming's first principle" },
+      ],
+      pitfalls: [
+        "Chasing viral slang: the meme expires while the store remains — tea iterates fast, but the name must survive three summers",
+        "Obscure characters for class: unpronounceable at the counter, untypeable in the delivery search — thousands of daily call-outs leave no room for literacy cost",
+        "Naked trademarks: classes 30 (tea) and 43 (food service) unchecked — squatters harvest you at franchise time, and a rename resets everything to zero",
+        "Ignoring the cup: the logo gets a thumb's width between sleeve and foam — thin strokes blur in photos, and the raised-cup selfie is the biggest free medium",
+      ],
+    },
+  },
+  bbq: {
+    slug: "bbq",
+    tlds: [
+      { tld: "com", zh: "连锁扩张与外卖平台入驻的信任底线，烧烤品牌默认选择", en: "The trust baseline for chain expansion and delivery platforms — the default for a grill brand" },
+      { tld: "kitchen", zh: "「厨房」语义直给，烟火气与出品感的餐饮后缀", en: "Kitchen semantics stated plainly — the food suffix carrying hearth and craft" },
+      { tld: "bar", zh: "「酒馆」的夜场感，烧烤配酒的深夜场景后缀", en: "The night feel of bar — the suffix for grills that pour late into the night" },
+    ],
+    zh: {
+      label: "烧烤夜宵",
+      title: "烧烤与夜宵品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "烧烤与夜宵品牌命名指南：烟火意象、江湖人格、地域招牌等 5 种思路，很久以前/木屋烧烤/丰茂烤串 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的烧烤品牌域名。",
+      intro:
+        "烧烤的名字要有炭火味：客人在深夜十一点打开外卖 App 或走进夜市，要的不是精致而是「对味」——名字先冒烟，食欲才跟上。第一素材库是烟火与炭火意象：炭、火、烟、串、签、灶——「木屋烧烤」用「木屋」把露营篝火的松弛感搬进城市，名字就是场景预告。第二个抓手是江湖人格：烧烤是最有江湖气的餐饮品类，老张、胖哥、二嫂的人格化命名自带「老板就在炉子前」的信任——夜宵摊的熟客生意，一半靠味道一半靠「认人」。第三个抓手是地域招牌：锦州烧烤、淄博烧烤、湛江生蚝——产地即风味标签，名字里的地名是品类心智的免费继承；「丰茂烤串」的延边基因就写在菜单第一页。要注意时间叙事的差异化：「很久以前」用一个时间短语把烧烤拉回篝火时代，讲的是「人类烤了一万年」的故事——当同行都在拼串数与价格时，叙事升维是最省钱的差异化。场景上，烧烤的名字活在夜市霓虹灯牌、外卖 App 的深夜搜索和「走，撸串去」的召集令里。渠道上，名字要两三个字喊得响、灯牌在烟雾里认得出、在「城市+烧烤」与点评夜宵榜里立得住——深夜的每一次转发都是名字的口碑裂变。",
+      namingIdeas: [
+        "烟火炭火意象：炭、火、烟、串、灶——名字先冒烟食欲才跟上，深夜场景的对味感从字面开始",
+        "江湖人格：老张、胖哥、二嫂——人格化命名自带「老板在炉前」的信任，夜宵熟客生意一半靠认人",
+        "地域招牌继承：锦州、淄博、延边——产地即风味标签，地名是品类心智的免费资产",
+        "时间叙事升维：「很久以前」把烧烤拉回篝火时代——同行拼价格时，讲一万年的故事最省钱",
+        "灯牌测试：两三个字喊得响、霓虹灯牌在烟雾里可认、「城市+烧烤」搜索立得住——深夜召集令就是名字",
+      ],
+      cases: [
+        { name: "很久以前羊肉串", takeaway: "一个时间短语当品牌：把烧烤拉回「人类围着篝火」的原始叙事——服务员喊「穿越回很久以前」，体验剧场化让名字成为整套世界观的入口，烧烤叙事命名的天花板" },
+        { name: "木屋烧烤", takeaway: "「木屋」两个字搬来露营篝火的松弛感：城市里的烧烤被装进原木场景——直营连锁百店的标准化底气配上一个有画面的名字，场景词命名的标准答案" },
+        { name: "丰茂烤串", takeaway: "「丰茂」的丰盛语感+延边产地基因：把「串儿」升级成有出处的风味——「现穿现烤」的品质承诺顺着名字的实在感落地，产地叙事的连锁化样本" },
+        { name: "冰城串吧", takeaway: "「冰城」地名+「串吧」场景词：哈尔滨的豪爽风味与酒吧化的夜场定位一次说清——名字即菜单与场景的双重预告，地域+业态的组合式命名" },
+        { name: "聚点串吧", takeaway: "「聚点」把烧烤的社交本质说破：夜宵是深夜的聚集地——名字直接卡位「朋友聚会去哪」的决策入口，功能词命名在夜宵品类的直给打法" },
+      ],
+      pitfalls: [
+        "精致语感错位：烧烤要的是烟火气——「轩」「阁」「府」的雅词让深夜食客觉得贵且拘束，对味比格调重要",
+        "锁死单一品类：烤串之外小龙虾、生蚝、冷面都在往菜单里长——名字绑死「串」，夜宵全场景装不进来",
+        "地名碰瓷：没有产地基因硬蹭锦州淄博——熟客一口就吃穿，风味对不上地名反成差评放大器",
+        "忽略灯牌与烟雾场景：夜市灯牌隔着炭烟看——纤细字体与复杂图形在烟雾里糊掉，粗字大号才是深夜的可读性",
+      ],
+    },
+    en: {
+      label: "BBQ & late-night grills",
+      title: "How to Name a BBQ or Late-Night Grill Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "BBQ and late-night grill naming guide: ember imagery, folk personas and regional badges, breakdowns of Very Long Ago/Muwu BBQ, recommended TLDs and pitfalls — then hunt an available grill brand domain with AI.",
+      intro:
+        "A grill brand's name needs the smell of charcoal: at eleven at night, the customer opening a delivery app or walking into the night market wants \"hits the spot\", not refinement — the name must smoke first for the appetite to follow. The first material bin is ember and hearth imagery: charcoal, fire, smoke, skewer, grill, stove — Muwu (\"log cabin\") BBQ carries campfire ease into the city, the name a trailer for the scene. The second lever is the folk persona: grilling is the most street-smart food category, and names like Old Zhang or Fat Brother carry built-in \"the owner is at the grill\" trust — a late-night regulars' business runs half on flavor, half on knowing who's cooking. The third is the regional badge: Jinzhou, Zibo, Yanbian — origin is a flavor label, and a place name in the brand inherits category mindshare for free; Fengmao's Yanbian roots are written on page one of the menu. Mind narrative elevation as differentiation: Very Long Ago pulls barbecue back to the campfire era with one time phrase, telling the story that humans have grilled for ten thousand years — when rivals compete on skewer counts and price, elevating the story is the cheapest differentiation. On scenarios: the name lives on the night-market neon board, in the late-night delivery search, and in the rally cry of \"let's go get skewers\". On channels: two or three syllables that shout well, a lightboard legible through the smoke, findable in city-plus-BBQ searches and late-night rankings — every midnight repost is word-of-mouth fission for the name.",
+      namingIdeas: [
+        "Ember imagery: charcoal, fire, smoke, skewer, stove — the name smokes first and the appetite follows; the late-night register starts at the letters",
+        "Folk persona: Old Zhang, Fat Brother — personable names carry \"the owner is at the grill\" trust; the regulars' business runs half on knowing who cooks",
+        "Regional badge: Jinzhou, Zibo, Yanbian — origin is a flavor label, and the place name inherits category mindshare for free",
+        "Narrative elevation: pull barbecue back to the campfire era — when rivals compete on price, a ten-thousand-year story is the cheapest differentiation",
+        "The lightboard test: two or three syllables that shout well, legible through charcoal smoke, findable in city-plus-BBQ searches",
+      ],
+      cases: [
+        { name: "Very Long Ago (很久以前)", takeaway: "A time phrase as a brand: pulling barbecue back to the primal campfire narrative — servers announce you're \"traveling back to long ago\", theatricalizing the visit so the name becomes the doorway to a worldview; the ceiling of narrative naming in BBQ" },
+        { name: "Muwu BBQ (木屋烧烤)", takeaway: "Two characters carrying campfire ease into the city: barbecue framed inside a log-cabin scene — a hundred directly-run stores of standardization behind one picturable name; the standard answer of scene-word naming" },
+        { name: "Fengmao (丰茂烤串)", takeaway: "An abundance register plus Yanbian origin genes: upgrading the skewer into a flavor with a birthplace — the skewered-fresh, grilled-fresh promise lands on the name's earthy credibility; the chain-scale sample of origin storytelling" },
+        { name: "Bingcheng Chuanba (冰城串吧)", takeaway: "The Ice City place name plus a skewer-bar scene word: Harbin's hearty flavor and a bar-like night positioning stated at once — the name doubling as menu and scene preview" },
+        { name: "Judian Chuanba (聚点串吧)", takeaway: "\"Gathering point\" says barbecue's social essence out loud: late-night grilling is the midnight meeting place — the name squats directly on the where-shall-we-meet decision entrance" },
+      ],
+      pitfalls: [
+        "Refined register mismatch: grills need hearth-smoke — pavilion and manor words make midnight diners feel priced-out and stiff; hitting the spot beats class",
+        "Welding to skewers alone: crayfish, oysters and cold noodles grow into the menu — a name locked to skewers can't hold the full late-night table",
+        "Freeloading on place names: claiming Jinzhou or Zibo without the roots — regulars taste through it in one bite, and a mismatched badge amplifies bad reviews",
+        "Ignoring smoke and neon: the night-market board is read through charcoal haze — thin fonts and intricate marks blur; bold and big is midnight legibility",
+      ],
+    },
+  },
+  pharmacy: {
+    slug: "pharmacy",
+    tlds: [
+      { tld: "com", zh: "医保对接与连锁扩张的信任底线，药店品牌默认选择", en: "The trust baseline for insurance networks and chain expansion — the default for a pharmacy brand" },
+      { tld: "care", zh: "「关怀照护」语义直给，健康服务的温度后缀", en: "Care semantics stated plainly — the warmth suffix for health services" },
+      { tld: "store", zh: "「门店」直白后缀，O2O 送药与线上商城的入口感", en: "The plain store suffix — an entry feel for O2O delivery and online storefronts" },
+    ],
+    zh: {
+      label: "连锁药店",
+      title: "连锁药店与药房品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "连锁药店与药房品牌命名指南：仁心意象、安心承诺、老字号语感等 5 种思路，同仁堂/老百姓/益丰 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的药店品牌域名。",
+      intro:
+        "药店的名字要在客人最脆弱的时刻被信任：深夜发烧找药、给父母买慢病药、拿着处方单跨进门——名字必须先把「安心」递出去。第一素材库是仁心与济世意象：仁、堂、济、康、寿、安——「同仁堂」三百年的「堂」字辈语感是中式药业的信任母体，「堂」自带坐堂医的专业联想，新品牌借「堂」字等于站上传统的肩膀。第二个抓手是平价亲民承诺：「老百姓大药房」把目标客群直接写成名字，平价定位一字不用解释——药品是民生刚需，名字的亲民感就是客流的第一道门槛。第三个抓手是健康祝愿：康、寿、益、丰——把「愿你健康」写进名字，客人买的是药，收到的是祝福；「益丰」两个字把受益与丰盈说得干净体面。要注意专业边界的谨慎：药店名字不能暗示疗效——「包好」「神效」类语感踩广告法红线，专业感要来自「堂」「仁」的传统语感或「大药房」的直白规模感，而不是疗效承诺。场景上，药店的名字活在绿十字灯箱旁的招牌、医保定点名录和外卖 App 的「送药上门」搜索里。渠道上，名字要两三个字长辈念得顺、招牌在街角一眼可认、在「附近药店」的地图搜索与 O2O 平台里都立得住——每一张处方都是对名字的一次信任投票。",
+      namingIdeas: [
+        "仁心济世意象：仁、堂、济、安——「堂」字自带坐堂医联想，新品牌借传统语感站上信任的肩膀",
+        "平价亲民入名：老百姓大药房把客群写成名字——药品是民生刚需，亲民感是客流第一道门槛",
+        "健康祝愿：康、寿、益、丰——客人买的是药收到的是祝福，名字先递出「愿你健康」",
+        "专业边界谨慎：不暗示疗效不踩广告法——专业感来自传统语感与规模直白，不来自「神效」承诺",
+        "街角测试：两三个字长辈念得顺、绿十字旁一眼可认、「附近药店」地图搜索立得住——处方就是信任投票",
+      ],
+      cases: [
+        { name: "同仁堂", takeaway: "「同仁」的仁心+「堂」的坐堂传统：三百年老字号把「炮制虽繁必不敢省人工」的信条压进三个字——中式药业信任语感的母体，所有「堂」字辈都在借它的光" },
+        { name: "老百姓大药房", takeaway: "把目标客群直接写成品牌：平价定位零解释，「老百姓」三个字自带亲切与规模——民生品类里最直白的命名打法，上市连锁的下沉扩张名字从不设防" },
+        { name: "益丰大药房", takeaway: "「益」的受益+「丰」的丰盈：两个字把健康祝愿说得干净体面——配「大药房」的规模后缀，祝愿语感与连锁正规感的平衡样本" },
+        { name: "大参林", takeaway: "「参」字点出滋补基因：人参的珍贵意象+「林」的规模感——从岭南参茸起家的品类基因写进名字，区域连锁的差异化资产" },
+        { name: "CVS", takeaway: "Consumer Value Store 的缩写：三个字母把「便利+实惠」做成美国药房的国民符号——药店+便利店的混合业态被名字的中性感完美兼容，缩写命名的规模化范本" },
+      ],
+      pitfalls: [
+        "疗效暗示踩红线：「包好」「神效」「到病除」——广告法与药监红线一碰就罚，专业感不能来自疗效承诺",
+        "堆砌「堂」字撞车：满街 X 仁堂 X 寿堂——传统语感被稀释，擦边老字号只会被当成山寨",
+        "锁死药品单品类：器械、保健品、慢病管理都在往店里长——名字绑死「药」，大健康的货架装不进来",
+        "忽略长辈客群：主力客群是中老年——生僻字念不出、英文名记不住，长辈念得顺才是药店名的硬指标",
+      ],
+    },
+    en: {
+      label: "Pharmacies",
+      title: "How to Name a Pharmacy Chain: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Pharmacy naming guide: benevolence imagery, affordability promises and heritage registers, breakdowns of Tongrentang/LBX/CVS, recommended TLDs and pitfalls — then hunt an available pharmacy brand domain with AI.",
+      intro:
+        "A pharmacy's name must earn trust at the customer's most vulnerable moments: hunting fever medicine at midnight, buying chronic-disease refills for parents, stepping in with a prescription slip — the name must hand over reassurance first. The first material bin is benevolence and healing imagery: kindness, hall, relief, health, longevity, ease — Tongrentang's three-hundred-year \"tang\" (hall) register is the trust matrix of Chinese pharmacy, the hall carrying built-in associations of the resident physician; a new brand borrowing the register stands on tradition's shoulders. The second lever is the affordability promise: LBX Pharmacy (\"the common people's pharmacy\") writes the target customer straight into the name, explaining its value positioning in zero words — medicine is a daily necessity, and the name's approachability is the first gate of footfall. The third is the health blessing: health, longevity, benefit, abundance — writing \"wishing you well\" into the name means the customer buys medicine and receives a blessing. Mind the professional boundary: pharmacy names must not imply efficacy — \"guaranteed cure\" registers cross advertising-law red lines; professionalism must come from heritage registers or plain scale words, never from outcome promises. On scenarios: the name lives on the sign beside the green-cross lightbox, in insurance-network directories, and in the delivery app's medicine-to-your-door search. On channels: two or three syllables elders can pronounce, recognizable at a glance on the corner, findable in nearby-pharmacy map searches and O2O platforms — every prescription is a vote of trust in the name.",
+      namingIdeas: [
+        "Benevolence imagery: kindness, hall, relief, ease — the hall register carries the resident physician; borrowing tradition puts a new brand on trust's shoulders",
+        "Affordability in the name: write the common customer into the brand — medicine is a daily necessity, and approachability is the first gate of footfall",
+        "Health blessing: health, longevity, benefit, abundance — the customer buys medicine and receives a blessing",
+        "Professional boundary: never imply efficacy — professionalism comes from heritage registers and plain scale, not outcome promises",
+        "The corner test: syllables elders can pronounce, legible beside the green cross, findable in nearby-pharmacy map searches",
+      ],
+      cases: [
+        { name: "Tongrentang (同仁堂)", takeaway: "Benevolence plus the hall tradition: three hundred years pressing \"never skimp on labor however complex the craft\" into three characters — the matrix of Chinese pharmaceutical trust registers, from which every hall-suffixed brand borrows light" },
+        { name: "LBX Pharmacy (老百姓大药房)", takeaway: "The target customer written as the brand: value positioning explained in zero words, with warmth and scale built into \"the common people\" — the bluntest naming play in daily-necessity retail, and the name never resists downmarket expansion" },
+        { name: "Yifeng (益丰大药房)", takeaway: "Benefit plus abundance: two characters stating the health blessing cleanly and respectably — paired with the grand-pharmacy scale suffix, the balance sample of blessing register and chain legitimacy" },
+        { name: "Da Shen Lin (大参林)", takeaway: "The ginseng character declaring tonic genes: precious-herb imagery plus a forest of scale — the Lingnan ginseng-and-antler origin written into the name, a regional chain's differentiation asset" },
+        { name: "CVS", takeaway: "Consumer Value Store abbreviated: three letters turning convenience-plus-value into America's national pharmacy symbol — the neutral acronym perfectly hosting the drugstore-convenience hybrid; the scale template of initialism naming" },
+      ],
+      pitfalls: [
+        "Implying efficacy: guaranteed-cure and miracle registers — advertising and pharmaceutical regulators fine on contact; professionalism can't come from outcome promises",
+        "Hall-suffix pileups: a street full of X-ren-tang and X-shou-tang — the heritage register dilutes, and a near-imitation of the old brands reads as counterfeit",
+        "Welding to medicine alone: devices, supplements and chronic-care services grow into the store — a name locked to drugs can't shelve the wellness expansion",
+        "Ignoring elder customers: the core footfall is middle-aged and older — obscure characters and English names lose them; elder-pronounceable is the hard metric",
+      ],
+    },
+  },
+  clinic: {
+    slug: "clinic",
+    tlds: [
+      { tld: "com", zh: "医疗机构资质公示与患者信任的底线，诊所官网默认选择", en: "The trust baseline for credential display and patient confidence — the default for a clinic site" },
+      { tld: "clinic", zh: "「诊所」语义直给，科室与预约页零解释", en: "Clinic semantics stated plainly — zero explanation for specialty and booking pages" },
+      { tld: "care", zh: "「照护」的温度后缀，全科与家庭医生线的气质选择", en: "The warmth suffix of care — the register choice for general practice and family medicine" },
+    ],
+    zh: {
+      label: "诊所门诊",
+      title: "诊所与门诊品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "诊所与门诊品牌命名指南：安心意象、专业直给、家庭医生温度等 5 种思路，卓正/美中宜和/Mayo Clinic 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的诊所品牌域名。",
+      intro:
+        "诊所的名字要在患者焦虑的顶点被选择：孩子半夜发烧挂不上号、体检报告有个箭头看不懂、想找个「不用排队三小时」的看病选项——名字必须一眼给出「专业且安心」。第一素材库是安心与守护意象：安、和、宜、康、心——民营医疗的信任赤字是行业底色，名字里的安定感是第一剂药；「美中宜和」四个字把「宜人平和」的就医体验写在门头上。第二个抓手是专业直给：卓正的「卓」与「正」——卓越与正规两个字，恰好回应了患者对民营诊所「怕不正规」的核心疑虑；循证医疗的定位从名字就开始自证。第三个抓手是家庭医生温度：全科诊所卖的是「熟悉的医生看熟悉的你」，名字要像邻居医生的名片——亲切、可托付、记得住；儿科线更要让孩子不害怕，名字里的软语感是候诊室哭声的降噪器。要注意合规红线的前置：医疗机构命名有专门规范——「协和」「同济」等知名医院名不可蹭，疗效暗示与「专家」「名医」类用语受限，核名要在装修之前完成。场景上，诊所的名字活在门头的灯箱、公众号预约页的抬头和妈妈群的「哪家儿科靠谱」转述里。渠道上，名字要两三个字念得顺、在「城市+科室」的搜索和点评医疗榜里立得住、印在医保定点铭牌上正规可认——每一次复诊都是名字的信任复利。",
+      namingIdeas: [
+        "安心守护意象：安、和、宜、康——民营医疗信任赤字是底色，名字的安定感是第一剂药",
+        "专业直给：卓、正、信、诚——直接回应「怕不正规」的核心疑虑，循证定位从名字自证",
+        "家庭医生温度：像邻居医生的名片——亲切可托付记得住，儿科线的软语感是候诊室的降噪器",
+        "合规前置：不蹭协和同济、不暗示疗效、慎用专家名医——医疗机构核名在装修之前完成",
+        "妈妈群测试：两三个字念得顺、「城市+科室」搜索立得住、「哪家儿科靠谱」的转述里第一个被提名",
+      ],
+      cases: [
+        { name: "卓正医疗", takeaway: "「卓」的卓越+「正」的正规：两个字精准回应患者对民营诊所的核心疑虑——循证医疗的定位从名字开始自证，中产家庭医疗的信任命名样本" },
+        { name: "美中宜和", takeaway: "「美中」的中美医疗基因+「宜和」的宜人平和：四个字把技术出处与就医体验一次说清——妇儿医疗的温度命名，名字就是产科病房的第一面墙" },
+        { name: "和睦家", takeaway: "「和睦」+「家」：把医院说成家——外资医疗本土化的命名典范，高端定位用家庭温度而非技术词立差异，妈妈群转述零翻译成本" },
+        { name: "Mayo Clinic", takeaway: "创始人姓氏+品类词：梅奥兄弟的名字沉淀成全球医疗的金标准——人名命名在医疗行业的终极形态，信任从医生个人复利到机构品牌" },
+        { name: "丁香诊所", takeaway: "「丁香」从医生社区丁香园平移而来：线上医学品牌的信任资产直接输血线下诊所——温柔的植物意象软化就医焦虑，品牌延展命名的教科书" },
+      ],
+      pitfalls: [
+        "蹭知名医院名：「协和」「同济」字样是核名红线——蹭来的信任撑不过一次监管检查，山寨感反噬专业定位",
+        "疗效与名医暗示：「专治」「神医」「专家」受广告法与医疗广告规范双重限制——专业感要靠资质公示不靠形容词",
+        "锁死单一科室：儿科起家想做全科、口腔想加医美——名字绑死科室，扩科时等于重新开业",
+        "冰冷机构腔：「XX 医学中心」的距离感吓退焦虑患者——诊所是社区医疗，名字要有邻居医生的温度",
+      ],
+    },
+    en: {
+      label: "Clinics & outpatient care",
+      title: "How to Name a Clinic or Outpatient Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Clinic naming guide: reassurance imagery, professional directness and family-doctor warmth, breakdowns of Distinct/United Family/Mayo Clinic, recommended TLDs and pitfalls — then hunt an available clinic brand domain with AI.",
+      intro:
+        "A clinic's name is chosen at the peak of patient anxiety: a child's midnight fever with no appointment available, an arrow on a lab report nobody explains, the search for care without a three-hour queue — the name must read \"professional and reassuring\" at a glance. The first material bin is reassurance and guardianship imagery: ease, harmony, gentle, well, heart — private healthcare's trust deficit is the industry's baseline, and the calm in a name is the first dose of medicine; Amcare writes a gentle, peaceable visit onto the storefront in four characters. The second lever is professional directness: Distinct Healthcare's characters for excellence and propriety answer the patient's core doubt about private clinics — \"is this legitimate?\" — letting the evidence-based positioning prove itself from the name onward. The third is family-doctor warmth: general practice sells a familiar doctor who knows you, so the name should read like the neighborhood doctor's card — warm, entrustable, memorable; pediatric lines need softness that turns down the crying in the waiting room. Mind the compliance red lines upfront: medical-institution naming is specifically regulated — famous hospital names like Union or Tongji cannot be borrowed, efficacy hints and expert-physician wording are restricted, and the name must clear registration before the renovation starts. On scenarios: the name lives on the storefront lightbox, the booking-page header, and the moms'-group retelling of \"which pediatrics is reliable\". On channels: two or three syllables smooth to say, findable in city-plus-specialty searches and medical rankings, legitimate on the insurance-network plaque — every follow-up visit compounds the name's trust.",
+      namingIdeas: [
+        "Reassurance imagery: ease, harmony, gentle, well — the trust deficit is the baseline; calm in the name is the first dose of medicine",
+        "Professional directness: excellence, propriety, trust — answer the is-this-legitimate doubt head-on; evidence-based positioning proves itself from the name",
+        "Family-doctor warmth: the neighborhood doctor's card — warm, entrustable, memorable; pediatric softness turns down the waiting-room crying",
+        "Compliance upfront: no borrowing famous hospital names, no efficacy hints, expert wording restricted — clear the registration before renovation",
+        "The moms'-group test: two or three syllables, findable in city-plus-specialty searches, first nominated in which-clinic-is-reliable retellings",
+      ],
+      cases: [
+        { name: "Distinct Healthcare (卓正医疗)", takeaway: "Excellence plus propriety: two characters answering the patient's core doubt about private clinics head-on — evidence-based positioning proving itself from the name; the trust-naming sample of middle-class family medicine" },
+        { name: "Amcare (美中宜和)", takeaway: "Sino-American medical genes plus a gentle, peaceable register: four characters stating technical provenance and visit experience at once — warmth naming in women's and children's care, the name as the first wall of the maternity ward" },
+        { name: "United Family (和睦家)", takeaway: "Harmony plus home: calling the hospital a family — the localization benchmark of foreign healthcare naming, differentiating premium care on domestic warmth instead of technical words, retold in moms' groups at zero translation cost" },
+        { name: "Mayo Clinic", takeaway: "A founder's surname plus the category word: the Mayo brothers' name compounding into the global gold standard of medicine — eponymous naming's ultimate form, trust flowing from physician to institution" },
+        { name: "DXY Clinics (丁香诊所)", takeaway: "The lilac carried over from the physicians' community DXY: an online medical brand's trust asset transfusing directly into offline clinics — gentle botanical imagery softening the anxiety of a visit; the textbook of brand-extension naming" },
+      ],
+      pitfalls: [
+        "Borrowing famous hospital names: Union and Tongji wordmarks are registration red lines — borrowed trust doesn't survive one inspection, and the knockoff feel poisons the professional positioning",
+        "Efficacy and expert hints: cure-all and master-physician wording is doubly restricted by advertising and medical-ad rules — professionalism comes from posted credentials, not adjectives",
+        "Welding to one specialty: pediatrics aiming for general practice, dental adding aesthetics — a name locked to a department means reopening from scratch at expansion",
+        "Cold institutional register: \"X Medical Center\" distance scares anxious patients away — a clinic is community medicine, and the name needs the neighborhood doctor's warmth",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

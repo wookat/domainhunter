@@ -167,4 +167,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "construction", zh: "建筑施工", en: "Construction & contracting" },
   { slug: "appliancerepair", zh: "家电维修", en: "Appliance repair" },
   { slug: "equipmentrental", zh: "设备租赁", en: "Equipment rental" },
+  { slug: "hotel", zh: "酒店旅宿", en: "Hotels & lodging" },
+  { slug: "karaoke", zh: "量贩KTV", en: "Karaoke lounges" },
+  { slug: "bubbletea", zh: "奶茶茶饮", en: "Bubble tea shops" },
+  { slug: "bbq", zh: "烧烤夜宵", en: "BBQ & late-night grills" },
+  { slug: "pharmacy", zh: "连锁药店", en: "Pharmacies" },
+  { slug: "clinic", zh: "诊所门诊", en: "Clinics & outpatient care" },
 ];
