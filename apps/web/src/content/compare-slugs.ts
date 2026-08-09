@@ -225,6 +225,12 @@ export const COMPARE_SLUGS = [
   "hockey-vs-team",
   "surf-vs-fun",
   "golf-vs-travel",
+  "tennis-vs-club",
+  "soccer-vs-club",
+  "football-vs-team",
+  "health-vs-care",
+  "family-vs-life",
+  "surf-vs-travel",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

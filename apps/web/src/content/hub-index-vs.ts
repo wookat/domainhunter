@@ -232,4 +232,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "hockey-vs-team", a: "hockey", b: "team", title: { zh: ".hockey 和 .team 怎么选：冰球专营与队伍通用的分工", en: ".hockey vs .team: The Rink Vertical or The Any-Squad Banner" } },
   { slug: "surf-vs-fun", a: "surf", b: "fun", title: { zh: ".surf 和 .fun 怎么选：浪点垂直与泛娱乐的分工", en: ".surf vs .fun: The Break Vertical or The Playground Banner" } },
   { slug: "golf-vs-travel", a: "golf", b: "travel", title: { zh: ".golf 和 .travel 怎么选：球场生意与行程生意的分工", en: ".golf vs .travel: The Course Business or The Itinerary Business" } },
+  { slug: "tennis-vs-club", a: "tennis", b: "club", title: { zh: ".tennis 和 .club 怎么选：网球品类与社群归属的分工", en: ".tennis vs .club: The Court Category or The Member Circle" } },
+  { slug: "soccer-vs-club", a: "soccer", b: "club", title: { zh: ".soccer 和 .club 怎么选：足球品类与俱乐部招牌的分工", en: ".soccer vs .club: The Pitch Category or The Clubhouse Sign" } },
+  { slug: "football-vs-team", a: "football", b: "team", title: { zh: ".football 和 .team 怎么选：足球专营与队伍通用的分工", en: ".football vs .team: The Sport Vertical or The Any-Squad Banner" } },
+  { slug: "health-vs-care", a: "health", b: "care", title: { zh: ".health 和 .care 怎么选：健康行业与照护服务的分工", en: ".health vs .care: The Industry Storefront or The Service Warmth" } },
+  { slug: "family-vs-life", a: "family", b: "life", title: { zh: ".family 和 .life 怎么选：家庭场景与生活方式的分工", en: ".family vs .life: The Household Unit or The Lifestyle Topic" } },
+  { slug: "surf-vs-travel", a: "surf", b: "travel", title: { zh: ".surf 和 .travel 怎么选：浪点生意与行程生意的分工", en: ".surf vs .travel: The Break Business or The Itinerary Business" } },
 ];

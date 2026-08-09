@@ -396,7 +396,7 @@
     ]
   },
   "vs": {
-    "count": 222,
+    "count": 228,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -619,7 +619,13 @@
       "soccer-vs-football",
       "hockey-vs-team",
       "surf-vs-fun",
-      "golf-vs-travel"
+      "golf-vs-travel",
+      "tennis-vs-club",
+      "soccer-vs-club",
+      "football-vs-team",
+      "health-vs-care",
+      "family-vs-life",
+      "surf-vs-travel"
     ]
   }
 }
