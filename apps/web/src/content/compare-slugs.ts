@@ -183,6 +183,12 @@ export const COMPARE_SLUGS = [
   "bike-vs-fitness",
   "toys-vs-shop",
   "shoes-vs-fashion",
+  "plus-vs-vip",
+  "house-vs-estate",
+  "shoes-vs-store",
+  "toys-vs-games",
+  "menu-vs-cafe",
+  "law-vs-expert",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
