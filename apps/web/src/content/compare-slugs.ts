@@ -171,6 +171,12 @@ export const COMPARE_SLUGS = [
   "education-vs-academy",
   "training-vs-coach",
   "love-vs-me",
+  "beauty-vs-salon",
+  "fashion-vs-style",
+  "work-vs-works",
+  "sale-vs-shop",
+  "help-vs-support",
+  "wedding-vs-love",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
