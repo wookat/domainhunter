@@ -215,7 +215,7 @@
     ]
   },
   "guide": {
-    "count": 212,
+    "count": 218,
     "slugs": [
       "saas",
       "ecommerce",
@@ -428,7 +428,13 @@
       "postproduction",
       "animation",
       "documentary",
-      "newsmedia"
+      "newsmedia",
+      "fruitshop",
+      "seafood",
+      "tailor",
+      "equestrian",
+      "archery",
+      "immigration"
     ]
   },
   "vs": {

@@ -13261,6 +13261,372 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  fruitshop: {
+    slug: "fruitshop",
+    tlds: [
+      { tld: "com", zh: "连锁化与线上下单的信任底线，生鲜品牌的默认选择", en: "The trust baseline for chains and online ordering — the default for a fresh-produce brand" },
+      { tld: "shop", zh: "「店」的品类后缀直给零售属性，社区水果店零解释成本", en: "The shop suffix states retail outright — zero explanation for a neighborhood fruit store" },
+      { tld: "farm", zh: "「农场」后缀暗示产地直采，源头故事一秒成立", en: "The farm suffix implies orchard-direct sourcing — the origin story lands in one second" },
+    ],
+    zh: {
+      label: "水果店",
+      title: "水果店与生鲜果切品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "水果店命名指南：新鲜词根、产地故事、甜感音节等 5 种思路，百果园/Zespri/Driscoll's 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的生鲜品牌域名。",
+      intro:
+        "水果店的名字要在顾客咬下第一口之前就先「甜」起来：招牌上一眼看到、外卖列表里一屏划过、社群接龙里被复述——名字是这家店新鲜与否的第一证据。第一素材库是新鲜词根：鲜、果、甜、熟、采——水果是即时消费的冲动品类，名字里的新鲜感直接参与购买决策；百果园用「百果」把品类丰富度写进名字，「园」字又添了产地联想。第二个抓手是产地故事：从枝头到舌尖的距离是水果店最硬的卖点——Zespri（佳沛）把新西兰阳光装进两个音节，Driscoll's 用创始家族姓氏为每盒莓果背书；社区店同样可以借「XX 山」「XX 庄园」的源头意象。第三个抓手是甜感音节：开口元音与叠字（如「果多多」式）念起来自带愉悦感，与水果的多巴胺属性天然合拍。要注意品类边界：果切、果汁、礼盒是水果店的自然延伸，名字锁死在单一水果（如「西瓜王」）会限制冬季生意。渠道上，水果店活在外卖平台列表、社区团购接龙和熟客的口头转述里——名字要短、要甜、要在小字号缩略图里依然清晰。",
+      namingIdeas: [
+        "新鲜词根：鲜、果、甜、采、熟——水果是冲动消费品类，名字里的新鲜感直接参与购买决策",
+        "产地意象：山、园、庄、枝头——「从枝头到舌尖」的距离是最硬卖点，源头故事一词讲清",
+        "甜感音节：开口元音与叠字念起来自带愉悦——把名字放进「今天去 XX 买点水果」念三遍测试",
+        "家族与人名背书：Driscoll's 式的姓氏命名——生鲜的信任来自「有人对品质负责」的具体感",
+        "留足品类余量：果切、果汁、礼盒是自然延伸——名字锁死单一水果会限制换季生意",
+      ],
+      cases: [
+        { name: "百果园", takeaway: "「百果」写尽品类丰富度，「园」添产地联想：三个字同时回答「你卖什么」与「货从哪来」——中国最大水果连锁的名字教科书" },
+        { name: "Zespri（佳沛）", takeaway: "新西兰奇异果的国家级品牌造词：z 开头的锐利感 + 轻快尾音，把阳光与活力装进两个音节；中文名「佳沛」再译一层「充沛的美好」" },
+        { name: "Driscoll's", takeaway: "创始家族姓氏为每盒莓果背书：生鲜的信任来自「有人负责」——姓氏命名把抽象的品控承诺变成具体的人格担保" },
+        { name: "Dole", takeaway: "创始人 James Dole 的姓氏：单音节四个字母，印在香蕉标签上一百年——生鲜品牌名的终极形态是「短到成为商品本身的一部分」" },
+      ],
+      pitfalls: [
+        "堆砌「鲜果生活超市」类全能词：像批发档口而非品牌——顾客记住的是具体意象，不是品类清单",
+        "锁死单一水果：「西瓜王」冬天怎么办——名字的边界要画在「新鲜果品」而非某个 SKU",
+        "谐音梗过度：「橙心橙意」式的谐音一条街三家用——甜感要来自音节本身而非梗",
+        "只做线下不查线上：外卖平台与社群团购是水果店的第二门面，同名店铺与域名要一起核验",
+      ],
+    },
+    en: {
+      label: "Fruit shops",
+      title: "How to Name a Fruit Shop or Fresh-Produce Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Fruit shop naming guide: freshness roots, origin stories, sweet phonetics, breakdowns of Pagoda/Zespri/Driscoll's, recommended TLDs and pitfalls — then hunt an available fresh-produce domain with AI.",
+      intro:
+        "A fruit shop's name has to taste sweet before the first bite: glanced at on the storefront, skimmed past in a delivery app list, repeated in a neighborhood group order — the name is the first evidence of freshness. The first word bank is freshness roots: fresh, ripe, picked, sweet — fruit is an impulse category, and the freshness in the name joins the buying decision directly. Pagoda (百果园) writes category abundance into \"hundred fruits\" and adds orchard imagery with \"garden\". The second lever is the origin story: the distance from branch to tongue is a fruit shop's hardest selling point — Zespri packs New Zealand sunshine into two syllables, and Driscoll's underwrites every berry box with the founding family's surname; a neighborhood shop can borrow the same move with hill, orchard and grove imagery. The third lever is sweet phonetics: open vowels and playful reduplication carry built-in delight, a natural match for fruit's dopamine appeal. Mind the category boundary: cut fruit, juice and gift boxes are natural extensions — a name welded to one fruit limits the winter business. As for channels, a fruit shop lives in delivery-app lists, group-buy threads and regulars' word of mouth — the name must stay short, sweet and legible at thumbnail size.",
+      namingIdeas: [
+        "Freshness roots: fresh, ripe, picked, sweet — fruit is impulse retail, and freshness in the name joins the buying decision",
+        "Origin imagery: hill, orchard, grove, branch — branch-to-tongue distance is the hardest sell; one word tells the sourcing story",
+        "Sweet phonetics: open vowels and playful doubling read as delight — test by saying \"let's grab fruit at X\" three times",
+        "Surname underwriting: the Driscoll's move — fresh-food trust comes from a specific person answering for quality",
+        "Leave category headroom: cut fruit, juice and gift boxes are natural extensions — don't weld the name to a single SKU",
+      ],
+      cases: [
+        { name: "Pagoda (百果园)", takeaway: "\"Hundred fruits\" spells out abundance while \"garden\" adds orchard provenance: three characters answering both \"what do you sell\" and \"where is it from\" — China's biggest fruit chain as a naming textbook" },
+        { name: "Zespri", takeaway: "A nation-scale coinage for New Zealand kiwifruit: the sharp z opening plus a light ending packs sunshine and zest into two syllables — proof that produce can carry an invented brand word" },
+        { name: "Driscoll's", takeaway: "The founding family's surname underwriting every berry box: fresh-food trust means someone answers for quality — a surname turns abstract QC promises into personal guarantee" },
+        { name: "Dole", takeaway: "James Dole's four-letter surname printed on banana labels for a century: the endgame of produce naming is a name short enough to become part of the product itself" },
+      ],
+      pitfalls: [
+        "Piling up \"fresh fruit life supermarket\" catch-alls: reads as a wholesale stall, not a brand — customers remember one image, not a category list",
+        "Welding to one fruit: what does \"Watermelon King\" sell in January — draw the boundary at fresh produce, not a SKU",
+        "Overdone puns: the same fruit pun shows up three times per street — sweetness should come from the syllables, not the joke",
+        "Checking only the storefront: delivery apps and group-buy channels are the second facade — clear the matching handles and domain together",
+      ],
+    },
+  },
+  seafood: {
+    slug: "seafood",
+    tlds: [
+      { tld: "com", zh: "宴请与礼盒场景的信任底线，海鲜品牌的默认选择", en: "The trust baseline for banquets and gifting — the default for a seafood brand" },
+      { tld: "restaurant", zh: "「餐厅」品类后缀直给业态，海鲜酒楼零解释成本", en: "The restaurant suffix states the trade — zero explanation for a seafood house" },
+      { tld: "market", zh: "「市场」后缀自带渔市烟火气，鲜活直供的意象一秒成立", en: "The market suffix carries fish-market energy — the live-and-direct image lands instantly" },
+    ],
+    zh: {
+      label: "海鲜餐厅",
+      title: "海鲜餐厅与水产品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "海鲜餐厅命名指南：鲜活词根、渔港意象、宴请分量等 5 种思路，Red Lobster/Legal Sea Foods/徐记海鲜等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的海鲜品牌域名。",
+      intro:
+        "海鲜生意的名字先要过「鲜活」这一关：顾客为一个「鲜」字买单，名字里若没有海水的气息，再好的货也要多花口舌解释。第一素材库是鲜活词根：鲜、活、渔、海、潮——海鲜是信任密集品类，「今天的货新不新鲜」的疑虑要在名字层面先消解一半；徐记海鲜用「徐记」的姓氏担保加「海鲜」的品类直给，把「有人负责」写进招牌。第二个抓手是渔港意象：码头、渔市、船长、灯塔——Red Lobster 用一只具体的红龙虾做名字，画面感直接变成招牌与吉祥物；渔港词根让内陆城市的店也能借到海边的可信度。第三个抓手是宴请分量：海鲜在中餐语境常是宴请与礼盒场景，名字要托得住商务饭局——「XX 渔港」「XX 海鲜酒楼」的结构自带正席感。要注意价格心智的分寸：名字太奢会吓退家庭客，太市井又撑不起大单——鲜活与体面要在名字里平衡。渠道上，海鲜品牌活在大众点评榜单、宴请转述和礼盒包装上——名字要经得起「今晚去 XX 吃海鲜」的口头传播。",
+      namingIdeas: [
+        "鲜活词根：鲜、活、渔、潮——海鲜是信任密集品类，「新不新鲜」的疑虑要在名字层面先消解",
+        "渔港意象：码头、渔市、船长、灯塔——具体画面直接变成招牌与吉祥物，内陆店也能借到海边可信度",
+        "姓氏+品类直给：徐记海鲜式结构——「有人负责」的姓氏担保是生鲜餐饮最硬的信任资产",
+        "宴请分量测试：把名字放进「今晚 XX 请客」念一遍——托不住商务饭局的名字接不到大单",
+        "价格心智平衡：太奢吓退家庭客、太市井撑不起礼盒——鲜活与体面要在名字里各占一半",
+      ],
+      cases: [
+        { name: "Red Lobster", takeaway: "一只具体的红龙虾做名字：品类里最有食欲的单品直接当招牌——画面感强到 logo、吉祥物、儿童蜡笔画都不用另想创意" },
+        { name: "Legal Sea Foods", takeaway: "「合法」一词的怪诞信任感：源自创始家族杂货店的诚信口碑「if it isn't fresh, it isn't Legal」——名字自带品控口号，怪得让人记住" },
+        { name: "徐记海鲜", takeaway: "「徐记」姓氏担保 +「海鲜」品类直给：湘派海鲜连锁把「有人负责」写进招牌——宴请场景里姓氏比造词更托底" },
+        { name: "獐子岛", takeaway: "用真实海岛做名字：产地即品牌——「獐子岛的扇贝」把地理坐标变成品质承诺，源头命名在水产品类的极致用法" },
+      ],
+      pitfalls: [
+        "堆砌「海鲜大排档城」类全能词：像美食广场而非品牌——宴请客要的是具体的信任锚点",
+        "奢华词透支：「皇家御品海鲜」式的名字家庭客不敢进——海鲜的日常化趋势下，体面不等于昂贵",
+        "锁死单一水产：「蚝王」旺季之外怎么办——名字边界画在「海味」而非某个单品，除非单品即战略",
+        "忽略外文可读性：做游客与出海生意时，中文名的拼音要能被非中文顾客念出——菜单与点评页是第二招牌",
+      ],
+    },
+    en: {
+      label: "Seafood restaurants",
+      title: "How to Name a Seafood Restaurant or Fishery Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Seafood naming guide: freshness-and-live roots, harbor imagery, banquet weight, breakdowns of Red Lobster/Legal Sea Foods/Zoneco, recommended TLDs and pitfalls — then hunt an available seafood-brand domain with AI.",
+      intro:
+        "A seafood name must pass the freshness test before anything else: customers pay for the word \"fresh\", and a name with no sea air in it makes even the best catch harder to sell. The first word bank is live-and-fresh roots: fresh, live, catch, tide, harbor — seafood is a trust-intensive category, and the \"is today's catch fresh?\" doubt should be half-answered at the name level; Xu Ji Seafood stacks a family surname guarantee onto the plain category word, writing \"someone answers for this\" onto the signboard. The second lever is harbor imagery: dock, fish market, captain, lighthouse — Red Lobster made one specific red lobster the entire brand, and the image became signboard and mascot for free; harbor roots let even an inland restaurant borrow coastal credibility. The third lever is banquet weight: seafood often anchors business dinners and gift boxes — the name must hold up when someone says \"I'm hosting at X tonight\". Mind the price-perception balance: too opulent scares off families, too street-stall can't carry the gift box — freshness and dignity should share the name evenly. As for channels, a seafood brand lives on review-site rankings, banquet referrals and gift packaging — the name must survive being spoken across a dinner table.",
+      namingIdeas: [
+        "Live-and-fresh roots: fresh, live, catch, tide — seafood is trust-intensive; defuse the freshness doubt at the name level",
+        "Harbor imagery: dock, market, captain, lighthouse — one concrete image becomes signboard and mascot; inland shops borrow coastal credibility",
+        "Surname plus plain category: the Xu Ji Seafood structure — a family name answering for freshness is the hardest trust asset in fresh dining",
+        "The banquet test: say \"I'm hosting at X tonight\" — a name that can't carry a business dinner never lands the big tables",
+        "Price-perception balance: too opulent repels families, too stall-like can't carry gifting — let freshness and dignity split the name",
+      ],
+      cases: [
+        { name: "Red Lobster", takeaway: "One specific red lobster as the whole brand: the category's most appetizing creature straight onto the sign — imagery so strong the logo, mascot and kids' crayon menu design themselves" },
+        { name: "Legal Sea Foods", takeaway: "The oddball trust of \"legal\": born from the founding family's grocery-store honesty and the slogan \"if it isn't fresh, it isn't Legal\" — a name that ships with its own QC motto, strange enough to stick" },
+        { name: "Xu Ji Seafood (徐记海鲜)", takeaway: "Surname guarantee plus plain category: the Hunan seafood chain writes \"someone answers for this\" onto the signboard — in banquet contexts a family name outweighs any coinage" },
+        { name: "Zoneco (獐子岛)", takeaway: "A real island as the brand: origin is the promise — \"scallops from Zhangzi Island\" turns a geographic coordinate into a quality claim; source naming at its purest in the fishery category" },
+      ],
+      pitfalls: [
+        "Piling up \"seafood plaza city\" catch-alls: reads as a food court, not a brand — banquet hosts need a concrete trust anchor",
+        "Opulence overdraft: \"Royal Imperial Seafood\" names scare families away — as seafood goes everyday, dignity no longer means expensive",
+        "Welding to one species: what does \"Oyster King\" serve off-season — draw the boundary at seafood unless the single item is the strategy",
+        "Ignoring cross-language readability: for tourist and export business, the name must be pronounceable by non-Chinese guests — the menu and review page are the second signboard",
+      ],
+    },
+  },
+  tailor: {
+    slug: "tailor",
+    tlds: [
+      { tld: "com", zh: "高客单与商务客群的信任底线，定制品牌的默认选择", en: "The trust baseline for high-ticket business clients — the default for a tailoring brand" },
+      { tld: "style", zh: "「风格」后缀直给着装主张，定制工作室的气质延伸", en: "The style suffix states a dressing philosophy — a natural extension for a tailoring studio" },
+      { tld: "boutique", zh: "「精品店」后缀自带小而精的手工感，与定制业态同频", en: "The boutique suffix carries small-and-fine craft energy — in tune with made-to-measure" },
+    ],
+    zh: {
+      label: "服装定制",
+      title: "服装定制与裁缝工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "服装定制命名指南：手工词根、量体意象、绅装传统等 5 种思路，Suitsupply/Indochino/红都等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的定制品牌域名。",
+      intro:
+        "定制西服的名字是穿在身上之前的第一次「合身」：客人把几千上万元交给一家店之前，名字要先证明你懂剪裁、懂场合、懂他要出席的那个时刻。第一素材库是手工词根：裁、缝、剪、量、工——定制卖的是「为你一人而作」的手艺感，Indochino 的造词自带异域裁缝行的想象，「量体裁衣」四个字本身就是这个行业的命名词库。第二个抓手是绅装传统：萨维尔街百年店以创始人姓氏立牌（Gieves & Hawkes），姓氏即工艺担保——中文语境的「红都」则借国字号的历史背书，做过国家领导人服装的出身就是最硬的名片。第三个抓手是场合叙事：定制的消费动机是人生时刻——婚礼、履新、答辩、上市敲钟，名字要托得住「人生最重要的一天穿它」的分量。要注意现代化的分寸：Suitsupply 证明定制也可以年轻直接——「西装+供给」的直白结构撕掉了老派绅装的距离感；名字太古典会吓退第一次定制的年轻客。渠道上，定制品牌活在婚博会展位、老客转介绍和试衣间镜子前的自我介绍里——名字要经得起「我这套是在 XX 做的」的炫耀式转述。",
+      namingIdeas: [
+        "手工词根：裁、缝、量、工——定制卖「为你一人而作」的手艺感，量体裁衣本身就是命名词库",
+        "姓氏立牌：Gieves & Hawkes 式的创始人姓氏——定制的信任来自「谁在为你剪裁」，姓氏即工艺担保",
+        "场合叙事：婚礼、履新、敲钟——定制的动机是人生时刻，名字要托得住「最重要的一天穿它」",
+        "现代直白结构：Suitsupply 式的品类+动作——撕掉老派距离感，第一次定制的年轻客更敢进店",
+        "东方语境借历史：红都式的出身背书——做过谁的衣服比说什么都硬，有历史就把历史写进名字",
+      ],
+      cases: [
+        { name: "Suitsupply", takeaway: "suit + supply 的直白合成：把「西装供给」说得像日用品——刻意去神秘化的名字撕掉绅装距离感，年轻人第一套定制的心理门槛被一个名字降低" },
+        { name: "Indochino", takeaway: "Indo + chino 的异域造词：线上量体定制的先行者用名字暗示「东方裁缝行的手艺、互联网的价格」——造词自带的想象空间正是品牌故事的留白" },
+        { name: "红都", takeaway: "国字号历史背书：为国家领导人制装的出身写进「红」字——中文定制语境里，出身与历史是比任何形容词都硬的名片" },
+        { name: "Gieves & Hawkes", takeaway: "萨维尔街一号的双姓氏招牌：两百年的裁缝世家以姓氏立牌——定制行业的终极信任结构是「名字后面站着具体的人」" },
+      ],
+      pitfalls: [
+        "堆砌「高端私人定制」形容词：定制的「高端」要由姓氏、出身或手艺细节证明——形容词自夸恰恰显得没底气",
+        "过度古典吓退新客：全英文老式绅装腔的名字让第一次定制的年轻人不敢推门——现代直白也是一种高级",
+        "锁死西服品类：衬衫、大衣、旗袍、礼服都是自然延伸——名字边界画在「量体定制」而非某个品类",
+        "忽略口头炫耀场景：「我这套是在 XX 做的」是定制最贵的免费广告——拗口的名字让老客想转介绍都开不了口",
+      ],
+    },
+    en: {
+      label: "Custom tailoring",
+      title: "How to Name a Tailoring Studio or Made-to-Measure Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Tailoring naming guide: craft roots, fitting imagery, sartorial heritage, breakdowns of Suitsupply/Indochino/Gieves & Hawkes, recommended TLDs and pitfalls — then hunt an available tailoring-brand domain with AI.",
+      intro:
+        "A tailoring brand's name is the first fitting before anything is worn: before a client hands over four figures, the name must prove you understand cut, occasion, and the moment he is dressing for. The first word bank is craft roots: cut, stitch, measure, cloth — made-to-measure sells the feeling of \"made for you alone\", and the entire vocabulary of the fitting room is a naming word bank; Indochino's coinage conjures an exotic tailoring house in four syllables. The second lever is sartorial heritage: Savile Row houses stand on founders' surnames (Gieves & Hawkes) — the surname is the craft guarantee; in the Chinese context, Hongdu (红都) leans on state-house history, and having dressed national leaders is the hardest calling card there is. The third lever is occasion narrative: the motive for bespoke is a life moment — a wedding, a new post, an IPO bell — and the name must carry the weight of \"I wore it on the most important day\". Mind the modernization balance: Suitsupply proved tailoring can be young and direct — the plain suit-plus-supply structure strips away old-world distance, while an overly classical name scares off first-time clients. As for channels, a tailoring brand lives at wedding expos, in client referrals and in front of the fitting-room mirror — the name must survive the proud retelling of \"mine was made at X\".",
+      namingIdeas: [
+        "Craft roots: cut, stitch, measure, cloth — bespoke sells \"made for you alone\", and the fitting room's vocabulary is your word bank",
+        "Surname houses: the Gieves & Hawkes structure — tailoring trust asks \"who cuts for you\"; a surname is the craft guarantee",
+        "Occasion narrative: weddings, new posts, IPO bells — bespoke is bought for life moments; the name must hold that weight",
+        "Modern plain structures: the Suitsupply move — category plus verb strips old-world distance and lowers the first-timer's threshold",
+        "Borrow history where you have it: the Hongdu move — who you have dressed beats any adjective; if there is heritage, write it in",
+      ],
+      cases: [
+        { name: "Suitsupply", takeaway: "The plainest possible blend, suit + supply: talking about tailoring like a utility — deliberate demystification that strips sartorial distance and lowers the young first-timer's threshold with the name alone" },
+        { name: "Indochino", takeaway: "Indo + chino, an exotic coinage: the online made-to-measure pioneer hints \"Eastern tailoring craft at internet prices\" — the imaginative space a coined word leaves open is exactly where the brand story lives" },
+        { name: "Hongdu (红都)", takeaway: "State-house heritage in one character: having tailored for national leaders written into \"red\" — in Chinese bespoke, provenance and history outweigh any adjective" },
+        { name: "Gieves & Hawkes", takeaway: "The double-surname signboard at No.1 Savile Row: two centuries of tailoring dynasties standing behind their names — the ultimate trust structure is a name with specific people behind it" },
+      ],
+      pitfalls: [
+        "Piling on \"premium private bespoke\" adjectives: premium must be proven by surname, provenance or craft detail — self-praise reads as insecurity",
+        "Over-classical intimidation: a full old-world sartorial register keeps first-time young clients from pushing the door — modern plainness is its own kind of luxury",
+        "Welding to suits: shirts, coats, qipao and gowns are natural extensions — draw the boundary at made-to-measure, not one garment",
+        "Ignoring the bragging scenario: \"mine was made at X\" is bespoke's most expensive free ad — a clumsy name keeps loyal clients from referring you",
+      ],
+    },
+  },
+  equestrian: {
+    slug: "equestrian",
+    tlds: [
+      { tld: "com", zh: "高客单会籍与马匹交易的信任底线，马术品牌的默认选择", en: "The trust baseline for high-ticket memberships and horse trading — the default for an equestrian brand" },
+      { tld: "club", zh: "「俱乐部」后缀直给会籍业态，马术圈的身份感同频", en: "The club suffix states the membership model — in tune with equestrian identity" },
+      { tld: "farm", zh: "「农场」后缀自带马场与牧地意象，自繁自养的故事一秒成立", en: "The farm suffix carries stable-and-pasture imagery — the homebred story lands instantly" },
+    ],
+    zh: {
+      label: "马术俱乐部",
+      title: "马术俱乐部与马房品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "马术俱乐部命名指南：骑士传统、马房意象、会籍身份感等 5 种思路，爱马仕/Ariat/天星调良等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的马术品牌域名。",
+      intro:
+        "马术俱乐部的名字要先回答一个问题：家长愿不愿意把孩子和一小时几百元的课时费托付给你。马术在中文市场是「贵族运动」的代名词，名字既要托得住这份想象，又不能虚到只剩贵气。第一素材库是骑士传统：鞍、缰、蹄、骑士、庄园——马术是全球运动里传统最深的品类之一，爱马仕从马具作坊起家，马车 logo 与名字共同讲了两百年的马文化故事；借传统词根等于借整个行业的历史背书。第二个抓手是马房意象：牧场、橡树、溪谷、围场——英语马圈的俱乐部惯以「XX Farm」「XX Stables」命名，地名+马房的结构自带「有真实场地与马匹」的可信度，天星调良用「调良」（调教良马）把专业训练写进名字。第三个抓手是会籍身份感：马术消费一半是运动一半是圈层——名字要让会员愿意印在马术服上、晒在朋友圈里。要注意专业与亲子的平衡：纯贵族腔吓退体验课家长，太卡通又撑不起赛事与马匹交易——青少年马术是现金流，专业形象是天花板。渠道上，马术俱乐部活在家长圈转介绍、赛事秩序册和马术服刺绣上——名字要经得起绣在胸口的审视。",
+      namingIdeas: [
+        "骑士传统词根：鞍、缰、骑士、庄园——马术是传统最深的运动品类，借传统词根即借行业历史背书",
+        "马房意象结构：地名+Farm/Stables——「有真实场地与马匹」的可信度自带，英语马圈的命名惯例",
+        "专业训练直给：调良式的「调教良马」——把训练专业度写进名字，家长为专业买单",
+        "会籍身份感：名字要值得绣在马术服胸口——马术消费一半是运动一半是圈层认同",
+        "专业与亲子平衡：纯贵族腔吓退体验课家长、太卡通撑不起赛事——青少年是现金流，专业是天花板",
+      ],
+      cases: [
+        { name: "爱马仕（Hermès）", takeaway: "马具作坊的姓氏起家：马车 logo 与名字共同讲了两百年马文化——奢侈品之王的原点证明马术传统是可以传承百年的品牌资产" },
+        { name: "Ariat", takeaway: "取自传奇赛马 Secretariat 的尾音：马靴品牌把「史上最伟大赛马」的血统藏进名字——圈内人会心一笑的彩蛋式命名" },
+        { name: "天星调良", takeaway: "「调良」即调教良马：把训练专业度写进名字，「天星」再添一层高远意象——中国马术俱乐部标杆的专业感命名范本" },
+        { name: "Godolphin", takeaway: "以十八世纪三大始祖公马之一 Godolphin Arabian 命名：全球最大赛马团队直接借血统史立牌——马圈命名的终极招数是把系谱写进名字" },
+      ],
+      pitfalls: [
+        "贵族词堆砌：「皇家贵族马会」式名字虚而无物——马术的贵气要由马匹、教练与场地证明，不是形容词",
+        "卡通化透支专业：太幼儿园气质的名字接不住赛事、马匹交易与成人会籍——青少年业务不等于儿童品牌",
+        "忽略英文名：马术是国际化运动，赛事秩序册与马匹护照都需要英文名——中英文要一起定",
+        "锁死单一场地：分店、马术营地、赛事队都是延伸方向——名字边界画在「马术」而非某块场地",
+      ],
+    },
+    en: {
+      label: "Equestrian clubs",
+      title: "How to Name an Equestrian Club or Stable: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Equestrian naming guide: riding heritage, stable imagery, membership identity, breakdowns of Hermès/Ariat/Godolphin, recommended TLDs and pitfalls — then hunt an available equestrian-brand domain with AI.",
+      intro:
+        "An equestrian club's name must first answer one question: will a parent trust you with their child and a triple-digit hourly lesson fee? Riding trades on heritage more than almost any sport, and the name must carry that aristocratic imagination without dissolving into empty poshness. The first word bank is riding heritage: saddle, rein, hoof, knight, manor — Hermès began as a harness workshop, and its carriage logo has told a two-hundred-year horse story alongside the name; borrowing heritage roots borrows the entire sport's historical credit. The second lever is stable imagery: pasture, oak, creek, paddock — English-speaking barns habitually name as \"X Farm\" or \"X Stables\", a place-plus-stable structure that carries built-in proof of real grounds and real horses; Equuleus (天星调良) writes horse-schooling professionalism straight into its Chinese name. The third lever is membership identity: equestrian spend is half sport, half social circle — the name must be worth embroidering on a show jacket and posting from the stands. Mind the professional-versus-family balance: pure aristocratic register scares off trial-lesson parents, while cartoonish warmth can't carry competitions and horse trading — junior riding is the cash flow, professional standing is the ceiling. As for channels, a club lives in parent referrals, event programs and jacket embroidery — the name must survive scrutiny stitched on a chest.",
+      namingIdeas: [
+        "Riding-heritage roots: saddle, rein, knight, manor — the sport's deep tradition is a credit line; heritage roots borrow it whole",
+        "Stable-imagery structure: place plus Farm/Stables — built-in proof of real grounds and horses; the naming convention of the barn world",
+        "Schooling professionalism: the Equuleus move — write horse-training expertise into the name; parents pay for professionalism",
+        "Membership identity: the name must deserve embroidery on a show jacket — equestrian spend is half sport, half circle",
+        "Balance professional and family: pure posh scares trial parents, cartoonish can't hold competitions — juniors fund you, professionalism ceilings you",
+      ],
+      cases: [
+        { name: "Hermès", takeaway: "A harness workshop's surname: the carriage logo and the name telling two centuries of horse culture together — luxury's crown proving equestrian heritage compounds as brand equity for a hundred years" },
+        { name: "Ariat", takeaway: "Clipped from Secretariat, the greatest racehorse: a riding-boot brand hiding legendary bloodline in its tail syllables — insider-wink naming that the barn aisle decodes instantly" },
+        { name: "Equuleus (天星调良)", takeaway: "\"Schooling fine horses\" written into the Chinese name, with a constellation for altitude: China's benchmark club naming professionalism itself — expertise as the brand promise" },
+        { name: "Godolphin", takeaway: "Named for the Godolphin Arabian, one of three foundation sires: the world's largest racing operation standing on pedigree history — the horse world's ultimate move is writing the studbook into the name" },
+      ],
+      pitfalls: [
+        "Piling up royal words: \"Royal Aristocrat Equestrian Society\" says nothing — poshness must be proven by horses, coaches and grounds, not adjectives",
+        "Cartoonish overdraft: a kindergarten-toned name can't hold competitions, horse sales or adult memberships — a junior program is not a children's brand",
+        "Skipping the English name: riding is international — event programs and horse passports need it; fix both languages together",
+        "Welding to one property: branches, riding camps and show teams are natural extensions — draw the boundary at equestrian, not one address",
+      ],
+    },
+  },
+  archery: {
+    slug: "archery",
+    tlds: [
+      { tld: "com", zh: "连锁化与青少年培训的信任底线，射箭馆的默认选择", en: "The trust baseline for chains and junior programs — the default for an archery brand" },
+      { tld: "club", zh: "「俱乐部」后缀直给会员业态，箭馆的圈子感同频", en: "The club suffix states the membership model — in tune with range community" },
+      { tld: "fun", zh: "「好玩」后缀直给娱乐属性，团建与约会场景零解释", en: "The fun suffix states entertainment outright — zero explanation for team outings and dates" },
+    ],
+    zh: {
+      label: "射箭馆",
+      title: "射箭馆与弓箭品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "射箭馆命名指南：命中意象、武侠借词、专注气质等 5 种思路，Hoyt/Mathews/Easton 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的射箭品牌域名。",
+      intro:
+        "射箭馆的名字要在顾客拉弓之前先「上靶」：这门生意一半卖体验的爽感，一半卖专注的气质——名字要同时接住团建局的热闹与箭道上的安静。第一素材库是命中意象：靶、心、中、矢、贯——「正中靶心」是全人类通用的爽感隐喻，名字里带命中感，团建组织者在列表里一眼就懂你卖什么。第二个抓手是武侠与神话借词：百步穿杨、后羿、罗宾汉、阿波罗——射箭是被故事包裹最厚的运动之一，中文语境的射雕意象与英语语境的 Robin Hood 各有一整个词库可借。第三个抓手是专注气质：弓道文化把射箭升华为修心——静、息、定的词根能把箭馆从「游乐项目」升维到「都市人的静心道场」，客单价与复购逻辑随之改变。要注意器材专业线的分野：Hoyt、Mathews、Easton 等国际弓箭器材品牌全是创始人姓氏——竞技线卖的是工程精度与冠军背书，娱乐馆卖的是画面与爽感，两条线的命名逻辑不要混。渠道上，射箭馆活在团建平台列表、点评榜单和「上次去的那家箭馆」的转述里——名字要短到能进一句约人的微信消息。",
+      namingIdeas: [
+        "命中意象：靶、心、中、矢——「正中靶心」是全人类通用的爽感隐喻，团建组织者一眼懂你卖什么",
+        "武侠神话借词：百步穿杨、后羿、罗宾汉——射箭被故事包裹最厚，中英文各有整个词库可借",
+        "专注气质升维：静、息、定——弓道式的修心叙事把箭馆从游乐项目升维到静心道场，客单价随之改变",
+        "娱乐与竞技分线：娱乐馆卖画面爽感、竞技线卖工程精度——两条线命名逻辑不同，先定业态再起名",
+        "约局句式测试：把名字放进「周五去 XX 射箭」的微信消息念一遍——太长太拗口的名字进不了约局",
+      ],
+      cases: [
+        { name: "Hoyt", takeaway: "创始人 Earl Hoyt 的姓氏：奥运领奖台上的弓是最硬的广告——竞技器材的信任结构是「姓氏+冠军背书」，四个字母足够" },
+        { name: "Mathews", takeaway: "创始人 Matt McPherson 的名字变体：单凸轮技术的发明者以名立牌——器材品类里技术专利与人名绑定，名字即专利书署名" },
+        { name: "Easton", takeaway: "从箭杆做到奥运标准的家族姓氏：全球竞技箭杆的代名词——一个品类做到「提到箭就想到它」，姓氏就升格为品类词" },
+        { name: "Bear Archery", takeaway: "创始人 Fred Bear 的姓氏恰好是「熊」：人名与野性意象的天然双关——传统猎弓的粗犷气质被一个姓氏说尽，命名运气也是实力" },
+      ],
+      pitfalls: [
+        "堆砌「箭馆运动中心」类全能词：像体育场馆招标文件——顾客记住的是「正中靶心」的画面，不是设施清单",
+        "武侠腔过度：满名的「神雕」「箭神」在点评列表里挤成一片——借词要借气质而非贴标签",
+        "娱乐竞技混线：既想接团建又想卖竞技培训的名字两头不靠——先定主业态，另一条线用子品牌",
+        "忽略安全与专业暗示：家长送孩子学箭最关心安全——名字太嬉闹会让青少年培训线失去家长信任",
+      ],
+    },
+    en: {
+      label: "Archery ranges",
+      title: "How to Name an Archery Range or Bow Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Archery naming guide: bullseye imagery, legend borrowings, focus-and-zen framing, breakdowns of Hoyt/Mathews/Easton, recommended TLDs and pitfalls — then hunt an available archery-brand domain with AI.",
+      intro:
+        "An archery range's name must hit the target before the customer draws a bow: this business sells the thrill of the hit and the quiet of the shooting line in equal halves, and the name has to hold both the team-outing buzz and the meditative hush. The first word bank is bullseye imagery: target, mark, arrow, strike, true — \"dead center\" is a universal metaphor for satisfaction, and a name with hit-energy tells the team-outing organizer at a glance what you sell. The second lever is legend borrowing: Robin Hood, Apollo, Artemis in English; Hou Yi and the willow-piercing archer in Chinese — few sports are wrapped in thicker story, and each language offers a whole word bank. The third lever is focus-and-zen framing: kyudo culture elevates archery into mind training — roots like still, breath and steady can lift a range from \"amusement activity\" to \"an urban meditation hall with arrows\", changing price point and repeat logic with it. Mind the equipment-line divide: Hoyt, Mathews and Easton are all founders' surnames — competitive gear sells engineering precision and podium credit, while recreational ranges sell imagery and thrill; don't mix the two naming logics. As for channels, a range lives on team-building platforms, review rankings and \"that archery place we went to\" retellings — the name must be short enough to fit a Friday-night group chat invite.",
+      namingIdeas: [
+        "Bullseye imagery: target, mark, strike, true — \"dead center\" is a universal thrill metaphor; organizers get it at a glance",
+        "Legend borrowings: Robin Hood, Apollo, Hou Yi — archery is wrapped in story; each language offers a full word bank",
+        "Focus-and-zen framing: still, breath, steady — the kyudo register lifts a range from amusement to meditation, and price with it",
+        "Split recreation from competition: ranges sell thrill, gear sells precision — two naming logics; fix the business model first",
+        "The group-chat test: put the name in \"archery at X this Friday?\" — a long or clumsy name never makes the invite",
+      ],
+      cases: [
+        { name: "Hoyt", takeaway: "Earl Hoyt's surname: bows on Olympic podiums are the hardest ad — competitive gear's trust structure is surname plus champion credit, and four letters suffice" },
+        { name: "Mathews", takeaway: "A twist on founder Matt McPherson's name: the solo-cam inventor standing behind his invention — in gear categories the patent and the personal name bind; the brand reads as a signature" },
+        { name: "Easton", takeaway: "The family surname that became the world standard for arrow shafts: when a category thinks of arrows and thinks of you, a surname graduates into the category word itself" },
+        { name: "Bear Archery", takeaway: "Founder Fred Bear's surname happens to mean the animal: a natural pun binding a person to wild imagery — traditional bowhunting's rugged soul said in one name; naming luck is also strength" },
+      ],
+      pitfalls: [
+        "Piling up \"archery sports center\" catch-alls: reads like a stadium tender document — customers remember the bullseye image, not the facility list",
+        "Legend overdose: every range named \"Arrow God\" crowds the same review page — borrow the aura, not the label",
+        "Mixing recreation and competition: one name chasing both team outings and elite training lands neither — pick the core line, sub-brand the other",
+        "Ignoring the safety signal: parents choosing a junior program care about safety first — an overly rowdy name costs the training line its trust",
+      ],
+    },
+  },
+  immigration: {
+    slug: "immigration",
+    tlds: [
+      { tld: "com", zh: "重决策高客单的信任底线，移民咨询的默认选择", en: "The trust baseline for heavyweight decisions — the default for an immigration consultancy" },
+      { tld: "global", zh: "「全球」后缀直给跨境属性，身份规划的格局感同频", en: "The global suffix states the cross-border trade — in tune with identity planning" },
+      { tld: "international", zh: "「国际」后缀自带机构分量，正式文书与官网同频", en: "The international suffix carries institutional weight — at home on formal papers" },
+    ],
+    zh: {
+      label: "移民咨询",
+      title: "移民咨询与签证服务品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "移民咨询命名指南：跨越意象、专业信任、无边界叙事等 5 种思路，Fragomen/Boundless/Envoy 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的移民服务域名。",
+      intro:
+        "移民是普通家庭一生中最重的决策之一：动辄百万的投入、数年的周期、一家人的未来——移民咨询的名字要配得上这份托付的重量。第一素材库是专业信任：全球移民法务巨头 Fragomen 以创始人姓氏立牌七十年，律所式的姓氏命名把「有执照的专业人士对结果负责」写进品牌——重决策品类里，姓氏比任何创意词都让人安心。第二个抓手是跨越意象：桥、门、途、岸、翼——移民的本质是从此岸到彼岸的跨越，Boundless（无边界）把「世界不该有墙」的价值主张直接当名字，一个词同时完成定位与站队。第三个抓手是使者叙事：Envoy（使节）把服务角色写进名字——「我们是你与移民局之间的专业使者」，角色词让复杂的服务一秒具象。要注意合规的分寸：移民广告受严格监管，名字里暗示「保过」「特批」的词根是合规红线；「XX 成功移民」式的名字既违规又显得像中介而非顾问。渠道上，移民咨询活在搜索引擎、老客转介绍和签证论坛的口碑帖里——名字要经得起「我找的是 XX」在家庭饭桌上被反复讨论与查证。",
+      namingIdeas: [
+        "姓氏立牌：Fragomen 式的律所命名——重决策品类里「有执照的人对结果负责」比创意词更安心",
+        "跨越意象：桥、门、途、岸、翼——移民是此岸到彼岸的跨越，意象词让服务一秒具象",
+        "价值主张直给：Boundless 式的「无边界」——把世界观当名字，定位与站队一词完成",
+        "使者角色词：Envoy 式的服务角色——「你与移民局之间的专业使者」，角色让复杂服务具象",
+        "合规预检：暗示保过、特批的词根是红线——移民广告强监管，名字先过合规再谈创意",
+      ],
+      cases: [
+        { name: "Fragomen", takeaway: "创始人姓氏立牌七十年：全球最大移民律所用姓氏承诺「有执照的专业人士对结果负责」——重决策品类的信任终极结构" },
+        { name: "Boundless", takeaway: "「无边界」直接当名字：价值主张、产品体验与政治站队一词完成——移民科技公司把「世界不该有墙」写进品牌的教科书案例" },
+        { name: "Envoy Global", takeaway: "「使节」+「全球」：服务角色与业务边界两个词说尽——企业移民服务的复杂性被一个角色词瞬间具象" },
+        { name: "VisaHQ", takeaway: "「签证总部」的品类词直给：搜索导向的命名——用户搜什么名字就是什么，工具型签证服务用直白换搜索独占的务实打法" },
+      ],
+      pitfalls: [
+        "暗示保过与特批：「必成」「直通」词根是合规红线——移民广告强监管，违规的名字连投放资格都没有",
+        "中介腔透支信任：「XX 出国服务部」式的名字像柜台而非顾问——重决策客户要的是专业人格，不是办事窗口",
+        "锁死单一国家：「XX 加拿大移民」在政策收紧时无路可退——名字边界画在「身份规划」而非某国项目",
+        "忽略多语言可读性：客户与移民局分处两个语言世界——中英文名要一起定，且英文名要经得起官方文书署名",
+      ],
+    },
+    en: {
+      label: "Immigration consulting",
+      title: "How to Name an Immigration Consultancy or Visa Service: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Immigration consulting naming guide: crossing imagery, professional trust, boundless narratives, breakdowns of Fragomen/Boundless/Envoy, recommended TLDs and pitfalls — then hunt an available immigration-brand domain with AI.",
+      intro:
+        "Immigration is one of the heaviest decisions a family ever makes: six-figure sums, multi-year timelines, everyone's future — and the consultancy's name must deserve that weight of trust. The first word bank is professional trust: Fragomen, the global immigration-law giant, has stood on its founder's surname for seventy years — law-firm surname naming writes \"a licensed professional answers for the outcome\" into the brand, and in heavyweight categories a surname soothes more than any clever coinage. The second lever is crossing imagery: bridge, gate, passage, shore, wing — immigration is at heart a crossing from one shore to another; Boundless made a worldview its entire name, completing positioning and stance-taking in one word. The third lever is the envoy narrative: Envoy writes the service role itself into the name — \"your professional emissary to the immigration office\" — and a role word makes an intricate service concrete in a second. Mind the compliance line: immigration advertising is tightly regulated, and roots implying guaranteed approval or special channels are red lines — a \"Surefire Migration\" name is both non-compliant and agent-flavored rather than advisory. As for channels, a consultancy lives in search results, client referrals and visa-forum testimony — the name must survive being discussed and background-checked at a family dinner table, again and again.",
+      namingIdeas: [
+        "Surname houses: the Fragomen structure — in heavyweight decisions, \"a licensed person answers for the outcome\" beats clever coinage",
+        "Crossing imagery: bridge, gate, passage, shore, wing — immigration is a shore-to-shore crossing; imagery makes the service concrete",
+        "Worldview as name: the Boundless move — positioning and stance-taking completed in a single value-laden word",
+        "Envoy role words: name the role you play — \"your emissary to the immigration office\" makes intricate service instantly legible",
+        "Compliance pre-clearing: roots implying guaranteed approval are red lines — regulated advertising means compliance before creativity",
+      ],
+      cases: [
+        { name: "Fragomen", takeaway: "A founder's surname standing for seventy years: the world's largest immigration law firm promising \"licensed professionals answer for outcomes\" — the ultimate trust structure for heavyweight decisions" },
+        { name: "Boundless", takeaway: "A worldview as the entire name: value proposition, product feel and political stance in one word — the textbook case of an immigration-tech brand writing \"the world shouldn't have walls\" into its identity" },
+        { name: "Envoy Global", takeaway: "Emissary plus global: the service role and the business boundary said in two words — corporate immigration's intricacy made concrete by a single role word" },
+        { name: "VisaHQ", takeaway: "The category word served plain: search-driven naming — be exactly what users type; a tool-grade visa service trading flair for search ownership, pragmatism as strategy" },
+      ],
+      pitfalls: [
+        "Implying guaranteed approval: \"surefire\" and \"fast-track\" roots are compliance red lines — a non-compliant name can't even buy ads",
+        "Agent-counter register: \"X Going-Abroad Service Desk\" names read as a counter window, not counsel — heavyweight clients want a professional persona",
+        "Welding to one country: \"X Canada Immigration\" has no exit when policy tightens — draw the boundary at identity planning, not one program",
+        "Ignoring bilingual duty: clients and immigration offices live in two languages — fix both names together, and the English one must survive official filings",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

@@ -1557,6 +1557,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个独立新闻媒体与资讯订阅品牌，寓意「替读者核实过了、配得上你的时间」；气质要独立锐利又稳重可信、绝不像流量营销号；场景是「据 XX 报道」的转引、订阅邮件发件人栏和读者「你看的哪家」的转述里都立得住。",
     en: "An independent news outlet brand. The name should promise verified-for-you journalism worth your time; the vibe is independent and sharp yet steady and credible, never a traffic-chasing content farm; it must hold up in \"according to X\" citations, the newsletter sender line, and readers' \"which one do you read?\" referrals.",
   },
+  {
+    slug: "fruitshop",
+    labelZh: "水果店",
+    labelEn: "Fruit shops",
+    zh: "一个水果店与生鲜果切品牌，寓意「从枝头到舌尖、每天都新鲜」；气质要甜而清爽、有产地故事又亲切日常、绝不像批发档口；场景是社区门头招牌、外卖平台列表和团购接龙里的「今天去 XX 买点水果」都立得住。",
+    en: "A fruit shop and fresh-cut brand. The name should promise branch-to-tongue freshness every day; the vibe is sweet and crisp, orchard-storied yet neighborly, never a wholesale stall; it must hold up on a storefront sign, in delivery-app lists, and in the group-buy thread's \"grabbing fruit at X today\".",
+  },
+  {
+    slug: "seafood",
+    labelZh: "海鲜餐厅",
+    labelEn: "Seafood restaurants",
+    zh: "一个海鲜餐厅与水产品牌，寓意「今日到港、鲜活有人负责」；气质要鲜活体面、有渔港烟火气又托得住宴请、绝不像美食广场档口；场景是门头灯箱、大众点评榜单和「今晚 XX 请客」的转述里都立得住。",
+    en: "A seafood restaurant brand. The name should promise today's catch with someone answering for freshness; the vibe is lively yet dignified, fish-market warm yet banquet-worthy, never a food-court stall; it must hold up on the lightbox sign, in review rankings, and in \"I'm hosting at X tonight\".",
+  },
+  {
+    slug: "tailor",
+    labelZh: "服装定制",
+    labelEn: "Custom tailoring",
+    zh: "一个服装定制与裁缝工作室品牌，寓意「为你一人而作、人生重要时刻都合身」；气质要手艺精工、有绅装传统又不老派疏远、绝不像商场改衣铺；场景是试衣间铜牌、婚博会展位和「我这套是在 XX 做的」的炫耀式转述里都立得住。",
+    en: "A made-to-measure tailoring studio brand. The name should promise garments made for you alone, fitting life's biggest moments; the vibe is precise craft with sartorial heritage yet never stuffy, never a mall alteration counter; it must hold up on the fitting-room plaque, at wedding expos, and in the proud \"mine was made at X\".",
+  },
+  {
+    slug: "equestrian",
+    labelZh: "马术俱乐部",
+    labelEn: "Equestrian clubs",
+    zh: "一个马术俱乐部与马房品牌，寓意「真马场真教练、把骑士精神教给孩子」；气质要专业有传统分量、贵气而不虚浮、绝不像游乐场骑马项目；场景是马术服胸口刺绣、赛事秩序册和家长圈转介绍里都立得住。",
+    en: "An equestrian club and stable brand. The name should promise real grounds, real coaches, and horsemanship taught to the next generation; the vibe is professional with heritage weight, refined without empty poshness, never a pony-ride attraction; it must hold up embroidered on a show jacket, in event programs, and in parent-circle referrals.",
+  },
+  {
+    slug: "archery",
+    labelZh: "射箭馆",
+    labelEn: "Archery ranges",
+    zh: "一个射箭馆与弓箭运动品牌，寓意「正中靶心、一箭入魂的专注」；气质要利落有命中感、既接得住团建热闹又有箭道的安静、绝不像游戏厅；场景是商场门头、团建平台列表和「周五去 XX 射箭」的约局消息里都立得住。",
+    en: "An archery range brand. The name should promise the bullseye thrill and single-arrow focus; the vibe is crisp with hit-energy, holding both team-outing buzz and shooting-line quiet, never an arcade; it must hold up on the mall storefront, in team-building listings, and in the \"archery at X this Friday?\" group chat.",
+  },
+  {
+    slug: "immigration",
+    labelZh: "移民咨询",
+    labelEn: "Immigration consulting",
+    zh: "一个移民咨询与身份规划品牌，寓意「专业的人替你走通此岸到彼岸」；气质要稳重专业有国际格局、绝不像街边中介柜台、更不暗示保过特批；场景是官网署名、方案书封面和家庭饭桌上「我找的是 XX」的反复讨论里都立得住。",
+    en: "An immigration consulting and identity-planning brand. The name should promise professionals walking you from this shore to the other; the vibe is steady, credentialed and globally minded, never a street-agent counter and never hinting at guaranteed approval; it must hold up on official filings, proposal covers, and the family dinner-table's repeated \"I went with X\".",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
