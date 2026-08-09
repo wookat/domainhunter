@@ -216,4 +216,10 @@ export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized 
   { slug: "selfstorage", label: { zh: "自助仓储", en: "Self-storage" }, oneLiner: { zh: "自助仓储与迷你仓命名指南：空间扩展、安全守护、随取随存等 5 种思路。", en: "Self-storage naming guide: extra-space value, guardian security." } },
   { slug: "catering", label: { zh: "宴会团餐", en: "Catering" }, oneLiner: { zh: "宴会外烩与企业团餐命名指南：盛宴仪式感、主厨手作、履约确定性等 5 种思路。", en: "Catering and food service naming guide: banquet ceremony, chef-craft credibility." } },
   { slug: "signage", label: { zh: "广告标识", en: "Signage & signs" }, oneLiner: { zh: "广告招牌与标识制作命名指南：醒目意象、快速交付、设计升维等 5 种思路。", en: "Sign company naming guide: visibility imagery, speed promises." } },
+  { slug: "shortvideo", label: { zh: "短视频制作", en: "Short-video production" }, oneLiner: { zh: "短视频制作公司命名指南：节奏词根、爆款意象、厂牌人格等 5 种思路。", en: "Short-video studio naming guide: tempo roots, viral imagery, label persona." } },
+  { slug: "audiobook", label: { zh: "有声书配音", en: "Audiobooks & voiceover" }, oneLiner: { zh: "有声书与配音工作室命名指南：声音意象、陪伴叙事、嗓音资产等 5 种思路。", en: "Audiobook and voiceover naming guide: sound imagery, companionship narrative." } },
+  { slug: "postproduction", label: { zh: "影视后期", en: "Post-production & VFX" }, oneLiner: { zh: "影视后期与特效公司命名指南：魔法叙事、精工意象、片尾署名感等 5 种思路。", en: "Post-production and VFX naming guide: magic narrative, frame-craft imagery." } },
+  { slug: "animation", label: { zh: "动画工作室", en: "Animation studios" }, oneLiner: { zh: "动画工作室命名指南：世界观词根、童心意象、片头厂标感等 5 种思路。", en: "Animation studio naming guide: world-building roots, childlike imagery." } },
+  { slug: "documentary", label: { zh: "纪录片工作室", en: "Documentary studios" }, oneLiner: { zh: "纪录片工作室命名指南：真实叙事、时间意象、题材立场等 5 种思路。", en: "Documentary studio naming guide: truth narrative, time imagery, subject stance." } },
+  { slug: "newsmedia", label: { zh: "独立新闻媒体", en: "Independent news media" }, oneLiner: { zh: "独立新闻媒体命名指南：信源信用、视角词根、订阅关系等 5 种思路。", en: "Independent news media naming guide: source credibility, lens roots." } },
 ];

@@ -209,7 +209,7 @@
     ]
   },
   "guide": {
-    "count": 206,
+    "count": 212,
     "slugs": [
       "saas",
       "ecommerce",
@@ -416,7 +416,13 @@
       "towing",
       "selfstorage",
       "catering",
-      "signage"
+      "signage",
+      "shortvideo",
+      "audiobook",
+      "postproduction",
+      "animation",
+      "documentary",
+      "newsmedia"
     ]
   },
   "vs": {

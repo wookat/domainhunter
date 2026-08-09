@@ -12883,6 +12883,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  shortvideo: {
+    slug: "shortvideo",
+    tlds: [
+      { tld: "com", zh: "品牌客户与广告代理比稿时的信任底线，制作公司官网的默认选择", en: "The trust baseline in brand pitches and agency shortlists — the default for a production company site" },
+      { tld: "video", zh: "「视频」后缀直给品类，作品集官网一眼说清主业", en: "The category spelled out — a portfolio site that states the trade at a glance" },
+      { tld: "stream", zh: "「流」后缀自带信息流与开播感，内容型厂牌的气质后缀", en: "The stream suffix carries feed-native, always-on energy — a vibe pick for content labels" },
+    ],
+    zh: {
+      label: "短视频制作",
+      title: "短视频制作公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "短视频制作公司命名指南：节奏词根、爆款意象、厂牌人格等 5 种思路，影视飓风/二更/Dude Perfect 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的短视频品牌域名。",
+      intro:
+        "短视频制作公司的名字活在两个片场：一个是甲方比稿会的 PPT 封面，一个是自家账号的片头三秒——前者要正规可信，后者要有记忆点、能被弹幕喊出来。第一素材库是节奏词根：快、闪、燃、卡点、帧——短视频是以秒计费的注意力生意，名字自带速度感与节奏感，就先赢了「这家懂短视频」的第一印象；「影视飓风」用一场风暴把画面感和量级同时给足。第二个抓手是爆款意象：火、爆、冲、上头——客户买的不是拍摄服务而是传播结果，名字里的爆款暗示直接参与「找谁做能火」的决策。第三个抓手是厂牌人格：短视频公司往往自己就是创作者——papitube、Dude Perfect 都是从人格长出来的厂牌，名字要能当账号名、能上片头、能被粉丝当称呼喊。要注意业务分层：帮品牌代运营与拍 TVC 级内容是两种生意——前者要名字里有账号感与陪跑感，后者要制作公司的专业腔；两头都想要时，名字至少别互相打架。渠道上，短视频公司活在账号主页、比稿 PPT 和「这条片子谁做的」的圈内转述里——名字要在竖屏角标那几十个像素里也认得出来。",
+      namingIdeas: [
+        "节奏词根：快、闪、燃、帧、卡点——以秒计费的注意力生意，名字自带速度感就先赢了第一印象",
+        "爆款意象：火、爆、冲、风暴——客户买的是传播结果，爆款暗示直接参与「找谁能火」的决策",
+        "厂牌人格：能当账号名、能上片头、能被粉丝喊——短视频公司自己就是创作者，名字即人设",
+        "画面动词：拍、剪、造、飓风——制作是动手的生意，动词名字把「我们真的能做出来」说在前面",
+        "双场景兼容测试：把名字放进比稿 PPT 封面和竖屏片头角标各看一遍——甲方与观众都认，才算过关",
+      ],
+      cases: [
+        { name: "影视飓风", takeaway: "「影视+飓风」的量级隐喻：一场风暴同时给足画面感、速度感与破坏力——从器材测评到千万粉厂牌，名字的气势一直兜得住业务的长大" },
+        { name: "二更", takeaway: "取自「二更天」的时间意象：深夜更新的陪伴感与东方韵味兼得——两个字好念好记，从公众号视频起家长成短视频内容厂牌的命名范本" },
+        { name: "Dude Perfect", takeaway: "口语感叹词当厂牌名：兄弟们投进神球喊的那句「perfect」直接注册成品牌——人格、内容调性与名字三位一体，粉丝喊得出就传得开" },
+        { name: "papitube", takeaway: "papi 酱个人 IP + tube 视频词根的嫁接：把一个人的流量势能平移成机构厂牌——创作者转 MCN 的命名路径示范，人格资产直接复用" },
+        { name: "一条", takeaway: "「每天一条视频」的更新承诺压缩成两个字：极简到近乎白描，却把内容节奏与克制美学同时说清——数字+量词的命名巧劲" },
+      ],
+      pitfalls: [
+        "传媒公司腔：名字停在「XX 文化传媒」的工商注册感——短视频客户要的是网感，一个土名字先输掉「懂不懂平台」的判断",
+        "锁死单一平台：名字绑死某个平台的黑话或梗——平台规则与红利说变就变，梗过气名字跟着过气",
+        "只有爆没有稳：全名都是火爆冲——品牌客户还要交付与履约的正规感，纯流量腔接不到年框大单",
+        "账号名与公司名两张皮：对外账号叫 A 公司叫 B——粉丝积累的认知资产无法平移到接单主体，两头都吃亏",
+      ],
+    },
+    en: {
+      label: "Short-video production",
+      title: "How to Name a Short-Video Production Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Short-video studio naming guide: tempo roots, viral imagery, label persona, breakdowns of MediaStorm/Dude Perfect/papitube, recommended TLDs and pitfalls — then hunt an available video-brand domain with AI.",
+      intro:
+        "A short-video studio's name lives on two sets: the cover slide of a client pitch and the first three seconds of your own channel intro — the first must read credible, the second must be memorable enough for fans to chant. The first material bin is tempo roots: fast, flash, frame, beat — short video is an attention business billed by the second, and a name that carries speed and rhythm wins the \"these people get short video\" first impression for free; MediaStorm packs scale and imagery into one weather system. The second lever is viral imagery: spark, blast, surge — clients aren't buying a shoot, they're buying reach, and a name that hints at virality joins the \"who can make this blow up\" decision directly. The third is label persona: short-video studios are usually creators themselves — papitube and Dude Perfect are labels grown out of personalities, and the name must work as a channel handle, an intro sting and something fans can actually shout. Mind the business layers: running brand accounts and producing TVC-grade content are different trades — one wants feed-native companionship, the other production-house professionalism; if you want both, at least don't let the name fight itself. On channels: studios live on channel pages, pitch decks and the industry's \"who made that one?\" word of mouth — the name must stay legible in the few dozen pixels of a vertical-video watermark.",
+      namingIdeas: [
+        "Tempo roots: fast, flash, frame, beat — an attention business billed by the second; a name with built-in speed wins the first impression",
+        "Viral imagery: spark, blast, surge, storm — clients buy reach, and a virality hint joins the \"who can make it blow up\" call",
+        "Label persona: works as a handle, an intro sting, a fan chant — the studio is the creator, and the name is the character",
+        "Maker verbs: shoot, cut, craft, storm — production is a hands-on trade; a verb name says \"we actually ship\" up front",
+        "The two-set test: put the name on a pitch-deck cover and in a vertical-video watermark — it must pass with both the client and the audience",
+      ],
+      cases: [
+        { name: "MediaStorm", takeaway: "Media + storm as a scale metaphor: one weather system delivering imagery, speed and force at once — from gear reviews to a multi-million-follower label, the name's momentum kept up with the business" },
+        { name: "二更 (Ergeng)", takeaway: "The old \"second watch of the night\": late-night companionship and eastern texture in two characters — easy to say, easy to recall, the naming benchmark of a feed-native content house" },
+        { name: "Dude Perfect", takeaway: "A spoken exclamation registered as a label: the \"perfect!\" shouted after a trick shot became the brand — persona, content tone and name fused; what fans can shout, fans will spread" },
+        { name: "papitube", takeaway: "A personal IP grafted onto the tube root: one creator's traffic momentum transplanted into an institutional label — the template for creator-to-MCN naming, reusing persona equity wholesale" },
+        { name: "一条 (Yit)", takeaway: "\"One video a day\" compressed into two characters: minimal to the point of plainness, yet stating cadence and restraint at once — the quiet power of a number-plus-measure-word name" },
+      ],
+      pitfalls: [
+        "Registered-company register: a name stuck at \"XX Culture Media\" filing-form blandness — short-video clients filter on feed fluency, and a stale name loses the \"do they get platforms?\" judgment first",
+        "Welding to one platform: a name built on one platform's slang or meme — rules and windfalls shift overnight, and when the meme ages out, so does the name",
+        "All blast, no ballast: a name that is pure virality-speak — brand clients also need delivery rigor, and pure traffic-register never lands the annual retainer",
+        "Handle and company split: the channel is called A while the company signs as B — fan equity can't transfer to the contracting entity, and both sides leak",
+      ],
+    },
+  },
+  audiobook: {
+    slug: "audiobook",
+    tlds: [
+      { tld: "com", zh: "出版方版权合作与听众订阅付费的信任底线，声音品牌的默认选择", en: "The trust baseline for publisher deals and listener subscriptions — the default for an audio brand" },
+      { tld: "audio", zh: "「声音」后缀直给品类，有声书与配音工作室零解释成本", en: "The audio suffix states the trade — zero explanation for audiobook and voice studios" },
+      { tld: "fm", zh: "电台基因的经典声音后缀，播客与有声内容圈内标配", en: "The radio-heritage classic — the insider standard for podcasts and spoken audio" },
+    ],
+    zh: {
+      label: "有声书配音",
+      title: "有声书与配音工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "有声书与配音工作室命名指南：声音意象、陪伴叙事、嗓音资产等 5 种思路，Audible/喜马拉雅/Storytel 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的声音品牌域名。",
+      intro:
+        "声音生意的名字有一条独有的铁律：它主要靠「听」传播——播讲人在片头念出来、听众在通勤路上向朋友转述，名字必须一遍听清、不用解释怎么写。第一素材库是声音意象：声、音、响、耳、听——Audible 直接把「听得见的」注册成品牌，品类词根在这个行业不是偷懒而是资产；回声、共鸣、留声机这些词自带频率与温度。第二个抓手是陪伴叙事：有声书的消费场景是通勤、家务与睡前——买的不是文件而是「有人给我讲故事」的陪伴感，枕边、深夜、炉火的意象直接命中真实需求；喜马拉雅用一座山把「声音的辽阔」讲成了平台格局。第三个抓手是嗓音资产：配音工作室的核心资产是声优的嗓音与戏路——名字要能印在演员表与合作案例里，让「XX 出品」成为品质暗号；声线、腔调、戏感的词根都在向甲方承诺专业。要注意业务分层：有声书制作是出版方的 B2B 履约生意（版权、审校、交付周期），配音是广告与游戏的项目制生意，听书 App 是 C 端订阅生意——三条线的名字气质不通用，先定主航道。渠道上，声音品牌活在片头口播、播客串台与「你在哪听的」的转述里——念起来顺、听一遍能拼写，是这个行业名字的第一道门槛。",
+      namingIdeas: [
+        "声音意象：声、音、响、echo、tone——品类词根在听觉行业是资产不是偷懒，自带频率与温度",
+        "陪伴叙事：枕边、深夜、炉火、伴——买的是「有人给我讲故事」，陪伴感意象直接命中真实需求",
+        "嗓音资产：声线、腔调、戏感——配音工作室卖的是嗓音与戏路，名字要能当片尾署名的品质暗号",
+        "一遍听清测试：名字念给朋友听一遍让对方写下来——写错就换，听觉行业的名字必须免拼写解释",
+        "版权正规感：有声书是出版方的 B2B 生意——名字要在版权合同与出版社供应商名录里立得住",
+      ],
+      cases: [
+        { name: "Audible", takeaway: "「听得见的」形容词直接品牌化：一个词说清品类、承诺与体验——被亚马逊收购后仍是有声书的代名词，品类词根命名的天花板" },
+        { name: "喜马拉雅", takeaway: "世界最高峰当声音平台名：把「声音的辽阔」讲成平台格局——与音频品类零字面关联却意象贴切，大词命名撑起大平台的示范" },
+        { name: "Storytel", takeaway: "story+tell 的合成词：「讲故事」这个最古老的行当压进一个词——北欧有声书订阅巨头，动词感让订阅服务有了人的温度" },
+        { name: "懒人听书", takeaway: "把用户人设写进名字：「懒」不是贬义而是场景——躺着听、不用看，四个字同时说清目标用户、使用姿势与产品形态" },
+        { name: "Libro.fm", takeaway: "西语「书」+电台后缀的组合：独立书店联盟的有声书平台——libro 的书卷气与 .fm 的声音感相加，域名本身就是完整品牌" },
+      ],
+      pitfalls: [
+        "看得懂听不清：名字里有生僻字或同音歧义——声音行业靠念传播，听一遍写不出来的名字每次口播都在漏水",
+        "锁死单一形态：名字绑死「听书」，扩播客、广播剧、AI 配音全是阻力——边界画在「声音内容」而不是一种载体",
+        "文字腔太重：名字全是出版感没有声音感——有声书是听觉体验生意，纸味盖过声音味就选错了赛道气质",
+        "忽略片头口播测试：名字在片头念出来拗口或不响亮——这是声音品牌曝光最高的广告位，念不响等于白占",
+      ],
+    },
+    en: {
+      label: "Audiobooks & voiceover",
+      title: "How to Name an Audiobook & Voiceover Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Audiobook and voiceover naming guide: sound imagery, companionship narrative, voice-as-asset, breakdowns of Audible/Ximalaya/Storytel, recommended TLDs and pitfalls — then hunt an available audio-brand domain with AI.",
+      intro:
+        "An audio business's name obeys one iron law of its own: it spreads by ear — the narrator reads it in the intro, the listener passes it on mid-commute, and it must land in one hearing with no spelling explanation. The first material bin is sound imagery: sound, voice, echo, tone, listen — Audible registered \"able to be heard\" as a brand, and in this industry the category root is an asset, not a shortcut; echo, resonance and phonograph roots carry frequency and warmth of their own. The second lever is the companionship narrative: audiobooks are consumed on commutes, over chores and at bedtime — the purchase is \"someone telling me a story\", so bedside, midnight and fireside imagery hits the real need; Ximalaya turned a mountain range into the scale story of a sound platform. The third is voice as asset: a dubbing studio's core asset is its actors' voices and range — the name must sit in cast credits and client reels, turning \"produced by X\" into a quality mark; timbre, register and delivery roots promise craft to the buyer. Mind the business layers: audiobook production is B2B publisher fulfillment (rights, proofing, deadlines), voiceover is project work for ads and games, and a listening app is a consumer subscription — three registers that barely mix, so pick a main lane first. On channels: audio brands live in intro reads, podcast cross-overs and \"where did you listen?\" word of mouth — reading smoothly and spelling itself after one hearing is this trade's first gate.",
+      namingIdeas: [
+        "Sound imagery: sound, voice, echo, tone — the category root is an asset in an aural trade, carrying frequency and warmth for free",
+        "Companionship narrative: bedside, midnight, fireside — the purchase is \"someone telling me a story\"; comfort imagery hits the real need",
+        "Voice as asset: timbre, register, delivery — a dubbing house sells voices and range; the name must work as a credits-line quality mark",
+        "The one-hearing test: say the name to a friend once and have them write it down — if they misspell it, change it; audio names must be spelling-free",
+        "Rights-desk rigor: audiobook production is publisher B2B — the name must hold up in licensing contracts and vendor lists",
+      ],
+      cases: [
+        { name: "Audible", takeaway: "The adjective \"able to be heard\" branded outright: one word stating category, promise and experience — still synonymous with audiobooks post-Amazon; the ceiling of category-root naming" },
+        { name: "Ximalaya (喜马拉雅)", takeaway: "The world's highest range naming a sound platform: \"the vastness of sound\" told through a mountain — zero literal link to audio yet perfectly apt; a big word carrying a big platform" },
+        { name: "Storytel", takeaway: "Story + tell compounded: humanity's oldest trade compressed into one word — the Nordic audiobook subscription giant, its verb energy lending a subscription service human warmth" },
+        { name: "懒人听书 (Lazy Audio)", takeaway: "The user persona written into the name: \"lazy\" as scene, not slur — lying down, eyes closed; four characters stating target user, posture and product form at once" },
+        { name: "Libro.fm", takeaway: "Spanish for \"book\" plus the radio suffix: the indie-bookstore audiobook platform — libro's bookish grain and .fm's broadcast feel add up to a domain that is the whole brand" },
+      ],
+      pitfalls: [
+        "Readable but not hearable: rare characters or homophone traps — audio brands spread by mouth, and a name that can't be written after one hearing leaks on every read",
+        "Welding to one format: a name locked to \"audiobooks\" resists podcasts, audio drama and AI voice — draw the line at \"sound content\", not one carrier",
+        "Too much ink, too little air: a name that is all publishing and no sound — this is an aural-experience trade, and paper grain over voice grain is the wrong register",
+        "Skipping the intro-read test: a name that stumbles when read aloud in an episode intro — that is the brand's highest-exposure ad slot, and a flat read wastes it",
+      ],
+    },
+  },
+  postproduction: {
+    slug: "postproduction",
+    tlds: [
+      { tld: "com", zh: "片方与广告代理供应商名录的信任底线，后期公司的默认选择", en: "The trust baseline on studio and agency vendor lists — the default for a post house" },
+      { tld: "productions", zh: "「制作」后缀直给行业身份，片尾署名式的正式感", en: "The productions suffix states the trade — end-credits formality built in" },
+      { tld: "studio", zh: "「工作室」后缀，创意与手艺气质兼得的通用选择", en: "The studio suffix — craft and creativity in one versatile pick" },
+    ],
+    zh: {
+      label: "影视后期",
+      title: "影视后期制作公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "影视后期与特效公司命名指南：魔法叙事、精工意象、片尾署名感等 5 种思路，工业光魔/Weta FX/Framestore 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的后期品牌域名。",
+      intro:
+        "影视后期的名字要通过一场特殊的考试：片尾滚动字幕——这个行业最重要的品牌曝光不在广告位，而在每一部作品的 credits 里，名字要在滚过的两秒钟内被同行与片方记住。第一素材库是魔法叙事：后期是「把不可能拍出来」的行当——工业光魔（Industrial Light & Magic）把 magic 写进名字，从此「魔法」成了特效行业的最高自我期许；幻、境、造梦的词根都在讲同一个故事：我们负责让想象落地。第二个抓手是精工意象：帧、格、刻、雕——后期是逐帧打磨的手艺活，调色师抠一个镜头的光、特效师磨一根毛发的物理，名字里的匠气直接对应报价单上的档次。第三个抓手是片尾署名感：Weta、Framestore、DNEG——好的后期公司名像一枚厂标，短、硬、有辨识度，出现在 credits 里自成品质背书。要注意业务分层：广告后期吃效率与客情，电影特效吃技术与产能，剧集调色吃流程与稳定——名字的档次感要与主战场匹配，接广告的叫「XX 视效科技」嫌重，做电影的叫「XX 快剪」嫌轻。渠道上，后期公司活在片尾字幕、行业奖项名单与制片主任的供应商名录里——名字要在这三个地方都体面，且英文拼写要经得起国际合制的邮件往来。",
+      namingIdeas: [
+        "魔法叙事：幻、境、magic、造梦——后期是「把不可能拍出来」的行当，魔法是行业的最高自我期许",
+        "精工意象：帧、格、刻、雕——逐帧打磨的手艺活，名字里的匠气直接对应报价单上的档次",
+        "片尾署名感：短、硬、有辨识度——名字是一枚厂标，credits 里滚过两秒也要被记住",
+        "技术底气：光、渲染、引擎、FX——电影级特效卖的是技术产能，硬核词根是投标书的入场券",
+        "国际合制兼容：英文名好拼好念——后期是全球分包的生意，名字要经得起跨国邮件与结算单",
+      ],
+      cases: [
+        { name: "工业光魔（ILM）", takeaway: "industrial+light+magic 的矛盾修辞：工业的规模感与魔法的想象力焊在一起——卢卡斯为《星球大战》创立的特效厂牌，一个名字定义了整个行业的自我认知" },
+        { name: "Weta FX", takeaway: "新西兰本土昆虫 weta 当厂名：不起眼的虫子做出了《指环王》的中土——本土意象+FX 品类词，谦逊的名字与逆天的作品形成品牌张力" },
+        { name: "Framestore", takeaway: "frame+store 的直给合成：「存放画格的地方」——一个词说清行当本质，伦敦广告后期起家做到《银翼杀手 2049》，名字的克制配得上英伦手艺人气质" },
+        { name: "MORE VFX（墨）", takeaway: "中文单字「墨」与英文 MORE 的双关：水墨的东方美学与「更多」的进取心一音双关——《流浪地球》背后的中国视效厂牌，双语命名的巧思范本" },
+        { name: "DNEG", takeaway: "Double Negative（双重否定）的压缩：胶片时代「负片的负片即正片」的行话梗——圈内人会心一笑的技术黑话，缩写后更像一枚硬核厂标" },
+      ],
+      pitfalls: [
+        "档次错配：接广告快单的叫「XX 视效科技」嫌重、做电影特效的叫「XX 快剪」嫌轻——名字的分量要与主战场的客单价对齐",
+        "锁死单一工序：名字绑死「调色」「剪辑」一道工序——后期公司的成长路径是全流程，工序名是天花板",
+        "拼写不过关：英文名生造得连片方邮件都会拼错——后期是全球分包生意，credits 里被拼错的名字等于白干",
+        "只有技术没有创意：全名都是 render、pixel 的硬词——片方买的是「让画面更好看」的审美判断，纯技术腔接不到创意向的大单",
+      ],
+    },
+    en: {
+      label: "Post-production & VFX",
+      title: "How to Name a Post-Production & VFX House: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Post-production and VFX naming guide: magic narrative, frame-craft imagery, credits-worthy marks, breakdowns of ILM/Weta FX/Framestore, recommended TLDs and pitfalls — then hunt an available post-house domain with AI.",
+      intro:
+        "A post house's name sits one exam that no other trade takes: the end-credits roll — this industry's biggest brand exposure isn't an ad slot but the credits of every film it touches, and the name must lodge itself with peers and producers in the two seconds it scrolls past. The first material bin is the magic narrative: post-production is the trade of filming the impossible — Industrial Light & Magic wrote magic into its name and set the industry's highest self-image ever since; illusion, realm and dream-forging roots all tell the same story: we make imagination land. The second lever is frame-craft imagery: frame, grain, carve, polish — this is frame-by-frame handwork, a colorist chasing one shot's light, an FX artist grooming one hair's physics, and craft in the name maps directly to the tier on the rate card. The third is the credits-worthy mark: Weta, Framestore, DNEG — a good post-house name works like a foundry stamp, short, hard and distinctive, self-endorsing wherever it appears in credits. Mind the business layers: commercial post runs on speed and relationships, film VFX on technology and capacity, episodic grading on pipeline and reliability — the name's weight must match the main arena; \"X Visual Technology\" is too heavy for ad jobs, \"X QuickCut\" too light for features. On channels: post houses live in credits, awards lists and line producers' vendor rosters — the name must look dignified in all three, and its English spelling must survive international co-production email threads.",
+      namingIdeas: [
+        "Magic narrative: illusion, realm, magic, dream-forge — the trade of filming the impossible; magic is the industry's highest self-image",
+        "Frame-craft imagery: frame, grain, carve, polish — frame-by-frame handwork, and craft in the name maps to the rate-card tier",
+        "Credits-worthy mark: short, hard, distinctive — the name is a foundry stamp that must lodge in two seconds of scroll",
+        "Technical spine: light, render, engine, FX — film-grade VFX sells capacity, and hardcore roots are the tender ticket",
+        "Co-production compatibility: an English name that spells and says itself — post is a globally subcontracted trade, and the name must survive cross-border email and invoices",
+      ],
+      cases: [
+        { name: "Industrial Light & Magic", takeaway: "An oxymoron welded shut: industrial scale fused with magical imagination — the VFX house Lucas built for Star Wars, one name defining how an entire industry sees itself" },
+        { name: "Weta FX", takeaway: "A humble New Zealand insect as the marque: the unassuming weta built Middle-earth — local imagery plus the FX category word, and the tension between modest name and impossible work becomes the brand" },
+        { name: "Framestore", takeaway: "Frame + store, served straight: \"the place where frames are kept\" — one word stating the trade's essence, from London ad post to Blade Runner 2049; restraint worthy of British craftsmanship" },
+        { name: "MORE VFX (墨)", takeaway: "The single character 墨 (ink) punning on English MORE: ink-wash aesthetics and hunger for more in one sound — the Chinese VFX house behind The Wandering Earth, a benchmark of bilingual naming wit" },
+        { name: "DNEG", takeaway: "Double Negative compressed: the film-stock in-joke that a negative of a negative is a positive — insider technical slang, and the abbreviation reads even more like a hardened foundry stamp" },
+      ],
+      pitfalls: [
+        "Weight mismatch: \"X Visual Technology\" is too heavy for quick ad jobs, \"X QuickCut\" too light for feature VFX — match the name's gravity to the main arena's ticket size",
+        "Welding to one process: a name locked to grading or editing — a post house grows toward full pipeline, and a process name is a ceiling",
+        "Failing the spelling test: a coined English name even producers misspell in email — post is globally subcontracted work, and a misspelled credit is a wasted credit",
+        "All tech, no taste: a name built purely of render and pixel — producers buy aesthetic judgment, and pure engineering register never lands the creative-led job",
+      ],
+    },
+  },
+  animation: {
+    slug: "animation",
+    tlds: [
+      { tld: "com", zh: "发行方合作与 IP 授权谈判的信任底线，动画厂牌的默认选择", en: "The trust baseline for distribution deals and IP licensing — the default for an animation label" },
+      { tld: "pictures", zh: "「影业」后缀自带片头厂标感，动画公司的正装选择", en: "The pictures suffix carries opening-logo gravitas — the formal wear of an animation house" },
+      { tld: "tv", zh: "剧集与流媒体动画的气质后缀，内容播出感直给", en: "The natural fit for series and streaming animation — broadcast energy built in" },
+    ],
+    zh: {
+      label: "动画工作室",
+      title: "动画工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "动画工作室命名指南：世界观词根、童心意象、片头厂标感等 5 种思路，皮克斯/吉卜力/追光动画等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的动画品牌域名。",
+      intro:
+        "动画工作室的名字是片头厂标的文案：观众对一家动画公司的全部认知，往往浓缩在正片开始前那五秒的 logo 动画里——皮克斯的跳跳灯、吉卜力的龙猫，名字与厂标互相成就，一起变成品质承诺。第一素材库是世界观词根：星球、乐园、幻境、国度——动画是造世界的生意，名字要给未来的角色、续集与主题乐园留出宇宙级的边界；「追光」两个字既是技术（光线渲染）又是理想主义的姿态。第二个抓手是童心意象：动画的第一观众常常是孩子与家庭——纸飞机、蜡笔、云朵的意象自带柔软与安全感；但成人向动画正在崛起，暗黑、赛博、实验的气质词根同样是富矿，先定观众再选词库。第三个抓手是片头厂标感：Ghibli、Pixar、Aardman——好的动画厂名短促有声、带一点异质感，念出来就像一枚印章；名字要能做成 logo 动画，有自己的声音与形状。要注意 IP 生意的本质：动画公司的终局是 IP 授权与衍生——名字别绑死单一作品或角色，厂牌名与作品名分开走，作品可以失败，厂牌要能一直活着。渠道上，动画工作室活在片头厂标、电影节片单与发行方的洽谈桌上——名字要在国际电影节的英文片单里好念，也要在衍生品包装上印得住。",
+      namingIdeas: [
+        "世界观词根：星球、乐园、幻境、国度——造世界的生意，名字要给角色、续集与乐园留出宇宙边界",
+        "童心意象：纸飞机、蜡笔、云朵——家庭向自带柔软安全感；成人向则换暗黑赛博词库，先定观众",
+        "片头厂标感：短促有声、带一点异质感——名字要能做成 logo 动画，有自己的声音与形状",
+        "技术与理想双关：光、帧、绘——「追光」式的一词两义，技术底气与理想主义一次说清",
+        "厂牌与作品分离：厂牌名别绑死单一角色或作品——作品可以失败，厂牌要能一直活着",
+      ],
+      cases: [
+        { name: "Pixar", takeaway: "pixel+art 气质的生造词：像素的科技感与西语动词式的响亮结尾——从硬件公司到动画帝国，一个既像技术又像艺术的名字撑住了两次转身" },
+        { name: "吉卜力（Ghibli）", takeaway: "撒哈拉热风的意大利语：宫崎骏要「在日本动画界吹起一阵热风」——异质感的外来词自带神秘与诗意，厂牌气质与作品美学浑然一体" },
+        { name: "Aardman", takeaway: "生造的「土豚人」式怪词：aa 开头在字母表排序永远靠前——黏土动画的手作怪趣与名字的古怪完美同频，《小羊肖恩》厂牌的性格签名" },
+        { name: "追光动画", takeaway: "「追光」的一词两义：光线渲染的技术底气与追逐理想的姿态互为表里——《白蛇》系列背后的中国动画厂牌，两个字把技术与情怀一次说清" },
+        { name: "Cartoon Saloon", takeaway: "cartoon+saloon 的押韵组合：爱尔兰小镇酒馆式的亲切与手绘动画的温度——三次奥斯卡提名的独立厂牌，押韵让名字自带民谣感" },
+      ],
+      pitfalls: [
+        "绑死单一作品：厂牌名跟着第一部作品或主角走——作品扑街或 IP 到期，厂牌跟着陪葬；厂牌与作品要分开走",
+        "锁死低幼定位：名字全是宝宝乐园腔——成人向与合家欢是动画的利润腹地，低幼名字接不到全年龄向的项目",
+        "国际片单不友好：名字在英文片单里难念难记——动画是全球发行的生意，电影节与流媒体采购都用英文名认你",
+        "只有可爱没有厂牌感：名字软到立不住片头——厂标要有印章般的分量，纯可爱撑不起「出品方」三个字",
+      ],
+    },
+    en: {
+      label: "Animation studios",
+      title: "How to Name an Animation Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Animation studio naming guide: world-building roots, childlike imagery, opening-logo presence, breakdowns of Pixar/Ghibli/Cartoon Saloon, recommended TLDs and pitfalls — then hunt an available animation domain with AI.",
+      intro:
+        "An animation studio's name is the copy of its opening logo: everything an audience knows about the house compresses into the five seconds before the feature — Pixar's hopping lamp, Ghibli's Totoro — name and logo animation building each other into a quality promise. The first material bin is world-building roots: planet, realm, wonder, kingdom — animation is the business of making worlds, and the name must leave universe-scale room for future characters, sequels and theme parks; Light Chaser reads as both rendering technology and idealist posture in one word. The second lever is childlike imagery: animation's first audience is often kids and families — paper planes, crayons and clouds carry softness and safety for free; but adult animation is rising, and dark, cyber and experimental registers are equally rich veins — pick the audience before the word bin. The third is opening-logo presence: Ghibli, Pixar, Aardman — great studio names are short, sonorous and slightly foreign, stamping like a seal when spoken; the name must survive becoming a logo animation, with a sound and a shape of its own. Mind the nature of the IP business: an animation studio's endgame is licensing and merchandise — never weld the studio name to one title or character; label and works travel separately, for works may fail but the label must live on. On channels: studios live in opening logos, festival lineups and distributors' meeting rooms — the name must read easily on an international festival slate and print well on merchandise packaging.",
+      namingIdeas: [
+        "World-building roots: planet, realm, wonder, kingdom — a world-making business needs a name with universe-scale room for characters, sequels and parks",
+        "Childlike imagery: paper planes, crayons, clouds — family fare gets softness for free; adult animation swaps in dark and cyber bins — pick the audience first",
+        "Opening-logo presence: short, sonorous, slightly foreign — the name must survive becoming a logo animation, with its own sound and shape",
+        "Tech-ideal double reading: light, frame, draw — a Light Chaser-style pun stating rendering muscle and idealism in one stroke",
+        "Label-title separation: never weld the studio name to one character or film — works may fail; the label must live on",
+      ],
+      cases: [
+        { name: "Pixar", takeaway: "A coined word with pixel + art energy: pixel's tech sheen ending in a Spanish-verb snap — from hardware company to animation empire, a name reading as both technology and art carried two reinventions" },
+        { name: "Studio Ghibli", takeaway: "Italian for the Saharan hot wind: Miyazaki's vow to \"blow a hot wind through Japanese animation\" — a foreign borrowing carrying mystery and poetry, label texture fused with the films' aesthetics" },
+        { name: "Aardman", takeaway: "A coined oddity that sorts first alphabetically: the double-a quirk perfectly in tune with claymation's handmade whimsy — the personality signature of the Shaun the Sheep house" },
+        { name: "Light Chaser (追光)", takeaway: "One word read two ways: ray-rendering muscle and the posture of chasing ideals as each other's lining — the Chinese studio behind the White Snake films, technology and heart stated in two characters" },
+        { name: "Cartoon Saloon", takeaway: "Cartoon + saloon in rhyme: Irish small-town pub warmth meeting hand-drawn animation's glow — the thrice-Oscar-nominated indie label, its rhyme lending the name a folk-song lilt" },
+      ],
+      pitfalls: [
+        "Welding to one title: a label named after the first film or hero — when the title flops or the IP lapses, the label is buried with it; keep label and works separate",
+        "Locking into preschool register: a name that is all baby-park sweetness — all-ages and adult fare are animation's profit belly, and a toddler name never lands them",
+        "Festival-slate unfriendly: a name that stumbles on an English lineup — animation is globally distributed, and festivals and streamers know you by the English name",
+        "Cute without weight: a name too soft to hold the opening card — a studio mark needs seal-like gravity; pure cuteness cannot carry \"presented by\"",
+      ],
+    },
+  },
+  documentary: {
+    slug: "documentary",
+    tlds: [
+      { tld: "com", zh: "平台采购与基金申请的信任底线，纪录片厂牌的默认选择", en: "The trust baseline for platform commissions and grant applications — the default for a documentary label" },
+      { tld: "movie", zh: "「电影」后缀直给影像身份，院线级纪录片的气质选择", en: "The movie suffix states film identity — the register of theatrical documentary" },
+      { tld: "media", zh: "「媒体」后缀边界宽，纪实内容跨形态扩张零阻力", en: "The media suffix draws a wide boundary — zero friction as nonfiction expands across formats" },
+    ],
+    zh: {
+      label: "纪录片工作室",
+      title: "纪录片工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "纪录片工作室命名指南：真实叙事、时间意象、题材立场等 5 种思路，National Geographic/Participant/稻来传媒等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的纪实品牌域名。",
+      intro:
+        "纪录片工作室的名字要回答一个立场问题：你替谁看世界？观众相信一部纪录片之前，先相信它背后的厂牌——BBC 的自然、NHK 的社会、陈晓卿的人间烟火，厂牌即视角，名字要把这个视角说出来。第一素材库是真实叙事：真、实、见、证——纪录片卖的是「这是真的」的信用，名字里的求真姿态直接参与观众的信任决策；镜头、目光、在场的词根都在承诺「我们替你看见」。第二个抓手是时间意象：纪录片是时间的手艺——跟拍十年的坚持、历史影像的打捞、一个时代的存档，年轮、光阴、档案的词根把这份耐心变成品牌资产；「稻来」取自「稻花香里说丰年」，把土地与时间一起收进两个字。第三个抓手是题材立场：Participant（参与者）把「看完要行动」的社会立场写进名字——自然、美食、社会议题的厂牌各有词库，名字先声明你替谁发声。要注意生意的两条腿：平台委托制作（B2B 履约，要正规可信）与自有 IP 开发（内容品牌，要有辨识度）——名字要在基金申请书与片头厂标两个场景都立得住。渠道上，纪录片厂牌活在电影节片单、流媒体分类页与「这是哪家拍的」的口碑转述里——名字要配得上题材的分量，轻浮的名字接不住沉重的故事。",
+      namingIdeas: [
+        "真实叙事：真、实、见、证——纪录片卖「这是真的」的信用，求真姿态直接参与信任决策",
+        "时间意象：年轮、光阴、档案——跟拍十年的耐心是品牌资产，时间词根把坚持变成承诺",
+        "题材立场：自然、人间、田野——厂牌即视角，名字先声明你替谁看世界、为谁发声",
+        "在场感词根：镜头、目光、现场——「我们替你看见」是这门手艺的第一承诺",
+        "双场景测试：名字放进基金申请书与片头厂标各看一遍——委托方与观众都信，才算过关",
+      ],
+      cases: [
+        { name: "National Geographic", takeaway: "「国家+地理」的学会式命名：一百多年的探险与求知信用压进黄框——机构感大词撑起「替人类看世界」的格局，纪实品牌信任资产的天花板" },
+        { name: "Participant", takeaway: "「参与者」的立场宣言：看完要行动，观众不是旁观者——《难以忽视的真相》背后的影业，一个词把社会议题厂牌的使命说尽" },
+        { name: "Dogwoof", takeaway: "狗吠的拟声怪词：纪录片发行界最响的一声——古怪好记零歧义，独立纪录片发行厂牌用一个不严肃的名字做最严肃的内容，反差即辨识度" },
+        { name: "稻来传媒", takeaway: "取自「稻花香里说丰年」：土地、时间与人间烟火收进两个字——陈晓卿《风味人间》厂牌，名字的温度与美食纪实的视角完全同频" },
+        { name: "RadicalMedia", takeaway: "radical+media 的态度组合：「彻底的、根源的」——从奥斯卡纪录片到品牌内容，激进一词把创作立场当成厂牌资产" },
+      ],
+      pitfalls: [
+        "轻浮压不住题材：名字太俏皮接不住沉重的故事——纪录片的名字要配得上题材的分量，信任先于趣味",
+        "锁死单一题材：名字绑死「美食」「自然」一个赛道——题材会枯竭，厂牌的边界要画在「纪实视角」而非某类内容",
+        "机构腔没有温度：名字全是「XX 影视文化」的注册感——观众记住的是视角与态度，工商名进不了口碑转述",
+        "忽略国际片单：英文名难念或歧义——纪录片是电影节与国际发行的生意，英文名拼不出等于缺席",
+      ],
+    },
+    en: {
+      label: "Documentary studios",
+      title: "How to Name a Documentary Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Documentary studio naming guide: truth narrative, time imagery, subject stance, breakdowns of National Geographic/Participant/Dogwoof, recommended TLDs and pitfalls — then hunt an available nonfiction-brand domain with AI.",
+      intro:
+        "A documentary studio's name must answer a question of stance: on whose behalf do you look at the world? Before audiences believe a film, they believe the label behind it — BBC's nature, NHK's society, Chen Xiaoqing's street-food humanity; the label is the lens, and the name must say so. The first material bin is the truth narrative: real, true, witness, testify — documentary sells the credit of \"this actually happened\", and a truth-seeking posture in the name joins the viewer's trust decision directly; lens, gaze and presence roots all promise \"we see it for you\". The second lever is time imagery: documentary is a craft of time — ten-year follow shoots, archival salvage, the filing of an era — and rings, seasons and archive roots turn that patience into brand equity; Daolai (稻来) folds land and time into two characters lifted from a harvest poem. The third is subject stance: Participant wrote its social position — watch, then act — straight into its name; nature, food and social-issue labels each have their own word bins, and the name should declare whom you speak for. Mind the two legs of the business: platform commissions (B2B fulfillment, needing rigor) and owned-IP development (a content brand, needing distinctiveness) — the name must hold up in both a grant application and an opening card. On channels: documentary labels live on festival slates, streamer category pages and \"who made this?\" word of mouth — the name must carry the weight of its subjects, for a flippant name cannot hold a heavy story.",
+      namingIdeas: [
+        "Truth narrative: real, true, witness, testify — documentary sells the credit of \"this actually happened\"; the truth posture joins the trust decision",
+        "Time imagery: rings, seasons, archive — ten-year patience is brand equity, and time roots turn persistence into promise",
+        "Subject stance: nature, humanity, field — the label is the lens; the name declares whom you watch for and speak for",
+        "Presence roots: lens, gaze, on-the-ground — \"we see it for you\" is this craft's first promise",
+        "The two-scene test: place the name in a grant application and on an opening card — commissioners and audiences must both believe it",
+      ],
+      cases: [
+        { name: "National Geographic", takeaway: "Learned-society naming at national scale: a century of exploration credit compressed into the yellow frame — institutional gravitas carrying \"seeing the world for humanity\"; the ceiling of nonfiction trust equity" },
+        { name: "Participant", takeaway: "A stance declared in one word: watch, then act — the studio behind An Inconvenient Truth, its whole social-issue mission folded into a single noun" },
+        { name: "Dogwoof", takeaway: "An onomatopoeic bark as a marque: the loudest name in documentary distribution — odd, memorable, unambiguous; the most serious content behind the least serious name, and the contrast is the recognition" },
+        { name: "稻来 (Daolai)", takeaway: "Lifted from a harvest-season verse: land, time and street-food humanity folded into two characters — Chen Xiaoqing's Flavorful Origins label, its warmth in perfect tune with the food-documentary lens" },
+        { name: "RadicalMedia", takeaway: "Radical + media as attitude: \"of the root, thoroughgoing\" — from Oscar-winning documentary to branded content, a creative stance turned into label equity" },
+      ],
+      pitfalls: [
+        "Flippancy under heavy subjects: a name too playful to hold hard stories — a documentary name must match its subjects' weight; trust precedes wit",
+        "Welding to one beat: a name locked to food or nature — beats run dry, so draw the boundary at \"the nonfiction lens\", not one genre",
+        "Institutional blandness: a name stuck at \"XX Film & Culture\" registry-speak — audiences remember lens and attitude, and a filing-form name never enters word of mouth",
+        "Ignoring the festival slate: an English name that stumbles or misleads — documentary is a festival and international-sales business; a name that can't be spelled is a name that isn't there",
+      ],
+    },
+  },
+  newsmedia: {
+    slug: "newsmedia",
+    tlds: [
+      { tld: "com", zh: "读者订阅与机构信源引用的信任底线，新闻品牌的默认选择", en: "The trust baseline for reader subscriptions and source citations — the default for a news brand" },
+      { tld: "press", zh: "「新闻界」后缀直给行业身份，独立媒体的态度宣言", en: "The press suffix states the trade — an independent newsroom's declaration of identity" },
+      { tld: "news", zh: "「新闻」品类词后缀，资讯站点零解释成本", en: "The news category suffix — zero explanation for a news destination" },
+    ],
+    zh: {
+      label: "独立新闻媒体",
+      title: "独立新闻媒体与资讯品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "独立新闻媒体命名指南：信源信用、视角词根、订阅关系等 5 种思路，Axios/The Information/财新等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的媒体品牌域名。",
+      intro:
+        "新闻品牌的名字是一枚信源印章：它会出现在「据 XX 报道」的转引里、订阅邮件的发件人栏里、被引用的截图角标里——名字的可信度直接参与每一次传播。第一素材库是信源信用：信、实、真、核——读者订阅一家媒体买的是「它替我核实过了」，Axios 取希腊语「值得的」，一个词把配得上你的时间说清；The Information 干脆用品类大词自证「我们就是信息本身」。第二个抓手是视角词根：独立媒体的生存之道是差异化视角——深、锐、透、镜的词根声明你看得更深；财新的「财」定领域、「新」定姿态，两个字画出专业财经的疆界。第三个抓手是订阅关系：新闻正在从流量生意变成会员生意——The Athletic（体育迷的自称）用身份词把「我们是自己人」写进名字，订阅制媒体的名字要让读者愿意让它天天出现在收件箱里。要注意公信力的分寸：名字太营销腔会透支新闻的严肃感，太机关腔又失去独立媒体的锐气——独立、深度、专业的气质要在名字里平衡。渠道上，新闻品牌活在转引署名、newsletter 发件人栏与「你看的哪家」的读者转述里——名字要短到能进「据 XX」的句式，且经得起十年公信力的积累。",
+      namingIdeas: [
+        "信源信用：信、实、真、核——读者买的是「它替我核实过了」，求真词根直接参与信任决策",
+        "视角词根：深、锐、透、镜——独立媒体靠差异化视角活着，名字先声明你看得更深",
+        "订阅关系：身份词与自己人感——会员制媒体的名字要让读者愿意天天在收件箱见到它",
+        "转引句式测试：把名字放进「据 XX 报道」念一遍——拗口或歧义的名字每次被引用都在漏水",
+        "领域+姿态双字法：一字定领域一字定姿态——「财新」式的紧凑结构，两个字画出专业疆界",
+      ],
+      cases: [
+        { name: "Axios", takeaway: "希腊语「值得的」：信息过载时代承诺「配得上你的时间」——smart brevity 的产品哲学与名字互为注脚，学术感外来词自带严肃与克制" },
+        { name: "The Information", takeaway: "品类大词加定冠词的底气：「我们就是信息本身」——高价订阅的科技媒体用最朴素的名字自证稀缺，定冠词是傲气也是承诺" },
+        { name: "财新", takeaway: "「财」定领域「新」定姿态：两个字画出专业财经的疆界——调查报道的公信力资产在名字里日积月累，紧凑结构经得起「据财新报道」的转引" },
+        { name: "ProPublica", takeaway: "pro+publica 的拉丁语立场：「为了公众」——非营利调查新闻的使命直接当名字，机构定位、资金模式与编辑方针一词说尽" },
+        { name: "The Athletic", takeaway: "体育迷的自称当刊名：「我们是自己人」的身份词——订阅制体育媒体把读者身份写进名字，会员生意的命名范本" },
+      ],
+      pitfalls: [
+        "营销腔透支公信力：名字像增长黑客产品——新闻卖的是十年信用，流量腔的名字第一天就在打折",
+        "锁死单一介质：名字绑死「报」「刊」「台」——介质会过时，媒体品牌的边界画在视角与领域而非载体",
+        "「据 XX」念不顺：名字进不了转引句式——被引用是新闻品牌最大的免费传播，拗口的名字每次都在漏水",
+        "大而无当：名字全是「环球」「时代」的空泛大词——独立媒体的资产是具体的视角与领域，大词撑不起小编辑部反而显虚",
+      ],
+    },
+    en: {
+      label: "Independent news media",
+      title: "How to Name an Independent News Outlet: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Independent news media naming guide: source credibility, lens roots, subscriber relationships, breakdowns of Axios/The Information/ProPublica, recommended TLDs and pitfalls — then hunt an available news-brand domain with AI.",
+      intro:
+        "A news brand's name is a source stamp: it appears in \"according to X\" citations, the newsletter sender line and the watermark of screenshotted stories — its credibility joins every act of circulation. The first material bin is source credit: true, fact, verify — a subscription buys \"they verified it for me\"; Axios took the Greek for \"worthy\", one word promising worth your time, while The Information claims the category noun itself as self-evidence. The second lever is lens roots: an independent outlet survives on a differentiated lens — deep, sharp, through and lens roots declare you see further; Caixin's two characters fix the beat (finance) and the posture (new) in one compact seal. The third is the subscriber relationship: news is shifting from traffic to membership — The Athletic wrote its readers' own self-label into the masthead, an identity word saying \"we are one of you\"; a subscription outlet's name must be one readers welcome into their inbox daily. Mind the credibility balance: a marketing-flavored name overdrafts journalistic seriousness, while a bureaucratic one kills independent edge — independence, depth and rigor must balance in the name. On channels: news brands live in citation bylines, sender lines and readers' \"which one do you read?\" — the name must be short enough for the \"according to X\" clause and durable enough to compound a decade of trust.",
+      namingIdeas: [
+        "Source credit: true, fact, verify — a subscription buys \"they verified it for me\"; truth roots join the trust decision directly",
+        "Lens roots: deep, sharp, through — an independent outlet lives on a differentiated lens; the name declares you see further",
+        "Subscriber identity: self-label words and one-of-us warmth — a membership outlet's name must be welcome in the inbox every day",
+        "The citation test: read the name inside \"according to X\" — a clumsy or ambiguous name leaks value on every citation",
+        "Beat-plus-posture compression: one element fixing the beat, one the stance — the Caixin-style seal, a professional boundary in two characters",
+      ],
+      cases: [
+        { name: "Axios", takeaway: "Greek for \"worthy\": in the age of overload, a promise to be worth your time — the smart-brevity philosophy and the name annotating each other; a learned borrowing carrying seriousness and restraint" },
+        { name: "The Information", takeaway: "The category noun with a definite article: \"we are the information itself\" — a high-priced tech outlet proving scarcity with the plainest possible name; the article is both swagger and promise" },
+        { name: "Caixin (财新)", takeaway: "One character fixing the beat, one the posture: a professional-finance boundary drawn in two strokes — investigative credibility compounding inside a name built to survive \"according to Caixin\"" },
+        { name: "ProPublica", takeaway: "Latin stance-taking: \"for the public\" — a nonprofit investigative mission served as the name itself; positioning, funding model and editorial charter in one word" },
+        { name: "The Athletic", takeaway: "The readers' own self-label as the masthead: an identity word saying \"we are one of you\" — subscriber sports journalism writing its audience into the name; the membership-era naming benchmark" },
+      ],
+      pitfalls: [
+        "Marketing register overdrafting trust: a name that reads like a growth-hacked product — news sells a decade of credit, and traffic-speak discounts it from day one",
+        "Welding to one medium: a name locked to paper, journal or channel — media age out; draw the boundary at lens and beat, not carrier",
+        "Failing \"according to X\": a name that can't ride the citation clause — being quoted is a news brand's largest free distribution, and a clumsy name leaks on every quote",
+        "Grand and hollow: a name of empty globe-and-era words — an independent newsroom's asset is a concrete lens and beat; oversized words on a small masthead read as bluff",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
