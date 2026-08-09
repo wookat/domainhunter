@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 186,
+    "count": 192,
     "slugs": [
       "com",
       "net",
@@ -187,7 +187,13 @@
       "fit",
       "dance",
       "guide",
-      "reviews"
+      "reviews",
+      "golf",
+      "tennis",
+      "soccer",
+      "football",
+      "hockey",
+      "surf"
     ]
   },
   "guide": {

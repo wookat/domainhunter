@@ -5604,6 +5604,186 @@ const GUIDES = {
       ],
     },
   },
+  golf: {
+    tld: "golf",
+    zh: {
+      title: ".golf 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".golf 把「高尔夫」写进域名，适合高尔夫球场与练习场、教练与青少年培训、球具装备电商、赛事与差点管理工具。查看 .golf 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .golf 域名。",
+      intro:
+        ".golf 把球场写进域名：高尔夫球场与练习场、教练与青少年培训、球具装备电商、赛事与差点管理工具用 name.golf，「打球来这儿」的定位从地址就说清了。高尔夫是客单价与搜索意图双高的行业——球友搜「城市 + golf」订场，家长搜教练名核实资质，「场地名 + .golf」比杂牌后缀更像正经球场官网；对球具电商与订场平台，后缀本身就是品类词，省掉域名里再塞一遍 golf 的冗余。注册局为 Identity Digital，注册约 $5（约 ¥33），续费约 $52/年（约 ¥374）——首年低价、续费中高档，按续费价核算预算才稳妥。库存极好：城市词、球场词、人名几乎都有货。注意三点：一是续费 ¥374/年 对个人球友博客偏贵，轻量内容站可先用温和档后缀起步；二是 golf 是全球通用词，面向国内学员的页面记得同步中文品牌名；三是与已收录 .club 的分工——会员制俱乐部社群用 .club，球场与教学业务用 .golf 品类更锐。命名上「城市 + .golf」直接接住订场搜索，「人名 + .golf」适合教练个人品牌，「品牌 + .golf」适合球具电商与赛事平台。",
+      bestFor: ["高尔夫球场与练习场", "教练与青少年培训", "球具装备电商", "赛事与差点管理工具"],
+      namingTips: [
+        "「城市 + .golf」直接接住订场与找场搜索",
+        "首年约 $5、续费约 $52/年，按续费价做预算",
+        "面向国内学员的页面同步中文品牌名更稳",
+        "会员社群用 .club，球场与教学用 .golf 更锐",
+      ],
+    },
+    en: {
+      title: ".golf Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".golf writes the course into the address — for golf courses and driving ranges, coaches and junior academies, club and gear stores, and tournament and handicap tools. See live pricing and naming advice, then hunt available .golf names with AI.",
+      intro:
+        ".golf writes the course into the address: golf courses and driving ranges, coaches and junior academies, club and gear stores, tournament and handicap tools on name.golf say this is where the golf happens in the domain itself. Golf is a vertical where ticket size and search intent both run high — players search city + golf to book tee times and parents search the coach's name to vet credentials, and course name + .golf reads like a proper club site where a generic suffix wouldn't; for gear stores and booking platforms the suffix is the category word, sparing the name from carrying golf twice. Operated by Identity Digital, about $5 to register and $52/yr to renew — a cheap first year with a mid-to-high renewal, so budget on the renewal price. Inventory is excellent: city words, course words and first names nearly all hit. Three cautions: $52/yr is steep for a personal golf blog — lightweight content sites can start on a milder suffix; golf is a global word, so pages aimed at local students should pair the local brand name; and split the work with the already-listed .club — membership communities fit .club, courses and coaching read sharper on .golf. Naming: city + .golf catches tee-time searches directly; first name + .golf fits coach personal brands; brand + .golf fits gear stores and tournament platforms.",
+      bestFor: ["Golf courses & driving ranges", "Coaches & junior academies", "Club & gear stores", "Tournament & handicap tools"],
+      namingTips: [
+        "City + .golf catches tee-time and course searches",
+        "About $5 year one, $52/yr renewal — budget on renewal",
+        "Pair a local brand name for local-student pages",
+        "Communities fit .club; courses read sharper on .golf",
+      ],
+    },
+  },
+  tennis: {
+    tld: "tennis",
+    zh: {
+      title: ".tennis 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".tennis 把「网球」写进域名，适合网球俱乐部与场馆订场、教练与青少年培训、球拍球线装备电商、赛事组织与约球社区。查看 .tennis 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tennis 域名。",
+      intro:
+        ".tennis 把球拍写进域名：网球俱乐部与场馆订场、教练与青少年培训、球拍球线装备电商、赛事组织与约球社区用 name.tennis，「打网球来这儿」从地址就说清了。网球是强本地、强教学的运动——学员搜「城市 + tennis」找课订场，「俱乐部名 + .tennis」一眼就是网球场馆官网；穿线师与装备店用品类后缀，域名主体留给品牌名，比在杂牌后缀里塞 tennis 更利落。注册局为 Identity Digital，注册约 $52（约 ¥374），续费约 $52/年（约 ¥374）——注册续费同价，无「首年低价钓鱼」问题，报价即长期成本，但绝对价位属中高档，适合正经经营的场馆与品牌而非试水项目。库存极好：城市词、俱乐部词、人名几乎都有货。注意三点：一是同价意味着第一年就按长期成本决策，预算敏感可先用 .club 起步；二是 tennis 是全球通用词，本地招生页面同步中文品牌名；三是与已收录 .coach 的分工——教练个人品牌用 .coach 更通用，场馆与俱乐部用 .tennis 品类更明确。命名上「城市 + .tennis」直接接住找课订场搜索，「俱乐部名 + .tennis」适合场馆官网，「品牌 + .tennis」适合装备电商与赛事平台。",
+      bestFor: ["网球俱乐部与场馆订场", "教练与青少年培训", "球拍球线装备电商", "赛事组织与约球社区"],
+      namingTips: [
+        "「城市 + .tennis」直接接住找课与订场搜索",
+        "注册续费同价约 $52/年，首年就按长期成本决策",
+        "预算敏感可先用 .club 起步，正经场馆再上",
+        "教练个人品牌用 .coach，场馆俱乐部用 .tennis",
+      ],
+    },
+    en: {
+      title: ".tennis Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".tennis writes the racquet into the address — for tennis clubs and court booking, coaches and junior programs, racquet and string stores, and leagues and hitting-partner communities. See live pricing and naming advice, then hunt available .tennis names with AI.",
+      intro:
+        ".tennis writes the racquet into the address: tennis clubs and court booking, coaches and junior programs, racquet and string stores, leagues and hitting-partner communities on name.tennis say this is where the tennis happens in the domain itself. Tennis is a local, lesson-heavy sport — students search city + tennis for classes and courts, and club name + .tennis reads instantly as a club's official site; stringers and gear stores get the category from the suffix and keep the name for the brand, cleaner than stuffing tennis into a generic domain. Operated by Identity Digital, about $52 to register and $52/yr to renew — same price both years, no first-year teaser, so the quote is the long-term cost; the absolute tier is mid-to-high, right for operating clubs and brands rather than trial projects. Inventory is excellent: city words, club words and first names nearly all hit. Three cautions: flat pricing means deciding on long-term cost from day one — budget-sensitive projects can start on .club; tennis is a global word, so local enrollment pages should pair the local brand name; and split the work with the already-listed .coach — coach personal brands read broader on .coach, clubs and venues read more specific on .tennis. Naming: city + .tennis catches class and court searches directly; club name + .tennis fits venue sites; brand + .tennis fits gear stores and league platforms.",
+      bestFor: ["Tennis clubs & court booking", "Coaches & junior programs", "Racquet & string stores", "Leagues & hitting-partner communities"],
+      namingTips: [
+        "City + .tennis catches class and court searches",
+        "Same $52 to register and renew — no teaser trap",
+        "Budget-sensitive projects can start on .club first",
+        "Coach brands fit .coach; clubs read sharper here",
+      ],
+    },
+  },
+  soccer: {
+    tld: "soccer",
+    zh: {
+      title: ".soccer 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".soccer 把「足球」写进域名，适合青训机构与足球学校、业余球队与联赛组织、球迷内容与战术分析站、球衣装备电商。查看 .soccer 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .soccer 域名。",
+      intro:
+        ".soccer 把绿茵场写进域名：青训机构与足球学校、业余球队与联赛组织、球迷内容与战术分析站、球衣装备电商用 name.soccer，「踢球来这儿」从地址就说清了。足球是全球第一运动，青训是家长掏钱的刚需赛道——家长搜「城市 + 足球青训」找机构，「机构名 + .soccer」比杂牌后缀更像正经足球学校；美式语境里 soccer 专指足球不与橄榄球混淆，面向北美市场尤其顺。注册局为 Identity Digital，注册约 $11（约 ¥78），续费约 $21/年（约 ¥152）——温和档，球队与机构长期持有无压力。库存极好：城市词、队名词、青训词几乎都有货。注意三点：一是英式语境更习惯 football，主打欧洲市场可对比同价的 .football 选更顺口的那个；二是球迷内容的主阵地在短视频与社区平台，域名的角色是招生报名与赛程报名的稳定入口；三是与已收录 .team 的分工——泛团队协作用 .team，足球专营用 .soccer 品类更锐。命名上「城市 + .soccer」直接接住找青训搜索，「队名 + .soccer」适合球队与联赛官网，「品牌 + .soccer」适合装备电商与内容站。",
+      bestFor: ["青训机构与足球学校", "业余球队与联赛组织", "球迷内容与战术分析站", "球衣装备电商"],
+      namingTips: [
+        "「城市 + .soccer」直接接住青训与找队搜索",
+        "注册约 $11、续费约 $21/年，长期持有无压力",
+        "北美市场用 soccer，欧洲市场可对比 .football",
+        "泛团队用 .team，足球专营用 .soccer 更锐",
+      ],
+    },
+    en: {
+      title: ".soccer Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".soccer writes the pitch into the address — for youth academies and soccer schools, amateur clubs and leagues, fan content and tactics sites, and jersey and gear stores. See live pricing and naming advice, then hunt available .soccer names with AI.",
+      intro:
+        ".soccer writes the pitch into the address: youth academies and soccer schools, amateur clubs and leagues, fan content and tactics analysis sites, jersey and gear stores on name.soccer say this is where the game lives in the domain itself. Soccer is the world's biggest sport and youth training is a category parents pay for — they search city + youth soccer to find academies, and academy name + .soccer reads like a proper soccer school where a generic suffix wouldn't; in American English soccer is unambiguous, which makes the suffix especially smooth for North American audiences. Operated by Identity Digital, about $11 to register and $21/yr to renew — the mild tier, painless for clubs and academies to hold long-term. Inventory is excellent: city words, club names and training words nearly all hit. Three cautions: British English says football, so Europe-facing projects should compare the same-priced .football and pick whichever reads natural; fan content spreads on video and community platforms, so the domain's job is the stable front door for enrollment and fixtures; and split the work with the already-listed .team — general teamwork fits .team, dedicated soccer brands read sharper on .soccer. Naming: city + .soccer catches academy searches directly; club name + .soccer fits team and league sites; brand + .soccer fits gear stores and content sites.",
+      bestFor: ["Youth academies & soccer schools", "Amateur clubs & leagues", "Fan content & tactics sites", "Jersey & gear stores"],
+      namingTips: [
+        "City + .soccer catches academy and team searches",
+        "About $11 year one, $21/yr renewal — easy to hold",
+        "US says soccer; Europe-facing projects compare .football",
+        "Teamwork fits .team; soccer brands read sharper here",
+      ],
+    },
+  },
+  football: {
+    tld: "football",
+    zh: {
+      title: ".football 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".football 把「足球」写进域名，适合足球俱乐部与球迷会、青训营与球员经纪、赛事资讯与数据分析站、球场预订与约球平台。查看 .football 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .football 域名。",
+      intro:
+        ".football 把主队写进域名：足球俱乐部与球迷会、青训营与球员经纪、赛事资讯与数据分析站、球场预订与约球平台用 name.football，「为足球而生」从地址就说清了。football 是英式与全球大多数市场对足球的称呼——欧洲、南美、亚非球迷搜索用的都是这个词，「俱乐部名 + .football」对国际球迷比 .soccer 更自然；对球迷会与自媒体，后缀本身就是身份宣言，比杂牌后缀更有归属感。注册局为 Identity Digital，注册约 $11（约 ¥78），续费约 $21/年（约 ¥152）——温和档，俱乐部与球迷会长期持有无压力。库存极好：队名词、城市词、联赛词几乎都有货。注意三点：一是美式语境里 football 指橄榄球，主打北美市场可对比同价的 .soccer 避免歧义；二是涉及俱乐部徽标与赛事名的商标授权要先厘清，球迷站标明非官方身份更稳；三是与已收录 .games 的分工——泛游戏娱乐用 .games，足球垂直用 .football 语义更准。命名上「队名/城市 + .football」适合俱乐部与球迷会，「联赛 + .football」适合赛事资讯站，「品牌 + .football」适合订场与数据平台。",
+      bestFor: ["足球俱乐部与球迷会", "青训营与球员经纪", "赛事资讯与数据分析站", "球场预订与约球平台"],
+      namingTips: [
+        "「队名/城市 + .football」是俱乐部与球迷会标准款",
+        "注册约 $11、续费约 $21/年，长期持有无压力",
+        "北美语境 football 指橄榄球，可对比 .soccer",
+        "球迷站标明非官方身份，商标授权先厘清",
+      ],
+    },
+    en: {
+      title: ".football Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".football writes the club into the address — for football clubs and supporter groups, youth camps and player agencies, fixtures and analytics sites, and pitch booking and pickup platforms. See live pricing and naming advice, then hunt available .football names with AI.",
+      intro:
+        ".football writes the club into the address: football clubs and supporter groups, youth camps and player agencies, fixtures and analytics sites, pitch booking and pickup platforms on name.football declare made for the game in the domain itself. football is what most of the world calls the sport — fans in Europe, South America, Asia and Africa all search with this word, so club name + .football reads more natural to an international audience than .soccer; for supporter groups and fan media the suffix is an identity statement with a belonging a generic suffix can't match. Operated by Identity Digital, about $11 to register and $21/yr to renew — the mild tier, painless for clubs and fan groups to hold long-term. Inventory is excellent: club names, city words and league words nearly all hit. Three cautions: in American English football means the gridiron game, so North America-facing projects should compare the same-priced .soccer to avoid ambiguity; club crests and competition names carry trademark weight, so fan sites should state their unofficial status and clear licensing first; and split the work with the already-listed .games — general gaming fits .games, football verticals read truer on .football. Naming: club or city + .football fits clubs and supporter groups; league + .football fits fixtures and news sites; brand + .football fits booking and analytics platforms.",
+      bestFor: ["Football clubs & supporter groups", "Youth camps & player agencies", "Fixtures & analytics sites", "Pitch booking & pickup platforms"],
+      namingTips: [
+        "Club or city + .football is the supporter standard",
+        "About $11 year one, $21/yr renewal — easy to hold",
+        "US reads football as gridiron; compare .soccer there",
+        "Fan sites: state unofficial status, clear trademarks",
+      ],
+    },
+  },
+  hockey: {
+    tld: "hockey",
+    zh: {
+      title: ".hockey 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".hockey 把「冰球」写进域名，适合冰球俱乐部与青训营、冰场与训练设施、球杆护具装备电商、联赛资讯与球迷社区。查看 .hockey 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .hockey 域名。",
+      intro:
+        ".hockey 把冰场写进域名：冰球俱乐部与青训营、冰场与训练设施、球杆护具装备电商、联赛资讯与球迷社区用 name.hockey，「打冰球来这儿」从地址就说清了。冰球在北美、北欧与俄罗斯是国民运动，国内冰雪运动也在政策带动下快速升温——家长搜「城市 + 冰球培训」找俱乐部，「俱乐部名 + .hockey」比杂牌后缀更像正经冰球机构；装备电商用品类后缀，域名主体留给品牌名。注册局为 Identity Digital，注册约 $8（约 ¥59），续费约 $48/年（约 ¥345）——首年低价、续费中高档，按续费价核算预算才稳妥。库存极好：城市词、队名词、装备词几乎都有货。注意三点：一是 hockey 在英联邦部分地区默认指曲棍球（field hockey），面向这些市场时页面要说清冰球还是曲棍球；二是续费 ¥345/年 对个人球迷博客偏贵，轻量内容站可先用温和档后缀起步；三是与已收录 .club 的分工——综合体育社群用 .club，冰球专营用 .hockey 品类更锐。命名上「城市 + .hockey」直接接住找俱乐部搜索，「队名 + .hockey」适合球队与联赛官网，「品牌 + .hockey」适合装备电商与冰场平台。",
+      bestFor: ["冰球俱乐部与青训营", "冰场与训练设施", "球杆护具装备电商", "联赛资讯与球迷社区"],
+      namingTips: [
+        "「城市 + .hockey」直接接住找俱乐部搜索",
+        "首年约 $8、续费约 $48/年，按续费价做预算",
+        "英联邦部分市场 hockey 默认曲棍球，页面说清",
+        "综合社群用 .club，冰球专营用 .hockey 更锐",
+      ],
+    },
+    en: {
+      title: ".hockey Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".hockey writes the rink into the address — for hockey clubs and youth programs, rinks and training facilities, stick and gear stores, and league news and fan communities. See live pricing and naming advice, then hunt available .hockey names with AI.",
+      intro:
+        ".hockey writes the rink into the address: hockey clubs and youth programs, rinks and training facilities, stick and gear stores, league news and fan communities on name.hockey say this is where the hockey happens in the domain itself. Hockey is a national sport across North America, the Nordics and Russia — parents search city + youth hockey to find clubs, and club name + .hockey reads like a proper hockey organization where a generic suffix wouldn't; gear stores get the category from the suffix and keep the name for the brand. Operated by Identity Digital, about $8 to register and $48/yr to renew — a cheap first year with a mid-to-high renewal, so budget on the renewal price. Inventory is excellent: city words, team names and gear words nearly all hit. Three cautions: in parts of the Commonwealth hockey defaults to field hockey, so pages facing those markets should say which game; $48/yr is steep for a personal fan blog — lightweight content sites can start on a milder suffix; and split the work with the already-listed .club — general sports communities fit .club, dedicated hockey brands read sharper on .hockey. Naming: city + .hockey catches club searches directly; team name + .hockey fits club and league sites; brand + .hockey fits gear stores and rink platforms.",
+      bestFor: ["Hockey clubs & youth programs", "Rinks & training facilities", "Stick & gear stores", "League news & fan communities"],
+      namingTips: [
+        "City + .hockey catches club and program searches",
+        "About $8 year one, $48/yr renewal — budget on renewal",
+        "Commonwealth markets may read field hockey — clarify",
+        "Communities fit .club; hockey brands read sharper here",
+      ],
+    },
+  },
+  surf: {
+    tld: "surf",
+    zh: {
+      title: ".surf 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".surf 把「冲浪」写进域名，适合冲浪学校与教练、冲浪营地与海边民宿、浪板装备电商、浪况预报与冲浪内容站。查看 .surf 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .surf 域名。",
+      intro:
+        ".surf 把海浪写进域名：冲浪学校与教练、冲浪营地与海边民宿、浪板装备电商、浪况预报与冲浪内容站用 name.surf，「下水来这儿」从地址就说清了。冲浪是强目的地、强生活方式的运动——浪人搜「海滩 + surf」找学校订营地，「地名 + .surf」比杂牌后缀更像本地浪店；surf 同时还有「上网冲浪」的双关义，浏览器工具与网页产品也能借它玩出彩。注册局运营方为 GoDaddy Registry（原 Minds + Machines），注册约 $2（约 ¥11），续费约 $26/年（约 ¥189）——首年白菜价、续费温和档，长期持有无压力。库存极好：海滩词、地名、品牌词几乎都有货。注意三点：一是首年超低价也吸引过垃圾站，个别平台对超低价后缀审查稍严，正经做站内容质量要跟上；二是国内冲浪聚集在万宁、后海等目的地，本地招生页面同步中文品牌名更稳；三是与已收录 .fun 的分工——泛娱乐用 .fun，冲浪垂直用 .surf 品类更锐。命名上「海滩/地名 + .surf」直接接住找学校搜索，「品牌 + .surf」适合装备电商与预报工具，「动词短语 + .surf」适合网页产品的双关玩法。",
+      bestFor: ["冲浪学校与教练", "冲浪营地与海边民宿", "浪板装备电商", "浪况预报与冲浪内容站"],
+      namingTips: [
+        "「海滩/地名 + .surf」直接接住找学校搜索",
+        "首年约 $2、续费约 $26/年，长期持有无压力",
+        "超低价后缀曾招垃圾站，内容质量要撑住信任",
+        "泛娱乐用 .fun，冲浪垂直用 .surf 更锐",
+      ],
+    },
+    en: {
+      title: ".surf Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".surf writes the wave into the address — for surf schools and instructors, surf camps and beach stays, board and gear stores, and surf forecasts and content sites. See live pricing and naming advice, then hunt available .surf names with AI.",
+      intro:
+        ".surf writes the wave into the address: surf schools and instructors, surf camps and beach stays, board and gear stores, surf forecast and content sites on name.surf say paddle out here in the domain itself. Surfing is a destination-driven lifestyle sport — surfers search beach + surf for schools and camps, and place name + .surf reads like the local surf shop where a generic suffix wouldn't; surf also carries the browse-the-web double meaning, which browser tools and web products can play to great effect. Operated by GoDaddy Registry (the former Minds + Machines), about $2 to register and $26/yr to renew — a bargain first year with a mild renewal, painless to hold long-term. Inventory is excellent: beach words, place names and brand words nearly all hit. Three cautions: the ultra-cheap first year has attracted spam sites before, so some platforms eye bargain suffixes a bit harder — serious sites need content quality to carry trust; surf scenes cluster around destinations, so local-enrollment pages should pair the local brand name; and split the work with the already-listed .fun — general entertainment fits .fun, surf verticals read sharper on .surf. Naming: beach or place + .surf catches school searches directly; brand + .surf fits gear stores and forecast tools; verb phrase + .surf fits web products playing the double meaning.",
+      bestFor: ["Surf schools & instructors", "Surf camps & beach stays", "Board & gear stores", "Surf forecasts & content sites"],
+      namingTips: [
+        "Beach or place + .surf catches school searches",
+        "About $2 year one, $26/yr renewal — easy to hold",
+        "Cheap door drew spam once; quality carries the trust",
+        "Fun fits .fun; surf verticals read sharper here",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
