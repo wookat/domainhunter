@@ -81,6 +81,8 @@ export async function whoisFallback(r: CheckResult): Promise<CheckResult> {
       const expiresAt = parseWhoisExpiry(text);
       return { domain: r.domain, status: "taken", method: "whois", ...(expiresAt ? { expiresAt } : {}) };
     }
+    // 注册局保留域：found/notFound 都没匹配且文本明确表示保留/不可注册（如 cnnic 对 nic.* 返回「can not be registered online」），细化文案
+    if (/\breserv(?:ed|ation)\b|can\s?not be registered/i.test(text)) return { domain: r.domain, status: "unknown", method: "whois", detail: "reserved" };
     return { domain: r.domain, status: "unknown", method: "whois", detail: "unparsed" };
   } catch (e) {
     return { domain: r.domain, status: "unknown", method: "whois", detail: String(e) };
