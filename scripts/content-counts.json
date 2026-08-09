@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 180,
+    "count": 186,
     "slugs": [
       "com",
       "net",
@@ -181,7 +181,13 @@
       "mom",
       "dad",
       "dog",
-      "gifts"
+      "gifts",
+      "photo",
+      "health",
+      "fit",
+      "dance",
+      "guide",
+      "reviews"
     ]
   },
   "guide": {

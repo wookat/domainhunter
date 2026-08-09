@@ -19,8 +19,8 @@ description: How to run zero-AI production audits of DomainHunter (hunt.zalize.c
 - Raw `websocket-client` CDP connections need `suppress_origin=True` (Chrome rejects the localhost Origin otherwise).
 - `/s/:id` share pages always return HTTP 200 (SPA shell); the 410 (revoked) / 404 (unknown) semantics are on `GET /api/share/:id`. Revoke via `DELETE /api/share/:id` with `{"token": revokeToken}` from the create response.
 - SPA 404 status: unknown top-level paths and unknown `/tld|/guide|/vs` slugs DO return real HTTP 404 with a branded page.
-- MCP `tld_prices` returns `prices` as a dict keyed by TLD (not an array); expected tldCount = current /tld count (180 as of R298).
-- Hub counts (as of R298): /tld 180, /guide 164, /vs 192; quick-check "All" = /tld count + 1 (com.cn). Authoritative counts live in `scripts/content-counts.json`.
+- MCP `tld_prices` returns `prices` as a dict keyed by TLD (not an array); expected tldCount = current /tld count (186 as of R301).
+- Hub counts (as of R301): /tld 186, /guide 182, /vs 210; quick-check "All" = /tld count + 1 (com.cn). Authoritative counts live in `scripts/content-counts.json`.
 - Local testing without deploying: `pnpm install`, then in `apps/web` run `pnpm build` (vite) followed by `npx wrangler dev --port 8787` — it serves the built `dist` plus the worker routes (sitemap.xml, /llms.txt, /api/*) on localhost. `/prices` shows static reference prices when live Porkbun quotes are unavailable locally.
 - To count /prices table rows objectively, count `main a[href^="/?tld="]` (Hunt links) — the table is not a `<table>` element.
 - 375px viewport checks: use CDP `Emulation.setDeviceMetricsOverride` in a separate tab; assert `document.documentElement.scrollWidth <= 375`.

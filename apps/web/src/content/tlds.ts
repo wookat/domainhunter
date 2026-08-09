@@ -5424,6 +5424,186 @@ const GUIDES = {
       ],
     },
   },
+  photo: {
+    tld: "photo",
+    zh: {
+      title: ".photo 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".photo 把「照片」写进域名，适合摄影师作品集与个人主页、婚礼跟拍与约拍工作室、图片分享与照片打印服务、修图与摄影教程站。查看 .photo 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .photo 域名。",
+      intro:
+        ".photo 把作品写进域名：摄影师作品集与个人主页、婚礼跟拍与约拍工作室、图片分享与照片打印服务、修图与摄影教程站用 name.photo，「这里看照片」的定位从地址就说清了。与已收录的 .photos/.photography 相比，.photo 是单数原型词——不带复数也不拖长音节，适合当「一张名片」用：客户在婚礼现场听到 lily.photo，回家就能拼对；而 .photos 更像相册合集、.photography 更像行业机构。注册局运营方为 Registry Services（原 Uniregistry 系），注册约 $26（约 ¥189），续费约 $26/年（约 ¥189）——注册续费同价，无「首年低价钓鱼」问题，报价即长期成本。库存极好：人名、城市、风格词几乎都有货。注意三点：一是 photo 对英文用户是「照片」而非「摄影服务」，主打约拍业务时页面要把服务说清；二是与 .photos 的分工——个人品牌用单数、相册库存类用复数更顺；三是照片作品的主阵地在 Instagram 等平台，域名的角色是接单与转化的稳定门面。命名上「人名 + .photo」是摄影师标准款，「城市 + 风格词 + .photo」适合本地约拍，「品牌 + .photo」适合打印与分享工具。",
+      bestFor: ["摄影师作品集与个人主页", "婚礼跟拍与约拍工作室", "图片分享与照片打印服务", "修图与摄影教程站"],
+      namingTips: [
+        "「人名 + .photo」是摄影师个人品牌标准款",
+        "注册续费同价约 $26/年，报价即长期成本",
+        "个人品牌用单数 .photo，相册合集用 .photos",
+        "平台接流量，域名做接单转化的稳定门面",
+      ],
+    },
+    en: {
+      title: ".photo Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".photo writes the work into the address — for photographer portfolios and personal pages, wedding and portrait studios, photo sharing and print services, and editing and tutorial sites. See live pricing and naming advice, then hunt available .photo names with AI.",
+      intro:
+        ".photo writes the work into the address: photographer portfolios and personal pages, wedding and portrait studios, photo sharing and print services, editing and tutorial sites on name.photo say come here for the pictures in the domain itself. Against its siblings .photos and .photography, .photo is the singular root — no plural, no extra syllables — which makes it the business-card play: a client who hears lily.photo at a wedding can spell it at home, while .photos reads like an album and .photography like an institution. Operated by Registry Services (the former Uniregistry stable), about $26 to register and $26/yr to renew — same price both ways, so there's no first-year teaser trap and the sticker is the long-term cost. Inventory is excellent: first names, cities and style words nearly all hit. Three cautions: photo means the picture, not the service, to English ears — a booking-led studio should spell out the offer on the page; split the work with .photos — singular fits a personal brand, plural fits archives and collections; and photography lives on Instagram and similar platforms, so the domain's job is the stable storefront for bookings and conversions. Naming: first name + .photo is the standard photographer pattern; city + style word + .photo fits local portrait work; brand + .photo fits print and sharing tools.",
+      bestFor: ["Photographer portfolios & personal pages", "Wedding & portrait studios", "Photo sharing & print services", "Editing & tutorial sites"],
+      namingTips: [
+        "First name + .photo is the photographer standard",
+        "Same $26 price to register and renew — no teaser trap",
+        "Singular for a personal brand; .photos for archives",
+        "Platforms bring traffic; the domain converts bookings",
+      ],
+    },
+  },
+  health: {
+    tld: "health",
+    zh: {
+      title: ".health 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".health 把「健康」写进域名，适合数字健康与健康管理应用、诊所与健康服务机构、健康科普与营养内容站、企业员工健康福利平台。查看 .health 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .health 域名。",
+      intro:
+        ".health 把行业写进域名：数字健康与健康管理应用、诊所与健康服务机构、健康科普与营养内容站、企业员工健康福利平台用 name.health，「做健康这门生意」的定位从地址就说清了。健康是搜索量与信任要求双高的赛道——用户点进健康站点前会先掂量可信度，一个行业专属后缀比杂牌后缀更能传达「正经做健康」的信号；CVS、AXA 等大机构启用 .health 站点也在持续给后缀背书。注册局为 DotHealth，注册约 $11（约 ¥78），续费约 $62/年（约 ¥449）——首年低价引流、续费中高档，预算按续费价核算才稳妥。库存极好：病种词、人群词、服务词几乎都有货。注意三点：一是健康内容受平台与监管双重审视，医疗声明合规比域名本身更关键；二是与已收录 .care/.clinic/.doctor 的分工——机构实体用后三者，泛健康产品与内容平台用 .health 更大气；三是续费 ¥449/年 对个人博客偏贵，轻量内容站可先用温和档后缀起步。命名上「品牌 + .health」适合健康应用与平台，「人群/病种 + .health」直接接住垂直搜索，「企业名 + .health」适合员工健康门户。",
+      bestFor: ["数字健康与健康管理应用", "诊所与健康服务机构", "健康科普与营养内容站", "企业员工健康福利平台"],
+      namingTips: [
+        "「品牌 + .health」适合健康应用与平台门户",
+        "首年约 $11、续费约 $62/年，按续费价做预算",
+        "医疗声明合规比域名更关键，先把资质做扎实",
+        "机构实体用 .clinic/.doctor，平台产品用 .health",
+      ],
+    },
+    en: {
+      title: ".health Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".health writes the industry into the address — for digital health and wellness apps, clinics and health services, health education and nutrition content, and corporate wellness platforms. See live pricing and naming advice, then hunt available .health names with AI.",
+      intro:
+        ".health writes the industry into the address: digital health and wellness apps, clinics and health services, health education and nutrition content sites, corporate wellness platforms on name.health state we're in the health business in the domain itself. Health is a vertical where search volume and trust requirements both run high — users size up credibility before they click, and a category-specific suffix signals serious about health better than a generic one; adoption by CVS, AXA and other large institutions keeps endorsing the suffix. Operated by the DotHealth registry, about $11 to register and $62/yr to renew — a cheap first year with a mid-to-high renewal, so budget on the renewal price. Inventory is excellent: condition words, audience words and service words nearly all hit. Three cautions: health content faces platform and regulatory scrutiny alike, so medical-claim compliance matters more than the domain; split the work with .care, .clinic and .doctor — physical practices fit those, while broad health products and content platforms read bigger on .health; and $62/yr is steep for a personal blog — lightweight content sites can start on a milder suffix. Naming: brand + .health fits health apps and platforms; audience or condition + .health catches vertical searches directly; company name + .health fits employee wellness portals.",
+      bestFor: ["Digital health & wellness apps", "Clinics & health services", "Health education & nutrition content", "Corporate wellness platforms"],
+      namingTips: [
+        "Brand + .health fits health apps and platforms",
+        "About $11 year one, $62/yr renewal — budget on renewal",
+        "Medical-claim compliance matters more than the domain",
+        "Practices fit .clinic/.doctor; platforms read bigger here",
+      ],
+    },
+  },
+  fit: {
+    tld: "fit",
+    zh: {
+      title: ".fit 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".fit 把「健身」写进域名，适合健身应用与训练计划工具、私教与线上课程、健身房与工作室、运动穿搭与健康生活内容站。查看 .fit 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fit 域名。",
+      intro:
+        ".fit 把状态写进域名：健身应用与训练计划工具、私教与线上课程、健身房与工作室、运动穿搭与健康生活内容站用 name.fit，「变强变健康」的承诺从地址就说清了。fit 是英语里少见的「三字母正能量词」——既是「健康的」也是「合身的」，get fit、stay fit 这类固定搭配让「动词/品牌 + .fit」读起来像一句口号；相比已收录的 .fitness，.fit 短四个音节，App 名与口播场景明显更顺。注册局运营方为 GoDaddy Registry（原 Minds + Machines），注册约 $2（约 ¥15），续费约 $26/年（约 ¥189）——首年白菜价、续费温和档，长期持有无压力。库存极好：动词、人名、训练法词几乎都有货。注意三点：一是首年 $2 的低门槛也吸引过垃圾站，个别平台对 .fit 链接审查稍严，正经做站内容质量要跟上；二是 fit 也有「合身」义，服装电商用它反而一语双关；三是与 .fitness 的分工——工作室实体用全拼更正式，应用与个人品牌用 .fit 更利落。命名上「动词 + .fit」是口号式标准款（get.fit 式），「人名 + .fit」适合私教个人品牌，「品牌 + .fit」适合健身应用与穿搭电商。",
+      bestFor: ["健身应用与训练计划工具", "私教与线上课程", "健身房与工作室", "运动穿搭与健康生活内容站"],
+      namingTips: [
+        "「动词 + .fit」读起来像口号，get.fit 式最顺口",
+        "首年约 $2、续费约 $26/年，长期持有无压力",
+        "低价后缀曾招垃圾站，内容质量要撑住信任",
+        "实体工作室用 .fitness，应用与个人品牌用 .fit",
+      ],
+    },
+    en: {
+      title: ".fit Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".fit writes the goal into the address — for fitness apps and training tools, personal trainers and online courses, gyms and studios, and activewear and healthy-living content. See live pricing and naming advice, then hunt available .fit names with AI.",
+      intro:
+        ".fit writes the goal into the address: fitness apps and training-plan tools, personal trainers and online courses, gyms and studios, activewear and healthy-living content sites on name.fit make the get-stronger promise in the domain itself. fit is that rare three-letter positive word — healthy and well-fitting at once — and fixed phrases like get fit and stay fit make verb or brand + .fit read like a slogan; against the already-listed .fitness, .fit is four syllables shorter, which app names and spoken plugs feel immediately. Operated by GoDaddy Registry (the former Minds + Machines), about $2 to register and $26/yr to renew — a bargain first year with a mild renewal, painless to hold long-term. Inventory is excellent: verbs, first names and training-method words nearly all hit. Three cautions: the $2 door has attracted spam sites before, so some platforms eye .fit links a bit harder — serious sites need content quality to carry trust; fit also means well-fitting, which activewear stores can turn into a double meaning; and split the work with .fitness — physical studios read more formal on the full word, apps and personal brands read snappier on .fit. Naming: verb + .fit is the slogan pattern (think get.fit); first name + .fit fits trainer personal brands; brand + .fit fits fitness apps and activewear stores.",
+      bestFor: ["Fitness apps & training tools", "Personal trainers & online courses", "Gyms & studios", "Activewear & healthy-living content"],
+      namingTips: [
+        "Verb + .fit reads like a slogan — think get.fit",
+        "About $2 year one, $26/yr renewal — easy to hold",
+        "Cheap door drew spam once; quality carries the trust",
+        "Studios fit .fitness; apps and personal brands fit .fit",
+      ],
+    },
+  },
+  dance: {
+    tld: "dance",
+    zh: {
+      title: ".dance 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".dance 把「舞蹈」写进域名，适合舞蹈工作室与培训机构、舞者个人主页与作品集、舞蹈赛事与演出团体、线上教程与编舞内容站。查看 .dance 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .dance 域名。",
+      intro:
+        ".dance 把热爱写进域名：舞蹈工作室与培训机构、舞者个人主页与作品集、舞蹈赛事与演出团体、线上教程与编舞内容站用 name.dance，「跳舞的地方」从地址就说清了。舞蹈是强线下、强社群的行业——学员搜「城市 + 舞种」找课，家长搜机构名核实资质，「机构名 + .dance」两件事一次做完；对街舞、拉丁、芭蕾等垂直舞种，后缀直接把行业身份戴在名字上，比杂牌后缀更有归属感。注册局为 Identity Digital，注册约 $10（约 ¥70），续费约 $22/年（约 ¥159）——温和档，工作室与个人长期持有无压力。库存极好：舞种词、城市词、人名几乎都有货。注意三点：一是舞蹈内容的传播主阵地在抖音/B 站/Instagram，域名的角色是招生报名与档期预订的稳定入口；二是 dance 是英文词，纯中文本地招生可在页面同步中文品牌名；三是与已收录 .studio 的分工——综合艺术空间用 .studio，舞蹈专营用 .dance 语义更锐。命名上「舞种 + 城市 + .dance」直接接住找课搜索，「人名 + .dance」适合舞者个人品牌，「团名 + .dance」适合演出团体与赛事。",
+      bestFor: ["舞蹈工作室与培训机构", "舞者个人主页与作品集", "舞蹈赛事与演出团体", "线上教程与编舞内容站"],
+      namingTips: [
+        "「舞种 + 城市 + .dance」直接接住找课搜索",
+        "注册约 $10、续费约 $22/年，长期持有无压力",
+        "短视频平台接流量，域名做招生报名稳定入口",
+        "综合空间用 .studio，舞蹈专营用 .dance 更锐",
+      ],
+    },
+    en: {
+      title: ".dance Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".dance writes the passion into the address — for dance studios and schools, dancer portfolios and personal pages, competitions and performance troupes, and online tutorials and choreography content. See live pricing and naming advice, then hunt available .dance names with AI.",
+      intro:
+        ".dance writes the passion into the address: dance studios and schools, dancer portfolios and personal pages, competitions and performance troupes, online tutorial and choreography sites on name.dance say this is where the dancing happens in the domain itself. Dance is a local, community-heavy trade — students search city + style for classes and parents search the studio name to vet it, and studio name + .dance answers both at once; for hip-hop, latin, ballet and other verticals, the suffix pins the identity right onto the name with a belonging a generic suffix can't match. Operated by Identity Digital, about $10 to register and $22/yr to renew — the mild tier, painless for studios and dancers to hold long-term. Inventory is excellent: style words, city words and first names nearly all hit. Three cautions: dance content spreads on TikTok, Instagram and similar platforms, so the domain's job is the stable front door for enrollment and bookings; dance is an English word — purely local Chinese enrollment should pair the page with the Chinese brand name; and split the work with the already-listed .studio — multi-art spaces fit .studio, dedicated dance brands read sharper on .dance. Naming: style + city + .dance catches class searches directly; first name + .dance fits dancer personal brands; troupe name + .dance fits companies and competitions.",
+      bestFor: ["Dance studios & schools", "Dancer portfolios & personal pages", "Competitions & performance troupes", "Online tutorials & choreography content"],
+      namingTips: [
+        "Style + city + .dance catches class searches directly",
+        "About $10 to register, $22/yr — easy to hold long-term",
+        "Platforms bring reach; the domain books enrollments",
+        "Multi-art spaces fit .studio; dance brands read sharper here",
+      ],
+    },
+  },
+  guide: {
+    tld: "guide",
+    zh: {
+      title: ".guide 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".guide 把「攻略」写进域名，适合旅行攻略与城市指南、购物选品与工具评测指南、新手教程与入门指南站、导游与向导服务预订。查看 .guide 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .guide 域名。",
+      intro:
+        ".guide 把内容形态写进域名：旅行攻略与城市指南、购物选品与工具评测指南、新手教程与入门指南站、导游与向导服务预订用 name.guide，「这里有攻略」从地址就说清了。guide 是搜索里的高频意图词——「city guide」「buying guide」「beginner's guide」都是用户主动敲进搜索框的词，「主题词 + .guide」让域名本身长得像搜索结果；对 SEO 内容站与联盟营销站，这类语义精准的后缀天然贴合内容定位。注册局为 Identity Digital，注册约 $6（约 ¥44），续费约 $33/年（约 ¥241）——温和档偏上，内容站长期持有无压力。库存极好：城市词、品类词、主题词几乎都有货。注意三点：一是 guide 单数读作「一份指南/一位向导」，内容站用单数正好，聚合平台可斟酌语序；二是攻略内容竞争激烈，域名点题只是起点，内容深度与更新频率才是排名关键；三是与已收录 .tips/.wiki 的分工——零散技巧用 .tips、协作知识库用 .wiki、成体系攻略用 .guide 最正。命名上「城市 + .guide」是旅行站标准款，「品类 + .guide」适合选品评测，「人名 + .guide」适合导游与顾问个人品牌。",
+      bestFor: ["旅行攻略与城市指南", "购物选品与工具评测指南", "新手教程与入门指南站", "导游与向导服务预订"],
+      namingTips: [
+        "「城市/品类 + .guide」让域名长得像搜索结果",
+        "注册约 $6、续费约 $33/年，内容站持有无压力",
+        "点题只是起点，内容深度才是攻略站排名关键",
+        "技巧用 .tips、知识库用 .wiki、成体系用 .guide",
+      ],
+    },
+    en: {
+      title: ".guide Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".guide writes the format into the address — for travel and city guides, buying and review guides, beginner tutorials and how-to sites, and tour-guide booking services. See live pricing and naming advice, then hunt available .guide names with AI.",
+      intro:
+        ".guide writes the format into the address: travel and city guides, buying and review guides, beginner tutorials and how-to sites, tour-guide booking services on name.guide announce the guide is here in the domain itself. guide is a high-frequency intent word — city guide, buying guide and beginner's guide are phrases users type into the search box themselves, so topic + .guide makes the domain look like a search result; for SEO content sites and affiliate plays, few suffixes fit the format this precisely. Operated by Identity Digital, about $6 to register and $33/yr to renew — upper-mild tier, painless for a content site held long-term. Inventory is excellent: city words, category words and topic words nearly all hit. Three cautions: guide is singular and reads as one guide or one person — right for a content site, worth a thought for aggregator platforms; guide content is fiercely competitive, so the on-topic domain is the starting line and depth plus freshness win the rankings; and split the work with the already-listed .tips and .wiki — scattered tricks fit .tips, collaborative knowledge bases fit .wiki, and structured guides aim truest on .guide. Naming: city + .guide is the travel-site standard; category + .guide fits buying and review sites; first name + .guide fits tour guides and consultants.",
+      bestFor: ["Travel & city guides", "Buying & review guides", "Beginner tutorials & how-to sites", "Tour-guide booking services"],
+      namingTips: [
+        "City or category + .guide looks like a search result",
+        "About $6 to register, $33/yr — easy for content sites",
+        "On-topic is the start; depth and freshness win rankings",
+        "Tricks fit .tips, wikis fit .wiki, structured guides here",
+      ],
+    },
+  },
+  reviews: {
+    tld: "reviews",
+    zh: {
+      title: ".reviews 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".reviews 把「评测」写进域名，适合产品评测与横向对比站、软件与服务点评平台、影视书籍乐评内容站、本地商家口碑与点评聚合。查看 .reviews 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .reviews 域名。",
+      intro:
+        ".reviews 把立场写进域名：产品评测与横向对比站、软件与服务点评平台、影视书籍乐评内容站、本地商家口碑与点评聚合用 name.reviews，「看真实评价来这儿」从地址就说清了。「产品名 + reviews」是购买决策前的黄金搜索词——用户掏钱前最后一步就是搜评测，「品类 + .reviews」让域名精准卡进这条搜索路径；对联盟营销与比价内容站，这是少数天生带商业意图的后缀。注册局为 Identity Digital，注册约 $5（约 ¥33），续费约 $50/年（约 ¥360）——首年低价、续费中档，按续费价做预算才稳妥。库存极好：品类词、行业词、场景词几乎都有货。注意三点：一是评测站的生命线是公信力，测评方法透明与利益披露比域名更决定长期口碑；二是 reviews 是复数，读作「一批评价」，聚合与对比站用复数正好，单品深评也不违和；三是与已收录 .guide/.tips 的分工——教你怎么选用 .guide，给你小技巧用 .tips，替你试过再评用 .reviews 立场最鲜明。命名上「品类 + .reviews」直接接住购买前搜索，「行业 + .reviews」适合垂直点评平台，「品牌 + .reviews」适合口碑聚合与用户证言页。",
+      bestFor: ["产品评测与横向对比站", "软件与服务点评平台", "影视书籍乐评内容站", "本地商家口碑与点评聚合"],
+      namingTips: [
+        "「品类 + .reviews」精准卡进购买前搜索路径",
+        "首年约 $5、续费约 $50/年，按续费价做预算",
+        "公信力是评测站生命线，方法透明比域名重要",
+        "选购攻略用 .guide，亲测点评用 .reviews 最鲜明",
+      ],
+    },
+    en: {
+      title: ".reviews Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".reviews writes the verdict into the address — for product review and comparison sites, software and service rating platforms, film, book and music criticism, and local business review aggregators. See live pricing and naming advice, then hunt available .reviews names with AI.",
+      intro:
+        ".reviews writes the verdict into the address: product review and comparison sites, software and service rating platforms, film, book and music criticism, local business review aggregators on name.reviews say honest takes live here in the domain itself. product name + reviews is the golden pre-purchase query — the last thing users search before paying — and category + .reviews parks the domain squarely on that path; for affiliate and comparison content, few suffixes carry commercial intent this natively. Operated by Identity Digital, about $5 to register and $50/yr to renew — a cheap first year with a mid-tier renewal, so budget on the renewal price. Inventory is excellent: category words, industry words and scenario words nearly all hit. Three cautions: a review site lives or dies on credibility, so transparent methodology and disclosed affiliations shape the reputation more than the domain; reviews is plural and reads as a body of verdicts — right for aggregators and comparisons, and fine for single-product deep dives too; and split the work with the already-listed .guide and .tips — how-to-choose fits .guide, quick tricks fit .tips, and we-tested-it verdicts stand sharpest on .reviews. Naming: category + .reviews catches pre-purchase searches directly; industry + .reviews fits vertical rating platforms; brand + .reviews fits testimonial and reputation pages.",
+      bestFor: ["Product review & comparison sites", "Software & service rating platforms", "Film, book & music criticism", "Local business review aggregators"],
+      namingTips: [
+        "Category + .reviews catches pre-purchase searches",
+        "About $5 year one, $50/yr renewal — budget on renewal",
+        "Credibility is the lifeline; methodology beats the domain",
+        "How-to-choose fits .guide; tested verdicts stand here",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
