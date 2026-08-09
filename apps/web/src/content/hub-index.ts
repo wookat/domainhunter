@@ -507,4 +507,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "bike-vs-fitness", a: "bike", b: "fitness", title: { zh: ".bike 和 .fitness 怎么选：一项运动与一个行业的对比", en: ".bike vs .fitness: One Sport or The Whole Industry" } },
   { slug: "toys-vs-shop", a: "toys", b: "shop", title: { zh: ".toys 和 .shop 怎么选：品类货架与万能商店的对比", en: ".toys vs .shop: The Category Shelf or The Universal Store" } },
   { slug: "shoes-vs-fashion", a: "shoes", b: "fashion", title: { zh: ".shoes 和 .fashion 怎么选：品类垂直与行业全称的对比", en: ".shoes vs .fashion: The Vertical or The Industry" } },
+  { slug: "plus-vs-vip", a: "plus", b: "vip", title: { zh: ".plus 和 .vip 怎么选：升级入口与会员身份的对比", en: ".plus vs .vip: The Upgrade or The Membership" } },
+  { slug: "house-vs-estate", a: "house", b: "estate", title: { zh: ".house 和 .estate 怎么选：一栋房子与一份资产的对比", en: ".house vs .estate: The Home or The Asset" } },
+  { slug: "shoes-vs-store", a: "shoes", b: "store", title: { zh: ".shoes 和 .store 怎么选：品类招牌与万能商城的对比", en: ".shoes vs .store: The Category Sign or The Universal Mall" } },
+  { slug: "toys-vs-games", a: "toys", b: "games", title: { zh: ".toys 和 .games 怎么选：实体玩具与游戏行业的对比", en: ".toys vs .games: Physical Play or The Games Industry" } },
+  { slug: "menu-vs-cafe", a: "menu", b: "cafe", title: { zh: ".menu 和 .cafe 怎么选：一张菜单与一间咖啡馆的对比", en: ".menu vs .cafe: The Card or The Corner Shop" } },
+  { slug: "law-vs-expert", a: "law", b: "expert", title: { zh: ".law 和 .expert 怎么选：行业门牌与权威人设的对比", en: ".law vs .expert: The Trade Plaque or The Authority Claim" } },
 ];

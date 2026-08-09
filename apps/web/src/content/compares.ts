@@ -3985,6 +3985,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Apparel brands & boutiques", "Independent designer studios", "Full-wardrobe fashion e-commerce", "Cheaper transparent renewals"],
     },
   },
+  "plus-vs-vip": {
+    slug: "plus-vs-vip",
+    a: "plus",
+    b: "vip",
+    zh: {
+      title: ".plus 和 .vip 怎么选：升级入口与会员身份的对比",
+      metaDescription: ".plus 说「更好的那一档」，.vip 说「会员专属」。对比两个增值系后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在做「付费的那一档」，说法不同。.plus 是升级入口——产品的 Pro/会员版、增值服务与升级套餐、工具的扩展版用 name.plus，流媒体时代 Plus 后缀早已深入人心（各大平台的 + 订阅版都是这个语感），brand.plus 读出来就是「同一个东西，更好的那档」；Identity Digital 运营，注册约 $10、续费约 $44/年——续费偏高档，适合真正承载付费业务的入口而非闲置注册。.vip 是会员身份——会员制产品、粉丝社群、高端服务预约、电商会员站用 name.vip，VIP 的概念国人人人皆知，后缀已获工信部资质、可正常 ICP 备案，注册量长期位居新后缀前列；注册约 $6、续费约 $8/年——两边价差五倍多，.vip 是本组的性价比档。判断标准：语义重心在「产品升级了什么」——功能更强、套餐更高 → .plus 的升级语感更准，brand.plus 天然是付费升级跳转页；语义重心在「用户是谁」——会员身份、专属待遇、圈子归属 → .vip 的身份词直给。市场也分岸：.vip 在国内认知远超海外且可备案，面向国内的会员业务用它顺理成章；.plus 的语感在海外订阅制产品里更通行。注意 .plus 是修饰词不是品牌词，主站放品牌主域、它做会员/升级版入口最顺；.vip 自带营销感，严肃工具类产品不太搭；两个都常见的玩法是主站 .com + 同名增值站，分工天然。",
+      pickA: ["产品 Pro/升级版入口", "增值服务与套餐页", "海外订阅制产品", "「品牌 + .plus」升级语感命名"],
+      pickB: ["面向国内的会员制业务", "粉丝社群与圈子运营", "需要 ICP 备案的会员站", "低续费的长期持有"],
+    },
+    en: {
+      title: ".plus vs .vip: The Upgrade or The Membership",
+      metaDescription:
+        ".plus says \"the better tier\"; .vip says \"members only\". Compare the two premium-tier suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both sell the paid tier; the framing differs. .plus is the upgrade doorway — Pro and premium editions, add-on services and upgrade bundles, extended versions of tools on name.plus ride a suffix the streaming era already taught everyone (every platform's + subscription speaks this language), so brand.plus reads out as \"the same thing, the better tier\"; run by Identity Digital at about $10 to register and $44/yr to renew — a premium renewal, worth it for doorways that actually carry paid business rather than idle registrations. .vip is the membership badge — membership products, fan communities, premium booking services and store membership hubs on name.vip lean on a concept every Chinese user knows cold, with MIIT accreditation for normal ICP filing and registration volumes long among the top new gTLDs; about $6 to register and $8/yr to renew — a five-fold price gap that makes .vip the value pick of this pair. The test: the semantic weight is on what upgraded — stronger features, higher tiers → .plus's upgrade voice aims truer, and brand.plus is a natural paid-upgrade landing page; the weight is on who the user is — member identity, exclusive perks, belonging → .vip's status word says it straight. Markets split too: .vip's recognition in China far outruns overseas and it files for ICP, so China-facing membership plays wear it naturally; .plus travels better among international subscription products. Note .plus is a modifier, not a brand word — keep the brand home on a mainstream domain and let .plus run the members' door; .vip carries a promotional air that sober tooling brands may not want; and the classic play on either side is .com for the main site plus the matching premium domain, a natural division of labor.",
+      pickA: ["Pro & premium edition doorways", "Add-on services & upgrade bundles", "International subscription products", "Upgrade-voice naming (brand + .plus)"],
+      pickB: ["China-facing membership businesses", "Fan communities & clubs", "Membership sites needing ICP filing", "Cheap long-term renewals"],
+    },
+  },
+  "house-vs-estate": {
+    slug: "house-vs-estate",
+    a: "house",
+    b: "estate",
+    zh: {
+      title: ".house 和 .estate 怎么选：一栋房子与一份资产的对比",
+      metaDescription: ".house 说居住场景里的一栋栋房子，.estate 说资产与地产生意。对比两个房产系后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都姓房产，视角不同。.house 看的是「一栋一栋的房子」——2C 的租售信息平台、家装与家居品牌、民宿与短租、建筑与室内设计工作室用 name.house，居住场景亲切直给；它还有一层妙用：英文里创意机构惯用 House 结尾（design house、publishing house），brand.house 让「品牌词 + 后缀」直接等于机构全名；Identity Digital 运营，注册约 $15、续费约 $36/年——中档价位。.estate 看的是「资产与生意」——经纪人与中介品牌、豪宅与庄园项目、物业与资产管理公司用 name.estate，行业属性一目了然，smith.estate 比 smithrealestate.com 短一半且更显高端；它还兼「遗产/资产」语义，家族办公室与遗产规划也用得顺；同为 Identity Digital 运营，注册约 $8、续费约 $31/年——对客单价极高的房产行业可忽略。判断标准：面向住的人——租房买房的个人、家装、民宿 → .house 的居住词更亲切；面向资产与交易——中介品牌、豪宅盘、物业与资管 → .estate 的行业词更专业，且自带高端庄园气质，刚需平价盘用它反而有落差。两边续费只差 $5/年，成本几乎打平，选择纯看视角。注意房产是强本地强监管行业：「城市/街区 + .house」能接住本地搜索，而中介牌照与备案信息两边都要在页面讲清；两个后缀国内认知都有限，更适合海外或涉外业务的门面。命名上「城市 + .house」「姓氏/品牌 + .estate」是各自最顺的形态。",
+      pickA: ["2C 租售与民宿短租", "家装与家居品牌", "建筑与室内设计工作室", "「城市/街区 + .house」本地命名"],
+      pickB: ["经纪人与中介品牌", "豪宅与庄园项目", "物业与资产管理", "家族办公室与遗产规划"],
+    },
+    en: {
+      title: ".house vs .estate: The Home or The Asset",
+      metaDescription:
+        ".house speaks of homes people live in; .estate speaks of property as an asset and a trade. Compare the two real-estate suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both belong to property; the lens differs. .house sees homes one at a time — consumer rental and sales platforms, interior and home-living brands, guesthouses and short-term stays, architecture and interior studios on name.house speak the living scene warmly; it hides a bonus too: English creative firms end in House (design house, publishing house), so brand.house makes the domain read as the firm's full name; run by Identity Digital at about $15 to register and $36/yr to renew — mid-tier. .estate sees the asset and the trade — agent and brokerage brands, luxury and manor projects, property and asset managers on name.estate declare the industry on sight, and smith.estate runs half the length of smithrealestate.com while reading twice as upscale; it also carries the inheritance sense, so family offices and estate planning wear it well; also Identity Digital, about $8 to register and $31/yr to renew — negligible against real estate's ticket sizes. The test: the audience is people who live there — renters, buyers, home improvement, guesthouses → .house's home word feels warmer; the audience is the asset side — brokerages, luxury listings, property and asset management → .estate's trade word reads more professional, though its manor air sits awkwardly on budget housing. Renewals differ by just $5/yr, so cost is a wash and the choice is purely the lens. Note property is fiercely local and heavily regulated: city or neighborhood + .house catches local search, and licenses plus real office details must be legible on either suffix; both carry modest recognition in China, so they fit international-facing storefronts best. Naming: city + .house and surname or brand + .estate are each side's most natural patterns.",
+      pickA: ["Consumer rentals & short stays", "Interior & home-living brands", "Architecture & design studios", "Local naming (city + .house)"],
+      pickB: ["Agent & brokerage brands", "Luxury & manor projects", "Property & asset management", "Family offices & estate planning"],
+    },
+  },
+  "shoes-vs-store": {
+    slug: "shoes-vs-store",
+    a: "shoes",
+    b: "store",
+    zh: {
+      title: ".shoes 和 .store 怎么选：品类招牌与万能商城的对比",
+      metaDescription: ".shoes 把鞋这个品类写进后缀，.store 是电商的万能商城词。对比垂直品类词与通用商店词的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在卖货，招牌写法不同。.shoes 是品类招牌——鞋履品牌与电商、球鞋店与鞋圈社区、手工定制鞋工作室用 name.shoes，品类从后缀就说清了，大牌先例现成：耐克注册了 nike.shoes，「品类/风格 + .shoes」（running.shoes 式）更是一眼点题；Identity Digital 运营，注册约 $21、续费约 $52/年——首年中档、续费跳档，预算按续费价算才稳。.store 是万能商城——DTC 独立站、品牌官方商城、任何品类的线上入口用 brand.store 语义零损耗，最主流的玩法是主站 .com + 商城同名 .store，两个域名分工明确；首年常见大幅促销、续费约 $53/年，账本结构与 .shoes 几乎一样。判断标准：只做鞋——球鞋店、鞋履品牌、定制工坊 → .shoes 的品类词指向最准，后缀即定位，搜索与转发时自带说明书；品类更宽、或未来会扩品 → .store 的万能词不锁死货架，今天卖鞋明天上服饰也不违和。两边续费都在 $52-53/年档，成本打平，选择纯看货架宽度。注意 .store 的主体名就写品牌本身——后缀已经说了「商店」，主体再带 shop/mall 是画蛇添足；球鞋转售与鉴定是强信任生意，域名专业只是第一步，鉴定背书与保障政策才是成交关键；两个后缀认知度都一般，面向大众的品牌主站建议同时持有主流后缀。",
+      pickA: ["鞋履品牌与垂直电商", "球鞋店与鞋圈社区", "手工与定制鞋工作室", "「品类/风格 + .shoes」垂直命名"],
+      pickB: ["多品类 DTC 独立站", "品牌官方商城子站", "未来可能扩品的店", "「品牌 + .store」零损耗命名"],
+    },
+    en: {
+      title: ".shoes vs .store: The Category Sign or The Universal Mall",
+      metaDescription:
+        ".shoes writes one category into the suffix; .store is e-commerce's universal mall word. Compare the vertical word and the generic store word on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both sell; the shop sign reads differently. .shoes is the category sign — footwear brands and e-commerce, sneaker shops and communities, custom shoemakers on name.shoes declare the product from the suffix, with marquee precedent ready-made: Nike registered nike.shoes, and category or style + .shoes (the running.shoes pattern) nails the aim on sight; run by Identity Digital at about $21 to register and $52/yr to renew — a mid-tier first year with a renewal jump, so budget on the renewal price. .store is the universal mall — DTC independent stores, official brand shops, the online doorway for any category read losslessly on brand.store, and the mainstream play is .com for the main site with the matching .store as the storefront, two domains with a clean division of labor; intro pricing is often heavily discounted while renewals run about $53/yr — a ledger shaped almost exactly like .shoes. The test: the business is shoes and only shoes — sneaker shops, footwear brands, custom workshops → .shoes' category word aims truest, the suffix is the positioning, a built-in explainer in every search result and share; the catalog is broader, or will broaden → .store's generic word never locks the shelf, so selling shoes today and apparel tomorrow reads fine. Both renew in the $52–53/yr band, so cost is a wash and the choice is purely shelf width. Note the front word on .store should be the brand itself — the suffix already says store, so shop or mall in the name is redundant; sneaker resale and authentication is a trust-first trade, so a professional domain is only step one — authentication backing and guarantees close the sale; and both suffixes carry modest recognition, so consumer-facing brand homes should hold a mainstream suffix too.",
+      pickA: ["Footwear brands & vertical e-commerce", "Sneaker shops & communities", "Custom & handmade shoemakers", "Vertical naming (running.shoes)"],
+      pickB: ["Multi-category DTC stores", "Official brand storefronts", "Stores that may broaden the catalog", "Lossless naming (brand + .store)"],
+    },
+  },
+  "toys-vs-games": {
+    slug: "toys-vs-games",
+    a: "toys",
+    b: "games",
+    zh: {
+      title: ".toys 和 .games 怎么选：实体玩具与游戏行业的对比",
+      metaDescription: ".toys 偏实体玩具与收藏品，.games 偏游戏行业与玩法。对比两个玩乐系后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在做「好玩」的生意，实体感不同。.toys 偏「摸得着的快乐」——玩具品牌与电商、潮玩与手办店、桌游与积木社区用 name.toys，复数名词天然带「货架感」，读出来就是「某某家的玩具」，大牌先例现成：乐高注册了 lego.toys；Identity Digital 运营，注册约 $11、续费约 $52/年——首年便宜续费跳档，预算按续费价算才稳。.games 偏「游戏与玩法」——游戏工作室官网、独立游戏作品站、电竞战队、游戏媒体与社区用 name.games，行业一眼即懂，Epic 旗下产品页与众多独立开发者的作品集都在用；注册约 $18、续费约 $24/年——续费只有 .toys 的一半不到，是玩乐系后缀里的性价比档。判断标准：卖实体——玩具、手办、积木、收藏品 → .toys 的货架词更准，lego.toys 式命名自带辨识度；做数字——电子游戏、游戏内容、电竞与社区 → .games 的行业词更对味，「工作室名/游戏名 + .games」不需要再解释行业属性。有趣的重叠带是桌游：偏实体收藏与售卖选 .toys，偏玩法社区与赛事选 .games。长期账本值得注意：约 $24/年 vs $52/年，.games 便宜一半——纯看成本时数字侧占优。注意面向儿童的电商与内容受合规约束（隐私与广告规范，如美国 COPPA），两边都要跟上；潮玩与游戏的主战场都在社交平台与直播，域名的角色是品牌官网与发售/上线日历的稳定入口；重度单款品牌可能仍需拿下 .com 防御。",
+      pickA: ["玩具品牌与垂直电商", "潮玩与手办店", "积木与实体收藏社区", "「品牌 + .toys」货架感命名"],
+      pickB: ["游戏工作室与作品站", "独立游戏与发行页", "电竞战队与游戏社区", "低一半续费的长期持有"],
+    },
+    en: {
+      title: ".toys vs .games: Physical Play or The Games Industry",
+      metaDescription:
+        ".toys leans physical toys and collectibles; .games leans the games industry and play itself. Compare the two play suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both trade in fun; the physicality differs. .toys leans touchable joy — toy brands and e-commerce, designer-toy and figure shops, board-game and block communities on name.toys carry a built-in shelf feel: the plural reads out as \"so-and-so's toys\", with marquee precedent ready-made — LEGO registered lego.toys; run by Identity Digital at about $11 to register and $52/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price. .games leans play itself — game studio sites, indie game homes, esports teams, gaming media and communities on name.games read the industry on sight, with Epic product pages and countless indie portfolios already using it; about $18 to register and $24/yr to renew — less than half of .toys to hold, the value tier among play suffixes. The test: the product is physical — toys, figures, blocks, collectibles → .toys' shelf word aims truer, and lego.toys-style naming carries built-in recognition; the product is digital — video games, gaming content, esports and communities → .games reads more native, and studio or title + .games needs no further industry explainer. The interesting overlap is board games: collecting and selling lean .toys; play communities and events lean .games. Watch the long-term ledger: about $24/yr versus $52/yr — .games holds at half the price, so pure cost favors the digital side. Note child-facing commerce and content carry compliance duties (privacy and ad rules like COPPA) on either suffix; designer toys and games both live on social platforms and livestreams, so the domain's role is the stable brand home and release calendar; and a heavyweight single-title brand may still want the .com for defense.",
+      pickA: ["Toy brands & vertical e-commerce", "Designer-toy & figure shops", "Block & physical collector communities", "Shelf-feel naming (lego.toys)"],
+      pickB: ["Game studios & portfolios", "Indie games & release pages", "Esports teams & gaming communities", "Half-price long-term renewals"],
+    },
+  },
+  "menu-vs-cafe": {
+    slug: "menu-vs-cafe",
+    a: "menu",
+    b: "cafe",
+    zh: {
+      title: ".menu 和 .cafe 怎么选：一张菜单与一间咖啡馆的对比",
+      metaDescription: ".menu 指菜单这个功能入口，.cafe 指咖啡馆这个场所。对比两个餐饮系后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在餐饮场上，指向不同。.menu 是功能入口——餐厅在线菜单页、扫码点餐系统、外卖与订餐平台用 name.menu，域名读出来就是「某某家的菜单」，最顺手的玩法是把它印进桌角二维码，顾客扫码直达菜单，比夹在官网深处的 PDF 好一个量级，且不绑定业态，正餐、酒吧、奶茶店都能用；Wedding TLD2 注册局运营（GoDaddy Registry 平台），注册约 $27、续费约 $27/年——注册续费同价，成本透明。.cafe 是场所招牌——独立咖啡店、烘焙工作室、猫咖书咖用 name.cafe，域名和店招完全同构；它的气质还能外溢到线上：「cafe」在互联网语境里早就是「轻松聚集地」的代名词，读书会、语言角、开发者社区拿 name.cafe 做线上客厅比 .com 更有温度；Identity Digital 运营，注册约 $5、续费约 $42/年——首年友好、续费常规档，对实体店成本可忽略。判断标准：要解决的是「菜单这个入口」——扫码点餐、外卖菜单、菜品展示 → .menu 的功能词最点题；要立的是「店这个场所」——咖啡馆官网、店铺品牌、线上社区客厅 → .cafe 的场所词更有画面。开咖啡店的最优组合其实是两个都用：name.cafe 做店铺门面、name.menu 印进二维码直达菜单，分工天然。注意 .menu 长期持有约 $27/年 vs .cafe 约 $42/年，功能词反而便宜；.cafe 行业气质浓，与「休闲聚集」无关的业务用它会显得错位；餐饮是强本地行业，两边都能靠「城市/街区 + 后缀」接住本地搜索，菜单页也建议与本地点评平台并行。",
+      pickA: ["扫码点餐与桌角二维码", "餐厅在线菜单页", "外卖与订餐平台", "注册续费同价的透明成本"],
+      pickB: ["独立咖啡店与烘焙工作室", "猫咖书咖等主题店", "线上社区的「客厅」站", "「店名/意象词 + .cafe」招牌命名"],
+    },
+    en: {
+      title: ".menu vs .cafe: The Card or The Corner Shop",
+      metaDescription:
+        ".menu names the functional doorway; .cafe names the place itself. Compare the two dining suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in dining; the pointer differs. .menu is the functional doorway — restaurant menu pages, QR-code ordering systems, delivery and reservation platforms on name.menu read out as \"so-and-so's menu\", and the smoothest play is printing it into a table-corner QR code so guests scan straight to the card — an order of magnitude better than a PDF buried in a website — while binding to no format: fine dining, bars and bubble-tea shops all qualify; run by the Wedding TLD2 registry on the GoDaddy Registry platform at about $27 to register and $27/yr to renew — the same both ways, transparent cost. .cafe is the shop sign — independent coffee shops, roasteries and bakeries, cat and book cafés on name.cafe make the domain and the storefront read as one; the vibe travels online too — cafe has long meant \"a relaxed gathering place\" on the internet, so reading circles, language corners and developer communities wear name.cafe as a warmer living room than any .com; run by Identity Digital at about $5 to register and $42/yr to renew — a friendly first year, standard renewal, negligible against a physical shop's costs. The test: the job is the menu doorway — QR ordering, delivery menus, dish showcases → .menu's function word nails it; the job is the place — café brand sites, shop identity, online community living rooms → .cafe paints the scene. For a coffee shop the elegant play is both: name.cafe as the storefront, name.menu printed into the QR code — a natural division of labor. Note long-term holding runs about $27/yr on .menu versus $42/yr on .cafe — the function word is the cheaper one; .cafe carries a strong leisure air that mismatched businesses will feel; and dining is fiercely local, so city or neighborhood + suffix catches local search on either side, with menu pages best run alongside local review platforms.",
+      pickA: ["QR ordering & table codes", "Restaurant online menus", "Delivery & reservation platforms", "Transparent same-price renewals"],
+      pickB: ["Independent cafés & roasteries", "Cat & book café concepts", "Online community living rooms", "Shop-sign naming (corner.cafe)"],
+    },
+  },
+  "law-vs-expert": {
+    slug: "law-vs-expert",
+    a: "law",
+    b: "expert",
+    zh: {
+      title: ".law 和 .expert 怎么选：行业门牌与权威人设的对比",
+      metaDescription: ".law 是法律行业的专属门牌，.expert 是跨领域的权威宣言。对比行业词与身份词的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在卖专业，凭证不同。.law 是行业门牌——律师事务所、独立执业律师、法律科技产品用 name.law，法律行业讲信任，smith.law 比一长串 .com 更像一块烫金门牌；GoDaddy Registry 平台运营，注册约 $83、续费约 $83/年——注册续费同价，是本站较贵的后缀之一，但对客单价以万计的法律行业，这个门槛反而筛掉了垃圾站，让 .law 整体域名环境更干净。.expert 是权威人设——独立顾问、垂直咨询公司、深度评测与知识付费站用 name.expert，定位一秒立住，seo.expert、tax.expert 这样的「领域词 + .expert」组合就是一块数字招牌，法律之外任何领域都能用；Identity Digital 运营，注册约 $7、续费约 $50/年——首年引流、续费收割的典型定价，预算按续费核算。判断标准：身份是「执业律师/律所」——smith.law 的行业词即执业声明，贵一点的门牌换来的是同行罕有的干净环境；身份是「某领域的专家个体/小团队」——律师之外的顾问、评测人、知识付费作者 → .expert 的身份词覆盖面大得多，法律人做普法内容与个人 IP 也可以用它。价格结构值得注意：.law 约 $83/年 vs .expert 约 $50/年，都不便宜，但 .law 的门槛是有意为之的信任设计。注意「expert」是承诺，内容深度与案例撑不起时反而招致反感——空壳站用这个后缀会放大质疑；法律等监管行业的「专家」表述可能触碰广告合规，谨慎措辞；各法域对律师广告与网站有执业合规要求，.law 站上线前按当地律协规范自查。命名上「姓氏 + .law」「领域词 + .expert」是各自最强的形态。",
+      pickA: ["律师事务所与执业律师", "法律科技产品", "「城市/领域 + .law」垂直站", "愿为干净环境付门槛的品牌"],
+      pickB: ["独立顾问与咨询公司", "深度评测与知识付费", "法律之外的专业人设", "「领域词 + .expert」数字招牌"],
+    },
+    en: {
+      title: ".law vs .expert: The Trade Plaque or The Authority Claim",
+      metaDescription:
+        ".law is the legal trade's reserved plaque; .expert is a cross-field authority statement. Compare the industry word and the identity word on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both sell expertise; the credential differs. .law is the trade plaque — law firms, independent attorneys and legal-tech products on name.law build trust from the suffix up: smith.law reads more like a brass nameplate than any long .com; run on the GoDaddy Registry platform at about $83 to register and $83/yr to renew — the same both ways and among this site's priciest, but against legal-industry ticket sizes the threshold works as a filter, keeping the .law neighborhood notably clean. .expert is the authority claim — independent consultants, vertical advisory firms, deep-dive review and paid-knowledge sites on name.expert lock the positioning in one second, and field word + .expert (the seo.expert, tax.expert pattern) is a digital shingle any discipline can hang; run by Identity Digital at about $7 to register and $50/yr to renew — classic cheap-entry, harvest-on-renewal pricing, so budget on the renewal. The test: the identity is a practicing lawyer or firm — smith.law's industry word is itself a statement of practice, and the pricier plaque buys a cleaner neighborhood than most suffixes enjoy; the identity is an expert individual or small team in any field — consultants, reviewers, paid-knowledge authors beyond the bar → .expert's identity word stretches far wider, and even lawyers doing public-education content and personal brands can wear it. Watch the price structure: about $83/yr on .law versus $50/yr on .expert — neither is cheap, but .law's threshold is trust engineering by design. Note expert is a promise — thin content and missing case studies invite backlash, and an empty shell amplifies doubt under this suffix; regulated fields (law, medicine, finance) restrict expert claims in advertising, so phrase carefully; and every jurisdiction regulates attorney advertising and websites, so audit a .law site against local bar rules before launch. Naming: surname + .law and field word + .expert are each side's strongest patterns.",
+      pickA: ["Law firms & practicing attorneys", "Legal-tech products", "City or practice-area + .law verticals", "Brands paying for a clean neighborhood"],
+      pickB: ["Independent consultants & advisories", "Deep reviews & paid knowledge", "Expert brands beyond the bar", "Digital-shingle naming (seo.expert)"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
