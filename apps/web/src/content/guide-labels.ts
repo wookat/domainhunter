@@ -143,4 +143,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "bar", zh: "酒吧清吧", en: "Bars & lounges" },
   { slug: "musicschool", zh: "音乐培训琴行", en: "Music schools" },
   { slug: "chess", zh: "棋类培训", en: "Chess & Go academies" },
+  { slug: "hotpot", zh: "火锅烧烤", en: "Hotpot & BBQ" },
+  { slug: "dessert", zh: "甜品冰淇淋", en: "Dessert & ice cream" },
+  { slug: "convenience", zh: "社区便利店", en: "Convenience stores" },
+  { slug: "stationery", zh: "文创文具", en: "Stationery & paper goods" },
+  { slug: "cybercafe", zh: "电竞网咖", en: "Esports cafés" },
+  { slug: "carrental", zh: "租车出行", en: "Car rental & mobility" },
 ];
