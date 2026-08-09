@@ -15,7 +15,7 @@ import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
 import { tldPrice } from "./types";
-import { putShareVerified } from "./share-write";
+import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
 
 // LLM_API_BASE：仅供本地 wrangler dev 指向假上游验证错误路径（R264），生产不设置
 type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace; LLM_API_BASE?: string };
@@ -602,7 +602,14 @@ app.post("/api/share", async (c) => {
   // KV put 偶发静默丢失：写后读回校验 + 退避重试 + 换 id 重写（详见 share-write.ts）
   const result = await putShareVerified(kv, () => nanoid(10), () => payload, SHARE_TTL);
   c.executionCtx.waitUntil(bumpShareWrite(kv, result.retries, !result.ok));
-  if (!result.ok) return c.json({ error: "share_write_failed" }, 503);
+  if (!result.ok) {
+    // 结构化失败日志（wrangler tail 排查用）：总尝试次数、用过的 id 数、KV 抛错消息摘要
+    console.error(
+      "share_write_failed",
+      JSON.stringify({ attempts: result.retries, ids: SHARE_WRITE_MAX_IDS, kvErrors: result.errors }),
+    );
+    return c.json({ error: "share_write_failed" }, 503);
+  }
   const origin = new URL(c.req.url).origin;
   return c.json({ id: result.id, url: `${origin}/s/${result.id}`, revokeToken });
 });

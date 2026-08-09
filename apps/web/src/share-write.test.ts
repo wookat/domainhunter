@@ -70,4 +70,18 @@ describe("putShareVerified", () => {
     expect(r.retries).toBe(SHARE_WRITE_ATTEMPTS_PER_ID * SHARE_WRITE_MAX_IDS);
     expect(kv.store.size).toBe(0);
   });
+
+  it("put 抛错时收集消息摘要（去重），供失败日志排查", async () => {
+    const kv = flakyKv(SHARE_WRITE_ATTEMPTS_PER_ID * SHARE_WRITE_MAX_IDS, { throwInstead: true });
+    const r = await putShareVerified(kv, nextId, (id) => `payload-${id}`, 60, noBackoff);
+    expect(r.ok).toBe(false);
+    expect(r.errors).toEqual(["kv put failed"]);
+  });
+
+  it("静默丢失（不抛错）不产生错误消息；成功路径 errors 为空", async () => {
+    const kv = flakyKv(1);
+    const r = await putShareVerified(kv, nextId, (id) => `payload-${id}`, 60, noBackoff);
+    expect(r.ok).toBe(true);
+    expect(r.errors).toEqual([]);
+  });
 });
