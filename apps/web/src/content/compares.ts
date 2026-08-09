@@ -3721,6 +3721,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Personal pages & résumé sites", "Developer & creator portfolios", "Personal brand home bases", "Imperative plays (hire.me)"],
     },
   },
+  "beauty-vs-salon": {
+    slug: "beauty-vs-salon",
+    a: "beauty",
+    b: "salon",
+    zh: {
+      title: ".beauty 和 .salon 怎么选：行业大词与门店招牌的对比",
+      metaDescription: ".beauty 是美业的行业大词，.salon 是一家店的招牌。对比两个美业后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在美业里，说话的对象不同。.beauty 是行业大词——美妆品牌与电商、美妆博主与教程站、皮肤管理与造型工作室用 name.beauty，行业定位一眼即明，做品牌、做内容、做电商用它格局更大；XYZ 注册局运营（旗下还有 .hair、.skin、.makeup 一整套美妆系后缀），欧莱雅集团都注册过多个 .beauty 做品牌活动站；注册约 $2、续费约 $13/年——首年近乎白送、续费温和，美妆系后缀里性价比最高。.salon 是门店招牌——美发店、美甲店、皮肤管理与美容院、宠物美容店用 name.salon，读出来就是一家「有椅子有镜子有预约本」的店，到店服务型生意用它更像招牌；它还保留「文艺沙龙」的老义，读书会与播客沙龙用它也优雅；Identity Digital 运营，注册约 $11、续费约 $46/年——续费中偏上，对客单价与复购看这不算什么。判断标准：做的是「品牌与内容」——美妆电商、博主、行业平台 → .beauty 的大词更配；做的是「一家店」——理发店、美甲店、美容院这类要客人上门的生意 → .salon 的招牌感更准。两个还能是同一盘生意的两层：品牌用 .beauty，品牌旗下门店用 .salon。注意 .beauty 六个字母不算短、.salon 只有五个字母，两边主体名都选短词；.beauty 便宜档要靠真实内容快速建立信任。共同注意：美业是视觉行业，域名只是入口——站内质感、作品图与预约转化才是生意本身。",
+      pickA: ["美妆品牌与电商", "美妆博主与教程站", "行业平台与内容站", "预算敏感的轻量试错"],
+      pickB: ["美发美甲与美容院", "皮肤管理与造型工作室", "宠物美容店", "读书会与文艺沙龙"],
+    },
+    en: {
+      title: ".beauty vs .salon: The Industry Word or The Shop Sign",
+      metaDescription:
+        ".beauty is the beauty industry's umbrella word; .salon is one shop's sign. Compare the two beauty suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in the beauty business; they address different people. .beauty is the industry word — cosmetics brands and e-commerce, beauty creators and tutorial sites, skin and styling studios on name.beauty state the industry on first read, carrying more scale for brands, content and commerce; run by the XYZ registry (alongside its .hair, .skin and .makeup family), with L'Oréal already using multiple .beauty domains for campaign sites; about $2 to register and $13/yr to renew — a nearly free first year and a mild renewal, the best value in the beauty family. .salon is the shop sign — hair studios, nail bars, skin clinics and pet groomers on name.salon read as a place with chairs, mirrors and an appointment book, so walk-in service businesses wear it like a storefront; it also keeps the older artsy sense, so reading circles and podcast salons wear it elegantly too; run by Identity Digital at about $11 to register and $46/yr to renew — an upper-mid renewal, trivial against beauty ticket sizes and repeat visits. The test: the business is a brand or content play — beauty commerce, creators, industry platforms → .beauty's umbrella fits; the business is one shop — a place clients visit → .salon's sign is truer. They can even be two layers of one business: the brand on .beauty, its shops on .salon. Note .beauty runs six letters and .salon five, so keep the front word short on both; and .beauty's bargain tier must earn trust fast with real content. Shared notes: beauty is a visual industry — the domain only opens the door; on-site polish, portfolio shots and booking conversion are the business itself.",
+      pickA: ["Cosmetics brands & e-commerce", "Beauty creators & tutorial sites", "Industry platforms & content", "Budget-friendly experiments"],
+      pickB: ["Hair, nail & beauty studios", "Skin clinics & styling studios", "Pet grooming shops", "Reading circles & creative salons"],
+    },
+  },
+  "fashion-vs-style": {
+    slug: "fashion-vs-style",
+    a: "fashion",
+    b: "style",
+    zh: {
+      title: ".fashion 和 .style 怎么选：行业专词与审美泛词的对比",
+      metaDescription: ".fashion 锁定时装行业，.style 泛指一切风格。对比两个时尚系后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都姓时尚，范围不同。.fashion 是行业专词——服装品牌与买手店、独立设计师工作室、时尚电商与租赁平台用 name.fashion，后缀本身就是行业宣言，做服装的用它指向最准；GoDaddy Registry 运营，注册约 $26、续费约 $26/年——注册续费同价，没有低价钩子也没有续费陷阱，预算一眼算到底，首年即全价也意味着它更适合认真做的品牌而非随手占名。.style 是审美泛词——穿搭博主与造型师、形象顾问、生活方式媒体用 name.style，「名字 + .style」念出来就是「某某的风格」；它比 fashion 宽得多：家居、文字、甚至企业的 brand style guide（brand.style 是设计圈经典用法）都装得下；Identity Digital 运营，注册约 $7、续费约 $31/年，温和档。判断标准：做的是「时装这个行业」——品牌、买手店、时尚电商 → .fashion 的专词更准；做的是「风格这件事」——个人穿搭、形象顾问、生活方式内容 → .style 的泛词更灵活。个人品牌几乎总是 .style 更顺：七个字母的 fashion 配人名偏重，五个字母的 style 轻盈得多。注意 .fashion 七个字母偏长，主体名务必短；.style 承诺审美，站点视觉必须跟上——挂 .style 的网站设计粗糙比普通域名更减分。共同注意：时尚行业视觉即正义，首屏大图与品牌摄影才是气场来源，域名只负责把「懂审美」写在门口。",
+      pickA: ["服装品牌与买手店", "独立设计师工作室", "时尚电商与租赁平台", "想要注册续费同价的透明成本"],
+      pickB: ["穿搭博主与造型师", "形象顾问与个人品牌", "生活方式媒体", "品牌规范站（brand.style）"],
+    },
+    en: {
+      title: ".fashion vs .style: The Industry Word or The Aesthetic Word",
+      metaDescription:
+        ".fashion locks onto the apparel industry; .style covers every kind of taste. Compare the two fashion suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both belong to fashion; the scope differs. .fashion is the industry word — apparel brands and boutiques, independent designer studios, fashion e-commerce and rental platforms on name.fashion make the suffix itself the industry statement, the truest pick for anyone actually making clothes; run by GoDaddy Registry at about $26 to register and $26/yr to renew — the same both ways: no cheap hook, no renewal trap, and a full-price first year that filters for serious brands over casual squatting. .style is the aesthetic word — outfit creators and stylists, image consultants, lifestyle media on name.style read out as \"so-and-so's style\"; it stretches far wider than fashion: interiors, writing, even corporate brand style guides (brand.style is a design-world classic) all fit; run by Identity Digital at about $7 to register and $31/yr to renew — the mild tier. The test: the business is the apparel industry — brands, boutiques, fashion commerce → .fashion's precision wins; the business is taste itself — personal styling, consulting, lifestyle content → .style's flexibility wins. For personal brands .style almost always reads better: seven-letter fashion weighs a name down, five-letter style keeps it light. Note .fashion runs seven letters, so keep the front word short; and .style promises aesthetics — a rough-looking site under .style loses more points than under a plain domain. Shared notes: fashion is a visuals-first industry — hero imagery and brand photography carry the presence; the domain just writes \"good taste\" on the door.",
+      pickA: ["Apparel brands & boutiques", "Independent designer studios", "Fashion e-commerce & rental", "Transparent same-price renewals"],
+      pickB: ["Outfit creators & stylists", "Image consultants & personal brands", "Lifestyle media", "Brand style guides (brand.style)"],
+    },
+  },
+  "work-vs-works": {
+    slug: "work-vs-works",
+    a: "work",
+    b: "works",
+    zh: {
+      title: ".work 和 .works 怎么选：一字之差的职业与作品分工",
+      metaDescription: ".work 说的是工作与职业，.works 说的是作品与「能用」。对比一字之差的两个后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个 s 的差别，分工完全不同。.work 说的是工作本身——招聘与求职站、自由职业者、远程办公与协作工具、职业培训用 name.work，英文里「对象 + work」本来就是通顺短语（remote.work、find.work 的语感），动词名词两读，域名读出来就是行动号召；GoDaddy Registry 运营，注册约 $2、续费约 $11/年——首年白菜价，续费也是全站最便宜档之一，长期持有毫无压力。.works 说的是作品与运转——设计工坊、木工坊、独立开发者的项目集用 name.works 读起来像老字号招牌（design works、iron works 的传统），另一层双关是「it works（能用）」——实干型工具产品用「品牌 + .works」自带「这东西真的能用」的口播广告（flow.works 式）；Identity Digital 运营，首年十几二十元、续费两百多元，典型新顶级域结构。判断标准：主题是「工作与职业」——招聘、求职、劳务、职业工具 → 单数 .work 更点题；主题是「作品与产品」——工作室、作品集、开发者工具 → 复数 .works 更传神。价格也拉开差距：.work 续费便宜一半以上，占多个名字或长期持有时账要算清。注意 .work 超低价后缀历史上垃圾站比例高，新站要靠真实内容与 HTTPS 快速建立信任；.works 口播时复数 s 要念清，别让用户少打一个字母落到别人手里——预算允许时两个都注册做跳转最省心。共同注意：两个都是四五个字母的短后缀，主体名再选短词，整个域名才利落。",
+      pickA: ["招聘与求职站", "自由职业者与劳务平台", "远程办公与协作工具", "超低续费的长期持有"],
+      pickB: ["设计与手作工作室", "个人与团队作品集", "开发者工具（it works 双关）", "工程与制造类品牌"],
+    },
+    en: {
+      title: ".work vs .works: One Letter Between the Job and the Craft",
+      metaDescription:
+        ".work names the job and the career; .works names the craft and \"it works\". Compare the one-letter-apart suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One letter, two entirely different jobs. .work names work itself — job boards and hiring sites, freelancers, remote-work and collaboration tools, vocational training on name.work ride the fact that target + work is already a natural English phrase (the remote.work, find.work cadence), readable as noun or verb, so the domain doubles as a call to action; run by GoDaddy Registry at about $2 to register and $11/yr to renew — a bargain first year and one of the cheapest renewals anywhere, painless to hold forever. .works names the craft and the claim — design shops, woodworkers and indie developers' project collections on name.works read like a heritage shop sign (the design works, iron works tradition), with the second pun being \"it works\": pragmatic tool products on brand + .works carry a built-in word-of-mouth ad (the flow.works play); run by Identity Digital with a cheap first year and a renewal in the typical new-TLD tier. The test: the theme is jobs and careers — hiring, gigs, labor platforms, career tools → singular .work hits harder; the theme is output and products — studios, portfolios, developer tools → plural .works tells the story. Price splits them too: .work renews for a fraction, worth weighing when holding several names long-term. Note .work's bargain tier historically attracts spam, so a new site must earn trust fast with real content and HTTPS; and .works' plural s must be enunciated — don't let a dropped letter send users to someone else; register both and redirect when budget allows. Shared notes: both suffixes are short, so keep the front word short too and the whole domain stays crisp.",
+      pickA: ["Job boards & hiring sites", "Freelancers & labor platforms", "Remote-work & collaboration tools", "Ultra-cheap long-term renewals"],
+      pickB: ["Design & maker studios", "Personal & team portfolios", "Developer tools (the \"it works\" pun)", "Engineering & manufacturing brands"],
+    },
+  },
+  "sale-vs-shop": {
+    slug: "sale-vs-shop",
+    a: "sale",
+    b: "shop",
+    zh: {
+      title: ".sale 和 .shop 怎么选：促销档期与常设店面的对比",
+      metaDescription: ".sale 喊的是「特价中」，.shop 挂的是「营业中」。对比两个电商后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在卖货，时态不同。.sale 是促销档期——品牌大促活动站、折扣电商与清仓频道、二手转卖与房产车辆出售页用 name.sale，域名本身就在喊「特价」：英文里「on sale」「for sale」妇孺皆知，brand.sale 读出来就是「某某在打折」，大促季给主站配一个短域名做活动落地页，比长长的 /promotions 路径好记好投放；Identity Digital 运营，注册约 $4、续费约 $31/年——首年便宜续费中偏上，短期活动用一季即弃毫无压力。.shop 是常设店面——独立站、品牌官方商店、垂直品类电商用 name.shop，看到域名就知道这是一家店，「品牌 + .shop」本身就是行动号召；也常做主品牌的商店子站——主站 .com、商店同名 .shop，分工清晰；首年常有低价促销但续费明显更高，长期持有前看清续费价。判断标准：页面有「档期」——大促、清仓、出售单件资产 → .sale 的紧迫感是武器；页面是「店」——常年营业、持续上新 → .shop 的店面感才对。最常见的正确用法是配合：店开在 .shop（或主流后缀），大促季启用 brand.sale 做活动页，档期结束 301 回主站。注意 .sale 常年挂着反而稀释促销力度，且折扣语境与高端定位相冲，奢侈品牌慎用；.shop 在部分用户认知里新后缀感仍强于 .com，大额客单价场景建议搭配主流后缀。共同注意：两个都是电商后缀，信任要素（HTTPS、退换货政策、真实评价）比域名更决定转化。",
+      pickA: ["品牌大促活动站", "折扣电商与清仓频道", "二手转卖平台", "房产车辆出售页（house.sale）"],
+      pickB: ["独立站与 DTC 电商", "品牌官方商店子站", "垂直品类电商", "线下店铺线上入口"],
+    },
+    en: {
+      title: ".sale vs .shop: The Limited-Time Event or The Open Store",
+      metaDescription:
+        ".sale shouts \"on sale now\"; .shop hangs the \"open\" sign. Compare the two commerce suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both sell; the tense differs. .sale is the limited-time event — brand promo sites, discount and clearance channels, second-hand resale and property or vehicle listings on name.sale make the domain itself shout \"on sale\": the phrases on sale and for sale are universal English, brand.sale reads as \"so-and-so is discounting\", and a short campaign domain beats a long /promotions path for recall and ad spend; run by Identity Digital at about $4 to register and $31/yr to renew — cheap first year, upper-mid renewal, painless for a one-season campaign. .shop is the open store — independent stores, official brand shops and vertical e-commerce on name.shop read as a store on sight, with brand + .shop working as a built-in call to action; it also pairs classically as the store companion to a .com main site; first years are often discounted while renewals run notably higher, so check the renewal before holding long. The test: the page has a run date — a big promo, a clearance, a single asset for sale → .sale's urgency is the weapon; the page is a store — open year-round, restocking continuously → .shop's storefront is right. The most common correct play is both: the store lives on .shop (or a mainstream TLD), brand.sale opens for the campaign season and 301s home after. Note a permanent .sale dilutes the urgency it trades on, and the discount register clashes with luxury positioning; .shop still reads newer than .com to part of the audience, so pair big-ticket businesses with a mainstream suffix. Shared notes: both are commerce suffixes — trust signals (HTTPS, return policy, real reviews) decide conversion more than the domain does.",
+      pickA: ["Brand promo campaign sites", "Discount & clearance channels", "Second-hand resale platforms", "Asset listings (house.sale)"],
+      pickB: ["Independent & DTC stores", "Official brand shop companions", "Vertical e-commerce", "Offline shops going online"],
+    },
+  },
+  "help-vs-support": {
+    slug: "help-vs-support",
+    a: "help",
+    b: "support",
+    zh: {
+      title: ".help 和 .support 怎么选：短口语与全称的求助入口对比",
+      metaDescription: ".help 是四个字母的短口语，.support 是七个字母的正式全称。对比两个求助入口后缀的语气、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是给品牌配求助入口的功能后缀，差在语气与账本。.help 短而口语——四个字母，用户遇到问题时下意识就能拼出 brand.help，产品帮助中心、工具教程站、公益求助项目（refugees.help 式天然短语）用它传播零成本；Internet Naming Co. 运营，注册约 $2、续费约 $26/年——首年近乎白送但差价十倍以上，占名前想清楚是长期资产还是一次性试验。.support 长而正式——七个字母写全了「支持」，产品帮助中心与知识库、客服与售后团队、IT 与技术支持服务商用 name.support，企业级语境里它比 help 更庄重，独立服务商用「品类 + .support」（printer、mac 类）接单也顺；Identity Digital 运营，注册约 $7、续费约 $22/年——注册续费差距小，长期持有反而比 .help 便宜，保护性注册毫无压力。判断标准：品牌短、面向消费者、要的是「顺口好拼」→ .help 的四个字母更快；企业级产品、B2B 客服、技术支持服务商 → .support 的全称更稳。长期账本几乎打平甚至倒挂（.support 续费更低），别只看首年价下单。最省心的做法：两个都注册，主用一个、另一个 301——用户在紧急时刻不该猜你用的是哪个。注意两边共同的铁律：域名承诺了帮助，页面必须真能解决问题——挂着 .help/.support 却无人应答比没有更伤信任；它们都是功能词不是品牌词，新品牌主域另选，这两个做配套入口。",
+      pickA: ["产品帮助中心与教程站", "面向消费者的口语入口", "公益求助与互助项目", "首年低价的轻量试验"],
+      pickB: ["企业级知识库与工单入口", "客服与售后团队", "IT 与技术支持服务商", "长期持有的低续费"],
+    },
+    en: {
+      title: ".help vs .support: The Short Word or The Full Word at the Front Desk",
+      metaDescription:
+        ".help is the four-letter colloquial cry; .support is the seven-letter formal noun. Compare the two front-desk suffixes on tone, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are functional suffixes for a brand's front desk; the split is tone and the ledger. .help is short and colloquial — four letters a stressed user can type on instinct as brand.help: product help centers, tool tutorial sites and cause projects (the refugees.help natural phrase) spread it at zero cost; run by Internet Naming Co. at about $2 to register and $26/yr to renew — a nearly free first year but a 10x-plus gap, so decide up front whether it's a long-term asset or a one-off experiment. .support is long and formal — seven letters spelling the full word: help centers and knowledge bases, customer-service and after-sales teams, IT and tech-support providers on name.support read more corporate than help, and independent providers book work naturally on category + .support (printer, mac); run by Identity Digital at about $7 to register and $22/yr to renew — a small gap both ways, actually cheaper than .help to hold long, painless as a defensive registration. The test: a short consumer brand that needs the address to roll off the tongue → .help's four letters win; enterprise products, B2B service desks, tech-support providers → .support's full word is steadier. The long-term ledger nearly evens out or flips (.support renews cheaper), so don't buy on first-year price alone. The safest play: register both, run one, 301 the other — a user in trouble shouldn't have to guess which one you chose. One iron rule on both sides: the domain promises help, so the page must actually deliver — a dead .help or .support wounds trust more than having none; and both are function words, not brand words — pick the brand's main domain elsewhere and run these as companions.",
+      pickA: ["Product help centers & tutorials", "Consumer-facing colloquial entry", "Cause & mutual-aid projects", "Cheap first-year experiments"],
+      pickB: ["Enterprise knowledge bases & ticketing", "Customer service & after-sales teams", "IT & tech-support providers", "Cheaper long-term renewals"],
+    },
+  },
+  "wedding-vs-love": {
+    slug: "wedding-vs-love",
+    a: "wedding",
+    b: "love",
+    zh: {
+      title: ".wedding 和 .love 怎么选：一场婚礼与一份情感的对比",
+      metaDescription: ".wedding 专指婚礼这件事，.love 泛指一切情感。对比两个喜事后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都带喜气，指向不同。.wedding 专指婚礼——新人的电子请柬与纪念站、婚庆策划公司与场地、婚纱摄影与礼服租售、跟拍与主持团队用 name.wedding，后缀一出场就自带喜气：names.wedding 读出来就是「某某的婚礼」，请柬域名的天花板写法，婚庆行业用它行业定位也一眼即明；GoDaddy Registry 运营，注册约 $26、续费约 $26/年——注册续费同价，成本透明。.love 泛指情感——求婚站、情侣与家庭纪念页、公益与慈善项目、粉丝应援站用 name.love，是极少数「读出来就有情绪」的后缀，两个经典语法：「名字 + .love」（emma.love 的语感）和「我爱的东西 + .love」（coffee.love 式品类宣言）；注册约 $9、续费约 $23/年，温和档且比 .wedding 便宜。判断标准：主题是「婚礼这件事」——请柬、婚庆、婚纱摄影、场地 → .wedding 的专词最点题；主题是「一段感情或一份热爱」——求婚、纪念、公益、应援 → .love 的情绪浓度覆盖面更广。新人请柬两个都顺：names.wedding 更正式点题，names.love 更浪漫且续费便宜——婚礼结束后若想留作永久纪念页，.love 的账本更友好。注意 .wedding 七个字母偏长，两人姓名组合选短拼法；两边共同的档期问题：婚礼过后要么续费做成纪念页，要么果断放手，别让带着两人名字的域名过期流入市场。婚庆是本地强需求行业，「城市 + .wedding」能接住本地搜索红利；.love 的情感浓度在严肃 B2B 场景明显违和，商用前想清楚。",
+      pickA: ["婚礼请柬与纪念站", "婚庆策划与场地", "婚纱摄影与礼服", "本地婚庆（城市 + .wedding）"],
+      pickB: ["求婚与情侣纪念页", "公益与慈善项目", "粉丝应援站", "品类情感宣言（coffee.love）"],
+    },
+    en: {
+      title: ".wedding vs .love: The Big Day or The Big Feeling",
+      metaDescription:
+        ".wedding names the event; .love names the emotion. Compare the two celebration suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both carry the celebration; they point at different things. .wedding names the event — couples' invitation and keepsake sites, wedding planners and venues, bridal photography and dress rental, videography and MC teams on name.wedding arrive with the festivity built in: names.wedding reads out as \"so-and-so's wedding\", the ceiling of invitation-domain grammar, and the trade reads its industry on sight; run by GoDaddy Registry at about $26 to register and $26/yr to renew — the same both ways, transparent cost. .love names the emotion — proposal sites, couple and family tribute pages, charities and causes, fan projects on name.love ride one of the very few suffixes that lands a feeling on first read, with two classic grammars: name + .love (the emma.love cadence) and thing-I-love + .love (the coffee.love category declaration); about $9 to register and $23/yr to renew — the mild tier, cheaper than .wedding. The test: the theme is the wedding itself — invitations, planning, bridal photography, venues → .wedding's precision hits hardest; the theme is a feeling or a passion — proposals, tributes, causes, fandom → .love's emotional range stretches wider. For couples' invitations both work: names.wedding reads more formal and on-topic, names.love more romantic with a cheaper renewal — friendlier math if the site becomes a permanent keepsake page after the day. Note .wedding runs seven letters, so pick short spellings for the couple's names; and both share the shelf-life problem: after the wedding, renew into a keepsake page or let go deliberately — never let a domain carrying two names lapse into the open market. Weddings are a strongly local trade, so city + .wedding catches local search; and .love's voltage reads plainly wrong in sober B2B settings — think before commercial use.",
+      pickA: ["Wedding invitations & keepsake sites", "Planners & venues", "Bridal photography & dresses", "Local wedding trade (city + .wedding)"],
+      pickB: ["Proposals & couple tributes", "Charities & causes", "Fan projects", "Category declarations (coffee.love)"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
