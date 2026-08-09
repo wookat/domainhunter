@@ -46,12 +46,25 @@ const firstSentence = (s, lang) => (lang === "zh" ? s.split("。")[0] + "。" : 
  * hub 卡片短句：首句内按逗号取前若干分句，控制在 maxLen 内（至少保留第一分句）。
  * /guide 158 条首句普遍 120+ 字，全文进 SSR 骨架让 /guide HTML 比 /vs 大 10KB gzip、
  * 移动 FCP 慢 0.3s（R284 移动性能优化）；详情页 metaDescription 不受影响。
+ * 首分句本身超 maxLen 时截断加「…」（zh 优先在次级标点「、」「；」处截，en 在词边界截），
+ * 保证卡片一行文案含省略号不超 maxLen；只影响 hub 卡片，不改指南正文。
  */
+const truncateClause = (clause, lang, maxLen) => {
+  const head = clause.slice(0, maxLen - 1);
+  if (lang === "zh") {
+    const at = Math.max(head.lastIndexOf("、"), head.lastIndexOf("；"));
+    return (at > 0 ? head.slice(0, at) : head) + "…";
+  }
+  const at = head.lastIndexOf(" ");
+  return (at > 0 ? head.slice(0, at) : head) + "…";
+};
+
 const cardLine = (s, lang, maxLen) => {
   const sep = lang === "zh" ? "，" : ", ";
   const end = lang === "zh" ? "。" : ".";
   const sentence = firstSentence(s, lang);
   const clauses = sentence.slice(0, sentence.length - end.length).split(sep);
+  if (clauses[0].length > maxLen) return truncateClause(clauses[0], lang, maxLen);
   let out = clauses[0];
   for (let i = 1; i < clauses.length && out.length + sep.length + clauses[i].length <= maxLen; i++) out += sep + clauses[i];
   return out + end;
