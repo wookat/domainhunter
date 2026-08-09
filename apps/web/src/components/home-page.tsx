@@ -1515,6 +1515,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个广告招牌与标识制作品牌，寓意「让每个生意都被看见、开业日期前准时点亮」；气质要醒目利落、有设计感和工程正规感、绝不像街边图文快印；场景是自家门头的活广告、连锁品牌的投标书和装修公司的转包名录里都立得住。",
     en: "A sign-making and signage brand. The name should promise every business gets seen, lit on time before opening day; the vibe is conspicuous and crisp, with design taste and engineering rigor, never a corner print shop; it must hold up on your own storefront, in the chain-brand tender, and on the contractor's sub list.",
   },
+  {
+    slug: "shortvideo",
+    labelZh: "短视频制作",
+    labelEn: "Short-video production",
+    zh: "一个短视频制作与内容厂牌品牌，寓意「懂节奏、能出爆款、条条片子有网感」；气质要快而利落、有创作者人格又有履约正规感、绝不像老派文化传媒公司；场景是比稿 PPT 封面、竖屏片头角标和「这条片子谁做的」的圈内转述里都立得住。",
+    en: "A short-video production studio brand. The name should promise feed fluency, viral instincts, and rhythm in every cut; the vibe is fast and crisp, creator-flavored yet delivery-reliable, never a stale media company; it must hold up on a pitch-deck cover, in a vertical-video watermark, and in \"who made that one?\" industry word of mouth.",
+  },
+  {
+    slug: "audiobook",
+    labelZh: "有声书配音",
+    labelEn: "Audiobooks & voiceover",
+    zh: "一个有声书制作与配音工作室品牌，寓意「声音有温度、听一遍就记住」；气质要专业有戏感又温暖陪伴、绝不像冷冰冰的录音棚编号；场景是片头口播、出版社供应商名录和听众「你在哪听的」的转述里都立得住。",
+    en: "An audiobook and voiceover studio brand. The name should carry warmth in the voice and stick after one hearing; the vibe is professional with dramatic range yet companionably warm, never a numbered recording booth; it must hold up in an episode intro read, on a publisher's vendor list, and in a listener's \"where did you hear it?\" referral.",
+  },
+  {
+    slug: "postproduction",
+    labelZh: "影视后期",
+    labelEn: "Post-production & VFX",
+    zh: "一个影视后期与特效制作品牌，寓意「逐帧打磨、把不可能拍出来」；气质要硬核精工、有魔法感又有工业产能的可靠、绝不像街边快剪小店；场景是片尾滚动字幕、行业奖项名单和制片主任的供应商名录里都立得住。",
+    en: "A film post-production and VFX brand. The name should promise frame-by-frame craft and filming the impossible; the vibe is hardcore precision with a touch of magic and industrial-capacity reliability, never a strip-mall quick-cut shop; it must hold up in the end-credits roll, on awards lists, and in the line producer's vendor roster.",
+  },
+  {
+    slug: "animation",
+    labelZh: "动画工作室",
+    labelEn: "Animation studios",
+    zh: "一个动画工作室与内容厂牌品牌，寓意「造一个世界、片头五秒就是品质承诺」；气质要有想象力与厂标分量、既柔软动人又立得住出品方三个字；场景是片头 logo 动画、电影节片单和衍生品包装上都立得住。",
+    en: "An animation studio brand. The name should promise a world of its own, with the five-second opening logo as a quality vow; the vibe is imaginative with marque-level weight — tender yet sturdy enough for \"presented by\"; it must hold up in the opening logo animation, on festival slates, and on merchandise packaging.",
+  },
+  {
+    slug: "documentary",
+    labelZh: "纪录片工作室",
+    labelEn: "Documentary studios",
+    zh: "一个纪录片工作室与纪实厂牌品牌，寓意「替观众看见真实、十年跟拍也守得住」；气质要真诚厚重有立场、绝不轻浮猎奇；场景是电影节片单、平台委托的基金申请书和「这是哪家拍的」的口碑转述里都立得住。",
+    en: "A documentary studio brand. The name should promise seeing the real world on the audience's behalf, patient enough for a ten-year follow shoot; the vibe is sincere, weighty and principled, never flippant or sensational; it must hold up on festival slates, in commissioning grant applications, and in \"who made this?\" word of mouth.",
+  },
+  {
+    slug: "newsmedia",
+    labelZh: "独立新闻媒体",
+    labelEn: "Independent news media",
+    zh: "一个独立新闻媒体与资讯订阅品牌，寓意「替读者核实过了、配得上你的时间」；气质要独立锐利又稳重可信、绝不像流量营销号；场景是「据 XX 报道」的转引、订阅邮件发件人栏和读者「你看的哪家」的转述里都立得住。",
+    en: "An independent news outlet brand. The name should promise verified-for-you journalism worth your time; the vibe is independent and sharp yet steady and credible, never a traffic-chasing content farm; it must hold up in \"according to X\" citations, the newsletter sender line, and readers' \"which one do you read?\" referrals.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
