@@ -5041,6 +5041,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Surf trip operators", "Overseas break & camp bookings", "Island resort travel desks", "Full-itinerary package businesses"],
     },
   },
+  "ltd-vs-llc": {
+    slug: "ltd-vs-llc",
+    a: "ltd",
+    b: "llc",
+    zh: {
+      title: ".ltd 和 .llc 怎么选：注册地决定的公司抬头对比",
+      metaDescription: ".ltd 对齐英联邦/中国的有限公司抬头，.llc 对齐美国 LLC 注册文件。对比两者的语义边界、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是「把公司抬头写进域名」的后缀，分工由注册地决定。.ltd 是 limited 的全球通用缩写——英联邦与中国的公司名里天天见，「公司名 + .ltd」与营业执照抬头天然对齐；.llc 强绑定美国 LLC 形态，「公司名 + .llc」与美国注册文件一字不差，对美国客户与平台审核尤其有说服力。价格差一档：.ltd 注册约 $6、续费约 $25/年——首年低价、续费温和；.llc 注册约 $11、续费约 $35/年——中档持有。判断标准就一条：公司注册在哪。英联邦/中国语境的有限公司、集团子公司与新业务线 → .ltd 更贴抬头且更便宜；美国注册的 LLC、跨境卖家的美国主体、接美元收款的独立开发者 → .llc 的实体信号更准。两个注意：没注册 LLC 的主体硬用 .llc 容易名实不符，先落地注册再上域名；两边语义都是「公司官网」，内容站与个人项目用哪个都别扭。命名上「公司名 + 后缀」是两边的标准款，按注册文件抬头选后缀即可。",
+      pickA: ["英联邦/中国语境的有限公司", "集团子公司与新业务线", "续费预算敏感的公司官网", "创业公司品牌站"],
+      pickB: ["美国注册的 LLC 公司官网", "跨境电商美国主体站", "面向美国客户与平台审核", "自由职业者公司化品牌"],
+    },
+    en: {
+      title: ".ltd vs .llc: The Letterhead Suffix, Picked by Where You're Registered",
+      metaDescription:
+        ".ltd matches Commonwealth-style limited companies; .llc matches US LLC formation papers. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both suffixes write the company letterhead into the address; the split is where the entity is registered. .ltd is the global shorthand for limited company — it appears in company names across the Commonwealth and China, so company name + .ltd lines up naturally with the certificate. .llc is tightly bound to America's default company form — company name + .llc matches the formation papers letter for letter, which lands especially well with US clients and platform reviews. Pricing sits a tier apart: .ltd about $6 to register and $25/yr to renew — cheap first year, mild renewal; .llc about $11 and $35/yr — a mid-tier hold. The test is one question: where is the company registered? Commonwealth or China-context limited companies, group subsidiaries and new business lines → .ltd matches the letterhead and costs less; US-registered LLCs, cross-border sellers' US entities and indie developers billing in dollars → .llc's entity signal aims truer. Two cautions: using .llc without an actual LLC invites a mismatch — form the entity first; and both suffixes mean company site, so content projects and personal pages read awkward on either. Naming: company name + suffix is the standard on both sides — pick the suffix that matches the papers.",
+      pickA: ["Commonwealth/China-context limited companies", "Group subsidiaries & new business lines", "Renewal-budget-sensitive company sites", "Startup brand homes"],
+      pickB: ["US-registered LLC company sites", "Cross-border sellers with US entities", "US clients & platform reviews", "Freelancers going corporate"],
+    },
+  },
+  "ltd-vs-co": {
+    slug: "ltd-vs-co",
+    a: "ltd",
+    b: "co",
+    zh: {
+      title: ".ltd 和 .co 怎么选：注册抬头与品牌简写的取舍",
+      metaDescription: ".ltd 像营业执照抬头，.co 是 company 的品牌化简写。对比两者的气质、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都指向「公司」，气质完全不同。.ltd 是注册抬头——「公司名 + .ltd」与营业执照对齐，读起来是「正经注册的有限公司」，适合把合规感写进地址的中小企业与专业服务公司；.co 是品牌简写——两个字母短促轻快，创业公司与融资叙事里 .co 早已是 .com 之外的主流选择，读起来是「一家现代公司」而非「一份注册文件」。价格上 .ltd 注册约 $6、续费约 $25/年；.co 注册约 $10、续费在多数注册商 $25-35/年——长期成本接近，差别主要在首年与气质。判断标准：域名要传达的是「合规实体」还是「品牌」。咨询、代理、集团子公司这类靠资质与信任做生意的 → .ltd 的抬头感是加分项；产品导向的创业公司、想要短域名与融资叙事的 → .co 更轻更潮，且两字母后缀的库存与转售流动性都更好。注意 .co 是哥伦比亚国别域被全球品牌化使用，个别场景会被误敲成 .com——品牌起量后建议把 .com 一并收了；.ltd 则别用在内容站与个人项目上。命名上「公司名 + .ltd」对齐执照，「品牌词 + .co」做主站是两边的标准款。",
+      pickA: ["咨询与专业服务公司", "把合规感写进地址的中小企业", "集团子公司与新业务线", "首年预算敏感"],
+      pickB: ["产品导向的创业公司", "想要两字母短后缀的品牌", "融资叙事与硅谷气质", "计划后续收购 .com 的主站"],
+    },
+    en: {
+      title: ".ltd vs .co: The Certificate or The Brand Shorthand",
+      metaDescription:
+        ".ltd reads like the company certificate; .co is the branded shorthand for company. Compare vibe, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both point at company, with opposite vibes. .ltd is the letterhead — company name + .ltd lines up with the certificate and reads properly registered limited company, a fit for SMEs and professional-services firms that want compliance in the address. .co is the brand shorthand — two letters, short and quick, long established as the mainstream alternative to .com in startup and fundraising circles; it reads a modern company, not a registration document. On price, .ltd runs about $6 to register and $25/yr to renew; .co registers around $10 and renews at $25–35 at many registrars — long-term costs land close, so the real difference is year one and vibe. The test: should the domain signal a compliant entity or a brand? Consulting firms, agencies and group subsidiaries that trade on credentials and trust → .ltd's letterhead feel is upside; product-led startups wanting a short domain and a fundraising-friendly read → .co travels lighter, with better inventory and resale liquidity for a two-letter suffix. Two cautions: .co is Colombia's country code globally rebranded, and a slice of users will fat-finger .com — buy the matching .com once the brand has traction; and keep .ltd off content sites and personal projects. Naming: company name + .ltd matches the certificate; brand word + .co as the main site is the standard on the other side.",
+      pickA: ["Consulting & professional-services firms", "SMEs putting compliance in the address", "Group subsidiaries & new business lines", "First-year-budget sensitive"],
+      pickB: ["Product-led startups", "Brands wanting a two-letter suffix", "Fundraising narrative & startup vibe", "Main sites planning to acquire .com later"],
+    },
+  },
+  "biz-vs-com": {
+    slug: "biz-vs-com",
+    a: "biz",
+    b: "com",
+    zh: {
+      title: ".biz 和 .com 怎么选：老牌替补与默认答案的对比",
+      metaDescription: ".biz 是 2001 年就开放的老牌生意后缀，.com 是所有人的默认答案。对比两者的信任度、库存与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "这是「默认答案」与「老牌替补」的对比。.com 认知度无可替代——用户口头听到一个品牌默认补全 .com，长期品牌资产与转售流动性都是天花板；.biz 是 2001 年就开放的老牌 gTLD，business 语义直白，全球注册商与邮箱系统支持度拉满，最大优势是库存：.com 里早被占光的短公司名、行业词在 .biz 大量有货。价格接近：.com 注册续费稳定在 $10-12/年 档；.biz 注册约 $7、续费约 $19/年——都是温和档，成本不构成决策因素。判断标准：品牌词拿不拿得到。.com 能注册或收购价可接受 → 别犹豫，尤其是面向大众的正式品牌与口头传播多的场景；心仪名字 .com 在别人手里、生意本身是外贸/B2B/本地实体 → .biz 的生意语义反而比硬凑一个变体 .com 更直白，海外客户一眼读懂。两个注意：.biz 早年被垃圾邮件站用得多，信任分低于 .com，正经官网内容与 HTTPS 要跟上；品牌词常见且对应 .com 是竞品在运营时，用 .biz 会持续分流——这种情况宁可换名字。命名上「公司名/行业词 + .biz」直接接住生意语义，.com 侧则按「品牌词 + .com」的标准款走。",
+      pickA: ["心仪名字 .com 已被注册", "外贸与 B2B 业务站", "本地商家与个体生意", "同名单更高的可注册命中率"],
+      pickB: ["面向大众的正式品牌", "长期品牌资产与转售", "口头传播场景多（广告、播客）", "预算允许收购的主站"],
+    },
+    en: {
+      title: ".biz vs .com: The Veteran Fallback or The Default Answer",
+      metaDescription:
+        ".biz is the 2001-vintage business suffix; .com is everyone's default. Compare trust, inventory and fit, then hunt names available on both.",
+      verdict:
+        "This is the default answer versus the veteran fallback. .com's recognition is irreplaceable — users hearing a brand out loud autocomplete .com by reflex, and for long-term brand assets and resale liquidity it's the ceiling. .biz is a 2001-vintage gTLD with plain business semantics, universal registrar and email support, and its real edge is inventory: short company names and trade words long gone on .com are widely open on .biz. Pricing is close — .com sits stably around $10–12/yr, .biz about $7 to register and $19/yr to renew — cheap enough that cost isn't the decider. The test: can you get the brand word? If the .com is open or the acquisition price is acceptable → don't hesitate, especially for mainstream consumer brands and heavy word-of-mouth channels. If the name you love is taken on .com and the business itself is trade, B2B or a local storefront → .biz's business semantics read more honestly than a mangled .com variant, and overseas clients parse it instantly. Two cautions: early spam abuse left .biz with less trust than .com, so serious sites need real content and HTTPS to carry it; and if the brand word is common and a competitor operates the .com, .biz will leak traffic indefinitely — better to change the name. Naming: company or trade word + .biz reads business instantly; on the other side, brand word + .com is the standard.",
+      pickA: ["Your name is taken on .com", "Trade & B2B ventures", "Local businesses & sole proprietors", "Better availability odds for the same list"],
+      pickB: ["Mainstream consumer brands", "Long-term brand asset and resale", "Heavy word-of-mouth channels (ads, podcasts)", "Main sites with acquisition budget"],
+    },
+  },
+  "fyi-vs-info": {
+    slug: "fyi-vs-info",
+    a: "fyi",
+    b: "info",
+    zh: {
+      title: ".fyi 和 .info 怎么选：轻快速查与正式资料的分工",
+      metaDescription: ".fyi 是轻快的「供你参考」，.info 是老牌正式的「信息」。对比两者的气质、续费结构与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是信息类后缀，分工在气质与账本。.fyi 是英文里最日常的信息前缀——docs.fyi、changelog.fyi 读起来就是一句话，轻快俏皮，适合产品文档、更新日志、状态页与速查手册；最难得的是价格结构：注册续费同价约 $6/年，无「首年低价钓鱼」问题，是信息站里最省心的长期持有。.info 是 2001 年第一批新通用后缀，「信息」语义正式，二十多年历史让它的认知度在新后缀里名列前茅——资料站、行业百科、活动信息页用它顺理成章；但账本结构相反：首年常年极低（经常一两美元）、续费翻数倍，长期持有要按续费价核算。判断标准：信息的「体温」。产品配套的文档/changelog/状态页、话题速查站这类轻快内容 → .fyi 的口语感更贴且长期成本可预期；行业百科、正式资料库、活动信息发布这类端着讲的内容 → .info 的正式感与老牌认知更稳。两个注意：fyi 是英文缩写，纯中文受众站点要在页面说清定位；.info 历史上被垃圾站用得多，商业主站信任感弱于 .com。命名上「产品名 + .fyi」挂文档、「话题词 + .fyi」接速查搜索，「主题词 + .info」做正式资料站是两边标准款。",
+      pickA: ["产品文档与更新日志站", "状态页与速查手册", "续费成本要可预期的长期持有", "轻快俏皮的话题信息站"],
+      pickB: ["行业百科与正式资料库", "活动与信息发布页", "看重老牌后缀认知度", "首年低成本试验内容项目"],
+    },
+    en: {
+      title: ".fyi vs .info: The Quick Lookup or The Formal Reference",
+      metaDescription:
+        ".fyi is the breezy heads-up; .info is the veteran formal reference suffix. Compare vibe, renewal structure and fit, then hunt names available on both.",
+      verdict:
+        "Both are information suffixes; the split is vibe and the ledger. .fyi is everyday English for for your information — docs.fyi and changelog.fyi read as a sentence, light and snappy, a fit for product docs, changelogs, status pages and cheat-sheet sites. Its rarest trait is the price structure: flat about $6 to register and renew, no first-year teaser, the most carefree long-term hold among info sites. .info is from the 2001 first wave of new gTLDs with formal information semantics and two decades of recognition — resource sites, industry wikis and event info pages wear it naturally; but its ledger runs the other way: rock-bottom first years (often a dollar or two) with renewals several times higher, so budget on the renewal price. The test is the information's temperature. Product-side docs, changelogs and status pages, topic quick-lookup sites — breezy content → .fyi reads truer and costs stay predictable. Industry wikis, formal reference libraries, event announcements — content that stands on ceremony → .info's formality and veteran recognition carry better. Two cautions: fyi is an English abbreviation, so purely non-English audiences may need the positioning spelled out; and .info's spam history leaves commercial main sites less trusted than .com. Naming: product name + .fyi for docs and topic + .fyi for lookups; theme word + .info is the formal-reference standard on the other side.",
+      pickA: ["Product docs & changelog sites", "Status pages & cheat sheets", "Predictable flat renewal for long holds", "Breezy topic info sites"],
+      pickB: ["Industry wikis & formal references", "Event & info announcement pages", "Veteran-suffix recognition", "Cheap first-year content experiments"],
+    },
+  },
+  "promo-vs-shop": {
+    slug: "promo-vs-shop",
+    a: "promo",
+    b: "shop",
+    zh: {
+      title: ".promo 和 .shop 怎么选：活动阵地与常设店铺的分工",
+      metaDescription: ".promo 是短期活动与优惠码的阵地，.shop 是常设电商店铺的门面。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都在电商营销链路里，分工看「卖场是常设还是限时」。.shop 是店铺词——什么品类都能装，「品牌 + .shop」本身就是一句行动号召，独立站与 DTC 品牌的通用门面，全球注册量在电商后缀里最大；.promo 是促销词——促销落地页、优惠码聚合、campaign 微站与达人带货页用它，「这里有优惠」从地址就说清了，比一长串带参数的活动 URL 更好记好读。价格结构不同：.promo 注册约 $11、续费约 $20/年——温和档长持无压力；.shop 首年常有低价促销、续费明显更高——预算按续费价算。判断标准：域名承载的是「货架」还是「活动」。长期运营的独立站、把商品与购物车放上去的 → .shop 的店铺语义是门面；主站已有、要给大促/新品/联盟推广开独立阵地的 → .promo 的活动语义更准，campaign 结束还能复用给下一场。两个注意：.promo 促销语义强，公司主站与产品官网用它撑不起长期品牌；营销类后缀在部分邮箱过滤器眼里更敏感，促销邮件用主域名发、.promo 只做落地页更稳。命名上「品牌 + .shop」做常设店、「品牌/品类 + .promo」做活动阵地是两边标准款。",
+      pickA: ["促销活动落地页", "优惠码与折扣聚合站", "品牌 campaign 微站", "达人带货与联盟推广页"],
+      pickB: ["长期运营的独立站与 DTC 品牌", "把商品与购物车放上去的常设店", "「品牌 + 行动号召」的门面域名", "电商后缀里最大的注册量与认知"],
+    },
+    en: {
+      title: ".promo vs .shop: The Campaign Outpost or The Permanent Storefront",
+      metaDescription:
+        ".promo hosts short campaigns and coupon hubs; .shop fronts the permanent store. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in the commerce funnel; the split is whether the venue is permanent or limited-time. .shop is the store word — any category fits, brand + .shop is itself a call to action, the default storefront for independent and DTC brands and the biggest commerce suffix by registrations. .promo is the offer word — promotion landing pages, coupon aggregators, campaign microsites and creator promo pages on name.promo say the deal lives here, beating a parameter-laden campaign URL for memorability. Price structures differ: .promo about $11 to register and $20/yr to renew — a mild tier, painless to hold; .shop runs cheap first-year promos with notably higher renewals — budget on the renewal price. The test: does the domain carry the shelves or the event? A long-running store with products and a cart → .shop's storefront semantics are the face of the business. A main site that needs a separate stage for a big sale, a launch or affiliate pushes → .promo aims truer, and the domain recycles for the next campaign when this one ends. Two cautions: .promo's promo semantics run hot — company homepages can't build a lasting brand on it; and marketing suffixes get extra scrutiny from some mail filters, so send email from the main domain and keep .promo for landing pages. Naming: brand + .shop for the permanent store; brand or niche + .promo for the campaign outpost.",
+      pickA: ["Promotion landing pages", "Coupon & discount aggregators", "Brand campaign microsites", "Creator & affiliate promo pages"],
+      pickB: ["Long-running independent & DTC stores", "Permanent storefronts with carts", "Brand + call-to-action storefront domains", "Biggest commerce-suffix recognition"],
+    },
+  },
+  "express-vs-store": {
+    slug: "express-vs-store",
+    a: "express",
+    b: "store",
+    zh: {
+      title: ".express 和 .store 怎么选：快服务与常设商店的分工",
+      metaDescription: ".express 把「快」写进域名，.store 是常设商店的正式门面。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工看生意卖的是「速度」还是「货架」。.express 是速度词——快递与同城配送、跨境物流与货代、上门快修快洗、主打「秒出结果」的工具产品用 name.express，「快」的承诺从地址就说清了；express 刻在全球物流业的行业名里（顺丰速运、联邦快递的英文名都有它），「城市/品牌 + .express」对快递与货代就是行业标准式命名。.store 是商店词——实体「商店」的正式称谓，品牌旗舰店气质重，主站 .com + 同名 .store 做商城是最主流的分工玩法。价格结构不同：.express 注册约 $9、续费约 $31/年——首年低价、续费中档；.store 首年常见大幅促销、续费要按 $50-60/年 核算——电商后缀里最陡的促销-续费差之一。判断标准：收入来自「送得快/修得快」的服务费 → .express 的速度语义更准，同城搜索也接得住；收入来自把商品放上货架卖 → .store 的商店语义是门面。两个注意：express 一词多义（快递/特快/表达），页面首屏要说清做的是哪门生意；.store 续费有分量，纯玩票项目按续费价三思。命名上「城市/线路 + .express」接物流搜索，「品牌 + .store」做旗舰商城是两边标准款。",
+      pickA: ["快递与同城配送", "跨境物流与货代", "上门快修快洗服务", "主打速度的工具产品"],
+      pickB: ["品牌旗舰店与商城", "主站 .com + 同名 .store 分工", "把商品放上货架的常设店", "电商门面的正式称谓"],
+    },
+    en: {
+      title: ".express vs .store: Selling Speed or Selling Shelves",
+      metaDescription:
+        ".express writes the fast promise into the address; .store fronts the permanent shop. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is what the business sells: speed or shelves. .express is the speed word — courier and local delivery, cross-border logistics and freight forwarders, on-demand repair and cleaning, and instant-result tools on name.express make the fast promise in the domain itself; express is baked into the logistics industry's own names (FedEx and half the world's couriers carry it), so city or brand + .express is the standard naming pattern for delivery and freight. .store is the shop word — the formal storefront title with flagship-store gravitas, and main site on .com + the matching .store as the shop is the most common division of labor. Price structures differ: .express about $9 to register and $31/yr to renew — cheap first year, mid renewal; .store runs steep first-year promos with renewals to budget around $50–60/yr — one of the widest promo-to-renewal gaps among commerce suffixes. The test: revenue comes from delivering or fixing fast — service fees → .express's speed semantics aim truer and local delivery searches land directly; revenue comes from putting products on shelves → .store's storefront semantics are the face. Two cautions: express carries several senses (courier, fast, expression), so the hero section should say which business this is; and .store's renewal has real weight — hobby projects should think twice at the renewal price. Naming: city or route + .express catches logistics searches; brand + .store is the flagship-shop standard.",
+      pickA: ["Courier & local delivery services", "Cross-border logistics & freight forwarders", "On-demand repair & cleaning services", "Speed-first tool products"],
+      pickB: ["Flagship brand stores & malls", ".com main site + matching .store split", "Permanent stores with product shelves", "The formal storefront title"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
