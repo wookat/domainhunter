@@ -4777,6 +4777,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Broader-topic writing homes", "Personal blogs & essays", "Newsletter web homes", "Renewal-cost-conscious writers"],
     },
   },
+  "golf-vs-club": {
+    slug: "golf-vs-club",
+    a: "golf",
+    b: "club",
+    zh: {
+      title: ".golf 和 .club 怎么选：球场品类与社群归属的分工",
+      metaDescription: ".golf 把高尔夫行业写进域名，.club 是社群与俱乐部的通用招牌。对比两者的语义锐度、价格与适用场景差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在锐度：.golf 是品类词——高尔夫球场与练习场、教练与青少年培训、球具装备电商、订场与差点管理工具用 name.golf，「打球来这儿」从地址就说清，球友搜「城市 + golf」订场、家长搜教练名核实资质，「场地名 + .golf」两件事一次做完，这种行业归属感是通用后缀给不了的；.club 是归属词——会员制球会、球友社群、跨运动的综合俱乐部用 name.club，「加入我们」的号召从域名立住，业务不止高尔夫时也不违和。价格结构不同：.golf 注册约 $5、续费约 $52/年——首年低价、续费中高档，按续费核算预算才稳；.club 首年常见促销、续费温和得多，长持成本明显更低。判断标准：生意是高尔夫本身——球场运营、教学、装备、订场工具 → .golf 四个字母把赛道说完，比 golfclub.com 式拼接更短更准；卖的是会籍与圈子——会员社群、跨项目俱乐部、球友组织 → .club 的归属感更点题，续费也更省。两个注意：.golf 续费约 ¥374/年，对个人球友博客偏贵，轻量内容站可先用 .club 起步；高尔夫客群搜索意图强，域名的角色是订场与报名的稳定入口，页面要把价格与档期做清楚。命名上「城市/场地名 + .golf」（直接接住订场搜索）与「会名 + .club」（会员俱乐部标准款）各是两边最点题的模式。",
+      pickA: ["高尔夫球场与练习场", "教练与青少年培训", "球具装备电商与订场工具", "承接「城市 + golf」搜索"],
+      pickB: ["会员制球会与球友社群", "跨运动的综合俱乐部", "在意长持续费成本", "主品牌的社群子站"],
+    },
+    en: {
+      title: ".golf vs .club: The Course Category or The Member Circle",
+      metaDescription:
+        ".golf writes the golf trade into the address; .club is the general sign of a member community. Compare semantic sharpness, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is sharpness. .golf is the category word — courses and driving ranges, coaches and junior academies, gear stores, tee-time and handicap tools on name.golf say the golf happens here in the domain itself: players search city + golf to book, parents search a coach's name to verify, and venue name + .golf does both jobs at once with a vertical belonging no generic suffix can match. .club is the belonging word — member golf clubs, player communities, multi-sport clubs on name.club put the join-us call in the address, and nothing breaks if the club is about more than golf. The pricing structures differ: .golf about $5 to register jumping to about $52/yr — a cheap first year with a mid-to-high renewal, so budget on the renewal; .club runs frequent first-year promos with a much milder renewal, clearly cheaper to hold. The test: the business is golf itself — course operations, coaching, gear, booking tools → .golf says the lane in four letters, shorter and sharper than any golfclub.com compound; the product is membership and the circle — member communities, multi-activity clubs, player groups → .club's belonging aims truer and costs less to keep. Two cautions: .golf's $52/yr is steep for a personal golf blog — lightweight content sites can start on .club; and golf customers search with high intent, so the domain's job is the stable booking and enrollment entrance with clear pricing and availability on the page. Naming: city or venue + .golf (catching tee-time searches directly) versus club name + .club (the member-club standard) are each side's on-target patterns.",
+      pickA: ["Courses & driving ranges", "Coaches & junior academies", "Gear stores & booking tools", "Catching city + golf searches"],
+      pickB: ["Member clubs & player communities", "Multi-sport clubs", "Renewal-cost-conscious holds", "A brand's community subdomain"],
+    },
+  },
+  "tennis-vs-coach": {
+    slug: "tennis-vs-coach",
+    a: "tennis",
+    b: "coach",
+    zh: {
+      title: ".tennis 和 .coach 怎么选：项目招牌与职业身份的分工",
+      metaDescription: ".tennis 把网球项目写进域名，.coach 写出教练的职业身份。对比两者的语义指向、价格与适用场景差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在指向：.tennis 指向项目——网球俱乐部与场馆订场、青少年培训机构、球拍球线装备电商、赛事与约球社区用 name.tennis，「这里全是网球」从地址就说清，学员搜「城市 + tennis」找场地找课，「场馆名 + .tennis」比杂牌后缀更像正经网球机构；.coach 指向人——网球教练、体能教练、职业发展与人生教练用 name.coach，「我以教学为业」的身份从域名立住，跨项目、跨领域的教学生意都装得下。价格同档偏高：.tennis 注册约 $52、续费约 $52/年——注册续费同价，报价即长期成本；.coach 注册约 $11、续费约 $62/年——首年便宜续费更高，两边都要按年费几十美元核算预算。判断标准：主体是场馆与项目——俱乐部、培训机构、装备电商、赛事组织 → .tennis 的品类归属更锐，本地学员核实场馆时也更好认；主体是教练个人——网球教练的个人品牌、可能扩到体能与其他项目的教学业务 → .coach 的职业身份不绑项目，学员换项目也不用换域名。两个注意：两者续费都在 ¥370–450/年 档，个人兴趣站要算清长持成本；网球获客重度依赖本地搜索与转介绍，域名的角色是报名与订场的稳定入口。命名上「城市/场馆名 + .tennis」（直接接住找场搜索）与「人名 + .coach」（教练个人品牌标准款）各是两边最点题的模式。",
+      pickA: ["网球俱乐部与场馆订场", "青少年培训机构", "球拍球线装备电商", "赛事组织与约球社区"],
+      pickB: ["网球教练个人品牌", "跨项目的教学业务", "体能与专项训练服务", "以人为核心的教学生意"],
+    },
+    en: {
+      title: ".tennis vs .coach: The Sport's Banner or The Trainer's Title",
+      metaDescription:
+        ".tennis writes the sport into the address; .coach writes out the trainer's profession. Compare semantic aim, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is what the name points at. .tennis points at the sport — clubs and court booking, junior academies, racquet and string stores, tournaments and hitting-partner communities on name.tennis say everything here is tennis in the domain itself: students search city + tennis for courts and lessons, and venue name + .tennis reads like a proper tennis institution where a generic suffix wouldn't. .coach points at the person — tennis coaches, fitness trainers, career and life coaches on name.coach put teaching is my profession in the address, and the identity holds across sports and fields. Both price in the upper tier: .tennis about $52 to register and $52/yr to renew — same price both ways, the sticker is the long-term cost; .coach about $11 to register and $62/yr to renew — cheap in, higher to hold, so budget both on tens of dollars a year. The test: the subject is the venue and the sport — clubs, academies, gear stores, tournaments → .tennis's category belonging is sharper and easier for local students verifying the venue; the subject is the coach as a person — a tennis coach's personal brand, a teaching business that may expand into fitness or other sports → .coach binds you to no single sport, and switching disciplines never means switching domains. Two cautions: both renew around $50–62/yr, so personal hobby sites should count the holding cost; and tennis businesses win students through local search and referrals, so the domain's job is the stable enrollment and booking entrance. Naming: city or venue + .tennis (catching court searches directly) versus your name + .coach (the coach personal-brand standard) are each side's on-target patterns.",
+      pickA: ["Clubs & court booking", "Junior academies", "Racquet & string stores", "Tournaments & hitting communities"],
+      pickB: ["Tennis coaches' personal brands", "Cross-sport teaching businesses", "Fitness & performance training", "Person-centered teaching brands"],
+    },
+  },
+  "soccer-vs-football": {
+    slug: "soccer-vs-football",
+    a: "soccer",
+    b: "football",
+    zh: {
+      title: ".soccer 和 .football 怎么选：北美叫法与全球叫法的分工",
+      metaDescription: ".soccer 是北美市场对足球的称呼，.football 是欧洲与全球大多数市场的叫法。对比两者的受众语境、价格与适用场景差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在受众语境：同一项运动，两个后缀各占一个语言世界。.soccer 是北美词——美加的青训营与足球学校、业余联赛、球迷内容站用 name.soccer，家长搜「城市 + youth soccer」找机构，soccer 在美式语境里毫无歧义，因为 football 在那里指橄榄球；.football 是全球词——欧洲、南美、亚非市场对足球的称呼都是 football，俱乐部与球迷会、青训与球员经纪、赛事资讯与数据分析站用 name.football 对国际球迷更自然。价格完全同档：两者注册局同为 Identity Digital，注册都约 $11、续费都约 $21/年——温和档长持无压力，预算不构成决策因素，纯看受众。判断标准：主要用户在北美——美加青训、社区联赛、面向北美家长的培训机构 → .soccer 无歧义直达；面向国际球迷或欧洲市场——俱乐部球迷会、国际赛事内容、全球化的足球产品 → .football 是世界的叫法。两个注意：跨市场项目可以两个都注册、主站选主受众的叫法另一个 301 跳转；涉及俱乐部徽标与赛事名的商标授权要先厘清，球迷站标明非官方身份更稳。命名上「城市 + .soccer」（接住北美找课搜索）与「队名/联赛 + .football」（国际球迷与资讯站标准款）各是两边最点题的模式。",
+      pickA: ["美加青训营与足球学校", "北美业余联赛与社区球队", "面向北美家长的培训机构", "美式语境的球迷内容站"],
+      pickB: ["面向国际球迷的俱乐部与球迷会", "欧洲与全球市场的足球产品", "赛事资讯与数据分析站", "青训营与球员经纪（国际线）"],
+    },
+    en: {
+      title: ".soccer vs .football: The American Word or The World's Word",
+      metaDescription:
+        ".soccer is what North America calls the game; .football is what the rest of the world calls it. Compare audience context, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is audience language: one sport, two suffixes, each owning a linguistic world. .soccer is the North American word — US and Canadian youth academies and soccer schools, amateur leagues, fan content sites on name.soccer: parents search city + youth soccer to find programs, and soccer is unambiguous in American English precisely because football there means the gridiron game. .football is the world's word — Europe, South America, Asia and Africa all call the sport football, so clubs and supporter groups, youth camps and player agencies, fixtures and analytics sites on name.football read more natural to an international audience. Pricing is identical: both run on Identity Digital at about $11 to register and $21/yr to renew — the mild tier, painless to hold, so budget decides nothing and the audience decides everything. The test: the users are in North America — US/Canada youth programs, community leagues, parent-facing academies → .soccer lands without ambiguity; the audience is international or European — club supporter groups, global football products, international fixtures content → .football speaks the world's language. Two cautions: cross-market projects can register both, put the primary site on the main audience's word and 301 the other; and club crests and competition names carry trademark weight, so fan sites should state their unofficial status and clear licensing first. Naming: city + .soccer (catching North American class searches) versus club or league + .football (the international fan and news standard) are each side's on-target patterns.",
+      pickA: ["US & Canadian youth academies", "North American amateur leagues", "Parent-facing training programs", "American-English fan content"],
+      pickB: ["International club & supporter sites", "Europe-facing football products", "Fixtures & analytics sites", "Global youth camps & agencies"],
+    },
+  },
+  "hockey-vs-team": {
+    slug: "hockey-vs-team",
+    a: "hockey",
+    b: "team",
+    zh: {
+      title: ".hockey 和 .team 怎么选：冰球专营与队伍通用的分工",
+      metaDescription: ".hockey 把冰球项目写进域名，.team 是任何队伍的通用后缀。对比两者的语义锐度、价格与适用场景差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在锐度：.hockey 更锐——冰球俱乐部与青训营、冰场与训练设施、球杆护具装备电商、联赛资讯与球迷社区用 name.hockey，「打冰球来这儿」从地址就说清，家长搜「城市 + 冰球培训」找俱乐部，「俱乐部名 + .hockey」比通用后缀更像正经冰球机构，装备电商还能把品类留给后缀、域名主体留给品牌；.team 更宽——任何项目的运动队、公司战队、电竞队、志愿者团队都装得下，「我们是一支队伍」的气质从域名立住，跨项目的体育俱乐部用它不违和。价格结构不同：.hockey 注册约 $8、续费约 $48/年——首年低价、续费中高档，按续费核算才稳；.team 注册约 $5、续费约 $29/年——温和档，长持成本约为 .hockey 的六成。判断标准：生意就是冰球——俱乐部、冰场、装备、联赛 → .hockey 六个字母把赛道说完，垂直归属感通用后缀给不了；主体是「队伍」而项目可能不止一个——综合体育俱乐部、公司球队、电竞战队 → .team 不绑项目，扩什么项目都成立，续费也更省。两个注意：hockey 在英联邦部分市场默认指曲棍球，面向这些市场的页面要说清冰球还是曲棍球；青训获客靠本地搜索与家长转介绍，域名的角色是报名与冰场档期的稳定入口。命名上「城市/俱乐部名 + .hockey」（直接接住找俱乐部搜索）与「队名 + .team」（任何队伍的标准款）各是两边最点题的模式。",
+      pickA: ["冰球俱乐部与青训营", "冰场与训练设施", "球杆护具装备电商", "联赛资讯与球迷社区"],
+      pickB: ["跨项目的综合运动队", "公司球队与电竞战队", "志愿者与项目团队", "在意长持续费成本"],
+    },
+    en: {
+      title: ".hockey vs .team: The Rink Vertical or The Any-Squad Banner",
+      metaDescription:
+        ".hockey writes the sport into the address; .team is the general banner of any squad. Compare semantic sharpness, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is sharpness. .hockey is sharper — hockey clubs and youth programs, rinks and training facilities, stick and gear stores, league news and fan communities on name.hockey say the hockey happens here in the domain itself: parents search city + youth hockey to find clubs, club name + .hockey reads like a proper hockey organization where a generic suffix wouldn't, and gear stores get the category from the suffix while keeping the name for the brand. .team is wider — any sport's squad, corporate teams, esports rosters, volunteer crews all fit, projecting we are a team from the address, and a multi-sport club never outgrows it. The pricing structures differ: .hockey about $8 to register jumping to about $48/yr — cheap in, mid-to-high to hold, so budget on the renewal; .team about $5 to register and $29/yr to renew — the mild tier, roughly sixty percent of .hockey's holding cost. The test: the business is hockey itself — clubs, rinks, gear, leagues → .hockey says the lane in six letters with a vertical belonging no generic suffix can match; the subject is the squad and the sport may vary — multi-sport clubs, corporate teams, esports rosters → .team binds you to no discipline and costs less to keep. Two cautions: in parts of the Commonwealth hockey defaults to field hockey, so pages facing those markets should say which game; and youth programs win families through local search and referrals, so the domain's job is the stable enrollment and ice-time entrance. Naming: city or club + .hockey (catching club searches directly) versus squad name + .team (the any-team standard) are each side's on-target patterns.",
+      pickA: ["Hockey clubs & youth programs", "Rinks & training facilities", "Stick & gear stores", "League news & fan communities"],
+      pickB: ["Multi-sport squads & clubs", "Corporate & esports teams", "Volunteer & project crews", "Renewal-cost-conscious holds"],
+    },
+  },
+  "surf-vs-fun": {
+    slug: "surf-vs-fun",
+    a: "surf",
+    b: "fun",
+    zh: {
+      title: ".surf 和 .fun 怎么选：浪点垂直与泛娱乐的分工",
+      metaDescription: ".surf 把冲浪生活方式写进域名，.fun 是一切好玩事物的通用后缀。对比两者的语义锐度、价格与适用场景差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在锐度：.surf 是浪点词——冲浪学校与教练、冲浪营地与海边民宿、浪板装备电商、浪况预报与冲浪内容站用 name.surf，「下水来这儿」从地址就说清，浪人搜「海滩 + surf」找学校订营地，「地名 + .surf」比通用后缀更像本地浪店；surf 还有「上网冲浪」的双关义，浏览器工具与网页产品也能借它玩出彩。.fun 是气质词——桌游吧、密室逃脱、亲子乐园、活动策划、休闲小游戏用 name.fun，「好玩」两个字从域名立住，什么娱乐形态都装得下。价格都亲民：.surf 注册约 $2、续费约 $26/年；.fun 首年常见白菜价、续费略高但差距不大——两边长持都无压力，预算不构成决策因素。判断标准：生意围着海浪转——冲浪教学、营地民宿、装备、预报工具 → .surf 四个字母把生活方式说完，垂直归属感 .fun 给不了；卖的是「好玩」本身——线下娱乐场馆、亲子活动、休闲游戏 → .fun 的泛娱乐气质更点题，跨形态扩展也不违和。两个注意：两者首年低价都吸引过垃圾站，个别平台对超低价后缀审查稍严，正经做站内容质量要跟上；.fun 与严肃行业相斥，金融、医疗等业务别用。命名上「海滩/地名 + .surf」（直接接住找学校搜索）与「品牌词 + .fun」（泛娱乐标准款）各是两边最点题的模式。",
+      pickA: ["冲浪学校与教练", "冲浪营地与海边民宿", "浪板装备电商与预报工具", "网页产品的「冲浪」双关"],
+      pickB: ["桌游吧与密室逃脱等线下娱乐", "亲子乐园与活动策划", "休闲小游戏与趣味产品", "跨形态的泛娱乐品牌"],
+    },
+    en: {
+      title: ".surf vs .fun: The Break Vertical or The Playground Banner",
+      metaDescription:
+        ".surf writes the surf lifestyle into the address; .fun is the general banner of everything playful. Compare semantic sharpness, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is sharpness. .surf is the break word — surf schools and instructors, surf camps and beach stays, board and gear stores, forecast and content sites on name.surf say paddle out here in the domain itself: surfers search beach + surf for schools and camps, and place name + .surf reads like the local surf shop where a generic suffix wouldn't; surf also carries the browse-the-web double meaning, a bonus for browser tools and web products. .fun is the mood word — board-game cafés, escape rooms, family parks, event planners, casual games on name.fun put playful in the address, and any form of entertainment fits. Both price friendly: .surf about $2 to register and $26/yr to renew; .fun commonly a bargain first year with a slightly higher but comparable renewal — both painless to hold, so budget decides nothing. The test: the business orbits the wave — surf lessons, camps and stays, gear, forecast tools → .surf says the lifestyle in four letters with a vertical belonging .fun can't give; the product is fun itself — entertainment venues, family activities, casual games → .fun's playful register aims truer and stretches across formats. Two cautions: both cheap first years have attracted spam sites before, so some platforms eye bargain suffixes a bit harder — serious sites need content quality to carry trust; and .fun repels serious industries — keep finance and healthcare off it. Naming: beach or place + .surf (catching school searches directly) versus brand word + .fun (the general entertainment standard) are each side's on-target patterns.",
+      pickA: ["Surf schools & instructors", "Surf camps & beach stays", "Gear stores & forecast tools", "Web products playing the surf pun"],
+      pickB: ["Escape rooms & entertainment venues", "Family parks & event planners", "Casual games & playful products", "Cross-format entertainment brands"],
+    },
+  },
+  "golf-vs-travel": {
+    slug: "golf-vs-travel",
+    a: "golf",
+    b: "travel",
+    zh: {
+      title: ".golf 和 .travel 怎么选：球场生意与行程生意的分工",
+      metaDescription: ".golf 把高尔夫行业写进域名，.travel 是旅业机构的行业后缀。对比两者的行业指向、价格与适用场景差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在生意主体：.golf 是球场词——高尔夫球场与练习场、教练与培训、球具装备电商、订场与差点工具用 name.golf，「打球来这儿」从地址就说清，卖的是这一次下场；.travel 是行程词——高尔夫旅游线路、海外打球行程定制、球场度假村的旅业门面用 name.travel，卖的是从机票酒店到球位的整段行程，rgnames 运营的 .travel 历史上曾要求旅业资质、行业身份感更强。高尔夫旅游正好横跨两边：主体是球场与教学选 .golf，主体是行程打包与代订选 .travel。价格差异明显：.golf 注册约 $5、续费约 $52/年——首年低价、续费中高档；.travel 注册约 $16、续费约 $119/年——旅业机构门面价，对个人站偏贵。判断标准：收入来自球场本身——果岭费、教学费、装备销售 → .golf 品类更锐，球友搜「城市 + golf」也直达；收入来自行程差价与服务费——线路定制、团期代订、球场度假打包 → .travel 的旅业身份更点题，客户订整段行程时更信任。两个注意：.travel 续费约 ¥857/年，预算按年费核算清楚；两边获客都重本地搜索与转介绍，域名的角色是订场/订团的稳定入口。命名上「城市/场地名 + .golf」（接住订场搜索）与「目的地 + golf + .travel」式组合（高尔夫旅游标准款）各是两边最点题的模式。",
+      pickA: ["高尔夫球场与练习场", "教练与青少年培训", "球具装备电商", "订场与差点管理工具"],
+      pickB: ["高尔夫旅游线路定制", "海外打球行程与团期代订", "球场度假村旅业门面", "整段行程打包的旅业生意"],
+    },
+    en: {
+      title: ".golf vs .travel: The Course Business or The Itinerary Business",
+      metaDescription:
+        ".golf writes the golf trade into the address; .travel is the travel industry's suffix. Compare industry aim, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is what the business sells. .golf is the course word — courses and driving ranges, coaches and academies, gear stores, tee-time and handicap tools on name.golf say the golf happens here, selling this round today. .travel is the itinerary word — golf tour operators, overseas golf-trip planners, resort travel desks on name.travel sell the whole journey from flights and hotels to tee times, and .travel historically required travel-industry credentials, giving it a stronger institutional identity. Golf tourism straddles both: pick .golf when the subject is the course and the teaching, .travel when the subject is the packaged trip. Pricing sits tiers apart: .golf about $5 to register and $52/yr to renew — cheap in, mid-to-high to hold; .travel about $16 and $119/yr — a travel-trade storefront price, steep for personal sites. The test: revenue comes from the course itself — green fees, lessons, gear → .golf's category is sharper and city + golf searches land directly; revenue comes from itinerary margins and service fees — custom tours, group bookings, golf-resort packages → .travel's industry identity aims truer and travelers booking a full trip trust it more. Two cautions: .travel's $119/yr means budgeting on the annual fee; and both trades win customers through local search and referrals, so the domain's job is the stable booking entrance. Naming: city or venue + .golf (catching tee-time searches) versus destination + golf + .travel compounds (the golf-tour standard) are each side's on-target patterns.",
+      pickA: ["Courses & driving ranges", "Coaches & junior academies", "Golf gear stores", "Tee-time & handicap tools"],
+      pickB: ["Golf tour operators", "Overseas golf-trip planners", "Resort travel desks", "Full-itinerary package businesses"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

@@ -219,6 +219,12 @@ export const COMPARE_SLUGS = [
   "dance-vs-studio",
   "guide-vs-tips",
   "reviews-vs-blog",
+  "golf-vs-club",
+  "tennis-vs-coach",
+  "soccer-vs-football",
+  "hockey-vs-team",
+  "surf-vs-fun",
+  "golf-vs-travel",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
