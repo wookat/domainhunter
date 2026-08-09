@@ -174,4 +174,10 @@ export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized 
   { slug: "construction", label: { zh: "建筑施工", en: "Construction & contracting" }, oneLiner: { zh: "建筑施工与工程承包命名指南：基石意象、履约承诺、匠作人格等 5 种思路。", en: "Construction and contracting naming guide: bedrock imagery." } },
   { slug: "appliancerepair", label: { zh: "家电维修", en: "Appliance repair" }, oneLiner: { zh: "家电维修品牌命名指南：师傅人格、妙手承诺、正规军气质等 5 种思路。", en: "Appliance repair naming guide: master-craftsman personas." } },
   { slug: "equipmentrental", label: { zh: "设备租赁", en: "Equipment rental" }, oneLiner: { zh: "设备租赁与机械租赁命名指南：力量意象、随取承诺、联合规模感等 5 种思路。", en: "Equipment rental naming guide: power imagery." } },
+  { slug: "hotel", label: { zh: "酒店旅宿", en: "Hotels & lodging" }, oneLiner: { zh: "酒店与旅宿品牌命名指南：栖居意象、在地叙事、服务承诺等 5 种思路。", en: "Hotel and lodging naming guide: dwelling imagery." } },
+  { slug: "karaoke", label: { zh: "量贩KTV", en: "Karaoke lounges" }, oneLiner: { zh: "量贩 KTV 与唱歌品牌命名指南：声音意象、聚会情绪、青春记忆等 5 种思路。", en: "Karaoke lounge naming guide: sound imagery, party moods and youth nostalgia." } },
+  { slug: "bubbletea", label: { zh: "奶茶茶饮", en: "Bubble tea shops" }, oneLiner: { zh: "奶茶与新茶饮品牌命名指南：茶意象、情绪治愈、国风叙事等 5 种思路。", en: "Bubble tea naming guide: tea imagery, mood-lift promises and heritage storytelling." } },
+  { slug: "bbq", label: { zh: "烧烤夜宵", en: "BBQ & late-night grills" }, oneLiner: { zh: "烧烤与夜宵品牌命名指南：烟火意象、江湖人格、地域招牌等 5 种思路。", en: "BBQ and late-night grill naming guide: ember imagery." } },
+  { slug: "pharmacy", label: { zh: "连锁药店", en: "Pharmacies" }, oneLiner: { zh: "连锁药店与药房品牌命名指南：仁心意象、安心承诺、老字号语感等 5 种思路。", en: "Pharmacy naming guide: benevolence imagery." } },
+  { slug: "clinic", label: { zh: "诊所门诊", en: "Clinics & outpatient care" }, oneLiner: { zh: "诊所与门诊品牌命名指南：安心意象、专业直给、家庭医生温度等 5 种思路。", en: "Clinic naming guide: reassurance imagery." } },
 ];

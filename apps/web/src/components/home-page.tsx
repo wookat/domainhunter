@@ -1191,6 +1191,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个设备租赁与机械租赁品牌，寓意「用的时候一定有、调得动、结算清」；气质要有钢铁力量感又结算正规、喷在挖机侧面隔着工地可认、电话里报得清楚；场景是「城市+设备租赁」的搜索、总包供应商名录和成本经理的比价表里都立得住。",
     en: "An equipment and machinery rental brand. The name should feel like it's there when you need it, dispatched fast, billed clean; the vibe carries steel's power with corporate billing legitimacy, legible across the site when spray-painted on an excavator flank, spellable over the phone; it must stand in city-plus-equipment-rental searches, GC supplier registries, and the cost manager's comparison sheet.",
   },
+  {
+    slug: "hotel",
+    labelZh: "酒店旅宿",
+    labelEn: "Hotels & lodging",
+    zh: "一个酒店与旅宿品牌，寓意「一晚有人情味的栖居」；气质要松弛体面、贵气与房价段位匹配、两三个字好念好搜；场景是 OTA 搜索列表的三秒扫视、「城市+酒店」的搜索和客人「我住在 XX」的转述里都立得住，夜里灯箱亮起隔着马路可认。",
+    en: "A hotel and lodging brand. The name should feel like one night of humane dwelling; the vibe is composed ease with luxury calibrated to the room rate, two or three syllables easy to say and search; it must stand in the three-second OTA scan, city-plus-hotel searches, and the guest's retelling of \"I'm staying at X\", legible across the street when the lightbox glows at night.",
+  },
+  {
+    slug: "karaoke",
+    labelZh: "量贩KTV",
+    labelEn: "Karaoke lounges",
+    zh: "一个量贩 KTV 与唱歌品牌，寓意「今晚的情绪出口就在这里」；气质要明亮干净无暧昧、两个字喊得响、群聊打字不纠错；场景是「今晚去哪唱」的群聊投票、商场中庭的巨型招牌和团购平台的套餐列表里都第一个被想起。",
+    en: "A family karaoke brand. The name should feel like tonight's emotional outlet is right here; the vibe is bright, clean and unambiguous, two syllables that shout well and type without typos; it must be first nominated in the where-are-we-singing group vote, on the mall-atrium mega sign, and in group-buy package lists.",
+  },
+  {
+    slug: "bubbletea",
+    labelZh: "奶茶茶饮",
+    labelEn: "Bubble tea shops",
+    zh: "一个奶茶与新茶饮品牌，寓意「三分钟的好心情」；气质要甜而不腻有记忆钩子、口播不拗口、杯身 logo 隔着奶盖可认；场景是点单屏的三秒扫视、外卖 App 的搜索框和举杯自拍的种草笔记里都立得住，拼音出海也好念。",
+    en: "A bubble tea brand. The name should feel like three minutes of good mood; the vibe is sweet with a memory hook, smooth to call out at the counter, the cup logo legible over the foam; it must stand in the menu-screen scan, the delivery search box, and raised-cup seeding posts — with a romanization that travels overseas.",
+  },
+  {
+    slug: "bbq",
+    labelZh: "烧烤夜宵",
+    labelEn: "BBQ & late-night grills",
+    zh: "一个烧烤与夜宵品牌，寓意「深夜的炭火与聚集地」；气质要有烟火气与江湖气、两三个字喊得响、霓虹灯牌在炭烟里认得出；场景是「走，撸串去」的召集令、外卖 App 的深夜搜索和「城市+烧烤」的点评夜宵榜里都立得住。",
+    en: "A BBQ and late-night grill brand. The name should feel like midnight charcoal and the gathering place; the vibe carries hearth-smoke and street swagger, two or three syllables that shout well, the neon board legible through charcoal haze; it must stand in the let's-get-skewers rally cry, late-night delivery searches, and city-plus-BBQ rankings.",
+  },
+  {
+    slug: "pharmacy",
+    labelZh: "连锁药店",
+    labelEn: "Pharmacies",
+    zh: "一个连锁药店与药房品牌，寓意「深夜亮灯的安心」；气质要正规亲民有祝愿感、长辈念得顺、绿十字旁一眼可认、不暗示疗效；场景是「附近药店」的地图搜索、医保定点名录和外卖送药的搜索框里都立得住。",
+    en: "A pharmacy chain brand. The name should feel like a light on at midnight, reassurance at hand; the vibe is legitimate and approachable with a blessing register, pronounceable by elders, recognizable beside the green cross, never implying efficacy; it must stand in nearby-pharmacy map searches, insurance-network directories, and medicine-delivery search boxes.",
+  },
+  {
+    slug: "clinic",
+    labelZh: "诊所门诊",
+    labelEn: "Clinics & outpatient care",
+    zh: "一个诊所与门诊品牌，寓意「专业且安心的邻居医生」；气质要专业正规又有家庭医生温度、两三个字念得顺、不蹭名院不暗示疗效；场景是妈妈群的「哪家儿科靠谱」转述、「城市+科室」的搜索和医保定点铭牌上都立得住。",
+    en: "A clinic and outpatient brand. The name should feel like the neighborhood doctor — professional and reassuring; the vibe balances credentialed legitimacy with family-doctor warmth, two or three syllables smooth to say, never borrowing famous hospital names or implying efficacy; it must stand in which-pediatrics-is-reliable retellings, city-plus-specialty searches, and on the insurance-network plaque.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
