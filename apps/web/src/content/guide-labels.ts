@@ -227,4 +227,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "icecream", zh: "冰淇淋品牌", en: "Ice cream brands" },
   { slug: "hostel", zh: "青年旅舍", en: "Hostels" },
   { slug: "bowling", zh: "保龄球馆", en: "Bowling alleys" },
+  { slug: "tea", zh: "茶叶品牌", en: "Tea brands" },
+  { slug: "hotspring", zh: "温泉度假", en: "Hot spring resorts" },
+  { slug: "trampoline", zh: "蹦床公园", en: "Trampoline parks" },
+  { slug: "funeral", zh: "殡葬服务", en: "Funeral & memorial services" },
+  { slug: "securityguard", zh: "安保服务", en: "Security services" },
+  { slug: "ipagency", zh: "知识产权代理", en: "IP & patent services" },
 ];

@@ -1641,6 +1641,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个保龄球馆与聚会娱乐品牌，寓意「全中一刻的脆响与满堂欢呼」；气质要有命中感与复古潮流味、托得住生日会团建与约会、绝不像过时电玩城；场景是商场导览屏、团建平台列表和「周五去 XX 打一局」的群消息里都立得住。",
     en: "A bowling alley and social-entertainment brand. The name should evoke the crack of a strike and the cheer that follows; the vibe is hit-energized and retro-cool, holding birthdays, team outings and dates, never a dated arcade; it must hold up on mall directories, team-outing platforms, and the \"bowling at X this Friday?\" group chat.",
   },
+  {
+    slug: "tea",
+    labelZh: "茶叶品牌",
+    labelEn: "Tea brand",
+    zh: "一个茶叶品牌，寓意「一方山场的滋味落进一盏日常」；气质要有山水感与人文分量、拿得住礼盒也接得住办公室的一杯日饮、绝不像景区纪念品；场景是礼盒柜台、电商详情页和茶桌上「上次喝的 XX 不错」的复述里都立得住。",
+    en: "A tea brand. The name should evoke one terroir settling into an everyday cup; the vibe carries landscape and humanist weight, worthy of the gift box yet at home on an office desk, never a souvenir stall; it must hold up on gift counters, product detail pages, and the tea-table's \"that X we drank was good\".",
+  },
+  {
+    slug: "hotspring",
+    labelZh: "温泉度假",
+    labelEn: "Hot spring resort",
+    zh: "一个温泉度假与汤泉品牌，寓意「一池热汤卸下一周疲惫」；气质要有疗愈感与在地风物、经得起预订平台图墙、绝不像洗浴中心；场景是预订列表、周末攻略和「周末去 XX 泡一天」的犒赏计划里都立得住。",
+    en: "A hot spring resort and bathhouse brand. The name should evoke a week's fatigue dissolving in one hot pool; the vibe is healing and rooted in local terroir, worthy of booking-platform photo walls, never a bathhouse; it must hold up in booking listings, weekend guides, and the \"a day soaking at X\" reward plan.",
+  },
+  {
+    slug: "trampoline",
+    labelZh: "蹦床公园",
+    labelEn: "Trampoline park",
+    zh: "一个蹦床公园与运动乐园品牌，寓意「离地一瞬的失重快乐」；气质要能量满格又让家长安心、托得住生日会团建与亲子、绝不像过时电玩城；场景是点评榜单、亲子平台和「周末带娃去 XX」的家庭计划里都立得住。",
+    en: "A trampoline park and adventure venue brand. The name should evoke the weightless joy of leaving the ground; the vibe is fully charged yet parent-reassuring, holding birthdays, team outings and family visits, never a dated arcade; it must hold up on review rankings, family platforms, and the \"taking the kids to X\" weekend plan.",
+  },
+  {
+    slug: "funeral",
+    labelZh: "殡葬服务",
+    labelEn: "Funeral services",
+    zh: "一个殡葬服务与生命礼仪品牌，寓意「让告别体面，让思念有处安放」；气质要庄重有温度、可托付而不冰冷、绝不轻佻；场景是深夜搜索框、医院社工的转介绍和陵园门楣的石刻上都立得住。",
+    en: "A funeral and memorial services brand. The name should promise a dignified farewell and a resting place for remembrance; the vibe is solemn yet warm, trustworthy and never cold or flippant; it must hold up in a late-night search box, in hospital referrals, and carved on the memorial-park gate.",
+  },
+  {
+    slug: "securityguard",
+    labelZh: "安保服务",
+    labelEn: "Security services",
+    zh: "一个安保服务公司品牌，寓意「出事之前的放心」；气质要可靠有纪律、威慑收进专业感、绝不像街头武馆；场景是投标文件封面、物业合同公章和岗亭制服臂章上都立得住。",
+    en: "A security services company brand. The name should promise peace of mind before anything happens; the vibe is reliable and disciplined, deterrence folded into professionalism, never a street dojo; it must hold up on tender covers, contract seals, and the uniform patch at the gatehouse.",
+  },
+  {
+    slug: "ipagency",
+    labelZh: "知识产权代理",
+    labelEn: "IP & patent services",
+    zh: "一个知识产权代理与专利商标服务品牌，寓意「把创新守成资产」；气质要精密专业有传承感、经得起公文抬头与英文官网、绝不堆砌大词；场景是投标名单、代理人名录和「我们的专利是 XX 代理的」的行业口碑里都立得住。",
+    en: "An IP and patent services brand. The name should promise innovation guarded into assets; the vibe is precise, professional and heritage-minded, worthy of formal letterheads and the English site, never stacked with grand words; it must hold up on tender shortlists, practitioner directories, and the \"our patents are with X\" word of mouth.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
