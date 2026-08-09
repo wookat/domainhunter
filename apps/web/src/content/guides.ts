@@ -9079,6 +9079,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  noodle: {
+    slug: "noodle",
+    tlds: [
+      { tld: "com", zh: "连锁化与外卖平台入驻的信任底线，小吃品牌做大的默认选择", en: "The trust baseline for chains and delivery platforms — the default once a noodle brand scales" },
+      { tld: "kitchen", zh: "「厨房」后缀，现煮现做的锅气直给", en: "The kitchen suffix — the plainest statement of cooked-to-order fire" },
+      { tld: "cafe", zh: "「小馆」气质后缀，社区小吃店的亲切感", en: "The café-style suffix — neighborhood warmth for a small eatery" },
+    ],
+    zh: {
+      label: "粉面小吃",
+      title: "面馆与粉面小吃品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "面馆与粉面小吃品牌命名指南：一碗的画面感、地域正宗、市井烟火等 5 种思路，兰州拉面/和府捞面/太二等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的粉面品牌域名。",
+      intro:
+        "粉面小吃的名字要一碗端上来就冒热气：这是一个复购率极高、决策极快的品类——顾客在写字楼电梯里或外卖列表前只给你两秒钟，名字要在这两秒里让人「看见那碗面」。第一素材库是一碗的画面感：汤、辣、香、劲道、现拉现煮——粉面是味觉记忆的生意，名字里有画面，顾客点单前就已经开始分泌口水；「捞面」「拌粉」「牛骨汤」这些工艺与食材词自带镜头感。第二个抓手是地域正宗：兰州拉面、柳州螺蛳粉、武汉热干面——粉面是地域文化的代言人，产地词是最省钱的信任状，但要注意公共地名人人可用，地域词之上必须再叠一层自己的品牌记忆点。第三个抓手是市井烟火与反差人设：太二酸菜鱼证明了「有梗的人设」能让一碗家常菜排队两小时——小吃品类客单价低、话题传播就是最便宜的获客，名字可以有脾气、有故事、有一句能被转述的slogan。要注意档次分层：街边夫妻店拼亲切与实在，商场连锁拼品牌感与出品稳定，新中式面馆（和府捞面式）拼环境与客单价升级——三种业态三种名字气质，想做连锁的名字从第一天就要经得起加盟手册与商标注册的审视。渠道上，粉面活在外卖平台的缩略图、商场楼层导视和「楼下那家 XX」的日常口碑里，名字要两三个字喊得顺口、菜单上和招牌上都一眼记住。",
+      namingIdeas: [
+        "一碗的画面感：汤、辣、劲道、现拉现煮——工艺与食材词自带镜头感，点单前先让人流口水",
+        "地域正宗：产地词是最省钱的信任状——但公共地名人人可用，之上必须再叠自己的记忆点",
+        "市井人设：有脾气、有故事、有一句能被转述的 slogan——小吃客单价低，话题传播就是最便宜的获客",
+        "业态分层：夫妻店拼亲切、商场连锁拼稳定、新中式拼升级——想做连锁的名字第一天就要经得起商标审视",
+        "外卖缩略图测试：两三个字、外卖列表与楼层导视里一眼认出——好念好记胜过雅致拗口",
+      ],
+      cases: [
+        { name: "兰州拉面", takeaway: "产地+工艺的教科书结构：「兰州」给正宗、「拉面」给画面——公共品类名的信任红利人人可分，也提醒后来者必须在此之上再造自有品牌" },
+        { name: "和府捞面", takeaway: "「和府」的书房气+「捞面」的工艺词：把街边面馆升级成新中式书房场景——名字先把客单价的天花板抬上去，业态升级从命名开始" },
+        { name: "太二", takeaway: "自嘲式人设名：「太二」的反差萌把一碗酸菜鱼做成社交话题——低客单价品类靠话题获客，名字本身就是传播素材" },
+        { name: "五爷拌面", takeaway: "「五爷」的市井江湖人设+品类词直给：人物 IP 让加盟连锁有了统一的故事壳——拌面的「拌」字还把差异化工艺写进了名字" },
+        { name: "Marugame Udon", takeaway: "丸龟制面：产地「丸龟」+「制面」的现做工艺——日式粉面出海的信任结构与兰州拉面同构，明档现拉的画面感全球通用" },
+      ],
+      pitfalls: [
+        "只有地域没有品牌：公共地名人人可用——「XX 拉面」满街都是时，顾客记住的是品类不是你",
+        "雅致但拗口：四五个字的文言名在外卖列表里被两个字的对手淹没——粉面是快决策品类，好念压倒好听",
+        "锁死单一品类：名字绑死「米线」二字，加面、加饭、加小吃时全是阻力——留一层品类余地",
+        "忽略商标检索：小吃品类商标抢注重灾区——夫妻店做成连锁那天才发现名字用不了，改名等于清零",
+      ],
+    },
+    en: {
+      label: "Noodle shops",
+      title: "How to Name a Noodle Shop or Street Food Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Noodle shop naming guide: bowl imagery, regional authenticity, street-life persona, breakdowns of Lanzhou Lamian/Marugame/Ippudo, recommended TLDs and pitfalls — then hunt an available noodle brand domain with AI.",
+      intro:
+        "A noodle shop name should arrive steaming: this is a high-repeat, split-second category — customers give you two seconds in an office-tower elevator or a delivery-app list, and the name must make them see the bowl in those two seconds. The first material bin is bowl imagery: broth, heat, chew, hand-pulled, cooked to order — noodles are a taste-memory business, and a name with a picture in it starts the mouth watering before the order is placed; craft and ingredient words like \"hand-pulled\", \"bone broth\" and \"dry-tossed\" carry their own camera angle. The second lever is regional authenticity: Lanzhou lamian, Hakata tonkotsu, Liuzhou luosifen — noodles are ambassadors of place, and an origin word is the cheapest credential there is; but public place names belong to everyone, so a brand memory hook must be stacked on top. The third is street-life persona: a name with attitude, a story, one line that gets retold — in a low-ticket category, talkability is the cheapest customer acquisition, and a bowl of comfort food can queue for hours on the strength of a persona. Mind the format split: the mom-and-pop counter competes on warmth and value, the mall chain competes on brand polish and consistency, the new-wave noodle house competes on ambience and a higher ticket — three formats, three registers, and a name with chain ambitions must survive the franchise brochure and the trademark register from day one. On channels: noodles live in delivery-app thumbnails, mall floor directories and \"that place downstairs\" word of mouth — two or three syllables, instantly legible on a menu board, beats elegant but unpronounceable every time.",
+      namingIdeas: [
+        "Bowl imagery: broth, heat, chew, hand-pulled — craft and ingredient words carry their own camera angle; make mouths water before the order",
+        "Regional authenticity: an origin word is the cheapest credential — but public place names belong to everyone; stack your own hook on top",
+        "Street persona: attitude, a story, one retellable line — in a low-ticket category, talkability is the cheapest acquisition channel",
+        "Format split: counters compete on warmth, mall chains on consistency, new-wave houses on ambience — a chain-bound name must survive the trademark register from day one",
+        "The thumbnail test: two or three syllables, instantly legible in delivery lists and floor directories — easy to say beats elegant every time",
+      ],
+      cases: [
+        { name: "Lanzhou Lamian", takeaway: "The textbook origin + craft structure: \"Lanzhou\" grants authenticity, \"lamian\" grants the picture — a public category name whose trust dividend everyone shares, which is exactly why a private brand must be built on top" },
+        { name: "Marugame Udon", takeaway: "Origin \"Marugame\" + the craft of making noodles in open view: the same trust structure as Lanzhou lamian, exported — hand-pulled theater is a universal language" },
+        { name: "Ippudo", takeaway: "\"One wind hall\": a poetic coinage that lifted ramen from street stall to global brand — proof that a crafted name can raise the ticket ceiling of a humble bowl" },
+        { name: "Xi'an Famous Foods", takeaway: "Origin + a cheerfully literal boast: New York's hand-ripped noodle cult — \"famous\" said with a straight face became the persona, and the place name did the authenticating" },
+        { name: "Wagamama", takeaway: "Japanese for \"willful\": attitude as brand — a persona name with a story that turned canteen-style noodles into a global casual chain; the retellable meaning is the marketing" },
+      ],
+      pitfalls: [
+        "Origin without brand: public place names belong to everyone — when every corner has an \"X Lamian\", customers remember the category, not you",
+        "Elegant but unpronounceable: a four-word literary name drowns next to a two-syllable rival in a delivery list — noodles are a split-second decision; sayable beats poetic",
+        "Welding to one dish: a name locked to \"rice noodles\" drags at every menu expansion — leave one layer of category headroom",
+        "Skipping the trademark search: street food is squatter territory — discovering the name is taken on the day you franchise means starting from zero",
+      ],
+    },
+  },
+  grocery: {
+    slug: "grocery",
+    tlds: [
+      { tld: "com", zh: "社区生鲜连锁与线上下单的信任底线，加盟扩张的默认选择", en: "The trust baseline for fresh-grocery chains and online ordering — the default for franchise expansion" },
+      { tld: "shop", zh: "「店铺」后缀，零售业态零解释成本", en: "The shop suffix — zero explanation for a retail format" },
+      { tld: "farm", zh: "「农场」后缀，产地直采的新鲜叙事直给", en: "The farm suffix — the direct-from-source freshness story, stated plainly" },
+    ],
+    zh: {
+      label: "社区生鲜",
+      title: "社区生鲜店与生鲜品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "社区生鲜店命名指南：新鲜承诺、邻里亲切、产地直采等 5 种思路，钱大妈/盒马/百果园等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的生鲜品牌域名。",
+      intro:
+        "生鲜店的名字要带着水汽和泥土味：这是一个把「新鲜」当命根子的品类——顾客每天都来、每次都在用眼睛和手检验你的承诺，名字要在门头上就把「今天的菜是今天的」说清楚。第一素材库是新鲜承诺：鲜、日日、现摘、直达——钱大妈一句「不卖隔夜肉」把新鲜写成了制度，名字与口号一体化是生鲜命名的最高效率打法；新鲜不是形容词而是承诺，名字里的每个字都要经得起顾客拿着蔫菜叶来对质。第二个抓手是邻里亲切：生鲜店是社区的高频触点——「大妈」「阿姨」「老张家」这类人物称谓自带熟人社会的信任感，买菜是有温度的日常，名字太洋气反而拒人千里。第三个抓手是产地直采：从「基地直供」到「本地农场」，供应链叙事正在成为生鲜差异化的核心——产地词、农场词给出「中间没有二道贩子」的价格与品质双重暗示。要注意业态分层：社区夫妻店拼熟客与实在，连锁品牌（钱大妈式）拼制度化的新鲜承诺，新零售（盒马式）拼「生鲜+餐饮+即配」的复合体验——盒马用一只河马的 IP 把生鲜超市做成了亲子打卡点，证明生鲜命名也可以走 IP 化路线。客群上，买菜主力是价格敏感的中老年与时间敏感的年轻家庭——名字要让阿姨念得顺口、让年轻人在即时零售 App 里搜得到。渠道上，生鲜活在门头灯箱、社区团购群和外卖平台的店铺列表里，名字要两三个字、笔画简单、灯箱上隔着一条街也认得出。",
+      namingIdeas: [
+        "新鲜承诺：鲜、日日、现摘、不卖隔夜——名字与口号一体化，新鲜是承诺不是形容词",
+        "邻里人物：大妈、阿姨、老 X 家——人物称谓自带熟人社会的信任感，买菜是有温度的日常",
+        "产地直采：基地、农场、直达——供应链叙事给出「没有二道贩子」的价格与品质双重暗示",
+        "IP 化路线：一只动物、一个人设——新零售把生鲜店做成打卡点，IP 名要配得上延展的周边与内容",
+        "灯箱测试：两三个字、笔画简单、隔街可认——阿姨念得顺口、年轻人在即时零售 App 里搜得到",
+      ],
+      cases: [
+        { name: "钱大妈", takeaway: "「大妈」的熟人称谓+「不卖隔夜肉」的制度化口号：名字与承诺一体，社区生鲜连锁化的教科书——人物名把冷冰冰的供应链翻译成了菜市场的人情味" },
+        { name: "盒马", takeaway: "「盒」（到家的箱）+「马」（速度）的合成 IP：一只河马把生鲜超市做成亲子打卡点——新零售复合业态用 IP 名甩开「XX 生鲜」的同质化" },
+        { name: "百果园", takeaway: "「百果」的丰盛+「园」的产地画面：品类聚焦（只做水果）写进名字——三个字说清卖什么、暗示新鲜从哪来，垂直生鲜的命名样板" },
+        { name: "叮咚买菜", takeaway: "「叮咚」的门铃拟声+「买菜」的品类直给：到家场景的声音记忆——拟声词把「送到家门口」的服务瞬间可听化，即配生鲜的场景命名" },
+        { name: "Whole Foods", takeaway: "「完整食物」的健康主张：把超市名变成生活方式宣言——名字先定价值观再定品类，高端生鲜溢价从命名开始" },
+      ],
+      pitfalls: [
+        "「XX 生鲜」的同质化：品类词裸奔满街撞名——顾客记住的是「生鲜」不是「XX」，差异化记忆点缺位",
+        "洋气过头：社区买菜是熟人生意——英文名、抽象名在阿姨的口碑网络里传不动，亲切感就是转化率",
+        "承诺兑现不了：名字里写了「日日鲜」就要天天做到——生鲜顾客每天验货，名不副实的反噬比无名更狠",
+        "锁死单一品类：名字绑死「水果」，加蔬菜、肉蛋、预制菜时全是阻力——社区店的生意边界是「餐桌」不是单品",
+      ],
+    },
+    en: {
+      label: "Fresh groceries",
+      title: "How to Name a Fresh Grocery or Neighborhood Market Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Fresh grocery naming guide: the freshness promise, neighborly warmth, farm-direct sourcing, breakdowns of Whole Foods/Trader Joe's/Freshippo, recommended TLDs and pitfalls — then hunt an available grocery brand domain with AI.",
+      intro:
+        "A fresh grocery name should carry dew and soil: this category lives and dies on \"fresh\" — customers come daily and audit your promise with their eyes and hands every time, so the name must declare \"today's produce is from today\" right on the fascia. The first material bin is the freshness promise: fresh, daily, just-picked, farm-direct — the strongest grocery names fuse name and slogan into one institution (\"we don't sell yesterday's meat\"), because in this category freshness is a covenant, not an adjective, and every word in the name must survive a customer holding up a wilted leaf. The second lever is neighborly warmth: the grocery store is the neighborhood's highest-frequency touchpoint — person-names and familiar honorifics carry the trust of a known face, and Trader Joe's proved a first name can turn a supermarket into a friend; a name too sleek pushes the daily shopper away. The third is farm-direct sourcing: from \"grower-direct\" to \"local farm\", the supply-chain story is becoming grocery's core differentiator — origin and farm words whisper the double promise of no middlemen: better price, better quality. Mind the format split: the corner mom-and-pop competes on regulars and value, the chain competes on an institutionalized freshness promise, and new retail (Freshippo-style) competes on the grocery-plus-dining-plus-delivery composite — Freshippo's hippo mascot turned a supermarket into a family destination, proof that grocery naming can take the IP route. The core shoppers are price-sensitive elders and time-poor young families — the name must roll off an auntie's tongue and surface in an instant-delivery app search. On channels: groceries live on fascia lightboxes, community group-buy chats and delivery-app listings — two or three simple syllables, recognizable from across the street.",
+      namingIdeas: [
+        "The freshness promise: fresh, daily, just-picked — fuse name and slogan into one covenant; freshness is a promise, not an adjective",
+        "Neighborly persons: a first name or familiar honorific — the trust of a known face; grocery shopping is a warm daily ritual",
+        "Farm-direct story: grower, farm, direct — the supply-chain narrative whispers no-middlemen price and quality at once",
+        "The IP route: one animal, one persona — new retail turns stores into destinations; an IP name must sustain merchandise and content",
+        "The fascia test: two or three simple syllables, legible across the street — sayable by an auntie, searchable in a delivery app",
+      ],
+      cases: [
+        { name: "Whole Foods", takeaway: "\"Whole\" as a health thesis: a supermarket name turned lifestyle manifesto — values first, category second; the premium-grocery markup begins at the name" },
+        { name: "Trader Joe's", takeaway: "A first name behind the counter: the trust of a known face at chain scale — proof that neighborly warmth, not sleekness, is grocery's conversion engine" },
+        { name: "Freshippo", takeaway: "Fresh + hippo: a mascot that turned a supermarket into a family destination — the IP route out of \"X Fresh\" sameness, with delivery-box speed built into the story" },
+        { name: "Sprouts", takeaway: "A single germinating word: freshness as image rather than claim — one syllable of green that outsells paragraphs of \"farm to table\" copy" },
+        { name: "FreshDirect", takeaway: "Promise + channel in two words: fresh, delivered, no middlemen — the supply-chain story compressed into a name; literal, and in groceries literal converts" },
+      ],
+      pitfalls: [
+        "\"X Fresh\" sameness: a naked category word collides on every corner — customers remember \"fresh\", not you; the memory hook is missing",
+        "Overshooting sleek: groceries are a familiar-faces business — an abstract or foreign name won't travel through the auntie word-of-mouth network; warmth is the conversion rate",
+        "A promise you can't keep: put \"daily fresh\" in the name and you must deliver it daily — grocery customers audit every visit, and a broken name-promise bites harder than no name",
+        "Welding to one aisle: a name locked to \"fruit\" drags at every expansion into vegetables, meat or ready meals — the neighborhood store's boundary is the dinner table, not a single SKU",
+      ],
+    },
+  },
+  tutoring: {
+    slug: "tutoring",
+    tlds: [
+      { tld: "com", zh: "家长决策与机构信任的底线，教培品牌的默认选择", en: "The trust baseline for parent decisions — the default for a tutoring brand" },
+      { tld: "academy", zh: "「学院」后缀，教学机构的身份直给", en: "The academy suffix — an institution's identity, stated plainly" },
+      { tld: "education", zh: "「教育」后缀，正规办学的严肃感", en: "The education suffix — the gravity of a legitimate school" },
+    ],
+    zh: {
+      label: "课外辅导",
+      title: "课外辅导与家教品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "课外辅导与家教品牌命名指南：提分承诺、师者人设、陪伴成长等 5 种思路，学而思/名师人设/Kumon 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的教培品牌域名。",
+      intro:
+        "辅导班的名字要让两代人同时点头：付钱的是焦虑的家长，上课的是被安排的孩子——名字要让家长觉得「靠谱、值」，让孩子不至于抗拒，这个双重受众结构是教培命名的第一约束。第一素材库是学业价值：思、学、优、进步——学而思把「学而不思则罔」的古训压缩成三个字，经典引文给名字装上文化底座，家长在「学而思」三个字里读出的是教育理念而不只是补习班；但价值词要克制，直接把「提分」「状元」写进名字既过不了监管也透支了信任。第二个抓手是师者人设：家教的本质是「跟对人」——「X 老师」的人物名在本地口碑市场里就是活招牌，名师工作室的命名逻辑是把个人信誉资产化；连锁化时人设要从真人升级为可复制的品牌角色。第三个抓手是陪伴成长：双减之后，素质教育、习惯养成、思维训练成为主叙事——名字从「提分」转向「成长」，从对抗焦虑转向长期主义，Kumon 用创始人姓氏承载「每天进步一点点」的方法论，方法名比结果名走得更远。要注意品类合规：教培是强监管行业，名字要经得起办学许可与广告法的双重审视——「保过」「第一」是红线，「学科」与「素质」的边界要拎清。客群上，小学家长要安心与习惯、初高中家长要效率与结果、艺考与成人客群要专业与陪跑——名字的气质要与主打学段匹配。渠道上，辅导班活在家长群的转介绍、校门口的招牌和大众点评的机构列表里，名字要正规可信、好念好转述，「XX 家孩子在哪补的」一句话里立得住。",
+      namingIdeas: [
+        "学业价值：思、学、优、进——经典引文给名字装文化底座，但「提分」「状元」是监管与信任的双重红线",
+        "师者人设：X 老师、名师工作室——把个人信誉资产化，连锁化时从真人升级为可复制的品牌角色",
+        "陪伴成长：习惯、思维、成长——双减后的主叙事从对抗焦虑转向长期主义，方法名比结果名走得更远",
+        "学段匹配：小学要安心、初高中要效率、艺考成人要专业——名字气质与主打学段对齐",
+        "家长群测试：正规可信、好念好转述——「XX 家孩子在哪补的」一句话里立得住，转介绍是教培最大渠道",
+      ],
+      cases: [
+        { name: "学而思", takeaway: "「学而不思则罔」的古训压缩：三个字装下教育理念——经典引文给培训班装上文化底座，家长读出的是理念不是补习，教培命名的天花板之作" },
+        { name: "新东方", takeaway: "「东方」的宏大意象+「新」的时代感：从留学英语到教育集团——名字不锁定学科给了三十年扩张空间，大格局命名的长期红利" },
+        { name: "Kumon", takeaway: "创始人公文公的姓氏：「每天进步一点点」的方法论以姓氏为载体全球连锁——方法名比结果名走得更远，个人信誉资产化的极致" },
+        { name: "猿辅导", takeaway: "「猿」的 IP 化+「辅导」的品类直给：一只猿猴让在线教育有了亲和的脸——动物 IP 降低孩子的抗拒感，双重受众的平衡样本" },
+        { name: "豌豆思维", takeaway: "「豌豆」的幼小亲切+「思维」的素质定位：小豆子长大的成长隐喻——双减后素质赛道命名的标准结构：亲切意象+能力词" },
+      ],
+      pitfalls: [
+        "结果词踩红线：「保过」「状元」「第一」过不了广告法——监管强行业的名字要按最严口径自审",
+        "焦虑营销入名：「抢跑」「碾压」式名字透支信任——家长群里的口碑经不起「贩卖焦虑」的指控",
+        "锁死单一学科：名字绑死「数学」，扩英语、扩素质时全是阻力——学段与学科都要留余地",
+        "只讨好家长不管孩子：孩子抗拒的名字家长也留不住——双重受众结构里，孩子的接受度是隐性转化率",
+      ],
+    },
+    en: {
+      label: "Tutoring & test prep",
+      title: "How to Name a Tutoring or Test Prep Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Tutoring brand naming guide: academic value, teacher persona, growth companionship, breakdowns of Kumon/Khan Academy/Mathnasium, recommended TLDs and pitfalls — then hunt an available tutoring domain with AI.",
+      intro:
+        "A tutoring name has to earn two nods at once: the anxious parent pays, the scheduled child attends — the name must read \"credible and worth it\" to the parent without triggering the child's resistance, and this dual-audience structure is the first constraint of education naming. The first material bin is academic value: think, learn, excel, progress — a classical allusion can give a name a cultural foundation, so parents read an educational philosophy rather than a cram school; but value words demand restraint, because writing \"guaranteed scores\" into a name fails both regulators and trust. The second lever is the teacher persona: tutoring is at bottom a follow-the-right-person business — \"Ms. X's Studio\" is a living signboard in the local word-of-mouth market, capitalizing personal reputation into a brand; when you chain up, the persona must graduate from a real person to a replicable character. The third is growth companionship: habits, thinking skills, long-termism — Kumon carries a whole \"a little progress every day\" methodology on its founder's surname, and a method name travels farther than a results name. Mind compliance: education is a heavily regulated category, and the name must survive licensing and advertising law — \"guaranteed pass\" and \"number one\" are red lines. Primary-school parents want reassurance and habits, secondary parents want efficiency and outcomes, arts and adult learners want expertise and a running partner — the name's register must match the flagship segment. On channels: tutoring lives in parent-group referrals, schoolgate signage and review-app listings — the name must be legitimate, easy to say and easy to retell, standing firm inside the one sentence that matters: \"where does their kid go?\"",
+      namingIdeas: [
+        "Academic value: think, learn, excel — a classical allusion gives cultural foundation, but \"guaranteed scores\" is a double red line of regulation and trust",
+        "Teacher persona: Ms. X's Studio — capitalize personal reputation; when chaining up, graduate the persona from a real person to a replicable character",
+        "Growth companionship: habits, thinking, method — the post-crackdown narrative moves from anxiety to long-termism; method names travel farther than results names",
+        "Segment match: primary wants reassurance, secondary wants efficiency, adult wants expertise — align the register with the flagship segment",
+        "The parent-group test: legitimate, sayable, retellable — the name must stand inside \"where does their kid go?\"; referral is tutoring's biggest channel",
+      ],
+      cases: [
+        { name: "Kumon", takeaway: "The founder's surname carrying a whole methodology: \"a little progress every day\" franchised worldwide — a method name travels farther than a results name; personal reputation, fully capitalized" },
+        { name: "Khan Academy", takeaway: "Surname + \"academy\": one tutor's screencasts elevated to a global institution — the academy word lends institutional gravity to a personal project, the teacher-persona structure at internet scale" },
+        { name: "Mathnasium", takeaway: "Math + gymnasium: the training-ground metaphor makes drilling feel like working out — a blend that reframes the grind as strength-building, category and promise in one coinage" },
+        { name: "Sylvan Learning", takeaway: "\"Sylvan\" — of the woods: calm, growth, patience — an atmosphere word instead of a results word, selling reassurance to parents in a single syllable of green" },
+        { name: "VIPKid", takeaway: "VIP + Kid: each child treated as the honored guest — the dual audience resolved in one name; parents hear premium service, kids hear it's about them" },
+      ],
+      pitfalls: [
+        "Results words on red lines: \"guaranteed pass\", \"number one\" fail advertising law — in a regulated category, self-audit the name at the strictest reading",
+        "Anxiety marketing in the name: \"get ahead or fall behind\" registers overdraw trust — parent-group word of mouth doesn't survive an anxiety-peddling accusation",
+        "Welding to one subject: a name locked to \"math\" drags at every expansion into English or enrichment — leave headroom on both subject and age",
+        "Pleasing only the payer: a name kids resist loses the parents too — in the dual-audience structure, the child's acceptance is the hidden conversion rate",
+      ],
+    },
+  },
+  printshop: {
+    slug: "printshop",
+    tlds: [
+      { tld: "com", zh: "企业客户批量下单的信任底线，图文快印的默认选择", en: "The trust baseline for corporate bulk orders — the default for a print shop" },
+      { tld: "ink", zh: "「墨水」后缀，印刷行业的身份直给", en: "The ink suffix — the print trade's identity, stated plainly" },
+      { tld: "studio", zh: "「工作室」后缀，设计+印刷一体的创意感", en: "The studio suffix — design-plus-print creative positioning" },
+    ],
+    zh: {
+      label: "图文快印",
+      title: "图文店与快印品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "图文快印店命名指南：快与准的承诺、一站式服务、设计增值等 5 种思路，FedEx Office/Vistaprint 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的快印品牌域名。",
+      intro:
+        "图文店的名字要像交付一样快而准：这是一个活在 deadline 里的品类——顾客走进来时标书明早九点开标、论文下午三点答辩，名字要在焦急的搜索里给出「能搞定、不出错」的确定性。第一素材库是快与准的承诺：快、捷、准时、当日——快印的「快」不是修辞而是刚需，名字里的速度词直接回应品类的第一决策因素；但快要落在准上，印错一个字整批重来，「零差错」的严谨感要与速度感并存。第二个抓手是一站式能力：从名片到标书、从喷绘到装订——图文店的生意本质是「办公室外包的输出部门」，名字要暗示能力边界够宽，企业客户找的是长期供应商不是单次打印。第三个抓手是设计增值：图文店正在从「复印店」升级为「视觉服务商」——设计、创意、视觉这类词把客单价从毛角票抬到项目制，Vistaprint 用「vista（视野）」给小微企业的名片生意装上了设计感的壳。要注意客群分层：校园店拼论文装订的口碑与价格，写字楼店拼标书的加急与保密，广告制作店拼喷绘工程的产能与安装——三种客群三种名字气质。信任上，标书与合同印制涉及商业机密，名字的正规感参与保密信任的建立；连锁化的图文品牌要经得起企业采购供应商名录的审视。渠道上，图文店活在「附近的打印店」地图搜索、写字楼电梯广告和「上次那家印得不错」的行政口碑里，名字要好念好搜、地图列表里一眼认出，电话里报得清楚。",
+      namingIdeas: [
+        "快与准：快、捷、当日、零差错——速度词直接回应品类第一决策因素，但快要落在准上",
+        "一站式暗示：图文、印务、输出——能力边界够宽，企业客户找的是长期供应商不是单次打印",
+        "设计增值：视觉、创意、design——从复印店升级为视觉服务商，名字先把客单价的壳换掉",
+        "客群分层：校园店拼口碑价格、写字楼店拼加急保密、广告店拼产能安装——气质与主力客群对齐",
+        "地图搜索测试：好念好搜、电话里报得清楚——「附近的打印店」列表里一眼认出是获客第一现场",
+      ],
+      cases: [
+        { name: "FedEx Office", takeaway: "物流巨头的信任嫁接：FedEx 的「使命必达」延伸到文印——「Office」把能力边界画到整个办公室，一站式外包的命名极致" },
+        { name: "Vistaprint", takeaway: "vista（视野）+ print：给小微企业的名片生意装上设计感——在线印刷把「印」从街边店升级为平台，前缀词决定客单价的壳" },
+        { name: "Staples", takeaway: "「订书钉」的办公室隐喻：一个日常小物代言整个办公服务——具象小词扛起大品类，比「XX 办公」的直给更有记忆点" },
+        { name: "Kinko's", takeaway: "创始人绰号（卷发 kinky hair）的人格化：从校园复印店到千店连锁——绰号名的亲切感在校园与创业客群里就是口碑本身" },
+        { name: "Moo", takeaway: "一声牛叫的极简品牌：高端名片在线印刷用最不像印刷的名字切割街边店——反品类命名在设计敏感客群里溢价最高" },
+      ],
+      pitfalls: [
+        "「XX 图文」的同质化：品类词裸奔在地图列表里撞成一片——加急搜索的两秒钟里没有记忆点就没有点击",
+        "只有快没有准：速度词堆满名字却印错标书——快印的信任一次事故就清零，严谨感要写进气质",
+        "锁死复印定位：名字绑死「复印」，升级设计服务、广告制作时全是阻力——「输出部门」的边界要留宽",
+        "电话里报不清：谐音字、生僻字在「您好我找 XX 图文」的通话里反复拼写——B 端生意电话沟通高频，报得清是硬指标",
+      ],
+    },
+    en: {
+      label: "Print shops",
+      title: "How to Name a Print Shop or Copy Center Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Print shop naming guide: speed-and-accuracy promise, one-stop capability, design upsell, breakdowns of FedEx Office/Vistaprint/Moo, recommended TLDs and pitfalls — then hunt an available print brand domain with AI.",
+      intro:
+        "A print shop name should move like the work: fast and exact. This category lives inside other people's deadlines — the customer walks in with a bid due at nine tomorrow or a thesis defense at three, and the name must radiate \"we'll get it done, without errors\" into their anxious search. The first material bin is the speed-and-accuracy promise: fast, express, same-day — speed here is not rhetoric but the category's first decision factor; yet fast must land on exact, because one wrong character reprints the whole batch, so zero-defect rigor has to coexist with tempo in the name's register. The second lever is one-stop capability: from business cards to bid documents, banners to binding — a print shop is really the outsourced output department of every office nearby, and the name should imply a wide capability boundary; corporate clients are hiring a standing supplier, not buying one print run. The third is the design upsell: print shops are graduating from copy counters to visual-services firms — words like design, visual and studio swap the price shell from cents per page to project fees; Vistaprint's \"vista\" dressed small-business cards in designer clothes. Mind the client split: campus shops compete on thesis-binding word of mouth and price, office-district shops on rush jobs and confidentiality, signage shops on production capacity and installation — three clients, three registers. On trust: bids and contracts carry business secrets, so the name's air of legitimacy participates in confidentiality itself, and a chain brand must survive the corporate procurement vendor list. On channels: print shops live in \"print shop near me\" map searches, elevator ads and the admin's \"that place did it right last time\" — the name must say cleanly, search cleanly, stand out in a map list and survive being spelled over the phone.",
+      namingIdeas: [
+        "Speed and accuracy: fast, express, same-day, zero-defect — speed answers the category's first decision factor, but fast must land on exact",
+        "One-stop implication: print, output, office — a wide capability boundary; corporate clients hire a standing supplier, not one print run",
+        "Design upsell: visual, studio, design — graduate from copy counter to visual services; the name swaps the price shell first",
+        "Client split: campus shops on word of mouth, office shops on rush and confidentiality, signage shops on capacity — align the register with the flagship client",
+        "The map-search test: sayable, searchable, spellable over the phone — the two seconds of an urgent \"near me\" search is the first sales floor",
+      ],
+      cases: [
+        { name: "FedEx Office", takeaway: "Trust grafted from the logistics giant: absolutely-positively-overnight extended to documents — \"Office\" draws the capability boundary around the whole workplace, one-stop outsourcing at its naming extreme" },
+        { name: "Vistaprint", takeaway: "Vista + print: small-business cards dressed in designer clothes — online printing lifted \"print\" from the corner shop to a platform; the prefix word sets the price shell" },
+        { name: "Staples", takeaway: "The office metaphor of a tiny fastener: one everyday object fronting an entire category — a concrete little word outremembering every literal \"X Office Supply\"" },
+        { name: "Kinko's", takeaway: "The founder's nickname (for his kinky hair) personified: from a campus copy shop to a thousand stores — a nickname's warmth was the word of mouth among students and founders" },
+        { name: "Moo", takeaway: "A single cow sound: premium online cards under the least print-like name possible — anti-category naming carries the highest premium with design-sensitive clients" },
+      ],
+      pitfalls: [
+        "\"X Print\" sameness: naked category words pile up in the map list — with no hook in the two-second urgent search, there is no click",
+        "Fast without exact: speed words stacked in the name, then a typo in the bid — print-shop trust zeroes out in one incident; rigor belongs in the register",
+        "Welding to the copier: a name locked to \"copy\" drags at every upgrade into design or signage — leave the output-department boundary wide",
+        "Unspellable on the phone: puns and rare characters mean repeating yourself in every \"hi, is this X Print?\" call — B2B lives on the phone; spellable is a hard requirement",
+      ],
+    },
+  },
+  errand: {
+    slug: "errand",
+    tlds: [
+      { tld: "com", zh: "平台化与商家合作的信任底线，跑腿品牌的默认选择", en: "The trust baseline for platform plays and merchant partnerships — the default for an errand brand" },
+      { tld: "run", zh: "「跑」后缀，跑腿品类的动作直给", en: "The run suffix — the errand category's core verb, stated plainly" },
+      { tld: "services", zh: "「服务」后缀，本地生活服务的正规感", en: "The services suffix — the legitimacy of a local-services operation" },
+    ],
+    zh: {
+      label: "同城跑腿",
+      title: "同城跑腿与代办品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "同城跑腿与代办服务命名指南：快的承诺、使命必达、人格化信任等 5 种思路，闪送/达达/UU 跑腿等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的跑腿品牌域名。",
+      intro:
+        "跑腿的名字要自己先跑起来：这是一个把「着急」当生意做的品类——顾客下单的那一刻不是在买配送，而是在买「一小时内必须送到」的确定性，名字要在焦急的下单页上就给出速度与可靠的双重承诺。第一素材库是快的动作感：闪、飞、达、奔——闪送两个字把「快」写到了极致，动词与拟声的速度词是品类的母语；但快要有节奏感，「闪」「飞」这类爆破音开头的字自带加速度，名字读出来的速度就是服务的第一印象。第二个抓手是使命必达的可靠感：跑腿单的货值可能是一份合同、一串钥匙、一束求婚的花——「达」字辈的名字（达达、必达）承诺的是结果而不是过程，同城应急件的信任门槛比外卖高一个量级，名字的可靠感直接参与客单价。第三个抓手是人格化信任：把服务翻译成「一个靠谱的人」——「小哥」「帮帮」「跑男」式的人物名让冷冰冰的配送有了体温，代办业务（排队、代购、代取）本质是把自己的私事托付给陌生人，人格化名字降低托付的心理门槛。要注意模式分层：专人直送（闪送式）拼速度与专属感，众包跑腿（UU 式）拼运力密度与价格，企业即配（达达式）拼商家履约——三种模式三种名字气质，平台名要在 C 端的亲切与 B 端的正规之间找平衡。场景上，跑腿活在「帮我送一下」的应急时刻——文件忘带、药要送到、蛋糕不能倒，名字要在这些具体场景的搜索里被想起。渠道上，跑腿活在应用商店的搜索、骑手马甲的背后印字和「上次 XX 半小时就送到了」的口碑里，名字要两三个字、好念好搜、印在马甲上满街跑都是广告。",
+      namingIdeas: [
+        "快的动作感：闪、飞、达、奔——爆破音开头自带加速度，名字读出来的速度就是服务第一印象",
+        "使命必达：达、必、准——承诺结果而不是过程，应急件的信任门槛比外卖高一个量级",
+        "人格化信任：小哥、帮帮、人物名——代办是把私事托付给陌生人，人格化降低托付的心理门槛",
+        "模式分层：专人直送拼速度、众包拼密度、企业即配拼履约——C 端亲切与 B 端正规要找平衡",
+        "马甲测试：两三个字、印在骑手马甲上满街跑都是广告——好念好搜，应急搜索里第一个被想起",
+      ],
+      cases: [
+        { name: "闪送", takeaway: "「闪」的极致速度+「送」的品类直给：两个字把专人直送的核心卖点说死——爆破音开头的加速度感，跑腿命名的教科书" },
+        { name: "达达", takeaway: "「达」的结果承诺叠字化：使命必达的「达」念两遍就是品牌——叠字的亲切感中和了物流的冰冷，B 端即配的信任命名" },
+        { name: "UU 跑腿", takeaway: "「UU」的呼唤拟声+「跑腿」的品类词：像喊朋友帮忙的一声「呦呦」——众包模式的平民气质写进名字，亲切感就是运力招募的广告" },
+        { name: "Postmates", takeaway: "post（投递）+ mates（伙伴）：把快递员翻译成「你的伙伴」——人格化信任的英文样本，代办的心理门槛被一个 mates 拆掉" },
+        { name: "TaskRabbit", takeaway: "task（任务）+ rabbit（兔子）：兔子的速度感+萌系亲切——「任何杂事都有人帮」的平台用一只兔子降低了陌生人上门的戒备" },
+      ],
+      pitfalls: [
+        "只有快没有靠谱：速度词堆满名字却丢过一次件——应急件的信任一次事故就清零，可靠感要与速度并存",
+        "谐音擦边巨头：「闪 X」「X 达」满街跑——品类头部的语感已被占住，擦边名在应用商店搜索里只给对手导流",
+        "锁死单一场景：名字绑死「送文件」，扩代排队、代购、宠物接送时全是阻力——「跑腿」的边界是「替你跑」不是某一单",
+        "忽略骑手侧：名字印在马甲上要让骑手体面——招募运力也是获客，骑手不愿穿的名字跑不满街",
+      ],
+    },
+    en: {
+      label: "Errand & courier services",
+      title: "How to Name an Errand Running or Same-City Courier Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Errand and courier naming guide: speed in the sound, mission-complete reliability, personified trust, breakdowns of Postmates/TaskRabbit/GoShare, recommended TLDs and pitfalls — then hunt an available errand brand domain with AI.",
+      intro:
+        "An errand brand's name should already be running: this category sells to urgency itself — the customer isn't buying delivery at the tap of the button, they're buying the certainty that it arrives within the hour, and the name must promise speed and reliability on the anxious checkout screen. The first material bin is speed in the sound: flash, dash, bolt, zip — verbs and near-onomatopoeia are the category's mother tongue; plosive-led words carry their own acceleration, and how fast the name reads is the service's first impression. The second lever is mission-complete reliability: an errand's cargo might be a contract, a set of keys or the flowers for a proposal — result words promise the outcome, not the process, and the trust bar for urgent same-city runs sits an order of magnitude above food delivery; the name's dependability participates directly in the price. The third is personified trust: translate the service into \"a reliable someone\" — mate, buddy, runner-style person-names give a cold logistics network body heat; concierge errands (queuing, buying, collecting) are at bottom entrusting private business to a stranger, and a personified name lowers that psychological threshold. Mind the model split: dedicated one-runner delivery competes on speed and exclusivity, crowdsourced fleets compete on density and price, merchant instant-delivery competes on fulfillment — three models, three registers, and a platform name must balance consumer warmth with merchant-side legitimacy. On scenarios: errands live in \"can someone run this over\" emergencies — the forgotten document, the medicine, the cake that must not tip — and the name must surface in those concrete searches. On channels: errand brands live in app-store searches, on the backs of runner vests and in \"they made it in thirty minutes\" word of mouth — two or three syllables, easy to say and search, and every vest on the street is a billboard.",
+      namingIdeas: [
+        "Speed in the sound: flash, dash, bolt, zip — plosive-led words carry their own acceleration; how fast the name reads is the first impression",
+        "Mission-complete: arrive, deliver, sure — promise the outcome, not the process; the urgent-run trust bar sits far above food delivery",
+        "Personified trust: mate, buddy, runner — concierge errands entrust private business to a stranger; a person-name lowers the threshold",
+        "Model split: dedicated runs on speed, crowdsourced on density, merchant delivery on fulfillment — balance consumer warmth with B2B legitimacy",
+        "The vest test: two or three syllables printed on a runner's vest — every street crossing is a billboard; be the first name recalled in an emergency search",
+      ],
+      cases: [
+        { name: "Postmates", takeaway: "Post + mates: the courier translated into your buddy — personified trust in one suffix; the psychological threshold of handing over private errands dismantled by a single word" },
+        { name: "TaskRabbit", takeaway: "Task + rabbit: a rabbit's speed with disarming cuteness — the anything-helped platform used one animal to lower the guard against strangers at the door" },
+        { name: "DoorDash", takeaway: "Door + dash: destination and speed bolted together — two plosive syllables that read at a sprint; the category's core promise compressed into pure sound" },
+        { name: "Gopuff", takeaway: "Go + puff: gone in a puff of smoke — instant needs answered with a name that evaporates as fast as the wait; irreverence as differentiation in a utility category" },
+        { name: "Instacart", takeaway: "Instant + cart: the whole promise in the first four letters — literal speed naming that survives translation into every \"get it now\" search phrase" },
+      ],
+      pitfalls: [
+        "Fast without dependable: speed words stacked in the name, then one lost package — urgent-run trust zeroes out in a single incident; reliability must ride with speed",
+        "Sound-alike drafting off leaders: the flash-and-dash register is taken — near-imitations in an app-store search only route customers to the incumbent",
+        "Welding to one scenario: a name locked to \"documents\" drags at queuing, buying and pet pickup — the boundary is \"we run for you\", not one kind of run",
+        "Forgetting the runner's side: the name printed on the vest must let the runner feel decent — fleet recruitment is also marketing; a vest nobody wants to wear never floods the streets",
+      ],
+    },
+  },
+  plumber: {
+    slug: "plumber",
+    tlds: [
+      { tld: "com", zh: "上门服务与物业合作的信任底线，维修品牌的默认选择", en: "The trust baseline for in-home service and property partnerships — the default for a trades brand" },
+      { tld: "services", zh: "「服务」后缀，上门服务的正规感直给", en: "The services suffix — in-home legitimacy, stated plainly" },
+      { tld: "pro", zh: "「专业」后缀，持证师傅的手艺背书", en: "The pro suffix — a licensed tradesman's craft endorsement" },
+    ],
+    zh: {
+      label: "管道疏通维修",
+      title: "管道疏通与水电维修品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "管道疏通与水电维修品牌命名指南：应急响应、师傅人设、透明报价等 5 种思路，Roto-Rooter/Mr. Rooter 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的维修品牌域名。",
+      intro:
+        "管道维修的名字要在水漫金山的慌乱里被搜到：这是一个纯应急的品类——顾客想起你的那一刻，马桶正在堵、水管正在漏、热水器正在罢工，名字要在「附近疏通下水道」的搜索结果里给出「马上能来、不会乱收费」的双重确定性。第一素材库是应急响应：快修、速通、24 小时——应急品类的第一决策因素是响应速度，名字里的时间承诺直接参与那通焦急的电话；但快要配上专业，Roto-Rooter 把「旋转疏通机」的工具写进名字，工具词与工艺词给出「专业设备、药到病除」的手艺暗示。第二个抓手是师傅人设：上门维修的本质是「放一个陌生人进家门」——「X 师傅」「老王修家」式的人物名自带熟人社会的信任感，Mr. Rooter、Mr. Handyman 的「Mr.」系连锁证明人格化命名可以规模化复制；人设名的礼貌感（先生、师傅）还在暗示服务规范。第三个抓手是透明报价：维修行业的信任赤字来自「小病大修、坐地起价」——名字与口号一体化地承诺「明码标价、修不好不收费」，正规感是这个品类最稀缺的资产，「XX 到家」「XX 管家」式的名字借平台化气质对冲游击队印象。要注意业务分层：疏通是流量入口（高频低客单），水电改造是利润腹地（低频高客单），全屋维保是长期主义（会员制）——名字的边界要从「通马桶」画到「家的维修部」。客群上，业主要的是靠谱不宰客，物业与商铺要的是资质与发票——名字要在 C 端的亲切与 B 端的正规之间兼容。渠道上，管道维修活在地图搜索、社区公告栏的小广告和物业推荐名录里，名字要好念好搜、电话里报得清楚，师傅工服上印出来要体面可信。",
+      namingIdeas: [
+        "应急响应：快修、速通、24 小时——时间承诺直接参与那通焦急的电话，但快要配上专业",
+        "工具工艺词：疏通机、管道、水电——专业设备写进名字，给出「药到病除」的手艺暗示",
+        "师傅人设：X 师傅、Mr. 系——上门是放陌生人进家门，人格化+礼貌感是信任与规范的双重暗示",
+        "透明承诺：明码标价、修不好不收费——名字与口号一体化，对冲「小病大修」的行业信任赤字",
+        "业务留边界：疏通是入口、改造是利润、维保是长期——名字从「通马桶」画到「家的维修部」",
+      ],
+      cases: [
+        { name: "Roto-Rooter", takeaway: "旋转（roto）+疏通机（rooter）的工具命名：把专业设备写进名字——「药到病除」的手艺暗示+押韵的节奏感，管道品类的百年样本" },
+        { name: "Mr. Rooter", takeaway: "「Mr.」的礼貌人格化+品类工具词：陌生人进家门的信任用一个「先生」化解——人设名规模化复制的连锁范本" },
+        { name: "啄木鸟", takeaway: "益鸟捉虫的治病隐喻：把维修翻译成「给家看病」——动物 IP 的亲切感+「哪里坏了敲哪里」的画面感，中文维修平台的命名代表" },
+        { name: "Mr. Handyman", takeaway: "「什么都会修的先生」：能力边界一次画满——从水电到木工的全屋维修用一个 handyman 说清，业务留边界的教科书" },
+        { name: "58 到家", takeaway: "平台数字品牌+「到家」的场景词：上门服务的正规感借平台气质完成——「到家」两个字把服务半径与服务方式同时说清" },
+      ],
+      pitfalls: [
+        "游击队气质：「XX 疏通」加手机号的小广告式名字——正规感是品类最稀缺资产，名字先要摆脱电线杆贴纸的联想",
+        "只有快没有价：响应快但报价黑——「坐地起价」的行业信任赤字一次投诉就引爆，透明承诺要写进品牌",
+        "锁死疏通单品：名字绑死「通下水道」，扩水电改造、全屋维保时全是阻力——利润在改造、长期在维保",
+        "电话里报不清：应急品类电话沟通是成交现场——谐音字、生僻字在「您好我要疏通」的通话里反复拼写就是流失",
+      ],
+    },
+    en: {
+      label: "Plumbing & repair",
+      title: "How to Name a Plumbing or Home Repair Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Plumbing and home repair naming guide: emergency response, tradesman persona, transparent pricing, breakdowns of Roto-Rooter/Mr. Rooter/Mr. Handyman, recommended TLDs and pitfalls — then hunt an available trades domain with AI.",
+      intro:
+        "A plumbing name must be findable mid-flood: this is a pure-emergency category — at the moment a customer thinks of you, the toilet is backing up, the pipe is spraying, the water heater is on strike, and the name must radiate double certainty into the \"plumber near me\" results: we can come now, and we won't gouge you. The first material bin is emergency response: rapid, rescue, 24-hour — response speed is the category's first decision factor, and a time promise in the name participates directly in that panicked phone call; but fast must pair with professional, and Roto-Rooter wrote the actual machine into its name — tool and craft words whisper \"proper equipment, cured on the first visit\". The second lever is the tradesman persona: in-home repair is at bottom letting a stranger through your door — person-names carry known-face trust, and the \"Mr.\" franchise family (Mr. Rooter, Mr. Handyman) proved personified naming replicates at chain scale; the courtesy title itself hints at professional conduct. The third is transparent pricing: the trade's trust deficit comes from invented faults and prices that climb on site — a name fused with a promise (upfront pricing, no fix no fee) is the scarcest asset in the category, and butler-style or platform-style names offset the fly-by-night image. Mind the business layers: drain clearing is the traffic gate (high frequency, low ticket), repiping and electrical work is the profit belly (low frequency, high ticket), whole-home maintenance is the long game (membership) — draw the name's boundary from \"unclog the toilet\" out to \"the home's repair department\". Homeowners want honest and unafraid-to-recommend; property managers and shops want licenses and invoices — the name must reconcile consumer warmth with B2B legitimacy. On channels: plumbing lives in map searches, community notice boards and property-manager referral lists — the name must say and search cleanly, survive the phone call, and look decent printed on a work uniform at your door.",
+      namingIdeas: [
+        "Emergency response: rapid, rescue, 24-hour — a time promise participates in the panicked call, but fast must pair with professional",
+        "Tool and craft words: rooter, pipe, wrench — write the equipment into the name; whisper \"proper gear, cured on the first visit\"",
+        "Tradesman persona: Mr. X, Master X — letting a stranger through the door; personification plus a courtesy title hints trust and conduct at once",
+        "Transparent promise: upfront pricing, no fix no fee — fuse name and promise to offset the trade's invented-fault trust deficit",
+        "Boundary headroom: drains are the gate, repiping the profit, maintenance the long game — draw the name from \"unclog\" out to \"the home's repair department\"",
+      ],
+      cases: [
+        { name: "Roto-Rooter", takeaway: "Tool naming at its purest: the rotating drain machine written into the brand — craft implication plus a rhyming cadence; the category's century-old benchmark" },
+        { name: "Mr. Rooter", takeaway: "A courtesy title bolted to the category tool: the stranger at your door defused by one \"Mr.\" — the personified-franchise template, replicated across a whole family of trades" },
+        { name: "Mr. Handyman", takeaway: "\"The gentleman who fixes everything\": the capability boundary drawn to the whole house in one word — the textbook of leaving business headroom in a trades name" },
+        { name: "Benjamin Franklin Plumbing", takeaway: "\"The punctual plumber\": a founding-father name carrying a punctuality covenant — borrowed gravitas plus an on-time promise, transparency naming at franchise scale" },
+        { name: "Angi", takeaway: "Angie's List clipped to four letters: a first name that made hiring strangers feel like asking a friend — person-name trust carried from a review list to a whole home-services platform" },
+      ],
+      pitfalls: [
+        "Fly-by-night register: \"X Unclog\" plus a phone number reads like a utility-pole sticker — legitimacy is the category's scarcest asset; escape that association first",
+        "Fast without fair: quick to arrive, dark on price — the invented-fault trust deficit detonates on one complaint; write the transparency promise into the brand",
+        "Welding to the drain: a name locked to \"unclogging\" drags at repiping and maintenance — the profit lives in renovation, the longevity in membership",
+        "Unspellable in the call: emergencies close on the phone — puns and rare characters mean repeating yourself to a panicking caller; every respell is a lost job",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
