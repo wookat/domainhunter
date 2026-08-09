@@ -4513,6 +4513,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Developer personal portfolios", "Dev tools, CLIs & SDKs", "Technical docs & open-source projects", "Want cheap renewals & enforced HTTPS"],
     },
   },
+  "family-vs-com": {
+    slug: "family-vs-com",
+    a: "family",
+    b: "com",
+    zh: {
+      title: ".family 和 .com 怎么选：家庭温度与通用信任的取舍",
+      metaDescription: ".family 把「一家人」写进域名，.com 是通用信任的默认后缀。对比两者的语义、价格与命名模式差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在温度：.family 是归属词——家庭主页与家谱相册、亲子内容与育儿社区、家族企业官网，「姓氏 + .family」是家庭数字资产的标准写法，smith.family 式的名字在 .com 下早被同姓者占光、在这里几乎总有货；.com 是默认词——用户口头补全的永远是 .com，正式商业品牌、面向大众的产品放在上面信任零折损。价格上 .family 注册约 $6、续费约 $31/年——温和档长持无压力；.com 注册续费都在 $10 上下、全程平价，还是转售流动性最好的后缀。判断标准：主体是「一家人」或「家的叙事」——家庭站、家谱、家族企业、亲子品牌 → .family 的温度是 .com 给不了的；主体是正式商业品牌、要触达最广人群 → .com 的认知度无可替代。两个注意：家庭站涉及儿童照片与隐私，域名之外要配访问控制别全公开；.family 六个字母偏长且面向国内用户认知度一般，正式商用建议同时持有 .com 兜底。命名上「姓氏 + .family」（smith.family 式家庭主页）与「品牌词 + .com」各是两边最点题的模式。",
+      pickA: ["家庭主页与家谱相册", "亲子内容与育儿社区", "家族企业与传承品牌", "姓氏在 .com 已被注册"],
+      pickB: ["正式商业品牌主站", "面向最广人群的产品", "长期品牌资产与转售", "口头传播场景多（广告、口碑）"],
+    },
+    en: {
+      title: ".family vs .com: Warmth of the Household or Default Trust",
+      metaDescription:
+        ".family writes the household into the address; .com is the default suffix of universal trust. Compare semantics, pricing and naming patterns, then hunt names available on both.",
+      verdict:
+        "The split is warmth. .family is the belonging word — family homepages and photo archives, parenting content and communities, family-business sites: surname + .family is the standard pattern for a household's digital home, and smith.family-style names long gone on .com nearly always hit here. .com is the default word — what users autocomplete by reflex, where formal commercial brands and mass-market products pay zero trust tax. On price, .family runs about $6 to register and $31/yr to renew — the mild tier, painless to hold; .com sits around $10 both ways with flat pricing and the best resale liquidity of any suffix. The test: the subject is a household or a family narrative — family sites, genealogy, family businesses, parenting brands → .family carries a warmth .com can't; the subject is a formal commercial brand reaching the widest audience → .com's recognition is irreplaceable. Two cautions: family sites carry children's photos, so pair the domain with access control rather than going fully public; and .family is six letters and less recognized outside English markets, so serious commercial plays should hold the .com as backup. Naming: surname + .family (the smith.family homepage pattern) versus brand word + .com are each side's on-target patterns.",
+      pickA: ["Family homepages & photo archives", "Parenting content & communities", "Family businesses & heritage brands", "Your surname is taken on .com"],
+      pickB: ["Formal commercial brand sites", "Mass-market consumer products", "Long-term brand asset & resale", "Heavy word-of-mouth channels"],
+    },
+  },
+  "baby-vs-store": {
+    slug: "baby-vs-store",
+    a: "baby",
+    b: "store",
+    zh: {
+      title: ".baby 和 .store 怎么选：母婴垂直与通用货架的分工",
+      metaDescription: ".baby 把母婴人群写进域名，.store 是通用电商的货架后缀。对比两者的语义、价格与适用场景差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在客群：.baby 是人群词——母婴用品电商与品牌、月子中心与产后护理、婴幼儿早教与托育，用 name.baby 目标客群一眼锁定，它最初由强生发起、后转入 XYZ 注册局，母婴垂直的定位从注册局层面就写死了；.store 是货架词——看到域名就知道能买东西，什么品类都能装，主站 .com + 商城 .store 的分工已是成熟品牌的惯例。价格结构相似都要看续费：.baby 注册约 $2、续费约 $52/年——首年极便宜续费跳档明显；.store 首年常见大幅促销、续费同样明显更高，两边预算都按续费价算。判断标准：生意就是母婴——母婴品牌、月子中心、婴童品类电商 → .baby 三个字母把人群说完，比 babysomething.com 的拼接短得多也准得多；品类更宽或以后要扩品 → .store 不绑赛道，扩到任何品类都不违和。两个注意：母婴行业信任成本高，资质、成分与安全认证的展示比域名更影响转化；.baby 语义锁死母婴，业务一旦超出这个人群就不合身，扩品预期强的店从一开始就该选 .store。命名上「品牌 + .baby」（母婴品牌的标准用法）与「品牌 + .store」（后缀已说明商店、主体别再叠 shop）各是两边最点题的模式。",
+      pickA: ["母婴用品电商与品牌", "月子中心与产后护理", "婴幼儿早教与托育", "育儿内容与新生儿记录"],
+      pickB: ["品类更宽的综合电商", "有扩品计划的 DTC 品牌", "主站 .com + 商城分工", "非母婴垂直的零售生意"],
+    },
+    en: {
+      title: ".baby vs .store: The Vertical Audience or The General Shelf",
+      metaDescription:
+        ".baby writes the parenting audience into the address; .store is the general e-commerce shelf. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is the audience. .baby is the demographic word — baby product stores and brands, postpartum care centers, early education and childcare: name.baby locks onto the target customer at a glance, and its pedigree is genuinely vertical — launched by Johnson & Johnson and now run by XYZ Registry, the parenting focus is written in at the registry level. .store is the shelf word — visitors know they can buy before they click, any category fits, and the .com-for-brand, .store-for-shop split is an established convention. The pricing structures rhyme — budget on renewals for both: .baby about $2 to register with a jump to about $52/yr; .store runs deep first-year promos with renewals notably higher. The test: the business is parenting and babies — baby brands, postpartum services, child-category stores → .baby says the audience in four letters, shorter and sharper than any babysomething.com compound; the catalog is broader or expansion is planned → .store binds you to no lane and fits whatever you sell next. Two cautions: trust costs are high in the baby trade, so certifications, ingredients and safety credentials convert better than any domain; and .baby's semantics lock hard onto the demographic — a store expecting to outgrow it should start on .store instead. Naming: brand + .baby (the standard baby-brand pattern) versus brand + .store (the suffix already says shop — don't stack shop words) are each side's on-target patterns.",
+      pickA: ["Baby product stores & brands", "Postpartum & maternity care services", "Early education & childcare", "Parenting content & baby-book sites"],
+      pickB: ["Broader multi-category stores", "DTC brands planning to expand the catalog", "The .com-site-plus-.store-shop split", "Retail outside the parenting vertical"],
+    },
+  },
+  "mom-vs-me": {
+    slug: "mom-vs-me",
+    a: "mom",
+    b: "me",
+    zh: {
+      title: ".mom 和 .me 怎么选：妈妈身份与个人品牌的分工",
+      metaDescription: ".mom 把妈妈身份写进域名，.me 是个人品牌的通用后缀。对比两者的语气、价格与命名模式差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在身份颗粒度：.mom 是身份词——妈妈博客与育儿日记、妈妈社群与团购服务、送妈妈的礼物电商，name.mom 三个字母把视角说完，ask mom、super mom 这类固定搭配让「词 + .mom」读出来就是一句话，妈妈博主与妈妈创业者在这里的个人品牌比通用后缀鲜活得多；.me 是通用个人词——个人主页、简历站、作品集，「me＝我」什么身份都能装，还有 hire.me 式动词短语的独门玩法。价格上 .mom 注册约 $2、续费约 $26/年，.me 与 .com 接近——都是温和档，长持无压力。判断标准：内容以「妈妈视角」为核心——育儿记录、妈妈社群、母婴带货 → .mom 的身份感直接变成品牌资产；身份更宽或以后会转型——个人 IP 覆盖职业、生活多条线 → .me 不绑身份，内容方向怎么变都不违和。两个注意：mom 是美式拼写，面向英联邦市场的受众习惯 mum，市场定位要想清；妈妈内容的主阵地在 Instagram 等平台，域名的角色是个人品牌与商务合作的稳定门面，别指望它单独带流量。命名上「名字 + .mom」（妈妈博主的标准写法）与「名字/昵称 + .me」各是两边最点题的模式。",
+      pickA: ["妈妈博客与育儿日记", "妈妈社群与团购服务", "送妈妈的礼物电商", "以妈妈身份带货的博主"],
+      pickB: ["身份更宽的个人品牌", "简历站与作品集", "动词短语域名（hire.me 式）", "内容方向可能转型的创作者"],
+    },
+    en: {
+      title: ".mom vs .me: The Mom Identity or The Personal Brand",
+      metaDescription:
+        ".mom writes the mom identity into the address; .me is the general personal-brand suffix. Compare tone, pricing and naming patterns, then hunt names available on both.",
+      verdict:
+        "The split is identity granularity. .mom is the identity word — mom blogs and parenting diaries, mom communities and group-buy services, gifts-for-mom stores: name.mom states the point of view in three letters, fixed phrases like ask mom and super mom make word + .mom read as a sentence, and mom bloggers and mompreneurs get a far livelier personal brand here than on any generic suffix. .me is the general personal word — homepages, résumé sites, portfolios: me fits any identity, plus the signature verb-phrase play (hire.me, coach.me) no other suffix offers. On price, .mom runs about $2 to register and $26/yr to renew, and .me sits close to .com — both mild tiers, painless to hold. The test: the content's core is the mom's-eye view — parenting diaries, mom communities, baby-product affiliate work → .mom's identity becomes brand equity directly; the identity is broader or may pivot — a personal brand spanning career and life → .me binds you to nothing and survives any content turn. Two cautions: mom is the American spelling — Commonwealth audiences expect mum, so mind the market; and mom content lives on Instagram and similar platforms, so the domain's job is the stable front door for the brand and sponsorship inquiries, not a traffic source on its own. Naming: first name + .mom (the standard mom-blogger pattern) versus name or nickname + .me are each side's on-target patterns.",
+      pickA: ["Mom blogs & parenting diaries", "Mom communities & group-buy services", "Gifts-for-mom stores", "Mom-identity affiliate creators"],
+      pickB: ["Broader personal brands", "Résumé sites & portfolios", "Verb-phrase domains (hire.me)", "Creators whose direction may pivot"],
+    },
+  },
+  "dad-vs-blog": {
+    slug: "dad-vs-blog",
+    a: "dad",
+    b: "blog",
+    zh: {
+      title: ".dad 和 .blog 怎么选：爸爸人设与写作阵地的分工",
+      metaDescription: ".dad 把爸爸视角写进域名，.blog 是写作者的通用阵地。对比两者的语气、价格与安全特性差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在人设浓度：.dad 是人设词——爸爸博客与育儿分享、冷笑话与幽默内容站、家庭工具与 DIY 教程，name.dad「爸爸视角」从地址就开始了，英语文化里 dad joke、dad bod 的梗自带流量，它还是 Google 注册局后缀、与 .app/.dev 同门全线强制 HTTPS；.blog 是形态词——Automattic（WordPress 母公司）旗下注册局运营，name.blog 天然读成「某某的博客」，什么主题都能写、读者零解释成本。价格上 .dad 注册约 $11、续费同价——全程透明无陷阱；.blog 首年常见 $3 上下、续费约 $21/年——首年便宜续费温和，长持比 .dad 略省。判断标准：内容以「爸爸人设」立身——育儿视角、冷笑话、父子 DIY → .dad 三个字母把人设说完，比 dadblog.com 式拼接鲜活得多；主题更宽或人设可能淡出——写作本身是主体、育儿只是一条线 → .blog 不绑人设，写什么都成立。两个注意：.dad 幽默气质是双刃剑，严肃的父职咨询用它显得轻佻；Google 后缀必须配好 HTTPS 证书才能解析（主流托管平台自动搞定）。与 .mom 成对做「爸妈视角」双站是现成的内容矩阵玩法。命名上「名字 + .dad」（爸爸博主的标准写法）与「人名/主题词 + .blog」各是两边最点题的模式。",
+      pickA: ["爸爸博客与育儿分享", "冷笑话与幽默内容站", "家庭工具与 DIY 教程", "与 .mom 成对的内容矩阵"],
+      pickB: ["主题更宽的写作阵地", "人设可能淡出的长期博客", "Newsletter 网页版", "在意续费更便宜的创作者"],
+    },
+    en: {
+      title: ".dad vs .blog: The Dad Persona or The Writing Home",
+      metaDescription:
+        ".dad writes the dad's-eye view into the address; .blog is the writer's general home. Compare tone, pricing and security, then hunt names available on both.",
+      verdict:
+        "The split is persona density. .dad is the persona word — dad blogs and parenting diaries, dad-joke and humor sites, home tool and DIY tutorials: name.dad starts the dad's-eye view in the domain, English culture hands it free traffic through dad joke and dad bod memes, and it's a Google Registry suffix — same family as .app and .dev, HTTPS enforced across the zone. .blog is the format word — run by Automattic's registry (the WordPress parent), name.blog reads as someone's blog with zero reader education, and any topic fits. On price, .dad runs about $11 both ways — transparent all the way; .blog is commonly around $3 the first year and about $21/yr to renew — cheaper in and slightly cheaper to hold long-term. The test: the content stands on the dad persona — parenting takes, dad jokes, father-and-kid DIY → .dad says the persona in three letters, far livelier than any dadblog.com compound; the topics are broader or the persona may fade — the writing itself is the subject and parenting just one thread → .blog binds you to no persona and survives any turn. Two cautions: .dad's humor register cuts both ways — serious fatherhood counseling reads flippant on it; and a Google suffix must serve HTTPS or it won't resolve (mainstream hosts handle it automatically). Registering the .mom pair for a two-site parents' matrix is a ready-made content play. Naming: first name + .dad (the standard dad-blogger pattern) versus your name or topic word + .blog are each side's on-target patterns.",
+      pickA: ["Dad blogs & parenting diaries", "Dad-joke & humor content sites", "Home tools & DIY tutorials", "A .mom-paired parents' content matrix"],
+      pickB: ["Broader-topic writing homes", "Long-term blogs outliving the persona", "Newsletter web homes", "Renewal-cost-conscious writers"],
+    },
+  },
+  "dog-vs-pet": {
+    slug: "dog-vs-pet",
+    a: "dog",
+    b: "pet",
+    zh: {
+      title: ".dog 和 .pet 怎么选：犬类专营与全宠物赛道的分工",
+      metaDescription: ".dog 锁死犬类一个赛道，.pet 覆盖全宠物品类。对比两者的语义锐度、价格与适用场景差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在赛道宽度：.dog 更锐利——pet 泛指宠物、dog 锁死犬类，狗粮订阅、训犬与遛狗平台、犬种社区用 name.dog 定位分毫不差，good dog、top dog 的固定搭配让「词 + .dog」自然成句；.pet 更宽——宠物用品电商与门店、宠物医院与上门服务、宠物科技什么物种都能装，mars.pet（玛氏宠物）式的大公司品牌延伸就是背书。价格结构相反：.dog 注册约 $4、续费约 $52/年——首年便宜续费跳档，预算按续费算；.pet 注册约 $11、续费约 $21/年——价差小更平，长持每年省 $31。判断标准很简单：生意只做狗——狗粮、训犬、遛狗、犬种内容 → .dog 三个字母把赛道说完，垂直人群的搜索与消费极度聚焦；覆盖猫狗与多物种、或以后会扩品类 → .pet 不绑物种，扩到任何宠物都不违和。两个注意：宠物行业信任靠实拍与口碑，域名点题之外用户评价与案例照片才是转化关键；dog 在英语俚语里偶有贬义（dog day 式），品牌词要选正面搭配。命名上「犬种/品牌 + .dog」（corgi.dog 式垂直社区）与「品牌词/动物名 + .pet」各是两边最点题的模式。",
+      pickA: ["狗粮电商与订阅服务", "训犬与遛狗平台", "犬种科普与狗狗社区", "纯犬类的垂直品牌"],
+      pickB: ["多物种宠物用品电商", "宠物医院与上门服务", "宠物科技（喂食器、定位器）", "有扩品类计划、在意续费更便宜"],
+    },
+    en: {
+      title: ".dog vs .pet: The Dog Lane or The Whole Pet Aisle",
+      metaDescription:
+        ".dog locks onto the dog lane; .pet covers every species. Compare semantic sharpness, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is lane width. .dog is sharper — pet covers any animal, dog locks onto one lane: food subscriptions, training and walking platforms, breed communities on name.dog aim true to an audience that searches and spends with extreme vertical focus, and fixed phrases like good dog and top dog make word + .dog read as a sentence. .pet is wider — pet supply stores, vet clinics and mobile services, pet tech fit any species, with mars.pet (Mars Petcare) as the big-brand endorsement. The pricing structures are opposites: .dog about $4 to register jumping to about $52/yr — budget on the renewal; .pet about $11 to register and $21/yr to renew — flatter and $31/yr cheaper on a long hold. The test is simple: the business is dogs only — dog food, training, walking, breed content → .dog says the lane in three letters and the vertical focus pays; the catalog spans cats and more, or expansion is planned → .pet binds you to no species and fits whatever you add. Two cautions: trust in the pet trade is built on real photos and reviews — the domain opens the door but testimonials convert; and dog carries occasional negative slang in English (the dog-day sense), so pick positive brand pairings. Naming: breed or brand + .dog (the corgi.dog community pattern) versus brand or animal name + .pet are each side's on-target patterns.",
+      pickA: ["Dog food stores & subscriptions", "Training & dog-walking platforms", "Breed guides & dog communities", "Pure dog-lane vertical brands"],
+      pickB: ["Multi-species pet supply stores", "Vet clinics & mobile pet services", "Pet tech (feeders, trackers)", "Expansion plans & cheaper renewals"],
+    },
+  },
+  "gifts-vs-shop": {
+    slug: "gifts-vs-shop",
+    a: "gifts",
+    b: "shop",
+    zh: {
+      title: ".gifts 和 .shop 怎么选：送礼场景与通用店铺的分工",
+      metaDescription: ".gifts 把送礼场景写进域名，.shop 是通用电商的店铺后缀。对比两者的语义、价格与适用场景差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在场景锐度：.gifts 是场景词——礼品电商与定制礼物、企业礼品与伴手礼、节日礼物清单与推荐站，「来这儿挑礼物」的用途从地址就说清了，圣诞、情人节、母亲节的搜索高峰周期性爆发，「人群/场景词 + .gifts」正接住这类意图（forhim.gifts 式）；.shop 是店铺词——什么品类都能装，「品牌词 + .shop」本身就是一句行动号召，独立站与 DTC 品牌的通用选择。价格结构不同：.gifts 注册约 $8、续费约 $29/年——温和档长持无压力；.shop 首年常有低价促销、续费明显更高——预算按续费算。判断标准：生意就是「送礼」——礼品专营、定制礼物、企业礼品、节日推荐 → .gifts 的场景感直接变成转化力，比 giftshop.com 式拼接更短更准；品类更宽、送礼只是场景之一 → .shop 不绑场景，卖什么都成立。两个注意：礼品电商强季节性，节前物流履约的保障比域名更影响口碑；gifts 是复数、读作「各种礼物」，单一定制品用「品类 + .gifts」反而更准。命名上「人群/节日词 + .gifts」（直接接住送礼搜索）与「品牌词 + .shop」（后缀已说明店铺、主体别再叠词）各是两边最点题的模式。",
+      pickA: ["礼品电商与定制礼物", "企业礼品与伴手礼服务", "节日礼物清单与推荐站", "礼品卡与心愿单工具"],
+      pickB: ["品类更宽的独立站电商", "DTC 品牌官方商店", "垂直品类店（非送礼场景）", "线下店铺的线上入口"],
+    },
+    en: {
+      title: ".gifts vs .shop: The Occasion or The Storefront",
+      metaDescription:
+        ".gifts writes the gifting occasion into the address; .shop is the general storefront suffix. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is occasion sharpness. .gifts is the occasion word — gift stores and custom gifts, corporate gifting and favors, holiday gift guides: come here to pick a present is announced in the domain itself, and since Christmas, Valentine's and Mother's Day searches spike on schedule, audience or occasion word + .gifts catches exactly that intent (the forhim.gifts pattern). .shop is the storefront word — any category fits, brand + .shop is a call to action in itself, and it's the general choice for independent stores and DTC brands. The pricing structures differ: .gifts about $8 to register and $29/yr to renew — the mild tier, painless to hold; .shop runs cheap first-year promos with renewals notably higher — budget on the renewal. The test: the business is gifting — dedicated gift stores, custom gifts, corporate gifting, seasonal guides → .gifts turns the occasion into conversion power, shorter and sharper than any giftshop.com compound; the catalog is broader and gifting is just one scenario → .shop binds you to no occasion and fits whatever you sell. Two cautions: gifting is fiercely seasonal, so pre-holiday fulfillment builds the reputation more than the domain; and gifts is plural, reading as an assortment — a single custom product aims truer as category + .gifts. Naming: audience or holiday word + .gifts (catching gifting searches directly) versus brand word + .shop (the suffix already says store — don't stack shop words) are each side's on-target patterns.",
+      pickA: ["Gift stores & custom gifts", "Corporate gifting & favor services", "Holiday gift guides & lists", "Gift card & wishlist tools"],
+      pickB: ["Broader independent stores", "DTC brand storefronts", "Vertical category shops beyond gifting", "Online entrances for offline stores"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

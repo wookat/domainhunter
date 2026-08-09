@@ -366,7 +366,7 @@
     ]
   },
   "vs": {
-    "count": 204,
+    "count": 210,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -571,7 +571,13 @@
       "eco-vs-earth",
       "earth-vs-world",
       "engineering-vs-tech",
-      "engineering-vs-dev"
+      "engineering-vs-dev",
+      "family-vs-com",
+      "baby-vs-store",
+      "mom-vs-me",
+      "dad-vs-blog",
+      "dog-vs-pet",
+      "gifts-vs-shop"
     ]
   }
 }

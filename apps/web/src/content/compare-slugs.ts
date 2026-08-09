@@ -207,6 +207,12 @@ export const COMPARE_SLUGS = [
   "earth-vs-world",
   "engineering-vs-tech",
   "engineering-vs-dev",
+  "family-vs-com",
+  "baby-vs-store",
+  "mom-vs-me",
+  "dad-vs-blog",
+  "dog-vs-pet",
+  "gifts-vs-shop",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
