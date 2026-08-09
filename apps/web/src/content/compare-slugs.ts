@@ -213,6 +213,12 @@ export const COMPARE_SLUGS = [
   "dad-vs-blog",
   "dog-vs-pet",
   "gifts-vs-shop",
+  "photo-vs-photography",
+  "health-vs-life",
+  "fit-vs-fitness",
+  "dance-vs-studio",
+  "guide-vs-tips",
+  "reviews-vs-blog",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

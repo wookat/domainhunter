@@ -4645,6 +4645,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Broader independent stores", "DTC brand storefronts", "Vertical category shops beyond gifting", "Online entrances for offline stores"],
     },
   },
+  "photo-vs-photography": {
+    slug: "photo-vs-photography",
+    a: "photo",
+    b: "photography",
+    zh: {
+      title: ".photo 和 .photography 怎么选：单数名片与全拼手艺的分工",
+      metaDescription: ".photo 短促上口像一张名片，.photography 全拼写出职业身份。对比两者的音节、价格与命名模式差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在音节：.photo 是名片词——摄影师个人主页、婚礼跟拍与约拍工作室、照片打印与分享工具用 name.photo，五个字母不带复数不拖长音节，客户在婚礼现场听到 lily.photo 回家就能拼对，口播与社交简介是它的主场；.photography 是手艺词——十一个字母全拼写出「摄影是我的职业」，摄影师作品集、商业与产品摄影工作室用它更显专业分量，名片与作品集水印上最见功力。价格差异明显：.photo 注册约 $26、续费约 $26/年——注册续费同价，无首年低价钓鱼，报价即长期成本；.photography 注册约 $6、续费约 $29/年——首年便宜续费温和，长持两边差距不大。判断标准：名字要靠口播与短促传播——婚礼现场、社交简介、短视频口播 → .photo 的单数短音节赢；主打专业身份与书面呈现——作品集官网、名片、提案文档 → .photography 的全拼更有分量。两个注意：photo 对英文用户是「照片」而非「摄影服务」，约拍业务页面要把服务说清；两者获客主阵地都在 Instagram 等平台，域名的角色是接单与档期预约的稳定门面。命名上「人名 + .photo」（口播友好的摄影师名片）与「人名 + .photography」（书面正式的职业写法）各是两边最点题的模式。",
+      pickA: ["口播与社交简介传播为主", "婚礼跟拍与本地约拍", "照片打印与分享工具", "预算按同价长持核算"],
+      pickB: ["摄影师作品集官网", "商业与产品摄影工作室", "名片与水印书面呈现", "首年低价起步的个人品牌"],
+    },
+    en: {
+      title: ".photo vs .photography: The Business Card or The Craft in Full",
+      metaDescription:
+        ".photo is short and spellable like a business card; .photography spells out the profession. Compare syllables, pricing and naming patterns, then hunt names available on both.",
+      verdict:
+        "The split is syllables. .photo is the business-card word — photographer personal pages, wedding and portrait studios, photo print and sharing tools on name.photo: five letters, no plural, no extra syllables, so a client who hears lily.photo at a wedding can spell it at home; spoken word and social bios are its home turf. .photography is the craft word — eleven letters spelling photography is my profession, carrying professional weight on portfolio sites, commercial and product studios, business cards and watermarks. Pricing differs sharply: .photo runs about $26 to register and $26/yr to renew — same price both ways, no teaser trap, the sticker is the long-term cost; .photography is about $6 to register and $29/yr to renew — cheap in, mild to hold, and over a long hold the two land close. The test: the name travels by voice and quick reads — wedding venues, social bios, short-video mentions → .photo's short singular wins; the play is professional identity in print — portfolio sites, business cards, proposals → .photography's full spelling carries more weight. Two cautions: photo means the picture, not the service, to English ears — booking-led studios should spell out the offer on the page; and both trades win clients on Instagram and similar platforms, so the domain's job is the stable storefront for bookings. Naming: first name + .photo (the speakable photographer card) versus first name + .photography (the formal written pattern) are each side's on-target patterns.",
+      pickA: ["Voice-first & social-bio brands", "Wedding & local portrait work", "Photo print & sharing tools", "Flat-price long holds"],
+      pickB: ["Photographer portfolio sites", "Commercial & product studios", "Business cards & watermarks", "Cheap first-year personal brands"],
+    },
+  },
+  "health-vs-life": {
+    slug: "health-vs-life",
+    a: "health",
+    b: "life",
+    zh: {
+      title: ".health 和 .life 怎么选：行业信号与生活温度的取舍",
+      metaDescription: ".health 把健康行业写进域名，.life 用温度覆盖整个生活方式赛道。对比两者的语义、价格与信任差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在专业浓度：.health 是行业词——数字健康与健康管理应用、诊所与健康服务机构、企业员工健康福利平台用 name.health，「正经做健康」的信号从地址就发出，CVS、AXA 等大机构启用 .health 站点持续给后缀背书，在信任要求极高的健康赛道这层信号有真金白银的价值；.life 是温度词——健康只是它的一个分区，生活方式品牌、家庭服务、心理与个人成长、保险养老都装得下，「品牌 + .life」像一句承诺而非一份资质。价格差一档：.health 注册约 $11、续费约 $62/年——首年低价续费中高档，预算按续费核算；.life 首年十几元促销、续费两百元档（约 $25–30/年）——长持比 .health 每年省一半以上。判断标准：业务核心是「健康」本身——健康应用、诊所服务、医疗内容 → .health 的行业信号是 .life 给不了的；业务是「过好日子」的泛生活方式——健康只是切入点、以后会横向扩展 → .life 不绑赛道，温度也更亲人。两个注意：健康内容受平台与监管双重审视，医疗声明合规比域名本身更关键；.health 续费约 ¥449/年 对个人博客偏贵，轻量内容站从 .life 起步更稳。命名上「品牌/人群 + .health」（行业身份一步到位）与「品牌 + .life」（生活承诺式写法）各是两边最点题的模式。",
+      pickA: ["数字健康与健康管理应用", "诊所与健康服务机构", "企业员工健康福利平台", "信任要求高的健康品牌"],
+      pickB: ["泛生活方式品牌与博客", "家庭服务与养老保险", "心理与个人成长社区", "预算敏感的长期内容站"],
+    },
+    en: {
+      title: ".health vs .life: The Industry Signal or The Warmth of Living",
+      metaDescription:
+        ".health writes the industry into the address; .life covers the whole lifestyle lane with warmth. Compare semantics, pricing and trust, then hunt names available on both.",
+      verdict:
+        "The split is professional density. .health is the industry word — digital health and wellness apps, clinics and health services, corporate wellness platforms on name.health signal serious about health from the address itself, with CVS, AXA and other large institutions endorsing the suffix by adoption; in a vertical where trust is everything, that signal has cash value. .life is the warmth word — health is just one of its rooms: lifestyle brands, family services, mental health and personal growth, insurance and retirement all fit, and brand + .life reads as a promise rather than a credential. Pricing sits a tier apart: .health about $11 to register jumping to about $62/yr — budget on the renewal; .life runs first-year promos of a few dollars with renewals near $25–30/yr — less than half of .health's holding cost. The test: the business core is health itself — health apps, clinic services, medical content → .health's industry signal is something .life can't give; the business is living well broadly — health is the entry point and expansion is coming → .life binds you to no lane and feels warmer. Two cautions: health content faces platform and regulatory scrutiny alike, so medical-claim compliance matters more than the domain; and $62/yr is steep for a personal blog — lightweight content sites start safer on .life. Naming: brand or audience + .health (industry identity in one step) versus brand + .life (the living-promise pattern) are each side's on-target patterns.",
+      pickA: ["Digital health & wellness apps", "Clinics & health services", "Corporate wellness platforms", "Trust-heavy health brands"],
+      pickB: ["Broad lifestyle brands & blogs", "Family, insurance & retirement services", "Mental health & growth communities", "Budget-conscious long-term content sites"],
+    },
+  },
+  "fit-vs-fitness": {
+    slug: "fit-vs-fitness",
+    a: "fit",
+    b: "fitness",
+    zh: {
+      title: ".fit 和 .fitness 怎么选：口号短词与全拼场馆的分工",
+      metaDescription: ".fit 三个字母像一句口号，.fitness 全拼写出场馆身份。对比两者的音节、价格与适用场景差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在场景：.fit 是口号词——健身应用与训练计划工具、私教个人品牌、运动穿搭电商用 name.fit，get fit、stay fit 的固定搭配让「动词 + .fit」读起来就是一句口号，三个字母在 App 名与口播场景明显更顺，fit 还有「合身」义、服装电商用它一语双关；.fitness 是场馆词——健身房、瑜伽普拉提馆、CrossFit 场馆、线上健身课程用 name.fitness，全拼写出行业身份，开店的正式感它更足。价格都温和：.fit 注册约 $2、续费约 $26/年——首年白菜价长持无压力；.fitness 注册约 $6、续费约 $33/年——对场馆月卡收入可以忽略，两边预算都不构成决策因素。判断标准：主体是应用、个人或口号——健身 App、私教个人品牌、穿搭电商 → .fit 的短促与双关赢；主体是场馆与项目——实体健身房、课程体系 → .fitness 的全拼更正式，本地学员搜店名核实时也更好认。两个注意：.fit 首年 $2 的低门槛吸引过垃圾站，个别平台对 .fit 链接审查稍严，正经做站内容质量要跟上；健身获客重度依赖短视频与本地平台，域名的角色是品牌官网与课程预约的稳定入口。命名上「动词 + .fit」（get.fit 式口号款）与「店名/风格词 + .fitness」（场馆标准写法）各是两边最点题的模式。",
+      pickA: ["健身应用与训练计划工具", "私教个人品牌", "运动穿搭电商（合身双关）", "口播与 App 名场景多"],
+      pickB: ["健身房与瑜伽普拉提馆", "CrossFit 与团课场馆", "线上健身课程体系", "本地招生的实体门店"],
+    },
+    en: {
+      title: ".fit vs .fitness: The Slogan or The Gym in Full",
+      metaDescription:
+        ".fit reads like a three-letter slogan; .fitness spells out the gym. Compare syllables, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is the shape of the business. .fit is the slogan word — fitness apps and training-plan tools, personal-trainer brands, activewear stores on name.fit: fixed phrases like get fit and stay fit make verb + .fit read as a slogan, three letters travel best in app names and spoken mentions, and fit also means well-fitting — a built-in double meaning for apparel. .fitness is the gym word — gyms, yoga and pilates studios, CrossFit boxes, online course programs on name.fitness spell out the industry in full, with the formality a physical venue wants. Both price mild: .fit about $2 to register and $26/yr to renew — painless to hold; .fitness about $6 and $33/yr — a rounding error against membership revenue, so budget decides nothing here. The test: the subject is an app, a person or a slogan — fitness apps, trainer brands, activewear → .fit's brevity and double meaning win; the subject is a venue and its programs — physical gyms, course systems → .fitness reads more formal and is easier for local members verifying the name. Two cautions: .fit's $2 entry drew spam sites historically, so some platforms scrutinize .fit links — quality content carries the reputation; and fitness businesses win clients on short video and local platforms, so the domain's job is the stable booking front door. Naming: verb + .fit (the get.fit slogan pattern) versus venue or style word + .fitness (the standard gym pattern) are each side's on-target patterns.",
+      pickA: ["Fitness apps & training tools", "Personal-trainer brands", "Activewear stores (the fit pun)", "App-name & spoken-word contexts"],
+      pickB: ["Gyms & yoga/pilates studios", "CrossFit & group-class venues", "Online course programs", "Local member-facing venues"],
+    },
+  },
+  "dance-vs-studio": {
+    slug: "dance-vs-studio",
+    a: "dance",
+    b: "studio",
+    zh: {
+      title: ".dance 和 .studio 怎么选：舞种锐度与创作空间的分工",
+      metaDescription: ".dance 把舞蹈行业写进域名，.studio 是创作团队的通用招牌。对比两者的语义锐度、价格与适用场景差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在锐度：.dance 更锐利——舞蹈工作室与培训机构、舞者个人主页、舞蹈赛事与演出团体用 name.dance，「跳舞的地方」从地址就说清，学员搜「城市 + 舞种」找课、家长搜机构名核实资质，「机构名 + .dance」两件事一次做完，街舞、拉丁、芭蕾等垂直舞种的行业归属感是通用后缀给不了的；.studio 更宽——设计、影像、动画、游戏、舞蹈都装得下，「小而专的创作团队」气质从域名立住，业务跨舞蹈与其他艺术形式时不违和。价格都温和：.dance 注册约 $10、续费约 $22/年——工作室与个人长持无压力；.studio 首年常有促销、续费约 $25–35/年——两边差距不大，预算不构成决策因素。判断标准：生意就是舞蹈——舞蹈培训、舞者品牌、演出团体 → .dance 五个字母把赛道说完，比 dancestudio.com 式拼接更短更准；空间是综合艺术形态——舞蹈只是课程之一、还有音乐美术戏剧 → .studio 不绑舞种，扩什么课都成立。两个注意：舞蹈内容的传播主阵地在抖音/B 站/Instagram，域名的角色是招生报名与档期预订的稳定入口；dance 是英文词，纯中文本地招生要在页面同步中文品牌名。命名上「舞种 + 城市 + .dance」（直接接住找课搜索）与「品牌词 + .studio」（创作团队通用写法）各是两边最点题的模式。",
+      pickA: ["舞蹈工作室与培训机构", "舞者个人主页与作品集", "舞蹈赛事与演出团体", "垂直舞种社区（街舞、拉丁）"],
+      pickB: ["综合艺术空间与多课程机构", "设计与影像创作团队", "业务可能扩出舞蹈的空间", "小而专的创作团队品牌"],
+    },
+    en: {
+      title: ".dance vs .studio: The Dance Lane or The Creative Room",
+      metaDescription:
+        ".dance writes the dance trade into the address; .studio is the general sign of a creative team. Compare semantic sharpness, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is sharpness. .dance is sharper — dance studios and academies, dancers' personal pages, competitions and performance troupes on name.dance say the dancing happens here in the domain itself: students search city + style for classes, parents search the school's name to verify it, and school name + .dance does both jobs at once, with a vertical belonging that street, latin and ballet communities feel instantly. .studio is wider — design, film, animation, games and dance all fit, projecting the small-and-focused creative team from the address, and nothing breaks if the business spans dance and other art forms. Both price mild: .dance about $10 to register and $22/yr to renew — painless for studios and individuals; .studio runs frequent first-year promos with renewals near $25–35/yr — close enough that budget decides nothing. The test: the business is dance — academies, dancer brands, troupes → .dance says the lane in five letters, shorter and sharper than any dancestudio.com compound; the space is a broader arts venue — dance is one class among music, art and theater → .studio binds you to no discipline and fits whatever you add. Two cautions: dance content spreads on TikTok, Instagram and their peers, so the domain's job is the stable enrollment and booking entrance; and dance is an English word — purely local-language schools should pair the local brand name on the page. Naming: style + city + .dance (catching class searches directly) versus brand word + .studio (the general creative-team pattern) are each side's on-target patterns.",
+      pickA: ["Dance studios & academies", "Dancers' pages & portfolios", "Competitions & performance troupes", "Vertical style communities (street, latin)"],
+      pickB: ["Multi-discipline arts venues", "Design & film creative teams", "Spaces that may outgrow dance", "Small focused creative-team brands"],
+    },
+  },
+  "guide-vs-tips": {
+    slug: "guide-vs-tips",
+    a: "guide",
+    b: "tips",
+    zh: {
+      title: ".guide 和 .tips 怎么选：成体系攻略与轻量技巧的分工",
+      metaDescription: ".guide 承诺一份成体系的攻略，.tips 承诺一批轻量实用的技巧。对比两者的内容预期、价格与命名模式差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在内容颗粒度：.guide 是体系词——旅行攻略与城市指南、购物选品与工具评测指南、新手入门教程站用 name.guide，「city guide」「buying guide」都是用户主动敲进搜索框的词，「主题词 + .guide」让域名本身长得像搜索结果，承诺的是一份从头到尾带你走完的攻略，导游与向导服务用它还多一层「真人向导」义；.tips 是技巧词——生活妙招、省钱指南、垂类小技巧站用 name.tips，「领域 + .tips」（travel.tips、tax.tips 类）读出来同样是查询词，但预期是轻量、零散、即取即用的建议。价格都温和：.guide 注册约 $6、续费约 $33/年；.tips 注册约 $8、续费约 $25/年——长持 .tips 略省，差距不构成决策因素。判断标准：内容是成体系的长文攻略——按章节组织、从入门到进阶 → .guide 的体系预期更合身；内容是碎片化技巧合集——每篇一招、随查随用 → .tips 的轻量气质更准。两个注意：两者同属 Identity Digital、注册链路一致，真正的分野只在内容形态，选错不致命但气质会拧；攻略与技巧站竞争都激烈，域名点题只是起点，内容深度与更新频率才是排名关键。命名上「城市/品类 + .guide」（旅行与选品站标准款）与「领域 + .tips」（读出来就是搜索词）各是两边最点题的模式。",
+      pickA: ["旅行攻略与城市指南", "购物选品与评测指南", "新手教程与入门体系", "导游与向导服务预订"],
+      pickB: ["生活妙招与省钱技巧站", "垂类小技巧博客", "工具型 newsletter", "碎片化即查即用内容"],
+    },
+    en: {
+      title: ".guide vs .tips: The Full Walkthrough or The Quick Trick",
+      metaDescription:
+        ".guide promises a systematic walkthrough; .tips promises a batch of quick practical tricks. Compare content expectations, pricing and naming patterns, then hunt names available on both.",
+      verdict:
+        "The split is content granularity. .guide is the system word — travel and city guides, buying and tool-review guides, beginner walkthrough sites on name.guide: city guide and buying guide are queries users type by hand, so topic + .guide makes the domain read like a search result, promising a start-to-finish walkthrough — and tour-guide services get a bonus human-guide reading. .tips is the trick word — life hacks, money-saving advice, vertical quick-tip sites on name.tips: domain + .tips (the travel.tips, tax.tips pattern) reads as a query too, but the expectation is light, granular, grab-and-go advice. Both price mild: .guide about $6 to register and $33/yr to renew; .tips about $8 and $25/yr — .tips slightly cheaper to hold, not enough to decide anything. The test: the content is a structured long-form walkthrough — organized in chapters, beginner to advanced → .guide's systematic expectation fits; the content is a collection of standalone tricks — one move per post, consulted on demand → .tips' lightweight register aims truer. Two cautions: both run on Identity Digital with identical registration plumbing, so the real divide is purely content shape — picking wrong isn't fatal but reads off-key; and guide and tip content are fiercely competitive, so the on-target domain is the start while depth and update cadence decide rankings. Naming: city or category + .guide (the travel and buying-guide standard) versus domain word + .tips (reading as the query itself) are each side's on-target patterns.",
+      pickA: ["Travel & city guides", "Buying & review guides", "Beginner walkthrough systems", "Tour-guide service bookings"],
+      pickB: ["Life-hack & money-saving sites", "Vertical quick-tip blogs", "Tool-style newsletters", "Grab-and-go fragment content"],
+    },
+  },
+  "reviews-vs-blog": {
+    slug: "reviews-vs-blog",
+    a: "reviews",
+    b: "blog",
+    zh: {
+      title: ".reviews 和 .blog 怎么选：评测立场与写作阵地的分工",
+      metaDescription: ".reviews 把「替你试过」的立场写进域名，.blog 是写作者的通用阵地。对比两者的商业意图、价格与适用场景差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在立场：.reviews 是立场词——产品评测与横向对比站、软件与服务点评平台、影视书籍乐评站用 name.reviews，「产品名 + reviews」是购买决策前的黄金搜索词，「品类 + .reviews」让域名精准卡进这条搜索路径，对联盟营销与比价内容站，这是少数天生带商业意图的后缀；.blog 是形态词——Automattic（WordPress 母公司）旗下注册局运营，name.blog 天然读成「某某的博客」，什么主题都能写、读者零解释成本，评测只是它能装的内容之一。价格结构不同：.reviews 注册约 $5、续费约 $50/年——首年低价续费中档，预算按续费核算；.blog 首年常见 $3 上下、续费约 $21/年——长持每年省 $29，个人创作者可长期负担。判断标准：站点以「评测」立身——测评方法、打分体系、购买建议是主体 → .reviews 的立场直接变成流量入口，商业转化预期它更高；写作本身是主体——评测只是众多主题之一、还有随笔与教程 → .blog 不绑立场，写什么都成立且持有更便宜。两个注意：评测站的生命线是公信力，测评方法透明与利益披露比域名更决定长期口碑；reviews 是复数、读作「一批评价」，聚合对比站用它正好，个人随笔向的单篇点评放 .blog 气质更合。命名上「品类 + .reviews」（直接接住购买前搜索）与「人名/主题词 + .blog」（写作者标准写法）各是两边最点题的模式。",
+      pickA: ["产品评测与横向对比站", "软件与服务点评平台", "联盟营销与比价内容站", "本地商家口碑聚合"],
+      pickB: ["主题更宽的写作阵地", "个人博客与随笔", "Newsletter 网页版", "在意续费更便宜的创作者"],
+    },
+    en: {
+      title: ".reviews vs .blog: The Verdict Stand or The Writing Home",
+      metaDescription:
+        ".reviews writes the we-tested-it stance into the address; .blog is the writer's general home. Compare commercial intent, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is stance. .reviews is the stance word — product review and comparison sites, software and service rating platforms, film and book criticism on name.reviews: product name + reviews is the golden pre-purchase query, so category + .reviews parks the domain squarely on that path, and for affiliate and comparison content few suffixes carry commercial intent this natively. .blog is the format word — run by Automattic's registry (the WordPress parent), name.blog reads as someone's blog with zero reader education, any topic fits, and reviews are just one thing it can hold. The pricing structures differ: .reviews about $5 to register jumping to about $50/yr — budget on the renewal; .blog commonly around $3 the first year and about $21/yr to renew — $29/yr cheaper to hold, sustainable for individual creators. The test: the site stands on verdicts — methodology, scoring, buying advice are the substance → .reviews turns the stance into a traffic entrance with higher conversion expectations; the writing itself is the subject — reviews are one thread among essays and tutorials → .blog binds you to no stance and costs less to keep. Two cautions: a review site lives or dies on credibility, so transparent methodology and disclosed affiliations shape the reputation more than the domain; and reviews is plural, reading as a body of verdicts — right for aggregators and comparisons, while personal one-off takes sit more naturally on .blog. Naming: category + .reviews (catching pre-purchase searches directly) versus your name or topic word + .blog (the standard writer pattern) are each side's on-target patterns.",
+      pickA: ["Product review & comparison sites", "Software & service rating platforms", "Affiliate & price-comparison content", "Local business review aggregators"],
+      pickB: ["Broader-topic writing homes", "Personal blogs & essays", "Newsletter web homes", "Renewal-cost-conscious writers"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
