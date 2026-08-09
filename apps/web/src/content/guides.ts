@@ -11359,6 +11359,390 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  productphoto: {
+    slug: "productphoto",
+    tlds: [
+      { tld: "com", zh: "客户是电商卖家与品牌方，报价单和合同上 .com 最正规", en: "Your clients are sellers and brands — .com looks most official on quotes and contracts" },
+      { tld: "photos", zh: "后缀即交付物，「拍出来的就是这些照片」零解释", en: "The suffix is the deliverable itself — \"these are the photos\" with zero explanation" },
+      { tld: "studio", zh: "工作室身份直给，棚拍与置景能力的气质自带", en: "Studio identity made explicit — set-building and in-house shooting implied" },
+    ],
+    zh: {
+      label: "电商产品摄影",
+      title: "电商产品摄影品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "电商产品摄影品牌命名指南：转化叙事、光影词根、交付效率感等 5 种思路，soona/Squareshot/Pixelz 等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的产品摄影域名。",
+      intro:
+        "电商产品摄影的名字要对「卖家的钱包」说话，而不是对「摄影师的情怀」说话。客户下单前只关心一件事：这套图能不能让我的转化率涨。所以这个行业的头部品牌几乎都放弃了传统影楼的「艺术感」命名，转向「转化叙事」——soona 卖的是「快到今天下单明天出图」，Pixelz 卖的是「像素级修图流水线」，Squareshot 把主图的方形规格直接写进名字。这背后是客群的迁移：找产品摄影的人是运营和电商老板，他们用采购思维评估你，名字里的效率感、规格感、流程感就是第一份报价单。第二个关键是平台语境：你的名字会出现在淘宝服务市场、Fiverr 列表和商家群转介绍里，和几十个「XX 视觉」「XX 影像」并排——通用的「视觉」「影像」二字等于匿名。命名时把交付物、速度或规格中的一样写进名字，剩下的交给案例集。",
+      namingIdeas: [
+        "转化叙事：名字里放「卖得动」的暗示——主图、爆款、转化词根，客户按采购思维评估你，效率感就是第一份报价单",
+        "交付效率感：快、直出、次日达式的时间承诺入名（soona = soon 的变体），电商节奏里速度本身就是卖点",
+        "规格与平台词根：方图、白底、主图等规格词自带专业信号，懂行的运营一眼知道你熟平台规则",
+        "光影词根克制用：light、snap、shot 等摄影词根要与品类词组合（Squareshot），单独用就掉回传统影楼的匿名感",
+        "警惕「XX 视觉」「XX 影像」：服务市场里并排几十家，通用词等于匿名，名字里没有记忆钩子转介绍就断链",
+      ],
+      cases: [
+        { name: "soona", takeaway: "soon 的变体造词加一个元音结尾：「快」这个电商摄影最硬的卖点写进名字，四个字母好念好拼——效率叙事命名的教科书" },
+        { name: "Squareshot", takeaway: "square（方图规格）+ shot（拍摄）：电商主图的方形规格直接入名，懂平台规则的运营一眼识别——规格词命名的精准打击" },
+        { name: "Pixelz", takeaway: "pixel 加复数变形：像素级修图的流水线定位，名字本身就在说「我们是批量处理图片的工厂」——B2B 效率感的直给表达" },
+        { name: "StyleShoots", takeaway: "style + shoots 的直白组合：服饰类目垂直定位写进名字，设备品牌做到品类代名词——垂直聚焦换来的搜索独占" },
+        { name: "POW! Photography", takeaway: "拟声词 POW 加惊叹号：在一排「XX Photography」里视觉上先跳出来——服务市场列表里的差异化就是生意" },
+      ],
+      pitfalls: [
+        "用传统影楼思维起名：艺术感词藻打动不了看转化率的运营，客户要的是「卖得动」不是「拍得美」",
+        "「XX 视觉」「XX 影像」通用词：服务市场里并排几十家，毫无辨识度，转介绍时客户想不起你叫什么",
+        "名字锁死单一类目：只叫「XX 服装摄影」，明年接珠宝和食品单就自相矛盾，品类词要选可扩展的",
+        "只查域名没查服务市场重名：淘宝服务市场与 Fiverr 里同名店铺会直接分流你的搜索流量",
+      ],
+    },
+    en: {
+      label: "Product photography",
+      title: "How to Name a Product Photography Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Product photography naming guide: conversion-first stories, spec words and delivery-speed signals, breakdowns of soona/Squareshot/Pixelz, recommended TLDs and pitfalls — then hunt an available product photography domain with AI.",
+      intro:
+        "A product photography name must speak to the seller's wallet, not the photographer's soul. Before booking, your client cares about exactly one thing: will these images lift my conversion rate. That's why the category leaders have abandoned art-house studio naming for conversion narratives — soona sells \"order today, shots tomorrow\", Pixelz sells a pixel-grade retouching pipeline, and Squareshot writes the square listing-image spec straight into the name. Behind this is a shift in who's buying: the person hiring a product photographer is an e-commerce operator or store owner who evaluates you with procurement logic, so the efficiency, spec and process signals in your name are your first quote sheet. The second reality is platform context: your name will sit in Taobao service marketplaces, Fiverr listings and merchant-group referrals next to dozens of \"XX Visuals\" and \"XX Imaging\" — generic imaging words are effectively anonymity. Put one of deliverable, speed or spec into the name; let the portfolio do the rest.",
+      namingIdeas: [
+        "Lead with conversion: hints of sells-through — hero image, bestseller, lift roots. Your buyer thinks in procurement terms, and efficiency in the name is your first quote",
+        "Signal delivery speed: soon-style time promises (soona) — in e-commerce cadence, turnaround itself is the selling point",
+        "Use spec and platform words: square, white-background, listing-shot vocabulary reads as insider fluency to the operators who hire you",
+        "Ration the photo roots: light, snap, shot only work fused with a category word (Squareshot) — alone they dissolve into studio-anonymity",
+        "Avoid generic \"XX Visuals\": marketplace listings stack dozens of them side by side, and a name without a memory hook breaks the referral chain",
+      ],
+      cases: [
+        { name: "soona", takeaway: "A coinage from \"soon\" with a soft vowel ending: the hardest selling point in e-commerce photography — speed — written into four spellable letters. Textbook efficiency naming" },
+        { name: "Squareshot", takeaway: "square (the listing-image spec) + shot: the platform format built into the name — operators who know marketplace rules identify you instantly. Precision spec-word naming" },
+        { name: "Pixelz", takeaway: "pixel with a plural mutation: the name itself says \"we are a factory for images at scale\" — B2B efficiency stated outright" },
+        { name: "StyleShoots", takeaway: "style + shoots: apparel vertical focus written into the name, and the equipment brand became shorthand for the category — search ownership bought by vertical focus" },
+        { name: "POW! Photography", takeaway: "An onomatopoeia plus an exclamation mark: visually jumps out of a column of \"XX Photography\" listings — in marketplace lists, differentiation is the business" },
+      ],
+      pitfalls: [
+        "Naming like a portrait studio: artistic flourishes don't move an operator watching conversion rates — they're buying sells-through, not beauty",
+        "Generic \"XX Visuals\" / \"XX Imaging\": dozens per marketplace page, zero recall — referrals die when the client can't remember what you're called",
+        "Locking into one category: \"XX Apparel Photography\" contradicts itself the day you take jewelry and food orders — keep category words expandable",
+        "Clearing only the domain: a same-name shop on Taobao's service market or Fiverr siphons your search traffic directly",
+      ],
+    },
+  },
+  portrait: {
+    slug: "portrait",
+    tlds: [
+      { tld: "com", zh: "连锁写真馆要上点评平台与商场招商表，.com 最正规", en: "Portrait chains live on review platforms and mall leasing sheets — .com reads most established" },
+      { tld: "photo", zh: "单数 photo 干脆利落，「一张好照片」的承诺感直给", en: "Singular and crisp — the promise of \"one great photo\" made directly" },
+      { tld: "gallery", zh: "把写真馆讲成画廊，精修与陈列价值的气质自带", en: "Frames the studio as a gallery — retouch-and-display value built into the suffix" },
+    ],
+    zh: {
+      label: "个人写真",
+      title: "个人写真照相馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "个人写真照相馆命名指南：最美时刻叙事、色彩意象、标准化信任感等 5 种思路，海马体/天真蓝/盘子女人坊等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的写真馆域名。",
+      intro:
+        "个人写真的名字卖的是「更好版本的自己」。客人走进写真馆之前，先在小红书刷到别人的成片、在点评平台比较过三家、在闺蜜群里问过「哪家拍证件照好看」——名字在每一个环节都要经得起转述。这个行业最有意思的命名现象是「去摄影化」：头部品牌海马体、天真蓝的名字里都没有「摄影」二字。海马体借大脑记忆中枢之名，把拍照升维成「记住美好」；天真蓝用一种情绪色彩，让人未进店先感到干净透亮。它们共同放弃了「XX 摄影」「XX 照相馆」的品类描述，换来的是品牌联想的独占。另一条路线是盘子女人坊式的场景命名——古装写真的戏剧感直接写进名字，垂直客群一眼识别。要警惕的是「美」「颜」「像」的堆砌：美颜相机时代，这些字在客人眼里等于「过度修图」，反而消解了「记录真实的我」的信任。",
+      namingIdeas: [
+        "去摄影化命名：不用「摄影」「照相」品类词，借记忆、时刻、遇见等升维词——海马体证明写真卖的是记忆不是快门",
+        "色彩与情绪意象：一种颜色一种心情（天真蓝），未进店先有画面感，小红书笔记的标题都替你写好了",
+        "标准化信任感：连锁写真的核心承诺是「每家店一样好」，名字要干净利落可复制，方言梗和生僻字都开不了分店",
+        "垂直场景直给：古装、闺蜜、职业形象照——垂直定位写进名字（盘子女人坊），目标客群搜索时精准命中",
+        "警惕美颜系字眼：美、颜、像的堆砌在过度修图时代反而扣分，客人要的是「更好的我」不是「不像我」",
+      ],
+      cases: [
+        { name: "海马体", takeaway: "借大脑记忆中枢「海马体」之名：把拍照升维成「储存美好记忆」，三个字自带科普话题度——去摄影化命名的开山之作" },
+        { name: "天真蓝", takeaway: "情绪+色彩的三字组合：未进店先感到干净透亮，「天真」的心理暗示恰好对冲写真的做作感——色彩意象命名的典范" },
+        { name: "盘子女人坊", takeaway: "「盘子」的市井亲切+「女人坊」的场景直给：古装写真的垂直定位写进名字，搜索「古装写真」的客群精准命中——垂直命名的长期主义" },
+        { name: "缦图摄影", takeaway: "「缦」字的织物质感+图：海马体母公司的集团名，一个生僻字换来了商标独占与高级感——单字审美的风险与收益并存" },
+        { name: "JCPenney Portraits", takeaway: "百货品牌+品类词的老派结构：信任背书直接继承母品牌，证明写真行业「谁给你拍」比「叫什么」更重——渠道品牌的命名逻辑" },
+      ],
+      pitfalls: [
+        "「XX 摄影」「XX 照相馆」品类词命名：点评平台一搜一整页，客人记住的是套餐价格不是你的名字",
+        "美颜系字眼堆砌：美、颜、像在过度修图时代等于「拍出来不像我」，信任感不升反降",
+        "名字锁死单一场景：只叫「XX 证件照」，客单更高的全家福和形象照业务就接不进来",
+        "生僻字与方言梗：单店有个性，连锁开分店时收银系统、发票抬头和外地客人都会卡壳",
+      ],
+    },
+    en: {
+      label: "Portrait studios",
+      title: "How to Name a Portrait Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Portrait studio naming guide: better-self narratives, color moods and chain-grade trust, breakdowns of himo/Naive Blue/JCPenney Portraits, recommended TLDs and pitfalls — then hunt an available portrait studio domain with AI.",
+      intro:
+        "A portrait studio's name sells \"a better version of yourself\". Before a client walks in, she has scrolled someone else's finished shots on social feeds, compared three studios on review platforms, and asked her group chat \"where should I get my ID photo taken\" — the name must survive retelling at every step. The most interesting naming phenomenon in this category is de-photography-fication: the Chinese chain leaders himo (海马体, named after the hippocampus) and Naive Blue (天真蓝) contain no \"photo\" word at all. Himo borrows the brain's memory center to elevate picture-taking into \"keeping what's beautiful\"; Naive Blue uses an emotional color so you feel clean, bright light before entering the store. Both traded the category description \"XX Photography\" for exclusive brand associations. The other route is scene-vertical naming à la Pan Zi Nü Ren Fang — costume-portrait theatricality written into the name, instantly recognized by its target audience. The trap: stacking beauty-filter words. In the age of over-retouching, \"beauty/glam/perfect\" reads as \"won't look like me\" and erodes the core trust of a portrait — a truer, better self.",
+      namingIdeas: [
+        "De-photography-fy: skip \"photo/studio\" category words for elevation words — memory, moment, encounter. Himo proved portraits sell memories, not shutters",
+        "Color as mood: one color, one feeling (Naive Blue) — the client pictures the light before entering, and social-post titles write themselves",
+        "Name for chain-grade trust: the promise of a portrait chain is \"equally good at every branch\" — clean, replicable names scale; dialect puns and rare characters don't",
+        "Go scene-vertical: costume, best-friend, professional-headshot verticals written into the name hit their searchers precisely",
+        "Beware beauty-filter words: in the over-retouch era, glam-stacking signals \"not going to look like me\" — clients want a better self, not a different one",
+      ],
+      cases: [
+        { name: "himo (海马体)", takeaway: "Named after the hippocampus, the brain's memory center: picture-taking elevated into \"storing beautiful memories\", with built-in conversational spark — the pioneering work of de-photography-fied naming" },
+        { name: "Naive Blue (天真蓝)", takeaway: "Emotion + color in three characters: you feel the clean, bright light before entering, and \"naive\" neatly offsets the stagey-ness of portraits — the exemplar of color-mood naming" },
+        { name: "Pan Zi Nü Ren Fang (盘子女人坊)", takeaway: "Folk warmth plus an explicit women's-studio scene word: costume-portrait vertical written into the name — whoever searches the category lands on you. Vertical naming as a long game" },
+        { name: "Mantu (缦图)", takeaway: "A rare silk-textured character plus \"image\": himo's parent company traded easy spelling for trademark exclusivity and a premium register — the risk-reward of single-character aesthetics" },
+        { name: "JCPenney Portraits", takeaway: "Retail brand + category word, old-school structure: trust inherited straight from the parent — proof that in portraits, \"who shoots you\" outweighs \"what it's called\". Channel-brand naming logic" },
+      ],
+      pitfalls: [
+        "Category-word names (\"XX Photography\"): one search on a review platform returns a full page of them — clients remember your package price, not your name",
+        "Beauty-filter word stacks: glam/perfect/beauty now read as \"won't look like me\" — trust goes down, not up",
+        "Locking into one scene: \"XX ID Photos\" can't carry the higher-ticket family and professional-headshot lines you'll want next year",
+        "Rare characters and dialect puns: charming for one store, a liability at branch two — POS systems, invoices and out-of-town clients all stumble",
+      ],
+    },
+  },
+  foodreview: {
+    slug: "foodreview",
+    tlds: [
+      { tld: "reviews", zh: "后缀即业态声明，「这里是测评」的定位零解释", en: "The suffix declares the format — \"this is reviews\" with zero explanation" },
+      { tld: "guide", zh: "把测评升维成指南，「跟着吃不踩雷」的承诺感自带", en: "Elevates reviews into a guide — \"eat along, never regret\" built into the suffix" },
+      { tld: "blog", zh: "个人探店博主的身份直给，内容属性一眼可读", en: "Personal food-blogger identity made explicit — content-first at a glance" },
+    ],
+    zh: {
+      label: "探店测评",
+      title: "探店测评品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "探店测评账号与平台命名指南：人格化信任、毒舌与公正感、吃货词根等 5 种思路，大众点评/Yelp/企鹅吃喝指南等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的测评域名。",
+      intro:
+        "探店测评的名字卖的是「信得过的舌头」。观众关注一个测评号之前心里只有一个问题：你恰不恰饭？所以这个行业的命名核心资产是公正感——大众点评把「大众」放在名字第一位，声明评分来自千万普通人而非编辑部；Yelp 用一声短促的吆喝，把「有话直说」的气质写进四个字母。人格化是第二条命门：探店内容的复购本质是「追更一个人」，企鹅吃喝指南用一只不恰饭的企鹅当人格面具，毒舌与可爱兼得。要注意测评号的名字比一般餐饮品牌多一层法律暴露：你的名字会出现在差评视频的标题里、被商家截图发律师函时引用——名字本身越中立越安全，「XX 黑榜」「XX 曝光」式的对抗性命名等于给每条差评加十倍诉讼风险。最后是平台迁移问题：名字要在抖音、小红书、B 站和独立站之间通用，绑定单一平台梗的名字（「XX 系」「XX 姬」）出圈即失效。",
+      namingIdeas: [
+        "公正感前置：大众、真实、不恰饭的暗示放进名字——观众关注前只问一句「你收钱了吗」，名字先替你回答",
+        "人格化面具：动物、身份、口头禅入名（企鹅吃喝指南），测评的复购是「追更一个人」，人格越具体粘性越高",
+        "毒舌要留法律余量：敢说是卖点，但「黑榜」「曝光」式对抗命名会给每条差评加十倍诉讼风险，锋利感用「实话」「直说」表达更安全",
+        "吃货词根的通感：馋、饿、干饭等生理词自带食欲唤起，观众刷到名字先咽口水再点关注",
+        "全平台通用性：名字要在抖音、小红书、B 站和独立站之间无损迁移，绑定单一平台梗的名字出圈即失效",
+      ],
+      cases: [
+        { name: "大众点评", takeaway: "「大众」二字放在名字最前：评分来自千万普通人而非编辑部，公正感的声明写进品牌——UGC 点评模式的命名地基" },
+        { name: "Yelp", takeaway: "一声短促的吆喝（yelp 本义犬吠/惊叫）：四个字母把「有话直说」的气质焊死，还能当动词用「Yelp 一下」——拟声命名的满分卷" },
+        { name: "企鹅吃喝指南", takeaway: "不恰饭的企鹅人格+「指南」的工具承诺：毒舌与可爱兼得，测评的公正感靠人格面具背书——人格化命名的教科书" },
+        { name: "The Infatuation", takeaway: "「痴迷」这个情绪词替代「评论」：声明自己是热爱驱动不是商业驱动，反差感让专业测评显得有温度——情绪词命名的降维打击" },
+        { name: "Eater", takeaway: "最直白的「吃的人」：单词级简洁+城市分站结构（Eater NY），把「吃货视角」做成媒体网络——通用词+架构感的组合拳" },
+      ],
+      pitfalls: [
+        "对抗性命名：「黑榜」「曝光」式名字给每条差评加十倍诉讼风险，商家律师函最喜欢引用你的名字",
+        "绑定单一平台梗：「XX 姬」「XX 系」出了那个平台就没人懂，多平台分发时名字先失效",
+        "「美食推荐」类通用词：搜索结果里和几百个同行混在一起，观众划过去想不起你是哪个",
+        "名字暗示恰饭：带「探店合作」「推广」联想的字眼，公正感人设从名字这一层就塌了",
+      ],
+    },
+    en: {
+      label: "Food reviews",
+      title: "How to Name a Food Review Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Food review and restaurant-guide naming guide: impartiality signals, persona masks and appetite roots, breakdowns of Yelp/Dianping/The Infatuation, recommended TLDs and pitfalls — then hunt an available review domain with AI.",
+      intro:
+        "A food review brand's name sells a trustworthy tongue. Before following a reviewer, the audience has exactly one question: are you paid to say this? So the core naming asset in this category is impartiality — Dianping (大众点评) puts \"the masses\" first in its name, declaring that scores come from millions of ordinary diners rather than an editorial desk; Yelp compresses \"say it out loud\" into a four-letter bark. Persona is the second lifeline: the repeat consumption of review content is really \"following a person\", which is why a penguin that never takes sponsorships fronts one of China's most trusted food guides — sharp-tongued and adorable at once. Note that review names carry a legal exposure ordinary restaurant brands don't: your name appears in the titles of negative reviews and gets quoted in merchants' lawyer letters — the more neutral the name itself, the safer you are, while adversarial \"blacklist/exposé\" naming multiplies litigation risk on every honest pan. Finally, platform portability: the name must travel across TikTok, Instagram, YouTube and your own site — names welded to one platform's in-joke die the moment you cross over.",
+      namingIdeas: [
+        "Lead with impartiality: masses, real, no-sponsorship hints in the name — the audience's first question is \"are you paid\", and the name should answer first",
+        "Wear a persona mask: animals, characters, catchphrases — review loyalty is really following a person, and the more specific the persona, the stickier the audience",
+        "Sharp but suable-proof: honesty sells, but blacklist/exposé naming multiplies legal risk on every negative review — express the edge as \"straight talk\" instead",
+        "Tap appetite roots: hungry, crave, feast — physiological words trigger salivation before the follow button",
+        "Stay platform-portable: the name must survive TikTok, Instagram, YouTube and an independent site unchanged — single-platform in-jokes expire on export",
+      ],
+      cases: [
+        { name: "Dianping (大众点评)", takeaway: "\"The masses\" leads the name: scores from millions of ordinary diners, not an editorial desk — the impartiality declaration that grounded China's UGC review model" },
+        { name: "Yelp", takeaway: "A short bark of a word: four letters welding in \"say it out loud\", and it verbs — \"just Yelp it\". A perfect score in onomatopoeic naming" },
+        { name: "企鹅吃喝指南 (Penguin Eats)", takeaway: "A sponsorship-free penguin persona plus the tool-promise of \"guide\": sharp-tongued and adorable at once, impartiality endorsed by a mask — the persona-naming textbook" },
+        { name: "The Infatuation", takeaway: "An emotion word in place of \"review\": declaring passion-driven over commerce-driven — the warmth differential that made professional reviewing feel human" },
+        { name: "Eater", takeaway: "The plainest possible word — \"one who eats\" — scaled by city-edition architecture (Eater NY): the diner's-eye view built into a media network. Common word + structure, in combination" },
+      ],
+      pitfalls: [
+        "Adversarial naming: blacklist/exposé names multiply litigation risk on every honest pan — merchants' lawyers love quoting your name back at you",
+        "Welding to one platform's in-joke: the name means nothing off-platform, and dies first when you go multi-channel",
+        "Generic \"food recommendations\": you blend into hundreds of peers in search results, and viewers scrolling past can't recall which one you were",
+        "Names that hint at sponsorship: any \"collab/promo\" association in the name collapses the impartiality persona at the foundation",
+      ],
+    },
+  },
+  nutrition: {
+    slug: "nutrition",
+    tlds: [
+      { tld: "health", zh: "健康身份直给，专业与合规的气质一眼可读", en: "Health identity made explicit — professional and compliant at a glance" },
+      { tld: "fit", zh: "三个字母干脆利落，「吃出状态」的轻快感自带", en: "Three crisp letters — \"eat your way into shape\" with built-in lightness" },
+      { tld: "care", zh: "把营养咨询讲成长期陪伴，服务属性温度直给", en: "Frames nutrition as ongoing care — the service warmth built into the suffix" },
+    ],
+    zh: {
+      label: "营养师咨询",
+      title: "营养师咨询品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "营养师咨询品牌命名指南：科学信任感、轻量陪伴感、反节食叙事等 5 种思路，薄荷健康/Noom/Lifesum 等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的营养咨询域名。",
+      intro:
+        "营养师咨询的名字要在「科学」与「温柔」之间走钢丝。走向科学一端太远，名字像保健品或药企，客户怕被推销；走向温柔一端太远，又像鸡汤号，客户怀疑你没有资质。头部品牌的解法值得拆解：薄荷健康用一片清爽的薄荷叶，把「健康管理」的沉重话题变得轻盈可亲近；Noom 干脆造一个圆润的无意义词，刻意与「diet」「slim」等节食词划清界限——因为它卖的是行为改变不是节食。这背后是行业的根本转向：反节食叙事。今天的客户被「三天瘦五斤」式营销伤害过太多次，名字里任何速效暗示都在触发防御。相反，「陪伴感」词根（伴、每日、慢）和「生活方式」词根（餐桌、厨房、四季）正在赢得信任。还要注意合规红线：营养师咨询不是医疗诊断，名字里带「治」「疗」「瘦」等字眼，不仅吓跑客户还可能触碰广告法。",
+      namingIdeas: [
+        "反节食叙事：与 diet、瘦、燃脂划清界限（Noom 的无意义造词就是刻意避开节食词），客户被速效营销伤害过，速效暗示只会触发防御",
+        "轻盈食物意象：薄荷、柠檬、燕麦等清爽食材入名，把沉重的「健康管理」变得可亲近，App 图标都好设计",
+        "陪伴感词根：伴、每日、慢——营养改善是按月计的长期服务，名字先声明「我不是七天速成班」",
+        "科学感锚点：实验室、数据、循证等词根适合面向健身与慢病人群的专业线，但要与温柔词搭配使用避免像药企",
+        "合规红线预检：治、疗、瘦身等字眼可能触碰广告法且吓跑客户，营养咨询的名字要停在「生活方式」这一侧",
+      ],
+      cases: [
+        { name: "薄荷健康", takeaway: "一片清爽的薄荷叶：把「健康管理」的沉重话题变得轻盈可亲近，食物库工具起家的国民品牌——轻盈食物意象的教科书" },
+        { name: "Noom", takeaway: "圆润的无意义造词：刻意与 diet/slim 划清界限，因为卖的是行为心理学不是节食——反节食叙事的命名宣言" },
+        { name: "Lifesum", takeaway: "life + sum 的合成词：「生活的总和」把营养放进整体生活方式叙事，北欧品牌的克制感恰好匹配长期主义定位" },
+        { name: "MyFitnessPal", takeaway: "my + pal 的双重亲密感：工具被讲成「我的伙伴」，记录行为的枯燥被陪伴感化解——陪伴词根的规模化验证" },
+        { name: "WW", takeaway: "从 Weight Watchers 改名 WW：把「盯着体重」的旧叙事整个抹掉，只留缩写转向整体健康——行业反节食转向最昂贵的一次改名背书" },
+      ],
+      pitfalls: [
+        "速效暗示入名：「七天」「急速」「燃脂」触发客户防御——被减肥营销伤害过的人对速效词过敏",
+        "医疗化字眼：治、疗、诊等字既可能触碰广告法，又把咨询服务错位成医疗机构，合规与信任双输",
+        "「XX 营养」通用词命名：搜索结果和几百个同行并排，客户记住的是抖音里那个人，不是你的机构名",
+        "只锁减脂单一场景：增肌、孕产、慢病管理的客单更高，名字锁死「瘦」就把高价值客群关在门外",
+      ],
+    },
+    en: {
+      label: "Nutrition coaching",
+      title: "How to Name a Nutrition Coaching Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Nutrition coaching naming guide: anti-diet narratives, companionship roots and science anchors, breakdowns of Noom/Boohee/Lifesum, recommended TLDs and pitfalls — then hunt an available nutrition domain with AI.",
+      intro:
+        "A nutrition coaching name walks a tightrope between science and softness. Lean too scientific and you sound like a supplement company or a pharma brand — clients brace for a sales pitch; lean too soft and you sound like wellness fluff — clients doubt your credentials. The leaders' solutions are worth dissecting: Boohee (薄荷健康, \"mint health\") uses one cool mint leaf to make the heavy topic of health management feel light and approachable; Noom coined a rounded nonsense word precisely to cut ties with \"diet\" and \"slim\" — because it sells behavior change, not restriction. Behind this is the category's fundamental pivot: the anti-diet narrative. Today's client has been burned repeatedly by \"lose five pounds in three days\" marketing, so any quick-fix hint in a name triggers defenses. Companionship roots (daily, along, slow) and lifestyle roots (table, kitchen, seasons) are what win trust now. Mind the compliance line too: nutrition coaching is not medical diagnosis — cure/treat/slimming words can breach advertising law and scare clients off in the same stroke.",
+      namingIdeas: [
+        "Go anti-diet: cut ties with diet/slim/burn (Noom's nonsense coinage exists to avoid them) — your client has been burned by quick-fix marketing, and speed hints trigger defenses",
+        "Borrow light food imagery: mint, lemon, oat — cool ingredients make heavy health management approachable, and the app icon designs itself",
+        "Use companionship roots: daily, along, pace — nutrition change is measured in months, and the name should declare \"not a seven-day bootcamp\" upfront",
+        "Anchor with science, gently: lab, data, evidence roots suit the fitness and chronic-care professional line — but pair them with warm words or you'll read as pharma",
+        "Pre-clear the compliance line: cure/treat/slimming words risk advertising-law trouble and reposition you as a medical provider — stay on the lifestyle side",
+      ],
+      cases: [
+        { name: "Boohee (薄荷健康)", takeaway: "One cool mint leaf: heavy health management made light and approachable, and a food-database tool grew into a household brand — the light-food-imagery textbook" },
+        { name: "Noom", takeaway: "A rounded nonsense coinage: deliberately severing diet/slim associations because the product is behavioral psychology, not restriction — the naming manifesto of the anti-diet turn" },
+        { name: "Lifesum", takeaway: "life + sum: \"the sum of living\" places nutrition inside a whole-lifestyle narrative, with Nordic restraint matching the long-game positioning" },
+        { name: "MyFitnessPal", takeaway: "Double intimacy in my + pal: a logging tool recast as \"my companion\", the tedium of tracking dissolved by friendship — companionship roots validated at scale" },
+        { name: "WW", takeaway: "Renamed from Weight Watchers to WW: erasing the watch-the-scale narrative wholesale, keeping only initials while pivoting to wellness — the most expensive endorsement the anti-diet turn ever received" },
+      ],
+      pitfalls: [
+        "Quick-fix hints: \"7-day\", \"rapid\", \"fat-burn\" trigger the defenses of clients already burned by weight-loss marketing",
+        "Medicalized words: cure/treat/clinic terms risk advertising-law breaches and misposition coaching as medical care — losing compliance and trust at once",
+        "Generic \"XX Nutrition\": search results stack you beside hundreds of peers — clients remember the person in the videos, never the generic practice name",
+        "Locking into weight loss: muscle gain, prenatal and chronic-care clients pay more — a name welded to \"slim\" locks the higher-value segments out",
+      ],
+    },
+  },
+  physio: {
+    slug: "physio",
+    tlds: [
+      { tld: "clinic", zh: "诊所身份直给，医疗级专业与合规感一眼可读", en: "Clinic identity made explicit — medical-grade professionalism at a glance" },
+      { tld: "care", zh: "把理疗讲成长期照护，康复陪伴的温度自带", en: "Frames rehab as ongoing care — recovery companionship built into the suffix" },
+      { tld: "health", zh: "健康大类身份正规，转诊与保险合作场景不掉价", en: "A respectable health-sector identity that holds up in referral and insurance contexts" },
+    ],
+    zh: {
+      label: "康复理疗",
+      title: "康复理疗品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "康复理疗与运动康复品牌命名指南：回归叙事、脊柱意象、医疗信任感等 5 种思路，优复门诊/Hinge Health/脊近完美等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的康复域名。",
+      intro:
+        "康复理疗的名字要回答客户心里最焦虑的那个问题：「我还能回到原来的样子吗？」所以这个行业最有效的命名母题是「回归」——优复门诊的「优复」直接承诺优质康复，Hinge Health 用「铰链」这个机械意象精准锁定关节功能的恢复。与按摩养生馆最大的区别在于：康复理疗必须建立医疗级信任，客户是带着核磁报告和术后医嘱来的，名字里的循证感、门诊感直接决定他敢不敢把腰交给你。但医疗感不等于冰冷——康复是按月计的长期陪伴，头部品牌都在「专业」与「温度」之间做精确配比：脊近完美用谐音把「脊柱」焊进名字，又用「完美」许诺终点。要警惕两条红线：一是夸大疗效的字眼（根治、痊愈）既触碰广告法又透支信任；二是与按摩、推拿的模糊地带——名字若滑向养生馆语感，客单价直接掉一个数量级，运动员和术后人群也不会走进来。",
+      namingIdeas: [
+        "回归叙事：复、回、重启——客户最焦虑的问题是「还能回到原来吗」，名字先给出肯定答案（优复=优质康复）",
+        "身体部位的意象化：脊柱、关节、铰链（Hinge Health）——把治疗对象写进名字，转诊搜索时精准命中",
+        "医疗信任感锚点：门诊、循证、康复师等词根声明「我不是养生馆」，带着核磁报告来的客户要的是临床语感",
+        "运动场景垂直：跑者、球类、术后重返赛场——运动康复的客单最高，垂直命名让教练和队医主动转介绍",
+        "警惕夸大疗效：根治、痊愈等字眼触碰广告法红线，康复的诚实承诺是「更好的功能」不是「保证治好」",
+      ],
+      cases: [
+        { name: "优复门诊", takeaway: "「优复」=优质康复的二字浓缩+「门诊」的医疗身份：回归叙事与临床信任一次说完——康复连锁命名的标杆结构" },
+        { name: "Hinge Health", takeaway: "hinge（铰链）的机械意象：关节功能的恢复被一个词讲透，数字康复独角兽用它撑起百亿估值——身体意象命名的精准打击" },
+        { name: "脊近完美", takeaway: "「脊」+「近完美」的谐音双关：治疗对象与结果承诺焊在四个字里，念一遍就忘不掉——中文谐音命名在医疗语境的高分示范" },
+        { name: "Sword Health", takeaway: "sword（剑）的锋利意象：把「对抗疼痛」讲成一场战斗，数字理疗的科技感与攻击性并存——情绪张力命名的另类路线" },
+        { name: "Kaia Health", takeaway: "Kaia 这个温暖的人名：AI 理疗应用刻意选择人格化命名，用「像朋友一样的教练」化解数字医疗的冰冷——温度配比的典型解法" },
+      ],
+      pitfalls: [
+        "滑向养生馆语感：名字像按摩推拿，客单价掉一个数量级，术后人群和运动员根本不会进店",
+        "夸大疗效字眼：根治、痊愈触碰广告法红线，医疗监管对康复机构的名称审查只会越来越严",
+        "「XX 康复中心」通用词：转诊场景里医生想不起你，搜索结果里和公立医院科室混在一起",
+        "锁死单一部位：只叫「XX 腰椎」，颈椎、运动损伤和产后康复的客群就被名字挡在门外",
+      ],
+    },
+    en: {
+      label: "Physiotherapy & rehab",
+      title: "How to Name a Physiotherapy & Rehab Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Physiotherapy and sports rehab naming guide: return narratives, joint imagery and clinical trust, breakdowns of Hinge Health/Sword Health/Kaia, recommended TLDs and pitfalls — then hunt an available rehab domain with AI.",
+      intro:
+        "A rehab brand's name must answer the most anxious question in the client's head: \"will I get back to who I was?\" That's why the category's most effective naming motif is return — UP Clinic (优复, \"excellent recovery\") promises quality rehabilitation in two characters, and Hinge Health locks onto joint function with one precise mechanical image. The crucial difference from massage-and-wellness parlors: rehab must establish medical-grade trust. Your client arrives with an MRI report and post-surgical orders, and the evidence-based, clinical register of your name decides whether they dare hand you their spine. But clinical doesn't mean cold — recovery is companionship measured in months, and the leaders all calibrate professionalism against warmth: Kaia Health picked a warm human name so a digital physio app feels like a coach-friend. Two red lines: exaggerated-outcome words (cure, guaranteed recovery) breach advertising law and overdraw trust; and drifting toward spa-parlor vocabulary drops your price point by an order of magnitude — athletes and post-surgical patients simply won't walk in.",
+      namingIdeas: [
+        "Lead with return: recover, restore, rebound — the client's deepest question is \"can I get back\", and the name should answer yes first (优复 = excellent recovery)",
+        "Turn anatomy into imagery: spine, joint, hinge (Hinge Health) — writing the treatment target into the name means referral searches land on you precisely",
+        "Anchor clinical trust: clinic, evidence, therapist roots declare \"not a spa\" — clients holding MRI reports need a clinical register",
+        "Go sports-vertical: runners, court sports, return-to-play — sports rehab commands the highest tickets, and vertical names earn referrals from coaches and team doctors",
+        "Never overpromise outcomes: cure/guaranteed words cross the advertising-law line — rehab's honest promise is better function, not certain healing",
+      ],
+      cases: [
+        { name: "UP Clinic (优复门诊)", takeaway: "\"Excellent recovery\" compressed into two characters plus the clinical identity of \"clinic\": return narrative and medical trust said in one breath — the benchmark structure for rehab chains" },
+        { name: "Hinge Health", takeaway: "The mechanical image of a hinge: joint-function recovery explained in one word, carrying a digital-MSK unicorn to a multi-billion valuation — anatomy imagery at its most precise" },
+        { name: "脊近完美 (Spine-Near-Perfect)", takeaway: "A homophone pun welding \"spine\" to \"near perfect\": treatment target and outcome promise fused in four characters, unforgettable after one hearing — Chinese pun naming at its clinical best" },
+        { name: "Sword Health", takeaway: "The sharp image of a sword: fighting pain framed as combat — tech edge and aggression coexisting, the alternative route of emotional-tension naming" },
+        { name: "Kaia Health", takeaway: "A warm human name for an AI physio app: personification chosen deliberately to dissolve digital healthcare's coldness with a coach-like friend — the warmth-calibration playbook" },
+      ],
+      pitfalls: [
+        "Drifting into spa vocabulary: sound like a massage parlor and your price point drops an order of magnitude — post-surgical patients and athletes won't come in",
+        "Exaggerated-outcome words: cure/guaranteed cross advertising-law red lines, and regulator scrutiny of rehab naming only tightens",
+        "Generic \"XX Rehab Center\": referring physicians can't recall you, and search results blend you into public-hospital departments",
+        "Locking onto one body part: \"XX Lumbar\" bars the neck, sports-injury and postpartum segments your growth depends on",
+      ],
+    },
+  },
+  runclub: {
+    slug: "runclub",
+    tlds: [
+      { tld: "run", zh: "后缀即动作本身，跑步身份零解释还短到极致", en: "The suffix is the action itself — running identity with zero explanation, at minimal length" },
+      { tld: "club", zh: "俱乐部归属感直给，「加入我们」的邀请写在域名里", en: "Belonging made explicit — the invitation to join written into the domain" },
+      { tld: "fit", zh: "三个字母的轻快感，训练属性与状态感自带", en: "Three light letters — training identity and feel-good state built in" },
+    ],
+    zh: {
+      label: "跑步俱乐部",
+      title: "跑步俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "跑步俱乐部与跑团命名指南：归属感设计、地名徽章、配速人格等 5 种思路，NRC/悦跑圈/parkrun 等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的跑团域名。",
+      intro:
+        "跑步俱乐部的名字不是商标，是队服背后的那行字。它要经得起三个场景的检验：印在队服上被马拉松赛道两旁的观众念出来、出现在完赛照片的社交分享里、以及新人鼓起勇气问「我配速六分半能加入吗」的那条私信里。所以跑团命名的第一原则是归属感优先——parkrun 全小写的谦逊姿态说「这不是比赛是习惯」，悦跑圈用一个「圈」字把社群边界画得温柔。第二个抓手是地名徽章：城市、街区、地标入名（High Rock Runners 式），本地跑者的身份认同直接变成招新转化，马拉松远征时队服就是城市名片。要拆解的反例同样清晰：竞技感过强的名字（「XX 精英跑团」）会把六分半配速的新人吓跑，而跑团的生命力恰恰来自源源不断的新人；谐音玩梗过度的名字第一次听好笑，印在队服上跑十年就尴尬了。悦跑圈与 Keep 的对照还揭示一层：工具类品牌可以抽象，社群类品牌必须具体——「圈」比「运动科技」更能让人找到组织。",
+      namingIdeas: [
+        "归属感优先：圈、会、部落——跑团卖的是「一起跑」不是「跑得快」，名字先把「你可以加入」说出口",
+        "地名徽章：城市、街区、地标入名，本地身份认同直接变成招新转化，远征外地马拉松时队服就是城市名片",
+        "配速人格：慢跑、破风、追日式的姿态词给跑团定调性——欢乐跑团和 PB 训练营吸引的是两拨人，名字先分流",
+        "仪式感词根：晨、夜跑、周三——把固定跑步时间写进名字，习惯的仪式感就是社群的黏合剂",
+        "警惕竞技压迫感：「精英」「战队」会吓跑六分半配速的新人，而跑团的生命力恰恰来自新人的持续加入",
+      ],
+      cases: [
+        { name: "Nike Run Club", takeaway: "大品牌甘当「俱乐部」：不叫训练营不叫学院，「club」一词把竞技品牌的压迫感卸掉，全球跑者都敢进——归属感词根的顶级示范" },
+        { name: "parkrun", takeaway: "全小写的 park + run：谦逊到极致的两个词说清「公园里跑步」，「这不是比赛是习惯」的定位让五百万人每周六早晨出门——反竞技命名的世界级验证" },
+        { name: "悦跑圈", takeaway: "「悦」的情绪+「圈」的社群边界：跑步被讲成开心的事，圈子被画得温柔可进入——中文跑步社群命名的教科书" },
+        { name: "adidas Runners", takeaway: "直白的复数「Runners」：品牌退后跑者站前，城市分站结构（AR Shanghai）让全球社群长成本地跑团——架构感命名的品牌级应用" },
+        { name: "Strava", takeaway: "瑞典语「奋进」：竞技感藏进一门外语里，既有态度又不吓人，段位感恰好匹配数据型跑者——外语词根的调性平衡术" },
+      ],
+      pitfalls: [
+        "竞技压迫感命名：「精英」「战队」把新人吓跑，跑团没有新人加入就只剩老龄化的微信群",
+        "谐音梗过度：第一次听好笑的名字，印在队服上跑十年就尴尬——队服寿命远比段子长",
+        "「XX 跑团」通用词：马拉松博览会上几百个跑团摆摊，没有记忆钩子的名字换不来一次合影打卡",
+        "锁死单一场景：只叫「XX 夜跑」，晨跑活动和马拉松训练营开起来名字就自相矛盾",
+      ],
+    },
+    en: {
+      label: "Run clubs",
+      title: "How to Name a Run Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Run club naming guide: belonging-first design, place-name badges and pace personas, breakdowns of NRC/parkrun/Strava, recommended TLDs and pitfalls — then hunt an available run club domain with AI.",
+      intro:
+        "A run club's name isn't a trademark — it's the line across the back of the jersey. It must survive three scenes: shouted by spectators along a marathon course, tagged in finish-line photos on social feeds, and typed into the nervous DM that asks \"my pace is 6:30, can I still join?\" So the first principle of run club naming is belonging over speed — parkrun's all-lowercase humility says \"this is a habit, not a race\", and JoyRun (悦跑圈) draws the community's boundary gently with one character meaning \"circle\". The second lever is the place-name badge: city, neighborhood or landmark in the name converts local identity straight into recruitment, and at away marathons the jersey becomes the city's business card. The cautionary tales are equally clear: overly competitive names (\"XX Elite Squad\") scare off the 6:30-pace beginner — and a club's lifeblood is precisely the steady arrival of beginners; pun-heavy names are funny once and awkward for the ten years they're printed on a jersey. The JoyRun-versus-Keep contrast reveals one more layer: tool brands can be abstract, but community brands must be concrete — \"circle\" beats \"sports technology\" at helping someone find their people.",
+      namingIdeas: [
+        "Belonging first: circle, crew, tribe — a run club sells running together, not running fast, and the name should say \"you can join\" out loud",
+        "Wear a place-name badge: city, neighborhood, landmark — local identity converts straight into recruitment, and the jersey becomes the city's business card at away races",
+        "Set a pace persona: easy-jog, wind-breaker, chase-the-dawn posture words sort your crowd — social clubs and PB camps attract different runners, and the name filters first",
+        "Ritualize the schedule: dawn, night-run, Wednesday — writing the fixed run time into the name makes the habit's ritual the community's glue",
+        "Beware competitive pressure: \"elite\" and \"squad\" scare off the 6:30 beginner, and a club without newcomers is just an aging group chat",
+      ],
+      cases: [
+        { name: "Nike Run Club", takeaway: "A giant brand content to be a \"club\": not an academy, not a bootcamp — one word strips the competitive intimidation, and every runner on earth dares walk in. The apex demonstration of belonging roots" },
+        { name: "parkrun", takeaway: "All-lowercase park + run: two humble words that say exactly \"running in the park\", and the not-a-race positioning gets five million people out on Saturday mornings — anti-competitive naming validated at world scale" },
+        { name: "JoyRun (悦跑圈)", takeaway: "Joy's emotion plus the community boundary of \"circle\": running framed as delight, the circle drawn soft enough to step into — the Chinese textbook of running-community naming" },
+        { name: "adidas Runners", takeaway: "The plainest plural — \"Runners\": brand steps back, runners step forward, and city-chapter architecture (AR Shanghai) grows a global community into local crews — structural naming at brand scale" },
+        { name: "Strava", takeaway: "Swedish for \"strive\": competitiveness hidden inside a foreign word — attitude without intimidation, pitched exactly at the data-driven runner. The tonal balancing act of foreign roots" },
+      ],
+      pitfalls: [
+        "Competitive-pressure naming: \"elite\" and \"squad\" repel the beginners whose steady arrival is the club's actual lifeblood",
+        "Overdone puns: funny on first hearing, awkward across the ten years it's printed on a jersey — jerseys outlive jokes",
+        "Generic \"XX Run Club\": hundreds of booths at a marathon expo — a name without a memory hook earns zero photo check-ins",
+        "Locking into one scene: \"XX Night Run\" contradicts itself the day you launch dawn sessions and a marathon training camp",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
