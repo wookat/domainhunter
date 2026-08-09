@@ -227,7 +227,7 @@
     ]
   },
   "guide": {
-    "count": 218,
+    "count": 224,
     "slugs": [
       "saas",
       "ecommerce",
@@ -446,7 +446,13 @@
       "tailor",
       "equestrian",
       "archery",
-      "immigration"
+      "immigration",
+      "deli",
+      "winery",
+      "sushi",
+      "icecream",
+      "hostel",
+      "bowling"
     ]
   },
   "vs": {

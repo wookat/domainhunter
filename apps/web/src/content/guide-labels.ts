@@ -221,4 +221,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "equestrian", zh: "马术俱乐部", en: "Equestrian clubs" },
   { slug: "archery", zh: "射箭馆", en: "Archery ranges" },
   { slug: "immigration", zh: "移民咨询", en: "Immigration consulting" },
+  { slug: "deli", zh: "卤味熟食", en: "Deli & braised food" },
+  { slug: "winery", zh: "精品酒庄", en: "Boutique wineries" },
+  { slug: "sushi", zh: "日料餐厅", en: "Sushi & Japanese dining" },
+  { slug: "icecream", zh: "冰淇淋品牌", en: "Ice cream brands" },
+  { slug: "hostel", zh: "青年旅舍", en: "Hostels" },
+  { slug: "bowling", zh: "保龄球馆", en: "Bowling alleys" },
 ];

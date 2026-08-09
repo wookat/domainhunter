@@ -13627,6 +13627,373 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  deli: {
+    slug: "deli",
+    tlds: [
+      { tld: "com", zh: "连锁加盟与线上商城的信任底线，卤味品牌的默认选择", en: "The trust baseline for franchising and online stores — the default for a deli brand" },
+      { tld: "shop", zh: "「店」的品类后缀直给零售属性，社区卤味档口零解释成本", en: "The shop suffix states retail outright — zero explanation for a neighborhood deli counter" },
+      { tld: "menu", zh: "「菜单」后缀自带即食联想，外卖与预订场景一秒对上", en: "The menu suffix carries ready-to-eat associations — delivery and pre-order scenarios click instantly" },
+    ],
+    zh: {
+      label: "卤味熟食",
+      title: "卤味熟食品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "卤味熟食命名指南：滋味词根、老卤故事、单品旗帜等 5 种思路，绝味/周黑鸭/紫燕百味鸡等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的卤味品牌域名。",
+      intro:
+        "卤味的名字要先让人「咽口水」：顾客在档口前排队、在外卖列表里划过、在深夜想加个菜的瞬间——名字是这口滋味的第一次预售。第一素材库是滋味词根：卤、香、辣、味、鲜——卤味是嗅觉先行的品类，名字里的味觉暗示直接触发购买冲动；绝味把「绝」的极致判断词压在「味」上，两个字把产品自信说满。第二个抓手是老卤故事：一锅老卤传三代是这个品类最硬的信任资产——「X 记」「老 X」的结构自带年头感，紫燕百味鸡用「百味」讲工艺丰富度，让家常品类有了品牌纵深。第三个抓手是单品旗帜：周黑鸭把「鸭」写进名字，用最强单品当品牌旗帜——认知效率极高，但要想清楚单品即战略还是阶段打法。要注意价格与场景的分寸：卤味横跨佐餐、零食、夜宵三个场景，名字太市井接不住礼盒与电商，太雅致又丢了烟火气。渠道上，卤味活在档口招牌、外卖平台缩略图和「下班带一份 XX」的口头指令里——名字要短、要有味道、要经得起日复一日的重复。",
+      namingIdeas: [
+        "滋味词根：卤、香、辣、味——卤味是嗅觉先行的品类，名字里的味觉暗示直接触发购买冲动",
+        "老卤与年头感：X 记、老 X 的结构自带传承联想——一锅老卤传三代是品类最硬的信任资产",
+        "单品旗帜：把最强单品写进名字（周黑鸭式）——认知效率极高，但要想清楚单品即战略还是阶段打法",
+        "极致判断词：绝、真、正的自信前缀压在品类词上——两个字把产品自信说满，适合连锁扩张",
+        "场景余量测试：把名字分别放进佐餐、零食、礼盒三个场景念一遍——只活在夜宵摊的名字接不住电商生意",
+      ],
+      cases: [
+        { name: "绝味", takeaway: "「绝」的极致判断词压在「味」上：两个字把产品自信说满——中国门店数最多的卤味连锁，名字短到可以印在任何一根签子上" },
+        { name: "周黑鸭", takeaway: "姓氏 + 颜色 + 单品的三字结构：「黑」既是卤色又是记忆钩子，「鸭」把最强单品当品牌旗帜——具体到看见名字就看见产品" },
+        { name: "紫燕百味鸡", takeaway: "「紫燕」的意象雅致化 +「百味」的工艺丰富度：家常佐餐品类借文气意象完成升维——菜市场档口与商场专柜通吃" },
+        { name: "Boar's Head", takeaway: "野猪头的纹章式意象：美国百年熟食品牌用「盾徽感」把切片火腿卖出了品质溢价——熟食的信任可以来自「像老字号一样古老」的视觉联想" },
+      ],
+      pitfalls: [
+        "堆砌「香辣卤味熟食坊」类全能词：像档口分类牌而非品牌——顾客记住的是一个钩子，不是品类清单",
+        "锁死单一单品但没想清战略：「鸭脖王」想卖素菜与礼盒时名字就成了天花板——单品旗帜要配单品战略",
+        "土味谐音透支：「卤至深处」式谐音一条街三家用——年头感要来自结构与故事，不是梗",
+        "只顾档口不查线上：卤味电商与外卖占比越来越高，同名商标、店铺与域名要一起核验",
+      ],
+    },
+    en: {
+      label: "Deli & braised food",
+      title: "How to Name a Deli or Braised-Food Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Deli and braised-food naming guide: flavor roots, master-broth heritage, flagship-item names, breakdowns of Juewei/Zhou Hei Ya/Boar's Head, recommended TLDs and pitfalls — then hunt an available deli-brand domain with AI.",
+      intro:
+        "A deli name has to make mouths water before the counter is even in sight: queued at the stall, skimmed in a delivery list, remembered at midnight when dinner needs one more dish — the name is the first pre-sale of the flavor. The first word bank is flavor roots: braise, spice, savory, aroma — braised food is a smell-first category, and taste cues in the name trigger the impulse directly; Juewei stacks the superlative \"jue\" (absolute) onto \"wei\" (flavor), saying full product confidence in two characters. The second lever is master-broth heritage: a broth passed down three generations is the category's hardest trust asset — \"X Ji\" and \"Old X\" structures carry built-in age, and Ziyan Baiweiji uses \"hundred flavors\" to give a homestyle category craft depth. The third lever is the flagship item: Zhou Hei Ya writes \"duck\" into the name, flying the strongest SKU as the brand flag — maximum recognition efficiency, but decide whether the single item is the strategy or just a phase. Mind the price-and-scene balance: braised food spans side-dish, snack and late-night scenes — too street-stall and the name can't carry gift boxes and e-commerce; too refined and the market-stall warmth is gone. As for channels, a deli brand lives on stall signboards, delivery-app thumbnails and the daily \"grab some X on the way home\" — the name must be short, tasty and survive endless repetition.",
+      namingIdeas: [
+        "Flavor roots: braise, spice, savory, aroma — a smell-first category where taste cues in the name trigger the purchase impulse",
+        "Master-broth heritage: \"X Ji\" and \"Old X\" structures carry built-in age — a broth passed down generations is the hardest trust asset",
+        "Flagship-item names: write the strongest SKU into the name (the Zhou Hei Ya move) — peak recognition, but pair it with a single-item strategy",
+        "Superlative prefixes: absolute, true, prime stacked on the category word — full confidence in two syllables, built for chain expansion",
+        "The three-scene test: say the name in side-dish, snack and gift-box scenes — a name that only lives at the night-market stall can't carry e-commerce",
+      ],
+      cases: [
+        { name: "Juewei (绝味)", takeaway: "The superlative \"absolute\" pressed onto \"flavor\": full product confidence in two characters — China's largest braised-food chain, with a name short enough to print on every skewer" },
+        { name: "Zhou Hei Ya (周黑鸭)", takeaway: "Surname + color + flagship item in three characters: \"black\" is both the braise color and a memory hook, \"duck\" flies the strongest SKU as the brand flag — see the name, see the product" },
+        { name: "Ziyan Baiweiji (紫燕百味鸡)", takeaway: "\"Purple swallow\" elevates with literary imagery while \"hundred flavors\" claims craft depth: a homestyle side-dish category upgraded to work both the wet market and the mall counter" },
+        { name: "Boar's Head", takeaway: "A heraldic boar's-head crest: the century-old American deli brand sells sliced ham at a premium through \"as old as a guild\" visual authority — deli trust can come from looking heritage" },
+      ],
+      pitfalls: [
+        "Piling up \"spicy braised deli house\" catch-alls: reads as a stall category sign, not a brand — customers remember one hook, not a list",
+        "Welding to one SKU without the strategy: \"Duck Neck King\" hits a ceiling the day you add vegetarian sides and gift boxes — flagship names need flagship strategies",
+        "Overdrawn rustic puns: the same braise pun shows up three stalls in a row — age should come from structure and story, not the joke",
+        "Checking only the stall: delivery and e-commerce keep growing — clear the matching trademark, storefront handles and domain together",
+      ],
+    },
+  },
+  winery: {
+    slug: "winery",
+    tlds: [
+      { tld: "com", zh: "出口与收藏市场的信任底线，酒庄品牌的默认选择", en: "The trust baseline for export and collector markets — the default for a winery brand" },
+      { tld: "wine", zh: "「葡萄酒」品类后缀直给行业，酒庄与酒商零解释成本", en: "The wine suffix states the trade outright — zero explanation for wineries and merchants" },
+      { tld: "estate", zh: "「庄园」后缀自带风土分量，单一园叙事一秒成立", en: "The estate suffix carries terroir weight — the single-vineyard story lands instantly" },
+    ],
+    zh: {
+      label: "精品酒庄",
+      title: "精品酒庄与葡萄酒品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "酒庄命名指南：风土词根、家族背书、酒标画面等 5 种思路，张裕/奔富/黄尾袋鼠等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的酒庄品牌域名。",
+      intro:
+        "酒庄的名字要在酒标上先醒一次：进口商在酒单里扫过、藏家在拍卖图录里核对、朋友在餐桌上把瓶子转过来念出——名字是这瓶酒的第一口单宁。第一素材库是风土词根：庄、园、谷、坡、河——葡萄酒卖的是地理，名字里的风土词把「这瓶酒从哪来」先答一半；张裕用创始人张弼士的姓氏加「昌裕兴隆」的裕字，把民族工业的年头感酿进两个字。第二个抓手是家族背书：奔富（Penfolds）用创始医生的姓氏走了一百六十年——葡萄酒的信任结构里，「谁家做的」比「什么味道」更先被问到。第三个抓手是酒标画面：黄尾袋鼠（Yellow Tail）用一只跳跃的袋鼠把澳洲装进酒标，新世界品牌以画面感对抗旧世界的城堡纹章——名字与酒标是一体设计。要注意新旧世界的语法差异：走精品收藏线要庄园与家族的分量，走大众餐酒线要好念好记的画面词——两条路的名字语法完全不同。渠道上，酒庄品牌活在酒标、酒单、电商详情页和「上次那瓶 XX 不错」的餐桌复述里——名字要能被不懂酒的人一次念对。",
+      namingIdeas: [
+        "风土词根：庄、园、谷、坡、河——葡萄酒卖的是地理，名字先回答「这瓶酒从哪来」",
+        "家族与姓氏背书：奔富式的创始人姓氏——葡萄酒的信任结构里「谁家做的」比「什么味道」更先被问到",
+        "酒标画面词：黄尾袋鼠式的具体动物或意象——新世界品牌用画面感对抗旧世界纹章，名字与酒标一体设计",
+        "新旧世界分线：精品收藏线要庄园分量，大众餐酒线要好念好记——先定价格带再定名字语法",
+        "餐桌复述测试：把名字放进「上次那瓶 XX 不错」念一遍——不懂酒的人一次念不对的名字进不了复购",
+      ],
+      cases: [
+        { name: "张裕", takeaway: "创始人张弼士的姓氏 +「昌裕兴隆」的裕字：1892 年的民族工业年头感酿进两个字——中国葡萄酒的开山品牌把家族背书与吉祥寓意一次做完" },
+        { name: "奔富（Penfolds）", takeaway: "创始医生 Christopher Penfold 的姓氏走了一百六十年：中文名「奔富」再译一层「奔向富贵」的彩头——姓氏背书跨语言时可以借音造意" },
+        { name: "黄尾袋鼠（Yellow Tail）", takeaway: "一只跳跃的袋鼠把澳洲装进酒标：新世界品牌用画面感对抗旧世界城堡纹章——全球销量最大的葡萄酒品牌之一，赢在「好认好念好点单」" },
+        { name: "Opus One", takeaway: "「作品一号」的乐章命名：罗斯柴尔德与蒙大维联手的美国膜拜酒，用艺术品语法宣告「这是签名之作」——顶级酒的名字可以完全脱离地理与姓氏",
+        },
+      ],
+      pitfalls: [
+        "堆砌「城堡」「皇家」类欧陆套话：新世界酒庄硬借旧世界纹章反显山寨——分量要来自真实的园与家族",
+        "名字与酒标脱节：名字讲风土酒标画袋鼠——葡萄酒是名字、酒标、瓶型的一体叙事，拆开就漏",
+        "拼写超载：法语式拼写在出口市场每一次点单都在漏水——目标市场的服务员念不出的名字上不了酒单",
+        "忽略中外双名协同：进口与出口都要双语名——音译要留吉祥彩头（奔富式），意译要保画面感，两头都不能瘸",
+      ],
+    },
+    en: {
+      label: "Boutique wineries",
+      title: "How to Name a Winery or Wine Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Winery naming guide: terroir roots, family endorsement, label imagery, breakdowns of Changyu/Penfolds/Yellow Tail, recommended TLDs and pitfalls — then hunt an available winery-brand domain with AI.",
+      intro:
+        "A winery's name has to breathe on the label first: scanned by importers on a wine list, checked by collectors in an auction catalogue, read aloud when a friend turns the bottle at dinner — the name is the first tannin of the wine. The first word bank is terroir roots: estate, vineyard, valley, slope, river — wine sells geography, and a terroir word half-answers \"where is this from\" before the cork moves; Changyu blends founder Zhang Bishi's surname with a prosperity character, aging a national-industry heritage into two characters. The second lever is family endorsement: Penfolds has run a hundred and sixty years on its founding doctor's surname — in wine's trust structure, \"whose house made it\" gets asked before \"how does it taste\". The third lever is label imagery: Yellow Tail packs Australia into one leaping kangaroo, the New World fighting Old World château crests with pure picture power — name and label are one design. Mind the Old-versus-New-World grammar: the boutique-collector track needs estate and family weight, while the everyday-table track needs an easy, picturable word — two entirely different naming grammars, so fix the price tier first. As for channels, a winery brand lives on labels, wine lists, e-commerce pages and the dinner-table's \"that bottle of X was good\" — the name must be sayable, first try, by someone who knows nothing about wine.",
+      namingIdeas: [
+        "Terroir roots: estate, vineyard, valley, slope, river — wine sells geography; the name answers \"where is this from\" first",
+        "Family and surname endorsement: the Penfolds move — \"whose house made it\" gets asked before \"how does it taste\"",
+        "Label imagery: a concrete animal or image, Yellow Tail style — New World picture power against Old World crests; design name and label as one",
+        "Split by world: collector wines need estate weight, table wines need an easy picturable word — fix the price tier before the naming grammar",
+        "The dinner-table test: say \"that bottle of X was good\" — a name non-drinkers can't repeat first try never earns the reorder",
+      ],
+      cases: [
+        { name: "Changyu (张裕)", takeaway: "Founder Zhang Bishi's surname plus a prosperity character: China's pioneering winery from 1892 ages family endorsement and auspicious meaning into two characters at once" },
+        { name: "Penfolds", takeaway: "Dr. Christopher Penfold's surname carrying a hundred and sixty years: the Chinese transliteration 奔富 adds a \"racing to fortune\" blessing — surname endorsement can mint new meaning when crossing languages" },
+        { name: "Yellow Tail", takeaway: "One leaping kangaroo packs Australia onto the label: New World picture power against château crests — one of the world's best-selling wines, winning on \"easy to spot, say and order\"" },
+        { name: "Opus One", takeaway: "A movement-number name in art grammar: the Rothschild–Mondavi cult wine declares \"this is a signature work\" — at the very top, a wine name can leave geography and surname behind entirely" },
+      ],
+      pitfalls: [
+        "Piling on \"château\" and \"royal\" Old World clichés: a New World estate borrowing fake crests reads as knockoff — weight must come from a real vineyard and family",
+        "Name and label telling different stories: terroir in the name, kangaroo on the label — wine is one narrative across name, label and bottle; split it and it leaks",
+        "Spelling overload: faux-French spellings leak at every export order — a name the target market's waiter can't pronounce never makes the list",
+        "Ignoring the bilingual pair: import and export both need two names — transliterate with a blessing (the Penfolds move), translate with the image intact; neither side can limp",
+      ],
+    },
+  },
+  sushi: {
+    slug: "sushi",
+    tlds: [
+      { tld: "com", zh: "连锁与预订系统的信任底线，日料品牌的默认选择", en: "The trust baseline for chains and reservation systems — the default for a Japanese-dining brand" },
+      { tld: "restaurant", zh: "「餐厅」品类后缀直给业态，日料店零解释成本", en: "The restaurant suffix states the trade — zero explanation for a Japanese restaurant" },
+      { tld: "menu", zh: "「菜单」后缀贴合点单场景，外卖与到店预订一秒对上", en: "The menu suffix fits the ordering moment — delivery and reservations click instantly" },
+    ],
+    zh: {
+      label: "日料餐厅",
+      title: "日料餐厅与寿司品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "日料店命名指南：和风词根、匠人叙事、鲜度暗示等 5 种思路，Nobu/争鲜/元气寿司等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的日料品牌域名。",
+      intro:
+        "日料店的名字要先把「板前的安静」传出去：顾客在商场导览屏上扫过、在点评榜单里比较、在「今晚吃日料去哪家」的讨论里被提名——名字是这家店匠气的第一次亮相。第一素材库是和风词根：鲜、匠、寿、藏、庵、屋——日料是仪式感品类，名字里的和风字直接搭建场景预期；但要克制堆砌，两三个字的留白比满纸假名更像日本。第二个抓手是匠人叙事：Nobu 用主厨松久信幸的名字走遍全球——日料的信任结构里「谁站在板前」是最硬的资产，主厨名、家族屋号都是这条路。第三个抓手是鲜度与情绪暗示：争鲜把「争抢新鲜」写进名字，元气寿司用「元气」把回转寿司做成快乐场景——平价线的名字要轻快，高端线的名字要收敛。要注意价格带的语法差异：人均百元的回转线与人均千元的板前线，名字语法完全不同——前者要好念好记有食欲，后者要安静克制有余白。渠道上，日料店活在商场门头、点评榜单和宴请转述里——中文名与日文汉字的双重可读性要一起设计。",
+      namingIdeas: [
+        "和风词根：鲜、匠、寿、藏、庵、屋——仪式感品类的场景预期从名字开始，但两三字留白胜过满纸假名",
+        "匠人与屋号叙事：主厨名或家族屋号（Nobu 式）——「谁站在板前」是日料最硬的信任资产",
+        "鲜度与情绪暗示：争鲜式的直给、元气式的快乐——平价线要轻快有食欲，高端线要收敛有余白",
+        "价格带分语法：回转线好念好记、板前线安静克制——先定人均再定名字的声音大小",
+        "双语可读测试：中文名与日文汉字要互相成立——「XX 亭」在两种语言里都要念得顺、不闹笑话",
+      ],
+      cases: [
+        { name: "Nobu", takeaway: "主厨松久信幸（Nobuyuki）的昵称走遍全球四十城：两个音节把「谁站在板前」说清——名人合伙的餐饮帝国证明匠人名可以规模化" },
+        { name: "争鲜", takeaway: "「争抢新鲜」的动词感直给品类核心：回转寿司平价线的教科书——有食欲、有速度感、两个字在商场导览屏上一眼抓住" },
+        { name: "元气寿司", takeaway: "「元气」把回转寿司做成快乐场景：日常词的情绪价值——吃的不只是寿司还有精气神，平价日料靠情绪词完成差异化" },
+        { name: "Sugarfish", takeaway: "sugar + fish 的反差合成词：洛杉矶 omakase 平价化品牌用「甜 + 鱼」的陌生组合制造记忆点——新市场的日料名可以脱离和风语法" },
+      ],
+      pitfalls: [
+        "和风符号堆砌：「樱花富士匠心屋」式满纸符号反显游客店——真正的和风是两三个字的留白",
+        "价格带错位：回转店起板前名顾客不敢进，板前店起快餐名撑不起客单——名字的声音大小要匹配人均",
+        "生造假日文：不存在的假名拼写在日本顾客眼里立刻穿帮——用真实汉字或干脆走本地化新语法",
+        "忽略点评搜索：「鮨」字美而难打，顾客在点评软件里搜不出来——招牌可以用雅字，注册名与域名要留好打的版本",
+      ],
+    },
+    en: {
+      label: "Sushi & Japanese dining",
+      title: "How to Name a Sushi Restaurant or Japanese-Dining Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Sushi restaurant naming guide: Japanese aesthetic roots, chef narrative, freshness cues, breakdowns of Nobu/Sushi Express/Genki Sushi, recommended TLDs and pitfalls — then hunt an available Japanese-dining domain with AI.",
+      intro:
+        "A sushi restaurant's name has to transmit the hush of the counter before the first course: scanned on a mall directory, compared on review rankings, nominated in tonight's \"where for Japanese?\" debate — the name is the first appearance of the house's craftsmanship. The first word bank is Japanese aesthetic roots: fresh, artisan, house, hall, an, ya — Japanese dining is a ritual category, and one wafu character sets the scene expectation; but restraint wins, since two quiet characters feel more Japanese than a page of borrowed kana. The second lever is the chef narrative: Nobu carried chef Nobuyuki Matsuhisa's nickname to forty cities — in this cuisine's trust structure, \"who stands behind the counter\" is the hardest asset, and chef names and family house names both walk that road. The third lever is freshness and mood cues: Sushi Express (争鲜) writes \"racing for freshness\" into its name, and Genki Sushi turns conveyor-belt dining into a cheerful scene with \"genki\" (vitality) — budget lines should sound bright, premium lines should sound restrained. Mind the price-tier grammar: a conveyor-belt chain and a thousand-per-head omakase counter need entirely different naming registers — appetizing and catchy for one, quiet and spare for the other. As for channels, the restaurant lives on mall facades, review rankings and banquet referrals — design the local name and the kanji for double readability from day one.",
+      namingIdeas: [
+        "Japanese aesthetic roots: fresh, artisan, house, an, ya — one wafu character sets the ritual expectation; two quiet characters beat a page of kana",
+        "Chef and house-name narrative: the Nobu move — \"who stands behind the counter\" is the cuisine's hardest trust asset",
+        "Freshness and mood cues: Sushi Express's directness, Genki's cheer — budget lines sound bright, premium lines sound restrained",
+        "Split grammar by price tier: catchy and appetizing for conveyor belts, quiet and spare for omakase — set the check average before the name's volume",
+        "The double-readability test: the local name and the kanji must both stand — \"X-tei\" has to read smoothly, without accidents, in both languages",
+      ],
+      cases: [
+        { name: "Nobu", takeaway: "Chef Nobuyuki Matsuhisa's nickname carried to forty cities: two syllables answering \"who stands behind the counter\" — the celebrity-partnered empire proving an artisan's name can scale" },
+        { name: "Sushi Express (争鲜)", takeaway: "\"Racing for freshness\" verbs the category's core: the textbook budget conveyor-belt name — appetizing, fast-feeling, and a two-character grab on any mall directory" },
+        { name: "Genki Sushi", takeaway: "\"Genki\" (vitality) turns conveyor-belt sushi into a cheerful scene: everyday-word emotion — you're buying spirit along with the fish; budget Japanese dining differentiates on mood words" },
+        { name: "Sugarfish", takeaway: "Sugar + fish as a contrast blend: the LA brand that democratized omakase built its hook on an unfamiliar pairing — in new markets, a Japanese-dining name can leave wafu grammar behind" },
+      ],
+      pitfalls: [
+        "Stacking Japanese symbols: \"Sakura Fuji Artisan House\" reads as a tourist trap — real wafu is the restraint of two or three characters",
+        "Mismatching the price tier: an omakase name scares diners off a conveyor belt, a fast-food name can't carry a premium check — match the name's volume to the average bill",
+        "Inventing fake Japanese: nonexistent kana spellings collapse instantly before Japanese guests — use real kanji or commit to a localized new grammar",
+        "Ignoring review-app search: the character 鮨 is beautiful but hard to type — keep an easily typed registered name and domain even if the signboard stays literary",
+      ],
+    },
+  },
+  icecream: {
+    slug: "icecream",
+    tlds: [
+      { tld: "com", zh: "连锁与零售渠道的信任底线，冰淇淋品牌的默认选择", en: "The trust baseline for chains and retail — the default for an ice cream brand" },
+      { tld: "shop", zh: "「店」的品类后缀直给零售属性，街角冰淇淋店零解释成本", en: "The shop suffix states retail outright — zero explanation for a corner scoop shop" },
+      { tld: "fun", zh: "「快乐」后缀贴合多巴胺品类气质，甜品的情绪价值一秒成立", en: "The fun suffix matches the dopamine category — dessert's emotional value lands instantly" },
+    ],
+    zh: {
+      label: "冰淇淋品牌",
+      title: "冰淇淋与甜品站品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "冰淇淋命名指南：快乐音节、异域造词、创始人温度等 5 种思路，哈根达斯/DQ/Ben & Jerry's 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的冰淇淋品牌域名。",
+      intro:
+        "冰淇淋的名字要先在舌尖化开：小孩在橱窗前指着念、朋友在社交软件里晒、排队的人把招牌拍进第一张照片——名字是这支冰淇淋的第一口甜。第一素材库是快乐音节：开口元音、叠字、轻快尾音——冰淇淋是纯粹的多巴胺品类，名字念出来的愉悦感直接参与购买；DQ（Dairy Queen）用「皇后」给乳品加冕，两个字母的缩写又轻快得像一句口号。第二个抓手是异域造词：哈根达斯（Häagen-Dazs）是一个完全虚构的「假丹麦词」——创始人在纽约造出北欧感，证明冰淇淋的溢价可以来自名字营造的异域想象。第三个抓手是创始人温度：Ben & Jerry's 用两个真实名字把手工感与价值观装进品牌——甜品的信任来自「有人在认真做这件小事」。要注意品类的两条价格线：街边甜筒线要轻快亲民，礼盒零售线要有质感与故事——名字先选赛道再定语法。渠道上，冰淇淋活在橱窗招牌、便利店冰柜贴纸和社交软件的九宫格里——名字要上镜、要好念、要在小小的杯盖上依然清晰。",
+      namingIdeas: [
+        "快乐音节：开口元音、叠字、轻快尾音——多巴胺品类的名字念出来就要有愉悦感",
+        "异域造词：哈根达斯式的「假北欧词」——冰淇淋的溢价可以来自名字营造的异域想象，但要造得像真的",
+        "创始人温度：Ben & Jerry's 式的真名组合——甜品的信任来自「有人在认真做这件小事」的具体感",
+        "加冕与升维词：DQ 的「皇后」给乳品加冕——日常品类借头衔词完成质感升级",
+        "杯盖测试：名字印在直径五厘米的杯盖上要依然清晰——冰淇淋的名字活在小包装与九宫格照片里",
+      ],
+      cases: [
+        { name: "哈根达斯（Häagen-Dazs）", takeaway: "完全虚构的「假丹麦词」：纽约创始人造出北欧异域感——两个变音符号撑起的溢价神话，证明冰淇淋的高端感可以从名字凭空营造" },
+        { name: "DQ（Dairy Queen）", takeaway: "「皇后」给乳品加冕 + 两字母缩写的口号感：全称有质感、缩写有速度——大众品牌的双名结构教科书" },
+        { name: "Ben & Jerry's", takeaway: "两个真实创始人名字的组合：手工感、价值观与幽默感一起装进品牌——甜品的信任来自「有人认真做这件小事」" },
+        { name: "钟薛高", takeaway: "「中式雪糕」的谐音三字：把品类宣言藏进一个像人名的名字——国潮命名的代表作，也提醒名字撑起的溢价要有产品接住" },
+      ],
+      pitfalls: [
+        "堆砌「冰雪甜心屋」类甜腻全能词：像临时摊位而非品牌——甜感要来自音节，不是形容词",
+        "异域感造假穿帮：造词要像真的——半真半假的「法式」拼写被识破后反噬信任",
+        "名字与价格带错位：街边甜筒起贵妇名吓退路人，礼盒线起卡通名撑不起客单——先选赛道再定语法",
+        "忽略季节与品类余量：纯「冰」字名字冬天怎么办——热饮与甜品是自然延伸，名字边界画在「甜品」更稳",
+      ],
+    },
+    en: {
+      label: "Ice cream brands",
+      title: "How to Name an Ice Cream or Dessert Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Ice cream naming guide: joyful phonetics, exotic coinages, founder warmth, breakdowns of Häagen-Dazs/DQ/Ben & Jerry's, recommended TLDs and pitfalls — then hunt an available ice cream brand domain with AI.",
+      intro:
+        "An ice cream name has to melt on the tongue first: pointed at and read aloud by kids at the window, posted by friends on social feeds, framed in the first photo of the queue — the name is the first taste of sweetness. The first word bank is joyful phonetics: open vowels, playful doubling, light endings — ice cream is a pure dopamine category, and the pleasure of saying the name joins the purchase directly; Dairy Queen crowns the dairy case with royalty, while the DQ abbreviation snaps like a slogan. The second lever is the exotic coinage: Häagen-Dazs is an entirely fictional \"fake Danish\" word — a New York founder manufactured Nordic premium from thin air, proving ice cream margins can be built on imagined provenance. The third lever is founder warmth: Ben & Jerry's packs craft feel, values and humor into two real first names — dessert trust comes from the sense that someone cares about this small thing. Mind the two price tracks: the street-cone line needs light, friendly sounds, while the gift-and-retail line needs texture and story — pick the track before the grammar. As for channels, ice cream lives on window signage, freezer-door stickers and social-media photo grids — the name must be photogenic, easy to say, and legible on a five-centimeter cup lid.",
+      namingIdeas: [
+        "Joyful phonetics: open vowels, playful doubling, light endings — a dopamine category whose name should taste good to say",
+        "Exotic coinage: the Häagen-Dazs move — premium can be built on imagined provenance, but the invention has to feel real",
+        "Founder warmth: the Ben & Jerry's pairing — dessert trust comes from a specific someone caring about this small thing",
+        "Crowning words: Dairy Queen's royalty on the dairy case — everyday categories upgrade through title words",
+        "The cup-lid test: the name must stay legible on a five-centimeter lid — ice cream names live on tiny packaging and photo grids",
+      ],
+      cases: [
+        { name: "Häagen-Dazs", takeaway: "An entirely fictional \"fake Danish\" word: a New York founder manufacturing Nordic premium — the umlaut-powered margin myth proving high-end feel can be coined from nothing" },
+        { name: "Dairy Queen (DQ)", takeaway: "Royalty crowning the dairy case plus a two-letter slogan of an abbreviation: texture in the full name, speed in the short one — the textbook double-name structure for a mass brand" },
+        { name: "Ben & Jerry's", takeaway: "Two real founders' first names: craft feel, values and humor packed into one brand — proof that dessert trust is personal, not corporate" },
+        { name: "Chicecream (钟薛高)", takeaway: "Three characters punning on \"Chinese ice cream\" disguised as a person's name: the guochao naming flagship — and a reminder that name-built premium needs product to catch it" },
+      ],
+      pitfalls: [
+        "Piling up \"Frosty Sweetheart House\" saccharine catch-alls: reads as a pop-up stall, not a brand — sweetness comes from syllables, not adjectives",
+        "Exotic fakery that unravels: coin it like it's real — a half-baked \"French\" spelling backfires on trust once spotted",
+        "Mismatching the price track: a duchess name scares street-cone buyers, a cartoon name can't carry the gift box — pick the track first",
+        "No seasonal headroom: what does a pure \"ice\" name sell in January — hot drinks and desserts are natural extensions; draw the line at dessert, not frozen",
+      ],
+    },
+  },
+  hostel: {
+    slug: "hostel",
+    tlds: [
+      { tld: "com", zh: "OTA 直连与国际预订的信任底线，青旅品牌的默认选择", en: "The trust baseline for OTA listings and international bookings — the default for a hostel brand" },
+      { tld: "travel", zh: "「旅行」品类后缀直给行业，背包客受众零解释成本", en: "The travel suffix states the trade — zero explanation for a backpacker audience" },
+      { tld: "world", zh: "「世界」后缀贴合环球旅行叙事，连锁扩张的格局一秒成立", en: "The world suffix fits the round-the-globe story — chain ambition lands instantly" },
+    ],
+    zh: {
+      label: "青年旅舍",
+      title: "青年旅舍与背包客栈怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "青旅命名指南：相遇词根、在地故事、社群气质等 5 种思路，YHA/Generator/Selina 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的青旅品牌域名。",
+      intro:
+        "青旅的名字要先递出一张床位之外的邀请：背包客在预订平台上比价、在攻略帖里被种草、在大堂酒吧里问「你也住这家？」——名字卖的不是住宿是相遇。第一素材库是相遇词根：栈、舍、集、巢、驿——青旅是社交密度最高的住宿业态，名字里的聚集感直接回答「这里能认识人吗」；YHA（国际青年旅舍）用协会式命名做了一百年的标准与信任，是这个品类的公共基础设施。第二个抓手是在地故事：瓦当瓦舍把建筑构件「瓦当」写进名字，用在地文化给连锁品牌做出人文纵深——青旅的顾客买的就是「住进这座城市」的感觉。第三个抓手是社群气质词：Generator（发电机）把能量与创造力当名字，Selina 用一个女孩的名字把连锁开到二十国——青旅名字的气质光谱可以从工业酷感到亲密人名，关键是与目标客群的自我认同对齐。要注意与酒店语法的切割：「XX 大酒店」的分量词在青旅语境里全是减分项——这个品类要的是轻、是酷、是有故事。渠道上，青旅活在 OTA 列表、小红书攻略和旅友的口头接力里——名字要好念、上镜、且在多语言环境里不闹笑话。",
+      namingIdeas: [
+        "相遇词根：栈、舍、集、巢、驿——青旅卖的不是床位是相遇，聚集感直接回答「这里能认识人吗」",
+        "在地故事：把城市的建筑、方言、物产写进名字（瓦当瓦舍式）——顾客买的是「住进这座城市」的感觉",
+        "社群气质词：从 Generator 的工业酷感到 Selina 的亲密人名——气质光谱很宽，关键是与客群自我认同对齐",
+        "与酒店语法切割：大、豪、国际等分量词全是减分项——青旅要轻、要酷、要有故事",
+        "多语言口念测试：背包客来自全世界——名字要让非中文母语者也能念出并转述给下一个旅友",
+      ],
+      cases: [
+        { name: "YHA / Hostelling International", takeaway: "协会式命名做了一百年的标准与信任：「青年旅舍」这个品类名本身就是它定义的——公共基础设施级的品牌，靠标准而非个性取胜" },
+        { name: "Generator", takeaway: "「发电机」的工业能量词：欧洲设计青旅连锁用一个词把「这里有电」的社交密度说清——品类升级时代的青旅可以酷得像俱乐部" },
+        { name: "Selina", takeaway: "一个女孩的名字开到二十个国家：亲密人名让连锁品牌保持民宿般的温度——数字游民时代「住宿 + 联合办公」的新物种命名" },
+        { name: "瓦当瓦舍", takeaway: "建筑构件「瓦当」+ 谐音复沓的「瓦舍」：在地文化给连锁品牌做出人文纵深——中文青旅命名里罕见的既有学问又好念的样本" },
+      ],
+      pitfalls: [
+        "借酒店分量词：「国际大酒店」式的名字在青旅语境全是减分——这个品类的信任来自社群而非气派",
+        "廉价感透支：「穷游驿站」式自嘲把低价写进名字——青旅早已不是将就的代名词，别把品牌钉在价格底部",
+        "锁死单一城市：「XX 湖畔客栈」开第二家店时名字就成了包袱——在地故事要可复制，城市名放副标题",
+        "忽略多语言环境：背包客来自全世界，拼音名要能被外国舌头念出——OTA 页面上的英文名要一起设计",
+      ],
+    },
+    en: {
+      label: "Hostels",
+      title: "How to Name a Hostel or Backpacker Lodge: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Hostel naming guide: gathering roots, local stories, community vibes, breakdowns of YHA/Generator/Selina, recommended TLDs and pitfalls — then hunt an available hostel-brand domain with AI.",
+      intro:
+        "A hostel's name has to extend an invitation beyond the bunk: compared on booking platforms, recommended in travel threads, asked about at the lobby bar with \"you're staying here too?\" — what it sells is not lodging but encounters. The first word bank is gathering roots: lodge, nest, den, junction, post — hostels are the most social lodging format there is, and a gathering word answers \"will I meet people here?\" straight from the sign; YHA built a century of standards and trust on association-style naming, becoming the category's public infrastructure. The second lever is the local story: Wadang Washe writes an ancient roof-tile ornament into its name, giving a Chinese chain humanistic depth — hostel guests are buying the feeling of living inside the city. The third lever is the community vibe word: Generator makes industrial energy the entire brand, while Selina carried one girl's name to twenty countries — the vibe spectrum runs from warehouse-cool to intimate first names, and the only rule is aligning with how your guests see themselves. Mind the split from hotel grammar: \"Grand\", \"Plaza\" and \"International\" are all negatives in a hostel context — this category wants light, cool and storied. As for channels, hostels live on OTA listings, travel-app guides and traveler-to-traveler relays — the name must be easy to say, photogenic, and accident-free across many languages.",
+      namingIdeas: [
+        "Gathering roots: lodge, nest, den, junction, post — hostels sell encounters, and the gathering word answers \"will I meet people here?\"",
+        "Local stories: write the city's architecture, dialect or produce into the name — guests are buying the feeling of living inside the city",
+        "Community vibe words: from Generator's industrial energy to Selina's intimate first name — align the vibe with how guests see themselves",
+        "Split from hotel grammar: Grand, Plaza and International are negatives here — the category wants light, cool and storied",
+        "The multilingual test: backpackers come from everywhere — the name must be sayable and relayable by tongues from any continent",
+      ],
+      cases: [
+        { name: "YHA / Hostelling International", takeaway: "Association naming carrying a century of standards: the category word \"youth hostel\" is one it defined itself — an infrastructure-grade brand winning on trust, not personality" },
+        { name: "Generator", takeaway: "Industrial energy as the entire name: the European design-hostel chain says \"this place has voltage\" in one word — the upgraded hostel era can be as cool as a club" },
+        { name: "Selina", takeaway: "One girl's name carried to twenty countries: an intimate first name keeps a chain feeling like a guesthouse — the naming of the lodging-plus-coworking species of the digital-nomad era" },
+        { name: "Wadang Washe (瓦当瓦舍)", takeaway: "An ancient roof-tile ornament plus rhyming repetition: local heritage giving a Chinese chain humanistic depth — a rare sample that is both erudite and easy to say" },
+      ],
+      pitfalls: [
+        "Borrowing hotel weight words: \"Grand International\" names are all negatives in a hostel — trust here comes from community, not marble",
+        "Overdrawing the budget angle: \"Broke Traveler Depot\" self-deprecation nails the brand to the price floor — hostels stopped being a compromise years ago",
+        "Welding to one location: \"X Lakeside Lodge\" becomes baggage at the second property — make the local story replicable and keep the city name in the subtitle",
+        "Ignoring the multilingual room: guests come from everywhere — design the romanized name for foreign tongues, and fix the OTA-page English name together",
+      ],
+    },
+  },
+  bowling: {
+    slug: "bowling",
+    tlds: [
+      { tld: "com", zh: "连锁场馆与赛事运营的信任底线，保龄球品牌的默认选择", en: "The trust baseline for chains and league operations — the default for a bowling brand" },
+      { tld: "club", zh: "「俱乐部」后缀贴合会员制场馆与球队社群，归属感直给", en: "The club suffix fits membership venues and league communities — belonging stated outright" },
+      { tld: "fun", zh: "「快乐」后缀直给娱乐属性，家庭与团建场景零解释成本", en: "The fun suffix states entertainment outright — zero explanation for family and team-outing scenes" },
+    ],
+    zh: {
+      label: "保龄球馆",
+      title: "保龄球馆与桌娱品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "保龄球馆命名指南：全中词根、复古潮流、聚会能量等 5 种思路，Bowlero/Lucky Strike/Round1 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的球馆品牌域名。",
+      intro:
+        "保龄球馆的名字要先让人听见「全中」的那声脆响：同事在团建平台上选场地、家庭在周末计划里比较、朋友在「周五去打保龄」的群消息里提名——名字是这家馆欢乐浓度的第一次预告。第一素材库是全中词根：中、击、瓶、道、环——保龄球的爽感浓缩在 strike 一瞬，名字里的命中感直接调动多巴胺；Bowlero 在品类词 bowl 后加一个拉丁尾音，让老品类瞬间年轻。第二个抓手是复古潮流：保龄球自带上世纪美式黄金年代的滤镜——Lucky Strike 借「幸运一击」的双关把复古酷感做成高端聚会品牌，霓虹灯、木纹球道都是名字可以借的意象。第三个抓手是聚会能量：现代球馆是「保龄球 + 酒吧 + 街机」的娱乐综合体——Round1 用「第一回合」把多业态的游戏感说清，名字要托得住生日会、团建与约会三个场景。要注意运动与娱乐的配比：纯运动向的名字吓退轻玩家，纯娱乐向又接不住联赛与球具生意——命中感与欢乐感要各占一半。渠道上，球馆活在商场导览屏、团建平台列表和小红书的荧光球道照片里——名字要上镜、好念、自带邀约感。",
+      namingIdeas: [
+        "全中词根：中、击、瓶、道——strike 一瞬的爽感是品类核心，名字里的命中感直接调动多巴胺",
+        "复古潮流意象：霓虹、木纹、黄金年代——保龄球自带美式复古滤镜，Lucky Strike 式的双关能把老品类做出高端酷感",
+        "聚会能量词：回合、派对、星光——现代球馆是娱乐综合体，名字要托得住生日会、团建与约会三个场景",
+        "品类词年轻化：Bowlero 式的尾音改造——在 bowl 类词根上加轻快尾音，老品类瞬间年轻",
+        "邀约感测试：把名字放进「周五去 XX 打一局」念一遍——没有邀约感的名字进不了群消息",
+      ],
+      cases: [
+        { name: "Bowlero", takeaway: "品类词 bowl + 拉丁尾音 -ero：老品类的年轻化改造教科书——北美最大保龄球连锁用一个尾音完成从球馆到潮流娱乐的转身" },
+        { name: "Lucky Strike", takeaway: "「幸运一击」的双关：strike 既是保龄全中又是好运降临——复古酷感做成高端聚会品牌，名字自带霓虹灯质感" },
+        { name: "Round1", takeaway: "「第一回合」的游戏语法：日本娱乐综合体把保龄球、街机、卡拉 OK 装进一个格斗游戏术语——多业态场馆的游戏感命名样本" },
+        { name: "AMF", takeaway: "American Machine & Foundry 的三字母缩写：从球道设备商到球馆连锁——工业品牌反向进入消费场景时，缩写的中性反而成了资产" },
+      ],
+      pitfalls: [
+        "堆砌「星际炫酷保龄城」类夜场词：像十年前的电玩城而非潮流场馆——复古要精致，炫酷要克制",
+        "纯运动向吓退轻玩家：「XX 竞技保龄中心」把团建客挡在门外——命中感与欢乐感要各占一半",
+        "锁死单一业态：现代球馆是球道 + 酒吧 + 街机的综合体——名字边界画在「聚会娱乐」而非一条球道",
+        "忽略团建平台搜索：企业订场景走团建平台与点评搜索——名字要好打好搜，生僻字与纯符号名进不了采购清单",
+      ],
+    },
+    en: {
+      label: "Bowling alleys",
+      title: "How to Name a Bowling Alley or Entertainment Venue: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Bowling alley naming guide: strike roots, retro-cool imagery, party energy, breakdowns of Bowlero/Lucky Strike/Round1, recommended TLDs and pitfalls — then hunt an available bowling-brand domain with AI.",
+      intro:
+        "A bowling alley's name should crack like a strike before anyone laces up: picked by coworkers on a team-outing platform, compared in weekend family plans, nominated in the \"bowling this Friday?\" group chat — the name is the first preview of the venue's joy density. The first word bank is strike roots: strike, pin, lane, hit, ten — bowling's thrill is compressed into the strike moment, and hit-energy in the name taps dopamine directly; Bowlero grafts a Latin ending onto the category word and makes an old pastime instantly young. The second lever is retro-cool: bowling carries a built-in mid-century American filter — Lucky Strike turns the strike/fortune double meaning into an upscale party brand, and neon signs and wood-grain lanes are all imagery a name can borrow. The third lever is party energy: the modern alley is a bowling-bar-arcade complex — Round1 says multi-format play in one fighting-game term, and the name must hold birthdays, team outings and dates at once. Mind the sport-to-entertainment ratio: a purely athletic name scares off casual players, while a purely party name can't carry leagues and pro-shop business — hit-energy and fun should split the name evenly. As for channels, alleys live on mall directories, team-outing platforms and glow-lane photos on social feeds — the name must be photogenic, easy to say, and carry a built-in invitation.",
+      namingIdeas: [
+        "Strike roots: strike, pin, lane, hit — the category's thrill is compressed into one moment; hit-energy in the name taps dopamine directly",
+        "Retro-cool imagery: neon, wood grain, the golden age — bowling wears a mid-century filter; a Lucky Strike-style double meaning makes old cool again",
+        "Party energy words: round, social, star — the modern alley is an entertainment complex; the name must hold birthdays, team outings and dates",
+        "Rejuvenate the category word: the Bowlero move — a light ending grafted onto a bowl root makes the old pastime instantly young",
+        "The invitation test: say \"bowling at X this Friday?\" — a name without built-in invitation never makes the group chat",
+      ],
+      cases: [
+        { name: "Bowlero", takeaway: "Category word plus Latin ending: the textbook rejuvenation of an old pastime — North America's largest bowling chain pivoted from alley to lifestyle entertainment on one suffix" },
+        { name: "Lucky Strike", takeaway: "The strike/fortune double meaning: a bowling term that is also good luck arriving — retro-cool built into an upscale party brand, with neon texture baked into the name" },
+        { name: "Round1", takeaway: "Fighting-game grammar for a venue: the Japanese complex packs bowling, arcades and karaoke into one \"round one\" — the sample for naming multi-format play" },
+        { name: "AMF", takeaway: "Three letters from American Machine & Foundry: the lane-equipment maker turned alley chain — when an industrial brand enters consumer space, the abbreviation's neutrality becomes the asset" },
+      ],
+      pitfalls: [
+        "Piling up \"Galactic Neon Bowl City\" nightclub words: reads as a decade-old arcade, not a venue — keep retro refined and cool restrained",
+        "Going purely athletic: \"X Competitive Bowling Center\" locks out the team-outing crowd — split the name evenly between hit-energy and fun",
+        "Welding to one format: the modern alley is lanes plus bar plus arcade — draw the boundary at social entertainment, not a single lane",
+        "Ignoring platform search: corporate bookings run through team-outing platforms and review apps — obscure characters and symbol-only names never make the procurement list",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
