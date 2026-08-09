@@ -5569,6 +5569,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Law firm websites", "Practicing attorneys' personal brands", "City/practice + .law vertical acquisition", "The clean namespace behind the price bar"],
     },
   },
+  "jewelry-vs-boutique": {
+    slug: "jewelry-vs-boutique",
+    a: "jewelry",
+    b: "boutique",
+    zh: {
+      title: ".jewelry 和 .boutique 怎么选：品类门牌与精品调性的分工",
+      metaDescription: ".jewelry 把珠宝品类写进后缀，适合珠宝品牌与设计师工作室；.boutique 讲的是精品调性，适合买手店与小众品牌。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个说「卖什么」，一个说「怎么卖」。.jewelry 把整个品类写进后缀——珠宝品牌与设计师工作室、金店银楼与钻石商、手作饰品电商、定制与鉴定服务用 name.jewelry，品牌名加品类词一步到位，aurora.jewelry 比 aurorajewelry.com 更短更雅；注册约 $11（约 ¥78）、续费约 $52/年（约 ¥374），首年便宜、续费中档，对客单价高的珠宝生意是可忽略的获客成本。.boutique 说的不是品类而是气质——买手店与设计师集合店、小众服饰与生活方式品牌、精品民宿与选品店用 name.boutique，「精品、小而美」的调性从后缀就开始传达；注册约 $3（约 ¥19）、续费约 $26/年（约 ¥189），两头都便宜得多，是行业后缀里少见的低持有成本。判断标准：生意就是珠宝——主打首饰、钻石、定制 → .jewelry 的品类门牌最准，宝石词与设计师名库存都极好；生意是「一家有品味的店」——多品类买手、小众集合、精品调性 → .boutique 的气质覆盖面更宽，珠宝只是货架之一时也不违和。两点注意：一是 .jewelry 七个字母偏长，口播传播为主的品牌先读顺再定，印刷与包装上反而加分；二是 .boutique 语义不含品类，纯珠宝垂类用它会损失一部分搜索意图。预算允许的珠宝买手店可以两头拿：.jewelry 做垂类主站、.boutique 兜住精品调性搜索。命名上「品牌/宝石词 + .jewelry」接珠宝垂类，「店名 + .boutique」接精品集合店。",
+      pickA: ["珠宝品牌与设计师工作室", "金店银楼与钻石商", "手作饰品与定制电商", "品牌名 + 品类词一步到位"],
+      pickB: ["买手店与设计师集合店", "小众服饰与生活方式品牌", "精品民宿与选品店", "更低的注册与续费（约 ¥189/年）"],
+    },
+    en: {
+      title: ".jewelry vs .boutique: The Category Nameplate or The Curated Air",
+      metaDescription:
+        ".jewelry writes the category into the suffix — for jewelry brands and designer studios; .boutique carries the curated, small-and-fine air — for concept stores and niche brands. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One names what you sell; the other names how you sell it. .jewelry puts the whole category in the suffix — jewelry brands and designer studios, gold and diamond dealers, handmade accessory e-commerce, and custom or appraisal services on name.jewelry get brand plus category in one stroke; aurora.jewelry reads shorter and more elegant than aurorajewelry.com. At about $11 to register and $52/yr to renew, the holding cost is negligible for a high-ticket trade. .boutique names the register, not the category — multi-brand concept stores, niche fashion and lifestyle labels, and boutique guesthouses or curated shops on name.boutique broadcast the small-and-fine air straight from the suffix. At about $3 to register and $26/yr to renew, it's far cheaper on both ends — a rare low-cost hold among industry gTLDs. The test: if the business is jewelry itself — fine pieces, diamonds, custom work → .jewelry's category nameplate is truest, and gemstone words and designer names nearly all hit; if the business is a tasteful shop — multi-category curation, niche collections, boutique positioning → .boutique's wider register fits even when jewelry is just one shelf. Two cautions: at seven letters .jewelry runs long, so say it aloud before committing if word-of-mouth is your channel — in print and on packaging it reads as a plus; and .boutique carries no category signal, so a pure jewelry vertical loses some search intent on it. A jewelry concept store with budget can hold both: .jewelry as the vertical flagship, .boutique catching curated-shopping search. Naming: brand or gemstone word + .jewelry fits the vertical; shop name + .boutique fits curated stores.",
+      pickA: ["Jewelry brands & designer studios", "Gold & diamond dealers", "Handmade & custom accessory e-commerce", "Brand + category in one stroke"],
+      pickB: ["Multi-brand concept stores", "Niche fashion & lifestyle labels", "Boutique guesthouses & curated shops", "Cheaper ~$26/yr renewal"],
+    },
+  },
+  "cleaning-vs-services": {
+    slug: "cleaning-vs-services",
+    a: "cleaning",
+    b: "services",
+    zh: {
+      title: ".cleaning 和 .services 怎么选：精准品类与多业态平台的分工",
+      metaDescription: ".cleaning 把保洁品类说得一字不差，适合专注清洁的公司；.services 覆盖面宽，适合多业态家政与服务平台。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个窄而准，一个宽而稳。.cleaning 把服务内容说得一字不差——家政保洁与开荒公司、写字楼与商业保洁、地毯/外墙/管道等专项清洁、清洁设备与耗材品牌用 name.cleaning，客户搜「城市名 + cleaning」找的就是它，sparkle.cleaning 这样的名字本身就是广告语；注册与续费均约 $60/年（约 ¥434），平进平出、无首年陷阱，在行业后缀里价格偏高但换来极好的库存。.services 是服务业的通用门牌——多业态家政平台、企业服务与外包、IT 运维与咨询、本地生活服务聚合用 name.services，一个后缀装得下保洁、维修、搬家多条业务线；注册约 $9（约 ¥63）、续费约 $31/年（约 ¥226），两头都便宜得多、续费不到 .cleaning 的一半。判断标准：只做清洁、靠品类词精准获客——单城保洁公司、专项清洁团队 → .cleaning 的搜索匹配直接变成询单；业务线不止清洁、或计划横向扩张——家政平台、综合服务商 → .services 的宽口径不用改名就能装下新业务。两点注意：一是约 ¥434/年的持有成本对单店家政是笔真实开销，起步期可先用 .services 过渡、客源稳定后再上 .cleaning；二是本地服务生意的大头在地图与本地 SEO，域名里的关键词是加分不是全部。预算允许的清洁公司可以两头拿：.cleaning 做获客落地页、.services 做集团官网。命名上「城市 + .cleaning」接本地保洁获客，「品牌 + .services」接多业态平台。",
+      pickA: ["专注保洁的家政与开荒公司", "商业办公楼保洁", "专项清洁（地毯/外墙/管道）", "「城市 + cleaning」精准搜索获客"],
+      pickB: ["多业态家政与服务平台", "企业服务与外包公司", "IT 运维与咨询服务", "更低的注册与续费（约 ¥226/年）"],
+    },
+    en: {
+      title: ".cleaning vs .services: The Precise Category or The Multi-Trade Platform",
+      metaDescription:
+        ".cleaning says the trade word for word — for dedicated cleaning companies; .services reads wider — for multi-trade home service platforms. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One is narrow and precise; the other wide and steady. .cleaning says the service word for word — residential and move-out cleaners, office and commercial janitorial firms, specialty carpet/window/duct crews, and cleaning supply brands on name.cleaning match exactly what customers type when they search city + cleaning; a name like sparkle.cleaning is its own slogan. At about $60/yr flat for both registration and renewal, it's pricier than most industry gTLDs but pays back in superb inventory. .services is the trade world's general nameplate — multi-trade home service platforms, business services and outsourcing, IT operations and consulting, and local service aggregators on name.services hold cleaning, repair and moving lines under one suffix. At about $9 to register and $31/yr to renew, it's far cheaper on both ends — renewal less than half of .cleaning. The test: if cleaning is the whole business and the category word drives leads — a single-city cleaning firm, a specialty crew → .cleaning's search match converts straight into inquiries; if the business spans more trades or plans to — a home-services platform, a general contractor → .services' wide scope absorbs new lines without a rename. Two cautions: at ≈$60/yr the .cleaning holding cost is real for a one-crew operation — start on .services and upgrade once bookings stabilize; and local service businesses still live on maps and local SEO — the keyword in the domain is a boost, not the whole game. With budget, hold both: .cleaning as the lead-gen landing page, .services as the group site. Naming: city + .cleaning fits local lead capture; brand + .services fits multi-trade platforms.",
+      pickA: ["Dedicated residential & commercial cleaners", "Office & janitorial services", "Specialty cleaning (carpet/window/duct)", "City + cleaning exact-match search"],
+      pickB: ["Multi-trade home service platforms", "Business services & outsourcing", "IT operations & consulting", "Cheaper ~$31/yr renewal"],
+    },
+  },
+  "plumbing-vs-repair": {
+    slug: "plumbing-vs-repair",
+    a: "plumbing",
+    b: "repair",
+    zh: {
+      title: ".plumbing 和 .repair 怎么选：水暖专业身份与综合维修的分工",
+      metaDescription: ".plumbing 是水暖管道行业的专业门牌，适合水管维修与安装公司；.repair 覆盖一切修理生意，适合综合维修与数码维修。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都靠急单吃饭，一个报工种，一个报动作。.plumbing 是最早一批行业 gTLD——水管维修与疏通、水暖安装工程、卫浴管件供应、24 小时应急上门平台用 name.plumbing，爆管漏水的客户搜「城市名 + plumbing」时你的域名就是搜索词本身；注册约 $8（约 ¥59）、续费约 $58/年（约 ¥419），首年低门槛试水、续费按获客价值算完全值回。.repair 一个动作词覆盖一切修理——手机与数码维修、家电维修、汽车维修、综合上门修理平台用 name.repair，「修什么」放在前缀就说清了，phone.repair、watch.repair 式组合本身就是搜索词；注册约 $8（约 ¥56）、续费约 $29/年（约 ¥211），首年与 .plumbing 相当、续费便宜三成，多品类矩阵更好养。判断标准：只做水暖、要的是执业身份——水暖行、管道公司 → .plumbing 的专业门牌最准，师傅姓氏与城市名库存极好；修的不止水管、或以品类词获客——数码/家电/综合维修 → .repair 的宽口径加「品类 + .repair」组合更灵活。两点注意：一是两者都主要面向英语市场，中文语境的认知需要品牌自己建立；二是急单生意的转化在响应速度与评价，域名精准只是入口，接单电话与地图收录要同步做足。水暖公司扩业务时常见打法：.plumbing 做主站、品类词 .repair 做各业务线落地页。命名上「城市/姓氏 + .plumbing」接本地水暖行，「品类 + .repair」接垂直维修获客。",
+      pickA: ["水管维修与疏通服务", "水暖安装工程公司", "卫浴与管件供应商", "「城市 + plumbing」急单搜索词"],
+      pickB: ["手机与数码维修", "家电与综合上门维修", "「品类 + .repair」即搜索词", "更便宜的续费（约 ¥211/年）"],
+    },
+    en: {
+      title: ".plumbing vs .repair: The Trade Identity or The Catch-All Fix",
+      metaDescription:
+        ".plumbing is the plumbing trade's professional nameplate — for repair and installation firms; .repair covers every fixing business — for electronics and general repair. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live on urgent calls; one names the trade, the other names the action. .plumbing is one of the original trade gTLDs — repair and drain-clearing services, installation contractors, bathroom and pipe-fitting suppliers, and 24/7 emergency platforms on name.plumbing match the exact phrase a customer with a burst pipe types: city + plumbing. At about $8 to register and $58/yr to renew, the low first-year door suits testing and the renewal pays for itself in lead value. .repair covers every fixing business in one action word — phone and electronics repair, appliance repair, auto shops, and on-demand fix-it platforms on name.repair state what gets fixed right in the prefix; combos like phone.repair or watch.repair are the search query itself. At about $8 to register and $29/yr to renew — similar year one, but renewal runs a third cheaper, making a multi-category matrix easier to hold. The test: if plumbing is the whole trade and you want the professional identity — a plumbing firm, a drains company → .plumbing's nameplate is truest, and family names and city names nearly all hit; if you fix more than pipes or acquire by category word — electronics, appliances, general repair → .repair's wide scope plus category + .repair combos flex further. Two cautions: both target English-speaking markets first, so plan brand-building elsewhere; and urgent-call trades convert on response time and reviews — the exact-match domain is the door, not the deal, so nail the phone line and map listing too. A plumbing firm expanding trades often holds both: .plumbing as the flagship, category .repair domains as line-of-business landing pages. Naming: city or family name + .plumbing fits local firms; category + .repair fits vertical lead capture.",
+      pickA: ["Repair & drain services", "Plumbing installation contractors", "Bathroom & pipe fitting suppliers", "City + plumbing burst-pipe search"],
+      pickB: ["Phone & electronics repair", "Appliance & general on-demand repair", "Category + .repair as the search query", "Cheaper ~$29/yr renewal"],
+    },
+  },
+  "catering-vs-restaurant": {
+    slug: "catering-vs-restaurant",
+    a: "catering",
+    b: "restaurant",
+    zh: {
+      title: ".catering 和 .restaurant 怎么选：外烩承办与堂食门店的分工",
+      metaDescription: ".catering 说的是上门承办与宴会外烩，适合活动餐饮公司；.restaurant 是堂食门店的门牌，适合餐厅官网与订位。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同是餐饮，一个送出去，一个请进来。.catering 把「外烩承办」写进域名——宴会与活动餐饮、企业团餐与工作餐配送、婚礼与派对外烩、私厨上门宴席用 name.catering，办活动找餐饮的客户搜「城市名/菜系 + catering」落到你的域名毫无损耗，feast.catering 这样的名字本身就说清了生意；注册与续费均约 $31/年（约 ¥226），平进平出、无首年陷阱，属中档好持有。.restaurant 是堂食门店的门牌——餐厅官网与订位、连锁品牌主站、美食广场与餐饮集团用 name.restaurant，顾客一眼读懂「这是家餐厅」，菜单、地址、订位一站承载；注册约 $13（约 ¥94）、续费约 $52/年（约 ¥374），首年便宜、续费中偏高，对翻台生意是小钱。判断标准：生意在客户的场地——宴会承办、团餐配送、上门私厨 → .catering 的场景词最准；生意在自己的门店——堂食、订位、门店矩阵 → .restaurant 的门牌感更稳。两点注意：一是 .restaurant 十个字母是最长的行业后缀之一，配短品牌词平衡口播；二是餐饮集团两条业务线并行时不必二选一——主站用 .restaurant、外烩业务线用 .catering 分开获客是常见打法，比堆在一个域名下更利于投放与 SEO。三是外烩生意重案例与口碑，域名之外把作品集和客户评价做足。命名上「城市/菜系 + .catering」接本地承接，「店名 + .restaurant」接堂食门店官网。",
+      pickA: ["宴会与活动餐饮公司", "企业团餐与工作餐配送", "婚礼与派对外烩", "注册续费同价好持有（约 ¥226/年）"],
+      pickB: ["餐厅官网与在线订位", "连锁餐饮品牌主站", "美食广场与餐饮集团", "门牌感一眼读懂堂食门店"],
+    },
+    en: {
+      title: ".catering vs .restaurant: Bringing the Feast or Seating the Guest",
+      metaDescription:
+        ".catering names the off-site trade — for event caterers and corporate meals; .restaurant is the dine-in nameplate — for venue sites and reservations. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both feed people; one delivers the feast, the other seats the guest. .catering writes the off-site trade into the domain — banquet and event caterers, corporate meal and office-lunch programs, wedding and party specialists, and private chef services on name.catering catch event planners searching city or cuisine + catering with zero loss; a name like feast.catering explains the business by itself. At about $31/yr flat for both registration and renewal — no first-year trap, an easy mid-tier hold. .restaurant is the dine-in nameplate — venue websites and reservations, chain brand flagships, and food halls or restaurant groups on name.restaurant read instantly as a place to eat, carrying menu, address and booking in one stop. At about $13 to register and $52/yr to renew — cheap year one, mid-to-high renewal that's small change for a table-turning business. The test: if the business happens at the client's venue — banquets, corporate delivery, private chefs → .catering's scene word is truest; if it happens at your own tables — dine-in, reservations, a venue portfolio → .restaurant's nameplate reads steadier. Three cautions: at ten letters .restaurant is among the longest industry suffixes, so pair it with a short brand word for spoken balance; a restaurant group running both lines needn't choose — .restaurant for the flagship and .catering for the events arm is the common play, cleaner for ads and SEO than piling both on one domain; and catering runs on portfolios and word of mouth, so back the domain with case photos and client reviews. Naming: city or cuisine + .catering fits local booking; venue name + .restaurant fits the dine-in front door.",
+      pickA: ["Banquet & event caterers", "Corporate meal & lunch delivery", "Wedding & party catering", "Flat ~$31/yr in-and-out pricing"],
+      pickB: ["Restaurant websites & reservations", "Chain brand flagship sites", "Food halls & restaurant groups", "Instant dine-in nameplate read"],
+    },
+  },
+  "florist-vs-garden": {
+    slug: "florist-vs-garden",
+    a: "florist",
+    b: "garden",
+    zh: {
+      title: ".florist 和 .garden 怎么选：花艺师门牌与园艺生活的分工",
+      metaDescription: ".florist 说的是花艺师与花店的职业身份，适合花店与花艺工作室；.garden 讲园艺与庭院生活，适合园艺资材与景观设计。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都与花草为伴，一个卖花束，一个种花园。.florist 三个音节就是「花艺师」——本地花店与鲜花速递、花艺工作室与婚礼布置、订阅制鲜花电商、花艺课程培训用 name.florist，买花的人搜「城市名 + florist」找的就是它，bloom.florist 印在花束卡片上也雅致；注册约 $8（约 ¥59）、续费约 $26/年（约 ¥189），首年低门槛、续费也便宜，是少见的「便宜进便宜养」。.garden 说的是园艺与庭院这个生活场景——园艺资材与种子电商、景观设计与庭院施工、市民农园与植物园、园艺内容与社区用 name.garden，一个后缀装下从卖种子到造花园的整条链路；注册约 $2（约 ¥11）、续费约 $26/年（约 ¥189），首年近乎免费、续费与 .florist 同价。判断标准：生意是「花艺师的手艺」——花束、婚礼布置、鲜花订阅 → .florist 的职业门牌最准，花名与城市名库存极好；生意是「园艺这件事」——资材、设计施工、植物内容 → .garden 的场景口径更宽，secret.garden 这样的名字自带诗意。两点注意：一是别用 .garden 装花店——它说的是「花园」不是「花束」，搜索意图对不上；二是两者续费同价、都好持有，纠结时按客户的搜索词拍板：搜 florist 的要买花，搜 garden 的要种花。花艺 + 园艺兼营的品牌可以两头拿：.florist 接花店业务、.garden 接资材与课程。命名上「城市/花名 + .florist」接本地花店与花艺品牌，「品牌/意象词 + .garden」接园艺电商与景观设计。",
+      pickA: ["本地花店与鲜花速递", "花艺工作室与婚礼布置", "订阅制鲜花电商", "「城市 + florist」买花搜索词"],
+      pickB: ["园艺资材与种子电商", "景观设计与庭院施工", "园艺内容与植物社区", "首年近乎免费（约 ¥11 入场）"],
+    },
+    en: {
+      title: ".florist vs .garden: The Bouquet Counter or The Growing Ground",
+      metaDescription:
+        ".florist names the floristry profession — for flower shops and floral studios; .garden names the growing life — for garden supply and landscape design. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live among flowers; one sells the bouquet, the other grows the garden. .florist names the profession in three syllables — local flower shops and same-day delivery, floral design studios and wedding decorators, subscription flower e-commerce, and floristry schools on name.florist match exactly what flower buyers search: city + florist; bloom.florist sits elegantly on a bouquet card. At about $8 to register and $26/yr to renew, it's a rare cheap-in, cheap-to-hold profile. .garden names the scene — garden supply and seed e-commerce, landscape design and build, community gardens and botanical projects, and gardening content or communities on name.garden hold the whole chain from selling seeds to building gardens. At about $2 to register and $26/yr to renew — a near-free first year with the same renewal as .florist. The test: if the business is the florist's craft — bouquets, wedding decor, flower subscriptions → .florist's professional nameplate is truest, and flower names and city names nearly all hit; if the business is gardening itself — supplies, design-build, plant content → .garden's scene scope reads wider, and a name like secret.garden carries its own poetry. Two cautions: don't put a flower shop on .garden — it says the garden, not the bouquet, and the search intent misses; and with identical renewals both are easy holds, so decide by the customer's search word: florist searchers buy flowers, garden searchers grow them. A brand spanning both trades can hold both: .florist for the shop, .garden for supplies and courses. Naming: city or flower name + .florist fits local shops and floral brands; brand or imagery word + .garden fits garden e-commerce and landscape studios.",
+      pickA: ["Local flower shops & same-day delivery", "Floral design studios & wedding decor", "Subscription flower e-commerce", "City + florist buyer search phrase"],
+      pickB: ["Garden supply & seed e-commerce", "Landscape design & build", "Gardening content & plant communities", "Near-free ~$2 first year"],
+    },
+  },
+  "church-vs-community": {
+    slug: "church-vs-community",
+    a: "church",
+    b: "community",
+    zh: {
+      title: ".church 和 .community 怎么选：教会身份与社群平台的分工",
+      metaDescription: ".church 是教会与信仰社区的专属门牌，适合地方教会与线上敬拜；.community 覆盖一切社群，适合兴趣社区与会员平台。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在聚人，一个报信仰身份，一个报社群形态。.church 把「教会」直接写进域名——地方教会与堂点、植堂与联合机构、线上敬拜与讲道平台、查经与信仰内容站用 name.church，会众和慕道友一眼认出这是教会官网，搜「地名 + church」找聚会点的人落到 grace.church 毫无违和；注册约 $7（约 ¥48）、续费约 $47/年（约 ¥337），首年低门槛适合新植堂验证、续费属中档。.community 是社群的通用门牌——兴趣社区与论坛、会员制平台、开源与开发者社区、邻里与业主组织用 name.community，「这是个社群」的形态从后缀就说清，覆盖信仰之外的一切聚集；注册约 $8（约 ¥59）、续费约 $37/年（约 ¥263），价格与 .church 相近、续费便宜两成。判断标准：组织的身份是教会——堂会、植堂网络、敬拜平台 → .church 的语义绑定就是信任状，地名与堂会名库存极好；组织是更广义的社群——兴趣、会员、邻里、跨宗教团体 → .community 的中性口径更稳，不会把非教会组织错标成教会。两点注意：一是 .church 语义强绑定基督教会场景，跨宗教或综合公益组织用 .community / .org 更中性；二是 .community 九个字母偏长，配短品牌词平衡口播。教会做外展社群的可以两头拿：.church 做堂会主站、.community 接兴趣小组与邻里活动。命名上「地名/堂会名 + .church」接本地教会，「主题词 + .community」接兴趣与会员社群。",
+      pickA: ["地方教会与堂点", "教会植堂与联合机构", "线上敬拜与讲道平台", "「地名 + church」慕道友搜索词"],
+      pickB: ["兴趣社区与论坛", "会员制与付费社群平台", "开源与开发者社区", "跨宗教组织的中性之选"],
+    },
+    en: {
+      title: ".church vs .community: The Faith Nameplate or The Gathering Ground",
+      metaDescription:
+        ".church is the dedicated nameplate for congregations — for local churches and online worship; .community covers every kind of gathering — for interest groups and membership platforms. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both gather people; one names the faith identity, the other names the gathering itself. .church writes the congregation into the domain — local churches and campuses, church plants and networks, online worship and sermon platforms, and Bible study sites on name.church are instantly recognizable as church websites; someone searching city + church lands on grace.church with zero friction. At about $7 to register and $47/yr to renew — a low first-year door for new plants with a mid-tier renewal. .community is the general nameplate for gathering — interest forums, membership platforms, open-source and developer communities, and neighborhood or HOA groups on name.community state the format straight from the suffix, covering every assembly beyond faith. At about $8 to register and $37/yr to renew — similar entry, renewal about 20% cheaper. The test: if the organization's identity is a church — a congregation, a planting network, a worship platform → .church's semantic bond is the credential, and place names and congregation names nearly all hit; if it's a broader community — interests, memberships, neighborhoods, interfaith groups → .community's neutral scope reads steadier and never mislabels a non-church group. Two cautions: .church binds semantically to Christian congregations, so interfaith or general nonprofits read better on .community or .org; and at nine letters .community runs long — pair it with a short brand word for spoken balance. A church running outreach groups can hold both: .church for the congregation's flagship, .community for interest groups and neighborhood events. Naming: place or congregation name + .church fits local churches; topic word + .community fits interest and membership groups.",
+      pickA: ["Local churches & campuses", "Church plants & networks", "Online worship & sermon platforms", "City + church seeker search phrase"],
+      pickB: ["Interest communities & forums", "Membership & paid community platforms", "Open-source & developer communities", "The neutral pick for interfaith groups"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
