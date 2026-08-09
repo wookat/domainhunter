@@ -64,9 +64,11 @@ const cardLine = (s, lang, maxLen) => {
   const end = lang === "zh" ? "。" : ".";
   const sentence = firstSentence(s, lang);
   const clauses = sentence.slice(0, sentence.length - end.length).split(sep);
-  if (clauses[0].length > maxLen) return truncateClause(clauses[0], lang, maxLen);
+  // zh 口径：含结尾句号的总可见长度 ≤ maxLen（正文预留句号位）；en 口径不变
+  const bodyMax = lang === "zh" ? maxLen - end.length : maxLen;
+  if (clauses[0].length > bodyMax) return truncateClause(clauses[0], lang, maxLen);
   let out = clauses[0];
-  for (let i = 1; i < clauses.length && out.length + sep.length + clauses[i].length <= maxLen; i++) out += sep + clauses[i];
+  for (let i = 1; i < clauses.length && out.length + sep.length + clauses[i].length <= bodyMax; i++) out += sep + clauses[i];
   return out + end;
 };
 
