@@ -272,6 +272,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   builders: { first: 33, renew: 204 },
   construction: { first: 63, renew: 226 },
   repair: { first: 56, renew: 211 },
+  energy: { first: 85, renew: 671 },
+  solar: { first: 41, renew: 374 },
+  green: { first: 48, renew: 463 },
+  eco: { first: 430, renew: 430 },
+  earth: { first: 115, renew: 115 },
+  engineering: { first: 48, renew: 374 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {

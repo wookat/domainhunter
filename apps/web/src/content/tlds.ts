@@ -5064,6 +5064,186 @@ const GUIDES = {
       ],
     },
   },
+  energy: {
+    tld: "energy",
+    zh: {
+      title: ".energy 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".energy 把「能源」写进域名，适合能源公司与电力服务商、光伏与储能企业、充电桩与新能源汽车配套、能源科技与碳管理 SaaS。查看 .energy 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .energy 域名。",
+      intro:
+        ".energy 把行业写进域名：能源公司与电力服务商、光伏与储能企业、充电桩与新能源汽车配套、能源科技与碳管理 SaaS 用 name.energy，一眼就是「做能源的」。它踩在全球能源转型的风口上——从售电公司到虚拟电厂、从户用光伏到工商业储能，新玩家爆发式增长，而 .com 里能源相关的好词早被传统巨头占完，.energy 上品牌词、技术词几乎都有货。Identity Digital 运营，注册约 $12（约 ¥85），续费约 $93/年（约 ¥671）——首年便宜、续费跳档明显，是本批里续费最贵的一个，预算一定按续费价算。注意三点：一是能源是强监管行业，售电、并网等资质信息比域名更影响客户信任；二是词覆盖面广，首屏要立刻讲清做电、做气还是做储能；三是续费贵，适合有真实业务的公司而非囤域名。命名上「品牌 + .energy」最点题（tesla.energy 式是行业标杆用法），「城市/区域 + .energy」适合本地售电与光伏安装商，「clean/smart + .energy」适合技术定位。",
+      bestFor: ["能源公司与电力服务商", "光伏与储能企业", "充电桩与新能源汽车配套", "能源科技与碳管理 SaaS"],
+      namingTips: [
+        "「品牌 + .energy」是 tesla.energy 式的行业标杆用法",
+        "注册约 $12、续费约 $93/年，预算一定按续费算",
+        "词覆盖面广，首屏讲清做电、做气还是做储能",
+        "「城市 + .energy」适合本地售电与光伏安装商",
+      ],
+    },
+    en: {
+      title: ".energy Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".energy writes the industry into the address — for power companies and utilities, solar and storage firms, EV charging providers, and energy-tech and carbon SaaS. See live pricing and naming advice, then hunt available .energy names with AI.",
+      intro:
+        ".energy writes the industry into the address: power companies and electricity retailers, solar and storage firms, EV charging providers, energy-tech and carbon-management SaaS on name.energy read as energy businesses at a glance. It rides the global energy transition — from retail power to virtual power plants, rooftop solar to commercial storage, new players are multiplying while the good energy words in .com were claimed by incumbents long ago, so brand and technology words in .energy are nearly all available. Operated by Identity Digital, about $12 to register and $93/yr to renew — a cheap first year with a steep renewal jump, the priciest renewal in this batch, so budget strictly on the renewal price. Three cautions: energy is a heavily regulated trade, so licenses and grid credentials build trust more than the domain; the word is broad, so say whether you do power, gas or storage above the fold; and the renewal cost suits operating companies, not domain hoarding. Naming: brand + .energy is the tesla.energy industry-standard pattern; city or region + .energy fits local retailers and solar installers; clean or smart + .energy fits technology positioning.",
+      bestFor: ["Power companies & electricity retailers", "Solar & storage firms", "EV charging providers", "Energy-tech & carbon SaaS"],
+      namingTips: [
+        "Brand + .energy is the tesla.energy industry-standard pattern",
+        "About $12 to register, $93/yr — budget strictly on renewal",
+        "Broad word — say power, gas or storage above the fold",
+        "City + .energy fits local retailers and solar installers",
+      ],
+    },
+  },
+  solar: {
+    tld: "solar",
+    zh: {
+      title: ".solar 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".solar 把「光伏」写进域名，适合光伏安装商与经销商、户用与工商业光伏方案、太阳能组件与逆变器品牌、光伏电站运维监控。查看 .solar 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .solar 域名。",
+      intro:
+        ".solar 把产品写进域名：光伏安装商与经销商、户用与工商业光伏方案商、太阳能组件与逆变器品牌、电站运维监控平台用 name.solar，客户一眼知道你做太阳能。它是能源类后缀里语义最锐利的一个——不像 .energy 什么能源都算，solar 锁死太阳能一个赛道，「城市 + solar」正是屋顶光伏客户的搜索原文，本地安装商用它接搜索意图极准。Identity Digital 运营，注册约 $6（约 ¥41），续费约 $52/年（约 ¥374）——首年便宜、续费跳档，预算按续费价算才稳。库存极好：城市词、品牌词、技术词几乎都有货。注意三点：一是光伏安装是强本地生意，Google 商家资料、案例照片与补贴政策解读比域名更影响成单；二是词也指「太阳的」，非光伏的太阳能热水、太阳观测内容站也能用，但定位要讲清；三是行业价格战激烈，域名省下的钱不如投在客户评价运营上。命名上「城市 + .solar」最点题（austin.solar 式直接接住本地搜索），「品牌 + .solar」适合组件与逆变器厂商，「go/get + .solar」适合营销落地页。",
+      bestFor: ["光伏安装商与经销商", "户用与工商业光伏方案", "太阳能组件与逆变器品牌", "光伏电站运维监控"],
+      namingTips: [
+        "「城市 + .solar」直接接住本地屋顶光伏搜索",
+        "注册约 $6、续费约 $52/年，预算按续费算",
+        "语义比 .energy 更锐利，锁死太阳能赛道",
+        "「品牌 + .solar」适合组件与逆变器厂商",
+      ],
+    },
+    en: {
+      title: ".solar Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".solar writes the product into the address — for solar installers and dealers, residential and commercial PV providers, panel and inverter brands, and plant monitoring platforms. See live pricing and naming advice, then hunt available .solar names with AI.",
+      intro:
+        ".solar writes the product into the address: solar installers and dealers, residential and commercial PV providers, panel and inverter brands, plant monitoring platforms on name.solar tell customers instantly that you do solar. It's the sharpest of the energy suffixes — where .energy covers any energy, solar locks onto one lane, and city + solar is literally what rooftop customers type, so local installers catch search intent with precision. Operated by Identity Digital, about $6 to register and $52/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price. Inventory is excellent: city words, brand words and technology words are nearly all available. Three cautions: solar installation is a fiercely local trade, so Google Business profiles, project photos and incentive guides close deals more than the domain; the word also means of the sun, so solar-thermal or astronomy sites can use it too if the positioning is clear; and the industry is price-competitive — money saved on the domain is better spent on review management. Naming: city + .solar is the on-target austin.solar pattern that catches local searches; brand + .solar fits panel and inverter makers; go or get + .solar fits marketing landing pages.",
+      bestFor: ["Solar installers & dealers", "Residential & commercial PV providers", "Panel & inverter brands", "Plant monitoring platforms"],
+      namingTips: [
+        "City + .solar catches local rooftop searches directly",
+        "About $6 to register, $52/yr — budget on renewal",
+        "Sharper than .energy — locked onto the solar lane",
+        "Brand + .solar fits panel and inverter makers",
+      ],
+    },
+  },
+  green: {
+    tld: "green",
+    zh: {
+      title: ".green 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".green 把「绿色环保」写进域名，适合可持续品牌与环保产品、绿色金融与 ESG 服务、环保组织与公益项目、有机食品与低碳生活方式。查看 .green 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .green 域名。",
+      intro:
+        ".green 把价值观写进域名：可持续品牌与环保产品、绿色金融与 ESG 服务、环保组织与公益项目、有机食品与低碳生活方式站用 name.green，环保立场在域名里就表明了。它是少有的「形容词型」后缀——green 修饰一切，绿色出行、绿色建筑、绿色电力、绿色包装都成立，品牌把 .com 主站之外的可持续专题放在 .green 上也是常见玩法。Identity Digital 运营，注册约 $7（约 ¥48），续费约 $64/年（约 ¥463）——首年便宜、续费跳档，预算按续费价算才稳。库存极好：行业词、品牌词、生活方式词几乎都有货。注意三点：一是「洗绿」监管趋严，域名喊绿色、页面要有认证与数据支撑，否则适得其反；二是 green 也是姓氏与颜色，非环保用法（设计、人名站）同样成立；三是续费不便宜，适合真实运营的品牌而非批量注册。命名上「品牌 + .green」最点题（品牌可持续专题页的标准用法），「行业词 + .green」适合垂直环保服务（building.green 式），「go/live + .green」适合生活方式内容站。",
+      bestFor: ["可持续品牌与环保产品", "绿色金融与 ESG 服务", "环保组织与公益项目", "有机食品与低碳生活方式"],
+      namingTips: [
+        "「品牌 + .green」是可持续专题页的标准用法",
+        "注册约 $7、续费约 $64/年，预算按续费算",
+        "页面要有认证与数据支撑，避免「洗绿」质疑",
+        "「行业词 + .green」适合垂直环保服务",
+      ],
+    },
+    en: {
+      title: ".green Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".green writes the values into the address — for sustainable brands and eco products, green finance and ESG services, environmental nonprofits, and organic and low-carbon lifestyle sites. See live pricing and naming advice, then hunt available .green names with AI.",
+      intro:
+        ".green writes the values into the address: sustainable brands and eco products, green finance and ESG services, environmental nonprofits, organic and low-carbon lifestyle sites on name.green state their stance in the domain itself. It's a rare adjective suffix — green modifies everything, so green mobility, green building, green power and green packaging all work, and brands routinely park their sustainability microsite on .green beside the .com flagship. Operated by Identity Digital, about $7 to register and $64/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price. Inventory is excellent: industry words, brand words and lifestyle words are nearly all available. Three cautions: greenwashing rules are tightening, so a green domain needs certifications and data on the page or it backfires; green is also a surname and a color, so non-eco uses (design, personal sites) work fine too; and the renewal isn't cheap — it suits operating brands, not bulk registration. Naming: brand + .green is the standard sustainability-microsite pattern; industry word + .green fits vertical eco services (the building.green pattern); go or live + .green fits lifestyle content sites.",
+      bestFor: ["Sustainable brands & eco products", "Green finance & ESG services", "Environmental nonprofits", "Organic & low-carbon lifestyle sites"],
+      namingTips: [
+        "Brand + .green is the standard sustainability-microsite pattern",
+        "About $7 to register, $64/yr — budget on renewal",
+        "Back the green claim with certifications, or it backfires",
+        "Industry word + .green fits vertical eco services",
+      ],
+    },
+  },
+  eco: {
+    tld: "eco",
+    zh: {
+      title: ".eco 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".eco 把「生态环保」写进域名，适合环保组织与气候行动项目、可持续品牌官网、碳中和与循环经济服务、生态旅游与自然保护。查看 .eco 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .eco 域名。",
+      intro:
+        ".eco 把承诺写进域名：环保组织与气候行动项目、可持续品牌官网、碳中和与循环经济服务、生态旅游与自然保护项目用 name.eco，三个字母就是一份环保声明。它是新顶级域里独一份的「带门槛后缀」——由 Big Room 运营、WWF 等环保组织背书，注册时需在 profiles.eco 提交环保承诺档案，这道门槛反而成了信任背书：挂 .eco 等于公开可查的环保立场，比自说自话的绿色文案硬得多。注册约 $60（约 ¥430），续费同价——无首年低价陷阱，价格全程透明。库存很好：品牌词、行动词、地名几乎都有货。注意三点：一是注册后要完成环保档案，否则域名可能被暂停解析；二是价格偏高，适合认真做环保定位的组织而非试水；三是 eco 是全球通用词根，多语言市场无需翻译。命名上「品牌 + .eco」最点题（品牌环保主站的标准用法），「行动词 + .eco」适合倡议项目（act.eco 式），「地名 + .eco」适合区域生态旅游与保护项目。",
+      bestFor: ["环保组织与气候行动项目", "可持续品牌官网", "碳中和与循环经济服务", "生态旅游与自然保护"],
+      namingTips: [
+        "「品牌 + .eco」是公开可查的环保立场声明",
+        "注册约 $60、续费同价，全程无涨价陷阱",
+        "注册后需完成 profiles.eco 环保档案",
+        "「行动词 + .eco」适合气候倡议项目",
+      ],
+    },
+    en: {
+      title: ".eco Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".eco writes the commitment into the address — for environmental nonprofits and climate projects, sustainable brand sites, carbon-neutral and circular-economy services, and ecotourism. See live pricing and naming advice, then hunt available .eco names with AI.",
+      intro:
+        ".eco writes the commitment into the address: environmental nonprofits and climate-action projects, sustainable brand sites, carbon-neutral and circular-economy services, ecotourism and conservation projects on name.eco make three letters read as an environmental pledge. It's the rare gated suffix among new gTLDs — operated by Big Room and backed by groups like WWF, registration requires an eco profile at profiles.eco, and that gate becomes the trust signal: a .eco domain is a publicly verifiable stance, far harder currency than self-declared green copy. About $60 to register and the same to renew — no first-year teaser, fully transparent pricing. Inventory is strong: brand words, action words and place names are nearly all available. Three cautions: complete the eco profile after registering or the domain can be suspended; the price suits organizations serious about environmental positioning, not experiments; and eco is a global root that needs no translation across markets. Naming: brand + .eco is the standard eco-flagship pattern; action word + .eco fits campaigns (the act.eco pattern); place name + .eco fits regional ecotourism and conservation projects.",
+      bestFor: ["Environmental nonprofits & climate projects", "Sustainable brand sites", "Carbon-neutral & circular-economy services", "Ecotourism & conservation"],
+      namingTips: [
+        "Brand + .eco is a publicly verifiable environmental pledge",
+        "About $60 to register and renew — no teaser-price trap",
+        "Complete the profiles.eco eco profile after registering",
+        "Action word + .eco fits climate campaigns",
+      ],
+    },
+  },
+  earth: {
+    tld: "earth",
+    zh: {
+      title: ".earth 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".earth 把「地球」写进域名，适合环境与气候内容站、地理与地图数据服务、户外与自然探索品牌、全球公益与可持续倡议。查看 .earth 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .earth 域名。",
+      intro:
+        ".earth 把格局写进域名：环境与气候内容站、地理与地图数据服务、户外与自然探索品牌、全球公益与可持续倡议用 name.earth，「面向全球、关乎地球」的定位一读即懂。它比 .eco 和 .green 更宽——不预设环保立场，google.earth 式的地理科技、纪录片式的自然内容、行星尺度的数据可视化都成立，是少有的自带宏大叙事感的后缀。Interlink 运营（日本注册局），注册约 $16（约 ¥115），续费同价——无首年低价陷阱，价格全程透明，在新顶级域里属于「便宜且稳」的一档。库存极好：品牌词、主题词、项目名几乎都有货。注意三点：一是词偏「叙事感」，电商转化类站点用行业词后缀更直接；二是环境类内容站竞争激烈，域名之外持续的内容质量才是护城河；三是注册局有公益属性倡议（支持地球友好项目），品牌调性契合会加分。命名上「品牌 + .earth」最点题（宏大叙事的品牌主站），「主题词 + .earth」适合内容站（climate.earth 式），「save/for + .earth」适合公益倡议项目。",
+      bestFor: ["环境与气候内容站", "地理与地图数据服务", "户外与自然探索品牌", "全球公益与可持续倡议"],
+      namingTips: [
+        "「品牌 + .earth」自带全球视野的叙事感",
+        "注册约 $16、续费同价，价格便宜且稳",
+        "比 .eco/.green 更宽，不预设环保立场",
+        "「主题词 + .earth」适合气候与自然内容站",
+      ],
+    },
+    en: {
+      title: ".earth Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".earth writes the planet into the address — for environment and climate content sites, geo and mapping services, outdoor and nature brands, and global sustainability initiatives. See live pricing and naming advice, then hunt available .earth names with AI.",
+      intro:
+        ".earth writes the scale into the address: environment and climate content sites, geo and mapping data services, outdoor and nature exploration brands, global sustainability initiatives on name.earth read as planet-scale at a glance. It's broader than .eco and .green — no environmental stance is presumed, so google.earth-style geo tech, documentary-grade nature content and planetary data visualization all fit; few suffixes carry this much narrative gravity. Operated by Interlink (a Japanese registry), about $16 to register and the same to renew — no first-year teaser, transparent pricing, one of the cheap-and-stable tiers among new gTLDs. Inventory is excellent: brand words, theme words and project names are nearly all available. Three cautions: the word leans narrative — conversion-focused shops do better on trade-word suffixes; environmental content is a crowded space, so sustained content quality is the moat, not the domain; and the registry runs earth-friendly initiatives, so a matching brand ethos earns goodwill. Naming: brand + .earth is the grand-narrative flagship pattern; theme word + .earth fits content sites (the climate.earth pattern); save or for + .earth fits advocacy campaigns.",
+      bestFor: ["Environment & climate content sites", "Geo & mapping data services", "Outdoor & nature exploration brands", "Global sustainability initiatives"],
+      namingTips: [
+        "Brand + .earth carries planet-scale narrative gravity",
+        "About $16 to register and renew — cheap and stable",
+        "Broader than .eco/.green — no eco stance presumed",
+        "Theme word + .earth fits climate and nature content sites",
+      ],
+    },
+  },
+  engineering: {
+    tld: "engineering",
+    zh: {
+      title: ".engineering 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".engineering 把「工程」写进域名，适合工程设计与咨询公司、机械与电气工程服务、软件工程团队博客、工程教育与认证机构。查看 .engineering 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .engineering 域名。",
+      intro:
+        ".engineering 把专业写进域名：工程设计与咨询公司、机械与电气工程服务商、软件工程团队博客、工程教育与认证机构用 name.engineering，「工程师做的」四个字直接长在域名上。它有一层科技公司红利——海外大厂把技术博客挂在 brand.engineering 上已成惯例（Uber、Slack 都这么用），招聘页与技术品牌页用它比 .com 子目录更有辨识度。Identity Digital 运营，注册约 $7（约 ¥48），续费约 $52/年（约 ¥374）——首年便宜、续费跳档，预算按续费价算才稳。库存极好：品牌词、学科词、姓氏几乎都有货。注意三点：一是词很长（11 个字母），适合品牌页与技术博客而非口播传播；二是传统工程行业重资质，注册执业编号与项目案例比域名更影响信任；三是软件与土木两种「工程」都用它，首屏要讲清是写代码还是画图纸。命名上「品牌 + .engineering」最点题（uber.engineering 式技术博客标准用法），「学科词 + .engineering」适合垂直服务（civil.engineering 式），「姓氏 + .engineering」适合独立工程顾问。",
+      bestFor: ["工程设计与咨询公司", "机械与电气工程服务", "软件工程团队博客", "工程教育与认证机构"],
+      namingTips: [
+        "「品牌 + .engineering」是大厂技术博客的标准用法",
+        "注册约 $7、续费约 $52/年，预算按续费算",
+        "词长适合品牌页与博客，不适合口播",
+        "「学科词 + .engineering」适合垂直工程服务",
+      ],
+    },
+    en: {
+      title: ".engineering Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".engineering writes the profession into the address — for engineering design and consulting firms, mechanical and electrical services, software engineering blogs, and engineering education. See live pricing and naming advice, then hunt available .engineering names with AI.",
+      intro:
+        ".engineering writes the profession into the address: engineering design and consulting firms, mechanical and electrical service providers, software engineering team blogs, engineering schools and certification bodies on name.engineering wear the trade in the domain itself. It carries a tech-company bonus — big names hang their engineering blogs on brand.engineering as a convention (Uber and Slack both do), and for hiring pages and tech branding it beats a .com subdirectory on recognition. Operated by Identity Digital, about $7 to register and $52/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price. Inventory is excellent: brand words, discipline words and surnames are nearly all available. Three cautions: at eleven letters the word is long — good for brand pages and blogs, poor for word of mouth; traditional engineering is credentials-first, so licence numbers and project portfolios build trust more than the domain; and both software and civil engineers use it, so say which kind above the fold. Naming: brand + .engineering is the uber.engineering blog convention; discipline + .engineering fits vertical services (the civil.engineering pattern); surname + .engineering fits independent consultants.",
+      bestFor: ["Engineering design & consulting firms", "Mechanical & electrical services", "Software engineering team blogs", "Engineering education & certification"],
+      namingTips: [
+        "Brand + .engineering is the big-tech blog convention",
+        "About $7 to register, $52/yr — budget on renewal",
+        "Eleven letters — good for brand pages, poor for word of mouth",
+        "Discipline + .engineering fits vertical services",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

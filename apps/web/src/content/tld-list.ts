@@ -30,6 +30,7 @@ export const TLD_LIST = [
   "law", "tax", "menu", "bike", "toys", "shoes",
   "travel", "tours", "vacations", "holiday", "flights", "taxi",
   "properties", "rentals", "apartments", "builders", "construction", "repair",
+  "energy", "solar", "green", "eco", "earth", "engineering",
 ] as const;
 
 export type Tld = (typeof TLD_LIST)[number];
