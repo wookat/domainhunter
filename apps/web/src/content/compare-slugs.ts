@@ -165,6 +165,12 @@ export const COMPARE_SLUGS = [
   "institute-vs-international",
   "partners-vs-group",
   "support-vs-center",
+  "website-vs-site",
+  "technology-vs-tech",
+  "community-vs-club",
+  "education-vs-academy",
+  "training-vs-coach",
+  "love-vs-me",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

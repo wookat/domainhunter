@@ -3589,6 +3589,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Physical center-style institutions", "Resource & download hubs", "Docs & status pages (docs.center)", "Training & testing centers"],
     },
   },
+  "website-vs-site": {
+    slug: "website-vs-site",
+    a: "website",
+    b: "site",
+    zh: {
+      title: ".website 和 .site 怎么选：完整单词与中性白纸的对比",
+      metaDescription: ".website 是普通人一听就懂的完整单词，.site 是不带任何暗示的中性白纸。对比 Radix 同门两个通用后缀的语感、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同门兄弟（都由 Radix 运营），差别全在语感。.website 是完整单词——个人主页与作品集、小微企业官网、产品落地页用 name.website，念出来就是「某某的网站」，非技术人群零解释成本，面向大众的小生意用它更稳；注册约 $2、续费约 $21/年——首年是全站最便宜档之一，但续费是首年十倍，长期持有前先想清楚。.site 是中性白纸——不预设行业、不限定气质，作品集、文档站、社区、小工具都装得下，docs、wiki、lab 类功能词组合在它下面读起来最自然；首年常低至一两美元，库存几乎无限，同样注意首年与续费的价差。判断标准：受众是普通消费者、要的是「一听就懂」——本地小店、个人主页、面向大众的落地页 → .website 的完整单词更亲切；受众是网民与开发者、要的是「短与中性」——工具站、文档站、快速试错的副项目 → .site 少两个音节更利落。注意 .website 七个字母偏长，主体名务必选短词；.site 中性不加分，名字本身要独特或直接写清用途。共同注意：两个都是便宜通用后缀，历史上垃圾站偏多，新站要靠真实内容与 HTTPS 尽快建立信任；两个都有首年低价钩子，续费才是真实成本。",
+      pickA: ["个人主页与作品集", "本地小店与小微企业官网", "面向大众的产品落地页", "非技术受众（一听就懂）"],
+      pickB: ["工具站与文档站（docs/wiki/lab）", "快速试错的副项目", "主品牌的配套子项目", "想要更短更中性的域名"],
+    },
+    en: {
+      title: ".website vs .site: The Full Word or The Blank Canvas",
+      metaDescription:
+        ".website is the complete word everyone parses instantly; .site is the neutral blank canvas with zero signal. Compare Radix's two generalist suffixes on tone, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Siblings from the same registry (both run by Radix); the whole difference is register. .website is the complete word — personal pages and portfolios, small-business sites, product landing pages on name.website read out literally as \"so-and-so's website\", zero explanation cost for non-technical audiences, so consumer-facing small businesses read safer here; about $2 to register and $21/yr to renew — one of the cheapest first years anywhere, but a 10x renewal jump, so think before holding long. .site is the blank canvas — no industry assumption, no personality bias: portfolios, doc sites, communities and small tools all fit, and function words like docs, wiki and lab combine most naturally under it; first-year pricing often drops to a dollar or two with effectively unlimited inventory — watch the same intro-vs-renewal gap. The test: the audience is everyday consumers and the goal is instant comprehension — local shops, personal pages, mass-market landing pages → .website's full word is friendlier; the audience is web-native and the goal is short and neutral — tool sites, doc sites, quick experiments → .site saves two syllables and reads cleaner. Note .website runs seven letters, so keep the front word short; and .site's neutrality adds nothing — the name must be distinctive or state the purpose outright. Shared notes: both are cheap generalist suffixes that historically attract spam, so a new site must earn trust fast with real content and HTTPS; and both dangle first-year hooks — the renewal is the real cost.",
+      pickA: ["Personal pages & portfolios", "Local shops & small-business sites", "Mass-market landing pages", "Non-technical audiences (instant parse)"],
+      pickB: ["Tool & doc sites (docs/wiki/lab)", "Quick experiments & side projects", "Companion projects to a main brand", "Shorter, fully neutral address"],
+    },
+  },
+  "technology-vs-tech": {
+    slug: "technology-vs-tech",
+    a: "technology",
+    b: "tech",
+    zh: {
+      title: ".technology 和 .tech 怎么选：正式全称与创业短音的对比",
+      metaDescription: ".technology 是拼完整的正式全称，.tech 是短促的创业感缩写。对比两个科技后缀的语气、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一个词的两种念法。.technology 是正式全称——科技公司官网、面向政企客户的技术公司、深科技与硬科技品牌、研究机构用 name.technology，读起来正式稳重，公司全名带 Technology 的（XX Technology Co.）用 brand.technology 等于把注册名直接搬上域名；Identity Digital 运营，注册约 $10、续费约 $23/年，温和档，续费反而比 .tech 便宜不少。.tech 是创业短音——初创公司、开发者产品、黑客松项目与科技媒体用 name.tech，短促有冲劲，科技圈认知度在新后缀里名列前茅；注册便宜但续费明显更高，长期持有前先算账。判断标准：品牌气质是「正式与分量」——政企客户、深科技、研究机构 → .technology 的全称更压得住；品牌气质是「轻快与冲劲」——创业公司、开发者工具、消费级科技产品 → .tech 的短音更来电。注意 .technology 十个字母是全站最长档之一，主体名必须够短，两三个音节封顶，且配套短域名跳转是常见做法；.tech 反过来赢在短，但正式场合略显随意。共同注意：两个都是行业词后缀，域名说了「科技」，产品就要真有技术含量——落地页放清楚产品与团队，别让后缀空转。",
+      pickA: ["面向政企客户的技术公司", "深科技与硬科技品牌", "公司全名带 Technology 的企业", "研究机构与技术团队官网"],
+      pickB: ["初创公司与开发者产品", "黑客松项目与科技媒体", "轻快的消费级科技品牌", "想要更短更好念的域名"],
+    },
+    en: {
+      title: ".technology vs .tech: The Full Name or The Startup Clip",
+      metaDescription:
+        ".technology spells the formal full word; .tech is the clipped startup syllable. Compare the two tech suffixes on tone, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Two pronunciations of the same word. .technology is the formal full name — corporate tech sites, firms selling to enterprise and government, deep-tech and hard-tech brands, research institutes on name.technology read stately, and companies whose registered name ends in Technology (XX Technology Co.) can put the full name straight into brand.technology; run by Identity Digital at about $10 to register and $23/yr to renew — the mild tier, and notably cheaper to renew than .tech. .tech is the startup clip — startups, developer products, hackathon projects and tech media on name.tech sound quick and punchy, with recognition near the top of the new-TLD class in tech circles; cheap to register but distinctly pricier to renew, so do the math before holding long. The test: the brand's register is formal and weighty — enterprise clients, deep tech, research bodies → .technology's full word carries it; the brand's register is light and fast — startups, dev tools, consumer tech → .tech's clip has the spark. Note .technology runs ten letters — among the longest suffixes anywhere — so the front word must stay very short, and a short redirect domain is common practice; .tech wins on brevity but reads casual in formal settings. Shared notes: both are industry-word suffixes — the domain says technology, so the product must actually have some: put the product and team front and center, and don't let the suffix idle.",
+      pickA: ["Firms selling to enterprise & government", "Deep-tech & hard-tech brands", "Companies named XX Technology Co.", "Research institutes & engineering teams"],
+      pickB: ["Startups & developer products", "Hackathon projects & tech media", "Playful consumer tech brands", "Shorter, punchier address"],
+    },
+  },
+  "community-vs-club": {
+    slug: "community-vs-club",
+    a: "community",
+    b: "club",
+    zh: {
+      title: ".community 和 .club 怎么选：开放家园与会员俱乐部的对比",
+      metaDescription: ".community 说「这里是一群人的开放家园」，.club 说「这里是有门槛的俱乐部」。对比两个社群后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是「一群人」的后缀，门的开法不同。.community 是开放家园——兴趣社群与论坛、开源项目的用户社区、本地社区组织用 name.community，访客点开之前就知道「这里欢迎所有人」，品牌或项目开专属社区站（主站放官网、brand.community 放论坛）是它的经典用法，「地名 + .community」在英文里还是通顺短语（riverside.community 的语感）；Identity Digital 运营，注册约 $8、续费约 $37/年，续费中偏上档。.club 是会员俱乐部——付费会员社群、订阅制服务、球队与粉丝会、酒类与咖啡的订阅盒子用 name.club，自带「加入我们」的号召与一点点排他感，会员制商业模式用它一眼点题；注册量长期位居新后缀前列，认知度高，首年常见低价、续费温和。判断标准：社群的气质是「开放与归属」——人人可进的论坛、开源社区、街区组织 → .community 的家园感更准；社群的气质是「会员与身份」——付费入会、订阅制、粉丝会 → .club 的门槛感更配。注意 .community 九个字母偏长，主体名务必选短词；.club 短而好念，但「俱乐部」的轻快语气撑不起严肃机构，那种场景 .org 更合身。共同注意：两个后缀都承诺了「里面有人」，挂上去就要有真实的成员活动——空壳社区比没有更伤品牌；域名的角色是家园的门牌，拉新靠内容与口碑。",
+      pickA: ["开放论坛与兴趣社群", "开源项目的用户社区（brand.community）", "本地社区与街区组织", "地名社区站（riverside.community）"],
+      pickB: ["付费会员社群与订阅制", "球队、粉丝会与同好会", "订阅盒子（咖啡、酒类）", "想要短而好念的社群域名"],
+    },
+    en: {
+      title: ".community vs .club: The Open Home or The Members' Door",
+      metaDescription:
+        ".community promises an open home for everyone; .club promises a members' door with a velvet rope. Compare the two group suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are people suffixes; the door swings differently. .community is the open home — interest groups and forums, open-source user communities, local neighborhood organizations on name.community tell visitors \"everyone's welcome\" before the click; the classic play is the dedicated community site (main site on the brand domain, forum on brand.community), and place + .community is a natural English phrase (the riverside.community cadence); run by Identity Digital at about $8 to register and $37/yr to renew — an upper-mid renewal tier. .club is the members' door — paid membership groups, subscription services, teams and fan clubs, coffee and wine subscription boxes on name.club carry a built-in \"join us\" with a hint of exclusivity, the instant fit for membership business models; long among the highest-volume new TLDs, so recognition is strong, with cheap first years and mild renewals. The test: the group's spirit is openness and belonging — public forums, open-source communities, neighborhood orgs → .community's home reads truer; the group's spirit is membership and identity — paid access, subscriptions, fan clubs → .club's velvet rope fits. Note .community runs nine letters, so keep the front word short; .club is short and snappy but too playful for solemn institutions — that's .org turf. Shared notes: both suffixes promise people inside — real member activity must follow, and a ghost town hurts the brand more than none; the domain is the nameplate on the door, while growth comes from content and word of mouth.",
+      pickA: ["Open forums & interest groups", "Open-source communities (brand.community)", "Local & neighborhood organizations", "Place-based sites (riverside.community)"],
+      pickB: ["Paid membership & subscriptions", "Teams, fan clubs & societies", "Subscription boxes (coffee, wine)", "Short, snappy group address"],
+    },
+  },
+  "education-vs-academy": {
+    slug: "education-vs-academy",
+    a: "education",
+    b: "academy",
+    zh: {
+      title: ".education 和 .academy 怎么选：行业大词与机构名号的对比",
+      metaDescription: ".education 是教育行业的大词，.academy 是一所学院的名号。对比两个教育后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都姓教育，格局不同。.education 是行业大词——教育平台与 EdTech 产品、教育媒体与家长资讯站、学校的对外项目用 name.education，做平台、做媒体、做行业级产品用它格局更大，它也是 .edu 门槛（只对美国认证高校开放）之外最正式的平替；Identity Digital 运营，注册约 $21、续费约 $28/年——注册续费接近同价，没有低价钩子也没有续费陷阱，成本透明。.academy 是机构名号——培训机构、在线课程品牌、编程训练营、企业大学用 name.academy，读出来就是「某某学院」，英文里机构以 Academy 结尾是命名传统，「品牌 + .academy」等于把机构全名搬上域名；注册约 $12、续费约 $38/年，首年便宜、续费中偏上。判断标准：做的是「行业与平台」——聚合课程的平台、教育媒体、EdTech 工具 → .education 的大词更配；做的是「一所学院」——有名字、有老师、有课程体系的教学品牌 → .academy 的名号更准。两个还能是同一盘生意的两层：平台用 .education，平台上的旗舰课程品牌用 .academy。注意 .education 九个字母偏长，主体名选短词；.academy 语气正经，兴趣向轻课程用 .school 或 .training 更松弛。共同注意：教育是强信任行业，后缀不是资质——办学许可、师资展示与学员评价才是转化关键，域名只负责把「做教育的」写在门口。",
+      pickA: ["教育平台与 EdTech 产品", "教育媒体与家长资讯站", "学校对外项目与公开课", "想要成本透明的长期持有"],
+      pickB: ["培训机构与在线课程品牌", "编程训练营与技能学院", "企业大学与内训学院", "机构名以「学院」收尾的品牌"],
+    },
+    en: {
+      title: ".education vs .academy: The Industry Word or The Institution's Name",
+      metaDescription:
+        ".education is the industry's umbrella word; .academy is one institution's nameplate. Compare the two education suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both belong to education; the scale differs. .education is the industry word — education platforms and EdTech products, education media and parent resources, schools' outreach programs on name.education carry more scale for platforms, media and industry-level products, and it's the most formal substitute outside the .edu gate (restricted to accredited US higher education); run by Identity Digital at about $21 to register and $28/yr to renew — nearly the same both ways: no cheap hook, no renewal trap, transparent cost. .academy is the institution's name — training providers, online course brands, coding bootcamps, corporate universities on name.academy read out as \"the X Academy\", riding the naming tradition of institutions ending in Academy, so brand + .academy puts the full institutional name into the address; about $12 to register and $38/yr to renew — cheap first year, upper-mid renewal. The test: the business is an industry or platform — course marketplaces, education media, EdTech tools → .education's umbrella fits; the business is one school — a named teaching brand with faculty and curriculum → .academy's nameplate is truer. They can even be two layers of one business: the platform on .education, its flagship course brand on .academy. Note .education runs nine letters, so keep the front word short; and .academy's register is proper — casual hobby courses relax better on .school or .training. Shared notes: education is a high-trust business and the suffix is not a credential — licenses, teacher credentials and student reviews drive conversion; the domain just writes \"in education\" on the door.",
+      pickA: ["Education platforms & EdTech products", "Education media & parent resources", "School outreach & open courses", "Transparent long-term holding cost"],
+      pickB: ["Training providers & course brands", "Coding bootcamps & skill academies", "Corporate universities", "Brands named \"the X Academy\""],
+    },
+  },
+  "training-vs-coach": {
+    slug: "training-vs-coach",
+    a: "training",
+    b: "coach",
+    zh: {
+      title: ".training 和 .coach 怎么选：练什么与谁来带的对比",
+      metaDescription: ".training 把「练什么」写进域名，.coach 把「谁来带」写进域名。对比两个技能后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在技能生意里，主语不同。.training 说的是事——职业技能培训机构、企业内训与团队赋能、健身与体能课程、认证备考用 name.training，英文里「对象 + training」本来就是通顺短语（dog training、strength training 的语感），语义 SEO 红利实打实；Identity Digital 运营，注册约 $12、续费约 $33/年，中档。.coach 说的是人——健身与运动教练、人生与职业教练、企业高管教练、球队教练组用 name.coach，「名字 + .coach」读出来就是「某某教练」，个人品牌一秒立住，教练这个身份直接写进域名比任何标语都省事；注册约 $11、续费约 $62/年——续费高档，个人服务业务按客单价看通常无感，纯展示站要掂量。判断标准：卖的是「课程与体系」——机构、内训、认证备考、标准化课程 → .training 的事更准；卖的是「这个人」——一对一带练、私教、顾问式服务 → .coach 的人更点题。两个常常是同一门生意的两层：机构用 .training，机构里的明星教练用 .coach 做个人站。注意 .training 八个字母不算短，主体名选短词更利落；.coach 在英文里另有「长途大巴」与品牌 Coach 的歧义，语境不清时配一句副标题。共同注意：技能生意承诺效果，页面要有课程大纲、案例与结果数据——光喊口号转化不动；本地需求强的品类（健身、青训）记得把城市词做进主体名或页面。",
+      pickA: ["职业技能培训机构", "企业内训与团队赋能", "认证备考与标准化课程", "「技能词 + .training」的语义红利"],
+      pickB: ["健身与运动私教", "人生与职业教练", "高管教练与顾问式服务", "教练个人品牌站（name.coach）"],
+    },
+    en: {
+      title: ".training vs .coach: The Drill or The Person",
+      metaDescription:
+        ".training writes what you practice into the address; .coach writes who leads you. Compare the two skill suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in the skills business; the subject differs. .training names the thing — vocational skills providers, corporate training and team enablement, fitness and strength programs, certification prep on name.training ride the fact that target + training is already a natural English phrase (dog training, strength training), a real semantic-SEO dividend; run by Identity Digital at about $12 to register and $33/yr to renew — the mid tier. .coach names the person — fitness and sports coaches, life and career coaches, executive coaches, team coaching staffs on name.coach read out as \"Coach So-and-so\": the personal brand stands up in one second, the identity written into the address better than any tagline; about $11 to register and $62/yr to renew — a high-tier renewal, invisible against personal-service rates but worth weighing for a pure brochure site. The test: you sell the curriculum and system — institutions, corporate programs, cert prep, standardized courses → .training's thing is truer; you sell this person — one-on-one sessions, personal training, advisory work → .coach's person hits harder. They're often two layers of one business: the institution on .training, its star coach's personal site on .coach. Note .training runs eight letters, so keep the front word tight; and coach in English also means the long-distance bus and the handbag brand — add a clarifying subtitle where context is thin. Shared notes: the skills business promises outcomes — pages need syllabi, case studies and results data, slogans alone won't convert; and strongly local categories (fitness, youth sports) should work the city into the name or the page.",
+      pickA: ["Vocational training providers", "Corporate training & team enablement", "Certification prep & standard courses", "Semantic wins (skill + .training)"],
+      pickB: ["Fitness & sports coaches", "Life & career coaches", "Executive coaching & advisory", "Personal brand sites (name.coach)"],
+    },
+  },
+  "love-vs-me": {
+    slug: "love-vs-me",
+    a: "love",
+    b: "me",
+    zh: {
+      title: ".love 和 .me 怎么选：情感宣言与个人名片的对比",
+      metaDescription: ".love 把情感写进域名，.me 把「我」写进域名。对比两个个人向后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都常用于个人站，说的话不同。.love 是情感宣言——婚礼与求婚站、情侣纪念页、公益与慈善项目、粉丝应援站用 name.love，是极少数「读出来就有情绪」的后缀，两个经典语法：「名字 + .love」（emma.love 的语感，婚礼站标准写法）和「我爱的东西 + .love」（coffee.love、cats.love），后者让品类词直接变成情感宣言；注册约 $9、续费约 $23/年，温和档。.me 是个人名片——个人主页与简历站、开发者作品集、独立创作者的主站用 name.me，「about.me 时代」以来它就是个人域名的代名词，英文里还能玩「动词 + .me」的祈使句（hire.me、read.me 的节奏），黑山国家域但全球开放注册；首年常见低价、续费温和，个人长期持有无压力。判断标准：站点的主题是「一段感情或一份热爱」——婚礼、纪念、公益、应援 → .love 的情绪浓度无可替代；站点的主题是「我这个人」——简历、作品集、个人品牌 → .me 的名片属性更准。注意 .love 情感浓度是双刃剑，严肃 B2B 与金融用它明显违和，婚礼与纪念站过了档期记得续期或做成永久纪念页，别让 .love 域名落到别人手里；.me 中性百搭但不自带情绪，表白与纪念场景压不过 .love。共同注意：两个都是「个人叙事」后缀，域名只负责开场——内容与更新频率才决定访客会不会回来。",
+      pickA: ["婚礼与求婚站（名字 + .love）", "情侣与家庭纪念页", "公益与慈善项目", "品类情感宣言（coffee.love）"],
+      pickB: ["个人主页与简历站", "开发者与创作者作品集", "个人品牌主站", "祈使句玩法（hire.me）"],
+    },
+    en: {
+      title: ".love vs .me: The Declaration or The Calling Card",
+      metaDescription:
+        ".love writes the feeling into the address; .me writes the person. Compare the two personal suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both serve personal sites; they say different things. .love is the declaration — wedding and proposal sites, couple and family tribute pages, charities, fan projects on name.love ride one of the very few suffixes that lands an emotion on first read, with two classic grammars: name + .love (the emma.love cadence, the wedding-site standard) and thing-I-love + .love (coffee.love, cats.love), which turns a plain category word into a declaration; about $9 to register and $23/yr to renew — the mild tier. .me is the calling card — personal pages and résumé sites, developer portfolios, independent creators' home bases on name.me carry the suffix that has meant \"personal domain\" since the about.me era, plus the imperative trick of verb + .me (the hire.me, read.me rhythm); Montenegro's country code, open to everyone worldwide, with cheap first years and mild renewals — easy to hold long as an individual. The test: the site is about a feeling or a passion — weddings, tributes, charities, fandom → .love's emotional voltage is irreplaceable; the site is about you — résumé, portfolio, personal brand → .me's calling card is truer. Note .love's voltage cuts both ways — sober B2B and finance read plainly wrong here, and wedding or tribute sites have a shelf life: renew or convert to a permanent keepsake page, and never let a .love domain lapse into a stranger's hands; .me is neutral and versatile but carries no emotion of its own — for declarations and tributes it can't outplay .love. Shared notes: both are personal-narrative suffixes, and the domain only opens the story — content and cadence decide whether visitors return.",
+      pickA: ["Wedding & proposal sites (name + .love)", "Couple & family tribute pages", "Charities & causes", "Category declarations (coffee.love)"],
+      pickB: ["Personal pages & résumé sites", "Developer & creator portfolios", "Personal brand home bases", "Imperative plays (hire.me)"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
