@@ -869,12 +869,19 @@ app.post("/mcp", async (c) => {
     const payload = await loadPricesPayload(c.env.CACHE);
     if (!payload) return mcpText(id, "pricing upstream unavailable, try again later", true);
     // Porkbun 无报价的后缀（如 cn/so）用静态参考价补齐，带 approx 标记，保证覆盖全部追踪后缀
-    const parsed = JSON.parse(payload) as { prices: Record<string, PriceEntry> };
+    const parsed = JSON.parse(payload) as { prices: Record<string, PriceEntry>; stale?: boolean } & Record<string, unknown>;
+    const liveCount = Object.keys(parsed.prices).length;
     for (const tld of TLD_LIST) {
       if (parsed.prices[tld]) continue;
       const ref = tldPrice(tld);
       if (ref) parsed.prices[tld] = { registration: Math.round((ref.first / USD_TO_CNY) * 100) / 100, renewal: Math.round((ref.renew / USD_TO_CNY) * 100) / 100, approx: true };
     }
+    // 元数据与实际返回条目对齐：tldCount = 补齐后总条数；liveCount/staticCount 区分实时价与静态参考价；stale 仅指 live 部分来自兜底快照
+    const total = Object.keys(parsed.prices).length;
+    parsed.tldCount = total;
+    parsed.liveCount = liveCount;
+    parsed.staticCount = total - liveCount;
+    if (parsed.stale) parsed.staleNote = "live prices come from the last cached upstream snapshot; entries marked approx:true are static reference prices";
     return mcpText(id, JSON.stringify(parsed));
   }
 
