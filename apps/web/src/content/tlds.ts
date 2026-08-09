@@ -4524,6 +4524,186 @@ const GUIDES = {
       ],
     },
   },
+  law: {
+    tld: "law",
+    zh: {
+      title: ".law 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".law 把「法律」写进域名，适合律师事务所、独立执业律师、法律科技产品、法律咨询与普法内容站。查看 .law 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .law 域名。",
+      intro:
+        ".law 把法律写进域名：律师事务所、独立执业律师、法律科技产品、法律咨询与普法内容站用 name.law，专业身份从后缀就开始建立——法律行业讲信任，而 smith.law 比一长串 .com 更像一块烫金门牌。它与 .legal 的分工在语感：law 三个字母更短更硬，指「法律」本身，事务所与律师个人品牌用它更利落。GoDaddy Registry 平台运营，注册约 $83（约 ¥597），续费约 $83/年（约 ¥597）——注册续费同价，是本站较贵的后缀之一，但对客单价以万计的法律行业，这个门槛反而筛掉了垃圾站，让 .law 整体域名环境更干净。库存极好：姓氏、城市、执业领域词命中率都高。注意三点：一是价格门槛高，适合已执业的律师与律所而非学生练手；二是法律是强属地行业，「城市 + .law」「领域 + .law」（injury.law 式）能精准接住本地与垂直搜索；三是各法域对律师广告与网站有执业合规要求，上线前按当地律协规范自查。命名上「姓氏 + .law」最自然（smith.law 即「史密斯律所」），律所用「品牌 + .law」，垂直站用「执业领域 + .law」一眼点题。",
+      bestFor: ["律师事务所", "独立执业律师", "法律科技产品", "法律咨询与普法内容站"],
+      namingTips: [
+        "「姓氏 + .law」读出来就是一块门牌",
+        "注册续费同价约 $83/年，门槛筛掉垃圾站",
+        "「城市/领域 + .law」接住本地与垂直搜索",
+        "上线前按当地律协广告规范自查",
+      ],
+    },
+    en: {
+      title: ".law Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".law writes the profession into the address — for law firms, solo attorneys, legal-tech products and legal-content sites. See live pricing and naming advice, then hunt available .law names with AI.",
+      intro:
+        ".law writes the profession into the address: law firms, solo attorneys, legal-tech products and legal-education sites on name.law start building professional trust from the suffix itself — in a business built on credibility, smith.law reads more like a brass nameplate than a long .com ever could. The split with .legal is register: law is three letters, shorter and harder, meaning the law itself, so firms and personal attorney brands land cleaner here. Operated on the GoDaddy Registry platform, about $83 to register and $83/yr to renew — the same both ways, one of the pricier suffixes on this site, but for an industry billing by the hour that threshold filters out spam and keeps the .law namespace clean. Inventory is excellent: surnames, cities and practice-area words all hit. Three cautions: the price fits practicing attorneys and firms, not student experiments; law is fiercely local, so city + .law and practice + .law (the injury.law pattern) catch local and vertical search precisely; and most jurisdictions regulate attorney advertising — check your bar's website rules before launch. Naming: surname + .law is the natural nameplate (smith.law reads as \"Smith Law\"); firms go brand + .law; vertical sites nail it as practice area + .law.",
+      bestFor: ["Law firms", "Solo attorneys", "Legal-tech products", "Legal-content & education sites"],
+      namingTips: [
+        "Surname + .law reads as a nameplate",
+        "About $83 both ways — the threshold filters spam",
+        "City or practice + .law catches vertical search",
+        "Check bar advertising rules before launch",
+      ],
+    },
+  },
+  tax: {
+    tld: "tax",
+    zh: {
+      title: ".tax 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".tax 把「税」写进域名，适合税务师与会计事务所、报税软件、税务咨询与筹划、税法内容站。查看 .tax 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tax 域名。",
+      intro:
+        ".tax 把税写进域名：税务师与会计事务所、报税软件与工具、税务咨询与筹划服务、税法解读内容站用 name.tax，三个字母把业务说得不能再直白——大牌先例现成：Intuit 的 turbo.tax 就是把 TurboTax 拆进后缀的教科书写法。Identity Digital 运营，注册约 $8（约 ¥59），续费约 $54/年（约 ¥389）——首年便宜续费跳档，预算按续费价算才稳。库存极好：品牌词、地区词、人群词命中率都高。注意三点：一是税务是强合规行业，网站需要执业资质与免责声明背书，域名越专业内容越要专业；二是报税是季节性流量（报税季爆发），「工具/人群 + .tax」的直白命名在旺季搜索里优势明显；三是 tax 在英语里也是动词（tax one's patience），品牌向命名注意歧义。命名上「品牌 + .tax」最自然（turbo.tax 式拆词），事务所用「姓氏/城市 + .tax」，工具用「场景 + .tax」（file.tax 式）读出来就是行动号召。",
+      bestFor: ["税务师与会计事务所", "报税软件与工具", "税务咨询与筹划服务", "税法解读内容站"],
+      namingTips: [
+        "「品牌 + .tax」可复刻 turbo.tax 式拆词",
+        "注册约 $8、续费约 $54/年，预算按续费算",
+        "「场景 + .tax」读出来就是行动号召",
+        "强合规行业，资质与免责声明要跟上",
+      ],
+    },
+    en: {
+      title: ".tax Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".tax writes the business into the address — for tax and accounting firms, filing software, tax advisory services and tax-law content sites. See live pricing and naming advice, then hunt available .tax names with AI.",
+      intro:
+        ".tax writes the business into the address: tax and accounting firms, filing software and tools, advisory and planning services, tax-law explainer sites on name.tax say the trade in three letters — with a marquee precedent ready-made: Intuit's turbo.tax is the textbook split of a brand across the dot. Operated by Identity Digital, about $8 to register and $54/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price. Inventory is excellent: brand words, region words and audience words all hit. Three cautions: tax is a heavily regulated trade, so credentials and disclaimers must back the site — the more professional the domain, the more professional the content must be; filing traffic is seasonal (it spikes at deadline time), and blunt tool + .tax names win those high-intent searches; and tax is also an English verb (taxing one's patience), so brand-led names should watch the double reading. Naming: brand + .tax is the natural turbo.tax-style split; firms go surname or city + .tax; tools nail it as action + .tax — file.tax reads out as a call to action.",
+      bestFor: ["Tax & accounting firms", "Filing software & tools", "Tax advisory & planning services", "Tax-law content sites"],
+      namingTips: [
+        "Brand + .tax can replay the turbo.tax split",
+        "About $8 to register, $54/yr — budget on renewal",
+        "Action + .tax reads as a call to action",
+        "Regulated trade — credentials and disclaimers required",
+      ],
+    },
+  },
+  menu: {
+    tld: "menu",
+    zh: {
+      title: ".menu 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".menu 把「菜单」写进域名，适合餐厅在线菜单、扫码点餐系统、外卖与订餐平台、餐饮品牌官网。查看 .menu 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .menu 域名。",
+      intro:
+        ".menu 把菜单写进域名：餐厅在线菜单页、扫码点餐系统、外卖与订餐平台、餐饮品牌官网用 name.menu，域名读出来就是「某某家的菜单」——餐饮数字化最顺手的入口。它有个独特的实用玩法：把 .menu 域名印进桌角二维码，顾客扫码直达菜单，比夹在 .com 官网深处的 PDF 体验好一个量级；对比 .cafe/.restaurant 它不绑定业态，正餐、酒吧、奶茶店都能用。Wedding TLD2 注册局运营（GoDaddy Registry 平台），注册约 $27（约 ¥194），续费约 $27/年（约 ¥194）——注册续费同价，成本透明。库存极好：店名、菜系、城市词命中率都高。注意三点：一是 menu 语义就是「菜单」，适合做菜单/点餐这件事本身，品牌主站还是建议搭配主流后缀；二是四个字母虽短，中文语境认知度一般，面向本地食客的店建议菜单页与大众点评等平台并行；三是菜单是高频更新内容，域名之外要选个改起来不心累的建站方式。命名上「店名 + .menu」最自然（读出来就是「本店菜单」），点餐系统用「品牌 + .menu」，城市美食指南用「城市 + .menu」一眼点题。",
+      bestFor: ["餐厅在线菜单", "扫码点餐系统", "外卖与订餐平台", "餐饮品牌官网"],
+      namingTips: [
+        "「店名 + .menu」读出来就是「本店菜单」",
+        "注册续费同价约 $27/年，成本透明",
+        "印进桌角二维码，扫码直达菜单",
+        "菜单页之外，品牌主站建议搭配主流后缀",
+      ],
+    },
+    en: {
+      title: ".menu Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".menu writes the card into the address — for restaurant online menus, QR ordering systems, delivery platforms and restaurant brand sites. See live pricing and naming advice, then hunt available .menu names with AI.",
+      intro:
+        ".menu writes the card into the address: restaurant menu pages, QR-code ordering systems, delivery and reservation platforms, restaurant brand sites on name.menu read out as \"so-and-so's menu\" — the smoothest doorway into restaurant digitization. It has a uniquely practical play: print the .menu domain into a table-corner QR code and guests scan straight to the menu — an order of magnitude better than a PDF buried in a .com site; and unlike .cafe or .restaurant it binds to no format — fine dining, bars and bubble-tea shops all qualify. Run by the Wedding TLD2 registry on the GoDaddy Registry platform, about $27 to register and $27/yr to renew — the same both ways, transparent cost. Inventory is excellent: shop names, cuisine words and city words all hit. Three cautions: menu means the menu itself, so it suits the menu-and-ordering job — pair a mainstream suffix for the main brand site; four letters are short but general recognition is modest, so local spots should run the menu page alongside Yelp-style platforms; and menus change weekly, so pick a site builder that makes edits painless. Naming: shop name + .menu is the natural read-aloud; ordering systems go brand + .menu; city food guides nail it as city + .menu.",
+      bestFor: ["Restaurant online menus", "QR ordering systems", "Delivery & reservation platforms", "Restaurant brand sites"],
+      namingTips: [
+        "Shop name + .menu reads as \"our menu\"",
+        "About $27 both ways — transparent cost",
+        "Print it into the table QR code",
+        "Pair a mainstream suffix for the main brand site",
+      ],
+    },
+  },
+  bike: {
+    tld: "bike",
+    zh: {
+      title: ".bike 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".bike 把「自行车」写进域名，适合自行车品牌与车店、骑行俱乐部与赛事、租车与修车服务、骑行装备电商。查看 .bike 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .bike 域名。",
+      intro:
+        ".bike 把自行车写进域名：自行车品牌与车店、骑行俱乐部与赛事、共享与租赁服务、修车铺与装备电商用 name.bike，四个字母把行业说得干脆——它还是 2014 年新顶级域开闸的第一批后缀之一，资历老、先例多：Trek 就注册了 trek.bike 给品牌用。Identity Digital 运营，注册约 $8（约 ¥59），续费约 $31/年（约 ¥226）——首年便宜、续费温和，行业词后缀里的性价比档。库存极好：品牌词、城市词、车型词命中率都高。注意三点：一是 bike 也涵盖摩托车（英语里 bike 两义都有），电动车与摩托相关业务同样适用，但页面定位要讲清是哪种「bike」；二是骑行是强社区行业，俱乐部与赛事站用「城市/线路 + .bike」能精准聚拢本地骑友；三是低价后缀认知度有限，品牌向业务建议同时持有主流后缀。命名上「品牌 + .bike」最自然（trek.bike 式），车店用「店名/城市 + .bike」，俱乐部用「地名/线路 + .bike」一眼点题。",
+      bestFor: ["自行车品牌与车店", "骑行俱乐部与赛事", "租赁与修车服务", "骑行装备电商"],
+      namingTips: [
+        "「品牌 + .bike」有 trek.bike 先例",
+        "注册约 $8、续费约 $31/年，性价比档",
+        "bike 两义（单车/摩托），定位要讲清",
+        "「城市/线路 + .bike」聚拢本地骑友",
+      ],
+    },
+    en: {
+      title: ".bike Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".bike writes the ride into the address — for bike brands and shops, cycling clubs and races, rental and repair services, gear e-commerce. See live pricing and naming advice, then hunt available .bike names with AI.",
+      intro:
+        ".bike writes the ride into the address: bicycle brands and shops, cycling clubs and races, sharing and rental services, repair shops and gear e-commerce on name.bike say the trade in four crisp letters — and it was in the very first batch of new gTLDs to launch in 2014, with seniority and precedent to show: Trek registered trek.bike for the brand. Operated by Identity Digital, about $8 to register and $31/yr to renew — a cheap first year and a mild renewal, the value tier among industry-word suffixes. Inventory is excellent: brand words, city words and model words all hit. Three cautions: bike covers motorcycles too (English carries both senses), so e-bike and moto businesses qualify — but the hero must say which bike you mean; cycling is a community-first trade, so clubs and races gather local riders precisely with city or route + .bike; and cheap-suffix recognition is limited, so brand-led businesses should hold a mainstream suffix too. Naming: brand + .bike is the natural trek.bike pattern; shops go shop name or city + .bike; clubs nail it as place or route + .bike.",
+      bestFor: ["Bike brands & shops", "Cycling clubs & races", "Rental & repair services", "Cycling gear e-commerce"],
+      namingTips: [
+        "Brand + .bike has the trek.bike precedent",
+        "About $8 to register, $31/yr — the value tier",
+        "Bike has two senses — say which one fast",
+        "City or route + .bike gathers local riders",
+      ],
+    },
+  },
+  toys: {
+    tld: "toys",
+    zh: {
+      title: ".toys 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".toys 把「玩具」写进域名，适合玩具品牌与电商、潮玩与手办店、桌游与积木社区、儿童教育玩具。查看 .toys 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .toys 域名。",
+      intro:
+        ".toys 把玩具写进域名：玩具品牌与电商、潮玩与手办店、桌游与积木社区、儿童教育玩具站用 name.toys，复数名词天然带「货架感」——读出来就是「某某家的玩具」，大牌先例现成：乐高注册了 lego.toys。它与 .games 的分工在实体感：games 偏游戏（电子游戏与桌游玩法），toys 偏实体玩具与收藏品，卖「摸得着的快乐」用 toys 更准。Identity Digital 运营，注册约 $11（约 ¥78），续费约 $52/年（约 ¥374）——首年便宜续费跳档，预算按续费价算才稳。库存极好：品牌词、品类词、IP 向词命中率都高。注意三点：一是面向儿童的电商与内容受合规约束（隐私与广告规范，如美国 COPPA），站点设计要跟上；二是潮玩与手办的主战场在社交平台与直播，域名的角色是品牌官网与发售日历的稳定入口；三是 toys 语义宽，成人向收藏与儿童玩具受众完全不同，主体名要把定位收窄。命名上「品牌 + .toys」最自然（lego.toys 式），潮玩店用「店名 + .toys」，垂直社区用「品类 + .toys」一眼点题。",
+      bestFor: ["玩具品牌与电商", "潮玩与手办店", "桌游与积木社区", "儿童教育玩具站"],
+      namingTips: [
+        "「品牌 + .toys」有 lego.toys 先例",
+        "注册约 $11、续费约 $52/年，预算按续费算",
+        "与 .games 分工：toys 偏实体与收藏",
+        "儿童向业务注意隐私与广告合规",
+      ],
+    },
+    en: {
+      title: ".toys Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".toys writes the shelf into the address — for toy brands and e-commerce, designer-toy and figure shops, board-game communities and educational toys. See live pricing and naming advice, then hunt available .toys names with AI.",
+      intro:
+        ".toys writes the shelf into the address: toy brands and e-commerce, designer-toy and figure shops, board-game and building-block communities, educational-toy sites on name.toys carry a built-in shelf feel — the plural reads out as \"so-and-so's toys\", with marquee precedent ready-made: LEGO registered lego.toys. The split with .games is physicality — games leans gameplay (video and board), toys means tangible playthings and collectibles, so sellers of touchable joy aim truer here. Operated by Identity Digital, about $11 to register and $52/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price. Inventory is excellent: brand words, category words and IP-adjacent words all hit. Three cautions: child-facing commerce and content carry compliance duties (privacy and ad rules like COPPA), so the site must keep up; designer toys live on social platforms and livestreams, so the domain's role is the stable brand home and drop calendar; and toys is semantically broad — adult collectibles and children's toys are different audiences, so the front word must narrow the aim. Naming: brand + .toys is the natural lego.toys pattern; shops go shop name + .toys; vertical communities nail it as category + .toys.",
+      bestFor: ["Toy brands & e-commerce", "Designer-toy & figure shops", "Board-game & block communities", "Educational-toy sites"],
+      namingTips: [
+        "Brand + .toys has the lego.toys precedent",
+        "About $11 to register, $52/yr — budget on renewal",
+        "Toys means tangible; .games means gameplay",
+        "Child-facing sites carry compliance duties",
+      ],
+    },
+  },
+  shoes: {
+    tld: "shoes",
+    zh: {
+      title: ".shoes 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".shoes 把「鞋」写进域名，适合鞋履品牌与电商、球鞋店与鞋圈社区、手工鞋定制、洗鞋修鞋服务。查看 .shoes 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .shoes 域名。",
+      intro:
+        ".shoes 把鞋写进域名：鞋履品牌与电商、球鞋店与鞋圈社区、手工与定制鞋工作室、洗鞋修鞋服务用 name.shoes，品类从后缀就说清了——大牌先例现成：耐克注册了 nike.shoes。它与 .fashion 的分工在颗粒度：fashion 泛指时装行业，shoes 专指鞋这个品类，垂直做鞋的用 shoes 指向更准，「品牌 + .shoes」读出来就是「某某家的鞋」。Identity Digital 运营，注册约 $21（约 ¥152），续费约 $52/年（约 ¥374）——首年中档、续费跳档，预算按续费价算才稳。库存极好：品牌词、品类词、风格词命中率都高。注意三点：一是球鞋转售与鉴定是强信任生意，域名专业只是第一步，鉴定背书与保障政策才是成交关键；二是鞋类电商的主战场在图片与尺码体验，域名之外落地页体验要跟上；三是五个字母认知度一般，面向大众的品牌主站建议同时持有主流后缀。命名上「品牌 + .shoes」最自然（nike.shoes 式），球鞋店用「店名 + .shoes」，垂直站用「品类/风格 + .shoes」（running.shoes 式）一眼点题。",
+      bestFor: ["鞋履品牌与电商", "球鞋店与鞋圈社区", "手工与定制鞋工作室", "洗鞋修鞋服务"],
+      namingTips: [
+        "「品牌 + .shoes」有 nike.shoes 先例",
+        "注册约 $21、续费约 $52/年，预算按续费算",
+        "与 .fashion 分工：shoes 专指鞋类垂直",
+        "「品类/风格 + .shoes」一眼点题",
+      ],
+    },
+    en: {
+      title: ".shoes Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".shoes writes the category into the address — for footwear brands and e-commerce, sneaker shops and communities, custom shoemakers and shoe-care services. See live pricing and naming advice, then hunt available .shoes names with AI.",
+      intro:
+        ".shoes writes the category into the address: footwear brands and e-commerce, sneaker shops and communities, handmade and custom shoemakers, cleaning and repair services on name.shoes declare the product from the suffix — with marquee precedent ready-made: Nike registered nike.shoes. The split with .fashion is granularity — fashion means the apparel industry at large, shoes means this one category, so footwear-first businesses aim truer here: brand.shoes reads out as \"so-and-so's shoes\". Operated by Identity Digital, about $21 to register and $52/yr to renew — a mid-tier first year with a renewal jump, so budget on the renewal price. Inventory is excellent: brand words, category words and style words all hit. Three cautions: sneaker resale and authentication is a trust-first trade — a professional domain is only step one, authentication backing and guarantees close the sale; footwear e-commerce lives or dies on imagery and sizing UX, so the landing page must keep up; and five letters carry modest recognition, so consumer-facing brand homes should hold a mainstream suffix too. Naming: brand + .shoes is the natural nike.shoes pattern; sneaker shops go shop name + .shoes; vertical sites nail it as category or style + .shoes — the running.shoes pattern.",
+      bestFor: ["Footwear brands & e-commerce", "Sneaker shops & communities", "Custom & handmade shoemakers", "Shoe cleaning & repair services"],
+      namingTips: [
+        "Brand + .shoes has the nike.shoes precedent",
+        "About $21 to register, $52/yr — budget on renewal",
+        "Shoes is the vertical; .fashion is the industry",
+        "Category or style + .shoes nails the aim",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
