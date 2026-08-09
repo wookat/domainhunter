@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 210,
+    "count": 216,
     "slugs": [
       "com",
       "net",
@@ -211,7 +211,13 @@
       "investments",
       "holdings",
       "mortgage",
-      "computer"
+      "computer",
+      "vet",
+      "lawyer",
+      "legal",
+      "delivery",
+      "recipes",
+      "rent"
     ]
   },
   "guide": {
