@@ -1,0 +1,112 @@
+{
+  "/": {
+    "scrollWidth": 375,
+    "innerWidth": 375,
+    "overflow": false,
+    "smallTargets": [
+      "GitHub"
+    ],
+    "headerBtns": [
+      [
+        44,
+        44
+      ],
+      [
+        40,
+        44
+      ],
+      [
+        67,
+        44
+      ],
+      [
+        52,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ]
+  },
+  "/prices": {
+    "scrollWidth": 375,
+    "innerWidth": 375,
+    "overflow": false,
+    "smallTargets": [
+      ".xyz",
+      ".site",
+      ".fun",
+      ".online",
+      ".store"
+    ],
+    "headerBtns": [
+      [
+        44,
+        44
+      ],
+      [
+        67,
+        44
+      ],
+      [
+        52,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ]
+  },
+  "/tld": {
+    "scrollWidth": 375,
+    "innerWidth": 375,
+    "overflow": false,
+    "smallTargets": [],
+    "headerBtns": [
+      [
+        44,
+        44
+      ],
+      [
+        67,
+        44
+      ],
+      [
+        52,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ]
+  },
+  "/vs/com-vs-travel": {
+    "scrollWidth": 375,
+    "innerWidth": 375,
+    "overflow": false,
+    "smallTargets": [
+      "TLD comparisons"
+    ],
+    "headerBtns": [
+      [
+        44,
+        44
+      ],
+      [
+        67,
+        44
+      ],
+      [
+        52,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ]
+  }
+}
