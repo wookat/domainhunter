@@ -1625,7 +1625,7 @@ export function HomePage({
                           onClick={() => void retryQuickDomain(row.domain)}
                           title={t("home.quickRetryTitle", { domain: row.domain })}
                           aria-label={t("home.quickRetryTitle", { domain: row.domain })}
-                          className="border-l border-line/70 px-3 transition-colors hover:text-txt0 sm:px-2"
+                          className="flex min-w-[44px] items-center justify-center border-l border-line/70 transition-colors hover:text-txt0 sm:min-w-0 sm:px-2"
                         >
                           <RotateCw className="h-3.5 w-3.5" />
                         </button>
