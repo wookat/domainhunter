@@ -12505,6 +12505,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  pestcontrol: {
+    slug: "pestcontrol",
+    tlds: [
+      { tld: "com", zh: "进家消杀与商户合同的信任底线，消杀品牌的默认选择", en: "The trust baseline for in-home treatment and commercial contracts — the default for a pest brand" },
+      { tld: "services", zh: "「服务」后缀，定期防治的正规感直给", en: "The services suffix — recurring-treatment legitimacy, stated plainly" },
+      { tld: "expert", zh: "「专家」后缀，虫害诊断的专业背书", en: "The expert suffix — a diagnostician's authority endorsement" },
+    ],
+    zh: {
+      label: "害虫防治",
+      title: "害虫防治与消杀公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "害虫防治与消杀公司命名指南：终结暗示、科学防治、安心承诺等 5 种思路，Terminix/Orkin/Rentokil 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的消杀品牌域名。",
+      intro:
+        "消杀公司的名字要在「恶心与恐慌」里给出终结感：顾客搜「灭蟑螂公司」的那一刻，厨房刚爬过一只蟑螂、床垫上刚发现臭虫咬痕——名字要立刻回答「这事到我为止」。第一素材库是终结暗示：灭、清、终结、零——Terminix 把 terminate（终结）写进名字，一个词根就是服务承诺；但「灭」要配上「治」，一次性喷药和长期防治是两种生意，Rentokil 的 kill 后面站着一套虫害管理体系。第二个抓手是科学防治：白蚁检测、虫情监测、综合虫害管理（IPM）——名字里的科学词把「打药的」升级成「虫害医生」，商业客户（餐厅、酒店、食品厂）签年度合同看的正是这份专业；实验室感、盾牌感的词根（盾、卫、护）在暗示防线而非扑杀。第三个抓手是安心承诺：消杀的本质焦虑是「药剂进了我家」——儿童宠物安全、无味环保是决策的隐形门槛，名字的气质要干净清爽而非化学品味；Mosquito Joe 用一个邻家人名把上门消杀翻译成熟人帮忙。要注意业务分层：家庭单次消杀是流量入口，白蚁防治与商户年包是利润腹地——白蚁一单抵十单蟑螂，名字的边界要从「灭蟑」画到「虫害防线」。客群上，家庭要的是快速彻底不留味，商户要的是资质报告与巡检记录——名字要兼容 C 端的安心与 B 端的正规。渠道上，消杀活在地图搜索、物业推荐与商户转介绍里，名字要好念好搜，印在工服和作业报告上要专业可信。",
+      namingIdeas: [
+        "终结暗示：灭、清、零、终结——Terminix 式把服务承诺写进词根，「这事到我为止」的确定性直给",
+        "科学防治：检测、监测、综合管理——把「打药的」升级成「虫害医生」，商户年度合同看的就是专业",
+        "防线词根：盾、卫、护——暗示长期防线而非一次扑杀，定期巡检的会员制生意从名字开始",
+        "安心气质：儿童宠物安全、无味环保——化学品焦虑是隐形门槛，名字要干净清爽而非药水味",
+        "业务留边界：灭蟑是入口、白蚁与商户年包是利润——名字从「灭蟑」画到「虫害防线」",
+      ],
+      cases: [
+        { name: "Terminix", takeaway: "terminate（终结）+ix 的科技感后缀：把「彻底解决」写进词根——终结暗示命名的百年样本，白蚁防治品类的开创者用名字立下承诺" },
+        { name: "Orkin", takeaway: "创始人 Otto Orkin 的姓氏：14 岁卖灭鼠药起家的「灭鼠人」用一生把姓氏做成品类代名词——人名信任在百年老牌上的复利" },
+        { name: "Rentokil", takeaway: "ento（昆虫学）+kill 的学科命名：本想注册 Entokill 被驳回改成 Rentokil——kill 的直给背后站着昆虫学的专业底座，科学与终结的合体" },
+        { name: "Mosquito Joe", takeaway: "品类词+邻家人名：把庭院驱蚊翻译成「老乔来帮你」——人设名的亲和感化解药剂进家的戒备，连锁复制的轻资产范本" },
+        { name: "Aptive", takeaway: "adaptive（适应性）的裁剪造词：把消杀说成「与环境共处的智慧防治」——环保世代的品类改名，气质干净得不像杀虫公司" },
+      ],
+      pitfalls: [
+        "药水味太冲：名字全是「杀」「毒」「灭」的狠劲——家庭客户的隐形门槛是儿童宠物安全，狠要配上安心",
+        "锁死单一虫种：「XX 灭蟑」绑死蟑螂，接白蚁、四害年包全是阻力——利润在白蚁与商户合同",
+        "游击队气质：电线杆小广告式的「XX 消杀」加电话——商户要资质报告，名字先要摆脱野队联想",
+        "科学感为零：只有狠没有专——「虫害医生」与「打药的」价差数倍，专业词根是溢价的入场券",
+      ],
+    },
+    en: {
+      label: "Pest control",
+      title: "How to Name a Pest Control Company: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Pest control naming guide: termination roots, science-first authority, safe-for-family reassurance, breakdowns of Terminix/Orkin/Rentokil/Aptive, recommended TLDs and pitfalls — then hunt an available pest brand domain with AI.",
+      intro:
+        "A pest control name must radiate finality into a moment of disgust: when a customer searches \"exterminator near me\", a roach just crossed the kitchen counter or bed bug bites just surfaced — the name must answer instantly: this ends with us. The first material bin is termination roots: end, zero, x-out — Terminix wrote terminate into its name, making one root the whole service promise; but kill must pair with manage, because a one-off spray and a standing defense are different businesses — behind Rentokil's \"kill\" stands an entire pest-management system. The second lever is science-first authority: termite inspection, monitoring, integrated pest management — scientific words upgrade \"the spray guy\" into \"the pest doctor\", and commercial clients (restaurants, hotels, food plants) sign annual contracts precisely for that credential; shield and guard roots imply a defense line rather than a massacre. The third is safe-for-family reassurance: the category's core anxiety is chemicals entering my home — child-and-pet safety is the invisible decision gate, so the name's register should read clean and fresh, not fumigant; Mosquito Joe translated yard treatment into a neighbor lending a hand. Mind the business layers: one-off household jobs are the traffic gate, termite work and commercial annual contracts are the profit belly — one termite job outearns ten roach calls; draw the name's boundary from \"kill the roaches\" out to \"the standing pest defense\". Households want fast, thorough and odor-free; businesses want certificates and inspection logs — the name must reconcile consumer reassurance with B2B legitimacy. On channels: pest control lives in map searches, property-manager referrals and restaurant word of mouth — the name must say and search cleanly, and look credible on a uniform and a treatment report.",
+      namingIdeas: [
+        "Termination roots: end, zero, x-out — write the promise into the root, Terminix-style; \"this ends with us\" certainty, stated plainly",
+        "Science-first authority: inspection, monitoring, IPM — upgrade \"the spray guy\" to \"the pest doctor\"; commercial contracts buy the credential",
+        "Defense-line roots: shield, guard, sentry — imply a standing defense, not a one-off massacre; recurring plans start from the name",
+        "Clean reassurance: family-safe, eco, odor-free — chemical anxiety is the invisible gate; read fresh, not fumigant",
+        "Boundary headroom: roach calls are the gate, termites and annual contracts the profit — draw the name from \"kill\" out to \"defense\"",
+      ],
+      cases: [
+        { name: "Terminix", takeaway: "Terminate plus a technical -ix suffix: \"solved for good\" written into the root — the century-old benchmark of termination naming, the termite category's founder making the promise in the brand itself" },
+        { name: "Orkin", takeaway: "Founder Otto Orkin's surname: the boy who sold rat poison at 14 turned his own name into the category shorthand — person-name trust compounding over a hundred years" },
+        { name: "Rentokil", takeaway: "Ento(mology) + kill — the intended \"Entokill\" was refused at registration and became Rentokil: blunt finality standing on an entomology credential, science and termination fused in one word" },
+        { name: "Mosquito Joe", takeaway: "Category word plus a neighborly first name: yard treatment translated into \"Joe's coming over\" — persona warmth defusing the chemicals-in-my-home wariness, a franchise-ready template" },
+        { name: "Aptive", takeaway: "A clipped coinage from adaptive: pest control restyled as intelligent coexistence with the environment — the eco generation's category rename, a register so clean it barely smells of spray" },
+      ],
+      pitfalls: [
+        "Overdosing on menace: a name that is all kill, poison and exterminate — the household's invisible gate is child-and-pet safety; ferocity must pair with reassurance",
+        "Welding to one pest: \"X Roach Control\" drags at termite jobs and four-pest annual contracts — the profit lives in termites and commercial accounts",
+        "Fly-by-night register: a utility-pole \"X Extermination\" plus a phone number — commercial clients need certificates; escape the guerrilla association first",
+        "Zero science signal: all ferocity, no credential — the pest doctor and the spray guy differ severalfold in price; a professional root is the ticket to the premium",
+      ],
+    },
+  },
+  roofing: {
+    slug: "roofing",
+    tlds: [
+      { tld: "com", zh: "大额工程与保险理赔对接的信任底线，屋顶品牌的默认选择", en: "The trust baseline for big-ticket jobs and insurance claims — the default for a roofing brand" },
+      { tld: "construction", zh: "「建筑施工」后缀，工程正规军的身份直给", en: "The construction suffix — licensed-contractor identity, stated plainly" },
+      { tld: "pro", zh: "「专业」后缀，持证施工队的手艺背书", en: "The pro suffix — a certified crew's craft endorsement" },
+    ],
+    zh: {
+      label: "屋顶施工",
+      title: "屋顶施工与防水工程公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "屋顶施工与防水工程命名指南：庇护意象、工匠人设、质保承诺等 5 种思路，Mr. Roof/Tecta America/CentiMark 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的屋顶品牌域名。",
+      intro:
+        "屋顶公司的名字要扛得住「头顶大事」的分量：换一个屋顶动辄数万，业主一辈子只买一两次，选错了漏雨十年——名字要在陌生的一次性大额交易里给出「盖得住、赔得起、找得到」的三重确定性。第一素材库是庇护意象：顶、盾、庇护、穹——屋顶是家的第一道防线，Tecta America 用拉丁语 tecta（屋顶/庇护所）把庇护写进词源，庇护感的名字先赢下情绪票。第二个抓手是工匠人设：屋顶是看不见的手艺——业主爬不上去验收，只能信人；Mr. Roof 的礼貌人格化、Baker Roofing 的百年姓氏都在用「一个具体的人」为看不见的工艺担保，家族姓氏在建筑行业就是「跑不掉」的信用抵押。第三个抓手是质保承诺：屋顶生意成交在「保多少年」——名字与质保一体化（终身质保、漏了就修）能直接对冲行业「装完就消失」的信任赤字；风暴理赔是北美屋顶的独特入口，帮业主跟保险公司打交道的能力也值得进名字的气质里。要注意业务分层：补漏是流量入口（高频低客单），整体换顶是利润腹地（低频高客单），商业屋顶年检维保是长期主义（合同制）——CentiMark 用「百分百标记」的质保词根专攻商业屋顶。客群上，业主要的是不漏与美观，物业与厂房要的是资质、保险与响应速度——名字要在住宅的温度与商用的正规之间兼容。渠道上，屋顶活在风暴过后的地图搜索、保险理赔员的推荐名录与院子里的施工告示牌上——那块插在草坪上的牌子，就是品牌在整个街区的广告位。",
+      namingIdeas: [
+        "庇护意象：顶、盾、穹、庇护——屋顶是家的第一道防线，庇护感先赢情绪票",
+        "工匠人设：Mr. 系、家族姓氏——看不见的手艺只能信人，姓氏是「跑不掉」的信用抵押",
+        "质保承诺：终身质保、漏了就修——成交在「保多少年」，名字与质保一体化对冲装完就消失",
+        "风暴响应：storm、rescue 气质——风暴理赔是独特入口，帮业主对接保险的能力写进气质",
+        "业务留边界：补漏是入口、换顶是利润、商业维保是长期——名字从「补漏」画到「屋顶管家」",
+      ],
+      cases: [
+        { name: "Mr. Roof", takeaway: "礼貌人格化+品类词的极简组合：看不见的屋顶手艺用一位「先生」担保——好念好记好转介绍，北美最大住宅屋顶商的人设名范本" },
+        { name: "Tecta America", takeaway: "拉丁语 tecta（屋顶/庇护所）+国名格局：词源里的庇护感+全国联盟的规模感——商业屋顶整合平台用一个古典词根完成气质升维" },
+        { name: "CentiMark", takeaway: "cent（百）+mark（标记）的质保词根：「百分百做到位」的承诺感专攻商业屋顶——大客户要的不是热情是确定性，质保命名的教科书" },
+        { name: "Baker Roofing", takeaway: "1915 年传承的家族姓氏+品类直给：百年姓氏在建筑行业就是信用抵押——「我们的名字钉在你的屋顶上」，工匠人设的时间复利" },
+        { name: "Roof Maxx", takeaway: "品类词+maxx 的延寿暗示：不换顶、给旧屋顶续命 15 年——产品化命名把「修 vs 换」的第三选项说清，品类创新从名字开始" },
+      ],
+      pitfalls: [
+        "游击队气质：「XX 防水补漏」加手机号的墙体广告式名字——大额工程先看正规感，摆脱野施工队联想是第一步",
+        "锁死补漏单品：名字绑死「补漏」，接整体换顶、商业维保全是阻力——利润在换顶，长期在合同维保",
+        "没有质保暗示：屋顶成交在「保多少年」——名字气质里没有承诺感，报价单上的质保条款就少一半说服力",
+        "风暴投机脸：追着冰雹跑的 storm chaser 是行业负资产——风暴响应要配上本地扎根感，别让名字像打一枪换一个地方",
+      ],
+    },
+    en: {
+      label: "Roofing",
+      title: "How to Name a Roofing Company: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Roofing company naming guide: shelter imagery, craftsman personas, warranty promises, breakdowns of Mr. Roof/Tecta America/CentiMark/Baker Roofing, recommended TLDs and pitfalls — then hunt an available roofing domain with AI.",
+      intro:
+        "A roofing name must carry the weight of what's overhead: a replacement runs tens of thousands, a homeowner buys once or twice in a lifetime, and a wrong choice leaks for a decade — into that unfamiliar, one-shot, big-ticket decision the name must radiate triple certainty: we can build it, we stand behind it, and we'll still be here. The first material bin is shelter imagery: peak, shield, canopy, haven — the roof is the home's first line of defense, and Tecta America wrote shelter into its etymology with the Latin tecta; a sheltering name wins the emotional vote first. The second lever is the craftsman persona: roofing is invisible craft — the owner can't climb up to inspect, so they can only trust a person; Mr. Roof's courteous personification and Baker Roofing's century-old surname both stake a concrete human being against unseeable workmanship, and in construction a family name is collateral that can't skip town. The third is the warranty promise: roofing deals close on \"how many years\" — a name fused with its guarantee (lifetime warranty, we fix every leak) directly offsets the trade's install-and-vanish trust deficit; storm-claim response is North American roofing's unique gate, and the ability to face the insurance adjuster for the homeowner deserves a place in the name's register. Mind the business layers: leak repair is the traffic gate (high frequency, low ticket), full replacement the profit belly (low frequency, high ticket), commercial inspection contracts the long game — CentiMark aimed its warranty root squarely at commercial roofs. Homeowners want dry and handsome; property managers and plants want licenses, insurance and response time — the name must reconcile residential warmth with commercial rigor. On channels: roofing lives in post-storm map searches, adjuster referral lists and the yard sign on the lawn — that little sign is the brand's billboard for the whole street.",
+      namingIdeas: [
+        "Shelter imagery: peak, shield, canopy, haven — the roof is the home's first defense; a sheltering name wins the emotional vote first",
+        "Craftsman persona: Mr. X, the family surname — invisible craft can only be trusted through a person; a surname is collateral that can't skip town",
+        "Warranty fusion: lifetime, every-leak-fixed — deals close on \"how many years\"; fuse name and guarantee to offset install-and-vanish",
+        "Storm response: rapid, restore, rescue registers — the claim is the category's unique gate; facing the adjuster is worth naming",
+        "Boundary headroom: repairs are the gate, replacement the profit, commercial contracts the long game — draw from \"patch\" out to \"roof steward\"",
+      ],
+      cases: [
+        { name: "Mr. Roof", takeaway: "Courteous personification bolted to the category word: unseeable rooftop craft guaranteed by one \"Mister\" — easy to say, recall and refer; the persona-name benchmark of America's largest residential roofer" },
+        { name: "Tecta America", takeaway: "Latin tecta (roof, shelter) plus a national canvas: etymological shelter and coast-to-coast scale in one breath — a commercial-roofing consolidator elevated by a single classical root" },
+        { name: "CentiMark", takeaway: "Cent (hundred) + mark: a warranty root promising one hundred percent, aimed squarely at commercial roofs — big clients buy certainty, not enthusiasm; the textbook of guarantee naming" },
+        { name: "Baker Roofing", takeaway: "A family surname carried since 1915, category stated plainly: in construction a century-old name is credit collateral — \"our name is nailed to your roof\", the craftsman persona compounding over time" },
+        { name: "Roof Maxx", takeaway: "Category word + a maxx of extension: don't replace, give the old roof 15 more years — productized naming that articulates the third option between repair and replace; category innovation starting from the name" },
+      ],
+      pitfalls: [
+        "Fly-by-night register: a spray-painted \"X Waterproofing\" plus a phone number — big-ticket work reads legitimacy first; escape the rogue-crew association before anything else",
+        "Welding to the patch: a name locked to \"leak repair\" drags at full replacements and commercial contracts — the profit is in replacement, the longevity in maintenance",
+        "No warranty implication: roofing closes on \"how many years\" — a name with no promise in its register halves the persuasive power of the quote's warranty clause",
+        "Storm-chaser face: hail-chasing crews are the industry's baggage — storm response must pair with local-roots credibility, or the name reads hit-and-run",
+      ],
+    },
+  },
+  towing: {
+    slug: "towing",
+    tlds: [
+      { tld: "com", zh: "深夜路边求助的信任底线，救援品牌的默认选择", en: "The trust baseline for a midnight roadside call — the default for a towing brand" },
+      { tld: "express", zh: "「快」的后缀直给，响应速度是品类第一决策因素", en: "The express suffix, speed stated plainly — response time is the category's first decision factor" },
+      { tld: "help", zh: "「帮助」后缀，困境救援的属性零解释成本", en: "The help suffix — rescue-in-distress positioning at zero explanation cost" },
+    ],
+    zh: {
+      label: "道路救援",
+      title: "道路救援与拖车公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "道路救援与拖车公司命名指南：极速响应、守护陪伴、透明计价等 5 种思路，AAA/HONK/Urgently 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的救援品牌域名。",
+      intro:
+        "拖车公司的名字要在深夜高速的应急车道上被想起：这是比管道维修更极端的应急品类——顾客搜「拖车电话」时，车抛锚在无人的路肩、电瓶死在冰冷的停车场，恐惧与无助拉满，名字要立刻给出「马上到、不宰你」的双重确定性。第一素材库是极速响应：闪电、火速、24 小时——应急救援的第一决策因素是「多久能到」，时间承诺直接参与那通打着双闪的电话；但快要有凭据，网络化调度（就近派单）的平台感词根比单纯的「快」更可信。第二个抓手是守护陪伴：抛锚的本质情绪是孤立无援——AAA 百年来把「会员守护」做成品类心智，「守护」「同行」「靠山」式的词根把一次拖车升级成一份随行保障；把救援卖成会员制（年费换安心）正是这个品类利润模型的升维方向。第三个抓手是透明计价：拖车是宰客重灾区——起步价说不清、拖到黑名单修理厂拿回扣是全行业的信任赤字，名字与承诺一体化（明码计价、拖到你指定的厂）是最稀缺的差异化；HONK、Urgently 等平台正是用「Uber 式透明」重做了这门老生意。要注意业务分层：事故拖车是流量入口，搭电换胎送油等轻救援是高频触点，企业车队与保险公司的年度合同是利润腹地——名字的边界要从「拖车」画到「道路救援服务商」。客群上，个人车主要的是快与不宰，保险与车队要的是网络覆盖与结算规范。渠道上，救援活在地图搜索、保险 App 的合作商列表与高速服务区的告示牌里——名字要在电话里一遍报清，车身上喷出来要在夜里认得出。",
+      namingIdeas: [
+        "极速响应：闪电、火速、24 小时——「多久能到」是第一决策因素，时间承诺直接参与那通双闪电话",
+        "守护陪伴：守护、同行、靠山——抛锚的情绪是孤立无援，把一次拖车升级成一份随行保障",
+        "透明计价：明码、直拖、你指定的厂——宰客是行业信任赤字，透明承诺是最稀缺的差异化",
+        "平台调度感：就近派单、网络覆盖——「快」要有凭据，调度网络的词根比口号更可信",
+        "业务留边界：拖车是入口、轻救援是高频、车队合同是利润——名字从「拖车」画到「道路救援商」",
+      ],
+      cases: [
+        { name: "AAA", takeaway: "三个字母的百年守护：美国汽车协会把「会员制道路救援」做成品类心智——极简缩写+互助会血统，「有 AAA」三个字就是路上的安全感" },
+        { name: "HONK", takeaway: "按喇叭的拟声词做品牌：把「路边求助」翻译成一声喇叭——四个字母的动作词好念好记，Uber 式透明调度重做拖车老生意的命名代表" },
+        { name: "Urgently", takeaway: "「十万火急」的副词直接注册：把品类第一决策因素（急）写成品牌本身——urgent.ly 的域名 hack 加成，词性命名的教科书" },
+        { name: "Agero", takeaway: "拉丁语 agere（行动/驱动）的造词：为保险与车厂做白标救援网络的 B2B 定位——古典词根的中性专业感，服务商命名的稳妥样本" },
+        { name: "途虎", takeaway: "「路途+虎」的力量组合：虎的可靠强悍配上途的场景直给——中文汽车服务品牌用动物词把专业翻译成安全感的代表作" },
+      ],
+      pitfalls: [
+        "宰客联想：名字气质野蛮生长——拖车是宰客重灾区，游击队气质的名字先被挂到「黑拖车」的联想上",
+        "只有快没有价：响应快但计价黑——「拖一次上千」的投诉一次就上本地热搜，透明承诺要写进品牌",
+        "锁死拖车单品：名字绑死「拖车」，接搭电换胎、车队年包全是阻力——高频在轻救援，利润在合同",
+        "夜里认不出：救援车深夜到场，车身名字要一眼可认——复杂图形与生僻字在应急场景里就是沟通事故",
+      ],
+    },
+    en: {
+      label: "Towing & roadside",
+      title: "How to Name a Towing or Roadside Assistance Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Towing and roadside assistance naming guide: speed promises, guardian companionship, transparent pricing, breakdowns of AAA/HONK/Urgently/Agero, recommended TLDs and pitfalls — then hunt an available towing domain with AI.",
+      intro:
+        "A towing name must come to mind on a midnight shoulder: this is an even more extreme emergency category than plumbing — when a customer searches \"tow truck near me\", the car has died on an empty highway or the battery has quit in a freezing garage, fear and helplessness at full scale, and the name must radiate instant double certainty: we'll be there fast, and we won't fleece you. The first material bin is speed: lightning, rapid, 24-hour — \"how soon can you get here\" is the category's first decision factor, and a time promise participates directly in that hazard-lights phone call; but fast needs evidence, and dispatch-network roots (nearest-truck routing) read more credible than a bare \"quick\". The second lever is guardian companionship: a breakdown's core emotion is being stranded alone — AAA spent a century building \"member protection\" into the category's mind, and guardian, alongside and backup roots upgrade a single tow into a standing safety net; selling rescue as membership (an annual fee for peace of mind) is exactly how this category's profit model levels up. The third is transparent pricing: towing is a fleecing hotspot — opaque hook fees and kickback tows to blacklisted shops are the whole trade's trust deficit, so a name fused with a promise (upfront rates, towed to the shop YOU choose) is the scarcest differentiation; HONK and Urgently rebuilt this old business precisely on Uber-style transparency. Mind the business layers: accident tows are the traffic gate, light rescue (jump-starts, tire changes, fuel delivery) the high-frequency touchpoint, fleet and insurance contracts the profit belly — draw the name's boundary from \"tow truck\" out to \"roadside assistance provider\". Drivers want fast and fair; insurers and fleets want network coverage and clean invoicing. On channels: rescue lives in map searches, insurance-app partner lists and highway rest-stop boards — the name must say cleanly in one phone call and be recognizable on a truck door at night.",
+      namingIdeas: [
+        "Speed promise: lightning, rapid, 24-hour — \"how soon\" is the first decision factor; a time promise joins the hazard-lights call",
+        "Guardian companionship: guardian, alongside, backup — the breakdown emotion is stranded-alone; upgrade one tow into a standing safety net",
+        "Transparent pricing: upfront, direct, your-shop — fleecing is the trade's trust deficit; the transparency promise is the scarcest differentiation",
+        "Dispatch-network credibility: nearest-truck, coverage — fast needs evidence; network roots read more credible than a bare \"quick\"",
+        "Boundary headroom: tows are the gate, light rescue the frequency, fleet contracts the profit — draw from \"tow truck\" out to \"roadside provider\"",
+      ],
+      cases: [
+        { name: "AAA", takeaway: "Three letters, a century of guardianship: the auto club that built membership rescue into the category's mind — minimal initials with mutual-aid heritage; \"I have AAA\" is road-trip peace of mind in one phrase" },
+        { name: "HONK", takeaway: "The horn's onomatopoeia registered as the brand: roadside distress translated into one honk — a four-letter action word, easy to say and recall; the naming face of towing rebuilt on Uber-style transparent dispatch" },
+        { name: "Urgently", takeaway: "The category's first decision factor registered as an adverb: urgency itself becomes the brand — with the urgent.ly domain hack as a bonus; the textbook of part-of-speech naming" },
+        { name: "Agero", takeaway: "A coinage from Latin agere (to act, to drive): white-label rescue networks for insurers and automakers — a classical root's neutral professionalism, the safe template for a B2B service provider" },
+        { name: "Mach1", takeaway: "The speed of sound as a brand: an on-demand roadside app writing velocity into physics — a speed metaphor with built-in swagger, instantly legible in an emergency category" },
+      ],
+      pitfalls: [
+        "Fleecing association: a rough-and-ready register — towing is a rip-off hotspot, and a guerrilla-flavored name gets hung on the \"predatory tow\" stereotype first",
+        "Fast without fair: quick to arrive, dark on the hook fee — one four-figure-tow complaint trends locally; write the transparency promise into the brand",
+        "Welding to the tow: a name locked to \"towing\" drags at jump-starts, tire changes and fleet contracts — frequency lives in light rescue, profit in contracts",
+        "Illegible at night: the truck arrives at 2 a.m. — the door decal must read in one glance; intricate marks and rare characters are communication accidents in an emergency",
+      ],
+    },
+  },
+  selfstorage: {
+    slug: "selfstorage",
+    tlds: [
+      { tld: "com", zh: "长租托付家当的信任底线，仓储品牌的默认选择", en: "The trust baseline for entrusting belongings long-term — the default for a storage brand" },
+      { tld: "space", zh: "「空间」后缀与品类零距离，仓储生意的天选词根", en: "The space suffix at zero distance from the category — storage's natural-born root" },
+      { tld: "city", zh: "「城市」后缀，城市网点连锁的规模气质", en: "The city suffix — the register of an urban multi-site network" },
+    ],
+    zh: {
+      label: "自助仓储",
+      title: "自助仓储与迷你仓品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "自助仓储与迷你仓命名指南：空间扩展、安全守护、随取随存等 5 种思路，Public Storage/CubeSmart/Extra Space 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的仓储品牌域名。",
+      intro:
+        "迷你仓的名字要把「家太小」翻译成「空间还有」：顾客搜「附近迷你仓」的那一刻，正在搬家、换季、创业囤货或处理旧物——本质诉求不是「存东西」而是「给生活腾地方」，名字要先卖空间感再卖仓库。第一素材库是空间扩展：Extra Space（多出来的空间）把品类价值一次说破——多、余、扩、间——名字直接回答「我能多一个房间」；CubeSmart 用「立方体+聪明」把仓库翻译成聪明的空间方案，空间词根是这个品类的天选素材。第二个抓手是安全守护：存进去的是家当甚至传家宝——监控、门禁、恒温恒湿是决策清单的必查项，「守护」「保险箱」气质的词根把仓库升级成「家当的银行」；Public Storage 的橙色大门用高辨识颜色做了视觉版的安全感，名字与视觉资产要一起规划。第三个抓手是随取随存：自助仓的「自助」是核心体验——24 小时刷卡进出、月付随退、线上订仓——灵活性词根（随、易、快）把重资产生意做出轻服务的体感。要注意业务分层：个人换季与搬家仓是流量入口，电商卖家的库存仓与企业档案仓是利润腹地（长租稳定、按面积计费），贵重物品仓（红酒、艺术品）是溢价尖货——名字的边界要从「存杂物」画到「空间服务商」。客群上，个人要的是近与便宜，商家要的是稳定与发票——名字要兼容民用的亲切与商用的可靠。渠道上，迷你仓活在地图搜索、搬家公司的推荐与仓库外墙的巨幅招牌里——那面对着马路的墙，就是最大的广告位，名字要在 60 公里时速里一眼认出。",
+      namingIdeas: [
+        "空间扩展：多、余、扩、间——本质诉求是「给生活腾地方」，名字直接回答「我能多一个房间」",
+        "安全守护：守护、保险箱、银行感——存的是家当，监控门禁恒温写进气质，仓库升级成「家当的银行」",
+        "随取随存：随、易、快——「自助」是核心体验，灵活词根把重资产生意做出轻服务体感",
+        "聪明方案感：smart、cube、方案——CubeSmart 式把仓库翻译成聪明的空间方案，摆脱铁皮柜联想",
+        "业务留边界：个人仓是入口、电商与企业仓是利润——名字从「存杂物」画到「空间服务商」",
+      ],
+      cases: [
+        { name: "Public Storage", takeaway: "品类直给+「公共」的普惠感：两个词把「人人存得起」说清——配上橙色大门的视觉锤，品类词命名+颜色资产的组合拳，全球最大仓储 REIT 的底气" },
+        { name: "Extra Space Storage", takeaway: "「多出来的空间」一次说破品类价值：顾客买的不是仓库是「多一个房间」——价值命名的教科书，把功能翻译成生活收益" },
+        { name: "CubeSmart", takeaway: "立方体+聪明的组合：把铁皮仓库翻译成「聪明的空间方案」——几何词的秩序感+smart 的方案感，仓储品牌摆脱工业气质的升维样本" },
+        { name: "U-Haul", takeaway: "「你来拉」的自助宣言：DIY 搬家的品类开创者把「自助」写进名字——U 开头的第二人称命名把顾客变成主角，自助仓储的精神源头" },
+        { name: "迷你考拉仓", takeaway: "「迷你+考拉」的亲切组合：考拉抱树的形象暗合「抱住你的家当」——动物 IP 把冷冰冰的仓储做出温度，中文迷你仓命名的代表" },
+      ],
+      pitfalls: [
+        "铁皮柜气质：名字全是「仓」「库」的工业冷感——顾客托付的是家当，冷库联想拉低安全感与客单价",
+        "锁死民用小仓：名字绑死「个人杂物」，接电商库存、企业档案全是阻力——利润在长租的商用仓",
+        "没有位置感：迷你仓是三公里生意——名字与网点扩张策略脱节，连锁化时「XX 路仓库」式的名字全部作废",
+        "安全感为零：只有空间没有守护——监控门禁恒温是决策必查项，名字气质里没有「稳妥」就输在比较表上",
+      ],
+    },
+    en: {
+      label: "Self-storage",
+      title: "How to Name a Self-Storage Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Self-storage naming guide: extra-space value, guardian security, self-serve flexibility, breakdowns of Public Storage/Extra Space/CubeSmart/U-Haul, recommended TLDs and pitfalls — then hunt an available storage domain with AI.",
+      intro:
+        "A self-storage name must translate \"my home is too small\" into \"there's still room\": when a customer searches \"storage near me\", they're mid-move, mid-season-swap, stocking inventory for a side business or clearing an estate — the underlying need isn't \"store stuff\" but \"make room for life\", so the name sells space before it sells warehouse. The first material bin is space extension: Extra Space Storage said the category's whole value in two words — more, spare, expand, room — the name answers directly: you can have one more room; CubeSmart translated the warehouse into a clever space solution, and space roots are this category's natural-born material. The second lever is guardian security: what goes in is the household's belongings, sometimes heirlooms — cameras, gated access and climate control top the decision checklist, and vault-and-guardian roots upgrade a shed into \"a bank for your belongings\"; Public Storage's orange doors did the visual version of that trust, a reminder to plan the name and the visual asset together. The third is self-serve flexibility: the \"self\" is the core experience — 24-hour keypad access, month-to-month terms, book online — agility roots (easy, ready, anytime) give a heavy-asset business a light-service feel. Mind the business layers: personal moving-and-seasonal units are the traffic gate, e-commerce inventory and business records the profit belly (long leases, per-square-foot billing), wine and art vaults the premium tip — draw the name's boundary from \"store the clutter\" out to \"space services provider\". Individuals want near and cheap; businesses want stable and invoiced — the name must reconcile household warmth with commercial reliability. On channels: storage lives in map searches, movers' referrals and the giant sign on the facility wall — that roadside wall is the biggest ad slot the brand owns, and the name must read at forty miles an hour.",
+      namingIdeas: [
+        "Space extension: more, spare, expand, room — the real need is \"make room for life\"; answer directly: you can have one more room",
+        "Guardian security: vault, guard, bank register — belongings and heirlooms go in; write cameras-gates-climate into the vibe, upgrade shed to \"belongings bank\"",
+        "Self-serve flexibility: easy, ready, anytime — \"self\" is the core experience; agility roots give heavy assets a light-service feel",
+        "Clever-solution register: smart, cube, plan — translate the warehouse into a clever space solution, CubeSmart-style; escape the tin-shed association",
+        "Boundary headroom: personal units are the gate, business storage the profit — draw from \"store the clutter\" out to \"space provider\"",
+      ],
+      cases: [
+        { name: "Public Storage", takeaway: "Category stated plainly plus the inclusiveness of \"public\": storage for everyone in two words — hammered home by the orange-door visual; plain naming plus a color asset, the confidence of the world's largest storage REIT" },
+        { name: "Extra Space Storage", takeaway: "The category's entire value said in two words: the customer isn't buying a warehouse but one more room — the textbook of value naming, function translated into a life benefit" },
+        { name: "CubeSmart", takeaway: "Cube plus smart: the tin warehouse translated into a clever space solution — geometric order plus solution-feel; the template for lifting a storage brand out of its industrial register" },
+        { name: "U-Haul", takeaway: "The you-do-it declaration: the DIY-moving pioneer wrote self-service into its name — second-person U-naming makes the customer the protagonist; the spiritual ancestor of self-storage" },
+        { name: "StorageMart", takeaway: "Category word plus the retail -mart: storage sold like a convenience store — easy in, easy out, priced on the shelf; borrowing retail's familiarity to soften a warehouse business" },
+      ],
+      pitfalls: [
+        "Tin-shed register: a name that is all warehouse and depot — customers entrust their belongings; cold-storage associations depress both trust and ticket size",
+        "Welding to the closet: a name locked to \"personal clutter\" drags at e-commerce inventory and business records — the profit lives in long-lease commercial units",
+        "No sense of place: storage is a three-mile business — a name detached from the expansion plan (\"X Road Storage\") dies the day the second site opens",
+        "Zero security signal: all space, no guardian — cameras, gates and climate top the comparison table; a name with no \"safe\" in its register loses the checklist war",
+      ],
+    },
+  },
+  catering: {
+    slug: "catering",
+    tlds: [
+      { tld: "com", zh: "企业团餐与婚宴大单的信任底线，餐饮服务商的默认选择", en: "The trust baseline for corporate contracts and wedding banquets — the default for a caterer" },
+      { tld: "events", zh: "「活动」后缀，宴会与活动餐饮的场景直给", en: "The events suffix — banquet and event catering, scene stated plainly" },
+      { tld: "kitchen", zh: "「厨房」后缀，中央厨房与手作现制的画面感", en: "The kitchen suffix — central-kitchen capability with made-fresh imagery" },
+    ],
+    zh: {
+      label: "宴会团餐",
+      title: "宴会外烩与企业团餐品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "宴会外烩与企业团餐命名指南：盛宴仪式感、主厨手作、履约确定性等 5 种思路，Sodexo/Aramark/Compass 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的餐饮服务域名。",
+      intro:
+        "餐饮服务商的名字要同时端得上婚宴的主桌与招标书的封面：这是一门「一次做几百人饭」的生意——顾客不是一位食客而是一位主办方，TA 赌上的是婚礼的体面、年会的口碑、员工餐厅的日常满意度，名字要给出「场面撑得住、履约不掉链」的双重确定性。第一素材库是盛宴仪式感：宴、悦、堂、庆——外烩的高光时刻是揭开餐盖的那一瞬，名字要有把日子过成节日的喜气；但喜气要配上格调，婚宴与高端活动的客单价撑在「体面」两个字上。第二个抓手是主厨手作：Wolfgang Puck Catering 用明星主厨的名字把宴会菜从「大锅饭」拉到「餐厅水准」——主厨姓氏、厨房、手作的词根在对冲团餐「预制、将就」的品类偏见，「谁在掌勺」是宴会客户最愿意付溢价的问题。第三个抓手是履约确定性：团餐与外烩的成交在招标桌上——食品安全资质、中央厨房产能、准时配送率是硬指标，Compass（指南针）、Sodexo 式的中性专业名在告诉采购方「我们是系统不是小饭馆」；名字的正规感直接参与投标打分。要注意业务分层：婚宴外烩是高光入口（低频高客单），企业团餐是利润腹地（年度合同、日日出餐），茶歇与会议简餐是高频触点——名字的边界要从「办一场宴」画到「餐饮服务商」。客群上，新人要的是体面与惊喜，行政采购要的是资质与稳定——名字要在喜庆与正规之间兼容。渠道上，这门生意活在婚庆公司的推荐名录、招标平台的资质列表与活动现场的餐台桌牌上——桌牌立在餐台前，就是品牌在几百位宾客面前的一次路演。",
+      namingIdeas: [
+        "盛宴仪式感：宴、悦、堂、庆——揭开餐盖的那一瞬是高光，把日子过成节日的喜气配上格调",
+        "主厨手作：主厨姓氏、厨房、手作——对冲「预制大锅饭」的品类偏见，「谁在掌勺」值得溢价",
+        "履约确定性：指南针式的系统感——成交在招标桌上，正规感直接参与投标打分",
+        "规模产能感：中央厨房、准时率——「几百人饭不掉链」的硬实力写进名字气质",
+        "业务留边界：婚宴是高光、团餐是利润、茶歇是高频——名字从「办一场宴」画到「餐饮服务商」",
+      ],
+      cases: [
+        { name: "Sodexo", takeaway: "Société d'Exploitation Hôtelière 的缩合造词：法式后勤世家把长公司名熔成三音节全球品牌——缩合命名在 B2B 服务里兼得传承与好念，团餐巨头的教科书" },
+        { name: "Compass Group", takeaway: "「指南针」的方向隐喻：全球最大团餐集团用导航词根传递「复杂餐饮体系有人掌舵」——中性专业名在招标桌上的说服力，系统感命名的范本" },
+        { name: "Aramark", takeaway: "ARA（美国餐饮联合）+mark 的品牌化改造：从缩写公司名到服务标记的升级——老 B2B 企业翻新名字的经典路径，「mark」暗示服务到哪都有标准" },
+        { name: "Wolfgang Puck Catering", takeaway: "明星主厨姓名直接冠名：奥斯卡晚宴的掌勺人把宴会菜拉到餐厅水准——主厨人格是宴会品类最硬的溢价凭据，「谁在掌勺」的终极答案" },
+        { name: "俏江南", takeaway: "「俏+江南」的风韵组合：把地域菜系的水乡意象做成宴请场面的格调——中文宴请命名用意境词撑起体面，商务宴请心智的代表作" },
+      ],
+      pitfalls: [
+        "大锅饭气质：名字全是「快餐」「盒饭」的将就感——婚宴与年会买的是体面，先摆脱食堂联想",
+        "只有喜庆没有资质：外烩的另一半成交在招标桌——食安资质与产能的正规感缺位，投标先丢印象分",
+        "锁死婚宴单场景：名字绑死「婚宴」，接企业团餐、会议茶歇全是阻力——利润在年度合同的日常出餐",
+        "报不清记不住：推荐名录与转介绍是核心渠道——婚庆策划师电话里报不清的名字，就进不了推荐清单",
+      ],
+    },
+    en: {
+      label: "Catering",
+      title: "How to Name a Catering or Food Service Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Catering and food service naming guide: banquet ceremony, chef-craft credibility, delivery certainty, breakdowns of Sodexo/Compass/Aramark/Wolfgang Puck, recommended TLDs and pitfalls — then hunt an available catering domain with AI.",
+      intro:
+        "A caterer's name must sit equally well on the wedding head table and the tender document's cover: this is the business of cooking for hundreds at once — the customer isn't a diner but a host, staking a wedding's dignity, a gala's reputation or a staff canteen's daily satisfaction, and the name must radiate double certainty: we can carry the occasion, and we won't drop the handoff. The first material bin is banquet ceremony: feast, fête, gala, table — the caterer's spotlight moment is the lifting of the cloche, and the name should carry turn-a-day-into-a-festival festivity; but festivity must pair with polish, because wedding and premium-event tickets rest on the word \"dignified\". The second lever is chef-craft credibility: Wolfgang Puck Catering used a star chef's name to pull banquet food from \"mass-cooked\" up to restaurant grade — chef surnames, kitchen and handmade roots offset the category's reheated-and-settled-for prejudice, and \"who's at the stove\" is the question event clients pay the premium for. The third is delivery certainty: contract catering closes at the tender table — food-safety certification, central-kitchen capacity and on-time rates are hard metrics, and neutral professional names in the Compass and Sodexo register tell procurement \"we are a system, not a bistro\"; the name's institutional weight scores directly in the bid. Mind the business layers: wedding catering is the spotlight gate (low frequency, high ticket), corporate contract dining the profit belly (annual contracts, meals every day), coffee breaks and boxed conference lunches the high-frequency touchpoint — draw the name's boundary from \"cater one banquet\" out to \"food service provider\". Couples want dignity and delight; procurement wants certificates and stability — the name must reconcile festivity with rigor. On channels: this trade lives in wedding planners' referral lists, tender-platform vendor registries and the placard on the buffet table — that placard, standing before hundreds of guests, is a live roadshow for the brand.",
+      namingIdeas: [
+        "Banquet ceremony: feast, fête, gala, table — the cloche-lift is the spotlight; festival warmth must pair with polish",
+        "Chef-craft credibility: chef surnames, kitchen, handmade — offset the reheated prejudice; \"who's at the stove\" earns the premium",
+        "Delivery certainty: compass-style system registers — contracts close at the tender table; institutional weight scores in the bid",
+        "Capacity signal: central kitchen, on-time — \"hundreds of meals without a drop\" is hard power worth writing into the vibe",
+        "Boundary headroom: weddings are the spotlight, contracts the profit, coffee breaks the frequency — draw from \"one banquet\" out to \"food service\"",
+      ],
+      cases: [
+        { name: "Sodexo", takeaway: "A contraction of Société d'Exploitation Hôtelière: a French hospitality house fused a long corporate name into three global syllables — contraction naming winning heritage and pronounceability at once; the contract-catering giant's textbook" },
+        { name: "Compass Group", takeaway: "The navigation metaphor: the world's largest food service group signaling \"someone is steering this complex system\" — a neutral professional name's persuasive power at the tender table, the benchmark of system-register naming" },
+        { name: "Aramark", takeaway: "ARA (Automatic Retailers of America) + mark: an acronym corporation rebuilt as a service marque — the classic path for renewing an old B2B name; \"mark\" implying the same standard wherever the service lands" },
+        { name: "Wolfgang Puck Catering", takeaway: "A star chef's full name over the door: the man who cooks the Oscars dinner pulled banquet food to restaurant grade — chef personhood is the category's hardest premium credential, the final answer to \"who's at the stove\"" },
+        { name: "Blue Apron", takeaway: "The apprentice chef's blue apron written into the brand: kitchen-craft imagery carried by one garment — proof that a single concrete kitchen object can hold an entire food company's promise of care" },
+      ],
+      pitfalls: [
+        "Mess-hall register: a name that is all fast-food and boxed-lunch settling — weddings and galas buy dignity; escape the canteen association first",
+        "Festivity without credentials: half the trade closes at the tender table — missing institutional weight loses the bid's first impression before the tasting",
+        "Welding to the wedding: a name locked to banquets drags at corporate contracts and conference breaks — the profit lives in everyday contract meals",
+        "Unreferrable: planner referral lists are the core channel — a name the wedding planner can't say cleanly on the phone never makes the shortlist",
+      ],
+    },
+  },
+  signage: {
+    slug: "signage",
+    tlds: [
+      { tld: "com", zh: "企业订单与连锁招牌工程的信任底线，标识品牌的默认选择", en: "The trust baseline for corporate orders and chain-store rollouts — the default for a sign brand" },
+      { tld: "design", zh: "「设计」后缀，标识是设计生意而非加工生意的宣言", en: "The design suffix — a declaration that signage is a design business, not a fabrication shop" },
+      { tld: "works", zh: "「工坊」后缀，制作交付的实干气质直给", en: "The works suffix — build-and-deliver craft, stated plainly" },
+    ],
+    zh: {
+      label: "广告标识",
+      title: "广告招牌与标识制作公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "广告招牌与标识制作命名指南：醒目意象、快速交付、设计升维等 5 种思路，FASTSIGNS/Signarama/YESCO 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的标识品牌域名。",
+      intro:
+        "招牌公司的名字本身就是自己的样品：这是一门「帮别人被看见」的生意——客户订招牌时买的是「路过的人抬头就认出我」，而你的名字如果自己都不够醒目，就先输了第一次比稿。第一素材库是醒目意象：亮、闪、显、光——招牌的使命是从街景里跳出来，霓虹、发光字、灯箱的词根自带画面；YESCO 点亮了拉斯维加斯的传奇招牌，「点亮」是这个行业最好的动词。第二个抓手是快速交付：FASTSIGNS 把 fast 直接焊进名字——开业日期不等人，「明天开业今天装好」的时间承诺是中小商户的第一决策因素；quick、express、当日出的词根直接参与那通「周五能装好吗」的电话。第三个抓手是设计升维：招牌行业的价差在「加工」与「品牌落地」之间——同一块亚克力，图文店赚材料钱，品牌标识公司赚设计与系统钱（导视系统、连锁门头 SI、展厅标识）；名字里的设计感与系统感（studio、design、identity）是承接连锁大单与地产导视的入场券。要注意业务分层：门头招牌是流量入口，连锁品牌的门头 SI 与楼宇导视系统是利润腹地（成体系、可复购），亮化工程与户外大牌是规模生意——名字的边界要从「做一块招牌」画到「让品牌被看见」。客群上，小商户要的是快与便宜，连锁与地产要的是设计能力与项目管理——名字要在街边小店的亲切与投标书的正规之间兼容。渠道上，招牌公司活在「广告牌制作」的搜索、装修公司的转包与自己门头的活广告里——你的门头就是 24 小时营业的样品间，名字要配得上这块最贵的展位。",
+      namingIdeas: [
+        "醒目意象：亮、闪、显、光——招牌的使命是从街景跳出来，「点亮」是行业最好的动词",
+        "快速交付：fast、express、当日出——开业日期不等人，时间承诺直接参与「周五能装好吗」的电话",
+        "设计升维：studio、design、identity——价差在加工与品牌落地之间，设计感是连锁大单的入场券",
+        "系统感：导视、SI、体系——单块招牌是入口，成体系的标识工程才是利润与复购",
+        "自证醒目：名字本身要好认好记——招牌公司的名字就是自己的样品，先赢自己的比稿",
+      ],
+      cases: [
+        { name: "FASTSIGNS", takeaway: "fast+signs 的直给组合：把品类第一决策因素（快）焊进名字——全大写的视觉强度自带招牌感，连锁标识品牌用两个词说清「快且专业」" },
+        { name: "Signarama", takeaway: "sign+panorama 的后缀嫁接：「招牌的全景」暗示品类齐全——-arama 的展销会式热闹感好念好记，全球加盟连锁的命名底盘" },
+        { name: "YESCO", takeaway: "Young Electric Sign Company 的缩写：点亮拉斯维加斯的百年招牌世家——从霓虹地标到品牌缩写，「我们的作品就是城市夜景」的底气" },
+        { name: "Image360", takeaway: "「形象+360 度」的系统承诺：从门头到车贴到展架的一站式视觉落地——数字词根把「什么都能做」说得有体系，设计升维命名的范本" },
+        { name: "视觉中国", takeaway: "「视觉+国名」的格局命名：把图像生意的边界画到整个视觉产业——品类大词+地域大词的组合示范了「被看见」生意的天花板画法" },
+      ],
+      pitfalls: [
+        "图文店气质：名字停在「快印」「喷绘」的加工感——价差在设计与系统，加工联想接不到连锁与导视大单",
+        "自己不醒目：招牌公司的名字拗口难记——你的名字就是样品，第一次比稿先输给自己",
+        "锁死单一工艺：名字绑死「霓虹」「灯箱」，工艺迭代（LED、数字屏）一来就过时——卖「被看见」而非某种灯",
+        "只有快没有稳：招牌是高空作业与结构安全的工程——快要配上资质与安装的正规感，出一次事故品牌就翻牌",
+      ],
+    },
+    en: {
+      label: "Signage & signs",
+      title: "How to Name a Sign & Signage Company: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Sign company naming guide: visibility imagery, speed promises, design-grade positioning, breakdowns of FASTSIGNS/Signarama/YESCO/Image360, recommended TLDs and pitfalls — then hunt an available signage domain with AI.",
+      intro:
+        "A sign company's name is its own sample: this is the business of getting other people seen — the customer buying a storefront sign is buying \"passers-by look up and recognize me\", and if your own name isn't conspicuous, you've lost the first pitch before it starts. The first material bin is visibility imagery: bright, flash, beacon, glow — a sign's mission is to jump out of the streetscape, and neon, lightbox and channel-letter roots ship with their own pictures; YESCO lit the legendary signs of Las Vegas, and \"light up\" is this industry's best verb. The second lever is the speed promise: FASTSIGNS welded fast straight into its name — opening day waits for no one, and a \"install today, open tomorrow\" time promise is the small merchant's first decision factor; quick, express and same-day roots participate directly in that \"can it be up by Friday?\" phone call. The third is design-grade positioning: the category's price spread sits between fabrication and brand rollout — from the same sheet of acrylic, a print shop earns material margin while a signage identity firm earns design and system fees (wayfinding systems, chain-store SI, exhibition graphics); design and system roots (studio, design, identity) are the ticket to chain rollouts and real-estate wayfinding tenders. Mind the business layers: storefront signs are the traffic gate, chain-brand sign systems and building wayfinding the profit belly (systematic, repeatable), illumination projects and outdoor boards the scale play — draw the name's boundary from \"make a sign\" out to \"get brands seen\". Small merchants want fast and cheap; chains and developers want design capability and project management — the name must reconcile shopfront warmth with tender-document rigor. On channels: sign shops live in \"sign maker near me\" searches, contractor subcontracts and their own storefront — your own fascia is a 24-hour showroom, and the name must deserve that most expensive display slot.",
+      namingIdeas: [
+        "Visibility imagery: bright, flash, beacon, glow — a sign's mission is to jump out of the streetscape; \"light up\" is the industry's best verb",
+        "Speed promise: fast, express, same-day — opening day waits for no one; the time promise joins the \"up by Friday?\" call",
+        "Design-grade register: studio, design, identity — the spread sits between fabrication and brand rollout; design-feel is the chain-tender ticket",
+        "System signal: wayfinding, SI, program — one sign is the gate; systematic signage programs are the profit and the repeat order",
+        "Self-evident conspicuousness: the name must be instantly legible — a sign company's name is its own sample; win your own pitch first",
+      ],
+      cases: [
+        { name: "FASTSIGNS", takeaway: "Fast + signs, stated plainly: the category's first decision factor welded into the name — all-caps visual intensity that already reads like a sign; two words carrying \"quick and professional\" for a global franchise" },
+        { name: "Signarama", takeaway: "Sign + panorama grafted at the suffix: \"the full panorama of signs\" implying complete range — the -arama trade-show exuberance, easy to say and recall; the naming chassis of a worldwide franchise" },
+        { name: "YESCO", takeaway: "Young Electric Sign Company compressed to five letters: the century-old house that lit Las Vegas — from neon landmarks to a brand acronym, the confidence of \"our portfolio is the city's skyline at night\"" },
+        { name: "Image360", takeaway: "Image plus the full circle: one-stop visual rollout from fascia to vehicle wrap to trade-show booth — a numeric root turning \"we do everything\" into a system; the benchmark of design-grade renaming" },
+        { name: "Neon Museum", takeaway: "The category material elevated to heritage: Las Vegas's boneyard of retired signs proves neon itself carries story — material words in this trade come pre-loaded with glow, nostalgia and streetscape memory" },
+      ],
+      pitfalls: [
+        "Print-shop register: a name stuck at \"quick print\" and \"banner\" fabrication-feel — the spread lives in design and systems; a processing association never lands the chain rollout",
+        "Inconspicuous yourself: a clumsy, forgettable name on a sign company — your name is the sample; you lose your own pitch first",
+        "Welding to one craft: a name locked to neon or lightboxes goes stale at the next technology turn (LED, digital) — sell being seen, not a kind of lamp",
+        "Fast without safe: signs are working-at-height structural engineering — speed must pair with licensed-installer legitimacy; one falling sign flips the brand",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

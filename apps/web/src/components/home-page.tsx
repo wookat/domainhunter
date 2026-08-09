@@ -1473,6 +1473,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个限时特卖与闪购电商品牌，寓意「好货有限时，错过就没了」；气质要快而体面、有会员特权感和正品底气、绝不像清仓甩卖；场景是 App 推送的弹窗、限时开抢的倒计时页和快递箱的胶带上都立得住。",
     en: "A flash sale e-commerce brand. The name should carry good finds, limited time — gone if you blink; the vibe is fast yet dignified, with members-only privilege and authenticity confidence, never a clearance bin; it must hold up in the push-notification banner, the countdown page, and the tape on the shipping box.",
   },
+  {
+    slug: "pestcontrol",
+    labelZh: "害虫防治",
+    labelEn: "Pest control",
+    zh: "一个害虫防治与消杀服务品牌，寓意「虫害到我为止、这家有科学防线」；气质要专业干净、有终结感又让人安心、绝不像打游击的野队；场景是地图搜索的结果页、商户年检报告的抬头和师傅工服的胸前都立得住。",
+    en: "A pest control service brand. The name should say the infestation ends here, backed by a scientific defense; the vibe is professional and clean, final yet reassuring, never a fly-by-night crew; it must hold up in map search results, on the commercial inspection report header, and on the technician's uniform.",
+  },
+  {
+    slug: "roofing",
+    labelZh: "屋顶施工",
+    labelEn: "Roofing",
+    zh: "一个屋顶施工与防水工程品牌，寓意「头顶的大事交给靠得住的人」；气质要庇护可靠、有工匠手艺感和质保底气、经得起大额工程的审视；场景是草坪上的施工告示牌、保险理赔的推荐名录和报价单的抬头都立得住。",
+    en: "A roofing and waterproofing brand. The name should promise what's overhead is in dependable hands; the vibe is sheltering and reliable, with craftsman skill and warranty confidence, standing up to big-ticket scrutiny; it must hold up on the yard sign, the insurance adjuster's referral list, and the quote header.",
+  },
+  {
+    slug: "towing",
+    labelZh: "道路救援",
+    labelEn: "Towing & roadside",
+    zh: "一个道路救援与拖车服务品牌，寓意「深夜抛锚也马上有人来、明码计价不宰客」；气质要极速可靠、像随行的守护而不是趁火打劫的野拖车；场景是深夜的地图搜索、保险 App 的合作商列表和救援车的车身喷绘都立得住。",
+    en: "A towing and roadside assistance brand. The name should promise help arrives fast even at midnight, at upfront honest rates; the vibe is rapid and dependable — a guardian alongside, never a predatory tow; it must hold up in a midnight map search, the insurance app's partner list, and the truck-door decal.",
+  },
+  {
+    slug: "selfstorage",
+    labelZh: "自助仓储",
+    labelEn: "Self-storage",
+    zh: "一个自助仓储与迷你仓品牌，寓意「给生活多腾一个房间、家当存得稳妥」；气质要安全灵活、像家当的银行而不是冷冰冰的铁皮柜；场景是路边仓库的巨幅招牌、搬家公司的推荐话术和线上订仓页的标题都立得住。",
+    en: "A self-storage brand. The name should evoke one more room for life, belongings kept safe and sound; the vibe is secure yet flexible — a bank for your belongings, not a cold tin shed; it must hold up on the roadside facility sign, in the mover's referral, and on the online booking page.",
+  },
+  {
+    slug: "catering",
+    labelZh: "宴会团餐",
+    labelEn: "Catering",
+    zh: "一个宴会外烩与企业团餐品牌，寓意「几百人的饭也办得体面、履约从不掉链」；气质要有盛宴的仪式感又有招标桌上的正规感、绝不像凑合的大锅饭；场景是婚宴餐台的桌牌、招标书的资质页和婚庆公司的推荐名录里都立得住。",
+    en: "A catering and food service brand. The name should promise dignity for a meal of hundreds, delivered without a slip; the vibe carries banquet ceremony plus tender-table rigor, never a settle-for mess hall; it must hold up on the buffet placard, the tender's vendor page, and the wedding planner's referral list.",
+  },
+  {
+    slug: "signage",
+    labelZh: "广告标识",
+    labelEn: "Signage & signs",
+    zh: "一个广告招牌与标识制作品牌，寓意「让每个生意都被看见、开业日期前准时点亮」；气质要醒目利落、有设计感和工程正规感、绝不像街边图文快印；场景是自家门头的活广告、连锁品牌的投标书和装修公司的转包名录里都立得住。",
+    en: "A sign-making and signage brand. The name should promise every business gets seen, lit on time before opening day; the vibe is conspicuous and crisp, with design taste and engineering rigor, never a corner print shop; it must hold up on your own storefront, in the chain-brand tender, and on the contractor's sub list.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

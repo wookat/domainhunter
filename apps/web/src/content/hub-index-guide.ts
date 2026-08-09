@@ -210,4 +210,10 @@ export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized 
   { slug: "trading", label: { zh: "外贸公司", en: "Import & export trading" }, oneLiner: { zh: "外贸公司与进出口贸易命名指南：航海意象、桥梁词根、双语同构等 5 种思路。", en: "Import-export trading company naming guide: maritime imagery, bridge roots." } },
   { slug: "coupon", label: { zh: "优惠券导购", en: "Coupon & deals platforms" }, oneLiner: { zh: "优惠券与折扣导购平台命名指南：省钱直给、精明人格、情报站叙事等 5 种思路。", en: "Coupon and deals platform naming guide: savings-first roots, savvy-shopper personas." } },
   { slug: "flashsale", label: { zh: "限时特卖电商", en: "Flash sale e-commerce" }, oneLiner: { zh: "限时特卖与闪购电商命名指南：时间紧迫感、会员特权感、正品信任锚等 5 种思路。", en: "Flash sale e-commerce naming guide: urgency roots, members-only privilege." } },
+  { slug: "pestcontrol", label: { zh: "害虫防治", en: "Pest control" }, oneLiner: { zh: "害虫防治与消杀公司命名指南：终结暗示、科学防治、安心承诺等 5 种思路。", en: "Pest control naming guide: termination roots, science-first authority." } },
+  { slug: "roofing", label: { zh: "屋顶施工", en: "Roofing" }, oneLiner: { zh: "屋顶施工与防水工程命名指南：庇护意象、工匠人设、质保承诺等 5 种思路。", en: "Roofing company naming guide: shelter imagery, craftsman personas, warranty promises." } },
+  { slug: "towing", label: { zh: "道路救援", en: "Towing & roadside" }, oneLiner: { zh: "道路救援与拖车公司命名指南：极速响应、守护陪伴、透明计价等 5 种思路。", en: "Towing and roadside assistance naming guide: speed promises, guardian companionship." } },
+  { slug: "selfstorage", label: { zh: "自助仓储", en: "Self-storage" }, oneLiner: { zh: "自助仓储与迷你仓命名指南：空间扩展、安全守护、随取随存等 5 种思路。", en: "Self-storage naming guide: extra-space value, guardian security." } },
+  { slug: "catering", label: { zh: "宴会团餐", en: "Catering" }, oneLiner: { zh: "宴会外烩与企业团餐命名指南：盛宴仪式感、主厨手作、履约确定性等 5 种思路。", en: "Catering and food service naming guide: banquet ceremony, chef-craft credibility." } },
+  { slug: "signage", label: { zh: "广告标识", en: "Signage & signs" }, oneLiner: { zh: "广告招牌与标识制作命名指南：醒目意象、快速交付、设计升维等 5 种思路。", en: "Sign company naming guide: visibility imagery, speed promises." } },
 ];
