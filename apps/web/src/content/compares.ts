@@ -3457,6 +3457,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Independent writers' home base", "Brand content satellites (brand.blog)", "Long-form essays & opinion", "Cheapest renewal for creators"],
     },
   },
+  "market-vs-exchange": {
+    slug: "market-vs-exchange",
+    a: "market",
+    b: "exchange",
+    zh: {
+      title: ".market 和 .exchange 怎么选：多方陈列与双向撮合的对比",
+      metaDescription: ".market 说「这里是集市，来逛来买」，.exchange 说「这里撮合双方流动」。对比两个平台后缀的方向感、价格与合规注意，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是平台后缀，方向不同。.market 是陈列——垂直电商集市、二手与本地市集、数字资产与模板商店、农夫与周末市集用 name.market，点进来之前就知道「这里能逛能买」，「品类 + .market」还是天然英文短语（art.market、nft.market 的节奏），语义 SEO 有真实红利；Identity Digital 运营，注册约 $36、续费约 $36/年——没有首年甜头，但也没有续费陷阱，长期成本透明。.exchange 是撮合——交易与匹配平台、二手置换与以物易物社区、货币与积分兑换、数据与 API 市场用 name.exchange，把平台的核心动作直接写进域名，供需双向流动的平台用它更准；注册约 $6、续费约 $31/年，温和档，首年比 .market 便宜得多。判断标准：平台聚合多个卖家做「陈列与出售」——集市、商城、模板店 → .market 的集市感更准；平台撮合双边做「流动与交换」——交易所、置换、兑换 → .exchange 的动词更点题。注意 .exchange 在英文里自带证券交易所的联想，金融类项目要把牌照与合规信息放在明面上——域名越像交易所，监管目光越多。共同注意：双边平台冷启动靠两侧供给，域名的角色是平台可信度门面而不是流量来源；两个词都不算短，主体名务必短。",
+      pickA: ["垂直电商与多卖家集市", "二手与本地市集", "数字资产与模板商店", "想要成本透明的长期持有"],
+      pickB: ["交易与撮合平台", "置换与以物易物社区", "货币与积分兑换工具", "数据与 API 市场"],
+    },
+    en: {
+      title: ".market vs .exchange: The Bazaar or The Match",
+      metaDescription:
+        ".market says \"browse and buy here\"; .exchange says \"two-way flow matched here\". Compare the two platform suffixes on direction, pricing and compliance, then hunt names available on both.",
+      verdict:
+        "Both are platform suffixes; the direction differs. .market is display — vertical e-commerce marketplaces, secondhand and local markets, digital-asset and template stores, farmers and weekend markets on name.market tell visitors \"browse and buy\" before the click, and category + .market is a natural English phrase (the art.market, nft.market cadence) with a real semantic-SEO dividend; run by Identity Digital at about $36 to register and $36/yr to renew — no first-year sweetener, but no renewal trap either, so the long-term cost is transparent. .exchange is matching — trading and matching platforms, swap and barter communities, currency and points converters, data and API marketplaces on name.exchange write the platform's core verb into the address, truest for platforms matching both sides of supply and demand; about $6 to register and $31/yr to renew — the mild tier, far cheaper up front than .market. The test: the platform aggregates many sellers to display and sell — marketplaces, malls, template stores → .market's bazaar reads truer; the platform matches two sides in motion — exchanges, swaps, conversions → .exchange's verb is sharper. Note that in English, exchange rings of stock exchanges — financial projects should put licensing and compliance front and center, because the more exchange-like the domain, the more regulatory scrutiny it invites. Shared notes: two-sided platforms cold-start on supply, so the domain's job is instant platform credibility, not traffic; and neither word is short — keep the front word tight.",
+      pickA: ["Vertical & multi-vendor marketplaces", "Secondhand & local markets", "Digital-asset & template stores", "Transparent long-term holding cost"],
+      pickB: ["Trading & matching platforms", "Swap & barter communities", "Currency & points converters", "Data & API marketplaces"],
+    },
+  },
+  "watch-vs-show": {
+    slug: "watch-vs-show",
+    a: "watch",
+    b: "show",
+    zh: {
+      title: ".watch 和 .show 怎么选：观看动作与节目名号的对比",
+      metaDescription: ".watch 把「看」这个动作写进域名，.show 把「节目」这个名号写进域名。对比两个内容后缀的语义、价格陷阱与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都指向内容消费，指的不是一回事。.watch 是动作——视频与流媒体聚合、赛事与剧集观看指南、价格与舆情监控工具（price watch、whale watch 的语感）、手表电商与钟表社区用 name.watch，一个后缀横跨「观看、盯梢、腕表」三个场景，「对象 + .watch」是地道英文习语（storm.watch 的节奏）；Identity Digital 运营，注册约 $3 是全站最便宜档之一，但续费约 $36/年是 10 倍跳涨——验证想法便宜，长期持有要按续费算账。.show 是名号——播客与视频节目、脱口秀与综艺、演出与展览、作品集展示页用 name.show，英文节目名以 Show 结尾是百年传统（The Tonight Show 的节奏），「节目名 + .show」读出来就是完整片名，播客受益最大；注册约 $8、续费约 $36/年，中间档。判断标准：站点的核心是「观看或监控某个对象」——聚合站、观看指南、监控工具 → .watch 的动作更准；站点本身就是「一档节目」——播客、访谈、演出 → .show 的名号更配。注意 .watch 一词三义是资产也是歧义，首屏必须立刻说清你是看剧、盯价还是卖表；流媒体聚合站要注意版权，域名越点题越显眼。共同注意：节目与内容站是持续承诺，断更的 .show 比断更的博客更伤；获客靠内容与订阅，域名的角色是品牌门面，首屏放最好的内容。",
+      pickA: ["视频与流媒体聚合站", "赛事与剧集观看指南", "价格与舆情监控工具", "手表电商与钟表社区"],
+      pickB: ["播客与视频节目", "脱口秀与访谈栏目", "演出与展览页面", "作品集展示（brand.show）"],
+    },
+    en: {
+      title: ".watch vs .show: The Verb or The Title",
+      metaDescription:
+        ".watch writes the act of watching into the address; .show writes the program's title. Compare the two content suffixes on semantics, pricing traps and fit, then hunt names available on both.",
+      verdict:
+        "Both point at content; they point differently. .watch is the verb — video and streaming aggregators, sports and show viewing guides, price and sentiment monitors (the price watch, whale watch cadence), watch retailers and horology communities on name.watch stretch one suffix across three scenes, and target + .watch is native English idiom (the storm.watch rhythm); run by Identity Digital at about $3 to register — one of the cheapest first years anywhere — but about $36/yr to renew, a 10x jump: cheap to validate an idea, a real line item to hold. .show is the title — podcasts and video shows, talk shows and variety formats, performances and exhibitions, portfolio showcases on name.show ride a century-old convention of programs ending in \"Show\" (The Tonight Show cadence), so show name + suffix reads out as the complete title — podcasters benefit most; about $8 to register and $36/yr to renew, the mid tier. The test: the site's core is watching or monitoring something — aggregators, viewing guides, alert tools → .watch's verb is sharper; the site is itself a program — podcasts, interviews, performances → .show's title fits. Note .watch's triple meaning is an asset and an ambiguity — the hero must instantly say whether you stream, monitor, or sell timepieces; and streaming aggregators should mind copyright, because the more on-the-nose the domain, the more attention it draws. Shared notes: shows and content sites are ongoing promises — an abandoned .show reads worse than an abandoned blog; growth comes from content and subscriptions, so lead the first screen with your best work.",
+      pickA: ["Video & streaming aggregators", "Sports & series viewing guides", "Price & sentiment monitors", "Watch retail & horology communities"],
+      pickB: ["Podcasts & video shows", "Talk shows & interview formats", "Performance & exhibition pages", "Portfolio showcases (brand.show)"],
+    },
+  },
+  "house-vs-style": {
+    slug: "house-vs-style",
+    a: "house",
+    b: "style",
+    zh: {
+      title: ".house 和 .style 怎么选：居住场景与审美主张的对比",
+      metaDescription: ".house 把「住」写进域名，.style 把「品味」写进域名。对比两个生活方式后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是生活方式后缀，落点不同。.house 是场景——房产中介与租房平台、家装家居品牌、民宿与短租、建筑与室内设计工作室用 name.house，一眼「与居住有关」；还有一层加成：创意机构、唱片厂牌与出版社的英文名传统以 House 结尾（design house、publishing house），「品牌词 + .house」读出来就是机构全名，比 .studio 多一分居家感；Identity Digital 运营，注册约 $15、续费约 $36/年，中间档。.style 是主张——穿搭与时尚博主、造型师与形象顾问、美妆与服饰品牌、生活方式媒体用 name.style，域名自带「有品味」的气质，比 .fashion 更宽：穿搭、家居、文字甚至代码规范都装得下（brand style guide 就是它的地盘），「人名 + .style」读出来就是「某某的风格」；注册约 $7、续费约 $31/年，温和档，比 .house 便宜。判断标准：业务围绕「房子与居住」——房产、家装、民宿、设计工作室 → .house 的场景更准；业务围绕「审美与个人品牌」——穿搭、美妆、造型、生活方式内容 → .style 的主张更配。家居品牌两边都能站：卖「住的产品」偏 .house，卖「生活的品味」偏 .style。注意房产是极度本地的生意，「城市 + .house」比泛词更接本地搜索；.style 是主观承诺，站点视觉必须撑得住——粗糙的 .style 站比普通域名更减分。共同注意：两个都偏轻快生活气质，严肃 B2B 与金融另选后缀。",
+      pickA: ["房产中介与租房平台", "家装与家居品牌", "民宿与短租页面", "建筑与设计工作室（brand.house）"],
+      pickB: ["穿搭与时尚博主", "造型师与形象顾问", "美妆与服饰品牌", "个人品牌（yourname.style）"],
+    },
+    en: {
+      title: ".house vs .style: The Place or The Taste",
+      metaDescription:
+        ".house writes living into the address; .style writes taste into it. Compare the two lifestyle suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are lifestyle suffixes; they land differently. .house is the place — real-estate agents and rental platforms, home-improvement and furnishing brands, guesthouses and short-term rentals, architecture and interior studios on name.house read instantly \"about living\"; and there's a bonus register: creative agencies, record labels and publishers traditionally end in House (design house, publishing house), so brand word + .house reads out as the organization's full name, one notch homier than .studio; run by Identity Digital at about $15 to register and $36/yr to renew — the mid tier. .style is the taste — fashion and outfit bloggers, stylists and image consultants, beauty and apparel brands, lifestyle media on name.style carry a \"taste included\" air, broader than .fashion: outfits, interiors, writing, even code conventions fit (the brand style guide is its turf), and yourname.style reads out as \"so-and-so's style\"; about $7 to register and $31/yr to renew — the mild tier, cheaper than .house. The test: the business is about homes and living — property, furnishing, rentals, design studios → .house's scene is truer; the business is about aesthetics and personal brand — outfits, beauty, styling, lifestyle content → .style's claim fits. Home brands can stand on either: selling the product of living leans .house, selling the taste of living leans .style. Note property is a fiercely local business — city + .house catches local search better than generic words; and .style is a subjective promise, so the site's visuals must deliver — a rough-looking .style site hurts more than a plain domain. Shared notes: both wear a light lifestyle register — sober B2B and finance look elsewhere.",
+      pickA: ["Real-estate agents & rental platforms", "Home-improvement & furnishing brands", "Guesthouses & short-term rentals", "Architecture & design studios (brand.house)"],
+      pickB: ["Fashion & outfit bloggers", "Stylists & image consultants", "Beauty & apparel brands", "Personal brands (yourname.style)"],
+    },
+  },
+  "institute-vs-international": {
+    slug: "institute-vs-international",
+    a: "institute",
+    b: "international",
+    zh: {
+      title: ".institute 和 .international 怎么选：研究权威与全球版图的对比",
+      metaDescription: ".institute 是研究机构的正式名号，.international 把全球化写进域名。对比两个机构后缀的语义、价格与命名传统，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是机构后缀，说的不是一件事。.institute 说「我们做研究」——智库与研究团队、培训与认证机构、行业研究组织、公益研究项目用 name.institute，英文机构名以 Institute 结尾是行业惯例（AI 安全、经济政策类机构都这么起名），「领域词 + .institute」读出来就是机构全名，发布报告与标准的组织用它最立得住；Identity Digital 运营，注册约 $8、续费约 $22/年，温和档且续费友好。.international 说「我们做全球」——跨境企业与全球品牌、国际组织与 NGO、留学与移民服务、货运与外贸公司用 name.international，公司名以 International 结尾是老牌跨国企业的经典写法，「品牌词 + .international」读出来就是注册主体全名，比塞进主体名优雅得多；注册约 $8、续费约 $25/年，同样温和档。判断标准：机构的立身之本是「研究与权威」——发报告、定标准、做认证 → .institute 的学术分量更准；机构的立身之本是「跨境与版图」——多国经营、国际服务、全球品牌 → .international 的全球叙事更配。两个都能是同一家机构的不同侧面：研究院用 .institute，集团全球站用 .international。注意 .institute 语气正式，个人博客与轻内容撑不起来，空壳站会显得越界；.international 长达十三个字母，主体名必须极短，两三个音节封顶；部分司法辖区对注册名里的 institute 有监管，注意表述。共同注意：机构后缀吃信任，页面放清楚主体资质与联系信息，承诺要兑现——单语言单市场的 .international 站会显得空洞。",
+      pickA: ["智库与研究团队", "培训与认证机构", "行业研究与标准组织", "公益研究项目"],
+      pickB: ["跨境企业与全球品牌", "国际组织与 NGO", "留学移民与国际服务", "货运与外贸公司"],
+    },
+    en: {
+      title: ".institute vs .international: The Authority or The Footprint",
+      metaDescription:
+        ".institute is the research body's formal name; .international writes the global footprint into the address. Compare the two institutional suffixes on semantics, pricing and naming tradition, then hunt names available on both.",
+      verdict:
+        "Both are institutional suffixes; they claim different things. .institute says \"we do research\" — think tanks and research groups, training and certification bodies, industry research organizations, nonprofit research projects on name.institute ride the convention of organizations ending in Institute (AI-safety and economic-policy shops alike), so field word + suffix reads out as the institution's full name — organizations that publish reports and standards wear it best; run by Identity Digital at about $8 to register and $22/yr to renew — mild tier with a friendly renewal. .international says \"we operate worldwide\" — cross-border businesses and global brands, international organizations and NGOs, study-abroad and immigration services, freight and trade companies on name.international ride the classic multinational convention of company names ending in International, so brand word + suffix equals the registered entity — far more elegant than cramming it into the name; about $8 to register and $25/yr to renew, the same mild tier. The test: the organization stands on research and authority — reports, standards, certification → .institute's academic weight is truer; the organization stands on borders and footprint — multi-country operations, international services, global brands → .international's story fits. They can even be two faces of one organization: the research arm on .institute, the group's global site on .international. Note .institute's register is formal — personal blogs and thin content read as overreach, and some jurisdictions regulate \"institute\" in registered names; and .international runs thirteen letters — among the longest TLDs anywhere — so the front word must be very short. Shared notes: institutional suffixes trade on trust — publish entity, credentials and contacts, and keep the promise: a single-language, single-market .international site rings hollow.",
+      pickA: ["Think tanks & research groups", "Training & certification bodies", "Industry research & standards orgs", "Nonprofit research projects"],
+      pickB: ["Cross-border businesses & global brands", "International organizations & NGOs", "Study-abroad & immigration services", "Freight & trade companies"],
+    },
+  },
+  "partners-vs-group": {
+    slug: "partners-vs-group",
+    a: "partners",
+    b: "group",
+    zh: {
+      title: ".partners 和 .group 怎么选：合伙名号与集团门面的对比",
+      metaDescription: ".partners 是专业事务所的铜牌名号，.group 是集团与多品牌矩阵的母品牌门面。对比两个机构后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是机构后缀，组织形态不同。.partners 是合伙——律所与会计师事务所、咨询公司、投资合伙（LP/GP 结构）、企业渠道与联盟计划用 name.partners，英文事务所与基金以 Partners 结尾是行业传统，「姓氏 + .partners」读出来就是注册主体全名；Identity Digital 运营，注册约 $8、续费约 $57/年——续费高档，但对专业服务费率完全无感；「品牌 + .partners」做企业合作伙伴计划入口也是经典用法，值得防御注册。.group 是集团——控股公司、多品牌矩阵的母品牌、家族企业用 name.group，读出来就是「X 集团」，比冗长的 xxgroup.com 干净得多；它还有第二条路：社群与兴趣小组的落地页同样自然；注册首年常见几美元、续费不到 $20/年，促销与续费差价比多数新后缀小，适合长期持有。判断标准：组织是「合伙人执业」——律师、会计师、咨询师、基金 GP → .partners 的名号传统更准；组织是「集团与矩阵」——控股母公司、多子品牌、家族企业 → .group 的母品牌门面更配。注意 .partners 是复数与机构语气，单人顾问用 .pro 或 .expert 更合身；合伙品牌吃信任，主体名用姓氏与稳重词，切忌轻佻。共同注意：两个都是机构门面后缀，获客靠口碑与关系，域名的角色是正式官网与信任背书，页面放清楚主体资质与团队信息。",
+      pickA: ["律所与会计师事务所", "咨询公司与基金 GP", "投资合伙（LP/GP）主体", "企业合作伙伴计划（brand.partners）"],
+      pickB: ["控股公司与集团母站", "多品牌矩阵的母品牌", "家族企业官网", "社群与兴趣小组落地页"],
+    },
+    en: {
+      title: ".partners vs .group: The Nameplate or The Parent",
+      metaDescription:
+        ".partners is the professional firm's brass nameplate; .group is the parent brand of a conglomerate. Compare the two institutional suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are institutional suffixes; the org charts differ. .partners is the partnership — law and accounting firms, consultancies, investment partnerships (LP/GP structures), corporate channel and alliance programs on name.partners ride the tradition of firms and funds ending in Partners, so surname + suffix reads out as the registered entity's full name; run by Identity Digital at about $8 to register and $57/yr to renew — a high-tier renewal, invisible against professional-services fees; and brand.partners as a company's partner-program front door is a classic worth a defensive registration. .group is the parent — holding companies, the parent brand of a multi-brand portfolio, family businesses on name.group read literally as \"the X Group\", far cleaner than a long xxgroup.com; it runs a second road too: landing pages for communities and interest groups read just as naturally; a few dollars first year with renewals under $20 — a smaller promo-to-renewal gap than most new gTLDs, good for long-term holding. The test: the organization is partners practicing — lawyers, accountants, consultants, fund GPs → .partners' nameplate tradition is truer; the organization is a group and its portfolio — holdcos, multi-brand parents, family businesses → .group's parent front door fits. Note .partners is plural and institutional — a solo consultant reads better on .pro or .expert; and partnership brands trade on trust, so front words should be surnames or steady words, never flippant. Shared notes: both are institutional front-door suffixes — business comes through reputation and relationships, so the domain's job is the formal site and trust anchor: publish entity credentials and the team.",
+      pickA: ["Law & accounting firms", "Consultancies & fund GPs", "Investment partnerships (LP/GP)", "Partner programs (brand.partners)"],
+      pickB: ["Holding companies & group sites", "Multi-brand portfolio parents", "Family business sites", "Community & club landing pages"],
+    },
+  },
+  "support-vs-center": {
+    slug: "support-vs-center",
+    a: "support",
+    b: "center",
+    zh: {
+      title: ".support 和 .center 怎么选：帮助入口与枢纽名号的对比",
+      metaDescription: ".support 把「来这求助」写进域名，.center 把「这里是枢纽」写进域名。对比两个功能后缀的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是功能后缀，功能不同。.support 是求助入口——产品帮助中心与知识库、客服与售后团队、IT 与技术支持服务商、互助社区用 name.support，用户凭直觉就会试 brand.support，主站在品牌域名、帮助中心在 brand.support，比 support.brand.com 子域名更短更顺，是最自解释的后缀之一；Identity Digital 运营，注册约 $7、续费约 $22/年，便宜档，任何品牌都值得防御注册。.center 是枢纽名号——帮助中心、资源与下载站、培训与考试中心、医疗与健身中心、社区服务中心用 name.center，业务本身叫「X 中心」的，后缀替你把名字说完；开发者场景同样顺手：产品的支持站、文档与状态页放在 help.center、docs.center 这类语义直白的域名上，与主域干净分离；注册首年几美元、续费约 $20/年，同为便宜档。判断标准：域名的功能是「求助的门」——客服、售后、技术支持 → .support 的直觉入口更准；主体本身是「一个中心」——线下场馆、培训机构、资源枢纽 → .center 的名号更配。帮助中心两边都能站：挂在品牌下的求助门偏 brand.support，独立运营的资源站偏 name.center。注意两个都是功能词不是品牌词——主站另备品牌域名，让它们做配套入口；.support 承诺了帮助，响应质量必须跟上，没人回的 .support 比没有更伤；.center 要留意英式 centre 拼写分流，必要时防御注册。共同注意：功能后缀的价值在「一看就懂」，落地页第一屏就要兑现域名的承诺。",
+      pickA: ["产品帮助中心与知识库", "客服与售后团队入口", "IT 与技术支持服务商", "品牌防御注册（brand.support）"],
+      pickB: ["线下中心类机构", "资源与下载枢纽", "文档与状态页（docs.center）", "培训与考试中心"],
+    },
+    en: {
+      title: ".support vs .center: The Help Door or The Hub",
+      metaDescription:
+        ".support writes the help entrance into the address; .center names the hub. Compare the two function suffixes on semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are function suffixes; the functions differ. .support is the help door — product help centers and knowledge bases, customer service and after-sales teams, IT and tech-support providers, mutual-aid communities on name.support give users the address they'd instinctively try: main site on the brand domain, help center on brand.support — shorter and smoother than a support.brand.com subdomain, one of the most self-explaining suffixes anywhere; run by Identity Digital at about $7 to register and $22/yr to renew — the cheap tier, an easy defensive registration for any brand. .center is the hub's name — help centers, resource and download hubs, training and testing centers, medical and fitness centers, community service centers on name.center get the suffix to finish the name when the business is literally \"the X Center\"; developers get a bonus pattern: support sites, docs and status pages read perfectly on semantically literal domains like help.center or docs.center, cleanly separated from the main domain; a few dollars first year and renewals around $20 — the same budget tier. The test: the domain's function is the door people knock on for help — customer service, after-sales, tech support → .support's instinctive entrance is truer; the entity itself is a center — physical venues, training bodies, resource hubs → .center's name fits. Help centers can stand on either: a brand's help door leans brand.support, an independently run resource hub leans name.center. Note both are function words, not brand words — keep a separate main domain and let these be companion doors; .support promises help, so response quality must follow — an unanswered .support hurts more than none; and .center should mind the centre spelling split for Commonwealth audiences. Shared notes: a function suffix's value is instant clarity — the first screen must deliver what the domain promises.",
+      pickA: ["Product help centers & knowledge bases", "Customer service & after-sales doors", "IT & tech-support providers", "Defensive registration (brand.support)"],
+      pickB: ["Physical center-style institutions", "Resource & download hubs", "Docs & status pages (docs.center)", "Training & testing centers"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

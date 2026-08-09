@@ -159,6 +159,12 @@ export const COMPARE_SLUGS = [
   "systems-vs-network",
   "ventures-vs-capital",
   "tips-vs-blog",
+  "market-vs-exchange",
+  "watch-vs-show",
+  "house-vs-style",
+  "institute-vs-international",
+  "partners-vs-group",
+  "support-vs-center",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
