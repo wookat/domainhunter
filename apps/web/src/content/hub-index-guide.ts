@@ -168,4 +168,10 @@ export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized 
   { slug: "weddingphoto", label: { zh: "婚纱摄影", en: "Wedding photography" }, oneLiner: { zh: "婚纱摄影与婚礼跟拍命名指南：永恒意象、光影工艺、主理人签名等 5 种思路。", en: "Wedding photography naming guide: forever imagery, light-craft words." } },
   { slug: "footspa", label: { zh: "足疗采耳", en: "Foot spas & wellness lounges" }, oneLiner: { zh: "足疗采耳与养生馆命名指南：解乏意象、手艺传承、新中式体验等 5 种思路。", en: "Foot spa and wellness lounge naming guide: release imagery, craft lineage." } },
   { slug: "parcel", label: { zh: "快递驿站", en: "Parcel stations & pickup points" }, oneLiner: { zh: "快递驿站与社区代收命名指南：驿站意象、邻里人格、安心承诺等 5 种思路。", en: "Parcel station and pickup point naming guide: relay-station imagery." } },
+  { slug: "realtor", label: { zh: "房产中介", en: "Real estate agencies" }, oneLiner: { zh: "房产中介与经纪品牌命名指南：托付意象、专业承诺、邻里人格等 5 种思路。", en: "Real estate agency naming guide: shelter imagery." } },
+  { slug: "propertymgmt", label: { zh: "物业管理", en: "Property management" }, oneLiner: { zh: "物业管理公司命名指南：守护意象、生活承诺、空间升维等 5 种思路。", en: "Property management naming guide: guardianship imagery." } },
+  { slug: "apartment", label: { zh: "长租公寓", en: "Apartment rentals" }, oneLiner: { zh: "长租公寓品牌命名指南：栖居意象、自在承诺、青年社群等 5 种思路。", en: "Apartment rental brand naming guide: dwelling imagery." } },
+  { slug: "construction", label: { zh: "建筑施工", en: "Construction & contracting" }, oneLiner: { zh: "建筑施工与工程承包命名指南：基石意象、履约承诺、匠作人格等 5 种思路。", en: "Construction and contracting naming guide: bedrock imagery." } },
+  { slug: "appliancerepair", label: { zh: "家电维修", en: "Appliance repair" }, oneLiner: { zh: "家电维修品牌命名指南：师傅人格、妙手承诺、正规军气质等 5 种思路。", en: "Appliance repair naming guide: master-craftsman personas." } },
+  { slug: "equipmentrental", label: { zh: "设备租赁", en: "Equipment rental" }, oneLiner: { zh: "设备租赁与机械租赁命名指南：力量意象、随取承诺、联合规模感等 5 种思路。", en: "Equipment rental naming guide: power imagery." } },
 ];

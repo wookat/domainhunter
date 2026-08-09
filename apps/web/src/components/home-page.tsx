@@ -1149,6 +1149,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个快递驿站与社区代收品牌，寓意「东西放这儿，放心」；气质要像老邻居打招呼般亲切、两三个字隔着马路可认、写进取件短信落款不占字数；场景是小区门口的灯箱、业主群的日常提问和「去 XX 取个件」的口头禅里都第一个被想起。",
     en: "A parcel station and community pickup brand. The name should feel like leave it here, rest easy; the vibe is a neighbor's greeting, two or three syllables legible across the street and free inside an SMS signature; it must be the first name recalled at the gate lightbox, in homeowners' group chats, and in the daily \"I'll grab it from X\" refrain.",
   },
+  {
+    slug: "realtor",
+    labelZh: "房产中介",
+    labelEn: "Real estate agencies",
+    zh: "一个房产中介与经纪品牌，寓意「把一生最大的一笔交易放心托付」；气质要有家的温度又立得住专业可信、两三个字好念好记、印在工牌与门店招牌上体面；场景是「城市+买房中介」的搜索、业主群的「XX 家靠谱吗」和签约室的合同抬头里都立得住。",
+    en: "A real estate agency brand. The name should feel like life's biggest transaction safely entrusted; the vibe carries home's warmth while standing firmly professional, two or three syllables easy to say and remember, respectable on a name badge and storefront sign; it must stand in city-plus-agent searches, \"is X reliable\" group chats, and on the contract header in the signing room.",
+  },
+  {
+    slug: "propertymgmt",
+    labelZh: "物业管理",
+    labelEn: "Property management",
+    zh: "一个物业管理公司品牌，寓意「有人在，家园就有秩序与安心」；气质要正规有集团感又不失服务温度、印在工服岗亭与标书封面上都立得住；场景是业委会续约投票的转述、开发商招标的资审表和「城市+物业公司」的搜索里都拿得出手。",
+    en: "A property management brand. The name should feel like someone is there — order and ease for the whole compound; the vibe is group-level legitimacy warmed by service, standing firm on uniforms, guardhouses and bid covers; it must hold up in owners' committee renewal votes, developer tender prequalification sheets, and city-plus-management searches.",
+  },
+  {
+    slug: "apartment",
+    labelZh: "长租公寓",
+    labelEn: "Apartment rentals",
+    zh: "一个长租公寓与租赁品牌，寓意「在出租屋里也能过上像家一样的生活」；气质要年轻自在有社群温度、机构感与亲和力平衡、两三个字好念好搜；场景是租房 App 的筛选列表、「城市+长租公寓」的搜索和「我住在 XX」的自我介绍里说出口不掉价。",
+    en: "An apartment rental brand. The name should feel like a rented room that lives like home; the vibe is young ease with communal warmth, balancing institution and approachability, two or three syllables easy to say and search; it must stand in rental-app filter lists, city-plus-apartments searches, and the self-introduction \"I live at X\" without embarrassment.",
+  },
+  {
+    slug: "construction",
+    labelZh: "建筑施工",
+    labelEn: "Construction & contracting",
+    zh: "一个建筑施工与工程承包品牌，寓意「基础打得牢、工期守得住、一言九鼎」；气质要正规有分量像国家队、印在围挡与安全帽上隔着马路可认；场景是招标资审表的三秒扫视、「城市+施工总包」的搜索和竣工铭牌上几十年的注视里都立得住。",
+    en: "A construction and contracting brand. The name should feel like foundations laid solid, schedules kept, a promise weighing nine tripods; the vibe is credentialed gravity, legible across the street on hoardings and hard hats; it must survive the three-second tender prequalification scan, city-plus-general-contractor searches, and decades of gazes at the completion plaque.",
+  },
+  {
+    slug: "appliancerepair",
+    labelZh: "家电维修",
+    labelEn: "Appliance repair",
+    zh: "一个家电维修与家庭维修品牌，寓意「师傅一到、药到病除、明码标价」；气质要正规专业与游击队彻底切割、电话里报得清楚、印在工牌上让业主敢开门；场景是「附近家电维修」的应急搜索、电梯广告二维码和物业推荐名录里都立得住。",
+    en: "An appliance and home repair brand. The name should feel like the master arrives, the fix lands, the price is posted; the vibe is licensed professionalism cut clean from the fly-by-night crowd, spellable over the phone, trustworthy enough on a badge that the door opens; it must stand in emergency \"appliance repair near me\" searches, elevator-ad QR codes, and property-manager referral lists.",
+  },
+  {
+    slug: "equipmentrental",
+    labelZh: "设备租赁",
+    labelEn: "Equipment rental",
+    zh: "一个设备租赁与机械租赁品牌，寓意「用的时候一定有、调得动、结算清」；气质要有钢铁力量感又结算正规、喷在挖机侧面隔着工地可认、电话里报得清楚；场景是「城市+设备租赁」的搜索、总包供应商名录和成本经理的比价表里都立得住。",
+    en: "An equipment and machinery rental brand. The name should feel like it's there when you need it, dispatched fast, billed clean; the vibe carries steel's power with corporate billing legitimacy, legible across the site when spray-painted on an excavator flank, spellable over the phone; it must stand in city-plus-equipment-rental searches, GC supplier registries, and the cost manager's comparison sheet.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

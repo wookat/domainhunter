@@ -9835,6 +9835,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  realtor: {
+    slug: "realtor",
+    tlds: [
+      { tld: "com", zh: "大宗交易的信任底线，买卖双方与银行渠道的默认选择", en: "The trust baseline for big-ticket transactions — the default for buyers, sellers and bank partners" },
+      { tld: "properties", zh: "「物业/房产」语义直给，房源列表站与门店官网零解释", en: "Properties semantics stated plainly — zero explanation for listing sites and storefront pages" },
+      { tld: "estate", zh: "「不动产」的庄重感，高端住宅与豪宅线品牌的气质后缀", en: "The gravitas of estate — the register suffix for luxury residential brands" },
+    ],
+    zh: {
+      label: "房产中介",
+      title: "房产中介与经纪品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "房产中介与经纪品牌命名指南：托付意象、专业承诺、邻里人格等 5 种思路，贝壳/链家/Compass 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的中介品牌域名。",
+      intro:
+        "房产中介的名字要接得住一个家庭一生中最大的一笔交易：客户把几百万的首付、几十年的贷款和「新家」的想象一起交到你手上，名字必须先把「可信」两个字立住。第一素材库是托付与庇护意象：壳、家、巢、屋檐——「贝壳」用一个意象同时说了庇护与珍贵，「链家」把「链接人与家」写进了名字；房产中介卖的不是房子，是「家」的确定性，名字里有家的温度，门店的灯光就先亮了一半。第二个抓手是专业承诺：真房源、透明佣金、不吃差价——这个行业的信任赤字人尽皆知，名字与承诺一体化（真、诚、信）等于把品类痛点翻译成品牌资产；链家「真房源」的心智就是从名字的「家」延伸到承诺的闭环。第三个抓手是邻里人格：社区门店是中介的毛细血管，「XX 家的小王」比冷冰冰的机构名更容易被业主群转述——人格化命名让「找中介」变成「找熟人」。要注意边界预留：中介早已不只卖二手房——新房代理、租赁托管、装修金融都在往门店里长，名字锁死「二手房」等于给自己的业务地图画了圈。场景上，中介的名字活在小区门口的绿色招牌、业主群的「XX 家靠谱吗」和签约室的合同抬头里。渠道上，名字要两三个字好念好记、印在工牌上体面、在「城市+买房中介」的搜索里立得住——每一次带看都是名字的路演。",
+      namingIdeas: [
+        "托付庇护意象：壳、家、巢、屋檐——中介卖的是「家」的确定性，名字里有家的温度，信任先立一半",
+        "专业承诺入名：真、诚、信——行业信任赤字人尽皆知，名字与承诺一体化等于把品类痛点变成品牌资产",
+        "邻里人格：社区门店是毛细血管，人格化命名让「找中介」变成「找熟人」，业主群转述零成本",
+        "边界预留：新房代理、租赁托管都在往门店里长——名字锁死「二手房」等于给业务地图画圈",
+        "工牌测试：两三个字、印在工牌与绿色招牌上体面、「城市+买房中介」搜索立得住——每次带看都是路演",
+      ],
+      cases: [
+        { name: "贝壳", takeaway: "一个意象同时说了庇护与珍贵：壳是家的原型，珍珠在壳里长成——从链家平台化升维时换名「贝壳」，把「家」的心智抽象成了可容纳全行业的容器" },
+        { name: "链家", takeaway: "「链接人与家」压进两个字：链是网络与连接，家是终点与温度——功能与情感各占一字的教科书结构，「真房源」的承诺从名字自然延伸" },
+        { name: "Compass", takeaway: "罗盘：在人生最大的决策里给你方向——一个常见词把「经纪人」重新定义为「导航者」，配合极简黑白视觉，美国高端经纪的气质样本" },
+        { name: "RE/MAX", takeaway: "Real Estate Maximums 的压缩：斜杠与全大写把「成交最大化」做成了视觉符号——面向经纪人招募的名字，气球 logo 让它在院子招牌上全球可认" },
+        { name: "我爱我家", takeaway: "一句口语当品牌：五个字把「买房是爱家」的情绪说满，念出来自带广告语——牺牲一点商标独占性，换来零记忆成本的全民心智" },
+      ],
+      pitfalls: [
+        "堆砌「豪」「金」「顶级」：贵气词不等于信任感——买家怕的是被宰，名字越炫耀，佣金谈判越被动",
+        "锁死二手房单品：新房、租赁、托管都在往门店里长——名字绑死一个业务，扩张时只能再养一个牌子",
+        "谐音撞车头部：「X 壳」「X 家」满街跑——头部品牌的语感已被占住，擦边名在业主群里只给对手背书",
+        "机构腔置业顾问化：「XX 置业集团」的距离感让社区客户却步——中介是邻里生意，名字要说人话",
+      ],
+    },
+    en: {
+      label: "Real estate agencies",
+      title: "How to Name a Real Estate Agency: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Real estate agency naming guide: shelter imagery, trust promises and neighborly personas, breakdowns of Beike/Compass/RE-MAX, recommended TLDs and pitfalls — then hunt an available agency domain with AI.",
+      intro:
+        "A real estate agency's name has to carry the largest transaction of a family's life: clients hand over the down payment, a thirty-year mortgage and the entire idea of \"home\" — the name must establish trustworthy before anything else. The first material bin is shelter imagery: shell, home, nest, roof — Beike (\"shell\") says protection and preciousness in one image, and Lianjia (\"link + home\") wrote its mission into two characters; agencies don't sell houses, they sell certainty about home, and a name with home's warmth lights half the storefront already. The second lever is the professional promise: verified listings, transparent commissions, no hidden spreads — this industry's trust deficit is common knowledge, so a name fused with promise words (true, honest, certain) converts the category's pain point into brand equity. The third is the neighborly persona: community storefronts are the business's capillaries, and a personable name travels through homeowners' group chats far better than an institutional one — good naming turns \"finding an agent\" into \"asking someone familiar\". Mind the headroom: agencies long ago outgrew resale — new-home distribution, rental management and renovation financing are all growing into the same storefront, so don't weld the name to one business line. On scenarios: the name lives on the storefront sign, in the group chat asking \"is X reliable\", and on the contract header in the signing room. On channels: two or three syllables, respectable on a name badge, and findable in city-plus-agent searches — every home tour is a roadshow for the name.",
+      namingIdeas: [
+        "Shelter imagery: shell, home, nest, roof — agencies sell certainty about home; warmth in the name builds half the trust upfront",
+        "Promise words: true, honest, certain — the trust deficit is common knowledge; fusing the promise into the name converts pain into equity",
+        "Neighborly persona: storefronts are capillaries — a personable name turns finding an agent into asking someone familiar",
+        "Reserve headroom: new homes, rentals and management are growing into the storefront — don't weld the name to resale",
+        "The badge test: two or three syllables, respectable on a name badge and storefront sign, findable in city-plus-agent searches",
+      ],
+      cases: [
+        { name: "Beike (贝壳)", takeaway: "One image says protection and preciousness: the shell is home's archetype, and pearls grow inside — chosen when Lianjia platformized, abstracting \"home\" into a container for the whole industry" },
+        { name: "Compass", takeaway: "A compass: direction for life's biggest decision — one common word recasts the broker as a navigator; with minimalist black-and-white branding, the register benchmark for premium US brokerage" },
+        { name: "RE/MAX", takeaway: "Real Estate Maximums compressed: the slash and all-caps turn \"maximize the deal\" into a visual mark — a name built for agent recruitment, with the balloon logo making yard signs globally recognizable" },
+        { name: "Zillow", takeaway: "Zillions of data points + pillow: scale and domestic comfort blended into one coined, ownable word — the textbook of naming a housing platform without saying house" },
+        { name: "Century 21", takeaway: "A time-stamp as brand: \"the next century\" of real estate, franchised worldwide on the strength of a confident number — proof that gravitas can come from arithmetic, not adjectives" },
+      ],
+      pitfalls: [
+        "Stacking luxe words (elite, prime, platinum): buyers fear being fleeced — the flashier the name, the harder the commission negotiation",
+        "Welding to resale: new homes, rentals and management grow into the same storefront — a name locked to one line forces a second brand later",
+        "Sound-alike drafting off incumbents: the shell-and-home register is taken — a near-imitation in the group chat only endorses the leader",
+        "Institutional distance: \"X Realty Group\" keeps community clients at arm's length — this is a neighborhood business; the name must speak human",
+      ],
+    },
+  },
+  propertymgmt: {
+    slug: "propertymgmt",
+    tlds: [
+      { tld: "com", zh: "对接业委会与开发商招标的信任底线，物业品牌默认选择", en: "The trust baseline for owners' committees and developer tenders — the default for a property brand" },
+      { tld: "properties", zh: "「物业」语义直给，管理面积与项目列表页零解释", en: "Properties semantics stated plainly — zero explanation for portfolio and project pages" },
+      { tld: "services", zh: "「服务」后缀，物业本质是服务业的正规感直给", en: "The services suffix — property management is a service business, stated with legitimacy" },
+    ],
+    zh: {
+      label: "物业管理",
+      title: "物业管理公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "物业管理公司命名指南：守护意象、生活承诺、空间升维等 5 种思路，万物云/保利物业等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的物业品牌域名。",
+      intro:
+        "物业的名字要在两张桌子上同时立住：一张是业委会的谈判桌——续约投票时业主念出你的名字不带情绪；一张是开发商的招标桌——标书封面上的名字要有集团级的正规感。第一素材库是守护与秩序意象：卫、安、护、盾——物业卖的是「有人在」的确定性，深夜亮着的岗亭灯就是品牌的具象；名字里有守护感，投诉电话的火气都会小半分。第二个抓手是生活承诺：物业的终局不是看门扫地，而是社区生活的运营商——「万物云」直接把「物」升维成「万物」，从管理房子跳到连接生活；名字往「生活服务」画边界，增值业务（家政、养老、社区零售）才装得进来。第三个抓手是空间升维：城市、空间、家园——把「小区」说成「家园」，把「楼盘」说成「城市空间」，名字的格局决定招标时的想象空间。要注意母品牌借势的分寸：开发商系物业（保利物业、龙湖智创生活）天然继承母品牌信任，但独立第三方物业恰恰要反着来——名字要刻意与开发商切割，「独立、专业、只对业主负责」才是投标时的差异化故事。场景上，物业的名字活在门岗的敬礼、缴费通知单的抬头和业主群的「物业费交给谁」里。渠道上，名字要印在工服、岗亭与公告栏上正规可认，在「城市+物业公司」的搜索和企查查的资质页里都立得住。",
+      namingIdeas: [
+        "守护秩序意象：卫、安、护、盾——物业卖的是「有人在」的确定性，名字里有守护感，火气先消半分",
+        "生活承诺升维：从看门扫地到生活运营商——名字往「生活服务」画边界，家政养老零售才装得进来",
+        "空间格局词：城市、空间、家园——把小区说成家园，名字的格局决定招标桌上的想象空间",
+        "借势与切割：开发商系借母品牌信任，独立物业反着来——「只对业主负责」是第三方的差异化故事",
+        "标书测试：印在工服岗亭上正规可认、标书封面有集团感、「城市+物业公司」搜索立得住",
+      ],
+      cases: [
+        { name: "万物云", takeaway: "「万物」的升维+「云」的科技感：从万科物业换名，把「管房子」抽象成「连接万物」——一次换名完成从劳动密集到科技平台的叙事跃迁，物业行业命名天花板" },
+        { name: "保利物业", takeaway: "央企母品牌直接背书：「保利」两个字自带资质与信任，物业子牌零成本继承——开发商系物业借势命名的标准答案，投标时名字就是敲门砖" },
+        { name: "龙湖智创生活", takeaway: "母品牌+「智创」+「生活」的三段式：既继承龙湖的品质心智，又用「生活」把边界从物业画到社区服务——名字即业务地图的样本" },
+        { name: "FirstService", takeaway: "「服务第一」直白到极致：北美最大住宅物业集团把价值观写成名字——放弃巧思换来零歧义，B2B 采购场景里直白就是效率" },
+        { name: "碧桂园服务", takeaway: "母品牌+「服务」的极简结构：不造新词，把「服务」两个字做成承诺——上市后市值一度超过母公司，证明物业名字的价值在信任不在花哨" },
+      ],
+      pitfalls: [
+        "「XX 物业管理有限公司」当品牌：注册名不等于品牌名——业主记不住十个字的机构名，投诉时只会说「物业」",
+        "堆砌「金」「豪」「尊」：贵气词推高服务预期——物业费不变服务费涨预期，续约投票时反噬",
+        "锁死「物业」二字：家政、养老、社区零售都在往里长——名字画在「生活服务」，增值业务才有户型",
+        "忽略工服与岗亭场景：花体英文在公告栏与工牌上认不出——正规可认是物业名的硬指标，信任从视觉开始",
+      ],
+    },
+    en: {
+      label: "Property management",
+      title: "How to Name a Property Management Company: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Property management naming guide: guardianship imagery, life-service promises and spatial elevation, breakdowns of Onewo/FirstService, recommended TLDs and pitfalls — then hunt an available property brand domain with AI.",
+      intro:
+        "A property management name has to hold at two tables at once: the owners' committee table — where residents say your name without heat during the renewal vote — and the developer tender table, where the name on the bid cover needs group-level legitimacy. The first material bin is guardianship and order imagery: guard, secure, shield, watch — property management sells the certainty that someone is there, and the lit guardhouse at midnight is the brand made physical; a name with guardianship in it takes half a degree off every complaint call. The second lever is the life-service promise: the endgame isn't gates and mops but operating community life — Onewo (\"万物云\", all things + cloud) elevated \"property\" to \"everything\", jumping from managing buildings to connecting living; drawing the name's boundary at life services makes room for home services, elder care and community retail. The third is spatial elevation: city, space, homeland — calling the compound a homeland and the tower a city space; the name's scale sets the imagination at the tender table. Mind the parent-brand calculus: developer-affiliated brands (Poly Property) inherit trust for free, but independent third-party managers should do the opposite — deliberately cut loose from developers, because \"independent, professional, answerable only to owners\" is the differentiation story that wins bids. On scenarios: the name lives in the gate salute, the fee-notice header, and the group chat asking who the fee goes to. On channels: legible and legitimate on uniforms, guardhouses and notice boards, and findable in city-plus-property-management searches and corporate registries.",
+      namingIdeas: [
+        "Guardianship imagery: guard, secure, shield, watch — the product is \"someone is there\"; guardianship in the name cools every complaint call",
+        "Life-service promise: from gates and mops to operating community life — boundary at life services makes room for care, cleaning and retail",
+        "Spatial elevation: city, space, homeland — the name's scale sets the imagination at the tender table",
+        "Parent-brand calculus: affiliated brands inherit trust; independents should cut loose — \"answerable only to owners\" wins bids",
+        "The tender test: legitimate on uniforms and bid covers, legible on the guardhouse, findable in city-plus-management searches",
+      ],
+      cases: [
+        { name: "Onewo (万物云)", takeaway: "\"All things\" elevated plus the cloud: renamed from Vanke Property, abstracting building management into connecting everything — one rename completing the narrative leap from labor-intensive to tech platform; the category's naming ceiling" },
+        { name: "Poly Property (保利物业)", takeaway: "State-owned parent brand as direct endorsement: two characters carry credentials and trust, inherited by the subsidiary at zero cost — the standard answer for developer-affiliated naming; the name itself opens tender doors" },
+        { name: "FirstService", takeaway: "Service-first stated to the extreme: North America's largest residential manager wrote its values as its name — trading cleverness for zero ambiguity; in B2B procurement, bluntness is efficiency" },
+        { name: "Greystar", takeaway: "Grey (institutional steadiness) + star (aspiration): the world's largest apartment operator balances fiduciary gravitas with ambition in two syllables — a name that reads equally well to investors and residents" },
+        { name: "Country Garden Services (碧桂园服务)", takeaway: "Parent brand + \"Services\", nothing more: no coinage, just the promise word — its market cap once exceeded the parent's, proof that a property name's value lies in trust, not flourish" },
+      ],
+      pitfalls: [
+        "Using the registered entity as the brand: residents can't remember a ten-word corporate name — in complaints it collapses to \"the management\"",
+        "Stacking luxe words (gold, royal, prestige): they inflate service expectations without inflating fees — and backfire at the renewal vote",
+        "Welding to \"property\": home services, elder care and retail are growing in — draw the boundary at life services to leave floor plan",
+        "Ignoring the uniform and guardhouse: cursive flourishes fail on notice boards and badges — legitimate legibility is the hard requirement; trust starts visually",
+      ],
+    },
+  },
+  apartment: {
+    slug: "apartment",
+    tlds: [
+      { tld: "com", zh: "租客签年约、押一付三的信任底线，公寓品牌默认选择", en: "The trust baseline for year-long leases and deposits — the default for an apartment brand" },
+      { tld: "apartments", zh: "「公寓」语义直给，房源列表与租房搜索里零解释", en: "Apartments semantics stated plainly — zero explanation in listings and rental searches" },
+      { tld: "rentals", zh: "「租赁」直给，长租短租通吃的品类后缀", en: "Rentals stated plainly — the category suffix spanning long and short stays" },
+    ],
+    zh: {
+      label: "长租公寓",
+      title: "长租公寓与租赁品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "长租公寓品牌命名指南：栖居意象、自在承诺、青年社群等 5 种思路，自如/泊寓/冠寓等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的公寓品牌域名。",
+      intro:
+        "长租公寓的名字要替一群刚到城市的年轻人回答一个问题：「在出租屋里，能不能过上像家一样的生活？」这决定了公寓命名的基调——它不是地产生意的名字，是生活方式的名字。第一素材库是栖居意象：寓、宿、巢、栖、泊——「泊寓」用一个「泊」字把「城市漂泊」翻译成「靠岸停泊」，情绪转译精准到一个字；栖居词自带「暂时但安稳」的语义，正好接住租房人群的心理状态。第二个抓手是自在承诺：租房的痛点清单人人背得出——黑中介、随意涨租、押金失踪——「自如」两个字直接把所有痛点的反面做成了品牌：住得自由、过得舒适；名字与承诺一体化，是租赁品牌信任建设的最短路径。第三个抓手是青年社群感：长租公寓卖的不只是床位，是「一个人来，一群人住」的城市着陆方案——名字要有社群温度（社、伴、友邻），公共厨房与天台电影之夜才有叙事支点。要注意机构感与温度的平衡：公寓背后是资管生意，名字太「租房中介」显小，太「地产集团」显冷——「品牌名+寓」的结构（泊寓、冠寓、冠居）正好卡在中间：母品牌给信任，「寓」字给品类。场景上，公寓的名字活在租房 App 的筛选列表、楼下门禁的 logo 墙和租客对朋友说「我住在 XX」的自我介绍里。渠道上，名字要两三个字好念好搜、在「城市+长租公寓」的搜索里立得住、印在门禁卡上有设计感——「我住在 XX」说出口不掉价，就是公寓名的及格线。",
+      namingIdeas: [
+        "栖居意象：寓、宿、巢、栖、泊——「暂时但安稳」的语义正好接住租房人群的心理状态",
+        "自在承诺：把黑中介、乱涨租的反面做成名字——自由、安心、自如，信任建设的最短路径",
+        "青年社群感：社、伴、友邻——公寓卖的是「一个人来，一群人住」，名字给社群叙事一个支点",
+        "母品牌+寓结构：泊寓、冠寓——母品牌给信任，「寓」字给品类，机构感与温度的平衡点",
+        "门禁卡测试：两三个字、「城市+长租公寓」搜索立得住、「我住在 XX」说出口不掉价",
+      ],
+      cases: [
+        { name: "自如", takeaway: "两个字把租房痛点的反面说满：住得自由、过得舒适——「自如」既是状态也是承诺，从链家孵化却完全独立命名，租赁品牌情绪命名的天花板" },
+        { name: "泊寓", takeaway: "一个「泊」字的情绪转译：把「城市漂泊」翻译成「靠岸停泊」——万科的「品牌感+寓」结构，母公司信任与品类语义各占一字" },
+        { name: "冠寓", takeaway: "龙湖「冠」字辈的延续+「寓」的品类词：集团命名体系直接复用，租客一看就知道背后是谁——资管生意借势命名的标准打法" },
+        { name: "Common", takeaway: "「共同」当名字：共享居住（co-living）的品类词直接品牌化——纽约青年公寓用一个常见词宣告「共居是常态」，社群感写进名字" },
+        { name: "魔方公寓", takeaway: "「魔方」的模块化联想：标准化户型像魔方一样拼装复制——把资管逻辑翻译成年轻人听得懂的玩具意象，机构感与亲和力的双赢" },
+      ],
+      pitfalls: [
+        "地产腔机构名：「XX 置业租赁事业部」的名字让租客想起中介与合同陷阱——公寓是生活方式品牌，名字要先给情绪",
+        "锁死「青年」标签：名字绑死青年公寓，家庭房与银发租赁进不来——人群会老，名字的边界画在「居住」更耐用",
+        "承诺过载：名字里堆「安心」「无忧」「零押」——承诺越具体越容易被一次纠纷证伪，情绪词比条款词耐用",
+        "忽略搜索场景：租房决策始于搜索框——名字与「公寓」「租房」毫无语义关联，就要花双倍投放费买回认知",
+      ],
+    },
+    en: {
+      label: "Apartment rentals",
+      title: "How to Name an Apartment or Rental Housing Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Apartment rental brand naming guide: dwelling imagery, ease-of-living promises and community warmth, breakdowns of Ziroom/Common/Greystar, recommended TLDs and pitfalls — then hunt an available apartment brand domain with AI.",
+      intro:
+        "An apartment brand's name answers a question for every young person new to the city: can a rented room feel like home? That sets the register — this is not a real estate name, it's a lifestyle name. The first material bin is dwelling imagery: lodge, nest, perch, harbor — Vanke's Port Apartment (泊寓) translated \"drifting through the city\" into \"coming into harbor\" with a single character; dwelling words carry a temporary-but-secure semantic that catches renters' exact psychological state. The second lever is the ease-of-living promise: every renter can recite the pain list — shady agents, surprise rent hikes, vanishing deposits — and Ziroom (自如, \"free and at ease\") built its brand from the exact opposite of every item; fusing the promise into the name is the shortest path to trust in rentals. The third is community warmth: co-living apartments sell a soft landing in the city — arrive alone, live among others — so the name needs communal temperature to anchor the shared-kitchen and rooftop-movie narrative. Mind the balance of institution and warmth: behind apartments sits an asset-management business — too agency-flavored reads small, too real-estate-group reads cold; the brand-plus-dwelling-word structure (Port Apartment, Goyoo) sits exactly between: parent brand for trust, dwelling word for category. On scenarios: the name lives in rental-app filter lists, the lobby logo wall, and the self-introduction \"I live at X\". On channels: two or three syllables, findable in city-plus-apartments searches, designed well on a key card — if \"I live at X\" can be said without embarrassment, the name passes.",
+      namingIdeas: [
+        "Dwelling imagery: lodge, nest, perch, harbor — temporary-but-secure semantics that catch renters' exact psychological state",
+        "Ease-of-living promise: name the opposite of the pain list — freedom, ease, certainty; the shortest path to rental trust",
+        "Community warmth: arrive alone, live among others — communal temperature anchors the shared-space narrative",
+        "Brand-plus-dwelling structure: parent brand for trust, dwelling word for category — the balance point of institution and warmth",
+        "The key-card test: two or three syllables, findable in city-plus-apartments searches, sayable in \"I live at X\" without embarrassment",
+      ],
+      cases: [
+        { name: "Ziroom (自如)", takeaway: "Two characters stating the opposite of every renter pain: live free, live at ease — both a state and a promise; incubated by Lianjia yet named fully independently, the ceiling of emotional naming in rentals" },
+        { name: "Port Apartment (泊寓)", takeaway: "One character's emotional translation: city drifting becomes coming into harbor — Vanke's brand-plus-dwelling structure, parent trust and category semantics one character each" },
+        { name: "Common", takeaway: "The word \"common\" as brand: co-living's category concept branded directly — a New York co-living operator declaring shared living the norm, community written into the name itself" },
+        { name: "Greystar", takeaway: "Institutional grey plus aspirational star: the world's largest apartment operator reads steady to investors and warm enough to residents — two syllables holding both audiences" },
+        { name: "Mofang Apartment (魔方公寓)", takeaway: "The Rubik's-cube association: standardized units assembled and replicated like cube faces — asset-management logic translated into a toy image renters instantly get; institution and approachability both won" },
+      ],
+      pitfalls: [
+        "Real-estate registers: \"X Realty Leasing Division\" reminds renters of agents and contract traps — this is a lifestyle brand; lead with feeling",
+        "Welding to \"youth\": a name locked to young renters blocks family units and senior living — tenants age; a boundary drawn at dwelling lasts longer",
+        "Promise overload: stacking worry-free, zero-deposit into the name — the more specific the pledge, the faster one dispute falsifies it; mood words outlast clause words",
+        "Ignoring the search box: rental decisions start with search — a name with zero semantic link to apartments or renting costs double in ads to buy the association back",
+      ],
+    },
+  },
+  construction: {
+    slug: "construction",
+    tlds: [
+      { tld: "com", zh: "招标资审与总包合同的信任底线，工程品牌默认选择", en: "The trust baseline for tender prequalification and contracts — the default for a construction brand" },
+      { tld: "construction", zh: "「建筑施工」语义直给，工程公司官网零解释", en: "Construction semantics stated plainly — zero explanation for a contractor's site" },
+      { tld: "builders", zh: "「建造者」的匠人感，中小承建与自建房品牌的气质后缀", en: "The craftsman feel of builders — the register suffix for smaller contractors and home builders" },
+    ],
+    zh: {
+      label: "建筑施工",
+      title: "建筑施工与工程承包公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "建筑施工与工程承包命名指南：基石意象、履约承诺、匠作人格等 5 种思路，中建/金螳螂/Bechtel 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的工程品牌域名。",
+      intro:
+        "施工企业的名字要经得起两种目光的审视：招标方在资审表上扫过的三秒钟，和业主在工地围挡上看到的三年——前者要求正规可信，后者要求扛得住风吹日晒。第一素材库是基石与结构意象：基、筑、砼、梁、鼎——「筑」字是品类天选之字，动作与结果一体；「鼎」自带「一言九鼎」的履约承诺，工程生意的信任就压在这类字的分量上。第二个抓手是履约承诺：工期、质量、安全是招标评分表上的三座大山——名字与承诺一体化（固、准、诚）等于在资审阶段就开始加分；「百年建筑」的心智从名字的第一个字开始搭。第三个抓手是匠作人格：中小承建商与装修施工队的获客靠口碑转介绍——「金螳螂」用一只专注的螳螂把「精工细作」翻译成了生物意象，匠人人格让冷硬的工程有了温度。要注意专业条线的边界：土建、机电、幕墙、装饰各是各的资质与圈子——名字锁死单一条线，总包资质升级时就要再养一个牌子；「建设」「营造」这类大词是给全条线预留的户型，「营造」还自带东方匠作的古意。场景上，工程名字活在围挡广告、安全帽正面、竣工铭牌和招标文件的资审页里。渠道上，名字要印在围挡上隔着马路可认、写进标书抬头有分量、在「城市+施工总包」的搜索里立得住——竣工铭牌会替你站几十年的街，名字要配得上这块铜牌。",
+      namingIdeas: [
+        "基石结构意象：基、筑、梁、鼎——「筑」是品类天选之字，「鼎」自带一言九鼎的履约分量",
+        "履约承诺：固、准、诚——工期质量安全是评分表三座大山，名字与承诺一体化从资审就加分",
+        "匠作人格：金螳螂式的生物意象——中小承建靠口碑转介绍，匠人人格让冷硬工程有温度",
+        "条线留边界：「建设」「营造」是全条线户型——名字锁死土建或装饰，资质升级就要再养牌子",
+        "围挡测试：隔马路可认、安全帽上不违和、标书抬头有分量——竣工铭牌替你站几十年的街",
+      ],
+      cases: [
+        { name: "中国建筑", takeaway: "国字头+品类词的顶配：四个字就是资质本身——「中建」的缩写体系（中建三局、八局）把一个名字裂变成整个集团军的番号，工程命名的国家队样本" },
+        { name: "金螳螂", takeaway: "一只专注的螳螂扛起装饰龙头：螳臂的「精准」与金色的「品质」——生物意象把「精工细作」翻译成一眼记住的画面，B2B 品牌里罕见的形象化命名" },
+        { name: "Bechtel", takeaway: "创始人姓氏站成行业丰碑：胡佛大坝、英吉利海峡隧道的履历让一个德裔姓氏成了「超级工程」代名词——工程界姓氏命名的信任复利样本" },
+        { name: "Skanska", takeaway: "从「斯堪的纳维亚」压缩造词：地域感与国际化一词兼得——北欧品质的心智内嵌在名字里，绿色施工的人设有了地理背书" },
+        { name: "Turner", takeaway: "创始人姓氏+百年履历：美国最大总包用最朴素的姓氏证明——工程品牌的信任不靠名字花哨，靠名字在竣工铭牌上出现的次数" },
+      ],
+      pitfalls: [
+        "堆砌「宏」「伟」「巨」：大词不等于大项目——资审看的是业绩表，名字吹得越满，业绩栏越显得空",
+        "锁死单一条线：名字绑死「装饰」「幕墙」，总包资质升级时只能再养一个牌子——「建设」「营造」留足户型",
+        "生僻字进标书：资审录入系统打不出的字就是废字——评标专家不会为一个名字查字典",
+        "忽略安全帽与围挡：花体字在工地视觉里认不出——隔着马路可认、印在安全帽上不违和是工程名的硬指标",
+      ],
+    },
+    en: {
+      label: "Construction & contracting",
+      title: "How to Name a Construction or Contracting Company: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Construction and contracting naming guide: bedrock imagery, delivery promises and craftsman personas, breakdowns of Bechtel/Skanska/Turner, recommended TLDs and pitfalls — then hunt an available construction brand domain with AI.",
+      intro:
+        "A construction company's name must survive two kinds of scrutiny: the three seconds a tender officer spends scanning the prequalification sheet, and the three years an owner spends looking at your site hoarding — the first demands legitimacy, the second demands weathering. The first material bin is bedrock and structure imagery: base, build, beam, keystone — \"build\" words fuse action and result, and keystone-class words carry the weight of a kept promise; trust in this trade rests on the heaviness of such characters. The second lever is the delivery promise: schedule, quality, safety are the three mountains on every scoring sheet — a name fused with promise words (solid, true, certain) starts earning points at prequalification; the century-building reputation starts with the name's first syllable. The third is the craftsman persona: smaller contractors win work through referrals — Golden Mantis (金螳螂) translated \"precision work\" into a focused insect image, giving cold engineering a temperature; a craftsman persona makes the trade retellable. Mind the discipline boundaries: civil works, MEP, curtain walls and fit-out each have their own licenses and circles — a name welded to one discipline forces a second brand when the general-contracting license upgrades; construction and building words reserve floor plan for every line. On scenarios: the name lives on site hoardings, hard-hat fronts, completion plaques and the prequalification page of tender documents. On channels: legible across the street on the hoarding, weighty as a bid header, findable in city-plus-general-contractor searches — the completion plaque will stand on the street for decades, and the name must deserve the bronze.",
+      namingIdeas: [
+        "Bedrock imagery: base, build, beam, keystone — build-words fuse action and result; keystone-class words carry a kept promise's weight",
+        "Delivery promise: solid, true, certain — schedule, quality and safety are the scoring sheet's three mountains; the name earns points at prequal",
+        "Craftsman persona: a Golden-Mantis-style image — smaller contractors live on referrals; a persona gives cold engineering warmth",
+        "Discipline headroom: construction and building words reserve every line — a name welded to fit-out forces a second brand at license upgrade",
+        "The hoarding test: legible across the street, at home on a hard hat, weighty as a bid header — the completion plaque stands for decades",
+      ],
+      cases: [
+        { name: "China State Construction (中国建筑)", takeaway: "Nation-prefix plus category word at full spec: four characters that are the credential itself — the CSCEC numbering system (Third Bureau, Eighth Bureau) fissions one name into an army's designations; the national-team benchmark" },
+        { name: "Golden Mantis (金螳螂)", takeaway: "One focused insect carrying the fit-out leader: the mantis forelimb's precision plus gold's quality — a biological image translating precision work into an unforgettable picture; rare figurative naming in B2B" },
+        { name: "Bechtel", takeaway: "A founder's surname standing as an industry monument: Hoover Dam and Channel Tunnel credentials made a German family name synonymous with megaprojects — the compound-interest model of surname trust" },
+        { name: "Skanska", takeaway: "Coined by compressing \"Scandinavian\": regional identity and international polish in one word — Nordic quality embedded in the name, giving its green-construction persona geographic endorsement" },
+        { name: "Turner", takeaway: "A surname plus a century of delivery: America's largest GC proves construction trust isn't built by clever names — it's built by how many completion plaques the name appears on" },
+      ],
+      pitfalls: [
+        "Stacking grand words (mega, grand, vast): big words don't mean big projects — prequal reads the track-record table, and the fuller the name boasts, the emptier the table looks",
+        "Welding to one discipline: a name locked to fit-out or curtain walls forces a second brand at license upgrade — construction words leave floor plan",
+        "Rare characters in bid systems: a character the procurement system can't type is a dead character — evaluators won't open a dictionary for your name",
+        "Ignoring the hard hat and hoarding: cursive flourishes fail in site visuals — legible across the street and at home on a hard hat are hard requirements",
+      ],
+    },
+  },
+  appliancerepair: {
+    slug: "appliancerepair",
+    tlds: [
+      { tld: "com", zh: "上门入户生意的信任底线，家电维修品牌默认选择", en: "The trust baseline for an in-home trade — the default for an appliance repair brand" },
+      { tld: "repair", zh: "「维修」语义直给，报修搜索与官网零解释", en: "Repair semantics stated plainly — zero explanation in fix-it searches" },
+      { tld: "services", zh: "「服务」后缀，正规军对抗游击队的气质直给", en: "The services suffix — licensed-professional legitimacy against the fly-by-night crowd" },
+    ],
+    zh: {
+      label: "家电维修",
+      title: "家电维修品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "家电维修品牌命名指南：师傅人格、妙手承诺、正规军气质等 5 种思路，啄木鸟/万师傅/苏宁帮客等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的维修品牌域名。",
+      intro:
+        "家电维修的名字要在用户最烦躁的时刻被信任：空调在三伏天罢工、冰箱在年夜饭前失灵——报修是一次带着情绪的应急采购，名字必须在「附近家电维修」的搜索结果里三秒钟给出「正规、能修好、不乱收费」的三重暗示。第一素材库是师傅人格：这个行业的信任单位不是公司是人——「万师傅」直接把「师傅」两个字做成平台名，一声称呼就把手艺、辈分与托付感全部激活；师傅、匠、帮这类词让冷冰冰的上门服务有了人的面孔。第二个抓手是妙手承诺：药到病除、手到擒来——「啄木鸟」用一只给树看病的鸟把「精准诊断」翻译成国民级意象，生物隐喻比「专业维修」四个字生动一百倍。第三个抓手是正规军气质：这个行业被「游击队」伤透了——小广告、虚报故障、换件宰客——名字要刻意与游击队切割（帮客、管家、官方售后），「有平台、有价目表、有售后」的暗示从名字开始。要注意品类边界：家电维修的终局是家庭维修——水电、门窗、防水都在往同一个师傅的工具包里长，名字画在「家庭维修」比锁死「家电」耐用；啄木鸟从家电修到全屋就是这条路。场景上，维修名字活在搜索结果的前三条、电梯广告的二维码和师傅敲门时工牌上的那行字。渠道上，名字要好念好搜、电话里报得清楚、印在工服上让业主敢开门——「开门率」是上门生意独有的转化指标，名字的正规感直接影响那扇门开不开。",
+      namingIdeas: [
+        "师傅人格：师傅、匠、帮——信任单位是人不是公司，一声称呼激活手艺、辈分与托付感",
+        "妙手承诺：啄木鸟式的生物隐喻——「给树看病的鸟」比「专业维修」生动一百倍，诊断感自带",
+        "正规军切割：帮客、管家、官方——与游击队刻意划清界限，「有价目表有售后」的暗示从名字开始",
+        "边界画在家庭维修：水电门窗都在往工具包里长——锁死「家电」，全屋业务进不来",
+        "开门测试：电话里报得清、工牌上正规可信、业主敢开门——开门率是上门生意独有的转化指标",
+      ],
+      cases: [
+        { name: "啄木鸟", takeaway: "一只给树看病的鸟扛起家庭维修第一品牌：「精准诊断+除害」的国民级意象零教育成本——生物隐喻把维修的信任问题翻译成自然界的常识，品类命名天花板" },
+        { name: "万师傅", takeaway: "「师傅」的称谓直接平台化：一声称呼激活手艺与托付感，「万」字铺开平台规模——把行业的信任单位（人）做成品牌的命名样本" },
+        { name: "苏宁帮客", takeaway: "母品牌+「帮客」的服务人格：苏宁的零售信任迁移到上门服务，「帮」字把交易翻译成帮忙——大平台做维修的借势命名标准答案" },
+        { name: "Mr. Appliance", takeaway: "「家电先生」的人格化直译：Mr. 前缀给维修工穿上西装——北美连锁用一个称谓完成「游击队到正规军」的形象升级，特许经营命名的模板" },
+        { name: "鲁班到家", takeaway: "祖师爷 IP+「到家」的场景词：鲁班是工匠信任的最大公约数，「到家」说清服务方式——文化借势与场景直给的双拼结构" },
+      ],
+      pitfalls: [
+        "游击队气质名：「快修王」「特价维修」的地摊感——报修是信任采购，名字越像小广告，开门率越低",
+        "锁死「家电」品类：水电、门窗、防水都在往师傅的工具包里长——边界画在「家庭维修」才装得下全屋",
+        "承诺过载：「一次修好」「终身保修」进名字——维修有天然不确定性，被一次返修证伪的名字比没名字更糟",
+        "忽略搜索与电话场景：报修始于搜索框终于电话——名字拗口难拼，「附近维修」的流量就流向了报得清名字的对手",
+      ],
+    },
+    en: {
+      label: "Appliance repair",
+      title: "How to Name an Appliance Repair Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Appliance repair naming guide: master-craftsman personas, healing-hands promises and licensed legitimacy, breakdowns of Woodpecker/Mr. Appliance, recommended TLDs and pitfalls — then hunt an available repair brand domain with AI.",
+      intro:
+        "An appliance repair name must earn trust at the customer's most irritable moment: the AC quits in a heatwave, the fridge dies before the holiday dinner — a repair call is an emergency purchase made with emotion, and in the \"appliance repair near me\" results the name has three seconds to signal legitimate, capable, fairly priced. The first material bin is the master-craftsman persona: this trade's unit of trust is a person, not a company — Wanshifu (万师傅) turned the honorific \"master\" itself into a platform name, one form of address activating craft, seniority and entrustment at once; master, craftsman and helper words give a faceless house call a human face. The second lever is the healing-hands promise: Woodpecker (啄木鸟) translated precise diagnosis into a bird that doctors trees — a biological metaphor a hundred times more vivid than the words \"professional repair\". The third is licensed legitimacy: this industry is scarred by the fly-by-night crowd — sticker ads, invented faults, part-swapping markups — so the name must deliberately cut away from them (helper, steward, official service), signaling a price list and after-service from the first syllable. Mind the category boundary: appliance repair's endgame is home repair — plumbing, wiring, doors and waterproofing are all growing into the same toolbag, so draw the line at home repair rather than appliances; Woodpecker's route from appliances to whole-home proves the path. On scenarios: the name lives in the top three search results, the elevator-ad QR code, and the badge line at the door. On channels: easy to say and search, spellable over the phone, respectable on a uniform — door-open rate is this trade's unique conversion metric, and the name's legitimacy decides whether that door opens.",
+      namingIdeas: [
+        "Master persona: master, craftsman, helper — the unit of trust is a person; one honorific activates craft, seniority and entrustment",
+        "Healing-hands metaphor: the Woodpecker play — a bird that doctors trees beats \"professional repair\" a hundredfold; diagnosis built in",
+        "Licensed cut-away: helper, steward, official — deliberately separate from the fly-by-night crowd; price list and after-service signaled from syllable one",
+        "Boundary at home repair: plumbing, doors and waterproofing grow into the same toolbag — welding to appliances blocks the whole-home business",
+        "The door-open test: spellable by phone, legitimate on the badge, trustworthy enough that the door opens — this trade's unique conversion metric",
+      ],
+      cases: [
+        { name: "Woodpecker (啄木鸟)", takeaway: "A tree-doctoring bird carrying the home-repair leader: precise-diagnosis-plus-pest-removal imagery at zero education cost — a biological metaphor turning repair trust into natural common sense; the category's naming ceiling" },
+        { name: "Wanshifu (万师傅)", takeaway: "The honorific \"master\" platformized: one form of address activates craft and entrustment, with \"ten thousand\" spreading the platform's scale — naming built from the industry's true unit of trust: the person" },
+        { name: "Mr. Appliance", takeaway: "The persona spelled out: the Mr. prefix puts a suit on the repairman — a North American franchise completing the fly-by-night-to-professional upgrade with a single form of address; the franchising template" },
+        { name: "Suning Bangke (苏宁帮客)", takeaway: "Parent brand plus a helper persona: retail trust migrated to house calls, with \"help\" translating a transaction into a favor — the standard answer for platforms entering repair" },
+        { name: "Luban Daojia (鲁班到家)", takeaway: "The patron saint of carpenters plus \"to your home\": Lu Ban is the greatest common denominator of craftsman trust, and the scene word states the delivery model — cultural borrowing and scene-directness double-barreled" },
+      ],
+      pitfalls: [
+        "Fly-by-night registers: \"Fast Fix King\" and \"Discount Repair\" read like sticker ads — a repair call is a trust purchase; the cheaper the name sounds, the fewer doors open",
+        "Welding to appliances: plumbing, doors and waterproofing grow into the same toolbag — draw the boundary at home repair to fit the whole house",
+        "Promise overload: \"fixed in one visit\" and \"lifetime warranty\" in the name — repair carries natural uncertainty, and a name falsified by one callback is worse than no name",
+        "Ignoring search and phone: the job starts in a search box and closes on a call — a tongue-twister name routes \"repair near me\" traffic to the competitor whose name spells itself",
+      ],
+    },
+  },
+  equipmentrental: {
+    slug: "equipmentrental",
+    tlds: [
+      { tld: "com", zh: "设备资产与企业客户结算的信任底线，租赁品牌默认选择", en: "The trust baseline for asset fleets and corporate billing — the default for a rental brand" },
+      { tld: "rentals", zh: "「租赁」语义直给，设备目录与报价页零解释", en: "Rentals semantics stated plainly — zero explanation for catalog and quote pages" },
+      { tld: "works", zh: "「工程/作业」语义百搭，机械设备租赁的行业感直给", en: "Works semantics fit machinery — the industrial register, stated plainly" },
+    ],
+    zh: {
+      label: "设备租赁",
+      title: "设备租赁与机械租赁品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "设备租赁与机械租赁命名指南：力量意象、随取承诺、联合规模感等 5 种思路，United Rentals/众能联合等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的租赁品牌域名。",
+      intro:
+        "设备租赁的名字要让两种人同时点头：工地上的机手一听就觉得「这家设备硬」，办公室里的成本经理一看就觉得「这家结算正规」。第一素材库是力量与钢铁意象：能、力、擎、猛——高空车、挖机、发电机的生意天然带着钢铁的荷尔蒙，名字里有力量感，设备目录都显得更硬气；「擎」字一手托起机械与担当双重语义，是这个品类的高频好字。第二个抓手是随取承诺：租赁的本质是「用的时候一定有」——设备停租一天，工地损失的是整条作业线的窗口期；名字与「随时、就近、直达」的承诺一体化（速、达、通），等于把履约 SLA 写进品牌。第三个抓手是联合规模感：设备租赁是重资产的规模游戏——网点密度决定调度半径，「United Rentals」「众能联合」都把「联合」写进名字，用规模暗示「什么设备都有、哪个城市都到」；中小租赁商反而可以反着打，用「XX 机械」的专业深度对抗巨头的宽度。要注意结算场景的正规感：租赁合同、对账单、发票抬头——名字太江湖（「老张设备」），进不了国企总包的供应商名录；正规感是 B2B 租赁的入场券。场景上，租赁名字活在设备侧身的喷漆 logo、工地围挡外的调度电话和成本经理的供应商比价表里。渠道上，名字要喷在挖机侧面隔着工地可认、电话里报得清楚、在「城市+设备租赁」的搜索里立得住——每一台开进工地的设备，都是移动的广告牌。",
+      namingIdeas: [
+        "力量钢铁意象：能、力、擎、猛——钢铁生意自带荷尔蒙，「擎」字一手托起机械与担当双重语义",
+        "随取承诺：速、达、通——设备停租一天误的是整条作业线，把「用时一定有」的 SLA 写进名字",
+        "联合规模感：网点密度决定调度半径——「联合」「众」暗示什么设备都有；中小商反打专业深度",
+        "结算正规感：名字太江湖进不了总包供应商名录——正规感是 B2B 租赁的入场券",
+        "喷漆测试：喷在挖机侧面隔着工地可认、电话报得清、「城市+设备租赁」搜索立得住——每台设备都是移动广告牌",
+      ],
+      cases: [
+        { name: "United Rentals", takeaway: "「联合+租赁」直白到极致：全球最大设备租赁商用两个词说清规模与品类——蓝色喷漆 logo 在北美工地无处不在，B2B 里直白就是效率的顶级样本" },
+        { name: "众能联合", takeaway: "「众能」的双关+「联合」的规模感：既是「众多能力」也是「大众能源/机械」，联合呼应 United 的全球对标——中国设备租赁平台化命名的教科书" },
+        { name: "Sunbelt Rentals", takeaway: "「阳光地带」的地理起点+品类词：从美国南部阳光带起家，地域词长成全国品牌——绿色设备涂装让名字在工地上隔百米可认" },
+        { name: "宏信建发", takeaway: "「宏信」的正规感+「建发」的行业词：远东宏信孵化的设备租赁旗舰，名字自带金融租赁的结算信任——重资产生意借金融母牌的样本" },
+        { name: "BigRentz", takeaway: "Big+Rentz 的直给变形：「大」说规模、「Rentz」的 z 尾给了商标独占性——美国设备租赁线上平台用一个变形词平衡了品类直白与域名可得" },
+      ],
+      pitfalls: [
+        "江湖气个体名：「老张设备」进不了国企总包的供应商名录——结算正规感是 B2B 租赁的入场券",
+        "锁死单一设备：名字绑死「高空车」「发电机」，品类扩张时只能再养牌子——「设备」「机械」留足户型",
+        "堆砌「宏」「巨」「霸」：吹规模的名字撞上比价表就现形——成本经理只看网点密度与日租价",
+        "忽略喷漆场景：设备侧身是最大的广告位——花体字与浅色喷漆在工地灰尘里隔十米就认不出",
+      ],
+    },
+    en: {
+      label: "Equipment rental",
+      title: "How to Name an Equipment Rental Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Equipment rental naming guide: power imagery, always-available promises and united-scale signals, breakdowns of United Rentals/Sunbelt/BigRentz, recommended TLDs and pitfalls — then hunt an available rental brand domain with AI.",
+      intro:
+        "An equipment rental name needs two nods at once: the operator on site hears it and thinks their fleet is solid, and the cost manager in the office reads it and thinks their invoicing is clean. The first material bin is power and steel imagery: force, might, engine, lift — a business of boom lifts, excavators and generators carries steel's hormones natively, and a name with power in it makes even the catalog read tougher. The second lever is the always-available promise: rental's essence is \"it's there when you need it\" — a day of downtime costs the site an entire work window; fusing reach words (swift, direct, through) into the name writes the fulfillment SLA into the brand. The third is united-scale signaling: equipment rental is a heavy-asset scale game — depot density sets the dispatch radius, and both United Rentals and China's Zhongneng United wrote \"united\" into their names to imply every machine, every city; smaller players can counterpunch with specialist depth against the giants' width. Mind billing legitimacy: rental contracts, statements and invoice headers — a name too folksy (\"Old Zhang's Machines\") never enters a state-owned GC's supplier registry; legitimacy is the B2B entry ticket. On scenarios: the name lives in the spray-painted logo on the machine's flank, the dispatch call outside the hoarding, and the cost manager's vendor comparison sheet. On channels: legible across the site when painted on an excavator, spellable over the phone, findable in city-plus-equipment-rental searches — every machine that rolls onto a site is a moving billboard.",
+      namingIdeas: [
+        "Power imagery: force, might, engine, lift — steel businesses carry hormones natively; power in the name toughens the whole catalog",
+        "Always-available promise: swift, direct, through — a day of downtime costs a work window; write the fulfillment SLA into the name",
+        "United-scale signal: depot density sets dispatch radius — \"united\" implies every machine, every city; smaller players counter with specialist depth",
+        "Billing legitimacy: too folksy never enters the supplier registry — legitimacy is the B2B entry ticket",
+        "The spray-paint test: legible across the site on a machine flank, spellable by phone, findable in city-plus-rental searches — every machine is a billboard",
+      ],
+      cases: [
+        { name: "United Rentals", takeaway: "United plus rentals, blunt to the extreme: the world's largest equipment lessor states scale and category in two words — the blue spray-paint logo is everywhere on North American sites; in B2B, bluntness is efficiency at the highest spec" },
+        { name: "Sunbelt Rentals", takeaway: "A geographic origin plus the category word: born in America's southern sun belt, the regional word grew into a national brand — and the green fleet livery makes the name legible at a hundred meters" },
+        { name: "Zhongneng United (众能联合)", takeaway: "A pun on \"many capabilities\" plus the united-scale signal: echoing United Rentals as the global benchmark — the textbook of platformized equipment rental naming in China" },
+        { name: "BigRentz", takeaway: "Big + Rentz, a blunt mutation: \"big\" states scale and the z-tail buys trademark ownability — an online rental marketplace balancing category bluntness with domain availability in one coined word" },
+        { name: "Horizon Construction Development (宏信建发)", takeaway: "A finance parent's legitimacy plus the industry word: the rental flagship incubated by Far East Horizon inherits leasing-grade billing trust — the model of heavy-asset business borrowing a financial parent brand" },
+      ],
+      pitfalls: [
+        "Folksy sole-trader names: \"Old Zhang's Machines\" never enters a state-owned GC's supplier registry — billing legitimacy is the entry ticket",
+        "Welding to one machine class: a name locked to boom lifts or generators forces a second brand at expansion — equipment and machinery words leave floor plan",
+        "Stacking scale boasts (mega, giant, king): they collapse against the comparison sheet — cost managers read depot density and day rates, not adjectives",
+        "Ignoring the spray-paint scene: the machine flank is the biggest ad slot — cursive and pale paint vanish in site dust beyond ten meters",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

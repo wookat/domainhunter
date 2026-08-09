@@ -161,4 +161,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "weddingphoto", zh: "婚纱摄影", en: "Wedding photography" },
   { slug: "footspa", zh: "足疗采耳", en: "Foot spas & wellness lounges" },
   { slug: "parcel", zh: "快递驿站", en: "Parcel stations & pickup points" },
+  { slug: "realtor", zh: "房产中介", en: "Real estate agencies" },
+  { slug: "propertymgmt", zh: "物业管理", en: "Property management" },
+  { slug: "apartment", zh: "长租公寓", en: "Apartment rentals" },
+  { slug: "construction", zh: "建筑施工", en: "Construction & contracting" },
+  { slug: "appliancerepair", zh: "家电维修", en: "Appliance repair" },
+  { slug: "equipmentrental", zh: "设备租赁", en: "Equipment rental" },
 ];
