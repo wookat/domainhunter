@@ -14384,6 +14384,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  wig: {
+    slug: "wig",
+    keywords: ["假发", "接发", "hair extensions", "wigs"],
+    tlds: [
+      { tld: "com", zh: "跨境假发卖给全球消费者，.com 仍是独立站转化底线", en: "Wigs sell worldwide — .com remains the conversion baseline for a DTC store" },
+      { tld: "hair", zh: "「头发」后缀直给品类，假发与接发品牌零解释成本", en: "The hair suffix states the category outright — zero explanation for wigs and extensions" },
+      { tld: "shop", zh: "独立站属性直白，配合品牌词把「来买」说清楚", en: "Plainly a store — pairs with a brand word to say \"come shop\" outright" },
+    ],
+    zh: {
+      label: "假发品牌",
+      title: "假发与接发品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "假发品牌命名指南：真发意象、变美叙事、出海好念等 5 种思路，UNice/Luvme/瑞贝卡等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的假发品牌域名。",
+      intro:
+        "假发是中国跨境电商最隐秘的百亿级品类，而它的命名战场几乎全在海外：黑人女性消费者在 TikTok 测评里认识你、在独立站下单、在闺蜜群里转述——名字要在英文语境里好念好拼，还要接得住「变美」这件高情感浓度的事。第一素材库是真发与质感意象：virgin hair、raw hair 是品类信任词，UNice 用「U + nice」把「你很美」写进品牌名，直白却精准命中赠美心智。第二个抓手是宠爱与自我叙事：假发消费的深层动机是自我表达——Luvme 用「Love me」的变体把「爱自己」说成品牌主张，社媒标签自带传播。第三个抓手是产业带信任：许昌造出全球一半假发，瑞贝卡（Rebecca）用一个英文人名完成从原料商到全球品牌的跳跃——人名让产品有了「她」的形象。要注意发音测试：核心客群在北美与非洲英语区，拼音词根几乎必死，名字要让英语母语者一遍读对。渠道上，假发品牌活在 TikTok 测评、网红联盟链接和复购邮件里——名字要能做成 #标签，也要在包裹面单上不显廉价。",
+      namingIdeas: [
+        "真发与质感词根：silk、raw、virgin、crown——品类信任词自带「好发质」联想，把材质承诺写进名字",
+        "宠爱与自我叙事：Luvme 式的「爱自己」变体——假发买的是自我表达，情感主张比品类描述更能带动转发",
+        "人名拟人化：Rebecca 式的英文人名——给产品一个「她」的形象，测评与口播里天然有故事可讲",
+        "U/Me 第二人称结构：UNice 式的「你 + 形容词」——直接对用户说话，赠美心智一秒到位",
+        "英语母语发音测试：把候选名发给英语母语者念一遍——拼音词根与生僻拼写在北美市场几乎必死",
+      ],
+      cases: [
+        { name: "UNice", takeaway: "「U + nice」的第二人称结构：对用户说「你很美」——五个字母好念好拼，跨境假发独立站里赠美心智的教科书" },
+        { name: "Luvme", takeaway: "「Love me」的社媒化变体拼写：把「爱自己」说成品牌主张——标签化传播天然成立，情感叙事压过品类描述的样本" },
+        { name: "瑞贝卡（Rebecca）", takeaway: "一个英文人名完成产业跳跃：许昌原料商借「她」的形象做成全球品牌——人名拟人化让假发有了温度与故事" },
+        { name: "Insert Name Here", takeaway: "反套路命名：用「在此填入名字」的占位符梗做潮牌感——年轻客群的社媒语境里，幽默感本身就是品牌资产" },
+      ],
+      pitfalls: [
+        "拼音词根直接出海：核心客群在英语区，读不出的名字连测评口播都进不去——国际名是必选项不是备选",
+        "锁死单一品类词：wig 之外还有接发、发块、护发——名字边界画在「头发生意」而非一顶假发",
+        "廉价感拼写：hair 前堆 cheap/discount 类词根——假发是变美消费，低价词根直接杀死溢价空间",
+        "忽略社媒标签测试：名字先当 #标签搜一遍——被垃圾内容占据或拼写歧义的名字换掉再上",
+      ],
+    },
+    en: {
+      label: "Wig brands",
+      title: "How to Name a Wig & Hair Extension Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Wig brand naming guide: hair-quality roots, self-love narratives, global pronounceability, breakdowns of UNice/Luvme/Rebecca, recommended TLDs and pitfalls — then hunt an available wig-brand domain with AI.",
+      intro:
+        "Wigs are one of cross-border e-commerce's quietest billion-dollar categories, and the naming battlefield is almost entirely overseas: shoppers meet you in TikTok reviews, buy on your DTC store, and retell you in group chats — the name must read and spell easily in English while carrying the emotional weight of beauty itself. The first word bank is hair-quality imagery: virgin, raw and silk are the category's trust words, and UNice writes \"you're beautiful\" straight into the brand with U plus nice — plain, but dead-on for the gifting-beauty mindset. The second lever is the self-love narrative: the deep motive behind a wig purchase is self-expression — Luvme turns \"love me\" into a brand claim that ships as its own hashtag. The third lever is industrial-belt trust: Xuchang makes half the world's wigs, and Rebecca leapt from raw-material supplier to global brand on a single English given name — a name gives the product a \"her\". Mind the pronunciation test: the core audience is in North America and anglophone Africa, so pinyin roots are near-certain casualties; a native speaker must read it right the first time. As for channels, wig brands live in TikTok reviews, affiliate links and repurchase emails — the name must work as a hashtag and not look cheap on a shipping label.",
+      namingIdeas: [
+        "Hair-quality roots: silk, raw, virgin, crown — the category's trust words carry the \"great hair\" association; write the material promise into the name",
+        "Self-love narratives: the Luvme move — wigs sell self-expression; an emotional claim spreads further than a category description",
+        "Personify with a name: the Rebecca move — an English given name gives the product a \"her\", and reviews get a story to tell",
+        "Second-person structures: the UNice formula of you plus a compliment — speak straight to the buyer and land the beauty mindset in a second",
+        "The native-speaker test: have an English native read the candidate aloud once — pinyin roots and obscure spellings rarely survive the North American market",
+      ],
+      cases: [
+        { name: "UNice", takeaway: "U plus nice in second person: telling the buyer \"you're beautiful\" — five letters, easy to say and spell; the textbook of gifting-beauty mindset for cross-border wig DTC" },
+        { name: "Luvme", takeaway: "A social-native respelling of \"love me\": self-love stated as the brand claim — hashtag distribution built in; the sample of emotion beating category description" },
+        { name: "Rebecca", takeaway: "One English given name powering an industrial leap: a Xuchang supplier became a global brand by giving the product a \"her\" — personification lends wigs warmth and story" },
+        { name: "Insert Name Here", takeaway: "Anti-naming as naming: a placeholder joke turned streetwear-cool — in a young social-media audience, humor itself is brand equity" },
+      ],
+      pitfalls: [
+        "Exporting pinyin roots untouched: the core audience is anglophone — a name reviewers can't say never enters the review at all; an international name is mandatory",
+        "Welding to the word wig: extensions, toppers and hair care sit next door — draw the boundary at the hair business, not one product",
+        "Cheap-signal spellings: stacking discount-type roots before hair — wigs are beauty spend; bargain roots kill the premium outright",
+        "Skipping the hashtag test: search the name as a hashtag first — if it's squatted by junk or splits into awkward words, change it before launch",
+      ],
+    },
+  },
+  skincare: {
+    slug: "skincare",
+    keywords: ["护肤", "护肤品", "skincare", "美容护肤"],
+    tlds: [
+      { tld: "com", zh: "护肤是高信任消费，.com 仍是品牌官网的转化底线", en: "Skincare runs on trust — .com is still the conversion baseline for a brand site" },
+      { tld: "skin", zh: "「皮肤」后缀直给品类，护肤品牌与皮肤管理零解释成本", en: "The skin suffix states the category outright — zero explanation for skincare brands" },
+      { tld: "beauty", zh: "美妆大类后缀，产品线跨彩妆与护肤时更从容", en: "The beauty umbrella suffix — roomier when the line spans makeup and skincare" },
+    ],
+    zh: {
+      label: "护肤品牌",
+      title: "护肤品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "护肤品牌命名指南：成分理性、肌肤意象、极简格调等 5 种思路，The Ordinary/CeraVe/薇诺娜等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的护肤品牌域名。",
+      intro:
+        "护肤命名正处在两种叙事的分水岭上：一边是「成分党」的理性时代——消费者会背浓度、查配方表，The Ordinary 干脆用「平平无奇」自嘲，把「不讲故事只讲成分」做成了最锋利的故事；另一边是肌肤与自然的感性传统——温和、修护、焕活的意象仍在大众市场稳定收割。名字要先选边：科学向的名字（CeraVe 从神经酰胺 ceramide 造词）自带实验室气质，情感向的名字（薇诺娜的温柔女名感）自带柜台亲和力，摇摆在中间最危险。第二个抓手是敏感与安全承诺：护肤涂在脸上，安全是购买决策的底线——薇诺娜以「舒敏」定位从药房渠道杀出，名字的温和感与定位互为证词。第三个抓手是极简格调：护肤品牌的名字要经得起印在素色瓶身上——Aesop 借伊索寓言的文化词根，两音节配极简包装成了格调本身。要注意商标密度：美妆是商标最拥挤的类目之一，好词几乎注册殆尽，造词与冷僻文化词根是更现实的路线。渠道上，护肤活在成分测评、皮肤科医生推荐和免税店货架上——名字要禁得起放大镜，也要在小红书标题里好搜。",
+      namingIdeas: [
+        "成分词根造词：CeraVe 式的从核心成分取词——成分党时代，名字里的科学感就是功效背书",
+        "反套路理性命名：The Ordinary 式的自嘲——「不讲故事」本身就是最锋利的故事，适合配方透明的定位",
+        "肌肤与温和意象：润、透、舒、源——护肤的底层承诺是温和安全，名字先给出「不刺激」的体感",
+        "文化词根借力：Aesop 式的寓言、神话、植物学词根——冷僻但有出处的词自带格调，且商标空间更大",
+        "瓶身测试：把名字放进素色瓶身的极简排版里看一眼——压不住留白的名字撑不起高端线",
+      ],
+      cases: [
+        { name: "The Ordinary", takeaway: "用「平平无奇」自嘲的反套路命名：把「只讲成分不讲故事」做成最锋利的故事——成分党时代护肤命名的分水岭之作" },
+        { name: "CeraVe", takeaway: "从核心成分 ceramide（神经酰胺）造词：科学感直接写进名字——皮肤科医生推荐语境里，成分词根就是功效背书" },
+        { name: "薇诺娜", takeaway: "温柔女名感配「舒敏」定位：名字的温和体感与敏感肌专研互为证词——从药房渠道杀出的中国功效护肤样本" },
+        { name: "Aesop", takeaway: "借伊索寓言的文化词根：两音节冷僻词配极简包装——格调本身成了产品力，文化词根命名的教科书" },
+      ],
+      pitfalls: [
+        "科学与情感摇摆：实验室气质与柜台亲和力选一边站——两头讨好的名字在两个客群里都不可信",
+        "夸大功效词根：抗老、逆龄、瞬白入名——广告法与平台审核的高危区，名字先给自己埋合规雷",
+        "忽略商标密度：美妆类目好词几乎注册殆尽——定名前先查商标网，造词与冷僻词根更现实",
+        "拼音在出海线失灵：护肤出海要在英文测评里被念对——中文名之外备好国际名与对应域名",
+      ],
+    },
+    en: {
+      label: "Skincare brands",
+      title: "How to Name a Skincare Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Skincare naming guide: ingredient-science roots, skin imagery, minimalist poise, breakdowns of The Ordinary/CeraVe/Winona/Aesop, recommended TLDs and pitfalls — then hunt an available skincare domain with AI.",
+      intro:
+        "Skincare naming sits on a watershed between two narratives. On one side is the ingredient-literate era — buyers recite concentrations and read INCI lists, and The Ordinary weaponized self-deprecation, turning \"no story, just ingredients\" into the sharpest story of all. On the other side is the sensory tradition of skin and nature — gentle, restoring, renewing imagery still converts reliably in the mass market. Pick a side first: a science-coded name (CeraVe, coined from ceramide) carries lab credibility, while an emotional name carries counter warmth — hovering in between is the dangerous spot. The second lever is the safety promise: skincare goes on the face, so safety is the decision floor — Winona built a sensitive-skin empire out of pharmacy aisles, its gentle-sounding name and positioning vouching for each other. The third lever is minimalist poise: a skincare name must survive being printed on a plain bottle — Aesop borrowed a fable's cultural root, and two quiet syllables on minimalist packaging became the aesthetic itself. Mind trademark density: beauty is among the most crowded classes and the good words are mostly gone — coinages and obscure cultural roots are the realistic route. As for channels, skincare lives in ingredient reviews, dermatologist recommendations and duty-free shelves — the name must bear a magnifying glass and stay searchable in social titles.",
+      namingIdeas: [
+        "Coin from ingredients: the CeraVe move — in the ingredient-literate era, science in the name reads as an efficacy endorsement",
+        "Anti-marketing candor: the Ordinary move — \"no story\" is itself the sharpest story, fit for transparent-formula positioning",
+        "Skin and gentleness imagery: dew, pure, calm, source — skincare's floor promise is gentle safety; let the name deliver the \"non-irritating\" feel first",
+        "Borrow cultural roots: the Aesop move — fables, myths and botany are obscure but sourced, carrying poise with more trademark room",
+        "The bottle test: set the name in minimalist type on a plain bottle — a name that can't hold the white space can't hold the premium line",
+      ],
+      cases: [
+        { name: "The Ordinary", takeaway: "Self-deprecation as strategy: \"just ingredients, no story\" turned into the sharpest story — the watershed of skincare naming in the ingredient-literate era" },
+        { name: "CeraVe", takeaway: "Coined from ceramide, its hero ingredient: science written straight into the name — in dermatologist-recommendation contexts, the ingredient root is the efficacy endorsement" },
+        { name: "Winona", takeaway: "A gentle given-name feel matched to sensitive-skin positioning: the name's softness and the science vouch for each other — China's pharmacy-born functional skincare sample" },
+        { name: "Aesop", takeaway: "A fable's cultural root: two quiet syllables on minimalist packaging — poise became the product; the textbook of cultural-root naming" },
+      ],
+      pitfalls: [
+        "Hovering between lab and counter: pick science credibility or emotional warmth — a name that courts both convinces neither audience",
+        "Efficacy hype in the name: anti-aging and instant-whitening roots are regulatory minefields — the name shouldn't pre-book a compliance problem",
+        "Ignoring trademark density: beauty's good words are mostly registered — clear the trademark first; coinages and obscure roots are the realistic route",
+        "Pinyin failing abroad: an exporting skincare brand must be pronounceable in English reviews — back the Chinese name with an international one and matching domain",
+      ],
+    },
+  },
+  makeupartist: {
+    slug: "makeupartist",
+    keywords: ["化妆师", "化妆造型", "跟妆", "makeup artist"],
+    tlds: [
+      { tld: "com", zh: "作品集官网与档期咨询的信任底线，工作室默认选择", en: "The trust baseline for a portfolio site and booking inquiries — the studio default" },
+      { tld: "makeup", zh: "「化妆」后缀直给行当，化妆师与造型工作室零解释成本", en: "The makeup suffix states the trade outright — zero explanation for artists and studios" },
+      { tld: "studio", zh: "「工作室」属性直白，个人品牌升级团队时依然合身", en: "Plainly a studio — still fits when a personal brand grows into a team" },
+    ],
+    zh: {
+      label: "化妆造型工作室",
+      title: "化妆师与化妆造型工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "化妆造型工作室命名指南：人名署名、妆面意象、档期场景等 5 种思路，毛戈平/Charlotte Tilbury/Bobbi Brown 等案例拆解，推荐 TLD 与误区，并用 AI 猎取可注册域名。",
+      intro:
+        "化妆造型是「手艺人署名」浓度最高的行业之一：新娘在婚礼前把最重要的一张脸交给你，明星在红毯前把镜头信任交给你——名字首先是一个署名，其次才是一块招牌。第一素材库是人名署名：毛戈平用本名从化妆师做到上市美妆集团，Bobbi Brown、Charlotte Tilbury 都是「名字即品牌」的样本——手艺人行业里，敢用本名本身就是自信的证词。第二个抓手是妆面与光影意象：素、雾、绒、光——化妆的产品是「那张脸的状态」，名字给出妆效的画面感，客片还没看气质先到位。第三个抓手是档期与场景词：跟妆、早妆、试妆是新娘搜索的真实词汇——工作室名可以走气质路线，但小红书简介里要让「新娘跟妆」这类场景词露出。要注意成长空间：今天是单人跟妆，明天可能是造型团队、培训班甚至美妆线——毛戈平的路径证明名字的边界要画在「美」而非「化妆」。渠道上，化妆造型活在小红书客片、婚博会摊位和新娘群转介绍里——名字要好@好搜，也要在婚礼请柬供应商名单里显得体面。",
+      namingIdeas: [
+        "本名署名：毛戈平式的实名品牌——手艺人行业敢署本名就是自信证词，转介绍时「找 XX 化妆」天然顺口",
+        "妆面意象词：素、雾、绒、光、透——名字先给出妆效的画面感，客片未到气质先行",
+        "人名 + 品类结构：Bobbi Brown 式的「名字即品牌」——个人 IP 与产品线共用一个署名，升级美妆品牌不换名",
+        "场景词露出：跟妆、早妆、试妆留在简介与搜索标签里——工作室名走气质，搜索词负责被找到",
+        "请柬测试：把名字放进婚礼请柬的供应商名单里想一遍——压不住请柬版面的名字接不到高端单",
+      ],
+      cases: [
+        { name: "毛戈平", takeaway: "本名从化妆师做到上市美妆集团：「名字即署名」的中国样本——手艺人实名品牌的天花板，名字边界画在「美」而非「化妆」" },
+        { name: "Charlotte Tilbury", takeaway: "红毯化妆师的实名跳跃：先用作品把名字做成行业署名，再让署名长成美妆帝国——人名品牌两步走的教科书" },
+        { name: "Bobbi Brown", takeaway: "「名字即品牌」的鼻祖级样本：自然妆效理念与本名绑定——理念有署名，产品线就有了灵魂人物" },
+        { name: "MAC", takeaway: "「Makeup Art Cosmetics」的缩写结构：把「化妆艺术」写进名字——专业向缩写在行业内外都好念好记" },
+      ],
+      pitfalls: [
+        "堆砌「国际御用首席」类头衔：资历靠客片与口碑证明——头衔堆砌在新娘眼里是廉价感不是专业感",
+        "锁死婚嫁单一场景：跟妆之外还有商拍、培训、美妆线——名字边界画宽，路径才走得通",
+        "生僻字配英文花体：请柬与小红书都要好认好搜——读不出的名字连转介绍都开不了口",
+        "忽略同名化妆师检索：行业里人名品牌密集——定名前先搜同行同名，撞名等于给别人导流",
+      ],
+    },
+    en: {
+      label: "Makeup artists",
+      title: "How to Name a Makeup Artist Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Makeup artist naming guide: signature names, finish imagery, booking-scene words, breakdowns of Mao Geping/Charlotte Tilbury/Bobbi Brown/MAC, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Makeup artistry is one of the most signature-driven trades there is: a bride hands you the most important face of her life, a celebrity hands you the camera's trust — the name is a signature first and a signboard second. The first word bank is the signed name itself: Mao Geping rode his own name from working artist to a listed beauty group, and Bobbi Brown and Charlotte Tilbury are the canonical \"name as brand\" samples — in a craftsperson's trade, daring to sign your real name is itself a testimony of confidence. The second lever is finish and light imagery: bare, mist, velvet, glow — the product is the state of a face, and a name that carries the finish's imagery sets the tone before the portfolio loads. The third lever is booking-scene words: bridal trial, morning makeup and on-day styling are what brides actually search — let the studio name carry the aesthetic while profile tags carry the scene words. Mind the growth path: today a solo bridal artist, tomorrow a styling team, an academy, even a product line — Mao Geping's arc proves the boundary belongs at beauty, not at makeup. As for channels, the trade lives in portfolio posts, wedding-expo booths and bridal group referrals — the name must be taggable and searchable, and look dignified on a wedding invitation's vendor list.",
+      namingIdeas: [
+        "Sign your real name: the Mao Geping move — in a craft trade the signed name is the confidence testimony, and \"book X for makeup\" flows naturally in referrals",
+        "Finish imagery: bare, mist, velvet, glow — let the name carry the makeup finish's mood before the portfolio does",
+        "Name-as-brand structures: the Bobbi Brown move — one signature spans the personal IP and the product line, so scaling into cosmetics needs no rename",
+        "Keep scene words visible: bridal trial, morning makeup and on-day styling belong in profiles and tags — the name carries taste, the tags carry search",
+        "The invitation test: picture the name on a wedding invitation's vendor list — a name that can't hold that page won't book the high-end weddings",
+      ],
+      cases: [
+        { name: "Mao Geping", takeaway: "A real name carried from working artist to a listed beauty group: China's ceiling case for signed craft brands — with the boundary drawn at beauty, not makeup" },
+        { name: "Charlotte Tilbury", takeaway: "The red-carpet artist's two-step: first make the name an industry signature through work, then let the signature grow into a beauty empire — the textbook of name-brand sequencing" },
+        { name: "Bobbi Brown", takeaway: "The founding sample of name-as-brand: the natural-look philosophy bound to a real name — when the idea has a signature, the product line has a soul" },
+        { name: "MAC", takeaway: "The Makeup Art Cosmetics abbreviation: artistry written into the name — a professional acronym that reads easily inside and outside the trade" },
+      ],
+      pitfalls: [
+        "Stacking \"international chief celebrity\" titles: credentials come from portfolios and referrals — stacked titles read as cheap, not professional, to brides",
+        "Welding to weddings alone: commercial shoots, training and product lines sit next door — draw the boundary wide enough for the path",
+        "Obscure characters with ornate script: invitations and social profiles must be readable and searchable — a name nobody can say kills the referral at hello",
+        "Skipping the namesake search: name brands crowd this trade — search fellow artists first; sharing a name means routing your referrals to someone else",
+      ],
+    },
+  },
+  homestaging: {
+    slug: "homestaging",
+    keywords: ["房屋整备", "软装布置", "卖房布置", "home staging"],
+    tlds: [
+      { tld: "com", zh: "对接中介与业主的信任底线，服务品牌的默认选择", en: "The trust baseline with agents and owners — the default for a service brand" },
+      { tld: "homes", zh: "「房屋」后缀直给行当，整备与软装品牌零解释成本", en: "The homes suffix states the trade outright — zero explanation for staging brands" },
+      { tld: "design", zh: "「设计」后缀强调审美专业，软装向工作室更合身", en: "The design suffix leads with aesthetics — a natural fit for styling-led studios" },
+    ],
+    zh: {
+      label: "房屋整备布置",
+      title: "房屋整备与软装布置怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "房屋整备命名指南：焕新意象、成交叙事、家的温度等 5 种思路，Meridith Baer/Stuccu 等案例与命名结构拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的整备品牌域名。",
+      intro:
+        "房屋整备（home staging）卖的不是家具摆放，而是「让房子看起来值这个价」：中介带看前请你布置，业主挂牌前请你焕新——客户为「更快成交、卖出更高」付费，名字要先把这个商业承诺立住。第一素材库是焕新与登场意象：stage 本义是舞台——房子挂牌就是登场，名字里的「亮相感」直接对齐服务价值；焕、映、启、幕都是同一个方向。第二个抓手是成交叙事：这是一门 ROI 生意——北美头部品牌 Meridith Baer Home 用创始人署名配「Home」，靠好莱坞豪宅案例把人名做成品类代名词；署名式命名在这个「作品集说话」的行业天然成立。第三个抓手是家的温度：整备的手艺是「让空房子看起来有人爱」——名字过冷像搬家公司，过甜像家居博主，要在专业与温度之间找平衡。要注意与家装设计的边界：整备是「为卖而装」的轻改造，客户是中介与卖家——名字里带太重的「装修」感会引来错误询盘。渠道上，整备活在中介转介绍、房产平台带看照和挂牌前后的对比图里——名字要在「Before/After」的对比帖里好记，也要在中介的供应商名单里显得专业。",
+      namingIdeas: [
+        "登场与焕新意象：幕、映、焕、启——staging 本义是舞台，名字里的「亮相感」直接对齐「挂牌即登场」的服务价值",
+        "署名 + Home 结构：Meridith Baer 式的人名署名——作品集说话的行业，署名即背书，配 Home 圈定行当",
+        "成交叙事词根：快、值、升——客户为「卖得更快更高」付费，名字可以直接站在 ROI 一侧",
+        "家的温度词：暖、栖、居、心——空房子要看起来有人爱，名字先给出「家的样子」的画面",
+        "中介名单测试：把名字放进中介的供应商推荐名单里想一遍——像搬家公司或家居博主的名字都接不到整备单",
+      ],
+      cases: [
+        { name: "Meridith Baer Home", takeaway: "人名署名 + Home 的直白结构：靠好莱坞豪宅案例把署名做成品类代名词——作品集行业里「名字即背书」的头部样本" },
+        { name: "Staged to Sell", takeaway: "把商业承诺直接写进名字：「布置了就好卖」——ROI 叙事的极致直给，中介一眼懂服务价值的命名结构" },
+        { name: "宜家（IKEA）", takeaway: "整备行业的隔壁教科书：样板间美学让「布置好的家」成为大众想象——整备品牌可借的正是这种「看见即想住」的画面感" },
+        { name: "Curated", takeaway: "「策展」词根的降维借用：把摆放说成策展——一个词完成从体力活到审美专业的身份升级" },
+      ],
+      pitfalls: [
+        "像搬家或保洁公司：整备卖的是审美与成交——名字掉进「劳务感」，报价就上不去",
+        "装修味过重引错询盘：整备是为卖而装的轻改造——名字里的「装饰装修」感会引来全屋装修的错误客户",
+        "锁死住宅单一场景：样板间、民宿、商拍空间都是同一门手艺——名字边界画在「空间焕新」更从容",
+        "忽略对比帖传播：Before/After 是这行的流量密码——名字要在对比图水印与话题标签里好认好记",
+      ],
+    },
+    en: {
+      label: "Home staging",
+      title: "How to Name a Home Staging Business: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Home staging naming guide: debut imagery, sell-faster narratives, warmth of home, breakdowns of Meridith Baer Home and staging naming structures, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Home staging doesn't sell furniture placement — it sells \"make the house look worth the price\": agents book you before showings, owners book you before listing, and everyone pays for faster sales at higher prices, so the name must plant that commercial promise first. The first word bank is debut and renewal imagery: stage literally means the platform — a listing is a debut, and a name with \"curtain-up\" energy aligns straight with the service's value. The second lever is the closing narrative: this is an ROI trade — North America's flagship Meridith Baer Home pairs a founder's signature with \"Home\" and rode Hollywood-estate portfolios until the name became shorthand for the category; signature naming works naturally in a portfolio-speaks business. The third lever is the warmth of home: the craft is making an empty house look loved — too cold reads like a moving company, too sweet reads like a decor blogger; the name balances professionalism and warmth. Mind the boundary with interior design: staging is light, sale-driven styling for agents and sellers — too much \"renovation\" in the name attracts the wrong inquiries. As for channels, staging lives in agent referrals, listing photos and before/after posts — the name must stick in comparison threads and look professional on an agent's vendor shortlist.",
+      namingIdeas: [
+        "Debut and renewal imagery: curtain, reveal, fresh, glow — a listing is a debut; \"curtain-up\" energy in the name aligns with the service's value outright",
+        "Signature plus Home: the Meridith Baer move — in a portfolio-speaks trade the signed name is the endorsement, and Home marks the territory",
+        "Closing-narrative roots: sold, swift, worth — clients pay for faster and higher; the name may stand openly on the ROI side",
+        "Warmth-of-home words: nest, dwell, hearth — an empty house must look loved; let the name paint the \"someone lives here\" picture first",
+        "The vendor-list test: picture the name on an agent's recommended-vendor sheet — anything that reads like a mover or a decor blog won't book staging work",
+      ],
+      cases: [
+        { name: "Meridith Baer Home", takeaway: "Signature plus Home, plainly structured: Hollywood-estate portfolios turned a founder's name into category shorthand — the flagship sample of name-as-endorsement in a portfolio trade" },
+        { name: "Staged to Sell", takeaway: "The commercial promise written straight into the name: staged, therefore sellable — ROI stated outright; agents grasp the service's value at a glance" },
+        { name: "IKEA", takeaway: "The next-door textbook: showroom aesthetics made \"the staged home\" a mass fantasy — what staging brands borrow is exactly that see-it-want-to-live-in-it imagery" },
+        { name: "Curated", takeaway: "Borrowing the curation root: placement reframed as curation — one word upgrades the trade from manual labor to aesthetic profession" },
+      ],
+      pitfalls: [
+        "Reading like a mover or cleaner: staging sells taste and closings — a laborer-sounding name caps your pricing",
+        "Too much renovation flavor: staging is light, sale-driven styling — heavy \"remodel\" signals attract full-renovation inquiries you don't want",
+        "Welding to residential listings: show flats, rentals and shoot locations are the same craft — draw the boundary at space renewal for room to grow",
+        "Ignoring before/after distribution: comparison posts are the trade's growth engine — the name must read cleanly in watermarks and hashtags",
+      ],
+    },
+  },
+  yachtcharter: {
+    slug: "yachtcharter",
+    keywords: ["游艇", "游艇租赁", "包船", "yacht charter"],
+    tlds: [
+      { tld: "com", zh: "高客单的信任底线，游艇会与包船平台的默认选择", en: "The trust baseline for high-ticket bookings — the default for clubs and platforms" },
+      { tld: "boats", zh: "「船艇」后缀直给品类，租赁与销售品牌零解释成本", en: "The boats suffix states the category outright — zero explanation for charter and sales" },
+      { tld: "club", zh: "「俱乐部」属性直白，会员制游艇会的气质后缀", en: "Plainly a club — the membership suffix for a members-first yacht brand" },
+    ],
+    zh: {
+      label: "游艇租赁俱乐部",
+      title: "游艇租赁与游艇俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "游艇租赁命名指南：海洋意象、稀缺圈层、航程叙事等 5 种思路，Boatsetter/GetMyBoat/圣汐等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的游艇品牌域名。",
+      intro:
+        "游艇租赁卖的是「一段海上的高光时刻」：求婚、团建、生日包船——客户为记忆付费，客单五位数起步，名字要先把「值得」两个字立住。第一素材库是海洋与风的意象：帆、汐、澜、屿——海面词根自带画面，但要避开「渔家乐」的联想，游艇的海是香槟色的海。第二个抓手是圈层与稀缺感：游艇会的本质是会员制社交资产——圣汐、蓝高这类名字用两个字压住「贵而不炫」的分寸，圈层生意的名字要让会员愿意印在名片上。第三个抓手是共享平台叙事：Boatsetter、GetMyBoat 把「租船」说成一次点按——平台向命名要直白好拼，动词结构降低「包船很复杂」的心理门槛。要注意持牌与安全的暗线：海上项目的决策人往往是替全家或全公司做决定的那个人——名字过于轻浮会让「安全吗」的疑虑放大。渠道上，游艇租赁活在小红书打卡照、OTA 体验列表和高端酒店礼宾的推荐话术里——名字要在夕阳甲板的照片标签里好看，也要在礼宾的转述里显得可靠。",
+      namingIdeas: [
+        "海洋意象升维：帆、汐、澜、屿——选香槟色的海不选渔港的海，画面感先把客单价的气质立住",
+        "圈层稀缺词：会、荟、隐——游艇会是会员制社交资产，名字要让会员愿意印在名片上",
+        "平台动词结构：GetMyBoat 式的「动词 + 船」——把包船说成一次点按，直白结构降低决策门槛",
+        "航程叙事词：启航、环屿、追日——卖的是一段海上时光，名字里可以有航程的起点感",
+        "礼宾转述测试：想象五星酒店礼宾向客人推荐你——念不顺或显廉价的名字进不了礼宾话术",
+      ],
+      cases: [
+        { name: "Boatsetter", takeaway: "boat + setter 的合成结构：借 trendsetter 的语感把租船说成生活方式——共享游艇平台里「品类词 + 气质尾缀」的样本" },
+        { name: "GetMyBoat", takeaway: "动词短语直给：「拿到我的船」三个词说完全部服务——把高门槛品类说成一次点按的教科书级平台命名" },
+        { name: "圣汐（Sunseeker）", takeaway: "「追逐阳光的人」写进名字：奢侈品级的向往感——中文名「圣汐」以「汐」压住海的贵气，双语命名互相成就的样本" },
+        { name: "Moana", takeaway: "毛利语「海洋」的文化词根：一个词自带南太平洋的画面——冷僻文化词根在体验行业的降维用法" },
+      ],
+      pitfalls: [
+        "掉进渔家乐联想：海鲜、渔港、船家类词根拉低客单——游艇的海是香槟色的，词根先选对色温",
+        "炫富词根吓退企业客户：帝王、至尊类名字让团建采购难走报销——「贵而不炫」才是圈层生意的分寸",
+        "锁死单一船型：今天是游艇，明天可能有帆船、游轮、水上项目——名字边界画在「海上体验」更从容",
+        "忽略安全感暗线：替全家做决定的人最怕轻浮——名字要经得起「安全吗」的第一眼审视",
+      ],
+    },
+    en: {
+      label: "Yacht charters",
+      title: "How to Name a Yacht Charter or Boat Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Yacht charter naming guide: ocean imagery, members-only scarcity, voyage narratives, breakdowns of Boatsetter/GetMyBoat/Sunseeker, recommended TLDs and pitfalls — then hunt an available yacht-brand domain with AI.",
+      intro:
+        "A yacht charter sells a highlight reel on the water: proposals, offsites, birthday charters — clients pay for memories at five-figure tickets, so the name must establish \"worth it\" before anything else. The first word bank is ocean and wind imagery: sail, tide, cove, isle — sea roots carry instant pictures, but steer clear of the fishing-wharf register; a yacht's sea is champagne-colored. The second lever is circle and scarcity: a yacht club is a membership social asset — names like Sunseeker hold the \"expensive but not loud\" line, and a circle business needs a name members will happily print on business cards. The third lever is the platform narrative: Boatsetter and GetMyBoat compress chartering into a tap — platform names should be plain and spellable, with verb structures dissolving the \"chartering is complicated\" barrier. Mind the safety undertone: the decision-maker often books for a whole family or company — a flippant name amplifies the \"is this safe?\" doubt. As for channels, charters live in sunset-deck photos, OTA experience listings and hotel concierge scripts — the name must look good in a golden-hour hashtag and sound reliable in a concierge's retelling.",
+      namingIdeas: [
+        "Elevated ocean imagery: sail, tide, cove, isle — choose the champagne sea over the fishing wharf; the picture sets the price register first",
+        "Circle and scarcity words: club, reserve, haven — a yacht club is a membership social asset; members must want the name on their cards",
+        "Platform verb structures: the GetMyBoat formula — chartering compressed into a tap; plain verb phrasing dissolves the decision barrier",
+        "Voyage narratives: set sail, island loop, chase the sun — you sell a passage of time at sea; the name may carry the departure's spark",
+        "The concierge test: imagine a five-star concierge recommending you by name — anything awkward or cheap-sounding never enters the script",
+      ],
+      cases: [
+        { name: "Boatsetter", takeaway: "boat plus the -setter tail: borrowing trendsetter's cadence to frame chartering as lifestyle — the category-word-plus-vibe-suffix sample among boat-sharing platforms" },
+        { name: "GetMyBoat", takeaway: "A verb phrase, stated outright: three words carry the whole service — the textbook of compressing a high-barrier category into one tap" },
+        { name: "Sunseeker", takeaway: "\"One who chases the sun\" written into the name: luxury-grade longing — with its Chinese name resting on the tide character, a sample of bilingual names reinforcing each other" },
+        { name: "Moana", takeaway: "The Maori word for ocean: one cultural root carrying the whole South Pacific — the experience industry's shortcut use of an evocative loanword" },
+      ],
+      pitfalls: [
+        "Sliding into the fishing-wharf register: seafood and harbor roots drag the ticket down — pick the sea's color temperature before the words",
+        "Flashy-wealth roots that scare corporate buyers: imperial and supreme names are hard to put on an expense report — \"expensive but not loud\" is the circle's etiquette",
+        "Welding to one hull type: yachts today, sailboats, cruises and water sports tomorrow — draw the boundary at experiences on the water",
+        "Ignoring the safety undertone: whoever books for the family fears flippancy most — the name must survive the first \"is this safe?\" glance",
+      ],
+    },
+  },
+  autoparts: {
+    slug: "autoparts",
+    keywords: ["汽配", "汽车配件", "改装件", "auto parts"],
+    tlds: [
+      { tld: "com", zh: "跨境汽配独立站的转化底线，B 端采购最信任", en: "The conversion baseline for cross-border parts stores — B2B buyers trust it most" },
+      { tld: "autos", zh: "「汽车」后缀直给品类，配件与改装品牌零解释成本", en: "The autos suffix states the category outright — zero explanation for parts and mods" },
+      { tld: "shop", zh: "独立站属性直白，配合品牌词把「来买」说清楚", en: "Plainly a store — pairs with a brand word to say \"come shop\" outright" },
+    ],
+    zh: {
+      label: "汽配用品品牌",
+      title: "汽配与汽车用品品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "汽配品牌命名指南：性能词根、可靠承诺、车主圈层等 5 种思路，AutoZone/Bosch/米其林等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的汽配品牌域名。",
+      intro:
+        "汽配的名字要同时通过两道审视：修理厂老板在采购目录里扫过你——名字要像「靠得住的零件」；改装车主在论坛里讨论你——名字要有「值得上车」的性能气质。第一素材库是性能与机械词根：turbo、torque、forge、精、驰——汽配卖的是机器的可靠与力量，名字里的金属感就是第一层质检。第二个抓手是可靠承诺：配件装进发动机舱，坏一个零件赔一台车——Bosch 用姓氏走过百年，德系姓氏在汽配语境里就是质量背书；国产品牌可以用「恒、坚、卫」类词根给出同款承诺。第三个抓手是场景与品类圈定：AutoZone 用「汽车 + 地带」把连锁汽配店说成目的地，NAPA 用缩写沉淀行业身份——渠道品牌与产品品牌的命名路线不同，先想清楚你是谁。要注意 SKU 扩张空间：今天卖雨刷，明天可能是全品类——名字锁死单一部件（如「XX 刹车片」）会限制货架宽度。渠道上，汽配活在电商 listing、修理厂采购群和改装论坛的口碑里——名字要在英文 listing 里好搜，也要在师傅的转述里好念。",
+      namingIdeas: [
+        "性能机械词根：turbo、torque、forge、驰、锋——金属感与力量感是汽配名字的第一层质检",
+        "可靠承诺词：恒、坚、卫、盾——配件坏一个赔一台车，名字先给出「装得放心」的承诺",
+        "姓氏与百年感：Bosch 式的姓氏背书——汽配语境里德系姓氏就是质量证词，中文品牌可用厚重字根平替",
+        "目的地结构：AutoZone 式的「品类 + 地带」——渠道品牌把店说成目的地，采购动线一秒建立",
+        "listing 搜索测试：把名字放进英文电商标题搜一遍——被通用词淹没或拼写歧义的名字换掉再上",
+      ],
+      cases: [
+        { name: "AutoZone", takeaway: "「汽车 + 地带」的目的地结构：把连锁汽配店说成「有车事就来这」——渠道品牌命名里品类词加空间词的教科书" },
+        { name: "Bosch", takeaway: "创始人姓氏走过百年：德系姓氏在汽配语境里就是质量背书——B 端采购目录里最省解释成本的名字形态" },
+        { name: "米其林（Michelin）", takeaway: "姓氏配轮胎人 IP：严肃姓氏用吉祥物注入亲和力——工业品牌做消费者沟通的双轨命名样本" },
+        { name: "NAPA", takeaway: "「National Automotive Parts Association」的缩写沉淀：四个字母把行业联盟做成信任标志——缩写命名在 B 端渠道的长期复利" },
+      ],
+      pitfalls: [
+        "锁死单一部件：「XX 刹车片」式的名字限制货架宽度——汽配的胜负手是 SKU 扩张，边界画在「汽车后市场」",
+        "堆砌 auto/parts 通用词：与几千个同行在 listing 里撞车——通用词组合永远挤不进搜索第一屏",
+        "山寨大牌拼写：蹭 Bosch/NGK 近似拼写换短期流量——跨境平台的商标投诉一封就下架",
+        "忽略师傅口碑链路：修理厂转述是汽配的隐形渠道——拗口的名字在采购群里传不开",
+      ],
+    },
+    en: {
+      label: "Auto parts brands",
+      title: "How to Name an Auto Parts Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Auto parts naming guide: performance roots, reliability promises, gearhead circles, breakdowns of AutoZone/Bosch/Michelin/NAPA, recommended TLDs and pitfalls — then hunt an available parts-brand domain with AI.",
+      intro:
+        "An auto parts name must pass two inspections at once: a shop owner scanning a procurement catalog — where the name must read like a dependable component — and a gearhead debating you on a forum, where it needs the performance aura of something worth bolting on. The first word bank is performance and machinery roots: turbo, torque, forge, drive — parts sell a machine's reliability and power, and the metal in the name is the first layer of quality control. The second lever is the reliability promise: a part goes into an engine bay where one failure costs a whole car — Bosch has carried a surname for over a century, and in the parts context a German surname is a quality endorsement; newer brands can bank the same promise with steadfast roots like guard, iron and true. The third lever is scene and category framing: AutoZone turned a parts chain into a destination with category plus place, while NAPA compressed an industry association into four trusted letters — channel brands and product brands name differently, so decide which you are first. Mind SKU headroom: wipers today, full catalog tomorrow — a name welded to one component (SomethingBrakes) caps your shelf width. As for channels, parts live in marketplace listings, repair-shop procurement chats and modder forums — the name must be searchable in an English listing and easy in a mechanic's retelling.",
+      namingIdeas: [
+        "Performance and machinery roots: turbo, torque, forge, drive — metal and muscle in the name are the first layer of quality control",
+        "Reliability promises: guard, iron, true, shield — one failed part costs a whole car; let the name promise \"safe to install\" first",
+        "Surname and century weight: the Bosch move — in the parts context a heritage surname is the quality testimony; newer brands substitute weighty roots",
+        "Destination structures: the AutoZone formula of category plus place — a channel brand frames the store as the destination and the buying habit follows",
+        "The listing test: search the candidate inside an English marketplace title — if generic words drown it or the spelling splits, change it before launch",
+      ],
+      cases: [
+        { name: "AutoZone", takeaway: "Category plus place as destination: the parts chain framed as \"where you go when the car acts up\" — the textbook of channel-brand naming" },
+        { name: "Bosch", takeaway: "A surname carried past a century: in the parts context the German surname is the quality endorsement — the lowest-explanation name form in a B2B catalog" },
+        { name: "Michelin", takeaway: "A surname warmed by a mascot: the tire man injects approachability into an industrial name — the dual-track sample of an industrial brand speaking to consumers" },
+        { name: "NAPA", takeaway: "An industry association compressed to four letters: the abbreviation matured into a trust mark — the long compounding of acronym naming in B2B channels" },
+      ],
+      pitfalls: [
+        "Welding to one component: SomethingBrakes-style names cap shelf width — the game is SKU expansion; draw the boundary at the automotive aftermarket",
+        "Stacking generic auto/parts words: you'll collide with thousands of listings — generic combos never own page one of search",
+        "Look-alike spellings of big brands: riding near-Bosch spellings for short-term traffic — one trademark complaint delists you from the marketplace",
+        "Ignoring the mechanic's word of mouth: repair-shop retelling is the invisible channel — a clunky name never travels through procurement chats",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
