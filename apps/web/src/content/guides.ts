@@ -10975,6 +10975,390 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  babystore: {
+    slug: "babystore",
+    tlds: [
+      { tld: "com", zh: "母婴消费决策链长、口碑传播密集，.com 的零解释成本让妈妈群转发不打折", en: "Parenting purchases travel by word of mouth — .com's zero-explanation credibility keeps group-chat referrals intact" },
+      { tld: "baby", zh: "后缀直接声明母婴赛道，品类身份一目了然", en: "The suffix states the baby vertical outright — category identity at a glance" },
+      { tld: "shop", zh: "零售属性直给，「这里能买」的心智零损耗", en: "Retail intent made explicit — \"you can buy here\" lands with zero loss" },
+    ],
+    zh: {
+      label: "母婴用品",
+      title: "母婴用品品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "母婴用品品牌命名指南：安心意象、亲昵叠词、专业信任感等 5 种思路，Babycare/孩子王/爱婴室等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的母婴品牌域名。",
+      intro:
+        "母婴用品的名字面对的是全消费领域最谨慎的决策者：新手妈妈买的不是商品，是「不出错」。名字的第一使命是传递安全感——柔软的音节、温暖的意象、没有任何歧义的联想；一个读起来发硬的名字，在婴儿贴身用品的语境里就是减分项。第二使命是进得了妈妈群：母婴消费高度依赖口碑转述，「XX 家的纸尿裤真的好用」这句话里，名字必须两三个字念得顺、听一遍记得住。命名素材上，叠词与儿语感（贝贝、宝宝、咪咪）是天然词库但也最拥挤，破局点在「安心+专业」的复合气质——Babycare 用一个 care 把「护理级标准」写进名字，孩子王用「王」字把品类权威感直接占住。要警惕的是把名字锁死在「婴」上：客群会从孕期延伸到学龄，名字留出「大母婴」余量，复购生命周期才够长。",
+      namingIdeas: [
+        "安心意象：柔、安、护、贝——新手妈妈买的是「不出错」，名字里的柔软感就是第一层信任",
+        "亲昵叠词：贝贝、宝宝式的儿语节奏念着亲切，但词库最拥挤，需搭配差异化字根才不撞车",
+        "专业信任感：care、护理、实验室语感——把「护理级标准」写进名字，在成分党妈妈面前先赢一步",
+        "品类权威词：王、优选、严选——直接占住「这个品类我最懂」的心智，连锁扩张时招牌自带背书",
+        "留出年龄余量：客群从孕期延伸到学龄，名字锁死「婴」字，孩子两岁后品牌就跟着毕业了",
+      ],
+      cases: [
+        { name: "Babycare", takeaway: "baby + care 的直白组合：一个 care 把「护理级标准」写进名字，品类词+价值词的结构让新品牌自带专业气场——母婴命名的教科书结构" },
+        { name: "孩子王", takeaway: "「王」字直接占住品类权威：三个字口语化到像妈妈群里的日常称呼，连锁大店业态配上称王语气，规模感与亲切感罕见地兼得" },
+        { name: "爱婴室", takeaway: "爱+婴+室：三个字把情感、客群、场所全说清，「室」字自带专柜级的正规感——直营连锁的信任型命名" },
+        { name: "Pampers", takeaway: "动词 pamper（宠爱）复数化：把使用行为升华成情感承诺，「宠爱孩子」的联想让功能性产品有了情绪溢价" },
+        { name: "十月结晶", takeaway: "「十月怀胎」的结晶：把孕产的情感叙事直接入名，四个字讲完一个故事，待产包场景里几乎是情绪精准打击" },
+      ],
+      pitfalls: [
+        "锁死在「婴」上：客群从孕期延伸到学龄，名字只写「婴」，孩子两岁后复购就断了",
+        "叠词堆到无差别：贝贝、宝宝、乐乐满赛道撞车，妈妈群转述时根本分不清是哪家",
+        "洋名硬凹「进口感」：拼不出读不顺的伪外文名，在代购与跨境泛滥后反而触发假洋牌警惕",
+        "只查商标没查敏感联想：母婴语境对歧义零容忍，谐音里藏一个负面词就是公关事故预定",
+      ],
+    },
+    en: {
+      label: "Baby & maternity stores",
+      title: "How to Name a Baby & Maternity Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Baby and maternity brand naming guide: reassurance imagery, affectionate reduplication and clinical-trust registers, breakdowns of Babycare/Pampers/Kidswant, recommended TLDs and pitfalls — then hunt an available baby brand domain with AI.",
+      intro:
+        "A baby-products name faces the most cautious decision-maker in all of consumer retail: a new mother isn't buying a product, she's buying \"nothing can go wrong\". The name's first job is to radiate safety — soft syllables, warm imagery, zero ambiguous associations; a name that sounds hard-edged is an automatic deduction in the context of things touching a newborn's skin. Its second job is to survive the moms' group chat: baby retail runs on word-of-mouth retellings, and in the sentence \"X's diapers are genuinely good\", the name must be two or three syllables, smooth to say, remembered on first hearing. On material: reduplication and baby-talk (bebe, boo, mimi) is the native word bin but also the most crowded; the breakout register is \"reassuring plus clinical\" — Babycare writes a care-grade standard into the name itself, and Kidswant's Chinese name plants a crown on the whole category. The trap is welding the name to \"infant\": the customer relationship stretches from pregnancy to school age, so leave headroom for the full parenting arc or the brand graduates when the child turns two.",
+      namingIdeas: [
+        "Reassurance imagery: soft, safe, gentle, nest — a new mother buys \"nothing can go wrong\", and softness in the name is the first layer of trust",
+        "Affectionate reduplication: bebe- and boo-style baby-talk reads warm instantly, but the bin is crowded — pair it with a distinctive root or vanish",
+        "Clinical-trust registers: care, pure, lab-flavored words — writing a care-grade standard into the name wins the ingredient-checking mother first",
+        "Category-authority words: king, select, prime — claim \"we know this category best\" outright; the signage self-endorses as the chain scales",
+        "Leave age headroom: the customer arc runs pregnancy to school age — a name welded to \"infant\" graduates with the baby's second birthday",
+      ],
+      cases: [
+        { name: "Babycare", takeaway: "baby + care, plainly: one word writes the care-grade standard into the brand — the category-word-plus-value-word structure that gives a new brand instant clinical presence" },
+        { name: "Kidswant (孩子王)", takeaway: "A crown planted on the category: the Chinese name reads like everyday moms'-group speech, and the kingly register matches the big-box format — scale and warmth rarely coexist this well" },
+        { name: "Pampers", takeaway: "The verb \"pamper\", pluralized: usage behavior elevated into an emotional promise, giving a functional product an affection premium that outlived every competitor" },
+        { name: "Carter's", takeaway: "A founder's name worn soft with age: possessive form reads like a family label sewn into the clothes — heritage trust that no coined word can shortcut" },
+        { name: "Mothercare", takeaway: "mother + care welded into one: the buyer and the promise in a single word — so literal it became the UK's category shorthand for decades" },
+      ],
+      pitfalls: [
+        "Welding the name to \"infant\": the relationship stretches from pregnancy to school age — an infant-only name loses the repurchase arc at age two",
+        "Reduplication into sameness: bebe, boo and mimi clones flood the vertical, and moms'-group retellings can't tell one from another",
+        "Faux-foreign names forcing an import feel: unpronounceable pseudo-European coinages now trigger fake-import suspicion rather than prestige",
+        "Clearing the trademark but not the connotations: baby contexts have zero tolerance for ambiguity — one negative homophone is a PR incident on schedule",
+      ],
+    },
+  },
+  kidsphoto: {
+    slug: "kidsphoto",
+    tlds: [
+      { tld: "com", zh: "家长决策要在妈妈群与点评平台间反复横跳，.com 的正规感让转发链接不掉价", en: "Parents cross-check group chats and review platforms — .com keeps the shared link credible everywhere" },
+      { tld: "photos", zh: "后缀直接声明摄影品类，作品集站身份一目了然", en: "The suffix states the photography category outright — a portfolio site at a glance" },
+      { tld: "studio", zh: "工作室气质直给，「有实体门店、有专业布景」的联想自带", en: "Studio credibility built in — implying a real space with professional sets" },
+    ],
+    zh: {
+      label: "儿童摄影",
+      title: "儿童摄影品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "儿童摄影品牌命名指南：时光意象、童趣词根、纪念感表达等 5 种思路，芳妮豆丁/格林童趣/小鬼当佳等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的儿童摄影域名。",
+      intro:
+        "儿童摄影卖的不是照片，是「留住这一年」的时光焦虑——孩子的百天、周岁、幼儿园毕业照都只有一次，名字必须先接住这份郑重感。但郑重不等于严肃：决策人是家长，体验者是孩子，名字要同时过两道关——家长听到觉得「值得托付」，孩子听到觉得「好玩想去」。这决定了儿童摄影命名的独特配方：童趣词根打底（豆丁、格林、小鬼），时光与纪念感点睛（成长、时光、印记）。命名素材上，童话语感是天然词库——格林童趣直接借格林童话的联想，一秒建立「梦幻布景」的预期；但要警惕堆砌「贝贝」「天使」式的通用甜词，全城影楼撞名的结果是家长在点评平台上根本搜不到你。连锁扩张的品牌还要预留成人化余量：亲子照、全家福、孕妇照都是同一批客户的延伸订单，名字锁死「童」字，客单价天花板就锁死了。",
+      namingIdeas: [
+        "时光纪念感：成长、时光、印记、纪年——家长买的是「留住这一年」，名字先接住这份郑重",
+        "童趣词根：豆丁、小鬼、糖果式的孩子气词汇，让孩子听到就想去，拍摄配合度从名字开始",
+        "童话借词：格林、爱丽丝式的经典童话联想，一秒建立「梦幻布景、故事感成片」的预期",
+        "叠字昵称化：像给孩子起小名一样起店名，妈妈群转述时自带亲切滤镜，但需搭配差异化字根",
+        "留出全家福余量：亲子照、孕妇照是同批客户的延伸单，名字锁死「童」字客单价就到顶了",
+      ],
+      cases: [
+        { name: "芳妮豆丁", takeaway: "洋名「芳妮」+ 儿语「豆丁」的混搭：前半段给家长听（品牌感），后半段给孩子听（亲切感），双受众命名的巧妙分工" },
+        { name: "格林童趣", takeaway: "借格林童话的公共联想：不用自己讲故事，四个字直接调用「梦幻、经典、安全」的童话资产——借词命名的教科书" },
+        { name: "小鬼当佳", takeaway: "谐音改造《小鬼当家》：电影梗自带记忆点，「佳」字又把片名扭回「拍得好」的行业承诺，一语双关的完成度极高" },
+        { name: "天真蓝", takeaway: "「天真」+「蓝」的通感组合：既是孩子的天真，又是天空的湛蓝，三个字给成片定了色调基调——文艺流儿童摄影的气质标杆" },
+        { name: "Little Nest", takeaway: "little + nest 的柔软意象：巢是安全感的原型符号，配合小写视觉与暖调布景，把「孩子在这里放松」写进名字" },
+      ],
+      pitfalls: [
+        "堆通用甜词：贝贝、天使、宝贝满城撞名，家长在点评平台搜到的是别家的差评",
+        "锁死「童」字：亲子照、孕妇照、全家福是同批客户的延伸订单，名字太窄客单价就到顶",
+        "文艺到看不懂业务：纯意境名配上没预算投广告的新店，家长刷到也不知道你是拍照的",
+        "只查商标没查点评平台：本地家长找影楼全靠点评搜索，同名老店的差评会精准砸到你头上",
+      ],
+    },
+    en: {
+      label: "Kids' photography",
+      title: "How to Name a Kids' Photography Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Kids' photography naming guide: keepsake imagery, playful word roots and fairy-tale borrowings, breakdowns of Fanny Dourdin/Little Nest and more, recommended TLDs and pitfalls — then hunt an available studio domain with AI.",
+      intro:
+        "Kids' photography doesn't sell photos — it sells relief from time anxiety: the hundred-day shoot, the first birthday, the kindergarten graduation each happen exactly once, and the name must first honor that gravity. But gravity isn't solemnity: the parent decides, the child experiences, so the name must clear two gates at once — \"worth entrusting\" to the parent's ear, \"sounds fun, want to go\" to the child's. That yields the category's peculiar formula: playful roots as the base (peanut, sprout, rascal), keepsake and time words as the accent (growing, moments, imprint). Fairy-tale borrowings are the native word bin — invoking Grimm or Wonderland conjures dreamy-set expectations in one second. The trap is piling on generic sweet words: angel- and bebe-style names collide across every studio in town, and parents searching review platforms simply can't find you. Chains should also reserve grown-up headroom: family portraits and maternity shoots are extension orders from the same customers, and a name welded to \"kids\" caps the ticket size for good.",
+      namingIdeas: [
+        "Keepsake registers: growing, moments, imprint — parents are buying \"keep this year forever\", and the name must honor that gravity first",
+        "Playful roots: sprout, rascal, candy-flavored words the child wants to visit — shoot cooperation starts with the name",
+        "Fairy-tale borrowings: Grimm- and Wonderland-adjacent words summon dreamy-set, storybook-frame expectations in one second",
+        "Nickname warmth: name the studio like you'd nickname a child — moms'-group retellings arrive pre-softened, but pair it with a distinctive root",
+        "Reserve family-portrait headroom: maternity and full-family shoots are same-customer extensions — a \"kids\"-welded name caps the ticket size",
+      ],
+      cases: [
+        { name: "Fanny Dourdin (芳妮豆丁)", takeaway: "A faux-foreign half for the parent (brand polish) plus baby-talk half for the child (instant warmth): dual-audience naming with an elegant division of labor" },
+        { name: "Green Fairy Tale (格林童趣)", takeaway: "Borrowing Grimm's public associations: four characters summon \"dreamy, classic, safe\" without telling a single story of their own — the textbook of borrowed-asset naming" },
+        { name: "Little Nest", takeaway: "little + nest, softness squared: the nest is the archetype of safety, and with lowercase styling and warm sets, \"your child relaxes here\" is written into the name" },
+        { name: "天真蓝 (Naive Blue)", takeaway: "A synesthetic blend: the child's innocence and the sky's blue in three characters, setting the tonal palette of the final photos from the name itself — the aesthetic benchmark of artful kids' studios" },
+        { name: "小鬼当佳", takeaway: "A homophone remix of Home Alone's Chinese title: the movie reference carries the memory, and the swapped character bends it into \"shoots done well\" — a rare fully-earned double meaning" },
+      ],
+      pitfalls: [
+        "Piling on generic sweet words: angel and bebe clones collide citywide, and review-platform searches surface a rival's complaints under your name",
+        "Welding to \"kids\": maternity and family portraits are same-customer extension orders — a too-narrow name caps the average ticket for good",
+        "Artful to the point of opacity: a pure-mood name on a studio with no ad budget means parents scroll past without knowing you take photos",
+        "Clearing the trademark but not the review platforms: local parents find studios by review search, and a name-twin's one-star history lands on you",
+      ],
+    },
+  },
+  giftcustom: {
+    slug: "giftcustom",
+    tlds: [
+      { tld: "com", zh: "礼品订单跨企业与个人两端，.com 的通吃正规感让报价单与购物车都立得住", en: "Gift orders span corporate and personal buyers — .com holds up on both the quote sheet and the shopping cart" },
+      { tld: "gifts", zh: "后缀直接声明礼品赛道，「这里是买礼物的地方」零解释", en: "The suffix states the gifting vertical outright — \"this is where you buy gifts\", zero explanation" },
+      { tld: "boutique", zh: "精品气质直给，定制业务的「非流水线」定位自带", en: "Boutique credibility built in — the not-mass-produced positioning of true customization" },
+    ],
+    zh: {
+      label: "礼品定制",
+      title: "礼品定制品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "礼品定制品牌命名指南：心意意象、仪式感词根、定制专属感等 5 种思路，野兽派/Things Remembered 等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的礼品品牌域名。",
+      intro:
+        "礼品定制的名字有个独特的传播场景：它会出现在礼物的包装与贺卡上，被收礼人看见——名字本身就是礼物的一部分。这决定了第一原则：名字要配得上「心意」二字，廉价感、批发味、流水线气息都是硬伤；送礼人挑的不只是商品，是「我为你专门找的」这份郑重。第二原则是接得住两端客户：企业礼品要的是报价单上的正规感，个人定制要的是购物车里的怦然心动，名字最好在「可靠」与「浪漫」之间找到平衡点。命名素材上，心意与记忆的意象（礼、念、忆、藏）是天然词库，仪式感词根（盒、匣、笺、印）能把「打开礼物的瞬间」写进名字；野兽派用一个反差词把花店做成了生活方式品牌，证明礼品赛道的命名上限远高于「XX 礼品公司」。要警惕的是「定制」二字本身——它是业务描述不是品牌资产，满街的「XX 定制」正在互相抵消。",
+      namingIdeas: [
+        "心意意象：念、忆、礼、藏——收礼人会看见名字，它必须配得上「专门为你」的郑重",
+        "仪式感词根：盒、匣、笺、印——把「拆开礼物的瞬间」写进名字，未拆封先有期待",
+        "反差造词：野兽派式的意外组合，在甜腻扎堆的礼品赛道里一个硬朗词反而最抢眼",
+        "双端平衡：企业单要报价单上的正规感，个人单要购物车里的心动感，名字在两者间找支点",
+        "警惕「定制」入名：它是业务描述不是品牌资产，满街「XX 定制」正在互相抵消辨识度",
+      ],
+      cases: [
+        { name: "野兽派", takeaway: "借野兽派画派的艺术联想：在甜腻扎堆的花礼赛道用一个硬朗词破局，从微博故事花店做到生活方式品牌——反差命名的天花板案例" },
+        { name: "Things Remembered", takeaway: "「被记住的物件」：把刻字定制的本质——对抗遗忘——直接写成名字，两个常见词组合出品类里最准的情感定位" },
+        { name: "礼物说", takeaway: "「说」字激活场景：礼物会替你说话，三个字把送礼的社交本质讲透，攻略内容+电商的业务形态都装得进去" },
+        { name: "Moleskine", takeaway: "借传奇笔记本的物件叙事：把「梵高与海明威用过的本子」的故事资产变成品牌，证明礼品的溢价来自叙事而非材质" },
+        { name: "初礼", takeaway: "「初」+「礼」两字：初次见面的礼、最初的心意，极简组合自带郑重感——中文礼品命名里字义密度的示范" },
+      ],
+      pitfalls: [
+        "「定制」直接入名：业务描述不是品牌资产，满街「XX 定制」在互相抵消辨识度",
+        "廉价感与批发味：名字带着义乌小商品气息，收礼人在包装上看见的一瞬间心意就打折",
+        "锁死单一品类：只写「花」「杯」「印」的名字，品类一扩张就得改名重来",
+        "只顾浪漫忘了报价单：企业礼品是大单来源，名字甜到发腻就进不了采购的供应商名录",
+      ],
+    },
+    en: {
+      label: "Custom gifts",
+      title: "How to Name a Custom Gifts Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Custom gifts brand naming guide: sentiment imagery, ritual word roots and contrast coinages, breakdowns of Beast/Things Remembered/Moleskine, recommended TLDs and pitfalls — then hunt an available gifts domain with AI.",
+      intro:
+        "A custom-gifts name has a distribution channel no other category enjoys: it appears on the wrapping and the card, seen by the recipient — the name is literally part of the gift. That sets the first principle: the name must live up to the sentiment; cheapness, wholesale flavor, or assembly-line vibes are disqualifying, because the giver isn't choosing a product but the gravity of \"I found this specifically for you\". The second principle is holding both ends of the market: corporate gifting wants quote-sheet respectability, personal customization wants shopping-cart flutter, and the best names balance reliable against romantic. On material: sentiment and memory imagery (keepsake, remember, treasure) is the native word bin, and ritual roots (box, seal, letter) write the unwrapping moment into the name itself. Beast (野兽派) built a lifestyle brand out of a flower shop with one contrarian word — proof the category's naming ceiling sits far above \"XX Gifts Co.\". The trap is the word \"custom\" itself: it's a service description, not a brand asset, and a street full of \"XX Custom\" names cancels each other out.",
+      namingIdeas: [
+        "Sentiment imagery: keepsake, remember, treasure — the recipient sees the name, and it must earn the gravity of \"specifically for you\"",
+        "Ritual roots: box, seal, letter, imprint — write the unwrapping moment into the name so anticipation starts before the ribbon comes off",
+        "Contrast coinages: a Beast-style hard word in a saccharine category — when everyone whispers sweetness, one bold word owns the shelf",
+        "Balance both ends: corporate orders need quote-sheet respectability, personal orders need cart-flutter — the name finds the fulcrum",
+        "Beware \"custom\" in the name: it's a service description, not a brand asset — a street of \"XX Custom\" names cancels each other out",
+      ],
+      cases: [
+        { name: "Beast (野兽派)", takeaway: "Borrowing Fauvism's art-history edge: one hard word broke the saccharine flower-gifting mold, scaling a Weibo storytelling florist into a lifestyle house — the ceiling case of contrast naming" },
+        { name: "Things Remembered", takeaway: "The essence of engraving — resisting forgetting — written directly as the name: two everyday words landing the most precise emotional positioning in the category" },
+        { name: "Moleskine", takeaway: "Object-narrative as brand: the storied notebook of Van Gogh and Hemingway proves gift premium flows from narrative, not material" },
+        { name: "礼物说 (Liwushuo)", takeaway: "\"The gift speaks\": three characters nailing gifting's social essence — the gift says what you can't — roomy enough to hold both content guides and commerce" },
+        { name: "Etsy", takeaway: "A short, meaning-free coinage: four letters with no category weld, letting a handmade marketplace stretch across every gift occasion without ever renaming" },
+      ],
+      pitfalls: [
+        "Putting \"custom\" in the name: a service description, not a brand asset — the street of \"XX Custom\" names cancels each other out",
+        "Cheapness and wholesale flavor: a commodity-market vibe on the wrapping discounts the sentiment the instant the recipient reads it",
+        "Welding to one product: a name that only says flowers, mugs or stamps forces a rename with the first catalog expansion",
+        "All romance, no quote sheet: corporate gifting is where the big orders live, and a name too saccharine never makes the procurement vendor list",
+      ],
+    },
+  },
+  petgrooming: {
+    slug: "petgrooming",
+    tlds: [
+      { tld: "com", zh: "本地宠物服务同样吃口碑与搜索，.com 让点评页与预约链接都正规可信", en: "Local pet services live on reviews and search — .com keeps the listing and booking link credible" },
+      { tld: "dog", zh: "后缀直接声明犬类主场，遛狗人群一眼认同", en: "The suffix declares the dog-first identity outright — instantly recognized by the leash crowd" },
+      { tld: "pet", zh: "宠物品类身份直给，全品种服务的余量也留足", en: "Pet-category identity made explicit, with headroom for every species you'll ever groom" },
+    ],
+    zh: {
+      label: "宠物美容",
+      title: "宠物美容品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "宠物美容品牌命名指南：拟声昵称、萌系意象、专业信任感等 5 种思路，酷迪/宠物家/PetSmart 等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的宠物美容域名。",
+      intro:
+        "宠物美容的付费人是主人，体验者是毛孩子，而评价标准是「照片好不好看」——洗剪吹的成果最终以九宫格形式发到朋友圈，名字从一开始就要为这条传播链服务。第一要求是萌而不腻：拟声与昵称词（汪、喵、毛毛）是天然词库，能让铲屎官一眼会心；但全城宠物店都在汪喵起名，纯萌系已经撞车到失效，破局点是「萌+专业」的复合气质——主人把毛孩子交出去两小时，名字里得有「它在这里很安全」的暗示。第二要求是本地搜索友好：宠物美容是三公里生意，大众点评与地图搜索是主要入口，名字要短、要好打字、要在列表里一眼跳出来。连锁化的品牌还要注意品种余量：只写「犬」或「猫」的名字，业务扩到异宠美容时就尴尬了——宠物家用一个「家」字把所有物种和所有服务都装了进去。",
+      namingIdeas: [
+        "拟声昵称：汪、喵、毛毛——铲屎官的黑话体系自带亲切滤镜，但需搭配差异字根避免全城撞名",
+        "萌系意象：爪印、尾巴、蓬蓬——把「洗完蓬松可爱」的成果预期写进名字，照片传播链从店名开始",
+        "专业信任感：主人交出毛孩子两小时，名字里要有「它在这里很安全」的暗示——护理、专护词根都好用",
+        "人格化店主：给店起个「师傅感」的名字（Tony 老师式），美容师的手艺人设让预约指名率更高",
+        "留出品种余量：只写「犬」「猫」的名字，扩到异宠或寄养时就尴尬——「家」「星球」式的容器词更耐用",
+      ],
+      cases: [
+        { name: "宠物家", takeaway: "一个「家」字装下所有物种与服务：从美容到寄养都不违和，容器词命名的示范——连锁扩张时名字从不掉队" },
+        { name: "酷迪", takeaway: "cool + dog 的音译混血：两个字念着利落，「酷」字把宠物美容从「洗澡」升维到「造型」，客单价的想象空间就在名字里" },
+        { name: "PetSmart", takeaway: "pet + smart 的直白组合：聪明既指宠物也指主人的消费选择，品类词+价值词让大卖场业态自带「专业推荐」气场" },
+        { name: "Petco", takeaway: "pet + company 缩写成四个字母：短到收银小票和 App 图标都清爽，宠物零售的「无意义短名」路线代表" },
+        { name: "毛孩子", takeaway: "直接借用铲屎官黑话：主人对宠物的称呼变成店名，进店前情感就已就位——社群语言资产化的典型打法" },
+      ],
+      pitfalls: [
+        "纯萌系撞车：全城都叫汪汪喵喵，点评列表里毫无辨识度，萌必须搭配差异化字根",
+        "只萌不专业：主人要把毛孩子交出去两小时，名字甜而无信任感，第一单就难成交",
+        "锁死单一品种：只写「犬」的名字扩到猫与异宠就尴尬，容器词比品种词耐用",
+        "忽略本地搜索：宠物美容是三公里生意，名字难打字难拼写，地图搜索里就是隐身",
+      ],
+    },
+    en: {
+      label: "Pet grooming",
+      title: "How to Name a Pet Grooming Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Pet grooming brand naming guide: onomatopoeic nicknames, fluff imagery and care-trust registers, breakdowns of PetSmart/Petco and more, recommended TLDs and pitfalls — then hunt an available grooming domain with AI.",
+      intro:
+        "In pet grooming the payer is the owner, the experiencer is the furry client, and the success metric is \"how good do the photos look\" — a wash-and-trim ends its journey as a nine-grid post on social media, and the name should serve that distribution chain from day one. Requirement one: cute without cloying. Onomatopoeia and pet-parent slang (woof, meow, floof) is the native word bin and earns an instant knowing smile — but every shop in town is named some variant of Woof & Meow, so pure cuteness has collided into noise. The breakout register is cute-plus-professional: an owner is handing over a family member for two hours, and the name needs a whisper of \"they're safe here\". Requirement two: local-search friendly. Grooming is a three-kilometer business living on map and review-platform searches, so the name must be short, typeable, and able to jump out of a results list. Chains should also mind species headroom — a dog-only or cat-only name gets awkward when exotic pets and boarding arrive; a container word like \"home\" or \"planet\" holds every species you'll ever groom.",
+      namingIdeas: [
+        "Onomatopoeic nicknames: woof, meow, floof — pet-parent slang arrives pre-warmed, but pair it with a distinctive root or join the citywide collision",
+        "Fluff imagery: paw prints, tails, clouds — write the fresh-from-the-bath fluffiness into the name; the photo chain starts at the shop sign",
+        "Care-trust registers: the owner hands over a family member for two hours — groom, care and spa roots whisper \"they're safe here\"",
+        "Groomer-as-character: a name with artisan personality (the celebrity-stylist register) turns the groomer into someone clients book by name",
+        "Species headroom: dog-only names get awkward at the first exotic-pet appointment — container words like home or planet never run out of room",
+      ],
+      cases: [
+        { name: "PetSmart", takeaway: "pet + smart, plainly: the smartness flatters both the animal and the owner's choice — category word plus value word giving a big-box format a professional-recommendation aura" },
+        { name: "Petco", takeaway: "pet + company compressed to five letters: short enough to stay crisp on receipts and app icons — the meaning-light short-name route of pet retail" },
+        { name: "宠物家 (Pet's Home)", takeaway: "One container word holding every species and service: grooming to boarding without friction — the demonstration case of container naming that never lags the chain's expansion" },
+        { name: "酷迪 (Kudi)", takeaway: "A cool-plus-dog transliteration blend: two crisp characters upgrading grooming from \"a bath\" to \"styling\" — the ticket-size headroom is written into the name" },
+        { name: "毛孩子 (Fur Kid)", takeaway: "Pet-parent slang lifted straight onto the signboard: the owner's own word for their pet becomes the shop — community language converted into brand equity" },
+      ],
+      pitfalls: [
+        "Pure-cute collision: a city full of Woof & Meow variants has zero list-visibility — cuteness must ride a distinctive root",
+        "Cute without trust: the owner is handing over a family member for two hours, and a sweet-but-flimsy name loses the first booking",
+        "Welding to one species: a dog-only name gets awkward at the first cat or exotic-pet appointment — container words outlast species words",
+        "Ignoring local search: grooming is a three-kilometer business, and a hard-to-type name is simply invisible in map results",
+      ],
+    },
+  },
+  housekeeping: {
+    slug: "housekeeping",
+    tlds: [
+      { tld: "com", zh: "家政订单从小程序到央企保洁标书都有，.com 的通吃正规感两端都立得住", en: "Housekeeping orders run from mini-app bookings to corporate cleaning tenders — .com holds up at both ends" },
+      { tld: "family", zh: "后缀直接声明家庭场景，「进家门的服务」信任感自带", en: "The suffix declares the family context outright — built-in trust for a service that enters the home" },
+      { tld: "services", zh: "服务业属性直给，多品类家政的余量也留足", en: "Service-sector identity made explicit, with headroom for every home service you'll add" },
+    ],
+    zh: {
+      label: "家政服务",
+      title: "家政服务品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "家政服务品牌命名指南：信任意象、家的语感、阿姨人格化等 5 种思路，天鹅到家/好慷在家等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的家政品牌域名。",
+      intro:
+        "家政是「让陌生人进家门」的生意，名字的第一使命不是好听，是解除戒备——保洁阿姨、月嫂、育儿嫂要进入的是客户最私密的空间，名字里的每个字都在替公司做背景审查。「家」「到家」「在家」是这个赛道的高频词根，不是没创意，而是刚需：它们一秒钟声明服务场景，把「上门」这个信任门槛最高的动作正常化。第二使命是撑住双边平台的两端：客户端要「靠谱、专业、出了事有人负责」的公司感，阿姨端要「体面、被尊重」的职业感——天鹅到家用「天鹅」给家政劳动者一个优雅的职业意象，这在招工竞争激烈的家政行业本身就是获客武器。要警惕的是「保洁」「阿姨」直接入名：业务会从保洁扩到月嫂、收纳、养老照护，名字锁死单一工种，扩张时就得改名重来。",
+      namingIdeas: [
+        "信任意象：管家、卫士、安心——陌生人要进家门，名字里的每个字都在替公司做背景审查",
+        "家的语感：到家、在家、家人——一秒声明上门场景，把信任门槛最高的动作正常化",
+        "职业尊重感：天鹅式的优雅意象给劳动者体面，双边平台的阿姨端招募也靠名字加分",
+        "管家升维：从「打扫」到「管理一个家」，管家词根把客单价从小时费升到年度服务包",
+        "留出工种余量：保洁、月嫂、收纳、养老照护是同一张服务网，名字锁死单一工种就得改名",
+      ],
+      cases: [
+        { name: "天鹅到家", takeaway: "「天鹅」给家政劳动者一个优雅的职业意象：客户端读到品质，阿姨端读到体面——双边平台命名两头兼顾的示范" },
+        { name: "好慷在家", takeaway: "「在家」直接声明服务场景：慷有慷慨爽利的语感，四个字把「上门服务做得大方专业」讲完——场景词命名的标准打法" },
+        { name: "Merry Maids", takeaway: "merry + maids 的头韵组合：把清洁劳动注入愉悦感，特许经营五十年验证了「情绪价值入名」在家政行业的耐久度" },
+        { name: "Handy", takeaway: "一个词说清「顺手、能干、随叫随到」：形容词直接当品牌，家政平台命名里「无摩擦感」的极简代表" },
+        { name: "管家帮", takeaway: "「管家」升维+「帮」的组织感：从打扫升到管理一个家，帮字又带着人多可靠的联想——客单价天花板被名字先抬高了" },
+      ],
+      pitfalls: [
+        "「保洁」「阿姨」直接入名：业务扩到月嫂、收纳、养老照护时，单一工种的名字就得改名重来",
+        "廉价感压过信任感：家政的痛点是「敢不敢让 TA 进门」，名字先透出便宜就先输掉背景审查",
+        "忽略阿姨端感受：双边平台招工比获客更难，名字让劳动者觉得掉价，供给端就先崩了",
+        "只查商标没查本地口碑：家政靠社区口碑与物业推荐，同名小公司的纠纷会精准转嫁到你头上",
+      ],
+    },
+    en: {
+      label: "Housekeeping services",
+      title: "How to Name a Housekeeping Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Housekeeping brand naming guide: trust imagery, at-home registers and worker-dignity naming, breakdowns of Swan Daojia/Merry Maids/Handy, recommended TLDs and pitfalls — then hunt an available housekeeping domain with AI.",
+      intro:
+        "Housekeeping is the business of letting a stranger into your home, so the name's first job isn't beauty — it's disarming suspicion. The cleaner, the confinement nanny, the organizer are entering the client's most private space, and every character in the name is running a background check on the company's behalf. \"Home\", \"at home\" and \"to your door\" are the vertical's high-frequency roots not for lack of creativity but by necessity: they declare the service context in one second and normalize the highest-trust action in local services. The second job is holding up both sides of a two-sided platform: the client side wants corporate accountability — reliable, professional, someone answerable when things break — while the worker side wants dignity. Swan Daojia hands domestic workers an elegant professional image with one word, and in an industry where recruiting workers is harder than finding clients, that's an acquisition weapon in itself. The trap is welding \"cleaning\" or \"maid\" into the name: the business will stretch from cleaning to confinement care, organizing and elder care, and a single-trade name forces a rename at the first expansion.",
+      namingIdeas: [
+        "Trust imagery: steward, guardian, assured — a stranger is entering the home, and every word in the name runs a background check for you",
+        "At-home registers: to-your-door, at-home, family words declare the context in one second and normalize the highest-trust action in local services",
+        "Worker dignity: a swan-style elegant image gives domestic labor its professional pride — in a supply-constrained industry, the name recruits",
+        "Steward upgrade: from \"cleaning\" to \"managing a household\" — butler and steward roots lift the ticket from hourly fees to annual service plans",
+        "Trade headroom: cleaning, confinement care, organizing and elder care share one service network — a single-trade name renames itself at the first expansion",
+      ],
+      cases: [
+        { name: "Swan Daojia (天鹅到家)", takeaway: "A swan handed to domestic workers as their professional image: the client reads quality, the worker reads dignity — the demonstration case of naming both sides of a two-sided platform" },
+        { name: "Merry Maids", takeaway: "Alliteration injecting joy into cleaning labor: fifty franchise years proving that emotional value in the name endures in home services" },
+        { name: "Handy", takeaway: "One adjective covering capable, convenient, on-call: the frictionless-minimalist benchmark of home-services platform naming" },
+        { name: "好慷在家 (Haokang Zaijia)", takeaway: "\"At home\" declaring the service context outright, with a generous, brisk-sounding first word: four characters saying \"door-to-door service, done handsomely\" — the standard play of context-word naming" },
+        { name: "管家帮 (Guanjiabang)", takeaway: "Steward upgraded plus the organized-crew connotation: from scrubbing floors to managing a household, with strength-in-numbers reliability — the ticket-size ceiling raised by the name itself" },
+      ],
+      pitfalls: [
+        "Welding \"cleaning\" or \"maid\" into the name: the business stretches to confinement care, organizing and elder care — a single-trade name renames itself",
+        "Cheapness overpowering trust: the category's core anxiety is \"do I dare let them in\" — a bargain-flavored name fails the background check first",
+        "Ignoring the worker side: recruiting is harder than client acquisition, and a name that demeans the labor collapses the supply side first",
+        "Clearing the trademark but not local reputation: housekeeping runs on community word of mouth, and a name-twin's disputes transfer straight to you",
+      ],
+    },
+  },
+  kidsplayground: {
+    slug: "kidsplayground",
+    tlds: [
+      { tld: "com", zh: "亲子消费决策在妈妈群与点评平台完成，.com 让团购链接与会员卡都正规可信", en: "Family spending decisions happen in group chats and review platforms — .com keeps the deal link and membership card credible" },
+      { tld: "fun", zh: "后缀直接声明快乐属性，孩子看到就想去的气质自带", en: "The suffix declares the fun outright — the \"I want to go\" pull built into the domain" },
+      { tld: "family", zh: "亲子场景身份直给，「全家一起来」的定位零解释", en: "Family-context identity made explicit — \"bring the whole family\" with zero explanation" },
+    ],
+    zh: {
+      label: "亲子乐园",
+      title: "亲子乐园品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "亲子乐园品牌命名指南：快乐意象、世界感造词、安全暗示等 5 种思路，meland/奈尔宝/莫莉幻想等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的亲子乐园域名。",
+      intro:
+        "亲子乐园的名字要同时通过两场考试：孩子的「想去考试」和家长的「放心考试」。孩子听到名字要眼睛发亮——快乐、梦幻、冒险的联想缺一不可；家长看到名字要联想到安全垫、消毒记录和明码标价的年卡。这决定了命名的黄金配方：梦幻世界感打底，安全专业感兜底。命名素材上，「世界感」造词是头部品牌的共同选择——meland、奈尔宝、莫莉幻想都在暗示「进门就是另一个世界」，把两百平的室内场馆讲成一个宇宙，是这个行业溢价能力的来源。第二个抓手是 IP 化人格：给乐园一个角色名（莫莉、奈尔），孩子对角色的依恋会转化为「还要去找莫莉玩」的复购请求——孩子才是复购的真正决策人。要警惕的是「儿童乐园」四个字直接入名：它是品类描述不是品牌，商场里每层楼都有一个「XX 儿童乐园」，家长根本记不住你是哪家。",
+      namingIdeas: [
+        "世界感造词：land、乐园、幻想——把两百平场馆讲成一个宇宙，「进门就是另一个世界」是溢价的来源",
+        "IP 角色人格：给乐园起个角色名，孩子对角色的依恋会变成「还要去找它玩」的复购请求",
+        "快乐直给词：蹦、跳、闹、乐——孩子听到眼睛发亮的动词，去哪儿玩的家庭会议上就赢了",
+        "安全暗示兜底：家长在扫码买年卡前要的是放心，柔软、守护系词根在名字里先垫一层安全垫",
+        "警惕品类词入名：「XX 儿童乐园」是描述不是品牌，商场每层都有一个，家长记不住你是哪家",
+      ],
+      cases: [
+        { name: "meland", takeaway: "me + land 的极简造词：「属于我的世界」四个字母讲完，小写视觉自带高端感——世界感命名的教科书结构" },
+        { name: "奈尔宝", takeaway: "NeoBio 的音译再造：三个字念着像童话角色名，「宝」字又落回中文亲子语感——外文基因与本土温度的平衡示范" },
+        { name: "莫莉幻想", takeaway: "角色「莫莉」+「幻想」：IP 人格前置，孩子记住的不是场馆是朋友，「还要去找莫莉」就是复购的语言形态" },
+        { name: "Chuck E. Cheese", takeaway: "把吉祥物老鼠直接当店名：角色即品牌五十年，孩子的生日会指名权证明了 IP 命名在亲子行业的复利" },
+        { name: "KidZania", takeaway: "kid + zania 的国度感造词：「孩子的国家」定位直接写进名字，职业体验业态配上国名语感，门票就是签证——概念完整度的天花板" },
+      ],
+      pitfalls: [
+        "品类词直接入名：「XX 儿童乐园」满商场都是，家长记不住你是哪家，团购列表里毫无辨识度",
+        "只讨好孩子忘了家长：名字疯闹有余安心不足，扫码买年卡的那只手就会犹豫",
+        "世界感有名无实：名字讲宇宙场馆只有滑梯，预期落差直接变成点评平台的差评",
+        "IP 角色没做版权检查：角色名撞了动画片版权，最值钱的品牌资产一夜变成侵权风险",
+      ],
+    },
+    en: {
+      label: "Kids' playgrounds",
+      title: "How to Name a Kids' Playground Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Kids' playground naming guide: world-building coinages, mascot personas and safety cues, breakdowns of meland/KidZania/Chuck E. Cheese, recommended TLDs and pitfalls — then hunt an available playground domain with AI.",
+      intro:
+        "A kids' playground name must pass two exams at once: the child's \"I want to go\" test and the parent's \"I feel safe\" test. The child should light up on hearing it — joy, fantasy and adventure all implied; the parent should subconsciously picture padded floors, sanitation logs and transparently priced annual passes. That yields the golden formula: world-building fantasy as the base, safety-and-professionalism as the floor. On material: \"world\" coinages are the shared choice of every head brand — meland, NeoBio and Molly Fantasy all whisper \"step through the door into another universe\", and talking a two-hundred-square-meter indoor venue into a cosmos is precisely where the category's pricing power comes from. The second lever is mascot personas: give the park a character name and the child's attachment converts into \"I want to visit Molly again\" — and the child, not the parent, is the real repurchase decision-maker. The trap is putting \"kids' playground\" itself in the name: it's a category description, not a brand — every mall floor has one, and parents simply cannot remember which one you are.",
+      namingIdeas: [
+        "World-building coinages: -land, -topia, fantasy — talk two hundred square meters into a universe; \"another world inside\" is where pricing power lives",
+        "Mascot personas: name the park after a character, and the child's attachment becomes \"I want to visit them again\" — the child decides the repurchase",
+        "Direct-joy verbs: bounce, hop, romp — words that make a child's eyes light up win the family's where-to-go negotiation on the spot",
+        "Safety cues as the floor: before scanning to buy the annual pass, the parent needs reassurance — soft and guardian roots lay the padded floor in the name",
+        "Beware category words: \"XX Kids' Playground\" is a description, not a brand — every mall floor has one, and parents can't remember which is yours",
+      ],
+      cases: [
+        { name: "meland", takeaway: "me + land in four lowercase letters: \"a world of my own\" said completely, with the lowercase styling carrying the premium feel — the textbook structure of world-building coinage" },
+        { name: "KidZania", takeaway: "kid + a nation-sounding suffix: \"the country of children\" written into the name, where the role-play format makes every ticket a visa — the ceiling of concept-complete naming" },
+        { name: "Chuck E. Cheese", takeaway: "The mascot mouse as the brand itself for fifty years: birthday parties booked by the character's name — proof of the compounding returns of persona naming in family entertainment" },
+        { name: "Molly Fantasy (莫莉幻想)", takeaway: "Character first, venue second: the child remembers a friend, not a facility, and \"visit Molly again\" is what repurchase sounds like in a child's words" },
+        { name: "NeoBio (奈尔宝)", takeaway: "A transliteration rebuilt to sound like a storybook character in Chinese, with a warm closing syllable — the balance demonstration between foreign DNA and local family warmth" },
+      ],
+      pitfalls: [
+        "Category words as the name: malls are full of \"XX Kids' Playground\" — parents can't remember which one you are, and deal lists show zero distinction",
+        "Charming the child, forgetting the parent: all romp and no reassurance, and the hand scanning to buy the annual pass hesitates",
+        "World-building the name but not the venue: a cosmos in the name over a single slide converts expectation gaps straight into one-star reviews",
+        "Skipping the mascot rights check: a character name colliding with an animation IP turns your most valuable brand asset into infringement risk overnight",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

@@ -179,4 +179,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "retrofit", zh: "节能改造", en: "Energy retrofits" },
   { slug: "hvac", zh: "暖通空调", en: "HVAC services" },
   { slug: "watertreatment", zh: "水处理环保", en: "Water treatment" },
+  { slug: "babystore", zh: "母婴用品", en: "Baby & maternity stores" },
+  { slug: "kidsphoto", zh: "儿童摄影", en: "Kids' photography" },
+  { slug: "giftcustom", zh: "礼品定制", en: "Custom gifts" },
+  { slug: "petgrooming", zh: "宠物美容", en: "Pet grooming" },
+  { slug: "housekeeping", zh: "家政服务", en: "Housekeeping services" },
+  { slug: "kidsplayground", zh: "亲子乐园", en: "Kids' playgrounds" },
 ];
