@@ -1107,6 +1107,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个管道疏通与水电维修品牌，寓意「马上能来、明码标价、药到病除」；气质要正规专业不像游击队、电话里报得清楚、印在工服上体面可信；场景是「附近疏通下水道」的应急搜索、物业推荐名录和业主群转介绍里都立得住。",
     en: "A plumbing and home repair brand. The name should feel like we can come now, price upfront, cured on the first visit; the vibe is licensed professionalism far from fly-by-night, spellable over the phone, decent printed on a work uniform; it must stand in emergency \"plumber near me\" searches, property-manager referral lists, and homeowner group recommendations.",
   },
+  {
+    slug: "travelagency",
+    labelZh: "旅行社",
+    labelEn: "Travel agencies",
+    zh: "一个旅行社与定制游品牌，寓意「把假期放心托付给懂行的人」；气质要既装得下远方的辽阔又给出履约的踏实、好念好搜、电话里报得清楚；场景是「目的地几日游」的搜索、OTA 店铺列表和「上次找 XX 安排得特别好」的转介绍里都立得住，印在领队旗子上也体面。",
+    en: "A travel agency and custom tour brand. The name should feel like a vacation entrusted to someone who knows the way; the vibe holds both the width of the faraway and the weight of the promise, easy to say and search, spellable over the phone; it must stand in destination-plus-days searches, OTA storefront lists, and \"they arranged everything perfectly\" referrals — and look decent on the tour leader's flag.",
+  },
+  {
+    slug: "teahouse",
+    labelZh: "茶馆茶室",
+    labelEn: "Tea houses & tea brands",
+    zh: "一个茶馆与茶品牌，寓意「进来把节奏调慢的一盏茶」；气质要经得起老茶客盘问又卸下年轻人的门槛感、有底蕴不堆禅意、好念好记；场景是「附近适合谈事的茶馆」的搜索、伴手礼礼盒和「他家岩茶很正」的圈层口碑里都立得住，印在茶饼棉纸上压得住岁月。",
+    en: "A tea house and tea brand. The name should feel like a cup that grants permission to slow down; the vibe survives a connoisseur's cross-examination yet lowers the threshold for younger drinkers, deep without zen-word pileups, easy to say and remember; it must stand in \"quiet tea house for a meeting\" searches, on gift-box lids, and in circle-of-trust word of mouth — and press with dignity onto a tea-cake wrapper.",
+  },
+  {
+    slug: "petcafe",
+    labelZh: "宠物咖啡",
+    labelEn: "Pet cafés",
+    zh: "一个宠物咖啡馆品牌，寓意「被毛茸茸包围的三十分钟治愈」；气质要萌得干净不油腻、念出来嘴角就上扬、两三个字好念好转述；场景是「附近猫咖」的搜索、探店视频标题和「那家店的猫超亲人」的口碑里都第一个被想起，印在拍立得相框角上也不抢戏。",
+    en: "A pet café brand. The name should feel like thirty minutes wrapped in fur; the vibe is clean cuteness without greasy puns, lifting the corners of the mouth on pronunciation, two or three syllables that retell at zero cost; it must surface first in \"cat café near me\" searches, visit-vlog titles, and \"their cats actually like people\" word of mouth — and sit politely in the corner of an instant-photo frame.",
+  },
+  {
+    slug: "weddingphoto",
+    labelZh: "婚纱摄影",
+    labelEn: "Wedding photography",
+    zh: "一个婚纱摄影与婚礼跟拍品牌，寓意「把人生最重要的一天封存成永远」；气质要审美在线又郑重其事、有签名感不落俗套；场景是「城市+婚纱照」的搜索、婚博会展位和新娘闺蜜群的转介绍里都立得住，印在相册烫金封面上要经得起几十年的翻看。",
+    en: "A wedding photography brand. The name should feel like the most important day sealed into permanence; the vibe is impeccable taste with appropriate gravity, a signature feel free of romance clichés; it must stand in city-plus-wedding-photos searches, expo booths, and the bridesmaids' group chat — and carry weight foil-stamped on an album cover opened for decades.",
+  },
+  {
+    slug: "footspa",
+    labelZh: "足疗采耳",
+    labelEn: "Foot spas & wellness lounges",
+    zh: "一个足疗采耳与养生馆品牌，寓意「进来就能卸下一天疲惫的松弛」；气质要干净敞亮有手艺传承感、雅而不贵、家庭客群看着放心；场景是「附近足疗」的搜索、商场导视牌和「那家手法很专业」的口碑里都立得住，印在储值会员卡上拿得出手。",
+    en: "A foot spa and wellness lounge brand. The name should feel like a whole day's fatigue set down at the door; the vibe is clean and open with craft-lineage depth, refined without pricing out the value crowd, reassuring to families; it must stand in \"foot massage near me\" searches, mall directories, and \"their technique is genuinely professional\" word of mouth — and look respectable on a stored-value membership card.",
+  },
+  {
+    slug: "parcel",
+    labelZh: "快递驿站",
+    labelEn: "Parcel stations & pickup points",
+    zh: "一个快递驿站与社区代收品牌，寓意「东西放这儿，放心」；气质要像老邻居打招呼般亲切、两三个字隔着马路可认、写进取件短信落款不占字数；场景是小区门口的灯箱、业主群的日常提问和「去 XX 取个件」的口头禅里都第一个被想起。",
+    en: "A parcel station and community pickup brand. The name should feel like leave it here, rest easy; the vibe is a neighbor's greeting, two or three syllables legible across the street and free inside an SMS signature; it must be the first name recalled at the gate lightbox, in homeowners' group chats, and in the daily \"I'll grab it from X\" refrain.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

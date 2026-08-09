@@ -9457,6 +9457,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  travelagency: {
+    slug: "travelagency",
+    tlds: [
+      { tld: "com", zh: "预付大额旅费的信任底线，旅行社品牌的默认选择", en: "The trust baseline when customers prepay big trip budgets — the default for a travel agency" },
+      { tld: "travel", zh: "「旅行」行业后缀，业务定位从域名就说清", en: "The travel industry suffix — positioning stated right in the domain" },
+      { tld: "tours", zh: "「跟团游/线路」直给，产品型旅行社零解释成本", en: "Tours, said plainly — zero explanation for itinerary-led agencies" },
+    ],
+    zh: {
+      label: "旅行社",
+      title: "旅行社与定制游品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "旅行社与定制游命名指南：目的地梦想、专业向导人设、行程确定性等 5 种思路，携程/Intrepid/Abercrombie & Kent 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的旅行社域名。",
+      intro:
+        "旅行社的名字要在「想去」与「敢订」之间架桥：顾客刷到风景大片时心动的是远方，掏钱那一刻担心的是「这家社靠不靠谱」——名字要同时装下梦想的辽阔与履约的踏实。第一素材库是目的地梦想：远方、环球、启程、地平线——旅行卖的是对另一种生活的想象，名字先要把人带到出发前夜的兴奋里；携程的「携程」两个字（携手同程）把陪伴感写进了名字。第二个抓手是专业向导人设：定制游与小众线路的本质是「把假期托付给一个懂行的人」——「X 游侠」「向导」「管家」式的名字给出熟人带路的安心感，Intrepid（无畏）用一个形容词把探险队长的人设立住。第三个抓手是行程确定性：旅行社行业的信任赤字来自低价团、购物店与货不对板——名字与承诺一体化（纯玩、无自费、小团）能直接对冲行业负资产；高端定制社则反向操作，用创始人姓氏或双人名（Abercrombie & Kent 式）传递「老牌世家」的手作感。要注意业务分层：跟团游拼性价比与线路，定制游拼服务与圈层，商务差旅拼资质与账期——三种生意三种名字气质，别用九块九特价团的名字去接高净值家庭的南极订单。场景上，旅行社活在「XX 目的地 几日游」的搜索、朋友圈的行程海报和「上次找 XX 安排得特别好」的转介绍里。渠道上，名字要在 OTA 店铺列表里一眼可认、电话里报得清楚，印在领队旗子上要体面——那面小旗子举起来，就是品牌在景区里的移动广告。",
+      namingIdeas: [
+        "目的地梦想：远方、环球、启程、地平线——旅行卖的是想象，名字先把人带到出发前夜的兴奋里",
+        "向导人设：游侠、向导、管家——定制游是把假期托付给懂行的人，人格化给出熟人带路的安心感",
+        "确定性承诺：纯玩、小团、无自费——名字与承诺一体化，对冲低价团与购物店的行业信任赤字",
+        "世家手作感：创始人姓氏、双人名——高端定制用「老牌世家」的签名感说服高净值客群",
+        "业务留边界：跟团拼线路、定制拼圈层、差旅拼资质——名字气质要与客单价匹配，别混用",
+      ],
+      cases: [
+        { name: "携程", takeaway: "「携手同程」的陪伴感：两个字把「一路有人管」的核心承诺说清——从订票工具到旅行管家的扩张全被这个名字兜住，中文旅行命名的标杆" },
+        { name: "Intrepid", takeaway: "「无畏的」一个形容词立住探险队长人设：小团探险游的气质从名字就开始筛选客群——形容词命名把「我们是谁」变成「你是谁」" },
+        { name: "Abercrombie & Kent", takeaway: "双人名的世家签名感：高端定制游用「两位先生的手作行程」传递半个世纪的老牌信任——姓氏命名在奢侈旅行里就是品质保证书" },
+        { name: "Contiki", takeaway: "借 Kon-Tiki 木筏远征的探险典故：青年旅行团把「一场传奇远征」写进名字——典故词自带故事，围炉夜话的谈资从品牌名开始" },
+        { name: "飞猪", takeaway: "「会飞的猪」的反差萌：把 OTA 的冰冷交易翻译成年轻人的说走就走——动物 IP 的亲切感+「猪」的慵懒反差，旅行平台里最会撒娇的名字" },
+      ],
+      pitfalls: [
+        "低价团气质：「特价」「折扣」进名字——旅行的信任赤字本就来自低价团，名字先自降身价就再难承接定制单",
+        "锁死单一目的地：名字绑死「XX 岛专线」，目的地政策一变全盘重来——留出「从海岛到全球」的扩张边界",
+        "大词空转：环球、国际、假日满街都是——工商注册查重先撞车，搜索结果里永远挤不进第一屏",
+        "电话里报不清：跟团咨询大量发生在电话与微信里——谐音字、生僻字每一次拼写解释都是流失的订单",
+      ],
+    },
+    en: {
+      label: "Travel agencies",
+      title: "How to Name a Travel Agency or Custom Tour Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Travel agency naming guide: destination dreaming, guide personas, itinerary certainty, breakdowns of Intrepid/Contiki/Abercrombie & Kent, recommended TLDs and pitfalls — then hunt an available travel agency domain with AI.",
+      intro:
+        "A travel agency's name must bridge \"I want to go\" and \"I dare to book\": scrolling a landscape reel, the customer falls for the faraway; at checkout, they worry whether this agency will actually deliver — the name has to hold both the width of the dream and the weight of the promise. The first material bin is destination dreaming: horizon, voyage, odyssey, wander — travel sells the imagination of another life, and the name should put people in the night-before-departure thrill. The second lever is the guide persona: custom trips and off-path itineraries are at bottom entrusting your vacation to someone who knows the way — guide, sherpa and butler-style names carry the reassurance of a friend leading the trail, and Intrepid planted an expedition-leader persona with a single adjective. The third is itinerary certainty: the trade's trust deficit comes from bait-price tours, forced shopping stops and photos that oversell — a name fused with a promise (no shopping stops, small groups, all-inclusive) directly offsets the category's baggage; luxury outfitters run the opposite play, using founders' surnames (the Abercrombie & Kent register) to signal old-house craftsmanship. Mind the business layers: packaged tours compete on routes and value, bespoke travel on service and tribe, corporate travel on credentials and payment terms — three businesses, three registers; don't send a flash-sale name to pitch an Antarctica charter. On scenarios: agencies live in \"destination + days\" searches, itinerary posters shared to friends, and \"they arranged everything perfectly\" referrals. On channels: the name must stand out in OTA storefront lists, survive the phone call, and look decent on the tour leader's little flag — every time that flag rises in a crowded plaza, it's the brand's moving billboard.",
+      namingIdeas: [
+        "Destination dreaming: horizon, voyage, odyssey, wander — travel sells imagination; put the customer in the night-before thrill first",
+        "Guide persona: guide, sherpa, butler — bespoke travel entrusts a vacation to someone who knows the way; personification reassures",
+        "Certainty promise: small group, no shopping stops, all-inclusive — fuse name and promise to offset the bait-tour trust deficit",
+        "Old-house signature: founders' surnames, paired names — luxury outfitters persuade high-net-worth clients with handcrafted-heritage feel",
+        "Boundary headroom: packages compete on routes, bespoke on tribe, corporate on credentials — match the register to the ticket size",
+      ],
+      cases: [
+        { name: "Intrepid", takeaway: "One adjective plants the expedition-leader persona: small-group adventure travel filters its tribe straight from the name — adjective naming turns \"who we are\" into \"who you are\"" },
+        { name: "Abercrombie & Kent", takeaway: "The paired-surname signature: luxury bespoke travel selling \"two gentlemen's handcrafted itineraries\" — half a century of old-house trust; in high-end travel, a surname is the quality certificate" },
+        { name: "Contiki", takeaway: "Borrowed from the Kon-Tiki raft expedition: youth touring wrote \"a legendary voyage\" into its name — allusion words ship with their own story, campfire conversation starting from the brand" },
+        { name: "Trafalgar", takeaway: "A landmark name carrying instant geography and gravitas: place-borrowing gives a tour operator both worldliness and weight — one square in London lends a century of implied heritage" },
+        { name: "Black Tomato", takeaway: "Deliberate anti-category naming: a luxury outfitter that refuses horizon-and-voyage clichés — memorability through incongruity, filtering for travelers who want anything but the standard tour" },
+      ],
+      pitfalls: [
+        "Flash-sale register: \"deal\" and \"discount\" in the name — the category's trust deficit already comes from bait pricing; a name that cheapens itself can never carry a bespoke booking",
+        "Welding to one destination: a name locked to \"X Island Express\" restarts from zero when policy or demand shifts — leave headroom from one island to the globe",
+        "Spinning big empty words: global, international, holiday are everywhere — you'll collide at registration and never own page one of search",
+        "Unspellable on the phone: package inquiries close over calls and chat — puns and rare characters mean respelling to every caller, and every respell is a lost booking",
+      ],
+    },
+  },
+  teahouse: {
+    slug: "teahouse",
+    tlds: [
+      { tld: "com", zh: "品牌化连锁与线上商城的默认选择，茶生意的信任底线", en: "The default for chain ambitions and online stores — tea's trust baseline" },
+      { tld: "cafe", zh: "「馆/坐下来喝」的空间感直给，新式茶馆零违和", en: "The sit-down-space suffix — zero friction for modern tea houses" },
+      { tld: "shop", zh: "茶叶零售与电商直给「这里能买」", en: "Says \"you can buy here\" — plain and direct for tea retail" },
+    ],
+    zh: {
+      label: "茶馆茶室",
+      title: "茶馆与茶品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "茶馆与茶品牌命名指南：山场产地、慢生活意境、新中式反差等 5 种思路，tea'stone/大益/T2 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的茶品牌域名。",
+      intro:
+        "茶的名字要泡得开两种水温：一壶是老茶客的讲究——山场、年份、工艺，名字要经得起内行盘问；一壶是年轻人的松弛——把喝茶从「爸爸的保温杯」翻译成「我的第三空间」，名字要卸下门槛感。第一素材库是山场产地：武夷、云雾、涧、岩——茶是农产品里地理属性最强的品类，产地词自带风土背书，「岩」「涧」「雾」这类字一个顶一段产品文案；但产地词是公共资产，要配品牌词才能独占。第二个抓手是慢生活意境：坐、闲、栖、渡——茶馆卖的不是茶水是时间，名字要给出「进来把节奏调慢」的许可，一个「坐」字就是邀请。第三个抓手是新中式反差：tea'stone、茶颜悦色证明茶可以年轻——拼音、混搭、谐音梗把千年品类翻译成当代语感，关键是反差里要留住茶的底蕴，只有梗没有茶就成了快招加盟的气质。要注意业态分层：茶馆（空间生意）拼环境与体验，茶叶品牌（零售生意）拼产地与标准化，新茶饮（流量生意）拼上新与打卡——三种生意三种名字，空间名可以禅意留白，零售名要好记好复述。场景上，茶生意活在「附近适合谈事的茶馆」的搜索、伴手礼的礼盒上和「他家岩茶很正」的圈层口碑里。渠道上，名字要在大众点评列表里立得住格调、印在茶饼棉纸上压得住岁月——一饼存十年的茶，名字也要经得起十年后的打量。",
+      namingIdeas: [
+        "山场产地：岩、涧、雾、坑——地理词自带风土背书，一个字顶一段文案，但要配品牌词才能独占",
+        "慢生活意境：坐、闲、栖、渡——茶馆卖的是时间不是茶水，名字要给出「把节奏调慢」的许可",
+        "新中式反差：拼音、混搭、谐音——把千年品类翻译成当代语感，反差里要留住茶的底蕴",
+        "器物工艺词：壶、盏、焙、揉——工艺词给内行递暗号，器物词给空间定调，都比「茶」字本身更有画面",
+        "业态分层：空间名可禅意留白、零售名要好记复述、茶饮名要上新友好——别用一个名字硬撑三种生意",
+      ],
+      cases: [
+        { name: "tea'stone", takeaway: "tea + stone 的中西混搭：把「茶与石」的东方意境装进英文语感——新中式茶馆用一个撇号完成「传统内核、当代表达」的翻译" },
+        { name: "大益", takeaway: "「大益」两个字的祝福感：普洱头部品牌把「喝茶有益」的朴素价值写成名字——好念好记压得住茶饼棉纸，零售茶命名的教科书" },
+        { name: "T2", takeaway: "一个字母一个数字的极简反差：澳洲品牌把最古老的品类做成最潮的门店——极简名+高饱和视觉，证明茶的年轻化不必靠谐音梗" },
+        { name: "竹叶青", takeaway: "茶名即品牌名的独占打法：把公共品类词抢注成品牌资产——「竹叶青」三个字既是茶又是商标，产地品类词独占的经典案例" },
+        { name: "煮葉", takeaway: "「煮」的动作+「葉」的繁体：一个动词把冲泡仪式感写进名字——繁体字的旧时光滤镜给新式茶空间镀上底蕴" },
+      ],
+      pitfalls: [
+        "禅意堆砌：静、云、禅、悟排列组合——每条街都有一家「云隐」，意境词撞车后毫无辨识度，要配独占性强的品牌词",
+        "只有梗没有茶：谐音梗名字热闹三个月——茶是复购生意，梗的保鲜期撑不起十年老客，底蕴才是复购的理由",
+        "生僻字立门槛：茶文化不等于生僻字——「望穿秋水认不出招牌」的名字在点评搜索和口碑转述里全是流失",
+        "锁死单一茶类：名字绑死「岩茶」，扩白茶、扩茶点、扩空间全是阻力——边界画在「茶生活」而不是某一泡",
+      ],
+    },
+    en: {
+      label: "Tea houses & tea brands",
+      title: "How to Name a Tea House or Tea Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Tea house and tea brand naming guide: terroir words, slow-living moods, modern-heritage contrast, breakdowns of T2/tea'stone/Palais des Thés, recommended TLDs and pitfalls — then hunt an available tea brand domain with AI.",
+      intro:
+        "A tea name must brew at two temperatures: one pot for connoisseurs — terroir, vintage, craft — a name that survives an expert's cross-examination; one pot for younger drinkers — translating tea from \"dad's thermos\" into \"my third place\", a name that lowers the threshold. The first material bin is terroir: mountain, mist, ridge, spring — tea is the most geography-bound of crops, and place words carry built-in provenance; one good terroir word outworks a paragraph of copy, but terroir is public property — pair it with an ownable brand word. The second lever is slow-living mood: sit, linger, dwell, drift — a tea house sells time, not liquid, and the name should grant permission to slow down; a single \"sit\" is an invitation. The third is modern-heritage contrast: T2 and tea'stone proved tea can read young — minimalism, mashups and wordplay translate a millennia-old category into contemporary register, but the contrast must keep tea's depth; all pun and no tea reads like a fast-franchise flyer. Mind the format split: tea houses (a space business) compete on atmosphere and experience, tea labels (a retail business) on origin and consistency, new-style tea drinks (a traffic business) on drops and photogenics — three businesses, three registers; a space name can breathe with negative space, a retail name must be effortlessly repeatable. On scenarios: tea lives in \"quiet tea house for a meeting\" searches, on gift-box lids, and in \"their oolong is the real thing\" circle-of-trust word of mouth. On channels: the name must hold its poise in review-app listings and press with dignity onto a tea-cake wrapper — a cake aged ten years deserves a name that still looks right a decade on.",
+      namingIdeas: [
+        "Terroir words: mountain, mist, ridge, spring — geography carries built-in provenance; one word outworks a paragraph, but pair it with an ownable brand word",
+        "Slow-living mood: sit, linger, dwell, drift — a tea house sells time; the name should grant permission to slow down",
+        "Modern-heritage contrast: minimalism, mashups, wordplay — translate the ancient category into contemporary register, but keep tea's depth in the contrast",
+        "Vessel and craft words: pot, cup, roast, leaf — craft words signal insiders, vessel words set the room's tone; both out-picture the word \"tea\" itself",
+        "Format split: space names can breathe, retail names must repeat effortlessly, drink names must welcome new drops — one name rarely stretches over all three",
+      ],
+      cases: [
+        { name: "T2", takeaway: "One letter, one digit: an Australian brand made the oldest category feel like the newest store — minimal name plus saturated visuals, proof that young tea doesn't need puns" },
+        { name: "tea'stone", takeaway: "Tea + stone in an East-meets-West mashup: an apostrophe carrying \"traditional core, contemporary voice\" — the modern Chinese tea house translated in one mark" },
+        { name: "Palais des Thés", takeaway: "\"Palace of teas\": French retail naming that elevates a commodity into a curated collection — the palace metaphor turns shelf browsing into a gallery visit" },
+        { name: "Mariage Frères", takeaway: "A founding family's surname running since 1854: heritage naming where the family name is the vintage — in fine tea, a surname works like a château label in wine" },
+        { name: "DAVIDsTEA", takeaway: "A first name bolted to the category: friendly, lowercase-hearted retail that made loose-leaf approachable — person-name warmth as the antidote to tea-ceremony intimidation" },
+      ],
+      pitfalls: [
+        "Zen-word pileups: cloud, mist, calm, still in every permutation — every street has one; mood words collide until only an ownable brand word can rescue recognition",
+        "All pun, no tea: wordplay names run hot for a season — tea is a repurchase business, and a pun's shelf life can't hold a ten-year regular; depth is the reason to return",
+        "Obscure characters as gatekeeping: tea culture doesn't require unreadable signage — a name nobody can read is a name nobody can search or recommend",
+        "Welding to one leaf: a name locked to \"rock oolong\" drags at white tea, tea snacks and the space business — draw the boundary at tea life, not one steeping",
+      ],
+    },
+  },
+  petcafe: {
+    slug: "petcafe",
+    tlds: [
+      { tld: "com", zh: "连锁化与预约系统的默认选择，体验业态的信任底线", en: "The default for chains and booking systems — the experience venue's trust baseline" },
+      { tld: "cafe", zh: "「咖啡馆」直给，业态一半写进后缀", en: "Café, said plainly — half the format is in the suffix" },
+      { tld: "pet", zh: "「宠物」行业后缀，另一半业态零解释成本", en: "The pet industry suffix — the other half explained for free" },
+    ],
+    zh: {
+      label: "宠物咖啡",
+      title: "宠物咖啡馆与猫咖品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "宠物咖啡馆与猫咖命名指南：治愈拟声、店宠 IP、空间意象等 5 种思路，猫之一/Cat Café Mocha 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的宠物咖啡域名。",
+      intro:
+        "宠物咖啡的名字要先发出一声「喵」：这是一个把治愈当产品卖的业态——顾客推门进来不是为了咖啡因，而是为了被毛茸茸包围的三十分钟，名字要在小红书的封面图旁就完成「这里有猫可撸」的召唤。第一素材库是治愈拟声与叠词：喵、汪、呼噜、団団——拟声词是这个品类的母语，一声「呼噜」就把体验预演了一遍；叠词的软糯感（団子、毛毛）自带萌系滤镜，念出来嘴角就上扬。第二个抓手是店宠 IP：把镇店猫狗的名字写进品牌——「大橘的店」式命名让顾客还没进门就认识了主角，店宠的性格就是品牌的性格，社交内容也有了固定主角；但要留边界，主角猫会老会退休，名字最好是「IP+空间」的结构而不是单押一只猫。第三个抓手是空间意象：窝、巢、岛、森林——宠物咖啡卖的是「都市里的治愈飞地」，空间词给出「躲进来」的许可；「猫岛」「狗子花园」这类名字把面积不大的店翻译成一个可以逃离的世界。要注意合规与预期管理：名字里承诺了「猫」就要真有猫，卫生与动物福利是这个品类的信任底线——名字气质越干净越好，油腻谐音会让家长客群（亲子是重要客源）直接划走。场景上，宠物咖啡活在「附近猫咖」的搜索、探店视频的标题和「那家店的猫超亲人」的口碑里。渠道上，名字要在点评列表与地图标注里萌得醒目、印在拍立得相框角上不抢戏——顾客带走的每一张合影，都是品牌的自来水广告。",
+      namingIdeas: [
+        "治愈拟声：喵、汪、呼噜——拟声词是品类母语，一声呼噜就把体验预演了一遍",
+        "叠词软糯：団団、毛毛、球球——叠词自带萌系滤镜，念出来嘴角就上扬，转述零成本",
+        "店宠 IP：镇店主角写进名字——顾客未进门先认识主角，但要「IP+空间」留边界，主角会退休",
+        "治愈飞地：窝、巢、岛、森林——空间词给出「躲进来」的许可，小店翻译成可逃离的世界",
+        "干净气质：亲子是重要客源——名字越干净越好，油腻谐音让家长直接划走，卫生联想从名字开始",
+      ],
+      cases: [
+        { name: "Cat Café Mocha", takeaway: "咖啡色系词 Mocha 一词双关：既是拿铁色也是常见猫名——日本连锁猫咖用一个词完成「咖啡×猫」的业态说明，品类混搭命名的样本" },
+        { name: "猫之一", takeaway: "「猫之一」的悬念留白：像一句没说完的话——「猫之一生」还是「众猫之一」？歧义制造记忆点，文艺气质精准筛选打卡客群" },
+        { name: "Neko Harbour", takeaway: "neko（日语猫）+ harbour（港湾）：把猫咖翻译成「猫的避风港」——治愈飞地的空间隐喻+日系滤镜，两个词讲完业态与情绪" },
+        { name: "旺角咖啡", takeaway: "「旺」的狗吠谐音+地名联想：一个字同时装下狗叫声与市井烟火——方言谐音命名的巧劲，狗咖里辨识度极高的样本" },
+        { name: "KitTea", takeaway: "kitty + tea 的无缝焊接：旧金山猫咖把「猫」与「茶」拼进一个词——发音还是 kitty，业态已经说完，英文混成词命名的教科书" },
+      ],
+      pitfalls: [
+        "承诺与实物不符：名字里有「猫」店里三只猫全在睡——体验业态的差评来得最快，名字许下的场景要真能兑现",
+        "单押一只店宠：名字绑死主角猫，猫会老会退休——「IP+空间」的结构才留得住品牌资产",
+        "油腻谐音：擦边梗让亲子客群直接划走——治愈业态的名字要干净，卫生联想从名字就开始积累",
+        "忽略咖啡侧：只有萌没有品质暗示——复购靠「咖啡也不错」支撑，名字全押宠物会把店做成一次性打卡点",
+      ],
+    },
+    en: {
+      label: "Pet cafés",
+      title: "How to Name a Pet Café or Cat Café: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Pet café and cat café naming guide: healing onomatopoeia, house-pet IP, sanctuary imagery, breakdowns of Cat Café Mocha/KitTea/Neko Harbour, recommended TLDs and pitfalls — then hunt an available pet café domain with AI.",
+      intro:
+        "A pet café's name should open with a meow: this format sells healing as the product — customers push the door not for caffeine but for thirty minutes wrapped in fur, and the name must complete the \"there are cats to pet here\" summons right beside the feed photo. The first material bin is healing onomatopoeia and reduplication: meow, woof, purr — sound words are the category's mother tongue, and one \"purr\" rehearses the whole experience; doubled syllables (Momo, Coco) ship with a built-in cuteness filter that lifts the corners of the mouth on pronunciation. The second lever is house-pet IP: write the resident cat or dog into the brand — \"Marmalade's Place\" naming introduces the protagonist before the customer arrives, the pet's personality becomes the brand's personality, and social content gets a standing lead; but leave headroom — protagonists age and retire, so structure the name as IP-plus-space rather than betting everything on one cat. The third is sanctuary imagery: nest, den, island, forest — a pet café sells a healing enclave in the city, and space words grant permission to hide inside; \"Cat Island\" translates a modest storefront into a world you can escape to. Mind expectations and welfare: a name that promises cats must deliver cats, and hygiene plus animal welfare are the category's trust baseline — the cleaner the name's register the better, since greasy puns make the family segment (a core clientele) swipe away. On scenarios: pet cafés live in \"cat café near me\" searches, in visit-vlog titles, and in \"their cats actually like people\" word of mouth. On channels: the name must read adorably in review lists and map pins and sit politely in the corner of an instant-photo frame — every selfie a customer carries out is unpaid advertising.",
+      namingIdeas: [
+        "Healing onomatopoeia: meow, woof, purr — sound words are the category's mother tongue; one purr rehearses the whole visit",
+        "Doubled-syllable softness: Momo, Coco, Bobo — reduplication ships with a cuteness filter and retells at zero cost",
+        "House-pet IP: write the resident star into the name — but structure it as IP-plus-space; protagonists age and retire",
+        "Sanctuary imagery: nest, den, island, forest — space words grant permission to hide; a small storefront becomes an escapable world",
+        "Clean register: families are core clientele — the cleaner the name the better; hygiene associations start accruing from the name itself",
+      ],
+      cases: [
+        { name: "Cat Café Mocha", takeaway: "Mocha working double duty: a latte shade and a classic cat name at once — Japan's chain explained café-times-cat in one word; the category-mashup benchmark" },
+        { name: "KitTea", takeaway: "Kitty + tea welded seamlessly: still pronounced \"kitty\", yet the format is fully stated — the textbook English portmanteau for a hybrid venue" },
+        { name: "Neko Harbour", takeaway: "Neko (Japanese for cat) + harbour: the cat café translated into a safe haven — sanctuary metaphor plus a Japanese filter, format and feeling in two words" },
+        { name: "Crumbs & Whiskers", takeaway: "Pastry crumbs + cat whiskers: both halves of the business in one ampersand — texture words so tactile the name almost purrs; concrete-noun pairing at its best" },
+        { name: "Lady Dinah's Cat Emporium", takeaway: "A named hostess plus a Victorian \"emporium\": London's cat café built a whole fictional world in four words — persona-plus-place naming that makes the visit feel like entering a story" },
+      ],
+      pitfalls: [
+        "Promising what the room can't deliver: \"cat\" in the name and three sleeping cats in the corner — experience venues collect bad reviews fastest; the name's promised scene must be real",
+        "Betting on one resident star: a name welded to the protagonist cat — cats age and retire; only IP-plus-space structure preserves the brand asset",
+        "Greasy puns: edgy wordplay makes the family segment swipe away — a healing venue needs a clean register; hygiene trust starts at the name",
+        "Forgetting the coffee side: all cute, no quality cue — repeat visits ride on \"the coffee's actually good\"; a name spent entirely on pets builds a one-time photo stop",
+      ],
+    },
+  },
+  weddingphoto: {
+    slug: "weddingphoto",
+    tlds: [
+      { tld: "com", zh: "人生大事的预算级消费，信任底线非 .com 莫属", en: "A once-in-a-lifetime budget purchase — the trust baseline is .com" },
+      { tld: "wedding", zh: "「婚礼」行业后缀，业务定位从域名就说清", en: "The wedding suffix — positioning stated right in the domain" },
+      { tld: "photography", zh: "「摄影」直给，作品集站的专业签名", en: "Photography, said plainly — the portfolio site's professional signature" },
+    ],
+    zh: {
+      label: "婚纱摄影",
+      title: "婚纱摄影与婚礼跟拍品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "婚纱摄影与婚礼跟拍命名指南：永恒意象、光影工艺、主理人签名等 5 种思路，铂爵旅拍/Jose Villa 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的婚摄品牌域名。",
+      intro:
+        "婚纱摄影的名字要配得上「一生一次」：顾客选的不是摄影服务，是把人生最重要的一天托付给谁的眼睛——名字要在婚博会的展位上、小红书的样片旁给出「审美在线、郑重其事」的双重信号。第一素材库是永恒意象：誓、恒、白头、时光——婚纱照卖的是「把此刻封存成永远」，时间词与誓言词直击品类本质；「时光」「永恒」虽已拥挤，但配上独特的品牌词仍是最稳的底色。第二个抓手是光影工艺词：光、影、帧、曝光——摄影是用光的手艺，工艺词给出专业暗号，「一帧」「逐光」这类名字把技术翻译成了诗意；胶片、暗房等复古词还能为文艺路线加持质感。第三个抓手是主理人签名：摄影是极度依赖个人审美的手艺——「XX 影像」「Studio X」式的主理人命名把作品与人绑定，高端定制婚摄尤其吃这一套，Jose Villa 式的本名工作室就是「买我的眼睛」的直接表达。要注意路线分层：影楼流水线拼产能与套系价格，旅拍拼目的地与体验，独立摄影师拼审美与圈层——三种生意三种名字气质，影楼名要大气好记，独立工作室名可以任性文艺。场景上，婚摄活在「城市+婚纱照」的搜索、婚博会的比价和新娘闺蜜群的转介绍里——「我们家片子是 XX 拍的」这句话要顺口且有面子。渠道上，名字要在点评榜单里立得住、印在相册烫金封面上压得住场——那本相册要在婚礼后被翻看几十年，名字也要经得起几十年。",
+      namingIdeas: [
+        "永恒意象：誓、恒、白头、时光——婚纱照卖的是把此刻封存成永远，时间词直击品类本质",
+        "光影工艺：光、影、帧、曝光——工艺词给出专业暗号，把技术翻译成诗意，复古词加持质感",
+        "主理人签名：XX 影像、Studio X——审美生意把作品与人绑定，高端定制就是「买我的眼睛」",
+        "目的地叙事：旅拍路线把远方写进名字——海岛、雪山、古城，名字先带新人去到取景地",
+        "路线分层：影楼名大气好记、旅拍名自带远方、独立工作室可任性文艺——气质要与价位表匹配",
+      ],
+      cases: [
+        { name: "铂爵旅拍", takeaway: "「铂爵」的贵金属爵位感+「旅拍」的品类首创：奢华暗示与业态定义一次完成——「想去哪拍就去哪拍」的口号让品类词成了品牌资产" },
+        { name: "Jose Villa", takeaway: "本名即品牌的胶片大师：高端婚摄的终极命名就是自己的名字——「买我的眼睛」的直接表达，作品集与口碑全部沉淀在人名上" },
+        { name: "唯一视觉", takeaway: "「唯一」的誓言感+「视觉」的专业词：把婚姻的排他性翻译成品牌承诺——誓言词命名在婚嫁品类里的教科书" },
+        { name: "Studio Impressions", takeaway: "studio 的工作室格调+impressions 的一语双关：既是「印象」也是「印相」——摄影工艺与情感记忆在一个词里重曝" },
+        { name: "花嫁丽舍", takeaway: "「花嫁」的和风新娘意象+「丽舍」的空间格调：日系审美路线从名字就开始筛选客群——风格化命名精准锁定目标新娘" },
+      ],
+      pitfalls: [
+        "浪漫词大通铺：真爱、浪漫、幸福满街都是——婚嫁品类的意境词拥挤度全行业第一，没有独占性品牌词就没有辨识度",
+        "锁死婚纱单品：名字绑死「婚纱照」，扩亲子、扩写真、扩跟拍全是阻力——边界画在「人生影像」而不是一件白纱",
+        "影楼气质接定制单：大而全的影楼名去谈高端定制先输一半——价位表与名字气质要匹配，高端要有签名感",
+        "谐音破坏郑重感：婚礼是最忌讳「将就」的消费——油腻谐音梗在「一生一次」的决策里就是减分项，郑重感从名字开始",
+      ],
+    },
+    en: {
+      label: "Wedding photography",
+      title: "How to Name a Wedding Photography Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Wedding photography naming guide: forever imagery, light-craft words, photographer signatures, breakdowns of Jose Villa/Studio Impressions, recommended TLDs and pitfalls — then hunt an available wedding photography domain with AI.",
+      intro:
+        "A wedding photography name must deserve \"once in a lifetime\": the couple isn't choosing a photo service, they're choosing whose eyes to trust with the most important day they'll ever have — and the name must radiate two signals beside the sample album and the expo booth: impeccable taste, and appropriate gravity. The first material bin is forever imagery: vow, ever, eternal, golden hour — wedding photos sell the sealing of a moment into permanence, and time words strike the category's essence; \"forever\" and \"timeless\" are crowded, but paired with an ownable brand word they remain the steadiest base coat. The second lever is light-craft words: light, shadow, frame, exposure — photography is a craft of light, and craft words pass a professional signal; names like \"Golden Frame\" translate technique into poetry, while film-era words (darkroom, grain) add texture for the editorial route. The third is the photographer's signature: this is a taste-driven craft — name-plus-studio naming binds the work to the person, and in high-end bespoke weddings the plain personal name (the Jose Villa register) is the most direct statement of \"you're buying my eyes\". Mind the route split: volume studios compete on capacity and package pricing, destination shoots on places and experience, independent photographers on taste and tribe — three businesses, three registers; a volume studio needs a grand, memorable name, while an indie studio can afford to be willful and literary. On scenarios: wedding photography lives in \"city + wedding photos\" searches, expo comparison-shopping, and the bridesmaids' group chat — \"our album was shot by X\" must roll off the tongue with pride. On channels: the name must hold rank on review leaderboards and carry weight foil-stamped on an album cover — that album will be opened for decades after the wedding, and the name must age as well as the photographs.",
+      namingIdeas: [
+        "Forever imagery: vow, ever, eternal, golden hour — wedding photos seal a moment into permanence; time words strike the category's essence",
+        "Light-craft words: light, shadow, frame, exposure — craft words pass a professional signal and translate technique into poetry",
+        "Photographer's signature: name + studio — a taste-driven craft binds work to person; in bespoke weddings the plain name says \"you're buying my eyes\"",
+        "Destination narrative: write the faraway into a travel-shoot name — islands, peaks, old towns; the name takes the couple on location first",
+        "Route split: volume studios need grand and memorable, destination brands carry the faraway, indie studios can be willful — match register to the price list",
+      ],
+      cases: [
+        { name: "Jose Villa", takeaway: "The film master whose brand is his own name: the endgame of high-end wedding naming — \"you're buying my eyes\", with portfolio and reputation all compounding on one personal name" },
+        { name: "Studio Impressions", takeaway: "Studio poise plus a double exposure of meaning: impressions as memory and as the printed image — craft and emotion overlaid in a single word" },
+        { name: "KT Merry", takeaway: "Initials plus a mood: \"Merry\" carries celebration right inside the photographer's own name — a lucky-surname signature perfectly cast for the wedding trade" },
+        { name: "Flytographer", takeaway: "Fly + photographer welded into one word: destination shoots explained in a beat — the portmanteau states the business model and the wanderlust at once" },
+        { name: "The Wedding Artists Collective", takeaway: "Naming photographers as artists, plural: a collective that priced photography as art direction — the frame word elevates the whole roster's perceived tier" },
+      ],
+      pitfalls: [
+        "Romance-word bunk beds: love, forever, blissful are the most crowded shelf in the industry — without an ownable brand word there is no recognition at all",
+        "Welding to the white dress: a name locked to \"wedding photos\" drags at maternity, portraits and event coverage — draw the boundary at life's images, not one gown",
+        "Volume register chasing bespoke bookings: a big-box studio name walks into a luxury consult already half-defeated — the name's register must match the price list; high-end needs a signature",
+        "Puns that break the gravity: weddings are the purchase least tolerant of \"good enough\" — a greasy pun is pure deduction in a once-in-a-lifetime decision; solemnity starts at the name",
+      ],
+    },
+  },
+  footspa: {
+    slug: "footspa",
+    tlds: [
+      { tld: "com", zh: "连锁扩张与会员储值的信任底线，休闲养生的默认选择", en: "The trust baseline for chains and stored-value memberships — the default for wellness venues" },
+      { tld: "care", zh: "「呵护」后缀，把服务的本质写进域名", en: "The care suffix — the service's essence written into the domain" },
+      { tld: "vip", zh: "会员制生意的身份感直给，国内认知度高", en: "Membership identity, said plainly — strong recognition in China" },
+    ],
+    zh: {
+      label: "足疗采耳",
+      title: "足疗采耳与养生馆品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "足疗采耳与养生馆命名指南：解乏意象、手艺传承、新中式体验等 5 种思路，足力健/重庆富侨等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的养生馆域名。",
+      intro:
+        "足疗养生的名字要先替顾客松一口气：这是一个把「解乏」当产品卖的品类——顾客推门进来时带着一天的疲惫，名字要在商场导视与点评列表里就给出「进来就能卸下来」的许可。第一素材库是解乏意象：松、舒、泰、悦——身体感受词是品类母语，一个「松」字就是服务承诺；「泰」「康」这类字还叠加了养生的吉祥语感，中老年客群尤其受用。第二个抓手是手艺传承：足疗采耳是手上功夫——「川派采耳」「扬州修脚」等地域流派自带百年手艺背书，地名+手艺的结构（重庆富侨式）等于把师承写进名字；「堂」「阁」「坊」的老字号后缀给手艺加持岁月感。第三个抓手是新中式体验：年轻客群把足疗从「爸妈的保健」翻译成「我的精致养生」——「颂」「栖」「汀」这类雅字配上茶歇、汉服、庭院的体验升级，名字要先完成气质升级；但雅要有度，过度文艺会让「实惠解乏」的基本盘客群觉得贵。要注意信任底线：这个品类历史上被灰色业态拖累过，名字的干净度直接决定家庭客群与女性客群的进店意愿——正规连锁的名字要大方敞亮，避免暧昧暗示，「养生」「健康」的正面词是必要的信任锚。场景上，足疗活在「附近足疗」的搜索、商场负一层的导视牌和「那家手法很专业」的口碑里。渠道上，名字要在团购平台的套餐列表里好认、会员卡上印出来有面子——储值会员是这个生意的现金流，名字的体面感直接参与办卡决策。",
+      namingIdeas: [
+        "解乏意象：松、舒、泰、悦——身体感受词是品类母语，一个「松」字就是服务承诺",
+        "地域手艺：川派、扬州、重庆——地域流派自带百年手艺背书，地名+手艺等于把师承写进名字",
+        "老字号后缀：堂、阁、坊——岁月感给手艺加持，「XX 堂」三个字就有了老师傅的画面",
+        "新中式雅字：颂、栖、汀——年轻客群要的是精致养生，但雅要有度，别吓跑实惠解乏的基本盘",
+        "干净敞亮：正面词是信任锚——「养生」「健康」要在场，暧昧暗示是家庭客群的一票否决",
+      ],
+      cases: [
+        { name: "重庆富侨", takeaway: "地名+品牌词的流派打法：「重庆」两个字把川派手艺的师承写进名字——地域背书让全国扩张时每家店都自带手艺说明书" },
+        { name: "华夏良子", takeaway: "「华夏」的文化底座+「良子」的人格化：良善的「良」给足疗最稀缺的干净感——大词与暖词的组合，连锁养生命名的稳健样本" },
+        { name: "郑远元", takeaway: "创始人本名即品牌：修脚师傅的名字开成千店连锁——手艺生意的终极信任是「师傅本人敢署名」，人名命名在传统手艺里的复利" },
+        { name: "常乐", takeaway: "「知足常乐」的成语拆用：两个字同时装下「足」的品类暗示与「乐」的情绪承诺——成语命名的巧劲，好念好记还自带吉祥话" },
+        { name: "悦足堂", takeaway: "「悦」的情绪+「足」的品类+「堂」的老字号感：三个字各司其职——情绪词定调、品类词定位、后缀定辈分，结构化命名的教科书" },
+      ],
+      pitfalls: [
+        "暧昧暗示：品类历史上被灰色业态拖累——名字有一丝暧昧，家庭客群与女性客群就一票否决，干净是底线不是加分项",
+        "锁死足部单品：名字绑死「足」，扩采耳、肩颈、艾灸全是阻力——边界画在「放松养生」而不是一双脚",
+        "过度文艺：雅字堆到认不出业态——「实惠解乏」的基本盘客群看不懂就不进门，气质升级不能丢掉大众盘",
+        "忽略会员卡场景：储值是现金流——名字印在会员卡上要有面子，办卡决策里「这卡拿得出手」真实参与转化",
+      ],
+    },
+    en: {
+      label: "Foot spas & wellness lounges",
+      title: "How to Name a Foot Spa or Wellness Lounge: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Foot spa and wellness lounge naming guide: release imagery, craft lineage, modern-wellness upgrades, breakdowns of Chongqing Fuqiao/Zheng Yuanyuan-style founder brands, recommended TLDs and pitfalls — then hunt an available wellness domain with AI.",
+      intro:
+        "A foot spa's name should exhale on the customer's behalf: this category sells release as the product — the customer pushes the door carrying a whole day's fatigue, and the name must grant permission to set it down, right from the mall directory and the review list. The first material bin is release imagery: ease, loosen, restore, calm — body-sensation words are the category's mother tongue, and a single \"ease\" is a service promise; auspicious wellness words layer on a blessing register that older clienteles especially warm to. The second lever is craft lineage: foot therapy and ear cleaning are handwork — regional schools (Sichuan-style ear cleaning, Yangzhou pedicure) carry century-old craft endorsement, and the place-plus-craft structure writes the apprenticeship into the name; heritage suffixes (hall, house, lodge) add the patina of years. The third is the modern-wellness upgrade: younger customers are translating foot therapy from \"my parents' health habit\" into \"my self-care ritual\" — elegant characters paired with tea service and courtyard interiors upgrade the register, but elegance needs a ceiling: overdone literary airs price out the value-driven base who just want honest relief. Mind the trust baseline: this category has historically been dragged by grey-market associations, and the name's cleanliness directly decides whether families and female customers walk in — legitimate chains need open, generous names anchored by wholesome words like wellness and health, with zero ambiguity. On scenarios: foot spas live in \"foot massage near me\" searches, basement-level mall directories, and \"their technique is genuinely professional\" word of mouth. On channels: the name must read clearly in group-buy package lists and look respectable on a membership card — stored-value members are this business's cash flow, and the card's dignity genuinely participates in the top-up decision.",
+      namingIdeas: [
+        "Release imagery: ease, loosen, restore, calm — body-sensation words are the category's mother tongue; one \"ease\" is a service promise",
+        "Craft lineage: regional schools, place + craft — century-old handwork endorsement; the apprenticeship written into the name",
+        "Heritage suffixes: hall, house, lodge — the patina of years; three characters conjure the old master's hands",
+        "Modern-wellness elegance: refined characters for the self-care generation — but cap the literary airs or the value-driven base walks past",
+        "Clean and open: wholesome anchors — wellness and health must be present; a hint of ambiguity is a family-customer veto",
+      ],
+      cases: [
+        { name: "重庆富侨 (Chongqing Fuqiao)", takeaway: "Place + brand in the lineage play: \"Chongqing\" writes the Sichuan-school apprenticeship into the name — regional endorsement gives every new city's outlet a built-in craft credential" },
+        { name: "郑远元 (Zheng Yuanyuan)", takeaway: "The founder's real name grown into a thousand-store chain: handwork's ultimate trust is a master willing to sign his own name — personal-name compounding in a traditional craft" },
+        { name: "华夏良子 (Huaxia Liangzi)", takeaway: "A cultural foundation word plus a personified given name: \"Liang\" (virtuous) supplies the category's scarcest asset — cleanliness; the steady template for wellness chains" },
+        { name: "常乐 (Changle)", takeaway: "A four-character idiom folded in half: \"contentment brings joy\" carries both the foot pun and the emotional promise — idiom naming that blesses while it brands" },
+        { name: "悦足堂 (Yuezutang)", takeaway: "Emotion + category + heritage suffix, one character each: mood sets the tone, category sets the position, the hall suffix sets the seniority — structured naming as textbook" },
+      ],
+      pitfalls: [
+        "Ambiguous undertones: the category carries grey-market history — one hint of innuendo and families and female customers veto on sight; clean is the floor, not a bonus",
+        "Welding to the foot: a name locked to feet drags at ear cleaning, neck work and moxibustion — draw the boundary at relaxation, not one body part",
+        "Literary overdose: elegant characters stacked until the trade is unreadable — the value-driven base won't enter a door they can't parse; upgrade the register without losing the mass market",
+        "Forgetting the membership card: stored value is the cash flow — the name must look respectable on the card; \"I'd be fine showing this card\" genuinely converts top-ups",
+      ],
+    },
+  },
+  parcel: {
+    slug: "parcel",
+    tlds: [
+      { tld: "com", zh: "网点加盟与平台对接的信任底线，驿站品牌的默认选择", en: "The trust baseline for franchisees and platform integrations — the default for a parcel station brand" },
+      { tld: "services", zh: "「服务」后缀，社区服务的正规感直给", en: "The services suffix — community-service legitimacy, stated plainly" },
+      { tld: "site", zh: "「站点」语义百搭，驿站网点站群成本友好", en: "Site semantics fit a station network — budget-friendly at fleet scale" },
+    ],
+    zh: {
+      label: "快递驿站",
+      title: "快递驿站与社区代收品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "快递驿站与社区代收命名指南：驿站意象、邻里人格、安心承诺等 5 种思路，菜鸟驿站/妈妈驿站等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的驿站品牌域名。",
+      intro:
+        "驿站的名字要像老邻居打的一声招呼：这是一个长在社区毛细血管里的生意——顾客每天下班绕到这里取件，名字要在小区门口的灯箱上给出「东西放这儿，放心」的日常承诺。第一素材库是驿站意象：驿、站、铺、巢——「驿」字是这个品类的天选之字，古代驿站「代收代转、使命必达」的语义与现代代收完美重叠，菜鸟驿站直接把品类词做成了品牌资产。第二个抓手是邻里人格：驿站的本质是「把包裹托付给一个熟人」——「妈妈驿站」用一个称谓解决了全部信任问题，大爷、小哥、阿姨式的人格化命名让代收从物流末端变成邻里帮忙；人格名还自带话题性，「去妈妈那儿取个件」的日常对话就是品牌复读机。第三个抓手是安心承诺:包裹会不会丢、会不会被拆、超时收不收费——名字与承诺一体化（安心、稳、妥）直接回应品类焦虑；「妥投」「稳收」这类词把物流术语翻译成了口语安全感。要注意业态复合：驿站早已不只收快递——团购自提、洗衣代收、家政入口、社区零售都在往驿站里长，名字的边界要画在「社区服务站」而不是「快递架」；「XX 生活驿站」的结构就是给复合业态预留的户型。场景上，驿站活在取件码短信的落款、小区业主群的「XX 驿站今天几点关门」和门口灯箱的夜里那盏光里。渠道上，名字要两三个字好念好记、印在灯箱上隔着马路可认、写进短信落款不占字数——每天几百条取件短信，就是几百次免费的品牌曝光。",
+      namingIdeas: [
+        "驿站意象：驿、站、铺、巢——「驿」是品类天选之字，古代驿站的语义与现代代收完美重叠",
+        "邻里人格：妈妈、大爷、小哥——把包裹托付给熟人，一个称谓解决全部信任问题",
+        "安心承诺：安、稳、妥——名字直接回应「会不会丢件」的品类焦虑，物流术语翻译成口语安全感",
+        "复合留边界：生活驿站、社区站——团购、洗衣、家政都在往驿站里长，边界画在服务站不是快递架",
+        "灯箱测试：两三个字、隔马路可认、短信落款不占字数——每天几百条取件短信就是免费曝光",
+      ],
+      cases: [
+        { name: "菜鸟驿站", takeaway: "「菜鸟」的反差萌+「驿站」的品类定义：自嘲式品牌词卸下巨头的压迫感——把「驿站」两个字从古汉语抢注成现代品类资产，命名定义品类的顶级样本" },
+        { name: "妈妈驿站", takeaway: "一个称谓解决全部信任：「妈妈」两个字让代收变成「东西放我妈那儿了」——人格化命名在社区生意里的天花板，亲切感就是护城河" },
+        { name: "兔喜生活", takeaway: "「兔」的速度萌感+「喜」的情绪+「生活」的边界：三个词把快递、心情、复合业态全说了——从「取件」到「生活服务」的户型预留" },
+        { name: "熊猫快收", takeaway: "国宝 IP+「快收」的动作承诺：熊猫的憨厚可信中和物流的冰冷——动物人格化+效率承诺的双拼结构，社区门头的萌系样本" },
+        { name: "驿收发", takeaway: "「驿」的品类字+「收发」的功能全集：三个字把代收代寄的业务边界说满——功能型命名的极致压缩，加盟招商一听就懂" },
+      ],
+      pitfalls: [
+        "冷冰冰的物流腔：「XX 仓配」「XX 末端」是给投资人看的——社区生意的名字要说人话，居民不会把包裹托付给一个物流术语",
+        "锁死快递单品：名字绑死「快递」，团购自提、洗衣家政进不来——驿站的终局是社区服务站，边界要提前画大",
+        "谐音撞车巨头：「X 鸟」「X 驿」满街跑——头部品牌的语感已被占住，擦边名在业主群的转述里只给对手导流",
+        "灯箱上认不出：生僻字与英文花体在小区门口的夜灯下就是无效招牌——隔着马路一眼可认是驿站名的硬指标",
+      ],
+    },
+    en: {
+      label: "Parcel stations & pickup points",
+      title: "How to Name a Parcel Station or Community Pickup Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Parcel station and pickup point naming guide: relay-station imagery, neighborly personas, peace-of-mind promises, breakdowns of Cainiao Post/Mama Station, recommended TLDs and pitfalls — then hunt an available parcel brand domain with AI.",
+      intro:
+        "A parcel station's name should sound like a neighbor's greeting: this business grows in the community's capillaries — customers swing by on the way home every single day, and the name on the lightbox by the gate must make a daily promise: leave it here, rest easy. The first material bin is relay-station imagery: post, station, depot, nest — the relay-post word family is the category's chosen vocabulary, its ancient \"receive, hold, forward\" semantics overlapping perfectly with modern parcel pickup; Cainiao Post turned the category word itself into brand equity. The second lever is the neighborly persona: a pickup point is at bottom entrusting your package to someone familiar — Mama Station solved the entire trust problem with one form of address, and grandpa-, auntie- and buddy-style persona names turn last-mile logistics into a neighbor doing you a favor; persona names also self-replicate in daily speech — \"I'll grab it from Mama's\" is the brand on repeat. The third is the peace-of-mind promise: will the parcel get lost, opened, or charged for overstaying — a name fused with reassurance words (safe, steady, sound) answers the category's anxiety directly, translating logistics jargon into spoken-language security. Mind the format creep: stations long ago outgrew parcels — group-buy pickup, laundry drop-off, home-services entry and community retail are all growing into the same storefront, so draw the name's boundary at \"community service station\", not \"parcel shelf\"; the life-station structure reserves floor plan for the compound format. On scenarios: stations live in the pickup-code SMS signature, the homeowners' group chat asking \"what time does it close\", and the lightbox glowing by the gate at night. On channels: the name must run two or three syllables, read across the street, and fit inside an SMS signature without costing characters — hundreds of pickup texts a day are hundreds of free brand impressions.",
+      namingIdeas: [
+        "Relay-station imagery: post, station, depot, nest — ancient relay semantics overlap perfectly with modern pickup; the category's chosen vocabulary",
+        "Neighborly persona: mama, grandpa, buddy — entrusting a package to someone familiar; one form of address solves the whole trust problem",
+        "Peace-of-mind promise: safe, steady, sound — answer the will-it-get-lost anxiety head-on; jargon translated into spoken security",
+        "Compound headroom: life station, community post — group-buy, laundry and home services are growing in; draw the boundary at service station, not parcel shelf",
+        "The lightbox test: two or three syllables, legible across the street, free inside an SMS signature — hundreds of pickup texts a day are free impressions",
+      ],
+      cases: [
+        { name: "Cainiao Post (菜鸟驿站)", takeaway: "Self-deprecating \"rookie bird\" plus the relay-post category word: the underdog register disarms a giant's intimidation — and the ancient word for relay station got re-registered as modern brand equity; top-tier category-defining naming" },
+        { name: "Mama Station (妈妈驿站)", takeaway: "One form of address solves all trust: \"it's at Mama's\" turns parcel pickup into family safekeeping — the ceiling of persona naming in community business; warmth as the moat" },
+        { name: "InPost", takeaway: "In + post: self-service lockers compressed into five letters — the parcel is \"in the post\" in both senses; European locker networks' textbook of functional brevity" },
+        { name: "Doddle", takeaway: "British slang for \"something effortless\": the pickup errand renamed as no trouble at all — promise-as-name, with the friction of collection dissolved before the customer arrives" },
+        { name: "熊猫快收 (Panda Quick Collect)", takeaway: "National-treasure IP plus an action promise: the panda's guileless trust thaws logistics' chill — animal persona and efficiency pledge in one double-barreled storefront name" },
+      ],
+      pitfalls: [
+        "Cold logistics register: \"X Fulfillment Node\" is written for investors — community business must speak human; residents won't entrust packages to a supply-chain term",
+        "Welding to parcels: a name locked to \"express delivery\" blocks group-buy, laundry and home services — the endgame is the community service station; draw the boundary large, early",
+        "Sound-alike drafting off giants: the bird-and-post register is taken — a near-imitation in the homeowners' group chat only routes packages to the incumbent",
+        "Illegible on the lightbox: rare characters and cursive flourishes fail under the gate lamp at night — legible across the street is the hard requirement for a station name",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
