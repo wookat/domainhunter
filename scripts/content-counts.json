@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 198,
+    "count": 204,
     "slugs": [
       "com",
       "net",
@@ -199,7 +199,13 @@
       "llc",
       "fyi",
       "promo",
-      "express"
+      "express",
+      "press",
+      "stream",
+      "movie",
+      "pictures",
+      "productions",
+      "audio"
     ]
   },
   "guide": {
