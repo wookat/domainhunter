@@ -185,7 +185,7 @@
     ]
   },
   "guide": {
-    "count": 176,
+    "count": 182,
     "slugs": [
       "saas",
       "ecommerce",
@@ -362,7 +362,13 @@
       "recycling",
       "retrofit",
       "hvac",
-      "watertreatment"
+      "watertreatment",
+      "babystore",
+      "kidsphoto",
+      "giftcustom",
+      "petgrooming",
+      "housekeeping",
+      "kidsplayground"
     ]
   },
   "vs": {

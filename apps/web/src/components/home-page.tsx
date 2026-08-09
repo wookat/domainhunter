@@ -1275,6 +1275,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个水处理环保品牌，寓意「把浑浊变清澈、把每一滴水管到放心」；气质要清净、专业、有干得了二十年运营的工程信任感；场景是政府投标文件、工业客户的采购清单和治理后的河道展示牌上都立得住。",
     en: "A water treatment brand. The name should evoke turning murky into clear and every drop safely managed; the vibe is clean, professional, with the engineering trust of a twenty-year operator; it must hold up in government bids, industrial procurement lists, and on the plaque beside a restored river.",
   },
+  {
+    slug: "babystore",
+    labelZh: "母婴用品",
+    labelEn: "Baby & maternity",
+    zh: "一个母婴用品品牌，寓意「每一件都替妈妈把过关」；气质要柔软安心又有护理级的专业感、两三个字念得顺、没有任何歧义联想；场景是妈妈群的「哪家纸尿裤好用」转述、待产包清单和母婴店招牌上都立得住。",
+    en: "A baby and maternity brand. The name should promise every item pre-vetted on mom's behalf; the vibe is soft and reassuring yet care-grade professional, two or three syllables smooth to say, with zero ambiguous associations; it must stand in moms'-group diaper recommendations, hospital-bag checklists, and on the storefront sign.",
+  },
+  {
+    slug: "kidsphoto",
+    labelZh: "儿童摄影",
+    labelEn: "Kids' photography",
+    zh: "一个儿童摄影品牌，寓意「把孩子这一年留下来」；气质要童趣梦幻又值得家长托付、孩子听到想去、家长听到放心；场景是妈妈群的百天照推荐、点评平台的搜索列表和相册烫金封面上都立得住。",
+    en: "A kids' photography brand. The name should promise keeping this year of childhood forever; the vibe is playful and dreamlike yet trustworthy to parents — fun to the child's ear, reassuring to the parent's; it must stand in moms'-group hundred-day-shoot referrals, review-platform search lists, and embossed on the album cover.",
+  },
+  {
+    slug: "giftcustom",
+    labelZh: "礼品定制",
+    labelEn: "Custom gifts",
+    zh: "一个礼品定制品牌，寓意「心意被认真对待」；气质要有仪式感、精致郑重、在浪漫与正规之间平衡；场景是礼盒烫印、贺卡落款和企业采购的供应商名录里都立得住。",
+    en: "A custom gifts brand. The name should promise sentiment taken seriously; the vibe is ceremonial and refined, balanced between romantic and businesslike; it must hold up foil-stamped on the gift box, signed on the card, and listed in a corporate procurement vendor directory.",
+  },
+  {
+    slug: "petgrooming",
+    labelZh: "宠物美容",
+    labelEn: "Pet grooming",
+    zh: "一个宠物美容品牌，寓意「毛孩子交给我，还你一只蓬松开心的它」；气质要萌而专业、让铲屎官一眼会心又敢放心托付；场景是地图 App 的「附近宠物美容」列表、朋友圈的洗护九宫格和社区宠物群的推荐里都被记住。",
+    en: "A pet grooming brand. The name should promise hand over your fur kid, get back a fluffy happy one; the vibe is cute yet professional — an instant knowing smile for pet parents, plus the trust to hand over a family member; it must be remembered in map-app grooming-nearby lists, fresh-groom photo posts, and neighborhood pet-group referrals.",
+  },
+  {
+    slug: "housekeeping",
+    labelZh: "家政服务",
+    labelEn: "Housekeeping",
+    zh: "一个家政服务品牌，寓意「值得请进家门的那双手」；气质要可靠正规、给客户安心也给阿姨体面；场景是小区业主群的阿姨推荐、上门服务的工牌和企业保洁的投标书里都立得住。",
+    en: "A housekeeping services brand. The name should feel like hands worth inviting through your front door; the vibe is reliable and accountable, reassuring to clients and dignifying to workers; it must stand in neighborhood-group nanny referrals, on the worker's door-side badge, and in a corporate cleaning tender.",
+  },
+  {
+    slug: "kidsplayground",
+    labelZh: "亲子乐园",
+    labelEn: "Kids' playgrounds",
+    zh: "一个亲子乐园品牌，寓意「进门就是孩子的另一个世界」；气质要梦幻快乐又让家长联想到安全垫与消毒记录、孩子听到眼睛发亮；场景是商场导视牌、妈妈群的遛娃攻略和年卡续费提醒里都被记住。",
+    en: "A kids' playground brand. The name should promise another world for children just inside the door; the vibe is dreamy and joyful yet padded-floor reassuring to parents — a child's eyes should light up on hearing it; it must be remembered on mall directory boards, in moms'-group weekend guides, and on the annual-pass renewal notice.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

@@ -186,4 +186,10 @@ export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized 
   { slug: "retrofit", label: { zh: "节能改造", en: "Energy retrofits" }, oneLiner: { zh: "节能改造品牌命名指南：省与优的价值词、工程可靠感、双碳叙事等 5 种思路。", en: "Energy retrofit naming guide: savings-value words." } },
   { slug: "hvac", label: { zh: "暖通空调", en: "HVAC services" }, oneLiner: { zh: "暖通空调品牌命名指南：冷暖体感词、气候意象、师傅可靠感等 5 种思路。", en: "HVAC naming guide: comfort words, climate imagery and technician-trust registers." } },
   { slug: "watertreatment", label: { zh: "水处理环保", en: "Water treatment" }, oneLiner: { zh: "水处理品牌命名指南：清与净的意象、水系词根、工程信任感等 5 种思路。", en: "Water treatment naming guide: clarity imagery." } },
+  { slug: "babystore", label: { zh: "母婴用品", en: "Baby & maternity stores" }, oneLiner: { zh: "母婴用品品牌命名指南：安心意象、亲昵叠词、专业信任感等 5 种思路。", en: "Baby and maternity brand naming guide: reassurance imagery." } },
+  { slug: "kidsphoto", label: { zh: "儿童摄影", en: "Kids' photography" }, oneLiner: { zh: "儿童摄影品牌命名指南：时光意象、童趣词根、纪念感表达等 5 种思路。", en: "Kids' photography naming guide: keepsake imagery." } },
+  { slug: "giftcustom", label: { zh: "礼品定制", en: "Custom gifts" }, oneLiner: { zh: "礼品定制品牌命名指南：心意意象、仪式感词根、定制专属感等 5 种思路。", en: "Custom gifts brand naming guide: sentiment imagery." } },
+  { slug: "petgrooming", label: { zh: "宠物美容", en: "Pet grooming" }, oneLiner: { zh: "宠物美容品牌命名指南：拟声昵称、萌系意象、专业信任感等 5 种思路。", en: "Pet grooming brand naming guide: onomatopoeic nicknames." } },
+  { slug: "housekeeping", label: { zh: "家政服务", en: "Housekeeping services" }, oneLiner: { zh: "家政服务品牌命名指南：信任意象、家的语感、阿姨人格化等 5 种思路。", en: "Housekeeping brand naming guide: trust imagery." } },
+  { slug: "kidsplayground", label: { zh: "亲子乐园", en: "Kids' playgrounds" }, oneLiner: { zh: "亲子乐园品牌命名指南：快乐意象、世界感造词、安全暗示等 5 种思路。", en: "Kids' playground naming guide: world-building coinages." } },
 ];
