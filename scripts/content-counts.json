@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 228,
+    "count": 234,
     "slugs": [
       "com",
       "net",
@@ -229,7 +229,13 @@
       "mba",
       "study",
       "forum",
-      "review"
+      "review",
+      "hair",
+      "skin",
+      "makeup",
+      "homes",
+      "boats",
+      "autos"
     ]
   },
   "guide": {
