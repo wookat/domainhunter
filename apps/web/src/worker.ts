@@ -15,6 +15,7 @@ import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
 import { tldPrice } from "./types";
+import { putShareVerified } from "./share-write";
 
 // LLM_API_BASE：仅供本地 wrangler dev 指向假上游验证错误路径（R264），生产不设置
 type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace; LLM_API_BASE?: string };
@@ -62,6 +63,10 @@ interface DayUsage {
   refine: number;
   /** 当日 AI 上游错误分类计数（R264，仅数字；旧数据无此字段） */
   aiErrors?: Partial<Record<AiErrorKind, number>>;
+  /** 分享写入读回校验失败后的重试次数（R305，生产观测；旧数据无此字段） */
+  shareWriteRetry?: number;
+  /** 分享写入最终失败（含换 id 重写仍失败）次数（R305） */
+  shareWriteFail?: number;
 }
 
 async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: boolean, refine: boolean): Promise<void> {
@@ -84,6 +89,18 @@ async function bumpAiError(kv: KVNamespace | undefined, kind: AiErrorKind): Prom
     const key = `usage:${new Date().toISOString().slice(0, 10)}`;
     const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
     cur.aiErrors = { ...cur.aiErrors, [kind]: (cur.aiErrors?.[kind] ?? 0) + 1 };
+    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
+  } catch { /* 统计失败不影响主流程 */ }
+}
+
+/** 分享写入重试/失败计数（R305，仅聚合数字；KV 非原子，允许少量误差） */
+async function bumpShareWrite(kv: KVNamespace | undefined, retries: number, failed: boolean): Promise<void> {
+  if (!kv || (retries <= 0 && !failed)) return;
+  try {
+    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
+    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
+    if (retries > 0) cur.shareWriteRetry = (cur.shareWriteRetry ?? 0) + retries;
+    if (failed) cur.shareWriteFail = (cur.shareWriteFail ?? 0) + 1;
     await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
   } catch { /* 统计失败不影响主流程 */ }
 }
@@ -579,20 +596,15 @@ app.post("/api/share", async (c) => {
   if (rawItems.length > MAX_SHARE_ITEMS) return c.json({ error: "too many items" }, 400);
   const items = rawItems.map(sanitizeShareItem).filter((x): x is ShareItem => x !== null);
   if (items.length === 0) return c.json({ error: "items invalid" }, 400);
-  const id = nanoid(10);
   // revoke token 仅返回给创建者，用于后续撤销；不随 GET 暴露
   const revokeToken = nanoid(24);
-  // KV put 偶发静默丢失（同 colo 立即读也取不到），写后读回校验，失败重写
-  const key = `share:${id}`;
   const payload = JSON.stringify({ items, createdAt: Date.now(), revokeToken });
-  let written = false;
-  for (let attempt = 0; attempt < 3 && !written; attempt++) {
-    await kv.put(key, payload, { expirationTtl: SHARE_TTL });
-    written = (await kv.get(key)) !== null;
-  }
-  if (!written) return c.json({ error: "share_write_failed" }, 503);
+  // KV put 偶发静默丢失：写后读回校验 + 退避重试 + 换 id 重写（详见 share-write.ts）
+  const result = await putShareVerified(kv, () => nanoid(10), () => payload, SHARE_TTL);
+  c.executionCtx.waitUntil(bumpShareWrite(kv, result.retries, !result.ok));
+  if (!result.ok) return c.json({ error: "share_write_failed" }, 503);
   const origin = new URL(c.req.url).origin;
-  return c.json({ id, url: `${origin}/s/${id}`, revokeToken });
+  return c.json({ id: result.id, url: `${origin}/s/${result.id}`, revokeToken });
 });
 
 interface ShareSnapshotStored {
