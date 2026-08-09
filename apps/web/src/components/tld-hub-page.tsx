@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { HUB_META, tldHubGroups, tldOneLiner } from "@/content/hubs";
+import { TLD_HUB_META, tldHubGroups, tldOneLiner } from "@/content/hubs-tld";
 import { useI18n } from "@/lib/i18n";
 import { usePageTitle } from "@/lib/use-page-title";
 import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
@@ -7,7 +7,7 @@ import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
 /** /tld 索引 hub：全部 TLD 注册指南，按用途分组。DOM 与 worker 的 tldHubBlocks 骨架逐字一致。 */
 export function TldHubPage() {
   const { lang } = useI18n();
-  const meta = HUB_META.tld[lang];
+  const meta = TLD_HUB_META[lang];
   usePageTitle(meta.title);
   const [query, setQuery] = useState("");
   const groups = useMemo(() => tldHubGroups(), []);
