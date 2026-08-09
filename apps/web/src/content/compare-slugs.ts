@@ -261,6 +261,12 @@ export const COMPARE_SLUGS = [
   "catering-vs-restaurant",
   "florist-vs-garden",
   "church-vs-community",
+  "courses-vs-academy",
+  "degree-vs-education",
+  "mba-vs-school",
+  "study-vs-courses",
+  "forum-vs-community",
+  "review-vs-reviews",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

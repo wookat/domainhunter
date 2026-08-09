@@ -5701,6 +5701,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Interest communities & forums", "Membership & paid community platforms", "Open-source & developer communities", "The neutral pick for interfaith groups"],
     },
   },
+  "courses-vs-academy": {
+    slug: "courses-vs-academy",
+    a: "courses",
+    b: "academy",
+    zh: {
+      title: ".courses 和 .academy 怎么选：课程目录与教学机构的分工",
+      metaDescription: ".courses 说的是课程目录本身，适合在线课程平台与知识付费；.academy 是教学机构的门牌，适合培训学院与训练营。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在教东西，一个报商品，一个报机构。.courses 把「课程」这个商品直接写进域名——在线课程平台与独立讲师、职业技能与考证培训、企业内训与知识付费项目用 name.courses，学员搜「主题 + courses」时域名就是搜索词，python.courses 这样的名字不用解释就知道卖什么；注册约 $2（约 ¥11）、续费约 $31/年（约 ¥226），首年几乎零成本试水、续费中档，矩阵注册按续费价算总账。.academy 报的是机构身份——培训学院与训练营、企业大学与认证体系、体育与艺术教学机构用 name.academy，「学院」二字自带体系感与权威感，code.academy 式的名字听起来就是一所学校而不是一份课表；注册约 $12（约 ¥85）、续费约 $38/年（约 ¥271），两头都比 .courses 略贵但差距不大。判断标准：卖的是课程目录——多门课、可单买、按主题检索 → .courses 的商品语义最准，学科词与技能词库存极好；办的是一所学校——成体系的培养路径、结业认证、机构品牌 → .academy 的机构门牌更稳，品牌溢价也更高。两点注意：一是 .courses 复数形式暗示「一批课程」，单门课或个人 IP 用 .academy 反而更像个牌子；二是两者续费相近，纠结时按学员的心智拍板：报「一门课」的搜 courses，进「一所学院」的搜 academy。教育集团常见打法是两头拿：.academy 做机构主站、.courses 做课程目录与投放落地页。命名上「学科/技能 + .courses」接垂类课程站，「品牌 + .academy」接机构官网。",
+      pickA: ["在线课程平台与独立讲师", "职业技能与考证培训", "知识付费的课程目录入口", "首年约 ¥11 低成本验证"],
+      pickB: ["培训学院与训练营", "企业大学与认证体系", "体育与艺术教学机构", "机构感与品牌溢价更强"],
+    },
+    en: {
+      title: ".courses vs .academy: The Course Catalog or The Institution's Nameplate",
+      metaDescription:
+        ".courses names the product — course catalogs and paid knowledge; .academy names the institution — training schools and bootcamps. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both teach; one names the product, the other names the institution. .courses writes the merchandise into the domain — online course platforms and independent instructors, vocational and certification training, and corporate learning or paid-knowledge programs on name.courses match exactly what learners search: topic + courses; a name like python.courses needs no explanation. At about $2 to register and $31/yr to renew — near-zero cost to test, mid-tier to hold; price a multi-topic matrix at renewal rates. .academy names the identity — training schools and bootcamps, corporate universities and certification bodies, and sports or arts academies on name.academy carry the built-in weight of an institution; a code.academy-style name sounds like a school, not a syllabus. At about $12 to register and $38/yr to renew — slightly pricier both ways, but not by much. The test: if you sell a catalog — many courses, bought individually, browsed by topic → .courses' product semantics are truest, and subject and skill words nearly all hit; if you run a school — structured paths, graduation credentials, an institutional brand → .academy's nameplate reads steadier and carries more brand premium. Two cautions: the plural .courses implies a batch of courses, so a single course or a personal brand often reads better as an .academy; and with similar renewals, decide by the learner's mental model — people enrolling in a course search courses, people joining an academy search academy. Education groups commonly hold both: .academy as the institutional flagship, .courses as the catalog and ad landing pages. Naming: subject or skill + .courses fits vertical course sites; brand + .academy fits the institution's front door.",
+      pickA: ["Course platforms & independent instructors", "Vocational & certification training", "Paid-knowledge course catalogs", "About $2 year-one validation"],
+      pickB: ["Training schools & bootcamps", "Corporate universities & certification bodies", "Sports & arts academies", "Stronger institutional brand premium"],
+    },
+  },
+  "degree-vs-education": {
+    slug: "degree-vs-education",
+    a: "degree",
+    b: "education",
+    zh: {
+      title: ".degree 和 .education 怎么选：学位项目与教育机构的分工",
+      metaDescription: ".degree 强指学历学位，适合在线学位与升学服务；.education 是教育行业的通用门牌，适合学校官网与教育科技。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在教育行业，一个报结果，一个报行业。.degree 说的是「学位」这个结果——在线学位与继续教育项目、留学与升学咨询、学位课程比价测评、高校招生与专业介绍站用 name.degree，想读学位的人搜「专业 + degree」时域名与搜索意图严丝合缝，nursing.degree 这样的名字自带转化力；注册约 $8（约 ¥59）、续费约 $42/年（约 ¥300），首年低门槛、续费在教育后缀里属中上。.education 是整个行业的通用门牌——学校与教育机构官网、教育科技与在线平台、教育媒体与政策研究、教师培训与资源站用 name.education，十个字母把行业身份写得端端正正；注册约 $21（约 ¥152）、续费约 $28/年（约 ¥204），注册续费接近同价、无首年陷阱，长持成本反而比 .degree 低三成。判断标准：业务围着「拿学位」转——在线学位、升学留学、学位比价 → .degree 的结果语义最准，专业词库存极好；业务是「做教育」——办学、平台、媒体、师训 → .education 的行业口径更宽，机构官网用它最得体。两点注意：一是「degree」强指学历，技能证书类项目用 .courses / .training 更贴；二是 .education 偏长，配短品牌词平衡口播，且它报行业不报品类，垂直获客站用 .degree 的精准词更划算。教育集团常见打法：.education 做集团官网、.degree 做学位业务线的获客落地页。命名上「专业 + .degree」接垂类学位站，「机构名 + .education」接学校与平台官网。",
+      pickA: ["在线学位与继续教育项目", "留学与升学咨询", "学位课程比价与测评", "「专业 + degree」精准搜索词"],
+      pickB: ["学校与教育机构官网", "教育科技与在线平台", "教育媒体与教师培训", "续费更低（约 ¥204/年）长持划算"],
+    },
+    en: {
+      title: ".degree vs .education: The Credential or The Industry Nameplate",
+      metaDescription:
+        ".degree points squarely at academic credentials — for online degrees and admissions services; .education is the industry's general nameplate — for school sites and ed-tech. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in education; one names the outcome, the other names the industry. .degree names the credential — online degree and continuing-education programs, study-abroad and admissions consulting, degree comparison and review sites, and university recruitment pages on name.degree match exactly what prospective students search: major + degree; a name like nursing.degree carries its own conversion power. At about $8 to register and $42/yr to renew — a low first-year door with an upper-mid renewal among education suffixes. .education is the industry's general nameplate — school and institution websites, ed-tech and online platforms, education media and policy research, and teacher training resources on name.education spell the industry identity in full. At about $21 to register and $28/yr to renew — near-flat pricing with no first-year trap, and the long hold actually runs about 30% cheaper than .degree. The test: if the business revolves around earning a degree — online programs, admissions, degree comparison → .degree's outcome semantics are truest, and major words nearly all hit; if the business is education itself — running schools, platforms, media, teacher training → .education's industry scope reads properly institutional. Two cautions: degree strongly means academic credentials, so skill certificates fit .courses or .training better; and at nine letters .education runs long — pair it with a short brand word, and remember it names the industry, not a category, so vertical lead-gen sites convert better on .degree's exact-match words. Education groups commonly split: .education for the group site, .degree for degree-line landing pages. Naming: major + .degree fits vertical degree sites; institution name + .education fits school and platform flagships.",
+      pickA: ["Online degree & continuing-ed programs", "Study-abroad & admissions consulting", "Degree comparison & review sites", "Major + degree exact-match search"],
+      pickB: ["School & institution websites", "Ed-tech & online platforms", "Education media & teacher training", "Cheaper ~$28/yr renewal for long holds"],
+    },
+  },
+  "mba-vs-school": {
+    slug: "mba-vs-school",
+    a: "mba",
+    b: "school",
+    zh: {
+      title: ".mba 和 .school 怎么选：商学院身份与泛教学场景的分工",
+      metaDescription: ".mba 三个字母就是全球通行的商科学位符号，适合商学院与管理培训；.school 覆盖一切教学场景，适合各类学校与线上课堂。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都挂着「学」字招牌，一个专攻商科，一个来者不拒。.mba 是全球通行的三字母学位符号——MBA/EMBA 项目与商学院、管理与领导力培训、备考与申请咨询、商业案例内容站用 name.mba，目标人群零解释成本，apply.mba 这样的名字本身就是行动号召；注册约 $11（约 ¥78）、续费约 $31/年（约 ¥226），便宜进便宜养，城市名与商科赛道词库存极好。.school 是泛教学场景的门牌——中小学与国际学校、语言学校与艺术培训、线上课堂与兴趣班、驾校厨校等垂直技能学校用 name.school，「这是所学校」一眼即懂；注册约 $6（约 ¥41）、续费约 $29/年（约 ¥211），是教育后缀里的低位价，两头都比 .mba 略便宜。判断标准：人群是商科学员与经理人——商学院、管理培训、MBA 备考 → .mba 的身份符号最准，圈内认知直接变成信任；人群更宽或更年轻——K12、语言、兴趣、技能学校 → .school 的泛口径更稳，code.school、music.school 式组合就是搜索词。两点注意：一是 .mba 把定位锁死在商科教育，泛管理内容用 .guru / .expert 更灵活；二是 .school 语义偏「机构」，单门课程或课程目录用已收录的 .courses 更贴。商学院做外延业务时常见两头拿：.mba 做学位项目主站、.school 接短期班与青少年商科营。命名上「城市/学校名 + .mba」接商学院与校友圈，「品类 + .school」接垂直技能学校。",
+      pickA: ["MBA/EMBA 项目与商学院", "管理与领导力培训", "备考申请与咨询服务", "商科人群零解释成本"],
+      pickB: ["中小学与国际学校", "语言、艺术与兴趣班", "「品类 + .school」即搜索词", "更低的注册与续费（约 ¥211/年）"],
+    },
+    en: {
+      title: ".mba vs .school: The B-School Badge or The Everyteach Nameplate",
+      metaDescription:
+        ".mba is the globally recognized three-letter business credential — for business schools and management training; .school covers every teaching scene — for schools of all kinds and online classrooms. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both hang a teaching shingle; one specializes in business, the other takes all comers. .mba is a globally understood credential in three letters — MBA/EMBA programs and business schools, management and leadership training, admissions prep and consulting, and business case content on name.mba need zero explanation to their audience; a name like apply.mba is a call to action by itself. At about $11 to register and $31/yr to renew — cheap in, cheap to hold, with excellent inventory of city names and business-track words. .school is the nameplate for every teaching scene — K-12 and international schools, language and arts academies, online classrooms and hobby classes, and vertical skill schools from driving to cooking on name.school read instantly as a place that teaches. At about $6 to register and $29/yr to renew — among the cheapest education suffixes, slightly under .mba on both ends. The test: if the audience is business students and managers — b-schools, management training, MBA prep → .mba's badge is truest, and in-circle recognition converts straight into trust; if the audience is broader or younger — K-12, languages, hobbies, trade skills → .school's wide scope reads steadier, and combos like code.school or music.school are the search query itself. Two cautions: .mba locks the positioning to business education — broader management content flexes better on .guru or .expert; and .school implies an institution — a single course or catalog fits the already-listed .courses better. Business schools expanding sideways often hold both: .mba for the degree flagship, .school for short programs and youth business camps. Naming: city or school name + .mba fits b-schools and alumni hubs; category + .school fits vertical skill schools.",
+      pickA: ["MBA/EMBA programs & business schools", "Management & leadership training", "Admissions prep & consulting", "Zero explanation to the b-school crowd"],
+      pickB: ["K-12 & international schools", "Language, arts & hobby classes", "Category + .school as the search query", "Cheaper ~$29/yr renewal"],
+    },
+  },
+  "study-vs-courses": {
+    slug: "study-vs-courses",
+    a: "study",
+    b: "courses",
+    zh: {
+      title: ".study 和 .courses 怎么选：学习动作与课程目录的分工",
+      metaDescription: ".study 是「学习」这个动作，适合备考工具与学习社区；.courses 是「课程」这个商品，适合在线课程与知识付费。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一个注册局、同一张价目表，差别全在词性：一个是动词，一个是商品。.study 把「学习」这个动作写进域名——备考刷题与学习工具、留学与游学项目、学习方法与效率内容、研究小组与学习社区用 name.study，动词属性自带号召，ielts.study 就是一句「来学雅思」，germany.study 对留学机构是天然入口（study in + 国家是行业固定搜索词）；注册约 $2（约 ¥11）、续费约 $31/年（约 ¥226）。.courses 报的是「课程」这个商品——在线课程平台与独立讲师、职业技能与考证培训、知识付费目录用 name.courses，学员搜「主题 + courses」时域名就是搜索词，python.courses 不用解释就知道卖什么；价格与 .study 完全同档：注册约 $2（约 ¥11）、续费约 $31/年（约 ¥226）。价格既然打平，判断标准就纯看业务形态：产品是「学习的过程」——刷题工具、学习社区、留学服务、方法论内容 → .study 的动词口径最准；产品是「可购买的课程」——卖课、课程目录、按主题检索 → .courses 的商品语义直接对上购买意图。两点注意：一是同一个品牌词常常两个后缀都有货（库存都极好），预算允许可以两个都拿、一个主用一个跳转，防止矩阵词被同行摘走；二是两者首年便宜续费贵 20 倍，批量注册按续费价算总账。命名上「考试/国家 + .study」接备考与留学，「学科/技能 + .courses」接课程售卖，一条学习产品线常见打法是 .study 做工具与社区、.courses 做变现课程目录。",
+      pickA: ["备考刷题与学习工具", "留学与游学项目（国家 + .study）", "学习方法与效率内容", "研究小组与学习社区"],
+      pickB: ["在线课程平台与独立讲师", "职业技能与考证培训", "知识付费的课程目录", "「主题 + courses」购买搜索词"],
+    },
+    en: {
+      title: ".study vs .courses: The Verb of Learning or The Product on the Shelf",
+      metaDescription:
+        ".study names the act of learning — for test-prep tools and study communities; .courses names the product — for online courses and paid knowledge. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same registry, same price sheet — the whole difference is the part of speech: one is a verb, the other is merchandise. .study puts the act of learning in the domain — test-prep and study tools, study-abroad programs, learning-method and productivity content, and research groups or study communities on name.study carry a built-in call to action; ielts.study literally says \"come study IELTS\", and germany.study is a natural front door for study-abroad agencies (study in + country is the industry's fixed search phrase). About $2 to register and $31/yr to renew. .courses names the product — online course platforms and independent instructors, vocational and certification training, and paid-knowledge catalogs on name.courses match exactly what learners search: topic + courses; python.courses needs no explanation. Pricing is identical: about $2 to register and $31/yr to renew. With price off the table, decide purely by business shape: if the product is the process of learning — practice tools, study communities, abroad services, methodology content → .study's verb register is truest; if the product is a purchasable course — selling classes, catalogs, topic browsing → .courses' merchandise semantics meet buying intent head-on. Two cautions: the same brand word is often available on both (inventory is excellent on each), so with budget take both — one primary, one redirecting — before a competitor picks off your matrix word; and both run cheap year one with a 20× renewal, so price bulk registrations at renewal rates. Naming: exam or country + .study fits prep and study-abroad; subject or skill + .courses fits course sales — a common split puts tools and community on .study and the monetized catalog on .courses.",
+      pickA: ["Test-prep & study tools", "Study-abroad programs (country + .study)", "Learning methods & productivity content", "Research groups & study communities"],
+      pickB: ["Course platforms & independent instructors", "Vocational & certification training", "Paid-knowledge course catalogs", "Topic + courses buying-intent search"],
+    },
+  },
+  "forum-vs-community": {
+    slug: "forum-vs-community",
+    a: "forum",
+    b: "community",
+    zh: {
+      title: ".forum 和 .community 怎么选：发帖式论坛与泛社群身份的分工",
+      metaDescription: ".forum 强指经典发帖式讨论区，适合垂直论坛与品牌社区；.community 覆盖一切社群形态，适合会员平台与邻里组织。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在聚人讨论，一个报产品形态，一个报组织身份。.forum 就是「论坛」本身——垂直兴趣社区、行业交流与问答平台、开源项目讨论区、品牌用户社区用 name.forum，一眼就知道这是个能发帖回帖的地方，crypto.forum 不用任何说明；这个后缀早年定价数百美元，如今降到注册约 $2（约 ¥11）、续费约 $31/年（约 ¥226），是社区场景的捡漏机会，兴趣词与行业词库存极好。.community 报的是更宽的社群身份——会员制与付费社群、开源与开发者社区、邻里与业主组织、跨兴趣的综合平台用 name.community，「这是个社群」的形态从后缀就说清，不预设讨论区这一种产品形态；注册约 $8（约 ¥59）、续费约 $37/年（约 ¥263），两头都比 .forum 略贵。判断标准：产品就是经典发帖式论坛——主题版块、串楼讨论、UGC 沉淀 → .forum 的形态语义最准，落到域名就是产品说明书；组织是更广义的社群——会员体系、活动组织、多形态内容 → .community 的宽口径更稳，产品形态再怎么迭代都不用改名。两点注意：一是 .forum 强指讨论区，官网主站不适合，最佳用法是主站 + 社区分离（brand.com 主站、brand.forum 社区），.community 同理但语义更宽容；二是 .forum 首年便宜续费贵 20 倍、.community 九个字母偏长，各有一处成本要掂量。品牌社区常见打法：形态是论坛就用 .forum，形态是会员社群就用 .community，两个词都被占时互为备选。命名上「兴趣/行业 + .forum」接垂类论坛，「主题词 + .community」接会员与邻里社群。",
+      pickA: ["垂直兴趣论坛与讨论区", "行业交流与问答平台", "开源项目讨论区", "首年约 ¥11 的捡漏价"],
+      pickB: ["会员制与付费社群", "邻里与业主组织", "形态未定的综合社群", "不预设产品形态、迭代不改名"],
+    },
+    en: {
+      title: ".forum vs .community: The Threaded Board or The Broad Gathering",
+      metaDescription:
+        ".forum strongly means a classic threaded discussion board — for vertical forums and brand communities; .community covers every gathering format — for membership platforms and neighborhood groups. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both gather people to talk; one names the product format, the other names the organizational identity. .forum is the word itself — vertical interest communities, industry Q&A platforms, open-source discussion boards, and official brand communities on name.forum are instantly recognizable as places to post and reply; crypto.forum needs no tagline. This suffix once carried a several-hundred-dollar price tag and now runs about $2 to register and $31/yr to renew — a genuine bargain for community projects, with excellent inventory of interest and industry words. .community names the broader identity — membership and paid communities, open-source and developer groups, neighborhood and HOA organizations, and multi-format platforms on name.community state \"this is a community\" without presuming the discussion-board format. At about $8 to register and $37/yr to renew — slightly pricier both ways. The test: if the product is a classic threaded forum — topic boards, threads, UGC archives → .forum's format semantics are truest, and the domain doubles as the product description; if the organization is a broader community — membership systems, events, mixed content formats → .community's wide scope reads steadier and survives every product pivot without a rename. Two cautions: .forum strongly means a discussion board, so it suits a community satellite rather than a main site — the classic split is brand.com for the site, brand.forum for the community, and .community plays the same role with looser semantics; and each carries one cost to weigh — .forum's renewal runs 20× its first year, while .community is nine letters long. Brand communities usually decide by format: threaded board → .forum, membership community → .community, with each as the other's fallback when a word is taken. Naming: interest or industry + .forum fits vertical boards; topic word + .community fits membership and neighborhood groups.",
+      pickA: ["Vertical interest forums & boards", "Industry Q&A platforms", "Open-source discussion boards", "About $2 year-one bargain entry"],
+      pickB: ["Membership & paid communities", "Neighborhood & HOA organizations", "Format-undecided general communities", "Survives product pivots without renaming"],
+    },
+  },
+  "review-vs-reviews": {
+    slug: "review-vs-reviews",
+    a: "review",
+    b: "reviews",
+    zh: {
+      title: ".review 和 .reviews 怎么选：评测媒体与点评聚合的分工",
+      metaDescription: "单数 .review 贴「一篇评测」的媒体身份，适合产品评测与横评站；复数 .reviews 贴「一堆点评」的聚合形态，适合口碑平台与用户评价。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个字母 s 的差别，分开的是两种产品形态。单数 .review 说的是「一篇评测」——产品评测与横评媒体、软件与服务深度测评、书影音评论专栏用 name.review，编辑视角的「我们来评一评」从后缀就开始，laptop.review 这样的名字自带点击理由；注册与续费均约 $11/年（约 ¥78），平进平出、无首年陷阱，在内容后缀里是便宜好持有的一档。复数 .reviews 说的是「一堆点评」——消费点评与口碑聚合、用户评价平台、商家信誉与评分站用 name.reviews，UGC 聚合的形态一眼即懂，hotel.reviews 读起来就是一个点评库；注册约 $5（约 ¥33）、续费约 $50/年（约 ¥360），首年更便宜但续费是 .review 的四倍多，长持成本差距明显。判断标准：产品是编辑评测——深度横评、专业测试、评论专栏 → 单数 .review 的媒体身份最准，且平价续费适合长期养站；产品是点评聚合——用户打分、口碑库、商家评价 → 复数 .reviews 的聚合语义更贴，首年便宜适合快速验证。三点注意：一是两者互为最强混淆项，认真的评测品牌建议主用一个、防御注册另一个，避免流量被同行截走；二是评测与点评生意的命脉都是公信力，测试方法与利益披露要写清；三是 .reviews 续费约 ¥360/年，矩阵注册前按续费价算总账。命名上「品类 + .review」接垂类评测媒体，「品类/地名 + .reviews」接点评聚合平台，单复数正好对上「一篇评测」与「一堆点评」的语感。",
+      pickA: ["产品评测与横评媒体", "软件与服务深度测评", "书影音评论专栏", "注册续费均约 ¥78 平进平出"],
+      pickB: ["消费点评与口碑聚合", "用户评价与打分平台", "商家信誉与评分站", "首年约 ¥33 快速验证"],
+    },
+    en: {
+      title: ".review vs .reviews: The Editorial Verdict or The Rating Pile",
+      metaDescription:
+        "Singular .review fits the review-media identity — for product testing and comparison sites; plural .reviews fits aggregation — for rating platforms and user feedback. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One letter s apart, two different products. Singular .review names the artifact — a review: product review and comparison media, in-depth software and service testing, and book, film or music criticism on name.review carry the editorial \"we reviewed it\" register straight from the suffix; a name like laptop.review brings its own reason to click. At about $11/yr flat for both registration and renewal — no first-year trap, in the cheap-to-hold tier of content suffixes. Plural .reviews names the pile — consumer rating aggregators, user feedback platforms, and merchant reputation or scoring sites on name.reviews read instantly as UGC collections; hotel.reviews sounds like a database of opinions. At about $5 to register and $50/yr to renew — cheaper year one, but renewal runs over four times .review's, a real gap on a long hold. The test: if the product is editorial reviewing — deep comparisons, professional testing, criticism columns → the singular's media identity is truest, and the flat renewal suits a long-lived site; if the product is aggregation — user ratings, reputation libraries, merchant scores → the plural's semantics fit, and the cheap first year suits fast validation. Three cautions: each is the other's strongest confusion risk, so a serious review brand should use one and defensively register the other before a competitor siphons the traffic; both trades live on credibility — publish testing methodology and disclosure policies; and at ≈$50/yr, price any .reviews matrix at renewal rates before bulk-registering. Naming: category + .review fits vertical review media; category or place + .reviews fits rating aggregators — the singular and plural map exactly onto one verdict versus many opinions.",
+      pickA: ["Product review & comparison media", "In-depth software & service testing", "Book, film & music criticism", "Flat ~$11/yr in-and-out pricing"],
+      pickB: ["Consumer rating aggregators", "User feedback & scoring platforms", "Merchant reputation & rating sites", "About $5 year-one fast validation"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

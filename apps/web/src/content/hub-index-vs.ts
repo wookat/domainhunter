@@ -268,4 +268,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "catering-vs-restaurant", a: "catering", b: "restaurant", title: { zh: ".catering 和 .restaurant 怎么选：外烩承办与堂食门店的分工", en: ".catering vs .restaurant: Bringing the Feast or Seating the Guest" } },
   { slug: "florist-vs-garden", a: "florist", b: "garden", title: { zh: ".florist 和 .garden 怎么选：花艺师门牌与园艺生活的分工", en: ".florist vs .garden: The Bouquet Counter or The Growing Ground" } },
   { slug: "church-vs-community", a: "church", b: "community", title: { zh: ".church 和 .community 怎么选：教会身份与社群平台的分工", en: ".church vs .community: The Faith Nameplate or The Gathering Ground" } },
+  { slug: "courses-vs-academy", a: "courses", b: "academy", title: { zh: ".courses 和 .academy 怎么选：课程目录与教学机构的分工", en: ".courses vs .academy: The Course Catalog or The Institution's Nameplate" } },
+  { slug: "degree-vs-education", a: "degree", b: "education", title: { zh: ".degree 和 .education 怎么选：学位项目与教育机构的分工", en: ".degree vs .education: The Credential or The Industry Nameplate" } },
+  { slug: "mba-vs-school", a: "mba", b: "school", title: { zh: ".mba 和 .school 怎么选：商学院身份与泛教学场景的分工", en: ".mba vs .school: The B-School Badge or The Everyteach Nameplate" } },
+  { slug: "study-vs-courses", a: "study", b: "courses", title: { zh: ".study 和 .courses 怎么选：学习动作与课程目录的分工", en: ".study vs .courses: The Verb of Learning or The Product on the Shelf" } },
+  { slug: "forum-vs-community", a: "forum", b: "community", title: { zh: ".forum 和 .community 怎么选：发帖式论坛与泛社群身份的分工", en: ".forum vs .community: The Threaded Board or The Broad Gathering" } },
+  { slug: "review-vs-reviews", a: "review", b: "reviews", title: { zh: ".review 和 .reviews 怎么选：评测媒体与点评聚合的分工", en: ".review vs .reviews: The Editorial Verdict or The Rating Pile" } },
 ];
