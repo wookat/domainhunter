@@ -1,0 +1,75 @@
+{
+  "home_more_chip": "+178",
+  "onboarding_ttl": {
+    "no_key_visible": true,
+    "close_btn": "关闭引导",
+    "value_after_dismiss": "1786285706577",
+    "value_is_ms_ts": true,
+    "hidden_after_dismiss": false,
+    "visible_after_31d": true,
+    "key_removed_after_expiry": true,
+    "legacy_hidden": false,
+    "legacy_upgraded_to_ts": true
+  },
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_all": "核验完成：共 193 个，185 个可注册",
+  "quick_all_unknown_elems": 16,
+  "quick_baidu_com_cn": "核验完成：共 10 个，0 个可注册",
+  "prices_rows_zh": 192,
+  "prices_rows_en": 192,
+  "tld_hub_links": 192,
+  "guide_hub_links": 188,
+  "vs_hub_links": 222,
+  "guide_zh_cardline": {
+    "total": 0,
+    "over": [],
+    "max": -Infinity
+  },
+  "advanced_bulk_text": [
+    "google.com\nqzxvkw9r310b.com",
+    "google.com"
+  ],
+  "share_live_domains": 0,
+  "share_revoke": {
+    "del": 200,
+    "delBody": {
+      "ok": true
+    },
+    "getAfter": 410
+  },
+  "share_revoked_ui": true,
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(11, 12, 14)",
+    "persist_after_reload": "rgb(11, 12, 14)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld": 360,
+    "/vs/golf-vs-club": 360
+  },
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r310"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/tld/notatld-r310"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/KXifLcFDzx"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/KXifLcFDzx"
+    }
+  ]
+}
