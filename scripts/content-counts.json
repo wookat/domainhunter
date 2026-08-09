@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 216,
+    "count": 222,
     "slugs": [
       "com",
       "net",
@@ -217,7 +217,13 @@
       "legal",
       "delivery",
       "recipes",
-      "rent"
+      "rent",
+      "church",
+      "jewelry",
+      "cleaning",
+      "plumbing",
+      "catering",
+      "florist"
     ]
   },
   "guide": {

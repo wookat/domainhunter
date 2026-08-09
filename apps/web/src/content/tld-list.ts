@@ -38,6 +38,7 @@ export const TLD_LIST = [
   "press", "stream", "movie", "pictures", "productions", "audio",
   "credit", "loans", "investments", "holdings", "mortgage", "computer",
   "vet", "lawyer", "legal", "delivery", "recipes", "rent",
+  "church", "jewelry", "cleaning", "plumbing", "catering", "florist",
 ] as const;
 
 export type Tld = (typeof TLD_LIST)[number];
