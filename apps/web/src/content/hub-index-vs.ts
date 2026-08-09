@@ -220,4 +220,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "dad-vs-blog", a: "dad", b: "blog", title: { zh: ".dad 和 .blog 怎么选：爸爸人设与写作阵地的分工", en: ".dad vs .blog: The Dad Persona or The Writing Home" } },
   { slug: "dog-vs-pet", a: "dog", b: "pet", title: { zh: ".dog 和 .pet 怎么选：犬类专营与全宠物赛道的分工", en: ".dog vs .pet: The Dog Lane or The Whole Pet Aisle" } },
   { slug: "gifts-vs-shop", a: "gifts", b: "shop", title: { zh: ".gifts 和 .shop 怎么选：送礼场景与通用店铺的分工", en: ".gifts vs .shop: The Occasion or The Storefront" } },
+  { slug: "photo-vs-photography", a: "photo", b: "photography", title: { zh: ".photo 和 .photography 怎么选：单数名片与全拼手艺的分工", en: ".photo vs .photography: The Business Card or The Craft in Full" } },
+  { slug: "health-vs-life", a: "health", b: "life", title: { zh: ".health 和 .life 怎么选：行业信号与生活温度的取舍", en: ".health vs .life: The Industry Signal or The Warmth of Living" } },
+  { slug: "fit-vs-fitness", a: "fit", b: "fitness", title: { zh: ".fit 和 .fitness 怎么选：口号短词与全拼场馆的分工", en: ".fit vs .fitness: The Slogan or The Gym in Full" } },
+  { slug: "dance-vs-studio", a: "dance", b: "studio", title: { zh: ".dance 和 .studio 怎么选：舞种锐度与创作空间的分工", en: ".dance vs .studio: The Dance Lane or The Creative Room" } },
+  { slug: "guide-vs-tips", a: "guide", b: "tips", title: { zh: ".guide 和 .tips 怎么选：成体系攻略与轻量技巧的分工", en: ".guide vs .tips: The Full Walkthrough or The Quick Trick" } },
+  { slug: "reviews-vs-blog", a: "reviews", b: "blog", title: { zh: ".reviews 和 .blog 怎么选：评测立场与写作阵地的分工", en: ".reviews vs .blog: The Verdict Stand or The Writing Home" } },
 ];
