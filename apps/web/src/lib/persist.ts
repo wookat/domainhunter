@@ -23,6 +23,15 @@ export function saveSearch(s: SavedSearch): void {
   }
 }
 
+/** 本标签页是否已有搜索结果（用于判定老用户，不解析完整数据） */
+export function hasSavedSearch(): boolean {
+  try {
+    return sessionStorage.getItem(KEY) !== null;
+  } catch {
+    return false;
+  }
+}
+
 export function loadSearch(): SavedSearch | null {
   try {
     const raw = sessionStorage.getItem(KEY);
