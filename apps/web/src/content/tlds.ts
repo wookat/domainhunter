@@ -5244,6 +5244,186 @@ const GUIDES = {
       ],
     },
   },
+  family: {
+    tld: "family",
+    zh: {
+      title: ".family 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".family 把「家庭」写进域名，适合家庭网站与家谱相册、亲子内容与育儿社区、家庭理财与保险服务、家族企业官网。查看 .family 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .family 域名。",
+      intro:
+        ".family 把归属写进域名：家庭网站与家谱相册、亲子内容与育儿社区、家庭理财与保险服务、家族企业官网用 name.family，「一家人」的温度从地址就传出来了。它最独特的用法是「姓氏 + .family」——smith.family 式的家庭主页天然成立，聚合相册、家谱、家庭动态，比社交平台更私密可控；对家族企业它也是加分项，「传承感」正是这类品牌想要的。Identity Digital 运营，注册约 $6（约 ¥41），续费约 $31/年（约 ¥226）——温和档，当家庭数字资产长期持有无压力。库存极好：常见姓氏、拼音姓氏命中率都很高。注意三点：一是家庭站涉及儿童照片与隐私，建议配合访问控制而非全公开；二是 family 也是「家族式」的商业隐喻，餐馆、诊所等「家庭经营」定位同样成立；三是亲子内容竞争激烈，域名点题之外内容质量才是留存关键。命名上「姓氏 + .family」最点题（家庭主页的标准用法），「品牌 + .family」适合家族企业与亲子品牌，「city/our + .family」适合社区型育儿站。",
+      bestFor: ["家庭网站与家谱相册", "亲子内容与育儿社区", "家庭理财与保险服务", "家族企业官网"],
+      namingTips: [
+        "「姓氏 + .family」是家庭主页的标准用法",
+        "注册约 $6、续费约 $31/年，长期持有无压力",
+        "涉及儿童照片建议配访问控制，别全公开",
+        "「品牌 + .family」适合家族企业与亲子品牌",
+      ],
+    },
+    en: {
+      title: ".family Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".family writes the bond into the address — for family sites and photo archives, parenting content and communities, family finance and insurance services, and family-business sites. See live pricing and naming advice, then hunt available .family names with AI.",
+      intro:
+        ".family writes the bond into the address: family homepages and photo archives, parenting content and communities, family finance and insurance services, family-business sites on name.family carry the warmth in the domain itself. Its signature pattern is surname + .family — a smith.family homepage just works, gathering albums, genealogy and family news with more privacy and control than any social platform; for family businesses it adds exactly the heritage note the brand wants. Operated by Identity Digital, about $6 to register and $31/yr to renew — the mild tier, painless to hold as a long-term family asset. Inventory is excellent: common surnames in English and pinyin alike still hit. Three cautions: family sites carry children's photos, so pair the domain with access control rather than going fully public; family also works as a business metaphor — family-run restaurants and clinics qualify too; and parenting content is a crowded field, so the domain opens the door but content quality keeps readers. Naming: surname + .family is the standard homepage pattern; brand + .family fits family businesses and parenting brands; our or city + .family fits community parenting sites.",
+      bestFor: ["Family sites & photo archives", "Parenting content & communities", "Family finance & insurance", "Family-business sites"],
+      namingTips: [
+        "Surname + .family is the standard family-homepage pattern",
+        "About $6 to register, $31/yr — easy to hold long-term",
+        "Pair kids' photos with access control, not a public site",
+        "Brand + .family fits family businesses and parenting brands",
+      ],
+    },
+  },
+  baby: {
+    tld: "baby",
+    zh: {
+      title: ".baby 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".baby 把「婴幼儿」写进域名，适合母婴用品电商与品牌、月子中心与产后护理、婴幼儿早教与托育、育儿内容与新生儿记录站。查看 .baby 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .baby 域名。",
+      intro:
+        ".baby 把人群写进域名：母婴用品电商与品牌、月子中心与产后护理机构、婴幼儿早教与托育、育儿内容与新生儿记录站用 name.baby，目标客群一眼锁定。它的行业出身很正——最初由强生（Johnson & Johnson）发起、后转入 XYZ 注册局运营，母婴垂直的定位从注册局层面就写死了；对母婴品牌这是 .com 之外语义最贴的选择，「品牌 + .baby」读出来就是产品线。注册约 $2（约 ¥11），续费约 $52/年（约 ¥374）——首年极便宜、续费跳档明显，预算一定按续费价算。库存极好：品牌词、品类词、昵称词几乎都有货。注意三点：一是母婴行业信任成本高，资质、成分与安全认证展示比域名更影响转化；二是 baby 也是昵称与流行文化用词，音乐、宠物等非母婴用法同样成立；三是新生儿记录站热度随孩子长大会降，长期续费要想清楚。命名上「品牌 + .baby」最点题（母婴品牌的标准用法），「品类词 + .baby」适合垂直电商（organic.baby 式），「昵称 + .baby」适合个人记录站。",
+      bestFor: ["母婴用品电商与品牌", "月子中心与产后护理", "婴幼儿早教与托育", "育儿内容与新生儿记录"],
+      namingTips: [
+        "「品牌 + .baby」是母婴品牌的标准用法",
+        "注册约 $2、续费约 $52/年，预算一定按续费算",
+        "母婴行业资质与安全认证比域名更影响转化",
+        "「品类词 + .baby」适合垂直母婴电商",
+      ],
+    },
+    en: {
+      title: ".baby Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".baby writes the audience into the address — for baby-product stores and brands, maternity and postpartum care, early education and childcare, and parenting content and baby-book sites. See live pricing and naming advice, then hunt available .baby names with AI.",
+      intro:
+        ".baby writes the audience into the address: baby-product stores and brands, maternity and postpartum care centers, early education and childcare providers, parenting content and baby-book sites on name.baby lock onto their customers at a glance. Its pedigree is unusually on-topic — launched by Johnson & Johnson and now operated by XYZ Registry, the mother-and-baby vertical is baked in at the registry level, making it the most semantically exact choice outside .com for baby brands: brand + .baby reads as the product line itself. About $2 to register and $52/yr to renew — a very cheap first year with a steep renewal jump, so budget strictly on the renewal price. Inventory is excellent: brand words, category words and nickname words are nearly all available. Three cautions: trust costs are high in the baby industry, so certifications, ingredients and safety proof convert better than any domain; baby is also a term of endearment and pop-culture word, so music and pet uses work fine too; and a baby-book site cools as the child grows, so think through the long-term renewals. Naming: brand + .baby is the standard baby-brand pattern; category + .baby fits vertical stores (the organic.baby pattern); nickname + .baby fits personal baby books.",
+      bestFor: ["Baby-product stores & brands", "Maternity & postpartum care", "Early education & childcare", "Parenting content & baby books"],
+      namingTips: [
+        "Brand + .baby is the standard baby-brand pattern",
+        "About $2 to register, $52/yr — budget strictly on renewal",
+        "Certifications and safety proof convert better than the domain",
+        "Category + .baby fits vertical baby stores",
+      ],
+    },
+  },
+  mom: {
+    tld: "mom",
+    zh: {
+      title: ".mom 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".mom 把「妈妈」写进域名，适合妈妈博客与育儿分享、母婴社区与妈妈群服务、送给妈妈的礼物电商、家庭生活方式内容站。查看 .mom 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .mom 域名。",
+      intro:
+        ".mom 把身份写进域名：妈妈博客与育儿分享、母婴社区与妈妈群服务、送给妈妈的礼物电商、家庭生活方式内容站用 name.mom，「妈妈视角」三个字母就说清了。它和 .baby 是一对好搭档——baby 指向孩子与产品，mom 指向妈妈本人与社群，妈妈博主、妈妈创业者（mompreneur）用它做个人品牌比通用后缀鲜活得多；英语里 ask mom、super mom 的固定搭配也让「词 + .mom」读起来自然成句。XYZ 注册局运营，注册约 $2（约 ¥11），续费约 $26/年（约 ¥189）——温和档，个人博客长期持有无压力。库存极好：昵称、名字、生活方式词几乎都有货。注意三点：一是 mom 是美式拼写，英式受众熟悉的是 mum，面向英联邦市场要留意；二是妈妈内容的主阵地在小红书、Instagram 等平台，域名的角色是个人品牌与合作洽谈的稳定入口；三是三个字母极短，配长一点的前词反而更好记。命名上「名字 + .mom」最点题（妈妈博主个人品牌的标准用法），「super/busy + .mom」适合人设化内容站，「品牌 + .mom」适合母婴社区产品。",
+      bestFor: ["妈妈博客与育儿分享", "母婴社区与妈妈群服务", "送给妈妈的礼物电商", "家庭生活方式内容站"],
+      namingTips: [
+        "「名字 + .mom」是妈妈博主个人品牌的标准用法",
+        "注册约 $2、续费约 $26/年，长期持有无压力",
+        "美式拼写 mom，面向英联邦市场注意 mum 差异",
+        "「super/busy + .mom」适合人设化内容站",
+      ],
+    },
+    en: {
+      title: ".mom Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".mom writes the identity into the address — for mom blogs and parenting diaries, mom communities and services, gifts-for-mom stores, and family lifestyle content sites. See live pricing and naming advice, then hunt available .mom names with AI.",
+      intro:
+        ".mom writes the identity into the address: mom blogs and parenting diaries, mom communities and group services, gifts-for-mom stores, family lifestyle content sites on name.mom state the point of view in three letters. It pairs naturally with .baby — baby points at the child and the products, mom points at the mother and her community, so mom bloggers and mompreneurs get a far livelier personal brand here than on a generic suffix, and fixed phrases like ask mom and super mom make word + .mom read as a sentence. Operated by XYZ Registry, about $2 to register and $26/yr to renew — the mild tier, painless for a personal blog held long-term. Inventory is excellent: nicknames, first names and lifestyle words nearly all hit. Three cautions: mom is the American spelling — Commonwealth audiences know mum, so mind the market; mom content lives on Instagram and similar platforms, so the domain's job is the stable front door for the personal brand and sponsorship inquiries; and three letters is ultra-short, so a slightly longer front word is actually easier to remember. Naming: first name + .mom is the standard mom-blogger pattern; super or busy + .mom fits persona-driven content; brand + .mom fits mom-community products.",
+      bestFor: ["Mom blogs & parenting diaries", "Mom communities & services", "Gifts-for-mom stores", "Family lifestyle content"],
+      namingTips: [
+        "First name + .mom is the standard mom-blogger pattern",
+        "About $2 to register, $26/yr — easy to hold long-term",
+        "American spelling — Commonwealth markets expect mum",
+        "Super or busy + .mom fits persona-driven content sites",
+      ],
+    },
+  },
+  dad: {
+    tld: "dad",
+    zh: {
+      title: ".dad 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".dad 把「爸爸」写进域名，适合爸爸博客与育儿分享、父亲节礼物与男士好物电商、冷笑话与幽默内容站、家庭工具与 DIY 教程。查看 .dad 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .dad 域名。",
+      intro:
+        ".dad 把身份写进域名：爸爸博客与育儿分享、父亲节礼物与男士好物电商、冷笑话与幽默内容站、家庭工具与 DIY 教程站用 name.dad，「爸爸视角」从地址就开始了。它是 Google 注册局运营的后缀——与 .app、.dev 同门，全线强制 HTTPS，安全基线从注册局层面写死；英语文化里 dad joke（冷笑话）、dad bod 等梗自带流量，幽默内容站用 .dad 点题又讨喜。注册约 $11（约 ¥78），续费同价——无首年低价陷阱，价格全程透明。库存极好：名字、梗词、工具词几乎都有货。注意三点：一是 Google 后缀必须配好 HTTPS 证书（主流托管平台都自动搞定）；二是 dad 的幽默气质是双刃剑，严肃的父职咨询、法律服务用它会显得轻佻；三是与 .mom 成对注册做「爸妈视角」双站是内容矩阵的现成玩法。命名上「名字 + .dad」最点题（爸爸博主个人品牌的标准用法），「joke/tips + .dad」适合幽默与技巧内容站，「品牌 + .dad」适合男士与父亲节礼物电商。",
+      bestFor: ["爸爸博客与育儿分享", "父亲节礼物与男士好物", "冷笑话与幽默内容站", "家庭工具与 DIY 教程"],
+      namingTips: [
+        "「名字 + .dad」是爸爸博主个人品牌的标准用法",
+        "注册约 $11、续费同价，无涨价陷阱",
+        "Google 后缀强制 HTTPS，托管平台自动搞定",
+        "幽默气质明显，严肃父职服务慎用",
+      ],
+    },
+    en: {
+      title: ".dad Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".dad writes the identity into the address — for dad blogs and parenting diaries, Father's Day gift stores, dad-joke and humor sites, and home tool and DIY tutorial sites. See live pricing and naming advice, then hunt available .dad names with AI.",
+      intro:
+        ".dad writes the identity into the address: dad blogs and parenting diaries, Father's Day and men's gift stores, dad-joke and humor sites, home tool and DIY tutorial sites on name.dad start the dad's-eye view right in the domain. It's a Google Registry suffix — same family as .app and .dev, with HTTPS enforced across the zone, so the security baseline is set at the registry level; and English culture hands it free traffic through dad joke and dad bod memes, making humor sites both on-topic and likable here. About $11 to register and the same to renew — no first-year teaser, fully transparent pricing. Inventory is excellent: first names, meme words and tool words nearly all hit. Three cautions: a Google suffix needs a working HTTPS certificate (mainstream hosts handle it automatically); the humor register cuts both ways — serious fatherhood counseling or legal services would read flippant here; and registering the .mom pair for a two-site parents' matrix is a ready-made content play. Naming: first name + .dad is the standard dad-blogger pattern; joke or tips + .dad fits humor and how-to content; brand + .dad fits men's and Father's Day gift stores.",
+      bestFor: ["Dad blogs & parenting diaries", "Father's Day & men's gifts", "Dad-joke & humor sites", "Home tools & DIY tutorials"],
+      namingTips: [
+        "First name + .dad is the standard dad-blogger pattern",
+        "About $11 to register and renew — no teaser-price trap",
+        "Google suffix — HTTPS is enforced, hosts handle it",
+        "Humor register — serious services should look elsewhere",
+      ],
+    },
+  },
+  dog: {
+    tld: "dog",
+    zh: {
+      title: ".dog 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".dog 把「狗狗」写进域名，适合宠物用品与狗粮电商、宠物美容与寄养服务、训犬与遛狗平台、犬种科普与狗狗内容站。查看 .dog 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .dog 域名。",
+      intro:
+        ".dog 把毛孩子写进域名：宠物用品与狗粮电商、宠物美容与寄养服务、训犬与遛狗平台、犬种科普与狗狗内容站用 name.dog，「跟狗有关」三个字母就说完了。它比 .pet 更锐利——pet 泛指宠物，dog 锁死犬类一个赛道，养狗人群的搜索与消费都极度垂直，狗粮订阅、犬种社区、遛狗 App 用它定位分毫不差；英语里 good dog、top dog 的固定搭配也让「词 + .dog」自然成句。Identity Digital 运营，注册约 $4（约 ¥26），续费约 $52/年（约 ¥374）——首年便宜、续费跳档，预算按续费价算才稳。库存极好：犬种名、昵称、品类词几乎都有货。注意三点：一是宠物行业信任靠实拍与口碑，域名点题之外用户评价与案例照片才是转化关键；二是 dog 在英语俚语里偶有贬义（dog day 式），品牌词要选正面搭配；三是与 .pet 的分工要想清，多宠物品类用 .pet、纯犬类用 .dog 更准。命名上「品牌 + .dog」最点题（宠物品牌的标准用法），「犬种 + .dog」适合垂直社区（corgi.dog 式），「good/walk + .dog」适合服务与内容站。",
+      bestFor: ["宠物用品与狗粮电商", "宠物美容与寄养服务", "训犬与遛狗平台", "犬种科普与狗狗内容"],
+      namingTips: [
+        "「品牌 + .dog」是宠物品牌的标准用法",
+        "注册约 $4、续费约 $52/年，预算按续费算",
+        "比 .pet 更锐利，纯犬类赛道定位分毫不差",
+        "「犬种 + .dog」适合垂直犬种社区",
+      ],
+    },
+    en: {
+      title: ".dog Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".dog writes the pup into the address — for pet supply and dog food stores, grooming and boarding services, dog training and walking platforms, and breed guides and dog content sites. See live pricing and naming advice, then hunt available .dog names with AI.",
+      intro:
+        ".dog writes the pup into the address: pet supply and dog food stores, grooming and boarding services, dog training and walking platforms, breed guides and dog content sites on name.dog say it all in three letters. It's sharper than .pet — pet covers any animal, dog locks onto one lane, and dog owners search and spend with extreme vertical focus, so food subscriptions, breed communities and walking apps aim true here; fixed phrases like good dog and top dog make word + .dog read as a sentence. Operated by Identity Digital, about $4 to register and $52/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price. Inventory is excellent: breed names, nicknames and category words nearly all hit. Three cautions: trust in the pet trade is built on real photos and reviews, so the domain opens the door but testimonials convert; dog carries occasional negative slang in English (the dog-day sense), so pick positive brand pairings; and split the work with .pet deliberately — multi-species stores fit .pet, pure dog plays aim truer with .dog. Naming: brand + .dog is the standard pet-brand pattern; breed + .dog fits vertical communities (the corgi.dog pattern); good or walk + .dog fits services and content sites.",
+      bestFor: ["Pet supply & dog food stores", "Grooming & boarding services", "Dog training & walking platforms", "Breed guides & dog content"],
+      namingTips: [
+        "Brand + .dog is the standard pet-brand pattern",
+        "About $4 to register, $52/yr — budget on renewal",
+        "Sharper than .pet — locked onto the dog lane",
+        "Breed + .dog fits vertical breed communities",
+      ],
+    },
+  },
+  gifts: {
+    tld: "gifts",
+    zh: {
+      title: ".gifts 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".gifts 把「礼物」写进域名，适合礼品电商与定制礼物、企业礼品与伴手礼服务、节日礼物清单与推荐站、礼品卡与心愿单工具。查看 .gifts 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .gifts 域名。",
+      intro:
+        ".gifts 把场景写进域名：礼品电商与定制礼物、企业礼品与伴手礼服务、节日礼物清单与推荐站、礼品卡与心愿单工具用 name.gifts，「来这儿挑礼物」的用途从地址就说清了。礼物是天然的「场景消费」——圣诞、情人节、母亲节、生日的搜索高峰周期性爆发，「场景词 + .gifts」正接住这类意图；对定制礼品与企业礼品这类高毛利生意，一个点题域名比长尾 .com 更好记也更好投放。Identity Digital 运营，注册约 $8（约 ¥59），续费约 $29/年（约 ¥211）——温和档，电商站长期持有无压力。库存极好：场景词、人群词、品类词几乎都有货。注意三点：一是礼品电商强季节性，域名之外物流履约的节前保障才是口碑关键；二是 gifts 是复数，读作「各种礼物」，单一定制品（如刻字钢笔）用「品类 + .gifts」反而更准；三是与 .shop/.store 的分工——泛电商用后者，礼物场景专营用 .gifts 语义更锐。命名上「人群 + .gifts」最点题（forhim.gifts 式直接接住送礼搜索），「品牌 + .gifts」适合礼品定制品牌，「节日词 + .gifts」适合季节性推荐站。",
+      bestFor: ["礼品电商与定制礼物", "企业礼品与伴手礼服务", "节日礼物清单与推荐站", "礼品卡与心愿单工具"],
+      namingTips: [
+        "「人群 + .gifts」直接接住送礼场景搜索",
+        "注册约 $8、续费约 $29/年，长期持有无压力",
+        "强季节性生意，节前履约保障比域名更关键",
+        "泛电商用 .shop，礼物专营用 .gifts 更锐",
+      ],
+    },
+    en: {
+      title: ".gifts Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".gifts writes the occasion into the address — for gift stores and custom gifts, corporate gifting services, holiday gift guides and lists, and gift card and wishlist tools. See live pricing and naming advice, then hunt available .gifts names with AI.",
+      intro:
+        ".gifts writes the occasion into the address: gift stores and custom-gift shops, corporate gifting and favor services, holiday gift guides and recommendation sites, gift card and wishlist tools on name.gifts announce come here to pick a present in the domain itself. Gifting is occasion commerce by nature — Christmas, Valentine's, Mother's Day and birthday searches spike on schedule, and occasion word + .gifts catches exactly that intent; for high-margin custom and corporate gifting, an on-topic domain beats a long-tail .com for recall and ad copy alike. Operated by Identity Digital, about $8 to register and $29/yr to renew — the mild tier, painless for a store held long-term. Inventory is excellent: occasion words, audience words and category words nearly all hit. Three cautions: gifting is fiercely seasonal, so pre-holiday fulfillment reliability builds the reputation more than the domain; gifts is plural and reads as an assortment — a single custom product (an engraved pen, say) aims truer as category + .gifts; and split the work with .shop or .store — general stores fit those, dedicated gifting plays read sharper on .gifts. Naming: audience + .gifts is the on-target forhim.gifts pattern that catches gifting searches; brand + .gifts fits custom-gift brands; holiday word + .gifts fits seasonal guides.",
+      bestFor: ["Gift stores & custom gifts", "Corporate gifting services", "Holiday gift guides & lists", "Gift card & wishlist tools"],
+      namingTips: [
+        "Audience + .gifts catches gifting searches directly",
+        "About $8 to register, $29/yr — easy to hold long-term",
+        "Seasonal trade — fulfillment matters more than the domain",
+        "General stores fit .shop; gifting plays read sharper here",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

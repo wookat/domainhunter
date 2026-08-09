@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 174,
+    "count": 180,
     "slugs": [
       "com",
       "net",
@@ -175,7 +175,13 @@
       "green",
       "eco",
       "earth",
-      "engineering"
+      "engineering",
+      "family",
+      "baby",
+      "mom",
+      "dad",
+      "dog",
+      "gifts"
     ]
   },
   "guide": {
