@@ -6,6 +6,7 @@ import { ScoreBars } from "@/components/score-bars";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
 import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
+import { createdAgoLabel } from "@/lib/relative-time";
 import type { ShortlistItem } from "@/lib/shortlist";
 import { scoreBadgeClass, totalScore } from "@/types";
 import { cn } from "@/lib/utils";
@@ -63,12 +64,13 @@ export function SharePage({ id }: { id: string }) {
         <div className="text-center">
           <Crosshair className="mx-auto h-8 w-8 text-txt2" />
           <p className="mt-4 text-sm text-txt1">{t(state.kind === "revoked" ? "share.revoked" : "share.notFound")}</p>
+          <p className="mt-2 text-xs text-txt2">{t("share.errCtaDesc")}</p>
           <a
             href="/"
             className="mt-6 inline-flex h-10 items-center gap-1.5 rounded-lg bg-brand px-5 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90"
           >
             <Sparkles className="h-4 w-4" />
-            {t("share.goHome")}
+            {t("share.errCta")}
           </a>
         </div>
       </main>
@@ -86,7 +88,10 @@ export function SharePage({ id }: { id: string }) {
   return (
     <main className="mx-auto w-full min-w-0 max-w-6xl flex-1 px-4 py-8 md:px-6">
       <h1 className="text-xl font-bold tracking-tight">{t("share.title")}</h1>
-      <p className="mt-1 text-xs text-txt2">{t("share.subtitle", { time: timeStr })}</p>
+      <p className="mt-1 text-xs text-txt2">
+        {t("share.subtitle", { time: timeStr })}
+        {createdAt > 0 && <> · {createdAgoLabel(createdAt, lang)}</>}
+      </p>
 
       {items.length > 0 && (
         <div className="mt-3 flex flex-wrap items-center gap-2">

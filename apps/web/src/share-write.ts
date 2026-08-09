@@ -19,11 +19,15 @@ export interface ShareWriteResult {
   retries: number;
   /** 是否发生过换 id 重写 */
   idRotated: boolean;
+  /** KV put/get 抛错的消息摘要（去重、每条截断、最多 MAX_ERROR_MESSAGES 条；读回校验失败不产生消息） */
+  errors: string[];
 }
 
 export const SHARE_WRITE_ATTEMPTS_PER_ID = 3;
 export const SHARE_WRITE_MAX_IDS = 2;
 const BACKOFF_MS = [150, 400];
+const MAX_ERROR_MESSAGES = 4;
+const MAX_ERROR_LENGTH = 120;
 
 const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 
@@ -36,6 +40,7 @@ export async function putShareVerified(
 ): Promise<ShareWriteResult> {
   let retries = 0;
   let id = newId();
+  const errors: string[] = [];
   for (let round = 0; round < SHARE_WRITE_MAX_IDS; round++) {
     if (round > 0) id = newId();
     const key = `share:${id}`;
@@ -45,11 +50,15 @@ export async function putShareVerified(
       try {
         await kv.put(key, payload, { expirationTtl: ttl });
         if ((await kv.get(key)) !== null) {
-          return { ok: true, id, retries, idRotated: round > 0 };
+          return { ok: true, id, retries, idRotated: round > 0, errors };
         }
-      } catch { /* put/get 抛错与读回失败同样处理：计入重试 */ }
+      } catch (e) {
+        // put/get 抛错与读回失败同样处理：计入重试；消息摘要供失败日志排查
+        const msg = (e instanceof Error ? e.message : String(e)).slice(0, MAX_ERROR_LENGTH);
+        if (errors.length < MAX_ERROR_MESSAGES && !errors.includes(msg)) errors.push(msg);
+      }
       retries++;
     }
   }
-  return { ok: false, id, retries, idRotated: true };
+  return { ok: false, id, retries, idRotated: true, errors };
 }
