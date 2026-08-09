@@ -1,0 +1,564 @@
+{
+  "/": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": "DomainHunter — AI 域名猎手",
+    "html_lang": "zh-CN",
+    "h1": null,
+    "jsonld_types": [
+      "FAQPage",
+      "WebSite"
+    ]
+  },
+  "/?lang=en": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/?lang=en",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "en_US",
+    "og_title": "DomainHunter — AI Domain Hunter",
+    "html_lang": "en",
+    "h1": null,
+    "jsonld_types": [
+      "FAQPage",
+      "WebSite"
+    ]
+  },
+  "/prices": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/prices",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": "域名后缀价格总览：192 个主流 TLD 注册与续费对比 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": "域名后缀价格总览：192 个主流 TLD 注册与续费对比",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "FAQPage"
+    ]
+  },
+  "/prices?lang=en": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/prices?lang=en",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "en_US",
+    "og_title": "TLD Price Overview: Registration vs Renewal for 192 Popular Suffixes | DomainHun",
+    "html_lang": "en",
+    "h1": "TLD Price Overview: Registration vs Renewal for 192 Popular Suffixes",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "FAQPage"
+    ]
+  },
+  "/tld": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/tld",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": "全部 TLD 注册指南：192 个后缀怎么选 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": "全部 TLD 注册指南：192 个后缀怎么选",
+    "jsonld_types": [
+      "BreadcrumbList"
+    ]
+  },
+  "/tld?lang=en": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/tld?lang=en",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "en_US",
+    "og_title": "All TLD Registration Guides: How to Choose Among 192 Suffixes | DomainHunter",
+    "html_lang": "en",
+    "h1": "All TLD Registration Guides: How to Choose Among 192 Suffixes",
+    "jsonld_types": [
+      "BreadcrumbList"
+    ]
+  },
+  "/guide": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/guide",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": "全部行业命名指南：188 个行业怎么起名 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": "全部行业命名指南：188 个行业怎么起名",
+    "jsonld_types": [
+      "BreadcrumbList"
+    ]
+  },
+  "/guide?lang=en": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/guide?lang=en",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "en_US",
+    "og_title": "All Industry Naming Guides: How to Name a Product in 188 Industries | DomainHunt",
+    "html_lang": "en",
+    "h1": "All Industry Naming Guides: How to Name a Product in 188 Industries",
+    "jsonld_types": [
+      "BreadcrumbList"
+    ]
+  },
+  "/vs": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/vs",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": "全部后缀对比：222 组 TLD 怎么选 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": "全部后缀对比：222 组 TLD 怎么选",
+    "jsonld_types": [
+      "BreadcrumbList"
+    ]
+  },
+  "/vs?lang=en": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/vs?lang=en",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "en_US",
+    "og_title": "All TLD Comparisons: 222 Head-to-Head Matchups | DomainHunter",
+    "html_lang": "en",
+    "h1": "All TLD Comparisons: 222 Head-to-Head Matchups",
+    "jsonld_types": [
+      "BreadcrumbList"
+    ]
+  },
+  "/why": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/why",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": "为什么选 DomainHunter：好域名都被占了，换个找法 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": null,
+    "jsonld_types": [
+      "BreadcrumbList"
+    ]
+  },
+  "/advanced": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/advanced",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": "批量域名核验：粘贴名单一键实时查可注册 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": null,
+    "jsonld_types": []
+  },
+  "/tld/golf": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/tld/golf",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": ".golf 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": ".golf 域名注册指南：适合谁、多少钱、怎么起名",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "FAQPage"
+    ]
+  },
+  "/tld/tennis": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/tld/tennis",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": ".tennis 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": ".tennis 域名注册指南：适合谁、多少钱、怎么起名",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "FAQPage"
+    ]
+  },
+  "/tld/soccer": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/tld/soccer",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": ".soccer 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": ".soccer 域名注册指南：适合谁、多少钱、怎么起名",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "FAQPage"
+    ]
+  },
+  "/tld/football": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/tld/football",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": ".football 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": ".football 域名注册指南：适合谁、多少钱、怎么起名",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "FAQPage"
+    ]
+  },
+  "/tld/hockey": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/tld/hockey",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": ".hockey 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": ".hockey 域名注册指南：适合谁、多少钱、怎么起名",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "FAQPage"
+    ]
+  },
+  "/tld/surf": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/tld/surf",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": ".surf 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": ".surf 域名注册指南：适合谁、多少钱、怎么起名",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "FAQPage"
+    ]
+  },
+  "/tld/golf?lang=en": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/tld/golf?lang=en",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "en_US",
+    "og_title": ".golf Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+    "html_lang": "en",
+    "h1": ".golf Domain Guide: Who It's For, Pricing &amp; Naming Tips",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "FAQPage"
+    ]
+  },
+  "/tld/surf?lang=en": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/tld/surf?lang=en",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "en_US",
+    "og_title": ".surf Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+    "html_lang": "en",
+    "h1": ".surf Domain Guide: Who It's For, Pricing &amp; Naming Tips",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "FAQPage"
+    ]
+  },
+  "/vs/golf-vs-club": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/vs/golf-vs-club",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": ".golf 和 .club 怎么选：球场品类与社群归属的分工 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": ".golf 和 .club 怎么选：球场品类与社群归属的分工",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "Article",
+      "FAQPage"
+    ]
+  },
+  "/vs/tennis-vs-coach": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/vs/tennis-vs-coach",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": ".tennis 和 .coach 怎么选：项目招牌与职业身份的分工 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": ".tennis 和 .coach 怎么选：项目招牌与职业身份的分工",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "Article",
+      "FAQPage"
+    ]
+  },
+  "/vs/soccer-vs-football": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/vs/soccer-vs-football",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": ".soccer 和 .football 怎么选：北美叫法与全球叫法的分工 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": ".soccer 和 .football 怎么选：北美叫法与全球叫法的分工",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "Article",
+      "FAQPage"
+    ]
+  },
+  "/vs/hockey-vs-team": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/vs/hockey-vs-team",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": ".hockey 和 .team 怎么选：冰球专营与队伍通用的分工 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": ".hockey 和 .team 怎么选：冰球专营与队伍通用的分工",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "Article",
+      "FAQPage"
+    ]
+  },
+  "/vs/surf-vs-fun": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/vs/surf-vs-fun",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": ".surf 和 .fun 怎么选：浪点垂直与泛娱乐的分工 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": ".surf 和 .fun 怎么选：浪点垂直与泛娱乐的分工",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "Article",
+      "FAQPage"
+    ]
+  },
+  "/vs/golf-vs-travel": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/vs/golf-vs-travel",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": ".golf 和 .travel 怎么选：球场生意与行程生意的分工 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": ".golf 和 .travel 怎么选：球场生意与行程生意的分工",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "Article",
+      "FAQPage"
+    ]
+  },
+  "/vs/golf-vs-club?lang=en": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/vs/golf-vs-club?lang=en",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "en_US",
+    "og_title": ".golf vs .club: The Course Category or The Member Circle | DomainHunter",
+    "html_lang": "en",
+    "h1": ".golf vs .club: The Course Category or The Member Circle",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "Article",
+      "FAQPage"
+    ]
+  },
+  "/vs/soccer-vs-football?lang=en": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/vs/soccer-vs-football?lang=en",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "en_US",
+    "og_title": ".soccer vs .football: The American Word or The World's Word | DomainHunter",
+    "html_lang": "en",
+    "h1": ".soccer vs .football: The American Word or The World's Word",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "Article",
+      "FAQPage"
+    ]
+  },
+  "/guide/runclub": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/guide/runclub",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": "跑步俱乐部怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": "跑步俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "Article",
+      "FAQPage"
+    ]
+  },
+  "/guide/nutrition": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/guide/nutrition",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": "营养师咨询品牌怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": "营养师咨询品牌怎么起名：命名思路、好名字拆解与域名选择",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "Article",
+      "FAQPage"
+    ]
+  },
+  "/guide/physio": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/guide/physio",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "zh_CN",
+    "og_title": "康复理疗品牌怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+    "html_lang": "zh-CN",
+    "h1": "康复理疗品牌怎么起名：命名思路、好名字拆解与域名选择",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "Article",
+      "FAQPage"
+    ]
+  },
+  "/guide/runclub?lang=en": {
+    "status": 200,
+    "canonical": "https://hunt.zalize.com/guide/runclub?lang=en",
+    "hreflang": [
+      "zh-CN",
+      "en",
+      "x-default"
+    ],
+    "og_locale": "en_US",
+    "og_title": "How to Name a Run Club: Strategies, Case Studies &amp; Domains | DomainHunter",
+    "html_lang": "en",
+    "h1": "How to Name a Run Club: Strategies, Case Studies &amp; Domains",
+    "jsonld_types": [
+      "BreadcrumbList",
+      "Article",
+      "FAQPage"
+    ]
+  },
+  "/nonexistent-r310": {
+    "status": 404,
+    "branded404": false
+  },
+  "/tld/notatld-r310": {
+    "status": 404,
+    "branded404": true
+  },
+  "/guide/nope-r310": {
+    "status": 404,
+    "branded404": true
+  },
+  "/vs/none-vs-none": {
+    "status": 404,
+    "branded404": true
+  }
+}

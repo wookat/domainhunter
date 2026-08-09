@@ -1,0 +1,54 @@
+{
+  "onboarding_ttl_v2": {
+    "no_key_visible": true,
+    "value_after_dismiss_is_ms_ts": true,
+    "hidden_after_dismiss": true,
+    "visible_after_31d": true,
+    "key_removed_after_expiry": true,
+    "legacy_hidden": true,
+    "legacy_upgraded_to_ts": true
+  },
+  "guide_hub_lang": "zh-CN",
+  "guide_zh_cardline": {
+    "total": 188,
+    "overCount": 0,
+    "over": [],
+    "max": 42
+  },
+  "theme_v2": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(250, 250, 249)",
+    "persist_after_reload": "rgb(250, 250, 249)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "share_live_text": [],
+  "share_live_ui": {
+    "copy": true,
+    "csv": true
+  },
+  "share_revoke_v2": {
+    "del": 200,
+    "getAfter": 410,
+    "unknown": 404
+  },
+  "share_revoked_ui_v2": true,
+  "quick_all_v2": "核验完成：共 193 个，185 个可注册",
+  "unknown_recheck_buttons": 0,
+  "console_errors_b": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/FTKpOr7hcQ"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/s/FTKpOr7hcQ"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/FTKpOr7hcQ"
+    }
+  ]
+}
