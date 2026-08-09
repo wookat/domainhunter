@@ -4704,6 +4704,186 @@ const GUIDES = {
       ],
     },
   },
+  travel: {
+    tld: "travel",
+    zh: {
+      title: ".travel 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".travel 是旅游行业的专属老牌后缀，适合旅行社与定制游、旅游攻略与目的地站、酒店民宿预订、签证与出行服务。查看 .travel 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .travel 域名。",
+      intro:
+        ".travel 是 2005 年就诞生的旅游行业专属后缀，比绝大多数新顶级域早了近十年，行业指向性无可挑剔：旅行社与定制游工作室、旅游攻略与目的地内容站、酒店民宿预订平台、签证与出行服务用 name.travel，用户从后缀就知道你是做旅游的。它的历史还带来一层筛选效应——早年 .travel 仅限旅游行业实名注册，沉淀了不少行业站点，整体信任感比多数新后缀好。现由 Identity Digital 运营，注册约 $16（约 ¥115），续费约 $119/年（约 ¥856）——续费明显偏贵，是六个字母换行业身份的溢价，预算务必按续费价算。库存很好：目的地词、玩法词、品牌词命中率都高。注意三点：一是六个字母偏长，口头传播不如短后缀顺，适合以线上获客为主的业务；二是旅游是强信任消费，域名专业只是起点，资质展示与真实评价才是转化关键；三是面向大众的品牌主站建议同时持有 .com 防流失。命名上「目的地 + .travel」最点题（japan.travel 式官方先例众多），「品牌 + .travel」适合旅行社，「玩法/主题 + .travel」（diving.travel 式）适合垂直内容站。",
+      bestFor: ["旅行社与定制游工作室", "旅游攻略与目的地内容站", "酒店民宿预订平台", "签证与出行服务"],
+      namingTips: [
+        "「目的地 + .travel」有 japan.travel 式官方先例",
+        "注册约 $16、续费约 $119/年，预算按续费算",
+        "2005 年老牌行业后缀，信任底子好于多数新后缀",
+        "「玩法/主题 + .travel」适合垂直内容站",
+      ],
+    },
+    en: {
+      title: ".travel Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".travel is the tourism industry's veteran dedicated TLD — for travel agencies and tour operators, destination guides, hotel booking and visa services. See live pricing and naming advice, then hunt available .travel names with AI.",
+      intro:
+        ".travel launched back in 2005 — nearly a decade before most new TLDs — and its industry signal is beyond dispute: travel agencies and bespoke tour studios, destination guides and travel content sites, hotel and lodging booking platforms, visa and transit services on name.travel tell users what business you're in from the suffix alone. Its history adds a filter effect too: early .travel registration was restricted to verified travel businesses, so the namespace accumulated genuine industry sites and carries more trust than most new suffixes. Now operated by Identity Digital, about $16 to register and $119/yr to renew — a clearly premium renewal that buys industry identity, so budget strictly on the renewal price. Inventory is deep: destination words, activity words and brand words all hit. Three cautions: six letters is on the long side and less fluent by word of mouth, so it suits online-first acquisition; travel is a high-trust purchase — a professional domain is only the start, credentials and real reviews close the sale; and consumer-facing brand homes should hold the .com defensively. Naming: destination + .travel is the on-target japan.travel pattern with official precedents everywhere; brand + .travel fits agencies; activity or theme + .travel — the diving.travel pattern — fits vertical content sites.",
+      bestFor: ["Travel agencies & tour operators", "Destination guides & travel content", "Hotel & lodging booking platforms", "Visa & transit services"],
+      namingTips: [
+        "Destination + .travel echoes official japan.travel-style precedents",
+        "About $16 to register, $119/yr — budget on renewal",
+        "A 2005 veteran with better trust than most new TLDs",
+        "Activity or theme + .travel fits vertical content sites",
+      ],
+    },
+  },
+  tours: {
+    tld: "tours",
+    zh: {
+      title: ".tours 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".tours 把「跟团/路线」写进域名，适合一日游与包车路线、徒步登山向导、城市导览与美食团、景区体验项目。查看 .tours 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tours 域名。",
+      intro:
+        ".tours 把产品形态直接写进域名：一日游与包车路线、徒步登山向导、城市导览与美食团、景区体验项目用 name.tours，卖的是「带你走一趟」这件事，后缀读出来就是服务本身。它与 .travel 的分工在颗粒度：travel 泛指旅游行业，tours 专指线路与导览这类具体产品，本地向导与体验运营商用 tours 指向更准——「目的地 + .tours」读出来就是「某地的团」。Identity Digital 运营，注册约 $6（约 ¥41），续费约 $50/年（约 ¥360）——首年很便宜、续费跳档明显，预算按续费价算才稳。库存极好：目的地词、玩法词、品牌词几乎随手可得。注意三点：一是复数形式暗示多条线路，单一体验项目用单数语义的名字更贴；二是导览生意吃平台流量（GetYourGuide、Viator 等），独立域名适合做品牌沉淀与直订转化，别指望域名本身带客；三是面向国际游客建议英文名，本地客群则拼音亦可。命名上「目的地 + .tours」最点题（paris.tours 式），「主题 + .tours」（food.tours、bike.tours 式）适合垂直玩法，「品牌 + .tours」适合向导个人品牌。",
+      bestFor: ["一日游与包车路线", "徒步登山向导", "城市导览与美食团", "景区体验项目"],
+      namingTips: [
+        "「目的地 + .tours」读出来就是「某地的团」",
+        "注册约 $6、续费约 $50/年，预算按续费算",
+        "与 .travel 分工：tours 专指线路与导览产品",
+        "「主题 + .tours」适合美食/骑行等垂直玩法",
+      ],
+    },
+    en: {
+      title: ".tours Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".tours writes the product into the address — for day trips and chartered routes, hiking guides, city walks and food tours, and attraction experiences. See live pricing and naming advice, then hunt available .tours names with AI.",
+      intro:
+        ".tours writes the product itself into the address: day trips and chartered routes, hiking and mountain guides, city walks and food tours, attraction experiences on name.tours sell exactly what the suffix says — taking you on a trip. The split with .travel is granularity: travel means the industry at large, tours means this specific product — routes and guided experiences — so local guides and experience operators aim truer here; destination + .tours reads out as \"tours of that place\". Operated by Identity Digital, about $6 to register and $50/yr to renew — a cheap first year with a clear renewal jump, so budget on the renewal price. Inventory is excellent: destination words, activity words and brand words are all within reach. Three cautions: the plural implies multiple routes, so a single signature experience may read better under a singular-flavored name; the tours business leans on marketplaces (GetYourGuide, Viator) for traffic — an independent domain is for brand equity and direct bookings, not free customers; and international audiences want an English name even if locals would accept otherwise. Naming: destination + .tours is the on-target paris.tours pattern; theme + .tours — food.tours, bike.tours — fits vertical experiences; brand + .tours fits personal guide brands.",
+      bestFor: ["Day trips & chartered routes", "Hiking & mountain guides", "City walks & food tours", "Attraction experiences"],
+      namingTips: [
+        "Destination + .tours reads as \"tours of that place\"",
+        "About $6 to register, $50/yr — budget on renewal",
+        "Tours is the product; .travel is the industry",
+        "Theme + .tours (food.tours, bike.tours) fits verticals",
+      ],
+    },
+  },
+  vacations: {
+    tld: "vacations",
+    zh: {
+      title: ".vacations 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".vacations 把「度假」写进域名，适合度假套餐与海岛游、度假村与民宿集群、亲子与蜜月主题游、度假攻略内容站。查看 .vacations 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .vacations 域名。",
+      intro:
+        ".vacations 把度假心情写进域名：度假套餐与海岛游、度假村与民宿集群、亲子与蜜月主题游、度假攻略内容站用 name.vacations，后缀自带「放松、犒赏自己」的情绪价值——用户搜度假产品时的心理状态，正好被这个词接住。它与 .tours 的分工在场景：tours 是带你走线路，vacations 是住下来慢慢玩，度假村、包段民宿与套餐产品用 vacations 更贴。Identity Digital 运营，注册约 $6（约 ¥41），续费约 $31/年（约 ¥226）——首年便宜，续费在行业后缀里算温和，长期持有压力不大。库存极好：目的地词、主题词、品牌词命中率都高。注意三点：一是九个字母偏长，适合线上获客与广告落地页，口头传播弱；二是度假消费决策周期长、比价重，域名情绪对了还要靠内容与真实图片承接；三是拼写对非英语母语用户有门槛，面向国内客群记得同时备一个好记的中文品牌词。命名上「目的地 + .vacations」最点题（maldives.vacations 式），「主题 + .vacations」（family.vacations、ski.vacations 式）适合垂直产品线，「品牌 + .vacations」适合度假村集团。",
+      bestFor: ["度假套餐与海岛游", "度假村与民宿集群", "亲子与蜜月主题游", "度假攻略内容站"],
+      namingTips: [
+        "「目的地 + .vacations」直接接住度假搜索意图",
+        "注册约 $6、续费约 $31/年，长期持有压力小",
+        "与 .tours 分工：vacations 是住下来度假的场景",
+        "「主题 + .vacations」适合亲子/滑雪等产品线",
+      ],
+    },
+    en: {
+      title: ".vacations Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".vacations writes the getaway into the address — for vacation packages and island trips, resorts and lodging clusters, family and honeymoon themes, and vacation-planning content. See live pricing and naming advice, then hunt available .vacations names with AI.",
+      intro:
+        ".vacations writes the getaway mood into the address: vacation packages and island trips, resorts and lodging clusters, family and honeymoon themes, vacation-planning content sites on name.vacations carry built-in emotional value — relaxation, treating yourself — which is exactly the state of mind of someone shopping for a holiday. The split with .tours is the scenario: tours takes you along a route, vacations means settling in and unwinding, so resorts, buyout lodges and package products fit truer here. Operated by Identity Digital, about $6 to register and $31/yr to renew — a cheap first year and one of the gentler renewals among industry suffixes, easy to hold long term. Inventory is excellent: destination words, theme words and brand words all hit. Three cautions: nine letters is long — great for online acquisition and ad landing pages, weak by word of mouth; vacation purchases have long, comparison-heavy decision cycles, so the mood-right domain still needs content and real photography to convert; and the spelling is a hurdle for non-native English speakers, so keep a memorable local brand word for domestic audiences. Naming: destination + .vacations is the on-target maldives.vacations pattern; theme + .vacations — family.vacations, ski.vacations — fits vertical product lines; brand + .vacations fits resort groups.",
+      bestFor: ["Vacation packages & island trips", "Resorts & lodging clusters", "Family & honeymoon themes", "Vacation-planning content"],
+      namingTips: [
+        "Destination + .vacations catches holiday search intent",
+        "About $6 to register, $31/yr — easy to hold long term",
+        "Vacations is settling in; .tours is the route",
+        "Theme + .vacations (family, ski) fits product lines",
+      ],
+    },
+  },
+  holiday: {
+    tld: "holiday",
+    zh: {
+      title: ".holiday 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".holiday 把「假日」写进域名，适合节日礼品与假日营销、假期出行产品、节庆活动策划、假日主题内容站。查看 .holiday 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .holiday 域名。",
+      intro:
+        ".holiday 一词两义，域名也吃到两个场景：英式语境里是「度假」，假期出行产品与假日民宿用得顺；更普适的语义是「节日」——圣诞、新年、万圣节等节庆礼品电商、假日营销活动页、节庆活动策划用 name.holiday，节日氛围从域名就开始了。与 .vacations 的分工在语感：vacations 专指度假旅行，holiday 还能覆盖节庆礼赠与假日营销这条零售线，做节日限定产品与活动页反而是 holiday 更贴。Identity Digital 运营，注册约 $6（约 ¥41），续费约 $52/年（约 ¥374）——首年便宜、续费跳档，预算按续费价算。库存极好：节日词、目的地词、品牌词都有货。注意三点：一是节庆业务强季节性，域名全年续费但流量集中在旺季，适合当活动页矩阵而非唯一主站；二是单数 holiday 与复数 holidays 是不同后缀，对外传播注意别拼混；三是美式语境里 holiday 首先指节日而非度假，面向北美用户按节庆语义命名更稳。命名上「节日 + .holiday」最点题（christmas.holiday 式），「品牌 + .holiday」适合假日限定企划，「目的地 + .holiday」适合英式度假产品。",
+      bestFor: ["节日礼品与假日营销", "假期出行产品", "节庆活动策划", "假日主题内容站"],
+      namingTips: [
+        "「节日 + .holiday」自带节庆氛围",
+        "注册约 $6、续费约 $52/年，预算按续费算",
+        "与 .vacations 分工：holiday 还覆盖节庆礼赠零售线",
+        "注意单数 holiday，别与 holidays 拼混",
+      ],
+    },
+    en: {
+      title: ".holiday Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".holiday writes the festive break into the address — for seasonal gifts and holiday marketing, getaway products, festive event planning and holiday-themed content. See live pricing and naming advice, then hunt available .holiday names with AI.",
+      intro:
+        ".holiday carries two meanings and the domain profits from both: in British usage it means a getaway, so holiday-trip products and vacation rentals read naturally; the more universal sense is the festive one — Christmas, New Year and Halloween gift shops, holiday marketing campaign pages, festive event planners on name.holiday start the celebration from the address itself. The split with .vacations is register: vacations strictly means leisure travel, while holiday also covers the retail line of seasonal gifting and holiday campaigns — for limited-edition festive products, holiday is the truer fit. Operated by Identity Digital, about $6 to register and $52/yr to renew — cheap first year, renewal jump, so budget on the renewal price. Inventory is excellent: festival words, destination words and brand words are all in stock. Three cautions: festive business is sharply seasonal — you renew all year but traffic spikes in peak weeks, so it works best as a campaign-page fleet rather than the sole brand home; singular .holiday and plural .holidays are different TLDs — don't let them blur in promotion; and in American usage holiday means the festival first, so name by the festive sense for North American audiences. Naming: festival + .holiday is the on-target christmas.holiday pattern; brand + .holiday fits limited-run festive campaigns; destination + .holiday fits British-style getaway products.",
+      bestFor: ["Seasonal gifts & holiday marketing", "Getaway products", "Festive event planning", "Holiday-themed content"],
+      namingTips: [
+        "Festival + .holiday brings the festive mood built in",
+        "About $6 to register, $52/yr — budget on renewal",
+        "Holiday also covers seasonal gifting; .vacations is travel only",
+        "Mind the singular — .holidays is a different TLD",
+      ],
+    },
+  },
+  flights: {
+    tld: "flights",
+    zh: {
+      title: ".flights 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".flights 把「机票/航班」写进域名，适合机票比价与订票、航线攻略与里程玩法、包机与商务航空、低价机票订阅提醒。查看 .flights 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .flights 域名。",
+      intro:
+        ".flights 把生意写进域名：机票比价与订票、航线攻略与里程玩法社区、包机与商务航空服务、低价机票订阅提醒用 name.flights，用户搜「某地机票」时这个后缀直接接住搜索意图——「目的地 + .flights」读出来就是「飞某地的航班」。它在旅游后缀家族里定位最垂直：travel 是行业、tours 是线路、flights 只管天上这一段，做机票与航空周边的用它指向最准。Identity Digital 运营，注册约 $31（约 ¥226），续费约 $47/年（约 ¥337）——首年中档、续费小幅上浮，在行业后缀里定价算平缓。库存极好：目的地词、航线词、玩法词命中率都高。注意三点：一是机票分销资质门槛高（IATA/代理协议），无资质做订票站有合规风险，内容与比价导流是更稳的切入；二是机票比价巨头林立（Google Flights、Skyscanner），独立站要靠里程玩法、错峰攻略这类差异化内容立足；三是八个字母认知度一般，品牌主站建议同时持有主流后缀。命名上「目的地 + .flights」最点题（tokyo.flights 式），「cheap/deal + .flights」适合低价订阅产品，「品牌 + .flights」适合包机与商务航空。",
+      bestFor: ["机票比价与订票", "航线攻略与里程玩法", "包机与商务航空", "低价机票订阅提醒"],
+      namingTips: [
+        "「目的地 + .flights」直接接住机票搜索意图",
+        "注册约 $31、续费约 $47/年，定价相对平缓",
+        "旅游家族里最垂直：只管「飞」这一段",
+        "无分销资质先做内容与比价导流更稳",
+      ],
+    },
+    en: {
+      title: ".flights Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".flights writes air travel into the address — for fare comparison and booking, route guides and miles hacking, charter and business aviation, and cheap-fare alert services. See live pricing and naming advice, then hunt available .flights names with AI.",
+      intro:
+        ".flights writes the business into the address: fare comparison and booking, route guides and miles-hacking communities, charter and business aviation, cheap-fare alert subscriptions on name.flights catch search intent head-on — destination + .flights reads out as \"flights to that place\". Within the travel-suffix family it is the most vertical: travel is the industry, tours is the route, flights covers only the airborne leg, so airfare and aviation-adjacent products aim truest here. Operated by Identity Digital, about $31 to register and $47/yr to renew — a mid-tier first year with only a modest renewal step, gentle pricing among industry suffixes. Inventory is excellent: destination words, route words and hack words all hit. Three cautions: airfare distribution is licence-gated (IATA/agency agreements) — running a booking site without credentials is a compliance risk, so content and comparison referral is the safer entry; fare comparison is giant-dominated (Google Flights, Skyscanner), so independents win on differentiated content like miles hacking and off-peak guides; and eight letters carry modest recognition, so brand homes should hold a mainstream suffix too. Naming: destination + .flights is the on-target tokyo.flights pattern; cheap or deal + .flights fits fare-alert products; brand + .flights fits charter and business aviation.",
+      bestFor: ["Fare comparison & booking", "Route guides & miles hacking", "Charter & business aviation", "Cheap-fare alert services"],
+      namingTips: [
+        "Destination + .flights catches airfare search intent",
+        "About $31 to register, $47/yr — relatively gentle pricing",
+        "The most vertical travel suffix: just the airborne leg",
+        "Without distribution credentials, start with content/referral",
+      ],
+    },
+  },
+  taxi: {
+    tld: "taxi",
+    zh: {
+      title: ".taxi 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".taxi 把「打车/接送」写进域名，适合本地出租车与网约车队、机场接送与包车、景区与酒店接驳、代驾与货运小车队。查看 .taxi 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .taxi 域名。",
+      intro:
+        ".taxi 把服务写进域名：本地出租车与网约车队、机场接送与包车、景区与酒店接驳、代驾与货运小车队用 name.taxi，四个字母全球通用——taxi 在几十种语言里拼法几乎一致，是少有的天然无语言门槛的行业词。它对本地生意尤其顺手：「城市 + .taxi」读出来就是「某城打车」，本地搜索意图直接被域名接住，比在 .com 里挤长名字体面得多。Identity Digital 运营，注册约 $6（约 ¥45），续费约 $50/年（约 ¥360）——首年便宜、续费跳档，预算按续费价算才稳。库存极好：城市词、区域词、品牌词几乎都有货。注意三点：一是打车主战场在超级 App（Uber、滴滴），独立域名适合做预约制接送、企业包车这类直客生意，别硬拼即时叫车；二是接送是强信任服务，域名之外车辆照片、司机资质与固定报价才是转化关键；三是四个字母虽短，但认知度仍在建立期，本地投放时配合电话与微信入口更稳。命名上「城市 + .taxi」最点题（berlin.taxi 式已有大量同行先例），「机场码 + .taxi」（jfk.taxi 式）适合接送专线，「品牌 + .taxi」适合车队品牌化。",
+      bestFor: ["本地出租车与网约车队", "机场接送与包车", "景区与酒店接驳", "代驾与货运小车队"],
+      namingTips: [
+        "「城市 + .taxi」直接接住本地打车搜索",
+        "注册约 $6、续费约 $50/年，预算按续费算",
+        "taxi 全球拼法几乎一致，天然无语言门槛",
+        "「机场码 + .taxi」适合接送专线",
+      ],
+    },
+    en: {
+      title: ".taxi Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".taxi writes the ride into the address — for local cab and ride-hail fleets, airport transfers and charters, resort and hotel shuttles, and designated-driver services. See live pricing and naming advice, then hunt available .taxi names with AI.",
+      intro:
+        ".taxi writes the service into the address: local cab and ride-hail fleets, airport transfers and charters, resort and hotel shuttles, designated-driver and small cargo fleets on name.taxi — four letters that work worldwide, since taxi is spelled nearly identically across dozens of languages, one of the rare industry words with no language barrier at all. It suits local business especially well: city + .taxi reads out as \"a cab in that city\", catching local search intent from the domain itself — far cleaner than squeezing a long name into .com. Operated by Identity Digital, about $6 to register and $50/yr to renew — cheap first year, renewal jump, so budget on the renewal price. Inventory is excellent: city words, district words and brand words are nearly all available. Three cautions: on-demand rides belong to the super-apps (Uber, Didi) — an independent domain wins at scheduled transfers and corporate charters, not instant hailing; rides are a trust-first service, so vehicle photos, driver credentials and fixed quotes convert more than the domain; and though four letters are short, recognition is still building — pair local campaigns with phone and chat entry points. Naming: city + .taxi is the on-target berlin.taxi pattern with plenty of industry precedent; airport code + .taxi — the jfk.taxi pattern — fits transfer routes; brand + .taxi fits fleet branding.",
+      bestFor: ["Local cab & ride-hail fleets", "Airport transfers & charters", "Resort & hotel shuttles", "Designated-driver services"],
+      namingTips: [
+        "City + .taxi catches local ride searches",
+        "About $6 to register, $50/yr — budget on renewal",
+        "Taxi is spelled the same worldwide — no language barrier",
+        "Airport code + .taxi fits transfer routes",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

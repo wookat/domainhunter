@@ -167,6 +167,12 @@ export const TLD_ONE_LINERS = {
   "bike": { zh: ".bike 把「自行车」写进域名，适合自行车品牌与车店、骑行俱乐部与赛事、租车与修车服务、骑行装备电商。", en: ".bike writes the ride into the address — for bike brands and shops, cycling clubs and races, rental and repair services, gear e-commerce." },
   "toys": { zh: ".toys 把「玩具」写进域名，适合玩具品牌与电商、潮玩与手办店、桌游与积木社区、儿童教育玩具。", en: ".toys writes the shelf into the address — for toy brands and e-commerce, designer-toy and figure shops, board-game communities and educational toys." },
   "shoes": { zh: ".shoes 把「鞋」写进域名，适合鞋履品牌与电商、球鞋店与鞋圈社区、手工鞋定制、洗鞋修鞋服务。", en: ".shoes writes the category into the address — for footwear brands and e-commerce, sneaker shops and communities, custom shoemakers and shoe-care services." },
+  "travel": { zh: ".travel 是旅游行业的专属老牌后缀，适合旅行社与定制游、旅游攻略与目的地站、酒店民宿预订、签证与出行服务。", en: ".travel is the tourism industry's veteran dedicated TLD — for travel agencies and tour operators, destination guides, hotel booking and visa services." },
+  "tours": { zh: ".tours 把「跟团/路线」写进域名，适合一日游与包车路线、徒步登山向导、城市导览与美食团、景区体验项目。", en: ".tours writes the product into the address — for day trips and chartered routes, hiking guides, city walks and food tours, and attraction experiences." },
+  "vacations": { zh: ".vacations 把「度假」写进域名，适合度假套餐与海岛游、度假村与民宿集群、亲子与蜜月主题游、度假攻略内容站。", en: ".vacations writes the getaway into the address — for vacation packages and island trips, resorts and lodging clusters, family and honeymoon themes, and vacation-planning content." },
+  "holiday": { zh: ".holiday 把「假日」写进域名，适合节日礼品与假日营销、假期出行产品、节庆活动策划、假日主题内容站。", en: ".holiday writes the festive break into the address — for seasonal gifts and holiday marketing, getaway products, festive event planning and holiday-themed content." },
+  "flights": { zh: ".flights 把「机票/航班」写进域名，适合机票比价与订票、航线攻略与里程玩法、包机与商务航空、低价机票订阅提醒。", en: ".flights writes air travel into the address — for fare comparison and booking, route guides and miles hacking, charter and business aviation, and cheap-fare alert services." },
+  "taxi": { zh: ".taxi 把「打车/接送」写进域名，适合本地出租车与网约车队、机场接送与包车、景区与酒店接驳、代驾与货运小车队。", en: ".taxi writes the ride into the address — for local cab and ride-hail fleets, airport transfers and charters, resort and hotel shuttles, and designated-driver services." },
 } satisfies Record<Tld, Localized>;
 
 /** 行业指南索引（顺序与 GUIDE_LIST 一致）：slug + 双语标签 + 一句话定位 */
