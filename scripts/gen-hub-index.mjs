@@ -87,7 +87,8 @@ const tldLines = TLD_LIST.map((t) => `  ${q(t)}: { zh: ${q(firstSentence(TLD_GUI
 
 const guideLines = GUIDE_LIST.map((s) => {
   const g = INDUSTRY_GUIDES[s];
-  return `  { slug: ${q(s)}, label: { zh: ${q(g.zh.label)}, en: ${q(g.en.label)} }, oneLiner: { zh: ${q(cardLine(g.zh.metaDescription, "zh", 42))}, en: ${q(cardLine(g.en.metaDescription, "en", 84))} } },`;
+  const kw = g.keywords?.length ? `, keywords: [${g.keywords.map(q).join(", ")}]` : "";
+  return `  { slug: ${q(s)}, label: { zh: ${q(g.zh.label)}, en: ${q(g.en.label)} }, oneLiner: { zh: ${q(cardLine(g.zh.metaDescription, "zh", 42))}, en: ${q(cardLine(g.en.metaDescription, "en", 84))} }${kw} },`;
 });
 
 const compareLines = COMPARE_LIST.map((s) => {
@@ -109,8 +110,8 @@ ${tldLines.join("\n")}
   "hub-index-guide.ts": `${header}
 type Localized = { zh: string; en: string };
 
-/** 行业指南索引（顺序与 GUIDE_LIST 一致）：slug + 双语标签 + 一句话定位 */
-export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized }[] = [
+/** 行业指南索引（顺序与 GUIDE_LIST 一致）：slug + 双语标签 + 一句话定位 + 可选同义搜索词（仅过滤匹配用） */
+export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized; keywords?: string[] }[] = [
 ${guideLines.join("\n")}
 ];
 `,
