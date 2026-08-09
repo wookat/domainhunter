@@ -6504,6 +6504,186 @@ const GUIDES = {
       ],
     },
   },
+  church: {
+    tld: "church",
+    zh: {
+      title: ".church 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".church 是教会与信仰社区的专属后缀，适合地方教会与堂点、教会植堂与联合机构、线上敬拜与讲道平台、信仰内容与查经资源站。查看 .church 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .church 域名。",
+      intro:
+        ".church 把「教会」直接写进域名：地方教会与堂点、植堂与联合机构、线上敬拜与讲道直播平台、查经与信仰内容站用 name.church，会众和慕道友一眼认出这是教会官网——搜「地名 + church」找聚会点的人落到 grace.church 这样的域名毫无违和。注册局为 Identity Digital，首年约 $7（约 ¥48），续费约 $47/年（约 ¥337），首年低门槛适合新植堂验证；续费在行业后缀里属中档，对以奉献维持运营的教会而言仍是可承受的年度开销。库存极好：地名、堂会名、经文关键词基本都有货，而这些名字在 .org 上早被占光。注意三点：一是 .church 语义强绑定基督教会场景，跨宗教或综合公益组织用 .org 更中性；二是老牌教会已有 .org 的可将 .church 作为传播用短域名跳转主站，新堂会则可直接主用；三是续费约 ¥337/年，多堂点矩阵注册前按续费价算总账。命名上「地名 + .church」适合本地堂会，「品牌/异象词 + .church」适合植堂网络，「online/live + .church」适合线上敬拜平台。",
+      bestFor: ["地方教会与堂点", "教会植堂与联合机构", "线上敬拜与讲道平台", "信仰内容与查经资源站"],
+      namingTips: [
+        "「地名 + .church」就是慕道友的搜索词，本地堂会首选",
+        "首年约 $7 低门槛，续费约 $47/年按此算长期成本",
+        "跨宗教或综合公益用 .org 更中性，教会身份用这里",
+        "线上敬拜可用 online/live + .church 直接说清形态",
+      ],
+    },
+    en: {
+      title: ".church Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".church is the dedicated suffix for churches and faith communities — for local churches and campuses, church plants and networks, online worship and sermon platforms, and Bible study and faith content sites. See live pricing and naming advice, then hunt available .church names with AI.",
+      intro:
+        ".church writes the congregation into the domain: local churches and campuses, church plants and denominational networks, online worship and sermon streaming platforms, and Bible study or faith content sites on name.church are instantly recognizable as church websites — someone searching city + church lands on grace.church with zero friction. Operated by Identity Digital, about $7 for the first year (≈¥48) and $47/yr to renew (≈¥337) — a low first-year door that suits new church plants, with a mid-tier renewal that a donation-funded congregation can sustain. Inventory is excellent: place names, congregation names and scripture keywords nearly all hit, while the same names on .org were taken long ago. Three cautions: .church is semantically bound to Christian congregations, so interfaith or general nonprofits read more neutrally on .org; established churches already on .org can run .church as a short promotional redirect, while new plants can make it the primary; and at ≈$47/yr renewal, price a multi-campus portfolio at renewal rates before committing. Naming: city + .church fits local congregations; brand or vision word + .church fits planting networks; online/live + .church states the digital-worship format outright.",
+      bestFor: ["Local churches & campuses", "Church plants & networks", "Online worship & sermon platforms", "Bible study & faith content sites"],
+      namingTips: [
+        "City + .church is exactly what seekers search — local first choice",
+        "About $7 year one, $47/yr renewal — budget on the latter",
+        "Interfaith or general nonprofits read better on .org",
+        "online/live + .church states the digital format outright",
+      ],
+    },
+  },
+  jewelry: {
+    tld: "jewelry",
+    zh: {
+      title: ".jewelry 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".jewelry 是珠宝行业的专属后缀，适合珠宝品牌与设计师工作室、金店银楼与钻石商、手作饰品电商、珠宝定制与鉴定服务。查看 .jewelry 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .jewelry 域名。",
+      intro:
+        ".jewelry 把整个品类写进后缀：珠宝品牌与设计师工作室、金店银楼与钻石商、手作饰品电商、定制与鉴定服务用 name.jewelry，品牌名 + 品类词一步到位——aurora.jewelry 比 aurorajewelry.com 更短更雅，也把被 .com 占光的珠宝好名重新放回货架。注册局为 Identity Digital，首年约 $11（约 ¥78），续费约 $52/年（约 ¥374），对客单价高的珠宝生意来说是可忽略的获客成本。库存极好：宝石词、设计师名、品牌词基本都有货。注意三点：一是后缀 7 个字母偏长，主打口播传播的品牌要读顺再定，印刷与包装上反而是加分项；二是与已收录的 .boutique / .shop 分工——.jewelry 说品类、气质高奢，综合买手店用 .boutique，大而全电商用 .shop；三是首年便宜续费中档，系列域名按续费价算总账。命名上「品牌 + .jewelry」适合珠宝品牌主站，「宝石/材质词 + .jewelry」适合垂类电商，「设计师名 + .jewelry」适合工作室与定制业务。",
+      bestFor: ["珠宝品牌与设计师工作室", "金店银楼与钻石商", "手作饰品电商", "珠宝定制与鉴定服务"],
+      namingTips: [
+        "「品牌 + .jewelry」品牌名加品类词一步到位",
+        "首年约 $11、续费约 $52/年，对高客单生意可忽略",
+        "综合买手店用 .boutique、大而全电商用 .shop 更贴",
+        "设计师名 + .jewelry 适合工作室与定制业务",
+      ],
+    },
+    en: {
+      title: ".jewelry Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".jewelry is the jewelry industry's dedicated suffix — for jewelry brands and designer studios, gold and diamond dealers, handmade accessory shops, and custom design and appraisal services. See live pricing and naming advice, then hunt available .jewelry names with AI.",
+      intro:
+        ".jewelry puts the whole category in the suffix: jewelry brands and designer studios, gold and diamond dealers, handmade accessory e-commerce, and custom design or appraisal services on name.jewelry get brand plus category in one stroke — aurora.jewelry is shorter and more elegant than aurorajewelry.com, and it puts jewelry names long gone on .com back on the shelf. Operated by Identity Digital, about $11 for the first year (≈¥78) and $52/yr to renew (≈¥374) — negligible customer-acquisition cost for a high-ticket trade. Inventory is excellent: gemstone words, designer names and brand words nearly all hit. Three cautions: at seven letters the suffix runs long, so say it aloud before committing if radio or word-of-mouth is your channel — on print and packaging it reads as a plus; split the work with the already-listed .boutique and .shop — .jewelry names the category with a luxury air, multi-brand boutiques fit .boutique, and general storefronts fit .shop; and with the cheap-first-year structure, price a domain series at renewal rates. Naming: brand + .jewelry fits flagship brand sites; gemstone or material word + .jewelry fits vertical e-commerce; designer name + .jewelry fits studios and custom work.",
+      bestFor: ["Jewelry brands & designer studios", "Gold & diamond dealers", "Handmade accessory shops", "Custom design & appraisal services"],
+      namingTips: [
+        "Brand + .jewelry delivers brand plus category in one stroke",
+        "About $11 year one, $52/yr renewal — trivial for high-ticket trade",
+        "Multi-brand boutiques fit .boutique; general shops fit .shop",
+        "Designer name + .jewelry fits studios and custom work",
+      ],
+    },
+  },
+  cleaning: {
+    tld: "cleaning",
+    zh: {
+      title: ".cleaning 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".cleaning 是清洁服务行业的专属后缀，适合家政保洁与开荒公司、商业办公楼保洁、专项清洁（地毯/外墙/管道）、清洁设备与耗材品牌。查看 .cleaning 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .cleaning 域名。",
+      intro:
+        ".cleaning 把服务内容说得一字不差：家政保洁与开荒公司、写字楼与商业保洁、地毯/外墙/管道等专项清洁、清洁设备与耗材品牌用 name.cleaning，客户搜「城市名 + cleaning」找的就是它——sparkle.cleaning 这样的名字本身就是广告语。注册局为 Identity Digital，注册与续费均约 $60/年（约 ¥434），平进平出、无首年陷阱，在行业后缀里价格偏高但换来极好的库存：城市名、动词词组、品牌词基本都有货，而 XXcleaning.com 早被各地保洁公司占光。注意三点：一是约 ¥434/年的持有成本对单店家政是笔真实开销，适合已有稳定客源、把域名当门面的公司，起步期可先用已收录的 .services 过渡；二是与 .services 的分工——.cleaning 说品类精准获客，多业态家政平台用 .services 更宽；三是本地服务生意记得同步做好地图与本地 SEO，域名里的关键词是加分不是全部。命名上「城市 + .cleaning」适合本地获客，「品牌 + .cleaning」适合连锁保洁，「专项词（carpet/window）+ .cleaning」适合垂类服务。",
+      bestFor: ["家政保洁与开荒公司", "商业办公楼保洁", "专项清洁（地毯/外墙/管道）", "清洁设备与耗材品牌"],
+      namingTips: [
+        "「城市 + .cleaning」就是客户的搜索词，本地获客首选",
+        "注册续费均约 $60/年，平进平出但按年算好持有成本",
+        "多业态家政平台用 .services 更宽，专注保洁用这里",
+        "专项词 carpet/window + .cleaning 直接说清垂类",
+      ],
+    },
+    en: {
+      title: ".cleaning Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".cleaning is the cleaning industry's dedicated suffix — for residential and move-out cleaning companies, commercial and office janitorial services, specialty cleaning (carpet/window/duct), and cleaning equipment and supply brands. See live pricing and naming advice, then hunt available .cleaning names with AI.",
+      intro:
+        ".cleaning says the service word for word: residential and move-out cleaners, office and commercial janitorial firms, specialty carpet/window/duct crews, and cleaning equipment or supply brands on name.cleaning match exactly what customers type when they search city + cleaning — a name like sparkle.cleaning is its own slogan. Operated by Identity Digital, about $60/yr for both registration and renewal (≈¥434) — flat in, flat out, no first-year trap; pricier than most industry gTLDs, but the payoff is superb inventory: city names, verb phrases and brand words nearly all hit, while every XXcleaning.com was claimed by local firms long ago. Three cautions: at ≈$60/yr the holding cost is real for a one-crew operation — it suits established companies treating the domain as a storefront, while early-stage outfits can start on the already-listed .services; split the work with .services — .cleaning names the category for precise lead capture, multi-trade platforms read wider on .services; and local service businesses still live on maps and local SEO — the keyword in the domain is a boost, not the whole game. Naming: city + .cleaning fits local lead-gen; brand + .cleaning fits franchise chains; specialty word (carpet/window) + .cleaning states the vertical outright.",
+      bestFor: ["Residential & move-out cleaning", "Commercial & office janitorial", "Specialty cleaning (carpet/window/duct)", "Cleaning equipment & supply brands"],
+      namingTips: [
+        "City + .cleaning is exactly what customers search",
+        "About $60/yr flat both ways — budget the holding cost",
+        "Multi-trade platforms read wider on .services",
+        "carpet/window + .cleaning states the vertical outright",
+      ],
+    },
+  },
+  plumbing: {
+    tld: "plumbing",
+    zh: {
+      title: ".plumbing 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".plumbing 是水暖管道行业的专属后缀，适合水管维修与疏通服务、水暖安装工程公司、卫浴与管件供应商、应急上门维修平台。查看 .plumbing 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .plumbing 域名。",
+      intro:
+        ".plumbing 是最早一批行业 gTLD 之一：水管维修与疏通、水暖安装工程、卫浴与管件供应、24 小时应急上门平台用 name.plumbing，爆管漏水的客户搜「城市名 + plumbing」时你的域名就是搜索词本身——对靠急单吃饭的行业，这种精准匹配直接变成电话量。注册局为 Identity Digital，首年约 $8（约 ¥59），续费约 $58/年（约 ¥419），首年低门槛适合试水，续费按获客价值算完全值回。库存极好：城市名、师傅姓氏、品牌词基本都有货，而 XXplumbing.com 在英语市场早被本地水暖公司抢光。注意三点：一是主要面向英语市场，中文语境「水暖/管道」认知需要品牌自己建立；二是首年便宜续费贵 7 倍，多城市矩阵按续费价算总账；三是与 .repair / .services 的分工——综合维修用 .repair，多业态家政用 .services，水暖专业身份用 .plumbing 最准。命名上「城市 + .plumbing」适合本地急单获客，「姓氏/品牌 + .plumbing」适合老牌水暖行，「emergency/24h + .plumbing」适合应急平台。",
+      bestFor: ["水管维修与疏通服务", "水暖安装工程公司", "卫浴与管件供应商", "应急上门维修平台"],
+      namingTips: [
+        "「城市 + .plumbing」就是急单客户的搜索词",
+        "首年约 $8、续费约 $58/年，矩阵注册按续费算总账",
+        "综合维修用 .repair 更宽，水暖专业身份用这里",
+        "emergency/24h + .plumbing 直接说清应急定位",
+      ],
+    },
+    en: {
+      title: ".plumbing Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".plumbing is the plumbing trade's dedicated suffix — for repair and drain services, plumbing installation contractors, bathroom and pipe fitting suppliers, and 24/7 emergency callout platforms. See live pricing and naming advice, then hunt available .plumbing names with AI.",
+      intro:
+        ".plumbing is one of the original trade gTLDs: repair and drain-clearing services, installation contractors, bathroom and pipe-fitting suppliers, and 24/7 emergency callout platforms on name.plumbing match the exact phrase a customer with a burst pipe types — city + plumbing — and in a trade that lives on urgent calls, that precision converts straight into phone calls. Operated by Identity Digital, about $8 for the first year (≈¥59) and $58/yr to renew (≈¥419) — a low first-year door for testing, with a renewal that pays for itself in lead value. Inventory is excellent: city names, family names and brand words nearly all hit, while every XXplumbing.com in English-speaking markets was claimed by local firms long ago. Three cautions: it targets English-speaking markets first, so plan brand-building if your audience thinks in another language; the first year is cheap but renewal runs 7× — price a multi-city matrix at renewal rates; and split the work with .repair and .services — general repair fits .repair, multi-trade home services fit .services, while the plumbing identity is truest here. Naming: city + .plumbing fits urgent local lead-gen; family name or brand + .plumbing fits established firms; emergency/24h + .plumbing states the callout positioning outright.",
+      bestFor: ["Repair & drain services", "Plumbing installation contractors", "Bathroom & pipe fitting suppliers", "24/7 emergency callout platforms"],
+      namingTips: [
+        "City + .plumbing is the burst-pipe search phrase itself",
+        "About $8 year one, $58/yr renewal — matrix at renewal rates",
+        "General repair fits .repair; the trade identity lives here",
+        "emergency/24h + .plumbing states the callout model outright",
+      ],
+    },
+  },
+  catering: {
+    tld: "catering",
+    zh: {
+      title: ".catering 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".catering 是餐饮外烩行业的专属后缀，适合宴会与活动餐饮公司、企业团餐与工作餐配送、婚礼与派对外烩、私厨与上门宴席服务。查看 .catering 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .catering 域名。",
+      intro:
+        ".catering 把「外烩承办」写进域名：宴会与活动餐饮、企业团餐与工作餐配送、婚礼与派对外烩、私厨上门宴席用 name.catering，办活动找餐饮的客户搜「城市名/菜系 + catering」落到你的域名毫无损耗——feast.catering 这样的名字本身就说清了生意。注册局为 Identity Digital，注册与续费均约 $31/年（约 ¥226），平进平出、无首年陷阱，在行业后缀里属中档好持有的一档。库存极好：城市名、菜系词、品牌词基本都有货。注意三点：一是与已收录的 .restaurant / .kitchen 分工——堂食门店用 .restaurant，中央厨房与美食内容用 .kitchen，承办外烩用 .catering 最准；二是外烩生意重案例与口碑，域名之外把作品集和客户评价做足；三是主要面向英语市场，中文语境可作为品牌官网的国际版入口。命名上「城市 + .catering」适合本地承接，「菜系/风格词 + .catering」适合垂类外烩，「品牌 + .catering」适合连锁餐饮的外烩业务线。",
+      bestFor: ["宴会与活动餐饮公司", "企业团餐与工作餐配送", "婚礼与派对外烩", "私厨与上门宴席服务"],
+      namingTips: [
+        "「城市 + .catering」就是办活动客户的搜索词",
+        "注册续费均约 $31/年，平进平出好持有",
+        "堂食用 .restaurant、中央厨房用 .kitchen，外烩用这里",
+        "菜系/风格词 + .catering 直接说清垂类定位",
+      ],
+    },
+    en: {
+      title: ".catering Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".catering is the catering industry's dedicated suffix — for banquet and event caterers, corporate meal and office lunch delivery, wedding and party catering, and private chef and pop-up dinner services. See live pricing and naming advice, then hunt available .catering names with AI.",
+      intro:
+        ".catering writes the trade into the domain: banquet and event caterers, corporate meal and office-lunch programs, wedding and party specialists, and private chef or pop-up dinner services on name.catering catch event planners searching city or cuisine + catering with zero loss — a name like feast.catering explains the business by itself. Operated by Identity Digital, about $31/yr for both registration and renewal (≈¥226) — flat in, flat out, none of the first-year trap, sitting in the easy-to-hold middle tier of industry gTLDs. Inventory is excellent: city names, cuisine words and brand words nearly all hit. Three cautions: split the work with the already-listed .restaurant and .kitchen — dine-in venues fit .restaurant, commissary kitchens and food content fit .kitchen, while the catering trade is truest here; catering runs on portfolios and word of mouth, so back the domain with case photos and client reviews; and it targets English-speaking markets first — elsewhere it works well as the international front door of a food brand. Naming: city + .catering fits local booking; cuisine or style word + .catering fits vertical specialists; brand + .catering fits the catering arm of a restaurant group.",
+      bestFor: ["Banquet & event caterers", "Corporate meal & lunch delivery", "Wedding & party catering", "Private chef & pop-up dinners"],
+      namingTips: [
+        "City + .catering is exactly what event planners search",
+        "About $31/yr flat for both registration and renewal",
+        "Dine-in fits .restaurant, commissaries fit .kitchen",
+        "Cuisine or style word + .catering states the vertical",
+      ],
+    },
+  },
+  florist: {
+    tld: "florist",
+    zh: {
+      title: ".florist 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".florist 是花店与花艺行业的专属后缀，适合本地花店与鲜花速递、花艺工作室与婚礼布置、订阅制鲜花电商、花艺课程与培训。查看 .florist 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .florist 域名。",
+      intro:
+        ".florist 三个音节就是「花艺师」：本地花店与鲜花速递、花艺工作室与婚礼布置、订阅制鲜花电商、花艺课程培训用 name.florist，买花的人搜「城市名 + florist」找的就是它——bloom.florist 这样的名字自带画面感，印在花束卡片上也雅致。注册局为 Identity Digital，首年约 $8（约 ¥59），续费约 $26/年（约 ¥189），首年低门槛、续费也便宜，在行业后缀里属于少见的「便宜进便宜养」。库存极好：城市名、花名、品牌词基本都有货，而 XXflowers.com / XXflorist.com 早被同行占光。注意三点：一是说的是「花艺师/花店」职业身份，卖种子园艺资材的用已收录的 .garden 更贴；二是与 .boutique 的分工——花店身份用 .florist 最准，主打精品调性的花艺买手店可用 .boutique；三是鲜花是强本地与强时效生意，域名之外把地图收录与同城配送时效讲清楚。命名上「城市 + .florist」适合本地花店，「花名/意象词 + .florist」适合花艺品牌，「品牌 + .florist」适合订阅制鲜花电商。",
+      bestFor: ["本地花店与鲜花速递", "花艺工作室与婚礼布置", "订阅制鲜花电商", "花艺课程与培训"],
+      namingTips: [
+        "「城市 + .florist」就是买花人的搜索词，本地花店首选",
+        "首年约 $8、续费约 $26/年，便宜进便宜养",
+        "园艺资材用 .garden 更贴，花艺师身份用这里",
+        "花名/意象词 + .florist 自带画面感适合品牌",
+      ],
+    },
+    en: {
+      title: ".florist Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".florist is the floristry trade's dedicated suffix — for local flower shops and same-day delivery, floral design studios and wedding decor, subscription flower e-commerce, and floristry courses and training. See live pricing and naming advice, then hunt available .florist names with AI.",
+      intro:
+        ".florist names the profession in three syllables: local flower shops and same-day delivery, floral design studios and wedding decorators, subscription flower e-commerce, and floristry schools on name.florist match exactly what flower buyers search — city + florist — and a name like bloom.florist carries its own imagery, sitting elegantly on a bouquet card. Operated by Identity Digital, about $8 for the first year (≈¥59) and just $26/yr to renew (≈¥189) — a rare cheap-in, cheap-to-hold profile among industry gTLDs. Inventory is excellent: city names, flower names and brand words nearly all hit, while every XXflowers.com and XXflorist.com was claimed by the trade long ago. Three cautions: it names the florist profession, so seed and garden-supply shops read better on the already-listed .garden; split the work with .boutique — the florist identity is truest here, while a curated floral concept store can lean .boutique; and flowers are a hyper-local, time-critical trade — beyond the domain, nail your map listing and same-day delivery promise. Naming: city + .florist fits local shops; flower or imagery word + .florist fits floral brands; brand + .florist fits subscription e-commerce.",
+      bestFor: ["Local flower shops & same-day delivery", "Floral design studios & wedding decor", "Subscription flower e-commerce", "Floristry courses & training"],
+      namingTips: [
+        "City + .florist is exactly what flower buyers search",
+        "About $8 year one, $26/yr renewal — cheap in, cheap to hold",
+        "Seed and garden supply fit .garden; the trade lives here",
+        "Flower or imagery word + .florist carries its own imagery",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
