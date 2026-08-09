@@ -532,7 +532,18 @@ export function ShortlistPage({
         </p>
       )}
       {(shareError || recheckError || monitorError) && (
-        <p className="mb-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{shareError || recheckError || monitorError}</p>
+        <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">
+          <span>{shareError || recheckError || monitorError}</span>
+          {shareError && (
+            <button
+              className="rounded-md border border-destructive/40 px-2.5 py-1 text-xs font-semibold text-destructive transition-colors hover:bg-destructive/15 disabled:opacity-50"
+              disabled={sharing}
+              onClick={() => void share()}
+            >
+              {sharing ? t("shortlist.sharing") : t("shortlist.shareRetry")}
+            </button>
+          )}
+        </p>
       )}
 
       {/* 监控动态：开了监控的域名的掉落/回补记录 */}
