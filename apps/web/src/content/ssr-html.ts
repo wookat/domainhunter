@@ -136,7 +136,7 @@ export function pricesTableSkeleton(lang: Lang): string {
   const rowsHtml = rows
     .map(
       ({ tld }) =>
-        `<div class="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0"><a href="/tld/${tld}?lang=${lang}" class="tap-target font-mono text-sm font-semibold text-txt0 hover:text-brand">.${tld}</a><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><a href="/?tld=${tld}" class="flex min-h-[44px] items-center rounded-lg border border-line px-2.5 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-[36px]">${escapeHtml(s.hunt)}</a></div>`,
+        `<div class="cv-row grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0"><a href="/tld/${tld}?lang=${lang}" class="tap-target font-mono text-sm font-semibold text-txt0 hover:text-brand">.${tld}</a><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><a href="/?tld=${tld}" class="flex min-h-[44px] items-center rounded-lg border border-line px-2.5 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-[36px]">${escapeHtml(s.hunt)}</a></div>`,
     )
     .join("");
   return (
