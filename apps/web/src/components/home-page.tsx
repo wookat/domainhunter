@@ -1021,48 +1021,6 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个围棋与棋类培训品牌，寓意「落子有声，学棋即修心」；气质要有棋语文化厚度、智慧与修养并存、奖状上印得住体面；场景是家长群「XX 家孩子定段了」的转述、赛事成绩公示和商场招牌里都可信好记。",
     en: "A Go and chess academy brand. The name should land like a stone on the board — learning the game disciplines the mind; the vibe carries board-game cultural depth, wisdom with cultivation, dignified on certificates; it must sound credible in \"their kid just made dan\" parent retellings, tournament postings, and mall signage.",
   },
-  {
-    slug: "hotpot",
-    labelZh: "火锅烧烤",
-    labelEn: "Hotpot & BBQ",
-    zh: "一个火锅与烧烤品牌，寓意「一桌人围炉的热闹烟火气」；气质要市井有梗、两三个字喊得响、灯箱上远远认得出；场景是「今晚吃什么」的群聊提议、大众点评榜单和「走，去吃 XX」的朋友转述里都第一个被喊出来。",
-    en: "A hotpot and BBQ brand. The name should feel like the bustle of friends around a boiling pot; the vibe is street-fire wit, shoutable in two or three syllables, legible across a night market; it must be the first name shouted in \"what's for dinner\" group chats, ranked review lists, and \"let's go eat at X\" retellings.",
-  },
-  {
-    slug: "dessert",
-    labelZh: "甜品冰淇淋",
-    labelEn: "Dessert & ice cream",
-    zh: "一个甜品店与冰淇淋品牌，寓意「今天值得奖励自己一下」；气质要甜而不腻、有口感画面又有情绪价值、印在杯子和招牌上好看上镜；场景是下午茶提议、小红书探店笔记和外卖列表里都第一个浮现。",
-    en: "A dessert shop and ice cream brand. The name should feel like today deserves a treat; the vibe is sweet without cloying, textured and emotionally rewarding, photogenic on cups and signage; it must surface first in afternoon-tea proposals, discovery posts, and delivery lists.",
-  },
-  {
-    slug: "convenience",
-    labelZh: "社区便利店",
-    labelEn: "Convenience stores",
-    zh: "一个社区便利店与即时零售品牌，寓意「楼下永远亮着的那盏灯」；气质要亲切正规、两三个字笔画简单、灯箱上一眼认出；场景是「楼下买瓶水」的肌肉记忆、外卖即时零售列表和加盟招商手册里都可信好记。",
-    en: "A convenience store and instant retail brand. The name should feel like the light downstairs that never goes out; the vibe is neighborly yet legitimate, two or three simple syllables, instantly recognized on a lightbox; it must carry in \"grab a bottle downstairs\" muscle memory, instant-delivery listings, and franchise brochures.",
-  },
-  {
-    slug: "stationery",
-    labelZh: "文创文具",
-    labelEn: "Stationery & paper goods",
-    zh: "一个文创与文具品牌，寓意「认真生活的仪式感」；气质要克制有书房气、字形好看可做印章、经得起印在产品角落被反复端详；场景是小红书晒本子、文具店铺货和「送人拿得出手」的礼物场景里都体面耐看。",
-    en: "A stationery and paper goods brand. The name should feel like the ritual of living deliberately; the vibe is restrained with study-room air, beautiful as a mark or seal, worthy of repeated gaze on a product corner; it must look dignified in journal-spread posts, shop shelves, and \"presentable as a gift\" scenes.",
-  },
-  {
-    slug: "cybercafe",
-    labelZh: "电竞网咖",
-    labelEn: "Esports cafés",
-    zh: "一个电竞馆与网咖品牌，寓意「五个人坐一排的开黑圣地」；气质要热血有梗但不中二、两三个字喊得顺口、储值卡上印得体面；场景是「今晚去哪开黑」的语音集结、大众点评比价和朋友拉群里都好喊好记。",
-    en: "An esports venue and cyber café brand. The name should feel like the squad's holy ground — five friends in a row; the vibe is competitive fire with wit but no cringe, rolling off the tongue in two or three syllables, decent on a membership card; it must rally well in \"where are we queuing tonight\" voice chats, review-app comparisons, and group invites.",
-  },
-  {
-    slug: "carrental",
-    labelZh: "租车出行",
-    labelEn: "Car rental & mobility",
-    zh: "一个租车与共享出行品牌，寓意「说走就走的自由与稳稳的可靠」；气质要正规可信又轻快有效率、好念好搜不与巨头谐音撞车；场景是行程规划的搜索、机场到达厅灯箱和「上次在 XX 租的车不错」的口碑里都立得住。",
-    en: "A car rental and mobility brand. The name should feel like leave-whenever freedom on a bedrock of reliability; the vibe is legitimate yet light and efficient, easy to say and search without sound-alike collisions with giants; it must stand in trip-planning searches, arrival-hall lightboxes, and \"the car I got at X was solid\" word of mouth.",
-  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
