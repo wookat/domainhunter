@@ -49,13 +49,13 @@ export function tldHubGroups(): { id: string; zh: string; en: string; tlds: stri
 const GUIDE_CATEGORY_DEFS: { id: string; zh: string; en: string; members: string[] }[] = [
   { id: "tech", zh: "科技与互联网", en: "Tech & internet", members: ["saas", "ai", "agent", "devtools", "web3", "security", "hardware", "opensource", "indiehacker", "indiegame", "drone", "solar", "3dprint"] },
   { id: "ecommerce", zh: "电商与零售", en: "E-commerce & retail", members: ["ecommerce", "crossborder", "livestream", "resale", "fleamarket", "sourcing", "forwarder", "usedcar", "fashion", "jewelry", "toys", "furniture", "hanfu", "petsupplies", "gearrental", "vending", "fragrance", "upcycling"] },
-  { id: "food", zh: "餐饮与食品", en: "Food & beverage", members: ["food", "coffee", "bakery", "brewery", "farm", "foodtruck", "mealprep"] },
+  { id: "food", zh: "餐饮与食品", en: "Food & beverage", members: ["food", "coffee", "bakery", "brewery", "farm", "foodtruck", "mealprep", "bar"] },
   { id: "content", zh: "内容与创作", en: "Content & creators", members: ["blog", "podcast", "newsletter", "creator", "music", "photography", "travelshoot", "mcn", "boardgame", "pottery", "petphoto", "zine"] },
-  { id: "edu", zh: "教育与知识", en: "Education & knowledge", members: ["edu", "courses", "studyabroad", "codingschool", "language", "preschool", "bookstore", "translation", "knowledgepay", "swimschool", "kidsart", "danceschool", "drivingschool", "studytour"] },
-  { id: "health", zh: "健康与运动", en: "Health & fitness", members: ["fitness", "health", "yoga", "coach", "crossfit", "therapy", "dental", "eldercare", "ski", "climbing", "martialarts", "billiards", "massage", "diving", "skateshop"] },
+  { id: "edu", zh: "教育与知识", en: "Education & knowledge", members: ["edu", "courses", "studyabroad", "codingschool", "language", "preschool", "bookstore", "translation", "knowledgepay", "swimschool", "kidsart", "danceschool", "drivingschool", "studytour", "musicschool", "chess"] },
+  { id: "health", zh: "健康与运动", en: "Health & fitness", members: ["fitness", "health", "yoga", "coach", "crossfit", "therapy", "dental", "eldercare", "ski", "climbing", "martialarts", "billiards", "massage", "diving", "skateshop", "surf", "golf"] },
   { id: "travel", zh: "旅行与出行", en: "Travel & mobility", members: ["travel", "bnb", "outdoor", "automotive", "moving", "logistics", "rvtravel", "bikeshop", "fishing", "campgear"] },
   { id: "local", zh: "生活服务", en: "Local services", members: ["pets", "vet", "aquarium", "cleaning", "barber", "beauty", "wedding", "florist", "gardening", "interior", "events", "escaperoom", "parenting", "pettraining", "nailsalon", "laundry", "matchmaking", "tattoo", "repair", "optician", "carwash", "petboarding", "locksmith"] },
-  { id: "business", zh: "商业与专业服务", en: "Business & professional", members: ["fintech", "legal", "accounting", "insurance", "recruiting", "realestate", "agency", "freelance", "marketing", "coworking", "resume", "nonprofit", "community", "game", "esports", "careercoach"] },
+  { id: "business", zh: "商业与专业服务", en: "Business & professional", members: ["fintech", "legal", "accounting", "insurance", "recruiting", "realestate", "agency", "freelance", "marketing", "coworking", "resume", "nonprofit", "community", "game", "esports", "careercoach", "vr"] },
 ];
 
 const GUIDE_FALLBACK = { id: "more", zh: "更多行业", en: "More industries" };

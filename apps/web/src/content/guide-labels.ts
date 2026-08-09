@@ -137,4 +137,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "zine", zh: "独立杂志", en: "Indie magazines & zines" },
   { slug: "locksmith", zh: "开锁换锁", en: "Locksmiths" },
   { slug: "skateshop", zh: "滑板店", en: "Skate shops" },
+  { slug: "surf", zh: "冲浪俱乐部", en: "Surf clubs" },
+  { slug: "golf", zh: "高尔夫", en: "Golf" },
+  { slug: "vr", zh: "VR 体验馆", en: "VR arcades" },
+  { slug: "bar", zh: "酒吧清吧", en: "Bars & lounges" },
+  { slug: "musicschool", zh: "音乐培训琴行", en: "Music schools" },
+  { slug: "chess", zh: "棋类培训", en: "Chess & Go academies" },
 ];

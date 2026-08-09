@@ -979,6 +979,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个滑板店与滑板品牌，寓意「真实不装的态度，街头自己人的接头点」；气质要横得真诚、永远年轻但不装嫩、经得起印在板底和卫衣上；场景是滑手圈「去 XX 买板」的口碑、视频片尾鸣谢和 IG 标签里都好认好拼。",
     en: "A skate shop and skate brand. The name should feel like an authentic, unapologetic meeting point for the local scene; the vibe is earned swagger, forever young without faking it, print-ready for deck bottoms and hoodies; it must read cleanly in \"get your deck at X\" word of mouth, video credits, and IG tags.",
   },
+  {
+    slug: "surf",
+    labelZh: "冲浪俱乐部",
+    labelEn: "Surf clubs",
+    zh: "一个冲浪俱乐部与冲浪学校品牌，寓意「把生活调成海边频率，逐浪而居」；气质要自由松弛、闻得到海的味道、老手觉得地道新手不害怕；场景是浪点攻略搜索、OTA 预订页和「在 XX 学的下浪，教练会推板」的浪人口碑里都好念好拼。",
+    en: "A surf club and surf school brand. The name should feel like retuning life to an ocean frequency and living by the swell; the vibe is free and loose, smelling of salt, authentic to veterans yet unthreatening to first-timers; it must read well in surf-spot guide searches, OTA booking pages, and \"I learned to pop up at X\" surfer word of mouth.",
+  },
+  {
+    slug: "golf",
+    labelZh: "高尔夫",
+    labelEn: "Golf",
+    zh: "一个高尔夫俱乐部与球技培训品牌，寓意「果岭上的体面与精准」；气质要庄园矜贵而不土豪、经得起会籍卡烫金与合同抬头；场景是会籍顾问名片、企业团建洽谈和球友「周末去 XX 打一场」的转述里都体面可信。",
+    en: "A golf club and golf academy brand. The name should feel like propriety and precision on the green; the vibe is estate reserve without gaudiness, worthy of gold-foil membership cards and contract letterheads; it must carry on membership consultants' cards, corporate-event pitches, and \"let's play X this weekend\" golfer retellings.",
+  },
+  {
+    slug: "vr",
+    labelZh: "VR 体验馆",
+    labelEn: "VR arcades",
+    zh: "一个 VR 体验馆与沉浸式娱乐品牌，寓意「推开一扇门，踏进另一个世界」；气质要科技奇观感与好玩直给并存、不用生僻科技词；场景是商场中庭招牌三米外可读、团购列表一眼记住和「上次去的那家 XX 超好玩」的朋友转述里都好念好记。",
+    en: "A VR arcade and immersive entertainment brand. The name should feel like pushing open a door into another world; the vibe pairs tech spectacle with plain fun, no obscure jargon; it must read from three meters off mall signage, stick at a glance in deals lists, and carry in \"that place X was insane\" friend retellings.",
+  },
+  {
+    slug: "bar",
+    labelZh: "酒吧清吧",
+    labelEn: "Bars & lounges",
+    zh: "一个鸡尾酒吧与清吧品牌，寓意「名字就是第一杯酒，定下今晚的基调」；气质要有故事感有梗、微醺不烂醉、做成霓虹灯牌好看；场景是「今晚去哪喝」的朋友转述、小红书探店和大众点评榜单里都好念好记。",
+    en: "A cocktail bar and lounge brand. The name should feel like the first drink, setting the register of the night; the vibe is storied and witty, tipsy but never wrecked, beautiful as a neon sign; it must carry in \"where are we drinking tonight\" retellings, discovery posts, and ranked review lists.",
+  },
+  {
+    slug: "musicschool",
+    labelZh: "音乐培训琴行",
+    labelEn: "Music schools",
+    zh: "一个音乐培训机构与琴行品牌，寓意「从第一个音阶到第一次登台」；气质要专业可信又有音乐美感、家长听到坚持孩子感到向往；场景是家长群转介绍、商场招牌和汇报演出节目单里都念着可信印着体面。",
+    en: "A music school and instrument store brand. The name should feel like the journey from the first scale to the first recital; the vibe is credible expertise with musical beauty — parents hear rigor, kids feel longing; it must sound trustworthy in parent-group referrals, mall signage, and recital programs.",
+  },
+  {
+    slug: "chess",
+    labelZh: "棋类培训",
+    labelEn: "Chess & Go academies",
+    zh: "一个围棋与棋类培训品牌，寓意「落子有声，学棋即修心」；气质要有棋语文化厚度、智慧与修养并存、奖状上印得住体面；场景是家长群「XX 家孩子定段了」的转述、赛事成绩公示和商场招牌里都可信好记。",
+    en: "A Go and chess academy brand. The name should land like a stone on the board — learning the game disciplines the mind; the vibe carries board-game cultural depth, wisdom with cultivation, dignified on certificates; it must sound credible in \"their kid just made dan\" parent retellings, tournament postings, and mall signage.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
