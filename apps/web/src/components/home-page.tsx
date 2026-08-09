@@ -1063,6 +1063,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个租车与共享出行品牌，寓意「说走就走的自由与稳稳的可靠」；气质要正规可信又轻快有效率、好念好搜不与巨头谐音撞车；场景是行程规划的搜索、机场到达厅灯箱和「上次在 XX 租的车不错」的口碑里都立得住。",
     en: "A car rental and mobility brand. The name should feel like leave-whenever freedom on a bedrock of reliability; the vibe is legitimate yet light and efficient, easy to say and search without sound-alike collisions with giants; it must stand in trip-planning searches, arrival-hall lightboxes, and \"the car I got at X was solid\" word of mouth.",
   },
+  {
+    slug: "noodle",
+    labelZh: "粉面小吃",
+    labelEn: "Noodle shops",
+    zh: "一个面馆与粉面小吃品牌，寓意「一碗端上来就冒热气的踏实」；气质要市井有烟火气、两三个字喊得顺口、外卖列表与楼层导视里一眼认出；场景是「中午吃什么」的快决策、外卖缩略图和「楼下那家 XX」的日常口碑里都第一个被想起。",
+    en: "A noodle shop and street food brand. The name should feel like a steaming bowl set down in front of you; the vibe is street-fire warmth, two or three syllables that roll off the tongue, instantly legible in delivery lists and floor directories; it must surface first in \"what's for lunch\" split-second decisions, delivery thumbnails, and \"that place downstairs\" word of mouth.",
+  },
+  {
+    slug: "grocery",
+    labelZh: "社区生鲜",
+    labelEn: "Fresh groceries",
+    zh: "一个社区生鲜店品牌，寓意「今天的菜是今天的」；气质要新鲜亲切、笔画简单、门头灯箱隔街可认；场景是阿姨的日常口碑、社区团购群和即时零售 App 的搜索里都念得顺口、记得牢靠。",
+    en: "A neighborhood fresh grocery brand. The name should feel like today's produce is from today; the vibe is fresh and neighborly with simple strokes, legible on a fascia lightbox from across the street; it must roll off an auntie's tongue in daily word of mouth, community group-buy chats, and instant-delivery app searches.",
+  },
+  {
+    slug: "tutoring",
+    labelZh: "课外辅导",
+    labelEn: "Tutoring & test prep",
+    zh: "一个课外辅导与家教品牌，寓意「跟对人，每天进步一点点」；气质要正规可信有文化底座、让家长安心也让孩子不抗拒；场景是家长群「XX 家孩子在哪补的」的转介绍、校门口招牌和机构名录里都立得住体面。",
+    en: "A tutoring and test prep brand. The name should feel like following the right teacher toward a little progress every day; the vibe is legitimate with a cultural foundation, reassuring to parents without triggering kids' resistance; it must stand dignified in \"where does their kid go\" parent-group referrals, schoolgate signage, and institution directories.",
+  },
+  {
+    slug: "printshop",
+    labelZh: "图文快印",
+    labelEn: "Print shops",
+    zh: "一个图文快印品牌，寓意「再急的活也快而准地交付」；气质要专业严谨有效率、好念好搜、电话里报得清楚；场景是「附近的打印店」的加急搜索、写字楼电梯广告和行政「上次那家印得不错」的口碑里都一眼认出。",
+    en: "A print shop and copy center brand. The name should feel like even the tightest deadline delivered fast and exact; the vibe is professional rigor with efficiency, easy to say and search, spellable over the phone; it must stand out in urgent \"print shop near me\" searches, office elevator ads, and the admin's \"that place did it right\" word of mouth.",
+  },
+  {
+    slug: "errand",
+    labelZh: "同城跑腿",
+    labelEn: "Errand & courier services",
+    zh: "一个同城跑腿与代办品牌，寓意「一小时内使命必达的确定性」；气质要有速度感又靠谱、两三个字好念好搜、印在骑手马甲上满街跑都是广告；场景是「帮我送一下」的应急下单、应用商店搜索和「半小时就送到了」的口碑里都第一个被想起。",
+    en: "An errand running and same-city courier brand. The name should feel like within-the-hour certainty on a mission; the vibe is speed with dependability, two or three syllables easy to say and search, a billboard on every runner's vest; it must be the first name recalled in \"run this over\" emergencies, app-store searches, and \"they made it in thirty minutes\" word of mouth.",
+  },
+  {
+    slug: "plumber",
+    labelZh: "管道疏通维修",
+    labelEn: "Plumbing & repair",
+    zh: "一个管道疏通与水电维修品牌，寓意「马上能来、明码标价、药到病除」；气质要正规专业不像游击队、电话里报得清楚、印在工服上体面可信；场景是「附近疏通下水道」的应急搜索、物业推荐名录和业主群转介绍里都立得住。",
+    en: "A plumbing and home repair brand. The name should feel like we can come now, price upfront, cured on the first visit; the vibe is licensed professionalism far from fly-by-night, spellable over the phone, decent printed on a work uniform; it must stand in emergency \"plumber near me\" searches, property-manager referral lists, and homeowner group recommendations.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
