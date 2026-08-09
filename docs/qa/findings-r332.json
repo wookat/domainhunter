@@ -1,0 +1,250 @@
+{
+  "usage_pre": {
+    "days": {
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786298444783,
+    "indexnowLast": 1786255259045
+  },
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_all": "核验完成：共 223 个，209 个可注册",
+  "prices_rows_zh": 222,
+  "prices_live_count": 58,
+  "prices_static_count": 164,
+  "prices_live_cny_mismatch": [],
+  "prices_default_sorted_asc": true,
+  "prices_new_tld_static": {
+    "expected": {
+      "church": [
+        48,
+        337
+      ],
+      "jewelry": [
+        78,
+        374
+      ],
+      "cleaning": [
+        434,
+        434
+      ],
+      "plumbing": [
+        59,
+        419
+      ],
+      "catering": [
+        226,
+        226
+      ],
+      "florist": [
+        59,
+        189
+      ]
+    },
+    "got": {
+      "church": [
+        48,
+        337
+      ],
+      "plumbing": [
+        59,
+        419
+      ],
+      "florist": [
+        59,
+        189
+      ],
+      "jewelry": [
+        78,
+        374
+      ],
+      "catering": [
+        226,
+        226
+      ],
+      "cleaning": [
+        434,
+        434
+      ]
+    },
+    "match": true
+  },
+  "prices_tld_sorted": true,
+  "prices_rows_en": 222,
+  "tld_hub_links": 222,
+  "guide_hub_links": 224,
+  "vs_hub_links": 252,
+  "footer_counts": [],
+  "templates_prefill": {
+    "deli": "A deli and braised-food brand. The name ",
+    "winery": "A boutique winery and wine brand. The na",
+    "sushi": "A sushi restaurant and Japanese-dining b",
+    "icecream": "An ice cream and dessert brand. The name",
+    "hostel": "A hostel and backpacker-lodge brand. The",
+    "bowling": "A bowling alley and social-entertainment"
+  },
+  "templates_total_buttons": [],
+  "404_status": 404,
+  "404_tld_status": 404,
+  "mcp_doc_status": 200,
+  "mcp_tld_prices": {
+    "tldCount": 222,
+    "priceKeys": 222
+  },
+  "share_create": {
+    "status": 200,
+    "id": "xvRhHZFUEL",
+    "has_token": true
+  },
+  "share_live_domains": {
+    "d1": true,
+    "d2": true
+  },
+  "share_revoke": {
+    "del": 200,
+    "getAfter": 410
+  },
+  "share_revoked_ui": true,
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(250, 250, 249)",
+    "persist_after_reload": "rgb(250, 250, 249)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "keyboard_tab_seq": [
+    "BUTTON:DomainHunter",
+    "BUTTON:Advanced",
+    "BUTTON:Shortlist0",
+    "A:",
+    "BUTTON:切换到中文",
+    "BUTTON:",
+    "BUTTON:Dismiss guide",
+    "BUTTON:AI naming"
+  ],
+  "keyboard_focus_visible": {
+    "outline": true
+  },
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld/church": 360,
+    "/vs": 360,
+    "/guide/deli": 360
+  },
+  "usage_post": {
+    "days": {
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786298444783,
+    "indexnowLast": 1786255259045
+  },
+  "usage_equal": true,
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r332"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r332"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r332"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/xvRhHZFUEL"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/xvRhHZFUEL"
+    }
+  ]
+}

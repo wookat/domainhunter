@@ -1,0 +1,123 @@
+{
+  "footer_hub_dedup": {
+    "/tld/": 222,
+    "/guide/": 224,
+    "/vs/": 252
+  },
+  "footer_count_text": [],
+  "templates_zh_buttons": [
+    "甜品冰淇淋",
+    "卤味熟食",
+    "精品酒庄",
+    "日料餐厅",
+    "冰淇淋品牌",
+    "青年旅舍",
+    "保龄球馆"
+  ],
+  "template_chip_prefill_deli_zh": "一个卤味熟食品牌，寓意「一锅老卤的滋味，下班路上顺手的那份好味」；气质要有食欲有",
+  "templates_prefill_zh": {
+    "deli": "一个卤味熟食品牌，寓意「一锅老卤的滋味，下班路上顺手的那份好味」；气质要有食欲有",
+    "winery": "一个精品酒庄与葡萄酒品牌，寓意「一方风土酿进一瓶酒」；气质要有庄园分量与家族质感",
+    "sushi": "一家日料餐厅与寿司品牌，寓意「板前的安静与食材的新鲜」；气质要有匠气与留白、克制",
+    "icecream": "一个冰淇淋与甜品站品牌，寓意「一口化开的快乐」；气质要轻快上镜有甜感、经得起橱窗",
+    "hostel": "一个青年旅舍与背包客栈品牌，寓意「一张床位之外的相遇」；气质要轻盈有故事、酷而不",
+    "bowling": "一个保龄球馆与聚会娱乐品牌，寓意「全中一刻的脆响与满堂欢呼」；气质要有命中感与复"
+  },
+  "home_375_templates_scrollWidth": 375,
+  "seo": {
+    "/tld/church": {
+      "title": ".church 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/church",
+      "og_title": ".church Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+      "lang": "zh-CN",
+      "jsonld": [
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "hreflang": [
+        "zh-CN",
+        "en",
+        "x-default"
+      ]
+    },
+    "/tld/plumbing": {
+      "title": ".plumbing 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/plumbing",
+      "og_title": ".plumbing Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+      "lang": "zh-CN",
+      "jsonld": [
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "hreflang": [
+        "zh-CN",
+        "en",
+        "x-default"
+      ]
+    },
+    "/guide/winery": {
+      "title": "精品酒庄与葡萄酒品牌怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/winery",
+      "og_title": "How to Name a Winery or Wine Brand: Strategies, Case Studies & Domains | DomainHunter",
+      "lang": "zh-CN",
+      "jsonld": [
+        "BreadcrumbList",
+        "Article",
+        "FAQPage"
+      ],
+      "hreflang": [
+        "zh-CN",
+        "en",
+        "x-default"
+      ]
+    },
+    "/guide/hostel": {
+      "title": "青年旅舍与背包客栈怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/hostel",
+      "og_title": "How to Name a Hostel or Backpacker Lodge: Strategies, Case Studies & Domains | DomainHunter",
+      "lang": "zh-CN",
+      "jsonld": [
+        "BreadcrumbList",
+        "Article",
+        "FAQPage"
+      ],
+      "hreflang": [
+        "zh-CN",
+        "en",
+        "x-default"
+      ]
+    },
+    "/vs/lawyer-vs-legal": {
+      "title": ".lawyer 和 .legal 怎么选：律师个人牌与法律行业牌的分工 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/lawyer-vs-legal",
+      "og_title": ".lawyer vs .legal: The Attorney's Nameplate or The Industry's Address | DomainHunter",
+      "lang": "zh-CN",
+      "jsonld": [
+        "BreadcrumbList",
+        "Article",
+        "FAQPage"
+      ],
+      "hreflang": [
+        "zh-CN",
+        "en",
+        "x-default"
+      ]
+    },
+    "/vs/rent-vs-rentals": {
+      "title": ".rent 和 .rentals 怎么选：动词品牌与列表聚合的分工 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/rent-vs-rentals",
+      "og_title": ".rent vs .rentals: The Verb Brand or The Listings Aggregator | DomainHunter",
+      "lang": "zh-CN",
+      "jsonld": [
+        "BreadcrumbList",
+        "Article",
+        "FAQPage"
+      ],
+      "hreflang": [
+        "zh-CN",
+        "en",
+        "x-default"
+      ]
+    }
+  }
+}
