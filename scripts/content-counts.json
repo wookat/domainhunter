@@ -239,7 +239,7 @@
     ]
   },
   "guide": {
-    "count": 230,
+    "count": 236,
     "slugs": [
       "saas",
       "ecommerce",
@@ -470,7 +470,13 @@
       "trampoline",
       "funeral",
       "securityguard",
-      "ipagency"
+      "ipagency",
+      "wig",
+      "skincare",
+      "makeupartist",
+      "homestaging",
+      "yachtcharter",
+      "autoparts"
     ]
   },
   "vs": {

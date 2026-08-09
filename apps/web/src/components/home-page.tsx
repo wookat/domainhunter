@@ -1683,6 +1683,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个知识产权代理与专利商标服务品牌，寓意「把创新守成资产」；气质要精密专业有传承感、经得起公文抬头与英文官网、绝不堆砌大词；场景是投标名单、代理人名录和「我们的专利是 XX 代理的」的行业口碑里都立得住。",
     en: "An IP and patent services brand. The name should promise innovation guarded into assets; the vibe is precise, professional and heritage-minded, worthy of formal letterheads and the English site, never stacked with grand words; it must hold up on tender shortlists, practitioner directories, and the \"our patents are with X\" word of mouth.",
   },
+  {
+    slug: "wig",
+    labelZh: "假发品牌",
+    labelEn: "Wig brand",
+    zh: "一个面向海外市场的假发与接发品牌，寓意「戴上就是更自信的自己」；气质要好念好拼有变美的情感浓度、经得起 TikTok 测评口播、绝不显廉价；场景是英文独立站域名、网红联盟链接和 #标签里都立得住。",
+    en: "A wig and hair extension brand for overseas markets. The name should promise a more confident self the moment it's worn; the vibe is easy to say and spell with real beauty-emotion, ready for TikTok review voiceovers, never cheap-looking; it must hold up as an English storefront domain, in affiliate links, and as a hashtag.",
+  },
+  {
+    slug: "skincare",
+    labelZh: "护肤品牌",
+    labelEn: "Skincare brand",
+    zh: "一个护肤品牌，寓意「温和有效，把皮肤交给可信的人」；气质要在科学感与温度之间站稳一边、压得住素色瓶身的极简排版、绝不夸大功效；场景是成分测评、皮肤科医生推荐和免税店货架上都立得住。",
+    en: "A skincare brand. The name should promise gentle efficacy — skin entrusted to someone credible; the vibe picks a clear side between lab science and warmth, holds minimalist type on a plain bottle, and never overclaims; it must hold up in ingredient reviews, dermatologist recommendations, and on duty-free shelves.",
+  },
+  {
+    slug: "makeupartist",
+    labelZh: "化妆造型工作室",
+    labelEn: "Makeup artist studio",
+    zh: "一个化妆师与化妆造型工作室品牌，寓意「把最重要的那张脸交给你」；气质要有署名感与妆面的画面感、接得住新娘跟妆与商拍、绝不堆砌头衔；场景是小红书客片、婚礼请柬供应商名单和「找 XX 化妆」的转介绍里都立得住。",
+    en: "A makeup artist and styling studio brand. The name should carry the trust of \"the most important face of the day\"; the vibe is signature-like with the imagery of a beautiful finish, holding bridal and commercial work, never stacked with titles; it must hold up in portfolio posts, on wedding vendor lists, and in \"book X for makeup\" referrals.",
+  },
+  {
+    slug: "homestaging",
+    labelZh: "房屋整备布置",
+    labelEn: "Home staging",
+    zh: "一个房屋整备与软装布置品牌，寓意「让房子看起来值这个价」；气质要专业有审美、带「挂牌即登场」的焕新感、绝不像搬家公司或家居博主；场景是中介供应商名单、带看照和 Before/After 对比帖里都立得住。",
+    en: "A home staging and styling brand. The name should promise a house that looks worth its price; the vibe is professional with taste and a curtain-up freshness, never a moving company or a decor blog; it must hold up on agents' vendor lists, in listing photos, and in before/after comparison posts.",
+  },
+  {
+    slug: "yachtcharter",
+    labelZh: "游艇租赁俱乐部",
+    labelEn: "Yacht charter",
+    zh: "一个游艇租赁与游艇俱乐部品牌，寓意「一段海上的高光时刻」；气质要贵而不炫、有香槟色海面的画面感、可靠得让替全家做决定的人放心、绝不像渔家乐；场景是夕阳甲板打卡照、OTA 体验列表和酒店礼宾推荐里都立得住。",
+    en: "A yacht charter and boat club brand. The name should promise a highlight moment on the water; the vibe is expensive but not loud, with champagne-sea imagery, reliable enough for whoever books for the whole family, never a fishing wharf; it must hold up in sunset-deck photos, OTA listings, and hotel concierge recommendations.",
+  },
+  {
+    slug: "autoparts",
+    labelZh: "汽配用品品牌",
+    labelEn: "Auto parts brand",
+    zh: "一个汽配与汽车用品品牌，寓意「装得放心，跑得带劲」；气质要有金属感与性能气质、像靠得住的零件、绝不山寨大牌拼写；场景是英文电商 listing、修理厂采购群和改装论坛的口碑里都立得住。",
+    en: "An auto parts and accessories brand. The name should promise safe to install and strong on the road; the vibe is metallic with performance energy, reading like a dependable component, never a look-alike of big brands; it must hold up in English marketplace listings, repair-shop procurement chats, and modder-forum word of mouth.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

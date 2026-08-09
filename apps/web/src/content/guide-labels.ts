@@ -233,4 +233,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "funeral", zh: "殡葬服务", en: "Funeral & memorial services" },
   { slug: "securityguard", zh: "安保服务", en: "Security services" },
   { slug: "ipagency", zh: "知识产权代理", en: "IP & patent services" },
+  { slug: "wig", zh: "假发品牌", en: "Wig brands" },
+  { slug: "skincare", zh: "护肤品牌", en: "Skincare brands" },
+  { slug: "makeupartist", zh: "化妆造型工作室", en: "Makeup artists" },
+  { slug: "homestaging", zh: "房屋整备布置", en: "Home staging" },
+  { slug: "yachtcharter", zh: "游艇租赁俱乐部", en: "Yacht charters" },
+  { slug: "autoparts", zh: "汽配用品品牌", en: "Auto parts brands" },
 ];
