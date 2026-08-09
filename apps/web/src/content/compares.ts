@@ -5305,6 +5305,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Podcasts & radio-style shows", "Music channels & sound communities", "Short domain-hack plays", "The radio-vibe insider badge"],
     },
   },
+  "credit-vs-finance": {
+    slug: "credit-vs-finance",
+    a: "credit",
+    b: "finance",
+    zh: {
+      title: ".credit 和 .finance 怎么选：信用垂直与综合金融的分工",
+      metaDescription: ".credit 把信用业务写进域名，适合征信、信用卡与信用修复；.finance 是综合金融的正装后缀，覆盖金融科技与财务服务。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都姓金融，口径一宽一窄。.credit 窄而准——信用评分与征信服务、信用卡比价与返现平台、信用修复与咨询、企业信用额度产品用 name.credit 一词说清业务，check.credit、build.credit 这类「动词 + .credit」读出来就是产品口号；账本要看清：注册约 $7（约 ¥48）、续费约 $83/年（约 ¥597），首年钩子明显、续费近九倍跳档，按 ¥600/年 持有成本核算再下手。.finance 宽而正——金融科技创业公司、财务顾问与资管、记账预算工具、企业金融 SaaS 都装得下，DeFi 圈已把它用成协议命名惯例（yearn.finance 完成了用户教育）；首年 $7 上下（约 ¥48）、续费约 $52/年（约 ¥375），续费同样偏高但比 .credit 温和一档。判断标准：业务核心是「信用」这一个词——征信、信用卡、信用修复 → .credit 点题最准；业务是更广义的金融产品或服务 → .finance 的口径与正式感更配。共同注意：征信与放贷在各地都是强监管业务，务必先核清金融牌照与广告合规，域名不能替代资质。命名上「动词 + .credit」接信用工具，「品牌 + .finance」接金融公司门面。",
+      pickA: ["信用评分与征信服务", "信用卡比价与返现平台", "信用修复与咨询机构", "「动词 + .credit」产品口号式命名"],
+      pickB: ["金融科技创业公司", "财务顾问与资管机构", "记账、预算与企业金融 SaaS", "DeFi 协议的圈内惯例后缀"],
+    },
+    en: {
+      title: ".credit vs .finance: The Credit Vertical or Finance at Large",
+      metaDescription:
+        ".credit writes the credit business into the address for bureaus, cards and repair services; .finance is the suit-and-tie suffix for finance at large. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in finance; the split is scope. .credit is narrow and precise — credit scoring and bureau services, card comparison and cashback platforms, credit repair and counseling, and business credit-line products state it in one word on name.credit, and verb + .credit names like check.credit or build.credit read as a product slogan out loud. Mind the ledger: about $7 to register but $83/yr to renew — a steep first-year hook with a near nine-fold jump, so budget the ~$83/yr holding cost first. .finance is broad and formal — fintech startups, financial advisors and asset managers, budgeting tools and corporate-finance SaaS all fit, and DeFi has made it a protocol-naming convention (yearn.finance did the user education); about $7 year one and $52/yr renewal — also premium, but a notch gentler than .credit. The test: if the business is the word credit — bureaus, cards, repair — .credit reads truest; for anything broader in finance, .finance carries the scope and the gravitas. Shared caution: credit and lending are regulated everywhere, so clear licensing and advertising compliance first — a domain never substitutes for a license. Naming: verb + .credit for credit tools; brand + .finance for a financial company's front door.",
+      pickA: ["Credit scoring & bureau services", "Card comparison & cashback platforms", "Credit repair & counseling", "Verb + .credit slogan-style names"],
+      pickB: ["Fintech startups", "Financial advisors & asset managers", "Budgeting & corporate-finance SaaS", "DeFi's protocol-naming convention"],
+    },
+  },
+  "loans-vs-money": {
+    slug: "loans-vs-money",
+    a: "loans",
+    b: "money",
+    zh: {
+      title: ".loans 和 .money 怎么选：贷款产品与理财内容的分界",
+      metaDescription: ".loans 把贷款业务写进域名，适合贷款产品、比价与助贷平台；.money 直白亲民，适合省钱攻略与个人理财内容。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都跟钱打交道，一个卖「借钱」，一个讲「管钱」。.loans 是贷款垂直的行业招牌——个人贷与消费贷产品、贷款比价平台、房贷车贷经纪、面向小微企业的经营贷用 name.loans，业务一词说清，home.loans、fast.loans 这类组合读出来就是获客广告语；账本要算清：注册约 $11（约 ¥78）、续费约 $93/年（约 ¥671），续费约八倍于首年，按 ¥670/年 持有成本核算，短期获客页慎用。.money 直白、口语、有冲击力——省钱攻略、返现工具、预算记账、个人理财社区用它顺口好记，smart.money、save.money 读出来像一句理财建议；注册约 $11（约 ¥78）、续费约 $28/年（约 ¥204），续费在行业后缀里算温和，长期持有压力小得多。判断标准：业务是「贷款产品本身」——放贷、助贷、比价 → .loans 点题最准；业务是「钱怎么省怎么赚」的内容与工具 → .money 的亲民直白更配、持有也更便宜。共同注意：放贷助贷在各地都是强监管业务，上线前核清金融牌照、利率披露与广告合规；金钱主题也是钓鱼重灾区，真实主体信息与 HTTPS 是信任底线。",
+      pickA: ["贷款产品与助贷平台", "贷款比价与利率聚合", "房贷车贷与经营贷经纪", "「场景 + .loans」广告语式命名"],
+      pickB: ["省钱攻略与理财内容", "返现与优惠工具", "预算记账与比价服务", "续费温和、适合长期内容站"],
+    },
+    en: {
+      title: ".loans vs .money: Lending Products or Money Content",
+      metaDescription:
+        ".loans writes lending into the address for loan products, brokers and comparison sites; .money is plain-spoken and approachable for personal-finance content. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both deal in money; one sells borrowing, the other talks managing it. .loans is the lending vertical's industry sign — personal and consumer loan products, comparison platforms, mortgage and auto brokers, and small-business lending read in one word on name.loans, and combos like home.loans or fast.loans sound like acquisition copy out loud. Mind the ledger: about $11 to register and $93/yr to renew — roughly eight times year one — so budget the ~$93/yr holding cost and think twice for short-lived campaign pages. .money is blunt, spoken and punchy — savings guides, cashback tools, budgeting apps and personal-finance communities wear it naturally; smart.money or save.money reads like a piece of advice. At about $11 to register and $28/yr to renew, it's one of the gentler industry suffixes to hold long-term. The test: if the business is the loan product itself — lending, brokering, comparison — .loans reads truest; for how-to-save-and-earn content and tools, .money is friendlier and far cheaper to keep. Shared cautions: lending is heavily regulated everywhere, so clear licensing, rate disclosure and ad compliance first; and money topics attract phishing, so real entity info and HTTPS are the trust baseline.",
+      pickA: ["Loan products & lending platforms", "Loan comparison & rate aggregators", "Mortgage, auto & business-loan brokers", "Scenario + .loans ad-copy names"],
+      pickB: ["Savings guides & finance content", "Cashback & deals tools", "Budgeting & comparison services", "Gentle renewal for long-term content sites"],
+    },
+  },
+  "investments-vs-fund": {
+    slug: "investments-vs-fund",
+    a: "investments",
+    b: "fund",
+    zh: {
+      title: ".investments 和 .fund 怎么选：综合投资门面与一笔钱的分工",
+      metaDescription: ".investments 全称正式，适合投资公司与财富管理的机构门面；.fund 短而具体，指向单一基金与募资计划。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在讲投资，一个是「门面全称」，一个是「一笔钱」。.investments 是机构门面——投资公司、财富管理与理财顾问、家族办公室、地产投资平台用 name.investments，11 个字符的全称读起来正式有分量，「姓氏 + .investments」等于把主体全名搬上域名；账本是典型的机构定价：注册约 $8（约 ¥59）、续费约 $104/年（约 ¥745），续费在新顶级域里属高档，对管理真金白银的机构不算负担，反而筛掉了玩票项目。.fund 短而准——单一基金官网、主题募资计划、公益与社区基金用 name.fund，「主题 + .fund」（climate.fund 类）直接说明钱往哪去，比全称更具体也更亲民；注册约 $9（约 ¥63）、续费约 $57/年（约 ¥410），同属偏高档但比 .investments 便宜近一半。判断标准：域名代表「一家投资机构」——多条业务线、长期机构品牌、对客户的正式门面 → .investments 的全称更压得住；域名代表「一只基金/一个募资计划」→ .fund 点题最准、成本也更轻。注意 .investments 后缀很长，前缀务必用姓氏或单个短词；两者都自带监管预期，主体信息与合规声明必须上首屏。机构牌子另有 .capital 可选，基金用 .fund，综合投资门面用 .investments。",
+      pickA: ["投资公司与财富管理机构", "理财顾问与家族办公室", "地产与另类投资平台", "「姓氏 + 全称后缀」的正式门面"],
+      pickB: ["单一基金官网", "主题募资与捐赠计划", "公益与社区基金", "「主题 + .fund」直接说明资金去向"],
+    },
+    en: {
+      title: ".investments vs .fund: The Firm's Front Door or The Single Pool",
+      metaDescription:
+        ".investments is the formal full-word front door for investment firms and wealth managers; .fund is short and specific, pointing at a single fund or fundraising drive. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both talk investing; one is the firm's letterhead, the other is a single pool of money. .investments is the institutional front door — investment firms, wealth managers and advisors, family offices and real-estate investment platforms read formal and weighty on name.investments, and surname + .investments puts the registered name right in the address; the ledger is classic institutional pricing: about $8 to register and $104/yr to renew — high-end among new gTLDs, trivial for firms managing real money, and it quietly filters out hobby projects. .fund is short and precise — a single fund's site, a themed fundraising drive, charity and community funds read on name.fund, and theme + .fund names (think climate.fund) say where the money goes; at about $9 to register and $57/yr to renew it costs nearly half as much to hold. The test: if the domain represents the firm — multiple lines, a long-term institutional brand, a formal client-facing front → .investments carries the weight; if it represents one fund or one drive → .fund is on the nose and lighter to keep. Note the 11-character suffix runs long, so keep the prefix to a surname or one short word; both carry regulatory expectations, so put entity info and compliance up front. For a house brand there's also .capital; single funds fit .fund, and the full-service front door fits .investments.",
+      pickA: ["Investment firms & wealth managers", "Advisors & family offices", "Real-estate & alternative platforms", "Surname + full-word formal front door"],
+      pickB: ["A single fund's website", "Themed fundraising & donation drives", "Charity & community funds", "Theme + .fund says where money goes"],
+    },
+  },
+  "holdings-vs-group": {
+    slug: "holdings-vs-group",
+    a: "holdings",
+    b: "group",
+    zh: {
+      title: ".holdings 和 .group 怎么选：控股主体与经营集团的分工",
+      metaDescription: ".holdings 指向持有资产的控股主体与家族办公室；.group 指向经营型集团与多品牌矩阵母品牌。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是公司层后缀，差别在主体干什么。.holdings 说的是「持有」——控股公司、家族办公室、投资持有主体、多资产组合的母公司用 name.holdings，英文商业世界里 Holdings 结尾就是这类主体的注册名惯例，「姓氏 + .holdings」读出来即公司全名；账本没有套路：注册与续费同价约 $52/年（约 ¥374），无首年钩子也无续费跳档，价格从第一年就筛掉玩票项目，对持有资产的主体不算负担。.group 说的是「经营」——经营型集团、多品牌矩阵的母品牌、家族企业用 name.group，读出来就是「X 集团」，比冗长的 xxgroup.com 干净得多；它还有第二语义——社群与兴趣小组的落地页同样自然，这是 .holdings 没有的方向；价格也是友好档：首年几十元、续费一百多元，价差比多数新顶级域小，适合长期持有。判断标准：主体的角色是「持有资产/股权」——控股平台、家族办公室、投资载体 → .holdings 的注册名惯例最正；主体的角色是「经营业务」——旗下多个品牌实际运营 → .group 的集团语义更贴。两个都是公司层门面：消费品牌站各用品牌域名，别把母公司域名混作产品站。命名上「姓氏 + .holdings」接家族控股，「品牌 + .group」接经营集团。",
+      pickA: ["控股公司与投资持有主体", "家族办公室", "多资产组合的母公司", "「姓氏 + Holdings」注册名惯例"],
+      pickB: ["经营型集团与家族企业", "多品牌矩阵的母品牌枢纽", "社群与兴趣小组落地页", "续费价差小、适合长期持有"],
+    },
+    en: {
+      title: ".holdings vs .group: The Asset Holder or The Operating Group",
+      metaDescription:
+        ".holdings points at asset-holding entities and family offices; .group points at operating conglomerates and multi-brand parents. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are company-level suffixes; the split is what the entity does. .holdings says ownership — holding companies, family offices, investment vehicles and the parent of a multi-asset portfolio read on name.holdings, and in the English business world a Holdings ending is the registered-name convention for exactly these entities, so surname + .holdings reads as the company's full name. The ledger has no tricks: registration and renewal both run about $52/yr — no teaser, no jump — pricing that filters out hobby projects from day one and costs nothing to an entity that holds assets. .group says operations — operating conglomerates, the parent brand of a multi-brand portfolio and family businesses read as brand + .group, literally \"the X Group,\" far cleaner than a long xxgroup.com; it also has a second life .holdings lacks — community and interest-group landing pages read just as naturally; pricing is friendly too: a few dollars year one, renewals under $20, with a smaller gap than most new gTLDs. The test: if the entity's role is holding assets or equity — holding platforms, family offices, investment vehicles → .holdings matches the registered-name convention; if the role is running businesses with multiple brands underneath → .group's conglomerate read fits better. Both are corporate front doors: keep consumer brand sites on their own domains. Naming: surname + .holdings for family holding entities; brand + .group for operating groups.",
+      pickA: ["Holding companies & investment vehicles", "Family offices", "Parents of multi-asset portfolios", "Surname + Holdings naming convention"],
+      pickB: ["Operating groups & family businesses", "Multi-brand parent hub pages", "Community & interest-group landing pages", "Small renewal gap for long-term holding"],
+    },
+  },
+  "mortgage-vs-estate": {
+    slug: "mortgage-vs-estate",
+    a: "mortgage",
+    b: "estate",
+    zh: {
+      title: ".mortgage 和 .estate 怎么选：房贷生意与房产招牌的分工",
+      metaDescription: ".mortgage 把房贷业务写进域名，适合房贷经纪与利率比价；.estate 是房地产行业招牌，适合经纪人与物业资产管理。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都围着房子转，一个管「钱」，一个管「房」。.mortgage 是房贷垂直——房贷经纪与信贷员个人品牌、利率比价与再融资平台、房贷计算器等内容工具用 name.mortgage，8 个字符把业务说得明明白白，「地名 + .mortgage」（texas.mortgage 类）就是本地获客广告语；注册约 $8（约 ¥59）、续费约 $50/年（约 ¥360），首年便宜、续费中档，在金融类新顶级域里属于好持有的一档。.estate 是房产行业招牌——经纪人与中介品牌、豪宅与庄园项目、物业与资产管理用 name.estate，行业属性一目了然（real.estate 是注册局自己的旗舰组合），smith.estate 比 smithrealestate.com 短一半且更显高端；它还有「遗产/资产」第二层语义，家族办公室与遗产规划用得顺；注册约 $8（约 ¥59）、续费约 $31/年（约 ¥226），比 .mortgage 更便宜一档。判断标准：业务是「房子的钱」——放贷、经纪、比价、再融资 → .mortgage 点题最准；业务是「房子本身」——买卖、租赁、物业、资管 → .estate 的行业指向更广更高端。注意房贷是强监管业务（如美国 NMLS），资质与披露上首屏；同一团队两头做的，常见打法是 .estate 做主站、.mortgage 做贷款业务线的直达入口。",
+      pickA: ["房贷经纪与信贷员个人品牌", "利率比价与再融资平台", "房贷计算器与内容工具", "「地名 + .mortgage」本地获客"],
+      pickB: ["房产经纪人与中介品牌", "豪宅与庄园项目", "物业与资产管理", "遗产规划的第二层语义"],
+    },
+    en: {
+      title: ".mortgage vs .estate: The Home-Loan Business or The Property Sign",
+      metaDescription:
+        ".mortgage writes home lending into the address for brokers and rate comparison; .estate is the real-estate industry sign for agents and property management. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both orbit the house; one handles the money, the other the property. .mortgage is the home-loan vertical — broker and loan-officer personal brands, rate-comparison and refinance platforms, and calculator-style content tools read unmistakably on name.mortgage, and place + .mortgage names (think texas.mortgage) work as local acquisition copy; at about $8 to register and $50/yr to renew it sits in the easy-to-hold tier of finance gTLDs. .estate is the property industry's sign — agent and brokerage brands, luxury and manor projects, property and asset management read instantly on name.estate (real.estate is the registry's own flagship), and smith.estate runs half the length of smithrealestate.com while reading more upscale; it also carries a second inheritance-and-assets meaning that suits family offices and estate planning. At about $8 to register and $31/yr to renew, it's a tier cheaper than .mortgage. The test: if the business is the money side — lending, brokering, comparison, refinancing → .mortgage is on the nose; if it's the property itself — sales, rentals, management → .estate points broader and more upscale. Note mortgages are heavily regulated (NMLS in the US), so put credentials and disclosures up front; teams doing both often run .estate as the main site with .mortgage as the loan line's direct door.",
+      pickA: ["Mortgage brokers & loan-officer brands", "Rate comparison & refinance platforms", "Mortgage calculators & content tools", "Place + .mortgage local acquisition"],
+      pickB: ["Real-estate agents & brokerage brands", "Luxury & manor projects", "Property & asset management", "The estate-planning second meaning"],
+    },
+  },
+  "computer-vs-tech": {
+    slug: "computer-vs-tech",
+    a: "computer",
+    b: "tech",
+    zh: {
+      title: ".computer 和 .tech 怎么选：硬件维修具体词与科技泛称的分工",
+      metaDescription: ".computer 具体指向电脑硬件——维修店、装机与二手翻新；.tech 是科技行业泛称，适合创业公司与开发者社区。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是科技词，一个具体到「这台机器」，一个泛指「这个行业」。.computer 的语义具体而实在——电脑维修与上门服务、装机与硬件定制工作室、二手电脑与翻新交易、电脑培训与技能课程用 name.computer，「地名 + .computer」（brooklyn.computer 类）对本地维修店就是一句获客广告；也有独立开发者拿它做个人站玩复古计算机情怀的用法。注册约 $18（约 ¥130）、续费约 $31/年（约 ¥226），首年中档、续费温和，价格结构健康，长期持有无压力。.tech 是行业泛称——初创公司、开发者社区、黑客马拉松、科技媒体用 name.tech，后缀本身就是行业声明，认知度被 ces.tech 这类真实案例验证；注册便宜但续费明显高于首年促销价，长期持有前先算账。判断标准：业务围绕「电脑这台设备」——修、装、卖、教 → .computer 的具体语义比泛称更准、对本地客户更直白；业务是更广义的「科技」——软件、互联网、创业公司 → .tech 的行业泛称与圈内认知度更配。注意 .computer 语义窄，软件与互联网产品用它反而错位；.tech 则相反，具体到硬件维修时不如 .computer 点题。命名上「地名/服务 + .computer」接本地硬件生意，「品牌 + .tech」接科技公司。",
+      pickA: ["电脑维修与上门服务", "装机与硬件定制工作室", "二手电脑与翻新交易", "「地名 + .computer」本地获客"],
+      pickB: ["科技创业公司", "开发者社区与黑客马拉松", "科技媒体与博客", "圈内认知度高的行业泛称"],
+    },
+    en: {
+      title: ".computer vs .tech: The Machine Itself or The Industry at Large",
+      metaDescription:
+        ".computer points concretely at the machine — repair shops, custom builds and refurbishing; .tech is the industry's umbrella suffix for startups and developer communities. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are tech words; one names the machine, the other the industry. .computer is concrete and literal — repair shops and on-site services, custom-build and hardware studios, used and refurbished dealers, and computer-skills training read plainly on name.computer, and place + .computer names (think brooklyn.computer) work as local acquisition copy for a repair shop; indie developers also wear it for retro-computing personal sites. At about $18 to register and $31/yr to renew, the price structure is healthy — mid first year, gentle renewal, easy to hold long-term. .tech is the industry umbrella — startups, developer communities, hackathons and tech media read on name.tech, where the suffix itself is the industry statement, with recognition proven by real adoption like ces.tech; registration is cheap but renewals run well above the first-year promo, so do the math before holding long-term. The test: if the business orbits the machine — fixing, building, selling, teaching → .computer's concrete read beats the umbrella and speaks plainer to local customers; if it's tech at large — software, internet, startups → .tech's category recognition fits better. Note .computer is narrow, so software and internet products read misplaced on it; conversely .tech is less on the nose than .computer for a hardware-repair shop. Naming: place/service + .computer for local hardware businesses; brand + .tech for technology companies.",
+      pickA: ["Computer repair & on-site services", "Custom-build & hardware studios", "Used & refurbished dealers", "Place + .computer local acquisition"],
+      pickB: ["Tech startups", "Developer communities & hackathons", "Tech media and blogs", "The high-recognition industry umbrella"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

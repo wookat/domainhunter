@@ -250,4 +250,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "pictures-vs-photos", a: "pictures", b: "photos", title: { zh: ".pictures 和 .photos 怎么选：制片公司范与照片交付的分工", en: ".pictures vs .photos: Studio Pedigree or Photo Delivery" } },
   { slug: "productions-vs-studio", a: "productions", b: "studio", title: { zh: ".productions 和 .studio 怎么选：接案制作公司与创意小团队的分工", en: ".productions vs .studio: The For-Hire Shop or The Creative Studio" } },
   { slug: "audio-vs-fm", a: "audio", b: "fm", title: { zh: ".audio 和 .fm 怎么选：声音产业与电台气质的分工", en: ".audio vs .fm: The Sound Industry or The Radio Vibe" } },
+  { slug: "credit-vs-finance", a: "credit", b: "finance", title: { zh: ".credit 和 .finance 怎么选：信用垂直与综合金融的分工", en: ".credit vs .finance: The Credit Vertical or Finance at Large" } },
+  { slug: "loans-vs-money", a: "loans", b: "money", title: { zh: ".loans 和 .money 怎么选：贷款产品与理财内容的分界", en: ".loans vs .money: Lending Products or Money Content" } },
+  { slug: "investments-vs-fund", a: "investments", b: "fund", title: { zh: ".investments 和 .fund 怎么选：综合投资门面与一笔钱的分工", en: ".investments vs .fund: The Firm's Front Door or The Single Pool" } },
+  { slug: "holdings-vs-group", a: "holdings", b: "group", title: { zh: ".holdings 和 .group 怎么选：控股主体与经营集团的分工", en: ".holdings vs .group: The Asset Holder or The Operating Group" } },
+  { slug: "mortgage-vs-estate", a: "mortgage", b: "estate", title: { zh: ".mortgage 和 .estate 怎么选：房贷生意与房产招牌的分工", en: ".mortgage vs .estate: The Home-Loan Business or The Property Sign" } },
+  { slug: "computer-vs-tech", a: "computer", b: "tech", title: { zh: ".computer 和 .tech 怎么选：硬件维修具体词与科技泛称的分工", en: ".computer vs .tech: The Machine Itself or The Industry at Large" } },
 ];

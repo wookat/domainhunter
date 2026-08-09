@@ -243,6 +243,12 @@ export const COMPARE_SLUGS = [
   "pictures-vs-photos",
   "productions-vs-studio",
   "audio-vs-fm",
+  "credit-vs-finance",
+  "loans-vs-money",
+  "investments-vs-fund",
+  "holdings-vs-group",
+  "mortgage-vs-estate",
+  "computer-vs-tech",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
