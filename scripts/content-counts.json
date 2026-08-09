@@ -432,7 +432,7 @@
     ]
   },
   "vs": {
-    "count": 240,
+    "count": 246,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -673,7 +673,13 @@
       "movie-vs-tv",
       "pictures-vs-photos",
       "productions-vs-studio",
-      "audio-vs-fm"
+      "audio-vs-fm",
+      "credit-vs-finance",
+      "loans-vs-money",
+      "investments-vs-fund",
+      "holdings-vs-group",
+      "mortgage-vs-estate",
+      "computer-vs-tech"
     ]
   }
 }
