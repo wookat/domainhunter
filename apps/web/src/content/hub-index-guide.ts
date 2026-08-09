@@ -222,4 +222,10 @@ export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized 
   { slug: "animation", label: { zh: "动画工作室", en: "Animation studios" }, oneLiner: { zh: "动画工作室命名指南：世界观词根、童心意象、片头厂标感等 5 种思路。", en: "Animation studio naming guide: world-building roots, childlike imagery." } },
   { slug: "documentary", label: { zh: "纪录片工作室", en: "Documentary studios" }, oneLiner: { zh: "纪录片工作室命名指南：真实叙事、时间意象、题材立场等 5 种思路。", en: "Documentary studio naming guide: truth narrative, time imagery, subject stance." } },
   { slug: "newsmedia", label: { zh: "独立新闻媒体", en: "Independent news media" }, oneLiner: { zh: "独立新闻媒体命名指南：信源信用、视角词根、订阅关系等 5 种思路。", en: "Independent news media naming guide: source credibility, lens roots." } },
+  { slug: "fruitshop", label: { zh: "水果店", en: "Fruit shops" }, oneLiner: { zh: "水果店命名指南：新鲜词根、产地故事、甜感音节等 5 种思路。", en: "Fruit shop naming guide: freshness roots, origin stories, sweet phonetics." } },
+  { slug: "seafood", label: { zh: "海鲜餐厅", en: "Seafood restaurants" }, oneLiner: { zh: "海鲜餐厅命名指南：鲜活词根、渔港意象、宴请分量等 5 种思路。", en: "Seafood naming guide: freshness-and-live roots, harbor imagery, banquet weight." } },
+  { slug: "tailor", label: { zh: "服装定制", en: "Custom tailoring" }, oneLiner: { zh: "服装定制命名指南：手工词根、量体意象、绅装传统等 5 种思路。", en: "Tailoring naming guide: craft roots, fitting imagery, sartorial heritage." } },
+  { slug: "equestrian", label: { zh: "马术俱乐部", en: "Equestrian clubs" }, oneLiner: { zh: "马术俱乐部命名指南：骑士传统、马房意象、会籍身份感等 5 种思路。", en: "Equestrian naming guide: riding heritage, stable imagery, membership identity." } },
+  { slug: "archery", label: { zh: "射箭馆", en: "Archery ranges" }, oneLiner: { zh: "射箭馆命名指南：命中意象、武侠借词、专注气质等 5 种思路。", en: "Archery naming guide: bullseye imagery, legend borrowings, focus-and-zen framing." } },
+  { slug: "immigration", label: { zh: "移民咨询", en: "Immigration consulting" }, oneLiner: { zh: "移民咨询命名指南：跨越意象、专业信任、无边界叙事等 5 种思路。", en: "Immigration consulting naming guide: crossing imagery, professional trust." } },
 ];
