@@ -1,0 +1,198 @@
+{
+  "home_more_chip": "+196",
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_all": "核验完成：共 205 个，196 个可注册",
+  "quick_all_unknown": [
+    "未知 9",
+    "qzxvkw9r320.icu未知",
+    "qzxvkw9r320.icu未知",
+    "qzxvkw9r320.lol未知",
+    "qzxvkw9r320.lol未知",
+    "qzxvkw9r320.fm未知",
+    "qzxvkw9r320.fm未知",
+    "qzxvkw9r320.best未知",
+    "qzxvkw9r320.best未知",
+    "qzxvkw9r320.beauty未知",
+    "qzxvkw9r320.beauty未知",
+    "qzxvkw9r320.help未知",
+    "qzxvkw9r320.help未知",
+    "qzxvkw9r320.baby未知",
+    "qzxvkw9r320.baby未知",
+    "qzxvkw9r320.mom未知",
+    "qzxvkw9r320.mom未知",
+    "qzxvkw9r320.audio未知",
+    "qzxvkw9r320.audio未知"
+  ],
+  "quick_recheck_clicked": true,
+  "quick_baidu_com_cn": "核验完成：共 10 个，0 个可注册",
+  "prices_rows_zh": 204,
+  "prices_live_count": 58,
+  "prices_static_count": 146,
+  "prices_cny_checked": 60,
+  "prices_cny_mismatch": [
+    {
+      "tld": "click",
+      "usd": [
+        {
+          "approx": true,
+          "v": 2
+        },
+        {
+          "approx": true,
+          "v": 11
+        }
+      ],
+      "cny": [
+        11,
+        78
+      ]
+    },
+    {
+      "tld": "lol",
+      "usd": [
+        {
+          "approx": true,
+          "v": 2
+        },
+        {
+          "approx": true,
+          "v": 26
+        }
+      ],
+      "cny": [
+        11,
+        189
+      ]
+    },
+    {
+      "tld": "best",
+      "usd": [
+        {
+          "approx": true,
+          "v": 2
+        },
+        {
+          "approx": true,
+          "v": 19
+        }
+      ],
+      "cny": [
+        12,
+        135
+      ]
+    },
+    {
+      "tld": "garden",
+      "usd": [
+        {
+          "approx": true,
+          "v": 2
+        },
+        {
+          "approx": true,
+          "v": 26
+        }
+      ],
+      "cny": [
+        11,
+        189
+      ]
+    },
+    {
+      "tld": "beauty",
+      "usd": [
+        {
+          "approx": true,
+          "v": 2
+        },
+        {
+          "approx": true,
+          "v": 13
+        }
+      ],
+      "cny": [
+        11,
+        94
+      ]
+    }
+  ],
+  "prices_default_sorted_asc": true,
+  "prices_tld_sorted": true,
+  "prices_rows_en": 204,
+  "tld_hub_links": 204,
+  "guide_hub_links": 206,
+  "vs_hub_links": 234,
+  "advanced_bulk_text": [
+    "google.com\nqzxvkw9r320b.com",
+    "google.com"
+  ],
+  "share_create": {
+    "status": 200,
+    "id": "XnHXA6ReNc"
+  },
+  "share_live_domains": 0,
+  "share_created_ago_zh": null,
+  "share_404_cta": {
+    "cta": [
+      "Create your own shortlist"
+    ],
+    "desc": true
+  },
+  "share_404_api": 404,
+  "share_revoke": {
+    "del": 200,
+    "delBody": {
+      "ok": true
+    },
+    "getAfter": 410
+  },
+  "share_revoked_ui": true,
+  "share_410_cta": [
+    "Create your own shortlist"
+  ],
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(11, 12, 14)",
+    "persist_after_reload": "rgb(11, 12, 14)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld": 360,
+    "/vs/tennis-vs-club": 360,
+    "/guide/companyreg": 360
+  },
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r320"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/tld/notatld-r320"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/s/nonexistent316"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/s/nonexistent316"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/nonexistent316"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/XnHXA6ReNc"
+    }
+  ]
+}

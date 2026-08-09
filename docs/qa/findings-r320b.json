@@ -1,0 +1,95 @@
+{
+  "live_rows": 58,
+  "live_pairs_checked": 116,
+  "live_cny_mismatch": [],
+  "static_sample": [
+    {
+      "tld": "click",
+      "usd": [
+        {
+          "approx": true,
+          "v": 2
+        },
+        {
+          "approx": true,
+          "v": 11
+        }
+      ],
+      "cny": [
+        11,
+        78
+      ]
+    },
+    {
+      "tld": "ink",
+      "usd": [
+        {
+          "approx": true,
+          "v": 2
+        },
+        {
+          "approx": true,
+          "v": 26
+        }
+      ],
+      "cny": [
+        15,
+        189
+      ]
+    },
+    {
+      "tld": "lol",
+      "usd": [
+        {
+          "approx": true,
+          "v": 2
+        },
+        {
+          "approx": true,
+          "v": 26
+        }
+      ],
+      "cny": [
+        11,
+        189
+      ]
+    }
+  ],
+  "header_buttons": [
+    {
+      "aria": "DomainHunter",
+      "title": null,
+      "text": "DomainHunter"
+    },
+    {
+      "aria": "Advanced",
+      "title": "Advanced",
+      "text": "Advanced"
+    },
+    {
+      "aria": null,
+      "title": null,
+      "text": "Shortlist0"
+    },
+    {
+      "aria": "切换到中文",
+      "title": "切换到中文",
+      "text": "中"
+    },
+    {
+      "aria": null,
+      "title": "Toggle light/dark",
+      "text": ""
+    }
+  ],
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(250, 250, 249)",
+    "persist_after_reload": "rgb(250, 250, 249)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "share2_create_status": 200,
+  "share2_created_ago_zh": "创建于今天",
+  "share2_domain_visible": true,
+  "share2_revoke": 200
+}
