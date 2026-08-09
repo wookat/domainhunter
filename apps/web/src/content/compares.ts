@@ -5437,6 +5437,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Tech startups", "Developer communities & hackathons", "Tech media and blogs", "The high-recognition industry umbrella"],
     },
   },
+  "lawyer-vs-legal": {
+    slug: "lawyer-vs-legal",
+    a: "lawyer",
+    b: "legal",
+    zh: {
+      title: ".lawyer 和 .legal 怎么选：律师个人牌与法律行业牌的分工",
+      metaDescription: ".lawyer 指向律师个人与团队，适合个人品牌与获客落地页；.legal 口径更宽，适合法律科技与合规服务。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都姓法律，指向一窄一宽。.lawyer 指「律师这个人」——律师个人品牌与独立执业、离婚/移民/刑辩等专项服务、法律获客落地页用 name.lawyer，「我是律师」不言自明，当事人搜「城市 + lawyer」「领域 + lawyer」时域名本身就是广告位（miamidivorce.lawyer 式组合读出来即获客文案）；账本干净：注册与续费均约 $50/年（约 ¥360），平进平出无陷阱，对客单价高的法律行业年费几乎可忽略。.legal 宽一档——不止律师，法律科技与合同工具、企业法务与合规服务、法律咨询平台、公证文书服务都装得下，legaltech 创业公司用 name.legal 点明行业又不把自己框成「一位律师」；价格结构相反：注册约 $6（约 ¥41）、续费约 $57/年（约 ¥412），首年低门槛、续费近十倍跳档，验证期入场便宜但长持要按续费价核算。判断标准：卖的是「某位律师/某个团队的专业服务」→ .lawyer 的个人指向最准；卖的是「法律产品或平台化服务」→ .legal 的行业口径更顺。两者常见打法是 .legal 做产品主站、.lawyer 做创始律师个人页互相导流。共同注意：各法域对律师广告与网站措辞有执业合规要求（best/top 字样谨慎），上线前按当地律协规范自查。命名上「姓氏/城市 + 领域 + .lawyer」接个人与获客页，「产品词 + .legal」（sign.legal、contract.legal 风格）接法律科技。",
+      pickA: ["律师个人品牌与独立执业", "离婚/移民/刑辩等专项法律服务", "「城市 + 领域 + .lawyer」获客落地页", "平进平出的续费结构（约 ¥360/年）"],
+      pickB: ["法律科技与合同工具", "企业法务与合规服务", "法律咨询与公证文书平台", "首年低门槛验证（约 ¥41 入场）"],
+    },
+    en: {
+      title: ".lawyer vs .legal: The Attorney's Nameplate or The Industry's Address",
+      metaDescription:
+        ".lawyer points at the individual attorney — personal brands and intake pages; .legal is a notch broader, fitting legaltech and compliance services. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in law; the split is narrow versus broad. .lawyer points at the person — personal attorney brands and solo practices, focused services like divorce, immigration or criminal defense, and legal-intake landing pages on name.lawyer make \"I'm a lawyer\" self-evident, and when clients search city + lawyer or practice + lawyer the domain itself is ad copy (miamidivorce.lawyer reads as an intake pitch out loud). The ledger is clean: about $50/yr flat for registration and renewal — no teaser, no jump, trivial next to legal-industry client values. .legal runs a notch broader — beyond attorneys it fits legaltech and contract tools, corporate legal and compliance services, advice platforms, and notary or document services; a legaltech startup on name.legal names the industry without boxing itself in as one lawyer. Its pricing is the mirror image: about $6 to register but $57/yr to renew — a low first-year door with a near ten-fold jump, cheap to validate but budget the renewal for a committed hold. The test: selling one attorney's or one team's professional service → .lawyer's personal read is truest; selling a legal product or platform → .legal's industry scope flows better. A common split runs .legal as the product's main site with .lawyer as the founding attorney's page, each feeding the other. Shared caution: attorney advertising rules vary by jurisdiction — mind wording like best/top and check your bar's website rules before launch. Naming: surname or city + practice + .lawyer for personal brands and intake pages; product word + .legal (sign.legal, contract.legal style) for legaltech.",
+      pickA: ["Personal attorney brands & solo practices", "Divorce/immigration/defense verticals", "City + practice + .lawyer intake pages", "Flat ~$50/yr in-and-out pricing"],
+      pickB: ["Legaltech & contract tools", "Corporate legal & compliance services", "Legal-advice & notary platforms", "Cheap ~$6 first-year validation"],
+    },
+  },
+  "vet-vs-pet": {
+    slug: "vet-vs-pet",
+    a: "vet",
+    b: "pet",
+    zh: {
+      title: ".vet 和 .pet 怎么选：兽医专业与宠物生意的分工",
+      metaDescription: ".vet 是宠物医疗的专业后缀，适合宠物医院与上门兽医；.pet 覆盖整个宠物经济，适合用品电商与宠物科技。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都围着宠物转，一个管「看病」，一个管「生意」。.vet 三个字母就是「兽医」——宠物医院与诊所、上门兽医服务、体检疫苗中心、兽医科普与线上问诊平台用 name.vet，专业身份一眼可辨，铲屎官搜「城市 + vet」找的就是它；注册与续费均约 $33/年（约 ¥241），平进平出好持有。.pet 是行业指向最明确的后缀之一——宠物用品电商与线下门店、宠物美容与寄养、宠物科技（智能喂食器、定位器）用 name.pet 一秒传达行业属性，mars.pet（玛氏宠物）这样的品牌延伸就是背书；注册约 $11（约 ¥78）、续费约 $21/年（约 ¥152），比 .vet 便宜一档，对客单价可观的宠物行业毫无压力。判断标准：业务核心是「医疗专业」——诊疗、疫苗、问诊 → .vet 的职业指向最短最正，且对本地搜索更直白；业务是宠物经济的其他环节——零售、美容、寄养、科技 → .pet 的行业口径更宽更贴。两点注意：一是 .vet 在英语里也指退伍军人（veteran），但宠物医疗语境下歧义很小；二是诊疗类站点无论用哪个后缀，执业资质都要挂上首屏。同一品牌两头做的（宠物医院 + 自营商城），常见打法是 .vet 做诊所、.pet 做商城分工明确。命名上「城市 + .vet」接本地诊所搜索，「品牌词/动物名 + .pet」接宠物品牌。",
+      pickA: ["宠物医院与诊所", "上门兽医与疫苗体检服务", "兽医科普与线上问诊平台", "「城市 + .vet」本地搜索获客"],
+      pickB: ["宠物用品电商与线下门店", "宠物美容与寄养服务", "宠物科技（智能硬件）品牌", "更便宜的续费（约 ¥152/年）"],
+    },
+    en: {
+      title: ".vet vs .pet: The Clinic's Credential or The Pet Economy's Address",
+      metaDescription:
+        ".vet is the veterinary professional suffix for animal hospitals and mobile vets; .pet spans the whole pet economy — supply shops, grooming and pet tech. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both orbit pets; one handles the medicine, the other the business. .vet says veterinarian in three letters — animal hospitals and clinics, mobile vet services, checkup and vaccination centers, and veterinary content or telehealth platforms on name.vet declare the profession at a glance, and pet owners searching city + vet are looking for exactly this; at about $33/yr flat for registration and renewal it's one of the easiest industry gTLDs to hold. .pet is among the most industry-explicit suffixes anywhere — pet-supply e-commerce and physical stores, grooming and boarding, and pet tech (smart feeders, GPS trackers) on name.pet communicate the industry instantly, with corporate extensions like mars.pet (Mars Petcare) endorsing it at the highest level; at about $11 to register and $21/yr to renew it runs a tier cheaper than .vet — trivial for an industry with healthy ticket sizes. The test: if the core is medical practice — treatment, vaccines, telehealth → .vet's professional read is shortest and truest, and speaks plainer to local search; for the rest of the pet economy — retail, grooming, boarding, tech → .pet's broader industry scope fits better. Two cautions: in English .vet can also mean veteran, though ambiguity is minimal in a pet-care context; and clinical sites on either suffix should put licensing credentials above the fold. Brands doing both (a clinic plus its own shop) often split cleanly: .vet for the practice, .pet for the store. Naming: city + .vet catches local clinic searches; brand word or animal name + .pet fits pet brands.",
+      pickA: ["Animal hospitals & clinics", "Mobile vets, checkups & vaccinations", "Veterinary content & telehealth", "City + .vet local-search acquisition"],
+      pickB: ["Pet-supply e-commerce & stores", "Grooming & boarding services", "Pet-tech (smart hardware) brands", "Cheaper ~$21/yr renewal"],
+    },
+  },
+  "delivery-vs-express": {
+    slug: "delivery-vs-express",
+    a: "delivery",
+    b: "express",
+    zh: {
+      title: ".delivery 和 .express 怎么选：送上门与快承诺的分工",
+      metaDescription: ".delivery 把「送上门」写进域名，适合外卖生鲜与垂直配送；.express 主打「快」，适合快递物流与即时服务。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是配送词，卖点一个是「送到门」，一个是「快」。.delivery 把服务本身写进域名——外卖与生鲜配送、同城跑腿与即时达、鲜花蛋糕等垂直品类配送用 name.delivery，「送什么」+「.delivery」连起来就是一句完整的服务承诺（flowers.delivery 读出来即广告）；注册约 $5（约 ¥37）、续费约 $50/年（约 ¥360），首年几乎零门槛、续费跳档明显，适合先低成本上线单城试点、跑通再续。.express 把速度写进域名——快递与同城配送、跨境物流与货代、上门快修快洗、主打速度的工具产品用 name.express，express 是刻进全球物流业行业名的词（顺丰速运、联邦快递的英文名里都有它），「城市/品牌 + .express」就是快递与货代的行业标准式命名；注册约 $9（约 ¥67）、续费约 $31/年（约 ¥226），续费比 .delivery 便宜一档，长持更轻松。判断标准：业务的核心承诺是「把东西送到你门口」——外卖、生鲜、垂直品类配送 → .delivery 更具体更点题；核心承诺是「快」——快递干线、跨境物流、立等可取的服务 → .express 的行业惯例与速度语义更配。两点注意：一是 .delivery 后缀 8 字符偏长，口播场景选短前缀平衡总长度；二是 express 一词多义（快递/特快/表达），页面首屏要说清做的是哪门生意。命名上「品类 + .delivery」接垂直配送（flowers/cake 风格），「城市/线路词 + .express」接同城与跨境物流。",
+      pickA: ["外卖与生鲜配送平台", "鲜花蛋糕等垂直品类配送", "同城跑腿与即时达服务", "「品类 + .delivery」一句话服务承诺"],
+      pickB: ["快递与跨境物流、货代", "上门快修快洗等立等可取服务", "主打速度的工具产品", "更便宜的续费（约 ¥226/年）"],
+    },
+    en: {
+      title: ".delivery vs .express: To Your Door or At Full Speed",
+      metaDescription:
+        ".delivery writes to-your-door into the address for food and vertical delivery; .express sells speed for couriers, logistics and instant services. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are delivery words; one promises to your door, the other promises fast. .delivery writes the service itself into the address — food and grocery delivery, same-city couriers and instant-delivery services, and vertical niches like flowers and cakes on name.delivery turn what-you-deliver + .delivery into a complete promise (flowers.delivery reads as ad copy out loud); at about $5 to register and $50/yr to renew, the near-zero first-year door suits launching a single-city pilot cheaply, but the renewal jump is steep — budget accordingly. .express writes the speed in — courier and local delivery, cross-border logistics and freight forwarders, on-demand repair and cleaning, and speed-first tools on name.express make the fast promise in the domain itself; express is baked into the logistics industry's own names (FedEx and half the world's couriers carry the word), so city or brand + .express is the standard naming pattern for delivery and freight. At about $9 to register and $31/yr to renew, its renewal runs a tier cheaper than .delivery — an easier long-term hold. The test: if the core promise is getting goods to the customer's door — food, grocery, vertical categories → .delivery is more concrete and on the nose; if the promise is speed itself — courier lines, cross-border logistics, while-you-wait services → .express carries the industry convention and the velocity read. Two cautions: the 8-character .delivery leans long, so pick a short prefix for spoken-word balance; and express has several senses (courier, fast, expression), so the hero section should say which business this is. Naming: category + .delivery fits vertical services (flowers/cake style); city or route word + .express fits local and cross-border logistics.",
+      pickA: ["Food & grocery delivery platforms", "Vertical niches (flowers, cakes)", "Same-city couriers & instant delivery", "Category + .delivery one-line promise"],
+      pickB: ["Couriers, cross-border logistics & forwarders", "While-you-wait on-demand services", "Speed-first tool products", "Cheaper ~$31/yr renewal"],
+    },
+  },
+  "recipes-vs-menu": {
+    slug: "recipes-vs-menu",
+    a: "recipes",
+    b: "menu",
+    zh: {
+      title: ".recipes 和 .menu 怎么选：做法内容与点餐入口的分工",
+      metaDescription: ".recipes 点明「这里有做法」，适合菜谱站与烹饪课程；.menu 是餐厅的点餐入口，适合在线菜单与扫码点餐。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是美食词，一个给「跟着做的人」，一个给「点着吃的人」。.recipes 一词点明内容形态——菜谱站与美食博客、烹饪课程与教学、饮食计划与营养搭配、食品品牌的内容营销用 name.recipes，读者点开前就知道「这里有做法」，grandma.recipes 自带故事感、keto.recipes 自带精准流量；注册约 $7（约 ¥48）、续费约 $62/年（约 ¥449），首年低门槛、续费在内容类后缀里偏高，适合认真做内容资产的站长。.menu 把菜单写进域名——餐厅在线菜单页、扫码点餐系统、外卖订餐平台用 name.menu，读出来就是「某某家的菜单」，最实用的玩法是把域名印进桌角二维码、顾客扫码直达菜单，比夹在官网深处的 PDF 好一个量级；注册约 $27（约 ¥194）、续费约 $27/年（约 ¥194），注册续费同价、成本透明，比 .recipes 的续费便宜四成。判断标准：产出是「可跟着做的内容」——教程、课程、饮食计划 → .recipes 的集合感与搜索意图最准；产出是「今天吃什么的入口」——菜单、点餐、订位 → .menu 的功能指向更直接。两点注意：一是 .recipes 复数形式暗示「一批菜谱」，单道招牌菜或餐厅官网反而用 .menu / .restaurant 更贴；二是 .menu 语义就是「菜单」，餐饮品牌主站建议搭配主流后缀，.menu 专职点餐入口。餐厅做内容营销的可以两头拿：.menu 接点餐、.recipes 发招牌菜做法引流。命名上「饮食流派/食材 + .recipes」接垂直内容，「店名 + .menu」读出来就是本店菜单。",
+      pickA: ["菜谱站与美食博客", "烹饪课程与教学平台", "饮食计划与营养搭配服务", "「流派/食材 + .recipes」SEO 合集站"],
+      pickB: ["餐厅在线菜单与扫码点餐", "外卖与订餐平台", "桌角二维码直达菜单玩法", "注册续费同价（约 ¥194/年）"],
+    },
+    en: {
+      title: ".recipes vs .menu: Follow-Along Content or The Ordering Door",
+      metaDescription:
+        ".recipes tells readers how-to lives here — for recipe sites and cooking courses; .menu is the restaurant's ordering door — for online menus and QR ordering. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are food words; one serves people who cook along, the other people who order. .recipes names the content format outright — recipe sites and food blogs, cooking courses, meal planning and nutrition, and food-brand content marketing on name.recipes tell readers \"how-to lives here\" before the click; grandma.recipes carries a story, keto.recipes carries precise search intent. At about $7 to register and $62/yr to renew, the low first-year door pairs with a renewal on the high side for content suffixes — built for owners growing a real content asset. .menu writes the card into the address — restaurant menu pages, QR-code ordering systems, and delivery or reservation platforms on name.menu read out as \"so-and-so's menu\"; the uniquely practical play is printing the domain into a table-corner QR code so guests scan straight to the menu, an order of magnitude better than a PDF buried in a .com site. At about $27 to register and $27/yr to renew — the same both ways — it's transparent, and its renewal runs about 40% cheaper than .recipes. The test: if the output is follow-along content — tutorials, courses, meal plans → .recipes matches the collection read and the search intent; if it's the what-to-eat-today doorway — menus, ordering, reservations → .menu points more directly at the job. Two cautions: the plural .recipes implies a collection, so a single signature dish or restaurant homepage reads better on .menu or .restaurant; and .menu means the menu itself, so restaurant brands should pair a mainstream suffix for the main site and keep .menu as the ordering door. Restaurants doing content marketing can hold both: .menu for ordering, .recipes publishing signature-dish how-tos for traffic. Naming: diet or ingredient + .recipes fits vertical content; shop name + .menu is the natural read-aloud.",
+      pickA: ["Recipe sites & food blogs", "Cooking courses & teaching platforms", "Meal planning & nutrition services", "Diet/ingredient + .recipes SEO collections"],
+      pickB: ["Restaurant menus & QR ordering", "Delivery & reservation platforms", "Table-corner QR straight-to-menu play", "Flat ~$27/yr in-and-out pricing"],
+    },
+  },
+  "rent-vs-rentals": {
+    slug: "rent-vs-rentals",
+    a: "rent",
+    b: "rentals",
+    zh: {
+      title: ".rent 和 .rentals 怎么选：动词品牌与列表聚合的分工",
+      metaDescription: ".rent 是动词、短促有行动感，适合租赁品牌主站；.rentals 是名词复数、集合感强，适合房源与设备列表站。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一门生意的两种语法。.rent 一个动词说清商业模式——房屋与公寓出租平台、设备与工具租赁、服装与奢侈品租赁、汽车与房车租赁用 name.rent，「租什么」一目了然，camera.rent 这样的「品类 + .rent」组合本身就是搜索词，4 字符后缀短促有行动感，适合品牌主站与「租 X」场景；XYZ 注册局运营，注册约 $10（约 ¥74）、续费约 $52/年（约 ¥374），首年低门槛、续费中档。.rentals 是名词复数、天然的集合感——民宿与短租运营、长租公寓与租房中介、婚礼与活动物品出租用 name.rentals 读起来就像一个列表站，覆盖面横跨房产与实体租赁两个行业；Identity Digital 运营，注册约 $7（约 ¥48）、续费约 $36/年（约 ¥256），两头都比 .rent 便宜、续费便宜三成。判断标准：做的是「一个租赁品牌」——主站、动词感、行动号召 → .rent 的短促最提气；做的是「一批可租之物的聚合」——房源列表、设备清单、比价平台 → .rentals 的复数集合感更贴，kayak.rentals 式组合读出来就是生意本身。两点注意：一是两者都是「首年便宜续费贵」结构，多品类矩阵按续费价算总账；二是租赁是强信任生意，押金规则、真实照片与评价体系比域名更影响转化。预算允许时同名双注册是常见打法——.rent 做品牌主站、.rentals 301 兜住列表型搜索流量。命名上「品类 + .rent」接垂直租赁品牌（camera/dress 风格），「城市 + 品类 + .rentals」接本地聚合列表。",
+      pickA: ["租赁品牌主站与「租 X」场景", "服装/相机等垂直租赁品牌", "4 字符短后缀的行动感命名", "「品类 + .rent」即搜索词"],
+      pickB: ["民宿与短租直订官网", "房源/设备聚合列表站", "婚礼与活动物品出租", "更便宜的注册与续费（约 ¥256/年）"],
+    },
+    en: {
+      title: ".rent vs .rentals: The Verb Brand or The Listings Aggregator",
+      metaDescription:
+        ".rent is a punchy verb for rental brand homepages; .rentals is a plural noun that reads like a listings site. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Two grammars for the same trade. .rent states the business model in one verb — home and apartment platforms, equipment and tool rental, fashion and luxury rental, and car or RV rental on name.rent make what's-for-rent obvious; category + .rent combos like camera.rent are the search query itself, and the 4-character suffix stays short and action-first, fitting brand homepages and rent-an-X plays. Operated by the XYZ registry, about $10 to register and $52/yr to renew — a low first-year door with a mid renewal. .rentals is the plural noun with built-in collection energy — vacation and short-term rental hosts, apartment platforms and agencies, and wedding or event gear hire on name.rentals read like a listings site, spanning both real estate and physical hire. Operated by Identity Digital, about $7 to register and $36/yr to renew — cheaper than .rent on both ends, with a renewal about a third lower. The test: building one rental brand — a homepage, a verb, a call to action → .rent's punch reads strongest; building an aggregation of things for rent — property listings, equipment inventories, comparison platforms → .rentals' plural fits, and the kayak.rentals pattern reads out as the business itself. Two cautions: both run the cheap-first-year structure, so price a multi-category matrix at renewal rates; and rentals are a trust-first trade — deposit rules, real photos and reviews convert more than the domain. With budget, registering both of a name is the common play: .rent as the brand homepage, .rentals 301-ing to catch listings-style search. Naming: category + .rent fits vertical rental brands (camera/dress style); city + category + .rentals fits local aggregators.",
+      pickA: ["Rental brand homepages & rent-an-X plays", "Fashion/camera vertical rental brands", "Short 4-character action-first naming", "Category + .rent as the search query"],
+      pickB: ["Vacation & short-stay direct-booking sites", "Property/equipment listings aggregators", "Wedding & event gear hire", "Cheaper ~$36/yr renewal"],
+    },
+  },
+  "legal-vs-law": {
+    slug: "legal-vs-law",
+    a: "legal",
+    b: "law",
+    zh: {
+      title: ".legal 和 .law 怎么选：法律平台与律所门牌的分工",
+      metaDescription: ".legal 适合法律科技与合规服务，首年入场便宜；.law 更短更硬，是律所与执业律师的烫金门牌但价格高。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都写着法律，气质一软一硬。.legal 装得下整个法律行业的产品面——法律科技与合同工具、企业法务与合规服务、法律咨询平台、公证文书服务用 name.legal，点明行业又不端架子，动词前缀（get/use 风格）也压得住；注册约 $6（约 ¥41）、续费约 $57/年（约 ¥412），首年低门槛验证、续费按十倍价核算。.law 三个字母更短更硬，指「法律」本身——律师事务所、独立执业律师用 smith.law 比一长串 .com 更像一块烫金门牌，法律行业讲信任，专业身份从后缀就开始建立；GoDaddy Registry 平台运营，注册约 $83（约 ¥598）、续费约 $83/年（约 ¥598），注册续费同价，是较贵的后缀之一，但这个门槛反而筛掉了垃圾站，让 .law 的域名环境更干净。判断标准：做的是「法律产品或平台」——软件、工具、咨询服务 → .legal 的行业口径与轻盈价格更配；做的是「执业主体的门面」——律所官网、律师个人品牌 → .law 的庄重与稀缺门槛就是信任背书，「城市 + .law」「领域 + .law」（injury.law 式）还能精准接住本地与垂直搜索。持有成本对比要看长线：.legal 续费 ¥412/年、.law ¥598/年，差距不大但气质迥异——预算紧的验证期项目从 .legal 起步，已执业的律所直接上 .law。共同注意：各法域对律师广告与网站有执业合规要求，上线前按当地律协规范自查。命名上「产品词 + .legal」接法律科技，「姓氏/品牌 + .law」接律所门牌（smith.law 即「史密斯律所」）。",
+      pickA: ["法律科技与合同工具", "企业法务与合规服务", "法律咨询与文书平台", "首年低门槛验证（约 ¥41 入场）"],
+      pickB: ["律师事务所官网", "执业律师个人品牌", "「城市/领域 + .law」垂直获客", "高门槛带来的干净域名环境"],
+    },
+    en: {
+      title: ".legal vs .law: The Legal Platform or The Firm's Brass Nameplate",
+      metaDescription:
+        ".legal fits legaltech and compliance services with a cheap first year; .law is shorter and harder — the brass nameplate for firms and attorneys at a premium. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both spell law; the registers differ — one product-friendly, one brass-plated. .legal holds the industry's product side — legaltech and contract tools, corporate legal and compliance services, advice platforms, and notary or document services on name.legal name the industry without stiffness, and light verb prefixes (get/use style) still read trustworthy. At about $6 to register and $57/yr to renew, it's a cheap first-year door with a ~10x renewal to budget. .law is three letters, shorter and harder, meaning the law itself — for firms and solo attorneys, smith.law reads more like a brass nameplate than a long .com ever could, and in a business built on credibility the suffix starts the trust-building. Operated on the GoDaddy Registry platform at about $83 to register and $83/yr to renew — the same both ways, one of the pricier suffixes, but that threshold filters out spam and keeps the .law namespace clean. The test: building a legal product or platform — software, tools, advisory services → .legal's industry scope and lighter pricing fit; building a practicing entity's front door — a firm site, a personal attorney brand → .law's gravity and scarcity are the endorsement, and city + .law or practice + .law (the injury.law pattern) catch local and vertical search precisely. On holding costs the long view matters less than register: $57/yr versus $83/yr isn't a huge gap, but the reads diverge — validation-stage projects start on .legal, practicing firms go straight to .law. Shared caution: most jurisdictions regulate attorney advertising, so check your bar's website rules before launch. Naming: product word + .legal for legaltech; surname or brand + .law for the firm's nameplate (smith.law reads as \"Smith Law\").",
+      pickA: ["Legaltech & contract tools", "Corporate legal & compliance services", "Legal-advice & document platforms", "Cheap ~$6 first-year validation"],
+      pickB: ["Law firm websites", "Practicing attorneys' personal brands", "City/practice + .law vertical acquisition", "The clean namespace behind the price bar"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
