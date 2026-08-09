@@ -456,7 +456,7 @@
     ]
   },
   "vs": {
-    "count": 252,
+    "count": 258,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -709,7 +709,13 @@
       "delivery-vs-express",
       "recipes-vs-menu",
       "rent-vs-rentals",
-      "legal-vs-law"
+      "legal-vs-law",
+      "jewelry-vs-boutique",
+      "cleaning-vs-services",
+      "plumbing-vs-repair",
+      "catering-vs-restaurant",
+      "florist-vs-garden",
+      "church-vs-community"
     ]
   }
 }

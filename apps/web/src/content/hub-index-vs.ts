@@ -262,4 +262,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "recipes-vs-menu", a: "recipes", b: "menu", title: { zh: ".recipes 和 .menu 怎么选：做法内容与点餐入口的分工", en: ".recipes vs .menu: Follow-Along Content or The Ordering Door" } },
   { slug: "rent-vs-rentals", a: "rent", b: "rentals", title: { zh: ".rent 和 .rentals 怎么选：动词品牌与列表聚合的分工", en: ".rent vs .rentals: The Verb Brand or The Listings Aggregator" } },
   { slug: "legal-vs-law", a: "legal", b: "law", title: { zh: ".legal 和 .law 怎么选：法律平台与律所门牌的分工", en: ".legal vs .law: The Legal Platform or The Firm's Brass Nameplate" } },
+  { slug: "jewelry-vs-boutique", a: "jewelry", b: "boutique", title: { zh: ".jewelry 和 .boutique 怎么选：品类门牌与精品调性的分工", en: ".jewelry vs .boutique: The Category Nameplate or The Curated Air" } },
+  { slug: "cleaning-vs-services", a: "cleaning", b: "services", title: { zh: ".cleaning 和 .services 怎么选：精准品类与多业态平台的分工", en: ".cleaning vs .services: The Precise Category or The Multi-Trade Platform" } },
+  { slug: "plumbing-vs-repair", a: "plumbing", b: "repair", title: { zh: ".plumbing 和 .repair 怎么选：水暖专业身份与综合维修的分工", en: ".plumbing vs .repair: The Trade Identity or The Catch-All Fix" } },
+  { slug: "catering-vs-restaurant", a: "catering", b: "restaurant", title: { zh: ".catering 和 .restaurant 怎么选：外烩承办与堂食门店的分工", en: ".catering vs .restaurant: Bringing the Feast or Seating the Guest" } },
+  { slug: "florist-vs-garden", a: "florist", b: "garden", title: { zh: ".florist 和 .garden 怎么选：花艺师门牌与园艺生活的分工", en: ".florist vs .garden: The Bouquet Counter or The Growing Ground" } },
+  { slug: "church-vs-community", a: "church", b: "community", title: { zh: ".church 和 .community 怎么选：教会身份与社群平台的分工", en: ".church vs .community: The Faith Nameplate or The Gathering Ground" } },
 ];
