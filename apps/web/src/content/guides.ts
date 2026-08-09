@@ -12127,6 +12127,384 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  companyreg: {
+    slug: "companyreg",
+    tlds: [
+      { tld: "com", zh: "面向创业者的服务生意，获客与信任的默认底线", en: "A service business selling to founders — the default baseline for acquisition and trust" },
+      { tld: "ltd", zh: "「有限公司」语义直给，公司注册服务与产品卖点同构", en: "Limited-company semantics stated plainly — the TLD mirrors exactly what you sell" },
+      { tld: "llc", zh: "面向美国市场的 LLC 注册服务，后缀即业务说明书", en: "For US-market LLC formation services, the suffix is the business one-pager" },
+    ],
+    zh: {
+      label: "公司注册代办",
+      title: "公司注册代办与企业服务品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "公司注册代办与企业服务命名指南：起点叙事、合规信任感、流程减负词等 5 种思路，LegalZoom/ZenBusiness/Stripe Atlas 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的企业服务域名。",
+      intro:
+        "公司注册代办的名字要在创业者最忐忑的时刻递上一只稳定的手：客户来找你的那天，往往是他第一次面对工商、税务、银行开户这些陌生词——名字要同时说出两件事：「这事很正规」和「这事交给我就简单了」。第一素材库是起点叙事：注册公司是一段旅程的第一步——Firstbase（第一垒）、LaunchGo 式的词根把「开公司」翻译成「起跑」，创业者买的不是一沓执照，是「我的事业今天开始了」的仪式感。第二个抓手是合规信任感：Legal、Zen、诚、正、信这类词根直接回应「会不会被坑」的品类焦虑——但要警惕堆砌：一个「信」字胜过三个「豪华国际」。第三个抓手是流程减负词：Zen（禅意的省心）、Easy、简、快——代办生意的本质是把客户不想碰的表格全部接走，名字里的轻松感就是服务承诺。要注意业务边界：注册只是入口，记账报税、商标、变更注销才是续费主力——名字的边界画在「企业服务」而不是「执照代办」，否则第二年客户就以为你只会办执照。场景上，这个名字活在创业者深夜搜「注册公司多少钱」的搜索页、代账会计的转介绍和写字楼电梯广告里。渠道上，名字要经得起「正规吗」的第一眼审视——生僻的洋名和过分俏皮的谐音都会在这个品类里折损信任。",
+      namingIdeas: [
+        "起点叙事：第一垒、启程、开张——把「注册公司」翻译成「事业起跑」，卖的是仪式感不是执照",
+        "合规信任词：Legal、诚、正、信——直接回应「会不会被坑」的品类焦虑，一个信任字胜过三个豪华词",
+        "流程减负感：Zen、Easy、简、快——代办的本质是接走客户不想碰的表格，名字里的轻松感就是服务承诺",
+        "边界画在企业服务：注册是入口，记账报税、商标续费才是主力——别让名字把你锁死在「执照代办」",
+        "正规感测试：把名字放进「XX 帮我注册的公司」这句话念一遍——听起来不放心的名字直接淘汰",
+      ],
+      cases: [
+        { name: "LegalZoom", takeaway: "legal（法律）+ zoom（加速）：把「法律服务」和「快」焊在一起——最令人却步的品类用一个动感词卸下门槛，线上法律服务的开山命名" },
+        { name: "ZenBusiness", takeaway: "zen（禅）+ business（生意）：开公司的焦虑被一个「禅」字抚平——情绪价值写进名字，代办品类「省心承诺」的教科书" },
+        { name: "Stripe Atlas", takeaway: "巨头品牌+「地图册」：Atlas 把全球创业者「在美国开公司」的陌生旅程翻译成一本地图——子品牌借隐喻扩品类的模板级答案" },
+        { name: "Firstbase", takeaway: "first（第一）+ base（垒/基地）：棒球第一垒的意象把注册公司变成「上垒」——起点叙事的英文样本，远程创业潮的时代红利名" },
+        { name: "Bizee", takeaway: "biz（生意）+ easy 的谐音尾：从 Incfile 更名而来——把「文件」味的旧名换成「生意变简单」的承诺，品类词根+情绪尾缀的轻改名样本" },
+      ],
+      pitfalls: [
+        "堆砌「国际」「环球」「集团」：注册代办的客户是刚起步的创业者——名字越浮夸，越像会乱收费的中介",
+        "锁死「注册」单品：记账、商标、注销才是长期收入——名字绑死执照代办，客户第二年就不回头",
+        "过分俏皮的谐音：这个品类的第一眼审视是「正规吗」——玩笑名在工商局门口立不住",
+        "只查了域名没查同行字号：企业服务字号重名率极高——「XX 财税」满街跑，工商核名先于域名注册",
+      ],
+    },
+    en: {
+      label: "Company formation services",
+      title: "How to Name a Company Formation or Business Services Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Company formation and business services naming guide: starting-line narratives, compliance trust, effort-lifting words, breakdowns of LegalZoom/ZenBusiness/Stripe Atlas, recommended TLDs and pitfalls — then hunt an available business services domain with AI.",
+      intro:
+        "A company formation brand's name must extend a steady hand at the founder's most anxious moment: the day a customer finds you is often the first time they've faced registrations, tax IDs and bank accounts — and the name has to say two things at once: this is legitimate, and this becomes easy once you hand it over. The first material bin is the starting-line narrative: incorporating is step one of a journey — Firstbase-style roots translate \"filing paperwork\" into \"leaving the blocks\"; the founder isn't buying a stack of certificates, they're buying the ritual of my business starts today. The second lever is compliance trust: roots like Legal, Zen, true and trust answer the category's am-I-getting-scammed anxiety head-on — but resist piling them up: one credible root beats three \"Premium Global\" modifiers. The third is the effort-lifting word: Zen's calm, Easy, swift — the essence of a filing service is taking away every form the customer dreads, and the lightness in the name is the service promise. Mind the business boundary: formation is the doorway; bookkeeping, tax filings, trademarks and amendments are where renewal revenue lives — draw the name at \"business services\", not \"license filing\", or customers will assume you only do certificates. On scenarios: this name lives in a founder's midnight search for \"cost to register a company\", an accountant's referral, and the elevator ad in an office tower. On channels: the name must survive the first \"is this legit?\" glance — obscure foreign coinage and over-cute puns both leak trust in this category.",
+      namingIdeas: [
+        "Starting-line narrative: first base, launch, opening day — translate incorporation into a business taking off; you sell the ritual, not the certificate",
+        "Compliance trust roots: Legal, Zen, true, trust — answer the am-I-getting-scammed anxiety directly; one credible root beats three luxury modifiers",
+        "Effort-lifting words: Zen, Easy, swift — the service takes away dreaded forms, and the name's lightness is the promise",
+        "Draw the line at business services: formation is the doorway, bookkeeping and trademarks are the revenue — don't let the name weld you to license filing",
+        "The legitimacy test: say \"XX handled my incorporation\" out loud — any name that sounds risky in that sentence is out",
+      ],
+      cases: [
+        { name: "LegalZoom", takeaway: "Legal + zoom: the most intimidating category welded to a speed word — one kinetic syllable lowers the drawbridge; the founding name of online legal services" },
+        { name: "ZenBusiness", takeaway: "Zen + business: incorporation anxiety soothed by a single meditative root — emotional value written into the name; the textbook of the filing category's peace-of-mind promise" },
+        { name: "Stripe Atlas", takeaway: "A giant's brand plus an atlas: the unfamiliar journey of \"incorporating in the US from anywhere\" translated into a map book — the template for extending a brand into a new category via metaphor" },
+        { name: "Firstbase", takeaway: "First + base: baseball's first base turns incorporation into getting on base — the starting-line narrative in English, a name that rode the remote-founding wave" },
+        { name: "Bizee", takeaway: "Biz + an easy-sounding tail: renamed from Incfile — the paperwork-flavored old name swapped for a business-made-easy promise; category root plus emotional suffix in one light rebrand" },
+      ],
+      pitfalls: [
+        "Stacking \"Global\", \"International\", \"Group\": your customers are first-time founders — the grander the name, the more it reads like an agency with hidden fees",
+        "Welding to \"formation\": bookkeeping, trademarks and dissolutions are the long-term revenue — a name locked to filings loses the customer in year two",
+        "Over-cute puns: this category's first glance is \"is this legit?\" — a joke name collapses at the registrar's counter",
+        "Checking the domain but not competitor trade names: business-services name collisions are rampant — clear the corporate registry before the domain",
+      ],
+    },
+  },
+  consulting: {
+    slug: "consulting",
+    tlds: [
+      { tld: "com", zh: "企业客户与采购部门的信任底线，咨询公司的默认选择", en: "The trust baseline for enterprise clients and procurement — the default for a consultancy" },
+      { tld: "consulting", zh: "「咨询」语义直给，精品咨询与独立顾问零解释", en: "Consulting semantics stated plainly — zero explanation for boutique firms and independents" },
+      { tld: "biz", zh: "「生意」后缀直白务实，中小企业咨询的性价比之选", en: "The business suffix, plain and pragmatic — a value pick for SMB-focused advisory" },
+    ],
+    zh: {
+      label: "管理咨询",
+      title: "管理咨询与顾问公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "管理咨询与顾问公司命名指南：姓氏资产、抽象造词、方法论词根等 5 种思路，McKinsey/Accenture/Slalom 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的咨询公司域名。",
+      intro:
+        "咨询公司的名字是第一份交付物：客户为判断力付费，而名字就是你交出的第一个判断——它要在提案封面、董事会纪要和猎头的挖人电话里都立得住。第一素材库是姓氏资产：McKinsey、Bain、Roland Berger——姓氏命名是这个行业的百年传统，本质是「用个人信誉抵押服务质量」；单干的资深顾问用姓氏起步依然是最快的信任路径，但要想清楚：姓氏名很难卖掉，也很难长出创始人之外的人格。第二个抓手是抽象造词：Accenture（accent on the future）、Slalom（回转滑雪）——大型咨询公司用造词与隐喻摆脱姓氏束缚，一个词装下方法论与气质；隐喻要选「动作」而非「结果」：slalom 的连续过弯比 success 的空洞承诺高级得多。第三个抓手是方法论词根：Insight、Matrix、North、Compass——客户买咨询买的是「看清」与「方向」，认知类词根直接命中交付物本质。要注意气质克制：咨询是「贵但值得」的生意——名字要贵在克制而非堆砌，「卓越巅峰国际咨询」式的名字恰恰暴露了不自信。场景上，这个名字活在提案 PPT 的右下角、客户 CFO 的预算审批单和 LinkedIn 的公司页上。渠道上，名字要能穿西装：读音干净、拼写无歧义、邮箱域名不别扭——每一封 @yourfirm 的邮件都是一次品牌资产的复利。",
+      namingIdeas: [
+        "姓氏资产：McKinsey、Bain 式的百年传统——用个人信誉抵押服务质量，单干顾问最快的信任路径，但姓氏名难卖也难传承",
+        "抽象造词：Accenture、Slalom——造词与隐喻装下方法论与气质；隐喻选「动作」不选「结果」，连续过弯比空洞的成功高级",
+        "方法论词根：Insight、North、Compass——客户买的是「看清」与「方向」，认知类词根直接命中交付物",
+        "气质克制：贵在克制不在堆砌——「卓越巅峰国际」式的修饰词暴露不自信，一个干净的词胜过一串形容词",
+        "西装测试：读音干净、拼写无歧义、@yourfirm 的邮箱不别扭——名字要配得上提案封面和董事会纪要",
+      ],
+      cases: [
+        { name: "McKinsey & Company", takeaway: "姓氏+「& Company」的百年结构：个人信誉抵押服务质量——「麦肯锡说」成为商业世界的引用格式，姓氏资产复利的天花板" },
+        { name: "Accenture", takeaway: "accent on the future 的压缩造词：从 Andersen Consulting 拆分后的重生——把「未来重音」藏进七个字母，咨询业造词改名的教科书" },
+        { name: "Slalom", takeaway: "回转滑雪的隐喻：在障碍间连续过弯的敏捷——用一项运动说清「帮客户绕过障碍」的方法论，动作隐喻优于结果承诺的样本" },
+        { name: "Thoughtworks", takeaway: "thought（思想）+ works（工厂）：把「思考」做成「工程」——脑力劳动的交付感用一个复合词说清，技术咨询的定位宣言" },
+        { name: "Kearney", takeaway: "从 A.T. Kearney 精简为单姓：百年品牌做减法——砍掉缩写让名字更利落，老牌咨询「越简越贵」的更名注脚" },
+      ],
+      pitfalls: [
+        "堆砌宏大修饰词：「卓越」「巅峰」「环球」是不自信的信号——客户买判断力，名字先要展示克制的判断",
+        "锁死单一领域：名字绑死「数字化」「营销」，五年后转型全案就要改名——方法论词根比领域词根寿命长",
+        "生造难读的洋名：提案会上客户念不出你的名字，是当场丢分——读音干净是咨询名的硬指标",
+        "忽略邮箱与缩写：名字落到 @domain 和两三个字母缩写时要依然体面——缩写撞上尴尬词是高频翻车点",
+      ],
+    },
+    en: {
+      label: "Management consulting",
+      title: "How to Name a Consulting Firm: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Management consulting naming guide: surname equity, abstract coinage, methodology roots, breakdowns of McKinsey/Accenture/Slalom, recommended TLDs and pitfalls — then hunt an available consulting domain with AI.",
+      intro:
+        "A consultancy's name is its first deliverable: clients pay for judgment, and the name is the first judgment you hand over — it has to hold up on the proposal cover, in board minutes, and in a headhunter's poaching call. The first material bin is surname equity: McKinsey, Bain, Roland Berger — surname naming is this industry's century-old tradition, at bottom collateralizing service quality with personal reputation; for a senior consultant going solo it remains the fastest trust path, but know the trade: a surname firm is hard to sell and hard to grow a personality beyond its founder. The second lever is abstract coinage: Accenture (accent on the future), Slalom (the ski discipline) — larger firms use coinage and metaphor to escape the surname's gravity, packing methodology and temperament into one word; choose metaphors of motion, not outcome — slalom's linked turns beat the empty promise of \"success\" every time. The third is the methodology root: Insight, Matrix, North, Compass — clients buy clarity and direction, and cognition words hit the deliverable's essence directly. Mind the restraint register: consulting is an expensive-but-worth-it business — the name should be expensive through restraint, not accumulation; \"Supreme Pinnacle Global Advisors\" broadcasts exactly the insecurity it tries to hide. On scenarios: this name lives in the corner of a proposal deck, on the CFO's budget approval line, and atop the firm's LinkedIn page. On channels: the name must wear a suit — clean pronunciation, unambiguous spelling, an email domain that isn't awkward; every @yourfirm email is compound interest on the brand.",
+      namingIdeas: [
+        "Surname equity: the McKinsey-Bain tradition — collateralize quality with personal reputation; fastest trust path for solo seniors, but hard to sell or outgrow",
+        "Abstract coinage: Accenture, Slalom — pack methodology and temperament into one coined word; pick metaphors of motion over outcome",
+        "Methodology roots: Insight, North, Compass — clients buy clarity and direction; cognition words hit the deliverable directly",
+        "Expensive through restraint: pile-up modifiers like \"Supreme Global\" broadcast insecurity — one clean word beats a string of adjectives",
+        "The suit test: clean pronunciation, unambiguous spelling, a dignified @yourfirm inbox — the name must dress for the proposal cover",
+      ],
+      cases: [
+        { name: "McKinsey & Company", takeaway: "Surname plus \"& Company\", the century-old structure: personal reputation as collateral — \"McKinsey says\" became business's citation format; the ceiling of surname-equity compounding" },
+        { name: "Accenture", takeaway: "\"Accent on the future\" compressed into a coinage: rebirth after splitting from Andersen Consulting — the future's emphasis hidden in seven letters; the industry's rebrand textbook" },
+        { name: "Slalom", takeaway: "The ski-discipline metaphor: agile linked turns between gates — one sport explains the whole steer-around-obstacles methodology; motion metaphors beating outcome promises" },
+        { name: "Thoughtworks", takeaway: "Thought + works: thinking run as a factory — the deliverability of brainwork stated in one compound; a positioning manifesto for technology consulting" },
+        { name: "Kearney", takeaway: "Trimmed from A.T. Kearney to a single surname: a century-old brand doing subtraction — dropping the initials sharpened the name; the older the firm, the simpler the label" },
+      ],
+      pitfalls: [
+        "Stacking grand modifiers: \"Supreme\", \"Pinnacle\", \"Global\" signal insecurity — clients buy judgment, and the name must first demonstrate restrained judgment",
+        "Welding to one specialty: a name locked to \"digital\" or \"marketing\" forces a rebrand when the practice broadens — methodology roots outlive specialty roots",
+        "Unpronounceable coinage: a client stumbling over your name in the pitch meeting is points lost on the spot — clean pronunciation is a hard requirement",
+        "Ignoring the inbox and the acronym: the name must stay dignified as @domain and as two or three initials — embarrassing acronym collisions are a frequent wreck",
+      ],
+    },
+  },
+  wholesale: {
+    slug: "wholesale",
+    tlds: [
+      { tld: "com", zh: "B2B 采购决策链长、审查严，.com 是供应商资质的一部分", en: "B2B buying chains are long and skeptical — .com is part of your supplier credentials" },
+      { tld: "biz", zh: "「生意」后缀与 B2B 语义同构，批发平台的性价比标识", en: "The business suffix mirrors B2B semantics — a value badge for wholesale platforms" },
+      { tld: "market", zh: "「市场」语义直给，批发市场与选品平台零解释", en: "Market semantics stated plainly — zero explanation for wholesale marketplaces" },
+    ],
+    zh: {
+      label: "B2B 批发平台",
+      title: "B2B 批发平台与批发市场品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "B2B 批发平台命名指南：市场意象、规模词根、生意人语感等 5 种思路，1688/Faire/Ankorstore 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的批发平台域名。",
+      intro:
+        "批发平台的名字要像市场门口那块最亮的招牌：B2B 生意的两端都是生意人——上游要相信「这里出货快」，下游要相信「这里拿货便宜且不掺假」，名字要在两种精明之间同时成立。第一素材库是市场意象：市、汇、集、source、market——批发的本质是「把货与人聚到一处」，聚集类词根天然携带「货全」的联想；Faire（法语「集市/做」）证明一个市场词可以同时优雅和高效。第二个抓手是规模词根：批发客户按箱、按柜、按吨思考——万、广、集、bulk、depot 这类词根暗示「量大管够」，规模感就是批发平台的第一卖点。第三个抓手是生意人语感：1688（一路发发）的谐音彩头、旺、丰、利——B 端客户嘴上谈供应链，心里念生意兴隆，吉利词根在中文批发语境里是被反复验证的信任货币。要注意数字化定位：新一代批发平台是「在线选品+账期+物流」的软件生意——名字要能容纳 SaaS 气质，太土的市场名请不动品牌方入驻，太洋的科技名又吓跑档口老板，分寸感是命名的核心难题。场景上，名字活在采购经理的供应商列表、档口老板的名片和展会易拉宝上。渠道上，B2B 获客靠搜索与转介绍：名字要好念好记好输入，拼音直觉输入不出错是中文批发名的硬指标。",
+      namingIdeas: [
+        "市场意象：市、汇、集、market、source——批发的本质是把货与人聚到一处，聚集词根自带「货全」联想",
+        "规模词根：万、广、bulk、depot——B 端客户按箱按柜思考，「量大管够」是批发名的第一卖点",
+        "生意人语感：发、旺、丰、利——嘴上谈供应链，心里念兴隆；吉利词根是中文批发语境的信任货币",
+        "数字化分寸：太土请不动品牌方，太洋吓跑档口老板——新批发平台的名字要在市场气与科技感之间走钢丝",
+        "输入测试：采购经理凭记忆输入你的域名或拼音——一次输错就是一单流失，好输入是 B2B 名的硬指标",
+      ],
+      cases: [
+        { name: "1688（阿里巴巴）", takeaway: "「一路发发」的数字谐音：把吉利话压缩成四个数字——好记、好输、自带彩头，中文 B2B 语境里数字命名的天花板" },
+        { name: "Faire", takeaway: "法语「集市/做」的一词双关：批发平台做出了买手店的优雅——B2B 命名摆脱「土味市场感」的代表作，证明批发也可以有品牌溢价" },
+        { name: "Ankorstore", takeaway: "anchor（锚）+ store（店铺）：给独立零售商一个「稳固的进货锚点」——安全感隐喻+品类词的欧洲批发样本" },
+        { name: "Made-in-China", takeaway: "把原产地标签直接注册成品牌：全球采购商搜索框里的高频词就是名字——搜索即品牌的极致，通用词命名吃尽品类流量" },
+        { name: "Global Sources", takeaway: "global（全球）+ sources（货源）：跨境采购的两个关键词直接相加——功能命名的老牌样本，五十年不用解释业务是什么" },
+      ],
+      pitfalls: [
+        "土味与洋气失衡：纯土名请不动品牌方入驻，纯洋名吓跑档口老板——两头客户都要照顾是批发名的独特难题",
+        "锁死单一品类：名字绑死「服装」「五金」，扩品类就要改名——批发平台的终局是全品类，边界提前画大",
+        "忽略拼音输入：采购经理凭记忆输入出错，订单就进了同行的站——好念好输是中文 B2B 名的硬指标",
+        "堆砌「国际」「环球」：没有实货支撑的宏大词在验厂环节露馅——B 端客户的尽调比 C 端苛刻得多",
+      ],
+    },
+    en: {
+      label: "B2B wholesale platforms",
+      title: "How to Name a B2B Wholesale Platform: Strategies, Case Studies & Domains",
+      metaDescription:
+        "B2B wholesale platform naming guide: marketplace imagery, scale roots, merchant-register instincts, breakdowns of 1688/Faire/Ankorstore, recommended TLDs and pitfalls — then hunt an available wholesale domain with AI.",
+      intro:
+        "A wholesale platform's name should be the brightest sign at the market gate: both ends of a B2B business are merchants — suppliers must believe stock moves fast here, buyers must believe prices are sharp and goods are genuine, and the name has to stand up to two kinds of shrewdness at once. The first material bin is marketplace imagery: market, fair, hub, source — wholesale is at bottom gathering goods and people in one place, and gathering roots carry the everything-in-stock association for free; Faire (French for market/to make) proves a marketplace word can be elegant and efficient at the same time. The second lever is the scale root: wholesale customers think in cartons, containers and tons — bulk, depot, grand and their kin whisper we have quantity, and scale is a wholesale platform's first selling point. The third is the merchant register: prosperity roots and lucky numbers — 1688's homophone for \"fortune all the way\" shows that B2B buyers talk supply chains but pray for booming trade; auspicious roots are proven trust currency in wholesale contexts. Mind the digital positioning: the new generation of wholesale is software — online curation, payment terms, logistics — so the name must hold SaaS temperament: too folksy and brands won't list, too techy and stall owners bolt; that balance is the naming problem's core. On scenarios: the name lives in a purchasing manager's supplier list, on a stall owner's business card, and on the trade-show banner. On channels: B2B acquisition runs on search and referral — easy to say, easy to remember, easy to type; a mistyped domain is an order routed to a rival.",
+      namingIdeas: [
+        "Marketplace imagery: market, fair, hub, source — wholesale gathers goods and people in one place; gathering roots carry everything-in-stock for free",
+        "Scale roots: bulk, depot, grand — B2B customers think in cartons and containers; we-have-quantity is the first selling point",
+        "Merchant register: prosperity roots and lucky numbers — buyers talk supply chains and pray for booming trade; auspicious sounds are trust currency",
+        "The digital balance: too folksy and brands won't list, too techy and stall owners bolt — the new wholesale name walks a tightrope",
+        "The typing test: a purchasing manager types your domain from memory — one typo is one lost order; typability is a hard B2B requirement",
+      ],
+      cases: [
+        { name: "1688 (Alibaba)", takeaway: "The numeric homophone for \"fortune all the way\": a blessing compressed into four digits — memorable, typable, auspicious; the ceiling of number naming in Chinese B2B" },
+        { name: "Faire", takeaway: "French for market and to make in one word: a wholesale platform styled like a curated boutique — the flagship case of B2B naming escaping flea-market folksiness, proving wholesale can carry brand premium" },
+        { name: "Ankorstore", takeaway: "Anchor + store: giving independent retailers a stable sourcing anchor — a security metaphor bolted to a category word; the European wholesale sample" },
+        { name: "Made-in-China", takeaway: "The origin label registered as the brand: the highest-frequency phrase in global buyers' search boxes is the name — search-as-brand at its extreme, a generic name drinking the category's traffic" },
+        { name: "Global Sources", takeaway: "Global + sources: cross-border procurement's two keywords simply added — the veteran of functional naming; fifty years without ever explaining what the business does" },
+      ],
+      pitfalls: [
+        "Losing the folksy-techy balance: a pure market name repels brands, a pure tech name repels stall owners — serving both ends is wholesale naming's unique problem",
+        "Welding to one category: a name locked to apparel or hardware forces a rebrand at expansion — wholesale platforms end at all-category; draw the boundary large early",
+        "Ignoring typability: a purchasing manager's typo sends the order to a competitor — easy to say and type is a hard B2B requirement",
+        "Stacking \"Global\" and \"International\": grand words without real inventory collapse at the factory audit — B2B due diligence is far harsher than consumer scrutiny",
+      ],
+    },
+  },
+  trading: {
+    slug: "trading",
+    tlds: [
+      { tld: "com", zh: "跨国采购商与银行信用证流程的默认信任底线", en: "The default trust baseline for overseas buyers and letter-of-credit paperwork" },
+      { tld: "ltd", zh: "「有限公司」后缀与外贸公司的注册主体同构，报关抬头零违和", en: "The limited-company suffix mirrors the trading entity itself — zero friction on customs headers" },
+      { tld: "biz", zh: "「生意」语义直白，中小外贸公司的务实之选", en: "Business semantics stated plainly — the pragmatic pick for SMB trading firms" },
+    ],
+    zh: {
+      label: "外贸公司",
+      title: "外贸公司与进出口贸易品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "外贸公司与进出口贸易命名指南：航海意象、桥梁词根、双语同构等 5 种思路，利丰/三井物产/嘉能可等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的外贸公司域名。",
+      intro:
+        "外贸公司的名字要在两种语言里同时可信：它印在形式发票的抬头、提单的 shipper 栏和海外买家的供应商档案里——对方可能一辈子不来你的办公室，名字与邮件签名就是你的全部门面。第一素材库是航海与通路意象：port、bridge、link、海、洋、航——贸易的本质是「把货从此岸送到彼岸」，通路词根自带「渠道畅通」的承诺；桥梁隐喻在中外语境里都成立，是外贸命名的万能牌。第二个抓手是双语同构：中文名与英文名要同时注册、同时好念——最优解是语义对译（华桥/ChinaBridge）或音义兼顾（利丰/Li & Fung），最差解是中文名很响亮、英文名是一串没人会读的拼音。第三个抓手是可靠词根：信、恒、诚、trust、solid——信用证生意的每一环都在验证「你会不会跑路」，名字里的稳定感是尽调的第一印象分。要注意品类边界：贸易公司的品类随行情漂移——今年出口五金明年做光伏，名字锁死品类等于给自己上枷锁；「XX 国际贸易」的留白结构虽然平庸但耐用。场景上，名字活在广交会的摊位楣板、B2B 平台的店铺主页和买家验厂报告的封面上。渠道上，名字要经得起海关、银行、使馆认证的全流程拼写——一个字母的出入就能让单据被退回，拼写无歧义是外贸名的生死线。",
+      namingIdeas: [
+        "航海与通路意象：port、bridge、海、航——贸易是把货送到彼岸，通路词根自带「渠道畅通」的承诺",
+        "双语同构：中英文名同时注册同时好念——语义对译或音义兼顾，别让英文名沦为一串没人会读的拼音",
+        "可靠词根：信、恒、诚、trust——信用证生意的每一环都在验证「会不会跑路」，稳定感是尽调第一印象",
+        "品类留白：今年五金明年光伏——品类随行情漂移，名字锁死品类等于上枷锁，留白结构平庸但耐用",
+        "单据测试：名字过一遍形式发票、提单、信用证的拼写全流程——一个字母出入就会退单，无歧义是生死线",
+      ],
+      cases: [
+        { name: "利丰（Li & Fung）", takeaway: "「利」（利润）+「丰」（丰盛）的吉利双拼，英文保留粤语音译：中英同构的百年样本——生意人语感与国际拼写在一个名字里两全" },
+        { name: "三井物产", takeaway: "财阀姓氏+「物产」的品类留白：不说品类只说「万物皆可贸易」——综合商社「什么都做」的边界智慧，百年贸易名的耐用性证明" },
+        { name: "嘉能可（Glencore）", takeaway: "Global Energy Commodity Resources 的首字母压缩造词：把全球、能源、大宗全装进三个音节——缩写造词在重资产贸易里的教科书" },
+        { name: "Trafigura", takeaway: "traffic（流通）+ figura 的拉丁尾：货物流通的本质写进词根，拉丁语感自带跨国气质——大宗贸易命名的欧陆样本" },
+        { name: "中粮（COFCO）", takeaway: "「中国+粮食」的国家队直给+四字母英文缩写：中文说身份、英文求好拼——双语各司其职的国企外贸命名范式" },
+      ],
+      pitfalls: [
+        "英文名是生硬拼音：海外买家读不出记不住，邮件与转介绍全程折损——音义兼顾的英文名是外贸的入场券",
+        "品类锁死：名字绑死「五金」「纺织」，行情一转就要换抬头——贸易公司的品类会漂移，留白比精准重要",
+        "浮夸词堆砌：「环球」「帝国」式的名字在验厂与银行尽调里只会引来更严的审查——外贸的信任靠稳不靠大",
+        "拼写有歧义：单据流转经手海关、银行、货代十几道——一个容易写错的名字每年退回的单据比你想象的多",
+      ],
+    },
+    en: {
+      label: "Import & export trading",
+      title: "How to Name an Import-Export Trading Company: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Import-export trading company naming guide: maritime imagery, bridge roots, bilingual symmetry, breakdowns of Li & Fung/Mitsui/Glencore, recommended TLDs and pitfalls — then hunt an available trading company domain with AI.",
+      intro:
+        "A trading company's name must be credible in two languages at once: it sits on the proforma invoice header, in the bill of lading's shipper field, and in an overseas buyer's supplier file — the counterparty may never visit your office, so the name and the email signature are your entire storefront. The first material bin is maritime and passage imagery: port, bridge, link, ocean, voyage — trade is at bottom moving goods from this shore to that one, and passage roots carry a channels-are-open promise for free; the bridge metaphor works in both Chinese and Western registers, the wildcard of trading names. The second lever is bilingual symmetry: the Chinese and English names must be registered together and pronounceable together — the best solutions are semantic twins (ChinaBridge) or sound-and-sense pairs (Li & Fung), the worst a resonant local name saddled with an unreadable romanization. The third is the reliability root: trust, solid, constant, true — every link of the letter-of-credit chain is testing whether you'll vanish, and the steadiness in a name is the first impression of due diligence. Mind the category boundary: a trader's product mix drifts with the market — hardware this year, solar next — so a name welded to one category is a self-imposed shackle; the blank-space structure of \"XX International Trading\" is bland but durable. On scenarios: the name lives on the Canton Fair booth fascia, the B2B storefront page, and the cover of the buyer's factory-audit report. On channels: the name must survive the full spelling gauntlet of customs, banks and embassy legalization — one letter's discrepancy bounces the documents; unambiguous spelling is the life-or-death line of trading names.",
+      namingIdeas: [
+        "Maritime and passage imagery: port, bridge, ocean, voyage — trade moves goods to the far shore; passage roots promise open channels for free",
+        "Bilingual symmetry: register and pronounce both names together — semantic twins or sound-and-sense pairs; never a resonant local name with an unreadable romanization",
+        "Reliability roots: trust, solid, constant — the letter-of-credit chain keeps testing whether you'll vanish; steadiness is the first due-diligence impression",
+        "Category blank space: hardware this year, solar next — the product mix drifts, so a category-welded name is a shackle; bland-but-durable beats precise-but-brittle",
+        "The documents test: run the name through invoice, bill of lading and L/C spelling — one letter off bounces the paperwork; unambiguity is the survival line",
+      ],
+      cases: [
+        { name: "Li & Fung (利丰)", takeaway: "Auspicious roots — profit plus abundance — with the Cantonese sound kept in English: the century-old sample of bilingual symmetry; merchant instinct and international spelling reconciled in one name" },
+        { name: "Mitsui & Co. (三井物产)", takeaway: "A zaibatsu surname plus \"products\" as category blank space: naming no category means everything is tradable — the sogo shosha's boundary wisdom, proof of a trading name's century-long durability" },
+        { name: "Glencore", takeaway: "Global Energy Commodity Resources compressed into a coinage: global, energy and commodities packed into three syllables — the textbook of acronym coinage in heavy-asset trading" },
+        { name: "Trafigura", takeaway: "Traffic + a Latin tail: the essence of goods in motion written into the root, with Latinate sound carrying transnational air — the continental sample of commodity-trading names" },
+        { name: "COFCO (中粮)", takeaway: "\"China + grain\" stated plainly at home, four clean letters abroad: each language doing its own job — the bilingual division-of-labor paradigm for state trading names" },
+      ],
+      pitfalls: [
+        "An English name that's raw romanization: overseas buyers can't read or recall it, and every email and referral leaks — a sound-and-sense English name is the entry ticket",
+        "Category welding: a name locked to hardware or textiles forces a new letterhead when the market turns — a trader's mix drifts; blank space beats precision",
+        "Grandiose stacking: \"Empire\" and \"Universal\" invite harsher scrutiny in factory audits and bank checks — trading trust is built on steadiness, not size",
+        "Ambiguous spelling: documents pass through a dozen hands at customs, banks and forwarders — an easy-to-misspell name bounces more paperwork a year than you think",
+      ],
+    },
+  },
+  coupon: {
+    slug: "coupon",
+    tlds: [
+      { tld: "promo", zh: "「促销」语义直给，优惠券与折扣导购的天选后缀", en: "Promo semantics stated plainly — the chosen suffix for coupons and deal curation" },
+      { tld: "fyi", zh: "「供你参考」的情报语感，折扣情报站的差异化标识", en: "For-your-information register — the differentiator badge for a deals intelligence site" },
+      { tld: "com", zh: "返利与联盟分佣的资金往来，信任底线依然是它", en: "Cashback and affiliate payouts involve money changing hands — the trust baseline still applies" },
+    ],
+    zh: {
+      label: "优惠券导购",
+      title: "优惠券与折扣导购平台怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "优惠券与折扣导购平台命名指南：省钱直给、精明人格、情报站叙事等 5 种思路，RetailMeNot/Honey/什么值得买等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的导购平台域名。",
+      intro:
+        "优惠券平台的名字要让用户在下单前的三秒钟里想起你：这个品类的入口场景极其具体——购物车结算页上那个「有优惠码吗」的输入框，名字要在那一刻从记忆里弹出来。第一素材库是省钱直给：省、折、券、save、deal——导购平台的价值主张只有一句话「帮你花更少的钱」，直给词根在搜索框里就是流量本身；但直给名的代价是同质化，「XX 省钱」满地都是，直给词根需要一个记忆钩子来配平。第二个抓手是精明人格：什么值得买的「值」、Slickdeals 的 slick——用户不想被看作「穷」，想被看作「会买」；把省钱翻译成「聪明消费」，名字的自尊心处理是这个品类的隐藏考点。第三个抓手是情报站叙事：折扣是有时效的情报——「情报局」「快报」「雷达」式的词根把优惠券从「乞讨感」升维成「信息差红利」，让分享行为变得体面。要注意信任配平：返利模式涉及资金往来，名字太油滑会让「提现到账吗」的疑虑加重——Honey 用一个甜而无害的词讲清了「顺手薅到的甜头」，甜感与可信感可以共存。场景上，名字活在结算页前的搜索框、比价群的链接分享和浏览器插件的图标上。渠道上，这个品类高度依赖口碑与 SEO：名字要能连读进「先上 XX 查一下」的句式，念不顺口的名字进不了用户的口头禅。",
+      namingIdeas: [
+        "省钱直给：省、折、券、save、deal——价值主张只有「花更少」，直给词根就是搜索流量，但需要记忆钩子配平同质化",
+        "精明人格：值、slick、smart——用户想被看作「会买」而不是「穷」，把省钱翻译成聪明消费是隐藏考点",
+        "情报站叙事：快报、雷达、情报——折扣是有时效的情报，信息差红利的叙事让分享变得体面",
+        "信任配平：返利涉及资金往来——太油滑的名字加重「提现到账吗」的疑虑，甜感与可信感要共存",
+        "口头禅测试：名字放进「先上 XX 查一下」念三遍——进不了口头禅的名字做不成导购平台",
+      ],
+      cases: [
+        { name: "什么值得买", takeaway: "把用户的搜索原话直接注册成品牌：「值」字同时解决自尊与决策——不是「贪便宜」是「买得值」，中文导购命名的心理学天花板" },
+        { name: "Honey", takeaway: "「蜂蜜」的甜而无害：优惠码自动查找的「顺手甜头」用一个字说清——去乞讨感的教科书，甜感与可信感共存的证明" },
+        { name: "RetailMeNot", takeaway: "「别按原价卖给我」的俏皮宣言：一句消费者心声直接做名字——反抗性的幽默让省钱变成态度，句子式命名的品类代表" },
+        { name: "Rakuten（乐天返利）", takeaway: "日语「乐观/乐天」+返利业务的全球化：把「省到钱的快乐」写进品牌词根——情绪价值先于功能说明的东亚样本" },
+        { name: "Slickdeals", takeaway: "slick（漂亮利落）+ deals（折扣）：把「捡到便宜」升维成「操作漂亮」——社区荣誉感驱动分享，精明人格命名的英文标杆" },
+      ],
+      pitfalls: [
+        "「XX 省钱」式同质化：直给词根不带记忆钩子，在应用商店里和几十个同行长得一模一样",
+        "油滑过头透支信任：返利要提现、佣金要结算——名字太「鸡贼」会加重资金疑虑，甜感不等于油滑",
+        "触发「穷酸感」：用户想当聪明买家不想当拮据者——名字把用户钉在「贪便宜」的人设上，分享率归零",
+        "绑死单一平台或品类：名字锁死「淘」「书」「机票」，扩品类就要改名——导购的终局是全品类比价",
+      ],
+    },
+    en: {
+      label: "Coupon & deals platforms",
+      title: "How to Name a Coupon or Deals Platform: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Coupon and deals platform naming guide: savings-first roots, savvy-shopper personas, intelligence narratives, breakdowns of RetailMeNot/Honey/Slickdeals, recommended TLDs and pitfalls — then hunt an available deals domain with AI.",
+      intro:
+        "A coupon platform's name has to surface in the three seconds before checkout: this category's entry scenario is brutally specific — the \"got a promo code?\" box on the payment page — and the name must pop out of memory right there. The first material bin is savings-first roots: save, deal, coupon, off — the value proposition is one sentence, spend less, and literal roots are search traffic in themselves; but the literal name's tax is sameness — \"XX Savings\" is everywhere, so a literal root needs a memory hook to balance it. The second lever is the savvy-shopper persona: the slick in Slickdeals — users don't want to look broke, they want to look like they buy well; translating thrift into smart shopping is this category's hidden exam question, the self-esteem handling inside a name. The third is the intelligence narrative: a discount is perishable intel — radar, wire, insider roots elevate coupons from begging to information-edge dividends, and make sharing feel respectable. Mind the trust balance: cashback means money changing hands — an oily name amplifies the will-my-payout-arrive doubt; Honey proved a sweet, harmless word can explain the effortless perk while staying trustworthy: sweetness and credibility can coexist. On scenarios: the name lives in the pre-checkout search box, the deal-group link share, and the browser extension's icon. On channels: this category runs on word of mouth and SEO — the name must flow inside \"check XX first\", because a name that can't enter the catchphrase never becomes the habit.",
+      namingIdeas: [
+        "Savings-first roots: save, deal, off — the proposition is spend less and literal roots are traffic, but they need a memory hook to escape sameness",
+        "Savvy-shopper persona: slick, smart, worth — users want to look like they buy well, not like they're broke; self-esteem handling is the hidden exam",
+        "Intelligence narrative: radar, wire, insider — a discount is perishable intel; the information-edge story makes sharing respectable",
+        "Trust balance: cashback moves real money — an oily name amplifies payout doubt; sweetness and credibility must coexist",
+        "The catchphrase test: say \"check XX first\" three times — a name that can't enter the habit phrase never becomes the habit",
+      ],
+      cases: [
+        { name: "Honey", takeaway: "Sweet and harmless: the auto-found promo code explained as an effortless perk in one word — the textbook of de-begging a category, proof that sweetness and credibility coexist" },
+        { name: "RetailMeNot", takeaway: "\"Don't retail me\" as a playful manifesto: the shopper's inner voice registered as the brand — defiant humor turns thrift into attitude; the category's sentence-name flagship" },
+        { name: "Slickdeals", takeaway: "Slick + deals: catching a bargain reframed as a clean play — community pride drives the sharing loop; the English benchmark of savvy-persona naming" },
+        { name: "Rakuten", takeaway: "Japanese for optimism carried into global cashback: the joy of money saved written into the brand root — emotional value ahead of functional description, the East Asian sample" },
+        { name: "Groupon", takeaway: "Group + coupon: the mechanism itself fused into a coinage — collective buying power compressed into three syllables; mechanism-naming that defined a category worldwide" },
+      ],
+      pitfalls: [
+        "\"XX Savings\" sameness: a literal root with no memory hook looks identical to dozens of rivals in the app store",
+        "Overplaying slyness: cashback needs withdrawals and settlements — a too-cunning name amplifies money doubt; sweet is not oily",
+        "Triggering the broke feeling: users want to be smart buyers, not strapped ones — a name that pins them as penny-pinchers kills the share rate",
+        "Welding to one platform or category: a name locked to books or flights forces a rebrand at expansion — the endgame is all-category price intelligence",
+      ],
+    },
+  },
+  flashsale: {
+    slug: "flashsale",
+    tlds: [
+      { tld: "promo", zh: "「促销」语义直给，限时特卖的品类天选后缀", en: "Promo semantics stated plainly — the category's chosen suffix for limited-time sales" },
+      { tld: "express", zh: "「快」的双关：闪购的节奏与发货的速度一词双押", en: "The double meaning of fast: flash-sale tempo and shipping speed in one suffix" },
+      { tld: "shop", zh: "「商店」语义百搭，特卖电商的通用零解释选择", en: "Shop semantics fit any retail format — the universal zero-explanation pick" },
+    ],
+    zh: {
+      label: "限时特卖电商",
+      title: "限时特卖与闪购电商品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "限时特卖与闪购电商命名指南：时间紧迫感、会员特权感、正品信任锚等 5 种思路，唯品会/Gilt/Veepee 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的特卖电商域名。",
+      intro:
+        "闪购平台的名字自带一只倒计时的钟：这个品类贩卖的不是商品是「错过就没了」的心跳——名字要在用户划过推送的半秒钟里完成「进去看看」的转化。第一素材库是时间紧迫感：闪、秒、限、flash、rush——倒计时是闪购的核心机制，把时间压力写进名字等于把促销逻辑做成品牌资产；但紧迫感要配上轻快的音节，念起来快的名字才配得上抢购的节奏。第二个抓手是会员特权感：闪购的鼻祖玩法是「凭邀请进场」——Gilt（镀金）、vente-privée（私人特卖）用「会员制」的措辞把清库存包装成「特权准入」，同一批尾货，「私享特卖」比「清仓甩卖」贵出一个身位。第三个抓手是正品信任锚：特卖模式天然背负「是不是假货」的原罪——唯品会「一家专门做特卖的网站」的定位句与「唯品」的正品暗示互为表里；名字里的品质词根是折扣模式的信任对冲。要注意折扣的体面感：用户想要便宜但不想显得廉价——名字的气质要站在「精明淘到好货」而不是「捡破烂」一边，这条线画错了品牌就再也高级不起来。场景上，名字活在 App 推送的弹窗、限时开抢的倒计时页和快递箱的胶带上。渠道上，闪购高度依赖复购与推送打开率：名字要短、要有节奏感、要在通知栏的一行字里自带「快点开」的动能。",
+      namingIdeas: [
+        "时间紧迫感：闪、秒、限、flash——倒计时是核心机制，把时间压力写进名字，但要配轻快音节才够快",
+        "会员特权感：私享、会、gilt——「凭邀请进场」的措辞把清库存包装成特权准入，同一批货贵出一个身位",
+        "正品信任锚：唯、真、品——特卖天然背负假货疑虑，品质词根是折扣模式的信任对冲",
+        "体面的便宜：站在「精明淘到好货」而不是「捡破烂」一边——这条线画错了品牌就高级不起来",
+        "推送测试：名字放进通知栏一行字里——短、有节奏、自带「快点开」的动能，念起来慢的名字抢不动",
+      ],
+      cases: [
+        { name: "唯品会", takeaway: "「唯+品」的正品暗示+「会」的会员感：三个字同时对冲假货疑虑、营造特权准入——配合「一家专门做特卖的网站」的定位句，中文闪购命名的完整答卷" },
+        { name: "Gilt", takeaway: "「镀金」的四个字母：奢侈品尾货特卖用一层金箔翻译成「够到轻奢」——把清库存卖出特权感，闪购品类气质命名的开山样本" },
+        { name: "Veepee（原 vente-privée）", takeaway: "「私人特卖」缩写成 VP 的昵称化改名：法语长名的国际化减法——保留「私享」基因又换来好念好记，改名不丢定位的欧洲范本" },
+        { name: "Zulily", takeaway: "zu + lily 的轻快造词：母婴闪购用百合的柔感+跳跃的音节讨好目标客群——品类无关的造词靠音感传递「每天有新惊喜」" },
+        { name: "Woot", takeaway: "游戏圈欢呼语「woot!」直接做名字：抢到便宜的那声欢呼就是品牌——情绪拟声命名的极致，一天一件的机制与名字的爽感同构" },
+      ],
+      pitfalls: [
+        "廉价感失控：「甩卖」「清仓」式词根把品牌钉死在地摊——用户要便宜不要掉价，体面感是闪购名的生命线",
+        "紧迫感透支：名字里全是「疯抢」「秒杀」，日常运营没有大促时名字就在说谎——机制词要留出常态化余地",
+        "忽略正品疑虑：折扣越深疑虑越重——名字没有品质锚点，客服每天都在回答「是正品吗」",
+        "音节拖沓：闪购的名字要念得比倒计时快——三个音节以上的名字在推送弹窗里天然慢半拍",
+      ],
+    },
+    en: {
+      label: "Flash sale e-commerce",
+      title: "How to Name a Flash Sale or Limited-Time Retail Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Flash sale e-commerce naming guide: urgency roots, members-only privilege, authenticity anchors, breakdowns of Gilt/Veepee/Zulily, recommended TLDs and pitfalls — then hunt an available flash-sale domain with AI.",
+      intro:
+        "A flash-sale brand's name carries a countdown clock inside it: this category sells not goods but the heartbeat of gone-if-you-blink — the name must convert a half-second glance at a push notification into a tap. The first material bin is urgency roots: flash, rush, dash, last — the countdown is the core mechanic, and writing time pressure into the name turns the promotion logic itself into brand equity; but urgency needs quick, light syllables — only a name that reads fast deserves the sprint it advertises. The second lever is members-only privilege: the category's founding move was entry by invitation — Gilt and vente-privée dressed inventory clearance as privileged access, and the same pallet of overstock sells a full tier higher as a \"private sale\" than as a \"clearance\". The third is the authenticity anchor: deep discounts carry the original sin of is-it-fake — quality roots inside the name are the trust hedge of the discount model; the deeper the markdown, the harder the name must vouch. Mind the dignity of cheap: customers want bargains without looking bargain-bin — the name must stand with the savvy find, never the rummage pile; draw that line wrong and the brand can never trade up again. On scenarios: the name lives in the push-notification banner, the countdown page at drop time, and the tape on the shipping box. On channels: flash sale lives and dies on repeat visits and notification open rates — the name must be short, rhythmic, and carry open-me-now momentum in a single notification line.",
+      namingIdeas: [
+        "Urgency roots: flash, rush, dash, last — the countdown is the mechanic; write time pressure into the name, but only quick syllables earn the sprint",
+        "Members-only privilege: private, gilt, club — entry-by-invitation wording dresses clearance as access; the same overstock sells a tier higher",
+        "Authenticity anchors: true, prime, verified — deep discounts carry the is-it-fake original sin; quality roots are the trust hedge",
+        "The dignity of cheap: stand with the savvy find, never the rummage pile — draw this line wrong and the brand can never trade up",
+        "The push test: drop the name into one notification line — short, rhythmic, open-me-now momentum; a slow-reading name loses the drop",
+      ],
+      cases: [
+        { name: "Gilt", takeaway: "Gilded in four letters: luxury overstock translated into affordable shine through one layer of gold leaf — clearance sold as privilege; the founding sample of flash-sale register naming" },
+        { name: "Veepee (ex vente-privée)", takeaway: "The private sale abbreviated into a nickname: French length subtracted for global reach — the private-access gene kept, pronounceability gained; Europe's lesson in renaming without losing the position" },
+        { name: "Zulily", takeaway: "Zu + lily, a light-footed coinage: mom-and-baby flash sales courting their audience with floral softness and bouncing syllables — category-free coinage carrying daily-surprise energy through pure sound" },
+        { name: "Woot", takeaway: "The gamer's victory cry registered as the brand: the whoop of scoring a bargain is the name — onomatopoeic emotion at its extreme, the one-deal-a-day mechanic and the name sharing one thrill" },
+        { name: "唯品会 (Vipshop)", takeaway: "Authenticity hint plus members-only feel in three characters, VIP built into the English name: fake-goods doubt hedged and privileged access staged at once — the complete Chinese flash-sale naming answer" },
+      ],
+      pitfalls: [
+        "Cheapness unchecked: clearance-flavored roots nail the brand to the bargain bin — customers want low prices without low status; dignity is the lifeline",
+        "Urgency overdrawn: a name that screams \"frenzy\" and \"seckill\" lies on ordinary days — mechanic words need headroom for daily operations",
+        "Ignoring the authenticity doubt: the deeper the discount, the heavier the suspicion — without a quality anchor, support answers \"is it genuine?\" all day",
+        "Dragging syllables: a flash-sale name must read faster than its countdown — three-plus syllables arrive half a beat late in the notification banner",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

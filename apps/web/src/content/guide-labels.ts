@@ -197,4 +197,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "hockey", zh: "冰球俱乐部", en: "Hockey clubs" },
   { slug: "pickleball", zh: "匹克球", en: "Pickleball" },
   { slug: "pilates", zh: "普拉提馆", en: "Pilates studios" },
+  { slug: "companyreg", zh: "公司注册代办", en: "Company formation services" },
+  { slug: "consulting", zh: "管理咨询", en: "Management consulting" },
+  { slug: "wholesale", zh: "B2B 批发平台", en: "B2B wholesale platforms" },
+  { slug: "trading", zh: "外贸公司", en: "Import & export trading" },
+  { slug: "coupon", zh: "优惠券导购", en: "Coupon & deals platforms" },
+  { slug: "flashsale", zh: "限时特卖电商", en: "Flash sale e-commerce" },
 ];

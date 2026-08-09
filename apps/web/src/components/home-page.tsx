@@ -1431,6 +1431,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个普拉提工作室品牌，寓意「身体的精修，不止是流汗」；气质要克制贵气、有精准与控制感、绝不像撸铁健身房；场景是白领搜「核心床普拉提」的对比列表、会员的体态对比照分享和精品工作室门头上都立得住。",
     en: "A Pilates studio brand. The name should frame the body, refined — not just sweat; the vibe is restrained and expensive-feeling, precise and controlled, never gym-adjacent; it must hold up in a professional's reformer-studio shortlist, members' posture-progress shares, and on the boutique storefront.",
   },
+  {
+    slug: "companyreg",
+    labelZh: "公司注册代办",
+    labelEn: "Company formation",
+    zh: "一个公司注册代办与企业服务品牌，寓意「创业第一步，交给我就简单了」；气质要正规可靠又不官僚、让第一次开公司的人放心；场景是创业者深夜搜「注册公司多少钱」的搜索页、代账会计的转介绍和写字楼电梯广告上都立得住。",
+    en: "A company formation and business services brand. The name should say your first step, made simple; the vibe is legitimate and reliable without bureaucracy, reassuring to first-time founders; it must hold up in a founder's midnight cost search, an accountant's referral, and the office-tower elevator ad.",
+  },
+  {
+    slug: "consulting",
+    labelZh: "管理咨询",
+    labelEn: "Consulting firms",
+    zh: "一个管理咨询与顾问公司品牌，寓意「帮客户看清方向、绕过障碍」；气质要贵在克制、有判断力和方法论感、配得上提案封面和董事会纪要；场景是客户 CFO 的预算审批单、提案 PPT 的右下角和 LinkedIn 公司页上都立得住。",
+    en: "A management consulting brand. The name should promise clarity and a path around obstacles; the vibe is expensive through restraint, carrying judgment and methodology, worthy of the proposal cover and board minutes; it must hold up on the CFO's budget line, the pitch deck's corner, and the firm's LinkedIn page.",
+  },
+  {
+    slug: "wholesale",
+    labelZh: "B2B 批发平台",
+    labelEn: "B2B wholesale",
+    zh: "一个 B2B 批发平台品牌，寓意「货全、量大、拿货价实在」；气质要有市场的烟火气又有数字化的效率感、让档口老板和品牌方都愿意来；场景是采购经理的供应商列表、档口老板的名片和展会易拉宝上都立得住。",
+    en: "A B2B wholesale platform brand. The name should say full stock, real quantity, honest trade prices; the vibe blends marketplace bustle with digital efficiency, welcoming both stall owners and brands; it must hold up in a purchasing manager's supplier list, a stall owner's business card, and the trade-show banner.",
+  },
+  {
+    slug: "trading",
+    labelZh: "外贸公司",
+    labelEn: "Import & export",
+    zh: "一个外贸公司与进出口贸易品牌，寓意「把货可靠地送到大洋彼岸」；气质要稳健可信、中英文都好念好拼、经得起海关银行的单据流转；场景是广交会的摊位楣板、形式发票的抬头和海外买家的供应商档案里都立得住。",
+    en: "An import-export trading brand. The name should promise goods delivered reliably across the ocean; the vibe is steady and credible, pronounceable and spellable in both languages, surviving customs and bank paperwork; it must hold up on the Canton Fair fascia, the invoice header, and the overseas buyer's supplier file.",
+  },
+  {
+    slug: "coupon",
+    labelZh: "优惠券导购",
+    labelEn: "Coupon & deals",
+    zh: "一个优惠券与折扣导购平台品牌，寓意「会买的人先来这儿查一下」；气质要精明不寒酸、像掌握情报的行家而不是抠门的省钱工具；场景是结算页前的搜索框、比价群的链接分享和浏览器插件的图标上都立得住。",
+    en: "A coupon and deals platform brand. The name should say smart buyers check here first; the vibe is savvy without shabbiness — an insider with intel, not a stingy penny-pincher tool; it must hold up in the pre-checkout search box, the deal-group link share, and the browser extension icon.",
+  },
+  {
+    slug: "flashsale",
+    labelZh: "限时特卖电商",
+    labelEn: "Flash sales",
+    zh: "一个限时特卖与闪购电商品牌，寓意「好货有限时，错过就没了」；气质要快而体面、有会员特权感和正品底气、绝不像清仓甩卖；场景是 App 推送的弹窗、限时开抢的倒计时页和快递箱的胶带上都立得住。",
+    en: "A flash sale e-commerce brand. The name should carry good finds, limited time — gone if you blink; the vibe is fast yet dignified, with members-only privilege and authenticity confidence, never a clearance bin; it must hold up in the push-notification banner, the countdown page, and the tape on the shipping box.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
