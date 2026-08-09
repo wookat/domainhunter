@@ -480,7 +480,7 @@
     ]
   },
   "vs": {
-    "count": 264,
+    "count": 270,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -745,7 +745,13 @@
       "mba-vs-school",
       "study-vs-courses",
       "forum-vs-community",
-      "review-vs-reviews"
+      "review-vs-reviews",
+      "hair-vs-salon",
+      "skin-vs-beauty",
+      "makeup-vs-boutique",
+      "homes-vs-house",
+      "boats-vs-travel",
+      "autos-vs-repair"
     ]
   }
 }
