@@ -468,7 +468,7 @@
     ]
   },
   "vs": {
-    "count": 258,
+    "count": 264,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -727,7 +727,13 @@
       "plumbing-vs-repair",
       "catering-vs-restaurant",
       "florist-vs-garden",
-      "church-vs-community"
+      "church-vs-community",
+      "courses-vs-academy",
+      "degree-vs-education",
+      "mba-vs-school",
+      "study-vs-courses",
+      "forum-vs-community",
+      "review-vs-reviews"
     ]
   }
 }
