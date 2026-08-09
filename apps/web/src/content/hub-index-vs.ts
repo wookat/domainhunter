@@ -274,4 +274,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "study-vs-courses", a: "study", b: "courses", title: { zh: ".study 和 .courses 怎么选：学习动作与课程目录的分工", en: ".study vs .courses: The Verb of Learning or The Product on the Shelf" } },
   { slug: "forum-vs-community", a: "forum", b: "community", title: { zh: ".forum 和 .community 怎么选：发帖式论坛与泛社群身份的分工", en: ".forum vs .community: The Threaded Board or The Broad Gathering" } },
   { slug: "review-vs-reviews", a: "review", b: "reviews", title: { zh: ".review 和 .reviews 怎么选：评测媒体与点评聚合的分工", en: ".review vs .reviews: The Editorial Verdict or The Rating Pile" } },
+  { slug: "hair-vs-salon", a: "hair", b: "salon", title: { zh: ".hair 和 .salon 怎么选：美发垂类与门店业态的分工", en: ".hair vs .salon: The Hair Vertical or The Shop Format" } },
+  { slug: "skin-vs-beauty", a: "skin", b: "beauty", title: { zh: ".skin 和 .beauty 怎么选：护肤垂类与美妆全域的分工", en: ".skin vs .beauty: The Skincare Vertical or The Whole Beauty Aisle" } },
+  { slug: "makeup-vs-boutique", a: "makeup", b: "boutique", title: { zh: ".makeup 和 .boutique 怎么选：彩妆品类与精品调性的分工", en: ".makeup vs .boutique: The Cosmetics Category or The Curated Vibe" } },
+  { slug: "homes-vs-house", a: "homes", b: "house", title: { zh: ".homes 和 .house 怎么选：房源清单与单栋场景的分工", en: ".homes vs .house: The Listing Pile or The Single Address" } },
+  { slug: "boats-vs-travel", a: "boats", b: "travel", title: { zh: ".boats 和 .travel 怎么选：船艇垂类与旅游行业的分工", en: ".boats vs .travel: The Vessel Vertical or The Industry Badge" } },
+  { slug: "autos-vs-repair", a: "autos", b: "repair", title: { zh: ".autos 和 .repair 怎么选：汽车行业与维修服务的分工", en: ".autos vs .repair: The Industry Nameplate or The Action Word" } },
 ];

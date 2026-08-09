@@ -5833,6 +5833,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Consumer rating aggregators", "User feedback & scoring platforms", "Merchant reputation & rating sites", "About $5 year-one fast validation"],
     },
   },
+  "hair-vs-salon": {
+    slug: "hair-vs-salon",
+    a: "hair",
+    b: "salon",
+    zh: {
+      title: ".hair 和 .salon 怎么选：美发垂类与门店业态的分工",
+      metaDescription: ".hair 把「头发」写进域名，适合美发垂类与发型师个人品牌；.salon 报的是门店业态，适合美发美甲美容综合沙龙。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都做美业，一个报品类，一个报业态。.hair 把「头发」直接写进域名——美发沙龙与理发店、发型师个人品牌、假发与接发电商、头皮护理产品用 name.hair，顾客搜「城市/风格 + hair」时域名就是搜索词本身，tokyo.hair 或 curly.hair 不用解释就知道做什么；欧莱雅发起、XYZ 注册局运营，首年约 $2（约 ¥11）、续费约 $13/年（约 ¥93），首年几乎零成本、长持也便宜，城市词与风格词库存极好。.salon 报的是「沙龙」这个门店业态——美发、美甲、美容、SPA 的综合门店用 name.salon，念出来就是招牌本身，不锁定单一品类；注册约 $11（约 ¥78）、续费约 $46/年（约 ¥330），续费是 .hair 的三倍多，但对美业客单价与复购频率来说仍是轻负担。判断标准：业务锁定头发——剪烫染、假发接发、防脱护理 → .hair 的品类语义最锐，SEO 上与「hair」搜索词严丝合缝；门店是综合美业——美发 + 美甲 + 美容一站式 → .salon 的业态口径更稳，扩品类不用改名。两点注意：一是 .hair 强指美发垂类，综合美容院用它会把定位说窄；二是行业后缀认知度仍在建立期，门头与名片把完整域名印清楚。连锁打法可以两头拿：.salon 做品牌主站，.hair 接美发垂类内容与预约页。命名上「城市/发型师名 + .hair」接本地与个人品牌，「店名/街区 + .salon」接门店与连锁。",
+      pickA: ["美发沙龙与理发店", "发型师个人品牌与作品集", "假发接发与头皮护理电商", "「城市/风格 + hair」搜索词域名"],
+      pickB: ["美发美甲美容综合门店", "连锁沙龙品牌主站", "扩品类不改名的业态口径", "「沙龙」招牌感的门店气质"],
+    },
+    en: {
+      title: ".hair vs .salon: The Hair Vertical or The Shop Format",
+      metaDescription:
+        ".hair writes the hair trade into the domain — for hair-focused businesses and stylist brands; .salon names the shop format — for full-service beauty salons. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in the beauty trade; one names the category, the other names the shop format. .hair writes hair into the domain — salons and barbershops, stylist personal brands, wig and extension shops, and scalp-care products on name.hair match exactly what clients search: city or style + hair; tokyo.hair or curly.hair needs no explanation. Launched by L'Oréal and run by XYZ Registry, about $2 for the first year and $13/yr to renew — near-zero cost to test, cheap to hold, with excellent inventory of city and style words. .salon names the shop format itself — full-service businesses spanning hair, nails, skincare and spa on name.salon sound like the sign above the door without locking into one category. At about $11 to register and $46/yr to renew — over three times .hair's renewal, yet still light against beauty-industry ticket sizes and repeat visits. The test: if the business is hair-locked — cuts, color, wigs and extensions, anti-hair-loss care → .hair's category semantics are sharpest and align perfectly with hair search phrases; if the shop is full-service beauty — hair plus nails plus skincare → .salon's format scope reads steadier and survives category expansion without a rename. Two cautions: .hair reads strictly hair-vertical, so a full-service salon narrows its positioning by using it; and recognition of industry suffixes is still building — print the full domain clearly on storefronts and cards. Chains can hold both: .salon for the brand flagship, .hair for hair-vertical content and booking pages. Naming: city or stylist name + .hair fits local and personal brands; shop or neighborhood name + .salon fits storefronts and chains.",
+      pickA: ["Salons & barbershops", "Stylist personal brands & portfolios", "Wig, extension & scalp-care e-commerce", "City/style + hair search-phrase domains"],
+      pickB: ["Full-service hair-nails-skin shops", "Salon chain brand flagships", "Category expansion without renaming", "The sign-above-the-door salon vibe"],
+    },
+  },
+  "skin-vs-beauty": {
+    slug: "skin-vs-beauty",
+    a: "skin",
+    b: "beauty",
+    zh: {
+      title: ".skin 和 .beauty 怎么选：护肤垂类与美妆全域的分工",
+      metaDescription: ".skin 说的就是「皮肤」，适合护肤品牌与皮肤管理机构；.beauty 覆盖美妆美容全域，适合综合美妆品牌与博主。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同为欧莱雅发起、XYZ 注册局运营的美妆系后缀，价格几乎同档，选择只看口径宽窄。.skin 说的就是「皮肤」——护肤品牌与美妆电商、皮肤科诊所与医美机构、成分党测评内容、美容仪设备用 name.skin，用户搜「诉求 + skin」时域名与搜索意图严丝合缝，glow.skin 或 clear.skin 自带品类联想；首年约 $2（约 ¥11）、续费约 $13/年（约 ¥93）。.beauty 覆盖美妆美容全域——彩妆、护肤、美发、美甲通吃的综合品牌、美妆博主与买手店用 name.beauty，等于把「美」写成品牌宣言；首年约 $2（约 ¥11）、续费约 $13/年（约 ¥94），与 .skin 同为美妆系性价比档，功效词、品牌词、人名库存都极好。判断标准：产品锁定护肤——功效护肤、皮肤管理、医美、成分内容 → .skin 的垂类语义最准，SEO 上正面接住 skincare 相关搜索；品牌横跨彩妆护肤多品类、或博主内容不设边界 → .beauty 的全域口径更稳，扩品类不用改名。三点注意：一是皮肤科诊疗内容有医疗属性，资质与执业信息要在站内写清；二是两个后缀便宜且互为最近替代，认真的品牌建议主用一个、防御注册另一个（连同 .makeup / .hair 一起保护）；三是行业后缀认知度仍在建立期，广告投放把完整域名突出。命名上「功效/成分 + .skin」接护肤垂类，「品牌/昵称 + .beauty」接综合品牌与个人 IP。",
+      pickA: ["护肤品牌与功效护肤电商", "皮肤科诊所与皮肤管理机构", "成分党测评与护肤内容", "「功效 + skin」搜索词域名"],
+      pickB: ["彩妆护肤多品类综合品牌", "美妆博主与个人 IP", "美妆买手店与集合电商", "扩品类不改名的全域口径"],
+    },
+    en: {
+      title: ".skin vs .beauty: The Skincare Vertical or The Whole Beauty Aisle",
+      metaDescription:
+        ".skin names skincare outright — for skincare brands and skin clinics; .beauty covers the whole beauty aisle — for multi-category brands and creators. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are L'Oréal-launched, XYZ-run beauty suffixes at nearly the same price, so the choice is purely about scope. .skin names skincare outright — skincare brands and beauty e-commerce, dermatology and aesthetic clinics, ingredient-focused review content, and beauty-device makers on name.skin match search intent exactly: goal + skin; glow.skin or clear.skin carries instant category recall. About $2 for the first year and $13/yr to renew. .beauty covers the whole aisle — brands spanning makeup, skincare, hair and nails, beauty creators and curated shops on name.beauty turn the suffix into a brand statement. Also about $2 year one and $13/yr to renew — the same value tier, with excellent inventory of benefit words, brand words and names on both. The test: if the product is skincare-locked — active-ingredient lines, skin management, aesthetics, ingredient content → .skin's vertical semantics are truest and meet skincare searches head-on; if the brand spans multiple beauty categories or a creator's content has no fixed lane → .beauty's full-aisle scope reads steadier and survives category expansion without a rename. Three cautions: dermatology content carries medical weight — publish credentials and practitioner details on the site; the two suffixes are each other's nearest substitute and both are cheap, so a serious brand should use one and defensively register the other (along with .makeup and .hair); and industry-suffix recognition is still building — feature the full domain prominently in ads. Naming: benefit or ingredient + .skin fits the skincare vertical; brand or handle + .beauty fits multi-category brands and personal IPs.",
+      pickA: ["Skincare brands & active-ingredient lines", "Dermatology & skin-management clinics", "Ingredient-review & skincare content", "Goal + skin search-phrase domains"],
+      pickB: ["Multi-category beauty brands", "Beauty creators & personal IPs", "Curated beauty shops & e-commerce", "Category expansion without renaming"],
+    },
+  },
+  "makeup-vs-boutique": {
+    slug: "makeup-vs-boutique",
+    a: "makeup",
+    b: "boutique",
+    zh: {
+      title: ".makeup 和 .boutique 怎么选：彩妆品类与精品调性的分工",
+      metaDescription: ".makeup 把「彩妆」写进域名，适合彩妆品牌与化妆师；.boutique 报的是精品小店调性，适合设计师品牌与买手店。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个报品类，一个报调性。.makeup 把「彩妆」直接写进域名——彩妆品牌与美妆电商、化妆师个人品牌与工作室、教程测评内容、婚礼影视化妆服务用 name.makeup，用户搜「场合/风格 + makeup」时域名就是搜索词，bridal.makeup 不用解释就知道做什么；欧莱雅发起、XYZ 注册局运营，首年约 $2（约 ¥11）、续费约 $13/年（约 ¥93），美妆系便宜好持有档，风格词与场合词库存极好。.boutique 报的是「精品小店」的调性——设计师品牌、买手店、小众香水与饰品、精品咨询与精品酒店用 name.boutique，法语血统自带「小而美、有筛选」的暗示，不锁定任何品类；注册约 $3（约 ¥19）、续费约 $26/年（约 ¥189），首年同为白菜价、续费约为 .makeup 的两倍。判断标准：业务锁定彩妆——产品线、化妆服务、教程内容 → .makeup 的品类语义最准，SEO 上正面接住 makeup 搜索词；卖的是「精选」而非单一品类——买手店、设计师集合、小众精品 → .boutique 的调性口径更贴，品类再杂也不违和。三点注意：一是 boutique 八个字母且 -que 结尾对非母语者有拼写门槛，主体名务必短；二是 .boutique 的「贵气」与平价走量定位错位，快消彩妆用 .makeup 更实在；三是行业后缀认知度仍在建立期，包装与名片把完整域名印清楚。命名上「场合/风格 + .makeup」接彩妆垂类，「品牌词 + .boutique」接精品定位——彩妆买手店两头都顺。",
+      pickA: ["彩妆品牌与美妆电商", "化妆师个人品牌与工作室", "彩妆教程与测评内容", "「场合 + makeup」搜索词域名"],
+      pickB: ["设计师品牌与买手店", "小众香水饰品等精品电商", "精品咨询与精品酒店", "「小而美」的精选调性"],
+    },
+    en: {
+      title: ".makeup vs .boutique: The Cosmetics Category or The Curated Vibe",
+      metaDescription:
+        ".makeup writes cosmetics into the domain — for makeup brands and artists; .boutique names the curated-shop vibe — for designer labels and select shops. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One names the category, the other names the vibe. .makeup writes cosmetics into the domain — makeup brands and beauty e-commerce, makeup artist brands and studios, tutorial and review content, and bridal or film makeup services on name.makeup match exactly what users search: occasion or style + makeup; bridal.makeup needs no explanation. Launched by L'Oréal and run by XYZ Registry, about $2 for the first year and $13/yr to renew — the cheap-to-hold tier of beauty suffixes, with excellent inventory of style and occasion words. .boutique names the curated-small-shop register — designer labels, select shops, niche fragrance and jewelry, boutique consultancies and boutique hotels on name.boutique carry the French-rooted \"small, chosen, special\" implication without locking into any category. About $3 to register and $26/yr to renew — a bargain first year with a renewal about twice .makeup's. The test: if the business is cosmetics-locked — product lines, artist services, tutorial content → .makeup's category semantics are truest and meet makeup searches head-on; if you sell curation rather than one category — select shops, designer collections, niche goods → .boutique's vibe fits however mixed the catalog gets. Three cautions: boutique runs eight letters with a -que ending that trips non-native spellers, so keep the brand word short; .boutique's premium register clashes with pile-them-high pricing — mass-market cosmetics read truer on .makeup; and industry-suffix recognition is still building — print the full domain clearly on packaging and cards. Naming: occasion or style + .makeup fits the cosmetics vertical; brand word + .boutique fits curated positioning — a cosmetics select shop wears either well.",
+      pickA: ["Makeup brands & beauty e-commerce", "Makeup artist brands & studios", "Tutorial & review content", "Occasion + makeup search-phrase domains"],
+      pickB: ["Designer labels & select shops", "Niche fragrance & jewelry e-commerce", "Boutique consultancies & hotels", "The small-and-curated register"],
+    },
+  },
+  "homes-vs-house": {
+    slug: "homes-vs-house",
+    a: "homes",
+    b: "house",
+    zh: {
+      title: ".homes 和 .house 怎么选：房源清单与单栋场景的分工",
+      metaDescription: "复数 .homes 贴「多套房源」的清单形态，适合房产经纪与找房平台；单数 .house 是场景词，适合单盘项目、家装品牌与工作室。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个字母 s 的差别，分开的是「一堆房源」与「一栋房子」。复数 .homes 贴的是清单形态——房产经纪与中介团队、住宅开发商、房源聚合与找房平台用 name.homes，买家搜「城市/区域 + homes」时域名就是搜索词本身，austin.homes 自带本地房产联想；原为受限后缀，2022 年 XYZ 注册局接手后任何人可注册，首年约 $2（约 ¥11）、续费约 $13/年（约 ¥93），房产后缀里最便宜好持有的一档，城市词与区域词库存极好。单数 .house 是场景词——单盘项目页、家装与住宅改造品牌、设计工作室、甚至机构名（fashion house 式）用 name.house，念出来就是完整品牌；注册约 $15（约 ¥107）、续费约 $36/年（约 ¥256），中档价位，续费约为 .homes 的三倍。判断标准：业务是「多套房源」的清单生意——经纪、聚合、开发商多盘矩阵 → 复数 .homes 的语义与 SEO 都最准，且矩阵注册按 $13/年 的续费价算总账也轻；业务围着「一栋/一个空间」转——单盘项目、家装品牌、工作室 → 单数 .house 的场景感更贴。三点注意：一是老资料可能仍写 .homes「需行业资质」，以注册商实时页面为准；二是 .house 也可能被读成机构名，定位靠首屏文案钉死；三是与已收录的 .estate / .properties / .rentals 分工——住宅买卖清单用 .homes，综合资产用 .estate，租赁用 .rentals。命名上「城市/区域 + .homes」接本地找房搜索，「楼盘名/品牌词 + .house」接单盘与家装品牌。",
+      pickA: ["房产经纪与中介团队", "房源聚合与找房平台", "开发商多盘矩阵站", "「城市 + homes」买家搜索词"],
+      pickB: ["单盘项目与楼盘页", "家装与住宅改造品牌", "设计工作室与机构名", "「一栋房子」的场景感"],
+    },
+    en: {
+      title: ".homes vs .house: The Listing Pile or The Single Address",
+      metaDescription:
+        "Plural .homes fits the multi-listing format — for agents and home-search platforms; singular .house is the scene word — for single developments, renovation brands and studios. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One letter s apart: many listings versus one house. Plural .homes fits the listing business — real estate agents and brokerage teams, residential developers, and listing aggregators or home-search platforms on name.homes match exactly what buyers search: city or neighborhood + homes; austin.homes carries instant local-real-estate recall. Formerly restricted, open to everyone since XYZ Registry took over in 2022 — about $2 for the first year and $13/yr to renew, the cheapest-to-hold tier among real estate suffixes, with excellent inventory of city and neighborhood words. Singular .house is the scene word — single development pages, renovation and interior brands, design studios, even institution names (the fashion-house register) on name.house read as a complete brand when spoken. About $15 to register and $36/yr to renew — mid tier, roughly three times .homes' renewal. The test: if the business is a pile of listings — brokerage, aggregation, a developer's multi-project matrix → the plural's semantics and SEO are truest, and a matrix priced at $13/yr renewals stays light; if the business orbits one building or one space — a single development, a renovation brand, a studio → the singular's scene register fits better. Three cautions: older references may still claim .homes requires industry credentials — trust the registrar's live page; .house can also read as an institution name, so pin the positioning with above-the-fold copy; and split the work with the already-listed .estate, .properties and .rentals — residential sales listings fit .homes, broad assets .estate, rentals .rentals. Naming: city or neighborhood + .homes catches local home-search; project or brand word + .house fits single developments and renovation brands.",
+      pickA: ["Agents & brokerage teams", "Listing aggregators & home search", "Developer multi-project matrices", "City + homes buyer search phrase"],
+      pickB: ["Single developments & project pages", "Renovation & interior brands", "Design studios & institution names", "The one-address scene register"],
+    },
+  },
+  "boats-vs-travel": {
+    slug: "boats-vs-travel",
+    a: "boats",
+    b: "travel",
+    zh: {
+      title: ".boats 和 .travel 怎么选：船艇垂类与旅游行业的分工",
+      metaDescription: ".boats 把「船」写进域名，适合船艇买卖与租船出海服务；.travel 是旅游行业的老牌后缀，适合旅行社与目的地平台。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都能做「出海游」的生意，一个报载具，一个报行业。.boats 把「船」直接写进域名——游艇与船艇买卖经纪、租船与包船出海服务、码头与船艇维护、航海装备用 name.boats，客户搜「地点/船型 + boats」时域名就是搜索词，miami.boats 不用解释就知道做什么；原为受限后缀，2022 年 XYZ 注册局接手后任何人可注册，首年约 $2（约 ¥11）、续费约 $13/年（约 ¥93），垂类后缀里便宜好持有档，港口词与船型词库存极好。.travel 是旅游行业的老牌后缀——旅行社与定制游、目的地营销、机票酒店平台、旅游内容站用 name.travel，japan.travel 式官方先例众多，行业身份一眼即懂；注册约 $16（约 ¥115）、续费约 $119/年（约 ¥857），续费明显偏贵，预算务必按续费价算。判断标准：生意围着船转——船艇买卖、租船包船、码头服务 → .boats 的载具语义最锐，「港口 + boats」正面接住本地搜索且持有成本不到 .travel 的零头；生意是更宽的旅游服务——多目的地、多玩法、机酒打包 → .travel 的行业身份更稳，船只是产品线之一时别把域名绑死在载具上。三点注意：一是船艇买卖高客单、决策链长，域名之外把资质与成交记录展示清楚；二是豪华游艇定位可斟酌同系的 .yachts；三是老资料可能仍写 .boats「需行业资质」，以注册商实时页面为准。租船出海的本地生意两头都顺：预算紧用 .boats，做全线旅游再上 .travel。命名上「港口/船型 + .boats」接船艇垂类，「目的地/品牌 + .travel」接旅游行业站。",
+      pickA: ["游艇与船艇买卖经纪", "租船与包船出海服务", "码头与船艇维护装备", "首年约 ¥11 的轻成本持有"],
+      pickB: ["旅行社与定制游平台", "目的地营销与官方站", "机票酒店等打包旅游产品", "多玩法多目的地的行业口径"],
+    },
+    en: {
+      title: ".boats vs .travel: The Vessel Vertical or The Industry Badge",
+      metaDescription:
+        ".boats writes the vessel into the domain — for boat sales, charters and marinas; .travel is the tourism industry's veteran suffix — for agencies and destination platforms. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both can sell a day on the water; one names the vessel, the other names the industry. .boats writes the boat into the domain — boat and yacht brokers, charter and rental services, marinas and maintenance, and marine gear on name.boats match exactly what customers search: place or boat type + boats; miami.boats needs no explanation. Formerly restricted, open to everyone since XYZ Registry took over in 2022 — about $2 for the first year and $13/yr to renew, the cheap-to-hold tier of vertical suffixes, with excellent inventory of harbor and boat-type words. .travel is tourism's veteran suffix — agencies and custom tours, destination marketing, flight-and-hotel platforms, and travel content on name.travel carry instant industry identity, with official precedents like japan.travel everywhere. About $16 to register and $119/yr to renew — a clearly premium renewal, so budget at the renewal rate. The test: if the business orbits the vessel — boat sales, charters, marina services → .boats' semantics are sharpest, harbor + boats meets local search head-on, and the holding cost is a fraction of .travel's; if the business is broader travel — multiple destinations, activities, packages — and boats are just one product line → .travel's industry badge reads steadier than chaining the brand to one vessel. Three cautions: boat sales are high-ticket with long decision cycles, so display credentials and sale records beyond the domain; a luxury-yacht positioning may fit the sibling .yachts better; and older references may still claim .boats requires credentials — trust the registrar's live page. A local charter business wears either: start on .boats when budget-tight, add .travel when going full-line tourism. Naming: harbor or boat type + .boats fits the vessel vertical; destination or brand + .travel fits industry sites.",
+      pickA: ["Boat & yacht brokers", "Charter & rental services", "Marinas, maintenance & marine gear", "About $2 year-one light holding cost"],
+      pickB: ["Travel agencies & custom tours", "Destination marketing & official sites", "Flight-hotel package platforms", "Multi-destination industry scope"],
+    },
+  },
+  "autos-vs-repair": {
+    slug: "autos-vs-repair",
+    a: "autos",
+    b: "repair",
+    zh: {
+      title: ".autos 和 .repair 怎么选：汽车行业与维修服务的分工",
+      metaDescription: ".autos 把「汽车」写进域名，适合车行与二手车平台；.repair 报的是「修」这个动作，适合汽修门店与各类维修服务。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都能挂在汽修门店的招牌上，一个报行业，一个报动作。.autos 把「汽车」直接写进域名——二手车买卖与车行、汽车租赁与订阅、汽修改装门店、选车资讯内容用 name.autos，买家搜「城市/品类 + autos」时域名就是搜索词，dallas.autos 自带本地车行联想；原为受限后缀，2022 年 XYZ 注册局接手后任何人可注册，首年约 $2（约 ¥11）、续费约 $13/年（约 ¥93）——对比动辄数千美元的 .auto / .car / .cars，是汽车垂类唯一便宜好持有的选择，城市词与品类词库存极好。.repair 报的是「修」——汽修之外，手机维修、家电维修、房屋修缮都在射程内，phone.repair 式的「品类 + .repair」读出来就是搜索词本身；注册约 $8（约 ¥56）、续费约 $29/年（约 ¥211），首年便宜、续费跳档，预算按续费价算。判断标准：生意是汽车行业的宽面——买卖、租赁、改装、资讯，修车只是其一 → .autos 的行业口径最稳，扩业务不用改名且持有成本更低；生意钉死「维修」这个动作——专修变速箱、钣金喷漆、连锁快修 → .repair 的动作语义更锐，「城市 + 品类 + .repair」正面接住本地维修搜索。三点注意：一是 .autos 与天价单数 .auto 只差一个字母，对外沟通强调复数拼写；二是维修是强本地生意，Google 商家资料与报价透明比域名更影响获客；三是二手车与维修都重信任，车况报告、保修承诺写在站内。汽修连锁可以两头拿：.autos 做品牌主站，「品类 + .repair」接各专修落地页。命名上「城市 + .autos」接本地车行，「品类 + .repair」接垂类维修搜索。",
+      pickA: ["二手车买卖与本地车行", "汽车租赁与订阅服务", "改装门店与选车内容", "买卖租修全线的行业口径"],
+      pickB: ["汽修与专项维修门店", "手机家电等泛维修服务", "连锁快修品牌落地页", "「品类 + repair」本地搜索词"],
+    },
+    en: {
+      title: ".autos vs .repair: The Industry Nameplate or The Action Word",
+      metaDescription:
+        ".autos writes the automobile into the domain — for dealers and used-car platforms; .repair names the action — for auto shops and every repair trade. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both fit an auto shop's sign; one names the industry, the other names the action. .autos writes the automobile into the domain — used-car dealers and lots, rental and subscription services, repair and tuning shops, and buying-guide content on name.autos match exactly what buyers search: city or category + autos; dallas.autos carries instant local-dealer recall. Formerly restricted, open to everyone since XYZ Registry took over in 2022 — about $2 for the first year and $13/yr to renew; against the thousands-of-dollars .auto, .car and .cars, it's the only cheap-to-hold choice in the automotive vertical, with excellent inventory of city and category words. .repair names the action — beyond auto shops, phone repair, appliance repair and home repair all fit; category + .repair reads as the search phrase itself, phone.repair style. About $8 to register and $29/yr to renew — a cheap first year with a renewal jump, so budget at renewal rates. The test: if the business spans the automotive trade — sales, rentals, tuning, content, with repair as one line → .autos' industry scope reads steadier, survives expansion without a rename, and holds cheaper; if the business is nailed to the act of fixing — transmission specialists, body shops, quick-fix chains → .repair's action semantics are sharper, and city + category + .repair meets local repair searches head-on. Three cautions: .autos sits one letter from the sky-priced singular .auto — stress the plural spelling in all communications; repair is a hyper-local trade where Google Business profiles and transparent quotes move customers more than the domain; and both used cars and repairs run on trust — publish condition reports and warranty terms on the site. A repair chain can hold both: .autos for the brand flagship, category + .repair for specialist landing pages. Naming: city + .autos fits local dealers; category + .repair fits vertical repair searches.",
+      pickA: ["Used-car dealers & local lots", "Car rental & subscription services", "Tuning shops & buying-guide content", "Full-line sales-rent-fix industry scope"],
+      pickB: ["Auto & specialist repair shops", "Phone, appliance & home repair trades", "Quick-fix chain landing pages", "Category + repair local search phrase"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
