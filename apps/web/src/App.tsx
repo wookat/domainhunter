@@ -13,7 +13,7 @@ import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { useI18n } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
 import { friendlyError, friendlyHttpError } from "@/lib/utils";
-import type { Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types";
+import type { AiErrorKind, Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types";
 
 // 按路由懒加载：这些页面不在首屏关键路径上，拆包降低首屏 JS。
 // chunk 加载失败（新部署后旧 hashed 文件 404）时自动整页刷新一次拿新版本，避免白屏。
@@ -175,6 +175,8 @@ export default function App() {
   const [currentRound, setCurrentRound] = useState(0);
   const [running, setRunning] = useState(false);
   const [error, setError] = useState("");
+  // R264：AI 上游错误类别：quota 类重试无效，不展示重试 CTA
+  const [errorKind, setErrorKind] = useState<AiErrorKind | null>(null);
   // R247：多轮低产出提示（worker 每次搜索至多发一次 hint 事件）
   const [lowYieldHint, setLowYieldHint] = useState(false);
   const [logs, setLogs] = useState<LogEntry[]>([]);
@@ -230,6 +232,8 @@ export default function App() {
     });
 
   const availableCount = rows.filter((r) => r.status === "available").length;
+  // R267：quota（401/402/403）重试必然失败，抑制所有会触发 AI 的入口
+  const quotaExhausted = errorKind === "quota";
 
   useEffect(() => {
     if (mode === "home") prefetchSearchChunks();
@@ -285,7 +289,21 @@ export default function App() {
     } else if (ev.type === "done") {
       // no-op：running 状态在流结束时统一收尾
     } else if (ev.type === "error") {
-      setError(t("error.ai"));
+      const kind = ev.errorKind ?? "unknown";
+      setErrorKind(kind);
+      setError(
+        t(
+          kind === "quota"
+            ? "error.ai.quota"
+            : kind === "rate-limit"
+              ? "error.ai.rateLimit"
+              : kind === "upstream"
+                ? "error.ai.upstream"
+                : kind === "network"
+                  ? "error.ai.network"
+                  : "error.ai",
+        ),
+      );
     } else if (ev.domain) {
       const status = ev.status as Status;
       setLogs((prev) => [...prev.slice(-19), { domain: ev.domain!, status, cached: ev.cached }]);
@@ -326,6 +344,7 @@ export default function App() {
     }
     setLogs([]);
     setError("");
+    setErrorKind(null);
     setLowYieldHint(false);
     setRunning(true);
     setMode("agent");
@@ -610,13 +629,14 @@ export default function App() {
         <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
           <div className="flex items-center justify-between gap-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5">
             <p className="text-sm text-destructive">{error}</p>
-            {!running && lastRunRef.current && (
+            {!running && errorKind !== "quota" && lastRunRef.current && (
               <button
                 type="button"
                 className="shrink-0 rounded-md border border-destructive/40 px-3 py-1.5 text-sm font-semibold text-destructive transition-colors hover:bg-destructive/20"
                 onClick={() => {
                   const last = lastRunRef.current!;
                   setError("");
+                  setErrorKind(null);
                   void run(last.v, last.opts);
                 }}
               >
@@ -665,6 +685,7 @@ export default function App() {
             fallback={understanding}
             onRefine={refine}
             running={running}
+            quotaExhausted={quotaExhausted}
           />
         </div>
       )}
@@ -679,6 +700,7 @@ export default function App() {
           onBackToResults={rows.length > 0 ? () => setMode("results") : undefined}
           onOpenAdvanced={openAdvanced}
           shortlist={shortlist}
+          quotaExhausted={quotaExhausted}
         />
       )}
       {mode === "agent" && (
@@ -726,6 +748,7 @@ export default function App() {
           onMoreAroundLocked={() => void run(values, { more: true, aroundLocked: true })}
           running={running}
           moreDisabled={!values.description.trim()}
+          quotaExhausted={quotaExhausted}
           dislikedHas={(label) => disliked.has(label)}
           onToggleDislike={toggleDislike}
         />

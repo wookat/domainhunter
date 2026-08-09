@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { nanoid } from "nanoid";
 import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
-import { AI_THEMES, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiTheme, type DislikedItem } from "./ai";
+import { AI_THEMES, classifyAiError, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
@@ -16,7 +16,8 @@ import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
 import { tldPrice } from "./types";
 
-type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace };
+// LLM_API_BASE：仅供本地 wrangler dev 指向假上游验证错误路径（R264），生产不设置
+type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace; LLM_API_BASE?: string };
 
 const app = new Hono<{ Bindings: Bindings }>();
 
@@ -59,6 +60,8 @@ interface DayUsage {
   byTld: Record<string, number>;
   fast: number;
   refine: number;
+  /** 当日 AI 上游错误分类计数（R264，仅数字；旧数据无此字段） */
+  aiErrors?: Partial<Record<AiErrorKind, number>>;
 }
 
 async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: boolean, refine: boolean): Promise<void> {
@@ -70,6 +73,17 @@ async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: bool
     if (fast) cur.fast += 1;
     if (refine) cur.refine += 1;
     for (const t of tlds) cur.byTld[t] = (cur.byTld[t] ?? 0) + 1;
+    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
+  } catch { /* 统计失败不影响主流程 */ }
+}
+
+/** 当日 AI 上游错误分类计数 +1（R264，仅计数；KV 非原子，允许少量误差） */
+async function bumpAiError(kv: KVNamespace | undefined, kind: AiErrorKind): Promise<void> {
+  if (!kv) return;
+  try {
+    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
+    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
+    cur.aiErrors = { ...cur.aiErrors, [kind]: (cur.aiErrors?.[kind] ?? 0) + 1 };
     await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
   } catch { /* 统计失败不影响主流程 */ }
 }
@@ -226,7 +240,8 @@ app.post("/api/ai-search", async (c) => {
       const roundGains: number[] = [];
       let prevAvailableCount = 0;
       let lowYieldHintSent = false;
-      const understandingDone = generateUnderstanding(description, apiKey, lang)
+      const llmBase = c.env.LLM_API_BASE || undefined;
+      const understandingDone = generateUnderstanding(description, apiKey, lang, llmBase)
         .then(async (u) => {
           if (u) await emit({ type: "understanding", ...u });
         })
@@ -249,9 +264,14 @@ app.post("/api/ai-search", async (c) => {
               round,
               lang,
               guard,
+              baseUrl: llmBase,
             });
           } catch (e) {
-            await emit({ type: "error", round, detail: String(e), guard });
+            // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；
+            // detail 只含既有错误短码（llm-http-402 等），不含 key 与上游响应体
+            const errorKind = classifyAiError(e);
+            await emit({ type: "error", round, errorKind, detail: String(e), guard });
+            await bumpAiError(c.env.CACHE, errorKind);
             break;
           }
           const fresh = candidates.filter((x) => !tried.has(x.label));
@@ -1361,7 +1381,7 @@ const HOME_FAQ = {
     { q: "核验结果准确吗？", a: "每个域名经 DNS + RDAP + WHOIS 三级核验，可注册状态来自注册局权威数据；注册前建议在注册商页面再确认一次。" },
     { q: "使用收费吗？", a: "完全免费。AI 搜索有每小时次数限制；即输即查、更多后缀与前后缀变体核验不限量、不消耗 AI 次数。" },
     { q: "会自动帮我注册域名吗？", a: "不会。我们只提供核验结果与注册商跳转链接（如 Porkbun），注册和付费在注册商完成。" },
-    { q: "支持哪些后缀？", a: "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu/page/bio/ink/moe/lol/uk/fm/one/cool/red/today/best/wtf/pizza/bar/cafe/money/gold/band/cash/city/estate/expert/farm/blue/pink/black/ninja/rocks/pet/academy/school/coach/care/doctor/restaurant/boutique/clinic/dental/fitness/photos/gallery/salon/yoga/coffee/wine/kitchen/garden/photography/events/solutions/services/consulting/software/marketing/systems/ventures/capital/guru/tips。" },
+    { q: "支持哪些后缀？", a: "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu/page/bio/ink/moe/lol/uk/fm/one/cool/red/today/best/wtf/pizza/bar/cafe/money/gold/band/cash/city/estate/expert/farm/blue/pink/black/ninja/rocks/pet/academy/school/coach/care/doctor/restaurant/boutique/clinic/dental/fitness/photos/gallery/salon/yoga/coffee/wine/kitchen/garden/photography/events/solutions/services/consulting/software/marketing/systems/ventures/capital/guru/tips/directory/exchange/institute/international/partners/support/plus/house/market/watch/style/show/website/technology/community/education/training/love。" },
     { q: "我的搜索会被保存吗？", a: "不保存输入内容和 IP，只记录匿名的聚合次数统计；收藏清单保存在你自己的浏览器本地。" },
   ],
   en: [
@@ -1369,7 +1389,7 @@ const HOME_FAQ = {
     { q: "How accurate are the availability checks?", a: "Every domain goes through DNS + RDAP + WHOIS checks against authoritative registry data. We still recommend a final confirmation on the registrar's page before buying." },
     { q: "Is it free?", a: "Completely free. AI search has an hourly rate limit; instant checks, extra-TLD checks, and prefix/suffix variants are unlimited and never use AI quota." },
     { q: "Will it register domains for me automatically?", a: "No. We only provide verification results and registrar links (e.g. Porkbun) — registration and payment happen at the registrar." },
-    { q: "Which TLDs are supported?", a: "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu/page/bio/ink/moe/lol/uk/fm/one/cool/red/today/best/wtf/pizza/bar/cafe/money/gold/band/cash/city/estate/expert/farm/blue/pink/black/ninja/rocks/pet/academy/school/coach/care/doctor/restaurant/boutique/clinic/dental/fitness/photos/gallery/salon/yoga/coffee/wine/kitchen/garden/photography/events/solutions/services/consulting/software/marketing/systems/ventures/capital/guru/tips via the “more TLDs” button." },
+    { q: "Which TLDs are supported?", a: "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu/page/bio/ink/moe/lol/uk/fm/one/cool/red/today/best/wtf/pizza/bar/cafe/money/gold/band/cash/city/estate/expert/farm/blue/pink/black/ninja/rocks/pet/academy/school/coach/care/doctor/restaurant/boutique/clinic/dental/fitness/photos/gallery/salon/yoga/coffee/wine/kitchen/garden/photography/events/solutions/services/consulting/software/marketing/systems/ventures/capital/guru/tips/directory/exchange/institute/international/partners/support/plus/house/market/watch/style/show/website/technology/community/education/training/love via the “more TLDs” button." },
     { q: "Do you store my searches?", a: "We never store your input or IP — only anonymous aggregate counters. Your shortlist lives in your own browser's local storage." },
   ],
 } as const;
@@ -1773,7 +1793,7 @@ app.get("/why", async (c) => {
 });
 
 // 内容最后更新日期（sitemap <lastmod>）：每次内容页增减/改写时更新
-const CONTENT_LASTMOD = "2026-08-08";
+const CONTENT_LASTMOD = "2026-08-09";
 
 const sitemapPaths = () => ["/", "/prices", "/why", "/mcp", "/advanced", "/tld", "/guide", "/vs", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
 

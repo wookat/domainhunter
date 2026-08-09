@@ -33,6 +33,9 @@ export interface RoundInfo {
   filtered?: number;
 }
 
+/** AI 上游错误类别（R264）：quota 类重试无效，其余可重试 */
+export type AiErrorKind = "quota" | "rate-limit" | "upstream" | "network" | "unknown";
+
 /** 防线统计元数据（R238）：各防线丢弃计数 + 补发/重试触发，只计数不含候选内容 */
 export interface GuardMeta {
   dropped: Record<string, number>;
@@ -56,6 +59,8 @@ export interface StreamEvent {
   target?: number;
   reachedTarget?: boolean;
   detail?: string;
+  /** error 事件的上游错误类别（R264，旧事件无此字段） */
+  errorKind?: AiErrorKind;
   domain?: string;
   status?: Status;
   meaning?: string;
@@ -225,6 +230,24 @@ const TLD_PRICES: Record<string, TldPrice> = {
   capital: { first: 41, renew: 412 },
   guru: { first: 19, renew: 248 },
   tips: { first: 59, renew: 182 },
+  directory: { first: 33, renew: 159 },
+  exchange: { first: 44, renew: 226 },
+  institute: { first: 56, renew: 159 },
+  international: { first: 59, renew: 182 },
+  partners: { first: 56, renew: 412 },
+  support: { first: 48, renew: 159 },
+  plus: { first: 70, renew: 315 },
+  house: { first: 107, renew: 256 },
+  market: { first: 256, renew: 256 },
+  watch: { first: 22, renew: 256 },
+  style: { first: 52, renew: 226 },
+  show: { first: 59, renew: 256 },
+  website: { first: 14, renew: 152 },
+  technology: { first: 70, renew: 167 },
+  community: { first: 59, renew: 263 },
+  education: { first: 152, renew: 204 },
+  training: { first: 85, renew: 241 },
+  love: { first: 63, renew: 167 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {

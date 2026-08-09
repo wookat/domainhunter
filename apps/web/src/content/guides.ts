@@ -7567,6 +7567,1140 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  petphoto: {
+    slug: "petphoto",
+    tlds: [
+      { tld: "com", zh: "预约与档期沟通的信任底线，家长把毛孩子交给你之前先看域名", en: "The trust baseline for bookings — pet parents check the domain before handing over their fur kids" },
+      { tld: "studio", zh: "「工作室」语义直给，摄影行业的天然后缀", en: "The studio register outright — photography's native suffix" },
+      { tld: "pet", zh: "「宠物」语义直给，一眼锁定客群与圈层", en: "The pet register outright — locks the audience in one glance" },
+    ],
+    zh: {
+      label: "宠物摄影",
+      title: "宠物摄影工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "宠物摄影工作室命名指南：拟人视角、瞬间词根、毛孩子昵称等 5 种思路，The Dogist/爪印/Pawtrait 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的宠物摄影域名。",
+      intro:
+        "宠物摄影的名字要先认清客户是谁：付钱的是「家长」，拍的是「孩子」——这个行业本质上是亲子摄影的平行宇宙，名字必须站在拟人视角上说话。「给狗拍照」和「给毛孩子留下成长纪念」是两个价位、两种客群，名字的气质直接决定你落在哪一档。命名的第一素材库是拟人词根：家、宝贝、成长、纪念日都在谱系上，把宠物当家庭成员的措辞天然筛选出高客单客户。第二个抓手是瞬间词根：摄影卖的是「留住那一刻」——快门、定格、瞬间、moment 这类词把服务价值说在名字里，且与「宠物寿命短于人类」的情感暗线共振，宠物摄影最贵的订单从来是纪念性拍摄。第三个抓手是毛孩子昵称与身体部位的可爱化：爪、尾巴、耳朵、鼻头，paw 系造词（Pawtrait = paw + portrait）在英文市场已成品类惯例，中文的「爪印」「尾巴」同理——具体的身体意象比抽象的「萌宠」更有画面感。渠道上，宠物摄影获客高度依赖小红书/Instagram 的作品流，名字要能当话题标签用：短、无歧义、打字不费劲。还要留半径：成熟工作室普遍延展宠物写真周边（台历、油画布）、上门拍摄与殡葬纪念摄影，名字锁死「狗」，猫主人就不进店了——除非你刻意只做犬类生意。",
+      namingIdeas: [
+        "拟人视角：家、宝贝、成长、纪念——把宠物说成家庭成员，天然筛选愿意为情感付费的高客单家长",
+        "瞬间词根：定格、快门、moment——把「留住那一刻」写进名字，与纪念性拍摄的情感暗线共振",
+        "爪系造词：爪印、Pawtrait、尾巴——具体的身体意象比抽象的「萌宠」更有画面感，英文 paw 双关是品类惯例",
+        "话题标签测试：名字要能直接当小红书/Instagram 标签用——短、无歧义、打字不费劲，作品流就是你的获客主场",
+        "物种半径决策：只做犬类就大方用 dog/汪，全物种就选中性词根——猫主人不会走进一家名字里全是狗的店",
+      ],
+      cases: [
+        { name: "The Dogist", takeaway: "dog + -ist 后缀造词：「拍狗的人」被说成一种职业身份，Instagram 千万粉的街头犬摄影账号——身份感命名让个人 IP 与品牌合一" },
+        { name: "Pawtrait", takeaway: "paw（爪）+ portrait（肖像）的教科书双关：一个词同时说清「宠物」与「写真」，英文市场宠物摄影的品类级造词" },
+        { name: "爪印摄影", takeaway: "「爪印」的具体意象：既是宠物的签名又是「留下印记」的纪念隐喻——中文市场里瞬间词根与身体意象的双关结合" },
+        { name: "Tiny Tails", takeaway: "tiny（小）+ tails（尾巴）的头韵：可爱感拉满且暗示「小生命的故事」（tale 谐音）——头韵+谐音的复合技巧" },
+        { name: "他拍摄影", takeaway: "「他」的拟人称谓直接把宠物提到人的位置：不用萌字不用宠字，一个代词完成拟人视角——克制命名的范本" },
+      ],
+      pitfalls: [
+        "「萌宠」堆砌：萌宠摄影、萌宠写真千店一面，检索无独占性，小红书标签里永远混在同行堆里",
+        "锁死单一物种：名字全是「汪」「犬」，猫与异宠家长直接过滤掉你——除非刻意只做犬类，否则留物种半径",
+        "只有可爱没有专业：全名都是叠词萌语，高客单的纪念性拍摄客户会怀疑你的灯光与修图水准",
+        "忽略话题标签可用性：名字里有生僻字或易错拼写，作品流传播时每个标签都在漏水",
+      ],
+    },
+    en: {
+      label: "Pet photography",
+      title: "How to Name a Pet Photography Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Pet photography naming guide: humanizing registers, moment roots, paw-pun coinages, breakdowns of The Dogist/Pawtrait/Tiny Tails, recommended TLDs and pitfalls — then hunt an available pet photography domain with AI.",
+      intro:
+        "A pet photography name must first be clear about who the customer is: the payer is a parent, the subject is a child — this industry is family photography's parallel universe, and the name has to speak from a humanizing register. \"Photos of your dog\" and \"a keepsake of your fur kid growing up\" are two price tiers and two audiences, and the name's register decides which tier you land in. The first material bin is humanizing roots: family, baby, growing up, anniversary all live on the spectrum — phrasing that treats pets as family members naturally filters for high-ticket clients. The second lever is moment roots: photography sells \"holding onto that instant\" — shutter, freeze, moment — and these words carry the service's value in the name while resonating with the quiet emotional line that pets' lives are shorter than ours; the most expensive orders in this category are always commemorative shoots. The third is cute-ified anatomy: paws, tails, ears, noses — paw coinages (Pawtrait = paw + portrait) are already category convention in English, and the same logic works in any language, because a concrete body image beats an abstract \"cute pets\" every time. On channels: pet photographers acquire clients through Instagram and social feeds, so the name must work as a hashtag — short, unambiguous, effortless to type. Finally, leave radius: mature studios expand into print merchandise, on-location shoots and memorial photography, and a name welded to dogs keeps cat parents from ever walking in — unless dog-only is deliberately your lane.",
+      namingIdeas: [
+        "Humanizing registers: family, baby, growing up, anniversary — treat pets as family members and naturally filter for parents who pay for emotion",
+        "Moment roots: freeze, shutter, moment — write \"holding onto that instant\" into the name and resonate with the commemorative-shoot emotional line",
+        "Paw coinages: Pawtrait, tiny tails — concrete anatomy beats abstract cuteness, and the paw pun is category convention in English",
+        "The hashtag test: the name must work as an Instagram tag outright — short, unambiguous, effortless to type; the feed is your storefront",
+        "Decide the species radius: dog-only studios can own dog words proudly; full-service studios need neutral roots — cat parents won't enter a store named all-dog",
+      ],
+      cases: [
+        { name: "The Dogist", takeaway: "dog + the -ist suffix: \"one who photographs dogs\" framed as a professional identity — the multi-million-follower street-dog account where personal IP and brand merge in one coinage" },
+        { name: "Pawtrait", takeaway: "paw + portrait, the textbook pun: one word saying both \"pet\" and \"fine portrait\" — the category-defining coinage of English-market pet photography" },
+        { name: "Tiny Tails", takeaway: "Alliteration plus a homophone: tails/tales whispers \"small lives, big stories\" — cuteness and narrative in two four-letter words" },
+        { name: "Puptrait", takeaway: "The pup variant of the paw pun: narrowing to dogs on purpose, the Baltimore studio proving a species-locked name works when dog-only is genuinely the lane" },
+        { name: "Fur & Feathers", takeaway: "Two textures as the brand: covering dogs, cats and birds in one alliterative sweep — the neutral-radius play for full-species studios" },
+      ],
+      pitfalls: [
+        "Piling on \"cute pets\": generic cuteness names look identical in every feed and own nothing in search or hashtags",
+        "Welding the name to one species: an all-dog name filters out cat and exotic parents — leave radius unless dog-only is deliberately the lane",
+        "All cute, no craft: a name that's pure baby talk makes high-ticket commemorative clients doubt your lighting and retouching",
+        "Ignoring hashtag usability: obscure characters or easy misspellings leak referrals every time the work gets shared",
+      ],
+    },
+  },
+  campgear: {
+    slug: "campgear",
+    tlds: [
+      { tld: "com", zh: "装备客单价不低，跨境电商与独立站的信任底线", en: "Gear isn't cheap — the trust baseline for DTC and cross-border stores" },
+      { tld: "shop", zh: "「商店」语义直给，装备零售的天然后缀", en: "The shop register outright — gear retail's native suffix" },
+      { tld: "co", zh: "户外品牌圈的利落替身，短一个字母更有装备感", en: "The outdoor-brand stand-in — one letter sleeker, plenty of gear cred" },
+    ],
+    zh: {
+      label: "露营装备",
+      title: "露营装备品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "露营装备品牌命名指南：荒野词根、可靠感金属词、轻量化叙事等 5 种思路，Snow Peak/牧高笛/BigAgnes 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的露营装备域名。",
+      intro:
+        "露营装备的名字要过两道关：第一道是「可靠感」——帐篷漏不漏雨、炉头会不会翻，用户把安全交给你的产品，名字先要让人放心；第二道是「向往感」——装备是通往山野的门票，名字要让人看见雪峰、篝火与星空。这两道关决定了品类的命名光谱：一端是硬核功能派（材质、结构、参数词根），一端是荒野浪漫派（山、雪、风、鹿），最成功的品牌往往两头各占一点。命名的第一素材库是荒野意象：山峰、雪线、溪谷、篝火都在谱系上，Snow Peak（雪峰）是教科书——具体的自然意象比抽象的「户外」更有画面。第二个抓手是可靠感词根：金属、岩石、锚、盾这类「硬」词天然传递结构强度，适合帐篷、炉具等安全强相关品类。第三个抓手是轻量化叙事：超轻（UL）是露营装备近十年最大的技术叙事，克数敏感的进阶玩家看到 light、feather、zero 就走不动路——但要注意别与「结实」的第一关打架，轻与可靠的平衡本身就是品牌故事。渠道上，装备品牌活在评测视频、种草笔记与海淘表格里，名字要经得起「参数党」的反复引用：好拼、好搜、不与大牌撞型号。还要留半径：露营装备品牌普遍从帐篷延展到桌椅、灯具与服饰，名字锁死单一品类（XX帐篷），扩品时天花板立现。",
+      namingIdeas: [
+        "荒野意象：雪峰、溪谷、篝火——具体的自然画面比抽象的「户外」更有向往感，Snow Peak 是教科书",
+        "可靠感词根：岩、锚、盾、金属——「硬」词天然传递结构强度，帐篷炉具等安全强相关品类的第一优先",
+        "轻量化叙事：light、feather、零克感——UL 玩家看克数下单，但别与「结实」打架，轻与可靠的平衡就是故事",
+        "装备黑话入名：营地、天幕、风绳——圈内词根让老玩家一眼认同，但要确认新手也不至于看不懂",
+        "品类半径预留：从帐篷到桌椅灯具服饰是标准扩品路线，名字别锁死单一品类，用气质词而非品类词",
+      ],
+      cases: [
+        { name: "Snow Peak", takeaway: "「雪峰」的具体意象：新潟燕三条的金属工艺撑起可靠感，名字负责向往感——日系露营美学的品牌原点，荒野浪漫派的教科书" },
+        { name: "牧高笛", takeaway: "「牧」的田园+「高」的山野+「笛」的悠然：三个字拼出一幅露营画面，中文市场少见的意象组合命名" },
+        { name: "Big Agnes", takeaway: "以科罗拉多 Big Agnes 山峰命名：真实地名自带荒野血统与故事——「我们的帐篷以我们爬过的山命名」是最省力的品牌叙事" },
+        { name: "NEMO", takeaway: "Nemo 是拉丁语「无人」也是《海底两万里》的船长：探索精神+好读的四字母——短造词与文化引用的双重红利" },
+        { name: "挪客 Naturehike", takeaway: "nature + hike 的直白合成配「挪客」的音译：中英一体，性价比路线的大众化命名——直给合成词适合以量取胜的渠道打法" },
+      ],
+      pitfalls: [
+        "「户外」「营地」堆砌：XX户外、XX营地千牌一面，评测表格里毫无辨识度，搜索也永远挤不进第一屏",
+        "锁死单一品类：名字里写死「帐篷」，扩到桌椅灯具服饰时天花板立现——用气质词留半径",
+        "轻量承诺过头：名字全是 ultra/zero，产品克数跟不上就成了评测视频里的靶子",
+        "忽略海外拼写：跨境是装备品牌的标配路线，拼音直出（如「XiaoLu」）在海淘表格里既难读又难记",
+      ],
+    },
+    en: {
+      label: "Camping gear",
+      title: "How to Name a Camping Gear Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Camping gear naming guide: wilderness imagery, reliability roots, ultralight narratives, breakdowns of Snow Peak/Big Agnes/NEMO, recommended TLDs and pitfalls — then hunt an available camping gear domain with AI.",
+      intro:
+        "A camping gear name has to clear two gates: first, reliability — will the tent leak, will the stove tip — customers trust your product with their safety, so the name must reassure before anything else; second, longing — gear is the ticket to the wild, and the name should show snow peaks, campfires and star fields. Those two gates define the category's naming spectrum: hardcore function (materials, structures, spec roots) at one end, wilderness romance (mountains, snow, wind, elk) at the other — and the most successful brands take a little of both. The first material bin is wilderness imagery: peaks, snowlines, creeks and campfires all live on the spectrum, and Snow Peak is the textbook — a concrete natural image beats an abstract \"outdoor\" every time. The second lever is reliability roots: rock, anchor, shield, metal — hard words that carry structural strength, first priority for safety-critical categories like tents and stoves. The third is the ultralight narrative: UL has been the category's defining technical story for a decade, and gram-counting enthusiasts stop scrolling at light, feather, zero — just don't let lightness fight the reliability gate; the balance of light and strong is itself the brand story. On channels: gear brands live in review videos, gear lists and cross-border spreadsheets, so the name must survive spec-nerd citation — easy to spell, easy to search, no collision with a big brand's model codes. Finally, leave radius: gear brands standardly expand from tents into furniture, lighting and apparel, and a name welded to one category hits its ceiling at the first line extension.",
+      namingIdeas: [
+        "Wilderness imagery: peaks, creeks, campfires — a concrete natural picture outsells an abstract \"outdoor\"; Snow Peak is the textbook",
+        "Reliability roots: rock, anchor, shield — hard words carry structural strength, first priority for safety-critical tents and stoves",
+        "Ultralight narratives: light, feather, zero — gram counters order by the numbers, but never let lightness fight the strength gate",
+        "Camp jargon roots: basecamp, tarp, guyline — insider words win veteran nods instantly; just confirm beginners can still parse them",
+        "Reserve category radius: tents to furniture to apparel is the standard expansion path — use a character word, not a category word",
+      ],
+      cases: [
+        { name: "Snow Peak", takeaway: "A concrete image doing the longing while Tsubame-Sanjo metalwork does the reliability: the origin point of Japanese camping aesthetics — the wilderness-romance textbook" },
+        { name: "Big Agnes", takeaway: "Named after a real Colorado peak: a genuine place name carries wilderness pedigree and a free story — \"our tents are named after mountains we've climbed\" is the cheapest brand narrative there is" },
+        { name: "NEMO", takeaway: "Latin for \"no one\" and Verne's captain at once: explorer spirit in four readable letters — the double dividend of a short coinage with cultural echo" },
+        { name: "Naturehike", takeaway: "nature + hike, the plainspoken blend: the mass-market value play — direct compounds suit brands that win on volume and price" },
+        { name: "Hilleberg", takeaway: "The founder's Swedish surname on four-season tents: five decades of family-name accountability — proof that in safety-critical gear, a human name is a warranty" },
+      ],
+      pitfalls: [
+        "Piling on \"outdoor\" and \"camp\": generic combos look identical in review spreadsheets and never own page one of search",
+        "Welding the name to one category: a \"tent\" name hits the ceiling the day you launch chairs and lanterns — leave radius with a character word",
+        "Overpromising lightness: an ultra/zero name becomes a review-video target the moment the scale disagrees",
+        "Ignoring global spelling: cross-border is the default route, and a hard-to-read romanization leaks referrals in every gear list",
+      ],
+    },
+  },
+  careercoach: {
+    slug: "careercoach",
+    tlds: [
+      { tld: "com", zh: "客户把职业前途交给你，.com 的信任感是第一道背书", en: "Clients hand you their career — .com trust is the first endorsement" },
+      { tld: "coach", zh: "「教练」语义直给，职业辅导的天然后缀", en: "The coach register outright — career coaching's native suffix" },
+      { tld: "pro", zh: "「专业人士」的身份后缀，独立咨询师的利落选择", en: "The professional identity suffix — a sleek pick for solo consultants" },
+    ],
+    zh: {
+      label: "职业规划咨询",
+      title: "职业规划咨询怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "职业规划与生涯咨询命名指南：航向词根、跃迁叙事、教练人设等 5 种思路，BetterUp/前程无忧/The Muse 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的职业咨询域名。",
+      intro:
+        "职业规划咨询的名字要先解决一个信任悖论：客户找你是因为迷茫，但没人愿意承认自己迷茫——名字不能写「迷茫」「焦虑」，要写「方向」「跃迁」「更好的自己」。这决定了品类命名的第一原则：卖终点不卖起点，客户为「三年后的那个我」付费，名字要指向那个终点。命名的第一素材库是航向词根：罗盘、灯塔、北极星、航线都在谱系上——职业规划的本质是导航服务，方向意象把抽象的咨询翻译成具体的画面。第二个抓手是跃迁叙事：up、leap、next、rise 这类上升词根自带增长感，BetterUp 两个词说完了整个行业的价值主张；中文的「进」「跃」「升」同理。第三个抓手是教练人设：职业咨询高度依赖咨询师个人 IP，「人名+工作室」的结构在知识付费市场天然成立——客户买的是「跟对人」，人名命名把这层信任写在门脸上。要注意与猎头、招聘平台划清界限：名字太像招聘网站（XX直聘、XXJobs），客户会以为你是卖简历流量的，客单价直接掉档。渠道上，职业咨询获客靠内容——公众号长文、播客、LinkedIn 帖子，名字要在标题里反复出现而不违和，太长太拗口的名字每次引用都在折损。还要留半径：成熟机构普遍从个人咨询延展到企业内训、测评工具与课程产品，名字锁死「一对一」，扩品时要重讲故事。",
+      namingIdeas: [
+        "航向词根：罗盘、灯塔、北极星——职业规划本质是导航服务，方向意象把抽象咨询翻译成具体画面",
+        "跃迁叙事：up、leap、进、跃——上升词根自带增长感，客户为「三年后的自己」付费，名字要指向终点",
+        "教练人设：人名+工作室——知识付费买的是「跟对人」，人名命名把个人 IP 的信任写在门脸上",
+        "终点命名法：不写迷茫写方向、不写焦虑写从容——卖终点不卖起点是品类第一原则",
+        "内容标题测试：名字放进公众号标题与播客片头念三遍——职业咨询靠内容获客，拗口的名字每次引用都在折损",
+      ],
+      cases: [
+        { name: "BetterUp", takeaway: "better + up 两个最简单的词：把「变得更好」与「向上走」焊在一起，职业教练行业的价值主张一次说完——简单词合成的天花板" },
+        { name: "The Muse", takeaway: "「缪斯」的灵感意象：把找工作说成「被启发的职业选择」，内容驱动的求职平台用一个文化词与招聘网站彻底划清气质界限" },
+        { name: "前程无忧", takeaway: "「前程」的终点+「无忧」的情绪承诺：四个字同时说清服务对象与交付感受——中文市场终点命名法的老牌范本" },
+        { name: "Korn Ferry", takeaway: "两位创始人姓氏并列：高管猎头与领导力咨询用人名撑起五十年信任——专业服务里人名即担保的经典结构" },
+        { name: "职升机", takeaway: "「直升机」的谐音改造：职业+上升+快速三层含义压进三个字，谐音梗里少见的信息密度——但谐音命名要确认口头传播不被还原成原词", },
+      ],
+      pitfalls: [
+        "写起点不写终点：名字里带「迷茫」「焦虑」，没人愿意承认自己需要——卖方向不卖困境",
+        "长得像招聘网站：XX直聘、XXJobs 式名字让客户以为你卖简历流量，咨询客单价直接掉档",
+        "「成功学」气质过浓：巅峰、王者、逆袭式大词让理性客户警惕——职业咨询的信任感来自专业而非鸡血",
+        "锁死一对一咨询：企业内训、测评工具与课程是标准扩品路线，名字太窄扩品时要重讲故事",
+      ],
+    },
+    en: {
+      label: "Career coaching",
+      title: "How to Name a Career Coaching Practice: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Career coaching and counseling naming guide: navigation roots, upward narratives, coach personas, breakdowns of BetterUp/The Muse/Korn Ferry, recommended TLDs and pitfalls — then hunt an available coaching domain with AI.",
+      intro:
+        "A career coaching name must first resolve a trust paradox: clients come to you because they're lost, but nobody wants to admit being lost — so the name can't say \"stuck\" or \"anxious\"; it has to say direction, leap, the better version of you. That sets the category's first principle: sell the destination, not the starting point — clients pay for who they'll be in three years, and the name should point at that person. The first material bin is navigation roots: compass, lighthouse, north star, course all live on the spectrum — career planning is fundamentally a navigation service, and directional imagery translates abstract consulting into a concrete picture. The second lever is the upward narrative: up, leap, next, rise carry growth in their bones — BetterUp states the entire industry's value proposition in two of the commonest words in English. The third is the coach persona: this business runs on personal IP, and the name-plus-practice structure works natively in the expertise economy — clients buy \"the right person to follow,\" and a human name writes that trust on the storefront. Draw a hard line against recruiting platforms: a name that smells like a job board (anything-Jobs, anything-Hire) makes clients assume you sell resume traffic, and your session price drops a tier on contact. On channels: coaching is acquired through content — long-form posts, podcasts, LinkedIn — so the name must sit comfortably in a headline and a podcast intro, said three times without stumbling; every clunky citation leaks authority. Finally, leave radius: mature practices expand from one-on-one into corporate training, assessment tools and courses, and a name welded to \"1:1 sessions\" retells its story at every product launch.",
+      namingIdeas: [
+        "Navigation roots: compass, lighthouse, north star — career planning is a navigation service, and directional imagery makes abstract consulting concrete",
+        "Upward narratives: up, leap, rise, next — clients pay for who they'll be in three years; point the name at the destination",
+        "Coach personas: your name + practice — the expertise economy buys \"the right person to follow,\" and a human name writes that trust on the door",
+        "Destination naming: never stuck or anxious, always direction and clarity — sell the endpoint, not the predicament",
+        "The headline test: read the name in a post title and a podcast intro three times — coaching is acquired through content, and clunky names leak authority per citation",
+      ],
+      cases: [
+        { name: "BetterUp", takeaway: "better + up, two of the simplest words in English welded into the industry's whole value proposition — the ceiling of plain-word compounding" },
+        { name: "The Muse", takeaway: "An inspiration image as the brand: job searching reframed as \"inspired career choices\" — one cultural word drawing a clean line between content-driven guidance and job-board traffic" },
+        { name: "Korn Ferry", takeaway: "Two founders' surnames side by side: executive search and leadership advisory carried by human names for five decades — the classic name-as-warranty structure of professional services" },
+        { name: "Mind the Product", takeaway: "A borrowed London Underground phrase turned career community: proof that a familiar cultural phrase can brand professional growth with zero explanation cost" },
+        { name: "80,000 Hours", takeaway: "The number of hours in a career as the brand: career advice framed by the stakes themselves — a statistic doing the work of a manifesto" },
+      ],
+      pitfalls: [
+        "Naming the starting point: \"stuck\" or \"lost\" in a name asks clients to admit what they won't — sell direction, not predicament",
+        "Smelling like a job board: anything-Jobs names make clients assume resume traffic, and session pricing drops a tier on contact",
+        "Overdosing on hustle words: peak, crush, 10x registers alarm the thoughtful clients who pay best — trust comes from rigor, not adrenaline",
+        "Welding the name to 1:1 sessions: corporate training, assessments and courses are the standard expansion — a narrow name retells its story at every launch",
+      ],
+    },
+  },
+  fragrance: {
+    slug: "fragrance",
+    tlds: [
+      { tld: "com", zh: "礼赠场景的信任底线，香氛客单不低且高度依赖送礼", en: "The gifting trust baseline — fragrance runs on presents and premium tickets" },
+      { tld: "shop", zh: "「商店」语义直给，DTC 香氛电商的天然后缀", en: "The shop register outright — DTC fragrance's native suffix" },
+      { tld: "life", zh: "「生活方式」语义直连，香氛卖的正是生活的样子", en: "The lifestyle register — and lifestyle is exactly what fragrance sells" },
+    ],
+    zh: {
+      label: "香氛蜡烛",
+      title: "香氛蜡烛品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "香氛蜡烛与家居香品牌命名指南：通感词根、场景切片、故事产地等 5 种思路，Diptyque/观夏/Boy Smells 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的香氛品牌域名。",
+      intro:
+        "香氛蜡烛的名字要完成一个不可能任务：气味无法通过屏幕传递，名字（和文案）就是气味的第一载体——用户在电商详情页闻不到味道，是名字先让人「仿佛闻到了」。这决定了品类命名的核心技法：通感——用视觉、触觉、记忆的词汇去写嗅觉。第一素材库是通感词根：雾、绒、晨、雪松、旧书房都在谱系上，观夏的「昆仑煮雪」六个字调动了地理、温度与画面三重感官——中文在通感命名上有天然优势，四声调与意象字是英文品牌拿不到的资产。第二个抓手是场景切片：香氛卖的不是气味是时刻——「周日清晨」「雨后书店」「深夜写作」，把一个具体时刻切出来做名字，用户买的是进入那个时刻的门票。第三个抓手是故事产地：Diptyque 的每支蜡烛都有地名与回忆，产地叙事（京都、科莫湖、苔藓森林）自带旅行想象，适合做系列命名的骨架——主品牌名负责气质，产品名负责讲故事，两层命名体系是香氛品类的标准打法。要注意雅俗平衡：香氛是「轻奢入门券」，名字太直白（XX香薰店）掉价，太玄乎（生僻字堆砌）又劝退——好念但有距离感是黄金区间。渠道上，香氛高度依赖礼赠与社交晒单，名字要在礼盒上印得好看、在朋友圈晒得出口。还要留半径：蜡烛品牌普遍延展香薰机、身体护理与空间香氛服务，名字锁死「蜡烛」，扩品时天花板立现。",
+      namingIdeas: [
+        "通感词根：雾、绒、晨、雪松——气味无法上屏，用视觉触觉记忆的词汇写嗅觉，名字就是气味的第一载体",
+        "场景切片：周日清晨、雨后书店——香氛卖的是时刻不是气味，用户买的是进入那个时刻的门票",
+        "故事产地：京都、科莫湖、苔藓森林——产地叙事自带旅行想象，是系列产品命名的天然骨架",
+        "双层命名体系：主品牌管气质、产品名管故事——Diptyque 式打法，给每支蜡烛一个地名与回忆",
+        "雅俗平衡测试：好念但有距离感是黄金区间——太直白掉价，生僻字堆砌又劝退，念给朋友听一遍就知道",
+      ],
+      cases: [
+        { name: "Diptyque", takeaway: "希腊语「双联画」：巴黎圣日耳曼大道 34 号的双面橱窗写进名字——产地与艺术血统的复合叙事，轻奢香氛的品类原点" },
+        { name: "观夏 To Summer", takeaway: "「观」的东方凝视+「夏」的季节切片：中文通感命名的标杆，配 To Summer 的英文名完成双语市场的气质闭环" },
+        { name: "Boy Smells", takeaway: "「男孩的气味」的性别反叛：用一个略带冒犯的直白名字打破香氛的性别默认——争议感命名在拥挤品类里的破圈打法" },
+        { name: "Le Labo", takeaway: "法语「实验室」：把调香说成实验，手写标签与现场灌装的仪式感全从名字长出来——一个词定义整个品牌体验" },
+        { name: "野兽派 The Beast", takeaway: "借野兽派艺术运动的文化词：从花店延展到香氛家居的中国品牌——文化引用命名自带审美立场，也给了品类扩展的宽半径" },
+      ],
+      pitfalls: [
+        "直白品类词命名：XX香薰、XX蜡烛在礼盒上印不出高级感——香氛是轻奢生意，名字先要配得上定价",
+        "生僻字堆砌：太玄乎的名字用户不敢念出口，朋友圈晒单与口碑转述全部卡壳",
+        "锁死「蜡烛」品类：香薰机、身体护理、空间香氛都是标准扩品路线，名字太窄天花板立现",
+        "忽略礼赠场景：香氛一半销量在送礼，名字要在礼盒与贺卡上得体——过于私人化或搞怪的名字送不出手",
+      ],
+    },
+    en: {
+      label: "Home fragrance & candles",
+      title: "How to Name a Candle & Home Fragrance Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Candle and home fragrance naming guide: synesthetic roots, moment slices, place narratives, breakdowns of Diptyque/Le Labo/Boy Smells, recommended TLDs and pitfalls — then hunt an available fragrance brand domain with AI.",
+      intro:
+        "A candle brand's name is assigned an impossible job: scent cannot travel through a screen, so the name (and its copy) is the fragrance's first carrier — on a product page nobody smells anything; it's the name that makes them almost smell it. That defines the category's core technique: synesthesia — writing smell with the vocabulary of sight, touch and memory. The first material bin is synesthetic roots: mist, velvet, morning, cedar, an old library all live on the spectrum — the goal is a name that triggers a sensory scene before the wick is ever lit. The second lever is the moment slice: fragrance doesn't sell smells, it sells moments — \"Sunday morning,\" \"a bookshop after rain,\" \"writing past midnight\" — cut one specific moment out and make it the name; the customer is buying a ticket into that moment. The third is the place narrative: every Diptyque candle carries a place and a memory, and provenance storytelling (Kyoto, Lake Como, a moss forest) ships with free travel imagination — the natural skeleton for series naming. This yields the category's standard two-layer system: the master brand carries the character, each product name tells a story. Mind the register balance: home fragrance is an entry ticket to affordable luxury — too plain (Candle Shop X) cheapens the price tag, too cryptic scares customers off; pronounceable-but-slightly-distant is the golden zone. On channels: fragrance runs on gifting and social sharing, so the name must print beautifully on a gift box and say easily in a caption. Finally, leave radius: candle brands standardly expand into diffusers, body care and space scenting, and a name welded to \"candle\" hits its ceiling at the first line extension.",
+      namingIdeas: [
+        "Synesthetic roots: mist, velvet, cedar, morning — scent can't cross a screen, so write smell in the vocabulary of sight, touch and memory",
+        "Moment slices: Sunday morning, a bookshop after rain — fragrance sells moments, and the customer buys a ticket into that moment",
+        "Place narratives: Kyoto, Lake Como, a moss forest — provenance ships with free travel imagination and skeletons your product series",
+        "Two-layer naming: master brand for character, product names for stories — the Diptyque play, one place and memory per candle",
+        "The register test: pronounceable but slightly distant is the golden zone — too plain cheapens the tag, too cryptic kills word of mouth; read it to a friend once",
+      ],
+      cases: [
+        { name: "Diptyque", takeaway: "Greek for \"diptych\": the two-paneled window of 34 Boulevard Saint-Germain written into the name — provenance and art pedigree compounded, the origin point of niche fragrance" },
+        { name: "Le Labo", takeaway: "\"The lab\" in French: perfumery framed as experiment, with hand-written labels and on-site blending all growing out of one word — a name defining an entire brand ritual" },
+        { name: "Boy Smells", takeaway: "A gently confrontational literal phrase breaking fragrance's gender defaults — controversy-tinged naming as the breakout play in a crowded category" },
+        { name: "Jo Malone", takeaway: "The founder's name on minimalist bottles: human-name trust plus place-and-ingredient product names (Lime Basil & Mandarin) — the two-layer system executed to textbook standard" },
+        { name: "Homesick", takeaway: "One emotion as the brand: candles that smell like the place you miss — the moment-slice strategy compressed into a single aching word" },
+      ],
+      pitfalls: [
+        "Plain category naming: \"X Candle Shop\" can't print premium on a gift box — this is affordable luxury, and the name must live up to the price tag first",
+        "Piling on cryptic words: a name customers won't dare pronounce kills captions, gifting and word of mouth all at once",
+        "Welding the name to candles: diffusers, body care and space scenting are the standard expansion — a wax-locked name hits the ceiling early",
+        "Forgetting the gift box: half of fragrance sells as presents, and an overly private or jokey name can't be handed across a table",
+      ],
+    },
+  },
+  diving: {
+    slug: "diving",
+    tlds: [
+      { tld: "com", zh: "客户把性命交给你的气瓶与教练，.com 的信任感是第一道安全绳", en: "Divers trust you with their air supply — .com trust is the first safety line" },
+      { tld: "club", zh: "「俱乐部」语义直给，潜水社群生意的天然后缀", en: "The club register outright — dive communities' native suffix" },
+      { tld: "blue", zh: "「蓝色」即大海本身，潜水品牌少见的语义级后缀", en: "Blue is the ocean itself — a rare semantically perfect suffix for dive brands" },
+    ],
+    zh: {
+      label: "潜水俱乐部",
+      title: "潜水俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "潜水俱乐部与潜店命名指南：深蓝词根、失重叙事、安全专业感等 5 种思路，PADI/蓝旗鱼/Blue Corner 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的潜水品牌域名。",
+      intro:
+        "潜水俱乐部的名字要在两种情绪之间走钢丝：一边是「向往」——深蓝、珊瑚、鲸鲨与失重的自由，名字要让人看见海；另一边是「安全」——客户把性命交给你的气瓶、教练与流程，名字不能轻佻。这决定了品类命名的基本盘：浪漫可以有，但专业感必须在场。命名的第一素材库是深蓝意象：蓝、深、珊瑚、洋流、鲸都在谱系上——具体的海洋意象比抽象的「潜水」更有画面，蓝色系词根（deep blue、azure、蔚蓝）几乎是品类的公共资产，要用就用出组合的独特性。第二个抓手是失重叙事：潜水卖的核心体验是「像飞一样」——无重力、悬浮、寂静，把水下的身体感受写进名字，比写鱼写珊瑚更能击中体验过的人；复购与考证客户恰恰是体验过的人。第三个抓手是安全专业感：教练体系（PADI/SSI）、潜水长、气瓶数是这个行业的信任货币，名字或副标语里带一点体系感（学院、学校、Dive Center）能直接承接考证客群——考证是潜店现金流的主线业务。要注意地域绑定的取舍：三亚、涛岛、诗巴丹这类目的地词自带搜索流量，但也把品牌锁死在一个海域——做目的地生意就大方绑定，做城市俱乐部与出行社群就留半径。渠道上，潜水获客靠小红书攻略、考证测评与老带新，名字要在「XX 潜水考证靠谱吗」这样的搜索句式里好读好记。",
+      namingIdeas: [
+        "深蓝意象：蓝、珊瑚、洋流、鲸——具体的海洋画面比抽象的「潜水」更有向往感，蓝色系是品类公共资产，要用出组合独特性",
+        "失重叙事：无重力、悬浮、寂静——把水下的身体感受写进名字，最能击中体验过的复购与考证客群",
+        "专业体系感：学院、潜水中心、Dive Center——考证是潜店现金流主线，名字里的体系感直接承接考证客群",
+        "地域绑定取舍：目的地词自带搜索流量但锁死海域——做目的地就大方绑定，做城市社群就留半径",
+        "搜索句式测试：把名字放进「XX 潜水考证靠谱吗」念一遍——攻略与测评是获客主场，拗口的名字进不了推荐语",
+      ],
+      cases: [
+        { name: "PADI", takeaway: "Professional Association of Diving Instructors 的缩写：四个字母成为行业标准本身——体系型缩写命名的天花板，「考 PADI」已是品类动词" },
+        { name: "Blue Corner", takeaway: "以帕劳传奇潜点命名：真实潜点自带潜水员的集体记忆与向往——用圣地做名字是潜店版的「以爬过的山命名帐篷」" },
+        { name: "蓝旗鱼潜水", takeaway: "「蓝旗鱼」的具体海洋生物意象：速度感与深蓝血统兼得，比泛泛的「蓝色海洋」更有辨识度——具体物种命名的中文范本" },
+        { name: "Dive! Tutukaka", takeaway: "动词+目的地的结构：一个感叹号把「出发」的冲动写进名字——新西兰老牌潜店示范目的地绑定的正确姿势" },
+        { name: "Girls that Scuba", takeaway: "人群+品类的直白结构：全球最大女性潜水社群用名字完成人群筛选——社群生意里「说清你是谁的俱乐部」胜过一切修辞" },
+      ],
+      pitfalls: [
+        "轻佻感压过专业感：名字太玩梗，客户把性命交给你之前会犹豫——浪漫可以有，专业感必须在场",
+        "泛蓝色词堆砌：深蓝、蔚蓝、Blue Ocean 是品类公共资产，单用毫无独占性，要用出组合的独特性",
+        "误绑地域：城市俱乐部绑死一个目的地，旺季带队去别的海域时名字就穿帮——想清楚你做的是目的地还是社群",
+        "忽略考证客群：名字全是诗和远方没有体系感，「学潜水」的搜索流量接不住——考证才是现金流主线",
+      ],
+    },
+    en: {
+      label: "Diving & scuba",
+      title: "How to Name a Dive Shop or Scuba Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Dive shop and scuba club naming guide: deep-blue imagery, weightlessness narratives, safety credibility, breakdowns of PADI/Blue Corner/Girls that Scuba, recommended TLDs and pitfalls — then hunt an available dive brand domain with AI.",
+      intro:
+        "A dive shop's name walks a tightrope between two emotions: longing — deep blue, coral, whale sharks and weightless freedom, the name should show the ocean — and safety — customers trust you with their air supply, instructors and procedures, so the name cannot read flippant. That sets the category's baseline: romance is welcome, but professionalism must be in the room. The first material bin is deep-blue imagery: blue, deep, coral, current, whale all live on the spectrum — a concrete ocean image beats an abstract \"dive,\" though blue roots are effectively the category's public asset, so use them in combinations you can own. The second lever is the weightlessness narrative: what diving actually sells is \"flying underwater\" — zero gravity, hovering, silence — and writing that bodily sensation into the name lands harder with people who've felt it than any fish or reef word; returning divers and certification students are exactly those people. The third is systematic credibility: agencies (PADI/SSI), divemasters and tank counts are this industry's trust currency, and a note of system in the name or tagline (academy, dive center) directly captures the certification pipeline — certification is a dive shop's cash-flow mainline. Weigh the destination binding carefully: place words (Koh Tao, Sipadan, Palau) ship with search traffic but lock the brand to one sea — bind proudly if you run a destination operation, keep radius if you're a city club that travels. On channels: dive shops are found through guides, certification reviews and buddy referrals, so the name must read smoothly inside sentences like \"is X a good place to get certified\" — that phrase is your storefront.",
+      namingIdeas: [
+        "Deep-blue imagery: coral, current, whale — a concrete ocean picture beats an abstract \"dive\"; blue is the category's public asset, so own a combination",
+        "Weightlessness narratives: zero gravity, hovering, silence — write the underwater body-feel into the name and land hardest with the divers who've felt it",
+        "Systematic credibility: academy, dive center — certification is the cash-flow mainline, and a note of system captures that pipeline outright",
+        "Weigh destination binding: place words ship with search traffic but lock you to one sea — bind proudly as a destination shop, keep radius as a traveling club",
+        "The review-sentence test: read the name inside \"is X a good place to get certified\" — guides and reviews are your storefront, and clunky names never make the recommendation",
+      ],
+      cases: [
+        { name: "PADI", takeaway: "Four letters that became the industry standard itself: \"getting my PADI\" is a category verb — the ceiling of systematic acronym naming" },
+        { name: "Blue Corner", takeaway: "Named after Palau's legendary dive site: a real site carries divers' collective memory and longing — the dive-shop version of naming tents after mountains you've climbed" },
+        { name: "Girls that Scuba", takeaway: "Audience + category, said plainly: the world's largest women's dive community completing its audience filter in the name — in community businesses, stating whose club this is beats all rhetoric" },
+        { name: "Dive! Tutukaka", takeaway: "Verb + destination with an exclamation mark: the urge to go written into the punctuation — the New Zealand stalwart demonstrating destination binding done right" },
+        { name: "Deptherapy", takeaway: "depth + therapy: the UK charity teaching scuba as rehabilitation for injured veterans — a blend that states mission and mechanism in one word" },
+      ],
+      pitfalls: [
+        "Letting playfulness beat professionalism: customers hesitate before trusting a joke with their air supply — romance yes, but credibility must be in the room",
+        "Piling on generic blue: deep blue and blue ocean are public assets with zero ownability — use blue only in combinations you can own",
+        "Mis-binding geography: a city club welded to one destination breaks character the first time you lead a trip elsewhere — decide if you're a place or a community",
+        "Forgetting the certification pipeline: all poetry and no system misses the \"learn to dive\" search traffic — certification is the cash-flow mainline",
+      ],
+    },
+  },
+  carwash: {
+    slug: "carwash",
+    tlds: [
+      { tld: "com", zh: "会员卡与套餐预付的信任底线，本地服务的默认选择", en: "The trust baseline for memberships and prepaid packages — the local-service default" },
+      { tld: "care", zh: "「养护」语义直给，汽车美容从洗车升维到照料的天然后缀", en: "The care register outright — detailing's upgrade from washing to caring" },
+      { tld: "pro", zh: "「专业」身份后缀，精致洗车与镀膜工艺路线的利落选择", en: "The professional suffix — a sleek pick for detailing and coating specialists" },
+    ],
+    zh: {
+      label: "汽车美容洗车",
+      title: "汽车美容洗车店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "洗车与汽车美容命名指南：焕新词根、爱车人设、效率承诺等 5 种思路，Mister Car Wash/驰加/Ceramic Pro 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的汽车美容域名。",
+      intro:
+        "汽车美容的名字要先分清你做的是哪门生意：快洗店卖的是效率——十分钟出场、会员月卡、顺路就洗；精致美容店卖的是仪式——镀膜、抛光、内饰护理，车主把爱车当第二张脸。两种生意的名字气质完全不同，先选赛道再起名。命名的第一素材库是焕新词根：亮、净、新、光、shine 都在谱系上——洗车交付的核心体验是「开走时像新车」，把那个瞬间的感受写进名字，比写「洗」本身更有价值感。第二个抓手是爱车人设：对精致美容客群，车不是交通工具是伙伴——名字带一点「宠爱」「管家」「养护」的措辞，直接筛选出愿意为镀膜付四位数的车主；「美容」「SPA」的拟人化借词是品类惯例。第三个抓手是效率承诺：快洗连锁的名字要写「快」与「顺路」——分钟数、express、驿站式词根让通勤车主一眼理解你的价值主张；美国最大洗车连锁 Mister Car Wash 的直白与 Take 5 的数字承诺都是这条路线。要注意连锁化预留：洗车是高度依赖选址复制的生意，名字要在几十家门店招牌上统一得起来——过于依赖单店老板个人 IP 的名字，连锁化时要重讲故事。渠道上，洗车获客一半靠地图搜索与路过招牌，名字要在「附近洗车」的列表里好认好记，招牌三米外能读清。还要留半径：成熟门店普遍延展贴膜、改色、保养快修，名字锁死「洗」字，客单价升级时天花板立现。",
+      namingIdeas: [
+        "焕新词根：亮、净、光、shine——交付的核心体验是「开走时像新车」，把那个瞬间写进名字比写「洗」更有价值感",
+        "爱车人设：管家、养护、SPA——把车说成伙伴，直接筛选愿意为镀膜付四位数的精致美容客群",
+        "效率承诺：分钟数、express、顺路——快洗连锁的价值主张就是快，数字与速度词根让通勤车主一眼看懂",
+        "连锁化预留：名字要在几十家招牌上统一得起来——过于依赖单店老板 IP 的名字，连锁化时要重讲故事",
+        "招牌测试：三米外能读清、地图列表里好认——洗车获客一半靠路过与「附近洗车」搜索，招牌就是获客位",
+      ],
+      cases: [
+        { name: "Mister Car Wash", takeaway: "「先生」的拟人+品类直给：美国最大洗车连锁用一个礼貌称谓把标准化服务说得有人情味——直白命名支撑起四百家门店的统一招牌" },
+        { name: "Take 5", takeaway: "「花五分钟」的数字承诺：换油快保连锁把效率承诺压进两个词——数字命名在「顺路型」汽车服务里的教科书" },
+        { name: "驰加 Tyreplus", takeaway: "「驰」的速度+「加」的增值：米其林旗下汽车服务连锁的中文名兼顾行车意象与服务升级——中英一体的渠道品牌范本" },
+        { name: "Ceramic Pro", takeaway: "材质+专业的直给结构：镀膜品类的全球标杆把工艺写进名字——在技术导向的细分里，材料词根就是信任货币" },
+        { name: "洗车人家", takeaway: "「人家」的烟火气：把标准化快洗说出社区感与亲切感——中文市场里用生活词根对冲「连锁冷感」的实用打法" },
+      ],
+      pitfalls: [
+        "赛道不分先起名：快洗要效率感、精致美容要仪式感——两种气质混在一个名字里，两边客群都不认",
+        "锁死「洗」字：贴膜、改色、保养快修是标准扩品路线，名字太窄客单价升级时天花板立现",
+        "「汽车美容」堆砌：XX汽车美容千店一面，地图列表里毫无辨识度——「附近洗车」的搜索列表就是你的战场",
+        "过度依赖老板 IP：单店靠老板人设成立，连锁化时几十家招牌统一不起来——想清楚终局再命名",
+      ],
+    },
+    en: {
+      label: "Car wash & detailing",
+      title: "How to Name a Car Wash or Detailing Shop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Car wash and auto detailing naming guide: renewal roots, car-lover personas, speed promises, breakdowns of Mister Car Wash/Take 5/Ceramic Pro, recommended TLDs and pitfalls — then hunt an available car care domain with AI.",
+      intro:
+        "A car care name must first decide which business it's in: express washes sell efficiency — ten minutes, monthly memberships, on your way home; detailing studios sell ritual — coating, polishing, interior care, for owners whose car is a second face. The two businesses need entirely different name registers, so pick the lane before picking the name. The first material bin is renewal roots: shine, gleam, fresh, new all live on the spectrum — what a wash actually delivers is the \"drives away like new\" moment, and writing that feeling into the name carries more value than writing \"wash\" itself. The second lever is the car-lover persona: for the detailing crowd the car is a companion, not a conveyance — a note of pampering, butler or care in the name filters straight for owners who'll pay four figures for ceramic coating; the borrowed registers of \"spa\" and \"grooming\" are category convention. The third is the speed promise: express chains should write fast and on-the-way into the name — minute counts, express, pit-stop roots let commuters grasp the proposition at a glance; Mister Car Wash's plainness and Take 5's numeric promise both run this route. Reserve for chain scale: car washing is a site-replication business, and the name must unify across dozens of storefront signs — a name built on one owner's personal charisma retells its story at franchise time. On channels: half of acquisition is map search and drive-by signage, so the name must read clearly from three meters and stand out in a \"car wash near me\" list. Finally, leave radius: mature shops expand into wraps, tinting and quick maintenance, and a name welded to \"wash\" hits its ceiling exactly when ticket sizes upgrade.",
+      namingIdeas: [
+        "Renewal roots: shine, gleam, fresh — the product is the \"drives away like new\" moment; write that feeling, not the word wash",
+        "Car-lover personas: butler, care, spa — frame the car as a companion and filter straight for the four-figure coating crowd",
+        "Speed promises: minute counts, express, on-the-way — the express proposition is fast, and numbers say it faster than adjectives",
+        "Reserve for chain scale: the name must unify across dozens of signs — owner-charisma names retell their story at franchise time",
+        "The signage test: legible from three meters, recognizable in a \"car wash near me\" list — the sign and the map are half your acquisition",
+      ],
+      cases: [
+        { name: "Mister Car Wash", takeaway: "A polite honorific plus the plain category: America's largest wash chain making standardized service feel personable — plainspoken naming carrying four hundred unified storefronts" },
+        { name: "Take 5", takeaway: "A five-minute promise in two words: the oil-change chain compressing its whole proposition into a number — the textbook of numeric naming in on-the-way auto services" },
+        { name: "Ceramic Pro", takeaway: "Material + professional, said outright: the global coating benchmark writing its technology into the name — in spec-driven niches, material roots are the trust currency" },
+        { name: "Chemical Guys", takeaway: "Ingredient nerds as the brand persona: the detailing-products giant turning enthusiast obsession into identity — persona naming that built a community, not just a catalog" },
+        { name: "El Car Wash", takeaway: "A bilingual article on the plain category: the Florida express chain nodding to its market's Spanish street register — micro-localization inside a chain-scale name" },
+      ],
+      pitfalls: [
+        "Naming before picking the lane: express wants speed, detailing wants ritual — mix the registers and neither audience claims you",
+        "Welding the name to \"wash\": wraps, tinting and quick maintenance are the standard expansion — a wash-locked name caps you exactly when tickets upgrade",
+        "Piling on \"auto detailing\": generic combos vanish in the map list, and \"car wash near me\" results are precisely your battlefield",
+        "Overrelying on owner charisma: one shop can run on a personality, but dozens of signs can't — name for the endgame",
+      ],
+    },
+  },
+  studytour: {
+    slug: "studytour",
+    tlds: [
+      { tld: "com", zh: "家长付费、学校采购的信任底线，教育类机构的默认选择", en: "The trust baseline for paying parents and school procurement — the default for education businesses" },
+      { tld: "academy", zh: "「学院」语义直给，把营地从「玩」升维到「学」的天然后缀", en: "The academy register outright — lifting a camp from play to learning" },
+      { tld: "world", zh: "「看世界」的意象后缀，研学「行走的课堂」叙事零违和", en: "The see-the-world suffix — a natural fit for the walking-classroom narrative" },
+    ],
+    zh: {
+      label: "研学营地",
+      title: "研学营地机构怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "研学旅行与营地教育命名指南：成长隐喻、行走课堂、安全信号等 5 种思路，Outward Bound/世纪明德/青青部落等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的研学营地域名。",
+      intro:
+        "研学营地的名字要同时说服两个人：掏钱的家长和参加的孩子。家长要的是「安全、有教育价值、机构靠谱」，孩子要的是「好玩、有冒险感、和同学吹得起来」——名字只讨好一边，转化就断一半。命名的第一素材库是成长隐喻：营地教育卖的不是行程是改变——独立、勇气、视野、友谊，把「孩子回来不一样了」的那个瞬间写进名字，比写「研学」「营地」本身更打动家长；Outward Bound（驶离港湾）就是把成长仪式压进两个词的教科书。第二个抓手是行走课堂叙事：研学的合法性来自「学」——博物馆、科考、非遗、营地课程体系，名字带一点「知」「行」「探」「问」的书卷气，直接回应家长「玩几天能学到什么」的灵魂拷问；「读万卷书行万里路」的古典资源在中文市场几乎取之不尽。第三个抓手是安全信号：营地是把别人家孩子带出门的生意，名字的气质必须稳——过于野性、极限感的措辞会吓退妈妈们；「明德」「部落」这类既有温度又有秩序感的词根是安全与趣味的平衡点。要注意年龄段弹性：小学生营、中学生营、亲子营的气质差异很大，名字锁死「小」字（如「娃娃营」），做中学生市场时就尴尬。渠道上，研学获客靠学校合作、家长社群与公众号转介绍，名字要在「XX 研学怎么样」的家长群讨论里好念好搜、不与同行混淆。还要留半径：成熟机构普遍从冬夏令营延展到周末营、亲子游、国际游学，名字锁死单一场景（如「沙漠营」），产品线扩张时天花板立现。",
+      namingIdeas: [
+        "成长隐喻：独立、勇气、视野——卖的不是行程是改变，把「孩子回来不一样了」写进名字比写「营地」更打动家长",
+        "行走课堂：知、行、探、问——「学」是研学的合法性来源，书卷气词根直接回应「玩几天能学到什么」的家长拷问",
+        "安全信号：稳重与温度并存——把孩子带出门的生意，过于野性极限的措辞会吓退妈妈们",
+        "年龄段弹性：别锁死「娃娃」「少年」——小学生营到中学生营气质差异大，名字要跟得上孩子长大",
+        "家长群测试：在「XX 研学怎么样」的群聊里好念好搜——研学获客一半靠家长社群转介绍，拗口的名字传不动",
+      ],
+      cases: [
+        { name: "Outward Bound", takeaway: "「驶离港湾」的航海隐喻：全球营地教育鼻祖把「离开舒适区」的成长仪式压进两个词——不提营地不提课程，只说改变" },
+        { name: "世纪明德", takeaway: "「明德」取自《大学》开篇：研学头部机构用古典书卷气直接回应教育价值质疑——中文市场「行走课堂」叙事的标准打法" },
+        { name: "青青部落", takeaway: "「青青」的少年感+「部落」的集体归属：既有温度又有秩序感——安全信号与趣味性的平衡点，家长孩子两边都认" },
+        { name: "NOLS", takeaway: "National Outdoor Leadership School 的缩写：把「领导力」写进机构全称——用课程体系严肃性背书，B 端学校采购导向的命名路线" },
+        { name: "游美营地", takeaway: "「游」+「美」的双关：既是游学美国的业务直给，又有「游历之美」的意境——业务描述与意境兼得的取巧结构" },
+      ],
+      pitfalls: [
+        "只讨好孩子不讨好家长：掏钱的是家长，名字太闹腾会输掉「教育价值」的第一印象",
+        "锁死年龄段：「娃娃」「宝贝」类词根做中学生市场时尴尬——孩子会长大，名字要跟得上",
+        "极限感过强：野性、征服类措辞在「别人家孩子」的生意里是减分项——安全感是成交前提",
+        "锁死单一场景：「沙漠」「草原」写进名字，产品线扩到城市研学、国际游学时天花板立现",
+      ],
+    },
+    en: {
+      label: "Study camps & tours",
+      title: "How to Name a Study Camp or Educational Travel Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Study travel and camp education naming guide: growth metaphors, walking-classroom registers, safety signals, breakdowns of Outward Bound/NOLS/Camp Rising Sun, recommended TLDs and pitfalls — then hunt an available camp domain with AI.",
+      intro:
+        "A study camp name has to convince two people at once: the parent who pays and the kid who attends. Parents want safe, educational, credible; kids want fun, adventurous, braggable at school — please only one side and conversion breaks in half. The first material bin is growth metaphors: camps sell change, not itineraries — independence, courage, horizon, friendship. Writing the \"my kid came back different\" moment into the name moves parents far more than the words camp or tour; Outward Bound compresses a whole coming-of-age ritual into two nautical words. The second lever is the walking-classroom register: educational travel earns its legitimacy from the learning — museums, field science, heritage crafts, a real curriculum — so a note of inquiry, discovery or scholarship in the name directly answers the parent's hard question: \"what will they actually learn?\" The third is the safety signal: this is a business of taking other people's children away from home, so the name's temperament must be steady — overly feral, extreme-sports wording scares mothers off; warm-but-ordered roots balance safety with fun. Watch age elasticity: elementary camps, teen expeditions and family trips need different registers, and a name welded to \"little kids\" turns awkward exactly when you move upmarket to teens. On channels: acquisition runs on school partnerships and parent group chats, so the name must survive \"has anyone tried X?\" threads — easy to say, easy to search, impossible to confuse with a rival. Finally, leave radius: mature operators expand from summer camps into weekend programs, family trips and international study tours, and a name locked to one terrain (Desert Camp) hits its ceiling the day the catalog grows.",
+      namingIdeas: [
+        "Growth metaphors: independence, courage, horizon — you sell change, not itineraries; write the \"came back different\" moment, not the word camp",
+        "Walking-classroom registers: inquiry, discovery, scholarship — learning is your legitimacy, and it answers the parent's \"what will they learn?\" outright",
+        "Safety signals: steady and warm beats feral and extreme — you carry other people's children, and reassurance closes the sale",
+        "Age elasticity: skip \"little\" and \"kiddie\" roots — children grow, and a name that can't follow them to teen programs caps your market",
+        "The parent-group test: it must survive \"has anyone tried X?\" chats — half your acquisition is referrals, and clunky names don't travel",
+      ],
+      cases: [
+        { name: "Outward Bound", takeaway: "A nautical idiom for leaving safe harbor: the global pioneer compressing the whole leave-your-comfort-zone ritual into two words — no camp, no course, just transformation" },
+        { name: "NOLS", takeaway: "National Outdoor Leadership School, abbreviated: leadership written into the institution's full name — curriculum-first gravitas aimed squarely at schools and serious parents" },
+        { name: "Camp Rising Sun", takeaway: "Dawn as a growth metaphor on the plain category word: an international scholarship camp pairing optimism with institutional steadiness — warm imagery that still reads safe" },
+        { name: "Summer Discovery", takeaway: "The season plus the promise: pre-college programs saying exactly when and exactly what — descriptive naming that wins the \"summer program\" search box" },
+        { name: "Round Square", takeaway: "A deliberate paradox borrowed from experiential-education heritage: the global school network using an enigmatic name that invites the founding story — intrigue as a door-opener" },
+      ],
+      pitfalls: [
+        "Pleasing kids but not parents: the parent pays, and a name that's all noise loses the educational-value first impression",
+        "Welding to an age band: kiddie roots turn awkward the day you launch teen expeditions — children grow, the name must too",
+        "Overdoing the extreme: conquer-the-wild wording is a liability in an other-people's-children business — reassurance precedes adventure",
+        "Locking to one terrain: desert or grassland in the name caps you when city heritage tours and international programs join the catalog",
+      ],
+    },
+  },
+  petboarding: {
+    slug: "petboarding",
+    tlds: [
+      { tld: "com", zh: "长假寄养预付定金的信任底线，本地服务的默认选择", en: "The trust baseline for holiday-season deposits — the local-service default" },
+      { tld: "pet", zh: "品类直给的行业后缀，宠物生意的身份标识", en: "The category suffix outright — instant identity for pet businesses" },
+      { tld: "care", zh: "「照护」语义直给，寄养的核心承诺就是照顾好它", en: "The care register outright — boarding's core promise in the suffix itself" },
+    ],
+    zh: {
+      label: "宠物寄养",
+      title: "宠物寄养机构怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "宠物寄养与宠物酒店命名指南：第二个家、假期快乐、透明可见等 5 种思路，Rover/Camp Bow Wow/PetsHotel 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的宠物寄养域名。",
+      intro:
+        "宠物寄养的名字要治愈的是一种非常具体的情绪：分离焦虑——而且主要是主人的。把毛孩子交给陌生人看几天，主人脑补的全是「它会不会不吃饭」「会不会被欺负」，名字的第一任务就是把这份担心接住。命名的第一素材库是「第二个家」：家、窝、驿站类词根直接回应「它在那里过得好不好」——寄养卖的不是笼位是安心，名字有家的温度，定金就好收一半。第二个抓手是假期快乐叙事：把寄养从「被寄存」反转成「它自己的假期」——camp、度假、乐园类词根让主人从愧疚变成「它玩得比我还开心」；Camp Bow Wow 把狗叫声写进营地名，就是这条路线的满分卷。第三个抓手是透明可见：寄养行业的信任建立在「随时看得到」上——24 小时监控、每日视频、接送打卡已是标配，名字带一点「看得见」「在身边」的语义，直接回应行业最大的信任痛点。要注意物种与体型边界：只做猫的寄养（猫舍气质安静精致）与狗猫混营（热闹活泼）名字气质完全不同；先想清楚收不收大型犬、收不收异宠，再决定名字的包容度。渠道上，寄养是强本地生意+节假日脉冲需求，名字要在「附近宠物寄养」的地图搜索和小区宠物群的「十一寄哪家」讨论里好认好传。还要留半径：成熟门店普遍延展日托、洗护、训练甚至殡葬，名字锁死「寄养」二字，业务扩张时又要重新装修招牌。",
+      namingIdeas: [
+        "第二个家：家、窝、驿站——寄养卖的不是笼位是安心，名字有家的温度，主人的分离焦虑就好接住",
+        "假期快乐：camp、度假、乐园——把「被寄存」反转成「它自己的假期」，主人从愧疚变成安心晒图",
+        "透明可见：看得见、在身边——监控直播与每日视频是行业标配，名字直接回应「它过得好不好」的信任痛点",
+        "物种边界先想清：纯猫馆要安静精致、狗猫混营要热闹活泼——两种气质不通用，先定客群再定名",
+        "小区群测试：在「十一寄哪家」的宠物群讨论里好念好传——寄养是强本地生意，邻居口碑就是获客主渠道",
+      ],
+      cases: [
+        { name: "Rover", takeaway: "最经典的狗名当品牌名：全球最大宠物寄养平台把「你家狗」写进名字——亲切零门槛，平台型生意用通用词换认知效率的教科书" },
+        { name: "Camp Bow Wow", takeaway: "「汪汪」+「营地」：把寄养反转成狗狗夏令营——假期快乐叙事的满分卷，主人的愧疚感被一个拟声词化解" },
+        { name: "PetsHotel", takeaway: "宠物+酒店的直给结构：PetSmart 旗下寄养品牌用「酒店」二字完成价值升维——从笼位到客房，一个词涨一倍客单价" },
+        { name: "DogVacay", takeaway: "dog + vacation 的合成词：「狗狗度假」把服务重新定义——后被 Rover 收购，但命名思路留在了整个行业的话术里" },
+        { name: "小佩宠物", takeaway: "「佩」的陪伴谐音与拟人昵称感：中国宠物服务连锁把「陪伴」写进两个字——中文市场亲昵词根的标准用法" },
+      ],
+      pitfalls: [
+        "笼舍感词根：托管所、寄存类措辞把服务说成仓库——主人要的是「第二个家」，不是行李寄存柜",
+        "物种气质错配：纯猫馆用狗狗乐园式的热闹名字，猫主人第一眼就划走——先定客群再定名",
+        "锁死「寄养」：日托、洗护、训练是标准扩品路线，名字太窄业务扩张时招牌重做",
+        "忽略节假日搜索场景：「附近宠物寄养」的地图列表是获客主战场，名字在列表里认不出等于不存在",
+      ],
+    },
+    en: {
+      label: "Pet boarding",
+      title: "How to Name a Pet Boarding Business: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Pet boarding and pet hotel naming guide: second-home warmth, vacation framing, visible-care signals, breakdowns of Rover/Camp Bow Wow/PetsHotel, recommended TLDs and pitfalls — then hunt an available pet boarding domain with AI.",
+      intro:
+        "A pet boarding name has one very specific emotion to treat: separation anxiety — mostly the owner's. Handing the furry kid to strangers for a week, an owner's imagination runs straight to \"will she eat, will she be bullied\" — and the name's first job is to catch that worry. The first material bin is the second home: home, den, nest roots answer \"is she okay there\" directly — boarding sells peace of mind, not kennel space, and a name with domestic warmth collects deposits twice as easily. The second lever is the vacation flip: reframe boarding from being stored to having her own holiday — camp, resort and playground roots turn the owner's guilt into \"she's having a better time than I am\"; Camp Bow Wow writing a bark into a camp name is the full-marks version of this move. The third is visible care: trust in this industry is built on always being able to look — 24/7 cams, daily videos and pickup check-ins are table stakes, so a name with a within-sight, by-your-side register answers the category's biggest trust pain outright. Mind the species boundary: a cats-only pension (quiet, refined) and a dog-and-cat campus (loud, playful) need entirely different registers; decide about large breeds and exotics before deciding how inclusive the name should be. On channels: boarding is hyper-local with holiday demand spikes, so the name must stand out in \"pet boarding near me\" maps and in the neighborhood pet group's annual \"where are you boarding for the holidays?\" thread. Finally, leave radius: mature shops expand into daycare, grooming, training and beyond, and a name welded to \"boarding\" means repainting the sign exactly when the business grows.",
+      namingIdeas: [
+        "Second-home roots: home, den, nest — you sell peace of mind, not kennel space; domestic warmth catches the owner's separation anxiety",
+        "The vacation flip: camp, resort, playground — turn \"being stored\" into \"her own holiday\" and guilt into proud photo-sharing",
+        "Visible-care signals: within sight, by your side — cams and daily videos are table stakes; put the reassurance in the name itself",
+        "Pick the species register first: cats-only wants quiet refinement, dog campuses want joyful noise — the two don't share a name",
+        "The neighborhood-group test: it must travel in \"where are you boarding for the holidays?\" threads — local word of mouth is the main channel",
+      ],
+      cases: [
+        { name: "Rover", takeaway: "The most classic dog name as the brand: the world's largest pet-sitting platform writing \"your dog\" into its name — zero-friction warmth, a textbook of common-word naming for platform businesses" },
+        { name: "Camp Bow Wow", takeaway: "A bark plus a camp: boarding flipped into doggy summer camp — the vacation narrative at full marks, dissolving owner guilt with one onomatopoeia" },
+        { name: "PetsHotel", takeaway: "Pets plus hotel, said outright: PetSmart's boarding brand upgrading the register from kennel to guest room — one word, double the ticket size" },
+        { name: "DogVacay", takeaway: "Dog + vacation, blended: redefining the service as the dog's holiday — acquired by Rover, but the framing lives on in the whole category's sales language" },
+        { name: "Best Friends Pet Hotel", takeaway: "The relationship named before the service: your best friend deserves a hotel — emotional framing that justifies premium pricing before the tour even starts" },
+      ],
+      pitfalls: [
+        "Warehouse registers: storage and deposit wording makes the service sound like a luggage locker — owners want a second home, not left luggage",
+        "Species-register mismatch: a cats-only pension with a rowdy dog-park name loses cat owners at first glance — pick the audience before the name",
+        "Welding to \"boarding\": daycare, grooming and training are the standard expansion — a boarding-locked name repaints the sign as you grow",
+        "Ignoring the map list: \"pet boarding near me\" is the battlefield, and a name that blurs into the list might as well not exist",
+      ],
+    },
+  },
+  upcycling: {
+    slug: "upcycling",
+    tlds: [
+      { tld: "com", zh: "电商与品牌合作的信任底线，可持续品牌的默认选择", en: "The trust baseline for e-commerce and brand collabs — the sustainable-brand default" },
+      { tld: "studio", zh: "「工作室」气质后缀，手作改造的创作感直给", en: "The studio register — maker energy for one-of-a-kind rework" },
+      { tld: "art", zh: "「艺术」身份后缀，把旧物改造从手工升维到创作", en: "The art suffix — lifting upcycling from craft to creation" },
+    ],
+    zh: {
+      label: "旧物改造",
+      title: "旧物改造品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "旧物改造与升级再造命名指南：重生叙事、独一无二、来历故事等 5 种思路，FREITAG/Worn Wear/好瓶等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的旧物改造域名。",
+      intro:
+        "旧物改造（upcycling）的名字要完成一次价值反转：把「二手的、旧的、别人不要的」说成「限量的、有故事的、独一无二的」——反转成功，卡车篷布做的包能卖几千块；反转失败，就是跳蚤市场的地摊货。命名的第一素材库是重生叙事：新生、重启、再造、又一次——旧物改造卖的核心情绪是「它本来会被扔掉，现在成了最特别的那个」，把重生的戏剧性写进名字，价格锚点直接换赛道。第二个抓手是独一无二：每件改造品的原料都不同，成品必然独版——limited、one of a kind 的稀缺感是对抗「二手嫌弃」的最强武器，名字带一点「仅此一件」的语义，溢价就有了合法性。第三个抓手是来历故事：原料是消防水带、卡车篷布还是牛仔裤，来历本身就是品牌资产——FREITAG 用创始人姓氏+卡车篷布的故事讲了三十年；名字直接点出原料或工艺，每件产品都自带话题。要注意「环保说教」的度：可持续是加分项不是卖点主体——消费者为「酷」和「独特」买单，为「道德」买单的是少数；名字环保感太重会把品牌推进「情怀税」的质疑区。渠道上，旧物改造品牌活在小红书图文、市集摊位与品牌联名里，名字要在「这个包居然是篷布做的」的转述里好念好记、经得起放大。还要留半径：改造品类会从包袋扩到家具、饰品、服装，名字锁死单一原料（如「篷布社」），扩品时故事要重讲。",
+      namingIdeas: [
+        "重生叙事：新生、重启、再造——「本来会被扔掉，现在成了最特别的」是核心情绪，把重生的戏剧性写进名字",
+        "独一无二：仅此一件、独版——原料各不相同注定成品独版，稀缺感是对抗「二手嫌弃」的最强武器",
+        "来历故事：篷布、水带、牛仔裤——原料的前世就是品牌资产，名字点出来历，每件产品自带话题",
+        "克制环保说教：可持续是加分项不是主卖点——消费者为酷买单，环保感过重会掉进「情怀税」质疑区",
+        "转述测试：在「这个包居然是 XX 做的」的种草转述里好念好记——旧物改造靠故事传播，名字是故事的第一句",
+      ],
+      cases: [
+        { name: "FREITAG", takeaway: "创始人姓氏（德语「星期五」）+卡车篷布的来历故事：瑞士改造包鼻祖把姓氏做成材质代名词——三十年只讲一个故事，讲成了全球邪典品牌" },
+        { name: "Worn Wear", takeaway: "「穿旧的衣服」的坦然直给：Patagonia 的二手修复线把「旧」大大方方写进名字——头部品牌为整个循环时尚品类定调的命名" },
+        { name: "好瓶 HowBottle", takeaway: "「好瓶」与 How 的双关：中国再生塑料品牌把原料（瓶子）与态度（怎么办）压进两个字——中文双关命名在可持续赛道的代表作" },
+        { name: "Looptworks", takeaway: "loop（循环）+ works（工坊）：把循环经济的核心概念写进名字——概念词根+工坊后缀的标准结构，品类认知零成本" },
+        { name: "Elvis & Kresse", takeaway: "两位创始人的名字+消防水带的来历：英国改造品牌用人名的温度中和工业原料的硬——人名命名在手作赛道的信任加成" },
+      ],
+      pitfalls: [
+        "二手感压过设计感：「旧货」「废品」类词根把改造品拉回地摊价——价值反转是这门生意的全部，名字先要完成反转",
+        "环保说教过重：eco、green 堆砌会掉进「情怀税」质疑——消费者为酷和独特买单，道德是附赠不是主菜",
+        "锁死单一原料：「篷布」「轮胎」写进名字，扩品到家具饰品时故事要重讲——点原料可以，锁原料要想清楚",
+        "忽略质感信号：改造品卖溢价靠工艺可信度，名字太随意会让「手作」滑向「手工课作业」",
+      ],
+    },
+    en: {
+      label: "Upcycling & rework",
+      title: "How to Name an Upcycling Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Upcycling and rework naming guide: rebirth narratives, one-of-a-kind scarcity, origin stories, breakdowns of FREITAG/Worn Wear/Elvis & Kresse, recommended TLDs and pitfalls — then hunt an available upcycling domain with AI.",
+      intro:
+        "An upcycling name has to pull off a value reversal: turning \"secondhand, old, discarded\" into \"limited, storied, one of a kind\" — nail the flip and a truck-tarp bag sells for hundreds; miss it and you're flea-market bric-a-brac. The first material bin is the rebirth narrative: reborn, revived, remade, once more — the core emotion of upcycling is \"this was headed for landfill and became the most special one in the room,\" and writing that drama into the name moves your price anchor to a different lane entirely. The second lever is one-of-a-kind scarcity: every piece starts from different raw material, so every product is inherently an edition of one — that scarcity is the strongest weapon against secondhand squeamishness, and a note of \"only one exists\" in the name gives the premium its legitimacy. The third is the origin story: whether the raw material is fire hose, truck tarp or old denim, provenance itself is brand equity — FREITAG has told one tarp story for thirty years; naming the material or process gives every product a built-in conversation starter. Watch the eco-preaching dose: sustainability is a bonus, not the pitch — customers pay for cool and unique; only a few pay for virtue, and an over-green name slides you into the guilt-tax skepticism zone. On channels: upcycling brands live in visual social posts, market stalls and brand collabs, so the name must carry in \"this bag is made of WHAT?\" retellings and survive being printed large. Finally, leave radius: rework categories drift from bags into furniture, jewelry and apparel, and a name welded to one material retells its whole story at expansion time.",
+      namingIdeas: [
+        "Rebirth narratives: reborn, revived, remade — \"headed for landfill, became the most special one\" is the core emotion; write the drama in",
+        "One-of-a-kind scarcity: edition of one — different raw material every time means inherent uniqueness, your best weapon against secondhand squeamishness",
+        "Origin stories: tarp, fire hose, denim — provenance is brand equity, and naming the material gives every product a conversation starter",
+        "Dose the eco-preaching: sustainability is the bonus, not the pitch — customers pay for cool; an over-green name reads as guilt tax",
+        "The retelling test: it must carry in \"this bag is made of WHAT?\" moments — upcycling spreads by story, and the name is the story's first line",
+      ],
+      cases: [
+        { name: "FREITAG", takeaway: "A founder surname (German for Friday) welded to a truck-tarp origin story: the Swiss pioneer turning a family name into a material's synonym — one story told for thirty years, into global cult status" },
+        { name: "Worn Wear", takeaway: "Worn, stated proudly: Patagonia's repair-and-resale line writing \"used\" into the name without flinching — a category leader setting the register for circular fashion" },
+        { name: "Elvis & Kresse", takeaway: "Two founders' names on a fire-hose origin: the British rework house using human warmth to soften industrial raw material — personal naming as a trust bonus in maker categories" },
+        { name: "Looptworks", takeaway: "Loop + works: the circular-economy concept written straight into a workshop name — concept root plus maker suffix, category recognition at zero cost" },
+        { name: "Rothy's", takeaway: "A warm, personal possessive on recycled-bottle shoes: sustainability kept in the story, style kept in the name — the eco-brand playbook of leading with cool, not virtue" },
+      ],
+      pitfalls: [
+        "Letting secondhand beat design: junk and scrap registers drag rework back to flea-market pricing — the value flip is the whole business; the name flips first",
+        "Overdosing the eco: piled-up eco/green reads as guilt tax — customers buy cool and unique; virtue is the garnish, not the entrée",
+        "Welding to one material: tarp or tire in the name retells the whole story when furniture and jewelry join the line — cite the material, don't marry it",
+        "Skipping the craft signal: premiums rest on workmanship credibility, and a flippant name slides \"handmade\" toward \"craft-class homework\"",
+      ],
+    },
+  },
+  zine: {
+    slug: "zine",
+    tlds: [
+      { tld: "com", zh: "订阅制与电商周边的信任底线，出版品牌的默认选择", en: "The trust baseline for subscriptions and merch — the publishing default" },
+      { tld: "ink", zh: "「墨水」意象后缀，纸质出版的物理质感直给", en: "The ink suffix — print's physical texture in the domain itself" },
+      { tld: "media", zh: "「媒体」身份后缀，从一本杂志到内容品牌的扩展预留", en: "The media suffix — headroom from one magazine to a content brand" },
+    ],
+    zh: {
+      label: "独立杂志",
+      title: "独立杂志怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "独立杂志与 zine 命名指南：单词美学、态度宣言、生活方式提案等 5 种思路，Monocle/Kinfolk/单读等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的独立杂志域名。",
+      intro:
+        "独立杂志的名字就是刊物的第一篇社论：它要在读者翻开之前，先声明这本杂志的品味、立场与生活提案。独立出版没有渠道铺货的预算，全靠书店平摊的封面与社交网络的转述获客——名字与封面设计共同构成了全部的「货架营销」。命名的第一素材库是单词美学：一个精准的单词往往比一个短语更有杂志感——Monocle（单片眼镜）、Kinfolk（亲族）、Popeye 都是单词刊名；单词的留白给了读者解读空间，也给了刊物气质定调的自由。第二个抓手是态度宣言:独立杂志的存在理由就是主流媒体不说的话——把立场压进名字（慢、小、附近、延迟），读者一眼识别出「这是为我办的杂志」；Delayed Gratification（延迟满足）用刊名直接宣战即时新闻。第三个抓手是生活方式提案：成功的独立杂志都在贩卖一种可以想象的生活——Kinfolk 的慢聚会、Popeye 的城市男孩，名字先把那种生活的画面感立起来，选题、摄影、字体才有统一的锚点。要注意「刊名即品牌」的延展性：独立杂志的商业模式普遍是「一本杂志+周边+咖啡店+活动」，名字要能印在帆布包和咖啡杯上不违和——过于新闻腔的名字做生活方式周边时会尴尬。渠道上，独立杂志活在独立书店、买手店与内容社区的转述里，名字要在「你看过 XX 吗」的同好接头暗号里好念、有辨识度、带一点圈层门槛。还要留半径：从纸刊延展到播客、Newsletter、线下活动是标准路线，名字锁死「志」「刊」等纸媒后缀，媒介扩张时会自缚手脚。",
+      namingIdeas: [
+        "单词美学：一个精准的单词比短语更有杂志感——留白给读者解读空间，也给刊物气质定调自由",
+        "态度宣言：慢、小、附近、延迟——独立杂志的存在理由是主流不说的话，把立场压进名字读者一眼认亲",
+        "生活方式提案：先立画面再做刊——名字把「可以想象的生活」立起来，选题摄影字体才有统一锚点",
+        "周边延展测试：印在帆布包和咖啡杯上不违和——「一本杂志+周边+活动」是标准商业模式，新闻腔名字做周边会尴尬",
+        "接头暗号感：在「你看过 XX 吗」的同好转述里好念、有辨识度——带一点圈层门槛反而是独立刊物的获客资产",
+      ],
+      cases: [
+        { name: "Monocle", takeaway: "「单片眼镜」的旧世界精英意象：全球化生活方式刊用一个单词立起「见多识广的绅士」人设——单词刊名定调气质的教科书" },
+        { name: "Kinfolk", takeaway: "「亲族」的古语温度：慢生活聚会美学的圣经把「一起吃饭的人」写进刊名——一个词卖出一种可以想象的生活" },
+        { name: "单读", takeaway: "「单」的孤独感+「读」的行为直给：从书店（单向街）长出的思想刊物——单字定调在中文刊名里的克制表达" },
+        { name: "Popeye", takeaway: "借大力水手的顽童人设：日本「城市男孩圣经」用一个漫画角色立起轻盈不严肃的时尚态度——借用流行文化 IP 气质的经典打法" },
+        { name: "Delayed Gratification", takeaway: "「延迟满足」的直白宣战：慢新闻季刊把方法论压进刊名——对抗即时新闻的立场就是刊物的全部卖点" },
+      ],
+      pitfalls: [
+        "新闻腔命名：「XX 观察」「XX 评论」气质老成，做生活方式周边与线下活动时处处违和",
+        "锁死纸媒后缀：「志」「刊」「报」写进名字，扩展播客与 Newsletter 时自缚手脚",
+        "过度晦涩：圈层门槛是资产，但完全无法转述的名字连同好接头都接不上——好念是底线",
+        "忽略周边场景：帆布包、咖啡杯、贴纸是独立刊物的现金流，名字排版不好看等于放弃一半收入",
+      ],
+    },
+    en: {
+      label: "Indie magazines & zines",
+      title: "How to Name an Indie Magazine or Zine: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Indie magazine and zine naming guide: single-word aesthetics, stance statements, lifestyle propositions, breakdowns of Monocle/Kinfolk/Delayed Gratification, recommended TLDs and pitfalls — then hunt an available magazine domain with AI.",
+      intro:
+        "An indie magazine's name is its first editorial: before a reader opens a single page, it has already declared the publication's taste, stance and proposed way of living. Independent publishing has no distribution budget — acquisition runs entirely on bookstore table displays and social retellings, so the name and the cover design together are the whole shelf-marketing department. The first material bin is single-word aesthetics: one precise word usually out-magazines a phrase — Monocle, Kinfolk, Popeye are all one-word mastheads; a single word leaves interpretive room for the reader and register-setting freedom for the editors. The second lever is the stance statement: an indie magazine exists to say what mainstream media won't — compress the position into the name (slow, small, nearby, delayed) and readers recognize \"this magazine is for me\" on sight; Delayed Gratification declares war on the news cycle in its masthead. The third is the lifestyle proposition: successful indies sell an imaginable life — Kinfolk's slow gatherings, Popeye's city boy; erect that picture in the name first and every later choice of story, photography and typeface has an anchor. Mind masthead-as-brand elasticity: the standard indie business model is magazine plus merch plus café plus events, so the name must sit comfortably on a tote bag and a coffee cup — a newsroom-register name turns awkward on lifestyle merch. On channels: indies live in independent bookstores, select shops and community retellings, so the name must work as a password in \"have you read X?\" exchanges — pronounceable, distinctive, with just enough in-group threshold. Finally, leave radius: print-to-podcast-to-newsletter is the standard arc, and a name welded to print-only suffixes ties your hands at exactly the wrong moment.",
+      namingIdeas: [
+        "Single-word aesthetics: one precise word out-magazines a phrase — interpretive room for readers, register-setting freedom for editors",
+        "Stance statements: slow, small, nearby, delayed — you exist to say what mainstream won't; compress the position and readers self-select",
+        "Lifestyle propositions: erect the imaginable life first — the name anchors every later choice of story, photo and typeface",
+        "The merch test: it must sit well on a tote bag and a coffee cup — magazine-plus-merch is the business model, and newsroom registers embarrass on lifestyle goods",
+        "Password quality: it should work in \"have you read X?\" exchanges — a slight in-group threshold is an asset, but pronounceability is the floor",
+      ],
+      cases: [
+        { name: "Monocle", takeaway: "An old-world eyepiece for a globalized readership: the lifestyle-and-affairs magazine erecting a worldly-gentleman persona in one word — the textbook of single-word register-setting" },
+        { name: "Kinfolk", takeaway: "An archaic word for the people you eat with: the slow-gathering bible selling an imaginable life in a single masthead — one word, one whole aesthetic movement" },
+        { name: "Popeye", takeaway: "A cartoon sailor as the persona: Japan's \"Magazine for City Boys\" borrowing pop-culture lightness to stay stylish but never solemn — the classic borrowed-IP register move" },
+        { name: "Delayed Gratification", takeaway: "The methodology as the masthead: the slow-journalism quarterly declaring war on the news cycle in its own name — stance-first naming where the position is the entire pitch" },
+        { name: "The Gentlewoman", takeaway: "A dated honorific reclaimed with a wink: the fashion biannual flipping an old register into a modern stance — irony as a naming instrument, executed with restraint" },
+      ],
+      pitfalls: [
+        "Newsroom registers: Observer/Review-style names age the publication and clash with the tote bags, cafés and events that pay the bills",
+        "Welding to print suffixes: journal and gazette in the masthead tie your hands when the podcast and newsletter launch",
+        "Over-obscurity: an in-group threshold is an asset, but a name nobody can retell fails even at the password exchange — pronounceability is the floor",
+        "Ignoring the merch scene: totes, cups and stickers are indie cash flow — a name that typesets poorly forfeits half the revenue",
+      ],
+    },
+  },
+  locksmith: {
+    slug: "locksmith",
+    tlds: [
+      { tld: "com", zh: "深夜救急也敢点开的信任底线，本地服务的默认选择", en: "The trust baseline even for a 2 a.m. emergency call — the local-service default" },
+      { tld: "services", zh: "「服务」直给的品类后缀，救急型本地生意的清晰选择", en: "The services suffix outright — clarity for emergency local trades" },
+      { tld: "pro", zh: "「专业」身份后缀，持证上岗与规范作业的信号", en: "The professional suffix — a licensed, by-the-book signal" },
+    ],
+    zh: {
+      label: "开锁换锁",
+      title: "开锁换锁服务怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "开锁换锁与锁匠服务命名指南：速度承诺、持证信任、钥匙意象等 5 种思路，Pop-A-Lock/KeyMe/Minute Key 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的开锁服务域名。",
+      intro:
+        "开锁服务的名字要在一个极端场景里成立：深夜被锁在门外的人，站在楼道里用手机搜「附近开锁」，在一列陌生名字里选一个敢让他开自己家门的。这是本地服务里信任门槛最高的品类之一——你请进门的是一个能打开任何锁的人。命名的第一素材库是速度承诺：被锁在门外的每一分钟都是煎熬，「快」是这门生意的第一卖点——分钟数、闪电、即刻类词根直接回应搜索者最迫切的需求；Minute Key 把「一分钟」写进名字就是这条路线。第二个抓手是持证信任：开锁行业鱼龙混杂、乱收费与安全疑虑并存，名字带一点「正规军」的气质——持证、备案、连锁感——能在陌生列表里先赢一步；过于江湖气的名字（「神手开锁」类）反而触发警惕。第三个抓手是钥匙与锁的意象库：key、lock、bolt 与中文的锁、匙、开，是品类认知零成本的词根——Pop-A-Lock 用一个拟声动作把开锁的瞬间写进名字，专业又不吓人。要注意救急与安防的双线：开锁是获客入口，换锁、智能锁安装、安防升级才是利润线——名字锁死「开」字，客单价升级时会自我设限。渠道上，这门生意几乎 100% 活在地图搜索、小区物业推荐与楼道小广告里，名字要在「附近开锁」列表里好认、电话里报出来可信、贴在物业公告栏上不掉价。还要留意 24 小时暗示：深夜救急是高峰场景，名字或副标带「全天」「24h」的语义，转化率直接受益。",
+      namingIdeas: [
+        "速度承诺：分钟数、闪电、即刻——被锁在门外的每一分钟都是煎熬，「快」是搜索者最迫切的需求",
+        "持证信任：正规军气质——开锁是把「能开任何锁的人」请进家门的生意，江湖气名字触发警惕，规范感先赢一步",
+        "钥匙意象：key、lock、锁、匙——品类认知零成本的词根库，配一个动作或承诺词就是完整结构",
+        "救急+安防双线：开锁获客、换锁赚钱——名字锁死「开」字，智能锁安装与安防升级的利润线会自我设限",
+        "物业测试：贴在小区公告栏上不掉价、电话里报出来可信——物业推荐与地图搜索是获客主渠道",
+      ],
+      cases: [
+        { name: "Pop-A-Lock", takeaway: "「啵」地一声开锁的拟声动作：美国最大开锁连锁把服务瞬间写进名字——轻快专业不吓人，救急服务命名的满分卷" },
+        { name: "KeyMe", takeaway: "key 动词化的「给我配钥匙」：智能配钥匙亭品牌用两个词说清自助服务——动词化命名在传统行业的降维打击" },
+        { name: "Minute Key", takeaway: "「一分钟配钥匙」的数字承诺：自助配钥匙机把速度压进名字——效率承诺在救急品类里的直给表达" },
+        { name: "Mr. Rekey", takeaway: "「换锁先生」的人设+细分动词 rekey：只做换锁芯的定位写进名字——细分聚焦命名，一个词过滤掉所有错误期待" },
+        { name: "啄木鸟家庭维修", takeaway: "「啄木鸟」的勤勉修理工意象：中国家庭维修平台用动物人设中和上门服务的陌生感——邻近品类里拟物命名的信任范本" },
+      ],
+      pitfalls: [
+        "江湖气命名：「神手」「一秒开」式吹嘘触发安全警惕——你要进的是别人家的门，规范感比神奇感值钱",
+        "锁死「开锁」：换锁、智能锁安装、安防升级才是利润线——名字太窄客单价升级时自我设限",
+        "忽略 24 小时场景：深夜救急是转化高峰，名字与招牌不带全天候暗示等于把黄金时段让给同行",
+        "地图列表里认不出：「XX 开锁服务部」千店一面——「附近开锁」的搜索列表就是全部货架，辨识度是生死线",
+      ],
+    },
+    en: {
+      label: "Locksmiths",
+      title: "How to Name a Locksmith Business: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Locksmith and lock service naming guide: speed promises, licensed-trust signals, key imagery, breakdowns of Pop-A-Lock/KeyMe/Minute Key, recommended TLDs and pitfalls — then hunt an available locksmith domain with AI.",
+      intro:
+        "A locksmith name has to work in one extreme scene: someone locked out at midnight, standing in a hallway searching \"locksmith near me,\" choosing from a list of strangers the one they'll let open their own front door. This is one of the highest trust thresholds in local services — the person you're inviting in can open any lock. The first material bin is the speed promise: every minute locked out is agony, so fast is the category's first selling point — minute counts, flash and instant roots answer the searcher's most urgent need; Minute Key writes sixty seconds straight into its name. The second lever is licensed trust: the trade is notorious for rogue operators and surprise pricing, so a by-the-book register — licensed, bonded, chain-scale steadiness — wins the stranger list before anyone answers the phone; swaggering \"magic hands\" names trigger exactly the wrong instinct. The third is the key-and-lock image bank: key, lock, bolt and their cousins are zero-cost category roots — Pop-A-Lock writes the instant of the door opening into an onomatopoeia, professional without being menacing. Mind the emergency-to-security double line: lockouts are the acquisition funnel, but rekeying, smart-lock installation and security upgrades are the profit line — a name welded to \"unlock\" caps the ticket exactly when it should grow. On channels: this business lives almost entirely in map search, property-manager referrals and hallway stickers, so the name must stand out in the \"locksmith near me\" list, sound credible spoken on the phone, and not cheapen on a building notice board. And watch the 24-hour cue: midnight emergencies are peak conversion, and an around-the-clock hint in the name or tagline pays for itself.",
+      namingIdeas: [
+        "Speed promises: minute counts, flash, instant — every minute locked out is agony, and fast is the first thing the searcher scans for",
+        "Licensed-trust registers: by-the-book beats magic-hands — you're being invited through a stranger's door, and steadiness wins the list",
+        "Key imagery: key, lock, bolt — zero-cost category roots; pair one with an action or promise word and the structure is complete",
+        "The double line: lockouts acquire, rekeying and smart locks profit — a name welded to \"unlock\" caps the ticket as it should grow",
+        "The notice-board test: credible on a property manager's board, trustworthy spoken on the phone — referrals and map search are the whole funnel",
+      ],
+      cases: [
+        { name: "Pop-A-Lock", takeaway: "The pop of a lock giving way, as onomatopoeia: America's largest locksmith franchise writing the service's payoff instant into its name — light, professional, unthreatening; full marks for emergency-service naming" },
+        { name: "KeyMe", takeaway: "Key, verbed: the smart key-duplication kiosk saying self-service in two syllables — verb-able naming as a category upgrade in a centuries-old trade" },
+        { name: "Minute Key", takeaway: "Sixty seconds as the promise: the self-serve key machine compressing its speed proposition into the name — numeric efficiency naming in an urgency category" },
+        { name: "Mr. Rekey", takeaway: "A persona honorific on a niche verb: the rekey-only positioning written into the name itself — focus naming that filters out every wrong expectation with one word" },
+        { name: "1-800-Unlocks", takeaway: "The phone number as the brand: a locksmith network naming itself after the exact action and the exact channel — pure utility naming for a pick-up-the-phone business" },
+      ],
+      pitfalls: [
+        "Swagger naming: magic-hands and one-second-open boasts trigger safety alarms — you're entering someone's home; steadiness outsells wizardry",
+        "Welding to \"unlock\": rekeying, smart locks and security upgrades are the profit line — a lockout-only name caps the ticket as it grows",
+        "Missing the 24-hour cue: midnight is peak conversion, and a sign without an around-the-clock hint donates the golden hours to rivals",
+        "Vanishing in the map list: generic \"XX Lock Service\" blurs into the results — the \"locksmith near me\" list is the entire shelf, and distinctiveness is survival",
+      ],
+    },
+  },
+  skateshop: {
+    slug: "skateshop",
+    tlds: [
+      { tld: "com", zh: "电商与品牌联名的信任底线，潮流品牌的默认选择", en: "The trust baseline for e-commerce and collabs — the streetwear default" },
+      { tld: "shop", zh: "「店」直给的零售后缀，本地滑板店的清晰身份", en: "The shop suffix outright — clear identity for a local skate store" },
+      { tld: "cool", zh: "「酷」的态度后缀，滑板文化的气质零违和", en: "The cool suffix — zero friction with skate culture's whole register" },
+    ],
+    zh: {
+      label: "滑板店",
+      title: "滑板店与滑板品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "滑板店与滑板品牌命名指南：反叛态度、圈内黑话、场景地标等 5 种思路，Supreme/Vans/Thrasher 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的滑板品牌域名。",
+      intro:
+        "滑板店的名字不是招牌是立场：滑板文化的核心是反叛与真实（authenticity），一个名字「装不装」，圈内人半秒就能判断——讨好、卖乖、蹭潮流的名字，在这个圈子里等于自我出局。命名的第一素材库是反叛态度：不解释、不讨好、甚至带一点冒犯——Supreme（至高无上）的傲慢、Thrasher（狂虐者）的凶悍，都是把态度直接压进名字；滑板品牌的名字可以横，但必须横得真诚。第二个抓手是圈内黑话：动作名（ollie、grind、kickflip）、装备词（deck、truck、griptape）与滑手俚语是天然的身份识别码——圈外人看不懂恰恰是价值所在，黑话名字自带「你是自己人」的接头功能。第三个抓手是场景地标：滑板文化高度在地化——传奇滑点、街区名、城市缩写写进名字，本地滑手立刻认领；世界各地的传奇滑板店（Supreme 之于 Lafayette 街）本身就是社群坐标。要注意「店」与「品牌」的双重身份：滑板店的终局普遍是自有品牌——板面、服装、联名，名字要经得起印在板底与卫衣胸口，过于「零售感」的名字（XX 滑板用品店）做品牌时先天不足。渠道上，滑板店活在滑手口碑、视频片尾鸣谢与 IG 标签里，名字要在「去 XX 买板」的圈内转述与 @提及里好认好拼。还要留意气质的年龄跨度：滑板人群从 12 岁到 40 岁，名字太幼齿留不住老炮，太老气吸不来新血——「永远年轻但不装嫩」是这个品类的命名基调。",
+      namingIdeas: [
+        "反叛态度：不解释、不讨好——Supreme 的傲慢与 Thrasher 的凶悍都是态度直给，横可以，但必须横得真诚",
+        "圈内黑话：ollie、grind、deck——动作与装备词是身份识别码，圈外人看不懂恰恰是接头暗号的价值",
+        "场景地标：传奇滑点、街区、城市缩写——滑板文化高度在地化，地标名字让本地滑手立刻认领",
+        "品牌预留：经得起印在板底与卫衣胸口——滑板店的终局是自有品牌，「零售感」名字做品牌先天不足",
+        "年龄跨度测试：12 岁滑小子和 40 岁老炮都认——太幼齿留不住老炮，太老气吸不来新血",
+      ],
+      cases: [
+        { name: "Supreme", takeaway: "「至高无上」的纯粹傲慢：从 Lafayette 街滑板店到全球潮流帝国——不解释不讨好的态度命名，配合极简红盒 logo 成了反叛本身的商标" },
+        { name: "Vans", takeaway: "创始人 Van Doren 的姓氏缩短：滑板鞋鼻祖用家族姓氏的朴实中和潮流的浮夸——「Off The Wall」的slogan补足态度，姓氏+态度的组合拳" },
+        { name: "Thrasher", takeaway: "「狂虐者」的凶悍直给：滑板圣经杂志把滑手糟蹋板子的狠劲写进刊名——火焰字标印遍全球胸口，态度命名的极端样本" },
+        { name: "Palace", takeaway: "「宫殿」的反讽幽默：伦敦滑板品牌用最堂皇的词自嘲滑手的破公寓（Palace Wayward Boys Choir）——英式反讽在滑板命名里的教科书" },
+        { name: "Element", takeaway: "「元素」的自然哲学：风火水土的意象把滑板从街头亚文化拉向生活方式——态度品牌里少见的普世词根路线，换来最宽的年龄跨度" },
+      ],
+      pitfalls: [
+        "装酷不真诚：蹭潮流热词、堆砌 street/urban 的名字，圈内人半秒识破——真实是滑板文化的唯一通行证",
+        "零售感过重：「XX 滑板用品店」做自有品牌时先天不足——板面与卫衣才是终局，名字要经得起印上去",
+        "锁死幼齿气质：卡通感名字留不住 30+ 的老炮客群——滑板人群年龄跨度大，「永远年轻但不装嫩」是基调",
+        "忽略拼写传播：视频鸣谢与 IG 标签是主要曝光位，生僻拼写让 @提及和搜索都断链",
+      ],
+    },
+    en: {
+      label: "Skate shops",
+      title: "How to Name a Skate Shop or Skate Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Skate shop and skate brand naming guide: rebel attitude, insider slang, local landmarks, breakdowns of Supreme/Vans/Thrasher/Palace, recommended TLDs and pitfalls — then hunt an available skate domain with AI.",
+      intro:
+        "A skate shop's name isn't a sign, it's a stance: skate culture runs on rebellion and authenticity, and insiders judge whether a name is \"trying too hard\" in half a second — a name that panders, plays nice or chases trends is self-elimination in this scene. The first material bin is rebel attitude: unapologetic, unexplaining, even slightly offensive — Supreme's arrogance and Thrasher's menace both press the stance straight into the name; a skate name can swagger, but the swagger has to be earned. The second lever is insider slang: trick names (ollie, grind, kickflip), gear words (deck, truck, griptape) and skater vernacular are natural identity codes — that outsiders don't get it is precisely the point; slang names carry a built-in \"you're one of us\" handshake. The third is the local landmark: skate culture is fiercely local — legendary spots, street names and city abbreviations written into the name get claimed by local skaters instantly; the great shops of the world are community coordinates as much as stores. Mind the shop-to-brand double identity: the endgame for most skate shops is an own-label — decks, apparel, collabs — so the name must survive being printed on a deck bottom and a hoodie chest; a retail-flavored name (XX Skate Supply Store) is born handicapped as a brand. On channels: skate shops live in skater word of mouth, video-part credits and IG tags, so the name must read and spell cleanly in \"get your deck at X\" retellings and @-mentions. And watch the age span: the crowd runs from 12 to 40, and a name too childish loses the veterans while one too stiff draws no new blood — forever young without faking it is the register.",
+      namingIdeas: [
+        "Rebel attitude: unapologetic, unexplaining — Supreme's arrogance and Thrasher's menace press the stance into the name; swagger, but earn it",
+        "Insider slang: ollie, grind, deck — trick and gear words are identity codes, and outsiders not getting it is precisely the value",
+        "Local landmarks: legendary spots, street names, city codes — skate culture is fiercely local, and landmark names get claimed instantly",
+        "Reserve for the brand: it must survive a deck bottom and a hoodie chest — own-label is the endgame, and retail-flavored names are born handicapped",
+        "The age-span test: the 12-year-old grom and the 40-year-old veteran must both claim it — forever young without faking it",
+      ],
+      cases: [
+        { name: "Supreme", takeaway: "Pure arrogance as a name: from a Lafayette Street skate shop to a global streetwear empire — unexplaining attitude naming that, with the red box logo, became the trademark of rebellion itself" },
+        { name: "Vans", takeaway: "The founder's surname, shortened: the original skate shoe using family-name plainness to ground the hype — \"Off The Wall\" supplies the attitude; surname plus slogan as a combination punch" },
+        { name: "Thrasher", takeaway: "Menace, stated outright: the skate bible writing the violence skaters do to their boards into its masthead — the flame logotype on chests worldwide, the extreme sample of attitude naming" },
+        { name: "Palace", takeaway: "The grandest word as self-mockery: the London brand naming skaters' shabby flats a palace (Palace Wayward Boys Choir) — the textbook of British irony in skate naming" },
+        { name: "Element", takeaway: "Nature's four elements as philosophy: pulling skateboarding from street subculture toward lifestyle — a rare universal-root route in an attitude category, buying the widest age span in the game" },
+      ],
+      pitfalls: [
+        "Faking the cool: trend-chasing names piled with street/urban get clocked in half a second — authenticity is skate culture's only passport",
+        "Over-retailing: \"XX Skate Supply Store\" is born handicapped as an own-label — decks and hoodies are the endgame, and the name must print well on both",
+        "Locking into grom energy: cartoonish names lose the 30-plus veterans — the crowd spans decades, and forever-young-without-faking-it is the register",
+        "Ignoring spellability: video credits and IG tags are the main exposure — an unspellable name breaks both the @-mention and the search",
+      ],
+    },
+  },
+  surf: {
+    slug: "surf",
+    tlds: [
+      { tld: "com", zh: "冲浪学校与冲浪店的信任底线，预订与装备电商的默认选择", en: "The trust baseline for surf schools and shops — the default for bookings and gear" },
+      { tld: "club", zh: "「俱乐部」直给的社群后缀，冲浪俱乐部身份零解释", en: "The club suffix outright — zero explanation for a surf club's identity" },
+      { tld: "life", zh: "「生活方式」后缀，冲浪即生活的品牌主张天然合拍", en: "The lifestyle suffix — a natural fit for surf-is-life brand statements" },
+    ],
+    zh: {
+      label: "冲浪俱乐部",
+      title: "冲浪俱乐部与冲浪学校怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "冲浪俱乐部与冲浪学校命名指南：海浪意象、地点绑定、自由态度等 5 种思路，Rip Curl/Billabong/Quiksilver 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的冲浪品牌域名。",
+      intro:
+        "冲浪品牌的名字要闻得到海的味道：这个行业卖的从来不只是浪板和课程，而是一种「把生活调成海边频率」的向往——名字必须在落地前先把人带到海上。第一素材库是海浪与海洋意象：浪（swell、break、barrel）、潮汐、离岸风、珊瑚与咸水——Rip Curl（浪管内侧）与 Billabong（澳洲土语的死水潭）都是把海的词根直接压进名字，圈内人一听就知道你懂浪。第二个抓手是地点绑定：冲浪高度在地化——浪点名、海湾名、海岸线写进名字（后海、日月湾、Bondi、Pipeline），本地浪人立刻认领，游客搜「XX 浪点冲浪俱乐部」时你就是答案。第三个抓手是自由态度：冲浪文化的精神内核是逐浪而居的松弛与反日常——名字可以慵懒、诗意甚至一点嬉皮，但要真诚不装酷；「辞职去冲浪」的都市想象是这个品类最强的情绪杠杆。要注意客群的双层结构：核心浪人要的是圈内认同（黑话、浪点、态度），而收入大头往往来自零基础体验课的游客与亲子客——名字要让老手觉得地道、让新手不害怕，太硬核的黑话名会把体验客挡在门外。渠道上，冲浪俱乐部活在小红书攻略、OTA 预订页和浪人社群转述里，「在 XX 学的下浪，教练会推板」的口碑要好念好拼；中文名配英文名是海岛店的标配，两个名字要能互相解释。",
+      namingIdeas: [
+        "海浪意象：swell、barrel、潮汐、咸水——把海的词根压进名字，Rip Curl 式的圈内直给，一听就懂浪",
+        "地点绑定：浪点名、海湾名、海岸线——冲浪高度在地化，本地浪人立刻认领，浪点搜索你就是答案",
+        "自由态度：逐浪而居的松弛与反日常——可以慵懒诗意，但要真诚；「辞职去冲浪」是最强情绪杠杆",
+        "双层客群测试：老手觉得地道、新手不害怕——太硬核的黑话名会把占收入大头的体验客挡在门外",
+        "双语互解：海岛店标配中文名+英文名——两个名字要能互相解释，OTA 页与 IG 账号一套人设",
+      ],
+      cases: [
+        { name: "Rip Curl", takeaway: "「撕开浪管内侧」的动作黑话：两个单音节词把冲浪最迷人的瞬间（管浪）写进名字——圈内直给的教科书，装备品牌的地道感天花板" },
+        { name: "Billabong", takeaway: "澳洲原住民语「死水潭」：用在地词根绑定澳洲冲浪文化的正统血统——异域词自带故事，且全球独占毫无撞名风险" },
+        { name: "Quiksilver", takeaway: "quicksilver（水银）的变形拼写：流动、闪光、抓不住的意象完美映射浪的气质——删一个字母换来商标独占，变形克制不伤读音" },
+        { name: "O'Neill", takeaway: "创始人 Jack O'Neill 的姓氏：潜水衣发明者用人名压住技术权威——「先驱者姓氏」在装备品类里是信任的速记" },
+        { name: "Salt Gypsy", takeaway: "salt（咸水）+ gypsy（流浪者）：两个词拼出「逐浪而居的咸水吉普赛人」——女性冲浪品牌用意象组合讲完整生活方式" },
+      ],
+      pitfalls: [
+        "堆砌 surf/wave 的直白组合：SurfProShop 类名字毫无浪味——圈内人要的是懂浪的暗号，不是品类说明书",
+        "硬核黑话吓退体验客：收入大头是零基础游客——名字太圈内，「敢不敢来试一节」的门槛就高了",
+        "忽略地点独占性：不绑浪点的名字在「XX 湾冲浪」搜索里永远输给绑了的——在地化是这个品类的免费流量",
+        "中英文名互不相干：海岛店双语场景多——两个名字讲两个故事，等于品牌资产砍半",
+      ],
+    },
+    en: {
+      label: "Surf clubs",
+      title: "How to Name a Surf Club or Surf School: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Surf club and surf school naming guide: ocean imagery, spot-binding, free-spirit attitude, breakdowns of Rip Curl/Billabong/Quiksilver, recommended TLDs and pitfalls — then hunt an available surf domain with AI.",
+      intro:
+        "A surf brand's name should smell of salt: this industry never just sells boards and lessons — it sells the longing to retune life to an ocean frequency, and the name must put people on the water before they ever book. The first material bin is wave and ocean imagery: swell, break, barrel, tides, offshore wind, saltwater — Rip Curl (the inside of the wave) and Billabong (an Aboriginal word) both press ocean roots straight into the name, and insiders instantly hear that you know waves. The second lever is spot-binding: surfing is fiercely local — write the break, the bay or the coastline into the name (Bondi, Pipeline, Riyue Bay) and local surfers claim it instantly, while travelers searching \"surf school at X\" find you as the answer. The third is free-spirit attitude: surf culture's core is the loose, anti-routine life of chasing swell — the name can be lazy, poetic, even a little hippie, as long as it's earned rather than posed; the quit-your-job-and-surf fantasy is the category's strongest emotional lever. Mind the two-layer clientele: core surfers want insider recognition (slang, spots, attitude), but revenue usually comes from first-timer lessons and family bookings — the name must read authentic to veterans without scaring beginners, and hardcore slang walls out the try-it crowd. On channels: surf clubs live in travel-guide posts, OTA booking pages and surfer word of mouth — \"I learned to pop up at X, great coaches\" must retell cleanly, and island shops typically run a local-language name plus an English name that explain each other.",
+      namingIdeas: [
+        "Ocean imagery: swell, barrel, tides, saltwater — press wave roots into the name, Rip Curl-style; insiders hear instantly that you know waves",
+        "Bind the spot: break names, bays, coastlines — surfing is fiercely local; locals claim landmark names and spot searches resolve to you",
+        "Free-spirit attitude: loose, poetic, anti-routine — earn the vibe rather than pose it; quit-your-job-and-surf is the strongest emotional lever",
+        "The two-layer test: authentic to veterans, unthreatening to first-timers — hardcore slang walls out the lesson bookings that pay the bills",
+        "Bilingual pairing: island shops run local + English names — make the two explain each other so OTA pages and IG share one identity",
+      ],
+      cases: [
+        { name: "Rip Curl", takeaway: "Trick slang for riding inside the wave: two monosyllables writing surfing's most magical moment (the barrel) into the name — the textbook of insider-direct naming in gear" },
+        { name: "Billabong", takeaway: "An Aboriginal word for a stagnant pool: a native root binding the brand to Australian surf heritage — exotic words carry built-in story and global ownability" },
+        { name: "Quiksilver", takeaway: "Quicksilver, respelled: fluid, flashing, ungraspable — the mercury image mapping perfectly onto waves; one dropped letter buys the trademark without hurting pronunciation" },
+        { name: "O'Neill", takeaway: "Founder Jack O'Neill's surname: the wetsuit inventor anchoring technical authority in a family name — the pioneer-surname shorthand for trust in gear" },
+        { name: "Salt Gypsy", takeaway: "salt + gypsy: two words composing the saltwater nomad who lives by the swell — a women's surf brand telling a whole lifestyle through image pairing" },
+      ],
+      pitfalls: [
+        "Piling up literal surf/wave combos: SurfProShop-style names carry zero salt — insiders want a knowing wink, not a category label",
+        "Scaring beginners with hardcore slang: first-timer lessons pay the bills — too insider a name raises the bar on \"dare I book one class?\"",
+        "Skipping spot-binding: unanchored names always lose \"surf at X bay\" searches to anchored ones — locality is this category's free traffic",
+        "Unrelated bilingual names: island shops live in two languages — two names telling two stories halves the brand asset",
+      ],
+    },
+  },
+  golf: {
+    slug: "golf",
+    tlds: [
+      { tld: "com", zh: "高净值客群的信任默认，球场预订与会籍销售的底线配置", en: "The trust default for a high-net-worth clientele — baseline for bookings and memberships" },
+      { tld: "club", zh: "「俱乐部」原义直给，高尔夫俱乐部的身份后缀天然合法", en: "The literal club suffix — natively legitimate for a golf club's identity" },
+      { tld: "pro", zh: "「专业」后缀，教练工作室与球技培训的资质暗示", en: "The pro suffix — a credential hint for coaching studios and academies" },
+    ],
+    zh: {
+      label: "高尔夫",
+      title: "高尔夫俱乐部与球具品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "高尔夫俱乐部与球具品牌命名指南：庄园气质、自然地貌、技术精准等 5 种思路，Titleist/Callaway/TaylorMade 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的高尔夫品牌域名。",
+      intro:
+        "高尔夫的名字要配得上果岭的草：这是一个把「体面」写进基因的品类——客群是企业主、高管与专业人士，名字的第一使命是让会籍卖得出溢价、让商务局约得有面子。第一素材库是庄园与绅士气质：山谷、庄园、橡树、湖畔——高尔夫俱乐部的命名传统深植于英式乡村庄园（Augusta National、St Andrews），中文语境里「XX 山谷」「XX 湖」的地貌名同样自带会员制的矜贵。第二个抓手是自然地貌绑定：球场本身就是风景资产——把真实的山、湖、林、湾写进名字，既独占地理心智又给了球场故事（「面朝七个湖的十八洞」）。第三个抓手是技术与精准：球具与培训品牌走另一条路——Titleist（title + -ist，冠军头衔）、TaylorMade（量身定制）把「更远更准」的装备承诺压进名字；室内模拟器馆与青少年培训则要在专业感里加一点轻快，别把「运动」做成「应酬」。要注意新老高尔夫的分化：传统俱乐部端着庄园贵气，但城市室内高尔夫、青少年体校与女性球局正在把这项运动年轻化——新业态的名字可以去掉阶层感，留下精准与优雅。渠道上，高尔夫活在会籍顾问的名片、企业团建的合同抬头和球友「周末去 XX 打一场」的转述里，名字要经得起烫金印刷，也要在微信群里好打好认。",
+      namingIdeas: [
+        "庄园气质：山谷、庄园、橡树、湖畔——英式乡村的命名血统，中文地貌名同样自带会员制矜贵",
+        "地貌绑定：把真实的山湖林湾写进名字——球场即风景资产，地理独占又自带故事",
+        "技术精准：球具与培训走 Titleist 路线——把「更远更准」的承诺压进名字，-ist/-made 的匠人暗示",
+        "新业态减负：室内模拟器与青少年培训去掉阶层感——留下精准与优雅，别把运动做成应酬",
+        "烫金测试：名字要经得起会籍卡烫金与合同抬头——太随意的名字卖不动溢价会籍",
+      ],
+      cases: [
+        { name: "Titleist", takeaway: "title（冠军头衔）+ -ist（执业者后缀）：「夺冠者的球」一词说清定位——巡回赛数据背书下，名字本身就是使用者证言" },
+        { name: "Callaway", takeaway: "创始人 Ely Callaway 的姓氏：三音节姓氏自带美式体面——人名压阵让「大贝莎」这类产品昵称可以放飞，主品牌稳产品线活" },
+        { name: "TaylorMade", takeaway: "taylor（裁缝谐音 tailor）+ made：「量身定制」的承诺直给——装备品类里把定制感写进名字的教科书，拼写变形还换来了独占" },
+        { name: "St Andrews", takeaway: "苏格兰小镇名即「高尔夫故乡」：地名成为品类圣地的终极案例——说明球场命名的最高境界是让地理与运动互相成就" },
+        { name: "Topgolf", takeaway: "top + golf 的直白组合：室内娱乐化高尔夫刻意去掉庄园贵气——证明新业态命名可以轻快直给，把门槛感从名字里先拆掉" },
+      ],
+      pitfalls: [
+        "贵气堆砌成土豪感：皇家/国际/至尊连用的名字适得其反——真正的矜贵是地貌与庄园的克制，不是形容词的轰炸",
+        "新业态套旧壳：城市室内馆用庄园式名字，年轻客群只觉得「不是给我的」——业态变了，名字的阶层感要先松绑",
+        "忽略烫金场景：会籍卡、合同抬头、球包刺绣都是名字的印刷位——太长太花的名字在这些场景里全线翻车",
+        "只顾中文丢英文：商务客群国际化，英文名是标配——中英文气质错位（中文庄园风配英文街头风）会削弱信任",
+      ],
+    },
+    en: {
+      label: "Golf",
+      title: "How to Name a Golf Club or Golf Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Golf club and golf brand naming guide: estate gravitas, landscape binding, precision engineering, breakdowns of Titleist/Callaway/TaylorMade, recommended TLDs and pitfalls — then hunt an available golf domain with AI.",
+      intro:
+        "A golf name has to deserve the grass on the green: this is a category with propriety written into its genes — the clientele is owners, executives and professionals, and the name's first job is to let memberships sell at a premium and business rounds carry face. The first material bin is estate and gentry register: valleys, manors, oaks, lakesides — golf club naming descends from the English country estate (Augusta National, St Andrews), and landscape names carry the same members-only reserve in any language. The second lever is landscape binding: the course itself is a scenic asset — writing the actual mountain, lake, forest or bay into the name owns the geography and hands the club its story (\"eighteen holes facing seven lakes\"). The third is precision engineering: equipment and academy brands take another road — Titleist (title + -ist) and TaylorMade press the farther-and-straighter promise of gear straight into the name; indoor simulator studios and junior academies should add lightness to the expertise, keeping the sport from congealing into corporate entertaining. Mind the old-new split: traditional clubs hold the estate gravitas, but urban indoor golf, junior programs and women's leagues are rejuvenating the game — new-format names can drop the class signaling and keep the precision and elegance. On channels: golf lives on membership consultants' cards, corporate-event letterheads and \"let's play X this weekend\" retellings among golfers — the name must survive gold-foil embossing and still type cleanly in a group chat.",
+      namingIdeas: [
+        "Estate register: valleys, manors, oaks, lakesides — the English country-estate bloodline; landscape names carry members-only reserve in any language",
+        "Bind the landscape: write the actual mountain, lake or bay into the name — the course is a scenic asset, and geography is both moat and story",
+        "Precision engineering: gear and academies take the Titleist road — press farther-and-straighter into the name with -ist/-made craftsman hints",
+        "Lighten the new formats: indoor simulators and junior programs drop the class signaling — keep precision and elegance, not corporate entertaining",
+        "The gold-foil test: the name must survive membership-card embossing and contract letterheads — casual names can't sell premium memberships",
+      ],
+      cases: [
+        { name: "Titleist", takeaway: "title + -ist, the champion's practitioner: \"the ball of title-holders\" in one word — with tour data behind it, the name itself reads as user testimony" },
+        { name: "Callaway", takeaway: "Founder Ely Callaway's surname: three syllables of American propriety — the family name anchors the brand so product nicknames like Big Bertha can run wild" },
+        { name: "TaylorMade", takeaway: "tailor, respelled, + made: the custom-fit promise stated outright — the textbook of writing bespoke feel into a gear name, with the respelling buying ownability" },
+        { name: "St Andrews", takeaway: "A Scottish town name that became the home of golf: the ultimate case of place and sport consecrating each other — course naming's highest form" },
+        { name: "Topgolf", takeaway: "top + golf, plainly: entertainment golf deliberately shedding estate gravitas — proof that new-format naming can be light and direct, dismantling the intimidation in the name first" },
+      ],
+      pitfalls: [
+        "Piling gravitas into gaudiness: Royal/Imperial/Supreme stacked together backfires — true reserve is restrained landscape and estate language, not adjective bombardment",
+        "Old shell on a new format: an urban simulator studio with a manor name tells young players \"not for you\" — when the format changes, unbuckle the class signaling first",
+        "Ignoring the embossing scenes: membership cards, letterheads and bag embroidery are all print positions — long, ornate names fail across all of them",
+        "Mismatched bilingual registers: the clientele is international and an English name is standard — estate Chinese paired with streetwear English erodes trust",
+      ],
+    },
+  },
+  vr: {
+    slug: "vr",
+    tlds: [
+      { tld: "com", zh: "连锁扩张与团建采购的信任底线，线下门店品牌的默认选择", en: "The trust baseline for chain expansion and corporate bookings — the offline-brand default" },
+      { tld: "fun", zh: "「好玩」直给的娱乐后缀，线下体验业态零违和", en: "The fun suffix outright — zero friction for location-based entertainment" },
+      { tld: "zone", zh: "「空间/地带」后缀，体验馆的场域感天然合拍", en: "The zone suffix — a natural fit for the arena feel of a venue" },
+    ],
+    zh: {
+      label: "VR 体验馆",
+      title: "VR 体验馆与线下电竞怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "VR 体验馆与线下沉浸娱乐命名指南：异世界入口、科技奇观、场域命名等 5 种思路，Sandbox VR/Zero Latency/The Void 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的 VR 品牌域名。",
+      intro:
+        "VR 体验馆的名字是「异世界的门牌」：顾客买的不是设备使用时长，而是一次踏进另一个世界的门票——名字要在商场中庭的招牌上就开始造梦。第一素材库是入口与传送意象：门、传送门、虫洞、次元、平行世界——The Void（虚空）与 Portal 类名字把「踏入未知」的期待直接写在门头；名字越像一扇门，路过的人越想推开。第二个抓手是科技奇观感：零延迟、全感官、自由行走这些技术卖点可以升维成名字——Zero Latency（零延迟）把最硬的技术参数变成了品牌名，硬核得理直气壮。第三个抓手是场域命名：体验馆本质是一个「场」——Sandbox（沙盒）、Arena（竞技场）、Lab（实验室）这类空间词给足想象又不锁死内容，联机对战、密室逃脱、亲子探索都装得下。要注意内容迭代的快周期：VR 内容更新换代极快，名字千万别绑死某个 IP 或某类内容（「丧尸 VR 馆」在丧尸题材过气后就是负资产）——名字管「世界的入口」，内容管「今天去哪个世界」。客群上，主力是朋友局、情侣约会与企业团建，决策场景是大众点评比价和商场路过——名字要在门店招牌三米外可读、在团购列表里一眼记住。渠道上，「上次去的那家 XX 超好玩」的口头转述是最大获客来源，名字要好念、别用生僻科技词把顾客拒之门外。",
+      namingIdeas: [
+        "入口意象：门、传送门、次元、平行世界——名字越像一扇门，路过的人越想推开",
+        "科技奇观：把零延迟、自由行走等硬参数升维成名字——Zero Latency 式的理直气壮，技术即品牌",
+        "场域命名：Sandbox、Arena、Lab——空间词给足想象不锁死内容，对战密室亲子全装得下",
+        "去 IP 化：内容迭代极快，名字别绑死题材——名字管「入口」，内容管「今天去哪个世界」",
+        "招牌三米测试：商场中庭招牌三米外可读、团购列表一眼记住——生僻科技词是获客的门槛",
+      ],
+      cases: [
+        { name: "Sandbox VR", takeaway: "「沙盒」的游戏黑话转公共词：既向玩家暗示自由创造，又给大众「安全游乐场」的联想——场域词+品类词的教科书结构" },
+        { name: "Zero Latency", takeaway: "把最硬的技术参数直接做名字：「零延迟」对晕动症的隐忧一剑封喉——技术卖点升维成品牌承诺的极端样本" },
+        { name: "The Void", takeaway: "「虚空」的纯粹入口意象：什么都没说却什么都说了——踏入未知的期待感拉满，定冠词 The 添了唯一性的傲气" },
+        { name: "Dreamscape", takeaway: "dream + scape（景观后缀）：「梦境景观」把 VR 体验类比成看得见走得进的梦——好莱坞血统的叙事感命名，内容感强于设备感" },
+        { name: "Illucity", takeaway: "illusion + city 的合成词：「幻觉之城」给巴黎的城市级 VR 乐园——合成词既保留双词根联想又拿得到商标与域名" },
+      ],
+      pitfalls: [
+        "绑死题材或 IP：「丧尸 VR」在题材过气后就是负资产——内容迭代极快，名字要管入口不管内容",
+        "生僻科技词当门槛：Metaverse/XR/Haptic 这类词大众读不顺——主力客群是朋友局与团建，不是极客",
+        "设备感压过体验感：名字里全是硬件（头显/座舱），顾客买的是异世界门票不是设备使用权",
+        "忽略连锁统一性：VR 馆终局多是多城连锁——名字要在不同商场招牌上统一得起来，别用地名锁死",
+      ],
+    },
+    en: {
+      label: "VR arcades",
+      title: "How to Name a VR Arcade or Immersive Venue: Strategies, Case Studies & Domains",
+      metaDescription:
+        "VR arcade and immersive entertainment naming guide: portal imagery, tech spectacle, arena naming, breakdowns of Sandbox VR/Zero Latency/The Void, recommended TLDs and pitfalls — then hunt an available VR domain with AI.",
+      intro:
+        "A VR arcade's name is the doorplate of another world: customers aren't buying headset minutes, they're buying a ticket through a portal — and the dream has to start on the sign in the mall atrium. The first material bin is portal and passage imagery: doors, portals, wormholes, dimensions, parallel worlds — The Void and its kin write the anticipation of stepping into the unknown straight onto the storefront; the more the name reads like a door, the more passers-by want to push it open. The second lever is tech spectacle: hard selling points like zero latency, full-sensory rigs and free-roam arenas can be elevated into the name itself — Zero Latency turned the driest spec into a brand, and earned the bluntness. The third is arena naming: a venue is fundamentally a field of play — spatial words like Sandbox, Arena and Lab feed imagination without locking in content, so PvP, escape rooms and family quests all fit inside. Mind the content churn: VR titles turn over fast, so never chain the name to one IP or theme (a \"Zombie VR\" venue is a liability once zombies age out) — the name owns the doorway, the content decides which world you visit today. The clientele is friend groups, dates and corporate team-building, deciding via review-app comparisons and mall walk-bys — the name must read from three meters off the signage and stick in a deals list at a glance. And word of mouth — \"that place X we went to was insane\" — is the biggest acquisition channel, so keep it pronounceable and spare the obscure tech jargon.",
+      namingIdeas: [
+        "Portal imagery: doors, dimensions, parallel worlds — the more the name reads like a door, the more passers-by want to push it open",
+        "Tech spectacle: elevate zero-latency and free-roam specs into the name — Zero Latency-style earned bluntness, the tech as the brand",
+        "Arena naming: Sandbox, Arena, Lab — spatial words feed imagination without locking content; PvP, escape rooms and family quests all fit",
+        "De-IP the name: content churns fast, so never chain it to a theme — the name owns the doorway, the content picks today's world",
+        "The three-meter test: readable from three meters off mall signage, memorable at a glance in a deals list — jargon is an acquisition tax",
+      ],
+      cases: [
+        { name: "Sandbox VR", takeaway: "Gamer slang gone public: \"sandbox\" hints free creation to players while reading safe-playground to everyone else — the textbook arena-word + category-word structure" },
+        { name: "Zero Latency", takeaway: "The driest spec made the brand: \"zero latency\" beheads the motion-sickness worry in one stroke — the extreme sample of elevating a selling point into a promise" },
+        { name: "The Void", takeaway: "Pure portal imagery: saying nothing and everything at once — anticipation of the unknown at full volume, with the definite article adding a swagger of singularity" },
+        { name: "Dreamscape", takeaway: "dream + -scape: framing VR as a dream you can walk into — Hollywood-blooded narrative naming where the content feel outweighs the hardware feel" },
+        { name: "Illucity", takeaway: "illusion + city blended: a city of illusions for a Paris-scale VR park — the blend keeps both roots' associations while staying ownable in trademark and domain" },
+      ],
+      pitfalls: [
+        "Chaining the name to an IP or theme: \"Zombie VR\" is a liability once the theme ages out — content churns fast; the name owns the doorway only",
+        "Jargon as a doorstep: Metaverse/XR/Haptic stumble in casual speech — the clientele is friend groups and team-building, not gearheads",
+        "Hardware feel over experience feel: a name full of headsets and pods forgets the customer bought a ticket to another world, not device time",
+        "Ignoring chain readiness: the endgame is multi-city venues — the name must unify across mall signs, so don't lock it to one location",
+      ],
+    },
+  },
+  bar: {
+    slug: "bar",
+    tlds: [
+      { tld: "com", zh: "品牌连锁与瓶装产品线的信任底线，酒吧出圈后的必备资产", en: "The trust baseline for chains and bottled lines — essential once the bar breaks out" },
+      { tld: "bar", zh: "「酒吧」本吧的品类后缀，域名即业态零解释", en: "The category suffix itself — the domain is the business, zero explanation" },
+      { tld: "club", zh: "「俱乐部」后缀，会员制清吧与 livehouse 的社群感直给", en: "The club suffix — community feel outright for members' lounges and livehouses" },
+    ],
+    zh: {
+      label: "酒吧清吧",
+      title: "酒吧与鸡尾酒吧怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "酒吧与鸡尾酒吧命名指南：隐秘暗号、故事人设、微醺意象等 5 种思路，Death & Co/Attaboy/PDT 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的酒吧品牌域名。",
+      intro:
+        "酒吧的名字是第一杯酒：顾客还没推门，名字已经决定了他们期待一个怎样的夜晚——是西装革履的经典鸡尾酒吧，还是精酿满墙的工业风酒馆，或是烛光摇曳的爵士清吧。第一素材库是隐秘与暗号：speakeasy（禁酒令时期地下酒吧）传统让「藏起来」成了鸡尾酒吧的最高礼仪——PDT（Please Don't Tell）把保密写进名字，无名招牌、暗门电话亭都是名字的延伸；越难找越想找，是这个品类独有的营销悖论。第二个抓手是故事人设：好酒吧都有一个「主理人叙事」——Death & Co（与死神共饮的黑色幽默）、Attaboy（老派俚语「好样的」）用名字定下整晚的谈资基调；名字即人设，酒单、装潢、bartender 的围裙都从名字长出来。第三个抓手是微醺意象：月亮、猫、雾、深夜、老唱片——清吧与小酒馆走情绪路线，名字要有画面、有温度、微醺不烂醉。要注意业态分寸感：鸡尾酒吧的名字可以神秘傲气，社区精酿馆要亲切好进，livehouse 要有声音的态度——同是卖酒，名字的「门槛感」要和客单价与门店气质对齐。渠道上，酒吧活在「今晚去哪喝」的朋友转述、小红书探店和大众点评榜单里——名字要好念好记有梗，「就是那家叫 XX 的」一句话能传开；招牌夜里亮灯的样子，也值得在起名时先想一遍。",
+      namingIdeas: [
+        "隐秘暗号：speakeasy 传统的「藏起来」礼仪——PDT 式的保密人设，越难找越想找的营销悖论",
+        "故事人设：名字定整晚谈资基调——Death & Co 的黑色幽默、Attaboy 的老派俚语，酒单装潢都从名字长出来",
+        "微醺意象：月亮、猫、雾、深夜、老唱片——清吧走情绪路线，有画面有温度，微醺不烂醉",
+        "门槛感对齐：鸡尾酒吧可以神秘傲气，社区酒馆要亲切好进——名字的门槛感和客单价对齐",
+        "夜灯测试：想象名字做成霓虹灯牌在深夜亮起的样子——酒吧名字的最终考场是招牌不是文档",
+      ],
+      cases: [
+        { name: "PDT (Please Don't Tell)", takeaway: "把「保密」写进名字的极致：藏在热狗店电话亭后的暗门——名字与动线共同完成 speakeasy 叙事，越不让说越人人在说" },
+        { name: "Death & Co", takeaway: "「与死神共饮」的黑色幽默：禁酒令时期「喝酒即赴死」的老海报梗——暗黑人设让一间小店成了全球鸡尾酒复兴的图腾" },
+        { name: "Attaboy", takeaway: "老派俚语「好样的」：前 Milk & Honey 团队用一句夸赞做店名——亲切老友感中和了名店血统的距离感，俚语命名的典范" },
+        { name: "Trailer Happiness", takeaway: "「拖车房里的快乐」：伦敦 tiki 吧用廉价拖车配快乐——反差幽默定下不装的派对基调，Tiki 品类命名的松弛样本" },
+        { name: "跳海", takeaway: "中文语境的意象暴击：「跳进酒海」的洒脱与「跳海」的黑色幽默双关——精酿社区吧用两个字完成人设、态度与传播梗的三合一" },
+      ],
+      pitfalls: [
+        "神秘过头找不到店：speakeasy 人设要配合线上可搜——点评页、地图定位与名字对不上，隐秘就成了流失",
+        "门槛感错配：社区小酒馆起了个傲气法文名，街坊只觉得贵不敢进——名字的门槛感要和客单价对齐",
+        "烂醉感压过微醺感：名字太「猛」（买醉/断片类）拉低格调也吓退女性客群——微醺是氛围，烂醉是事故",
+        "忽略霓虹招牌场景：字太多、笔画太密的名字做灯牌一团糊——酒吧名字的最终考场是深夜亮灯的招牌",
+      ],
+    },
+    en: {
+      label: "Bars & lounges",
+      title: "How to Name a Bar or Cocktail Lounge: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Bar and cocktail lounge naming guide: speakeasy secrecy, house personas, tipsy imagery, breakdowns of PDT/Death & Co/Attaboy, recommended TLDs and pitfalls — then hunt an available bar domain with AI.",
+      intro:
+        "A bar's name is the first drink: before the door opens, the name has already told guests what kind of night to expect — a suited classic-cocktail room, a taproom with cans to the ceiling, or a candlelit jazz lounge. The first material bin is secrecy and passwords: the speakeasy tradition made hiding the highest etiquette of cocktail bars — PDT (Please Don't Tell) writes confidentiality into the name itself, and unmarked doors and phone-booth entrances are extensions of it; the harder to find, the harder people look, the category's private marketing paradox. The second lever is the house persona: great bars run on a proprietor's narrative — Death & Co (drinking with death, in black humor) and Attaboy (old-slang approval) set the night's conversational register from the sign onward; the name is the persona, and the menu, the fit-out and the bartender's apron all grow out of it. The third is tipsy imagery: moons, cats, fog, late nights, old records — lounges and neighborhood bars take the mood route, where the name needs picture and warmth, tipsy but never wrecked. Mind the register of the format: a cocktail den can be cryptic and proud, a neighborhood taproom must feel easy to walk into, a livehouse needs sonic attitude — same liquor, but the name's intimidation level must match the check size. On channels: bars live in \"where are we drinking tonight\" retellings, discovery posts and ranked lists — the name needs a hook that survives \"that place called X\"; and it's worth imagining, before you commit, what the name looks like lit up as neon at 1 a.m.",
+      namingIdeas: [
+        "Speakeasy secrecy: the hide-it etiquette of the tradition — PDT-style confidentiality personas; the harder to find, the harder people look",
+        "House persona: the name sets the night's register — Death & Co's black humor, Attaboy's old slang; menu and fit-out grow out of the name",
+        "Tipsy imagery: moons, cats, fog, late nights, old records — the mood route needs picture and warmth, tipsy but never wrecked",
+        "Match the intimidation: cocktail dens may be cryptic and proud, neighborhood taprooms easy to enter — the name's threshold must match the check",
+        "The neon test: imagine the name lit as a sign at 1 a.m. — a bar name's final exam is the signage, not the document",
+      ],
+      cases: [
+        { name: "PDT (Please Don't Tell)", takeaway: "Confidentiality written into the name, taken to the limit: a hidden door behind a hot-dog shop's phone booth — name and entrance co-writing the speakeasy story; the less you may tell, the more everyone does" },
+        { name: "Death & Co", takeaway: "Drinking with death as black humor: riffing on Prohibition posters that equated drink with doom — a dark persona that turned one small room into a totem of the global cocktail revival" },
+        { name: "Attaboy", takeaway: "Old slang for \"well done\": the ex-Milk & Honey crew naming their room after a pat on the back — warmth neutralizing pedigree's distance, the exemplar of slang naming" },
+        { name: "Trailer Happiness", takeaway: "Joy in a trailer home: London's tiki den pairing cheap kitsch with delight — contrast humor setting an unpretentious party register, the relaxed sample of tiki naming" },
+        { name: "Two Schmucks", takeaway: "Self-deprecation as persona: a Barcelona dive calling itself two fools while ranking among the world's best — proof that in bars, humility with swagger out-drinks solemnity" },
+      ],
+      pitfalls: [
+        "Secrecy past findability: the speakeasy persona still needs searchable listings — when maps and review pages can't match the name, mystery becomes churn",
+        "Mismatched intimidation: a proud French name on a corner taproom reads expensive-do-not-enter to the neighborhood — threshold must match the check",
+        "Wrecked over tipsy: names that lean blackout-hard cheapen the room and scare off half the clientele — tipsy is an atmosphere, wrecked is an incident",
+        "Forgetting the neon: dense, wordy names blur into mush as a lit sign — a bar name's final exam happens after dark, on the facade",
+      ],
+    },
+  },
+  musicschool: {
+    slug: "musicschool",
+    tlds: [
+      { tld: "com", zh: "家长决策的信任底线，连锁琴行与考级机构的默认选择", en: "The trust baseline for parent decisions — the default for chains and grading academies" },
+      { tld: "academy", zh: "「学院」后缀直给教学身份，音乐教育机构天然合拍", en: "The academy suffix stating the teaching identity — a natural fit for music education" },
+      { tld: "studio", zh: "「工作室」后缀，成人钢琴房与录音教学的轻业态标配", en: "The studio suffix — standard for adult piano rooms and recording-lesson formats" },
+    ],
+    zh: {
+      label: "音乐培训琴行",
+      title: "音乐培训与琴行怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "音乐培训机构与琴行命名指南：乐理词根、大师致敬、成长叙事等 5 种思路，Yamaha 音乐教室/School of Rock 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的音乐教育域名。",
+      intro:
+        "音乐培训的名字要同时打动两代人：付钱的家长要听到专业与坚持，学琴的孩子要感到有趣与向往——一个名字里得住着「考级通过率」与「舞台聚光灯」两种想象。第一素材库是乐理词根：音符（do re mi）、和弦、节拍、谱号、八度——这些词自带行业身份又有音乐美感，「半音阶」「小节线」比「XX 艺术培训」专业十倍；乐器词（琴键、琴弦、弓）同样好用，但别锁死单一乐器，机构扩科时名字要装得下。第二个抓手是大师与经典致敬：贝多芬、莫扎特、月光、田园——古典音乐的公共资产库取之不尽，致敬词自带「正统血统」的暗示，家长的信任瞬间有了锚点。第三个抓手是成长叙事：音乐教育卖的是「孩子的变化」——从第一个音阶到第一次登台，名字里的「阶」「台」「光」都在讲这个故事；School of Rock 用一部电影的热血把「学音乐」讲成「组乐队」，证明成长叙事可以很燃。要注意业态的分化：少儿考级机构要稳重可信，成人兴趣班要松弛治愈（「三十岁学钢琴不丢人」），琴行零售要专业殷实——同是音乐，名字的温度要对准客群。渠道上，音乐机构活在家长群转介绍、商场中庭的招牌和汇报演出的节目单上——名字要在「我家孩子在 XX 学琴」的转述里好念可信，也要在演出海报上印得体面。",
+      namingIdeas: [
+        "乐理词根：音符、和弦、节拍、八度——自带行业身份与音乐美感，比「XX 艺术培训」专业十倍",
+        "大师致敬：贝多芬、月光、田园——古典公共资产库取之不尽，正统血统的暗示让家长信任有锚点",
+        "成长叙事：从第一个音阶到第一次登台——「阶」「台」「光」都在讲孩子的变化，School of Rock 式的热血也是路",
+        "扩科预留：别锁死单一乐器——钢琴教室加声乐加吉他是常态，名字要装得下整个音乐版图",
+        "两代人测试：家长听到专业坚持、孩子感到有趣向往——名字里要同时住着考级与聚光灯",
+      ],
+      cases: [
+        { name: "Yamaha 音乐教室", takeaway: "乐器巨头把品牌直接延伸到教育：卖琴与教琴互为闭环——「教室」而非「学校」的措辞降低了报名门槛，品牌延伸命名的教科书" },
+        { name: "School of Rock", takeaway: "借电影 IP 的热血叙事：把「学音乐」讲成「组乐队登台」——成长叙事的极端样本，连锁化后名字本身就是招生海报" },
+        { name: "柏斯音乐", takeaway: "「柏」的沉稳配「斯」的文气：中文琴行命名的经典气质配方——两字名在门头、发票抬头与家长转述里都稳重体面" },
+        { name: "Simply Piano", takeaway: "simply + 乐器名：把「学琴很难」的心理门槛用一个副词拆掉——线上陪练产品的命名逻辑同样适用于成人零基础门店" },
+        { name: "知音琴行", takeaway: "「知音」的典故暴击：伯牙子期的故事让两个字自带千年信任——典故命名在音乐品类里是中文独有的富矿" },
+      ],
+      pitfalls: [
+        "锁死单一乐器：「XX 钢琴教室」扩声乐吉他时名字先打架——扩科是常态，名字要装得下整个版图",
+        "艺术培训大杂烩：名字里塞满艺术/教育/文化，专业感反而稀释——家长要的是「懂音乐」不是「什么都教」",
+        "温度错配：少儿机构起了个酒吧风名字、成人琴房起了个考级风名字——客群不同，名字的温度要对准",
+        "忽略节目单场景：汇报演出海报与结业证书是名字的高光印刷位——太随意的名字在这些场景里撑不起仪式感",
+      ],
+    },
+    en: {
+      label: "Music schools",
+      title: "How to Name a Music School or Instrument Store: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Music school and instrument store naming guide: music-theory roots, maestro homage, growth narratives, breakdowns of Yamaha Music School/School of Rock, recommended TLDs and pitfalls — then hunt an available music education domain with AI.",
+      intro:
+        "A music school's name has to move two generations at once: the paying parent needs to hear rigor and persistence, while the child at the keyboard needs to feel fun and longing — one name housing both the grading-exam pass rate and the stage spotlight. The first material bin is music-theory roots: notes, chords, tempo, clefs, octaves — words that carry industry identity and musical beauty at once; \"Chromatic\" or \"Barline\" reads ten times more professional than \"XX Arts Training\". Instrument words (keys, strings, bows) work too, but don't lock onto one instrument — when the school adds voice and guitar, the name must have room. The second lever is maestro and classic homage: Beethoven, Mozart, Moonlight, Pastoral — classical music's public-domain treasury is inexhaustible, and homage words hint at orthodox lineage, giving parental trust an instant anchor. The third is the growth narrative: music education sells the child's transformation — from the first scale to the first recital, and words of steps, stages and light all tell that story; School of Rock turned \"music lessons\" into \"joining a band\", proof the narrative can burn hot. Mind the format split: kids' grading academies need steadiness, adult hobby studios need ease (\"learning piano at thirty is nothing to hide\"), and instrument retail needs substance — same music, different warmth, tuned to the clientele. On channels: music schools live in parent-group referrals, mall-atrium signage and recital programs — the name must sound credible in \"my kid studies at X\" retellings and print with dignity on a concert poster.",
+      namingIdeas: [
+        "Music-theory roots: notes, chords, tempo, octaves — industry identity plus musical beauty, ten times more professional than \"XX Arts Training\"",
+        "Maestro homage: Beethoven, Moonlight, Pastoral — the classical public domain is inexhaustible, and lineage hints anchor parental trust instantly",
+        "Growth narrative: from the first scale to the first recital — steps, stages and light tell the transformation; School of Rock proves it can burn hot",
+        "Reserve for expansion: don't lock onto one instrument — piano schools add voice and guitar as a rule, and the name must hold the whole map",
+        "The two-generation test: parents hear rigor, kids feel longing — the name must house both the grading exam and the spotlight",
+      ],
+      cases: [
+        { name: "Yamaha Music School", takeaway: "The instrument giant extending straight into education: selling and teaching close the loop — \"school\" kept humble as classroom-scale, the textbook of brand-extension naming" },
+        { name: "School of Rock", takeaway: "A film IP's fire borrowed whole: teaching music retold as forming a band and taking the stage — the extreme sample of growth-narrative naming, where the franchise name is its own recruitment poster" },
+        { name: "Simply Piano", takeaway: "simply + the instrument: one adverb dismantling the \"piano is hard\" threshold — the online-practice logic transfers intact to adult beginner studios" },
+        { name: "Steinway & Sons", takeaway: "The family name plus \"& Sons\": generational craft written into the letterhead — in music retail, lineage words are substance made audible" },
+        { name: "El Sistema", takeaway: "\"The System\" as a movement name: Venezuela's youth-orchestra program naming method itself — proof that in music education, a name promising a path can outshine one promising talent" },
+      ],
+      pitfalls: [
+        "Locking onto one instrument: \"XX Piano Classroom\" fights its own name when voice and guitar arrive — expansion is the rule, and the name must hold the map",
+        "The arts-training grab bag: stuffing arts/education/culture into one name dilutes the expertise — parents want \"knows music\", not \"teaches everything\"",
+        "Mismatched warmth: a bar-flavored name on a kids' academy, an exam-flavored name on an adult studio — tune the temperature to the clientele",
+        "Forgetting the recital program: concert posters and certificates are the name's ceremonial print positions — a casual name can't carry the occasion",
+      ],
+    },
+  },
+  chess: {
+    slug: "chess",
+    tlds: [
+      { tld: "com", zh: "家长决策与连锁扩张的信任底线，棋类教育机构的默认选择", en: "The trust baseline for parent decisions and chain growth — the default for chess academies" },
+      { tld: "club", zh: "「俱乐部」后缀直给棋社身份，会员制与赛事组织天然合拍", en: "The club suffix stating the chess-club identity — natural for memberships and tournaments" },
+      { tld: "academy", zh: "「学院」后缀，青少年棋院与考级培训的教学身份直给", en: "The academy suffix — the teaching identity outright for youth programs and grading prep" },
+    ],
+    zh: {
+      label: "棋类培训",
+      title: "围棋与棋类培训怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "围棋、国际象棋与棋类培训命名指南：棋语词根、智慧意象、段位叙事等 5 种思路，聂卫平围棋道场/Chess.com 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的棋类教育域名。",
+      intro:
+        "棋类培训的名字要落子有声：这是一个把「智慧」当作核心承诺的品类——家长送孩子学棋，买的是专注力、大局观与胜负心的修炼，名字要在第一眼就落下这颗「聪明子」。第一素材库是棋语词根：围棋的「星位」「天元」「布局」「定式」，国际象棋的「开局」「将军」「王后」——棋语自带行业身份与文化厚度，「天元」两个字比「XX 智力开发」高级十倍；黑白、纵横、方圆这些棋盘意象同样是富矿。第二个抓手是智慧与修养意象：棋在中文语境里从来不只是游戏——琴棋书画的「棋」是士人修养，名字里的「弈」「思」「谋」「静」都在向家长承诺「学棋即修心」。第三个抓手是段位与成长叙事：从启蒙到定段，棋类教育有最清晰的进阶阶梯——名字里的「登顶」「问鼎」「步步」都在讲这个爬坡故事；冠军棋手的名字（聂卫平围棋道场）更是把「终点」直接做成了招牌。要注意棋种的选择题：围棋机构常走东方雅致路线，国际象棋机构常走国际精英路线——两条路线的名字气质几乎不通用，先定棋种与客群再落名字；综合棋院则要用「棋」的公约数，别让名字偏科。渠道上，棋类机构活在家长群「XX 家孩子定段了」的转述、商场招牌和赛事成绩公示里——名字要在成绩单与奖状上印得住体面，「在 XX 学棋」要念着可信。",
+      namingIdeas: [
+        "棋语词根：天元、星位、布局、将军——棋语自带行业身份与文化厚度，比「智力开发」高级十倍",
+        "智慧意象：弈、思、谋、静——琴棋书画的士人修养血统，向家长承诺「学棋即修心」",
+        "段位叙事：从启蒙到定段的爬坡故事——「登顶」「问鼎」「步步」都在讲进阶，冠军名字即招牌",
+        "棋种定调：围棋走东方雅致、国象走国际精英——两条路线气质不通用，先定客群再落名字",
+        "奖状测试：名字要在成绩公示与奖状上印得住体面——棋类教育的高光时刻都在纸面上",
+      ],
+      cases: [
+        { name: "聂卫平围棋道场", takeaway: "冠军姓名+「道场」的双重压阵：棋圣的名字是终点承诺，道场的措辞把训练升格为修行——人名命名在棋类教育里的天花板样本" },
+        { name: "Chess.com", takeaway: "品类词+.com 的极致直给：把「国际象棋」本身注册成品牌——品类通用词做名字的唯一解法是拿到那个域名，先到先得的教科书" },
+        { name: "真朴围棋", takeaway: "「真」与「朴」的道家词根：把围棋的东方哲学写进名字——两个字同时完成气质定调与教育主张，雅致路线的经典配方" },
+        { name: "Magnus Academy", takeaway: "借世界冠军 Magnus Carlsen 的名字做学院：冠军 IP 即信任背书——国际象棋的精英路线命名，名字本身就是「学到多高」的答案" },
+        { name: "弈学园", takeaway: "「弈」的单字专业+「学园」的亲切：既有棋语血统又不吓退启蒙家长——专业词根配教育后缀的平衡样本" },
+      ],
+      pitfalls: [
+        "智力开发大词化：名字里塞满智力/思维/脑力，反而显得像早教杂牌——棋语词根才是专业身份的证明",
+        "棋种气质错配：围棋机构起了个国际范名字、国象机构起了个水墨风名字——两条路线不通用，先定棋种再落名",
+        "锁死单一棋种：「XX 围棋」加开国象象棋时名字先打架——综合棋院要用「棋」「弈」的公约数",
+        "忽略奖状场景：成绩公示与奖状是家长晒圈的素材——太随意的名字在这些纸面高光时刻撑不起来",
+      ],
+    },
+    en: {
+      label: "Chess & Go academies",
+      title: "How to Name a Chess or Go Academy: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Chess and Go academy naming guide: board-game roots, wisdom imagery, rank-climbing narratives, breakdowns of Chess.com/Magnus Academy and Go dojos, recommended TLDs and pitfalls — then hunt an available chess education domain with AI.",
+      intro:
+        "A chess academy's name should land like a stone on the board: this is a category whose core promise is intelligence — parents enrolling a child are buying focus, strategic vision and a tempered relationship with winning, and the name must place that \"smart stone\" at first glance. The first material bin is board-game roots: Go's tengen, star points, joseki and fuseki; chess's openings, checks, queens and gambits — game terms carry industry identity and cultural depth at once, and \"Tengen\" reads ten times classier than \"XX Brain Development\"; black-and-white, grids and the board itself are equally rich veins. The second lever is wisdom and cultivation imagery: in East Asian tradition the game sits among the four scholarly arts — words of contemplation, strategy and stillness promise parents that learning the game disciplines the mind. The third is the rank-climbing narrative: from first lessons to dan certification, board-game education has the clearest progression ladder of any subject — names of summits, ascents and steps tell that climb, and champions' names on the door (a Nie Weiping dojo, a Magnus academy) make the destination itself the signboard. Mind the which-game question: Go academies usually take the Eastern-elegance route while chess academies take the international-elite route — the two registers barely interchange, so fix the game and the clientele before fixing the name; multi-game schools need the common denominator of \"board wisdom\" without leaning one way. On channels: academies live in parent-group retellings (\"their kid just made dan\"), mall signage and tournament result postings — the name must print with dignity on certificates, and \"studies at X\" must sound credible.",
+      namingIdeas: [
+        "Board-game roots: tengen, star points, gambits, checks — game terms carry identity and cultural depth, ten times classier than \"brain development\"",
+        "Wisdom imagery: contemplation, strategy, stillness — the scholarly-arts bloodline promising parents that the game disciplines the mind",
+        "Rank-climbing narrative: from first lesson to dan certification — summits, ascents and steps tell the climb; a champion's name is the destination made signboard",
+        "Fix the game first: Go takes Eastern elegance, chess takes international elite — the registers barely interchange; pick the clientele before the name",
+        "The certificate test: results postings and award certificates are the parents' share-worthy moments — the name must print with dignity on paper",
+      ],
+      cases: [
+        { name: "Chess.com", takeaway: "The category word plus .com, taken to the limit: registering the game itself as the brand — the only way a generic works is owning that domain; the textbook of first-mover naming" },
+        { name: "Magnus Academy", takeaway: "The world champion's first name on the door: champion IP as trust collateral — elite-route chess naming where the name itself answers \"how far can my kid go?\"" },
+        { name: "Nie Weiping Go Dojo", takeaway: "Champion surname + \"dojo\": the Go saint's name promises the destination while dojo elevates training into cultivation — the ceiling sample of person-naming in board-game education" },
+        { name: "ChessKid", takeaway: "The category word + kid: instantly legible to parents as the safe, child-first version — audience-suffix naming that carves a family brand out of a generic" },
+        { name: "DeepMind", takeaway: "deep + mind, born from games: the AlphaGo creator naming itself after depth of thought — proof that the intelligence promise at this category's heart scales far beyond the board" },
+      ],
+      pitfalls: [
+        "Inflating with brain-development buzzwords: intelligence/thinking/mind stacked in a name reads like generic early education — game roots are the proof of expertise",
+        "Mismatched game registers: an international-flavored name on a Go dojo, an ink-wash name on a chess academy — the routes barely interchange",
+        "Locking onto one game: \"XX Go\" fights its own name when chess and xiangqi classes arrive — multi-game schools need the common denominator",
+        "Forgetting the certificate: results postings and awards are what parents share — a casual name collapses at exactly the paper moments that matter",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

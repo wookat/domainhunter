@@ -5,6 +5,7 @@ const WHOIS_SERVERS: Record<string, { host: string; notFound: RegExp; found: Reg
   com: { host: "whois.verisign-grs.com", notFound: /No match for/i, found: /Domain Name:/i },
   net: { host: "whois.verisign-grs.com", notFound: /No match for/i, found: /Domain Name:/i },
   cn: { host: "whois.cnnic.cn", notFound: /no matching record/i, found: /Registrant|Registration Time/i },
+  "com.cn": { host: "whois.cnnic.cn", notFound: /no matching record/i, found: /Registrant|Registration Time/i },
   io: { host: "whois.nic.io", notFound: /NOT FOUND|No Object Found/i, found: /Domain Name:/i },
   cc: { host: "ccwhois.verisign-grs.com", notFound: /No match for/i, found: /Domain Name:/i },
   tv: { host: "tvwhois.verisign-grs.com", notFound: /No match for/i, found: /Domain Name:/i },
@@ -80,6 +81,8 @@ export async function whoisFallback(r: CheckResult): Promise<CheckResult> {
       const expiresAt = parseWhoisExpiry(text);
       return { domain: r.domain, status: "taken", method: "whois", ...(expiresAt ? { expiresAt } : {}) };
     }
+    // 注册局保留域：found/notFound 都没匹配且文本明确表示保留/不可注册（如 cnnic 对 nic.* 返回「can not be registered online」），细化文案
+    if (/\breserv(?:ed|ation)\b|can\s?not be registered/i.test(text)) return { domain: r.domain, status: "unknown", method: "whois", detail: "reserved" };
     return { domain: r.domain, status: "unknown", method: "whois", detail: "unparsed" };
   } catch (e) {
     return { domain: r.domain, status: "unknown", method: "whois", detail: String(e) };
