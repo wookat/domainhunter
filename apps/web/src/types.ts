@@ -33,6 +33,9 @@ export interface RoundInfo {
   filtered?: number;
 }
 
+/** AI 上游错误类别（R264）：quota 类重试无效，其余可重试 */
+export type AiErrorKind = "quota" | "rate-limit" | "upstream" | "network" | "unknown";
+
 /** 防线统计元数据（R238）：各防线丢弃计数 + 补发/重试触发，只计数不含候选内容 */
 export interface GuardMeta {
   dropped: Record<string, number>;
@@ -56,6 +59,8 @@ export interface StreamEvent {
   target?: number;
   reachedTarget?: boolean;
   detail?: string;
+  /** error 事件的上游错误类别（R264，旧事件无此字段） */
+  errorKind?: AiErrorKind;
   domain?: string;
   status?: Status;
   meaning?: string;

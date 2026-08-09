@@ -373,6 +373,33 @@ export function guardDroppedTotal(guard: GuardStats): number {
   return Object.values(guard.dropped).reduce((a, b) => a + b, 0);
 }
 
+// ---------------- 上游 LLM 错误分类（R264） ----------------
+// 生产事故：DeepSeek 账户欠费（上游 402）时前端只有通用错误文案，用户无法区分
+// 「服务方账务问题，重试没用」与「暂时限流/网络抖动，可重试」。
+// 按错误来源分类，随 error 流事件透出给前端（只透出类别与既有 detail 短码，
+// 不含 key、不含上游响应体）：
+// - quota：401/402/403（认证/账务/配额，重试无效）
+// - rate-limit：429（上游限流，稍后可重试）
+// - upstream：5xx 与其他 HTTP 错误、坏 JSON 输出（上游故障，可重试）
+// - network：fetch 网络失败 / 超时（可重试）
+export type AiErrorKind = "quota" | "rate-limit" | "upstream" | "network" | "unknown";
+
+const LLM_HTTP_RE = /llm-http-(\d{3})/;
+
+export function classifyAiError(e: unknown): AiErrorKind {
+  const msg = e instanceof Error ? e.message : String(e);
+  const m = LLM_HTTP_RE.exec(msg);
+  if (m) {
+    const status = Number(m[1]);
+    if (status === 401 || status === 402 || status === 403) return "quota";
+    if (status === 429) return "rate-limit";
+    return "upstream";
+  }
+  if (msg.includes("llm-bad-json") || msg.includes("llm-bad-output")) return "upstream";
+  if (e instanceof Error && (e.name === "TimeoutError" || e.name === "AbortError" || e.name === "TypeError")) return "network";
+  return "unknown";
+}
+
 export interface AiUnderstanding {
   core: string;
   style: string;
@@ -413,9 +440,13 @@ ${MEANING_REDLINES_EN}
   ✗ canaryio 标 word —— label 内嵌 TLD 名 io，组成 canaryio.com 观感怪异，这类内嵌 TLD 名的候选直接不要输出
   ✗ ledgeledger —— 同词根叠拼（ledger+ledger）低质，不要输出任何同词根叠拼的候选`;
 
-export async function generateUnderstanding(description: string, apiKey: string, lang: "zh" | "en" = "zh"): Promise<AiUnderstanding | null> {
+// LLM 上游基地址：默认 DeepSeek 官方；本地 wrangler dev 可用 LLM_API_BASE 指向假上游
+// 验证错误路径（R264），生产不设此变量时行为与既往完全一致
+export const DEFAULT_LLM_API_BASE = "https://api.deepseek.com";
+
+export async function generateUnderstanding(description: string, apiKey: string, lang: "zh" | "en" = "zh", baseUrl: string = DEFAULT_LLM_API_BASE): Promise<AiUnderstanding | null> {
   try {
-    const res = await fetch("https://api.deepseek.com/chat/completions", {
+    const res = await fetch(`${baseUrl}/chat/completions`, {
       method: "POST",
       headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}` },
       body: JSON.stringify({
@@ -514,7 +545,7 @@ export function mergeWordSupplement(main: AiCandidate[], extra: AiCandidate[]): 
 export async function generateAiCandidates(
   description: string,
   apiKey: string,
-  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; guard?: GuardStats } = {},
+  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; guard?: GuardStats; baseUrl?: string } = {},
 ): Promise<AiCandidate[]> {
   let out: AiCandidate[];
   try {
@@ -1139,6 +1170,7 @@ async function generateOnce(
     wordSupplementExclude?: string[];
     wordSupplementAttempt?: number;
     guard?: GuardStats;
+    baseUrl?: string;
   } = {},
 ): Promise<AiCandidate[]> {
   const count = opts.count ?? 24;
@@ -1151,7 +1183,7 @@ async function generateOnce(
   if (isWordSupplement) {
     user += `\n\n${buildWordSupplementDirective(count, opts.wordSupplementExclude ?? [], opts.wordSupplementAttempt ?? 1)}`;
   }
-  const res = await fetch("https://api.deepseek.com/chat/completions", {
+  const res = await fetch(`${opts.baseUrl ?? DEFAULT_LLM_API_BASE}/chat/completions`, {
     method: "POST",
     headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}` },
     signal: AbortSignal.timeout(60_000), // 单次 LLM 调用超时上限，超时走上层重试
