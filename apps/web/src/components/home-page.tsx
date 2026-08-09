@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Brain, Check, ChevronDown, Copy, ExternalLink, History, Loader2, Plus, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
+import { ArrowRight, Brain, Check, ChevronDown, Copy, ExternalLink, History, Loader2, Plus, RotateCw, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { ExpiryNote, WatchCta } from "@/components/domain-row";
@@ -1140,7 +1140,7 @@ export function HomePage({
   const quickParsed = parseQuickCheck(description);
   const quick = quickParsed && "label" in quickParsed ? quickParsed : null;
   const quickUnsupportedTld = quickParsed && "unsupportedTld" in quickParsed ? quickParsed.unsupportedTld : null;
-  const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown"; expiresAt?: string }[]>([]);
+  const [quickRows, setQuickRows] = useState<{ domain: string; status: "checking" | "available" | "taken" | "unknown"; expiresAt?: string; detail?: string }[]>([]);
   const [quickRunning, setQuickRunning] = useState(false);
   const [quickMoreDone, setQuickMoreDone] = useState(false);
   // quick-check 图例过滤（IDS 式）：按状态筛 chips
@@ -1219,14 +1219,14 @@ export function HomePage({
         buf = lines.pop()!;
         for (const line of lines) {
           if (!line) continue;
-          let r: { domain?: string; status?: "available" | "taken" | "unknown"; expiresAt?: string; type?: string };
+          let r: { domain?: string; status?: "available" | "taken" | "unknown"; expiresAt?: string; detail?: string; type?: string };
           try {
             r = JSON.parse(line) as typeof r;
           } catch {
             continue; // 单行损坏不影响其余结果
           }
           if (r.type || !r.domain || !r.status) continue;
-          setQuickRows((prev) => prev.map((row) => (row.domain === r.domain ? { ...row, status: r.status!, expiresAt: r.expiresAt } : row)));
+          setQuickRows((prev) => prev.map((row) => (row.domain === r.domain ? { ...row, status: r.status!, expiresAt: r.expiresAt, detail: r.detail } : row)));
         }
       }
     } catch {
@@ -1238,6 +1238,33 @@ export function HomePage({
         setQuickRows((prev) => prev.map((row) => (checkDomains.has(row.domain) && row.status === "checking" ? { ...row, status: "unknown" } : row)));
       }
     }
+  }
+
+  // 单域重试：只重查一个 unknown 域名，复用 /api/search 的显式域名清单通道，不影响其余 chips
+  async function retryQuickDomain(domain: string) {
+    setQuickRows((prev) => prev.map((row) => (row.domain === domain ? { ...row, status: "checking", detail: undefined } : row)));
+    let next: { status: "available" | "taken" | "unknown"; expiresAt?: string; detail?: string } = { status: "unknown" };
+    try {
+      const res = await fetch("/api/search", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ domains: [domain] }),
+      });
+      if (res.ok) {
+        for (const line of (await res.text()).split("\n")) {
+          if (!line) continue;
+          try {
+            const r = JSON.parse(line) as { domain?: string; status?: "available" | "taken" | "unknown"; expiresAt?: string; detail?: string; type?: string };
+            if (!r.type && r.domain === domain && r.status) next = { status: r.status, expiresAt: r.expiresAt, detail: r.detail };
+          } catch {
+            /* 单行损坏忽略 */
+          }
+        }
+      }
+    } catch {
+      /* 网络错误：回落未知 */
+    }
+    setQuickRows((prev) => prev.map((row) => (row.domain === domain ? { ...row, ...next } : row)));
   }
 
   async function runVariantCheck() {
@@ -1581,14 +1608,28 @@ export function HomePage({
                   ) : (
                     <span
                       key={row.domain}
+                      title={row.status === "unknown" ? t(row.detail === "reserved" ? "home.quickReservedTip" : "home.quickUnknownTip") : undefined}
                       className={cn(
-                        "inline-flex max-w-full items-center gap-1.5 rounded-lg border px-2.5 py-1.5 font-mono text-xs",
+                        "inline-flex max-w-full items-stretch overflow-hidden rounded-lg border font-mono text-xs",
                         row.status === "unknown" && "border-line text-txt1",
                         row.status === "checking" && "border-line text-txt2",
                       )}
                     >
-                      <span title={row.domain} className="min-w-0 truncate">{row.domain}</span>
-                      <i className="not-italic font-sans text-[10px]">{t(`status.${row.status}` as I18nKey)}</i>
+                      <span className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 sm:min-h-0">
+                        <span title={row.status === "checking" ? row.domain : undefined} className="min-w-0 truncate">{row.domain}</span>
+                        <i className="not-italic font-sans text-[10px]">{t(row.status === "unknown" && row.detail === "reserved" ? "status.reserved" : (`status.${row.status}` as I18nKey))}</i>
+                        {row.status === "checking" && <Loader2 className="h-3 w-3 animate-spin" />}
+                      </span>
+                      {row.status === "unknown" && row.detail !== "reserved" && (
+                        <button
+                          onClick={() => void retryQuickDomain(row.domain)}
+                          title={t("home.quickRetryTitle", { domain: row.domain })}
+                          aria-label={t("home.quickRetryTitle", { domain: row.domain })}
+                          className="border-l border-line/70 px-3 transition-colors hover:text-txt0 sm:px-2"
+                        >
+                          <RotateCw className="h-3.5 w-3.5" />
+                        </button>
+                      )}
                     </span>
                   ),
                 )}
