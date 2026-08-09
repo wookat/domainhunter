@@ -16,6 +16,7 @@ import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
 import { tldPrice } from "./types";
 import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
+import { fetchPorkbunPrices, PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
 
 // LLM_API_BASE：仅供本地 wrangler dev 指向假上游验证错误路径（R264），生产不设置
 type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace; LLM_API_BASE?: string };
@@ -42,6 +43,7 @@ const PRICES_TTL = 24 * 3600; // Porkbun 价格缓存 24h
 const PRICES_STALE_KEY = "prices:latest"; // 不带版本的 stale 兜底 key：升版冷缓存 + 上游不可达时回退
 const PRICES_STALE_TTL = 30 * 24 * 3600; // stale 兜底保留 30 天（每次成功拉取刷新）
 const PRICES_FETCH_TIMEOUT_MS = 10_000; // Porkbun 拉取超时（原依赖 Workers 默认 ~60s，收紧到 10s）
+const PRICES_STALE_REFRESH_MS = 12 * 3600 * 1000; // cron 内主动重拉阈值：缓存超 12h 视为过久
 const SITE_ORIGIN = "https://hunt.zalize.com";
 const FAST_FIRST_ROUND_COUNT = 8; // fast 模式首轮候选数（更快首字节）
 const DOMAIN_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62}))+$/;
@@ -707,17 +709,6 @@ app.post("/api/check", async (c) => {
   return new Response(readable, { headers: { "content-type": "application/x-ndjson; charset=utf-8" } });
 });
 
-interface PorkbunPricing {
-  pricing?: Record<string, { registration?: string; renewal?: string }>;
-}
-
-interface PriceEntry {
-  registration: number;
-  renewal: number;
-  /** 静态参考价（无实时报价时回退，仅 MCP tld_prices 补齐时使用） */
-  approx?: true;
-}
-
 /** 上游失败/超时时回退不带版本的 stale key，响应标注 stale:true（TLD 数可少于当前，缺的走前端静态参考价） */
 async function loadStalePayload(kv: KVNamespace | undefined): Promise<string | null> {
   if (!kv) return null;
@@ -732,34 +723,15 @@ async function loadStalePayload(kv: KVNamespace | undefined): Promise<string | n
 }
 
 /** 实时价格负载（JSON 字符串）：Porkbun 公开价格 API（美元），KV 缓存 24h；上游不可达时回退 stale key */
-async function loadPricesPayload(kv: KVNamespace | undefined): Promise<string | null> {
-  if (kv) {
+async function loadPricesPayload(kv: KVNamespace | undefined, opts?: { forceRefresh?: boolean }): Promise<string | null> {
+  if (kv && !opts?.forceRefresh) {
     try {
       const cached = await kv.get(PRICES_KEY, "text");
       if (cached) return cached;
     } catch { /* 缓存读取失败则实时拉取 */ }
   }
-  let data: PorkbunPricing;
-  try {
-    const res = await fetch("https://api.porkbun.com/api/json/v3/pricing/get", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: "{}",
-      signal: AbortSignal.timeout(PRICES_FETCH_TIMEOUT_MS),
-    });
-    if (!res.ok) return loadStalePayload(kv);
-    data = (await res.json()) as PorkbunPricing;
-  } catch {
-    return loadStalePayload(kv);
-  }
-  const prices: Record<string, PriceEntry> = {};
-  for (const tld of TLD_LIST) {
-    const p = data.pricing?.[tld];
-    const registration = Number(p?.registration);
-    const renewal = Number(p?.renewal);
-    if (Number.isFinite(registration) && Number.isFinite(renewal)) prices[tld] = { registration, renewal };
-  }
-  if (Object.keys(prices).length === 0) return loadStalePayload(kv);
+  const prices = await fetchPorkbunPrices(kv, TLD_LIST, PRICES_FETCH_TIMEOUT_MS);
+  if (!prices) return loadStalePayload(kv);
   const payload = JSON.stringify({ prices, currency: "USD", usdToCny: USD_TO_CNY, fetchedAt: Date.now(), tldCount: Object.keys(prices).length });
   if (kv) {
     try {
@@ -768,6 +740,20 @@ async function loadPricesPayload(kv: KVNamespace | undefined): Promise<string | 
     } catch { /* 缓存写入失败不影响返回 */ }
   }
   return payload;
+}
+
+/** cron 周期内价格缓存超过阈值（含缓存缺失）时主动重拉一次，避免长期 stale */
+async function refreshPricesIfStale(env: Bindings): Promise<void> {
+  const kv = env.CACHE;
+  if (!kv) return;
+  try {
+    const cached = await kv.get(PRICES_KEY, "text");
+    if (cached) {
+      const { fetchedAt } = JSON.parse(cached) as { fetchedAt?: number };
+      if (typeof fetchedAt === "number" && Date.now() - fetchedAt < PRICES_STALE_REFRESH_MS) return;
+    }
+    await loadPricesPayload(kv, { forceRefresh: true });
+  } catch { /* 重拉失败等下个 cron 周期 */ }
 }
 
 app.get("/api/prices", async (c) => {
@@ -1060,12 +1046,21 @@ app.get("/api/usage", async (c) => {
   }
   let cronLast: number | null = null;
   let indexnowLast: number | null = null;
+  let pricesLastOk: number | null = null;
+  let pricesLastFail: number | null = null;
   try {
-    const [cl, il] = await Promise.all([kv?.get("cron:last"), kv?.get("indexnow:last")]);
+    const [cl, il, po, pf] = await Promise.all([
+      kv?.get("cron:last"),
+      kv?.get("indexnow:last"),
+      kv?.get(PRICES_LAST_OK_KEY),
+      kv?.get(PRICES_LAST_FAIL_KEY),
+    ]);
     cronLast = cl ? Number(cl) : null;
     indexnowLast = il ? Number(il) : null;
+    pricesLastOk = po ? Number(po) : null;
+    pricesLastFail = pf ? Number(pf) : null;
   } catch { /* 读失败返回 null */ }
-  return c.json({ days: out, cronLast, indexnowLast }, 200, { "cache-control": "public, max-age=300" });
+  return c.json({ days: out, cronLast, indexnowLast, pricesLastOk, pricesLastFail }, 200, { "cache-control": "public, max-age=300" });
 });
 
 // SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）
@@ -1933,5 +1928,6 @@ export default {
     ctx.waitUntil(env.CACHE?.put("cron:last", String(Date.now())) ?? Promise.resolve());
     ctx.waitUntil(runMonitorSweep(env));
     ctx.waitUntil(pingIndexNow(env));
+    ctx.waitUntil(refreshPricesIfStale(env));
   },
 };
