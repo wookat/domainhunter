@@ -1233,6 +1233,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个诊所与门诊品牌，寓意「专业且安心的邻居医生」；气质要专业正规又有家庭医生温度、两三个字念得顺、不蹭名院不暗示疗效；场景是妈妈群的「哪家儿科靠谱」转述、「城市+科室」的搜索和医保定点铭牌上都立得住。",
     en: "A clinic and outpatient brand. The name should feel like the neighborhood doctor — professional and reassuring; the vibe balances credentialed legitimacy with family-doctor warmth, two or three syllables smooth to say, never borrowing famous hospital names or implying efficacy; it must stand in which-pediatrics-is-reliable retellings, city-plus-specialty searches, and on the insurance-network plaque.",
   },
+  {
+    slug: "evcharging",
+    labelZh: "充电桩运营",
+    labelEn: "EV charging",
+    zh: "一个充电桩运营品牌，寓意「随处有桩、插上就走的确定感」；气质要快、稳、有电力感，撑得起物业与车企的合同抬头；场景是地图 App 的「附近充电」列表、充电站灯箱和车主群的推荐里都一眼被记住。",
+    en: "An EV charging network brand. The name should promise chargers everywhere and plug-in-and-go certainty; the vibe is fast, steady, and electric, weighty enough for contracts with properties and automakers; it must stand out in the map app's chargers-nearby list, on station lightboxes, and in EV owner group recommendations.",
+  },
+  {
+    slug: "energystorage",
+    labelZh: "储能系统",
+    labelEn: "Energy storage",
+    zh: "一个储能系统品牌，寓意「把电存住、把峰谷抹平的可靠资产」；气质要沉稳、工程感强、经得起招投标与银行尽调；场景是电网招标文件、工商业园区方案书和户用储能的产品包装上都立得住。",
+    en: "An energy storage brand. The name should evoke a reliable asset that banks electricity and smooths the peaks; the vibe is sober, engineering-grade, able to survive tenders and bank due diligence; it must hold up in grid procurement documents, C&I proposals, and on a home battery's packaging.",
+  },
+  {
+    slug: "recycling",
+    labelZh: "再生资源回收",
+    labelEn: "Recycling & recovery",
+    zh: "一个再生资源回收品牌，寓意「万物皆可再来一次、垃圾是放错位置的资源」；气质要干净、有科技感、彻底摆脱废品站的脏乱差印象；场景是居民区回收柜、政府招标文件和品牌方的 ESG 报告里都不违和。",
+    en: "A recycling and resource-recovery brand. The name should suggest everything deserves a second life and waste is a resource in the wrong place; the vibe is clean and tech-forward, fully shedding the scrapyard stigma; it must sit comfortably on neighborhood collection kiosks, in government tenders, and in a client's ESG report.",
+  },
+  {
+    slug: "retrofit",
+    labelZh: "节能改造",
+    labelEn: "Energy retrofit",
+    zh: "一个节能改造服务品牌，寓意「省下来的电费看得见、改造效果说到做到」；气质要工程可靠、稳重专业、接得住双碳语境；场景是政府园区的立项文件、国企的招标书和能源账单对比图里都站得住。",
+    en: "An energy retrofit services brand. The name should promise visible savings and deliver-what-you-promise engineering; the vibe is reliable, professional, at home in the decarbonization era; it must stand in public-sector project approvals, state-enterprise tenders, and before-and-after energy bill charts.",
+  },
+  {
+    slug: "hvac",
+    labelZh: "暖通空调",
+    labelEn: "HVAC services",
+    zh: "一个暖通空调品牌，寓意「一年四季的体感舒适都交给我」；气质要专业可靠、有厂牌感又不失服务温度；场景是三伏天「空调维修」的搜索结果、装修群的邻居推荐和工程图纸的设备清单里都有分量。",
+    en: "An HVAC brand. The name should promise year-round indoor comfort in trusted hands; the vibe balances factory-grade reliability with service warmth; it needs weight in mid-heatwave AC-repair searches, renovation group-chat referrals, and the equipment schedule on construction drawings.",
+  },
+  {
+    slug: "watertreatment",
+    labelZh: "水处理环保",
+    labelEn: "Water treatment",
+    zh: "一个水处理环保品牌，寓意「把浑浊变清澈、把每一滴水管到放心」；气质要清净、专业、有干得了二十年运营的工程信任感；场景是政府投标文件、工业客户的采购清单和治理后的河道展示牌上都立得住。",
+    en: "A water treatment brand. The name should evoke turning murky into clear and every drop safely managed; the vibe is clean, professional, with the engineering trust of a twenty-year operator; it must hold up in government bids, industrial procurement lists, and on the plaque beside a restored river.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

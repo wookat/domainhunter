@@ -180,4 +180,10 @@ export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized 
   { slug: "bbq", label: { zh: "烧烤夜宵", en: "BBQ & late-night grills" }, oneLiner: { zh: "烧烤与夜宵品牌命名指南：烟火意象、江湖人格、地域招牌等 5 种思路。", en: "BBQ and late-night grill naming guide: ember imagery." } },
   { slug: "pharmacy", label: { zh: "连锁药店", en: "Pharmacies" }, oneLiner: { zh: "连锁药店与药房品牌命名指南：仁心意象、安心承诺、老字号语感等 5 种思路。", en: "Pharmacy naming guide: benevolence imagery." } },
   { slug: "clinic", label: { zh: "诊所门诊", en: "Clinics & outpatient care" }, oneLiner: { zh: "诊所与门诊品牌命名指南：安心意象、专业直给、家庭医生温度等 5 种思路。", en: "Clinic naming guide: reassurance imagery." } },
+  { slug: "evcharging", label: { zh: "充电桩运营", en: "EV charging" }, oneLiner: { zh: "充电桩运营品牌命名指南：电力意象、效率承诺、网络覆盖感等 5 种思路。", en: "EV charging brand naming guide: power imagery." } },
+  { slug: "energystorage", label: { zh: "储能系统", en: "Energy storage" }, oneLiner: { zh: "储能品牌命名指南：蓄与稳的意象、电力词根、可靠感表达等 5 种思路。", en: "Energy storage naming guide: reserve-and-steady imagery." } },
+  { slug: "recycling", label: { zh: "再生资源回收", en: "Recycling & recovery" }, oneLiner: { zh: "再生资源回收品牌命名指南：循环意象、重生叙事、去脏乱差感等 5 种思路。", en: "Recycling brand naming guide: circular imagery." } },
+  { slug: "retrofit", label: { zh: "节能改造", en: "Energy retrofits" }, oneLiner: { zh: "节能改造品牌命名指南：省与优的价值词、工程可靠感、双碳叙事等 5 种思路。", en: "Energy retrofit naming guide: savings-value words." } },
+  { slug: "hvac", label: { zh: "暖通空调", en: "HVAC services" }, oneLiner: { zh: "暖通空调品牌命名指南：冷暖体感词、气候意象、师傅可靠感等 5 种思路。", en: "HVAC naming guide: comfort words, climate imagery and technician-trust registers." } },
+  { slug: "watertreatment", label: { zh: "水处理环保", en: "Water treatment" }, oneLiner: { zh: "水处理品牌命名指南：清与净的意象、水系词根、工程信任感等 5 种思路。", en: "Water treatment naming guide: clarity imagery." } },
 ];

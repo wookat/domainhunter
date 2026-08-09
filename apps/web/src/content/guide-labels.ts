@@ -173,4 +173,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "bbq", zh: "烧烤夜宵", en: "BBQ & late-night grills" },
   { slug: "pharmacy", zh: "连锁药店", en: "Pharmacies" },
   { slug: "clinic", zh: "诊所门诊", en: "Clinics & outpatient care" },
+  { slug: "evcharging", zh: "充电桩运营", en: "EV charging" },
+  { slug: "energystorage", zh: "储能系统", en: "Energy storage" },
+  { slug: "recycling", zh: "再生资源回收", en: "Recycling & recovery" },
+  { slug: "retrofit", zh: "节能改造", en: "Energy retrofits" },
+  { slug: "hvac", zh: "暖通空调", en: "HVAC services" },
+  { slug: "watertreatment", zh: "水处理环保", en: "Water treatment" },
 ];

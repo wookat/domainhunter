@@ -10591,6 +10591,390 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  evcharging: {
+    slug: "evcharging",
+    tlds: [
+      { tld: "com", zh: "充电网络要接住车企、物业与车主三方，.com 的中立可信是签约底气", en: "A charging network signs with automakers, properties and drivers alike — .com's neutral credibility closes contracts" },
+      { tld: "energy", zh: "后缀直接声明能源赛道，充电运营商的身份一目了然", en: "The suffix states the energy vertical outright — a charging operator's identity at a glance" },
+      { tld: "network", zh: "充电桩的价值在网络密度，.network 把「布点成网」写进域名", en: "A charger's value is network density — .network writes coverage into the domain itself" },
+    ],
+    zh: {
+      label: "充电桩运营",
+      title: "充电桩运营品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "充电桩运营品牌命名指南：电力意象、效率承诺、网络覆盖感等 5 种思路，特来电/星星充电/ChargePoint 等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的充电品牌域名。",
+      intro:
+        "充电桩品牌的名字在两个高频场景里被念出来：车主在地图 App 里搜「附近充电」时的列表一瞥，和物业、车企谈判桌上的合同抬头。前者要求名字自带「快、稳、有电」的联想——续航焦虑是这个行业的底色，名字里的确定性就是第一剂安抚；后者要求名字撑得起重资产运营的信任感，毕竟一根桩要在车库里立十年。命名素材上，电与光的意象（闪、电、星、能）是天然词库，特来电把「特别快来电」的双关写进三个字；网络感是第二抓手，充电运营的护城河是布点密度，名字最好暗示「哪里都有我」。要警惕的是把自己锁死在「桩」上——行业正从卖电走向储充一体、车网互动，名字留出「能源服务商」的余量，三年后的业务扩张才不用改名。",
+      namingIdeas: [
+        "电力意象：闪、电、星、能、光——续航焦虑的行业底色下，名字里的「有电感」就是第一剂安抚",
+        "效率承诺：快、秒、极、直——快充是核心卖点，名字直接兑现「插上就走」的期待，但需有技术兜底",
+        "网络覆盖感：星罗棋布、随处可充——充电运营的护城河是密度，名字暗示「哪里都有我」比单桩性能更值钱",
+        "双关造词：特来电（特别快+来电）式的谐音双关，让功能承诺自带记忆点，地图列表里一眼被挑中",
+        "留出能源余量：储充一体、车网互动是下一站，名字锁死「桩」或「充」太深，扩张时就要改名重来",
+      ],
+      cases: [
+        { name: "特来电", takeaway: "「特别快来电」的双关：三个字同时写下快充承诺与「来电」的情绪彩蛋，B 端合同与 C 端地图列表通吃——充电行业双关命名的教科书" },
+        { name: "星星充电", takeaway: "星星 = 星罗棋布：用最日常的意象把「布点密度」翻译成画面，叠词念着亲切，App 图标里一颗星就是完整的品牌资产" },
+        { name: "ChargePoint", takeaway: "charge + point 的直白组合：品类词+地点词说清「充电的地方」，配合全球最大充电网络的规模，通用词反而成了品类代名词" },
+        { name: "EVgo", takeaway: "EV + go 两个音节：把「充完就走」的快充定位压缩到极致，短到车机屏幕和高速路牌上都不会被截断" },
+        { name: "Electrify America", takeaway: "动词「电气化」+ 国名：把企业使命直接当品牌名，公共充电网络的基建气质拉满——使命命名在重资产行业的标准打法" },
+      ],
+      pitfalls: [
+        "锁死在「桩」字上：储充一体、车网互动是行业下一站，名字只写「桩」，业务一扩张就过期",
+        "堆「新能源」万金油词：绿能、新能、锂电满街撞车，地图搜索列表里毫无辨识度",
+        "承诺兑现不了的「快」：名字喊「秒充」实际功率跟不上，续航焦虑的用户最记仇",
+        "只查了商标没查地图 App 收录名：车主找桩全靠地图搜索，同名运营商混在列表里等于把流量白送",
+      ],
+    },
+    en: {
+      label: "EV charging",
+      title: "How to Name an EV Charging Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "EV charging brand naming guide: power imagery, speed promises and network-density cues, breakdowns of TELD/Star Charge/ChargePoint, recommended TLDs and pitfalls — then hunt an available charging brand domain with AI.",
+      intro:
+        "An EV charging name gets spoken in two high-frequency rooms: a driver scanning the map app's \"chargers nearby\" list, and the contract header on a negotiation table with property managers and automakers. The first demands instant associations of fast, reliable, powered — range anxiety is the industry's baseline mood, and certainty in the name is the first dose of reassurance. The second demands the gravitas of heavy-asset operations: a charger stands in that garage for a decade. On material: electricity and light imagery (bolt, spark, star, volt) is the native word bin — TELD's Chinese name puns \"especially fast\" into \"getting a charge\". Network density is the second lever: coverage is the moat, so the best names whisper \"we're everywhere\". The trap to avoid is welding the name to the charging post itself — the industry is moving toward storage-plus-charging and vehicle-to-grid, so leave \"energy services\" headroom or you'll rename in three years.",
+      namingIdeas: [
+        "Power imagery: bolt, spark, star, volt — against the range-anxiety baseline, a powered-up name is the first dose of reassurance",
+        "Speed promises: fast, instant, direct — fast charging is the core sell; let the name deliver \"plug in and go\", backed by real hardware",
+        "Network-density cues: everywhere, constellation, grid — coverage is the moat; a name implying \"we're everywhere\" beats single-post specs",
+        "Pun coinages: TELD-style double meanings make the functional promise self-memorable, so the map list picks you out at a glance",
+        "Leave energy headroom: storage-plus-charging and V2G are next — a name welded to \"charger\" expires with the first business expansion",
+      ],
+      cases: [
+        { name: "TELD (特来电)", takeaway: "A pun on \"especially fast\" and \"getting a charge\": three characters carrying both the fast-charging promise and an emotional easter egg — the textbook of pun naming in charging" },
+        { name: "Star Charge (星星充电)", takeaway: "Stars = scattered everywhere: everyday imagery translating network density into a picture; the reduplicated Chinese name reads friendly, and one star in the app icon is a complete brand asset" },
+        { name: "ChargePoint", takeaway: "charge + point, plainly: category word plus place word saying \"where you charge\" — backed by the largest network, the generic phrase became the category's shorthand" },
+        { name: "EVgo", takeaway: "EV + go in two syllables: the charge-and-leave positioning compressed to the limit, short enough to survive car dashboards and highway signage uncropped" },
+        { name: "Electrify America", takeaway: "A verb plus a country: the corporate mission used directly as the brand — mission naming's standard play in heavy-asset infrastructure" },
+      ],
+      pitfalls: [
+        "Welding the name to the charging post: storage-plus-charging and V2G are the industry's next stop — a \"charger\"-only name expires at the first expansion",
+        "Piling on green-energy filler: eco, volt, li-ion clones collide everywhere and vanish in the map app's search list",
+        "Promising speed the hardware can't deliver: a name shouting \"instant\" over underpowered posts — range-anxious drivers hold grudges",
+        "Clearing the trademark but not the map listing: drivers find chargers by map search, and a name-twin operator in the list means donating your traffic",
+      ],
+    },
+  },
+  energystorage: {
+    slug: "energystorage",
+    tlds: [
+      { tld: "com", zh: "储能订单动辄千万级，采购与银行尽调里 .com 是默认的靠谱信号", en: "Storage deals run to eight figures — in procurement and bank due diligence, .com is the default credibility signal" },
+      { tld: "energy", zh: "后缀即赛道声明，储能系统商的能源身份零解释成本", en: "The suffix is the vertical statement — an energy-storage maker's identity at zero explanation cost" },
+      { tld: "tech", zh: "电芯、PCS、EMS 都是硬科技，.tech 强化技术公司的底色", en: "Cells, PCS and EMS are hard tech — .tech reinforces the technology-company core" },
+    ],
+    zh: {
+      label: "储能系统",
+      title: "储能品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "储能品牌命名指南：蓄与稳的意象、电力词根、可靠感表达等 5 种思路，宁德时代/Powerwall/Fluence 等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的储能品牌域名。",
+      intro:
+        "储能的名字要向两类完全不同的买家自证：电网与工商业主看的是「二十年运行不出事」的可靠感，名字必须稳重如资产负债表；户用市场看的是「停电时家里还有电」的安全感，名字要有守护者的温度。命名素材上，「蓄、储、峰、谷、稳」是中文天然词库，把削峰填谷的生意逻辑直接写进名字；英文世界则偏爱容器与堡垒意象——Powerwall 用一面「电力墙」让复杂的电池系统变成一件家居产品。第三条路是借电力工程词根（cell、grid、flux、amp）造词，向懂行的采购展示技术出身。要避免的坑与充电桩类似但更致命：储能项目的招投标、银行融资、保险核保都要念这个名字，任何轻浮、山寨感都会被尽调放大——B 端重资产行业里，名字的「无聊的可靠」胜过「聪明的花哨」。",
+      namingIdeas: [
+        "蓄与稳的意象：蓄、储、峰、谷、恒——把削峰填谷的生意逻辑写进名字，电网客户一眼看懂你是干什么的",
+        "容器与堡垒隐喻：墙、仓、堡、库——Powerwall 式的具象化，让看不见的电池系统变成一件可感知的产品",
+        "电力词根造词：cell、grid、flux、amp 嫁接短词根，向懂行的采购展示技术出身，融资 BP 里也站得住",
+        "可靠感优先：两三个字、发音沉稳、无歧义——招投标与银行尽调都要念这个名字，无聊的可靠胜过聪明的花哨",
+        "户储加温度：家庭市场要「守护感」——名字里的安心与守护，比参数表更能打动为停电焦虑的业主",
+      ],
+      cases: [
+        { name: "宁德时代（CATL）", takeaway: "地名「宁德」+「时代」的宏大词：把一座城市写进动力与储能电池的全球名片，CATL 四字母缩写又给了国际市场一个干净的技术符号——双名并行的出海范本" },
+        { name: "Tesla Powerwall", takeaway: "power + wall 的具象合成：一面「电力墙」把电芯、BMS、逆变器的复杂系统压缩成一件挂在墙上的家居产品——产品命名具象化的天花板" },
+        { name: "Fluence", takeaway: "从 fluent/influence 造词，暗合能量流动的物理本义；西门子与 AES 合资的电网级储能商，用一个流动感的造词摆脱了母公司工业词的沉重" },
+        { name: "阳光电源（Sungrow）", takeaway: "阳光 + 电源：光伏逆变器起家延展到储能，中文名把能源来源与产品形态说全，Sungrow 又添「生长」的正向联想——中英同构命名的典范" },
+        { name: "Enphase", takeaway: "energy + phase（相位）：把电力电子的专业词根藏进品牌，微逆与户储的技术公司气质从名字就开始——词根造词在能源硬科技的标准打法" },
+      ],
+      pitfalls: [
+        "轻浮感与山寨感：储能要过招投标、银行融资、保险核保三道尽调，名字里任何不严肃都会被放大",
+        "锁死在「电池」上：储能的终局是能源管理，名字只写电芯，做 EMS 和虚拟电厂时就穿不上了",
+        "堆「能源」万金油词：X 能、能 X 满赛道撞车，采购的入围名单里根本分不清谁是谁",
+        "忽视国际化发音：储能出海是主旋律，中文名的拼音在英文语境里拗口，等于放弃海外口碑传播",
+      ],
+    },
+    en: {
+      label: "Energy storage",
+      title: "How to Name an Energy Storage Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Energy storage naming guide: reserve-and-steady imagery, power-engineering roots and reliability-first registers, breakdowns of CATL/Powerwall/Fluence, recommended TLDs and pitfalls — then hunt an available storage brand domain with AI.",
+      intro:
+        "A storage name must prove itself to two very different buyers: grid and C&I customers read for \"runs twenty years without incident\" — the name should be as steady as a balance sheet; the residential market reads for \"the lights stay on when the grid fails\" — the name needs a guardian's warmth. On material: reserve, peak, valley and steady words write the peak-shaving business logic straight into the name, while the English-speaking world favors container and fortress imagery — Powerwall turns a complex battery system into a household object with one word. A third path grafts power-engineering roots (cell, grid, flux, amp) into coinages that signal technical pedigree to informed procurement teams. The trap is like EV charging's but deadlier: tenders, bank financing and insurance underwriting all pronounce this name, and any hint of flippancy gets amplified in due diligence — in heavy-asset B2B, boring reliability beats clever flash.",
+      namingIdeas: [
+        "Reserve-and-steady imagery: store, peak, valley, constant — write the peak-shaving logic into the name so grid customers instantly place you",
+        "Container and fortress metaphors: wall, vault, keep — the Powerwall move, turning an invisible battery system into a tangible product",
+        "Power-engineering roots: graft cell, grid, flux, amp onto short roots — technical pedigree that survives both procurement review and the fundraising deck",
+        "Reliability first: two or three syllables, sober phonetics, zero ambiguity — tenders and bank due diligence say this name aloud; boring reliability beats clever flash",
+        "Warmth for home storage: residential buyers want guardianship — reassurance in the name moves outage-anxious homeowners more than a spec sheet",
+      ],
+      cases: [
+        { name: "CATL (宁德时代)", takeaway: "A city name plus an era word: writing Ningde into the global calling card of batteries, while the four-letter CATL gives international markets a clean technical mark — the dual-name playbook for going global" },
+        { name: "Tesla Powerwall", takeaway: "power + wall, concretely: one word compressing cells, BMS and inverter into a household object hung on a wall — the ceiling of concrete product naming" },
+        { name: "Fluence", takeaway: "Coined from fluent/influence, echoing the physics of energy flow; the Siemens-AES grid-storage venture shed both parents' industrial heaviness with one flowing coinage" },
+        { name: "Sungrow (阳光电源)", takeaway: "Sun + grow: from PV inverters into storage, the Chinese name states energy source and product form while the English adds growth — a model of parallel bilingual naming" },
+        { name: "Enphase", takeaway: "energy + phase: a power-electronics term folded into the brand — the technology-company register starts at the name; root-coinage's standard play in energy hard tech" },
+      ],
+      pitfalls: [
+        "Any flippancy: storage clears three rounds of due diligence — tenders, bank financing, insurance underwriting — and unseriousness in the name gets amplified in each",
+        "Welding to \"battery\": storage's endgame is energy management — a cell-only name won't stretch to EMS and virtual power plants",
+        "Piling on energy filler: X-energy and energy-X clones flood the vertical, and procurement shortlists can't tell one from another",
+        "Ignoring global phonetics: storage exports are the main theme — a pinyin name that stumbles in English forfeits overseas word of mouth",
+      ],
+    },
+  },
+  recycling: {
+    slug: "recycling",
+    tlds: [
+      { tld: "com", zh: "回收生意上游对接品牌与政府、下游面向大众，.com 两头都镇得住", en: "Recycling deals with brands and governments upstream and the public downstream — .com holds credibility at both ends" },
+      { tld: "eco", zh: "后缀即环保立场声明，绿色属性从域名就开始表达", en: "The suffix is an ecological statement — the green identity starts at the domain" },
+      { tld: "earth", zh: "「为地球」的使命感后缀，环保品牌的价值观零成本外显", en: "A for-the-planet suffix — an environmental brand's values made visible at zero cost" },
+    ],
+    zh: {
+      label: "再生资源回收",
+      title: "再生资源回收品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "再生资源回收品牌命名指南：循环意象、重生叙事、去脏乱差感等 5 种思路，爱回收/TerraCycle/格林美等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的环保品牌域名。",
+      intro:
+        "回收品牌命名的第一要务是对抗刻板印象：这个行业在大众记忆里是走街串巷的三轮车与堆料场，而现代再生资源企业做的是城市矿山、动力电池梯次利用、塑料再生颗粒的技术生意——名字必须先把「脏乱差」的心理包袱卸掉。第一素材库是循环意象：环、再、循、生，把「资源转一圈回来」的商业模式画进名字；爱回收更进一步，用一个「爱」字把交易行为升格为价值观。第二抓手是重生叙事：垃圾是放错位置的资源，名字里的「新生感」（再生、焕新、重生）让用户把交出旧物变成一件有意义的事。第三是技术感加持：面向品牌方与政府的 B 端回收企业，名字要像环保科技公司而不是废品站——格林美用「绿色美好」的音译造词完成了身份跃迁。场景校验：名字要在居民区回收柜、政府招标文件和 ESG 报告三个地方都不违和。",
+      namingIdeas: [
+        "循环意象：环、再、循、生——把「资源转一圈回来」的商业模式直接画进名字，一眼看懂生意逻辑",
+        "重生叙事：再生、焕新、新生——垃圾是放错位置的资源，名字里的新生感让交出旧物变成有意义的仪式",
+        "价值观升格：爱回收式的情感词嫁接——一个「爱」字把交易行为升格为环保态度，C 端传播自带温度",
+        "技术感造词：面向品牌方与政府的 B 端回收，名字要像环保科技公司而不是废品站——音译造词是身份跃迁的捷径",
+        "三场景校验：居民区回收柜、政府招标文件、ESG 报告——名字在三个场景里都不违和才算过关",
+      ],
+      cases: [
+        { name: "爱回收（ATRenew）", takeaway: "「爱」+ 品类词「回收」：一个字把交易升格为价值观，让交出旧手机变成环保行动；英文名 ATRenew 再补一层「重新」的国际叙事——情感词嫁接的教科书" },
+        { name: "TerraCycle", takeaway: "terra（大地）+ cycle（循环）：拉丁词根的庄重感 + 循环经济的直白表达，「难回收物」专家的全球品牌从词根就写清了使命" },
+        { name: "格林美（GEM）", takeaway: "green 的音译「格林」+「美」：把绿色美好写成一个像科技公司的名字，城市矿山概念的上市公司用造词完成了从废品到资源的身份跃迁；缩写 GEM（宝石）更是点睛——废料里炼出宝石" },
+        { name: "Redwood Materials", takeaway: "红杉（长寿巨树）+ 材料：用自然界最长寿的生命体隐喻材料的永续循环，电池回收巨头把使命藏进了一棵树里" },
+        { name: "万物新生", takeaway: "四个字直接说满循环经济的愿景——所有东西都值得第二次生命；爱回收集团升级后的名字，重生叙事命名的完全体" },
+      ],
+      pitfalls: [
+        "废品站气质：名字里的「废、破、收购」坐实脏乱差刻板印象，B 端客户的 ESG 报告里根本写不出口",
+        "环保口号堆砌：绿色、环保、地球满街都是，喊口号的名字反而显得不专业",
+        "锁死单一品类：只写「电池」或「塑料」，回收品类一扩张名字就穿不上了",
+        "忽视政府语境：再生资源行业高度依赖资质与招投标，名字过于网感在红头文件里会显得轻浮",
+      ],
+    },
+    en: {
+      label: "Recycling & recovery",
+      title: "How to Name a Recycling Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Recycling brand naming guide: circular imagery, rebirth narratives and shedding the scrapyard stigma, breakdowns of ATRenew/TerraCycle/GEM, recommended TLDs and pitfalls — then hunt an available green brand domain with AI.",
+      intro:
+        "A recycling brand's first naming job is fighting the stereotype: public memory files this industry under scrap tricycles and junk yards, while modern recovery companies run urban mining, battery second-life and food-grade rPET operations — the name must shed the grime before it says anything else. The first material bin is circular imagery: loop, cycle, re-, renew — drawing the resources-come-back-around business model into the name itself. ATRenew's Chinese name goes further, upgrading a transaction into a value statement with a single character for \"love\". The second lever is the rebirth narrative: waste is a resource in the wrong place, and newness in the name (renew, reborn, fresh) turns handing over old goods into a meaningful ritual. The third is technical register: B2B recyclers facing brands and governments should sound like cleantech companies, not scrap dealers — GEM completed that identity leap with a coined transliteration. The test: the name must sit comfortably in three places at once — the neighborhood collection kiosk, the government tender document, and the client's ESG report.",
+      namingIdeas: [
+        "Circular imagery: loop, cycle, re-, renew — draw the resources-come-back-around model into the name so the business logic reads at a glance",
+        "Rebirth narratives: renew, reborn, second life — waste is a resource in the wrong place; newness in the name makes handing over old goods a ritual",
+        "Upgrade to values: the ATRenew move — one emotional word turns a transaction into an environmental stance, giving consumer marketing built-in warmth",
+        "Coin for technical register: B2B recovery facing brands and governments should sound like cleantech, not a scrapyard — coined words are the shortcut to the identity leap",
+        "The three-scene test: neighborhood kiosk, government tender, ESG report — a name passes only when it sits comfortably in all three",
+      ],
+      cases: [
+        { name: "ATRenew (爱回收)", takeaway: "\"Love\" plus the category word: one character upgrading a trade-in into an environmental act; the English ATRenew layers on the international \"renew\" narrative — the textbook of emotional grafting" },
+        { name: "TerraCycle", takeaway: "terra (earth) + cycle: Latin gravitas plus a plain statement of circular economy — the hard-to-recycle specialist wrote its global mission into the roots themselves" },
+        { name: "GEM (格林美)", takeaway: "A transliteration of green plus \"beauty\": a name that reads like a tech company, completing the leap from scrap to resources; the GEM acronym is the flourish — gems refined from waste" },
+        { name: "Redwood Materials", takeaway: "The longest-lived tree plus the category word: nature's most durable organism as a metaphor for perpetually circulating materials — the battery-recycling giant hid its mission inside a tree" },
+        { name: "万物新生 (All Things Renewed)", takeaway: "Four characters stating the circular vision outright — everything deserves a second life; ATRenew group's upgraded name, the complete form of rebirth naming" },
+      ],
+      pitfalls: [
+        "Scrapyard register: waste, junk and salvage words confirm the grime stereotype — no client can write that name into an ESG report",
+        "Slogan pileup: green, eco and planet clones are everywhere; a sloganeering name reads less professional, not more",
+        "Welding to one material: a battery-only or plastics-only name won't stretch when the recovery portfolio expands",
+        "Ignoring the government context: recovery runs on licenses and tenders — an overly internet-flavored name reads flippant in official documents",
+      ],
+    },
+  },
+  retrofit: {
+    slug: "retrofit",
+    tlds: [
+      { tld: "com", zh: "节能改造合同一签十年，.com 的稳重是能源合同管理的信任底座", en: "Energy performance contracts run a decade — .com's gravity anchors the trust an ESCO needs" },
+      { tld: "energy", zh: "后缀直接声明能源赛道，节能服务商的身份零解释成本", en: "The suffix states the energy vertical — an energy-services identity at zero explanation cost" },
+      { tld: "green", zh: "「绿色」写进域名，双碳语境下的立场表达最直接", en: "Green written into the domain — the most direct stance in a decarbonizing world" },
+    ],
+    zh: {
+      label: "节能改造",
+      title: "节能改造服务怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "节能改造品牌命名指南：省与优的价值词、工程可靠感、双碳叙事等 5 种思路，Ameresco/江森自控/南网能源等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的节能品牌域名。",
+      intro:
+        "节能改造（合同能源管理）的名字要过的第一关是财务总监的怀疑：这个行业卖的是「未来省下的电费」，账期以年计、验证靠数据，名字必须先建立「说到做到」的工程可靠感。第一素材库是省与优的价值词：节、省、优、效——把客户最关心的收益直接写进名字，但要配足工程底色，否则像贴牌中介。第二抓手是双碳叙事：碳、绿、零，政策语境给了这个行业十年顺风，名字里接住「双碳」的势能，政府园区与国企客户的立项文件里就多一分顺理成章。第三是稳重的工程词根：能源改造要动客户的配电房与空调主机，名字要像干了二十年的总包方——Ameresco 用 America + escrow 般的沉稳造词撑起北美最大独立 ESCO 的合同信任。避坑重点：别用「轻快互联网风」，一个像 App 的名字在千万级改造合同的封面上只会引发不安。",
+      namingIdeas: [
+        "省与优的价值词：节、省、优、效——把客户最关心的电费收益写进名字，但要配足工程底色，避免贴牌中介感",
+        "双碳叙事：碳、绿、零——政策给了十年顺风，名字接住双碳势能，政府与国企客户的立项文件里更顺理成章",
+        "工程可靠感：沉稳词根、两三个字、像干了二十年的总包方——合同能源管理一签十年，名字先要「说到做到」",
+        "效果可量化暗示：名字里的「数、衡、验」呼应节能量核证的行业逻辑，让「省多少看得见」从名字开始",
+        "留出综合能源余量：照明改完改空调、空调改完上光伏储能——名字锁死单一技术，业务纵深就断了",
+      ],
+      cases: [
+        { name: "Ameresco", takeaway: "America + esco（能源服务公司缩写）的嫁接：把行业身份 ESCO 直接编进名字，北美最大独立节能服务商用一个词说清「我是谁、在哪干」——行业缩写造词的范本" },
+        { name: "江森自控（Johnson Controls）", takeaway: "创始人姓氏 + controls：从恒温器发明者到楼宇效率巨头，「控制」一词横跨百年仍精准——设备可控、能耗可控，品类词选对了就永不过期" },
+        { name: "南网能源", takeaway: "电网母品牌「南网」+「能源」：背靠南方电网的信用做综合能源服务，母品牌背书命名在重信任行业的标准打法——名字本身就是资产负债表" },
+        { name: "施耐德电气（Schneider Electric）", takeaway: "姓氏 + electric 的百年组合：从钢铁到配电再到能效管理，品类词「电气」宽到装得下所有转型——EcoStruxure 子品牌再把绿色叙事补上" },
+        { name: "Carrier", takeaway: "开利：空调发明者 Willis Carrier 的姓氏成为品类本身，暖通改造市场里「用开利」等于「用正品」——姓氏命名沉淀百年后就是信任本身" },
+      ],
+      pitfalls: [
+        "轻快互联网风：像 App 的名字出现在千万级改造合同封面上，财务总监只会更怀疑「省下的电费」能不能兑现",
+        "锁死单一技术：只写「照明」或「空调」，综合能源服务一扩张名字就成了天花板",
+        "空喊碳中和：名字里只有口号没有工程感，双碳红利期一过就只剩尴尬",
+        "忽视政企语境：节能改造的大客户是政府园区与国企，名字过于洋气在立项与招标文件里反而减分",
+      ],
+    },
+    en: {
+      label: "Energy retrofits",
+      title: "How to Name an Energy Retrofit Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Energy retrofit naming guide: savings-value words, engineering gravitas and decarbonization narratives, breakdowns of Ameresco/Johnson Controls/Carrier, recommended TLDs and pitfalls — then hunt an available energy brand domain with AI.",
+      intro:
+        "An energy retrofit (ESCO) name must first survive the CFO's skepticism: this industry sells future electricity savings — payback measured in years, verified by meter data — so the name must establish deliver-what-you-promise engineering credibility before anything else. The first material bin is savings-value words: save, optimize, efficient — writing the client's payoff into the name, but with enough engineering ballast to avoid reading like a middleman. The second lever is the decarbonization narrative: carbon, green, zero — policy has handed this industry a decade of tailwind, and a name that catches it makes the project approval one line easier in government and state-enterprise paperwork. The third is sober engineering roots: retrofits touch the client's switchgear and chiller plant, so the name should sound like a contractor with twenty years on site — Ameresco's steady coinage carries the contract trust of North America's largest independent ESCO. The trap: breezy app-style naming — a name that belongs on a phone screen only breeds unease on the cover of an eight-figure retrofit contract.",
+      namingIdeas: [
+        "Savings-value words: save, optimize, efficient — write the client's electricity payoff into the name, ballasted with engineering weight to avoid middleman vibes",
+        "Decarbonization narrative: carbon, green, zero — catch the policy tailwind so government and state-enterprise approvals read one line smoother",
+        "Engineering gravitas: sober roots, two or three syllables, a twenty-years-on-site register — performance contracts run a decade; the name must promise delivery first",
+        "Hint at measurability: metering and verification words echo the M&V logic of the industry — \"savings you can see\" starts at the name",
+        "Leave integrated-energy headroom: lighting leads to HVAC leads to solar-plus-storage — a single-technology name caps the business depth",
+      ],
+      cases: [
+        { name: "Ameresco", takeaway: "America grafted onto ESCO, the industry's own acronym: one word stating who we are and where we work — the template of acronym coinage, carrying North America's largest independent ESCO" },
+        { name: "Johnson Controls", takeaway: "A founder's surname plus \"controls\": from inventing the thermostat to building-efficiency giant, the category word stayed precise across a century — pick the right one and it never expires" },
+        { name: "China Southern Power Grid Energy (南网能源)", takeaway: "The grid parent brand plus \"energy\": integrated energy services borrowing the grid's balance-sheet credibility — parent-brand endorsement, the standard play in high-trust verticals" },
+        { name: "Schneider Electric", takeaway: "Surname plus \"electric\", a century-old pairing: from steel to switchgear to energy management, the category word proved wide enough for every pivot — with EcoStruxure layering the green narrative on top" },
+        { name: "Carrier", takeaway: "Willis Carrier's surname became the category itself: in HVAC retrofits, \"going with Carrier\" means \"going with the original\" — a surname compounds into trust itself after a hundred years" },
+      ],
+      pitfalls: [
+        "Breezy app-style naming: a phone-screen name on an eight-figure contract cover only deepens the CFO's doubt that promised savings will materialize",
+        "Welding to one technology: a lighting-only or HVAC-only name becomes the ceiling when integrated energy services expand",
+        "Hollow carbon slogans: all narrative, no engineering — when the decarbonization tailwind fades, only the awkwardness remains",
+        "Ignoring the government register: retrofit's anchor clients are public parks and state enterprises — an over-westernized name loses points in tender documents",
+      ],
+    },
+  },
+  hvac: {
+    slug: "hvac",
+    tlds: [
+      { tld: "com", zh: "暖通生意靠本地口碑与工程合同，.com 对业主与总包都最稳妥", en: "HVAC runs on local reputation and contracts — .com is safest for both homeowners and general contractors" },
+      { tld: "services", zh: "后缀直接声明服务属性，安装维保的生意模式一目了然", en: "The suffix states the service business outright — install and maintenance at a glance" },
+      { tld: "cool", zh: "制冷主业可玩的双关后缀，「凉爽」与「酷」一词两用", en: "A playable pun for the cooling trade — chill and cool in one suffix" },
+    ],
+    zh: {
+      label: "暖通空调",
+      title: "暖通空调品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "暖通空调品牌命名指南：冷暖体感词、气候意象、师傅可靠感等 5 种思路，大金/开利/格力等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的暖通品牌域名。",
+      intro:
+        "暖通空调的名字被念出来的场景极其生活化：三伏天空调罢工时业主在搜索框里敲「空调维修」，装修群里邻居问「你家新风装的哪家」，总包在图纸会审时报设备品牌。这决定了命名的双重人格：面向业主要有体感——冷、暖、风、适，名字先给一口「舒服」的想象；面向工程渠道要有厂牌感——大金、开利、特灵们证明，两个字的沉稳工业名在图纸与标书里最有分量。本地安装维保商还有第三个抓手：师傅的可靠感，名字里的「快、修、到家」呼应的是「今天报修今天来」的服务承诺。素材库上，气候与自然意象（风、雪、云、泉）是暖通天然词库，格力的「格调之力」则示范了抽象造词的工业质感。避坑：别把名字锁死在「空调」单品上——热泵、新风、地暖都是同一批客户的钱包，名字留出「室内环境」的余量。",
+      namingIdeas: [
+        "冷暖体感词：冷、暖、风、适——业主买的是体感不是设备，名字先给一口「舒服」的想象",
+        "气候自然意象：风、雪、云、泉——暖通的天然词库，画面感强又自带清爽联想",
+        "厂牌工业感：两个字、沉稳、像做了三十年的设备厂——图纸会审与标书里最有分量的是这种名字",
+        "师傅可靠感：本地安装维保商用「快、修、到家」呼应服务承诺，搜索「空调维修+城市」时最能接住急单",
+        "留出室内环境余量：热泵、新风、地暖是同一批客户——名字锁死「空调」单品，客单价纵深就断了",
+      ],
+      cases: [
+        { name: "大金（Daikin）", takeaway: "「大阪金属工业」的缩写沉淀成全球暖通第一厂牌：两个字的工业沉稳感在图纸与标书里最有分量——缩写命名熬过时间就是信任本身" },
+        { name: "开利（Carrier）", takeaway: "空调发明者的姓氏即品类起点：「现代空调之父」的历史叙事让品牌与品类同龄，中文译名「开利」又添「开启利益」的彩头——姓氏+译名双赢的范本" },
+        { name: "格力（GREE）", takeaway: "「格调之力」的抽象造词：不描述任何产品却自带工业质感，两个字撑起从空调到装备制造的全部延展——中文抽象造词的天花板之一" },
+        { name: "特灵（Trane）", takeaway: "创始人姓氏 Trane 的音译「特灵」暗藏「特别灵」的中文彩蛋：设备好不好，名字先说「灵」——音译本地化的教科书案例" },
+        { name: "美的楼宇科技", takeaway: "家电母品牌「美的」+ 品类词「楼宇科技」：用母品牌的国民信任切入中央空调与楼宇智控，B 端子品牌命名的标准打法——信任平移，品类清晰" },
+      ],
+      pitfalls: [
+        "锁死「空调」单品：热泵、新风、地暖是同一批客户的钱包，名字太窄客单价纵深就断了",
+        "堆「冷暖」直白词到俗套：冷暖、冰凉、制冷满街撞车，搜索结果里挤不进第一屏",
+        "本地服务商起「大厂名」：两人安装队起个设备厂的名字，业主上门发现落差反而伤信任",
+        "忽视搜索场景：业主报修全靠「空调维修+城市」搜索，名字里没有品类或谐音钩子，急单全被同行接走",
+      ],
+    },
+    en: {
+      label: "HVAC services",
+      title: "How to Name an HVAC Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "HVAC naming guide: comfort words, climate imagery and technician-trust registers, breakdowns of Daikin/Carrier/Trane, recommended TLDs and pitfalls — then hunt an available HVAC brand domain with AI.",
+      intro:
+        "An HVAC name gets spoken in the most domestic of scenes: a homeowner typing \"AC repair\" mid-heatwave, a neighbor asking the renovation group chat \"who did your fresh-air system\", a general contractor reading equipment brands off the drawings. That splits the naming personality in two: for homeowners, lead with felt comfort — cool, warm, air, ease — the name should promise relief before the technician arrives; for the engineering channel, lead with factory gravitas — Daikin, Carrier and Trane prove that a short, sober industrial name carries the most weight in drawings and bid documents. Local install-and-service shops have a third lever: technician trust — fast, fix and to-your-door words echo the report-today-fixed-today promise. The material bin is climate and nature imagery (wind, snow, cloud, spring), while GREE shows how an abstract coinage can carry industrial quality. The trap: don't weld the name to the air conditioner — heat pumps, fresh-air systems and floor heating draw from the same customer's wallet, so leave \"indoor environment\" headroom.",
+      namingIdeas: [
+        "Comfort words: cool, warm, air, ease — homeowners buy the feeling, not the equipment; let the name promise relief first",
+        "Climate and nature imagery: wind, snow, cloud, spring — HVAC's native word bin, vivid and self-refreshing",
+        "Factory gravitas: short, sober, thirty-years-in-business — the register that carries most weight in drawings and bid documents",
+        "Technician trust: local service shops win urgent searches with fast, fix and to-your-door cues echoing the same-day promise",
+        "Leave indoor-environment headroom: heat pumps, fresh air and floor heating share one wallet — an AC-only name caps the ticket size",
+      ],
+      cases: [
+        { name: "Daikin", takeaway: "An abbreviation of \"Osaka Metal Industries\" compounded into the world's top HVAC marque: short industrial sobriety that outweighs everything in drawings — an acronym aged into trust itself" },
+        { name: "Carrier", takeaway: "The inventor's surname as the category's starting point: the father-of-air-conditioning narrative makes brand and category the same age — with a Chinese transliteration that adds a prosperity blessing on top" },
+        { name: "GREE (格力)", takeaway: "An abstract coinage meaning \"the power of style\": describing no product yet radiating industrial quality, two characters stretching from AC to full equipment manufacturing — a ceiling of abstract Chinese coinage" },
+        { name: "Trane", takeaway: "The founder's surname, transliterated into Chinese as \"especially effective\" — the name vouches for the equipment before the spec sheet does; the textbook of localization by transliteration" },
+        { name: "Midea Building Technologies", takeaway: "The appliance parent brand plus a category phrase: household trust transplanted into central HVAC and building controls — the standard play for B2B sub-brand naming: trust carried over, category made explicit" },
+      ],
+      pitfalls: [
+        "Welding to the air conditioner: heat pumps, fresh air and floor heating share the same wallet — a narrow name caps your ticket size",
+        "Piling on literal cold-warm words: chill, cool and freeze clones collide everywhere and never crack page one of search",
+        "A factory name on a two-man crew: when the homeowner opens the door to the mismatch, the oversized name damages trust instead of building it",
+        "Ignoring the search scene: repairs start at \"AC repair + city\" — without a category or pun hook in the name, urgent jobs go to competitors",
+      ],
+    },
+  },
+  watertreatment: {
+    slug: "watertreatment",
+    tlds: [
+      { tld: "com", zh: "水务项目对接政府与工业大客户，.com 的稳重是投标文件的标配", en: "Water projects face governments and industrial clients — .com's gravity is standard issue in bid documents" },
+      { tld: "eco", zh: "治水即治环境，.eco 把环保立场写进域名", en: "Treating water is treating the environment — .eco writes the stance into the domain" },
+      { tld: "engineering", zh: "膜法、生化、深度处理都是硬工程，后缀直接声明工程公司身份", en: "Membranes, biotreatment and advanced polishing are hard engineering — the suffix states it outright" },
+    ],
+    zh: {
+      label: "水处理环保",
+      title: "水处理品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "水处理品牌命名指南：清与净的意象、水系词根、工程信任感等 5 种思路，威立雅/碧水源/Xylem 等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的水务品牌域名。",
+      intro:
+        "水处理的名字要在政府投标文件与工业客户的采购清单里反复出现，这个行业卖的本质是「放心」：市政污水厂托付的是一座城市的河道，工业零排放托付的是环评与生产线的连续性——名字必须先像一家干得了二十年运营的工程公司。第一素材库是清与净的意象：清、碧、澈、净、源，碧水源三个字就是一幅「治理后的河道」；这类词自带结果承诺，是水务命名的主粮。第二抓手是水系词根：川、江、湖、泉、流，以及英文的 aqua、hydro、flow——Xylem 更进一步，借「木质部」（植物运水的组织）完成了一次教科书级的科学隐喻。第三是工程信任感：水处理项目动辄 BOT 二三十年，名字要沉得住，轻浮的网感词在标书里就是减分项。国际化提示：水务巨头几乎都是全球生意，中文名之外备好一个发音干净的英文名，威立雅（Veolia）式的双名并行是标准配置。",
+      namingIdeas: [
+        "清与净的意象：清、碧、澈、净、源——自带治理结果的承诺，碧水源三个字就是一幅治理后的河道",
+        "水系词根：川、江、湖、泉，英文 aqua、hydro、flow——行业身份零解释成本，造词空间也最充裕",
+        "科学隐喻：Xylem（木质部）式的借词——从自然界找一个「天生会运水」的意象，专业感与故事性兼得",
+        "工程信任感：BOT 一签二三十年，名字要沉得住——两三个字、发音稳重，轻浮网感词在标书里就是减分项",
+        "双名并行：水务是全球生意，中文名之外备好发音干净的英文名，威立雅式的双名配置是出海标配",
+      ],
+      cases: [
+        { name: "威立雅（Veolia）", takeaway: "从拉丁词根造出的全球水务第一品牌：无实义却发音庄重，配合中文译名「威立雅」的「威严挺立」联想——纯造词+译名本地化的双名范本" },
+        { name: "碧水源", takeaway: "碧 + 水 + 源：三个字画出「治理后的碧水」与「技术的源头」双重意象，膜技术上市公司把结果承诺与技术自信同时写进了名字" },
+        { name: "Xylem（赛莱默）", takeaway: "借植物学词「木质部」——自然界天生的输水组织：科学隐喻让水技术公司的专业感与故事性兼得，从 ITT 拆分后用一个词完成品牌重生" },
+        { name: "Ecolab（艺康）", takeaway: "ecology + laboratory 的合成：把「生态」与「实验室」焊在一起，水处理与卫生科技的百年公司用名字声明「环保是门科学」" },
+        { name: "Pentair（滨特尔）", takeaway: "penta（五）+ air 的造词起点，五位创始人的纪念编码进名字；从气球公司转型水处理巨头，抽象造词的好处正在于——业务怎么转，名字都跟得上" },
+      ],
+      pitfalls: [
+        "轻浮网感词：水务项目 BOT 一签二三十年，像 App 的名字在政府标书里就是减分项",
+        "锁死单一工艺：只写「膜」或「污水」，业务扩到固废、大气、再生水时名字就穿不上了",
+        "清净词堆到同质化：清泉、碧水、净源满赛道撞车，投标入围名单里分不清谁是谁",
+        "忽视英文名：水务巨头都是全球生意，中文名的拼音在国际投标里拗口，等于自断出海口碑",
+      ],
+    },
+    en: {
+      label: "Water treatment",
+      title: "How to Name a Water Treatment Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Water treatment naming guide: clarity imagery, water-root coinages and engineering trust, breakdowns of Veolia/Originwater/Xylem, recommended TLDs and pitfalls — then hunt an available water brand domain with AI.",
+      intro:
+        "A water treatment name lives in government bid documents and industrial procurement lists, because what this industry really sells is assurance: a municipal plant is entrusted with a city's rivers, an industrial zero-discharge line with the client's environmental permit and production uptime — the name must first sound like an engineering company that can run operations for twenty years. The first material bin is clarity imagery: clear, pure, azure, source — Originwater's Chinese name paints a restored river in three characters, and such words carry a built-in promise of results. The second lever is water roots: river, spring, flow, plus aqua and hydro in English — and Xylem goes further, borrowing the plant tissue that transports water for a textbook scientific metaphor. The third is engineering trust: BOT concessions run twenty to thirty years, so the name must hold its weight — breezy internet-flavored words are point deductions in a tender. And a global note: water majors are global businesses, so pair the local name with a cleanly pronounceable international one — the Veolia-style dual-name setup is standard equipment.",
+      namingIdeas: [
+        "Clarity imagery: clear, pure, azure, source — a built-in promise of results; Originwater paints the restored river in three characters",
+        "Water roots: river, spring, flow, aqua, hydro — industry identity at zero explanation cost, with the richest coinage space",
+        "Scientific metaphor: the Xylem move — borrow something in nature born to move water, gaining professionalism and story in one word",
+        "Engineering trust: concessions run decades — two or three sober syllables; breezy internet words are point deductions in a tender",
+        "Dual names: water is a global business — pair the local name with a cleanly pronounceable international one; the Veolia setup is standard equipment",
+      ],
+      cases: [
+        { name: "Veolia", takeaway: "A pure coinage from Latin roots atop the global water industry: meaningless yet dignified in every language, with a Chinese transliteration adding \"standing with authority\" — the dual-name template of coinage plus localization" },
+        { name: "Originwater (碧水源)", takeaway: "Azure + water + source: three characters painting both the restored river and the technical wellspring — the membrane specialist wrote the result promise and the engineering confidence into one name" },
+        { name: "Xylem", takeaway: "A botany term — the tissue that transports water in plants: scientific metaphor giving a water-tech company professionalism and story at once; one word completed the brand rebirth after the ITT spin-off" },
+        { name: "Ecolab", takeaway: "ecology + laboratory welded together: the century-old water and hygiene company declaring \"environmental care is a science\" from the name onward" },
+        { name: "Pentair", takeaway: "penta + air, memorializing five founders: from balloons to water-treatment giant — the virtue of abstract coinage is exactly that the name keeps up however the business pivots" },
+      ],
+      pitfalls: [
+        "Breezy internet words: BOT concessions run decades — an app-flavored name is a point deduction in a government tender",
+        "Welding to one process: a membrane-only or sewage-only name won't stretch when the portfolio expands to solid waste, air and water reuse",
+        "Clarity-word homogeneity: clear-spring and pure-water clones flood the vertical, and tender shortlists can't tell one from another",
+        "Skipping the international name: water majors are global businesses — a pinyin-only name that stumbles abroad forfeits international word of mouth",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
