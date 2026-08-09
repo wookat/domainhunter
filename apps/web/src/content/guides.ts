@@ -13994,6 +13994,372 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  tea: {
+    slug: "tea",
+    tlds: [
+      { tld: "com", zh: "礼盒电商与出海渠道的信任底线，茶叶品牌的默认选择", en: "The trust baseline for gift-box e-commerce and export channels — the default for a tea brand" },
+      { tld: "shop", zh: "「商店」后缀直给零售属性，线上茶铺与旗舰店零解释成本", en: "The shop suffix states retail outright — zero explanation for an online tea store or flagship" },
+      { tld: "vip", zh: "「尊享」后缀贴合高端礼茶与会员制私享茶，档次感直给", en: "The vip suffix fits premium gift tea and members-only offerings — prestige stated outright" },
+    ],
+    zh: {
+      label: "茶叶品牌",
+      title: "茶叶品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "茶叶品牌命名指南：山场词根、器物意象、日饮轻茶等 5 种思路，小罐茶/TWG/茶里/大益等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的茶叶品牌域名。",
+      intro:
+        "茶叶品牌的名字要先回答一个问题：这泡茶是拿来「品」的还是拿来「喝」的？送礼客在礼盒柜台比较、老茶客在茶桌上复述、年轻人在便利店冰柜和奶茶点单页上顺手拿——名字是价格带与人群的第一次声明。第一素材库是山场词根：山、岩、涧、雾、春——茶的价值叙事从产地开始，武夷、狮峰、冰岛的地名本身就是品质背书，名字里的山水感直接抬升期待；大益以「大益于人」的祝福词根成为普洱的硬通货符号。第二个抓手是器物与东方意境：罐、盏、席、白、素——小罐茶把包装器物写进名字，一只金属小罐同时解决了标准化与礼品感两个难题。第三个抓手是日饮轻茶化：把茶从茶室搬进办公室与背包——茶里（CHALI）用「茶在这里」的轻快口语接住袋泡茶的年轻客群，TWG 用三字母缩写加年份徽章把新加坡品牌做出百年欧洲茶行的仪式感。要注意价格带锁定：山场词根往上走是礼茶与收藏，口语词根往下走是日饮与新零售——名字一旦声明了价格带，跨带扩张就要靠子品牌。渠道上，茶叶活在礼盒柜台、电商详情页和茶桌上的口头推荐里——名字要拿得住毛笔字招牌，也经得起购物车缩略图。",
+      namingIdeas: [
+        "山场词根：山、岩、涧、雾、春——产地是茶的第一价值叙事，名字里的山水感直接抬升品质期待",
+        "器物意象：罐、盏、席、瓷——小罐茶式的包装入名，器物感同时解决标准化与礼品感两个难题",
+        "日饮口语词：茶里式的轻快表达——把茶从茶室搬进办公室，口语感的名字接住袋泡茶与新零售客群",
+        "祝福与人文词根：益、和、福、雅——大益式的祝福词让品牌进入送礼语境，人文感托住收藏与馈赠",
+        "价格带自检：把名字分别放进礼盒柜台与便利店冰柜想一遍——名字声明的价格带要与主渠道一致",
+      ],
+      cases: [
+        { name: "小罐茶", takeaway: "包装器物直接入名：一只金属小罐同时完成标准化、礼品感与记忆点——「小罐」二字把无形的茶叶变成有形的产品单位" },
+        { name: "TWG Tea", takeaway: "The Wellness Group 的三字母缩写 + 1837 年份徽章：新加坡品牌用缩写的中性与年份的仪式感做出百年欧洲茶行气质——缩写命名的高端化样本" },
+        { name: "茶里（CHALI）", takeaway: "「茶在这里」的轻快口语 + 拼音直译的国际名：袋泡茶品牌把日饮场景写进名字——传统品类年轻化的口语命名教科书" },
+        { name: "大益", takeaway: "「大益于人」的祝福词根：两个字同时完成人文立意与送礼语境——普洱硬通货的符号资产，证明祝福词在茶品类的长期复利" },
+      ],
+      pitfalls: [
+        "堆砌「御品贡茶轩」类宫廷词：像景区纪念品而非品牌——山场与人文要具体，尊贵感堆砌只显廉价",
+        "价格带错位：日饮袋泡茶配收藏级名字、礼茶配口语名——名字声明的档次要与主渠道和定价一致",
+        "锁死单一茶类：只叫「XX 龙井」就接不住红茶与花草茶——品类扩张的边界要提前画在「茶」而非一款茶",
+        "忽略出海拼写：普洱、龙井的拼音对海外用户是乱码——出海品牌要备一个好念的国际名与对应域名",
+      ],
+    },
+    en: {
+      label: "Tea brands",
+      title: "How to Name a Tea Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Tea brand naming guide: terroir roots, vessel imagery, everyday-tea energy, breakdowns of Xiaoguan Tea/TWG/CHALI/TAETEA, recommended TLDs and pitfalls — then hunt an available tea-brand domain with AI.",
+      intro:
+        "A tea brand's name must first answer one question: is this tea for savoring or for drinking? Gift buyers compare it at the gift-box counter, veteran drinkers repeat it across the tea table, younger customers grab it from convenience-store fridges and milk-tea order pages — the name is the first declaration of price band and audience. The first word bank is terroir roots: mountain, cliff, mist, spring — tea's value story starts at the origin, and famous growing regions are quality endorsements in themselves; landscape energy in the name raises expectations directly, and TAETEA built puerh's hard-currency symbol on a blessing root meaning \"great benefit\". The second lever is vessels and Eastern mood: jar, cup, porcelain, plain — Xiaoguan Tea (Little Jar Tea) wrote the package into the name, one small metal jar solving standardization and giftability at once. The third lever is everyday-tea energy: moving tea from the tearoom to the office and the backpack — CHALI catches the tea-bag generation with a light colloquial \"tea is here\", while TWG stacks a three-letter abbreviation on an 1837 crest to give a Singapore brand the ritual of a century-old European tea house. Mind the price-band lock: terroir roots climb toward gift and collection tea, colloquial roots descend toward daily drinking and new retail — once the name declares a band, crossing it takes a sub-brand. As for channels, tea lives on gift-box counters, product detail pages and tea-table word of mouth — the name must carry a brush-calligraphy signboard and survive a shopping-cart thumbnail.",
+      namingIdeas: [
+        "Terroir roots: mountain, cliff, mist, spring — origin is tea's first value story; landscape energy in the name raises quality expectations directly",
+        "Vessel imagery: jar, cup, porcelain — the Xiaoguan move of writing the package into the name solves standardization and giftability at once",
+        "Everyday colloquial words: the CHALI register — move tea from the tearoom to the office; a light spoken name catches the tea-bag and new-retail crowd",
+        "Blessing and humanist roots: benefit, harmony, grace — a TAETEA-style blessing word walks the brand into gifting language and holds collection value",
+        "The price-band check: place the name on a gift counter and a convenience fridge in turn — the band the name declares must match the main channel",
+      ],
+      cases: [
+        { name: "Xiaoguan Tea", takeaway: "The package written into the name: one small metal jar delivers standardization, giftability and memorability at once — \"little jar\" turns loose-leaf tea into a tangible product unit" },
+        { name: "TWG Tea", takeaway: "Three letters from The Wellness Group plus an 1837 crest: abbreviation neutrality and vintage ritual give a Singapore brand century-old European tea-house gravitas — the sample for premiumizing an acronym" },
+        { name: "CHALI", takeaway: "A light colloquial \"tea is here\" with a pinyin-born international name: the tea-bag brand writes the daily-drinking scene into the name — the textbook for rejuvenating a traditional category" },
+        { name: "TAETEA", takeaway: "A blessing root meaning \"great benefit\": two characters deliver humanist intent and gifting context at once — puerh's hard-currency symbol proving blessing words compound long-term in tea" },
+      ],
+      pitfalls: [
+        "Piling up \"Imperial Tribute Tea House\" palace words: reads as a souvenir stall, not a brand — keep terroir and humanism specific; stacked grandeur only cheapens",
+        "Mismatching the price band: a collection-grade name on daily tea bags, or a colloquial name on gift tea — the register must match channel and pricing",
+        "Welding to one tea type: a name built on a single famous varietal can't carry black tea and botanicals — draw the boundary at tea, not one leaf",
+        "Ignoring export spelling: varietal pinyin is noise to overseas buyers — a global tea brand needs a pronounceable international name and the matching domain",
+      ],
+    },
+  },
+  hotspring: {
+    slug: "hotspring",
+    tlds: [
+      { tld: "com", zh: "度假预订与企业接待的信任底线，温泉品牌的默认选择", en: "The trust baseline for resort booking and corporate retreats — the default for a hot spring brand" },
+      { tld: "travel", zh: "「旅行」后缀直给度假属性，温泉旅宿一体的场景零解释", en: "The travel suffix states the getaway outright — zero explanation for a springs-and-stay resort" },
+      { tld: "life", zh: "「生活」后缀贴合都市疗愈与日常汤浴，把泡汤说成生活方式", en: "The life suffix fits urban wellness and everyday bathing — soaking framed as a lifestyle" },
+    ],
+    zh: {
+      label: "温泉度假",
+      title: "温泉度假村与汤泉品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "温泉度假命名指南：汤泉词根、疗愈意象、在地风物等 5 种思路，Blue Lagoon/极乐汤/御温泉等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的温泉品牌域名。",
+      intro:
+        "温泉品牌的名字要先冒出热气：家庭客在周末出行清单里比较、情侣在预订平台的图墙前停留、都市白领把「去泡个汤」当作对一周辛苦的犒赏——名字是水温与松弛感的第一次预告。第一素材库是汤泉词根：汤、泉、汤屋、涧、雾——「汤」字自带日式疗愈滤镜，极乐汤用「极乐 + 汤」把日常钱汤做成连锁品牌，两个字同时交付爽感与品类。第二个抓手是疗愈与自然意象：蓝、雾、森、岩、月——冰岛 Blue Lagoon 用一汪蓝色潟湖的具体意象成为全球温泉的头牌，颜色 + 地貌的组合让名字自带明信片画面。第三个抓手是在地风物：温泉是最讲「此地此水」的生意——御温泉借「御」字的礼遇感把岭南温泉做成服务标杆，地名 + 敬语的结构在预订平台上自带高端筛选。要注意疗愈与娱乐的配比：纯疗愈向的名字接不住亲子水乐园业态，纯乐园向又拉低客单价——汤的静与水的闹要在名字里选好主次。渠道上，温泉活在预订平台图墙、周末出行攻略和「上次泡的那家 XX」的口碑里——名字要有画面感、好念、自带松弛暗示。",
+      namingIdeas: [
+        "汤泉词根：汤、泉、涧、汤屋——「汤」字自带日式疗愈滤镜，品类词根直接交付水温与松弛感",
+        "疗愈自然意象：蓝、雾、森、岩、月——Blue Lagoon 式的颜色 + 地貌组合，让名字自带明信片画面",
+        "在地风物入名：地名、山名、水名——温泉是「此地此水」的生意，在地词根就是品质背书",
+        "礼遇敬语结构：御、宸、雅——御温泉式的敬语前缀在预订平台自带高端筛选，托住企业接待与礼赠场景",
+        "松弛感测试：把名字放进「周末去 XX 泡一天」念一遍——没有松弛暗示的名字进不了犒赏清单",
+      ],
+      cases: [
+        { name: "Blue Lagoon", takeaway: "一汪蓝色潟湖的具体意象：颜色 + 地貌的组合让名字自带明信片画面——冰岛地热潟湖凭一个名字成为全球温泉头牌" },
+        { name: "极乐汤", takeaway: "「极乐 + 汤」的爽感直给：两个字同时交付情绪价值与品类——日常钱汤连锁化的命名样本，中日两个市场零翻译成本" },
+        { name: "御温泉", takeaway: "敬语「御」+ 品类词：礼遇感前缀把岭南温泉做成服务标杆——在预订平台上自带高端筛选的经典结构" },
+        { name: "Therme", takeaway: "拉丁词根「浴场」的品类直取：欧洲城市水疗综合体用一个古典词根同时说清疗愈与规模——品类词根国际化的教科书" },
+      ],
+      pitfalls: [
+        "堆砌「皇家御池国际温泉城」类头衔：像洗浴中心而非度假品牌——礼遇感要克制，头衔堆砌只显俗气",
+        "疗愈与乐园错配：亲子水乐园配禅意名、静汤配「欢乐」名——汤的静与水的闹要在名字里选好主次",
+        "锁死单一泉眼：度假村是温泉 + 住宿 + 餐饮的综合体——名字边界画在「度假疗愈」而非一池热水",
+        "忽略预订平台搜索：客人搜「XX 温泉」找不到你的花名——名字要带品类词或让品类词自然跟随",
+      ],
+    },
+    en: {
+      label: "Hot spring resorts",
+      title: "How to Name a Hot Spring Resort or Bathhouse: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Hot spring naming guide: bath roots, healing imagery, local terroir, breakdowns of Blue Lagoon/Gokurakuyu/Yu Hot Springs/Therme, recommended TLDs and pitfalls — then hunt an available spring-brand domain with AI.",
+      intro:
+        "A hot spring brand's name should steam before anyone checks in: families compare it on weekend shortlists, couples pause on booking-platform photo walls, and office workers frame \"a soak at X\" as the reward for a hard week — the name is the first preview of water temperature and calm. The first word bank is bath roots: spring, bath, brook, mist — the bath root carries a built-in onsen filter, and Gokurakuyu (\"paradise bath\") turned the everyday sento into a chain with two characters that deliver bliss and category at once. The second lever is healing and nature imagery: blue, mist, forest, rock, moon — Iceland's Blue Lagoon rode one concrete image of a milky-blue lagoon to become the world's marquee hot spring; color plus landform gives a name a postcard built in. The third lever is local terroir: hot springs are the most \"this place, this water\" of businesses — Yu Hot Springs used an honorific prefix to turn a Lingnan spring into a service benchmark, and the place-name-plus-honorific structure self-selects upscale guests on booking platforms. Mind the healing-to-play ratio: a purely zen name can't hold a family waterpark wing, while a purely playful name drags down the room rate — the quiet of the bath and the noise of the water must pick a lead in the name. As for channels, springs live on booking photo walls, weekend guides and \"that place we soaked at\" word of mouth — the name must be visual, easy to say, and carry a built-in exhale.",
+      namingIdeas: [
+        "Bath roots: spring, bath, brook — the bath root wears a built-in onsen filter; the category word delivers water temperature and calm directly",
+        "Healing nature imagery: blue, mist, forest, rock, moon — the Blue Lagoon formula of color plus landform gives the name a postcard built in",
+        "Local terroir in the name: the place, the mountain, the water — hot springs are a \"this place, this water\" business; local roots are the quality endorsement",
+        "Honorific structures: a deferential prefix on the category word — the Yu Hot Springs move self-selects upscale guests and holds corporate-retreat bookings",
+        "The exhale test: say \"a day soaking at X\" out loud — a name without a built-in exhale never makes the reward shortlist",
+      ],
+      cases: [
+        { name: "Blue Lagoon", takeaway: "One concrete image of a milky-blue lagoon: color plus landform bakes a postcard into the name — Iceland's geothermal pool became the world's marquee spring on the strength of a name" },
+        { name: "Gokurakuyu", takeaway: "\"Paradise\" plus \"bath\": two characters delivering emotional payoff and category at once — the naming sample for chaining the everyday sento, with zero translation cost across markets" },
+        { name: "Yu Hot Springs", takeaway: "An honorific prefix on the category word: deference turns a regional spring into a service benchmark — the classic structure that self-selects upscale guests on booking platforms" },
+        { name: "Therme", takeaway: "The Latin root for baths, taken straight: one classical word says healing and scale for Europe's urban spa complexes — the textbook for internationalizing a category root" },
+      ],
+      pitfalls: [
+        "Piling up \"Royal Imperial International Spring City\" titles: reads as a bathhouse, not a resort — keep deference restrained; stacked grandeur cheapens",
+        "Mismatching zen and play: a meditation name on a family waterpark, a carnival name on a silent bath — quiet and noise must pick a lead in the name",
+        "Welding to one pool: the resort is springs plus rooms plus dining — draw the boundary at restorative getaway, not a single hot pool",
+        "Ignoring platform search: guests search \"X hot springs\" and can't find your poetic alias — carry the category word or let it follow naturally",
+      ],
+    },
+  },
+  trampoline: {
+    slug: "trampoline",
+    tlds: [
+      { tld: "fun", zh: "「快乐」后缀直给娱乐属性，亲子与团建场景零解释成本", en: "The fun suffix states entertainment outright — zero explanation for family and team-outing scenes" },
+      { tld: "club", zh: "「俱乐部」后缀贴合会员制场馆与蹦床训练营，归属感直给", en: "The club suffix fits membership venues and trampoline camps — belonging stated outright" },
+      { tld: "com", zh: "连锁场馆与票务平台的信任底线，蹦床品牌的默认选择", en: "The trust baseline for chains and ticketing platforms — the default for a trampoline brand" },
+    ],
+    zh: {
+      label: "蹦床公园",
+      title: "蹦床公园与运动乐园怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "蹦床公园命名指南：腾空词根、能量动词、乐园复合等 5 种思路，Sky Zone/BOUNCE/Urban Air 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的蹦床乐园域名。",
+      intro:
+        "蹦床公园的名字要先弹起来：家长在周末遛娃清单里比较、团建负责人在场地平台上筛选、年轻人把海绵池后空翻发上社交软件——名字是这座馆能量密度的第一次预告。第一素材库是腾空词根：跳、弹、翻、飞、空——蹦床的爽感浓缩在离地一瞬，Sky Zone 用「天空地带」把腾空感画成一片区域，BOUNCE 干脆把动词本身做成品牌，一个词就是一次弹跳。第二个抓手是能量动词与拟声：跳、蹦、嗨、Boing——动词名自带动作指令，读出来就完成了一次心理预演。第三个抓手是乐园复合结构：现代蹦床馆是蹦床 + 攀爬 + 忍者关卡 + 海绵池的综合体——Urban Air 用「城市空中」把多业态说成一种城市新玩法，名字要托得住生日会、团建与亲子三个场景。要注意能量与安全的平衡：名字可以嗨，但家长在意的是防护——过于极限向的名字（Extreme、Insane 类）会让亲子客犹豫，能量感要配上专业感。渠道上，蹦床馆活在点评榜单、亲子平台和短视频的腾空镜头里——名字要上镜、好念、自带动作画面。",
+      namingIdeas: [
+        "腾空词根：跳、弹、翻、飞、空——离地一瞬是品类核心爽感，名字里的腾空感直接调动肾上腺素",
+        "能量动词直取：BOUNCE 式的动词品牌——动词名自带动作指令，读出来就完成一次心理预演",
+        "乐园复合词：空中 + 地带、乐园、基地——现代蹦床馆是多业态综合体，名字要画出一片玩乐领地",
+        "拟声与轻快尾音：Boing、Pop 类的声音词——拟声自带弹性画面，亲子客群一听就懂",
+        "亲子安心测试：把名字放进「周末带娃去 XX」念一遍——过于极限向的名字会让家长在预订前犹豫",
+      ],
+      cases: [
+        { name: "Sky Zone", takeaway: "「天空 + 地带」的领地结构：把腾空感画成一片可进入的区域——全球最大蹦床连锁用两个词完成品类定义" },
+        { name: "BOUNCE", takeaway: "动词本身做品牌：一个词就是一次弹跳——动词名自带动作指令与全球通用性，澳洲品牌出海十余国零翻译成本" },
+        { name: "Urban Air", takeaway: "「城市 + 空中」的场景重构：把郊区仓库里的蹦床说成城市新玩法——多业态运动乐园的命名样本，托住生日会与团建两大现金流" },
+        { name: "Altitude", takeaway: "「海拔」的单词直取：一个高度词同时交付腾空感与专业感——常见词 + 品类联想的经典打法，连锁扩张时商标与域名都留有余地" },
+      ],
+      pitfalls: [
+        "极限词吓退家长：Extreme、Insane 类名字让亲子客在预订前犹豫——能量感要配上专业与安全的暗示",
+        "锁死单一蹦床业态：现代场馆是蹦床 + 攀爬 + 忍者关卡的综合体——名字边界画在「运动乐园」而非一张网",
+        "堆砌「超级星际蹦床城」类夜场词：像十年前的电玩城——能量要克制表达，堆砌只显廉价",
+        "忽略亲子平台搜索：家长在点评与亲子平台按「蹦床」找场馆——名字要好打好搜，生僻词进不了周末清单",
+      ],
+    },
+    en: {
+      label: "Trampoline parks",
+      title: "How to Name a Trampoline Park or Adventure Venue: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Trampoline park naming guide: airborne roots, energy verbs, park compounds, breakdowns of Sky Zone/BOUNCE/Urban Air/Altitude, recommended TLDs and pitfalls — then hunt an available park-brand domain with AI.",
+      intro:
+        "A trampoline park's name should leave the ground before anyone jumps: parents compare it on weekend kid-outing lists, team-outing organizers filter it on venue platforms, and backflips into the foam pit headline social feeds — the name is the first preview of the venue's energy density. The first word bank is airborne roots: jump, bounce, flip, fly, air — the category's thrill is compressed into the instant of leaving the ground; Sky Zone paints that lift as a territory you can enter, and BOUNCE simply brands the verb itself: one word, one jump. The second lever is energy verbs and onomatopoeia: jump, spring, boing — a verb name carries its own action command, and saying it aloud is a mental rehearsal of the fun. The third lever is the park compound: the modern venue is trampolines plus climbing plus ninja courses plus foam pits — Urban Air reframes a suburban warehouse as a new way to play in the city, and the name must hold birthdays, team outings and family visits at once. Mind the energy-to-safety balance: the name can run hot, but parents care about padding — Extreme/Insane-grade names make family bookers hesitate, so energy needs a professional undertone. As for channels, parks live on review rankings, family platforms and mid-air short-video frames — the name must be photogenic, easy to say, and carry a built-in action shot.",
+      namingIdeas: [
+        "Airborne roots: jump, bounce, flip, fly, air — the instant off the ground is the category's core thrill; lift in the name taps adrenaline directly",
+        "Take the verb straight: the BOUNCE move — a verb name carries its own action command, and saying it is a rehearsal of the fun",
+        "Park compounds: air plus zone, park, base — the modern venue is multi-format; the name should draw a territory of play",
+        "Onomatopoeia and springy endings: boing, pop — sound words carry elastic imagery that families decode instantly",
+        "The parent-comfort test: say \"taking the kids to X this weekend\" — Extreme-grade names make family bookers hesitate before paying",
+      ],
+      cases: [
+        { name: "Sky Zone", takeaway: "Sky plus zone, a territory structure: lift painted as a place you can enter — the world's largest trampoline chain defined the category in two words" },
+        { name: "BOUNCE", takeaway: "The verb as the brand: one word is one jump — action command and global portability built in; the Australian brand crossed a dozen markets with zero translation cost" },
+        { name: "Urban Air", takeaway: "Urban plus air, a scene reframe: trampolines in a suburban warehouse sold as a new way to play in the city — the naming sample for multi-format adventure parks holding birthdays and team outings" },
+        { name: "Altitude", takeaway: "A dictionary word taken straight: one height word delivers lift and professionalism at once — the classic common-word-plus-category play, leaving room for trademarks and domains as the chain scales" },
+      ],
+      pitfalls: [
+        "Extreme words that scare parents: Insane/Extreme-grade names make family bookers hesitate — energy needs a professional, safety-aware undertone",
+        "Welding to the trampoline alone: the modern venue is jumps plus climbing plus ninja courses — draw the boundary at adventure park, not one net",
+        "Piling up \"Super Galactic Jump City\" arcade words: reads as a decade-old game hall — express energy with restraint; stacking cheapens",
+        "Ignoring family-platform search: parents find venues by searching the category on review and family apps — obscure coinages never make the weekend list",
+      ],
+    },
+  },
+  funeral: {
+    slug: "funeral",
+    tlds: [
+      { tld: "com", zh: "家属托付与机构合作的信任底线，殡葬品牌的默认选择", en: "The trust baseline for family trust and institutional partners — the default for a funeral brand" },
+      { tld: "life", zh: "「生命」后缀把告别说成生命礼赞，温度与体面直给", en: "The life suffix frames farewell as a celebration of life — warmth and dignity stated outright" },
+      { tld: "care", zh: "「关怀」后缀直给服务温度，贴合家属陪伴与身后事规划", en: "The care suffix states service warmth outright — fitting family support and end-of-life planning" },
+    ],
+    zh: {
+      label: "殡葬服务",
+      title: "殡葬服务与生命礼仪品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "殡葬服务命名指南：福寿词根、生命礼赞、庄重人文等 5 种思路，福寿园/Dignity/Farewill 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的生命服务域名。",
+      intro:
+        "殡葬品牌的名字要在人生最沉重的时刻被念出来：家属在深夜的搜索框里寻找、亲友在灵堂签到处看见、多年后扫墓的人对着园区门楣回忆——名字是这份托付的第一次安放。第一素材库是福寿词根：福、寿、安、宁、恩——中国语境里的身后事讲「福寿全归」，福寿园用两个最吉祥的字把陵园做成上市公司，庄重与祝福在名字里同时成立。第二个抓手是生命礼赞：把「殡葬」翻译成「生命服务」——Dignity（尊严）用一个抽象名词把英国殡仪连锁的价值观写进名字，告别的体面感一词直给。第三个抓手是人文陪伴感：Farewill 把 farewell（告别）与 will（遗嘱）叠成双关，用轻盈的科技感重构身后事规划——数字化殡葬服务的命名可以年轻，但不能轻佻。要注意庄重与温度的配比：纯庄重向的名字冷得像石碑，纯温情向又压不住仪式的分量——名字要让家属安心，也要让逝者体面。渠道上，殡葬服务活在搜索框、医院社工的转介绍和陵园门楣上——名字要经得起石刻，也要在搜索结果里传递可托付感。",
+      namingIdeas: [
+        "福寿词根：福、寿、安、宁、恩——「福寿全归」的语境让吉祥字在殡葬品类庄重成立，祝福即体面",
+        "生命礼赞词：尊严、礼、颂、纪念——把「殡葬」翻译成「生命服务」，抽象价值词直给告别的体面感",
+        "人文陪伴感：Farewill 式的温柔双关——数字化身后事服务可以年轻轻盈，但不能轻佻",
+        "园林与归处意象：园、山、水、林——陵园是「归处」的生意，园林词根把沉重转译成安宁",
+        "托付感测试：把名字放进深夜搜索框想一遍——家属在最脆弱的时刻，名字必须一眼传递可托付",
+      ],
+      cases: [
+        { name: "福寿园", takeaway: "「福 + 寿 + 园」三个字的教科书：吉祥词根 + 园林归处——中国最大殡葬服务商用一个名字同时完成庄重、祝福与上市公司的品牌资产" },
+        { name: "Dignity", takeaway: "抽象名词「尊严」直取：一个词把殡仪服务的核心价值写成品牌——英国殡葬连锁的价值观命名样本，体面感零解释成本" },
+        { name: "Co-op Funeralcare", takeaway: "「合作社 + 殡葬关怀」的复合结构：百年互助组织的信任资产 + funeralcare 的温度改写——品类词加 care 一词，冷仪式变暖服务" },
+        { name: "Farewill", takeaway: "farewell 与 will 的双关叠词：告别与遗嘱两个语义严丝合缝——数字化身后事规划的命名教科书，轻盈但不轻佻" },
+      ],
+      pitfalls: [
+        "堆砌「天堂极乐永生」类宗教词：家属信仰各异，过重的宗教暗示把非教友客群挡在门外——庄重要普适",
+        "冷得像石碑：纯「陵、墓、葬」的名字传递不了服务温度——现代殡葬是陪伴与规划，名字要有人的温度",
+        "轻佻的互联网腔：身后事服务可以年轻化，但谐音梗与网感词会被解读为不敬——轻盈与轻佻一线之隔",
+        "忽略深夜搜索场景：家属在最脆弱的时刻用品类词搜索——名字要带或自然关联品类词，花名找不到就是流失",
+      ],
+    },
+    en: {
+      label: "Funeral & memorial services",
+      title: "How to Name a Funeral or Memorial Services Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Funeral services naming guide: blessing roots, celebration-of-life framing, dignified warmth, breakdowns of Fu Shou Yuan/Dignity/Co-op Funeralcare/Farewill, recommended TLDs and pitfalls — then hunt an available memorial-brand domain with AI.",
+      intro:
+        "A funeral brand's name is spoken at life's heaviest moments: typed into a search box late at night, seen at the condolence-book table, remembered years later on the memorial-park gate — the name is the first resting place of a family's trust. The first word bank is blessing roots: peace, grace, rest, eternal — in Chinese contexts a good passing is a \"complete blessing of fortune and longevity\", and Fu Shou Yuan built a listed company on the two most auspicious characters, making solemnity and blessing stand together in one name. The second lever is celebration-of-life framing: translating \"funeral\" into \"life services\" — Dignity wrote the core value of the British funeral chain into a single abstract noun, and the decency of a farewell is delivered in one word. The third lever is humane companionship: Farewill folds farewell into will as a gentle pun, rebuilding end-of-life planning with a light digital touch — a deathcare name may be young, but never flippant. Mind the solemnity-to-warmth ratio: a purely solemn name is as cold as a headstone, while a purely tender one can't bear the weight of ritual — the name must reassure the living and honor the departed. As for channels, the business lives in search boxes, hospital social-worker referrals and carved park gates — the name must survive being cut in stone and still read as trustworthy in a search result.",
+      namingIdeas: [
+        "Blessing roots: peace, grace, rest, eternal — in a \"complete blessing\" culture, auspicious words stand solemnly in this category; blessing is decency",
+        "Celebration-of-life words: dignity, tribute, memorial — translate \"funeral\" into \"life services\"; an abstract value word delivers the decency of farewell outright",
+        "Humane companionship: the Farewill register — a gentle pun and a light digital touch; young is fine, flippant never",
+        "Garden and resting-place imagery: garden, hill, water, grove — memorial parks sell a final home; landscape roots translate weight into peace",
+        "The trust test: imagine the name in a 2 a.m. search box — at their most vulnerable, families must read trustworthiness at a glance",
+      ],
+      cases: [
+        { name: "Fu Shou Yuan", takeaway: "Fortune plus longevity plus garden: blessing roots and a resting-place image in three characters — China's largest deathcare provider built solemnity, blessing and listed-company brand equity into one name" },
+        { name: "Dignity", takeaway: "An abstract noun taken straight: one word writes the core value of funeral service into the brand — the value-naming sample for the category, with decency at zero explanation cost" },
+        { name: "Co-op Funeralcare", takeaway: "A century of mutual trust plus one rewritten category word: funeralcare turns the cold rite into warm service — the compound that softens the category with a single 'care'" },
+        { name: "Farewill", takeaway: "Farewell folded into will: two meanings joined without a seam — the textbook for digital end-of-life planning, light in touch yet never flippant" },
+      ],
+      pitfalls: [
+        "Piling on \"Heaven Eternal Paradise\" religious words: families differ in faith — heavy religious cues lock out everyone else; solemnity must be universal",
+        "Cold as a headstone: names built only on tomb-and-burial roots carry no service warmth — modern deathcare is companionship and planning; the name needs human temperature",
+        "Flippant internet registers: a deathcare brand may be young, but puns and meme words read as disrespect — light and flippant are a hair apart",
+        "Ignoring the late-night search: families search the category word at their most vulnerable — a poetic alias that can't be found is a family lost",
+      ],
+    },
+  },
+  securityguard: {
+    slug: "securityguard",
+    tlds: [
+      { tld: "com", zh: "政企投标与物业合作的信任底线，安保品牌的默认选择", en: "The trust baseline for government tenders and property contracts — the default for a security brand" },
+      { tld: "services", zh: "「服务」后缀直给行业属性，安保外包与驻场业务零解释", en: "The services suffix states the trade outright — zero explanation for guarding and outsourced patrols" },
+      { tld: "group", zh: "「集团」后缀贴合多城市布点的安保集团，规模感直给", en: "The group suffix fits multi-city security operations — scale stated outright" },
+    ],
+    zh: {
+      label: "安保服务",
+      title: "安保服务公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "安保公司命名指南：守护词根、可靠意象、规模信任等 5 种思路，Securitas/G4S/ADT 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的安保品牌域名。",
+      intro:
+        "安保公司的名字要先站得笔直：物业总监在投标文件里审阅、企业行政在供应商名单里比较、业主在岗亭制服的臂章上确认——名字是这支队伍可靠度的第一次亮相。第一素材库是守护词根：安、卫、盾、护、诚——安保卖的是「出事之前的放心」，名字里的守护感直接降低采购决策的心理成本；Securitas 用拉丁语「安全女神」把瑞典保安做成全球最大安保集团，古典词根自带制度感。第二个抓手是可靠与纪律意象：盾牌、堡垒、哨兵、鹰——ADT 一百四十年只做一件事，三字母缩写在北美成了「联网报警」的代名词，缩写的中性反而成了机构信任的资产。第三个抓手是规模与体系感：安保是重人力、重资质的生意——G4S 用「Group 4 Securicor」的并购史缩写说清全球布点，投标场景里规模就是资格。要注意威慑与亲和的配比：纯武力向的名字（战狼、特攻类）吓退写字楼与社区客户，纯温和向又压不住押运与要害驻场——守护感要配上专业纪律的暗示。渠道上，安保活在投标文件、物业合同和制服臂章上——名字要经得起公章与徽章，也要让业主一眼读出「有人在管」。",
+      namingIdeas: [
+        "守护词根：安、卫、盾、护、诚——安保卖「出事之前的放心」，守护感直接降低采购的心理成本",
+        "古典与制度感词根：Securitas 式的拉丁词——古典词根自带制度与传承感，政企投标场景天然加分",
+        "纪律意象：哨兵、堡垒、鹰、盾徽——纪律感的具象词让名字站得笔直，制服臂章上自带威慑",
+        "缩写与体系结构：ADT、G4S 式的字母名——重资质行业里缩写的中性是机构信任资产，并购扩张也不掉队",
+        "投标测试：把名字放进「XX 保安服务有限公司」的投标封面想一遍——压不住公章的名字进不了供应商名单",
+      ],
+      cases: [
+        { name: "Securitas", takeaway: "拉丁语「安全女神」直取：古典词根自带制度与传承感——瑞典公司凭一个词做成全球最大安保集团，红点徽标 + 名字构成完整信任系统" },
+        { name: "G4S", takeaway: "「Group 4 Securicor」的并购史缩写：字母 + 数字的中性组合装下全球布点——重资质行业里，缩写的克制就是规模的证明" },
+        { name: "ADT", takeaway: "American District Telegraph 的三字母遗产：一百四十年聚焦让缩写成为「联网报警」代名词——技术安防品牌的信任复利样本" },
+        { name: "Allied Universal", takeaway: "「联合 + 环球」的双规模词：两个抽象大词说清并购整合与全球能力——北美最大安保雇主的投标语法，规模就是资格" },
+      ],
+      pitfalls: [
+        "武力词吓退客户：战狼、特攻类名字让写字楼与社区物业犹豫——威慑要收进纪律感，不能露在字面",
+        "堆砌「国际皇家卫士」类头衔：资质靠证照不靠名字——头衔堆砌在投标评审眼里反而扣分",
+        "锁死单一业务：现代安保是人防 + 技防 + 咨询的体系——名字边界画在「安全服务」而非一个岗亭",
+        "忽略公章与臂章场景：名字要在投标封面、合同公章与制服臂章上都立得住——花哨字体救不了轻飘的名字",
+      ],
+    },
+    en: {
+      label: "Security services",
+      title: "How to Name a Security Services Company: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Security company naming guide: guardian roots, reliability imagery, institutional scale, breakdowns of Securitas/G4S/ADT/Allied Universal, recommended TLDs and pitfalls — then hunt an available security-brand domain with AI.",
+      intro:
+        "A security company's name must stand at attention: reviewed by property directors in tender documents, compared by office managers on vendor lists, confirmed by residents on the arm patch at the gatehouse — the name is the first inspection of the team's reliability. The first word bank is guardian roots: guard, shield, watch, trust — security sells peace of mind before anything happens, and protective weight in the name directly lowers the psychological cost of procurement; Securitas rode the Latin goddess of safety from a Swedish guard firm to the world's largest security group, a classical root carrying institutional gravitas built in. The second lever is reliability and discipline imagery: shield, fortress, sentinel, eagle — ADT did one thing for a hundred and forty years until three letters became synonymous with monitored alarms in North America; an abbreviation's neutrality became an institutional asset. The third lever is scale and system: security is a heavy-headcount, heavy-license business — G4S compresses a merger history into one alphanumeric mark that says global footprint, and in tenders scale is qualification. Mind the deterrence-to-warmth ratio: combat-grade names scare off office towers and residential communities, while soft names can't hold cash-in-transit and critical-site posts — protection needs an undertone of professional discipline. As for channels, security lives in tender files, property contracts and uniform patches — the name must bear the official seal and the badge, and let a resident read \"someone is on watch\" at a glance.",
+      namingIdeas: [
+        "Guardian roots: guard, shield, watch, trust — security sells peace of mind before the incident; protective weight lowers procurement's psychological cost",
+        "Classical institutional roots: the Securitas move — a Latin root carries heritage and institution, a natural advantage in government and enterprise tenders",
+        "Discipline imagery: sentinel, fortress, eagle, crest — concrete discipline words make the name stand at attention, deterrence built into the arm patch",
+        "Abbreviations and system marks: the ADT/G4S register — in a license-heavy trade, an abbreviation's neutrality is institutional trust, and it survives mergers",
+        "The tender test: place the name on a bid cover above the official seal — a name that can't bear the stamp never makes the vendor list",
+      ],
+      cases: [
+        { name: "Securitas", takeaway: "The Latin goddess of safety taken straight: a classical root carrying institution and heritage — one word carried a Swedish firm to the world's largest security group, name and three red dots forming a complete trust system" },
+        { name: "G4S", takeaway: "A merger history compressed to letter and digit: the neutral mark holds a global footprint — in a license-heavy trade, an abbreviation's restraint is the proof of scale" },
+        { name: "ADT", takeaway: "Three letters inherited from American District Telegraph: a hundred and forty years of focus made the abbreviation synonymous with monitored alarms — the compounding-trust sample for tech-enabled security" },
+        { name: "Allied Universal", takeaway: "Two scale words stacked: allied plus universal says merger integration and global capability — the tender grammar of North America's largest security employer, where scale is qualification" },
+      ],
+      pitfalls: [
+        "Combat words that scare clients: warlord-grade names make office towers and residential managers hesitate — fold deterrence into discipline, never onto the surface",
+        "Piling up \"Royal International Guardian\" titles: qualification comes from licenses, not names — stacked grandeur loses points with tender reviewers",
+        "Welding to one service: modern security is guarding plus monitoring plus consulting — draw the boundary at security services, not a single gatehouse",
+        "Ignoring the seal and the patch: the name must hold on bid covers, contract stamps and uniform patches — no typeface rescues a flimsy name",
+      ],
+    },
+  },
+  ipagency: {
+    slug: "ipagency",
+    tlds: [
+      { tld: "com", zh: "企业法务与涉外代理的信任底线，知产品牌的默认选择", en: "The trust baseline for corporate counsel and cross-border filings — the default for an IP brand" },
+      { tld: "law", zh: "「法律」后缀直给专业属性，知产律所与代理所零解释成本", en: "The law suffix states the profession outright — zero explanation for IP firms and agencies" },
+      { tld: "pro", zh: "「专业」后缀贴合代理人与顾问的个人与精品所品牌", en: "The pro suffix fits attorneys and boutique practices — expertise stated outright" },
+    ],
+    zh: {
+      label: "知识产权代理",
+      title: "知识产权代理与专利商标服务怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "知识产权代理命名指南：智慧词根、资产意象、精密专业感等 5 种思路，集佳/Anaqua/Dennemeyer 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的知产品牌域名。",
+      intro:
+        "知识产权代理的名字要配得上客户最值钱的无形资产：企业法务在比价单里审阅、发明人在深夜检索里托付、涉外客户在英文官网上确认——名字是这家所专业浓度的第一次证明。第一素材库是智慧词根：智、慧、知、创、佳——知产卖的是「把创新变成资产」的能力，集佳用「集聚佳作」的立意把商标代理做成中国头部所，两个字同时交付专业与祝福。第二个抓手是资产与精密意象：产权是可确权、可交易、可诉讼的资产——Anaqua 从「知识产权年金管理」的业务词根造出软件品牌，把无形资产管理说成一门精密生意。第三个抓手是传承与制度感：知产是跨代际的长期生意——Dennemeyer 用创始人姓氏走过六十年，姓氏名在欧洲专业服务语境里就是责任背书；CPA Global 用「Certified Patent Agents」的缩写 + Global 说清全球年金网络。要注意专业与亲和的配比：纯法务向的名字吓退中小创新者，纯互联网向又接不住涉外大案——精密感要配上「替你守住」的温度。渠道上，知产代理活在招投标名单、代理人协会名录和「我们的专利是 XX 代理的」的行业口碑里——名字要经得起公文头，也要在英文语境里好念。",
+      namingIdeas: [
+        "智慧词根：智、慧、知、创、佳——知产卖「把创新变成资产」的能力，智慧感直接对齐客户的核心诉求",
+        "资产与精密意象：权、诚、衡、桥——产权是可交易的资产，名字里的精密感把服务说成一门严谨生意",
+        "姓氏与传承结构：Dennemeyer 式的姓氏名——专业服务语境里姓氏就是责任背书，跨代际生意天然加分",
+        "缩写 + 全球结构：CPA Global 式的组合——涉外代理要在英文语境好念，缩写加 Global 直给国际网络",
+        "公文头测试：把名字放进「XX 知识产权代理有限公司」的公函抬头想一遍——压不住公文的名字进不了投标名单",
+      ],
+      cases: [
+        { name: "集佳", takeaway: "「集聚佳作」的双字立意：专业能力与美好祝愿同时成立——中国头部知产所用两个字完成从商标代理到综合大所的品牌资产" },
+        { name: "Anaqua", takeaway: "从「年金管理」业务词根造词：annuity 的专业语义藏进一个好念的四音节——知产软件品牌把无形资产管理说成精密生意的命名样本" },
+        { name: "Dennemeyer", takeaway: "创始人姓氏走过六十年：欧洲专业服务语境里姓氏就是责任背书——跨代际知产生意的传承命名教科书" },
+        { name: "CPA Global", takeaway: "「Certified Patent Agents」缩写 + Global：资质词根加全球网络的直白组合——涉外年金服务的规模语法，后并入 Clarivate 仍是行业代名词" },
+      ],
+      pitfalls: [
+        "堆砌「中华国际知产帝国」类大词：资质靠执业证不靠名字——大词堆砌在法务采购眼里反而减分",
+        "互联网腔接不住大案：谐音梗与网感词让涉外客户犹豫——知产是严肃的资产生意，轻快要有分寸",
+        "锁死单一业务线：现代知产所是专利 + 商标 + 诉讼 + 运营的体系——名字边界画在「知识产权」而非一纸证书",
+        "忽略英文语境：涉外代理的名字要在英文邮件与国际会议里好念——拼音拗口的名字要备国际名与对应域名",
+      ],
+    },
+    en: {
+      label: "IP & patent services",
+      title: "How to Name an IP or Patent Services Firm: Strategies, Case Studies & Domains",
+      metaDescription:
+        "IP services naming guide: wisdom roots, asset imagery, precision professionalism, breakdowns of Unitalen/Anaqua/Dennemeyer/CPA Global, recommended TLDs and pitfalls — then hunt an available IP-brand domain with AI.",
+      intro:
+        "An IP agency's name must be worthy of a client's most valuable intangible asset: reviewed by corporate counsel on comparison sheets, trusted by inventors in late-night searches, confirmed by cross-border clients on the English site — the name is the first proof of the firm's professional density. The first word bank is wisdom roots: wisdom, knowledge, invention, merit — IP services sell the ability to turn innovation into assets, and Unitalen (\"gathering fine works\") rode two characters of professional intent and blessing to the top tier of Chinese trademark practice. The second lever is asset and precision imagery: a right that can be registered, traded and litigated is an asset — Anaqua coined a software brand from the annuity-management root of its business, framing intangible-asset management as a precision trade. The third lever is heritage and institution: IP is a cross-generational business — Dennemeyer has carried its founder's surname for six decades, and in European professional services a surname is a liability signature; CPA Global stacks a credential abbreviation on \"Global\" to say worldwide annuity network. Mind the professional-to-approachable ratio: a purely legal register scares off small inventors, while a startup register can't hold cross-border litigation — precision needs the warmth of \"we hold what's yours\". As for channels, IP firms live on tender shortlists, practitioner directories and \"our patents are with X\" industry word of mouth — the name must bear a formal letterhead and stay pronounceable in English.",
+      namingIdeas: [
+        "Wisdom roots: wisdom, knowledge, invention, merit — IP sells turning innovation into assets; intelligence in the name aligns with the client's core ask",
+        "Asset and precision imagery: rights, balance, bridge, trust — a registrable, tradable right is an asset; precision frames the service as a rigorous trade",
+        "Surname and heritage structures: the Dennemeyer move — in professional services a surname is a liability signature, a natural advantage in a cross-generational trade",
+        "Abbreviation plus global: the CPA Global formula — cross-border work must read in English; a credential root plus Global states the international network outright",
+        "The letterhead test: set the name atop a formal filing letter — a name that can't bear the letterhead never makes the tender shortlist",
+      ],
+      cases: [
+        { name: "Unitalen", takeaway: "\"Gathering fine works\" in two characters: professional capability and blessing standing together — a top Chinese IP firm built brand equity from trademark agency to full-service practice on one name" },
+        { name: "Anaqua", takeaway: "Coined from the annuity root of the business: professional semantics folded into four pronounceable syllables — the naming sample for framing intangible-asset software as a precision trade" },
+        { name: "Dennemeyer", takeaway: "A founder's surname carried for six decades: in European professional services the surname is the liability signature — the heritage textbook for a cross-generational IP business" },
+        { name: "CPA Global", takeaway: "A credential abbreviation stacked on Global: qualification root plus worldwide network, stated plainly — the scale grammar of cross-border annuity services, still a byword after joining Clarivate" },
+      ],
+      pitfalls: [
+        "Piling up \"Grand International IP Empire\" words: qualification comes from licenses, not names — stacked grandeur loses points with legal procurement",
+        "A startup register that drops the big cases: puns and meme words make cross-border clients hesitate — IP is a serious asset trade; keep lightness measured",
+        "Welding to one service line: the modern firm is patents plus trademarks plus litigation plus licensing — draw the boundary at intellectual property, not one certificate",
+        "Ignoring the English context: cross-border names must survive English emails and conferences — back an awkward transliteration with an international name and matching domain",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

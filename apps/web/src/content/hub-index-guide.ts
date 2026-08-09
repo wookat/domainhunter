@@ -234,4 +234,10 @@ export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized 
   { slug: "icecream", label: { zh: "冰淇淋品牌", en: "Ice cream brands" }, oneLiner: { zh: "冰淇淋命名指南：快乐音节、异域造词、创始人温度等 5 种思路。", en: "Ice cream naming guide: joyful phonetics, exotic coinages, founder warmth." } },
   { slug: "hostel", label: { zh: "青年旅舍", en: "Hostels" }, oneLiner: { zh: "青旅命名指南：相遇词根、在地故事、社群气质等 5 种思路。", en: "Hostel naming guide: gathering roots, local stories, community vibes." } },
   { slug: "bowling", label: { zh: "保龄球馆", en: "Bowling alleys" }, oneLiner: { zh: "保龄球馆命名指南：全中词根、复古潮流、聚会能量等 5 种思路。", en: "Bowling alley naming guide: strike roots, retro-cool imagery, party energy." } },
+  { slug: "tea", label: { zh: "茶叶品牌", en: "Tea brands" }, oneLiner: { zh: "茶叶品牌命名指南：山场词根、器物意象、日饮轻茶等 5 种思路。", en: "Tea brand naming guide: terroir roots, vessel imagery, everyday-tea energy." } },
+  { slug: "hotspring", label: { zh: "温泉度假", en: "Hot spring resorts" }, oneLiner: { zh: "温泉度假命名指南：汤泉词根、疗愈意象、在地风物等 5 种思路。", en: "Hot spring naming guide: bath roots, healing imagery, local terroir." } },
+  { slug: "trampoline", label: { zh: "蹦床公园", en: "Trampoline parks" }, oneLiner: { zh: "蹦床公园命名指南：腾空词根、能量动词、乐园复合等 5 种思路。", en: "Trampoline park naming guide: airborne roots, energy verbs, park compounds." } },
+  { slug: "funeral", label: { zh: "殡葬服务", en: "Funeral & memorial services" }, oneLiner: { zh: "殡葬服务命名指南：福寿词根、生命礼赞、庄重人文等 5 种思路。", en: "Funeral services naming guide: blessing roots, celebration-of-life framing." } },
+  { slug: "securityguard", label: { zh: "安保服务", en: "Security services" }, oneLiner: { zh: "安保公司命名指南：守护词根、可靠意象、规模信任等 5 种思路。", en: "Security company naming guide: guardian roots, reliability imagery." } },
+  { slug: "ipagency", label: { zh: "知识产权代理", en: "IP & patent services" }, oneLiner: { zh: "知识产权代理命名指南：智慧词根、资产意象、精密专业感等 5 种思路。", en: "IP services naming guide: wisdom roots, asset imagery, precision professionalism." } },
 ];

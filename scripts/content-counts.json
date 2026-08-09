@@ -227,7 +227,7 @@
     ]
   },
   "guide": {
-    "count": 224,
+    "count": 230,
     "slugs": [
       "saas",
       "ecommerce",
@@ -452,7 +452,13 @@
       "sushi",
       "icecream",
       "hostel",
-      "bowling"
+      "bowling",
+      "tea",
+      "hotspring",
+      "trampoline",
+      "funeral",
+      "securityguard",
+      "ipagency"
     ]
   },
   "vs": {
