@@ -202,10 +202,4 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "flights-vs-travel", a: "flights", b: "travel", title: { zh: ".flights 和 .travel 怎么选：垂直航段与行业全域的取舍", en: ".flights vs .travel: The Vertical Leg or The Whole Industry" } },
   { slug: "tours-vs-vacations", a: "tours", b: "vacations", title: { zh: ".tours 和 .vacations 怎么选：走线路与住下来的场景分工", en: ".tours vs .vacations: The Route or The Stay" } },
   { slug: "taxi-vs-city", a: "taxi", b: "city", title: { zh: ".taxi 和 .city 怎么选：接送专线与城市门户的分工", en: ".taxi vs .city: The Ride Service or The City Portal" } },
-  { slug: "properties-vs-estate", a: "properties", b: "estate", title: { zh: ".properties 和 .estate 怎么选：资产清单与行业门牌的分工", en: ".properties vs .estate: The Portfolio Word or The Trade Plaque" } },
-  { slug: "apartments-vs-rentals", a: "apartments", b: "rentals", title: { zh: ".apartments 和 .rentals 怎么选：房型词与交易词的分工", en: ".apartments vs .rentals: The Property Type or The Transaction Word" } },
-  { slug: "properties-vs-rentals", a: "properties", b: "rentals", title: { zh: ".properties 和 .rentals 怎么选：卖与租两种生意的分工", en: ".properties vs .rentals: Selling Assets or Renting Them Out" } },
-  { slug: "builders-vs-construction", a: "builders", b: "construction", title: { zh: ".builders 和 .construction 怎么选：施工班组与工程公司的分工", en: ".builders vs .construction: The Crew or The Firm" } },
-  { slug: "repair-vs-services", a: "repair", b: "services", title: { zh: ".repair 和 .services 怎么选：修一件事与包一揽子的分工", en: ".repair vs .services: The One Fix or The Full Bundle" } },
-  { slug: "apartments-vs-house", a: "apartments", b: "house", title: { zh: ".apartments 和 .house 怎么选：招租页与家宅品牌的分工", en: ".apartments vs .house: The Leasing Page or The House Brand" } },
 ];
