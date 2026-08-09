@@ -256,4 +256,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "holdings-vs-group", a: "holdings", b: "group", title: { zh: ".holdings 和 .group 怎么选：控股主体与经营集团的分工", en: ".holdings vs .group: The Asset Holder or The Operating Group" } },
   { slug: "mortgage-vs-estate", a: "mortgage", b: "estate", title: { zh: ".mortgage 和 .estate 怎么选：房贷生意与房产招牌的分工", en: ".mortgage vs .estate: The Home-Loan Business or The Property Sign" } },
   { slug: "computer-vs-tech", a: "computer", b: "tech", title: { zh: ".computer 和 .tech 怎么选：硬件维修具体词与科技泛称的分工", en: ".computer vs .tech: The Machine Itself or The Industry at Large" } },
+  { slug: "lawyer-vs-legal", a: "lawyer", b: "legal", title: { zh: ".lawyer 和 .legal 怎么选：律师个人牌与法律行业牌的分工", en: ".lawyer vs .legal: The Attorney's Nameplate or The Industry's Address" } },
+  { slug: "vet-vs-pet", a: "vet", b: "pet", title: { zh: ".vet 和 .pet 怎么选：兽医专业与宠物生意的分工", en: ".vet vs .pet: The Clinic's Credential or The Pet Economy's Address" } },
+  { slug: "delivery-vs-express", a: "delivery", b: "express", title: { zh: ".delivery 和 .express 怎么选：送上门与快承诺的分工", en: ".delivery vs .express: To Your Door or At Full Speed" } },
+  { slug: "recipes-vs-menu", a: "recipes", b: "menu", title: { zh: ".recipes 和 .menu 怎么选：做法内容与点餐入口的分工", en: ".recipes vs .menu: Follow-Along Content or The Ordering Door" } },
+  { slug: "rent-vs-rentals", a: "rent", b: "rentals", title: { zh: ".rent 和 .rentals 怎么选：动词品牌与列表聚合的分工", en: ".rent vs .rentals: The Verb Brand or The Listings Aggregator" } },
+  { slug: "legal-vs-law", a: "legal", b: "law", title: { zh: ".legal 和 .law 怎么选：法律平台与律所门牌的分工", en: ".legal vs .law: The Legal Platform or The Firm's Brass Nameplate" } },
 ];

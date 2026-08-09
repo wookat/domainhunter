@@ -249,6 +249,12 @@ export const COMPARE_SLUGS = [
   "holdings-vs-group",
   "mortgage-vs-estate",
   "computer-vs-tech",
+  "lawyer-vs-legal",
+  "vet-vs-pet",
+  "delivery-vs-express",
+  "recipes-vs-menu",
+  "rent-vs-rentals",
+  "legal-vs-law",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
