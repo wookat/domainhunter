@@ -232,6 +232,8 @@ export default function App() {
     });
 
   const availableCount = rows.filter((r) => r.status === "available").length;
+  // R267：quota（401/402/403）重试必然失败，抑制所有会触发 AI 的入口
+  const quotaExhausted = errorKind === "quota";
 
   useEffect(() => {
     if (mode === "home") prefetchSearchChunks();
@@ -683,6 +685,7 @@ export default function App() {
             fallback={understanding}
             onRefine={refine}
             running={running}
+            quotaExhausted={quotaExhausted}
           />
         </div>
       )}
@@ -697,6 +700,7 @@ export default function App() {
           onBackToResults={rows.length > 0 ? () => setMode("results") : undefined}
           onOpenAdvanced={openAdvanced}
           shortlist={shortlist}
+          quotaExhausted={quotaExhausted}
         />
       )}
       {mode === "agent" && (
@@ -744,6 +748,7 @@ export default function App() {
           onMoreAroundLocked={() => void run(values, { more: true, aroundLocked: true })}
           running={running}
           moreDisabled={!values.description.trim()}
+          quotaExhausted={quotaExhausted}
           dislikedHas={(label) => disliked.has(label)}
           onToggleDislike={toggleDislike}
         />

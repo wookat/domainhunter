@@ -11,13 +11,16 @@ export function UnderstandingBar({
   fallback,
   onRefine,
   running,
+  quotaExhausted,
 }: {
   understanding: Understanding | null;
   fallback: string;
   onRefine: (pref: string) => void;
   running: boolean;
+  quotaExhausted?: boolean;
 }) {
   const { t } = useI18n();
+  const blocked = running || quotaExhausted;
   return (
     <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border border-brand-line/60 bg-brand-dim/40 px-4 py-2.5">
@@ -50,12 +53,12 @@ export function UnderstandingBar({
             return (
               <button
                 key={k}
-                disabled={running}
+                disabled={blocked}
                 onClick={() => onRefine(label)}
-                title={t("understand.refineTitle", { pref: label })}
+                title={quotaExhausted ? t("results.moreQuota") : t("understand.refineTitle", { pref: label })}
                 className={cn(
                   "min-h-[44px] whitespace-nowrap rounded-full border border-line bg-bg1 px-2.5 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0 sm:py-1",
-                  running && "pointer-events-none opacity-50",
+                  blocked && "pointer-events-none opacity-50",
                 )}
               >
                 {label}

@@ -226,6 +226,7 @@ export function ResultsPage({
   onMoreAroundLocked,
   running,
   moreDisabled,
+  quotaExhausted,
   dislikedHas,
   onToggleDislike,
 }: {
@@ -245,6 +246,7 @@ export function ResultsPage({
   onMoreAroundLocked: () => void;
   running: boolean;
   moreDisabled?: boolean;
+  quotaExhausted?: boolean;
   dislikedHas: (label: string) => boolean;
   onToggleDislike: (label: string) => void;
 }) {
@@ -257,6 +259,7 @@ export function ResultsPage({
   const [view, setView] = useState<View>("rows");
   const [linkCopied, setLinkCopied] = useState(false);
   const { copied: availCopied, copy: copyAvailable } = useCopyAvailable();
+  const moreBlocked = running || moreDisabled || quotaExhausted;
   const [starredCount, setStarredCount] = useState(0);
   const [selectedIdx, setSelectedIdx] = useState(-1);
   const listRef = useRef<HTMLDivElement>(null);
@@ -322,7 +325,7 @@ export function ResultsPage({
           el?.scrollIntoView({ block: "nearest" });
           return next;
         });
-      } else if (e.key === " " && !running && !moreDisabled) {
+      } else if (e.key === " " && !moreBlocked) {
         e.preventDefault();
         if (locked.size > 0) onMoreAroundLocked();
         else onMore();
@@ -335,7 +338,7 @@ export function ResultsPage({
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [visible, selectedIdx, running, moreDisabled, locked, onMore, onMoreAroundLocked, onToggleFavorite]);
+  }, [visible, selectedIdx, moreBlocked, locked, onMore, onMoreAroundLocked, onToggleFavorite]);
 
   const lockedList = [...locked];
 
@@ -426,7 +429,8 @@ export function ResultsPage({
             <button
               className="flex h-9 items-center gap-1.5 rounded-lg bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50"
               onClick={onMore}
-              disabled={running || moreDisabled}
+              disabled={moreBlocked}
+              title={quotaExhausted ? t("results.moreQuota") : undefined}
             >
               <RotateCw className={cn("h-4 w-4", running && "animate-spin")} />
               {t("results.more")} <kbd className="hidden md:inline" style={{ background: "rgba(0,0,0,.2)", color: "inherit", borderColor: "rgba(0,0,0,.25)" }}>Space</kbd>
@@ -610,7 +614,9 @@ export function ResultsPage({
       {/* 底部 sticky：锁定 + 围绕锁定再来一轮 */}
       <div className="fixed inset-x-0 bottom-0 z-20 border-t border-line bg-bg1/90 backdrop-blur-[12px]">
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-3 sm:gap-3 sm:px-4 md:px-6">
-          {locked.size > 0 ? (
+          {quotaExhausted ? (
+            <span className="min-w-0 truncate text-[11px] text-txt2 sm:text-xs">{t("results.moreQuota")}</span>
+          ) : locked.size > 0 ? (
             <>
               <span className="hidden items-center gap-1.5 truncate text-xs text-txt1 md:flex">
                 <Lock className="h-3.5 w-3.5 shrink-0 text-brand" />
@@ -645,7 +651,8 @@ export function ResultsPage({
           <button
             className="flex h-11 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg bg-brand px-3.5 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50 sm:px-4 md:h-9"
             onClick={locked.size > 0 ? onMoreAroundLocked : onMore}
-            disabled={running || moreDisabled}
+            disabled={moreBlocked}
+            title={quotaExhausted ? t("results.moreQuota") : undefined}
           >
             <RotateCw className={cn("h-4 w-4", running && "animate-spin")} />
             {locked.size > 0 ? t("results.moreAroundLocked") : t("results.more")}
