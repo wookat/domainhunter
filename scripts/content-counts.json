@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 222,
+    "count": 228,
     "slugs": [
       "com",
       "net",
@@ -223,7 +223,13 @@
       "cleaning",
       "plumbing",
       "catering",
-      "florist"
+      "florist",
+      "courses",
+      "degree",
+      "mba",
+      "study",
+      "forum",
+      "review"
     ]
   },
   "guide": {

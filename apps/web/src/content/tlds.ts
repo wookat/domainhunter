@@ -6684,6 +6684,186 @@ const GUIDES = {
       ],
     },
   },
+  courses: {
+    tld: "courses",
+    zh: {
+      title: ".courses 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".courses 是在线课程与教学内容的专属后缀，适合在线课程平台与独立讲师、职业技能与考证培训、企业内训与知识付费、兴趣与语言学习课程。查看 .courses 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .courses 域名。",
+      intro:
+        ".courses 把「课程」直接写进域名：在线课程平台与独立讲师、职业技能与考证培训、企业内训与知识付费、兴趣与语言学习项目用 name.courses，学员搜「主题 + courses」时域名就是搜索词本身——python.courses 这样的名字不用解释就知道卖什么。注册局为 Open Universities Australia（澳大利亚开放大学联盟），首年约 $2（约 ¥11），续费约 $31/年（约 ¥226），首年几乎零成本试水，续费在内容后缀里属中档。库存极好：学科词、技能词、品牌词基本都有货，而 XXcourses.com 在英语市场早被在线教育公司抢光。注意三点：一是复数形式暗示「课程目录」，单门课或个人品牌可斟酌是否用已收录的 .academy / .school；二是首年便宜续费贵 20 倍，批量注册按续费价算总账；三是与 .education / .training 的分工——机构官网用 .education，线下实训用 .training，在线课程目录用 .courses 最准。命名上「学科/技能 + .courses」适合垂类课程站，「品牌 + .courses」适合知识付费矩阵，「城市 + .courses」适合本地培训机构。",
+      bestFor: ["在线课程平台与独立讲师", "职业技能与考证培训", "企业内训与知识付费", "兴趣与语言学习课程"],
+      namingTips: [
+        "「学科/技能 + .courses」就是学员的搜索词",
+        "首年约 $2、续费约 $31/年，矩阵注册按续费算总账",
+        "机构官网用 .education，在线课程目录用这里",
+        "品牌 + .courses 适合知识付费的课程矩阵入口",
+      ],
+    },
+    en: {
+      title: ".courses Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".courses is the dedicated suffix for online courses and teaching content — for course platforms and independent instructors, vocational and certification training, corporate learning and paid knowledge products, and hobby or language courses. See live pricing and naming advice, then hunt available .courses names with AI.",
+      intro:
+        ".courses writes the product into the domain: online course platforms and independent instructors, vocational and certification training, corporate learning programs and paid knowledge products on name.courses match exactly what learners search — topic + courses — and a name like python.courses needs no explanation. Operated by Open Universities Australia, about $2 for the first year (≈¥11) and $31/yr to renew (≈¥226) — near-zero cost to test, mid-tier to hold among content suffixes. Inventory is excellent: subject words, skill words and brand words nearly all hit, while every XXcourses.com in English-speaking markets was claimed by ed-tech companies long ago. Three cautions: the plural implies a catalog of courses — a single course or personal brand may read better on the already-listed .academy or .school; the first year is cheap but renewal runs 20× — price a multi-topic matrix at renewal rates; and split the work with .education and .training — institution sites fit .education, hands-on programs fit .training, while an online course catalog is truest here. Naming: subject or skill + .courses fits vertical course sites; brand + .courses fits a paid-knowledge catalog; city + .courses fits local training providers.",
+      bestFor: ["Course platforms & independent instructors", "Vocational & certification training", "Corporate learning & paid knowledge", "Hobby & language courses"],
+      namingTips: [
+        "Subject or skill + .courses is exactly what learners search",
+        "About $2 year one, $31/yr renewal — matrix at renewal rates",
+        "Institution sites fit .education; course catalogs live here",
+        "Brand + .courses works as a paid-knowledge catalog front door",
+      ],
+    },
+  },
+  degree: {
+    tld: "degree",
+    zh: {
+      title: ".degree 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".degree 是学位教育与升学服务的专属后缀，适合在线学位与继续教育项目、留学与升学咨询、学位课程比价与测评、高校招生与专业介绍站。查看 .degree 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .degree 域名。",
+      intro:
+        ".degree 说的就是「学位」：在线学位与继续教育项目、留学与升学咨询、学位课程比价测评、高校招生与专业介绍站用 name.degree，想读学位的人搜「专业 + degree」时域名与搜索意图严丝合缝——nursing.degree 这样的名字自带转化力。注册局为 Identity Digital，首年约 $8（约 ¥59），续费约 $42/年（约 ¥300），首年低门槛，续费在教育后缀里属中上。库存极好：专业词、学位类型词（online / masters / mba 相关组合）基本都有货。注意三点：一是「degree」在英语里强指学历学位，技能证书类项目用 .courses / .training 更贴；二是学位是高客单决策，域名之外把课程认证与就业数据做扎实才有转化；三是与已收录的 .education / .institute 分工——机构官网用 .education，研究机构用 .institute，学位项目与升学服务用 .degree 最准。命名上「专业 + .degree」适合垂类学位站，「online/fast + .degree」适合在线学位聚合，「品牌 + .degree」适合教育集团的学位业务线。",
+      bestFor: ["在线学位与继续教育项目", "留学与升学咨询", "学位课程比价与测评", "高校招生与专业介绍站"],
+      namingTips: [
+        "「专业 + .degree」与升学搜索意图严丝合缝",
+        "首年约 $8、续费约 $42/年，按续费价算长期成本",
+        "技能证书用 .courses 更贴，学历学位用这里",
+        "online + .degree 直接说清在线学位定位",
+      ],
+    },
+    en: {
+      title: ".degree Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".degree is the dedicated suffix for degree education and admissions services — for online degree and continuing-education programs, study-abroad and admissions consulting, degree comparison and review sites, and university recruitment pages. See live pricing and naming advice, then hunt available .degree names with AI.",
+      intro:
+        ".degree names the credential itself: online degree and continuing-education programs, study-abroad and admissions consultants, degree comparison and review sites, and university recruitment pages on name.degree match the exact intent of someone searching major + degree — a name like nursing.degree converts from the address bar. Operated by Identity Digital, about $8 for the first year (≈¥59) and $42/yr to renew (≈¥300) — a low first-year door with an upper-mid renewal among education suffixes. Inventory is excellent: majors, degree-type words and online/masters combos nearly all hit. Three cautions: \"degree\" strongly means academic credentials in English — skill certificates read better on .courses or .training; degrees are high-ticket decisions, so back the domain with accreditation and employment data or the traffic won't convert; and split the work with the already-listed .education and .institute — institution sites fit .education, research bodies fit .institute, while degree programs and admissions services are truest here. Naming: major + .degree fits vertical degree sites; online or fast + .degree fits online-degree aggregators; brand + .degree fits the degree arm of an education group.",
+      bestFor: ["Online degree & continuing education", "Study-abroad & admissions consulting", "Degree comparison & review sites", "University recruitment pages"],
+      namingTips: [
+        "Major + .degree matches admissions search intent exactly",
+        "About $8 year one, $42/yr renewal — budget at renewal rates",
+        "Skill certificates fit .courses; academic degrees live here",
+        "online + .degree states the online-program positioning outright",
+      ],
+    },
+  },
+  mba: {
+    tld: "mba",
+    zh: {
+      title: ".mba 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".mba 是商学教育与管理培训的专属后缀，适合 MBA/EMBA 项目与商学院、管理培训与领导力课程、商科备考与申请咨询、商业案例与管理内容站。查看 .mba 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .mba 域名。",
+      intro:
+        ".mba 三个字母就是全球通行的商学教育符号：MBA/EMBA 项目与商学院、管理培训与领导力课程、商科备考与申请咨询、商业案例内容站用 name.mba，读商学院的人一眼就懂——apply.mba 这样的名字本身就是行动号召。注册局为 Identity Digital，首年约 $11（约 ¥78），续费约 $31/年（约 ¥226），进出都不贵，在垂直后缀里属好持有的一档。库存极好：城市名、商学方向词（finance / marketing / tech 组合）、品牌词基本都有货，而 XXmba.com 早被备考机构占光。注意三点：一是 MBA 是全球认知的缩写，无需教育市场，但也把定位锁死在商学教育——泛管理内容可斟酌 .guru / .expert；二是备考与申请咨询是强信任生意，域名之外把导师背景与录取案例做足；三是与 .degree 的分工——泛学位项目用 .degree，商学教育专属身份用 .mba 最准。命名上「城市/学校 + .mba」适合本地项目与校友站，「方向词 + .mba」适合垂类商学内容，「动词 + .mba」（apply/get）适合申请服务。",
+      bestFor: ["MBA/EMBA 项目与商学院", "管理培训与领导力课程", "商科备考与申请咨询", "商业案例与管理内容站"],
+      namingTips: [
+        "「城市/学校 + .mba」适合项目官网与校友社区",
+        "首年约 $11、续费约 $31/年，进出都不贵好持有",
+        "泛学位用 .degree，商学教育专属身份用这里",
+        "apply/get + .mba 本身就是行动号召",
+      ],
+    },
+    en: {
+      title: ".mba Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".mba is the dedicated suffix for business education and management training — for MBA/EMBA programs and business schools, management and leadership courses, admissions test prep and consulting, and business case content sites. See live pricing and naming advice, then hunt available .mba names with AI.",
+      intro:
+        ".mba is a globally understood credential in three letters: MBA/EMBA programs and business schools, management and leadership training, admissions prep and consulting, and business case content on name.mba need zero explanation to their audience — a name like apply.mba is a call to action by itself. Operated by Identity Digital, about $11 for the first year (≈¥78) and $31/yr to renew (≈¥226) — inexpensive both in and out, an easy-to-hold tier among vertical suffixes. Inventory is excellent: city names, business-track words (finance, marketing, tech combos) and brand words nearly all hit, while every XXmba.com was claimed by test-prep firms long ago. Three cautions: MBA is universally recognized but locks the positioning to business education — broader management content may lean .guru or .expert; admissions prep and consulting run on trust, so back the domain with mentor credentials and admit results; and split the work with .degree — general degree programs fit .degree, while the business-school identity is truest here. Naming: city or school + .mba fits program sites and alumni communities; track word + .mba fits vertical business content; verb + .mba (apply, get) fits admissions services.",
+      bestFor: ["MBA/EMBA programs & business schools", "Management & leadership training", "Admissions prep & consulting", "Business case & management content"],
+      namingTips: [
+        "City or school + .mba fits program sites and alumni hubs",
+        "About $11 year one, $31/yr renewal — cheap in, cheap to hold",
+        "General degrees fit .degree; the b-school identity lives here",
+        "apply/get + .mba is a call to action by itself",
+      ],
+    },
+  },
+  study: {
+    tld: "study",
+    zh: {
+      title: ".study 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".study 是学习与备考场景的专属后缀，适合备考刷题与学习工具、留学与游学项目、学习方法与效率内容、研究小组与学习社区。查看 .study 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .study 域名。",
+      intro:
+        ".study 把「学习」这个动作写进域名：备考刷题与学习工具、留学与游学项目、学习方法与效率内容、研究小组与学习社区用 name.study，动词属性让域名自带号召——ielts.study 这样的名字就是一句「来学雅思」。注册局为 Open Universities Australia（澳大利亚开放大学联盟），首年约 $2（约 ¥11），续费约 $31/年（约 ¥226），首年几乎零成本，续费中档。库存极好：考试名、学科词、方法词基本都有货，而 XXstudy.com 早被教育公司抢光。注意三点：一是 .study 是「学习动作」而 .courses 是「课程目录」——工具与社区用 .study，卖课用 .courses 更准；二是首年便宜续费贵 20 倍，矩阵注册按续费价算总账；三是「study in + 国家」是留学行业的固定搜索词，germany.study 这类名字对留学机构是天然入口。命名上「考试/学科 + .study」适合备考垂类，「国家/城市 + .study」适合留学项目，「品牌 + .study」适合学习工具与社区。",
+      bestFor: ["备考刷题与学习工具", "留学与游学项目", "学习方法与效率内容", "研究小组与学习社区"],
+      namingTips: [
+        "「考试/学科 + .study」就是备考人的搜索词",
+        "首年约 $2、续费约 $31/年，矩阵注册按续费算总账",
+        "卖课用 .courses，学习工具与社区用这里",
+        "国家 + .study 是留学行业的天然入口",
+      ],
+    },
+    en: {
+      title: ".study Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".study is the dedicated suffix for learning and exam prep — for test-prep and study tools, study-abroad programs, learning methods and productivity content, and research groups and study communities. See live pricing and naming advice, then hunt available .study names with AI.",
+      intro:
+        ".study puts the verb in the domain: test-prep and study tools, study-abroad programs, learning-method and productivity content, and research groups or study communities on name.study carry a built-in call to action — a name like ielts.study literally says \"come study IELTS\". Operated by Open Universities Australia, about $2 for the first year (≈¥11) and $31/yr to renew (≈¥226) — near-zero cost to start, mid-tier to hold. Inventory is excellent: exam names, subjects and method words nearly all hit, while every XXstudy.com was claimed by education companies long ago. Three cautions: .study is the act of learning while .courses is a catalog — tools and communities fit .study, selling courses reads truer on .courses; the first year is cheap but renewal runs 20× — price a matrix at renewal rates; and \"study in + country\" is a fixed search phrase in the study-abroad industry, so a name like germany.study is a natural front door for agencies. Naming: exam or subject + .study fits prep verticals; country or city + .study fits study-abroad programs; brand + .study fits learning tools and communities.",
+      bestFor: ["Test-prep & study tools", "Study-abroad programs", "Learning methods & productivity content", "Research groups & study communities"],
+      namingTips: [
+        "Exam or subject + .study is exactly what test-takers search",
+        "About $2 year one, $31/yr renewal — matrix at renewal rates",
+        "Selling courses fits .courses; tools and communities live here",
+        "Country + .study is the study-abroad industry's front door",
+      ],
+    },
+  },
+  forum: {
+    tld: "forum",
+    zh: {
+      title: ".forum 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".forum 是社区讨论场景的专属后缀，适合垂直兴趣社区与论坛、行业交流与问答平台、开源项目讨论区、品牌用户社区。查看 .forum 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .forum 域名。",
+      intro:
+        ".forum 就是「论坛」本身：垂直兴趣社区、行业交流与问答平台、开源项目讨论区、品牌用户社区用 name.forum，一眼就知道这是个能发帖讨论的地方——crypto.forum 这样的名字不用任何说明。注册局为 Fegistry，首年约 $2（约 ¥11），续费约 $31/年（约 ¥226）——这个后缀早年定价数百美元，如今降到平价后成了社区场景的捡漏机会。库存极好：兴趣词、行业词、品牌词基本都有货，而 XXforum.com 早被老论坛占光。注意三点：一是 .forum 强指「讨论区」，官网主站不适合，最佳用法是主站 + 社区分离（如 brand.com 主站、brand.forum 社区）；二是首年便宜续费贵 20 倍，按续费价算长期成本；三是与已收录的 .community / .chat 分工——泛社区身份用 .community，即时聊天用 .chat，经典发帖式论坛用 .forum 最准。命名上「兴趣/行业 + .forum」适合垂类社区，「品牌 + .forum」适合官方用户社区，「地名 + .forum」适合本地讨论区。",
+      bestFor: ["垂直兴趣社区与论坛", "行业交流与问答平台", "开源项目讨论区", "品牌用户社区"],
+      namingTips: [
+        "「兴趣/行业 + .forum」一眼就知道是讨论区",
+        "首年约 $2、续费约 $31/年，按续费价算长期成本",
+        "泛社区用 .community，经典发帖式论坛用这里",
+        "brand.forum 与主站分离是品牌社区的经典架构",
+      ],
+    },
+    en: {
+      title: ".forum Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".forum is the dedicated suffix for community discussion — for vertical interest communities and forums, industry Q&A platforms, open-source project discussion boards, and official brand user communities. See live pricing and naming advice, then hunt available .forum names with AI.",
+      intro:
+        ".forum is the word itself: vertical interest communities, industry Q&A platforms, open-source discussion boards, and official brand communities on name.forum are instantly recognizable as places to post and discuss — a name like crypto.forum needs no tagline. Operated by Fegistry, about $2 for the first year (≈¥11) and $31/yr to renew (≈¥226) — this suffix once carried a several-hundred-dollar price tag, and its drop to commodity pricing makes it a genuine bargain for community projects. Inventory is excellent: interest words, industry words and brand words nearly all hit, while every XXforum.com was claimed by legacy boards long ago. Three cautions: .forum strongly means a discussion board, so it suits a community satellite rather than a main site — the classic split is brand.com for the site, brand.forum for the community; the first year is cheap but renewal runs 20× — budget at renewal rates; and split the work with the already-listed .community and .chat — broad community identity fits .community, real-time chat fits .chat, while a classic threaded forum is truest here. Naming: interest or industry + .forum fits vertical communities; brand + .forum fits official user communities; place name + .forum fits local boards.",
+      bestFor: ["Vertical interest communities & forums", "Industry Q&A platforms", "Open-source discussion boards", "Official brand user communities"],
+      namingTips: [
+        "Interest or industry + .forum instantly reads as a board",
+        "About $2 year one, $31/yr renewal — budget at renewal rates",
+        "Broad community fits .community; threaded boards live here",
+        "brand.forum beside brand.com is the classic community split",
+      ],
+    },
+  },
+  review: {
+    tld: "review",
+    zh: {
+      title: ".review 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".review 是评测与点评场景的专属后缀，适合产品评测与横评媒体、消费点评与口碑聚合、软件与服务测评站、书影音评论内容。查看 .review 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .review 域名。",
+      intro:
+        ".review 单数形式说的是「一篇评测/一次点评」：产品评测与横评媒体、消费点评与口碑聚合、软件与服务测评站、书影音评论内容用 name.review，找评测的人搜「品类 + review」时域名就是搜索词——laptop.review 这样的名字自带点击理由。注册局为 GRS Domains（原 Famous Four Media 系），注册与续费均约 $11/年（约 ¥78），平进平出、无首年陷阱，在内容后缀里属便宜好持有的一档。库存极好：品类词、品牌词基本都有货，而 XXreview.com / XXreviews.com 早被联盟营销站占光。注意三点：一是与已收录的复数 .reviews 分工——单数 .review 更贴「评测媒体」身份，复数 .reviews 更贴「点评聚合」，两者可择一或互相保护性注册；二是评测站的命脉是公信力，域名之外把测试方法与利益披露写清楚；三是历史上部分注册局曾对 .review 有溢价词表，注册前以注册商实时报价为准。命名上「品类 + .review」适合垂类评测站，「品牌 + .review」适合官方测评栏目，「地名 + .review」适合本地消费点评。",
+      bestFor: ["产品评测与横评媒体", "消费点评与口碑聚合", "软件与服务测评站", "书影音评论内容"],
+      namingTips: [
+        "「品类 + .review」就是找评测的人的搜索词",
+        "注册续费均约 $11/年，平进平出好持有",
+        "复数 .reviews 贴点评聚合，评测媒体身份用这里",
+        "评测站命脉是公信力，测试方法与披露要写清",
+      ],
+    },
+    en: {
+      title: ".review Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".review is the dedicated suffix for reviews and ratings — for product review and comparison media, consumer rating aggregators, software and service testing sites, and book, film and music criticism. See live pricing and naming advice, then hunt available .review names with AI.",
+      intro:
+        ".review in the singular names the artifact — a review: product review and comparison media, consumer rating aggregators, software and service testing sites, and book, film or music criticism on name.review match exactly what shoppers search — category + review — and a name like laptop.review carries its own reason to click. Operated by GRS Domains (the former Famous Four Media portfolio), about $11/yr for both registration and renewal (≈¥78) — flat in, flat out, none of the first-year trap, in the cheap-to-hold tier of content suffixes. Inventory is excellent: category words and brand words nearly all hit, while every XXreview.com and XXreviews.com was claimed by affiliate sites long ago. Three cautions: split the work with the already-listed plural .reviews — the singular fits a review-media identity while the plural fits rating aggregation, so pick one or register both defensively; a review site lives on credibility, so publish your testing methodology and disclosure policy alongside the domain; and some registries have historically kept premium word lists on .review — trust the registrar's live quote before buying. Naming: category + .review fits vertical review sites; brand + .review fits an official testing desk; place name + .review fits local consumer ratings.",
+      bestFor: ["Product review & comparison media", "Consumer rating aggregators", "Software & service testing sites", "Book, film & music criticism"],
+      namingTips: [
+        "Category + .review is exactly what shoppers search",
+        "About $11/yr flat for both registration and renewal",
+        "Plural .reviews fits aggregation; review media lives here",
+        "Publish methodology and disclosures — credibility is the moat",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
