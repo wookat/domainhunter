@@ -501,4 +501,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "sale-vs-shop", a: "sale", b: "shop", title: { zh: ".sale 和 .shop 怎么选：促销档期与常设店面的对比", en: ".sale vs .shop: The Limited-Time Event or The Open Store" } },
   { slug: "help-vs-support", a: "help", b: "support", title: { zh: ".help 和 .support 怎么选：短口语与全称的求助入口对比", en: ".help vs .support: The Short Word or The Full Word at the Front Desk" } },
   { slug: "wedding-vs-love", a: "wedding", b: "love", title: { zh: ".wedding 和 .love 怎么选：一场婚礼与一份情感的对比", en: ".wedding vs .love: The Big Day or The Big Feeling" } },
+  { slug: "law-vs-pro", a: "law", b: "pro", title: { zh: ".law 和 .pro 怎么选：行业门牌与泛专业感的对比", en: ".law vs .pro: The Industry Nameplate or The Generic Credential" } },
+  { slug: "tax-vs-finance", a: "tax", b: "finance", title: { zh: ".tax 和 .finance 怎么选：报税专词与金融泛词的对比", en: ".tax vs .finance: The Filing Word or The Industry Word" } },
+  { slug: "menu-vs-restaurant", a: "menu", b: "restaurant", title: { zh: ".menu 和 .restaurant 怎么选：一张菜单与一家店的对比", en: ".menu vs .restaurant: The Card or The House" } },
+  { slug: "bike-vs-fitness", a: "bike", b: "fitness", title: { zh: ".bike 和 .fitness 怎么选：一项运动与一个行业的对比", en: ".bike vs .fitness: One Sport or The Whole Industry" } },
+  { slug: "toys-vs-shop", a: "toys", b: "shop", title: { zh: ".toys 和 .shop 怎么选：品类货架与万能商店的对比", en: ".toys vs .shop: The Category Shelf or The Universal Store" } },
+  { slug: "shoes-vs-fashion", a: "shoes", b: "fashion", title: { zh: ".shoes 和 .fashion 怎么选：品类垂直与行业全称的对比", en: ".shoes vs .fashion: The Vertical or The Industry" } },
 ];
