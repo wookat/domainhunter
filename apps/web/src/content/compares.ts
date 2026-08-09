@@ -5173,6 +5173,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Flagship brand stores & malls", ".com main site + matching .store split", "Permanent stores with product shelves", "The formal storefront title"],
     },
   },
+  "press-vs-news": {
+    slug: "press-vs-news",
+    a: "press",
+    b: "news",
+    zh: {
+      title: ".press 和 .news 怎么选：媒体身份与资讯站的分工",
+      metaDescription: ".press 是编辑部与出版身份的宣言，.news 是资讯站最直白的门牌。对比两者的语义、续费结构与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是新闻内容后缀，分工在「机构身份」与「内容形态」。.press 在英文里既指新闻业也指出版社，机构宣言感更重——独立编辑部、调查报道项目、学生报刊、公司新闻中心（把 press.brand.com 翻成 brand.press）用它，「这里做新闻」从域名就立住了；.news 语义最直白，看到域名就知道是资讯站——垂直行业资讯、地方新闻、付费 newsletter 用「主题 + .news」，本身就是完整产品名。账本差异明显：.press 注册约 $5、续费约 $64/年，典型首年低价、续费陡升，认真办刊再上；.news 首年几美元到十美元、续费 $26 左右，内容后缀里的温和档，长持压力小得多。判断标准：域名承载的是「编辑部的名字」还是「资讯的主题」。刊名、报头、机构新闻中心 → .press 的出版身份更正；赛道站、聚合站、行业周报 → .news 的资讯语义更准且更省钱。两个注意：.press 续费有分量，个人博客用 .blog 更划算；两者都语义强绑定新闻，非资讯业务硬用会误导预期。命名上「刊名/城市/行业 + .press」像正经出版物，「主题词 + .news」接资讯搜索是两边标准款。",
+      pickA: ["独立编辑部与调查报道项目", "学生报刊与刊物品牌", "公司新闻中心（brand.press）", "出版机构身份宣言"],
+      pickB: ["垂直行业资讯与赛道站", "地方新闻与聚合站", "付费 newsletter 与行业周报", "续费温和的长期内容站"],
+    },
+    en: {
+      title: ".press vs .news: Editorial Identity or The News Destination",
+      metaDescription:
+        ".press declares an editorial and publishing identity; .news is the plainest news-site sign. Compare semantics, renewal structure and fit, then hunt names available on both.",
+      verdict:
+        "Both are journalism suffixes; the split is institutional identity versus content format. In English, press means both the news industry and the publishing house, so .press carries a stronger institutional claim — independent newsrooms, investigative projects, student papers and corporate press centers (flipping press.brand.com into brand.press) plant a flag with it: journalism happens here. .news is the most literal content suffix there is — one glance and readers know it's a news destination; topic + .news is a complete product name for vertical industry coverage, local news and paid newsletters. The ledgers differ sharply: .press runs about $5 to register and $64/yr to renew — the classic cheap-first-year, steep-renewal pattern, so commit before branding; .news runs a few dollars to $10 first year with renewals around $26/yr — a moderate tier that's far lighter to hold. The test: does the domain carry a masthead or a topic? Publication names, mastheads and institutional newsrooms → .press's publishing identity reads truer; niche sites, aggregators and industry digests → .news aims more precisely and costs less. Two cautions: .press's renewal is heavy for a personal blog — .blog fits cheaper; and both suffixes hard-bind to journalism, so non-news businesses mislead expectations on either. Naming: masthead, city or industry + .press feels like a real publication; topic word + .news catches news searches on the other side.",
+      pickA: ["Independent newsrooms & investigative projects", "Student papers & publication brands", "Corporate press centers (brand.press)", "A publishing-identity statement"],
+      pickB: ["Vertical industry & niche news sites", "Local news & aggregators", "Paid newsletters & industry digests", "Milder renewals for long-term content sites"],
+    },
+  },
+  "stream-vs-live": {
+    slug: "stream-vs-live",
+    a: "stream",
+    b: "live",
+    zh: {
+      title: ".stream 和 .live 怎么选：流本身与现场感的分工",
+      metaDescription: ".stream 把「流」写进域名，横跨内容直播与数据流；.live 主打「正在发生」的现场号召力。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都在直播语境里，分工看域名强调「流本身」还是「现场感」。.stream 是个动词后缀——主播个人站、推流与转码工具、流媒体内容站用它，「点开就在播」的暗示从地址开始；更妙的是它横跨两个热语境：消费级流媒体与工程界的数据流（Kafka、实时管道、事件处理），做 streaming 基础设施的技术产品用 name.stream 一眼即懂。.live 的语义是「正在发生」——线上活动与发布会页、演出与赛事、实时数据看板用「名字 + .live」自带「点进来看现场」的号召力。账本差异是关键：.stream 注册约 $5、续费约 $6/年，两头都便宜，是新后缀里罕见的无续费陷阱，长持无忧；.live 首年促销便宜但续费明显上浮，注册前看清续费价。判断标准：产品的核心是「持续的流」还是「限时的场」。7×24 的频道、推流工具、数据流产品 → .stream 更准且成本可预期；发布会、峰会、演出这类有开始有结束的「场」 → .live 的现场感更带劲。两个注意：.stream 历史上有垃圾注册记录，重要邮件放主域名发；.live 语义绑定实时，与直播无关的主站会预期错位。命名上「ID/功能词 + .stream」接流媒体与数据流，「活动名 + .live」做现场入口是两边标准款。",
+      pickA: ["主播个人站与流媒体内容站", "推流、转码与直播工具", "数据流与实时处理产品", "注册续费都便宜的长期持有"],
+      pickB: ["线上活动与发布会页", "演出、赛事与现场活动", "实时数据与状态看板", "「点进来看现场」的号召力"],
+    },
+    en: {
+      title: ".stream vs .live: The Stream Itself or The Live Moment",
+      metaDescription:
+        ".stream writes the stream into the address, spanning content and data pipelines; .live sells the happening-now moment. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in the broadcast context; the split is whether the domain stresses the stream itself or the live moment. .stream is a verb of a suffix — streamer personal sites, ingest and transcoding tools, and streaming content hubs get the click-and-it's-playing hint right in the address; better still, the word spans two hot contexts, consumer streaming and engineering data streams (Kafka, real-time pipelines, event processing), so streaming-infrastructure products read instantly on name.stream. .live means happening now — online events and launch pages, shows and matches, and real-time dashboards on name.live carry a built-in come watch it live pull. The ledger is the decider: .stream runs about $5 to register and $6/yr to renew — cheap both years, one of the rare new gTLDs with no renewal trap, worry-free to hold; .live runs cheap first-year promos with notably higher renewals, so check the renewal price before registering. The test: is the product a continuous stream or a time-boxed moment? A 24/7 channel, an ingest tool, a data-stream product → .stream aims truer with predictable costs; a launch event, a summit, a show with a start and an end → .live's moment energy hits harder. Two cautions: .stream's spam-registration history makes a few mail gateways wary — keep important email on your main domain; and .live hard-binds to real-time, so unrelated main sites misset expectations. Naming: handle or function word + .stream for streaming and data-stream products; event name + .live as the live entrance on the other side.",
+      pickA: ["Streamer sites & streaming content hubs", "Ingest, transcoding & live-streaming tools", "Data-streaming & real-time processing products", "Cheap-both-years long-term holds"],
+      pickB: ["Online events & launch pages", "Shows, matches & live performances", "Real-time data & status dashboards", "The come-watch-it-live pull"],
+    },
+  },
+  "movie-vs-tv": {
+    slug: "movie-vs-tv",
+    a: "movie",
+    b: "tv",
+    zh: {
+      title: ".movie 和 .tv 怎么选：单片战役与频道品牌的分工",
+      metaDescription: ".movie 是电影语义最直白的后缀，适合影片宣传战役；.tv 是视频与频道品牌的行业标配。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都指向影像内容，分工看载体是「一部片」还是「一个频道」。.movie 的电影语义零解释成本——「片名 + .movie」给每部片一个独立地址，比藏在公司站 /movies/片名 的路径好记得多，好莱坞发行方真的在用它做单片宣传站；制片公司、影展也顺理成章。.tv 借图瓦卢国别域名与「电视」的天然联想，成了视频内容的专属后缀——Twitch.tv 一个案例足以说明地位，直播平台、视频栏目、流媒体品牌、影视工作室用 name.tv，用户看到就知道「这里有内容可看」。账本差距是决定性的：.movie 注册约 $37、续费高达 $279/年，是给有营销预算的项目准备的——对宣发预算而言是零头，对个人站是重负，好在宣传站通常只需持有影片两三年生命周期；.tv 价格高于 .com 但远低于 .movie，且续费稳定，适合长期经营的频道品牌。判断标准：域名服务「一部作品的战役」还是「持续更新的频道」。影片宣发、影展、制片公司门面 → .movie 语义最正；栏目、主播、流媒体平台这类长期阵地 → .tv 的性价比与行业认知都更稳。两个注意：.movie 续费按年核算再上，影迷站与影评博客用 .reviews/.blog 更划算；两者都绑定影像语义，无关业务勿用。命名上「片名 + .movie」是战役标准式，「频道名/主播名 + .tv」是长期阵地标准款。",
+      pickA: ["影片官方宣传站（片名 + .movie）", "制片公司与工作室门面", "影展与放映活动", "有宣发预算的单片战役"],
+      pickB: ["直播平台与主播个人站", "视频栏目与频道品牌", "流媒体与长期内容阵地", "续费稳定的行业标配"],
+    },
+    en: {
+      title: ".movie vs .tv: The Film Campaign or The Channel Brand",
+      metaDescription:
+        ".movie is the most literal film suffix, built for title campaigns; .tv is the industry standard for video and channel brands. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both point at moving pictures; the split is whether the domain carries one film or one channel. .movie parses with zero explanation — title + .movie gives each picture its own address, far more memorable than a /movies/title path buried in a corporate site, and Hollywood distributors genuinely run single-film campaign sites on it; production companies and film festivals wear it naturally too. .tv rode Tuvalu's country code into the television association and became video's home suffix — Twitch.tv alone settles its standing; streaming platforms, video shows, channel brands and studios on name.tv tell users there's something to watch here. The ledger decides: .movie runs about $37 to register and a steep $279/yr to renew — built for projects with a marketing budget, a rounding error against P&A spend but a real burden for a personal site, though campaign domains typically only need holding for a film's two-to-three-year life cycle. .tv costs more than .com but far less than .movie, with stable renewals — right for a channel brand you'll run for years. The test: does the domain serve one title's campaign or an ever-updating channel? Film promo, festivals, production-house fronts → .movie reads truest; shows, streamers and platforms holding ground long-term → .tv wins on cost and industry recognition. Two cautions: budget .movie on the renewal price — fan sites and review blogs fit .reviews or .blog far cheaper; and both suffixes hard-bind to video, so unrelated businesses should skip them. Naming: title + .movie is the campaign standard; channel or streamer name + .tv is the long-term pattern.",
+      pickA: ["Official film campaign sites (title + .movie)", "Production companies & studio fronts", "Film festivals & screenings", "Single-title campaigns with marketing budgets"],
+      pickB: ["Streaming platforms & streamer sites", "Video shows & channel brands", "Long-term streaming content bases", "Stable renewals at the industry standard"],
+    },
+  },
+  "pictures-vs-photos": {
+    slug: "pictures-vs-photos",
+    a: "pictures",
+    b: "photos",
+    zh: {
+      title: ".pictures 和 .photos 怎么选：制片公司范与照片交付的分工",
+      metaDescription: ".pictures 自带「某某影业」的片厂血统，.photos 是摄影师作品与交付最直白的门牌。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是影像后缀，分工看做的是「出品」还是「照片」。.pictures 的妙处在片厂血统——Sony Pictures、Universal Pictures 把这个词刻进了行业史，小型制片公司在 brand.pictures 上一秒借到「某某影业」的读法，影视制作、婚礼活动跟拍团队、插画与视觉作品集用它都有分量。.photos 则最直白：「这里是照片」从域名就说清，摄影师作品集、人像与婚礼工作室天然合适，还有独特的实用玩法——按项目/客户开「照片交付页」，链接发出去客户秒懂。价格都温和但结构略异：.pictures 注册约 $8、续费约 $13/年，影像后缀里的性价比之选；.photos 注册约 $8、续费约 $24/年，同样是创意后缀温和档。判断标准：品牌读法是「公司名」还是「作品属性」。团队以「某某 Pictures」自居、卖的是成片与出品 → .pictures 的公司范更正；个人摄影师、卖拍摄服务与照片交付 → .photos 的复数所有格读法（某某的照片）更顺。两个注意：pictures 一词偏「成品」而非「拍摄过程」，卖预约拍摄流程的服务工作室用 .photography/.photo 语义更直接；两个后缀都不短（8/6 字母），前缀保持一两个音节最稳。命名上「姓氏/品牌 + .pictures」像制片公司，「人名/城市 + .photos」接作品集与交付是两边标准款。",
+      pickA: ["影视与视频制作公司", "婚礼活动跟拍与出品团队", "「某某影业」式公司门面", "插画与视觉作品集"],
+      pickB: ["摄影师个人作品集", "人像与婚礼摄影工作室", "按客户开照片交付页", "「某某的照片」所有格读法"],
+    },
+    en: {
+      title: ".pictures vs .photos: Studio Pedigree or Photo Delivery",
+      metaDescription:
+        ".pictures borrows the movie-studio pedigree; .photos is the plainest sign for portfolios and photo delivery. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are imaging suffixes; the split is whether you sell productions or photos. .pictures's charm is the studio pedigree — Sony Pictures and Universal Pictures carved the word into industry history, so a small production shop borrows the So-and-so Pictures read the moment it brands on brand.pictures; film and video production, wedding and event videography teams, and illustration portfolios all carry weight on it. .photos is the plainest sign there is: the domain says the photos live here — photographer portfolios and portrait or wedding studios fit naturally, plus a uniquely practical play: per-project or per-client photo-delivery pages whose links clients parse instantly. Pricing is mild on both with slightly different shapes: .pictures about $8 to register and $13/yr to renew — the value pick among imaging suffixes; .photos about $8 and $24/yr — the same moderate creative tier. The test: does the brand read as a company name or as the work itself? A team styling itself So-and-so Pictures, selling finished productions → .pictures reads truer as a company; a solo photographer selling shoots and delivering galleries → .photos's possessive plural (someone's photos) reads smoother. Two cautions: pictures connotes finished work rather than the shooting process, so a booking-driven service studio may read more directly on .photography or .photo; and neither suffix is short (8 and 6 letters), so keep the prefix to a syllable or two. Naming: surname or brand + .pictures feels like a production company; name or city + .photos is the portfolio-and-delivery standard.",
+      pickA: ["Film & video production companies", "Wedding & event videography teams", "So-and-so Pictures company fronts", "Illustration & visual-art portfolios"],
+      pickB: ["Photographer portfolios", "Portrait & wedding photo studios", "Per-client photo-delivery pages", "The someone's-photos possessive read"],
+    },
+  },
+  "productions-vs-studio": {
+    slug: "productions-vs-studio",
+    a: "productions",
+    b: "studio",
+    zh: {
+      title: ".productions 和 .studio 怎么选：接案制作公司与创意小团队的分工",
+      metaDescription: ".productions 补全「某某制作」的行业惯用全称，.studio 是小而专创意团队的气质后缀。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是创作团队后缀，分工看团队的「营业形态」。.productions 补全的是行业里最老的公司命名格式——「某某 Productions」，brand.productions 读起来就是完整的公司全称，放名片上、片尾字幕里都正式；影视与广告制作公司、音乐与播客制作团队、活动与演出制作方用它，「接案制作」的定位一目了然。.studio 的语义是「工作室」——设计、影像、游戏与内容团队用「名字 + .studio」，比 .com 更能传达「小而专的创作团队」气质，两三人的创意小组尤其合适。账本接近：.productions 注册约 $8、续费约 $32/年，运营中的制作公司持有无压力；.studio 价格中等、库存充足。库存差异值得一提：.studio 热门词被挑得差不多了，.productions 里人名、工作室名、风格词命中率高得多。判断标准：对外身份是「接活的制作公司」还是「有自己作品的工作室」。给客户做片、做活动、做广告的乙方团队 → .productions 的公司全称感更正；做自己的游戏、内容、设计品牌的创作团队 → .studio 的作者气质更贴。两个注意：.productions 长达 11 个字母，前缀必须短——一个词或一个名字，别再接长词；面向消费者的内容品牌两个都不如 .tv/.media 直接。命名上「创始人名 + .productions」是行业惯例，「名字 + .studio」自带小而专团队气质是两边标准款。",
+      pickA: ["影视与广告接案制作公司", "音乐与播客制作团队", "活动与演出制作方", "「某某 Productions」行业惯例全称"],
+      pickB: ["设计与创意工作室", "游戏与独立开发小团队", "有自己作品的内容团队", "小而专的作者气质"],
+    },
+    en: {
+      title: ".productions vs .studio: The For-Hire Shop or The Creative Studio",
+      metaDescription:
+        ".productions completes the So-and-so Productions company format; .studio carries the small-and-focused creative-team vibe. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are creative-team suffixes; the split is the team's mode of business. .productions completes the oldest company-name format in the business — So-and-so Productions — so brand.productions reads as the full, legal-sounding name, at home on a business card or in end credits; film and ad production companies, music and podcast teams, and event or show producers wear the for-hire positioning plainly. .studio means the workshop — design, film, game and content teams on name.studio project a small-and-focused creative-team vibe that .com can't, and two-or-three-person crews fit it especially well. The ledgers are close: .productions about $8 to register and $32/yr to renew — painless for an operating production company; .studio sits at a mid price with ample inventory. The inventory gap is worth noting: .studio's hot words are largely picked over, while personal names, studio names and style words nearly all hit on .productions. The test: is the outward identity a for-hire production shop or a studio with its own work? Teams shooting, staging and producing for clients → .productions's full-company-name gravity reads truer; teams building their own games, content or design brand → .studio's authorial vibe fits closer. Two cautions: .productions runs 11 letters, so the prefix must be short — one word or a name, never another long word; and consumer-facing content brands read better on .tv or .media than on either. Naming: founder name + .productions is the industry convention; name + .studio carries the small-team vibe on the other side.",
+      pickA: ["For-hire film & ad production companies", "Music & podcast production teams", "Event & show producers", "The So-and-so Productions convention"],
+      pickB: ["Design & creative studios", "Game & indie-dev small teams", "Content teams with their own work", "The small-and-focused authorial vibe"],
+    },
+  },
+  "audio-vs-fm": {
+    slug: "audio-vs-fm",
+    a: "audio",
+    b: "fm",
+    zh: {
+      title: ".audio 和 .fm 怎么选：声音产业与电台气质的分工",
+      metaDescription: ".audio 把声音产业写进域名，适合硬件品牌与录音棚；.fm 借调频广播之名成了播客与电台的身份标签。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是声音后缀，分工看做的是「声音的生意」还是「声音的节目」。.audio 把行业写进地址——音频硬件与耳机品牌、播客网络与音频平台、录音与母带工作室、音频技术工具用 name.audio 一词说清行业；hi-fi 公司历来以 Audio 结尾命名，brand.audio 对发烧友是熟悉的读法。.fm 借调频广播（FM radio）之名被音频行业彻底认领——Anchor（anchor.fm）、Last.fm 这些标杆让它成了「声音产品」的身份标签，只有两个字符，域名短而好念，节目名、频道名直接上最自然，还能玩 relay.fm 式的 domain hack。账本都是「无低价钩子」的平价结构：.audio 注册续费同价约 $104/年，精品定价从第一天就筛掉玩票项目，反而成了信任资产——挂 .audio 的站一看就是认真做的生意；.fm 注册续费均约 $88/年，成本同样不低，适合长期经营的音频品牌。判断标准：卖的是「设备与服务」还是「节目与内容」。硬件品牌、录音棚、音频技术公司 → .audio 的产业语义更正；播客、电台、音乐节目 → .fm 的电台气质更暖、更圈内。两个注意：单个个人播客两个都偏贵，平台页或 .fm 二级栏目更省；两者语义都绑定声音，无关业务勿用。命名上「品牌 + .audio」接硬件与技术公司，「节目名 + .fm」是播客电台标准款。",
+      pickA: ["音频硬件与耳机品牌", "录音、混音与母带工作室", "音频技术工具与平台", "「某某 Audio」产业惯用读法"],
+      pickB: ["播客与电台节目", "音乐频道与声音社区", "domain hack 短域名玩法", "电台气质的圈内身份标签"],
+    },
+    en: {
+      title: ".audio vs .fm: The Sound Industry or The Radio Vibe",
+      metaDescription:
+        ".audio writes the sound industry into the address for gear brands and studios; .fm borrowed the radio band and became podcasting's badge. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are sound suffixes; the split is whether you run a sound business or a sound show. .audio writes the industry into the address — audio hardware and headphone brands, podcast networks and platforms, recording and mastering studios, and audio-tech tools state it in one word; hi-fi companies have always ended their names in Audio, so brand.audio is a familiar read to audiophiles. .fm borrowed the FM radio band and got fully claimed by the audio world — Anchor (anchor.fm) and Last.fm made it the badge of things you can listen to; at two characters the whole domain stays short and speakable, show and channel names drop straight in, and relay.fm-style domain hacks are on the table. Both ledgers run flat with no teaser pricing: .audio costs the same to register and renew, about $104/yr — boutique pricing that filters out hobby projects from day one and quietly becomes a trust asset, since an .audio site signals a business that means it; .fm runs about $88/yr both ways, likewise a real commitment fit for brands in it for the long haul. The test: do you sell gear and services or shows and content? Hardware brands, studios and audio-tech companies → .audio's industry semantics read truer; podcasts, stations and music shows → .fm's radio vibe runs warmer and more native. Two cautions: a single personal podcast is pricey on either — a platform page or an .fm subpage is cheaper; and both hard-bind to sound, so unrelated businesses should skip them. Naming: brand + .audio for hardware and technology companies; show name + .fm is the podcast-and-station standard.",
+      pickA: ["Audio hardware & headphone brands", "Recording, mixing & mastering studios", "Audio-tech tools & platforms", "The So-and-so Audio industry read"],
+      pickB: ["Podcasts & radio-style shows", "Music channels & sound communities", "Short domain-hack plays", "The radio-vibe insider badge"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

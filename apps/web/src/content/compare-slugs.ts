@@ -237,6 +237,12 @@ export const COMPARE_SLUGS = [
   "fyi-vs-info",
   "promo-vs-shop",
   "express-vs-store",
+  "press-vs-news",
+  "stream-vs-live",
+  "movie-vs-tv",
+  "pictures-vs-photos",
+  "productions-vs-studio",
+  "audio-vs-fm",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
