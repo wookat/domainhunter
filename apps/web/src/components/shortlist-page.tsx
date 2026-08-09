@@ -17,6 +17,9 @@ import { NOTE_MAX_LENGTH, type RecheckResult, type ShortlistItem } from "@/lib/s
 import { scoreBadgeClass, tldPrice, totalScore, type Status } from "@/types";
 import { cn, formatExpiry } from "@/lib/utils";
 
+// 两步确认窗口：与 R213 口径统一为 5s（清空清单、删除分享记录共用）
+const CONFIRM_WINDOW_MS = 5000;
+
 function exportShortlist(items: ShortlistItem[], format: "csv" | "txt", lang: "zh" | "en", prices: PriceMap | null) {
   if (format === "csv") {
     exportResultsCsv(
@@ -224,7 +227,7 @@ export function ShortlistPage({
     if (confirmDeleteId !== record.id) {
       setConfirmDeleteId(record.id);
       window.clearTimeout(deleteConfirmTimer.current);
-      deleteConfirmTimer.current = window.setTimeout(() => setConfirmDeleteId(""), 3000);
+      deleteConfirmTimer.current = window.setTimeout(() => setConfirmDeleteId(""), CONFIRM_WINDOW_MS);
       return;
     }
     window.clearTimeout(deleteConfirmTimer.current);
@@ -493,7 +496,7 @@ export function ShortlistPage({
                 } else {
                   setConfirmClear(true);
                   window.clearTimeout(confirmTimer.current);
-                  confirmTimer.current = window.setTimeout(() => setConfirmClear(false), 5000);
+                  confirmTimer.current = window.setTimeout(() => setConfirmClear(false), CONFIRM_WINDOW_MS);
                 }
               }}
             >
