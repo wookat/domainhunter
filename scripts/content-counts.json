@@ -179,7 +179,7 @@
     ]
   },
   "guide": {
-    "count": 170,
+    "count": 176,
     "slugs": [
       "saas",
       "ecommerce",
@@ -350,11 +350,17 @@
       "bubbletea",
       "bbq",
       "pharmacy",
-      "clinic"
+      "clinic",
+      "evcharging",
+      "energystorage",
+      "recycling",
+      "retrofit",
+      "hvac",
+      "watertreatment"
     ]
   },
   "vs": {
-    "count": 198,
+    "count": 204,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -553,7 +559,13 @@
       "properties-vs-rentals",
       "builders-vs-construction",
       "repair-vs-services",
-      "apartments-vs-house"
+      "apartments-vs-house",
+      "energy-vs-solar",
+      "green-vs-eco",
+      "eco-vs-earth",
+      "earth-vs-world",
+      "engineering-vs-tech",
+      "engineering-vs-dev"
     ]
   }
 }
