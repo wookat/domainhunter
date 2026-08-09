@@ -198,4 +198,10 @@ export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized 
   { slug: "nutrition", label: { zh: "营养师咨询", en: "Nutrition coaching" }, oneLiner: { zh: "营养师咨询品牌命名指南：科学信任感、轻量陪伴感、反节食叙事等 5 种思路。", en: "Nutrition coaching naming guide: anti-diet narratives." } },
   { slug: "physio", label: { zh: "康复理疗", en: "Physiotherapy & rehab" }, oneLiner: { zh: "康复理疗与运动康复品牌命名指南：回归叙事、脊柱意象、医疗信任感等 5 种思路。", en: "Physiotherapy and sports rehab naming guide: return narratives." } },
   { slug: "runclub", label: { zh: "跑步俱乐部", en: "Run clubs" }, oneLiner: { zh: "跑步俱乐部与跑团命名指南：归属感设计、地名徽章、配速人格等 5 种思路。", en: "Run club naming guide: belonging-first design, place-name badges and pace personas." } },
+  { slug: "tennis", label: { zh: "网球俱乐部", en: "Tennis clubs" }, oneLiner: { zh: "网球俱乐部与网球培训命名指南：会员制质感、场地意象、青训信任感等 5 种思路。", en: "Tennis club and academy naming guide: membership polish." } },
+  { slug: "soccer", label: { zh: "足球青训", en: "Soccer academies" }, oneLiner: { zh: "足球青训机构与业余俱乐部命名指南：城市徽章、青训信任词、俱乐部文化等 5 种思路。", en: "Soccer academy and amateur club naming guide: city badges." } },
+  { slug: "football", label: { zh: "腰旗橄榄球", en: "Flag football" }, oneLiner: { zh: "腰旗橄榄球与美式橄榄球俱乐部命名指南：力量图腾、城市战队感…", en: "Flag football and gridiron club naming guide: power totems." } },
+  { slug: "hockey", label: { zh: "冰球俱乐部", en: "Hockey clubs" }, oneLiner: { zh: "冰球俱乐部、冰上运动培训与冰场命名指南：冰雪意象、速度词根、北境气质等 5 种思路。", en: "Hockey club, ice sports academy and rink naming guide: ice-and-north imagery." } },
+  { slug: "pickleball", label: { zh: "匹克球", en: "Pickleball" }, oneLiner: { zh: "匹克球俱乐部与场馆命名指南：趣味词根、社交属性、新运动占位等 5 种思路。", en: "Pickleball club and venue naming guide: humor-first roots." } },
+  { slug: "pilates", label: { zh: "普拉提馆", en: "Pilates studios" }, oneLiner: { zh: "普拉提工作室命名指南：身体词根、器械意象、精品工作室质感等 5 种思路。", en: "Pilates studio naming guide: body-word roots." } },
 ];

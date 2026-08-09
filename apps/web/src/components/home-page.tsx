@@ -1389,6 +1389,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个跑步俱乐部品牌，寓意「一起跑，谁都能加入」；气质要有归属感和城市徽章感、欢迎六分半配速的新人、印在队服上十年不尴尬；场景是马拉松赛道边的加油声、完赛照片的社交分享和招新海报上都立得住。",
     en: "A run club brand. The name should say run together — anyone can join; the vibe is belonging-first with a city-badge feel, welcoming to the 6:30-pace beginner, and still cool printed on a jersey ten years on; it must hold up in course-side cheers, finish-line photo shares, and on the recruitment poster.",
   },
+  {
+    slug: "tennis",
+    labelZh: "网球俱乐部",
+    labelEn: "Tennis clubs",
+    zh: "一个网球俱乐部与青训品牌，寓意「优雅的运动，人人可入场」；气质要有会员制的质感又不端着、欢迎零基础成人和小朋友；场景是家长搜青训班的搜索框、会员说「我在 XX 打球」的日常对话和球场围网广告牌上都立得住。",
+    en: "A tennis club and academy brand. The name should say an elegant sport, open to everyone; the vibe carries membership polish without stuffiness, welcoming beginner adults and kids; it must hold up in a parent's junior-program search, a member's \"I play at XX\", and on the court-fence banner.",
+  },
+  {
+    slug: "soccer",
+    labelZh: "足球青训",
+    labelEn: "Soccer academies",
+    zh: "一个足球青训与业余俱乐部品牌，寓意「代表这片街区去踢球」；气质要有俱乐部的正规军气场又让家长放心、能印上队徽和队服；场景是家长搜青训机构的对比列表、球员穿队服的合影和城市联赛的秩序册上都立得住。",
+    en: "A soccer academy and amateur club brand. The name should say we represent this neighborhood on the pitch; the vibe is proper-club gravitas that still reassures parents, ready for a crest and a kit; it must hold up in a parent's academy shortlist, team photos in full kit, and the city league's program.",
+  },
+  {
+    slug: "football",
+    labelZh: "腰旗橄榄球",
+    labelEn: "Flag football",
+    zh: "一个腰旗橄榄球俱乐部品牌，寓意「橄榄球的热血，没有冲撞的门槛」；气质要有战队图腾感又让家长看到安全和快乐、头盔队徽顺着名字长出来；场景是家长确认「无冲撞」的咨询、成人联赛的对阵表和招新海报上都立得住。",
+    en: "A flag football club brand. The name should promise gridiron thrill without the collision barrier; the vibe is franchise-totem cool that still shows parents safety and fun, with helmet and crest growing out of the name; it must hold up in a parent's \"is it non-contact?\" inquiry, adult-league fixtures, and the recruiting poster.",
+  },
+  {
+    slug: "hockey",
+    labelZh: "冰球俱乐部",
+    labelEn: "Hockey clubs",
+    zh: "一个冰球俱乐部与冰上运动品牌，寓意「冰面上最快的团队运动」；气质要有冰雪的清冽和速度感、配得上精英教育的段位又不炫耀价格；场景是家长对比青训俱乐部的搜索、孩子穿队服上冰的骄傲和冰场门头上都立得住。",
+    en: "A hockey club and ice sports brand. The name should carry the fastest team game on ice; the vibe is crisp winter imagery with speed, worthy of the elite-education tier without flaunting price; it must hold up in a parent's club comparison, a kid's pride in the jersey, and on the rink's front sign.",
+  },
+  {
+    slug: "pickleball",
+    labelZh: "匹克球",
+    labelEn: "Pickleball",
+    zh: "一个匹克球俱乐部品牌，寓意「五分钟上手，一场球交到朋友」；气质要轻快好玩带点无厘头、绝不端着、三代同堂都觉得被欢迎；场景是新手第一次约球的群公告、球场边的笑声合影和城市球局的报名页上都立得住。",
+    en: "A pickleball club brand. The name should say learn in five minutes, leave with friends; the vibe is breezy and playful with a dash of absurdity, never posh, welcoming to all three generations on court; it must hold up in a first-timer's group invite, courtside laughter photos, and the city meetup's signup page.",
+  },
+  {
+    slug: "pilates",
+    labelZh: "普拉提馆",
+    labelEn: "Pilates studios",
+    zh: "一个普拉提工作室品牌，寓意「身体的精修，不止是流汗」；气质要克制贵气、有精准与控制感、绝不像撸铁健身房；场景是白领搜「核心床普拉提」的对比列表、会员的体态对比照分享和精品工作室门头上都立得住。",
+    en: "A Pilates studio brand. The name should frame the body, refined — not just sweat; the vibe is restrained and expensive-feeling, precise and controlled, never gym-adjacent; it must hold up in a professional's reformer-studio shortlist, members' posture-progress shares, and on the boutique storefront.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

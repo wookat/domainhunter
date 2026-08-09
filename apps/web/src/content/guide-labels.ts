@@ -191,4 +191,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "nutrition", zh: "营养师咨询", en: "Nutrition coaching" },
   { slug: "physio", zh: "康复理疗", en: "Physiotherapy & rehab" },
   { slug: "runclub", zh: "跑步俱乐部", en: "Run clubs" },
+  { slug: "tennis", zh: "网球俱乐部", en: "Tennis clubs" },
+  { slug: "soccer", zh: "足球青训", en: "Soccer academies" },
+  { slug: "football", zh: "腰旗橄榄球", en: "Flag football" },
+  { slug: "hockey", zh: "冰球俱乐部", en: "Hockey clubs" },
+  { slug: "pickleball", zh: "匹克球", en: "Pickleball" },
+  { slug: "pilates", zh: "普拉提馆", en: "Pilates studios" },
 ];

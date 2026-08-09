@@ -11743,6 +11743,390 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  tennis: {
+    slug: "tennis",
+    tlds: [
+      { tld: "tennis", zh: "后缀即运动本身，俱乐部与教练的身份零解释", en: "The suffix is the sport itself — instant identity for clubs and coaches, zero explanation" },
+      { tld: "club", zh: "会员制归属感直给，「加入我们」写在域名里", en: "Membership belonging made explicit — the invitation to join written into the domain" },
+      { tld: "coach", zh: "私教与青训业务的精准信号，教练个人品牌首选", en: "A precise signal for private lessons and junior programs — first choice for coach personal brands" },
+    ],
+    zh: {
+      label: "网球俱乐部",
+      title: "网球俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "网球俱乐部与网球培训命名指南：会员制质感、场地意象、青训信任感等 5 种思路，Wimbledon/IMG Academy/威尔胜等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的网球域名。",
+      intro:
+        "网球俱乐部的名字要同时出现在三个地方：家长给孩子报青训班时的搜索框、会员挂在嘴边的「我在 XX 打球」、以及球场围网上那块广告牌。这决定了网球命名的核心张力：既要有会员制运动的质感——网球自带的「白衣草地」传统让轻浮的谐音梗格外违和，又不能端到把零基础成人和小朋友吓跑。最稳的路径是场地与器物意象：底线、网前、球拍、黄球都是自带画面的词根，Baseline、Ace 类词在英文世界已被反复验证；中文里「网」字的双关（网球/网络/社群之网）是天然的命名富矿。第二个抓手是青训信任感：家长选机构本质是选教练体系，名字里带「学院」「Academy」的机构在家长眼中天然比「XX 网球馆」贵一个段位——但要配得上这个词，课程体系得真的成体系。反例同样清晰：把「贵族运动」写在脸上的命名（皇家、贵族、精英）在 2026 年只会显得营销过度，网球平民化浪潮下，亲和力才是增量市场的入场券。",
+      namingIdeas: [
+        "场地与器物意象：底线、网前、Ace、黄球——自带画面的词根让名字一秒锚定网球，Baseline 类词在英文世界反复验证",
+        "「网」字双关：网球之网、社群之网、网络之网——中文命名的天然富矿，一个字同时说清运动与连接",
+        "青训用「学院」抬段位：家长选的是教练体系，Academy 比「网球馆」天然贵一档，但课程体系要配得上这个词",
+        "会员制质感：俱乐部、会——网球的白衣传统适合克制优雅的词根，轻浮谐音梗在这项运动里格外违和",
+        "警惕贵族化标签：皇家、精英、贵族写在名字上只显营销过度——网球平民化浪潮下，亲和力才是增量市场的入场券",
+      ],
+      cases: [
+        { name: "Wimbledon", takeaway: "地名即圣殿：伦敦西南的一个街区名，靠一百五十年的草地传统长成网球的代名词——地名徽章的天花板，本地俱乐部可以复制的路径" },
+        { name: "IMG Academy", takeaway: "「Academy」一词把体育培训抬进教育段位：家长付的是升学与职业路径的钱，名字先把承诺说出口——青训命名的黄金词根" },
+        { name: "Wilson", takeaway: "创始人姓氏长成品类信任：一百年只做球具，姓氏即品质背书——器材行业「时间换信任」的经典，新品牌学不来但值得敬畏" },
+        { name: "UTR (Universal Tennis Rating)", takeaway: "把「通用评级」做成名字：三个字母承载一套全球标准，工具型网球品牌抽象命名的成功样本——社群品牌则相反，必须具体" },
+        { name: "好动网球", takeaway: "「好动」的儿童天性+品类词直给：家长一眼看懂这是让孩子动起来的地方，青训获客场景里亲和力压过高级感——中文青训命名的务实示范" },
+      ],
+      pitfalls: [
+        "贵族化标签堆砌：皇家、精英、贵族只显营销过度，把想入门的零基础成人挡在门外",
+        "谐音梗过度：网球的白衣传统让轻浮的梗格外违和，印在俱乐部围网上十年会尴尬",
+        "「XX 网球馆」通用词：和同城几十家场馆撞车，搜索结果里永远挤不进第一屏",
+        "锁死单一业务：只叫「XX 青训」，成人团课和场地租赁业务开起来名字就自相矛盾",
+      ],
+    },
+    en: {
+      label: "Tennis clubs",
+      title: "How to Name a Tennis Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Tennis club and academy naming guide: membership polish, court imagery and junior-program trust, breakdowns of Wimbledon/IMG Academy/Wilson, recommended TLDs and pitfalls — then hunt an available tennis domain with AI.",
+      intro:
+        "A tennis club's name has to live in three places at once: the search box where a parent looks up junior programs, the sentence a member says out loud — \"I play at XX\" — and the banner on the court fence. That defines the core tension of tennis naming: it needs the polish of a membership sport — tennis's whites-and-grass tradition makes flippant puns feel especially off — yet it can't be so starchy that beginner adults and kids feel unwelcome. The safest path is court-and-gear imagery: baseline, net, ace, the yellow ball are roots with built-in pictures, and Baseline-type names are battle-tested in English. The second lever is junior-program trust: parents are really choosing a coaching system, and \"Academy\" in the name reads a full tier above \"XX Tennis Center\" — but the curriculum has to earn the word. The cautionary tale is just as clear: writing \"aristocratic sport\" into the name (Royal, Elite, Noble) reads as overmarketing in 2026 — as tennis democratizes, approachability is the ticket to the growth market.",
+      namingIdeas: [
+        "Use court-and-gear imagery: baseline, net, ace, the yellow ball — picture-rich roots anchor the name to tennis in a second, and Baseline-type names are proven in English",
+        "Mine the net metaphor: the net on court, the net of community, the network — one image that says both sport and connection",
+        "Let \"Academy\" raise the tier for juniors: parents buy a coaching system, and Academy reads a level above \"Tennis Center\" — as long as the curriculum earns it",
+        "Keep membership polish: club and restrained, elegant roots suit tennis's whites tradition — flippant puns feel especially off in this sport",
+        "Beware aristocratic labels: Royal, Elite and Noble read as overmarketing — as tennis democratizes, approachability wins the growth market",
+      ],
+      cases: [
+        { name: "Wimbledon", takeaway: "A place name become a temple: one southwest-London neighborhood grew into tennis's synonym through 150 years of grass tradition — the ceiling of place-name badges, and a path local clubs can copy" },
+        { name: "IMG Academy", takeaway: "\"Academy\" lifts sports training into the education tier: parents pay for pathways to college and pro careers, and the name makes the promise first — the gold-standard root of junior-program naming" },
+        { name: "Wilson", takeaway: "A founder's surname grown into category trust: a century of making rackets turns a family name into a quality mark — the classic time-for-trust trade in equipment, unteachable but worth respecting" },
+        { name: "UTR (Universal Tennis Rating)", takeaway: "A rating standard as a name: three letters carrying a global benchmark — proof that tool-type tennis brands can name abstractly, while community brands must stay concrete" },
+        { name: "Ace Tennis (好动网球)", takeaway: "A kid's natural energy plus the plain category word: parents instantly see a place where children move — in junior acquisition, approachability beats prestige. The pragmatic Chinese template" },
+      ],
+      pitfalls: [
+        "Stacked aristocratic labels: Royal, Elite and Noble read as overmarketing and turn away the beginner adults you need",
+        "Overdone puns: tennis's whites tradition makes flippant jokes feel especially off, and they age badly on a court banner",
+        "Generic \"XX Tennis Center\": collides with dozens of local venues and never cracks the first page of search results",
+        "Locking into one business line: a name that only says \"junior academy\" contradicts itself when adult clinics and court rentals launch",
+      ],
+    },
+  },
+  soccer: {
+    slug: "soccer",
+    tlds: [
+      { tld: "soccer", zh: "后缀即运动本身，美式市场的青训与俱乐部零解释", en: "The suffix is the sport itself — zero explanation for academies and clubs in soccer-speaking markets" },
+      { tld: "club", zh: "俱乐部文化是足球的母语，归属感写进域名", en: "Club culture is football's native tongue — belonging written into the domain" },
+      { tld: "academy", zh: "青训体系的直接信号，家长搜索场景里的信任词", en: "A direct signal of a training system — the trust word in a parent's search" },
+    ],
+    zh: {
+      label: "足球青训",
+      title: "足球青训与俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "足球青训机构与业余俱乐部命名指南：城市徽章、青训信任词、俱乐部文化等 5 种思路，Ajax/La Masia/董路足球等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的足球域名。",
+      intro:
+        "足球是全世界俱乐部文化最深厚的运动，这给命名者一份现成的遗产：FC、United、City、Athletic 这些词根经过百年豪门的反复背书，天然自带「正规军」气场——一支业余队叫「XX FC」瞬间比「XX 足球队」像回事。但青训机构的命名逻辑完全不同：付钱的是家长，家长要的不是豪门想象而是教练资质、课程体系和安全感，「学院」「青训营」比「俱乐部」更能回答「我的孩子在这里能学到什么」。所以先想清楚你在哪个市场：成人业余俱乐部往豪门词根靠，队徽、围巾、tifo 文化都是命名的延伸资产；青训机构往教育信任靠，名字里最好能读出体系感。城市与街区徽章在两个市场都成立——足球的部落属性让「我们代表这片街区」成为最强的招募语言。反例是把两边混着来：叫「精英青训」却只有周末兴趣班，家长第一节课就会用脚投票；叫「快乐足球」却想收竞技梯队的钱，段位感又立不起来。",
+      namingIdeas: [
+        "豪门词根借力：FC、United、Athletic 经百年背书自带正规军气场——业余俱乐部叫 XX FC 瞬间比 XX 足球队像回事",
+        "城市街区徽章：足球的部落属性让「我们代表这片街区」成为最强招募语言，队徽围巾都是名字的延伸资产",
+        "青训用教育信任词：学院、青训营回答「孩子能学到什么」——家长买的是教练资质与课程体系，不是豪门想象",
+        "分清两个市场：成人俱乐部往豪门气场靠，青训机构往体系感靠——名字先定位，定价随之而来",
+        "警惕段位错配：叫「精英青训」却只有周末兴趣班，家长第一节课就用脚投票；名字许的愿产品要接得住",
+      ],
+      cases: [
+        { name: "Ajax", takeaway: "希腊神话英雄名+百年青训体系：一个词同时承载勇武气质与「青训摇篮」的行业地位——神话词根的段位感天花板，阿贾克斯把名字变成了青训的代名词" },
+        { name: "La Masia", takeaway: "「农舍」：巴萨青训营用一座石头房子的名字讲完了传承故事——具体地点的具象命名反而长出神圣感，比任何「精英学院」都高级" },
+        { name: "Manchester City", takeaway: "城市名+City 的最朴素结构：名字把俱乐部和城市绑死，蓝月亮的社区认同一百年不散——城市徽章命名的教科书" },
+        { name: "AFC Richmond", takeaway: "《Ted Lasso》虚构俱乐部：AFC 前缀+街区名的组合真实到被当成真队搜索——豪门词根公式的有效性连编剧都在用" },
+        { name: "董路足球小将", takeaway: "个人 IP+「小将」的成长意象：创始人信任直接迁移到青训品牌，「小将」一词把孩子说成未来之星——中文青训命名里家长心理的精准拿捏" },
+      ],
+      pitfalls: [
+        "段位错配：叫「精英青训」却只有周末兴趣班，名字许的愿产品接不住，家长第一节课就用脚投票",
+        "豪门名硬蹭：直接叫「XX 巴萨」「小皇马」有商标风险，且暴露的是模仿而非体系",
+        "「XX 足球俱乐部」通用词：同城搜索里和几十家撞车，没有记忆钩子就没有转介绍",
+        "锁死年龄段：只叫「XX 幼儿足球」，U12 梯队和成人班开起来名字就自相矛盾",
+      ],
+    },
+    en: {
+      label: "Soccer academies",
+      title: "How to Name a Soccer Academy or Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Soccer academy and amateur club naming guide: city badges, academy trust words and club-culture roots, breakdowns of Ajax/La Masia/Manchester City, recommended TLDs and pitfalls — then hunt an available soccer domain with AI.",
+      intro:
+        "Football has the deepest club culture of any sport, and that hands namers a ready-made inheritance: FC, United, City and Athletic carry a century of elite-club endorsement — an amateur side called \"XX FC\" instantly sounds more real than \"XX Soccer Team\". But academy naming runs on entirely different logic: the buyer is a parent, and parents aren't purchasing big-club fantasy — they're purchasing coaching credentials, a curriculum and safety, so \"Academy\" answers \"what will my kid actually learn here\" far better than \"Club\". So decide which market you're in first: adult amateur clubs should lean into club-culture roots, where crests, scarves and tifo culture become extensions of the name; academies should lean into educational trust, with a name that reads like a system. City and neighborhood badges work in both markets — football's tribal nature makes \"we represent this block\" the strongest recruiting language there is. The failure mode is mixing the two: call yourself \"Elite Academy\" while running weekend rec sessions and parents vote with their feet after one class; call yourself \"Fun Football\" while charging competitive-pathway prices and the positioning collapses.",
+      namingIdeas: [
+        "Borrow club-culture roots: FC, United and Athletic carry a century of endorsement — XX FC instantly sounds more real than XX Soccer Team",
+        "Wear the city or neighborhood badge: football's tribal nature makes \"we represent this block\" the strongest recruiting language, and the crest extends the name",
+        "Use education trust words for academies: Academy and Development answer \"what will my kid learn\" — parents buy curriculum and credentials, not big-club fantasy",
+        "Pick your market first: adult clubs lean into club-culture gravitas, academies lean into system credibility — the name sets the positioning and the pricing follows",
+        "Beware tier mismatch: \"Elite Academy\" over weekend rec sessions loses parents after one class — the product must honor what the name promises",
+      ],
+      cases: [
+        { name: "Ajax", takeaway: "A Greek hero's name plus a century of youth development: one word carrying both warrior spirit and \"the cradle of academies\" status — the ceiling of mythological roots, a name that became a synonym for youth development itself" },
+        { name: "La Masia", takeaway: "\"The farmhouse\": Barcelona's academy tells its whole heritage story with the name of a stone building — concrete-place naming that grew into something sacred, classier than any \"Elite Academy\"" },
+        { name: "Manchester City", takeaway: "The plainest structure — city name + City: the name welds club to city, and the blue-moon community identity holds for a century — the textbook of city-badge naming" },
+        { name: "AFC Richmond", takeaway: "The fictional club from Ted Lasso: AFC prefix + neighborhood name, so convincing people searched for it as a real team — proof the club-root formula works even for screenwriters" },
+        { name: "Dong Lu's Young Stars (董路足球小将)", takeaway: "A founder's personal brand plus a growth image — \"young stars\": creator trust transfers straight to the academy, and the name casts every kid as a future star — a precise read of parent psychology in Chinese youth soccer" },
+      ],
+      pitfalls: [
+        "Tier mismatch: \"Elite Academy\" over weekend rec sessions — the product can't honor the promise and parents vote with their feet",
+        "Riding big-club names: \"Little Barça\"-style naming invites trademark trouble and signals imitation instead of a system",
+        "Generic \"XX Soccer Club\": collides with dozens of local sides in search, and a name without a hook earns zero referrals",
+        "Locking into one age group: a name that only says \"toddler soccer\" contradicts itself when U12 squads and adult leagues launch",
+      ],
+    },
+  },
+  football: {
+    slug: "football",
+    tlds: [
+      { tld: "football", zh: "后缀即运动本身，橄榄球身份零解释", en: "The suffix is the sport itself — football identity with zero explanation" },
+      { tld: "academy", zh: "青训体系的信任信号，家长搜索场景的转化词", en: "The trust signal of a training system — the conversion word in a parent's search" },
+      { tld: "team", zh: "队伍归属感直给，招募页写在域名里", en: "Team belonging made explicit — the recruiting page written into the domain" },
+    ],
+    zh: {
+      label: "腰旗橄榄球",
+      title: "腰旗橄榄球俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "腰旗橄榄球与美式橄榄球俱乐部命名指南：力量图腾、城市战队感、新兴运动教育词等 5 种思路，NFL/Packers/巨石腰旗等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的橄榄球域名。",
+      intro:
+        "腰旗橄榄球是这几年增长最快的团队运动之一——2028 奥运入项、NFL 全球推广、无冲撞门槛让家长放心，一个青训与成人联赛的双市场正在打开。命名要抓住这项运动的独特处境：它顶着美式橄榄球百年积累的战队美学（图腾、猛兽、城市徽章），又需要向不熟悉规则的新市场解释「这是什么、安不安全」。所以最有效的公式是力量图腾+亲和后缀：猛兽、雷电、钢铁类词根继承 NFL 战队的视觉遗产，「俱乐部」「营」类后缀把门槛感卸掉。城市战队感是第二抓手——橄榄球的部落属性比足球更强，Packers 式的「城市+职业/物产」命名让一支队伍长成城市名片。青训市场则要换语言：家长搜索时想确认的是「无冲撞」「安全」「体能开发」，名字或副标题里最好能读出教育属性。反例是照搬冲撞美学吓到家长：满口「碾压」「暴击」的名字在成人联赛里帅，放在给八岁孩子报班的家长眼前就是劝退按钮。",
+      namingIdeas: [
+        "力量图腾继承 NFL 美学：猛兽、雷电、钢铁类词根自带战队视觉遗产，队徽头盔设计顺着名字长出来",
+        "城市+物产/职业的 Packers 公式：橄榄球的部落属性比足球更强，一支队伍可以长成城市名片",
+        "青训换教育语言：家长要确认「无冲撞、安全、体能开发」——名字或副标题读出教育属性，招生页转化立涨",
+        "新兴运动占位红利：腰旗橄榄球中文好名字还没被占完，品类词+记忆钩子的组合窗口期正当时",
+        "警惕冲撞美学错场景：「碾压」「暴击」在成人联赛帅，放在八岁孩子家长眼前就是劝退按钮",
+      ],
+      cases: [
+        { name: "Green Bay Packers", takeaway: "城市+罐头工人：1919 年赞助商的工种名长成百年图腾——「城市+物产/职业」公式让小城球队成为城市本身，社区持股模式与名字互相成就" },
+        { name: "NFL Flag", takeaway: "顶级联盟直接给品类背书：NFL 三个字母+品类词 Flag，家长一眼确认「这是正规体系」——大 IP 做新品类的命名捷径，也是本土机构要错位竞争的对象" },
+        { name: "Chicago Bears", takeaway: "城市+猛兽的原型命名：熊的力量图腾撑起头盔、队徽、吉祥物整套视觉资产——力量图腾命名的百年验证，新战队仍在复制这个公式" },
+        { name: "巨石腰旗橄榄球", takeaway: "「巨石」的力量感+品类词直给：新兴运动阶段品类词必须在名字里，力量词根提供战队气质——中文腰旗命名窗口期的务实打法" },
+        { name: "AFFL (American Flag Football League)", takeaway: "全称即定义：新品类的联赛组织用最直白的描述性命名抢占心智——品类早期，清晰压过创意；等品类成熟，缩写自然长成品牌" },
+      ],
+      pitfalls: [
+        "冲撞美学错场景：「碾压」「暴击」类名字在青训市场直接劝退家长——腰旗的卖点恰恰是无冲撞",
+        "NFL 队名硬蹭：直接叫「XX 酋长」「小海鹰」有商标风险，且新联盟需要自己的图腾不是借来的",
+        "品类词缺失：新兴运动阶段只叫「XX 战队」没人知道你玩什么——腰旗/橄榄球字样现阶段必须在场",
+        "锁死单一人群：只叫「XX 少儿腰旗」，成人联赛和企业团建业务开起来名字就自相矛盾",
+      ],
+    },
+    en: {
+      label: "Flag football",
+      title: "How to Name a Flag Football Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Flag football and gridiron club naming guide: power totems, city-franchise feel and safety-first education words, breakdowns of Packers/NFL Flag/Bears, recommended TLDs and pitfalls — then hunt an available football domain with AI.",
+      intro:
+        "Flag football is one of the fastest-growing team sports of the decade — an Olympic debut in 2028, the NFL pushing it worldwide, and a no-contact format that puts parents at ease, opening a double market of youth programs and adult leagues. Naming has to grasp the sport's peculiar position: it inherits a century of gridiron franchise aesthetics (totems, beasts, city badges) while needing to explain to a brand-new market \"what is this, and is it safe\". The most effective formula is power totem + approachable suffix: beast, thunder and steel roots inherit the NFL's visual legacy, while \"club\" or \"camp\" strips away the intimidation. City-franchise feel is the second lever — football's tribal pull is even stronger than soccer's, and Packers-style \"city + trade\" naming can grow a team into a city's calling card. The youth market demands a language switch: parents searching for programs want to confirm \"non-contact\", \"safe\" and \"athletic development\", so the name or tagline should read educational. The failure mode is importing collision aesthetics wholesale: \"Crush\" and \"Blitzkrieg\" look great in an adult league and act as an eject button for the parent enrolling an eight-year-old.",
+      namingIdeas: [
+        "Inherit the NFL's power totems: beast, thunder and steel roots carry franchise visual legacy — helmet and crest designs grow straight out of the name",
+        "Run the Packers formula — city + trade or beast: football's tribal pull beats soccer's, and a team name can become the city's calling card",
+        "Switch to education language for youth: parents need to confirm non-contact, safe, athletic development — a name or tagline that reads educational lifts enrollment instantly",
+        "Claim the new-category window: great flag football names are still unclaimed — the category word + memory hook combo is wide open right now",
+        "Beware collision aesthetics in the wrong market: \"Crush\" and \"Blitz\" look great in adult leagues and eject the parent of an eight-year-old",
+      ],
+      cases: [
+        { name: "Green Bay Packers", takeaway: "City + cannery workers: a 1919 sponsor's trade grew into a century-old totem — the \"city + trade\" formula let a small-town team become the town itself, with community ownership and name reinforcing each other" },
+        { name: "NFL Flag", takeaway: "A top league endorsing the category outright: three letters of NFL + the category word Flag lets parents confirm \"this is the official system\" at a glance — the big-IP shortcut local programs must position against, not copy" },
+        { name: "Chicago Bears", takeaway: "The archetype of city + beast: a bear's power totem carries the helmet, crest and mascot as one visual system — a century of validation that new franchises still copy" },
+        { name: "Boulder Flag (巨石腰旗橄榄球)", takeaway: "A boulder's force plus the plain category word: in a new sport the category must be in the name, and the power root supplies franchise attitude — the pragmatic play for the Chinese flag football window" },
+        { name: "AFFL (American Flag Football League)", takeaway: "The full name as a definition: a new category's league grabs mindshare with the most literal descriptive name — early in a category, clarity beats creativity; once it matures, the acronym becomes the brand" },
+      ],
+      pitfalls: [
+        "Collision aesthetics in the youth market: \"Crush\"-style names eject parents outright — no-contact is precisely flag football's selling point",
+        "Riding NFL team names: \"XX Chiefs\" invites trademark trouble, and a new league needs its own totem, not a borrowed one",
+        "Missing the category word: in a new sport, \"XX Squad\" alone tells nobody what you play — flag or football must be present at this stage",
+        "Locking into one audience: a name that only says \"kids flag\" contradicts itself when the adult league and corporate events launch",
+      ],
+    },
+  },
+  hockey: {
+    slug: "hockey",
+    tlds: [
+      { tld: "hockey", zh: "后缀即运动本身，冰球俱乐部与冰场零解释", en: "The suffix is the sport itself — zero explanation for hockey clubs and rinks" },
+      { tld: "club", zh: "俱乐部归属感直给，会员制冰上运动的天然后缀", en: "Club belonging made explicit — the natural suffix for membership ice sports" },
+      { tld: "academy", zh: "青训体系的信任信号，家长搜索场景的转化词", en: "The trust signal of a training system — the conversion word in a parent's search" },
+    ],
+    zh: {
+      label: "冰球俱乐部",
+      title: "冰球俱乐部与冰场怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "冰球俱乐部、冰上运动培训与冰场命名指南：冰雪意象、速度词根、北境气质等 5 种思路，Maple Leafs/Bauer/万域芳菲等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的冰球域名。",
+      intro:
+        "冰球在中国是「贵而新」的运动：一线城市家长把它当作精英教育的一部分，冰场按小时计费的成本结构决定了客单价不低——名字要配得上这个价位，又不能端到让第一次带孩子上冰的家庭却步。最顺手的词库是冰雪与北境意象：冰、雪、极、北、霜自带清冽的画面感和稀缺气质，这是别的运动拿不到的命名资产；速度与锋刃是第二词库——冰刀、破冰、疾风类词根把这项「地球上最快的团队运动」的爽感写进名字。北美经验同样值得借：NHL 球队的城市+图腾公式（枫叶、油人、雪崩）证明冰球命名可以既扎根本地又气质超然。青训与冰场是两套逻辑：俱乐部往战队感靠，孩子要的是穿上队服的骄傲；冰场是场馆生意，名字要装得下花滑、冰壶、公众场滑冰的全业务。反例是把「贵」写在脸上：「皇家冰上贵族」式命名在 2026 年只会显得暴发户，冰球的稀缺感应该来自冰雪意象的清冽，而不是价格标签的炫耀。",
+      namingIdeas: [
+        "冰雪北境词库：冰、雪、极、霜、北——清冽画面感与稀缺气质是这项运动独有的命名资产，别的运动拿不到",
+        "速度与锋刃词根：冰刀、破冰、疾风——「地球上最快的团队运动」的爽感直接写进名字",
+        "NHL 城市+图腾公式：枫叶、雪崩、油人证明冰球命名能既扎根本地又气质超然，队徽顺着名字长出来",
+        "俱乐部与冰场分开想：俱乐部要战队感（孩子穿队服的骄傲），冰场要装下花滑冰壶公众场的全业务",
+        "警惕把贵写在脸上：「皇家」「贵族」只显暴发户——稀缺感应来自冰雪意象的清冽，不是价格标签",
+      ],
+      cases: [
+        { name: "Toronto Maple Leafs", takeaway: "国家符号入队名：枫叶把一支球队升格为国家图腾，蓝白配色一百年不改——城市+国民符号的命名天花板，认同感直接拉满" },
+        { name: "Colorado Avalanche", takeaway: "「雪崩」：地理特征+自然伟力的双关，山地州的身份与冰雪运动的气势一词说尽——冰雪意象命名的现代范本" },
+        { name: "Bauer", takeaway: "创始人姓氏百年长成器材信任：冰刀到护具的品质背书全在一个姓里——器材行业时间换信任的又一例，俱乐部选合作品牌时的心智锚点" },
+        { name: "万域芳菲", takeaway: "「万域」的辽阔+「芳菲」的柔美：中国冰上培训品牌用文学化命名区隔于战队式取名，切中花滑与冰球双业务的场馆定位——中文冰上命名的差异化样本" },
+        { name: "EDGE Hockey Academy", takeaway: "「刃」的一词双关：冰刀之刃与竞争优势之 edge 同词——英文冰球命名里最顺手的双关词根，Academy 后缀再把青训信任补齐" },
+      ],
+      pitfalls: [
+        "把贵写在脸上：「皇家」「贵族」式命名只显暴发户，冰球的稀缺感应来自冰雪意象而非价格炫耀",
+        "NHL 队名硬蹭：直接叫「小枫叶」「XX 油人」有商标风险，且借来的图腾长不成自己的认同",
+        "「XX 冰上运动中心」通用词：场馆生意撞名严重，没有记忆钩子家长转介绍时说不清你是谁",
+        "锁死单一冰种：只叫「XX 冰球」，花滑课程和公众场滑冰业务开起来名字就装不下",
+      ],
+    },
+    en: {
+      label: "Hockey clubs",
+      title: "How to Name a Hockey Club or Rink: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Hockey club, ice sports academy and rink naming guide: ice-and-north imagery, speed-and-edge roots and NHL formulas, breakdowns of Maple Leafs/Avalanche/Bauer, recommended TLDs and pitfalls — then hunt an available hockey domain with AI.",
+      intro:
+        "Hockey occupies the \"premium and new\" slot among youth sports: big-city parents treat it as part of an elite education, and the by-the-hour economics of ice time set a high price point — the name has to live up to that tier without freezing out the family bringing a kid onto the ice for the first time. The handiest word bank is ice-and-north imagery: ice, snow, polar, frost and north carry a crisp, scarce quality no other sport can claim as naming material. Speed and edge form the second bank — blade, breakaway and gale roots write the thrill of \"the fastest team game on earth\" straight into the name. North American precedent is worth borrowing too: the NHL's city + totem formula (Maple Leafs, Oilers, Avalanche) proves hockey names can be locally rooted and transcendent at once. Academies and rinks run on different logic: a club needs franchise pride — kids want to wear the jersey — while a rink is a venue business whose name must hold figure skating, curling and public sessions. The failure mode is wearing the price tag as a name: \"Royal Ice Aristocrat\"-style naming reads nouveau-riche in 2026 — hockey's scarcity should come from the crispness of ice imagery, not from flaunting cost.",
+      namingIdeas: [
+        "Draw from the ice-and-north word bank: ice, snow, polar, frost — a crisp, scarce imagery no other sport can claim as naming material",
+        "Use speed-and-edge roots: blade, breakaway, gale — write the thrill of the fastest team game on earth straight into the name",
+        "Borrow the NHL's city + totem formula: Maple Leafs and Avalanche prove hockey names can be locally rooted and transcendent at once, with the crest growing out of the name",
+        "Name clubs and rinks differently: clubs need franchise pride (kids want the jersey), rinks must hold figure skating, curling and public sessions",
+        "Beware wearing the price tag: Royal and Aristocrat read nouveau-riche — scarcity should come from crisp ice imagery, not flaunted cost",
+      ],
+      cases: [
+        { name: "Toronto Maple Leafs", takeaway: "A national symbol as a team name: the maple leaf elevates a club into a national totem, blue and white unchanged for a century — the ceiling of city + national-symbol naming, identity maxed out" },
+        { name: "Colorado Avalanche", takeaway: "\"Avalanche\": a double read of local geography and natural force — a mountain state's identity and winter sport's momentum in one word. The modern template of ice imagery" },
+        { name: "Bauer", takeaway: "A founder's surname aged into equipment trust: from blades to pads, the quality mark lives in one family name — another time-for-trust classic, and the mental anchor when clubs pick gear partners" },
+        { name: "Vanguard Bloom (万域芳菲)", takeaway: "Vast domains plus floral grace: a Chinese ice-sports brand using literary naming to stand apart from franchise-style names, matching a venue that runs both figure skating and hockey — the differentiation sample for Chinese ice naming" },
+        { name: "EDGE Hockey Academy", takeaway: "One word, two blades: the edge of a skate and the competitive edge in the same syllable — English hockey's handiest pun root, with Academy topping up the training trust" },
+      ],
+      pitfalls: [
+        "Wearing the price tag: Royal and Aristocrat naming reads nouveau-riche — hockey's scarcity should come from ice imagery, not cost flaunting",
+        "Riding NHL names: \"Little Leafs\" invites trademark trouble, and a borrowed totem never grows into your own identity",
+        "Generic \"XX Ice Sports Center\": venue names collide constantly, and without a hook parents can't explain who you are in a referral",
+        "Locking into one discipline: a name that only says hockey can't hold the figure skating program and public sessions when they launch",
+      ],
+    },
+  },
+  pickleball: {
+    slug: "pickleball",
+    tlds: [
+      { tld: "club", zh: "俱乐部归属感直给，匹克球社交属性的天然后缀", en: "Club belonging made explicit — the natural suffix for pickleball's social core" },
+      { tld: "fun", zh: "这项运动的第一卖点就是好玩，后缀替名字表态", en: "The sport's #1 selling point is fun — let the suffix say it" },
+      { tld: "games", zh: "赛事与约球平台的直接信号，轻竞技气质自带", en: "A direct signal for events and matchmaking — light competition built in" },
+    ],
+    zh: {
+      label: "匹克球",
+      title: "匹克球俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "匹克球俱乐部与场馆命名指南：趣味词根、社交属性、新运动占位等 5 种思路，PPA Tour/Chicken N Pickle/JOOLA 等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的匹克球域名。",
+      intro:
+        "匹克球是全美连续多年增长最快的运动，这股风正吹向全世界：上手五分钟、场地只要网球场四分之一、三代同堂能同场——它的命名逻辑和任何传统运动都不同，因为「好玩、不端着」本身就是产品定位。名字里带一点幽默感不仅不减分，反而是圈内正统：这项运动的名字本身就来自一条叫 Pickles 的狗（一说腌黄瓜），Chicken N Pickle 这样把餐厅和球场开在一起的品牌用「无厘头」命名做成了连锁生意。所以第一原则是别把它当网球命名：贵族感、精英感、竞技压迫感统统错频，轻快、聚会感、一点点自嘲才是对的调性。社交属性是第二抓手——匹克球被称为「最容易交到朋友的运动」，俱乐部名字里的「局」「聚」「社」类词根直接对齐核心价值。品类占位红利同样真实：中文世界的匹克球好名字几乎还没被注册，品类词+记忆钩子的窗口期正当时。反例是过度竞技化：拿「大满贯」「冠军」压阵的名字，把这项运动最珍贵的「零门槛快乐」直接调成了静音。",
+      namingIdeas: [
+        "幽默是正统不是减分项：运动名字本身来自一条狗（或腌黄瓜），一点无厘头反而是圈内认同的接头暗号",
+        "社交词根对齐核心价值：局、聚、社——「最容易交朋友的运动」的俱乐部名字要先把聚会感说出来",
+        "别当网球命名：贵族感、精英感统统错频，轻快与一点自嘲才是匹克球的调性",
+        "品类占位窗口期：中文匹克球好名字几乎没被注册，品类词+记忆钩子的组合现在下手正当时",
+        "警惕过度竞技化：「大满贯」「冠军」压阵的名字，把零门槛快乐这个最大卖点直接静音",
+      ],
+      cases: [
+        { name: "Chicken N Pickle", takeaway: "炸鸡餐厅+匹克球场的无厘头组合名：把「好玩不端着」写进品牌骨子里，餐饮+运动的混业模式靠这个名字讲通——匹克球命名幽默正统性的商业验证" },
+        { name: "PPA Tour", takeaway: "职业化用最正式的缩写：草根运动的职业巡回赛反向选择严肃命名，和俱乐部的欢乐调性形成分工——同一运动两个市场两套命名逻辑的活教材" },
+        { name: "JOOLA", takeaway: "从乒乓球器材跨界而来的四字母品牌：好读好记无含义，跨品类时零包袱——器材品牌抽象命名的优势在新运动爆发期兑现" },
+        { name: "The Kitchen", takeaway: "直接用规则术语「厨房」（不可截击区）命名社区：圈内人秒懂的黑话即身份认同——规则术语是新运动命名的免费词库" },
+        { name: "Dink", takeaway: "轻吊球的拟声词：一个动作术语自带俏皮声效，短到极致还能当动词——术语+拟声的双重红利，匹克球词库里的黄金单词" },
+      ],
+      pitfalls: [
+        "过度竞技化：「大满贯」「冠军」式命名把零门槛快乐调成静音，吓跑的正是增量人群",
+        "端着装高级：匹克球的气质是球场边的果汁与笑声，贵族化命名和运动调性根本错频",
+        "品类词缺失：新运动阶段只叫「XX 俱乐部」没人知道你打什么——匹克球三个字现阶段必须在场",
+        "谐音梗低俗化：幽默是正统但有边界，低俗谐音第一次好笑，印在球衣上就是俱乐部的天花板",
+      ],
+    },
+    en: {
+      label: "Pickleball",
+      title: "How to Name a Pickleball Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Pickleball club and venue naming guide: humor-first roots, social-core words and new-sport land grabs, breakdowns of Chicken N Pickle/PPA Tour/The Kitchen, recommended TLDs and pitfalls — then hunt an available pickleball domain with AI.",
+      intro:
+        "Pickleball has been America's fastest-growing sport for years running, and the wave is going global: five minutes to learn, a quarter of a tennis court to play, three generations on the same court — its naming logic differs from every legacy sport because \"fun and unpretentious\" is the product positioning itself. A dose of humor in the name isn't a discount — it's orthodoxy: the sport itself is named after a dog called Pickles (or a pickle, depending who you ask), and Chicken N Pickle built a restaurant-plus-courts chain on an absurdist name. So rule one: don't name it like tennis — aristocratic polish, elite posturing and competitive intimidation are all off-frequency; breezy, party-forward, lightly self-deprecating is the right key. The social core is the second lever — pickleball is called the easiest sport to make friends in, so club names built on gathering roots (social, crew, jam) align straight with the core value. The land-grab window is real too: good pickleball names are still largely unregistered, and category word + memory hook is wide open right now. The failure mode is over-competitiveness: names flexing \"Grand Slam\" and \"Champion\" mute the sport's most precious asset — zero-barrier joy.",
+      namingIdeas: [
+        "Treat humor as orthodoxy, not a discount: the sport is named after a dog (or a pickle) — a dash of absurdity is the community's secret handshake",
+        "Build on social roots: social, crew, jam — the easiest sport to make friends in deserves a name that says gathering first",
+        "Don't name it like tennis: aristocratic polish and elite posturing are off-frequency — breezy with light self-deprecation is pickleball's key",
+        "Grab the category window: good pickleball names are still largely unregistered — category word + memory hook is wide open right now",
+        "Beware over-competitiveness: \"Grand Slam\" and \"Champion\" flexing mutes zero-barrier joy — the exact people you'd scare off are the growth market",
+      ],
+      cases: [
+        { name: "Chicken N Pickle", takeaway: "Fried chicken plus pickleball courts in one absurdist name: \"fun and unpretentious\" written into the brand's bones, and the restaurant-sports hybrid only makes sense because the name sets it up — commercial proof of humor's orthodoxy" },
+        { name: "PPA Tour", takeaway: "Professionalization picks the most formal acronym: the grassroots sport's pro tour deliberately chose serious naming, dividing labor with the clubs' playful register — a live lesson in one sport, two markets, two naming logics" },
+        { name: "JOOLA", takeaway: "A four-letter brand crossing over from table tennis gear: readable, memorable, meaning-free — abstract equipment naming cashing in its zero-baggage advantage in a new sport's boom" },
+        { name: "The Kitchen", takeaway: "A community named straight from the rulebook — the no-volley zone: insider slang that lands instantly with players is identity itself. Rule terminology is a new sport's free word bank" },
+        { name: "Dink", takeaway: "The soft-shot's onomatopoeia: one term with built-in playful sound, minimal length, and it works as a verb — the double dividend of terminology plus sound, the golden word in pickleball's bank" },
+      ],
+      pitfalls: [
+        "Over-competitiveness: \"Grand Slam\"-style naming mutes zero-barrier joy and scares off exactly the newcomers fueling growth",
+        "Pretending to be posh: pickleball's vibe is courtside lemonade and laughter — aristocratic naming is fundamentally off-frequency",
+        "Missing the category word: in a new sport, \"XX Club\" alone tells nobody what you play — pickleball must be present at this stage",
+        "Crude puns: humor is orthodox but bounded — a lowbrow pun is funny once and becomes the club's ceiling once printed on a jersey",
+      ],
+    },
+  },
+  pilates: {
+    slug: "pilates",
+    tlds: [
+      { tld: "studio", zh: "精品工作室业态的直接信号，小而美的定位自带", en: "A direct signal of the boutique studio format — small-and-refined built in" },
+      { tld: "fit", zh: "三个字母的轻快感，训练属性直给还短到极致", en: "Three light letters — training identity made explicit at minimal length" },
+      { tld: "life", zh: "把普拉提说成生活方式而非课程，客单价的叙事支点", en: "Frames Pilates as a lifestyle, not a class — the narrative lever behind premium pricing" },
+    ],
+    zh: {
+      label: "普拉提馆",
+      title: "普拉提工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription:
+        "普拉提工作室命名指南：身体词根、器械意象、精品工作室质感等 5 种思路，Club Pilates/万普拉提/BASI 等好名字拆解，推荐 TLD 与常见误区，并用 AI 立刻猎取可注册的普拉提域名。",
+      intro:
+        "普拉提是这几年增长最猛的线下健身业态：器械普拉提客单价是团课健身的两三倍，核心客群是愿意为「精准、体态、控制感」付费的都市女性——名字要配得上这个价位段的审美。普拉提命名的第一特殊性是它自带人名遗产：这项运动以创始人 Joseph Pilates 命名，「普拉提」三个字本身就是品类词，所以命名的真正战场在修饰词——你是哪一种普拉提？身体词根是最顺手的词库：核心、脊柱、线条、平衡、控制，这些词既是训练术语又是客户想要的结果，一词两用。器械意象是第二词库：Reformer（核心床）、Cadillac 这些器械名自带专业感，「核心床普拉提」类命名直接完成业态说明。精品工作室的质感要求名字克制：小写字母、单词根、留白感的命名（外文里的 form、align 类）比堆砌「国际」「高端」更贵气。反例是往传统健身房的方向跑：「XX 健身工作室」的名字会把普拉提拉回撸铁的心智区间，客单价叙事直接塌掉——普拉提卖的不是流汗，是身体的精修。",
+      namingIdeas: [
+        "身体词根一词两用：核心、脊柱、线条、平衡——既是训练术语又是客户想要的结果，名字先把效果说出口",
+        "器械意象自带专业感：Reformer、核心床入名直接完成业态说明，器械普拉提的客单价叙事从名字开始",
+        "精品质感靠克制：单词根、留白感（form、align 类）比堆砌「国际」「高端」更贵气，小而美的命名要敢少",
+        "生活方式叙事：把普拉提说成日常的仪式而非课程——「练普拉提的人」是一种身份，名字给这个身份命名",
+        "警惕健身房化：「XX 健身工作室」把普拉提拉回撸铁心智，客单价叙事直接塌掉——卖的是精修不是流汗",
+      ],
+      cases: [
+        { name: "Club Pilates", takeaway: "「俱乐部+品类词」的连锁公式：把精品业态做成规模生意，名字的亲和感支撑了「人人可练」的定位——全球最大普拉提连锁的命名务实主义" },
+        { name: "BASI Pilates", takeaway: "Body Arts and Science International 的缩写：把「身体的艺术与科学」压进四个字母，教培体系的权威感全在名字里——认证机构命名的教科书" },
+        { name: "Fluidform", takeaway: "fluid + form 的合成词：流动的形体一词说尽普拉提的动作美学，澳洲线上普拉提品牌靠这个名字把「精修身体」讲成日常——身体词根合成的现代范本" },
+        { name: "万普拉提", takeaway: "「万」的规模感+品类词直给：中文普拉提连锁把搜索友好放在第一位，品类词在名字里让每一次搜索都是获客入口——本土连锁命名的流量思维" },
+        { name: "Frame", takeaway: "「框架/形体」的一词双关：身体的 frame 与人生的 frame 同词，伦敦精品工作室用一个常见词讲出留白的贵气——克制命名的英伦示范" },
+      ],
+      pitfalls: [
+        "健身房化命名：「XX 健身工作室」把普拉提拉回撸铁心智区间，精修身体的客单价叙事直接塌掉",
+        "堆砌「国际」「高端」：贵气来自克制不来自形容词，堆砌修饰词的名字恰恰暴露不自信",
+        "人名词根滥用：再叫「XX·普拉提斯」致敬创始人已是红海，修饰词才是命名的真正战场",
+        "锁死单一器械：只叫「XX 核心床」，垫上课程和孕产普拉提开起来名字就装不下",
+      ],
+    },
+    en: {
+      label: "Pilates studios",
+      title: "How to Name a Pilates Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Pilates studio naming guide: body-word roots, apparatus imagery and boutique restraint, breakdowns of Club Pilates/BASI/Fluidform, recommended TLDs and pitfalls — then hunt an available Pilates domain with AI.",
+      intro:
+        "Pilates is the hottest-growing boutique fitness format of recent years: reformer classes price at two to three times a group gym session, and the core clientele is urban professionals paying for precision, posture and control — the name has to match that price tier's aesthetics. Pilates naming's first peculiarity is its built-in surname inheritance: the discipline is named after founder Joseph Pilates, so \"Pilates\" itself is the category word and the real battlefield is the modifier — which Pilates are you? Body words are the handiest bank: core, spine, line, balance, control — simultaneously training terminology and the outcomes clients want, one word doing double duty. Apparatus imagery is the second bank: Reformer and Cadillac carry instant professionalism, and \"Reformer Pilates\" naming completes the format explanation by itself. Boutique polish demands restraint: single-root, whitespace names (form, align) read more expensive than stacking \"International\" and \"Premium\". The failure mode is drifting toward the gym: an \"XX Fitness Studio\" name drags Pilates back into iron-pumping mental territory and the premium narrative collapses — Pilates doesn't sell sweat, it sells the body, refined.",
+      namingIdeas: [
+        "Make body words do double duty: core, spine, line, balance — training terminology and desired outcomes in the same word, so the name states the result first",
+        "Let apparatus carry professionalism: Reformer in the name completes the format explanation by itself, and the premium narrative starts there",
+        "Earn polish through restraint: single-root, whitespace names (form, align) read more expensive than stacked \"International Premium\" modifiers — dare to say less",
+        "Tell a lifestyle story: frame Pilates as a daily ritual, not a class — \"someone who does Pilates\" is an identity, and the name names it",
+        "Beware gym-drift: \"XX Fitness Studio\" drags Pilates back into iron-pumping territory and the premium narrative collapses — you sell refinement, not sweat",
+      ],
+      cases: [
+        { name: "Club Pilates", takeaway: "The club + category formula: boutique format scaled into a franchise machine, with the name's approachability underwriting \"Pilates for everybody\" — the naming pragmatism of the world's largest Pilates chain" },
+        { name: "BASI Pilates", takeaway: "Body Arts and Science International compressed into four letters: the authority of a certification system living entirely in the name — the textbook of training-body naming" },
+        { name: "Fluidform", takeaway: "fluid + form blended: the discipline's movement aesthetic said in one coined word, and an Australian online brand turned \"the body, refined\" into a daily habit on the strength of it — the modern template of body-root blending" },
+        { name: "One Pilates (万普拉提)", takeaway: "Scale word plus the plain category term: a Chinese chain putting search-friendliness first — with the category in the name, every search becomes an acquisition channel. Traffic-minded naming for local chains" },
+        { name: "Frame", takeaway: "One word, two frames: the body's frame and life's frame in the same syllable — a London boutique making a common word read expensive through sheer restraint. The British lesson in saying less" },
+      ],
+      pitfalls: [
+        "Gym-style naming: \"XX Fitness Studio\" drags Pilates into iron-pumping territory and collapses the refined-body premium narrative",
+        "Stacking \"International\" and \"Premium\": expensiveness comes from restraint, not adjectives — piled-up modifiers broadcast insecurity",
+        "Overusing the founder's surname: another \"XX Pilates\" homage is a red ocean — the modifier is the real battlefield",
+        "Locking into one apparatus: a name that only says Reformer can't hold the mat classes and prenatal programs when they launch",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
