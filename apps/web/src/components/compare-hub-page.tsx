@@ -1,6 +1,5 @@
 import { useMemo, useState } from "react";
-import { TLD_COMPARES } from "@/content/compares";
-import { HUB_META, compareHubGroups } from "@/content/hubs";
+import { HUB_META, compareHubGroups, compareHubPair, compareHubTitle } from "@/content/hubs";
 import { useI18n } from "@/lib/i18n";
 import { usePageTitle } from "@/lib/use-page-title";
 import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
@@ -19,8 +18,8 @@ export function CompareHubPage() {
         .map((g) => ({
           ...g,
           slugs: g.slugs.filter((slug) => {
-            const c = TLD_COMPARES[slug];
-            return hubMatch(query, [slug, `.${c.a} vs .${c.b}`, c.a, c.b, c.zh.title, c.en.title]);
+            const { a, b } = compareHubPair(slug);
+            return hubMatch(query, [slug, `.${a} vs .${b}`, a, b, compareHubTitle(slug, "zh"), compareHubTitle(slug, "en")]);
           }),
         }))
         .filter((g) => g.slugs.length > 0),
@@ -48,7 +47,7 @@ export function CompareHubPage() {
                 href={`/vs/${slug}?lang=${lang}`}
                 className="flex min-h-[44px] items-center rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
               >
-                .{TLD_COMPARES[slug].a} vs .{TLD_COMPARES[slug].b}
+                .{compareHubPair(slug).a} vs .{compareHubPair(slug).b}
               </a>
             ))}
           </div>

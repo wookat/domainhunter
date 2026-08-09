@@ -1,25 +1,29 @@
 /**
  * 内容枢纽索引页（/tld、/guide、/vs）共享数据：双语元信息 + 分组逻辑。
  * 前端 hub 页面组件与 worker（SSR meta / 骨架 / OG）共用。
- * 计数与条目全部从 TLD_LIST / GUIDE_LIST / COMPARE_LIST 动态派生；
+ * 只依赖轻量数据（tld-list + 生成的 hub-index），不引入 tlds/guides/compares 全文 chunk，
+ * hub 页 JS 体积因此与全文内容规模解耦（R271 移动性能优化）。
+ * 计数与条目全部从 TLD_LIST / GUIDE_INDEX / COMPARE_INDEX 动态派生；
  * 分组只声明成员归属，未归类的新条目自动落入「更多」兜底分组。
  */
-import { TLD_LIST } from "./tld-list";
-import { TLD_GUIDES } from "./tlds";
-import { GUIDE_LIST, INDUSTRY_GUIDES } from "./guides";
-import { COMPARE_LIST, TLD_COMPARES } from "./compares";
+import { COMPARE_INDEX, GUIDE_INDEX, TLD_ONE_LINERS } from "./hub-index";
+import { TLD_LIST, type Tld } from "./tld-list";
 
 type Lang = "zh" | "en";
 
-/** 取 metaDescription 首句作一句话定位（zh 以「。」断句，en 以 ". " 断句） */
-const firstSentence = (s: string, lang: Lang): string => {
-  const cut = lang === "zh" ? s.split("。")[0] + "。" : s.split(". ")[0].replace(/\.?$/, ".");
-  return cut;
-};
+export const tldOneLiner = (tld: string, lang: Lang): string => TLD_ONE_LINERS[tld as Tld][lang];
 
-export const tldOneLiner = (tld: string, lang: Lang): string => firstSentence(TLD_GUIDES[tld][lang].metaDescription, lang);
+const GUIDE_BY_SLUG = new Map(GUIDE_INDEX.map((g) => [g.slug, g]));
 
-export const guideOneLiner = (slug: string, lang: Lang): string => firstSentence(INDUSTRY_GUIDES[slug][lang].metaDescription, lang);
+export const guideOneLiner = (slug: string, lang: Lang): string => GUIDE_BY_SLUG.get(slug)!.oneLiner[lang];
+
+export const guideHubLabel = (slug: string, lang: Lang): string => GUIDE_BY_SLUG.get(slug)!.label[lang];
+
+const COMPARE_BY_SLUG = new Map(COMPARE_INDEX.map((c) => [c.slug, c]));
+
+export const compareHubTitle = (slug: string, lang: Lang): string => COMPARE_BY_SLUG.get(slug)!.title[lang];
+
+export const compareHubPair = (slug: string): { a: string; b: string } => COMPARE_BY_SLUG.get(slug)!;
 
 /* ---------- /tld 分组：按用途归类，未列出的 TLD 自动进「更多后缀」 ---------- */
 
@@ -28,9 +32,9 @@ const TLD_CATEGORY_DEFS: { id: string; zh: string; en: string; members: string[]
   { id: "tech", zh: "科技与开发", en: "Tech & developers", members: ["io", "ai", "app", "dev", "tech", "cloud", "codes", "tools", "run", "host", "network", "digital", "sh", "gg", "so", "zone", "wiki", "software", "systems", "support", "technology"] },
   { id: "creative", zh: "创意与设计", en: "Creative & design", members: ["art", "design", "studio", "ink", "moe", "lol", "wtf", "red", "page", "bio", "photos", "gallery", "photography", "style", "fashion", "beauty"] },
   { id: "media", zh: "内容与媒体", en: "Content & media", members: ["blog", "news", "media", "video", "tv", "fm", "chat", "social", "email", "live", "band", "watch", "show", "community"] },
-  { id: "commerce", zh: "商业与电商", en: "Business & commerce", members: ["shop", "store", "online", "site", "company", "group", "agency", "team", "works", "center", "global", "expert", "boutique", "solutions", "services", "consulting", "marketing", "guru", "tips", "directory", "international", "partners", "market", "work", "sale", "law", "tax", "shoes", "toys"] },
+  { id: "commerce", zh: "商业与电商", en: "Business & commerce", members: ["shop", "store", "online", "site", "company", "group", "agency", "team", "works", "center", "global", "expert", "boutique", "solutions", "services", "consulting", "marketing", "guru", "tips", "directory", "international", "partners", "market", "work", "sale"] },
   { id: "finance", zh: "金融与资产", en: "Finance & assets", members: ["finance", "fund", "money", "cash", "gold", "estate", "land", "ventures", "capital", "exchange"] },
-  { id: "lifestyle", zh: "生活与行业", en: "Lifestyle & industries", members: ["life", "world", "club", "vip", "space", "fun", "games", "pizza", "bar", "cafe", "restaurant", "city", "farm", "academy", "school", "coach", "care", "doctor", "clinic", "dental", "fitness", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "events", "institute", "house", "education", "training", "love", "wedding", "menu", "bike"] },
+  { id: "lifestyle", zh: "生活与行业", en: "Lifestyle & industries", members: ["life", "world", "club", "vip", "space", "fun", "games", "pizza", "bar", "cafe", "restaurant", "city", "farm", "academy", "school", "coach", "care", "doctor", "clinic", "dental", "fitness", "salon", "yoga", "coffee", "wine", "kitchen", "garden", "events", "institute", "house", "education", "training", "love", "wedding"] },
   { id: "geo", zh: "国别与地域", en: "Country & regional", members: ["cn", "us", "uk", "in", "cc"] },
 ];
 
@@ -62,8 +66,9 @@ const GUIDE_FALLBACK = { id: "more", zh: "更多行业", en: "More industries" }
 
 export function guideHubGroups(): { id: string; zh: string; en: string; slugs: string[] }[] {
   const listed = new Set(GUIDE_CATEGORY_DEFS.flatMap((c) => c.members));
-  const groups = GUIDE_CATEGORY_DEFS.map((c) => ({ id: c.id, zh: c.zh, en: c.en, slugs: GUIDE_LIST.filter((s) => c.members.includes(s)) }));
-  const rest = GUIDE_LIST.filter((s) => !listed.has(s));
+  const slugs = GUIDE_INDEX.map((g) => g.slug);
+  const groups = GUIDE_CATEGORY_DEFS.map((c) => ({ id: c.id, zh: c.zh, en: c.en, slugs: slugs.filter((s) => c.members.includes(s)) }));
+  const rest = slugs.filter((s) => !listed.has(s));
   if (rest.length > 0) groups.push({ ...GUIDE_FALLBACK, slugs: rest });
   return groups.filter((g) => g.slugs.length > 0);
 }
@@ -72,8 +77,7 @@ export function guideHubGroups(): { id: string; zh: string; en: string; slugs: s
 
 export function compareHubGroups(): { tld: string; slugs: string[] }[] {
   const byTld = new Map<string, string[]>();
-  for (const slug of COMPARE_LIST) {
-    const a = TLD_COMPARES[slug].a;
+  for (const { slug, a } of COMPARE_INDEX) {
     const arr = byTld.get(a) ?? [];
     arr.push(slug);
     byTld.set(a, arr);
@@ -105,29 +109,29 @@ export const HUB_META = {
   guide: {
     zh: {
       kicker: "行业指南",
-      title: `全部行业命名指南：${GUIDE_LIST.length} 个行业怎么起名`,
-      desc: `${GUIDE_LIST.length} 个行业的产品命名指南索引：按科技/电商/餐饮/内容/教育/健康等大类浏览，每个行业一句话概览，含命名思路、好名字拆解与推荐 TLD。`,
-      intro: `好名字的标准因行业而异：SaaS 要能当动词用，餐饮要有画面感，法律要稳重可靠。这里按大类收录全部 ${GUIDE_LIST.length} 个行业的命名指南——每篇含命名思路、知名品牌好名字拆解、推荐 TLD 与常见误区，看完直接用 AI 按行业模板猎名。`,
+      title: `全部行业命名指南：${GUIDE_INDEX.length} 个行业怎么起名`,
+      desc: `${GUIDE_INDEX.length} 个行业的产品命名指南索引：按科技/电商/餐饮/内容/教育/健康等大类浏览，每个行业一句话概览，含命名思路、好名字拆解与推荐 TLD。`,
+      intro: `好名字的标准因行业而异：SaaS 要能当动词用，餐饮要有画面感，法律要稳重可靠。这里按大类收录全部 ${GUIDE_INDEX.length} 个行业的命名指南——每篇含命名思路、知名品牌好名字拆解、推荐 TLD 与常见误区，看完直接用 AI 按行业模板猎名。`,
     },
     en: {
       kicker: "Industry guides",
-      title: `All Industry Naming Guides: How to Name a Product in ${GUIDE_LIST.length} Industries`,
-      desc: `Index of naming guides for ${GUIDE_LIST.length} industries, grouped by category — tech, e-commerce, food, content, education, health and more. One-line overview per industry, with naming strategies, name breakdowns and recommended TLDs.`,
-      intro: `What makes a great name differs by industry: SaaS names should work as verbs, food brands need imagery, legal services need gravitas. Browse all ${GUIDE_LIST.length} industry naming guides by category — each covers naming strategies, famous-name breakdowns, recommended TLDs and common mistakes, then hunt names with the AI template.`,
+      title: `All Industry Naming Guides: How to Name a Product in ${GUIDE_INDEX.length} Industries`,
+      desc: `Index of naming guides for ${GUIDE_INDEX.length} industries, grouped by category — tech, e-commerce, food, content, education, health and more. One-line overview per industry, with naming strategies, name breakdowns and recommended TLDs.`,
+      intro: `What makes a great name differs by industry: SaaS names should work as verbs, food brands need imagery, legal services need gravitas. Browse all ${GUIDE_INDEX.length} industry naming guides by category — each covers naming strategies, famous-name breakdowns, recommended TLDs and common mistakes, then hunt names with the AI template.`,
     },
   },
   vs: {
     zh: {
       kicker: "后缀对比",
-      title: `全部后缀对比：${COMPARE_LIST.length} 组 TLD 怎么选`,
-      desc: `${COMPARE_LIST.length} 组域名后缀对比索引：com vs cn、io vs ai 等常见纠结组合，按后缀分组浏览，每组给出结论、适用场景与价格差异，帮你快速拍板。`,
-      intro: `选后缀常在两个之间纠结：com 还是 cn？io 还是 ai？这里按左侧后缀分组收录全部 ${COMPARE_LIST.length} 组对比——每组给出怎么选的结论、各自适用场景与价格差异，看完直接用 AI 同时在两个后缀下猎名。`,
+      title: `全部后缀对比：${COMPARE_INDEX.length} 组 TLD 怎么选`,
+      desc: `${COMPARE_INDEX.length} 组域名后缀对比索引：com vs cn、io vs ai 等常见纠结组合，按后缀分组浏览，每组给出结论、适用场景与价格差异，帮你快速拍板。`,
+      intro: `选后缀常在两个之间纠结：com 还是 cn？io 还是 ai？这里按左侧后缀分组收录全部 ${COMPARE_INDEX.length} 组对比——每组给出怎么选的结论、各自适用场景与价格差异，看完直接用 AI 同时在两个后缀下猎名。`,
     },
     en: {
       kicker: "TLD comparisons",
-      title: `All TLD Comparisons: ${COMPARE_LIST.length} Head-to-Head Matchups`,
-      desc: `Index of ${COMPARE_LIST.length} TLD comparisons — com vs cn, io vs ai and other common dilemmas, grouped by suffix. Each gives a verdict, pick-when scenarios and price differences to help you decide fast.`,
-      intro: `Choosing a suffix usually comes down to two finalists: com or cn? io or ai? Browse all ${COMPARE_LIST.length} matchups grouped by the left-hand suffix — each gives a verdict, pick-when scenarios and price differences, then hunt names on both suffixes at once with AI.`,
+      title: `All TLD Comparisons: ${COMPARE_INDEX.length} Head-to-Head Matchups`,
+      desc: `Index of ${COMPARE_INDEX.length} TLD comparisons — com vs cn, io vs ai and other common dilemmas, grouped by suffix. Each gives a verdict, pick-when scenarios and price differences to help you decide fast.`,
+      intro: `Choosing a suffix usually comes down to two finalists: com or cn? io or ai? Browse all ${COMPARE_INDEX.length} matchups grouped by the left-hand suffix — each gives a verdict, pick-when scenarios and price differences, then hunt names on both suffixes at once with AI.`,
     },
   },
 } as const;

@@ -254,12 +254,6 @@ const TLD_PRICES: Record<string, TldPrice> = {
   sale: { first: 26, renew: 226 },
   help: { first: 11, renew: 189 },
   wedding: { first: 189, renew: 189 },
-  law: { first: 597, renew: 597 },
-  tax: { first: 59, renew: 389 },
-  menu: { first: 194, renew: 194 },
-  bike: { first: 59, renew: 226 },
-  toys: { first: 78, renew: 374 },
-  shoes: { first: 152, renew: 374 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {

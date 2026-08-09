@@ -1,6 +1,5 @@
 import { useMemo, useState } from "react";
-import { INDUSTRY_GUIDES } from "@/content/guides";
-import { HUB_META, guideHubGroups, guideOneLiner } from "@/content/hubs";
+import { HUB_META, guideHubGroups, guideHubLabel, guideOneLiner } from "@/content/hubs";
 import { useI18n } from "@/lib/i18n";
 import { usePageTitle } from "@/lib/use-page-title";
 import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
@@ -19,7 +18,7 @@ export function GuideHubPage() {
         .map((g) => ({
           ...g,
           slugs: g.slugs.filter((slug) =>
-            hubMatch(query, [slug, INDUSTRY_GUIDES[slug].zh.label, INDUSTRY_GUIDES[slug].en.label, guideOneLiner(slug, "zh"), guideOneLiner(slug, "en")]),
+            hubMatch(query, [slug, guideHubLabel(slug, "zh"), guideHubLabel(slug, "en"), guideOneLiner(slug, "zh"), guideOneLiner(slug, "en")]),
           ),
         }))
         .filter((g) => g.slugs.length > 0),
@@ -47,7 +46,7 @@ export function GuideHubPage() {
                 href={`/guide/${slug}?lang=${lang}`}
                 className="flex min-h-[44px] flex-col justify-center rounded-lg border border-line bg-bg1 px-3.5 py-2.5 transition-colors hover:border-brand-line"
               >
-                <span className="text-sm font-semibold text-brand">{INDUSTRY_GUIDES[slug][lang].label}</span>
+                <span className="text-sm font-semibold text-brand">{guideHubLabel(slug, lang)}</span>
                 <span className="mt-0.5 text-xs leading-relaxed text-txt1">{guideOneLiner(slug, lang)}</span>
               </a>
             ))}
