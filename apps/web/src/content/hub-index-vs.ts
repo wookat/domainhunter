@@ -244,4 +244,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "fyi-vs-info", a: "fyi", b: "info", title: { zh: ".fyi 和 .info 怎么选：轻快速查与正式资料的分工", en: ".fyi vs .info: The Quick Lookup or The Formal Reference" } },
   { slug: "promo-vs-shop", a: "promo", b: "shop", title: { zh: ".promo 和 .shop 怎么选：活动阵地与常设店铺的分工", en: ".promo vs .shop: The Campaign Outpost or The Permanent Storefront" } },
   { slug: "express-vs-store", a: "express", b: "store", title: { zh: ".express 和 .store 怎么选：快服务与常设商店的分工", en: ".express vs .store: Selling Speed or Selling Shelves" } },
+  { slug: "press-vs-news", a: "press", b: "news", title: { zh: ".press 和 .news 怎么选：媒体身份与资讯站的分工", en: ".press vs .news: Editorial Identity or The News Destination" } },
+  { slug: "stream-vs-live", a: "stream", b: "live", title: { zh: ".stream 和 .live 怎么选：流本身与现场感的分工", en: ".stream vs .live: The Stream Itself or The Live Moment" } },
+  { slug: "movie-vs-tv", a: "movie", b: "tv", title: { zh: ".movie 和 .tv 怎么选：单片战役与频道品牌的分工", en: ".movie vs .tv: The Film Campaign or The Channel Brand" } },
+  { slug: "pictures-vs-photos", a: "pictures", b: "photos", title: { zh: ".pictures 和 .photos 怎么选：制片公司范与照片交付的分工", en: ".pictures vs .photos: Studio Pedigree or Photo Delivery" } },
+  { slug: "productions-vs-studio", a: "productions", b: "studio", title: { zh: ".productions 和 .studio 怎么选：接案制作公司与创意小团队的分工", en: ".productions vs .studio: The For-Hire Shop or The Creative Studio" } },
+  { slug: "audio-vs-fm", a: "audio", b: "fm", title: { zh: ".audio 和 .fm 怎么选：声音产业与电台气质的分工", en: ".audio vs .fm: The Sound Industry or The Radio Vibe" } },
 ];

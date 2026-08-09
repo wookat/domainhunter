@@ -420,7 +420,7 @@
     ]
   },
   "vs": {
-    "count": 234,
+    "count": 240,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -655,7 +655,13 @@
       "biz-vs-com",
       "fyi-vs-info",
       "promo-vs-shop",
-      "express-vs-store"
+      "express-vs-store",
+      "press-vs-news",
+      "stream-vs-live",
+      "movie-vs-tv",
+      "pictures-vs-photos",
+      "productions-vs-studio",
+      "audio-vs-fm"
     ]
   }
 }
