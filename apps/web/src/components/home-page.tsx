@@ -5,6 +5,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { ExpiryNote, WatchCta } from "@/components/domain-row";
 import { addRecentSearch, clearRecentSearches, loadRecentSearches, type RecentSearch } from "@/lib/history";
 import { useI18n, type I18nKey } from "@/lib/i18n";
+import { hasSavedSearch } from "@/lib/persist";
 import { toUsd, usePrices } from "@/lib/prices";
 import { REGISTRARS } from "@/lib/registrars";
 import { cn } from "@/lib/utils";
@@ -15,6 +16,7 @@ const EXAMPLES = ["独立开发者的 AI 周报工具", "宠物营养订阅电�
 const EXAMPLES_EN = ["AI weekly-report tool for indie devs", "Pet nutrition subscription store", "Minimal meditation app", "Cross-border SaaS dashboard"];
 const PRESET_TLDS = ["com", "cn", "io", "ai", "app", "dev"];
 const MAX_LEN = 500;
+const ONBOARD_KEY = "dh:onboardDismissed:v1";
 const LABEL_RE = /^[a-z0-9][a-z0-9-]{0,62}$/i;
 const EXACT_DOMAIN_RE = /^([a-z0-9][a-z0-9-]{0,62})\.([a-z0-9-]{2,24})$/i;
 const MULTI_DOMAIN_RE = /^([a-z0-9][a-z0-9-]{0,62})\.([a-z0-9-]{2,24}(?:\.[a-z0-9-]{2,24})+)$/i;
@@ -1410,6 +1412,24 @@ export function HomePage({
 
   // 最近搜索：本地保存，点击回填描述/TLD/风格/长度，不自动运行
   const [recent, setRecent] = useState<RecentSearch[]>(() => loadRecentSearches());
+
+  // 首访轻量引导：老用户（有最近搜索或本标签页已有结果）或已关闭过的不再显示
+  const [showOnboard, setShowOnboard] = useState<boolean>(() => {
+    try {
+      if (localStorage.getItem(ONBOARD_KEY)) return false;
+    } catch {
+      return false;
+    }
+    return loadRecentSearches().length === 0 && !hasSavedSearch();
+  });
+  const dismissOnboard = () => {
+    setShowOnboard(false);
+    try {
+      localStorage.setItem(ONBOARD_KEY, "1");
+    } catch {
+      /* 存储满/隐私模式，忽略 */
+    }
+  };
   const applyRecent = (r: RecentSearch) => {
     setDescription(r.description);
     if (r.tlds.length > 0) setTlds(r.tlds);
@@ -1448,6 +1468,36 @@ export function HomePage({
         <p className="mt-4 text-center text-base text-txt1 md:text-lg">
           {t("home.subtitle")}
         </p>
+
+        {/* 首访轻量引导条：三步怎么用 + quick-check 与 AI 搜索关系一句话，可关闭并记忆 */}
+        {showOnboard && (
+          <div className="relative mt-6 rounded-2xl border border-brand-line/60 bg-brand-dim/20 px-4 py-3.5 pr-12">
+            <button
+              onClick={dismissOnboard}
+              title={t("home.onboard.close")}
+              aria-label={t("home.onboard.close")}
+              className="absolute right-1 top-1 flex h-11 w-11 items-center justify-center rounded-full text-txt2 transition-colors hover:text-txt0"
+            >
+              <X className="h-3.5 w-3.5" />
+            </button>
+            <ol className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+              {(
+                [
+                  { icon: Wand2, key: "home.onboard.step1" },
+                  { icon: SearchCheck, key: "home.onboard.step2" },
+                  { icon: ShieldCheck, key: "home.onboard.step3" },
+                ] as { icon: typeof Wand2; key: I18nKey }[]
+              ).map((s, i) => (
+                <li key={s.key} className="flex min-w-0 items-center gap-2 text-xs text-txt1">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-dim font-mono text-[10px] font-semibold text-brand">{i + 1}</span>
+                  <s.icon className="h-3.5 w-3.5 shrink-0 text-brand" />
+                  <span className="min-w-0">{t(s.key)}</span>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-2.5 border-t border-brand-line/40 pt-2 text-[11px] leading-relaxed text-txt2">{t("home.onboard.note")}</p>
+          </div>
+        )}
 
         <div className="mt-8 flex justify-center">
           <div className="inline-flex items-center gap-1 rounded-full border border-line bg-bg1 p-1" role="group" aria-label={t("home.mode.aria")}>
@@ -1882,15 +1932,25 @@ export function HomePage({
           </div>
         </div>
 
-        <div className="mt-4 flex flex-wrap justify-center gap-2">
-          {(lang === "zh" ? EXAMPLES : EXAMPLES_EN).map((ex) => (
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+          {/* 首访微引导：提示示例可直接点击体验一次完整搜索 */}
+          {showOnboard && (
+            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-brand">
+              <Sparkles className="h-3 w-3" />
+              {t("home.onboard.tryExample")}
+            </span>
+          )}
+          {(lang === "zh" ? EXAMPLES : EXAMPLES_EN).map((ex, i) => (
             <button
               key={ex}
               onClick={() => {
                 setDescription(ex);
                 submit(ex);
               }}
-              className="h-11 rounded-full border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:h-9"
+              className={cn(
+                "h-11 rounded-full border px-3 text-xs transition-colors hover:border-brand-line hover:text-brand sm:h-9",
+                showOnboard && i === 0 ? "border-brand-line/70 bg-brand-dim/30 text-brand" : "border-line text-txt1",
+              )}
             >
               {ex}
             </button>
