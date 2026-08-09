@@ -4344,6 +4344,186 @@ const GUIDES = {
       ],
     },
   },
+  beauty: {
+    tld: "beauty",
+    zh: {
+      title: ".beauty 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".beauty 把「美」写进域名，适合美妆品牌与电商、美容院与皮肤管理、美妆博主与教程站、造型工作室。查看 .beauty 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .beauty 域名。",
+      intro:
+        ".beauty 把美写进域名：美妆品牌与电商、美容院与皮肤管理工作室、美妆博主与教程站、造型与美甲工作室用 name.beauty，行业定位一眼即明——这是「行业词后缀」里指向最清晰的一批。XYZ 注册局运营（旗下还有 .hair、.skin、.makeup 一整套美妆系后缀），大牌背书已有先例：欧莱雅集团就注册过多个 .beauty 域名做品牌活动站。注册约 $2（约 ¥11），续费约 $13/年（约 ¥93）——首年近乎白送，续费也只是温和档，美妆系后缀里性价比最高的一个。库存极好：品牌词、品类词、人名命中率都高。注意三点：一是六个字母不算短，主体名选短词，域名整体才轻盈；二是「beauty」指向美妆美容行业，跨界品牌（如美食、摄影里的「美」）用它需要首屏立刻讲清定位；三是美妆是视觉行业，域名只是入口，站内视觉质感与产品图才是转化关键。命名上「品牌 + .beauty」最自然（等于品牌宣言），本地店用「店名/城市 + .beauty」接住本地搜索，博主用「昵称 + .beauty」个人品牌感十足。",
+      bestFor: ["美妆品牌与电商", "美容院与皮肤管理", "美妆博主与教程站", "造型与美甲工作室"],
+      namingTips: [
+        "「品牌 + .beauty」等于一句品牌宣言",
+        "注册约 $2、续费约 $13/年，美妆系性价比最高",
+        "六个字母不算短，主体名选短词",
+        "跨界用法需要首屏立刻讲清定位",
+      ],
+    },
+    en: {
+      title: ".beauty Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".beauty writes the industry into the address — for beauty brands and e-commerce, salons and skincare studios, beauty creators and styling studios. See live pricing and naming advice, then hunt available .beauty names with AI.",
+      intro:
+        ".beauty writes the industry into the address: beauty brands and e-commerce, salons and skincare studios, beauty creators and tutorial sites, styling and nail studios on name.beauty declare their vertical at first glance — among the clearest industry-word suffixes there are. Operated by XYZ Registry (whose stable also holds .hair, .skin and .makeup — a full beauty family), it already has big-brand precedent: L'Oréal has registered multiple .beauty domains for brand campaigns. About $2 to register and $13/yr to renew — a nearly-free first year and a mild renewal, the best value in the beauty family. Inventory is excellent: brand words, category words and first names all hit. Three cautions: six letters isn't short, so keep the front word compact for a light overall domain; beauty points squarely at the cosmetics-and-care vertical, so crossover uses (beauty in food or photography) must clarify positioning in the hero; and beauty is a visual business — the domain is only the door, on-site imagery and product shots drive conversion. Naming: brand + .beauty is the natural manifesto; local shops catch nearby search as shop or city + .beauty; creators go handle + .beauty for instant personal branding.",
+      bestFor: ["Beauty brands & e-commerce", "Salons & skincare studios", "Beauty creators & tutorial sites", "Styling & nail studios"],
+      namingTips: [
+        "Brand + .beauty reads as a manifesto",
+        "About $2 to register, $13/yr — best value in the family",
+        "Six letters — keep the front word compact",
+        "Crossover uses must clarify positioning fast",
+      ],
+    },
+  },
+  fashion: {
+    tld: "fashion",
+    zh: {
+      title: ".fashion 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".fashion 把「时尚」写进域名，适合服装品牌与买手店、独立设计师、时尚电商与穿搭博主。查看 .fashion 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fashion 域名。",
+      intro:
+        ".fashion 把时尚写进域名：服装品牌与买手店、独立设计师工作室、时尚电商与租赁平台、穿搭博主与造型师用 name.fashion，后缀本身就是行业宣言。它与 .style 的分工在范围——style 泛指风格（家居、生活方式都能用），fashion 专指时装行业，做服装的用 fashion 指向更准。GoDaddy Registry 运营，注册约 $26（约 ¥189），续费约 $26/年（约 ¥189）——注册续费同价，没有低价钩子也没有续费陷阱，预算可以一眼算到底。库存极好：品牌词、风格词、人名命中率都高。注意三点：一是七个字母偏长，主体名务必短，走秀名牌式的简洁才配时尚气质；二是价格从第一年就是全价，试错成本比 $2 档后缀高，适合认真做的品牌而非随手占名；三是时尚行业视觉即正义，域名之外，首屏大图与品牌摄影才是气场来源。命名上「品牌 + .fashion」最自然（设计师品牌标准写法），买手店用「店名 + .fashion」，博主用「昵称 + .fashion」一眼点题。",
+      bestFor: ["服装品牌与买手店", "独立设计师工作室", "时尚电商与租赁平台", "穿搭博主与造型师"],
+      namingTips: [
+        "「品牌 + .fashion」是设计师品牌标准写法",
+        "注册续费同价约 $26/年，预算一眼算到底",
+        "七个字母偏长，主体名务必短",
+        "首年即全价，适合认真做的品牌",
+      ],
+    },
+    en: {
+      title: ".fashion Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".fashion writes the runway into the address — for clothing brands and boutiques, independent designers, fashion e-commerce and style creators. See live pricing and naming advice, then hunt available .fashion names with AI.",
+      intro:
+        ".fashion writes the runway into the address: clothing brands and boutiques, independent designer studios, fashion e-commerce and rental platforms, outfit creators and stylists on name.fashion carry the industry declaration in the suffix itself. The split with .style is scope — style is generic (interiors and lifestyle qualify), fashion means the apparel industry, so clothing businesses aim truer here. Operated by GoDaddy Registry, about $26 to register and $26/yr to renew — the same both ways: no cheap hook, no renewal trap, a budget you can read at a glance. Inventory is excellent: brand words, style words and first names all hit. Three cautions: seven letters is on the long side, so the front word must stay short — runway-label brevity suits the register; full price from year one means a higher cost of experimentation than the $2-tier suffixes, so it fits serious brands rather than casual name-grabs; and fashion is a looks-first business — beyond the domain, hero photography and brand imagery carry the presence. Naming: brand + .fashion is the designer-label standard; boutiques go shop name + .fashion; creators nail it as handle + .fashion.",
+      bestFor: ["Clothing brands & boutiques", "Independent designer studios", "Fashion e-commerce & rental platforms", "Outfit creators & stylists"],
+      namingTips: [
+        "Brand + .fashion is the designer-label standard",
+        "About $26 both ways — budget reads at a glance",
+        "Seven letters — the front word must stay short",
+        "Full price from year one — for serious brands",
+      ],
+    },
+  },
+  work: {
+    tld: "work",
+    zh: {
+      title: ".work 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".work 把「工作」写进域名，适合招聘与求职站、自由职业者作品集、远程办公工具、职业服务与劳务平台。查看 .work 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .work 域名。",
+      intro:
+        ".work 把工作写进域名：招聘与求职站、自由职业者作品集、远程办公与协作工具、职业培训与劳务服务用 name.work，四个字母把「干活」两个字说得干脆利落。英文里「对象 + work」本来就是通顺组合（remote.work、find.work 的语感），动词名词两读，域名读出来就是行动号召。它与 .works 一字之差但分工不同：works 偏「作品集/工程」（studio works），work 偏「工作/职业」本身，招聘与职业服务用单数更点题。GoDaddy Registry 运营，注册约 $2（约 ¥15），续费约 $11/年（约 ¥78）——首年白菜价，续费也是全站最便宜档之一，长期持有毫无压力。库存极好：动词、职业词、平台名命中率都高。注意三点：一是超低价后缀历史上垃圾站比例高，新站要靠真实内容与 HTTPS 快速建立信任；二是「work」语义宽，招聘、工具、劳务都能用，定位要靠主体名收窄；三是四个字母虽短，认知度仍不如 .com，面向大众的正式业务建议同时持有主流后缀。命名上「动词 + .work」最自然（find.work 式行动号召），自由职业者用「人名 + .work」，工具类用「场景 + .work」一眼点题。",
+      bestFor: ["招聘与求职站", "自由职业者作品集", "远程办公与协作工具", "职业培训与劳务服务"],
+      namingTips: [
+        "「动词 + .work」读出来就是行动号召",
+        "注册约 $2、续费约 $11/年，全站最便宜档之一",
+        "与 .works 分工：单数偏职业，复数偏作品",
+        "超低价后缀要靠真实内容建立信任",
+      ],
+    },
+    en: {
+      title: ".work Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".work writes the job into the address — for hiring and job boards, freelancer portfolios, remote-work tools and professional services. See live pricing and naming advice, then hunt available .work names with AI.",
+      intro:
+        ".work writes the job into the address: hiring and job boards, freelancer portfolios, remote-work and collaboration tools, vocational training and staffing services on name.work say \"getting things done\" in four crisp letters. English already pairs it naturally (the remote.work, find.work cadence) — verb or noun, the domain reads out as a call to action. One letter from .works but a different job: works leans portfolio and engineering (studio works), work means employment itself, so hiring and career services aim truer with the singular. Operated by GoDaddy Registry, about $2 to register and $11/yr to renew — a bargain first year and one of the cheapest renewals on this site, painless to hold long-term. Inventory is excellent: verbs, occupation words and platform names all hit. Three cautions: ultra-cheap suffixes historically attract spam, so a new site must earn trust fast with real content and HTTPS; work is semantically broad — hiring, tools and staffing all qualify — so the front word must narrow the positioning; and four letters are short, but recognition still trails .com, so consumer-facing formal businesses should hold a mainstream suffix too. Naming: verb + .work is the natural call to action (the find.work pattern); freelancers go name + .work; tools nail it as scenario + .work.",
+      bestFor: ["Hiring & job boards", "Freelancer portfolios", "Remote-work & collaboration tools", "Vocational training & staffing"],
+      namingTips: [
+        "Verb + .work reads as a call to action",
+        "About $2 to register, $11/yr — among the cheapest",
+        "Singular means employment; .works means portfolio",
+        "Ultra-cheap suffixes must earn trust fast",
+      ],
+    },
+  },
+  sale: {
+    tld: "sale",
+    zh: {
+      title: ".sale 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".sale 把「促销」写进域名，适合促销活动站、折扣电商与清仓频道、二手转卖平台、房产车辆出售页。查看 .sale 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .sale 域名。",
+      intro:
+        ".sale 把促销写进域名：品牌促销活动站、折扣电商与清仓频道、二手转卖平台、房产车辆出售页用 name.sale，域名本身就在喊「特价」。英文里「on sale」「for sale」是妇孺皆知的短语，brand.sale 读出来就是「某某在打折」，营销活动的先天素材——大促季给主站配一个 brand.sale 短域名做活动落地页，比长长的 /promotions 路径好记好投放。Identity Digital 运营，注册约 $4（约 ¥26），续费约 $31/年（约 ¥226）——首年便宜续费中偏上，短期活动用一季即弃毫无压力，长期持有要算清账。库存极好：品牌词、品类词、动词命中率都高。注意三点：一是「sale」自带紧迫感，常年挂着反而稀释促销力度，最适合有明确档期的活动；二是折扣语境与高端定位相冲，奢侈品牌慎用；三是二手与房产场景里「for sale」语义更顺（house.sale 式），面向英文用户零解释成本。命名上「品牌 + .sale」最自然（活动站标准写法），品类站用「品类 + .sale」，出售页用「资产 + .sale」一眼点题。",
+      bestFor: ["品牌促销活动站", "折扣电商与清仓频道", "二手转卖平台", "房产车辆出售页"],
+      namingTips: [
+        "「品牌 + .sale」是大促活动站标准写法",
+        "注册约 $4、续费约 $31/年，短期活动零压力",
+        "自带紧迫感，最适合有明确档期的活动",
+        "折扣语境与高端定位相冲，奢侈品牌慎用",
+      ],
+    },
+    en: {
+      title: ".sale Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".sale writes the discount into the address — for promo campaign sites, outlet e-commerce, resale platforms and for-sale listing pages. See live pricing and naming advice, then hunt available .sale names with AI.",
+      intro:
+        ".sale writes the discount into the address: brand promo campaign sites, outlet e-commerce and clearance channels, resale platforms, property and vehicle listing pages on name.sale shout \"deal\" in the domain itself. English knows on sale and for sale by heart, so brand.sale reads out as \"so-and-so is discounting\" — born campaign material: pairing the main site with a brand.sale landing page each promo season beats a long /promotions path for recall and ad copy. Operated by Identity Digital, about $4 to register and $31/yr to renew — cheap to start, upper-mid to keep, so a one-season campaign domain is painless while long-term holding needs the math. Inventory is excellent: brand words, category words and verbs all hit. Three cautions: sale carries built-in urgency, and flying it year-round dilutes the punch — it fits campaigns with real dates; discount framing clashes with premium positioning, so luxury brands should think twice; and in resale and property contexts the for-sale reading is seamless (the house.sale pattern) — zero explanation cost for English audiences. Naming: brand + .sale is the campaign-site standard; category stores go category + .sale; listings nail it as asset + .sale.",
+      bestFor: ["Brand promo campaign sites", "Outlet e-commerce & clearance", "Resale platforms", "Property & vehicle listings"],
+      namingTips: [
+        "Brand + .sale is the campaign-site standard",
+        "About $4 to register, $31/yr — painless for one season",
+        "Built-in urgency — fits campaigns with real dates",
+        "Discount framing clashes with luxury positioning",
+      ],
+    },
+  },
+  help: {
+    tld: "help",
+    zh: {
+      title: ".help 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".help 把「帮助」写进域名，适合产品帮助中心与文档站、客服与支持入口、公益求助与互助平台、工具教程站。查看 .help 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .help 域名。",
+      intro:
+        ".help 把帮助写进域名：产品帮助中心与文档站、客服与支持入口、公益求助与互助平台、工具教程站用 name.help，用户还没点开就知道「这里能找到答案」。它的经典用法是给品牌配独立帮助域——主站放官网，brand.help 放帮助中心与工单入口，比 support.brand.com 三级域名更短更好记，紧急时用户凭直觉就能拼出来。Internet Naming Co.（原 UNR）运营，注册约 $2（约 ¥11），续费约 $26/年（约 ¥189）——首年近乎白送，续费中档，给现有产品加个帮助域的决策成本极低。库存极好：品牌词、动词、场景词命中率都高。注意三点：一是首年与续费差十倍以上，占名前想清楚是长期资产还是一次性试验；二是「help」承诺即时可用，挂这个域名的页面必须真能解决问题，空转的帮助中心比没有更伤信任；三是公益求助场景里它是天然短语（refugees.help 式），传播零成本但也要防滥用带来的信任折损。命名上「品牌 + .help」最自然（帮助中心标准写法），工具站用「场景 + .help」，公益项目用「对象 + .help」一眼点题。",
+      bestFor: ["产品帮助中心与文档站", "客服与支持入口", "公益求助与互助平台", "工具教程站"],
+      namingTips: [
+        "「品牌 + .help」比三级域名更短更好记",
+        "注册约 $2、续费约 $26/年，差价十倍要想清",
+        "挂 .help 的页面必须真能解决问题",
+        "公益场景是天然短语，传播零成本",
+      ],
+    },
+    en: {
+      title: ".help Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".help writes the answer into the address — for product help centers and docs, support entry points, mutual-aid platforms and tutorial sites. See live pricing and naming advice, then hunt available .help names with AI.",
+      intro:
+        ".help writes the answer into the address: product help centers and docs, customer support entry points, charity and mutual-aid platforms, tool tutorial sites on name.help promise \"answers live here\" before the click. The classic play is the dedicated help domain: keep the main site on the brand domain and put the help center and ticket entry on brand.help — shorter and more memorable than a support.brand.com subdomain, and users can guess it by instinct in a pinch. Operated by Internet Naming Co. (formerly UNR), about $2 to register and $26/yr to renew — a nearly-free first year and a mid-tier renewal, so adding a help domain to an existing product is a low-stakes call. Inventory is excellent: brand words, verbs and scenario words all hit. Three cautions: the 10x-plus gap between first year and renewal means deciding upfront whether this is a long-term asset or a one-off experiment; help promises immediate usefulness — a page on this suffix must actually solve problems, and a hollow help center hurts trust more than none; and in charity contexts it's a natural phrase (the refugees.help pattern) — zero-cost to spread, but watch for the trust erosion abuse brings. Naming: brand + .help is the help-center standard; tools go scenario + .help; charities nail it as cause + .help.",
+      bestFor: ["Product help centers & docs", "Customer support entry points", "Charity & mutual-aid platforms", "Tool tutorial sites"],
+      namingTips: [
+        "Brand + .help beats a support.* subdomain",
+        "About $2 to register, $26/yr — a 10x gap to plan for",
+        "A .help page must actually solve problems",
+        "Natural phrase for charity causes — zero-cost spread",
+      ],
+    },
+  },
+  wedding: {
+    tld: "wedding",
+    zh: {
+      title: ".wedding 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".wedding 把「婚礼」写进域名，适合婚礼请柬与纪念站、婚庆策划与场地、婚纱摄影与礼服、婚礼跟拍团队。查看 .wedding 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .wedding 域名。",
+      intro:
+        ".wedding 把婚礼写进域名：新人的电子请柬与纪念站、婚庆策划公司与场地、婚纱摄影与礼服租售、婚礼跟拍与主持团队用 name.wedding，后缀一出场就自带喜气。它与 .love 的分工在场景——love 是情感大词（求婚、纪念、公益都能用），wedding 专指婚礼这件事，婚庆行业与新人请柬用它更点题：names.wedding 读出来就是「某某的婚礼」，请柬域名的天花板写法。GoDaddy Registry 运营，注册约 $26（约 ¥189），续费约 $26/年（约 ¥189）——注册续费同价，成本透明。库存极好：新人姓名组合、公司名、城市词命中率都高。注意三点：一是七个字母偏长，两人姓名组合要选短的拼法，域名整体才轻盈；二是新人纪念站有「档期」，婚礼过后要么续费做成永久纪念页，要么果断放手，别让带着两人名字的域名过期流入市场；三是婚庆是本地强需求行业，「城市 + .wedding」能接住本地搜索红利。命名上「两人名字 + .wedding」最自然（请柬标准写法），婚庆公司用「品牌 + .wedding」，场地与服务用「城市/场景 + .wedding」一眼点题。",
+      bestFor: ["婚礼请柬与纪念站", "婚庆策划与场地", "婚纱摄影与礼服", "婚礼跟拍与主持团队"],
+      namingTips: [
+        "「两人名字 + .wedding」是请柬标准写法",
+        "注册续费同价约 $26/年，成本透明",
+        "七个字母偏长，姓名组合选短拼法",
+        "婚礼过后要么做成纪念页要么果断放手",
+      ],
+    },
+    en: {
+      title: ".wedding Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".wedding writes the big day into the address — for invitation and keepsake sites, planners and venues, bridal photography and wedding crews. See live pricing and naming advice, then hunt available .wedding names with AI.",
+      intro:
+        ".wedding writes the big day into the address: couples' digital invitations and keepsake sites, wedding planners and venues, bridal photography and dress studios, videography and MC crews on name.wedding arrive with the celebration built in. The split with .love is scope — love is the broad emotion (proposals, tributes, charities all qualify), wedding means the event itself, so the wedding industry and couples' invitations aim truer here: names.wedding reads out as \"so-and-so's wedding\", the ceiling pattern for invitation domains. Operated by GoDaddy Registry, about $26 to register and $26/yr to renew — the same both ways, transparent cost. Inventory is excellent: couples' name pairs, company names and city words all hit. Three cautions: seven letters is on the long side, so pick the shorter spelling of a name pair to keep the domain light; keepsake sites have a date — after the day, either renew into a permanent keepsake page or let go deliberately, and never let a domain carrying two names lapse onto the open market; and weddings are a fiercely local business, so city + .wedding catches a real local-search dividend. Naming: couple's names + .wedding is the invitation standard; planners go brand + .wedding; venues and services nail it as city or scene + .wedding.",
+      bestFor: ["Invitation & keepsake sites", "Wedding planners & venues", "Bridal photography & dress studios", "Videography & MC crews"],
+      namingTips: [
+        "Couple's names + .wedding is the invitation standard",
+        "About $26 both ways — transparent cost",
+        "Seven letters — pick the shorter name spelling",
+        "After the day: keepsake page or deliberate letting go",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
