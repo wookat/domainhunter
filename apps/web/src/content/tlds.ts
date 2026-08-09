@@ -5784,6 +5784,186 @@ const GUIDES = {
       ],
     },
   },
+  ltd: {
+    tld: "ltd",
+    zh: {
+      title: ".ltd 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ltd 把「有限公司」写进域名，适合中小企业与有限公司官网、创业公司品牌站、咨询与专业服务公司、集团子公司与新业务线。查看 .ltd 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ltd 域名。",
+      intro:
+        ".ltd 把公司抬头写进域名：中小企业与有限公司官网、创业公司品牌站、咨询与专业服务公司、集团子公司与新业务线用 name.ltd，「我们是正经注册的公司」从地址就说清了。ltd 是 limited（有限公司）的全球通用缩写——英联邦与中国的公司名里天天见，「公司名 + .ltd」与营业执照上的抬头天然对齐，比杂牌后缀更像官网；对 .com 被占的公司名，.ltd 是语义最贴的替代之一。注册局为 Identity Digital，注册约 $6（约 ¥41），续费约 $25/年（约 ¥182）——首年低价、续费温和档，公司官网长期持有无压力。库存极好：公司名、行业词、拼音组合几乎都有货。注意三点：一是美国公司更习惯 .llc / .inc 抬头，主打美国市场可对比 .llc；二是 .ltd 语义就是「公司官网」，内容站与个人项目用它反而别扭；三是与已收录 .company 的分工——.company 更泛更长，.ltd 更短更像注册抬头。命名上「公司名 + .ltd」是标准款，「品牌 + .ltd」适合创业公司主站，「业务线 + .ltd」适合集团子公司与新业务独立站。",
+      bestFor: ["中小企业与有限公司官网", "创业公司品牌站", "咨询与专业服务公司", "集团子公司与新业务线"],
+      namingTips: [
+        "「公司名 + .ltd」与营业执照抬头天然对齐",
+        "首年约 $6、续费约 $25/年，长期持有无压力",
+        "主打美国市场可对比 .llc / .inc 抬头",
+        ".company 更泛更长，.ltd 更短更像注册抬头",
+      ],
+    },
+    en: {
+      title: ".ltd Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ltd writes the company into the address — for SME and limited-company sites, startup brand homes, consulting and professional-services firms, and group subsidiaries and new business lines. See live pricing and naming advice, then hunt available .ltd names with AI.",
+      intro:
+        ".ltd writes the letterhead into the address: SME and limited-company sites, startup brand homes, consulting and professional-services firms, group subsidiaries and new business lines on name.ltd say we are a properly registered company in the domain itself. ltd is the global shorthand for limited company — it appears in company names across the Commonwealth and beyond, so company name + .ltd lines up naturally with the legal name on the certificate and reads like an official site where a generic suffix wouldn't; when the .com is taken, .ltd is one of the most on-brand fallbacks for a company name. Operated by Identity Digital, about $6 to register and $25/yr to renew — a cheap first year with a mild renewal, painless for a company site to hold long-term. Inventory is excellent: company names, trade words and name combinations nearly all hit. Three cautions: US companies lean .llc or .inc, so America-facing brands should compare .llc; .ltd means company site, so content projects and personal pages read awkward on it; and split the work with the already-listed .company — .company is broader and longer, .ltd is shorter and closer to the legal letterhead. Naming: company name + .ltd is the standard; brand + .ltd fits startup main sites; business line + .ltd fits group subsidiaries and spin-offs.",
+      bestFor: ["SME & limited-company sites", "Startup brand homes", "Consulting & professional-services firms", "Group subsidiaries & new business lines"],
+      namingTips: [
+        "Company name + .ltd matches the legal letterhead",
+        "About $6 year one, $25/yr renewal — easy to hold",
+        "America-facing brands should compare .llc or .inc",
+        ".company reads broader; .ltd reads like the certificate",
+      ],
+    },
+  },
+  biz: {
+    tld: "biz",
+    zh: {
+      title: ".biz 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".biz 把「生意」写进域名，适合中小企业与本地商家官网、外贸与 B2B 业务站、副业与个体经营项目、企业信息与联系页。查看 .biz 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .biz 域名。",
+      intro:
+        ".biz 把生意写进域名：中小企业与本地商家官网、外贸与 B2B 业务站、副业与个体经营项目、企业信息与联系页用 name.biz，「这里做生意」从地址就说清了。.biz 是 2001 年就开放的老牌 gTLD——比一众新顶级域早十几年，全球注册商与邮箱系统支持度拉满，认知稳定不怕「这是什么后缀」的疑问；business 的缩写语义对外贸与 B2B 尤其直白，海外客户一眼读懂。注册局为 GoDaddy Registry（原 Neustar），注册约 $7（约 ¥48），续费约 $19/年（约 ¥137）——注册续费都在温和档，是本批公司类后缀里长期成本最低的。库存极好：.com 里早被占光的短公司名、行业词在 .biz 大量有货。注意三点：一是 .biz 早年被垃圾邮件站用得多，信任分低于 .com，正经官网内容与 HTTPS 要跟上；二是它气质偏「实用生意」而非「品牌调性」，融资导向的创业公司更适合 .co / .ltd；三是与已收录 .company 的分工——正式公司抬头用 .company / .ltd，个体生意与副业项目用 .biz 更轻。命名上「公司名 + .biz」是标准款，「行业词 + .biz」适合外贸与 B2B 获客站，「人名 + .biz」适合个体经营与副业项目。",
+      bestFor: ["中小企业与本地商家官网", "外贸与 B2B 业务站", "副业与个体经营项目", "企业信息与联系页"],
+      namingTips: [
+        "「公司名/行业词 + .biz」直白接住生意语义",
+        "注册约 $7、续费约 $19/年，长期成本极低",
+        "早年垃圾站拉低信任分，内容与 HTTPS 要跟上",
+        "品牌调性用 .co/.ltd，实用生意用 .biz 更轻",
+      ],
+    },
+    en: {
+      title: ".biz Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".biz writes the business into the address — for SME and local-business sites, trade and B2B ventures, side businesses and sole proprietors, and company info and contact pages. See live pricing and naming advice, then hunt available .biz names with AI.",
+      intro:
+        ".biz writes the business into the address: SME and local-business sites, trade and B2B ventures, side businesses and sole proprietors, company info and contact pages on name.biz say this is where business gets done in the domain itself. .biz is a 2001-vintage gTLD — live more than a decade before the new-TLD wave, with universal registrar and email support and none of the what suffix is that hesitation; the business shorthand reads instantly to overseas clients, which suits trade and B2B especially well. Operated by GoDaddy Registry (the former Neustar), about $7 to register and $19/yr to renew — mild tier both years, the cheapest long-term hold among company-style suffixes. Inventory is excellent: short company names and trade words long gone on .com are widely open on .biz. Three cautions: early spam abuse left .biz with less trust than .com, so serious sites need real content and HTTPS to carry it; its vibe is practical business rather than brand polish — funding-track startups read better on .co or .ltd; and split the work with the already-listed .company — formal letterheads fit .company or .ltd, solo ventures and side businesses travel lighter on .biz. Naming: company name + .biz is the standard; trade word + .biz fits B2B lead-gen sites; personal name + .biz fits sole proprietors and side projects.",
+      bestFor: ["SME & local-business sites", "Trade & B2B ventures", "Side businesses & sole proprietors", "Company info & contact pages"],
+      namingTips: [
+        "Company or trade word + .biz reads business instantly",
+        "About $7 year one, $19/yr renewal — cheapest to hold",
+        "Early spam history: real content and HTTPS carry trust",
+        "Brand polish fits .co/.ltd; practical business fits .biz",
+      ],
+    },
+  },
+  llc: {
+    tld: "llc",
+    zh: {
+      title: ".llc 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".llc 把「美国 LLC」写进域名，适合美国注册的 LLC 公司官网、跨境电商美国主体站、创业公司与合伙企业、自由职业者公司化品牌。查看 .llc 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .llc 域名。",
+      intro:
+        ".llc 把公司实体写进域名：美国注册的 LLC 公司官网、跨境电商美国主体站、创业公司与合伙企业、自由职业者公司化品牌用 name.llc，「我们是正经注册的 LLC」从地址就说清了。LLC（有限责任公司）是美国最常见的公司形态——跨境卖家开美国主体、独立开发者接美元收款都绕不开它，「公司名 + .llc」与注册文件上的抬头一字不差，对美国客户与平台审核尤其有说服力；.com 被占时它是公司站语义最准的替代。注册局为 Identity Digital，注册约 $11（约 ¥78），续费约 $35/年（约 ¥248）——中档价位，正经经营的公司持有无压力。库存极好：公司名、创始人姓氏、行业词几乎都有货。注意三点：一是后缀语义强绑定美国 LLC 形态，没注册 LLC 的主体用它容易名实不符，先落地注册再上域名；二是同类的 .inc 注册续费超 $250/年 贵一个数量级，预算内 .llc 是更现实的抬头后缀；三是与本批 .ltd 的分工——英联邦/中国语境的有限公司用 .ltd，美国 LLC 用 .llc，按注册地选。命名上「公司名 + .llc」是标准款，「姓氏 + .llc」适合家族与合伙企业，「品牌 + .llc」适合跨境电商美国主体站。",
+      bestFor: ["美国注册的 LLC 公司官网", "跨境电商美国主体站", "创业公司与合伙企业", "自由职业者公司化品牌"],
+      namingTips: [
+        "「公司名 + .llc」与注册文件抬头一字不差",
+        "注册约 $11、续费约 $35/年，中档持有无压力",
+        "先注册 LLC 再上域名，避免名实不符",
+        "英联邦有限公司用 .ltd，美国 LLC 用 .llc",
+      ],
+    },
+    en: {
+      title: ".llc Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".llc writes the entity into the address — for registered LLC company sites, cross-border sellers with US entities, startups and partnerships, and freelancers going corporate. See live pricing and naming advice, then hunt available .llc names with AI.",
+      intro:
+        ".llc writes the entity into the address: registered LLC company sites, cross-border sellers with US entities, startups and partnerships, freelancers going corporate on name.llc say we are a properly formed LLC in the domain itself. The LLC is America's default company form — cross-border sellers opening US entities and indie developers billing in dollars all end up with one, and company name + .llc matches the formation papers letter for letter, which lands especially well with US clients and platform reviews; when the .com is taken it is the most on-point fallback for a company site. Operated by Identity Digital, about $11 to register and $35/yr to renew — mid tier, painless for an operating company to hold. Inventory is excellent: company names, founder surnames and trade words nearly all hit. Three cautions: the suffix is tightly bound to the US LLC form — using it without an actual LLC invites a mismatch, so form the entity first; the sibling .inc runs past $250/yr, an order of magnitude dearer, making .llc the realistic letterhead suffix on a budget; and split the work with this batch's .ltd — Commonwealth-style limited companies fit .ltd, US LLCs fit .llc, pick by where you're registered. Naming: company name + .llc is the standard; surname + .llc fits family firms and partnerships; brand + .llc fits cross-border sellers' US-entity sites.",
+      bestFor: ["Registered LLC company sites", "Cross-border sellers with US entities", "Startups & partnerships", "Freelancers going corporate"],
+      namingTips: [
+        "Company name + .llc matches the formation papers",
+        "About $11 year one, $35/yr renewal — mid-tier hold",
+        "Form the LLC first; the suffix implies the entity",
+        "Commonwealth firms fit .ltd; US LLCs fit .llc",
+      ],
+    },
+  },
+  fyi: {
+    tld: "fyi",
+    zh: {
+      title: ".fyi 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".fyi 把「供你参考」写进域名，适合产品文档与帮助中心、行业资讯与科普站、更新日志与状态页、指南与速查手册站。查看 .fyi 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fyi 域名。",
+      intro:
+        ".fyi 把「供你参考」写进域名：产品文档与帮助中心、行业资讯与科普站、更新日志与状态页、指南与速查手册站用 name.fyi，「进来看信息」从地址就说清了。fyi（for your information）是英文里最日常的信息前缀——docs.fyi、changelog.fyi 这类组合读起来就是一句话，比杂牌后缀更有「轻快信息站」的气质；对主站在 .com 的产品，用 .fyi 挂文档与状态页还能天然区分主站与信息站的定位。注册局为 Identity Digital，注册约 $6（约 ¥41），续费约 $6/年（约 ¥41）——注册续费同价且都是白菜档，无「首年低价钓鱼」问题，是本批里最省心的长期持有。库存极好：话题词、产品词、动词短语几乎都有货。注意三点：一是语义就是「轻量信息」，公司官网与电商主站用它撑不起正式感；二是 fyi 是英文缩写，纯中文受众站点要在页面说清定位；三是与已收录 .info / .wiki 的分工——正式信息站用 .info，协作知识库用 .wiki，轻快速查与文档用 .fyi 更俏。命名上「话题词 + .fyi」直接接住科普与速查搜索，「产品名 + .fyi」适合文档与更新日志站，「动词短语 + .fyi」适合工具化的信息查询站。",
+      bestFor: ["产品文档与帮助中心", "行业资讯与科普站", "更新日志与状态页", "指南与速查手册站"],
+      namingTips: [
+        "「话题词/产品名 + .fyi」直接接住速查搜索",
+        "注册续费同价约 $6/年，本批最省心的长期持有",
+        "语义偏轻量信息，公司主站用 .ltd/.com 更正式",
+        "正式信息用 .info，知识库用 .wiki，速查用 .fyi",
+      ],
+    },
+    en: {
+      title: ".fyi Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".fyi writes the heads-up into the address — for product docs and help centers, industry explainers and info sites, changelogs and status pages, and guides and cheat-sheet sites. See live pricing and naming advice, then hunt available .fyi names with AI.",
+      intro:
+        ".fyi writes the heads-up into the address: product docs and help centers, industry explainers and info sites, changelogs and status pages, guides and cheat-sheet sites on name.fyi say come here for the facts in the domain itself. fyi is everyday English for for your information — combinations like docs.fyi or changelog.fyi read as a sentence, with a light informational vibe a generic suffix can't match; products living on .com can hang docs and status pages on .fyi and get a natural split between the main site and the info site. Operated by Identity Digital, about $6 to register and $6/yr to renew — flat bargain pricing with no first-year teaser, the most carefree long-term hold in this batch. Inventory is excellent: topic words, product names and verb phrases nearly all hit. Three cautions: the semantics are light information, so company homepages and storefronts can't lean on it for formality; fyi is an English abbreviation, so purely non-English audiences may need the positioning spelled out on the page; and split the work with the already-listed .info and .wiki — formal reference fits .info, collaborative knowledge bases fit .wiki, quick lookups and docs read snappier on .fyi. Naming: topic + .fyi catches explainer and lookup searches directly; product name + .fyi fits docs and changelog sites; verb phrase + .fyi fits tool-style lookup sites.",
+      bestFor: ["Product docs & help centers", "Industry explainers & info sites", "Changelogs & status pages", "Guides & cheat-sheet sites"],
+      namingTips: [
+        "Topic or product + .fyi catches lookup searches",
+        "Flat $6 to register and renew — carefree to hold",
+        "Light info vibe — main company sites fit .ltd/.com",
+        "Reference fits .info, wikis fit .wiki, lookups fit .fyi",
+      ],
+    },
+  },
+  promo: {
+    tld: "promo",
+    zh: {
+      title: ".promo 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".promo 把「促销」写进域名，适合促销活动落地页、优惠码与折扣聚合站、品牌 campaign 微站、达人带货与联盟推广页。查看 .promo 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .promo 域名。",
+      intro:
+        ".promo 把促销写进域名：促销活动落地页、优惠码与折扣聚合站、品牌 campaign 微站、达人带货与联盟推广页用 name.promo，「这里有优惠」从地址就说清了。促销页的转化第一眼就定生死——「品牌 + .promo」比一长串带参数的活动 URL 更好记好读，印在海报与短视频口播里都顺；优惠码聚合与联盟推广站用品类后缀，域名主体留给品牌或品类词，语义零浪费。注册局为 Identity Digital，注册约 $11（约 ¥78），续费约 $20/年（约 ¥145）——温和档，长期运营的优惠站持有无压力。库存极好：品牌词、品类词、动词短语几乎都有货。注意三点：一是促销语义强，公司主站与产品官网用它撑不起长期品牌，适合作为主站之外的活动阵地；二是营销类后缀在部分邮箱过滤器眼里更敏感，发促销邮件用主域名发、.promo 只做落地页更稳；三是与已收录 .sale 的分工——长期折扣频道用 .sale，短期 campaign 与优惠码阵地用 .promo 更准。命名上「品牌 + .promo」是 campaign 微站标准款，「品类 + .promo」适合优惠聚合站，「达人名 + .promo」适合带货与联盟推广页。",
+      bestFor: ["促销活动落地页", "优惠码与折扣聚合站", "品牌 campaign 微站", "达人带货与联盟推广页"],
+      namingTips: [
+        "「品牌 + .promo」比带参数活动 URL 更好记",
+        "注册约 $11、续费约 $20/年，长期持有无压力",
+        "促销邮件用主域发，.promo 只做落地页更稳",
+        "长期折扣频道用 .sale，短期 campaign 用 .promo",
+      ],
+    },
+    en: {
+      title: ".promo Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".promo writes the offer into the address — for promotion landing pages, coupon and discount aggregators, brand campaign microsites, and creator and affiliate promo pages. See live pricing and naming advice, then hunt available .promo names with AI.",
+      intro:
+        ".promo writes the offer into the address: promotion landing pages, coupon and discount aggregators, brand campaign microsites, creator and affiliate promo pages on name.promo say the deal lives here in the domain itself. Promo pages convert or die on the first glance — brand + .promo beats a long parameter-laden campaign URL for memorability, and reads clean on posters and in short-video call-outs; coupon aggregators and affiliate pages get the category from the suffix and keep the name for the brand or niche, zero semantic waste. Operated by Identity Digital, about $11 to register and $20/yr to renew — mild tier, painless for a long-running deals site to hold. Inventory is excellent: brand words, niche words and verb phrases nearly all hit. Three cautions: the promo semantics run hot — company homepages and product sites can't build a lasting brand on it, so treat it as the campaign outpost beside the main site; marketing suffixes get extra scrutiny from some mail filters, so send promo email from the main domain and keep .promo for landing pages; and split the work with the already-listed .sale — a permanent discount channel fits .sale, short campaigns and coupon hubs read truer on .promo. Naming: brand + .promo is the campaign-microsite standard; niche + .promo fits coupon aggregators; creator name + .promo fits affiliate and shoutout pages.",
+      bestFor: ["Promotion landing pages", "Coupon & discount aggregators", "Brand campaign microsites", "Creator & affiliate promo pages"],
+      namingTips: [
+        "Brand + .promo beats parameter-laden campaign URLs",
+        "About $11 year one, $20/yr renewal — easy to hold",
+        "Send email from the main domain; land on .promo",
+        "Permanent deals fit .sale; campaigns fit .promo",
+      ],
+    },
+  },
+  express: {
+    tld: "express",
+    zh: {
+      title: ".express 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".express 把「快」写进域名，适合快递与同城配送、跨境物流与货代、上门快修快洗服务、主打速度的工具产品。查看 .express 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .express 域名。",
+      intro:
+        ".express 把速度写进域名：快递与同城配送、跨境物流与货代、上门快修快洗服务、主打速度的工具产品用 name.express，「快」的承诺从地址就说清了。express 在全球物流业是刻进行业名的词——顺丰速运、联邦快递的英文名里都有它，「城市/品牌 + .express」对快递与货代就是行业标准式命名；对强调「立等可取」的上门服务与「秒出结果」的工具产品，后缀本身就是卖点陈述。注册局为 Identity Digital，注册约 $9（约 ¥67），续费约 $31/年（约 ¥226）——首年低价、续费中档，正经经营的服务商持有无压力。库存极好：城市词、线路词、品牌词几乎都有货。注意三点：一是 express 一词多义（快递/特快/表达），页面首屏要说清做的是哪门生意；二是续费 ¥226/年 对纯玩票项目略有分量，按续费价核算预算；三是与已收录 .taxi / .tools 的分工——出行调度用 .taxi，通用工具用 .tools，主打「快」的配送与服务用 .express 更准。命名上「城市 + .express」直接接住同城配送搜索，「线路词 + .express」适合跨境物流与货代，「品牌 + .express」适合上门服务与速度型工具。",
+      bestFor: ["快递与同城配送", "跨境物流与货代", "上门快修快洗服务", "主打速度的工具产品"],
+      namingTips: [
+        "「城市/线路 + .express」是物流行业标准式命名",
+        "首年约 $9、续费约 $31/年，按续费价做预算",
+        "express 一词多义，首屏说清做的是哪门生意",
+        "出行用 .taxi，工具用 .tools，快服务用 .express",
+      ],
+    },
+    en: {
+      title: ".express Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".express writes the speed into the address — for courier and local delivery services, cross-border logistics and freight forwarders, on-demand repair and cleaning services, and speed-first tool products. See live pricing and naming advice, then hunt available .express names with AI.",
+      intro:
+        ".express writes the speed into the address: courier and local delivery services, cross-border logistics and freight forwarders, on-demand repair and cleaning services, speed-first tool products on name.express make the fast promise in the domain itself. express is baked into the logistics industry's own names — FedEx and half the world's couriers carry the word — so city or brand + .express is the standard naming pattern for delivery and freight; for while-you-wait services and instant-result tools the suffix is the pitch itself. Operated by Identity Digital, about $9 to register and $31/yr to renew — a cheap first year with a mid renewal, painless for an operating service to hold. Inventory is excellent: city words, route words and brand words nearly all hit. Three cautions: express carries several senses (courier, fast, expression), so the hero section should say which business this is; $31/yr has some weight for a hobby project — budget on the renewal price; and split the work with the already-listed .taxi and .tools — ride dispatch fits .taxi, general utilities fit .tools, speed-first delivery and services read truer on .express. Naming: city + .express catches local-delivery searches directly; route word + .express fits cross-border logistics and forwarders; brand + .express fits on-demand services and speed-first tools.",
+      bestFor: ["Courier & local delivery services", "Cross-border logistics & freight forwarders", "On-demand repair & cleaning services", "Speed-first tool products"],
+      namingTips: [
+        "City or route + .express is the logistics standard",
+        "About $9 year one, $31/yr renewal — budget on renewal",
+        "Express has many senses — say which on the hero",
+        "Rides fit .taxi, utilities fit .tools, speed fits here",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

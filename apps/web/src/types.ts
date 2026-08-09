@@ -296,6 +296,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   football: { first: 78, renew: 152 },
   hockey: { first: 59, renew: 345 },
   surf: { first: 11, renew: 189 },
+  ltd: { first: 41, renew: 182 },
+  biz: { first: 48, renew: 137 },
+  llc: { first: 78, renew: 248 },
+  fyi: { first: 41, renew: 41 },
+  promo: { first: 78, renew: 145 },
+  express: { first: 67, renew: 226 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
