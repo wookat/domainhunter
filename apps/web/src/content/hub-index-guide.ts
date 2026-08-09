@@ -228,4 +228,10 @@ export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized 
   { slug: "equestrian", label: { zh: "马术俱乐部", en: "Equestrian clubs" }, oneLiner: { zh: "马术俱乐部命名指南：骑士传统、马房意象、会籍身份感等 5 种思路。", en: "Equestrian naming guide: riding heritage, stable imagery, membership identity." } },
   { slug: "archery", label: { zh: "射箭馆", en: "Archery ranges" }, oneLiner: { zh: "射箭馆命名指南：命中意象、武侠借词、专注气质等 5 种思路。", en: "Archery naming guide: bullseye imagery, legend borrowings, focus-and-zen framing." } },
   { slug: "immigration", label: { zh: "移民咨询", en: "Immigration consulting" }, oneLiner: { zh: "移民咨询命名指南：跨越意象、专业信任、无边界叙事等 5 种思路。", en: "Immigration consulting naming guide: crossing imagery, professional trust." } },
+  { slug: "deli", label: { zh: "卤味熟食", en: "Deli & braised food" }, oneLiner: { zh: "卤味熟食命名指南：滋味词根、老卤故事、单品旗帜等 5 种思路。", en: "Deli and braised-food naming guide: flavor roots, master-broth heritage." } },
+  { slug: "winery", label: { zh: "精品酒庄", en: "Boutique wineries" }, oneLiner: { zh: "酒庄命名指南：风土词根、家族背书、酒标画面等 5 种思路。", en: "Winery naming guide: terroir roots, family endorsement, label imagery." } },
+  { slug: "sushi", label: { zh: "日料餐厅", en: "Sushi & Japanese dining" }, oneLiner: { zh: "日料店命名指南：和风词根、匠人叙事、鲜度暗示等 5 种思路。", en: "Sushi restaurant naming guide: Japanese aesthetic roots, chef narrative." } },
+  { slug: "icecream", label: { zh: "冰淇淋品牌", en: "Ice cream brands" }, oneLiner: { zh: "冰淇淋命名指南：快乐音节、异域造词、创始人温度等 5 种思路。", en: "Ice cream naming guide: joyful phonetics, exotic coinages, founder warmth." } },
+  { slug: "hostel", label: { zh: "青年旅舍", en: "Hostels" }, oneLiner: { zh: "青旅命名指南：相遇词根、在地故事、社群气质等 5 种思路。", en: "Hostel naming guide: gathering roots, local stories, community vibes." } },
+  { slug: "bowling", label: { zh: "保龄球馆", en: "Bowling alleys" }, oneLiner: { zh: "保龄球馆命名指南：全中词根、复古潮流、聚会能量等 5 种思路。", en: "Bowling alley naming guide: strike roots, retro-cool imagery, party energy." } },
 ];

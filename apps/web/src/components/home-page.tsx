@@ -1599,6 +1599,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个移民咨询与身份规划品牌，寓意「专业的人替你走通此岸到彼岸」；气质要稳重专业有国际格局、绝不像街边中介柜台、更不暗示保过特批；场景是官网署名、方案书封面和家庭饭桌上「我找的是 XX」的反复讨论里都立得住。",
     en: "An immigration consulting and identity-planning brand. The name should promise professionals walking you from this shore to the other; the vibe is steady, credentialed and globally minded, never a street-agent counter and never hinting at guaranteed approval; it must hold up on official filings, proposal covers, and the family dinner-table's repeated \"I went with X\".",
   },
+  {
+    slug: "deli",
+    labelZh: "卤味熟食",
+    labelEn: "Deli & braised food",
+    zh: "一个卤味熟食品牌，寓意「一锅老卤的滋味，下班路上顺手的那份好味」；气质要有食欲有烟火气、又接得住礼盒与电商的体面、绝不像临时摊位；场景是档口招牌、外卖平台缩略图和「下班带一份 XX」的口头指令里都立得住。",
+    en: "A deli and braised-food brand. The name should evoke a master broth's depth and the easy pick-up on the way home; the vibe is appetizing and warmly street-smart, yet dignified enough for gift boxes and e-commerce, never a pop-up stall; it must hold up on the stall signboard, in delivery-app thumbnails, and in the daily \"grab some X on the way home\".",
+  },
+  {
+    slug: "winery",
+    labelZh: "精品酒庄",
+    labelEn: "Boutique winery",
+    zh: "一个精品酒庄与葡萄酒品牌，寓意「一方风土酿进一瓶酒」；气质要有庄园分量与家族质感、经得起酒标与拍卖图录、绝不山寨欧陆城堡；场景是酒标、酒单和「上次那瓶 XX 不错」的餐桌复述里都立得住。",
+    en: "A boutique winery and wine brand. The name should evoke one terroir aged into one bottle; the vibe carries estate weight and family texture, worthy of the label and the auction catalogue, never a knockoff château; it must hold up on wine labels, wine lists, and the dinner-table's \"that bottle of X was good\".",
+  },
+  {
+    slug: "sushi",
+    labelZh: "日料餐厅",
+    labelEn: "Sushi restaurant",
+    zh: "一家日料餐厅与寿司品牌，寓意「板前的安静与食材的新鲜」；气质要有匠气与留白、克制而不堆砌和风符号、绝不像游客店；场景是商场门头、点评榜单和「今晚吃日料去 XX」的提名里都立得住。",
+    en: "A sushi restaurant and Japanese-dining brand. The name should evoke the hush of the counter and the freshness of the catch; the vibe is artisanal with quiet restraint, never a pile of tourist-trap symbols; it must hold up on the mall facade, in review rankings, and in tonight's \"let's do Japanese at X\".",
+  },
+  {
+    slug: "icecream",
+    labelZh: "冰淇淋品牌",
+    labelEn: "Ice cream brand",
+    zh: "一个冰淇淋与甜品站品牌，寓意「一口化开的快乐」；气质要轻快上镜有甜感、经得起橱窗与九宫格照片、绝不甜腻廉价；场景是橱窗招牌、便利店冰柜贴纸和社交软件晒图里都立得住。",
+    en: "An ice cream and dessert brand. The name should evoke joy that melts on the tongue; the vibe is light, photogenic and sweet without being saccharine or cheap; it must hold up on the shop window, on freezer-door stickers, and in social-media photo grids.",
+  },
+  {
+    slug: "hostel",
+    labelZh: "青年旅舍",
+    labelEn: "Hostel",
+    zh: "一个青年旅舍与背包客栈品牌，寓意「一张床位之外的相遇」；气质要轻盈有故事、酷而不端着、绝不像挂牌大酒店；场景是预订平台列表、攻略帖和大堂酒吧里「你也住这家？」的搭话里都立得住。",
+    en: "A hostel and backpacker-lodge brand. The name should promise encounters beyond the bunk; the vibe is light, storied and cool without posing, never a plaque-heavy grand hotel; it must hold up in booking-platform listings, travel threads, and the lobby-bar's \"you're staying here too?\".",
+  },
+  {
+    slug: "bowling",
+    labelZh: "保龄球馆",
+    labelEn: "Bowling alley",
+    zh: "一个保龄球馆与聚会娱乐品牌，寓意「全中一刻的脆响与满堂欢呼」；气质要有命中感与复古潮流味、托得住生日会团建与约会、绝不像过时电玩城；场景是商场导览屏、团建平台列表和「周五去 XX 打一局」的群消息里都立得住。",
+    en: "A bowling alley and social-entertainment brand. The name should evoke the crack of a strike and the cheer that follows; the vibe is hit-energized and retro-cool, holding birthdays, team outings and dates, never a dated arcade; it must hold up on mall directories, team-outing platforms, and the \"bowling at X this Friday?\" group chat.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
