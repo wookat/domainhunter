@@ -390,7 +390,7 @@
     ]
   },
   "vs": {
-    "count": 216,
+    "count": 222,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -607,7 +607,13 @@
       "fit-vs-fitness",
       "dance-vs-studio",
       "guide-vs-tips",
-      "reviews-vs-blog"
+      "reviews-vs-blog",
+      "golf-vs-club",
+      "tennis-vs-coach",
+      "soccer-vs-football",
+      "hockey-vs-team",
+      "surf-vs-fun",
+      "golf-vs-travel"
     ]
   }
 }

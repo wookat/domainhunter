@@ -226,4 +226,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "dance-vs-studio", a: "dance", b: "studio", title: { zh: ".dance 和 .studio 怎么选：舞种锐度与创作空间的分工", en: ".dance vs .studio: The Dance Lane or The Creative Room" } },
   { slug: "guide-vs-tips", a: "guide", b: "tips", title: { zh: ".guide 和 .tips 怎么选：成体系攻略与轻量技巧的分工", en: ".guide vs .tips: The Full Walkthrough or The Quick Trick" } },
   { slug: "reviews-vs-blog", a: "reviews", b: "blog", title: { zh: ".reviews 和 .blog 怎么选：评测立场与写作阵地的分工", en: ".reviews vs .blog: The Verdict Stand or The Writing Home" } },
+  { slug: "golf-vs-club", a: "golf", b: "club", title: { zh: ".golf 和 .club 怎么选：球场品类与社群归属的分工", en: ".golf vs .club: The Course Category or The Member Circle" } },
+  { slug: "tennis-vs-coach", a: "tennis", b: "coach", title: { zh: ".tennis 和 .coach 怎么选：项目招牌与职业身份的分工", en: ".tennis vs .coach: The Sport's Banner or The Trainer's Title" } },
+  { slug: "soccer-vs-football", a: "soccer", b: "football", title: { zh: ".soccer 和 .football 怎么选：北美叫法与全球叫法的分工", en: ".soccer vs .football: The American Word or The World's Word" } },
+  { slug: "hockey-vs-team", a: "hockey", b: "team", title: { zh: ".hockey 和 .team 怎么选：冰球专营与队伍通用的分工", en: ".hockey vs .team: The Rink Vertical or The Any-Squad Banner" } },
+  { slug: "surf-vs-fun", a: "surf", b: "fun", title: { zh: ".surf 和 .fun 怎么选：浪点垂直与泛娱乐的分工", en: ".surf vs .fun: The Break Vertical or The Playground Banner" } },
+  { slug: "golf-vs-travel", a: "golf", b: "travel", title: { zh: ".golf 和 .travel 怎么选：球场生意与行程生意的分工", en: ".golf vs .travel: The Course Business or The Itinerary Business" } },
 ];
