@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { nanoid } from "nanoid";
 import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
-import { AI_THEMES, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiTheme, type DislikedItem } from "./ai";
+import { AI_THEMES, classifyAiError, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
@@ -16,7 +16,8 @@ import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
 import { tldPrice } from "./types";
 
-type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace };
+// LLM_API_BASE：仅供本地 wrangler dev 指向假上游验证错误路径（R264），生产不设置
+type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace; LLM_API_BASE?: string };
 
 const app = new Hono<{ Bindings: Bindings }>();
 
@@ -59,6 +60,8 @@ interface DayUsage {
   byTld: Record<string, number>;
   fast: number;
   refine: number;
+  /** 当日 AI 上游错误分类计数（R264，仅数字；旧数据无此字段） */
+  aiErrors?: Partial<Record<AiErrorKind, number>>;
 }
 
 async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: boolean, refine: boolean): Promise<void> {
@@ -70,6 +73,17 @@ async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: bool
     if (fast) cur.fast += 1;
     if (refine) cur.refine += 1;
     for (const t of tlds) cur.byTld[t] = (cur.byTld[t] ?? 0) + 1;
+    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
+  } catch { /* 统计失败不影响主流程 */ }
+}
+
+/** 当日 AI 上游错误分类计数 +1（R264，仅计数；KV 非原子，允许少量误差） */
+async function bumpAiError(kv: KVNamespace | undefined, kind: AiErrorKind): Promise<void> {
+  if (!kv) return;
+  try {
+    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
+    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
+    cur.aiErrors = { ...cur.aiErrors, [kind]: (cur.aiErrors?.[kind] ?? 0) + 1 };
     await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
   } catch { /* 统计失败不影响主流程 */ }
 }
@@ -226,7 +240,8 @@ app.post("/api/ai-search", async (c) => {
       const roundGains: number[] = [];
       let prevAvailableCount = 0;
       let lowYieldHintSent = false;
-      const understandingDone = generateUnderstanding(description, apiKey, lang)
+      const llmBase = c.env.LLM_API_BASE || undefined;
+      const understandingDone = generateUnderstanding(description, apiKey, lang, llmBase)
         .then(async (u) => {
           if (u) await emit({ type: "understanding", ...u });
         })
@@ -249,9 +264,14 @@ app.post("/api/ai-search", async (c) => {
               round,
               lang,
               guard,
+              baseUrl: llmBase,
             });
           } catch (e) {
-            await emit({ type: "error", round, detail: String(e), guard });
+            // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；
+            // detail 只含既有错误短码（llm-http-402 等），不含 key 与上游响应体
+            const errorKind = classifyAiError(e);
+            await emit({ type: "error", round, errorKind, detail: String(e), guard });
+            await bumpAiError(c.env.CACHE, errorKind);
             break;
           }
           const fresh = candidates.filter((x) => !tried.has(x.label));
