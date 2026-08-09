@@ -197,7 +197,7 @@
     ]
   },
   "guide": {
-    "count": 188,
+    "count": 194,
     "slugs": [
       "saas",
       "ecommerce",
@@ -386,7 +386,13 @@
       "foodreview",
       "nutrition",
       "physio",
-      "runclub"
+      "runclub",
+      "tennis",
+      "soccer",
+      "football",
+      "hockey",
+      "pickleball",
+      "pilates"
     ]
   },
   "vs": {
