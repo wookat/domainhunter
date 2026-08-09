@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 192,
+    "count": 198,
     "slugs": [
       "com",
       "net",
@@ -193,7 +193,13 @@
       "soccer",
       "football",
       "hockey",
-      "surf"
+      "surf",
+      "ltd",
+      "biz",
+      "llc",
+      "fyi",
+      "promo",
+      "express"
     ]
   },
   "guide": {
