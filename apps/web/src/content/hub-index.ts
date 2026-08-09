@@ -161,6 +161,12 @@ export const TLD_ONE_LINERS = {
   "sale": { zh: ".sale 把「促销」写进域名，适合促销活动站、折扣电商与清仓频道、二手转卖平台、房产车辆出售页。", en: ".sale writes the discount into the address — for promo campaign sites, outlet e-commerce, resale platforms and for-sale listing pages." },
   "help": { zh: ".help 把「帮助」写进域名，适合产品帮助中心与文档站、客服与支持入口、公益求助与互助平台、工具教程站。", en: ".help writes the answer into the address — for product help centers and docs, support entry points, mutual-aid platforms and tutorial sites." },
   "wedding": { zh: ".wedding 把「婚礼」写进域名，适合婚礼请柬与纪念站、婚庆策划与场地、婚纱摄影与礼服、婚礼跟拍团队。", en: ".wedding writes the big day into the address — for invitation and keepsake sites, planners and venues, bridal photography and wedding crews." },
+  "law": { zh: ".law 把「法律」写进域名，适合律师事务所、独立执业律师、法律科技产品、法律咨询与普法内容站。", en: ".law writes the profession into the address — for law firms, solo attorneys, legal-tech products and legal-content sites." },
+  "tax": { zh: ".tax 把「税」写进域名，适合税务师与会计事务所、报税软件、税务咨询与筹划、税法内容站。", en: ".tax writes the business into the address — for tax and accounting firms, filing software, tax advisory services and tax-law content sites." },
+  "menu": { zh: ".menu 把「菜单」写进域名，适合餐厅在线菜单、扫码点餐系统、外卖与订餐平台、餐饮品牌官网。", en: ".menu writes the card into the address — for restaurant online menus, QR ordering systems, delivery platforms and restaurant brand sites." },
+  "bike": { zh: ".bike 把「自行车」写进域名，适合自行车品牌与车店、骑行俱乐部与赛事、租车与修车服务、骑行装备电商。", en: ".bike writes the ride into the address — for bike brands and shops, cycling clubs and races, rental and repair services, gear e-commerce." },
+  "toys": { zh: ".toys 把「玩具」写进域名，适合玩具品牌与电商、潮玩与手办店、桌游与积木社区、儿童教育玩具。", en: ".toys writes the shelf into the address — for toy brands and e-commerce, designer-toy and figure shops, board-game communities and educational toys." },
+  "shoes": { zh: ".shoes 把「鞋」写进域名，适合鞋履品牌与电商、球鞋店与鞋圈社区、手工鞋定制、洗鞋修鞋服务。", en: ".shoes writes the category into the address — for footwear brands and e-commerce, sneaker shops and communities, custom shoemakers and shoe-care services." },
 } satisfies Record<Tld, Localized>;
 
 /** 行业指南索引（顺序与 GUIDE_LIST 一致）：slug + 双语标签 + 一句话定位 */
