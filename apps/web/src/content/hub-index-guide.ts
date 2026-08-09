@@ -192,4 +192,10 @@ export const GUIDE_INDEX: { slug: string; label: Localized; oneLiner: Localized 
   { slug: "petgrooming", label: { zh: "宠物美容", en: "Pet grooming" }, oneLiner: { zh: "宠物美容品牌命名指南：拟声昵称、萌系意象、专业信任感等 5 种思路。", en: "Pet grooming brand naming guide: onomatopoeic nicknames." } },
   { slug: "housekeeping", label: { zh: "家政服务", en: "Housekeeping services" }, oneLiner: { zh: "家政服务品牌命名指南：信任意象、家的语感、阿姨人格化等 5 种思路。", en: "Housekeeping brand naming guide: trust imagery." } },
   { slug: "kidsplayground", label: { zh: "亲子乐园", en: "Kids' playgrounds" }, oneLiner: { zh: "亲子乐园品牌命名指南：快乐意象、世界感造词、安全暗示等 5 种思路。", en: "Kids' playground naming guide: world-building coinages." } },
+  { slug: "productphoto", label: { zh: "电商产品摄影", en: "Product photography" }, oneLiner: { zh: "电商产品摄影品牌命名指南：转化叙事、光影词根、交付效率感等 5 种思路。", en: "Product photography naming guide: conversion-first stories." } },
+  { slug: "portrait", label: { zh: "个人写真", en: "Portrait studios" }, oneLiner: { zh: "个人写真照相馆命名指南：最美时刻叙事、色彩意象、标准化信任感等 5 种思路。", en: "Portrait studio naming guide: better-self narratives." } },
+  { slug: "foodreview", label: { zh: "探店测评", en: "Food reviews" }, oneLiner: { zh: "探店测评账号与平台命名指南：人格化信任、毒舌与公正感、吃货词根等 5 种思路。", en: "Food review and restaurant-guide naming guide: impartiality signals." } },
+  { slug: "nutrition", label: { zh: "营养师咨询", en: "Nutrition coaching" }, oneLiner: { zh: "营养师咨询品牌命名指南：科学信任感、轻量陪伴感、反节食叙事等 5 种思路。", en: "Nutrition coaching naming guide: anti-diet narratives." } },
+  { slug: "physio", label: { zh: "康复理疗", en: "Physiotherapy & rehab" }, oneLiner: { zh: "康复理疗与运动康复品牌命名指南：回归叙事、脊柱意象、医疗信任感等 5 种思路。", en: "Physiotherapy and sports rehab naming guide: return narratives." } },
+  { slug: "runclub", label: { zh: "跑步俱乐部", en: "Run clubs" }, oneLiner: { zh: "跑步俱乐部与跑团命名指南：归属感设计、地名徽章、配速人格等 5 种思路。", en: "Run club naming guide: belonging-first design, place-name badges and pace personas." } },
 ];

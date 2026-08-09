@@ -191,7 +191,7 @@
     ]
   },
   "guide": {
-    "count": 182,
+    "count": 188,
     "slugs": [
       "saas",
       "ecommerce",
@@ -374,7 +374,13 @@
       "giftcustom",
       "petgrooming",
       "housekeeping",
-      "kidsplayground"
+      "kidsplayground",
+      "productphoto",
+      "portrait",
+      "foodreview",
+      "nutrition",
+      "physio",
+      "runclub"
     ]
   },
   "vs": {

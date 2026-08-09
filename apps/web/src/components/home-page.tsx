@@ -1317,6 +1317,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个亲子乐园品牌，寓意「进门就是孩子的另一个世界」；气质要梦幻快乐又让家长联想到安全垫与消毒记录、孩子听到眼睛发亮；场景是商场导视牌、妈妈群的遛娃攻略和年卡续费提醒里都被记住。",
     en: "A kids' playground brand. The name should promise another world for children just inside the door; the vibe is dreamy and joyful yet padded-floor reassuring to parents — a child's eyes should light up on hearing it; it must be remembered on mall directory boards, in moms'-group weekend guides, and on the annual-pass renewal notice.",
   },
+  {
+    slug: "productphoto",
+    labelZh: "电商产品摄影",
+    labelEn: "Product photography",
+    zh: "一个电商产品摄影品牌，寓意「这套图能让转化率涨」；气质要高效专业、有规格感和流程感、让运营按采购思维一眼信任；场景是淘宝服务市场列表、商家群转介绍和报价单抬头上都立得住。",
+    en: "A product photography brand. The name should promise images that lift conversion rates; the vibe is efficient and professional, with spec-and-process credibility that wins an operator's procurement-minded trust at a glance; it must hold up in marketplace service listings, merchant-group referrals, and on the quote-sheet header.",
+  },
+  {
+    slug: "portrait",
+    labelZh: "个人写真",
+    labelEn: "Portrait studios",
+    zh: "一个个人写真照相馆品牌，寓意「记录更好版本的自己」；气质要干净透亮、有标准化连锁的信任感、不堆美颜字眼；场景是闺蜜群的证件照推荐、点评平台的搜索列表和商场店招上都立得住。",
+    en: "A portrait studio brand. The name should promise capturing a better version of yourself; the vibe is clean and luminous, with chain-grade consistency and zero beauty-filter clichés; it must stand in group-chat ID-photo referrals, review-platform search lists, and on the mall storefront sign.",
+  },
+  {
+    slug: "foodreview",
+    labelZh: "探店测评",
+    labelEn: "Food reviews",
+    zh: "一个探店测评品牌，寓意「一条信得过的舌头」；气质要公正敢说又不失亲切、有人格化的记忆点、不带恰饭联想；场景是视频标题、粉丝转发和商家挂在门口的推荐贴纸上都立得住。",
+    en: "A food review brand. The name should feel like a tongue you can trust; the vibe is candid and fair yet warm, with a persona-level memory hook and zero sponsored-content associations; it must hold up in video titles, follower shares, and on the recommendation sticker by the restaurant door.",
+  },
+  {
+    slug: "nutrition",
+    labelZh: "营养师咨询",
+    labelEn: "Nutrition coaching",
+    zh: "一个营养师咨询品牌，寓意「吃得对是一种生活方式」；气质要科学可信又温柔轻盈、没有节食和速效暗示；场景是体检报告后的搜索、宝妈群的营养师推荐和企业健康讲座的海报上都立得住。",
+    en: "A nutrition coaching brand. The name should frame eating right as a lifestyle, not a diet; the vibe is science-credible yet gentle and light, free of quick-fix or restriction hints; it must stand in post-checkup searches, moms'-group dietitian referrals, and on the corporate wellness-talk poster.",
+  },
+  {
+    slug: "physio",
+    labelZh: "康复理疗",
+    labelEn: "Physiotherapy & rehab",
+    zh: "一个康复理疗品牌，寓意「帮你回到原来的样子」；气质要有医疗级的循证信任感又不失温度、绝不像养生馆；场景是骨科医生的转诊建议、术后患者的搜索列表和诊所门头上都立得住。",
+    en: "A physiotherapy and rehab brand. The name should promise getting you back to who you were; the vibe is evidence-based and medical-grade yet warm, never spa-adjacent; it must hold up in an orthopedist's referral advice, a post-surgical patient's search list, and on the clinic's front sign.",
+  },
+  {
+    slug: "runclub",
+    labelZh: "跑步俱乐部",
+    labelEn: "Run clubs",
+    zh: "一个跑步俱乐部品牌，寓意「一起跑，谁都能加入」；气质要有归属感和城市徽章感、欢迎六分半配速的新人、印在队服上十年不尴尬；场景是马拉松赛道边的加油声、完赛照片的社交分享和招新海报上都立得住。",
+    en: "A run club brand. The name should say run together — anyone can join; the vibe is belonging-first with a city-badge feel, welcoming to the 6:30-pace beginner, and still cool printed on a jersey ten years on; it must hold up in course-side cheers, finish-line photo shares, and on the recruitment poster.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
