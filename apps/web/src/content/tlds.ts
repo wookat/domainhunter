@@ -6144,6 +6144,186 @@ const GUIDES = {
       ],
     },
   },
+  credit: {
+    tld: "credit",
+    zh: {
+      title: ".credit 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".credit 把「信用」写进域名，适合信用评分与征信服务、信用卡比价与返现平台、信用修复与咨询机构、面向企业的信用额度产品。查看 .credit 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .credit 域名。",
+      intro:
+        ".credit 把信用写进域名：信用评分与征信服务、信用卡比价与返现平台、信用修复与咨询机构、面向企业的信用额度产品用 name.credit，业务一词说清——check.credit、build.credit 这类「动词 + .credit」读出来就是一句产品口号。注册局为 Identity Digital，注册约 $7（约 ¥48），续费约 $83/年（约 ¥597）——首年低价钩子明显、续费跳档大，按 ¥600/年 的持有成本核算再下手。库存极好：动词、行为词、人群词基本都有货。注意三点：一是「credit」在金融语境敏感，涉及征信与放贷务必先核清本地金融牌照与广告合规，域名不能替代资质；二是续费近九倍于首年，短期活动页慎用长期主站；三是与已收录 .finance / .money / .cash 的分工——综合金融服务用 .finance，个人理财内容用 .money，支付收单用 .cash，信用与征信业务用 .credit 最正。命名上「动词 + .credit」适合信用工具（build、fix、check），「品牌 + .credit」适合信用卡与返现平台，「人群 + .credit」适合细分征信服务。",
+      bestFor: ["信用评分与征信服务", "信用卡比价与返现平台", "信用修复与咨询机构", "企业信用额度产品"],
+      namingTips: [
+        "「动词 + .credit」读出来就是产品口号（build、check、fix）",
+        "首年约 $7、续费约 $83/年，按 ¥600/年 持有成本核算",
+        "征信与放贷语境敏感，先核清金融牌照与广告合规",
+        "综合金融用 .finance，支付用 .cash，信用业务用 .credit",
+      ],
+    },
+    en: {
+      title: ".credit Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".credit writes creditworthiness into the address — for credit scoring and bureau services, card comparison and cashback platforms, credit repair and counseling, and business credit-line products. See live pricing and naming advice, then hunt available .credit names with AI.",
+      intro:
+        ".credit writes the business into the address: credit scoring and bureau services, card comparison and cashback platforms, credit repair and counseling, and business credit-line products on name.credit state it in one word — verb + .credit names like check.credit or build.credit read as a product slogan out loud. Operated by Identity Digital, about $7 to register and $83/yr to renew — a steep first-year hook with a big renewal jump, so budget the ~$83/yr holding cost before committing. Inventory is excellent: verbs, action words and audience words nearly all hit. Three cautions: \"credit\" is a regulated word in finance, so clear local lending and advertising compliance first — a domain never substitutes for a license; renewal is nearly nine times year one, so avoid it for short-lived campaign pages; and split the work with the already-listed .finance, .money and .cash — full-service finance fits .finance, personal-finance content fits .money, payments fit .cash, and credit and bureau businesses read truest on .credit. Naming: verb + .credit fits credit tools (build, fix, check); brand + .credit fits card and cashback platforms; audience + .credit fits niche bureau services.",
+      bestFor: ["Credit scoring & bureau services", "Card comparison & cashback platforms", "Credit repair & counseling", "Business credit-line products"],
+      namingTips: [
+        "Verb + .credit reads as a product slogan (build, check, fix)",
+        "About $7 year one, $83/yr renewal — budget the jump",
+        "Credit is a regulated word; clear compliance first",
+        "Finance fits .finance, payments .cash, credit fits here",
+      ],
+    },
+  },
+  loans: {
+    tld: "loans",
+    zh: {
+      title: ".loans 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".loans 把「贷款」写进域名，适合贷款比价与撮合平台、抵押与消费信贷机构、小微企业融资服务、贷款计算器等工具站。查看 .loans 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .loans 域名。",
+      intro:
+        ".loans 把贷款写进域名：贷款比价与撮合平台、抵押与消费信贷机构、小微企业融资服务、贷款计算器等工具站用 name.loans，业务一词说清——复数形式天然带「多家产品任选」的比价语感，compare.loans、student.loans 读出来就是页面主题。注册局为 Identity Digital，注册约 $11（约 ¥78），续费约 $93/年（约 ¥671）——首年便宜、续费跳档大，按 ¥670/年 的持有成本核算。库存极好：品类词、人群词、地区词基本都有货。注意三点：一是放贷与助贷在各地都是强监管业务，上线前务必核清金融牌照、利率披露与广告合规；二是续费约八倍于首年，短期获客页慎重；三是与已收录 .finance / .money / .credit 的分工——综合金融用 .finance，理财内容用 .money，征信信用用 .credit，贷款产品与比价用 .loans 最正。命名上「品类 + .loans」适合垂直信贷（car、home、student），「compare/get + .loans」适合比价撮合，「地区 + .loans」适合本地信贷服务。",
+      bestFor: ["贷款比价与撮合平台", "抵押与消费信贷机构", "小微企业融资服务", "贷款计算器与工具站"],
+      namingTips: [
+        "「品类 + .loans」直接命中搜索意图（car、home、student）",
+        "首年约 $11、续费约 $93/年，按 ¥670/年 持有成本核算",
+        "放贷助贷强监管，先核清牌照、利率披露与广告合规",
+        "征信用 .credit，理财内容用 .money，贷款产品用 .loans",
+      ],
+    },
+    en: {
+      title: ".loans Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".loans writes lending into the address — for loan comparison and matching platforms, mortgage and consumer lenders, small-business financing services, and loan calculator tool sites. See live pricing and naming advice, then hunt available .loans names with AI.",
+      intro:
+        ".loans writes the business into the address: loan comparison and matching platforms, mortgage and consumer lenders, small-business financing, and loan calculator sites on name.loans state it in one word — the plural naturally carries a marketplace tone, so compare.loans or student.loans reads as the page topic itself. Operated by Identity Digital, about $11 to register and $93/yr to renew — cheap first year, steep renewal jump, so budget the ~$93/yr holding cost. Inventory is excellent: category words, audience words and geo words nearly all hit. Three cautions: lending and loan brokering are heavily regulated everywhere, so clear licensing, rate disclosure and advertising compliance before launch; renewal is roughly eight times year one, so think twice for short-lived acquisition pages; and split the work with the already-listed .finance, .money and .credit — full-service finance fits .finance, personal-finance content fits .money, credit and bureau services fit .credit, and loan products and comparison read truest on .loans. Naming: category + .loans fits vertical lending (car, home, student); compare/get + .loans fits marketplaces; region + .loans fits local lenders.",
+      bestFor: ["Loan comparison & matching platforms", "Mortgage & consumer lenders", "Small-business financing services", "Loan calculators & tool sites"],
+      namingTips: [
+        "Category + .loans hits search intent (car, home, student)",
+        "About $11 year one, $93/yr renewal — budget the jump",
+        "Lending is heavily regulated; clear licensing first",
+        "Credit fits .credit, content .money, loan products here",
+      ],
+    },
+  },
+  investments: {
+    tld: "investments",
+    zh: {
+      title: ".investments 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".investments 把「投资业务」写进域名，适合资产管理与投资顾问、房产与另类投资平台、家族办公室与私人投资公司、投资研究与组合工具。查看 .investments 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .investments 域名。",
+      intro:
+        ".investments 把投资业务写进域名：资产管理与投资顾问、房产与另类投资平台、家族办公室与私人投资公司、投资研究与组合工具用 name.investments，「XX Investments」本就是投资公司几十年的标准字号格式，brand.investments 读出来就是完整公司名。注册局为 Identity Digital，注册约 $8（约 ¥59），续费约 $104/年（约 ¥745）——首年低、续费在新顶级域里属于高档，按 ¥745/年 的持有成本核算，对管理真金白银的机构不算负担，反而筛掉了玩票项目。库存极好：姓氏、地名、策略词基本都有货。注意三点：一是后缀很长（11 字符），前缀务必短——姓氏或单词最佳；二是投资建议与募资在各地强监管，务必核清牌照与合规披露；三是与已收录 .capital / .fund / .ventures 的分工——机构品牌用 .capital，基金产品用 .fund，风投用 .ventures，综合投资公司与平台用 .investments 最正。命名上「姓氏 + .investments」是家族办公室惯例，「地名 + .investments」适合区域资管，「策略词 + .investments」适合主题投资平台。",
+      bestFor: ["资产管理与投资顾问", "房产与另类投资平台", "家族办公室与私人投资公司", "投资研究与组合工具"],
+      namingTips: [
+        "「姓氏 + .investments」就是完整公司字号",
+        "首年约 $8、续费约 $104/年，机构持有无压力",
+        "后缀 11 字符很长，前缀用姓氏或单个短词",
+        "机构牌子用 .capital，基金用 .fund，综合投资用这里",
+      ],
+    },
+    en: {
+      title: ".investments Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".investments writes the firm into the address — for asset managers and investment advisors, real-estate and alternative investment platforms, family offices and private investment companies, and research and portfolio tools. See live pricing and naming advice, then hunt available .investments names with AI.",
+      intro:
+        ".investments writes the firm into the address: asset managers and advisors, real-estate and alternative platforms, family offices and private investment companies, and research and portfolio tools on name.investments complete the classic firm-name format — \"So-and-so Investments\" — so brand.investments reads as the full company name. Operated by Identity Digital, about $8 to register and $104/yr to renew — low first year, one of the pricier renewals among new gTLDs, so budget the ~$104/yr holding cost; for a firm managing real money that's trivial, and it quietly filters out hobby projects. Inventory is excellent: surnames, place names and strategy words nearly all hit. Three cautions: the suffix is long (11 characters), so keep the prefix to a surname or one short word; investment advice and fundraising are heavily regulated, so clear licensing and disclosure first; and split the work with the already-listed .capital, .fund and .ventures — institutional brands fit .capital, fund products fit .fund, VCs fit .ventures, and diversified investment firms and platforms read truest on .investments. Naming: surname + .investments is the family-office convention; place + .investments fits regional asset managers; strategy word + .investments fits thematic platforms.",
+      bestFor: ["Asset managers & investment advisors", "Real-estate & alternative platforms", "Family offices & private investment firms", "Research & portfolio tools"],
+      namingTips: [
+        "Surname + .investments completes the classic firm name",
+        "About $8 year one, $104/yr renewal — easy for firms",
+        "11-character suffix — keep the prefix short",
+        "Brands fit .capital, funds .fund, diversified firms here",
+      ],
+    },
+  },
+  holdings: {
+    tld: "holdings",
+    zh: {
+      title: ".holdings 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".holdings 把「控股公司」写进域名，适合控股集团与母公司官网、家族企业与资产持有主体、多品牌集团的公司层门户、投资控股与并购主体。查看 .holdings 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .holdings 域名。",
+      intro:
+        ".holdings 把控股公司写进域名：控股集团与母公司官网、家族企业与资产持有主体、多品牌集团的公司层门户、投资控股与并购主体用 name.holdings，「XX Holdings」是全球公司注册处里最常见的字号格式之一，brand.holdings 读出来就是完整法人名——旗下品牌各用各的域名，公司层信息披露与投资者关系放 .holdings 上，层级一目了然。注册局为 Identity Digital，注册与续费同价，约 $52/年（约 ¥374）——无首年钩子也无续费跳档，价格从第一年就筛掉了玩票项目，对持有资产的主体不算负担。库存极好：姓氏、地名、行业词基本都有货。注意三点：一是它是「公司层」后缀，面向消费者的品牌站气质不对，应各自用品牌域名；二是按 ¥374/年 核算持有成本；三是与已收录 .group / .capital / .ltd 的分工——多品牌经营集团用 .group，投资机构牌子用 .capital，注册主体后缀用 .ltd，控股与资产持有主体用 .holdings 最正。命名上「姓氏 + .holdings」是家族控股惯例，「品牌 + .holdings」适合集团母公司，「地名 + .holdings」适合区域控股平台。",
+      bestFor: ["控股集团与母公司官网", "家族企业与资产持有主体", "多品牌集团公司层门户", "投资控股与并购主体"],
+      namingTips: [
+        "「姓氏/品牌 + .holdings」就是完整法人字号",
+        "注册续费同价约 $52/年，无钩子也无跳档",
+        "公司层后缀：消费品牌站各用品牌域名，别混用",
+        "经营集团用 .group，投资牌子用 .capital，控股主体用这里",
+      ],
+    },
+    en: {
+      title: ".holdings Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".holdings writes the parent company into the address — for holding groups and parent-company sites, family businesses and asset-holding entities, corporate portals of multi-brand groups, and investment holding and M&A vehicles. See live pricing and naming advice, then hunt available .holdings names with AI.",
+      intro:
+        ".holdings writes the parent company into the address: holding groups and parent-company sites, family businesses and asset-holding entities, corporate portals of multi-brand groups, and investment holding vehicles on name.holdings complete one of the most common legal-name formats in company registries worldwide — \"So-and-so Holdings\" — so brand.holdings reads as the full entity name. Each operating brand keeps its own domain while corporate disclosure and investor relations live on .holdings, making the hierarchy obvious. Operated by Identity Digital with flat pricing, about $52/yr for both registration and renewal — no first-year hook and no renewal jump, a price that filters out hobby projects from day one and is trivial for an asset-holding entity. Inventory is excellent: surnames, place names and industry words nearly all hit. Three cautions: it is a corporate-layer suffix, so consumer-facing brand sites belong on their own domains; budget the flat ~$52/yr; and split the work with the already-listed .group, .capital and .ltd — operating multi-brand groups fit .group, investment brands fit .capital, legal-entity suffixes fit .ltd, and holding and asset entities read truest on .holdings. Naming: surname + .holdings is the family-holding convention; brand + .holdings fits group parents; place + .holdings fits regional holding platforms.",
+      bestFor: ["Holding groups & parent-company sites", "Family businesses & asset entities", "Corporate portals of multi-brand groups", "Investment holding & M&A vehicles"],
+      namingTips: [
+        "Surname/brand + .holdings completes the entity name",
+        "Flat ~$52/yr for both years — no hook, no jump",
+        "Corporate-layer suffix; brand sites keep own domains",
+        "Groups fit .group, brands .capital, entities fit here",
+      ],
+    },
+  },
+  mortgage: {
+    tld: "mortgage",
+    zh: {
+      title: ".mortgage 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".mortgage 把「房贷」写进域名，适合房贷经纪与直贷机构、房贷比价与再融资平台、房贷计算器等工具站、面向购房者的内容站。查看 .mortgage 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .mortgage 域名。",
+      intro:
+        ".mortgage 把房贷写进域名：房贷经纪与直贷机构、房贷比价与再融资平台、房贷计算器等工具站、面向购房者的内容站用 name.mortgage，业务一词说清——房贷是金额最大、决策最重的个人信贷品类，域名把品类写明白本身就是信任信号。注册局为 Identity Digital，注册约 $8（约 ¥59），续费约 $50/年（约 ¥360）——首年便宜、续费中档，在金融类新顶级域里属于好持有的一档。库存极好：地名、人名、动词基本都有货，本地经纪「城市名 + .mortgage」几乎随便挑。注意三点：一是房贷经纪与放贷在各地强监管（如美国 NMLS 牌照），上线前务必核清资质与披露要求；二是后缀 8 字符偏长，前缀用地名或姓氏等短词；三是与已收录 .loans / .estate / .credit 的分工——泛贷款比价用 .loans，房产经纪用 .estate，征信用 .credit，房贷垂直业务用 .mortgage 最正。命名上「城市 + .mortgage」适合本地经纪，「姓氏 + .mortgage」适合个人经纪人，「compare/refi + .mortgage」适合比价与再融资平台。",
+      bestFor: ["房贷经纪与直贷机构", "房贷比价与再融资平台", "房贷计算器与工具站", "面向购房者的内容站"],
+      namingTips: [
+        "「城市 + .mortgage」是本地经纪的黄金格式",
+        "首年约 $8、续费约 $50/年，金融类里好持有的一档",
+        "房贷强监管（如 NMLS），先核清资质与披露要求",
+        "泛贷款用 .loans，房产经纪用 .estate，房贷垂直用这里",
+      ],
+    },
+    en: {
+      title: ".mortgage Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".mortgage writes home lending into the address — for mortgage brokers and direct lenders, rate comparison and refinance platforms, mortgage calculator tool sites, and homebuyer content sites. See live pricing and naming advice, then hunt available .mortgage names with AI.",
+      intro:
+        ".mortgage writes the business into the address: mortgage brokers and direct lenders, rate comparison and refinance platforms, calculator tool sites, and homebuyer content on name.mortgage state it in one word — the mortgage is the largest, most considered consumer-credit decision, and naming the category outright is itself a trust signal. Operated by Identity Digital, about $8 to register and $50/yr to renew — cheap first year, mid renewal, one of the easier finance gTLDs to hold. Inventory is excellent: place names, personal names and verbs nearly all hit, so a local broker can practically pick any city + .mortgage. Three cautions: mortgage brokering and lending are heavily regulated (e.g. NMLS licensing in the US), so clear credentials and disclosure requirements before launch; the 8-character suffix leans long, so keep the prefix to a city or surname; and split the work with the already-listed .loans, .estate and .credit — general loan comparison fits .loans, real-estate brokerage fits .estate, credit services fit .credit, and mortgage-vertical businesses read truest on .mortgage. Naming: city + .mortgage fits local brokers; surname + .mortgage fits individual loan officers; compare/refi + .mortgage fits comparison and refinance platforms.",
+      bestFor: ["Mortgage brokers & direct lenders", "Rate comparison & refinance platforms", "Mortgage calculators & tool sites", "Homebuyer content sites"],
+      namingTips: [
+        "City + .mortgage is the golden format for local brokers",
+        "About $8 year one, $50/yr renewal — easy to hold",
+        "Heavily regulated (e.g. NMLS); clear licensing first",
+        "General loans fit .loans, real estate .estate, this is home lending",
+      ],
+    },
+  },
+  computer: {
+    tld: "computer",
+    zh: {
+      title: ".computer 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".computer 把「电脑」写进域名，适合电脑维修与上门服务、装机与硬件定制工作室、二手电脑与配件电商、计算机培训与科普内容。查看 .computer 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .computer 域名。",
+      intro:
+        ".computer 把电脑写进域名：电脑维修与上门服务、装机与硬件定制工作室、二手电脑与配件电商、计算机培训与科普内容用 name.computer，行业一词说清——本地维修店「城市名 + .computer」读出来就是店招，硬件圈也不乏用它做品牌的（如知名的 NAS 社区项目）。注册局为 Identity Digital，注册约 $18（约 ¥130），续费约 $31/年（约 ¥226）——首年中档、续费温和，在行业词后缀里属于价格结构健康的一档，长期持有无压力。库存极好：地名、品牌词、硬件词基本都有货。注意三点：一是后缀 8 字符偏长且偏「硬件实体」，纯软件与云产品用 .dev / .software 气质更贴；二是单数形式是「一台电脑」的语感，适合店铺与品牌而非平台聚合；三是与已收录 .tech / .software / .systems 的分工——泛科技品牌用 .tech，软件产品用 .software，集成商用 .systems，电脑硬件与维修服务用 .computer 最正。命名上「城市 + .computer」适合本地维修店，「品牌 + .computer」适合装机与硬件工作室，「fix/repair + .computer」适合连锁维修品牌。",
+      bestFor: ["电脑维修与上门服务", "装机与硬件定制工作室", "二手电脑与配件电商", "计算机培训与科普内容"],
+      namingTips: [
+        "「城市 + .computer」读出来就是本地店招",
+        "首年约 $18、续费约 $31/年，价格结构健康好持有",
+        "纯软件与云产品用 .dev / .software 更贴",
+        "泛科技用 .tech，软件用 .software，硬件维修用这里",
+      ],
+    },
+    en: {
+      title: ".computer Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".computer writes the machine into the address — for computer repair and on-site services, custom PC building studios, refurbished computer and parts shops, and computer training and educational content. See live pricing and naming advice, then hunt available .computer names with AI.",
+      intro:
+        ".computer writes the trade into the address: computer repair and on-site services, custom PC building studios, refurbished computer and parts shops, and computer training content on name.computer state the industry in one word — city + .computer reads like a local shop sign, and hardware brands have used it too (a well-known NAS community project among them). Operated by Identity Digital, about $18 to register and $31/yr to renew — mid first year, gentle renewal, one of the healthier price structures among industry-word gTLDs, painless to hold long term. Inventory is excellent: place names, brand words and hardware terms nearly all hit. Three cautions: the 8-character suffix leans long and physical, so pure software and cloud products read better on .dev or .software; the singular form carries a one-machine, shop-front tone that suits stores and brands more than marketplaces; and split the work with the already-listed .tech, .software and .systems — broad tech brands fit .tech, software products fit .software, integrators fit .systems, and computer hardware and repair services read truest on .computer. Naming: city + .computer fits local repair shops; brand + .computer fits PC-building and hardware studios; fix/repair + .computer fits repair chains.",
+      bestFor: ["Computer repair & on-site services", "Custom PC building studios", "Refurbished computer & parts shops", "Computer training & educational content"],
+      namingTips: [
+        "City + .computer reads like a local shop sign",
+        "About $18 year one, $31/yr renewal — healthy structure",
+        "Pure software fits .dev / .software better",
+        "Broad tech fits .tech, software .software, hardware here",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
