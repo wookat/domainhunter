@@ -42,6 +42,21 @@ rmSync(tmp, { recursive: true, force: true });
 /** 与 hubs.ts 原 firstSentence 完全一致：取 metaDescription 首句 */
 const firstSentence = (s, lang) => (lang === "zh" ? s.split("。")[0] + "。" : s.split(". ")[0].replace(/\.?$/, "."));
 
+/**
+ * hub 卡片短句：首句内按逗号取前若干分句，控制在 maxLen 内（至少保留第一分句）。
+ * /guide 158 条首句普遍 120+ 字，全文进 SSR 骨架让 /guide HTML 比 /vs 大 10KB gzip、
+ * 移动 FCP 慢 0.3s（R284 移动性能优化）；详情页 metaDescription 不受影响。
+ */
+const cardLine = (s, lang, maxLen) => {
+  const sep = lang === "zh" ? "，" : ", ";
+  const end = lang === "zh" ? "。" : ".";
+  const sentence = firstSentence(s, lang);
+  const clauses = sentence.slice(0, sentence.length - end.length).split(sep);
+  let out = clauses[0];
+  for (let i = 1; i < clauses.length && out.length + sep.length + clauses[i].length <= maxLen; i++) out += sep + clauses[i];
+  return out + end;
+};
+
 const q = (s) => JSON.stringify(s);
 
 const header = `/**
@@ -57,7 +72,7 @@ const tldLines = TLD_LIST.map((t) => `  ${q(t)}: { zh: ${q(firstSentence(TLD_GUI
 
 const guideLines = GUIDE_LIST.map((s) => {
   const g = INDUSTRY_GUIDES[s];
-  return `  { slug: ${q(s)}, label: { zh: ${q(g.zh.label)}, en: ${q(g.en.label)} }, oneLiner: { zh: ${q(firstSentence(g.zh.metaDescription, "zh"))}, en: ${q(firstSentence(g.en.metaDescription, "en"))} } },`;
+  return `  { slug: ${q(s)}, label: { zh: ${q(g.zh.label)}, en: ${q(g.en.label)} }, oneLiner: { zh: ${q(cardLine(g.zh.metaDescription, "zh", 42))}, en: ${q(cardLine(g.en.metaDescription, "en", 84))} } },`;
 });
 
 const compareLines = COMPARE_LIST.map((s) => {
