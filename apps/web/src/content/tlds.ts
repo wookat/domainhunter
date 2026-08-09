@@ -4884,6 +4884,186 @@ const GUIDES = {
       ],
     },
   },
+  properties: {
+    tld: "properties",
+    zh: {
+      title: ".properties 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".properties 把「物业/房产」写进域名，适合房产中介与经纪团队、物业管理公司、房源展示与楼盘官网、房产投资组合。查看 .properties 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .properties 域名。",
+      intro:
+        ".properties 把行业写进域名：房产中介与经纪团队、物业管理公司、房源展示与楼盘官网、房产投资组合用 name.properties，一眼就是「房产」生意。它的长处是语义完整——properties 是英语里对「多套房产/物业资产」最正式的说法，比 .estate 更日常、比 .house 更专业，中介挂整个在售组合、开发商做楼盘列表页都顺理成章。Identity Digital 运营，注册约 $6（约 ¥44），续费约 $31/年（约 ¥226）——首年便宜、续费跳档，预算按续费价算才稳。库存极好：城市词、区域词、品牌词几乎都有货。注意三点：一是词偏长（10 个字母），手机输入不算友好，适合做展示与投放落地页而非口播传播；二是房产是强本地、强信任行业，域名之外持牌信息与真实房源照片才是转化关键；三是它天然指「多套物业」，单套房源销售页用「地址 + .properties」反而更贴切。命名上「城市/区域 + .properties」最点题（miami.properties 式），「品牌/姓氏 + .properties」适合经纪团队，「luxury/prime + .properties」适合高端组合定位。",
+      bestFor: ["房产中介与经纪团队", "物业管理公司", "房源展示与楼盘官网", "房产投资组合"],
+      namingTips: [
+        "「城市/区域 + .properties」直接接住本地找房搜索",
+        "注册约 $6、续费约 $31/年，预算按续费算",
+        "词偏长，适合落地页与投放而非口播传播",
+        "「品牌/姓氏 + .properties」适合经纪团队",
+      ],
+    },
+    en: {
+      title: ".properties Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".properties writes real estate into the address — for agencies and broker teams, property management firms, listing showcases and development sites, and investment portfolios. See live pricing and naming advice, then hunt available .properties names with AI.",
+      intro:
+        ".properties writes the trade into the address: real-estate agencies and broker teams, property management firms, listing showcases and development sites, investment portfolios on name.properties read as a property business at a glance. Its strength is semantic completeness — properties is the most natural English word for a portfolio of real estate, more everyday than .estate and more professional than .house, so an agent's full listing set or a developer's project page sits on it naturally. Operated by Identity Digital, about $6 to register and $31/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price. Inventory is excellent: city words, district words and brand words are nearly all available. Three cautions: at ten letters the word is long, so it suits landing pages and campaigns better than word-of-mouth; real estate is a local, trust-first trade, so licensing info and real listing photos convert more than the domain; and the word implies multiple units — a single-listing sales page reads better as address + .properties. Naming: city or district + .properties is the on-target miami.properties pattern; brand or surname + .properties fits broker teams; luxury or prime + .properties fits high-end portfolios.",
+      bestFor: ["Real-estate agencies & broker teams", "Property management firms", "Listing showcases & development sites", "Property investment portfolios"],
+      namingTips: [
+        "City/district + .properties catches local home searches",
+        "About $6 to register, $31/yr — budget on renewal",
+        "Ten letters — better for landing pages than word of mouth",
+        "Brand/surname + .properties fits broker teams",
+      ],
+    },
+  },
+  rentals: {
+    tld: "rentals",
+    zh: {
+      title: ".rentals 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".rentals 把「出租」写进域名，适合民宿与短租运营、长租公寓与租房平台、汽车与设备租赁、婚礼与活动物品出租。查看 .rentals 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .rentals 域名。",
+      intro:
+        ".rentals 把生意模式写进域名：民宿与短租运营、长租公寓与租房中介、汽车与设备租赁、婚礼与活动物品出租用 name.rentals，「租什么」在域名里就说清了。它的覆盖面比想象中宽——从房子到相机、从婚纱到脚手架，一切按天按月收费的生意都能用，是少有的横跨房产与实体租赁两个行业的后缀。Identity Digital 运营，注册约 $7（约 ¥48），续费约 $36/年（约 ¥256）——首年便宜、续费跳档，预算按续费价算才稳。库存极好：品类词、城市词、品牌词几乎都有货。注意三点：一是短租房源的主战场在 Airbnb 等平台，独立域名适合做直订官网沉淀回头客、省平台佣金；二是租赁是强信任生意，押金规则、真实照片与评价体系比域名更影响转化；三是词是复数形式，单一房源或单台设备的页面用「品类 + .rentals」反而比品牌名更接搜索。命名上「品类 + .rentals」最点题（kayak.rentals 式读出来就是生意本身），「城市 + 品类 + .rentals」适合本地租赁，「品牌 + .rentals」适合连锁品牌化。",
+      bestFor: ["民宿与短租直订官网", "长租公寓与租房平台", "汽车与设备租赁", "婚礼与活动物品出租"],
+      namingTips: [
+        "「品类 + .rentals」读出来就是生意本身",
+        "注册约 $7、续费约 $36/年，预算按续费算",
+        "短租直订官网可沉淀回头客、省平台佣金",
+        "「城市 + 品类 + .rentals」适合本地租赁",
+      ],
+    },
+    en: {
+      title: ".rentals Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".rentals writes the business model into the address — for vacation and short-term rentals, apartment and housing platforms, car and equipment hire, and event gear rental. See live pricing and naming advice, then hunt available .rentals names with AI.",
+      intro:
+        ".rentals writes the business model into the address: vacation and short-term rental hosts, apartment and housing platforms, car and equipment hire, wedding and event gear rental on name.rentals say what's for rent in the domain itself. Its range is wider than it looks — houses to cameras, dresses to scaffolding, anything charged by the day or month fits, making it one of the rare suffixes spanning both real estate and physical hire. Operated by Identity Digital, about $7 to register and $36/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price. Inventory is excellent: category words, city words and brand words are nearly all available. Three cautions: short-stay bookings live on Airbnb-style platforms, so an independent domain wins as a direct-booking site that keeps repeat guests and saves platform fees; rentals are a trust-first trade, so deposit rules, real photos and reviews convert more than the domain; and the word is plural — a single listing or machine reads better as category + .rentals than as a brand name. Naming: category + .rentals is the on-target kayak.rentals pattern that reads out as the business itself; city + category + .rentals fits local hire; brand + .rentals fits chains going branded.",
+      bestFor: ["Vacation & short-term rental direct booking", "Apartment & housing platforms", "Car & equipment hire", "Wedding & event gear rental"],
+      namingTips: [
+        "Category + .rentals reads out as the business itself",
+        "About $7 to register, $36/yr — budget on renewal",
+        "Direct-booking sites keep repeat guests, skip platform fees",
+        "City + category + .rentals fits local hire",
+      ],
+    },
+  },
+  apartments: {
+    tld: "apartments",
+    zh: {
+      title: ".apartments 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".apartments 把「公寓」写进域名，适合长租公寓品牌、服务式公寓与公寓式酒店、公寓楼盘招租官网、学生公寓运营。查看 .apartments 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .apartments 域名。",
+      intro:
+        ".apartments 把物业类型写进域名：长租公寓品牌、服务式公寓与公寓式酒店、公寓楼盘招租官网、学生公寓运营用 name.apartments，找房人一眼知道这里租公寓。它是新顶级域里语义最窄也最准的后缀之一——不像 .rentals 什么都能租、.properties 什么房都算，apartments 精确锁定公寓这一种物业，招租页的搜索意图匹配度极高。Identity Digital 运营，注册约 $11（约 ¥78），续费约 $46/年（约 ¥330）——首年便宜、续费跳档，预算按续费价算才稳。库存极好：楼盘名、街区名、城市词几乎都有货。注意三点：一是词很长（10 个字母），适合印在招租物料与投放落地页，不适合口播；二是租房决策重线下，域名之外户型图、真实实拍与价格透明才是转化关键；三是各国「公寓」叫法不一（英式常用 flats），面向英联邦租客时留意用词习惯。命名上「楼盘名 + .apartments」最点题（parkview.apartments 式），「街区/城市 + .apartments」适合区域招租平台，「品牌 + .apartments」适合连锁公寓运营商。",
+      bestFor: ["长租公寓品牌", "服务式公寓与公寓式酒店", "公寓楼盘招租官网", "学生公寓运营"],
+      namingTips: [
+        "「楼盘名 + .apartments」招租意图一眼可读",
+        "注册约 $11、续费约 $46/年，预算按续费算",
+        "词长适合物料与落地页，不适合口播",
+        "「街区/城市 + .apartments」适合区域招租平台",
+      ],
+    },
+    en: {
+      title: ".apartments Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".apartments writes the property type into the address — for long-term apartment brands, serviced apartments and aparthotels, leasing sites for developments, and student housing operators. See live pricing and naming advice, then hunt available .apartments names with AI.",
+      intro:
+        ".apartments writes the property type into the address: long-term apartment brands, serviced apartments and aparthotels, leasing sites for developments, student housing operators on name.apartments tell renters exactly what's on offer. It's one of the narrowest and most precise new gTLDs — where .rentals covers anything for hire and .properties covers any real estate, apartments locks onto one property type, so leasing pages match search intent almost perfectly. Operated by Identity Digital, about $11 to register and $46/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price. Inventory is excellent: building names, neighborhood names and city words are nearly all available. Three cautions: at ten letters the word is long — good on leasing flyers and landing pages, poor for word of mouth; renting is decided offline, so floor plans, real photos and transparent pricing convert more than the domain; and the word varies by market (British English says flats), so mind the vocabulary when targeting Commonwealth renters. Naming: building name + .apartments is the on-target parkview.apartments pattern; neighborhood or city + .apartments fits area leasing platforms; brand + .apartments fits chain operators.",
+      bestFor: ["Long-term apartment brands", "Serviced apartments & aparthotels", "Development leasing sites", "Student housing operators"],
+      namingTips: [
+        "Building name + .apartments reads as a leasing page at a glance",
+        "About $11 to register, $46/yr — budget on renewal",
+        "Ten letters — fine on flyers and landing pages, poor for word of mouth",
+        "Neighborhood/city + .apartments fits area leasing platforms",
+      ],
+    },
+  },
+  builders: {
+    tld: "builders",
+    zh: {
+      title: ".builders 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".builders 把「建造者」写进域名，适合建筑与施工承包商、自建房与装修团队、房屋定制与模块化建造、开发者社区与创客团队。查看 .builders 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .builders 域名。",
+      intro:
+        ".builders 把身份写进域名：建筑与施工承包商、自建房与装修团队、房屋定制与模块化建造商用 name.builders，一眼就是「干工程的」。它还有一层意外的科技红利——builder 在互联网语境里指「创造者/开发者」，indie hacker 社区、低代码工具、创客团队用 .builders 同样成立，一个后缀同时覆盖工地与键盘两种「建造」。Identity Digital 运营，注册约 $5（约 ¥33），续费约 $28/年（约 ¥204）——首年便宜、续费跳档，预算按续费价算才稳；这也是本批房产建筑后缀里续费最低的一个。库存极好：姓氏、城市词、品类词几乎都有货。注意三点：一是复数形式指团队，个人工匠展示页用 .works 或 .expert 可能更贴；二是建筑承包是强资质行业，域名之外执照编号、完工案例与保险信息才是转化关键；三是词义横跨实体与科技，定位要在首屏立刻讲清做哪种「建造」。命名上「姓氏 + .builders」最点题（smith.builders 式是海外承包商的常见签名），「城市 + .builders」适合本地施工队，「社区名 + .builders」适合开发者社群。",
+      bestFor: ["建筑与施工承包商", "自建房与装修团队", "房屋定制与模块化建造", "开发者社区与创客团队"],
+      namingTips: [
+        "「姓氏 + .builders」是海外承包商的常见签名",
+        "注册约 $5、续费约 $28/年，预算按续费算",
+        "词义横跨工地与键盘，首屏讲清做哪种建造",
+        "「城市 + .builders」适合本地施工队",
+      ],
+    },
+    en: {
+      title: ".builders Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".builders writes the identity into the address — for construction contractors, custom-home and renovation crews, modular builders, and maker/developer communities. See live pricing and naming advice, then hunt available .builders names with AI.",
+      intro:
+        ".builders writes the identity into the address: construction contractors, custom-home and renovation crews, modular home builders on name.builders read as trade professionals at a glance. It also carries an unexpected tech bonus — builder means creator/developer in internet parlance, so indie-hacker communities, low-code tools and maker teams wear .builders just as well: one suffix covering both the job site and the keyboard. Operated by Identity Digital, about $5 to register and $28/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price; it's also the cheapest renewal in this property-and-construction batch. Inventory is excellent: surnames, city words and category words are nearly all available. Three cautions: the plural implies a team — a solo craftsman's portfolio may sit better on .works or .expert; contracting is a credentials-first trade, so license numbers, finished projects and insurance info convert more than the domain; and since the word spans physical and digital building, say which kind you do above the fold. Naming: surname + .builders is the classic smith.builders contractor signature; city + .builders fits local crews; community name + .builders fits developer collectives.",
+      bestFor: ["Construction contractors", "Custom-home & renovation crews", "Modular & prefab builders", "Maker & developer communities"],
+      namingTips: [
+        "Surname + .builders is the classic contractor signature",
+        "About $5 to register, $28/yr — budget on renewal",
+        "Spans job site and keyboard — say which kind above the fold",
+        "City + .builders fits local crews",
+      ],
+    },
+  },
+  construction: {
+    tld: "construction",
+    zh: {
+      title: ".construction 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".construction 把「建筑工程」写进域名，适合建筑工程公司、总包与分包商、基建与市政工程、建材与工程设备供应商。查看 .construction 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .construction 域名。",
+      intro:
+        ".construction 把行业写进域名：建筑工程公司、总包与分包商、基建与市政工程、建材与工程设备供应商用 name.construction，行业属性再明确不过。它是新顶级域里最「正式」的建筑后缀——比 .builders 更机构化，适合以公司而非团队示人的场景：投标资料、工程官网、集团子品牌都压得住。Identity Digital 运营，注册约 $9（约 ¥63），续费约 $31/年（约 ¥226）——首年便宜、续费跳档，预算按续费价算才稳。库存极好：公司名、城市词、工程品类词几乎都有货。注意三点：一是词非常长（12 个字母，现役最长的行业后缀之一），适合印在投标书与官网，不适合口播与手机输入；二是工程行业获客靠投标与转介绍，域名的价值在专业形象与资料可信度，而非搜索流量；三是别与 .builders 纠结太久——公司官网用 .construction、团队与工匠用 .builders 是最顺的分工。命名上「公司名 + .construction」最点题（acme.construction 式），「城市 + .construction」适合本地工程公司，「品类 + .construction」（steel.construction 式）适合细分工种。",
+      bestFor: ["建筑工程公司", "总包与分包商", "基建与市政工程", "建材与工程设备供应商"],
+      namingTips: [
+        "「公司名 + .construction」正式感压得住投标资料",
+        "注册约 $9、续费约 $31/年，预算按续费算",
+        "12 个字母很长，适合官网与投标书，不适合口播",
+        "公司官网用 .construction，团队工匠用 .builders",
+      ],
+    },
+    en: {
+      title: ".construction Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".construction writes the industry into the address — for construction firms, general and sub-contractors, infrastructure and civil works, and building material suppliers. See live pricing and naming advice, then hunt available .construction names with AI.",
+      intro:
+        ".construction writes the industry into the address: construction firms, general and sub-contractors, infrastructure and civil works, building material and equipment suppliers on name.construction could not be clearer about the trade. It's the most formal construction suffix among new gTLDs — more institutional than .builders, built for showing up as a company rather than a crew: bid documents, corporate sites and group sub-brands all carry it well. Operated by Identity Digital, about $9 to register and $31/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price. Inventory is excellent: company names, city words and trade categories are nearly all available. Three cautions: at twelve letters it's one of the longest industry suffixes in service — fine on bid documents and websites, poor for word of mouth and mobile typing; construction wins work through bids and referrals, so the domain's value is professional credibility, not search traffic; and don't agonize over .builders vs .construction — company site on .construction, crews and craftsmen on .builders is the natural split. Naming: company name + .construction is the on-target acme.construction pattern; city + .construction fits local firms; trade + .construction — the steel.construction pattern — fits specialist crafts.",
+      bestFor: ["Construction firms", "General & sub-contractors", "Infrastructure & civil works", "Building material suppliers"],
+      namingTips: [
+        "Company name + .construction carries bid documents well",
+        "About $9 to register, $31/yr — budget on renewal",
+        "Twelve letters — fine on paper, poor for word of mouth",
+        "Company site on .construction, crews on .builders",
+      ],
+    },
+  },
+  repair: {
+    tld: "repair",
+    zh: {
+      title: ".repair 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".repair 把「维修」写进域名，适合手机与电脑维修店、家电与家庭维修服务、汽车维修与保养、维修教程与配件商城。查看 .repair 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .repair 域名。",
+      intro:
+        ".repair 把服务写进域名：手机与电脑维修店、家电与家庭维修服务、汽车维修与保养、维修教程与配件商城用 name.repair，「修什么」直接长在域名上。它接的是全网最高意图的一类搜索——东西坏了的人马上就要找人修，「品类 + repair」正是他们的搜索原文，iphone.repair 这样的域名等于把搜索词注册成了门牌。Identity Digital 运营，注册约 $8（约 ¥56），续费约 $29/年（约 ¥211）——首年便宜、续费跳档，预算按续费价算才稳。库存极好：品类词、品牌词、城市词几乎都有货。注意三点：一是维修是强本地生意，域名之外 Google 商家资料、评价与报价透明才是获客主力；二是品类词域名涉及第三方商标时（如 iphone.repair）注意页面别自称官方；三是右起可修的东西极多，定位要聚焦一两个品类打透，别做「什么都修」的杂铺。命名上「品类 + .repair」最点题（phone.repair 式读出来就是搜索词），「城市 + 品类 + .repair」适合本地门店，「fix/快修词 + .repair」适合连锁品牌化。",
+      bestFor: ["手机与电脑维修店", "家电与家庭维修服务", "汽车维修与保养", "维修教程与配件商城"],
+      namingTips: [
+        "「品类 + .repair」等于把搜索词注册成门牌",
+        "注册约 $8、续费约 $29/年，预算按续费算",
+        "维修是本地生意，商家资料与评价才是获客主力",
+        "「城市 + 品类 + .repair」适合本地门店",
+      ],
+    },
+    en: {
+      title: ".repair Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".repair writes the service into the address — for phone and computer repair shops, appliance and home repair services, auto repair and maintenance, and repair guides and parts stores. See live pricing and naming advice, then hunt available .repair names with AI.",
+      intro:
+        ".repair writes the service into the address: phone and computer repair shops, appliance and home repair services, auto repair and maintenance, repair guides and parts stores on name.repair say what gets fixed in the domain itself. It catches some of the highest-intent searches on the web — people with something broken need a fix now, and category + repair is literally what they type, so a name like iphone.repair registers the search phrase as your storefront. Operated by Identity Digital, about $8 to register and $29/yr to renew — a cheap first year with a renewal jump, so budget on the renewal price. Inventory is excellent: category words, brand words and city words are nearly all available. Three cautions: repair is a fiercely local trade, so Google Business profiles, reviews and transparent quotes win customers more than the domain; category names touching third-party trademarks (like iphone.repair) must avoid claiming official status on the page; and since almost anything can be repaired, focus on one or two categories instead of a fix-everything shop. Naming: category + .repair is the on-target phone.repair pattern that reads out as the search phrase; city + category + .repair fits local shops; fix-style words + .repair fit chains going branded.",
+      bestFor: ["Phone & computer repair shops", "Appliance & home repair services", "Auto repair & maintenance", "Repair guides & parts stores"],
+      namingTips: [
+        "Category + .repair registers the search phrase as your storefront",
+        "About $8 to register, $29/yr — budget on renewal",
+        "Repair is local — business profiles and reviews win customers",
+        "City + category + .repair fits local shops",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
