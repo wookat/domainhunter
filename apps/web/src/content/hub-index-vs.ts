@@ -214,4 +214,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "earth-vs-world", a: "earth", b: "world", title: { zh: ".earth 和 .world 怎么选：星球词与世界词的分工", en: ".earth vs .world: The Planet Word or The People Word" } },
   { slug: "engineering-vs-tech", a: "engineering", b: "tech", title: { zh: ".engineering 和 .tech 怎么选：职业身份与科技氛围的分工", en: ".engineering vs .tech: The Profession or The Vibe" } },
   { slug: "engineering-vs-dev", a: "engineering", b: "dev", title: { zh: ".engineering 和 .dev 怎么选：工程门牌与开发者签名的分工", en: ".engineering vs .dev: The Firm's Plaque or The Developer's Signature" } },
+  { slug: "family-vs-com", a: "family", b: "com", title: { zh: ".family 和 .com 怎么选：家庭温度与通用信任的取舍", en: ".family vs .com: Warmth of the Household or Default Trust" } },
+  { slug: "baby-vs-store", a: "baby", b: "store", title: { zh: ".baby 和 .store 怎么选：母婴垂直与通用货架的分工", en: ".baby vs .store: The Vertical Audience or The General Shelf" } },
+  { slug: "mom-vs-me", a: "mom", b: "me", title: { zh: ".mom 和 .me 怎么选：妈妈身份与个人品牌的分工", en: ".mom vs .me: The Mom Identity or The Personal Brand" } },
+  { slug: "dad-vs-blog", a: "dad", b: "blog", title: { zh: ".dad 和 .blog 怎么选：爸爸人设与写作阵地的分工", en: ".dad vs .blog: The Dad Persona or The Writing Home" } },
+  { slug: "dog-vs-pet", a: "dog", b: "pet", title: { zh: ".dog 和 .pet 怎么选：犬类专营与全宠物赛道的分工", en: ".dog vs .pet: The Dog Lane or The Whole Pet Aisle" } },
+  { slug: "gifts-vs-shop", a: "gifts", b: "shop", title: { zh: ".gifts 和 .shop 怎么选：送礼场景与通用店铺的分工", en: ".gifts vs .shop: The Occasion or The Storefront" } },
 ];
