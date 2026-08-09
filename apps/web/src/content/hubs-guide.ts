@@ -15,6 +15,9 @@ export const guideOneLiner = (slug: string, lang: Lang): string => GUIDE_BY_SLUG
 
 export const guideHubLabel = (slug: string, lang: Lang): string => GUIDE_BY_SLUG.get(slug)!.label[lang];
 
+/** 同义搜索词（仅参与 hub 即时过滤匹配，不渲染到卡面） */
+export const guideKeywords = (slug: string): string[] => GUIDE_BY_SLUG.get(slug)!.keywords ?? [];
+
 /* ---------- /guide 分组：按行业大类归类，未列出的 slug 自动进「更多行业」 ---------- */
 
 const GUIDE_CATEGORY_DEFS: { id: string; zh: string; en: string; members: string[] }[] = [

@@ -28,6 +28,8 @@ export interface IndustryGuideLocale {
 
 export interface IndustryGuide {
   slug: string;
+  /** hub 即时过滤的同义搜索词（zh/en 混排，如 日料餐厅→寿司）；仅参与 /guide hub 过滤匹配，不渲染 */
+  keywords?: string[];
   /** 推荐 TLD（链接到 /tld/:tld），reason 按语言 */
   tlds: { tld: string; zh: string; en: string }[];
   zh: IndustryGuideLocale;
@@ -161,6 +163,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   ai: {
     slug: "ai",
+    keywords: ["人工智能", "大模型"],
     tlds: [
       { tld: "ai", zh: "AI 产品的身份标签，一个后缀完成定位表达", en: "The identity badge — the suffix alone states your positioning" },
       { tld: "com", zh: "当 AI 只是能力而非全部叙事时，.com 更保品牌纵深", en: "When AI is a capability, not the whole story, .com preserves brand depth" },
@@ -533,6 +536,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   travel: {
     slug: "travel",
+    keywords: ["旅游"],
     tlds: [
       { tld: "com", zh: "预订涉及付款与行程，.com 的信任感直接影响转化", en: "Bookings involve money and itineraries — .com trust converts" },
       { tld: "co", zh: "新锐旅行品牌的利落替身，社媒露出更轻盈", en: "A sleek stand-in for young travel brands, lighter on social" },
@@ -594,6 +598,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   food: {
     slug: "food",
+    keywords: ["餐厅", "饭店"],
     tlds: [
       { tld: "com", zh: "外卖与到店都认的默认后缀，长辈客群尤其信任", en: "The default both delivery and dine-in customers trust" },
       { tld: "co", zh: "新消费餐饮品牌的轻巧替身，菜单上更利落", en: "A neat stand-in for new F&B brands, cleaner on menus" },
@@ -655,6 +660,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   fitness: {
     slug: "fitness",
+    keywords: ["健身房", "gym"],
     tlds: [
       { tld: "com", zh: "会员付费与私教预约的信任基线", en: "The trust baseline for memberships and coaching payments" },
       { tld: "io", zh: "健身科技与数据向产品的圈内后缀", en: "The insider suffix for fitness-tech and data-driven products" },
@@ -1143,6 +1149,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   legal: {
     slug: "legal",
+    keywords: ["律师"],
     tlds: [
       { tld: "com", zh: "法律服务的信任基本盘，别无二选", en: "The trust baseline for legal services — no substitute" },
       { tld: "pro", zh: "独立执业律师个人品牌的专业认证感", en: "Certified-expert energy for independent practitioners" },
@@ -1757,6 +1764,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   fashion: {
     slug: "fashion",
+    keywords: ["服装", "女装"],
     tlds: [
       { tld: "com", zh: "时尚品牌的国际化门面，吊牌与包装上的默认预期", en: "The global storefront for fashion — what customers expect on a hang tag" },
       { tld: "co", zh: "简短现代，新消费与 DTC 品牌的常见替代", en: "Short and modern — a common alternative for DTC labels" },
@@ -1817,6 +1825,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   coffee: {
     slug: "coffee",
+    keywords: ["咖啡店", "咖啡馆"],
     tlds: [
       { tld: "com", zh: "连锁化与电商化的门面，豆袋包装上的默认后缀", en: "The default for chains and online bean sales — what belongs on a coffee-bag label" },
       { tld: "co", zh: "与 coffee/company 双关，咖啡品牌的天然缩写", en: "A natural pun on coffee/company — the insider suffix for cafés" },
@@ -2607,6 +2616,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   eldercare: {
     slug: "eldercare",
+    keywords: ["养老院"],
     tlds: [
       { tld: "com", zh: "决策者是子女，付款前会反复核实——.com 的正规感是第一道信任关", en: "Adult children are the decision makers and they verify before paying — .com's legitimacy is the first trust gate" },
       { tld: "life", zh: "把养老定位成「生活的延续」而非照护机构，.life 温和有尊严", en: "Frames senior care as life continuing, not institutional care — gentle and dignified" },
@@ -3400,6 +3410,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   barber: {
     slug: "barber",
+    keywords: ["发廊"],
     tlds: [
       { tld: "com", zh: "本地搜索与地图入口的信任基线，连锁扩张不换名", en: "The trust baseline for local search and maps — no rename needed when you scale" },
       { tld: "studio", zh: "发型工作室的气质后缀，预约制高客单价定位直给", en: "Salon-studio energy — states the appointment-only, premium positioning outright" },
@@ -3766,6 +3777,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   dental: {
     slug: "dental",
+    keywords: ["牙医"],
     tlds: [
       { tld: "com", zh: "高客单医疗决策的信任基线，家庭牙医十年不换名", en: "The trust baseline for high-ticket medical decisions — a family dentist's name for a decade" },
       { tld: "studio", zh: "美学牙科与 tend 式生活方式诊所的气质后缀", en: "The temperament suffix for aesthetic dentistry and tend-style lifestyle clinics" },
@@ -7317,6 +7329,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   drivingschool: {
     slug: "drivingschool",
+    keywords: ["学车", "考驾照"],
     tlds: [
       { tld: "com", zh: "报名缴费的信任底线，大额学费决策必须稳", en: "The trust baseline for enrollment — tuition-sized payments demand it" },
       { tld: "school", zh: "「学校」语义直给，驾培机构的天然后缀", en: "The school register outright — driver training's native suffix" },
@@ -7380,6 +7393,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   optician: {
     slug: "optician",
+    keywords: ["配眼镜"],
     tlds: [
       { tld: "com", zh: "验光配镜大额消费的信任底线，医疗感客群必备", en: "The trust baseline for prescription-grade purchases" },
       { tld: "store", zh: "零售属性直给，潮流眼镜买手店的轻快选择", en: "The retail register outright — a playful pick for the eyewear boutique" },
@@ -8703,6 +8717,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   hotpot: {
     slug: "hotpot",
+    keywords: ["串串香", "麻辣烫"],
     tlds: [
       { tld: "com", zh: "连锁扩张与加盟招商的信任底线，餐饮品牌出海的默认选择", en: "The trust baseline for chain expansion and franchising — the default for restaurant brands going global" },
       { tld: "restaurant", zh: "「餐厅」直给的品类后缀，火锅店身份零解释", en: "The restaurant suffix outright — zero explanation for a hotpot house's identity" },
@@ -9081,6 +9096,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   noodle: {
     slug: "noodle",
+    keywords: ["拉面", "米线"],
     tlds: [
       { tld: "com", zh: "连锁化与外卖平台入驻的信任底线，小吃品牌做大的默认选择", en: "The trust baseline for chains and delivery platforms — the default once a noodle brand scales" },
       { tld: "kitchen", zh: "「厨房」后缀，现煮现做的锅气直给", en: "The kitchen suffix — the plainest statement of cooked-to-order fire" },
@@ -9144,6 +9160,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   grocery: {
     slug: "grocery",
+    keywords: ["超市", "supermarket"],
     tlds: [
       { tld: "com", zh: "社区生鲜连锁与线上下单的信任底线，加盟扩张的默认选择", en: "The trust baseline for fresh-grocery chains and online ordering — the default for franchise expansion" },
       { tld: "shop", zh: "「店铺」后缀，零售业态零解释成本", en: "The shop suffix — zero explanation for a retail format" },
@@ -9207,6 +9224,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   tutoring: {
     slug: "tutoring",
+    keywords: ["补习"],
     tlds: [
       { tld: "com", zh: "家长决策与机构信任的底线，教培品牌的默认选择", en: "The trust baseline for parent decisions — the default for a tutoring brand" },
       { tld: "academy", zh: "「学院」后缀，教学机构的身份直给", en: "The academy suffix — an institution's identity, stated plainly" },
@@ -10215,6 +10233,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   hotel: {
     slug: "hotel",
+    keywords: ["宾馆"],
     tlds: [
       { tld: "com", zh: "OTA 之外直订渠道的信任底线，品牌官网与会员体系的默认选择", en: "The trust baseline for direct booking beyond OTAs — the default for the brand site and loyalty program" },
       { tld: "travel", zh: "「旅行」语义直给，旅宿品牌与目的地内容站零解释", en: "Travel semantics stated plainly — zero explanation for lodging brands and destination content" },
@@ -10278,6 +10297,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   karaoke: {
     slug: "karaoke",
+    keywords: ["K歌"],
     tlds: [
       { tld: "com", zh: "连锁扩张与团购平台入驻的信任底线，娱乐品牌默认选择", en: "The trust baseline for chain expansion and group-buy platforms — the default for an entertainment brand" },
       { tld: "fun", zh: "「玩乐」语义直给，娱乐场景的情绪后缀零解释", en: "Fun semantics stated plainly — the zero-explanation mood suffix for entertainment venues" },
@@ -10341,6 +10361,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   bubbletea: {
     slug: "bubbletea",
+    keywords: ["珍珠奶茶", "boba"],
     tlds: [
       { tld: "com", zh: "连锁加盟与出海扩张的信任底线，茶饮品牌默认选择", en: "The trust baseline for franchising and overseas expansion — the default for a tea brand" },
       { tld: "cafe", zh: "「饮品店」语义直给，门店官网与菜单页零解释", en: "Café semantics stated plainly — zero explanation for the shop site and menu page" },
@@ -11233,6 +11254,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   housekeeping: {
     slug: "housekeeping",
+    keywords: ["保姆", "月嫂"],
     tlds: [
       { tld: "com", zh: "家政订单从小程序到央企保洁标书都有，.com 的通吃正规感两端都立得住", en: "Housekeeping orders run from mini-app bookings to corporate cleaning tenders — .com holds up at both ends" },
       { tld: "family", zh: "后缀直接声明家庭场景，「进家门的服务」信任感自带", en: "The suffix declares the family context outright — built-in trust for a service that enters the home" },
@@ -13690,6 +13712,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   winery: {
     slug: "winery",
+    keywords: ["红酒", "葡萄酒"],
     tlds: [
       { tld: "com", zh: "出口与收藏市场的信任底线，酒庄品牌的默认选择", en: "The trust baseline for export and collector markets — the default for a winery brand" },
       { tld: "wine", zh: "「葡萄酒」品类后缀直给行业，酒庄与酒商零解释成本", en: "The wine suffix states the trade outright — zero explanation for wineries and merchants" },
@@ -13752,6 +13775,7 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
   },
   sushi: {
     slug: "sushi",
+    keywords: ["寿司", "日本料理", "日式"],
     tlds: [
       { tld: "com", zh: "连锁与预订系统的信任底线，日料品牌的默认选择", en: "The trust baseline for chains and reservation systems — the default for a Japanese-dining brand" },
       { tld: "restaurant", zh: "「餐厅」品类后缀直给业态，日料店零解释成本", en: "The restaurant suffix states the trade — zero explanation for a Japanese restaurant" },

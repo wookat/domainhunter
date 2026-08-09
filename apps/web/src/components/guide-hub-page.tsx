@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { GUIDE_HUB_META, guideHubGroups, guideHubLabel, guideOneLiner } from "@/content/hubs-guide";
+import { GUIDE_HUB_META, guideHubGroups, guideHubLabel, guideKeywords, guideOneLiner } from "@/content/hubs-guide";
 import { useI18n } from "@/lib/i18n";
 import { usePageTitle } from "@/lib/use-page-title";
 import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
@@ -18,7 +18,7 @@ export function GuideHubPage() {
         .map((g) => ({
           ...g,
           slugs: g.slugs.filter((slug) =>
-            hubMatch(query, [slug, guideHubLabel(slug, "zh"), guideHubLabel(slug, "en"), guideOneLiner(slug, "zh"), guideOneLiner(slug, "en")]),
+            hubMatch(query, [slug, guideHubLabel(slug, "zh"), guideHubLabel(slug, "en"), guideOneLiner(slug, "zh"), guideOneLiner(slug, "en"), ...guideKeywords(slug)]),
           ),
         }))
         .filter((g) => g.slugs.length > 0),
