@@ -238,4 +238,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "health-vs-care", a: "health", b: "care", title: { zh: ".health 和 .care 怎么选：健康行业与照护服务的分工", en: ".health vs .care: The Industry Storefront or The Service Warmth" } },
   { slug: "family-vs-life", a: "family", b: "life", title: { zh: ".family 和 .life 怎么选：家庭场景与生活方式的分工", en: ".family vs .life: The Household Unit or The Lifestyle Topic" } },
   { slug: "surf-vs-travel", a: "surf", b: "travel", title: { zh: ".surf 和 .travel 怎么选：浪点生意与行程生意的分工", en: ".surf vs .travel: The Break Business or The Itinerary Business" } },
+  { slug: "ltd-vs-llc", a: "ltd", b: "llc", title: { zh: ".ltd 和 .llc 怎么选：注册地决定的公司抬头对比", en: ".ltd vs .llc: The Letterhead Suffix, Picked by Where You're Registered" } },
+  { slug: "ltd-vs-co", a: "ltd", b: "co", title: { zh: ".ltd 和 .co 怎么选：注册抬头与品牌简写的取舍", en: ".ltd vs .co: The Certificate or The Brand Shorthand" } },
+  { slug: "biz-vs-com", a: "biz", b: "com", title: { zh: ".biz 和 .com 怎么选：老牌替补与默认答案的对比", en: ".biz vs .com: The Veteran Fallback or The Default Answer" } },
+  { slug: "fyi-vs-info", a: "fyi", b: "info", title: { zh: ".fyi 和 .info 怎么选：轻快速查与正式资料的分工", en: ".fyi vs .info: The Quick Lookup or The Formal Reference" } },
+  { slug: "promo-vs-shop", a: "promo", b: "shop", title: { zh: ".promo 和 .shop 怎么选：活动阵地与常设店铺的分工", en: ".promo vs .shop: The Campaign Outpost or The Permanent Storefront" } },
+  { slug: "express-vs-store", a: "express", b: "store", title: { zh: ".express 和 .store 怎么选：快服务与常设商店的分工", en: ".express vs .store: Selling Speed or Selling Shelves" } },
 ];

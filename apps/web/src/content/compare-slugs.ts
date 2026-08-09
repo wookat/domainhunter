@@ -231,6 +231,12 @@ export const COMPARE_SLUGS = [
   "health-vs-care",
   "family-vs-life",
   "surf-vs-travel",
+  "ltd-vs-llc",
+  "ltd-vs-co",
+  "biz-vs-com",
+  "fyi-vs-info",
+  "promo-vs-shop",
+  "express-vs-store",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

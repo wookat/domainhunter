@@ -408,7 +408,7 @@
     ]
   },
   "vs": {
-    "count": 228,
+    "count": 234,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -637,7 +637,13 @@
       "football-vs-team",
       "health-vs-care",
       "family-vs-life",
-      "surf-vs-travel"
+      "surf-vs-travel",
+      "ltd-vs-llc",
+      "ltd-vs-co",
+      "biz-vs-com",
+      "fyi-vs-info",
+      "promo-vs-shop",
+      "express-vs-store"
     ]
   }
 }
