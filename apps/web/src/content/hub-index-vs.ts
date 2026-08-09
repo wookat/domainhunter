@@ -208,4 +208,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "builders-vs-construction", a: "builders", b: "construction", title: { zh: ".builders 和 .construction 怎么选：施工班组与工程公司的分工", en: ".builders vs .construction: The Crew or The Firm" } },
   { slug: "repair-vs-services", a: "repair", b: "services", title: { zh: ".repair 和 .services 怎么选：修一件事与包一揽子的分工", en: ".repair vs .services: The One Fix or The Full Bundle" } },
   { slug: "apartments-vs-house", a: "apartments", b: "house", title: { zh: ".apartments 和 .house 怎么选：招租页与家宅品牌的分工", en: ".apartments vs .house: The Leasing Page or The House Brand" } },
+  { slug: "energy-vs-solar", a: "energy", b: "solar", title: { zh: ".energy 和 .solar 怎么选：全行业与单赛道的分工", en: ".energy vs .solar: The Whole Industry or The Single Lane" } },
+  { slug: "green-vs-eco", a: "green", b: "eco", title: { zh: ".green 和 .eco 怎么选：形容词与认证徽章的分工", en: ".green vs .eco: The Adjective or The Vetted Badge" } },
+  { slug: "eco-vs-earth", a: "eco", b: "earth", title: { zh: ".eco 和 .earth 怎么选：承诺档案与星球叙事的分工", en: ".eco vs .earth: The Vetted Pledge or The Planet Story" } },
+  { slug: "earth-vs-world", a: "earth", b: "world", title: { zh: ".earth 和 .world 怎么选：星球词与世界词的分工", en: ".earth vs .world: The Planet Word or The People Word" } },
+  { slug: "engineering-vs-tech", a: "engineering", b: "tech", title: { zh: ".engineering 和 .tech 怎么选：职业身份与科技氛围的分工", en: ".engineering vs .tech: The Profession or The Vibe" } },
+  { slug: "engineering-vs-dev", a: "engineering", b: "dev", title: { zh: ".engineering 和 .dev 怎么选：工程门牌与开发者签名的分工", en: ".engineering vs .dev: The Firm's Plaque or The Developer's Signature" } },
 ];

@@ -4381,6 +4381,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Single-family sales & custom homes", "Renovation & home brands", "Studios & labels (the house brand usage)", "Want shorter, cheaper-to-hold"],
     },
   },
+  "energy-vs-solar": {
+    slug: "energy-vs-solar",
+    a: "energy",
+    b: "solar",
+    zh: {
+      title: ".energy 和 .solar 怎么选：全行业与单赛道的分工",
+      metaDescription: ".energy 覆盖整个能源行业，.solar 锁定光伏一条赛道。对比两者的语义颗粒度、价格与续费差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在颗粒度：.energy 是行业词——售电公司、虚拟电厂、储能与充电桩、能源科技与碳管理 SaaS 都装得下，name.energy 读出来就是「做能源的」，tesla.energy 式是行业标杆用法；.solar 是赛道词——光伏安装商、户用与工商业电站、组件与逆变器品牌、电站监控平台，锁死「太阳能」一条线，「城市 + solar」正是屋顶客户的搜索原文，本地安装商用它接搜索意图最准。价格差一档：.energy 注册约 $12、续费约 $93/年——续费是这批能源后缀里最贵的；.solar 注册约 $6、续费约 $52/年——长持每年省 $41，预算都按续费算。判断标准：业务横跨发电、售电、储能、充电多条线，或做能源行业平台 → .energy 的覆盖面才够，业务扩了域名不用换；只做光伏这一条赛道——安装、组件、监控 → .solar 指向更准、更便宜，austin.solar 式域名等于把搜索词注册成门牌。两个注意：能源是强监管行业，售电与并网资质比域名更影响信任，首屏放资质；.solar 还有「太阳的」本义，光热与天文项目借用也成立，命名时留意语境。命名上「品牌 + .energy」（tesla.energy 式）与「城市 + .solar」（austin.solar 式）各是两边最点题的模式。",
+      pickA: ["售电公司与综合能源服务商", "储能、充电桩与多线业务", "能源科技与碳管理 SaaS", "业务可能继续扩张的平台"],
+      pickB: ["光伏安装商与经销商", "户用与工商业电站", "组件与逆变器品牌", "在意续费成本的长持"],
+    },
+    en: {
+      title: ".energy vs .solar: The Whole Industry or The Single Lane",
+      metaDescription:
+        ".energy covers the whole energy industry; .solar locks onto the photovoltaic lane. Compare semantic granularity, pricing and renewals, then hunt names available on both.",
+      verdict:
+        "The split is granularity. .energy is the industry word — electricity retailers, virtual power plants, storage and EV charging, energy-tech and carbon SaaS all fit: name.energy reads as an energy business, and tesla.energy is the industry-standard pattern. .solar is the lane word — solar installers and dealers, residential and commercial PV, panel and inverter brands, plant monitoring: it locks onto one lane, and city + solar is literally what rooftop customers type, so local installers catch search intent with precision. Pricing differs by a tier: .energy about $12 to register and $93/yr to renew — the priciest renewal among the energy suffixes; .solar about $6 and $52/yr — a $41/yr saving on a long hold, and both should be budgeted on the renewal. The test: the business spans generation, retail, storage or charging, or you run an energy-industry platform → only .energy covers the ground and won't strand the domain when you expand; you do solar and only solar — installation, panels, monitoring → .solar aims truer and costs less, and an austin.solar-style name registers the search phrase as your storefront. Two cautions: energy is a heavily regulated trade, so licenses and grid credentials build trust more than the domain — put them above the fold; and .solar also means of the sun, so solar-thermal and astronomy projects can borrow it — mind the context when naming. Naming: brand + .energy (tesla.energy) versus city + .solar (austin.solar) are each side's on-target patterns.",
+      pickA: ["Electricity retailers & integrated energy services", "Storage, EV charging & multi-line businesses", "Energy-tech & carbon SaaS", "Platforms that may keep expanding"],
+      pickB: ["Solar installers & dealers", "Residential & commercial PV plants", "Panel & inverter brands", "Renewal-cost-sensitive long holds"],
+    },
+  },
+  "green-vs-eco": {
+    slug: "green-vs-eco",
+    a: "green",
+    b: "eco",
+    zh: {
+      title: ".green 和 .eco 怎么选：形容词与认证徽章的分工",
+      metaDescription: ".green 是人人可注册的绿色形容词，.eco 是需提交环保档案的带门槛后缀。对比两者的信任背书、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是环保后缀，分工在门槛：.green 是形容词——绿色出行、绿色建筑、绿色电力、绿色包装都能修饰，人人可注册零门槛，品牌把可持续微站挂在 brand.green 是标准用法，主站照旧留 .com；.eco 是徽章——Big Room 运营、WWF 等环保组织背书，注册时需在 profiles.eco 提交环保承诺档案，这道门槛反而成了信任背书：挂 .eco 等于公开可查的环保立场，比自说自话的绿色文案硬得多。价格结构完全相反：.green 注册约 $7、续费约 $64/年——首年便宜续费跳档；.eco 注册约 $60、续费同价——全程透明无涨价陷阱，三年总持有成本反而是 .eco 略低。判断标准：绿色是品牌叙事的一部分——可持续产品线、ESG 专题站、环保营销活动 → .green 灵活便宜、修饰万物；环保是机构的身份本身——环保组织、气候行动项目、碳中和服务，且愿意公开承诺档案 → .eco 的门槛就是你的差异化。两个注意：漂绿监管趋严，.green 站上必须放认证与数据，否则形容词反成靶子；.eco 注册后要完成环保档案，否则域名可能被暂停解析。命名上「品牌 + .green」（可持续微站标准写法）与「组织/行动 + .eco」各是两边最点题的模式。",
+      pickA: ["品牌可持续微站与 ESG 专题", "绿色出行、建筑、包装等垂类服务", "环保营销活动与内容站", "预算敏感、想先试后扩"],
+      pickB: ["环保组织与气候行动项目", "碳中和与循环经济服务", "愿意公开环保承诺档案的品牌", "在意全程透明定价"],
+    },
+    en: {
+      title: ".green vs .eco: The Adjective or The Vetted Badge",
+      metaDescription:
+        ".green is the open-to-all green adjective; .eco requires a public sustainability profile to register. Compare trust signals, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are environmental suffixes; the split is the gate. .green is the adjective — green mobility, green building, green power, green packaging: it modifies everything, anyone can register, and parking the sustainability microsite on brand.green beside the .com flagship is the standard play. .eco is the badge — operated by Big Room and backed by WWF among others, registration requires filing a sustainability pledge at profiles.eco, and that gate becomes the endorsement: wearing .eco means a publicly auditable environmental stance, far harder currency than self-declared green copy. The pricing structures are opposites: .green about $7 to register and $64/yr to renew — cheap in, renewal jump; .eco about $60 with the same renewal — transparent all the way, and over three years .eco actually totals slightly less. The test: green is part of the brand story — sustainable product lines, ESG microsites, environmental campaigns → .green is flexible, cheap to start and modifies anything; the environment is the institution's identity — environmental nonprofits, climate-action projects, carbon-neutral services willing to publish the pledge → .eco's gate is your differentiation. Two cautions: greenwashing rules are tightening, so a .green site needs certifications and data on the page or the adjective backfires; and .eco registrants must complete the profile or the domain can be suspended. Naming: brand + .green (the standard sustainability-microsite pattern) versus organization or action + .eco are each side's on-target patterns.",
+      pickA: ["Brand sustainability microsites & ESG pages", "Green mobility, building & packaging verticals", "Environmental campaigns & content sites", "Budget-sensitive, start-small plays"],
+      pickB: ["Environmental nonprofits & climate action", "Carbon-neutral & circular-economy services", "Brands willing to publish a pledge", "Want transparent flat pricing"],
+    },
+  },
+  "eco-vs-earth": {
+    slug: "eco-vs-earth",
+    a: "eco",
+    b: "earth",
+    zh: {
+      title: ".eco 和 .earth 怎么选：承诺档案与星球叙事的分工",
+      metaDescription: ".eco 带环保承诺门槛、自带认证背书，.earth 开放注册、讲星球级叙事。对比两者的信任机制、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都面向环保与可持续，分工在信任机制：.eco 靠门槛——注册需在 profiles.eco 提交环保承诺档案，WWF 等组织背书，挂上它等于一份公开可查的环保声明，环保组织、气候行动项目、碳中和服务用它，后缀本身就是资质；.earth 靠叙事——「地球」是比「生态」更大的词，星球级环保项目、地理与自然内容、旅行与探险品牌、甚至「大地色」美学的生活方式品牌都装得下，开放注册无门槛，语义比 .eco 宽一圈。价格都是透明档：.eco 注册约 $60、续费同价，.earth 注册约 $16、续费同价——都无首年低价陷阱，差距在绝对值：.earth 每年便宜 $44，长持成本低得多。判断标准：需要后缀替你背书——机构官网、募捐页、碳服务，愿意公开承诺档案 → .eco 的门槛就是信任；要的是星球格局的品牌叙事——环境内容站、自然纪录片、户外与探险、地球科学项目 → .earth 更便宜、更自由、词也更大。两个注意：.eco 注册后不完成档案可能被暂停解析，流程要走完；.earth 无门槛也意味着无背书，环保立场要靠站内认证与数据自证。命名上「组织/行动 + .eco」与「主题/品牌 + .earth」（save.earth 式的号召感）各是两边最点题的模式。",
+      pickA: ["环保组织与气候行动项目", "碳中和与循环经济服务", "需要后缀背书的募捐与机构站", "愿意公开环保承诺档案"],
+      pickB: ["环境内容与自然纪录项目", "户外、旅行与探险品牌", "地球科学与地理项目", "预算敏感的长持"],
+    },
+    en: {
+      title: ".eco vs .earth: The Vetted Pledge or The Planet Story",
+      metaDescription:
+        ".eco gates registration behind a sustainability pledge; .earth is open and tells a planet-scale story. Compare trust mechanics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both face the environmental and sustainability space; the split is the trust mechanism. .eco trusts by gate — registration requires a sustainability pledge at profiles.eco, with WWF-league backing, so wearing it is a publicly auditable environmental statement: nonprofits, climate-action projects and carbon services use the suffix as a credential in itself. .earth trusts by story — earth is a bigger word than eco: planet-scale environmental projects, geography and nature content, travel and adventure brands, even earth-tone lifestyle labels all fit, registration is open with no gate, and the semantics run a ring wider than .eco. Both price transparently: .eco about $60 to register with the same renewal, .earth about $16 the same both ways — no first-year teasers on either, and the gap is the absolute number: .earth saves $44 a year, far cheaper to hold long-term. The test: you need the suffix to vouch for you — institutional sites, donation pages, carbon services, and you'll publish the pledge → .eco's gate is the trust; you want a planet-scale brand narrative — environmental content, nature documentaries, outdoor and adventure, earth science → .earth is cheaper, freer and the bigger word. Two cautions: an .eco registration left without a completed profile can be suspended, so finish the process; and .earth's openness means no endorsement — prove the environmental stance with on-page certifications and data. Naming: organization or action + .eco versus theme or brand + .earth (the save.earth call-to-action cadence) are each side's on-target patterns.",
+      pickA: ["Environmental nonprofits & climate action", "Carbon-neutral & circular-economy services", "Donation & institutional sites needing endorsement", "Willing to publish a pledge"],
+      pickB: ["Environmental content & nature documentary projects", "Outdoor, travel & adventure brands", "Earth science & geography projects", "Budget-sensitive long holds"],
+    },
+  },
+  "earth-vs-world": {
+    slug: "earth-vs-world",
+    a: "earth",
+    b: "world",
+    zh: {
+      title: ".earth 和 .world 怎么选：星球词与世界词的分工",
+      metaDescription: ".earth 指向自然与星球本身，.world 指向人类世界与「××的世界」。对比两者的语义、价格与命名模式差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个指星球、一个指人间：.earth 是自然词——环保与可持续项目、地球科学与地理内容、户外探险与自然旅行、大地色美学品牌，语境是「这颗星球」，save.earth 式域名自带号召感；.world 是叙事词——「××的世界」是它的原生句式，游戏与虚拟世界、品牌宇宙、垂类门户（coffee.world 式）、国际化业务都装得下，语境是「人类世界/某个世界」，比 .earth 更商业、更百搭。价格结构相反：.earth 注册约 $16、续费同价——全程透明；.world 首年促销常见几美元、续费约 $28/年——首年便宜续费跳档，长持 .earth 反而每年省 $12。判断标准：主题是自然、环境、星球本身——环保行动、自然内容、地球科学 → .earth 的语义最正；讲的是「一个世界」——游戏世界观、品牌宇宙、垂类聚合、国际化叙事 → .world 的句式天然成立，什么品类都能接。两个注意：.earth 商业辨识度还在建立期，面向大众的品牌主站建议配一个主流后缀；.world 首年低价吸引了大量批量注册，新站要靠真实内容快速建立信任。命名上「行动/主题 + .earth」（save.earth 式）与「品牌/品类 + .world」（coffee.world 式）各是两边最点题的模式。",
+      pickA: ["环保与可持续行动项目", "地球科学与自然内容", "户外探险与自然旅行品牌", "在意续费透明的长持"],
+      pickB: ["游戏与虚拟世界项目", "品牌宇宙与主题社区", "垂类门户与聚合站", "国际化业务叙事"],
+    },
+    en: {
+      title: ".earth vs .world: The Planet Word or The People Word",
+      metaDescription:
+        ".earth points at nature and the planet itself; .world points at the human world and the world of X. Compare semantics, pricing and naming patterns, then hunt names available on both.",
+      verdict:
+        "One means the planet, the other means the people on it. .earth is the nature word — environmental and sustainability projects, earth science and geography content, outdoor adventure and nature travel, earth-tone aesthetic brands: the context is this planet, and a save.earth-style name carries a built-in call to action. .world is the narrative word — the world of X is its native sentence: games and virtual worlds, brand universes, vertical portals (coffee.world), international businesses all fit; the context is the human world or a world, more commercial and more versatile than .earth. The pricing structures are opposites: .earth about $16 to register with the same renewal — transparent all the way; .world runs first-year promos of a few dollars then renews around $28/yr — cheap in, renewal jump, so a long hold on .earth actually saves $12 a year. The test: the subject is nature, the environment, the planet itself — climate action, nature content, earth science → .earth's semantics aim truest; you're building a world — game universes, brand worlds, vertical aggregators, international narratives → .world's sentence works natively and takes any category. Two cautions: .earth's commercial recognition is still building, so consumer-facing brand homes should pair a mainstream suffix; and .world's cheap first year attracts bulk registrations, so a new site must earn trust fast with real content. Naming: action or theme + .earth (save.earth) versus brand or category + .world (coffee.world) are each side's on-target patterns.",
+      pickA: ["Environmental & sustainability action projects", "Earth science & nature content", "Outdoor adventure & nature travel brands", "Transparent-renewal long holds"],
+      pickB: ["Games & virtual-world projects", "Brand universes & themed communities", "Vertical portals & aggregators", "International business narratives"],
+    },
+  },
+  "engineering-vs-tech": {
+    slug: "engineering-vs-tech",
+    a: "engineering",
+    b: "tech",
+    zh: {
+      title: ".engineering 和 .tech 怎么选：职业身份与科技氛围的分工",
+      metaDescription: ".engineering 把职业写进域名，.tech 卖的是科技感氛围。对比两者的语气、价格与命名模式差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在语气：.engineering 是职业词——工程设计与咨询公司、机电服务商、工程院校认证机构，把职业身份直接长在后缀上，还有一层科技公司红利：大厂把工程博客挂在 brand.engineering 已成惯例（Uber、Slack 都这么用），招聘页与技术品牌用它比 .com 子目录更有辨识度；.tech 是氛围词——初创公司、黑客松、科技媒体、硬件品牌，四个字母把「科技感」说完，语义宽到什么科技生意都能装，CES 官网就用 ces.tech。价格上 .engineering 注册约 $7、续费约 $52/年；.tech 首年促销常见极低价、续费高出数倍——两个都是首年便宜续费跳档，预算按续费算。判断标准：主体是「工程师/工程公司」——设计院、咨询所、技术团队博客、独立顾问 → .engineering 的职业感压得住，civil.engineering 式垂类词更是点题；要的是泛科技氛围——创业公司、科技活动、硬件电商 → .tech 更短更好念、面向大众更好记。两个注意：.engineering 十一个字母是现役最长后缀之一，适合品牌页与博客、不适合口播，前缀务必用短词；.tech 库存好但同名初创多，起名先查商标撞车。命名上「品牌 + .engineering」（uber.engineering 式博客惯例）与「短品牌词 + .tech」各是两边最点题的模式。",
+      pickA: ["工程设计与咨询公司", "大厂工程博客与招聘页", "机电与专业技术服务商", "独立工程顾问个人品牌"],
+      pickB: ["科技初创公司官网", "黑客松与科技活动", "科技媒体与硬件品牌", "在意更短更好念的后缀"],
+    },
+    en: {
+      title: ".engineering vs .tech: The Profession or The Vibe",
+      metaDescription:
+        ".engineering writes the profession into the address; .tech sells the technology vibe. Compare tone, pricing and naming patterns, then hunt names available on both.",
+      verdict:
+        "The split is the tone. .engineering is the profession word — engineering design and consulting firms, mechanical and electrical providers, schools and certification bodies wear the trade in the suffix itself, with a tech-company bonus: hanging the engineering blog on brand.engineering is an established convention (Uber and Slack both do it), and for hiring pages and tech branding it beats a .com subdirectory on recognition. .tech is the vibe word — startups, hackathons, tech media, hardware brands: four letters that say technology, broad enough for any tech business, and CES itself runs on ces.tech. Pricing: .engineering about $7 to register and $52/yr to renew; .tech runs rock-bottom first-year promos with renewals several times higher — both cheap in with a renewal jump, so budget on renewals. The test: the entity is an engineer or engineering firm — design institutes, consultancies, team blogs, independent consultants → .engineering's professional register carries it, and a civil.engineering-style vertical word is dead on target; you want the general tech vibe — startups, tech events, hardware e-commerce → .tech is shorter, easier to say and easier for consumers to remember. Two cautions: at eleven letters .engineering is among the longest suffixes in service — good for brand pages and blogs, poor by word of mouth, so keep the prefix short; and .tech's healthy inventory means many namesake startups — clear trademarks before naming. Naming: brand + .engineering (the uber.engineering blog convention) versus short brand word + .tech are each side's on-target patterns.",
+      pickA: ["Engineering design & consulting firms", "Big-company engineering blogs & hiring pages", "Mechanical & electrical service providers", "Independent consultant personal brands"],
+      pickB: ["Tech startup company sites", "Hackathons & tech events", "Tech media & hardware brands", "Want the shorter, easier-said suffix"],
+    },
+  },
+  "engineering-vs-dev": {
+    slug: "engineering-vs-dev",
+    a: "engineering",
+    b: "dev",
+    zh: {
+      title: ".engineering 和 .dev 怎么选：工程门牌与开发者签名的分工",
+      metaDescription: ".engineering 是工程机构的正式门牌，.dev 是开发者个人与工具的圈内签名。对比两者的语气、价格与安全特性差异，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在主体：.engineering 是机构门牌——工程公司官网、大厂工程博客（uber.engineering 式惯例）、团队招聘页，十一个字母自带正式感，软件与土木两个世界的「工程」都压得住；.dev 是个人与工具的签名——开发者作品集（yourname.dev 是圈内标准写法）、开发工具、技术文档、开源项目主页，Google 运营、全区强制 HTTPS（HSTS 预加载），web.dev、kubernetes.dev 早把用户教育做完了。价格结构不同：.engineering 注册约 $7、续费约 $52/年——首年便宜续费跳档；.dev 注册续费稳定在 $12–15——全程平价无陷阱，长持每年省 $37。判断标准：以「工程组织」示人——公司官网、团队博客、招聘页、垂类咨询 → .engineering 的正式感与职业语义更对；以「开发者/工具」示人——个人品牌、CLI 工具、SDK 文档、开源项目 → .dev 更短更便宜，圈内辨识度也更高。两个注意：.engineering 长，口播与手机输入吃亏，前缀必须短；.dev 语义拉力强，非开发者业务放上去会错位，且全站必须配好 HTTPS 证书才能解析。最顺的分工其实是并用：团队博客用 .engineering，个人与工具用 .dev。命名上「品牌 + .engineering」（uber.engineering 式）与「人名/工具词 + .dev」（yourname.dev 式）各是两边最点题的模式。",
+      pickA: ["工程公司官网与团队博客", "招聘页与技术品牌", "土木/机电等传统工程机构", "垂类工程咨询（civil.engineering 式）"],
+      pickB: ["开发者个人作品集", "开发工具与 CLI/SDK", "技术文档与开源项目", "在意续费便宜与 HTTPS 保障"],
+    },
+    en: {
+      title: ".engineering vs .dev: The Firm's Plaque or The Developer's Signature",
+      metaDescription:
+        ".engineering is the formal plaque of an engineering organization; .dev is the in-crowd signature of developers and tools. Compare tone, pricing and security, then hunt names available on both.",
+      verdict:
+        "The split is the subject. .engineering is the institutional plaque — engineering firm sites, big-company engineering blogs (the uber.engineering convention), team hiring pages: eleven letters with built-in formality, at home in both the software and civil senses of engineering. .dev is the signature of people and tools — developer portfolios (yourname.dev is the in-crowd standard), dev tools, technical docs, open-source homepages: Google-operated with the whole zone HSTS-preloaded, and official sites like web.dev and kubernetes.dev finished the user education years ago. The pricing structures differ: .engineering about $7 to register and $52/yr to renew — cheap in, renewal jump; .dev sits stable around $12–15 both ways — flat and honest, saving $37 a year on a long hold. The test: showing up as an engineering organization — company sites, team blogs, hiring pages, vertical consultancies → .engineering's formality and professional semantics fit; showing up as a developer or a tool — personal brands, CLI tools, SDK docs, open source → .dev is shorter, cheaper and carries more recognition inside the community. Two cautions: .engineering is long — poor for word of mouth and mobile typing, so the prefix must be short; and .dev's semantic pull is strong — non-developer businesses look misplaced, and the site must serve HTTPS or it won't resolve at all. The natural split is to use both: team blog on .engineering, personal sites and tools on .dev. Naming: brand + .engineering (uber.engineering) versus your name or tool word + .dev (yourname.dev) are each side's on-target patterns.",
+      pickA: ["Engineering firm sites & team blogs", "Hiring pages & tech branding", "Civil/mechanical traditional engineering institutions", "Vertical consultancies (civil.engineering)"],
+      pickB: ["Developer personal portfolios", "Dev tools, CLIs & SDKs", "Technical docs & open-source projects", "Want cheap renewals & enforced HTTPS"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

@@ -201,6 +201,12 @@ export const COMPARE_SLUGS = [
   "builders-vs-construction",
   "repair-vs-services",
   "apartments-vs-house",
+  "energy-vs-solar",
+  "green-vs-eco",
+  "eco-vs-earth",
+  "earth-vs-world",
+  "engineering-vs-tech",
+  "engineering-vs-dev",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
