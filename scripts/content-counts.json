@@ -203,7 +203,7 @@
     ]
   },
   "guide": {
-    "count": 200,
+    "count": 206,
     "slugs": [
       "saas",
       "ecommerce",
@@ -404,7 +404,13 @@
       "wholesale",
       "trading",
       "coupon",
-      "flashsale"
+      "flashsale",
+      "pestcontrol",
+      "roofing",
+      "towing",
+      "selfstorage",
+      "catering",
+      "signage"
     ]
   },
   "vs": {

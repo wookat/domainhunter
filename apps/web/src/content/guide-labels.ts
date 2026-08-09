@@ -203,4 +203,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "trading", zh: "外贸公司", en: "Import & export trading" },
   { slug: "coupon", zh: "优惠券导购", en: "Coupon & deals platforms" },
   { slug: "flashsale", zh: "限时特卖电商", en: "Flash sale e-commerce" },
+  { slug: "pestcontrol", zh: "害虫防治", en: "Pest control" },
+  { slug: "roofing", zh: "屋顶施工", en: "Roofing" },
+  { slug: "towing", zh: "道路救援", en: "Towing & roadside" },
+  { slug: "selfstorage", zh: "自助仓储", en: "Self-storage" },
+  { slug: "catering", zh: "宴会团餐", en: "Catering" },
+  { slug: "signage", zh: "广告标识", en: "Signage & signs" },
 ];
