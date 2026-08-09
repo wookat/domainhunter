@@ -1,0 +1,440 @@
+{
+ "https://hunt.zalize.com/": {
+  "canonical": "https://hunt.zalize.com/",
+  "og_locale": "zh_CN",
+  "hreflang_n": 3,
+  "html_lang": "zh-CN",
+  "jsonld_n": 2,
+  "h1": null
+ },
+ "https://hunt.zalize.com/?lang=en": {
+  "canonical": "https://hunt.zalize.com/?lang=en",
+  "og_locale": "en_US",
+  "hreflang_n": 3,
+  "html_lang": "en",
+  "jsonld_n": 2,
+  "h1": null
+ },
+ "https://hunt.zalize.com/prices": {
+  "canonical": "https://hunt.zalize.com/prices",
+  "og_locale": "zh_CN",
+  "hreflang_n": 3,
+  "html_lang": "zh-CN",
+  "jsonld_n": 2,
+  "h1": "域名后缀价格总览：180 个主流 TLD 注册与续费对比"
+ },
+ "https://hunt.zalize.com/prices?lang=en": {
+  "canonical": "https://hunt.zalize.com/prices?lang=en",
+  "og_locale": "en_US",
+  "hreflang_n": 3,
+  "html_lang": "en",
+  "jsonld_n": 2,
+  "h1": "TLD Price Overview: Registration vs Renewal for 180 Popular "
+ },
+ "https://hunt.zalize.com/tld": {
+  "canonical": "https://hunt.zalize.com/tld",
+  "og_locale": "zh_CN",
+  "hreflang_n": 3,
+  "html_lang": "zh-CN",
+  "jsonld_n": 1,
+  "h1": "全部 TLD 注册指南：180 个后缀怎么选"
+ },
+ "https://hunt.zalize.com/tld?lang=en": {
+  "canonical": "https://hunt.zalize.com/tld?lang=en",
+  "og_locale": "en_US",
+  "hreflang_n": 3,
+  "html_lang": "en",
+  "jsonld_n": 1,
+  "h1": "All TLD Registration Guides: How to Choose Among 180 Suffixe"
+ },
+ "https://hunt.zalize.com/guide": {
+  "canonical": "https://hunt.zalize.com/guide",
+  "og_locale": "zh_CN",
+  "hreflang_n": 3,
+  "html_lang": "zh-CN",
+  "jsonld_n": 1,
+  "h1": "全部行业命名指南：182 个行业怎么起名"
+ },
+ "https://hunt.zalize.com/guide?lang=en": {
+  "canonical": "https://hunt.zalize.com/guide?lang=en",
+  "og_locale": "en_US",
+  "hreflang_n": 3,
+  "html_lang": "en",
+  "jsonld_n": 1,
+  "h1": "All Industry Naming Guides: How to Name a Product in 182 Ind"
+ },
+ "https://hunt.zalize.com/vs": {
+  "canonical": "https://hunt.zalize.com/vs",
+  "og_locale": "zh_CN",
+  "hreflang_n": 3,
+  "html_lang": "zh-CN",
+  "jsonld_n": 1,
+  "h1": "全部后缀对比：210 组 TLD 怎么选"
+ },
+ "https://hunt.zalize.com/vs?lang=en": {
+  "canonical": "https://hunt.zalize.com/vs?lang=en",
+  "og_locale": "en_US",
+  "hreflang_n": 3,
+  "html_lang": "en",
+  "jsonld_n": 1,
+  "h1": "All TLD Comparisons: 210 Head-to-Head Matchups"
+ },
+ "https://hunt.zalize.com/why": {
+  "canonical": "https://hunt.zalize.com/why",
+  "og_locale": "zh_CN",
+  "hreflang_n": 3,
+  "html_lang": "zh-CN",
+  "jsonld_n": 1,
+  "h1": null
+ },
+ "https://hunt.zalize.com/why?lang=en": {
+  "canonical": "https://hunt.zalize.com/why?lang=en",
+  "og_locale": "en_US",
+  "hreflang_n": 3,
+  "html_lang": "en",
+  "jsonld_n": 1,
+  "h1": null
+ },
+ "https://hunt.zalize.com/shortlist": {
+  "canonical": "https://hunt.zalize.com/shortlist",
+  "og_locale": "zh_CN",
+  "hreflang_n": 0,
+  "html_lang": "zh-CN",
+  "jsonld_n": 0,
+  "h1": null
+ },
+ "https://hunt.zalize.com/shortlist?lang=en": {
+  "canonical": "https://hunt.zalize.com/shortlist",
+  "og_locale": "zh_CN",
+  "hreflang_n": 0,
+  "html_lang": "zh-CN",
+  "jsonld_n": 0,
+  "h1": null
+ },
+ "https://hunt.zalize.com/monitors": {
+  "canonical": "https://hunt.zalize.com/monitors",
+  "og_locale": "zh_CN",
+  "hreflang_n": 0,
+  "html_lang": "zh-CN",
+  "jsonld_n": 0,
+  "h1": null
+ },
+ "https://hunt.zalize.com/monitors?lang=en": {
+  "canonical": "https://hunt.zalize.com/monitors",
+  "og_locale": "zh_CN",
+  "hreflang_n": 0,
+  "html_lang": "zh-CN",
+  "jsonld_n": 0,
+  "h1": null
+ },
+ "https://hunt.zalize.com/advanced": {
+  "canonical": "https://hunt.zalize.com/advanced",
+  "og_locale": "zh_CN",
+  "hreflang_n": 3,
+  "html_lang": "zh-CN",
+  "jsonld_n": 0,
+  "h1": null
+ },
+ "https://hunt.zalize.com/advanced?lang=en": {
+  "canonical": "https://hunt.zalize.com/advanced?lang=en",
+  "og_locale": "en_US",
+  "hreflang_n": 3,
+  "html_lang": "en",
+  "jsonld_n": 0,
+  "h1": null
+ },
+ "https://hunt.zalize.com/tld/ai": {
+  "canonical": "https://hunt.zalize.com/tld/ai",
+  "og_locale": "zh_CN",
+  "hreflang_n": 3,
+  "html_lang": "zh-CN",
+  "jsonld_n": 2,
+  "h1": ".ai 域名注册指南：适合谁、多少钱、怎么起名"
+ },
+ "https://hunt.zalize.com/tld/ai?lang=en": {
+  "canonical": "https://hunt.zalize.com/tld/ai?lang=en",
+  "og_locale": "en_US",
+  "hreflang_n": 3,
+  "html_lang": "en",
+  "jsonld_n": 2,
+  "h1": ".ai Domain Guide: Who It's For, Pricing &amp; Naming Tips"
+ },
+ "https://hunt.zalize.com/tld/family": {
+  "canonical": "https://hunt.zalize.com/tld/family",
+  "og_locale": "zh_CN",
+  "hreflang_n": 3,
+  "html_lang": "zh-CN",
+  "jsonld_n": 2,
+  "h1": ".family 域名注册指南：适合谁、多少钱、怎么起名"
+ },
+ "https://hunt.zalize.com/tld/family?lang=en": {
+  "canonical": "https://hunt.zalize.com/tld/family?lang=en",
+  "og_locale": "en_US",
+  "hreflang_n": 3,
+  "html_lang": "en",
+  "jsonld_n": 2,
+  "h1": ".family Domain Guide: Who It's For, Pricing &amp; Naming Tip"
+ },
+ "https://hunt.zalize.com/guide/hvac": {
+  "canonical": "https://hunt.zalize.com/guide/hvac",
+  "og_locale": "zh_CN",
+  "hreflang_n": 3,
+  "html_lang": "zh-CN",
+  "jsonld_n": 3,
+  "h1": "暖通空调品牌怎么起名：命名思路、好名字拆解与域名选择"
+ },
+ "https://hunt.zalize.com/guide/hvac?lang=en": {
+  "canonical": "https://hunt.zalize.com/guide/hvac?lang=en",
+  "og_locale": "en_US",
+  "hreflang_n": 3,
+  "html_lang": "en",
+  "jsonld_n": 3,
+  "h1": "How to Name an HVAC Brand: Strategies, Case Studies &amp; Do"
+ },
+ "https://hunt.zalize.com/guide/pet-grooming": {
+  "canonical": "https://hunt.zalize.com/",
+  "og_locale": "zh_CN",
+  "hreflang_n": 0,
+  "html_lang": "zh-CN",
+  "jsonld_n": 0,
+  "h1": null
+ },
+ "https://hunt.zalize.com/guide/pet-grooming?lang=en": {
+  "canonical": "https://hunt.zalize.com/",
+  "og_locale": "zh_CN",
+  "hreflang_n": 0,
+  "html_lang": "zh-CN",
+  "jsonld_n": 0,
+  "h1": null
+ },
+ "https://hunt.zalize.com/guide/baby-products": {
+  "canonical": "https://hunt.zalize.com/",
+  "og_locale": "zh_CN",
+  "hreflang_n": 0,
+  "html_lang": "zh-CN",
+  "jsonld_n": 0,
+  "h1": null
+ },
+ "https://hunt.zalize.com/guide/baby-products?lang=en": {
+  "canonical": "https://hunt.zalize.com/",
+  "og_locale": "zh_CN",
+  "hreflang_n": 0,
+  "html_lang": "zh-CN",
+  "jsonld_n": 0,
+  "h1": null
+ },
+ "https://hunt.zalize.com/vs/energy-vs-solar": {
+  "canonical": "https://hunt.zalize.com/vs/energy-vs-solar",
+  "og_locale": "zh_CN",
+  "hreflang_n": 3,
+  "html_lang": "zh-CN",
+  "jsonld_n": 3,
+  "h1": ".energy 和 .solar 怎么选：全行业与单赛道的分工"
+ },
+ "https://hunt.zalize.com/vs/energy-vs-solar?lang=en": {
+  "canonical": "https://hunt.zalize.com/vs/energy-vs-solar?lang=en",
+  "og_locale": "en_US",
+  "hreflang_n": 3,
+  "html_lang": "en",
+  "jsonld_n": 3,
+  "h1": ".energy vs .solar: The Whole Industry or The Single Lane"
+ },
+ "https://hunt.zalize.com/vs/dog-vs-pet": {
+  "canonical": "https://hunt.zalize.com/vs/dog-vs-pet",
+  "og_locale": "zh_CN",
+  "hreflang_n": 3,
+  "html_lang": "zh-CN",
+  "jsonld_n": 3,
+  "h1": ".dog 和 .pet 怎么选：犬类专营与全宠物赛道的分工"
+ },
+ "https://hunt.zalize.com/vs/dog-vs-pet?lang=en": {
+  "canonical": "https://hunt.zalize.com/vs/dog-vs-pet?lang=en",
+  "og_locale": "en_US",
+  "hreflang_n": 3,
+  "html_lang": "en",
+  "jsonld_n": 3,
+  "h1": ".dog vs .pet: The Dog Lane or The Whole Pet Aisle"
+ },
+ "https://hunt.zalize.com/vs/family-vs-baby": {
+  "canonical": "https://hunt.zalize.com/",
+  "og_locale": "zh_CN",
+  "hreflang_n": 0,
+  "html_lang": "zh-CN",
+  "jsonld_n": 0,
+  "h1": null
+ },
+ "https://hunt.zalize.com/vs/family-vs-baby?lang=en": {
+  "canonical": "https://hunt.zalize.com/",
+  "og_locale": "zh_CN",
+  "hreflang_n": 0,
+  "html_lang": "zh-CN",
+  "jsonld_n": 0,
+  "h1": null
+ },
+ "https://hunt.zalize.com/nonexistent-xyz": {
+  "status": "404"
+ },
+ "https://hunt.zalize.com/tld/notarealtld999": {
+  "status": "404"
+ },
+ "https://hunt.zalize.com/guide/notareal999": {
+  "status": "404"
+ },
+ "https://hunt.zalize.com/vs/notareal-vs-fake999": {
+  "status": "404"
+ },
+ "https://hunt.zalize.com/guide/petgrooming": {
+  "canonical": "https://hunt.zalize.com/guide/petgrooming",
+  "og": "zh_CN",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": "宠物美容品牌怎么起名：命名思路、好名字拆解与域名选择"
+ },
+ "https://hunt.zalize.com/guide/petgrooming?lang=en": {
+  "canonical": "https://hunt.zalize.com/guide/petgrooming?lang=en",
+  "og": "en_US",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": "How to Name a Pet Grooming Brand: Strategies, Case"
+ },
+ "https://hunt.zalize.com/guide/babystore": {
+  "canonical": "https://hunt.zalize.com/guide/babystore",
+  "og": "zh_CN",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": "母婴用品品牌怎么起名：命名思路、好名字拆解与域名选择"
+ },
+ "https://hunt.zalize.com/guide/babystore?lang=en": {
+  "canonical": "https://hunt.zalize.com/guide/babystore?lang=en",
+  "og": "en_US",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": "How to Name a Baby &amp; Maternity Brand: Strategi"
+ },
+ "https://hunt.zalize.com/guide/giftcustom": {
+  "canonical": "https://hunt.zalize.com/guide/giftcustom",
+  "og": "zh_CN",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": "礼品定制品牌怎么起名：命名思路、好名字拆解与域名选择"
+ },
+ "https://hunt.zalize.com/guide/giftcustom?lang=en": {
+  "canonical": "https://hunt.zalize.com/guide/giftcustom?lang=en",
+  "og": "en_US",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": "How to Name a Custom Gifts Brand: Strategies, Case"
+ },
+ "https://hunt.zalize.com/guide/housekeeping": {
+  "canonical": "https://hunt.zalize.com/guide/housekeeping",
+  "og": "zh_CN",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": "家政服务品牌怎么起名：命名思路、好名字拆解与域名选择"
+ },
+ "https://hunt.zalize.com/guide/housekeeping?lang=en": {
+  "canonical": "https://hunt.zalize.com/guide/housekeeping?lang=en",
+  "og": "en_US",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": "How to Name a Housekeeping Brand: Strategies, Case"
+ },
+ "https://hunt.zalize.com/guide/kidsplayground": {
+  "canonical": "https://hunt.zalize.com/guide/kidsplayground",
+  "og": "zh_CN",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": "亲子乐园品牌怎么起名：命名思路、好名字拆解与域名选择"
+ },
+ "https://hunt.zalize.com/guide/kidsplayground?lang=en": {
+  "canonical": "https://hunt.zalize.com/guide/kidsplayground?lang=en",
+  "og": "en_US",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": "How to Name a Kids' Playground Brand: Strategies, "
+ },
+ "https://hunt.zalize.com/guide/kidsphoto": {
+  "canonical": "https://hunt.zalize.com/guide/kidsphoto",
+  "og": "zh_CN",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": "儿童摄影品牌怎么起名：命名思路、好名字拆解与域名选择"
+ },
+ "https://hunt.zalize.com/guide/kidsphoto?lang=en": {
+  "canonical": "https://hunt.zalize.com/guide/kidsphoto?lang=en",
+  "og": "en_US",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": "How to Name a Kids' Photography Studio: Strategies"
+ },
+ "https://hunt.zalize.com/vs/family-vs-com": {
+  "canonical": "https://hunt.zalize.com/vs/family-vs-com",
+  "og": "zh_CN",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": ".family 和 .com 怎么选：家庭温度与通用信任的取舍"
+ },
+ "https://hunt.zalize.com/vs/family-vs-com?lang=en": {
+  "canonical": "https://hunt.zalize.com/vs/family-vs-com?lang=en",
+  "og": "en_US",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": ".family vs .com: Warmth of the Household or Defaul"
+ },
+ "https://hunt.zalize.com/vs/baby-vs-store": {
+  "canonical": "https://hunt.zalize.com/vs/baby-vs-store",
+  "og": "zh_CN",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": ".baby 和 .store 怎么选：母婴垂直与通用货架的分工"
+ },
+ "https://hunt.zalize.com/vs/baby-vs-store?lang=en": {
+  "canonical": "https://hunt.zalize.com/vs/baby-vs-store?lang=en",
+  "og": "en_US",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": ".baby vs .store: The Vertical Audience or The Gene"
+ },
+ "https://hunt.zalize.com/vs/mom-vs-me": {
+  "canonical": "https://hunt.zalize.com/vs/mom-vs-me",
+  "og": "zh_CN",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": ".mom 和 .me 怎么选：妈妈身份与个人品牌的分工"
+ },
+ "https://hunt.zalize.com/vs/mom-vs-me?lang=en": {
+  "canonical": "https://hunt.zalize.com/vs/mom-vs-me?lang=en",
+  "og": "en_US",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": ".mom vs .me: The Mom Identity or The Personal Bran"
+ },
+ "https://hunt.zalize.com/vs/dad-vs-blog": {
+  "canonical": "https://hunt.zalize.com/vs/dad-vs-blog",
+  "og": "zh_CN",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": ".dad 和 .blog 怎么选：爸爸人设与写作阵地的分工"
+ },
+ "https://hunt.zalize.com/vs/dad-vs-blog?lang=en": {
+  "canonical": "https://hunt.zalize.com/vs/dad-vs-blog?lang=en",
+  "og": "en_US",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": ".dad vs .blog: The Dad Persona or The Writing Home"
+ },
+ "https://hunt.zalize.com/vs/gifts-vs-shop": {
+  "canonical": "https://hunt.zalize.com/vs/gifts-vs-shop",
+  "og": "zh_CN",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": ".gifts 和 .shop 怎么选：送礼场景与通用店铺的分工"
+ },
+ "https://hunt.zalize.com/vs/gifts-vs-shop?lang=en": {
+  "canonical": "https://hunt.zalize.com/vs/gifts-vs-shop?lang=en",
+  "og": "en_US",
+  "hreflang": 3,
+  "jsonld": 3,
+  "h1": ".gifts vs .shop: The Occasion or The Storefront"
+ }
+}
