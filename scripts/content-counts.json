@@ -654,7 +654,7 @@
     ]
   },
   "vs": {
-    "count": 360,
+    "count": 366,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -1015,7 +1015,13 @@
       "glass-vs-art",
       "vision-vs-care",
       "tires-vs-autos",
-      "surgery-vs-clinic"
+      "surgery-vs-clinic",
+      "domains-vs-tools",
+      "college-vs-academy",
+      "actor-vs-studio",
+      "immo-vs-estate",
+      "vin-vs-wine",
+      "university-vs-education"
     ]
   }
 }
