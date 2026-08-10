@@ -1499,4 +1499,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家手工制笔与钢笔定制工作室，寓意「一支笔在掌心里配得上要写下的字」；气质要有笔尖手艺与文房血统的郑重、不显文创周边；场景是定制订单上独一无二、笔展名牌上体面、钢笔圈论坛里经得起行家审视。",
     en: "A penmaking and custom fountain pen studio. The name should carry a pen in the palm deserving the words it is about to write; the vibe is the solemnity of nib craft and the scholar's-desk bloodline, never stationery merch; it must read one-of-one on the commission, dignified on the pen-show placard, and survive the enthusiasts' forum scrutiny.",
   },
+  "marquetry": {
+    zh: "一家细木镶嵌与木皮拼花工作室，寓意「用木头的纹理作画、百木凑成一幅图」；气质要有宫廷家具血统与选料眼力、不显板材饰面厂；场景是高定家具方案书里专业体面、藏家眼里有艺术身价、体验课市集摊位上亲切好记。",
+    en: "A marquetry and wood inlay studio. The name should carry painting with the grain of wood, a hundred species composing one picture; the vibe is palace-furniture bloodline and an eye for stock, never a veneer panel factory; it must read professional in the bespoke spec book, carry art status to collectors, and stay warm on the class stall.",
+  },
+  "cloisonne": {
+    zh: "一家掐丝珐琅与景泰蓝工作室，寓意「一根铜丝掐出轮廓、一炉窑火烧出宝石光」；气质要有御用蓝的宫廷血统与百道工序的郑重、不显旅游纪念品；场景是国礼与藏家图录上体面、手作课海报上有话题、文创吊牌上好念好记。",
+    en: "A cloisonné enamel studio. The name should carry a copper wire drawing the outline and a kiln fire bringing up the jewel light; the vibe is imperial-blue bloodline and the solemnity of a hundred steps, never a tourist souvenir; it must read dignified in the collector catalogue, conversation-worthy on the class poster, and easy on the merch tag.",
+  },
+  "papermaking": {
+    zh: "一家手工造纸与古法纸工坊，寓意「一帘清水里捞起一张能传千年的纸」；气质要有纸乡血统与纤维里存住时间的郑重、不显办公纸品批发；场景是书画家纸样册上专业可信、品牌联名吊牌上有质感故事、亲子体验课海报上亲切上手。",
+    en: "A handmade papermaking studio. The name should carry a sheet lifted from clear water that will live a thousand years; the vibe is paper-country bloodline and time stored in fibre, never an office-paper wholesaler; it must read credible in the artist's swatch book, carry a texture story on the collab tag, and stay warm on the family class poster.",
+  },
+  "inkstone": {
+    zh: "一家制砚与砚雕工坊，寓意「一方石头供了一辈子的墨、传三代人的书案」；气质要有坑口石品的血统与文人书斋的郑重、不显石材厂；场景是藏家拍卖图录上有身价、书家口中好转述、文创研学课上亲切有故事。",
+    en: "An inkstone carving studio. The name should carry one stone serving a lifetime of ink and three generations of desks; the vibe is quarry-and-figure bloodline and scholar's-studio solemnity, never a stone yard; it must carry status in the auction catalogue, retell easily among calligraphers, and stay warm with a story in the culture class.",
+  },
+  "fletching": {
+    zh: "一家制箭与传统弓箭工坊，寓意「一支箭配得上百步之外的靶心」；气质要有羽与竹的古法手感与调直千百次的耐心、不显网游公会；场景是礼射场合有古意、俱乐部供货单上专业可信、射艺体验课海报上好念好记。",
+    en: "A fletching and traditional arrow-making workshop. The name should carry an arrow deserving the bullseye a hundred paces out; the vibe is the old-method feel of feather and bamboo and the patience of a thousand straightening passes, never a game guild; it must carry antiquity at the ritual range, read professional on the club order sheet, and stay easy on the class poster.",
+  },
+  "gilding": {
+    zh: "一家贴金与金箔工艺工坊，寓意「一张比呼吸还轻的金箔落在该发光的地方」；气质要有千年锻打血统与点睛的分寸感、不显土豪装修队；场景是古建修复方案书里资质可信、画框水金报价单上工艺体面、金箔体验课海报上出片有话题。",
+    en: "A gilding and gold-leaf studio. The name should carry a leaf lighter than breath settling exactly where the light belongs; the vibe is a millennium leaf-beating bloodline and the restraint of the finishing touch, never a flashy renovation crew; it must read credentialed in the restoration tender, dignified on the water-gilt quote, and photogenic on the class poster.",
+  },
 };
