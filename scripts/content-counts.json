@@ -383,7 +383,7 @@
     ]
   },
   "guide": {
-    "count": 374,
+    "count": 380,
     "slugs": [
       "saas",
       "ecommerce",
@@ -758,7 +758,13 @@
       "cooperage",
       "kintsugi",
       "indigodye",
-      "penmaking"
+      "penmaking",
+      "marquetry",
+      "cloisonne",
+      "papermaking",
+      "inkstone",
+      "fletching",
+      "gilding"
     ]
   },
   "vs": {

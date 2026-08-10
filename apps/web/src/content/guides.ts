@@ -23312,6 +23312,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  marquetry: {
+    slug: "marquetry",
+    keywords: ["细木镶嵌工作室", "木皮拼花", "薄木镶嵌", "marquetry studio", "wood inlay"],
+    tlds: [
+      { tld: "com", zh: "高定家具委托与设计师合作的默认后缀，报价单与作品签名上最稳", en: "The default suffix for bespoke furniture commissions and designer collaborations — steadiest on the quote and the maker's mark" },
+      { tld: "art", zh: "把木皮拼花从「工序」升维到「艺术品」，藏家与画廊线的身价后缀", en: "Elevating veneer work from process to artwork — the status suffix for the collector and gallery lines" },
+      { tld: "studio", zh: "工作室气质直给，镶嵌台前的匠作身位零违和", en: "The studio register stated outright — zero friction for the maker posture at the inlay bench" },
+    ],
+    zh: {
+      label: "细木镶嵌工作室",
+      title: "细木镶嵌工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "细木镶嵌与木皮拼花工作室命名指南：木纹作画意象、宫廷血统叙事等思路，镶嵌工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "细木镶嵌工作室的名字要说出「用木头的纹理作画」：这门手艺把几十种木皮按纹理与色泽裁成花瓣、羽毛与远山，拼进一张桌面——凡尔赛宫的家具、劳斯莱斯的仪表台木饰都出自这门语法，买家要的不是一块木板，是木纹在光里流动的那幅画，名字要先把这份「木即颜料」的身份递出去。词库现成：木、纹、拼、嵌、花——中文「百木成图」的意象一句话就立住。隐藏考点是双线业务：上游是高定家具与建筑内饰的 B 端委托，讲宫廷血统与工艺等级；下游是首饰木盒与体验课的 C 端零售，讲亲切与礼品感——名字要在设计师的方案书与市集摊位两个场景都成立。误区在于板材厂化：名字带满「板材、饰面、装饰」气质会立刻掉进建材价位段——这门手艺卖的是一幅用木头画的画，不是论平米的贴面。",
+      namingIdeas: [
+        "木纹作画直给：纹、画、图、彩类词根加木字——「用木头作画」是这门手艺的一句话简历，画面感直接写进名字",
+        "百木拼合叙事：百木、千木、拼类词根——几十种木色凑成一幅图的工艺本质，数量词自带工序的郑重",
+        "宫廷血统借力：凡尔赛、宫廷、殿堂类气质词——路易十四的家具语法是现成的身价叙事，高定委托线的信任语法",
+        "树种词根暗号：影木、瘿木、乌木类材料词——行内人一眼认出的选料眼力，B 端设计师线的接头暗号",
+        "光影流动转译：光、影、流、晕类词根——木皮换个角度就变色的光学魔法，把「会动的木纹」写进名字",
+      ],
+      cases: [
+        { name: "百木绘", takeaway: "「百木」立工艺本质加「绘」字立艺术身位：三个字说清用一百种木头作画——中文镶嵌命名的标准结构，方案书上体面" },
+        { name: "Boulle", takeaway: "姓氏成牌的行业圣经：路易十四御用镶嵌师安德烈-夏尔·布尔，三百年后「Boulle 工艺」仍是铜木镶嵌的代名词——署名传统的终极样本" },
+        { name: "纹澜工房", takeaway: "「木纹」加「波澜」：把木皮上流动的光泽写成水波——诗意转译的教科书，高定线与体验课两头都接得住" },
+        { name: "Silverwood Marquetry", takeaway: "材料词加品类词的英式样本：银木立选料眼力，Marquetry 直给行当——设计师检索零成本，B 端供货线辨识度现成" },
+      ],
+      pitfalls: [
+        "板材厂化：满是「饰面、板材、装饰工程」气质的名字掉进建材价位段——这门手艺卖用木头画的画，不是论平米的贴面",
+        "锁死单一品类：叫「桌面拼花」就难接首饰盒与墙面艺术的单——品类留给作品线，品牌名留给整个镶嵌台",
+        "生僻字堆砌：瘿、榫、椴堆满名字行外人念不出——工艺身价靠一两个点睛字立住，别把名字变成识字考试",
+        "忽略双线客群：太宫廷的名字在体验课海报上有距离感，太手作的名字进不了高定方案书——B 端要血统，C 端要亲切，两头都要成立",
+      ],
+    },
+    en: {
+      label: "Marquetry studios",
+      title: "How to Name a Marquetry Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Marquetry and wood inlay studio naming guide: painting-with-grain imagery, palace-bloodline narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A marquetry studio's name must say that it paints with the grain of wood: this craft cuts dozens of veneers by figure and tone into petals, feathers and far hills, and fits them into a tabletop — the furniture of Versailles and the dashboards of Rolls-Royce speak this grammar, and the buyer is not purchasing a board but the picture where grain moves in the light, so the name has to hand over the wood-as-pigment identity first. The lexicon is ready: grain, veneer, inlay, figure and bloom — and the Chinese image of a hundred woods composing one picture stands the brand up in a single phrase. The hidden exam is the twin business: upstream sits the B2B line of bespoke furniture and architectural interiors trading on palace bloodline and craft grade; downstream the C-side of jewellery boxes and classes trading on warmth and giftability — the name must stand in the designer's spec book and on the market stall alike. The failure mode is the panel-factory register: any veneer-and-decor whiff drops the studio into the building-materials price band — this craft sells a painting made of wood, not surfacing by the square metre.",
+      namingIdeas: [
+        "Painting-with-grain outright: picture, figure and palette roots joined to wood — 'painting with wood' is this craft's one-line résumé; write the image straight into the name",
+        "The hundred-woods narrative: hundred-wood and thousand-grain roots — dozens of species composing one picture is the craft's essence, and the count carries the ceremony of the process",
+        "Borrowing the palace bloodline: Versailles, court and salon registers — the furniture grammar of Louis XIV is a ready-made status narrative; the commission line's grammar of trust",
+        "Species code words: burl, ebony and figured-wood material roots — the eye for stock the trade reads at a glance; the handshake of the designer supply line",
+        "Translating the play of light: light, sheen, shimmer and chatoyance roots — veneer shifts colour with the viewing angle; write the moving grain into the name",
+      ],
+      cases: [
+        { name: "Bai Mu Hui (百木绘)", takeaway: "A hundred woods setting the craft's essence, the painting word setting the art posture: three characters saying a picture made of a hundred species — the standard Chinese marquetry structure, dignified in the spec book" },
+        { name: "Boulle", takeaway: "The trade's bible of the surname-turned-brand: André-Charles Boulle, inlay master to Louis XIV — three centuries on, 'Boulle work' still names the whole brass-and-wood genre; the ultimate sample of the signature tradition" },
+        { name: "Wen Lan (纹澜工房)", takeaway: "Grain joined to rippling water: the sheen moving across veneer written as a wave — the textbook of poetic translation, holding the bespoke line and the class line at once" },
+        { name: "Silverwood Marquetry", takeaway: "A material word on the category word, the English sample: silverwood setting the eye for stock, marquetry naming the trade outright — zero search cost for designers, recognition ready on the supply line" },
+      ],
+      pitfalls: [
+        "The panel-factory register: a veneer-and-decor name drops into the building-materials price band — this craft sells a painting made of wood, not surfacing by the square metre",
+        "Locking into one product: a tabletop-pattern name can't take the jewellery-box and wall-art orders — leave the object to the catalogue, keep the whole bench for the brand",
+        "Piling on obscure characters: a name stacked with rare timber terms defeats outsiders — let one telling character carry the craft status; a name is not a literacy exam",
+        "Ignoring the twin audience: a too-palatial name feels distant on the class poster, a too-crafty one never enters the bespoke spec book — bloodline for B2B, warmth for C-side; both must stand",
+      ],
+    },
+  },
+  cloisonne: {
+    slug: "cloisonne",
+    keywords: ["掐丝珐琅工作室", "景泰蓝", "珐琅工艺", "cloisonné studio", "enamel art"],
+    tlds: [
+      { tld: "com", zh: "礼品定制与出口订单的默认后缀，合同与品牌吊牌上最稳", en: "The default suffix for gift commissions and export orders — steadiest on the contract and the hang tag" },
+      { tld: "art", zh: "把珐琅从「工艺品」升维到「藏品」，博物馆联名与藏家线的身价后缀", en: "Elevating enamel from craft object to collectible — the status suffix for museum collabs and the collector line" },
+      { tld: "studio", zh: "工作室气质直给，掐丝台前的匠作身位零违和", en: "The studio register stated outright — zero friction for the maker posture at the wire-laying bench" },
+    ],
+    zh: {
+      label: "掐丝珐琅工作室",
+      title: "掐丝珐琅工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "掐丝珐琅与景泰蓝工作室命名指南：宫廷蓝意象、丝与彩叙事等思路，珐琅工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "掐丝珐琅工作室的名字要说出「一根铜丝掐出轮廓、一炉窑火烧出宝石光」：这门手艺以景泰年间的御用蓝得名，铜丝在胎上掐出图样、珐琅釉料填进丝格、入窑烧结再打磨鎏金——一件景泰蓝要过一百多道手，故宫的陈设与国礼清单上都有它的名字，买家要的是这份「宫廷血统」的郑重，名字要先把它递出去。词库现成：丝、蓝、彩、珐琅、鎏金——「景泰蓝」三个字本身就是中文命名的天花板：年号立血统、颜色立记忆。隐藏考点是新老两线：老线是国礼与藏家的收藏级身价，讲师承与年代；新线是掐丝珐琅手作课与首饰文创的年轻流量，讲上手与出片——名字要在拍卖图录与小红书标签两个场景都立得住。误区在于旅游纪念品化：满是「工艺品、特产」气质的名字会掉进景区货架价位段——这门手艺卖的是一百道工序的耐心，不是柜台上的摆件。",
+      namingIdeas: [
+        "御用蓝直给：蓝、青、靛类颜色词加宫、御、殿类词根——景泰蓝的蓝就是品牌色，颜色加血统的双重记忆点",
+        "丝与彩的合成：丝、缕类词根加彩、釉、光——掐丝与点蓝两道核心工序一头一尾，把手艺全程写进一个名字",
+        "年号语法借力：泰、景、宣类年号字——「景泰蓝」证明了年号立血统的语法，一个字借来整个朝代的分量",
+        "窑火叙事转译：窑、炉、焰、烧类词根——珐琅要过五六次窑火才成色，「火里出宝石」的过程感自带故事",
+        "丝格暗号入名：格、纹、界类词根——掐丝隔出的釉格是行内人一眼认出的工艺细节，专业身份的接头暗号",
+      ],
+      cases: [
+        { name: "景泰蓝", takeaway: "年号加颜色的命名天花板：明代年号立血统、御用蓝立记忆——五百年后品类即品牌，中文工艺命名的终极样本" },
+        { name: "丝彩御坊", takeaway: "「掐丝」加「点彩」加御字身位：三样核心元素一名收齐——国礼线体面、文创线好念，双线客群的标准解法" },
+        { name: "Fabergé", takeaway: "姓氏成牌的珐琅圣经：沙皇御用珐琅彩蛋的署名——人名立信任、御用立身价，珐琅工艺西线命名的终极参照", },
+        { name: "蓝格格工作室", takeaway: "「蓝」加「丝格」的叠字口语化：把工艺细节念成昵称——手作课与首饰文创线的亲切招牌，小红书标签里好记好搜" },
+      ],
+      pitfalls: [
+        "旅游纪念品化：满是「工艺品、特产、礼品城」气质的名字掉进景区货架价位段——这门手艺卖一百道工序，不是柜台摆件",
+        "锁死单一品类：叫「珐琅瓶」就难接首饰、腕表盘面与建筑装置的单——器型留给作品目录，品牌名留给整个窑炉",
+        "血统造假踩线：没有师承却硬蹭「御制、官造」会招来行家与监管双重审视——血统要么真有出处，要么用手艺自己说话",
+        "忽略新线客群：太庙堂的名字在手作课海报上有距离感——老线要郑重，新线要亲切，名字要给文创线留一扇门",
+      ],
+    },
+    en: {
+      label: "Cloisonné studios",
+      title: "How to Name a Cloisonné Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Cloisonné and enamel studio naming guide: imperial-blue imagery, wire-and-glaze narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A cloisonné studio's name must say that a copper wire draws the outline and a kiln fire brings up the jewel light: the craft took its Chinese name from the imperial blue of the Jingtai reign — wire pinched into pattern on the body, enamel packed into the cells, fired, ground and gilded, a single piece passing through a hundred hands — it furnishes the Forbidden City and the state-gift list, and what the buyer wants is that imperial-bloodline solemnity, so the name must hand it over first. The lexicon is ready: wire, blue, glaze, enamel and gilt — and 'Jingtai blue' itself is the ceiling of Chinese craft naming: a reign year setting bloodline, a colour setting memory. The hidden exam is the old and new lines: the old line sells collector-grade status on lineage and era; the new line sells wire-enamel classes and jewellery merch to a young crowd on approachability and photogenics — the name must stand in the auction catalogue and the social hashtag alike. The failure mode is the souvenir register: a crafts-and-specialty name drops onto the tourist-shop shelf — this craft sells the patience of a hundred steps, not a counter trinket.",
+      namingIdeas: [
+        "The imperial blue outright: blue, azure and indigo colour roots on palace and imperial registers — cloisonné's blue is the brand colour itself; colour plus bloodline is a double memory hook",
+        "Fusing wire and glaze: silk-wire roots joined to colour, glaze and light — the two core steps at either end of one name; the whole craft written in",
+        "Borrowing the reign-year grammar: era characters like Jingtai's — 'Jingtai blue' proves a reign year can set bloodline; one character borrows a dynasty's weight",
+        "Translating the kiln narrative: kiln, furnace and flame roots — enamel passes the fire five or six times before the colour stands; 'jewels out of fire' is a story the name can carry",
+        "Cell-work code words: cell, lattice and boundary roots — the wire-walled cells are the detail the trade reads at a glance; the handshake of professional identity",
+      ],
+      cases: [
+        { name: "Jingtai Blue (景泰蓝)", takeaway: "Reign year on colour, the ceiling of craft naming: a Ming era setting bloodline, the imperial blue setting memory — five centuries on the category is the brand; the ultimate Chinese sample" },
+        { name: "Si Cai Yu Fang (丝彩御坊)", takeaway: "Wire joined to colour on an imperial workshop ending: the three core elements gathered in one name — dignified on the state-gift line, easy on the merch line; the standard answer to the twin audience" },
+        { name: "Fabergé", takeaway: "The enamel bible of the surname-turned-brand: the signature on the tsars' enamel eggs — a name setting trust, the imperial warrant setting status; the Western reference for enamel naming" },
+        { name: "Lan Gege (蓝格格工作室)", takeaway: "Blue joined to the wire cell in a nickname cadence: a craft detail read as a pet name — the class and jewellery line's warm signboard, easy to keep in a hashtag" },
+      ],
+      pitfalls: [
+        "The souvenir register: a crafts-and-specialty name drops onto the tourist-shop shelf — this craft sells a hundred steps of patience, not a counter trinket",
+        "Locking into one form: a vase-house name can't take the jewellery, watch-dial and installation orders — leave the form to the catalogue, keep the whole kiln for the brand",
+        "Faking the bloodline: claiming imperial-workshop lineage without provenance invites the trade's and the regulator's scrutiny at once — either the pedigree is real, or let the hands speak",
+        "Ignoring the new line: a too-ceremonial name feels distant on the class poster — solemn for the old line, warm for the new; the name must leave a door open for merch",
+      ],
+    },
+  },
+  papermaking: {
+    slug: "papermaking",
+    keywords: ["手工造纸工坊", "古法造纸", "手工纸", "papermaking studio", "handmade paper"],
+    tlds: [
+      { tld: "com", zh: "美术纸供货与品牌联名的默认后缀，供货合同与纸样册上最稳", en: "The default suffix for fine-paper supply and brand collabs — steadiest on the contract and the swatch book" },
+      { tld: "art", zh: "把纸从「材料」升维到「作品」，艺术家用纸与藏品线的身价后缀", en: "Elevating paper from material to work — the status suffix for the artist-paper and collectible lines" },
+      { tld: "studio", zh: "工作室气质直给，抄纸帘前的匠作身位零违和", en: "The studio register stated outright — zero friction for the maker posture at the deckle" },
+    ],
+    zh: {
+      label: "手工造纸工坊",
+      title: "手工造纸工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "手工造纸与古法纸工坊命名指南：纤维与水意象、千年纸乡叙事等思路，造纸工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "手工造纸工坊的名字要说出「一帘清水里捞起一张纸」：这门手艺从蔡伦算起走了两千年——树皮沤成纤维、纸浆在帘上摇匀、湿纸一张张分揭晾干，宣纸的「纸寿千年」写在博物馆的修复台上，买家要的不是一张纸，是纤维里存住的时间，名字要先把这份「水里捞出的千年」递出去。词库现成：纸、帘、浆、纤、抄——每个字都带着纸坊的水汽。隐藏考点是三线客群：书画家与修复师的专业线认产地与帘纹，文创与婚品设计师的品牌线要质感故事，手作课与亲子体验的流量线要亲切上手——名字要在纸样册、品牌吊牌与体验课海报三个场景都立得住。误区在于纸品店化：名字带满「纸业、纸品、批发」气质会立刻掉进办公用纸的价位段——这门手艺卖的是一张有名有姓的纸，不是论令的白纸。",
+      namingIdeas: [
+        "纸乡血统直给：宣、泾、皮纸类产地词根——宣纸证明了地名即品质背书的语法，纸乡叙事自带修复台上的信任",
+        "水与帘的转译：水、帘、涟、汲类词根——抄纸的核心动作是水里摇帘，把「捞起一张纸」的画面写进名字",
+        "纤维叙事入名：楮、桑、竹、藤类原料词——树皮到纸页的转化是这门手艺的魔法，原料词立选料眼力",
+        "纸寿千年借力：千年、寿、恒类词根——「纸寿千年」是现成的口碑文案，把时间的承诺写进名字",
+        "抄纸动作暗号：抄、捞、揭、晒类工序词——行内人一眼认出的动作词，专业身份的接头暗号",
+      ],
+      cases: [
+        { name: "千年帘", takeaway: "「纸寿千年」加「抄纸帘」：品质承诺与核心工具一名双关——专业线认帘纹、品牌线有故事，中文纸坊命名的标准结构" },
+        { name: "红星宣纸", takeaway: "品牌词加产地品类的国民样本：泾县宣纸的头部厂牌——红星立记忆、宣纸立血统，书画圈里品牌即品质的活字典" },
+        { name: "汲光纸社", takeaway: "「汲水」加「晒纸的光」：两道工序的诗意拼合——手作课海报上有画面，纸样册上有质感，双线客群都接得住" },
+        { name: "St. Cuthberts Mill", takeaway: "地名加纸磨坊的英式样本：三百年水磨造纸的萨默塞特老坊——Mill 立血统，圣徒地名立记忆，艺术家用纸线的信任语法" },
+      ],
+      pitfalls: [
+        "纸品店化：满是「纸业、批发、纸品」气质的名字掉进办公用纸价位段——这门手艺卖有名有姓的纸，不是论令的白纸",
+        "锁死单一纸种：叫「宣纸坊」就难接花草纸、水彩纸与文创纸的单——纸种留给纸样册，品牌名留给整个纸帘",
+        "怀旧过载：满名的「古法、复原、遗产」气质会把品牌锁进博物馆——传承要立，但名字要给设计师联名线留现代感",
+        "忽略三线客群：太学术的名字在亲子体验课没人报名，太可爱的名字进不了修复师的采购单——专业、品牌、流量三线都要成立",
+      ],
+    },
+    en: {
+      label: "Papermaking studios",
+      title: "How to Name a Papermaking Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Handmade papermaking studio naming guide: fibre-and-water imagery, thousand-year paper narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A papermaking studio's name must say that a sheet of paper is lifted out of clear water on a screen: this craft has walked two thousand years from Cai Lun — bark retted into fibre, pulp swirled level across the mould, wet sheets parted and dried one by one — and xuan paper's 'a thousand years of life' is written on museum conservation benches, so the buyer is not purchasing a sheet but the time stored in the fibre, and the name must hand over that thousand-years-from-water first. The lexicon is ready: sheet, mould, deckle, pulp and fibre — every word carries the mist of the vat room. The hidden exam is the triple audience: the professional line of painters and conservators reads provenance and laid lines; the brand line of stationery and wedding designers wants a texture story; the traffic line of classes and family workshops wants warmth — the name must stand in the swatch book, on the hang tag and on the class poster alike. The failure mode is the paper-merchant register: any mills-and-wholesale whiff drops the studio into the office-paper price band — this craft sells a sheet with a name of its own, not reams of blank stock.",
+      namingIdeas: [
+        "The paper-country bloodline outright: provenance roots like Xuan and the bast-paper villages — xuan paper proves a place name is a quality warrant; the paper-country narrative carries the conservator's trust for free",
+        "Translating water and screen: water, mould, ripple and drawing-up roots — the craft's core gesture is rocking the screen in the vat; write the lifting of a sheet into the name",
+        "The fibre narrative: mulberry, kozo, bamboo and rattan material roots — bark becoming page is this craft's magic, and the material word sets the eye for stock",
+        "Borrowing the thousand-year promise: millennium, longevity and permanence roots — 'paper lives a thousand years' is ready-made copy; write the promise of time into the name",
+        "Vat-room code words: pulling, couching and loft-drying process roots — the gestures the trade reads at a glance; the handshake of professional identity",
+      ],
+      cases: [
+        { name: "Qian Nian Lian (千年帘)", takeaway: "The thousand-year promise joined to the papermaker's screen: quality pledge and core tool in one pun — laid lines for the professional line, a story for the brand line; the standard Chinese structure" },
+        { name: "Red Star Xuan (红星宣纸)", takeaway: "Brand word on provenance category, the national sample: the leading house of Jing County xuan — Red Star setting memory, xuan setting bloodline; the living proof that brand equals grade in the painting world" },
+        { name: "Ji Guang (汲光纸社)", takeaway: "Drawing water joined to the light of loft-drying: two process steps in one poetic splice — a picture on the class poster, texture in the swatch book; both lines held" },
+        { name: "St. Cuthberts Mill", takeaway: "Place name on the mill word, the English sample: three centuries of water-powered papermaking in Somerset — Mill setting bloodline, the saint's name setting memory; the artist-paper line's grammar of trust" },
+      ],
+      pitfalls: [
+        "The paper-merchant register: a mills-and-wholesale name drops into the office-paper price band — this craft sells a sheet with a name, not reams of blank stock",
+        "Locking into one paper: a xuan-house name can't take the flower-paper, watercolour and stationery orders — leave the grade to the swatch book, keep the whole vat for the brand",
+        "Nostalgia overload: a name saturated with ancient-method and heritage locks the brand inside a museum — honour the lineage, but leave the designer-collab line its modernity",
+        "Ignoring the triple audience: a too-scholarly name fills no family class, a too-cute one never enters the conservator's order — professional, brand and traffic lines must all stand",
+      ],
+    },
+  },
+  inkstone: {
+    slug: "inkstone",
+    keywords: ["制砚工坊", "砚台雕刻", "端砚歙砚", "inkstone studio", "inkstone carving"],
+    tlds: [
+      { tld: "com", zh: "藏家交易与文房供货的默认后缀，藏品证书与拍卖图录上最稳", en: "The default suffix for collector deals and scholar's-desk supply — steadiest on the certificate and the auction catalogue" },
+      { tld: "art", zh: "把砚从「文具」升维到「藏品」，名家款与拍卖线的身价后缀", en: "Elevating the inkstone from stationery to collectible — the status suffix for the signed-work and auction lines" },
+      { tld: "studio", zh: "工作室气质直给，刻刀与砚石之间的匠作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between chisel and stone" },
+    ],
+    zh: {
+      label: "制砚工坊",
+      title: "制砚工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "制砚与砚雕工坊命名指南：石品坑口血统、文房叙事等思路，制砚工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "制砚工坊的名字要说出「一方石头供了一辈子的墨」：砚居文房四宝之末却寿命最长——笔会秃、墨会尽、纸会老，一方好砚传三代，端溪的坑口、歙州的眉纹在藏家口中都是有名有姓的血统，买家要的不是磨墨的工具，是书案上那件传家的石头，名字要先把这份「石寿千年」的分量递出去。词库现成：砚、石、池、墨、坑——「端」「歙」两个产地字千年来就是品质背书。隐藏考点是双线客群：老线是藏家与书家的收藏级市场，认坑口、石品与刀工署名；新线是文创砚与研学体验的年轻流量，要把「磨墨」讲成一种慢生活仪式——名字要在拍卖图录与文创吊牌两个场景都立得住。误区在于石材厂化：名字带满「石业、石材」气质会掉进建材价位段——这门手艺卖的是文人案头的身价，不是论吨的石头。",
+      namingIdeas: [
+        "坑口血统直给：端、歙、洮、澄泥类产地词根——四大名砚的产地字就是品质证书，藏家线的信任语法现成",
+        "石品意象转译：眉纹、冰纹、鱼脑、蕉叶白类石品词——行内人认石品如认字画，把石头的胎记写进名字",
+        "墨池叙事借力：池、泓、润、涵类词根——砚堂里那一泓墨是文房最安静的画面，「储墨如储水」的意象自带书卷气",
+        "文人书斋语法：斋、山房、精舍类尾缀——砚是书斋器物，斋号语法让工坊名直接住进文人叙事",
+        "刀石相遇入名：琢、镌、刻类工序词加石——砚雕是「石上作画」的刀工，动作词立匠人身位",
+      ],
+      cases: [
+        { name: "墨泓山房", takeaway: "「一泓墨」加书斋尾缀：砚堂储墨的画面加文人斋号语法——藏家眼里有身价、书家口中好转述，中文制砚命名的标准结构" },
+        { name: "端溪砚坊", takeaway: "产地字直给的血统样本：端溪二字千年来就是砚中之首的代名词——坑口即品牌，藏家线检索零成本" },
+        { name: "眉子工作室", takeaway: "歙砚「眉纹」石品的昵称化：把石头的胎记念成人名——行家秒懂的专业暗号，文创线上又亲切好记" },
+        { name: "石语砚社", takeaway: "「石头会说话」的诗意转译加社字尾缀：刀工让石开口的匠作叙事——研学体验课的现成剧本，双线客群都接得住" },
+      ],
+      pitfalls: [
+        "石材厂化：满是「石业、石材、批发」气质的名字掉进建材价位段——这门手艺卖文人案头的身价，不是论吨的石头",
+        "锁死单一砚种：叫「端砚坊」就难接歙砚与澄泥砚的单——砚种留给作品目录，品牌名留给整个刻案",
+        "血统冒认踩线：非坑口料硬标「老坑」会毁掉藏家线的全部信任——石品经得起放大镜，名字更要经得起追问",
+        "忽略新线客群：太老气的名字在研学与文创线没人停步——老线要郑重，新线要把磨墨讲成慢生活，两头都要成立",
+      ],
+    },
+    en: {
+      label: "Inkstone studios",
+      title: "How to Name an Inkstone Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Inkstone carving studio naming guide: quarry-bloodline imagery, scholar's-desk narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An inkstone studio's name must say that one stone serves a lifetime of ink: the inkstone sits last among the four treasures of the scholar's desk yet lives longest — brushes wear, ink sticks end, paper ages, but a fine stone passes down three generations, and the Duan quarries and She's eyebrow-grain figures are bloodlines collectors recite by name — the buyer is not purchasing a grinding tool but the heirloom on the desk, so the name must hand over that stone-outlives-us weight first. The lexicon is ready: stone, pool, ink, quarry and grain — and the provenance characters of Duan and She have been quality warrants for a thousand years. The hidden exam is the twin audience: the old line of collectors and calligraphers reads quarry, figure and the carver's signature; the new line of desk-culture merch and slow-living classes needs ink-grinding retold as ritual — the name must stand in the auction catalogue and on the merch tag alike. The failure mode is the stone-yard register: any stoneworks-and-materials whiff drops the studio into the building-stone price band — this craft sells scholar's-desk status, not rock by the tonne.",
+      namingIdeas: [
+        "The quarry bloodline outright: Duan, She, Tao and ceramic-inkstone provenance roots — the four great inkstones' place characters are ready certificates; the collector line's grammar of trust",
+        "Translating the stone's figure: eyebrow grain, ice veins and fish-brain white — the trade reads figure the way it reads calligraphy; write the stone's birthmark into the name",
+        "Borrowing the ink-pool narrative: pool, depth, moist and holding roots — the ink standing in the well is the desk's quietest picture, and the stored-water image carries scholarly air for free",
+        "The scholar's-studio grammar: studio, mountain-house and retreat endings — the inkstone is a study object, and the studio-name tradition moves the workshop straight into the literati narrative",
+        "Chisel-meets-stone process words: carve, engrave and incise roots on stone — inkstone carving is painting with a blade, and the gesture word sets the maker posture",
+      ],
+      cases: [
+        { name: "Mo Hong (墨泓山房)", takeaway: "A pool of ink on the mountain-house ending: the picture of the well joined to the literati studio grammar — status to the collector, easy in the calligrapher's retelling; the standard Chinese structure" },
+        { name: "Duanxi Yanfang (端溪砚坊)", takeaway: "The provenance character outright, the bloodline sample: Duanxi has meant the first of inkstones for a millennium — the quarry is the brand; zero search cost on the collector line" },
+        { name: "Meizi (眉子工作室)", takeaway: "The She-stone eyebrow grain turned nickname: the stone's birthmark read as a given name — the code insiders catch at once, warm and memorable on the merch line" },
+        { name: "Shi Yu (石语砚社)", takeaway: "The stone-that-speaks poetic turn on a studio ending: the maker narrative of a blade giving stone a voice — a ready script for the slow-living class, holding both lines" },
+      ],
+      pitfalls: [
+        "The stone-yard register: a stoneworks-and-wholesale name drops into the building-stone price band — this craft sells scholar's-desk status, not rock by the tonne",
+        "Locking into one stone: a Duan-house name can't take the She and ceramic-inkstone orders — leave the species to the catalogue, keep the whole bench for the brand",
+        "Faking the quarry: labelling ordinary stock 'old pit' destroys the collector line's trust entirely — the figure survives the loupe, and the name must survive the questioning",
+        "Ignoring the new line: a too-antiquarian name stops no one on the class poster — solemnity for the old line, slow-living ritual for the new; both must stand",
+      ],
+    },
+  },
+  fletching: {
+    slug: "fletching",
+    keywords: ["制箭工坊", "传统弓箭", "手工箭矢", "fletching workshop", "traditional archery bowyer"],
+    tlds: [
+      { tld: "com", zh: "俱乐部供货与赛事订单的默认后缀，供货单与队徽授权上最稳", en: "The default suffix for club supply and tournament orders — steadiest on the order sheet and the team licence" },
+      { tld: "studio", zh: "工作室气质直给，箭台与羽刀之间的匠作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between jig and feather knife" },
+      { tld: "club", zh: "射艺体验与会员社群的轻快后缀，传统射艺圈层归属感现成", en: "The light suffix for archery experiences and membership — a ready sense of belonging for the traditional-archery circle" },
+    ],
+    zh: {
+      label: "制箭工坊",
+      title: "制箭工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "制箭与传统弓箭工坊命名指南：羽与竹意象、百步穿杨叙事等思路，制箭工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "制箭工坊的名字要说出「一支箭在手里配得上百步之外的靶心」：这门手艺是木杆、羽片与箭镞的三合一——竹木杆要调直到肉眼看不出的弧度，三片羽要贴出让箭旋转的角度，「箭无羽不行」的老话写了两千年，射手买的不是耗材，是脱弦之后那条看不见的直线，名字要先把这份「稳与准」的托付递出去。词库现成：箭、羽、竹、弦、靶——「百步穿杨」「箭无虚发」的成语库是中文命名的现成弹药。隐藏考点是圈层双线：传统射艺线讲礼射与古法，认师承与材质；竞技俱乐部线讲参数与稳定性，认克重与直度公差——名字要在射礼场合有古意，在俱乐部供货单上又立得住专业。误区在于武侠化过载：满名的「神箭、无敌」气质会把工坊念成网游公会——这门手艺卖的是手上千百次调直的耐心，不是玄幻小说的封号。",
+      namingIdeas: [
+        "羽与杆的合成：羽、翎类词根加竹、木、杆——箭的两个核心部件一头一尾，把制箭台写进一个名字",
+        "百步穿杨借力：杨、穿、中、的类典故词根——两千年的成语库是现成文案，典故血统自带射艺的古意",
+        "礼射叙事直给：礼、射、观德类词根——「射以观德」把射箭从竞技升维到修身，传统射艺线的身价语法",
+        "直线意象转译：直、正、准、衡类词根——调杆的终点是一条看不见的直线，把「稳」的承诺写进名字",
+        "箭部件暗号：镞、筈、翎类部件词——行内人一眼认出的专业细节，俱乐部供货线的接头暗号",
+      ],
+      cases: [
+        { name: "翎正工坊", takeaway: "「箭翎」加「正直」：部件词立行当、正字立承诺——射手一听就懂的稳准托付，中文制箭命名的标准结构" },
+        { name: "穿杨社", takeaway: "「百步穿杨」典故的三字化：成语血统自带准头叙事——射艺体验课好念好记，礼射场合又有古意" },
+        { name: "Easton Archery", takeaway: "姓氏加品类的美式样本：奥运箭杆的百年霸主——人名立信任、品类直给，竞技线「参数即品牌」的终极参照" },
+        { name: "竹羽箭庐", takeaway: "「竹杆」「羽片」两种材料加庐字尾缀：材料清单式命名自带古法气质——传统射艺圈认材质，庐字添了工坊的隐逸身位" },
+      ],
+      pitfalls: [
+        "武侠化过载：满是「神箭、无敌、天下第一」气质的名字念成网游公会——这门手艺卖千百次调直的耐心，不是玄幻封号",
+        "锁死单一箭种：叫「竹箭坊」就难接碳素与铝合金的俱乐部订单——材质留给产品线，品牌名留给整个箭台",
+        "忽略安全与合规身位：箭是受管理的器材，名字太狂野会在赛事授权与场馆合作时吃亏——专业与克制是供货线的通行证",
+        "圈层语言错位：太竞技的名字在礼射场合没有古意，太古风的名字在俱乐部供货单上像工艺品——两个圈层的语言都要说得出口",
+      ],
+    },
+    en: {
+      label: "Fletching workshops",
+      title: "How to Name a Fletching Workshop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Fletching and traditional arrow-making workshop naming guide: feather-and-shaft imagery, marksmanship narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A fletching workshop's name must say that an arrow in the hand deserves the bullseye a hundred paces out: this craft is shaft, feather and point in one — the shaft straightened until no eye can catch the curve, three fletches set at the angle that spins the arrow true, and the old line that an arrow is nothing without its feathers has stood for two thousand years — the archer is not buying consumables but the invisible straight line after the loose, so the name must hand over that trust in steadiness first. The lexicon is ready: arrow, feather, shaft, string and mark — and the Chinese idiom bank of piercing-the-willow marksmanship is ready-made ammunition. The hidden exam is the twin circle: the traditional-archery line speaks ritual shooting and old methods, reading lineage and material; the competitive club line speaks grain weight and straightness tolerance — the name must carry antiquity at the ritual range and professionalism on the club order sheet. The failure mode is wuxia overload: a divine-arrow, unbeatable-blade name reads like a game guild — this craft sells the patience of a thousand straightening passes, not a fantasy title.",
+      namingIdeas: [
+        "Fusing feather and shaft: fletch and plume roots joined to bamboo, wood and shaft — the arrow's two core parts at either end of one name; the whole bench written in",
+        "Borrowing the piercing-the-willow classic: willow, pierce and mark allusion roots — two millennia of idiom are ready-made copy, and the allusion carries archery's antiquity for free",
+        "The ritual-shooting narrative outright: rite, archery and virtue-observed roots — 'archery reveals character' lifts the craft from sport to self-cultivation; the traditional line's status grammar",
+        "Translating the straight line: straight, true, exact and balanced roots — the endpoint of shaft work is an invisible straight line; write the promise of steadiness into the name",
+        "Arrow-anatomy code words: point, nock and fletch component roots — details the trade reads at a glance; the handshake of the club supply line",
+      ],
+      cases: [
+        { name: "Ling Zheng (翎正工坊)", takeaway: "Fletch joined to true: the component word setting the trade, the straightness word setting the promise — the trust an archer hears at once; the standard Chinese structure" },
+        { name: "Chuan Yang (穿杨社)", takeaway: "The piercing-the-willow idiom in three characters: the allusion carrying the marksmanship narrative built-in — easy on the class poster, antique at the ritual range" },
+        { name: "Easton Archery", takeaway: "Surname on the category word, the American sample: the century house of Olympic shafts — the name setting trust, the category stated outright; the competitive line's proof that specs become brand" },
+        { name: "Zhu Yu (竹羽箭庐)", takeaway: "Bamboo and feather on a hermitage ending: the bill-of-materials name carrying old-method air for free — the traditional circle reads the stock list, the ending adds the workshop's reclusive posture" },
+      ],
+      pitfalls: [
+        "Wuxia overload: a divine-arrow, world's-best name reads like a game guild — this craft sells a thousand straightening passes, not a fantasy title",
+        "Locking into one shaft: a bamboo-arrow name can't take the carbon and aluminium club orders — leave the material to the product line, keep the whole bench for the brand",
+        "Ignoring the safety posture: arrows are regulated equipment, and a too-wild name costs you at tournament licensing and venue partnerships — professional restraint is the supply line's passport",
+        "Mismatching the circles' languages: a too-competitive name has no antiquity at the ritual range, a too-antique one reads like craftware on the club order sheet — both dialects must be speakable",
+      ],
+    },
+  },
+  gilding: {
+    slug: "gilding",
+    keywords: ["贴金工坊", "金箔工艺", "鎏金修复", "gilding studio", "gold leaf"],
+    tlds: [
+      { tld: "com", zh: "古建修复与佛像贴金委托的默认后缀，工程合同与报价单上最稳", en: "The default suffix for restoration and statue-gilding commissions — steadiest on the contract and the quote" },
+      { tld: "art", zh: "把金箔从「材料」升维到「艺术」，画框水金与当代艺术线的身价后缀", en: "Elevating gold leaf from material to art — the status suffix for water gilding and the contemporary-art line" },
+      { tld: "studio", zh: "工作室气质直给，金箔与胶刷之间的匠作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between leaf and gilder's tip" },
+    ],
+    zh: {
+      label: "贴金工坊",
+      title: "贴金工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "贴金与金箔工艺工坊命名指南：金光意象、万分之一毫米叙事等思路，贴金工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "贴金工坊的名字要说出「一张比呼吸还轻的金箔落在该发光的地方」：金箔被打到万分之一毫米薄，一口气就能吹皱，贴金师却要让它服帖在佛像的衣褶、匾额的笔画与画框的雕花上——南京金箔的锻打传了一千七百年，买家要的不是金子本身，是「金身」二字里的郑重，名字要先把这份「轻到极致、贵到点睛」的手感递出去。词库现成：金、箔、鎏、辉、光——每个字都自带这门手艺的颜色。隐藏考点是三线业务：古建与佛像修复的工程线认资质与案例，画框水金与家具饰金的定制线认工艺等级，金箔体验课与文创的流量线要出片好玩——名字要在修复方案书、定制报价单与体验课海报三个场景都立得住。误区在于暴发户化：满名的「豪、壕、土豪金」气质会把千年手艺念成装修公司——这门手艺卖的是金落在对的地方的分寸，不是满屋的金光。",
+      namingIdeas: [
+        "金箔之轻直给：箔、羽、息、云类词根加金——「比呼吸还轻」是这门手艺最独家的画面，轻与贵的反差自带故事",
+        "鎏金血统借力：鎏、錾、锻类古法词根——鎏金是青铜时代传下来的词，一个字借来三千年的工艺家谱",
+        "点睛叙事转译：点、睛、饰、缀类词根——贴金的哲学是「金落在该发光的地方」，分寸感就是身价感",
+        "佛像金身语法：金身、宝相、庄严类词根——佛像贴金是这门手艺最郑重的场景，宗教修复线的信任语法",
+        "锻打工序暗号：捶、锻、万锤类工序词——一张金箔要过万次锤打，把工序的分量写进名字",
+      ],
+      cases: [
+        { name: "金一息", takeaway: "「金箔轻如一口气」的直译：三个字把这门手艺最独家的画面写进名字——轻与贵的反差有记忆点，体验课与定制线都接得住" },
+        { name: "南京金箔", takeaway: "产地加品类的国家级样本：一千七百年锻打传承的地名背书——产地即品牌，修复工程线的资质语法现成" },
+        { name: "点金山房", takeaway: "「点石成金」的典故化用加书斋尾缀：点睛哲学与文人身位一名收齐——画框水金线体面，匾额委托方好转述" },
+        { name: "W&B Gold Leaf", takeaway: "创始人缩写加品类直给的西式样本：伦敦老牌金箔行——缩写立传承感、品类零解释成本，B 端供货线的标准结构" },
+      ],
+      pitfalls: [
+        "暴发户化：满是「豪、壕、土豪金」气质的名字把千年手艺念成装修公司——这门手艺卖金落对处的分寸，不是满屋金光",
+        "锁死单一场景：叫「佛像贴金」就难接画框水金与当代艺术的单——场景留给案例册，品牌名留给整个金箔案",
+        "真假金箔含糊：用仿金材料却名带「足金、真金」会招来信任与合规双重风险——材料等级要在名字之外说清楚",
+        "忽略工程线资质感：太文艺的名字在古建修复投标书里立不住——流量线要出片，工程线要专业，名字要给资质留身位",
+      ],
+    },
+    en: {
+      label: "Gilding studios",
+      title: "How to Name a Gilding Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Gilding and gold-leaf studio naming guide: lighter-than-breath imagery, gold-where-it-matters narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A gilding studio's name must say that a leaf of gold lighter than a breath settles exactly where the light belongs: gold is beaten to a ten-thousandth of a millimetre — one exhale wrinkles it — yet the gilder lays it flat into a statue's drapery, a signboard's brushstrokes and a frame's carving, and Nanjing's leaf-beating lineage runs seventeen hundred years — the buyer is not purchasing gold but the solemnity inside the word gilt, so the name must hand over that lightest-touch, highest-stakes feel first. The lexicon is ready: leaf, gilt, lustre, glow and gold — every word arrives pre-coloured. The hidden exam is the triple business: the restoration line of temples and heritage buildings reads credentials and casework; the bespoke line of water-gilt frames and furniture reads craft grade; the traffic line of leafing classes and merch wants photogenic fun — the name must stand in the restoration tender, on the bespoke quote and on the class poster alike. The failure mode is the nouveau-riche register: a bling-and-luxe name reads a millennium-old craft as a renovation contractor — this craft sells the judgement of gold landing in the right place, not a room full of glare.",
+      namingIdeas: [
+        "The lightness of leaf outright: leaf, feather, breath and cloud roots joined to gold — lighter than breath is this craft's most exclusive picture, and the light-versus-precious contrast carries its own story",
+        "Borrowing the fire-gilt bloodline: mercury-gilt, chased and forged old-method roots — gilding vocabulary descends from the Bronze Age; one character borrows a three-thousand-year family tree",
+        "Translating the finishing-touch narrative: accent, highlight and crowning roots — the gilder's philosophy is gold only where the light belongs; restraint is the status",
+        "The gilt-statue grammar: golden body, solemn adornment registers — statue gilding is this craft's most ceremonial scene; the religious-restoration line's grammar of trust",
+        "Leaf-beating code words: hammer, beat and ten-thousand-strikes process roots — one leaf survives ten thousand blows; write the weight of the process into the name",
+      ],
+      cases: [
+        { name: "Jin Yi Xi (金一息)", takeaway: "Gold light as one breath, translated straight: three characters holding the craft's most exclusive picture — the light-precious contrast is the memory hook, serving class and bespoke lines alike" },
+        { name: "Nanjing Gold Leaf (南京金箔)", takeaway: "Place name on the category, the national sample: seventeen hundred years of leaf-beating behind one city's name — provenance is the brand; the restoration line's credential grammar ready-made" },
+        { name: "Dian Jin (点金山房)", takeaway: "The touch-of-gold allusion on a scholar's-studio ending: finishing-touch philosophy and literati posture in one name — dignified on the water-gilt line, easy in the signboard client's retelling" },
+        { name: "W&B Gold Leaf", takeaway: "Founders' initials on the category outright, the Western sample: the veteran London leaf house — initials setting heritage, the category costing zero explanation; the standard B2B structure" },
+      ],
+      pitfalls: [
+        "The nouveau-riche register: a bling-and-luxe name reads the millennium craft as a renovation contractor — this craft sells gold landing in the right place, not a room full of glare",
+        "Locking into one scene: a statue-gilding name can't take the frame and contemporary-art orders — leave the scene to the casebook, keep the whole bench for the brand",
+        "Blurring real and imitation leaf: naming 'pure gold' over composition leaf invites trust and compliance risk at once — state the material grade outside the name, clearly",
+        "Ignoring the tender's gravity: a too-lyrical name won't stand in a heritage-restoration bid — photogenic for the traffic line, professional for the works line; leave the name room for credentials",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
