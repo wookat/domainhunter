@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 306,
+    "count": 312,
     "slugs": [
       "com",
       "net",
@@ -307,7 +307,13 @@
       "cyou",
       "monster",
       "pics",
-      "mobi"
+      "mobi",
+      "asia",
+      "buzz",
+      "fans",
+      "place",
+      "report",
+      "town"
     ]
   },
   "guide": {

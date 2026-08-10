@@ -53,6 +53,7 @@ export const TLD_LIST = [
   "basketball", "rugby", "cricket", "fish", "fan", "win",
   "wang", "day", "meme", "quest", "kids", "foundation",
   "bond", "sbs", "cyou", "monster", "pics", "mobi",
+  "asia", "buzz", "fans", "place", "report", "town",
 ] as const;
 
 export type Tld = (typeof TLD_LIST)[number];
