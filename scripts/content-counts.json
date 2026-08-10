@@ -251,7 +251,7 @@
     ]
   },
   "guide": {
-    "count": 248,
+    "count": 254,
     "slugs": [
       "saas",
       "ecommerce",
@@ -500,7 +500,13 @@
       "painting",
       "jobboard",
       "restaurantsupply",
-      "motorcycleparts"
+      "motorcycleparts",
+      "auction",
+      "antiques",
+      "lightingbrand",
+      "outlet",
+      "watches",
+      "sneakers"
     ]
   },
   "vs": {
