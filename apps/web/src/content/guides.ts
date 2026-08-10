@@ -19592,6 +19592,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  candle: {
+    slug: "candle",
+    keywords: ["香薰蜡烛", "香氛品牌", "手工蜡烛", "candle brand", "scented candle"],
+    tlds: [
+      { tld: "com", zh: "香氛品牌走礼品与电商双渠道，.com 在礼品卡与包装上最体面", en: "Fragrance brands live on gifting and e-commerce — .com reads best on the gift card and the box" },
+      { tld: "shop", zh: "独立站直卖的默认归类，小品牌起步期零解释成本", en: "The default filing for a direct-to-consumer storefront — zero explanation for a small brand starting out" },
+      { tld: "studio", zh: "手作与小批量浇注的工作室气质直给，DIY 课程线也接得住", en: "States the small-batch, hand-poured identity outright — and carries a candle-making class line too" },
+    ],
+    zh: {
+      label: "香薰蜡烛",
+      title: "香薰蜡烛品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "香薰蜡烛与香氛品牌命名指南：气味通感、场景情绪叙事等思路，Diptyque/观夏等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "香薰蜡烛卖的从来不是蜡，是「点燃之后那一小时的情绪」，名字要先替鼻子做一次预告。这个品类的独特难题是：气味无法在屏幕上传达，用户下单前唯一能「闻到」的就是名字与文案——Diptyque 的 Baies、观夏的「昆仑煮雪」，都是先用词把气味画出来。高端线的命名传统偏法语与地名（巴黎左岸叙事自带溢价），新锐国货则走东方意象与节气叙事，两条路线都成立，关键是别混穿。隐藏考点有二：一是礼品属性——香薰蜡烛一半以上的销量是送礼，名字印在礼盒上要体面、拿得出手；二是安全与成分叙事——大豆蜡、无烟棉芯是新客的决策点，品牌名可以留白，但副标语要接住。名字的字数要短，因为它还要印在蜡烛杯身那一小圈标签上。",
+      namingIdeas: [
+        "气味通感造词：把嗅觉翻译成画面——雪松、烟火、雨后类意象词，名字先替鼻子闻一遍",
+        "场景情绪叙事：睡前、独处、周末早晨类时刻词——蜡烛卖的是时段情绪，名字锚定使用场景转化最快",
+        "法语与地名借力：高端线的传统语法，巴黎、普罗旺斯类地名自带香氛工艺联想与溢价",
+        "东方节气路线：节气、山水、诗词意象——新锐国货香氛的差异化词库，礼盒叙事一脉相承",
+        "蜡与火的器物词根：焰、芯、burn、wick 类词——品类辨识度直给，适合走性冷淡极简风的品牌",
+      ],
+      cases: [
+        { name: "Diptyque", takeaway: "希腊语「双联画」入名：巴黎老牌用艺术词根立高级感——名字不提香味，反而给了五十年产品线扩张空间" },
+        { name: "观夏 To Summer", takeaway: "「观夏」二字把季节变成动词：东方意象+英文名双轨并行——新锐国货香氛命名的教科书" },
+        { name: "Yankee Candle", takeaway: "「洋基」地域身份+品类直给：美国国民蜡烛品牌证明大众线名字要说人话——高端线反着学" },
+        { name: "Boy Smells", takeaway: "挑衅式命名打破香氛的性别脚本：中性香定位从名字就开始——定位即命名的范本" },
+      ],
+      pitfalls: [
+        "名字太长印不下：蜡烛杯身标签只有一小圈，超过四个字的中文名在包装上会挤成一团",
+        "香味词锁死产品线：叫「栀子花香坊」就很难卖木质调——名字留白，香味留给产品名",
+        "高端叙事配大众价格：法语名+9.9 包邮会让两头客群都不信任——名字的气质要和定价对表",
+        "只查中文没查英文与商标：香氛品牌出海与进商场专柜都要英文名，商标类目（第 3/4 类）要提前查",
+      ],
+    },
+    en: {
+      label: "Candle brands",
+      title: "How to Name a Candle Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Scented candle and home fragrance naming guide: scent-to-image registers, moment-of-use naming, breakdowns of Diptyque/Yankee Candle/Boy Smells, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A candle brand never sells wax — it sells the hour of mood that follows the match, and the name must trail that scent before the nose arrives. The category's singular problem is that smell doesn't travel through a screen: until the box is opened, the only thing a customer can \"smell\" is the name and the copy, which is why Diptyque's Baies and every great candle name paint the scent in words first. The luxury tradition leans French and place-named — the Left Bank register carries its own premium — while newer brands win with moment-of-use naming: sleep, solitude, Sunday morning. The hidden exams are two: gifting, since more than half of candle sales are presents and the name must look dignified on a gift box; and the safety-and-ingredients story, since soy wax and cotton wicks are the first-time buyer's checklist — the name may stay poetic, but the tagline must answer. Keep it short: the name also has to fit the slim label wrapped around the vessel.",
+      namingIdeas: [
+        "Scent-to-image coinage: translate smell into picture — cedar, smoke, after-rain — so the name pre-smells the room",
+        "Moment-of-use register: bedtime, solitude, slow-morning words — candles sell an hour of mood, and anchoring the moment converts fastest",
+        "The French and place-name tradition: Paris and Provence registers carry perfume-craft associations and a built-in premium",
+        "The minimal object register: flame, wick, burn, ember — category recognition stated plainly, suited to the pared-back aesthetic",
+        "The subversive register: names that break the category's gender or luxury script — positioning that starts at the name, as Boy Smells proved",
+      ],
+      cases: [
+        { name: "Diptyque", takeaway: "Greek for \"diptych\": the Paris house staking an art-history root — a name that never mentions scent, buying fifty years of product-line room" },
+        { name: "Yankee Candle", takeaway: "Regional identity plus the category stated outright: America's mass-market candle proving the plain-speech register — the luxury tier learns by inverting it" },
+        { name: "Boy Smells", takeaway: "A provocation in two words: breaking the fragrance world's gender script from the name down — positioning-as-naming in its purest form" },
+        { name: "P.F. Candle Co.", takeaway: "Initials plus the honest \"Co.\": the small-batch workshop register — hand-poured credibility carried by typographic modesty" },
+      ],
+      pitfalls: [
+        "A name too long for the label: the vessel's wrap-around strip is small — long names crowd the packaging that is the product's face",
+        "Locking a scent into the brand name: call yourself Gardenia House and the woody line never sells — keep scent in product names, not the brand",
+        "Luxury register at bargain prices: a French name over discount pricing makes both audiences distrust you — tone and price must agree",
+        "Skipping trademark class checks: fragrance straddles classes 3 and 4 — and the gift-market English name needs clearing before the boxes print",
+      ],
+    },
+  },
+  juicebar: {
+    slug: "juicebar",
+    keywords: ["果汁店", "轻食果汁吧", "鲜榨果汁", "juice bar", "smoothie shop"],
+    tlds: [
+      { tld: "bar", zh: "juice bar 的 bar 直接进后缀，品类归类零解释成本", en: "The bar of juice bar filed straight into the TLD — category clarity at zero cost" },
+      { tld: "fit", zh: "轻食与健身客群的默认归类，健康叙事一步到位", en: "The default filing for the fitness crowd — the health story told in the suffix" },
+      { tld: "shop", zh: "门店+外卖双渠道的直白归类，小店起步不挑食", en: "The plain filing for a storefront with delivery — a starter suffix that never fights the name" },
+    ],
+    zh: {
+      label: "果汁轻食吧",
+      title: "果汁轻食吧怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "鲜榨果汁店与轻食果汁吧命名指南：新鲜现榨叙事、色彩活力意象等思路，Jamba/Joe & the Juice 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "果汁吧的名字要在三秒内完成一次「新鲜宣誓」：这个品类的信任核心是「现榨、真水果、无添加」，名字最好自带果园的湿度。国际连锁的两条命名路线泾渭分明：Jamba、Boost 走能量动词路线，把果汁卖成「按下开关的活力」；Joe & the Juice 走人名+品类的街角熟人路线，把果汁吧卖成社交空间。国内市场还有第三条路：书亦、茶百道证明了中文饮品名的「三字格」传播力，果汁吧同样适用——三个字、有画面、好连读。隐藏考点是客群分层：写字楼午餐的轻食果汁、健身房旁的蛋白奶昔、商场里的儿童鲜榨，三种场景的名字气质完全不同，先选场景再起名。要小心「减肥」暗示——排毒、瘦身类词根有监管与反噬风险，健康叙事要说「加了什么好东西」而不是「减掉什么」。",
+      namingIdeas: [
+        "新鲜现榨直给：鲜、榨、fresh、raw 类词根——品类信任核心一步说清，通勤客群秒懂",
+        "能量动词路线：boost、燃、活力类词——把果汁卖成「按下开关的状态切换」，健身场景最对味",
+        "水果色彩意象：橙、莓、青柠类颜色感词根——名字自带视觉锤，招牌与杯贴设计顺手接住",
+        "人名熟人路线：人名+juice 的街角语法——Joe & the Juice 证明果汁吧可以卖社交感与熟客关系",
+        "三字格中文名：三个字、有画面、好连读——中文饮品命名的黄金格式，果汁吧同样适用",
+      ],
+      cases: [
+        { name: "Jamba", takeaway: "西非语「甜莓」造词：异域词根自带果味联想，两音节全球好念——连锁化命名的教科书" },
+        { name: "Joe & the Juice", takeaway: "人名+品类的街角熟人语法：把果汁吧卖成社交空间——名字先立「和 Joe 聊两句」的关系感" },
+        { name: "Boost Juice", takeaway: "能量动词直给：澳洲连锁把果汁定义成「状态切换开关」——功能叙事命名的标杆" },
+        { name: "Pressed", takeaway: "一个分词说清工艺：冷压果汁的品类词直接当品牌名——工艺即卖点时命名可以极简" },
+      ],
+      pitfalls: [
+        "排毒瘦身词根入名：detox、瘦类字眼有广告法与监管风险，健康叙事要说「加了什么」不说「减掉什么」",
+        "名字锁死单一水果：叫「橙记」就很难卖牛油果碗——水果留给产品名，品牌名留白",
+        "场景气质错配：写字楼轻食名配夜店风字体、儿童鲜榨配健身狠词——先选主场景再定名字气质",
+        "只查中文没查外卖平台重名：果汁吧一半流量在外卖 App，平台内重名会把评分与复购分流给同行",
+      ],
+    },
+    en: {
+      label: "Juice bars",
+      title: "How to Name a Juice Bar: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Juice bar and smoothie shop naming guide: fresh-pressed registers, energy-verb naming, breakdowns of Jamba/Joe & the Juice/Pressed, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A juice bar's name must swear the freshness oath in three seconds: the category's trust core is fresh-pressed, real fruit, nothing added, and the best names arrive with the orchard's humidity still on them. The international chains split into two clean schools: Jamba and Boost take the energy-verb route, selling juice as a switch you flip; Joe & the Juice takes the first-name-plus-category route, selling the bar as a social corner where the barista knows you. The hidden exam is scene selection: the office-lunch salad-and-juice crowd, the gym-adjacent protein-smoothie crowd and the mall's kids-and-parents crowd want entirely different name temperatures — choose the scene before the name. And handle the health story with care: detox and slimming roots invite regulatory trouble and backlash; modern juice naming says what goes in, never what comes off.",
+      namingIdeas: [
+        "Fresh-pressed stated plainly: fresh, raw, pressed, squeeze — the category's trust core said in one word, instantly read by the commuter",
+        "The energy-verb school: boost, fuel, spark — selling juice as a state-switch, the native register of the gym crowd",
+        "Fruit-colour imagery: citrus, berry, lime-green roots — a name with a built-in visual hammer that the cup sleeve and signage inherit for free",
+        "The first-name corner-shop grammar: a human name plus juice — Joe & the Juice proved the bar can sell familiarity as much as fruit",
+        "Process-as-name minimalism: cold-pressed, squeezed, raw — when the method is the differentiator, the category word can be the brand",
+      ],
+      cases: [
+        { name: "Jamba", takeaway: "A West African root meaning sweet berry: exotic coinage with built-in fruit associations, two syllables the whole world can say — franchise-ready naming" },
+        { name: "Joe & the Juice", takeaway: "First name plus category: the corner-shop grammar selling a chat with Joe as much as the juice — relationship-first naming" },
+        { name: "Boost Juice", takeaway: "The energy verb stated outright: the Australian chain defining juice as a switch you flip — the benchmark of functional naming" },
+        { name: "Pressed", takeaway: "One participle carrying the whole method: cold-pressed craft as the brand itself — proof that when process is the pitch, naming can be minimal" },
+      ],
+      pitfalls: [
+        "Detox and slimming roots in the name: regulatory exposure plus cultural backlash — say what goes in, never what comes off",
+        "Locking one fruit into the brand: call yourself Orange House and the açaí bowl never sells — fruits belong in product names",
+        "Scene-register mismatch: office-lunch names in nightclub type, kids' juice in gym-menace words — pick the primary scene first",
+        "Skipping the delivery-app collision check: half a juice bar's volume lives in the apps — a same-name rival there siphons your ratings and repeat orders",
+      ],
+    },
+  },
+  leathercraft: {
+    slug: "leathercraft",
+    keywords: ["皮具工作室", "手工皮具", "皮革定制", "leather workshop", "leathercraft studio"],
+    tlds: [
+      { tld: "studio", zh: "手作工作室气质直给，定制与体验课双线都接得住", en: "The workshop identity stated outright — carrying both bespoke orders and craft classes" },
+      { tld: "shop", zh: "成品零售线的直白归类，独立站起步零解释成本", en: "The plain filing for the finished-goods line — a zero-explanation storefront suffix" },
+      { tld: "com", zh: "走高端定制与出海订单时最体面的默认选择", en: "The dignified default when bespoke commissions and export orders are the ambition" },
+    ],
+    zh: {
+      label: "皮具工作室",
+      title: "皮具工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "手工皮具工作室与皮革定制命名指南：手作温度叙事、匠人姓氏传统等思路，Saddleback/土屋鞄等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "皮具工作室的名字要先回答一个问题：凭什么比商场专柜贵、比白牌淘宝贵十倍？答案只能是「手」——植鞣革、手缝线、烫边打磨，名字要带出「一双手在皮子上花了八小时」的温度。这个行业的命名传统全球高度一致：匠人姓氏+工坊是最硬的信任状（爱马仕本质上就是 Thierry Hermès 的马具工坊），日本的土屋鞄、美国的 Saddleback 都在讲「谁做的」而不是「卖什么」。材质词根是第二词库：植鞣、马缰革、Horween 类皮料名自带行家门槛，圈内客群一眼识别。隐藏考点是产品线宽度：钱包卡包、包袋、皮带表带、还有越来越赚钱的手作体验课——名字别锁死在单一品类上，「皮」与「手作」留在名字里，品类留给产品页。时间叙事是这个品类独有的加分项：皮革会随使用变色养出包浆，「养」「岁月」「patina」类词根能把慢价值说进名字。",
+      namingIdeas: [
+        "匠人姓氏工坊语法：姓氏+皮具/工坊——全球皮具业最硬的信任状，爱马仕的起点就是马具作坊",
+        "材质词根立门槛：植鞣、马缰、full-grain 类皮料词——行家一眼识别，自动过滤比价客群",
+        "手作温度叙事：手缝、一针一线、handmade 类词根——把「八小时的手工」直接说进名字",
+        "时间包浆隐喻：养、岁月、patina 类词——皮革越用越美的慢价值是品类独有卖点，名字可以先讲",
+        "工具器物借力：锥、线、鞍、saddle 类工坊器物词——画面感直给，logo 设计顺手接住",
+      ],
+      cases: [
+        { name: "Saddleback Leather", takeaway: "马鞍词根+材质直给：美国硬派皮具用「百年保修」配硬汉名——名字与产品承诺互相背书" },
+        { name: "土屋鞄製造所", takeaway: "姓氏+製造所的日式工坊语法：六十年只讲「谁在做」——匠人命名传统的活标本" },
+        { name: "Hermès", takeaway: "马具作坊起家的姓氏帝国：证明皮具业最好的名字就是做皮子那个人的名字" },
+        { name: "Bellroy", takeaway: "澳洲两地名 Bells Beach+Fitzroy 合成：现代皮具品牌跳出姓氏传统的造词路线——轻巧好念全球通行" },
+      ],
+      pitfalls: [
+        "奢侈大词堆砌：名匠、御用、royal 类词没有作品支撑就是负资产——手作圈的信任靠晒工位不靠形容词",
+        "品类锁死：叫「钱包工坊」就很难卖包袋与体验课——皮与手作入名，品类留给产品页",
+        "洋名假姓氏：编一个不存在的意大利姓氏容易被行家识破——要么真姓氏要么老实造词",
+        "只查中文没查 Instagram 与 Etsy 重名：手工皮具的种草与出海阵地在图片社区，同名撞车等于白做内容",
+      ],
+    },
+    en: {
+      label: "Leather studios",
+      title: "How to Name a Leather Workshop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Leathercraft studio and bespoke leather naming guide: maker-surname tradition, material registers, breakdowns of Saddleback/Tsuchiya Kaban/Bellroy, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A leather workshop's name must answer one question first: why does this cost ten times the marketplace white-label? The only honest answer is the hand — vegetable-tanned hides, saddle-stitched seams, burnished edges — and the name should carry the warmth of eight hours spent on one piece. The global tradition is remarkably consistent: maker's surname plus workshop is the hardest credential in the trade (Hermès began as Thierry Hermès's harness shop), and Tsuchiya Kaban in Tokyo or Saddleback in Texas keep telling who makes it rather than what is sold. Material roots are the second vocabulary: veg-tan, bridle, full-grain and tannery names like Horween carry an insider's threshold that quietly filters out the price-comparison crowd. The hidden exam is line width — wallets, bags, belts, straps and the increasingly profitable craft-class business — so keep leather and craft in the name and leave the category to the product page. And this trade owns a register no other has: patina. Leather grows more beautiful with use, and words of time, wear and ageing let the name promise the slow reward up front.",
+      namingIdeas: [
+        "The maker-surname grammar: family name plus leather goods or workshop — the trade's hardest credential, and the origin story of Hermès itself",
+        "Material roots as a threshold: veg-tan, bridle, full-grain — insiders read them instantly, and bargain-hunters filter themselves out",
+        "The handmade-warmth register: saddle-stitch, handbound, bench-made — eight hours of handwork said straight into the name",
+        "The patina metaphor: age, wear, seasons — leather's grows-more-beautiful promise is the category's unique selling right, claimable at the name",
+        "Workshop-object borrowing: awl, thread, saddle, bench — instant imagery the logo design inherits for free",
+      ],
+      cases: [
+        { name: "Saddleback Leather", takeaway: "Saddle root plus material stated plainly: the American heavy-duty house pairing a rugged name with a 100-year warranty — name and promise endorsing each other" },
+        { name: "Tsuchiya Kaban", takeaway: "Surname plus seisakusho (manufactory): sixty years of saying who makes it — the living textbook of the maker-naming tradition" },
+        { name: "Hermès", takeaway: "A surname empire that began as a harness workshop: proof the best name in leather is the name of the person cutting the hide" },
+        { name: "Bellroy", takeaway: "Bells Beach plus Fitzroy blended: the modern route out of the surname tradition — a light, global coinage for a design-led brand" },
+      ],
+      pitfalls: [
+        "Stacking luxury adjectives: master, royal, artisan without work to show is negative equity — this trade trusts bench photos, not adjectives",
+        "Locking the category: call yourself The Wallet Works and the bag line and craft classes never sell — keep leather and craft, leave products to the page",
+        "The fake Italian surname: invented heritage gets unmasked by the first knowledgeable customer — use a real name or coin honestly",
+        "Skipping Instagram and Etsy collision checks: leathercraft lives on image platforms — a name already taken there wastes every photo you post",
+      ],
+    },
+  },
+  calligraphy: {
+    slug: "calligraphy",
+    keywords: ["书法工作室", "书法培训", "少儿书法", "calligraphy studio", "lettering"],
+    tlds: [
+      { tld: "art", zh: "书法的艺术身份直给，工作室与个人品牌都体面", en: "The art identity stated outright — dignified for studio and personal brand alike" },
+      { tld: "studio", zh: "工作室属性归类清晰，成人体验课与定制商单都接得住", en: "Clean workshop filing — carrying adult classes and commission work in one" },
+      { tld: "academy", zh: "少儿书法考级路线的体系化声明，家长秒懂", en: "Declares the structured grading pathway — parents read the system at once" },
+    ],
+    zh: {
+      label: "书法工作室",
+      title: "书法工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "书法工作室与书法培训命名指南：斋号堂号传统、笔墨意象等思路，荣宝斋/朵云轩等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "书法是唯一自带千年命名传统的行业：斋、轩、堂、庐——文人给书房起的「斋号」就是这个行业的原生命名语法，荣宝斋、朵云轩这些百年老号证明这套语法至今仍是信任状。但今天的书法工作室要在两个市场里活：少儿书法培训是现金流主力，名字要让家长读出「坐得住、写得正、考级有出路」；成人书法体验与定制商单（婚礼请柬、品牌题字、西文 calligraphy）是溢价市场，名字要有作品感与审美门槛。两个市场的名字气质几乎相反，先选主战场再起名。笔墨纸砚是天然词库——笔、墨、砚、帖、锋，每个字都自带画面；「静」与「定」类心性词是第二词库，因为书法在今天卖的很大一部分是「专注力」与「慢下来」。隐藏考点是西文书法（brush lettering）市场的存在：做英文花体与商单的工作室，名字要能在 Instagram 上被英文客户念出来。",
+      namingIdeas: [
+        "斋号堂号传统：斋、轩、堂、庐配一个意象字——千年文人命名语法，百年老号都在用，信任状直给",
+        "笔墨器物词根：笔、墨、砚、帖、锋类字——书房四宝自带画面，logo 与视觉体系顺手继承",
+        "心性叙事路线：静、定、澄、习类字——书法在今天卖的是专注力与慢生活，家长与白领都买单",
+        "碑帖名家借力：兰亭、颜筋柳骨类典故词根——圈内人识货，同时完成一次审美科普",
+        "双语双轨命名：中文斋号+英文 lettering 名并行——接西文商单与出海教学时两个市场都立得住",
+      ],
+      cases: [
+        { name: "荣宝斋", takeaway: "「以文会友、荣名为宝」入名：三百年琉璃厂老号证明斋号语法就是行业信任状本状" },
+        { name: "朵云轩", takeaway: "「朵云」典出书信雅称：上海百年笺扇庄用一个意象词立江南文人气——斋号命名的南派样本" },
+        { name: "兰亭书法学校", takeaway: "直接借《兰亭序》立校名：典故即课程承诺——少儿书法借碑帖典故命名的标准打法" },
+        { name: "Melissa Esplin Calligraphy", takeaway: "人名+品类的西文书法语法：Instagram 时代个人品牌直给——英文商单市场的命名通行证" },
+      ],
+      pitfalls: [
+        "斋号堆砌生僻字：龘、彧类字家长不会念也搜不到——文气要有，检索性不能丢",
+        "少儿市场用成人审美：性冷淡极简名对家长无感，他们要读出「坐得住、考级有出路」",
+        "大师头衔自封：名家、大师入名没有作品与师承支撑，书法圈最容易被同行拆台",
+        "只查中文没查拼音域名与商标：书法工作室的斋号重名率极高，拼音域名与 41 类商标要提前锁",
+      ],
+    },
+    en: {
+      label: "Calligraphy studios",
+      title: "How to Name a Calligraphy Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Calligraphy studio and lettering brand naming guide: studio-name traditions, brush-and-ink imagery, breakdowns of Rong Bao Zhai and modern lettering brands, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Calligraphy is the rare trade with a millennium of naming tradition built in: in the Chinese world, the scholar's studio name — zhai, xuan, tang — is the native grammar, and three-century houses like Rong Bao Zhai prove it still functions as a credential today; in the West, the corresponding tradition is the artist's own name plus calligraphy or lettering, the Instagram-era grammar of the commission market. A modern studio usually straddles two markets with opposite temperatures: children's classes are the cash-flow engine, and those names must tell a parent focus, posture, grading pathway; adult workshops and commission work — wedding suites, brand lettering, logotypes — are the premium market, and those names must carry portfolio-grade taste. Choose the primary battlefield before naming. The tool kit is a free vocabulary: brush, ink, stone, stroke, nib — every word arrives with its own picture; and the mindfulness register — still, slow, steady — is the second library, because much of what calligraphy sells today is concentration itself.",
+      namingIdeas: [
+        "The studio-name tradition: zhai/xuan/tang registers in Chinese, or atelier and studio in the West — a millennium-old grammar that still reads as a credential",
+        "Brush-and-ink object roots: brush, ink, nib, stroke, flourish — the desk's tools carry instant imagery the visual identity inherits",
+        "The mindfulness register: still, slow, steady-hand words — calligraphy sells concentration now, and parents and professionals both buy it",
+        "Canon borrowing: Lanting/Spencerian/Copperplate registers — the classics signal lineage to insiders and teach taste to newcomers in one stroke",
+        "The bilingual double-track: a Chinese studio name paired with an English lettering name — one identity for grading classes, one for the global commission market",
+      ],
+      cases: [
+        { name: "Rong Bao Zhai", takeaway: "A 300-year Beijing house whose studio-name grammar is the industry credential itself — proof the zhai tradition still converts trust today" },
+        { name: "Duo Yun Xuan", takeaway: "A cloud-letter allusion in a Shanghai house name: one image-word carrying the whole southern-scholar register — the southern school of studio naming" },
+        { name: "Lanting Calligraphy School", takeaway: "Borrowing the Orchid Pavilion Preface outright: the allusion is the curriculum promise — the standard play for children's programmes" },
+        { name: "Melissa Esplin Calligraphy", takeaway: "Artist name plus category: the Western commission-market grammar where the person is the brand — the Instagram-era passport" },
+      ],
+      pitfalls: [
+        "Obscure characters in the studio name: parents can't pronounce or search them — keep the scholar's air without losing findability",
+        "Adult aesthetics for the kids' market: minimalist cool means nothing to a parent scanning for focus, posture and grading outcomes",
+        "Self-awarded master titles: master in the name without lineage or work invites the trade's fastest debunking",
+        "Skipping pinyin-domain and trademark checks: studio-name collisions are rampant in this trade — lock the domain and the class-41 mark early",
+      ],
+    },
+  },
+  instrumentstore: {
+    slug: "instrumentstore",
+    keywords: ["乐器行", "乐器店", "吉他店", "music instrument store", "guitar shop"],
+    tlds: [
+      { tld: "shop", zh: "乐器零售的直白归类，实体店+网店双渠道零解释", en: "The plain retail filing — storefront plus web shop with zero explanation" },
+      { tld: "store", zh: "同样直给的零售后缀，名字短时兜底可用", en: "The equally plain retail suffix — a clean fallback when the name runs short" },
+      { tld: "band", zh: "走乐队文化与租赁排练路线时气质直给", en: "States the band-culture identity outright — for the rental-and-rehearsal route" },
+    ],
+    zh: {
+      label: "乐器行",
+      title: "乐器行怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "乐器行与乐器店命名指南：声音意象、乐手圈层叙事等思路，Guitar Center/Sweetwater 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "乐器行的名字要同时取信两种完全不同的客人：给孩子买第一把入门琴的家长，和为第七把琴找借口的老乐手。前者要读出「专业、不宰客、老师推荐的那家」，后者要闻到「懂行、有好货、能聊」的圈层气味。美国两大巨头恰好示范了两条路线：Guitar Center 用品类+中心的直给语法通吃大众市场，Sweetwater 用意象词+顶级服务把线上乐器卖成了信任生意。国内乐器行的传统语法是「琴行」——但「琴」字默认钢琴联想，主打吉他、管乐、民乐的店要么换词根要么加限定。隐藏考点是业务的三条腿：卖琴、教课、维修保养（还有越来越重要的租赁），名字最好别锁死在零售上，「琴行」比「琴店」的容量大就在于此。声音词根是这个行业独有的词库——音、弦、律、调、tone、chord，每个字都自带听感。",
+      namingIdeas: [
+        "声音词根直给：音、弦、律、tone、chord 类字——乐器行独有的听感词库，名字先响起来",
+        "品类+中心语法：吉他中心、管乐工坊类直给结构——大众市场零解释成本，家长搜索友好",
+        "乐手圈层暗号：riff、jam、backstage 类圈内词——老乐手闻味识店，自动完成客群筛选",
+        "琴行传统词根：行、坊、社配声音字——比「店」容量大，卖琴教课维修租赁四条腿都装得下",
+        "意象词错位路线：Sweetwater 式的非乐器意象词——差异化好记，靠服务与内容把联想补上",
+      ],
+      cases: [
+        { name: "Guitar Center", takeaway: "品类+中心的直给语法：美国最大乐器连锁证明大众市场要的是「一站买齐」的确定感" },
+        { name: "Sweetwater", takeaway: "「甜水」意象词与乐器无关：靠销售工程师制度把服务做成品牌——意象命名+服务兑现的范本" },
+        { name: "Chicago Music Exchange", takeaway: "城市+交换所语法：老琴与稀有琴的江湖气直给——二手与藏家市场的命名信任状" },
+        { name: "琴海乐器", takeaway: "「琴海」二字把品类与规模一次说清：国内琴行「声音字+大字」的经典组合——家长与乐手都能读" },
+      ],
+      pitfalls: [
+        "「琴」字锁死钢琴联想：主打吉他管乐民乐的店要换词根或加限定，否则进店客群错配",
+        "圈内梗吓走家长：太重的摇滚黑话会让给孩子买琴的家长却步——先选主客群再定黑话浓度",
+        "名字锁死零售：教课、维修、租赁是利润腿，「店」字装不下的业务「行」与「坊」装得下",
+        "只查中文没查电商平台与短视频重名：乐器行的增量在直播间与短视频评测，同名撞车流量白送同行",
+      ],
+    },
+    en: {
+      label: "Instrument stores",
+      title: "How to Name an Instrument Store: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Music instrument store naming guide: sound-root registers, player-tribe signals, breakdowns of Guitar Center/Sweetwater/Chicago Music Exchange, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An instrument store's name must win two entirely different customers at once: the parent buying a first beginner violin, and the veteran inventing reasons for a seventh guitar. The parent needs to read professional, fair-priced, the one the teacher recommends; the veteran needs to smell they know gear, they stock the good stuff, they'll talk. America's two giants demonstrate the two routes: Guitar Center takes the category-plus-center grammar and owns the mass market on certainty, while Sweetwater proves an unrelated image-word can anchor the trust business when service delivers the meaning. The hidden exam is that this business walks on three legs — sales, lessons, repairs (and increasingly rentals) — so the name should not lock itself to retail alone: exchange, works and house out-carry shop. And the trade owns a vocabulary nothing else can claim: tone, chord, string, reverb — every root arrives already sounding.",
+      namingIdeas: [
+        "Sound roots stated plainly: tone, chord, string, tempo — the trade's own audible vocabulary, so the name plays before the door opens",
+        "The category-plus-center grammar: Guitar Center's route — zero-explanation certainty that wins the parent and the search engine",
+        "Player-tribe signals: riff, jam, backstage — insider words that let veterans smell the shop and filter the crowd for you",
+        "The wide-container register: exchange, works, house over shop — room for lessons, repairs and rentals alongside the till",
+        "The displaced image-word: Sweetwater's route — an unrelated, memorable image that service and content later fill with meaning",
+      ],
+      cases: [
+        { name: "Guitar Center", takeaway: "Category plus center: America's biggest chain proving the mass market buys one-stop certainty — the plain-speech benchmark" },
+        { name: "Sweetwater", takeaway: "An image-word with no instrument in it: the sales-engineer service model turned the name into trust — imagery plus delivery as a system" },
+        { name: "Chicago Music Exchange", takeaway: "City plus exchange: vintage-and-rare-gear gravitas stated outright — the collector market's naming credential" },
+        { name: "Andertons Music Co", takeaway: "A family surname carried into the YouTube era: the UK shop proving the personal name plus content is the modern independent's moat" },
+      ],
+      pitfalls: [
+        "Locking one instrument into the name: Guitar House sells brass badly — either commit to the niche or keep the container wide",
+        "Insider slang that scares the parent: heavy rock argot repels the beginner-violin buyer — set the slang level after choosing the primary customer",
+        "Naming yourself into retail only: lessons, repairs and rentals are the margin legs — shop is a smaller container than exchange or works",
+        "Skipping marketplace and short-video collision checks: the growth channel is review content and live streams — a name collision there gifts your traffic to a rival",
+      ],
+    },
+  },
+  meditation: {
+    slug: "meditation",
+    keywords: ["冥想馆", "正念工作室", "冥想课程", "meditation studio", "mindfulness"],
+    tlds: [
+      { tld: "studio", zh: "线下冥想空间的直白归类，课程与包场团建都接得住", en: "The plain filing for a physical space — classes and corporate bookings both fit" },
+      { tld: "life", zh: "把冥想说成生活方式而非玄学，客群包容度最大", en: "Frames meditation as a lifestyle, not mysticism — the widest-door suffix" },
+      { tld: "app", zh: "做冥想内容与订阅产品时的默认归类，Calm 们的赛道", en: "The default filing for content and subscription products — the lane Calm built" },
+    ],
+    zh: {
+      label: "冥想馆",
+      title: "冥想馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "冥想馆与正念工作室命名指南：留白意象、去玄学化叙事等思路，Calm/Headspace 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "冥想馆的名字要完成一次微妙的走钢丝：既要有「安静下来」的气质，又不能滑进玄学与宗教的联想里——今天为冥想付费的主力是被焦虑追着跑的都市白领，他们要的是「科学的放松」而不是「神秘的修行」。Calm 与 Headspace 两个十亿美元品牌给出了标准答案：用最日常的英文词把冥想翻译成「状态」——冷静、头脑的空间，一个玄学词都没有。中文命名的对应词库是留白系：白、隅、山、息、云，这些字自带呼吸感又不烧香。线下冥想馆的隐藏考点是场景多元：午休冥想、睡前课程、企业团建包场、正念减压（MBSR）体系课，名字要装得下从个人到 B 端的客群。要小心「禅」字：它是最顺手也最危险的词根——气质到位，但宗教联想会把一部分企业客户与理性客群挡在门外，用之前先想清楚主客群是谁。",
+      namingIdeas: [
+        "状态直译路线：静、息、松、calm 类日常词——把冥想翻译成人人都要的状态，去玄学化最彻底",
+        "留白意象词库：白、隅、云、山类字——自带呼吸感与画面，中文冥想品牌的原生词根",
+        "呼吸与身体词根：息、吸、breath 类字——冥想最科学的锚点是呼吸，名字落在身体上最可信",
+        "空间隐喻语法：隅、间、space 类词——Headspace 证明「给头脑一个房间」是全球通行的冥想隐喻",
+        "科学背书路线：正念、MBSR 类体系词入名或副标——企业客户与理性客群要看到方法论不是玄学",
+      ],
+      cases: [
+        { name: "Calm", takeaway: "一个最日常的英文词封神：把冥想翻译成人人都要的状态——去玄学化命名的十亿美元验证" },
+        { name: "Headspace", takeaway: "「头脑的空间」隐喻直给：橙色圆点+日常词把冥想卖成了通勤日课——空间隐喻的教科书" },
+        { name: "Insight Timer", takeaway: "洞见+计时器的工具语法：把冥想拆成可量化的日常练习——工具感命名降低尝试门槛" },
+        { name: "一隅冥想", takeaway: "「一隅」二字给心留一个角落：中文留白词库的标准用法——安静有画面且零宗教联想" },
+      ],
+      pitfalls: [
+        "玄学词根吓走理性客群：灵、修、能量类字会把企业团建与白领客户挡在门外——先定客群再定词根",
+        "「禅」字双刃剑：气质最顺手但宗教联想最重，做 B 端与科学叙事的馆慎用",
+        "安静过头没有记忆点：太素的名字在点评与搜索里没有钩子——留白要留在意象上不是留在辨识度上",
+        "只查中文没查 App 与商标：冥想品牌的终局常是内容订阅，App Store 重名与 41/44 类商标要提前锁",
+      ],
+    },
+    en: {
+      label: "Meditation studios",
+      title: "How to Name a Meditation Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Meditation studio and mindfulness brand naming guide: everyday-word registers, whitespace imagery, breakdowns of Calm/Headspace/Insight Timer, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A meditation studio's name walks a tightrope: it must carry the hush, without sliding into mysticism — because today's paying meditator is an anxious professional buying scientific calm, not secret wisdom. The two billion-dollar brands wrote the playbook: Calm and Headspace translate meditation into the most ordinary English available — a state everyone wants, a room for the mind — with not one esoteric word between them. The corresponding vocabulary is whitespace imagery: still, quiet, cloud, mountain, breath — words that inhale on their own without lighting incense. The hidden exam for a physical studio is scene width: lunch-break sits, sleep courses, corporate off-sites and structured MBSR programmes all live under one roof, so the name must hold individual and B2B customers alike. And handle zen with care: it is the most tempting root and the most loaded — perfect temperature, but its religious associations close doors with corporate clients and skeptics; know your primary customer before you reach for it.",
+      namingIdeas: [
+        "The everyday-state register: calm, still, ease — translating meditation into a state everyone already wants, the purest de-mystification",
+        "Whitespace imagery: cloud, mountain, quiet, blank-space roots — names that breathe on their own, the native vocabulary of the category",
+        "Breath-and-body roots: breath, inhale, exhale — the most scientific anchor meditation has, and the most credible place for a name to land",
+        "The room-for-the-mind metaphor: space, room, corner — Headspace proved the spatial metaphor travels worldwide",
+        "The evidence register: mindfulness and MBSR in the name or tagline — corporate buyers and skeptics need to see method, not mystery",
+      ],
+      cases: [
+        { name: "Calm", takeaway: "One ordinary word canonised: meditation translated into a state everyone wants — the billion-dollar proof of de-mystified naming" },
+        { name: "Headspace", takeaway: "The room-for-the-mind metaphor stated plainly: an orange dot and an everyday word selling meditation as a commuter habit — the spatial-metaphor textbook" },
+        { name: "Insight Timer", takeaway: "Insight plus a timer: meditation framed as a measurable daily practice — tool-register naming that lowers the trying threshold" },
+        { name: "Ten Percent Happier", takeaway: "A skeptic's promise in a percentage: the anti-mystical register made explicit — naming that recruits exactly the audience zen would repel" },
+      ],
+      pitfalls: [
+        "Esoteric roots that repel the skeptic: spirit, energy, awakening close corporate doors — choose the customer before the vocabulary",
+        "The zen double-edge: perfect temperature, heaviest baggage — studios chasing B2B and evidence-based positioning should think twice",
+        "So quiet it disappears: an over-minimal name has no hook in search or reviews — keep the whitespace in the imagery, not the memorability",
+        "Skipping app-store and trademark checks: meditation brands often end as subscription products — clear the app name and classes 41/44 early",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

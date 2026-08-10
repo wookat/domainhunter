@@ -329,7 +329,7 @@
     ]
   },
   "guide": {
-    "count": 314,
+    "count": 320,
     "slugs": [
       "saas",
       "ecommerce",
@@ -644,7 +644,13 @@
       "handball",
       "curling",
       "rowing",
-      "skating"
+      "skating",
+      "candle",
+      "juicebar",
+      "leathercraft",
+      "calligraphy",
+      "instrumentstore",
+      "meditation"
     ]
   },
   "vs": {
