@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 288,
+    "count": 294,
     "slugs": [
       "com",
       "net",
@@ -289,7 +289,13 @@
       "bet",
       "poker",
       "futbol",
-      "moda"
+      "moda",
+      "basketball",
+      "rugby",
+      "cricket",
+      "fish",
+      "fan",
+      "win"
     ]
   },
   "guide": {

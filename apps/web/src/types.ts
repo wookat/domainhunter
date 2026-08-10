@@ -392,6 +392,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   poker: { first: 59, renew: 389 },
   futbol: { first: 41, renew: 100 },
   moda: { first: 78, renew: 241 },
+  basketball: { first: 302, renew: 309 },
+  rugby: { first: 302, renew: 309 },
+  cricket: { first: 152, renew: 152 },
+  fish: { first: 59, renew: 256 },
+  fan: { first: 48, renew: 315 },
+  win: { first: 33, renew: 41 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
