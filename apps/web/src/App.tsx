@@ -6,7 +6,7 @@ import { HomePage, type HomeValues } from "@/components/home-page";
 import type { LogEntry } from "@/components/agent-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
 import { isMockEnabled, runMockStream } from "@/mock";
-import { loadSearch, saveSearch } from "@/lib/persist";
+import { clearAiQuotaDown, loadSearch, markAiQuotaDown, saveSearch } from "@/lib/persist";
 import { TLD_LIST } from "@/content/tld-list";
 import { GUIDE_LABELS } from "@/content/guide-labels";
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
@@ -275,6 +275,7 @@ export default function App() {
           }),
         ),
       );
+      clearAiQuotaDown();
       triedLabelsRef.current.push(...ev.items!.map((i) => i.label));
       setRows((prev) => {
         const seen = new Set(prev.map((r) => r.domain));
@@ -291,6 +292,7 @@ export default function App() {
     } else if (ev.type === "error") {
       const kind = ev.errorKind ?? "unknown";
       setErrorKind(kind);
+      if (kind === "quota") markAiQuotaDown();
       setError(
         t(
           kind === "quota"
@@ -627,8 +629,30 @@ export default function App() {
 
       {error && (
         <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
-          <div className="flex items-center justify-between gap-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5">
+          <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5">
             <p className="text-sm text-destructive">{error}</p>
+            {quotaExhausted && (
+              <span className="flex flex-wrap items-center gap-2 text-xs text-txt1">
+                <span>{t("error.ai.fallbackLead")}</span>
+                {(
+                  [
+                    { href: "/?mode=exact", key: "error.ai.fallbackQuick" },
+                    { href: "/advanced", key: "error.ai.fallbackBulk" },
+                    { href: "/tld", key: "error.ai.fallbackTld" },
+                    { href: "/guide", key: "error.ai.fallbackGuide" },
+                    { href: "/vs", key: "error.ai.fallbackVs" },
+                  ] as const
+                ).map((l) => (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    className="inline-flex min-h-[44px] items-center rounded-md border border-line bg-bg1 px-2.5 font-medium text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0 sm:py-1"
+                  >
+                    {t(l.key)}
+                  </a>
+                ))}
+              </span>
+            )}
             {!running && errorKind !== "quota" && lastRunRef.current && (
               <button
                 type="button"
