@@ -376,4 +376,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "immo-vs-estate", a: "immo", b: "estate", title: { zh: ".immo 和 .estate 怎么选：欧陆行业词与英语地产的门面", en: ".immo vs .estate: The Continental Trade Word or The English Front" } },
   { slug: "vin-vs-wine", a: "vin", b: "wine", title: { zh: ".vin 和 .wine 怎么选：法语酒标的格调与英语市场的直白", en: ".vin vs .wine: The French Label or The English Shelf" } },
   { slug: "university-vs-education", a: "university", b: "education", title: { zh: ".university 和 .education 怎么选：大学的机构层级与教育的行业全域", en: ".university vs .education: The Institutional Tier or The Whole Industry" } },
+  { slug: "hospital-vs-clinic", a: "hospital", b: "clinic", title: { zh: ".hospital 和 .clinic 怎么选：住院机构的正门与门诊生意的门牌", en: ".hospital vs .clinic: The Inpatient Gate or The Outpatient Sign" } },
+  { slug: "gmbh-vs-company", a: "gmbh", b: "company", title: { zh: ".gmbh 和 .company 怎么选：德语区的注册名与泛公司的通用牌", en: ".gmbh vs .company: The German Register Name or The Generic Card" } },
+  { slug: "condos-vs-apartments", a: "condos", b: "apartments", title: { zh: ".condos 和 .apartments 怎么选：产权公寓的售楼处与租赁公寓的招租页", en: ".condos vs .apartments: The Sales Office or The Rental Sign" } },
+  { slug: "rehab-vs-care", a: "rehab", b: "care", title: { zh: ".rehab 和 .care 怎么选：康复的过程动词与照护的关系名词", en: ".rehab vs .care: The Recovery Verb or The Caring Noun" } },
+  { slug: "nyc-vs-us", a: "nyc", b: "us", title: { zh: ".nyc 和 .us 怎么选：纽约的城市门牌与全美的国家后缀", en: ".nyc vs .us: The City Nameplate or The National Suffix" } },
+  { slug: "london-vs-uk", a: "london", b: "uk", title: { zh: ".london 和 .uk 怎么选：伦敦的城市招牌与英国的全国信任", en: ".london vs .uk: The City Signboard or The National Trust" } },
 ];

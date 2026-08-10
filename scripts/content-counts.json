@@ -678,7 +678,7 @@
     ]
   },
   "vs": {
-    "count": 366,
+    "count": 372,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -1045,7 +1045,13 @@
       "actor-vs-studio",
       "immo-vs-estate",
       "vin-vs-wine",
-      "university-vs-education"
+      "university-vs-education",
+      "hospital-vs-clinic",
+      "gmbh-vs-company",
+      "condos-vs-apartments",
+      "rehab-vs-care",
+      "nyc-vs-us",
+      "london-vs-uk"
     ]
   }
 }

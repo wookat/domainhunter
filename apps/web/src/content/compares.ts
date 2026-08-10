@@ -8077,6 +8077,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Edtech products & learning platforms", "Education news & policy content", "Teacher-resource & research communities", "Study-abroad & education consulting"],
     },
   },
+  "hospital-vs-clinic": {
+    slug: "hospital-vs-clinic",
+    a: "hospital",
+    b: "clinic",
+    zh: {
+      title: ".hospital 和 .clinic 怎么选：住院机构的正门与门诊生意的门牌",
+      metaDescription: ".hospital 说「医院」这个机构层级，综合与专科医院、康复与护理机构定位最准，注册约 $46/年续费同价；.clinic 覆盖一切门诊制健康服务，连锁门诊与咨询生意通用。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在医疗机构赛道，分工在层级：一个说住院医院，一个说门诊诊所。.hospital 赢在机构高度——综合与专科医院官网、私立医院与日间医疗中心、康复医院与护理机构、动物医院与兽医医疗中心用 name.hospital，「这是一家医院」一词讲透，riverside.hospital 读起来就是医院大门的铭牌，机构分量与信任感是门诊后缀给不了的；注册局为 Identity Digital（原 Donuts），2016 年开放；价格中高且平续：注册约 $46/年（约 ¥330）、续费同价——无首年促销陷阱，与机构品牌价值匹配。.clinic 赢在门诊口径——口腔、眼科、皮肤、医美、理疗、心理咨询、宠物诊所，凡是「门诊制」的健康服务，name.clinic 读出来就是一家诊所，连锁门诊归拢多城市站点也顺；英语里 clinic 还有「诊断式服务」引申义，SEO clinic、resume clinic 式咨询生意用它自带专业感；注册约 $11（约 ¥78）、续费约 $52/年（约 ¥374）——首年便宜续费跳档，预算按续费价算。判断标准：主体是「一家医院」——有住院能力、多科室建制、机构级叙事 → .hospital 的层级语义最正，医院官网与院区分站都压得住；主体是「门诊看诊」——单科诊所、连锁门诊、非医疗的诊断式服务 → .clinic 的口径更宽，扩科室换形态不用改名。两者常见组合打法：医疗集团总院用 .hospital 立门面，旗下社区门诊用「地名 + .clinic」铺网络。三点注意：一是「医院」字样在多数国家受医疗机构法规保护，域名须与实际资质匹配，小型门诊挂 .hospital 名不符反伤信任；二是续费 .clinic（$52/年）反而比 .hospital（$46/年）略贵，长线成本别凭直觉；三是 .hospital 拼写长达 8 字符，主体词务必短促。命名上「城市/品牌 + .hospital」（riverside.hospital）与「科室/品牌 + .clinic」（smile.clinic）各是两边最点题的模式。",
+      pickA: ["综合与专科医院官网", "私立医院与日间医疗中心", "康复医院与护理机构", "动物医院与兽医医疗中心"],
+      pickB: ["单科门诊与连锁诊所", "医美、理疗与心理咨询", "宠物诊所与移动门诊", "「诊断式服务」咨询生意"],
+    },
+    en: {
+      title: ".hospital vs .clinic: The Inpatient Gate or The Outpatient Sign",
+      metaDescription:
+        ".hospital names the institutional tier — sharpest for general and specialty hospitals and care facilities, about $46/yr flat; .clinic covers every outpatient health service, from chains to consulting plays. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in healthcare institutions; the split is tier: one names the inpatient hospital, the other the outpatient practice. .hospital wins on institutional height — general and specialty hospital sites, private hospitals and day-care medical centers, rehabilitation hospitals and nursing facilities, and animal hospitals on name.hospital say \"this is a hospital\" in one word; riverside.hospital reads like the nameplate on a hospital gate, carrying institutional weight no outpatient suffix can match; the registry is Identity Digital (formerly Donuts), open since 2016; pricing is upper-mid and flat at about $46/yr (≈¥330) to register and the same to renew — no promo trap, in line with institutional brand value. .clinic wins on outpatient scope — dental, eye, skin, aesthetics, physio, counselling and veterinary practices all read as a clinic on name.clinic, and chains gather multi-city sites neatly; English also lends clinic a \"diagnostic service\" sense, so SEO clinic or resume clinic consulting plays borrow its authority; about $11 to register (≈¥78) with renewals near $52/yr (≈¥374) — cheap year one, so budget on the renewal. The test: the subject is a hospital — inpatient capacity, multi-department structure, institutional narrative → .hospital names the tier straightest and carries the flagship site; the subject is outpatient care — single-specialty practices, clinic chains, non-medical diagnostic services → .clinic scopes wider and survives a shape change without renaming. A common combo: the medical group fronts its flagship on .hospital while community practices spread on place + .clinic. Three cautions: the word hospital is regulated under healthcare-facility law in most countries, so the domain must match the actual license — a small practice on .hospital reads false and costs trust; .clinic actually renews slightly above .hospital ($52 vs $46/yr), so don't price by instinct; and .hospital runs eight characters, so keep the left side short. Naming: city or brand + .hospital (riverside.hospital) versus specialty or brand + .clinic (smile.clinic) are each side's on-target patterns.",
+      pickA: ["General & specialty hospital sites", "Private hospitals & day-care centers", "Rehabilitation hospitals & nursing facilities", "Animal hospitals & veterinary centers"],
+      pickB: ["Single-specialty practices & clinic chains", "Aesthetics, physio & counselling", "Veterinary clinics & mobile practices", "\"Diagnostic service\" consulting plays"],
+    },
+  },
+  "gmbh-vs-company": {
+    slug: "gmbh-vs-company",
+    a: "gmbh",
+    b: "company",
+    zh: {
+      title: ".gmbh 和 .company 怎么选：德语区的注册名与泛公司的通用牌",
+      metaDescription: ".gmbh 是德语区有限责任公司的专属后缀，与工商注册名同词，注册约 $37/年续费同价但要求 GmbH 实体资格；.company 说泛公司语义，任何主体都能用且续费约 $17/年最便宜。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在给企业主体挂门牌，分工在市场与门槛：一个钉死德语区公司形态，一个覆盖一切公司。.gmbh 赢在注册名同词——德国 GmbH 公司官网、奥地利与瑞士德语区企业、德语区子公司与合资公司用 name.gmbh，GmbH 是德语区最常见的公司形态（相当于英语的 LLC/Ltd），后缀与工商注册名同词，mueller.gmbh 读起来就是公司注册名的域名版，德语客户一眼读懂；2016 年开放注册；价格适中且平续：注册约 $37/年（约 ¥265）、续费同价——无首年促销陷阱；库存极好，与注册名一致的域名大概率有货。.company 赢在通用与便宜——中小企业官网、工作室的正式主体页、「the XX company」式复古命名用 name.company，任何国家任何主体形态都能注册；首年约 $3、续费约 $17/年（约 ¥125）——收录后缀里最便宜的一档，比 .com 续费还低，正式感与低成本兼得。判断标准：主体是依法设立的 GmbH/gGmbH、客户在德语区 → .gmbh 的注册名同词无可替代，DACH 官网定位最准；主体形态不限、市场不限、预算敏感 → .company 的通用口径与最低续费更稳。两者常见组合打法：国际集团主站用 .company 归拢，德语区子公司用「公司名 + .gmbh」单独立站。三点注意：一是 .gmbh 注册政策要求注册人是（或即将成为）依法设立的 GmbH/gGmbH 实体，个人与其他公司形态不符合条件，.company 无任何门槛；二是续费差一倍多（$37 vs $17/年），非德语区业务没必要为 .gmbh 溢价；三是 .gmbh 受众限于德语区，全球品牌主站 .com/.company 触达更广。命名上「公司名 + .gmbh」（mueller.gmbh）与「品牌 + .company」（acme.company）各是两边最点题的模式。",
+      pickA: ["德国 GmbH 公司官网", "奥地利与瑞士德语区企业", "德语区子公司与合资公司", "面向 DACH 市场的品牌站"],
+      pickB: ["中小企业与工作室官网", "「the XX company」式品牌命名", "预算敏感的正式主体页", "跨国业务的泛公司门面"],
+    },
+    en: {
+      title: ".gmbh vs .company: The German Register Name or The Generic Card",
+      metaDescription:
+        ".gmbh is the dedicated suffix for German-speaking limited companies — same word as the register entry, about $37/yr flat but GmbH-entities only; .company names any company anywhere, renewing near $17/yr, the cheapest tier. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both hang a sign on a corporate entity; the split is market and gate: one pins the German-speaking company form, the other covers every company. .gmbh wins on register-name identity — German GmbH company sites, Austrian and Swiss German-market firms, and DACH subsidiaries and joint ventures on name.gmbh use the region's most common company form (the LLC/Ltd of the German-speaking world), so the suffix matches the commercial-register entry word for word and mueller.gmbh reads like the register name's domain version, understood by German customers at a glance; open since 2016; pricing is moderate and flat at about $37/yr (≈¥265) to register and the same to renew — no promo trap; inventory is excellent, and the name matching your register entry is very likely available. .company wins on generality and price — small-business sites, studios' formal entity pages and \"the XX company\" retro naming on name.company are open to any entity in any country; about $3 first year and $17/yr to renew (≈¥125) — the cheapest tier listed here, below even .com renewals, pairing formality with low cost. The test: the entity is a legally established GmbH serving German-speaking customers → .gmbh's register-name identity is irreplaceable and positions a DACH site sharpest; the entity form, market or budget is open → .company scopes widest at the lowest renewal. A common combo: the international group gathers on .company while the DACH subsidiary stands alone on company name + .gmbh. Three cautions: .gmbh registry policy requires the registrant to be (or be becoming) a legally established GmbH or gGmbH — individuals and other forms don't qualify, while .company has no gate; renewals differ by more than double ($37 vs $17/yr), so non-DACH businesses needn't pay the premium; and .gmbh's audience is the German-speaking region — global flagships reach wider on .com or .company. Naming: company name + .gmbh (mueller.gmbh) versus brand + .company (acme.company) are each side's on-target patterns.",
+      pickA: ["German GmbH company sites", "Austrian & Swiss German-market firms", "DACH subsidiaries & joint ventures", "Brands targeting the DACH market"],
+      pickB: ["Small-business & studio sites", "\"The XX company\" retro naming", "Budget-minded formal entity pages", "Generic corporate fronts worldwide"],
+    },
+  },
+  "condos-vs-apartments": {
+    slug: "condos-vs-apartments",
+    a: "condos",
+    b: "apartments",
+    zh: {
+      title: ".condos 和 .apartments 怎么选：产权公寓的售楼处与租赁公寓的招租页",
+      metaDescription: ".condos 说产权公寓，楼盘销售与度假公寓定位最准，注册约 $47/年续费同价；.apartments 说租赁公寓，长租品牌与招租页的标配，注册约 $11 续费约 $46/年。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在公寓赛道，分工在产权与租赁：一个是售楼处，一个是招租页。.condos 赢在交易语义——公寓楼盘与开发项目官网、公寓销售与租赁中介、度假公寓与短租运营、业主委员会与物业社区用 name.condos，北美买家搜「买公寓」就用 condo 这个词，后缀与搜索意图同词，skyline.condos 读起来就是项目售楼处的门牌；注册局为 Identity Digital（原 Donuts），2014 年开放；价格中高且平续：注册约 $47/年（约 ¥340）、续费同价——无首年促销陷阱，与楼盘销售周期的成本可预期匹配。.apartments 赢在租赁标配——长租公寓品牌、服务式公寓、楼盘招租页、学生公寓运营商用 name.apartments，锁死「公寓」这一物业形态，招租页与搜索意图几乎完全对齐，parkview.apartments 一眼就是招租页；注册约 $11（约 ¥78）、续费约 $46/年（约 ¥330）——首年便宜续费跳档，预算按续费价算。判断标准：生意是「卖公寓」——楼盘销售、产权度假公寓、业主社区 → .condos 的产权语义最准，售楼处气质拉满；生意是「租公寓」——长租、服务式、学生公寓 → .apartments 的租赁语义更对，招租页转化顺。两者常见组合打法：开发商项目销售页用「楼盘名 + .condos」，交付后的租赁运营线用「楼盘名 + .apartments」分工。三点注意：一是续费几乎同价（$47 vs $46/年），按交易形态选而非价格；二是 condo 是北美用词，英联邦市场说 flat/apartment，面向英式英语受众 .apartments 更通；三是两个后缀都不短（6 与 10 字符），主体词尽量短促。命名上「楼盘名 + .condos」（skyline.condos）与「楼盘名/街区 + .apartments」（parkview.apartments）各是两边最点题的模式。",
+      pickA: ["公寓楼盘与开发项目官网", "公寓销售与置业中介", "度假公寓与短租运营", "业主委员会与物业社区"],
+      pickB: ["长租公寓品牌与服务式公寓", "楼盘招租页与租赁平台", "学生公寓运营商", "城市公寓生活内容站"],
+    },
+    en: {
+      title: ".condos vs .apartments: The Sales Office or The Rental Sign",
+      metaDescription:
+        ".condos names owned units — sharpest for development sales and vacation condos, about $47/yr flat; .apartments names rentals, the default for long-stay brands and leasing pages, about $11 then $46/yr. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live on the apartment block; the split is ownership versus rental: one is the sales office, the other the leasing sign. .condos wins on transaction semantics — condo developments and project sites, sales and rental agencies, vacation condos and short-stay operators, and owner associations on name.condos use the exact word North American buyers search when buying a unit, so the suffix matches search intent and skyline.condos reads like the sales-office sign of a development; the registry is Identity Digital (formerly Donuts), open since 2014; pricing is upper-mid and flat at about $47/yr (≈¥340) to register and the same to renew — no promo trap, predictable across a project's sales cycle. .apartments wins as the rental default — long-stay apartment brands, serviced apartments, leasing pages and student-housing operators on name.apartments pin the rental property type, aligning almost perfectly with leasing-search intent, and parkview.apartments reads as a leasing page at a glance; about $11 to register (≈¥78) with renewals near $46/yr (≈¥330) — cheap year one, so budget on the renewal. The test: the business sells units — development sales, owned vacation condos, owner communities → .condos names the transaction sharpest with full sales-office presence; the business rents units — long-stay, serviced, student housing → .apartments reads truer and converts leasing traffic. A common combo: the developer sells on project + .condos, then runs the post-handover rental line on project + .apartments. Three cautions: renewals land nearly identical ($47 vs $46/yr), so choose by transaction type, not price; condo is North American — Commonwealth markets say flat or apartment, so .apartments travels better with British-English audiences; and both suffixes run long (six and ten characters), so keep the left side short. Naming: project + .condos (skyline.condos) versus project or district + .apartments (parkview.apartments) are each side's on-target patterns.",
+      pickA: ["Condo developments & project sites", "Condo sales & buyer agencies", "Vacation condos & short-stay operators", "Owner associations & property communities"],
+      pickB: ["Long-stay & serviced apartment brands", "Leasing pages & rental platforms", "Student-housing operators", "City apartment-living content"],
+    },
+  },
+  "rehab-vs-care": {
+    slug: "rehab-vs-care",
+    a: "rehab",
+    b: "care",
+    zh: {
+      title: ".rehab 和 .care 怎么选：康复的过程动词与照护的关系名词",
+      metaDescription: ".rehab 说康复过程，物理治疗与戒瘾康复定位最准，首年约 $8 续费约 $29/年；.care 说照护关系，养老、居家与心理健康服务通用，注册约 $12 续费约 $36/年。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在健康服务赛道，分工在过程与关系：一个说「恢复到好」，一个说「一直在乎」。.rehab 赢在过程锐度——康复医学与物理治疗诊所、戒瘾治疗与康复中心、运动损伤康复与训练机构、旧物翻新与房屋改造品牌用 name.rehab，rehab 在英语里同时覆盖医疗康复、戒瘾治疗与旧物翻新三层语义，一个后缀三个行业都能用，knee.rehab 读起来就是专科康复门牌；注册局为 Identity Digital（原 Rightside/Donuts 系），2014 年开放；价格亲民但注意涨幅：首年常见约 $8（约 ¥60）、续费约 $29/年（约 ¥210）——首年低价适合试错，长期按续费价预算。.care 赢在关系温度——养老护理、居家照护、心理健康、母婴与宠物护理用 name.care，服务属性一秒传达，国际大牌还把 brand.care 用作客服售后入口；注册约 $12（约 ¥86）、续费约 $36/年（约 ¥260）——温和偏上档。判断标准：服务有明确「疗程与终点」——受伤后恢复、戒瘾疗程、术后康复，用户为「练好」而来 → .rehab 的过程语义最准，专科词组合读起来就是治疗项目；服务是持续性「陪伴与照护」——养老、居家、心理、母婴，卖的是长期关系 → .care 的温度更对，客服入口语义还多一层用法。两者常见组合打法：康复集团主站用 .care 归拢全线服务，专科康复中心用「部位/专科 + .rehab」单独立站。三点注意：一是 rehab 一词在部分语境带敏感联想（明星进 rehab 的八卦义），面向大众品牌注意语气；二是续费 .rehab 比 .care 便宜 $7/年，两者都是首年低价，按语义选而非价格；三是医疗语境都涉及执业资质与广告合规，资质信息必须页面清晰呈现。命名上「专科 + .rehab」（knee.rehab）与「品牌 + .care」（sunrise.care）各是两边最点题的模式。",
+      pickA: ["康复医学与物理治疗诊所", "戒瘾治疗与康复中心", "运动损伤康复与训练机构", "旧物翻新与房屋改造品牌"],
+      pickB: ["养老护理与居家照护", "心理健康与母婴护理", "宠物护理与照护服务", "品牌客服售后入口"],
+    },
+    en: {
+      title: ".rehab vs .care: The Recovery Verb or The Caring Noun",
+      metaDescription:
+        ".rehab names the recovery process — sharpest for physical therapy and addiction recovery, about $8 then $29/yr; .care names the caring relationship, fitting senior, home and mental-health services, about $12 then $36/yr. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in health services; the split is process versus relationship: one says \"getting back to good\", the other \"always caring\". .rehab wins on process sharpness — rehab medicine and physical-therapy clinics, addiction-treatment and recovery centers, sports-injury rehab and training facilities, and restoration or renovation brands on name.rehab tap a word that spans medical rehabilitation, addiction recovery and restoring old things, so one suffix serves three trades, and knee.rehab reads like a specialty practice's sign; the registry is Identity Digital (via the Rightside/Donuts lineage), open since 2014; pricing is friendly with a step-up: often about $8 first year (≈¥60), renewing near $29/yr (≈¥210) — cheap year one suits experiments, budget on the renewal. .care wins on relational warmth — senior and home care, mental health, and baby or pet care on name.care communicate the service in a second, and global brands use brand.care as customer-support portals; about $12 to register (≈¥86) with renewals near $36/yr (≈¥260) — gently upper-mid. The test: the service has a course and an endpoint — post-injury recovery, addiction programs, post-op rehabilitation where users come to get better → .rehab names the process sharpest, and specialty combos read as treatment programs outright; the service is ongoing companionship and care — senior, home, mental-health, baby care where the sale is a long relationship → .care carries the warmth, plus the support-portal sense as a bonus. A common combo: the care group gathers services on .care while specialty recovery centers stand alone on body part + .rehab. Three cautions: rehab carries sensitive connotations in some contexts (the celebrity-gossip sense), so mind the tone for consumer brands; .rehab renews $7/yr below .care and both are cheap in year one, so choose by semantics, not price; and both live in medical contexts where licensing and ad compliance apply — credentials must sit clearly on the page. Naming: specialty + .rehab (knee.rehab) versus brand + .care (sunrise.care) are each side's on-target patterns.",
+      pickA: ["Rehab medicine & physical-therapy clinics", "Addiction-treatment & recovery centers", "Sports-injury rehab & training facilities", "Restoration & home-renovation brands"],
+      pickB: ["Senior & home-care services", "Mental-health & baby care", "Pet care & caregiving services", "Brand customer-support portals"],
+    },
+  },
+  "nyc-vs-us": {
+    slug: "nyc-vs-us",
+    a: "nyc",
+    b: "us",
+    zh: {
+      title: ".nyc 和 .us 怎么选：纽约的城市门牌与全美的国家后缀",
+      metaDescription: ".nyc 是纽约市官方后缀，本地商家与纽约客内容定位最准，注册约 $26/年续费同价但要求纽约地址；.us 覆盖全美且价格最便宜一档，还能玩「与我们」的短语梗。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在美国市场，分工在半径：一个说纽约这一座城，一个说美国这一个国。.nyc 赢在城市锐度——纽约本地商家与餐饮门店、纽约创业公司与专业服务、纽约房产与社区项目、面向纽约客的内容与活动站用 name.nyc，「我们在纽约」一词讲透，pizza.nyc 读起来就是本地生意；这是纽约市政府旗下的官方城市后缀，2014 年开放，Nexus 政策要求注册人有纽约市五区内的真实地址——门槛本身就是本地身份的背书；价格适中且平续：注册约 $26/年（约 ¥190）、续费同价——无首年促销陷阱。.us 赢在全国口径与价格——面向美国市场的产品、社区与本地服务用 name.us，价格常年在最便宜一档；us 在英语里就是「我们」，join.us、near.us 式短语域名把后缀读进品牌里，社区与协作类产品用起来非常出彩；注册同样要求美国关联（公民/居民/企业，需申报 Nexus），但覆盖全美无城市限制。判断标准：客群就在纽约——门店、本地服务、纽约客内容，本地信任是卖点 → .nyc 的城市门牌最准，地址门槛反而是信誉；客群遍布全美——电商、社区、全国性服务 → .us 的国家口径更宽，价格也更轻。两者常见组合打法：全国品牌主站用 .us（或 .com），纽约旗舰店与城市专页用「品牌 + .nyc」立本地门面。三点注意：一是 .nyc 的 Nexus 要求贯穿持有期，地址失效域名可能被收回；二是 .us 注册局禁止 WHOIS 隐私，注册人信息公开可查，介意隐私要慎重；三是两者都限美国关联，海外主体两个都注册不了，面向美国市场的海外品牌用 .com 更稳。命名上「行业 + .nyc」（pizza.nyc）与「短语 + .us」（join.us）各是两边最点题的模式。",
+      pickA: ["纽约本地商家与餐饮门店", "纽约创业公司与专业服务", "纽约房产与社区项目", "面向纽约客的内容与活动站"],
+      pickB: ["面向美国市场的产品", "社区与协作类品牌", "美国本地服务", "「与我们」语义的创意域名"],
+    },
+    en: {
+      title: ".nyc vs .us: The City Nameplate or The National Suffix",
+      metaDescription:
+        ".nyc is New York City's official suffix — sharpest for local businesses and New Yorker content, about $26/yr flat with an NYC-address requirement; .us covers the whole country at bottom-tier prices, with the \"us\" phrase trick as a bonus. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both serve the American market; the split is radius: one names this one city, the other the whole country. .nyc wins on city sharpness — local businesses and restaurants, NYC startups and professional services, New York real estate and community projects, and content or events for New Yorkers on name.nyc say \"we're in New York\" in one word, and pizza.nyc reads like a genuinely local business; this is the city government's official suffix, open since 2014, and the nexus policy requires a physical address in the five boroughs — the bar itself endorses local identity; pricing is moderate and flat at about $26/yr (≈¥190) to register and the same to renew — no promo trap. .us wins on national scope and price — products, communities and local services aimed at the US market on name.us sit in the cheapest pricing tier year after year; and since us is the English pronoun, phrase domains like join.us and near.us read the suffix into the brand, brilliant for community and collaboration products; registration likewise requires a US nexus (citizen, resident or business), but covers the whole country with no city gate. The test: the audience is New York — storefronts, local services, New Yorker content where local trust sells → .nyc's city nameplate is sharpest, and the address bar doubles as credibility; the audience is nationwide — e-commerce, communities, national services → .us scopes wider at a lighter price. A common combo: the national brand fronts on .us (or .com) while the New York flagship stands on brand + .nyc. Three cautions: .nyc's nexus requirement runs through the whole term — domains without a valid NYC address can be reclaimed; the .us registry forbids WHOIS privacy, so registrant details are public — privacy-minded owners beware; and both require a US nexus, so overseas entities qualify for neither — foreign brands targeting the US are safer on .com. Naming: trade + .nyc (pizza.nyc) versus phrase + .us (join.us) are each side's on-target patterns.",
+      pickA: ["NYC local businesses & restaurants", "NYC startups & professional services", "New York real estate & community projects", "Content & events for New Yorkers"],
+      pickB: ["Products aimed at the US market", "Community & collaboration brands", "US local services", "\"With us\" phrase-domain plays"],
+    },
+  },
+  "london-vs-uk": {
+    slug: "london-vs-uk",
+    a: "london",
+    b: "uk",
+    zh: {
+      title: ".london 和 .uk 怎么选：伦敦的城市招牌与英国的全国信任",
+      metaDescription: ".london 是伦敦官方城市后缀，本地商家与旅游项目定位最准，首年约 $14 续费约 $28/年且全球可注册；.uk 是英国国家后缀，全国信任与本地 SEO 标配，注册约 $6/年续费同价。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在英国市场，分工在半径：一个说伦敦这一座城，一个说英国这一个国。.london 赢在城市锐度——伦敦本地商家与餐饮门店、伦敦创业公司与专业服务、伦敦房产与旅游项目、面向伦敦客群的内容与活动站用 name.london，「我们在伦敦」一词讲透，coffee.london 读起来就是本地生意；这是伦敦官方推广机构 London & Partners 旗下的城市后缀，2014 年开放，对全球开放无地址门槛，本地信任感与国际都市感兼得；价格适中但注意涨幅：首年常见约 $14（约 ¥105）、续费约 $28/年（约 ¥200）——首年低价适合试错，长期按续费价预算。.uk 赢在全国信任——Nominet 运营超过 25 年、上千万注册量，英国消费者把 .uk/.co.uk 当「本地生意」的默认信号，Google 也把 .uk 站点与英国地区相关联，本地 SEO 有天然加成；2014 年起可直接注册二级 .uk，name.uk 比 name.co.uk 短一截也更现代；注册约 $6（约 ¥43）、续费同价——ccTLD 里的良心价。判断标准：客群集中在伦敦——门店、旅游、本地服务，城市身份是卖点 → .london 的城市招牌最准，街区词与行业词库存还很充裕；客群遍布全英——电商、全国服务、面向英国消费者的品牌 → .uk 的全国信任与 SEO 加成更稳，价格也只有 .london 续费的两成。两者常见组合打法：全英品牌主站用 .uk 立信任，伦敦旗舰店与城市营销页用「品牌 + .london」点题。三点注意：一是 Nominet 要求 .uk 注册人提供英国境内送达地址，海外注册人需确认注册商代理支持，.london 反而全球无门槛；二是续费差近 5 倍（$28 vs $6/年），多域名矩阵先算总成本；三是 .london 拼写长达 6 字符，搭配短主体词控制总长。命名上「行业 + .london」（coffee.london）与「品牌 + .uk」（acme.uk）各是两边最点题的模式。",
+      pickA: ["伦敦本地商家与餐饮门店", "伦敦创业公司与专业服务", "伦敦房产与旅游项目", "面向伦敦客群的内容与活动站"],
+      pickB: ["面向全英市场的品牌", "英国电商与全国服务", "重视本地 SEO 的英国站点", "多域名矩阵的防御性注册"],
+    },
+    en: {
+      title: ".london vs .uk: The City Signboard or The National Trust",
+      metaDescription:
+        ".london is the capital's official city suffix — sharpest for local businesses and tourism, about $14 then $28/yr, open worldwide; .uk is the national suffix with default UK trust and local SEO, about $6/yr flat. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both serve the British market; the split is radius: one names this one city, the other the whole country. .london wins on city sharpness — local businesses and restaurants, London startups and professional services, London real estate and tourism projects, and content or events for Londoners on name.london say \"we're in London\" in one word, and coffee.london reads like a local business; run by London & Partners, the capital's official promotion agency, open since 2014 and available worldwide with no address requirement, blending local trust with global-city cachet; pricing is moderate with a step-up: often about $14 first year (≈¥105), renewing near $28/yr (≈¥200) — cheap year one suits experiments, budget on the renewal. .uk wins on national trust — Nominet has run it for over 25 years with millions of registrations, UK consumers read .uk/.co.uk as the default \"local business\" signal, and Google associates .uk sites with the UK region for a natural local-SEO lift; direct second-level .uk has been open since 2014, and name.uk reads shorter and more modern than name.co.uk; about $6 to register (≈¥43) and the same to renew — honest pricing among ccTLDs. The test: the audience concentrates in London — storefronts, tourism, local services where city identity sells → .london's signboard is sharpest, with deep inventory in neighborhood and trade words; the audience spans the UK — e-commerce, national services, brands for British consumers → .uk's national trust and SEO lift are steadier, at a fifth of .london's renewal. A common combo: the UK-wide brand builds trust on .uk while the London flagship and city-marketing pages stand on brand + .london. Three cautions: Nominet requires a UK service address for .uk registrants — overseas owners should confirm registrar proxy support, while .london has no gate at all; renewals differ nearly fivefold ($28 vs $6/yr), so price a multi-domain portfolio first; and .london runs six characters, so keep the left side short. Naming: trade + .london (coffee.london) versus brand + .uk (acme.uk) are each side's on-target patterns.",
+      pickA: ["London local businesses & restaurants", "London startups & professional services", "London real estate & tourism projects", "Content & events for Londoners"],
+      pickB: ["UK-wide consumer brands", "British e-commerce & national services", "UK sites leaning on local SEO", "Defensive multi-domain portfolios"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
