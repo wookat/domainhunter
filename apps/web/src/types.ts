@@ -386,6 +386,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   organic: { first: 78, renew: 493 },
   tattoo: { first: 15, renew: 226 },
   casa: { first: 11, renew: 78 },
+  vodka: { first: 189, renew: 189 },
+  casino: { first: 56, renew: 931 },
+  bet: { first: 69, renew: 151 },
+  poker: { first: 59, renew: 389 },
+  futbol: { first: 41, renew: 100 },
+  moda: { first: 78, renew: 241 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {

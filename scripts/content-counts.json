@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 282,
+    "count": 288,
     "slugs": [
       "com",
       "net",
@@ -283,7 +283,13 @@
       "luxury",
       "organic",
       "tattoo",
-      "casa"
+      "casa",
+      "vodka",
+      "casino",
+      "bet",
+      "poker",
+      "futbol",
+      "moda"
     ]
   },
   "guide": {
