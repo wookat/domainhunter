@@ -7153,6 +7153,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["International brands for global English markets", "Fashion media & blogs", "Stylists, buyers & industry events", "Flat-budget preference (same reg & renewal)"],
     },
   },
+  "basketball-vs-team": {
+    slug: "basketball-vs-team",
+    a: "basketball",
+    b: "team",
+    zh: {
+      title: ".basketball 和 .team 怎么选：单项官方域与万队通用牌",
+      metaDescription: ".basketball 是国际篮联背书的官方后缀，篮球俱乐部与青训机构用它最准；.team 装得下任何项目的队伍。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在锐度：一个把运动写死，一个把队伍写活。.basketball 是单项官方域——篮球俱乐部与青训机构、球迷媒体与数据统计站、街球赛事与联赛组织用 name.basketball，这是国际篮联（FIBA）背书、Roar Domains 运营的官方后缀，家长搜「城市 + basketball」找机构时逐字吻合，行业归属感是通用后缀给不了的；首年约 $42（约 ¥302）、续费约 $43/年（约 ¥309）——注册续费几乎同价，没有首年促销陷阱，预算恒定好算。.team 是万队通用牌——任何项目的球队、企业团队、电竞战队、志愿者组织都装得下，name.team 从地址就说「我们是一支队」；Identity Digital 运营，注册约 $5（约 ¥35）、续费约 $29/年（约 ¥212）——首年便宜、续费温和档，长持成本约为 .basketball 的七成。判断标准：生意是篮球本身——俱乐部运营、青训教学、装备电商、赛事组织 → .basketball 一词把赛道说完，比 basketballteam.com 式拼接更短更准；主体是队伍而项目可能变——综合体育俱乐部、企业球队、电竞班底 → .team 不绑项目，扩项不用换域名，续费也更省。两个注意：一是 .basketball 十个字母偏长，口头传播不如短后缀顺，主打线下传播的配个短域名跳转；二是 NBA 球队名与球星名多为注册商标，球迷站用城市或昵称更安全。命名上「城市/俱乐部 + .basketball」（downtown.basketball）与「队名 + .team」（rockets.team 式通用款）各是两边最点题的模式。",
+      pickA: ["篮球俱乐部与青训机构", "球迷媒体与数据统计站", "街球赛事与联赛组织", "承接「城市 + basketball」搜索"],
+      pickB: ["跨项目的综合体育俱乐部", "企业团队与协作场景", "电竞战队与志愿者组织", "在意长持续费成本"],
+    },
+    en: {
+      title: ".basketball vs .team: The Sport's Official Badge or Any Squad's Banner",
+      metaDescription:
+        ".basketball is the FIBA-backed official suffix — sharpest for clubs and academies; .team fits any squad in any sport. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is sharpness: one nails the sport, the other frees the squad. .basketball is the single-sport official domain — basketball clubs and youth academies, fan media and stats sites, streetball events and league organizers on name.basketball carry the FIBA-backed suffix operated by Roar Domains, matching city + basketball searches word for word with a vertical belonging no generic suffix can give; about $42 first year (≈¥302) and $43/yr to renew (≈¥309) — nearly the same price both ways, no first-year promo trap, a constant budget. .team is the any-squad banner — any sport's team, corporate teams, esports rosters and volunteer crews all fit, and name.team says we are a squad in the address itself; run by Identity Digital at about $5 to register (≈¥35) and $29/yr to renew (≈¥212) — cheap in, mild to hold, roughly seventy percent of .basketball's holding cost. The test: the business is basketball itself — club operations, coaching, gear stores, tournaments → .basketball says the whole lane in one word, shorter and sharper than any basketballteam.com compound; the subject is the squad and the sport may vary — multi-sport clubs, corporate teams, esports rosters → .team binds you to no discipline and costs less to keep. Two cautions: .basketball is ten letters — long for word-of-mouth, so offline-first brands should pair it with a short redirect domain; and NBA team and player names are mostly registered trademarks, so fan sites are safer with cities or nicknames. Naming: city or club + .basketball (downtown.basketball) versus squad name + .team (the any-team standard) are each side's on-target patterns.",
+      pickA: ["Basketball clubs & youth academies", "Fan media & stats sites", "Streetball events & league organizers", "Catching city + basketball searches"],
+      pickB: ["Multi-sport clubs", "Corporate teams & collaboration", "Esports rosters & volunteer crews", "Renewal-cost-conscious holds"],
+    },
+  },
+  "rugby-vs-football": {
+    slug: "rugby-vs-football",
+    a: "rugby",
+    b: "football",
+    zh: {
+      title: ".rugby 和 .football 怎么选：橄榄球与足球各说各的",
+      metaDescription: ".rugby 是世界橄榄球联合会背书的官方后缀，橄榄球俱乐部与赛事用它最准；.football 是全球市场对足球的叫法。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两项运动，各自的招牌。.rugby 直指橄榄球——橄榄球俱乐部与青训学院、球迷媒体与赛事报道站、业余联赛与巡回赛组织用 name.rugby，这是世界橄榄球联合会（World Rugby）背书、Roar Domains 运营的官方后缀，英联邦市场（英国、澳新、南非）与法国、日本的橄榄球生意用它定位最准；首年约 $42（约 ¥302）、续费约 $43/年（约 ¥309）——注册续费几乎同价，没有首年促销陷阱。.football 是全球词——欧洲、南美、亚非市场对足球的称呼都是 football，足球俱乐部与球迷会、青训与球员经纪、赛事资讯与数据分析站用 name.football 对国际球迷最自然；Identity Digital 运营，注册约 $11（约 ¥78）、续费约 $21/年（约 ¥152）——温和档，长持成本约为 .rugby 的一半。判断标准：生意围着橄榄球转——俱乐部、青训、装备、赛事报道 → .rugby 官方后缀身份直给，橄榄球圈一眼认同；生意围着足球转——球迷会、青训经纪、数据资讯 → .football 是世界的叫法，受众体量大得多。别忘了第三种情况：北美语境里 football 默认指美式橄榄球——面向美加市场的美式橄榄球项目用 .football 反而名正言顺，联盟式/联合式橄榄球项目则老老实实用 .rugby。三点注意：一是价差真实（续费 $43 vs $21/年），但语义匹配优先于价差；二是橄榄球分联盟式与联合式两种规则，跨市场品牌起名避免把 league/union 混为一谈；三是国家队与职业俱乐部名多为注册商标，球迷站用城市或昵称更安全。命名上「俱乐部/城市 + .rugby」（harbour.rugby）与「队名/联赛 + .football」（国际球迷站标准款）各是两边最点题的模式。",
+      pickA: ["橄榄球俱乐部与青训学院", "橄榄球球迷媒体与赛事报道", "业余联赛与巡回赛组织", "英联邦与法日市场的橄榄球生意"],
+      pickB: ["面向国际球迷的足球俱乐部与球迷会", "足球青训与球员经纪", "赛事资讯与数据分析站", "北美市场的美式橄榄球项目"],
+    },
+    en: {
+      title: ".rugby vs .football: Each Sport Under Its Own Banner",
+      metaDescription:
+        ".rugby is the World Rugby-backed official suffix — sharpest for rugby clubs and events; .football is the world's word for the beautiful game. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Two sports, two banners. .rugby points straight at rugby — clubs and youth academies, fan media and match coverage, amateur leagues and touring sides on name.rugby carry the World Rugby-backed official suffix operated by Roar Domains, the sharpest fit for rugby businesses across the Commonwealth (UK, Australia, New Zealand, South Africa) plus France and Japan; about $42 first year (≈¥302) and $43/yr to renew (≈¥309) — nearly flat pricing, no promo trap. .football is the global word — Europe, South America, Asia and Africa all call the game football, so clubs and supporter groups, academies and player agencies, and news or data-analysis sites read most natural on name.football to international fans; run by Identity Digital at about $11 to register (≈¥78) and $21/yr to renew (≈¥152) — the mild tier, roughly half of .rugby's holding cost. The test: the business orbits rugby — clubs, academies, gear, match coverage → .rugby's official-badge identity lands instantly with the rugby crowd; the business orbits soccer — supporter groups, academies, data and news → .football is the world's word with a far bigger audience. Don't forget the third case: in North America football defaults to the gridiron game — US/Canada-facing gridiron projects fit .football perfectly, while rugby league and rugby union projects belong on .rugby. Three cautions: the price gap is real ($43 vs $21/yr renewal) but semantic fit outranks it; rugby splits into league and union codes, so cross-market brands shouldn't blur the two; and national-team and pro-club names are mostly registered trademarks — fan sites are safer with cities or nicknames. Naming: club or city + .rugby (harbour.rugby) versus club or league + .football (the international fan-site standard) are each side's on-target patterns.",
+      pickA: ["Rugby clubs & youth academies", "Rugby fan media & match coverage", "Amateur leagues & touring sides", "Commonwealth, France & Japan markets"],
+      pickB: ["Clubs & supporter groups for global fans", "Soccer academies & player agencies", "News & data-analysis sites", "North American gridiron projects"],
+    },
+  },
+  "cricket-vs-club": {
+    slug: "cricket-vs-club",
+    a: "cricket",
+    b: "club",
+    zh: {
+      title: ".cricket 和 .club 怎么选：板球品类与社群归属的分工",
+      metaDescription: ".cricket 把板球写进域名，南亚与英联邦市场的板球生意用它最准；.club 是社群与俱乐部的通用招牌。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在锐度：.cricket 是品类词——板球俱乐部与青训学院、球迷媒体与比分数据站、地方联赛与赛事组织用 name.cricket，板球是全球第二大观赛运动，印度、巴基斯坦、英国、澳洲的球迷体量以十亿计，球迷搜「城市 + cricket」找俱乐部找比分时逐字吻合；Team Internet（GRS Domains）运营，注册与续费都约 $21/年（约 ¥152）——没有首年促销陷阱，预算恒定好算。.club 是归属词——会员制球会、跨项目的综合俱乐部、同好社群用 name.club，「加入我们」的号召从域名立住，业务不止板球时也不违和；首年约 $6（约 ¥40）、续费约 $17/年（约 ¥120）——首年常见促销、续费同样温和，长持成本比 .cricket 还低一档。判断标准：生意是板球本身——俱乐部运营、青训教学、装备电商、比分数据 → .cricket 一词把赛道说完，南亚与英联邦受众一眼认同，这种品类归属 .club 给不了；卖的是会籍与圈子——会员社群、跨项目俱乐部、城市体育会 → .club 的归属感更点题，装得下板球之外的项目。两者续费只差约 $4/年，预算几乎不构成决策因素，纯看语义。三点注意：一是 .cricket 早年低价促销期招过垃圾注册，个别邮件网关对新域名较严格，上线前把 SPF/DKIM 配齐；二是 IPL 球队名与球星名多为注册商标，球迷站用城市或昵称更安全；三是板球受众高度集中在南亚与英联邦，面向这些市场 .cricket 的信任感明显更强。命名上「城市/俱乐部 + .cricket」（mumbai.cricket）与「会名 + .club」（会员俱乐部标准款）各是两边最点题的模式。",
+      pickA: ["板球俱乐部与青训学院", "球迷媒体与比分数据站", "地方联赛与赛事组织", "南亚与英联邦市场的板球生意"],
+      pickB: ["会员制球会与同好社群", "跨运动的综合俱乐部", "在意长持续费成本", "主品牌的社群子站"],
+    },
+    en: {
+      title: ".cricket vs .club: The Sport's Category or The Member Circle",
+      metaDescription:
+        ".cricket writes the sport into the address — sharpest for South Asian and Commonwealth cricket businesses; .club is the general sign of a member community. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is sharpness. .cricket is the category word — cricket clubs and youth academies, fan media and live-score sites, local leagues and tournament organizers on name.cricket serve the world's second-most-watched sport, with fans in India, Pakistan, the UK and Australia counted in billions, matching city + cricket searches word for word; run by Team Internet (GRS Domains) at about $21/yr flat (≈¥152) for registration and renewal — no promo trap, a constant budget. .club is the belonging word — member clubs, multi-sport organizations and hobby communities on name.club put the join-us call in the address, and nothing breaks when the club is about more than cricket; about $6 first year (≈¥40) and $17/yr to renew (≈¥120) — frequent first-year promos with a similarly mild renewal, a tier cheaper than .cricket to hold. The test: the business is cricket itself — club operations, coaching, gear stores, score data → .cricket says the whole lane in one word with a category belonging South Asian and Commonwealth audiences recognize instantly, which .club can't give; the product is membership and the circle — member communities, multi-sport clubs, city sports associations → .club's belonging aims truer and holds anything beyond cricket. The renewals differ by only about $4/yr, so budget decides almost nothing — semantics decide everything. Three cautions: .cricket's early bargain-promo era drew spam registrations, so some mail gateways treat new domains strictly — configure SPF/DKIM before launch; IPL team and star names are mostly registered trademarks — fan sites are safer with cities or nicknames; and cricket's audience concentrates in South Asia and the Commonwealth, where .cricket's trust runs clearly stronger. Naming: city or club + .cricket (mumbai.cricket) versus club name + .club (the member-club standard) are each side's on-target patterns.",
+      pickA: ["Cricket clubs & youth academies", "Fan media & live-score sites", "Local leagues & tournament organizers", "South Asian & Commonwealth markets"],
+      pickB: ["Member clubs & hobby communities", "Multi-sport clubs", "Renewal-cost-conscious holds", "A brand's community subdomain"],
+    },
+  },
+  "fish-vs-fishing": {
+    slug: "fish-vs-fishing",
+    a: "fish",
+    b: "fishing",
+    zh: {
+      title: ".fish 和 .fishing 怎么选：水产品类与钓鱼活动的分工",
+      metaDescription: ".fish 直指鱼与水产这个品类，海鲜电商与水族生意用它最准；.fishing 说的是钓鱼这项活动，钓具与向导服务用它直给。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一字之差，主语不同：一个说「鱼」这个品类，一个说「钓」这项活动。.fish 直指鱼与水产——海鲜餐厅与鱼市电商、水族与观赏鱼社区、渔场与水产养殖企业、海洋保育内容站用 name.fish，fish 同时覆盖「鱼、渔业、水产」三层含义，四个字母也是行业后缀里少见的短；Identity Digital 运营，首年约 $8（约 ¥59）、续费约 $36/年（约 ¥256）——典型首年促销结构，务必按续费价做长期预算。.fishing 说的是钓鱼这项活动——钓具店与渔具电商、钓鱼内容与渔获博主、钓鱼向导与包船服务用 name.fishing，钓友搜「水域 + fishing」时逐字吻合；GoDaddy Registry 运营，注册约 $26（约 ¥189）、续费同价——平进平出预算稳定。判断标准：生意围着「鱼」转——卖鱼、养鱼、观赏鱼、说鱼的内容 → .fish 品类直给，salmon.fish 张口即是货架；生意围着「钓」转——渔具、钓点内容、向导服务、钓鱼社群 → .fishing 活动直给，钓友一眼认同。两者有交集（渔获直卖、钓场直营），按获客关键词选：客户搜 fresh fish 就用 .fish，搜 fishing charter 就用 .fishing。三点注意：一是价格结构相反（.fish 首年便宜续费高，.fishing 平进平出），五年持有成本反而 .fishing 略低，别被首年价签骗了；二是 .fish 四个字母、.fishing 七个字母，词根都控制在 5–6 字符更顺口；三是 fish 在英语俚语里另有含义，起名避免歧义组合。命名上「鱼种/品类 + .fish」（salmon.fish）与「鱼种/水域 + .fishing」（bass.fishing）各是两边最点题的模式。",
+      pickA: ["海鲜餐厅与鱼市电商", "水族与观赏鱼社区", "渔场与水产养殖企业", "海洋保育与科普内容站"],
+      pickB: ["钓具店与渔具电商", "钓鱼内容与渔获博主", "钓鱼向导与包船钓鱼", "钓鱼社群与赛事"],
+    },
+    en: {
+      title: ".fish vs .fishing: The Category or The Activity",
+      metaDescription:
+        ".fish points at fish as a category — seafood commerce and aquariums fit best; .fishing names the activity — tackle shops and guide services read instantly. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One suffix names the thing, the other names the act. .fish points at fish and seafood as a category — seafood restaurants and fish-market e-commerce, aquarium and ornamental-fish communities, fish farms and aquaculture companies, and marine-conservation content on name.fish cover fish, fisheries and seafood in one word, and at four letters it's rare shorthand among industry suffixes; run by Identity Digital at about $8 first year (≈¥59) and $36/yr to renew (≈¥256) — a classic first-year promo structure, so budget on the renewal. .fishing names the activity — tackle shops and gear e-commerce, catch content and angling creators, fishing guides and charter services on name.fishing match \"water + fishing\" searches word for word; run by GoDaddy Registry at about $26 flat (≈¥189) for registration and renewal — stable budgeting. The test: the business revolves around the fish — selling, farming, keeping or writing about fish → .fish is category-direct (salmon.fish reads like a shelf); the business revolves around the catch — tackle, spot content, guide services, angling communities → .fishing is activity-direct and instantly credible to anglers. They overlap on catch-to-table and guided-fishery operations — choose by the acquisition keyword: customers searching \"fresh fish\" → .fish; searching \"fishing charter\" → .fishing. Three cautions: the price structures run opposite (.fish cheap in, higher to hold; .fishing flat), so over five years .fishing actually costs slightly less — don't be fooled by the first-year tag; .fish is 4 letters and .fishing 7, so keep roots to 5–6 characters; and fish carries slang meanings in English — avoid ambiguous combinations. Naming: species or category + .fish (salmon.fish) versus species or water + .fishing (bass.fishing) are each side's on-target patterns.",
+      pickA: ["Seafood restaurants & fish-market e-commerce", "Aquarium & ornamental-fish communities", "Fish farms & aquaculture companies", "Marine conservation & science content"],
+      pickB: ["Tackle shops & gear e-commerce", "Catch content & angling creators", "Fishing guides & charter fishing", "Angling communities & tournaments"],
+    },
+  },
+  "fan-vs-club": {
+    slug: "fan-vs-club",
+    a: "fan",
+    b: "club",
+    zh: {
+      title: ".fan 和 .club 怎么选：粉丝身份与社群组织的分工",
+      metaDescription: ".fan 把「我是粉丝」写进域名，应援站与粉丝社区用它最准；.club 是社群与俱乐部的通用招牌。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "分工在主语：.fan 说「我是谁的粉」，.club 说「我们是个组织」。.fan 直指粉丝身份——球迷与追星应援站、创作者粉丝社区与会员站、粉丝周边电商、影视游戏同好内容站用 name.fan，读起来就是「某某的粉丝」（arsenal.fan 张口即成句），主语加后缀天然成句是它独有的语感；Identity Digital 运营，首年约 $7（约 ¥48）、续费约 $44/年（约 ¥315）——典型首年促销结构，续费涨幅明显，按续费价做长期预算。.club 是归属词——会员制社群、兴趣俱乐部、线下组织用 name.club，「加入我们」的号召从域名立住，不绑定粉丝语境，正式组织用它也不违和；首年约 $6（约 ¥40）、续费约 $17/年（约 ¥120）——首年常见促销、续费温和，长持成本约为 .fan 的四成。判断标准：站点以「粉」为核心——某个偶像/球队/作品的应援与同好内容，第一人称是粉丝 → .fan 身份直给，圈内人一眼共鸣；站点以「会」为核心——会员体系、活动组织、跨兴趣的社群运营 → .club 的组织感更点题，续费便宜一半以上。两者有交集（付费粉丝社群），按叙事选：强调「为爱发电」的圈层认同用 .fan，强调会员运营与组织架构用 .club。三点注意：一是价差真实（续费 $44 vs $17/年），内容型粉丝站长持要算清成本；二是明星与球队名多为注册商标，应援站标明非官方并避免商用侵权；三是 .fans 复数后缀同场竞争，主站选定一个、另一个做保护性注册更稳。命名上「偶像/球队 + .fan」（arsenal.fan）与「会名 + .club」（会员俱乐部标准款）各是两边最点题的模式。",
+      pickA: ["球迷与追星应援站", "创作者粉丝社区与会员站", "粉丝周边与应援物电商", "影视游戏同好内容站"],
+      pickB: ["会员制社群与兴趣俱乐部", "线下组织与活动运营", "在意长持续费成本", "正式组织的社群主站"],
+    },
+    en: {
+      title: ".fan vs .club: The Fan's Identity or The Member Organization",
+      metaDescription:
+        ".fan writes I'm a fan into the address — sharpest for fan sites and communities; .club is the general sign of a member organization. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The split is the subject: .fan says whose fan I am, .club says we are an organization. .fan points at the fan identity — sports and celebrity fan sites, creator fan communities and membership hubs, merch stores, and film-and-game fandom content on name.fan read literally as someone's fan (arsenal.fan speaks a full sentence), a built-in grammar no other suffix has; run by Identity Digital at about $7 first year (≈¥48) and $44/yr to renew (≈¥315) — a classic first-year promo with a steep renewal, so budget on the renewal. .club is the belonging word — member communities, hobby clubs and offline organizations on name.club put the join-us call in the address, unbound from fandom framing, and formal organizations wear it without friction; about $6 first year (≈¥40) and $17/yr to renew (≈¥120) — frequent promos with a mild renewal, roughly forty percent of .fan's holding cost. The test: the site centers on being a fan — devotion to one idol, team or franchise, first-person fandom → .fan is identity-direct and lands instantly inside the circle; the site centers on the organization — membership systems, event operations, cross-interest communities → .club's institutional feel aims truer and renews for less than half. They overlap on paid fan communities — choose by the story: fan-powered circle identity → .fan; membership operations and structure → .club. Three cautions: the price gap is real ($44 vs $17/yr renewal) — content-driven fan sites should count the holding cost; celebrity and team names are mostly registered trademarks — state unofficial status and avoid commercial infringement; and the plural .fans competes in the same space — pick one as the primary and register the other defensively. Naming: idol or team + .fan (arsenal.fan) versus club name + .club (the member-club standard) are each side's on-target patterns.",
+      pickA: ["Sports & celebrity fan sites", "Creator fan communities & membership hubs", "Fan merch & support-goods e-commerce", "Film & game fandom content"],
+      pickB: ["Member communities & hobby clubs", "Offline organizations & event operations", "Renewal-cost-conscious holds", "A formal organization's community home"],
+    },
+  },
+  "win-vs-bet": {
+    slug: "win-vs-bet",
+    a: "win",
+    b: "bet",
+    zh: {
+      title: ".win 和 .bet 怎么选：赢的结果与下注的动作",
+      metaDescription: ".win 把「赢」喊进域名，竞赛活动页与电竞平台用它最带情绪；.bet 直指下注动作，合规博彩与赛事预测站用它直给。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个报结果，一个报动作。.win 直指「赢」这个结果——竞赛与抽奖活动页、电竞战队与赛事平台、增长营销与转化落地页、竞技预测与积分工具站用 name.win，win 是英语里最短的胜利动词，name.win 读起来就是一句口号，做活动页自带情绪；Team Internet（GRS Domains）运营，首年约 $5（约 ¥33）、续费约 $6/年（约 ¥41）——注册续费都便宜，做活动页矩阵毫无压力。.bet 直指下注这个动作——持牌博彩运营商、赛事赔率与预测内容、体育竞猜社区用 name.bet，行业属性一词讲透；首年约 $10（约 ¥69）、续费约 $21/年（约 ¥151）——在博彩类后缀里续费最友好。判断标准：产品的钩子是「赢」——抽奖、竞赛、冲榜、电竞夺冠叙事，不必然涉及真金投注 → .win 情绪直给，价格便宜到可以一场活动一个域名；产品的核心是「注」——持牌运营、赔率内容、竞猜社区 → .bet 行业直给，用户与支付通道一眼读懂你是谁。两者有交集（预测竞猜类产品），按合规属性选：涉及真金下注的用 .bet 并把牌照信息亮出来，纯积分无现金的预测游戏用 .win 更轻。三点注意：一是两个后缀都属低价档，历史上都招过垃圾注册，个别邮件网关与企业防火墙较严格，重要业务配 SPF/DKIM 并测试送达；二是有奖竞赛与博彩在多数辖区受法规约束，.win 的抽奖要备规则页，.bet 的真金业务必须持牌，广告渠道对两者都有额外审核；三是 .win 便宜到 $6/年续费，活动矩阵可以批量持有，.bet 也只有 $21/年，预算都不构成负担。命名上「动词短语 + .win」（spin2.win）与「品牌/赛事 + .bet」（合规运营商标准款）各是两边最点题的模式。",
+      pickA: ["竞赛与抽奖活动页", "电竞战队与赛事平台", "增长营销与转化落地页", "无现金的预测与积分游戏"],
+      pickB: ["持牌博彩运营商", "赛事赔率与预测内容", "体育竞猜社区", "需要行业身份一眼可读"],
+    },
+    en: {
+      title: ".win vs .bet: The Outcome or The Action",
+      metaDescription:
+        ".win shouts the outcome — contest pages and esports platforms ride its energy; .bet names the action — licensed gaming and odds content read instantly. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One names the outcome, the other the action. .win points at winning — contest and giveaway pages, esports teams and tournament platforms, growth-marketing landing pages, and prediction or points-based tools on name.win ride the shortest victory verb in English: the domain reads like a slogan, born for campaign pages; run by Team Internet (GRS Domains) at about $5 first year (≈¥33) and $6/yr to renew (≈¥41) — cheap both ways, effortless for a whole campaign matrix. .bet points at the wager — licensed betting operators, odds and prediction content, sports-tipping communities on name.bet say the trade in one word; about $10 first year (≈¥69) and $21/yr to renew (≈¥151) — the friendliest renewal among gambling suffixes. The test: the product's hook is winning — giveaways, contests, leaderboards, esports-victory storytelling with no real-money stakes → .win is emotion-direct and cheap enough for one domain per campaign; the product's core is the wager — licensed operations, odds content, tipping communities → .bet is trade-direct, instantly legible to users and payment channels. They overlap on prediction products — choose by compliance: real-money wagering belongs on .bet with the license on display; cash-free prediction games travel lighter on .win. Three cautions: both are bargain-tier suffixes that historically drew spam registrations, so some mail gateways and corporate firewalls treat them strictly — configure SPF/DKIM and test deliverability; prize contests and gambling are regulated in most jurisdictions — .win giveaways need a rules page, real-money .bet businesses must hold licenses, and ad channels apply extra review to both; and at $6/yr .win can be held in bulk for campaign matrices while .bet's $21/yr stays painless. Naming: verb phrase + .win (spin2.win) versus brand or event + .bet (the licensed-operator standard) are each side's on-target patterns.",
+      pickA: ["Contest & giveaway campaign pages", "Esports teams & tournament platforms", "Growth-marketing landing pages", "Cash-free prediction & points games"],
+      pickB: ["Licensed betting operators", "Odds & prediction content", "Sports-tipping communities", "Trade identity legible at a glance"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

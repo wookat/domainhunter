@@ -594,7 +594,7 @@
     ]
   },
   "vs": {
-    "count": 324,
+    "count": 330,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -919,7 +919,13 @@
       "poker-vs-games",
       "vodka-vs-wine",
       "futbol-vs-soccer",
-      "moda-vs-fashion"
+      "moda-vs-fashion",
+      "basketball-vs-team",
+      "rugby-vs-football",
+      "cricket-vs-club",
+      "fish-vs-fishing",
+      "fan-vs-club",
+      "win-vs-bet"
     ]
   }
 }
