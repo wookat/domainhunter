@@ -1475,4 +1475,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家猛禽体验与鹰猎文化基地，寓意「一只鹰从手臂上起飞那一刻的震撼」；气质要立在文化传承与自然教育的身位、不做马戏团；场景是亲子研学方案让家长安心、团建方案书上震撼、鹰友圈里专业可信。",
     en: "A falconry and birds-of-prey experience. The name should carry the awe of the moment a hawk lifts off the glove; the vibe stands on heritage and nature education, never a circus; it must reassure parents on the study-trip proposal, thrill on the corporate deck, and read professional in the falconers' circle.",
   },
+  "lutherie": {
+    zh: "一家制琴与手工乐器工作室，寓意「一块木头在刨刀下醒来成为声音」；气质要有师承与耳力的匠作血统、不显乐器店柜台；场景是演奏家委托订单上郑重可信、琴标上体面、学生课堂里亲切。",
+    en: "A lutherie and handmade instrument studio. The name should carry a plank of wood waking under the plane and becoming a voice; the vibe is the maker bloodline of lineage and ear, never a music-shop counter; it must read solemn on the player's commission, dignified on the label, and warm in the student classroom.",
+  },
+  "lapidary": {
+    zh: "一家宝石切磨与玉石雕刻工作室，寓意「一块石头在砂轮下第一次亮出火彩」；气质要有眼力与刀工的专业身价、不显地摊淘货；场景是珠宝商供货单上专业可信、藏家鉴定书上体面、原石体验课海报上亲切上口。",
+    en: "A lapidary and gem-cutting studio. The name should carry the moment a stone first throws fire under the wheel; the vibe is the professional status of eye and blade, never a flea-market stall; it must read credible on the jeweller's supply list, dignified on the certificate, and warm on the rough-cutting class poster.",
+  },
+  "cooperage": {
+    zh: "一家制桶与橡木桶工坊，寓意「一圈橡木板在火上弯成酒的摇篮」；气质要有木、火、铁的古法底气与风味共作者的身位、不显无名耗材厂；场景是酒厂采购合同上专业可靠、酒标背书上有身价、精酿圈里有行家认同。",
+    en: "A cooperage and oak barrel workshop. The name should carry a ring of oak staves bending over fire into the cradle of a spirit; the vibe is the old-craft confidence of wood, fire and iron with a flavour co-author's posture, never a nameless consumables plant; it must read reliable on the distillery contract, carry status in the label credit, and earn respect in the craft circle.",
+  },
+  "kintsugi": {
+    zh: "一家金缮与器物修复工作室，寓意「裂痕被金线照亮成为器物的年轮」；气质要有大漆血统与残缺之美的哲学、不显修补摊；场景是藏家委托报价单上专业体面、寄修客人眼里郑重温暖、体验课海报上有话题。",
+    en: "A kintsugi and ceramic repair studio. The name should carry a crack lit by a golden seam becoming the vessel's growth ring; the vibe is the lacquer bloodline and the philosophy of beautiful imperfection, never a mending stall; it must read professional on the collector's quote, solemn and warm to the repair client, and conversation-worthy on the class poster.",
+  },
+  "indigodye": {
+    zh: "一家蓝染与植物染工坊，寓意「布从染缸里提起来那一刻由绿转蓝」；气质要有养一缸活蓝的手作温度与天然血统、不显化工染料厂；场景是体验课打卡标签里亲切上口、面料供货合同上专业可信、品牌联名吊牌上有设计身价。",
+    en: "An indigo and natural dye studio. The name should carry the moment cloth lifts from the vat and turns from green to blue; the vibe is the maker warmth of tending a living vat and a natural bloodline, never an industrial dyehouse; it must read warm in the class geo-tag, credible on the fabric supply contract, and carry design status on the collab hang tag.",
+  },
+  "penmaking": {
+    zh: "一家手工制笔与钢笔定制工作室，寓意「一支笔在掌心里配得上要写下的字」；气质要有笔尖手艺与文房血统的郑重、不显文创周边；场景是定制订单上独一无二、笔展名牌上体面、钢笔圈论坛里经得起行家审视。",
+    en: "A penmaking and custom fountain pen studio. The name should carry a pen in the palm deserving the words it is about to write; the vibe is the solemnity of nib craft and the scholar's-desk bloodline, never stationery merch; it must read one-of-one on the commission, dignified on the pen-show placard, and survive the enthusiasts' forum scrutiny.",
+  },
 };

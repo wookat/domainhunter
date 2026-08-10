@@ -378,4 +378,10 @@ export const TEMPLATE_LABELS: TemplateLabel[] = [
   { slug: "tufting", labelZh: "簇绒工作室", labelEn: "Tufting studio" },
   { slug: "silversmith", labelZh: "银匠工作室", labelEn: "Silversmith studio" },
   { slug: "falconry", labelZh: "猛禽体验基地", labelEn: "Falconry experience" },
+  { slug: "lutherie", labelZh: "制琴工作室", labelEn: "Lutherie studio" },
+  { slug: "lapidary", labelZh: "宝石切磨工作室", labelEn: "Lapidary studio" },
+  { slug: "cooperage", labelZh: "制桶工坊", labelEn: "Cooperage" },
+  { slug: "kintsugi", labelZh: "金缮修复工作室", labelEn: "Kintsugi studio" },
+  { slug: "indigodye", labelZh: "蓝染工坊", labelEn: "Indigo dye studio" },
+  { slug: "penmaking", labelZh: "手工制笔工作室", labelEn: "Penmaking studio" },
 ];

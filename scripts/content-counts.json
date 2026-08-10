@@ -383,7 +383,7 @@
     ]
   },
   "guide": {
-    "count": 368,
+    "count": 374,
     "slugs": [
       "saas",
       "ecommerce",
@@ -752,7 +752,13 @@
       "meadery",
       "tufting",
       "silversmith",
-      "falconry"
+      "falconry",
+      "lutherie",
+      "lapidary",
+      "cooperage",
+      "kintsugi",
+      "indigodye",
+      "penmaking"
     ]
   },
   "vs": {
