@@ -12,7 +12,7 @@
 | 级别 | 数量 | 摘要 |
 |---|---|---|
 | P0 | 0 | — |
-| P1 | 0 | — |
+| P1 | 1 | 基线分支 CI `content-counts` 必挂：`node scripts/gen-hub-index.mjs --check` 在 deploy/r192-r195 tip（4dc4786）上即报 `hub-index-tld.ts` / `hub-index-guide.ts` 与内容源不一致（R407 合并 R404/R405 后未重跑 gen-hub-index），导致所有入该分支的 PR CI 均红。修复：在基线分支跑 `node scripts/gen-hub-index.mjs` 重新生成并提交。本审计按任务约定不自行修代码，报父会话处理。 |
 | P2 | 0 | — |
 | P3 | 1 | Lighthouse 移动 perf 92–93（/ 92、/tld/london 93、/prices 93；桌面全 100、a11y/BP/SEO 全 100）。与 R399（90–99）同量级采样波动，无回归、无用户可见影响。 |
 
@@ -76,6 +76,7 @@ R407 重构（内容页数据随 HTML 注入 + 首页模板文案按需加载）
 
 ## P0/P1/P2/P3 明细
 
+- **P1-① 基线分支 hub-index 未重新生成，CI content-counts 必挂**：复现：`git checkout deploy/r192-r195 && node scripts/gen-hub-index.mjs --check` → exit 1（hub-index-tld.ts / hub-index-guide.ts 与内容源不一致）。影响：所有入该分支的 PR（含本 PR #377）CI 红；线上 hub 页实际链接计数正确（330/326/366），疑似仅索引文件顺序/条目降级不一致，无用户可见影响，但阻塞合入流水线。修复：基线上跑 `node scripts/gen-hub-index.mjs` 并提交重新生成的两个文件（建议父会话集成时处理）。
 - **P3-① Lighthouse 移动 perf 92–93**：/ 92、/tld/london 93、/prices 93。历史区间 89–99 内的常规采样波动，桌面全 100，无用户可见影响。复现：`npx lighthouse https://hunt.zalize.com/ --chrome-flags="--headless=new --no-sandbox" --only-categories=performance`。
 
-无 P0/P1/P2。R407 重构未引入任何回归。
+无 P0/P2。R407 重构在站点运行面未引入任何回归；P1-① 为基线分支 CI 基础设施问题（非线上用户可见），需父会话在基线上重跑 gen-hub-index 收口。
