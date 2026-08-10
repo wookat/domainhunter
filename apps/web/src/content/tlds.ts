@@ -11004,6 +11004,186 @@ const GUIDES = {
       ],
     },
   },
+  br: {
+    tld: "br",
+    zh: {
+      title: ".br 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".br 是巴西国家域名，注册需巴西税号（CPF/CNPJ），本地信任度极高，适合面向巴西与葡语美洲市场的品牌与电商。查看 .br 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .br 域名。",
+      intro:
+        ".br 是巴西的国家域名，由 Registro.br（NIC.br 下属）运营，注册量超过 500 万，是拉美最大的 ccTLD。巴西是拉美第一大经济体、全球最大葡语国家（人口约 2.1 亿），电商与数字支付（Pix）渗透率高速增长，本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.com.br 或 name.br，「巴西的生意」一眼讲清，信任度远超一般新后缀——巴西本土企业与机构的主站几乎都在 .br 体系上；Google 也会把 .br 站点与巴西地区相关联，葡语市场 SEO 有天然加成。资格上有硬门槛：注册人必须持有巴西税号——个人 CPF 或企业 CNPJ，外国公司需在巴西设实体或通过本地代理持有，这道门槛让 .br 几乎没有投机注册，域名与真实巴西业务强绑定。顶级直注（name.br）需在多个二级类别下先有注册记录，多数业务实际落在 .com.br 上。价格便宜且平续：约 $8/年（约 ¥60，R$40），续费同价，无引流钩子。库存干净充裕，葡语与英文词根命中率都高。命名上品牌词直接上（brand.com.br）最主流；本地服务用「行业词 + .com.br」，跨境电商用「品类词 + .br」讲清市场定位。注意：没有 CPF/CNPJ 无法注册，进入市场前先准备本地实体或代理。",
+      bestFor: ["巴西本地企业与服务", "面向巴西的跨境电商", "葡语内容与媒体站", "拉美市场品牌与金融科技"],
+      namingTips: [
+        "需巴西税号（个人 CPF / 企业 CNPJ），外国公司先设实体或找本地代理",
+        "注册续费均约 $8/年（R$40），平续无钩子",
+        "多数业务落在 .com.br，顶级直注 name.br 有额外条件",
+        "税号门槛让 .br 与真实巴西业务强绑定、库存干净",
+      ],
+    },
+    en: {
+      title: ".br Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".br is Brazil's country domain — registration requires a Brazilian tax ID (CPF/CNPJ) — with top-tier local trust for Brazil and Portuguese-speaking-Americas brands and e-commerce. See live pricing and naming advice, then hunt available .br names with AI.",
+      intro:
+        ".br is Brazil's country-code domain, run by Registro.br (under NIC.br) with over 5 million registrations — Latin America's largest ccTLD. Brazil is Latin America's biggest economy and the world's largest Portuguese-speaking country (about 210 million people), with fast-growing e-commerce and digital-payment (Pix) penetration, and local consumers are strongly attuned to local signals: name.com.br or name.br says \"a Brazilian business\" at a glance, with trust far beyond any new gTLD — Brazilian companies and institutions overwhelmingly live on the .br family; Google also geo-associates .br sites with Brazil, a natural boost for Portuguese-market SEO. Eligibility is a hard bar: registrants must hold a Brazilian tax ID — CPF for individuals or CNPJ for companies — so foreign companies need a Brazilian entity or a local agent to hold one, a bar that leaves .br with virtually no speculative registrations, binding domains to real Brazilian businesses. Direct second-level registration (name.br) has extra prerequisites, so most businesses live on .com.br. Pricing is cheap and flat: about $8/yr (≈¥60, R$40) with the same renewal, no teaser games. Inventory is clean and plentiful, and both Portuguese and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.com.br); local services fit trade-word + .com.br, and cross-border e-commerce can use category + .br to claim the market. One caution: without a CPF/CNPJ you cannot register — set up your entity or agent before entering the market.",
+      bestFor: ["Local Brazilian businesses & services", "Brazil-facing cross-border e-commerce", "Portuguese-language content & media", "LatAm brands & fintech"],
+      namingTips: [
+        "Requires a Brazilian tax ID (CPF/CNPJ) — foreign companies need an entity or local agent",
+        "About $8/yr (R$40) flat to register and renew — no traps",
+        "Most businesses live on .com.br — direct name.br has extra prerequisites",
+        "The tax-ID bar binds .br to real Brazilian businesses — clean inventory",
+      ],
+    },
+  },
+  pt: {
+    tld: "pt",
+    zh: {
+      title: ".pt 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".pt 是葡萄牙国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向葡萄牙市场的品牌、旅游与数字游民业务。查看 .pt 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .pt 域名。",
+      intro:
+        ".pt 是葡萄牙的国家域名，由注册局 DNS.PT 运营，注册量约 140 万。葡萄牙近年是欧洲增长最快的科技与旅游目的地之一：里斯本与波尔图聚集大量创业公司与数字游民，Web Summit 每年在里斯本举办，旅游业占 GDP 比重居欧盟前列。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.pt，「葡萄牙的生意」一眼讲清，信任度远超一般新后缀——葡萄牙本土企业与政府机构的主站几乎都在 .pt 上；Google 也会把 .pt 站点与葡萄牙地区相关联，本地 SEO 有天然加成。资格上 .pt 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格中等且平续：注册约 $15/年（约 ¥110），续费同价，无引流钩子。库存比 .com 充裕，葡语与英文词根命中率都高——顺带一提，.pt 对面向葡语世界（巴西之外）的业务也是自然选择。命名上品牌词直接上（brand.pt）最主流；旅游与地产业务可用「品类词 + .pt」借葡萄牙热度，本地服务用「行业词 + .pt」。注意受众主要在葡萄牙本土，纯外部市场业务信号较弱。",
+      bestFor: ["葡萄牙本地企业与服务", "旅游、民宿与地产业务", "数字游民与创业公司", "葡语内容与媒体站"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $15/年，平续无钩子",
+        "旅游与地产用「品类词 + .pt」借葡萄牙热度",
+        "受众在葡萄牙本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".pt Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".pt is Portugal's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Portugal-market brands, tourism and digital-nomad businesses. See live pricing and naming advice, then hunt available .pt names with AI.",
+      intro:
+        ".pt is Portugal's country-code domain, run by registry DNS.PT with about 1.4 million registrations. Portugal has been one of Europe's fastest-growing tech and tourism destinations: Lisbon and Porto host a dense startup and digital-nomad scene, Web Summit runs in Lisbon every year, and tourism's share of GDP is among the EU's highest. Local consumers are strongly attuned to local signals: name.pt says \"a Portuguese business\" at a glance, with trust far beyond any new gTLD — Portuguese companies and government institutions overwhelmingly live on .pt; Google also geo-associates .pt sites with Portugal, a natural boost for local SEO. On eligibility, .pt is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is moderate and flat: about $15/yr to register (≈¥110) with the same renewal, no teaser games. Inventory beats .com, and both Portuguese and English roots hit well — and .pt is a natural pick for Portuguese-speaking-world businesses beyond Brazil too. For naming, a straight brand word is the mainstream shape (brand.pt); tourism and real-estate ventures can use category + .pt to ride Portugal's momentum, and local services fit trade-word + .pt. One caution: the audience is primarily Portugal — the signal is weaker for purely external markets.",
+      bestFor: ["Local Portuguese businesses & services", "Tourism, lodging & real-estate ventures", "Digital nomads & startups", "Portuguese-language content & media"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $15/yr flat to register and renew — no traps",
+        "Tourism and real estate use category + .pt to ride Portugal's momentum",
+        "Audience is primarily Portugal — weaker signal for purely external markets",
+      ],
+    },
+  },
+  cz: {
+    tld: "cz",
+    zh: {
+      title: ".cz 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".cz 是捷克国家域名，无资格限制、任何人可注册，价格便宜且平续，本地信任度极高，适合面向捷克市场的品牌与电商。查看 .cz 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .cz 域名。",
+      intro:
+        ".cz 是捷克的国家域名，由非营利注册局 CZ.NIC 运营，注册量约 150 万。捷克是中欧制造与工程强国（大众集团旗下 Škoda 总部所在），布拉格也是欧洲重要的软件研发与游戏开发中心（Avast、Kiwi.com 都诞生于此）。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.cz，「捷克的生意」一眼讲清，信任度远超一般新后缀——捷克本土企业与政府机构的主站几乎都在 .cz 上；Google 也会把 .cz 站点与捷克地区相关联，本地 SEO 有天然加成。CZ.NIC 还是知名开源 DNS 软件（Knot DNS/Knot Resolver）的作者，注册局技术口碑极佳。资格上 .cz 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格便宜且平续：注册约 $10/年（约 ¥75），续费同价，无引流钩子——在欧洲 ccTLD 里属于最实惠一档。库存比 .com 充裕，捷克语与英文词根命中率都高。命名上品牌词直接上（brand.cz）最主流；制造与工程业务用「品类词 + .cz」讲清捷克血统，本地服务用「行业词 + .cz」。注意受众主要在捷克本土，纯外部市场业务信号较弱。",
+      bestFor: ["捷克本地企业与服务", "制造与工程业务", "软件研发与游戏工作室", "面向捷克的电商"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $10/年，欧洲 ccTLD 里最实惠一档",
+        "制造与工程用「品类词 + .cz」讲清捷克血统",
+        "受众在捷克本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".cz Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".cz is Czechia's country domain — no eligibility restrictions, anyone can register — cheap with flat renewals and top-tier local trust for Czech-market brands and e-commerce. See live pricing and naming advice, then hunt available .cz names with AI.",
+      intro:
+        ".cz is Czechia's country-code domain, run by non-profit registry CZ.NIC with about 1.5 million registrations. Czechia is a Central European manufacturing and engineering powerhouse (home of Volkswagen Group's Škoda), and Prague is a major European software and game-development hub (Avast and Kiwi.com were born there). Local consumers are strongly attuned to local signals: name.cz says \"a Czech business\" at a glance, with trust far beyond any new gTLD — Czech companies and government institutions overwhelmingly live on .cz; Google also geo-associates .cz sites with Czechia, a natural boost for local SEO. CZ.NIC is also the author of the well-known open-source Knot DNS/Knot Resolver software — a registry with a stellar technical reputation. On eligibility, .cz is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is cheap and flat: about $10/yr to register (≈¥75) with the same renewal, no teaser games — among the most affordable European ccTLDs. Inventory beats .com, and both Czech and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.cz); manufacturing and engineering ventures fit category + .cz to claim Czech pedigree, and local services fit trade-word + .cz. One caution: the audience is primarily Czechia — the signal is weaker for purely external markets.",
+      bestFor: ["Local Czech businesses & services", "Manufacturing & engineering ventures", "Software & game studios", "Czechia-facing e-commerce"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $10/yr flat to register and renew — among Europe's cheapest ccTLDs",
+        "Manufacturing and engineering use category + .cz to claim Czech pedigree",
+        "Audience is primarily Czechia — weaker signal for purely external markets",
+      ],
+    },
+  },
+  tr: {
+    tld: "tr",
+    zh: {
+      title: ".tr 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".tr 是土耳其国家域名，2023 年起开放顶级直注、任何人可注册，本地信任度极高，适合面向土耳其与欧亚跨境市场的品牌与电商。查看 .tr 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tr 域名。",
+      intro:
+        ".tr 是土耳其的国家域名，由信息与通信技术管理局（BTK）下属的 TRABİS 系统运营，注册量约 70 万。土耳其人口约 8500 万，横跨欧亚、是中东与中亚市场的门户，电商增速常年位居全球前列（Trendyol、Hepsiburada 都是本土巨头）。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.tr 或 name.com.tr，「土耳其的生意」一眼讲清，信任度远超一般新后缀——土耳其本土企业与政府机构的主站几乎都在 .tr 体系上；Google 也会把 .tr 站点与土耳其地区相关联，本地 SEO 有天然加成。资格上是重大利好：2022 年 TRABİS 上线后，.com.tr 取消了此前的商标/公司文件要求，2023 年起顶级直注（name.tr）也向所有人开放，无需本地地址或代理——开放时间不长，好词根库存明显比老牌欧洲 ccTLD 干净。价格中等且平续：注册约 $15/年（约 ¥110），续费同价，无引流钩子。土耳其语与英文词根命中率都高。命名上品牌词直接上（brand.tr）最主流；跨境电商与制造业务用「品类词 + .tr」讲清市场定位，本地服务用「行业词 + .tr」。注意受众主要在土耳其本土，纯外部市场业务信号较弱。",
+      bestFor: ["土耳其本地企业与服务", "面向土耳其的跨境电商", "制造与外贸业务", "土耳其语内容与媒体站"],
+      namingTips: [
+        "2023 年起顶级直注开放，任何人可注册、无需本地文件",
+        "注册续费均约 $15/年，平续无钩子",
+        "开放不久，好词根库存比老牌欧洲 ccTLD 干净",
+        "受众在土耳其本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".tr Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".tr is Türkiye's country domain — direct second-level registration opened to everyone in 2023 — with top-tier local trust for Türkiye and Eurasian cross-border brands and e-commerce. See live pricing and naming advice, then hunt available .tr names with AI.",
+      intro:
+        ".tr is Türkiye's country-code domain, run by the TRABİS system under the telecom regulator BTK, with about 700,000 registrations. Türkiye has about 85 million people, straddles Europe and Asia as a gateway to Middle Eastern and Central Asian markets, and posts e-commerce growth consistently among the world's fastest (Trendyol and Hepsiburada are homegrown giants). Local consumers are strongly attuned to local signals: name.tr or name.com.tr says \"a Turkish business\" at a glance, with trust far beyond any new gTLD — Turkish companies and government institutions overwhelmingly live on the .tr family; Google also geo-associates .tr sites with Türkiye, a natural boost for local SEO. Eligibility is a major win: after TRABİS launched in 2022, .com.tr dropped its old trademark/company-document requirements, and from 2023 direct second-level registration (name.tr) opened to everyone with no local address or proxy — and having opened so recently, good-root inventory is notably cleaner than older European ccTLDs. Pricing is moderate and flat: about $15/yr to register (≈¥110) with the same renewal, no teaser games. Both Turkish and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.tr); cross-border e-commerce and manufacturing ventures fit category + .tr to claim the market, and local services fit trade-word + .tr. One caution: the audience is primarily Türkiye — the signal is weaker for purely external markets.",
+      bestFor: ["Local Turkish businesses & services", "Türkiye-facing cross-border e-commerce", "Manufacturing & foreign trade", "Turkish-language content & media"],
+      namingTips: [
+        "Direct registration opened to everyone in 2023 — no local documents needed",
+        "About $15/yr flat to register and renew — no traps",
+        "Recently opened — good-root inventory is cleaner than older European ccTLDs",
+        "Audience is primarily Türkiye — weaker signal for purely external markets",
+      ],
+    },
+  },
+  ae: {
+    tld: "ae",
+    zh: {
+      title: ".ae 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ae 是阿联酋国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向迪拜/阿布扎比与中东市场的品牌、贸易与金融业务。查看 .ae 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ae 域名。",
+      intro:
+        ".ae 是阿联酋的国家域名，由电信与数字政府监管局（TDRA）旗下的 .aeDA 运营，注册量约 30 万。阿联酋是中东的商业与金融枢纽：迪拜与阿布扎比聚集全球贸易、物流、金融与 Web3 业务，人均 GDP 居世界前列，而且常住人口近九成是外籍人士——英语是商业通用语，英文词根无需翻译。本地消费者与企业对本土信号非常敏感：本地电商、品牌官网与服务商用 name.ae，「阿联酋的生意」一眼讲清，信任度远超一般新后缀——阿联酋本土企业与政府机构的主站几乎都在 .ae 上；Google 也会把 .ae 站点与阿联酋地区相关联，本地 SEO 有天然加成。资格上 .ae 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理——对计划落地迪拜自贸区的外国公司尤其友好。价格中等偏上且平续：注册约 $35/年（约 ¥250），续费同价，无引流钩子。库存比 .com 充裕，短词与行业词命中率高。命名上品牌词直接上（brand.ae）最主流；贸易、地产与金融业务用「品类词 + .ae」讲清中东落地，本地服务用「行业词 + .ae」。注意受众主要在阿联酋与海湾地区，纯外部市场业务信号较弱。",
+      bestFor: ["阿联酋本地企业与服务", "迪拜/阿布扎比贸易与物流", "中东金融与 Web3 业务", "面向海湾市场的品牌与电商"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $35/年，平续无钩子",
+        "英语是商业通用语，英文词根无需翻译",
+        "受众在阿联酋与海湾地区，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".ae Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ae is the UAE's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Dubai/Abu Dhabi and Middle East brands, trade and finance. See live pricing and naming advice, then hunt available .ae names with AI.",
+      intro:
+        ".ae is the United Arab Emirates' country-code domain, run by .aeDA under the telecom regulator TDRA, with about 300,000 registrations. The UAE is the Middle East's business and financial hub: Dubai and Abu Dhabi concentrate global trade, logistics, finance and Web3 ventures, GDP per capita ranks among the world's highest, and nearly ninety percent of residents are expatriates — English is the language of business, so English roots need no translation. Local consumers and companies are strongly attuned to local signals: name.ae says \"a UAE business\" at a glance, with trust far beyond any new gTLD — UAE companies and government institutions overwhelmingly live on .ae; Google also geo-associates .ae sites with the UAE, a natural boost for local SEO. On eligibility, .ae is fully open: individuals and organizations from anywhere can register directly with no local address or proxy — especially friendly for foreign companies planning a Dubai free-zone launch. Pricing is upper-moderate and flat: about $35/yr to register (≈¥250) with the same renewal, no teaser games. Inventory beats .com, and short words and trade words hit well. For naming, a straight brand word is the mainstream shape (brand.ae); trade, real-estate and finance ventures fit category + .ae to signal on-the-ground Middle East, and local services fit trade-word + .ae. One caution: the audience is the UAE and the Gulf — the signal is weaker for purely external markets.",
+      bestFor: ["Local UAE businesses & services", "Dubai/Abu Dhabi trade & logistics", "Middle East finance & Web3 ventures", "Gulf-market brands & e-commerce"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $35/yr flat to register and renew — no traps",
+        "English is the language of business — English roots need no translation",
+        "Audience is the UAE & the Gulf — weaker signal for purely external markets",
+      ],
+    },
+  },
+  id: {
+    tld: "id",
+    zh: {
+      title: ".id 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".id 是印度尼西亚国家域名，无资格限制、任何人可注册，本地信任度极高，还可读作英文 ID/身份，适合面向印尼市场的品牌与电商。注意首年便宜续费上浮。查看 .id 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .id 域名。",
+      intro:
+        ".id 是印度尼西亚的国家域名，由注册局 PANDI 运营，注册量约 100 万，居东南亚 ccTLD 前列。印尼人口约 2.8 亿，是全球第四人口大国、东南亚最大的数字经济体：电商（Tokopedia、Shopee）与数字支付渗透率高速增长，本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.id，「印尼的生意」一眼讲清，信任度远超一般新后缀——印尼本土企业与政府机构的主站几乎都在 .id 体系上；Google 也会把 .id 站点与印尼地区相关联，本地 SEO 有天然加成。.id 还有一层跨界彩蛋：它天然读作英文「ID / identity」，身份、账号与开发者工具类产品把它当语义后缀用（类似 .me 的玩法），受众可以完全不限于印尼。资格上 .id 完全开放：2014 年起开放顶级直注，任何国家的个人与机构都能直接注册，无需本地地址或代理。价格要留意：首年常见促销约 $8（约 ¥60），续费约 $30/年（约 ¥220）——注册前把续费价算进预算。印尼语与英文词根命中率都高。命名上品牌词直接上（brand.id）最主流；本地服务用「行业词 + .id」，身份与账号类产品可玩 name.id 的语义双关。注意本地信号与英文 ID 语义针对的是两类不同受众，定位想清楚再选词根。",
+      bestFor: ["印尼本地企业与服务", "面向印尼的跨境电商", "身份、账号与开发者工具产品", "东南亚市场品牌与金融科技"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "首年约 $8 但续费约 $30/年，预算按续费价算",
+        "天然读作英文 ID/身份，账号类产品可玩语义双关",
+        "本地信号与 ID 语义是两类受众，定位想清楚再选词根",
+      ],
+    },
+    en: {
+      title: ".id Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".id is Indonesia's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Indonesia-market brands and e-commerce, plus a natural English \"ID/identity\" reading. Watch the renewal step-up after a cheap first year. See live pricing and naming advice, then hunt available .id names with AI.",
+      intro:
+        ".id is Indonesia's country-code domain, run by registry PANDI with about 1 million registrations — among Southeast Asia's largest ccTLDs. Indonesia has about 280 million people — the world's fourth most populous country and Southeast Asia's largest digital economy — with e-commerce (Tokopedia, Shopee) and digital-payment penetration growing fast, and local consumers strongly attuned to local signals: name.id says \"an Indonesian business\" at a glance, with trust far beyond any new gTLD — Indonesian companies and government institutions overwhelmingly live on the .id family; Google also geo-associates .id sites with Indonesia, a natural boost for local SEO. .id also carries a crossover bonus: it naturally reads as English \"ID / identity\", so identity, account and developer-tool products use it as a semantic suffix (much like .me) — an audience not limited to Indonesia at all. On eligibility, .id is fully open: direct second-level registration opened in 2014, and individuals and organizations from anywhere can register with no local address or proxy. Pricing needs attention: first-year promos run about $8 (≈¥60) but renewals are about $30/yr (≈¥220) — budget on the renewal price. Both Indonesian and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.id); local services fit trade-word + .id, and identity or account products can play the name.id semantic pun. One caution: the local signal and the English ID reading target two different audiences — settle your positioning before picking roots.",
+      bestFor: ["Local Indonesian businesses & services", "Indonesia-facing cross-border e-commerce", "Identity, account & developer-tool products", "Southeast Asia brands & fintech"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $8 in year one but ~$30/yr renewal — budget on the renewal price",
+        "Naturally reads as English ID/identity — account products can play the pun",
+        "Local signal vs. the ID reading target different audiences — settle positioning first",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
