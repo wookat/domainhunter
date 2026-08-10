@@ -1,10 +1,8 @@
 import { CheckCircle2, HelpCircle, Scale, Sparkles } from "lucide-react";
 
 import { buildCompareFaq } from "@/content/compare-faq";
-import { TLD_COMPARES } from "@/content/compares";
-import { INDUSTRY_GUIDES, guidesForTld } from "@/content/guides";
+import { readInjectedContent } from "@/content/injected";
 import { NotFoundPage } from "@/components/not-found-page";
-import { TLD_GUIDES } from "@/content/tlds";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";
@@ -12,16 +10,17 @@ import { usePageTitle } from "@/lib/use-page-title";
 export function ComparePage({ slug }: { slug: string }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
-  const cmp = TLD_COMPARES[slug];
+  const content = readInjectedContent("vs", slug);
+  const cmp = content?.cmp;
   usePageTitle(cmp?.[lang].title);
 
-  if (!cmp) return <NotFoundPage />;
+  if (!content || !cmp) return <NotFoundPage />;
 
   const loc = cmp[lang];
   const sides = [cmp.a, cmp.b] as const;
   const picks = [loc.pickA, loc.pickB] as const;
   const faq = buildCompareFaq(cmp, lang);
-  const relatedGuides = [...new Set([...guidesForTld(cmp.a), ...guidesForTld(cmp.b)])].slice(0, 4);
+  const relatedGuides = content.relatedGuides;
 
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -45,7 +44,7 @@ export function ComparePage({ slug }: { slug: string }) {
       {/* 双列：各自的定位、价格与适用场景 */}
       <div className="mt-8 grid gap-4 md:grid-cols-2">
         {sides.map((tld, i) => {
-          const guide = TLD_GUIDES[tld];
+          const guide = content.sideGuides[i];
           return (
             <section key={tld} className="rounded-2xl border border-line bg-bg1 p-5">
               <a href={`/tld/${tld}?lang=${lang}`} className="tap-target inline-block font-mono text-lg font-bold text-brand hover:underline">
@@ -110,13 +109,13 @@ export function ComparePage({ slug }: { slug: string }) {
         <div className="mt-10">
           <h2 className="text-sm font-semibold text-txt1">{t("tld.relatedGuides")}</h2>
           <div className="mt-3 flex flex-wrap gap-2">
-            {relatedGuides.map((gSlug) => (
+            {relatedGuides.map((g) => (
               <a
-                key={gSlug}
-                href={`/guide/${gSlug}?lang=${lang}`}
+                key={g.slug}
+                href={`/guide/${g.slug}?lang=${lang}`}
                 className="flex min-h-[44px] items-center rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
               >
-                {INDUSTRY_GUIDES[gSlug][lang].label}
+                {g[lang]}
               </a>
             ))}
           </div>
@@ -127,7 +126,7 @@ export function ComparePage({ slug }: { slug: string }) {
       <div className="mt-10">
         <h2 className="text-sm font-semibold text-txt1">{t("vs.others")}</h2>
         <div className="mt-3 flex flex-wrap gap-2">
-          {Object.values(TLD_COMPARES).map((other) => (
+          {content.compareLinks.map((other) => (
             <a
               key={other.slug}
               href={`/vs/${other.slug}?lang=${lang}`}

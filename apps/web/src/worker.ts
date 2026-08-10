@@ -10,6 +10,8 @@ import { buildGuideFaq } from "./content/guide-faq";
 import { buildPricesFaq } from "./content/prices-faq";
 import { buildTldFaq } from "./content/tld-faq";
 import { compareContentBlocks, compareHubBlocks, guideContentBlocks, guideHubBlocks, hubCrumbKicker, hubCrumbLabel, pricesTableSkeleton, tldContentBlocks, tldHubBlocks } from "./content/ssr-html";
+import { buildGuideContent, buildTldContent, buildVsContent } from "./content/injected-build";
+import type { InjectedContent } from "./content/injected";
 import { HUB_META } from "./content/hubs";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
@@ -1247,6 +1249,13 @@ const injectHreflang = (html: string, path: string, explicitEn = false) => {
   return html.replace(/(<link rel="canonical"[^>]*\/>)/, `$1\n    ${hreflangTags(path)}`);
 };
 
+/** 内容页数据随 HTML 注入（window.__DH_CONTENT__）：客户端不再下载全量内容 chunk（见 content/injected.ts） */
+function injectContentData(html: string, payload: InjectedContent | null): string {
+  if (!payload) return html;
+  const json = JSON.stringify(payload).replace(/</g, "\\u003c");
+  return html.replace("</head>", `<script>window.__DH_CONTENT__=${json}</script></head>`);
+}
+
 /** SEO 页 SSR 首屏骨架：把 kicker/标题/首段直接渲染进 #root，LCP 文本不再等 JS 水合（React 挂载后整体替换） */
 function injectSsrSkeleton(html: string, kicker: string, title: string, blocks: string[], kickerHtml?: string, mainWidth = "max-w-3xl"): string {
   const skeleton = [
@@ -1523,6 +1532,7 @@ app.get("/tld/:tld", async (c) => {
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/tld-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
+  html = injectContentData(html, buildTldContent(tld));
   html = injectSsrSkeleton(html, `.${tld}`, loc.title, tldContentBlocks(tld, guide, lang), hubCrumbKicker("tld", `.${tld}`, lang));
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -1567,6 +1577,7 @@ app.get("/guide/:slug", async (c) => {
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/guide-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
+  html = injectContentData(html, buildGuideContent(slug));
   html = injectSsrSkeleton(html, guide[lang].label, loc.title, guideContentBlocks(guide, lang), hubCrumbKicker("guide", guide[lang].label, lang));
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -1611,6 +1622,7 @@ app.get("/vs/:slug", async (c) => {
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/compare-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
+  html = injectContentData(html, buildVsContent(slug));
   html = injectSsrSkeleton(html, `.${cmp.a} vs .${cmp.b}`, loc.title, compareContentBlocks(cmp, lang), hubCrumbKicker("vs", `.${cmp.a} vs .${cmp.b}`, lang), "max-w-4xl");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
