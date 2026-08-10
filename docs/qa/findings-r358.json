@@ -1,0 +1,667 @@
+{
+  "sitemap_loc_samples": [
+    814,
+    814,
+    814
+  ],
+  "sitemap_dup_locs": 0,
+  "sitemap_cat_counts": {
+    "tld": 258,
+    "guide": 260,
+    "vs": 288,
+    "core": 8
+  },
+  "sitemap_vs_counts_json": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "llms_counts": {
+    "tld": 258,
+    "guide": 260,
+    "vs": 288
+  },
+  "llms_vs_sitemap_equal": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "robots": {
+    "status": 200,
+    "has_sitemap": true,
+    "gptbot": true
+  },
+  "seo_new_pages": {
+    "/vs/business-vs-company": {
+      "status": 200,
+      "title": ".business 和 .company 怎么选：报经营还是报主体 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/business-vs-company",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 121400
+    },
+    "/vs/business-vs-company?lang=en": {
+      "status": 200,
+      "title": ".business vs .company: Naming the Trade or the Entity | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/business-vs-company?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 121586
+    },
+    "/vs/supplies-vs-supply": {
+      "status": 200,
+      "title": ".supplies 和 .supply 怎么选：一件件耗材与供给概念 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/supplies-vs-supply",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 122247
+    },
+    "/vs/supplies-vs-supply?lang=en": {
+      "status": 200,
+      "title": ".supplies vs .supply: The Items or the Provisioning | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/supplies-vs-supply?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 122797
+    },
+    "/tld/engineer": {
+      "status": 200,
+      "title": ".engineer 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/engineer",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 130496
+    },
+    "/tld/engineer?lang=en": {
+      "status": 200,
+      "title": ".engineer Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/engineer?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 131136
+    },
+    "/tld/camp": {
+      "status": 200,
+      "title": ".camp 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/camp",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 130479
+    },
+    "/tld/camp?lang=en": {
+      "status": 200,
+      "title": ".camp Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/camp?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 130853
+    },
+    "/guide/dollarstore": {
+      "status": 200,
+      "title": "一元店与折扣百货怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/dollarstore",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 114856
+    },
+    "/guide/dollarstore?lang=en": {
+      "status": 200,
+      "title": "How to Name a Dollar Store or Discount Shop: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/dollarstore?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 116319
+    },
+    "/guide/franchise": {
+      "status": 200,
+      "title": "连锁加盟品牌怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/franchise",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 114842
+    },
+    "/guide/franchise?lang=en": {
+      "status": 200,
+      "title": "How to Name a Franchise Brand: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/franchise?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 116994
+    }
+  },
+  "usage_pre": {
+    "days": {
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786320060446,
+    "indexnowLast": 1786255259045,
+    "pricesLastOk": 1786332384596,
+    "pricesLastFail": 1786334972331
+  },
+  "usage_keys_present": {
+    "pricesLastOk": true,
+    "pricesLastFail": true,
+    "cronLast": true,
+    "indexnowLast": true
+  },
+  "prices_api": {
+    "stale": true,
+    "tldCount": 250,
+    "fetchedAt": 1786332384854,
+    "keys": 250
+  },
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_all": "核验完成：共 259 个，209 个可注册",
+  "prices_rows_zh": 258,
+  "prices_live_count": 250,
+  "prices_static_count": 8,
+  "prices_new_tld_static": {
+    "expected": {
+      "camp": [
+        88,
+        398
+      ],
+      "camera": [
+        94,
+        374
+      ],
+      "diamonds": [
+        360,
+        374
+      ],
+      "theater": [
+        396,
+        430
+      ],
+      "accountants": [
+        612,
+        648
+      ],
+      "engineer": [
+        202,
+        216
+      ],
+      "engineering": [
+        48,
+        374
+      ]
+    },
+    "got": {
+      "engineering": [
+        48,
+        374
+      ],
+      "camp": [
+        88,
+        398
+      ],
+      "camera": [
+        94,
+        374
+      ],
+      "engineer": [
+        202,
+        216
+      ],
+      "diamonds": [
+        360,
+        374
+      ],
+      "theater": [
+        396,
+        430
+      ],
+      "accountants": [
+        612,
+        648
+      ]
+    },
+    "match": true
+  },
+  "prices_row_tld_hrefs": {
+    "camp": true,
+    "camera": true,
+    "diamonds": true,
+    "theater": true,
+    "accountants": true,
+    "engineer": true,
+    "engineering": true
+  },
+  "tld_pricecards": {
+    "got": {
+      "camp": {
+        "first": 88,
+        "renew": 398,
+        "live_label": null,
+        "prices_href": true
+      },
+      "camera": {
+        "first": 94,
+        "renew": 374,
+        "live_label": null,
+        "prices_href": true
+      },
+      "diamonds": {
+        "first": 360,
+        "renew": 374,
+        "live_label": null,
+        "prices_href": true
+      },
+      "theater": {
+        "first": 396,
+        "renew": 430,
+        "live_label": null,
+        "prices_href": true
+      },
+      "accountants": {
+        "first": 612,
+        "renew": 648,
+        "live_label": null,
+        "prices_href": true
+      },
+      "engineer": {
+        "first": 202,
+        "renew": 216,
+        "live_label": null,
+        "prices_href": true
+      },
+      "engineering": {
+        "first": null,
+        "renew": null,
+        "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+        "prices_href": true
+      }
+    },
+    "match": false
+  },
+  "tld_hub_links": 258,
+  "guide_hub_links": 260,
+  "vs_hub_links": 288,
+  "footer_counts": [],
+  "footer_link_counts": {
+    "/tld/": 258,
+    "/guide/": 260,
+    "/vs/": 288
+  },
+  "templates_prefill": {
+    "dollarstore": "A dollar store or discount variety shop.",
+    "thriftstore": "A thrift or vintage resale shop. The nam",
+    "officesupplies": "An office supplies and consumables vendo",
+    "medicalsupplies": "A medical equipment and supplies busines",
+    "buildingmaterials": "A building materials and hardware dealer",
+    "franchise": "A franchise chain brand. The name should"
+  },
+  "templates_more_chip": "+250",
+  "404_status": 404,
+  "404_tld_status": 404,
+  "404_guide_status": 404,
+  "404_vs_status": 404,
+  "mcp_doc_status": 200,
+  "mcp_doc_tldcount": "860",
+  "mcp_tld_prices": {
+    "tldCount": 258,
+    "priceKeys": 258
+  },
+  "share_create": {
+    "status": 200,
+    "id": "znzSfEx-wp",
+    "has_token": true
+  },
+  "share_live_domains": {
+    "d1": true,
+    "d2": true
+  },
+  "share_revoke": {
+    "del": 200,
+    "getAfter": 410,
+    "revokedBodyHasItems": false
+  },
+  "share_revoked_ui": true,
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(250, 250, 249)",
+    "persist_after_reload": "rgb(250, 250, 249)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld/engineer": 360,
+    "/vs/business-vs-company": 360,
+    "/guide/dollarstore": 360
+  },
+  "usage_post": {
+    "days": {
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786320060446,
+    "indexnowLast": 1786255259045,
+    "pricesLastOk": 1786332384596,
+    "pricesLastFail": 1786334972331
+  },
+  "usage_days_equal": true,
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r358"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r358"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r358"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r358"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r358"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/znzSfEx-wp"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/znzSfEx-wp"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/znzSfEx-wp"
+    }
+  ]
+}
