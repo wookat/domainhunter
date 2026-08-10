@@ -257,4 +257,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "outlet", zh: "折扣特卖店", en: "Outlet & discount stores" },
   { slug: "watches", zh: "腕表钟表店", en: "Watch brands & dealers" },
   { slug: "sneakers", zh: "球鞋潮鞋店", en: "Sneaker shops" },
+  { slug: "dollarstore", zh: "一元折扣店", en: "Dollar stores" },
+  { slug: "thriftstore", zh: "二手循环店", en: "Thrift stores" },
+  { slug: "officesupplies", zh: "办公用品", en: "Office supplies" },
+  { slug: "medicalsupplies", zh: "医疗用品", en: "Medical supplies" },
+  { slug: "buildingmaterials", zh: "建材五金", en: "Building materials" },
+  { slug: "franchise", zh: "连锁加盟", en: "Franchise brands" },
 ];
