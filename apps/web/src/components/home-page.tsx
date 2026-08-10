@@ -1977,6 +1977,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个正畸齿科与隐形矫正品牌，寓意「隐形舒适、笑容可期」；气质要美而专业、去医疗恐惧又不失资质感；场景是咨询室话术、矫治器包装和两年后晒出的笑容对比图里都值得信赖。",
     en: "An orthodontics and clear aligner brand. The name should promise invisible comfort and a smile worth the journey; the vibe is beautiful yet clinical enough to trust, dissolving dental dread without losing credentials; it must reassure in the consult script, on aligner packaging, and in the two-year before-and-after smile reveal.",
   },
+  {
+    slug: "kidswear",
+    labelZh: "童装品牌",
+    labelEn: "Kidswear brand",
+    zh: "一个童装品牌与儿童服饰独立站，寓意「陪孩子长大的衣橱」；气质要童趣有品质、家长念着安心、孩子念着好玩；场景是吊牌绣标、家长群推荐和孩子指名要穿的那句「我要穿 XX」里都亲切好记。",
+    en: "A kidswear brand and children's clothing store. The name should promise a wardrobe that grows with the child; the vibe is playful yet quality-anchored, reassuring to the parent and delightful to the child; it must charm on the woven label, in parent-group referrals, and in the child's own \"I want to wear X\".",
+  },
+  {
+    slug: "cookingclass",
+    labelZh: "烹饪教室",
+    labelEn: "Cooking class",
+    zh: "一家烹饪教室与菜谱教学品牌，寓意「人人端得出那盘菜」；气质要有锅气与治愈感、零基础不怯场；场景是周末约课、学员晒出第一盘菜的朋友圈和「跟他家学的」口碑推荐里都温暖可信。",
+    en: "A cooking class and recipe brand. The name should promise that anyone can plate the dish; the vibe is sizzling yet soothing, welcoming to complete beginners; it must glow in weekend bookings, in the student's first-dish photo, and in the word-of-mouth \"I learned it from them\".",
+  },
+  {
+    slug: "souvenir",
+    labelZh: "伴手礼品牌",
+    labelEn: "Souvenir brand",
+    zh: "一个伴手礼与特产礼盒品牌，寓意「把一座城的心意带回家」；气质要有风土故事、拿得出手也自己想吃；场景是机场货架、礼盒缎带和收礼人问「这是什么」时的那句转述里都体面动人。",
+    en: "A souvenir and local gift-box brand. The name should promise a city's sentiment carried home; the vibe is terroir-rich and giftable yet craveable for oneself; it must shine on the airport shelf, on the gift-box ribbon, and in the giver's one-line answer to \"what is this?\".",
+  },
+  {
+    slug: "partyplanner",
+    labelZh: "派对策划",
+    labelEn: "Party planner",
+    zh: "一家派对策划与气球布置工作室，寓意「把每个纪念日变成一声哇」；气质要轻快上镜、自带彩带与糖果色；场景是家长群转发的九宫格、现场合照水印和「下次也找他家」的口碑里都好记好念。",
+    en: "A party planning and balloon styling studio. The name should promise every milestone turned into a collective wow; the vibe is light, photogenic and candy-colored with confetti built in; it must pop in forwarded photo grids, in the party-photo watermark, and in the \"let's book them again\".",
+  },
+  {
+    slug: "seafishing",
+    labelZh: "海钓包船",
+    labelEn: "Sea fishing charter",
+    zh: "一家海钓包船与船钓俱乐部，寓意「懂海的船长带你上大物」；气质要野性专业、压得住风浪也接得住空军自嘲；场景是凌晨码头集合的群通知、渔获合照和钓友圈的船长名号里都硬核可信。",
+    en: "A sea fishing charter and boat fishing club. The name should promise a captain who reads the water and puts you on the big one; the vibe is wild yet seamanlike, solid in a gale and good-humored on a skunked day; it must ring true in the 4 a.m. dock roll call, the trophy photo, and the angling circle's word of mouth.",
+  },
+  {
+    slug: "horseranch",
+    labelZh: "马场骑乘",
+    labelEn: "Horse ranch",
+    zh: "一家马场骑乘与度假牧场，寓意「草原、蹄声与风的远方」；气质要旷野松弛、又稳得住第一次牵马的家长；场景是朋友圈定位、草原合照水印和亲子体验课的推荐里都上镜安心。",
+    en: "A horse ranch and riding retreat. The name should promise prairie, hoofbeats and wind — the faraway within reach; the vibe is open-range and unhurried yet steady enough for a first-time rider's parent; it must look good in the geotag, the grassland photo watermark, and the family-lesson referral.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
