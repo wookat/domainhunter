@@ -371,7 +371,7 @@
     ]
   },
   "guide": {
-    "count": 362,
+    "count": 368,
     "slugs": [
       "saas",
       "ecommerce",
@@ -734,7 +734,13 @@
       "kombucha",
       "climbinggym",
       "stainedglass",
-      "minigolf"
+      "minigolf",
+      "taxidermy",
+      "cheesemaking",
+      "meadery",
+      "tufting",
+      "silversmith",
+      "falconry"
     ]
   },
   "vs": {

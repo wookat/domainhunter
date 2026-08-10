@@ -1451,4 +1451,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家迷你高尔夫球场，寓意「一杆进洞那声欢呼」；气质要零门槛的欢乐、白天亲子晚上微醺都成立；场景是商场导视让家长秒懂、约会攻略里有趣、团建报价单上正经得起来。",
     en: "A mini golf course. The name should carry the cheer when the ball drops in one; the vibe is zero-barrier joy that works for daytime families and nighttime drinks alike; it must read instantly on the mall directory, sound fun in the date-night guide, and hold up on the corporate quote.",
   },
+  "taxidermy": {
+    zh: "一家标本与自然艺术工作室，寓意「让一个生命以最美的姿态被时间留住」；气质要立在保存与致敬自然的身位、不显阴森猎奇；场景是博物馆委托方案、自然教育课堂和藏家目录上都学术可信、亲切、有艺术身价。",
+    en: "A taxidermy and natural art studio. The name should carry a life held at its most beautiful moment against time; the vibe stands on preserving and honouring nature, never the macabre; it must read scholarly in the museum proposal, warm in the nature classroom, and carry art status in the collector's catalogue.",
+  },
+  "cheesemaking": {
+    zh: "一家手工奶酪工坊，寓意「一桶奶在时间里变成一轮酪」；气质要有牧场血统与窖藏身价、不显乳品厂流水线；场景是主厨菜单的产地栏专业可信、零售柜台亲切、品鉴课海报上有风土故事。",
+    en: "An artisan cheesemaking studio. The name should carry a pail of milk becoming a wheel through time; the vibe is pasture bloodline and cellar status, never a dairy conveyor; it must read credible in the menu's provenance line, warm at the retail counter, and full of terroir on the tasting-class poster.",
+  },
+  "meadery": {
+    zh: "一家蜂蜜酒厂与蜜酒品牌，寓意「人类最古老的酒在杯子里复活」；气质要有神话血统与酒庄体面、不做糖水饮料；场景是酒标上有年头、婚礼礼赠场景吉利上口、精酿圈里有行家认同。",
+    en: "A meadery and honey wine brand. The name should carry humanity's oldest drink coming back to life in the glass; the vibe is mythic bloodline and winery dignity, never a soft drink; it must carry age on the label, ring auspicious at the wedding table, and earn respect in the craft circle.",
+  },
+  "tufting": {
+    zh: "一家簇绒（tufting）体验与手工地毯工作室，寓意「一把簇绒枪把线打成一块毛茸茸的画」；气质要毛绒绒的治愈欢乐、也留得住手艺身价；场景是打卡定位标签里可爱上口、设计师采购单上专业、成品照里好看好带。",
+    en: "A tufting experience and handmade rug studio. The name should carry a tufting gun shooting yarn into a fluffy picture; the vibe is plush, healing joy that still holds maker status; it must read cute in the geo-tag, professional on the designer's purchase order, and photogenic in the finished-rug shot.",
+  },
+  "silversmith": {
+    zh: "一家银匠与手工银饰工作室，寓意「一块银在錾子下开出花」；气质要有錾子与体温的手作血统、不显金店柜台；场景是婚戒客户眼里郑重、日常佩戴客群眼里轻盈、体验课海报上亲切。",
+    en: "A silversmith and handmade silver studio. The name should carry silver blossoming under the chasing tool; the vibe is the handmade bloodline of chisel and body heat, never a gold-shop counter; it must read solemn to the wedding couple, light to the daily wearer, and warm on the class poster.",
+  },
+  "falconry": {
+    zh: "一家猛禽体验与鹰猎文化基地，寓意「一只鹰从手臂上起飞那一刻的震撼」；气质要立在文化传承与自然教育的身位、不做马戏团；场景是亲子研学方案让家长安心、团建方案书上震撼、鹰友圈里专业可信。",
+    en: "A falconry and birds-of-prey experience. The name should carry the awe of the moment a hawk lifts off the glove; the vibe stands on heritage and nature education, never a circus; it must reassure parents on the study-trip proposal, thrill on the corporate deck, and read professional in the falconers' circle.",
+  },
 };
