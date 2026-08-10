@@ -7764,6 +7764,186 @@ const GUIDES = {
       ],
     },
   },
+  villas: {
+    tld: "villas",
+    zh: {
+      title: ".villas 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".villas 是高端度假别墅与民宿的专属后缀，适合别墅短租与度假租赁、精品民宿与庄园酒店、海外置业与别墅开发商。查看 .villas 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .villas 域名。",
+      intro:
+        ".villas 把「别墅」写进域名：度假别墅短租、精品民宿与庄园酒店、海外别墅置业与开发商用 name.villas，客人还没点进来就知道住的是独栋而非标间。它与已收录的 .rentals/.vacations/.holiday 分工清晰——.rentals 说「出租」这个动作，.vacations/.holiday 说「度假」这件事，.villas 直接说「别墅」这个产品，做高端独栋度假产品用它定位最准；巴厘岛、普吉、托斯卡纳等目的地的别墅品牌用 bali.villas 式地名组合，域名即卖点。注册局为 Identity Digital。价格是典型首年促销结构：首年约 $11（约 ¥78），续费约 $48/年（约 ¥345），长期持有按续费价预算。库存极好：目的地名、品牌词、风格词全线有货。注意两点：一是 villas 是复数，单栋别墅民宿也建议用复数后缀（语感更像品牌）；二是高端住宿决策链长，域名之外照片与预订体验才是转化关键。命名上「目的地 + .villas」（bali.villas）最主流，「品牌/风格词 + .villas」（azure.villas）适合连锁品牌。",
+      bestFor: ["度假别墅短租与代管", "精品民宿与庄园酒店", "海外置业与别墅开发商", "目的地别墅集合平台"],
+      namingTips: [
+        "「目的地 + .villas」域名即卖点，客人一眼锁定住宿类型",
+        "首年约 $11、续费约 $48/年，按续费价做长期预算",
+        "高端独栋产品用 .villas 比 .rentals 定位更准",
+        "词根别再含 villa，避免 myvilla.villas 式重复",
+      ],
+    },
+    en: {
+      title: ".villas Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".villas is the dedicated suffix for upscale vacation villas — for villa rentals and property management, boutique guesthouses and estate hotels, overseas villa developers. See live pricing and naming advice, then hunt available .villas names with AI.",
+      intro:
+        ".villas writes the property type into the address: vacation-villa rentals, boutique guesthouses, estate hotels and overseas villa developers on name.villas tell guests they're booking a standalone home, not a hotel room, before the page even loads. It divides labor cleanly with the already-listed .rentals, .vacations and .holiday — .rentals is the transaction, .vacations and .holiday are the occasion, .villas is the product itself, so upscale standalone stays position sharpest here; destination brands in Bali, Phuket or Tuscany make the domain the pitch with names like bali.villas. The registry is Identity Digital. Pricing follows the classic promo structure: about $11 first year (≈¥78) and $48/yr to renew (≈¥345), so budget on the renewal for long holds. Inventory is excellent — destinations, brand words and style words all hit. Two cautions: villas is plural, but even a single-villa property reads more brand-like on the plural suffix; and high-end stays have long decision funnels — photos and booking flow convert, the domain just opens the door. Naming: destination + .villas (bali.villas) is the mainstream shape; brand or style word + .villas (azure.villas) suits multi-property brands.",
+      bestFor: ["Vacation villa rentals & management", "Boutique guesthouses & estate hotels", "Overseas villa developers", "Destination villa marketplaces"],
+      namingTips: [
+        "Destination + .villas makes the domain the pitch",
+        "About $11 year one, $48/yr renewal — budget on the renewal",
+        "Upscale standalone stays position sharper on .villas than .rentals",
+        "Never repeat villa in the root — avoid myvilla.villas redundancy",
+      ],
+    },
+  },
+  cruises: {
+    tld: "cruises",
+    zh: {
+      title: ".cruises 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".cruises 是邮轮与游船旅行的专属后缀，适合邮轮预订与比价平台、游船包船与内河游线路商、邮轮攻略媒体与旅行社邮轮频道。查看 .cruises 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .cruises 域名。",
+      intro:
+        ".cruises 把「邮轮」直接开进域名：邮轮预订与比价平台、游船包船与内河游线路商、邮轮攻略内容站用 name.cruises，用户搜「目的地 + cruises」时域名与搜索词逐字吻合——这正是邮轮行业的真实搜索习惯（alaska cruises、river cruises）。它比已收录的 .travel/.tours 更聚焦：.travel 覆盖全旅游业且有行业资质门槛，.tours 说「跟团游」，.cruises 只说邮轮，做邮轮垂直生意用它定位最锋利。注册局为 Identity Digital。价格是典型首年促销结构：首年约 $8（约 ¥59），续费约 $45/年（约 ¥323），入门便宜但长期按续费价算账。库存极好：航线名、目的地、品牌词全线有货。注意两点：一是 cruises 是复数且 8 个字母偏长，词根务必短；二是邮轮预订多数最终落在船公司或 OTA，独立站的价值在内容与线索，域名是获客入口不是交易终点。命名上「目的地/航线 + .cruises」（alaska.cruises、nile.cruises）最主流，「品牌词 + .cruises」适合包船与高端定制。",
+      bestFor: ["邮轮预订与比价平台", "游船包船与内河游线路", "邮轮攻略与测评媒体", "旅行社邮轮频道"],
+      namingTips: [
+        "「目的地 + .cruises」与用户搜索词逐字吻合",
+        "首年约 $8、续费约 $45/年，按续费价做长期预算",
+        "邮轮垂直生意用 .cruises 比 .travel/.tours 定位更锋利",
+        "后缀 8 个字母偏长，词根控制在 4–6 字符",
+      ],
+    },
+    en: {
+      title: ".cruises Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".cruises is the dedicated suffix for cruise travel — for cruise booking and comparison platforms, charter and river-cruise operators, cruise guide media and agency cruise desks. See live pricing and naming advice, then hunt available .cruises names with AI.",
+      intro:
+        ".cruises sails the category right into the address: cruise booking and comparison platforms, charter and river-cruise operators, and cruise-guide content sites on name.cruises match real search behavior word for word — travelers genuinely type \"alaska cruises\" and \"river cruises\". It's sharper than the already-listed .travel and .tours: .travel spans the whole industry and gates registration behind credentials, .tours says guided trips, .cruises says only cruises, so cruise-vertical businesses position most precisely here. The registry is Identity Digital. Pricing follows the classic promo structure: about $8 first year (≈¥59) and $45/yr to renew (≈¥323) — cheap to start, budget on the renewal. Inventory is excellent: routes, destinations and brand words all hit. Two cautions: cruises is plural and 8 letters, so keep the root short; and most cruise bookings close on the line's site or an OTA — an independent site wins on content and leads, the domain is the acquisition door, not the checkout. Naming: destination or route + .cruises (alaska.cruises, nile.cruises) is the mainstream shape; brand + .cruises suits charters and luxury custom trips.",
+      bestFor: ["Cruise booking & comparison platforms", "Charter & river-cruise operators", "Cruise guide & review media", "Agency cruise desks"],
+      namingTips: [
+        "Destination + .cruises matches real search phrases word for word",
+        "About $8 year one, $45/yr renewal — budget on the renewal",
+        "Cruise verticals position sharper here than on .travel or .tours",
+        "The 8-letter suffix needs a root of 4–6 characters",
+      ],
+    },
+  },
+  voyage: {
+    tld: "voyage",
+    zh: {
+      title: ".voyage 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".voyage 是旅程与探索主题的品牌后缀，适合高端定制游与探险旅行品牌、旅行内容与游记媒体、帆船远航项目与品牌故事站。查看 .voyage 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .voyage 域名。",
+      intro:
+        ".voyage 卖的是「旅程」这个意象：高端定制游与探险旅行品牌、旅行内容与游记媒体、帆船远航与极地科考项目用 name.voyage，比直白的 .travel 多一层「启程与探索」的叙事感。voyage 一词英法双语通用（法语里就是「旅行」），面向欧洲与法语市场天然加分；它还是品牌叙事的好载体——产品发布、公司转型、用户成长旅程都能借「voyage」做主题站，科技公司拿它做品牌活动页并不违和。注册局为 Identity Digital。价格是典型首年促销结构：首年约 $6（约 ¥41），续费约 $47/年（约 ¥337），入门极低但续费是首年数倍，长期持有按续费价预算。库存极好：品牌词、目的地、抽象词全线有货。注意两点：一是 voyage 是单数抽象名词，适合品牌与叙事，预订平台类用 .travel/.tours 更直给；二是对纯中文受众 voyage 认知度一般，主打国内市场时要掂量。命名上「品牌词 + .voyage」（solaris.voyage）最主流，「主题词 + .voyage」（polar.voyage、wine.voyage）适合垂直线路品牌。",
+      bestFor: ["高端定制游与探险品牌", "旅行内容与游记媒体", "帆船远航与科考项目", "品牌叙事与活动主题站"],
+      namingTips: [
+        "「品牌词 + .voyage」自带启程与探索的叙事感",
+        "首年约 $6、续费约 $47/年，按续费价做长期预算",
+        "英法双语通用，面向欧洲市场天然加分",
+        "预订平台类直给用 .travel，品牌叙事才是 .voyage 的主场",
+      ],
+    },
+    en: {
+      title: ".voyage Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".voyage is the brand suffix for journeys and exploration — for luxury custom travel and expedition brands, travel storytelling media, sailing expeditions and brand narrative sites. See live pricing and naming advice, then hunt available .voyage names with AI.",
+      intro:
+        ".voyage sells the journey as an image: luxury custom travel and expedition brands, travel storytelling media, sailing and polar expedition projects on name.voyage carry a sense of departure and discovery that the plainer .travel can't match. The word works in both English and French (where voyage simply means travel), a natural bonus for European and francophone markets; it's also a strong narrative vehicle — product launches, company pivots and customer-journey campaigns all wear \"voyage\" well, so even tech brands use it for story-driven microsites without friction. The registry is Identity Digital. Pricing follows the classic promo structure: about $6 first year (≈¥41) and $47/yr to renew (≈¥337) — a very low door, several times that to stay, so budget on the renewal. Inventory is excellent: brand words, destinations and abstract words all hit. Two cautions: voyage is a singular abstract noun — great for brands and narrative, while booking platforms read more directly on .travel or .tours; and recognition among purely Chinese-speaking audiences is modest, worth weighing for domestic-first products. Naming: brand + .voyage (solaris.voyage) is the mainstream shape; theme + .voyage (polar.voyage, wine.voyage) suits vertical route brands.",
+      bestFor: ["Luxury custom travel & expedition brands", "Travel storytelling media", "Sailing & research expeditions", "Brand narrative & campaign sites"],
+      namingTips: [
+        "Brand + .voyage carries departure-and-discovery narrative built in",
+        "About $6 year one, $47/yr renewal — budget on the renewal",
+        "Works in English and French alike — a bonus for European markets",
+        "Booking platforms read more directly on .travel; .voyage is for story",
+      ],
+    },
+  },
+  limo: {
+    tld: "limo",
+    zh: {
+      title: ".limo 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".limo 是豪华专车与礼宾用车的专属后缀，适合机场接送与商务专车、婚礼与活动豪车租赁、城市礼宾包车服务。查看 .limo 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .limo 域名。",
+      intro:
+        ".limo 把「豪华专车」停进域名：机场接送与商务专车、婚礼与红毯豪车租赁、城市礼宾包车公司用 name.limo，四个字母就把服务档次说清了。它与已收录的 .taxi 分工明确——.taxi 是即叫即走的出租车，.limo 是预约制的礼宾用车，客单价与服务预期完全不同，做高端接送用 .limo 定位不会被拉低；婚庆与活动市场是它的第二主场，wedding.limo 式命名让新人搜索时一眼命中。注册局为 Identity Digital。价格是典型首年促销结构：首年约 $11（约 ¥78），续费约 $44/年（约 ¥315），长期持有按续费价预算。库存极好：城市名、品牌词、场景词全线有货，city.limo 式地名组合是本地专车公司的黄金句式。注意两点：一是 limo 是美式口语（limousine 的缩写），北美市场零违和，其他英语市场认知度略低；二是本地用车生意依赖 Google 商家资料与口碑，域名要与商家名一致以强化本地 SEO。命名上「城市 + .limo」（vegas.limo）最主流，「场景词 + .limo」（wedding.limo、airport.limo）适合垂直服务线。",
+      bestFor: ["机场接送与商务专车", "婚礼与活动豪车租赁", "城市礼宾包车公司", "豪车车队与调度平台"],
+      namingTips: [
+        "「城市 + .limo」是本地专车公司的黄金句式",
+        "首年约 $11、续费约 $44/年，按续费价做长期预算",
+        "高端预约用车用 .limo，即叫即走的定位交给 .taxi",
+        "域名与 Google 商家名保持一致，强化本地 SEO",
+      ],
+    },
+    en: {
+      title: ".limo Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".limo is the dedicated suffix for luxury car service — for airport transfers and executive rides, wedding and event limo rentals, city chauffeur companies. See live pricing and naming advice, then hunt available .limo names with AI.",
+      intro:
+        ".limo parks the service class right in the address: airport transfer and executive car services, wedding and red-carpet limo rentals, city chauffeur companies on name.limo state the tier in four letters. It divides labor cleanly with the already-listed .taxi — .taxi is hail-and-go, .limo is booked chauffeur service with a different ticket size and expectation, so upscale transfer businesses position here without being dragged down-market; weddings and events are its second home, where wedding.limo-style names hit search intent dead on. The registry is Identity Digital. Pricing follows the classic promo structure: about $11 first year (≈¥78) and $44/yr to renew (≈¥315), so budget on the renewal for long holds. Inventory is excellent: city names, brand words and occasion words all hit — city + .limo is the golden pattern for local operators. Two cautions: limo is American colloquial shorthand for limousine — frictionless in North America, slightly less recognized elsewhere; and local transport businesses live on Google Business Profiles and reviews, so keep the domain aligned with the listing name for local SEO. Naming: city + .limo (vegas.limo) is the mainstream shape; occasion + .limo (wedding.limo, airport.limo) suits vertical service lines.",
+      bestFor: ["Airport transfers & executive rides", "Wedding & event limo rentals", "City chauffeur companies", "Fleet & dispatch platforms"],
+      namingTips: [
+        "City + .limo is the golden pattern for local operators",
+        "About $11 year one, $44/yr renewal — budget on the renewal",
+        "Booked chauffeur service takes .limo; hail-and-go belongs to .taxi",
+        "Match the domain to your Google Business name for local SEO",
+      ],
+    },
+  },
+  tickets: {
+    tld: "tickets",
+    zh: {
+      title: ".tickets 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".tickets 是票务行业的专属后缀，适合演出与赛事官方票务、票务平台与二级市场、场馆与剧院直销渠道。查看 .tickets 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tickets 域名。",
+      intro:
+        ".tickets 把「买票」写进域名：演唱会与体育赛事官方票务、票务平台与二级市场、场馆与剧院直销渠道用 name.tickets，粉丝搜「活动名 + tickets」时域名与搜索词逐字吻合——这是票务行业最真实的搜索句式。它的定价策略也在替你筛选邻居：注册约 $361（约 ¥2599）且续费同价，年费门槛把投机注册挡在门外，域名本身就是「官方直销」的信任信号，假票横行的行业里这一点尤其值钱。注册局为 XYZ（从 Accent Media 收购）。库存近乎全开：活动名、场馆名、球队名大多有货。注意三点：一是高年费只适合票务是主营收入的生意，内容站、粉丝站请绕行；二是已收录的 .events 说「活动本身」，.tickets 说「交易入口」，办活动用前者、卖票用后者；三是二级票务受各国法规约束（限价、转售牌照），合规先行。命名上「场馆/球队 + .tickets」（arena.tickets）最主流，「城市 + 品类 + .tickets」适合区域票务平台。",
+      bestFor: ["演出与赛事官方票务", "票务平台与二级市场", "场馆与剧院直销渠道", "球队与俱乐部官方售票"],
+      namingTips: [
+        "「场馆/球队 + .tickets」与粉丝搜索句式逐字吻合",
+        "注册约 $361、续费同价，只适合票务主营的生意",
+        "办活动用 .events，卖票用 .tickets，分工别搞混",
+        "二级票务先过当地法规（限价与转售牌照）再上线",
+      ],
+    },
+    en: {
+      title: ".tickets Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".tickets is the dedicated suffix for the ticketing trade — for official concert and sports ticketing, ticket platforms and resale markets, venue and theater box offices. See live pricing and naming advice, then hunt available .tickets names with AI.",
+      intro:
+        ".tickets writes the transaction into the address: official concert and sports ticketing, ticket platforms and resale marketplaces, venue and theater box offices on name.tickets match the industry's most literal search phrase — fans really do type \"event + tickets\". Its pricing doubles as neighborhood screening: about $361 to register (≈¥2599) and the same to renew, a yearly bar that keeps speculators out — so the suffix itself signals \"official box office\", which is worth real money in a fraud-prone industry. The registry is XYZ (acquired from Accent Media). Inventory is nearly wide open: event names, venues and team names mostly hit. Three cautions: the high annual fee only pencils out when ticketing is the core revenue — content and fan sites should pass; the already-listed .events names the occasion while .tickets names the checkout, so host on the former and sell on the latter; and secondary ticketing is regulated in many countries (price caps, resale licenses) — clear compliance first. Naming: venue or team + .tickets (arena.tickets) is the mainstream shape; city + category + .tickets suits regional platforms.",
+      bestFor: ["Official concert & sports ticketing", "Ticket platforms & resale markets", "Venue & theater box offices", "Team & club official sales"],
+      namingTips: [
+        "Venue or team + .tickets matches fan search phrases word for word",
+        "About $361 flat per year — only for ticketing-core businesses",
+        "Host events on .events; sell seats on .tickets",
+        "Clear resale regulations (price caps, licenses) before launch",
+      ],
+    },
+  },
+  flowers: {
+    tld: "flowers",
+    zh: {
+      title: ".flowers 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".flowers 是鲜花行业的专属后缀，适合鲜花电商与订阅配送、花店与花艺工作室、婚礼花艺与批发供应链。查看 .flowers 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .flowers 域名。",
+      intro:
+        ".flowers 把「鲜花」开进域名：鲜花电商与订阅配送、本地花店与花艺工作室、婚礼花艺与鲜花批发商用 name.flowers，送花的人搜「品牌 + flowers」时域名与搜索词逐字吻合——美国最大花商之一就叫 1800flowers，这个句式在行业里根深蒂固。它比已收录的 .florist 行业指南所覆盖的通用后缀更直给：florist 说「花艺师」这个职业，flowers 说「花」这个商品，电商与配送生意用后者更贴。注册局为 XYZ（从 UNR 收购）。价格平进平出：注册约 $104（约 ¥745），续费同价——中高档年费替你过滤了域名投机者，好词库存近乎全开：花名、城市名、品牌词基本都有货。注意三点：一是年费适合有真实营收的鲜花生意，纯兴趣博客可以选更便宜的后缀；二是 7 个字母的复数后缀不短，词根务必短（send.flowers、bloom.flowers 是理想形态）；三是鲜花是强节日生意，域名要配合情人节、母亲节的投放节奏。命名上「动词/短词 + .flowers」（send.flowers）最主流，「城市 + .flowers」适合本地花店直销。",
+      bestFor: ["鲜花电商与订阅配送", "本地花店与花艺工作室", "婚礼花艺与活动布置", "鲜花批发与供应链"],
+      namingTips: [
+        "「动词/短词 + .flowers」（send.flowers）是行业黄金句式",
+        "注册约 $104、续费同价，适合有真实营收的鲜花生意",
+        "电商卖花用 .flowers，花艺师个人品牌可考虑通用后缀",
+        "后缀 7 个字母偏长，词根控制在 4–5 字符",
+      ],
+    },
+    en: {
+      title: ".flowers Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".flowers is the dedicated suffix for the floral trade — for flower e-commerce and subscription delivery, local florists and floral studios, wedding florals and wholesale supply. See live pricing and naming advice, then hunt available .flowers names with AI.",
+      intro:
+        ".flowers blooms right in the address: flower e-commerce and subscription delivery, local florists and floral studios, wedding florists and flower wholesalers on name.flowers match gift-buyer searches word for word — one of America's biggest florists is literally named 1800flowers, so the phrase is baked into the industry. It's more direct for commerce than the generic suffixes covered by the already-listed florist industry guide: florist names the profession, flowers names the product, and delivery businesses read better on the latter. The registry is XYZ (acquired from UNR). Pricing is flat: about $104 to register (≈¥745) and the same to renew — an upper-mid annual fee that filters out speculators, leaving inventory nearly wide open: flower names, cities and brand words mostly hit. Three cautions: the fee suits floral businesses with real revenue — hobby blogs should pick a cheaper suffix; the 7-letter plural suffix isn't short, so keep the root tight (send.flowers and bloom.flowers are the ideal shapes); and flowers are a holiday-spike business — time the domain's campaigns to Valentine's and Mother's Day. Naming: verb or short word + .flowers (send.flowers) is the mainstream shape; city + .flowers suits local florist direct sales.",
+      bestFor: ["Flower e-commerce & subscriptions", "Local florists & floral studios", "Wedding & event florals", "Flower wholesale & supply"],
+      namingTips: [
+        "Verb + .flowers (send.flowers) is the industry's golden pattern",
+        "About $104 flat per year — for floral businesses with real revenue",
+        "Commerce reads best on .flowers; florist personal brands can go generic",
+        "The 7-letter suffix needs a root of 4–5 characters",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
