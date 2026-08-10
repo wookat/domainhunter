@@ -22568,6 +22568,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  taxidermy: {
+    slug: "taxidermy",
+    keywords: ["标本工作室", "动物标本制作", "自然标本", "taxidermy studio", "specimen art"],
+    tlds: [
+      { tld: "com", zh: "博物馆委托与藏家订单的默认后缀，报价单与藏品目录上最稳", en: "The default suffix for museum commissions and collector orders — steadiest on the quote and the catalogue" },
+      { tld: "studio", zh: "工作室气质直给，标本艺术的手作身位零违和", en: "The studio register stated outright — zero friction for the handcrafted posture of specimen art" },
+      { tld: "art", zh: "把标本从「制作」升维到「艺术」，藏家线的身价后缀", en: "Elevating taxidermy from craft to art — the status suffix for the collector line" },
+    ],
+    zh: {
+      label: "标本工作室",
+      title: "标本工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "标本与自然艺术工作室命名指南：永生意象、博物馆叙事等思路，标本工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "标本工作室的名字要说出「让一个生命以最美的姿态被时间留住」：这门手艺站在科学与艺术的交界——博物馆的兽类展柜、自然教育课堂的鸟类标本、藏家书房里的蝴蝶盒，背后都是同一双手对解剖学、防腐化学与雕塑姿态的三重掌握，名字要先把这份「博物馆级」的严谨递出去。词库现成：标本、永生、羽、骨、时光——每一个词都带着「凝固的自然」的诗意。隐藏考点是公众观感：这门手艺天然踩在「死亡」的敏感线上，名字必须站在「保存与致敬自然」的身位，而不是猎奇——博物馆采购要学术可信、自然教育客群要亲切安心、藏家要艺术身价。误区在于阴森化：一个哥特恐怖片气质的名字会同时吓跑博物馆、家长和藏家；这门手艺卖的是对生命的敬意，不是猎奇的战利品。",
+      namingIdeas: [
+        "永生意象直给：永、恒、留、驻类词根——标本的本质是让生命停在最好的一刻，时间语法是这门手艺的核心叙事",
+        "博物馆语法借力：馆、阁、志类词根——博物学的学术血统现成可用，达尔文时代的自然志气质自带可信度",
+        "羽与骨的诗意：羽、翎、骨、蝶类词根——具体的自然意象比抽象词更有画面，也为主打品类留了暗号",
+        "匠人署名路线：以标本师本名立室——定制委托的信任在人，人名招牌是藏家线的经典语法",
+        "自然致敬转译：森、野、原类词根加保存语义——把「向自然致敬」写进名字，化解公众对这门手艺的敏感",
+      ],
+      cases: [
+        { name: "永羽阁", takeaway: "「永生」加「羽毛」加阁号：三个字同时立住时间叙事、鸟类品类与老铺身价——中文标本命名的标准结构" },
+        { name: "Deyrolle", takeaway: "巴黎两百年标本老铺的人名招牌：创始人姓氏经营成博物学的代名词——人名加年头就是最硬的信任资产" },
+        { name: "时驻标本社", takeaway: "「时间驻留」直译入名：把这门手艺的本质一句说清——社字尾缀添了工作室的亲切，不显阴森" },
+        { name: "Prey Taxidermy", takeaway: "品类词直给的西式样本：好莱坞道具与博物馆双线的洛杉矶工作室——taxidermy 一词立行业，prey 一词立锋利的专业感" },
+      ],
+      pitfalls: [
+        "阴森化命名：哥特恐怖气质会同时吓跑博物馆、家长与藏家——这门手艺卖的是对生命的敬意，不是猎奇",
+        "锁死单一物种：叫「蝶坊」就难接兽类与鸟类委托——物种留给作品线，品牌名留给整个自然",
+        "忽略公众敏感线：名字必须站在「保存与致敬」的身位——任何「战利品」气质都会招来舆论风险",
+        "太学术不近人：纯拉丁学名式的名字在自然教育课堂上无法落地——博物馆要严谨，亲子客群要亲切，名字要两头成立",
+      ],
+    },
+    en: {
+      label: "Taxidermy studios",
+      title: "How to Name a Taxidermy Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Taxidermy and natural art studio naming guide: preservation imagery, museum narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A taxidermy studio's name must say that a life is held at its most beautiful moment against time: this craft stands at the border of science and art — the mammal case in the museum, the bird specimen in the nature classroom, the butterfly box in a collector's study all come from the same hands mastering anatomy, preservation chemistry and sculptural posture at once, so the name has to hand over that museum-grade rigour first. The lexicon is ready: specimen, eternal, plume, bone and stillness — every word carries the poetry of nature paused. The hidden exam is public perception: this trade naturally walks the sensitive line of death, and the name must stand on preserving and honouring nature, never on the macabre — museum procurement wants scholarly credibility, the nature-education crowd wants warmth, and collectors want art status. The failure mode is the gothic register: a horror-film name scares off the museum, the parents and the collector in one stroke; this craft sells reverence for life, not trophies.",
+      namingIdeas: [
+        "Preservation imagery outright: eternal, still and keep roots — the essence of taxidermy is a life paused at its finest moment; the grammar of time is this craft's core narrative",
+        "Borrowing the museum grammar: cabinet, atlas and natural-history roots — the scholarly bloodline of the Darwin age carries credibility for free",
+        "The poetry of plume and bone: feather, wing, bone and butterfly roots — concrete natural imagery paints faster than abstraction, and codes the flagship category",
+        "The maker's-signature route: the studio standing on the taxidermist's own name — commissioned trust lives in a person; the name above the door is the collector line's classic grammar",
+        "Translating the homage to nature: forest, wild and field roots joined to preservation words — writing the tribute into the name defuses the public's sensitivity to the trade",
+      ],
+      cases: [
+        { name: "Yong Yu Ge (永羽阁)", takeaway: "Eternal joined to plume on a pavilion name: three characters setting the time narrative, the bird category and the old-shop status at once — the standard Chinese structure" },
+        { name: "Deyrolle", takeaway: "The two-century Paris cabinet on a founder's surname: a family name run into a synonym for natural history — a name plus years is the hardest trust asset there is" },
+        { name: "Shi Zhu (时驻标本社)", takeaway: "Time-held-still translated straight into the name: the craft's essence said in one phrase — the studio suffix adding warmth, never gloom" },
+        { name: "Prey Taxidermy", takeaway: "The Western sample of the category word outright: the Los Angeles studio running Hollywood props and museum lines — taxidermy setting the trade, prey setting the sharp professional edge" },
+      ],
+      pitfalls: [
+        "The gothic register: a horror-film name scares off the museum, the parents and the collector at once — this craft sells reverence for life, not the macabre",
+        "Locking into one species: a butterfly-house name can't take the mammal and bird commissions — leave the species to the piece, keep the whole of nature for the brand",
+        "Ignoring the public's sensitive line: the name must stand on preserving and honouring — any trophy register invites a reputation storm",
+        "Too scholarly to be warm: a pure Latin-binomial name never lands in the nature classroom — the museum wants rigour, the family crowd wants warmth, and the name must hold both",
+      ],
+    },
+  },
+  cheesemaking: {
+    slug: "cheesemaking",
+    keywords: ["奶酪工坊", "手工奶酪品牌", "芝士工作室", "cheesemaking studio", "artisan cheese"],
+    tlds: [
+      { tld: "com", zh: "餐厅供货与电商零售的默认后缀，菜单与详情页上最稳", en: "The default suffix for restaurant supply and retail — steadiest on the menu and the product page" },
+      { tld: "farm", zh: "牧场血统直给，从奶到酪的溯源叙事零解释成本", en: "The pasture bloodline stated outright — zero explanation for the milk-to-wheel provenance story" },
+      { tld: "shop", zh: "零售门店与线上商城的直白后缀，切一角带走的生意", en: "The plain suffix for the retail counter and the online store — the cut-a-wedge-to-go business" },
+    ],
+    zh: {
+      label: "奶酪工坊",
+      title: "奶酪工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "手工奶酪工坊与芝士品牌命名指南：窖藏意象、牧场叙事等思路，奶酪品牌案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "奶酪工坊的名字要说出「一桶奶在时间里变成一轮酪」的风土：欧洲每一款传奇奶酪都以村庄命名——Brie、Cheddar、Gouda 本都是地名，这门手艺的命名传统就是「地方与时间的落款」，名字要先把这份产地血统递出去。词库现成：窖、酪、乳、轮、藏——每一个字都带着洞穴陈化的奶香。隐藏考点是市场教育：在奶酪文化尚浅的市场，名字要降低陌生感——「奶酪」比「干酪」亲切、「工坊」比「厂」有手作温度；而面向餐厅主厨与老饕的高端线，名字又要有窖藏年份的身价。误区在于工业化气质：手工奶酪的溢价全在「小批量、生乳、洞藏」的反工业叙事，名字若像乳品厂流水线，就把风土卖成了原料。",
+      namingIdeas: [
+        "窖藏意象直给：窖、藏、洞、熟成类词根——奶酪的身价在陈化的时间里，窖藏语法是高端线的通行证",
+        "牧场溯源叙事：牧、原、乳、鲜类词根——从一头牛到一轮酪的链路写进名字，生乳血统自带品质背书",
+        "地名落款路线：以山谷、村庄、农庄之名立牌——Brie 与 Cheddar 的千年惯例，产地即品牌的经典语法",
+        "轮与刀的画面感：轮、切、角类词根——奶酪特有的形态语言，切开一轮的仪式感是这门生意最好的海报",
+        "亲切化转译：芝士、奶香类口语词根——奶酪文化尚浅的市场要先降低陌生感，好念好记比法语腔更值钱",
+      ],
+      cases: [
+        { name: "奶酪窖", takeaway: "品类词加窖字直给：三个字同时立住行业、陈化工艺与洞藏身价——中文奶酪命名的最短路径" },
+        { name: "Cowgirl Creamery", takeaway: "牧场女孩加乳品坊的组合：加州手工奶酪的招牌样本——cowgirl 的西部亲切感把手作叙事讲活了" },
+        { name: "青原乳坊", takeaway: "「青青草原」缩写加乳坊：从牧草到奶香的链路两字说清——坊字尾缀立住手作温度，不显工厂" },
+        { name: "Neal's Yard Dairy", takeaway: "伦敦巷名加 dairy 的地名落款：一条小巷经营成英国奶酪的圣地——地址即品牌的教科书" },
+      ],
+      pitfalls: [
+        "工业化气质：名字像乳品厂流水线就毁掉手工溢价——小批量与洞藏的反工业叙事才是身价所在",
+        "锁死单一奶源：叫「羊酪坊」就难接牛乳与水牛乳线——奶源留给产品标签，品牌名留给整个奶香",
+        "法语腔滥用：满是断音符的名字在本地市场念不出口——风土可以借鉴欧洲，名字要过本地舌头",
+        "忽略餐厅渠道：主厨采购是手工奶酪最稳的现金流，名字在菜单的产地栏里要专业可信——太可爱的名字上不了米其林的菜单",
+      ],
+    },
+    en: {
+      label: "Cheesemaking studios",
+      title: "How to Name a Cheesemaking Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Artisan cheesemaking and cheese brand naming guide: cave-aging imagery, pasture provenance, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A cheesemaker's name must say the terroir of a pail of milk becoming a wheel through time: every legendary European cheese is named after a village — Brie, Cheddar and Gouda were all places first, so this craft's naming tradition is literally the signature of a place and a time, and the name has to hand over that provenance bloodline first. The lexicon is ready: cave, cellar, wheel, curd and cream — every word carries the milky air of the aging room. The hidden exam is market education: where cheese culture is young, the name must lower the strangeness — warm words beat technical ones, and a workshop register beats a factory register; yet the premium line facing chefs and connoisseurs needs the status of a vintage on the cellar shelf. The failure mode is the industrial register: the artisan premium lives entirely in the small-batch, raw-milk, cave-aged counter-industrial narrative, and a name that sounds like a dairy conveyor sells terroir as raw material.",
+      namingIdeas: [
+        "Cave-aging imagery outright: cave, cellar and age roots — the wheel's status is earned in aging time; the cellar grammar is the premium line's passport",
+        "The pasture provenance narrative: meadow, dairy and raw-milk roots — the chain from one cow to one wheel written into the name; the raw-milk bloodline endorses quality for free",
+        "The place-signature route: the brand standing on a valley, village or farm name — the millennial convention of Brie and Cheddar; place-as-brand is the classic grammar",
+        "The picture of wheel and knife: wheel, wedge and cut roots — cheese's own visual language; the ceremony of cutting a wheel open is this trade's best poster",
+        "Translating for warmth: colloquial cheese and cream roots — young cheese markets need strangeness lowered first; easy to say beats a French accent",
+      ],
+      cases: [
+        { name: "Nai Lao Jiao (奶酪窖)", takeaway: "The category word joined to cellar: three characters setting the trade, the aging craft and the cave status at once — the shortest Chinese path" },
+        { name: "Cowgirl Creamery", takeaway: "Cowgirl joined to creamery: California's flagship artisan sample — the Western warmth of cowgirl bringing the handmade story alive" },
+        { name: "Qing Yuan (青原乳坊)", takeaway: "Green pasture abbreviated onto a dairy-workshop ending: the chain from grass to cream said in two characters — the workshop suffix holding handmade warmth, never factory" },
+        { name: "Neal's Yard Dairy", takeaway: "A London alley name signed onto dairy: one small yard run into the holy site of British cheese — the textbook of address-as-brand" },
+      ],
+      pitfalls: [
+        "The industrial register: a dairy-conveyor name destroys the artisan premium — the counter-industrial narrative of small batches and cave aging is where the status lives",
+        "Locking into one milk: a goat-cheese name can't take the cow and buffalo lines — leave the milk to the label, keep the whole creamery for the brand",
+        "Overdoing the French accent: a name full of accent marks can't be said out loud in the local market — borrow Europe's terroir, but the name must pass the local tongue",
+        "Forgetting the restaurant channel: chef procurement is artisan cheese's steadiest cash flow, and the name must read credible in the menu's provenance line — a too-cute name never makes the Michelin menu",
+      ],
+    },
+  },
+  meadery: {
+    slug: "meadery",
+    keywords: ["蜂蜜酒厂", "蜜酒品牌", "蜂蜜发酵酒", "meadery", "honey wine"],
+    tlds: [
+      { tld: "com", zh: "酒类电商与渠道分销的默认后缀，酒标与详情页上最稳", en: "The default suffix for bottle-shop e-commerce and distribution — steadiest on the label and the product page" },
+      { tld: "wine", zh: "酒类身份直给，蜜酒作为「蜂蜜之酒」的品类归位", en: "The drinks identity stated outright — filing mead where it belongs, as the wine of honey" },
+      { tld: "bar", zh: "品鉴室与蜜酒吧线的直白后缀，到店体验的入口", en: "The plain suffix for the tasting room and mead bar line — the door to the on-site pour" },
+    ],
+    zh: {
+      label: "蜂蜜酒厂",
+      title: "蜂蜜酒厂怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "蜂蜜酒厂与蜜酒品牌命名指南：蜂巢意象、神话叙事等思路，蜜酒品牌案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "蜂蜜酒厂的名字要说出「人类最古老的酒在杯子里复活」：蜜酒比葡萄酒和啤酒都古老——维京人的宴会厅、北欧神话的诗之蜜酒、英语「蜜月」（honeymoon）的词源，全是这瓶酒的文化资产，名字要先把这份「最古老又最新鲜」的双重身位递出去。词库现成：蜜、蜂、巢、酿、金——每一个字都带着琥珀色的甜香。隐藏考点是品类教育：蜜酒在多数市场是「没听过的新东西」，名字要一秒说清「蜂蜜酿的酒」，同时借神话与蜜月的叙事把陌生感转成好奇心；精酿酒客要圈内认同、婚礼与礼赠场景要吉利上口。误区在于甜腻化：把名字做成糖水饮料，就丢掉了「酒」的身价——蜜酒的高端线是干型与桶陈，名字要留得住酒庄的体面。",
+      namingIdeas: [
+        "蜂巢意象直给：蜜、蜂、巢、金类词根——琥珀色的甜香是品类的招牌，蜂巢六边形还是现成的视觉资产",
+        "神话叙事借力：北欧诗之蜜酒、维京宴饮类意象——最古老的酒配最史诗的名字，故事线现成可讲",
+        "蜜月语法转译：蜜月词源直接入名——婚礼与礼赠场景的吉利话，甜蜜口彩是中文市场的天然接口",
+        "酒庄身价路线：庄、窖、号类词根——蜜酒的高端线是干型与桶陈，酒庄语法留住「酒」的体面",
+        "花源落款：以蜜源花田立名——荔枝蜜、椴树蜜、百花蜜的风土差异写进名字，单一花源就是蜜酒的单一麦芽",
+      ],
+      cases: [
+        { name: "金巢酒庄", takeaway: "「金色蜂巢」加酒庄尾缀：四个字同时立住蜜的颜色、蜂的血统与酒的身价——中文蜜酒命名的标准结构" },
+        { name: "Gosnells", takeaway: "伦敦蜜酒复兴的人名招牌：创始人姓氏配现代极简酒标——把千年老酒做成年轻人的新饮料，名字反而要新" },
+        { name: "蜜月酿", takeaway: "「蜜月」词源直取：honeymoon 本就源自新婚喝蜜酒的习俗——婚礼渠道的天选名字，吉利话自带流量" },
+        { name: "Skål Meadery", takeaway: "北欧祝酒词 skål 加品类词：维京宴饮的文化血统一词接通——品类教育与圈内认同一次完成" },
+      ],
+      pitfalls: [
+        "甜腻化命名：糖水饮料气质丢掉「酒」的身价——蜜酒的高端线是干型与桶陈，名字要留住酒庄体面",
+        "锁死甜型印象：叫「甜蜜蜜」就难卖干型与气泡线——甜度留给酒标，品牌名留给整个蜜源",
+        "神话腔过重：满是古北欧字符的名字在本地渠道念不出口——借维京的故事，用本地的舌头",
+        "忽略品类教育：蜜酒是多数人没听过的品类，名字若不带蜜与酒的线索，货架上三秒滑过——新品类的名字先要会自我介绍",
+      ],
+    },
+    en: {
+      label: "Meaderies",
+      title: "How to Name a Meadery: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Meadery and honey wine brand naming guide: hive imagery, Norse mythology narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A meadery's name must say humanity's oldest drink coming back to life in the glass: mead predates both wine and beer — the Viking feast hall, the mead of poetry in Norse myth and the very etymology of honeymoon are all this bottle's cultural assets, so the name has to hand over that oldest-yet-newest double posture first. The lexicon is ready: honey, hive, comb, brew and gold — every word carries an amber sweetness. The hidden exam is category education: in most markets mead is something nobody has heard of, so the name must say wine made from honey in one second while turning strangeness into curiosity through the myth and honeymoon narratives; the craft crowd wants insider respect, and the wedding and gifting scenes want an auspicious ring. The failure mode is the syrupy register: a soft-drink name throws away the status of a real drink — mead's premium line is dry and barrel-aged, and the name must keep the dignity of a winery.",
+      namingIdeas: [
+        "Hive imagery outright: honey, hive, comb and gold roots — the amber sweetness is the category's signboard, and the hexagon is a ready-made visual asset",
+        "Borrowing the myth narrative: the mead of poetry and the Viking feast — the oldest drink deserves the most epic name; the story line comes pre-written",
+        "Translating the honeymoon grammar: the etymology taken straight into the name — the wedding and gifting scenes' auspicious hook, sweetness with built-in occasion",
+        "The winery-status route: estate, cellar and house roots — mead's premium line is dry and barrel-aged; the winery grammar keeps the dignity of a real drink",
+        "The floral-source signature: the brand standing on the nectar field — lychee, linden and wildflower terroirs written into the name; single-origin nectar is mead's single malt",
+      ],
+      cases: [
+        { name: "Jin Chao (金巢酒庄)", takeaway: "Golden hive joined to an estate ending: four characters setting the honey's colour, the bee's bloodline and the drink's status at once — the standard Chinese structure" },
+        { name: "Gosnells", takeaway: "The London mead revival on a founder's surname: a family name with a minimal modern label — remaking a millennial drink for the young, where the name itself had to be new" },
+        { name: "Mi Yue Niang (蜜月酿)", takeaway: "The honeymoon etymology taken outright: the word itself descends from newlyweds drinking mead — the wedding channel's chosen name, an auspicious phrase with built-in traffic" },
+        { name: "Skål Meadery", takeaway: "The Norse toast joined to the category word: the Viking feast bloodline connected in one word — category education and insider respect settled at once" },
+      ],
+      pitfalls: [
+        "The syrupy register: a soft-drink name throws away the drink's status — mead's premium line is dry and barrel-aged; keep the winery's dignity in the name",
+        "Locking into sweetness: a sugar-sweet name can't sell the dry and sparkling lines — leave the sweetness scale to the label, keep the whole nectar field for the brand",
+        "Myth register too heavy: a name full of Old Norse characters can't be said out loud in the local shop — borrow the Viking story, use the local tongue",
+        "Skipping category education: mead is a drink most people have never heard of, and a name without a honey or wine clue slides past in three seconds on the shelf — a new category's name must introduce itself first",
+      ],
+    },
+  },
+  tufting: {
+    slug: "tufting",
+    keywords: ["簇绒工作室", "tufting体验店", "手工地毯工坊", "tufting studio", "rug making"],
+    tlds: [
+      { tld: "com", zh: "体验预约与定制订单的默认后缀，预约页与详情页上最稳", en: "The default suffix for bookings and custom orders — steadiest on the booking page and the product page" },
+      { tld: "studio", zh: "工作室气质直给，手作体验业态的标准归类", en: "The studio register stated outright — the standard filing for the hands-on workshop trade" },
+      { tld: "fun", zh: "体验课线的欢乐直给，周末打卡客群零违和", en: "The class line's joy stated outright — zero friction for the weekend check-in crowd" },
+    ],
+    zh: {
+      label: "簇绒工作室",
+      title: "簇绒工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "簇绒（tufting）体验与手工地毯工作室命名指南：绒毛意象、枪与线叙事等思路，案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "簇绒工作室的名字要说出「一把簇绒枪把线打成一块毛茸茸的画」：tufting 是近几年从社交平台长出来的新手作业态——年轻人花一个下午，把自己的涂鸦打成一块地毯抱回家，这门生意的本质是「可以带走的快乐」，名字要先把这份毛绒绒的治愈感递出去。词库现成：绒、毯、线、绵、茸——每一个字摸上去都是软的。隐藏考点是双线业务：体验课线要出片、要好打卡，名字在小红书的定位标签里要可爱上口；定制线接商用地毯与艺术挂毯，名字在设计师的采购单上又要有手作身价。误区在于把自己锁死在「体验店」：tufting 的热度会退潮，能沉淀的是「手工地毯工作室」的手艺身位——名字要给从网红店到手艺铺的转身留门。",
+      namingIdeas: [
+        "绒毛意象直给：绒、茸、绵、软类词根——毛绒绒的治愈感是这门生意的第一卖点，名字先要摸起来是软的",
+        "枪与线的动作感：枪、打、织类词根——簇绒枪突突突的爽感是体验课的招牌，动作入名自带现场感",
+        "毯上画布转译：毯、画、图类词根——把「地毯是能踩的画」写进名字，艺术身位为定制线抬价",
+        "打卡语法借力：可爱叠词与口语词根——体验课的流量在社交平台，名字要在定位标签里好念好搜",
+        "工坊身价路线：坊、社、所类词根——网红热度会退潮，手艺铺的身位能沉淀——名字给转身留门",
+      ],
+      cases: [
+        { name: "绒绒社", takeaway: "叠词加社字尾缀：三个字把毛绒触感与社群感一次立住——体验课线的打卡友好样本，念一遍就记住" },
+        { name: "Tuft the World", takeaway: "品类词加宏大宾语的反差：把小众手作说成一场运动——费城簇绒材料与教学品牌的圈内标准名" },
+        { name: "一枪一毯", takeaway: "工具加成品的对仗结构：四个字说清体验全流程——「一把枪打出一块毯」的爽感直接入名" },
+        { name: "Rug Artisan", takeaway: "品类词加匠人身位：从体验热度沉淀到定制手艺的转身样本——artisan 一词为设计师采购单抬足身价" },
+      ],
+      pitfalls: [
+        "锁死体验店身位：tufting 热度会退潮，名字若只剩「网红打卡」就没有第二幕——给手工地毯工作室的转身留门",
+        "英文名不落地：直接叫 tufting 的店在本地搜索里吃亏——品类词要配一个好念的本地名",
+        "太幼齿失了定制线：满是儿语的名字上不了设计师的采购单——体验课要可爱，定制线要手艺身价，两头都要成立",
+        "忽略出片属性：体验课的获客全靠社交平台的成品照，名字在定位标签与话题里要好搜好带——拗口的名字连打卡都懒得带",
+      ],
+    },
+    en: {
+      label: "Tufting studios",
+      title: "How to Name a Tufting Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Tufting and handmade rug studio naming guide: plush imagery, gun-and-yarn narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A tufting studio's name must say a tufting gun shooting yarn into a fluffy picture: tufting is the workshop trade that grew straight out of the social feed — young people spend an afternoon turning their own doodle into a rug they carry home, so the essence of the business is joy you can take with you, and the name has to hand over that plush, healing softness first. The lexicon is ready: tuft, plush, yarn, pile and fluff — every word feels soft to the touch. The hidden exam is the double line: the class line lives on photogenic check-ins, so the name must read cute and searchable in the geo-tag; the custom line takes commercial rugs and art tapestries, so the same name must carry maker status on a designer's purchase order. The failure mode is locking into the pop-up register: the tufting hype will ebb, and what settles is the standing of a handmade rug studio — the name must leave a door open for the turn from viral shop to craft house.",
+      namingIdeas: [
+        "Plush imagery outright: tuft, fluff, pile and soft roots — the fuzzy healing feel is the first selling point; the name should feel soft before it means anything",
+        "The motion of gun and yarn: gun, punch and weave roots — the rat-a-tat satisfaction of the tufting gun is the class line's signboard; motion in the name carries the room's energy",
+        "Translating the walkable canvas: rug, canvas and picture roots — a rug is a painting you can step on, written into the name; the art posture prices up the custom line",
+        "Borrowing the check-in grammar: cute doubled syllables and colloquial roots — the class line's traffic lives on the feed; the name must read easy in the geo-tag and the hashtag",
+        "The craft-house status route: studio, works and atelier roots — hype ebbs, craft standing settles; the name should leave the turn open",
+      ],
+      cases: [
+        { name: "Rong Rong She (绒绒社)", takeaway: "A doubled soft syllable on a club ending: three characters setting the plush touch and the community feel at once — the check-in-friendly sample, memorised in one hearing" },
+        { name: "Tuft the World", takeaway: "The category word against a grand object: a niche craft declared a movement — the insider-standard name of the Philadelphia tufting supply and teaching brand" },
+        { name: "Yi Qiang Yi Tan (一枪一毯)", takeaway: "Tool paired against product: four characters covering the whole experience — one gun, one rug, the satisfaction written straight into the name" },
+        { name: "Rug Artisan", takeaway: "The category word joined to maker status: the sample of settling from class hype into custom craft — artisan pricing the name up for the designer's purchase order" },
+      ],
+      pitfalls: [
+        "Locking into the pop-up register: the tufting hype will ebb, and a name that is only a viral check-in has no second act — leave the door open for the handmade rug studio",
+        "An English-only name that never lands: a shop called just tufting loses the local search — the category word needs a local name that rolls off the tongue",
+        "Too babyish for the custom line: a name of nursery talk never makes the designer's purchase order — the class line wants cute, the custom line wants craft status, and the name must hold both",
+        "Forgetting the photo economy: the class line's acquisition runs entirely on finished-rug photos in the feed, so the name must search and tag cleanly — a clumsy name doesn't even get tagged",
+      ],
+    },
+  },
+  silversmith: {
+    slug: "silversmith",
+    keywords: ["银匠工作室", "手工银饰", "银器定制", "silversmith studio", "handmade silver"],
+    tlds: [
+      { tld: "com", zh: "定制委托与电商销售的默认后缀，详情页与藏家目录上最稳", en: "The default suffix for commissions and e-commerce — steadiest on the product page and the collector's catalogue" },
+      { tld: "studio", zh: "工作室气质直给，手作银器的匠人身位零违和", en: "The studio register stated outright — zero friction for the maker posture of handwrought silver" },
+      { tld: "shop", zh: "银饰零售与体验课预约的直白后缀，小店感亲切", en: "The plain suffix for silver retail and class bookings — the friendly small-shop register" },
+    ],
+    zh: {
+      label: "银匠工作室",
+      title: "银匠工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "银匠与手工银饰工作室命名指南：錾刻意象、月光叙事等思路，银匠品牌案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "银匠工作室的名字要说出「一块银在錾子下开出花」的手上功夫：银器是离体温最近的金属手艺——从苗银的百年錾花、藏银的吉祥八宝，到都市工作室的一人一戒体验课，这门手艺的谱系既有民族的深度又有当代的亲切，名字要先把这份「錾子与体温」的手作血统递出去。词库现成：银、錾、月、辉、雪——银的白光在中文里全是现成的诗。隐藏考点是三线业务：定制婚戒与传家银器走高客单信任线、银饰零售走日常佩戴线、亲手做一枚戒指的体验课走周末流量线——名字要在婚戒客户眼里郑重，在日常客群眼里轻盈，在体验课海报上亲切。误区在于金店气质：手工银的溢价在「一錾一锤的独一件」，名字若像连锁金店的柜台，就把手艺卖成了按克计价的贵金属。",
+      namingIdeas: [
+        "錾刻意象直给：錾、锤、刻类词根——银匠的核心动作入名，一錾一锤的手工过程自带独一件背书",
+        "月光叙事转译：月、辉、霜、雪类词根——银的白光是中文里现成的诗，月色语法为品牌添了温柔的高级感",
+        "民族谱系借力：苗银、藏银的纹样与吉祥语汇——百年錾花的手艺血统现成可讲，民族深度就是身价",
+        "匠人署名路线：以银匠本名立室——定制婚戒的信任在人，人名招牌是传家件的经典语法",
+        "体温语法：戒、镯、链加亲手做的动作词——「亲手打一枚戒指」的体验课是获客入口，名字要留一扇亲切的门",
+      ],
+      cases: [
+        { name: "银月坊", takeaway: "银与月的意象叠加加坊字尾缀：三个字立住材质、诗意与手作身位——中文银饰命名的标准结构" },
+        { name: "Georg Jensen", takeaway: "丹麦银匠的人名招牌：一个世纪前的银匠署名经营成国宝品牌——人名加手艺年头是传家件最硬的信任" },
+        { name: "一錾银社", takeaway: "「一錾一锤」缩写加社字：把手工过程直接写进名字——独一件的叙事两个字说清，体验课线也亲切" },
+        { name: "Wolf Circus", takeaway: "温哥华手工银饰的反差命名：wolf 的野性加 circus 的玩心——不提银字却立住了年轻线的先锋气质，日常佩戴客群的样本" },
+      ],
+      pitfalls: [
+        "金店柜台气质：按克计价的连锁感毁掉手作溢价——手工银卖的是一錾一锤的独一件，不是贵金属",
+        "锁死单一品类：叫「婚戒工坊」就难接日常银饰与银器线——品类留给产品线，品牌名留给整块银",
+        "民族符号滥用：借苗银藏银的纹样却无手艺传承，圈内人一眼看穿——血统要真，名字才立得住",
+        "忽略体验课入口：亲手做戒指是最好的获客与婚戒转化前站，名字太高冷会关上这扇门——郑重与亲切要两头成立",
+      ],
+    },
+    en: {
+      label: "Silversmith studios",
+      title: "How to Name a Silversmith Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Silversmith and handmade silver studio naming guide: chasing-and-hammer imagery, moonlight narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A silversmith's name must say the handwork of silver blossoming under the chasing tool: silver is the metal craft closest to body warmth — from the century-old chased florals of Miao silver and the auspicious eight treasures of Tibetan silver to the make-your-own-ring class in a city studio, this craft's lineage runs ethnic-deep and modern-warm at once, so the name has to hand over that bloodline of chisel and body heat first. The lexicon is ready: silver, moon, frost, sheen and snow — silver's white light is ready-made poetry in any language. The hidden exam is the three-line business: custom wedding bands and heirloom pieces run on high-ticket trust, everyday silver runs on light wearability, and the make-a-ring class runs on weekend traffic — the name must read solemn to the wedding couple, light to the daily wearer, and warm on the class poster. The failure mode is the jewellery-chain counter: the handmade premium lives in the one-of-one struck blow by blow, and a name like a gold-shop counter sells the craft as metal priced by the gram.",
+      namingIdeas: [
+        "Chasing imagery outright: chase, hammer and strike roots — the smith's core motion named directly; the blow-by-blow process endorses the one-of-one for free",
+        "Translating the moonlight narrative: moon, sheen, frost and snow roots — silver's white light is ready-made poetry; the lunar grammar adds a gentle, elevated register",
+        "Borrowing the ethnic lineage: the chased florals of Miao silver and auspicious motifs — a century of craft bloodline pre-written; ethnic depth is status",
+        "The maker's-signature route: the studio standing on the smith's own name — wedding-band trust lives in a person; the signature is the heirloom line's classic grammar",
+        "The body-warmth grammar: ring, cuff and chain roots joined to make-it-yourself verbs — the forge-your-own-ring class is the acquisition door; keep a warm entrance in the name",
+      ],
+      cases: [
+        { name: "Yin Yue Fang (银月坊)", takeaway: "Silver layered on moon with a workshop ending: three characters setting the material, the poetry and the maker posture at once — the standard Chinese structure" },
+        { name: "Georg Jensen", takeaway: "The Danish smith's name above the door: a century-old signature run into a national treasure — a name plus craft years is the heirloom line's hardest trust" },
+        { name: "Yi Zan Yin She (一錾银社)", takeaway: "One-chisel-one-hammer abbreviated onto a club ending: the handmade process written straight into the name — the one-of-one narrative said in two characters, warm enough for the class line" },
+        { name: "Wolf Circus", takeaway: "Vancouver's contrast play: the wildness of wolf against the play of circus — no silver word at all, yet the young line's edge stands; the sample for the everyday-wear crowd" },
+      ],
+      pitfalls: [
+        "The gold-counter register: a priced-by-the-gram chain feel destroys the handmade premium — handwrought silver sells the one-of-one, not the metal",
+        "Locking into one category: a wedding-band name can't take the everyday and hollowware lines — leave the category to the product line, keep the whole ingot for the brand",
+        "Borrowing ethnic motifs without the lineage: insiders see through Miao and Tibetan styling with no real inheritance in one glance — the bloodline must be real for the name to stand",
+        "Forgetting the class-line door: making a ring by hand is the best funnel into the wedding commission, and a too-aloof name closes it — solemn and warm must both hold",
+      ],
+    },
+  },
+  falconry: {
+    slug: "falconry",
+    keywords: ["猛禽体验基地", "鹰猎文化", "猎鹰表演", "falconry experience", "birds of prey"],
+    tlds: [
+      { tld: "com", zh: "体验预约与团建报价的默认后缀，预约页与方案书上最稳", en: "The default suffix for bookings and corporate quotes — steadiest on the booking page and the proposal" },
+      { tld: "club", zh: "会员制飞行体验与鹰友社群的圈层归类", en: "The membership filing for flight experiences and the falconers' circle" },
+      { tld: "wiki", zh: "鹰猎文化科普与猛禽保育内容站的知识后缀", en: "The knowledge suffix for falconry heritage and raptor conservation content" },
+    ],
+    zh: {
+      label: "猛禽体验基地",
+      title: "猛禽体验基地怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "猛禽体验与鹰猎文化基地命名指南：飞羽意象、千年鹰猎叙事等思路，案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "猛禽体验基地的名字要说出「一只鹰从手臂上起飞那一刻的震撼」：鹰猎是被联合国教科文组织列入人类非遗的千年技艺——从草原上的金雕猎手到英式庄园的猎鹰学校，今天它转型为猛禽互动体验、飞行表演与保育教育，客群是亲子研学、团建与摄影爱好者，名字要先把这份「与猛禽对视」的敬畏感递出去。词库现成：鹰、隼、翔、猎、羽——每一个字都带着风声。隐藏考点是身位平衡：这门生意站在「体验」与「保育」的双重身位上——名字太娱乐会像马戏团，招来动物福利的质疑；太学术又失了体验的燃点。正确姿势是「文化传承 + 自然教育」：让家长觉得是研学、让团建客户觉得震撼、让鹰友觉得专业。误区在于猛兽园气质：猛禽的魅力在「野性被尊重」，不在「猛兽被驯服」。",
+      namingIdeas: [
+        "飞羽意象直给：鹰、隼、翔、掠类词根——猛禽起飞的画面入名，风声与爪影就是这门体验的招牌",
+        "千年鹰猎叙事：猎、驯、鹰师类词根——人类非遗的文化血统现成可讲，草原与庄园的谱系都是故事",
+        "对视语法转译：目、瞳、锐类词根——与猛禽对视的震撼是体验的核心记忆点，眼神写进名字自带锋利",
+        "保育身位路线：护、巢、栖类词根——猛禽保育与自然教育的身位让家长安心，也回应动物福利的审视",
+        "御风词库：风、云、空、峰类词根——猛禽的领地在天上，天空语法为基地添了辽阔的气场",
+      ],
+      cases: [
+        { name: "御风鹰堡", takeaway: "「御风」加「鹰堡」：四个字立住飞行的气势与基地的体量——中文猛禽体验命名的标准结构，团建方案书上有分量" },
+        { name: "The Falconry Centre", takeaway: "英式直给的品类词命名：格洛斯特郡老牌猛禽中心——centre 一词立住机构感，研学与保育的双身位现成" },
+        { name: "隼目营地", takeaway: "「隼的眼睛」加营地尾缀：对视的锋利入名——摄影客群与青少年研学两线都接得住，锐利又不凶悍" },
+        { name: "SkyFalconry", takeaway: "sky 加品类词的合成：把「天空课堂」一词说清——体验预约类目的直白样本，搜索友好" },
+      ],
+      pitfalls: [
+        "马戏团气质：太娱乐的名字招来动物福利质疑——猛禽的魅力在野性被尊重，不在猛兽被驯服",
+        "凶悍化过头：满是「血爪、猎杀」的名字吓退亲子研学线——震撼要有，狩猎腔要收，家长的安心是门票的一半",
+        "锁死单一鸟种：叫「金雕基地」就难接隼、鸮的展示线——鸟种留给项目表，品牌名留给整片天空",
+        "忽略合规身位：猛禽饲养展示有严格许可门槛，名字与文案要立在「持证保育与文化传承」上——野味气质是监管红线",
+      ],
+    },
+    en: {
+      label: "Falconry experiences",
+      title: "How to Name a Falconry Experience: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Falconry and birds-of-prey experience naming guide: flight imagery, millennial falconry heritage, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A falconry experience's name must say the awe of the moment a hawk lifts off the glove: falconry is a millennial art on UNESCO's intangible heritage list — from golden-eagle hunters on the steppe to falconry schools on English estates, today it lives on as raptor encounters, flight displays and conservation education, serving school trips, corporate days and photographers, so the name has to hand over that eye-to-eye reverence with a bird of prey first. The lexicon is ready: hawk, falcon, soar, talon and plume — every word carries the sound of wind. The hidden exam is the posture balance: this trade stands on experience and conservation at once — too entertaining and the name reads circus, inviting welfare scrutiny; too scholarly and the thrill dies. The right stance is heritage plus nature education: study-trip credible to parents, breathtaking to the corporate buyer, professional to the falconers' circle. The failure mode is the beast-park register: a raptor's magic is wildness respected, never a beast tamed.",
+      namingIdeas: [
+        "Flight imagery outright: hawk, falcon, soar and swoop roots — the lift-off picture named directly; the wind and the shadow of the wing are this experience's signboard",
+        "The millennial falconry narrative: hunt, mews and falconer roots — the UNESCO heritage bloodline pre-written; the steppe and the estate are both ready stories",
+        "Translating the eye-contact grammar: eye, gaze and keen roots — meeting a raptor's stare is the experience's core memory; the gaze written into the name carries its own edge",
+        "The conservation-posture route: guard, nest and roost roots — the raptor-conservation stance reassures parents and answers the welfare gaze at once",
+        "The wind-riding lexicon: wind, sky, cloud and peak roots — a raptor's territory is the open air; the sky grammar gives the grounds their sweep",
+      ],
+      cases: [
+        { name: "Yu Feng Ying Bao (御风鹰堡)", takeaway: "Riding-the-wind joined to hawk castle: four characters setting the sweep of flight and the weight of the grounds — carries authority on the corporate proposal" },
+        { name: "The Falconry Centre", takeaway: "The English category word stated outright: the Gloucestershire institution — centre setting the institutional register, study-trip and conservation postures pre-filed" },
+        { name: "Sun Mu (隼目营地)", takeaway: "The falcon's eye on a camp ending: the sharpness of the stare named — holding both the photographer line and the youth study line, keen without menace" },
+        { name: "SkyFalconry", takeaway: "Sky fused to the category word: the classroom in the open air said in one word — the plain search-friendly sample for the booking category" },
+      ],
+      pitfalls: [
+        "The circus register: a too-entertaining name invites welfare scrutiny — a raptor's magic is wildness respected, never a beast tamed",
+        "Overdone ferocity: a name of blood and kill scares off the school-trip line — keep the awe, drop the hunting growl; a parent's peace of mind is half the ticket",
+        "Locking into one species: a golden-eagle name can't take the falcon and owl displays — leave the species to the programme, keep the whole sky for the brand",
+        "Ignoring the licence posture: keeping and displaying raptors sits behind strict permits, and the name and copy must stand on licensed conservation and heritage — any wild-trade whiff is a regulatory red line",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
