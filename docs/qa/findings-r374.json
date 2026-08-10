@@ -1,0 +1,910 @@
+{
+  "sitemap_loc_samples": [
+    880,
+    880,
+    880
+  ],
+  "sitemap_dup_locs": 0,
+  "sitemap_cat_counts": {
+    "tld": 282,
+    "guide": 278,
+    "vs": 312,
+    "core": 8
+  },
+  "sitemap_vs_counts_json": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "llms_counts": {
+    "tld": 282,
+    "guide": 278,
+    "vs": 312
+  },
+  "llms_vs_sitemap_equal": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "robots": {
+    "status": 200,
+    "has_sitemap": true,
+    "gptbot": true
+  },
+  "seo_new_pages": {
+    "/guide/kidswear": {
+      "status": 200,
+      "title": "童装品牌与儿童服饰独立站怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/kidswear",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 118672
+    },
+    "/guide/kidswear?lang=en": {
+      "status": 200,
+      "title": "How to Name a Kidswear Brand or Children's Clothing Store: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/kidswear?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 120409
+    },
+    "/guide/seafishing": {
+      "status": 200,
+      "title": "海钓包船与船钓俱乐部怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/seafishing",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 118439
+    },
+    "/guide/seafishing?lang=en": {
+      "status": 200,
+      "title": "How to Name a Sea Fishing Charter or Boat Fishing Club: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/seafishing?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 120156
+    },
+    "/tld/singles": {
+      "status": 200,
+      "title": ".singles 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/singles",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 138105
+    },
+    "/tld/singles?lang=en": {
+      "status": 200,
+      "title": ".singles Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/singles?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 138969
+    },
+    "/tld/casa": {
+      "status": 200,
+      "title": ".casa 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/casa",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 138281
+    },
+    "/tld/casa?lang=en": {
+      "status": 200,
+      "title": ".casa Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/casa?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 139379
+    },
+    "/vs/clothing-vs-fashion": {
+      "status": 200,
+      "title": ".clothing 和 .fashion 怎么选：卖衣服的品类与说时尚的概念 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/clothing-vs-fashion",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 126035
+    },
+    "/vs/clothing-vs-fashion?lang=en": {
+      "status": 200,
+      "title": ".clothing vs .fashion: The Garments or the Concept | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/clothing-vs-fashion?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 126283
+    },
+    "/vs/horse-vs-pet": {
+      "status": 200,
+      "title": ".horse 和 .pet 怎么选：马术垂类与宠物大类 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/horse-vs-pet",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 126285
+    },
+    "/vs/horse-vs-pet?lang=en": {
+      "status": 200,
+      "title": ".horse vs .pet: The Vertical Blade or the Industry Umbrella | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/horse-vs-pet?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 127377
+    }
+  },
+  "new_pages_status": {
+    "/guide/kidswear": {
+      "status": 200,
+      "bytes": 118672,
+      "faq": true
+    },
+    "/guide/kidswear?lang=en": {
+      "status": 200,
+      "bytes": 120409,
+      "faq": true
+    },
+    "/guide/cookingclass": {
+      "status": 200,
+      "bytes": 118862,
+      "faq": true
+    },
+    "/guide/cookingclass?lang=en": {
+      "status": 200,
+      "bytes": 120670,
+      "faq": true
+    },
+    "/guide/souvenir": {
+      "status": 200,
+      "bytes": 118549,
+      "faq": true
+    },
+    "/guide/souvenir?lang=en": {
+      "status": 200,
+      "bytes": 120521,
+      "faq": true
+    },
+    "/guide/partyplanner": {
+      "status": 200,
+      "bytes": 118406,
+      "faq": true
+    },
+    "/guide/partyplanner?lang=en": {
+      "status": 200,
+      "bytes": 120224,
+      "faq": true
+    },
+    "/guide/seafishing": {
+      "status": 200,
+      "bytes": 118439,
+      "faq": true
+    },
+    "/guide/seafishing?lang=en": {
+      "status": 200,
+      "bytes": 120156,
+      "faq": true
+    },
+    "/guide/horseranch": {
+      "status": 200,
+      "bytes": 118578,
+      "faq": true
+    },
+    "/guide/horseranch?lang=en": {
+      "status": 200,
+      "bytes": 120317,
+      "faq": true
+    },
+    "/tld/singles": {
+      "status": 200,
+      "bytes": 138105,
+      "faq": true
+    },
+    "/tld/singles?lang=en": {
+      "status": 200,
+      "bytes": 138969,
+      "faq": true
+    },
+    "/tld/dating": {
+      "status": 200,
+      "bytes": 137726,
+      "faq": true
+    },
+    "/tld/dating?lang=en": {
+      "status": 200,
+      "bytes": 138672,
+      "faq": true
+    },
+    "/tld/luxury": {
+      "status": 200,
+      "bytes": 137724,
+      "faq": true
+    },
+    "/tld/luxury?lang=en": {
+      "status": 200,
+      "bytes": 138802,
+      "faq": true
+    },
+    "/tld/organic": {
+      "status": 200,
+      "bytes": 138228,
+      "faq": true
+    },
+    "/tld/organic?lang=en": {
+      "status": 200,
+      "bytes": 139617,
+      "faq": true
+    },
+    "/tld/tattoo": {
+      "status": 200,
+      "bytes": 137807,
+      "faq": true
+    },
+    "/tld/tattoo?lang=en": {
+      "status": 200,
+      "bytes": 138579,
+      "faq": true
+    },
+    "/tld/casa": {
+      "status": 200,
+      "bytes": 138281,
+      "faq": true
+    },
+    "/tld/casa?lang=en": {
+      "status": 200,
+      "bytes": 139379,
+      "faq": true
+    },
+    "/vs/clothing-vs-fashion": {
+      "status": 200,
+      "bytes": 126035,
+      "faq": true
+    },
+    "/vs/clothing-vs-fashion?lang=en": {
+      "status": 200,
+      "bytes": 126283,
+      "faq": true
+    },
+    "/vs/cooking-vs-recipes": {
+      "status": 200,
+      "bytes": 126311,
+      "faq": true
+    },
+    "/vs/cooking-vs-recipes?lang=en": {
+      "status": 200,
+      "bytes": 126717,
+      "faq": true
+    },
+    "/vs/gift-vs-gifts": {
+      "status": 200,
+      "bytes": 125941,
+      "faq": true
+    },
+    "/vs/gift-vs-gifts?lang=en": {
+      "status": 200,
+      "bytes": 126372,
+      "faq": true
+    },
+    "/vs/party-vs-events": {
+      "status": 200,
+      "bytes": 126594,
+      "faq": true
+    },
+    "/vs/party-vs-events?lang=en": {
+      "status": 200,
+      "bytes": 127200,
+      "faq": true
+    },
+    "/vs/fishing-vs-boats": {
+      "status": 200,
+      "bytes": 126649,
+      "faq": true
+    },
+    "/vs/fishing-vs-boats?lang=en": {
+      "status": 200,
+      "bytes": 127317,
+      "faq": true
+    },
+    "/vs/horse-vs-pet": {
+      "status": 200,
+      "bytes": 126285,
+      "faq": true
+    },
+    "/vs/horse-vs-pet?lang=en": {
+      "status": 200,
+      "bytes": 127377,
+      "faq": true
+    }
+  },
+  "usage_pre": {
+    "days": {
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786341659494,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786353092658,
+    "pricesLastFail": 1786352251978
+  },
+  "usage_keys_present": {
+    "pricesLastOk": true,
+    "pricesLastFail": true,
+    "cronLast": true,
+    "indexnowLast": true
+  },
+  "prices_api": {
+    "stale": null,
+    "tldCount": 280,
+    "fetchedAt": 1786353092934,
+    "keys": 280
+  },
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_all": "核验完成：共 283 个，200 个可注册",
+  "template_prefill": {
+    "chip": "电商品牌",
+    "filled": "一个面向年轻人的生活方式电商品牌，寓意「把好物带进日常、让生活更有质感」…",
+    "note": "initial run raced lang=en reload; re-test with zh confirmed prefill works, no submit"
+  },
+  "prices_rows_zh": 282,
+  "prices_live_count": 280,
+  "prices_static_count": 2,
+  "prices_static_slugs": [
+    "cn",
+    "so"
+  ],
+  "prices_new_tld_rows": {
+    "expected_static_fallback": {
+      "singles": [
+        52,
+        196
+      ],
+      "dating": [
+        93,
+        374
+      ],
+      "luxury": [
+        189,
+        189
+      ],
+      "organic": [
+        78,
+        493
+      ],
+      "tattoo": [
+        15,
+        226
+      ],
+      "casa": [
+        11,
+        78
+      ]
+    },
+    "got": {
+      "casa": [
+        11,
+        78
+      ],
+      "tattoo": [
+        15,
+        226
+      ],
+      "singles": [
+        52,
+        196
+      ],
+      "organic": [
+        78,
+        493
+      ],
+      "dating": [
+        93,
+        374
+      ],
+      "luxury": [
+        189,
+        189
+      ]
+    }
+  },
+  "prices_row_tld_hrefs": {
+    "singles": true,
+    "dating": true,
+    "luxury": true,
+    "organic": true,
+    "tattoo": true,
+    "casa": true
+  },
+  "tld_pricecards": {
+    "singles": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        7.21,
+        27.29
+      ],
+      "prices_href": true
+    },
+    "dating": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        12.87,
+        52.01
+      ],
+      "prices_href": true
+    },
+    "luxury": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        26.26,
+        26.26
+      ],
+      "prices_href": true
+    },
+    "organic": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        10.81,
+        68.49
+      ],
+      "prices_href": true
+    },
+    "tattoo": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        2.06,
+        31.41
+      ],
+      "prices_href": true
+    },
+    "casa": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        1.54,
+        10.81
+      ],
+      "prices_href": true
+    }
+  },
+  "tld_com_live": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+  "tld_hub_links": 282,
+  "guide_hub_links": 278,
+  "vs_hub_links": 312,
+  "footer_counts": [],
+  "footer_link_counts": {
+    "/tld/": 282,
+    "/guide/": 278,
+    "/vs/": 312
+  },
+  "templates_more_chip": "+268",
+  "why_status": 200,
+  "shortlist_status": 200,
+  "advanced_status": 200,
+  "404_status": 404,
+  "404_tld_status": 404,
+  "404_guide_status": 404,
+  "404_vs_status": 404,
+  "mcp_doc_status": 200,
+  "mcp_doc_tldcount": "282 (from /mcp main text: 'the 282 popular TLDs we track')",
+  "mcp_tld_prices": {
+    "tldCount": 282,
+    "priceKeys": 282
+  },
+  "share_create": {
+    "status": 200,
+    "id": "yQVBmXY_OY",
+    "has_token": true
+  },
+  "share_live_domains": {
+    "d1": true,
+    "d2": true
+  },
+  "share_revoke": {
+    "del": 200,
+    "getAfter": 410,
+    "revokedBodyHasItems": false
+  },
+  "share_revoked_ui": true,
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(250, 250, 249)",
+    "persist_after_reload": "rgb(250, 250, 249)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld/singles": 360,
+    "/vs/clothing-vs-fashion": 360,
+    "/guide/kidswear": 360
+  },
+  "usage_post": {
+    "days": {
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786341659494,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786353092658,
+    "pricesLastFail": 1786352251978
+  },
+  "usage_days_equal": true,
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r374"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r374"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r374"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r374"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r374"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/yQVBmXY_OY"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/yQVBmXY_OY"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/yQVBmXY_OY"
+    }
+  ],
+  "usage_post_final": {
+    "days": {
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      }
+    },
+    "cronLast": 1786341659494,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786353092658,
+    "pricesLastFail": 1786352251978
+  },
+  "usage_days_equal_final": true
+}
