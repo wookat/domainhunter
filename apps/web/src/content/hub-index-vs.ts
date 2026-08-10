@@ -304,4 +304,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "theater-vs-show", a: "theater", b: "show", title: { zh: ".theater 和 .show 怎么选：剧场场所感与泛演出内容", en: ".theater vs .show: The Venue or the Program" } },
   { slug: "accountants-vs-tax", a: "accountants", b: "tax", title: { zh: ".accountants 和 .tax 怎么选：职业身份与业务主题", en: ".accountants vs .tax: The Profession or the Subject" } },
   { slug: "engineer-vs-engineering", a: "engineer", b: "engineering", title: { zh: ".engineer 和 .engineering 怎么选：个人身份与公司生意", en: ".engineer vs .engineering: The Person or the Practice" } },
+  { slug: "villas-vs-rentals", a: "villas", b: "rentals", title: { zh: ".villas 和 .rentals 怎么选：产品定位与交易动作", en: ".villas vs .rentals: The Product or the Transaction" } },
+  { slug: "cruises-vs-travel", a: "cruises", b: "travel", title: { zh: ".cruises 和 .travel 怎么选：垂直锋利与行业正统", en: ".cruises vs .travel: Vertical Edge or Industry Credential" } },
+  { slug: "voyage-vs-tours", a: "voyage", b: "tours", title: { zh: ".voyage 和 .tours 怎么选：叙事意象与产品直给", en: ".voyage vs .tours: The Narrative or the Product" } },
+  { slug: "limo-vs-taxi", a: "limo", b: "taxi", title: { zh: ".limo 和 .taxi 怎么选：礼宾预约与即叫即走", en: ".limo vs .taxi: Booked Chauffeur or Street Hail" } },
+  { slug: "tickets-vs-events", a: "tickets", b: "events", title: { zh: ".tickets 和 .events 怎么选：交易入口与活动本身", en: ".tickets vs .events: The Checkout or the Occasion" } },
+  { slug: "flowers-vs-florist", a: "flowers", b: "florist", title: { zh: ".flowers 和 .florist 怎么选：商品直给与职业身份", en: ".flowers vs .florist: The Product or the Profession" } },
 ];

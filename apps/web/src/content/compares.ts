@@ -6493,6 +6493,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Engineering firms & design institutes", "Contractors & service teams", "Formal multi-partner firm presence", "First-year-budget-sensitive new companies"],
     },
   },
+  "villas-vs-rentals": {
+    slug: "villas-vs-rentals",
+    a: "villas",
+    b: "rentals",
+    zh: {
+      title: ".villas 和 .rentals 怎么选：产品定位与交易动作",
+      metaDescription: ".villas 说「别墅」这个产品，适合高端度假别墅与精品民宿；.rentals 说「出租」这个动作，适合各类租赁平台与短租生意。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在住宿租赁赛道，视角完全不同：一个报「产品」，一个报「动作」。.villas 说「别墅」——度假别墅短租、精品民宿与庄园酒店、海外别墅置业与开发商用 name.villas，客人还没点进来就知道住的是独栋而非标间；bali.villas 式「目的地 + .villas」域名即卖点，做高端独栋度假产品定位最准。Identity Digital 运营，首年约 $11（约 ¥78）、续费约 $48/年（约 ¥345），典型首年促销结构。.rentals 说的是「出租」这个动作——覆盖面宽得多：房屋短租、设备租赁、汽车租赁、服装道具租借都能用 name.rentals，平台型生意一个后缀通吃全品类；注册约 $7（约 ¥48）、续费约 $36/年（约 ¥256），首年与续费都比 .villas 便宜，续费一年省约 $12。判断标准：卖的是「别墅住宿体验」——高端独栋、庄园民宿、目的地别墅集合 → .villas 把住宿类型写进域名，客单价与定位一步到位；做的是「租赁生意本身」——多品类租赁平台、设备与车辆出租、普通短租房源 → .rentals 语义更宽、价格更低，扩品类不用换域名。三点注意：一是两者都是复数后缀且不短（6/7 字母），词根务必控制在 4–6 字符；二是 .villas 挂普通公寓房源会名不副实，反过来 .rentals 挂高端别墅会拉低预期，定位错配比后缀本身更伤转化；三是高端住宿决策链长，照片与预订体验才是转化关键，域名只负责第一印象。命名上「目的地 + .villas」（bali.villas）最主流，「品类 + .rentals」（kayak.rentals、camera.rentals）适合垂直租赁。",
+      pickA: ["度假别墅短租与代管", "精品民宿与庄园酒店", "海外置业与别墅开发商", "「目的地 + .villas」域名即卖点"],
+      pickB: ["多品类租赁平台", "设备/汽车/服装租赁", "普通短租与长租房源", "首年与续费预算敏感"],
+    },
+    en: {
+      title: ".villas vs .rentals: The Product or the Transaction",
+      metaDescription:
+        ".villas names the product — for upscale vacation villas and boutique stays; .rentals names the transaction — for rental platforms of every kind. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same accommodation-rental lane, entirely different lens: one names the product, the other the transaction. .villas says villa — vacation-villa rentals, boutique guesthouses, estate hotels and overseas villa developers on name.villas tell guests they're booking a standalone home before the page loads; destination + .villas (bali.villas) makes the domain the pitch, the sharpest positioning for upscale standalone stays. Operated by Identity Digital at about $11 first year (≈¥78) and $48/yr to renew (≈¥345) — the classic promo structure. .rentals names the act of renting — and covers far more ground: home short-lets, equipment hire, car rental, costume and prop lending all fit name.rentals, so platform businesses span every category on one suffix; about $7 to register (≈¥48) and $36/yr to renew (≈¥256), cheaper than .villas on both ends and saving about $12/yr on renewal. The test: if you sell the villa experience — upscale standalone homes, estate stays, destination villa collections → .villas writes the property type into the address and sets price expectations instantly; if you run the rental business itself — multi-category platforms, gear and vehicle hire, ordinary short-lets → .rentals is broader and cheaper, and adding categories never means changing domains. Three cautions: both are plural suffixes of 6–7 letters, so keep roots to 4–6 characters; listing ordinary apartments on .villas over-promises while parking luxury villas on .rentals under-sells — positioning mismatch hurts conversion more than either suffix; and high-end stays have long decision funnels — photos and booking flow convert, the domain just opens the door. Naming: destination + .villas (bali.villas) is the mainstream shape; category + .rentals (kayak.rentals, camera.rentals) fits vertical rental plays.",
+      pickA: ["Vacation villa rentals & management", "Boutique guesthouses & estate hotels", "Overseas villa developers", "Destination + .villas domain-as-pitch"],
+      pickB: ["Multi-category rental platforms", "Equipment / car / costume hire", "Ordinary short-lets and long-lets", "First-year and renewal budget sensitive"],
+    },
+  },
+  "cruises-vs-travel": {
+    slug: "cruises-vs-travel",
+    a: "cruises",
+    b: "travel",
+    zh: {
+      title: ".cruises 和 .travel 怎么选：垂直锋利与行业正统",
+      metaDescription: ".cruises 只说邮轮，垂直定位最锋利；.travel 覆盖全旅游业且自带行业身份。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "垂直与全域的取舍：一个只说邮轮，一个覆盖整个旅游业。.cruises 把「邮轮」直接开进域名——邮轮预订与比价、游船包船与内河游线路、邮轮攻略内容站用 name.cruises，用户搜「alaska cruises、river cruises」时域名与搜索词逐字吻合，这正是邮轮行业最真实的搜索句式。Identity Digital 运营，首年约 $8（约 ¥59）、续费约 $45/年（约 ¥323），典型首年促销结构。.travel 是旅游业的正统后缀——旅行社、OTA、目的地营销机构、旅游科技公司用 name.travel 自带行业身份，历史上有行业资质门槛（现已放宽但行业属性仍在），后缀本身就是「我们是做旅游的」声明；注册约 $16（约 ¥115）、续费约 $119/年（约 ¥857），全线明显更贵，续费是 .cruises 的两倍多。判断标准：生意只在邮轮这个垂类——航线比价、包船定制、邮轮内容 → .cruises 更短更准更便宜，搜索句式逐字命中；业务横跨机酒、线路、目的地多品类，或要向 B 端传递「正规旅游企业」身份 → .travel 的行业正统感值回价差。三点注意：一是从邮轮扩到全品类时 .cruises 会变紧身衣，有扩张计划直接上 .travel；二是续费差约 $74/年，内容站与线索型生意选 .cruises 显著更省；三是邮轮预订多数最终落在船公司或 OTA，独立站的价值在内容与线索，域名是获客入口不是交易终点。命名上「目的地/航线 + .cruises」（alaska.cruises、nile.cruises）最主流，「品牌 + .travel」适合综合旅行社与 OTA。",
+      pickA: ["邮轮预订与比价平台", "游船包船与内河游线路", "邮轮攻略与内容站", "续费预算敏感的垂直生意"],
+      pickB: ["综合旅行社与 OTA", "目的地营销与旅游局", "横跨机酒线路的多品类业务", "要行业正统身份的 B 端品牌"],
+    },
+    en: {
+      title: ".cruises vs .travel: Vertical Edge or Industry Credential",
+      metaDescription:
+        ".cruises says only cruises — the sharpest vertical positioning; .travel spans the whole industry with built-in credentials. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "A vertical-versus-umbrella trade: one says only cruises, the other spans the whole travel industry. .cruises sails the product into the address — cruise booking and comparison, charter and river-cruise operators, cruise-guide content sites on name.cruises match \"alaska cruises\" or \"river cruises\" searches word for word, exactly how the cruise market actually searches. Operated by Identity Digital at about $8 first year (≈¥59) and $45/yr to renew (≈¥323) — the classic promo structure. .travel is the industry's institutional suffix — agencies, OTAs, destination-marketing organizations and travel-tech companies on name.travel carry built-in industry identity; it historically required industry credentials (since relaxed, but the sector association remains), so the suffix itself declares \"we are a travel business\"; about $16 to register (≈¥115) and $119/yr to renew (≈¥857) — clearly pricier across the board, with renewal more than double .cruises. The test: if the business lives inside the cruise vertical — itinerary comparison, charters, cruise content → .cruises is shorter, sharper and cheaper, hitting the search phrase verbatim; if you span flights, hotels, tours and destinations, or need to signal \"established travel company\" to B2B partners → .travel's institutional weight earns back the premium. Three cautions: expanding from cruises to full-service travel makes .cruises a straitjacket — if expansion is the plan, start on .travel; the renewal gap is about $74/yr, so content and lead-gen plays save meaningfully on .cruises; and most cruise bookings close on the line's own site or an OTA — an independent site wins on content and leads, with the domain as the front door, not the checkout. Naming: destination or route + .cruises (alaska.cruises, nile.cruises) is the mainstream shape; brand + .travel fits full-service agencies and OTAs.",
+      pickA: ["Cruise booking & comparison platforms", "Charter & river-cruise operators", "Cruise guides & content sites", "Renewal-budget-sensitive vertical plays"],
+      pickB: ["Full-service agencies & OTAs", "Destination marketing organizations", "Multi-category flights-hotels-tours businesses", "B2B brands needing industry credentials"],
+    },
+  },
+  "voyage-vs-tours": {
+    slug: "voyage-vs-tours",
+    a: "voyage",
+    b: "tours",
+    zh: {
+      title: ".voyage 和 .tours 怎么选：叙事意象与产品直给",
+      metaDescription: ".voyage 卖「旅程」的叙事意象，适合高端定制与品牌故事；.tours 直给「跟团游」产品，适合线路商与预订平台。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "意象与直给的分工：一个卖故事，一个卖产品。.voyage 卖的是「旅程」这个意象——高端定制游与探险旅行品牌、旅行内容与游记媒体、帆船远航与极地科考项目用 name.voyage，比直白的产品词多一层「启程与探索」的叙事感；voyage 英法双语通用（法语里就是「旅行」），面向欧洲与法语市场天然加分，科技公司拿它做品牌活动页也不违和。Identity Digital 运营，首年约 $6（约 ¥41）、续费约 $47/年（约 ¥337）。.tours 直给「跟团游」这个产品——一日游与多日游线路商、目的地地接社、徒步/美食/摄影主题团用 name.tours，游客搜「目的地 + tours」时逐字命中，这是旅游线路最真实的搜索句式；注册约 $6（约 ¥41）、续费约 $50/年（约 ¥360），两者首年同价、续费只差约 $3/年，价格几乎不构成决策因素。判断标准既然价格打平，就纯看气质：品牌要讲「探索与启程」的故事——高端定制、探险旅行、品牌叙事站 → .voyage 的意象无可替代；卖的是具体线路与可预订产品——一日游、地接、主题团 → .tours 直给且搜索友好，转化路径最短。三点注意：一是 .voyage 是单数抽象名词，适合品牌与叙事，预订平台类用 .tours 更直给；二是对纯中文受众 voyage 认知度一般，主打国内市场时 .tours 更稳；三是两者续费都是首年数倍，长期持有按续费价预算。命名上「品牌/主题词 + .voyage」（solaris.voyage、polar.voyage）最主流，「目的地 + .tours」（kyoto.tours）适合地接与线路商。",
+      pickA: ["高端定制游与探险旅行品牌", "旅行内容与游记媒体", "面向欧洲/法语市场的品牌", "品牌叙事与主题活动站"],
+      pickB: ["一日游与多日游线路商", "目的地地接社", "徒步/美食/摄影主题团", "「目的地 + tours」搜索直达"],
+    },
+    en: {
+      title: ".voyage vs .tours: The Narrative or the Product",
+      metaDescription:
+        ".voyage sells the journey as narrative — for premium custom travel and brand stories; .tours sells the bookable product — for tour operators and booking platforms. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Imagery versus directness: one sells the story, the other the product. .voyage sells the journey as an idea — premium custom and adventure travel brands, travel content and journal media, sailing expeditions and polar programs on name.voyage carry a layer of departure-and-discovery narrative that plain product words lack; voyage works in both English and French (it simply means travel in French), a natural bonus for European and francophone markets, and even tech companies use it for brand-campaign pages without dissonance. Operated by Identity Digital at about $6 first year (≈¥41) and $47/yr to renew (≈¥337). .tours hands over the product directly — day-trip and multi-day operators, destination ground handlers, hiking, food and photography theme tours on name.tours match \"destination + tours\" searches verbatim, exactly how tours are actually searched; about $6 to register (≈¥41) and $50/yr to renew (≈¥360) — same first-year price and a renewal gap of only about $3/yr, so price barely enters the decision. With cost neutralized, it's pure personality: if the brand tells a story of exploration and departure — premium custom travel, expeditions, narrative brand sites → .voyage's imagery is irreplaceable; if you sell concrete bookable itineraries — day trips, ground handling, theme tours → .tours is direct and search-friendly with the shortest path to conversion. Three cautions: .voyage is a singular abstract noun suited to brands and narrative — booking platforms read better on .tours; voyage has middling recognition with purely Chinese-speaking audiences, so China-first businesses are safer on .tours; and both renew at several times the first-year price, so budget on renewals for long holds. Naming: brand or theme + .voyage (solaris.voyage, polar.voyage) is the mainstream shape; destination + .tours (kyoto.tours) fits operators and ground handlers.",
+      pickA: ["Premium custom & adventure travel brands", "Travel content & journal media", "European / francophone market brands", "Narrative brand & campaign sites"],
+      pickB: ["Day-trip & multi-day tour operators", "Destination ground handlers", "Hiking / food / photography theme tours", "Destination + tours verbatim searches"],
+    },
+  },
+  "limo-vs-taxi": {
+    slug: "limo-vs-taxi",
+    a: "limo",
+    b: "taxi",
+    zh: {
+      title: ".limo 和 .taxi 怎么选：礼宾预约与即叫即走",
+      metaDescription: ".limo 是预约制豪华专车的后缀，适合机场接送与婚礼用车；.taxi 是即叫即走的出租车后缀，适合叫车服务与车队。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同为地面用车，客单价与服务预期完全不同：一个是预约制礼宾，一个是即叫即走。.limo 把「豪华专车」停进域名——机场接送与商务专车、婚礼与红毯豪车租赁、城市礼宾包车公司用 name.limo，四个字母就把服务档次说清了；wedding.limo、vegas.limo 式命名让高客单场景一眼命中。Identity Digital 运营，首年约 $11（约 ¥78）、续费约 $44/年（约 ¥315）。.taxi 说的是大众叫车——出租车公司与车队、本地叫车服务、机场排班调度用 name.taxi，乘客搜「城市 + taxi」时逐字吻合，这是本地用车最高频的搜索句式；注册约 $6（约 ¥45）、续费约 $50/年（约 ¥360），首年比 .limo 便宜但续费反而贵约 $6/年，长期持有 .limo 反而更省。判断标准：服务是预约制、高客单、强调车型与礼宾体验——商务接送、婚庆用车、包车定制 → .limo 定位不会被拉低，价格锚点直接写在后缀里；服务是即时性、大众价位、拼响应速度——城市叫车、车队调度、机场排队 → .taxi 认知零成本，搜索句式直达。三点注意：一是 limo 是美式口语（limousine 缩写），北美市场零违和、其他英语市场认知度略低，.taxi 则全球通用；二是本地用车生意依赖 Google 商家资料与口碑，域名要与商家名一致以强化本地 SEO——两个后缀都适合「城市 + 后缀」句式；三是续费结构相反，.limo 首年贵续费低、.taxi 首年便宜续费高，按持有年限算总账。命名上「城市 + .limo」（vegas.limo）与「城市 + .taxi」（berlin.taxi）都是黄金句式，「场景词 + .limo」（wedding.limo、airport.limo）适合垂直服务线。",
+      pickA: ["机场接送与商务专车", "婚礼与红毯豪车租赁", "城市礼宾包车公司", "高客单、预约制服务定位"],
+      pickB: ["出租车公司与车队", "本地即时叫车服务", "机场排班与调度平台", "「城市 + taxi」搜索直达"],
+    },
+    en: {
+      title: ".limo vs .taxi: Booked Chauffeur or Street Hail",
+      metaDescription:
+        ".limo is the suffix for booked luxury rides — airport transfers and wedding cars; .taxi is the street-hail suffix — for cab companies and fleets. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both move people on the ground, but ticket size and service expectations differ completely: one is booked chauffeur service, the other is hail-and-go. .limo parks the luxury ride in the address — airport transfers and executive cars, wedding and red-carpet rentals, city chauffeur companies on name.limo state the service tier in four letters; wedding.limo and vegas.limo hit high-ticket occasions at a glance. Operated by Identity Digital at about $11 first year (≈¥78) and $44/yr to renew (≈¥315). .taxi speaks mass-market rides — cab companies and fleets, local dispatch services, airport queues on name.taxi match \"city + taxi\" searches verbatim, the highest-frequency local-transport search there is; about $6 to register (≈¥45) but $50/yr to renew (≈¥360) — cheaper year one yet about $6/yr more on renewal, so long holds actually cost less on .limo. The test: if the service is booked, high-ticket and sells the vehicle and courtesy experience — executive transfers, wedding cars, custom charters → .limo keeps positioning premium with the price anchor written into the suffix; if the service is on-demand, mass-priced and competes on response time — city hailing, fleet dispatch, airport ranks → .taxi has zero recognition cost and rides the verbatim search. Three cautions: limo is American vernacular (short for limousine) — native in North America, slightly less recognized in other English markets, while taxi is global; local transport lives on Google Business Profiles and reviews, so match the domain to the business name for local SEO — city + suffix works for both; and the pricing structures are opposites — .limo costs more up front and less to renew, .taxi the reverse, so do the math over your holding horizon. Naming: city + .limo (vegas.limo) and city + .taxi (berlin.taxi) are both golden shapes; occasion + .limo (wedding.limo, airport.limo) fits vertical service lines.",
+      pickA: ["Airport transfers & executive cars", "Wedding & red-carpet car rentals", "City chauffeur & charter companies", "High-ticket, booked-service positioning"],
+      pickB: ["Cab companies & fleets", "Local on-demand ride services", "Airport rank & dispatch platforms", "City + taxi verbatim searches"],
+    },
+  },
+  "tickets-vs-events": {
+    slug: "tickets-vs-events",
+    a: "tickets",
+    b: "events",
+    zh: {
+      title: ".tickets 和 .events 怎么选：交易入口与活动本身",
+      metaDescription: ".tickets 说「买票」这个交易，高年费自带官方直销信任；.events 说「活动」本身，适合活动品牌与策划公司。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在活动产业链，位置不同：一个是交易入口，一个是活动本身。.tickets 把「买票」写进域名——演唱会与体育赛事官方票务、票务平台与二级市场、场馆与剧院直销渠道用 name.tickets，粉丝搜「活动名 + tickets」时逐字吻合；XYZ 注册局运营，注册约 $361（约 ¥2599）且续费同价，年费门槛把投机注册挡在门外，域名本身就是「官方直销」的信任信号——假票横行的行业里这一点尤其值钱。.events 说的是「活动」这件事——活动策划公司、会展与音乐节品牌、场地与活动聚合平台用 name.events，覆盖从策划到执行的整条链路；Identity Digital 运营，注册约 $10（约 ¥70）、续费约 $37/年（约 ¥263），价格是 .tickets 的零头。判断标准非常清晰：办活动用 .events，卖票用 .tickets。票务是主营收入、需要向用户证明「这里买票是真的」——官方票务、场馆直销、授权分销 → .tickets 的高年费反而是信任资产；生意是活动策划、品牌活动、会展聚合，票务只是环节之一 → .events 语义更宽、成本低一个数量级。三点注意：一是 .tickets 年费只适合票务主营的生意，内容站、粉丝站、以及只是「顺带卖票」的活动品牌请直接选 .events；二是二级票务受各国法规约束（限价、转售牌照），上 .tickets 前合规先行；三是很多团队两个都要——品牌主站用 name.events，购票入口用 name.tickets 并 301 到售票页，分工清晰互不拉扯。命名上「场馆/球队 + .tickets」（arena.tickets）最主流，「城市/主题 + .events」（berlin.events、summer.events）适合策划与聚合平台。",
+      pickA: ["演唱会与赛事官方票务", "场馆与剧院直销渠道", "授权票务分销平台", "要「官方直销」信任信号的生意"],
+      pickB: ["活动策划与执行公司", "会展与音乐节品牌", "场地与活动聚合平台", "票务只是环节之一的活动生意"],
+    },
+    en: {
+      title: ".tickets vs .events: The Checkout or the Occasion",
+      metaDescription:
+        ".tickets names the transaction — its high fee doubles as an official-outlet trust signal; .events names the occasion — for event brands and planners. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same event industry, different position in the chain: one is the checkout, the other the occasion. .tickets writes the purchase into the address — official concert and sports ticketing, ticketing platforms and secondary markets, venue and theater box offices on name.tickets match \"event + tickets\" searches word for word; operated by XYZ at about $361 (≈¥2599) to register with renewal at the same price, a fee that fences out speculative registrations and turns the domain itself into an official-outlet trust signal — precious in an industry plagued by fake tickets. .events names the occasion — event planners, conference and festival brands, venue and event-aggregation platforms on name.events cover the whole chain from planning to production; operated by Identity Digital at about $10 to register (≈¥70) and $37/yr to renew (≈¥263) — a fraction of .tickets' cost. The test is crisp: run events on .events, sell tickets on .tickets. If ticketing is the core revenue and users must trust that tickets here are real — official outlets, venue box offices, authorized resellers → .tickets' high fee is itself a trust asset; if the business is planning, brand events or aggregation with ticketing as just one step → .events is broader and an order of magnitude cheaper. Three cautions: .tickets' annual fee only pencils out when ticketing is the primary business — content sites, fan sites and event brands that merely also sell tickets belong on .events; secondary ticketing is regulated in many countries (price caps, resale licenses), so clear compliance before building on .tickets; and many teams take both — brand site on name.events, checkout on name.tickets with a 301 to the sales page, a clean division of labor. Naming: venue or team + .tickets (arena.tickets) is the mainstream shape; city or theme + .events (berlin.events, summer.events) fits planners and aggregators.",
+      pickA: ["Official concert & sports ticketing", "Venue & theater box offices", "Authorized ticketing platforms", "Businesses needing the official-outlet signal"],
+      pickB: ["Event planning & production companies", "Conference & festival brands", "Venue & event aggregation platforms", "Event businesses where ticketing is one step"],
+    },
+  },
+  "flowers-vs-florist": {
+    slug: "flowers-vs-florist",
+    a: "flowers",
+    b: "florist",
+    zh: {
+      title: ".flowers 和 .florist 怎么选：商品直给与职业身份",
+      metaDescription: ".flowers 说「花」这个商品，适合鲜花电商与配送；.florist 说「花艺师」这个职业，适合本地花店与花艺工作室。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在鲜花生意，视角不同：一个报「商品」，一个报「职业」。.flowers 把「鲜花」开进域名——鲜花电商与订阅配送、婚礼花艺与鲜花批发商用 name.flowers，送花的人搜「品牌 + flowers」时逐字吻合，美国最大花商之一就叫 1800flowers，这个句式在行业里根深蒂固；send.flowers、bloom.flowers 式「动词 + .flowers」读起来就是产品名。XYZ 注册局运营（从 UNR 收购），注册约 $104（约 ¥745）且续费同价——中高档年费替你过滤了域名投机者，花名、城市名好词库存近乎全开。.florist 说的是「花艺师」这个职业——本地花店、花艺工作室、婚礼花艺师个人品牌用 name.florist，客人搜「地名 + florist」时逐字命中，这正是英语市场找花店的标准搜法；Identity Digital 运营，注册约 $8（约 ¥59）、续费约 $26/年（约 ¥189），首年便宜、续费也只有 .flowers 的四分之一。判断标准：卖的是「花」这个商品——电商、订阅配送、批发、跨城履约 → .flowers 商品直给，动词句式天然像产品名；卖的是「花艺师」的手艺与服务——本地花店、定制花艺、婚礼布置 → .florist 的职业身份感更强，「城市 + .florist」是本地获客利器。三点注意：一是 .flowers 年费适合有真实营收的鲜花生意，纯兴趣博客与刚起步的个人工作室选 .florist 或更便宜的后缀；二是两者都是 7 字母后缀，词根务必短（send.flowers、paris.florist 是理想形态）；三是鲜花是强节日生意，情人节、母亲节的投放节奏比域名本身更影响营收。命名上「动词/短词 + .flowers」（send.flowers）最主流，「城市/姓名 + .florist」（paris.florist）适合本地花店直销。",
+      pickA: ["鲜花电商与订阅配送", "婚礼花艺与鲜花批发", "「动词 + .flowers」产品名句式", "有真实营收、要过滤投机邻居"],
+      pickB: ["本地花店与花艺工作室", "婚礼花艺师个人品牌", "「城市 + florist」本地获客", "首年与续费预算敏感"],
+    },
+    en: {
+      title: ".flowers vs .florist: The Product or the Profession",
+      metaDescription:
+        ".flowers names the product — for flower e-commerce and delivery; .florist names the profession — for local shops and floral studios. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same flower business, different lens: one names the product, the other the professional. .flowers blooms the product into the address — flower e-commerce and subscription delivery, wedding florals and wholesale on name.flowers match \"brand + flowers\" searches verbatim; one of America's biggest flower retailers is literally 1800flowers, so the phrase is rooted deep in the industry, and verb + .flowers (send.flowers, bloom.flowers) reads like a product name outright. Operated by XYZ (acquired from UNR) at about $104 (≈¥745) with renewal at the same price — a mid-premium fee that filters out speculators, leaving flower names, city names and brand words largely available. .florist names the professional — local flower shops, floral design studios and wedding florists' personal brands on name.florist match \"place + florist\" searches word for word, exactly how English-speaking customers find one; operated by Identity Digital at about $8 to register (≈¥59) and $26/yr to renew (≈¥189) — cheap year one and roughly a quarter of .flowers' renewal. The test: if you sell the product — e-commerce, subscription delivery, wholesale, cross-city fulfillment → .flowers is direct, and the verb phrasing naturally reads as a product; if you sell the florist's craft and service — local shops, custom florals, wedding styling → .florist carries stronger professional identity, and city + .florist is a local-lead magnet. Three cautions: .flowers' annual fee suits businesses with real revenue — hobby blogs and just-launched solo studios should start on .florist or cheaper; both are 7-letter suffixes, so keep roots short (send.flowers, paris.florist are the ideal shapes); and flowers are a peak-season business — Valentine's and Mother's Day campaign timing moves revenue more than the domain does. Naming: verb or short word + .flowers (send.flowers) is the mainstream shape; city or name + .florist (paris.florist) fits local shops selling direct.",
+      pickA: ["Flower e-commerce & subscription delivery", "Wedding florals & wholesale", "Verb + .flowers product-name phrasing", "Revenue businesses wanting filtered neighbors"],
+      pickB: ["Local flower shops & floral studios", "Wedding florists' personal brands", "City + florist local-lead searches", "First-year and renewal budget sensitive"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
