@@ -20708,6 +20708,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  sealcarving: {
+    slug: "sealcarving",
+    keywords: ["篆刻工作室", "印章定制", "金石篆刻", "seal carving", "stone seal studio"],
+    tlds: [
+      { tld: "com", zh: "定制印章的商单与藏家询价走邮件与官网，.com 在报价单上最正式", en: "Commissions and collector enquiries travel by email and site — .com reads most formal on the quote" },
+      { tld: "art", zh: "金石篆刻本就是文人艺术，.art 把「刻章」升维成「方寸艺术」", en: "Seal carving is literati art at heart — .art elevates the chop into art within a square inch" },
+      { tld: "studio", zh: "工作室气质直给，篆刻课与定制线共用一块招牌", en: "The studio identity outright — one sign over the carving class and the commission line" },
+    ],
+    zh: {
+      label: "篆刻工作室",
+      title: "篆刻工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "篆刻工作室与印章定制命名指南：金石斋号传统、刀石意象等思路，西泠印社等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "篆刻工作室的名字要替「方寸之间的刀法」立信用：一方印章几厘米见方，买的人却把它盖在书画落款、合同尾页与传家的收藏上——这个品类卖的是「一辈子只刻你一个名字」的郑重感。中文语境里最厚的资产是金石斋号传统：西泠印社以一个地名+社字流传百年，成为篆刻的代名词；历代篆刻家的斋号（如吴昌硕的缶庐）证明了斋、庐、堂类字号是文人手艺的标准语法。隐藏考点是业务分层：旅游区的姓名章走量、书画家的常用印走口碑、藏家的名家印走拍卖行——名字要在电商详情页上亲切，也要在展览图录里立得住。另一个现实：篆刻的客群一半在书画圈层内，名字太白话会被圈内看轻，太生僻又挡住圈外的入门客，雅俗之间的分寸就是命名的核心功课。",
+      namingIdeas: [
+        "金石斋号传统：斋、庐、堂、山房类字号——文人手艺的标准语法，一个斋号就是一份职业郑重感",
+        "刀石意象直给：刀、石、印、篆类词根——「铁笔」「石语」类组合让人看见刀锋走过石面的样子",
+        "地名结社路线：西泠印社验证过的地名+社语法——地方文脉做背书，社字自带同好组织的厚度",
+        "篆字古意借力：从金文、篆书常用字里取字——字形本身就是招牌，门头与印蜕上都自成风景",
+        "当代转译语法：把篆刻说成「石头上的签名」——stone、seal 类英文词根配现代语感，年轻客群与文创线的入口",
+      ],
+      cases: [
+        { name: "西泠印社", takeaway: "地名+社流传百年成品类代名词：地方文脉与同好结社的双重背书——篆刻命名的天花板样本" },
+        { name: "缶庐（吴昌硕）", takeaway: "一件古缶做斋号：以物寄志的文人语法——器物名+庐的组合把审美趣味说在名字里" },
+        { name: "朵云轩", takeaway: "笺扇庄字号延伸到金石书画全品类：轩字号的包容力——老字号语法给品类扩张留足了余地" },
+        { name: "荣宝斋", takeaway: "「以文会友，荣名为宝」缩成三个字：斋号里藏经营哲学——字号即店训的命名示范" },
+      ],
+      pitfalls: [
+        "名字太白话掉份：篆刻客群一半在书画圈内，「刻章小店」类名字接不住书画家的常用印订单——郑重感是这个品类的入场券",
+        "生僻字挡住门外客：斋号用字太古奥，旅游客与入门客读不出就搜不到——古意要停在「认得出」的边界内",
+        "锁死单一印材：叫「寿山石坊」就难接青田、巴林与金属印——石种留给作品线，品牌名留斋号与刀石意象",
+        "忽略印蜕场景：名字最终要以边款与印蜕的形式出现在作品上——笔画太繁的字号在方寸边款里刻不动也认不清",
+      ],
+    },
+    en: {
+      label: "Seal carving studios",
+      title: "How to Name a Seal Carving Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Seal carving and custom chop studio naming guide: literati studio-name traditions, knife-and-stone imagery, breakdowns of Xiling Seal Society and more, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A seal carving studio's name must build credit for blade-work within a square inch: the chop is a few centimetres across, yet the buyer presses it onto painting colophons, contract pages and heirloom collections — the category sells the gravity of carving one person's name for a lifetime. The deepest asset is the literati studio-name tradition: China's Xiling Seal Society turned a place name plus a society word into the category's synonym for over a century, and generations of carvers' studio names (Wu Changshuo's Fou Lu, the Jar Cottage) proved that studio, cottage and hall words are the standard grammar of the scholar's craft. The hidden exam is the tier split: tourist name-chops run on volume, working seals for painters run on word of mouth, master seals run on the auction house — and the name must read warm on the product page yet hold up in the exhibition catalogue. One more reality: half the clientele lives inside the calligraphy circle, where a too-plain name loses face and a too-obscure one blocks the newcomer — the whole craft of naming here is walking that line.",
+      namingIdeas: [
+        "The literati studio-name tradition: studio, cottage, hall and mountain-house words — the scholar craft's standard grammar; one studio name is a statement of professional gravity",
+        "Knife-and-stone imagery outright: blade, stone, seal and script roots — an iron-brush or stone-speech compound lets the reader see the blade crossing the stone",
+        "The place-and-society route: the place-plus-society grammar Xiling proved — local heritage as endorsement, the society word carrying the weight of a fellowship",
+        "Borrowing the ancient scripts: characters lifted from bronze and seal script — the letterform itself is the sign, a landscape on the shopfront and the seal impression alike",
+        "The contemporary translation: seal carving restated as a signature in stone — stone and seal compounds with modern cadence, the door for younger clients and the gift line",
+      ],
+      cases: [
+        { name: "Xiling Seal Society (西泠印社)", takeaway: "A place name plus a society word become the category's synonym for a century: double endorsement of local heritage and fellowship — seal carving's naming ceiling" },
+        { name: "Fou Lu (缶庐, Wu Changshuo)", takeaway: "An ancient jar as the studio name: the literati grammar of lodging one's spirit in an object — an artefact word plus cottage stating taste inside the name" },
+        { name: "Duo Yun Xuan (朵云轩)", takeaway: "A stationery house's name stretched across the whole scholar-art trade: the pavilion word's capacity — heritage grammar leaving room for category expansion" },
+        { name: "Rong Bao Zhai (荣宝斋)", takeaway: "A business philosophy compressed into three characters: the shop creed hidden in the studio name — naming as mission statement" },
+      ],
+      pitfalls: [
+        "Too plain for the circle: half the clients are painters and calligraphers, and a chop-corner name never wins their working seals — gravity is this category's admission ticket",
+        "Obscure characters blocking the door: a studio name no tourist can read is one no tourist can search — keep the antiquity inside the boundary of recognition",
+        "Locking into one stone: a Shoushan-stone name can't take Qingtian, Balin or metal seals — leave the material to the product line, keep the studio name and imagery for the brand",
+        "Forgetting the impression: the name ultimately appears as a side inscription within a square inch — strokes too dense to carve are strokes too dense to read",
+      ],
+    },
+  },
+  incense: {
+    slug: "incense",
+    keywords: ["香道工作室", "香品品牌", "手工线香", "incense studio", "incense brand"],
+    tlds: [
+      { tld: "com", zh: "香品电商与出海订单的默认后缀，详情页与合作邮件里最稳", en: "The default suffix for incense e-commerce and export orders — steadiest on the product page and the partnership email" },
+      { tld: "art", zh: "香道是生活美学，.art 把「卖香」升维成「气味的艺术」", en: "Incense is living aesthetics — .art elevates selling sticks into the art of scent" },
+      { tld: "studio", zh: "香道课与手作体验的工作室归类，品香会与门店共用", en: "The studio filing for incense classes and hands-on sessions — one sign over the tasting and the shop" },
+    ],
+    zh: {
+      label: "香道工作室",
+      title: "香道工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "香道工作室与手工线香品牌命名指南：香方古籍传统、气味意象等思路，松荣堂/APFR 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "香道工作室的名字要给「看不见的商品」造一个可以想象的形状：香是所有品类里最难被屏幕传达的——图片拍不出气味，名字就是气味的第一次登场。这个品类的参照系横跨千年：京都的松荣堂以「堂」号制香三百年，证明老铺语法在香这个品类里可以直接兑换成信任；东京的 APOTHEKE FRAGRANCE 用「药房」一词把调香说成配药，严谨感立住了手作品牌的价格。中文语境里的资产更厚：香方古籍（《陈氏香谱》类）、文人香事（黄庭坚的香十德）都是现成的命名矿脉。隐藏考点是业务分层：线香与香囊走电商量、香道课与品香会走体验溢价、定制香方走私域深度——名字要在详情页上好念，也要在茶室与美术馆的品香会海报上有气质。误区同样明显：满街的「沉香阁」「檀香居」把材料名当品牌名，搜索直接淹没在品类词里。",
+      namingIdeas: [
+        "堂号老铺传统：堂、庐、山房类字号——松荣堂验证过三百年的语法，香这个品类里老铺感直接兑换成品质信任",
+        "气味通感意象：烟、云、雾、岚类词根——气味无形，名字要给它一个看得见的形状，一个「岚」字就是一炉香的样子",
+        "香方古籍借力：从《香谱》与文人香事里取词——香十德、隔火熏香类典故是现成的文化背书，定制线的气质天花板",
+        "时刻场景路线：把名字锚在一个用香的时刻——「睡前一支香」的具体场景比「东方禅意」的空泛标签更有购买理由",
+        "配药严谨语法：APFR 式的药房隐喻——把调香说成配方科学，手作品牌撑高价的信用来源",
+      ],
+      cases: [
+        { name: "松荣堂", takeaway: "京都堂号制香三百年：老铺语法直接兑换成品质信任——香品类里时间就是最硬的背书" },
+        { name: "APOTHEKE FRAGRANCE", takeaway: "「药房」一词把调香说成配药：严谨感立住手作价格——隐喻选得准，品牌就有了职业人设" },
+        { name: "观夏", takeaway: "「观」一个「夏」字把气味写成季节：通感命名的国货示范——东方叙事不靠禅字堆砌，靠一个动词的留白" },
+        { name: "Aesop", takeaway: "借伊索寓言做品牌名：气味品牌用文学做人设——名字不描述产品，描述读它的人" },
+      ],
+      pitfalls: [
+        "材料名当品牌名：满街的沉香阁檀香居，搜索直接淹没在品类词里——材料留给产品线，品牌名要私有",
+        "禅字堆砌的空壳：禅、悟、静类字扎堆却没有具体意象——东方气质要靠通感与场景落地，不靠标签词自我宣告",
+        "名字太玄卖不动电商：香的一半生意在详情页与直播间，太出世的名字在购物场景里没有点击理由——雅要留一个入世的把手",
+        "忽略出海对应：香是文化出海的热门品类，纯拼音名在海外读不出记不住——提前设计双语方案，英文名要能承载气味想象",
+      ],
+    },
+    en: {
+      label: "Incense studios",
+      title: "How to Name an Incense Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Incense studio and artisan incense brand naming guide: heritage-house traditions, scent-synaesthesia imagery, breakdowns of Shoyeido/APFR, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An incense studio's name must give shape to an invisible product: scent is the one category no screen can carry — the photo shows nothing, so the name is the fragrance's first appearance. The reference frame spans centuries: Kyoto's Shoyeido has made incense under one hall name for three hundred years, proving that heritage-house grammar converts directly into trust in this trade; Tokyo's APOTHEKE FRAGRANCE borrowed the apothecary word to restate blending as compounding medicine, and the rigor held up an artisan price. The hidden exam is the tier split: sticks and sachets run on e-commerce volume, incense ceremonies and classes run on experience premium, custom blends run on private-client depth — and the name must read easily on the product page yet carry an air on the tearoom's tasting poster. The pitfall is equally plain: streets full of Agarwood Pavilions and Sandalwood Houses use the material as the brand and drown in the category search.",
+      namingIdeas: [
+        "The heritage-house tradition: hall, cottage and mountain-house words — the grammar Shoyeido proved across three centuries; in incense, the old-shop air converts straight into quality trust",
+        "Scent synaesthesia: smoke, cloud, mist and haze roots — scent has no form, so the name must lend it one; a single mist word is the look of a burning stick",
+        "Borrowing the incense classics: words from the old incense manuals and literati incense rites — ready-made cultural endorsement, the custom line's ceiling",
+        "The moment-of-use route: anchor the name in one scented moment — the stick before sleep is a stronger reason to buy than any vague oriental-zen label",
+        "The apothecary grammar: APFR's compounding metaphor — blending restated as formula science, the credit source that holds an artisan price",
+      ],
+      cases: [
+        { name: "Shoyeido (松荣堂)", takeaway: "Three hundred years under one Kyoto hall name: heritage grammar converting straight into quality trust — in incense, time is the hardest endorsement" },
+        { name: "APOTHEKE FRAGRANCE", takeaway: "The apothecary word restating blending as medicine: rigor holding up the artisan price — pick the metaphor right and the brand has a profession" },
+        { name: "To Summer (观夏)", takeaway: "One verb watching one season: scent written as synaesthesia — the Chinese new-wave proof that Eastern narrative needs a well-placed blank, not a pile of zen characters" },
+        { name: "Aesop", takeaway: "A fable-teller's name on a scent brand: literature as persona — the name describes the reader, not the product" },
+      ],
+      pitfalls: [
+        "The material as the brand: streets of Agarwood Pavilions drown in the category search — leave the wood to the product line, keep the brand private",
+        "The zen-word husk: piles of zen, stillness and enlightenment characters with no concrete image — Eastern air lands through synaesthesia and scene, not self-declared labels",
+        "Too ethereal to sell: half the trade lives on product pages and livestreams, and an otherworldly name gives no reason to click — elegance needs one worldly handle",
+        "Forgetting the export pair: incense is a flagship culture export, and pure pinyin neither reads nor sticks abroad — design the bilingual pair upfront, with an English name that can carry scent",
+      ],
+    },
+  },
+  papercut: {
+    slug: "papercut",
+    keywords: ["剪纸工作室", "剪纸文创", "手工剪纸", "paper cutting", "papercut art"],
+    tlds: [
+      { tld: "com", zh: "文创电商与商业合作的默认后缀，详情页与授权合同里最稳", en: "The default suffix for craft e-commerce and licensing — steadiest on the product page and the contract" },
+      { tld: "art", zh: "剪纸是入选非遗的纸上艺术，.art 的归类直接对位", en: "Papercutting is heritage-listed art on paper — .art files it exactly where it belongs" },
+      { tld: "studio", zh: "工作室气质直给，剪纸课与定制线共用一块招牌", en: "The studio identity outright — one sign over the cutting class and the commission line" },
+    ],
+    zh: {
+      label: "剪纸工作室",
+      title: "剪纸工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "剪纸工作室与剪纸文创命名指南：窗花民俗传统、刀剪意象等思路，库淑兰等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "剪纸工作室的名字要接住一个身份转变：剪纸正在从「过年贴的窗花」变成「美术馆里的纸上艺术」与「品牌联名的国潮素材」，名字站在哪一边，决定了客户是谁。这个品类的资产在民俗里：窗花、喜字、福字是全民共识的意象库，库淑兰的「剪花娘子」证明了民间艺人的自称可以直接成为品牌——土到极致就是风格。但隐藏考点恰恰是「土与潮的换挡」：非遗补贴与景区门店吃民俗感，品牌联名与美术馆展览要当代感，名字要么选定一边做透，要么用「民俗意象+当代语法」的组合同时接住两头。另一个现实：剪纸的商业出口越来越多在文创授权与品牌合作——名字要能出现在联名产品的吊牌上，太长太土的名字会被甲方的设计师第一轮筛掉。",
+      namingIdeas: [
+        "窗花民俗借力：窗花、喜、福、纹样类全民意象——民俗共识就是零成本的认知资产，节庆场景直接对位",
+        "刀剪意象直给：剪、刻、镂、纸类词根——「一把剪刀一张纸」的手艺画面感，转译成名字就是信任",
+        "艺人自称传统：库淑兰「剪花娘子」式的自我命名——民间艺人的身份自信，人格化品牌的最短路径",
+        "纹样词根路线：从传统纹样（如意、云纹、团花）里取词——纹样名自带图形想象，logo 与名字一次解决",
+        "当代转译语法：把剪纸说成「纸上的镂空艺术」——paper、cut 类英文词根配设计感，联名线与出海线的入口",
+      ],
+      cases: [
+        { name: "剪花娘子（库淑兰）", takeaway: "民间艺人的自称成为艺术品牌：土到极致就是风格——人格化命名在手艺品类里的天花板" },
+        { name: "自游自在", takeaway: "谐音改字把状态写进名字：文创品牌的轻盈语法——一次改字完成从成语到品牌的私有化" },
+        { name: "上海故事", takeaway: "地名+故事的文创语法：把地方文化打包成可购买的叙事——景区文创命名的通用公式" },
+        { name: "纸原", takeaway: "「纸的原点」两个字说尽材料哲学：极简命名在纸品类的示范——留白本身就是纸的气质" },
+      ],
+      pitfalls: [
+        "土与潮两头不靠：既想要民俗感又怕土，结果名字在两个客群里都没有辨识度——换挡要果断，或者用组合语法明确两层",
+        "锁死节庆场景：叫「福字坊」就只有过年有生意——节庆留给产品线，品牌名要能覆盖全年场景",
+        "忽略吊牌场景：文创授权与品牌联名是增长出口，太长太土的名字过不了甲方设计师的第一轮——名字要能印在联名吊牌上不违和",
+        "地域标签太重：叫「陕北剪纸」等于把外地客户与出海线都挡在门外——地域留给作品介绍，品牌名要留扩张余地",
+      ],
+    },
+    en: {
+      label: "Papercut studios",
+      title: "How to Name a Papercut Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Papercut studio and paper-cutting brand naming guide: window-flower folk traditions, scissor-and-paper imagery, breakdowns of Ku Shulan and more, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A papercut studio's name must catch an identity in transition: papercutting is moving from the New Year window flower to museum-wall paper art and brand-collab national-style material, and which side the name stands on decides who the customer is. The category's assets live in folklore: window flowers, double-happiness and fortune characters are a commons of imagery the whole culture already knows, and folk artist Ku Shulan proved that a self-given title — the Papercut Lady — can be the brand itself; folk pushed to its extreme becomes style. But the hidden exam is exactly the gear-shift between folk and contemporary: heritage subsidies and scenic-area shops feed on folk flavor, while brand collaborations and museum shows demand modern air — the name must either commit to one side fully or pair folk imagery with contemporary grammar to hold both. One more reality: the trade's growth exit is licensing and collabs, and a name too long or too rustic gets cut by the client's designer in the first round — it has to sit on a co-branded hang tag without friction.",
+      namingIdeas: [
+        "Borrowing the window-flower commons: window flower, happiness, fortune and motif words — folk consensus is zero-cost cognitive equity, festival scenes aligned for free",
+        "Scissor-and-paper imagery outright: cut, carve, lattice and paper roots — one pair of scissors and one sheet of paper, the craft's picture translated into trust",
+        "The artist self-title tradition: Ku Shulan's Papercut Lady grammar — the folk artist's confidence in her own title, the shortest path to a personified brand",
+        "The motif-root route: words from traditional patterns (ruyi, cloud scroll, rosette) — motif names carry their own graphic, solving logo and name in one stroke",
+        "The contemporary translation: papercutting restated as lattice art on paper — paper and cut compounds with design cadence, the door for collabs and export",
+      ],
+      cases: [
+        { name: "Papercut Lady (剪花娘子, Ku Shulan)", takeaway: "A folk artist's self-title become an art brand: folk at its extreme is style — the ceiling of personified naming in craft" },
+        { name: "自游自在", takeaway: "One swapped character writing a state of mind into an idiom: the craft-brand's light grammar — privatising a proverb in a single edit" },
+        { name: "Shanghai Story (上海故事)", takeaway: "Place plus story: local culture packaged into a purchasable narrative — the universal formula of scenic-area craft naming" },
+        { name: "纸原 (Paper Origin)", takeaway: "Two characters stating a material philosophy: minimal naming in the paper trade — blank space itself is paper's temperament" },
+      ],
+      pitfalls: [
+        "Falling between folk and contemporary: wanting folk flavor while fearing rusticity leaves the name invisible to both crowds — shift gears decisively or layer the two explicitly",
+        "Locking into the festival: a fortune-character name only trades at New Year — leave the festival to the product line, keep the brand open all year",
+        "Forgetting the hang tag: licensing and collabs are the growth exit, and a long rustic name dies in the client designer's first cut — the name must sit on a co-branded tag without friction",
+        "Region stamped too hard: a Shaanbei-papercut name walls off outside clients and the export line — leave geography to the artist bio, keep expansion room in the brand",
+      ],
+    },
+  },
+  lantern: {
+    slug: "lantern",
+    keywords: ["灯笼工坊", "花灯定制", "手工灯彩", "lantern workshop", "festival lantern"],
+    tlds: [
+      { tld: "com", zh: "灯会工程与文旅项目的商单走官网与邮件，.com 在投标文件里最稳", en: "Festival contracts and tourism projects travel by site and email — .com reads steadiest in the bid" },
+      { tld: "art", zh: "灯彩是入选非遗的光影艺术，.art 把「扎灯」升维成「光的雕塑」", en: "Lantern craft is heritage-listed light art — .art elevates frame-tying into sculpture of light" },
+      { tld: "studio", zh: "工作室气质直给，扎灯课与定制线共用一块招牌", en: "The studio identity outright — one sign over the tying class and the commission line" },
+    ],
+    zh: {
+      label: "灯笼工坊",
+      title: "灯笼工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "灯笼工坊与花灯定制命名指南：灯彩民俗传统、光影意象等思路，自贡灯会等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "灯笼工坊的名字要同时照亮两个市场：一头是「屋檐下一盏红灯笼」的零售生意——餐厅、民宿与节庆家庭买的是氛围；另一头是「一场灯会点亮一座城」的工程生意——文旅项目与灯会招标买的是制作实力。自贡灯会用一个地名把灯彩做成了城市名片，证明这个品类里「产地即品牌」的逻辑成立；但对工作室来说，隐藏考点恰恰是别让名字停在民俗里：现代灯彩的订单越来越多来自商场美陈、艺术装置与海外灯展，名字要能从元宵节走进美术馆。光影意象是这个品类独有的命名富矿——灯、光、影、明、夜类词根自带画面，且中英转译都顺。误区也清晰：满街的「张记灯笼」接得住集市摊位，接不住灯会投标书；而太艺术的名字又会让买红灯笼的老客户觉得贵。",
+      namingIdeas: [
+        "光影意象直给：灯、光、影、明、夜类词根——这个品类独有的命名富矿，画面感自带且中英转译都顺",
+        "产地灯会借力：自贡式的产地背书语法——灯彩强产地属性，地名+灯彩占定位，再配一个私有字号做记忆",
+        "节庆时刻路线：上元、元夕、良宵类节令词——把名字锚在「亮灯那一刻」，节庆基因写进品牌",
+        "扎作手艺语法：扎、彩、篾、纱类工艺词根——「一根竹篾弯出一条龙」的手艺画面，工程投标里的实力暗示",
+        "当代转译语法：把灯彩说成「光的雕塑」——light、glow 类英文词根配装置感，商场美陈与海外灯展的入口",
+      ],
+      cases: [
+        { name: "自贡灯会", takeaway: "一个地名把灯彩做成城市名片：产地即品牌的品类证明——灯彩命名里地域背书的天花板" },
+        { name: "泡泡玛特", takeaway: "泡泡的轻盈感撑起潮玩帝国：意象选得轻，品牌就年轻——灯彩转型美陈装置可以借鉴的语感" },
+        { name: "teamLab", takeaway: "团队+实验室的组合把光影做成艺术品牌：命名不提灯与光，反而让光成为作品本身——当代光影艺术的命名参照系" },
+        { name: "大红灯笼（张艺谋）", takeaway: "一部电影把红灯笼变成全球文化符号：全民意象的认知资产——品类共识可以直接借力，但名字要在共识之上加私有记忆点" },
+      ],
+      pitfalls: [
+        "姓氏摊位语法接不住工程单：「张记灯笼」在集市成立，在灯会投标书与文旅合同里显得单薄——工程线需要字号的正式感",
+        "锁死元宵场景：叫「上元灯坊」就只有正月有生意——节令留给产品系列，品牌名要覆盖美陈、装置与全年订单",
+        "太艺术吓跑零售客：装置感太强的名字让买红灯笼的餐厅老板觉得贵——两个市场要么分品牌，要么名字留在中间地带",
+        "忽略夜景照片场景：灯彩的传播全靠夜拍照片与短视频，名字要在暗色调海报上认得出——笔画太繁的字在夜景图里糊成一团",
+      ],
+    },
+    en: {
+      label: "Lantern workshops",
+      title: "How to Name a Lantern Workshop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Lantern workshop and festival lantern naming guide: light-and-shadow imagery, festival traditions, breakdowns of Zigong Lantern Festival and more, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A lantern workshop's name must light two markets at once: on one side the retail trade of a red lantern under the eaves — restaurants, guesthouses and festival households buying atmosphere; on the other the engineering trade of a festival lighting up a city — tourism projects and lantern-fair tenders buying production muscle. China's Zigong turned a place name into the lantern city's calling card, proving that origin-as-brand works in this category; but for a studio the hidden exam is precisely not letting the name stall in folklore — modern lantern orders increasingly come from mall installations, art pieces and overseas lantern shows, and the name must walk from the Lantern Festival into the museum. Light-and-shadow imagery is this category's private naming mine: lamp, light, glow and night roots carry their own picture and translate cleanly across languages. The pitfalls are equally clear: a surname-stall name holds the market booth but not the festival tender, while a too-arty name makes the red-lantern buyer assume the price doubled.",
+      namingIdeas: [
+        "Light-and-shadow imagery outright: lamp, light, glow, night roots — the category's private naming mine, pictures built in and clean across languages",
+        "Borrowing the origin festival: the Zigong grammar of place endorsement — lantern craft is origin-heavy, so let geography claim position and a private mark do the remembering",
+        "The lighting-moment route: first-full-moon and festival-night words — the name anchored at the instant the lanterns come on, festival genes written into the brand",
+        "The frame-tying grammar: tie, bamboo-strip, gauze and colour craft roots — one strip of bamboo bent into a dragon, production muscle implied for the tender",
+        "The contemporary translation: lantern craft restated as sculpture of light — light and glow compounds with installation cadence, the door to mall displays and overseas shows",
+      ],
+      cases: [
+        { name: "Zigong Lantern Festival (自贡灯会)", takeaway: "One place name become the lantern city's calling card: origin-as-brand proven — the ceiling of geographic endorsement in this craft" },
+        { name: "Pop Mart", takeaway: "A bubble's lightness carrying a toy empire: pick the image light and the brand reads young — the cadence a lantern studio can borrow for its installation line" },
+        { name: "teamLab", takeaway: "Team plus lab building a light-art brand without one light word in the name: let the light be the work itself — contemporary light art's naming reference" },
+        { name: "Raise the Red Lantern", takeaway: "One film turning the red lantern into a global symbol: the commons' cognitive equity — borrow the consensus, but add a private hook above it" },
+      ],
+      pitfalls: [
+        "The surname-stall grammar failing the tender: a family lantern-stand name holds the market but reads thin on the festival bid — the engineering line needs a formal house name",
+        "Locking into the first full moon: a Lantern-Festival name only trades in the first lunar month — leave the festival to the product series, keep the brand open for installations year-round",
+        "Too arty for the retail buyer: an installation-flavored name makes the restaurant owner buying red lanterns assume the price doubled — split the brands or hold the middle ground",
+        "Forgetting the night photo: lantern craft spreads through night shots and short video, and the name must survive the dark poster — dense strokes blur into mush against the glow",
+      ],
+    },
+  },
+  quilting: {
+    slug: "quilting",
+    keywords: ["拼布工作室", "手工被服", "布艺拼贴", "quilting studio", "patchwork"],
+    tlds: [
+      { tld: "com", zh: "材料包电商与定制订单的默认后缀，详情页与报价单上最稳", en: "The default suffix for kit e-commerce and commissions — steadiest on the product page and the quote" },
+      { tld: "studio", zh: "工作室气质直给，拼布课与定制线共用一块招牌", en: "The studio identity outright — one sign over the quilting class and the commission line" },
+      { tld: "shop", zh: "布料与材料包零售的轻量归类，线上小店直接对位", en: "The light retail filing for fabric and kit sales — the online shop aligned outright" },
+    ],
+    zh: {
+      label: "拼布工作室",
+      title: "拼布工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "拼布工作室与手工被服命名指南：百家被记忆传统、针脚布片意象等思路，Gee's Bend 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "拼布工作室的名字要缝住「碎布头里的记忆」：拼布的本质是把零碎的布片缝成一床完整的被子——这个动作天然就是隐喻，旧衣改的被子缝进家史，百家被缝进祝福，名字只需要把这层情感明说。国际参照系深厚：美国 Gee's Bend 的黑人女性拼布社群用一个河湾地名进了大都会博物馆，证明拼布可以从「省布料的活计」升维成「布上的抽象艺术」；中文语境里「百家被」「慈母手中线」是现成的情感矿脉。隐藏考点是业务分层：材料包与图纸走电商量、拼布课走社群粘性、定制纪念被（旧衣被、婴儿百日被）走情感溢价——名字要在详情页上亲切，在「把外婆的旧衣缝成被子」的定制故事里动人。误区在于气质跑偏：太家政感的名字（缝补类）拉低手艺价值，太艺术的名字又吓跑想学针线的新手。",
+      namingIdeas: [
+        "布片针脚意象：布、片、缝、线、格类词根——「一格一格缝起来」的画面感，拼布独有的形式美直接入名",
+        "百家被情感借力：百家、暖、絮类词根——中文语境现成的祝福语法，定制纪念被的情感入口",
+        "碎片重组隐喻：把「碎布成被」说成「碎片成完整」——拼布动作本身的哲学，最高级的命名母题",
+        "社群地名路线：Gee's Bend 式的地名+社群语法——拼布是围坐着一起缝的手艺，社群感就是品类基因",
+        "当代转译语法：patch、quilt 类英文词根配设计感——把拼布说成「布上的几何」，年轻客群与艺术线的入口",
+      ],
+      cases: [
+        { name: "Gee's Bend", takeaway: "一个河湾地名从省布活计进了大都会博物馆：社群+地名的语法把拼布升维成布上抽象艺术——品类天花板的证明" },
+        { name: "无印良品", takeaway: "「没有名字的好东西」反而成了最响的名字：材料本位的命名哲学——布艺品类可借鉴的反品牌语法" },
+        { name: "慈母手中线", takeaway: "一句唐诗是整个品类的情感总纲：针线=牵挂的全民共识——定制纪念被的命名可以直接从诗里取字" },
+        { name: "Etsy", takeaway: "一个无意义短音节做成全球手作市集：好念好记先于含义——手作电商线命名的实用主义参照" },
+      ],
+      pitfalls: [
+        "家政感拉低手艺价值：缝补、改衣类词根让拼布听起来像修补服务——这个品类卖的是记忆与艺术，不是针线活",
+        "太艺术吓跑新手：拼布课的主力客群是零基础爱好者，装置艺术感的名字让人不敢进门——艺术线与教学线要分层表达",
+        "锁死被子品类：叫「被坊」就难接壁挂、包袋与服饰拼贴——被子留给产品线，品牌名留「布与缝」的母题",
+        "忽略材料包电商场景：增长引擎在材料包与图纸的线上销售，名字要在搜索框与详情页里好念好搜——太诗意的生僻组合搜不到",
+      ],
+    },
+    en: {
+      label: "Quilting studios",
+      title: "How to Name a Quilting Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Quilting studio and patchwork naming guide: memory-quilt traditions, stitch-and-patch imagery, breakdowns of Gee's Bend and more, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A quilting studio's name must stitch the memory hidden in the scrap basket: quilting's essence is sewing odd pieces into one whole blanket — an action that is already a metaphor, with old shirts sewn into family history and community quilts sewn into blessing, so the name only has to say that feeling out loud. The reference frame runs deep: the Black women quilters of Gee's Bend carried a river-bend place name into the Metropolitan Museum, proving the craft can rise from thrift-work to abstract art in cloth; and every culture keeps a mother's-thread verse that makes stitches mean care. The hidden exam is the tier split: kits and patterns run on e-commerce volume, quilting classes run on community stickiness, memory quilts (old-shirt quilts, baby quilts) run on emotional premium — and the name must read warm on the product page and moving in the story of grandmother's shirts sewn into a blanket. The failure mode is temperament drift: a mending-flavored name cheapens the craft, while a too-arty one scares off the beginner who just wants to learn to sew.",
+      namingIdeas: [
+        "Patch-and-stitch imagery: patch, piece, stitch, thread and block roots — the square-by-square picture, quilting's own formal beauty written straight into the name",
+        "Borrowing the memory quilt: hundred-family, warmth and comfort roots — the ready-made grammar of blessing, the emotional door of the commissioned keepsake",
+        "The fragments-made-whole metaphor: scraps into a blanket restated as pieces into wholeness — the philosophy inside the action itself, the category's highest naming motif",
+        "The community place-name route: the Gee's Bend grammar of place plus circle — quilting is sewn sitting together, and fellowship is the category's gene",
+        "The contemporary translation: patch and quilt compounds with design cadence — quilting restated as geometry in cloth, the door for younger clients and the art line",
+      ],
+      cases: [
+        { name: "Gee's Bend", takeaway: "A river-bend place name carried from thrift-work into the Met: the community-plus-place grammar raising quilts to abstract art in cloth — the category ceiling proven" },
+        { name: "MUJI (无印良品)", takeaway: "No-brand quality goods become the loudest name of all: material-first naming philosophy — the anti-brand grammar a fabric studio can borrow" },
+        { name: "The mother's-thread verse (慈母手中线)", takeaway: "One ancient line as the whole category's emotional charter: stitches equal care in the cultural commons — memory-quilt names can draw straight from the poem" },
+        { name: "Etsy", takeaway: "A meaningless short syllable built into the global craft market: easy to say and recall before meaning — the pragmatist reference for the kit-shop line" },
+      ],
+      pitfalls: [
+        "The mending register cheapening the craft: repair and alteration roots make quilting sound like a fix-it service — this category sells memory and art, not needlework-by-the-hour",
+        "Too arty for the beginner: classes run on zero-experience hobbyists, and an installation-flavored name keeps them at the door — voice the art line and the teaching line separately",
+        "Locking into blankets: a quilt-house name can't take wall hangings, bags and garment patchwork — leave the blanket to the product line, keep cloth-and-stitch for the brand",
+        "Forgetting the kit search box: growth lives in online kits and patterns, and the name must survive the search bar — a poetic-obscure compound is a name nobody can find",
+      ],
+    },
+  },
+  teaware: {
+    slug: "teaware",
+    keywords: ["茶器工作室", "手作茶具", "紫砂陶瓷茶器", "teaware studio", "tea ceramics"],
+    tlds: [
+      { tld: "com", zh: "茶器电商与藏家询价的默认后缀，详情页与拍卖图录里最稳", en: "The default suffix for teaware e-commerce and collector enquiries — steadiest on the product page and the catalogue" },
+      { tld: "art", zh: "手作茶器的一半身份是器物艺术，.art 的归类直接对位", en: "Half of artisan teaware's identity is object art — .art files it exactly where it belongs" },
+      { tld: "studio", zh: "工作室气质直给，制器与茶器课共用一块招牌", en: "The studio identity outright — one sign over the making and the teaware class" },
+    ],
+    zh: {
+      label: "茶器工作室",
+      title: "茶器工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "茶器工作室与手作茶具命名指南：堂号窑口传统、器物意象等思路，时大彬/柏纳德利奇等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "茶器工作室的名字要替「一只杯子凭什么卖四位数」作答：手作茶器的价格里，一半是泥料与火，另一半是名字背后的人——紫砂史证明了这一点，时大彬三个字在明代就是价格本身，制器人的名号从来是这个品类最硬的通货。当代的参照系同样清晰：日本民艺运动的柏纳德·利奇以个人名号立窑，景德镇的年轻工作室以「造物」类字号出圈——名号与堂号两条路都通，关键是选定后持续积累。隐藏考点是业务分层：口粮杯走电商量、名家壶走藏家圈、茶器课与茶会走体验线——名字要在详情页上好念，在拍卖图录与茶席上有分量。另一个现实：茶器与茶文化深度绑定，名字里的文气是刚需，但「禅茶一味」类的标签词已经通胀，真正的文气来自具体的器物意象——一个「素」字、一个「拙」字，比十个禅字更有力。",
+      namingIdeas: [
+        "制器名号传统：姓名/艺名直接立号——时大彬验证过的语法，制器人的名号是品类里最硬的通货，长期主义的第一选择",
+        "堂号窑口语法：堂、窑、舍、造物类字号——把个人手艺升格成一个「出品方」，团队化与品类扩张的容器",
+        "器物意象直给：素、拙、圆、润类审美词根——茶器的文气来自具体的器感，一个字的审美判断比十个禅字有力",
+        "泥料火候借力：紫泥、柴烧、天目类工艺词——工艺即卖点的直给路线，但要配私有字号避免淹没在品类词里",
+        "茶事场景路线：把名字锚在「注水出汤」的一刻——器为茶生，一个茶事动词让器物有了使用的画面",
+      ],
+      cases: [
+        { name: "时大彬", takeaway: "三个字在明代就是价格本身：制器人名号作为品类通货的历史证明——茶器命名里个人名号的天花板" },
+        { name: "Bernard Leach", takeaway: "民艺运动的名号立窑：个人名号跨文化成立——东西方茶陶传统在「人名即窑口」上殊途同归" },
+        { name: "小罐茶", takeaway: "把包装规格做成品牌名：器物与茶的绑定营销——名字直接描述产品形态的直给示范，也提醒手作线要留出格调差异" },
+        { name: "春风祥玉", takeaway: "景德镇仿古名坊的四字堂号：吉语+意象的传统语法在当代茶器市场依然坚挺——堂号路线的现役证明" },
+      ],
+      pitfalls: [
+        "禅字标签通胀：「禅茶」「一味」类词已被用滥，堆标签不如立一个具体的审美字——文气要落在器感上",
+        "锁死单一器型：叫「壶庐」就难接杯、盏与茶仓——器型留给作品线，品牌名留审美母题",
+        "工艺词当私名：只叫「柴烧工作室」淹没在品类搜索里——柴烧、紫砂是公共资产，要配私有名号才有辨识度",
+        "忽略藏家场景：名家线的生意在拍卖图录与藏家口碑里，名字要经得起「落款」——太网感的名字刻在壶底会掉价",
+      ],
+    },
+    en: {
+      label: "Teaware studios",
+      title: "How to Name a Teaware Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Teaware studio and artisan tea ceramics naming guide: maker-mark and kiln-name traditions, object-aesthetic imagery, breakdowns of Shi Dabin/Bernard Leach, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A teaware studio's name must answer why one cup costs four figures: half the price of artisan teaware is clay and fire, and the other half is the person behind the name — Yixing history proved it, where the three characters of Shi Dabin were the price itself in the Ming dynasty; the maker's mark has always been this category's hardest currency. The contemporary references agree: Bernard Leach of the mingei movement raised a kiln on a personal name, while young Jingdezhen studios break out under making-house style names — both the maker-mark road and the house-name road work, and what matters is committing to one and compounding it. The hidden exam is the tier split: everyday cups run on e-commerce volume, master pots run on the collector circle, teaware classes and tea gatherings run on the experience line — the name must read easily on the product page and carry weight in the auction catalogue and at the tea table. One more reality: teaware is welded to tea culture, so literati air is a requirement — but zen-tea label words have inflated into noise, and real literati air comes from a concrete object aesthetic: one word for plain or unpolished outweighs ten zen characters.",
+      namingIdeas: [
+        "The maker-mark tradition: the personal or art name raised as the mark — the grammar Shi Dabin proved; the maker's name is the category's hardest currency and the long-termist's first choice",
+        "The house-and-kiln grammar: hall, kiln, cottage and making-house names — the personal hand upgraded to an issuing house, the container for a team and a wider line",
+        "Object aesthetics outright: plain, unpolished, round and mellow roots — teaware's literati air lives in a concrete sense of the object; one aesthetic judgement outweighs ten zen characters",
+        "Borrowing clay and fire: purple clay, wood-fired and tenmoku craft words — the craft-as-selling-point route, paired with a private mark so it doesn't drown in the category term",
+        "The tea-moment route: the name anchored at the instant of pouring — the vessel exists for tea, and one tea verb gives the object a picture in use",
+      ],
+      cases: [
+        { name: "Shi Dabin (时大彬)", takeaway: "Three characters that were the price itself in the Ming dynasty: historical proof of the maker's mark as category currency — teaware naming's personal-name ceiling" },
+        { name: "Bernard Leach", takeaway: "A kiln raised on a mingei name: the maker's mark proven across cultures — East and West tea ceramics converging on name-as-kiln" },
+        { name: "Xiao Guan Tea (小罐茶)", takeaway: "A packaging format become the brand: vessel and tea welded in marketing — the plain-statement model, and a reminder the artisan line must keep its register apart" },
+        { name: "春风祥玉 (Chunfeng Xiangyu)", takeaway: "A four-character Jingdezhen house name of auspice plus imagery: the traditional grammar still holding firm in today's teaware market — the house-name road's living proof" },
+      ],
+      pitfalls: [
+        "Zen-label inflation: zen-tea words are worn to noise — one concrete aesthetic character beats the pile; let the literati air land on the object",
+        "Locking into one vessel: a pot-cottage name can't take cups, bowls and tea jars — leave the shape to the product line, keep the aesthetic motif for the brand",
+        "The craft word as your name: a wood-fired-studio name drowns in the category search — kiln and clay words are public assets, distinctive only when paired with a private mark",
+        "Forgetting the collector: the master line trades in auction catalogues and collector word of mouth, and the name must survive the base mark — an internet-flavored name carved under the pot marks the price down",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
