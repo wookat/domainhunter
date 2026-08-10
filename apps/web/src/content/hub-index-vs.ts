@@ -412,4 +412,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "se-vs-com", a: "se", b: "com", title: { zh: ".se 和 .com 怎么选：瑞典本地信任与全球默认后缀的对比", en: ".se vs .com: Swedish Local Trust or the Global Default" } },
   { slug: "pl-vs-eu", a: "pl", b: "eu", title: { zh: ".pl 和 .eu 怎么选：波兰单一市场与泛欧覆盖的对比", en: ".pl vs .eu: Poland's Home Market or Pan-European Coverage" } },
   { slug: "tw-vs-hk", a: "tw", b: "hk", title: { zh: ".tw 和 .hk 怎么选：台湾与香港两大繁中商圈的对比", en: ".tw vs .hk: Taiwan or Hong Kong — Two Traditional Chinese Markets Compared" } },
+  { slug: "dk-vs-se", a: "dk", b: "se", title: { zh: ".dk 和 .se 怎么选：丹麦与瑞典两大北欧 ccTLD 的对比", en: ".dk vs .se: Denmark or Sweden — Two Nordic ccTLDs Compared" } },
+  { slug: "fi-vs-se", a: "fi", b: "se", title: { zh: ".fi 和 .se 怎么选：芬兰与瑞典两大北欧科技圈 ccTLD 的对比", en: ".fi vs .se: Finland or Sweden — Two Nordic Tech ccTLDs Compared" } },
+  { slug: "no-vs-dk", a: "no", b: "dk", title: { zh: ".no 和 .dk 怎么选：挪威本地主体门槛与丹麦开放验证的对比", en: ".no vs .dk: Norway's Local-Entity Bar or Denmark's Open Validation" } },
+  { slug: "ie-vs-uk", a: "ie", b: "uk", title: { zh: ".ie 和 .uk 怎么选：爱尔兰与英国两大英语市场 ccTLD 的对比", en: ".ie vs .uk: Ireland or the UK — Two English-Speaking Markets Compared" } },
+  { slug: "nz-vs-au", a: "nz", b: "au", title: { zh: ".nz 和 .au 怎么选：新西兰与澳大利亚两大大洋洲 ccTLD 的对比", en: ".nz vs .au: New Zealand or Australia — Two Oceanian ccTLDs Compared" } },
+  { slug: "mx-vs-es", a: "mx", b: "es", title: { zh: ".mx 和 .es 怎么选：墨西哥与西班牙两大西语市场 ccTLD 的对比", en: ".mx vs .es: Mexico or Spain — Two Spanish-Language ccTLDs Compared" } },
 ];
