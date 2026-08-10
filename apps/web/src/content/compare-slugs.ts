@@ -387,6 +387,12 @@ export const COMPARE_SLUGS = [
   "vegas-vs-casino",
   "immobilien-vs-immo",
   "tienda-vs-shop",
+  "de-vs-com",
+  "de-vs-eu",
+  "ca-vs-us",
+  "au-vs-com",
+  "jp-vs-cn",
+  "sg-vs-asia",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

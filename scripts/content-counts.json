@@ -702,7 +702,7 @@
     ]
   },
   "vs": {
-    "count": 384,
+    "count": 390,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -1087,7 +1087,13 @@
       "amsterdam-vs-berlin",
       "vegas-vs-casino",
       "immobilien-vs-immo",
-      "tienda-vs-shop"
+      "tienda-vs-shop",
+      "de-vs-com",
+      "de-vs-eu",
+      "ca-vs-us",
+      "au-vs-com",
+      "jp-vs-cn",
+      "sg-vs-asia"
     ]
   }
 }

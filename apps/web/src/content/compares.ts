@@ -8473,6 +8473,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Independent stores & DTC brand shops", "Cross-border & multilingual commerce", "Offline stores' online entrances", "The most recognized e-commerce suffix"],
     },
   },
+  "de-vs-com": {
+    slug: "de-vs-com",
+    a: "de",
+    b: "com",
+    zh: {
+      title: ".de 和 .com 怎么选：德国本地信任与全球默认值的对比",
+      metaDescription: ".de 是全球注册量第一的 ccTLD、德国本地信任与本地 SEO 双加成，注册约 $8/年平续；.com 全球通用但好名字绝迹。对比两者的市场定位、资格要求与品牌策略，并用 AI 猎取可注册的名字。",
+      verdict:
+        "和所有「ccTLD vs .com」的选择一样，看用户在哪里。主攻德国市场时 .de 几乎是标配：合作社性质的注册局 DENIC 运营、注册量超过 1,700 万，是全球最大的 ccTLD——德国消费者在地址栏习惯性输入 name.de，把它当「本地生意」的默认信号，本地电商、制造业官网、服务商用 .de 的信任度远超一般新后缀；Google 也会把 .de 站点与德国地区相关联，德语市场 SEO 有天然加成。价格是另一重优势：注册约 $8/年（约 ¥58）、续费同价——大型 ccTLD 里的良心价，德语复合词的库存也远比 .com 充裕。面向全球用户或计划出海，.com 的认知度无可替代——口头传播默认补全、长期资产流动性最好。预算允许的成熟德国品牌通常两个都拿：.de 做本地门面或防抢注，.com 做国际主站。两条 .de 特有的注意事项：DENIC 要求德国境内的行政联系地址（Admin-C），海外注册人需确认注册商（INWX、united-domains、Porkbun 等）代理支持；DENIC 有 zone 检查，个别注册商会先做 DNS 预检。判断标准：用户、物流、合规都在德国 → .de 的本地信任是 .com 给不了的；全球市场 → .com 仍是安全区。",
+      pickA: ["面向德国市场的电商", "德国制造与出口企业官网", "德国本地服务与商铺", "德语内容与媒体站"],
+      pickB: ["面向全球用户或计划出海", "品牌主站与长期资产", "口头传播多、依赖默认补全", "转售流动性最好"],
+    },
+    en: {
+      title: ".de vs .com: German Local Trust vs the Global Default",
+      metaDescription:
+        ".de is the world's largest ccTLD with German local trust and local-SEO upside at about $8/yr flat; .com is the global default with empty shelves. Compare market focus, eligibility and brand strategy, then hunt available names.",
+      verdict:
+        "As with every ccTLD-versus-.com call, it comes down to where your users are. For a Germany-focused business, .de is near-mandatory: run by the cooperative registry DENIC with over 17 million registrations — the largest ccTLD on earth — German consumers type name.de by habit and read it as the default signal of a local business, so e-commerce, manufacturers and service providers get trust far beyond any new gTLD; Google also geo-associates .de sites with Germany, a free boost for German-market SEO. Pricing doubles the case: about $8/yr (≈¥58) with the same renewal — honest pricing for a major ccTLD — and German compound words have far better inventory than .com. For a global audience, .com's recognition is irreplaceable — autocomplete reflex and the best long-term asset liquidity. Established German brands with budget usually take both: .de as the local front door or defensively, .com as the international main site. Two .de-specific cautions: DENIC requires an administrative contact address in Germany (Admin-C), so overseas registrants must confirm their registrar (INWX, united-domains, Porkbun) proxies it; and DENIC runs zone checks on DNS configuration, so some registrars pre-validate nameservers. The test: users, logistics and compliance all in Germany → .de delivers local trust .com can't; global market → .com remains the safety zone.",
+      pickA: ["German-market e-commerce", "German manufacturers & exporters", "Local German services & shops", "German-language content & media"],
+      pickB: ["Global audience or expansion plans", "Primary brand site and long-term asset", "Heavy word-of-mouth, autocomplete reflex", "Best resale liquidity"],
+    },
+  },
+  "de-vs-eu": {
+    slug: "de-vs-eu",
+    a: "de",
+    b: "eu",
+    zh: {
+      title: ".de 和 .eu 怎么选：单一德国市场与泛欧定位的对比",
+      metaDescription: ".de 是德国市场的默认信号、约 $8/年平续；.eu 讲「服务全欧洲」但需欧盟/EEA 资格。对比两者的市场半径、资格要求与组合打法，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是欧洲的后缀，分工在市场半径：一个说「德国的生意」，一个说「全欧洲的生意」。.de 赢在单一市场的深度——面向德国市场的电商、德国制造与出口企业、本地服务与德语媒体用 name.de，是德国消费者在地址栏习惯性输入的默认后缀；DENIC 运营、注册量超过 1,700 万（全球最大 ccTLD），本地信任度远超一般后缀，Google 也把 .de 与德国地区相关联；注册约 $8/年（约 ¥58）平续，德语复合词库存充裕。.eu 赢在泛欧叙事——泛欧电商、SaaS 的欧洲站、跨境物流与欧盟合规服务用 name.eu，一眼讲清「我们服务全欧洲」而不绑定单一国家；EURid 运营、注册量约 370 万，欧盟机构自己也用它（europa.eu），且 .eu 站点默认受 GDPR 等欧盟法规约束，对欧洲用户是一层信任背书；注册约 $8（约 ¥55）、续费约 $10/年（约 ¥72），差价很小。资格都有门槛但方向不同：.de 要求德国境内行政联系地址（注册商可代理）；.eu 硬性要求欧盟/EEA 居民或注册机构，英国脱欧后已不再符合，非欧盟主体需当地实体或代理。判断标准：主战场就是德国——用户、物流、合规都在德国境内 → .de 的本地信任更深，泛欧后缀反而稀释信号；真正多国经营——业务横跨德法意西等多个欧盟市场 → .eu 比逐国注册 ccTLD 省事得多。常见组合打法：德国主场用 .de，泛欧扩张站用 .eu 收拢多国业务。注意只做单一国家时当地 ccTLD 永远比 .eu 信任度高——这条对法国（.fr）、荷兰（.nl）同样成立。",
+      pickA: ["面向德国市场的电商", "德国制造与出口企业官网", "德国本地服务与商铺", "德语内容与媒体站"],
+      pickB: ["泛欧电商与跨境业务", "SaaS 的欧洲站点", "欧盟合规与专业服务", "欧洲多国经营的品牌"],
+    },
+    en: {
+      title: ".de vs .eu: One German Market or the Pan-European Claim",
+      metaDescription:
+        ".de is the default signal for the German market at about $8/yr flat; .eu says \"we serve all of Europe\" but requires EU/EEA eligibility. Compare market radius, eligibility and combo plays, then hunt names available on both.",
+      verdict:
+        "Both are European suffixes; the split is market radius: one says a German business, the other says a European one. .de wins on single-market depth — German-market e-commerce, manufacturers and exporters, local services and German-language media on name.de use the suffix German consumers type by habit; run by DENIC with over 17 million registrations (the largest ccTLD on earth), it carries local trust far beyond any generic suffix, and Google geo-associates .de with Germany; about $8/yr (≈¥58) flat, with healthy inventory for German compounds. .eu wins on the pan-European story — pan-European e-commerce, a SaaS product's European presence, cross-border logistics and EU compliance services on name.eu say \"we serve all of Europe\" without binding to one country; run by EURid with about 3.7 million registrations, used by the EU institutions themselves (europa.eu), and an .eu site is presumed bound by GDPR and EU law — a layer of trust for European users; about $8 to register (≈¥55) and $10/yr to renew (≈¥72), a tiny step-up. Both gates differ in kind: .de needs a German admin contact address (registrars proxy it); .eu strictly requires EU/EEA residency or establishment — the UK no longer qualifies post-Brexit, and non-EU entities need a local presence or proxy. The test: the battlefield is Germany — users, logistics and compliance inside the country → .de's local trust runs deeper, and a pan-European suffix would dilute the signal; genuinely multi-country operations across Germany, France, Italy, Spain → .eu beats registering national ccTLDs one by one. A common combo: .de for the German home market, .eu to gather the multi-country expansion. Remember: for a single-country business the national ccTLD always out-trusts .eu — equally true for France (.fr) and the Netherlands (.nl).",
+      pickA: ["German-market e-commerce", "German manufacturers & exporters", "Local German services & shops", "German-language content & media"],
+      pickB: ["Pan-European e-commerce & cross-border trade", "A SaaS product's European presence", "EU compliance & professional services", "Brands operating across multiple EU countries"],
+    },
+  },
+  "ca-vs-us": {
+    slug: "ca-vs-us",
+    a: "ca",
+    b: "us",
+    zh: {
+      title: ".ca 和 .us 怎么选：加拿大与美国两个本土信号的对比",
+      metaDescription: ".ca 需满足加拿大存在要求、本地信任度极高且约 $13/年平续；.us 需美国关联、便宜且可玩短语梗但禁止 WHOIS 隐私。对比两者的资格、隐私与适用场景，并用 AI 猎取可注册的名字。",
+      verdict:
+        "北美两大 ccTLD 的对比先看资格再看市场：两边都有硬门槛，且互不通用。.ca 赢在本地信任的浓度——面向加拿大市场的电商、本地服务、专业事务所用 name.ca，调查里多数加拿大人表示更信任 .ca 网站并倾向从 .ca 电商下单；非营利注册局 CIRA 运营、注册量超过 300 万，加拿大存在要求（CPR）规定注册人须为加拿大公民、永久居民、加拿大注册企业或在加商标持有人——这道门槛保证了 .ca 的本地纯度，也让常见英文词的库存好于 .com；注册约 $13/年（约 ¥95）平续，双语市场注意名字在英法两语下都好读。.us 赢在价格与玩法——美国本土产品与服务、社区协作类品牌用 .us，价格便宜续费稳，「join.us、near.us」式短语域名还能把后缀读进品牌里；但注册要求美国关联（公民/居民/企业，需申报 Nexus），且注册局禁止 WHOIS 隐私——注册人信息公开，这条对隐私敏感的个人是实质障碍。判断标准：生意在加拿大——用户、物流、合规都在加境内 → .ca 的本地信任浓度是北美后缀里最高的一档；生意在美国——本土业务或短语梗成立 → .us 便宜且出彩，前提是接受信息公开。两边都做的跨境品牌通常各拿各的：.ca 服务加拿大站、.us（或更常见的 .com）服务美国站——事实上美国市场的主流选择仍是 .com，.us 是特色打法而非默认值，这一点与 .ca 在加拿大的地位不对称。",
+      pickA: ["面向加拿大市场的电商", "加拿大本地服务与事务所", "加拿大专业机构与连锁业务", "双语（英法）市场品牌"],
+      pickB: ["美国本土产品与服务", "「动词.us」短语域名（join.us 式）", "预算敏感（便宜续费稳）", "社区与协作类品牌"],
+    },
+    en: {
+      title: ".ca vs .us: Two North American Local Signals Compared",
+      metaDescription:
+        ".ca is gated by Canadian Presence Requirements with top local trust at about $13/yr flat; .us needs a US nexus, costs little and plays phrase puns but forbids WHOIS privacy. Compare eligibility, privacy and fit, then hunt available names.",
+      verdict:
+        "For North America's two big ccTLDs, check eligibility before market: both are gated, and neither gate opens the other. .ca wins on trust density — Canada-facing e-commerce, local services and professional firms on name.ca benefit from surveys showing most Canadians trust .ca sites more and prefer buying from .ca stores; run by non-profit registry CIRA with over 3 million registrations, the Canadian Presence Requirements limit registration to citizens, permanent residents, Canadian corporations or Canadian trademark holders — a gate that keeps .ca authentically local and keeps common English words in stock far better than .com; about $13/yr (≈¥95) flat, and in a bilingual market the name should read well in English and French. .us wins on price and wordplay — US-domestic products and services and community brands get budget pricing with stable renewals, and phrase domains like join.us or near.us read the suffix straight into the brand; but registration requires a genuine US nexus (citizen, resident or US business, declared at registration) and the registry forbids WHOIS privacy — registrant details are public, a real obstacle for privacy-minded individuals. The test: business in Canada — users, logistics and compliance in-country → .ca carries the densest local trust of any North American suffix; business in the US — domestic operations or a working phrase pun → .us is cheap and distinctive if you accept public WHOIS. Cross-border brands serving both usually take one each: .ca for the Canadian site, .us (or more commonly .com) for the US — in fact the American mainstream still defaults to .com, making .us a stylistic play rather than the default, an asymmetry .ca doesn't share in Canada.",
+      pickA: ["Canada-facing e-commerce", "Local Canadian services & firms", "Canadian professional institutions & franchises", "Bilingual (English-French) market brands"],
+      pickB: ["US-domestic products & services", "\"Verb.us\" phrase domains (join.us)", "Budget-sensitive, stable renewals", "Community & collaboration brands"],
+    },
+  },
+  "au-vs-com": {
+    slug: "au-vs-com",
+    a: "au",
+    b: "com",
+    zh: {
+      title: ".au 和 .com 怎么选：澳洲本地信任与全球默认值的对比",
+      metaDescription: ".au 2022 年才开放二级直注、库存新鲜且本地信任几十年，约 $12/年平续但需澳大利亚存在资格；.com 全球通用但好名字绝迹。对比两者的市场定位、资格与品牌策略，并用 AI 猎取可注册的名字。",
+      verdict:
+        "和所有「ccTLD vs .com」的选择一样，看用户在哪里——但 .au 多一张牌：库存新鲜。主攻澳大利亚市场时 .au 几乎是标配：auDA 管理、注册量超过 400 万，澳洲消费者把 .au 系后缀当「本地生意」的默认信号，本地电商、服务商、事务所用它的信任度远超一般新后缀；Google 也会把 .au 站点与澳大利亚地区相关联，本地 SEO 有天然加成。特殊之处在时间差：几十年来澳洲企业只能注册 .com.au，2022 年 3 月才开放二级直注——信任是几十年攒下的，好名字的库存却是 2022 年才重新洗牌的，不少在 .com.au 和 .com 下都被占的词，在 .au 直注下仍有机会；注册约 $12/年（约 ¥85）平续无钩子。资格是硬门槛：须满足澳大利亚存在要求——公民/居民、ABN 注册企业或在澳商标持有人，海外主体不符合就只能看 .com。面向全球用户或计划出海，.com 的认知度无可替代——口头传播默认补全、长期资产流动性最好。判断标准：用户、物流、合规都在澳大利亚 → .au 的本地信任加新鲜库存是难得的组合；全球市场或无澳洲资格 → .com 仍是安全区。两条注意：对应 .com.au 在他人手里时评估品牌混淆风险，最好一起拿；成熟澳洲品牌通常 .au/.com.au 做本地门面、.com 做国际主站。",
+      pickA: ["面向澳大利亚市场的电商", "澳洲本地服务与商铺", "澳洲专业机构与事务所", "想抢 2022 年新开放库存的品牌"],
+      pickB: ["面向全球用户或计划出海", "无澳大利亚存在资格", "品牌主站与长期资产", "口头传播多、依赖默认补全"],
+    },
+    en: {
+      title: ".au vs .com: Australian Local Trust vs the Global Default",
+      metaDescription:
+        ".au opened direct registration only in 2022 — fresh inventory on decades of trust at about $12/yr flat, gated by Australian presence rules; .com is the global default with empty shelves. Compare market focus, eligibility and strategy, then hunt available names.",
+      verdict:
+        "As with every ccTLD-versus-.com call, it comes down to where your users are — but .au holds one extra card: fresh inventory. For an Australia-focused business, .au is near-mandatory: governed by auDA with over 4 million registrations, Australian consumers read .au-family suffixes as the default local-business signal, so local e-commerce, services and firms get trust far beyond any new gTLD; Google also geo-associates .au sites with Australia, a free local-SEO boost. The twist is timing: for decades Australians could only register .com.au, and direct second-level registration opened in March 2022 — the trust took decades to build, but the good-name inventory was reshuffled in 2022, so words long taken on both .com.au and .com often remain available at name.au; about $12/yr (≈¥85) flat, no traps. Eligibility is the hard gate: the Australian presence requirement — citizens/residents, ABN-registered businesses or Australian trademark holders — and overseas entities that don't qualify are back to .com anyway. For a global audience, .com's recognition is irreplaceable — autocomplete reflex and the best long-term asset liquidity. The test: users, logistics and compliance all in Australia → .au's local trust plus fresh inventory is a rare combination; global market or no Australian presence → .com remains the safety zone. Two cautions: if someone else holds the matching .com.au, weigh the brand-confusion risk and ideally secure both; established Australian brands typically front locally on .au/.com.au and internationally on .com.",
+      pickA: ["Australia-facing e-commerce", "Local Australian services & shops", "Australian professional firms", "Brands hunting the 2022 reshuffled inventory"],
+      pickB: ["Global audience or expansion plans", "No Australian presence (ineligible for .au)", "Primary brand site and long-term asset", "Heavy word-of-mouth, autocomplete reflex"],
+    },
+  },
+  "jp-vs-cn": {
+    slug: "jp-vs-cn",
+    a: "jp",
+    b: "cn",
+    zh: {
+      title: ".jp 和 .cn 怎么选：日本与中国两大东亚市场入口的对比",
+      metaDescription: ".jp 是日本市场信任度最高的入口、约 $40/年平续、需日本联系地址；.cn 价格亲民、备案合规友好、需实名认证。对比两者的市场、资格与成本结构，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个后缀各自是一个市场的入口，几乎不存在二选一——真正的问题是「你的下一个市场是哪个」。.jp 是日本市场的通用入口：JPRS 运营、注册量约 170 万，是亚洲信任度最高的 ccTLD 之一——日本消费者对本土信号极为敏感，乐天、任天堂等日本巨头的主站都在 .jp 系后缀上，本地电商、品牌官网、进入日本的海外品牌用 name.jp 一眼讲清「日本的生意」；Google 也把 .jp 与日本地区相关联。资格上要求日本境内联系地址，海外主体由注册商代理（Gandi、GMO 系都支持）；价格偏高但平续——约 $40/年（约 ¥290），高价反而过滤投机、库存干净，日语罗马字词根在 .jp 下天然好读。.cn 是中国市场的合规入口：面向中国用户的产品、需要 ICP 备案上线的网站、政企合作项目用 .cn 天然顺畅——备案流程对 .cn 完全友好，而部分新顶级域会遇到限制；价格是主流后缀里最亲民的一档，首年常有活动价续费也便宜，大量双拼、三拼在 .com 无货后在 .cn 下仍可注册。注册需实名认证（个人或企业均可），面向海外用户的业务不建议主用 .cn。判断标准：下一站是日本——本地化产品、日本电商、日语内容 → .jp 的本土信任值回 $40 的年费；下一站是中国大陆——需要备案上线、国内获客 → .cn 是唯一同时满足合规与认知的选择。同时做中日两个市场的品牌就各拿各的：brand.jp 服务日本站、brand.cn 服务中国站，两边都是「本地生意」的信号，别指望一个后缀跨两个市场。",
+      pickA: ["面向日本市场的电商", "进入日本市场的海外品牌", "日本本地服务与门店", "日语内容与媒体站"],
+      pickB: ["面向中国用户的产品", "需要 ICP 备案的网站", "国内企业官网", "双拼品牌名（.com 无货时机会大）"],
+    },
+    en: {
+      title: ".jp vs .cn: Japan or China — Two East Asian Market Entrances",
+      metaDescription:
+        ".jp is Japan's most trusted market entrance at about $40/yr flat with a local-address requirement; .cn is affordable and ICP-filing friendly with real-name verification. Compare markets, eligibility and cost structure, then hunt available names.",
+      verdict:
+        "Each suffix is the entrance to one market, so this is rarely an either-or — the real question is which market comes next. .jp is the universal entrance to Japan: run by JPRS with about 1.7 million registrations and among the most trusted ccTLDs in Asia — Japanese consumers are highly attuned to local signals, giants like Rakuten and Nintendo keep their main sites on .jp-family suffixes, and local e-commerce, brand sites and overseas brands entering Japan say \"a Japanese business\" at a glance on name.jp; Google geo-associates .jp with Japan. Eligibility requires a contact address within Japan, proxied by registrars for overseas entities (Gandi and GMO-family registrars support it); pricing is high but flat — about $40/yr (≈¥290) — and the price bar filters speculation, keeping inventory clean, while Japanese romaji roots read naturally. .cn is the compliance entrance to China: products for Chinese users, sites that need ICP filing to go live, and government or enterprise projects run smoothest on .cn — the filing process is fully friendly to it while some new gTLDs hit restrictions; pricing sits in the friendliest tier of mainstream suffixes with frequent first-year deals and cheap renewals, and vast pinyin inventory remains open where .com sold out long ago. Registration requires real-name verification (individuals or companies), and businesses facing overseas users shouldn't lead with .cn. The test: next stop Japan — localized products, Japanese commerce, Japanese-language content → .jp's local trust earns its $40 fee; next stop mainland China — ICP filing and domestic acquisition → .cn is the only choice that satisfies both compliance and recognition. Brands serving both markets take one each: brand.jp for the Japan site, brand.cn for the China site — each signals a local business, and no single suffix spans both markets.",
+      pickA: ["Japan-facing e-commerce", "Overseas brands entering Japan", "Local Japanese services & storefronts", "Japanese-language content & media"],
+      pickB: ["Products for Chinese users", "Sites that need ICP filing", "Domestic Chinese corporate sites", "Pinyin brand names (big chance when .com is gone)"],
+    },
+  },
+  "sg-vs-asia": {
+    slug: "sg-vs-asia",
+    a: "sg",
+    b: "asia",
+    zh: {
+      title: ".sg 和 .asia 怎么选：新加坡枢纽信号与亚太区域后缀的对比",
+      metaDescription: ".sg 是新加坡国家域名、在东南亚商圈自带合规与专业联想，约 $39/年平续、需本地存在；.asia 是亚太区域的官方后缀、约 $12/年平续。对比两者的信号半径、资格与价格，并用 AI 猎取可注册的名字。",
+      verdict:
+        "都能讲亚洲故事，分工在信号的锚点：一个锚定新加坡这座枢纽城市国家，一个圈定整个亚太。.sg 赢在枢纽信号的浓度——新加坡是东南亚的商业与金融枢纽，.sg 的信号价值随之外溢：不止本地生意，面向东南亚的区域总部、金融科技、跨境电商用 name.sg，讲的是「以新加坡为基地的正规生意」，这个后缀在东南亚商圈自带合规与专业联想；SGNIC（新加坡资讯通信媒体发展局旗下）运营，要求本地存在——本地个人、注册企业，海外主体由注册商代理（Vodien、Exabytes 等支持）；注册约 $39/年（约 ¥280）平续，与 .jp 类似，价格门槛过滤投机、库存干净。.asia 赢在覆盖半径与价格——面向亚洲多国市场的跨境电商与品牌站、亚太区业务的企业官网、区域行业协会与展会活动用 name.asia 一眼锁定亚太；2007 年由香港 DotAsia 机构发起、多个亚太国家注册局背书，是少数「代表一个大洲」的官方后缀；注册约 $12/年（约 ¥85）、续费同价，成本只有 .sg 的三分之一，注册政策要求至少一个亚太联系人（多数注册商自动满足）。判断标准：业务以新加坡为基地——本地企业、区域总部落在新加坡、金融科技要合规联想 → .sg 的枢纽信号更浓，「pay/trade 类功能词 + .sg」在金融科技圈尤其吃香；业务横跨亚太多国而不绑定单一基地——东亚东南亚多市场电商、区域内容与活动 → .asia 的覆盖更宽、成本更低。常见组合打法：区域总部站用 .sg 立正规门面，面向多国的业务线用 .asia 收拢区域流量。注意两边的信号都限于亚洲商圈，纯欧美市场业务另择后缀。",
+      pickA: ["新加坡本地企业与服务", "东南亚区域总部与跨境业务", "金融科技与专业服务", "进入东南亚市场的品牌"],
+      pickB: ["面向亚洲多国市场的跨境电商", "亚太区业务的企业官网", "亚洲文化与旅行内容站", "预算敏感、要成本可预期的区域业务"],
+    },
+    en: {
+      title: ".sg vs .asia: The Singapore Hub Signal or the Asia-Pacific Region",
+      metaDescription:
+        ".sg is Singapore's country domain with compliance connotations across Southeast Asian business circles at about $39/yr flat, local presence required; .asia is the official Asia-Pacific suffix at about $12/yr flat. Compare signal radius, eligibility and pricing, then hunt available names.",
+      verdict:
+        "Both tell an Asian story; the split is the anchor: one pins itself to the hub city-state of Singapore, the other circles all of Asia-Pacific. .sg wins on hub-signal density — Singapore is Southeast Asia's business and financial hub, and the signal spills over: beyond local businesses, regional headquarters, fintech firms and cross-border commerce on name.sg say \"a legitimate business based in Singapore\", a suffix carrying compliance and professionalism connotations across the region's business circles; run by SGNIC under the Infocomm Media Development Authority, it requires local presence — Singapore individuals or registered entities, with registrars (Vodien, Exabytes) proxying for overseas registrants; about $39/yr (≈¥280) flat, and like .jp the price bar filters speculation, keeping inventory clean. .asia wins on radius and price — cross-border e-commerce and brands targeting multiple Asian markets, corporate sites with APAC operations, and regional trade associations and events on name.asia lock onto Asia-Pacific at a glance; launched in 2007 by the Hong Kong-based DotAsia Organisation and endorsed by many APAC country registries, it is one of the very few suffixes that officially names a continent; about $12/yr (≈¥85) flat — a third of .sg's cost — with a charter requiring one APAC-based contact (most registrars handle it automatically). The test: the business is based in Singapore — local companies, a regional HQ seated there, fintech wanting the compliance connotation → .sg's hub signal runs denser, and function words like pay or trade + .sg land especially well in fintech circles; the business spans multiple APAC countries without a single base — multi-market East and Southeast Asian commerce, regional content and events → .asia covers wider at lower cost. A common combo: the regional HQ fronts on .sg for legitimacy while multi-country business lines gather regional traffic on .asia. Note both signals stop at Asia's business circles — purely Western-market ventures should look elsewhere.",
+      pickA: ["Local Singapore businesses & services", "Southeast Asia regional HQs & cross-border trade", "Fintech & professional services", "Brands entering Southeast Asia"],
+      pickB: ["Cross-border e-commerce for multiple Asian markets", "Corporate sites with APAC operations", "Asian culture & travel content", "Budget-sensitive regional plays with flat costs"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

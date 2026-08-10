@@ -394,4 +394,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "vegas-vs-casino", a: "vegas", b: "casino", title: { zh: ".vegas 和 .casino 怎么选：城市门牌与博彩品类的分工", en: ".vegas vs .casino: The City Nameplate or The Gambling Category" } },
   { slug: "immobilien-vs-immo", a: "immobilien", b: "immo", title: { zh: ".immobilien 和 .immo 怎么选：德语房产全称与缩写的取舍", en: ".immobilien vs .immo: The German Full Word or The Short Abbreviation" } },
   { slug: "tienda-vs-shop", a: "tienda", b: "shop", title: { zh: ".tienda 和 .shop 怎么选：西语店铺词与全球店铺门面", en: ".tienda vs .shop: The Spanish Store Word or The Global Storefront" } },
+  { slug: "de-vs-com", a: "de", b: "com", title: { zh: ".de 和 .com 怎么选：德国本地信任与全球默认值的对比", en: ".de vs .com: German Local Trust vs the Global Default" } },
+  { slug: "de-vs-eu", a: "de", b: "eu", title: { zh: ".de 和 .eu 怎么选：单一德国市场与泛欧定位的对比", en: ".de vs .eu: One German Market or the Pan-European Claim" } },
+  { slug: "ca-vs-us", a: "ca", b: "us", title: { zh: ".ca 和 .us 怎么选：加拿大与美国两个本土信号的对比", en: ".ca vs .us: Two North American Local Signals Compared" } },
+  { slug: "au-vs-com", a: "au", b: "com", title: { zh: ".au 和 .com 怎么选：澳洲本地信任与全球默认值的对比", en: ".au vs .com: Australian Local Trust vs the Global Default" } },
+  { slug: "jp-vs-cn", a: "jp", b: "cn", title: { zh: ".jp 和 .cn 怎么选：日本与中国两大东亚市场入口的对比", en: ".jp vs .cn: Japan or China — Two East Asian Market Entrances" } },
+  { slug: "sg-vs-asia", a: "sg", b: "asia", title: { zh: ".sg 和 .asia 怎么选：新加坡枢纽信号与亚太区域后缀的对比", en: ".sg vs .asia: The Singapore Hub Signal or the Asia-Pacific Region" } },
 ];
