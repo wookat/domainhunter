@@ -293,7 +293,7 @@
     ]
   },
   "guide": {
-    "count": 284,
+    "count": 290,
     "slugs": [
       "saas",
       "ecommerce",
@@ -578,7 +578,13 @@
       "luxuryresale",
       "organicfood",
       "permanentmakeup",
-      "homedecor"
+      "homedecor",
+      "craftvodka",
+      "esportsnews",
+      "sportsodds",
+      "tabletopclub",
+      "futsal",
+      "fashionbuyer"
     ]
   },
   "vs": {

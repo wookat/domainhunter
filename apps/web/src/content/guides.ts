@@ -17732,6 +17732,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  craftvodka: {
+    slug: "craftvodka",
+    keywords: ["精酿伏特加", "伏特加品牌", "小批量蒸馏", "craft vodka", "distillery"],
+    tlds: [
+      { tld: "vodka", zh: "品类后缀直给到杯口，看域名就知道瓶子里装什么", en: "The category stated right at the rim — one glance at the domain says what's in the bottle" },
+      { tld: "wine", zh: "酒饮大品类的通用后缀，品牌延伸到利口酒也接得住", en: "The broad drinks suffix — room to stretch into liqueurs without renaming" },
+      { tld: "bar", zh: "调酒场景先占住，品牌故事从吧台那杯 Martini 讲起", en: "Claim the cocktail scene first — the brand story starts with the Martini on the bar top" },
+    ],
+    zh: {
+      label: "精酿伏特加",
+      title: "精酿伏特加品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "精酿伏特加品牌命名指南：产地风土、蒸馏工艺等思路，灰雁/绝对伏特加/Tito's 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "伏特加号称「无色无味」，所以它的名字要替液体把全部的故事讲完——货架上一排透明的瓶子，能分出高下的只有名字与它背后的想象。看行业样本：Grey Goose（灰雁）用一只法国灰雁把「法式奢华」冻进冰桶，产地叙事让一支美国人创立的品牌卖出了干邑的身价；Absolut（绝对伏特加）把一个形容词注册成了品牌——「绝对」的纯净、「绝对」的瑞典，广告四十年只讲瓶子和这个词；Tito's Handmade Vodka 反着走，用创始人小名加「手工」两个字，把德州小作坊的车库气质做成了美国销量第一。精酿伏特加的命名考点是「工艺可见度」：小批量、铜壶蒸馏、本地谷物——这些看不见的坚持要在名字里长出来，因为你的顾客买的不是酒精，是「为什么这瓶值三倍价钱」的理由。",
+      namingIdeas: [
+        "产地风土入名：灰雁式的地理叙事——把水源、谷物产地或小镇名写进名字，风土是精酿溢价的第一张牌",
+        "工艺词直给：手工、小批量、铜壶、单一谷物——Tito's 式的诚实命名，工艺词就是品质承诺书",
+        "极简形容词路线：绝对伏特加式的词性霸占——用一个干净的形容词讲纯净，配透明酒液刚好",
+        "创始人具名：蒸馏师的名字上瓶标——小作坊的信任靠人名背书，酒标就是署名的作品",
+        "冰点通感测试：名字读出来要「冷而净」——伏特加的想象在冰柜与冻杯里，热闹甜腻的词根留给利口酒",
+      ],
+      cases: [
+        { name: "Grey Goose 灰雁", takeaway: "一只法国灰雁冻进冰桶：产地叙事把美国创立的品牌卖出干邑身价——风土命名的教科书" },
+        { name: "Absolut 绝对伏特加", takeaway: "把形容词注册成品牌：「绝对」的纯净配透明的瓶子，四十年广告只讲一个词——词性霸占的世界级范本" },
+        { name: "Tito's Handmade Vodka", takeaway: "创始人小名加「手工」：德州车库作坊的诚实语感做成美国销量第一——工艺具名的逆袭样本" },
+        { name: "Beluga 白鲸", takeaway: "西伯利亚的白鲸借来稀有与冷冽：鱼子酱的联想直接把定位钉在超高端——意象借用的高分卷" },
+      ],
+      pitfalls: [
+        "俄式刻板堆砌：-ov/-ski 后缀与红场意象扎堆，精酿的本地故事反而被淹没——风土要自己的，不要借来的",
+        "只讲酒精度不讲想象：名字全是烈、纯、原浆，读起来像化学品——伏特加卖的是冰点之上的想象力",
+        "锁死单一品类：名字绑死伏特加，延伸金酒、利口酒就要重讲故事——主品牌留余量，品类交给副线",
+        "忽略酒吧点单场景：吧台嘈杂环境里要一秒说清——三个音节内说不出口的名字，调酒师不会替你推荐",
+      ],
+    },
+    en: {
+      label: "Craft vodka",
+      title: "How to Name a Craft Vodka Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Craft vodka naming guide: terroir stories, process-forward names, breakdowns of Grey Goose/Absolut/Tito's, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Vodka is famously \"colorless and odorless\" — which means the name must tell the liquid's entire story for it. On a shelf of identical clear bottles, the only thing separating them is the name and the imagination behind it. The benchmarks show the range: Grey Goose froze French luxury into an ice bucket with a single bird — a terroir narrative that let an American-founded brand charge cognac money; Absolut trademarked an adjective — absolute purity, absolute Sweden — and ran forty years of advertising on one word and one bottle; Tito's Handmade Vodka went the other way, a founder's nickname plus \"handmade,\" turning Texas garage-still honesty into America's best-selling vodka. The craft-vodka exam is process visibility: small batches, copper pots, local grain — invisible virtues that must grow into the name, because your customer isn't buying alcohol, they're buying the reason this bottle costs three times more.",
+      namingIdeas: [
+        "Terroir in the name: the Grey Goose move — write the water source, the grain, the small town into the label; provenance is craft's first premium card",
+        "Process words stated plainly: handmade, small batch, copper pot, single grain — Tito's-style honesty, where the process word is the quality warranty",
+        "The minimalist adjective route: own one clean word the way Absolut owns absoluteness — purity in a word, matched to a transparent spirit",
+        "Distiller's name on the bottle: small-still trust runs on a human signature — the label as a signed work",
+        "The freezer test: the name should read cold and clean aloud — vodka's imagination lives in ice; leave the warm, sweet roots to liqueurs",
+      ],
+      cases: [
+        { name: "Grey Goose", takeaway: "One French goose frozen into an ice bucket: terroir narrative selling an American-founded brand at cognac prices — the textbook of provenance naming" },
+        { name: "Absolut", takeaway: "An adjective registered as a brand: absolute purity, one bottle, forty years of ads on a single word — the world-class case of owning a part of speech" },
+        { name: "Tito's Handmade Vodka", takeaway: "A founder's nickname plus \"handmade\": Texas garage-still honesty become America's best-seller — the underdog proof of process naming" },
+        { name: "Beluga", takeaway: "A Siberian whale lending rarity and chill: the caviar association nails ultra-premium in one word — imagery borrowing at full marks" },
+      ],
+      pitfalls: [
+        "Stacking Russian clichés: -ov and -ski suffixes and Red Square imagery drown your own local story — terroir must be yours, not borrowed",
+        "All proof, no poetry: names that read like ethanol specs sell chemistry, not imagination — vodka trades on what happens above the freezing point",
+        "Welding to one spirit: a vodka-bound name restarts the story at every gin or liqueur extension — keep the parent name roomy, let sub-lines carry the category",
+        "Ignoring the bar call: in a loud bar the order must land in one second — a name over three syllables never gets recommended by the bartender",
+      ],
+    },
+  },
+  esportsnews: {
+    slug: "esportsnews",
+    keywords: ["棋牌电竞资讯", "电竞媒体", "赛事报道", "esports news", "gaming media"],
+    tlds: [
+      { tld: "casino", zh: "棋牌娱乐品类词直给，资讯定位下的行业门户一眼归类", en: "The card-gaming category stated outright — an info portal filed under its industry at a glance" },
+      { tld: "news", zh: "资讯身份先立住，合规敏感行业最稳的定位声明", en: "The news identity staked first — the safest positioning statement in a compliance-sensitive space" },
+      { tld: "media", zh: "媒体属性直给，从图文到视频栏目都装得下", en: "The media identity stated plainly — room for everything from articles to video desks" },
+    ],
+    zh: {
+      label: "棋牌电竞资讯",
+      title: "棋牌电竞资讯站怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "棋牌电竞资讯与赛事媒体命名指南：资讯定位、数据词根等思路，HLTV/玩加电竞/PokerNews 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "棋牌与电竞的资讯站，名字先要回答一个合规问题：「我是媒体，不是牌桌」。定位写进名字，才能把赛事报道、战队数据与攻略社区做成生意，而不被当成导流入口。看行业样本：HLTV 从 Half-Life TV 的观战工具起家，四个字母成了 CS 赛事数据的代名词——工具名沉淀成媒体品牌，权威是数据喂出来的；玩加电竞用「玩+加」把娱乐与增量写在一起，中文语境里「加」字自带战力提升的联想，资讯与数据服务顺势展开；PokerNews 直接用「品类+news」的诚实结构，二十年只做赛事报道与规则科普，名字本身就是合规声明。命名的隐藏考点是「牌桌距离感」：名字离「下注」越远、离「看懂比赛」越近，广告主、应用商店与搜索引擎对你就越友好——资讯站的名字要像解说席，不要像筹码桌。",
+      namingIdeas: [
+        "资讯词根直给：news/前线/情报局——把媒体身份写进名字，合规敏感行业先自证「我是解说席」",
+        "数据权威路线：HLTV 式的工具起家——榜单、评分、战绩库沉淀成名字的信任，权威靠数据喂养",
+        "观赛动词入名：观、看、播、评——把「看懂比赛」的动作写进名字，读者知道来这里干什么",
+        "玩家黑话借用：GG、上分、开局——社区自己人语感，但要挑不带赌味的那一层",
+        "牌桌距离测试：名字念出来像解说席还是筹码桌？——离下注越远，广告与商店审核越顺",
+      ],
+      cases: [
+        { name: "HLTV", takeaway: "观战工具四个字母沉淀成 CS 数据权威：工具名长成媒体品牌——数据喂养信任的教科书" },
+        { name: "玩加电竞", takeaway: "「玩+加」把娱乐与增量写在一起：中文「加」字自带战力联想——本土语感命名的高分卷" },
+        { name: "PokerNews", takeaway: "品类+news 的诚实结构：二十年只做报道与科普，名字即合规声明——资讯定位命名的范本" },
+        { name: "Dexerto", takeaway: "造词避开所有品类词：从电竞八卦到主播动态都装得下——泛娱乐扩张预留空间的样本" },
+      ],
+      pitfalls: [
+        "名字沾赌味：win/bet/筹码类词根一旦入名，应用商店与广告审核处处碰壁——资讯定位从名字开始自证",
+        "锁死单一游戏：名字绑死某款游戏，版本凉了品牌跟着凉——赛事会换，「看懂比赛」的需求不换",
+        "权威感靠形容词：名字堆「第一」「官方」却没有数据支撑——权威是榜单喂出来的，不是自封的",
+        "忽略口播场景：解说、播客、弹幕里要好念好打——拗口的名字上不了主播的口播位",
+      ],
+    },
+    en: {
+      label: "Esports & gaming news",
+      title: "How to Name an Esports & Card-Gaming News Site: Strategies, Cases & Domains",
+      metaDescription:
+        "Esports and card-gaming media naming guide: news-first positioning, data-authority roots, breakdowns of HLTV/Dexerto/PokerNews, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A card-gaming or esports news site must answer a compliance question before anything else: \"I am the press box, not the table.\" Write that position into the name, and match reports, team stats and strategy communities become a business rather than a funnel under suspicion. The benchmarks show the range: HLTV grew out of a Half-Life TV spectating tool — four letters that became the byword for CS match data, a utility name matured into a media brand, with authority fed daily by numbers; PokerNews takes the honest category-plus-news structure and has spent two decades on tournament reporting and rules explainers — the name itself is a compliance statement; Dexerto coined a word free of any game or gambling root, leaving room for everything from esports scoops to streamer culture. The hidden exam is distance from the table: the further your name sits from the wager and the closer to understanding the game, the friendlier advertisers, app stores and search engines become — a news brand should sound like the commentary desk, never the chip stack.",
+      namingIdeas: [
+        "News roots stated plainly: news, desk, wire, report — write the media identity into the name; in a sensitive category, prove you're the press box first",
+        "The data-authority route: the HLTV path — rankings, ratings and match archives feed trust into the name; authority is earned in numbers, not adjectives",
+        "Spectating verbs in the name: watch, read, call, replay — name the act of understanding the game, so readers know what they came for",
+        "Player slang, carefully sifted: GG, clutch, meta — insider warmth is good, but pick the layer with no smell of the wager",
+        "The table-distance test: read the name aloud — commentary desk or chip stack? The further from betting it sounds, the smoother every ad review goes",
+      ],
+      cases: [
+        { name: "HLTV", takeaway: "A spectating tool's four letters matured into the CS data authority: utility name grown into a media brand — the textbook of data-fed trust" },
+        { name: "PokerNews", takeaway: "Category plus news, honestly joined: twenty years of reporting and explainers, the name doubling as a compliance statement — the template of info-first naming" },
+        { name: "Dexerto", takeaway: "A coined word with no game or gambling root: room for esports scoops and streamer culture alike — expansion space reserved by design" },
+        { name: "Liquipedia", takeaway: "A team name grafted onto the encyclopedia: community-maintained authority in one portmanteau — credibility borrowed from both halves" },
+      ],
+      pitfalls: [
+        "A whiff of the wager: win-, bet- and chip-adjacent roots invite rejection at every app store and ad review — the info position must start at the name",
+        "Welding to one game title: a name bound to a single game dies with its patch cycle — titles rotate, the need to understand the match does not",
+        "Authority by adjective: names stacked with \"official\" and \"number one\" but no data behind them — authority is fed by leaderboards, not self-declared",
+        "Ignoring the cast: the name must roll off a commentator's tongue and type fast in chat — a clumsy name never makes the shoutcast",
+      ],
+    },
+  },
+  sportsodds: {
+    slug: "sportsodds",
+    keywords: ["体育竞猜资讯", "赛事数据", "赛前分析", "sports odds", "match analysis"],
+    tlds: [
+      { tld: "bet", zh: "品类词直给但定位要资讯：赛前分析与数据科普的行业门牌", en: "The category word stated — with an info stance: the door sign for pre-match analysis and data explainers" },
+      { tld: "tips", zh: "攻略与建议的语感，赛前分析栏目的天然后缀", en: "The advice-column register — a natural suffix for pre-match analysis desks" },
+      { tld: "news", zh: "资讯身份先立住，数据与报道的合规定位声明", en: "The news identity staked first — a compliance-positioning statement for data and reporting" },
+    ],
+    zh: {
+      label: "体育竞猜资讯",
+      title: "体育竞猜资讯站怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "体育竞猜资讯与赛事数据媒体命名指南：数据定位、赛前分析等思路，Oddschecker/懂球帝/FlashScore 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "体育竞猜资讯站的名字要在第一秒完成一次自我介绍：「我做的是数据与分析，不是投注柜台」。这条线划得越清楚，内容、广告与搜索流量的路才越宽。看行业样本：Oddschecker 用「赔率+检查」的诚实结构做比价与数据聚合，名字把「帮你看懂数字」的工具定位说完了，二十年稳坐英国赛事数据入口；FlashScore 把「快」写进名字——比分快人一步，数据站的核心体验被两个音节钉死；懂球帝走中文社区路线，「懂球」是身份认证、「帝」是段位自嘲，赛前分析与深度内容靠「懂」字撑起专业感。命名的隐藏考点是「柜台距离感」：名字离「下注动作」越远、离「看懂赛事」越近，平台审核与品牌信任就越顺——资讯站的名字要像数据分析师的工牌，不要像投注单。",
+      namingIdeas: [
+        "数据词根直给：赔率、比分、指数、情报——把「帮你看懂数字」写进名字，工具定位一步到位",
+        "速度感命名：FlashScore 式的快字诀——比分与情报的时效就是产品力，名字要有快人一步的语感",
+        "懂球身份路线：懂球帝式的身份认证——「懂」字圈出同好，专业感从名字的自信里长出来",
+        "分析师人设：赛前拆解、战术板、复盘——把分析师的工牌做成名字，深度内容有了署名感",
+        "柜台距离测试：名字念出来像数据台还是投注单？——离下注动作越远，审核与信任越顺",
+      ],
+      cases: [
+        { name: "Oddschecker", takeaway: "赔率+检查的诚实结构：比价工具定位一步说完，二十年稳坐数据入口——工具命名的教科书" },
+        { name: "FlashScore", takeaway: "把「快」写进名字：比分快人一步的核心体验被两个音节钉死——速度感命名的范本" },
+        { name: "懂球帝", takeaway: "「懂球」是身份认证、「帝」是段位自嘲：中文社区语感的高分卷——身份命名撑起深度内容" },
+        { name: "Opta", takeaway: "四个字母的数据权威：从统计供应商到全行业引用的度量衡——短名沉淀专业信任的样本" },
+      ],
+      pitfalls: [
+        "名字像投注单：稳赚、必中、倍投类词根一旦入名，合规与信任双输——资讯站卖的是「看懂」不是「押中」",
+        "锁死单一联赛：名字绑死某个联赛或赛事，版权与热度一变就被动——赛事会换，看数据的需求不换",
+        "承诺式命名越线：名字暗示收益承诺，广告审核与监管红线一起撞——分析可以自信，承诺不能出口",
+        "忽略比分场景：球迷在群聊与直播间口播你的名字——两秒说不清的名字进不了比分讨论",
+      ],
+    },
+    en: {
+      label: "Sports odds & analysis",
+      title: "How to Name a Sports Odds & Analysis Site: Strategies, Cases & Domains",
+      metaDescription:
+        "Sports odds and match-analysis media naming guide: data-first positioning, speed roots, breakdowns of Oddschecker/FlashScore/Opta, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A sports odds and analysis site has one second to introduce itself correctly: \"I do data and analysis, not the betting counter.\" The sharper that line, the wider the road for content, advertising and search. The benchmarks show the range: Oddschecker takes the honest odds-plus-checker structure — a comparison and aggregation tool whose name finishes the positioning sentence, twenty years as Britain's front door to match data; FlashScore writes speed into the name itself — scores a beat ahead, the core experience of a data site nailed in two syllables; Opta compressed statistical authority into four letters that the whole industry now cites as a unit of measure. The hidden exam is distance from the counter: the further your name sits from the act of wagering and the closer to understanding the match, the smoother every platform review and the deeper the brand trust — an analysis site's name should read like a data analyst's badge, never a betting slip.",
+      namingIdeas: [
+        "Data roots stated plainly: odds, score, index, intel — write \"we help you read the numbers\" into the name, and the tool positioning is done in one move",
+        "Speed as the name: the FlashScore move — freshness of scores and intel is the product, so the name needs a beat-ahead cadence",
+        "The insider-credential route: name the reader's fluency — a word that certifies \"we understand the game\" builds analytic confidence in",
+        "The analyst persona: preview, tactics board, debrief — make the analyst's badge the brand, and deep content gains a byline",
+        "The counter-distance test: read aloud — data desk or betting slip? The further from the wager it sounds, the smoother review and trust flow",
+      ],
+      cases: [
+        { name: "Oddschecker", takeaway: "Odds plus checker, honestly joined: comparison-tool positioning finished by the name itself, twenty years as the data front door — the textbook of utility naming" },
+        { name: "FlashScore", takeaway: "Speed written into the name: scores a beat ahead, the core experience nailed in two syllables — the template of velocity naming" },
+        { name: "Opta", takeaway: "Statistical authority in four letters: from data supplier to the industry's unit of citation — a short name matured into a standard" },
+        { name: "The Athletic", takeaway: "A definite article and one adjective: subscription-grade seriousness announced before the first paragraph — positioning by register alone" },
+      ],
+      pitfalls: [
+        "Reading like a betting slip: sure-win, lock and parlay roots sink compliance and trust together — an info site sells understanding, not hitting",
+        "Welding to one league: a name bound to a single competition is hostage to rights and hype cycles — leagues rotate, the need to read the data does not",
+        "Promise-shaped names: anything implying guaranteed returns collides with ad review and regulation at once — analysis may be confident, promises may not be spoken",
+        "Ignoring the group chat: fans say your name aloud mid-match — a name that takes over two seconds never enters the score debate",
+      ],
+    },
+  },
+  tabletopclub: {
+    slug: "tabletopclub",
+    keywords: ["桌游俱乐部", "桌游吧", "剧本杀", "board game cafe", "tabletop club"],
+    tlds: [
+      { tld: "poker", zh: "牌局品类词直给，卡牌之夜与德扑教学局一眼归位", en: "The card-night category stated — poker nights and teaching tables filed at a glance" },
+      { tld: "club", zh: "会员制语感自带归属，桌游社群的天然后缀", en: "Membership built into the suffix — the natural home for a tabletop community" },
+      { tld: "fun", zh: "快乐直给的后缀，开黑之夜的轻松气质先立住", en: "Fun stated outright — the game-night ease staked before the first roll" },
+    ],
+    zh: {
+      label: "桌游俱乐部",
+      title: "桌游俱乐部与桌游吧怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "桌游俱乐部与桌游吧命名指南：游戏意象、第三空间等思路，Snakes & Lattes/Draughts 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "桌游俱乐部卖的不是游戏，是「一群人围着一张桌子的晚上」——名字要先把这份热闹与归属感递出去，新客才愿意推门。看行业样本：Snakes & Lattes（多伦多）把「蛇梯棋+拿铁」拼进店名，桌游与咖啡的混业模式被名字一次说完，北美桌游吧的开山之作连名字都成了品类模板；Draughts（伦敦）用「国际跳棋」的英式老词当店名，一个词同时押中游戏与酒馆的双重联想，本地人会心一笑；Hex & Co（纽约）用六边形棋格的「Hex」加公司后缀，桌游极客的暗号与商业体面各占一半。命名的隐藏考点是「第三空间感」：桌游俱乐部是客厅与酒吧之间的第三空间，名字要让「今晚去哪」的提议脱口而出——「走，去 XX」比任何招牌都管用，拗口的名字连组局群名都进不去。",
+      namingIdeas: [
+        "游戏意象入名：骰子、棋格、卡牌、米宝——桌游的道具词自带画面，圈内人一眼认亲",
+        "混业结构直给：Snakes & Lattes 式的「游戏+饮品」拼名——商业模式写进店名，新客不用问「你们是干嘛的」",
+        "第三空间语感：客厅、据点、基地、桌旁——把「今晚去哪」的答案做成名字，组局提议脱口而出",
+        "老词新用路线：Draughts 式的复古游戏词——老游戏名自带岁月与酒馆气，本地文化里挖宝",
+        "组局群名测试：名字要能直接当微信群名——「XX 开黑群」念着顺，传播就自己长腿",
+      ],
+      cases: [
+        { name: "Snakes & Lattes", takeaway: "蛇梯棋拼上拿铁：桌游+咖啡的混业模式被店名一次说完——北美桌游吧的品类模板" },
+        { name: "Draughts", takeaway: "英式老词一词双关：游戏与酒馆的联想各押一半，本地人会心一笑——复古词命名的高分卷" },
+        { name: "Hex & Co", takeaway: "六边形棋格的极客暗号加公司后缀：圈内认亲与商业体面各占一半——双重受众的平衡样本" },
+        { name: "The Uncommons", takeaway: "「不寻常」反写公共空间：曼哈顿的桌游客厅靠一个反义词立住调性——概念命名的巧劲" },
+      ],
+      pitfalls: [
+        "锁死单一游戏：名字绑死剧本杀或某款热门游戏，热度退潮店名跟着过气——品类会轮换，聚会不会",
+        "极客浓度过高：生僻规则梗当店名，新客连门都不敢进——暗号留给会员日，店名要对路人友好",
+        "赌味词根越线：名字沾筹码、赌局语感，商场招商与平台审核双双碰壁——牌局要欢乐，不要赌气",
+        "忽略组局场景：桌游店的获客靠「今晚去哪」的群聊提议——名字进不了群名，传播就断了腿",
+      ],
+    },
+    en: {
+      label: "Tabletop clubs",
+      title: "How to Name a Board Game Cafe or Tabletop Club: Strategies, Cases & Domains",
+      metaDescription:
+        "Board game cafe and tabletop club naming guide: game imagery, third-place warmth, breakdowns of Snakes & Lattes/Draughts/Hex & Co, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A tabletop club doesn't sell games — it sells an evening of people around one table. The name must hand over that warmth and belonging before a new guest will push the door. The benchmarks show the range: Snakes & Lattes (Toronto) spliced a children's board game into a coffee order — the games-plus-cafe business model finished in one store name, and the pioneer's name became the template for a whole category; Draughts (London) revived a dusty English word for checkers that lands on both the game and the pub in one syllable — locals smile before they've seen the menu; Hex & Co (New York) pairs a geek's hexgrid password with a business suffix, insider recognition and commercial polish each taking half. The hidden exam is third-place gravity: a tabletop club lives between the living room and the bar, and its name must make \"where to tonight?\" answer itself — \"let's go to X\" outsells any signboard, and a clumsy name never even makes the group-chat title.",
+      namingIdeas: [
+        "Game imagery in the name: dice, meeple, hexes, decks — tabletop props carry instant pictures, and insiders recognize kin at a glance",
+        "The hybrid structure stated: the Snakes & Lattes splice — write games-plus-drinks into the name so no guest has to ask what you are",
+        "Third-place register: den, parlour, table, commons — make the answer to \"where to tonight?\" the brand, and the invitation says itself",
+        "Old words revived: the Draughts move — vintage game words carry pub-warmth and history; dig in the local culture for treasure",
+        "The group-chat test: the name must work as the game-night chat title — if \"X game night\" types easily, word of mouth grows its own legs",
+      ],
+      cases: [
+        { name: "Snakes & Lattes", takeaway: "A children's game spliced into a coffee order: the hybrid model finished by the store name alone — the category template for board game cafes" },
+        { name: "Draughts", takeaway: "One dusty English word landing on game and pub at once: locals smile before the menu arrives — vintage-word naming at full marks" },
+        { name: "Hex & Co", takeaway: "A hexgrid password plus a business suffix: insider kinship and commercial polish in equal halves — the balance model for dual audiences" },
+        { name: "The Uncommons", takeaway: "A commons made uncommon: Manhattan's tabletop living room held up by one inverted word — concept naming with a light touch" },
+      ],
+      pitfalls: [
+        "Welding to one hot game: a name bound to this season's craze retires with it — genres rotate, the gathering does not",
+        "Geek density too high: an obscure rules joke as a store name scares new guests off at the door — save passwords for members' night, keep the sign friendly",
+        "A whiff of the wager: chip-and-stakes register sinks mall leasing and platform reviews together — card nights should sound joyful, never gambled",
+        "Ignoring the invitation: a tabletop venue is sold in the \"where to tonight?\" chat — a name that can't title the group chat breaks word of mouth's legs",
+      ],
+    },
+  },
+  futsal: {
+    slug: "futsal",
+    keywords: ["五人制足球", "足球场馆", "笼式足球", "futsal", "five-a-side"],
+    tlds: [
+      { tld: "futbol", zh: "西语足球词自带街头气，五人制的草根热血一眼归位", en: "Football in Spanish, street heat included — five-a-side's grassroots blood filed at a glance" },
+      { tld: "soccer", zh: "品类词直给，英语市场的足球场馆门牌", en: "The category stated outright — the door sign for football venues in English markets" },
+      { tld: "club", zh: "会员制与球队归属感直给，散客约球到包场联赛都装得下", en: "Membership and team belonging built in — from pickup games to league bookings" },
+    ],
+    zh: {
+      label: "五人制足球场馆",
+      title: "五人制足球场馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "五人制足球与笼式球场命名指南：街头足球、城市灯光等思路，Urban Soccer/Powerleague 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "五人制足球是城市里的足球——写字楼下的笼式球场、晚上十点的灯光、下班后的那身球衣。场馆的名字要先把这份「城市里也能踢球」的热血递出去。看行业样本：Urban Soccer（法国）把「城市+足球」直拼成名，室内五人制的定位一次说完，法国最大连锁的名字就是品类说明书；Powerleague（英国）用「力量+联赛」把散客约球升格成正经比赛——名字给业余球员发了张职业感的球员证，英国五人制的头号品牌靠联赛体系黏住球友；Futsal Oz（墨尔本）直接用品类词加地名，澳洲人一看就知道这里踢的是正经 futsal 规则。命名的隐藏考点是「组队召唤力」：五人制的生意靠「今晚缺一个，来不来」的群聊消息滚动——名字要能进球队群名、能印在队服背后、能在朋友圈定位里替你拉新，念不顺的名字连约球接龙都排不进去。",
+      namingIdeas: [
+        "城市足球直拼：Urban Soccer 式的「城市+球」结构——写字楼与灯光下的足球场景一次说清",
+        "联赛升格路线：Powerleague 式的职业感——把散客约球包装成正经联赛，业余球员也要球员证",
+        "品类词加地名：futsal 加城市或街区名——规则正宗与本地主场感各占一半，搜索也顺",
+        "灯光与热血意象：夜光、绿茵、开球、加时——晚上十点的球场氛围写进名字，下班的腿自己走过来",
+        "球队群名测试：名字要能进「XX 约球群」和队服背后——接龙里念不顺的场馆，下次就被换掉",
+      ],
+      cases: [
+        { name: "Urban Soccer", takeaway: "城市+足球直拼成名：室内五人制的定位一次说完——法国最大连锁把品类说明书当店名" },
+        { name: "Powerleague", takeaway: "力量+联赛的职业感包装：散客约球升格正经比赛，联赛体系黏住球友——身份升维命名的范本" },
+        { name: "Futsal Oz", takeaway: "品类词加地名的诚实结构：规则正宗与本地主场感各占一半——直给命名的高分卷" },
+        { name: "索福德体育", takeaway: "Soccerworld 的中文音译落地：连锁球场的标准化形象靠译名统一——跨市场命名的平衡样本" },
+      ],
+      pitfalls: [
+        "锁死十一人语境：名字全是世界杯与大球场意象，五人制的城市灵活感反而丢了——笼子里的足球有自己的话术",
+        "体育综合体贪大：名字什么运动都想装，足球客群反而没了归属——先做透一颗球，再谈综合",
+        "忽略约球场景：五人制靠群聊接龙滚动获客——名字进不了球队群名，复购就断了线",
+        "土味热血过头：铁血、王者、战神堆满，白领球友发朋友圈都嫌尬——热血要有，体面也要有",
+      ],
+    },
+    en: {
+      label: "Futsal venues",
+      title: "How to Name a Futsal or Five-a-Side Venue: Strategies, Cases & Domains",
+      metaDescription:
+        "Futsal and five-a-side venue naming guide: urban football roots, league-night identity, breakdowns of Urban Soccer/Powerleague/Futsal Oz, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Futsal is the city's own football — the caged pitch under the office tower, floodlights at ten, the kit bag under the desk. A venue's name must hand over that \"the city plays too\" heat before anything else. The benchmarks show the range: Urban Soccer (France) splices city and football outright — indoor five-a-side positioned in one compound, the country's biggest chain wearing its category manual as a name; Powerleague (UK) grafts power onto league and promotes the after-work kickabout into a proper fixture — the name issues amateur players a professional's ID card, and the league system keeps them coming back; Futsal Oz (Melbourne) takes the honest category-plus-place structure, and every Australian knows real futsal rules are played inside. The hidden exam is squad-summoning power: five-a-side business rolls on the \"we're one short tonight, you in?\" group message — the name must fit the team chat title, print on the back of a jersey, and recruit through a geotagged post; a clumsy name never even makes the sign-up thread.",
+      namingIdeas: [
+        "The urban splice: the Urban Soccer structure — city plus ball, the office-tower floodlight scene said in one compound",
+        "League-night promotion: the Powerleague move — package pickup games as proper fixtures, and hand every amateur a player's ID",
+        "Category plus place: futsal plus your city or block — rule authenticity and home-turf feeling in equal halves, and search likes it too",
+        "Floodlight imagery: kickoff, turf, night game, extra time — write the ten-p.m. pitch into the name and tired legs walk over by themselves",
+        "The team-chat test: the name must fit \"X pickup group\" and the jersey back — a venue that stumbles in the sign-up thread gets swapped next week",
+      ],
+      cases: [
+        { name: "Urban Soccer", takeaway: "City spliced onto football: indoor five-a-side positioned in one compound — France's biggest chain wearing its category manual as a name" },
+        { name: "Powerleague", takeaway: "Power grafted onto league: the kickabout promoted to a fixture, and the league system keeps the squad returning — the template of identity promotion" },
+        { name: "Futsal Oz", takeaway: "Category plus place, honestly joined: rule authenticity and home turf in equal halves — plain-dealing naming at full marks" },
+        { name: "Soccerworld", takeaway: "A standardized chain name that travels across markets: the venue format franchised with the word — consistency as brand infrastructure" },
+      ],
+      pitfalls: [
+        "Borrowing eleven-a-side grandeur: World Cup and stadium imagery loses the caged pitch's urban agility — football in a cage speaks its own language",
+        "Multi-sport sprawl: a name that holds every sport gives the football crowd no home — master one ball before promising a complex",
+        "Ignoring the sign-up thread: five-a-side rolls on group-chat recruitment — a name that can't title the team chat cuts the repeat-booking line",
+        "Overheated warrior talk: iron-blood and war-god stacking makes the office crowd cringe at the geotag — bring the heat, keep the polish",
+      ],
+    },
+  },
+  fashionbuyer: {
+    slug: "fashionbuyer",
+    keywords: ["快时尚买手店", "买手店", "潮流集合店", "fashion buyer", "select shop"],
+    tlds: [
+      { tld: "moda", zh: "西语时尚词自带欧陆调性，买手店的品味先声夺人", en: "Fashion in Spanish with continental polish — a buyer's taste announced before the rack" },
+      { tld: "fashion", zh: "品类词直给，时尚身份一眼归位", en: "The category stated outright — fashion identity filed at a glance" },
+      { tld: "boutique", zh: "精品小店语感直给，买手严选的定位从后缀开始", en: "The boutique register built in — curation positioned from the suffix onward" },
+    ],
+    zh: {
+      label: "快时尚买手店",
+      title: "快时尚买手店与潮流集合店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "快时尚买手店与潮流集合店命名指南：品味人格、严选叙事等思路，SSENSE/栋梁/10 Corso Como 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "买手店卖的不是衣服，是「替你先挑过一遍」的眼光——顾客信的是名字背后那双眼睛，名字就是买手品味的第一件陈列品。看行业样本：SSENSE 把 essence（本质）拼上双 S，读音像「审视」的转音，蒙特利尔的极简语感配得上货架上的先锋设计师；栋梁用两个汉字押中「中国设计的脊梁」，买手店做成了本土设计师的孵化器，名字的立意直接抬高了整个店的段位；10 Corso Como 用米兰的门牌号当店名，一条地址卖了三十年生活方式——地标即品牌的开山案例。命名的隐藏考点是「品味人格化」：买手店的复购靠「XX 家又上新了」的信任感——名字要像一个懂穿搭的朋友，而不是一个卖场；快时尚节奏下每周上新，名字的品味浓度决定了顾客愿不愿意每周回来逛。",
+      namingIdeas: [
+        "品味词根造词：SSENSE 式的本质拼写——把审美主张压进一个造词，读音要有杂志感",
+        "立意升维路线：栋梁式的两字定调——名字管住「为什么选这些」的立意，单品只是注脚",
+        "地址即品牌：门牌号、街区名、拐角——10 Corso Como 式的地标命名，店在哪就是品牌是谁",
+        "买手人格具名：主理人名字或昵称入店名——「XX 挑的」是买手店最硬的信任背书",
+        "上新推送测试：名字要在「XX 家又上新了」的句式里顺口——每周回访的念想从名字开始",
+      ],
+      cases: [
+        { name: "SSENSE", takeaway: "essence 拼上双 S 的造词：极简读音配先锋货架，审美主张压进五个字母——品味造词的教科书" },
+        { name: "栋梁", takeaway: "两个汉字押中「中国设计的脊梁」：立意抬高整店段位，买手店做成设计师孵化器——中文命名的天花板" },
+        { name: "10 Corso Como", takeaway: "米兰门牌号当店名：一条地址卖三十年生活方式——地标即品牌的开山案例" },
+        { name: "LN-CC", takeaway: "Late Night Chameleon Café 缩写成密码：东伦敦的暗号语感筛选同类——极客式命名的时尚版" },
+      ],
+      pitfalls: [
+        "卖场语感：名字像批发城或折扣仓，买手「严选」的溢价瞬间归零——买手店卖眼光，不卖库存",
+        "潮牌词根扎堆：supply/archive/lab 满街都是，品味的辨识度反而没了——套路词根撑不起独立审美",
+        "洋名空心化：意语法语词随手拼却讲不出来历，顾客一问故事就穿帮——外语词要配得上你的货架",
+        "忽略上新场景：买手店靠每周上新的推送与朋友圈——名字在「又上新了」句式里拗口，回访的念想就断了",
+      ],
+    },
+    en: {
+      label: "Fashion select shops",
+      title: "How to Name a Fashion Buyer Store or Select Shop: Strategies, Cases & Domains",
+      metaDescription:
+        "Fashion buyer store and select shop naming guide: taste personas, curation narratives, breakdowns of SSENSE/10 Corso Como/LN-CC, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A select shop doesn't sell clothes — it sells the fact that someone with taste chose first. Customers trust the eye behind the name, which makes the name itself the first item on display. The benchmarks show the range: SSENSE splices a double S onto essence — a coined word with a magazine cadence, Montreal minimalism worthy of the avant-garde rack it fronts; 10 Corso Como turned a Milan street address into the brand and sold a lifestyle from one doorway for three decades — the founding case of landmark-as-brand; LN-CC compressed Late Night Chameleon Café into a cipher, an East London password that filters for kindred taste before the door opens. The hidden exam is personified taste: a select shop's repeat visits ride on the \"X just dropped new arrivals\" reflex — the name must feel like a friend who dresses well, never a sales floor; at fast-fashion cadence with weekly drops, the taste density of the name decides whether anyone comes back to browse next week.",
+      namingIdeas: [
+        "Coin a taste word: the SSENSE move — press an aesthetic stance into one coinage with a magazine-page cadence",
+        "Concept above product: let the name govern why these pieces — a high concept makes every item a footnote and lifts the whole rack",
+        "Address as brand: the 10 Corso Como move — a street number or corner as the name; where the store stands is who the brand is",
+        "The buyer's signature: the curator's name or alias on the door — \"chosen by X\" is the hardest trust endorsement a select shop owns",
+        "The new-drop test: the name must run smoothly in \"X just dropped\" — the weekly-return reflex starts with how the sentence sounds",
+      ],
+      cases: [
+        { name: "SSENSE", takeaway: "Essence spliced with a double S: minimalist cadence fronting an avant-garde rack, a stance pressed into six letters — the textbook of taste coinage" },
+        { name: "10 Corso Como", takeaway: "A Milan street address as the store name: one doorway selling a lifestyle for thirty years — the founding case of landmark-as-brand" },
+        { name: "LN-CC", takeaway: "Late Night Chameleon Café compressed into a cipher: an East London password filtering for kindred taste — geek naming in fashion's register" },
+        { name: "Dover Street Market", takeaway: "A street name kept through every relocation: the market metaphor licensing chaos as curation — place naming that outlived the place" },
+      ],
+      pitfalls: [
+        "Sales-floor cadence: a name that sounds like an outlet warehouse zeroes the curation premium instantly — a select shop sells the eye, not the stock",
+        "Streetwear-root pileup: supply, archive and lab on every corner erase your distinctiveness — formula roots cannot carry an independent aesthetic",
+        "Hollow continental words: Italian or French syllables spliced without a story collapse at the first customer question — the borrowed word must deserve your rack",
+        "Ignoring the drop post: select shops live on weekly new-arrival pushes — a name that stumbles in \"X just dropped\" cuts the return-visit reflex",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
