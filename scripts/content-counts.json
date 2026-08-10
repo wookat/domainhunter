@@ -570,7 +570,7 @@
     ]
   },
   "vs": {
-    "count": 312,
+    "count": 318,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -883,7 +883,13 @@
       "gift-vs-gifts",
       "party-vs-events",
       "fishing-vs-boats",
-      "horse-vs-pet"
+      "horse-vs-pet",
+      "singles-vs-dating",
+      "dating-vs-love",
+      "luxury-vs-vip",
+      "organic-vs-bio",
+      "tattoo-vs-ink",
+      "casa-vs-house"
     ]
   }
 }
