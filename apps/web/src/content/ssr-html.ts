@@ -12,6 +12,7 @@ import { buildTldFaq } from "./tld-faq";
 import { COMPARE_SLUGS, compareLabel } from "./compare-slugs";
 import { GUIDE_LIST, INDUSTRY_GUIDES, guidesForTld, type IndustryGuide } from "./guides";
 import { HUB_META, compareHubGroups, guideHubGroups, guideOneLiner, tldHubGroups, tldOneLiner } from "./hubs";
+import { relatedTlds } from "./tld-groups";
 import { TLD_GUIDES, type TldGuide } from "./tlds";
 import { TLD_LIST } from "./tld-list";
 import { toUsd } from "../lib/currency";
@@ -64,6 +65,7 @@ const STR = {
     tldCtaDesc: (tld: string) => `描述你的想法，AI 批量构思并实时核验 .${tld} 下的可注册好名字。`, // tld.ctaDesc
     tldCtaButton: (tld: string) => `开始猎取 .${tld}`, // tld.ctaButton
     others: "其他 TLD 指南", // tld.others
+    relatedTlds: "相关 TLD", // tld.relatedTlds
     relatedGuides: "相关行业命名指南", // tld.relatedGuides
     relatedCompares: "相关后缀对比", // vs.relatedCompares
     verdict: "怎么选", // vs.verdict
@@ -90,6 +92,7 @@ const STR = {
     tldCtaDesc: (tld: string) => `Describe your idea — AI brainstorms names in bulk and checks .${tld} availability live.`,
     tldCtaButton: (tld: string) => `Start hunting .${tld}`,
     others: "More TLD guides",
+    relatedTlds: "Related TLDs",
     relatedGuides: "Related industry naming guides",
     relatedCompares: "Related TLD comparisons",
     verdict: "Which to pick",
@@ -174,7 +177,8 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
   const loc = guide[lang];
   const faq = buildTldFaq(tld, loc, lang);
   const relatedGuides = guidesForTld(tld);
-  const relatedCompares = comparesForTld(tld);
+  const relatedCompares = comparesForTld(tld).slice(0, 6);
+  const groupTlds = relatedTlds(tld);
   const priceCard = `<div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-line bg-bg1 px-5 py-4">${ICON_TAG}<span class="text-sm text-txt1">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</span><a href="/prices?lang=${lang}" class="ml-auto inline-flex min-h-[44px] items-center text-xs text-txt2 hover:text-brand hover:underline sm:min-h-[36px]">${escapeHtml(s.seeAll)}</a></div>`;
   const bestFor = sectionH2(ICON_CHECK, s.bestFor) +
     `<ul class="mt-3 grid gap-2 sm:grid-cols-2">${loc.bestFor.map((it) => `<li class="rounded-lg border border-line bg-bg1 px-3.5 py-2.5 text-sm text-txt1">${escapeHtml(it)}</li>`).join("")}</ul>`;
@@ -196,6 +200,17 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
           .join(""),
       )
     : "";
+  const related = groupTlds.length
+    ? chipRow(
+        s.relatedTlds,
+        groupTlds
+          .map((other) => {
+            const price = staticPriceShort(other, lang);
+            return `<a href="/tld/${other}?lang=${lang}" class="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">.${other}${price ? `<span class="tnum ml-1.5 text-[10px] text-txt1">${escapeHtml(price)}</span>` : ""}</a>`;
+          })
+          .join(""),
+      )
+    : "";
   const guides = relatedGuides.length
     ? chipRow(
         s.relatedGuides,
@@ -213,6 +228,7 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
     ctaBlock(s.tldCtaTitle(tld), s.tldCtaDesc(tld), `/?tld=${tld}`, s.tldCtaButton(tld)),
     others,
     compares,
+    related,
     guides,
   ];
 }
