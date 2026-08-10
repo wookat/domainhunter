@@ -291,6 +291,12 @@ export const COMPARE_SLUGS = [
   "cheap-vs-discount",
   "bargains-vs-deals",
   "supplies-vs-supply",
+  "camp-vs-courses",
+  "camera-vs-photography",
+  "diamonds-vs-jewelry",
+  "theater-vs-show",
+  "accountants-vs-tax",
+  "engineer-vs-engineering",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
