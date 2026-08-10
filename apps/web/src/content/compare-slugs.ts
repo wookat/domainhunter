@@ -309,6 +309,12 @@ export const COMPARE_SLUGS = [
   "food-vs-restaurant",
   "attorney-vs-lawyer",
   "dentist-vs-dental",
+  "clothing-vs-fashion",
+  "cooking-vs-recipes",
+  "gift-vs-gifts",
+  "party-vs-events",
+  "fishing-vs-boats",
+  "horse-vs-pet",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

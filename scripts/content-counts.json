@@ -558,7 +558,7 @@
     ]
   },
   "vs": {
-    "count": 306,
+    "count": 312,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -865,7 +865,13 @@
       "spa-vs-salon",
       "food-vs-restaurant",
       "attorney-vs-lawyer",
-      "dentist-vs-dental"
+      "dentist-vs-dental",
+      "clothing-vs-fashion",
+      "cooking-vs-recipes",
+      "gift-vs-gifts",
+      "party-vs-events",
+      "fishing-vs-boats",
+      "horse-vs-pet"
     ]
   }
 }
