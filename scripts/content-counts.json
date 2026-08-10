@@ -582,7 +582,7 @@
     ]
   },
   "vs": {
-    "count": 318,
+    "count": 324,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -901,7 +901,13 @@
       "luxury-vs-vip",
       "organic-vs-bio",
       "tattoo-vs-ink",
-      "casa-vs-house"
+      "casa-vs-house",
+      "casino-vs-bet",
+      "bet-vs-poker",
+      "poker-vs-games",
+      "vodka-vs-wine",
+      "futbol-vs-soccer",
+      "moda-vs-fashion"
     ]
   }
 }

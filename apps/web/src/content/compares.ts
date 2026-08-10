@@ -7021,6 +7021,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["English-market agents & rental platforms", "Home-improvement & furnishing brands", "Architecture & interior design studios", "Creative brands borrowing the House register"],
     },
   },
+  "casino-vs-bet": {
+    slug: "casino-vs-bet",
+    a: "casino",
+    b: "bet",
+    zh: {
+      title: ".casino 和 .bet 怎么选：场馆招牌与动作词",
+      metaDescription: ".casino 直指赌场这个场馆概念，线上娱乐场与综合平台用它最像招牌；.bet 是「下注」这个动作词，体育博彩与预测类产品更贴。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在博彩赛道，一个报场馆，一个报动作。.casino 直指「赌场」这个场馆概念——线上娱乐场、老虎机与桌面游戏平台、综合博彩品牌用 name.casino，域名念出来就是一间开在互联网上的赌场，招牌感十足；Identity Digital 运营，首年约 $8（约 ¥56）、续费约 $129/年（约 ¥931），续费在全站前列，是典型的「首年引流、长期高价」结构，按续费价核算长期成本。.bet 说的是「下注」这个动作——体育博彩与赛事盘口、竞猜与预测产品、赔率与数据工具用 name.bet，动词入名天然带号召力（place your bet），且只有 3 个字母比 casino 短一半；同为 Identity Digital 运营，首年约 $10（约 ¥69）、续费约 $21/年（约 ¥151），在博彩类后缀里续费最友好，长持成本只有 .casino 的六分之一。判断标准：产品形态是「场馆」——线上娱乐场、老虎机、真人桌面游戏，品牌要的是灯火通明的招牌感 → .casino 语义直给，续费贵但招牌值钱；产品形态是「动作」——体育博彩、电竞竞猜、预测市场、赔率工具 → .bet 更短更便宜，动词的号召力也更适合转化型落地页。三点注意：一是博彩是全球强监管行业，域名之外先把目标市场的牌照拿到（马耳他 MGA、英国 UKGC 等），无照经营任何后缀都救不了；二是 .casino 与 .bet 的价差主要在续费（$129 vs $21/年），品牌矩阵与防御性注册用 .bet 铺、主站再考虑 .casino；三是主流广告与支付渠道对博彩类目有额外审核，域名只是合规链条的第一环。命名上「品牌词 + .casino」（royal.casino）最主流，「品牌/赛事词 + .bet」（quick.bet）适合转化型产品。",
+      pickA: ["线上娱乐场与老虎机平台", "真人桌面游戏与综合博彩品牌", "要「赌场招牌」的品牌感", "预算能扛高续费的主站"],
+      pickB: ["体育博彩与赛事盘口", "电竞竞猜与预测类产品", "赔率、数据与工具站", "续费预算敏感或矩阵铺量"],
+    },
+    en: {
+      title: ".casino vs .bet: The Venue Sign or the Action Word",
+      metaDescription:
+        ".casino names the venue — online casinos and full-suite platforms wear it like a sign; .bet names the action — sportsbooks and prediction products fit best. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same gambling lane, different register: one names the venue, the other the action. .casino names the venue — online casinos, slots and table-game platforms, and full-suite gambling brands on name.casino read out as a casino that lives on the internet, maximum signage value; run by Identity Digital at about $8 first year (≈¥56) and $129/yr to renew (≈¥931) — one of the steepest renewals on the site, the classic cheap-entry-expensive-hold structure, so budget on the renewal. .bet names the action — sportsbooks and match markets, tipping and prediction products, and odds or data tools on name.bet get a verb in the address with built-in call-to-action energy (place your bet), and at 3 letters it is half the length of casino; also Identity Digital, about $10 first year (≈¥69) and $21/yr to renew (≈¥151) — the friendliest renewal among gambling suffixes, roughly one-sixth of .casino's holding cost. The test: if the product is a venue — online casino, slots, live tables — and the brand wants the bright-lights sign → .casino is semantic-direct; expensive to hold, but the sign is the point. If the product is an action — sports betting, esports tipping, prediction markets, odds tools → .bet is shorter, far cheaper, and the verb suits conversion-focused landing pages. Three cautions: gambling is heavily regulated worldwide — secure licensing for each target market (MGA, UKGC and peers) before anything else, because no suffix rescues an unlicensed operation; the price gap lives in the renewal ($129 vs $21/yr), so build portfolios and defensive registrations on .bet and reserve .casino for the flagship; and mainstream ad and payment channels apply extra review to gambling — the domain is only the first link in the compliance chain. Naming: brand word + .casino (royal.casino) is the mainstream shape; brand or event word + .bet (quick.bet) suits conversion products.",
+      pickA: ["Online casinos & slots platforms", "Live table games & full-suite gambling brands", "Wanting the casino-sign brand register", "Flagship sites that can carry the renewal"],
+      pickB: ["Sportsbooks & match markets", "Esports tipping & prediction products", "Odds, data & tool sites", "Renewal-sensitive budgets & portfolios"],
+    },
+  },
+  "bet-vs-poker": {
+    slug: "bet-vs-poker",
+    a: "bet",
+    b: "poker",
+    zh: {
+      title: ".bet 和 .poker 怎么选：泛博彩动作与单一牌种",
+      metaDescription: ".bet 是「下注」这个泛博彩动作词，体育竞猜与预测产品都装得下；.poker 直指扑克这一个牌种，牌室、锦标赛与教学内容用它最准。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同出博彩语系，一个管整个动作，一个管一种牌。.bet 是「下注」这个泛用动作词——体育博彩、电竞竞猜、赛马赛狗盘口、预测市场用 name.bet 全装得下，凡是「押点什么」的产品它都覆盖，词短且带号召力；Identity Digital 运营，首年约 $10（约 ¥69）、续费约 $21/年（约 ¥151），在博彩类后缀里续费最友好。.poker 直指扑克这一个牌种——线上牌室与对局平台、扑克锦标赛与俱乐部、策略教学与牌手个人品牌用 name.poker，圈内人一眼认出这是「打牌的地方」而不是泛博彩站；同为 Identity Digital 运营，首年约 $8（约 ¥59）、续费约 $54/年（约 ¥389），介于 .bet 与 .casino 之间。判断标准：业务横跨多种玩法——体育 + 电竞 + 竞猜混合平台，或未来可能扩品类 → .bet 泛用词不锁赛道，续费也便宜一半以上；业务钉死在扑克——德州、奥马哈、锦标赛、教学 → .poker 品类直给，「品牌 + poker」正是牌手搜索的原词。有意思的是扑克的身份认同：牌手圈普遍不把扑克当纯赌博而当技巧游戏，.poker 因此比 .bet/.casino 少一分博彩味、多一分竞技味，教学与内容品牌用它心理负担更小。三点注意：一是扑克在多数司法辖区仍按博彩监管，真金对局平台照样要牌照，纯教学内容则宽松得多；二是价差在续费（$21 vs $54/年），矩阵铺量用 .bet、扑克主品牌用 .poker；三是 .poker 5 个字母不算短，词根尽量单音节（ace.poker 是理想形态）。命名上「品牌词 + .bet」（fast.bet）适合转化站，「牌手名/俱乐部名 + .poker」（ace.poker）最主流。",
+      pickA: ["体育 + 电竞混合竞猜平台", "预测市场与赔率工具", "未来可能扩玩法的品牌", "续费预算敏感或矩阵铺量"],
+      pickB: ["线上牌室与对局平台", "扑克锦标赛与俱乐部", "策略教学与内容品牌", "牌手个人品牌站"],
+    },
+    en: {
+      title: ".bet vs .poker: The Broad Action or the Single Game",
+      metaDescription:
+        ".bet is the broad action word — sportsbooks and prediction products all fit; .poker names one card game — rooms, tournaments and strategy content fit best. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same gambling family: one owns the whole action, the other owns one game. .bet is the broad action word — sportsbooks, esports tipping, racing markets and prediction platforms all fit on name.bet; anything where users stake something is covered, and the 3-letter verb carries call-to-action energy; run by Identity Digital at about $10 first year (≈¥69) and $21/yr to renew (≈¥151), the friendliest renewal among gambling suffixes. .poker names one card game — online poker rooms and play platforms, tournaments and clubs, strategy training and player personal brands on name.poker read instantly as a place to play cards, not a generic gambling site; also Identity Digital, about $8 first year (≈¥59) and $54/yr to renew (≈¥389) — between .bet and .casino. The test: if the business spans multiple verticals — sports plus esports plus tipping, or may expand later → .bet's generic verb doesn't lock the lane, and renewals cost less than half; if the business is pinned to poker — hold'em, Omaha, tournaments, training → .poker is category-direct, and \"brand + poker\" is the literal query players type. The interesting nuance is identity: the poker world sees itself as a skill game rather than pure gambling, so .poker reads more competitive and less casino-flavored than .bet — a lighter psychological load for training and content brands. Three cautions: most jurisdictions still regulate poker as gambling, so real-money platforms need licenses while pure strategy content is far freer; the price gap lives in the renewal ($21 vs $54/yr) — build volume on .bet, put the poker flagship on .poker; and poker runs 5 letters, so keep roots to one syllable (ace.poker is the ideal shape). Naming: brand word + .bet (fast.bet) suits conversion sites; player or club name + .poker (ace.poker) is the mainstream shape.",
+      pickA: ["Mixed sports + esports tipping platforms", "Prediction markets & odds tools", "Brands that may expand verticals", "Renewal-sensitive budgets & portfolios"],
+      pickB: ["Online poker rooms & play platforms", "Poker tournaments & clubs", "Strategy training & content brands", "Player personal brand sites"],
+    },
+  },
+  "poker-vs-games": {
+    slug: "poker-vs-games",
+    a: "poker",
+    b: "games",
+    zh: {
+      title: ".poker 和 .games 怎么选：单一牌种与泛游戏行业",
+      metaDescription: ".poker 直指扑克这一个牌种，牌室与锦标赛用它最准；.games 覆盖整个游戏行业，工作室与多品类平台更贴。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个钉死一种牌，一个装下整个行业。.poker 直指扑克这一个牌种——线上牌室、扑克锦标赛与俱乐部、策略教学与牌手品牌用 name.poker，品类写进域名，牌手搜「品牌 + poker」时逐字命中；Identity Digital 运营，首年约 $8（约 ¥59）、续费约 $54/年（约 ¥389），按续费价核算长期成本。.games 覆盖「游戏」这个整个行业——游戏工作室与发行商、多品类对战平台、休闲游戏门户、桌游与卡牌社区用 name.games 全装得下，复数形态天然带「一堆游戏」的货架感；首年约 $18（约 ¥130）、续费约 $24/年（约 ¥170），是游戏行业性价比最高的语义后缀。判断标准：业务只做扑克——真金牌室、锦标赛、教学 → .poker 品类直给，圈内认同感强；业务是「游戏」这个更大的筐——工作室做多款游戏、平台聚合多种玩法、扑克只是其中一个品类 → .games 不锁赛道且续费便宜一半以上。中间地带是卡牌游戏平台：如果德州扑克只是产品线之一（还有斗地主、桥牌、UNO），.games 的货架感比 .poker 的单品感更合身。三点注意：一是监管属性完全不同——真金扑克按博彩监管需要牌照，休闲游戏不需要，选后缀前先想清楚产品的合规定位；二是价差在续费（$54 vs $24/年），预算紧优先 .games；三是 .poker 的圈内溢价只对扑克玩家有效，泛游戏用户对它无感。命名上「品牌词 + .poker」（ace.poker）最主流，「工作室名/游戏名 + .games」（pixel.games）适合行业通用形态。",
+      pickA: ["线上牌室与真金对局平台", "扑克锦标赛与俱乐部", "策略教学与牌手品牌", "只做扑克这一个品类"],
+      pickB: ["游戏工作室与发行商", "多品类对战与休闲游戏平台", "桌游与卡牌社区", "续费预算敏感或品类可能扩张"],
+    },
+    en: {
+      title: ".poker vs .games: One Card Game or the Whole Industry",
+      metaDescription:
+        ".poker names one card game — rooms and tournaments fit best; .games covers the whole industry — studios and multi-genre platforms fit better. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One pins a single game, the other holds the whole industry. .poker names the card game — online rooms, tournaments and clubs, strategy training and player brands on name.poker put the category in the address, and \"brand + poker\" is the literal query players type; run by Identity Digital at about $8 first year (≈¥59) and $54/yr to renew (≈¥389), so budget on the renewal. .games covers the entire industry — game studios and publishers, multi-genre play platforms, casual gaming portals, and board-game or card communities all fit on name.games, and the plural form carries a natural shelf-of-games feel; at about $18 first year (≈¥130) and $24/yr to renew (≈¥170), it is the best-value semantic TLD in gaming. The test: if the business is poker and nothing else — real-money rooms, tournaments, training → .poker is category-direct with strong insider recognition; if the business is the bigger bucket of games — a studio shipping multiple titles, a platform aggregating genres, poker as just one product line → .games doesn't lock the lane and renews for less than half. The middle ground is card-game platforms: when hold'em sits alongside bridge, UNO and local card games, .games' shelf register fits better than .poker's single-item register. Three cautions: the regulatory profiles differ completely — real-money poker is licensed gambling while casual games are not, so settle the compliance posture before the suffix; the price gap lives in the renewal ($54 vs $24/yr), so tight budgets favor .games; and .poker's insider premium only registers with poker players — general gamers don't feel it. Naming: brand word + .poker (ace.poker) is the mainstream shape; studio or title + .games (pixel.games) is the industry-standard shape.",
+      pickA: ["Online rooms & real-money platforms", "Poker tournaments & clubs", "Strategy training & player brands", "Poker-only product lines"],
+      pickB: ["Game studios & publishers", "Multi-genre play & casual platforms", "Board-game & card communities", "Renewal-sensitive or expanding catalogs"],
+    },
+  },
+  "vodka-vs-wine": {
+    slug: "vodka-vs-wine",
+    a: "vodka",
+    b: "wine",
+    zh: {
+      title: ".vodka 和 .wine 怎么选：烈酒单品与酒文化大类",
+      metaDescription: ".vodka 直指伏特加这一个烈酒单品，蒸馏厂与鸡尾酒品牌用它最准；.wine 覆盖葡萄酒这个文化大类，酒庄、酒评与电商都装得下。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在酒柜上，一个是单品标签，一个是品类货架。.vodka 直指伏特加这一个烈酒单品——精酿蒸馏厂、伏特加品牌、鸡尾酒吧与调酒内容用 name.vodka，品类钉死在域名里，货架上的品牌感极强；GoDaddy Registry 运营（原 Minds + Machines 组合），注册与续费同价约 $26/年（约 ¥189），没有首年促销陷阱，预算恒定好算。.wine 覆盖「葡萄酒」这个文化大类——酒庄与产区品牌、葡萄酒电商与订阅、酒评媒体与侍酒师课程、酒窖与藏酒服务全装得下，wine 在英语里还泛指整个饮酒文化，外延比单一酒种宽得多；Identity Digital 运营，首年约 $6（约 ¥41）、续费约 $48/年（约 ¥346），首年引流、续费按数倍核算。判断标准：产品钉死伏特加——蒸馏厂、单一品牌、以伏特加为主角的酒吧 → .vodka 单品直给，同类后缀里几乎没有竞争者；业务在葡萄酒或泛酒文化——酒庄、电商、酒评、课程 → .wine 品类更宽，行业采用度也高得多（法国等产区已有成规模的 .wine 使用）。两者几乎不重叠，真正要比的是预算结构：.vodka 平进平出（$26/26），.wine 低开高走（$6 进 $48 续），三年期总成本反而是 .wine 更贵（约 $102 vs $78）。三点注意：一是酒类营销全球强监管——年龄门槛、广告限制、电商牌照，域名之外先把合规做好；二是烈酒消费者仍习惯搜大品牌词，新品牌用 .vodka 时要靠社媒与瓶标把域名打出去；三是 .wine 有姊妹后缀 .vin（法语），面向法语市场时注意品牌一致性。命名上「品牌词 + .vodka」（frost.vodka）最主流，「酒庄/产区 + .wine」（valley.wine）适合产区品牌。",
+      pickA: ["精酿蒸馏厂与伏特加品牌", "鸡尾酒吧与调酒内容", "预算要平进平出（注册续费同价）", "单品钉死、货架品牌感优先"],
+      pickB: ["酒庄与产区品牌", "葡萄酒电商与订阅服务", "酒评媒体与侍酒师课程", "泛酒文化与藏酒服务"],
+    },
+    en: {
+      title: ".vodka vs .wine: The Single Spirit or the Whole Cellar",
+      metaDescription:
+        ".vodka names one spirit — distilleries and cocktail brands fit best; .wine covers the whole wine culture — wineries, reviews and e-commerce all fit. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same liquor cabinet, different labels: one is a single-item tag, the other a category shelf. .vodka names one spirit — craft distilleries, vodka brands, cocktail bars and mixology content on name.vodka pin the category into the address with maximum shelf-brand energy; run by GoDaddy Registry (ex Minds + Machines portfolio) at about $26/yr flat (≈¥189) for registration and renewal — no first-year promo trap, so budgets stay constant. .wine covers the whole culture — wineries and appellation brands, wine e-commerce and subscriptions, review media and sommelier courses, cellar and storage services all fit, and in English wine stretches to drinking culture at large, far wider than a single spirit; run by Identity Digital at about $6 first year (≈¥41) and $48/yr to renew (≈¥346) — cheap entry, so budget on the multiplied renewal. The test: if the product is pinned to vodka — a distillery, a single brand, a vodka-first bar → .vodka is item-direct with almost no competing suffix; if the business lives in wine or drinking culture broadly — wineries, e-commerce, reviews, courses → .wine is the wider category with far deeper industry adoption (French wine regions already use .wine at scale). The two barely overlap, so the real comparison is budget structure: .vodka is flat ($26/26) while .wine starts low and climbs ($6 in, $48 to renew) — over three years .wine actually costs more (≈$102 vs $78). Three cautions: alcohol marketing is tightly regulated everywhere — age gates, ad restrictions and e-commerce licensing come before the domain; spirits shoppers still search big brand terms, so a new .vodka brand must push the domain via social and the bottle label; and .wine has a French sibling in .vin — keep branding consistent if you target francophone markets. Naming: brand word + .vodka (frost.vodka) is the mainstream shape; winery or region + .wine (valley.wine) suits appellation brands.",
+      pickA: ["Craft distilleries & vodka brands", "Cocktail bars & mixology content", "Flat-budget preference (same reg & renewal)", "Single-item shelf branding"],
+      pickB: ["Wineries & appellation brands", "Wine e-commerce & subscriptions", "Review media & sommelier courses", "Broader drinking-culture & cellar services"],
+    },
+  },
+  "futbol-vs-soccer": {
+    slug: "futbol-vs-soccer",
+    a: "futbol",
+    b: "soccer",
+    zh: {
+      title: ".futbol 和 .soccer 怎么选：西语的足球与北美的足球",
+      metaDescription: ".futbol 是西语「足球」，面向拉美与西语球迷市场最出彩；.soccer 是北美的叫法，美加青训与社区联赛用它直给。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一颗球，两种语言。.futbol 是西语的「足球」——拉美与西班牙的球迷媒体、球队与球迷会、五人制球场与青训营用 name.futbol，对五亿西语人口来说这是母语原词，fútbol 是拉美体育文化的第一关键词，域名与球迷的语言零距离；Identity Digital 运营，首年约 $6（约 ¥41）、续费约 $14/年（约 ¥100），比 .soccer/.football 的续费低一截，是球类后缀里的价格洼地。.soccer 是北美英语的叫法——美国与加拿大的青训俱乐部、社区联赛、装备电商与教练服务用 name.soccer，在 football 意指橄榄球的市场里精准指向圆球足球；同为 Identity Digital 运营，注册约 $11（约 ¥78）、续费约 $21/年（约 ¥152），温和档长持无压力。判断标准：受众说西语——拉美球迷媒体、西语球队与社区、面向拉美的赛事内容 → .futbol 母语直给，还便宜一档；受众在北美说英语——美加青训、社区足球、装备电商 → .soccer 是当地家长与球员搜索的原词。两者几乎不重叠，按受众母语选就对了；美国的双语市场（西语裔社区足球）是少见的交集，预算允许可以两个都拿——反正 .futbol 续费只要 $14/年。三点注意：一是别用 .futbol 面向英语用户（认知成本高），也别用 .soccer 面向欧洲——欧洲人对 soccer 一词略有抵触，欧陆英语市场更认 .football；二是球类域名的流量大头在赛事与球星词，社区站与内容站记得做好本地词布局（barrio.futbol、austin.soccer 这类形态）；三是两者续费都温和，适合按年续着走、不必囤。命名上「球队/社区名 + .futbol」（barrio.futbol）最主流，「城市/俱乐部 + .soccer」（austin.soccer）适合北美本地生意。",
+      pickA: ["拉美与西语球迷媒体", "西语球队、球迷会与社区", "五人制球场与青训营（西语市场）", "预算敏感（续费最低一档）"],
+      pickB: ["美加青训俱乐部与社区联赛", "北美装备电商与教练服务", "面向英语家长与球员的获客站", "北美本地「城市 + soccer」形态"],
+    },
+    en: {
+      title: ".futbol vs .soccer: The Spanish Game or the North American Name",
+      metaDescription:
+        ".futbol is Spanish for the game — Latin American and Spanish-speaking fan markets shine; .soccer is the North American word — US & Canadian youth clubs and leagues read instantly. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same ball, two languages. .futbol is the Spanish word — fan media in Latin America and Spain, clubs and supporter groups, five-a-side venues and youth academies on name.futbol speak the mother tongue of half a billion Spanish speakers, where fútbol is the first word of sporting culture and the domain sits zero distance from the fans' language; run by Identity Digital at about $6 first year (≈¥41) and $14/yr to renew (≈¥100) — a tier below .soccer/.football renewals and the price valley among ball-sport suffixes. .soccer is the North American English name — US and Canadian youth clubs, community leagues, gear e-commerce and coaching services on name.soccer point precisely at the round-ball game in markets where football means the gridiron; also Identity Digital, about $11 to register (≈¥78) and $21/yr to renew (≈¥152), the mild tier that's painless to hold. The test: Spanish-speaking audiences — Latin American fan media, Spanish-language clubs and communities, tournament content for the region → .futbol is native-direct and a tier cheaper; English-speaking North America — youth academies, community soccer, gear shops → .soccer is the literal word local parents and players type. They barely overlap, so choose by the audience's mother tongue; the rare intersection is bilingual US markets (Hispanic community soccer), where holding both is cheap — .futbol renews at just $14/yr. Three cautions: don't point .futbol at English audiences (high recognition cost), and don't point .soccer at Europe — continental fans bristle at the word and European English markets read .football better; ball-sport traffic concentrates on match and star keywords, so community and content sites should build local-word coverage (barrio.futbol, austin.soccer shapes); and both renewals are mild — renew annually, no need to stockpile. Naming: club or community name + .futbol (barrio.futbol) is the mainstream shape; city or club + .soccer (austin.soccer) suits North American local businesses.",
+      pickA: ["Latin American & Spanish-language fan media", "Spanish-speaking clubs & supporter groups", "Five-a-side venues & academies (Spanish markets)", "Budget-sensitive (lowest renewal tier)"],
+      pickB: ["US & Canadian youth clubs & leagues", "North American gear e-commerce & coaching", "Acquisition sites for English-speaking parents", "City + soccer local-business shapes"],
+    },
+  },
+  "moda-vs-fashion": {
+    slug: "moda-vs-fashion",
+    a: "moda",
+    b: "fashion",
+    zh: {
+      title: ".moda 和 .fashion 怎么选：西语的时尚与英语的时尚",
+      metaDescription: ".moda 是西语/意语的「时尚」，面向拉美与南欧市场最出彩；.fashion 是英语原词，时尚媒体与国际品牌用它直给。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一个 T 台，两种语言。.moda 是西语与意语的「时尚」——拉美与西班牙的服装品牌、意大利调性的设计师工作室、西语时尚博主与买手店用 name.moda，moda 在西语和意语里就是 fashion 的日常原词，米兰与马德里的时尚语境里它反而比英语更正统；Identity Digital 运营，首年约 $11（约 ¥78）、续费约 $33/年（约 ¥241），与 .fashion 续费相当。.fashion 是英语原词——时尚媒体与博客、国际化服装品牌、造型师与买手、时装周与行业活动用 name.fashion，面向全球英语受众认知零成本；GoDaddy Registry 运营，注册约 $26（约 ¥189）、续费同价，平进平出预算一眼算到底。判断标准：受众说西语或意语，或品牌要拉丁/地中海调性——拉美电商、西语博主、意式设计师品牌 → .moda 母语直给，还自带一分设计感（4 个字母比 fashion 短一半）；受众是全球英语用户——国际品牌、英文媒体、面向时装周的行业站 → .fashion 原词直给，不需要解释。两者的市场重叠在「国际化的拉丁品牌」：想同时吃西语与英语市场的，主站用 .fashion、本地站用 .moda 是成熟打法，两个续费加起来约 $59/年不算负担。三点注意：一是长期成本几乎打平（续费 $33 vs $26/年），按受众语言选而不是按价签选；二是 moda 一词在葡语（巴西）里同样是「时尚」，面向巴西市场 .moda 的覆盖比西语还大；三是时尚品牌的流量大头在 Instagram 与 TikTok，无论选哪个都把社媒主页与域名钉在一起。命名上「品牌词 + .moda」（bella.moda）最主流，「风格词 + .fashion」（street.fashion）适合媒体与博主。",
+      pickA: ["拉美与西班牙服装品牌", "意式调性设计师工作室", "西语/葡语时尚博主与买手店", "想要 4 字母短后缀的设计感"],
+      pickB: ["全球英语市场的国际品牌", "时尚媒体与博客", "造型师、买手与行业活动", "预算要平进平出（注册续费同价）"],
+    },
+    en: {
+      title: ".moda vs .fashion: Style in Spanish or English",
+      metaDescription:
+        ".moda is Spanish and Italian for fashion — Latin American and Southern European markets shine; .fashion is the English original — media and international brands read instantly. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same runway, two languages. .moda is the Spanish and Italian word — apparel brands in Latin America and Spain, Italian-vibe designer studios, Spanish-language fashion bloggers and boutiques on name.moda use the everyday word for fashion in those languages, and in Milan or Madrid it reads more native than the English word; run by Identity Digital at about $11 first year (≈¥78) and $33/yr to renew (≈¥241), on par with .fashion's renewal. .fashion is the English original — fashion media and blogs, international apparel brands, stylists and buyers, and fashion-week or trade events on name.fashion carry zero recognition cost for global English audiences; run by GoDaddy Registry at about $26 flat (≈¥189) for registration and renewal, so the price tag is the long-term cost. The test: Spanish or Italian-speaking audiences, or a Latin/Mediterranean brand vibe — Latin American e-commerce, Spanish-language bloggers, Italian-style designer brands → .moda is native-direct with a bonus of design economy (4 letters, half the length of fashion); global English audiences — international brands, English media, fashion-week industry sites → .fashion is the original word, no explanation needed. The overlap is the international Latin brand: to serve both markets, the mature play is .fashion for the flagship and .moda for the local site — the two renewals total about $59/yr, hardly a burden. Three cautions: long-term costs are nearly level ($33 vs $26/yr renewal), so choose by audience language, not price tag; moda means fashion in Portuguese too, so for the Brazilian market .moda covers even more ground than Spanish alone; and fashion traffic lives on Instagram and TikTok — pin the social profiles to whichever domain you pick. Naming: brand word + .moda (bella.moda) is the mainstream shape; style word + .fashion (street.fashion) fits media and bloggers.",
+      pickA: ["Latin American & Spanish apparel brands", "Italian-vibe designer studios", "Spanish/Portuguese-language bloggers & boutiques", "Wanting the 4-letter design economy"],
+      pickB: ["International brands for global English markets", "Fashion media & blogs", "Stylists, buyers & industry events", "Flat-budget preference (same reg & renewal)"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

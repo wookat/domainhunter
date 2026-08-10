@@ -321,6 +321,12 @@ export const COMPARE_SLUGS = [
   "organic-vs-bio",
   "tattoo-vs-ink",
   "casa-vs-house",
+  "casino-vs-bet",
+  "bet-vs-poker",
+  "poker-vs-games",
+  "vodka-vs-wine",
+  "futbol-vs-soccer",
+  "moda-vs-fashion",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
