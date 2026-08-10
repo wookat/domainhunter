@@ -9204,6 +9204,186 @@ const GUIDES = {
       ],
     },
   },
+  asia: {
+    tld: "asia",
+    zh: {
+      title: ".asia 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".asia 是亚洲区域的官方后缀，适合面向亚洲市场的跨境电商与品牌站、亚太区业务的企业官网、亚洲文化与旅行内容站、区域行业协会与展会活动。查看 .asia 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .asia 域名。",
+      intro:
+        ".asia 把市场范围写进域名：面向亚洲市场的跨境电商与品牌站、亚太区业务的企业官网、亚洲文化与旅行内容站、区域行业协会与展会活动用 name.asia，一眼锁定亚太——它是 2007 年由 DotAsia 机构（香港）发起的区域赞助类顶级域，得到亚太多个国家域名注册局背书，是少数「代表一个大洲」的官方后缀。后端由 Identity Digital 运营，解析与注册商生态成熟稳定。它与已收录的 .cn/.in/.global 分工清晰：.cn/.in 说单一国家，.global 说全球化——.asia 圈定「亚太区域」这个中间层，跨国但不泛全球的业务定位最准。价格是少见的平价平续结构：注册约 $12/年（约 ¥85），续费同价——没有首年促销陷阱，多年持有成本可预期。库存很好：行业词、城市词、品牌词大多有货。注意两点：一是注册政策要求至少一个联系人位于亚太地区（DotAsia 的 Charter 资格要求，多数注册商可自动满足）；二是面向欧美市场时区域标签反而收窄语义，全球业务用 .com/.global 更稳。命名上「品牌 + .asia」（acme.asia）最主流，「行业/品类 + .asia」（travel.asia）适合区域门户与内容站。",
+      bestFor: ["面向亚洲市场的跨境电商与品牌站", "亚太区业务的企业官网", "亚洲文化与旅行内容站", "区域行业协会与展会活动"],
+      namingTips: [
+        "「品牌 + .asia」一眼说明主战场在亚太",
+        "注册约 $12/年、续费同价，无首年促销陷阱",
+        "亚太区域用 .asia，单一国家用 .cn/.in，全球化用 .global",
+        "注册要求至少一个亚太联系人，多数注册商可自动满足",
+      ],
+    },
+    en: {
+      title: ".asia Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".asia is the official suffix for the Asia-Pacific region — for cross-border e-commerce and brands targeting Asian markets, corporate sites with APAC operations, Asian culture and travel content, and regional trade associations and events. See live pricing and naming advice, then hunt available .asia names with AI.",
+      intro:
+        ".asia writes the market into the address: cross-border e-commerce and brands targeting Asian markets, corporate sites with APAC operations, Asian culture and travel content, and regional trade associations and events on name.asia lock onto the region at a glance — launched in 2007 by the Hong Kong-based DotAsia Organisation as a sponsored regional top-level domain, endorsed by many Asia-Pacific country registries, it is one of the very few suffixes that officially names a continent. The backend runs on Identity Digital, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .cn, .in and .global: .cn and .in name a single country, .global claims the whole world — .asia marks the in-between layer, so multi-country-but-not-global positioning reads sharpest here. Pricing is the rare flat shape: about $12/yr to register (≈¥85) and the same to renew — no first-year promo trap, so multi-year costs stay predictable. Inventory is very good: industry words, city words and brand words mostly hit. Two cautions: the registry's Charter requires at least one contact based in the Asia-Pacific region (most registrars satisfy this automatically); and for audiences in Europe or the Americas the regional label narrows the story — global plays sit safer on .com or .global. Naming: brand + .asia (acme.asia) is the mainstream shape; industry or category + .asia (travel.asia) suits regional portals and content sites.",
+      bestFor: ["Cross-border e-commerce & brands for Asian markets", "Corporate sites with APAC operations", "Asian culture & travel content", "Regional trade associations & events"],
+      namingTips: [
+        "Brand + .asia says the home market is APAC at a glance",
+        "About $12/yr flat to register and renew — no promo trap",
+        "The region fits .asia; one country .cn/.in; worldwide .global",
+        "Charter needs one APAC contact — most registrars handle it",
+      ],
+    },
+  },
+  buzz: {
+    tld: "buzz",
+    zh: {
+      title: ".buzz 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".buzz 是「热度/话题」气质的营销后缀，适合营销活动与新品发布落地页、社媒话题与病毒传播项目、娱乐八卦与热点资讯站、蜂业与蜂蜜品牌。查看 .buzz 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .buzz 域名。",
+      intro:
+        ".buzz 把热度写进域名：营销活动与新品发布落地页、社媒话题与病毒传播项目、娱乐八卦与热点资讯站、蜂业与蜂蜜品牌用 name.buzz，「制造话题」一词说透——buzz 在英文里既是嗡嗡声也是「热度/风头」，营销语境里 create a buzz（制造话题）人尽皆知，此外它还是养蜂与蜂蜜品牌的天然双关。注册局为 DotStrategy（美国），2014 年开放注册，是新顶级域里少数由独立小注册局长期稳定运营的后缀，解析与注册商覆盖成熟。它与已收录的 .promo/.click/.fun 分工清晰：.promo 说促销动作，.click 说点击行为，.fun 说趣味体验——.buzz 说的是「话题热度」本身，做传播导向的活动页定位最准。价格是典型促销结构：首年约 $2（约 ¥15），续费约 $26/年（约 ¥189）——首年极低，务必按续费价做多年预算。库存极好：话题词、品牌词、行业词全线有货。注意两点：一是首年与续费差十倍以上，批量注册前先算三年总成本；二是低价后缀历史上垃圾站较多，务必配好 SPF/DKIM 并做好内容质量，避免邮件与搜索侧受牵连。命名上「品牌 + .buzz」（acme.buzz）最主流，「话题词 + .buzz」（launch.buzz）适合活动与传播页。",
+      bestFor: ["营销活动与新品发布落地页", "社媒话题与病毒传播项目", "娱乐八卦与热点资讯站", "蜂业与蜂蜜品牌"],
+      namingTips: [
+        "「品牌 + .buzz」把「正在制造话题」写进域名",
+        "首年约 $2、续费约 $26/年，按续费价算三年总成本",
+        "话题热度用 .buzz，促销动作用 .promo，趣味体验用 .fun",
+        "低价后缀需配好 SPF/DKIM 与内容质量，避免声誉牵连",
+      ],
+    },
+    en: {
+      title: ".buzz Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".buzz is the marketing suffix with heat — for campaign and product-launch landing pages, social-media topics and viral projects, entertainment gossip and trending-news sites, and beekeeping or honey brands. See live pricing and naming advice, then hunt available .buzz names with AI.",
+      intro:
+        ".buzz writes the hype into the address: campaign and product-launch landing pages, social-media topics and viral projects, entertainment gossip and trending-news sites, and beekeeping or honey brands on name.buzz say \"we make noise\" in one word — buzz is both the hum and the hype, \"create a buzz\" is marketing's most worn phrase, and the beekeeping pun comes free. The registry is DotStrategy of the United States; open since 2014, it is one of the few new gTLDs run long-term by a small independent registry, with mature registrar and DNS coverage. It divides labor cleanly with the already-listed .promo, .click and .fun: .promo names the discount move, .click names the action, .fun names the vibe — .buzz names the attention itself, so spread-first campaign pages position sharpest here. Pricing is the classic promo shape: about $2 first year (≈¥15) and $26/yr to renew (≈¥189) — year one is nearly free, so budget multi-year on the renewal. Inventory is excellent: topic words, brand words and industry words all hit. Two cautions: renewal is more than ten times year one, so price three years before bulk-registering; and cheap TLDs carry spam history, so configure SPF/DKIM and keep content quality high to avoid reputation spillover in email and search. Naming: brand + .buzz (acme.buzz) is the mainstream shape; topic word + .buzz (launch.buzz) suits campaigns and viral pages.",
+      bestFor: ["Campaign & product-launch landing pages", "Social-media topics & viral projects", "Entertainment gossip & trending news", "Beekeeping & honey brands"],
+      namingTips: [
+        "Brand + .buzz writes \"we're making noise\" into the address",
+        "About $2 year one, $26/yr renewal — price three years first",
+        "Attention fits .buzz; the discount .promo; the vibe .fun",
+        "Cheap TLDs need SPF/DKIM and real content to avoid spillover",
+      ],
+    },
+  },
+  fans: {
+    tld: "fans",
+    zh: {
+      title: ".fans 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".fans 是粉丝社群的专属后缀，适合明星与偶像官方粉丝站、球队与电竞战队应援站、创作者会员与粉丝订阅页、品牌粉丝社区与周边商城。查看 .fans 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fans 域名。",
+      intro:
+        ".fans 把归属感写进域名：明星与偶像官方粉丝站、球队与电竞战队应援站、创作者会员与粉丝订阅页、品牌粉丝社区与周边商城用 name.fans，「谁的粉丝」一眼讲透——名字在前、fans 在后，天然构成「XX 的粉丝们」的完整短语，这种「读出来就是一句话」的后缀在社群场景几乎无可替代。注册局为 ZDNS International（香港），2015 年开放注册，解析与注册商覆盖成熟。它与已收录的 .fan/.club/.live 分工清晰：.fan 说单个粉丝身份，.club 说俱乐部组织，.live 说直播现场——.fans 说的是「粉丝群体」这个复数集体，做官方应援站与社群主页定位最准。价格亲民：首年约 $4（约 ¥26），续费约 $9/年（约 ¥63）——续费在新顶级域里属于最低一档，长期持有无压力。库存极好：偶像名、战队名、品牌词大多有货。注意两点：一是涉及明星与 IP 的名字注意商标与姓名权，官方授权站与同人站要划清边界；二是 .fan 与 .fans 单复数并存，品牌保护最好两个都注册。命名上「偶像/品牌 + .fans」（acme.fans）最主流，「圈名 + .fans」（kpop.fans）适合垂直社群。",
+      bestFor: ["明星与偶像官方粉丝站", "球队与电竞战队应援站", "创作者会员与粉丝订阅页", "品牌粉丝社区与周边商城"],
+      namingTips: [
+        "「偶像/品牌 + .fans」读出来就是「XX 的粉丝们」",
+        "首年约 $4、续费约 $9/年，续费属最低一档",
+        "粉丝群体用 .fans，单个粉丝用 .fan，俱乐部用 .club",
+        "涉及明星与 IP 注意商标姓名权，.fan/.fans 最好都注册",
+      ],
+    },
+    en: {
+      title: ".fans Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".fans is the dedicated suffix for fan communities — for official star and idol fan sites, sports and esports team supporter hubs, creator membership and fan subscription pages, and brand fan communities with merch stores. See live pricing and naming advice, then hunt available .fans names with AI.",
+      intro:
+        ".fans writes the belonging into the address: official star and idol fan sites, sports and esports team supporter hubs, creator membership and fan subscription pages, and brand fan communities with merch stores on name.fans say whose crowd this is at a glance — name first, fans second, the domain reads out loud as a complete phrase, \"the fans of X\", a read-it-as-a-sentence quality almost no other suffix offers community builders. The registry is ZDNS International of Hong Kong; open since 2015, with mature registrar and DNS coverage. It divides labor cleanly with the already-listed .fan, .club and .live: .fan names one supporter, .club names the organization, .live names the show — .fans names the plural crowd, so official supporter hubs and community homepages position sharpest here. Pricing is friendly: about $4 first year (≈¥26) and $9/yr to renew (≈¥63) — among the cheapest renewals of any new gTLD, painless to hold long-term. Inventory is excellent: idol names, team names and brand words mostly hit. Two cautions: names tied to celebrities and IP raise trademark and personality-rights questions, so keep official and fan-made sites clearly separated; and .fan and .fans coexist as singular and plural, so brand protection ideally registers both. Naming: idol or brand + .fans (acme.fans) is the mainstream shape; scene name + .fans (kpop.fans) suits vertical communities.",
+      bestFor: ["Official star & idol fan sites", "Sports & esports supporter hubs", "Creator membership & fan subscriptions", "Brand fan communities & merch stores"],
+      namingTips: [
+        "Idol or brand + .fans reads out loud as \"the fans of X\"",
+        "About $4 year one, $9/yr renewal — cheapest tier to hold",
+        "The crowd fits .fans; one supporter .fan; the org .club",
+        "Mind trademark rights on celebrity names — register .fan too",
+      ],
+    },
+  },
+  place: {
+    tld: "place",
+    zh: {
+      title: ".place 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".place 是「地点/场所」语义的通用后缀，适合线下门店与场馆官网、共享空间与工作室预约页、本地生活与目的地指南站、虚拟社区与元宇宙空间。查看 .place 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .place 域名。",
+      intro:
+        ".place 把场所写进域名：线下门店与场馆官网、共享空间与工作室预约页、本地生活与目的地指南站、虚拟社区与元宇宙空间用 name.place，「这是一个地方」一词讲透——place 是英文里最通用的场所词，实体店面、活动场地、线上空间都能套用，且「品牌 + .place」读起来就是「XX 的地盘」，归属感天然。注册局为 Identity Digital（原 Donuts），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .space/.city/.land 分工清晰：.space 偏抽象空间与创意留白，.city 说城市尺度，.land 说地块与版图——.place 说的是「具体的一个场所」，做门店与场馆官网定位最准。价格是少见的平价平续结构：注册约 $18/年（约 ¥130），续费同价——无首年促销陷阱，多年持有成本可预期。库存极好：场所词、地名词、品牌词全线有货。注意两点：一是 place 语义宽泛，不自带行业信息，域名前半段要把业务说清楚；二是本地业务同时留意 .city 与城市域名，多注一手做品牌保护。命名上「品牌 + .place」（acme.place）最主流，「场所词 + .place」（studio.place）适合预约页与空间站。",
+      bestFor: ["线下门店与场馆官网", "共享空间与工作室预约页", "本地生活与目的地指南站", "虚拟社区与元宇宙空间"],
+      namingTips: [
+        "「品牌 + .place」读起来就是「XX 的地盘」",
+        "注册约 $18/年、续费同价，无首年促销陷阱",
+        "具体场所用 .place，抽象空间用 .space，城市尺度用 .city",
+        "place 语义宽泛，域名前半段要把业务说清楚",
+      ],
+    },
+    en: {
+      title: ".place Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".place is the generic suffix for locations and venues — for physical stores and venue sites, co-working and studio booking pages, local-living and destination guides, and virtual communities or metaverse spaces. See live pricing and naming advice, then hunt available .place names with AI.",
+      intro:
+        ".place writes the venue into the address: physical stores and venue sites, co-working and studio booking pages, local-living and destination guides, and virtual communities or metaverse spaces on name.place say \"this is somewhere\" in one word — place is English's most universal word for location, stretching from storefronts to event venues to online worlds, and brand + .place reads naturally as \"X's spot\", belonging built in. The registry is Identity Digital (formerly Donuts); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .space, .city and .land: .space leans abstract and creative, .city names the urban scale, .land names territory — .place names one concrete venue, so store and venue sites position sharpest here. Pricing is the rare flat shape: about $18/yr to register (≈¥130) and the same to renew — no first-year promo trap, so multi-year costs stay predictable. Inventory is excellent: venue words, location words and brand words all hit. Two cautions: place carries no industry meaning of its own, so the left half of the name must state the business; and local ventures should also watch .city and city-level domains, registering a spare for brand protection. Naming: brand + .place (acme.place) is the mainstream shape; venue word + .place (studio.place) suits booking pages and space sites.",
+      bestFor: ["Physical stores & venue sites", "Co-working & studio booking pages", "Local-living & destination guides", "Virtual communities & metaverse spaces"],
+      namingTips: [
+        "Brand + .place reads naturally as \"X's spot\"",
+        "About $18/yr flat to register and renew — no promo trap",
+        "One venue fits .place; abstract space .space; the city .city",
+        "place says no industry — the left half must state the business",
+      ],
+    },
+  },
+  report: {
+    tld: "report",
+    zh: {
+      title: ".report 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".report 是「报告/报道」的专属后缀，适合行业研究与市场报告站、数据新闻与调查报道项目、企业年报与 ESG 披露页、测评与白皮书发布站。查看 .report 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .report 域名。",
+      intro:
+        ".report 把体裁写进域名：行业研究与市场报告站、数据新闻与调查报道项目、企业年报与 ESG 披露页、测评与白皮书发布站用 name.report，「这里出报告」一词讲透——report 同时覆盖「研究报告」与「新闻报道」两层含义，做内容的权威感与做数据的专业感一并到位，「领域 + .report」读起来就是一份刊物的名字。注册局为 Identity Digital（原 Donuts），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .news/.wiki/.review 分工清晰：.news 说时效资讯，.wiki 说协作知识库，.review 说评价打分——.report 说的是「成体系的深度输出」，做研究报告与调查内容定位最准。价格适中：首年约 $7（约 ¥48），续费约 $20/年（约 ¥145）——首年有促销、续费不算贵，长期做内容站可持续。库存极好：行业词、地区词、题材词全线有货。注意两点：一是首年与续费有差价，按续费价做多年预算；二是「报告」自带权威预期，内容质量与数据来源要撑得起这个后缀，否则反噬信任。命名上「领域 + .report」（energy.report）最主流，读起来就是刊物名，「品牌 + .report」（acme.report）适合企业披露页。",
+      bestFor: ["行业研究与市场报告站", "数据新闻与调查报道项目", "企业年报与 ESG 披露页", "测评与白皮书发布站"],
+      namingTips: [
+        "「领域 + .report」读起来就是一份刊物的名字",
+        "首年约 $7、续费约 $20/年，按续费价做多年预算",
+        "深度报告用 .report，时效资讯用 .news，评价打分用 .review",
+        "「报告」自带权威预期，内容与数据要撑得起后缀",
+      ],
+    },
+    en: {
+      title: ".report Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".report is the dedicated suffix for reports and reporting — for industry research and market-report sites, data journalism and investigative projects, annual-report and ESG disclosure pages, and testing or whitepaper publishing. See live pricing and naming advice, then hunt available .report names with AI.",
+      intro:
+        ".report writes the genre into the address: industry research and market-report sites, data journalism and investigative projects, annual-report and ESG disclosure pages, and testing or whitepaper publishing on name.report say \"reports live here\" in one word — report spans both the research document and the act of journalism, so analytical authority and newsroom credibility arrive together, and field + .report reads like the masthead of a publication. The registry is Identity Digital (formerly Donuts); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .news, .wiki and .review: .news names the fast feed, .wiki names the shared knowledge base, .review names the scoring — .report names the systematic deep dive, so research and investigative content positions sharpest here. Pricing is moderate: about $7 first year (≈¥48) and $20/yr to renew (≈¥145) — a first-year promo with a reasonable renewal, sustainable for a long-running content site. Inventory is excellent: industry words, region words and topic words all hit. Two cautions: the first-year gap means budgeting on the renewal; and \"report\" sets an expectation of authority, so content quality and data sourcing must carry the suffix or trust backfires. Naming: field + .report (energy.report) is the mainstream shape and reads like a publication; brand + .report (acme.report) suits corporate disclosure pages.",
+      bestFor: ["Industry research & market-report sites", "Data journalism & investigative projects", "Annual-report & ESG disclosure pages", "Testing & whitepaper publishing"],
+      namingTips: [
+        "Field + .report reads like the masthead of a publication",
+        "About $7 year one, $20/yr renewal — budget on the renewal",
+        "The deep dive fits .report; the fast feed .news; scores .review",
+        "\"Report\" promises authority — the data must carry the suffix",
+      ],
+    },
+  },
+  town: {
+    tld: "town",
+    zh: {
+      title: ".town 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".town 是「小镇/城镇」语义的社区后缀，适合小镇与街区门户站、本地商户与市集导览、文旅小镇与古镇项目、主题社区与游戏小镇。查看 .town 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .town 域名。",
+      intro:
+        ".town 把烟火气写进域名：小镇与街区门户站、本地商户与市集导览、文旅小镇与古镇项目、主题社区与游戏小镇用 name.town，「一个镇子」一词讲透——town 比 city 小、比 village 大，自带熟人社区的亲切感，「地名 + .town」读起来就是小镇官网，「主题词 + .town」则能造出「某某小镇」的世界观，游戏与虚拟社区尤其好用。注册局为 Identity Digital（原 Donuts），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .city/.land/.casa 分工清晰：.city 说城市尺度，.land 说地块版图，.casa 说居所——.town 说的是「城镇尺度的社区」，做本地门户与文旅项目定位最准。价格是典型促销结构：首年约 $6（约 ¥41），续费约 $29/年（约 ¥211）——首年低、续费中档，按续费价做多年预算。库存极好：地名、主题词、品牌词全线有货。注意两点：一是首年与续费差价明显，批量注册前先算三年总成本；二是中文语境里「镇」的行政含义与英文 town 不完全对应，面向国内用户时配合中文品牌词更稳。命名上「地名 + .town」（dali.town）最主流，「主题词 + .town」（pixel.town）适合游戏与虚拟社区。",
+      bestFor: ["小镇与街区门户站", "本地商户与市集导览", "文旅小镇与古镇项目", "主题社区与游戏小镇"],
+      namingTips: [
+        "「地名 + .town」读起来就是小镇官网",
+        "首年约 $6、续费约 $29/年，按续费价算三年总成本",
+        "城镇社区用 .town，城市尺度用 .city，地块版图用 .land",
+        "「主题词 + .town」能造世界观，游戏与虚拟社区好用",
+      ],
+    },
+    en: {
+      title: ".town Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".town is the community suffix at town scale — for town and neighborhood portals, local merchant and market guides, cultural-tourism town projects, and themed communities or game towns. See live pricing and naming advice, then hunt available .town names with AI.",
+      intro:
+        ".town writes the neighborhood into the address: town and neighborhood portals, local merchant and market guides, cultural-tourism town projects, and themed communities or game towns on name.town say \"a town lives here\" in one word — town sits between city and village, carrying the warmth of a place where people know each other; placename + .town reads like the town's official site, while theme + .town builds a whole world, which games and virtual communities exploit beautifully. The registry is Identity Digital (formerly Donuts); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .city, .land and .casa: .city names the urban scale, .land names territory, .casa names the home — .town names the community at town scale, so local portals and cultural-tourism projects position sharpest here. Pricing is the classic promo shape: about $6 first year (≈¥41) and $29/yr to renew (≈¥211) — a low year one with a mid-tier renewal, so budget multi-year on the renewal. Inventory is excellent: placenames, theme words and brand words all hit. Two cautions: the first-year gap is large, so price three years before bulk-registering; and the Chinese administrative sense of 镇 doesn't map exactly onto the English town, so domestic-facing projects pair it with a Chinese brand word for clarity. Naming: placename + .town (dali.town) is the mainstream shape; theme + .town (pixel.town) suits games and virtual communities.",
+      bestFor: ["Town & neighborhood portals", "Local merchant & market guides", "Cultural-tourism town projects", "Themed communities & game towns"],
+      namingTips: [
+        "Placename + .town reads like the town's official site",
+        "About $6 year one, $29/yr renewal — price three years first",
+        "Town scale fits .town; the city .city; territory .land",
+        "Theme + .town builds a world — great for games and communities",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
