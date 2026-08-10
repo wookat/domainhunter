@@ -371,4 +371,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "tufting", zh: "簇绒工作室", en: "Tufting studios" },
   { slug: "silversmith", zh: "银匠工作室", en: "Silversmith studios" },
   { slug: "falconry", zh: "猛禽体验基地", en: "Falconry experiences" },
+  { slug: "lutherie", zh: "制琴工作室", en: "Lutherie studios" },
+  { slug: "lapidary", zh: "宝石切磨工作室", en: "Lapidary studios" },
+  { slug: "cooperage", zh: "制桶工坊", en: "Cooperages" },
+  { slug: "kintsugi", zh: "金缮修复工作室", en: "Kintsugi studios" },
+  { slug: "indigodye", zh: "蓝染工坊", en: "Indigo dye studios" },
+  { slug: "penmaking", zh: "手工制笔工作室", en: "Penmaking studios" },
 ];
