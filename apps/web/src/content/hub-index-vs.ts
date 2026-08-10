@@ -286,4 +286,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "equipment-vs-rentals", a: "equipment", b: "rentals", title: { zh: ".equipment 和 .rentals 怎么选：卖设备与租设备的分工", en: ".equipment vs .rentals: Selling The Gear or Renting It Out" } },
   { slug: "supply-vs-express", a: "supply", b: "express", title: { zh: ".supply 和 .express 怎么选：供货口径与快送口径的分工", en: ".supply vs .express: The Source of Goods or The Speed Promise" } },
   { slug: "parts-vs-repair", a: "parts", b: "repair", title: { zh: ".parts 和 .repair 怎么选：卖配件与修东西的分工", en: ".parts vs .repair: Selling The Piece or Fixing The Thing" } },
+  { slug: "auction-vs-market", a: "auction", b: "market", title: { zh: ".auction 和 .market 怎么选：竞价成交与挂牌交易的分工", en: ".auction vs .market: Bidding Floor or Open Marketplace" } },
+  { slug: "deals-vs-coupons", a: "deals", b: "coupons", title: { zh: ".deals 和 .coupons 怎么选：找便宜与发码的分工", en: ".deals vs .coupons: Deal Feeds or Code Distribution" } },
+  { slug: "discount-vs-sale", a: "discount", b: "sale", title: { zh: ".discount 和 .sale 怎么选：常年折扣与档期特卖的分工", en: ".discount vs .sale: Everyday Low Prices or Event Markdowns" } },
+  { slug: "furniture-vs-boutique", a: "furniture", b: "boutique", title: { zh: ".furniture 和 .boutique 怎么选：品类直给与精选气质的取舍", en: ".furniture vs .boutique: Category Precision or Curated Character" } },
+  { slug: "lighting-vs-garden", a: "lighting", b: "garden", title: { zh: ".lighting 和 .garden 怎么选：庭院灯光生意的两个入口", en: ".lighting vs .garden: Two Doors Into the Outdoor-Lighting Trade" } },
+  { slug: "lighting-vs-solar", a: "lighting", b: "solar", title: { zh: ".lighting 和 .solar 怎么选：太阳能灯生意站哪边", en: ".lighting vs .solar: Where a Solar-Lighting Business Belongs" } },
 ];
