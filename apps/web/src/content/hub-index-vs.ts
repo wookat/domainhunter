@@ -334,4 +334,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "vodka-vs-wine", a: "vodka", b: "wine", title: { zh: ".vodka 和 .wine 怎么选：烈酒单品与酒文化大类", en: ".vodka vs .wine: The Single Spirit or the Whole Cellar" } },
   { slug: "futbol-vs-soccer", a: "futbol", b: "soccer", title: { zh: ".futbol 和 .soccer 怎么选：西语的足球与北美的足球", en: ".futbol vs .soccer: The Spanish Game or the North American Name" } },
   { slug: "moda-vs-fashion", a: "moda", b: "fashion", title: { zh: ".moda 和 .fashion 怎么选：西语的时尚与英语的时尚", en: ".moda vs .fashion: Style in Spanish or English" } },
+  { slug: "basketball-vs-team", a: "basketball", b: "team", title: { zh: ".basketball 和 .team 怎么选：单项官方域与万队通用牌", en: ".basketball vs .team: The Sport's Official Badge or Any Squad's Banner" } },
+  { slug: "rugby-vs-football", a: "rugby", b: "football", title: { zh: ".rugby 和 .football 怎么选：橄榄球与足球各说各的", en: ".rugby vs .football: Each Sport Under Its Own Banner" } },
+  { slug: "cricket-vs-club", a: "cricket", b: "club", title: { zh: ".cricket 和 .club 怎么选：板球品类与社群归属的分工", en: ".cricket vs .club: The Sport's Category or The Member Circle" } },
+  { slug: "fish-vs-fishing", a: "fish", b: "fishing", title: { zh: ".fish 和 .fishing 怎么选：水产品类与钓鱼活动的分工", en: ".fish vs .fishing: The Category or The Activity" } },
+  { slug: "fan-vs-club", a: "fan", b: "club", title: { zh: ".fan 和 .club 怎么选：粉丝身份与社群组织的分工", en: ".fan vs .club: The Fan's Identity or The Member Organization" } },
+  { slug: "win-vs-bet", a: "win", b: "bet", title: { zh: ".win 和 .bet 怎么选：赢的结果与下注的动作", en: ".win vs .bet: The Outcome or The Action" } },
 ];

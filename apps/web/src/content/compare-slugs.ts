@@ -327,6 +327,12 @@ export const COMPARE_SLUGS = [
   "vodka-vs-wine",
   "futbol-vs-soccer",
   "moda-vs-fashion",
+  "basketball-vs-team",
+  "rugby-vs-football",
+  "cricket-vs-club",
+  "fish-vs-fishing",
+  "fan-vs-club",
+  "win-vs-bet",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
