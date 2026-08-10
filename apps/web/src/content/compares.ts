@@ -8737,6 +8737,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Local Singapore businesses & services", "Southeast Asia regional HQs & cross-border trade", "Fintech & professional services", "Brands entering Southeast Asia"],
     },
   },
+  "ch-vs-de": {
+    slug: "ch-vs-de",
+    a: "ch",
+    b: "de",
+    zh: {
+      title: ".ch 和 .de 怎么选：瑞士品质与德国腹地两大德语区 ccTLD 的对比",
+      metaDescription: ".ch 是瑞士国家域名、自带「瑞士制造」品质联想，约 $12/年平续、任何人可注册；.de 是全球最大 ccTLD、约 $8/年平续，德国市场标配。对比两者的市场信号、价格与资格，并用 AI 猎取可注册的名字。",
+      verdict:
+        "同属德语区的两大高信任 ccTLD，分工在市场半径与品牌联想。做瑞士市场 → .ch：学术网络机构 SWITCH 运营、注册量约 250 万——对 900 万人口的国家渗透率惊人；瑞士消费者对本土信号极其敏感，name.ch 一眼讲清「瑞士的生意」，本土企业、银行与政府机构的主站几乎都在 .ch 上，Google 也会把 .ch 站点与瑞士地区相关联，德/法/意三语市场的本地 SEO 都有加成；「瑞士制造」的全球溢价还给 .ch 加了一层品质联想——钟表、金融、医药、精品类业务用它比通用后缀更能讲清出身。做德国市场 → .de：DENIC 运营、注册量超过 1,700 万，是全球最大的 ccTLD，德国消费者在地址栏习惯性输入 name.de，本地信任度远超一般新后缀，德语市场 SEO 有天然加成。资格差异值得注意：.ch 完全开放，任何国家的个人与机构可直接注册、无需本地地址，是欧洲 ccTLD 里门槛最低的之一；.de 要求德国境内 Admin-C 地址（主流注册商可代理），且 DENIC 有 DNS zone 检查。价格都温和平续：.ch 注册约 $12/年（约 ¥85）、续费同价；.de 约 $8/年（约 ¥58）平续，是大型 ccTLD 里的良心价，两边都无引流钩子。判断标准：用户在瑞士，或想借「瑞士品质」联想的金融精品类品牌 → .ch；用户在德国 → .de；同时深耕 DACH 两大市场的品牌通常各注册一个做本地门面，谈不上二选一。",
+      pickA: ["瑞士本地企业与服务", "金融、钟表与精品品牌", "面向瑞士市场的电商", "无本地地址、要低门槛注册的主体"],
+      pickB: ["面向德国市场的电商", "德国本地服务与商铺", "德国制造与出口企业官网", "德语内容与媒体站"],
+    },
+    en: {
+      title: ".ch vs .de: Swiss Quality or the German Heartland",
+      metaDescription:
+        ".ch is Switzerland's country domain with a \"Swiss made\" quality halo at about $12/yr flat, open to anyone; .de is the world's largest ccTLD at about $8/yr flat, the default for the German market. Compare market signals, pricing and eligibility, then hunt available names.",
+      verdict:
+        "Two high-trust ccTLDs of the German-speaking world, split by market radius and brand halo. Switzerland-focused → .ch: run by academic-network operator SWITCH with about 2.5 million registrations — remarkable penetration for a country of 9 million; Swiss consumers are strongly attuned to local signals, name.ch says \"a Swiss business\" at a glance, Swiss companies, banks and government institutions overwhelmingly live on .ch, and Google geo-associates .ch sites with Switzerland — a local-SEO boost across the German, French and Italian language markets. The global premium of \"Swiss made\" adds a quality halo: watchmaking, finance, pharma and premium ventures communicate origin better on .ch than on any generic suffix. Germany-focused → .de: run by DENIC with over 17 million registrations — the largest ccTLD on earth — German consumers type name.de by habit, with local trust far beyond any new gTLD and a free German-market SEO boost. Eligibility differs in a practical way: .ch is fully open — individuals and organizations from anywhere register directly with no local address, one of the lowest bars among European ccTLDs; .de requires a German Admin-C address (mainstream registrars proxy it) plus DENIC's DNS zone checks. Pricing is gentle and flat on both sides: .ch runs about $12/yr (≈¥85) with the same renewal; .de about $8/yr flat (≈¥58), a bargain among major ccTLDs — no teaser games either way. The test: users in Switzerland, or a finance/premium brand borrowing the Swiss quality halo → .ch; users in Germany → .de; brands serious about both DACH markets usually register one of each as local front doors — it's rarely either-or.",
+      pickA: ["Local Swiss businesses & services", "Finance, watchmaking & premium brands", "Switzerland-facing e-commerce", "Registrants wanting a low-bar signup with no local address"],
+      pickB: ["Germany-facing e-commerce", "Local German services & shops", "German manufacturers & exporters", "German-language content & media"],
+    },
+  },
+  "at-vs-de": {
+    slug: "at-vs-de",
+    a: "at",
+    b: "de",
+    zh: {
+      title: ".at 和 .de 怎么选：奥地利本地与德国腹地的德语区对比",
+      metaDescription: ".at 是奥地利国家域名、约 $14/年平续、任何人可注册，还能拼 meet.at 类短语域名；.de 是全球最大 ccTLD、约 $8/年平续，德国市场标配。对比两者的市场信号、价格与玩法，并用 AI 猎取可注册的名字。",
+      verdict:
+        "德语区一大一小两个 ccTLD，选择先看用户在维也纳还是柏林。做奥地利市场 → .at：nic.at 运营、注册量约 150 万，奥地利消费者对本土信号非常敏感，name.at 一眼讲清「奥地利的生意」，本土企业与政府机构的主站几乎都在 .at 上，Google 也会把 .at 站点与奥地利地区相关联；奥地利与德国、瑞士共享德语圈，.at 站点对整个 DACH 区域都有辐射。做德国市场 → .de：DENIC 运营、注册量超过 1,700 万，是全球最大的 ccTLD，德国消费者在地址栏习惯性输入 name.de，本地信任度远超一般新后缀，德语市场 SEO 有天然加成。.at 还有一层 .de 玩不出的花样：at 是英文介词，能拼出 meet.at、stay.at、look.at 这类动词短语域名（domain hack），创意品牌与活动页用起来自然又好记——这类用法不受地域信号限制。资格上 .at 完全开放：任何国家的个人与机构可直接注册、无需本地地址；.de 要求德国境内 Admin-C 地址（注册商可代理）。价格都温和平续：.at 注册约 $14/年（约 ¥100）、续费同价；.de 约 $8/年（约 ¥58）平续更便宜，两边都无引流钩子。判断标准：用户在奥地利 → .at；用户在德国 → .de；想要介词短语域名的创意项目 → .at 独有；同时做两个市场的德语区品牌通常各注册一个，本地门面分开讲。",
+      pickA: ["奥地利本地企业与服务", "动词短语域名（meet.at 等）", "面向 DACH 德语区的业务", "无本地地址、要低门槛注册的主体"],
+      pickB: ["面向德国市场的电商", "德国本地服务与商铺", "德国制造与出口企业官网", "预算敏感、要最低平续价的主体"],
+    },
+    en: {
+      title: ".at vs .de: Austria's Home Turf or the German Heartland",
+      metaDescription:
+        ".at is Austria's country domain at about $14/yr flat, open to anyone, with preposition hacks like meet.at; .de is the world's largest ccTLD at about $8/yr flat, the default for the German market. Compare market signals, pricing and naming tricks, then hunt available names.",
+      verdict:
+        "One large and one mid-sized ccTLD of the German-speaking world — start with whether your users are in Vienna or Berlin. Austria-focused → .at: run by nic.at with about 1.5 million registrations; Austrian consumers hold a strong local preference, name.at says \"an Austrian business\" at a glance, Austrian companies and government institutions overwhelmingly live on .at, and Google geo-associates .at sites with Austria — and since Austria shares the German-speaking world with Germany and Switzerland, .at sites radiate across the whole DACH region. Germany-focused → .de: run by DENIC with over 17 million registrations — the largest ccTLD on earth — German consumers type name.de by habit, with local trust far beyond any new gTLD and a free German-market SEO boost. .at also offers a trick .de can't match: \"at\" is an English preposition, enabling verb-phrase domain hacks like meet.at, stay.at and look.at — natural and memorable for creative brands and event pages, and immune to geographic signaling. On eligibility, .at is fully open — anyone registers directly with no local address; .de requires a German Admin-C address (registrar-proxied). Pricing is gentle and flat on both sides: .at runs about $14/yr (≈¥100) with the same renewal; .de about $8/yr flat (≈¥58) — cheaper — and neither plays teaser games. The test: users in Austria → .at; users in Germany → .de; creative projects wanting a preposition hack → only .at delivers; DACH brands serious about both markets usually register one of each and keep the local front doors separate.",
+      pickA: ["Local Austrian businesses & services", "Verb-phrase domain hacks (meet.at etc.)", "DACH German-speaking market ventures", "Registrants wanting a low-bar signup with no local address"],
+      pickB: ["Germany-facing e-commerce", "Local German services & shops", "German manufacturers & exporters", "Budget-minded registrants wanting the lowest flat renewal"],
+    },
+  },
+  "be-vs-nl": {
+    slug: "be-vs-nl",
+    a: "be",
+    b: "nl",
+    zh: {
+      title: ".be 和 .nl 怎么选：比利时与荷兰两大低地国家 ccTLD 的对比",
+      metaDescription: ".be 是比利时国家域名、注册约 $9、续费约 $10/年，还能拼 youtu.be 式短语域名；.nl 是全球第三大 ccTLD、荷兰渗透率极高、注册约 $9、续费约 $10/年。对比两者的市场信号、价格与玩法，并用 AI 猎取可注册的名字。",
+      verdict:
+        "低地国家相邻的两个高信任 ccTLD，价格几乎一样，选择看用户在布鲁塞尔还是阿姆斯特丹。做比利时市场 → .be：非营利注册局 DNS Belgium 运营、注册量约 170 万；比利时地处欧盟核心——布鲁塞尔是欧盟与北约总部所在地，本地消费者对本土信号敏感，name.be 一眼讲清「比利时的生意」，Google 也会把 .be 站点与比利时地区相关联，荷语/法语双语市场的本地 SEO 都有加成。做荷兰市场 → .nl：注册局 SIDN 运营、注册量超过 630 万——按人口比例是全球渗透率最高的 ccTLD 之一，绝对量全球第三；荷兰消费者本土偏好极强，name.nl 对本地电商、服务商几乎是标配，荷兰又是欧洲物流与贸易枢纽（鹿特丹港、史基浦机场），跨境电商拿 .nl 讲「以荷兰为基地的欧洲生意」也很自然。.be 还有一层广为人知的玩法：be 是英文动词，能拼出 will.be、just.be 这类短语域名——YouTube 的短链 youtu.be 就是最著名的例子，个人品牌与创意项目用起来出彩。价格两边几乎镜像：都是注册约 $9（约 ¥65）、续费约 $10/年（约 ¥72），小幅上浮无钩子。资格差异轻微：.be 完全开放、任何人可直接注册无需本地地址；.nl 任何人可注册但 SIDN 要求荷兰境内联系地址（主流注册商可代理）。判断标准：用户在比利时或围绕欧盟机构圈做业务 → .be；用户在荷兰或走欧洲物流枢纽路线 → .nl；想要动词短语域名的创意项目 → .be 独有；同时做两个市场的品牌通常各注册一个做本地门面。",
+      pickA: ["比利时本地企业与服务", "面向欧盟机构圈的业务", "动词短语域名（youtu.be 式）", "荷语/法语内容站"],
+      pickB: ["面向荷兰市场的电商", "荷兰本地服务与事务所", "欧洲物流与跨境贸易业务", "用英文词根命名的欧洲品牌"],
+    },
+    en: {
+      title: ".be vs .nl: Belgium or the Netherlands — Two Low Countries Compared",
+      metaDescription:
+        ".be is Belgium's country domain at about $9 to register and $10/yr to renew, with verb hacks like youtu.be; .nl is the world's third-largest ccTLD with top Dutch penetration at about $9 to register and $10/yr to renew. Compare market signals, pricing and naming tricks, then hunt available names.",
+      verdict:
+        "Two neighboring high-trust ccTLDs of the Low Countries with nearly identical pricing — the choice follows whether your users are in Brussels or Amsterdam. Belgium-focused → .be: run by non-profit registry DNS Belgium with about 1.7 million registrations; Belgium sits at the heart of the EU — Brussels hosts the EU institutions and NATO headquarters — local consumers are attuned to local signals, name.be says \"a Belgian business\" at a glance, and Google geo-associates .be sites with Belgium, a local-SEO boost across both the Dutch- and French-speaking markets. Netherlands-focused → .nl: run by registry SIDN with over 6.3 million registrations — per capita one of the most deeply penetrated ccTLDs on earth and third in absolute size; Dutch consumers hold a strong local preference, name.nl is near-mandatory for local e-commerce and services, and with the Netherlands as Europe's logistics and trade hub (Port of Rotterdam, Schiphol), cross-border commerce naturally uses .nl to say \"a European business based in the Netherlands\". .be also carries a famous trick: \"be\" is the English verb, enabling phrase hacks like will.be and just.be — YouTube's short link youtu.be is the most celebrated example — which shine for personal brands and creative projects. Pricing mirrors on both sides: about $9 to register (≈¥65) and $10/yr to renew (≈¥72), tiny step-ups with no traps. Eligibility differs only slightly: .be is fully open with no local address needed; .nl is open to anyone but SIDN requires a Dutch contact address (mainstream registrars proxy it). The test: users in Belgium, or business around the EU institutional circle → .be; users in the Netherlands, or a European-logistics-hub story → .nl; creative projects wanting a verb hack → only .be delivers; brands serious about both markets usually register one of each as local front doors.",
+      pickA: ["Local Belgian businesses & services", "Ventures around the EU institutional circle", "Verb domain hacks (youtu.be style)", "Dutch/French content sites"],
+      pickB: ["Netherlands-facing e-commerce", "Local Dutch services & firms", "European logistics & cross-border trade", "European brands naming with English roots"],
+    },
+  },
+  "se-vs-com": {
+    slug: "se-vs-com",
+    a: "se",
+    b: "com",
+    zh: {
+      title: ".se 和 .com 怎么选：瑞典本地信任与全球默认后缀的对比",
+      metaDescription: ".se 是瑞典国家域名、自带斯德哥尔摩创新圈联想，约 $15/年平续、任何人可注册；.com 是全球认知度最高的默认后缀、$10-12/年档。对比两者的信号半径、价格与库存，并用 AI 猎取可注册的名字。",
+      verdict:
+        "一个锚定瑞典与北欧，一个面向全球，分工在信号半径与库存。做瑞典市场 → .se：非营利机构瑞典互联网基金会（Internetstiftelsen）运营、注册量约 150 万，是全球最早部署 DNSSEC 的注册局之一；瑞典消费者对本土信号非常敏感，name.se 一眼讲清「瑞典的生意」，本土企业与政府机构的主站几乎都在 .se 上，Google 也会把 .se 站点与瑞典地区相关联；瑞典还是欧洲创新与设计重镇——Spotify、Klarna、IKEA 都发家于此，.se 对科技创业与北欧设计类品牌自带「斯德哥尔摩创新圈」联想。面向全球 → .com：认知度无可替代，用户在地址栏下意识补全的就是它，转售市场也最活跃，好的 .com 本身就是资产。库存是实际差异：.com 下常见英文单词与短组合几乎绝迹，捡漏靠造词；.se 库存充裕得多，瑞典语与英文词根命中率都高——瑞典人英语水平全球顶尖，英文词根在 .se 下完全无障碍。价格都温和：.se 注册约 $15/年（约 ¥110）、续费同价平续；.com 稳定在 $10-12/年档，两边都无引流钩子。资格上 .se 完全开放，任何国家的个人与机构可直接注册、无需本地地址。判断标准：用户在瑞典或北欧、或做北欧设计与科技品牌 → .se 的本地信任与库存更实用；面向全球市场、品牌要长期持有转售 → .com 仍是默认答案；瑞典起家、计划出海的品牌常见打法是 .se 做本地门面、同时把对应 .com 拿下防守。",
+      pickA: ["瑞典本地企业与服务", "北欧科技创业与 SaaS", "北欧设计与生活方式品牌", "心仪名字 .com 已被注册的项目"],
+      pickB: ["面向全球用户的产品", "品牌主站与长期资产", "电商与跨境业务", "希望转售流动性最好的持有者"],
+    },
+    en: {
+      title: ".se vs .com: Swedish Local Trust or the Global Default",
+      metaDescription:
+        ".se is Sweden's country domain with a Stockholm-innovation halo at about $15/yr flat, open to anyone; .com is the internet's default suffix at the $10-12/yr tier. Compare signal radius, pricing and inventory, then hunt available names.",
+      verdict:
+        "One anchors to Sweden and the Nordics, the other faces the world — the split is signal radius and inventory. Sweden-focused → .se: run by the non-profit Swedish Internet Foundation (Internetstiftelsen) with about 1.5 million registrations, one of the first registries in the world to deploy DNSSEC; Swedish consumers hold a strong local preference, name.se says \"a Swedish business\" at a glance, Swedish companies and government institutions overwhelmingly live on .se, and Google geo-associates .se sites with Sweden. Sweden is also Europe's innovation and design powerhouse — Spotify, Klarna and IKEA all started here — so .se carries a \"Stockholm innovation circle\" halo for tech startups and Nordic design brands. Global-facing → .com: recognition is irreplaceable — it's what users type by reflex — with by far the most liquid resale market, so a good .com is an asset in itself. Inventory is the practical gap: dictionary words and short combos are long gone on .com, where winning means coined names; .se inventory is far richer, and both Swedish and English roots hit well — Swedish English proficiency is among the world's best, so English roots work perfectly. Pricing is gentle on both sides: .se runs about $15/yr flat (≈¥110); .com sits steadily in the $10-12/yr tier — no teaser games either way. On eligibility, .se is fully open: anyone registers directly with no local address. The test: users in Sweden or the Nordics, or a Nordic design/tech brand → .se's local trust and inventory are more practical; a global audience and a long-term resale asset → .com remains the default answer; Swedish-born brands planning to go global commonly run .se as the local front door while grabbing the matching .com defensively.",
+      pickA: ["Local Swedish businesses & services", "Nordic tech startups & SaaS", "Nordic design & lifestyle brands", "Projects whose first-choice name is taken on .com"],
+      pickB: ["Global-facing products", "Primary brand sites & long-term assets", "E-commerce & cross-border business", "Holders wanting the best resale liquidity"],
+    },
+  },
+  "pl-vs-eu": {
+    slug: "pl-vs-eu",
+    a: "pl",
+    b: "eu",
+    zh: {
+      title: ".pl 和 .eu 怎么选：波兰单一市场与泛欧覆盖的对比",
+      metaDescription: ".pl 是中东欧最大 ccTLD、任何人可注册，首年约 $6 但续费约 $25/年；.eu 是欧盟官方域名、覆盖全欧但需欧盟/EEA 资格，注册约 $8、续费约 $10/年。对比两者的信号半径、资格与续费，并用 AI 猎取可注册的名字。",
+      verdict:
+        "分工在信号半径：一个锚定波兰，一个圈定整个欧盟。.pl 赢在本地浓度与零门槛——国家研究院 NASK 运营、注册量约 250 万，是中东欧最大的 ccTLD；波兰是欧盟人口第五大国、中东欧最大经济体，电商增速常年领跑欧洲，name.pl 对波兰消费者一眼讲清「波兰的生意」，电商巨头 Allegro 与政府机构的主站都在 .pl 上，Google 也会把 .pl 站点与波兰地区相关联；资格完全开放，任何国家的个人与机构可直接注册、无需本地地址或代理。.eu 赢在覆盖半径——想覆盖整个欧洲市场而不绑定单一国家的业务（泛欧电商、SaaS 的欧洲站、跨境物流）用 name.eu 一眼讲清「我们服务全欧洲」；比利时注册局 EURid 运营、注册量约 370 万，欧盟机构自己也用它（europa.eu），且 .eu 站点默认受 GDPR 约束，对欧洲用户是一层信任背书；但资格是硬性的：须为欧盟/EEA 居民、公民或注册机构，非欧盟主体需欧盟实体或本地代理。价格结构是反差点：.pl 首年常见促销约 $6（约 ¥45）但续费约 $25/年（约 ¥180），预算要按续费价算、别被首年低价钩住；.eu 注册约 $8（约 ¥58）、续费约 $10/年（约 ¥72），小幅上浮无钩子，长期持有比 .pl 便宜一半以上。判断标准：用户以波兰为主 → .pl 的本地信任与零门槛更实用；业务真正横跨欧盟多国、且有欧盟资格 → .eu 的泛欧信号才用得上；只做波兰却挂 .eu，信任度反而不如 .pl。",
+      pickA: ["波兰本地企业与服务", "面向波兰的跨境电商", "中东欧软件与 IT 服务", "无欧盟实体的海外注册人"],
+      pickB: ["泛欧电商与多国经营", "SaaS 产品的欧洲站", "欧盟合规与跨境服务", "在意长期续费成本的持有者"],
+    },
+    en: {
+      title: ".pl vs .eu: Poland's Home Market or Pan-European Coverage",
+      metaDescription:
+        ".pl is Central Europe's largest ccTLD, open to anyone, at about $6 in year one but ~$25/yr renewal; .eu is the EU's official domain covering all of Europe but requiring EU/EEA eligibility, at about $8 to register and $10/yr to renew. Compare signal radius, eligibility and renewals, then hunt available names.",
+      verdict:
+        "The split is signal radius: one anchors to Poland, the other circles the whole European Union. .pl wins on local density and a zero bar — run by national research institute NASK with about 2.5 million registrations, the largest ccTLD in Central and Eastern Europe; Poland is the EU's fifth most populous country and the CEE region's biggest economy with e-commerce growth consistently leading Europe, name.pl says \"a Polish business\" at a glance, e-commerce giant Allegro and government institutions live on .pl, and Google geo-associates .pl sites with Poland; eligibility is fully open — anyone registers directly with no local address or proxy. .eu wins on radius — businesses covering the whole European market without binding to one country (pan-European e-commerce, a SaaS product's European presence, cross-border logistics) say \"we serve all of Europe\" in one glance with name.eu; run by Belgium-based EURid with about 3.7 million registrations, used by the EU institutions themselves (europa.eu), and presumed bound by GDPR — a trust layer for European users; but eligibility is strict: EU/EEA residents, citizens or registered organizations only, with non-EU entities needing an EU establishment or local proxy. Pricing structures contrast sharply: .pl runs about $6 in year one (≈¥45) but about $25/yr to renew (≈¥180) — budget on the renewal price and don't get hooked by the teaser; .eu runs about $8 to register (≈¥58) and $10/yr to renew (≈¥72), a tiny step-up with no traps — less than half .pl's long-term cost. The test: users mainly in Poland → .pl's local trust and zero bar are more practical; genuinely multi-country EU operations with EU eligibility → that's where .eu's pan-European signal earns its keep; a Poland-only business on .eu actually reads weaker than .pl.",
+      pickA: ["Local Polish businesses & services", "Poland-facing cross-border e-commerce", "CEE software & IT services", "Overseas registrants without an EU entity"],
+      pickB: ["Pan-European e-commerce & multi-country operations", "A SaaS product's European presence", "EU compliance & cross-border services", "Holders minding long-term renewal costs"],
+    },
+  },
+  "tw-vs-hk": {
+    slug: "tw-vs-hk",
+    a: "tw",
+    b: "hk",
+    zh: {
+      title: ".tw 和 .hk 怎么选：台湾与香港两大繁中商圈的对比",
+      metaDescription: ".tw 是台湾地区域名、自带「台湾制造」科技联想，约 $28/年平续、任何人可注册；.hk 是香港地区域名、约 $25/年平续、零门槛注册，面向大湾区与国际商圈。对比两者的信号半径、价格与联想，并用 AI 猎取可注册的名字。",
+      verdict:
+        "繁体中文互联网的两大地区域名，价格与门槛几乎对等，分工在辐射方向与行业联想。做台湾市场 → .tw：财团法人台湾网路资讯中心（TWNIC）管理；台湾是全球半导体与电子制造重镇，也是繁中互联网核心市场之一，name.tw 一眼讲清「台湾的生意」，本土企业与机构的主站大多在 .tw（或更严格的 .com.tw）上，Google 也会把 .tw 站点与台湾地区相关联，繁中市场 SEO 有天然加成；台湾的科技制造声誉还让 .tw 对硬件、电子与半导体供应链业务带上「台湾制造」联想。做香港与大湾区 → .hk：香港互联网注册管理有限公司（HKIRC）运营；香港是亚洲金融与贸易枢纽，面向大湾区与东南亚的贸易公司、金融服务用 name.hk 讲「以香港为基地的国际生意」，在两岸三地与亚太商圈自带国际化与合规联想。资格两边都开放：顶级 .tw 与 .hk 都无资格限制、任何地区的个人与机构可直接注册（更严格的 .com.tw 需台湾登记企业、.com.hk 需香港注册企业，门槛与信任度各高一档）。价格接近：.tw 注册约 $28/年（约 ¥200）平续；.hk 约 $25/年（约 ¥180）平续，都无引流钩子，价格门槛过滤投机、库存干净。判断标准：用户在台湾、或做硬件与半导体供应链生意 → .tw 的本地信任与制造联想更对口；业务辐射大湾区、两岸三地或以香港为国际枢纽 → .hk 的金融贸易联想更浓；同时深耕两个繁中商圈的品牌通常各注册一个做本地门面。",
+      pickA: ["台湾本地企业与服务", "硬件、电子与半导体供应链", "面向台湾的电商与品牌", "繁体中文内容与媒体站"],
+      pickB: ["香港本地企业与服务", "大湾区与跨境贸易业务", "金融服务与国际业务", "面向两岸三地的品牌"],
+    },
+    en: {
+      title: ".tw vs .hk: Taiwan or Hong Kong — Two Traditional Chinese Markets Compared",
+      metaDescription:
+        ".tw is Taiwan's regional domain with a \"made in Taiwan\" tech halo at about $28/yr flat, open to anyone; .hk is Hong Kong's regional domain at about $25/yr flat with zero-bar registration, radiating across the Greater Bay Area and international circles. Compare signal radius, pricing and connotations, then hunt available names.",
+      verdict:
+        "Two regional domains of the Traditional Chinese internet with nearly matched pricing and bars — the split is radiation direction and industry halo. Taiwan-focused → .tw: managed by the Taiwan Network Information Center (TWNIC); Taiwan is the world's semiconductor and electronics manufacturing powerhouse and a core market of the Traditional Chinese internet, name.tw says \"a Taiwanese business\" at a glance, Taiwanese companies and institutions overwhelmingly live on .tw (or the stricter .com.tw), and Google geo-associates .tw sites with Taiwan — a natural boost for Traditional Chinese SEO; Taiwan's tech manufacturing reputation adds a \"made in Taiwan\" halo for hardware, electronics and supply-chain ventures. Hong Kong and GBA-focused → .hk: run by the Hong Kong Internet Registration Corporation (HKIRC); Hong Kong is Asia's financial and trading hub, and trading companies and financial services targeting the Greater Bay Area and Southeast Asia use name.hk to say \"an international business based in Hong Kong\" — a suffix carrying international and compliance connotations across Chinese-speaking and Asia-Pacific circles. Both sides are open: top-level .tw and .hk impose no eligibility restrictions — individuals and organizations from anywhere register directly (the stricter .com.tw requires a Taiwan company and .com.hk a Hong Kong company, each a higher bar with higher trust). Pricing is close: .tw runs about $28/yr flat (≈¥200); .hk about $25/yr flat (≈¥180) — no teaser games, and the price bars filter speculation to keep inventory clean. The test: users in Taiwan, or a hardware/semiconductor supply-chain business → .tw's local trust and manufacturing halo fit better; business radiating across the Greater Bay Area and Chinese-speaking markets with Hong Kong as the international hub → .hk's finance and trade connotations run denser; brands serious about both Traditional Chinese markets usually register one of each as local front doors.",
+      pickA: ["Local Taiwanese businesses & services", "Hardware, electronics & semiconductor supply chain", "Taiwan-facing e-commerce & brands", "Traditional Chinese content & media"],
+      pickB: ["Local Hong Kong businesses & services", "Greater Bay Area & cross-border trade", "Financial services & international business", "Brands targeting Chinese-speaking markets"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

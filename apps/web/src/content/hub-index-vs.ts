@@ -406,4 +406,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "nl-vs-de", a: "nl", b: "de", title: { zh: ".nl 和 .de 怎么选：荷兰枢纽与德国腹地两大 ccTLD 的对比", en: ".nl vs .de: The Dutch Hub or the German Heartland" } },
   { slug: "kr-vs-jp", a: "kr", b: "jp", title: { zh: ".kr 和 .jp 怎么选：韩国与日本两大东亚市场的对比", en: ".kr vs .jp: Korea or Japan — Two East Asian Markets Compared" } },
   { slug: "hk-vs-sg", a: "hk", b: "sg", title: { zh: ".hk 和 .sg 怎么选：香港与新加坡两大亚洲枢纽的对比", en: ".hk vs .sg: Hong Kong or Singapore — Two Asian Hubs Compared" } },
+  { slug: "ch-vs-de", a: "ch", b: "de", title: { zh: ".ch 和 .de 怎么选：瑞士品质与德国腹地两大德语区 ccTLD 的对比", en: ".ch vs .de: Swiss Quality or the German Heartland" } },
+  { slug: "at-vs-de", a: "at", b: "de", title: { zh: ".at 和 .de 怎么选：奥地利本地与德国腹地的德语区对比", en: ".at vs .de: Austria's Home Turf or the German Heartland" } },
+  { slug: "be-vs-nl", a: "be", b: "nl", title: { zh: ".be 和 .nl 怎么选：比利时与荷兰两大低地国家 ccTLD 的对比", en: ".be vs .nl: Belgium or the Netherlands — Two Low Countries Compared" } },
+  { slug: "se-vs-com", a: "se", b: "com", title: { zh: ".se 和 .com 怎么选：瑞典本地信任与全球默认后缀的对比", en: ".se vs .com: Swedish Local Trust or the Global Default" } },
+  { slug: "pl-vs-eu", a: "pl", b: "eu", title: { zh: ".pl 和 .eu 怎么选：波兰单一市场与泛欧覆盖的对比", en: ".pl vs .eu: Poland's Home Market or Pan-European Coverage" } },
+  { slug: "tw-vs-hk", a: "tw", b: "hk", title: { zh: ".tw 和 .hk 怎么选：台湾与香港两大繁中商圈的对比", en: ".tw vs .hk: Taiwan or Hong Kong — Two Traditional Chinese Markets Compared" } },
 ];
