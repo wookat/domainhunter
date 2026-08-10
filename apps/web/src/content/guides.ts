@@ -19220,6 +19220,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  wrestling: {
+    slug: "wrestling",
+    keywords: ["摔跤馆", "摔跤培训", "自由式摔跤", "wrestling club", "wrestling academy"],
+    tlds: [
+      { tld: "club", zh: "俱乐部属性直给，青训与业余会员制摔跤馆的默认归类", en: "The club identity stated outright — the default filing for youth and amateur wrestling rooms" },
+      { tld: "academy", zh: "体系化青训的身份声明，家长看到就知道有教练梯队与升学出路", en: "Declares a structured pathway — parents read coaching tiers and scholarship routes at once" },
+      { tld: "fit", zh: "面向成人体能与格斗基础课时归类清晰，跨客群不用改名", en: "Files adult conditioning and grappling-basics classes cleanly — crossover crowds without a rebrand" },
+    ],
+    zh: {
+      label: "摔跤馆",
+      title: "摔跤馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "摔跤馆与摔跤培训命名指南：贴身缠斗意象、垫上纪律叙事等思路，Wasatch Wrestling/内蒙古搏克传统等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "摔跤是最古老的运动之一，名字要先解决一个认知问题：把「体育摔跤」和综艺娱乐摔角区分开。真正的摔跤馆卖的是垫上纪律——每天上千次的抱腿、翻滚、压制，名字最好带这股「贴地硬磨」的劲。美国高校摔跤生态发达，Wasatch、Cobra Kai 类俱乐部名多走「地名+图腾」或「狠词+club」路线，因为摔跤招生高度依赖学区与升学叙事，名字里的本地感就是获客半径；国内摔跤馆常借中国跤与蒙古搏克的传统立信任，「跤」字与草原意象是天然的差异化词根。隐藏考点是客群双轨：青训摔跤班的名字要让家长读出「吃苦、纪律、升学加分」，成人格斗基础班的名字要让白领觉得「练摔跤很酷不土」。先定主客群，再决定名字是穿摔跤服还是穿训练背心。",
+      namingIdeas: [
+        "缠斗意象直给：跤、缠、擒、pin、takedown——摔跤最有辨识度的技术词根，圈内人一眼认出门派",
+        "垫上纪律叙事：磨、砺、grind 类字眼——摔跤的核心卖点是「最能吃苦的运动」，名字带血汗感家长反而买单",
+        "地名+图腾路线：本地地名配狼、熊、鹰等力量图腾——摔跤招生半径小，名字里的本地感就是信任状",
+        "传统跤文化借力：中国跤、搏克、角抵类传统词根——差异化叙事自带文化厚度，适合走民族摔跤路线的馆",
+        "升学叙事暗示：champ、varsity、青训类字眼——摔跤在体育单招与特长生通道里有位置，名字暗示出路家长更愿意报",
+      ],
+      cases: [
+        { name: "Wasatch Wrestling Club", takeaway: "犹他州瓦萨奇山脉入名：地名即招生半径的信任状——美国青训摔跤俱乐部「本地山名+club」的教科书打法" },
+        { name: "Askren Wrestling Academy", takeaway: "世界冠军 Ben Askren 用姓氏立馆：冠军 IP 即信任状——摔跤圈师承叙事的标准操作" },
+        { name: "北京什刹海体校摔跤队", takeaway: "体校体系用地名+机构立信任：什刹海三个字在格斗圈就是「出冠军的地方」——机构信用背书的命名路线" },
+        { name: "Beat the Streets", takeaway: "纽约公益摔跤项目把使命写进名字：用摔跤打败街头——使命命名让项目自带传播与募资叙事" },
+      ],
+      pitfalls: [
+        "与娱乐摔角混淆：名字里的 wrestling 若配上夸张狠词，容易被误读为表演摔角——垫上运动的严肃感要立住",
+        "狠过头吓走家长：摔跤已自带受伤担忧，名字再血腥会把青训主力客群挡在门外",
+        "只借冠军大词没有师承支撑：家长会问教练是谁、出过什么成绩——名字开的支票馆里要兑现",
+        "只查中文没查拼音与英文域名：摔跤馆办赛与交流要官网，拼音域名被占会让品牌传播一步慢步步慢",
+      ],
+    },
+    en: {
+      label: "Wrestling clubs",
+      title: "How to Name a Wrestling Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Wrestling club and academy naming guide: mat-grind registers, hometown-totem naming, breakdowns of Wasatch/Askren/Beat the Streets, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Wrestling is one of the oldest sports on earth, and its naming problem is one of the newest: the name must instantly separate the mat sport from scripted entertainment wrestling. A real wrestling room sells discipline — a thousand shots, sprawls and pins a day — and the best names carry that low-to-the-ground grind. The American club scene shows the dominant pattern: Wasatch Wrestling Club stakes a mountain range because youth wrestling recruits inside a school-district radius, and the hometown in the name is the trust signal; Askren Wrestling Academy shows the champion-surname route where the founder's record is the résumé; Beat the Streets proves mission naming can carry a nonprofit's entire fundraising story. The hidden exam is the twin audience: a youth programme's name must read as discipline, toughness and a scholarship pathway to parents, while an adults' grappling-basics class needs a name a desk worker finds cool rather than crude. Decide the primary audience first, then decide whether the name wears a singlet or a training tee.",
+      namingIdeas: [
+        "Grappling imagery stated plainly: pin, takedown, sprawl, scramble — the sport's technical roots that insiders recognise on sight",
+        "The mat-grind register: grind, forge, iron — wrestling's core sell is being the hardest sport in school, and a name sweating that promise wins the parent",
+        "Hometown plus totem: local place-names with wolves, bears and eagles — youth wrestling recruits locally, and geography in the name is the credential",
+        "Folk-wrestling heritage: bökh, shuai jiao and other traditional roots — cultural depth as differentiation for clubs drawing on national styles",
+        "The pathway hint: champ, varsity, elite — wrestling feeds scholarships and recruiting pipelines, and a name hinting at the route closes the enrolment",
+      ],
+      cases: [
+        { name: "Wasatch Wrestling Club", takeaway: "A Utah mountain range staked in the name: geography as the recruiting-radius credential — the hometown-plus-club textbook of American youth wrestling" },
+        { name: "Askren Wrestling Academy", takeaway: "A world champion staking his surname: the founder's record as the résumé — the mentorship trust play of the wrestling world" },
+        { name: "Beat the Streets", takeaway: "A New York nonprofit writing its mission into the name: wrestling versus the street — mission naming that carries the fundraising story by itself" },
+        { name: "Cliff Keen", takeaway: "The gear brand built on a coaching legend's name: five decades of headgear proof that in wrestling, a surname is the strongest trademark" },
+      ],
+      pitfalls: [
+        "Blurring into sports entertainment: pair wrestling with cartoonish menace and readers assume scripted shows — the mat sport's seriousness must land first",
+        "Overdosing on menace: the sport already carries injury worry — a name too bloody scares off the parents who fill the youth roster",
+        "Borrowing champion words without a record: parents will ask who coaches and who placed — the name's promise needs a résumé behind it",
+        "Skipping the .com and social handle check: duals and tournaments live on shared brackets and clips — a name that can't be tagged can't travel",
+      ],
+    },
+  },
+  muaythai: {
+    slug: "muaythai",
+    keywords: ["泰拳馆", "泰拳培训", "muay thai", "muay thai gym", "kickboxing"],
+    tlds: [
+      { tld: "fit", zh: "泰拳减脂与体能课是主要现金流，归类到健身赛道零违和", en: "Fat-burn and conditioning classes pay the bills — filing under fitness fits perfectly" },
+      { tld: "club", zh: "会员制拳馆的默认归类，社群感与训练氛围直给", en: "The default for membership gyms — community and camp atmosphere stated outright" },
+      { tld: "pro", zh: "职业队与教练工作室的专业感声明，走竞技路线时立得住", en: "The professional register for fight teams and coach studios on the competitive route" },
+    ],
+    zh: {
+      label: "泰拳馆",
+      title: "泰拳馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "泰拳馆与泰拳培训命名指南：八肢艺术意象、拳营文化叙事等思路，Tiger Muay Thai/Fairtex 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "泰拳的名字要在「狠」与「美」之间走钢丝：它是「八肢的艺术」，既有肘膝的杀伤力，又有拜师舞的仪式感。看行业样本：普吉岛的 Tiger Muay Thai 用一只虎把力量图腾与度假训练营文化一次说清，成为全球泰拳游学的代名词；Fairtex 从拳营做到装备帝国，证明泰拳品牌名走「短音节+硬辅音」路线最有国际传播力；曼谷传奇拳场 Lumpinee（伦批尼）则说明场馆名可以直接成为段位认证——「打过伦批尼」就是简历。国内泰拳馆的主要现金流其实是白领减脂课与女子防身课，名字太血腥会把主力客群吓走，「泰」字配力量或仪式意象是稳妥的平衡。隐藏考点是文化尊重：泰拳自带泰国文化版权，名字借泰语词根（如 Yodha、Sitsongpeenong 式师承命名）要懂其含义，用错圈内人一眼看穿。",
+      namingIdeas: [
+        "八肢意象直给：肘、膝、八、eight limbs——泰拳区别于拳击与踢拳的技术身份，圈内人秒懂",
+        "力量图腾路线：虎、象、蟒等东南亚图腾——Tiger Muay Thai 验证过的国际化打法，图腾自带视觉锤",
+        "拳营文化叙事：camp、营、gym 配师承姓氏——泰拳的传统是「拳手属于拳营」，师承命名在圈内就是信任状",
+        "泰语词根借力：Sit-（师承前缀）、Yod-（顶尖）类泰语词根——用对了自带正宗感，用错了露怯，借之前先考证",
+        "减脂客群平衡：燃、汗、fit 类字眼配泰拳词根——白领减脂课是现金流主力，名字要让小白敢进门",
+      ],
+      cases: [
+        { name: "Tiger Muay Thai", takeaway: "一只虎说清力量图腾与训练营文化：普吉岛度假训练营模式的全球代名词——图腾+品类的国际化教科书" },
+        { name: "Fairtex", takeaway: "两音节硬辅音从拳营做到装备帝国：短、硬、好念是泰拳品牌国际传播的最优解——名字即出口力" },
+        { name: "Lumpinee", takeaway: "曼谷传奇拳场名即段位认证：「打过伦批尼」就是拳手简历——场馆名做成行业标准的极致案例" },
+        { name: "Evolve MMA", takeaway: "新加坡馆用「进化」避开血腥感：把格斗训练说成自我升级——高端综合格斗馆吸引白领客群的命名转译" },
+      ],
+      pitfalls: [
+        "血腥狠词堆砌：主力现金流是减脂与防身课，名字太杀会把白领与女性客群挡在门外",
+        "泰语词根乱用：Sit- 前缀有师承含义，不懂乱借会被圈内人看穿露怯——借词先考证",
+        "与踢拳搏击混为一谈：泰拳的肘膝与文化仪式是差异化本体，名字含糊会失去正宗感溢价",
+        "只查中文没查英文域名与社交账号：泰拳游学与赛事传播高度国际化，英文名与域名是标配",
+      ],
+    },
+    en: {
+      label: "Muay Thai gyms",
+      title: "How to Name a Muay Thai Gym: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Muay Thai gym naming guide: art-of-eight-limbs imagery, fight-camp lineage naming, breakdowns of Tiger Muay Thai/Fairtex/Lumpinee, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A Muay Thai gym's name walks a tightrope between ferocity and grace: this is the art of eight limbs, carrying both the elbow's cut and the wai kru's ritual bow. The benchmarks show the range: Tiger Muay Thai stakes one animal and becomes the global shorthand for the Phuket training-camp holiday; Fairtex rides two hard syllables from a Bangkok camp to an equipment empire, proving short-and-punchy is the export register of Muay Thai branding; Lumpinee shows a venue name can become a ranking system in itself — \"fought at Lumpinee\" is a fighter's résumé. The commercial reality most gyms face is that fat-burn classes and women's self-defence pay the rent, so a name dripping with menace scares off the very crowd that fills the timetable. The hidden exam is cultural respect: Thai roots like the Sit- lineage prefix carry real meaning, and borrowing them wrong is instantly visible to insiders. Decide whether the name bows to the camp tradition or opens the door to the office crowd — the best ones do both.",
+      namingIdeas: [
+        "Eight-limbs imagery stated plainly: elbow, knee, eight — the technical identity that separates Muay Thai from boxing and kickboxing at a glance",
+        "The power totem: tiger, elephant, python and other Southeast Asian animals — the Tiger Muay Thai playbook where the totem is the visual hammer",
+        "Fight-camp lineage: camp and gym paired with a teacher's name — in the Thai tradition a fighter belongs to a camp, and lineage naming is the insider credential",
+        "Thai-root borrowing done right: Sit- (lineage), Yod- (top-level) — authentic when used correctly, embarrassing when not; research before you borrow",
+        "The fitness-crowd balance: burn, sweat, fit paired with Muay Thai roots — beginners' classes pay the bills, and the name must let a first-timer walk in",
+      ],
+      cases: [
+        { name: "Tiger Muay Thai", takeaway: "One tiger stating totem and camp culture at once: the global shorthand for the Phuket training holiday — the totem-plus-category export textbook" },
+        { name: "Fairtex", takeaway: "Two hard syllables from Bangkok camp to equipment empire: short, hard, sayable — the export register of Muay Thai branding proven over five decades" },
+        { name: "Lumpinee", takeaway: "The legendary stadium whose name became a ranking: \"fought at Lumpinee\" as a fighter's résumé — a venue name turned industry standard" },
+        { name: "Evolve MMA", takeaway: "Singapore's flagship trading menace for self-improvement: combat training reframed as personal evolution — the white-collar translation of fight-gym naming" },
+      ],
+      pitfalls: [
+        "Overdosing on menace: fat-burn and self-defence classes fill the timetable — a name too bloody turns away the crowd that pays",
+        "Misusing Thai roots: the Sit- prefix implies lineage, and insiders spot a fake at first glance — verify meaning before borrowing",
+        "Blurring into kickboxing: the elbows, knees and ritual are the differentiation itself — a vague name forfeits the authenticity premium",
+        "Skipping the English name and handle check: Muay Thai tourism and fight promotion are global by default — an untaggable name can't travel",
+      ],
+    },
+  },
+  handball: {
+    slug: "handball",
+    keywords: ["手球俱乐部", "手球培训", "手球队", "handball club", "team handball"],
+    tlds: [
+      { tld: "club", zh: "俱乐部属性直给，欧洲手球生态的默认归类方式", en: "The club identity stated outright — the default filing of the European handball world" },
+      { tld: "team", zh: "手球是极致的团队运动，队伍感一秒立住", en: "Handball is the ultimate team sport — the squad identity lands in a second" },
+      { tld: "academy", zh: "青训体系的身份声明，走校园与梯队路线时家长秒懂", en: "Declares the youth pathway — parents read school programmes and feeder squads at once" },
+    ],
+    zh: {
+      label: "手球俱乐部",
+      title: "手球俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "手球俱乐部与手球培训命名指南：快攻意象、城市队徽叙事等思路，THW Kiel/Barça Handbol 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "手球在欧洲是坐满万人场馆的主流运动，在国内是正在破圈的校园新贵，名字要按市场成熟度选打法。欧洲手球俱乐部的命名传统极其稳定：城市名+缩写（THW Kiel、SG Flensburg-Handewitt），因为俱乐部就是城市荣誉的载体，名字里的地名是几十年球迷忠诚的锚点；巴萨、巴黎圣日耳曼的手球队则直接挂母品牌（Barça Handbol），借足球豪门的品牌势能。国内手球以校园与青训俱乐部为主，命名要解决的是「这是什么运动」的科普成本——「手球」二字最好直接入名，再配速度与团队意象。手球的运动气质是「快攻+跳射+七米球」，名字带冲刺感与腾空感最对味。隐藏考点是与「墙手球」（美式 handball）区分：出海或做英文名时，team handball 与 wall handball 是两种运动，名字与文案要让搜索引擎分得清。",
+      namingIdeas: [
+        "城市+缩写传统：地名配 HC/HB 类缩写——欧洲手球命名的正统语法，本地荣誉感就是球迷忠诚的锚点",
+        "快攻意象直给：快、闪、疾、fast break——手球是转换速度最快的团队球类，名字带冲刺感最对味",
+        "腾空跳射叙事：跃、飞、jump 类字眼——跳射是手球最具视觉标识的动作，名字借它自带画面",
+        "团队图腾路线：狼群、雄鹰类集体图腾——手球没有孤胆英雄，图腾要选群居动物才贴气质",
+        "校园科普命名：手球二字直接入名配活力词——国内市场认知度低，名字先把运动说清再谈个性",
+      ],
+      cases: [
+        { name: "THW Kiel", takeaway: "基尔城名+百年缩写：德甲手球霸主证明地名就是忠诚锚点——欧洲俱乐部命名正统的活标本" },
+        { name: "Barça Handbol", takeaway: "足球豪门直接挂母品牌：借势命名让手球队免费继承全球品牌资产——多项目俱乐部的标准打法" },
+        { name: "SG Flensburg-Handewitt", takeaway: "两个小镇合并入名：SG（体育共同体）前缀说清社区联合体身份——手球扎根社区的命名传统" },
+        { name: "Veszprém HC", takeaway: "匈牙利小城靠手球队名扬欧洲：城市与俱乐部互相成就——小城市大俱乐部的命名信任状" },
+      ],
+      pitfalls: [
+        "与美式墙手球混淆：英文 handball 有歧义，出海文案要用 team handball 锚定运动类别",
+        "借个人英雄叙事：手球是七人快攻的集体运动，孤胆狠词与运动气质不符",
+        "国内市场跳过科普：认知度还在爬坡，名字里没有「手球」二字会平白增加获客解释成本",
+        "只查中文没查英文域名：手球生态的赛事与交流以欧洲为中心，英文名与域名是接轨标配",
+      ],
+    },
+    en: {
+      label: "Handball clubs",
+      title: "How to Name a Handball Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Handball club naming guide: fast-break imagery, city-crest tradition, breakdowns of THW Kiel/Barça Handbol/Veszprém, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Handball fills ten-thousand-seat arenas in Europe and is a rising school sport elsewhere, and the name should match the market's maturity. The European tradition is remarkably stable: city plus abbreviation — THW Kiel, SG Flensburg-Handewitt — because the club is the vessel of civic pride, and the place-name anchors decades of fan loyalty; Barça Handbol shows the other establishment route, the multi-sport giant lending its football brand to the handball floor. In newer markets the name must first pay the education cost of \"what sport is this\": putting handball itself in the name, paired with speed and squad imagery, saves every enrolment conversation. The sport's temperament is the fast break, the jump shot and the seven-metre throw — names carrying sprint and flight suit it best. The hidden exam is disambiguation: in English, team handball and wall handball are different sports, and the name plus copy must sort them for the search engine before a visitor ever lands.",
+      namingIdeas: [
+        "City plus abbreviation: place-names with HC/HB — the orthodox grammar of European handball where civic pride anchors loyalty",
+        "Fast-break imagery stated plainly: break, flash, sprint — handball is the fastest-transition team sport, and the name should run",
+        "The jump-shot register: leap, fly, air — the sport's signature airborne strike gives the name its picture for free",
+        "The pack totem: wolves, eagles and other social animals — handball has no lone hero, so the totem must hunt in groups",
+        "The education-market register: handball itself in the name plus an energy word — in emerging markets, say the sport first and the personality second",
+      ],
+      cases: [
+        { name: "THW Kiel", takeaway: "A city and a century-old abbreviation: the Bundesliga dynasty proving the place-name is the loyalty anchor — the living textbook of European club naming" },
+        { name: "Barça Handbol", takeaway: "The football giant lending its crest to the court: piggyback naming that inherits global brand equity for free — the multi-sport standard play" },
+        { name: "SG Flensburg-Handewitt", takeaway: "Two small towns merged into one crest: the SG prefix declaring a sporting community — handball's community-roots tradition in a name" },
+        { name: "Veszprém HC", takeaway: "A small Hungarian city made famous by its handball club: town and team raising each other — the small-city, big-club credential" },
+      ],
+      pitfalls: [
+        "Ignoring the wall-handball collision: handball is ambiguous in English — anchor team handball in the copy or lose the search battle",
+        "Borrowing lone-hero menace: this is a seven-player fast-break sport — solitary-predator naming fights the sport's own temperament",
+        "Skipping the sport's name in emerging markets: awareness is still climbing — a name without handball in it pays an explanation tax on every lead",
+        "Skipping the English domain check: the sport's centre of gravity is European — an international-ready name and domain are the price of entry",
+      ],
+    },
+  },
+  curling: {
+    slug: "curling",
+    keywords: ["冰壶俱乐部", "冰壶培训", "冰壶体验", "curling club", "curling rink"],
+    tlds: [
+      { tld: "club", zh: "冰壶百年会员制传统的默认归类，社交属性直给", en: "The default of curling's century-old membership tradition — the social identity stated outright" },
+      { tld: "fun", zh: "面向企业团建与新手体验局时，把「好玩不冷」先说出口", en: "For corporate socials and first-timer sessions — says \"fun, not freezing\" up front" },
+      { tld: "team", zh: "四人一队的运动本体，走联赛与队伍路线时归类清晰", en: "A four-player team sport at heart — clean filing for league and squad routes" },
+    ],
+    zh: {
+      label: "冰壶俱乐部",
+      title: "冰壶俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "冰壶俱乐部与冰壶体验馆命名指南：冰面礼仪叙事、石壶意象等思路，苏格兰百年俱乐部与团建体验馆案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "冰壶的名字要接住它独一无二的气质组合：冰上国际象棋的智力感、扫冰呐喊的烟火气、以及「以礼开局以酒收场」的百年社交传统。发源地苏格兰与大本营加拿大的俱乐部命名极其古典：地名+Curling Club 是四百年不变的语法，Royal Caledonian Curling Club 这样的名字本身就是行业史；而冬奥会后的新兴市场里，冰壶馆的现金流主力是企业团建与新手体验局，名字要先把「不用会滑冰、好玩不冷」说出口，「壶」字配趣味词是国内市场的科普快捷键。冰壶自带一组好用的意象——石壶、冰道、扫刷、大本营（house）——都是别的运动借不走的专属词根。隐藏考点是气质分寸：太严肃会吓走团建客群，太搞笑又接不住俱乐部会员制的百年体面，好名字要让西装和卫衣都穿得进来。",
+      namingIdeas: [
+        "石壶意象直给：壶、石、stone、rock——冰壶最具辨识度的器物词根，名字自带画面与手感",
+        "冰道术语借力：house（大本营）、sweep、draw 类专业词——圈内人秒懂，还能顺手完成术语科普",
+        "百年社交叙事：club、会、社类字眼配地名——冰壶的会员制传统本身就是信任状，古典语法立体面",
+        "团建体验路线：乐、趣、fun 类字眼配壶字——新手体验是现金流主力，名字先说「好玩不冷门槛低」",
+        "冰上棋局隐喻：谋、局、chess 类智力词——冰壶是冰上国际象棋，智力叙事吸引白领与亲子客群",
+      ],
+      cases: [
+        { name: "Royal Caledonian Curling Club", takeaway: "苏格兰母会用皇家+古称立百年体面：名字即行业史——冰壶古典命名语法的源头活水" },
+        { name: "Toronto Cricket Skating and Curling Club", takeaway: "多伦多老会把三项运动全写进名字：多项目会员制俱乐部的直白命名——社交传统重于品牌花哨" },
+        { name: "冰立方（国家游泳中心）", takeaway: "水立方冬奥变身冰立方：一字之改完成场馆叙事切换——中文命名玩转场景转换的教科书" },
+        { name: "Rock Solid Curling", takeaway: "石壶双关「坚如磐石」：体验馆用一语双关同时说清器物与靠谱——新兴市场趣味命名的样板" },
+      ],
+      pitfalls: [
+        "气质端得太高：百年俱乐部语法配新兴市场体验馆会显得拒人千里，团建客群要的是好玩不是门槛",
+        "搞笑过头失体面：冰壶的礼仪传统（以礼开局、胜方请酒）是气质本体，名字太闹会丢掉这份独特",
+        "忽略「不用会滑冰」的科普：新手最大的顾虑是怕摔怕冷，名字与副标语要主动拆这个门槛",
+        "只查中文没查英文域名：冰壶赛事与交流以加拿大与北欧为中心，英文名与域名是接轨标配",
+      ],
+    },
+    en: {
+      label: "Curling clubs",
+      title: "How to Name a Curling Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Curling club naming guide: stone-and-house imagery, chess-on-ice registers, breakdowns of Royal Caledonian and modern experience rinks, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A curling club's name has to hold a combination no other sport offers: the chess-on-ice intellect, the roar of the sweep, and a four-century social tradition that opens with a handshake and ends with the winners buying the drinks. The Scottish and Canadian heartland names are gloriously classical — place-name plus Curling Club is a grammar unchanged for centuries, and Royal Caledonian Curling Club is industry history in six syllables. In newer markets the money comes from corporate socials and first-timer sessions, so the name must say \"fun, warm enough, no skating required\" before anything else. Curling owns a vocabulary no sport can borrow — the stone, the sheet, the sweep, the house, the hammer — and every one of them is a naming root with built-in imagery. The hidden exam is tonal range: too solemn scares the team-building crowd, too jokey drops the century-old clubhouse dignity — the best names let a business suit and a hoodie walk through the same door.",
+      namingIdeas: [
+        "Stone imagery stated plainly: stone, rock, granite — the sport's signature object gives the name weight and touch for free",
+        "Sheet-vocabulary borrowing: house, hammer, draw, sweep — insider terms that double as a glossary lesson for newcomers",
+        "The clubhouse register: club with a place-name — curling's membership tradition is itself the credential, and the classical grammar carries the dignity",
+        "The experience-market register: fun, social, spirit words paired with curling roots — first-timer sessions pay the bills, so say the low barrier first",
+        "The chess-on-ice metaphor: strategy, angle, end-game words — the intellectual register that draws office teams and families alike",
+      ],
+      cases: [
+        { name: "Royal Caledonian Curling Club", takeaway: "The Scottish mother club staking royal and ancient registers: a name that is industry history — the source spring of curling's classical grammar" },
+        { name: "Toronto Cricket Skating and Curling Club", takeaway: "Three sports written into one name: the multi-sport membership club naming with total candour — social tradition over branding polish" },
+        { name: "Ice Cube (Beijing)", takeaway: "The Water Cube reborn for Olympic curling with one word swapped: venue storytelling through minimal renaming — the scene-change textbook" },
+        { name: "Rock Solid Curling", takeaway: "The stone pun doubling as a reliability promise: object and trustworthiness in one phrase — the emerging-market playful-naming template" },
+      ],
+      pitfalls: [
+        "Over-solemn registers in experience markets: century-club grammar on a corporate-social rink reads as a barrier — the team-building crowd wants fun, not protocol",
+        "Over-jokey registers that drop the dignity: the handshake-and-drinks etiquette is the sport's soul — a name too silly forfeits what makes curling unique",
+        "Skipping the no-skating-required reassurance: first-timers fear falling and freezing — the name and tagline should dismantle that barrier up front",
+        "Skipping the English domain check: the sport's centre of gravity is Canadian and Nordic — an international-ready name and domain are the price of entry",
+      ],
+    },
+  },
+  rowing: {
+    slug: "rowing",
+    keywords: ["赛艇俱乐部", "赛艇培训", "皮划艇", "rowing club", "boathouse"],
+    tlds: [
+      { tld: "club", zh: "赛艇两百年会艇传统的默认归类，会员制体面直给", en: "The default of rowing's two-century club tradition — membership dignity stated outright" },
+      { tld: "team", zh: "八人一艇的极致同步运动，队伍感就是运动本体", en: "Eight rowers, one boat — the squad identity is the sport itself" },
+      { tld: "fit", zh: "陆上划船机课程是新现金流，归类到健身赛道零违和", en: "Indoor erg classes are the new cash flow — filing under fitness fits perfectly" },
+    ],
+    zh: {
+      label: "赛艇俱乐部",
+      title: "赛艇俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "赛艇俱乐部与赛艇培训命名指南：桨频意象、艇库文化叙事等思路，Leander Club/牛津剑桥赛艇传统等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "赛艇的名字自带一种别的运动少有的东西：两百年的会艇传统与名校光环。世界最老的 Leander Club 用一个希腊神话泳者的名字立了两个世纪的体面；牛津剑桥的 Boat Race 证明「地名+Boat Club」的古典语法本身就是精英叙事的载体；国内的赛艇俱乐部多依水而建，名字借江河湖名（如依苏州河、后海）既锚定了训练水域又自带城市文化。赛艇的运动气质是「极致同步的集体苦修」——八个人一条艇、桨频一致到毫秒，名字带同频、破浪、晨光意象最对味。商业上要注意双轨客群：青少年赛艇营卖的是名校升学叙事（美国大学赛艇招生是真实通道），成人俱乐部与陆上划船机课卖的是圈层社交与体能，名字的精英感要拿捏在「向往」与「劝退」之间。隐藏考点是与皮划艇区分：赛艇（rowing）背向前进、皮划艇（paddling）面向前进，是两个圈子，名字与文案别混。",
+      namingIdeas: [
+        "破浪意象直给：桨、浪、划、stroke——赛艇最具辨识度的动作词根，名字自带水花与节奏",
+        "同频叙事：齐、同、sync 类字眼——八人一艇的毫秒级同步是赛艇的灵魂，名字带「劲往一处使」的劲",
+        "艇库文化借力：boathouse、会艇、社类古典字眼——两百年俱乐部传统就是信任状，古典语法立体面",
+        "水域地名锚定：依江河湖名入名——训练水域即身份，苏州河、查尔斯河式命名自带城市文化",
+        "晨光苦修隐喻：晨、曦、dawn 类字眼——赛艇人的清晨五点是圈内共同记忆，名字借它立圈层认同",
+      ],
+      cases: [
+        { name: "Leander Club", takeaway: "希腊神话泳者之名立两百年体面：世界最老赛艇俱乐部证明古典命名的持久力——名字即传统本身" },
+        { name: "Oxford University Boat Club", takeaway: "地名+Boat Club 的古典语法：Boat Race 两百年对抗让名字成为精英叙事载体——名校赛艇命名的源头" },
+        { name: "Head of the Charles", takeaway: "查尔斯河名即赛事名：水域命名让赛事与城市互相成就——依水立名的最佳实践" },
+        { name: "Hydrow", takeaway: "hydro+row 造词的居家划船机品牌：赛艇气质翻译进健身科技——传统运动词根现代化的样板" },
+      ],
+      pitfalls: [
+        "精英感过头劝退新客：赛艇已自带贵族刻板印象，名字再端着会把体验课客群挡在门外",
+        "与皮划艇混为一谈：rowing 与 paddling 是两个圈子两套装备，名字含糊会同时得罪两边",
+        "忽略陆上划船机市场：erg 课程是增长最快的现金流，名字太「水上」会限制陆上业务延展",
+        "只查中文没查英文域名：赛艇文化以英美为中心，青训升学叙事更需要英文官网立信任",
+      ],
+    },
+    en: {
+      label: "Rowing clubs",
+      title: "How to Name a Rowing Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Rowing club naming guide: stroke-and-wake imagery, boathouse tradition, breakdowns of Leander/Oxford UBC/Head of the Charles, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A rowing club's name inherits something few sports can offer: two centuries of boathouse tradition and an old-school halo. Leander Club, the world's oldest, has run two hundred years on the name of a mythological swimmer; the Oxford and Cambridge boat clubs prove the place-name-plus-Boat-Club grammar is itself the vessel of the elite narrative; Head of the Charles shows a river's name can carry an entire regatta. The sport's temperament is collective asceticism in perfect time — eight rowers, one boat, stroke rates matched to the millisecond — so names carrying sync, wake and first-light imagery fit best. Commercially the audience runs on two tracks: junior programmes sell the college-recruiting pathway, while adult clubs and indoor erg studios sell fellowship and fitness — the name's prestige must sit between aspiration and intimidation. The hidden exam is the paddling boundary: rowing travels backwards, kayaking forwards, and they are different worlds — a name that blurs them offends both.",
+      namingIdeas: [
+        "Stroke imagery stated plainly: stroke, oar, wake, catch — the sport's signature motion gives the name rhythm and spray for free",
+        "The synchrony register: sync, unison, one-boat words — eight movements made identical is the soul of the sport, and the name should pull together",
+        "Boathouse tradition borrowing: boathouse, club, crew in classical grammar — two centuries of membership dignity as the built-in credential",
+        "The home-water anchor: river and lake names in the title — the training water is the identity, from the Charles to the Thames",
+        "The first-light metaphor: dawn, daybreak, early words — five a.m. on flat water is the shared memory of every rower, and the name can own it",
+      ],
+      cases: [
+        { name: "Leander Club", takeaway: "A mythological swimmer staking two centuries of dignity: the world's oldest club proving classical naming endures — the name as the tradition itself" },
+        { name: "Oxford University Boat Club", takeaway: "Place plus Boat Club in the orthodox grammar: two hundred years of the Boat Race making the name an elite-narrative vessel — the source of collegiate rowing naming" },
+        { name: "Head of the Charles", takeaway: "A river's name carrying the world's largest regatta: home-water naming where event and city raise each other — the best practice of naming by water" },
+        { name: "Hydrow", takeaway: "hydro spliced with row for the at-home erg brand: rowing's temperament translated into fitness tech — the modernisation template for a classical sport's roots" },
+      ],
+      pitfalls: [
+        "Prestige overdose: rowing already carries an old-money stereotype — a name too starched turns away the learn-to-row crowd that funds the boathouse",
+        "Blurring into paddling: rowing and kayaking are different worlds with different gear — a vague name offends both congregations",
+        "Ignoring the indoor erg market: ergometer classes are the fastest-growing revenue line — a name too water-bound limits the land business",
+        "Skipping the English domain check: the sport's culture is Anglo-American at its core — the college-pathway narrative needs an English-ready site to convince",
+      ],
+    },
+  },
+  skating: {
+    slug: "skating",
+    keywords: ["轮滑俱乐部", "滑冰培训", "轮滑培训", "skating rink", "skating club"],
+    tlds: [
+      { tld: "club", zh: "轮滑与滑冰俱乐部的默认归类，会员与社群感直给", en: "The default filing for skating clubs — membership and community stated outright" },
+      { tld: "kids", zh: "少儿轮滑是主力现金流，幼儿园门口的招生零解释", en: "Kids' skating pays the bills — zero explanation on the kindergarten flyer" },
+      { tld: "fun", zh: "轮滑的街头快乐属性直给，体验课与夜滑活动都装得下", en: "The street-joy register stated outright — room for taster sessions and night skates alike" },
+    ],
+    zh: {
+      label: "轮滑滑冰",
+      title: "轮滑滑冰俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "轮滑俱乐部与滑冰培训命名指南：滑行意象、少儿启蒙叙事等思路，米高轮滑/Flow Skate 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "轮滑与滑冰的名字要先回答一个定位题：你是少儿体育培训、街头轮滑社群，还是花样滑冰俱乐部？三个赛道的气质完全不同。少儿轮滑是国内最大的现金流市场，名字要对家长说「平衡感、勇气、体态」，对孩子说「像飞一样」——「米高」类品牌用装备品牌反哺培训生态，证明轮滑圈的名字要经得起圈内装备党的审视；街头轮滑与夜滑社群的名字要有风与自由的劲，flow、glide、freeride 是通行词根；花样滑冰俱乐部则借冰的晶莹与优雅立气质，「冰」字配星、舞、雪意象是稳妥语法。滑行运动共享一组好词根——滑、飞、风、轮、冰——名字最好让人读出速度与失重感。隐藏考点是场地属性：轮滑场、真冰场、仿真冰场的成本与客群完全不同，名字与副标语要让家长一眼看懂「你们在什么地面上教」。",
+      namingIdeas: [
+        "滑行意象直给：滑、飞、风、glide——滑行运动的失重感是最大魅力，名字要读出速度",
+        "少儿启蒙叙事：平衡、勇、小字辈——家长买的是平衡感与胆量训练，名字先说清训练价值",
+        "街头自由路线：flow、free、夜滑类字眼——轮滑社群的灵魂是风与自由，名字要有街头气",
+        "冰上优雅语法：冰配星、舞、雪——花样滑冰的晶莹气质自成一派，名字走优雅路线立辨识",
+        "装备党审视预设：轮、刃、bearing 类硬核词根——轮滑圈装备文化浓，名字经得起圈内人推敲才立得住",
+      ],
+      cases: [
+        { name: "米高轮滑", takeaway: "装备品牌反哺培训生态：micro 音译立圈内信任——轮滑圈「先服装备党再收学费」的命名打法" },
+        { name: "Flow Skate", takeaway: "一个 flow 说清滑行的灵魂：失重与自由感直给——街头轮滑社群命名的通行语法" },
+        { name: "冰纷万象", takeaway: "商场真冰场借「缤纷」谐音立场景：冰字双关完成品类与欢乐的双重表达——中文谐音命名的样板" },
+        { name: "Rollerdrome", takeaway: "roller+drome（场馆）合成词：品类与场地一次说清——轮滑场馆命名的直给结构" },
+      ],
+      pitfalls: [
+        "三个赛道混着说：少儿培训、街头社群、花滑俱乐部气质互斥，名字骑墙会三边不讨好",
+        "忽略场地说明：轮滑场与真冰场客群预期完全不同，名字不锚定地面属性会带来到店落差",
+        "只讨好孩子不安抚家长：滑行运动自带摔倒担忧，名字与副标语要主动传递安全与护具意识",
+        "只查中文没查拼音与英文域名：轮滑赛事与花滑考级都要线上报名，域名被占会让品牌传播漏水",
+      ],
+    },
+    en: {
+      label: "Skating clubs",
+      title: "How to Name a Skating Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Skating club and rink naming guide: glide imagery, kids-programme registers, breakdowns of Micro Skate/Flow Skate/Rollerdrome, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A skating name must first answer a positioning question: are you a kids' skating school, a street-skate community, or a figure-skating club? The three tracks wear entirely different temperaments. Kids' programmes are the biggest cash flow: the name must promise balance, courage and posture to the parent while whispering \"it feels like flying\" to the child — and brands like Micro prove skating names must survive the scrutiny of the gear-obsessed insider crowd. Street-skate and night-skate communities run on wind and freedom, with flow, glide and freeride as the lingua franca. Figure-skating clubs borrow the ice's crystalline elegance — ice paired with star, dance and snow imagery is the safe grammar. All gliding sports share a root family — glide, fly, wheel, blade, ice — and the best names read with speed and weightlessness. The hidden exam is the surface: a roller rink, a real-ice rink and a synthetic rink serve different crowds at different costs, and the name plus tagline must tell a parent at a glance what ground you teach on.",
+      namingIdeas: [
+        "Glide imagery stated plainly: glide, fly, wind, roll — weightlessness is the sport's magic, and the name should read at speed",
+        "The kids-programme register: balance, brave, little words — parents buy balance and courage training, so state the developmental value first",
+        "The street-freedom route: flow, free, night-skate words — the community's soul is wind and freedom, and the name needs street credibility",
+        "The ice-elegance grammar: ice with star, dance, snow — figure skating's crystalline register is its own school of naming",
+        "The gear-head audit: wheel, blade, bearing roots — skating culture is equipment-obsessed, and a name must survive insider scrutiny to stand",
+      ],
+      cases: [
+        { name: "Micro Skate", takeaway: "A gear brand feeding the training ecosystem: insider trust built through equipment first — the skate-world playbook of winning the gear-heads before selling lessons" },
+        { name: "Flow Skate", takeaway: "One word carrying the soul of gliding: weightlessness and freedom stated outright — the lingua franca of street-skate community naming" },
+        { name: "Rollerdrome", takeaway: "roller spliced with drome: category and venue declared in one coinage — the direct-structure template for rink naming" },
+        { name: "Ice Palace", takeaway: "The crystalline register staked in two words: elegance and destination in one name — the figure-skating rink's classic grammar" },
+      ],
+      pitfalls: [
+        "Straddling all three tracks: kids' school, street crew and figure club repel each other tonally — a fence-sitting name pleases none",
+        "Skipping the surface signal: roller, real-ice and synthetic rinks set different expectations — a name that doesn't anchor the ground invites walk-in disappointment",
+        "Charming the child while ignoring the parent: gliding sports carry fall-and-injury worry — the name and tagline should volunteer safety and gear awareness",
+        "Skipping the domain and handle check: competitions and grading tests register online — a name that can't be found leaks every referral",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

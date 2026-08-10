@@ -317,7 +317,7 @@
     ]
   },
   "guide": {
-    "count": 308,
+    "count": 314,
     "slugs": [
       "saas",
       "ecommerce",
@@ -626,7 +626,13 @@
       "squash",
       "lacrosse",
       "judo",
-      "bjj"
+      "bjj",
+      "wrestling",
+      "muaythai",
+      "handball",
+      "curling",
+      "rowing",
+      "skating"
     ]
   },
   "vs": {

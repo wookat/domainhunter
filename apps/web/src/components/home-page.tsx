@@ -2230,6 +2230,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一家巴西柔术馆与柔术学院，寓意「地面上的下棋、以巧胜力」；气质要谱系可信、狠而有门、白领敢来小白敢试；场景是道服臂章、赛队报名表和会员打卡照里都立得住、认得出。",
     en: "A Brazilian jiu-jitsu academy. The name should promise chess played on the floor, technique beating strength; the vibe is lineage-credible with an open door, fierce enough for the comp team and welcoming to the first-timer; it must patch well on the gi sleeve, hold up on the tournament roster, and read proudly in the member's mat-selfie caption.",
   },
+  {
+    slug: "wrestling",
+    labelZh: "摔跤馆",
+    labelEn: "Wrestling club",
+    zh: "一家摔跤馆与青少年摔跤俱乐部，寓意「垫子上一千次起身的贴地硬磨」；气质要硬而不凶、纪律感让家长放心；场景是垫上点名、赛事对阵表和体育单招简历里都念得顺、立得住。",
+    en: "A wrestling club and youth program. The name should carry the grind of a thousand shots and stand-ups on the mat; the vibe is hard without menace, disciplined enough to reassure the parent; it must call well at mat-side, hold up on the tournament bracket, and read proudly on the recruiting résumé.",
+  },
+  {
+    slug: "muaythai",
+    labelZh: "泰拳馆",
+    labelEn: "Muay Thai gym",
+    zh: "一家泰拳馆与泰拳培训，寓意「八肢的艺术、拜师舞之后的肘膝锋芒」；气质要狠得正宗又不吓走减脂小白；场景是拳靶课点名、赛队围巾和会员打卡照里都响亮好念、立得住。",
+    en: "A Muay Thai gym and training camp. The name should carry the art of eight limbs, the elbow's edge after the wai kru's bow; the vibe is authentically fierce yet welcoming to the fat-burn first-timer; it must call well at pad class, print proudly on the fight-team banner, and read well in the member's check-in photo.",
+  },
+  {
+    slug: "handball",
+    labelZh: "手球俱乐部",
+    labelEn: "Handball club",
+    zh: "一家手球俱乐部与校园手球队，寓意「七人快攻里那记腾空跳射」；气质要快而齐、有城市荣誉感；场景是场边齐喊、联赛秩序册和校队招新海报上都响亮好念、立得住。",
+    en: "A handball club and school program. The name should carry the jump shot rising out of a seven-player fast break; the vibe is fast and united with civic pride; it must chant well at courtside, hold its own in the league programme, and pop on the school recruitment poster.",
+  },
+  {
+    slug: "curling",
+    labelZh: "冰壶俱乐部",
+    labelEn: "Curling club",
+    zh: "一家冰壶俱乐部与冰壶体验馆，寓意「冰上棋局里那记压哨好壶」；气质要聪明有礼、好玩不高冷；场景是团建预订页、会员徽章和赛后互敬的致辞里都体面好念、立得住。",
+    en: "A curling club and experience rink. The name should carry the perfect draw settling into the house like a chess move; the vibe is clever and courteous, fun without frost; it must book well on the corporate-social page, sit cleanly on the member's pin, and read graciously in the post-game toast.",
+  },
+  {
+    slug: "rowing",
+    labelZh: "赛艇俱乐部",
+    labelEn: "Rowing club",
+    zh: "一家赛艇俱乐部与青少年赛艇营，寓意「晨光水面上八桨同频的那道破浪」；气质要体面向上、精英而不排外；场景是艇库点名、赛艇服胸前和升学文书里都念得顺、立得住。",
+    en: "A rowing club and junior crew. The name should carry the wake cut by eight blades in perfect time on first-light water; the vibe is aspirational and dignified, elite without exclusion; it must call well at the boathouse, sit proudly on the racing kit, and read well in the college application essay.",
+  },
+  {
+    slug: "skating",
+    labelZh: "轮滑滑冰",
+    labelEn: "Skating club",
+    zh: "一家轮滑俱乐部与少儿滑冰培训，寓意「像风一样滑出去、稳稳收住」；气质要飞得酷落得稳、孩子觉得帅家长觉得安全；场景是场边点名、考级证书和商场冰场的招生展架上都念得顺、立得住。",
+    en: "A skating club and kids' programme. The name should carry the glide that flies like wind and lands in control; the vibe is cool in flight and safe on landing, thrilling to the kid and reassuring to the parent; it must call well rink-side, sit with dignity on the grading certificate, and hold up on the mall-rink enrolment stand.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
