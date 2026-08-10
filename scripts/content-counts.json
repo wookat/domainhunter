@@ -642,7 +642,7 @@
     ]
   },
   "vs": {
-    "count": 354,
+    "count": 360,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -997,7 +997,13 @@
       "fans-vs-fan",
       "place-vs-space",
       "report-vs-news",
-      "town-vs-city"
+      "town-vs-city",
+      "shopping-vs-shop",
+      "graphics-vs-design",
+      "glass-vs-art",
+      "vision-vs-care",
+      "tires-vs-autos",
+      "surgery-vs-clinic"
     ]
   }
 }

@@ -364,4 +364,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "place-vs-space", a: "place", b: "space", title: { zh: ".place 和 .space 怎么选：具体的场所与抽象的天地", en: ".place vs .space: The Concrete Venue or The Open Room" } },
   { slug: "report-vs-news", a: "report", b: "news", title: { zh: ".report 和 .news 怎么选：深度的报告与时效的资讯", en: ".report vs .news: The Deep Dive or The Fast Feed" } },
   { slug: "town-vs-city", a: "town", b: "city", title: { zh: ".town 和 .city 怎么选：小镇的烟火气与城市的大尺度", en: ".town vs .city: The Cozy Scale or The Urban Scale" } },
+  { slug: "shopping-vs-shop", a: "shopping", b: "shop", title: { zh: ".shopping 和 .shop 怎么选：逛的体验与店的门面", en: ".shopping vs .shop: The Browsing Experience or The Storefront" } },
+  { slug: "graphics-vs-design", a: "graphics", b: "design", title: { zh: ".graphics 和 .design 怎么选：做图的工种与设计的学科", en: ".graphics vs .design: The Visual Trade or The Whole Discipline" } },
+  { slug: "glass-vs-art", a: "glass", b: "art", title: { zh: ".glass 和 .art 怎么选：材料的行业与创作的身份", en: ".glass vs .art: The Material Trade or The Creative Identity" } },
+  { slug: "vision-vs-care", a: "vision", b: "care", title: { zh: ".vision 和 .care 怎么选：眼睛的专科与照护的温度", en: ".vision vs .care: The Eye Specialty or The Caring Touch" } },
+  { slug: "tires-vs-autos", a: "tires", b: "autos", title: { zh: ".tires 和 .autos 怎么选：单一品类与汽车全域", en: ".tires vs .autos: The Single Category or The Whole Trade" } },
+  { slug: "surgery-vs-clinic", a: "surgery", b: "clinic", title: { zh: ".surgery 和 .clinic 怎么选：手术的专科纵深与门诊的机构门面", en: ".surgery vs .clinic: The Surgical Depth or The Outpatient Front" } },
 ];
