@@ -359,4 +359,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "neonsign", zh: "霓虹灯工作室", en: "Neon sign studios" },
   { slug: "millinery", zh: "制帽工作室", en: "Millinery studios" },
   { slug: "mosaic", zh: "马赛克工作室", en: "Mosaic studios" },
+  { slug: "blacksmith", zh: "铁匠铺", en: "Blacksmith forges" },
+  { slug: "distillery", zh: "精酿蒸馏厂", en: "Craft distilleries" },
+  { slug: "kombucha", zh: "康普茶品牌", en: "Kombucha brands" },
+  { slug: "climbinggym", zh: "攀岩馆", en: "Climbing gyms" },
+  { slug: "stainedglass", zh: "彩绘玻璃工作室", en: "Stained glass studios" },
+  { slug: "minigolf", zh: "迷你高尔夫球场", en: "Mini golf courses" },
 ];

@@ -1427,4 +1427,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家马赛克拼贴艺术工作室，寓意「一万块碎片凑成一幅完整的画、一贴一千年」；气质要立在镶嵌艺术的身位、不显建材感；场景是工程方案、藏家画册和手作课海报上都专业、亲切。",
     en: "A mosaic art studio. The name should carry ten thousand fragments assembling one whole picture, set once to stay a thousand years; the vibe stands on inlay art, never building materials; it must read professional in the project proposal, collectible in the catalogue, and warm on the class poster.",
   },
+  "blacksmith": {
+    zh: "一家铁匠铺与手工锻造工作室，寓意「一块铁在炉火里被千锤打醒」；气质要有火与锤的手艺血统、不做五金铺；场景是藏家目录、工程报价单和锻造体验课海报上都有分量、可信。",
+    en: "A blacksmith and hand-forging studio. The name should carry iron woken by a thousand hammer blows in the forge fire; the vibe is the bloodline of fire and hammer, never a hardware store; it must carry weight in the collector's catalogue, read credible on the quote, and welcoming on the class poster.",
+  },
+  "distillery": {
+    zh: "一家精酿蒸馏厂与烈酒品牌，寓意「一滴烈酒里蒸出来的时间与地方」；气质要有风土落款与陈年身价、不显酒精感；场景是酒标、拍卖行目录和品鉴室门头上都有年头、有故事。",
+    en: "A craft distillery and spirits brand. The name should carry the time and the place distilled into one drop; the vibe is terroir signature and cask-aged status, never raw booze; it must carry age on the label, status in the auction catalogue, and a story on the tasting-room door.",
+  },
+  "kombucha": {
+    zh: "一个康普茶与发酵茶饮品牌，寓意「一缸活着的茶、开瓶那一声嘶」；气质要活的、好喝的健康、不像药水；场景是货架三步外能认出、餐单上念得顺口、发酵社群里有行家认同。",
+    en: "A kombucha and fermented tea brand. The name should carry a tea that is alive and the hiss of the opening bottle; the vibe is health that tastes good, never medicine; it must be recognisable three steps from the shelf, read smooth on the menu, and earn respect in the fermentation forum.",
+  },
+  "climbinggym": {
+    zh: "一家攀岩馆与抱石馆，寓意「离地那一刻的专注与自由」；气质要向上、快乐、有社群感、不玩命；场景是售卡页像一种生活方式、商场导视让家长放心、岩友群里有圈内认同。",
+    en: "A climbing and bouldering gym. The name should carry the focus and freedom of the moment the feet leave the ground; the vibe is upward, joyful, and communal, never death-defying; it must read like a lifestyle on the checkout page, reassure parents on the mall directory, and earn respect in the climbers' group chat.",
+  },
+  "stainedglass": {
+    zh: "一家彩绘玻璃与花窗艺术工作室，寓意「光穿过颜色的那一刻」；气质要立在光的艺术身位、不显建材感；场景是修复方案、家装案例和手作课海报上都有学术分量与光的浪漫。",
+    en: "A stained glass and window art studio. The name should carry the moment light passes through colour; the vibe stands on the art of light, never building materials; it must carry scholarly weight in the restoration proposal, art status in the interiors portfolio, and the romance of light on the class poster.",
+  },
+  "minigolf": {
+    zh: "一家迷你高尔夫球场，寓意「一杆进洞那声欢呼」；气质要零门槛的欢乐、白天亲子晚上微醺都成立；场景是商场导视让家长秒懂、约会攻略里有趣、团建报价单上正经得起来。",
+    en: "A mini golf course. The name should carry the cheer when the ball drops in one; the vibe is zero-barrier joy that works for daytime families and nighttime drinks alike; it must read instantly on the mall directory, sound fun in the date-night guide, and hold up on the corporate quote.",
+  },
 };
