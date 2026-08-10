@@ -404,6 +404,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   quest: { first: 11, renew: 93 },
   kids: { first: 41, renew: 137 },
   foundation: { first: 43, renew: 163 },
+  bond: { first: 10, renew: 115 },
+  sbs: { first: 11, renew: 115 },
+  cyou: { first: 11, renew: 115 },
+  monster: { first: 11, renew: 93 },
+  pics: { first: 11, renew: 189 },
+  mobi: { first: 30, renew: 300 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {

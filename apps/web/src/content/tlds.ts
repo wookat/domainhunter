@@ -9024,6 +9024,186 @@ const GUIDES = {
       ],
     },
   },
+  bond: {
+    tld: "bond",
+    zh: {
+      title: ".bond 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".bond 是「纽带/债券」的双关后缀，适合信任型服务与客户关系品牌、债券与固定收益理财内容站、会员社群与校友联结站、婚恋与情感陪伴类产品。查看 .bond 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .bond 域名。",
+      intro:
+        ".bond 把关系写进域名：信任型服务与客户关系品牌、债券与固定收益理财内容站、会员社群与校友联结站、婚恋与情感陪伴类产品用 name.bond，一词双关讲透定位——bond 既是金融里的「债券」，也是人与人之间的「纽带」，同一个后缀能同时服务理财站与关系型品牌，是少见的「一词两吃」后缀。注册局为 ShortDot SA（卢森堡），与 .icu/.cyou/.sbs 同门，走的是低价走量路线，域名解析与注册商覆盖成熟。它与已收录的 .finance/.money/.community 分工清晰：.finance 说行业，.money 说钱本身，.community 说群体——.bond 说的是「连接」这件事，做信任叙事与关系型产品定位最准。价格是典型促销结构：首年约 $1（约 ¥10），续费约 $16/年（约 ¥115）——首年几乎白送，务必按续费价做多年预算。库存极好：关系词、金融词、品牌词全线有货。注意两点：一是首年与续费差十倍以上，批量注册前先算三年总成本；二是英文里 bail bond（保释金）语义邻近，法律相关项目起名时留意联想。命名上「品牌 + .bond」（acme.bond）最主流，「关系词 + .bond」（team.bond）适合社群与会员站。",
+      bestFor: ["信任型服务与客户关系品牌", "债券与固定收益理财内容站", "会员社群与校友联结站", "婚恋与情感陪伴类产品"],
+      namingTips: [
+        "「品牌 + .bond」把「与用户建立连接」写进域名",
+        "首年约 $1、续费约 $16/年，按续费价算三年总成本",
+        "连接叙事用 .bond，金融行业用 .finance，群体用 .community",
+        "英文里与 bail bond（保释金）语义邻近，法律项目留意联想",
+      ],
+    },
+    en: {
+      title: ".bond Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".bond is the double-meaning suffix for ties and bonds — for trust-driven services and customer-relationship brands, bond and fixed-income finance content, membership and alumni communities, and dating or companionship products. See live pricing and naming advice, then hunt available .bond names with AI.",
+      intro:
+        ".bond writes the relationship into the address: trust-driven services and customer-relationship brands, bond and fixed-income finance content, membership and alumni communities, and dating or companionship products on name.bond say the positioning in one pun — bond is both the financial instrument and the human tie, so a single suffix serves an investing site and a relationship brand equally well, a rare two-for-one word. The registry is ShortDot SA of Luxembourg, sibling to .icu, .cyou and .sbs, running a high-volume low-price playbook with mature registrar and DNS coverage. It divides labor cleanly with the already-listed .finance, .money and .community: .finance names the industry, .money names the cash, .community names the group — .bond names the act of connecting, so trust narratives and relationship products position sharpest here. Pricing is the classic promo shape: about $1 first year (≈¥10) and $16/yr to renew (≈¥115) — year one is nearly free, so budget multi-year on the renewal. Inventory is excellent: relationship words, finance words and brand words all hit. Two cautions: renewal is more than ten times year one, so price three years before bulk-registering; and \"bail bond\" sits close in English, worth noting for law-adjacent projects. Naming: brand + .bond (acme.bond) is the mainstream shape; relationship word + .bond (team.bond) suits communities and membership sites.",
+      bestFor: ["Trust-driven services & CRM brands", "Bond & fixed-income finance content", "Membership & alumni communities", "Dating & companionship products"],
+      namingTips: [
+        "Brand + .bond writes \"we connect with users\" into the address",
+        "About $1 year one, $16/yr renewal — price three years first",
+        "Connection fits .bond; the industry .finance; the group .community",
+        "\"Bail bond\" is semantically close in English — mind law projects",
+      ],
+    },
+  },
+  sbs: {
+    tld: "sbs",
+    zh: {
+      title: ".sbs 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".sbs 是 side-by-side 的缩写后缀，适合三字母品牌缩写站、企业服务与咨询公司官网、活动与快闪推广落地页、低成本站群与测试项目。查看 .sbs 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .sbs 域名。",
+      intro:
+        ".sbs 用三个字母收尾：三字母品牌缩写站、企业服务与咨询公司官网、活动与快闪推广落地页、低成本站群与测试项目用 name.sbs，短而中性——sbs 官方解读为 side by side（并肩），本身不携带行业含义，正因为「空白」，任何缩写型品牌都能把自己的解释填进去，这是通用后缀里少见的自由度。注册局为 ShortDot SA（卢森堡），与 .icu/.bond/.cyou 同门，最初面向企业服务场景推广，如今以低价通用后缀定位。它与已收录的 .biz/.company/.pro 分工清晰：.biz 说商业属性，.company 说公司形态，.pro 说专业身份——.sbs 不预设含义，适合把语义留给品牌自己的项目。价格是典型促销结构：首年约 $2（约 ¥11），续费约 $16/年（约 ¥115）——首年成本极低，适合先占后验证的项目。库存极好：短词、缩写、行业词全线有货。注意两点：一是三字母后缀在中文语境认知度低，面向大众市场需配合品牌教育；二是低价后缀历史上滥用较多，务必配好 SPF/DKIM 并做好内容质量，避免被邮件与搜索侧牵连。命名上「品牌缩写 + .sbs」（acme.sbs）最主流，「动词/口号 + .sbs」（grow.sbs）适合活动页。",
+      bestFor: ["三字母品牌缩写站", "企业服务与咨询公司官网", "活动与快闪推广落地页", "低成本站群与测试项目"],
+      namingTips: [
+        "「品牌缩写 + .sbs」语义留白，解释权归品牌自己",
+        "首年约 $2、续费约 $16/年，适合先占后验证",
+        "语义留白用 .sbs，商业属性用 .biz，公司形态用 .company",
+        "低价后缀需配好 SPF/DKIM 与内容质量，避免声誉牵连",
+      ],
+    },
+    en: {
+      title: ".sbs Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".sbs is the three-letter suffix short for side-by-side — for three-letter brand acronyms, business-service and consulting sites, event and pop-up campaign pages, and low-cost site networks or test projects. See live pricing and naming advice, then hunt available .sbs names with AI.",
+      intro:
+        ".sbs ends a name in three letters: three-letter brand acronyms, business-service and consulting sites, event and pop-up campaign pages, and low-cost site networks or test projects on name.sbs stay short and neutral — the registry glosses sbs as \"side by side\", and because it carries no industry meaning of its own, any acronym brand can pour its own reading into the blank, a freedom rare among generic suffixes. The registry is ShortDot SA of Luxembourg, sibling to .icu, .bond and .cyou; it launched aimed at business services and now sits as a cheap generic. It divides labor cleanly with the already-listed .biz, .company and .pro: .biz says commerce, .company says corporate form, .pro says professional standing — .sbs presumes nothing, which suits projects that want to define the meaning themselves. Pricing is the classic promo shape: about $2 first year (≈¥11) and $16/yr to renew (≈¥115) — cheap enough to claim a name before validating it. Inventory is excellent: short words, acronyms and industry words all hit. Two cautions: three-letter suffixes have low recognition with Chinese-speaking audiences, so mass-market plays need brand education; and cheap TLDs have a history of abuse, so configure SPF/DKIM and keep content quality high to avoid reputation spillover in email and search. Naming: brand acronym + .sbs (acme.sbs) is the mainstream shape; verb or slogan + .sbs (grow.sbs) suits campaign pages.",
+      bestFor: ["Three-letter brand acronyms", "Business-service & consulting sites", "Event & pop-up campaign pages", "Low-cost site networks & test projects"],
+      namingTips: [
+        "Brand acronym + .sbs leaves the meaning for you to define",
+        "About $2 year one, $16/yr renewal — cheap to claim then validate",
+        "A blank slate fits .sbs; commerce .biz; corporate form .company",
+        "Cheap TLDs need SPF/DKIM and real content to avoid spillover",
+      ],
+    },
+  },
+  cyou: {
+    tld: "cyou",
+    zh: {
+      title: ".cyou 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".cyou 是 see you 的谐音后缀，适合面向 Z 世代的内容与社群站、创作者个人主页与约见页、活动邀请与见面会落地页、游戏与二次元同好站。查看 .cyou 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .cyou 域名。",
+      intro:
+        ".cyou 把一句「回头见」放进域名：面向 Z 世代的内容与社群站、创作者个人主页与约见页、活动邀请与见面会落地页、游戏与二次元同好站用 name.cyou，语气一词讲透——cyou 读作 see you，域名本身就是一句告别与邀约，天生带社交口吻，这在以名词为主的后缀里非常少见。注册局为 ShortDot SA（卢森堡），与 .icu/.bond/.sbs 同门，主打年轻用户与低价走量。它与已收录的 .fun/.social/.chat 分工清晰：.fun 说气氛，.social 说社交属性，.chat 说聊天场景——.cyou 说的是「下次见」的邀约语气，做创作者主页与活动页最贴。价格是典型促销结构：首年约 $2（约 ¥11），续费约 $16/年（约 ¥115）——首年极低，长期按续费价算。库存极好：昵称、动词短语、社群词全线有货。注意两点：一是首年与续费差距大，长期项目别被促销价误导；二是低价后缀被滥用较多，部分企业邮件网关对陌生便宜后缀更敏感，正式业务信函建议另配成熟后缀。命名上「昵称/ID + .cyou」（mika.cyou）最主流，「动词 + .cyou」（meet.cyou）适合活动与邀约页。",
+      bestFor: ["面向 Z 世代的内容与社群站", "创作者个人主页与约见页", "活动邀请与见面会落地页", "游戏与二次元同好站"],
+      namingTips: [
+        "「昵称/ID + .cyou」整个域名读起来就是一句「回头见」",
+        "首年约 $2、续费约 $16/年，长期按续费价算",
+        "邀约语气用 .cyou，气氛用 .fun，聊天场景用 .chat",
+        "正式业务信函建议另配成熟后缀，避免邮件网关误判",
+      ],
+    },
+    en: {
+      title: ".cyou Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".cyou is the suffix that sounds like \"see you\" — for Gen-Z content and community sites, creator homepages and meet-up links, event invitation and fan-meet landing pages, and gaming or anime fandom sites. See live pricing and naming advice, then hunt available .cyou names with AI.",
+      intro:
+        ".cyou puts a goodbye in the address: Gen-Z content and community sites, creator homepages and meet-up links, event invitation and fan-meet landing pages, and gaming or anime fandom sites on name.cyou carry tone in one word — cyou reads as \"see you\", so the domain itself is a farewell and an invitation, a social voice that is rare among mostly-noun suffixes. The registry is ShortDot SA of Luxembourg, sibling to .icu, .bond and .sbs, aimed at younger audiences at volume pricing. It divides labor cleanly with the already-listed .fun, .social and .chat: .fun names the mood, .social names the category, .chat names the activity — .cyou names the \"see you next time\" invitation, which fits creator pages and event pages best. Pricing is the classic promo shape: about $2 first year (≈¥11) and $16/yr to renew (≈¥115) — very cheap up front, so plan on the renewal. Inventory is excellent: handles, verb phrases and community words all hit. Two cautions: the gap between year one and renewal is wide, so long-lived projects shouldn't anchor on the promo; and cheap TLDs see more abuse, with some corporate mail gateways treating unfamiliar bargain suffixes more suspiciously, so keep formal business mail on an established domain. Naming: handle or nickname + .cyou (mika.cyou) is the mainstream shape; verb + .cyou (meet.cyou) suits events and invitations.",
+      bestFor: ["Gen-Z content & community sites", "Creator homepages & meet-up links", "Event invitation & fan-meet pages", "Gaming & anime fandom sites"],
+      namingTips: [
+        "Handle + .cyou makes the whole domain read as \"see you\"",
+        "About $2 year one, $16/yr renewal — plan on the renewal",
+        "The invitation fits .cyou; the mood .fun; the activity .chat",
+        "Keep formal business mail on an established domain",
+      ],
+    },
+  },
+  monster: {
+    tld: "monster",
+    zh: {
+      title: ".monster 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".monster 是「怪兽」气质的品牌后缀，适合游戏与怪物题材项目、健身增肌与力量训练品牌、能量饮料与潮流周边电商、恐怖与万圣节内容站。查看 .monster 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .monster 域名。",
+      intro:
+        ".monster 把张力写进域名：游戏与怪物题材项目、健身增肌与力量训练品牌、能量饮料与潮流周边电商、恐怖与万圣节内容站用 name.monster，气质一词讲透——monster 在英文里既是「怪兽」也是「猛的、极强的」，形容词用法让它天然适合强调力量、夸张与个性的品牌，比中性后缀更有记忆点。注册局为 XYZ.COM LLC（.xyz 的注册局），2019 年从 Monster Worldwide 手中接手后开放通用注册，注册商覆盖广泛。它与已收录的 .games/.fit/.ninja 分工清晰：.games 说品类，.fit 说健身结果，.ninja 说身手——.monster 说的是「猛」这个气质，做张扬型品牌与娱乐内容最合适。价格结构友好：首年约 $2（约 ¥11），续费约 $13/年（约 ¥93）——续费在新顶级域里属于中低档，长期持有成本可控。库存极好：形容词、角色名、品类词全线有货。注意两点：一是词义偏娱乐化，B2B 与金融、医疗等严肃行业慎用；二是七个字母略长，移动端展示与口播时建议配短前缀。命名上「品类/角色 + .monster」（pixel.monster）最主流，「品牌 + .monster」（acme.monster）适合做子品牌与活动站。",
+      bestFor: ["游戏与怪物题材项目", "健身增肌与力量训练品牌", "能量饮料与潮流周边电商", "恐怖与万圣节内容站"],
+      namingTips: [
+        "「品类/角色 + .monster」一眼就有张力与记忆点",
+        "首年约 $2、续费约 $13/年，长期持有成本可控",
+        "张扬气质用 .monster，品类用 .games，结果用 .fit",
+        "词义偏娱乐化，B2B 与严肃行业慎用",
+      ],
+    },
+    en: {
+      title: ".monster Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".monster is the suffix with attitude — for gaming and creature-themed projects, strength-training and bodybuilding brands, energy drinks and streetwear merch, and horror or Halloween content sites. See live pricing and naming advice, then hunt available .monster names with AI.",
+      intro:
+        ".monster writes attitude into the address: gaming and creature-themed projects, strength-training and bodybuilding brands, energy drinks and streetwear merch, and horror or Halloween content on name.monster say the vibe in one word — in English monster is both a creature and an adjective for \"huge, beastly\", and that adjectival reading makes it a natural fit for brands built on power, exaggeration and personality, far stickier than a neutral suffix. The registry is XYZ.COM LLC, the operator behind .xyz, which took the TLD over from Monster Worldwide in 2019 and opened it to general registration with broad registrar coverage. It divides labor cleanly with the already-listed .games, .fit and .ninja: .games names the category, .fit names the result, .ninja names the skill — .monster names sheer intensity, which suits loud brands and entertainment content. Pricing is friendly: about $2 first year (≈¥11) and $13/yr to renew (≈¥93) — a mid-low renewal by new-gTLD standards, so long-term holding stays affordable. Inventory is excellent: adjectives, character names and category words all hit. Two cautions: the word skews playful, so B2B, finance and healthcare should think twice; and seven letters run long, so pair it with a short prefix for mobile display and voice. Naming: category or character + .monster (pixel.monster) is the mainstream shape; brand + .monster (acme.monster) suits sub-brands and campaign sites.",
+      bestFor: ["Gaming & creature-themed projects", "Strength-training & bodybuilding brands", "Energy drinks & streetwear merch", "Horror & Halloween content sites"],
+      namingTips: [
+        "Category or character + .monster lands with instant attitude",
+        "About $2 year one, $13/yr renewal — affordable to hold long-term",
+        "Intensity fits .monster; the category .games; the result .fit",
+        "The word skews playful — B2B and serious industries beware",
+      ],
+    },
+  },
+  pics: {
+    tld: "pics",
+    zh: {
+      title: ".pics 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".pics 是图片的口语化后缀，适合摄影作品集与图库站、活动照片分享与相册链接、表情包与素材下载站、图片处理与压缩工具。查看 .pics 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .pics 域名。",
+      intro:
+        ".pics 把图片说得更口语：摄影作品集与图库站、活动照片分享与相册链接、表情包与素材下载站、图片处理与压缩工具用 name.pics，用途一词讲透——pics 是 pictures 的日常缩写，比正式的 photography 短一半、比 photos 更随口，分享相册链接时读起来自然，这在图片类后缀里是最口语的一个。注册局为 XYZ.COM LLC（.xyz 的注册局），后端解析稳定、注册商覆盖广。它与已收录的 .photos/.photo/.gallery/.photography 分工清晰：.photography 说职业，.gallery 说展陈，.photos/.photo 偏中性名词——.pics 是最随手、最社交的说法，做分享链接与工具站最贴。价格是促销结构：首年约 $2（约 ¥11），续费约 $26/年（约 ¥189）——首年便宜、续费中等偏上，按续费价做预算。库存极好：品类词、活动词、品牌词全线有货。注意两点：一是口语气质偏轻，高端商业摄影主站用 .photography 更显专业；二是图片站带宽成本高，上线前先规划好 CDN 与图片压缩策略。命名上「品牌/活动 + .pics」（wedding.pics）最主流，「动词 + .pics」（share.pics）适合工具与分享服务。",
+      bestFor: ["摄影作品集与图库站", "活动照片分享与相册链接", "表情包与素材下载站", "图片处理与压缩工具"],
+      namingTips: [
+        "「品牌/活动 + .pics」念出来就是「某某的照片」",
+        "首年约 $2、续费约 $26/年，按续费价做预算",
+        "随手分享用 .pics，职业摄影用 .photography，展陈用 .gallery",
+        "图片站带宽成本高，上线前规划好 CDN 与压缩",
+      ],
+    },
+    en: {
+      title: ".pics Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".pics is the casual suffix for pictures — for photography portfolios and stock libraries, event photo sharing and album links, meme and asset download sites, and image processing or compression tools. See live pricing and naming advice, then hunt available .pics names with AI.",
+      intro:
+        ".pics says pictures the way people actually say it: photography portfolios and stock libraries, event photo sharing and album links, meme and asset download sites, and image processing or compression tools on name.pics state the purpose in one word — pics is the everyday shorthand for pictures, half the length of photography and looser than photos, so an album link reads naturally when spoken aloud, the most colloquial option among image suffixes. The registry is XYZ.COM LLC, operator of .xyz, with stable resolution and broad registrar coverage. It divides labor cleanly with the already-listed .photos, .photo, .gallery and .photography: .photography names the profession, .gallery names the exhibition, .photos and .photo stay neutral nouns — .pics is the offhand, social phrasing, best for share links and tools. Pricing follows the promo shape: about $2 first year (≈¥11) and $26/yr to renew (≈¥189) — cheap up front, mid-to-high renewal, so budget on the renewal. Inventory is excellent: category words, event words and brand words all hit. Two cautions: the casual tone reads light, so high-end commercial photography sites look more professional on .photography; and image sites burn bandwidth, so plan a CDN and compression strategy before launch. Naming: brand or event + .pics (wedding.pics) is the mainstream shape; verb + .pics (share.pics) suits tools and sharing services.",
+      bestFor: ["Photography portfolios & stock libraries", "Event photo sharing & album links", "Meme & asset download sites", "Image processing & compression tools"],
+      namingTips: [
+        "Brand or event + .pics reads as \"X's pictures\" out loud",
+        "About $2 year one, $26/yr renewal — budget on the renewal",
+        "Casual sharing fits .pics; the profession .photography; shows .gallery",
+        "Image sites burn bandwidth — plan CDN and compression first",
+      ],
+    },
+  },
+  mobi: {
+    tld: "mobi",
+    zh: {
+      title: ".mobi 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".mobi 是移动端的老牌专属后缀，适合移动端专版站与 H5 落地页、App 官网与下载页、移动营销与短链活动页、车载与物联网终端服务。查看 .mobi 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .mobi 域名。",
+      intro:
+        ".mobi 把「移动」写进域名：移动端专版站与 H5 落地页、App 官网与下载页、移动营销与短链活动页、车载与物联网终端服务用 name.mobi，场景一词讲透——.mobi 是 2005 年由诺基亚、微软、沃达丰等联合发起的移动专用顶级域，也是少数「为一种设备而生」的后缀，二十年过去仍是移动语义最直白的选择。注册局为 Identity Digital（原 Afilias 体系），运营历史长、解析与注册商生态成熟稳定。它与已收录的 .app/.tech/.online 分工清晰：.app 说应用形态，.tech 说技术属性，.online 说在线——.mobi 直指「手机/移动端」这个使用场景，做移动专版与 App 落地页定位最准。价格偏高一档：首年约 $4（约 ¥30），续费约 $42/年（约 ¥300）——续费明显高于新顶级域均值，长期持有前先确认预算。库存尚可：早期抢注热潮留下不少已注册域名，但组合词与长尾词仍有大量空间。注意两点：一是早年注册局曾要求移动端适配，如今该限制已取消，但「.mobi 是老式 WAP 站」的刻板印象仍在，品牌主站慎用；二是响应式设计普及后，独立移动站的必要性下降，更适合做落地页与活动页而非主域。命名上「品牌 + .mobi」（acme.mobi）最主流，「动词/服务词 + .mobi」（book.mobi）适合工具与活动页。",
+      bestFor: ["移动端专版站与 H5 落地页", "App 官网与下载页", "移动营销与短链活动页", "车载与物联网终端服务"],
+      namingTips: [
+        "「品牌 + .mobi」一眼说明这是手机端入口",
+        "首年约 $4、续费约 $42/年，续费高于新顶级域均值",
+        "移动场景用 .mobi，应用形态用 .app，技术属性用 .tech",
+        "响应式已是主流，更适合落地页与活动页而非品牌主域",
+      ],
+    },
+    en: {
+      title: ".mobi Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".mobi is the veteran suffix built for mobile — for mobile-specific sites and H5 landing pages, app homepages and download pages, mobile marketing and short-link campaigns, and in-car or IoT terminal services. See live pricing and naming advice, then hunt available .mobi names with AI.",
+      intro:
+        ".mobi writes the device into the address: mobile-specific sites and H5 landing pages, app homepages and download pages, mobile marketing and short-link campaigns, and in-car or IoT terminal services on name.mobi name the context in one word — .mobi launched in 2005, backed by Nokia, Microsoft, Vodafone and others as a mobile-only top-level domain, one of the very few suffixes created for a single class of device, and twenty years on it is still the bluntest way to say \"phone\" in a domain. The registry is Identity Digital (the former Afilias stack), with a long operating history and a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .app, .tech and .online: .app names the software form, .tech names the field, .online names presence — .mobi names the mobile context itself, so device-specific sites and app landing pages position sharpest here. Pricing sits a tier high: about $4 first year (≈¥30) and $42/yr to renew (≈¥300) — clearly above the new-gTLD average, so confirm the budget before holding long-term. Inventory is decent: the mid-2000s land rush left many names taken, but compound and long-tail terms still have plenty of room. Two cautions: the registry's original mobile-formatting requirement was retired years ago, yet the \"old WAP site\" stereotype lingers, so flagship brand sites should think twice; and responsive design has reduced the need for separate mobile sites, making .mobi better suited to landing and campaign pages than to a primary domain. Naming: brand + .mobi (acme.mobi) is the mainstream shape; verb or service word + .mobi (book.mobi) suits tools and campaigns.",
+      bestFor: ["Mobile-specific sites & H5 landing pages", "App homepages & download pages", "Mobile marketing & short-link campaigns", "In-car & IoT terminal services"],
+      namingTips: [
+        "Brand + .mobi says \"this is the phone entrance\" at a glance",
+        "About $4 year one, $42/yr renewal — above the new-gTLD average",
+        "The mobile context fits .mobi; the software .app; the field .tech",
+        "Responsive design rules — better for landing pages than a main domain",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
