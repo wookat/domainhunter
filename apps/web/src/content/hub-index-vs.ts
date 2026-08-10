@@ -418,4 +418,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "ie-vs-uk", a: "ie", b: "uk", title: { zh: ".ie 和 .uk 怎么选：爱尔兰与英国两大英语市场 ccTLD 的对比", en: ".ie vs .uk: Ireland or the UK — Two English-Speaking Markets Compared" } },
   { slug: "nz-vs-au", a: "nz", b: "au", title: { zh: ".nz 和 .au 怎么选：新西兰与澳大利亚两大大洋洲 ccTLD 的对比", en: ".nz vs .au: New Zealand or Australia — Two Oceanian ccTLDs Compared" } },
   { slug: "mx-vs-es", a: "mx", b: "es", title: { zh: ".mx 和 .es 怎么选：墨西哥与西班牙两大西语市场 ccTLD 的对比", en: ".mx vs .es: Mexico or Spain — Two Spanish-Language ccTLDs Compared" } },
+  { slug: "br-vs-pt", a: "br", b: "pt", title: { zh: ".br 和 .pt 怎么选：巴西与葡萄牙两大葡语 ccTLD 的对比", en: ".br vs .pt: Brazil or Portugal — Two Portuguese-Language ccTLDs Compared" } },
+  { slug: "br-vs-mx", a: "br", b: "mx", title: { zh: ".br 和 .mx 怎么选：拉美两大经济体 ccTLD 的对比", en: ".br vs .mx: Brazil or Mexico — Latin America's Two Biggest ccTLDs Compared" } },
+  { slug: "cz-vs-pl", a: "cz", b: "pl", title: { zh: ".cz 和 .pl 怎么选：捷克与波兰两大中欧 ccTLD 的对比", en: ".cz vs .pl: Czechia or Poland — Two Central European ccTLDs Compared" } },
+  { slug: "tr-vs-ae", a: "tr", b: "ae", title: { zh: ".tr 和 .ae 怎么选：土耳其与阿联酋两大欧亚门户 ccTLD 的对比", en: ".tr vs .ae: Türkiye or the UAE — Two Eurasian Gateway ccTLDs Compared" } },
+  { slug: "id-vs-sg", a: "id", b: "sg", title: { zh: ".id 和 .sg 怎么选：印尼与新加坡两大东南亚 ccTLD 的对比", en: ".id vs .sg: Indonesia or Singapore — Two Southeast Asian ccTLDs Compared" } },
+  { slug: "id-vs-me", a: "id", b: "me", title: { zh: ".id 和 .me 怎么选：两个「身份系」ccTLD 的语义与市场对比", en: ".id vs .me: Two \"Identity\" ccTLDs — Semantics and Markets Compared" } },
 ];
