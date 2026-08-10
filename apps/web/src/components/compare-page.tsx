@@ -1,6 +1,7 @@
 import { CheckCircle2, HelpCircle, Scale, Sparkles } from "lucide-react";
 
 import { buildCompareFaq } from "@/content/compare-faq";
+import { compareLabel, relatedCompares } from "@/content/compare-slugs";
 import { readInjectedContent } from "@/content/injected";
 import { NotFoundPage } from "@/components/not-found-page";
 import { useI18n } from "@/lib/i18n";
@@ -21,6 +22,7 @@ export function ComparePage({ slug }: { slug: string }) {
   const picks = [loc.pickA, loc.pickB] as const;
   const faq = buildCompareFaq(cmp, lang);
   const relatedGuides = content.relatedGuides;
+  const related = relatedCompares(slug);
 
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -116,6 +118,24 @@ export function ComparePage({ slug }: { slug: string }) {
                 className="flex min-h-[44px] items-center rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
               >
                 {g[lang]}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 同 TLD 相关对比互链 */}
+      {related.length > 0 && (
+        <div className="mt-6">
+          <h2 className="text-sm font-semibold text-txt1">{t("vs.related")}</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {related.map((other) => (
+              <a
+                key={other}
+                href={`/vs/${other}?lang=${lang}`}
+                className="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+              >
+                {compareLabel(other)}
               </a>
             ))}
           </div>

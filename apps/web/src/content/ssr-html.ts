@@ -9,7 +9,9 @@ import { TLD_COMPARES, comparesForTld, type TldCompare } from "./compares";
 import { buildCompareFaq } from "./compare-faq";
 import { buildGuideFaq } from "./guide-faq";
 import { buildTldFaq } from "./tld-faq";
-import { COMPARE_SLUGS, compareLabel } from "./compare-slugs";
+import { COMPARE_SLUGS, compareLabel, relatedCompares } from "./compare-slugs";
+import { GUIDE_LABELS } from "./guide-labels";
+import { relatedGuideSlugs } from "./guide-groups";
 import { GUIDE_LIST, INDUSTRY_GUIDES, guidesForTld, type IndustryGuide } from "./guides";
 import { HUB_META, compareHubGroups, guideHubGroups, guideOneLiner, tldHubGroups, tldOneLiner } from "./hubs";
 import { relatedTlds } from "./tld-groups";
@@ -82,6 +84,8 @@ const STR = {
     guideCtaDesc: "一键填入该行业模板，AI 批量构思并实时核验可注册的好域名。", // guide.ctaDesc
     guideCtaButton: "开始猎取", // guide.ctaButton
     guideOthers: "其他行业命名指南", // guide.others
+    guideRelated: "相关行业指南", // guide.related
+    vsRelated: "相关对比", // vs.related
   },
   en: {
     seeAll: `See prices for all ${TLD_LIST.length} TLDs →`,
@@ -109,6 +113,8 @@ const STR = {
     guideCtaDesc: "Prefill the industry template — AI brainstorms in bulk and verifies availability live.",
     guideCtaButton: "Start hunting",
     guideOthers: "More industry naming guides",
+    guideRelated: "Related industry guides", // guide.related
+    vsRelated: "Related comparisons", // vs.related
   },
 } as const;
 
@@ -252,6 +258,15 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang): string[] {
     })
     .join("")}</div>`;
   const pricesLink = `<p class="mt-4 text-center"><a href="/prices?lang=${lang}" class="inline-flex min-h-[44px] items-center px-2 text-sm text-txt1 hover:text-brand hover:underline">${escapeHtml(s.seeAll)}</a></p>`;
+  const relatedCmp = relatedCompares(cmp.slug);
+  const related = relatedCmp.length
+    ? chipRow(
+        s.vsRelated,
+        relatedCmp
+          .map((other) => `<a href="/vs/${other}?lang=${lang}" class="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">${escapeHtml(compareLabel(other))}</a>`)
+          .join(""),
+      )
+    : "";
   const guides = relatedGuides.length
     ? chipRow(
         s.relatedGuides,
@@ -281,6 +296,7 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang): string[] {
     ctaBlock(s.vsCtaTitle(cmp.a, cmp.b), s.vsCtaDesc, `/?tld=${cmp.a},${cmp.b}`, s.vsCtaButton),
     pricesLink,
     guides,
+    related,
     others,
   ];
 }
@@ -320,6 +336,17 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
     }).join(""),
     "mt-10",
   );
+  const relatedIndustry = relatedGuideSlugs(guide.slug)
+    .map((other) => GUIDE_LABELS.find((g) => g.slug === other))
+    .filter((g): g is (typeof GUIDE_LABELS)[number] => g !== undefined);
+  const related = relatedIndustry.length
+    ? chipRow(
+        s.guideRelated,
+        relatedIndustry
+          .map((g) => `<a href="/guide/${g.slug}?lang=${lang}" class="flex min-h-[44px] items-center rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">${escapeHtml(g[lang])}</a>`)
+          .join(""),
+      )
+    : "";
   return [
     `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.intro)}</p>`,
     ideas,
@@ -330,6 +357,7 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
     faqBlock(faq, lang),
     ctaBlock(s.guideCtaTitle, s.guideCtaDesc, `/?tpl=${guide.slug}`, s.guideCtaButton),
     others,
+    related,
   ];
 }
 

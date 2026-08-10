@@ -354,6 +354,8 @@ const zh = {
   "guide.ctaDesc": "一键填入该行业模板，AI 批量构思并实时核验可注册的好域名。",
   "guide.ctaButton": "开始猎取",
   "guide.others": "其他行业命名指南",
+  "guide.related": "相关行业指南",
+  "vs.related": "相关对比",
   // 404 页
   "nf.title": "页面不存在",
   "nf.desc": "你访问的链接不存在或已被移除，请检查网址是否正确。",
@@ -765,6 +767,8 @@ const en: Record<I18nKey, string> = {
   "guide.ctaDesc": "Prefill the industry template — AI brainstorms in bulk and verifies availability live.",
   "guide.ctaButton": "Start hunting",
   "guide.others": "More industry naming guides",
+  "guide.related": "Related industry guides",
+  "vs.related": "Related comparisons",
   // 404 page
   "nf.title": "Page not found",
   "nf.desc": "The page you're looking for doesn't exist or has been removed. Please check the URL.",
