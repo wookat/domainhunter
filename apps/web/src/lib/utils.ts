@@ -1,7 +1,35 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-import type { TFunc } from "@/lib/i18n";
+import type { I18nKey, TFunc } from "@/lib/i18n";
+
+/** 渲染期再翻译的错误描述：key 存 i18n 键（随语言切换重译），literal 用于服务端返回的自定义 message */
+export type UiError = { key: I18nKey; params?: Record<string, string | number> } | { literal: string };
+
+export function uiErrorText(err: UiError, t: TFunc): string {
+  return "key" in err ? t(err.key, err.params) : err.literal;
+}
+
+export function httpErrorSpec(status: number): UiError {
+  if (status === 400) return { key: "error.badRequest" };
+  if (status === 429) return { key: "error.rateLimited" };
+  if (status >= 500) return { key: "error.server" };
+  return { key: "error.http", params: { status } };
+}
+
+/** 携带 UiError 的异常：抛出点只定错误类别，翻译留到渲染期 */
+export class UiErrorException extends Error {
+  constructor(readonly spec: UiError) {
+    super("key" in spec ? spec.key : spec.literal);
+    this.name = "UiErrorException";
+  }
+}
+
+export function errorSpec(e: Error): UiError {
+  if (e instanceof UiErrorException) return e.spec;
+  if (e instanceof TypeError) return { key: "error.network" };
+  return e.message ? { literal: e.message } : { key: "error.unknown" };
+}
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
