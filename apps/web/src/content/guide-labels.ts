@@ -305,4 +305,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "boxing", zh: "拳击馆", en: "Boxing gyms" },
   { slug: "taekwondo", zh: "跆拳道馆", en: "Taekwondo schools" },
   { slug: "fencing", zh: "击剑俱乐部", en: "Fencing clubs" },
+  { slug: "gymnastics", zh: "体操培训", en: "Gymnastics academies" },
+  { slug: "cheerleading", zh: "啦啦操", en: "Cheerleading" },
+  { slug: "squash", zh: "壁球馆", en: "Squash clubs" },
+  { slug: "lacrosse", zh: "长曲棍球", en: "Lacrosse clubs" },
+  { slug: "judo", zh: "柔道馆", en: "Judo dojos" },
+  { slug: "bjj", zh: "巴西柔术", en: "BJJ academies" },
 ];

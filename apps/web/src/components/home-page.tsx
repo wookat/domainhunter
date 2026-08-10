@@ -2187,6 +2187,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一家击剑俱乐部与青少年击剑培训，寓意「白衣敬礼之后的一剑封喉」；气质要优雅有锋、贵而不势利；场景是剑道旁点名、赛事秩序册和家长群晒等级证书里都念得顺、立得住。",
     en: "A fencing club and youth academy. The name should promise the one clean touch after the salute in whites; the vibe is elegant with an edge, refined without snobbery; it must call well at the piste, hold its own in the tournament programme, and read proudly beside the level certificate.",
   },
+  {
+    slug: "gymnastics",
+    labelZh: "体操培训",
+    labelEn: "Gymnastics academy",
+    zh: "一家体操培训与少儿体操馆，寓意「腾空翻转之后稳稳落地」；气质要稳中带飞、孩子觉得酷家长觉得靠谱；场景是馆内点名、考级证书和幼儿园门口的招生易拉宝上都念得顺、立得住。",
+    en: "A gymnastics academy and kids' gym. The name should carry the flight of the tumble and the landing stuck without a wobble; the vibe is controlled flight, cool to the kid and credible to the parent; it must call well at roll call, sit with dignity on the level certificate, and hold up on the enrolment banner.",
+  },
+  {
+    slug: "cheerleading",
+    labelZh: "啦啦操",
+    labelEn: "Cheerleading gym",
+    zh: "一家啦啦操俱乐部与啦啦队培训机构，寓意「把能量喊给全场的那一声」；气质要热血闪耀、凶得漂亮不失集体的暖；场景是赛场边齐喊、队服背后和招新海报上都响亮好念、立得住。",
+    en: "A cheerleading gym and all-star program. The name should carry the shout that hands the whole arena its energy; the vibe is fierce and radiant with the warmth of belonging; it must chant well at the sideline, print proudly on the uniform, and pop on the tryout poster.",
+  },
+  {
+    slug: "squash",
+    labelZh: "壁球馆",
+    labelEn: "Squash club",
+    zh: "一家壁球馆与壁球俱乐部，寓意「四面墙之内的极速拉锯」；气质要利落聪明、精英感与开放感平衡得体；场景是订场小程序、会籍卡和写字楼午间约球群里都好念好搜、立得住。",
+    en: "A squash club and training venue. The name should carry the high-speed rally inside four walls; the vibe is sharp and smart, balancing prestige with an open door; it must search well in the booking app, sit cleanly on the membership card, and read fast in the lunchtime match-up chat.",
+  },
+  {
+    slug: "lacrosse",
+    labelZh: "长曲棍球",
+    labelEn: "Lacrosse club",
+    zh: "一家长曲棍球俱乐部与青训机构，寓意「网兜甩出的那道弧线」；气质要传统与新潮并存、圈内认亲圈外好懂；场景是青训选拔、联赛秩序册和家长群转发招生海报里都体面好念、立得住。",
+    en: "A lacrosse club and youth program. The name should carry the arc the ball draws out of the pocket; the vibe holds heritage and momentum at once, kin to insiders and clear to newcomers; it must read proudly at tryouts, hold its own in the league handbook, and travel well in the parents' group chat.",
+  },
+  {
+    slug: "judo",
+    labelZh: "柔道馆",
+    labelEn: "Judo dojo",
+    zh: "一家柔道馆与少儿柔道培训，寓意「先学鞠躬再学摔法的以柔克刚」；气质要有「道」的分量配巧劲的智慧、孩子念得响家长读得懂；场景是道服刺绣、段位证书和道馆门头上都体面立得住。",
+    en: "A judo dojo and kids' program. The name should carry the gentle way that teaches the bow before the throw; the vibe weighs the way with the wisdom of yielding, easy for a child to say and a parent to trust; it must embroider well on the gi, sit with dignity on the rank certificate, and hold up over the dojo door.",
+  },
+  {
+    slug: "bjj",
+    labelZh: "巴西柔术",
+    labelEn: "BJJ academy",
+    zh: "一家巴西柔术馆与柔术学院，寓意「地面上的下棋、以巧胜力」；气质要谱系可信、狠而有门、白领敢来小白敢试；场景是道服臂章、赛队报名表和会员打卡照里都立得住、认得出。",
+    en: "A Brazilian jiu-jitsu academy. The name should promise chess played on the floor, technique beating strength; the vibe is lineage-credible with an open door, fierce enough for the comp team and welcoming to the first-timer; it must patch well on the gi sleeve, hold up on the tournament roster, and read proudly in the member's mat-selfie caption.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
