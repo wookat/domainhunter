@@ -12,7 +12,7 @@ import { GUIDE_LABELS } from "@/content/guide-labels";
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { useI18n } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
-import { friendlyError, friendlyHttpError } from "@/lib/utils";
+import { errorSpec, httpErrorSpec, UiErrorException, uiErrorText, type UiError } from "@/lib/utils";
 import type { AiErrorKind, Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types";
 
 // 按路由懒加载：这些页面不在首屏关键路径上，拆包降低首屏 JS。
@@ -174,7 +174,8 @@ export default function App() {
   const [rounds, setRounds] = useState<RoundInfo[]>(saved?.rounds ?? []);
   const [currentRound, setCurrentRound] = useState(0);
   const [running, setRunning] = useState(false);
-  const [error, setError] = useState("");
+  // 错误条存结构化描述（i18n key/params 或服务端 literal），渲染期再 t()，切换语言即重译
+  const [error, setError] = useState<UiError | null>(null);
   // R264：AI 上游错误类别：quota 类重试无效，不展示重试 CTA
   const [errorKind, setErrorKind] = useState<AiErrorKind | null>(null);
   // R247：多轮低产出提示（worker 每次搜索至多发一次 hint 事件）
@@ -293,8 +294,8 @@ export default function App() {
       const kind = ev.errorKind ?? "unknown";
       setErrorKind(kind);
       if (kind === "quota") markAiQuotaDown();
-      setError(
-        t(
+      setError({
+        key:
           kind === "quota"
             ? "error.ai.quota"
             : kind === "rate-limit"
@@ -304,8 +305,7 @@ export default function App() {
                 : kind === "network"
                   ? "error.ai.network"
                   : "error.ai",
-        ),
-      );
+      });
     } else if (ev.domain) {
       const status = ev.status as Status;
       setLogs((prev) => [...prev.slice(-19), { domain: ev.domain!, status, cached: ev.cached }]);
@@ -345,7 +345,7 @@ export default function App() {
       roundOffsetRef.current = 0;
     }
     setLogs([]);
-    setError("");
+    setError(null);
     setErrorKind(null);
     setLowYieldHint(false);
     setRunning(true);
@@ -397,12 +397,12 @@ export default function App() {
         signal: ac.signal,
       });
       if (!res.ok) {
-        let msg = friendlyHttpError(res.status, t);
+        let spec = httpErrorSpec(res.status);
         try {
           const j = (await res.json()) as { message?: string };
-          if (j.message) msg = j.message;
+          if (j.message) spec = { literal: j.message };
         } catch { /* 非 JSON 响应，用默认文案 */ }
-        throw new Error(msg);
+        throw new UiErrorException(spec);
       }
       const reader = res.body!.getReader();
       const decoder = new TextDecoder();
@@ -419,7 +419,7 @@ export default function App() {
         }
       }
     } catch (e) {
-      if ((e as Error).name !== "AbortError") setError(friendlyError(e as Error, t));
+      if ((e as Error).name !== "AbortError") setError(errorSpec(e as Error));
     } finally {
       setRunning(false);
       setElapsedSec(Math.round((Date.now() - startedAtRef.current) / 1000));
@@ -630,7 +630,7 @@ export default function App() {
       {error && (
         <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
           <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5">
-            <p className="text-sm text-destructive">{error}</p>
+            <p className="text-sm text-destructive">{uiErrorText(error, t)}</p>
             {quotaExhausted && (
               <span className="flex flex-wrap items-center gap-2 text-xs text-txt1">
                 <span>{t("error.ai.fallbackLead")}</span>
@@ -659,7 +659,7 @@ export default function App() {
                 className="shrink-0 rounded-md border border-destructive/40 px-3 py-1.5 text-sm font-semibold text-destructive transition-colors hover:bg-destructive/20"
                 onClick={() => {
                   const last = lastRunRef.current!;
-                  setError("");
+                  setError(null);
                   setErrorKind(null);
                   void run(last.v, last.opts);
                 }}
