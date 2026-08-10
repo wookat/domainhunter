@@ -328,4 +328,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "organic-vs-bio", a: "organic", b: "bio", title: { zh: ".organic 和 .bio 怎么选：有机品类标准与一词双关", en: ".organic vs .bio: The Category Standard or the Continental Shorthand" } },
   { slug: "tattoo-vs-ink", a: "tattoo", b: "ink", title: { zh: ".tattoo 和 .ink 怎么选：行业直给与意象留白", en: ".tattoo vs .ink: Industry-Direct or Imagery With Room" } },
   { slug: "casa-vs-house", a: "casa", b: "house", title: { zh: ".casa 和 .house 怎么选：西语的家与英语的房子", en: ".casa vs .house: Home in Spanish or English" } },
+  { slug: "casino-vs-bet", a: "casino", b: "bet", title: { zh: ".casino 和 .bet 怎么选：场馆招牌与动作词", en: ".casino vs .bet: The Venue Sign or the Action Word" } },
+  { slug: "bet-vs-poker", a: "bet", b: "poker", title: { zh: ".bet 和 .poker 怎么选：泛博彩动作与单一牌种", en: ".bet vs .poker: The Broad Action or the Single Game" } },
+  { slug: "poker-vs-games", a: "poker", b: "games", title: { zh: ".poker 和 .games 怎么选：单一牌种与泛游戏行业", en: ".poker vs .games: One Card Game or the Whole Industry" } },
+  { slug: "vodka-vs-wine", a: "vodka", b: "wine", title: { zh: ".vodka 和 .wine 怎么选：烈酒单品与酒文化大类", en: ".vodka vs .wine: The Single Spirit or the Whole Cellar" } },
+  { slug: "futbol-vs-soccer", a: "futbol", b: "soccer", title: { zh: ".futbol 和 .soccer 怎么选：西语的足球与北美的足球", en: ".futbol vs .soccer: The Spanish Game or the North American Name" } },
+  { slug: "moda-vs-fashion", a: "moda", b: "fashion", title: { zh: ".moda 和 .fashion 怎么选：西语的时尚与英语的时尚", en: ".moda vs .fashion: Style in Spanish or English" } },
 ];
