@@ -7044,6 +7044,186 @@ const GUIDES = {
       ],
     },
   },
+  careers: {
+    tld: "careers",
+    zh: {
+      title: ".careers 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".careers 是招聘与职业发展的专属后缀，适合企业招聘官网、猎头与人力资源机构、垂直行业招聘平台、职业规划与求职辅导内容。查看 .careers 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .careers 域名。",
+      intro:
+        ".careers 把「招聘」写进域名：企业招聘官网、猎头与人力资源机构、垂直行业招聘平台、职业规划与求职辅导内容用 name.careers，求职者搜「公司/行业 + careers」时域名与搜索意图严丝合缝——很多大公司招聘页本就叫 careers 子页，brand.careers 是更干净的独立入口。该后缀由 Identity Digital（原 Donuts）注册局运营，首年约 $16（约 ¥115），续费约 $57/年（约 ¥412），续费在行业后缀里偏贵，适合把招聘当长期品牌资产的企业而非临时项目。库存极好：公司名、行业词、城市词基本都有货，而 XXcareers.com 与 XXjobs.com 早被招聘平台占光。注意三点：一是受限的 .jobs 需要企业验证且认知一般，.careers 开放注册更省事；二是续费较贵，短期招聘活动可用主站子页而非独立域名；三是招聘站涉及个人信息，隐私政策与数据合规要同步做好。命名上「品牌 + .careers」适合企业招聘官网，「行业 + .careers」适合垂类招聘平台，「城市 + .careers」适合本地人力资源服务。",
+      bestFor: ["企业招聘官网", "猎头与人力资源机构", "垂直行业招聘平台", "职业规划与求职辅导"],
+      namingTips: [
+        "「品牌 + .careers」是招聘页的天然独立入口",
+        "首年约 $16、续费约 $57/年，适合长期持有而非临时活动",
+        "受限的 .jobs 需企业验证，.careers 开放注册更省事",
+        "行业/城市 + .careers 适合垂类与本地招聘平台",
+      ],
+    },
+    en: {
+      title: ".careers Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".careers is the dedicated suffix for hiring and career growth — for company hiring sites, recruiters and HR agencies, vertical job boards, and career coaching content. See live pricing and naming advice, then hunt available .careers names with AI.",
+      intro:
+        ".careers writes hiring into the domain: company hiring sites, recruiters and HR agencies, vertical job boards, and career-coaching content on name.careers match exactly what candidates search — company or industry + careers — and since big companies already call their hiring page \"careers\", brand.careers is the cleaner standalone front door. Operated by Identity Digital (formerly Donuts), it runs about $16 for the first year (≈¥115) and $57/yr to renew (≈¥412) — renewal sits at the pricier end of industry suffixes, so it suits employers treating hiring as a long-term brand asset rather than a one-off campaign. Inventory is excellent: company names, industry words and city words nearly all hit, while every XXcareers.com and XXjobs.com was claimed by job platforms long ago. Three cautions: the restricted .jobs requires employer verification with mediocre recognition — .careers registers openly with less friction; renewal is pricey, so short campaigns may fit a subpage of your main site better; and hiring sites handle personal data, so ship privacy policy and compliance alongside. Naming: brand + .careers fits company hiring sites; industry + .careers fits vertical job boards; city + .careers fits local HR services.",
+      bestFor: ["Company hiring sites", "Recruiters & HR agencies", "Vertical job boards", "Career coaching & job-search content"],
+      namingTips: [
+        "Brand + .careers is the natural standalone hiring front door",
+        "About $16 year one, $57/yr renewal — hold long-term, not for one-off campaigns",
+        "Restricted .jobs needs employer verification; .careers registers openly",
+        "Industry or city + .careers fits vertical and local job boards",
+      ],
+    },
+  },
+  management: {
+    tld: "management",
+    zh: {
+      title: ".management 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".management 是管理服务的专属后缀，适合物业与资产管理公司、项目与工程管理服务、财富与投资管理机构、管理咨询与企业培训。查看 .management 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .management 域名。",
+      intro:
+        ".management 把「管理」写进域名：物业与资产管理公司、项目与工程管理服务、财富与投资管理机构、管理咨询与企业培训用 name.management，客户搜「品类 + management」时域名就是搜索词本身——property.management 或 wealth.management 这样的组合不用解释就知道做什么。该后缀由 Identity Digital（原 Donuts）注册局运营，首年约 $8（约 ¥59），续费约 $21/年（约 ¥152），在行业后缀里属中档好持有。库存极好：品类词、城市词、品牌词基本都有货，而 XXmanagement.com 早被物业与资管公司占光。注意三点：一是 management 拼写较长（10 个字母），口头传播时确认对方拼对；二是资管与财富管理涉及金融牌照，域名之外把资质展示清楚；三是泛咨询业务可斟酌已收录的 .consulting / .services，管理垂类用这里最准。命名上「品类 + .management」适合垂类服务商（物业/项目/财富），「城市 + .management」适合本地物业管理，「品牌 + .management」适合管理咨询公司官网。",
+      bestFor: ["物业与资产管理公司", "项目与工程管理服务", "财富与投资管理机构", "管理咨询与企业培训"],
+      namingTips: [
+        "「品类 + .management」就是客户的搜索词",
+        "首年约 $8、续费约 $21/年，中档好持有",
+        "拼写较长，口头传播时确认对方拼对",
+        "泛咨询可斟酌 .consulting / .services，管理垂类用这里",
+      ],
+    },
+    en: {
+      title: ".management Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".management is the dedicated suffix for management services — for property and asset managers, project management services, wealth management firms, and management consulting or training. See live pricing and naming advice, then hunt available .management names with AI.",
+      intro:
+        ".management writes the service into the domain: property and asset managers, project management services, wealth management firms, and management consultants on name.management match exactly what clients search — category + management — and a name like property.management or wealth.management needs no explanation. Operated by Identity Digital (formerly Donuts), about $8 for the first year (≈¥59) and $21/yr to renew (≈¥152) — mid-priced and easy to hold among industry suffixes. Inventory is excellent: category words, city words and brand words nearly all hit, while every XXmanagement.com was claimed by property and asset firms long ago. Three cautions: management is a long spelling (10 letters), so confirm it lands right when said aloud; wealth and asset management touch financial licensing — display credentials beyond the domain; and broad consulting practices may fit the already-listed .consulting or .services better — the management vertical lives here. Naming: category + .management fits vertical providers (property, project, wealth); city + .management fits local property managers; brand + .management fits consulting firm sites.",
+      bestFor: ["Property & asset managers", "Project management services", "Wealth & investment management firms", "Management consulting & training"],
+      namingTips: [
+        "Category + .management is exactly what clients search",
+        "About $8 year one, $21/yr renewal — mid-priced, easy to hold",
+        "Ten letters — confirm the spelling lands when said aloud",
+        "Broad consulting may fit .consulting/.services; management lives here",
+      ],
+    },
+  },
+  contractors: {
+    tld: "contractors",
+    zh: {
+      title: ".contractors 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".contractors 是承包商行业的专属后缀，适合建筑与装修总包公司、电气水暖等专业分包、屋顶外墙等专项施工队、承包商目录与接单平台。查看 .contractors 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .contractors 域名。",
+      intro:
+        ".contractors 把「承包商」写进域名：建筑与装修总包公司、电气水暖等专业分包、屋顶外墙等专项施工队、承包商目录与接单平台用 name.contractors，业主搜「城市/工种 + contractors」时域名就是搜索词本身——roofing.contractors 或 dallas.contractors 这样的名字自带本地施工队联想。该后缀由 Identity Digital（原 Donuts）注册局运营，首年约 $6（约 ¥41），续费约 $28/年（约 ¥204），首年便宜、续费中档。库存极好：工种词、城市词、品牌词基本都有货，而 XXcontractors.com 早被建筑公司与接单平台占光。注意三点：一是 contractors 拼写长（11 个字母），车贴与广告把完整域名印清楚；二是施工行业重资质与保险，域名之外把执照编号与保险信息展示出来；三是单一工种可斟酌已收录的 .builders / .construction / .repair / .plumbing，多工种综合承包用这里最准。命名上「工种 + .contractors」适合专业分包，「城市 + .contractors」适合本地总包与目录站，「品牌 + .contractors」适合承包公司官网。",
+      bestFor: ["建筑与装修总包公司", "电气水暖等专业分包", "屋顶外墙等专项施工队", "承包商目录与接单平台"],
+      namingTips: [
+        "「城市/工种 + .contractors」就是业主的搜索词",
+        "首年约 $6、续费约 $28/年，首年便宜续费中档",
+        "拼写 11 个字母，车贴与广告把域名印清楚",
+        "单一工种可斟酌 .builders / .plumbing 等，综合承包用这里",
+      ],
+    },
+    en: {
+      title: ".contractors Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".contractors is the dedicated suffix for the contracting trades — for general contractors and remodelers, electrical and plumbing subcontractors, roofing and specialty crews, and contractor directories. See live pricing and naming advice, then hunt available .contractors names with AI.",
+      intro:
+        ".contractors writes the trade into the domain: general contractors and remodelers, electrical and plumbing subs, roofing and specialty crews, and contractor directories on name.contractors match exactly what homeowners search — city or trade + contractors — and a name like roofing.contractors or dallas.contractors carries instant local-crew recall. Operated by Identity Digital (formerly Donuts), about $6 for the first year (≈¥41) and $28/yr to renew (≈¥204) — cheap to start, mid-priced to hold. Inventory is excellent: trade words, city words and brand words nearly all hit, while every XXcontractors.com was claimed by construction firms and lead platforms long ago. Three cautions: contractors is a long spelling (11 letters) — print the full domain clearly on trucks and ads; the trades run on licensing and insurance, so display license numbers and coverage beyond the domain; and single-trade shops may fit the already-listed .builders, .construction, .repair or .plumbing better — multi-trade general contracting lives here. Naming: trade + .contractors fits specialty subs; city + .contractors fits local GCs and directories; brand + .contractors fits company sites.",
+      bestFor: ["General contractors & remodelers", "Electrical & plumbing subcontractors", "Roofing & specialty crews", "Contractor directories & lead platforms"],
+      namingTips: [
+        "City or trade + .contractors is exactly what homeowners search",
+        "About $6 year one, $28/yr renewal — cheap start, mid-priced hold",
+        "Eleven letters — print the full domain clearly on trucks and ads",
+        "Single trades may fit .builders/.plumbing; general contracting lives here",
+      ],
+    },
+  },
+  equipment: {
+    tld: "equipment",
+    zh: {
+      title: ".equipment 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".equipment 是设备器材行业的专属后缀，适合工程与农用设备经销租赁、健身与运动器材电商、餐饮与商用设备供应商、二手设备交易与回收。查看 .equipment 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .equipment 域名。",
+      intro:
+        ".equipment 把「设备」写进域名：工程与农用设备经销租赁、健身与运动器材电商、餐饮与商用设备供应商、二手设备交易与回收用 name.equipment，买家搜「品类 + equipment」时域名就是搜索词本身——gym.equipment 或 farm.equipment 这样的组合不用解释就知道卖什么。该后缀由 Identity Digital（原 Donuts）注册局运营，首年约 $11（约 ¥78），续费约 $23/年（约 ¥167），在行业后缀里属中档好持有。库存极好：品类词、行业词、品牌词基本都有货，而 XXequipment.com 早被设备经销商占光。注意三点：一是 equipment 拼写较长（9 个字母）且易漏拼，广告物料把完整域名印清楚；二是大型设备交易重线下履约，域名之外把仓库地址与售后网点写清楚；三是泛工具类可斟酌已收录的 .tools / .supply 方向，成套设备用这里最准。命名上「品类 + .equipment」适合垂类经销商（健身/农用/餐饮），「租赁词 + .equipment」适合设备租赁平台，「品牌 + .equipment」适合厂商直销官网。",
+      bestFor: ["工程与农用设备经销租赁", "健身与运动器材电商", "餐饮与商用设备供应商", "二手设备交易与回收"],
+      namingTips: [
+        "「品类 + .equipment」就是买家的搜索词",
+        "首年约 $11、续费约 $23/年，中档好持有",
+        "拼写较长易漏拼，物料把完整域名印清楚",
+        "泛工具可斟酌 .tools，成套设备用这里",
+      ],
+    },
+    en: {
+      title: ".equipment Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".equipment is the dedicated suffix for the equipment trade — for heavy and farm equipment dealers, gym and sports gear e-commerce, restaurant and commercial suppliers, and used-equipment marketplaces. See live pricing and naming advice, then hunt available .equipment names with AI.",
+      intro:
+        ".equipment writes the inventory into the domain: heavy and farm equipment dealers and rentals, gym and sports gear shops, restaurant and commercial suppliers, and used-equipment marketplaces on name.equipment match exactly what buyers search — category + equipment — and a name like gym.equipment or farm.equipment needs no explanation. Operated by Identity Digital (formerly Donuts), about $11 for the first year (≈¥78) and $23/yr to renew (≈¥167) — mid-priced and easy to hold among industry suffixes. Inventory is excellent: category words, industry words and brand words nearly all hit, while every XXequipment.com was claimed by dealers long ago. Three cautions: equipment is a longer spelling (9 letters) that invites typos — print the full domain clearly on ads; big-ticket equipment sales run on offline fulfillment, so publish warehouse locations and service coverage beyond the domain; and general tool shops may fit the already-listed .tools better — full equipment lines live here. Naming: category + .equipment fits vertical dealers (gym, farm, restaurant); rental words + .equipment fits rental platforms; brand + .equipment fits manufacturer direct sites.",
+      bestFor: ["Heavy & farm equipment dealers/rentals", "Gym & sports gear e-commerce", "Restaurant & commercial suppliers", "Used-equipment marketplaces"],
+      namingTips: [
+        "Category + .equipment is exactly what buyers search",
+        "About $11 year one, $23/yr renewal — mid-priced, easy to hold",
+        "Nine letters and typo-prone — print the full domain clearly",
+        "General tools may fit .tools; full equipment lines live here",
+      ],
+    },
+  },
+  supply: {
+    tld: "supply",
+    zh: {
+      title: ".supply 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".supply 是供应与耗材行业的专属后缀，适合建材五金与工业耗材商、餐饮美容等行业耗材供应、潮牌与设计师补给品牌、供应链与批发平台。查看 .supply 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .supply 域名。",
+      intro:
+        ".supply 把「供给」写进域名：建材五金与工业耗材商、餐饮美容等行业耗材供应、潮牌与设计师补给品牌、供应链与批发平台用 name.supply，客户搜「品类 + supply」时域名就是搜索词本身——coffee.supply 或 barber.supply 这样的组合自带「行业补给站」气质，欧美潮牌也爱用 supply 一词做品牌名。该后缀由 Identity Digital（原 Donuts）注册局运营，注册与续费均约 $21/年（约 ¥152），价格平进平出、没有首年低价陷阱。库存极好：品类词、行业词、品牌词基本都有货，而 XXsupply.com 早被批发商与潮牌占光。注意三点：一是单复数有别，.supplies 是另一个后缀，对外统一用单数拼写；二是无首年折扣，预算敏感的试水项目可先用已收录的 .store / .shop；三是批发生意重账期与物流，域名之外把起订量与配送范围写清楚。命名上「品类 + .supply」适合行业耗材商，「品牌 + .supply」适合潮牌与设计师品牌，「城市 + .supply」适合本地建材五金。",
+      bestFor: ["建材五金与工业耗材商", "餐饮美容等行业耗材供应", "潮牌与设计师补给品牌", "供应链与批发平台"],
+      namingTips: [
+        "「品类 + .supply」就是行业客户的搜索词",
+        "注册续费均约 $21/年，平进平出无陷阱",
+        "与 .supplies 单复数有别，对外统一单数拼写",
+        "潮牌爱用 supply 一词，品牌 + .supply 很衬气质",
+      ],
+    },
+    en: {
+      title: ".supply Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".supply is the dedicated suffix for supply businesses — for building material and industrial suppliers, trade consumables for restaurants and salons, streetwear supply brands, and wholesale platforms. See live pricing and naming advice, then hunt available .supply names with AI.",
+      intro:
+        ".supply writes the business into the domain: building material and industrial suppliers, trade consumables for restaurants and salons, streetwear and designer supply brands, and wholesale platforms on name.supply match exactly what trade customers search — category + supply — and a name like coffee.supply or barber.supply carries built-in \"trade depot\" character; streetwear brands love the word supply too. Operated by Identity Digital (formerly Donuts), both registration and renewal run about $21/yr (≈¥152) — flat pricing with no first-year bait. Inventory is excellent: category words, trade words and brand words nearly all hit, while every XXsupply.com was claimed by wholesalers and streetwear labels long ago. Three cautions: singular matters — .supplies is a different suffix, so standardize on the singular spelling everywhere; there's no first-year discount, so budget-sensitive experiments may start on the already-listed .store or .shop; and wholesale runs on terms and logistics — publish minimum orders and delivery coverage beyond the domain. Naming: category + .supply fits trade consumable shops; brand + .supply fits streetwear and designer labels; city + .supply fits local building suppliers.",
+      bestFor: ["Building material & industrial suppliers", "Trade consumables for restaurants & salons", "Streetwear & designer supply brands", "Wholesale & supply chain platforms"],
+      namingTips: [
+        "Category + .supply is exactly what trade customers search",
+        "About $21/yr flat for registration and renewal — no bait pricing",
+        ".supplies is a different suffix — standardize on the singular",
+        "Streetwear loves the word supply; brand + .supply fits the vibe",
+      ],
+    },
+  },
+  parts: {
+    tld: "parts",
+    zh: {
+      title: ".parts 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".parts 是零配件行业的专属后缀，适合汽车摩托零配件电商、家电与手机维修配件、工业备件与机械零件商、二手拆车件与回收平台。查看 .parts 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .parts 域名。",
+      intro:
+        ".parts 把「配件」写进域名：汽车摩托零配件电商、家电与手机维修配件、工业备件与机械零件商、二手拆车件与回收平台用 name.parts，买家搜「品牌/品类 + parts」时域名就是搜索词本身——bmw.parts 这类组合在海外配件圈早有成交案例，jeep.parts、truck.parts 一看就知道卖什么。该后缀由 Identity Digital（原 Donuts）注册局运营，首年约 $9（约 ¥63），续费约 $33/年（约 ¥241），首年便宜、续费中档。库存很好：品类词、车型词、城市词大多有货，而 XXparts.com 早被配件电商占光。注意三点：一是用汽车品牌词注册（如 bmw.parts）有商标风险，独立配件商注意合理使用与免责声明；二是配件生意重适配查询，域名之外把车型/型号匹配工具做好；三是维修服务本身可斟酌已收录的 .repair，卖件用这里最准。命名上「品类 + .parts」适合垂类配件电商（汽车/家电/机械），「车型/系统 + .parts」适合细分配件站，「品牌 + .parts」适合配件连锁官网。",
+      bestFor: ["汽车摩托零配件电商", "家电与手机维修配件", "工业备件与机械零件商", "二手拆车件与回收平台"],
+      namingTips: [
+        "「品类 + .parts」就是买家的搜索词",
+        "首年约 $9、续费约 $33/年，首年便宜续费中档",
+        "用汽车品牌词注册有商标风险，注意合理使用",
+        "修理服务可斟酌 .repair，卖件用这里",
+      ],
+    },
+    en: {
+      title: ".parts Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".parts is the dedicated suffix for the parts trade — for auto and moto parts e-commerce, appliance and phone repair parts, industrial spares dealers, and salvage marketplaces. See live pricing and naming advice, then hunt available .parts names with AI.",
+      intro:
+        ".parts writes the inventory into the domain: auto and moto parts shops, appliance and phone repair parts, industrial spares dealers, and salvage marketplaces on name.parts match exactly what buyers search — brand or category + parts — names like bmw.parts have real aftermarket sales history abroad, and jeep.parts or truck.parts needs no explanation. Operated by Identity Digital (formerly Donuts), about $9 for the first year (≈¥63) and $33/yr to renew (≈¥241) — cheap to start, mid-priced to hold. Inventory is strong: category words, vehicle words and city words mostly hit, while every XXparts.com was claimed by parts e-commerce long ago. Three cautions: registering car-brand words (like bmw.parts) carries trademark risk — independent sellers should mind nominative fair use and disclaimers; the parts trade runs on fitment lookup, so build model-matching tools beyond the domain; and repair services themselves may fit the already-listed .repair better — selling parts lives here. Naming: category + .parts fits vertical parts shops (auto, appliance, machinery); model or system + .parts fits niche parts sites; brand + .parts fits parts chain sites.",
+      bestFor: ["Auto & moto parts e-commerce", "Appliance & phone repair parts", "Industrial spares & machinery parts", "Salvage & used-parts marketplaces"],
+      namingTips: [
+        "Category + .parts is exactly what buyers search",
+        "About $9 year one, $33/yr renewal — cheap start, mid-priced hold",
+        "Car-brand words carry trademark risk — mind fair use",
+        "Repair services may fit .repair; selling parts lives here",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

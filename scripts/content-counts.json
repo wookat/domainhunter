@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 234,
+    "count": 240,
     "slugs": [
       "com",
       "net",
@@ -235,7 +235,13 @@
       "makeup",
       "homes",
       "boats",
-      "autos"
+      "autos",
+      "careers",
+      "management",
+      "contractors",
+      "equipment",
+      "supply",
+      "parts"
     ]
   },
   "guide": {
