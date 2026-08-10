@@ -7584,6 +7584,186 @@ const GUIDES = {
       ],
     },
   },
+  camp: {
+    tld: "camp",
+    zh: {
+      title: ".camp 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".camp 是露营与户外营地的专属后缀，适合营地与房车公园官网、夏令营与研学项目、户外装备品牌与训练营式课程。查看 .camp 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .camp 域名。",
+      intro:
+        ".camp 把「营地」直接挂在域名上：露营地与房车公园官网、亲子夏令营与研学项目、户外探险俱乐部用 name.camp，用户一眼就知道这是个「可以去住、去玩、去学」的地方。它还有一层引申义被科技圈玩得很转——训练营（bootcamp）：编程集训营、健身训练营、写作营用 code.camp、fit.camp 这样的名字，比 .courses 更有「沉浸式集训」的气氛。已收录的 .campsite/.campgear 行业指南对应的正是这个后缀的核心客群。注册局为 Identity Digital。价格是典型的首年促销结构：首年约 $12（约 ¥88），续费约 $55/年（约 ¥398），长期持有要按续费价做预算。库存极好：地名、自然词、活动词基本全有货。注意两点：一是 camp 在英语网络语境里另有「刻意夸张」的亚文化含义，做正式品牌时留意语境；二是营地生意季节性强，域名之外要把预订系统做好。命名上「地名/自然词 + .camp」（pine.camp、lakeside.camp）最直觉，「主题词 + .camp」（code.camp、art.camp）适合训练营类产品。",
+      bestFor: ["露营地与房车公园", "夏令营与研学项目", "编程/健身等训练营", "户外俱乐部与装备品牌"],
+      namingTips: [
+        "「地名/自然词 + .camp」自带营地画面感",
+        "首年约 $12、续费约 $55/年，按续费价做长期预算",
+        "训练营类产品用「主题词 + .camp」比 .courses 更有集训氛围",
+        "词根别再含 camp，避免 campsite.camp 式重复",
+      ],
+    },
+    en: {
+      title: ".camp Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".camp is the dedicated suffix for camping and outdoor sites — for campgrounds and RV parks, summer camps, bootcamp-style courses and outdoor gear brands. See live pricing and naming advice, then hunt available .camp names with AI.",
+      intro:
+        ".camp hangs the campsite right on the domain: campgrounds and RV parks, family summer camps, study-tour programs and outdoor clubs on name.camp read instantly as \"a place to stay, play and learn\". Tech circles gave it a second life via the bootcamp: coding bootcamps, fitness camps and writing retreats on code.camp or fit.camp carry an immersive-cohort vibe that .courses can't match. The already-listed campsite and campgear industry guides describe exactly this suffix's core audience. The registry is Identity Digital. Pricing follows the classic promo structure: about $12 first year (≈¥88) and $55/yr to renew (≈¥398), so budget on the renewal for long holds. Inventory is excellent — place names, nature words and activity words nearly all hit. Two cautions: in internet English, camp also means \"deliberately exaggerated\" as an aesthetic, so mind the context for formal brands; and campground businesses are seasonal — the domain is the door, the booking system is the business. Naming: place or nature word + .camp (pine.camp, lakeside.camp) is the intuitive shape; theme + .camp (code.camp, art.camp) suits bootcamp products.",
+      bestFor: ["Campgrounds & RV parks", "Summer camps & study tours", "Coding & fitness bootcamps", "Outdoor clubs & gear brands"],
+      namingTips: [
+        "Place or nature word + .camp paints the campsite instantly",
+        "About $12 year one, $55/yr renewal — budget on the renewal",
+        "Bootcamp products read more immersive on .camp than .courses",
+        "Never repeat camp in the root — avoid campsite.camp redundancy",
+      ],
+    },
+  },
+  camera: {
+    tld: "camera",
+    zh: {
+      title: ".camera 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".camera 是影像器材与摄影行业的专属后缀，适合相机器材店与二手器材平台、摄影师作品集、影像技术产品与摄像头硬件品牌。查看 .camera 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .camera 域名。",
+      intro:
+        ".camera 把「相机」写进域名：相机与镜头器材店、二手器材交易平台、摄影师个人站、影像技术产品用 name.camera，卖什么、做什么一目了然。它和已收录的 .photography/.photos/.photo 是近亲，但分工不同：.photography 说「摄影这门手艺」，.photos 说「照片本身」，.camera 说的是「器材与设备」——器材店、租赁行、测评媒体用 .camera 比 .photography 更准。智能硬件是它的第二战场：行车记录仪、安防摄像头、网络摄像头品牌用 name.camera，域名即品类。注册局为 Identity Digital。价格中档偏上：首年约 $13（约 ¥94），续费约 $52/年（约 ¥374），续费是首年数倍，长期持有按续费价算账。库存极好：品牌词、器材词、场景词全线有货。注意：后缀 6 个字母不算短，词根宜短；且语义强绑定「器材」，纯摄影服务（婚纱、写真）用 .photography 系更贴。命名上「品牌词 + .camera」最主流，「场景/用途 + .camera」（dash.camera、door.camera）适合硬件单品。",
+      bestFor: ["相机与镜头器材店", "二手器材交易平台", "摄像头与影像硬件品牌", "器材租赁与测评媒体"],
+      namingTips: [
+        "「品牌词 + .camera」域名即品类，器材生意零解释",
+        "首年约 $13、续费约 $52/年，长期按续费价预算",
+        "器材与设备类用 .camera，摄影服务类用 .photography 更贴",
+        "后缀 6 个字母，词根控制在 4–6 字符",
+      ],
+    },
+    en: {
+      title: ".camera Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".camera is the dedicated suffix for imaging gear and the photo trade — for camera stores, used-gear marketplaces, photographer portfolios and camera hardware brands. See live pricing and naming advice, then hunt available .camera names with AI.",
+      intro:
+        ".camera writes the gear into the address: camera and lens stores, used-equipment marketplaces, photographer sites and imaging-tech products on name.camera explain themselves at a glance. It's kin to the already-listed .photography, .photos and .photo, but the division of labor differs: .photography is the craft, .photos is the pictures, .camera is the equipment — so gear shops, rental houses and review media are more precise here. Smart hardware is its second front: dashcam, security-camera and webcam brands on name.camera make the domain the category. The registry is Identity Digital. Pricing is upper-mid: about $13 first year (≈¥94) and $52/yr to renew (≈¥374) — several times the intro, so budget on the renewal. Inventory is excellent: brand words, gear words and scenario words all hit. Cautions: the 6-letter suffix isn't short, so keep the root tight; and the semantics bind hard to equipment — photo services (weddings, portraits) read better on the .photography family. Naming: brand + .camera is the mainstream shape; scenario + .camera (dash.camera, door.camera) suits single-product hardware.",
+      bestFor: ["Camera & lens stores", "Used-gear marketplaces", "Camera hardware brands", "Gear rental & review media"],
+      namingTips: [
+        "Brand + .camera makes the domain the category — zero explanation",
+        "About $13 year one, $52/yr renewal — budget on the renewal",
+        "Gear and hardware take .camera; photo services fit .photography better",
+        "The 6-letter suffix needs a root of 4–6 characters",
+      ],
+    },
+  },
+  diamonds: {
+    tld: "diamonds",
+    zh: {
+      title: ".diamonds 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".diamonds 是钻石与高级珠宝的专属后缀，适合钻石零售与定制品牌、培育钻石电商、婚戒定制工作室与宝石批发商。查看 .diamonds 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .diamonds 域名。",
+      intro:
+        ".diamonds 把「钻石」直接镶进域名：钻石零售品牌、培育钻石电商、婚戒定制工作室、宝石批发商用 name.diamonds，客户搜「品牌 + diamonds」时域名与搜索词逐字吻合。它比已收录的 .jewelry 更聚焦——.jewelry 覆盖全品类首饰，.diamonds 只说钻石，主打钻石品类的品牌用它定位更锋利；近年培育钻石（lab-grown）赛道爆发，lab.diamonds、eco.diamonds 这样的名字自带品类故事。注册局为 Identity Digital。价格与品类身价相称：首年约 $50（约 ¥360），续费约 $52/年（约 ¥374），首年续费几乎平价，没有低价钩子，反而让持有成本可预期。库存极好：品牌词、产地词、工艺词全线有货。注意两点：一是 8 个字母的后缀偏长，词根务必短；二是高客单价品类信任门槛高，新品牌建议同时持有 .com 做主站、.diamonds 做品类站或活动页。命名上「品牌词 + .diamonds」最主流，「产地/工艺 + .diamonds」（antwerp.diamonds、lab.diamonds）适合垂直定位。",
+      bestFor: ["钻石零售与定制品牌", "培育钻石电商", "婚戒定制工作室", "宝石批发与供应链商"],
+      namingTips: [
+        "「品牌词 + .diamonds」与客户搜索词逐字吻合",
+        "首年约 $50、续费约 $52/年，几乎平价，成本可预期",
+        "比 .jewelry 更聚焦：主打钻石品类定位更锋利",
+        "后缀 8 个字母偏长，词根控制在 4–5 字符",
+      ],
+    },
+    en: {
+      title: ".diamonds Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".diamonds is the dedicated suffix for diamonds and fine jewelry — for diamond retailers, lab-grown diamond e-commerce, engagement-ring studios and gem wholesalers. See live pricing and naming advice, then hunt available .diamonds names with AI.",
+      intro:
+        ".diamonds sets the stone right in the address: diamond retail brands, lab-grown diamond e-commerce, engagement-ring studios and gem wholesalers on name.diamonds match \"brand + diamonds\" searches word for word. It's sharper than the already-listed .jewelry — .jewelry covers every ornament, .diamonds says only diamonds, so diamond-first brands position more precisely here; and with the lab-grown boom, names like lab.diamonds or eco.diamonds carry the category story built in. The registry is Identity Digital. Pricing matches the merchandise: about $50 first year (≈¥360) and $52/yr to renew (≈¥374) — nearly flat, no teaser hook, fully predictable holding costs. Inventory is excellent: brand words, origin words and craft words all hit. Two cautions: the 8-letter suffix runs long, so keep the root short; and high-ticket categories carry high trust bars — new brands should pair a .com main site with .diamonds as the category or campaign domain. Naming: brand + .diamonds is the mainstream shape; origin or craft + .diamonds (antwerp.diamonds, lab.diamonds) suits vertical positioning.",
+      bestFor: ["Diamond retail & custom brands", "Lab-grown diamond e-commerce", "Engagement-ring studios", "Gem wholesalers & supply chains"],
+      namingTips: [
+        "Brand + .diamonds matches customer searches word for word",
+        "About $50 year one, $52/yr renewal — nearly flat, predictable",
+        "Sharper than .jewelry for diamond-first brand positioning",
+        "The 8-letter suffix needs a root of 4–5 characters",
+      ],
+    },
+  },
+  theater: {
+    tld: "theater",
+    zh: {
+      title: ".theater 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".theater 是剧场与演出行业的专属后缀，适合剧院与剧团官网、演出票务与剧目宣传页、戏剧教育机构与家庭影院方案商。查看 .theater 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .theater 域名。",
+      intro:
+        ".theater 把「剧场」搬进域名：剧院与剧团官网、演出季与剧目宣传页、戏剧教育机构用 name.theater，观众一眼读懂这是看戏的地方。它用的是美式拼写 theater（英式为 theatre），面向北美观众零违和，面向英联邦市场时要留意拼写习惯差异。除了舞台艺术，它还有一个务实的第二客群：家庭影院（home theater）——影音方案商、视听器材店用 home.theater 式命名，域名即品类。注册局为 Identity Digital。价格偏高且平进平出：首年约 $55（约 ¥396），续费约 $60/年（约 ¥430），没有首年钩子，成本可预期。库存极好：城市名、剧种词、品牌词全线有货，city.theater 式地名组合是剧院官网的黄金句式。注意两点：一是 7 个字母后缀不短，词根宜短；二是演出行业域名之外更依赖票务与会员系统，域名是门面不是全部。命名上「城市/街区 + .theater」（downtown.theater）最主流，「剧种/品牌 + .theater」（puppet.theater）适合垂直剧团。",
+      bestFor: ["剧院与剧团官网", "演出票务与剧目宣传", "戏剧教育与青少年剧社", "家庭影院与视听方案商"],
+      namingTips: [
+        "「城市/街区 + .theater」是剧院官网的黄金句式",
+        "首年约 $55、续费约 $60/年，平进平出成本可预期",
+        "美式拼写 theater，面向英联邦市场留意 theatre 拼写差异",
+        "家庭影院方案商用 home.theater 式命名域名即品类",
+      ],
+    },
+    en: {
+      title: ".theater Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".theater is the dedicated suffix for stage and performance — for theaters and troupes, show ticketing and season pages, drama schools and home-theater providers. See live pricing and naming advice, then hunt available .theater names with AI.",
+      intro:
+        ".theater moves the stage into the address: theater and troupe websites, season and show promo pages, and drama schools on name.theater tell audiences instantly where the show is. It uses the American spelling (theatre is the British form) — frictionless for North American audiences, worth noting for Commonwealth markets. Beyond the stage it has a pragmatic second audience: home theater — AV integrators and equipment stores naming like home.theater make the domain the category. The registry is Identity Digital. Pricing is upper-tier and flat: about $55 first year (≈¥396) and $60/yr to renew (≈¥430) — no teaser hook, predictable costs. Inventory is excellent: city names, genre words and brand words all hit, and city + .theater is the golden shape for venue websites. Two cautions: the 7-letter suffix isn't short, so keep the root tight; and performance businesses live on ticketing and membership systems — the domain is the marquee, not the box office. Naming: city or district + .theater (downtown.theater) is the mainstream shape; genre or brand + .theater (puppet.theater) suits specialist troupes.",
+      bestFor: ["Theater & troupe websites", "Show ticketing & season pages", "Drama schools & youth theater", "Home-theater & AV providers"],
+      namingTips: [
+        "City or district + .theater is the golden shape for venues",
+        "About $55 year one, $60/yr renewal — flat and predictable",
+        "American spelling — mind theatre for Commonwealth markets",
+        "AV integrators: home.theater-style names make the domain the category",
+      ],
+    },
+  },
+  accountants: {
+    tld: "accountants",
+    zh: {
+      title: ".accountants 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".accountants 是会计师行业的专属后缀，适合会计师事务所、税务与审计服务、记账代理公司与注册会计师个人品牌。查看 .accountants 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .accountants 域名。",
+      intro:
+        ".accountants 把职业身份写进域名：会计师事务所、税务与审计服务、记账代理公司、注册会计师个人品牌用 name.accountants，客户搜「地名/姓氏 + accountants」时域名与搜索词逐字吻合——这正是英语市场找会计师的标准搜法。它和已收录的 .tax/.lawyer/.legal 同属专业服务族：.tax 说「税这件事」，.accountants 说「我们是会计师」，事务所官网用后者身份感更强。已收录的 accounting 行业指南对应的正是这个客群。注册局为 Identity Digital。价格是全族里的高位：首年约 $85（约 ¥612），续费约 $90/年（约 ¥648），平进平出无钩子——高价本身就是过滤器，注册者几乎全是真事务所，后缀信誉反而干净。库存极好：姓氏、地名、组合词全线有货。注意两点：一是 11 个字母是最长的后缀之一，词根务必短；二是高续费适合执业多年的事务所，个人新手可先用 .pro 过渡。命名上「姓氏/合伙人名 + .accountants」延续行业传统，「城市 + .accountants」（london.accountants）是本地获客利器。",
+      bestFor: ["会计师事务所", "税务与审计服务", "记账代理公司", "注册会计师个人品牌"],
+      namingTips: [
+        "「姓氏/城市 + .accountants」与客户搜索词逐字吻合",
+        "首年约 $85、续费约 $90/年，高价过滤让后缀信誉干净",
+        "后缀 11 个字母，词根控制在 4–6 字符",
+        "新执业个人可先用 .pro 过渡，成熟事务所再上 .accountants",
+      ],
+    },
+    en: {
+      title: ".accountants Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".accountants is the dedicated suffix for the accounting profession — for accounting firms, tax and audit services, bookkeeping agencies and CPA personal brands. See live pricing and naming advice, then hunt available .accountants names with AI.",
+      intro:
+        ".accountants writes the profession into the address: accounting firms, tax and audit practices, bookkeeping agencies and CPA personal brands on name.accountants match \"place/surname + accountants\" searches word for word — exactly how English-speaking clients look for one. It belongs to the professional-services family with the already-listed .tax, .lawyer and .legal: .tax names the subject, .accountants names the people, so firm websites carry more identity on the latter. The already-listed accounting industry guide describes exactly this audience. The registry is Identity Digital. Pricing sits at the top of the family: about $85 first year (≈¥612) and $90/yr to renew (≈¥648), flat with no hook — the price itself is a filter, so registrants are almost all real firms and the suffix's reputation stays clean. Inventory is excellent: surnames, city names and compounds all hit. Two cautions: at 11 letters it's among the longest suffixes, so keep the root short; and the renewal suits established practices — new solo CPAs can start on .pro and upgrade. Naming: surname or partners + .accountants continues the industry tradition; city + .accountants (london.accountants) is a local-lead magnet.",
+      bestFor: ["Accounting firms", "Tax & audit services", "Bookkeeping agencies", "CPA personal brands"],
+      namingTips: [
+        "Surname or city + .accountants matches client searches word for word",
+        "About $85 year one, $90/yr renewal — the price filter keeps it clean",
+        "The 11-letter suffix needs a root of 4–6 characters",
+        "New solo CPAs can start on .pro; established firms take .accountants",
+      ],
+    },
+  },
+  engineer: {
+    tld: "engineer",
+    zh: {
+      title: ".engineer 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".engineer 是工程师的职业身份后缀，适合工程师个人品牌与作品集、独立咨询工程师、工程服务工作室与技术博客。查看 .engineer 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .engineer 域名。",
+      intro:
+        ".engineer 把职业写进域名：土木、机械、电气、软件工程师的个人站、作品集、独立咨询业务用 name.engineer，「姓名 + .engineer」就是一张数字名片——比 .com 上早已绝迹的姓名域名好拿得多。它和已收录的 .engineering 是单复数式的分工：.engineering 说「工程这门生意」，适合公司与团队；.engineer 说「我是工程师」，适合个人与小型工作室，个人品牌用单数身份感更强。注册局为 Identity Digital。价格中档平进平出：首年约 $28（约 ¥202），续费约 $30/年（约 ¥216），没有首年钩子，长期持有成本可预期。库存极好：姓名、专业方向、组合词全线有货。注意两点：一是部分国家「engineer」是受法律保护的职业头衔（如加拿大），执业相关站点要符合当地执业资质规定；二是 8 个字母后缀不短，词根宜短。命名上「姓名 + .engineer」是标准数字名片，「专业方向 + .engineer」（solar.engineer、audio.engineer）适合垂直咨询定位。",
+      bestFor: ["工程师个人品牌与作品集", "独立咨询工程师", "工程服务工作室", "工程技术博客与教程站"],
+      namingTips: [
+        "「姓名 + .engineer」是工程师的标准数字名片",
+        "首年约 $28、续费约 $30/年，平进平出成本可预期",
+        "个人用单数 .engineer，公司团队用 .engineering 更贴",
+        "部分国家 engineer 是受保护头衔，执业站点注意当地资质规定",
+      ],
+    },
+    en: {
+      title: ".engineer Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".engineer is the professional identity suffix for engineers — for personal brands and portfolios, independent consulting engineers, engineering studios and technical blogs. See live pricing and naming advice, then hunt available .engineer names with AI.",
+      intro:
+        ".engineer writes the profession into the address: civil, mechanical, electrical and software engineers running personal sites, portfolios or independent consultancies on name.engineer get a digital business card — and your name is far more likely to be available here than on .com. It splits duties with the already-listed .engineering like singular and plural: .engineering is the business of engineering, right for companies and teams; .engineer says \"I am one\", right for individuals and small studios — the singular carries more personal identity. The registry is Identity Digital. Pricing is mid-tier and flat: about $28 first year (≈¥202) and $30/yr to renew (≈¥216) — no teaser, predictable long-term costs. Inventory is excellent: names, specialties and compounds all hit. Two cautions: in some countries (Canada notably) \"engineer\" is a legally protected title, so practice-related sites must follow local licensing rules; and the 8-letter suffix isn't short, so keep the root tight. Naming: yourname.engineer is the standard digital business card; specialty + .engineer (solar.engineer, audio.engineer) suits vertical consulting positioning.",
+      bestFor: ["Engineer personal brands & portfolios", "Independent consulting engineers", "Engineering studios", "Technical blogs & tutorials"],
+      namingTips: [
+        "yourname.engineer is the standard digital business card",
+        "About $28 year one, $30/yr renewal — flat and predictable",
+        "Individuals take the singular .engineer; companies fit .engineering",
+        "Engineer is a protected title in some countries — mind licensing rules",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

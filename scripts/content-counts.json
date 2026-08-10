@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 252,
+    "count": 258,
     "slugs": [
       "com",
       "net",
@@ -253,7 +253,13 @@
       "associates",
       "cheap",
       "bargains",
-      "supplies"
+      "supplies",
+      "camp",
+      "camera",
+      "diamonds",
+      "theater",
+      "accountants",
+      "engineer"
     ]
   },
   "guide": {
