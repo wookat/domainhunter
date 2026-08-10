@@ -281,4 +281,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "partyplanner", zh: "派对策划", en: "Party planners" },
   { slug: "seafishing", zh: "海钓包船", en: "Sea fishing charters" },
   { slug: "horseranch", zh: "马场骑乘", en: "Horse ranches" },
+  { slug: "datingapp", zh: "交友App", en: "Dating apps" },
+  { slug: "singlesevents", zh: "单身社交活动", en: "Singles events" },
+  { slug: "luxuryresale", zh: "中古奢侈品", en: "Luxury resale" },
+  { slug: "organicfood", zh: "有机食品电商", en: "Organic food" },
+  { slug: "permanentmakeup", zh: "半永久纹绣", en: "Permanent makeup" },
+  { slug: "homedecor", zh: "家居饰品", en: "Home decor" },
 ];
