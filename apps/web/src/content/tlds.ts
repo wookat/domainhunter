@@ -9924,6 +9924,186 @@ const GUIDES = {
       ],
     },
   },
+  tokyo: {
+    tld: "tokyo",
+    zh: {
+      title: ".tokyo 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".tokyo 是东京的官方城市后缀，适合东京本地商家与餐饮门店、日本创业公司与科技团队、东京房产与旅游项目、面向东京客群的内容与活动站。查看 .tokyo 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tokyo 域名。",
+      intro:
+        ".tokyo 把城市身份写进域名：东京本地商家与餐饮门店、日本创业公司与科技团队、东京房产与旅游项目、面向东京客群的内容与活动站用 name.tokyo，「我们在东京」一词讲透——这是东京的官方城市后缀，由日本最大域名注册商 GMO 旗下注册局运营，2014 年开放注册，对全球开放无地址门槛，「品牌 + .tokyo」读起来就是一块东京门牌，本地信任感与国际都市感兼得。它与已收录的 .jp/.nyc/.london 分工清晰：.jp 说日本全国，.nyc 说纽约，.london 说伦敦——.tokyo 说的是「东京这一座城市」，本地商家与面向日本市场的团队定位最准。价格亲民且平续：注册约 $14/年（约 ¥100），续费同价——城市后缀里少见的低价平续，多年持有成本可预期。库存好：街区词、行业词、品牌词仍有大量机会。注意两点：一是主要受众在日本，站点最好配日语内容；二是面向全日本的品牌 .jp 触达更广，.tokyo 适合明确的东京定位。命名上「行业 + .tokyo」（sushi.tokyo）最主流，读起来就是本地生意，「街区/品牌 + .tokyo」（shibuya.tokyo）适合社区项目与旅游内容站。",
+      bestFor: ["东京本地商家与餐饮门店", "日本创业公司与科技团队", "东京房产与旅游项目", "面向东京客群的内容与活动站"],
+      namingTips: [
+        "「行业 + .tokyo」读起来就是东京本地生意",
+        "注册约 $14/年、续费同价，城市后缀里少见的低价平续",
+        "东京本地用 .tokyo，日本全国用 .jp",
+        "主要受众在日本，站点最好配日语内容",
+      ],
+    },
+    en: {
+      title: ".tokyo Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".tokyo is the official city suffix of Tokyo — for local businesses and restaurants, Japanese startups and tech teams, Tokyo real estate and tourism projects, and content or events for Tokyoites. See live pricing and naming advice, then hunt available .tokyo names with AI.",
+      intro:
+        ".tokyo writes the city into the address: local businesses and restaurants, Japanese startups and tech teams, Tokyo real estate and tourism projects, and content or events for Tokyoites on name.tokyo say \"we're in Tokyo\" in one word — this is Tokyo's official city suffix, run by the registry arm of GMO, Japan's largest domain company, open since 2014 and available worldwide with no address requirement, so brand + .tokyo reads like a Tokyo nameplate, blending local trust with global-city cachet. It divides labor cleanly with the already-listed .jp, .nyc and .london: .jp names the whole country, .nyc names New York, .london names London — .tokyo names this one city, so local businesses and Japan-focused teams position sharpest here. Pricing is friendly and flat: about $14/yr to register (≈¥100) and the same to renew — a rare cheap-and-flat deal among city suffixes, so multi-year costs stay predictable. Inventory is good: neighborhood words, trade words and brand words still offer plenty of room. Two cautions: the core audience is in Japan, so the site reads best with Japanese content; and a Japan-wide brand reaches wider on .jp — .tokyo suits an explicitly Tokyo positioning. Naming: trade + .tokyo (sushi.tokyo) is the mainstream shape and reads like a local business; neighborhood or brand + .tokyo (shibuya.tokyo) suits community projects and tourism content.",
+      bestFor: ["Local businesses & restaurants", "Japanese startups & tech teams", "Tokyo real estate & tourism projects", "Content & events for Tokyoites"],
+      namingTips: [
+        "Trade + .tokyo reads like a genuinely local business",
+        "About $14/yr flat to register and renew — rare for city TLDs",
+        "Tokyo fits .tokyo; Japan-wide brands reach wider on .jp",
+        "Core audience is in Japan — pair with Japanese content",
+      ],
+    },
+  },
+  miami: {
+    tld: "miami",
+    zh: {
+      title: ".miami 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".miami 是迈阿密的官方城市后缀，适合迈阿密本地商家与餐饮门店、房产与度假租赁项目、旅游与游艇服务、面向拉美市场的品牌站。查看 .miami 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .miami 域名。",
+      intro:
+        ".miami 把城市身份写进域名：迈阿密本地商家与餐饮门店、房产与度假租赁项目、旅游与游艇服务、面向拉美市场的品牌站用 name.miami，「我们在迈阿密」一词讲透——这是迈阿密的官方城市后缀，现由 GoDaddy Registry 运营，2015 年开放注册，对全球开放无地址门槛，「品牌 + .miami」读起来就是一块迈阿密门牌，阳光度假气质与拉美门户身份兼得。它与已收录的 .us/.nyc/.vegas 类城市后缀分工清晰：.us 说美国全国，.nyc 说纽约——.miami 说的是「迈阿密这一座城市」，本地商家、房产与度假项目定位最准。价格亲民且平续：注册约 $19/年（约 ¥140），续费同价——无首年促销陷阱，本地品牌的多年持有成本可预期。库存好：海滩词、街区词、行业词仍有大量机会。注意两点：一是受众限于迈阿密及其客群，面向全美的品牌 .com/.us 触达更广；二是迈阿密是拉美市场门户，站点配西语内容能放大后缀价值。命名上「行业 + .miami」（yachts.miami）最主流，读起来就是本地生意，「街区/品牌 + .miami」（brickell.miami）适合房产与度假项目。",
+      bestFor: ["迈阿密本地商家与餐饮门店", "房产与度假租赁项目", "旅游与游艇服务", "面向拉美市场的品牌站"],
+      namingTips: [
+        "「行业 + .miami」读起来就是迈阿密本地生意",
+        "注册约 $19/年、续费同价，无首年促销陷阱",
+        "迈阿密本地用 .miami，美国全国用 .us",
+        "面向拉美客群时配西语内容放大后缀价值",
+      ],
+    },
+    en: {
+      title: ".miami Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".miami is the official city suffix of Miami — for local businesses and restaurants, real estate and vacation-rental projects, tourism and yachting services, and brands reaching the Latin American market. See live pricing and naming advice, then hunt available .miami names with AI.",
+      intro:
+        ".miami writes the city into the address: local businesses and restaurants, real estate and vacation-rental projects, tourism and yachting services, and brands reaching the Latin American market on name.miami say \"we're in Miami\" in one word — this is Miami's official city suffix, now operated by GoDaddy Registry, open since 2015 and available worldwide with no address requirement, so brand + .miami reads like a Miami nameplate, blending beach-resort energy with gateway-to-Latin-America identity. It divides labor cleanly with the already-listed .us and .nyc: .us names the whole country, .nyc names New York — .miami names this one city, so local businesses, real estate and vacation projects position sharpest here. Pricing is friendly and flat: about $19/yr to register (≈¥140) and the same to renew — no first-year promo trap, so a local brand's multi-year costs stay predictable. Inventory is good: beach words, neighborhood words and trade words still offer plenty of room. Two cautions: the audience is Miami and its visitors, so US-wide brands reach wider on .com or .us; and Miami is the gateway to Latin America, so pairing the suffix with Spanish content amplifies its value. Naming: trade + .miami (yachts.miami) is the mainstream shape and reads like a local business; neighborhood or brand + .miami (brickell.miami) suits real estate and vacation projects.",
+      bestFor: ["Local businesses & restaurants", "Real estate & vacation-rental projects", "Tourism & yachting services", "Brands reaching the Latin American market"],
+      namingTips: [
+        "Trade + .miami reads like a genuinely local business",
+        "About $19/yr flat to register and renew — no promo trap",
+        "Miami fits .miami; nationwide brands reach wider on .us",
+        "Pair with Spanish content for the Latin American audience",
+      ],
+    },
+  },
+  boston: {
+    tld: "boston",
+    zh: {
+      title: ".boston 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".boston 是波士顿的官方城市后缀，适合波士顿本地商家与餐饮门店、教育与医疗机构、创业公司与专业服务、面向波士顿客群的内容与活动站。查看 .boston 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .boston 域名。",
+      intro:
+        ".boston 把城市身份写进域名：波士顿本地商家与餐饮门店、教育与医疗机构、创业公司与专业服务、面向波士顿客群的内容与活动站用 name.boston，「我们在波士顿」一词讲透——这是波士顿市认可的官方城市后缀，2017 年开放注册，现由 GoDaddy Registry 运营，对全球开放无地址门槛，「品牌 + .boston」读起来就是一块波士顿门牌，大学城与生物医药之都的身份自带信任感。它与已收录的 .us/.nyc/.london 分工清晰：.us 说美国全国，.nyc 说纽约，.london 说伦敦——.boston 说的是「波士顿这一座城市」，本地商家与教育医疗机构定位最准。价格亲民且平续：注册约 $19/年（约 ¥140），续费同价——无首年促销陷阱，本地品牌的多年持有成本可预期。库存极好：2017 年才开放，街区词、行业词、品牌词全线有货。注意两点：一是受众限于波士顿及其客群，面向全美的品牌 .com/.us 触达更广；二是后缀 6 字符偏长，搭配短品牌词控制总长。命名上「行业 + .boston」（law.boston）最主流，读起来就是本地生意，「街区/品牌 + .boston」（backbay.boston）适合社区项目与本地内容站。",
+      bestFor: ["波士顿本地商家与餐饮门店", "教育与医疗机构", "创业公司与专业服务", "面向波士顿客群的内容与活动站"],
+      namingTips: [
+        "「行业 + .boston」读起来就是波士顿本地生意",
+        "注册约 $19/年、续费同价，无首年促销陷阱",
+        "波士顿本地用 .boston，美国全国用 .us",
+        "后缀 6 字符偏长，搭配短品牌词控制总长",
+      ],
+    },
+    en: {
+      title: ".boston Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".boston is the official city suffix of Boston — for local businesses and restaurants, education and healthcare institutions, startups and professional services, and content or events for Bostonians. See live pricing and naming advice, then hunt available .boston names with AI.",
+      intro:
+        ".boston writes the city into the address: local businesses and restaurants, education and healthcare institutions, startups and professional services, and content or events for Bostonians on name.boston say \"we're in Boston\" in one word — this is Boston's city-endorsed suffix, open since 2017, now operated by GoDaddy Registry and available worldwide with no address requirement, so brand + .boston reads like a Boston nameplate, and the college-town, biotech-capital identity carries trust of its own. It divides labor cleanly with the already-listed .us, .nyc and .london: .us names the whole country, .nyc names New York, .london names London — .boston names this one city, so local businesses and education or healthcare institutions position sharpest here. Pricing is friendly and flat: about $19/yr to register (≈¥140) and the same to renew — no first-year promo trap, so a local brand's multi-year costs stay predictable. Inventory is excellent: open only since 2017, so neighborhood words, trade words and brand words all hit. Two cautions: the audience is Boston and its visitors, so US-wide brands reach wider on .com or .us; and at six characters the suffix runs a bit long, so a short brand word keeps the total manageable. Naming: trade + .boston (law.boston) is the mainstream shape and reads like a local business; neighborhood or brand + .boston (backbay.boston) suits community projects and local content.",
+      bestFor: ["Local businesses & restaurants", "Education & healthcare institutions", "Startups & professional services", "Content & events for Bostonians"],
+      namingTips: [
+        "Trade + .boston reads like a genuinely local business",
+        "About $19/yr flat to register and renew — no promo trap",
+        "Boston fits .boston; nationwide brands reach wider on .us",
+        "At six characters the suffix runs long — keep names short",
+      ],
+    },
+  },
+  healthcare: {
+    tld: "healthcare",
+    zh: {
+      title: ".healthcare 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".healthcare 是医疗健康行业的专属后缀，适合医疗集团与健康系统官网、诊所与专科医疗机构、健康险与医疗服务平台、数字医疗与健康科技公司。查看 .healthcare 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .healthcare 域名。",
+      intro:
+        ".healthcare 把行业身份写进域名：医疗集团与健康系统官网、诊所与专科医疗机构、健康险与医疗服务平台、数字医疗与健康科技公司用 name.healthcare，「我们做医疗健康」一词讲透——healthcare 是英语里医疗行业的总称词，后缀本身就是行业级别的声明，「品牌 + .healthcare」读起来就是一家医疗机构的官网。注册局为 Identity Digital（原 Donuts），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .health 语义近邻及 .hospital/.clinic/.care 分工清晰：.health 说泛健康（含健身养生），.hospital 说医院机构，.clinic 说门诊诊所，.care 说照护服务——.healthcare 说的是「医疗健康这个行业」，医疗集团与健康平台定位最准。价格偏高且平续：注册约 $71/年（约 ¥510），续费同价——无首年促销陷阱，行业级后缀按机构预算持有。库存极好：品牌词、专科词、地区词全线有货。注意两点：一是价格是通用后缀的十倍级，个人站与小诊所 .clinic/.care 更划算；二是医疗宣传受执业法规约束，命名与内容须与资质匹配。命名上「品牌 + .healthcare」（acme.healthcare）最主流，读起来就是医疗集团官网，「地区/专科 + .healthcare」（texas.healthcare）适合区域医疗平台。",
+      bestFor: ["医疗集团与健康系统官网", "诊所与专科医疗机构", "健康险与医疗服务平台", "数字医疗与健康科技公司"],
+      namingTips: [
+        "「品牌 + .healthcare」读起来就是医疗集团官网",
+        "注册约 $71/年、续费同价，按机构预算持有",
+        "行业总称用 .healthcare，医院用 .hospital，门诊用 .clinic",
+        "医疗宣传受执业法规约束，内容须与资质匹配",
+      ],
+    },
+    en: {
+      title: ".healthcare Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".healthcare is the dedicated suffix for the healthcare industry — for health-system and medical-group sites, clinics and specialty practices, health insurance and care-service platforms, and digital-health and healthtech companies. See live pricing and naming advice, then hunt available .healthcare names with AI.",
+      intro:
+        ".healthcare writes the industry into the address: health-system and medical-group sites, clinics and specialty practices, health insurance and care-service platforms, and digital-health companies on name.healthcare say \"we do healthcare\" in one word — healthcare is English's umbrella term for the medical industry, so the suffix itself is an industry-grade statement, and brand + .healthcare reads like a medical organization's official site. The registry is Identity Digital (formerly Donuts); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the semantic neighbor .health and the already-listed .hospital, .clinic and .care: .health spans wellness and fitness, .hospital names the institution, .clinic names the outpatient practice, .care names caregiving — .healthcare names the industry itself, so health systems and care platforms position sharpest here. Pricing is high and flat: about $71/yr to register (≈¥510) and the same to renew — no first-year promo trap; hold it on an institutional budget. Inventory is excellent: brand words, specialty words and region words all hit. Two cautions: the price runs ten times a generic suffix, so personal sites and small practices do better on .clinic or .care; and healthcare marketing is regulated, so naming and content must match your actual license. Naming: brand + .healthcare (acme.healthcare) is the mainstream shape and reads like a health system's site; region or specialty + .healthcare (texas.healthcare) suits regional care platforms.",
+      bestFor: ["Health-system & medical-group sites", "Clinics & specialty practices", "Health insurance & care-service platforms", "Digital-health & healthtech companies"],
+      namingTips: [
+        "Brand + .healthcare reads like a health system's site",
+        "About $71/yr flat to register and renew — institutional budget",
+        "The industry fits .healthcare; institutions .hospital; practices .clinic",
+        "Healthcare marketing is regulated — match your license",
+      ],
+    },
+  },
+  abogado: {
+    tld: "abogado",
+    zh: {
+      title: ".abogado 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".abogado 是西班牙语「律师」后缀，适合西语律师与律所官网、拉美与西班牙法律服务、移民与劳工法专业站、面向西语客户的法律内容站。查看 .abogado 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .abogado 域名。",
+      intro:
+        ".abogado 把职业写进域名：西语律师与律所官网、拉美与西班牙法律服务、移民与劳工法专业站、面向西语客户的法律内容站用 name.abogado，「我是律师」一词讲透——abogado 是西班牙语「律师」，全球五亿西语人口一眼读懂，后缀与客户搜索用词同词，「姓氏 + .abogado」读起来就是律所门牌。2014 年开放注册，现由 GoDaddy Registry 运营，早期的执业资质门槛已取消，现对全球开放注册。它与已收录的 .lawyer/.legal/.law 分工清晰：.lawyer/.law 面向英语客户，.legal 说泛法律服务——.abogado 说的是「西语客户这个具体人群」，美国西语社区与拉美市场的律师定位最准。价格适中且平续：注册约 $26/年（约 ¥190），续费同价——无首年促销陷阱，执业域名的多年持有成本可预期。库存极好：姓氏词、专业词、城市词全线有货。注意两点：一是律师广告在多数司法区受律师协会规范约束，命名与宣传须合规；二是受众限于西语客户，面向英语客户 .lawyer/.law 更贴切。命名上「姓氏 + .abogado」（garcia.abogado）最主流，与律所名一一对应，「专业/城市 + .abogado」（inmigracion.abogado）适合专业方向站与获客页。",
+      bestFor: ["西语律师与律所官网", "拉美与西班牙法律服务", "移民与劳工法专业站", "面向西语客户的法律内容站"],
+      namingTips: [
+        "「姓氏 + .abogado」与律所名一一对应",
+        "注册约 $26/年、续费同价，无首年促销陷阱",
+        "西语客户用 .abogado，英语客户用 .lawyer/.law",
+        "律师广告受律协规范约束，命名宣传须合规",
+      ],
+    },
+    en: {
+      title: ".abogado Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".abogado is the Spanish suffix for lawyer — for Spanish-speaking lawyers and law-firm sites, legal services in Latin America and Spain, immigration and labor-law practices, and legal content for Spanish-speaking clients. See live pricing and naming advice, then hunt available .abogado names with AI.",
+      intro:
+        ".abogado writes the profession into the address: Spanish-speaking lawyers and law-firm sites, legal services in Latin America and Spain, immigration and labor-law practices, and legal content for Spanish-speaking clients on name.abogado say \"I am a lawyer\" in one word — abogado is Spanish for lawyer, instantly read by half a billion Spanish speakers, and the suffix matches the exact word clients search with, so surname + .abogado reads like a law firm's nameplate. Open since 2014, now operated by GoDaddy Registry; the early bar-credential requirement has been dropped and registration is open worldwide. It divides labor cleanly with the already-listed .lawyer, .legal and .law: .lawyer and .law speak to English-speaking clients, .legal names legal services generically — .abogado speaks to this specific audience, so lawyers serving US Hispanic communities and Latin American markets position sharpest here. Pricing is moderate and flat: about $26/yr to register (≈¥190) and the same to renew — no first-year promo trap, so a practice domain's multi-year costs stay predictable. Inventory is excellent: surnames, practice-area words and city words all hit. Two cautions: attorney advertising is regulated by bar associations in most jurisdictions, so naming and marketing must comply; and the audience is Spanish-speaking clients — for English-speaking clients .lawyer or .law reads truer. Naming: surname + .abogado (garcia.abogado) is the mainstream shape, mapping one-to-one to the firm name; practice area or city + .abogado (inmigracion.abogado) suits specialty sites and client-acquisition pages.",
+      bestFor: ["Spanish-speaking lawyers & law-firm sites", "Legal services in Latin America & Spain", "Immigration & labor-law practices", "Legal content for Spanish-speaking clients"],
+      namingTips: [
+        "Surname + .abogado maps one-to-one to the firm name",
+        "About $26/yr flat to register and renew — no promo trap",
+        "Spanish-speaking clients fit .abogado; English .lawyer/.law",
+        "Attorney advertising is bar-regulated — stay compliant",
+      ],
+    },
+  },
+  kaufen: {
+    tld: "kaufen",
+    zh: {
+      title: ".kaufen 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".kaufen 是德语「购买」后缀，适合德语区电商与网店、比价与团购平台、二手交易与本地买卖站、面向 DACH 市场的促销落地页。查看 .kaufen 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .kaufen 域名。",
+      intro:
+        ".kaufen 把购买动作写进域名：德语区电商与网店、比价与团购平台、二手交易与本地买卖站、面向 DACH 市场的促销落地页用 name.kaufen，「来这里买」一词讲透——kaufen 是德语「购买」，德语用户搜商品就带这个词（如 auto kaufen），后缀与搜索意图同词，「品类 + .kaufen」读起来就是一句行动号召。注册局为 Identity Digital（原 Rightside/Donuts 系），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .shop/.store/.gmbh 分工清晰：.shop/.store 说店铺本身且面向全球，.gmbh 说公司形态——.kaufen 说的是「购买这个动作 + 德语区这个市场」，德语电商与促销页定位最准。价格亲民但注意涨幅：首年常见约 $6（约 ¥40），续费约 $24/年（约 ¥175）——首年低价适合试错，长期持有按续费价预算。库存极好：品类词、品牌词全线有货，德语组合词尤其充裕。注意两点：一是受众限于德语区，全球店铺 .shop/.store 触达更广；二是德国电商受价格标示与撤回权等消费法规约束，促销页须合规。命名上「品类 + .kaufen」（auto.kaufen）最主流，与德语搜索词一一对应，「品牌 + .kaufen」适合品牌店铺的德语区促销入口。",
+      bestFor: ["德语区电商与网店", "比价与团购平台", "二手交易与本地买卖站", "面向 DACH 市场的促销落地页"],
+      namingTips: [
+        "「品类 + .kaufen」与德语搜索词一一对应",
+        "首年约 $6、续费约 $24/年，长期按续费价预算",
+        "德语区店铺用 .kaufen，全球店铺用 .shop/.store",
+        "德国电商受消费法规约束，促销页须合规",
+      ],
+    },
+    en: {
+      title: ".kaufen Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".kaufen is the German suffix for buy — for German-market e-commerce shops, price-comparison and deals platforms, second-hand and local marketplace sites, and promo landing pages for the DACH market. See live pricing and naming advice, then hunt available .kaufen names with AI.",
+      intro:
+        ".kaufen writes the purchase into the address: German-market e-commerce shops, price-comparison and deals platforms, second-hand marketplaces and DACH promo landing pages on name.kaufen say \"buy here\" in one word — kaufen is German for to buy, the exact word German speakers put in their searches (auto kaufen), so the suffix matches search intent and category + .kaufen reads like a call to action. The registry is Identity Digital (via the Rightside/Donuts lineage); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .shop, .store and .gmbh: .shop and .store name the storefront for a global audience, .gmbh names the legal form — .kaufen names the buying action for this specific market, so German-language commerce and promo pages position sharpest here. Pricing is friendly but watch the step-up: often about $6 for the first year (≈¥40), renewing at about $24/yr (≈¥175) — the cheap first year suits experiments; budget long-term holds at the renewal rate. Inventory is excellent: category words and brand words all hit, and German compound words are especially plentiful. Two cautions: the audience is the German-speaking region, so a global storefront reaches wider on .shop or .store; and German e-commerce is bound by price-display and withdrawal-right consumer law, so promo pages must comply. Naming: category + .kaufen (auto.kaufen) is the mainstream shape, mapping one-to-one to the German search phrase; brand + .kaufen suits a brand's DACH promo entrance.",
+      bestFor: ["German-market e-commerce shops", "Price-comparison & deals platforms", "Second-hand & local marketplace sites", "Promo landing pages for the DACH market"],
+      namingTips: [
+        "Category + .kaufen maps one-to-one to the German search",
+        "About $6 first year, ~$24/yr renewal — budget the step-up",
+        "German-market shops fit .kaufen; global .shop/.store",
+        "German consumer law binds promo pages — stay compliant",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
