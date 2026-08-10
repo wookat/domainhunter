@@ -19964,6 +19964,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  woodworking: {
+    slug: "woodworking",
+    keywords: ["木工工作室", "原木家具定制", "木作体验课", "woodworking studio", "custom furniture"],
+    tlds: [
+      { tld: "com", zh: "定制家具客单价高、决策周期长，.com 在报价单与合同上最让人放心", en: "Bespoke furniture is a high-ticket, slow-decision purchase — .com reads most trustworthy on the quote and the contract" },
+      { tld: "studio", zh: "工作室气质直给，木作体验课与定制线共用一块招牌", en: "States the studio identity outright — one roof for the craft classes and the commission line" },
+      { tld: "works", zh: "「工坊」语义与木作天然同频，海外独立木匠的常用归类", en: "Workshop semantics native to the craft — a common filing for independent makers abroad" },
+    ],
+    zh: {
+      label: "木工工作室",
+      title: "木工工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "木工工作室与原木家具定制命名指南：木材词根、手作时间叙事等思路，梵几/木智工坊等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "木工工作室的名字要先回答一个问题：你卖的是「家具」还是「一双手在木头上花掉的时间」。这个品类的定价逻辑全在后者——同样一张桌子，宜家卖材料费，工作室卖的是榫卯、打磨与等待，名字必须替这份时间感背书。国内独立木作品牌已经蹚出两条路：梵几走「文人家具」路线，两个字把北欧极简与中式书房气质缝在一起；木智工坊走「材料+理性」路线，名字里的「智」字直接对冲了手作行业「感性有余、工程不足」的刻板印象。隐藏考点是业务的三条腿：定制家具、木作体验课、小件木器电商，三条线客群完全不同——定制客户看的是作品集与工期承诺，体验课学员看的是周末去处的松弛感，名字要选一条主线站稳再兼容其余。另一个容易忽略的点：木工品牌的名字会被激光刻在作品底部当 logo，笔画太复杂的字刻出来会糊成一团。",
+      namingIdeas: [
+        "木材词根直给：胡桃、橡、榆、原木类字眼——材料即卖点，懂行客户看到树种名就知道你的定位与价位",
+        "榫卯工艺意象：榫、凿、刨、mortise 类词——把工艺细节写进名字，手作可信度直接拉满",
+        "时间与慢叙事：把「等一件家具的三十天」变成卖点——慢词根替高客单价与长工期提前打预防针",
+        "文人家具路线：斋、几、堂类书房词——梵几验证过的中式极简语法，定制客单价的气质天花板",
+        "人名工坊语法：姓氏+木作/工坊——海外 maker 文化的默认格式，作品落款与品牌名天然合一",
+      ],
+      cases: [
+        { name: "梵几", takeaway: "「梵」的空寂+「几」的家具古称：两个字缝合北欧极简与中式书房——文人家具命名的开山范本" },
+        { name: "木智工坊", takeaway: "「木」的感性+「智」的理性：直接对冲手作行业「不讲工程」的刻板印象——差异化定位从名字开始" },
+        { name: "本来设计", takeaway: "「本来」二字把原木的天然属性说成哲学：材料叙事升维成生活主张——小件木器电商的命名标杆" },
+        { name: "Herman Miller", takeaway: "创始人姓名一用百年：家具行业的姓氏传统证明——人名入名是把个人信誉抵押给品牌的最长期投资" },
+      ],
+      pitfalls: [
+        "名字太文艺定位不明：只有意境没有品类暗示，客户分不清你是家具店、咖啡馆还是书店——文气要配一个落地词",
+        "笔画太复杂刻不动：品牌名要激光刻在作品底部，繁复字形小尺寸下会糊——起名时先做一次刻印测试",
+        "锁死单一树种：叫「胡桃木语」就很难接白蜡木订单——树种留给产品线，品牌名留材质气质即可",
+        "只查中文没查商标类目：家具（第 20 类）与教育培训（第 41 类）要分开查——体验课业务起量后补注册会被卡",
+      ],
+    },
+    en: {
+      label: "Woodworking studios",
+      title: "How to Name a Woodworking Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Woodworking studio and custom furniture naming guide: timber-root registers, slow-craft narratives, breakdowns of Herman Miller/Thos. Moser/Floyd, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A woodworking studio's name must first answer one question: are you selling furniture, or the hours a pair of hands spends inside a plank of walnut? The category's entire pricing logic lives in the second answer — IKEA sells the material, the studio sells the joinery, the sanding and the waiting, and the name has to vouch for that time before the portfolio loads. The craft's naming traditions run deep: the surname-workshop grammar (Thos. Moser, Herman Miller) mortgages a maker's personal reputation to the brand and has compounded for a century; the timber-root register (walnut, oak, grain) tells the knowing customer your positioning and price band in one word. The hidden exam is the business's three legs — commissioned furniture, weekend craft classes and small-goods e-commerce — which serve entirely different customers: the commission client reads the portfolio and the lead-time promise, the class student reads weekend-escape ease, and the name must plant its flag on one leg while leaving room for the others. One more overlooked detail: the name gets laser-branded into the underside of every piece, so it must survive being burned small into end grain.",
+      namingIdeas: [
+        "Timber roots stated plainly: walnut, oak, grain, heartwood — material as positioning, read instantly by the customer who knows what the species costs",
+        "Joinery-craft imagery: dovetail, mortise, plane, bench — process detail written into the name, hand-built credibility carried for free",
+        "The slow-craft register: words that sell the thirty-day wait as the point — pre-empting the lead-time conversation the way slow food did",
+        "The surname-workshop grammar: a maker's name plus works or workshop — the craft's oldest trust format, where the signature and the brand are one",
+        "The everyday-object register: bench, board, stool as brand words — modest nouns that let a direct-to-consumer line feel approachable, as Floyd proved",
+      ],
+      cases: [
+        { name: "Thos. Moser", takeaway: "The abbreviated first name plus surname: a Maine cabinetmaker's signature scaled into a brand — the surname mortgage paying out over fifty years" },
+        { name: "Herman Miller", takeaway: "A financier's name on a furniture century: proof the surname tradition outlives styles, owners and even the man himself" },
+        { name: "Floyd", takeaway: "A bare first name for flat-pack done honestly: stripping the craft register to reach the renter generation — naming that matches the product's modesty" },
+        { name: "Room & Board", takeaway: "A lodging idiom repurposed: two building words that happen to mean home — wordplay that files the brand under comfort, not carpentry" },
+      ],
+      pitfalls: [
+        "Poetry without a category anchor: all mood and no craft signal leaves customers unsure if you sell tables or coffee — pair the register with one grounded word",
+        "A name that won't brand small: the logo gets burned into end grain at thumbnail size — test the mark at one inch before committing",
+        "Locking one species into the brand: call yourself Walnut House and the ash commission never comes — keep species in product lines",
+        "Skipping the class-business trademark: furniture sits in class 20, workshops in class 41 — clear both before the weekend courses take off",
+      ],
+    },
+  },
+  soapmaking: {
+    slug: "soapmaking",
+    keywords: ["手工皂", "手工皂品牌", "冷制皂", "handmade soap", "cold process soap"],
+    tlds: [
+      { tld: "com", zh: "手工皂走电商与礼盒双渠道，.com 在包装与市集摊位上都最省解释", en: "Handmade soap lives on e-commerce and gift boxes — .com needs no explaining on the label or the market stall" },
+      { tld: "shop", zh: "独立站直卖的默认归类，小作坊起步期最顺手", en: "The default filing for a direct-to-consumer storefront — the easiest start for a small workshop" },
+      { tld: "life", zh: "把「洗澡」升维成「生活方式」的归类，天然护肤叙事一步到位", en: "Files bathing under lifestyle — the natural-skincare story told in the suffix" },
+    ],
+    zh: {
+      label: "手工皂",
+      title: "手工皂品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "手工皂与冷制皂品牌命名指南：成分直给、冷制工艺叙事等思路，Lush/Dr. Bronner's 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "手工皂的名字要完成一次「成分翻译」：这个品类的核心买点是「看得见的天然」——橄榄油、羊奶、草木灰都摆在配料表第一行，名字最好让人隔着屏幕闻到皂化后的植物油香。国际品牌的两条路线值得对照：Lush 用一个「郁郁葱葱」的形容词把新鲜现做写进品牌基因，门店像果蔬摊一样卖皂；Dr. Bronner's 用「博士+姓氏」的配方权威语法，把一块皂卖成了有信仰的日用品。国内手工皂的主战场在市集摊位、小红书与礼盒定制，名字要在这三个场景都立得住：摊位招牌要三秒被记住，小红书笔记要好搜索不撞名，礼盒烫金要体面。隐藏考点是监管红线——手工皂在国内按化妆品或普通日化管理，名字与文案里的「治疗湿疹」「祛痘」类功效词是高压线，天然叙事要说「加了什么好东西」，不能说「治什么病」。",
+      namingIdeas: [
+        "成分直给路线：橄榄、羊奶、艾草、蜂蜜类配料词——配料表第一行直接进名字，天然可信度零成本",
+        "冷制工艺叙事：冷制、古法、晾皂四十五天类工艺词——把「等一块皂熟成」的时间感变成溢价理由",
+        "植物园意象：把品牌开成一座园子——草木、花园、山野类词根自带疗愈感，礼盒叙事顺手接住",
+        "配方权威语法：人名+配方/研究所——Dr. Bronner's 验证过的信任格式，敏感肌客群最吃这一套",
+        "泡沫与洗感通感：绵、云、雪类触感词——把洗感写进名字，是少数能在屏幕上传达的产品体验",
+      ],
+      cases: [
+        { name: "Lush", takeaway: "一个形容词写尽「新鲜现做」：门店像果蔬摊一样卖皂——把品类气质浓缩进单词的命名教科书" },
+        { name: "Dr. Bronner's", takeaway: "博士+姓氏的配方权威语法：五代家族企业把一块皂卖成信仰——人名信任格式的百年验证" },
+        { name: "阿原肥皂", takeaway: "创始人乳名+品类直给：台湾青草药手工皂用「阿原」二字立住土地感——本土叙事命名的范本" },
+        { name: "Ethique", takeaway: "法语「道德」入名：固体美妆先锋把环保主张直接当品牌名——价值观命名吸引价值观客群" },
+      ],
+      pitfalls: [
+        "功效词踩监管红线：祛痘、治湿疹类字眼入名或入文案是高压线——天然叙事说成分不说疗效",
+        "名字锁死单一配方：叫「羊奶皂坊」就很难卖精油线——配料留给产品名，品牌名留天然气质",
+        "「手工」二字用滥撞名：市集里一半摊位都叫某某手工皂——差异化要落在配方、产地或人设上",
+        "只做中文没留英文名：手工皂礼盒与出海电商都需要英文名，包装印刷前要把双语与商标（第 3 类）一起查掉",
+      ],
+    },
+    en: {
+      label: "Soap brands",
+      title: "How to Name a Handmade Soap Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Handmade and cold-process soap naming guide: ingredient-first registers, slow-cure narratives, breakdowns of Lush/Dr. Bronner's/Ethique, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A handmade soap brand's name performs an ingredient translation: the category's core promise is visible naturalness — olive oil, goat milk and botanicals sit in the first line of the label — and the best names let you smell the saponified plant oils through the screen. Two international schools are worth studying: Lush compressed fresh-and-handmade into a single adjective and sells soap the way a greengrocer sells produce; Dr. Bronner's used the doctor-plus-surname formula-authority grammar to turn a bar of soap into a five-generation article of faith. The working scenes are the craft-market stall, the social feed and the gift box, and the name must hold up in all three: three-second recall on the stall banner, searchable without collisions in the feed, dignified under foil stamping on the lid. The hidden exam is regulatory: soap sits inside cosmetics rules in most markets, and therapeutic claims — eczema, acne, healing — are the live wire; the natural story must say what goes into the bar, never what it cures.",
+      namingIdeas: [
+        "Ingredients stated first: olive, goat milk, oat, honey — the label's first line promoted into the name, natural credibility at zero cost",
+        "The slow-cure register: cold-process, small-batch, forty-five-day cure — turning the wait into the reason for the price",
+        "The garden register: botanical, grove, meadow roots — a built-in calm that the gift-box storytelling inherits for free",
+        "The formula-authority grammar: a name plus doctor or apothecary — the trust format Dr. Bronner's proved on sensitive-skin buyers",
+        "Lather-and-touch synaesthesia: cloud, silk, snow — writing the wash-feel into the name, one of the few product truths a screen can carry",
+      ],
+      cases: [
+        { name: "Lush", takeaway: "One adjective carrying fresh-handmade-abundant: soap sold like produce — the textbook of compressing a category's temperament into a single word" },
+        { name: "Dr. Bronner's", takeaway: "Doctor plus surname: the formula-authority grammar sustaining a five-generation family label — the century-long proof of name-as-trust" },
+        { name: "Ethique", takeaway: "French for ethics as the brand itself: the solid-beauty pioneer wearing its values as its name — recruiting exactly the buyer who shares them" },
+        { name: "SoapWalla", takeaway: "The Indian -walla suffix meaning the person who does: a Brooklyn kitchen brand borrowing the street-vendor register — warmth and craft in one coinage" },
+      ],
+      pitfalls: [
+        "Therapeutic claims in the name: eczema, acne and healing words trip cosmetics regulation — say what goes in the bar, never what it treats",
+        "Locking one recipe into the brand: call yourself Goat Milk Works and the essential-oil line never fits — recipes belong in product names",
+        "The word handmade worn to nothing: half the market stalls carry it — differentiate on recipe, origin or maker persona instead",
+        "Skipping the bilingual and trademark check: gift boxes and cross-border shops need the English name cleared in class 3 before the packaging prints",
+      ],
+    },
+  },
+  modelkit: {
+    slug: "modelkit",
+    keywords: ["模型店", "手办店", "高达模型", "model kit store", "gunpla"],
+    tlds: [
+      { tld: "com", zh: "模型玩家海淘与比价成习惯，.com 在收藏圈与代购链接里最通行", en: "Kit collectors compare and import by habit — .com travels best in the hobby's link-sharing culture" },
+      { tld: "shop", zh: "门店+线上补件的双渠道直白归类，零解释成本", en: "The plain filing for a storefront with an online parts counter — zero explanation" },
+      { tld: "club", zh: "「店即据点」的社群气质直给，桌上比赛与团购活动顺手接住", en: "States the shop-as-clubhouse identity — build nights and group buys filed in the suffix" },
+    ],
+    zh: {
+      label: "模型手办店",
+      title: "模型手办店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "模型店与手办店命名指南：据点感叙事、比例词根等思路，万代/寿屋等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "模型手办店的名字要先想清楚：你开的是「零售店」还是「据点」。这个品类的复购全靠圈层——高达玩家、军模党、手办收藏者各有各的黑话与圣地，一家好店的本质是「放学后想去坐坐的地方」，名字要有据点感而不是货架感。日系厂牌的命名传统值得借用：万代（Bandai）、寿屋（Kotobukiya）都是先有店号后有厂牌，店号语法自带「老铺」信任；国内的模型店则常用「格纳库」「机库」类高达梗词，圈内人看一眼就知道是自己人。隐藏考点是品类跨度：拼装模型（要动手）、成品手办（要展示）、雕像 GK（要预订）是三种消费心理，名字最好选主营深耕——「工坊」气质吸引拼装党，「殿堂」气质吸引收藏党。另一个现实问题：模型店一半生意在闲鱼、微信群与直播间，名字要短、好打字、不生僻，群名片与直播间标题里才立得住。",
+      namingIdeas: [
+        "据点感词根：机库、格纳库、基地、hangar 类词——把店开成玩家的秘密据点，圈内暗号式认同一步到位",
+        "比例与型号黑话：1/144、RG、MG 类比例词根——懂的人自然懂，名字直接完成客群筛选",
+        "日系店号语法：屋、堂、社类后缀——借万代寿屋的老铺传统，模型文化的原产地气质自带信任",
+        "工坊与改件叙事：改、涂装、工房类词——吸引动手党，素组改件补件的高粘性生意从名字开始",
+        "殿堂收藏意象：阁、殿、馆类词——面向成品手办与雕像收藏客群，展示柜气质与高客单价对表",
+      ],
+      cases: [
+        { name: "万代 Bandai", takeaway: "「万代不易」出自古语：玩具帝国用一个愿望型店号起家——日系店号传统的信任范本" },
+        { name: "寿屋 Kotobukiya", takeaway: "「寿」字店号+屋后缀：从酒屋转型模型厂牌仍沿用老店号——店号资产可以跨品类继承" },
+        { name: "GSC 良笑社", takeaway: "Good Smile 直译入名：把「让人会心一笑」的产品体验当品牌名——情绪价值命名的手办界标杆" },
+        { name: "威龙 Dragon", takeaway: "「龙」的东方意象+军模品类：香港厂牌用一个字立住气势——单字强意象在模型圈的通行证" },
+      ],
+      pitfalls: [
+        "名字太泛没有圈层暗号：叫「XX玩具店」会同时失去高达党与手办党——圈层黑话是这个品类的信任货币",
+        "梗词版权踩线：直接用高达、EVA 等 IP 名入店名有商标风险——用圈内通用词（机库、格纳库）替代 IP 词",
+        "生僻字打不出来：一半生意在微信群与直播间，名字打字要顺——生僻字会杀死口碑传播链路",
+        "锁死单一 IP 品类：叫「高达基地」就很难卖舰船军模——IP 留给专区陈列，店名留据点气质",
+      ],
+    },
+    en: {
+      label: "Model kit stores",
+      title: "How to Name a Model Kit Store: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Model kit and figure store naming guide: clubhouse registers, scale-jargon roots, breakdowns of Bandai/Kotobukiya/Good Smile, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A model kit store's name must decide one thing first: are you a retailer or a hangout? The category's repeat business runs entirely on tribes — Gunpla builders, armour modellers and figure collectors each carry their own jargon and pilgrimage sites — and a great shop is really the place you want to sit in after work, so the name needs clubhouse warmth, not shelf-space neutrality. The Japanese trade names are the tradition to borrow: Bandai and Kotobukiya were shop signs before they were manufacturers, and the old-shop grammar carries built-in trust; hobby shops worldwide reach for hangar and base registers that insiders read as a handshake. The hidden exam is category spread: build-it kits, finished figures and garage-kit statues answer three different buying psychologies — workshop registers recruit the builders, gallery registers recruit the collectors — and the name should plant its flag on the main line. One practical constraint: half the trade lives in chat groups, marketplace listings and stream titles, so the name must be short, typeable and unambiguous to survive the hobby's link-sharing culture.",
+      namingIdeas: [
+        "Clubhouse roots: hangar, base, bay, dock — the shop as the tribe's secret headquarters, insider recognition granted at the sign",
+        "Scale-jargon registers: grade and scale roots the builders speak — a name that filters for exactly the customer who will come back monthly",
+        "The Japanese shop-sign grammar: -ya and -do suffixes, the old-shop register — borrowing the hobby's homeland credibility, as Bandai and Kotobukiya did",
+        "Workshop-and-paint registers: build, brush, panel-line words — recruiting the hands-on crowd whose parts-and-paints basket never empties",
+        "Gallery registers for the collector line: hall, vault, showcase — display-cabinet temperature matched to finished-figure price tags",
+      ],
+      cases: [
+        { name: "Bandai", takeaway: "From a classical phrase meaning eternally unchanging: a toy empire built on a wish-type shop sign — the Japanese trade-name trust tradition at full scale" },
+        { name: "Kotobukiya", takeaway: "A felicitous character plus the -ya shop suffix: a sake shop's sign inherited by a model maker — proof a trade name's equity crosses categories" },
+        { name: "Good Smile Company", takeaway: "The customer's reaction as the brand: naming the feeling the product produces — emotional-payoff naming that became the figure industry's benchmark" },
+        { name: "Tamiya", takeaway: "A family name and a twin-star mark: precision as a surname promise — the modeller's shorthand for quality earned over seventy years" },
+      ],
+      pitfalls: [
+        "A generic toy-store name: calling yourself a toy shop loses the builders and the collectors at once — tribal jargon is this category's trust currency",
+        "IP names on the signboard: Gundam or EVA in the shop name invites trademark trouble — use the tribe's generic words (hangar, dock) instead",
+        "A name that types badly: half the trade happens in chats and stream titles — hard-to-type names break the word-of-mouth chain",
+        "Locking one franchise into the brand: call yourself Gundam Base and the warship kits never sell — keep franchises in the shelf sections",
+      ],
+    },
+  },
+  framing: {
+    slug: "framing",
+    keywords: ["装裱店", "画框定制", "字画装裱", "framing shop", "custom framing"],
+    tlds: [
+      { tld: "com", zh: "装裱客单价与信任门槛都高，.com 在画廊与设计师转介绍里最体面", en: "Framing is a high-trust, referral-driven trade — .com reads best when the gallery passes your name along" },
+      { tld: "art", zh: "「为艺术服务」的归类直给，画廊与藏家客群一眼对位", en: "Files the shop under art outright — instantly aligned with the gallery and collector crowd" },
+      { tld: "studio", zh: "工作室气质适配定制装裱与修复业务，小而美路线顺手", en: "Studio temperature suited to bespoke framing and restoration — the small-and-fine route" },
+    ],
+    zh: {
+      label: "装裱画框店",
+      title: "装裱画框店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "装裱店与画框定制命名指南：边界与衬托意象、古法裱褙叙事等思路，荣宝斋/Framebridge 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "装裱店的名字要懂得「配角的艺术」：这个行业的职业操守是让画作成为主角、让框消失于无形，但名字又必须让客户记住你——好名字要在「谦逊的手艺」与「响亮的招牌」之间走钢丝。中式与西式是两套完全不同的命名传统：字画裱褙一脉接的是荣宝斋、朵云轩的「斋轩堂」文脉，名字自带纸墨香与百年老铺的信任；西式画框定制接的是画廊与家居美学，Framebridge 用「frame+bridge」把装裱说成「作品与生活之间的桥」，直接把传统手艺做成了互联网生意。隐藏考点是客群三层：藏家与画廊要的是博物馆级无酸装裱的专业感，家庭客户要的是「把孩子涂鸦变成传家宝」的情感叙事，设计师客户要的是批量与交期——名字选定主客群，气质才不会散。另一个易忽略点：装裱是本地生意+转介绍生意，名字要在美术馆边的门头与画廊老板的口碑转述里都顺口。",
+      namingIdeas: [
+        "斋轩堂文脉：斋、轩、堂、阁类老铺后缀——接住荣宝斋一脉的裱褙传统，字画客群的信任密码",
+        "边界与衬托意象：框、界、衬、边类词根——把「让主角更好看」的配角哲学写进名字",
+        "桥梁与连接叙事：把装裱说成「作品与生活之间的桥」——Framebridge 验证过的升维语法",
+        "古法工艺直给：浆糊、绫绢、托裱类工艺词——手工裱褙的时间感与机器装裱拉开身位",
+        "记忆与传家路线：藏、传、忆类词——面向家庭客群，「把一张纸变成传家宝」的情感转化最快",
+      ],
+      cases: [
+        { name: "荣宝斋", takeaway: "「以文会友、荣名为宝」缩成三字斋号：三百年裱褙老铺的文脉资产——斋号传统的信任天花板" },
+        { name: "朵云轩", takeaway: "「朵云」是书信的雅称：轩号把笺扇裱褙生意包进一朵云——意象命名与业务气质严丝合缝" },
+        { name: "Framebridge", takeaway: "frame+bridge 一词双关：把装裱说成作品与生活之间的桥——传统手艺互联网化的命名范本" },
+        { name: "Level Frames", takeaway: "「water level 校平」+「level up 升级」双关：挂正一幅画与抬升一个空间——功能词玩出层次感" },
+      ],
+      pitfalls: [
+        "名字抢了画的风头：装裱是配角艺术，名字太张扬会让藏家怀疑你的分寸感——响亮但不能喧宾",
+        "中西气质混穿：斋号配西式极简画框、英文名接古画裱褙都会错位——先选主线客群再定文脉",
+        "只说框不说裱：叫「XX画框」会漏掉字画装裱与修复的高价值业务——品类词要能覆盖两条线",
+        "忽略转介绍场景：装裱靠画廊与设计师口碑转述，名字拗口就断了转介绍链路——念三遍测试必做",
+      ],
+    },
+    en: {
+      label: "Framing shops",
+      title: "How to Name a Framing Shop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Custom framing and art mounting naming guide: border-and-backdrop imagery, heirloom registers, breakdowns of Framebridge/Level Frames, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A framing shop's name must master the art of the supporting role: the trade's professional ethic is to make the artwork the star and let the frame disappear, yet the name still has to make customers remember you — a good one walks the wire between humble craft and a sign worth repeating. The modern reference is Framebridge, which fused frame and bridge to recast framing as the span between an artwork and a life, turning a bench trade into an internet business; the older tradition is the conservation register — museum-grade, acid-free, archival — that collectors and galleries read as professional shorthand. The hidden exam is the three-layer clientele: collectors and galleries want conservation authority, families want the emotional turn that makes a child's drawing an heirloom, and designers want volume and lead times — the name should choose its primary audience or the temperature scatters. One more overlooked truth: framing is a local, referral-driven trade, and the name must survive being passed along verbally by the gallery owner down the street.",
+      namingIdeas: [
+        "Border-and-backdrop imagery: frame, edge, mat, border roots — the supporting-role philosophy written into the name itself",
+        "The bridge-and-connection register: framing recast as the span between artwork and life — the elevation grammar Framebridge proved",
+        "The conservation register: archival, museum, acid-free authority words — the collector's professional shorthand, distancing you from the mall kiosk",
+        "The heirloom turn: keep, legacy, treasury roots — for the family audience, converting a sheet of paper into a thing that gets inherited",
+        "Craft-bench honesty: joinery, mitre, gild words — the hand-finished register that separates bespoke benches from machine-cut chains",
+      ],
+      cases: [
+        { name: "Framebridge", takeaway: "frame plus bridge in one coinage: framing recast as the span between art and life — the textbook of internet-scaling a bench trade through naming" },
+        { name: "Level Frames", takeaway: "The spirit level and levelling up in one word: hanging a picture straight and lifting a room — a function word played on two registers" },
+        { name: "Larson-Juhl", takeaway: "Two surnames on the industry's moulding standard: the trade-supplier register — proof the surname mortgage works behind the counter too" },
+        { name: "The Great Frame Up", takeaway: "A crime-caper idiom turned shop pun: the frame-up reclaimed as retail warmth — proof humour can humanise a precision trade" },
+      ],
+      pitfalls: [
+        "A name louder than the art: framing is the supporting role, and a showy name makes collectors doubt your restraint — memorable, never upstaging",
+        "Mixing conservation and kiosk registers: museum authority with bargain-chain wording makes both audiences distrust you — pick the bench you sit at",
+        "Frames-only wording: a picture-frame name leaves out mounting, conservation and restoration — the higher-margin half of the trade",
+        "Ignoring the referral test: the trade travels by word of mouth from galleries and designers — a name that stumbles when spoken breaks the chain",
+      ],
+    },
+  },
+  recordingstudio: {
+    slug: "recordingstudio",
+    keywords: ["录音棚", "录音工作室", "混音母带", "recording studio", "music production"],
+    tlds: [
+      { tld: "studio", zh: "录音棚的品类后缀天然对位，名字+后缀一句话说清业务", en: "The category's native suffix — name plus TLD states the business in one breath" },
+      { tld: "com", zh: "厂牌与商业配音客户走合同流程，.com 在报价单上最稳", en: "Labels and commercial voice-over clients run on contracts — .com sits steadiest on the quote" },
+      { tld: "live", zh: "直播录音与 live session 业务线的气质归类，演出感直给", en: "Files the live-session and streaming line in the suffix — performance energy stated outright" },
+    ],
+    zh: {
+      label: "录音棚",
+      title: "录音棚怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "录音棚与录音工作室命名指南：声学词根、传奇棚址叙事等思路，Abbey Road/Electric Lady 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "录音棚的名字最终会出现在一个神圣的位置：专辑内页的 credits 栏。「Recorded at ___」这条署名就是行业的信任货币——Abbey Road 因为披头士的署名从一条街名变成圣地，Electric Lady 因为 Hendrix 的遗产成为纽约地标，录音棚命名的终极目标是让音乐人以在你这录音为荣。命名传统有三条主线：地名路线（棚址即身份，Abbey Road、Sunset Sound）、器材与声学路线（用 tape、echo、analog 类词根向懂行的人递暗号）、传奇人物路线（创始人或驻棚制作人的名字直接抵押给品牌）。国内录音棚的现实客群更宽：独立音乐人、播客主、有声书工作室、企业配音都在租时段，名字要在「专业到让厂牌放心」与「亲和到让播客新手敢进门」之间找平衡。隐藏考点是声音质感的传达——好的棚名自带音色，念出来要有混响感，毕竟你卖的就是声音本身。",
+      namingIdeas: [
+        "声学与器材词根：echo、tape、tone、模拟类词——向懂行的音乐人递暗号，器材信仰即专业信任",
+        "棚址地名路线：街名、门牌号、地标入名——Abbey Road 验证过的语法，棚址即身份、署名即广告",
+        "声音质感通感：把音色写进名字——温暖、复古、颗粒感类词根，名字念出来就要有混响",
+        "频率与波形意象：Hz、波、频类理工词根——面向电子音乐与后期客群，技术流气质直给",
+        "深夜创作叙事：午夜、失眠、灯光类词——录音棚的黄金时段在深夜，创作场景的情绪共鸣最快",
+      ],
+      cases: [
+        { name: "Abbey Road Studios", takeaway: "一条街名因署名封神：披头士专辑封面把地址变成圣地——「棚址即身份」的终极范本" },
+        { name: "Electric Lady Studios", takeaway: "Hendrix 从专辑名反推的棚名：电气+女士的迷幻意象——音乐人遗产直接抵押给棚牌" },
+        { name: "Sunset Sound", takeaway: "日落大道+声音的头韵：地名与品类词各取一半——好念好记的地名语法教科书" },
+        { name: "Sterling Sound", takeaway: "「纯银成色」+声音：母带工作室用材质等级词立专业——sterling 一词完成品质承诺" },
+      ],
+      pitfalls: [
+        "名字没有音色：录音棚卖的就是声音，名字念出来干瘪无混响就输在起跑线——念三遍听质感",
+        "锁死单一音乐风格:叫「嘻哈工厂」就接不到影视配乐单——风格留给作品集，棚名留声音气质",
+        "器材词过期风险：以设备型号入名，器材换代名字就成了旧闻——用 analog、tape 类气质词替代具体型号",
+        "忽略 credits 署名场景：棚名会印在专辑内页与流媒体 credits 里，太长太拗口的名字音乐人不愿署——短而有分量",
+      ],
+    },
+    en: {
+      label: "Recording studios",
+      title: "How to Name a Recording Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Recording studio naming guide: acoustic-gear registers, address-as-identity naming, breakdowns of Abbey Road/Electric Lady/Sunset Sound, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A recording studio's name ends up in one sacred place: the credits. \"Recorded at ___\" is the industry's trust currency — Abbey Road went from street sign to shrine because the Beatles printed it on a cover, and Electric Lady became a New York landmark on Hendrix's estate — so the endgame of studio naming is making artists proud to sign your name. Three traditions dominate: the address route, where the location is the identity (Abbey Road, Sunset Sound); the gear-and-acoustics route, where tape, echo and analog roots pass a handshake to musicians who know; and the legend route, where a founder's or house producer's name is mortgaged to the room. Today's client sheet is wider than labels: independent artists, podcasters, audiobook narrators and commercial voice-over all book the same hours, and the name must balance professional enough for the label's paperwork with warm enough that a first-time podcaster dares walk in. The hidden exam is timbre: a good studio name has a sound of its own — say it aloud and it should carry a little reverb, because sound is literally what you sell.",
+      namingIdeas: [
+        "Acoustic-gear roots: echo, tape, tone, analog — the handshake register for musicians who read gear faith as engineering trust",
+        "Address-as-identity: the street, the number, the landmark — the grammar Abbey Road proved, where the credit line is the advertisement",
+        "Timbre synaesthesia: warm, velvet, grain — writing the sound of the room into the name, the one product truth a word can carry",
+        "Frequency-and-waveform registers: hertz, wave, signal roots — the technical temperature for electronic and post-production clients",
+        "The late-night session register: midnight, neon, sleepless words — the studio's golden hours written as mood, instantly read by every artist",
+      ],
+      cases: [
+        { name: "Abbey Road Studios", takeaway: "A street name sainted by a credit line: the Beatles turned an address into a pilgrimage — the terminal proof of location-as-identity" },
+        { name: "Electric Lady Studios", takeaway: "Hendrix naming the room after the record: psychedelic electricity mortgaged to the brand — an artist's legacy as the studio's permanent collateral" },
+        { name: "Sunset Sound", takeaway: "The boulevard plus the category in alliteration: half address, half product — the textbook of a name that says and sounds easy" },
+        { name: "Sterling Sound", takeaway: "A silver-grade word on a mastering house: quality certification built into the name — sterling doing the work of a hundred testimonials" },
+      ],
+      pitfalls: [
+        "A name with no timbre: sound is the product, and a name that falls flat spoken aloud loses before the tour — say it three times and listen",
+        "Locking one genre into the room: call yourself Hip-Hop Factory and the film-score booking never calls — genres belong in the portfolio",
+        "Gear-model expiry: name yourself after a console and the name ages with the equipment — use analog-era registers, not model numbers",
+        "Forgetting the credits test: the name prints in liner notes and streaming credits — too long or awkward and artists quietly leave it off",
+      ],
+    },
+  },
+  hearingaid: {
+    slug: "hearingaid",
+    keywords: ["助听器验配", "听力中心", "助听器门店", "hearing aid center", "audiology clinic"],
+    tlds: [
+      { tld: "com", zh: "子女替父母决策、全家反复比价，.com 在家庭群转发链接里最可信", en: "Adult children research for their parents and the whole family compares — .com travels most credibly in the family group chat" },
+      { tld: "care", zh: "「照护」语义直给，把卖设备升维成听力健康服务", en: "Care semantics outright — elevating a device sale into hearing health service" },
+      { tld: "clinic", zh: "验配的医学专业感归类，与眼镜店式零售拉开身位", en: "Files the fitting under clinical professionalism — distancing you from eyewear-style retail" },
+    ],
+    zh: {
+      label: "助听器验配",
+      title: "助听器验配中心怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "助听器验配中心与听力中心命名指南：声音失而复得叙事、专业验配词根等思路，峰力/瑞声达等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "助听器验配中心的名字要同时说服两代人：戴的人是父母，做决策、付钱、搜索比价的往往是子女——名字既要让老人觉得不丢面子，又要让子女觉得专业可信。这个品类最大的心理障碍不是价格而是「病耻感」：很多老人宁可听不清也不愿承认「聋」，所以好名字从不说「聋」与「障」，而说「声音的失而复得」——瑞士峰力（Phonak）用 phon（声音）词根立专业，丹麦瑞声达（ReSound）直接把 re+sound「重新听见」写进名字，都是把负面品类翻译成正面叙事的教科书。隐藏考点是「验配」二字：助听器是医疗器械，核心价值在听力师的测听与调试服务而非盒子里的机器，名字带出专业服务感（听力中心、验配中心）能与网购机器拉开身位。另一个现实：这是典型的社区信任生意，名字会出现在小区口碑、医院转介绍与家庭群转发里，亲切度与专业度一个都不能少。",
+      namingIdeas: [
+        "失而复得叙事：重听、复声、再响类词根——把「治聋」翻译成「把声音找回来」，病耻感一步化解",
+        "声音词根专业路线：phon、声、音、response 类词——峰力验证过的语法，专业感从词源开始",
+        "聆听美好意象：把「听见」与具体的美好绑定——鸟鸣、孙辈笑声类场景词，子女决策的情感开关",
+        "验配服务直给：听力中心、验配、调试类词——核心价值是听力师服务而非机器，专业词根与网购拉开身位",
+        "陪伴与桥梁路线：伴、桥、连类词——助听器连接的是人与家人，关系叙事比设备叙事更打动两代人",
+      ],
+      cases: [
+        { name: "峰力 Phonak", takeaway: "phon（声音）词根+瑞士工程气质：中文名「峰力」再添巅峰联想——专业词源命名的行业标杆" },
+        { name: "瑞声达 ReSound", takeaway: "re+sound「重新听见」直接入名：把品类价值一词说尽——中文「瑞声达」音意双译同样漂亮" },
+        { name: "奥迪康 Oticon", takeaway: "oto（耳）医学词根+百年丹麦血统：创始人为失聪妻子创业的故事——名字背后的初心即品牌资产" },
+        { name: "Eargo", takeaway: "ear+go 的轻快组合：把助听器说成「戴上就走」的消费电子——去医疗化命名吸引年轻听损客群" },
+      ],
+      pitfalls: [
+        "「聋」「障」字眼入名：病耻感是品类最大障碍，负面词会把老人挡在门外——说「重新听见」不说「治聋」",
+        "只有亲切没有专业：纯温情名字撑不起医疗器械的信任门槛——亲切词要配听力中心类专业后缀",
+        "忽略子女搜索场景：决策人在手机上搜「XX助听器怎么样」，名字生僻或撞名连锁品牌会直接流失",
+        "锁死老人客群：听损正在年轻化，名字太「夕阳红」会挡住中青年客群——说听力健康，不说老年专属",
+      ],
+    },
+    en: {
+      label: "Hearing aid centers",
+      title: "How to Name a Hearing Aid Center: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Hearing aid center and audiology clinic naming guide: sound-regained narratives, clinical-fitting registers, breakdowns of Phonak/ReSound/Eargo, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A hearing center's name must persuade two generations at once: the parent wears the device, but the adult child researches, compares and often pays — so the name has to spare the parent's dignity while convincing the child of clinical competence. The category's biggest barrier isn't price but stigma: many older adults would rather miss the conversation than admit to deafness, which is why the great names never say deaf or loss — they say sound regained. Phonak built authority on the phon root; ReSound wrote the entire category promise into one compound, re plus sound; both are textbooks of translating a negative category into a positive story. The hidden exam is the word fitting: a hearing aid is a medical device whose real value is the audiologist's testing and tuning, not the hardware in the box, and a name that carries clinical service registers (hearing center, audiology) separates you from mail-order gadgets. One more truth: this is a neighbourhood-trust trade — the name travels through hospital referrals, community word of mouth and the family group chat, and it must sound both warm and credentialed in all three.",
+      namingIdeas: [
+        "The sound-regained narrative: re-, again, back roots — translating treat the deafness into bring the sound home, stigma dissolved at the name",
+        "Sound-root authority: phon, audio, sono, tone — the etymological professionalism Phonak proved, credibility starting at the word's origin",
+        "Moments-of-hearing imagery: birdsong, a grandchild's laugh, the dinner-table joke — binding hearing to specific joys, the adult child's emotional switch",
+        "The clinical-fitting register: hearing center, audiology, fitting words — the audiologist's service as the value, distancing you from mail-order boxes",
+        "The bridge-and-companion register: connect, bridge, together roots — the device links people to their families, and relationship naming moves both generations",
+      ],
+      cases: [
+        { name: "Phonak", takeaway: "The phon root plus Swiss engineering temperature: authority built from etymology up — the industry benchmark of sound-word professionalism" },
+        { name: "ReSound", takeaway: "re plus sound: the whole category promise in one compound — hearing given back, stated in the two most ordinary words available" },
+        { name: "Oticon", takeaway: "The oto (ear) medical root and a founder's story — a company started for a deaf wife: the origin as permanent brand collateral" },
+        { name: "Eargo", takeaway: "ear plus go in a consumer-electronics bounce: de-medicalising the device for younger losses — proof the category can name like a gadget when the audience shifts" },
+      ],
+      pitfalls: [
+        "Deaf and loss words in the name: stigma is the category's wall, and negative roots turn parents away at the door — say hearing regained, never deafness treated",
+        "Warmth without credentials: a purely tender name can't carry a medical device's trust threshold — pair the warm word with a clinical suffix",
+        "Ignoring the adult child's search: the decision-maker googles the name from a phone — obscure spellings or collisions with chain brands lose the family",
+        "Naming only for the elderly: hearing loss is getting younger, and a sunset-years register blocks the working-age client — say hearing health, not seniors only",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

@@ -329,7 +329,7 @@
     ]
   },
   "guide": {
-    "count": 320,
+    "count": 326,
     "slugs": [
       "saas",
       "ecommerce",
@@ -650,7 +650,13 @@
       "leathercraft",
       "calligraphy",
       "instrumentstore",
-      "meditation"
+      "meditation",
+      "woodworking",
+      "soapmaking",
+      "modelkit",
+      "framing",
+      "recordingstudio",
+      "hearingaid"
     ]
   },
   "vs": {
