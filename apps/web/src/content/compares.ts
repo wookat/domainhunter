@@ -8605,6 +8605,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Cross-border e-commerce for multiple Asian markets", "Corporate sites with APAC operations", "Asian culture & travel content", "Budget-sensitive regional plays with flat costs"],
     },
   },
+  "fr-vs-com": {
+    slug: "fr-vs-com",
+    a: "fr",
+    b: "com",
+    zh: {
+      title: ".fr 和 .com 怎么选：法国本地信任与全球默认值的对比",
+      metaDescription: ".fr 是法国国家域名、本地信任与法语市场 SEO 双加成，注册约 $9、续费约 $10/年，需欧盟/EEA 资格；.com 全球通用但好名字绝迹。对比两者的市场定位、资格要求与品牌策略，并用 AI 猎取可注册的名字。",
+      verdict:
+        "和所有「ccTLD vs .com」的选择一样，看用户在哪里。主攻法国市场时 .fr 几乎是标配：非营利注册局 AFNIC 运营、注册量超过 400 万，是欧洲第四大 ccTLD——法国消费者对本土信号非常敏感，name.fr 一眼讲清「法国的生意」，本地电商、餐饮与服务商用它的信任度远超一般新后缀，法国本土巨头与政府机构的主站几乎都在 .fr 上；Google 也会把 .fr 站点与法国地区相关联，法语市场 SEO 有天然加成。价格温和接近平续：注册约 $9（约 ¥65）、续费约 $10/年（约 ¥72），无引流钩子，法语词根与品牌词的库存也远比 .com 充裕。面向全球用户或计划出海，.com 的认知度无可替代——口头传播默认补全、长期资产流动性最好。预算允许的成熟法国品牌通常两个都拿：.fr 做本地门面或防抢注，.com 做国际主站。一条 .fr 特有的注意事项：AFNIC 要求注册人为欧盟/欧洲经济区（含瑞士、挪威、冰岛、列支敦士登）的个人或机构，非欧盟主体需欧盟实体或注册商本地代理（Gandi、OVH 等法系注册商都支持），注册前确认即可。判断标准：用户、物流、合规都在法国 → .fr 的本地信任是 .com 给不了的；全球市场 → .com 仍是安全区。",
+      pickA: ["面向法国市场的电商", "法国本地服务与门店", "进入法国市场的海外品牌", "法语内容与媒体站"],
+      pickB: ["面向全球用户或计划出海", "品牌主站与长期资产", "口头传播多、依赖默认补全", "转售流动性最好"],
+    },
+    en: {
+      title: ".fr vs .com: French Local Trust vs the Global Default",
+      metaDescription:
+        ".fr is France's country domain with local trust and French-market SEO upside at about $9 to register and $10/yr to renew, EU/EEA eligibility required; .com is the global default with empty shelves. Compare market focus, eligibility and brand strategy, then hunt available names.",
+      verdict:
+        "As with every ccTLD-versus-.com call, it comes down to where your users are. For a France-focused business, .fr is near-mandatory: run by the non-profit registry AFNIC with over 4 million registrations — Europe's fourth-largest ccTLD — French consumers are highly attuned to local signals, and name.fr says \"a French business\" at a glance, earning local e-commerce, restaurants and service providers trust far beyond any new gTLD, with France's household brands and government sites living on .fr; Google also geo-associates .fr sites with France, a free boost for French-market SEO. Pricing is gentle and near-flat: about $9 to register (≈¥65) and $10/yr to renew (≈¥72), no teaser games, and French roots and brand words enjoy far better inventory than .com. For a global audience, .com's recognition is irreplaceable — autocomplete reflex and the best long-term asset liquidity. Established French brands with budget usually take both: .fr as the local front door or defensively, .com as the international main site. One .fr-specific caution: AFNIC requires registrants to be individuals or organizations in the EU/EEA (plus Switzerland, Norway, Iceland, Liechtenstein), so non-EU entities need an EU establishment or a registrar's local proxy (French-family registrars like Gandi and OVH support it) — confirm before buying. The test: users, logistics and compliance all in France → .fr delivers local trust .com can't; global market → .com remains the safety zone.",
+      pickA: ["France-facing e-commerce", "Local French services & storefronts", "Overseas brands entering France", "French-language content & media"],
+      pickB: ["Global audience or expansion plans", "Primary brand site and long-term asset", "Heavy word-of-mouth, autocomplete reflex", "Best resale liquidity"],
+    },
+  },
+  "it-vs-de": {
+    slug: "it-vs-de",
+    a: "it",
+    b: "de",
+    zh: {
+      title: ".it 和 .de 怎么选：意大利与德国两大本地市场的对比",
+      metaDescription: ".it 是意大利国家域名、约 350 万注册量，注册约 $8、续费约 $10/年，需欧盟/EEA 资格，兼有 IT 双关玩法；.de 是全球最大 ccTLD、约 $8/年平续。对比两者的市场信号、资格与创意空间，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是欧洲一线 ccTLD，选择通常不难：看你的用户说意大利语还是德语。做意大利市场 → .it：Registro .it 运营、注册量约 350 万，是欧洲第五大 ccTLD——意大利电商、时尚品牌、餐饮与制造商用 name.it 几乎是标配，Google 也会把 .it 站点与意大利地区相关联，本地 SEO 有加成；注册约 $8（约 ¥58）、续费约 $10/年（约 ¥72），差价小无钩子。做德国市场 → .de：合作社性质的注册局 DENIC 运营、注册量超过 1,700 万，是全球最大的 ccTLD——德国消费者在地址栏习惯性输入 name.de，本地信任度远超一般新后缀；注册约 $8/年（约 ¥58）平续，大型 ccTLD 里的良心价，德语复合词库存充裕。.it 独有的加分项是双关创意：它恰好是英文单词「it」与「IT/信息技术」的缩写，域名黑客玩法层出不穷（do.it、make.it 类短语域名），科技产品拿它做创意主域也很常见——这条路线与地域无关，全球创业者都能玩。资格上两边都有门槛但形态不同：.it 要求欧盟/EEA 居民或机构资格，非欧盟主体需欧盟实体或注册商代理；.de 要求德国境内的行政联系地址（Admin-C），海外注册人由注册商代理（INWX、united-domains、Porkbun 等支持），且 DENIC 有 DNS zone 检查。判断标准：用户在意大利 → .it；用户在德国 → .de；两个市场都做的欧洲品牌通常各注册一个做本地门面；想玩「短语 + .it」的英文双关 → 只有 .it 能给。",
+      pickA: ["面向意大利市场的电商", "意大利时尚与制造品牌", "玩转 domain hack 的科技产品", "意大利语内容与媒体站"],
+      pickB: ["面向德国市场的电商", "德国制造与出口企业官网", "德国本地服务与商铺", "德语内容与媒体站"],
+    },
+    en: {
+      title: ".it vs .de: Italy or Germany — Two Prime Local Markets Compared",
+      metaDescription:
+        ".it is Italy's country domain with 3.5M registrations at about $8 to register and $10/yr to renew, EU/EEA eligibility required, plus IT double-meaning hacks; .de is the world's largest ccTLD at about $8/yr flat. Compare market signals, eligibility and creative room, then hunt available names.",
+      verdict:
+        "Both are first-tier European ccTLDs, and the choice is usually easy: do your users speak Italian or German? Italy-focused → .it: run by Registro .it with about 3.5 million registrations — Europe's fifth-largest ccTLD — name.it is near-mandatory for Italian e-commerce, fashion brands, restaurants and manufacturers, with Google geo-associating .it sites with Italy for a local-SEO boost; about $8 to register (≈¥58) and $10/yr to renew (≈¥72), a tiny step-up with no traps. Germany-focused → .de: run by the cooperative registry DENIC with over 17 million registrations — the largest ccTLD on earth — German consumers type name.de by habit, with local trust far beyond any new gTLD; about $8/yr flat (≈¥58), honest pricing for a major ccTLD, and German compound words enjoy generous inventory. .it holds one unique bonus: it doubles as the English word \"it\" and the abbreviation for information technology, spawning endless domain hacks (do.it, make.it-style phrase domains) — tech products routinely pick it as a creative primary domain, a play open to founders worldwide regardless of geography. Eligibility differs in shape on both sides: .it requires EU/EEA residency or establishment, with non-EU entities needing an EU presence or a registrar proxy; .de requires an administrative contact address in Germany (Admin-C), proxied by registrars like INWX, united-domains and Porkbun, and DENIC runs DNS zone checks. The test: users in Italy → .it; users in Germany → .de; European brands serving both markets usually register one of each as local front doors; and if you want the phrase-plus-.it English hack, only .it delivers.",
+      pickA: ["Italy-facing e-commerce", "Italian fashion & manufacturing brands", "Tech products playing domain hacks", "Italian-language content & media"],
+      pickB: ["Germany-facing e-commerce", "German manufacturers & exporters", "Local German services & shops", "German-language content & media"],
+    },
+  },
+  "es-vs-eu": {
+    slug: "es-vs-eu",
+    a: "es",
+    b: "eu",
+    zh: {
+      title: ".es 和 .eu 怎么选：西班牙单一市场与泛欧覆盖的对比",
+      metaDescription: ".es 是西班牙国家域名、无资格限制任何人可注册，注册约 $8、续费约 $10/年；.eu 是欧盟官方域名、覆盖全欧但需欧盟/EEA 资格。对比两者的信号半径、资格与语言外溢，并用 AI 猎取可注册的名字。",
+      verdict:
+        "分工在信号半径：一个锚定西班牙（外加西语世界的语言外溢），一个圈定整个欧盟。.es 赢在本地浓度与低门槛——西班牙政府旗下的 Red.es 运营、注册量约 200 万，对西班牙消费者 name.es 是「本地生意」的默认信号，西班牙电商、服务商、餐饮门店用它信任度远超新后缀，Google 也会把 .es 站点与西班牙地区相关联；与 .fr/.it 等欧洲邻居不同，.es 对注册人没有国籍或地址限制，任何人可直接注册、无需代理，是欧洲 ccTLD 里门槛最低的之一。还有语言外溢的加分：「es」恰好是西班牙语系动词「是」，西语是全球 5 亿人的母语，面向拉美与美国西语人群的内容站也常拿 .es 讲「西语世界的生意」。.eu 赢在覆盖半径——想覆盖整个欧洲市场而不绑定单一国家的业务（泛欧电商、SaaS 的欧洲站、跨境物流、欧盟合规服务）用 name.eu 一眼讲清「我们服务全欧洲」，比在 27 国逐个注册 ccTLD 省事得多；比利时注册局 EURid 运营、注册量约 370 万，欧盟机构自己也用它（europa.eu），且 .eu 站点默认受 GDPR 约束，对欧洲用户是一层信任背书。但资格是硬性的：须为欧盟/EEA 居民、公民或注册机构，英国脱欧后已不再符合，非欧盟主体需欧盟实体或本地代理。价格两边几乎一样：都是注册约 $8、续费约 $10/年，差价小无钩子。判断标准：用户以西班牙为主（或主打泛西语内容）→ .es 的本地信任与零门槛更实用；业务真正横跨欧盟多国 → .eu 的泛欧信号才用得上；只做西班牙却挂 .eu，信任度反而不如 .es。",
+      pickA: ["面向西班牙市场的电商", "西班牙本地服务与门店", "西语内容与媒体站", "无欧盟实体的海外注册人"],
+      pickB: ["泛欧电商与多国经营", "SaaS 产品的欧洲站", "欧盟合规与跨境服务", "强调 GDPR/欧盟背书的业务"],
+    },
+    en: {
+      title: ".es vs .eu: Spain's Home Market or Pan-European Coverage",
+      metaDescription:
+        ".es is Spain's country domain — no eligibility restrictions, anyone can register — at about $8 to register and $10/yr to renew; .eu is the EU's official domain covering all of Europe but requiring EU/EEA eligibility. Compare signal radius, eligibility and language spillover, then hunt available names.",
+      verdict:
+        "The split is signal radius: one anchors to Spain (plus a Spanish-language spillover), the other circles the whole European Union. .es wins on local density and a low bar — run by government-backed Red.es with about 2 million registrations, name.es is the default local-business signal to Spanish consumers, earning e-commerce, services and storefronts trust far beyond any new gTLD, with Google geo-associating .es sites with Spain; and unlike European neighbors .fr and .it, .es imposes no nationality or address restrictions — anyone worldwide can register directly with no proxy, one of the lowest bars among European ccTLDs. There's a language bonus too: \"es\" is the Spanish verb \"is\", and with 500 million native speakers, content sites targeting Latin America and US Hispanics often pick .es to say \"a Spanish-language business\". .eu wins on radius — businesses covering the whole European market without binding to one country (pan-European e-commerce, a SaaS product's European presence, cross-border logistics, EU compliance services) say \"we serve all of Europe\" in one glance with name.eu, far simpler than registering 27 national ccTLDs; run by Belgium-based EURid with about 3.7 million registrations, used by the EU institutions themselves (europa.eu), and presumed bound by GDPR — a trust layer for European users. But eligibility is strict: EU/EEA residents, citizens or registered organizations only — the UK no longer qualifies post-Brexit, and non-EU entities need an EU establishment or local proxy. Pricing is nearly identical on both sides: about $8 to register and $10/yr to renew, tiny step-ups with no traps. The test: users mainly in Spain (or pan-Hispanic content) → .es's local trust and zero bar are more practical; genuinely multi-country EU operations → that's where .eu's pan-European signal earns its keep; a Spain-only business on .eu actually reads weaker than .es.",
+      pickA: ["Spain-facing e-commerce", "Local Spanish services & storefronts", "Spanish-language content & media", "Overseas registrants without an EU entity"],
+      pickB: ["Pan-European e-commerce & multi-country operations", "A SaaS product's European presence", "EU compliance & cross-border services", "Ventures leaning on the GDPR/EU endorsement"],
+    },
+  },
+  "nl-vs-de": {
+    slug: "nl-vs-de",
+    a: "nl",
+    b: "de",
+    zh: {
+      title: ".nl 和 .de 怎么选：荷兰枢纽与德国腹地两大 ccTLD 的对比",
+      metaDescription: ".nl 是全球第三大 ccTLD、荷兰渗透率极高，注册约 $9、续费约 $10/年，任何人可注册（需荷兰联系地址）；.de 是全球最大 ccTLD、约 $8/年平续。对比两者的市场信号、资格与英语可用性，并用 AI 猎取可注册的名字。",
+      verdict:
+        "西欧相邻的两大 ccTLD，绝对量与渗透率各占一头，选择看用户在哪一侧。做荷兰市场 → .nl：注册局 SIDN 运营、注册量超过 630 万——按人口比例是全球渗透率最高的 ccTLD 之一，绝对量仅次于 .de 与 .cn；荷兰消费者本土偏好极强，name.nl 对本地电商、服务商、事务所几乎是标配，Google 也会把 .nl 站点与荷兰地区相关联。荷兰又是欧洲物流与贸易枢纽（鹿特丹港、史基浦机场），跨境电商与贸易公司拿 .nl 讲「以荷兰为基地的欧洲生意」也很自然。做德国市场 → .de：DENIC 运营、注册量超过 1,700 万，是全球最大的 ccTLD，德国消费者在地址栏习惯性输入 name.de，本地信任度远超一般新后缀，德语市场 SEO 有天然加成。语言是一条实用差异：荷兰英语普及率全球顶尖，英文词根在 .nl 下完全可用；德国市场则更认德语复合词，英文品牌词的亲切度低一档。价格与资格都温和：.nl 注册约 $9（约 ¥65）、续费约 $10/年（约 ¥72），任何人可注册但 SIDN 要求荷兰境内联系地址（主流注册商可代理）；.de 约 $8/年（约 ¥58）平续，要求德国境内 Admin-C 地址（注册商代理支持），且 DENIC 有 DNS zone 检查。判断标准：用户在荷兰或走欧洲物流枢纽路线 → .nl；用户在德国 → .de；同时深耕两个市场的品牌通常各注册一个做本地门面，谈不上二选一。",
+      pickA: ["面向荷兰市场的电商", "荷兰本地服务与事务所", "欧洲物流与跨境贸易业务", "用英文词根命名的欧洲品牌"],
+      pickB: ["面向德国市场的电商", "德国制造与出口企业官网", "德国本地服务与商铺", "德语内容与媒体站"],
+    },
+    en: {
+      title: ".nl vs .de: The Dutch Hub or the German Heartland",
+      metaDescription:
+        ".nl is the world's third-largest ccTLD with top per-capita penetration at about $9 to register and $10/yr to renew, open to anyone (Dutch contact address required); .de is the world's largest ccTLD at about $8/yr flat. Compare market signals, eligibility and English usability, then hunt available names.",
+      verdict:
+        "Two neighboring Western European heavyweights — one tops absolute size, the other per-capita penetration — and the choice follows your users. Netherlands-focused → .nl: run by registry SIDN with over 6.3 million registrations — per capita one of the most deeply penetrated ccTLDs on earth, third in absolute size behind .de and .cn; Dutch consumers hold a strong local preference, name.nl is near-mandatory for local e-commerce, services and firms, and Google geo-associates .nl sites with the Netherlands. The country is also Europe's logistics and trade hub (Port of Rotterdam, Schiphol), so cross-border commerce and trading companies naturally use .nl to say \"a European business based in the Netherlands\". Germany-focused → .de: run by DENIC with over 17 million registrations — the largest ccTLD on earth — German consumers type name.de by habit, with local trust far beyond any new gTLD and a free German-market SEO boost. Language is a practical differentiator: Dutch English proficiency is among the world's highest, so English roots work perfectly on .nl; the German market leans toward German compound words, where English brand words feel a notch colder. Pricing and eligibility are gentle on both sides: .nl runs about $9 to register (≈¥65) and $10/yr to renew (≈¥72), open to anyone though SIDN requires a Dutch contact address (mainstream registrars proxy it); .de runs about $8/yr flat (≈¥58), requiring a German Admin-C address (registrar-proxied) with DENIC's DNS zone checks. The test: users in the Netherlands, or a European-logistics-hub story → .nl; users in Germany → .de; brands serious about both markets usually register one of each as local front doors — it's rarely either-or.",
+      pickA: ["Netherlands-facing e-commerce", "Local Dutch services & firms", "European logistics & cross-border trade", "European brands naming with English roots"],
+      pickB: ["Germany-facing e-commerce", "German manufacturers & exporters", "Local German services & shops", "German-language content & media"],
+    },
+  },
+  "kr-vs-jp": {
+    slug: "kr-vs-jp",
+    a: "kr",
+    b: "jp",
+    zh: {
+      title: ".kr 和 .jp 怎么选：韩国与日本两大东亚市场的对比",
+      metaDescription: ".kr 是韩国国家域名、K 系品牌自带「韩流正品」联想，约 $40/年平续、需韩国联系地址；.jp 是日本国家域名、亚洲信任度最高的 ccTLD 之一，约 $40/年平续。对比两者的市场信号、资格与命名习惯，并用 AI 猎取可注册的名字。",
+      verdict:
+        "东亚两大高信任 ccTLD，价格与门槛几乎对等，选择完全看你的用户在首尔还是东京。做韩国市场 → .kr：韩国互联网振兴院（KISA）旗下 KRNIC 管理、注册量约 110 万；韩国是全球数字化程度最高的市场之一，消费者对本土信号敏感，name.kr 一眼讲清「韩国的生意」，Naver 与 Google 都会把 .kr 站点与韩国地区相关联；K-pop、K-beauty、K-food 的全球势能还给 .kr 加了一层「韩流正品」的品牌联想——做韩妆、韩食、韩娱周边的跨境业务，.kr 比通用后缀更能讲清出身。做日本市场 → .jp：JPRS 运营、注册量约 170 万，是亚洲信任度最高的 ccTLD 之一，乐天、任天堂等日本巨头的主站都在 .jp 系后缀上，日语市场 SEO 有天然加成。两边的价格与资格几乎镜像：都是约 $40/年（约 ¥290）平续，价格门槛过滤投机、库存干净；都要求本地联系地址且注册商可代理（.kr 走 Gabia、Whois.co.kr 等，.jp 走 Gandi、GMO 系）；都有更严格的企业档——.co.kr 与 .co.jp 均须本地注册法人，门槛与信任度各高一档。命名习惯也对称：韩语罗马字（romaja）词根对韩国用户、日语罗马字（romaji）词根对日本用户，都比英文词更亲切。判断标准：用户在韩国或做 K 系跨境品牌 → .kr；用户在日本 → .jp；同时做两个市场的品牌（美妆、内容出海常见）通常各注册一个，本地门面分开讲。",
+      pickA: ["面向韩国市场的电商", "K-beauty/K-food 跨境品牌", "韩国本地服务与门店", "韩语内容与娱乐站"],
+      pickB: ["面向日本市场的电商", "日本本地服务与门店", "进入日本市场的海外品牌", "日语内容与媒体站"],
+    },
+    en: {
+      title: ".kr vs .jp: Korea or Japan — Two East Asian Markets Compared",
+      metaDescription:
+        ".kr is South Korea's country domain with a K-wave authenticity halo at about $40/yr flat, Korean contact address required; .jp is Japan's country domain and among Asia's most trusted ccTLDs at about $40/yr flat. Compare market signals, eligibility and naming habits, then hunt available names.",
+      verdict:
+        "Two high-trust East Asian ccTLDs with nearly identical pricing and bars — the choice rests entirely on whether your users are in Seoul or Tokyo. Korea-focused → .kr: managed by KRNIC under the Korea Internet & Security Agency (KISA) with about 1.1 million registrations; Korea is one of the world's most digitized markets, consumers are attuned to local signals, name.kr says \"a Korean business\" at a glance, and Naver and Google both geo-associate .kr sites with Korea. The global momentum of K-pop, K-beauty and K-food adds an authenticity halo — for cross-border ventures selling Korean cosmetics, food or entertainment merchandise, .kr communicates Korean origin better than any generic suffix. Japan-focused → .jp: run by JPRS with about 1.7 million registrations, among the most trusted ccTLDs in Asia — giants like Rakuten and Nintendo keep their main sites on .jp-family suffixes, with a free Japanese-market SEO boost. Pricing and eligibility mirror each other: both run about $40/yr flat (≈¥290), a price bar that filters speculation and keeps inventory clean; both require a local contact address with registrar proxies available (.kr via Gabia and Whois.co.kr, .jp via Gandi and GMO-family registrars); and both offer a stricter corporate tier — .co.kr and .co.jp each require a locally registered company, a higher bar with higher trust. Naming habits are symmetric too: Korean romaja roots for Korean users and Japanese romaji roots for Japanese users both feel warmer than English words. The test: users in Korea, or a K-wave cross-border brand → .kr; users in Japan → .jp; brands serving both markets (common in beauty and content) usually register one of each and keep the local front doors separate.",
+      pickA: ["Korea-facing e-commerce", "K-beauty/K-food cross-border brands", "Local Korean services & storefronts", "Korean-language content & entertainment"],
+      pickB: ["Japan-facing e-commerce", "Local Japanese services & storefronts", "Overseas brands entering Japan", "Japanese-language content & media"],
+    },
+  },
+  "hk-vs-sg": {
+    slug: "hk-vs-sg",
+    a: "hk",
+    b: "sg",
+    zh: {
+      title: ".hk 和 .sg 怎么选：香港与新加坡两大亚洲枢纽的对比",
+      metaDescription: ".hk 是香港地区域名、无资格限制任何人可注册，约 $25/年平续，面向大湾区与两岸三地商圈；.sg 是新加坡国家域名、约 $39/年平续、需本地存在，在东南亚商圈自带合规联想。对比两者的信号半径、资格与价格，并用 AI 猎取可注册的名字。",
+      verdict:
+        "亚洲两大金融与贸易枢纽的域名对决，信号都会外溢到本地之外，分工在辐射的方向与门槛。.hk 赢在低门槛与大中华辐射——香港互联网注册管理有限公司（HKIRC）运营，与 .jp/.kr/.sg 等亚洲邻居不同，.hk 对注册人没有资格限制：任何地区的个人与机构都能直接注册、无需本地代理，是亚洲 ccTLD 里门槛最低的之一（更严格的 .com.hk 需香港注册企业）；面向大湾区与东南亚的贸易公司、金融服务、跨境电商用 name.hk 讲「以香港为基地的国际生意」，在两岸三地与亚太商圈自带国际化与合规联想；价格中等平续，约 $25/年（约 ¥180）。.sg 赢在东南亚商圈的合规浓度——新加坡是东南亚的商业与金融枢纽，SGNIC（新加坡资讯通信媒体发展局旗下）运营，面向东南亚的区域总部、金融科技用 name.sg 讲「以新加坡为基地的正规生意」，这个后缀在东南亚商圈的专业联想比 .hk 更浓；但要求本地存在——本地个人、注册企业，海外主体由注册商代理（Vodien、Exabytes 等支持）；注册约 $39/年（约 ¥280）平续，比 .hk 贵一半，价格门槛过滤投机、库存干净。判断标准：业务辐射大湾区、两岸三地，或想要零门槛快速拿域名 → .hk 更顺手，「trade/pay 类功能词 + .hk」在贸易金融圈很自然；业务以东南亚为主战场、region HQ 落在新加坡、金融科技要合规联想 → .sg 的信号更对口。两边都注意：信号半径限于亚太商圈，纯欧美市场业务另择后缀；同时布局两个枢纽的机构，双注册分别做区域门面也常见。",
+      pickA: ["香港本地企业与服务", "大湾区与跨境贸易业务", "面向两岸三地的品牌", "无本地实体、要低门槛注册的主体"],
+      pickB: ["新加坡本地企业与服务", "东南亚区域总部与跨境业务", "金融科技与专业服务", "进入东南亚市场的品牌"],
+    },
+    en: {
+      title: ".hk vs .sg: Hong Kong or Singapore — Two Asian Hubs Compared",
+      metaDescription:
+        ".hk is Hong Kong's regional domain — no eligibility restrictions, anyone can register — at about $25/yr flat, radiating across the Greater Bay Area and Chinese-speaking markets; .sg is Singapore's country domain at about $39/yr flat with local presence required and compliance connotations across Southeast Asia. Compare signal radius, eligibility and pricing, then hunt available names.",
+      verdict:
+        "A duel between Asia's two financial and trading hubs — both signals spill beyond their home turf, and the split is in radiation direction and the bar to entry. .hk wins on the low bar and Greater China reach — run by the non-profit Hong Kong Internet Registration Corporation (HKIRC), and unlike Asian neighbors .jp, .kr and .sg, it imposes no eligibility restrictions: individuals and organizations from anywhere register directly with no local proxy, one of the lowest bars among Asian ccTLDs (the stricter .com.hk requires a Hong Kong company); trading companies, financial services and cross-border commerce targeting the Greater Bay Area and Southeast Asia use name.hk to say \"an international business based in Hong Kong\", a suffix carrying international and compliance connotations across Chinese-speaking and Asia-Pacific business circles; pricing is moderate and flat at about $25/yr (≈¥180). .sg wins on compliance density in Southeast Asian circles — Singapore is the region's business and financial hub, the domain is run by SGNIC under the Infocomm Media Development Authority, and regional headquarters and fintech firms on name.sg say \"a legitimate business based in Singapore\", a professionalism signal that runs denser than .hk in Southeast Asia; but it requires local presence — Singapore individuals or registered entities, with registrars (Vodien, Exabytes) proxying for overseas registrants — at about $39/yr flat (≈¥280), half again .hk's price, a bar that filters speculation and keeps inventory clean. The test: business radiating across the Greater Bay Area and Chinese-speaking markets, or wanting a zero-bar registration → .hk is the smoother pick, with trade/pay-style function words + .hk landing naturally in trade and finance circles; business centered on Southeast Asia, a regional HQ seated in Singapore, fintech wanting the compliance connotation → .sg's signal fits better. On both sides, note the radius stops at Asia-Pacific business circles — purely Western-market ventures should look elsewhere; institutions straddling both hubs often register both as separate regional front doors.",
+      pickA: ["Local Hong Kong businesses & services", "Greater Bay Area & cross-border trade", "Brands targeting Chinese-speaking markets", "Registrants wanting a zero-bar signup with no local entity"],
+      pickB: ["Local Singapore businesses & services", "Southeast Asia regional HQs & cross-border trade", "Fintech & professional services", "Brands entering Southeast Asia"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

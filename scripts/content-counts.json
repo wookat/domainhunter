@@ -714,7 +714,7 @@
     ]
   },
   "vs": {
-    "count": 390,
+    "count": 396,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -1105,7 +1105,13 @@
       "ca-vs-us",
       "au-vs-com",
       "jp-vs-cn",
-      "sg-vs-asia"
+      "sg-vs-asia",
+      "fr-vs-com",
+      "it-vs-de",
+      "es-vs-eu",
+      "nl-vs-de",
+      "kr-vs-jp",
+      "hk-vs-sg"
     ]
   }
 }
