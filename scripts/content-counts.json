@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 246,
+    "count": 252,
     "slugs": [
       "com",
       "net",
@@ -247,7 +247,13 @@
       "coupons",
       "discount",
       "furniture",
-      "lighting"
+      "lighting",
+      "business",
+      "limited",
+      "associates",
+      "cheap",
+      "bargains",
+      "supplies"
     ]
   },
   "guide": {
