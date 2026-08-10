@@ -1935,6 +1935,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个鲜花电商与订阅订花品牌，寓意「新鲜绽放、准时的心意」；气质要浪漫又可靠、上镜适合晒图、说出口带花香；场景是快递花盒、贺卡署名和每周收花的朋友圈晒图里都体面动人。",
     en: "A flower delivery and bouquet subscription brand. The name should promise fresh blooms and sentiment arriving on time; the vibe is romantic yet dependable, photogenic and fragrant when spoken; it must charm on the delivery box, the gift-card signature, and the weekly unboxing photos shared online.",
   },
+  {
+    slug: "taproom",
+    labelZh: "精酿酒馆",
+    labelEn: "Taproom",
+    zh: "一家精酿酒馆或打酒站，寓意「现打新鲜、街区据点」；气质要有烟火气与态度、像街角老友不像货架商标；场景是微信群约酒、酒杯印字和半醉熟客的口头转述里都一说就懂。",
+    en: "A taproom or craft beer bar. The name should promise fresh pours and a neighborhood hangout; the vibe is warm with an edge of craft rebellion, a street-corner friend rather than a shelf label; it must land in group-chat invites, on the glassware, and in a happily buzzed regular's retelling.",
+  },
+  {
+    slug: "izakaya",
+    labelZh: "居酒屋",
+    labelEn: "Izakaya",
+    zh: "一家居酒屋或日式酒场，寓意「暖帘一掀、烟火扑面」；气质要松弛有温度、有炭炉与灯笼的画面感、一次说得清；场景是下班约酒、门口暖帘和「今晚去哪喝」的一句话邀约里都亲切自然。",
+    en: "An izakaya or Japanese gastropub. The name should promise lifted curtains and charcoal warmth; the vibe is loose and warm with lantern-and-grill imagery, clear in one hearing; it must feel natural in after-work invites, on the entrance curtain, and in the one-line \"where are we drinking tonight\".",
+  },
+  {
+    slug: "dayspa",
+    labelZh: "水疗会所",
+    labelEn: "Day spa",
+    zh: "一家水疗 SPA 会所，寓意「城市里的避世角落」；气质要静谧克制、念出口就让肩膀松下来、配得上客单价；场景是闺蜜推荐、预约短信和香薰灯下的会员卡上都轻盈体面。",
+    en: "A day spa and wellness retreat. The name should promise a sanctuary inside the city; the vibe is hushed and restrained, dropping shoulders the moment it is spoken, worthy of the price list; it must glow in friend referrals, booking confirmations, and on the membership card under aromatherapy light.",
+  },
+  {
+    slug: "snacks",
+    labelZh: "零食品牌",
+    labelEn: "Snack brand",
+    zh: "一个零食与休闲食品品牌，寓意「一口上瘾、分享快乐」；气质要馋感十足又有品质托底、货架三秒能让人伸手；场景是货架包装、直播口播和办公室分享的「这是什么牌子」里都立刻记住。",
+    en: "A snack and treats brand. The name should promise one-bite addiction and shareable joy; the vibe is crave-loaded with a quality anchor, triggering a reach within three shelf seconds; it must stick instantly on packaging, in livestream reads, and in the office \"what brand is this\".",
+  },
+  {
+    slug: "lawfirm",
+    labelZh: "律师事务所",
+    labelEn: "Law firm",
+    zh: "一家律师事务所，寓意「稳重可信、君子合力」；气质要端正庄重、有典籍底蕴、经得起委托前的反复查证；场景是委托合同抬头、法院文书和企业法务的推荐名单里都不怒自威。",
+    en: "A law firm. The name should promise steadiness, trust and partners joined in purpose; the vibe is upright and grave with classical depth, solid under pre-engagement scrutiny; it must command quiet authority atop engagement letters, in court filings, and on the general counsel's shortlist.",
+  },
+  {
+    slug: "orthodontics",
+    labelZh: "正畸齿科",
+    labelEn: "Orthodontics",
+    zh: "一个正畸齿科与隐形矫正品牌，寓意「隐形舒适、笑容可期」；气质要美而专业、去医疗恐惧又不失资质感；场景是咨询室话术、矫治器包装和两年后晒出的笑容对比图里都值得信赖。",
+    en: "An orthodontics and clear aligner brand. The name should promise invisible comfort and a smile worth the journey; the vibe is beautiful yet clinical enough to trust, dissolving dental dread without losing credentials; it must reassure in the consult script, on aligner packaging, and in the two-year before-and-after smile reveal.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

@@ -16616,6 +16616,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  taproom: {
+    slug: "taproom",
+    keywords: ["精酿酒馆", "自饮吧", "打酒站", "啤酒屋", "taproom", "craft beer bar"],
+    tlds: [
+      { tld: "beer", zh: "后缀即品类，精酿酒馆的域名自带酒花香", en: "The suffix is the category — a taproom's domain arrives hopped" },
+      { tld: "pub", zh: "酒馆业态直给，熟客约酒时一说就懂", en: "The pub format stated outright — regulars get it in one hearing" },
+      { tld: "bar", zh: "泛酒吧场景通吃，精酿之外的鸡尾酒夜也兜得住", en: "Covers the wider bar scene — cocktail nights beyond craft beer included" },
+    ],
+    zh: {
+      label: "精酿酒馆",
+      title: "精酿酒馆与打酒站怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "精酿酒馆与打酒站命名指南：酒头现打、街区据点等思路，跳东湖/BrewDog/Mikkeller 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "精酿酒馆的名字要能被酒鬼在微信群里一句话喊出来：「今晚老地方，XX 见」。与精酿品牌（酒厂）不同，酒馆卖的是「据点感」——十几个酒头、常换的酒单、熟客的固定座位，名字要像街角老友而不是货架商标。看行业样本：跳东湖把武汉人夏天跳进东湖的城市记忆做成店名，BrewDog 用 brew+dog 的组合把反叛精神拧进两个音节，Mikkeller 则是创始人名字的嫁接——三条路线分别代表「在地记忆、态度宣言、主理人人格」。酒馆名字还要考虑「醉后复述」场景：三杯下肚还能说清楚的名字才是好名字，拗口的英文长词在吧台点单时会被自动缩写，不如自己先起好短名。",
+      namingIdeas: [
+        "在地记忆词：城市地标、街区旧称、本地人才懂的梗——跳东湖式的名字让酒馆天然成为「本地人的据点」，游客也想打卡",
+        "酒头与现打意象：tap、桶、鲜啤、酒花——精酿酒馆与瓶装店的区别就是「现打」，把新鲜度写进名字",
+        "反叛与态度词：精酿文化自带对工业啤酒的反叛，BrewDog 式的态度词让同好一眼认亲，但要留意本地化后的攻击性",
+        "主理人人格：创始人绰号、姓氏+酒馆——精酿圈认「谁酿的」，Mikkeller 证明人格化名字能长成全球连锁",
+        "醉后复述测试：名字念三遍，想象半醉的熟客向朋友转述——两个音节内说得清的才配印上酒杯",
+      ],
+      cases: [
+        { name: "跳东湖", takeaway: "把武汉人夏天跳进东湖的集体记忆做成店名：三个字自带画面、动作与城市归属感——在地记忆命名的天花板，外地开店还能讲「跳」的故事" },
+        { name: "BrewDog", takeaway: "brew（酿）+ dog（狗/伙计）：品类词加街头感称呼，反叛气质拧进两个音节——精酿态度命名的全球样本" },
+        { name: "Mikkeller", takeaway: "创始人 Mikkel 与好友 Keller 的名字嫁接：主理人人格直接做品牌，从吉普赛酿造走到全球酒馆网络——人格化命名的成功路径" },
+        { name: "大跃啤酒", takeaway: "Great Leap 的中英双关：北京胡同酒馆用一个历史短语反差出幽默感，中文名朗朗上口——本地梗与国际表达兼顾的老牌样本" },
+      ],
+      pitfalls: [
+        "堆砌 craft/hops 等圈内词：全城精酿酒馆一半叫 Hops 什么，名字撞车后熟客约酒都要加地址",
+        "英文长词拗口：吧台点单与醉后转述都会把长名字磨短，不如自己先起个两音节短名",
+        "只顾反叛忘了亲切：酒馆是熟客生意，名字攻击性太强会把「下班喝一杯」的轻客群挡在门外",
+        "与酒厂品牌混淆：打酒站卖多家酒厂的酒，名字太像某个酒厂会被误认为专营店——据点感要大于品牌感",
+      ],
+    },
+    en: {
+      label: "Taprooms",
+      title: "How to Name a Taproom or Craft Beer Bar: Strategies, Cases & Domains",
+      metaDescription:
+        "Taproom and craft beer bar naming guide: fresh-from-the-tap imagery, neighborhood-landmark names, breakdowns of BrewDog/Mikkeller/Other Half, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A taproom name must survive the group chat: \"usual spot tonight — see you at X.\" Unlike a brewery brand, a taproom sells a hangout — sixteen rotating taps, a chalkboard list, regulars' favorite stools — so the name should feel like a street-corner friend, not a shelf label. The benchmarks show three routes: BrewDog twists rebellion into two syllables with brew + dog; Mikkeller grafts two founders' names into a persona that grew into a global bar network; Other Half turns a phrase of belonging (\"how the other half drinks\") into identity. A taproom name also faces the three-pints test: whatever regulars can still pronounce after three pours is the real name — long fancy words get slurred into nicknames at the bar, so pick the short name yourself first.",
+      namingIdeas: [
+        "Neighborhood-landmark roots: street names, local lore, jokes only locals get — the name makes the bar the default local hangout and a pilgrimage for visitors",
+        "Fresh-from-the-tap imagery: tap, cask, pour, hop — what separates a taproom from a bottle shop is freshness on draft; write it into the name",
+        "Attitude and rebellion words: craft culture defines itself against industrial lager — BrewDog-style defiance helps the tribe self-identify, but check how the edge translates locally",
+        "Founder-persona names: a nickname or surname plus taproom — the craft crowd cares who pours; Mikkeller proves a personal name can scale worldwide",
+        "The three-pints test: say the name three times, then imagine a happily buzzed regular repeating it — if it survives under two syllables, it earns the glassware",
+      ],
+      cases: [
+        { name: "BrewDog", takeaway: "brew + dog: a category word welded to a streetwise companion, packing craft rebellion into two syllables — the global template for attitude-first beer naming" },
+        { name: "Mikkeller", takeaway: "Founders Mikkel and Keller grafted into one name: persona-as-brand that scaled from gypsy brewing to a worldwide bar network — proof personal names travel" },
+        { name: "Other Half", takeaway: "A phrase of belonging — how the other half drinks — made into identity: no beer word needed, the tribe recognizes itself — concept naming at hazy-IPA level" },
+        { name: "Tree House", takeaway: "A childhood hideout as a brewery-taproom name: instant warmth and destination feel, zero beer jargon — imagery that makes the trip part of the brand" },
+      ],
+      pitfalls: [
+        "Piling on hops/craft/barrel: half the taprooms in town share these roots — a colliding name means regulars must append the street address",
+        "Fancy polysyllables: bar orders and buzzed retellings grind long names into nicknames — choose your own short name before customers do",
+        "All edge, no welcome: taprooms live on regulars — a name too aggressive scares off the after-work-pint crowd that pays the rent",
+        "Reading like a brewery: a multi-tap bar named after one style or brewery gets mistaken for a tied house — hangout identity should outrank brand identity",
+      ],
+    },
+  },
+  izakaya: {
+    slug: "izakaya",
+    keywords: ["居酒屋", "日式酒场", "深夜食堂", "串烧店", "izakaya"],
+    tlds: [
+      { tld: "pub", zh: "酒场业态直给，「下班喝一杯」的场景零解释", en: "The drinking-den format stated outright — zero explanation for the after-work pint" },
+      { tld: "bar", zh: "泛酒吧后缀通吃，清酒吧与烧鸟吧都成立", en: "The catch-all bar suffix — works for sake bars and yakitori counters alike" },
+      { tld: "restaurant", zh: "以食为主的居酒屋看正规感，订位场景稳妥", en: "Food-forward izakayas need legitimacy — solid for the reservation flow" },
+    ],
+    zh: {
+      label: "居酒屋",
+      title: "居酒屋与日式酒场怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "居酒屋与日式酒场命名指南：烟火气、深夜感等思路，鸟贵族/和民/串亭案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "居酒屋的名字要有「暖帘一掀、烟火扑面」的画面感：下班的人推门进来，要的不是精致而是松弛。这个业态的命名传统极其成熟——日文原型里，鸟贵族用「鸟（烧鸟）+贵族」的反差把平价串烧说出体面感，和民取「和（日式/平和）+民（大众）」直白定位大众食堂，磯丸水産用「磯（海边礁石）+水产」把海鲜新鲜感焊进店名。中文语境起名要多一层考虑：假名与生僻汉字虽有日式氛围，但会挡住口头传播——「今晚去 XX」必须一次说清。好的居酒屋名字往往是「食材/炉火词 + 屋/亭/家」的结构，两三个字就把深夜的一顿热饭说明白。",
+      namingIdeas: [
+        "炉火与烟气词：炉端、炭、串、焼——居酒屋的核心画面是炭炉上的烟火气，把火写进名字就有了温度",
+        "反差升维：平价食材配贵气字眼，鸟贵族式的「串烧+贵族」让客人花小钱有面子——反差本身就是记忆点",
+        "屋/亭/家收尾：日式店名的经典结构，前面放食材或意象词（串亭、鱼屋），一听就是「有座位的小馆子」",
+        "深夜与月夜意象：深夜食堂式的「夜、月、灯」——居酒屋做的是下班后的时间生意，把时段写进名字直接锚定场景",
+        "醉语测试：名字要经得起微醺的客人向朋友转述——假名、生僻字、四字以上的名字都会在转述中丢失",
+      ],
+      cases: [
+        { name: "鸟贵族", takeaway: "鸟（烧鸟串）+贵族：平价串烧店用贵气字眼做反差，「均一价请客也体面」的定位一词说清——反差命名的教科书" },
+        { name: "和民", takeaway: "和（日式/平和）+民（大众）：两个字直白定位「大众的日式食堂」，读音简单、含义温和——直给命名的长寿样本" },
+        { name: "串亭", takeaway: "串（品类）+亭（小馆）：食材词加建筑词的经典日式结构，两个字说清业态与规模——中文语境也完全成立的模板" },
+        { name: "磯丸水産", takeaway: "磯（海礁）+水产：把「海边直送」的新鲜感焊进店名，24 小时海鲜居酒屋的定位自带信任——供应链卖点入名的范例" },
+      ],
+      pitfalls: [
+        "假名与生僻汉字堆日式感：氛围有了但没人会念，口头推荐与搜索都断流——日式感应来自意象而非字形",
+        "与拉面/寿司店名混淆：居酒屋卖的是「酒+串+深夜」，名字太像正餐店会错配客人的时段预期",
+        "过度精致失去松弛感：居酒屋的本质是下班后的放松，名字端着会把「随便喝一杯」的客人吓跑",
+        "只有日文名没有中文名：本地化市场必须有能被中文说清的名字，双名并行时要保证指向同一家店",
+      ],
+    },
+    en: {
+      label: "Izakayas",
+      title: "How to Name an Izakaya or Japanese Gastropub: Strategies, Cases & Domains",
+      metaDescription:
+        "Izakaya naming guide: charcoal-and-lantern imagery, late-night warmth, breakdowns of Torikizoku/Watami/Gonpachi, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An izakaya name should feel like the curtain lifting: charcoal smoke, a lantern, the exhale after work. This category has one of the most mature naming traditions anywhere — Torikizoku pairs tori (grilled chicken) with kizoku (nobility) so a budget skewer chain sounds gracious; Watami joins wa (Japanese/harmony) and tami (the people) into \"everyone's canteen\"; Gonpachi rides a folkloric personal name into destination-restaurant fame. Naming outside Japan adds a translation layer: kanji and kana carry atmosphere but can block word of mouth — \"let's go to X tonight\" must survive one hearing. The classic structure travels well: an ingredient or hearth word plus a small-house suffix (ya, tei, an), telling diners in two beats that a warm seat and a cold drink await.",
+      namingIdeas: [
+        "Hearth and smoke roots: robata, charcoal, skewer, grill — the izakaya's defining image is smoke rising off binchotan; write the fire into the name for instant warmth",
+        "Contrast elevation: budget food dressed in noble words — Torikizoku's skewers-plus-nobility makes cheap feel classy; the contrast itself is the mnemonic",
+        "Small-house suffixes: ya, tei, an after an ingredient or image word — the classic structure that says \"cozy seats, small plates\" in one breath",
+        "Late-night imagery: lantern, midnight, moon — izakayas trade in the hours after work; naming the time slot anchors the occasion before the menu is read",
+        "The tipsy-retelling test: kana, rare kanji and four-plus syllables all dissolve when a happy customer recommends you — keep it sayable after two highballs",
+      ],
+      cases: [
+        { name: "Torikizoku", takeaway: "tori (yakitori) + kizoku (nobility): budget skewers dressed in noble diction — flat pricing made dignified, the textbook of contrast naming" },
+        { name: "Watami", takeaway: "wa (Japanese/harmony) + tami (the people): two syllables positioning \"everyone's Japanese canteen\" — plainspoken naming with decades of staying power" },
+        { name: "Gonpachi", takeaway: "A folkloric personal name on an Edo-styled space: persona plus theater that turned a Tokyo izakaya into a destination — story-first naming at scale" },
+        { name: "Uoshin", takeaway: "uo (fish) + shin (trust/fresh): the seafood supply chain welded into the name — freshness as a trust signal, category-word naming done right" },
+      ],
+      pitfalls: [
+        "Stacking kana and rare kanji for vibe: atmosphere without pronounceability kills word of mouth and search — let imagery, not typography, carry the Japan feel",
+        "Reading like a ramen or sushi bar: izakayas sell drinks-plus-skewers-plus-midnight — a name that promises a full dinner mismatches the occasion",
+        "Over-polishing away the slouch: the izakaya's essence is post-work looseness — a name too refined scares off the \"just one beer\" crowd",
+        "Running local and Japanese names that diverge: bilingual markets need both names pointing unmistakably at the same door — test the pair together",
+      ],
+    },
+  },
+  dayspa: {
+    slug: "dayspa",
+    keywords: ["水疗会所", "SPA 会所", "日间水疗", "spa", "day spa", "芳疗馆"],
+    tlds: [
+      { tld: "spa", zh: "后缀即品类，水疗会所的域名先于文案放松", en: "The suffix is the category — a spa's domain relaxes before the copy does" },
+      { tld: "salon", zh: "美业会所气质直给，美容+水疗的复合店零违和", en: "Beauty-house polish stated outright — seamless for salon-spa hybrids" },
+      { tld: "care", zh: "把「被照顾」写进后缀，疗愈感与信任感兼得", en: "Being cared for written into the suffix — healing and trust in one" },
+    ],
+    zh: {
+      label: "水疗会所",
+      title: "水疗 SPA 会所怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "水疗 SPA 会所命名指南：静谧感、水与自然意象等思路，悦榕SPA/Chuan Spa/ESPA 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "水疗会所的名字要在念出口的瞬间就让肩膀松下来：客人买的是两小时的抽离，名字是这场疗愈的第一个音符。与按摩推拿店不同，SPA 会所卖的是「仪式感溢价」——精油、热石、静音拖鞋，名字必须配得上客单价。看行业样本：悦榕（Banyan Tree）用一棵亚洲榕树的意象把「树荫下的庇护感」做成全球品牌，朗廷酒店的 Chuan Spa 直接用中文「川」表达水流与经络的东方疗愈观，ESPA 则是造词+品类词的国际化打法。中文起名的富矿在「水部与静字」：泉、汐、沁、屿、憩——这些字自带温度与湿度。要避开的是「养生馆化」：一旦名字滑向足疗保健的语感，客单价就先降一半。",
+      namingIdeas: [
+        "水的意象词：泉、汐、涧、沁——SPA 的核心介质是水，水部字自带流动与洁净感，是中文命名的第一词库",
+        "庇护所隐喻：悦榕的树荫、屿、隐、栖——客人要的是「城市里的避世角落」，把庇护感写进名字就赢了一半",
+        "东方疗愈词：川（经络如川）、禅、和、气——东方身心观是高端 SPA 的通用语言，一个字就能立住体系感",
+        "静音测试：名字要念起来轻、收得住——爆破音与开口大笑的音节会打破静谧感，气音与闭口音更配香薰灯",
+        "仪式感命名：把療程体验词化——「唤醒、归零、深呼吸」类动词短语做副牌或疗程名，主品牌保持克制",
+      ],
+      cases: [
+        { name: "悦榕SPA", takeaway: "Banyan Tree 的榕树意象：树荫=庇护=疗愈的三层联想，中文「悦榕」又叠加愉悦感——自然意象命名走向全球的教科书" },
+        { name: "Chuan Spa", takeaway: "朗廷酒店直接用中文「川」：水流与经络的双重含义，一个汉字向全球客人输出东方疗愈观——文化自信命名的高分卷" },
+        { name: "ESPA", takeaway: "E+SPA 的造词：品类词就在名字里，前缀让它可注册可商标——造词与品类识别兼得的国际化打法" },
+        { name: "Bliss", takeaway: "直接用「极乐/幸福」情绪词：把疗程结束时的感受做成名字，纽约起家开进全球酒店——情绪词命名的成功样本" },
+      ],
+      pitfalls: [
+        "滑向养生馆语感：「XX 养生会所」的命名惯性会把客单价拉向足疗保健——高端感来自克制而非堆砌",
+        "梵语泰语词滥用：lotus、sukha 类词已在 SPA 行业严重通胀，且多数客人不解其意——异域感要配可读性",
+        "名字太满太响：爆破音与夸张词破坏静谧预期，SPA 名字应该像香薰一样轻",
+        "忽略療程线扩展：只锚定「水疗」会限制美容、正念、轻医美的延伸——主名留白，療程名去具体",
+      ],
+    },
+    en: {
+      label: "Day spas",
+      title: "How to Name a Day Spa or Wellness Retreat: Strategies, Cases & Domains",
+      metaDescription:
+        "Day spa naming guide: water imagery, sanctuary metaphors, hushed phonetics, breakdowns of Banyan Tree/Chuan Spa/ESPA, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A spa name should drop the client's shoulders the moment it is spoken: what they buy is a two-hour escape, and the name is the first note of the ritual. Unlike a massage storefront, a day spa charges a ceremony premium — essential oils, warm stones, silence in slippers — and the name must be worth the price list. The benchmarks show the range: Banyan Tree turned the shelter of an Asian fig tree into a global sanctuary brand; Langham's Chuan Spa exports the Chinese character for river, carrying water-and-meridian healing in one glyph; ESPA welds a coined prefix to the category word for a trademarkable classic. The richest English word-fields are water and hush: spring, tide, still, haven — words that arrive humid and quiet. The trap is clinic-drift: one step toward medical diction and the candlelight premium evaporates.",
+      namingIdeas: [
+        "Water imagery: spring, tide, rain, well — water is the spa's medium, and water words arrive pre-softened; the first field to mine",
+        "Sanctuary metaphors: haven, grove, nest, isle — clients want a hideout inside the city; a name that promises shelter is half the treatment",
+        "Eastern wellness roots: chuan, zen, chi — the East's mind-body vocabulary is the lingua franca of high-end spas; one well-chosen word installs a whole philosophy",
+        "The hush test: say the name in a whisper — plosives and wide-open syllables break the quiet; soft consonants and closed vowels match the aromatherapy",
+        "Ritual sub-naming: verbs of restoration — awaken, reset, breathe — belong on treatment menus; keep the master brand restrained and let rituals carry the poetry",
+      ],
+      cases: [
+        { name: "Banyan Tree", takeaway: "The fig tree's shade as brand: shelter, rootedness and healing in one botanical image — nature-metaphor naming that scaled into a global sanctuary" },
+        { name: "Chuan Spa", takeaway: "A single Chinese character — river — carrying water flow and meridian philosophy to a global audience: cultural-confidence naming at hotel-group scale" },
+        { name: "ESPA", takeaway: "A coined E- prefix on the category word: instantly legible as spa, yet ownable and trademarkable — the pragmatic classic of category-plus-coinage" },
+        { name: "Bliss", takeaway: "The post-treatment feeling as the name: one emotion word, New York origin, now inside hotels worldwide — proof a single feeling can be a brand" },
+      ],
+      pitfalls: [
+        "Clinic-drift: medical diction promises procedures, not candlelight — the premium lives in restraint, and one clinical word can halve the ticket",
+        "Sanskrit-and-lotus inflation: lotus, sukha and friends are the most crowded shelf in wellness — exotic borrowings need pronounceability and room to trademark",
+        "Names that shout: big plosives and maximal words break the hush before the door opens — a spa name should weigh as little as the aroma mist",
+        "Locking out the treatment line: a name welded to water alone cramps facials, mindfulness and light aesthetics — keep the master name open, let menus be specific",
+      ],
+    },
+  },
+  snacks: {
+    slug: "snacks",
+    keywords: ["零食品牌", "休闲食品", "坚果零食", "snack brand", "snacks"],
+    tlds: [
+      { tld: "food", zh: "后缀即品类，零食品牌的域名先馋为敬", en: "The suffix is the category — a snack brand's domain whets appetite first" },
+      { tld: "shop", zh: "零食电商直给业态，囤货下单场景零歧义", en: "Snack e-commerce stated outright — zero ambiguity at stock-up checkout" },
+      { tld: "com", zh: "商超渠道与经销商看正规感，.com 稳住铺货盘", en: "Retail buyers and distributors check legitimacy — .com anchors the shelf deals" },
+    ],
+    zh: {
+      label: "零食品牌",
+      title: "零食品牌与休闲食品怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "零食品牌与休闲食品命名指南：萌感人设、咀嚼拟声等思路，三只松鼠/良品铺子/旺旺案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "零食的名字要在货架三秒与直播三句里同时赢：消费者伸手之前，名字先替包装说话。这个品类的命名密度全食品行业最高——单价低、决策快、复购看心情，名字必须自带「馋感」或「萌感」。看行业样本：三只松鼠把吃坚果的形象动物做成人设 IP，客服喊「主人」把名字延伸成服务体验；良品铺子用「良品+铺子」的老字号结构说清品质定位；旺旺一个叠字押上所有吉利联想，春节送礼场景直接焊死。零食命名还有一条隐藏赛道：拟声词——嘎嘣、脆、啵啵，咀嚼声写进名字就是最短的食欲广告。要警惕的是健康化转型陷阱：过度放大「零负担」会让名字失去馋感，健康零食的名字仍要先好吃再健康。",
+      namingIdeas: [
+        "萌物人设：动物+数量词（三只松鼠式）——形象可做 IP、可做包装、可做客服话术，名字即人设资产",
+        "咀嚼拟声词：嘎嘣、脆、啵——把吃的声音写进名字，是最短路径的食欲唤醒，直播口播尤其占便宜",
+        "老字号结构：良品/优选+铺子/工坊——品质词加店铺词的组合自带信任感，适合全品类零食集合品牌",
+        "吉利叠字：旺旺、乐事式的叠音与好彩头——零食一半的生意在送礼与分享场景，喜庆感直接变销量",
+        "货架三秒测试：名字配包装在货架上三秒内能否让人伸手——读得快、有画面、带情绪的名字才过关",
+      ],
+      cases: [
+        { name: "三只松鼠", takeaway: "吃坚果的动物做成三只的人设 IP：名字自带形象、故事与「主人」客服话术——人设命名把低价零食做成情感生意的教科书" },
+        { name: "良品铺子", takeaway: "良品（品质承诺）+铺子（老字号亲切感）：四个字说清「什么都有且都靠谱」的集合店定位——结构化命名的稳健样本" },
+        { name: "旺旺", takeaway: "一个「旺」字叠音：好念好记好彩头，春节送礼场景直接焊死，狗叫的谐音还自带萌感——吉利命名的天花板" },
+        { name: "乐事", takeaway: "Lay's 的中文名「乐事」：音译兼意译，把吃薯片的快乐写进两个字——跨国品牌本地化命名的高分卷" },
+      ],
+      pitfalls: [
+        "健康词压倒馋感：零负担、代餐类词让名字先失去食欲——健康零食也要先馋后健康",
+        "品类词锁死扩张：叫「XX 坚果」就难卖辣条，零食复购靠上新，名字要给全品类留门",
+        "萌过头显廉价：叠字与儿化音堆太满会滑向地摊感，萌要配品质词托底",
+        "忽略商标与山寨：零食是山寨重灾区，叠字与常见吉利字组合大多已被注册——定名前先查商标库",
+      ],
+    },
+    en: {
+      label: "Snack brands",
+      title: "How to Name a Snack Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Snack brand naming guide: crave-trigger sounds, mascot personas, shelf-test naming, breakdowns of KIND/SkinnyPop/Graze, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A snack name must win twice in three seconds: once on the shelf before the hand reaches out, once in the feed before the thumb scrolls past. No food category names harder — low price, impulse decision, mood-driven repurchase — so the name itself must carry crave or charm. The benchmarks map the routes: KIND folds the brand's whole ethos into one four-letter word that doubles as a wish; SkinnyPop welds the benefit to the category with zero copy needed; Graze names the behavior — all-day nibbling — rather than the product. There is also a secret lane: onomatopoeia. Crunch, pop, crisp — the sound of eating written into the name is the shortest appetite ad ever run. The trap is health-washing: over-rotating to guilt-free diction kills the crave, and even a healthy snack must sound delicious first.",
+      namingIdeas: [
+        "Crave onomatopoeia: crunch, pop, crisp, snap — the eating sound written into the name wakes appetite on sight and wins the read-aloud in every video ad",
+        "Mascot personas: an animal or character with a number or a name — the mascot becomes packaging, IP and customer-service voice in one asset",
+        "Benefit-welded names: SkinnyPop-style benefit-plus-category — the label argument compressed to two syllables, no back-of-pack reading required",
+        "Behavior naming: graze, nibble, snack verbs — naming the eating occasion rather than the product keeps the whole category open for line extensions",
+        "The shelf three-second test: name plus pack must trigger a reach within three seconds — fast to read, visual, emotionally loaded, or it stays on the shelf",
+      ],
+      cases: [
+        { name: "KIND", takeaway: "Four letters carrying the entire ethos — kind to body, kind to world — and doubling as a wish on every wrapper: values naming at its most compressed" },
+        { name: "SkinnyPop", takeaway: "Benefit (skinny) welded to category sound (pop): the nutrition argument settled in the name itself — benefit-naming that saved a million words of copy" },
+        { name: "Graze", takeaway: "The behavior as the brand: all-day nibbling named in one verb, keeping every future snack format inside the tent — occasion naming with room to grow" },
+        { name: "Bare", takeaway: "One word promising nothing-added: the clean-label movement compressed into four letters — minimalist naming that is the ingredient list" },
+      ],
+      pitfalls: [
+        "Health words that kill the crave: guilt-free and diet diction starve the appetite — even virtuous snacks must sound delicious before wholesome",
+        "Category-locked names: a nut word on the label makes the chip launch awkward — snacking lives on new SKUs, so leave the name category-open",
+        "Cute past the cliff: stacked diminutives read dollar-store — charm needs a quality anchor or the price perception drops with it",
+        "Skipping the trademark sweep: snacks are counterfeit country and cute short names are heavily squatted — clear marks and shelf lookalikes before falling in love",
+      ],
+    },
+  },
+  lawfirm: {
+    slug: "lawfirm",
+    keywords: ["律师事务所", "律所", "法律咨询", "law firm", "attorney"],
+    tlds: [
+      { tld: "attorney", zh: "后缀即职业，律师身份先于名片完成自证", en: "The suffix is the profession — attorney credentials proven before the card" },
+      { tld: "law", zh: "三个字母的行业后缀，简洁权威两者兼得", en: "Three letters of legal authority — concise and unmistakable" },
+      { tld: "com", zh: "机构客户与法务采购看正规感，.com 稳住大案源", en: "Corporate clients and GC procurement check legitimacy — .com anchors the big mandates" },
+    ],
+    zh: {
+      label: "律师事务所",
+      title: "律师事务所怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "律师事务所命名指南：稳重信任感、典籍取字等思路，金杜/君合/大成案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "律所的名字要在委托书签字前先完成一次「资信审查」：客户把身家性命交给你之前，名字是第一份尽调材料。这个行业的命名传统横跨两个体系——英美所走「创始合伙人姓氏串」路线（Skadden、Kirkland & Ellis），姓氏即信誉，年头即资产；中国所则多从典籍与愿景取字：金杜取「金」的贵重与「杜」的姓氏感，君合寓「君子合力」，大成出自「集大成者」。两条路线殊途同归：律所名字必须稳、正、可信，任何轻佻都是执业风险。数字化时代多了一层考验：律所官网是案源入口，名字要经得起搜索——太常见的字组合会淹没在同名机构里，生僻字则让客户打不出字来。",
+      namingIdeas: [
+        "典籍与愿景取字：君合、大成式的经史子集词库——两个字承载执业理念，文化底蕴直接转化为专业信任",
+        "姓氏信誉路线：创始合伙人姓氏入名——个人品牌与机构品牌互相背书，适合以明星律师为核心的精品所",
+        "稳重单字组合：金、正、恒、信、衡——法律行业的字库偏爱重量感，单字组合要读来端正、写来大方",
+        "专业领域锚定：知识产权、海事、劳动法等精品所可把领域写进副牌——主名保持机构感，副牌负责精准获客",
+        "签字场景测试：名字印在委托合同抬头与法院文书里是否庄重——律所名字的终极场景是最严肃的纸面",
+      ],
+      cases: [
+        { name: "金杜", takeaway: "金（贵重/信用)+杜（姓氏感）：两个字兼得财富联想与人格背书，英文名 King & Wood 又对齐国际所惯例——中西双轨命名的教科书" },
+        { name: "君合", takeaway: "「君子合力」的典籍寓意：把合伙制的本质——人的联合——写进名字，读音清朗、字形端正——愿景命名的高分卷" },
+        { name: "大成", takeaway: "「集大成者」的典出：规模化定位与文化底蕴一次到位，与 Dentons 合并后中文名保留——名字资产在国际化中的价值样本" },
+        { name: "Kirkland & Ellis", takeaway: "创始合伙人姓氏串：姓氏即信誉、年头即资产的英美所传统——个人执业声誉转化为机构品牌的百年路径" },
+      ],
+      pitfalls: [
+        "求新求潮失了庄重：律所名字轻佻一分，客户的信任就少一分——创新要在视觉与服务，不在名字",
+        "生僻字显文化反成障碍：客户搜索打不出字、转介绍说不清名，案源在输入法里流失",
+        "与同名机构撞车：常见吉利字组合的律所重名率极高，注册前先查全国律所名录与商标库",
+        "忽略英文名与域名：涉外业务的名片、邮箱、官网需要一套对齐的英文名——中文定名时就要同步验证",
+      ],
+    },
+    en: {
+      label: "Law firms",
+      title: "How to Name a Law Firm: Strategies, Cases & Domains",
+      metaDescription:
+        "Law firm naming guide: surname equity, gravitas words, searchable modern names, breakdowns of Kirkland & Ellis/Dentons/Axiom, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A law firm's name undergoes due diligence before the engagement letter is signed: clients entrust livelihoods and liberty, and the name is the first exhibit. The tradition splits into two systems. The Anglo-American route strings founding partners' surnames — Skadden, Kirkland & Ellis — where the surname is the credential and the years are the asset. The modern route compresses a concept into one confident word: Dentons built a global merger platform on a single invented surname-like name; Axiom named the self-evident truth of a new legal model; Clifford Chance shows even merged surname pairs can read like one seamless institution. Both routes converge on the same requirement — steady, upright, trustworthy; any wink of levity is malpractice. The digital era adds one more test: the firm's website is the intake funnel, and the name must survive search — too generic drowns among namesakes, too clever and the client can't spell it into the bar.",
+      namingIdeas: [
+        "Surname equity: founding partners' names in sequence — personal reputation converts to institutional brand; the classic route for rainmaker-led boutiques",
+        "Gravitas single words: axiom, meridian, anchor-class words — one confident term carrying institutional weight; the modern route for NewLaw and ALSP models",
+        "Latin and legal-heritage roots: lex, juris, veritas — the profession's classical vocabulary signals continuity, but check the local bar's naming rules first",
+        "Practice-area sub-brands: IP, maritime, employment boutiques can anchor the specialty in a sub-brand — keep the master name institutional and let the tagline target",
+        "The letterhead test: set the name atop an engagement letter and a court filing — the ultimate context for a firm name is the most serious paper in the room",
+      ],
+      cases: [
+        { name: "Kirkland & Ellis", takeaway: "Founding surnames in sequence: the credential is the name and the decades are the asset — the Anglo-American template where reputation compounds into brand" },
+        { name: "Dentons", takeaway: "One invented surname-like word as a global merger platform: no partner's name to negotiate, every combined firm fits under it — structural naming for scale" },
+        { name: "Clifford Chance", takeaway: "Two merged firms reading as one seamless name: proof that surname heritage can consolidate into a single institutional voice — the merger-naming high bar" },
+        { name: "Axiom", takeaway: "A self-evident truth as a NewLaw brand: one confident word repositioning legal services as modern and rational — gravitas without the mahogany" },
+      ],
+      pitfalls: [
+        "Trend-chasing away the gravitas: a playful firm name discounts trust at exactly the moment it is priced — innovate in service delivery, not in the name",
+        "Cleverness clients can't spell: obscure Latin or invented spellings die at the search bar and in referrals — the intake funnel starts with typeability",
+        "Colliding with namesake firms: common gravitas words repeat across jurisdictions — sweep bar registries and trademarks before the signage order",
+        "Ignoring the domain-email-name triad: clients judge a firm whose email domain mismatches its name — verify the aligned .com or .law before the partnership vote",
+      ],
+    },
+  },
+  orthodontics: {
+    slug: "orthodontics",
+    keywords: ["正畸齿科", "隐形正畸", "牙齿矫正", "orthodontics", "invisible aligner"],
+    tlds: [
+      { tld: "dentist", zh: "后缀即职业，齿科专业身份一步到位", en: "The suffix is the profession — dental credentials in one step" },
+      { tld: "clinic", zh: "诊所业态直给，预约问诊场景零歧义", en: "The clinic format stated outright — zero ambiguity at booking" },
+      { tld: "care", zh: "把「呵护」写进后缀，弱化医疗恐惧感", en: "Care written into the suffix — softening the dental-chair dread" },
+    ],
+    zh: {
+      label: "正畸齿科",
+      title: "正畸齿科与隐形矫正品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "正畸齿科与隐形矫正命名指南：笑容意象、隐形与美学等思路，隐适美/时代天使/SmileDirectClub 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "正畸的名字要卖的不是「矫正」而是「矫正之后」：两年的矫治周期、上万的客单价，客户签约时买的是未来那张笑脸，名字必须先把结果画出来。看行业样本：隐适美（Invisalign）把 invisible+align 的功能承诺压进四个字的中文名，「隐、适、美」三个字恰好是隐形、舒适、变美的疗程三部曲；时代天使用「天使」把医疗器械说成守护者；SmileDirectClub 则把「笑容+直达+俱乐部」的 DTC 模式全写进名字。正畸命名的关键分野是 to C 还是 to B：面向消费者的品牌要美、要轻、要去医疗恐惧；面向诊所与医生的技术品牌则要专业、要器械级信任——两头都想要的名字往往两头都不到位。",
+      namingIdeas: [
+        "笑容与结果词：smile、笑、美——正畸卖的是矫正后的那张脸，把结果写进名字比写技术有效十倍",
+        "隐形与舒适承诺：隐、透、轻——成年正畸最大的顾虑是「戴牙套很丑」，隐形承诺直接拆除决策门槛",
+        "守护者人设：天使、guardian——把冷冰冰的医疗器械说成陪伴两年的守护者，时代天使证明人设能软化医疗感",
+        "对齐与秩序意象：align、正、齐——正畸的本质是把牙齿排回秩序，对齐词自带专业感又不吓人",
+        "疗程谐音测试：中文名最好能拆出疗程价值（隐适美式的一字一义）——名字本身就是咨询师的话术",
+      ],
+      cases: [
+        { name: "隐适美", takeaway: "Invisalign 的中文名「隐、适、美」：隐形、舒适、变美三个卖点一字一个，音译兼意译——医疗品牌本地化命名的天花板" },
+        { name: "时代天使", takeaway: "「天使」把矫治器说成守护者：医疗器械的冰冷感被人设化解，「时代」又铺开技术迭代的叙事——本土正畸品牌的命名样本" },
+        { name: "SmileDirectClub", takeaway: "笑容（结果）+直达（DTC 模式）+俱乐部（归属感）：商业模式全写进名字，省下一整页融资 BP——模式命名的极致案例" },
+        { name: "Byte", takeaway: "咬合（bite）谐音科技词 byte：一个双关同时说清品类与科技感，四个字母好记好搜——双关命名的轻巧样本" },
+      ],
+      pitfalls: [
+        "技术词吓退消费者：托槽、颌面类专业词让 to C 品牌自带牙科诊所的凉意——技术留给医生版官网",
+        "美到看不出医疗资质：纯美妆语感的名字会让客户怀疑正规性，正畸是医疗行为，美感要配专业锚点",
+        "to C 与 to B 混用一个名字：消费者品牌与器械技术品牌的信任语言完全不同，双线业务考虑双品牌",
+        "忽略医疗广告合规：绝对化疗效词（保证整齐、100% 变美）写进名字即违规——命名前过一遍广告法红线",
+      ],
+    },
+    en: {
+      label: "Orthodontics",
+      title: "How to Name an Orthodontics or Clear Aligner Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Orthodontics and clear aligner naming guide: smile-outcome words, invisible-comfort promises, breakdowns of Invisalign/SmileDirectClub/Byte, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An orthodontics name sells not the treatment but the after: a two-year journey and a four-figure ticket are signed on the promise of a future smile, so the name must paint the result before the scan. The benchmarks compress remarkably: Invisalign welds invisible + align into one seamless promise — the objection (visible braces) and the outcome (straight teeth) resolved in three syllables; SmileDirectClub writes the entire DTC business model into the name — result, channel, belonging; Byte puns bite into a tech-forward four-letter brand that types as fast as it says. The strategic fork is B2C versus B2B: consumer brands must be light, beautiful and dread-free, while clinician-facing platforms need device-grade authority — names that chase both usually land on neither.",
+      namingIdeas: [
+        "Smile-outcome words: smile, grin, beam — orthodontics sells the face after treatment; naming the result outperforms naming the technique ten to one",
+        "Invisible-comfort promises: clear, invisible, light — the adult patient's biggest objection is ugly braces; dissolving it in the name removes the decision barrier",
+        "Alignment imagery: align, straight, true — the category's essence is order restored; alignment words carry clinical competence without the drill sound",
+        "Tech-pun compression: Byte-style double meanings — one pun carrying both category and technology reads modern and searches clean",
+        "The consult-script test: the best names pre-load the consultation pitch (Invisalign answers the top objection unprompted) — a name that argues is a name that converts",
+      ],
+      cases: [
+        { name: "Invisalign", takeaway: "invisible + align: the objection and the outcome fused into one seamless word — category-defining compression that made the brand the generic term" },
+        { name: "SmileDirectClub", takeaway: "Result (smile) + channel (direct) + belonging (club): the whole DTC model written into the name, saving a pitch deck of explanation — model naming at its most literal" },
+        { name: "Byte", takeaway: "bite punned into byte: category and tech-forwardness in one four-letter word that types, says and searches clean — lightweight dual-meaning naming" },
+        { name: "Candid", takeaway: "An honesty word doubling as a smile descriptor: transparent pricing and a candid grin in one term — values and outcome sharing a single word" },
+      ],
+      pitfalls: [
+        "Clinical jargon on a consumer brand: bracket-and-occlusion diction brings the dental-chair chill — save the technical vocabulary for the clinician portal",
+        "So beautiful the license disappears: pure-cosmetics diction makes patients question medical legitimacy — aesthetics need a clinical anchor word",
+        "One name straddling B2C and B2B: patient trust language and clinician trust language diverge completely — dual-track businesses should consider dual brands",
+        "Ignoring medical-advertising rules: absolute-outcome words (guaranteed straight, 100% perfect) baked into a name are compliance violations — sweep the ad-law red lines before filing",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
