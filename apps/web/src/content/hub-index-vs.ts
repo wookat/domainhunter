@@ -370,4 +370,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "vision-vs-care", a: "vision", b: "care", title: { zh: ".vision 和 .care 怎么选：眼睛的专科与照护的温度", en: ".vision vs .care: The Eye Specialty or The Caring Touch" } },
   { slug: "tires-vs-autos", a: "tires", b: "autos", title: { zh: ".tires 和 .autos 怎么选：单一品类与汽车全域", en: ".tires vs .autos: The Single Category or The Whole Trade" } },
   { slug: "surgery-vs-clinic", a: "surgery", b: "clinic", title: { zh: ".surgery 和 .clinic 怎么选：手术的专科纵深与门诊的机构门面", en: ".surgery vs .clinic: The Surgical Depth or The Outpatient Front" } },
+  { slug: "domains-vs-tools", a: "domains", b: "tools", title: { zh: ".domains 和 .tools 怎么选：域名行业的自指与通用工具的口径", en: ".domains vs .tools: The Trade's Own Name or The Generic Toolbox" } },
+  { slug: "college-vs-academy", a: "college", b: "academy", title: { zh: ".college 和 .academy 怎么选：学院的机构身份与训练营的技能口径", en: ".college vs .academy: The Institution or The Bootcamp" } },
+  { slug: "actor-vs-studio", a: "actor", b: "studio", title: { zh: ".actor 和 .studio 怎么选：表演者的个人名片与创作团队的工作室招牌", en: ".actor vs .studio: The Performer's Card or The Team's Signboard" } },
+  { slug: "immo-vs-estate", a: "immo", b: "estate", title: { zh: ".immo 和 .estate 怎么选：欧陆行业词与英语地产的门面", en: ".immo vs .estate: The Continental Trade Word or The English Front" } },
+  { slug: "vin-vs-wine", a: "vin", b: "wine", title: { zh: ".vin 和 .wine 怎么选：法语酒标的格调与英语市场的直白", en: ".vin vs .wine: The French Label or The English Shelf" } },
+  { slug: "university-vs-education", a: "university", b: "education", title: { zh: ".university 和 .education 怎么选：大学的机构层级与教育的行业全域", en: ".university vs .education: The Institutional Tier or The Whole Industry" } },
 ];

@@ -363,6 +363,12 @@ export const COMPARE_SLUGS = [
   "vision-vs-care",
   "tires-vs-autos",
   "surgery-vs-clinic",
+  "domains-vs-tools",
+  "college-vs-academy",
+  "actor-vs-studio",
+  "immo-vs-estate",
+  "vin-vs-wine",
+  "university-vs-education",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

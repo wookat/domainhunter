@@ -7945,6 +7945,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Multi-department & chain clinics", "Aesthetics, physio & counselling practices", "Veterinary clinics", "\"Diagnostic service\" consulting plays"],
     },
   },
+  "domains-vs-tools": {
+    slug: "domains-vs-tools",
+    a: "domains",
+    b: "tools",
+    zh: {
+      title: ".domains 和 .tools 怎么选：域名行业的自指与通用工具的口径",
+      metaDescription: ".domains 把域名行业写进域名本身，注册商与域名工具定位最准，注册约 $35/年续费同价；.tools 说通用工具，任何在线小工具都能用。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都常被开发者与工具型产品盯上，分工在口径：一个钉死域名行业，一个覆盖所有工具。.domains 赢在行业自指——域名注册商与经纪服务、域名投资与交易平台、域名监控与批量查询工具、多品牌域名组合展示页用 name.domains，「做域名生意的」一词讲透，站名与业务同词，行业内认知零成本，track.domains 这样的名字读出来就知道是查域名的；注册局为 Identity Digital（原 Donuts），2014 年开放；价格适中且平续：注册约 $35/年（约 ¥250）、续费同价——无首年促销陷阱，多年持有成本可预期。.tools 赢在通用覆盖——PDF 转换、图片压缩、文本处理、开发者小工具，凡是「拿来就用」的在线工具，name.tools 一词讲透产品形态，pdf.tools 式的「功能词 + 后缀」就是搜索直达；首年约 $10、续费约 $29/年（约 ¥210）——比 .domains 略便宜，功能词库存也深。判断标准：产品服务于「域名」这个具体行业——查 whois、监控到期、比价注册 → .domains 的自指语义最准，行业用户一眼归类；产品是行业无关的通用工具——转换、压缩、生成 → .tools 的口径最宽，换品类不用改名。两者常见组合打法：域名工具集主站用 .domains 点题，通用工具矩阵用「功能词 + .tools」铺开。三点注意：一是两者都是复数形态，口播提醒带上 s；二是 .domains 受众偏行业内，面向大众消费者 .tools 触达更广；三是续费价差不大（$35 vs $29/年），按语义精度选而非价格。命名上「功能词 + .domains」（track.domains）与「功能词 + .tools」（pdf.tools）各是两边最点题的模式。",
+      pickA: ["域名注册商与经纪服务", "域名投资与交易平台", "域名工具与监控服务", "多品牌域名组合展示页"],
+      pickB: ["通用在线小工具", "开发者工具与效率产品", "工具矩阵与站群", "行业无关的转换/生成器"],
+    },
+    en: {
+      title: ".domains vs .tools: The Trade's Own Name or The Generic Toolbox",
+      metaDescription:
+        ".domains writes the domain industry into the address itself — sharpest for registrars and domain tools, about $35/yr flat; .tools names any online utility. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both attract developers and tool products; the split is scope: one pins the domain trade, the other covers every utility. .domains wins on self-reference — registrars and brokerage services, domain investing and trading platforms, monitoring and bulk-lookup tools, and multi-brand portfolio pages on name.domains say \"we work in domains\" in one word; the site name and the business are the same word, so recognition inside the industry costs nothing, and track.domains announces a domain checker by itself; the registry is Identity Digital (formerly Donuts), open since 2014; pricing is moderate and flat at about $35/yr (≈¥250) to register and the same to renew — no promo trap, so multi-year costs stay predictable. .tools wins on generic coverage — PDF converters, image compressors, text utilities and developer helpers all read as a ready-to-use product on name.tools, and function word + suffix (pdf.tools) is a direct lane from search; about $10 first year with renewals near $29/yr (≈¥210) — slightly cheaper than .domains, with deep function-word inventory. The test: the product serves the domain trade specifically — whois lookups, expiry monitoring, price comparison → .domains names it sharpest and industry users classify it at a glance; the product is an industry-agnostic utility — convert, compress, generate → .tools scopes widest and survives a category change without renaming. A common combo: the domain-tool suite brands on .domains while a general utility matrix spreads across function word + .tools. Three cautions: both are plurals, so call out the s in speech; .domains skews industry-insider, so consumer products reach wider on .tools; and renewals differ little ($35 vs $29/yr), so choose by semantic precision, not price. Naming: function word + .domains (track.domains) versus function word + .tools (pdf.tools) are each side's on-target patterns.",
+      pickA: ["Registrars & brokerage services", "Domain investing & trading platforms", "Domain tools & monitoring services", "Multi-brand portfolio showcases"],
+      pickB: ["General online utilities", "Developer tools & productivity products", "Tool matrices & site networks", "Industry-agnostic converters & generators"],
+    },
+  },
+  "college-vs-academy": {
+    slug: "college-vs-academy",
+    a: "college",
+    b: "academy",
+    zh: {
+      title: ".college 和 .academy 怎么选：学院的机构身份与训练营的技能口径",
+      metaDescription: ".college 说「学院」这个机构身份，职业院校与备考机构定位最准，注册约 $52/年续费同价；.academy 说技能训练营，编程、健身、语言培训的通用门牌。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在教育培训赛道，分工在身份：一个说机构，一个说训练。.college 赢在机构感——高校与二级学院官网、职业院校与社区学院、备考培训与升学咨询、校园社区与学生项目用 name.college，「这是一所学院」一词讲透，与需要资质审核的 .edu 不同，.college 对所有人开放，培训机构也能拿到教育感十足的门牌，coding.college 读起来就是一所专科学院；注册局为 XYZ Registry（.xyz 同门），2015 年开放；价格中高且平续：注册约 $52/年（约 ¥375）、续费同价，注册商常有首年大促。.academy 赢在技能口径——编程训练营、健身与武术馆、语言与音乐培训、企业内训项目用 name.academy，「来这里练本事」一词讲透，不装机构架子，主打实操与成长感；注册约 $12（约 ¥85）、续费约 $38/年（约 ¥271）——首年便宜续费跳档，预算按续费价算。判断标准：定位是「一所学校」——有学制、有课程体系、颁证书的机构感 → .college 的机构身份最正，招生页与官网都压得住；定位是「一门手艺」——短期训练营、技能课程、兴趣培训 → .academy 的训练语义更轻快，转品类也不违和。两者常见组合打法：教育集团主站用 .college 立机构门面，单项技能训练营用「技能词 + .academy」分线获客。三点注意：一是续费 .college 比 .academy 贵 $14/年，机构预算按三年总成本算；二是「学院」字样在部分国家受办学资质法规约束，宣传用语须与资质匹配；三是大学层级机构 .university 语义更高，别用 .college 降格。命名上「学科 + .college」（coding.college）与「技能 + .academy」（yoga.academy）各是两边最点题的模式。",
+      pickA: ["高校与二级学院官网", "职业院校与社区学院", "备考培训与升学咨询", "校园社区与学生项目"],
+      pickB: ["编程与技能训练营", "健身、武术与舞蹈馆", "语言与音乐培训", "企业内训与认证课程"],
+    },
+    en: {
+      title: ".college vs .academy: The Institution or The Bootcamp",
+      metaDescription:
+        ".college names the institutional identity of a college — sharpest for vocational schools and test-prep brands, about $52/yr flat; .academy names the skills bootcamp, the generic front for training of every kind. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in education and training; the split is identity: one says institution, the other says practice. .college wins on institutional weight — college and school-within-university sites, vocational and community colleges, test-prep and admissions consulting, and campus communities on name.college say \"this is a college\" in one word; unlike .edu, which requires accreditation, .college is open to everyone, so training providers get an education-grade address too, and coding.college reads like a specialist school by itself; the registry is XYZ Registry (the .xyz family), open since 2015; pricing is upper-mid and flat at about $52/yr (≈¥375) to register and the same to renew, with frequent first-year promos. .academy wins on the skills register — coding bootcamps, gyms and martial-arts schools, language and music training, and corporate academies on name.academy say \"come train here\" in one word, dropping the institutional posture for hands-on growth; about $12 to register (≈¥85) and $38/yr to renew (≈¥271) — cheap year one, jumping renewal, so budget on the renewal. The test: the positioning is a school — programs, curriculum, credentials and institutional weight → .college carries the front door and the admissions page; the positioning is a craft — short bootcamps, skills courses, hobby training → .academy reads lighter and survives a category change. A common combo: the education group fronts on .college while single-skill bootcamps spread across skill + .academy. Three cautions: .college renews about $14/yr above .academy, so price three years for institutional budgets; the word college is regulated in some countries, so marketing must match the credentials; and university-tier institutions read higher on .university — don't downgrade. Naming: subject + .college (coding.college) versus skill + .academy (yoga.academy) are each side's on-target patterns.",
+      pickA: ["Colleges & school sites", "Vocational & community colleges", "Test-prep & admissions consulting", "Campus communities & student projects"],
+      pickB: ["Coding & skills bootcamps", "Gyms, martial-arts & dance schools", "Language & music training", "Corporate academies & certification courses"],
+    },
+  },
+  "actor-vs-studio": {
+    slug: "actor-vs-studio",
+    a: "actor",
+    b: "studio",
+    zh: {
+      title: ".actor 和 .studio 怎么选：表演者的个人名片与创作团队的工作室招牌",
+      metaDescription: ".actor 把表演职业写进域名，演员个人官网与选角展示定位最准，注册约 $35/年续费同价；.studio 说创作团队，设计、影像、游戏工作室的通用招牌。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在创意行业挂牌，分工在主语：一个说「我这个人」，一个说「我们这个团队」。.actor 赢在个人锐度——演员个人官网与作品集、配音与声优个人品牌、选角展示页、表演教师个人主页用 name.actor，「我是演员」一词讲透，演艺行业里人名就是品牌，janedoe.actor 读起来就是一张数字名片，比 name-actor.com 干净得多，选角导演一眼看懂；注册局为 Identity Digital（原 Donuts），2014 年开放；价格适中且平续：注册约 $35/年（约 ¥255）、续费同价——无首年促销陷阱，多年持有成本可预期。.studio 赢在团队招牌——设计、影像、动画、游戏工作室用 name.studio，「小而专的创作团队」气质从域名立住，不绑定具体工种，摄影转视频、设计转游戏都不用改名；首年常有促销、续费约 $25–35/年——与 .actor 同档，风格词与动物词库存充足。判断标准：主体是「一个表演者」——演员、配音、主持人，靠脸和名字接活 → .actor 的职业语义最准，个人品牌一词立住；主体是「一支团队」——工作室形态、多人协作、对外接项目 → .studio 的团队口径更稳，成员进出不影响品牌。两者常见组合打法：演员个人官网用「人名 + .actor」，其经纪或制作公司用「品牌 + .studio」分线。三点注意：一是 .actor 单数指向个人，剧团与经纪公司挂个人后缀会显小；二是人名域名先搜同名艺人再注册，避免撞名混淆；三是两者续费都平实，按主语选而非价格。命名上「人名 + .actor」（janedoe.actor）与「品牌 + .studio」（voicelab.studio）各是两边最点题的模式。",
+      pickA: ["演员个人官网与作品集", "配音与声优个人品牌", "选角展示与试镜页", "表演教师与戏剧工作坊主理人"],
+      pickB: ["设计与品牌工作室", "影像、动画与游戏团队", "播客与内容制作方", "多人协作的创意公司"],
+    },
+    en: {
+      title: ".actor vs .studio: The Performer's Card or The Team's Signboard",
+      metaDescription:
+        ".actor writes the performing profession into the address — sharpest for actor portfolios and casting profiles, about $35/yr flat; .studio names the creative team, the generic signboard for design, film and game shops. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both hang in the creative district; the split is the subject: one says this person, the other says this team. .actor wins on personal edge — actor portfolio sites, voice-acting personal brands, casting profiles and acting teachers on name.actor say \"I act\" in one word; in show business the name is the brand, and janedoe.actor reads like a digital headshot card, far cleaner than name-actor.com and instantly legible to a casting director; the registry is Identity Digital (formerly Donuts), open since 2014; pricing is moderate and flat at about $35/yr (≈¥255) to register and the same to renew — no promo trap, so multi-year costs stay predictable. .studio wins on the team signboard — design, film, animation and game shops on name.studio establish the small-and-focused maker register from the address, bound to no single craft, so a photo studio turning to video or a design shop turning to games keeps its name; frequent first-year promos with renewals around $25–35/yr put it in the same band, with strong inventory of style and craft words. The test: the subject is one performer — actor, voice artist, presenter booking work on a face and a name → .actor names the profession sharpest and the personal brand stands in one word; the subject is a team — a studio shape, collaborators, client projects → .studio scopes steadier and survives members coming and going. A common combo: the performer's own site on name + .actor while the agency or production company brands on .studio. Three cautions: the singular .actor points at one person, so troupes and agencies read small on it; search same-named performers before registering a personal name; and both renew flat and close, so choose by subject, not price. Naming: name + .actor (janedoe.actor) versus brand + .studio (voicelab.studio) are each side's on-target patterns.",
+      pickA: ["Actor portfolio sites", "Voice-acting personal brands", "Casting profiles & audition pages", "Acting teachers & workshop leads"],
+      pickB: ["Design & branding studios", "Film, animation & game teams", "Podcast & content producers", "Collaborative creative companies"],
+    },
+  },
+  "immo-vs-estate": {
+    slug: "immo-vs-estate",
+    a: "immo",
+    b: "estate",
+    zh: {
+      title: ".immo 和 .estate 怎么选：欧陆行业词与英语地产的门面",
+      metaDescription: ".immo 是法语/德语不动产行业缩写，欧陆房产中介定位最准，注册约 $28/年续费同价；.estate 面向英语市场的地产语义，中介与开发商的通用门面。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都做不动产的招牌，分工在语言市场：一个说欧陆母语，一个说英语世界。.immo 赢在欧陆语境——法国、德国、比利时、瑞士的房产中介与经纪公司、开发与项目营销、物业管理与租赁、估价与投资咨询用 name.immo，immo 是法语 immobilier、德语 Immobilien 的通用缩写，当地家喻户晓，lyon.immo 这样的「城市 + 后缀」读起来就是本地中介的搜索直达入口；注册局为 Identity Digital（原 Donuts），2014 年开放；价格亲民且平续：注册约 $28/年（约 ¥205）、续费同价——四字符超短后缀，搭配短城市词整体极短好记。.estate 赢在英语门面——英语市场的中介与经纪、豪宅与庄园项目、地产开发与资产管理用 name.estate，「地产」一词讲透且自带质感，庄园、酒庄、家族资产类品牌尤其贴；注册约 $8（约 ¥59）、续费约 $31/年（约 ¥226）——首年便宜续费跳档，预算按续费价算。判断标准：客户说法语/德语——业务扎根欧陆市场、本地搜索获客 → .immo 的母语行业词无可替代，认知零成本；客户说英语——面向国际买家、英语市场为主 → .estate 的语义直白且质感更高，immo 在英语里没人懂。两者常见组合打法：跨国中介用 .estate 做国际站，法语区与德语区分站用「城市 + .immo」接本地流量。三点注意：一是续费 .immo 比 .estate 便宜 $3/年且平续，长线持有更省心；二是 .immo 在英语市场认知度低，别拿它面向英语客户；三是两边都是强本地生意，Google 商家资料与房源质量比域名更影响成交。命名上「城市 + .immo」（lyon.immo）与「品牌 + .estate」（crown.estate）各是两边最点题的模式。",
+      pickA: ["欧陆房产中介与经纪公司", "法语区/德语区项目营销", "物业管理与租赁服务", "房产估价与投资咨询"],
+      pickB: ["英语市场的中介与经纪", "豪宅与庄园项目", "地产开发与资产管理", "面向国际买家的房产品牌"],
+    },
+    en: {
+      title: ".immo vs .estate: The Continental Trade Word or The English Front",
+      metaDescription:
+        ".immo is the everyday French/German abbreviation for real estate — sharpest for continental-European agencies, about $28/yr flat; .estate speaks the English market's language, the general front for agencies and developers. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both hang on the property signboard; the split is the language market: one speaks the continent's mother tongue, the other speaks English. .immo wins in the continental register — agencies and brokerages, development and project marketing, property management and rentals, and valuation consulting across France, Germany, Belgium and Switzerland on name.immo use the household short form of immobilier and Immobilien, so city + suffix (lyon.immo) reads like a direct lane from local search to the agency; the registry is Identity Digital (formerly Donuts), open since 2014; pricing is friendly and flat at about $28/yr (≈¥205) to register and the same to renew — and the four-letter suffix keeps names tiny next to short city words. .estate wins on the English front — English-market agencies and brokerages, luxury and manor projects, developers and asset managers on name.estate say the trade plainly with a premium ring, fitting estates, wineries and family-asset brands especially well; about $8 to register (≈¥59) and $31/yr to renew (≈¥226) — cheap year one, jumping renewal, so budget on the renewal. The test: clients speak French or German — the business roots in continental markets and local search → .immo's mother-tongue trade word is irreplaceable, costing zero recognition; clients speak English — international buyers, English-first markets → .estate reads plainly and richer, while immo means nothing in English. A common combo: the cross-border agency fronts internationally on .estate while French- and German-market sites catch local traffic on city + .immo. Three cautions: .immo renews $3/yr cheaper and flat, easier to hold long; .immo is unknown to English audiences, so don't aim it at them; and both are hard-local businesses — listings quality and Google Business profiles move deals more than the domain does. Naming: city + .immo (lyon.immo) versus brand + .estate (crown.estate) are each side's on-target patterns.",
+      pickA: ["Continental-European property agencies", "French/German-market project marketing", "Property management & rentals", "Valuation & investment consulting"],
+      pickB: ["English-market agencies & brokerages", "Luxury & manor projects", "Developers & asset managers", "Property brands for international buyers"],
+    },
+  },
+  "vin-vs-wine": {
+    slug: "vin-vs-wine",
+    a: "vin",
+    b: "wine",
+    zh: {
+      title: ".vin 和 .wine 怎么选：法语酒标的格调与英语市场的直白",
+      metaDescription: ".vin 是法语「葡萄酒」，法国酒庄与法式品牌定位最准，注册约 $48/年续费同价；.wine 面向英语大众市场，酒类电商与内容站的通用后缀。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一瓶酒的两张标签，分工在语言与格调：一个念法语，一个念英语。.vin 赢在法式格调——法国酒庄与葡萄园官网、法式品牌与进口商、产区门户与酒旅项目用 name.vin，vin 是法语「葡萄酒」，全球葡萄酒文化的母语词，比英语 wine 更多一层产地与格调的暗示，chateaumont.vin 读起来就是一枚法式酒标；注册局为 Identity Digital（原 Donuts），2016 年与 .wine 同批开放；价格中档且平续：注册约 $48/年（约 ¥345）、续费同价——无首年促销陷阱，酒庄名与产区词库存比 .wine 更充裕。.wine 赢在英语直白——葡萄酒电商与酒类零售、酒评与品鉴内容站、酒具与订阅盒项目用 name.wine，英语世界人人秒懂，大众市场触达最广；注册约 $6（约 ¥41）很便宜、续费约 $48/年（约 ¥346）是首年的数倍——预算按续费价算才稳。判断标准：品牌讲法语故事——法国酒庄、法式选酒、产区叙事，格调是卖点 → .vin 的母语酒标无可替代，三字符还极短；品牌做英语生意——电商、内容、订阅盒，触达是卖点 → .wine 的直白语义更稳，没有理解门槛。两者常见组合打法：法国酒庄主站用 .vin 立酒标，面向英语市场的电商线用 .wine 分销。三点注意：一是续费两者几乎同价（$48/年上下），按语言市场选而非价格；二是 .vin 在英语里易被读成 VIN 车架号，面向英语大众慎选；三是酒类营销各国监管不一，未成年人渠道投放须合规。命名上「酒庄 + .vin」（chateaumont.vin）与「品类 + .wine」（natural.wine）各是两边最点题的模式。",
+      pickA: ["法国酒庄与葡萄园官网", "法式品牌与精品进口商", "产区门户与酒旅项目", "讲格调故事的选酒品牌"],
+      pickB: ["葡萄酒电商与酒类零售", "酒评与品鉴内容站", "酒具与订阅盒项目", "面向英语大众市场的酒品牌"],
+    },
+    en: {
+      title: ".vin vs .wine: The French Label or The English Shelf",
+      metaDescription:
+        ".vin is French for wine — sharpest for French estates and French-styled brands, about $48/yr flat; .wine speaks plainly to the English mass market, the general suffix for wine commerce and content. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Two labels on the same bottle; the split is language and register: one reads French, the other English. .vin wins on French style — French wineries and vineyard sites, French-styled brands and importers, appellation portals and wine-tourism projects on name.vin use the mother tongue of global wine culture, carrying a hint of terroir that English wine doesn't, so chateaumont.vin reads like a French wine label; the registry is Identity Digital (formerly Donuts), launched alongside .wine in 2016; pricing is mid-tier and flat at about $48/yr (≈¥345) to register and the same to renew — no promo trap, and estate and appellation words run deeper than on .wine. .wine wins on English plainness — wine e-commerce and retail, review and tasting content, accessories and subscription boxes on name.wine are understood instantly across the English world, reaching the mass market widest; about $6 to register (≈¥41) with renewals near $48/yr (≈¥346), several times year one — budget on the renewal. The test: the brand tells a French story — French estates, curated French selections, terroir narratives where style sells → .vin's mother-tongue label is irreplaceable and only three letters long; the brand trades in English — commerce, content, subscriptions where reach sells → .wine reads plainer with no comprehension gate. A common combo: the French estate fronts on .vin while the English-market commerce line sells on .wine. Three cautions: renewals land nearly identical (around $48/yr), so choose by language market, not price; in English .vin reads as a VIN vehicle number, so mass-market English brands beware; and alcohol marketing rules vary by country, so mind the channels. Naming: estate + .vin (chateaumont.vin) versus category + .wine (natural.wine) are each side's on-target patterns.",
+      pickA: ["French wineries & vineyard sites", "French-styled brands & fine importers", "Appellation portals & wine tourism", "Style-led curated wine brands"],
+      pickB: ["Wine e-commerce & retail", "Wine-review & tasting content", "Accessories & subscription boxes", "English mass-market wine brands"],
+    },
+  },
+  "university-vs-education": {
+    slug: "university-vs-education",
+    a: "university",
+    b: "education",
+    zh: {
+      title: ".university 和 .education 怎么选：大学的机构层级与教育的行业全域",
+      metaDescription: ".university 说「大学」这个最高机构层级，企业大学与国际招生页定位最准，注册约 $50/年续费同价；.education 说教育行业全域，机构、平台与内容站通用。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在教育赛道，分工在口径：一个说机构层级，一个说行业全域。.university 赢在机构高度——大学官网与国际招生页、企业大学与内训学院、在线大学与公开课平台、校友会与大学品牌项目用 name.university，「这是一所大学」一词讲透，与仅限美国认证机构的 .edu 不同，.university 对全球开放，acme.university 读起来就是企业大学的正门；注册局为 Identity Digital（原 Donuts），2014 年开放；价格中高且平续：注册约 $50/年（约 ¥360）、续费同价——与机构品牌价值匹配。.education 赢在行业口径——教育科技产品与学习平台、教育资讯与政策内容站、教师资源与教研社区、留学与教育咨询服务用 name.education，「做教育的」一词讲透，不限定机构形态，产品、内容、服务都装得下；注册约 $21（约 ¥152）、续费约 $28/年（约 ¥204）——注册续费接近同价，教育后缀里的实惠档。判断标准：主体是「一所大学」——有学位层级、招生动作、校园叙事的机构感 → .university 的层级语义最正，招生页与企业大学都压得住；主体是「教育这门生意」——平台、内容、工具、咨询 → .education 的行业口径最宽，业务形态变了不用改名。两者常见组合打法：教育集团主站用 .education 归拢产品线，旗下企业大学用「品牌 + .university」单独立站。三点注意：一是续费 .university 比 .education 贵 $22/年，长线持有先算三年总成本；二是「大学」字样在部分国家受办学资质法规保护，命名与宣传须合规；三是 .university 拼写长达 10 字符，主体词务必短促。命名上「品牌 + .university」（acme.university）与「品牌 + .education」（bright.education）各是两边最点题的模式。",
+      pickA: ["大学官网与国际招生页", "企业大学与内训学院", "在线大学与公开课平台", "校友会与大学品牌项目"],
+      pickB: ["教育科技产品与学习平台", "教育资讯与政策内容站", "教师资源与教研社区", "留学与教育咨询服务"],
+    },
+    en: {
+      title: ".university vs .education: The Institutional Tier or The Whole Industry",
+      metaDescription:
+        ".university names the highest institutional tier — sharpest for corporate universities and admissions pages, about $50/yr flat; .education names the whole industry, fitting platforms, content and services alike. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in education; the split is scope: one names the institutional tier, the other the whole industry. .university wins on institutional height — university sites and international admissions pages, corporate universities and internal academies, online universities and open-course platforms, and alumni projects on name.university say \"this is a university\" in one word; unlike .edu, restricted to accredited US institutions, .university is open worldwide, and acme.university reads like the front gate of a corporate university; the registry is Identity Digital (formerly Donuts), open since 2014; pricing is upper-mid and flat at about $50/yr (≈¥360) to register and the same to renew — in line with institutional brand value. .education wins on industry scope — edtech products and learning platforms, education news and policy content, teacher-resource communities, and study-abroad or education consulting on name.education say \"we work in education\" in one word, bound to no institutional shape, so products, content and services all fit; about $21 to register (≈¥152) and $28/yr to renew (≈¥204) — near-flat and affordable among education suffixes. The test: the subject is a university — degree tiers, admissions motions, campus narrative and institutional weight → .university names the tier straightest and carries the admissions page; the subject is the education business — platforms, content, tools, consulting → .education scopes widest and survives a shape change without renaming. A common combo: the education group gathers product lines on .education while its corporate university stands alone on brand + .university. Three cautions: .university renews about $22/yr above .education, so price three years before holding long; the word university is legally protected in some countries, so naming and marketing must comply; and the suffix runs ten characters, so keep the left side short. Naming: brand + .university (acme.university) versus brand + .education (bright.education) are each side's on-target patterns.",
+      pickA: ["University sites & international admissions", "Corporate universities & internal academies", "Online universities & open-course platforms", "Alumni associations & university brands"],
+      pickB: ["Edtech products & learning platforms", "Education news & policy content", "Teacher-resource & research communities", "Study-abroad & education consulting"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
