@@ -44,6 +44,7 @@ export const TLD_LIST = [
   "careers", "management", "contractors", "equipment", "supply", "parts",
   "auction", "deals", "coupons", "discount", "furniture", "lighting",
   "business", "limited", "associates", "cheap", "bargains", "supplies",
+  "camp", "camera", "diamonds", "theater", "accountants", "engineer",
 ] as const;
 
 export type Tld = (typeof TLD_LIST)[number];
