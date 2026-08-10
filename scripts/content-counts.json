@@ -317,7 +317,7 @@
     ]
   },
   "guide": {
-    "count": 302,
+    "count": 308,
     "slugs": [
       "saas",
       "ecommerce",
@@ -620,7 +620,13 @@
       "baseball",
       "boxing",
       "taekwondo",
-      "fencing"
+      "fencing",
+      "gymnastics",
+      "cheerleading",
+      "squash",
+      "lacrosse",
+      "judo",
+      "bjj"
     ]
   },
   "vs": {

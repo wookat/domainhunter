@@ -18848,6 +18848,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  gymnastics: {
+    slug: "gymnastics",
+    keywords: ["体操培训", "少儿体操", "体操馆", "gymnastics academy", "tumbling"],
+    tlds: [
+      { tld: "academy", zh: "青训体系的身份声明，家长看到就知道有等级与出路", en: "The academy identity declared — parents read levels and pathways at once" },
+      { tld: "kids", zh: "少儿体操的主客群直给，幼儿园门口的招生零解释", en: "The core audience stated outright — zero explanation on the kindergarten flyer" },
+      { tld: "fit", zh: "面向成人体能与柔韧训练时归类清晰，跨客群也装得下", en: "Files adult flexibility and conditioning cleanly — room for crossover crowds" },
+    ],
+    zh: {
+      label: "体操培训",
+      title: "体操培训怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "体操培训与体操馆命名指南：翻腾意象、成长叙事等思路，World Champions Centre/The Little Gym/小小运动馆 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "体操培训的名字要对两代人同时说话：孩子听到要觉得「翻跟头很酷」，家长听到要觉得「练体能、练气质、有体系」。体操自带一组别的运动没有的意象——腾空、翻转、平衡、落地稳稳站住，名字最好也带这股「稳中带飞」的劲。看行业样本：拜尔斯家族的 World Champions Centre 直接把「世界冠军」写进馆名，冠军叙事是体操青训最硬的信任状；The Little Gym（小小运动馆）用「小」字把儿童运动启蒙的定位一次说清，franchise 四十年验证了这个名字的普适性；国内的少儿体操馆命名多走「成长+运动」路线，「翻翻乐」「小猴王」类名字把趣味写在前面。命名的隐藏考点是「竞技向还是启蒙向」：竞技体操馆的名字要有等级与出路的暗示，感统启蒙馆的名字要让两岁孩子的家长觉得安全好玩。先定客群年龄段，再定名字是穿比赛服还是穿爬爬服。",
+      namingIdeas: [
+        "翻腾意象直给：翻、腾、跃、flip——体操最有辨识度的动作词根，孩子听到就想试一下",
+        "落地叙事：稳、立、star 类字眼——体操的高潮是落地钉住的那一秒，名字带「稳稳站住」的劲家长最安心",
+        "成长启蒙路线：小、乐、萌系字眼——面向 2-6 岁感统与体操启蒙时，名字先把「安全好玩」说清",
+        "冠军信任状：冠军、champion、金牌类字眼——竞技向青训馆借冠军叙事立信任，最好馆里真有拿过名次的教练",
+        "身体词根造词：balance、tumble、体、韧——把体操的身体性写进名字，跨成人柔韧与体能课也不违和",
+      ],
+      cases: [
+        { name: "World Champions Centre", takeaway: "拜尔斯家族把「世界冠军」写进馆名：冠军叙事是体操青训最硬的信任状——名字即奖牌墙的打法" },
+        { name: "The Little Gym", takeaway: "一个「小」字说清儿童运动启蒙定位：franchise 四十年验证的普适命名——启蒙向体操馆的教科书" },
+        { name: "小小运动馆", takeaway: "The Little Gym 的中文名叠字处理：「小小」比「小」更软更亲——本地化命名保留原意又贴中文语感" },
+        { name: "Chow's Gymnastics", takeaway: "培养出两位奥运冠军的教练用自己的姓氏立馆：教练 IP 命名让招生自带背书——体操圈的师承信任打法" },
+      ],
+      pitfalls: [
+        "竞技启蒙混着说：名字既想要奥运梦又想要亲子乐，两头气质打架——先定客群年龄段",
+        "堆砌「冠军摇篮」类大词却没有成绩支撑：家长会问「你们出过谁」，名字开的支票馆里要兑现",
+        "忽略安全感语感：体操在家长认知里自带受伤担忧，名字太狠太竞技会把启蒙客群吓走",
+        "只查中文没查拼音与英文域名：体操馆做赛事与出国交流都要官网，拼音域名被占会让品牌一步慢步步慢",
+      ],
+    },
+    en: {
+      label: "Gymnastics academies",
+      title: "How to Name a Gymnastics Academy: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Gymnastics academy and kids' gym naming guide: tumbling imagery, stick-the-landing registers, breakdowns of World Champions Centre/The Little Gym/Chow's, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A gymnastics academy's name has to speak to two generations at once: the kid should hear it and think flipping is cool, and the parent should hear it and think strength, grace and a system. Gymnastics owns a set of images no other sport can claim — flight, rotation, balance, and the landing stuck without a wobble — and the best names carry that controlled-flight charge. The benchmarks show the range: World Champions Centre, the Biles family's gym, writes the medal wall into the name itself — championship lineage is the hardest credential in youth gymnastics; The Little Gym proves the opposite register, one word of smallness stating the early-childhood mission so clearly the franchise has run on it for four decades; Chow's Gymnastics, the Iowa gym behind two Olympic all-around champions, shows the coach-surname route where the name is the résumé. The hidden exam is competitive versus developmental: a competitive gym's name should hint at levels and pathways, while a toddler-tumbling gym's name must promise safety and fun to a two-year-old's parent. Decide the age band first, then decide whether the name wears a leotard or a onesie.",
+      namingIdeas: [
+        "Tumbling imagery stated plainly: flip, vault, tumble, aerial — the sport's signature motion becomes the hook the moment a kid hears it",
+        "Stick-the-landing register: stick, steady, star — gymnastics peaks in the motionless second after the dismount, and a name carrying that steadiness reassures the parent",
+        "The early-childhood register: little, wiggle, sprout words for developmental programmes — say \"safe and fun\" before the first cartwheel",
+        "The champion credential: champion, elite, gold — competitive academies borrow medal lineage, best backed by a coach who actually placed",
+        "Body-root coinage: balance, flex, kinetic — write the sport's physicality into the name and adult flexibility classes fit without a rebrand",
+      ],
+      cases: [
+        { name: "World Champions Centre", takeaway: "The Biles family writing the medal wall into the gym's name: championship lineage as the hardest credential — the name-as-trophy-case template" },
+        { name: "The Little Gym", takeaway: "One word of smallness stating the early-childhood mission: four decades of franchise proof — the developmental register's textbook" },
+        { name: "Chow's Gymnastics", takeaway: "The coach behind two Olympic champions staking his surname: coach-IP naming where the name is the résumé — the mentorship trust play" },
+        { name: "GymTots", takeaway: "Category spliced onto toddlerhood: the age band declared in two syllables — honest naming for the pre-school segment" },
+      ],
+      pitfalls: [
+        "Straddling competitive and developmental: Olympic dreams and toddler play fight in one name — pick the age band first",
+        "Cashing champion cheques you can't honour: parents will ask who you've produced — the name's promise needs a coach's record behind it",
+        "Ignoring the safety register: gymnastics already carries injury worry in a parent's mind — a name too fierce scares the beginner crowd away",
+        "Skipping the .com and social handle check: meets and open days live on shared clips — a name that can't be tagged can't travel",
+      ],
+    },
+  },
+  cheerleading: {
+    slug: "cheerleading",
+    keywords: ["啦啦操", "啦啦队培训", "cheer队", "cheerleading gym", "all-star cheer"],
+    tlds: [
+      { tld: "team", zh: "队伍身份直给，招新与赛事报名一眼归类", en: "The squad identity stated outright — tryouts and event entries filed at a glance" },
+      { tld: "dance", zh: "舞蹈啦啦操分支零解释，艺术表现向的队伍最合身", en: "Zero explanation for the dance-cheer branch — the fit for performance-first squads" },
+      { tld: "fun", zh: "把啦啦操的能量写进后缀，社团与兴趣班亲和力拉满", en: "The sport's energy written into the suffix — maximum warmth for clubs and hobby classes" },
+    ],
+    zh: {
+      label: "啦啦操",
+      title: "啦啦操俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "啦啦操俱乐部与啦啦队培训命名指南：能量词根、队伍图腾等思路，Varsity/Cheer Athletics/Navarro 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "啦啦操的名字要自带音量：这项运动的本质是把能量传给别人——赛场边为别人呐喊，赛台上为自己怒放。名字念出来就该像一句口号，三个字以内喊得响、配得上定点造型那一秒的爆发。看行业样本：Varsity 用一个「校队」词统治了整个行业——从服装到赛事的帝国建立在一个所有美国学生都懂的词上；Cheer Athletics 把「啦啦操+竞技」拼在一起，all-star 竞技定位一次说清，旗下战队再用 Panthers、Cheetahs 类猫科图腾命名，主队名+战队名的两层结构是啦啦操行业的标准打法；Navarro 本是德州一所社区学院，Netflix 纪录片《Cheer》让这个地名成了竞技啦啦操的圣地——成绩能把任何名字变成图腾。命名的隐藏考点是「竞技向还是校园向」：all-star 竞技队的名字要凶、要图腾化，校园社团与少儿兴趣班的名字要甜、要有集体的暖。先定赛道再定音量。",
+      namingIdeas: [
+        "能量词根直给：cheer、spirit、燃、跃——啦啦操的本质是能量传递，名字自己要先响起来",
+        "猫科图腾路线：Panthers、Cheetahs 类猛兽命名——all-star 战队的行业惯例，凶得漂亮才压得住赛台",
+        "两层命名结构：主品牌+战队名——俱乐部名管信任，战队名管气势，Cheer Athletics 模式可直接借用",
+        "校园语感：校、队、star 类字眼——面向学校社团与课后班时，名字要有「我们一起」的集体暖意",
+        "口号化测试：名字连喊三遍不拗口——啦啦操的名字终究要在赛场边被喊出来，喊不响的名字先淘汰",
+      ],
+      cases: [
+        { name: "Varsity", takeaway: "一个「校队」词统治整个行业：从服装到赛事的帝国建立在所有学生都懂的词上——品类通用词的天花板打法" },
+        { name: "Cheer Athletics", takeaway: "啦啦操拼上竞技：all-star 定位一次说清，旗下战队再用猫科图腾——主队名+战队名两层结构的行业标准" },
+        { name: "Navarro", takeaway: "Netflix 纪录片把一所社区学院的地名变成竞技啦啦操圣地：成绩能把任何名字变成图腾——地名命名的逆袭样本" },
+        { name: "Rebel Athletic", takeaway: "「叛逆」写进啦啦操服装品牌：把这项运动的锋芒从甜美刻板印象里解放出来——反差定位的命名范本" },
+      ],
+      pitfalls: [
+        "竞技校园混着说：名字既想要 all-star 的凶又想要课后班的甜，两头气质打架——先定赛道",
+        "堆砌 sparkle/princess 类甜腻词：竞技啦啦操是高强度项目，名字太软会劝退认真训练的队员",
+        "忽略口号场景：名字终究要在赛场边被百人齐喊，音节拗口的名字气势先输一半",
+        "只查中文没查英文与社媒账号：啦啦操赛事视频高度依赖社媒传播，@ 不到的名字传不远",
+      ],
+    },
+    en: {
+      label: "Cheerleading",
+      title: "How to Name a Cheerleading Program: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Cheerleading gym and all-star squad naming guide: energy roots, big-cat totems, breakdowns of Varsity/Cheer Athletics/Navarro, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A cheerleading name has to arrive with its own volume: this is the sport of transferring energy — shouting for someone else at the sideline, detonating for yourself on the mat. The name should work like a chant, short enough to yell three times and sharp enough to match the hit of the final pose. The benchmarks show the range: Varsity rules the entire industry on one word every American student understands, an apparel-to-events empire built on the school-team register; Cheer Athletics splices sport onto competition to state the all-star position outright, then names its squads Panthers and Cheetahs — the two-layer structure of trusted parent brand plus totem squad names is the industry's standard play; Navarro was a Texas community college until the Netflix series Cheer turned the place-name into a pilgrimage site — proof that results can make a totem of any name. The hidden exam is all-star versus school-spirit: a competitive programme's name should be fierce and totemic, while a school club or kids' class needs sweetness and the warmth of belonging. Pick the lane before picking the volume.",
+      namingIdeas: [
+        "Energy roots stated plainly: cheer, spirit, ignite, soar — the sport is energy transfer, so the name should make noise on its own",
+        "The big-cat totem route: Panthers, Cheetahs, Wildcats — the all-star convention, where fierce-and-beautiful is what holds the mat",
+        "The two-layer structure: parent brand plus squad names — the gym name carries trust, the squad names carry menace; the Cheer Athletics model is free to borrow",
+        "The school-spirit register: varsity, squad, star words for school clubs and after-school classes — say \"we belong together\" before the first stunt",
+        "The chant test: yell the name three times without stumbling — a cheer name lives at the sideline, and one that can't be chanted loses before the routine starts",
+      ],
+      cases: [
+        { name: "Varsity", takeaway: "One school-team word ruling an entire industry: an apparel-to-events empire on vocabulary every student knows — the ceiling of category-word naming" },
+        { name: "Cheer Athletics", takeaway: "Sport spliced onto competition, squads named for big cats: the two-layer parent-plus-totem structure — the all-star industry standard" },
+        { name: "Navarro", takeaway: "A Netflix series turning a community college's place-name into a pilgrimage: results making a totem of any name — the place-name comeback story" },
+        { name: "Rebel Athletic", takeaway: "Defiance written into a cheer apparel brand: freeing the sport's edge from the sweetness stereotype — contrast positioning done in one word" },
+      ],
+      pitfalls: [
+        "Straddling all-star and school-spirit: mat menace and classroom sweetness fight in one name — pick the lane first",
+        "Piling on sparkle-and-princess sugar: competitive cheer is a high-intensity sport, and a name too soft repels the athletes who train hardest",
+        "Ignoring the chant scenario: the name will be yelled by a hundred voices at once — clumsy syllables surrender the energy before the music starts",
+        "Skipping the social handle check: cheer lives on shared routine clips — a name that can't be tagged can't go viral",
+      ],
+    },
+  },
+  squash: {
+    slug: "squash",
+    keywords: ["壁球馆", "壁球俱乐部", "壁球培训", "squash club", "squash court"],
+    tlds: [
+      { tld: "club", zh: "俱乐部身份直给，会籍与订场体系一眼归类", en: "The club identity stated outright — memberships and court bookings filed at a glance" },
+      { tld: "fit", zh: "面向健身向壁球时零解释，白领午间场最合身", en: "Zero explanation for fitness-first squash — the fit for the lunchtime office crowd" },
+      { tld: "coach", zh: "教练与培训身份声明，青训与私教课看到就懂", en: "The coaching identity declared — juniors and private lessons read it at once" },
+    ],
+    zh: {
+      label: "壁球馆",
+      title: "壁球馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "壁球馆与壁球俱乐部命名指南：四面墙意象、精英与开放的平衡等思路，PSA/Open Squash/SquashSkills 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "壁球馆的名字有一道独特的平衡题：这项运动长期贴着「精英俱乐部」的标签——玻璃房、白墙、金融城的午间场，但 2028 年洛杉矶奥运会的入选正在把它推向大众。名字要么借精英感立信任，要么反着来把门槛拆掉。看行业样本：纽约的 Open Squash 用一个「开放」词直接对着行业刻板印象开火——非营利、人人可打，命名即宣言；PSA（职业壁球协会）三个字母延续体育联盟缩写的标准打法；SquashSkills 把「壁球+技能」拼成线上教学平台的诚实命名，搜索意图直接变品牌。壁球自带一组好用的意象：四面墙、玻璃房、T 位、贴墙死球——名字带「墙」的劲就有行业暗号感。命名的隐藏考点是「俱乐部向还是培训向」：会籍制俱乐部的名字要有殿堂感，青训与大众馆的名字要把「谁都能来」说清。先定商业模式再定名字的门槛高度。",
+      namingIdeas: [
+        "四面墙意象：墙、glass、court、T 位——壁球独有的空间语言，写进名字就是圈内暗号",
+        "开放宣言路线：open、all、easy 类字眼——对着精英刻板印象反着命名，大众馆的获客先赢在名字",
+        "精英殿堂语感：会籍制俱乐部可以借 club、royal 类字眼立殿堂感——壁球的英伦血统是现成的信任状",
+        "速度词根：快、闪、rally——壁球是最高强度的室内球类之一，名字带速度感对健身客群最有吸引力",
+        "品类+功能诚实命名：SquashSkills 式的直给结构——线上教学与订场平台用名字说清自己是干什么的",
+      ],
+      cases: [
+        { name: "Open Squash", takeaway: "一个「开放」词对着行业刻板印象开火：非营利人人可打的宣言写进名字——反精英定位的命名范本" },
+        { name: "PSA", takeaway: "职业壁球协会三个字母：体育联盟缩写命名的标准打法——机构向命名以简取胜" },
+        { name: "SquashSkills", takeaway: "壁球拼上技能：线上教学平台的搜索意图直接变品牌——品类+功能诚实命名的教科书" },
+        { name: "Squash On Fire", takeaway: "华盛顿的按场付费馆把「着火」写进名字：高强度运动的热量感直给——大众化壁球馆的能量命名" },
+      ],
+      pitfalls: [
+        "精英大众混着说：名字既想要殿堂感又想要亲民价，两头气质打架——先定商业模式",
+        "锁死单一场馆：名字绑定某栋楼或某个地标，连锁扩张时第二家店就尴尬",
+        "忽略拼写门槛：squash 在非英语市场常被拼错，中文名主打时英文域名要选好拼的词根",
+        "只查中文没查订场平台同名：壁球客群高度依赖线上订场，平台里搜不到的名字等于不存在",
+      ],
+    },
+    en: {
+      label: "Squash clubs",
+      title: "How to Name a Squash Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Squash club and academy naming guide: four-wall imagery, open-versus-elite registers, breakdowns of PSA/Open Squash/SquashSkills, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A squash club's name faces a balancing act few sports set: the game has worn the elite-club label for a century — glass courts, white walls, the financial district's lunchtime rally — yet its arrival at the LA 2028 Olympics is pushing it mainstream. A name can borrow the prestige or fire at it. The benchmarks show both barrels: Open Squash, the New York nonprofit, aims one word straight at the stereotype — everyone plays, the name is the manifesto; PSA runs the standard three-letter play of sports-body acronyms; SquashSkills splices category onto function for an online coaching platform, turning search intent into brand. Squash also owns a spatial vocabulary no other sport has: four walls, the glass box, the T, the dying nick — a name carrying the wall reads as an insider signal at once. The hidden exam is club versus academy: a membership club's name should feel like a hall with history, while a juniors programme or pay-per-court venue must say \"anyone can walk in.\" Decide the business model before deciding how high the name's threshold sits.",
+      namingIdeas: [
+        "Four-wall imagery: wall, glass, court, the T — squash's private spatial language becomes an insider signal the moment it enters the name",
+        "The open manifesto: open, all, everyone words — name against the elite stereotype and the mainstream venue wins its first members at the door",
+        "The heritage register: club, royal, lodge words for membership venues — squash's British lineage is a ready-made credential",
+        "Velocity roots: rally, blitz, sprint — squash burns more calories per hour than nearly any indoor sport, and speed in the name sells to the fitness crowd",
+        "Category-plus-function honesty: the SquashSkills move — booking platforms and online academies state exactly what they do and let search intent become the brand",
+      ],
+      cases: [
+        { name: "Open Squash", takeaway: "One word fired at the elite stereotype: a nonprofit's everyone-plays manifesto written into the name — the anti-exclusivity template" },
+        { name: "PSA", takeaway: "The pro tour in three letters: the standard sports-body acronym play — institutional naming winning by brevity" },
+        { name: "SquashSkills", takeaway: "Category spliced onto function: an online coaching platform turning search intent into brand — the honest-naming textbook" },
+        { name: "Squash On Fire", takeaway: "A Washington DC pay-per-court venue writing heat into the name: the sport's intensity stated outright — energy naming for mainstream squash" },
+      ],
+      pitfalls: [
+        "Straddling elite and open: hall-with-history prestige and walk-right-in warmth fight in one name — pick the business model first",
+        "Anchoring to one building: a name tied to a single landmark embarrasses the second venue — leave room for the chain",
+        "Ignoring the spelling barrier: squash is mistyped surprisingly often outside English markets — keep the domain on roots people can spell",
+        "Skipping the booking-platform check: squash players live on court-booking apps — a name they can't find there might as well not exist",
+      ],
+    },
+  },
+  lacrosse: {
+    slug: "lacrosse",
+    keywords: ["长曲棍球", "袋棍球", "长曲棍球俱乐部", "lacrosse club", "lax"],
+    tlds: [
+      { tld: "club", zh: "俱乐部身份直给，会员与赛季报名一眼归类", en: "The club identity stated outright — members and season sign-ups filed at a glance" },
+      { tld: "team", zh: "队伍属性零解释，青训选拔与联赛阵容都装得下", en: "The squad identity with zero explanation — tryouts and league rosters both fit" },
+      { tld: "academy", zh: "青训体系的身份声明，家长看到就知道有教练与出路", en: "The academy identity declared — parents read coaching and pathways at once" },
+    ],
+    zh: {
+      label: "长曲棍球",
+      title: "长曲棍球俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "长曲棍球俱乐部与青训命名指南：原住民传统、lax 缩写文化等思路，PLL/STX/LaxAllStars 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "长曲棍球的名字站在两种传统的交汇处：它是北美原住民传承数百年的「造物主的游戏」，也是美国东海岸预科学校的经典运动，如今又是增长最快的青少年团队项目之一。名字借哪种传统，决定了俱乐部的气质坐标。看行业样本：PLL（职业长曲棍球联盟）用三个字母的联盟缩写延续职业体育的标准打法，但它真正的命名创新在球队——Whipsnakes、Chaos、Atlas 类无城市归属的图腾命名，把联盟做成了巡回演出；STX 是这项运动最老的器材品牌之一，三个字母的工业感命名从 1970 年用到今天；LaxAllStars 则展示了圈内暗号的力量——「lax」是长曲棍球玩家的自称缩写，用它命名等于先对圈内人递了暗号。命名的隐藏考点是「lax 文化的浓度」：面向资深玩家的品牌可以满写 lax、rip、cradle 类行话，面向新手家长的青训俱乐部则要把「这是什么运动」说清。先定受众的圈内浓度，再定黑话的用量。",
+      namingIdeas: [
+        "lax 暗号直给：lax、rip、cradle 类圈内行话——对资深玩家递暗号，一个词就完成身份认证",
+        "图腾命名路线：PLL 式的无城市图腾（蛇、混沌、擎天）——青训战队借职业联盟的语感，气势先立住",
+        "原住民传统致敬：medicine game、creator 类意象——这项运动的精神根源，用得庄重就是最深的信任状",
+        "东岸预科语感：prep、academy、heritage 类字眼——借预科学校传统立体系感，家长最认这套语感",
+        "增长叙事：面向新兴市场的俱乐部可以用 rise、new 类字眼——把「增长最快的运动」写进名字，招新自带话题",
+      ],
+      cases: [
+        { name: "PLL", takeaway: "联盟三个字母延续职业体育缩写打法，球队却用无城市图腾命名：Whipsnakes/Chaos/Atlas 把联盟做成巡回演出——图腾命名的当代实验场" },
+        { name: "STX", takeaway: "三个字母的工业感命名从 1970 年用到今天：器材品牌以简取胜——耐用命名的长跑冠军" },
+        { name: "LaxAllStars", takeaway: "用圈内自称「lax」命名媒体平台：一个缩写完成身份认证——行话命名对核心客群的暗号效应" },
+        { name: "Denver Elite", takeaway: "城市+精英的青训俱乐部标准结构：地域归属与选拔感一次到位——新兴市场青训命名的直给样本" },
+      ],
+      pitfalls: [
+        "行话浓度错配：面向新手家长的青训俱乐部满纸 lax 黑话，第一眼就把不懂的人挡在门外——先定受众圈内浓度",
+        "原住民元素轻佻化：这项运动的精神根源值得庄重致敬，猎奇式借用部落意象会引发真实的文化反弹",
+        "曲棍球混淆：lacrosse 与 hockey/曲棍球在中文市场常被混为一谈，名字与副标题要把品类说清",
+        "只查英文没查中文译名：长曲棍球/袋棍球译名尚未统一，中文市场落地前先定自己的译名并占好域名",
+      ],
+    },
+    en: {
+      label: "Lacrosse clubs",
+      title: "How to Name a Lacrosse Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Lacrosse club and youth program naming guide: lax-culture signals, totem team names, breakdowns of PLL/STX/LaxAllStars, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A lacrosse club's name stands where two traditions meet: this is the Creator's Game, carried by Haudenosaunee and other Indigenous nations for centuries, and it is also the classic sport of East Coast prep schools — while today ranking among the fastest-growing youth team sports in America. Which tradition the name borrows sets the club's coordinates. The benchmarks show the range: PLL runs the standard three-letter league acronym, but its real naming innovation is the teams — Whipsnakes, Chaos, Atlas, city-free totems that turned the league into a touring show; STX, one of the sport's oldest equipment houses, has run an industrial three-letter mark since 1970; LaxAllStars shows the power of the insider signal — \"lax\" is what players call their own game, and opening with it is a handshake only insiders feel. The hidden exam is lax-culture concentration: a brand for lifers can run thick with rip, cradle and dodge slang, while a youth club recruiting first-time parents must explain what the sport even is. Measure the audience's insider level before measuring the slang.",
+      namingIdeas: [
+        "The lax handshake: lax, rip, cradle slang — one insider word completes the identity check for players who live the game",
+        "The totem route: city-free creature and concept names in the PLL mould (snakes, chaos, atlas) — youth squads borrowing the pro league's swagger",
+        "Honouring the Creator's Game: medicine-game and origin imagery — the sport's spiritual root, and the deepest credential when treated with gravity",
+        "The prep-heritage register: academy, prep, heritage words — East Coast tradition reads as system and pathway, the grammar parents trust most",
+        "The growth story: rise and new words for emerging-market clubs — write \"fastest-growing sport\" into the name and recruitment carries its own headline",
+      ],
+      cases: [
+        { name: "PLL", takeaway: "A three-letter league running city-free totem teams: Whipsnakes and Chaos turning the league into a touring show — the modern lab of totem naming" },
+        { name: "STX", takeaway: "An industrial three-letter mark running since 1970: equipment naming winning by brevity — the marathon champion of durable names" },
+        { name: "LaxAllStars", takeaway: "A media platform opening with the players' own word for their game: one abbreviation completing the identity check — the insider-signal effect" },
+        { name: "Denver Elite", takeaway: "City plus selection in the standard youth-club structure: home turf and tryout prestige in two words — the emerging-market template stated plainly" },
+      ],
+      pitfalls: [
+        "Slang-concentration mismatch: a first-time parent meets a wall of lax jargon and walks — measure the audience's insider level first",
+        "Treating Indigenous roots as decoration: the Creator's Game deserves gravity, and novelty borrowing of tribal imagery earns real cultural backlash",
+        "Blurring into field hockey: lacrosse and hockey get conflated in new markets — the name and tagline must sort the category at first glance",
+        "Skipping the translated-name check: the sport's Chinese name is still unsettled — pick your translation early and register the domain before scaling",
+      ],
+    },
+  },
+  judo: {
+    slug: "judo",
+    keywords: ["柔道馆", "柔道培训", "少儿柔道", "judo dojo", "judo club"],
+    tlds: [
+      { tld: "academy", zh: "道馆体系的身份声明，段位与晋级路径一眼归类", en: "The academy identity declared — belt ranks and progression filed at a glance" },
+      { tld: "club", zh: "俱乐部属性直给，成人班与约练体系都装得下", en: "The club identity stated outright — adult classes and open mats both fit" },
+      { tld: "kids", zh: "少儿柔道的主客群零解释，家长看到就知道是给孩子的", en: "Zero explanation for the kids' segment — parents read the audience at once" },
+    ],
+    zh: {
+      label: "柔道馆",
+      title: "柔道馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "柔道馆与柔道培训命名指南：以柔克刚哲学、道字辈语感等思路，讲道馆/Budokwai/IJF 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "柔道馆的名字有一个现成的哲学母题：以柔克刚。嘉纳治五郎 1882 年创立讲道馆时，把「柔之道」三个字定成了这项运动的名字——柔道可能是世界上唯一一个名字本身就是命名指南的运动。看行业样本：讲道馆（Kodokan）意为「讲授道的地方」，一馆之名成了全球柔道的圣地与段位认证的源头，「道+馆」结构是柔道命名的母版；伦敦的 Budokwai（武道会）1918 年创立，是欧洲最老的日式武道俱乐部，音译命名保留了东方血统的仪式感；IJF（国际柔道联合会）则走体育联盟缩写的标准打法。命名的隐藏考点是「哲学浓度」：柔道在家长眼里是「讲礼的摔跤」——先学鞠躬再学摔法、先学受身再学胜负，名字带「道」的分量就是最硬的信任状；但面向成人竞技与体能客群时，名字又可以更直接地写对抗与力量。先定道与武的配比，再落笔。",
+      namingIdeas: [
+        "道字辈语感：道、馆、修、心类字眼——柔道的教育属性是招生王牌，名字带「道」的分量家长最认",
+        "以柔克刚意象：柔、水、圆、巧劲——这项运动的哲学母题现成可用，用得准就是圈内暗号",
+        "日语血统致敬：Kodokan 式的音译或日语词根——保留发源地的仪式感，武道圈一眼识别正统",
+        "段位意象：黑带、一本（ippon）、袈裟固类术语——对练过的人递暗号，一个词完成身份认证",
+        "少儿礼仪路线：面向少儿班时主打「礼」与「勇」的组合——家长要的是孩子学会尊重与自信，不只是摔法",
+      ],
+      cases: [
+        { name: "讲道馆 Kodokan", takeaway: "「讲授道的地方」一馆之名成为全球柔道圣地：道+馆结构是柔道命名的母版——名字即体系源头的终极样本" },
+        { name: "Budokwai", takeaway: "1918 年创立的欧洲最老日式武道俱乐部：音译命名保留东方血统的仪式感——跨文化武道命名的百年验证" },
+        { name: "IJF", takeaway: "国际柔道联合会三个字母：体育联盟缩写命名的标准打法——机构向命名以简取胜" },
+        { name: "American Judo System", takeaway: "国家+品类+体系的直给结构：教学方法论写进名字——线上柔道教学的诚实命名" },
+      ],
+      pitfalls: [
+        "道武比例失衡：名字太玄家长看不懂教什么，太狠又丢了柔道「讲礼」的差异化——先定哲学浓度",
+        "与跆拳道空手道混淆：三大道馆在家长认知里常混为一谈，名字与副标题要把「柔道」品类说清",
+        "日语词根拼写门槛：Kodokan 类音译对圈外人难拼难记，主名与域名最好留一个好拼的词根",
+        "只查中文没查商标：「讲道馆」类经典名有权利与正统性边界，挂牌前先确认不构成冒用",
+      ],
+    },
+    en: {
+      label: "Judo dojos",
+      title: "How to Name a Judo Dojo: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Judo dojo and academy naming guide: the gentle-way philosophy, do-register naming, breakdowns of Kodokan/Budokwai/IJF, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A judo dojo's name comes with a philosophical theme pre-installed: the gentle way overcoming the hard. When Jigoro Kano founded the Kodokan in 1882 he named the art itself judo — the way of gentleness — making judo perhaps the only sport whose own name is a naming guide. The benchmarks follow from the source: Kodokan means \"the place for teaching the way,\" and that single hall's name became world judo's holy site and the root of rank certification — the do-plus-hall structure is the mother template of judo naming; London's Budokwai, founded in 1918 as Europe's oldest Japanese martial arts club, shows transliteration preserving the ceremony of origin; the IJF runs the standard sports-federation acronym. The hidden exam is philosophical concentration: to a parent, judo is the throwing art that teaches bowing first — respect before technique, falling safely before winning — so a name carrying the weight of the way is the hardest credential; yet an adult competitive programme can write grip and power more directly. Set the ratio of way to combat before writing a word.",
+      namingIdeas: [
+        "The do register: way, path, hall, mind words — judo's educational identity is the enrolment ace, and the weight of the way is the grammar parents trust",
+        "Gentle-way imagery: soft, water, circle, yield — the art's built-in philosophy, an insider signal when used precisely",
+        "Honouring the Japanese root: Kodokan-style transliteration or Japanese word roots — the ceremony of origin, instantly read as orthodox by the budo world",
+        "Rank imagery: black belt, ippon, kuzushi terms — one word of the art's vocabulary completes the identity check for anyone who has trained",
+        "The kids' courtesy route: respect-plus-courage pairings for children's programmes — parents enrol for confidence and manners, not just throws",
+      ],
+      cases: [
+        { name: "Kodokan", takeaway: "\"The place for teaching the way\" becoming world judo's holy site: the do-plus-hall structure as the mother template — the ultimate name-as-origin sample" },
+        { name: "Budokwai", takeaway: "Europe's oldest Japanese martial arts club, founded 1918: transliteration preserving the ceremony of origin — a century's proof of cross-cultural budo naming" },
+        { name: "IJF", takeaway: "The world federation in three letters: the standard sports-body acronym play — institutional naming winning by brevity" },
+        { name: "American Judo System", takeaway: "Nation plus art plus method stated plainly: a teaching methodology written into the name — honest naming for online judo instruction" },
+      ],
+      pitfalls: [
+        "Unbalancing way and combat: too mystical and parents can't tell what's taught, too fierce and judo's courtesy edge is squandered — set the ratio first",
+        "Blurring into taekwondo and karate: the three dojang arts blend together in a parent's mind — the name and tagline must sort judo at first glance",
+        "The transliteration spelling barrier: Japanese roots are elegant but mistyped daily — keep the primary name or domain on roots people can spell",
+        "Skipping the legitimacy check: classic names like Kodokan carry lineage and rights boundaries — confirm you're not trading on borrowed orthodoxy before the sign goes up",
+      ],
+    },
+  },
+  bjj: {
+    slug: "bjj",
+    keywords: ["巴西柔术", "柔术馆", "BJJ", "jiu jitsu gym", "grappling"],
+    tlds: [
+      { tld: "academy", zh: "柔术馆的行业惯用身份，色带体系与课程结构一眼归类", en: "The industry's default identity — belt system and curriculum filed at a glance" },
+      { tld: "club", zh: "俱乐部属性直给，约练文化与会员体系都装得下", en: "The club identity stated outright — open-mat culture and memberships both fit" },
+      { tld: "fit", zh: "面向体能与减脂客群时零解释，白领柔术课最合身", en: "Zero explanation for the fitness crowd — the fit for after-work jiu-jitsu classes" },
+    ],
+    zh: {
+      label: "巴西柔术",
+      title: "巴西柔术馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "巴西柔术馆与柔术学院命名指南：师承谱系、地面哲学等思路，Gracie Barra/10th Planet/AOJ 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "巴西柔术馆的命名绕不开一个词：谱系。这项运动的信任体系建立在师承上——你的黑带是谁给的，决定了你的馆在圈内的坐标。看行业样本：Gracie Barra 用「格雷西家族+里约 Barra 区」的姓氏+地名结构，把创始家族的姓变成了全球七百馆连锁的金字招牌，姓氏命名在柔术行业的权重全球罕见；Eddie Bravo 的 10th Planet 反着来——不用姓氏用「第十行星」，无道服体系的离经叛道从名字就开始宣言；Mendes 兄弟的 AOJ（Art of Jiu Jitsu）把「艺术」放在品类前面，加州极简美学的定位一次说清。命名的隐藏考点是「师承浓度」：挂师承的名字（XX 柔术 under 某黑带）借的是谱系信任，自立门户的名字赌的是自己的教学体系。先想清楚借势还是立牌，再落笔。",
+      namingIdeas: [
+        "姓氏谱系路线：创始人姓氏+柔术——Gracie Barra 验证过的行业最强结构，前提是你的黑带谱系经得起追问",
+        "地面哲学意象：ground、flow、roll 类词根——柔术是地面上的下棋，名字带「流动」的劲圈内人一眼认亲",
+        "离经叛道宣言：10th Planet 式的反传统命名——无道服、新体系的馆用名字先把「我们不一样」喊出来",
+        "艺术定位：art、精、道类字眼——AOJ 式把柔术从格斗往艺术拉，吸引怕受伤的白领客群",
+        "色带意象：黑带、紫带类等级词——对练过的人递暗号，青训馆用「幼带」类词对家长说安全",
+      ],
+      cases: [
+        { name: "Gracie Barra", takeaway: "创始家族姓氏+里约地名：七百馆连锁的金字招牌建立在谱系信任上——姓氏命名在柔术行业的权重全球罕见" },
+        { name: "10th Planet", takeaway: "不用姓氏用「第十行星」：无道服体系的离经叛道从名字就开始宣言——反传统命名的行业样本" },
+        { name: "Art of Jiu Jitsu", takeaway: "把「艺术」放在品类前面：加州极简美学的馆定位一次说清——柔术从格斗往艺术拉的命名实验" },
+        { name: "BJJ Fanatics", takeaway: "品类缩写+狂热者：线上教学平台对核心客群直给——圈内暗号+社群认同的电商命名" },
+      ],
+      pitfalls: [
+        "谱系经不起追问：挂了师承感的名字却说不清黑带来自谁，圈内第一轮质疑就翻车——先理清谱系再借势",
+        "与传统柔术/柔道混淆：BJJ、日式柔术、柔道在中文市场常被混为一谈，名字与副标题要把品类说清",
+        "过度凶狠劝退小白：submission、kill 类狠词吓走占营收大头的白领与少儿客群——狠留给赛队，馆名要留门",
+        "只查中文没查 IBJJF 注册与社媒：柔术馆出赛与网课都要英文名，@ 不到搜不到的名字传不远",
+      ],
+    },
+    en: {
+      label: "BJJ academies",
+      title: "How to Name a BJJ Academy: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Brazilian jiu-jitsu academy naming guide: lineage naming, ground-game imagery, breakdowns of Gracie Barra/10th Planet/AOJ, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "You cannot name a Brazilian jiu-jitsu academy without meeting one word: lineage. The sport's entire trust system runs on who gave you your black belt, and the academy's name is where that pedigree goes public. The benchmarks show the range: Gracie Barra welds the founding family's surname to Rio's Barra district, turning a family name into the marquee of a seven-hundred-school network — no other sport gives surnames this much naming weight; Eddie Bravo's 10th Planet runs the opposite play, trading lineage for a planet that doesn't exist, the no-gi system's heresy declared from the name onward; the Mendes brothers' Art of Jiu Jitsu puts art before category, stating the Californian minimalist position in four words. The hidden exam is lineage concentration: a name that leans on pedigree (under so-and-so's black belt) borrows the trust of a family tree, while a self-standing name bets on your own curriculum. Decide whether you're borrowing the flag or planting one before writing a word.",
+      namingIdeas: [
+        "The surname-lineage route: founder's name plus jiu-jitsu — the strongest structure in the industry, proven by Gracie Barra, provided your black-belt line survives questioning",
+        "Ground-game imagery: ground, flow, roll roots — jiu-jitsu is chess played on the floor, and a name carrying the flow reads as kin to anyone who trains",
+        "The heresy manifesto: the 10th Planet move — no-gi and new-system academies shout \"we are different\" from the name onward",
+        "The art register: art, craft, studio words — the AOJ play pulling jiu-jitsu from fighting toward art, opening the door to the injury-wary office crowd",
+        "Belt imagery: black-belt and rank words as insider signals — while kids' programmes use grey-belt and little-champions registers to say safety to parents",
+      ],
+      cases: [
+        { name: "Gracie Barra", takeaway: "The founding family's surname welded to a Rio district: a seven-hundred-school marquee built on lineage trust — surnames carrying more weight here than in any other sport" },
+        { name: "10th Planet", takeaway: "A planet that doesn't exist instead of a surname: the no-gi system's heresy declared from the name onward — the anti-tradition template" },
+        { name: "Art of Jiu Jitsu", takeaway: "Art placed before category: Californian minimalism stated in four words — the experiment of pulling jiu-jitsu toward art" },
+        { name: "BJJ Fanatics", takeaway: "Category acronym plus devotion: an instructional platform speaking straight to the obsessed — insider signal and community identity in one name" },
+      ],
+      pitfalls: [
+        "Lineage that can't survive questioning: a pedigree-flavoured name with no traceable black-belt line fails the community's first audit — settle the family tree before borrowing it",
+        "Blurring into judo and Japanese jujutsu: the grappling arts blend together in new markets — the name and tagline must sort BJJ at first glance",
+        "Overdosing on menace: submission-and-kill vocabulary scares off the office workers and kids who pay most of the bills — save the fangs for the comp team",
+        "Skipping the IBJJF and social handle check: competition rosters and instructionals live online — a name that can't be found or tagged can't build a following",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
