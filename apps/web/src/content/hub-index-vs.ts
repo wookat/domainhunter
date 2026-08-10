@@ -310,4 +310,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "limo-vs-taxi", a: "limo", b: "taxi", title: { zh: ".limo 和 .taxi 怎么选：礼宾预约与即叫即走", en: ".limo vs .taxi: Booked Chauffeur or Street Hail" } },
   { slug: "tickets-vs-events", a: "tickets", b: "events", title: { zh: ".tickets 和 .events 怎么选：交易入口与活动本身", en: ".tickets vs .events: The Checkout or the Occasion" } },
   { slug: "flowers-vs-florist", a: "flowers", b: "florist", title: { zh: ".flowers 和 .florist 怎么选：商品直给与职业身份", en: ".flowers vs .florist: The Product or the Profession" } },
+  { slug: "beer-vs-pub", a: "beer", b: "pub", title: { zh: ".beer 和 .pub 怎么选：品类直给与场所双关", en: ".beer vs .pub: The Category or the Venue" } },
+  { slug: "pub-vs-bar", a: "pub", b: "bar", title: { zh: ".pub 和 .bar 怎么选：英式烟火气与泛酒吧通吃", en: ".pub vs .bar: Tavern Warmth or Catch-All Nightlife" } },
+  { slug: "spa-vs-salon", a: "spa", b: "salon", title: { zh: ".spa 和 .salon 怎么选：康养链条与美业门店", en: ".spa vs .salon: The Wellness Chain or the Beauty Shop" } },
+  { slug: "food-vs-restaurant", a: "food", b: "restaurant", title: { zh: ".food 和 .restaurant 怎么选：品类总词与门店直给", en: ".food vs .restaurant: The Umbrella or the Storefront" } },
+  { slug: "attorney-vs-lawyer", a: "attorney", b: "lawyer", title: { zh: ".attorney 和 .lawyer 怎么选：美式正式与全球通称", en: ".attorney vs .lawyer: The Formal American or the Global Word" } },
+  { slug: "dentist-vs-dental", a: "dentist", b: "dental", title: { zh: ".dentist 和 .dental 怎么选：职业身份与行业大词", en: ".dentist vs .dental: The Professional or the Industry" } },
 ];

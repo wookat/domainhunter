@@ -546,7 +546,7 @@
     ]
   },
   "vs": {
-    "count": 300,
+    "count": 306,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -847,7 +847,13 @@
       "voyage-vs-tours",
       "limo-vs-taxi",
       "tickets-vs-events",
-      "flowers-vs-florist"
+      "flowers-vs-florist",
+      "beer-vs-pub",
+      "pub-vs-bar",
+      "spa-vs-salon",
+      "food-vs-restaurant",
+      "attorney-vs-lawyer",
+      "dentist-vs-dental"
     ]
   }
 }

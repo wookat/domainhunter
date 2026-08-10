@@ -303,6 +303,12 @@ export const COMPARE_SLUGS = [
   "limo-vs-taxi",
   "tickets-vs-events",
   "flowers-vs-florist",
+  "beer-vs-pub",
+  "pub-vs-bar",
+  "spa-vs-salon",
+  "food-vs-restaurant",
+  "attorney-vs-lawyer",
+  "dentist-vs-dental",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
