@@ -140,7 +140,7 @@ export function pricesTableSkeleton(lang: Lang): string {
     )
     .join("");
   return (
-    `<input placeholder="${escapeHtml(s.filter)}" class="mt-6 h-10 w-full max-w-xs rounded-lg border border-line bg-bg1 px-3 font-mono text-sm text-txt0 outline-none transition-colors placeholder:font-sans placeholder:text-txt2 focus:border-brand-line" />` +
+    `<div class="relative mt-6 h-11"><input type="search" placeholder="${escapeHtml(s.filter)}" aria-label="${escapeHtml(s.filter)}" class="h-11 w-full rounded-lg border border-line bg-bg2 pl-3.5 pr-24 text-sm text-txt1 outline-none transition-colors placeholder:text-txt2 focus:border-brand-line [&amp;::-webkit-search-cancel-button]:hidden" /><span class="tnum pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 font-mono text-xs text-txt2">${TLD_LIST.length} / ${TLD_LIST.length}</span></div>` +
     `<div class="mt-4 overflow-hidden rounded-xl border border-line"><div class="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line bg-bg1 px-4 py-2.5">${th(s.colTld, false)}${th(s.colReg, true)}${th(s.colRenew, false)}<span></span></div>${rowsHtml}</div>`
   );
 }
