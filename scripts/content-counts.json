@@ -365,7 +365,7 @@
     ]
   },
   "guide": {
-    "count": 356,
+    "count": 362,
     "slugs": [
       "saas",
       "ecommerce",
@@ -722,7 +722,13 @@
       "mushroomfarm",
       "neonsign",
       "millinery",
-      "mosaic"
+      "mosaic",
+      "blacksmith",
+      "distillery",
+      "kombucha",
+      "climbinggym",
+      "stainedglass",
+      "minigolf"
     ]
   },
   "vs": {

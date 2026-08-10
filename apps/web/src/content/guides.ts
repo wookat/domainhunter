@@ -22196,6 +22196,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  blacksmith: {
+    slug: "blacksmith",
+    keywords: ["铁匠铺", "手工锻造", "锻刀工作室", "blacksmith forge", "bladesmith"],
+    tlds: [
+      { tld: "com", zh: "定制委托与电商销售的默认后缀，报价单与详情页上最稳", en: "The default suffix for commissions and e-commerce — steadiest on the quote and the product page" },
+      { tld: "works", zh: "工坊气质直给，锻造的「制造」血统零违和", en: "The workshop register stated outright — zero friction for the forged, made-here bloodline" },
+      { tld: "studio", zh: "艺术锻造与体验课线的身位归类，手作感直接对位", en: "The filing for art forging and the class line — the handmade posture aligned outright" },
+    ],
+    zh: {
+      label: "铁匠铺",
+      title: "铁匠铺怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "铁匠铺与手工锻造工作室命名指南：炉火意象、千锤叙事等思路，铁匠谱系案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "铁匠铺的名字要说出「一块铁在炉火里被千锤打醒」的分量：这是人类最古老的手艺之一——村口的铁匠曾经打出整个农耕时代的犁与马蹄铁，今天的锻造工作室则在打大马士革纹的厨刀、庭院的锻铁栏杆和藏家手里的斧头，名字要先把这份「火与锤的血统」递出去。词库现成：炉、锤、砧、锻、淬——每一个字都带着火星，「千锤百炼」「趁热打铁」更是中文里现成的口彩。隐藏考点是业务分层：定制刀具与艺术锻造走高客单与藏家线、建筑锻铁走工程委托、锻造体验课走周末流量——名字要在藏家眼里有手艺身价，在工程报价单上专业可信，在体验课海报上让新手敢推门。误区在于把自己做成「五金铺」：锻造的溢价在「一锤一锤打出来」的手工叙事与匠人署名，名字若只剩「铁」的材料感，就把千年手艺卖成了建材。",
+      namingIdeas: [
+        "炉火意象直给：炉、火、焰类词根——锻造的核心场景入名，火光就是这门手艺的招牌色",
+        "锤砧语法借力：锤、砧、锻类词库——「千锤百炼」的中文口彩现成可用，工艺过程自带品质背书",
+        "淬火叙事转译：淬、刃、锋类词根——把「淬火成钢」的蜕变写进名字，刀具线的锋利暗号",
+        "匠人署名路线：以铁匠本名立铺——西方 Smith 姓氏本就源自铁匠，人名招牌是定制线的信任语法",
+        "老铺语法借力：铺、坊、号类词根——铁匠铺是村口最老的店，老铺感就是手艺年头的速记",
+      ],
+      cases: [
+        { name: "千锤堂", takeaway: "「千锤百炼」缩写加堂号：工艺过程直接入名——四个字把手工血统与老铺身价一次立住" },
+        { name: "Alec Steele", takeaway: "人名招牌加姓氏双关：steele 与 steel 同音——锻造视频千万订阅的当代铁匠样本，名字即内容 IP" },
+        { name: "淬锋社", takeaway: "「淬火」加「锋刃」的组合示范：刀具线的锐利直给——两个字说完从生铁到利刃的全过程" },
+        { name: "Oleson Forge", takeaway: "姓氏加 forge 的西式标准语法：forge 一词既是锻造炉也是动词「锻造」——品类词自带动作感" },
+      ],
+      pitfalls: [
+        "降级成五金铺：名字只剩「铁」的材料感就辜负千年手艺——溢价在千锤手作的叙事与匠人署名",
+        "锁死单一品类：叫「刀坊」就难接锻铁栏杆与艺术委托——品类留给作品线，品牌名留整个炉台",
+        "武侠腔过重：满是「神兵、屠龙」的名字在工程报价单上失分——藏家线要武艺，工程线要工艺",
+        "忽略体验课客群：锻造体验是最好的获客入口，名字太硬核会吓退第一次拿锤的新手——留一扇亲切的门",
+      ],
+    },
+    en: {
+      label: "Blacksmith forges",
+      title: "How to Name a Blacksmith Forge: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Blacksmith and hand-forging studio naming guide: forge-fire imagery, thousand-hammer narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A blacksmith's name must say the weight of iron woken by a thousand hammer blows in the forge fire: this is one of humanity's oldest crafts — the village smith once hammered out the ploughs and horseshoes of the entire agricultural age, and today's forge shapes Damascus-pattern kitchen knives, wrought-iron railings and collectors' axes, so the name has to hand over that bloodline of fire and hammer first. The lexicon is ready: forge, anvil, hammer, quench and temper — every word carries sparks, and strike-while-hot idioms offer ready hooks in any language. The hidden exam is the tier split: custom blades and art forging run on high tickets and collectors, architectural ironwork runs on project commissions, and forging classes run on weekend traffic — the name must carry craft status in the collector's eye, read credible on the project quote, and let a first-timer dare to pick up the hammer on the class poster. The failure mode is becoming a hardware store: the premium lives in the blow-by-blow handmade narrative and the maker's signature, and a name with only the flat material word 'iron' sells a millennial craft as building supply.",
+      namingIdeas: [
+        "Forge-fire imagery outright: forge, fire and ember roots — the craft's core scene named directly; the glow of the fire is this trade's signature colour",
+        "Borrowing the hammer-and-anvil grammar: hammer, anvil and strike roots — the process itself is the quality endorsement, tempered a thousand times",
+        "Translating the quench narrative: quench, edge and temper roots — the transformation from raw iron to blade written into the name, the sharp password of the knife line",
+        "The maker's-signature route: the forge standing on the smith's own name — the surname Smith itself descends from this trade; the name above the door is the trust grammar of commissions",
+        "Borrowing the old-shop grammar: forge, works and est. roots — the smithy is the oldest shop in the village, and the old-shop register is shorthand for years at the anvil",
+      ],
+      cases: [
+        { name: "Qian Chui Tang (千锤堂)", takeaway: "A thousand hammers joined to a hall name: the process made the brand — four characters setting the handmade bloodline and old-shop status at once" },
+        { name: "Alec Steele", takeaway: "The name above the door with a surname pun: steele sounding as steel — the modern smith with millions of subscribers, the name doubling as the content IP" },
+        { name: "Cui Feng She (淬锋社)", takeaway: "Quench joined to edge: the knife line's sharpness stated outright — two characters covering the whole journey from raw iron to blade" },
+        { name: "Oleson Forge", takeaway: "The Western standard grammar of surname plus forge: one word naming both the hearth and the act of forging — a category word with motion built in" },
+      ],
+      pitfalls: [
+        "Demoting to a hardware store: a name with only the flat word iron betrays a millennial craft — the premium is the blow-by-blow narrative and the maker's signature",
+        "Locking into one category: a knife-shop name can't take the railing commission and the art piece — leave the category to the product line, keep the whole anvil for the brand",
+        "Fantasy register too heavy: a name of dragon-slayers and legendary blades loses points on the project quote — the collector line wants legend, the commission line wants craft",
+        "Forgetting the class crowd: the forging experience is the best acquisition funnel, and a too-hardcore name scares the first-time hammer hand — leave a welcoming door in the name",
+      ],
+    },
+  },
+  distillery: {
+    slug: "distillery",
+    keywords: ["精酿蒸馏厂", "威士忌酒厂", "金酒品牌", "craft distillery", "whisky gin"],
+    tlds: [
+      { tld: "com", zh: "酒类电商与出口贸易的默认后缀，酒标与订单上最稳", en: "The default suffix for e-commerce and export — steadiest on the label and the order" },
+      { tld: "bar", zh: "品鉴室与酒吧场景直接对位，到店体验线的归类", en: "The tasting-room scene aligned outright — the filing for the on-premise line" },
+      { tld: "co", zh: "新锐酒饮品牌的利落替身，瓶身设计上更简洁", en: "The sleek stand-in for new drinks brands — cleaner on the bottle design" },
+    ],
+    zh: {
+      label: "精酿蒸馏厂",
+      title: "精酿蒸馏厂怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "精酿蒸馏厂与威士忌/金酒品牌命名指南：铜壶意象、产地叙事等思路，酒厂谱系案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "蒸馏厂的名字要说出「一滴烈酒里蒸出来的时间与地方」：威士忌在橡木桶里躺十二年，金酒在铜壶里萃取杜松子的清苦，每一瓶烈酒都是产地、水源与年份的签名，名字要先把这份「风土的落款」递出去。行业惯例极强：苏格兰酒厂几乎全用盖尔语地名（Glenfiddich 意为「鹿之谷」），日本威士忌用山与水命名（山崎、白州），美国精酿蒸馏厂则爱用创始人与老故事——命名传统本身就是行业的信任语法。隐藏考点是业务分层：核心酒款走渠道与出口、限定桶与会员桶走藏家线、品鉴室与酒厂游走体验流量——名字要在酒标上有年头感，在拍卖行目录里有身价，在品鉴室门头上有故事。误区在于把自己做成「酒精厂」：烈酒的溢价在风土叙事与陈年时间，名字若只剩「烈、醉」的酒精感，就把十二年的橡木桶卖成了工业乙醇。",
+      namingIdeas: [
+        "产地语法直给：以山、谷、泉、湾等地理词根立名——苏格兰盖尔语地名的百年惯例，风土就是烈酒的第一签名",
+        "铜壶意象借力：壶、蒸、馏类词根——蒸馏器是这门手艺的图腾，铜的暖色就是品类的视觉血统",
+        "水源叙事转译：泉、涧、雪水类词库——威士忌的第一原料是水，日本山崎、白州的命名范式现成可用",
+        "陈年时间入名：桶、藏、年类词根——「时间是最贵的原料」写进名字，藏家线的身价暗号",
+        "老故事路线：创始人、家族或本地传说立名——美国精酿蒸馏厂的惯例，酒标背面的故事栏有话可讲",
+      ],
+      cases: [
+        { name: "Glenfiddich", takeaway: "盖尔语「鹿之谷」：产地语法的百年样本——一个地名让每瓶酒都带着山谷的落款，鹿标即谷名" },
+        { name: "山崎 Yamazaki", takeaway: "日本第一家威士忌蒸馏所以水源地立名：山与水的命名范式——产地即品质承诺的东方转译" },
+        { name: "Hendrick's", takeaway: "以园丁之名立牌的金酒示范：人名加撇号的老铺语法——黄瓜与玫瑰的怪奇气质全靠名字的古典感压住" },
+        { name: "泉引社", takeaway: "「引泉入壶」的动作入名：水源叙事的中文示范——两个字说完从山泉到酒液的第一道工序" },
+      ],
+      pitfalls: [
+        "降级成酒精厂：名字只剩「烈、醉」的酒精感就辜负橡木桶里的十二年——溢价在风土与时间的叙事",
+        "锁死单一酒种：叫「金酒坊」就难接威士忌与朗姆的产品线——酒种留给酒标，品牌名留整个铜壶",
+        "撞车苏格兰腔：不在苏格兰却硬造 Glen 开头的名字有法律与信誉双重风险——SWA 对此有明确限制，风土要真",
+        "忽略品鉴室场景：酒厂游与品鉴会是最好的品牌现场，名字要在门头与酒杯上都有故事——太工业的名字倒不出话来",
+      ],
+    },
+    en: {
+      label: "Craft distilleries",
+      title: "How to Name a Craft Distillery: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Craft distillery and whisky/gin brand naming guide: copper-still imagery, terroir narrative, breakdowns of Glenfiddich/Yamazaki, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A distillery's name must say the time and the place distilled into one drop of spirit: whisky lies twelve years in the oak, gin pulls the bitter-bright of juniper through the copper still, and every bottle is a signature of origin, water and vintage, so the name has to hand over that terroir signature first. The trade convention runs deep: Scottish distilleries name themselves almost entirely in Gaelic place-names (Glenfiddich, valley of the deer), Japanese whisky names on mountains and waters (Yamazaki, Hakushu), and American craft distilleries lean on founders and old stories — the naming tradition itself is the industry's trust grammar. The hidden exam is the tier split: core expressions run on distribution and export, single casks and members' barrels run on the collector line, and the tasting room and distillery tour run on experience traffic — the name must carry age on the label, status in the auction catalogue, and a story on the tasting-room door. The failure mode is becoming an ethanol plant: the premium lives in terroir narrative and resting time, and a name of raw booze words sells twelve years of oak as industrial alcohol.",
+      namingIdeas: [
+        "Place-name grammar outright: naming on glen, spring, bay and mountain roots — the century-old Gaelic convention; terroir is the spirit's first signature",
+        "Borrowing the copper-still imagery: still, pot and distil roots — the still is the craft's totem, and copper's warm glow is the category's visual bloodline",
+        "Translating the water-source narrative: spring, brook and snowmelt roots — water is whisky's first ingredient, and the Yamazaki/Hakushu paradigm is ready to use",
+        "Resting time in the name: cask, vault and vintage roots — time as the most expensive ingredient written into the name, the status password of the collector line",
+        "The old-story route: founders, family names and local legends — the American craft convention; the back label's story panel needs something to tell",
+      ],
+      cases: [
+        { name: "Glenfiddich", takeaway: "Gaelic for valley of the deer: the century-old sample of place-name grammar — one glen signing every bottle with its valley, the stag badge as the name itself" },
+        { name: "Yamazaki", takeaway: "Japan's first whisky distillery named on its water source: the mountain-and-water paradigm — origin as quality promise in Eastern translation" },
+        { name: "Hendrick's", takeaway: "A gin standing on a gardener's name: the possessive old-shop grammar — cucumber-and-rose eccentricity held steady by the name's classical weight" },
+        { name: "Quan Yin She (泉引社)", takeaway: "Drawing the spring into the still made a name: the Chinese model of the water narrative — two characters covering the first step from mountain spring to spirit" },
+      ],
+      pitfalls: [
+        "Demoting to an ethanol plant: a name of raw booze words betrays twelve years in oak — the premium is the narrative of terroir and time",
+        "Locking into one spirit: a gin-house name can't take the whisky and the rum line — leave the spirit to the label, keep the whole copper still for the brand",
+        "Faking the Scottish register: a Glen- name outside Scotland runs legal and credibility risk at once — the SWA polices this; the terroir must be real",
+        "Forgetting the tasting room: the tour and the tasting are the brand's best stage, and the name must tell a story on the door and in the glass — a too-industrial name pours out nothing",
+      ],
+    },
+  },
+  kombucha: {
+    slug: "kombucha",
+    keywords: ["康普茶品牌", "发酵茶饮", "气泡发酵饮料", "kombucha brewery", "fermented tea"],
+    tlds: [
+      { tld: "com", zh: "饮品电商与商超渠道的默认后缀，瓶标与订单上最稳", en: "The default suffix for e-commerce and retail — steadiest on the bottle and the order" },
+      { tld: "co", zh: "新消费饮品牌的利落替身，瓶身与社媒上更轻盈", en: "The sleek stand-in for new drinks brands — lighter on the bottle and the feed" },
+      { tld: "life", zh: "健康生活方式的身位直给，功能饮品线的气质归类", en: "The wellness posture stated outright — the register filing for the functional line" },
+    ],
+    zh: {
+      label: "康普茶品牌",
+      title: "康普茶品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "康普茶与发酵茶饮品牌命名指南：活菌意象、气泡叙事等思路，GT's/Health-Ade 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "康普茶的名字要说出「一缸活着的茶」的生命力：红茶菌在糖茶里呼吸发酵，吐出细密的气泡与微酸的果香——这是一瓶「有生命的饮料」，货架对手是死甜的碳酸水，名字要先把「活的、发酵的、对肠胃好的」这份差异递出去。品类正在破圈：从健身房冰柜到便利店货架，康普茶在从小众养生饮料变成日常气泡水的平替，名字要同时接住两拨人——懂发酵的核心客群要看到「菌与活性」的行话，第一次尝试的路人要觉得「好喝不奇怪」。隐藏考点是业务分层：瓶装零售走商超与电商、鲜打桶装走咖啡馆与餐厅、自酿课与菌种售卖走社群——名字要在货架上三步外能认出，在餐单上念得顺口，在发酵社群里有行家认同。误区在于把自己做成「药水」：康普茶的溢价在「好喝的健康」，名字若太像保健品，就把气泡的快乐卖成了苦口的义务。",
+      namingIdeas: [
+        "活菌意象直给：活、酵、生类词根——「有生命的饮料」是品类的第一差异，发酵行话就是核心客群的认亲暗号",
+        "气泡叙事转译：泡、汽、沁类词库——把开瓶那一声「嘶」写进名字，对标碳酸水的快乐语法",
+        "茶血统借力：茶、菌、酿类词根——康普茶的底子是茶，中文茶文化的千年词库现成可用",
+        "微酸果香路线：果名与酸感词入名——风味是复购的钩子，名字先让人尝到一口",
+        "轻快造词收尾：-bucha、以及 fizz/brew 类词尾——品类词的变体造词，货架上一眼归类又独占",
+      ],
+      cases: [
+        { name: "GT's Living Foods", takeaway: "「活的食物」直接入名：创始人缩写加品类哲学——北美康普茶开创者把「活性」写成了品牌姓氏" },
+        { name: "Health-Ade", takeaway: "health 加 -ade 饮料词尾的合成词：一词说完「健康的汽水」——品类平替的定位全在名字里" },
+        { name: "活茶社", takeaway: "「活着的茶」直译入名的中文示范：三个字说完品类差异——茶血统与活菌叙事一次拿下" },
+        { name: "Brew Dr.", takeaway: "「酿造博士」的信任语法：brew 的手作感加 Dr. 的专业感——从茶馆起家的酿造血统写进招牌" },
+      ],
+      pitfalls: [
+        "做成药水感：名字太像保健品就丢了气泡的快乐——康普茶的溢价是「好喝的健康」，不是苦口的义务",
+        "发酵黑话过深：满是「菌群、SCOBY」的名字让路人不敢开瓶——核心客群要行话，新客要好喝的暗示",
+        "锁死单一口味：叫「姜汁康普」就难接果味与无糖线——口味留给瓶标，品牌名留整缸茶",
+        "忽略餐单场景：咖啡馆与餐厅的鲜打线是高毛利渠道，名字要在餐单上念得顺口——拗口的名字点单率先输一半",
+      ],
+    },
+    en: {
+      label: "Kombucha brands",
+      title: "How to Name a Kombucha Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Kombucha and fermented tea brand naming guide: living-culture imagery, fizz narrative, breakdowns of GT's/Health-Ade, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A kombucha name must say the vitality of a tea that is alive: the culture breathes and ferments in sweet tea, exhaling fine bubbles and a bright tartness — this is a living drink whose shelf rival is dead-sweet soda, so the name has to hand over that alive, fermented, gut-friendly difference first. The category is crossing over: from the gym fridge to the convenience-store shelf, kombucha is moving from niche wellness to everyday sparkling-water stand-in, and the name must catch two crowds at once — the fermentation faithful want the insider signals of culture and liveness, while the first-time sipper needs to feel it's delicious, not weird. The hidden exam is the tier split: bottled retail runs on supermarkets and e-commerce, draft kombucha runs on cafés and restaurants, and brewing classes and culture sales run on community — the name must be recognisable three steps from the shelf, read smooth on the menu, and earn respect in the fermentation forum. The failure mode is becoming a tonic: the premium is health that tastes good, and a name that sounds like medicine sells the joy of fizz as a bitter obligation.",
+      namingIdeas: [
+        "Living-culture imagery outright: live, culture and ferment roots — the living drink is the category's first difference, and the fermentation argot is the kinship code of the core crowd",
+        "Translating the fizz narrative: bubble, spark and pop roots — the hiss of the opening bottle written into the name, the joy grammar aimed at soda",
+        "Borrowing the tea bloodline: tea, brew and steep roots — kombucha stands on tea, and a millennium of tea lexicon is ready to use",
+        "The tart-and-fruity route: fruit names and brightness words — flavour is the reorder hook; let the name give the first sip",
+        "Light coinage endings: -bucha, fizz and brew suffixes — variant coinage on the category word, filed on the shelf at a glance yet fully ownable",
+      ],
+      cases: [
+        { name: "GT's Living Foods", takeaway: "Living written straight into the name: founder's initials plus category philosophy — the North American pioneer made aliveness the brand's surname" },
+        { name: "Health-Ade", takeaway: "A blend of health and the -ade drink suffix: healthy soda said in one word — the whole stand-in positioning carried by the name" },
+        { name: "Huo Cha She (活茶社)", takeaway: "The living tea translated literally: the Chinese model — three characters covering the category difference, tea bloodline and live culture won at once" },
+        { name: "Brew Dr.", takeaway: "The trust grammar of the brewing doctor: brew's handmade warmth plus Dr.'s authority — a teahouse-born brewing bloodline written on the sign" },
+      ],
+      pitfalls: [
+        "Turning into a tonic: a medicine-sounding name loses the joy of the fizz — the premium is health that tastes good, not a bitter obligation",
+        "Fermentation argot too deep: a name full of SCOBY-and-microbiome stops the first-timer from opening the bottle — insiders want argot, newcomers want the hint of delicious",
+        "Locking into one flavour: a ginger-brew name can't take the fruit and zero-sugar lines — leave the flavour to the label, keep the whole vat for the brand",
+        "Forgetting the menu: draft kombucha in cafés is the high-margin channel, and the name must read smooth on the menu — a tongue-twister loses half its orders before pouring",
+      ],
+    },
+  },
+  climbinggym: {
+    slug: "climbinggym",
+    keywords: ["攀岩馆", "抱石馆", "室内攀岩", "climbing gym", "bouldering"],
+    tlds: [
+      { tld: "com", zh: "会员购买与场馆预订的默认后缀，售卡页与账单上最稳", en: "The default suffix for memberships and bookings — steadiest on the checkout and the invoice" },
+      { tld: "club", zh: "会员制社群感直给，攀岩馆的圈子气质零违和", en: "The membership community stated outright — zero friction for the climbing-crew register" },
+      { tld: "fun", zh: "体验与亲子线的快乐直给，first-timer 的低门槛暗示", en: "The joy of the experience line stated outright — the low-bar hint for first-timers" },
+    ],
+    zh: {
+      label: "攀岩馆",
+      title: "攀岩馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "攀岩馆与抱石馆命名指南：岩点意象、向上叙事等思路，攀岩场馆案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "攀岩馆的名字要说出「离地那一刻的专注与自由」：手指扣住岩点、全身只剩下一条向上的路线——攀岩是把恐惧翻译成专注的运动，也是城市里最像社交俱乐部的健身房，名字要先把这份「向上的快乐」递出去。品类正在起飞：奥运项目带来大众认知，抱石馆以低门槛（无需绳索）成为年轻人的新社交场，名字要同时接住岩友与第一次脱鞋上墙的新手。词库现成：岩、点、壁、攀、顶——「登顶」「岩点」是行话，「向上」是所有人都懂的隐喻。隐藏考点是业务分层：会员与次卡走复购、体验课与亲子线走流量、定线与赛事走圈内口碑——名字要在售卡页上像一种生活方式，在商场导视上让家长放心，在岩友群里有圈内认同。误区在于把自己做成「极限运动场」：抱石馆的主力客群是下班来社交的白领，名字太「生死极限」会吓退最大的那块市场。",
+      namingIdeas: [
+        "岩点意象直给：岩、点、壁类词根——攀岩的核心道具入名，岩友一眼认出主场",
+        "向上叙事转译：攀、登、顶类词库——「向上」是全人类通用的隐喻，励志语法自带传播",
+        "重力反语路线：飞、浮、离地类词根——把「对抗重力」的自由感写进名字，品类的快乐直给",
+        "社群语法借力：club、社、圈类词尾——抱石馆是新一代社交场，名字先把「来玩」的邀请递出去",
+        "地形词库借力：崖、谷、峰类自然词根——把野外岩壁的血统搬进室内，硬核线的谱系暗号",
+      ],
+      cases: [
+        { name: "岩舞空间", takeaway: "「岩」加「舞」的组合示范：把攀爬写成墙上的舞蹈——恐惧感换成美感，亲子与新手线的门槛一次降下来" },
+        { name: "The Crag", takeaway: "直接借野外岩场术语立名：crag 是岩友的行话——一个词让核心客群立刻认出这是自己人开的馆" },
+        { name: "离地社", takeaway: "「离地」瞬间的体感入名：品类最独特的一秒直给——三个字说完攀岩与跑步机的全部区别" },
+        { name: "Touchstone Climbing", takeaway: "「试金石」的一词双关：touch stone 既是摸岩点也是检验自己——美国连锁岩馆的命名样本" },
+      ],
+      pitfalls: [
+        "做成极限运动场：满是「生死、征服」的名字吓退下班来社交的主力客群——抱石的气质是快乐专注，不是玩命",
+        "锁死单一形态：叫「抱石馆」就难接绳索区与训练板——形态留给场区命名，品牌名留整面墙",
+        "行话过深：满是「Beta、Dyno」的名字让第一次上墙的人不敢进门——岩友要暗号，新手要邀请",
+        "忽略亲子与团建线：儿童课与企业团建是最厚的白天时段收入，名字要让家长与 HR 放心——太野的名字进不了采购单",
+      ],
+    },
+    en: {
+      label: "Climbing gyms",
+      title: "How to Name a Climbing Gym: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Climbing and bouldering gym naming guide: hold imagery, upward narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A climbing gym's name must say the focus and freedom of the moment the feet leave the ground: fingers locked on a hold, the whole body reduced to one line upward — climbing is the sport that translates fear into focus, and the climbing gym is the most social gym in the city, so the name has to hand over that joy of going up first. The category is taking off: Olympic status brought mainstream awareness, and bouldering's rope-free low bar has made it the new social scene for young urbanites, so the name must catch both the crag veteran and the first-timer pulling on rental shoes. The lexicon is ready: crag, hold, wall, send and summit — send and beta are the argot, and upward is the metaphor everyone reads. The hidden exam is the tier split: memberships run on retention, intro classes and kids' lines run on traffic, and routesetting and comps run on scene credibility — the name must read like a lifestyle on the checkout page, reassure parents on the mall directory, and earn respect in the climbers' group chat. The failure mode is becoming an extreme-sports arena: the core crowd is office workers climbing to socialise after work, and a death-defying name scares off the biggest slice of the market.",
+      namingIdeas: [
+        "Hold imagery outright: crag, hold and wall roots — the sport's core props named directly; the climber's eye spots home ground at once",
+        "Translating the upward narrative: climb, ascend and summit roots — up is humanity's universal metaphor, and the aspiration grammar spreads itself",
+        "The anti-gravity route: fly, float and liftoff roots — the freedom of defying gravity written into the name, the category's joy stated outright",
+        "Borrowing the community grammar: club, crew and collective endings — the bouldering gym is the new social scene; let the name hand over the come-play invitation first",
+        "Borrowing the terrain lexicon: crag, canyon and peak roots — the outdoor rock bloodline carried indoors, the lineage password of the hardcore line",
+      ],
+      cases: [
+        { name: "Yan Wu Space (岩舞空间)", takeaway: "Rock joined to dance: climbing written as choreography on the wall — fear traded for grace, the bar for kids and first-timers lowered in one stroke" },
+        { name: "The Crag", takeaway: "Naming straight on the outdoor term: crag is the climbers' argot — one word telling the core crowd this gym is run by their own" },
+        { name: "Li Di She (离地社)", takeaway: "The instant of leaving the ground made a name: the category's most singular second stated outright — three characters covering everything that splits climbing from the treadmill" },
+        { name: "Touchstone Climbing", takeaway: "The one-word double meaning: touching stone and testing oneself — the naming sample of the American gym chain" },
+      ],
+      pitfalls: [
+        "Turning into an extreme-sports arena: a name of death-and-conquest scares the after-work social crowd — bouldering's register is joyful focus, not risking your life",
+        "Locking into one format: a bouldering-only name can't take the rope walls and training boards — leave the format to the zones, keep the whole wall for the brand",
+        "Argot too deep: a name full of beta-and-dyno stops the first-timer at the door — veterans want the password, newcomers want the invitation",
+        "Forgetting kids and corporate: children's classes and team-building fill the daytime hours, and the name must reassure parents and HR — a too-wild name never makes the procurement list",
+      ],
+    },
+  },
+  stainedglass: {
+    slug: "stainedglass",
+    keywords: ["彩绘玻璃工作室", "花窗玻璃", "玻璃镶嵌艺术", "stained glass studio", "glass art"],
+    tlds: [
+      { tld: "com", zh: "工程委托与定制询价的默认后缀，方案与合同上最稳", en: "The default suffix for commissions and quotes — steadiest on the proposal and the contract" },
+      { tld: "art", zh: "艺术身位直给，教堂修复与藏家线零违和", en: "The art posture stated outright — zero friction for restoration and the collector line" },
+      { tld: "studio", zh: "工作室气质直接对位，手作课与家居定制的归类", en: "The studio register aligned outright — the filing for classes and home commissions" },
+    ],
+    zh: {
+      label: "彩绘玻璃工作室",
+      title: "彩绘玻璃工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "彩绘玻璃与花窗艺术工作室命名指南：光影意象、教堂血统等思路，Tiffany 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "彩绘玻璃工作室的名字要说出「光穿过颜色的那一刻」：这门手艺不画在纸上、不挂在墙上——它把颜色装进窗户，让每天的阳光替作品重新上色，教堂里的玫瑰花窗让一千年的信徒在同一束光里抬头，名字要先把这份「会呼吸的光」递出去。血统显赫：从沙特尔大教堂的蓝到 Tiffany 的灯，从哥特花窗到新艺术运动的曲线——这是写进艺术史的手艺。词库现成：光、彩、窗、琉璃、花窗——「琉璃」二字在中文里自带千年的贵气。隐藏考点是业务分层：教堂与古建修复走机构委托、家居门窗与灯具走高客单定制、体验课与小件走流量——名字要在修复方案里有学术分量，在家装案例里有艺术身价，在手作课海报上有光的浪漫。误区在于把自己做成「玻璃店」：彩绘玻璃的溢价在「光的艺术」与百年工艺，名字若只剩「玻璃」的建材感，就把大教堂的光卖成了窗户报价单。",
+      namingIdeas: [
+        "光影意象直给：光、彩、晖类词根——这门手艺的真正材料是光，名字先让人看见那束穿过颜色的阳光",
+        "琉璃语法借力：琉璃、晶、透类词库——「琉璃」在中文里自带千年贵气，区隔建材感的身价词根",
+        "花窗血统借力：玫瑰窗、哥特、教堂类意象——千年艺术史的谱系背书，修复线的学术暗号",
+        "铅线工艺入名：铅、线、嵌类词根——铅条勾勒色块是工艺的指纹，行家一眼认出手工血统",
+        "灯下场景转译：把 Tiffany 灯的暖光写进名字——家居线的核心买点，光的浪漫落进客厅",
+      ],
+      cases: [
+        { name: "Tiffany Studios", takeaway: "人名加工作室的经典语法：一盏彩玻璃灯让姓氏成为品类代名词——艺术史级的命名遗产" },
+        { name: "拾光花窗", takeaway: "「拾光」谐音「时光」的双关示范：光的材料与岁月的手艺一词双收——中文彩玻璃命名的满分卷" },
+        { name: "Judson Studios", takeaway: "美国最老的家族花窗工作室：五代人的姓氏就是修复线的信任状——老铺语法在机构委托里的分量" },
+        { name: "琉光社", takeaway: "「琉璃」加「光」的组合：两个字把材质贵气与光的艺术一次立住——身价与浪漫兼得的词根示范" },
+      ],
+      pitfalls: [
+        "降级成玻璃店：名字只剩「玻璃」的建材感就辜负千年艺术史——溢价在光的艺术与手工铅线",
+        "锁死宗教场景：满是「圣、堂」的名字难接家居与商业空间——教堂是血统不是边界，名字留给所有的窗",
+        "复古腔过重：太哥特的名字在现代家装案例里显得沉重——修复线要古典，家居线要轻盈，名字留一扇亮窗",
+        "忽略体验课客群：玻璃手作课是最好的获客入口，名字太学术会吓退第一次碰铅刀的新手——留一份光的浪漫",
+      ],
+    },
+    en: {
+      label: "Stained glass studios",
+      title: "How to Name a Stained Glass Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Stained glass and window art studio naming guide: light imagery, cathedral bloodline, breakdowns of Tiffany/Judson, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A stained glass studio's name must say the moment light passes through colour: this craft paints on no paper and hangs on no wall — it loads colour into the window and lets each day's sun repaint the work, and the rose windows of the cathedrals have made a thousand years of faithful look up into the same beam, so the name has to hand over that breathing light first. The bloodline is illustrious: from the blue of Chartres to the lamps of Tiffany, from Gothic tracery to Art Nouveau curves — this craft is written into art history. The lexicon is ready: light, hue, window, pane and rose window — and in Chinese the word liuli carries a millennium of nobility on its own. The hidden exam is the tier split: church and heritage restoration runs on institutional commissions, home windows and lamps run on high-ticket custom work, and classes and small pieces run on traffic — the name must carry scholarly weight in the restoration proposal, art-market status in the interiors portfolio, and the romance of light on the class poster. The failure mode is becoming a glazier's shop: the premium lives in the art of light and a centuries-old craft, and a name with only the flat word glass sells cathedral light as a window quote.",
+      namingIdeas: [
+        "Light imagery outright: light, glow and beam roots — the craft's true material is light; let the name show the sunbeam through colour first",
+        "Borrowing the liuli grammar: crystal, lumen and translucence roots — the noble register that splits art glass from building material",
+        "Borrowing the rose-window bloodline: rose window, Gothic and cathedral imagery — a millennium of art-history endorsement, the scholarly password of the restoration line",
+        "Leadline craft in the name: lead, line and came roots — the lead outline is the craft's fingerprint; the trade eye spots the handmade bloodline at once",
+        "Translating the lamplit scene: the warm glow of the Tiffany lamp written into the name — the core buy of the home line, the romance of light landing in the living room",
+      ],
+      cases: [
+        { name: "Tiffany Studios", takeaway: "The classic grammar of name plus studio: one stained glass lamp made a surname the category's synonym — a naming legacy of art-history rank" },
+        { name: "Shi Guang (拾光花窗)", takeaway: "Gathering light punning on time in Chinese: the material of light and the craft of years won in one word — a full-marks paper of Chinese glass naming" },
+        { name: "Judson Studios", takeaway: "America's oldest family glass studio: five generations of one surname as the restoration line's letter of trust — the old-shop grammar's weight in institutional commissions" },
+        { name: "Liu Guang She (琉光社)", takeaway: "Liuli joined to light: two characters setting material nobility and the art of light at once — the root model that wins status and romance together" },
+      ],
+      pitfalls: [
+        "Demoting to a glazier's shop: a name with only the flat word glass betrays a millennium of art history — the premium is the art of light and the hand-leaded line",
+        "Locking into the sacred: a name full of saints-and-chapels can't take the home and commercial commissions — the cathedral is the bloodline, not the boundary; keep the name for every window",
+        "Period register too heavy: a too-Gothic name reads sombre in the modern interiors portfolio — the restoration line wants classical, the home line wants light; leave a bright window in the name",
+        "Forgetting the class crowd: the glass workshop is the best acquisition funnel, and a too-scholarly name scares the first-time lead-knife hand — keep a share of the romance of light",
+      ],
+    },
+  },
+  minigolf: {
+    slug: "minigolf",
+    keywords: ["迷你高尔夫球场", "室内迷你高尔夫", "亲子高尔夫", "mini golf course", "putt putt"],
+    tlds: [
+      { tld: "com", zh: "订场与团建预订的默认后缀，预订页与账单上最稳", en: "The default suffix for bookings and events — steadiest on the booking page and the invoice" },
+      { tld: "fun", zh: "快乐直给的品类天配，亲子与约会线零违和", en: "The category's joy stated outright — zero friction for the family and date-night lines" },
+      { tld: "club", zh: "会员与联赛的社群归类，复购线的圈子暗号", en: "The community filing for members and leagues — the circle code of the repeat line" },
+    ],
+    zh: {
+      label: "迷你高尔夫球场",
+      title: "迷你高尔夫球场怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "迷你高尔夫与室内推杆球场命名指南：一杆进洞意象、主题叙事等思路，Puttshack 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "迷你高尔夫的名字要说出「一杆进洞那声欢呼」的快乐：它把高尔夫的贵族门槛拆成十八个奇思妙想的关卡——风车、隧道、旋转桥，三岁的孩子与第一次约会的年轻人都能立刻上手，名字要先把这份「零门槛的欢乐」递出去。品类正在升级：从街边亲子乐园到融合酒吧与科技计分的社交娱乐综合体（competitive socialising），迷你高尔夫成了城市夜生活的新选项，名字要同时接住白天的家庭客与晚上的酒杯。词库现成：杆、洞、球、putt——「一杆进洞」是现成的口彩，hole in one 全世界通用。隐藏考点是业务分层：散客门票走流量、生日会与团建走包场客单、会员联赛走复购——名字要在商场导视上让家长秒懂，在约会攻略里显得有趣，在团建方案里正经得起报价。误区在于把自己做成「儿童游乐区」：新一代迷你高尔夫的增量在成人社交线，名字太幼齿就把晚上的酒水收入关在了门外。",
+      namingIdeas: [
+        "一杆进洞直给：杆、洞、进类词根——品类最高光的一秒入名，「一杆进洞」的口彩现成可用",
+        "putt 词根造词：putt 的叠词与变体——Puttshack、Putt Putt 的国际惯例，品类词自带球感",
+        "主题叙事转译：把球场的主题世界写进名字——恐龙、海盗、霓虹，十八个关卡的想象力先从名字开始",
+        "社交语法借力：吧、club、社类词尾——新一代迷你高尔夫是拿着酒杯打的，夜场线的身位暗号",
+        "反差幽默路线：把「迷你」与「大满贯」对撞——小球场大快乐的自嘲语法，社媒传播的现成梗",
+      ],
+      cases: [
+        { name: "Puttshack", takeaway: "putt 加 shack 的合成词：科技计分的社交迷你高尔夫开创者——「小屋」的随意感把贵族运动拆成了酒吧游戏" },
+        { name: "一杆社", takeaway: "「一杆进洞」缩写加社群词尾：三个字把品类高光与圈子感一次立住——中文命名的利落示范" },
+        { name: "Swingers", takeaway: "「挥杆的人」的一词双关：伦敦社交迷你高尔夫的命名样本——夜场气质全靠这点俏皮压住" },
+        { name: "风车洞窟", takeaway: "经典关卡直接入名：风车是迷你高尔夫的图腾——一个道具让全世界玩过的人瞬间对位" },
+      ],
+      pitfalls: [
+        "做成儿童游乐区：太幼齿的名字关掉成人社交线——新一代的增量在酒杯与夜场，名字要白天亲子晚上微醺都成立",
+        "撞车真高尔夫：名字太像正经球场会让穿拖鞋的客人犹豫——迷你高尔夫卖的是欢乐不是挥杆技术",
+        "锁死单一主题：叫「恐龙谷」就难换季换主题——主题留给关卡，品牌名留整个球场",
+        "忽略团建与包场：生日会与企业团建是最厚的客单，名字要在报价单上正经得起来——太搞笑的名字进不了采购流程",
+      ],
+    },
+    en: {
+      label: "Mini golf courses",
+      title: "How to Name a Mini Golf Course: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Mini golf and indoor putting venue naming guide: hole-in-one imagery, theme narrative, breakdowns of Puttshack/Swingers, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A mini golf name must say the joy of the cheer when the ball drops in one: it dismantles golf's country-club gate into eighteen holes of whimsy — windmills, tunnels, spinning bridges — where a three-year-old and a first date can both play at once, so the name has to hand over that zero-barrier delight first. The category is upgrading: from the roadside family course to the competitive-socialising complex with bars and tech scoring, mini golf has become the city's new night out, and the name must catch the daytime families and the evening drinks crowd together. The lexicon is ready: putt, hole, green and swing — hole in one is a universal cheer in any language. The hidden exam is the tier split: walk-in tickets run on traffic, birthdays and team-building run on private-hire tickets, and leagues run on repeat play — the name must read instantly to parents on the mall directory, sound fun in the date-night guide, and hold up seriously on the corporate quote. The failure mode is becoming a kids' play zone: the new growth is the adult social line, and a too-childish name locks the evening bar revenue out.",
+      namingIdeas: [
+        "Hole-in-one outright: putt, hole and sink roots — the category's brightest second named directly; the hole-in-one cheer is a ready-made hook",
+        "Coining on the putt root: doubles and variants of putt — the international convention of Puttshack and Putt Putt; the category word carries the ball itself",
+        "Translating the theme narrative: the course's fantasy world written into the name — dinosaurs, pirates, neon; the imagination of eighteen holes starts at the name",
+        "Borrowing the social grammar: bar, club and social endings — the new mini golf is played with a drink in hand, the posture code of the night line",
+        "The contrast-humour route: mini colliding with grand slam — the small-course-big-joy self-deprecation, a ready meme for the feed",
+      ],
+      cases: [
+        { name: "Puttshack", takeaway: "A blend of putt and shack: the pioneer of tech-scored social mini golf — the shack's ease dismantling a country-club sport into a bar game" },
+        { name: "Yi Gan She (一杆社)", takeaway: "Hole-in-one abbreviated onto a club ending: three characters setting the category's highlight and the circle feel at once — the crisp Chinese model" },
+        { name: "Swingers", takeaway: "The one-word double meaning of those who swing: the naming sample of London's social mini golf — the night-out register held steady by that one wink" },
+        { name: "Feng Che Dong Ku (风车洞窟)", takeaway: "The classic obstacle named directly: the windmill is mini golf's totem — one prop aligning everyone who has ever played, worldwide" },
+      ],
+      pitfalls: [
+        "Turning into a kids' play zone: a too-childish name shuts down the adult social line — the growth is in the evening drinks crowd; the name must work for daytime families and nighttime tipsy alike",
+        "Colliding with real golf: a too-serious course name makes the flip-flop crowd hesitate — mini golf sells joy, not swing technique",
+        "Locking into one theme: a dinosaur-valley name can't survive the seasonal re-theme — leave the theme to the holes, keep the whole course for the brand",
+        "Forgetting private hire: birthdays and team-building are the fattest tickets, and the name must hold up on the quote — a too-jokey name never clears the procurement flow",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
