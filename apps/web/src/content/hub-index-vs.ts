@@ -340,4 +340,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "fish-vs-fishing", a: "fish", b: "fishing", title: { zh: ".fish 和 .fishing 怎么选：水产品类与钓鱼活动的分工", en: ".fish vs .fishing: The Category or The Activity" } },
   { slug: "fan-vs-club", a: "fan", b: "club", title: { zh: ".fan 和 .club 怎么选：粉丝身份与社群组织的分工", en: ".fan vs .club: The Fan's Identity or The Member Organization" } },
   { slug: "win-vs-bet", a: "win", b: "bet", title: { zh: ".win 和 .bet 怎么选：赢的结果与下注的动作", en: ".win vs .bet: The Outcome or The Action" } },
+  { slug: "wang-vs-com", a: "wang", b: "com", title: { zh: ".wang 和 .com 怎么选：说中文的后缀与全球默认值", en: ".wang vs .com: The Chinese-Speaking Suffix or The Global Default" } },
+  { slug: "day-vs-today", a: "day", b: "today", title: { zh: ".day 和 .today 怎么选：日子的名词与今天的号角", en: ".day vs .today: The Named Day or The Call of Now" } },
+  { slug: "meme-vs-fun", a: "meme", b: "fun", title: { zh: ".meme 和 .fun 怎么选：梗文化身份牌与泛娱乐通配符", en: ".meme vs .fun: The Meme-Culture Badge or The Entertainment Wildcard" } },
+  { slug: "quest-vs-games", a: "quest", b: "games", title: { zh: ".quest 和 .games 怎么选：冒险的过程与游戏的行业", en: ".quest vs .games: The Journey or The Industry" } },
+  { slug: "kids-vs-family", a: "kids", b: "family", title: { zh: ".kids 和 .family 怎么选：儿童受众与全家归属的分工", en: ".kids vs .family: The Child Audience or The Whole Household" } },
+  { slug: "foundation-vs-org", a: "foundation", b: "org", title: { zh: ".foundation 和 .org 怎么选：基金会的全称与非营利的正统", en: ".foundation vs .org: The Institution's Full Name or The Nonprofit Standard" } },
 ];
