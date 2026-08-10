@@ -1,0 +1,858 @@
+{
+  "sitemap_loc_samples": [
+    934,
+    934,
+    934
+  ],
+  "sitemap_dup_locs": 0,
+  "sitemap_cat_counts": {
+    "tld": 300,
+    "guide": 296,
+    "vs": 330,
+    "core": 8
+  },
+  "sitemap_vs_counts_json": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "llms_counts": {
+    "tld": 300,
+    "guide": 296,
+    "vs": 330
+  },
+  "llms_vs_sitemap_equal": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "robots": {
+    "status": 200,
+    "has_sitemap": true,
+    "gptbot": true
+  },
+  "seo_new_pages": {
+    "/guide/aquascaping": {
+      "status": 200,
+      "title": "观赏鱼与水族造景工作室怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/aquascaping",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 121487
+    },
+    "/guide/aquascaping?lang=en": {
+      "status": 200,
+      "title": "How to Name an Aquascaping &amp; Ornamental Fish Studio: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/aquascaping?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 124205
+    },
+    "/guide/giveaway": {
+      "status": 200,
+      "title": "抽奖活动平台怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/giveaway",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 121758
+    },
+    "/guide/giveaway?lang=en": {
+      "status": 200,
+      "title": "How to Name a Giveaway &amp; Campaign Platform: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/giveaway?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 124294
+    },
+    "/tld/wang": {
+      "status": 200,
+      "title": ".wang 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/wang",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 143468
+    },
+    "/tld/wang?lang=en": {
+      "status": 200,
+      "title": ".wang Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/wang?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 144550
+    },
+    "/tld/quest": {
+      "status": 200,
+      "title": ".quest 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/quest",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 143136
+    },
+    "/tld/quest?lang=en": {
+      "status": 200,
+      "title": ".quest Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/quest?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 144367
+    },
+    "/vs/basketball-vs-team": {
+      "status": 200,
+      "title": ".basketball 和 .team 怎么选：单项官方域与万队通用牌 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/basketball-vs-team",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 130800
+    },
+    "/vs/basketball-vs-team?lang=en": {
+      "status": 200,
+      "title": ".basketball vs .team: The Sport's Official Badge or Any Squad's Banner | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/basketball-vs-team?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 130865
+    },
+    "/vs/win-vs-bet": {
+      "status": 200,
+      "title": ".win 和 .bet 怎么选：赢的结果与下注的动作 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/win-vs-bet",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 131042
+    },
+    "/vs/win-vs-bet?lang=en": {
+      "status": 200,
+      "title": ".win vs .bet: The Outcome or The Action | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/win-vs-bet?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 131273
+    }
+  },
+  "new_pages_status": {
+    "/guide/basketball": {
+      "status": 200,
+      "bytes": 121720,
+      "faq": true
+    },
+    "/guide/basketball?lang=en": {
+      "status": 200,
+      "bytes": 123914,
+      "faq": true
+    },
+    "/guide/rugby": {
+      "status": 200,
+      "bytes": 121513,
+      "faq": true
+    },
+    "/guide/rugby?lang=en": {
+      "status": 200,
+      "bytes": 123307,
+      "faq": true
+    },
+    "/guide/cricket": {
+      "status": 200,
+      "bytes": 121700,
+      "faq": true
+    },
+    "/guide/cricket?lang=en": {
+      "status": 200,
+      "bytes": 124308,
+      "faq": true
+    },
+    "/guide/aquascaping": {
+      "status": 200,
+      "bytes": 121487,
+      "faq": true
+    },
+    "/guide/aquascaping?lang=en": {
+      "status": 200,
+      "bytes": 124205,
+      "faq": true
+    },
+    "/guide/fanclub": {
+      "status": 200,
+      "bytes": 121285,
+      "faq": true
+    },
+    "/guide/fanclub?lang=en": {
+      "status": 200,
+      "bytes": 123813,
+      "faq": true
+    },
+    "/guide/giveaway": {
+      "status": 200,
+      "bytes": 121758,
+      "faq": true
+    },
+    "/guide/giveaway?lang=en": {
+      "status": 200,
+      "bytes": 124294,
+      "faq": true
+    },
+    "/tld/wang": {
+      "status": 200,
+      "bytes": 143468,
+      "faq": true
+    },
+    "/tld/wang?lang=en": {
+      "status": 200,
+      "bytes": 144550,
+      "faq": true
+    },
+    "/tld/day": {
+      "status": 200,
+      "bytes": 143449,
+      "faq": true
+    },
+    "/tld/day?lang=en": {
+      "status": 200,
+      "bytes": 144178,
+      "faq": true
+    },
+    "/tld/meme": {
+      "status": 200,
+      "bytes": 143060,
+      "faq": true
+    },
+    "/tld/meme?lang=en": {
+      "status": 200,
+      "bytes": 144056,
+      "faq": true
+    },
+    "/tld/quest": {
+      "status": 200,
+      "bytes": 143136,
+      "faq": true
+    },
+    "/tld/quest?lang=en": {
+      "status": 200,
+      "bytes": 144367,
+      "faq": true
+    },
+    "/tld/kids": {
+      "status": 200,
+      "bytes": 143541,
+      "faq": true
+    },
+    "/tld/kids?lang=en": {
+      "status": 200,
+      "bytes": 144720,
+      "faq": true
+    },
+    "/tld/foundation": {
+      "status": 200,
+      "bytes": 143880,
+      "faq": true
+    },
+    "/tld/foundation?lang=en": {
+      "status": 200,
+      "bytes": 145128,
+      "faq": true
+    },
+    "/vs/basketball-vs-team": {
+      "status": 200,
+      "bytes": 130800,
+      "faq": true
+    },
+    "/vs/basketball-vs-team?lang=en": {
+      "status": 200,
+      "bytes": 130865,
+      "faq": true
+    },
+    "/vs/rugby-vs-football": {
+      "status": 200,
+      "bytes": 131309,
+      "faq": true
+    },
+    "/vs/rugby-vs-football?lang=en": {
+      "status": 200,
+      "bytes": 131149,
+      "faq": true
+    },
+    "/vs/cricket-vs-club": {
+      "status": 200,
+      "bytes": 131066,
+      "faq": true
+    },
+    "/vs/cricket-vs-club?lang=en": {
+      "status": 200,
+      "bytes": 131655,
+      "faq": true
+    },
+    "/vs/fish-vs-fishing": {
+      "status": 200,
+      "bytes": 130772,
+      "faq": true
+    },
+    "/vs/fish-vs-fishing?lang=en": {
+      "status": 200,
+      "bytes": 131477,
+      "faq": true
+    },
+    "/vs/fan-vs-club": {
+      "status": 200,
+      "bytes": 130976,
+      "faq": true
+    },
+    "/vs/fan-vs-club?lang=en": {
+      "status": 200,
+      "bytes": 131480,
+      "faq": true
+    },
+    "/vs/win-vs-bet": {
+      "status": 200,
+      "bytes": 131042,
+      "faq": true
+    },
+    "/vs/win-vs-bet?lang=en": {
+      "status": 200,
+      "bytes": 131273,
+      "faq": true
+    }
+  },
+  "usage_pre": {
+    "days": {
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      }
+    },
+    "cronLast": 1786363208040,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786364011741,
+    "pricesLastFail": 1786352251978
+  },
+  "usage_keys_present": {
+    "pricesLastOk": true,
+    "pricesLastFail": true,
+    "cronLast": true,
+    "indexnowLast": true
+  },
+  "prices_api": {
+    "stale": null,
+    "tldCount": 298,
+    "fetchedAt": 1786364012026,
+    "keys": 298
+  },
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_all": "核验完成：共 301 个，200 个可注册",
+  "template_prefill": {
+    "chip": "电商品牌",
+    "filled": ""
+  },
+  "prices_rows_zh": 300,
+  "prices_live_count": 298,
+  "prices_static_count": 2,
+  "prices_static_slugs": [
+    "cn",
+    "so"
+  ],
+  "prices_new_tld_rows": {
+    "expected_static_fallback": {
+      "wang": [
+        30,
+        44
+      ],
+      "day": [
+        78,
+        78
+      ],
+      "meme": [
+        78,
+        78
+      ],
+      "quest": [
+        11,
+        93
+      ],
+      "kids": [
+        41,
+        137
+      ],
+      "foundation": [
+        43,
+        163
+      ]
+    },
+    "got": {
+      "quest": [
+        11,
+        93
+      ],
+      "wang": [
+        30,
+        44
+      ],
+      "kids": [
+        41,
+        137
+      ],
+      "foundation": [
+        43,
+        163
+      ],
+      "day": [
+        78,
+        78
+      ],
+      "meme": [
+        78,
+        78
+      ]
+    }
+  },
+  "prices_row_tld_hrefs": {
+    "wang": true,
+    "day": true,
+    "meme": true,
+    "quest": true,
+    "kids": true,
+    "foundation": true
+  },
+  "tld_pricecards": {
+    "wang": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        4.12,
+        6.05
+      ],
+      "prices_href": true
+    },
+    "day": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        10.81,
+        10.81
+      ],
+      "prices_href": true
+    },
+    "meme": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        10.81,
+        10.81
+      ],
+      "prices_href": true
+    },
+    "quest": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        1.54,
+        12.98
+      ],
+      "prices_href": true
+    },
+    "kids": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        5.66,
+        19.05
+      ],
+      "prices_href": true
+    },
+    "foundation": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        5.99,
+        22.66
+      ],
+      "prices_href": true
+    }
+  },
+  "tld_com_live": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+  "tld_hub_links": 300,
+  "guide_hub_links": 296,
+  "vs_hub_links": 330,
+  "footer_counts": [],
+  "footer_link_counts": {
+    "/tld/": 300,
+    "/guide/": 296,
+    "/vs/": 330
+  },
+  "templates_more_chip": "+286",
+  "why_status": 200,
+  "shortlist_status": 200,
+  "advanced_status": 200,
+  "404_status": 404,
+  "404_tld_status": 404,
+  "404_guide_status": 404,
+  "404_vs_status": 404,
+  "mcp_doc_status": 200,
+  "mcp_doc_tldcount": "860",
+  "mcp_tld_prices": {
+    "tldCount": 300,
+    "priceKeys": 300
+  },
+  "share_create": {
+    "status": 200,
+    "id": "4Sy4aGBGXy",
+    "has_token": true
+  },
+  "share_live_domains": {
+    "d1": true,
+    "d2": true
+  },
+  "share_revoke": {
+    "del": 200,
+    "getAfter": 410,
+    "revokedBodyHasItems": false
+  },
+  "share_revoked_ui": true,
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(250, 250, 249)",
+    "persist_after_reload": "rgb(250, 250, 249)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld/wang": 360,
+    "/vs/win-vs-bet": 360,
+    "/guide/aquascaping": 360
+  },
+  "usage_post": {
+    "days": {
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      }
+    },
+    "cronLast": 1786363208040,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786364011741,
+    "pricesLastFail": 1786352251978
+  },
+  "usage_days_equal": true,
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r386"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r386"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r386"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r386"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r386"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/4Sy4aGBGXy"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/4Sy4aGBGXy"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/4Sy4aGBGXy"
+    }
+  ]
+}
