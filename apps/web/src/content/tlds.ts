@@ -7224,6 +7224,186 @@ const GUIDES = {
       ],
     },
   },
+  auction: {
+    tld: "auction",
+    zh: {
+      title: ".auction 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".auction 是拍卖行业的专属后缀，适合线上拍卖平台、艺术品与收藏品拍卖行、法拍与资产处置机构、慈善义拍活动。查看 .auction 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .auction 域名。",
+      intro:
+        ".auction 把「拍卖」写进域名：线上拍卖平台、艺术品与收藏品拍卖行、法拍与资产处置机构、慈善义拍活动用 name.auction，买家一眼就知道「这里出价成交」——art.auction 或 car.auction 这样的组合自带槌声，域名本身就是业务说明。该后缀由 Identity Digital（原 Donuts）注册局运营，首年约 $11（约 ¥78），续费约 $28/年（约 ¥204），首年便宜、续费中档。库存极好：品类词、城市词、行业词基本都有货，而 XXauction.com 早被老牌拍卖行占光。注意三点：一是拍卖涉及资金与竞价规则，正规资质与担保机制要在站内讲清楚，域名只解决「是什么」；二是 auction 拼写较长（7 字母），线下物料印全称并核对拼写；三是普通电商促销不必用它，秒杀折扣类站点更适合后文的 .deals。命名上「品类 + .auction」适合垂类拍卖平台（艺术/汽车/域名），「城市/机构 + .auction」适合本地拍卖行，「慈善词 + .auction」适合义拍活动站。",
+      bestFor: ["线上拍卖平台", "艺术品与收藏品拍卖行", "法拍与资产处置机构", "慈善义拍活动"],
+      namingTips: [
+        "「品类 + .auction」一眼就是竞价场",
+        "首年约 $11、续费约 $28/年，首年便宜续费中档",
+        "拍卖重资质与担保，站内把规则讲清楚",
+        "促销折扣站不必用它，秒杀类更适合 .deals",
+      ],
+    },
+    en: {
+      title: ".auction Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".auction is the dedicated suffix for the auction trade — for online auction platforms, art and collectibles houses, foreclosure and asset disposal agencies, and charity auctions. See live pricing and naming advice, then hunt available .auction names with AI.",
+      intro:
+        ".auction writes the gavel into the domain: online auction platforms, art and collectibles houses, foreclosure and asset-disposal agencies, and charity auctions on name.auction tell buyers instantly that bidding happens here — names like art.auction or car.auction explain the business by themselves. Operated by Identity Digital (formerly Donuts), about $11 for the first year (≈¥78) and $28/yr to renew (≈¥204) — cheap to start, mid-priced to hold. Inventory is excellent: category words, city words and trade words nearly all hit, while every XXauction.com was claimed by established houses long ago. Three cautions: auctions involve money and bidding rules, so licensing and escrow must be explained on-site — the domain only says what you are; auction is a longer spelling (7 letters), so print the full name carefully on offline materials; and ordinary e-commerce promotions don't need it — flash-sale sites fit .deals better. Naming: category + .auction fits vertical platforms (art, cars, domains); city or house name + .auction fits local auction houses; charity words + .auction fits fundraising events.",
+      bestFor: ["Online auction platforms", "Art & collectibles auction houses", "Foreclosure & asset disposal", "Charity auction events"],
+      namingTips: [
+        "Category + .auction reads as a bidding floor at a glance",
+        "About $11 year one, $28/yr renewal — cheap start, mid-priced hold",
+        "Auctions run on trust — explain licensing and escrow on-site",
+        "Flash-sale and promo sites fit .deals better",
+      ],
+    },
+  },
+  deals: {
+    tld: "deals",
+    zh: {
+      title: ".deals 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".deals 是促销与优惠信息的专属后缀，适合折扣聚合与比价网站、秒杀与限时特卖频道、本地优惠信息平台、品牌促销活动页。查看 .deals 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .deals 域名。",
+      intro:
+        ".deals 把「划算」写进域名：折扣聚合与比价网站、秒杀与限时特卖频道、本地优惠信息平台、品牌促销活动页用 name.deals，用户看到域名就知道「这里有便宜可捡」——tech.deals 或 travel.deals 这样的组合自带点击欲，英语里 deals 一词本身就是购物达人每天搜索的高频词。该后缀由 Identity Digital（原 Donuts）注册局运营，首年约 $9（约 ¥63），续费约 $28/年（约 ¥204），首年便宜、续费中档。库存极好：品类词、城市词、场景词基本都有货，而 XXdeals.com 早被返利与比价站占光。注意三点：一是促销信息时效性强，域名之外把更新频率与信息真实性做扎实，过期折扣最伤口碑；二是部分邮件网关对促销类域名的营销邮件更敏感，群发前做好域名预热与 SPF/DKIM；三是主品牌官网不建议用它，促销频道用 .deals、主站用 .com 分工更清晰。命名上「品类 + .deals」适合垂类折扣站（数码/旅行/母婴），「城市 + .deals」适合本地优惠平台，「品牌 + .deals」适合大促活动专页。",
+      bestFor: ["折扣聚合与比价网站", "秒杀与限时特卖频道", "本地优惠信息平台", "品牌促销活动页"],
+      namingTips: [
+        "「品类 + .deals」就是折扣猎人的搜索词",
+        "首年约 $9、续费约 $28/年，首年便宜续费中档",
+        "促销重时效，过期折扣最伤口碑",
+        "主站用 .com、促销频道用 .deals 分工清晰",
+      ],
+    },
+    en: {
+      title: ".deals Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".deals is the dedicated suffix for bargains and promotions — for deal aggregators and price-comparison sites, flash-sale channels, local offers platforms, and brand promo landers. See live pricing and naming advice, then hunt available .deals names with AI.",
+      intro:
+        ".deals writes the bargain into the domain: deal aggregators and price-comparison sites, flash-sale and limited-time channels, local offers platforms, and brand promo landers on name.deals promise savings at a glance — names like tech.deals or travel.deals practically click themselves, and \"deals\" is a word bargain hunters type into search every day. Operated by Identity Digital (formerly Donuts), about $9 for the first year (≈¥63) and $28/yr to renew (≈¥204) — cheap to start, mid-priced to hold. Inventory is excellent: category words, city words and occasion words nearly all hit, while every XXdeals.com was claimed by cashback and comparison sites long ago. Three cautions: deals expire fast, so freshness and accuracy matter more than the domain — stale offers kill trust; some mail gateways scrutinize marketing mail from promo-flavored domains, so warm up the domain and set up SPF/DKIM before campaigns; and a main brand site doesn't belong here — run the brand on .com and the promo channel on the matching .deals. Naming: category + .deals fits vertical deal sites (tech, travel, baby); city + .deals fits local offers platforms; brand + .deals fits big-sale landers.",
+      bestFor: ["Deal aggregators & price comparison", "Flash-sale & limited-time channels", "Local offers platforms", "Brand promo landing pages"],
+      namingTips: [
+        "Category + .deals is exactly what bargain hunters search",
+        "About $9 year one, $28/yr renewal — cheap start, mid-priced hold",
+        "Deals expire fast — freshness beats everything",
+        "Brand on .com, promo channel on the matching .deals",
+      ],
+    },
+  },
+  coupons: {
+    tld: "coupons",
+    zh: {
+      title: ".coupons 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".coupons 是优惠券行业的专属后缀，适合优惠券聚合与验证站、品牌折扣码发放页、返利与导购平台、本地商家券包服务。查看 .coupons 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .coupons 域名。",
+      intro:
+        ".coupons 把「优惠券」写进域名：优惠券聚合与验证站、品牌折扣码发放页、返利与导购平台、本地商家券包服务用 name.coupons，用户搜「品牌/品类 + coupons」时域名就是搜索词本身——fashion.coupons 或 pizza.coupons 一看就知道来领码。该后缀由 Identity Digital（原 Donuts）注册局运营，首年约 $11（约 ¥78），续费约 $51/年（约 ¥366），首年便宜、续费偏高，适合当作长期经营的主域而非批量囤名。库存极好：品牌词、品类词、城市词基本都有货，而 XXcoupons.com 早被返利站占光。注意三点：一是优惠券站的生命线是「码能用」，失效码比没有码更伤口碑，验证机制要下功夫；二是与 .deals 分工——折扣信息流用 .deals，折扣码发放与验证用 .coupons 更精准；三是用大牌名注册（如 nike.coupons）有商标风险，聚合站注意合理使用与免责声明。命名上「品类 + .coupons」适合垂类券站（美妆/餐饮/旅行），「城市 + .coupons」适合本地券包平台，「品牌 + .coupons」适合品牌官方折扣码页。",
+      bestFor: ["优惠券聚合与验证站", "品牌折扣码发放页", "返利与导购平台", "本地商家券包服务"],
+      namingTips: [
+        "「品类 + .coupons」就是找码用户的搜索词",
+        "首年约 $11、续费约 $51/年，适合长期主域不宜囤名",
+        "失效码最伤口碑，验证机制是生命线",
+        "大牌词注册有商标风险，聚合站注意合理使用",
+      ],
+    },
+    en: {
+      title: ".coupons Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".coupons is the dedicated suffix for the coupon trade — for coupon aggregators and verifiers, brand discount-code pages, cashback and shopping-guide platforms, and local merchant coupon services. See live pricing and naming advice, then hunt available .coupons names with AI.",
+      intro:
+        ".coupons writes the discount code into the domain: coupon aggregators and verifiers, brand code pages, cashback and shopping-guide platforms, and local merchant coupon services on name.coupons match exactly what shoppers search — brand or category + coupons — and names like fashion.coupons or pizza.coupons need no explanation. Operated by Identity Digital (formerly Donuts), about $11 for the first year (≈¥78) and $51/yr to renew (≈¥366) — cheap to start but pricier to hold, so treat it as a long-term primary domain rather than a bulk-registration play. Inventory is excellent: brand words, category words and city words nearly all hit, while every XXcoupons.com was claimed by cashback sites long ago. Three cautions: a coupon site lives or dies on codes that work — dead codes hurt more than no codes, so invest in verification; split duties with .deals — deal feeds fit .deals, code distribution and validation fit .coupons; and registering big-brand words (like nike.coupons) carries trademark risk — aggregators should mind fair use and disclaimers. Naming: category + .coupons fits vertical coupon sites (beauty, dining, travel); city + .coupons fits local coupon platforms; brand + .coupons fits official brand code pages.",
+      bestFor: ["Coupon aggregators & verifiers", "Brand discount-code pages", "Cashback & shopping-guide platforms", "Local merchant coupon services"],
+      namingTips: [
+        "Category + .coupons is exactly what code hunters search",
+        "About $11 year one, $51/yr renewal — long-term domain, not a bulk play",
+        "Dead codes hurt more than no codes — verify relentlessly",
+        "Big-brand words carry trademark risk — mind fair use",
+      ],
+    },
+  },
+  discount: {
+    tld: "discount",
+    zh: {
+      title: ".discount 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".discount 是折扣零售的专属后缀，适合折扣店与奥特莱斯电商、尾货与清仓特卖平台、学生与会员专属折扣服务、折扣信息聚合站。查看 .discount 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .discount 域名。",
+      intro:
+        ".discount 把「折扣」写进域名：折扣店与奥特莱斯电商、尾货与清仓特卖平台、学生与会员专属折扣服务、折扣信息聚合站用 name.discount，用户看到域名就默认「这里比别处便宜」——shoes.discount 或 student.discount 这样的组合自带价格锚点，后者在海外更是高频搜索词。该后缀由 Identity Digital（原 Donuts）注册局运营，首年约 $9（约 ¥63），续费约 $28/年（约 ¥204），首年便宜、续费中档。库存极好：品类词、人群词、城市词基本都有货，而 XXdiscount.com 早被折扣零售商占光。注意三点：一是「折扣」定位会拉低品牌溢价预期，走品质路线的品牌主站慎用，清仓副站更合适；二是与近义后缀分工——信息流聚合用 .deals、发码用 .coupons、折扣零售本身用 .discount 最准；三是 discount 拼写较长（8 字母），线下物料印全称并核对拼写。命名上「品类 + .discount」适合垂类折扣电商（鞋服/家电/图书），「人群 + .discount」适合学生/军人等专属折扣服务，「品牌 + .discount」适合品牌清仓副站。",
+      bestFor: ["折扣店与奥特莱斯电商", "尾货与清仓特卖平台", "学生与会员专属折扣服务", "折扣信息聚合站"],
+      namingTips: [
+        "「品类 + .discount」自带「比别处便宜」的锚点",
+        "首年约 $9、续费约 $28/年，首年便宜续费中档",
+        "品质品牌主站慎用，清仓副站最合适",
+        "信息流用 .deals、发码用 .coupons、折扣零售用这里",
+      ],
+    },
+    en: {
+      title: ".discount Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".discount is the dedicated suffix for discount retail — for outlet e-commerce, clearance and overstock platforms, student and member discount services, and discount aggregators. See live pricing and naming advice, then hunt available .discount names with AI.",
+      intro:
+        ".discount writes the price cut into the domain: outlet and discount-store e-commerce, clearance and overstock platforms, student and member discount services, and discount aggregators on name.discount are assumed cheaper than elsewhere at a glance — names like shoes.discount or student.discount carry a built-in price anchor, and \"student discount\" is a high-volume search phrase abroad. Operated by Identity Digital (formerly Donuts), about $9 for the first year (≈¥63) and $28/yr to renew (≈¥204) — cheap to start, mid-priced to hold. Inventory is excellent: category words, audience words and city words nearly all hit, while every XXdiscount.com was claimed by discount retailers long ago. Three cautions: the discount positioning lowers premium expectations, so quality-first brands should keep their main site elsewhere and use it for clearance channels; split duties with the near-synonyms — deal feeds fit .deals, code distribution fits .coupons, discount retail itself fits .discount; and discount is a longer spelling (8 letters), so print the full domain carefully offline. Naming: category + .discount fits vertical discount shops (apparel, appliances, books); audience + .discount fits student or military discount services; brand + .discount fits clearance side-sites.",
+      bestFor: ["Outlet & discount-store e-commerce", "Clearance & overstock platforms", "Student & member discount services", "Discount aggregators"],
+      namingTips: [
+        "Category + .discount anchors 'cheaper than elsewhere' instantly",
+        "About $9 year one, $28/yr renewal — cheap start, mid-priced hold",
+        "Premium brands: keep the main site elsewhere, use this for clearance",
+        "Feeds fit .deals, codes fit .coupons, discount retail lives here",
+      ],
+    },
+  },
+  furniture: {
+    tld: "furniture",
+    zh: {
+      title: ".furniture 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".furniture 是家具行业的专属后缀，适合家具品牌与工厂直销站、定制与实木家具工作室、办公家具供应商、二手与中古家具平台。查看 .furniture 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .furniture 域名。",
+      intro:
+        ".furniture 把「家具」写进域名：家具品牌与工厂直销站、定制与实木家具工作室、办公家具供应商、二手与中古家具平台用 name.furniture，买家搜「风格/品类 + furniture」时域名就是搜索词本身——oak.furniture 这样的组合在海外家具电商圈早有成交案例，office.furniture 一看就知道卖什么。该后缀由 Identity Digital（原 Donuts）注册局运营，首年约 $12（约 ¥88），续费约 $97/年（约 ¥700），续费在行业后缀里偏贵，适合客单价高、长期经营的家具生意，不适合囤名。库存极好：风格词、材质词、品类词基本都有货，而 XXfurniture.com 早被家具商占光。注意三点：一是 furniture 拼写长（9 字母）且易拼错，线下物料印全称并配二维码；二是家具重视觉与场景，域名之外把实拍图与 3D 展示做扎实；三是预算敏感的杂货家居店可先用已收录的 .store / .shop，垂直家具生意用这里最准。命名上「材质/风格 + .furniture」适合定制工作室（oak/vintage），「品类 + .furniture」适合垂类电商（office/outdoor），「品牌 + .furniture」适合家具品牌官网。",
+      bestFor: ["家具品牌与工厂直销站", "定制与实木家具工作室", "办公家具供应商", "二手与中古家具平台"],
+      namingTips: [
+        "「材质/品类 + .furniture」就是买家的搜索词",
+        "首年约 $12、续费约 $97/年，适合高客单长期生意",
+        "九字母易拼错，线下物料印全称配二维码",
+        "杂货家居店可先用 .store，垂直家具用这里",
+      ],
+    },
+    en: {
+      title: ".furniture Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".furniture is the dedicated suffix for the furniture trade — for furniture brands and factory-direct stores, custom and solid-wood studios, office furniture suppliers, and vintage furniture marketplaces. See live pricing and naming advice, then hunt available .furniture names with AI.",
+      intro:
+        ".furniture writes the showroom into the domain: furniture brands and factory-direct stores, custom and solid-wood studios, office furniture suppliers, and vintage marketplaces on name.furniture match exactly what buyers search — style or category + furniture — names like oak.furniture have real sales history in the furniture e-commerce world, and office.furniture needs no explanation. Operated by Identity Digital (formerly Donuts), about $12 for the first year (≈¥88) and $97/yr to renew (≈¥700) — one of the pricier industry suffixes to hold, so it suits high-ticket, long-term furniture businesses rather than bulk registration. Inventory is excellent: style words, material words and category words nearly all hit, while every XXfurniture.com was claimed by furniture sellers long ago. Three cautions: furniture is long (9 letters) and typo-prone — print the full domain with a QR code offline; furniture sells on visuals, so invest in real photography and 3D views beyond the domain; and budget-sensitive general home stores may start on the already-listed .store or .shop — vertical furniture businesses live here. Naming: material or style + .furniture fits custom studios (oak, vintage); category + .furniture fits vertical shops (office, outdoor); brand + .furniture fits brand sites.",
+      bestFor: ["Furniture brands & factory-direct stores", "Custom & solid-wood studios", "Office furniture suppliers", "Vintage & used furniture marketplaces"],
+      namingTips: [
+        "Material or category + .furniture is exactly what buyers search",
+        "About $12 year one, $97/yr renewal — for high-ticket, long-term businesses",
+        "Nine letters and typo-prone — print the full domain with a QR code",
+        "General home stores may start on .store; vertical furniture lives here",
+      ],
+    },
+  },
+  lighting: {
+    tld: "lighting",
+    zh: {
+      title: ".lighting 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".lighting 是照明行业的专属后缀，适合灯具品牌与照明电商、照明设计与工程公司、舞台与影视灯光服务、智能照明方案商。查看 .lighting 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .lighting 域名。",
+      intro:
+        ".lighting 把「照明」写进域名：灯具品牌与照明电商、照明设计与工程公司、舞台与影视灯光服务、智能照明方案商用 name.lighting，客户搜「场景/品类 + lighting」时域名就是搜索词本身——studio.lighting 或 garden.lighting 一看就知道做什么，海外照明设计事务所用这个后缀的不少。该后缀由 Identity Digital（原 Donuts）注册局运营，首年约 $6（约 ¥41），续费约 $20/年（约 ¥143），注册与持有都便宜，是行业后缀里少见的低价平款。库存极好：场景词、品类词、城市词基本都有货，而 XXlighting.com 早被灯具厂商占光。注意三点：一是 lighting 与 lightning（闪电）只差一个字母，线下物料与口播要防拼错；二是照明生意重案例与参数，域名之外把项目实拍与光效参数做扎实；三是泛家居杂货店可先用已收录的 .store，垂直照明生意用这里最准。命名上「场景 + .lighting」适合照明设计公司（stage/garden/office），「品类 + .lighting」适合垂类灯具电商（led/smart），「城市 + .lighting」适合本地照明工程商。",
+      bestFor: ["灯具品牌与照明电商", "照明设计与工程公司", "舞台与影视灯光服务", "智能照明方案商"],
+      namingTips: [
+        "「场景 + .lighting」就是客户的搜索词",
+        "首年约 $6、续费约 $20/年，行业后缀里少见的低价平款",
+        "与 lightning 只差一字母，物料口播防拼错",
+        "泛家居店可先用 .store，垂直照明用这里",
+      ],
+    },
+    en: {
+      title: ".lighting Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".lighting is the dedicated suffix for the lighting trade — for lamp brands and lighting e-commerce, lighting design and engineering firms, stage and film lighting services, and smart lighting providers. See live pricing and naming advice, then hunt available .lighting names with AI.",
+      intro:
+        ".lighting writes the glow into the domain: lamp brands and lighting e-commerce, lighting design and engineering firms, stage and film lighting services, and smart lighting providers on name.lighting match exactly what clients search — scene or category + lighting — names like studio.lighting or garden.lighting explain themselves, and plenty of lighting design firms abroad already use the suffix. Operated by Identity Digital (formerly Donuts), about $6 for the first year (≈¥41) and $20/yr to renew (≈¥143) — cheap to register and cheap to hold, a rare flat-priced bargain among industry suffixes. Inventory is excellent: scene words, category words and city words nearly all hit, while every XXlighting.com was claimed by lamp makers long ago. Three cautions: lighting is one letter away from lightning, so guard against typos in print and speech; lighting sells on portfolios and specs, so invest in project photos and photometric data beyond the domain; and general home stores may start on the already-listed .store — vertical lighting businesses live here. Naming: scene + .lighting fits design firms (stage, garden, office); category + .lighting fits vertical shops (led, smart); city + .lighting fits local lighting contractors.",
+      bestFor: ["Lamp brands & lighting e-commerce", "Lighting design & engineering firms", "Stage & film lighting services", "Smart lighting solution providers"],
+      namingTips: [
+        "Scene + .lighting is exactly what clients search",
+        "About $6 year one, $20/yr renewal — a rare flat-priced bargain",
+        "One letter from 'lightning' — guard against typos",
+        "General home stores may start on .store; vertical lighting lives here",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
