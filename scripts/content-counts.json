@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 330,
+    "count": 336,
     "slugs": [
       "com",
       "net",
@@ -331,7 +331,13 @@
       "condos",
       "rehab",
       "nyc",
-      "london"
+      "london",
+      "tokyo",
+      "miami",
+      "boston",
+      "healthcare",
+      "abogado",
+      "kaufen"
     ]
   },
   "guide": {
