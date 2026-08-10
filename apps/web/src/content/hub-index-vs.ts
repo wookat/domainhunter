@@ -292,4 +292,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "furniture-vs-boutique", a: "furniture", b: "boutique", title: { zh: ".furniture 和 .boutique 怎么选：品类直给与精选气质的取舍", en: ".furniture vs .boutique: Category Precision or Curated Character" } },
   { slug: "lighting-vs-garden", a: "lighting", b: "garden", title: { zh: ".lighting 和 .garden 怎么选：庭院灯光生意的两个入口", en: ".lighting vs .garden: Two Doors Into the Outdoor-Lighting Trade" } },
   { slug: "lighting-vs-solar", a: "lighting", b: "solar", title: { zh: ".lighting 和 .solar 怎么选：太阳能灯生意站哪边", en: ".lighting vs .solar: Where a Solar-Lighting Business Belongs" } },
+  { slug: "business-vs-company", a: "business", b: "company", title: { zh: ".business 和 .company 怎么选：报经营还是报主体", en: ".business vs .company: Naming the Trade or the Entity" } },
+  { slug: "limited-vs-ltd", a: "limited", b: "ltd", title: { zh: ".limited 和 .ltd 怎么选：全拼正式感与缩写实用感", en: ".limited vs .ltd: Full Spelling vs the Working Abbreviation" } },
+  { slug: "associates-vs-partners", a: "associates", b: "partners", title: { zh: ".associates 和 .partners 怎么选：字号传统与合伙关系", en: ".associates vs .partners: The Firm Name or the Relationship" } },
+  { slug: "cheap-vs-discount", a: "cheap", b: "discount", title: { zh: ".cheap 和 .discount 怎么选：报价格标签还是报打折动作", en: ".cheap vs .discount: The Price Tag or the Markdown" } },
+  { slug: "bargains-vs-deals", a: "bargains", b: "deals", title: { zh: ".bargains 和 .deals 怎么选：捡漏乐趣与交易促成", en: ".bargains vs .deals: The Thrill of the Find or the Transaction" } },
+  { slug: "supplies-vs-supply", a: "supplies", b: "supply", title: { zh: ".supplies 和 .supply 怎么选：一件件耗材与供给概念", en: ".supplies vs .supply: The Items or the Provisioning" } },
 ];

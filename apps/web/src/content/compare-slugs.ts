@@ -285,6 +285,12 @@ export const COMPARE_SLUGS = [
   "furniture-vs-boutique",
   "lighting-vs-garden",
   "lighting-vs-solar",
+  "business-vs-company",
+  "limited-vs-ltd",
+  "associates-vs-partners",
+  "cheap-vs-discount",
+  "bargains-vs-deals",
+  "supplies-vs-supply",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
