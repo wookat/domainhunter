@@ -8304,6 +8304,186 @@ const GUIDES = {
       ],
     },
   },
+  singles: {
+    tld: "singles",
+    zh: {
+      title: ".singles 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".singles 是单身人群场景的专属后缀，适合同城交友与单身活动组织、婚恋相亲与红娘工作室、单身社群与兴趣俱乐部、脱单课程与情感咨询。查看 .singles 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .singles 域名。",
+      intro:
+        ".singles 把「单身」写进域名：同城交友与单身活动组织、婚恋相亲与红娘工作室、单身社群与兴趣俱乐部、脱单课程与情感咨询用 name.singles，目标人群一眼锁定——用户搜「城市 + singles」找同城活动时，域名与搜索词逐字吻合。它与已收录的 .love/.club/.social 分工清晰：.love 说「爱」这个抽象大词（品牌表白、婚礼站也用），.club 说泛泛的会员组织，.social 说社交产品，.singles 直指「单身人群」这个精确画像——做单身经济的生意用它人群定位最准。注册局为 Identity Digital（Binky Moon 组合，2014 年首批新后缀）。价格是典型首年促销结构：首年约 $7（约 ¥52），续费约 $27/年（约 ¥196）——入门便宜，长期按续费价预算。库存极好：城市词、兴趣词、活动词全线有货。注意两点：一是 7 个字母的后缀不短，词根务必短（nyc.singles 是理想形态）；二是交友婚恋行业重信任与合规，域名之外把实名审核与隐私政策这类信任设施备好。命名上「城市 + .singles」（tokyo.singles）最主流，「兴趣/场景 + .singles」（hiking.singles）适合垂直社群与主题活动。",
+      bestFor: ["同城交友与单身活动组织", "婚恋相亲与红娘工作室", "单身社群与兴趣俱乐部", "脱单课程与情感咨询"],
+      namingTips: [
+        "「城市 + .singles」与同城交友搜索句式逐字吻合",
+        "首年约 $7、续费约 $27/年，按续费价做长期预算",
+        "精确人群用 .singles，泛社群用 .club/.social",
+        "交友行业重信任，实名审核与隐私政策一起备好",
+      ],
+    },
+    en: {
+      title: ".singles Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".singles is the dedicated suffix for the unattached — for local singles events and meetup organizers, matchmaking services and dating agencies, singles communities and interest clubs, dating courses and relationship coaching. See live pricing and naming advice, then hunt available .singles names with AI.",
+      intro:
+        ".singles writes the audience right into the address: local singles events and meetup organizers, matchmaking services and dating agencies, singles communities and interest clubs, and dating courses on name.singles lock onto their target crowd at a glance — \"city + singles\" is the literal query people type when hunting local events. It divides labor cleanly with the already-listed .love, .club and .social: .love names the big abstract word (brands and wedding sites use it too), .club names any membership group, .social names social products — .singles names one precise demographic, so businesses in the singles economy position sharpest here. The registry is Identity Digital (Binky Moon portfolio, from the first 2014 wave). Pricing follows the classic promo structure: about $7 first year (≈¥52) and $27/yr to renew (≈¥196) — cheap to start, budget on the renewal. Inventory is excellent: city words, interest words and event words all hit. Two cautions: the 7-letter suffix isn't short, so keep the root tight (nyc.singles is the ideal shape); and the dating industry runs on trust and compliance — pair the domain with identity verification and a real privacy policy. Naming: city + .singles (tokyo.singles) is the mainstream shape; interest or scene + .singles (hiking.singles) suits vertical communities and themed events.",
+      bestFor: ["Local singles events & meetup organizers", "Matchmaking services & dating agencies", "Singles communities & interest clubs", "Dating courses & relationship coaching"],
+      namingTips: [
+        "City + .singles matches local-event search queries word for word",
+        "About $7 year one, $27/yr renewal — budget on the renewal",
+        "A precise demographic fits .singles; generic groups fit .club",
+        "Dating runs on trust — pair verification and privacy policies",
+      ],
+    },
+  },
+  dating: {
+    tld: "dating",
+    zh: {
+      title: ".dating 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".dating 是婚恋交友行业的专属后缀，适合交友 App 与婚恋平台、相亲机构与高端红娘、约会攻略与情感内容站、垂直人群交友社区。查看 .dating 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .dating 域名。",
+      intro:
+        ".dating 把「约会」放进域名：交友 App 与婚恋平台、相亲机构与高端红娘、约会攻略与情感内容站、垂直人群交友社区用 name.dating，行业属性一词讲透——这是个全球数百亿美元的大行业，专属后缀的品牌回报也高。它与同批收录的 .singles 分工清晰：.singles 说「单身人群」这个画像（活动、社群向），.dating 说「约会交友」这个行业与产品——做平台与服务的生意用 .dating，做人群社群用 .singles。注册局为 Identity Digital（Binky Moon 组合，2014 年首批新后缀）。价格是典型首年促销结构：首年约 $13（约 ¥93），续费约 $52/年（约 ¥374）——续费在新后缀里偏高，正式产品才值得长期持有。库存极好：产品词、人群词、地域词全线有货。注意两点：一是交友行业各国监管与应用商店审核趋严，域名之外把年龄验证与内容审核机制备好；二是续费近 $52/年，域名矩阵别铺太宽，主站一个就够。命名上「品牌词 + .dating」（spark.dating）最主流，「人群/垂直 + .dating」（senior.dating）适合细分市场平台。",
+      bestFor: ["交友 App 与婚恋平台", "相亲机构与高端红娘", "约会攻略与情感内容站", "垂直人群交友社区"],
+      namingTips: [
+        "「品牌词 + .dating」行业属性一词讲透",
+        "首年约 $13、续费约 $52/年，正式产品才长期持有",
+        "平台与服务用 .dating，人群活动用 .singles",
+        "监管趋严，年龄验证与内容审核一起备好",
+      ],
+    },
+    en: {
+      title: ".dating Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".dating is the dedicated suffix for the dating industry — for dating apps and matchmaking platforms, matchmaking agencies and premium matchmakers, dating-advice and relationship content sites, niche dating communities. See live pricing and naming advice, then hunt available .dating names with AI.",
+      intro:
+        ".dating puts the industry right in the address: dating apps and matchmaking platforms, agencies and premium matchmakers, dating-advice content sites, and niche dating communities on name.dating say the whole business in one word — and in a global industry worth tens of billions, a dedicated suffix pays back its branding fast. It divides labor cleanly with the same-batch .singles: .singles names the demographic (events and community first), .dating names the industry and the product — platforms and services fit .dating, audience communities fit .singles. The registry is Identity Digital (Binky Moon portfolio, from the first 2014 wave). Pricing follows the classic promo structure: about $13 first year (≈¥93) and $52/yr to renew (≈¥374) — a renewal on the high side for new gTLDs, so hold it long-term only for a serious product. Inventory is excellent: product words, audience words and place names all hit. Two cautions: dating faces tightening regulation and app-store review worldwide, so pair the domain with age verification and content moderation; and at $52/yr, keep the domain portfolio narrow — one main site is enough. Naming: brand word + .dating (spark.dating) is the mainstream shape; audience or vertical + .dating (senior.dating) suits niche-market platforms.",
+      bestFor: ["Dating apps & matchmaking platforms", "Matchmaking agencies & premium matchmakers", "Dating-advice & relationship content sites", "Niche dating communities"],
+      namingTips: [
+        "Brand word + .dating says the whole industry in one word",
+        "About $13 year one, $52/yr renewal — for serious products only",
+        "Platforms fit .dating; audience communities fit .singles",
+        "Regulation is tightening — pair age checks and moderation",
+      ],
+    },
+  },
+  luxury: {
+    tld: "luxury",
+    zh: {
+      title: ".luxury 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".luxury 是高端奢侈品定位的专属后缀，适合奢侈品牌与高端定制、高端腕表珠宝与买手店、豪华旅行与高端酒店、高净值服务与私人顾问。查看 .luxury 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .luxury 域名。",
+      intro:
+        ".luxury 把「奢侈」戴进域名：奢侈品牌与高端定制、高端腕表珠宝与买手店、豪华旅行与高端酒店、高净值服务与私人顾问用 name.luxury，定位声明直接写在地址里——客单价越高的生意，后缀传递的档次感越值钱。它与已收录的 .boutique/.gold/.diamonds 分工清晰：.boutique 说精品小店，.gold/.diamonds 说具体品类，.luxury 说「奢侈」这个定位本身——跨品类的高端生意用它覆盖面最广。注册局为 Luxury Partners LLC（专营该后缀的独立注册局）。价格平进平出：注册约 $26（约 ¥189），续费同价——曾经年费数百美元的贵族后缀已降到中档价位，现在入手正是时候。库存极好：品牌词、品类词、地名全线有货。注意两点：一是「luxury」是定位承诺，站点视觉与服务体验必须撑得起这个词，否则适得其反；二是 6 个字母的后缀读感高级但不短，词根务必短（yachts.luxury 已是舒适上限）。命名上「品牌词 + .luxury」（maison.luxury）最主流，「品类 + .luxury」（watches.luxury）适合垂直买手与内容站。",
+      bestFor: ["奢侈品牌与高端定制", "高端腕表珠宝与买手店", "豪华旅行与高端酒店", "高净值服务与私人顾问"],
+      namingTips: [
+        "「品牌词 + .luxury」定位声明直接写在地址里",
+        "注册约 $26、续费同价，贵族后缀已降到中档价",
+        "视觉与服务必须撑得起 luxury 这个词",
+        "词根控制在 6 字符内，读感才配得上档次",
+      ],
+    },
+    en: {
+      title: ".luxury Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".luxury is the dedicated suffix for high-end positioning — for luxury brands and haute couture, fine watches, jewelry and curated boutiques, luxury travel and five-star hotels, high-net-worth services and private advisors. See live pricing and naming advice, then hunt available .luxury names with AI.",
+      intro:
+        ".luxury wears the positioning right in the address: luxury brands and haute couture, fine watches and jewelry, luxury travel and five-star hotels, and high-net-worth services on name.luxury make the claim before the page loads — and the higher the ticket size, the more that signal is worth. It divides labor cleanly with the already-listed .boutique, .gold and .diamonds: .boutique names a small fine shop, .gold and .diamonds name specific categories — .luxury names the positioning itself, so high-end businesses across categories get the widest coverage here. The registry is Luxury Partners LLC, an independent registry dedicated to this suffix. Pricing is flat: about $26 to register (≈¥189) and the same to renew — a suffix that once cost hundreds of dollars a year has settled at a mid-range fee, which makes now a good entry point. Inventory is excellent: brand words, category words and place names all hit. Two cautions: \"luxury\" is a promise — the site's design and service must live up to the word or the suffix backfires; and the 6-letter ending reads premium but not short, so keep the root tight (yachts.luxury is about the comfortable limit). Naming: brand word + .luxury (maison.luxury) is the mainstream shape; category + .luxury (watches.luxury) suits vertical curators and content sites.",
+      bestFor: ["Luxury brands & haute couture", "Fine watches, jewelry & curated boutiques", "Luxury travel & five-star hotels", "High-net-worth services & private advisors"],
+      namingTips: [
+        "Brand word + .luxury states the positioning in the address",
+        "About $26 flat per year — a once-premium suffix now mid-range",
+        "Design and service must live up to the word, or it backfires",
+        "Keep the root within 6 characters to match the premium read",
+      ],
+    },
+  },
+  organic: {
+    tld: "organic",
+    zh: {
+      title: ".organic 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".organic 是有机产业的专属后缀，适合有机食品品牌与电商、有机农场与生态种植、天然护肤与有机个护、有机认证与行业内容站。查看 .organic 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .organic 域名。",
+      intro:
+        ".organic 把「有机」种进域名：有机食品品牌与电商、有机农场与生态种植、天然护肤与有机个护、有机认证与行业内容站用 name.organic，核心卖点直接写在地址里——消费者为「有机」支付溢价，域名先一步完成信任暗示。它与已收录的 .eco/.green/.farm 分工清晰：.eco 说环保理念，.green 说绿色泛概念，.farm 说农场这个场所，.organic 直指「有机」这个有认证体系背书的品类标准——卖有机产品的生意用它定位最准。注册局为 Identity Digital（原 Afilias 组合）。该后缀曾有「须与有机行业相关」的注册倡导，现已开放注册，但生态仍以真有机从业者为主。价格是典型首年促销结构：首年约 $11（约 ¥78），续费约 $68/年（约 ¥493）——续费在全站属高位，真做有机生意再长期持有。库存极好：品类词、农场名、品牌词全线有货。注意两点：一是「organic」是受监管的营销用语，各国对有机宣称有认证要求，域名之外把认证证书亮出来；二是续费近 $68/年，别做域名矩阵，主品牌一个就够。命名上「品牌/农场名 + .organic」（sunrise.organic）最主流，「品类 + .organic」（tea.organic）适合垂直电商与内容站。",
+      bestFor: ["有机食品品牌与电商", "有机农场与生态种植", "天然护肤与有机个护", "有机认证与行业内容站"],
+      namingTips: [
+        "「品牌 + .organic」核心卖点直接写在地址里",
+        "首年约 $11、续费约 $68/年，真有机生意再长期持有",
+        "有机宣称受监管，认证证书与域名一起亮出来",
+        "品类标准用 .organic，泛环保理念用 .eco/.green",
+      ],
+    },
+    en: {
+      title: ".organic Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".organic is the dedicated suffix for the organic industry — for organic food brands and e-commerce, organic farms and ecological growers, natural skincare and organic personal care, organic certification and industry content sites. See live pricing and naming advice, then hunt available .organic names with AI.",
+      intro:
+        ".organic plants the selling point right in the address: organic food brands and e-commerce, organic farms and ecological growers, natural skincare lines, and certification or industry content sites on name.organic state the premium claim before the page loads — consumers pay extra for \"organic\", and the domain starts the trust signal early. It divides labor cleanly with the already-listed .eco, .green and .farm: .eco names an environmental ethos, .green names the broad concept, .farm names the place — .organic names a category standard backed by real certification schemes, so businesses that actually sell organic products position sharpest here. The registry is Identity Digital (from the former Afilias portfolio). The suffix once encouraged organic-industry-related registrations; it is open to all now, but the ecosystem still skews toward genuine organic businesses. Pricing follows the classic promo structure: about $11 first year (≈¥78) and $68/yr to renew (≈¥493) — one of the higher renewals on this site, so hold it long-term only for a real organic business. Inventory is excellent: category words, farm names and brand words all hit. Two cautions: \"organic\" is a regulated marketing term with certification requirements in most countries, so display the certificates alongside the domain; and at $68/yr, skip the domain portfolio — one main brand is enough. Naming: brand or farm name + .organic (sunrise.organic) is the mainstream shape; category + .organic (tea.organic) suits vertical commerce and content sites.",
+      bestFor: ["Organic food brands & e-commerce", "Organic farms & ecological growers", "Natural skincare & organic personal care", "Organic certification & industry content sites"],
+      namingTips: [
+        "Brand + .organic states the premium claim in the address",
+        "About $11 year one, $68/yr renewal — for real organic businesses",
+        "\"Organic\" is regulated — show certification with the domain",
+        "The category standard fits .organic; broad ethos fits .eco",
+      ],
+    },
+  },
+  tattoo: {
+    tld: "tattoo",
+    zh: {
+      title: ".tattoo 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".tattoo 是纹身行业的专属后缀，适合纹身店与工作室、纹身师个人作品集、纹身器材与耗材电商、纹身设计与图案平台。查看 .tattoo 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tattoo 域名。",
+      intro:
+        ".tattoo 把「纹身」刺进域名：纹身店与工作室、纹身师个人作品集、纹身器材与耗材电商、纹身设计与图案平台用 name.tattoo，行业属性一词讲透——纹身是重作品集、重口碑的手艺行业，客人搜「纹身师名 + tattoo」时域名与搜索词逐字吻合。它与已收录的 .ink/.studio/.art 分工清晰：.ink 说「墨水」这个意象（文创、写作也用），.studio 说工作室这个场所，.art 说泛艺术，.tattoo 直指纹身这个行业——做纹身生意用它定位最准。注册局为 GoDaddy Registry（原 Uniregistry 组合）。价格是典型首年促销结构：首年约 $2（约 ¥15），续费约 $31/年（约 ¥226）——首年近乎白送，长期按续费价预算。库存极好：风格词（blackwork、irezumi）、人名、店名全线有货。注意两点：一是 6 个字母的后缀读感直接但不短，词根务必短（ink.tattoo 是理想形态）；二是纹身获客靠作品集与社媒导流，域名之外把 Instagram 作品墙与预约系统接好。命名上「纹身师/店名 + .tattoo」（raven.tattoo）最主流，「风格 + .tattoo」（blackwork.tattoo）适合垂直风格工作室。",
+      bestFor: ["纹身店与工作室", "纹身师个人作品集", "纹身器材与耗材电商", "纹身设计与图案平台"],
+      namingTips: [
+        "「纹身师名 + .tattoo」与客人搜索句式逐字吻合",
+        "首年约 $2、续费约 $31/年，按续费价做长期预算",
+        "纹身行业用 .tattoo，泛意象用 .ink，场所用 .studio",
+        "作品集与预约系统和域名一起接好",
+      ],
+    },
+    en: {
+      title: ".tattoo Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".tattoo is the dedicated suffix for the tattoo trade — for tattoo shops and studios, tattoo artist portfolios, tattoo equipment and supply e-commerce, tattoo design and flash platforms. See live pricing and naming advice, then hunt available .tattoo names with AI.",
+      intro:
+        ".tattoo inks the trade right into the address: tattoo shops and studios, artist portfolios, equipment and supply e-commerce, and design or flash platforms on name.tattoo say the whole industry in one word — tattooing is a portfolio-and-reputation craft, and \"artist name + tattoo\" is the literal query clients type. It divides labor cleanly with the already-listed .ink, .studio and .art: .ink names the imagery (writers and stationery brands use it too), .studio names the room, .art names art at large — .tattoo names this one trade, so tattoo businesses position sharpest here. The registry is GoDaddy Registry (from the former Uniregistry portfolio). Pricing follows the classic promo structure: about $2 first year (≈¥15) and $31/yr to renew (≈¥226) — the first year is nearly free, so budget on the renewal. Inventory is excellent: style words (blackwork, irezumi), artist names and shop names all hit. Two cautions: the 6-letter suffix reads direct but isn't short, so keep the root tight (ink.tattoo is the ideal shape); and tattoo clients arrive via portfolios and social feeds — wire the Instagram wall and booking system to the domain from day one. Naming: artist or shop name + .tattoo (raven.tattoo) is the mainstream shape; style + .tattoo (blackwork.tattoo) suits style-focused studios.",
+      bestFor: ["Tattoo shops & studios", "Tattoo artist portfolios", "Tattoo equipment & supply e-commerce", "Tattoo design & flash platforms"],
+      namingTips: [
+        "Artist name + .tattoo matches client search queries word for word",
+        "About $2 year one, $31/yr renewal — budget on the renewal",
+        "The trade fits .tattoo; imagery fits .ink; the room fits .studio",
+        "Wire portfolio and booking to the domain from day one",
+      ],
+    },
+  },
+  casa: {
+    tld: "casa",
+    zh: {
+      title: ".casa 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".casa 是西语「家」的生活方式后缀，适合西语市场房产与民宿、家居品牌与生活方式电商、餐厅民宿等「Casa」系品牌、室内设计与家装服务。查看 .casa 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .casa 域名。",
+      intro:
+        ".casa 把西语的「家」安进域名：西语市场房产与民宿、家居品牌与生活方式电商、餐厅民宿等「Casa」系品牌、室内设计与家装服务用 name.casa，一个词同时说了「房子」与「家的温度」——全球五亿西语人口外加意大利语市场，Casa 开头的品牌名本就遍地都是，name.casa 让品牌名与后缀读成一句话。它与已收录的 .homes/.house/.estate 分工清晰：.homes 是英语房产垂直（有行业注册要求），.house 说房子这个通用词，.estate 说资产与地产，.casa 直指西语与拉丁语系市场的「家」——面向西语用户或走地中海调性的品牌用它最出彩。注册局为 GoDaddy Registry（原 Minds + Machines 组合）。价格是全站少见的双低结构：首年约 $2（约 ¥11），续费约 $11/年（约 ¥78）——注册与续费都便宜，做品牌矩阵与落地页几乎零成本。库存极好：地名、品牌词、风格词全线有货。注意两点：一是英语市场对 casa 的认知有限，主打英语用户时配主流后缀做主站；二是 Casa 系品牌名泛滥，词根要挑有记忆点的（mi.casa、tu.casa 这类短组合早被抢注）。命名上「品牌词 + .casa」（bella.casa）最主流，「地名 + .casa」（tulum.casa）适合民宿与本地房产站。",
+      bestFor: ["西语市场房产与民宿", "家居品牌与生活方式电商", "餐厅民宿等「Casa」系品牌", "室内设计与家装服务"],
+      namingTips: [
+        "「品牌词 + .casa」让品牌名与后缀读成一句话",
+        "首年约 $2、续费约 $11/年，双低价格几乎零成本",
+        "西语与地中海调性用 .casa，英语房产垂直用 .homes",
+        "Casa 系品牌泛滥，词根要挑有记忆点的",
+      ],
+    },
+    en: {
+      title: ".casa Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".casa is the Spanish \"home\" as a lifestyle suffix — for Spanish-market real estate and vacation rentals, home and lifestyle brands, \"Casa\"-named restaurants and guesthouses, interior design and home services. See live pricing and naming advice, then hunt available .casa names with AI.",
+      intro:
+        ".casa moves the Spanish word for home right into the address: Spanish-market real estate and vacation rentals, home and lifestyle brands, \"Casa\"-named restaurants and guesthouses, and interior design services on name.casa say both \"house\" and \"the warmth of home\" in one word — with half a billion Spanish speakers plus the Italian market, Casa-branded names are everywhere, and name.casa makes brand and suffix read as one phrase. It divides labor cleanly with the already-listed .homes, .house and .estate: .homes is the English real-estate vertical (with industry registration requirements), .house names the generic building, .estate names the asset — .casa names home for the Spanish and Latin-language world, so brands targeting those markets or a Mediterranean vibe shine brightest here. The registry is GoDaddy Registry (from the former Minds + Machines portfolio). Pricing is a rare double-low: about $2 first year (≈¥11) and $11/yr to renew (≈¥78) — cheap in and cheap to hold, so brand portfolios and landing pages cost almost nothing. Inventory is excellent: place names, brand words and style words all hit. Two cautions: English-market recognition of casa is limited, so pair a mainstream suffix for English-first audiences; and Casa-branded names are crowded — pick a memorable root (short combos like mi.casa and tu.casa went long ago). Naming: brand word + .casa (bella.casa) is the mainstream shape; place + .casa (tulum.casa) suits vacation rentals and local property sites.",
+      bestFor: ["Spanish-market real estate & vacation rentals", "Home & lifestyle brands", "\"Casa\"-named restaurants & guesthouses", "Interior design & home services"],
+      namingTips: [
+        "Brand word + .casa makes name and suffix read as one phrase",
+        "About $2 year one, $11/yr renewal — nearly free either way",
+        "Spanish and Mediterranean vibes fit .casa; English real estate fits .homes",
+        "Casa branding is crowded — pick a memorable root",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

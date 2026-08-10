@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 276,
+    "count": 282,
     "slugs": [
       "com",
       "net",
@@ -277,7 +277,13 @@
       "gift",
       "party",
       "fishing",
-      "horse"
+      "horse",
+      "singles",
+      "dating",
+      "luxury",
+      "organic",
+      "tattoo",
+      "casa"
     ]
   },
   "guide": {
