@@ -382,4 +382,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "rehab-vs-care", a: "rehab", b: "care", title: { zh: ".rehab 和 .care 怎么选：康复的过程动词与照护的关系名词", en: ".rehab vs .care: The Recovery Verb or The Caring Noun" } },
   { slug: "nyc-vs-us", a: "nyc", b: "us", title: { zh: ".nyc 和 .us 怎么选：纽约的城市门牌与全美的国家后缀", en: ".nyc vs .us: The City Nameplate or The National Suffix" } },
   { slug: "london-vs-uk", a: "london", b: "uk", title: { zh: ".london 和 .uk 怎么选：伦敦的城市招牌与英国的全国信任", en: ".london vs .uk: The City Signboard or The National Trust" } },
+  { slug: "tokyo-vs-asia", a: "tokyo", b: "asia", title: { zh: ".tokyo 和 .asia 怎么选：东京的城市门牌与亚太的区域口径", en: ".tokyo vs .asia: The City Nameplate or The Regional Scope" } },
+  { slug: "miami-vs-nyc", a: "miami", b: "nyc", title: { zh: ".miami 和 .nyc 怎么选：两座美国名城的门牌之争", en: ".miami vs .nyc: A Tale of Two City Nameplates" } },
+  { slug: "boston-vs-city", a: "boston", b: "city", title: { zh: ".boston 和 .city 怎么选：具体的城市门牌与泛化的城市语义", en: ".boston vs .city: The Specific Nameplate or The Generic City Word" } },
+  { slug: "healthcare-vs-health", a: "healthcare", b: "health", title: { zh: ".healthcare 和 .health 怎么选：行业级声明与泛健康赛道", en: ".healthcare vs .health: The Industry Statement or The Wellness Umbrella" } },
+  { slug: "abogado-vs-lawyer", a: "abogado", b: "lawyer", title: { zh: ".abogado 和 .lawyer 怎么选：西语客户与英语客户的执业门牌", en: ".abogado vs .lawyer: The Practice Nameplate in Spanish or English" } },
+  { slug: "kaufen-vs-shop", a: "kaufen", b: "shop", title: { zh: ".kaufen 和 .shop 怎么选：德语区的购买动词与全球的店铺门面", en: ".kaufen vs .shop: The German Buy Verb or The Global Storefront" } },
 ];

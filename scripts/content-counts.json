@@ -690,7 +690,7 @@
     ]
   },
   "vs": {
-    "count": 372,
+    "count": 378,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -1063,7 +1063,13 @@
       "condos-vs-apartments",
       "rehab-vs-care",
       "nyc-vs-us",
-      "london-vs-uk"
+      "london-vs-uk",
+      "tokyo-vs-asia",
+      "miami-vs-nyc",
+      "boston-vs-city",
+      "healthcare-vs-health",
+      "abogado-vs-lawyer",
+      "kaufen-vs-shop"
     ]
   }
 }
