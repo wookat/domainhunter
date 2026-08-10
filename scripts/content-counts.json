@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 300,
+    "count": 306,
     "slugs": [
       "com",
       "net",
@@ -301,7 +301,13 @@
       "meme",
       "quest",
       "kids",
-      "foundation"
+      "foundation",
+      "bond",
+      "sbs",
+      "cyou",
+      "monster",
+      "pics",
+      "mobi"
     ]
   },
   "guide": {
