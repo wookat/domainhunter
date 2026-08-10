@@ -2,7 +2,7 @@ import { AlertTriangle, HelpCircle, Lightbulb, Quote, Sparkles } from "lucide-re
 
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { buildGuideFaq } from "@/content/guide-faq";
-import { GUIDE_LIST, INDUSTRY_GUIDES } from "@/content/guides";
+import { readInjectedContent } from "@/content/injected";
 import { NotFoundPage } from "@/components/not-found-page";
 import { useI18n } from "@/lib/i18n";
 import { priceShort, usePrices } from "@/lib/prices";
@@ -12,10 +12,11 @@ import { cn } from "@/lib/utils";
 export function GuidePage({ slug }: { slug: string }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
-  const guide = INDUSTRY_GUIDES[slug];
+  const content = readInjectedContent("guide", slug);
+  const guide = content?.guide;
   usePageTitle(guide?.[lang].title);
 
-  if (!guide) return <NotFoundPage />;
+  if (!content || !guide) return <NotFoundPage />;
 
   const loc = guide[lang];
   const faq = buildGuideFaq(guide, lang);
@@ -145,16 +146,16 @@ export function GuidePage({ slug }: { slug: string }) {
       <div className="mt-10">
         <h2 className="text-sm font-semibold text-txt1">{t("guide.others")}</h2>
         <div className="mt-3 flex flex-wrap gap-2">
-          {GUIDE_LIST.map((other) => (
+          {content.guideLinks.map((other) => (
             <a
-              key={other}
-              href={`/guide/${other}?lang=${lang}`}
+              key={other.slug}
+              href={`/guide/${other.slug}?lang=${lang}`}
               className={cn(
                 "flex min-h-[44px] items-center rounded-lg border px-3 text-xs transition-colors",
-                other === slug ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand",
+                other.slug === slug ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand",
               )}
             >
-              {INDUSTRY_GUIDES[other][lang].label}
+              {other[lang]}
             </a>
           ))}
         </div>
