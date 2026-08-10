@@ -400,4 +400,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "au-vs-com", a: "au", b: "com", title: { zh: ".au 和 .com 怎么选：澳洲本地信任与全球默认值的对比", en: ".au vs .com: Australian Local Trust vs the Global Default" } },
   { slug: "jp-vs-cn", a: "jp", b: "cn", title: { zh: ".jp 和 .cn 怎么选：日本与中国两大东亚市场入口的对比", en: ".jp vs .cn: Japan or China — Two East Asian Market Entrances" } },
   { slug: "sg-vs-asia", a: "sg", b: "asia", title: { zh: ".sg 和 .asia 怎么选：新加坡枢纽信号与亚太区域后缀的对比", en: ".sg vs .asia: The Singapore Hub Signal or the Asia-Pacific Region" } },
+  { slug: "fr-vs-com", a: "fr", b: "com", title: { zh: ".fr 和 .com 怎么选：法国本地信任与全球默认值的对比", en: ".fr vs .com: French Local Trust vs the Global Default" } },
+  { slug: "it-vs-de", a: "it", b: "de", title: { zh: ".it 和 .de 怎么选：意大利与德国两大本地市场的对比", en: ".it vs .de: Italy or Germany — Two Prime Local Markets Compared" } },
+  { slug: "es-vs-eu", a: "es", b: "eu", title: { zh: ".es 和 .eu 怎么选：西班牙单一市场与泛欧覆盖的对比", en: ".es vs .eu: Spain's Home Market or Pan-European Coverage" } },
+  { slug: "nl-vs-de", a: "nl", b: "de", title: { zh: ".nl 和 .de 怎么选：荷兰枢纽与德国腹地两大 ccTLD 的对比", en: ".nl vs .de: The Dutch Hub or the German Heartland" } },
+  { slug: "kr-vs-jp", a: "kr", b: "jp", title: { zh: ".kr 和 .jp 怎么选：韩国与日本两大东亚市场的对比", en: ".kr vs .jp: Korea or Japan — Two East Asian Markets Compared" } },
+  { slug: "hk-vs-sg", a: "hk", b: "sg", title: { zh: ".hk 和 .sg 怎么选：香港与新加坡两大亚洲枢纽的对比", en: ".hk vs .sg: Hong Kong or Singapore — Two Asian Hubs Compared" } },
 ];
