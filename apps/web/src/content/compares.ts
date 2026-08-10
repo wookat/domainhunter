@@ -6229,6 +6229,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["PV installers & equipment dealers", "Storage & off-grid energy providers", "Full-line solar energy brands", "City + solar installer search phrase"],
     },
   },
+  "business-vs-company": {
+    slug: "business-vs-company",
+    a: "business",
+    b: "company",
+    zh: {
+      title: ".business 和 .company 怎么选：报经营还是报主体",
+      metaDescription: ".business 强调「做生意」本身，适合本地商家与中小企业门面；.company 强调「公司」这个法人主体，适合正式企业站与控股主体页。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个后缀是近亲，分工在一个词：一个报「经营」，一个报「主体」。.business 强调做生意本身——中小企业官网、本地商家门面站、餐馆维修铺咨询室这类「生意」气质的主体用 name.business，访客一眼明白「这是家正经做生意的」；Identity Digital 运营，首年约 $2–3（约 ¥19）、续费约 $16/年（约 ¥115），续费比 .com 还便宜，是长期持有成本最低的企业后缀之一。.company 强调「公司」这个法人身份——正式企业站、集团母公司与控股主体页、「The XX Company」式复古品牌用 name.company，acme.company 读出来就是「Acme 公司」；同样 Identity Digital 运营，首年约 $3（约 ¥21）、续费约 $17/年（约 ¥125），两者价格几乎打平。判断标准：主体气质偏「生意/店」——本地商家、个体经营、服务小微，客户关心的是你卖什么 → .business 更顺口，「店名/行业词 + .business」直接接住本地与行业搜索；主体气质偏「公司/法人」——注册了正式公司、要挂企业信息与招聘页、或走「The XX Company」品牌路线 → .company 更正式，「公司名 + .company」与营业执照抬头对齐。三点注意：一是两者续费都低于 .com，防御性两个都注册的成本也不高，主用一个、另一个 301 跳转即可；二是 .business 八个字母、.company 七个字母都偏长，词根务必短；三是两者大众认知度都不及 .com，线下物料配一句业务说明。命名上「店名/姓氏 + .business」适合本地商家，「公司名 + .company」适合正式企业站与控股主体页。",
+      pickA: ["本地商家与个体经营门面", "餐馆/维修/咨询等服务小微", "强调「卖什么」的行业词命名", "要最低续费的长期持有"],
+      pickB: ["正式注册公司的企业站", "集团母公司与控股主体页", "「The XX Company」式品牌", "企业信息与招聘页"],
+    },
+    en: {
+      title: ".business vs .company: Naming the Trade or the Entity",
+      metaDescription:
+        ".business stresses the act of doing business — for local shops and SMB storefronts; .company stresses the legal entity — for formal corporate sites and holding pages. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "These close cousins split on one word: one names the trade, the other names the entity. .business stresses the act of doing business — SMB websites, local shop storefronts, and trade-flavored outfits like restaurants, repair shops and consultancies on name.business tell visitors instantly that this is a real, operating business. Operated by Identity Digital, about $2–3 for the first year (≈¥19) and $16/yr to renew (≈¥115) — cheaper to renew than a .com, one of the lowest-cost business suffixes to hold long term. .company stresses the legal nature — formal corporate sites, group and holding entity pages, and retro \"The X Company\" branding on name.company read the company name out loud: acme.company is literally \"the Acme company.\" Also Identity Digital, about $3 first year (≈¥21) and $17/yr to renew (≈¥125) — pricing is effectively a tie. The test: if the outfit feels like a trade or a shop — local merchants, sole proprietors, small service businesses whose customers care about what you sell → .business reads more natural, and shop or trade word + .business catches local and industry searches; if it feels like a corporation — a formally registered company, a corporate-info and careers page, or a \"The X Company\" brand → .company is more formal, and company name + .company aligns with the letterhead. Three cautions: both renew below .com, so defensively registering both and 301-ing one is cheap; at 8 and 7 letters both suffixes are long, so keep the root short; and both trail .com in mainstream recognition — add a one-line descriptor on print materials. Naming: shop or family name + .business fits local merchants; company name + .company fits formal corporate and holding pages.",
+      pickA: ["Local shops & sole proprietors", "Restaurants, repair & consulting micro-businesses", "Trade-word naming that says what you sell", "Lowest renewal for a long hold"],
+      pickB: ["Formally registered corporate sites", "Group & holding entity pages", "\"The X Company\" style brands", "Corporate-info & careers pages"],
+    },
+  },
+  "limited-vs-ltd": {
+    slug: "limited-vs-ltd",
+    a: "limited",
+    b: "ltd",
+    zh: {
+      title: ".limited 和 .ltd 怎么选：全拼正式感与缩写实用感",
+      metaDescription: ".limited 是 Limited 的完整拼写，正式且自带「限量」语义；.ltd 是全球通用缩写，更短更便宜。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一个公司抬头的两种写法：一个全拼，一个缩写。.limited 是 Limited 的完整拼写——英联邦体系的有限公司把 brand.limited 当官网，等于把注册名一字不差写进域名，比缩写更完整正式；它还有第二张脸：「限量」语义让限量发售潮牌、小批量手作、会员制精品店用 drop.limited 这类组合自带稀缺感。Identity Digital 运营，首年约 $8（约 ¥59）、续费约 $29/年（约 ¥211）。.ltd 是全球通用缩写——中小企业与有限公司官网、创业公司品牌站、集团子公司用 name.ltd，与营业执照上的「XX 有限公司/Ltd」抬头天然对齐，中国公司尤其眼熟；首年约 $6（约 ¥41）、续费约 $25/年（约 ¥182），注册续费都比 .limited 便宜，而且只有 3 个字母，口播与名片都省力。判断标准：要「一字不差的正式感」——公司注册名以 Limited 结尾、走英伦/港式的传统所气质，或想借「限量」语义做稀缺叙事 → .limited 的全拼最完整；要「实用的公司抬头」——日常使用、口播传播多、预算敏感 → .ltd 更短更便宜，7 字母的长度差在每一次输入里都能感觉到。三点注意：一是别混用两种语义，.limited 做公司站就正经做，做潮牌就做限量叙事，摇摆让访客困惑；二是美国用户对 Limited/Ltd 抬头都不敏感，主打美国市场更适合 .com/.inc/.llc；三是同一个品牌两个后缀都在时，防御性注册另一个的成本不高。命名上「注册名 + .limited」适合传统有限公司官网，「公司名 + .ltd」适合日常使用的企业站，「drop/edition 词根 + .limited」适合限量品牌。",
+      pickA: ["注册名以 Limited 结尾的公司", "英伦/港式传统所气质官网", "限量发售潮牌与会员制精品店", "「限量」稀缺叙事命名"],
+      pickB: ["日常使用的中小企业官网", "创业公司品牌站与子公司站", "口播传播多、要短后缀", "注册续费更便宜的长期持有"],
+    },
+    en: {
+      title: ".limited vs .ltd: Full Spelling vs the Working Abbreviation",
+      metaDescription:
+        ".limited spells the company suffix out in full — formal, with a scarcity double meaning; .ltd is the universal abbreviation — shorter and cheaper. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Two spellings of the same letterhead: one written out, one abbreviated. .limited spells it in full — limited companies in Commonwealth jurisdictions put brand.limited on the door, writing the registered name into the domain letter for letter, more complete and formal than any abbreviation. It also has a second face: the scarcity meaning lets limited-edition streetwear, small-batch crafts and members-only boutiques run combos like drop.limited that practically market themselves. Operated by Identity Digital, about $8 for the first year (≈¥59) and $29/yr to renew (≈¥211). .ltd is the working abbreviation — SMB and limited-company sites, startup brand pages and group subsidiaries on name.ltd align naturally with the \"Ltd\" on the letterhead, instantly familiar across the Commonwealth and China. About $6 first year (≈¥41) and $25/yr to renew (≈¥182) — cheaper both ways, and at 3 letters it saves effort in every spoken mention and business card. The test: if you want letter-for-letter formality — a registered name ending in Limited, a traditional UK or Hong Kong firm feel, or a scarcity story built on the word itself → .limited is the complete spelling; if you want the practical letterhead — everyday use, heavy word-of-mouth, budget sensitivity → .ltd is shorter and cheaper, and the 7-letter length gap shows in every keystroke. Three cautions: don't mix .limited's two meanings — run a corporate site or a scarcity story, not both; US audiences don't register Limited or Ltd as company suffixes, so a US-market corporate site is safer on .com, .inc or .llc; and when both are open for your brand, a defensive second registration is cheap. Naming: registered name + .limited for traditional limited companies; company name + .ltd for everyday corporate sites; roots like drop or edition + .limited for edition-driven brands.",
+      pickA: ["Registered names ending in Limited", "Traditional UK/HK firm formality", "Limited-edition streetwear & boutiques", "Scarcity-story naming"],
+      pickB: ["Everyday SMB & startup sites", "Group subsidiaries & new business lines", "Heavy word-of-mouth, short suffix", "Cheaper registration & renewal"],
+    },
+  },
+  "associates-vs-partners": {
+    slug: "associates-vs-partners",
+    a: "associates",
+    b: "partners",
+    zh: {
+      title: ".associates 和 .partners 怎么选：字号传统与合伙关系",
+      metaDescription: ".associates 对应「姓氏 + Associates」的字号传统，适合律所会计所等专业机构；.partners 强调合伙人关系，适合基金与合作计划。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "专业服务业的两块门牌：一个刻字号，一个刻关系。.associates 把「姓氏 + & Associates」的百年命名传统写进域名——律所、会计师事务所、咨询与设计所用 smith.associates，就是 Smith & Associates 的完美数字化，比 smithassociates.com 短一截还省掉尴尬的 & 符号；Identity Digital 运营，首年约 $12（约 ¥85）、续费约 $31/年（约 ¥226），专业所预算内。.partners 强调合伙人之间的关系——律所与咨询公司之外，基金与投资合伙（LP/GP 结构）、企业的渠道与联盟合作计划用 name.partners 都名正言顺，brand.partners 做合作伙伴计划入口是经典用法；首年约 $8（约 ¥56），但续费约 $57/年（约 ¥412），续费比 .associates 贵近一倍，按长期成本预算。判断标准：名片上印的是 Associates——字号里带这个词的机构，域名就该与字号一致 → .associates 最准，「姓氏 + .associates」直接等于机构名；卖点是「合伙/合作」——基金的 GP 品牌、双姓氏合伙所、企业渠道计划 → .partners 的关系语义更大，投资圈对 XX Partners 的认知也更成熟。三点注意：一是续费差近一倍，非投资圈的普通事务所选 .associates 长期更省；二是两个后缀都长（10 与 8 字母），词根必须是短姓氏或短词；三是个人顾问两个都别用——solo 用 .expert/.consulting 更灵活，这两块门牌都属于机构。命名上「姓氏 + .associates」对应字号传统，「姓氏/意象词 + .partners」适合基金与合伙品牌，「品牌 + .partners」适合渠道合作计划。",
+      pickA: ["字号含 Associates 的律所会计所", "咨询与设计事务所", "「姓氏 + 字号」传统命名", "续费更省的长期持有"],
+      pickB: ["基金与投资合伙（LP/GP）", "双姓氏合伙制事务所", "企业渠道与联盟合作计划", "投资圈成熟的 Partners 认知"],
+    },
+    en: {
+      title: ".associates vs .partners: The Firm Name or the Relationship",
+      metaDescription:
+        ".associates digitizes the \"Name & Associates\" firm tradition — for law and accounting practices; .partners names the partnership itself — for funds and channel programs. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Two doorplates of professional services: one engraves the firm name, the other the relationship. .associates writes the century-old \"Surname & Associates\" tradition into the domain — law firms, accounting practices, consultancies and design studios on smith.associates get the perfect digital form of Smith & Associates, shorter than smithassociates.com and rid of the awkward ampersand. Operated by Identity Digital, about $12 for the first year (≈¥85) and $31/yr to renew (≈¥226) — within any firm's budget. .partners names the relationship between partners — beyond law and consulting, funds and investment partnerships (LP/GP structures) and corporate channel or alliance programs all wear name.partners naturally, and brand.partners as a partner-program front door is a classic. About $8 first year (≈¥56) but $57/yr to renew (≈¥412) — nearly double .associates' holding cost, so budget long-term. The test: if the letterhead says Associates — a firm with the word in its name should match the domain to the name → .associates is truest, surname + .associates literally equals the firm; if the pitch is the partnership — a fund's GP brand, a double-surname firm, a corporate channel program → .partners carries the bigger relationship semantics, and investors already read XX Partners fluently. Three cautions: the renewal gap is nearly 2x, so an ordinary practice outside the investment world holds .associates cheaper; both suffixes are long (10 and 8 letters), so the root must be a short surname or word; and solo consultants should skip both — .expert or .consulting reads better, these doorplates belong to institutions. Naming: surname + .associates maps the firm tradition; surname or imagery word + .partners fits funds and partnership brands; brand + .partners fits channel programs.",
+      pickA: ["Firms with Associates in the name", "Law, accounting & design practices", "Surname + firm-name tradition", "Cheaper renewal for a long hold"],
+      pickB: ["Funds & investment partnerships (LP/GP)", "Double-surname partnership firms", "Corporate channel & alliance programs", "Mature investor recognition of Partners"],
+    },
+  },
+  "cheap-vs-discount": {
+    slug: "cheap-vs-discount",
+    a: "cheap",
+    b: "discount",
+    zh: {
+      title: ".cheap 和 .discount 怎么选：报价格标签还是报打折动作",
+      metaDescription: ".cheap 直给「便宜」这个价格标签，适合比价与省钱攻略站；.discount 报「打折」这个动作，适合折扣店与清仓促销。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "省钱生意的两个入口：一个报价格状态，一个报打折动作。.cheap 最直给——比价网站、省钱攻略博客、廉价机票酒店聚合用 flights.cheap 或 hotels.cheap，域名就是广告语本身，用户搜「cheap + 品类」时逐字吻合，英语里 cheap flights/cheap hotels 是常年高频搜索词；Identity Digital 运营，首年约 $6（约 ¥41）、续费约 $29/年（约 ¥211）。.discount 报的是「打折」这个动作——折扣店与奥莱清仓、品牌促销频道、折扣码聚合站用 name.discount，暗示「原价在别处、这里打折卖」，比 cheap 少一层「廉价=劣质」的潜台词；首年约 $9（约 ¥63）、续费约 $28/年（约 ¥204），两者续费几乎打平。判断标准：卖点是「绝对低价」——比价、廉航、青旅这类用户就冲着便宜来的品类 → .cheap 与搜索词逐字对齐，SEO 语义最直接；卖点是「折扣差价」——品牌货打折卖、清仓奥莱、折扣码与促销信息 → .discount 更准，「打折」暗示品质不变只是价格下来了。三点注意：一是 cheap 的「廉价」潜台词更重，卖品牌货的折扣店用 .discount 更保调性，纯比价与省钱攻略用 .cheap 更上头；二是这两个词根都别在域名里重复出现，避免 cheapflights.cheap 式冗余；三是省钱类流量站竞争激烈，域名只是起点，比价数据与更新频率才是壁垒。命名上「品类 + .cheap」（flights/hotels/eats）适合比价与聚合，「品牌词/品类 + .discount」适合折扣店与促销频道。",
+      pickA: ["机票酒店等比价聚合站", "省钱攻略与羊毛博客", "用户就冲便宜来的品类", "「cheap + 品类」搜索词逐字吻合"],
+      pickB: ["品牌折扣店与奥莱清仓", "折扣码与促销信息聚合", "保品质调性的打折叙事", "「discount + 品类」促销搜索词"],
+    },
+    en: {
+      title: ".cheap vs .discount: The Price Tag or the Markdown",
+      metaDescription:
+        ".cheap hangs the low price right on the door — for comparison and savings sites; .discount names the markdown — for outlet stores and promo channels. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Two doors into the savings business: one names the price state, the other the markdown action. .cheap is the bluntest — price-comparison sites, savings blogs and budget flight or hotel aggregators on flights.cheap or hotels.cheap own a domain that is the ad copy itself, matching \"cheap + category\" searches word for word; cheap flights and cheap hotels are perennial high-volume queries. Operated by Identity Digital, about $6 for the first year (≈¥41) and $29/yr to renew (≈¥211). .discount names the markdown — outlet and clearance stores, brand promo channels and coupon-code aggregators on name.discount imply the full price lives elsewhere and it's marked down here, dodging cheap's \"low quality\" undertone. About $9 first year (≈¥63) and $28/yr to renew (≈¥204) — renewals are effectively a tie. The test: if the pitch is the absolute low price — comparison, budget airlines, hostels, categories whose users come precisely for cheapness → .cheap aligns letter for letter with the search phrase, the most direct SEO semantics; if the pitch is the price cut — brand goods marked down, outlets and clearance, coupon and promo feeds → .discount is truer: a markdown says the quality stayed and only the price dropped. Three cautions: cheap's low-quality undertone is heavier, so outlets selling brand goods keep their tone on .discount while pure comparison plays lean .cheap; never repeat either word in the root — avoid cheapflights.cheap redundancy; and savings-traffic niches are brutally competitive, so the domain is the start, not the moat — comparison data and update cadence are. Naming: category + .cheap (flights, hotels, eats) fits comparison and aggregation; brand or category + .discount fits outlet stores and promo channels.",
+      pickA: ["Flight & hotel comparison aggregators", "Savings blogs & deal-hunting content", "Categories where users come for cheapness", "Word-for-word cheap + category searches"],
+      pickB: ["Brand outlet & clearance stores", "Coupon-code & promo aggregators", "Markdown story that keeps brand tone", "Discount + category promo searches"],
+    },
+  },
+  "bargains-vs-deals": {
+    slug: "bargains-vs-deals",
+    a: "bargains",
+    b: "deals",
+    zh: {
+      title: ".bargains 和 .deals 怎么选：捡漏乐趣与交易促成",
+      metaDescription: ".bargains 报「捡到宝」的乐趣，适合捡漏社区与特卖情报；.deals 报「有好交易」，适合折扣聚合与促销频道。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "近义词的取舍看语感：一个偏「捡漏的乐趣」，一个偏「交易的促成」。.bargains 说「你赚到了」——折扣信息聚合、清仓特卖电商、二手捡漏社区、本地特卖情报号用 name.bargains，复数形式暗示「这里有一堆好货」，daily.bargains、tech.bargains 读起来就像栏目名，社区型产品用它更有烟火气；Identity Digital 运营，首年约 $12（约 ¥85）、续费约 $24/年（约 ¥174），续费是这一族里最温和的。.deals 说「这里有好交易」——折扣聚合与比价、秒杀与限时特卖频道、本地优惠平台、品牌促销活动页用 name.deals，deals 是英语购物达人每天搜索的高频词，认知度在省钱族后缀里最高；首年约 $9（约 ¥63）、续费约 $28/年（约 ¥204），首年更便宜、续费略贵。判断标准：产品带「淘」的乐趣——二手捡漏、清仓翻宝、社区分享型特卖情报 → .bargains 的捡漏语义更有温度，复数形式贴聚合与清单内容；产品是「交易信息流」——秒杀频道、返利比价、品牌大促页 → .deals 更直接，「品类 + .deals」与用户搜索习惯对齐，商业气质也更强。三点注意：一是续费差 $4/年不大，选型主要看语感别看价格；二是 .bargains 八个字母偏长，词根控制在 5–6 字符，.deals 五个字母更口播友好；三是这类站点信息时效性强，过期折扣最伤口碑，更新频率比域名更决定成败。命名上「品类/地名 + .bargains」适合捡漏社区与本地特卖，「品类/城市 + .deals」适合折扣聚合与促销频道，「daily/weekly + .bargains」适合订阅制特卖情报。",
+      pickA: ["二手捡漏与翻宝社区", "清仓特卖与本地情报号", "订阅制特卖清单（daily/weekly）", "社区分享型省钱产品"],
+      pickB: ["折扣聚合与返利比价站", "秒杀与限时特卖频道", "品牌大促活动专页", "「品类 + deals」高频搜索词"],
+    },
+    en: {
+      title: ".bargains vs .deals: The Thrill of the Find or the Transaction",
+      metaDescription:
+        ".bargains celebrates scoring a find — for treasure-hunt communities and sale alerts; .deals promises a good transaction — for deal aggregators and promo channels. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Choosing between near-synonyms comes down to tone: one leans the thrill of the find, the other the closing of a transaction. .bargains says \"you scored\" — deal-aggregation sites, clearance e-commerce, secondhand treasure-hunting communities and local sale alerts on name.bargains carry a built-in invitation to come dig; the plural implies a whole pile of finds, so daily.bargains or tech.bargains read like column names, and community products feel homier here. Operated by Identity Digital, about $12 for the first year (≈¥85) and $24/yr to renew (≈¥174) — the gentlest renewal in the family. .deals says \"good transactions inside\" — deal aggregators and comparison sites, flash-sale channels, local offer platforms and brand promo pages on name.deals ride the single highest-recognition word in the savings family; shoppers search deals every day. About $9 first year (≈¥63) and $28/yr to renew (≈¥204) — cheaper year one, slightly pricier to hold. The test: if the product carries the joy of the hunt — secondhand finds, clearance digging, community-shared sale intel → .bargains' semantics are warmer and the plural suits aggregation and list content; if the product is a transaction feed — flash sales, cashback comparison, brand promo pages → .deals is more direct, category + .deals matches how users actually search, and the commercial tone is stronger. Three cautions: the $4/yr renewal gap is trivial — pick by tone, not price; .bargains is 8 letters, so keep the root to 5–6 characters, while 5-letter .deals speaks easier; and freshness is everything in this niche — stale offers hurt more than any domain helps, so update cadence beats the address. Naming: category or place + .bargains fits treasure-hunt communities and local sales; category or city + .deals fits aggregators and promo channels; daily or weekly + .bargains suits subscription-style sale alerts.",
+      pickA: ["Secondhand treasure-hunt communities", "Clearance sales & local sale alerts", "Subscription sale lists (daily/weekly)", "Community-driven savings products"],
+      pickB: ["Deal aggregators & cashback comparison", "Flash-sale & limited-time channels", "Brand promo campaign pages", "High-volume category + deals searches"],
+    },
+  },
+  "supplies-vs-supply": {
+    slug: "supplies-vs-supply",
+    a: "supplies",
+    b: "supply",
+    zh: {
+      title: ".supplies 和 .supply 怎么选：一件件耗材与供给概念",
+      metaDescription: ".supplies 指「一件件耗材」，适合办公美术宠物等耗材店；.supply 偏「供应/供给」的抽象概念，适合供应链与潮牌补给。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "单复数一字之差，语义分了家：复数指「一件件耗材」，单数偏「供给」这个概念。.supplies 把货写进域名——办公用品店、美术画材铺、宠物与园艺耗材电商、实验室与医疗物资商用 name.supplies，客户搜「品类 + supplies」时逐字对齐，art.supplies、pet.supplies 一看就是卖什么的；Identity Digital 运营，注册续费均约 $20/年（约 ¥145），平进平出没有首年套路。.supply 偏抽象的「供应/供给」——建材五金与工业耗材商、供应链与批发平台、以及欧美潮牌爱用的 supply 品牌词（潮牌补给站叙事）用 name.supply，coffee.supply、barber.supply 自带「行业补给站」气质；注册续费均约 $21/年（约 ¥152），同样平价平款，两者持有成本几乎相同。判断标准：卖的是「一件件实物耗材」——文具画材、宠物园艺用品、实验耗材，客户搜的就是 office supplies、art supplies → 复数 .supplies 与搜索词逐字吻合，语义最准；卖的是「供给关系或品牌叙事」——批发供应链、行业补给、潮牌 supply 命名传统 → 单数 .supply 更贴，品牌感也更强。三点注意：一是对外拼写务必统一，单复数是两个域名，最好把另一个防御性注册并 301，防客户拼错流失；二是复数尾音 s 口播时容易被吞，线下传播多的生意留意；三是两个后缀都是 8/6 字母不短，词根控制在 5 字符左右且别再含 supply 字样。命名上「品类 + .supplies」（office/art/pet/garden/lab）适合耗材店，「品类/城市 + .supply」适合批发供应与本地建材，「品牌词 + .supply」适合潮牌补给叙事。",
+      pickA: ["办公与美术用品店", "宠物园艺与实验耗材电商", "「品类 + supplies」搜索词逐字吻合", "卖一件件实物耗材的店"],
+      pickB: ["批发与供应链平台", "建材五金与工业供应商", "潮牌 supply 命名传统", "「行业补给站」品牌叙事"],
+    },
+    en: {
+      title: ".supplies vs .supply: The Items or the Provisioning",
+      metaDescription:
+        ".supplies means the physical consumables — for office, art and pet supply stores; .supply leans the abstract provisioning — for supply chains and streetwear brands. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One letter apart, the meanings split cleanly: the plural means the items, the singular means the provisioning. .supplies writes the goods into the address — office supply stores, art material shops, pet and garden consumable e-commerce, and lab or medical suppliers on name.supplies align word for word with what customers search: art.supplies or pet.supplies explains the shop at a glance. Operated by Identity Digital at roughly $20/yr for both registration and renewal (≈¥145) — flat pricing, no first-year teaser. .supply leans abstract — building-material and industrial vendors, supply-chain and wholesale platforms, plus the streetwear world's beloved supply brand word (the outfitter narrative) on name.supply carry that industry-depot feel: coffee.supply or barber.supply says it instantly. Also flat at about $21/yr (≈¥152), so holding costs are effectively identical. The test: if you sell physical consumables item by item — stationery, art materials, pet and garden goods, lab supplies — customers literally search office supplies or art supplies → the plural .supplies matches the query letter for letter; if you sell the provisioning relationship or a brand story — wholesale supply chains, industry outfitting, the streetwear supply naming tradition → the singular .supply fits truer and brands harder. Three cautions: pick one spelling publicly and defensively register the other with a 301 — they are two different domains and typo traffic is real; the trailing s gets swallowed in speech, so word-of-mouth businesses beware; and at 8 and 6 letters neither is short — keep the root near 5 characters and never repeat supply in it. Naming: category + .supplies (office, art, pet, garden, lab) fits consumable stores; category or city + .supply fits wholesale and local building materials; brand word + .supply fits the streetwear outfitter story.",
+      pickA: ["Office & art supply stores", "Pet, garden & lab consumables e-commerce", "Word-for-word category + supplies searches", "Shops selling physical items"],
+      pickB: ["Wholesale & supply-chain platforms", "Building-material & industrial vendors", "Streetwear supply naming tradition", "Industry-outfitter brand narrative"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
