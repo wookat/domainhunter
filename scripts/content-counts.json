@@ -618,7 +618,7 @@
     ]
   },
   "vs": {
-    "count": 342,
+    "count": 348,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -961,7 +961,13 @@
       "meme-vs-lol",
       "quest-vs-fun",
       "kids-vs-baby",
-      "win-vs-vip"
+      "win-vs-vip",
+      "bond-vs-finance",
+      "sbs-vs-xyz",
+      "cyou-vs-fun",
+      "monster-vs-games",
+      "pics-vs-photos",
+      "mobi-vs-app"
     ]
   }
 }

@@ -7549,6 +7549,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Membership products & paid subscriptions", "Fan communities & supporter operations", "E-commerce member sites & member centers", "China-facing business needing ICP filing"],
     },
   },
+  "bond-vs-finance": {
+    slug: "bond-vs-finance",
+    a: "bond",
+    b: "finance",
+    zh: {
+      title: ".bond 和 .finance 怎么选：纽带的双关与金融的行业词",
+      metaDescription: ".bond 一词双关「纽带/债券」，关系型品牌与理财内容站首年成本极低；.finance 直说金融行业，金融科技与 DeFi 的严肃标配。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都能做金融站，分工在说法：一个说「连接」，一个说「行业」。.bond 赢在一词两吃——信任型服务与客户关系品牌、会员社群与校友联结站、婚恋与情感陪伴类产品、低成本试水的债券与理财内容站用 name.bond，bond 既是金融里的「债券」，也是人与人之间的「纽带」，同一个后缀能同时服务理财站与关系型品牌；注册局为 ShortDot SA（卢森堡），走低价走量路线，首年约 $1（约 ¥10）、续费约 $16/年（约 ¥115）——首年几乎白送，务必按续费价做多年预算。.finance 赢在行业正统——金融科技创业公司、记账与预算工具、财务咨询与企业财务 SaaS、DeFi 协议用 name.finance，「金融」两个字直接写进后缀，气质严肃、专业、值钱；DeFi 圈更把它用成行业惯例（yearn.finance 等头部协议完成了用户教育）；Identity Digital 运营，首年约 $7（约 ¥48）、续费约 $52/年（约 ¥375）——续费偏高，认真做金融品牌的团队通常不在乎这个量级。判断标准：产品核心是「金融服务」这个行业身份——理财、支付、DeFi、财务 SaaS → .finance 的行业词零解释成本，监管语境下也更显正规；产品核心是「关系与信任」这个叙事——客户关系、社群联结、情感陪伴，或想低价试水理财内容 → .bond 的双关更巧、持有成本低得多。两者常见组合打法：正式金融品牌主站用 .finance，社群与活动页用 .bond 批量铺开。三点注意：一是两者续费差三倍以上（$16 vs $52/年），批量注册前先算三年总成本；二是金融语义自带监管预期，两个后缀的理财站都要有合规信息与真实主体背书；三是英文里 bail bond（保释金）语义邻近，法律相关项目起 .bond 名字时留意联想。命名上「关系词 + .bond」（team.bond）与「品牌/场景词 + .finance」（acme.finance）各是两边最点题的模式。",
+      pickA: ["信任型服务与客户关系品牌", "会员社群与校友联结站", "婚恋与情感陪伴类产品", "低成本试水的理财内容站"],
+      pickB: ["金融科技创业公司与支付产品", "DeFi 协议与加密金融项目", "财务咨询与企业财务 SaaS", "需要严肃专业形象的金融品牌"],
+    },
+    en: {
+      title: ".bond vs .finance: The Double-Meaning Tie or The Industry Word",
+      metaDescription:
+        ".bond puns on ties and bonds — relationship brands and finance content start nearly free; .finance names the industry outright, the serious default for fintech and DeFi. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both can host a finance site; the split is what the suffix says: one says connection, the other says industry. .bond wins on the two-for-one word — trust-driven services and customer-relationship brands, membership and alumni communities, dating and companionship products, and low-cost bond or investing content on name.bond use a word that is both the financial instrument and the human tie, so one suffix serves an investing site and a relationship brand equally well; the registry is ShortDot SA of Luxembourg on a high-volume low-price playbook, at about $1 first year (≈¥10) and $16/yr to renew (≈¥115) — year one is nearly free, so budget multi-year on the renewal. .finance wins on industry standing — fintech startups, budgeting and accounting tools, financial advisory and corporate-finance SaaS, and DeFi protocols on name.finance write the industry into the suffix with a serious, professional, high-value air; DeFi has even made it a convention (yearn.finance and peers educated the market); run by Identity Digital at about $7 first year (≈¥48) and $52/yr to renew (≈¥375) — a high renewal that serious finance teams rarely mind. The test: the core is the financial-services identity — investing, payments, DeFi, finance SaaS → .finance names the industry at zero explanation cost and reads more official under regulatory scrutiny; the core is the relationship-and-trust narrative — CRM, community ties, companionship, or cheap validation of finance content → .bond puns harder and costs far less to hold. A common combo: .finance for the formal brand main site, .bond spread across community and campaign pages. Three cautions: renewals differ more than threefold ($16 vs $52/yr), so price three years before bulk-registering; finance semantics carry regulatory expectations — both suffixes need compliance info and a real entity behind the site; and \"bail bond\" sits close in English, worth noting when naming law-adjacent .bond projects. Naming: relationship word + .bond (team.bond) versus brand or context word + .finance (acme.finance) are each side's on-target patterns.",
+      pickA: ["Trust-driven services & CRM brands", "Membership & alumni communities", "Dating & companionship products", "Low-cost finance content experiments"],
+      pickB: ["Fintech startups & payment products", "DeFi protocols & crypto finance", "Financial advisory & corporate-finance SaaS", "Serious, professional finance branding"],
+    },
+  },
+  "sbs-vs-xyz": {
+    slug: "sbs-vs-xyz",
+    a: "sbs",
+    b: "xyz",
+    zh: {
+      title: ".sbs 和 .xyz 怎么选：留白的缩写与反叛的亚文化",
+      metaDescription: ".sbs 是 side-by-side 的中性缩写，语义留白任品牌自己解释；.xyz 有 Alphabet 背书与 Web3 亚文化，注册量长期霸榜。对比两者的定位、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同为低价通用后缀，分工在气质：一个是空白画布，一个是亚文化旗帜。.sbs 赢在语义留白——三字母品牌缩写站、企业服务与咨询公司官网、低成本站群与测试项目、活动与快闪推广落地页用 name.sbs，sbs 官方解读为 side by side（并肩），本身不携带行业含义，正因为「空白」，任何缩写型品牌都能把自己的解释填进去；注册局为 ShortDot SA（卢森堡），首年约 $2（约 ¥11）、续费约 $16/年（约 ¥115）——首年成本极低，适合先占后验证。.xyz 赢在生态与态度——Web3 与加密项目、创意实验与造词品牌、年轻亚文化社群、需要「圈内认同」的项目用 name.xyz，Google 母公司 Alphabet 用 abc.xyz 做官网给了它最高背书，Web3 圈更把它变成亚文化标志：不想要 .com 的正襟危坐，就用 .xyz 的年轻反叛；首年注册常常只要几块钱、续费回到常规档（约为首年十倍），注册量长期位居新顶级域榜首。判断标准：品牌是缩写、语义想自己定义、或做站群矩阵要最低持有成本 → .sbs 的空白与低价直给；品牌要借一个「有故事的后缀」——Web3、创意实验、年轻社群 → .xyz 的 Alphabet 背书与亚文化认同是 .sbs 给不了的。两者常见组合打法：主实验项目用 .xyz 立旗，配套测试站与落地页用 .sbs 批量铺开。三点注意：一是两者都是低价后缀重灾区，垃圾站多，部分邮件网关与企业防火墙更敏感，正式业务信函建议另配成熟后缀；二是两者首年与续费差距都大，长期项目按续费价算总成本；三是 .xyz 的二级市场与案例远比 .sbs 成熟，打算转售的域名投资优先 .xyz。命名上「品牌缩写 + .sbs」（acm.sbs）与「造词/梗词 + .xyz」（zora.xyz 类）各是两边最点题的模式。",
+      pickA: ["三字母品牌缩写站", "企业服务与咨询公司官网", "低成本站群与测试项目", "活动与快闪推广落地页"],
+      pickB: ["Web3 与加密项目", "创意实验与造词品牌", "年轻亚文化社群", "需要注册量生态与案例背书"],
+    },
+    en: {
+      title: ".sbs vs .xyz: The Blank Abbreviation or The Subculture Flag",
+      metaDescription:
+        ".sbs is the neutral side-by-side abbreviation that lets brands define the meaning; .xyz carries Alphabet's endorsement and Web3 subculture with chart-topping registrations. Compare positioning, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are budget generics; the split is attitude: one is a blank canvas, the other a subculture flag. .sbs wins on semantic blankness — three-letter brand abbreviation sites, business-services and consulting homepages, low-cost site networks and test projects, and event or pop-up landing pages on name.sbs use a suffix officially read as side by side that carries no industry meaning of its own, and precisely because it is blank, any abbreviation brand can pour its own story in; the registry is ShortDot SA of Luxembourg, at about $2 first year (≈¥11) and $16/yr to renew (≈¥115) — cheap enough to claim first and validate later. .xyz wins on ecosystem and attitude — Web3 and crypto projects, creative experiments and invented-word brands, young subculture communities, and projects that want in-crowd recognition on name.xyz got the ultimate endorsement when Alphabet, Google's parent, chose abc.xyz, and Web3 turned it into a subculture badge: skip .com's formality for .xyz's young rebellion; first-year pricing is often pocket change with renewals back at the normal tier (roughly ten times year one), and registrations have topped the new-gTLD charts for years. The test: the brand is an abbreviation, wants to define its own meaning, or runs a site network at minimum holding cost → .sbs delivers blankness and price directly; the brand wants a suffix with a story — Web3, creative experiments, young communities → .xyz's Alphabet endorsement and subculture cachet are things .sbs cannot offer. A common combo: plant the flag on .xyz for the main experiment, spread test sites and landing pages across .sbs. Three cautions: both are heavily abused cheap suffixes — some mail gateways and corporate firewalls stay wary, so keep formal business mail on a mature suffix; both gap widely between year one and renewal, so budget long-term on the renewal; and .xyz's resale market and case studies far outclass .sbs — domain investors eyeing resale should favor .xyz. Naming: brand abbreviation + .sbs (acm.sbs) versus invented or meme word + .xyz (zora.xyz style) are each side's on-target patterns.",
+      pickA: ["Three-letter brand abbreviation sites", "Business-services & consulting homepages", "Low-cost site networks & test projects", "Event & pop-up landing pages"],
+      pickB: ["Web3 & crypto projects", "Creative experiments & invented-word brands", "Young subculture communities", "Registration-volume ecosystem & precedent"],
+    },
+  },
+  "cyou-vs-fun": {
+    slug: "cyou-vs-fun",
+    a: "cyou",
+    b: "fun",
+    zh: {
+      title: ".cyou 和 .fun 怎么选：邀约的语气与好玩的气氛",
+      metaDescription: ".cyou 读作 see you，域名本身是一句邀约，创作者主页与 Z 世代社群最贴；.fun 直说「好玩」，游戏娱乐与互动营销一眼即懂。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在跟用户「玩」，分工在说话对象：一个是对你说的告别，一个是对气氛的形容。.cyou 赢在邀约语气——创作者个人主页与约见页、面向 Z 世代的内容与社群站、活动邀请与见面会落地页、游戏与二次元同好站用 name.cyou，cyou 读作 see you，域名本身就是一句告别与邀约，天生带社交口吻，这在以名词为主的后缀里非常少见；注册局为 ShortDot SA（卢森堡），首年约 $2（约 ¥11）、续费约 $16/年（约 ¥115）——首年极低，长期按续费价算。.fun 赢在气氛直给——小游戏与休闲游戏站、互动营销页与趣味测试、派对与活动策划、玩具与亲子品牌用 name.fun，「名字 + .fun」天然传达轻松愉快的预期，凡是想让用户「玩起来」的产品都合适；首年价格常年极低（常见一两美元），库存极好，续费上浮幅度在新后缀里不算激进。判断标准：主体是「人」——创作者、社群、见面会，域名要像一句话说给粉丝听 → .cyou 的语气感独一份，mika.cyou 读出来就是「回头见」；主体是「事」——游戏、活动、营销 campaign，域名要形容体验 → .fun 的形容词直给，零解释成本。两者常见组合打法：创作者主页用 .cyou，活动与小游戏页用 .fun 各占其位。三点注意：一是两者都是低价后缀，被低质站用得多，正式业务信函建议另配成熟后缀、品牌靠内容撑住第一印象；二是两者语义都偏轻，金融、医疗、B2B 等严肃场景不合适；三是 .cyou 的谐音在非英语用户里需要教育，海外传播以英语受众为主时更稳。命名上「昵称/ID + .cyou」（mika.cyou）与「品类/活动词 + .fun」（quiz.fun）各是两边最点题的模式。",
+      pickA: ["创作者个人主页与约见页", "面向 Z 世代的内容与社群站", "活动邀请与见面会落地页", "游戏与二次元同好站"],
+      pickB: ["小游戏与休闲游戏站", "互动营销页与趣味测试", "派对与活动策划品牌", "玩具与亲子品牌"],
+    },
+    en: {
+      title: ".cyou vs .fun: The Invitation or The Vibe",
+      metaDescription:
+        ".cyou reads as \"see you\" — the domain itself is an invitation, best for creator pages and Gen-Z communities; .fun states the vibe outright for games and interactive marketing. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both play with the user; the split is who the suffix talks to: one is a goodbye said to you, the other an adjective for the mood. .cyou wins on the invitation — creator homepages and meet-up links, Gen-Z content and community sites, event invitation and fan-meet landing pages, and gaming or anime fandom sites on name.cyou use a suffix that reads as see you, so the domain itself is a farewell and an invitation with a built-in social voice, rare among noun-heavy suffixes; the registry is ShortDot SA of Luxembourg, at about $2 first year (≈¥11) and $16/yr to renew (≈¥115) — a rock-bottom first year, budgeted long-term on the renewal. .fun wins on stating the mood — casual game sites, interactive marketing pages and quizzes, party and event planning, and toy or family brands on name.fun make \"name + .fun\" promise a light, playful experience, fitting anything that wants users to play; first-year pricing stays very low (a dollar or two is common), inventory is excellent, and the renewal climb is mild by new-gTLD standards. The test: the subject is a person — a creator, a community, a fan meet — and the domain should sound like a line spoken to fans → .cyou's tone is one of a kind, mika.cyou reads as \"see you around\"; the subject is a thing — a game, an event, a campaign — and the domain should describe the experience → .fun's adjective lands at zero explanation cost. A common combo: .cyou for the creator homepage, .fun for the games and campaign pages. Three cautions: both are cheap suffixes with plenty of low-quality neighbors — keep formal business mail on a mature suffix and let content carry the first impression; both skew light, misfitting finance, healthcare and B2B; and .cyou's phonetic pun needs educating outside English — safest when the audience reads English. Naming: nickname or handle + .cyou (mika.cyou) versus category or event word + .fun (quiz.fun) are each side's on-target patterns.",
+      pickA: ["Creator homepages & meet-up links", "Gen-Z content & community sites", "Event invitation & fan-meet landing pages", "Gaming & anime fandom sites"],
+      pickB: ["Casual & mini-game sites", "Interactive marketing & quizzes", "Party & event planning brands", "Toy & family brands"],
+    },
+  },
+  "monster-vs-games": {
+    slug: "monster-vs-games",
+    a: "monster",
+    b: "games",
+    zh: {
+      title: ".monster 和 .games 怎么选：猛的气质与行业的品类",
+      metaDescription: ".monster 把「猛」写进域名，怪物题材与张扬品牌自带记忆点；.games 是游戏行业的语义标配，工作室与独立游戏零解释成本。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都能做游戏站，分工在词性：一个是形容气质的形容词，一个是指明行业的品类词。.monster 赢在张力——游戏与怪物题材项目、健身增肌与力量训练品牌、能量饮料与潮流周边电商、恐怖与万圣节内容站用 name.monster，monster 在英文里既是「怪兽」也是「猛的、极强的」，形容词用法让它天然适合强调力量、夸张与个性的品牌，比中性后缀更有记忆点；注册局为 XYZ.COM LLC（.xyz 的注册局），首年约 $2（约 ¥11）、续费约 $13/年（约 ¥93）——续费在新顶级域里属于中低档，长期持有成本可控。.games 赢在行业正统——游戏工作室官网、独立游戏作品站、电竞战队、游戏媒体与社区用 name.games，行业写进域名一眼即懂，Epic 旗下产品页与众多 Steam 独立开发者的作品集都在用；相比单数 .game 的注册局天价，复数 .games 首年百元级、续费一两百元（人民币），是游戏行业性价比最高的语义后缀。判断标准：品牌靠「气质」取胜——怪物 IP、力量感、张扬个性，且业务可能溢出游戏（健身、饮料、周边） → .monster 的形容词跨界自由；品牌靠「行业」定位——工作室、作品集、电竞、游戏媒体 → .games 的品类词零解释，圈内认同直接拉满。两者常见组合打法：工作室主站用 .games，怪物题材单款 IP 与周边店用 .monster 立个性。三点注意：一是 .monster 词义偏娱乐化，B2B 与金融、医疗等严肃行业慎用；二是 .monster 七个字母、.games 五个字母都不算短，移动端展示与口播时建议配短前缀；三是重度单款品牌无论选哪边，都建议评估拿下 .com 防御。命名上「品类/角色 + .monster」（pixel.monster）与「工作室名/游戏名 + .games」（arcade.games）各是两边最点题的模式。",
+      pickA: ["游戏与怪物题材 IP 项目", "健身增肌与力量训练品牌", "能量饮料与潮流周边电商", "恐怖与万圣节内容站"],
+      pickB: ["游戏工作室官网", "独立游戏作品站", "电竞战队与游戏媒体", "需要行业语义零解释成本"],
+    },
+    en: {
+      title: ".monster vs .games: The Attitude or The Industry",
+      metaDescription:
+        ".monster writes intensity into the address — creature IPs and loud brands get instant recall; .games is the gaming industry's semantic default for studios and indies. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both can host a gaming site; the split is the part of speech: one is an adjective for attitude, the other a category noun for the industry. .monster wins on intensity — gaming and creature-themed projects, strength-training and bodybuilding brands, energy drinks and streetwear merch, and horror or Halloween content on name.monster use a word that is both a creature and English shorthand for \"huge, beastly\", and that adjectival reading suits brands built on power, exaggeration and personality, far stickier than a neutral suffix; the registry is XYZ.COM LLC, operator of .xyz, at about $2 first year (≈¥11) and $13/yr to renew (≈¥93) — a mid-low renewal by new-gTLD standards, affordable to hold long-term. .games wins on industry standing — game-studio homepages, indie game portfolios, esports teams, and gaming media and communities on name.games write the industry into the address at a glance, with Epic product pages and countless Steam indie portfolios already there; against the registry-premium singular .game, the plural .games runs an affordable double-digit-dollar first year with renewals around $20–30, the best value semantic suffix in gaming. The test: the brand wins on attitude — creature IPs, raw power, loud personality — and may spill beyond gaming (fitness, drinks, merch) → .monster's adjective crosses categories freely; the brand positions by industry — studio, portfolio, esports, media → .games names the category at zero explanation cost with instant in-crowd recognition. A common combo: .games for the studio main site, .monster for a creature-IP title and its merch store. Three cautions: .monster skews playful — B2B, finance and healthcare should think twice; at seven and five letters neither is short, so pair with a short prefix for mobile display and voice; and a flagship single title should weigh a defensive .com either way. Naming: category or character + .monster (pixel.monster) versus studio or game name + .games (arcade.games) are each side's on-target patterns.",
+      pickA: ["Gaming & creature-themed IP projects", "Strength-training & bodybuilding brands", "Energy drinks & streetwear merch", "Horror & Halloween content sites"],
+      pickB: ["Game-studio homepages", "Indie game portfolios", "Esports teams & gaming media", "Zero-explanation industry semantics"],
+    },
+  },
+  "pics-vs-photos": {
+    slug: "pics-vs-photos",
+    a: "pics",
+    b: "photos",
+    zh: {
+      title: ".pics 和 .photos 怎么选：随手的口语与交付的正装",
+      metaDescription: ".pics 是 pictures 的口语缩写，分享链接与图片工具读起来最顺口；.photos 更中性正式，摄影师作品集与照片交付的稳定门面。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在说「照片」，分工在语域：一个是随口说的，一个是正经写的。.pics 赢在口语顺口——活动照片分享与相册链接、表情包与素材下载站、图片处理与压缩工具、社交气质的活动页用 name.pics，pics 是 pictures 的日常缩写，比正式的 photography 短一半、比 photos 更随口，分享相册链接时读起来最自然；注册局为 XYZ.COM LLC（.xyz 的注册局），首年约 $2（约 ¥11）、续费约 $26/年（约 ¥189）——首年便宜、续费中等偏上，按续费价做预算。.photos 赢在中性正式——摄影师作品集、婚礼与人像工作室、活动跟拍与照片交付站点、图库站用 name.photos，「这里是照片」从域名开始就说清了，还有按项目/客户开子域做「照片交付页」的独特玩法（wedding.photos 式），链接发出去客户秒懂；Identity Digital 运营，注册约 $8（约 ¥59）、续费约 $24/年（约 ¥174），是创意后缀里的温和档。判断标准：场景是「随手分享与工具」——相册链接、表情包、压缩工具，读起来要像日常说话 → .pics 的口语感直给，share.pics 念出来就是一句话；场景是「作品与交付」——作品集、婚礼跟拍、客户交付，域名是生意门面 → .photos 更正式稳重，摄影师订单客单价完全无压力。两者常见组合打法：工作室主站用 .photos，活动分享页与小工具用 .pics 各司其职。三点注意：一是两者续费几乎同档（$26 vs $24/年），成本不构成选择因素，按语域选即可；二是高端商业摄影主站用 .photography 更显专业，两者都偏日常；三是图片站带宽成本高，无论选哪边都先规划好 CDN 与压缩策略。命名上「动词 + .pics」（share.pics）与「人名/场景 + .photos」（wedding.photos）各是两边最点题的模式。",
+      pickA: ["活动照片分享与相册链接", "表情包与素材下载站", "图片处理与压缩工具", "社交气质的活动页"],
+      pickB: ["摄影师作品集", "婚礼与人像工作室", "活动跟拍与照片交付站点", "图库与照片素材站"],
+    },
+    en: {
+      title: ".pics vs .photos: The Casual Shorthand or The Delivery Front",
+      metaDescription:
+        ".pics is the everyday shorthand for pictures — share links and image tools read naturally; .photos is the neutral, steadier front for portfolios and photo delivery. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both say pictures; the split is register: one is how people talk, the other how they write. .pics wins on the casual read — event photo sharing and album links, meme and asset download sites, image processing and compression tools, and social-flavored campaign pages on name.pics use the everyday shorthand for pictures, half the length of photography and looser than photos, so a shared album link reads naturally when spoken; the registry is XYZ.COM LLC, operator of .xyz, at about $2 first year (≈¥11) and $26/yr to renew (≈¥189) — cheap up front, mid-to-high renewal, so budget on the renewal. .photos wins on neutral formality — photographer portfolios, wedding and portrait studios, event coverage and photo-delivery sites, and stock libraries on name.photos say \"the pictures live here\" from the address on, with the unique per-client delivery-page play (wedding.photos style) where the link explains itself; run by Identity Digital at about $8 to register (≈¥59) and $24/yr to renew (≈¥174), the gentle tier among creative suffixes. The test: the scene is offhand sharing and tools — album links, memes, compressors — and the domain should sound like everyday speech → .pics lands the casual tone, share.pics reads as a sentence; the scene is work and delivery — portfolios, wedding coverage, client handoff — and the domain is the storefront → .photos reads steadier and more professional, easily carried by a photographer's order value. A common combo: .photos for the studio main site, .pics for event share pages and small tools. Three cautions: renewals sit in the same tier ($26 vs $24/yr), so cost barely matters — choose by register; high-end commercial photography flagships look sharper on .photography, as both of these skew everyday; and image sites burn bandwidth — plan CDN and compression first either way. Naming: verb + .pics (share.pics) versus name or occasion + .photos (wedding.photos) are each side's on-target patterns.",
+      pickA: ["Event photo sharing & album links", "Meme & asset download sites", "Image processing & compression tools", "Social-flavored campaign pages"],
+      pickB: ["Photographer portfolios", "Wedding & portrait studios", "Event coverage & photo delivery", "Stock & photo asset libraries"],
+    },
+  },
+  "mobi-vs-app": {
+    slug: "mobi-vs-app",
+    a: "mobi",
+    b: "app",
+    zh: {
+      title: ".mobi 和 .app 怎么选：移动的场景与应用的形态",
+      metaDescription: ".mobi 是 2005 年为移动设备而生的老牌后缀，移动专版与 H5 落地页语义直白；.app 由 Google 运营、强制 HTTPS，是应用产品的天然门面。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都跟手机有关，分工在指向：一个说「在哪用」，一个说「是什么」。.mobi 赢在场景直白——移动端专版站与 H5 落地页、移动营销与短链活动页、车载与物联网终端服务、老牌移动品牌的怀旧入口用 name.mobi，它是 2005 年由诺基亚、微软、沃达丰等联合发起的移动专用顶级域，少数「为一种设备而生」的后缀，二十年过去仍是移动语义最直白的选择；注册局为 Identity Digital（原 Afilias 体系），首年约 $4（约 ¥30）、续费约 $42/年（约 ¥300）——续费明显高于新顶级域均值，长期持有前先确认预算。.app 赢在形态与安全——App 官网与下载落地页、Web App 与 SaaS 产品、小工具官网用 name.app，由 Google 运营且全后缀强制 HTTPS（HSTS 预加载），浏览器直接拒绝不安全连接，天生适合正经的应用产品；语义零解释成本——用户看到 name.app 就知道这是个应用；价格适中，续费略高于 .com，库存比 .com 充裕得多。判断标准：产品是「应用」这个形态——有下载页、有 Web App、要传递安全感 → .app 的 Google 背书与强制 HTTPS 是行业标配，做主域名毫无压力；需求是「移动」这个场景——移动专版、H5 活动页、车载终端 → .mobi 语义最直白，但更适合做落地页与活动页而非品牌主域。两者常见组合打法：产品主站用 .app，移动营销活动页按需配 .mobi。三点注意：一是响应式设计普及后独立移动站必要性下降，「.mobi 是老式 WAP 站」的刻板印象仍在，品牌主站慎用；二是 .app 强制 HTTPS 意味着必须配好证书才能访问，上线前把 TLS 链路准备好；三是两者续费差距大（$42 vs 略高于 .com），批量注册前先算总成本。命名上「品牌 + .mobi」（acme.mobi）与「产品词 + .app」（name.app 已说明一切，别再重复 app 字样）各是两边最点题的模式。",
+      pickA: ["移动端专版站与 H5 落地页", "移动营销与短链活动页", "车载与物联网终端服务", "老牌移动品牌的场景入口"],
+      pickB: ["App 官网与下载落地页", "Web App 与 SaaS 产品", "需要强制 HTTPS 的安全形象", "应用形态产品的品牌主域"],
+    },
+    en: {
+      title: ".mobi vs .app: The Mobile Context or The Application Form",
+      metaDescription:
+        ".mobi was born in 2005 for mobile devices — device-specific sites and H5 landing pages read bluntly; .app is Google-run with enforced HTTPS, the natural front for application products. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both orbit the phone; the split is what they point at: one names where it's used, the other what it is. .mobi wins on blunt context — mobile-specific sites and H5 landing pages, mobile marketing and short-link campaigns, in-car and IoT terminal services, and heritage mobile-brand entrances on name.mobi use the TLD launched in 2005 by Nokia, Microsoft, Vodafone and others as a mobile-only domain, one of the very few suffixes created for a single class of device and still the bluntest way to say \"phone\" in an address; the registry is Identity Digital (the former Afilias stack), at about $4 first year (≈¥30) and $42/yr to renew (≈¥300) — clearly above the new-gTLD average, so confirm the budget before holding long-term. .app wins on form and security — app homepages and download landing pages, Web Apps and SaaS products, and utility sites on name.app run on Google's registry with suffix-wide enforced HTTPS (HSTS preloading), so browsers refuse insecure connections outright, a natural fit for serious application products; semantics cost nothing — users see name.app and know it's an app; pricing is moderate, renewing slightly above .com, with far better inventory. The test: the product is an application — download page, Web App, a security-first image → .app's Google backing and enforced HTTPS are the industry default, fully safe as the primary domain; the need is the mobile context — device-specific versions, H5 campaign pages, in-car terminals → .mobi says it bluntest, but suits landing and campaign pages better than a flagship domain. A common combo: .app for the product main site, .mobi for mobile campaign pages as needed. Three cautions: responsive design has cut the need for separate mobile sites and the \"old WAP site\" stereotype lingers — flagship brand sites should think twice about .mobi; .app's enforced HTTPS means the site is unreachable without a valid certificate, so wire up TLS before launch; and renewals gap widely ($42 vs slightly above .com), so price the portfolio first. Naming: brand + .mobi (acme.mobi) versus product word + .app (name.app already says it all — don't repeat \"app\" in the name) are each side's on-target patterns.",
+      pickA: ["Mobile-specific sites & H5 landing pages", "Mobile marketing & short-link campaigns", "In-car & IoT terminal services", "Heritage mobile-brand entrances"],
+      pickB: ["App homepages & download landing pages", "Web Apps & SaaS products", "Enforced-HTTPS security image", "Primary domain for application products"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

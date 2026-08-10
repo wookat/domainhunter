@@ -352,4 +352,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "quest-vs-fun", a: "quest", b: "fun", title: { zh: ".quest 和 .fun 怎么选：冒险的叙事与好玩的气质", en: ".quest vs .fun: The Adventure Story or The Playful Vibe" } },
   { slug: "kids-vs-baby", a: "kids", b: "baby", title: { zh: ".kids 和 .baby 怎么选：儿童内容的承诺与母婴品类的招牌", en: ".kids vs .baby: The Child-Safe Promise or The Baby-Market Sign" } },
   { slug: "win-vs-vip", a: "win", b: "vip", title: { zh: ".win 和 .vip 怎么选：赢的情绪与会员的身份", en: ".win vs .vip: The Thrill of Winning or The Status of Membership" } },
+  { slug: "bond-vs-finance", a: "bond", b: "finance", title: { zh: ".bond 和 .finance 怎么选：纽带的双关与金融的行业词", en: ".bond vs .finance: The Double-Meaning Tie or The Industry Word" } },
+  { slug: "sbs-vs-xyz", a: "sbs", b: "xyz", title: { zh: ".sbs 和 .xyz 怎么选：留白的缩写与反叛的亚文化", en: ".sbs vs .xyz: The Blank Abbreviation or The Subculture Flag" } },
+  { slug: "cyou-vs-fun", a: "cyou", b: "fun", title: { zh: ".cyou 和 .fun 怎么选：邀约的语气与好玩的气氛", en: ".cyou vs .fun: The Invitation or The Vibe" } },
+  { slug: "monster-vs-games", a: "monster", b: "games", title: { zh: ".monster 和 .games 怎么选：猛的气质与行业的品类", en: ".monster vs .games: The Attitude or The Industry" } },
+  { slug: "pics-vs-photos", a: "pics", b: "photos", title: { zh: ".pics 和 .photos 怎么选：随手的口语与交付的正装", en: ".pics vs .photos: The Casual Shorthand or The Delivery Front" } },
+  { slug: "mobi-vs-app", a: "mobi", b: "app", title: { zh: ".mobi 和 .app 怎么选：移动的场景与应用的形态", en: ".mobi vs .app: The Mobile Context or The Application Form" } },
 ];
