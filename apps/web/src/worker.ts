@@ -16,7 +16,8 @@ import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
 import { tldPrice } from "./types";
 import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
-import { fetchPorkbunPrices, PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
+import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
+import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
 
 // LLM_API_BASE：仅供本地 wrangler dev 指向假上游验证错误路径（R264），生产不设置
 type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace; LLM_API_BASE?: string };
@@ -38,12 +39,13 @@ const MONITOR_CHANGES_KEY = "monitor:changes";
 const MAX_MONITOR_DOMAINS = 500; // 全局监控上限
 const MAX_MONITOR_CHANGES = 100; // 变化记录保留条数
 const MONITOR_RECHECK_COOLDOWN_S = 60; // 手动刷新限频：每 IP 60 秒一次
-const PRICES_KEY = `prices:v2:${TLD_LIST.length}`; // key 掺 TLD 数量：指南扩容后旧缓存自动失效
-const PRICES_TTL = 24 * 3600; // Porkbun 价格缓存 24h
-const PRICES_STALE_KEY = "prices:latest"; // 不带版本的 stale 兜底 key：升版冷缓存 + 上游不可达时回退
-const PRICES_STALE_TTL = 30 * 24 * 3600; // stale 兜底保留 30 天（每次成功拉取刷新）
-const PRICES_FETCH_TIMEOUT_MS = 10_000; // Porkbun 拉取超时（原依赖 Workers 默认 ~60s，收紧到 10s）
-const PRICES_STALE_REFRESH_MS = 12 * 3600 * 1000; // cron 内主动重拉阈值：缓存超 12h 视为过久
+// 版本化缓存 key 掺 TLD 数量：指南扩容后旧缓存不再被当作全量数据；迁移/刷新逻辑见 prices-cache.ts
+const PRICES_CACHE_CFG: PricesCacheConfig = {
+  key: `prices:v2:${TLD_LIST.length}`,
+  tldList: TLD_LIST,
+  usdToCny: USD_TO_CNY,
+  timeoutMs: 25_000, // Porkbun 拉取超时：上游全量报价实测 ~13s，10s 会必然超时导致实时价永远拉不到
+};
 const SITE_ORIGIN = "https://hunt.zalize.com";
 const FAST_FIRST_ROUND_COUNT = 8; // fast 模式首轮候选数（更快首字节）
 const DOMAIN_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62}))+$/;
@@ -709,55 +711,8 @@ app.post("/api/check", async (c) => {
   return new Response(readable, { headers: { "content-type": "application/x-ndjson; charset=utf-8" } });
 });
 
-/** 上游失败/超时时回退不带版本的 stale key，响应标注 stale:true（TLD 数可少于当前，缺的走前端静态参考价） */
-async function loadStalePayload(kv: KVNamespace | undefined): Promise<string | null> {
-  if (!kv) return null;
-  try {
-    const stale = await kv.get(PRICES_STALE_KEY, "text");
-    if (!stale) return null;
-    const parsed = JSON.parse(stale) as Record<string, unknown>;
-    return JSON.stringify({ ...parsed, stale: true });
-  } catch {
-    return null;
-  }
-}
-
-/** 实时价格负载（JSON 字符串）：Porkbun 公开价格 API（美元），KV 缓存 24h；上游不可达时回退 stale key */
-async function loadPricesPayload(kv: KVNamespace | undefined, opts?: { forceRefresh?: boolean }): Promise<string | null> {
-  if (kv && !opts?.forceRefresh) {
-    try {
-      const cached = await kv.get(PRICES_KEY, "text");
-      if (cached) return cached;
-    } catch { /* 缓存读取失败则实时拉取 */ }
-  }
-  const prices = await fetchPorkbunPrices(kv, TLD_LIST, PRICES_FETCH_TIMEOUT_MS);
-  if (!prices) return loadStalePayload(kv);
-  const payload = JSON.stringify({ prices, currency: "USD", usdToCny: USD_TO_CNY, fetchedAt: Date.now(), tldCount: Object.keys(prices).length });
-  if (kv) {
-    try {
-      await kv.put(PRICES_KEY, payload, { expirationTtl: PRICES_TTL });
-      await kv.put(PRICES_STALE_KEY, payload, { expirationTtl: PRICES_STALE_TTL });
-    } catch { /* 缓存写入失败不影响返回 */ }
-  }
-  return payload;
-}
-
-/** cron 周期内价格缓存超过阈值（含缓存缺失）时主动重拉一次，避免长期 stale */
-async function refreshPricesIfStale(env: Bindings): Promise<void> {
-  const kv = env.CACHE;
-  if (!kv) return;
-  try {
-    const cached = await kv.get(PRICES_KEY, "text");
-    if (cached) {
-      const { fetchedAt } = JSON.parse(cached) as { fetchedAt?: number };
-      if (typeof fetchedAt === "number" && Date.now() - fetchedAt < PRICES_STALE_REFRESH_MS) return;
-    }
-    await loadPricesPayload(kv, { forceRefresh: true });
-  } catch { /* 重拉失败等下个 cron 周期 */ }
-}
-
 app.get("/api/prices", async (c) => {
-  const payload = await loadPricesPayload(c.env.CACHE);
+  const payload = await loadPricesPayload(c.env.CACHE, PRICES_CACHE_CFG);
   // 彻底无数据也返回 200 + 空 prices（前端全部走 ≈ 静态参考价），不再 502
   if (!payload) {
     return new Response(JSON.stringify({ prices: {}, currency: "USD", usdToCny: USD_TO_CNY, fetchedAt: null, stale: true }), {
@@ -871,7 +826,7 @@ app.post("/mcp", async (c) => {
   const args = (params?.arguments ?? {}) as Record<string, unknown>;
 
   if (toolName === "tld_prices") {
-    const payload = await loadPricesPayload(c.env.CACHE);
+    const payload = await loadPricesPayload(c.env.CACHE, PRICES_CACHE_CFG);
     if (!payload) return mcpText(id, "pricing upstream unavailable, try again later", true);
     // Porkbun 无报价的后缀（如 cn/so）用静态参考价补齐，带 approx 标记，保证覆盖全部追踪后缀
     const parsed = JSON.parse(payload) as { prices: Record<string, PriceEntry>; stale?: boolean } & Record<string, unknown>;
@@ -944,7 +899,7 @@ app.post("/mcp", async (c) => {
     // 首年注册价（美元）：实时价优先，静态参考价兜底（与 tld_prices 同口径）
     const priceByTld: Record<string, number> = {};
     try {
-      const payload = await loadPricesPayload(c.env.CACHE);
+      const payload = await loadPricesPayload(c.env.CACHE, PRICES_CACHE_CFG);
       if (payload) {
         const parsed = JSON.parse(payload) as { prices: Record<string, PriceEntry> };
         for (const t of tlds) if (parsed.prices[t]) priceByTld[t] = parsed.prices[t].registration;
@@ -1928,6 +1883,6 @@ export default {
     ctx.waitUntil(env.CACHE?.put("cron:last", String(Date.now())) ?? Promise.resolve());
     ctx.waitUntil(runMonitorSweep(env));
     ctx.waitUntil(pingIndexNow(env));
-    ctx.waitUntil(refreshPricesIfStale(env));
+    ctx.waitUntil(refreshPricesIfStale(env.CACHE, PRICES_CACHE_CFG));
   },
 };
