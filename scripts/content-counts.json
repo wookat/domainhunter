@@ -359,7 +359,7 @@
     ]
   },
   "guide": {
-    "count": 344,
+    "count": 350,
     "slugs": [
       "saas",
       "ecommerce",
@@ -704,7 +704,13 @@
       "chocolate",
       "weaving",
       "puppet",
-      "birding"
+      "birding",
+      "stargazing",
+      "cidery",
+      "bookbinding",
+      "letterpress",
+      "terrarium",
+      "axethrowing"
     ]
   },
   "vs": {

@@ -21452,6 +21452,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  stargazing: {
+    slug: "stargazing",
+    keywords: ["观星俱乐部", "天文科普", "星空营地", "stargazing club", "astronomy outreach"],
+    tlds: [
+      { tld: "com", zh: "观星营报名与望远镜带货的默认后缀，行程页与家长群里最稳", en: "The default suffix for camp bookings and telescope commerce — steadiest on the itinerary page and in the parents' chat" },
+      { tld: "club", zh: "俱乐部属性直给，会员制与同好社群零违和", en: "The club stated outright — zero friction for memberships and the hobbyist community" },
+      { tld: "space", zh: "后缀本身就是「太空」，天文品牌拿它是语义上的天作之合", en: "The suffix literally says space — a semantic match made in the sky for an astronomy brand" },
+    ],
+    zh: {
+      label: "观星俱乐部",
+      title: "观星俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "观星俱乐部与天文科普品牌命名指南：星体意象、暗夜叙事等思路，Celestron/星明天文台等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "观星俱乐部的名字要说出「抬头那一刻的安静」：城市人开两小时车逃离光污染，为的是躺在垫子上看一场猎户座流星雨——这个品类卖的不是望远镜，是「重新和宇宙对上眼神」的体验，名字要先把这份辽阔递出去。参照系清楚：Celestron 用 celestial 的词根做成望远镜大牌，证明「天上的词」自带专业感；国内的星明天文台以「星明」二字把业余天文做成发现超新星的民间传奇；各地「暗夜公园」认证则把 dark sky 变成了旅游资产。隐藏考点是业务分层：观星营与星空摄影团走行程报名、青少年天文科普走学校与机构合作、望远镜与赤道仪装备走电商测评——名字要在营地海报上有浪漫，在科普课表里专业，在器材圈里可信。误区在于把名字锁进硬核天文黑话：增长客群是亲子与情侣，名字要轻，别让「深空、赤纬」把新手挡在门外。",
+      namingIdeas: [
+        "星体意象直给：猎户、昴宿、织女、北落师门类星名词根——中文星官词库千年现成，一个星名就是一张文化名片",
+        "暗夜叙事路线：把「逃离光污染」写进名字——暗夜、无光、星野类词根，观星旅行线的核心卖点直说",
+        "天文词根借力：Celestron 式的 celestial/astro/stellar 词根——拉丁词库自带专业感，器材与科普双场景通吃",
+        "抬头时刻语法：把「第一次看清银河的惊叹」做成名字——观星体验的情感巅峰，亲子与情侣客群的共同记忆点",
+        "宇宙尺度隐喻：光年、星尘、深空类词根——宇宙的辽阔自带诗意，让品牌在社交媒体上天然出片",
+      ],
+      cases: [
+        { name: "Celestron", takeaway: "celestial 词根加仪器尾缀：望远镜大牌的命名模板——「天上的词」直接兑换专业信任" },
+        { name: "星明天文台", takeaway: "「星明」二字把业余天文做成发现超新星的民间传奇：中文观星品牌的文脉示范——朴素星名也能立住招牌" },
+        { name: "Sky-Watcher", takeaway: "「看天的人」直白到零解释成本：入门器材霸榜的命名功臣——新手第一次搜索就能拼对" },
+        { name: "Stellarium", takeaway: "stellar 加场馆尾缀做成桌面星象馆：软件把观星装进了每台电脑——工具化命名的天文样本" },
+      ],
+      pitfalls: [
+        "硬核黑话吓退新手：满是「深空、赤纬、导星」的名字让亲子客群却步——增长在轻装新人，名字要留白",
+        "锁死单一场景：叫「流星社」就难接日食团、天文冬令营与器材带货——天象留给活动线，品牌名留「抬头与辽阔」",
+        "光污染词自带负能量：名字里堆「逃离、黑暗」容易显得沉重——暗夜是卖点，但要说成「星空更亮」的正面语法",
+        "忽略机构采购场景：天文科普的大头在学校与场馆合作，名字要在课程方案里专业可信——太玩闹的名字进不了课表",
+      ],
+    },
+    en: {
+      label: "Stargazing clubs",
+      title: "How to Name a Stargazing Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Stargazing club and astronomy-outreach brand naming guide: star-name imagery, dark-sky narratives, breakdowns of Celestron/Sky-Watcher, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A stargazing club's name must say the quiet of looking up: city people drive two hours past the light dome to lie on a mat under the Orionids — this category sells not telescopes but the experience of meeting the universe's gaze again, and the name has to hand over that vastness first. The references are clear. Celestron built a telescope marque on the celestial root, proving that sky-words carry their own authority; Sky-Watcher won the beginner market with a name that costs zero explanation; and dark-sky park certifications turned darkness itself into a tourism asset. The hidden exam is the tier split: star camps and astrophotography tours run on itinerary bookings, youth astronomy outreach runs on school partnerships, and telescopes with mounts run on review-driven e-commerce — the name must carry romance on the camp poster, authority in the syllabus, and credibility in the gear forums. The failure mode is hardcore argot: growth lives with families and couples, so keep declination and deep-sky out of the marque.",
+      namingIdeas: [
+        "Star-name imagery outright: Orion, Pleiades, Vega and Fomalhaut roots — millennia of ready star lexicon; one star name is a cultural calling card",
+        "The dark-sky narrative: escaping the light dome written into the name — dark, unlit and starfield roots, the tour line's core sell said straight",
+        "Borrowing the astro root: celestial, astro and stellar in the Celestron manner — the Latin lexicon carries its own authority, serving gear and outreach alike",
+        "The look-up moment grammar: the gasp of first seeing the Milky Way made into a name — the emotional peak of the experience, the shared memory of families and couples",
+        "The cosmic-scale metaphor: light-year, stardust and deep-field roots — the vastness carries its own poetry, and the brand photographs itself on social media",
+      ],
+      cases: [
+        { name: "Celestron", takeaway: "The celestial root with an instrument suffix: the naming template of a telescope marque — sky-words redeemed directly for professional trust" },
+        { name: "Sky-Watcher", takeaway: "One who watches the sky, plain to zero explanation: the naming workhorse of the beginner-gear charts — a first-time searcher spells it right" },
+        { name: "Stellarium", takeaway: "Stellar plus a venue suffix made a desktop planetarium: software that put stargazing on every computer — the astronomy sample of tool naming" },
+        { name: "Unistellar", takeaway: "Universe fused with stellar: the smart-telescope startup that folded the whole sky into one word — compound naming for the connected-optics era" },
+      ],
+      pitfalls: [
+        "Hardcore argot scaring beginners: a name of deep-sky and guiding jargon turns families away — growth lives with light-packing newcomers, leave the name room to breathe",
+        "Locking into one event: a meteor-society name can't take eclipse tours, winter camps and gear commerce — leave the sky show to the outings, keep looking-up-and-vastness for the brand",
+        "Darkness reading as gloom: a name stacked with escape-and-black weighs heavy — the dark sky is the sell, but say it as the stars shine brighter, the positive grammar",
+        "Forgetting institutional purchase: outreach revenue lives with schools and venues, and the name must read credible in the course proposal — a too-playful name never makes the timetable",
+      ],
+    },
+  },
+  cidery: {
+    slug: "cidery",
+    keywords: ["苹果酒坊", "西打酒", "果酒品牌", "craft cidery", "hard cider"],
+    tlds: [
+      { tld: "com", zh: "电商与渠道铺货的默认后缀，酒标与报价单上最稳", en: "The default suffix for e-commerce and channel listings — steadiest on the label and the quote" },
+      { tld: "bar", zh: "自有酒吧与品鉴室直接对位，打酒与餐配场景归类", en: "The taproom aligned outright — the filing for pours and pairings" },
+      { tld: "farm", zh: "果园直酿的产地叙事直给，farm-to-bottle 一眼可信", en: "The orchard-origin story stated outright — farm-to-bottle credible at a glance" },
+    ],
+    zh: {
+      label: "苹果酒坊",
+      title: "苹果酒坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "手工苹果酒与果酒品牌命名指南：果园叙事、酒标语法等思路，Angry Orchard/Strongbow 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "苹果酒坊的名字要说出「果园到酒杯的那条路」：cider 在啤酒与葡萄酒的夹缝里长出自己的身位——比啤酒清爽、比葡萄酒轻盈，客群是想喝点低度果味的年轻人，名字要先把「果香与轻快」递到嘴边。参照系成熟：Angry Orchard 用「愤怒的果园」把产地叙事拧出戏剧张力，做成美国销量第一；Strongbow 借一张长弓把英伦血统射进全球商超；国产品牌则常以「有果味的中文名」抢占微醺场景。隐藏考点是业务分层：瓶装走商超与电商、生啤桶装走酒吧与餐配、品鉴室与果园游走体验预约——名字要在酒标上镜、在酒单里好念、在果园门口有画面。误区在于把 cider 说成「苹果味啤酒」：这个品类的溢价恰恰在「不是啤酒」，名字要立住果酒的独立身份。",
+      namingIdeas: [
+        "果园产地直给：果园、老树、山坡类词根——farm-to-bottle 的信任语法，酒标背面的产地故事从名字开始",
+        "苹果品种借力：用酿酒苹果品种名做词根——圈内人认亲的黑话，一个冷门品种名就是风味承诺",
+        "英伦血统语法：Strongbow 式的古词与徽章意象——cider 的文化母国是英国，借一个旧词接住千年酒史",
+        "微醺场景路线：把「低度、果味、轻快」写进名字——对齐年轻客群的微醺时刻，晚风、野餐、露台的画面语言",
+        "戏剧化反差：Angry Orchard 式的形容词反差——温和的水果加一个有脾气的词，货架上第一眼的记忆点",
+      ],
+      cases: [
+        { name: "Angry Orchard", takeaway: "「愤怒的果园」把产地叙事拧出戏剧张力：美国销量第一的命名功臣——反差形容词是货架记忆点的杠杆" },
+        { name: "Strongbow", takeaway: "一张长弓射穿全球商超：借古词与徽章意象接住英伦酒史——文化母国叙事的命名样本" },
+        { name: "Aspall", takeaway: "萨福克庄园地名酿了近三百年：地名即年份的信任语法——老字号果酒的产地命名天花板" },
+        { name: "Rekorderlig", takeaway: "瑞典语「有品质的」拗口却成了记忆点：北欧果酒的异域词策略——难念的名字用瓶身设计补齐传播" },
+      ],
+      pitfalls: [
+        "说成苹果味啤酒：cider 的溢价在「不是啤酒」，名字挂 beer 词根就自降身位——立住果酒的独立身份",
+        "锁死单一水果：叫「苹果坊」就难接梨酒、莓果与蜂蜜酒的产品线——水果留给酒标，品牌名留「果园与轻快」",
+        "甜腻词根劝退成人客群：满是「甜心、蜜糖」的名字显得像儿童饮料——微醺是成人的轻快，不是糖水的甜",
+        "忽略酒单场景：酒吧点单靠口头，名字要一遍念对——拗口的异域词除非有 Rekorderlig 级的设计预算，否则慎用",
+      ],
+    },
+    en: {
+      label: "Craft cideries",
+      title: "How to Name a Cidery: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Craft cidery and fruit-wine brand naming guide: orchard narratives, label grammar, breakdowns of Angry Orchard/Strongbow, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A cidery's name must say the road from orchard to glass: cider grew its own stance in the gap between beer and wine — crisper than beer, lighter than wine, aimed at drinkers who want something low-proof and fruit-forward, and the name has to hand over that brightness first. The references are mature. Angry Orchard twisted the origin story into theatrical tension and became America's best-seller; Strongbow shot its English bloodline into supermarkets worldwide on one longbow; Aspall aged a Suffolk place-name into three centuries of trust. The hidden exam is the tier split: bottles run on retail and e-commerce, kegs run on bars and pairings, and tasting rooms with orchard tours run on bookings — the name must photograph on the label, speak easily on the drinks list, and paint a picture at the orchard gate. The failure mode is calling it apple beer: the category's premium lives precisely in not being beer, so the name must hold cider's independent identity.",
+      namingIdeas: [
+        "The orchard origin outright: orchard, old-tree and hillside roots — the trust grammar of farm-to-bottle; the back-label story starts in the name",
+        "Borrowing the apple variety: a cider-apple cultivar as the root — the insider argot of the trade; one obscure variety name is a flavor promise",
+        "The English-bloodline grammar: old words and heraldic imagery in the Strongbow manner — cider's cultural homeland is England; one archaic word catches a millennium of drinking history",
+        "The session-buzz route: low-proof, fruit-forward and bright written into the name — aligned with the young drinker's golden hour, the picture language of picnics and terraces",
+        "The theatrical contrast: an adjective with a temper on a gentle fruit, the Angry Orchard play — the first-glance memory hook on the shelf",
+      ],
+      cases: [
+        { name: "Angry Orchard", takeaway: "An orchard with a temper twisted the origin story into drama: the naming workhorse of America's best-seller — the contrast adjective is the lever of shelf memory" },
+        { name: "Strongbow", takeaway: "One longbow shot through supermarkets worldwide: old words and heraldry catching the English drinking canon — the naming sample of homeland narrative" },
+        { name: "Aspall", takeaway: "A Suffolk estate name brewed for near three centuries: place-name as vintage, the trust grammar — the ceiling of origin naming in heritage cider" },
+        { name: "Rekorderlig", takeaway: "Swedish for 'proper', awkward yet unforgettable: the Nordic exotic-word strategy — a hard-to-say name repaid with bottle design" },
+      ],
+      pitfalls: [
+        "Reading as apple beer: cider's premium lives in not being beer, and a beer-root name demotes the brand — hold the independent identity",
+        "Locking into one fruit: an apple-house name can't take perry, berry and mead lines — leave the fruit to the label, keep orchard-and-brightness for the brand",
+        "Saccharine roots repelling adults: a name of sweetheart-and-honey reads like a children's drink — the session buzz is adult lightness, not sugar water",
+        "Forgetting the drinks list: bar orders travel by mouth, and the name must land in one hearing — exotic spellings need Rekorderlig-grade design budgets; otherwise beware",
+      ],
+    },
+  },
+  bookbinding: {
+    slug: "bookbinding",
+    keywords: ["手工装帧", "古籍修复", "手账定制", "bookbinding studio", "book restoration"],
+    tlds: [
+      { tld: "com", zh: "定制订单与电商带货的默认后缀，报价单与详情页上最稳", en: "The default suffix for custom orders and e-commerce — steadiest on the quote and the product page" },
+      { tld: "studio", zh: "工作室气质直给，手作与课程场景零违和", en: "The studio stated outright — zero friction for craft and classes" },
+      { tld: "art", zh: "装帧作为书籍艺术的定位直说，展览与藏家场景加分", en: "Binding declared as book art — a bonus in exhibitions and with collectors" },
+    ],
+    zh: {
+      label: "手工装帧工作室",
+      title: "手工装帧工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "手工装帧与古籍修复工作室命名指南：装帧工艺、书籍意象等思路，经折装/线装等文化词库梳理，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "手工装帧工作室的名字要说出「一本书被郑重对待的样子」：在电子书时代还愿意花上千元装帧一本书的人，买的是「把文字变成传家物」的仪式感，名字要先把这份郑重递出去。文化词库现成：线装、经折、蝴蝶装、金镶玉——中文书籍装帧的工艺名本身就是千年词库；西方的 Smyth 缝线、法式全皮装帧则是另一套可借的专业语法。隐藏考点是业务分层：婚书与家谱定制走高客单私人订制、手账与笔记本走电商与市集、装帧课程与古籍修复走机构合作——名字要在定制报价单上贵得起，在市集摊位上亲切，在图书馆合作方案里专业。误区在于把名字做成「文创杂货铺」：装帧的溢价在工艺的不可替代，名字要立住手艺人的身份，而不是泛文创的可爱。",
+      namingIdeas: [
+        "装帧工艺直给：线装、经折、蝴蝶装类工艺词根——中文书籍工艺的千年词库，一个工艺名就是专业身份证",
+        "书籍部位借力：书脊、扉页、函套、毛边类词根——爱书人一眼认亲的黑话，把工作室焊在书的解剖学上",
+        "纸与线的材质语法：宣纸、麻线、糨糊类材料词——手作的质感从材料名开始，详情页的信任语法",
+        "传家叙事路线：把「一本书传三代」写进名字——高客单定制的情感母题，婚书与家谱订单的画面语言",
+        "西式工坊借词：atelier、press、bindery 类词根——接住法式与英式装帧的专业谱系，外单与藏家场景加分",
+      ],
+      cases: [
+        { name: "荣宝斋", takeaway: "木版水印与装裱的百年老号：斋号语法的天花板——「斋」字把手艺接进文人传统，装帧工作室的现成参照" },
+        { name: "Shepherds Bookbinders", takeaway: "伦敦老牌装帧行以姓氏立店：人名即工艺担保的西式语法——手艺人身份直接写在门楣上", },
+        { name: "Moleskine", takeaway: "一个笔记本用「鼹鼠皮」的旧称做成全球文具帝国：材质旧词的命名杠杆——装帧词库里睡着的词都能叫醒" },
+        { name: "中国书店", takeaway: "古籍修复的国字号招牌：朴素直给也能立住百年——修复业务的信任靠机构感，名字不必花哨" },
+      ],
+      pitfalls: [
+        "泛文创化稀释手艺：满是「小确幸、治愈」的名字让装帧掉进杂货铺——溢价在工艺不可替代，立住手艺人身份",
+        "锁死单一品类：叫「手账社」就难接婚书、家谱与古籍修复的高客单线——品类留给产品线，品牌名留「纸与郑重」",
+        "工艺黑话过深：全是「Smyth 缝、书口刷金」的名字让新客不敢进门——黑话留给详情页，名字要留一扇亲切的门",
+        "忽略机构合作场景：古籍修复与课程的大头在图书馆与学校采购，名字要在方案里专业可信——太可爱的名字签不了合同",
+      ],
+    },
+    en: {
+      label: "Bookbinding studios",
+      title: "How to Name a Bookbinding Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Bookbinding and book-restoration studio naming guide: binding-craft lexicon, book-anatomy imagery, breakdowns of Shepherds/Moleskine, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A bookbinding studio's name must say what a book looks like when it is taken seriously: whoever pays real money to bind one volume in the e-book era is buying the ritual of turning text into an heirloom, and the name has to hand over that gravity first. The lexicon is ready-made: thread binding, concertina folds, butterfly binding — Chinese book craft carries a millennium of process names; Smyth sewing and French full-leather work supply the Western grammar. The hidden exam is the tier split: wedding books and family genealogies run on high-ticket commissions, journals and notebooks run on e-commerce and market stalls, and binding classes with rare-book restoration run on institutional partnerships — the name must justify the price on the commission quote, feel warm at the market stall, and read credible in the library proposal. The failure mode is the gift-shop register: the premium lives in irreplaceable craft, so the name must hold the binder's identity, not generic stationery cuteness.",
+      namingIdeas: [
+        "The binding craft outright: thread-bound, concertina and butterfly roots — a millennium of process lexicon; one craft term is a professional ID card",
+        "Borrowing book anatomy: spine, endpaper, slipcase and deckle roots — the argot book lovers recognize at a glance, welding the studio to the anatomy of the book",
+        "The paper-and-thread material grammar: xuan paper, linen thread and paste roots — handcraft texture starts in the material name, the trust grammar of the product page",
+        "The heirloom narrative: one book passed down three generations written into the name — the emotional motif of high-ticket commissions, the picture language of wedding books and genealogies",
+        "The Western atelier loan: atelier, press and bindery roots — catching the French and English binding lineage, a bonus with export orders and collectors",
+      ],
+      cases: [
+        { name: "Rong Bao Zhai (荣宝斋)", takeaway: "A century house of woodblock printing and mounting: the ceiling of the studio-hall grammar — the zhai suffix wires craft into the literati tradition" },
+        { name: "Shepherds Bookbinders", takeaway: "London's veteran bindery standing on a surname: the Western grammar of name-as-warranty — the binder's identity written on the lintel" },
+        { name: "Moleskine", takeaway: "A notebook empire built on an old word for oilcloth: the naming lever of the sleeping material term — the binding lexicon is full of words waiting to be woken" },
+        { name: "China Bookstore (中国书店)", takeaway: "The state marque of rare-book restoration: plain and direct held up a century — restoration trust runs on institutional weight, no flourish needed" },
+      ],
+      pitfalls: [
+        "The gift-shop register diluting the craft: a name of cozy-and-healing drops the bindery into the sundries aisle — the premium is irreplaceable craft; hold the binder's identity",
+        "Locking into one product: a journal-club name can't take wedding books, genealogies and restoration commissions — leave the product to the line, keep paper-and-gravity for the brand",
+        "Argot cut too deep: a name of Smyth-sewn and gilt-edge jargon bars the newcomer at the door — keep the argot for the product page, leave a warm door in the name",
+        "Forgetting the institutional deck: restoration and course revenue lives with libraries and schools, and the name must read credible in the proposal — a too-cute name never signs the contract",
+      ],
+    },
+  },
+  letterpress: {
+    slug: "letterpress",
+    keywords: ["活版印刷", "凸版印刷工作室", "喜帖名片印制", "letterpress studio", "movable type printing"],
+    tlds: [
+      { tld: "com", zh: "定制订单与电商带货的默认后缀，报价单与详情页上最稳", en: "The default suffix for custom orders and e-commerce — steadiest on the quote and the product page" },
+      { tld: "studio", zh: "工作室气质直给，印坊与课程场景零违和", en: "The studio stated outright — zero friction for the press room and classes" },
+      { tld: "ink", zh: "后缀本身就是「油墨」，活版品牌拿它是材质上的天作之合", en: "The suffix literally says ink — a material match made in the press for a letterpress brand" },
+    ],
+    zh: {
+      label: "活版印刷工作室",
+      title: "活版印刷工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "活版印刷与凸版工作室命名指南：铅字意象、压痕语法等思路，字在/Hatch Show Print 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "活版印刷工作室的名字要说出「铅字压进棉纸的那一下」：数码印刷把成本打到地板后，活版反而靠「有分量的压痕」活成了奢侈品——喜帖、名片、诗集限量版，客户买的是指尖能摸到的仪式感，名字要先把这份「重量」递出去。参照系清楚：国内的「字在」把活字做成文化 IP，两个字同时说了「文字在场」与「自在」；纳什维尔的 Hatch Show Print 用姓氏加「秀场印刷」活成美国活版的活化石；日本的活版再兴运动则证明这门手艺能靠美学复兴。隐藏考点是业务分层：喜帖与品牌名片走高客单定制、明信片与文创走电商与市集、活字体验课走亲子与团建——名字要在婚礼清单里精致，在市集摊位上好认，在体验课海报上有手感。误区在于把名字做成怀旧标本：活版的当代生意是「新审美用旧工艺」，名字要活在当下，而不是躺在博物馆。",
+      namingIdeas: [
+        "铅字意象直给：铅字、活字、字模类词根——工艺的核心资产直接入名，「字」在中文里自带千年书写传统",
+        "压痕手感语法：把「压进纸里的那一下」写进名字——压痕、凹凸、touch 类词根，活版区别于数码的唯一卖点",
+        "油墨与纸的材质路线：油墨、棉纸、宣纸类材料词——手作质感从材料开始，详情页与体验课的信任语法",
+        "印坊旧词借力：press、印坊、印务局类旧机构词——接住印刷业的历史谱系，老词新用自带故事感",
+        "字体排印借词：serif、em、活字号数类排印黑话——设计师客群一眼认亲，品牌名片订单的圈层暗号",
+      ],
+      cases: [
+        { name: "字在", takeaway: "两个字同时说了「文字在场」与「自在」：活字文化 IP 的命名天花板——一语双关把工艺接进生活方式" },
+        { name: "Hatch Show Print", takeaway: "姓氏加「秀场印刷」活成美国活版活化石：百年印坊的命名样本——直给的业务描述靠时间酿成传奇" },
+        { name: "Cranky Pressman", takeaway: "「暴脾气印刷工」的人格化反差：把匠人脾气做成品牌记忆点——幽默是手艺品牌破圈的杠杆" },
+        { name: "朵云轩", takeaway: "木版水印的百年斋号：「朵云」借信札雅称立店——印刷老号的文人命名语法，活版工作室的现成参照" },
+      ],
+      pitfalls: [
+        "怀旧标本化：满是「复古、怀旧」的名字把活版锁进博物馆——当代生意是新审美用旧工艺，名字要活在当下",
+        "锁死单一品类：叫「喜帖社」就难接名片、诗集与体验课的产品线——品类留给报价单，品牌名留「铅字与压痕」",
+        "排印黑话过深：全是「号数、字距」的名字让非设计师客群却步——黑话留给圈层传播，名字要留一扇大众的门",
+        "忽略婚礼场景的质感要求：喜帖是最大客单来源，名字要在婚礼清单里精致得体——太糙的名字接不住人生大事",
+      ],
+    },
+    en: {
+      label: "Letterpress studios",
+      title: "How to Name a Letterpress Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Letterpress and movable-type studio naming guide: type imagery, impression grammar, breakdowns of Hatch Show Print/Cranky Pressman, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A letterpress studio's name must say the moment lead type bites into cotton paper: after digital printing drove cost to the floor, letterpress survived as a luxury on the weight of its impression — wedding suites, brand cards, limited-run poetry, where the client buys ritual they can feel with a fingertip, and the name has to hand over that weight first. The references are clear. China's Zi Zai made movable type a cultural IP with a two-character pun on 'the written word present' and 'at ease'; Nashville's Hatch Show Print lived into America's letterpress fossil on a surname plus its trade; Japan's letterpress revival proved the craft can return on aesthetics alone. The hidden exam is the tier split: wedding suites and brand cards run on high-ticket commissions, postcards and paper goods run on e-commerce and market stalls, and type-setting workshops run on family and team-building bookings — the name must read refined on the wedding checklist, recognizable at the stall, and tactile on the workshop poster. The failure mode is the nostalgia specimen: the contemporary business is old craft under new aesthetics, and the name must live in the present, not lie in the museum.",
+      namingIdeas: [
+        "Type imagery outright: lead type, movable type and matrix roots — the craft's core asset named directly; the written character carries millennia of tradition",
+        "The impression grammar: the bite of type into paper written into the name — impression, deboss and touch roots, the one sell that separates letterpress from digital",
+        "The ink-and-paper material route: ink, cotton and xuan-paper roots — handcraft texture starts in the material, the trust grammar of the product page and the workshop",
+        "Borrowing the old press house: press, printworks and printing-office roots — catching the trade's historical lineage; an old word re-inked carries its own story",
+        "The typographic loan: serif, em and point-size argot — designers recognize kin at a glance, the circle password of brand-card commissions",
+      ],
+      cases: [
+        { name: "Zi Zai (字在)", takeaway: "Two characters saying 'the word present' and 'at ease' at once: the ceiling of movable-type IP naming — one pun wiring craft into lifestyle" },
+        { name: "Hatch Show Print", takeaway: "A surname plus the show-print trade lived into America's letterpress fossil: the century-press naming sample — a plain trade description aged into legend" },
+        { name: "Cranky Pressman", takeaway: "The personified contrast of a bad-tempered pressman: craftsman temper made a brand hook — humor is the lever that carries a craft brand beyond the circle" },
+        { name: "Duo Yun Xuan (朵云轩)", takeaway: "A century hall of woodblock printing named for an elegant word for letters: the literati grammar of the printing house — a ready reference for the letterpress studio" },
+      ],
+      pitfalls: [
+        "The nostalgia specimen: a name of retro-and-vintage locks the press in the museum — the contemporary business is old craft under new aesthetics; keep the name alive",
+        "Locking into one product: a wedding-suite name can't take brand cards, poetry runs and workshops — leave the product to the quote, keep type-and-impression for the brand",
+        "Typographic argot cut too deep: a name of point sizes and kerning bars the non-designer — keep the argot for the circle, leave a public door in the name",
+        "Forgetting the wedding register: suites are the largest ticket, and the name must sit refined on the wedding checklist — a rough name cannot hold a life event",
+      ],
+    },
+  },
+  terrarium: {
+    slug: "terrarium",
+    keywords: ["生态瓶工作室", "苔藓微景观", "雨林缸", "terrarium studio", "moss garden"],
+    tlds: [
+      { tld: "com", zh: "电商与课程预约的默认后缀，详情页与报价单上最稳", en: "The default suffix for e-commerce and class bookings — steadiest on the product page and the quote" },
+      { tld: "studio", zh: "工作室气质直给，手作课与定制场景零违和", en: "The studio stated outright — zero friction for workshops and commissions" },
+      { tld: "green", zh: "后缀本身就是「绿」，微景观品牌拿它是气质上的天作之合", en: "The suffix literally says green — a temperament match made in moss for a terrarium brand" },
+    ],
+    zh: {
+      label: "生态瓶工作室",
+      title: "生态瓶工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "生态瓶与苔藓微景观工作室命名指南：瓶中世界、微缩自然等思路，文化词库梳理与案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "生态瓶工作室的名字要说出「一只玻璃瓶里装下一片雨林」：都市人养不活一个阳台，却能在办公桌上养活一个瓶中生态——这个品类卖的是「可以拥有的微缩自然」，名字要先把这份「小而完整的世界」递出去。词库现成：苔、藓、雨林、瓶中、微缩——中文的「壶中天地」「芥子纳须弥」更是千年现成的哲学背书。隐藏考点是业务分层：成品生态瓶与雨林缸走电商与定制、DIY 材料包走线上带货、手作课与企业团建走预约制——名字要在详情页上有画面，在课程海报上亲切，在企业方案里专业。误区在于把名字做成「多肉杂货铺」：生态瓶的溢价在「闭环生态」的技术感与「瓶中世界」的诗意，名字要立住这两样，而不是泛绿植的可爱。",
+      namingIdeas: [
+        "瓶中世界直给：瓶、壶、盏类容器词加自然词根——「壶中天地」的千年哲学现成背书，一个容器词就是世界观",
+        "苔藓意象借力：苔、藓、青苔类词根——品类的核心材料自带禅意，日式苔庭的美学谱系一并接住",
+        "微缩语法路线：微、小、掌上类词根——「可以拥有的微缩自然」直说，办公桌场景的画面语言",
+        "闭环生态叙事：把「自己会呼吸的小世界」写进名字——生态瓶区别于普通绿植的技术卖点，详情页的信任语法",
+        "雨林秘境隐喻：雨林、秘境、深绿类词根——雨林缸高客单线的画面感，玩家圈层的认亲暗号",
+      ],
+      cases: [
+        { name: "壶中天地", takeaway: "道家「壶公悬壶」的千年典故：容器即宇宙的哲学语法——生态瓶命名可直接借用的文化母题" },
+        { name: "The Glass Forest", takeaway: "「玻璃森林」两个名词的直白拼接：材质加自然的命名模板——瓶中世界的画面一秒成像" },
+        { name: "苔庭", takeaway: "两个字接住日式苔庭美学谱系：苔藓词根的禅意直给——中文微景观品牌的气质示范" },
+        { name: "Bioloark", takeaway: "bio 加 ark 的「生态方舟」造词：雨林缸装备品牌的命名样本——把闭环生态说成诺亚方舟的野心" },
+      ],
+      pitfalls: [
+        "泛绿植化稀释身位：满是「多肉、盆栽」的名字把生态瓶拖回花店货架——溢价在闭环生态与瓶中诗意，别自降为绿植杂货",
+        "锁死单一形态：叫「苔藓社」就难接雨林缸、水陆缸与企业定制——材料留给产品线，品牌名留「瓶中世界」",
+        "技术黑话吓退新手：满是「造景、水陆、雾化」的名字让礼品客群却步——黑话留给玩家圈，名字要留一扇亲切的门",
+        "忽略礼品场景：生态瓶的大量成交是「送人」，名字要在礼盒上得体有寓意——太玩家向的名字进不了礼品清单",
+      ],
+    },
+    en: {
+      label: "Terrarium studios",
+      title: "How to Name a Terrarium Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Terrarium and moss-garden studio naming guide: world-in-a-jar imagery, miniature-nature grammar, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A terrarium studio's name must say a rainforest folded into one glass jar: the city dweller who cannot keep a balcony alive can keep a desktop ecosystem thriving — this category sells miniature nature you can own, and the name has to hand over that small, complete world first. The lexicon is ready: moss, fern, rainforest, jar and miniature — and the Chinese canon supplies 'a universe in a pot' and 'a mustard seed holding a mountain', millennia of philosophical endorsement. The hidden exam is the tier split: finished terrariums and paludariums run on e-commerce and commissions, DIY kits run on online retail, and workshops with corporate team-building run on bookings — the name must paint a picture on the product page, feel warm on the class poster, and read professional in the corporate deck. The failure mode is the succulent sundries shop: the premium lives in the closed-loop ecology and the poetry of the world in glass, and the name must hold both, not generic houseplant cuteness.",
+      namingIdeas: [
+        "The world-in-a-jar outright: jar, pot and vessel roots joined to nature words — 'a universe in a pot' is a millennium of ready philosophy; one vessel word is a worldview",
+        "Borrowing the moss image: moss, lichen and verdant roots — the category's core material carries its own zen, catching the Japanese moss-garden lineage in the same move",
+        "The miniature grammar: micro, palm-sized and tiny roots — miniature nature you can own said straight, the picture language of the desktop scene",
+        "The closed-loop narrative: a little world that breathes on its own written into the name — the technical sell that separates terrariums from houseplants, the trust grammar of the product page",
+        "The rainforest-sanctum metaphor: rainforest, hidden-land and deep-green roots — the picture of the high-ticket paludarium line, the kinship password of the hobbyist circle",
+      ],
+      cases: [
+        { name: "Hu Zhong Tian Di (壶中天地)", takeaway: "The Daoist tale of the gourd-heaven: vessel-as-universe, the philosophical grammar — a cultural motif terrarium naming can borrow whole" },
+        { name: "The Glass Forest", takeaway: "Two plain nouns joined: the material-plus-nature naming template — the world in glass developed in one second" },
+        { name: "Tai Ting (苔庭)", takeaway: "Two characters catching the Japanese moss-garden lineage: the zen of the moss root said outright — the temperament model of Chinese micro-landscape brands" },
+        { name: "Bioloark", takeaway: "Bio fused with ark: the naming sample of the paludarium-gear brand — the ambition of calling a closed loop a Noah's ark" },
+      ],
+      pitfalls: [
+        "The houseplant drift: a name of succulents-and-pots drags the terrarium back to the flower-shop shelf — the premium is closed-loop ecology and glass poetry; do not demote to plant sundries",
+        "Locking into one form: a moss-society name can't take paludariums, vivariums and corporate commissions — leave the material to the line, keep the world-in-a-jar for the brand",
+        "Technical argot scaring the gift buyer: a name of hardscape-and-misting jargon turns the gifting crowd away — keep the argot for the hobbyists, leave a warm door in the name",
+        "Forgetting the gift register: a large share of terrariums are bought to give, and the name must read graceful on the gift box — a too-hobbyist name never makes the gift list",
+      ],
+    },
+  },
+  axethrowing: {
+    slug: "axethrowing",
+    keywords: ["飞斧馆", "掷斧运动", "城市新潮运动", "axe throwing venue", "urban axe range"],
+    tlds: [
+      { tld: "com", zh: "场馆预约与团建报价的默认后缀，页面与合同里最稳", en: "The default suffix for venue bookings and team-building quotes — steadiest on the page and the contract" },
+      { tld: "fun", zh: "娱乐属性直给，新潮运动的轻快气质零违和", en: "The fun stated outright — zero friction for the light register of a novelty sport" },
+      { tld: "club", zh: "会员联赛与同好社群直接对位，复购场景的归类", en: "Leagues and the community aligned outright — the filing for repeat play" },
+    ],
+    zh: {
+      label: "飞斧馆",
+      title: "飞斧馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "飞斧馆与掷斧运动场馆命名指南：斧头意象、伐木叙事等思路，BATL/Bad Axe Throwing 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "飞斧馆的名字要说出「斧刃咬进木靶的那声闷响」：这项从加拿大伐木营地长出来的新潮运动，卖的是「安全范围内的原始爽感」——白领下班换下西装扔一小时斧头，压力随着木屑一起飞出去，名字要先把这份「解压的野性」递出去。参照系成熟：多伦多的 BATL 用「后院斧头联盟」四个词的缩写做成行业开创者；Bad Axe Throwing 直接把「坏」字焊在斧头上连锁全球；国内场馆则常与酒吧、桌游混业，名字要能装下「运动加社交」的复合业态。隐藏考点是业务分层：散客体验走大众点评引流、团建包场走企业合同、会员联赛走复购社群——名字要在点评页上够野够好记，在团建方案里专业可控，在联赛圈里有江湖气。误区在于把「危险感」做过头：飞斧的生意本质是「安全的刺激」，名字可以野，但不能让 HR 看了不敢下单。",
+      namingIdeas: [
+        "斧头意象直给：斧、刃、掷类词根——品类核心动作直接入名，搜索与口碑传播零解释成本",
+        "伐木叙事借力：伐木营、木屑、林场类词根——接住这项运动的加拿大伐木血统，粗犷画面自带故事",
+        "解压语法路线：把「扔出去的压力」写进名字——白领客群的核心买点直说，团建方案的画面语言",
+        "江湖侠气借词：斧头帮、快意、豪侠类中文词库——武侠语境的现成词库，中文场馆的圈层记忆点",
+        "命中时刻直给：正中、靶心、bullseye 类词根——斧刃咬靶的爽感瞬间，会员联赛线的竞技暗号",
+      ],
+      cases: [
+        { name: "BATL", takeaway: "「后院斧头联盟」缩写恰好谐音 battle：行业开创者的命名神来之笔——缩写与战意一词双关" },
+        { name: "Bad Axe Throwing", takeaway: "一个「坏」字焊在斧头上连锁全球：badass 的谐音梗做成连锁招牌——野性人格化的命名杠杆" },
+        { name: "Whistle Punk", takeaway: "借伐木行话「吹哨学徒」立店：血统词库的深挖示范——一个行话让懂行者会心一笑" },
+        { name: "Urban Axes", takeaway: "「城市」加「斧头」的反差拼接：把荒野运动搬进市中心的定位直说——选址即卖点的命名样本" },
+      ],
+      pitfalls: [
+        "危险感做过头：满是「血、狂暴」的名字让 HR 不敢下团建单——生意本质是安全的刺激，野而不吓人",
+        "锁死单一业态：叫「斧馆」就难装酒吧、桌游与飞镖的混业空间——斧头是招牌，品牌名要留混业的余地",
+        "谐音梗用力过猛：中文「斧」的谐音位有限，强行谐音显得廉价——梗要自然，BATL 级的双关可遇不可求",
+        "忽略团建合同场景：包场团建是最大客单，名字要在企业方案里专业可控——太江湖的名字进不了采购流程",
+      ],
+    },
+    en: {
+      label: "Axe-throwing venues",
+      title: "How to Name an Axe-Throwing Venue: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Axe-throwing venue naming guide: axe imagery, lumberjack narratives, breakdowns of BATL/Bad Axe Throwing, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An axe-throwing venue's name must say the thunk of a blade biting the wooden target: this novelty sport grew out of Canadian lumber camps and sells primal release inside a safety fence — the office worker trades the suit for an hour of throwing, and the stress flies off with the wood chips, so the name has to hand over that tamed wildness first. The references are mature. Toronto's BATL made an industry founder of a four-word acronym that happens to sound like battle; Bad Axe Throwing welded one bad onto the axe and franchised worldwide; Urban Axes said the whole positioning — wilderness sport moved downtown — in two words. The hidden exam is the tier split: walk-ins run on review-platform traffic, team-building buyouts run on corporate contracts, and leagues run on repeat community — the name must read wild and memorable on the review page, professional and controlled in the corporate deck, and carry swagger in the league circle. The failure mode is overdone danger: the business is safe thrill, and the name may run wild but must never scare the HR buyer off the quote.",
+      namingIdeas: [
+        "Axe imagery outright: axe, blade and throw roots — the category's core act named directly, zero explanation in search and word of mouth",
+        "Borrowing the lumber-camp narrative: logging camp, wood-chip and timber roots — catching the sport's Canadian bloodline; the rough-hewn picture carries its own story",
+        "The stress-release grammar: the pressure thrown away written into the name — the office crowd's core buy said straight, the picture language of the team-building deck",
+        "The outlaw-swagger loan: axe-gang, gallant and outlaw roots from the wuxia lexicon — the ready Chinese word-hoard, the circle hook of a domestic venue",
+        "The bullseye moment outright: dead-center, target and bullseye roots — the thunk of blade on board, the competitive password of the league line",
+      ],
+      cases: [
+        { name: "BATL", takeaway: "Backyard Axe Throwing League abbreviating into battle: the founder's stroke of naming genius — acronym and war-cry in one pun" },
+        { name: "Bad Axe Throwing", takeaway: "One bad welded onto the axe, franchised worldwide: the badass homophone made a chain marque — the naming lever of personified wildness" },
+        { name: "Whistle Punk", takeaway: "A venue standing on logging slang for the signal apprentice: the deep-dig model of the bloodline lexicon — one trade word earns the insider's grin" },
+        { name: "Urban Axes", takeaway: "City spliced against axe: the whole positioning of wilderness moved downtown said in two words — the naming sample of location-as-sell" },
+      ],
+      pitfalls: [
+        "Danger overdone: a name of blood-and-rampage scares the HR buyer off the team-building order — the business is safe thrill; wild, never menacing",
+        "Locking into one format: a bare axe-hall name can't hold the bar, board games and darts of a mixed venue — the axe is the marquee; leave the brand room for the mix",
+        "The pun forced too hard: the homophone slots are few and a strained pun reads cheap — the wordplay must land naturally; a BATL-grade double meaning is found, not forced",
+        "Forgetting the corporate contract: buyouts are the largest ticket, and the name must read professional and controlled in the procurement deck — a too-outlaw name never clears the process",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
