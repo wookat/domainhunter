@@ -26,5 +26,7 @@ description: How to run zero-AI production audits of DomainHunter (hunt.zalize.c
 - To count /prices table rows objectively, count `main a[href^="/?tld="]` (Hunt links) — the table is not a `<table>` element.
 - 375px viewport checks: use CDP `Emulation.setDeviceMetricsOverride` in a separate tab; assert `document.documentElement.scrollWidth <= 375`.
 - Lighthouse CLI with `--chrome-flags="--headless=new --no-sandbox"` works fine against production.
+- Hub pages (/tld, /guide, /vs) have a sticky group-chips anchor nav (R415): chips are `nav[aria-label="分组导航"/"Group navigation"] a[href^="#hub-g-"]`, sections are `id="hub-g-<group>"` with `scroll-mt-28`; the back-to-top button (`button[aria-label="回到顶部"/"Back to top"]`, 44×44) appears once `scrollY > innerHeight`. Note the chips row can show a horizontal OS scrollbar that makes nav bottom (~124px) exceed scroll-mt-28 (112px), slightly clipping headings after anchor jumps — measure with getBoundingClientRect if verifying anchor offsets.
+- Before browser-testing a freshly checked-out branch locally, confirm `apps/web/dist/assets` mtimes are newer than the checkout (wrangler dev serves the prebuilt dist; rerun `pnpm build` in apps/web if stale).
 - The /tld hub has an `input[type=search]` filter (aria-label "Filter TLDs…/筛选后缀…") — fastest way to locate a single TLD and its category.
 - Local `wrangler dev` CAN fetch live Porkbun quotes, so TLD detail pages show live prices rather than static reference prices; to verify `TLD_PRICES`, grep the SSR HTML for「静态参考价：首年 ¥X · 续费 ¥Y/年」.

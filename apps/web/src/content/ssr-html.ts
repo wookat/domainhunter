@@ -334,7 +334,7 @@ export const hubCrumbLabel = (hub: "tld" | "guide" | "vs", lang: Lang): string =
 const HUB_FILTER_PLACEHOLDER = `<div class="mt-6 h-11"></div>`;
 
 const hubSection = (id: string, heading: string, count: number, itemsHtml: string, headingCls = "text-base font-bold") =>
-  `<section id="hub-g-${id}" class="mt-8 scroll-mt-28"><h2 class="${headingCls}">${escapeHtml(heading)}<span class="tnum ml-2 font-mono text-xs font-normal text-txt2">${count}</span></h2>${itemsHtml}</section>`;
+  `<section id="hub-g-${id}" class="mt-8 scroll-mt-32"><h2 class="${headingCls}">${escapeHtml(heading)}<span class="tnum ml-2 font-mono text-xs font-normal text-txt2">${count}</span></h2>${itemsHtml}</section>`;
 
 const HUB_NAV_LABEL = { zh: "分组导航", en: "Group navigation" } as const;
 
@@ -385,7 +385,7 @@ export function compareHubBlocks(lang: Lang): string[] {
   const meta = HUB_META.vs[lang];
   const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>${HUB_FILTER_PLACEHOLDER}${hubNavChips(lang, compareHubGroups().map((g) => ({ id: g.tld, label: `.${g.tld}`, count: g.slugs.length })))}`;
   const sections = compareHubGroups().map((g) =>
-    `<section id="hub-g-${g.tld}" class="mt-8 scroll-mt-28"><h2 class="font-mono text-base font-bold">.${g.tld}<span class="tnum ml-2 text-xs font-normal text-txt2">${g.slugs.length}</span></h2><div class="mt-3 flex flex-wrap gap-2">${g.slugs
+    `<section id="hub-g-${g.tld}" class="mt-8 scroll-mt-32"><h2 class="font-mono text-base font-bold">.${g.tld}<span class="tnum ml-2 text-xs font-normal text-txt2">${g.slugs.length}</span></h2><div class="mt-3 flex flex-wrap gap-2">${g.slugs
       .map((slug) => `<a href="/vs/${slug}?lang=${lang}" class="flex min-h-[44px] items-center rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">.${TLD_COMPARES[slug].a} vs .${TLD_COMPARES[slug].b}</a>`)
       .join("")}</div></section>`,
   );

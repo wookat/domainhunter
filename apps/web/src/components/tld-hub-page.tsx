@@ -37,7 +37,7 @@ export function TldHubPage() {
       <HubAnchorNav lang={lang} items={filtered.map((g) => ({ id: g.id, label: g[lang], count: g.tlds.length }))} />
       {filtered.length === 0 && <HubFilterEmpty lang={lang} onClear={() => setQuery("")} />}
       {filtered.map((g) => (
-        <section key={g.id} id={hubAnchorId(g.id)} className="mt-8 scroll-mt-28">
+        <section key={g.id} id={hubAnchorId(g.id)} className="mt-8 scroll-mt-32">
           <h2 className="text-base font-bold">
             {g[lang]}
             <span className="tnum ml-2 font-mono text-xs font-normal text-txt2">{g.tlds.length}</span>

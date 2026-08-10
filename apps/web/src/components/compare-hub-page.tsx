@@ -37,7 +37,7 @@ export function CompareHubPage() {
       <HubAnchorNav lang={lang} items={filtered.map((g) => ({ id: g.tld, label: `.${g.tld}`, count: g.slugs.length }))} />
       {filtered.length === 0 && <HubFilterEmpty lang={lang} onClear={() => setQuery("")} />}
       {filtered.map((g) => (
-        <section key={g.tld} id={hubAnchorId(g.tld)} className="mt-8 scroll-mt-28">
+        <section key={g.tld} id={hubAnchorId(g.tld)} className="mt-8 scroll-mt-32">
           <h2 className="font-mono text-base font-bold">
             .{g.tld}
             <span className="tnum ml-2 text-xs font-normal text-txt2">{g.slugs.length}</span>
