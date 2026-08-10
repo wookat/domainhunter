@@ -1,0 +1,326 @@
+{
+  "usage_pre": {
+    "days": {
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-10": {
+        "searches": 4,
+        "byTld": {
+          "com": 4,
+          "cn": 4
+        },
+        "fast": 4,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      }
+    },
+    "cronLast": 1786384808159,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786384352084,
+    "pricesLastFail": 1786352251978
+  },
+  "fallback_no_inject": {
+    "/tld/london": {
+      "normal_injected": true,
+      "ssr_script_stripped": true,
+      "fallback_built_kind": "tld",
+      "text_equal": true,
+      "normal_len": 8201,
+      "fallback_len": 8201
+    },
+    "/guide/hearingaid": {
+      "normal_injected": true,
+      "ssr_script_stripped": true,
+      "fallback_built_kind": "guide",
+      "text_equal": true,
+      "normal_len": 3145,
+      "fallback_len": 3145
+    },
+    "/vs/university-vs-education": {
+      "normal_injected": true,
+      "ssr_script_stripped": true,
+      "fallback_built_kind": "vs",
+      "text_equal": true,
+      "normal_len": 7833,
+      "fallback_len": 7833
+    }
+  },
+  "hydration": {
+    "/tld/com": {
+      "h1": ".com 域名注册指南：适合谁、多少钱、怎么起名",
+      "title": ".com 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "mainLen": 8373,
+      "injected": true
+    },
+    "/tld/london": {
+      "h1": ".london 域名注册指南：适合谁、多少钱、怎么起名",
+      "title": ".london 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "mainLen": 8201,
+      "injected": true
+    },
+    "/guide/saas": {
+      "h1": "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择",
+      "title": "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "mainLen": 3318,
+      "injected": true
+    },
+    "/guide/hearingaid": {
+      "h1": "助听器验配中心怎么起名：命名思路、好名字拆解与域名选择",
+      "title": "助听器验配中心怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "mainLen": 3145,
+      "injected": true
+    },
+    "/vs/com-vs-cn": {
+      "h1": ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比",
+      "title": ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比 | DomainHunter",
+      "mainLen": 6941,
+      "injected": true
+    },
+    "/vs/university-vs-education": {
+      "h1": ".university 和 .education 怎么选：大学的机构层级与教育的行业全域",
+      "title": ".university 和 .education 怎么选：大学的机构层级与教育的行业全域 | DomainHunter",
+      "mainLen": 7833,
+      "injected": true
+    }
+  },
+  "template_chunk_url": "https://hunt.zalize.com/assets/home-template-texts-CPFvJbKD.js",
+  "template_texts_full_compare": {
+    "local_count": 326,
+    "deployed_count": 326,
+    "missing_in_deployed": [],
+    "extra_in_deployed": [],
+    "content_diff": [],
+    "all_equal": true
+  },
+  "template_chip_counts": {
+    "zh": 326,
+    "en": 326
+  },
+  "template_chip_fill_sample": {
+    "saas": true,
+    "woodworking": true,
+    "soapmaking": true,
+    "modelkit": true,
+    "framing": true,
+    "recordingstudio": true,
+    "hearingaid": true
+  },
+  "template_tpl_fill_sample": {
+    "saas:zh": true,
+    "saas:en": true,
+    "equipmentrental:zh": true,
+    "equipmentrental:en": true,
+    "hearingaid:zh": true,
+    "hearingaid:en": true
+  },
+  "home_no_injected_build_chunk": true,
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_more_label": "查更多后缀 +322",
+  "quick_all": "核验完成：共 331 个，200 个可注册",
+  "quick_pending_count": 0,
+  "quick_repeat": "核验完成：共 9 个，9 个可注册",
+  "prices_rows": 330,
+  "tld_hub_links": 330,
+  "guide_hub_links": 326,
+  "vs_hub_links": 366,
+  "footer_link_counts": {
+    "/tld/": 330,
+    "/guide/": 326,
+    "/vs/": 366
+  },
+  "ai_banner_absent_by_default": true,
+  "why_status": 200,
+  "shortlist_status": 200,
+  "monitors_status": 200,
+  "advanced_status": 200,
+  "mcp_doc_status": 200,
+  "advanced_bulk": null,
+  "share_create": {
+    "status": 200,
+    "id": "GZrmxqxqAD",
+    "has_token": true
+  },
+  "share_live": {
+    "d1": true,
+    "d2": true
+  },
+  "share_revoke": {
+    "del": 200,
+    "getAfter": 410
+  },
+  "keyboard_tab_chain": [
+    {
+      "tag": "BUTTON",
+      "text": "DomainHunter",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "高级模式",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "候选清单0",
+      "visible": true
+    },
+    {
+      "tag": "A",
+      "text": "",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "EN",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "关闭引导",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "AI 猎名",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "精确核验",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "批量核验",
+      "visible": true
+    }
+  ],
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld/london": 360,
+    "/vs/university-vs-education": 360,
+    "/guide/hearingaid": 360,
+    "/shortlist": 375,
+    "/advanced": 360,
+    "/why": 360,
+    "/mcp": 360
+  },
+  "usage_post": {
+    "days": {
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-10": {
+        "searches": 4,
+        "byTld": {
+          "com": 4,
+          "cn": 4
+        },
+        "fast": 4,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786384808159,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786384352084,
+    "pricesLastFail": 1786352251978
+  },
+  "usage_days_equal": true,
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/GZrmxqxqAD"
+    }
+  ]
+}
