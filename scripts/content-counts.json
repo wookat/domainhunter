@@ -293,7 +293,7 @@
     ]
   },
   "guide": {
-    "count": 278,
+    "count": 284,
     "slugs": [
       "saas",
       "ecommerce",
@@ -572,7 +572,13 @@
       "souvenir",
       "partyplanner",
       "seafishing",
-      "horseranch"
+      "horseranch",
+      "datingapp",
+      "singlesevents",
+      "luxuryresale",
+      "organicfood",
+      "permanentmakeup",
+      "homedecor"
     ]
   },
   "vs": {

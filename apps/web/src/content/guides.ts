@@ -17360,6 +17360,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  datingapp: {
+    slug: "datingapp",
+    keywords: ["交友App", "婚恋社交", "脱单软件", "dating app", "online dating"],
+    tlds: [
+      { tld: "dating", zh: "后缀即品类，脱单意图从域名就说清楚", en: "The suffix is the category — the dating intent is stated from the domain onward" },
+      { tld: "app", zh: "产品形态直给，下载页与落地页一名到底", en: "The product form stated outright — one name from the landing page to the install button" },
+      { tld: "love", zh: "把结果写进后缀，品牌许诺一眼可读", en: "The outcome written into the suffix — the brand's promise readable at a glance" },
+    ],
+    zh: {
+      label: "交友App",
+      title: "交友App与婚恋社交产品怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "交友App与婚恋社交命名指南：火花动词、缘分意象等思路，Tinder/Bumble/探探案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "交友App的名字要在应用商店的三秒钟里完成两件事：说清「这是交友的」，并暗示「这里的交友不一样」。看行业样本：Tinder 用「火种」把心动瞬间写进名字，向左向右滑动的每一下都在给这簇火苗添柴，名字与交互动作互为注解；Bumble 用蜂巢意象翻转规则——「女士先开口」的产品机制被一只蜜蜂讲成了品牌故事，名字即差异化主张；探探用叠字动词把「试探」的微妙心理写成两个字，中文语境里的暧昧分寸感一步到位；Hinge 则以「铰链」自称「为删除而生的App」，把认真恋爱的定位反着说出彩。交友命名的隐藏考点是「转述尴尬度」：用户向朋友承认「我在用 XX」时，名字的体面程度直接决定口碑传播——太露骨的名字用户不好意思说出口，增长就少了最便宜的一环。",
+      namingIdeas: [
+        "火花与心动意象：火种、闪、怦然——把「遇见那一刻」的生理反应写进名字，品类情绪先声夺人",
+        "动作动词路线：探探式的试探、滑动、遇见——名字与产品核心交互互为注解，用一个动词占住行为",
+        "规则翻转叙事：Bumble 式的机制入名——「谁先开口、怎么匹配」的差异化规则本身就是最好的品牌故事",
+        "认真程度分层：休闲交友要轻快、婚恋相亲要郑重——名字的严肃度要与用户的投入预期精确对表",
+        "转述测试：用户向朋友说「我在用 XX」时要体面自然——不好意思说出口的名字，自传播先输一半",
+      ],
+      cases: [
+        { name: "Tinder", takeaway: "「火种」把心动瞬间写进名字：每一次滑动都在添柴，名字与交互互为注解——品类情绪命名的全球范本" },
+        { name: "Bumble", takeaway: "蜂巢意象翻转规则：「女士先开口」的机制被一只蜜蜂讲成品牌故事——差异化主张入名的教科书" },
+        { name: "探探", takeaway: "叠字动词写尽试探心理：中文语境的暧昧分寸感两个字说透——本土化交友命名的高分卷" },
+        { name: "Hinge", takeaway: "「铰链」自称为删除而生：把认真恋爱的定位反着说，越想卸载越显真诚——反向定位命名的巧劲" },
+      ],
+      pitfalls: [
+        "露骨到不敢转述：名字太直白，用户向朋友提起都尴尬——交友产品的增长一半靠口碑，体面是底线",
+        "严肃休闲错位：婚恋定位起了个轻浮名，或休闲产品装得像民政局——名字的认真度要与用户预期对表",
+        "撞脸头部产品：tin/bumb/tan 类词根跟风，应用商店搜索直接给对手导流——差异化从词根开始",
+        "忽略多语市场：出海交友App的名字在目标语言里可能另有含义——上线前先过一遍俚语词典",
+      ],
+    },
+    en: {
+      label: "Dating apps",
+      title: "How to Name a Dating App or Social Matching Product: Strategies, Cases & Domains",
+      metaDescription:
+        "Dating app naming guide: spark imagery, action verbs, rule-flip narratives, breakdowns of Tinder/Bumble/Hinge, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A dating app's name has three seconds on the app store shelf to do two jobs: say \"this is for dating\" and hint \"dating here is different.\" The benchmarks show the craft: Tinder writes the spark of attraction into a single word — every swipe feeds the flame, name and gesture annotating each other; Bumble turns a product rule into a brand story — \"women message first\" narrated by a bee, the differentiating mechanic worn as the name; Hinge calls itself \"designed to be deleted,\" stating a serious-relationship position by inverting it — the more it wants to be uninstalled, the more sincere it reads; Coffee Meets Bagel names the ritual of one curated match a day, pace as positioning. The hidden exam is the retelling test: when a user admits \"I'm on X\" to a friend, the name's dignity decides whether word of mouth flows — a name too explicit to say out loud forfeits the cheapest growth channel there is.",
+      namingIdeas: [
+        "Spark and flutter imagery: tinder, flame, spark — write the physiological jolt of meeting someone into the name; category emotion leads",
+        "Action-verb routes: swipe, meet, match — let the name annotate the core gesture and own the behavior itself",
+        "Rule-flip narratives: the Bumble formula — the differentiating mechanic (who speaks first, how matching works) is the best brand story available",
+        "Seriousness calibration: casual apps sound light, matrimony products sound solemn — tune the name's gravity to the user's investment level",
+        "The retelling test: \"I'm on X\" must be sayable to a friend without a wince — a name users won't say aloud loses half its growth",
+      ],
+      cases: [
+        { name: "Tinder", takeaway: "The spark of attraction in one word: every swipe feeds the flame, name and gesture annotating each other — category-emotion naming's global template" },
+        { name: "Bumble", takeaway: "A bee narrating the rule flip: \"women message first\" turned into brand story — the differentiating mechanic worn as the name" },
+        { name: "Hinge", takeaway: "\"Designed to be deleted\": a serious-dating position stated by inversion — the app that wants to be uninstalled reads the most sincere" },
+        { name: "Coffee Meets Bagel", takeaway: "One curated match a day named as a ritual: pace as positioning — slow-dating differentiation written into the name itself" },
+      ],
+      pitfalls: [
+        "Too explicit to retell: a name users are embarrassed to say aloud kills word of mouth — dating growth runs on dignified confession",
+        "Seriousness mismatch: a matrimony product named like a party app, or a casual app dressed like a registry office — calibrate gravity to expectation",
+        "Cloning the leader's root: tin-/bumb- soundalikes route app-store searches straight to the incumbent — differentiate from the root up",
+        "Ignoring cross-language slang: a dating name can mean something else entirely abroad — run the slang-dictionary check before launch",
+      ],
+    },
+  },
+  singlesevents: {
+    slug: "singlesevents",
+    keywords: ["单身社交活动", "脱单活动", "相亲局", "singles events", "singles mixer"],
+    tlds: [
+      { tld: "singles", zh: "后缀即人群，单身社交的定位从域名就锁定", en: "The suffix is the audience — the singles positioning locked in from the domain onward" },
+      { tld: "events", zh: "活动形态直给，报名页与场次页一名通用", en: "The event format stated outright — one name for the sign-up page and every session" },
+      { tld: "club", zh: "会员社群感自带，回头客生意的身份标识", en: "Membership warmth built in — the identity badge of a repeat-visit business" },
+    ],
+    zh: {
+      label: "单身社交活动",
+      title: "单身社交活动与脱单局品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "单身社交活动与脱单局命名指南：轻松去尬、场景造词等思路，Lunchclub/二狗喜事/Timeleft 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "单身社交活动的名字要先解决一个心理关卡：让报名的人觉得「我是去玩，顺便认识人」，而不是「我是去相亲」。这个体面的台阶，名字得先搭好。看行业样本：Timeleft 用「余下的时间」把陌生人晚餐讲成人生命题——每周三与六个陌生人吃饭，名字提醒你时间有限、值得一试，哲学感冲淡了目的性；Lunchclub 用「午餐俱乐部」把社交包进最日常的一顿饭里，商务与交友的边界被名字轻轻模糊；线下脱单局爱用「XX 局」「XX 喜事」的口语——把活动说成一场热闹，参加者转发朋友圈都不掉价。命名的隐藏考点是「朋友圈转发测试」：单身社交靠参与者晒照拉新，名字出现在合照水印与定位里要好玩不尴尬——「我参加了 XX」这句话，得让单身的朋友看了想报名，不单身的朋友看了想点赞。",
+      namingIdeas: [
+        "去目的化包装：饭局、俱乐部、派对——把「脱单」藏进「好玩」里，名字先给参加者一个体面台阶",
+        "时间与缘分意象：Timeleft 式的人生命题——把认识陌生人讲成对时间的珍惜，哲学感冲淡目的性",
+        "热闹口语路线：局、喜事、有约——中文语境的烟火气让活动像朋友攒的饭局，报名门槛降到最低",
+        "场景造词：晚餐+陌生人、城市+漫步——用「活动内容」直接命名，报名者一眼知道自己要去干什么",
+        "转发测试：名字出现在合照水印与朋友圈定位里要好玩不尴尬——参与者的每次晒照都是拉新广告",
+      ],
+      cases: [
+        { name: "Timeleft", takeaway: "「余下的时间」把陌生人晚餐讲成人生命题：哲学感冲淡目的性，周三晚餐成了全球现象——去尬命名的天花板" },
+        { name: "Lunchclub", takeaway: "社交包进最日常的一顿饭：商务与交友的边界被名字轻轻模糊——低门槛场景命名的硅谷样本" },
+        { name: "Meetup", takeaway: "一个动词短语占住品类：「见个面」的轻松语感让百万个兴趣小组共用一个动作——行为命名的平台级范本" },
+        { name: "SpeedDating", takeaway: "「快速约会」把玩法直接写成品类名：八分钟轮换的规则一听就懂——玩法即名字的开山之作" },
+      ],
+      pitfalls: [
+        "目的性太裸露：名字里全是「脱单」「相亲」，报名者拍照都不好意思发——体面台阶是转化率的一半",
+        "像婚介不像活动：起得太郑重，年轻人以为要交年费填表格——活动生意的名字要轻，轻才有第一次报名",
+        "锁死单一玩法：名字绑死「晚餐」或「徒步」，换场景老用户认知转不过来——玩法留给场次名，品牌管社交",
+        "忽略同城扩张：带死城市名的活动品牌开不到第二座城——城市放场次标题里，品牌名管全国",
+      ],
+    },
+    en: {
+      label: "Singles events",
+      title: "How to Name a Singles Events or Social Mixer Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Singles events and social mixer naming guide: de-awkward framing, scene coinage, breakdowns of Timeleft/Lunchclub/Meetup, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A singles-events name must first clear a psychological hurdle: the guest wants to feel \"I'm going out for fun, and might meet someone\" — not \"I'm going husband-hunting.\" The name builds that dignified off-ramp before the landing page loads. The benchmarks show how: Timeleft frames dinner with six strangers as a meditation on finite time — philosophy diluting agenda, and Wednesday dinners became a global ritual; Lunchclub folds networking into the most ordinary meal of the day, the name gently blurring business and friendship; Meetup claims an entire category with one casual verb phrase — a million interest groups sharing a single low-stakes action. The hidden exam is the photo-caption test: singles events grow through guests posting group photos, so the name in the watermark and the geotag must read playful, never desperate — \"I went to X\" should make single friends want to sign up and everyone else want to like the post.",
+      namingIdeas: [
+        "De-agenda framing: dinner, club, social — wrap the matchmaking inside the fun; the name is the guest's dignified off-ramp",
+        "Time and serendipity imagery: the Timeleft move — frame meeting strangers as honoring finite time; philosophy dilutes agenda",
+        "Casual-gathering diction: mixer, table, hangout — the name should feel like a friend's dinner party, dropping the sign-up threshold to zero",
+        "Scene coinage: dinner-with-strangers, city-walk — name the activity itself so guests know exactly what they're walking into",
+        "The photo-caption test: the name must sit well in the group-photo watermark and geotag — every guest's post is the cheapest acquisition ad",
+      ],
+      cases: [
+        { name: "Timeleft", takeaway: "Dinner with strangers framed as a meditation on finite time: philosophy diluting agenda — the ceiling of de-awkward naming, one Wednesday at a time" },
+        { name: "Lunchclub", takeaway: "Networking folded into the day's most ordinary meal: business and friendship gently blurred — Silicon Valley's low-threshold scene naming" },
+        { name: "Meetup", takeaway: "One casual verb phrase owning a category: a million interest groups sharing a single low-stakes action — behavior naming at platform scale" },
+        { name: "SpeedDating", takeaway: "The format written as the category name: eight-minute rotations understood on first hearing — gameplay-as-name's founding classic" },
+      ],
+      pitfalls: [
+        "Agenda too naked: a name that shouts matchmaking makes guests hide the photos — the dignified off-ramp is half the conversion rate",
+        "Bureau instead of party: too solemn a name reads like annual fees and application forms — event businesses need lightness to win the first sign-up",
+        "Welding to one format: a name locked to \"dinner\" or \"hiking\" cannot stretch to the next format — formats belong in session titles, the brand owns the socializing",
+        "Hard-coding the city: a city-bound event brand cannot open in the second city — put geography in the session title, keep the brand national",
+      ],
+    },
+  },
+  luxuryresale: {
+    slug: "luxuryresale",
+    keywords: ["中古奢侈品", "二手奢侈品", "奢品寄卖", "luxury resale", "pre-owned luxury"],
+    tlds: [
+      { tld: "luxury", zh: "后缀即定位，奢品身份从域名就立住", en: "The suffix is the positioning — luxury credentials established from the domain onward" },
+      { tld: "boutique", zh: "精品店语感自带，中古店的策展感一步到位", en: "Boutique cadence built in — the curated-shop feel of a vintage store in one step" },
+      { tld: "shop", zh: "短而通用的零售后缀，线上寄卖与线下门店一名通用", en: "Short, universal retail suffix — one name for online consignment and the physical store" },
+    ],
+    zh: {
+      label: "中古奢侈品",
+      title: "中古奢侈品与奢品寄卖店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "中古奢侈品与奢品寄卖命名指南：时间价值、鉴定信任等思路，Vestiaire Collective/The RealReal/中古教父案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "中古奢侈品的名字要完成一次惊险的翻转：把「二手」翻译成「传承」。同一只包，叫二手是折价，叫中古是故事——名字直接决定客单价的锚点。看行业样本：The RealReal 用一个词根的叠用把「真」喊成品牌——二手奢侈品最大的心理障碍是怕假，名字把鉴定信任写在门脸上；Vestiaire Collective 用「衣橱集合」的法语优雅把平台讲成全球衣橱的流转，寄卖双方都体面；日本中古店爱用「大黑屋」「Brand Off」式的直白与信任感——几十年老铺的语感本身就是鉴定书。命名的隐藏考点是「卖家心理」：寄卖生意两头都是客户，名字既要让买家觉得「这里的东西是真的、值的」，也要让卖家觉得「我的爱马仕托付给这个名字不跌份」——名字的体面程度，直接决定收得到什么货。",
+      namingIdeas: [
+        "真伪信任入名：real、鉴、真——二手奢品最大的心理障碍是怕假，名字先把鉴定信任写在门脸上",
+        "时间价值翻转：中古、vintage、传承——把「用过的」讲成「流传的」，折价逻辑翻转成故事溢价",
+        "衣橱与流转意象：Vestiaire 式的衣橱集合——平台是全球衣橱的中转站，寄卖双方都体面的说法",
+        "老铺信任语感：屋、堂、洋行——中古品类信老字号，几十年铺子的语感本身就是一张鉴定书",
+        "卖家测试：名字要配得上卖家的爱马仕——「我的包托付给 XX」这句话说出口不跌份，才收得到好货",
+      ],
+      cases: [
+        { name: "The RealReal", takeaway: "词根叠用把「真」喊成品牌：二手奢品最怕假，名字把鉴定信任写在门脸上——信任命名的美国范本" },
+        { name: "Vestiaire Collective", takeaway: "「衣橱集合」的法语优雅：平台讲成全球衣橱的流转，寄卖双方都体面——欧陆调性命名的高分卷" },
+        { name: "大黑屋", takeaway: "日式老铺的直白信任：几十年「屋」字号语感本身就是鉴定书——中古品类老字号命名的东京样本" },
+        { name: "Rebag", takeaway: "re+bag 两个音节说清生意：包的再流转直白到不需要解释——品类直给命名的效率之最" },
+      ],
+      pitfalls: [
+        "「二手」语感拉低锚点：名字里的廉价感直接砍客单价——同一只包，中古是故事，二手是折价",
+        "只讨好买家忘了卖家：寄卖两头都是客户，名字不体面就收不到好货——货源质量才是中古店的命",
+        "蹭奢侈品牌词根：名字里嵌 LV/Chanel 式词根，商标与平台下架风险双高——借势要借品类不借品牌",
+        "锁死单一品类：名字绑死「包」，表与珠宝线接不住——品类留给货架，名字管信任",
+      ],
+    },
+    en: {
+      label: "Luxury resale",
+      title: "How to Name a Luxury Resale or Consignment Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Luxury resale and consignment naming guide: authentication trust, time-value flips, breakdowns of The RealReal/Vestiaire Collective/Rebag, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A luxury-resale name must pull off a daring flip: translating \"second-hand\" into \"heritage.\" The same bag discounts as used and appreciates as vintage — the name sets the price anchor before the tag does. The benchmarks show the craft: The RealReal doubles down on one root to shout authenticity — the category's deepest fear is fakes, so the name wears the authentication promise on the storefront; Vestiaire Collective lends French elegance to the trade, framing the platform as the world's shared wardrobe in circulation — dignity for both consignor and buyer; Rebag compresses the entire business into two syllables, the bag's second life stated without explanation. The hidden exam is the consignor's psychology: consignment has customers on both ends, and the name must convince the buyer \"everything here is real and worth it\" while assuring the seller \"my Hermès is not demeaned by this label\" — the name's dignity decides what inventory you get to sell.",
+      namingIdeas: [
+        "Authenticity in the name: real, verified, certified — the category's deepest fear is fakes; wear the authentication promise on the storefront",
+        "Time-value flips: vintage, heritage, archive — turn \"used\" into \"in circulation\" and the discount logic into story premium",
+        "Wardrobe and circulation imagery: the Vestiaire move — the platform as the world's shared closet, dignity for both sides of the trade",
+        "Heritage-house cadence: maison, house, atelier — resale trades on trust, and old-shop diction reads like an authentication certificate",
+        "The consignor test: the name must deserve the seller's Hermès — \"I consigned it to X\" said without a wince is what fills the racks",
+      ],
+      cases: [
+        { name: "The RealReal", takeaway: "One root doubled into a promise: authenticity shouted where the category fears fakes most — America's template for trust naming" },
+        { name: "Vestiaire Collective", takeaway: "French elegance for the world's shared wardrobe: circulation framed with dignity for consignor and buyer alike — continental cadence at its best" },
+        { name: "Rebag", takeaway: "The whole business in two syllables: the bag's second life stated without explanation — category-direct naming at maximum efficiency" },
+        { name: "What Goes Around Comes Around", takeaway: "A proverb as a store name: circulation, karma and vintage cool in one phrase — narrative naming that turned a NYC shop into an institution" },
+      ],
+      pitfalls: [
+        "Second-hand diction sinking the anchor: cheapness in the name cuts the ticket size — the same bag is vintage as story, used as discount",
+        "Charming buyers, ignoring consignors: consignment has customers on both ends — an undignified name never gets offered the good inventory",
+        "Borrowing luxury brands' roots: LV-/Chanel-adjacent roots invite trademark action and platform delisting — borrow the category's glamour, never the brand's",
+        "Welding to one category: a bag-bound name cannot hold watches and jewelry — categories belong on the shelves, the name carries the trust",
+      ],
+    },
+  },
+  organicfood: {
+    slug: "organicfood",
+    keywords: ["有机食品", "有机电商", "绿色食品", "organic food", "organic grocery"],
+    tlds: [
+      { tld: "organic", zh: "后缀即认证语感，有机定位从域名就立住", en: "The suffix reads like certification — the organic positioning established from the domain onward" },
+      { tld: "food", zh: "品类直给的通用后缀，食品电商一眼归位", en: "The category stated plainly — a food business filed correctly at first glance" },
+      { tld: "store", zh: "独立站零售身份直给，订阅制菜箱也兜得住", en: "Store identity stated outright — subscription produce boxes included" },
+    ],
+    zh: {
+      label: "有机食品电商",
+      title: "有机食品电商与绿色食材品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "有机食品电商与绿色食材命名指南：产地溯源、自然意象等思路，Whole Foods/多利农庄/Thrive Market 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "有机食品的名字要替消费者回答一个灵魂拷问：「凭什么贵三倍？」有机卖的是信任，而信任从名字的第一印象开始积累。看行业样本：Whole Foods 用「完整食物」把加工食品的反面写成品牌——「完整」二字暗示未经修饰的本来面目，一个形容词撑起有机超市的品类心智；Thrive Market 用「茁壮」把有机从「贵」翻译成「值」——买的不是标签是全家的生命力，价格敏感被价值叙事化解；国内的多利农庄、沱沱工社则把「农庄」「工社」的实体感写进名字——有机最怕虚，一个看得见的农场是最硬的信任状。命名的隐藏考点是「溯源承诺」：有机品牌的名字最好自带「可以去看」的邀请感——名字里有农场、有产地、有节气，消费者才相信包装上的认证标不是印出来的。",
+      namingIdeas: [
+        "本来面目路线：whole、纯、本味——把「未经修饰」写进名字，有机的价值主张一个词说清",
+        "农场实体感：农庄、工社、farm——有机最怕虚，名字里一个看得见的农场是最硬的信任状",
+        "生命力翻译：thrive、茁壮、沃——把「贵三倍」翻译成「全家的生命力」，价格敏感被价值叙事化解",
+        "节气与风土词：谷雨、初霜、山野——中文语境的农耕记忆自带「应季而食」的说服力",
+        "溯源邀请测试：名字要自带「欢迎来看」的语感——敢邀请参观的名字，认证标才显得是真的",
+      ],
+      cases: [
+        { name: "Whole Foods", takeaway: "「完整食物」把加工食品的反面写成品牌：一个形容词撑起有机超市的品类心智——概念命名的美国教科书" },
+        { name: "Thrive Market", takeaway: "「茁壮」把有机从贵翻译成值：买的是全家生命力不是标签——价值叙事命名的电商样本" },
+        { name: "多利农庄", takeaway: "「农庄」的实体感写进名字：有机最怕虚，看得见的农场是最硬的信任状——本土有机命名的上海样本" },
+        { name: "Daylesford", takeaway: "英国庄园地名直接做品牌：一座真实农场的名字自带溯源承诺——产地即品牌的英伦范本" },
+      ],
+      pitfalls: [
+        "满口「有机」「绿色」的空话：认证词人人能用，名字全是公共资产就没有品牌——有机要配自有词",
+        "科技感压过泥土气：有机消费者要的是农场不是实验室，名字太「生物科技」反而引发怀疑",
+        "锁死单一品类：名字绑死「菜」，蛋奶肉与零食线接不住——品类留给货架，名字管信任",
+        "禁不起溯源追问：名字里的农场与产地若是虚构，一次打假就塌房——写进名字的承诺必须真实",
+      ],
+    },
+    en: {
+      label: "Organic food",
+      title: "How to Name an Organic Food Store or Green Grocery Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Organic food and green grocery naming guide: whole-food concepts, farm authenticity, breakdowns of Whole Foods/Thrive Market/Daylesford, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An organic food name must answer the shopper's silent question: \"why does this cost three times more?\" Organic sells trust, and trust starts accruing at the first impression of the name. The benchmarks show the craft: Whole Foods writes the opposite of processed food into a brand — \"whole\" implying nothing added, nothing hidden, one adjective carrying an entire supermarket category; Thrive Market translates organic from \"expensive\" into \"worth it\" — you're buying the family's vitality, not a label, and price resistance dissolves in the value story; Daylesford names the brand after a real English farm estate — provenance as brand, the traceability promise built into the word itself. The hidden exam is the visit-invitation test: the best organic names carry an implicit \"come and see\" — a farm, a region, a season in the name makes the certification stamp on the package feel earned rather than printed.",
+      namingIdeas: [
+        "Unprocessed-truth routes: whole, pure, raw — write \"nothing added\" into the name and the organic value claim states itself",
+        "Farm authenticity: farm, orchard, estate — organic's biggest fear is vagueness; a visible farm in the name is the hardest trust asset",
+        "Vitality translation: thrive, flourish, grow — turn \"three times the price\" into \"the family's vitality\" and price resistance dissolves",
+        "Season and terroir words: harvest, frost, meadow — agrarian memory carries the eat-with-the-seasons argument for free",
+        "The visit-invitation test: the name should sound like it welcomes a farm tour — a name that dares to invite inspection makes the certification believable",
+      ],
+      cases: [
+        { name: "Whole Foods", takeaway: "The opposite of processed written into a brand: one adjective carrying a supermarket category — America's textbook of concept naming" },
+        { name: "Thrive Market", takeaway: "Organic translated from expensive to worth it: the family's vitality, not a label — value-narrative naming for e-commerce" },
+        { name: "Daylesford", takeaway: "A real English farm estate as the brand: provenance built into the word itself — the British template for origin-as-brand" },
+        { name: "Nature's Path", takeaway: "Nature plus a path to follow: the category's promise and the customer's journey in one possessive — heritage organic naming that scaled to every aisle" },
+      ],
+      pitfalls: [
+        "Empty certification words: organic and green are public assets anyone can use — a name made only of them owns nothing; pair them with a proprietary word",
+        "Lab coat over soil: organic shoppers want a farm, not a biotech firm — too much science in the name triggers the very suspicion it should calm",
+        "Welding to one aisle: a produce-bound name cannot hold dairy, meat and snacks — aisles belong on shelves, the name carries the trust",
+        "Unverifiable provenance: a fictional farm or region in the name collapses at the first exposé — a promise written into the name must be literally true",
+      ],
+    },
+  },
+  permanentmakeup: {
+    slug: "permanentmakeup",
+    keywords: ["半永久纹绣", "纹眉工作室", "美瞳线", "permanent makeup", "microblading"],
+    tlds: [
+      { tld: "tattoo", zh: "后缀即技艺归属，针尖上的手艺一眼认亲", en: "The suffix claims the craft — needle artistry recognized at a glance" },
+      { tld: "beauty", zh: "美业身份直给，预约页与主页一名到底", en: "Beauty-industry identity stated outright — one name from the booking page to the homepage" },
+      { tld: "ink", zh: "两个字母把「色料入肤」的专业说清，短而好记", en: "Two letters saying pigment-in-skin precisely — short and memorable" },
+    ],
+    zh: {
+      label: "半永久纹绣",
+      title: "半永久纹绣与纹眉工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "半永久纹绣与纹眉工作室命名指南：素颜自信、笔触意象等思路，Browhaus/雕眉世家/PhiBrows 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "半永久纹绣的名字要在「纹身」与「美妆」之间找到精确的落点：往纹身那边偏一步，顾客怕疼怕后悔；往美妆那边偏一步，又显不出「一次做好、三年素颜」的技术含金量。看行业样本：Browhaus 把「眉」与「工坊」焊在一起，新加坡美业连锁用一个词说清「我们只专注眉毛」——品类聚焦本身就是专业感；PhiBrows 用黄金分割的希腊字母 φ 做词根，把「眉形是算出来的」的技术叙事写进名字，全球加盟体系靠一个字母立住标准感；国内工作室爱用「雕」「绣」的手艺动词——雕眉世家式的名字把针尖功夫讲成传承。命名的隐藏考点是「后悔成本」：半永久是做在脸上、留三年的决定，顾客选店比选美甲谨慎十倍——名字的专业感与审美感，就是顾客敢把眉毛交出来的第一张资质证书。",
+      namingIdeas: [
+        "手艺动词入名：雕、绣、描——针尖上的功夫用动词说清，手艺感就是专业感",
+        "品类聚焦路线：Browhaus 式的单品类宣言——只做眉毛的名字反而比全能美业更让人放心",
+        "技术标准叙事：PhiBrows 式的黄金分割词根——「眉形是算出来的」，一个符号立住全球标准感",
+        "素颜结果承诺：把「三年素颜」「醒来就美」的结果写进名字——顾客买的不是过程是每天早晨省下的十分钟",
+        "资质测试：名字要经得起「做在脸上、留三年」的谨慎审视——听起来像会培训发证的名字才收得到眉毛",
+      ],
+      cases: [
+        { name: "Browhaus", takeaway: "「眉+工坊」的单品类宣言：只专注眉毛的名字比全能美业更让人放心——品类聚焦命名的新加坡连锁样本" },
+        { name: "PhiBrows", takeaway: "黄金分割 φ 做词根：「眉形是算出来的」技术叙事一个字母说清——全球加盟标准感的教科书" },
+        { name: "雕眉世家", takeaway: "手艺动词加传承语感：针尖功夫讲成三代家学，「雕」字的分量就是定价权——中文纹绣命名的经典公式" },
+        { name: "Anastasia Beverly Hills", takeaway: "创始人名字加高端地标：修眉师个人品牌长成美妆帝国——人格信任命名从工作室到货架的完整路径" },
+      ],
+      pitfalls: [
+        "纹身语感吓退美妆客：名字太「刺青」，怕疼的顾客直接划走——半永久卖的是妆感不是墨感",
+        "全能美业稀释专业：眉、唇、发际线全写进名字，反而不如单品类聚焦让人放心——专业感来自舍弃",
+        "夸大「永久」惹纠纷：半永久本会代谢褪色，名字承诺「永久」是给自己埋雷——留三年的话说三年",
+        "忽略资质联想：这行靠证书与案例吃饭，名字轻浮就配不上顾客的脸——审美感与专业感缺一不可",
+      ],
+    },
+    en: {
+      label: "Permanent makeup",
+      title: "How to Name a Permanent Makeup or Microblading Studio: Strategies, Cases & Domains",
+      metaDescription:
+        "Permanent makeup and microblading naming guide: craft verbs, single-category focus, breakdowns of Browhaus/PhiBrows/Anastasia Beverly Hills, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A permanent-makeup name must land precisely between tattoo and cosmetics: one step toward tattoo and clients fear pain and regret; one step toward makeup and the \"done once, bare-faced for three years\" expertise disappears. The benchmarks show the calibration: Browhaus welds brow to atelier — Singapore's beauty chain saying \"we only do brows\" in one word, category focus itself reading as mastery; PhiBrows builds its root on φ, the golden ratio — \"your brow shape is calculated, not guessed\" written into the name, one Greek letter anchoring a global franchise standard; Anastasia Beverly Hills grew a brow artist's own name into a cosmetics empire — personal trust naming's full arc from studio to shelf. The hidden exam is the regret cost: this is a decision worn on the face for three years, so clients choose ten times more carefully than for a manicure — the name's professionalism and taste are the first credentials that persuade someone to hand over their eyebrows.",
+      namingIdeas: [
+        "Craft verbs in the name: sculpt, etch, feather — needle-tip skill stated as action; craft diction is professional diction",
+        "Single-category focus: the Browhaus move — a brows-only name reassures more than a do-everything salon; mastery comes from omission",
+        "Technical-standard narrative: the PhiBrows formula — golden-ratio roots saying \"your brow shape is calculated,\" one symbol carrying franchise-grade rigor",
+        "Bare-faced outcome promises: write \"wake up done\" into the name — clients buy the ten minutes saved every morning, not the procedure",
+        "The credential test: the name must survive the scrutiny of a three-year decision worn on the face — sound like a studio that certifies artists, and the eyebrows follow",
+      ],
+      cases: [
+        { name: "Browhaus", takeaway: "Brow welded to atelier: a brows-only declaration reassuring more than any full-service menu — Singapore's chain-scale proof of category-focus naming" },
+        { name: "PhiBrows", takeaway: "The golden ratio as a root: \"calculated, not guessed\" in one Greek letter — the textbook of technical-standard naming for a global franchise" },
+        { name: "Anastasia Beverly Hills", takeaway: "An artist's first name plus a luxury landmark: a brow studio grown into a cosmetics empire — personal-trust naming's complete arc" },
+        { name: "Ink & Arch", takeaway: "Pigment and brow-shape in three syllables: the craft's two nouns paired with boutique polish — small-studio naming that photographs well on a glass door" },
+      ],
+      pitfalls: [
+        "Tattoo diction scaring makeup clients: too much ink and edge, and the pain-averse swipe away — permanent makeup sells finish, not defiance",
+        "Full-service dilution: brows, lips and hairline all crammed into the name reassure less than one mastered category — professionalism is what you omit",
+        "Overpromising \"permanent\": pigment metabolizes and fades — a name that promises forever writes its own complaint letter; say three years when you mean it",
+        "Ignoring credential resonance: this trade runs on certificates and healed-result photos — a flippant name never earns the client's face",
+      ],
+    },
+  },
+  homedecor: {
+    slug: "homedecor",
+    keywords: ["家居饰品", "软装品牌", "家居好物", "home decor", "homeware"],
+    tlds: [
+      { tld: "casa", zh: "「家」的西语后缀自带生活温度，家居品牌一眼归位", en: "\"Home\" in Spanish with warmth built in — a decor brand filed correctly at a glance" },
+      { tld: "house", zh: "居所意象直给，家居饰品的场景从域名开始", en: "The dwelling stated outright — the homeware scene begins at the domain" },
+      { tld: "design", zh: "设计感身份标识，软装美学的调性先立住", en: "The design-identity badge — a soft-furnishing brand's aesthetic staked out first" },
+    ],
+    zh: {
+      label: "家居饰品",
+      title: "家居饰品与软装品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "家居饰品与软装品牌命名指南：居住哲学、生活方式等思路，MUJI/ZARA HOME/野兽派案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "家居饰品的名字卖的不是花瓶与抱枕，是「理想生活的样子」——顾客把一件饰品带回家，其实是把名字背后的生活哲学摆上了柜子。看行业样本：MUJI（无印良品）用「没有品牌的好东西」做品牌，把去装饰的居住哲学写成四个字，名字本身就是产品理念的宣言；ZARA HOME 靠主品牌加场景词平移信任——快时尚的审美速度搬进客厅，命名成本几乎为零；野兽派从一束花起家，用艺术流派的名字给家居饰品注入「不好惹的美」——名字的态度决定了它能卖出溢价。命名的隐藏考点是「场景迁移力」：家居品牌的名字要能从一个花瓶延伸到香薰、床品、餐具——名字管的是「生活方式」这个总纲，单品只是它的注脚。名字立意越高，货架能摆的东西越多。",
+      namingIdeas: [
+        "居住哲学入名：无印良品式的理念宣言——把「怎么生活」的主张写成名字，产品只是哲学的注脚",
+        "生活方式总纲：名字管生活方式，单品做注脚——立意越高，花瓶到床品的货架延伸越顺",
+        "艺术态度路线：野兽派式的流派借用——艺术史的名字自带审美立场，饰品的溢价从态度开始",
+        "自然与温度意象：木、棉、晨、屿——家的松弛感用自然词传递，读一遍名字像回了一趟家",
+        "摆上柜子测试：名字要配得上顾客晒新家的九宫格——「这是我在 XX 买的」说出口要有生活品味加分",
+      ],
+      cases: [
+        { name: "MUJI 无印良品", takeaway: "「没有品牌的好东西」做品牌：去装饰的居住哲学写成四个字——理念命名的世界级范本" },
+        { name: "ZARA HOME", takeaway: "主品牌加场景词的信任平移：快时尚审美搬进客厅，命名成本几乎为零——品牌延伸命名的效率样本" },
+        { name: "野兽派", takeaway: "艺术流派借来「不好惹的美」：从一束花到全屋香薰，态度撑起溢价——审美立场命名的中文高分卷" },
+        { name: "Ferm Living", takeaway: "丹麦语的「稳固」配上 living：北欧的温度里长了一根脊梁——拥挤的北欧风里靠词根差异化的高分卷" },
+      ],
+      pitfalls: [
+        "锁死单一品类：名字绑死「花瓶」「香薰」，货架延伸到床品就接不住——单品留给详情页，名字管生活方式",
+        "装修公司语感：名字太「装饰工程」，卖的明明是审美却像接工程队的活——软装的名字要轻要美",
+        "北欧词根扎堆：hygge/nordic 类词根拥挤，货架上一排「北欧风」谁也记不住——风格要有，词根要避开",
+        "忽略晒家场景：家居的传播靠顾客晒新家，名字在九宫格文案里要好念有品——拗口的名字上不了朋友圈",
+      ],
+    },
+    en: {
+      label: "Home decor",
+      title: "How to Name a Home Decor or Homeware Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Home decor and homeware naming guide: living philosophy, lifestyle umbrellas, breakdowns of MUJI/Zara Home/Ferm Living, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A home decor name doesn't sell vases and cushions — it sells what the good life looks like. When a customer carries an ornament home, they're placing the philosophy behind the name on their shelf. The benchmarks show the range: MUJI (\"no-brand quality goods\") makes an anti-brand the brand — a whole philosophy of unadorned living compressed into the name, the label itself a manifesto; Zara Home transfers fast-fashion trust into the living room with one scene word appended to the parent brand — naming cost near zero, aesthetic velocity intact; Ferm Living plants a Danish word for \"firm/steady\" beside \"living,\" Nordic warmth with a spine. The hidden exam is scene mobility: a decor name must stretch from one vase to candles, bedding and tableware — the name governs the lifestyle, and each product is a footnote to it. The higher the name's concept, the more shelves it can fill.",
+      namingIdeas: [
+        "Living philosophy as name: the MUJI move — write a stance on how to live, and let every product be a footnote to it",
+        "Lifestyle umbrella: the name governs the way of living, products annotate it — higher concept, wider shelf: vase to bedding without strain",
+        "Art-attitude routes: borrow a movement's confidence — an art-history name carries an aesthetic position, and premium pricing starts from attitude",
+        "Nature and warmth imagery: linen, moss, dawn, isle — home's ease travels in natural words; reading the name should feel like walking in the door",
+        "The shelf-photo test: the name must deserve the customer's new-home photo grid — \"I got it at X\" should add taste points when said aloud",
+      ],
+      cases: [
+        { name: "MUJI", takeaway: "\"No-brand quality goods\" as the brand: a philosophy of unadorned living compressed into the label itself — the world-class template of manifesto naming" },
+        { name: "Zara Home", takeaway: "Parent brand plus one scene word: fast-fashion trust transferred to the living room at near-zero naming cost — brand-extension efficiency proven" },
+        { name: "Ferm Living", takeaway: "Danish steadiness beside the word living: Nordic warmth with a spine — hygge with a backbone, differentiated inside a crowded aesthetic" },
+        { name: "Anthropologie", takeaway: "The study of humanity as a homeware label: wanderlust and curation implied in one scholarly word — concept naming that prices the story into the ornament" },
+      ],
+      pitfalls: [
+        "Welding to one object: a vase-bound name cannot hold bedding and tableware — objects belong on product pages, the name owns the lifestyle",
+        "Contractor cadence: a name that sounds like renovation crews sells aesthetics like drywall — soft furnishing needs a light, beautiful name",
+        "Crowding into Nordic roots: hygge- and nordic- prefixes blur into one shelf of sameness — keep the style, dodge the cliché root",
+        "Ignoring the home-reveal scene: decor spreads through customers' new-home posts — a name that stumbles in the caption never makes the grid",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

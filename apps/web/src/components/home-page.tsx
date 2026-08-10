@@ -2019,6 +2019,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一家马场骑乘与度假牧场，寓意「草原、蹄声与风的远方」；气质要旷野松弛、又稳得住第一次牵马的家长；场景是朋友圈定位、草原合照水印和亲子体验课的推荐里都上镜安心。",
     en: "A horse ranch and riding retreat. The name should promise prairie, hoofbeats and wind — the faraway within reach; the vibe is open-range and unhurried yet steady enough for a first-time rider's parent; it must look good in the geotag, the grassland photo watermark, and the family-lesson referral.",
   },
+  {
+    slug: "datingapp",
+    labelZh: "交友App",
+    labelEn: "Dating app",
+    zh: "一款交友App与婚恋社交产品，寓意「心动那一刻被认真对待」；气质要轻快体面、有火花不轻浮；场景是应用商店图标、开屏 slogan 和用户向朋友说「我在用 XX」时都自然不尴尬。",
+    en: "A dating app and social matching product. The name should promise that the moment of a spark is taken seriously; the vibe is light and dignified, flirtatious without being sleazy; it must work on the app-store icon, the splash-screen slogan, and in the user's unembarrassed \"I'm on X\".",
+  },
+  {
+    slug: "singlesevents",
+    labelZh: "单身社交活动",
+    labelEn: "Singles events",
+    zh: "一个单身社交活动与脱单局品牌，寓意「去玩，顺便遇见对的人」；气质要热闹松弛、给报名者体面台阶；场景是活动海报、合照水印和朋友圈「我参加了 XX」的转发里都好玩不尴尬。",
+    en: "A singles events and social mixer brand. The name should promise a night out where meeting someone is the bonus; the vibe is lively yet relaxed, handing every guest a dignified off-ramp; it must read playful in the poster, the group-photo watermark, and the forwarded \"I went to X\".",
+  },
+  {
+    slug: "luxuryresale",
+    labelZh: "中古奢侈品",
+    labelEn: "Luxury resale",
+    zh: "一家中古奢侈品与奢品寄卖店，寓意「好东西值得第二次被珍惜」；气质要体面可信、鉴定专业感十足；场景是门店招牌、鉴定证书和卖家说「我的包托付给他家」时都稳重不跌份。",
+    en: "A luxury resale and consignment store. The name should promise that fine things deserve a second devotion; the vibe is dignified and trustworthy with authentication rigor built in; it must hold up on the storefront, on the authentication certificate, and in the consignor's \"I trusted them with my bag\".",
+  },
+  {
+    slug: "organicfood",
+    labelZh: "有机食品电商",
+    labelEn: "Organic food store",
+    zh: "一个有机食品电商与绿色食材品牌，寓意「从农场到餐桌都看得见」；气质要有泥土气与生命力、经得起溯源追问；场景是菜箱包装、认证标签旁和妈妈群「他家菜放心」的推荐里都可信温暖。",
+    en: "An organic food store and green grocery brand. The name should promise a farm-to-table journey you can see; the vibe is earthy and full of vitality, standing up to every traceability question; it must feel trustworthy on the produce box, beside the certification label, and in the parents-group \"their food is safe\".",
+  },
+  {
+    slug: "permanentmakeup",
+    labelZh: "半永久纹绣",
+    labelEn: "Permanent makeup studio",
+    zh: "一家半永久纹绣与纹眉工作室，寓意「一次做好，三年素颜」；气质要专业审美兼备、稳得住做在脸上的决定；场景是预约主页、案例对比图和顾客说「眉毛是在 XX 做的」时都专业体面。",
+    en: "A permanent makeup and microblading studio. The name should promise done once, bare-faced for three years; the vibe is equal parts professional and tasteful, steady enough for a decision worn on the face; it must reassure on the booking page, in healed-result photos, and in the client's \"I got my brows done at X\".",
+  },
+  {
+    slug: "homedecor",
+    labelZh: "家居饰品",
+    labelEn: "Home decor brand",
+    zh: "一个家居饰品与软装品牌，寓意「把理想生活摆上柜子」；气质要松弛有品、立意能从花瓶延伸到床品；场景是新家九宫格、礼盒卡片和「这是我在 XX 买的」的推荐里都有生活品味。",
+    en: "A home decor and soft-furnishing brand. The name should promise the good life placed on the shelf; the vibe is relaxed and tasteful, with a concept that stretches from vase to bedding; it must add taste points in the new-home photo grid, on the gift card, and in the \"I got it at X\".",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
