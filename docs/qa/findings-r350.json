@@ -1,0 +1,277 @@
+{
+  "usage_pre": {
+    "days": {
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786320060446,
+    "indexnowLast": 1786255259045,
+    "pricesLastOk": null,
+    "pricesLastFail": 1786326996712
+  },
+  "usage_keys_present": {
+    "pricesLastOk": true,
+    "pricesLastFail": true,
+    "cronLast": true,
+    "indexnowLast": true
+  },
+  "prices_api": {
+    "stale": true,
+    "tldCount": 58,
+    "fetchedAt": 1786167382002,
+    "keys": 58
+  },
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_all": "核验完成：共 247 个，199 个可注册",
+  "prices_rows_zh": 246,
+  "prices_live_count": 58,
+  "prices_static_count": 188,
+  "prices_new_tld_static": {
+    "expected": {
+      "auction": [
+        78,
+        204
+      ],
+      "deals": [
+        63,
+        204
+      ],
+      "coupons": [
+        78,
+        366
+      ],
+      "discount": [
+        63,
+        204
+      ],
+      "furniture": [
+        88,
+        700
+      ],
+      "lighting": [
+        41,
+        143
+      ]
+    },
+    "got": {
+      "lighting": [
+        41,
+        143
+      ],
+      "deals": [
+        63,
+        204
+      ],
+      "discount": [
+        63,
+        204
+      ],
+      "auction": [
+        78,
+        204
+      ],
+      "coupons": [
+        78,
+        366
+      ],
+      "furniture": [
+        88,
+        700
+      ]
+    },
+    "match": true
+  },
+  "prices_row_tld_hrefs": {
+    "auction": true,
+    "deals": true,
+    "coupons": true,
+    "discount": true,
+    "furniture": true,
+    "lighting": true
+  },
+  "tld_hub_links": 246,
+  "guide_hub_links": 248,
+  "vs_hub_links": 276,
+  "footer_counts": [],
+  "templates_prefill": {
+    "electrician": "An electrician and electrical services c",
+    "landscaping": "A landscaping design and maintenance com",
+    "painting": "A painting contractor. The name should p",
+    "jobboard": "A job board and hiring platform. The nam",
+    "restaurantsupply": "A restaurant equipment and supplies deal",
+    "motorcycleparts": "A motorcycle parts and riding gear brand"
+  },
+  "templates_more_chip": "+238",
+  "404_status": 404,
+  "404_tld_status": 404,
+  "404_guide_status": 404,
+  "404_vs_status": 404,
+  "mcp_doc_status": 200,
+  "mcp_doc_tldcount": "860",
+  "mcp_tld_prices": {
+    "tldCount": 246,
+    "priceKeys": 246
+  },
+  "share_create": {
+    "status": 200,
+    "id": "aclLjLOXDv",
+    "has_token": true
+  },
+  "share_live_domains": {
+    "d1": true,
+    "d2": true
+  },
+  "share_revoke": {
+    "del": 200,
+    "getAfter": 410,
+    "revokedBodyHasItems": false
+  },
+  "share_revoked_ui": true,
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(250, 250, 249)",
+    "persist_after_reload": "rgb(250, 250, 249)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld/auction": 360,
+    "/vs/careers-vs-work": 360,
+    "/guide/electrician": 360
+  },
+  "tld_auction_pricecard": null,
+  "usage_post": {
+    "days": {
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786320060446,
+    "indexnowLast": 1786255259045,
+    "pricesLastOk": null,
+    "pricesLastFail": 1786326996712
+  },
+  "usage_days_equal": true,
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r350"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r350"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r350"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r350"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r350"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/aclLjLOXDv"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/aclLjLOXDv"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/aclLjLOXDv"
+    }
+  ]
+}
