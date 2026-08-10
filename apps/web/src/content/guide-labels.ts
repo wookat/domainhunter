@@ -341,4 +341,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "lantern", zh: "灯笼工坊", en: "Lantern workshops" },
   { slug: "quilting", zh: "拼布工作室", en: "Quilting studios" },
   { slug: "teaware", zh: "茶器工作室", en: "Teaware studios" },
+  { slug: "kite", zh: "风筝工坊", en: "Kite workshops" },
+  { slug: "succulent", zh: "多肉植物店", en: "Succulent shops" },
+  { slug: "chocolate", zh: "手工巧克力", en: "Craft chocolate" },
+  { slug: "weaving", zh: "织造工作室", en: "Weaving studios" },
+  { slug: "puppet", zh: "木偶皮影工作室", en: "Puppetry studios" },
+  { slug: "birding", zh: "观鸟俱乐部", en: "Birding clubs" },
 ];

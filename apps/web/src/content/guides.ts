@@ -21080,6 +21080,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  kite: {
+    slug: "kite",
+    keywords: ["风筝工坊", "手作风筝", "潍坊风筝", "kite workshop", "kite making"],
+    tlds: [
+      { tld: "com", zh: "风筝电商与工坊订单的默认后缀，详情页与批发报价单上最稳", en: "The default suffix for kite e-commerce and workshop orders — steadiest on the product page and the wholesale quote" },
+      { tld: "art", zh: "手绘风筝的一半身份是纸上绘画，.art 的归类直接对位", en: "Half of a painted kite's identity is art on paper — .art files it exactly where it belongs" },
+      { tld: "fun", zh: "放风筝的快乐直给，亲子体验课与风筝节活动线零违和", en: "The joy of flying stated outright — zero friction for family classes and kite festival events" },
+    ],
+    zh: {
+      label: "风筝工坊",
+      title: "风筝工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "风筝工坊与手作风筝品牌命名指南：扎糊绘放四艺传统、御风意象等思路，潍坊/三石斋等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "风筝工坊的名字要接住「一根线牵着天空」的画面：风筝是少有的「作品在天上被看见」的手艺——沙燕、龙头蜈蚣在百米高处就是移动的招牌，名字只需把这份御风而上的轻盈说出来。参照系有两层：一是产地传统，潍坊以「世界风筝都」把一座城做成了品类背书，杨家埠的木版年画风筝、北京曹氏风筝的宫廷谱系，都证明「产地/流派+字号」是现成的信用语法；二是工艺本身，扎、糊、绘、放四艺是风筝的骨与皮，竹、绢、线、风都是可入名的具体材料。隐藏考点是业务分层：文创风筝与摆件走电商量、非遗体验课与亲子工坊走本地流量、大型风筝节与美陈订单走 B 端投标——名字要在详情页上好念，在体验课海报上有童趣，在投标书里立得住。误区在于把风筝锁进「玩具」的格子：这个品类的溢价来自手艺与民俗，不是塑料量产货。",
+      namingIdeas: [
+        "御风意象直给：风、鸢、翼、云类词根——「纸鸢」是这门手艺的古名，一个「鸢」字自带千年文脉与画面",
+        "四艺工艺借力：扎、糊、绘、竹、绢类材料词——把手艺的骨架写进名字，与量产塑料风筝直接切割",
+        "流派谱系语法：曹氏、杨家埠式的「姓氏/地名+风筝」——非遗传承的信用结构，师承即背书",
+        "线与天空的隐喻：把「一线牵天」说成牵挂与自由——风筝断线、放手的全民共识情感，礼品线与文创线的入口",
+        "童趣节令路线：春日、纸鸢节类场景词——风筝与春天深度绑定，亲子体验课与节令营销的现成钩子",
+      ],
+      cases: [
+        { name: "潍坊风筝", takeaway: "一座城把自己做成品类名：「世界风筝都」的产地背书让潍坊二字自带信用——产地语法在风筝品类的天花板" },
+        { name: "曹氏风筝", takeaway: "姓氏+品类的谱系语法：曹雪芹《南鹞北鸢考工志》的宫廷谱系做背书——师承叙事把一只风筝卖出收藏价" },
+        { name: "三石斋", takeaway: "老北京斋号立店：斋字自带书房气，把风筝从玩具升格为案头手艺——堂号路线在民俗品类的现役证明" },
+        { name: "Prism Kites", takeaway: "棱镜+风筝：一个光学词说清「天上那抹彩色」，运动风筝的现代感命名——传统品类做年轻线的参照" },
+      ],
+      pitfalls: [
+        "玩具感拉低手艺价值：叫「风筝玩具城」就把非遗手艺拍进塑料货架——这个品类卖的是扎糊绘的功夫，不是流水线货",
+        "锁死单一形制：叫「沙燕坊」就难接龙头蜈蚣与软体风筝——形制留给作品线，品牌名留「风与线」的母题",
+        "产地词当私名：只叫「潍坊风筝店」淹没在产地搜索里——潍坊是公共资产，要配私有字号才有辨识度",
+        "忽略 B 端投标场景：风筝节美陈与文旅订单是大头，名字要在投标书与合同里立得住——太卡通的名字接不了政企单",
+      ],
+    },
+    en: {
+      label: "Kite workshops",
+      title: "How to Name a Kite Workshop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Kite workshop and artisan kite brand naming guide: the four-craft tradition, wind-riding imagery, breakdowns of Weifang/Cao-family kites, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A kite workshop's name must catch the picture of one string holding the sky: kites are the rare craft whose work is seen overhead — a swallow kite or a dragon-centipede at a hundred meters is a flying signboard, and the name only has to say that wind-riding lightness out loud. The reference frame has two layers. First, place tradition: Weifang built a whole city into the category's endorsement as the world's kite capital, and the Yangjiabu woodblock-print kites and Beijing's Cao-family court lineage both prove that place-or-school plus house-name is a ready-made grammar of trust. Second, the craft itself: framing, papering, painting and flying are the kite's bones and skin, and bamboo, silk, string and wind are all concrete materials fit for a name. The hidden exam is the tier split: gift kites and ornaments run on e-commerce volume, heritage classes and family workshops run on local traffic, and kite festivals with large installations run on B2B tenders — the name must read easily on the product page, playful on the class poster, and solid in the tender document. The failure mode is filing the kite under toys: this category's premium comes from craft and folklore, not injection-molded volume.",
+      namingIdeas: [
+        "Wind-riding imagery outright: wind, glede, wing and cloud roots — the paper glede is this craft's ancient name, and one classical character carries a millennium of context and picture",
+        "Borrowing the four crafts: framing, papering, painting, bamboo and silk words — the craft's skeleton written into the name, a clean cut away from mass-produced plastic",
+        "The lineage grammar: family-name or place-name plus kite, in the Cao-family and Yangjiabu mold — heritage's structure of trust, where the master's line is the endorsement",
+        "The string-and-sky metaphor: one line to the sky restated as longing and letting go — the shared feeling of the snapped string, the door for the gift and stationery lines",
+        "The spring-festival route: spring day and kite-day scene words — kites are welded to spring, a ready hook for family classes and seasonal campaigns",
+      ],
+      cases: [
+        { name: "Weifang kites (潍坊)", takeaway: "A city made into the category name: the world-kite-capital endorsement gives the place name built-in credit — the ceiling of place grammar in this category" },
+        { name: "Cao-family kites (曹氏风筝)", takeaway: "Family name plus category in a documented lineage: the court pedigree traced to Cao Xueqin's kite treatise — heritage narrative selling one kite at collector prices" },
+        { name: "Sanshizhai (三石斋)", takeaway: "An old-Beijing studio name over the door: the zhai character carries the study's air, raising kites from toys to desk-worthy craft — the house-name road's living proof in folk arts" },
+        { name: "Prism Kites", takeaway: "An optics word plus the category: one term for that streak of color in the sky, the modern register of sport kites — the reference for a traditional category's youth line" },
+      ],
+      pitfalls: [
+        "The toy register cheapening the craft: a kite-toy-city name shelves heritage next to plastic — this category sells framing-and-painting skill, not assembly-line goods",
+        "Locking into one form: a swallow-kite name can't take dragon-centipedes and soft kites — leave the form to the product line, keep wind-and-string for the brand",
+        "The place word as your name: a bare Weifang-kite-shop name drowns in the place search — the city is a public asset, distinctive only with a private mark attached",
+        "Forgetting the tender document: festival installations and tourism orders are the big tickets, and the name must hold up in the bid and the contract — a too-cartoonish name can't sign the enterprise deal",
+      ],
+    },
+  },
+  succulent: {
+    slug: "succulent",
+    keywords: ["多肉植物店", "多肉大棚", "肉锥景天", "succulent shop", "succulent nursery"],
+    tlds: [
+      { tld: "com", zh: "多肉电商与批发询价的默认后缀，详情页与拼单群里最稳", en: "The default suffix for succulent e-commerce and wholesale enquiries — steadiest on the product page and in the group-buy chat" },
+      { tld: "shop", zh: "线上小店直接对位，多肉零售的轻量归类", en: "The online shop aligned outright — the light retail filing for succulent sales" },
+      { tld: "garden", zh: "大棚与园艺场景直给，实体基地与组盆课共用一块招牌", en: "Greenhouse and gardening stated outright — one sign over the nursery and the potting class" },
+    ],
+    zh: {
+      label: "多肉植物店",
+      title: "多肉植物店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "多肉植物店与多肉大棚命名指南：呆萌治愈意象、品种词根等思路，塔莎的花园/Leaf & Clay 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "多肉植物店的名字要说出「桌上一只小胖子」的治愈感：多肉的消费动机一半是养植物、一半是养心情——圆滚滚的呆萌形态自带表情包属性，名字只需把这份「捏一下就开心」的情绪明说。参照系分两路：一是内容电商，多肉是被直播与短视频喂大的品类，塔莎的花园式的「人设+园子」语法证明主播 IP 与店名可以互相成就；二是海外专业站，Leaf & Clay、Mountain Crest Gardens 用「材料/地名+园艺词」的组合把专业感做成信任。隐藏考点是业务分层：普货多肉走电商走量、贵货老桩走藏家圈层、组盆课与阳台改造走体验线——名字要在拼单群里好念，在贵货直播间里不掉价。另一个现实：多肉玩家有自己的黑话（度夏、出状态、控养），名字踩中圈内语感会被瞬间认亲，但也要给圈外新手留一扇看得懂的门。",
+      namingIdeas: [
+        "呆萌治愈直给：肉、胖、萌、圆类词根——品类情绪价值的直接翻译，新手客群的第一入口",
+        "品种词根借力：景天、肉锥、玉露、法师类品种词——圈内人一眼认亲的黑话语法，但要配私有字号避免淹没在品类词里",
+        "阳光旱地意象：沙、漠、阳、旱类词根——多肉的原生环境自带「顽强治愈」叙事，把耐旱好养的卖点写进名字",
+        "人设园子语法：塔莎的花园式的「人名+园」——直播电商时代主播 IP 与店名互相成就的现成结构",
+        "状态美学路线：出状态、果冻色类圈内审美词——贵货线的命名母题，锚定「养到极致」的玩家心理",
+      ],
+      cases: [
+        { name: "塔莎的花园", takeaway: "人名+园子的语法：借塔莎奶奶的田园人设立店，直播时代「主播 IP 即店名」的教科书——内容电商园艺赛道的现役证明" },
+        { name: "Leaf & Clay", takeaway: "叶与陶土两个具体名词：一个说植物一个说花盆，材料本位的命名把专业感说得温柔——海外多肉电商的简洁参照" },
+        { name: "Mountain Crest Gardens", takeaway: "山脊+园圃的地名语法：产地实景做信任背书，家族苗圃的厚重感——大棚基地线命名的美式样本" },
+        { name: "多肉联萌", takeaway: "谐音「联盟」的萌字改写：一个字把社群感与呆萌感同时说完——中文多肉社区命名的巧劲示范" },
+      ],
+      pitfalls: [
+        "品种词当私名：只叫「景天园」淹没在品种搜索里——景天、肉锥是公共资产，要配私有字号才有辨识度",
+        "太萌接不住贵货：全是叠字萌语的名字在万元老桩直播间里掉价——普货线与贵货线的气质要能分层兼容",
+        "锁死多肉品类：叫「多肉小铺」就难接块根、观叶与园艺资材——增长常在品类外，名字留「植物与阳光」的母题",
+        "忽略拼单群传播：多肉的私域靠群接龙与口头转述，名字要好念好打——生僻字与拗口组合在群里传一轮就变形",
+      ],
+    },
+    en: {
+      label: "Succulent shops",
+      title: "How to Name a Succulent Shop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Succulent shop and nursery naming guide: chubby-comfort imagery, genus-word roots, breakdowns of Leaf & Clay and more, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A succulent shop's name must say the comfort of a little chubby thing on the desk: half the purchase is keeping a plant and half is keeping a mood — the round, plump forms are practically emoji, and the name only has to state that squeeze-it-and-smile feeling out loud. The references run on two tracks. One is content commerce: succulents are a category raised by livestreams and short video, where the persona-plus-garden grammar proves a host's IP and a shop name can lift each other. The other is the overseas specialist shop: Leaf & Clay and Mountain Crest Gardens build professional trust from material or place words joined to garden words. The hidden exam is the tier split: everyday varieties run on e-commerce volume, rare specimens and aged plants run on the collector circle, and potting classes with balcony makeovers run on the experience line — the name must read easily in the group-buy chat and hold its dignity in the rare-plant livestream. One more reality: succulent people speak their own argot — summering-over, coloring-up, hard growing — and a name that lands the insider cadence gets adopted instantly, but it must leave a door legible to the beginner too.",
+      namingIdeas: [
+        "Chubby comfort outright: plump, round, cute and cushion roots — the category's emotional value translated directly, the first door for beginners",
+        "Borrowing the genus words: sedum, conophytum, haworthia and echeveria roots — the insider grammar recognized at a glance, paired with a private mark so it doesn't drown in the category term",
+        "Sun-and-dryland imagery: sand, desert, sun and drought roots — the native habitat's hardy-comfort narrative, writing easy-care right into the name",
+        "The persona-garden grammar: a personal name plus garden in the livestream mold — the ready structure where the host's IP and the shop name compound each other",
+        "The peak-condition aesthetic: coloring-up and jelly-tone insider words — the rare line's naming motif, anchored on the collector's grown-to-perfection pride",
+      ],
+      cases: [
+        { name: "Tasha's Garden (塔莎的花园)", takeaway: "Personal name plus garden: a pastoral persona raised into a shop, the textbook of host-IP-as-shop-name in the livestream era — content commerce's living proof in gardening" },
+        { name: "Leaf & Clay", takeaway: "Two concrete nouns, plant and pot: material-first naming that says professional gently — the clean overseas reference for succulent e-commerce" },
+        { name: "Mountain Crest Gardens", takeaway: "The ridge-plus-gardens place grammar: real terrain as the trust endorsement, the weight of a family nursery — the American sample for the greenhouse line" },
+        { name: "Duorou Lianmeng (多肉联萌)", takeaway: "A cute-character pun on alliance: one substituted character saying community and chubbiness at once — the deft touch of Chinese succulent community naming" },
+      ],
+      pitfalls: [
+        "The genus word as your name: a bare sedum-garden name drowns in the variety search — genus words are public assets, distinctive only with a private mark attached",
+        "Too cute for the rare line: an all-baby-talk name loses face in the four-figure aged-plant livestream — the everyday line and the collector line must share a compatible register",
+        "Locking into succulents: a succulent-corner name can't take caudex plants, foliage and garden supplies — growth lives outside the category, so keep sun-and-plant for the brand",
+        "Forgetting the group chat: this category's private traffic runs on group-buy threads and word of mouth, so the name must type and say easily — an obscure compound warps after one round of relay",
+      ],
+    },
+  },
+  chocolate: {
+    slug: "chocolate",
+    keywords: ["手工巧克力", "bean to bar", "巧克力工坊", "craft chocolate", "chocolatier"],
+    tlds: [
+      { tld: "com", zh: "巧克力电商与礼盒订单的默认后缀，详情页与企业礼品报价里最稳", en: "The default suffix for chocolate e-commerce and gift orders — steadiest on the product page and the corporate gifting quote" },
+      { tld: "store", zh: "线上旗舰店直接对位，礼盒零售的轻量归类", en: "The online flagship aligned outright — the light retail filing for gift-box sales" },
+      { tld: "boutique", zh: "精品店气质直给，手工巧克力的高客单价定位对位", en: "The boutique register outright — aligned with craft chocolate's premium positioning" },
+    ],
+    zh: {
+      label: "手工巧克力",
+      title: "手工巧克力品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "手工巧克力与 bean to bar 品牌命名指南：可可产地叙事、味觉意象等思路，Godiva/Dandelion 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "手工巧克力的名字要替「一块巧克力凭什么卖五十块」作答：这个品类的溢价一半来自可可豆的产地与工艺（bean to bar 的单一产地叙事），另一半来自礼物属性——巧克力是被送出去的次数远多于自己吃的品类，名字要在礼盒烫金上体面，在「送 TA 什么」的搜索里被想起。参照系两极分明：一极是 Godiva 式的传奇借名，一个裸骑献身的伯爵夫人传说把巧克力与「奉献之爱」焊死；另一极是 Dandelion 式的工坊直给，蒲公英的轻盈把 bean to bar 的匠气说得清新。隐藏考点是业务分层：礼盒走节令爆发、排块走复购日常、体验课与热饮吧走空间线——名字要在情人节礼盒上浪漫，在豆仓与风味卡上专业。误区在于味觉词的通胀：「丝滑」「浓醇」已被广告说到失效，真正的味觉感来自具体的产地与风味词——一句「厄瓜多尔 73%」比十个丝滑更有说服力。",
+      namingIdeas: [
+        "传奇借名语法：Godiva 式的人物/神话借力——把品牌焊在一个现成的爱与奉献故事上，礼物属性的最高级入口",
+        "产地风味直给：可可产地与风味轮词根（花香、莓果、焙火）——bean to bar 的专业叙事，风味卡与品鉴课的现成语言",
+        "轻盈意象反差：Dandelion 式的自然轻词——用蒲公英、羽毛类意象中和巧克力的浓重，年轻客群与清新线的入口",
+        "工坊匠气路线：坊、工房、chocolatier 类词根——把「手工」写进名字，与商超量产排块直接切割",
+        "深夜治愈母题：把巧克力说成「给自己的那一小块」——悦己消费的情绪语法，复购日常线的命名入口",
+      ],
+      cases: [
+        { name: "Godiva", takeaway: "一个裸骑献身的伯爵夫人传说：把巧克力与奉献之爱焊死，礼物属性的命名天花板——传奇借名语法的百年证明" },
+        { name: "Dandelion Chocolate", takeaway: "蒲公英+巧克力的反差：轻盈自然词中和品类的浓重，bean to bar 工坊清新气质的定调——旧金山精品巧克力的现役样本" },
+        { name: "La Maison du Chocolat", takeaway: "「巧克力之家」的法语直给：Maison 一词自带法式高定血统，品类词+场所词的贵气组合——高端礼盒线的语感参照" },
+        { name: "每日黑巧", takeaway: "频率+品类的功能直给：把「天天吃的健康黑巧」写进名字，健身与控糖人群零解释成本——功能线命名的中文样本" },
+      ],
+      pitfalls: [
+        "味觉词通胀：丝滑、浓醇类广告词已经失效——味觉感要落在具体产地与风味词上，一句单一产地比十个丝滑有力",
+        "锁死巧克力品类：叫「黑巧工坊」就难接热饮、烘焙与冰品——增长常在品类外，名字留「可可」的母题更宽",
+        "忽略礼盒烫金场景：礼物是这个品类的主战场，名字要在烫金与贺卡上体面——太网感的名字送不出手",
+        "洋名拗口断传播：法语意语名有格调但要过「口头转述」测试——念不出来的名字在「送 TA 什么」的对话里必然缺席",
+      ],
+    },
+    en: {
+      label: "Craft chocolate",
+      title: "How to Name a Craft Chocolate Brand: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Craft chocolate and bean-to-bar naming guide: origin storytelling, legend-borrowing, breakdowns of Godiva/Dandelion, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A craft chocolate name must answer why one bar costs eight dollars: half the premium is bean origin and process — the single-origin narrative of bean to bar — and half is the gift function, because chocolate is given away far more often than eaten alone, so the name must look dignified in gold foil and come to mind in the what-do-I-get-them search. The references sit at two poles. One is the Godiva play: a legend of a countess riding bare for her people welds chocolate to devoted love. The other is the Dandelion play: a light botanical word freshens the workshop's earnestness and sets bean to bar's clean register. The hidden exam is the tier split: gift boxes run on seasonal spikes, bars run on everyday repurchase, tasting classes and drinking-chocolate bars run on the space line — the name must read romantic on the Valentine box and professional on the origin card. The failure mode is taste-word inflation: silky and rich have been advertised into noise, and real taste credibility comes from concrete origin and flavor words — one line of Ecuador 73% outweighs ten silkys.",
+      namingIdeas: [
+        "The legend-borrowing grammar: a figure or myth carried in, the Godiva play — the brand welded to a ready story of love and devotion, the gift function's highest door",
+        "Origin and flavor outright: cacao origins and flavor-wheel roots — floral, berry, roast — the bean-to-bar narrative, the ready language of the tasting card and the class",
+        "The light-image contrast: dandelion, feather and leaf words in the Dandelion mold — a light natural image cutting the category's heaviness, the door for the younger, fresher line",
+        "The workshop register: atelier, works and chocolatier roots — handmade written into the name, a clean cut from the supermarket bar",
+        "The midnight-treat motif: chocolate restated as the one square you keep for yourself — the self-reward grammar, the naming door of the everyday repurchase line",
+      ],
+      cases: [
+        { name: "Godiva", takeaway: "A countess's bare-ride legend as the brand: chocolate welded to devoted love, the ceiling of gift-function naming — a century's proof of the legend-borrowing grammar" },
+        { name: "Dandelion Chocolate", takeaway: "Dandelion against chocolate: a light botanical word cutting the category's weight, setting bean to bar's fresh register — San Francisco craft chocolate's living sample" },
+        { name: "La Maison du Chocolat", takeaway: "The house of chocolate said in French: Maison carries couture pedigree, the noble pairing of category word and place word — the register reference for the premium gift line" },
+        { name: "Daily Dark (每日黑巧)", takeaway: "Frequency plus category, stated plainly: everyday healthy dark chocolate written into the name, zero explanation for the fitness and low-sugar crowd — the Chinese sample of functional naming" },
+      ],
+      pitfalls: [
+        "Taste-word inflation: silky and rich are advertised into noise — let taste land on concrete origin and flavor words; one single-origin line beats ten silkys",
+        "Locking into chocolate: a dark-bar-works name can't take drinking chocolate, pastry and gelato — growth lives outside the bar, so keep cacao for the brand",
+        "Forgetting the gold foil: gifting is this category's main theater, and the name must look right stamped on the box and the card — an internet-flavored name can't be handed over",
+        "The unpronounceable import: French and Italian names carry class but must survive the say-it-aloud test — a name nobody can pronounce is absent from the what-do-I-get-them conversation",
+      ],
+    },
+  },
+  weaving: {
+    slug: "weaving",
+    keywords: ["织造工作室", "手工织布", "梭织挂毯", "weaving studio", "handwoven textiles"],
+    tlds: [
+      { tld: "com", zh: "织物电商与定制订单的默认后缀，详情页与面料报价单上最稳", en: "The default suffix for textile e-commerce and commissions — steadiest on the product page and the fabric quote" },
+      { tld: "art", zh: "挂毯与纤维艺术的归类直接对位，艺术线的展签语境", en: "Tapestry and fiber art filed exactly where they belong — the gallery-label register of the art line" },
+      { tld: "studio", zh: "工作室气质直给，织布课与定制线共用一块招牌", en: "The studio identity outright — one sign over the weaving class and the commission line" },
+    ],
+    zh: {
+      label: "织造工作室",
+      title: "织造工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "织造工作室与手工织布品牌命名指南：经纬哲学、云锦织锦传统等思路，Harris Tweed/万事利等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "织造工作室的名字要织进「经纬交错」的哲学：织布是人类最古老的算法——经线定框架、纬线走内容，一梭一梭把时间织成物，这个动作本身就是最高级的命名母题。参照系纵深千年：中文语境里云锦、宋锦、缂丝是现成的皇家词库，「寸锦寸金」的贵重共识不需要教育；国际语境里 Harris Tweed 用一部法案守住「产地即品牌」的认证语法，日本的西阵织证明「地名+织」可以成为品类通货。隐藏考点是业务分层：围巾织物走电商与买手店、挂毯与纤维艺术走画廊与酒店软装、织布课与疗愈工作坊走体验线——名字要在详情页上有质感，在展签上立得住，在体验课海报上不吓人。误区在于把织造锁进「布」的格子：这个品类的天花板是纤维艺术与空间软装，名字要给「从围巾到装置」的升维留出空间。",
+      namingIdeas: [
+        "经纬哲学直给：经、纬、梭、杼类词根——织布的骨架语言自带秩序感，一个「梭」字就是手艺的画面",
+        "锦缎皇家借力：锦、缂、绫、罗类词根——中文现成的贵重词库，「寸锦寸金」的共识直接兑换成溢价",
+        "产地认证语法：Harris Tweed、西阵织式的「地名+织」——产地即品牌的信用结构，在地工作室的第一选择",
+        "手感温度路线：绒、软、暖类触觉词——织物最终卖的是贴身的温度，围巾与家居线的情感入口",
+        "时间织物隐喻：把「一梭一梭」说成时间的累积——慢工艺叙事的命名母题，疗愈工作坊与高定线的入口",
+      ],
+      cases: [
+        { name: "Harris Tweed", takeaway: "一部法案守住的产地品牌：只有外赫布里底群岛手织的粗花呢才能叫这个名字——「地名+织物」认证语法的全球天花板" },
+        { name: "南京云锦", takeaway: "「像云一样的锦」：一个比喻把织物说到天上，皇家贡品的词库直接兑换成当代溢价——中文织造命名的意象巅峰" },
+        { name: "万事利", takeaway: "吉语商号承接丝绸产业：从杭州丝厂到亚运礼品的国民品牌——传统吉语语法在织造品类的现役证明" },
+        { name: "西阵织", takeaway: "京都地名+织的品类通货：一个街区名成为和服面料的最高背书——产地语法跨文化成立的东方样本" },
+      ],
+      pitfalls: [
+        "锁死单一织物：叫「围巾坊」就难接挂毯、软装与服装面料——品类留给产品线，品牌名留「经纬」的母题",
+        "皇家词滥用掉价：不做缂丝却叫「御织坊」，名不副实反噬信任——锦缂类词要与真实工艺等级匹配",
+        "太艺术吓跑体验课新手：织布课主力是零基础疗愈客群，装置艺术感的名字让人不敢报名——艺术线与教学线分层表达",
+        "忽略面料 B 端场景：设计师面料与酒店软装订单看重专业感，名字要在面料报价单上立得住——太少女的名字接不了商单",
+      ],
+    },
+    en: {
+      label: "Weaving studios",
+      title: "How to Name a Weaving Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Weaving studio and handwoven textile naming guide: warp-and-weft philosophy, brocade traditions, breakdowns of Harris Tweed/Nishijin-ori, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A weaving studio's name must be woven on the warp and weft: weaving is humanity's oldest algorithm — the warp sets the frame, the weft carries the content, and shuttle by shuttle time is woven into a thing; the action itself is the category's highest naming motif. The references run a thousand years deep. In the Chinese register, cloud brocade, Song brocade and kesi tapestry are a ready royal lexicon where an inch of brocade, an inch of gold needs no education; internationally, Harris Tweed holds the place-as-brand certification grammar with an Act of Parliament, and Kyoto's Nishijin-ori proves place-plus-weave can become category currency. The hidden exam is the tier split: scarves and yardage run on e-commerce and the buyer's shop, tapestry and fiber art run on galleries and hotel interiors, weaving classes and mindful-craft workshops run on the experience line — the name must feel textured on the product page, stand on the gallery label, and stay unintimidating on the class poster. The failure mode is locking the loom into cloth: this category's ceiling is fiber art and interior commissions, and the name must leave room for the climb from scarf to installation.",
+      namingIdeas: [
+        "Warp-and-weft outright: warp, weft, shuttle and loom roots — the structural language of weaving carries its own sense of order, and one shuttle word is the whole picture of the craft",
+        "Borrowing the brocade lexicon: brocade, kesi and damask roots — the ready royal vocabulary where inch-of-gold prestige converts straight into premium",
+        "The certification grammar: place plus weave in the Harris Tweed and Nishijin mold — place-as-brand's structure of trust, the first choice of the rooted local studio",
+        "The hand-feel route: soft, warm and touch words — what cloth finally sells is warmth against the skin, the emotional door of the scarf and home lines",
+        "The woven-time metaphor: shuttle by shuttle restated as accumulated time — the slow-craft narrative's naming motif, the door for mindful workshops and the couture line",
+      ],
+      cases: [
+        { name: "Harris Tweed", takeaway: "A place brand guarded by an Act of Parliament: only tweed handwoven in the Outer Hebrides may bear the name — the global ceiling of place-plus-textile certification grammar" },
+        { name: "Nanjing cloud brocade (云锦)", takeaway: "Brocade like clouds: one metaphor lifting cloth into the sky, the royal-tribute lexicon converting straight into contemporary premium — the imagery summit of Chinese weaving names" },
+        { name: "Wensli (万事利)", takeaway: "An auspicious trade name carrying a silk industry: from a Hangzhou silk mill to state-gift silks — the traditional auspicious grammar's living proof in textiles" },
+        { name: "Nishijin-ori (西阵织)", takeaway: "A Kyoto district name plus weave as category currency: one neighborhood become the highest endorsement of kimono cloth — the Eastern sample of place grammar holding across cultures" },
+      ],
+      pitfalls: [
+        "Locking into one textile: a scarf-house name can't take tapestry, interiors and garment cloth — leave the product to the line, keep warp-and-weft for the brand",
+        "Royal words overclaimed: an imperial-loom name without kesi-grade craft backfires on trust — brocade lexicon must match the real level of the work",
+        "Too arty for the class: weaving classes run on zero-experience mindful-craft clients, and an installation-flavored name keeps them from signing up — voice the art line and the teaching line separately",
+        "Forgetting the fabric quote: designer yardage and hotel-interior commissions weigh professionalism, and the name must stand on the fabric quotation — a too-twee name can't sign the trade order",
+      ],
+    },
+  },
+  puppet: {
+    slug: "puppet",
+    keywords: ["木偶皮影工作室", "提线木偶", "皮影戏", "puppet theatre", "shadow puppetry"],
+    tlds: [
+      { tld: "com", zh: "演出订单与文创电商的默认后缀，合同与详情页里最稳", en: "The default suffix for show bookings and craft e-commerce — steadiest on the contract and the product page" },
+      { tld: "art", zh: "偶戏的一半身份是民间艺术，.art 的归类直接对位", en: "Half of puppetry's identity is folk art — .art files it exactly where it belongs" },
+      { tld: "show", zh: "演出属性直给，剧场线与巡演海报零违和", en: "The performance stated outright — zero friction on the theatre line and the tour poster" },
+    ],
+    zh: {
+      label: "木偶皮影工作室",
+      title: "木偶皮影工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "木偶皮影工作室与偶戏剧团命名指南：一口叙千年的班社传统、光影意象等思路，泉州提线木偶/Muppets 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "木偶皮影工作室的名字要说出「一双手让死物开口」的魔法：偶戏是所有表演艺术里「造物感」最强的一门——木头与牛皮本无生命，艺人的手指与灯光让它们讲了千年的故事，名字只需把这份点石成金的魔法明说。参照系两极：一极是班社传统，泉州提线木偶、陕西华县皮影的「地名+剧种」是非遗谱系的现成信用，老班社的「堂、班」字号自带江湖辈分；另一极是 Muppets 式的当代造词，marionette 与 puppet 缝成一个新词，把偶戏从戏台带进电视与全球 IP。隐藏考点是业务分层：剧场演出与巡演走 B 端合同、非遗体验课与研学走本地流量、偶人文创与材料包走电商——名字要在演出海报上有戏味，在研学手册里亲切，在文创吊牌上好认。误区在于把偶戏锁进「传统」的格子：这个品类的增长在亲子剧场与当代偶剧，名字要给「老手艺讲新故事」留出空间。",
+      namingIdeas: [
+        "光影意象直给：影、灯、幕类词根——皮影的全部魔法发生在一块布与一盏灯之间，光影就是品类的画面语言",
+        "班社堂号语法：班、堂、社类字号——偶戏班社的传统信用结构，江湖辈分与非遗谱系的现成容器",
+        "点物成活隐喻：把「死物开口」说成造物的魔法——偶戏区别于一切表演的核心魅力，当代剧场线的命名母题",
+        "地名剧种借力：泉州、华县式的「产地+剧种」——非遗认证的信用语法，但要配私有字号避免同质化",
+        "当代造词路线：Muppets 式的缝词新造——把偶戏从戏台带进亲子剧场与 IP 宇宙的语言通行证",
+      ],
+      cases: [
+        { name: "泉州提线木偶", takeaway: "地名+剧种的非遗通货：千年班社传统让泉州二字自带偶戏信用——产地语法在偶戏品类的天花板" },
+        { name: "The Muppets", takeaway: "marionette+puppet 缝成的新词：一个造词把偶戏从戏台带进电视与全球 IP——偶戏当代化命名的世纪样本" },
+        { name: "华县皮影", takeaway: "「一口叙还千古事，双手对舞百万兵」：皮影戏词自证品类魅力——命名可以直接从戏谚里取意象的现成矿脉" },
+        { name: "台原偶戏团", takeaway: "台北的当代偶戏团：把传统布袋戏与欧洲偶剧嫁接，团名平实而作品先锋——「名字守旧、作品创新」的反差策略" },
+      ],
+      pitfalls: [
+        "博物馆感锁死增长：太「遗产」的名字让亲子客群觉得与己无关——非遗是背书不是牢笼，名字要留当代剧场的门",
+        "锁死单一剧种：叫「皮影坊」就难接木偶、光影剧与偶人文创——剧种留给作品线，品牌名留「光影与手」的母题",
+        "地名剧种当私名：只叫「泉州木偶戏」淹没在品类搜索里——地名剧种是公共资产，要配私有字号才有辨识度",
+        "忽略演出合同场景：剧场巡演与文旅驻场是大头收入，名字要在合同与投标书里立得住——太玩闹的名字接不了政企单",
+      ],
+    },
+    en: {
+      label: "Puppetry studios",
+      title: "How to Name a Puppetry Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Puppetry and shadow-play studio naming guide: troupe-name traditions, light-and-shadow imagery, breakdowns of Quanzhou marionettes/The Muppets, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A puppetry studio's name must say the magic of hands that make dead things speak: puppetry has the strongest act of creation in all the performing arts — wood and rawhide have no life of their own, yet fingers and lamplight have made them tell stories for a thousand years, and the name only has to state that touch-of-life magic out loud. The references sit at two poles. One is the troupe tradition: Quanzhou's marionettes and Huaxian's shadow puppets carry place-plus-genre heritage credit, and the old troupe-hall names hold generations of standing. The other is the Muppets play: marionette and puppet stitched into a coined word that carried puppetry off the temple stage into television and a global IP. The hidden exam is the tier split: theatre runs and tours run on B2B contracts, heritage classes and school trips run on local traffic, and puppet crafts with DIY kits run on e-commerce — the name must carry stage flavor on the poster, warmth in the study-trip booklet, and clarity on the craft hang tag. The failure mode is filing puppetry under the past: growth lives in family theatre and contemporary puppet plays, and the name must leave room for old hands telling new stories.",
+      namingIdeas: [
+        "Light-and-shadow outright: shadow, lamp and screen roots — all of shadow play's magic happens between one cloth and one lamp; light is the category's picture language",
+        "The troupe-hall grammar: troupe, hall and company names — puppetry's traditional structure of trust, the ready container of standing and heritage lineage",
+        "The touch-of-life metaphor: dead things made to speak, restated as the maker's magic — the core charm that sets puppetry apart from all performance, the contemporary line's naming motif",
+        "Borrowing place and genre: place plus genre in the Quanzhou and Huaxian mold — heritage certification's grammar of trust, paired with a private mark against sameness",
+        "The coined-word route: stitched neologisms in the Muppets mold — the language passport carrying puppetry into family theatre and the IP universe",
+      ],
+      cases: [
+        { name: "Quanzhou marionettes (泉州提线木偶)", takeaway: "Place plus genre as heritage currency: a millennium of troupe tradition giving the city name built-in puppet credit — the ceiling of place grammar in this category" },
+        { name: "The Muppets", takeaway: "Marionette and puppet stitched into one coined word: a neologism carrying puppetry from the stage into television and global IP — the century's sample of the contemporary turn" },
+        { name: "Huaxian shadow puppets (华县皮影)", takeaway: "One mouth tells a thousand years; two hands command a million soldiers: the stage proverb proving the category's charm — a ready vein of imagery names can draw from directly" },
+        { name: "Taiyuan Puppet Theatre (台原偶戏团)", takeaway: "A Taipei company grafting glove puppetry onto European puppet theatre: a plain troupe name over avant-garde work — the contrast strategy of a quiet name and a bold repertoire" },
+      ],
+      pitfalls: [
+        "The museum register capping growth: a too-heritage name tells family audiences this isn't for them — heritage is the endorsement, not the cage; leave a door to contemporary theatre",
+        "Locking into one genre: a shadow-house name can't take marionettes, light plays and puppet crafts — leave the genre to the repertoire, keep light-and-hands for the brand",
+        "Place-genre as your name: a bare Quanzhou-puppet name drowns in the category search — place and genre are public assets, distinctive only with a private mark attached",
+        "Forgetting the contract: theatre tours and tourism residencies are the major revenue, and the name must stand in the contract and the tender — a too-playful name can't sign the government deal",
+      ],
+    },
+  },
+  birding: {
+    slug: "birding",
+    keywords: ["观鸟俱乐部", "观鸟导赏", "自然观察", "birding club", "birdwatching tours"],
+    tlds: [
+      { tld: "com", zh: "观鸟团报名与装备电商的默认后缀，行程页与报价单上最稳", en: "The default suffix for tour bookings and gear e-commerce — steadiest on the itinerary page and the quote" },
+      { tld: "club", zh: "俱乐部属性直给，会员制与鸟友社群零违和", en: "The club stated outright — zero friction for memberships and the birder community" },
+      { tld: "tours", zh: "观鸟旅行线直接对位，深度自然行程的归类", en: "The birding travel line aligned outright — the filing for in-depth nature itineraries" },
+    ],
+    zh: {
+      label: "观鸟俱乐部",
+      title: "观鸟俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "观鸟俱乐部与自然导赏品牌命名指南：鸟种意象、守护叙事等思路，Audubon/eBird 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "观鸟俱乐部的名字要说出「举起望远镜那一刻的心跳」：观鸟是把「偶遇」做成方法论的爱好——一只稀有鸟种进入视野的瞬间，是这个社群共享的巅峰体验，名字只需把这份「遇见」的期待明说。参照系成熟：国际上 Audubon 用一位博物画家的名字做成北美鸟类保护的百年招牌，证明「人名即使命」的语法；eBird 用一个前缀把公民科学做成全球数据库，证明工具化命名的当代路径；中文圈的朱雀会借神鸟之名立会，把传统文化词库接进现代保护组织。隐藏考点是业务分层：观鸟团与自然导赏走行程报名、青少年自然教育走机构合作、望远镜与图鉴装备走电商带货——名字要在行程海报上有野趣，在学校合作方案里专业，在鸟友群里被认亲。误区在于把观鸟锁进「老法师」的刻板印象：这个品类的增长在年轻人与亲子客群，名字要轻盈，不要器材党的沉重。",
+      namingIdeas: [
+        "鸟种意象直给：鹟、鸫、鹀、燕类鸟名词根——圈内人一眼认亲的黑话语法，一个冷门鸟种名就是社群暗号",
+        "神鸟文化借力：朱雀、青鸾、精卫类神话鸟名——中文现成的文化词库，把观鸟接进千年的鸟崇拜叙事",
+        "遇见时刻路线：把「lifer 的心跳」写进名字——第一次记录新鸟种的巅峰体验，观鸟社群共享的情感母题",
+        "人名使命语法：Audubon 式的博物学家借名——把品牌焊在一位先驱的名字上，保护叙事与专业感的双重背书",
+        "迁徙飞羽隐喻：迁徙、候鸟、飞羽类词根——鸟类年复一年的南来北往自带诗意，观鸟旅行线的画面语言",
+      ],
+      cases: [
+        { name: "Audubon", takeaway: "一位博物画家的名字做成百年保护招牌：人名即使命的语法天花板——北美观鸟文化的品牌原点" },
+        { name: "eBird", takeaway: "一个 e 前缀把观鸟做成全球公民科学数据库：工具化命名的当代样本——记录行为本身成了社群的粘合剂" },
+        { name: "朱雀会", takeaway: "借四象神鸟立会：传统文化词库接进现代鸟类保护——中文观鸟组织命名的文脉示范" },
+        { name: "Wingspan", takeaway: "「翼展」一个具体名词：桌游让观鸟破圈进了千万家庭——鸟类题材大众化传播的命名参照" },
+      ],
+      pitfalls: [
+        "器材党气质吓跑新手：全是「长焦、打鸟」黑话的名字让亲子客群却步——观鸟的增长在轻装新人，名字要轻盈",
+        "锁死单一鸟种：叫「猛禽社」就难接林鸟、水鸟与自然教育——鸟种留给活动线，品牌名留「飞羽与遇见」的母题",
+        "保护叙事过重变说教：全是「拯救、濒危」的名字让休闲客群有负担——保护是底色不是门槛，先让人爱上再谈守护",
+        "忽略学校合作场景：自然教育的大头在机构与学校采购，名字要在合作方案里专业可信——太玩闹的名字进不了课程表",
+      ],
+    },
+    en: {
+      label: "Birding clubs",
+      title: "How to Name a Birding Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Birding club and nature-guiding brand naming guide: bird-name argot, guardian narratives, breakdowns of Audubon/eBird, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A birding club's name must say the heartbeat of raising the binoculars: birding is the hobby that turned chance encounter into a method — the instant a rare species enters the glass is this community's shared peak, and the name only has to state that anticipation of meeting out loud. The references are mature. Audubon built a century of North American bird conservation on one naturalist-painter's name, proving the name-as-mission grammar; eBird turned citizen science into a global database with a single prefix, proving the tool-naming route; and China's Zhuque Society raised a club on a mythical bird, wiring the classical lexicon into modern conservation. The hidden exam is the tier split: birding tours and nature guiding run on itinerary bookings, youth nature education runs on school partnerships, and optics with field guides run on e-commerce — the name must carry wildness on the trip poster, professionalism in the school proposal, and instant kinship in the birders' chat. The failure mode is the gear-head stereotype: growth lives with young people and families, so the name must stay light, not heavy with lens-lore.",
+      namingIdeas: [
+        "Bird-name argot outright: flycatcher, thrush, bunting and swift roots — the insider grammar recognized at a glance; one obscure species name is a community password",
+        "Borrowing the mythical bird: vermilion bird, luan and phoenix roots — the ready classical lexicon, wiring birding into millennia of bird reverence",
+        "The lifer-moment route: the heartbeat of a first record written into the name — the peak experience of a new species logged, the community's shared emotional motif",
+        "The name-as-mission grammar: a naturalist's name carried in, the Audubon play — the brand welded to a pioneer, double endorsement of conservation and expertise",
+        "The migration metaphor: migration, flyway and feather roots — the year-in, year-out passage carries its own poetry, the picture language of the birding travel line",
+      ],
+      cases: [
+        { name: "Audubon", takeaway: "A naturalist-painter's name made a century-long conservation marque: the ceiling of name-as-mission grammar — the brand origin of North American birding culture" },
+        { name: "eBird", takeaway: "One e-prefix turning birding into a global citizen-science database: the contemporary sample of tool naming — the act of logging itself became the community's glue" },
+        { name: "Zhuque Society (朱雀会)", takeaway: "A club raised on the vermilion bird of the four symbols: the classical lexicon wired into modern bird conservation — the literate model of Chinese birding names" },
+        { name: "Wingspan", takeaway: "One concrete noun: a board game carrying birds into millions of homes — the naming reference for taking the birding theme mainstream" },
+      ],
+      pitfalls: [
+        "The gear-head register scaring beginners: a name built of telephoto argot turns families away — growth lives with light-packing newcomers, so keep the name light",
+        "Locking into one group: a raptor-society name can't take songbirds, waders and nature education — leave the species to the outings, keep feathers-and-meeting for the brand",
+        "The conservation sermon: a name all rescue-and-endangered burdens the casual guest — protection is the ground note, not the entry fee; make people fall in love first",
+        "Forgetting the school proposal: nature education's revenue lives in institutional purchases, and the name must read credible in the partnership deck — a too-playful name never makes the syllabus",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

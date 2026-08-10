@@ -347,7 +347,7 @@
     ]
   },
   "guide": {
-    "count": 338,
+    "count": 344,
     "slugs": [
       "saas",
       "ecommerce",
@@ -686,7 +686,13 @@
       "papercut",
       "lantern",
       "quilting",
-      "teaware"
+      "teaware",
+      "kite",
+      "succulent",
+      "chocolate",
+      "weaving",
+      "puppet",
+      "birding"
     ]
   },
   "vs": {
