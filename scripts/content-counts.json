@@ -305,7 +305,7 @@
     ]
   },
   "guide": {
-    "count": 290,
+    "count": 296,
     "slugs": [
       "saas",
       "ecommerce",
@@ -596,7 +596,13 @@
       "sportsodds",
       "tabletopclub",
       "futsal",
-      "fashionbuyer"
+      "fashionbuyer",
+      "basketball",
+      "rugby",
+      "cricket",
+      "aquascaping",
+      "fanclub",
+      "giveaway"
     ]
   },
   "vs": {

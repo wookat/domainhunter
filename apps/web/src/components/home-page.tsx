@@ -2103,6 +2103,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一家快时尚买手店与潮流集合店，寓意「替你先挑过一遍的眼光」；气质要有杂志感、品味立得住每周上新；场景是店头招牌、购物袋和「XX 家又上新了」的朋友圈里都有辨识度。",
     en: "A fast-fashion buyer store and select shop. The name should promise an eye that chose first; the vibe is magazine-grade, with taste that holds up to weekly drops; it must stay distinctive on the storefront, the shopping bag, and in the \"X just dropped new arrivals\" post.",
   },
+  {
+    slug: "basketball",
+    labelZh: "篮球培训",
+    labelEn: "Basketball training",
+    zh: "一家篮球培训与青训机构，寓意「凌晨球馆里变强的过程」；气质要热血靠谱、孩子听了想练家长听了放心；场景是训练服背后、球馆点名和家长群晒课表里都喊得响、说得出口。",
+    en: "A basketball training academy for youth players. The name should promise the getting-better that happens in early-morning gyms; the vibe is fired-up yet credible, thrilling the kid and reassuring the parent; it must shout well at roll call, print proudly on the practice jersey, and read well in the parents' group chat.",
+  },
+  {
+    slug: "rugby",
+    labelZh: "橄榄球俱乐部",
+    labelEn: "Rugby club",
+    zh: "一家业余橄榄球俱乐部，寓意「一件传了三代的球衣」；气质要有图腾感、传统与热血并存；场景是队歌合唱、酒馆第三半场和队徽刺绣上都立得住、喊得响。",
+    en: "An amateur rugby club. The name should feel like a jersey handed down three generations; the vibe is totemic, tradition and ferocity in one; it must hold up embroidered on the crest, roar well in the club anthem, and carry through the pub's third half.",
+  },
+  {
+    slug: "cricket",
+    labelZh: "板球社区",
+    labelEn: "Cricket community",
+    zh: "一个板球爱好者社区与球迷资讯站，寓意「看台上一坐就有人递茶的老位置」；气质要懂行亲切、经得起五天测试赛的慢聊；场景是比分讨论群、播客口播和看台闲谈里都好念耐用。",
+    en: "A cricket fan community and info site. The name should promise the regular's seat where someone passes the tea; the vibe is knowledgeable and warm, built for five days of slow talk; it must wear well in the score chat, the podcast shoutout, and the chatter of the stands.",
+  },
+  {
+    slug: "aquascaping",
+    labelZh: "观赏鱼造景",
+    labelEn: "Aquascaping studio",
+    zh: "一家观赏鱼与水族造景工作室，寓意「桌面上一片会呼吸的风景」；气质要安静有手艺感、读出来像水面不起波澜；场景是定制缸署名、展厅门头和造景直播口播里都体面好念。",
+    en: "An ornamental fish and aquascaping studio. The name should promise a breathing landscape on a desktop; the vibe is quiet and crafted, reading like an unrippled surface; it must sign a custom tank with dignity, sit well on the showroom front, and say cleanly in the scaping livestream.",
+  },
+  {
+    slug: "fanclub",
+    labelZh: "粉丝应援站",
+    labelEn: "Fan club",
+    zh: "一个粉丝应援站与粉丝社区，寓意「举起来同担一眼认亲的旗」；气质要体面有归属感、圈内认亲圈外好奇；场景是灯牌横幅、话题标签和超话搜索框里都读得快、拼得对。",
+    en: "A fan club and fandom community. The name should be a banner fellow fans recognize in a glance; the vibe is dignified with belonging built in, kin to insiders and intriguing to outsiders; it must read in a three-second lightstick wave, tag cleanly, and spell right in the trending search box.",
+  },
+  {
+    slug: "giveaway",
+    labelZh: "抽奖活动平台",
+    labelEn: "Giveaway platform",
+    zh: "一个抽奖活动与营销工具平台，寓意「像公证处一样可信的开奖台」；气质要喜气克制、工具感与公信力并存；场景是商家落地页、开奖倒数口播和活动海报上都体面好念不带赌气。",
+    en: "A giveaway and campaign tool platform. The name should promise a drawing stage as trustworthy as a notary's office; the vibe is festive yet restrained, utility and credibility in one; it must hang on a merchant's landing page with dignity, read fast in the countdown, and carry no whiff of the wager.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

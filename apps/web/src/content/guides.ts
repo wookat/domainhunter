@@ -18104,6 +18104,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  basketball: {
+    slug: "basketball",
+    keywords: ["篮球培训", "篮球训练营", "青少年篮球", "basketball training", "hoops academy"],
+    tlds: [
+      { tld: "basketball", zh: "品类后缀直给到篮筐，看域名就知道馆里练什么", en: "The category stated at the rim — one glance at the domain says what's trained inside" },
+      { tld: "coach", zh: "教练身份写进后缀，训练营的专业感先立住", en: "The coach identity built into the suffix — training-camp expertise staked first" },
+      { tld: "academy", zh: "体系化青训的语感，家长看到就联想课程与升学", en: "The systematic-academy register — parents read curriculum and pathways at once" },
+    ],
+    zh: {
+      label: "篮球培训",
+      title: "篮球培训机构怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "篮球培训与训练营命名指南：动作词根、青训体系等思路，IMG Academy/东方启明星/YBDL 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "篮球培训的名字要同时说服两代人：孩子听到觉得热血，家长听到觉得靠谱——报名决定在家长手里，但坚持上课的动力在孩子心里。看行业样本：IMG Academy 用创始机构的三个字母加「学院」，把网球起家的训练营做成全球体育青训的代名词，「Academy」一词给了家长课程体系与升学通道的全部想象；东方启明星把「启明星」写进名字——天亮前最亮的那颗星，练球的孩子与凌晨的球馆一下子有了画面，中文青训命名的意象天花板；YBDL（青少年篮球发展联盟）用缩写扛起「联盟」的规模感，四个字母在家长群里像一个官方认证。命名的隐藏考点是「双受众语感」：名字要经得起两个场景——孩子穿着印名字的训练服敢不敢在球场上抬头，家长在朋友圈晒课表时说不说得出口。",
+      namingIdeas: [
+        "动作词根直给：投、跳、突破、上篮——把球场动作写进名字，孩子一听就有画面",
+        "青训体系语感：学院、营、计划——Academy 式的体系承诺，家长要的课程感一步到位",
+        "意象升维路线：启明星式的比喻——把「变强的过程」写成一个意象，名字自带故事",
+        "联盟规模结构：联赛、联盟、Club——YBDL 式的组织感，散课变体系的信任杠杆",
+        "训练服测试：名字印在队服背后，孩子在球场上敢不敢抬头——羞于穿出去的名字留不住学员",
+      ],
+      cases: [
+        { name: "IMG Academy", takeaway: "三个字母加「学院」：网球起家做成全球青训代名词——Academy 一词扛起体系与升学想象" },
+        { name: "东方启明星", takeaway: "天亮前最亮的星配凌晨的球馆：练球的画面感被一个意象说完——中文青训命名的天花板" },
+        { name: "YBDL", takeaway: "青少年篮球发展联盟的缩写：四个字母在家长群像官方认证——联盟感命名的规模杠杆" },
+        { name: "Overtime", takeaway: "「加时赛」一词双关热血与内容：从球场集锦做到青年联赛——动作词升维品牌的样本" },
+      ],
+      pitfalls: [
+        "只讨好孩子不说服家长：名字全是酷炫黑话，家长看不出课程与安全——报名的笔在家长手里",
+        "球星名蹭旁轨：名字贴着球星与球队走，商标与授权随时翻车——借来的热血撑不起自己的馆",
+        "锁死年龄段：名字绑死「少儿」，学员长大品牌跟着掉队——年龄留余量，班型交给课表",
+        "忽略球馆喊名场景：教练点名、比赛加油都要喊得响——三个音节喊不出口的名字进不了球馆",
+      ],
+    },
+    en: {
+      label: "Basketball training",
+      title: "How to Name a Basketball Training Academy: Strategies, Cases & Domains",
+      metaDescription:
+        "Basketball training and youth academy naming guide: action roots, academy registers, breakdowns of IMG Academy/Overtime/YBDL, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A basketball training brand must convince two generations at once: the kid should hear adrenaline, the parent should hear credentials — the enrollment pen is in the parent's hand, but the will to keep showing up lives in the kid. The benchmarks show the range: IMG Academy took three founder letters plus \"Academy\" and turned a tennis camp into the global byword for sports schooling — that one word hands parents the full imagination of curriculum and pathways; Overtime turned a game-clock term into a youth-sports media and league empire, proof that one action word can carry highlight reels and a league alike; YBDL (Youth Basketball Development League) leans on the acronym's league-scale gravity — four letters that read like an official stamp in a parents' group chat. The hidden exam is the dual-audience test: the name must survive two scenes — a kid wearing it across the back of a practice jersey without ducking, and a parent saying it aloud while posting the class schedule.",
+      namingIdeas: [
+        "Action roots stated plainly: shoot, jump, drive, finish — write the court move into the name and the kid sees the play instantly",
+        "The academy register: academy, camp, program — the IMG move, promising a system the parent can enroll in, not just a hoop to rent",
+        "The imagery upgrade: name the process of getting better — a morning-star metaphor gives early practices a story to belong to",
+        "League-scale structure: league, club, union — the YBDL move, turning loose classes into an institution parents trust",
+        "The jersey test: print the name across a kid's back — a name they'd duck under keeps no student for a second term",
+      ],
+      cases: [
+        { name: "IMG Academy", takeaway: "Three founder letters plus \"Academy\": a tennis camp become the global byword for sports schooling — one word carrying curriculum and pathways" },
+        { name: "Overtime", takeaway: "A game-clock term doubling as ambition: from highlight reels to youth leagues — the proof that one action word can hold an empire" },
+        { name: "YBDL", takeaway: "A development league compressed to four letters: reads like an official stamp in the parents' chat — acronym naming with league-scale gravity" },
+        { name: "Drew League", takeaway: "A neighborhood gym's name grown into pro-am legend: place plus league, credibility compounding every summer — community naming at full trust" },
+      ],
+      pitfalls: [
+        "Charming the kid, losing the parent: all-slang names hide the curriculum and the safety story — the enrollment pen belongs to the adult",
+        "Drafting off star names: hugging a player or franchise invites trademark trouble — borrowed adrenaline never carries your own gym",
+        "Welding to an age band: a name bound to \"kids\" falls behind its own students — leave the age room, let the timetable set the classes",
+        "Ignoring the gym shout: coaches call it at drills, crowds chant it at games — a name over three syllables never gets shouted",
+      ],
+    },
+  },
+  rugby: {
+    slug: "rugby",
+    keywords: ["橄榄球俱乐部", "英式橄榄球", "业余体育俱乐部", "rugby club", "rugby union"],
+    tlds: [
+      { tld: "rugby", zh: "品类后缀直给到球场，圈内人看域名就认亲", en: "The category stated at the pitch — insiders recognize kin at the domain alone" },
+      { tld: "club", zh: "会员制语感自带归属，业余俱乐部的天然后缀", en: "Membership belonging built into the suffix — the natural home for an amateur club" },
+      { tld: "team", zh: "队伍身份直给，招新与约赛页面一眼归位", en: "The squad identity stated plainly — recruiting and fixture pages filed at a glance" },
+    ],
+    zh: {
+      label: "橄榄球俱乐部",
+      title: "橄榄球俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "橄榄球俱乐部命名指南：图腾意象、地名传统等思路，All Blacks/Harlequins/Barbarians 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "橄榄球是把「传统」穿在身上的运动，俱乐部的名字要像一件传了三代的球衣——新队员套上就懂得敬畏，老队员看到就想起泥地里的某个冬天。看行业样本：All Blacks（全黑队）把队服颜色做成了名字，一身黑加一段哈卡战舞，颜色命名做到极致就是国家图腾；Harlequins（丑角）用小丑的四色菱格反打橄榄球的肌肉气质——伦敦老牌俱乐部靠一个戏剧词把「优雅的野蛮」讲了一百五十年；Barbarians（野蛮人）是一支没有主场、受邀才集结的传奇明星队，名字把「为快乐而战」的业余精神封进了图腾。命名的隐藏考点是「第三半场」：橄榄球文化里赛后酒馆的第三半场与球场同样神圣，名字要在队歌里唱得响、在酒杯碰撞时喊得出——进不了队歌的名字，进不了俱乐部的血液。",
+      namingIdeas: [
+        "图腾意象入名：动物、战士、颜色——All Blacks 式的图腾命名，队徽与名字互相成就",
+        "地名传统路线：小镇、河流、老街区——俱乐部是地方的骄傲，地名让每场主场都是守土",
+        "戏剧反差结构：Harlequins 式的气质反打——优雅词配野蛮运动，反差本身就是记忆点",
+        "业余精神升维：野蛮人式的宣言——把「为快乐而战」写进名字，俱乐部有了信条",
+        "队歌测试：名字放进队歌与酒馆助威声里——喊不响的名字进不了第三半场",
+      ],
+      cases: [
+        { name: "All Blacks", takeaway: "队服颜色做成国家图腾：一身黑加哈卡战舞——颜色命名做到极致的世界级范本" },
+        { name: "Harlequins", takeaway: "丑角的四色菱格反打肌肉气质：戏剧词讲了一百五十年「优雅的野蛮」——反差命名的高分卷" },
+        { name: "Barbarians", takeaway: "无主场受邀集结的明星队：「为快乐而战」封进图腾——业余精神命名的传奇样本" },
+        { name: "Saracens", takeaway: "借中世纪战士的远征想象：北伦敦俱乐部靠一个历史词立住剽悍——历史借词的成功案例" },
+      ],
+      pitfalls: [
+        "图腾撞车：狮、虎、勇士满联赛都是，队徽再好看也认不出你——图腾要挑本地独有的那只",
+        "锁死单一级别：名字绑死业余联赛级别，升级冲甲就尴尬——级别会变，俱乐部之名不该变",
+        "忽略青训与女队：名字过于雄性荷尔蒙，女队与少年队挂名违和——俱乐部是一棵树不是一支队",
+        "进不了队歌：音节拗口押不上韵，酒馆助威喊不齐——橄榄球俱乐部的名字一半活在歌里",
+      ],
+    },
+    en: {
+      label: "Rugby clubs",
+      title: "How to Name a Rugby Club: Strategies, Cases & Domains",
+      metaDescription:
+        "Rugby club naming guide: totem imagery, place-name tradition, breakdowns of All Blacks/Harlequins/Barbarians, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Rugby wears its tradition on its back, and a club's name should feel like a jersey handed down three generations — a new player pulls it on and learns reverence, an old one sees it and remembers a particular mud-soaked winter. The benchmarks show the range: the All Blacks turned a kit color into a name — one black strip plus a haka, color naming carried so far it became a national totem; Harlequins set a jester's four-color diamonds against the sport's muscle — a London club telling the story of elegant savagery for a hundred and fifty years on one theatrical word; the Barbarians are an invitation-only side with no home ground, a name that sealed the amateur creed of playing for joy into a totem. The hidden exam is the third half: in rugby culture the post-match pub session is as sacred as the pitch, and the name must sing in the club anthem and carry over clinking glasses — a name that can't enter the song never enters the club's bloodstream.",
+      namingIdeas: [
+        "Totem imagery in the name: animals, warriors, colors — the All Blacks move, where crest and name build each other",
+        "The place-name tradition: town, river, old parish — a club is local pride, and a place name makes every home game a defense of home",
+        "Theatrical contrast: the Harlequins move — an elegant word set against a savage sport, the contrast itself becoming the memory hook",
+        "The amateur creed upgraded: the Barbarians declaration — write playing for joy into the name and the club gains a creed",
+        "The anthem test: put the name into the club song and the pub chant — what can't be roared in chorus never survives the third half",
+      ],
+      cases: [
+        { name: "All Blacks", takeaway: "A kit color grown into a national totem: one black strip plus a haka — the world-class limit of color naming" },
+        { name: "Harlequins", takeaway: "A jester's diamonds against the sport's muscle: one theatrical word telling elegant savagery for 150 years — contrast naming at full marks" },
+        { name: "Barbarians", takeaway: "No home ground, assembled by invitation: playing for joy sealed into a totem — the legend of amateur-creed naming" },
+        { name: "Saracens", takeaway: "Medieval warriors lending crusade-scale imagery: a North London club made fierce by one historical word — borrowed history that stuck" },
+      ],
+      pitfalls: [
+        "Totem collisions: lions, tigers and warriors crowd every league — pick the creature only your town can claim",
+        "Welding to one division: a name bound to the amateur tier turns awkward at promotion — divisions change, the club's name should not",
+        "Forgetting the youth and women's sides: an all-testosterone name sits badly on the whole tree — a club is a family of teams, not one squad",
+        "Failing the song: clumsy syllables never rhyme in the anthem — half of a rugby club's name lives inside the singing",
+      ],
+    },
+  },
+  cricket: {
+    slug: "cricket",
+    keywords: ["板球社区", "板球资讯", "板球爱好者", "cricket community", "cricket fans"],
+    tlds: [
+      { tld: "cricket", zh: "品类后缀直给到三柱门，看域名就知道聊什么", en: "The category stated at the stumps — one glance at the domain says what's discussed" },
+      { tld: "community", zh: "社区身份先立住，爱好者聚落的定位声明", en: "The community identity staked first — a positioning statement for the fan settlement" },
+      { tld: "fan", zh: "球迷立场直给，观赛与应援内容一眼归位", en: "The fan stance stated plainly — match-watching content filed at a glance" },
+    ],
+    zh: {
+      label: "板球社区",
+      title: "板球社区与球迷站怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "板球社区与球迷资讯站命名指南：术语词根、社区归属等思路，Cricinfo/Cricbuzz/Barmy Army 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "板球是一项能聊五天的运动——一场测试赛打五天，球迷社区的名字就要像看台上的老位置：一坐下来就有人递茶，聊到天黑也不散场。看行业样本：Cricinfo 用「板球+资讯」的诚实结构从大学网络时代做起，后来成为 ESPN 都要整体收编的板球百科，品类词命名做到了「行业入口」的高度；Cricbuzz 把「板球+嗡嗡声」拼在一起——比分推送的即时热闹被一个拟声词说完，印度球迷手机里的默认应用；Barmy Army（狂热军团）是英格兰远征球迷的自嘲——「发疯的军队」把跟着球队全球看球的痴劲变成了荣誉勋章。命名的隐藏考点是「茶歇语感」：板球文化自带下午茶与漫长等待，社区的名字要经得起慢聊——像酒馆常客的外号，越用越亲，太正式的名字反而进不了看台的闲谈。",
+      namingIdeas: [
+        "术语词根直给：三柱门、六分打、飞旋球——板球黑话自带认亲功能，圈内人看名字就落座",
+        "资讯结构诚实牌：Cricinfo 式的品类+资讯——社区做成行业入口，名字先把定位说完",
+        "拟声热闹路线：Cricbuzz 式的嗡嗡声——比分与讨论的即时感用一个拟声词钉死",
+        "自嘲勋章结构：狂热军团式的反串——把球迷的痴劲写成荣誉，社区有了自己人的暗号",
+        "茶歇测试：名字要经得起五天测试赛的慢聊——太正式的名字进不了看台闲谈",
+      ],
+      cases: [
+        { name: "ESPNcricinfo", takeaway: "板球+资讯的诚实结构：大学网络起家做成 ESPN 整体收编的百科——品类词做成行业入口" },
+        { name: "Cricbuzz", takeaway: "板球拼上嗡嗡声：比分推送的即时热闹被拟声词说完——印度球迷手机里的默认应用" },
+        { name: "Barmy Army", takeaway: "「发疯的军队」自嘲成勋章：远征看球的痴劲有了番号——球迷自嘲命名的传奇样本" },
+        { name: "Lord's", takeaway: "创始人名字加所有格成了「板球圣地」：一块场地的名字长成信仰坐标——场地命名的天花板" },
+      ],
+      pitfalls: [
+        "名字沾竞猜味：赔率、下注词根一旦入名，社区定位与平台审核双输——聊球不聊注，从名字开始",
+        "锁死单一赛制：名字绑死 T20 或某联赛，赛制热度轮换就被动——赛制会变，看台的茶不换",
+        "术语浓度劝退新人：生僻黑话当名字，新球迷连门都找不到——暗号留给内容，门牌要对路人友好",
+        "忽略跨时区口播：板球社区横跨印英澳时区，语音房与播客里要好念——拗口的名字熬不过五天赛",
+      ],
+    },
+    en: {
+      label: "Cricket communities",
+      title: "How to Name a Cricket Community or Fan Site: Strategies, Cases & Domains",
+      metaDescription:
+        "Cricket community and fan site naming guide: jargon roots, belonging structures, breakdowns of Cricinfo/Cricbuzz/Barmy Army, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Cricket is a sport you can talk about for five days — a Test match lasts that long, and a fan community's name should feel like a regular's seat in the stands: sit down and someone passes the tea, and the conversation outlasts the light. The benchmarks show the range: Cricinfo took the honest cricket-plus-info structure from university-network days to becoming the encyclopedia ESPN acquired whole — category naming carried to the height of an industry front door; Cricbuzz spliced cricket onto a buzz — the live thrill of the score push finished in one onomatopoeic word, the default app in an Indian fan's pocket; the Barmy Army is English touring fans' self-mockery — a \"mad army\" that turned the madness of following a team around the world into a badge of honor. The hidden exam is the tea-interval register: cricket culture comes with long afternoons and longer waits, so the name must wear well in slow conversation — like a pub regular's nickname, warmer with use; too formal a name never enters the chatter of the stands.",
+      namingIdeas: [
+        "Jargon roots stated plainly: stumps, sixes, googlies — cricket's dialect recognizes kin on sight, and insiders take their seat at the name alone",
+        "The honest info structure: the Cricinfo move — category plus info, a community grown into the industry's front door with positioning finished by the name",
+        "The onomatopoeic route: the Cricbuzz move — the live hum of scores and chatter nailed in a single buzzing word",
+        "Self-mockery as a badge: the Barmy Army move — write the fans' madness into an honor, and the community gains its insiders' password",
+        "The tea-interval test: the name must survive five days of slow talk — anything too formal never joins the stands' conversation",
+      ],
+      cases: [
+        { name: "ESPNcricinfo", takeaway: "Cricket plus info, honestly joined: from university networks to the encyclopedia ESPN bought whole — category naming grown into the front door" },
+        { name: "Cricbuzz", takeaway: "Cricket spliced onto a buzz: the score push's live thrill in one onomatopoeic word — the default app in an Indian fan's pocket" },
+        { name: "Barmy Army", takeaway: "A mad army worn as a badge: touring devotion given its own regiment number — the legend of fan self-mockery naming" },
+        { name: "Lord's", takeaway: "A founder's name in the possessive become cricket's holy ground: one venue's name grown into a coordinate of faith — the ceiling of place naming" },
+      ],
+      pitfalls: [
+        "A whiff of the wager: odds and betting roots sink the community position and platform reviews together — talk the game, never the stake, starting at the name",
+        "Welding to one format: a name bound to T20 or a single league is hostage to format cycles — formats rotate, the tea in the stands does not",
+        "Jargon density that scares newcomers: an obscure googly of a name hides the door itself — save the passwords for content, keep the sign friendly",
+        "Ignoring the cross-timezone call: cricket spans India, England and Australia — a name that stumbles in a podcast never survives a five-day Test",
+      ],
+    },
+  },
+  aquascaping: {
+    slug: "aquascaping",
+    keywords: ["观赏鱼水族", "水族造景", "草缸", "aquascaping", "ornamental fish"],
+    tlds: [
+      { tld: "fish", zh: "品类后缀直给到缸口，看域名就知道店里游着什么", en: "The category stated at the tank rim — one glance at the domain says what swims inside" },
+      { tld: "studio", zh: "造景工作室的语感，定制缸的手艺感先立住", en: "The studio register — custom-tank craftsmanship staked before the first scape" },
+      { tld: "art", zh: "水下造景即艺术，气质后缀替作品说话", en: "Aquascaping claimed as art — the suffix speaking for the work itself" },
+    ],
+    zh: {
+      label: "观赏鱼造景",
+      title: "观赏鱼与水族造景工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "观赏鱼与水族造景命名指南：水下意象、艺术定位等思路，ADA/Green Aqua/Tropica 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "观赏鱼与水族造景卖的是「桌面上的一片自然」——买缸的人要的不是鱼，是下班回家时那一眼会呼吸的风景。名字要先把这份静气递出去。看行业样本：ADA（Aqua Design Amano）把创始人天野尚的姓氏写进品牌，「水草造景之父」的署名让每一件器材都像作品的一部分，人名命名在这个行业就是流派认证；Green Aqua 用「绿+水」两个最直白的词，布达佩斯的展厅做成了全球草缸爱好者的朝圣地——颜色词把造景的第一印象说完；Tropica 从「热带」造词，丹麦水草农场用一个词根把产地与专业写进了名字。命名的隐藏考点是「静水语感」：这个行业的顾客追求的是慢与静，名字读出来要像水面不起波澜——热闹促销感的词根会瞬间打碎缸里的意境，名字先静下来，顾客才愿意停下来。",
+      namingIdeas: [
+        "水下意象入名：溪、涧、藻、鳞——把缸里的风景写进名字，一读就有水声",
+        "造景师具名：ADA 式的署名认证——人名即流派，定制缸的手艺靠署名背书",
+        "颜色直给路线：Green Aqua 式的绿与水——造景的第一印象用最直白的词说完",
+        "产地词根造词：Tropica 式的热带词根——产地与专业感一次写进名字",
+        "静水测试：名字读出来要像水面不起波澜——促销感词根会打碎缸里的意境",
+      ],
+      cases: [
+        { name: "ADA", takeaway: "天野尚的姓氏写进品牌：「水草造景之父」的署名让器材成为作品——人名命名即流派认证" },
+        { name: "Green Aqua", takeaway: "绿+水两个直白词：布达佩斯展厅做成全球草缸朝圣地——颜色命名把第一印象说完" },
+        { name: "Tropica", takeaway: "「热带」造词的丹麦水草农场：产地与专业一个词根写完——产地命名的教科书" },
+        { name: "Aquarium Co-Op", takeaway: "「合作社」的社区语感：内容与零售互相喂养的美国样本——把顾客变同好的命名巧劲" },
+      ],
+      pitfalls: [
+        "促销语感破坏意境：名字带清仓、批发味，静水深流的顾客扭头就走——这个行业卖的是静气",
+        "锁死单一缸型：名字绑死草缸或海缸，品类延伸就要重讲故事——水的世界很大，名字留余量",
+        "生僻拉丁学名当店名：学名只有老玩家认识，新客连读都读不出——专业留给内容，门牌要好念",
+        "忽略展厅与直播口播：造景直播与线下课是获客主场——两秒说不清的名字进不了口播位",
+      ],
+    },
+    en: {
+      label: "Aquascaping",
+      title: "How to Name an Aquascaping & Ornamental Fish Studio: Strategies, Cases & Domains",
+      metaDescription:
+        "Aquascaping and ornamental fish naming guide: underwater imagery, artist signatures, breakdowns of ADA/Green Aqua/Tropica, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Aquascaping and ornamental fish sell a piece of nature on a desktop — the buyer isn't paying for fish, but for the breathing landscape that greets them after work. The name must hand over that stillness first. The benchmarks show the range: ADA (Aqua Design Amano) wrote founder Takashi Amano's surname into the brand — the signature of the father of nature aquariums makes every piece of gear feel like part of a work, and in this trade a personal name is a school's certification; Green Aqua takes the two plainest words — green and water — and its Budapest showroom became the pilgrimage site of planted-tank lovers worldwide, color words finishing the first impression outright; Tropica coined from \"tropical,\" a Danish plant nursery writing provenance and expertise into one root. The hidden exam is the still-water register: this customer prizes slowness and calm, so the name should read like an unrippled surface — promotional-sounding roots shatter the mood inside the glass; only a name that settles first invites the customer to stop.",
+      namingIdeas: [
+        "Underwater imagery in the name: stream, moss, scale, glass — write the tank's landscape into the name and it murmurs like water when read",
+        "The scaper's signature: the ADA move — a personal name as a school's certification, custom tanks endorsed by the maker's own byline",
+        "Color stated plainly: the Green Aqua move — aquascaping's first impression finished in the two plainest words",
+        "Provenance coined into a root: the Tropica move — origin and expertise written into the name in a single coinage",
+        "The still-water test: read the name aloud and listen for ripples — clearance-sale roots shatter the mood behind the glass",
+      ],
+      cases: [
+        { name: "ADA", takeaway: "Amano's surname written into the brand: the father of nature aquariums signing every product — a personal name as a school's certification" },
+        { name: "Green Aqua", takeaway: "Green plus water, nothing more: a Budapest showroom grown into the planted-tank pilgrimage — color naming finishing the first impression" },
+        { name: "Tropica", takeaway: "\"Tropical\" coined by a Danish plant nursery: provenance and expertise in one root — the textbook of origin naming" },
+        { name: "Aquarium Co-Op", takeaway: "The co-op's community register: content and retail feeding each other in the American sample — naming that turns customers into fellow hobbyists" },
+      ],
+      pitfalls: [
+        "Promotional cadence breaking the mood: a name with warehouse-sale energy sends the still-water customer straight out — this trade sells calm",
+        "Welding to one tank type: a name bound to planted or reef restarts the story at every extension — the water world is wide, leave the name room",
+        "Obscure Latin binomials as the shop sign: only veterans can read them and newcomers can't even pronounce the door — keep expertise in the content, keep the sign sayable",
+        "Ignoring the livestream call: scaping streams and workshops are where customers arrive — a name that takes over two seconds never makes the broadcast",
+      ],
+    },
+  },
+  fanclub: {
+    slug: "fanclub",
+    keywords: ["粉丝应援站", "粉丝社区", "应援会", "fan club", "fandom"],
+    tlds: [
+      { tld: "fan", zh: "粉丝身份直给到后缀，应援站的立场一眼即明", en: "The fan identity stated in the suffix — the support station's stance clear at a glance" },
+      { tld: "club", zh: "会员制语感自带归属，应援会组织的天然后缀", en: "Membership belonging built in — the natural suffix for an organized fan club" },
+      { tld: "live", zh: "现场与直播的语感，打投与观演内容顺势归位", en: "The live-event register — concert and streaming content filed naturally" },
+    ],
+    zh: {
+      label: "粉丝应援站",
+      title: "粉丝应援站与粉丝社区怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "粉丝应援站与粉丝社区命名指南：番号归属、意象暗号等思路，Weverse/Fandom/ARMY 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "粉丝应援站的名字是一面旗——举起来要让同担一眼认亲，也要让偶像看到时体面。看行业样本：Weverse 用「We+universe」把「我们的宇宙」写进平台名，HYBE 旗下的官方粉丝社区把归属感做成了产品架构；Fandom 直接把「粉丝圈」这个品类词注册成品牌，从维基社区做到全球最大流行文化站——品类词霸占的教科书；ARMY 是 BTS 粉丝的番号——「军队」既是保护者的誓言，又藏着「防弹」与军队的互文，一个名字让千万人有了共同身份。命名的隐藏考点是「灯牌语感」：应援站的名字会被印上灯牌、话题标签与接机横幅，要在三秒的挥舞里被读完、在超话搜索框里被拼对——名字先成为暗号，社区才有心跳。",
+      namingIdeas: [
+        "番号归属结构：ARMY 式的共同身份——给粉丝一个番号，散人变成军团",
+        "我们宇宙路线：Weverse 式的 We 开头——把「我们」写进名字，归属感从第一个音节开始",
+        "意象暗号入名：应援色、代表物、歌词梗——圈内暗号一眼认亲，圈外人好奇入坑",
+        "品类词霸占：Fandom 式的直给——把粉丝圈品类词做成门牌，搜索入口先占住",
+        "灯牌测试：名字印上灯牌与横幅，三秒挥舞里要读得完——拼不对的名字进不了话题榜",
+      ],
+      cases: [
+        { name: "Weverse", takeaway: "We+universe 的「我们的宇宙」：官方粉丝社区把归属做成产品——平台级应援命名的范本" },
+        { name: "Fandom", takeaway: "粉丝圈品类词注册成品牌：维基社区做到全球最大流行文化站——品类霸占的教科书" },
+        { name: "ARMY", takeaway: "「军队」番号与防弹互文：一个名字给千万人共同身份——粉丝番号命名的世界级样本" },
+        { name: "LOFTER", takeaway: "「阁楼客」的造词给同人创作留了一层安静空间——中文同人社区命名的气质样本" },
+      ],
+      pitfalls: [
+        "名字蹭官方商标：直接用偶像名或厂牌注册词，被维权时整站搬家——旗要自己的，不要借来的",
+        "锁死单一偶像期：名字绑死某一代成员或作品，偶像转型社区跟着塌房——爱会更新，名字要耐久",
+        "圈外读不懂也拼不对：生僻梗当站名，新粉搜索都找不到门——暗号留给内容，门牌要好拼",
+        "忽略合规与体面：名字带打投互撕的火药味，平台审核与偶像形象双输——应援的旗要举得体面",
+      ],
+    },
+    en: {
+      label: "Fan clubs",
+      title: "How to Name a Fan Club or Fandom Community: Strategies, Cases & Domains",
+      metaDescription:
+        "Fan club and fandom community naming guide: regiment identities, insider signals, breakdowns of Weverse/Fandom/ARMY, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A fan club's name is a banner — raised, it must let fellow fans recognize kin in a glance, and stay dignified if the idol ever sees it. The benchmarks show the range: Weverse wrote \"our universe\" into a platform name with We plus universe — HYBE's official fan community turning belonging itself into product architecture; Fandom registered the category word for fan culture as its brand and grew from wiki communities into the world's largest pop-culture site — the textbook of category-word ownership; ARMY is the BTS fans' regiment number — an army that doubles as a protector's oath and completes the wordplay with \"Bulletproof,\" one name issuing a shared identity to millions. The hidden exam is the lightstick register: a fan club's name gets printed on light signs, hashtags and airport banners — it must be readable in a three-second wave and spelled right in a trending-topic search box. The name becomes a password first; only then does the community get a heartbeat.",
+      namingIdeas: [
+        "The regiment structure: the ARMY move — issue fans a shared designation, and scattered individuals become a legion",
+        "The our-universe route: the Weverse move — start the name with We, and belonging begins at the first syllable",
+        "Insider signals in the name: fan colors, mascots, lyric references — kin recognized at a glance, outsiders intrigued at the door",
+        "Category-word ownership: the Fandom move — make the category itself the sign and claim the search entrance first",
+        "The lightstick test: print the name on a banner — it must be read in a three-second wave; what can't be spelled never trends",
+      ],
+      cases: [
+        { name: "Weverse", takeaway: "We plus universe, \"our universe\": the official fan community turning belonging into product — the template of platform-scale fandom naming" },
+        { name: "Fandom", takeaway: "The category word registered as the brand: from wikis to the largest pop-culture site — the textbook of category ownership" },
+        { name: "ARMY", takeaway: "A regiment number completing the \"Bulletproof\" wordplay: one name issuing millions a shared identity — the world-class case of fan-designation naming" },
+        { name: "LOFTER", takeaway: "A coined \"loft dweller\" reserving a quiet upper floor for fan creation — the register sample of Chinese fanwork community naming" },
+      ],
+      pitfalls: [
+        "Drafting off official trademarks: building on the idol's or label's registered name means relocating the whole site when enforcement comes — the banner must be your own",
+        "Welding to one era: a name bound to a lineup or one album collapses with the idol's next turn — love updates, the name must endure",
+        "Unreadable to outsiders: an obscure in-joke as the site name hides the door from new fans — keep passwords in the content, keep the sign spellable",
+        "Forgetting dignity and compliance: a name that smells of vote wars and fan feuds loses platform reviews and the idol's grace at once — raise the banner with dignity",
+      ],
+    },
+  },
+  giveaway: {
+    slug: "giveaway",
+    keywords: ["抽奖活动平台", "抽奖工具", "活动运营", "giveaway platform", "lucky draw"],
+    tlds: [
+      { tld: "win", zh: "「赢」的品类语感直给，活动工具的喜气门牌", en: "The winning register stated outright — a festive door sign for a campaign tool" },
+      { tld: "fun", zh: "快乐直给的后缀，抽奖的轻松气质先立住", en: "Fun stated plainly — the giveaway's lightness staked before the draw" },
+      { tld: "events", zh: "活动运营的身份声明，营销工具的合规定位", en: "The events identity declared — a compliance-positioning statement for a marketing tool" },
+    ],
+    zh: {
+      label: "抽奖活动平台",
+      title: "抽奖活动平台怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "抽奖活动与营销工具平台命名指南：活动定位、公平机制等思路，Gleam/Rafflecopter/抽奖助手 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "抽奖活动平台的名字要先分清一条线：「我是帮商家做活动的工具，不是碰运气的赌桌」。定位站在活动运营一侧，名字才能同时通过商家采购、平台审核与用户信任三道门。看行业样本：Gleam（微光）用一个干净的单词把「让品牌被看见」写进名字，增长活动工具的气质克制体面，商家挂在落地页上不掉价；Rafflecopter 把「抽奖+直升机」拼成一个滑稽造词——奖品从天而降的画面感让活动自带欢乐，工具的中立感也立住了；微信生态的「抽奖助手」走极致诚实路线，「助手」二字把工具身份钉死，几亿次开奖靠「第三方中立」的定位攒下信任。命名的隐藏考点是「开奖公信力」：抽奖的核心资产是「大家相信结果公平」，名字要像公证处而不是像筹码桌——喜气可以有，赌气不能有。",
+      namingIdeas: [
+        "活动工具直给：助手、平台、引擎——把工具身份写进名字，商家与审核一眼归类",
+        "喜从天降意象：Rafflecopter 式的欢乐造词——奖品从天而降的画面感让活动自带庆祝气",
+        "微光克制路线：Gleam 式的体面单词——增长工具的气质克制，挂在品牌落地页不掉价",
+        "公平机制入名：公证、透明、摇号——把「结果可信」写进名字，公信力是抽奖的本钱",
+        "开奖口播测试：主持人倒数开奖时要好念——三秒读不完的名字进不了开奖环节",
+      ],
+      cases: [
+        { name: "Gleam", takeaway: "「微光」一词写进「让品牌被看见」：增长工具的克制体面——干净单词命名的范本" },
+        { name: "Rafflecopter", takeaway: "抽奖拼上直升机：奖品从天而降的滑稽画面自带欢乐——造词命名让工具有了表情" },
+        { name: "抽奖助手", takeaway: "「助手」二字钉死工具身份：几亿次开奖靠第三方中立攒信任——诚实命名的中文教科书" },
+        { name: "KingSumo", takeaway: "借相扑王的夸张语感做增长赠品工具：AppSumo 系的家族命名——母品牌背书的延伸样本" },
+      ],
+      pitfalls: [
+        "名字沾赌味：筹码、押注、翻倍类词根一旦入名，应用商店与广告审核处处碰壁——活动定位从名字自证",
+        "承诺式命名越线：必中、稳赚写进名字，监管红线与用户信任一起撞——喜气可以有，承诺不能有",
+        "锁死单一玩法：名字绑死转盘或盲盒，玩法过气品牌跟着过气——玩法会换，「办活动」的需求不换",
+        "忽略公信力语感：名字轻浮到像路边套圈，商家不敢把年会开奖交给你——开奖台要像公证处",
+      ],
+    },
+    en: {
+      label: "Giveaway platforms",
+      title: "How to Name a Giveaway & Campaign Platform: Strategies, Cases & Domains",
+      metaDescription:
+        "Giveaway and campaign platform naming guide: tool-first positioning, fairness registers, breakdowns of Gleam/Rafflecopter/KingSumo, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A giveaway platform's name must draw one line before anything else: \"I am the tool that runs the campaign, not the table where luck is wagered.\" Stand on the campaign-operations side, and the name clears three doors at once — merchant procurement, platform review and user trust. The benchmarks show the range: Gleam writes \"getting brands seen\" into one clean word — a growth-campaign tool with restraint enough that merchants hang it on their landing pages without embarrassment; Rafflecopter splices raffle onto helicopter — a comic coinage where prizes drop from the sky, giving campaigns built-in celebration while keeping the tool's neutral stance; WeChat's 抽奖助手 (Draw Assistant) takes radical honesty, the word \"assistant\" nailing the tool identity, with billions of draws banking trust on third-party neutrality. The hidden exam is drawing-night credibility: a giveaway's core asset is everyone believing the result is fair, so the name should read like a notary's office, never a chip stack — festive is welcome, gambling is not.",
+      namingIdeas: [
+        "The tool identity stated plainly: assistant, platform, engine — write the utility into the name, and merchants and reviewers file you correctly at once",
+        "Prizes-from-the-sky imagery: the Rafflecopter move — a comic coinage that gives every campaign built-in celebration",
+        "The restrained-gleam route: the Gleam move — one dignified word a brand can hang on its landing page without losing face",
+        "Fairness in the name: notary, transparent, drawn-by-lot — write \"the result can be trusted\" into the brand; credibility is a giveaway's capital",
+        "The countdown test: the host reads the name aloud before the draw — anything over three seconds never makes the reveal",
+      ],
+      cases: [
+        { name: "Gleam", takeaway: "One clean word carrying \"getting brands seen\": a growth tool with restraint and dignity — the template of single-word naming" },
+        { name: "Rafflecopter", takeaway: "Raffle spliced onto helicopter: prizes dropping from the sky in one comic coinage — a name that gives the tool a face" },
+        { name: "抽奖助手 (Draw Assistant)", takeaway: "\"Assistant\" nailing the tool identity: billions of draws banking trust on neutrality — the Chinese textbook of honest naming" },
+        { name: "KingSumo", takeaway: "A sumo king's exaggeration borrowed for a giveaway tool: AppSumo's family naming — extension by parent-brand endorsement" },
+      ],
+      pitfalls: [
+        "A whiff of the wager: chip, stake and parlay roots invite rejection at every app store and ad review — the campaign position must start at the name",
+        "Promise-shaped names: sure-win and guaranteed-hit collide with regulation and user trust together — festive is allowed, promises are not",
+        "Welding to one mechanic: a name bound to spin-the-wheel or blind boxes expires with the fad — mechanics rotate, the need to run campaigns does not",
+        "Fairground flimsiness: a name as flippant as a ring-toss stall loses the corporate annual-party contract — the drawing stage must read like a notary's office",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
