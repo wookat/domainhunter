@@ -2,6 +2,7 @@ import { CheckCircle2, HelpCircle, Lightbulb, Sparkles, Tag } from "lucide-react
 
 import { buildTldFaq } from "@/content/tld-faq";
 import { readInjectedContent } from "@/content/injected";
+import { relatedTlds } from "@/content/tld-groups";
 import { TLD_LIST } from "@/content/tld-list";
 import { NotFoundPage } from "@/components/not-found-page";
 import { useI18n } from "@/lib/i18n";
@@ -21,7 +22,8 @@ export function TldPage({ tld }: { tld: string }) {
   const loc = guide[lang];
   const live = prices?.[tld];
   const relatedGuides = content.relatedGuides;
-  const relatedCompares = content.relatedCompares;
+  const relatedCompares = content.relatedCompares.slice(0, 6);
+  const groupTlds = relatedTlds(tld);
   const faq = buildTldFaq(tld, loc, lang);
 
   return (
@@ -145,6 +147,25 @@ export function TldPage({ tld }: { tld: string }) {
                 className="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
               >
                 .{cmp.a} vs .{cmp.b}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 同组相关 TLD 互链 */}
+      {groupTlds.length > 0 && (
+        <div className="mt-6">
+          <h2 className="text-sm font-semibold text-txt1">{t("tld.relatedTlds")}</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {groupTlds.map((other) => (
+              <a
+                key={other}
+                href={`/tld/${other}?lang=${lang}`}
+                className="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+              >
+                .{other}
+                {priceShort(other, lang, prices) && <span className="tnum ml-1.5 text-[10px] text-txt1">{priceShort(other, lang, prices)}</span>}
               </a>
             ))}
           </div>

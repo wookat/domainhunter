@@ -334,6 +334,7 @@ const zh = {
   "tld.ctaDesc": "描述你的想法，AI 批量构思并实时核验 .{tld} 下的可注册好名字。",
   "tld.ctaButton": "开始猎取 .{tld}",
   "tld.others": "其他 TLD 指南",
+  "tld.relatedTlds": "相关 TLD",
   "tld.relatedGuides": "相关行业命名指南",
   // TLD 对比页
   "vs.verdict": "怎么选",
@@ -746,6 +747,7 @@ const en: Record<I18nKey, string> = {
   "tld.ctaDesc": "Describe your idea — AI brainstorms names in bulk and checks .{tld} availability live.",
   "tld.ctaButton": "Start hunting .{tld}",
   "tld.others": "More TLD guides",
+  "tld.relatedTlds": "Related TLDs",
   "tld.relatedGuides": "Related industry naming guides",
   "vs.verdict": "Which to pick",
   "vs.pickWhen": "Pick .{tld} when",
