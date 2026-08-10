@@ -1,0 +1,1425 @@
+{
+  "hreflang_r427": {
+    "/": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/tld": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/guide": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/vs": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/prices": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/prices",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/prices?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/why": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/why",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/why?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/advanced": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/advanced",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/advanced?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/mcp": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/mcp",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/mcp?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/tld/com": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/com",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/com?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/tld/football": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/football",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/football?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/tld/cl": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/cl",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/cl?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/tld/click": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/click",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/click?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/guide/saas": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/saas",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/saas?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/guide/runclub": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/runclub",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/runclub?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/guide/penmaking": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/penmaking",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/penmaking?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/guide/fitness": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/fitness",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/fitness?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/vs/com-vs-cn": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/com-vs-cn",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/com-vs-cn?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/vs/dad-vs-blog": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/dad-vs-blog",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/dad-vs-blog?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/vs/id-vs-me": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/id-vs-me",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/id-vs-me?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/vs/cricket-vs-club": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/cricket-vs-club",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/cricket-vs-club?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    }
+  },
+  "hreflang_r427_all_pass": true,
+  "related_r435_r439": {
+    "/tld/com|zh": {
+      "status": 200,
+      "sections": {
+        "相关后缀对比": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关 TLD": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关行业命名指南": {
+          "present": true,
+          "links": 3,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/tld/com|en": {
+      "status": 200,
+      "sections": {
+        "Related TLD comparisons": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related TLDs": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related industry naming guides": {
+          "present": true,
+          "links": 3,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/tld/football|zh": {
+      "status": 200,
+      "sections": {
+        "相关后缀对比": {
+          "present": true,
+          "links": 3,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关 TLD": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关行业命名指南": {
+          "present": true,
+          "links": 1,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/tld/football|en": {
+      "status": 200,
+      "sections": {
+        "Related TLD comparisons": {
+          "present": true,
+          "links": 3,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related TLDs": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related industry naming guides": {
+          "present": true,
+          "links": 1,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/tld/cl|zh": {
+      "status": 200,
+      "sections": {
+        "相关后缀对比": {
+          "present": false
+        },
+        "相关 TLD": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关行业命名指南": {
+          "present": false
+        }
+      },
+      "pass": true
+    },
+    "/tld/cl|en": {
+      "status": 200,
+      "sections": {
+        "Related TLD comparisons": {
+          "present": false
+        },
+        "Related TLDs": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related industry naming guides": {
+          "present": false
+        }
+      },
+      "pass": true
+    },
+    "/tld/miami|zh": {
+      "status": 200,
+      "sections": {
+        "相关后缀对比": {
+          "present": true,
+          "links": 1,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关 TLD": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关行业命名指南": {
+          "present": false
+        }
+      },
+      "pass": true
+    },
+    "/tld/miami|en": {
+      "status": 200,
+      "sections": {
+        "Related TLD comparisons": {
+          "present": true,
+          "links": 1,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related TLDs": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related industry naming guides": {
+          "present": false
+        }
+      },
+      "pass": true
+    },
+    "/tld/style|zh": {
+      "status": 200,
+      "sections": {
+        "相关后缀对比": {
+          "present": true,
+          "links": 2,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关 TLD": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关行业命名指南": {
+          "present": true,
+          "links": 1,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/tld/style|en": {
+      "status": 200,
+      "sections": {
+        "Related TLD comparisons": {
+          "present": true,
+          "links": 2,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related TLDs": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related industry naming guides": {
+          "present": true,
+          "links": 1,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/guide/saas|zh": {
+      "status": 200,
+      "sections": {
+        "相关后缀对比": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关行业指南": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/guide/saas|en": {
+      "status": 200,
+      "sections": {
+        "Related TLD comparisons": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related industry guides": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/guide/runclub|zh": {
+      "status": 200,
+      "sections": {
+        "相关后缀对比": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关行业指南": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/guide/runclub|en": {
+      "status": 200,
+      "sections": {
+        "Related TLD comparisons": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related industry guides": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/guide/penmaking|zh": {
+      "status": 200,
+      "sections": {
+        "相关后缀对比": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关行业指南": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/guide/penmaking|en": {
+      "status": 200,
+      "sections": {
+        "Related TLD comparisons": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related industry guides": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/guide/energystorage|zh": {
+      "status": 200,
+      "sections": {
+        "相关后缀对比": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关行业指南": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/guide/energystorage|en": {
+      "status": 200,
+      "sections": {
+        "Related TLD comparisons": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related industry guides": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/guide/grocery|zh": {
+      "status": 200,
+      "sections": {
+        "相关后缀对比": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关行业指南": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/guide/grocery|en": {
+      "status": 200,
+      "sections": {
+        "Related TLD comparisons": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related industry guides": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/vs/com-vs-cn|zh": {
+      "status": 200,
+      "sections": {
+        "相关行业命名指南": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关对比": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/vs/com-vs-cn|en": {
+      "status": 200,
+      "sections": {
+        "Related industry naming guides": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related comparisons": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/vs/dad-vs-blog|zh": {
+      "status": 200,
+      "sections": {
+        "相关行业命名指南": {
+          "present": true,
+          "links": 1,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关对比": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/vs/dad-vs-blog|en": {
+      "status": 200,
+      "sections": {
+        "Related industry naming guides": {
+          "present": true,
+          "links": 1,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related comparisons": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/vs/id-vs-me|zh": {
+      "status": 200,
+      "sections": {
+        "相关行业命名指南": {
+          "present": true,
+          "links": 3,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关对比": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/vs/id-vs-me|en": {
+      "status": 200,
+      "sections": {
+        "Related industry naming guides": {
+          "present": true,
+          "links": 3,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related comparisons": {
+          "present": true,
+          "links": 6,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/vs/email-vs-cloud|zh": {
+      "status": 200,
+      "sections": {
+        "相关行业命名指南": {
+          "present": false
+        },
+        "相关对比": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/vs/email-vs-cloud|en": {
+      "status": 200,
+      "sections": {
+        "Related industry naming guides": {
+          "present": false
+        },
+        "Related comparisons": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/vs/kitchen-vs-restaurant|zh": {
+      "status": 200,
+      "sections": {
+        "相关行业命名指南": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "相关对比": {
+          "present": true,
+          "links": 5,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    },
+    "/vs/kitchen-vs-restaurant|en": {
+      "status": 200,
+      "sections": {
+        "Related industry naming guides": {
+          "present": true,
+          "links": 4,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        },
+        "Related comparisons": {
+          "present": true,
+          "links": 5,
+          "cap_ok": true,
+          "prefix_ok": true,
+          "no_self": true
+        }
+      },
+      "pass": true
+    }
+  },
+  "related_all_pass": true,
+  "sitemap_loc_samples": [
+    1174,
+    1174,
+    1174
+  ],
+  "sitemap_dup_locs": 0,
+  "sitemap_cat_counts": {
+    "tld": 378,
+    "guide": 374,
+    "vs": 414,
+    "core": 8
+  },
+  "sitemap_vs_counts_json": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "sitemap_xhtml": {
+    "urls": 1174,
+    "xhtml_total": 3522,
+    "bad": [],
+    "bad_count": 0
+  },
+  "llms_counts": {
+    "tld": 378,
+    "guide": 374,
+    "vs": 414
+  },
+  "llms_vs_sitemap_equal": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "robots": {
+    "status": 200,
+    "has_sitemap": true,
+    "gptbot": true
+  },
+  "inject_sweep": {
+    "total": 1166,
+    "ok": 1166,
+    "bad": {}
+  },
+  "inject_en_sample": {
+    "/tld/com?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/tld/football?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/tld/cl?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/guide/runclub?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/guide/penmaking?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/guide/saas?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/vs/com-vs-cn?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/vs/dad-vs-blog?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/vs/id-vs-me?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    }
+  },
+  "seo_deep": {
+    "/tld/com": {
+      "status": 200,
+      "title": ".com 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/com",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/tld/com?lang=en": {
+      "status": 200,
+      "title": ".com Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/com?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/tld/cl": {
+      "status": 200,
+      "title": ".cl 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/cl",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/tld/cl?lang=en": {
+      "status": 200,
+      "title": ".cl Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/cl?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/guide/saas": {
+      "status": 200,
+      "title": "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/saas",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/guide/saas?lang=en": {
+      "status": 200,
+      "title": "How to Name a SaaS Product: Strategies, Case Studies &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/saas?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/guide/penmaking": {
+      "status": 200,
+      "title": "手工制笔工作室怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/penmaking",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/guide/penmaking?lang=en": {
+      "status": 200,
+      "title": "How to Name a Penmaking Studio: Strategies, Case Studies &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/penmaking?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/vs/com-vs-cn": {
+      "status": 200,
+      "title": ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/com-vs-cn",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/vs/com-vs-cn?lang=en": {
+      "status": 200,
+      "title": ".com vs .cn: Audience, Compliance &amp; Brand Protection Compared | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/com-vs-cn?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/vs/id-vs-me": {
+      "status": 200,
+      "title": ".id 和 .me 怎么选：两个「身份系」ccTLD 的语义与市场对比 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/id-vs-me",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/vs/id-vs-me?lang=en": {
+      "status": 200,
+      "title": ".id vs .me: Two &quot;Identity&quot; ccTLDs — Semantics and Markets Compared | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/id-vs-me?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/": {
+      "status": 200,
+      "title": "DomainHunter — AI 域名猎手 | 说出寓意，猎到真正可注册的好域名",
+      "canonical": "https://hunt.zalize.com/",
+      "html_lang": "zh-CN",
+      "og_count": 9,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": false,
+      "hreflang_count": 3
+    },
+    "/?lang=en": {
+      "status": 200,
+      "title": "DomainHunter — AI Domain Hunter | Describe the meaning, hunt truly available names",
+      "canonical": "https://hunt.zalize.com/?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": false,
+      "hreflang_count": 3
+    },
+    "/prices": {
+      "status": 200,
+      "title": "域名后缀价格总览：378 个主流 TLD 注册与续费对比 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/prices",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/prices?lang=en": {
+      "status": 200,
+      "title": "TLD Price Overview: Registration vs Renewal for 378 Popular Suffixes | DomainHunter",
+      "canonical": "https://hunt.zalize.com/prices?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/tld": {
+      "status": 200,
+      "title": "全部 TLD 注册指南：378 个后缀怎么选 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/tld?lang=en": {
+      "status": 200,
+      "title": "All TLD Registration Guides: How to Choose Among 378 Suffixes | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/guide": {
+      "status": 200,
+      "title": "全部行业命名指南：374 个行业怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/guide?lang=en": {
+      "status": 200,
+      "title": "All Industry Naming Guides: How to Name a Product in 374 Industries | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/vs": {
+      "status": 200,
+      "title": "全部后缀对比：414 组 TLD 怎么选 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/vs?lang=en": {
+      "status": 200,
+      "title": "All TLD Comparisons: 414 Head-to-Head Matchups | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/why": {
+      "status": 200,
+      "title": "为什么选 DomainHunter：好域名都被占了，换个找法 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/why",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/why?lang=en": {
+      "status": 200,
+      "title": "Why DomainHunter: all the good names are taken — hunt differently | DomainHunter",
+      "canonical": "https://hunt.zalize.com/why?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    }
+  },
+  "notfound": {
+    "/nonexistent-r443": 404,
+    "/tld/notatld-r443": 404,
+    "/guide/notaguide-r443": 404,
+    "/vs/nota-vs-r443": 404
+  },
+  "prices_api": {
+    "status": 200,
+    "stale": null,
+    "tldCount": 347,
+    "priceKeys": 347
+  },
+  "mcp_tools": [
+    "check_domains",
+    "tld_prices",
+    "suggest_variants"
+  ],
+  "mcp_check_domains": [
+    {
+      "domain": "google.com",
+      "status": "taken",
+      "expiresAt": "2028-09-14T04:00:00.000Z"
+    },
+    {
+      "domain": "qzxvkw9r443mcp1786403792.com",
+      "status": "available",
+      "expiresAt": null
+    }
+  ],
+  "mcp_tld_prices": {
+    "tldCount": 378,
+    "priceKeys": 378
+  },
+  "mcp_suggest_variants": {
+    "variants": 24
+  }
+}
