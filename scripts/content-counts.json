@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 312,
+    "count": 318,
     "slugs": [
       "com",
       "net",
@@ -313,7 +313,13 @@
       "fans",
       "place",
       "report",
-      "town"
+      "town",
+      "shopping",
+      "graphics",
+      "glass",
+      "vision",
+      "tires",
+      "surgery"
     ]
   },
   "guide": {

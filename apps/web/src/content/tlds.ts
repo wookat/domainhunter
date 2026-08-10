@@ -9384,6 +9384,186 @@ const GUIDES = {
       ],
     },
   },
+  shopping: {
+    tld: "shopping",
+    zh: {
+      title: ".shopping 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".shopping 是「购物」动作的直白后缀，适合综合电商与选品商城、导购与比价内容站、购物节与促销活动页、社交电商与直播带货项目。查看 .shopping 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .shopping 域名。",
+      intro:
+        ".shopping 把购物这件事写进域名：综合电商与选品商城、导购与比价内容站、购物节与促销活动页、社交电商与直播带货项目用 name.shopping，「来这里买买买」一词讲透——shopping 是消费者搜索里最高频的词之一，动词形态比名词更有行动感，「品牌 + .shopping」读起来就是购物入口。注册局为 Identity Digital（原 Donuts），2016 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .shop/.store/.sale 分工清晰：.shop 说店铺本身，.store 说门店/商城，.sale 说促销折扣——.shopping 说的是「购物这个行为与体验」，做导购内容与购物平台定位最准。价格是平价平续结构：注册约 $29/年（约 ¥210），续费同价——无首年促销陷阱，多年持有成本可预期。库存极好：品类词、场景词、品牌词全线有货。注意两点：一是拼写比 .shop 长，移动端输入成本略高，短品牌词更配；二是纯单店卖货 .shop/.store 更简洁，.shopping 更适合平台与内容导购的「逛」感。命名上「品牌 + .shopping」（acme.shopping）最主流，「品类 + .shopping」（outdoor.shopping）适合导购与比价站。",
+      bestFor: ["综合电商与选品商城", "导购与比价内容站", "购物节与促销活动页", "社交电商与直播带货项目"],
+      namingTips: [
+        "「品牌 + .shopping」读起来就是购物入口",
+        "注册约 $29/年、续费同价，无首年促销陷阱",
+        "逛与导购用 .shopping，开店用 .shop/.store，促销用 .sale",
+        "拼写较长，搭配短品牌词降低输入成本",
+      ],
+    },
+    en: {
+      title: ".shopping Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".shopping is the plain-spoken suffix for the act of buying — for e-commerce marketplaces and curated stores, shopping-guide and price-comparison sites, shopping-festival and promo landing pages, and social-commerce or livestream-selling projects. See live pricing and naming advice, then hunt available .shopping names with AI.",
+      intro:
+        ".shopping writes the activity into the address: e-commerce marketplaces and curated stores, shopping-guide and price-comparison sites, shopping-festival and promo landing pages, and social-commerce or livestream-selling projects on name.shopping say \"come buy here\" in one word — shopping is one of the highest-frequency words in consumer search, and the verb form carries more action than the noun, so brand + .shopping reads like a doorway to the checkout. The registry is Identity Digital (formerly Donuts); open since 2016, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .shop, .store and .sale: .shop names the shop itself, .store names the storefront, .sale names the discount — .shopping names the experience of browsing and buying, so guide content and shopping platforms position sharpest here. Pricing is the flat shape: about $29/yr to register (≈¥210) and the same to renew — no first-year promo trap, so multi-year costs stay predictable. Inventory is excellent: category words, occasion words and brand words all hit. Two cautions: the spelling runs longer than .shop, so short brand words type easier on mobile; and a single storefront reads cleaner on .shop or .store — .shopping shines where browsing is the product. Naming: brand + .shopping (acme.shopping) is the mainstream shape; category + .shopping (outdoor.shopping) suits guide and comparison sites.",
+      bestFor: ["E-commerce marketplaces & curated stores", "Shopping-guide & price-comparison sites", "Shopping-festival & promo pages", "Social commerce & livestream selling"],
+      namingTips: [
+        "Brand + .shopping reads like a doorway to the checkout",
+        "About $29/yr flat to register and renew — no promo trap",
+        "Browsing fits .shopping; the shop .shop/.store; deals .sale",
+        "The spelling runs long — pair it with a short brand word",
+      ],
+    },
+  },
+  graphics: {
+    tld: "graphics",
+    zh: {
+      title: ".graphics 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".graphics 是平面与视觉设计的专属后缀，适合平面设计工作室与自由设计师作品集、图形素材与模板下载站、Logo/VI 设计服务、数据可视化与信息图项目。查看 .graphics 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .graphics 域名。",
+      intro:
+        ".graphics 把专业写进域名：平面设计工作室与自由设计师作品集、图形素材与模板下载站、Logo/VI 设计服务、数据可视化与信息图项目用 name.graphics，「做图的」一词讲透——graphics 在英文里同时覆盖平面设计、图形素材与计算机图形学三层含义，「名字 + .graphics」读起来就是一家设计工作室的招牌。注册局为 Identity Digital（原 Donuts），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .design/.art/.studio 分工清晰：.design 说设计学科全域，.art 说艺术创作，.studio 说工作室形态——.graphics 说的是「图形/平面这个具体工种」，做视觉输出与素材站定位最准。价格适中且平续：注册约 $21/年（约 ¥150），续费同价——无首年促销陷阱，多年持有成本可预期。库存极好：人名、风格词、品牌词全线有货。注意两点：一是 graphics 偏工种词，做品牌全案或产品设计 .design 语义更宽；二是拼写含复数 s，口播时提醒用户带上。命名上「人名/品牌 + .graphics」（jane.graphics）最主流，「风格词 + .graphics」（retro.graphics）适合素材与模板站。",
+      bestFor: ["平面设计工作室与设计师作品集", "图形素材与模板下载站", "Logo/VI 设计服务", "数据可视化与信息图项目"],
+      namingTips: [
+        "「人名/品牌 + .graphics」读起来就是设计工作室招牌",
+        "注册约 $21/年、续费同价，无首年促销陷阱",
+        "平面工种用 .graphics，设计全域用 .design，艺术用 .art",
+        "拼写含复数 s，口播场景提醒用户带上",
+      ],
+    },
+    en: {
+      title: ".graphics Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".graphics is the dedicated suffix for visual design — for design studios and freelance portfolios, graphic-asset and template download sites, logo and brand-identity services, and data-visualization or infographic projects. See live pricing and naming advice, then hunt available .graphics names with AI.",
+      intro:
+        ".graphics writes the craft into the address: design studios and freelance portfolios, graphic-asset and template download sites, logo and brand-identity services, and data-visualization or infographic projects on name.graphics say \"we make the visuals\" in one word — graphics spans graphic design, visual assets and computer graphics all at once, and name + .graphics reads like the signboard of a design shop. The registry is Identity Digital (formerly Donuts); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .design, .art and .studio: .design claims the whole discipline, .art claims the artwork, .studio claims the workspace — .graphics claims the specific trade of making visuals, so visual-output services and asset sites position sharpest here. Pricing is moderate and flat: about $21/yr to register (≈¥150) and the same to renew — no first-year promo trap, so multi-year costs stay predictable. Inventory is excellent: personal names, style words and brand words all hit. Two cautions: graphics is a trade word, so full-service brand or product design reads wider on .design; and the plural s is easy to drop in speech, so remind listeners it's there. Naming: name or brand + .graphics (jane.graphics) is the mainstream shape; style word + .graphics (retro.graphics) suits asset and template sites.",
+      bestFor: ["Design studios & freelance portfolios", "Graphic-asset & template download sites", "Logo & brand-identity services", "Data visualization & infographics"],
+      namingTips: [
+        "Name + .graphics reads like the signboard of a design shop",
+        "About $21/yr flat to register and renew — no promo trap",
+        "The trade fits .graphics; the discipline .design; art .art",
+        "The plural s drops easily in speech — call it out",
+      ],
+    },
+  },
+  glass: {
+    tld: "glass",
+    zh: {
+      title: ".glass 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".glass 是玻璃行业的专属后缀，适合门窗与幕墙玻璃工程公司、汽车玻璃安装与修复服务、玻璃工艺品与艺术工作室、眼镜与光学镜片品牌。查看 .glass 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .glass 域名。",
+      intro:
+        ".glass 把材料写进域名：门窗与幕墙玻璃工程公司、汽车玻璃安装与修复服务、玻璃工艺品与艺术工作室、眼镜与光学镜片品牌用 name.glass，「做玻璃的」一词讲透——glass 是材料词里少见的「行业 + 美感」双重气质，工程公司用它说专业，艺术工作室用它说通透，「城市 + glass」读起来就是本地玻璃服务的电话本首选。注册局为 Identity Digital（原 Donuts），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .construction/.repair/.design 分工清晰：.construction 说施工全案，.repair 说维修服务，.design 说设计——.glass 说的是「玻璃这个具体行业」，做垂直业务定位最准。价格中档且平续：注册约 $37/年（约 ¥270），续费同价——无首年促销陷阱，多年持有成本可预期。库存极好：城市词、工艺词、品牌词全线有货。注意两点：一是行业词切得极窄，业务多元后可能被后缀框住；二是眼镜方向同时留意 .vision，光学语义更聚焦。命名上「城市/区域 + .glass」（denver.glass）最主流，本地服务搜索直达，「品牌 + .glass」（lumina.glass）适合工艺与艺术品牌。",
+      bestFor: ["门窗与幕墙玻璃工程公司", "汽车玻璃安装与修复服务", "玻璃工艺品与艺术工作室", "眼镜与光学镜片品牌"],
+      namingTips: [
+        "「城市 + .glass」是本地玻璃服务的电话本首选",
+        "注册约 $37/年、续费同价，无首年促销陷阱",
+        "玻璃垂直用 .glass，施工全案用 .construction，维修用 .repair",
+        "行业词切得窄，业务多元前想清楚品牌边界",
+      ],
+    },
+    en: {
+      title: ".glass Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".glass is the dedicated suffix for the glass trade — for window and curtain-wall glazing companies, auto-glass installation and repair services, glass-art and craft studios, and eyewear or optical-lens brands. See live pricing and naming advice, then hunt available .glass names with AI.",
+      intro:
+        ".glass writes the material into the address: window and curtain-wall glazing companies, auto-glass installation and repair services, glass-art and craft studios, and eyewear or optical-lens brands on name.glass say \"we work in glass\" in one word — glass is that rare material word carrying both trade credibility and aesthetic shine, so contractors use it for expertise while artists use it for transparency, and city + .glass reads like the first listing in the local directory. The registry is Identity Digital (formerly Donuts); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .construction, .repair and .design: .construction names the full build, .repair names the fix, .design names the drawing board — .glass names one concrete trade, so vertical glass businesses position sharpest here. Pricing is mid-tier and flat: about $37/yr to register (≈¥270) and the same to renew — no first-year promo trap, so multi-year costs stay predictable. Inventory is excellent: city words, craft words and brand words all hit. Two cautions: the trade word cuts narrow, so a diversifying business may outgrow the suffix; and eyewear plays should also watch .vision, where the optical meaning is sharper. Naming: city or region + .glass (denver.glass) is the mainstream shape for local search; brand + .glass (lumina.glass) suits craft and art brands.",
+      bestFor: ["Window & curtain-wall glazing companies", "Auto-glass installation & repair", "Glass-art & craft studios", "Eyewear & optical-lens brands"],
+      namingTips: [
+        "City + .glass reads like the first listing in the directory",
+        "About $37/yr flat to register and renew — no promo trap",
+        "The glass trade fits .glass; full builds .construction",
+        "The trade word cuts narrow — mind the brand's future scope",
+      ],
+    },
+  },
+  vision: {
+    tld: "vision",
+    zh: {
+      title: ".vision 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".vision 是「视力/愿景」双关的品牌后缀，适合眼科诊所与视光中心、眼镜与隐形眼镜品牌、品牌战略与咨询公司、计算机视觉与 AI 视觉项目。查看 .vision 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .vision 域名。",
+      intro:
+        ".vision 一词两吃：眼科诊所与视光中心、眼镜与隐形眼镜品牌取「视力」义，品牌战略与咨询公司、计算机视觉与 AI 视觉项目取「愿景/视觉」义——name.vision 读起来既像专业机构又像使命宣言，是少数天然双关的后缀。注册局为 Identity Digital（原 Donuts），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .clinic/.care/.doctor 分工清晰：.clinic/.doctor 说医疗机构全科，.care 说照护——.vision 说的是「眼睛与看见」这个具体领域，视光行业与视觉技术定位最准。近年计算机视觉创业潮又给它添了一层科技语义，cv 团队用 name.vision 比 name-cv.com 优雅得多。价格适中且平续：注册约 $22/年（约 ¥160），续费同价——无首年促销陷阱，多年持有成本可预期。库存极好：城市词、技术词、品牌词全线有货。注意两点：一是双关是双刃剑，视光诊所与 AI 团队同名撞车时品牌混淆，注册前搜同名；二是国内大众对 .vision 认知度一般，面向消费者时配合中文品牌传播。命名上「城市 + .vision」（austin.vision）适合本地视光机构，「品牌 + .vision」（acme.vision）适合愿景宣言与视觉 AI 团队。",
+      bestFor: ["眼科诊所与视光中心", "眼镜与隐形眼镜品牌", "品牌战略与咨询公司", "计算机视觉与 AI 视觉项目"],
+      namingTips: [
+        "「视力」与「愿景」双关，医疗与科技两头都能用",
+        "注册约 $22/年、续费同价，无首年促销陷阱",
+        "视光与视觉用 .vision，全科诊所用 .clinic/.doctor",
+        "注册前搜同名，避免视光机构与 AI 团队撞车混淆",
+      ],
+    },
+    en: {
+      title: ".vision Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".vision is the double-meaning brand suffix — for eye clinics and optometry centers, eyewear and contact-lens brands, brand-strategy and consulting firms, and computer-vision or AI-vision projects. See live pricing and naming advice, then hunt available .vision names with AI.",
+      intro:
+        ".vision earns its keep twice: eye clinics and optometry centers plus eyewear and contact-lens brands take the eyesight meaning, while brand-strategy consultancies and computer-vision or AI-vision teams take the foresight meaning — name.vision reads as both a professional practice and a mission statement, one of the few suffixes with a built-in double meaning. The registry is Identity Digital (formerly Donuts); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .clinic, .care and .doctor: .clinic and .doctor name the general practice, .care names the caregiving — .vision names the specific field of eyes and seeing, so optometry and vision-tech position sharpest here. The computer-vision startup wave added a tech layer too: name.vision beats name-cv.com for elegance every time. Pricing is moderate and flat: about $22/yr to register (≈¥160) and the same to renew — no first-year promo trap, so multi-year costs stay predictable. Inventory is excellent: city words, tech words and brand words all hit. Two cautions: the double meaning cuts both ways — an optometrist and an AI team sharing a name invites confusion, so search the name first; and consumer recognition in China is modest, so pair it with a Chinese brand for domestic audiences. Naming: city + .vision (austin.vision) suits local optometry; brand + .vision (acme.vision) suits mission statements and vision-AI teams.",
+      bestFor: ["Eye clinics & optometry centers", "Eyewear & contact-lens brands", "Brand-strategy & consulting firms", "Computer-vision & AI-vision projects"],
+      namingTips: [
+        "Eyesight and foresight in one word — health and tech both fit",
+        "About $22/yr flat to register and renew — no promo trap",
+        "Eyes and seeing fit .vision; the general practice .clinic",
+        "Search the name first — optometrists and AI teams collide",
+      ],
+    },
+  },
+  tires: {
+    tld: "tires",
+    zh: {
+      title: ".tires 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".tires 是轮胎行业的专属后缀，适合轮胎零售与批发商、轮胎安装与快修门店、轮胎品牌与经销网络、车队轮胎管理服务。查看 .tires 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tires 域名。",
+      intro:
+        ".tires 把品类写进域名：轮胎零售与批发商、轮胎安装与快修门店、轮胎品牌与经销网络、车队轮胎管理服务用 name.tires，「卖轮胎/换轮胎」一词讲透——轮胎是标准的高频刚需消费品，用户搜索意图明确（换胎、补胎、比价），「城市 + .tires」读起来就是本地轮胎店的搜索直达入口。注册局为 Identity Digital（原 Donuts），2015 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .autos/.parts/.repair 分工清晰：.autos 说整车与汽车生意全域，.parts 说全品类配件，.repair 说维修服务——.tires 说的是「轮胎这个单一品类」，垂直到品类级，本地轮胎店与轮胎电商定位最准。价格偏高且平续：注册约 $69/年（约 ¥500），续费同价——行业词后缀里的中高价位，按品类词的获客价值衡量。库存极好：城市词、品牌词、车型词全线有货。注意两点：一是价位偏高，先确认轮胎是核心业务而非附带品类；二是综合汽修店 .repair/.autos 语义更宽，只有轮胎主打才值得上 .tires。命名上「城市 + .tires」（miami.tires）最主流，本地搜索直达，「品牌 + .tires」（roadmax.tires）适合品牌与经销网络。",
+      bestFor: ["轮胎零售与批发商", "轮胎安装与快修门店", "轮胎品牌与经销网络", "车队轮胎管理服务"],
+      namingTips: [
+        "「城市 + .tires」是本地轮胎店的搜索直达入口",
+        "注册约 $69/年、续费同价，按品类获客价值衡量",
+        "轮胎单品类用 .tires，整车用 .autos，综合维修用 .repair",
+        "价位偏高，轮胎须是核心业务而非附带品类",
+      ],
+    },
+    en: {
+      title: ".tires Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".tires is the dedicated suffix for the tire trade — for tire retailers and wholesalers, tire-fitting and quick-service shops, tire brands and dealer networks, and fleet tire-management services. See live pricing and naming advice, then hunt available .tires names with AI.",
+      intro:
+        ".tires writes the category into the address: tire retailers and wholesalers, tire-fitting and quick-service shops, tire brands and dealer networks, and fleet tire-management services on name.tires say \"tires sold and fitted here\" in one word — tires are the classic high-frequency essential, searched with clear intent (replace, patch, compare), so city + .tires reads like a direct lane from local search to the shop. The registry is Identity Digital (formerly Donuts); open since 2015, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .autos, .parts and .repair: .autos names the whole car business, .parts names every component, .repair names the service bay — .tires names a single category, vertical to the SKU level, so local tire shops and tire e-commerce position sharpest here. Pricing is higher-tier and flat: about $69/yr to register (≈¥500) and the same to renew — upper-mid among trade suffixes, weighed against the customer-acquisition value of a category word. Inventory is excellent: city words, brand words and vehicle words all hit. Two cautions: the price tag asks that tires be the core business, not a side category; and a general garage reads wider on .repair or .autos — only a tires-first shop earns .tires. Naming: city + .tires (miami.tires) is the mainstream shape for local search; brand + .tires (roadmax.tires) suits brands and dealer networks.",
+      bestFor: ["Tire retailers & wholesalers", "Tire-fitting & quick-service shops", "Tire brands & dealer networks", "Fleet tire-management services"],
+      namingTips: [
+        "City + .tires is a direct lane from local search to the shop",
+        "About $69/yr flat to register and renew — weigh the value",
+        "One category fits .tires; the car business .autos; fixes .repair",
+        "The price asks that tires be the core business, not a side line",
+      ],
+    },
+  },
+  surgery: {
+    tld: "surgery",
+    zh: {
+      title: ".surgery 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".surgery 是外科医疗的专属后缀，适合外科诊所与日间手术中心、整形与美容外科机构、口腔颌面与种植外科、兽医外科与专科转诊中心。查看 .surgery 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .surgery 域名。",
+      intro:
+        ".surgery 把专科写进域名：外科诊所与日间手术中心、整形与美容外科机构、口腔颌面与种植外科、兽医外科与专科转诊中心用 name.surgery，「做手术的」一词讲透——surgery 在英式英语里还兼指「诊所/诊室」，英联邦市场里 name.surgery 读起来就是诊所门牌，双重语义都指向专业医疗。注册局为 Identity Digital（原 Donuts），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .clinic/.doctor/.dental 分工清晰：.clinic 说门诊机构，.doctor 说医生个人，.dental 说口腔全科——.surgery 说的是「外科/手术」这个专科纵深，整形外科与日间手术中心定位最准。价格偏高且平续：注册约 $69/年（约 ¥500），续费同价——医疗词后缀的中高价位，与获客单价高的外科专科匹配。库存极好：术式词、城市词、医生名全线有货。注意两点：一是医疗广告各国监管严格，域名用语要与资质匹配，避免夸大暗示；二是非手术类诊所用 .clinic 更稳，.surgery 语义很重，挂名不符反伤信任。命名上「专科 + .surgery」（spine.surgery）最主流，读起来就是专科中心，「医生名/品牌 + .surgery」（drlee.surgery）适合个人 IP 与私立机构。",
+      bestFor: ["外科诊所与日间手术中心", "整形与美容外科机构", "口腔颌面与种植外科", "兽医外科与专科转诊中心"],
+      namingTips: [
+        "「专科 + .surgery」读起来就是专科手术中心",
+        "注册约 $69/年、续费同价，与外科获客单价匹配",
+        "外科纵深用 .surgery，门诊机构用 .clinic，医生个人用 .doctor",
+        "医疗监管严格，域名用语须与资质匹配",
+      ],
+    },
+    en: {
+      title: ".surgery Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".surgery is the dedicated suffix for surgical medicine — for surgical clinics and day-surgery centers, plastic and cosmetic surgery practices, oral-maxillofacial and implant surgery, and veterinary surgery or specialist referral centers. See live pricing and naming advice, then hunt available .surgery names with AI.",
+      intro:
+        ".surgery writes the specialty into the address: surgical clinics and day-surgery centers, plastic and cosmetic surgery practices, oral-maxillofacial and implant surgery, and veterinary surgery or specialist referral centers on name.surgery say \"operations happen here\" in one word — and in British English surgery also means the doctor's office itself, so in Commonwealth markets name.surgery reads like the brass plate on the clinic door; both meanings point straight at professional medicine. The registry is Identity Digital (formerly Donuts); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .clinic, .doctor and .dental: .clinic names the outpatient practice, .doctor names the physician, .dental names general dentistry — .surgery names the surgical depth, so plastic surgeons and day-surgery centers position sharpest here. Pricing is higher-tier and flat: about $69/yr to register (≈¥500) and the same to renew — upper-mid among medical suffixes, in line with surgery's high patient-acquisition value. Inventory is excellent: procedure words, city words and surgeon names all hit. Two cautions: medical advertising is tightly regulated everywhere, so the name must match the license and avoid overpromising; and non-surgical practices sit safer on .clinic — .surgery carries weight, and wearing it without the scalpel erodes trust. Naming: specialty + .surgery (spine.surgery) is the mainstream shape and reads like a specialist center; surgeon name or brand + .surgery (drlee.surgery) suits personal brands and private practices.",
+      bestFor: ["Surgical clinics & day-surgery centers", "Plastic & cosmetic surgery practices", "Oral-maxillofacial & implant surgery", "Veterinary surgery & referral centers"],
+      namingTips: [
+        "Specialty + .surgery reads like a specialist center",
+        "About $69/yr flat to register and renew — matches the value",
+        "Surgical depth fits .surgery; outpatient .clinic; the person .doctor",
+        "Regulation is tight — the name must match the license",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
