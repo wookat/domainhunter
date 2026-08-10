@@ -269,7 +269,7 @@
     ]
   },
   "guide": {
-    "count": 260,
+    "count": 266,
     "slugs": [
       "saas",
       "ecommerce",
@@ -530,7 +530,13 @@
       "officesupplies",
       "medicalsupplies",
       "buildingmaterials",
-      "franchise"
+      "franchise",
+      "villarental",
+      "cruise",
+      "customtour",
+      "limoservice",
+      "ticketing",
+      "flowerdelivery"
     ]
   },
   "vs": {
