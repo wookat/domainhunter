@@ -606,7 +606,7 @@
     ]
   },
   "vs": {
-    "count": 330,
+    "count": 336,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -937,7 +937,13 @@
       "cricket-vs-club",
       "fish-vs-fishing",
       "fan-vs-club",
-      "win-vs-bet"
+      "win-vs-bet",
+      "wang-vs-com",
+      "day-vs-today",
+      "meme-vs-fun",
+      "quest-vs-games",
+      "kids-vs-family",
+      "foundation-vs-org"
     ]
   }
 }
