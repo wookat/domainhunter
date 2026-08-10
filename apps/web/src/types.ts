@@ -440,6 +440,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   healthcare: { first: 510, renew: 510 },
   abogado: { first: 190, renew: 190 },
   kaufen: { first: 40, renew: 175 },
+  berlin: { first: 300, renew: 300 },
+  paris: { first: 350, renew: 350 },
+  amsterdam: { first: 280, renew: 280 },
+  vegas: { first: 380, renew: 380 },
+  immobilien: { first: 60, renew: 220 },
+  tienda: { first: 360, renew: 360 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
