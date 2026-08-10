@@ -702,7 +702,7 @@
     ]
   },
   "vs": {
-    "count": 378,
+    "count": 384,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -1081,7 +1081,13 @@
       "boston-vs-city",
       "healthcare-vs-health",
       "abogado-vs-lawyer",
-      "kaufen-vs-shop"
+      "kaufen-vs-shop",
+      "berlin-vs-city",
+      "paris-vs-london",
+      "amsterdam-vs-berlin",
+      "vegas-vs-casino",
+      "immobilien-vs-immo",
+      "tienda-vs-shop"
     ]
   }
 }
