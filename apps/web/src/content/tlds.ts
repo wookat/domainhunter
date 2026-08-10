@@ -7404,6 +7404,186 @@ const GUIDES = {
       ],
     },
   },
+  business: {
+    tld: "business",
+    zh: {
+      title: ".business 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".business 把「做生意」直接写进域名，适合中小企业官网、本地商家、创业公司的正式门面与企业信息页。查看 .business 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .business 域名。",
+      intro:
+        ".business 是语义最直白的企业后缀：中小企业官网、本地商家、初创公司的正式门面用 name.business，访客一眼就明白「这是家正经做生意的」。它和 .company 是近亲——.company 强调法人实体，.business 强调经营本身，餐馆、维修铺、咨询室这类「生意」气质的主体用 .business 更顺口。价格是它的大杀器：首年常见 $2–3（约 ¥19），续费约 $16/年（约 ¥115），续费甚至比 .com 还便宜，是长期持有成本最低的企业后缀之一。注册局为 Identity Digital，RDAP 支持完善。库存极好：公司名、姓氏、行业词几乎随便挑，XXbusiness.com 式的组合早被占光，而 XX.business 还大片空着。注意两点：一是 8 个字母的后缀偏长，前面的名字要短；二是大众认知度仍不如 .com，印在名片上最好配一句业务说明。命名上「姓氏/店名 + .business」适合本地商家，「行业词 + .business」适合垂直服务商，「品牌词 + .business」适合把主站留在 .com、企业信息页放这里的分层玩法。",
+      bestFor: ["中小企业官网", "本地商家门面站", "创业公司正式主页", "品牌的企业信息页"],
+      namingTips: [
+        "「店名/姓氏 + .business」是本地商家最自然的写法",
+        "首年约 $2–3、续费约 $16/年，比 .com 续费还便宜",
+        "后缀 8 个字母偏长，名字本身控制在 6 字符内",
+        "认知度不及 .com，线下物料配一句业务说明",
+      ],
+    },
+    en: {
+      title: ".business Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".business writes commerce straight into the domain — for SMB websites, local shops, and startup homepages that want a formal storefront. See live pricing and naming advice, then hunt available .business names with AI.",
+      intro:
+        ".business is the most literal company suffix there is: SMB websites, local shops and startup homepages on name.business tell visitors instantly that this is a real, operating business. It's a close cousin of .company — .company stresses the legal entity, .business stresses the trade itself, so restaurants, repair shops and consultancies read more naturally here. Price is the killer feature: typically $2–3 for the first year (≈¥19) and about $16/yr to renew (≈¥115) — cheaper to renew than a .com, making it one of the lowest-cost business suffixes to hold long term. The registry is Identity Digital with mature RDAP support. Inventory is superb: company names, surnames and trade words are nearly all open, while every XXbusiness.com combo was claimed ages ago. Two cautions: at 8 letters the suffix is long, so keep the root short; and mainstream recognition still trails .com, so pair it with a one-line descriptor on print materials. Naming: shop or family name + .business fits local merchants; trade word + .business fits vertical services; brand + .business works as a corporate-info page while the product lives on its own domain.",
+      bestFor: ["SMB company websites", "Local shop storefronts", "Startup formal homepages", "Corporate-info pages for brands"],
+      namingTips: [
+        "Shop or family name + .business is the natural local-merchant shape",
+        "About $2–3 year one, $16/yr renewal — cheaper than a .com renewal",
+        "The 8-letter suffix is long — keep the root under 6 characters",
+        "Recognition trails .com; add a one-line descriptor on print materials",
+      ],
+    },
+  },
+  limited: {
+    tld: "limited",
+    zh: {
+      title: ".limited 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".limited 对应有限公司的 Limited 后缀，也自带「限量」语义，适合英联邦体系有限公司、限量发售品牌、会员制精品店。查看 .limited 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .limited 域名。",
+      intro:
+        ".limited 一词两义，是新后缀里少见的双面手。第一面是公司后缀：英联邦体系的有限公司（Limited/Ltd）把 brand.limited 当官网，等于把注册名写进域名，比 .ltd 更完整正式，香港、英国、澳新的公司尤其对味。第二面是「限量」语义：限量发售的潮牌、小批量手作、会员制精品店用 name.limited，稀缺感直接从域名溢出来——drop.limited 这种组合天然带饥饿营销气质。注册局为 Identity Digital。价格中规中矩：首年约 $8（约 ¥59），续费约 $29/年（约 ¥211）。库存很好：品牌词、姓氏、潮流词大多有货。注意两点：一是两个语义别混用，公司官网就正经做企业站，潮牌就做限量叙事，摇摆会让访客困惑；二是美国用户对 Limited 公司后缀不敏感，主打美国市场的正式企业站 .com/.inc 更稳。命名上「注册名 + .limited」适合有限公司官网，「品牌词 + .limited」适合限量品牌，词根本身短一点，7 字母后缀才不显冗长。",
+      bestFor: ["英联邦体系有限公司官网", "限量发售潮牌", "小批量手作与精品店", "会员制商店"],
+      namingTips: [
+        "有限公司用「注册名 + .limited」，域名即公司名",
+        "首年约 $8、续费约 $29/年，中规中矩",
+        "限量品牌可用 drop/edition 等词根强化稀缺感",
+        "主打美国市场的正式企业站更适合 .com/.inc",
+      ],
+    },
+    en: {
+      title: ".limited Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".limited doubles as the Limited company suffix and a scarcity signal — for Commonwealth limited companies, limited-edition brands, and members-only boutiques. See live pricing and naming advice, then hunt available .limited names with AI.",
+      intro:
+        ".limited carries two meanings at once — a rare double act among new TLDs. Face one is corporate: limited companies in Commonwealth jurisdictions put brand.limited on the door, writing the registered name into the domain itself — more complete and formal than .ltd, and especially natural for UK, Hong Kong, Australian and NZ companies. Face two is scarcity: limited-edition streetwear, small-batch crafts and members-only boutiques on name.limited leak exclusivity straight from the address — a combo like drop.limited practically markets itself. The registry is Identity Digital. Pricing is middle-of-the-road: about $8 first year (≈¥59) and $29/yr to renew (≈¥211). Inventory is strong: brand words, surnames and streetwear roots mostly hit. Two cautions: don't mix the two meanings — run a proper corporate site or a scarcity story, not both, or visitors get confused; and US audiences don't register \"Limited\" as a company suffix, so a formal US-market corporate site is safer on .com or .inc. Naming: registered name + .limited for limited companies; brand + .limited for edition-driven brands — and keep the root short, since the 7-letter suffix adds length.",
+      bestFor: ["Commonwealth limited-company sites", "Limited-edition streetwear brands", "Small-batch craft & boutique shops", "Members-only stores"],
+      namingTips: [
+        "Limited companies: registered name + .limited — the domain is the company name",
+        "About $8 year one, $29/yr renewal — middle-of-the-road pricing",
+        "Edition brands: roots like drop or edition amplify the scarcity story",
+        "Formal US-market corporate sites are safer on .com or .inc",
+      ],
+    },
+  },
+  associates: {
+    tld: "associates",
+    zh: {
+      title: ".associates 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".associates 是律所、会计所、咨询所等专业合伙机构的经典后缀——「姓氏 + Associates」的命名传统直接搬进域名。查看 .associates 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .associates 域名。",
+      intro:
+        ".associates 把专业服务业最经典的命名传统写进域名：欧美的律所、会计师事务所、咨询公司、建筑设计所惯用「创始人姓氏 + & Associates」作为字号，smith.associates 就是 Smith & Associates 的完美数字化——比 smithassociates.com 短一截，还省掉了尴尬的 & 符号。它和已收录的 .partners 是近亲：.partners 强调合伙人之间的关系，.associates 更贴「字号」本身，凡是名片上印着 Associates 的机构用它都顺理成章。注册局为 Identity Digital。价格中档：首年约 $12（约 ¥85），续费约 $31/年（约 ¥226）。库存极好：姓氏类词根几乎随便注册，这在 .com 上不可想象。注意两点：一是 10 个字母的后缀相当长，前面必须是短姓氏或短词，否则整个域名难读；二是它气质非常「机构」，个人顾问或轻咨询品牌用 .expert/.consulting 更灵活。命名上「姓氏 + .associates」是绝对主流，「领域词 + .associates」（tax.associates）适合突出专业方向的所。",
+      bestFor: ["律师事务所", "会计与税务师事务所", "咨询与设计事务所", "「姓氏 + Associates」字号机构"],
+      namingTips: [
+        "「姓氏 + .associates」直接对应 Smith & Associates 命名传统",
+        "首年约 $12、续费约 $31/年，专业所预算内",
+        "后缀 10 个字母很长，词根务必短",
+        "个人顾问用 .expert/.consulting 更灵活，这里适合机构字号",
+      ],
+    },
+    en: {
+      title: ".associates Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".associates is the classic suffix for law, accounting, consulting and design partnerships — the \"Name & Associates\" tradition, digitized. See live pricing and naming advice, then hunt available .associates names with AI.",
+      intro:
+        ".associates digitizes the most classic naming tradition in professional services: law firms, accounting practices, consultancies and architecture studios have branded themselves \"Founder & Associates\" for a century, and smith.associates is the perfect domain form of Smith & Associates — shorter than smithassociates.com and rid of the awkward ampersand. It's a close cousin of the already-listed .partners: .partners stresses the relationship between partners, while .associates matches the firm name itself — any practice with \"Associates\" on the letterhead belongs here. The registry is Identity Digital. Pricing is mid-tier: about $12 first year (≈¥85) and $31/yr to renew (≈¥226). Inventory is superb — surname roots are nearly all open, unthinkable on .com. Two cautions: at 10 letters the suffix is genuinely long, so the root must be a short surname or word or the whole domain becomes unreadable; and its personality is firmly institutional — solo consultants and lightweight advisory brands read better on .expert or .consulting. Naming: surname + .associates is the dominant shape; field word + .associates (tax.associates) suits practices leading with their specialty.",
+      bestFor: ["Law firms", "Accounting & tax practices", "Consulting & design studios", "\"Name & Associates\" branded firms"],
+      namingTips: [
+        "Surname + .associates maps straight onto the Smith & Associates tradition",
+        "About $12 year one, $31/yr renewal — within a firm's budget",
+        "The 10-letter suffix is long — keep the root short",
+        "Solo consultants read better on .expert/.consulting; firms live here",
+      ],
+    },
+  },
+  cheap: {
+    tld: "cheap",
+    zh: {
+      title: ".cheap 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".cheap 把「便宜」大大方方写进域名，适合比价与省钱攻略站、折扣电商、廉价机票酒店聚合等一切以低价为卖点的生意。查看 .cheap 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .cheap 域名。",
+      intro:
+        ".cheap 是最诚实的后缀：把「便宜」两个字大大方方挂在域名上。比价网站、省钱攻略博客、折扣电商、廉价机票酒店聚合——凡是以低价为核心卖点的生意，flights.cheap 或 hotels.cheap 这样的域名就是广告语本身，用户搜「cheap + 品类」时你的域名与搜索词逐字吻合。它和已收录的 .deals/.discount 是同一族：.deals 强调「有好交易」，.discount 强调「打折」，.cheap 最直给——就是便宜。注册局为 Identity Digital。价格贴合人设：首年约 $6（约 ¥41），续费约 $29/年（约 ¥211）。库存极好：品类词、场景词基本全有货。注意两点：一是 cheap 在英语里有「廉价=劣质」的潜台词，做品牌调性的产品别碰，它只适合旗帜鲜明的省钱生意；二是这类流量站竞争激烈，域名只是起点，内容与比价数据才是壁垒。命名上「品类 + .cheap」（flights/hotels/eats）是标准句式，「fly/stay/eat 等动词 + .cheap」更口语上头，注意别再在词根里塞 cheap 造成重复。",
+      bestFor: ["比价与省钱攻略站", "折扣电商与清仓店", "廉价机票酒店聚合", "优惠信息聚合站"],
+      namingTips: [
+        "「品类 + .cheap」与用户搜索词逐字吻合",
+        "首年约 $6、续费约 $29/年，和人设一样便宜",
+        "cheap 有「廉价」潜台词，品牌调性产品别用",
+        "词根别再含 cheap，避免 cheapflights.cheap 式重复",
+      ],
+    },
+    en: {
+      title: ".cheap Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".cheap puts low prices right in the address — for price-comparison sites, savings blogs, discount stores and budget travel aggregators. See live pricing and naming advice, then hunt available .cheap names with AI.",
+      intro:
+        ".cheap is the most honest suffix on the internet: it hangs \"low prices\" right on the door. Price-comparison sites, savings blogs, discount e-commerce, budget flight and hotel aggregators — for any business whose pitch is the price, a domain like flights.cheap or hotels.cheap is the ad copy itself, matching \"cheap + category\" searches word for word. It belongs to the same family as the already-listed .deals and .discount: .deals promises a good bargain, .discount promises a markdown, .cheap is the bluntest of the three. The registry is Identity Digital. Pricing matches the persona: about $6 first year (≈¥41) and $29/yr to renew (≈¥211). Inventory is excellent — category and scenario words nearly all hit. Two cautions: in English, cheap carries a \"low quality\" undertone, so brand-conscious products should stay away — this suffix is for proudly budget-first businesses only; and traffic plays in this niche are brutally competitive, so the domain is the start, not the moat — the comparison data is. Naming: category + .cheap (flights, hotels, eats) is the standard shape; verb + .cheap (fly, stay, eat) reads even catchier — and never repeat cheap in the root.",
+      bestFor: ["Price-comparison & savings sites", "Discount e-commerce & outlets", "Budget flight & hotel aggregators", "Deal-hunting content sites"],
+      namingTips: [
+        "Category + .cheap matches user searches word for word",
+        "About $6 year one, $29/yr renewal — as cheap as the persona",
+        "The word carries a low-quality undertone — skip it for premium brands",
+        "Never repeat cheap in the root — avoid cheapflights.cheap redundancy",
+      ],
+    },
+  },
+  bargains: {
+    tld: "bargains",
+    zh: {
+      title: ".bargains 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".bargains 是「捡便宜」的复数狂欢，适合折扣信息聚合站、清仓特卖电商、二手捡漏社区与本地特卖情报号。查看 .bargains 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .bargains 域名。",
+      intro:
+        ".bargains 和 .cheap 一字之差，气质却软得多：cheap 说「我便宜」，bargain 说「你赚到了」——前者是价格标签，后者是淘到宝的快感。折扣信息聚合站、清仓特卖电商、二手捡漏社区、本地特卖情报号用 name.bargains，域名自带「进来捡漏」的邀请函。复数形式暗示「这里有一堆好货」，做聚合与清单类内容尤其贴：daily.bargains、tech.bargains 读起来就像栏目名。注册局为 Identity Digital。价格中低档：首年约 $12（约 ¥85），续费约 $24/年（约 ¥174），续费比 .cheap/.discount 都温和，长期持有更划算。库存极好：品类词、地名、频率词全线有货。注意两点：一是 8 个字母的后缀不短，词根要短；二是它和已收录的 .deals 语义高度重叠，选型时看语感——deals 偏交易促成，bargains 偏捡漏乐趣，社区型产品用 bargains 更有烟火气。命名上「品类/地名 + .bargains」是主流，「daily/weekly 等频率词 + .bargains」适合订阅制特卖情报。",
+      bestFor: ["折扣信息聚合站", "清仓特卖电商", "二手捡漏社区", "本地特卖情报订阅"],
+      namingTips: [
+        "「品类/地名 + .bargains」自带「进来捡漏」的邀请感",
+        "首年约 $12、续费约 $24/年，同族里续费最温和",
+        "后缀 8 个字母，词根控制在 5–6 字符",
+        "与 .deals 高度同义：deals 偏交易，bargains 偏捡漏乐趣",
+      ],
+    },
+    en: {
+      title: ".bargains Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".bargains celebrates the thrill of the find — for deal-aggregation sites, clearance stores, secondhand treasure-hunting communities and local sale alerts. See live pricing and naming advice, then hunt available .bargains names with AI.",
+      intro:
+        ".bargains sits one word from .cheap but feels much warmer: cheap says \"I'm inexpensive,\" bargain says \"you scored\" — one is a price tag, the other is the thrill of the find. Deal-aggregation sites, clearance e-commerce, secondhand treasure-hunting communities and local sale alerts on name.bargains carry a built-in invitation to come dig. The plural implies a whole pile of finds, which suits aggregation and list-style content especially well: daily.bargains or tech.bargains read like column names. The registry is Identity Digital. Pricing is low-to-mid: about $12 first year (≈¥85) and $24/yr to renew (≈¥174) — gentler renewals than .cheap or .discount, so long-term holds cost less. Inventory is excellent: category words, place names and frequency words all hit. Two cautions: the 8-letter suffix isn't short, so keep the root tight; and it overlaps heavily with the already-listed .deals — pick by tone: deals leans transactional, bargains leans hunt-and-delight, so community products feel homier here. Naming: category or place + .bargains is the dominant shape; frequency words like daily or weekly + .bargains suit subscription-style sale alerts.",
+      bestFor: ["Deal-aggregation sites", "Clearance & outlet e-commerce", "Secondhand treasure-hunt communities", "Local sale alert subscriptions"],
+      namingTips: [
+        "Category or place + .bargains is a built-in invitation to come dig",
+        "About $12 year one, $24/yr renewal — gentlest renewal in the family",
+        "The 8-letter suffix needs a 5–6 character root",
+        "Near-synonym of .deals: deals is transactional, bargains is the thrill",
+      ],
+    },
+  },
+  supplies: {
+    tld: "supplies",
+    zh: {
+      title: ".supplies 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".supplies 是耗材与物资的专属后缀，适合办公与美术用品店、宠物与园艺耗材电商、行业物资 B2B 供应商。查看 .supplies 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .supplies 域名。",
+      intro:
+        ".supplies 把「耗材/物资」写进域名：办公用品店、美术画材铺、宠物与园艺耗材电商、实验室与医疗物资商、行业 B2B 供应商用 name.supplies，客户搜「品类 + supplies」时域名与搜索词逐字对齐——art.supplies、pet.supplies 一看就是卖什么的。它和已收录的单数 .supply 是一对：.supply 偏「供应链/供给」的抽象概念（水电、能源、供应链服务），复数 .supplies 具体指「一件件耗材」，卖实物耗材的店用复数更准。注册局为 Identity Digital。价格是少见的平价平款：注册与续费都约 $20/年（约 ¥145），没有首年低价续费跳涨的套路，长期持有成本可预期。库存极好：品类词几乎全有货，XXsupplies.com 早被文具与耗材商占光。注意两点：一是 8 个字母的后缀偏长，词根要短；二是复数后缀口播时容易漏掉尾音 s，线下传播多的生意要留意。命名上「品类 + .supplies」是绝对主流（office/art/pet/garden/lab），「场景 + .supplies」（studio/camp）适合垂直细分，词根别再含 supply 避免重复。",
+      bestFor: ["办公与美术用品店", "宠物与园艺耗材电商", "实验室与医疗物资商", "行业物资 B2B 供应商"],
+      namingTips: [
+        "「品类 + .supplies」与客户搜索词逐字对齐",
+        "注册续费均约 $20/年，无首年套路，成本可预期",
+        "后缀 8 个字母偏长，词根控制在 5 字符左右",
+        "口播易漏尾音 s，线下传播多的生意要留意",
+      ],
+    },
+    en: {
+      title: ".supplies Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".supplies is the dedicated suffix for consumables and materials — for office and art supply stores, pet and garden consumables, and B2B industrial suppliers. See live pricing and naming advice, then hunt available .supplies names with AI.",
+      intro:
+        ".supplies writes the goods into the address: office supply stores, art material shops, pet and garden consumable e-commerce, lab and medical suppliers and industrial B2B vendors on name.supplies align word for word with what customers search — art.supplies or pet.supplies explains the shop at a glance. It pairs with the already-listed singular .supply: .supply leans abstract — supply chains, energy, provisioning services — while the plural .supplies means the physical items themselves, so stores selling actual consumables are more precise here. The registry is Identity Digital. Pricing is a rare flat deal: roughly $20/yr for both registration and renewal (≈¥145) — no first-year teaser, no renewal jump, fully predictable holding costs. Inventory is excellent: category words nearly all hit, while every XXsupplies.com was claimed by stationers long ago. Two cautions: the 8-letter suffix is on the long side, so keep the root short; and the trailing s gets swallowed in speech, so businesses that spread by word of mouth should watch for it. Naming: category + .supplies is the dominant shape (office, art, pet, garden, lab); scene + .supplies (studio, camp) suits vertical niches — and never repeat supply in the root.",
+      bestFor: ["Office & art supply stores", "Pet & garden consumables e-commerce", "Lab & medical suppliers", "B2B industrial supply vendors"],
+      namingTips: [
+        "Category + .supplies aligns word for word with customer searches",
+        "About $20/yr to register and renew — flat, predictable pricing",
+        "The 8-letter suffix needs a root of roughly 5 characters",
+        "The trailing s gets swallowed in speech — mind word-of-mouth channels",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
