@@ -1,0 +1,465 @@
+{
+  "hub_nav_ssr": {
+    "/tld:zh": {
+      "status": 200,
+      "nav_present": true,
+      "chip_count": 9,
+      "chips_eq_sections": true,
+      "chip_counts_eq_section_counts": true,
+      "counts_sum": 342,
+      "sticky_class": true,
+      "scroll_mt_32_all": true
+    },
+    "/tld:en": {
+      "status": 200,
+      "nav_present": true,
+      "chip_count": 9,
+      "chips_eq_sections": true,
+      "chip_counts_eq_section_counts": true,
+      "counts_sum": 342,
+      "sticky_class": true,
+      "scroll_mt_32_all": true
+    },
+    "/guide:zh": {
+      "status": 200,
+      "nav_present": true,
+      "chip_count": 10,
+      "chips_eq_sections": true,
+      "chip_counts_eq_section_counts": true,
+      "counts_sum": 338,
+      "sticky_class": true,
+      "scroll_mt_32_all": true
+    },
+    "/guide:en": {
+      "status": 200,
+      "nav_present": true,
+      "chip_count": 10,
+      "chips_eq_sections": true,
+      "chip_counts_eq_section_counts": true,
+      "counts_sum": 338,
+      "sticky_class": true,
+      "scroll_mt_32_all": true
+    },
+    "/vs:zh": {
+      "status": 200,
+      "nav_present": true,
+      "chip_count": 319,
+      "chips_eq_sections": true,
+      "chip_counts_eq_section_counts": true,
+      "counts_sum": 378,
+      "sticky_class": true,
+      "scroll_mt_32_all": true
+    },
+    "/vs:en": {
+      "status": 200,
+      "nav_present": true,
+      "chip_count": 319,
+      "chips_eq_sections": true,
+      "chip_counts_eq_section_counts": true,
+      "counts_sum": 378,
+      "sticky_class": true,
+      "scroll_mt_32_all": true
+    }
+  },
+  "sitemap_loc_samples": [
+    1066,
+    1066,
+    1066
+  ],
+  "sitemap_dup_locs": 0,
+  "sitemap_cat_counts": {
+    "tld": 342,
+    "guide": 338,
+    "vs": 378,
+    "core": 8
+  },
+  "sitemap_vs_counts_json": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "llms_counts": {
+    "tld": 342,
+    "guide": 338,
+    "vs": 378
+  },
+  "llms_vs_sitemap_equal": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "robots": {
+    "status": 200,
+    "has_sitemap": true,
+    "gptbot": true
+  },
+  "inject_sweep": {
+    "total": 1058,
+    "ok": 1058,
+    "bad": {}
+  },
+  "inject_en_sample": {
+    "/tld/com?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/tld/tienda?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/tld/eco?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/guide/saas?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/guide/clinic?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/guide/teaware?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/vs/com-vs-cn?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/vs/kaufen-vs-shop?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/vs/flights-vs-travel?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    }
+  },
+  "seo_deep": {
+    "/tld/com": {
+      "status": 200,
+      "title": ".com 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/com",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 167323
+    },
+    "/tld/com?lang=en": {
+      "status": 200,
+      "title": ".com Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/com?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 167689
+    },
+    "/tld/tienda": {
+      "status": 200,
+      "title": ".tienda 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/tienda",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 161857
+    },
+    "/tld/tienda?lang=en": {
+      "status": 200,
+      "title": ".tienda Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/tienda?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 163410
+    },
+    "/guide/saas": {
+      "status": 200,
+      "title": "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/saas",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": true,
+      "hreflang_count": 3,
+      "bytes": 160882
+    },
+    "/guide/saas?lang=en": {
+      "status": 200,
+      "title": "How to Name a SaaS Product: Strategies, Case Studies &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/saas?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": true,
+      "hreflang_count": 3,
+      "bytes": 162698
+    },
+    "/guide/teaware": {
+      "status": 200,
+      "title": "茶器工作室怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/teaware",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": true,
+      "hreflang_count": 3,
+      "bytes": 162264
+    },
+    "/guide/teaware?lang=en": {
+      "status": 200,
+      "title": "How to Name a Teaware Studio: Strategies, Case Studies &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/teaware?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": true,
+      "hreflang_count": 3,
+      "bytes": 165590
+    },
+    "/vs/com-vs-cn": {
+      "status": 200,
+      "title": ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/com-vs-cn",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": true,
+      "hreflang_count": 3,
+      "bytes": 165449
+    },
+    "/vs/com-vs-cn?lang=en": {
+      "status": 200,
+      "title": ".com vs .cn: Audience, Compliance &amp; Brand Protection Compared | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/com-vs-cn?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": true,
+      "hreflang_count": 3,
+      "bytes": 165428
+    },
+    "/vs/kaufen-vs-shop": {
+      "status": 200,
+      "title": ".kaufen 和 .shop 怎么选：德语区的购买动词与全球的店铺门面 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/kaufen-vs-shop",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": true,
+      "hreflang_count": 3,
+      "bytes": 175924
+    },
+    "/vs/kaufen-vs-shop?lang=en": {
+      "status": 200,
+      "title": ".kaufen vs .shop: The German Buy Verb or The Global Storefront | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/kaufen-vs-shop?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": true,
+      "hreflang_count": 3,
+      "bytes": 176942
+    },
+    "/vs/abogado-vs-lawyer": {
+      "status": 200,
+      "title": ".abogado 和 .lawyer 怎么选：西语客户与英语客户的执业门牌 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/abogado-vs-lawyer",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": true,
+      "hreflang_count": 3,
+      "bytes": 175956
+    },
+    "/vs/abogado-vs-lawyer?lang=en": {
+      "status": 200,
+      "title": ".abogado vs .lawyer: The Practice Nameplate in Spanish or English | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/abogado-vs-lawyer?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": true,
+      "hreflang_count": 3,
+      "bytes": 177070
+    },
+    "/": {
+      "status": 200,
+      "title": "DomainHunter — AI 域名猎手 | 说出寓意，猎到真正可注册的好域名",
+      "canonical": "https://hunt.zalize.com/",
+      "html_lang": "zh-CN",
+      "og_count": 9,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": false,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 7709
+    },
+    "/?lang=en": {
+      "status": 200,
+      "title": "DomainHunter — AI Domain Hunter | Describe the meaning, hunt truly available names",
+      "canonical": "https://hunt.zalize.com/?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": false,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 8085
+    },
+    "/prices": {
+      "status": 200,
+      "title": "域名后缀价格总览：342 个主流 TLD 注册与续费对比 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/prices",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 241090
+    },
+    "/prices?lang=en": {
+      "status": 200,
+      "title": "TLD Price Overview: Registration vs Renewal for 342 Popular Suffixes | DomainHunter",
+      "canonical": "https://hunt.zalize.com/prices?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 240610
+    },
+    "/tld": {
+      "status": 200,
+      "title": "全部 TLD 注册指南：342 个后缀怎么选 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 203630
+    },
+    "/tld?lang=en": {
+      "status": 200,
+      "title": "All TLD Registration Guides: How to Choose Among 342 Suffixes | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 209923
+    },
+    "/guide": {
+      "status": 200,
+      "title": "全部行业命名指南：338 个行业怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 188310
+    },
+    "/guide?lang=en": {
+      "status": 200,
+      "title": "All Industry Naming Guides: How to Name a Product in 338 Industries | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 181707
+    },
+    "/vs": {
+      "status": 200,
+      "title": "全部后缀对比：378 组 TLD 怎么选 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 302858
+    },
+    "/vs?lang=en": {
+      "status": 200,
+      "title": "All TLD Comparisons: 378 Head-to-Head Matchups | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "has_article_jsonld": false,
+      "hreflang_count": 3,
+      "bytes": 302927
+    }
+  },
+  "notfound": {
+    "/nonexistent-r419": 404,
+    "/tld/notatld-r419": 404,
+    "/guide/notaguide-r419": 404,
+    "/vs/nota-vs-r419": 404
+  },
+  "prices_api": {
+    "status": 200,
+    "stale": null,
+    "tldCount": 337,
+    "priceKeys": 337
+  },
+  "mcp_tools": [
+    "check_domains",
+    "tld_prices",
+    "suggest_variants"
+  ],
+  "mcp_check_domains": [
+    {
+      "domain": "google.com",
+      "status": "taken",
+      "expiresAt": "2028-09-14T04:00:00.000Z"
+    },
+    {
+      "domain": "qzxvkw9r419mcp1786390189.com",
+      "status": "available",
+      "expiresAt": null
+    }
+  ],
+  "mcp_tld_prices": {
+    "tldCount": 342,
+    "priceKeys": 342
+  },
+  "mcp_suggest_variants": {
+    "variants": 24
+  }
+}
