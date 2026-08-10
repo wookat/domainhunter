@@ -7813,6 +7813,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["City guides & local news portals", "Local-living service aggregators", "\"City of X\" themed communities", "City-level event calendars & info sites"],
     },
   },
+  "shopping-vs-shop": {
+    slug: "shopping-vs-shop",
+    a: "shopping",
+    b: "shop",
+    zh: {
+      title: ".shopping 和 .shop 怎么选：逛的体验与店的门面",
+      metaDescription: ".shopping 说「购物这个行为」，导购与购物平台的动词后缀，注册续费同价；.shop 说「店铺本身」，独立站与 DTC 品牌的通用门面。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在电商赛道，分工在视角：一个说「逛」，一个说「店」。.shopping 赢在体验语义——综合电商与选品商城、导购与比价内容站、购物节与促销活动页、社交电商与直播带货项目用 name.shopping，「来这里买买买」一词讲透，动词形态比名词更有行动感，「品类 + .shopping」读起来就是一个购物频道的名字；注册局为 Identity Digital（原 Donuts），2016 年开放；价格是平价平续结构：注册约 $29/年（约 ¥210）、续费同价——无首年促销陷阱，多年持有成本可预期。.shop 赢在店铺门面——独立站、品牌官方商店、垂直品类电商用 name.shop，「品牌 + .shop」本身就是一句行动号召，全球注册量在电商后缀里最大、用户认知最成熟，好词库存也深；首年常有低价促销、续费明显更高——预算按续费价算才稳。判断标准：产品是「货架与购物车」——一家具体的店、把商品放上去卖 → .shop 的店铺语义最直白，认知成本最低；产品是「逛与选」——导购内容、比价平台、购物社区，卖的是发现与决策 → .shopping 的行为语义更准，平价平续也更适合长线内容站。两者常见组合打法：品牌店用 .shop 做门面，导购内容与大促专题站用 .shopping 分工。三点注意：一是 .shopping 拼写比 .shop 长四个字母，移动端输入成本略高，主体词尽量短；二是 .shop 首年与续费价差大，批量注册前按续费价算三年总成本；三是两者都强绑定电商语境，工具与内容以外的业务用它们会误导预期。命名上「品牌 + .shop」（acme.shop）与「品类 + .shopping」（outdoor.shopping）各是两边最点题的模式。",
+      pickA: ["导购与比价内容站", "综合电商与选品商城", "购物节与大促专题页", "社交电商与直播带货项目"],
+      pickB: ["独立站与 DTC 品牌商店", "线下店铺的线上入口", "垂直品类电商", "要用户认知最成熟的电商后缀"],
+    },
+    en: {
+      title: ".shopping vs .shop: The Browsing Experience or The Storefront",
+      metaDescription:
+        ".shopping names the act of buying — the verb suffix for guides and platforms with flat register-and-renew pricing; .shop names the store itself, the default storefront for DTC brands. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in e-commerce; the split is the lens: one says browsing, the other says the store. .shopping wins on the experience — marketplaces and curated stores, shopping-guide and price-comparison sites, shopping-festival landing pages, and social-commerce or livestream-selling projects on name.shopping say \"come buy here\" in one word; the verb form carries more action than the noun, and category + .shopping reads like the name of a shopping channel; the registry is Identity Digital (formerly Donuts), open since 2016; pricing is the flat shape at about $29/yr (≈¥210) to register and the same to renew — no promo trap, so multi-year costs stay predictable. .shop wins on the storefront — independent stores, official brand shops and category e-commerce on name.shop make brand + .shop a complete call to action, with the biggest global adoption and the most mature user recognition among commerce suffixes, plus deep word inventory; first years are often heavily discounted while renewals run notably higher — budget on the renewal. The test: the product is shelves and a cart — one concrete store selling goods → .shop's blunt store semantics cost the least recognition effort; the product is browsing and choosing — guide content, comparison platforms, shopping communities selling discovery → .shopping names the behavior sharper, and its flat pricing suits a long-lived content site. A common combo: the brand store fronts on .shop while guide content and festival microsites spread on .shopping. Three cautions: .shopping runs four letters longer, so keep the left half short for mobile typing; .shop's promo-to-renewal gap is wide, so price three years before bulk-registering; and both bind hard to commerce — anything else on them misleads expectations. Naming: brand + .shop (acme.shop) versus category + .shopping (outdoor.shopping) are each side's on-target patterns.",
+      pickA: ["Shopping-guide & price-comparison sites", "Marketplaces & curated stores", "Shopping-festival & promo microsites", "Social commerce & livestream selling"],
+      pickB: ["Independent & DTC brand stores", "Online doorways for physical shops", "Vertical category e-commerce", "Maximum-recognition commerce suffix"],
+    },
+  },
+  "graphics-vs-design": {
+    slug: "graphics-vs-design",
+    a: "graphics",
+    b: "design",
+    zh: {
+      title: ".graphics 和 .design 怎么选：做图的工种与设计的学科",
+      metaDescription: ".graphics 说「图形/平面这个具体工种」，素材站与视觉服务定位最准，注册续费同价；.design 说设计学科全域，设计师身份后缀的默认款。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在设计圈，分工在口径：一个报工种，一个报学科。.graphics 赢在具体——平面设计工作室与自由设计师作品集、图形素材与模板下载站、Logo/VI 设计服务、数据可视化与信息图项目用 name.graphics，「做图的」一词讲透，graphics 同时覆盖平面设计、图形素材与计算机图形学三层含义，「人名 + .graphics」读起来就是一家设计工作室的招牌；注册局为 Identity Digital（原 Donuts），2014 年开放；价格适中且平续：注册约 $21/年（约 ¥150）、续费同价——无首年促销陷阱，多年持有成本可预期。.design 赢在身份——设计师作品集、设计工作室、设计系统文档、设计资源站用 name.design，「名字 + .design」在简历、名片与邮件签名里的辨识度远超普通后缀，国外设计圈（尤其 UI/UX 与品牌设计）使用率高，不少知名团队的设计子站就在 .design 下；价格偏高（垂直后缀定价）但续费稳定，人名与风格词库存充足。判断标准：交付物是「图」——素材、模板、Logo、信息图，卖的是视觉输出 → .graphics 的工种语义最准，平续价也更省；身份是「设计师/设计团队」——作品集、工作室、设计系统 → .design 的学科口径更宽，圈内认同度也更高。两者常见组合打法：工作室主站用 .design 立身份，素材与模板下载站用 .graphics 分工。三点注意：一是 graphics 偏工种词，做品牌全案或产品设计 .design 语义更宽，扩业务不用改名；二是两者拼写都不短（8 与 6 个字母），主体词尽量短；三是 graphics 的复数 s 口播时容易漏，对外沟通提醒带上。命名上「人名/品牌 + .design」（jane.design）与「风格词 + .graphics」（retro.graphics）各是两边最点题的模式。",
+      pickA: ["图形素材与模板下载站", "Logo/VI 设计服务", "数据可视化与信息图项目", "以「图」为交付物的视觉服务"],
+      pickB: ["设计师作品集与个人品牌", "设计工作室官网", "设计系统与设计文档站", "产品公司的设计团队子站"],
+    },
+    en: {
+      title: ".graphics vs .design: The Visual Trade or The Whole Discipline",
+      metaDescription:
+        ".graphics names the specific trade of making visuals — asset sites and visual services with flat pricing; .design claims the whole discipline, the default identity suffix for designers. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in the design world; the split is scope: one names a trade, the other a discipline. .graphics wins on specificity — design studios and freelance portfolios, graphic-asset and template download sites, logo and brand-identity services, and data-visualization or infographic projects on name.graphics say \"we make the visuals\" in one word; graphics spans graphic design, visual assets and computer graphics all at once, and name + .graphics reads like the signboard of a design shop; the registry is Identity Digital (formerly Donuts), open since 2014; pricing is moderate and flat at about $21/yr (≈¥150) to register and the same to renew — no promo trap, predictable for years. .design wins on identity — designer portfolios, studios, design-system docs and resource sites on name.design carry recognition in resumes, business cards and email signatures that ordinary suffixes can't match; adoption runs high in the international design scene (especially UI/UX and brand design), with well-known teams hosting design subsites there; pricing sits higher (vertical-suffix tier) but renewals are stable, and name and style-word inventory is generous. The test: the deliverable is the visual — assets, templates, logos, infographics, selling output → .graphics names the trade sharpest and holds cheaper; the identity is the designer or team — portfolio, studio, design system → .design's discipline-wide scope and in-crowd credibility win. A common combo: the studio's main site stands on .design while the asset and template store runs on .graphics. Three cautions: graphics is a trade word, so full-service brand or product design reads wider on .design and survives expansion without renaming; both spellings run long (8 and 6 letters), so keep the left half short; and the plural s in graphics drops easily in speech — remind listeners it's there. Naming: name or brand + .design (jane.design) versus style word + .graphics (retro.graphics) are each side's on-target patterns.",
+      pickA: ["Graphic-asset & template download sites", "Logo & brand-identity services", "Data-visualization & infographic projects", "Visual services selling the output"],
+      pickB: ["Designer portfolios & personal brands", "Design studio main sites", "Design-system & documentation sites", "Product companies' design subsites"],
+    },
+  },
+  "glass-vs-art": {
+    slug: "glass-vs-art",
+    a: "glass",
+    b: "art",
+    zh: {
+      title: ".glass 和 .art 怎么选：材料的行业与创作的身份",
+      metaDescription: ".glass 把玻璃行业写进域名，工程公司与玻璃工艺工作室定位最准，注册续费同价；.art 是艺术圈的身份名片，艺术家与画廊的默认后缀。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个报行业，一个报身份，重叠区在玻璃艺术。.glass 赢在行业精准——门窗与幕墙玻璃工程公司、汽车玻璃安装与修复服务、玻璃工艺品与艺术工作室、眼镜与光学镜片品牌用 name.glass，「做玻璃的」一词讲透，glass 是材料词里少见的「行业 + 美感」双重气质，「城市 + .glass」读起来就是本地玻璃服务的电话本首选；注册局为 Identity Digital（原 Donuts），2014 年开放；价格中档且平续：注册约 $37/年（约 ¥270）、续费同价——无首年促销陷阱，多年持有成本可预期。.art 赢在身份名片——艺术家个人站与作品集、画廊与美术馆、艺术展览与博览会、设计与创意机构用 name.art，「名字 + .art」比 .com 更能说明「我是做艺术的」，注册局长期面向艺术社区运营，圈内认可度在垂直后缀里属于较高一档；注册与续费均约 $23/年，平进平出，人名、风格词、媒介词库存充足。判断标准：生意是「玻璃这个行业」——工程、安装、修复、光学，客户按行业找上门 → .glass 的行业语义最准，本地搜索直达；身份是「创作者/艺术机构」——作品集、画廊、展览，卖的是审美与身份 → .art 的名片效应更强，年费也更低。玻璃艺术家是重叠区：偏工艺销售与本地工作室用 .glass，偏艺术身份与展览用 .art，预算允许两个都注册分工。三点注意：一是 .glass 行业词切得极窄，业务多元后可能被后缀框住；二是 .art 语义垂直，非艺术类品牌不适合；三是两者年费差 $14/年，批量注册前算清三年总成本。命名上「城市 + .glass」（denver.glass）与「人名 + .art」（monet.art）各是两边最点题的模式。",
+      pickA: ["门窗与幕墙玻璃工程公司", "汽车玻璃安装与修复服务", "玻璃工艺品牌与本地工作室", "眼镜与光学镜片品牌"],
+      pickB: ["艺术家个人站与作品集", "画廊与美术馆官网", "艺术展览与博览会项目页", "设计与创意机构的身份主域名"],
+    },
+    en: {
+      title: ".glass vs .art: The Material Trade or The Creative Identity",
+      metaDescription:
+        ".glass writes the glass trade into the address — glazing companies and craft studios with flat pricing; .art is the art world's business card, the default for artists and galleries. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One names a trade, the other an identity; the overlap is glass art. .glass wins on trade precision — window and curtain-wall glazing companies, auto-glass installation and repair, glass-art and craft studios, and eyewear or optical-lens brands on name.glass say \"we work in glass\" in one word; glass is that rare material word carrying both trade credibility and aesthetic shine, and city + .glass reads like the first listing in the local directory; the registry is Identity Digital (formerly Donuts), open since 2014; pricing is mid-tier and flat at about $37/yr (≈¥270) to register and the same to renew — no promo trap, predictable for years. .art wins on the business card — artist portfolios, galleries and museums, exhibitions and fairs, and creative studios on name.art say \"I make art\" in a way .com never can; the registry has courted the art community for years, earning above-average credibility among vertical suffixes; register and renew both run about $23/yr, flat in and out, with generous inventory of artist names, style words and medium words. The test: the business is the glass trade — engineering, fitting, repair, optics, found by industry → .glass names the trade sharpest and catches local search; the identity is the creator or institution — portfolio, gallery, exhibition, selling taste and identity → .art's card effect is stronger and holds cheaper. Glass artists sit in the overlap: craft sales and local studios lean .glass, artistic identity and exhibitions lean .art — with budget, take both and split the roles. Three cautions: .glass cuts narrow, so a diversifying business may outgrow it; .art is vertical, so non-art brands don't fit; and the suffixes differ $14/yr, so price three years before bulk-registering. Naming: city + .glass (denver.glass) versus artist name + .art (monet.art) are each side's on-target patterns.",
+      pickA: ["Window & curtain-wall glazing companies", "Auto-glass installation & repair", "Glass-craft brands & local studios", "Eyewear & optical-lens brands"],
+      pickB: ["Artist portfolios & personal sites", "Gallery & museum sites", "Exhibition & art-fair project pages", "Creative studios' identity domains"],
+    },
+  },
+  "vision-vs-care": {
+    slug: "vision-vs-care",
+    a: "vision",
+    b: "care",
+    zh: {
+      title: ".vision 和 .care 怎么选：眼睛的专科与照护的温度",
+      metaDescription: ".vision 是「视力/愿景」双关后缀，视光机构与视觉 AI 团队定位最准，注册续费同价；.care 把「关怀」写进域名，照护与客户服务品牌的温度款。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在健康服务赛道，分工在口径：一个报专科，一个报温度。.vision 赢在双关精准——眼科诊所与视光中心、眼镜与隐形眼镜品牌取「视力」义，品牌战略咨询与计算机视觉团队取「愿景/视觉」义，name.vision 读起来既像专业机构又像使命宣言，是少数天然双关的后缀；注册局为 Identity Digital（原 Donuts），2014 年开放；价格适中且平续：注册约 $22/年（约 ¥160）、续费同价——无首年促销陷阱，多年持有成本可预期。.care 赢在温度直给——医疗健康服务、养老与居家护理、心理健康、母婴与宠物护理用 name.care，「我们在乎你」写进域名，国际大牌还把 brand.care 用作客服售后入口；同为 Identity Digital 运营，注册约 $12（约 ¥85）、续费约 $36/年（约 ¥256）——首年便宜续费中档，预算按续费价算。判断标准：业务钉死「眼睛与看见」——视光、眼镜、视觉 AI → .vision 的专科语义最准，域名本身就是定位；业务是持续性「照护/关怀」——养老、居家、心理、母婴，卖的是陪伴与服务 → .care 的温度无可替代，人群词组合（senior、home、baby 类）本身就是搜索品类词。眼科机构是重叠区：视光专科与眼镜品牌用 .vision 更锐，眼健康管理与术后照护服务用 .care 更暖。三点注意：一是 .vision 双关是双刃剑，视光诊所与 AI 团队同名撞车时品牌混淆，注册前搜同名；二是医疗类站点涉及执业资质与广告合规，资质信息必须清晰呈现；三是续费 .vision 反而更省（$22 vs $36/年），长持成本别按注册价判断。命名上「城市 + .vision」（austin.vision）与「人群/场景 + .care」（senior.care）各是两边最点题的模式。",
+      pickA: ["眼科诊所与视光中心", "眼镜与隐形眼镜品牌", "计算机视觉与 AI 视觉团队", "品牌战略与愿景宣言站"],
+      pickB: ["养老护理与居家照护", "心理健康与母婴护理", "宠物护理服务", "品牌客服与售后入口（brand.care）"],
+    },
+    en: {
+      title: ".vision vs .care: The Eye Specialty or The Caring Touch",
+      metaDescription:
+        ".vision plays eyesight and foresight at once — sharpest for optometry and vision-AI teams, with flat pricing; .care writes caring into the address for caregiving and support brands. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in health services; the split is register: one names a specialty, the other a warmth. .vision wins on the double meaning — eye clinics and optometry centers plus eyewear and contact-lens brands take the eyesight sense, while brand-strategy consultancies and computer-vision or AI teams take the foresight sense; name.vision reads as both a professional practice and a mission statement, one of the few suffixes with a built-in pun; the registry is Identity Digital (formerly Donuts), open since 2014; pricing is moderate and flat at about $22/yr (≈¥160) to register and the same to renew — no promo trap, predictable for years. .care wins on warmth delivered straight — healthcare services, senior and home care, mental health, and baby or pet care on name.care write \"we care about you\" into the address, and global brands run brand.care as the customer-support doorway; also Identity Digital, at about $12 to register (≈¥85) and $36/yr to renew (≈¥256) — a cheap year one with a mid renewal, so budget on the renewal. The test: the business is pinned to eyes and seeing — optometry, eyewear, vision AI → .vision names the specialty sharpest, the domain is the positioning; the business is ongoing caregiving — senior, home, mental, maternal care, selling companionship and service → .care's warmth is irreplaceable, and crowd words (senior, home, baby) are search categories in themselves. Eye clinics sit in the overlap: optometry specialists and eyewear brands cut sharper on .vision, while eye-health management and post-op care services read warmer on .care. Three cautions: .vision's pun cuts both ways — an optometrist and an AI team sharing a name invites confusion, so search first; medical sites carry licensing and advertising compliance, so credentials must be clearly shown; and .vision actually renews cheaper ($22 vs $36/yr), so judge holding costs by renewal, not the register price. Naming: city + .vision (austin.vision) versus crowd or scene + .care (senior.care) are each side's on-target patterns.",
+      pickA: ["Eye clinics & optometry centers", "Eyewear & contact-lens brands", "Computer-vision & AI-vision teams", "Brand-strategy & mission-statement sites"],
+      pickB: ["Senior & home-care services", "Mental-health & maternal care", "Pet-care services", "Brand customer-support doorways (brand.care)"],
+    },
+  },
+  "tires-vs-autos": {
+    slug: "tires-vs-autos",
+    a: "tires",
+    b: "autos",
+    zh: {
+      title: ".tires 和 .autos 怎么选：单一品类与汽车全域",
+      metaDescription: ".tires 把轮胎品类写进域名，本地轮胎店与轮胎电商定位最准，注册续费同价；.autos 说汽车生意全域，首年约 $2 的汽车垂类唯一平价款。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都挂在汽车生意的招牌上，分工在口径：一个钉死品类，一个覆盖全域。.tires 赢在品类精准——轮胎零售与批发商、轮胎安装与快修门店、轮胎品牌与经销网络、车队轮胎管理服务用 name.tires，「卖轮胎/换轮胎」一词讲透，轮胎是标准的高频刚需消费品，用户搜索意图明确（换胎、补胎、比价），「城市 + .tires」读起来就是本地轮胎店的搜索直达入口；注册局为 Identity Digital（原 Donuts），2015 年开放；价格偏高且平续：注册约 $69/年（约 ¥500）、续费同价——按品类词的获客价值衡量。.autos 赢在全域覆盖——二手车买卖与车行、汽车租赁与订阅服务、汽修保养与改装门店、汽车资讯与选车内容用 name.autos，dallas.autos 这样的名字自带本地车行联想；原为受限后缀，2022 年 XYZ 注册局接手后任何人可注册，首年约 $2（约 ¥11）、续费约 $13/年（约 ¥93）——汽车垂类里唯一便宜好持有的选择。判断标准：轮胎是核心业务——专营店、轮胎电商、经销网络 → .tires 的品类语义垂直到 SKU 级，域名就是搜索词，获客价值撑得起价位；生意是汽车行业的宽面——买卖、租赁、改装、资讯，轮胎只是其一 → .autos 的行业口径最稳，扩业务不用改名且持有成本只有 .tires 的零头。两者常见组合打法：连锁汽修用 .autos 做品牌主站，轮胎专线用「城市 + .tires」接本地搜索落地页。三点注意：一是续费差五倍以上（$69 vs $13/年），批量注册前先算三年总成本；二是 .autos 与天价单数 .auto 只差一个字母，对外沟通强调复数拼写；三是轮胎与汽修都是强本地生意，Google 商家资料与报价透明比域名更影响获客。命名上「城市 + .tires」（miami.tires）与「城市 + .autos」（dallas.autos）各是两边最点题的模式。",
+      pickA: ["轮胎零售与批发商", "轮胎安装与快修门店", "轮胎品牌与经销网络", "车队轮胎管理服务"],
+      pickB: ["二手车买卖与车行", "汽车租赁与订阅服务", "汽修保养与改装门店", "汽车资讯与选车内容"],
+    },
+    en: {
+      title: ".tires vs .autos: The Single Category or The Whole Trade",
+      metaDescription:
+        ".tires writes one high-intent category into the address — sharpest for local tire shops, with flat pricing; .autos names the whole car business at about $2 year one, the only cheap hold in the vertical. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both hang on the automotive signboard; the split is scope: one pins a category, the other covers the trade. .tires wins on category precision — tire retailers and wholesalers, fitting and quick-service shops, tire brands and dealer networks, and fleet tire management on name.tires say \"tires sold and fitted here\" in one word; tires are the classic high-frequency essential searched with clear intent (replace, patch, compare), so city + .tires reads like a direct lane from local search to the shop; the registry is Identity Digital (formerly Donuts), open since 2015; pricing is higher-tier and flat at about $69/yr (≈¥500) to register and the same to renew — weighed against the acquisition value of a category word. .autos wins on trade-wide coverage — used-car dealers, rental and subscription services, garages and tuning shops, and car-buying content on name.autos make dallas.autos read like the local dealership by itself; once a restricted suffix, it opened to everyone when XYZ Registry took over in 2022, at about $2 first year (≈¥11) and $13/yr to renew (≈¥93) — the only cheap, holdable choice in the automotive vertical. The test: tires are the core business — specialty shops, tire e-commerce, dealer networks → .tires goes vertical to the SKU level, the domain is the search term, and the acquisition value carries the price; the business spans the trade — sales, rentals, tuning, content, with tires just one line → .autos names the industry safest, survives expansion without renaming, and holds for a fraction of the cost. A common combo: the garage chain brands on .autos while city + .tires landing pages catch local tire searches. Three cautions: renewals differ more than fivefold ($69 vs $13/yr), so price three years before bulk-registering; .autos sits one letter from the four-figure singular .auto, so stress the plural spelling; and both are hard-local businesses — Google Business profiles and transparent pricing move customers more than the domain does. Naming: city + .tires (miami.tires) versus city + .autos (dallas.autos) are each side's on-target patterns.",
+      pickA: ["Tire retailers & wholesalers", "Tire-fitting & quick-service shops", "Tire brands & dealer networks", "Fleet tire-management services"],
+      pickB: ["Used-car dealers & lots", "Car rental & subscription services", "Garages & tuning shops", "Car-buying content & reviews"],
+    },
+  },
+  "surgery-vs-clinic": {
+    slug: "surgery-vs-clinic",
+    a: "surgery",
+    b: "clinic",
+    zh: {
+      title: ".surgery 和 .clinic 怎么选：手术的专科纵深与门诊的机构门面",
+      metaDescription: ".surgery 把外科专科写进域名，整形外科与日间手术中心定位最准，注册续费同价；.clinic 说「门诊机构」，各类诊所的通用门面。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在医疗机构赛道，分工在纵深：一个钉死外科，一个覆盖门诊。.surgery 赢在专科锐度——外科诊所与日间手术中心、整形与美容外科机构、口腔颌面与种植外科、兽医外科与专科转诊中心用 name.surgery，「做手术的」一词讲透；surgery 在英式英语里还兼指「诊所/诊室」，英联邦市场里 name.surgery 读起来就是诊所门牌；注册局为 Identity Digital（原 Donuts），2014 年开放；价格偏高且平续：注册约 $69/年（约 ¥500）、续费同价——与外科获客单价匹配。.clinic 赢在通用门面——口腔、眼科、皮肤、医美、理疗、心理咨询、宠物诊所，凡是「门诊制」的健康服务，name.clinic 读出来就是一家诊所，连锁门诊归拢多城市站点也顺；英语里 clinic 还有「诊断式服务」引申义，SEO clinic、resume clinic 式咨询生意用它自带专业感；注册约 $11（约 ¥78）、续费约 $52/年（约 ¥374）——首年便宜续费跳档，预算按续费价算。判断标准：业务核心是「手术」——整形外科、日间手术、种植外科，患者为术式而来 → .surgery 的专科纵深最准，spine.surgery 式的「术式 + 后缀」读起来就是专科中心；业务是「门诊看诊」——多科室、非手术为主、连锁扩张 → .clinic 的机构口径更宽，扩科室不用改名。两者常见组合打法：医疗集团主站用 .clinic 归拢全科室，外科中心用「术式 + .surgery」单独立站。三点注意：一是续费差 $17/年（$69 vs $52），成本不是主要因素，按业务纵深选；二是医疗广告各国监管严格，域名用语要与资质匹配，避免夸大暗示；三是 .surgery 语义很重，非手术类诊所挂名不符反伤信任，用 .clinic 更稳。命名上「术式 + .surgery」（spine.surgery）与「科室/品牌 + .clinic」（smile.clinic）各是两边最点题的模式。",
+      pickA: ["外科诊所与日间手术中心", "整形与美容外科机构", "口腔颌面与种植外科", "兽医外科与专科转诊中心"],
+      pickB: ["多科室门诊与连锁诊所", "医美、理疗与心理咨询机构", "宠物诊所", "「诊断式服务」类咨询生意"],
+    },
+    en: {
+      title: ".surgery vs .clinic: The Surgical Depth or The Outpatient Front",
+      metaDescription:
+        ".surgery writes the surgical specialty into the address — sharpest for plastic surgeons and day-surgery centers, with flat pricing; .clinic names the outpatient practice, the general front for every kind of clinic. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live on the medical signboard; the split is depth: one pins the operating room, the other covers the outpatient floor. .surgery wins on specialty edge — surgical clinics and day-surgery centers, plastic and cosmetic practices, oral-maxillofacial and implant surgery, and veterinary or referral centers on name.surgery say \"operations happen here\" in one word; in British English surgery also means the doctor's office itself, so in Commonwealth markets name.surgery reads like the brass plate on the door; the registry is Identity Digital (formerly Donuts), open since 2014; pricing is higher-tier and flat at about $69/yr (≈¥500) to register and the same to renew — in line with surgery's patient-acquisition value. .clinic wins on the general front — dental, eye, skin, aesthetics, physio, counselling and veterinary practices all read as a clinic on name.clinic, and chains gather multi-city sites under it neatly; English also lends clinic the \"diagnostic service\" sense, so SEO clinics and resume clinics borrow instant professionalism; about $11 to register (≈¥78) and $52/yr to renew (≈¥374) — cheap year one, jumping renewal, so budget on the renewal. The test: the core is the operation — plastic surgery, day surgery, implants, patients arriving for a procedure → .surgery names the depth sharpest, and procedure + suffix (spine.surgery) reads like a specialist center; the core is outpatient care — multi-department, non-surgical, chain expansion → .clinic's institutional scope is wider and survives new departments without renaming. A common combo: the medical group's main site gathers departments on .clinic while the surgical center stands alone on procedure + .surgery. Three cautions: renewals differ only $17/yr ($69 vs $52), so cost barely decides — choose by depth; medical advertising is tightly regulated everywhere, so the name must match the license and avoid overpromising; and .surgery carries weight — a non-surgical practice wearing it erodes trust, so sit safer on .clinic. Naming: procedure + .surgery (spine.surgery) versus department or brand + .clinic (smile.clinic) are each side's on-target patterns.",
+      pickA: ["Surgical clinics & day-surgery centers", "Plastic & cosmetic surgery practices", "Oral-maxillofacial & implant surgery", "Veterinary surgery & referral centers"],
+      pickB: ["Multi-department & chain clinics", "Aesthetics, physio & counselling practices", "Veterinary clinics", "\"Diagnostic service\" consulting plays"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

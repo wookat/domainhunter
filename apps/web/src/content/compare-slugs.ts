@@ -357,6 +357,12 @@ export const COMPARE_SLUGS = [
   "place-vs-space",
   "report-vs-news",
   "town-vs-city",
+  "shopping-vs-shop",
+  "graphics-vs-design",
+  "glass-vs-art",
+  "vision-vs-care",
+  "tires-vs-autos",
+  "surgery-vs-clinic",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
