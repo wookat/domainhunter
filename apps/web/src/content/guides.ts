@@ -16244,6 +16244,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  villarental: {
+    slug: "villarental",
+    keywords: ["别墅短租", "度假别墅", "民宿别墅", "villa rental", "vacation villa"],
+    tlds: [
+      { tld: "villas", zh: "后缀直接点明「别墅」，高端短租的品类身份一秒立住", en: "The suffix says villas outright — the premium-rental identity lands in a second" },
+      { tld: "rentals", zh: "「可租」写进后缀，搜短租的客人零解释成本", en: "Rentable is in the suffix — zero explanation for guests searching short stays" },
+      { tld: "com", zh: "高客单预订更依赖信任，.com 是付大额定金前的安心基线", en: "High-ticket bookings run on trust — .com is the comfort baseline before a big deposit" },
+    ],
+    zh: {
+      label: "民宿别墅短租",
+      title: "度假别墅与高端民宿短租怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "别墅短租与高端民宿命名指南：目的地意象、私享感等思路，Airbnb Luxe/onefinestay 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "度假别墅短租卖的不是床位，是「整栋私享的度假想象」。名字要先把客人带进画面：无边泳池、山海视野、管家备好的早餐——onefinestay（一次美好的停留）、Airbnb Luxe（奢华线）都在名字里预售体验。这个行业客单价高、决策周期长，客人会反复搜索核实房源与品牌，名字必须经得起「搜索—比价—付定金」的完整链路：太通用（XX度假村）搜不到你，太生僻拼不出来。中文语境里「墅、境、隐、宿」等字自带高端度假气质，英文则偏好 stay、villa、retreat 等场景词。名字还要为多房源扩张留空间——绑定单一地名的名字，开到第二个城市就尴尬了。",
+      namingIdeas: [
+        "私享与整栋感：one、private、独栋、包场——别墅短租与酒店的核心差异是「整栋只属于你」，名字先把排他感说出来",
+        "目的地意象词：山、海、云、谷——不绑定具体地名，用地貌意象保留扩张空间，客人却已经开始想象假期",
+        "停留与栖居词根：stay、nest、栖、宿——把「住」升格为「栖居体验」，onefinestay 的 stay 就是教科书",
+        "高端字根（中文向）：墅、境、隐、澜——单字自带价位暗示，配合朴素词根反而不俗气",
+        "多语言发音测试：别墅短租客源常跨国，名字让英语、中文客人都能读出并拼写，OTA 站内搜索才不漏客",
+      ],
+      cases: [
+        { name: "onefinestay", takeaway: "one + fine + stay 三个小词连写：把「一次美好的停留」直接做成品牌，读起来像一句承诺——体验预售式命名的范本" },
+        { name: "Airbnb Luxe", takeaway: "主品牌 + Luxe 后缀：借母品牌信任背书高端线，一个词完成价位区隔——平台品牌做奢华线的标准动作" },
+        { name: "Vrbo", takeaway: "Vacation Rentals by Owner 首字母缩写：从描述性全称进化成可读的四字母品牌，品类定义者的名字随行业一起长大" },
+        { name: "松赞", takeaway: "藏地文化词「松赞」：把目的地的精神气质做进名字，山居酒店与线路一体化——目的地深耕型品牌的中文样本" },
+      ],
+      pitfalls: [
+        "绑定单一地名：叫「莫干山某墅」开到大理就要改名，扩张计划先于名字确定",
+        "奢华词堆砌：luxury、royal、贵族连用显得用力过猛，高端感靠意象与留白而非形容词",
+        "与楼盘名撞车：「XX山庄、XX别院」是房地产高频名，搜索结果被楼盘淹没等于白做 SEO",
+        "忽略平台内搜索：客人常在 Airbnb/携程站内搜品牌核实，名字与房源标题不一致会直接丢单",
+      ],
+    },
+    en: {
+      label: "Villa rentals",
+      title: "How to Name a Villa Rental or Luxury Vacation Stay Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Villa rental and luxury stay naming guide: destination imagery, whole-home privacy cues, breakdowns of onefinestay/Airbnb Luxe/Vrbo, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A villa rental brand doesn't sell beds — it sells the fantasy of a whole home to yourselves: the infinity pool, the sea view, breakfast laid out by the housekeeper. The best names pre-sell that experience — onefinestay promises exactly one fine stay, and Airbnb Luxe stakes the tier in a single word. This is a high-ticket, long-consideration purchase: guests search, compare and re-verify before wiring a deposit, so the name must survive the full search-compare-book chain — too generic and you're unfindable, too obscure and unspellable. English favors scene words like stay, villa and retreat; the name should also leave room for a multi-property future — a name welded to one destination gets awkward the day you open in a second one.",
+      namingIdeas: [
+        "Whole-home privacy cues: one, private, estate — exclusivity is the core difference from hotels, so say \"it's all yours\" in the name",
+        "Destination imagery without place-lock: mountain, cove, cloud, vale — landform words start the vacation daydream while keeping expansion room",
+        "Stay-and-dwell roots: stay, nest, haven — elevate lodging into dwelling; the stay in onefinestay is the textbook move",
+        "Quiet luxury registers: understated roots beat luxury/royal stacking — premium feel comes from imagery and restraint, not adjectives",
+        "The cross-border pronunciation test: villa guests book across languages — if international guests can't say and spell it, in-app searches leak bookings",
+      ],
+      cases: [
+        { name: "onefinestay", takeaway: "one + fine + stay run together: the brand is literally a promise of one fine stay — the exemplar of experience-pre-selling names" },
+        { name: "Airbnb Luxe", takeaway: "Parent brand + Luxe: borrows the mothership's trust and marks the price tier in one word — the standard playbook for a platform's luxury line" },
+        { name: "Vrbo", takeaway: "Vacation Rentals by Owner, initialized: a descriptive mouthful matured into a four-letter pronounceable brand as the category grew — names can evolve with the industry" },
+        { name: "Belmond", takeaway: "bel (beautiful) + mond (world): pan-destination luxury travel under one coined euphonic word — how to sound premium without saying luxury" },
+      ],
+      pitfalls: [
+        "Welding the name to one destination: Tuscany-something works until you open in Provence — settle the expansion map before the name",
+        "Stacking luxury adjectives: luxury, royal and elite in one name read as trying too hard — restraint signals the higher price point",
+        "Colliding with real-estate developments: Villa/Manor names are developer favorites — if listings bury you in search results, the SEO is lost",
+        "Ignoring in-platform search: guests verify brands inside Airbnb and booking apps — a name that mismatches your listing titles drops bookings silently",
+      ],
+    },
+  },
+  cruise: {
+    slug: "cruise",
+    keywords: ["邮轮", "游轮", "邮轮旅行社", "cruise line", "cruise agency"],
+    tlds: [
+      { tld: "cruises", zh: "后缀就是品类本身，邮轮预订平台与包船社零解释成本", en: "The suffix is the category itself — zero explanation for cruise booking and charter brands" },
+      { tld: "travel", zh: "旅业专属后缀，邮轮+岸上行程的一站式旅行社气质", en: "The travel-industry TLD — fits agencies bundling cruises with shore excursions" },
+      { tld: "com", zh: "大额预付+提前数月预订，.com 的信任感直接影响成单", en: "Big prepayments booked months ahead — .com trust directly moves conversion" },
+    ],
+    zh: {
+      label: "邮轮旅行社",
+      title: "邮轮旅行社与邮轮预订平台怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "邮轮旅行社与预订平台命名指南：航海意象、目的地梦想等思路，Royal Caribbean/Carnival 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "邮轮的名字要装得下「海上宫殿」的想象：Royal Caribbean（皇家加勒比）用皇家+目的地把奢华与阳光一次说清，Carnival（嘉年华）直接把「船上就是节日」写进名字。邮轮旅行社与预订平台的命名逻辑略有不同——你不造船，你卖的是「选对那艘船」的专业与省心，名字要在航海浪漫与订购信任之间找平衡。这个行业客群偏年长、决策全家参与、动辄提前半年付定金，名字必须稳重可信，念给父母听不会起疑。航海词库是现成的宝藏：锚、帆、舷、航线、灯塔——但也因此拥挤，加一个目的地词或体验词才能跳出来。中文语境「邮轮」与「游轮」混用，SEO 上两个写法都要占住。",
+      namingIdeas: [
+        "航海意象词：锚、帆、灯塔、compass——行业词库自带浪漫，但需搭配差异化词根避免与同行撞车",
+        "皇家与节日两极：Royal 系走奢华稳重，Carnival 系走欢乐派对——先定品牌人设再选词根，两头都想要会两头不像",
+        "目的地梦想词：加勒比、地中海、极光——邮轮卖的是航线，名字里的目的地就是最直白的橱窗",
+        "省心专业感（代订社向）：管家、领航、优选——旅行社不拥有船，名字要说清「帮你选对船」的专业价值",
+        "家庭决策测试：邮轮常是三代同游，名字念给长辈听要显正规、念给孩子听要有期待感，两代都点头才算过",
+      ],
+      cases: [
+        { name: "Royal Caribbean 皇家加勒比", takeaway: "royal（皇家）+ Caribbean（加勒比）：奢华规格与阳光目的地一次说清，中文译名四字对仗朗朗上口——目的地+档次的黄金公式" },
+        { name: "Carnival 嘉年华", takeaway: "一个词把「船上就是节日」说透：欢乐派对的品牌人设从名字贯穿到甲板活动——体验定义型命名的教科书" },
+        { name: "Princess Cruises 公主邮轮", takeaway: "princess 的优雅人设+品类词 cruises：《爱之船》剧集加持下名字即浪漫代名词——影视联名放大品牌的经典案例" },
+        { name: "Viking 维京", takeaway: "北欧航海民族做名字：把「探索精神」注入河轮与远征航线，历史词根自带故事——文化借词命名的高分卷" },
+      ],
+      pitfalls: [
+        "泰坦尼克式联想：沉船、冰山等航海事故词根绝对避开，玩梗名字在这个行业等于自毁",
+        "锚、帆词根裸用：Anchor Travel 类名字全行业撞车，航海词必须加差异化搭配才记得住",
+        "只占「邮轮」丢「游轮」：中文两种写法搜索量都大，域名与 SEO 布局要双拼兼顾",
+        "花哨到不敢付款：邮轮定金动辄数万，名字轻浮会让年长客群在付款前一刻退缩",
+      ],
+    },
+    en: {
+      label: "Cruise agencies",
+      title: "How to Name a Cruise Agency or Cruise Booking Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Cruise agency and booking platform naming guide: nautical imagery, destination dreams, breakdowns of Royal Caribbean/Carnival/Viking, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A cruise name must hold the fantasy of a floating palace: Royal Caribbean fuses regal luxury with a sun-drenched destination, and Carnival writes \"the ship is the party\" straight into the brand. Agencies and booking platforms run a subtly different play — you don't own ships; you sell the expertise of choosing the right one, so the name balances nautical romance with booking-grade trust. The audience skews older, decides as a family, and pays deposits months in advance: the name must sound solid when read aloud to your parents. The nautical lexicon is a ready treasure chest — anchor, sail, beacon, compass — but crowded for the same reason; pair it with a destination or experience word to stand out.",
+      namingIdeas: [
+        "Nautical imagery: anchor, sail, beacon, compass — the industry lexicon is romantic by default, but needs a differentiating pairing to avoid the crowd",
+        "The royal-vs-carnival poles: Royal-style names sell stately luxury, Carnival-style names sell floating festivity — pick a persona first; chasing both lands on neither",
+        "Destination dream words: Caribbean, Mediterranean, fjords — cruises sell itineraries, and a destination in the name is the most literal shop window",
+        "Concierge expertise (for agencies): pilot, compass, curated — agencies don't own ships, so the name should promise \"we pick the right one for you\"",
+        "The three-generation test: cruises are multigenerational purchases — the name must sound legitimate to grandparents and exciting to kids in the same breath",
+      ],
+      cases: [
+        { name: "Royal Caribbean", takeaway: "royal + Caribbean: prestige tier and sunny destination declared in two words — the golden destination-plus-class formula of cruise naming" },
+        { name: "Carnival", takeaway: "One word making the ship itself the festival: the party persona runs from the name through every deck activity — the textbook experience-defining name" },
+        { name: "Princess Cruises", takeaway: "The princess persona plus the category word: The Love Boat made the name synonymous with romance at sea — the classic case of media amplifying a brand" },
+        { name: "Viking", takeaway: "A seafaring civilization as the brand: exploration spirit baked into river and expedition lines, with history supplying the story for free — cultural borrowing at its best" },
+      ],
+      pitfalls: [
+        "Shipwreck adjacency: iceberg, titanic and any disaster-tinged wordplay are radioactive here — maritime humor sinks bookings",
+        "Bare anchor-and-sail roots: Anchor Travel collides with half the industry — nautical words need a differentiating partner to be memorable",
+        "Sounding too playful to pay: cruise deposits run to thousands — a flippant name makes the older buyer hesitate at checkout",
+        "Ignoring itinerary breadth: a name welded to one sea (CaribbeanOnly-style) gets awkward when you add Alaska and the Rhine — check the route map first",
+      ],
+    },
+  },
+  customtour: {
+    slug: "customtour",
+    keywords: ["定制旅行", "定制游", "私人订制旅行", "custom travel", "bespoke travel"],
+    tlds: [
+      { tld: "voyage", zh: "法语「旅程」自带高级感，定制旅行的气质后缀", en: "French for journey with built-in polish — the tailor-made travel suffix" },
+      { tld: "travel", zh: "旅业实名后缀，定制社的专业身份一眼可辨", en: "The verified travel-industry TLD — instant professional identity for tour designers" },
+      { tld: "com", zh: "高客单私人服务先被搜索核实，.com 是尽调第一关", en: "High-ticket personal service gets vetted first — .com is due-diligence gate one" },
+    ],
+    zh: {
+      label: "定制旅行",
+      title: "定制旅行与私人订制游怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "定制旅行与私人订制游命名指南：旅程叙事、专属感等思路，Black Tomato/Abercrombie & Kent 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "定制旅行卖的是「只为你设计的旅程」，名字要先把「非标、专属、有品味」三件事说清。看看行业标杆：Black Tomato（黑番茄）用一个反常识意象宣告「我们不做寻常路线」，Abercrombie & Kent 用双姓氏传统营造老牌探险世家的信任感。定制游客单价高、重决策、靠口碑转介绍，名字会在饭桌上被反复转述——「我们这次是找 XX 定制的」，这句话说出口是否有面子，直接决定转介绍率。命名的核心张力在「个性」与「可信」之间：太像大众旅行社显不出定制价值，太先锋又让人担心履约能力。中文语境「行、途、旅、程」词根扎实，配一个态度词或意象词就能出彩。",
+      namingIdeas: [
+        "反常识意象：Black Tomato 式的陌生组合——宣告「我们不走寻常路」，一个奇特意象比十句「个性化」更有说服力",
+        "旅程叙事词：voyage、odyssey、远行、启程——把「行程单」升格为「人生旅程」，定制的溢价从词根开始",
+        "双姓氏与工作室感：A&K 式姓氏组合、「XX 行研所」——手作感与专业感并存，暗示每单都有主理人负责",
+        "专属与量体词：bespoke、tailor、私享、定制——服装定制的词库可整体平移，「量体裁衣」的联想现成可用",
+        "饭桌转述测试：客人向朋友介绍你时那句话顺不顺口、有没有面子，是定制游名字最真实的考场",
+      ],
+      cases: [
+        { name: "Black Tomato", takeaway: "黑色的番茄——现实中不存在的意象：一秒传达「我们专做稀有体验」，怪得有记忆点又不难拼写——反常识命名的天花板" },
+        { name: "Abercrombie & Kent", takeaway: "双姓氏 + &：老牌探险世家的口吻，55 年高端定制的信任感从名字的古典结构里长出来——姓氏传统在高客单行业的价值" },
+        { name: "Scott Dunn", takeaway: "创始人真名直接做品牌：私人订制卖的就是「有人为你负责」，人名即承诺——小而美定制社的低成本信任方案" },
+        { name: "无二之旅", takeaway: "「独一无二」拆出「无二」：中文定制游把核心卖点压缩成两个字，品类词「之旅」补全场景——中文定制命名的高分样本" },
+      ],
+      pitfalls: [
+        "「高端定制」直接入名：把卖点当名字毫无商标性，且与几百家同行同名——定制感要靠意象传达而非自我标榜",
+        "先锋到不敢下单：过于抽象艺术的名字让客人担心「是正经公司吗」，个性要以可信为底线",
+        "绑定单一目的地：叫「XX 日本行」就做不了欧洲线，定制社的名字要跟着客人的愿望清单走遍全球",
+        "忽略拼写与转述：口碑转介绍是定制游命脉，朋友听完拼不出名字搜不到你，转介绍就断在半路",
+      ],
+    },
+    en: {
+      label: "Bespoke travel",
+      title: "How to Name a Bespoke Travel or Custom Tour Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Bespoke and custom travel naming guide: journey narratives, exclusivity cues, breakdowns of Black Tomato/Abercrombie & Kent/Scott Dunn, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Bespoke travel sells a journey designed for one client, so the name must establish three things at once: non-standard, exclusive, and tasteful. The category leaders show the range — Black Tomato declares \"we don't do ordinary\" with one impossible image, while Abercrombie & Kent builds old-expedition-house trust from a double surname. Custom trips are high-ticket, heavily considered, and referral-driven: your name gets retold at dinner tables — \"we had it designed by X\" — and whether that sentence carries prestige decides your referral rate. The core tension is personality versus credibility: too mainstream and the bespoke premium evaporates; too avant-garde and clients doubt you can deliver. The journey lexicon — voyage, odyssey, expedition — supplies gravitas; pair it with an attitude word to stand apart.",
+      namingIdeas: [
+        "Impossible imagery: a Black-Tomato-style unfamiliar pairing — one strange image argues \"we don't do ordinary\" better than ten claims of personalization",
+        "Journey-narrative roots: voyage, odyssey, expedition — elevate the itinerary into a life journey; the bespoke premium starts at the word root",
+        "Double surnames and atelier framing: A&K-style pairings suggest a house with named principals — handcraft and accountability in the same breath",
+        "Tailoring vocabulary: bespoke, tailor, cut, made-to-measure — the Savile Row lexicon transfers wholesale, with the fitting metaphor pre-installed",
+        "The dinner-table retell test: how the client introduces you to friends is the name's true exam — if the sentence sounds prestigious and spells easily, referrals flow",
+      ],
+      cases: [
+        { name: "Black Tomato", takeaway: "A tomato that doesn't exist in nature: rare-experience positioning delivered in one weird, spellable image — the ceiling of counterintuitive naming" },
+        { name: "Abercrombie & Kent", takeaway: "Double surname with an ampersand: the diction of an old expedition house, with 55 years of luxury trust growing out of the classical structure itself" },
+        { name: "Scott Dunn", takeaway: "The founder's real name as the brand: bespoke service is a promise that a person is responsible — a name as a signature, the low-cost trust play for boutique firms" },
+        { name: "Journee", takeaway: "Journey respelled with a French flourish: one letter swap adds continental polish while keeping pronunciation — light-touch coinage for the taste-led buyer" },
+      ],
+      pitfalls: [
+        "Naming yourself Luxury Custom Travel: the selling point as the name has zero trademark power and a hundred namesakes — convey bespoke through imagery, not self-labels",
+        "Too avant-garde to book: overly abstract art-names make clients wonder if you're a real company — personality must sit on a floor of credibility",
+        "Destination lock-in: a Japan-only name forecloses the Europe line — bespoke names must travel wherever the client's wishlist goes",
+        "Ignoring the retell-and-spell chain: referrals are the lifeblood — if a friend can't spell what they heard, the recommendation dies mid-search",
+      ],
+    },
+  },
+  limoservice: {
+    slug: "limoservice",
+    keywords: ["豪车接送", "礼宾车", "专车服务", "机场接送", "limo", "chauffeur"],
+    tlds: [
+      { tld: "limo", zh: "后缀即品类，礼宾车队的身份在域名里一步到位", en: "The suffix is the category — a chauffeur fleet's identity lands in the domain itself" },
+      { tld: "com", zh: "企业差旅与婚礼大单看资质，.com 是商务信任的底色", en: "Corporate travel and wedding contracts check credentials — .com is the trust base coat" },
+      { tld: "taxi", zh: "出行属性直给，机场接送与城际专车场景现成", en: "Ride identity stated outright — ready-made for airport transfers and intercity runs" },
+    ],
+    zh: {
+      label: "豪车接送",
+      title: "豪车接送与礼宾专车服务怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "豪车接送与礼宾专车命名指南：尊贵准点、黑色套装等思路，Blacklane/Carey 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "豪车接送卖的是「体面 + 准点」的双重承诺：客人订的不只是一辆车，是商务会议前的从容、婚礼当天的排场、深夜航班落地时那块写着名字的接机牌。行业标杆的名字都在暗示这两件事——Blacklane（黑色车道）用黑色套装的意象说体面，Carey（凯瑞）用近百年姓氏传统说可靠。这个行业双客群并行：企业行政订差旅要的是发票抬头正规、履约稳定；个人客户订婚礼接送要的是排面与仪式感。名字要在「黑西装的克制」与「加长车的排场」之间选好站位。中文语境「礼宾、尊、爵、道」等词根自带尊贵感，英文则偏好 black、first、elite 等秩序词。切忌轻浮——没人把年会贵宾交给一个听起来像拼车软件的名字。",
+      namingIdeas: [
+        "黑色与套装意象：black、noir、黑金——礼宾行业的制服颜色就是品牌颜色，Blacklane 把它直接开上路",
+        "准点与秩序词：first、prime、准点、恒——商务客最怕误机，名字先把「可靠」两个字焊死",
+        "尊贵词根（中文向）：礼宾、爵、尊、御——单字定调服务规格，配「行、途、达」等出行词根落地",
+        "姓氏与年份传统：Carey 式姓氏、est. 年份——车队生意重资质与口碑，老牌感是最便宜的信任状",
+        "双客群朗读测试：名字出现在企业差旅系统里要正规，印在婚礼请柬上要体面——两个场景都过才算好名字",
+      ],
+      cases: [
+        { name: "Blacklane", takeaway: "black（黑色套装）+ lane（车道）：礼宾司机的制服颜色与专属通道感一词说清，两音节全球好读——意象命名在出行业的高分卷" },
+        { name: "Carey", takeaway: "创始人姓氏近百年沿用：机场接送做到全球连锁，姓氏即履约记录——重服务行业「人名做担保」的长期主义样本" },
+        { name: "Addison Lee", takeaway: "双人名组合：伦敦最大专车公司用「像律所一样的名字」做出行，商务气质压过出租车行业的市井感——命名气质决定客群档次" },
+        { name: "首汽约车", takeaway: "「首汽」国企背景 + 「约车」品类词：把六十年车队资质直接写进名字，信任感先于体验发生——资质型命名的中文标杆" },
+      ],
+      pitfalls: [
+        "轻浮到接不了商单：叫「飞毛腿接送」拿不下企业差旅协议，礼宾行业的名字先过正装场合这一关",
+        "luxury/VIP 裸用堆砌：尊贵感要靠意象与克制传达，直白自封「豪华」反而显得不豪华",
+        "与网约车平台混淆：名字太像打车 App 会拉低客单价预期，礼宾服务要在名字里与拼车划清界限",
+        "忽略机场场景拼写：接机牌、航站楼指引都要写名字，复杂拼写在国际客人面前每天出错",
+      ],
+    },
+    en: {
+      label: "Limo services",
+      title: "How to Name a Limo or Chauffeur Service: Strategies, Cases & Domains",
+      metaDescription:
+        "Limo and chauffeur service naming guide: black-suit polish, punctuality cues, breakdowns of Blacklane/Carey/Addison Lee, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A chauffeur brand sells a double promise: polish plus punctuality. The client isn't booking a car — they're booking composure before the board meeting, spectacle on the wedding day, and a name board waiting at arrivals after a midnight flight. The category's best names encode both: Blacklane drives the black-suit dress code onto the road, and Carey turns a near-century-old surname into a service record. Two audiences buy in parallel — corporate travel managers need invoice-grade legitimacy and flawless fulfillment; private clients booking wedding cars want ceremony and presence. Your name must pick its posture between black-suit restraint and stretch-limo spectacle. English leans on order words like black, first and elite; whatever you choose, never sound flippant — nobody hands their annual-gala VIPs to a name that sounds like a carpool app.",
+      namingIdeas: [
+        "Black and dress-code imagery: black, noir, tuxedo tones — the industry's uniform color is the brand color; Blacklane simply drove it onto the road",
+        "Punctuality and order words: first, prime, sharp, meridian — the business traveler's deepest fear is the missed flight; weld reliability into the name",
+        "Surname and est.-year tradition: Carey-style family names — fleet businesses run on credentials and word of mouth, and heritage is the cheapest trust certificate",
+        "Route and lane roots: lane, route, transfer — own the journey vocabulary rather than the car vocabulary, and the name scales from sedans to fleets",
+        "The two-audience read test: the name must look official inside a corporate travel system and elegant on a wedding invitation — pass both rooms or keep looking",
+      ],
+      cases: [
+        { name: "Blacklane", takeaway: "black (the suit) + lane (the road): dress-code polish and a private-lane feeling in one two-syllable word that reads globally — imagery naming at its best in mobility" },
+        { name: "Carey", takeaway: "A founder's surname carried for nearly a century: the name is the fulfillment record — the long-game proof that in service industries, a person's name is the guarantee" },
+        { name: "Addison Lee", takeaway: "A double personal name: London's biggest private-hire firm named like a law firm — business-grade diction lifting the brand above taxi-rank register" },
+        { name: "ExecuCar", takeaway: "executive + car compressed: the corporate use case fused with the vehicle in one word — descriptive blending for the airport-transfer buyer" },
+      ],
+      pitfalls: [
+        "Too playful for the contract: a Speedy-Rides-style name never wins the corporate travel RFP — chauffeur names must pass the black-tie test first",
+        "Bare luxury/VIP stacking: prestige is conveyed by imagery and restraint — self-declaring luxury reads as the opposite",
+        "Blurring into ride-hailing: sound like a carpool app and your price anchor drops to match — the name must separate chauffeur from taxi at first hearing",
+        "Ignoring the name-board scenario: your name gets handwritten on arrival boards daily — complex spellings fail in front of international clients every single flight",
+      ],
+    },
+  },
+  ticketing: {
+    slug: "ticketing",
+    keywords: ["票务", "演出票", "订票平台", "抢票", "ticketing", "box office"],
+    tlds: [
+      { tld: "tickets", zh: "后缀即商品本身，订票平台的品类身份零解释", en: "The suffix is the product itself — zero explanation for a ticketing brand" },
+      { tld: "events", zh: "从卖票延伸到做活动，主办方与场馆侧的自然后缀", en: "From selling tickets to running events — the natural suffix for organizer-side tools" },
+      { tld: "com", zh: "先付款后入场的生意，.com 的信任直接换成单量", en: "Pay first, enter later — .com trust converts directly into order volume" },
+    ],
+    zh: {
+      label: "票务平台",
+      title: "票务平台与演出订票网站怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "票务平台与演出订票命名指南：现场感、抢票效率等思路，Ticketmaster/StubHub/大麦 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "票务平台的名字要同时讨好两种情绪：抢票那一刻的「快与稳」，和开场前的「心跳与期待」。行业标杆各占一头——Ticketmaster（票务大师）用 master 承诺专业与库存权威，StubHub（票根中心）用票根意象唤起「看完演出留张纪念」的情感。票务是典型的双边平台：对观众，名字要让人放心付款（假票焦虑是行业原罪）；对主办方与场馆，名字要有系统感与出票能力。中文票务品牌偏爱直给：大麦、猫眼、票星球——好记、口语化、适合「在哪买的票？」一句话传播。命名要为品类扩张留空间：今天卖演唱会，明天可能是体育、展览、脱口秀，绑定单一品类的名字会限制盘子。",
+      namingIdeas: [
+        "票根与入场意象：stub、gate、检票口、票夹——实体票根的仪式感是这个行业独有的情感资产，数字化时代反而更珍贵",
+        "权威与库存感：master、hub、总代、直营——观众最怕买到假票，名字先回答「你是不是官方渠道」",
+        "现场心跳词：live、encore、开场、安可——把「演出前十分钟的兴奋」写进名字，情绪价值高于功能描述",
+        "口语传播测试：「在哪买的票？」的回答必须两秒说完——大麦、猫眼式的两字名在中文语境是最优解",
+        "品类留白：不绑定「演唱会/球赛」单一场景，用 ticket、live 等通用词根给体育、展览、话剧留扩张空间",
+      ],
+      cases: [
+        { name: "Ticketmaster", takeaway: "ticket + master：品类词加权威词，「票务这件事我们最专业」一词说清，五十年霸占行业心智——品类+权威的标准公式" },
+        { name: "StubHub", takeaway: "stub（票根）+ hub（集散地）：二手票交易用「票根」的纪念感消解倒票的灰色联想，命名完成行业洗白——意象改写行业形象的范本" },
+        { name: "大麦", takeaway: "两个字、口语化、无歧义：从「大麦网」到演出票务第一入口，名字短到成为「买票」的同义词——中文平台命名的极简样本" },
+        { name: "Eventbrite", takeaway: "event + brite（bright 变形）：活动+明亮的组合面向主办方侧，自助发布工具的轻快气质与 Ticketmaster 的重库存形成差异——双边平台命名分侧打法" },
+      ],
+      pitfalls: [
+        "「黄牛感」词根：秒杀、倒票、折扣票入名会触发假票焦虑，票务信任脆弱经不起暗示",
+        "绑定单一品类：叫「演唱会票仓」就丢了体育与展览盘子，品类词要选最大公约数",
+        "拼写复杂丢口碑单：抢票场景分秒必争，名字打错一个字母客人就进了别家",
+        "忽略主办方侧气质：平台名字太娱乐化，场馆与主办方谈系统对接时不被当正经服务商",
+      ],
+    },
+    en: {
+      label: "Ticketing platforms",
+      title: "How to Name a Ticketing Platform or Box-Office Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Ticketing platform naming guide: live-moment thrill, inventory authority, breakdowns of Ticketmaster/StubHub/Eventbrite, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A ticketing name must serve two emotions at once: the speed-and-certainty of the checkout sprint, and the heartbeat of the moments before doors open. The category leaders each own one pole — Ticketmaster promises inventory authority with a single word, while StubHub summons the sentimental keepsake of a torn ticket stub. Ticketing is a two-sided market: fans need to trust you with prepayment (fake-ticket anxiety is the industry's original sin), while organizers and venues need to hear system-grade competence. The name should also leave category room — concerts today, sports, exhibitions and comedy tomorrow; a name welded to one genre caps the business. Short, sayable names win here, because tickets spread through one sentence: \"where did you get yours?\"",
+      namingIdeas: [
+        "Stub and gate imagery: stub, gate, turnstile, encore — the ritual of the physical ticket is this industry's unique emotional asset, worth more in the digital era, not less",
+        "Authority and inventory cues: master, hub, official, prime — the fan's deepest fear is the fake ticket, so the name should answer \"are you the real channel\" first",
+        "Live-moment words: live, encore, showtime — bottle the ten minutes before curtain into the name; emotion outsells feature description",
+        "The one-sentence spread test: the answer to \"where did you buy them?\" must land in two seconds — short, unambiguous names compound word of mouth",
+        "Category headroom: choose the widest roots (ticket, live, seat) rather than concert-specific words, keeping sports, theater and exhibitions inside the fence",
+      ],
+      cases: [
+        { name: "Ticketmaster", takeaway: "ticket + master: category word plus authority word — \"we are the professionals of this\" in one name that has owned the industry mindshare for fifty years" },
+        { name: "StubHub", takeaway: "stub + hub: the keepsake warmth of a ticket stub launders the gray-market association of resale — the exemplar of imagery rewriting an industry's image" },
+        { name: "Eventbrite", takeaway: "event + brite: a bright, self-serve tone aimed at the organizer side, deliberately lighter than Ticketmaster's inventory heaviness — how two-sided platforms name by side" },
+        { name: "SeatGeek", takeaway: "seat + geek: data-nerd persona applied to seat-value scoring — a niche-pride name that turned price transparency into the brand itself" },
+      ],
+      pitfalls: [
+        "Scalper-adjacent roots: flash-deal and cheap-ticket words trigger fake-ticket anxiety — ticketing trust is too thin for bargain signaling",
+        "Genre lock-in: ConcertVault-style names forfeit sports and exhibitions — pick the greatest-common-denominator category word",
+        "Complex spellings in a race: ticket buying is a countdown scenario — one mistyped letter and the fan lands on a competitor",
+        "Sounding too playful for venues: organizers evaluating your system won't shortlist a name that reads like a fan meme page — keep one foot in enterprise diction",
+      ],
+    },
+  },
+  flowerdelivery: {
+    slug: "flowerdelivery",
+    keywords: ["鲜花电商", "鲜花订阅", "送花", "花束速递", "flower delivery"],
+    tlds: [
+      { tld: "flowers", zh: "后缀即品类，鲜花品牌的域名自带花香", en: "The suffix is the category — a flower brand's domain arrives pre-scented" },
+      { tld: "shop", zh: "线上花店直给业态，订花下单场景零歧义", en: "Online flower shop stated outright — zero ambiguity at checkout" },
+      { tld: "com", zh: "节日大促与企业订花看正规感，.com 稳住大单", en: "Holiday peaks and corporate orders check legitimacy — .com anchors the big tickets" },
+    ],
+    zh: {
+      label: "鲜花电商",
+      title: "鲜花电商与订花平台怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "鲜花电商与订阅订花命名指南：花期浪漫、准时送达等思路，花点时间/1-800-Flowers/Bloom & Wild 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "鲜花电商的名字要同时开两朵花：一朵开给收花人——浪漫、惊喜、被在乎的感觉；一朵开给下单人——准时、新鲜、不翻车。这个行业的情感浓度全零售最高（迟到一小时的生日花束等于事故），名字必须先浪漫后可靠、两者缺一不可。看行业样本：花点时间把「给生活一点仪式感」的订阅理念写进名字，Bloom & Wild（绽放与野趣）用两个意象词说清「新鲜直达的自然感」，1-800-Flowers 则把订购渠道本身做成名字。与线下花店（florist）不同，电商命名更要考虑「搜索与复购」：订阅制用户每周收花，名字会反复出现在快递盒与朋友圈晒图里，是免费的品牌广告位。",
+      namingIdeas: [
+        "花期与绽放词：bloom、开、绽、朵——「正在开放」的动态感比静态的 flower 更鲜活，Bloom & Wild 的 bloom 就是主角",
+        "仪式感与时间词：花点时间的「时间」、weekly、季——订阅制卖的是「定期的小确幸」，把频率与仪式写进名字",
+        "收花人视角：surprise、心意、For You——下单的人在买「对方拆开时的表情」，名字替他说出这份心意",
+        "新鲜与产地直达：farm、直采、晨摘——鲜花电商的信任核心是「不蔫」，供应链卖点可以直接开进名字",
+        "快递盒晒图测试：名字印在花盒上是否上镜、发朋友圈是否体面——鲜花电商的包装就是最大的广告位",
+      ],
+      cases: [
+        { name: "花点时间", takeaway: "「花点时间」一语双关：既是「花一点时间给生活」的倡议，又把品类词「花」藏在动词里——中文双关命名的教科书，订阅理念一词说清" },
+        { name: "Bloom & Wild", takeaway: "bloom（绽放）+ wild（野趣）：新鲜感与自然感两个意象并置，& 结构自带精品店气质——英文花电商命名的高分卷" },
+        { name: "1-800-Flowers", takeaway: "订购电话直接做品牌：把「随时能订到花」的渠道便利写成名字，电商时代之前的「域名思维」——渠道即品牌的历史样本" },
+        { name: "The Bouqs", takeaway: "bouquet 截短成 Bouqs：口语化缩写自带亲切感，配合火山农场直采的故事——品类词改造出独占性的轻巧打法" },
+      ],
+      pitfalls: [
+        "浪漫到看不出品类：名字全是诗意没有花，搜索「订花」时你不在结果里——意象要留一半给品类识别",
+        "绑定单一节日：叫「七夕花坊」就丢了全年 364 天的生意，节日是峰值不是名字",
+        "忽略递送承诺：鲜花是时效商品，名字轻飘会放大「会不会迟到蔫掉」的焦虑，浪漫要配可靠感",
+        "与本地花店同名：连锁花店与个体花坊重名率极高，商标与各平台账号先查再定名",
+      ],
+    },
+    en: {
+      label: "Flower delivery",
+      title: "How to Name a Flower Delivery or Bouquet Subscription Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Flower delivery and subscription naming guide: bloom romance, on-time trust, breakdowns of Bloom & Wild/1-800-Flowers/The Bouqs, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A flower delivery name must bloom twice: once for the recipient — romance, surprise, the feeling of being thought of — and once for the sender — on time, fresh, no disasters. No retail category carries higher emotional stakes (a birthday bouquet arriving an hour late is an incident, not a delay), so the name must be romantic first and reliable always. The benchmarks show the range: Bloom & Wild pairs two images to say \"fresh and natural, straight to your door\"; 1-800-Flowers made the ordering channel itself the brand; The Bouqs clipped bouquet into something you'd say to a friend. Unlike a local florist, an e-commerce flower brand lives on search and repeat orders — subscription customers see your name on the box every week, making the packaging your biggest free ad slot.",
+      namingIdeas: [
+        "Bloom and blossom roots: bloom, blossom, petal — the in-motion energy of flowering beats the static word flower; Bloom & Wild casts bloom as the lead",
+        "Ritual and cadence words: weekly, Sunday, season — subscriptions sell recurring small joys, so write the rhythm into the name",
+        "The recipient's-eye view: surprise, for-you, note — the sender is buying the recipient's face at unboxing; let the name speak that sentiment for them",
+        "Farm-fresh supply cues: farm, field, dawn-cut — freshness is the category's trust core, and the supply chain can walk straight into the name",
+        "The unboxing-photo test: your name on the flower box appears in every social share — if it photographs beautifully, every delivery is an ad",
+      ],
+      cases: [
+        { name: "Bloom & Wild", takeaway: "bloom + wild: freshness and untamed nature juxtaposed, with the ampersand adding boutique polish — the high-scoring template for flower e-commerce naming" },
+        { name: "1-800-Flowers", takeaway: "The ordering phone number as the brand: channel convenience made into identity — domain-thinking before domains existed, a history lesson in channel-as-brand" },
+        { name: "The Bouqs", takeaway: "bouquet clipped to Bouqs: a colloquial shortening that sounds like a friend talking, backed by volcano-farm sourcing stories — light-touch ownership of a category word" },
+        { name: "UrbanStems", takeaway: "urban + stems: city delivery scenario plus the botanical part that matters — a name that locates the audience and the product in two words" },
+      ],
+      pitfalls: [
+        "So poetic the category disappears: all imagery and no flower means you're absent from \"order flowers\" searches — leave half the name for category recognition",
+        "Welding to one holiday: a Valentine-only name forfeits the other 364 days — holidays are peaks, not names",
+        "Ignoring the delivery promise: flowers are perishable and deadline-bound — a flimsy name amplifies \"will it wilt\" anxiety; romance needs a reliability floor",
+        "Colliding with local florists: flower shop names repeat endlessly — clear trademarks and platform handles before falling in love",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

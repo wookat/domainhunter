@@ -1893,6 +1893,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个连锁加盟品牌，寓意「生意可复制、招牌全国通」；气质要大气正规、县城与一线都成立、能长出 IP 形象；场景是加盟商尽调、门店招牌和招商说明会里都让人觉得总部有实力。",
     en: "A franchise chain brand. The name should promise a replicable business and a sign that travels; the vibe is credible and big-league, working equally in metro flagships and county towns, with room for a mascot; it must impress in franchisee due diligence, on storefront signage, and at the recruitment pitch.",
   },
+  {
+    slug: "villarental",
+    labelZh: "民宿别墅短租",
+    labelEn: "Villa rental",
+    zh: "一个度假别墅与高端民宿短租品牌，寓意「整栋私享、假期从名字开始」；气质要高级克制、有山海度假的画面感、经得起大额定金前的反复搜索；场景是房源列表、管家欢迎卡和「我们订了 XX 的别墅」的转述里都体面动人。",
+    en: "A villa rental and luxury vacation stay brand. The name should promise a whole home to yourselves with the holiday starting at the name; the vibe is quietly premium with sea-and-mountain imagery, solid enough to survive pre-deposit searches; it must feel gracious on listing pages, the butler's welcome card, and in \"we booked a villa with X\" retellings.",
+  },
+  {
+    slug: "cruise",
+    labelZh: "邮轮旅行社",
+    labelEn: "Cruise agency",
+    zh: "一家邮轮旅行社或订票平台，寓意「海上宫殿、启航即度假」；气质要稳重可信又有航海浪漫、念给长辈听不起疑；场景是航线手册、提前半年的定金合同和全家出游的商量饭桌上都稳稳立住。",
+    en: "A cruise agency or booking platform. The name should carry floating-palace grandeur where the vacation starts at boarding; the vibe is trustworthy and steady with nautical romance, safe when read aloud to grandparents; it must hold steady in itinerary brochures, six-months-ahead deposit contracts, and the family dinner-table debate.",
+  },
+  {
+    slug: "customtour",
+    labelZh: "定制旅行",
+    labelEn: "Bespoke travel",
+    zh: "一家定制旅行工作室，寓意「只为你设计的旅程」；气质要有品味有态度、个性但可信、说出口有面子；场景是熟人转介绍、行程设计书封面和「我们这次找 XX 定制的」的饭桌炫耀里都恰到好处。",
+    en: "A bespoke travel design studio. The name should promise a journey designed for one client only; the vibe is tasteful and opinionated, distinctive yet credible, prestigious to say aloud; it must land perfectly in word-of-mouth referrals, on the itinerary book cover, and in the dinner-table brag \"we had it designed by X\".",
+  },
+  {
+    slug: "limoservice",
+    labelZh: "豪车接送",
+    labelEn: "Limo service",
+    zh: "一家豪车接送与礼宾专车公司，寓意「体面准点、贵宾专属」；气质要黑西装般克制尊贵、正规到能进企业差旅系统；场景是机场接机牌、婚礼头车和年会贵宾调度单里都拿得出手。",
+    en: "A limo and chauffeur service. The name should promise polish, punctuality and VIP exclusivity; the vibe is black-suit restraint and prestige, official enough for a corporate travel system; it must look right on an airport name board, the wedding lead car, and the gala VIP dispatch sheet.",
+  },
+  {
+    slug: "ticketing",
+    labelZh: "票务平台",
+    labelEn: "Ticketing platform",
+    zh: "一个演出票务与订票平台，寓意「官方靠谱、开票必达」；气质要快而稳、有开场前的心跳感、两秒说得清；场景是抢票倒计时、入场二维码和「在哪买的票」的一句话口碑里都即刻反应。",
+    en: "A live-event ticketing platform. The name should promise official reliability where every on-sale delivers; the vibe is fast and steady with pre-showtime heartbeat, sayable in two seconds; it must fire instantly in on-sale countdowns, on entry QR codes, and in the one-line \"where did you get tickets\" word of mouth.",
+  },
+  {
+    slug: "flowerdelivery",
+    labelZh: "鲜花电商",
+    labelEn: "Flower delivery",
+    zh: "一个鲜花电商与订阅订花品牌，寓意「新鲜绽放、准时的心意」；气质要浪漫又可靠、上镜适合晒图、说出口带花香；场景是快递花盒、贺卡署名和每周收花的朋友圈晒图里都体面动人。",
+    en: "A flower delivery and bouquet subscription brand. The name should promise fresh blooms and sentiment arriving on time; the vibe is romantic yet dependable, photogenic and fragrant when spoken; it must charm on the delivery box, the gift-card signature, and the weekly unboxing photos shared online.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
