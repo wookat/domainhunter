@@ -492,7 +492,7 @@
     ]
   },
   "vs": {
-    "count": 270,
+    "count": 276,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -763,7 +763,13 @@
       "makeup-vs-boutique",
       "homes-vs-house",
       "boats-vs-travel",
-      "autos-vs-repair"
+      "autos-vs-repair",
+      "careers-vs-work",
+      "management-vs-consulting",
+      "contractors-vs-construction",
+      "equipment-vs-rentals",
+      "supply-vs-express",
+      "parts-vs-repair"
     ]
   }
 }

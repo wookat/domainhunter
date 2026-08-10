@@ -273,6 +273,12 @@ export const COMPARE_SLUGS = [
   "homes-vs-house",
   "boats-vs-travel",
   "autos-vs-repair",
+  "careers-vs-work",
+  "management-vs-consulting",
+  "contractors-vs-construction",
+  "equipment-vs-rentals",
+  "supply-vs-express",
+  "parts-vs-repair",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

@@ -280,4 +280,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "homes-vs-house", a: "homes", b: "house", title: { zh: ".homes 和 .house 怎么选：房源清单与单栋场景的分工", en: ".homes vs .house: The Listing Pile or The Single Address" } },
   { slug: "boats-vs-travel", a: "boats", b: "travel", title: { zh: ".boats 和 .travel 怎么选：船艇垂类与旅游行业的分工", en: ".boats vs .travel: The Vessel Vertical or The Industry Badge" } },
   { slug: "autos-vs-repair", a: "autos", b: "repair", title: { zh: ".autos 和 .repair 怎么选：汽车行业与维修服务的分工", en: ".autos vs .repair: The Industry Nameplate or The Action Word" } },
+  { slug: "careers-vs-work", a: "careers", b: "work", title: { zh: ".careers 和 .work 怎么选：招聘门户与泛工作场景的分工", en: ".careers vs .work: The Hiring Portal or The Broad Work Scene" } },
+  { slug: "management-vs-consulting", a: "management", b: "consulting", title: { zh: ".management 和 .consulting 怎么选：管理服务与咨询行业的分工", en: ".management vs .consulting: Running It For You or Advising You" } },
+  { slug: "contractors-vs-construction", a: "contractors", b: "construction", title: { zh: ".contractors 和 .construction 怎么选：承包商身份与建筑行业的分工", en: ".contractors vs .construction: The Crew Identity or The Industry Name" } },
+  { slug: "equipment-vs-rentals", a: "equipment", b: "rentals", title: { zh: ".equipment 和 .rentals 怎么选：卖设备与租设备的分工", en: ".equipment vs .rentals: Selling The Gear or Renting It Out" } },
+  { slug: "supply-vs-express", a: "supply", b: "express", title: { zh: ".supply 和 .express 怎么选：供货口径与快送口径的分工", en: ".supply vs .express: The Source of Goods or The Speed Promise" } },
+  { slug: "parts-vs-repair", a: "parts", b: "repair", title: { zh: ".parts 和 .repair 怎么选：卖配件与修东西的分工", en: ".parts vs .repair: Selling The Piece or Fixing The Thing" } },
 ];

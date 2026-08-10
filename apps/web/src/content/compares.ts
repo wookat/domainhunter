@@ -5965,6 +5965,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Auto & specialist repair shops", "Phone, appliance & home repair trades", "Quick-fix chain landing pages", "Category + repair local search phrase"],
     },
   },
+  "careers-vs-work": {
+    slug: "careers-vs-work",
+    a: "careers",
+    b: "work",
+    zh: {
+      title: ".careers 和 .work 怎么选：招聘门户与泛工作场景的分工",
+      metaDescription: ".careers 把「招聘」写进域名，适合企业招聘站与垂直人才平台；.work 便宜且口径宽，适合工作工具与灵活用工平台。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都围着「工作」转，一个说的是职业招聘，一个说的是工作本身。.careers 把「招聘」直接写进域名——企业招聘官网、猎头与人力资源机构、垂直行业招聘平台、职业规划内容用 name.careers，求职者搜「公司/行业 + careers」时域名与搜索意图严丝合缝，大公司招聘页本来就叫 careers，brand.careers 是最干净的独立招聘门户；Identity Digital 运营，首年约 $16（约 ¥115）、续费约 $57/年（约 ¥412），续费在行业后缀里偏贵，适合把招聘当长期品牌资产的雇主。.work 说的是「工作」这个更宽的词——远程办公与协作工具、灵活用工与零工平台、职场内容社区、任何「动词 + work」的行动号召式命名用 name.work 都顺；注册约 $2（约 ¥15）、续费约 $11/年（约 ¥78），是全站最便宜好持有的档位之一，动词与职业词库存极好。判断标准：站点核心是「招人」——企业招聘页、猎头机构、垂直招聘平台 → .careers 的招聘语义最准，SEO 上正面接住 careers 搜索词，贵一点换来门户级的正式感；站点是工作工具、灵活用工或职场内容，招聘只是其一 → .work 的宽口径加白菜续费更划算，扩业务不用改名。三点注意：一是受限的 .jobs 需雇主验证且认知度一般，.careers 开放注册摩擦更小；二是超便宜后缀历史上易招垃圾站，.work 新站要靠真实内容与 HTTPS 快速建立信任；三是短期招聘活动用主站子页面更省，.careers 的续费价适合长期持有。命名上「品牌/行业 + .careers」接招聘门户，「动词 + .work」接工具与平台的行动号召。",
+      pickA: ["企业招聘官网与雇主品牌", "猎头与人力资源机构", "垂直行业招聘平台", "「行业 + careers」求职搜索词"],
+      pickB: ["远程办公与协作工具", "灵活用工与零工平台", "职场内容与社区", "续费约 ¥78/年 的轻成本持有"],
+    },
+    en: {
+      title: ".careers vs .work: The Hiring Portal or The Broad Work Scene",
+      metaDescription:
+        ".careers writes hiring into the domain — for company hiring sites and talent platforms; .work is cheap and broad — for work tools and gig platforms. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both orbit work; one names hiring, the other names the act itself. .careers writes hiring into the domain — company hiring sites, recruiters and HR agencies, vertical job boards, and career-coaching content on name.careers match exactly what candidates search: company or industry + careers; big companies already call their hiring page \"careers\", so brand.careers is the cleanest standalone hiring front door. Operated by Identity Digital, about $16 for the first year and $57/yr to renew — a pricier renewal among industry suffixes, suited to employers treating hiring as a long-term brand asset. .work names the broader word — remote-work and collaboration tools, gig and flexible-staffing platforms, workplace content communities, and any verb + work call-to-action naming reads naturally on name.work. About $2 to register and $11/yr to renew — one of the cheapest holds on this site, with excellent inventory of verbs and occupation words. The test: if the site's core is hiring people — company hiring pages, recruiting agencies, vertical job boards → .careers' hiring semantics are truest and meet careers searches head-on, and the premium buys portal-grade formality; if the site is a work tool, gig platform or workplace content with hiring as just one line → .work's broad scope plus bargain renewal wins, and survives expansion without a rename. Three cautions: the restricted .jobs requires employer verification with mediocre recognition — .careers registers openly with less friction; ultra-cheap suffixes historically attract spam, so a new .work site must earn trust fast with real content and HTTPS; and short hiring campaigns may fit a subpage of the main site better — .careers' renewal suits long-term holds. Naming: brand or industry + .careers fits hiring portals; verb + .work fits tools and platforms as a call to action.",
+      pickA: ["Company hiring sites & employer brands", "Recruiters & HR agencies", "Vertical job boards", "Industry + careers candidate search phrase"],
+      pickB: ["Remote-work & collaboration tools", "Gig & flexible-staffing platforms", "Workplace content & communities", "About $11/yr featherweight holding cost"],
+    },
+  },
+  "management-vs-consulting": {
+    slug: "management-vs-consulting",
+    a: "management",
+    b: "consulting",
+    zh: {
+      title: ".management 和 .consulting 怎么选：管理服务与咨询行业的分工",
+      metaDescription: ".management 把「管理」写进域名，适合物业、资产与项目管理服务；.consulting 报的是咨询行业身份，适合咨询公司与独立顾问。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是商务服务系后缀，一个报「替你管」的服务，一个报「给你建议」的行业。.management 把「管理」直接写进域名——物业与资产管理公司、项目管理服务、财富管理机构、管理顾问用 name.management，客户搜「品类 + management」时域名就是搜索词，property.management 或 wealth.management 不用解释就知道做什么；Identity Digital 运营，首年约 $8（约 ¥59）、续费约 $21/年（约 ¥152），行业后缀里中档好持有，品类词与城市词库存极好。.consulting 报的是咨询行业身份——战略与管理咨询公司、独立顾问个人品牌、IT 与营销等垂直咨询用 name.consulting，一眼即懂的行业名片；注册约 $21（约 ¥152）、续费约 $44/年（约 ¥315），续费约为 .management 的两倍，预算按续费价算。判断标准：业务是「持续代管」——物业、资产、项目、财富的日常运营管理 → .management 的服务语义最准，「品类 + .management」正面接住管理服务搜索且持有更便宜；业务是「按项目给建议」——战略咨询、专项顾问、专家个人品牌 → .consulting 的行业身份更稳，客户对 consulting 一词的行业认知也更成熟。三点注意：一是 management 有 10 个字母，口头传播务必确认拼写落地；二是财富与资产管理涉金融资质，域名之外把牌照与合规信息展示清楚；三是两词业务常有重叠——管理咨询公司两头都顺，可以 .consulting 做品牌主站、「品类 + .management」接垂直服务落地页。命名上「品类 + .management」接垂直管理服务，「品牌/姓氏 + .consulting」接咨询公司与个人顾问。",
+      pickA: ["物业与资产管理公司", "项目管理与代运营服务", "财富管理机构", "「品类 + management」服务搜索词"],
+      pickB: ["战略与管理咨询公司", "独立顾问个人品牌", "IT/营销等垂直咨询", "成熟的咨询行业身份认知"],
+    },
+    en: {
+      title: ".management vs .consulting: Running It For You or Advising You",
+      metaDescription:
+        ".management writes the service into the domain — for property, asset and project managers; .consulting names the industry — for consulting firms and independent advisors. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are business-services suffixes; one names running things for clients, the other names advising them. .management writes the service into the domain — property and asset managers, project management services, wealth management firms, and management consultants on name.management match exactly what clients search: category + management; property.management or wealth.management needs no explanation. Operated by Identity Digital, about $8 for the first year and $21/yr to renew — mid-priced and easy to hold among industry suffixes, with excellent inventory of category and city words. .consulting names the industry badge — strategy and management consultancies, independent advisors' personal brands, and IT or marketing consulting verticals on name.consulting read as an instantly-understood business card. About $21 to register and $44/yr to renew — roughly twice .management's renewal, so budget at renewal rates. The test: if the business is ongoing stewardship — day-to-day operation of properties, assets, projects or wealth → .management's service semantics are truest, category + .management meets management-service searches head-on, and it holds cheaper; if the business is project-based advice — strategy engagements, specialist advisory, expert personal brands → .consulting's industry identity reads steadier, and client recognition of the word consulting is more mature. Three cautions: management runs ten letters, so confirm the spelling lands when said aloud; wealth and asset management touch financial licensing — display credentials and compliance beyond the domain; and the two trades overlap — a management consultancy wears either, so consider .consulting for the brand flagship and category + .management for vertical service landing pages. Naming: category + .management fits vertical managers; brand or surname + .consulting fits firms and independent advisors.",
+      pickA: ["Property & asset management firms", "Project management & managed services", "Wealth management practices", "Category + management service search phrase"],
+      pickB: ["Strategy & management consultancies", "Independent advisors' personal brands", "IT & marketing consulting verticals", "Mature industry recognition of consulting"],
+    },
+  },
+  "contractors-vs-construction": {
+    slug: "contractors-vs-construction",
+    a: "contractors",
+    b: "construction",
+    zh: {
+      title: ".contractors 和 .construction 怎么选：承包商身份与建筑行业的分工",
+      metaDescription: ".contractors 报的是「承包商」这个人，适合总包团队与各工种分包；.construction 报的是「建筑」这个行业，适合建筑公司与工程项目。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在工地上，一个报「谁来干」，一个报「干的是什么行业」。.contractors 把承包商身份写进域名——总包与装修改造团队、水电与屋顶等专业分包、承包商名录平台用 name.contractors，业主搜「城市/工种 + contractors」时域名就是搜索词，dallas.contractors 或 roofing.contractors 自带本地施工队联想；Identity Digital 运营，首年约 $6（约 ¥41）、续费约 $28/年（约 ¥204），便宜起步、中档持有，工种词与城市词库存极好。.construction 报的是建筑行业——建筑公司与工程总承包、商业与基建项目、建筑资讯内容用 name.construction，行业身份一眼即懂，公司抬头里本来就常带 construction 一词；注册约 $9（约 ¥63）、续费约 $31/年（约 ¥226），与 .contractors 同档好持有。判断标准：生意以「接活的人/团队」为单位——面向业主的本地总包、各工种分包、接单名录 → .contractors 的身份语义最准，「城市/工种 + .contractors」正面接住本地找承包商的搜索；生意以「公司与项目」为单位——建筑企业官网、商业工程、地产配套施工 → .construction 的行业口径更正式，B 端客户与投标场景更认这个词。三点注意：一是两词都长（contractors 11 个字母、construction 12 个字母），车贴与广告把完整域名印清楚；二是建筑行业强资质属性，执照编号与保险信息要在站内展示；三是与已收录的 .builders / .repair / .plumbing 分工——住宅建造用 .builders，单工种维修用 .repair，多工种总包与名录在 .contractors，公司级行业站在 .construction。命名上「城市/工种 + .contractors」接本地接活搜索，「品牌 + .construction」接建筑公司官网。",
+      pickA: ["面向业主的本地总包团队", "水电屋顶等专业分包", "承包商名录与接单平台", "「城市/工种 + contractors」本地搜索词"],
+      pickB: ["建筑公司与工程总承包官网", "商业与基建项目站", "建筑行业资讯内容", "B 端投标场景的行业正式感"],
+    },
+    en: {
+      title: ".contractors vs .construction: The Crew Identity or The Industry Name",
+      metaDescription:
+        ".contractors names the people doing the work — for GCs and trade subs; .construction names the industry — for construction firms and projects. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live on the job site; one names who does the work, the other names the industry it belongs to. .contractors writes the crew identity into the domain — general contractors and remodelers, electrical, plumbing and roofing subs, and contractor directories on name.contractors match exactly what homeowners search: city or trade + contractors; dallas.contractors or roofing.contractors carries instant local-crew recall. Operated by Identity Digital, about $6 for the first year and $28/yr to renew — cheap to start, mid-priced to hold, with excellent inventory of trade and city words. .construction names the industry — construction firms and EPC contractors, commercial and infrastructure projects, and industry news content on name.construction read as instant industry identity; company letterheads carry the word construction already. About $9 to register and $31/yr to renew — the same easy-to-hold tier as .contractors. The test: if the business is organized around the people who take the job — homeowner-facing local GCs, trade subs, lead directories → .contractors' identity semantics are truest, and city or trade + .contractors meets find-a-contractor searches head-on; if the business is organized around the company and its projects — construction firm sites, commercial builds, development work → .construction's industry register reads more formal, and B2B clients and bid processes recognize the word. Three cautions: both words run long (11 and 12 letters) — print the full domain clearly on trucks and ads; the trades run on licensing and insurance, so display license numbers and coverage on the site; and split the work with the already-listed .builders, .repair and .plumbing — home building fits .builders, single-trade fixes .repair, multi-trade GCs and directories .contractors, company-level industry sites .construction. Naming: city or trade + .contractors catches local job searches; brand + .construction fits construction company flagships.",
+      pickA: ["Homeowner-facing local GCs", "Electrical, plumbing & roofing subs", "Contractor directories & lead platforms", "City/trade + contractors local search phrase"],
+      pickB: ["Construction firm & EPC flagships", "Commercial & infrastructure project sites", "Industry news & content", "Formal register for B2B bids"],
+    },
+  },
+  "equipment-vs-rentals": {
+    slug: "equipment-vs-rentals",
+    a: "equipment",
+    b: "rentals",
+    zh: {
+      title: ".equipment 和 .rentals 怎么选：卖设备与租设备的分工",
+      metaDescription: ".equipment 把「设备」写进域名，适合设备经销与器材电商；.rentals 报的是「出租」这个模式，适合设备租赁与各类租赁平台。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都能做设备生意，一个报「卖的是什么」，一个报「怎么个给法」。.equipment 把「设备」直接写进域名——重型与农用设备经销商、健身与运动器材电商、餐厨与商用设备供应商、二手设备交易平台用 name.equipment，买家搜「品类 + equipment」时域名就是搜索词，gym.equipment 或 farm.equipment 不用解释就知道做什么；Identity Digital 运营，首年约 $11（约 ¥78）、续费约 $23/年（约 ¥167），行业后缀里中档好持有，品类词库存极好。.rentals 报的是「出租」这个商业模式——设备与工具租赁、度假屋与场地租赁、婚庆与活动器材出租用 name.rentals，复数形态自带「清单可选」的平台感；注册约 $7（约 ¥48）、续费约 $36/年（约 ¥256），首年便宜、续费比 .equipment 高约五成，预算按续费价算。判断标准：生意以「卖/供设备」为主——经销、电商、二手交易，租赁只是补充 → .equipment 的品类语义最准，「品类 + .equipment」正面接住设备采购搜索且续费更轻；生意钉死「租」这个模式——按天按周计价、租转售、多品类租赁平台 → .rentals 的模式语义更锐，「品类/城市 + .rentals」接住 rental 意图的搜索，租的东西从挖机换成帐篷也不用改名。三点注意：一是 equipment 有 9 个字母且易拼错，广告物料把完整域名印清楚；二是大型设备重线下履约，仓库位置与服务范围要在站内写明；三是与已收录的 .tools / .supply 分工——手工具零售靠 .tools，耗材批发靠 .supply，成台套设备在 .equipment，租赁模式在 .rentals。设备租售一体的公司可以两头拿：.equipment 做品牌主站，「品类 + .rentals」接租赁落地页。命名上「品类 + .equipment」接设备采购搜索，「品类/城市 + .rentals」接本地租赁搜索。",
+      pickA: ["重型与农用设备经销商", "健身与商用器材电商", "二手设备交易平台", "「品类 + equipment」采购搜索词"],
+      pickB: ["设备与工具租赁公司", "度假屋与场地租赁", "婚庆活动器材出租", "「品类 + rentals」租赁意图搜索词"],
+    },
+    en: {
+      title: ".equipment vs .rentals: Selling The Gear or Renting It Out",
+      metaDescription:
+        ".equipment writes the inventory into the domain — for dealers and gear e-commerce; .rentals names the business model — for equipment and event rental platforms. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both trade in gear; one names what you sell, the other names how you hand it over. .equipment writes the inventory into the domain — heavy and farm equipment dealers, gym and sports gear e-commerce, restaurant and commercial suppliers, and used-equipment marketplaces on name.equipment match exactly what buyers search: category + equipment; gym.equipment or farm.equipment needs no explanation. Operated by Identity Digital, about $11 for the first year and $23/yr to renew — mid-priced and easy to hold, with excellent inventory of category words. .rentals names the business model — equipment and tool rentals, vacation homes and venues, wedding and event gear on name.rentals; the plural carries a built-in pick-from-the-list platform feel. About $7 to register and $36/yr to renew — a cheap first year with a renewal roughly half again .equipment's, so budget at renewal rates. The test: if the business mainly sells or supplies gear — dealing, e-commerce, used marketplaces, with rental as a sideline → .equipment's category semantics are truest, category + .equipment meets procurement searches head-on, and it holds cheaper; if the business is nailed to renting — day and week pricing, rent-to-own, multi-category rental platforms → .rentals' model semantics are sharper, category or city + .rentals catches rental-intent searches, and the catalog can shift from excavators to tents without a rename. Three cautions: equipment runs nine letters and invites typos — print the full domain clearly on ads; big-ticket equipment runs on offline fulfillment, so publish warehouse locations and service coverage; and split the work with the already-listed .tools and .supply — hand-tool retail fits .tools, consumables wholesale .supply, full machines .equipment, the rental model .rentals. A sell-and-rent dealer can hold both: .equipment for the brand flagship, category + .rentals for rental landing pages. Naming: category + .equipment catches procurement searches; category or city + .rentals catches local rental searches.",
+      pickA: ["Heavy & farm equipment dealers", "Gym & commercial gear e-commerce", "Used-equipment marketplaces", "Category + equipment procurement search phrase"],
+      pickB: ["Equipment & tool rental companies", "Vacation home & venue rentals", "Wedding & event gear hire", "Category + rentals rental-intent search phrase"],
+    },
+  },
+  "supply-vs-express": {
+    slug: "supply-vs-express",
+    a: "supply",
+    b: "express",
+    zh: {
+      title: ".supply 和 .express 怎么选：供货口径与快送口径的分工",
+      metaDescription: ".supply 报的是「供货」，适合建材工业供应商与潮牌 supply 命名；.express 报的是「快」，适合快递配送与快办服务。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在把货送到客户手里，一个报「货从我这来」，一个报「到你手上快」。.supply 把「供货」写进域名——建材与工业供应商、餐饮美发等行业耗材、潮牌与设计师品牌（supply 本就是街头服饰爱用词）、批发平台用 name.supply，行业客户搜「品类 + supply」时域名就是搜索词，coffee.supply 或 barber.supply 自带「行业供货站」的气质；Identity Digital 运营，注册与续费均约 $21/年（约 ¥152），一口价无首年钓鱼，品类词与行业词库存极好。.express 报的是「快」——同城与跨境快递、外卖与即时配送、签证与证件快办、一切以速度为卖点的服务用 name.express，读出来就是服务承诺；注册约 $9（约 ¥67）、续费约 $31/年（约 ¥226），首年便宜、续费与 .supply 同档偏上。判断标准：生意的重心是「货源与供应关系」——批发、耗材、长期供货合同 → .supply 的供货语义最准，「品类 + .supply」正面接住行业采购搜索，一口价定价也好做预算；生意的重心是「时效」——按小时按天承诺送达、加急代办 → .express 的速度语义更锐，域名本身就是营销话术。三点注意：一是 .supply 是单数，.supplies 是另一个后缀，所有物料统一单数拼写；二是 express 一词多义（快递/特快/表达），首屏文案把业务钉死；三是与已收录的 .delivery / .store 分工——配送履约本身用 .delivery，零售门店用 .store，供货关系在 .supply，速度承诺在 .express。命名上「品类 + .supply」接行业供货搜索，「城市/服务 + .express」接快送快办搜索。",
+      pickA: ["建材与工业品供应商", "餐饮美发等行业耗材商", "潮牌与设计师 supply 命名", "「品类 + supply」采购搜索词"],
+      pickB: ["同城与跨境快递配送", "外卖与即时零售", "签证证件等加急代办", "以「快」为卖点的服务承诺"],
+    },
+    en: {
+      title: ".supply vs .express: The Source of Goods or The Speed Promise",
+      metaDescription:
+        ".supply names the sourcing relationship — for industrial suppliers and supply-brand labels; .express names speed — for couriers and fast-turnaround services. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both get goods into customers' hands; one names where the goods come from, the other names how fast they arrive. .supply writes the sourcing relationship into the domain — building material and industrial suppliers, trade consumables for restaurants and salons, streetwear and designer labels (supply is a streetwear-favorite word), and wholesale platforms on name.supply match exactly what trade customers search: category + supply; coffee.supply or barber.supply carries built-in trade-depot character. Operated by Identity Digital, both registration and renewal run about $21/yr — flat pricing with no first-year bait, and excellent inventory of category and trade words. .express names speed — local and cross-border couriers, food and instant delivery, visa and document fast-tracking, and any service selling velocity on name.express read the promise aloud. About $9 to register and $31/yr to renew — a cheap first year with a renewal in the same band as .supply. The test: if the business centers on sourcing and supply relationships — wholesale, consumables, long-term contracts → .supply's semantics are truest, category + .supply meets trade procurement searches head-on, and flat pricing makes budgeting easy; if the business centers on turnaround time — hour-and-day delivery promises, rush processing → .express' speed semantics are sharper, and the domain doubles as the marketing line. Three cautions: singular matters — .supplies is a different suffix, so standardize the singular everywhere; express carries several senses (courier, fast, expression), so pin the business with above-the-fold copy; and split the work with the already-listed .delivery and .store — the delivery act itself fits .delivery, retail storefronts .store, sourcing relationships .supply, speed promises .express. Naming: category + .supply catches trade procurement searches; city or service + .express catches fast-turnaround searches.",
+      pickA: ["Building material & industrial suppliers", "Trade consumables for restaurants & salons", "Streetwear & designer supply labels", "Category + supply procurement search phrase"],
+      pickB: ["Local & cross-border couriers", "Food & instant delivery services", "Visa & document fast-tracking", "Speed-as-the-product service promise"],
+    },
+  },
+  "parts-vs-repair": {
+    slug: "parts-vs-repair",
+    a: "parts",
+    b: "repair",
+    zh: {
+      title: ".parts 和 .repair 怎么选：卖配件与修东西的分工",
+      metaDescription: ".parts 把「配件」写进域名，适合汽配与零部件电商；.repair 报的是「修」这个动作，适合维修门店与上门服务。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一条产业链的上下游，一个卖零件，一个管修好。.parts 把「配件」直接写进域名——汽配与摩配电商、家电与手机维修配件、工业备件经销、拆车件与二手件平台用 name.parts，买家搜「品牌/品类 + parts」时域名就是搜索词，海外 bmw.parts 有真实售后市场成交先例，truck.parts 不用解释就知道卖什么；Identity Digital 运营，首年约 $9（约 ¥63）、续费约 $33/年（约 ¥241），便宜起步、中档持有，品类词与车型词库存不错。.repair 报的是「修」这个动作——汽修与专项维修门店、手机家电维修、房屋修缮与上门服务用 name.repair，「品类 + .repair」读出来就是搜索词本身，phone.repair 式命名自带本地服务联想；注册约 $8（约 ¥56）、续费约 $29/年（约 ¥211），与 .parts 同档好持有。判断标准：生意是「把零件卖出去」——配件电商、备件经销、拆车件平台 → .parts 的库存语义最准，「品类 + .parts」正面接住配件采购搜索，配件生意的核心竞争力是车型/型号匹配查询，域名之外把适配工具做好；生意是「把东西修好」——门店维修、上门服务、连锁快修 → .repair 的动作语义更锐，「城市 + 品类 + .repair」接住本地维修搜索，Google 商家资料与透明报价比域名更影响到店。三点注意：一是注册汽车品牌词（如 bmw.parts）有商标风险，独立卖家注意指示性合理使用与免责声明；二是维修是强本地生意，评价与报价透明是获客关键；三是修配一体的门店可以两头拿——「品类 + .parts」做配件商城，「城市 + .repair」接维修预约，互相导流。命名上「品牌/品类 + .parts」接配件采购搜索，「城市/品类 + .repair」接本地维修搜索。",
+      pickA: ["汽配摩配与零部件电商", "家电手机维修配件商城", "工业备件与拆车件平台", "「品类 + parts」配件采购搜索词"],
+      pickB: ["汽修与专项维修门店", "手机家电上门维修", "连锁快修品牌落地页", "「城市 + 品类 + repair」本地搜索词"],
+    },
+    en: {
+      title: ".parts vs .repair: Selling The Piece or Fixing The Thing",
+      metaDescription:
+        ".parts writes the inventory into the domain — for auto parts and spares e-commerce; .repair names the action — for repair shops and on-site services. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Upstream and downstream of the same chain: one sells the piece, the other makes it work again. .parts writes the inventory into the domain — auto and moto parts e-commerce, appliance and phone repair parts, industrial spares dealers, and salvage marketplaces on name.parts match exactly what buyers search: brand or category + parts; names like bmw.parts have real aftermarket sales history abroad, and truck.parts needs no explanation. Operated by Identity Digital, about $9 for the first year and $33/yr to renew — cheap to start, mid-priced to hold, with strong inventory of category and vehicle words. .repair names the action — auto and specialist repair shops, phone and appliance repair, home fixes and on-site services on name.repair; category + .repair reads as the search phrase itself, phone.repair style, with built-in local-service recall. About $8 to register and $29/yr to renew — the same easy-to-hold tier as .parts. The test: if the business sells the piece — parts e-commerce, spares dealing, salvage platforms → .parts' inventory semantics are truest, category + .parts meets parts-procurement searches head-on, and since the parts trade runs on fitment, build model-matching tools beyond the domain; if the business fixes the thing — shop repairs, on-site service, quick-fix chains → .repair's action semantics are sharper, city + category + .repair catches local repair searches, and Google Business profiles with transparent quotes move customers more than the domain. Three cautions: registering car-brand words (like bmw.parts) carries trademark risk — independent sellers should mind nominative fair use and disclaimers; repair is a fiercely local trade where reviews and quote transparency win the job; and a fix-and-sell shop can hold both — category + .parts for the parts store, city + .repair for repair bookings, each feeding the other. Naming: brand or category + .parts catches parts-procurement searches; city or category + .repair catches local repair searches.",
+      pickA: ["Auto & moto parts e-commerce", "Appliance & phone repair parts stores", "Industrial spares & salvage platforms", "Category + parts procurement search phrase"],
+      pickB: ["Auto & specialist repair shops", "Phone & appliance on-site repair", "Quick-fix chain landing pages", "City + category + repair local search phrase"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
