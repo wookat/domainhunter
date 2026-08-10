@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 318,
+    "count": 324,
     "slugs": [
       "com",
       "net",
@@ -319,7 +319,13 @@
       "glass",
       "vision",
       "tires",
-      "surgery"
+      "surgery",
+      "domains",
+      "college",
+      "actor",
+      "immo",
+      "vin",
+      "university"
     ]
   },
   "guide": {
