@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 294,
+    "count": 300,
     "slugs": [
       "com",
       "net",
@@ -295,7 +295,13 @@
       "cricket",
       "fish",
       "fan",
-      "win"
+      "win",
+      "wang",
+      "day",
+      "meme",
+      "quest",
+      "kids",
+      "foundation"
     ]
   },
   "guide": {

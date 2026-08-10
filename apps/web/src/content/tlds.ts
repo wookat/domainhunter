@@ -8844,6 +8844,186 @@ const GUIDES = {
       ],
     },
   },
+  wang: {
+    tld: "wang",
+    zh: {
+      title: ".wang 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".wang 是拼音「网/王」的中文市场后缀，适合面向中文用户的网站与工具站、国货品牌与淘系店铺独立站、个人姓氏王的品牌站、下沉市场推广落地页。查看 .wang 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .wang 域名。",
+      intro:
+        ".wang 把「网」念进域名：面向中文用户的网站与工具站、国货品牌与电商独立站、姓氏为王的个人品牌站、下沉市场推广落地页用 name.wang，中文语感一词讲透——wang 是「网」与「王」的拼音，中文用户听到域名就能拼出来，口头传播零成本，这是拉丁字母后缀里少见的「说中文」的域名。注册局为黄道科技（Zodiac Wang Limited），是最早一批面向中文市场的新顶级域，已通过工信部备案资质，可在境内合规建站。它与已收录的 .cn/.top 分工清晰：.cn 说国别，.top 说通用，.wang 直指「网站」这个词——想让中文用户一听就懂的项目用它定位最准。价格是全站便宜档：首年约 $4（约 ¥30），续费约 $6/年（约 ¥44）——注册续费都便宜，做站群与落地页矩阵毫无压力。库存极好：行业词、拼音词、姓氏组合全线有货。注意两点：一是境内解析建站需完成 ICP 备案与实名认证，面向海外用户则无此要求；二是英文语境里 wang 无含义且有俚语歧义，出海项目慎用。命名上「拼音/行业词 + .wang」（zhuangxiu.wang）最主流，「姓氏/品牌 + .wang」（laowang.wang）适合个人品牌与自媒体。",
+      bestFor: ["面向中文用户的网站与工具站", "国货品牌与电商独立站", "姓氏为王的个人品牌站", "下沉市场推广落地页"],
+      namingTips: [
+        "「拼音/行业词 + .wang」中文用户一听就能拼出来",
+        "首年约 $4、续费约 $6/年，站群矩阵无压力",
+        "说中文的网站用 .wang，国别背书用 .cn，通用便宜用 .top",
+        "境内解析需 ICP 备案与实名认证，海外解析无此要求",
+      ],
+    },
+    en: {
+      title: ".wang Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".wang is the Chinese-market suffix from the pinyin for “web/king” — for Chinese-language sites and tools, domestic brands and e-commerce stores, personal brands with the surname Wang, and campaign landing pages. See live pricing and naming advice, then hunt available .wang names with AI.",
+      intro:
+        ".wang speaks Chinese in the address: Chinese-language sites and tool stations, domestic brands and e-commerce stores, personal brands carrying the surname Wang, and mass-market campaign pages on name.wang say it in the audience's own sound — wang is the pinyin for both 网 (web) and 王 (king), so Chinese users can spell the domain the moment they hear it, making word-of-mouth free — a rare Latin-letter suffix that literally speaks Chinese. The registry is Zodiac Wang Limited, one of the earliest new gTLDs built for the Chinese market, with MIIT accreditation for compliant hosting in mainland China. It divides labor cleanly with the already-listed .cn and .top: .cn names the country, .top names the generic tier — .wang names the word for website itself, so projects that want instant recognition from Chinese speakers position sharpest here. Pricing sits in the bargain tier: about $4 first year (≈¥30) and $6/yr to renew (≈¥44) — cheap both ways, so site networks and landing-page portfolios cost almost nothing. Inventory is excellent: industry words, pinyin words and surname combos all hit. Two cautions: hosting inside mainland China requires ICP filing and real-name verification (overseas hosting doesn't); and wang means nothing in English and carries slang ambiguity, so export-facing projects should think twice. Naming: pinyin or industry word + .wang (zhuangxiu.wang) is the mainstream shape; surname or brand + .wang (laowang.wang) suits personal brands and creators.",
+      bestFor: ["Chinese-language sites & tool stations", "Domestic brands & e-commerce stores", "Personal brands with the surname Wang", "Mass-market campaign landing pages"],
+      namingTips: [
+        "Pinyin or industry word + .wang spells itself to Chinese users",
+        "About $4 year one, $6/yr renewal — bargain tier for portfolios",
+        "Chinese-speaking sites fit .wang; country backing .cn; generic .top",
+        "Mainland hosting needs ICP filing — overseas hosting doesn't",
+      ],
+    },
+  },
+  day: {
+    tld: "day",
+    zh: {
+      title: ".day 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".day 是 Google 注册局的「日子」后缀，适合节日与纪念日活动站、婚礼与生日邀请页、每日打卡与习惯养成应用、日更内容与日历工具站。查看 .day 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .day 域名。",
+      intro:
+        ".day 把日子过进域名：节日与纪念日活动站、婚礼与生日邀请页、每日打卡与习惯养成应用、日更内容与日历工具站用 name.day，时间属性一词讲透——name.day 读起来就是「某某日」，做活动页与邀请页天然成句（wedding.day、demo.day），这是少见的「自带语法」的后缀。注册局为 Google（Charleston Road Registry），与 .app/.dev/.page 同门，整个后缀已列入 HSTS 预加载名单——浏览器强制 HTTPS，必须配证书才能访问，换来全站默认加密的安全背书。它与已收录的 .today/.events 分工清晰：.today 说「今天」的新闻感，.events 说活动业态，.day 直指「日子」这个词——纪念日、主题日、打卡日历用它定位最准。价格是少见的平价结构：首年约 $11（约 ¥78），续费约 $11/年（约 ¥78）——注册续费同价，没有首年促销陷阱，预算恒定好算。库存极好：节日词、动词短语、品牌词全线有货。注意两点：一是 HTTPS 强制意味着裸 HTTP 无法打开，托管平台需支持自动证书；二是三个字母够短但语义偏轻，严肃企业主站配 .com 更稳。命名上「场景词 + .day」（wedding.day）最主流，「品牌/动词 + .day」（plan.day）适合工具与应用。",
+      bestFor: ["节日与纪念日活动站", "婚礼与生日邀请页", "每日打卡与习惯养成应用", "日更内容与日历工具站"],
+      namingTips: [
+        "「场景词 + .day」整个域名读起来就是「某某日」",
+        "注册续费同价约 $11/年，预算恒定没有促销陷阱",
+        "日子场景用 .day，今天新闻感用 .today，活动业态用 .events",
+        "Google 后缀强制 HTTPS，托管需支持自动证书",
+      ],
+    },
+    en: {
+      title: ".day Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".day is Google Registry's suffix for days — for holiday and anniversary event sites, wedding and birthday invitation pages, daily habit and streak apps, daily content and calendar tools. See live pricing and naming advice, then hunt available .day names with AI.",
+      intro:
+        ".day writes the calendar into the address: holiday and anniversary event sites, wedding and birthday invitation pages, daily habit and streak apps, and daily content or calendar tools on name.day say the occasion in one word — name.day reads as \"X day\", so event and invitation pages form natural sentences (wedding.day, demo.day), a rare suffix with grammar built in. The registry is Google (Charleston Road Registry), sibling to .app, .dev and .page, and the whole TLD sits on the HSTS preload list — browsers force HTTPS, so a certificate is mandatory, in exchange for encrypted-by-default security backing. It divides labor cleanly with the already-listed .today and .events: .today carries the news-flash feel, .events names the business — .day names the day itself, so anniversaries, theme days and streak calendars position sharpest here. Pricing is refreshingly flat: about $11 first year (≈¥78) and $11/yr to renew (≈¥78) — register and renew cost the same, no promo trap, so budgets stay constant. Inventory is excellent: holiday words, verb phrases and brand words all hit. Two cautions: forced HTTPS means plain HTTP won't load, so hosting must support automatic certificates; and three letters is short but semantically light — serious corporate main sites should pair it with a .com. Naming: occasion word + .day (wedding.day) is the mainstream shape; brand or verb + .day (plan.day) suits tools and apps.",
+      bestFor: ["Holiday & anniversary event sites", "Wedding & birthday invitation pages", "Daily habit & streak apps", "Daily content & calendar tools"],
+      namingTips: [
+        "Occasion word + .day makes the domain read as \"X day\"",
+        "About $11/yr flat to register and renew — no promo trap",
+        "Days fit .day; the news-flash feel .today; the business .events",
+        "Google TLDs force HTTPS — hosting must support auto certificates",
+      ],
+    },
+  },
+  meme: {
+    tld: "meme",
+    zh: {
+      title: ".meme 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".meme 是 Google 注册局的梗文化后缀，适合梗图与表情包社区、迷因币与加密社区项目、玩梗营销活动页、创作者搞笑内容站。查看 .meme 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .meme 域名。",
+      intro:
+        ".meme 把梗玩进域名：梗图与表情包社区、迷因币与加密社区项目、玩梗营销活动页、创作者搞笑内容站用 name.meme，文化属性一词讲透——meme 是互联网原生词汇，看到后缀就知道内容基调，自嘲与玩梗的姿态先立住，这是品牌「会玩」的信号。注册局为 Google（Charleston Road Registry），2023 年开放注册，与 .day 同样列入 HSTS 预加载名单——浏览器强制 HTTPS，必须配证书。它与已收录的 .lol/.wtf/.moe 分工清晰：.lol 说大笑，.wtf 说吐槽，.moe 说二次元萌系，.meme 直指梗本身——梗图站、迷因币、病毒营销用它定位最准。价格是少见的平价结构：首年约 $11（约 ¥78），续费约 $11/年（约 ¥78）——注册续费同价，没有促销陷阱。库存极好：梗词、动物词、加密圈词全线有货。注意两点：一是迷因币项目良莠不齐，个别安全网关对 .meme 链接较敏感，正经项目备好品牌与合规页自证；二是梗有生命周期，追热点梗的域名过气快，主站选长青词更稳。命名上「梗词 + .meme」（doge.meme）最主流，「品牌/社区 + .meme」（dank.meme）适合社区与内容站。",
+      bestFor: ["梗图与表情包社区", "迷因币与加密社区项目", "玩梗营销活动页", "创作者搞笑内容站"],
+      namingTips: [
+        "「梗词 + .meme」后缀先把内容基调立住",
+        "注册续费同价约 $11/年，预算恒定没有促销陷阱",
+        "梗本身用 .meme，大笑用 .lol，吐槽用 .wtf，萌系用 .moe",
+        "追热点的梗过气快，主站选长青词更稳",
+      ],
+    },
+    en: {
+      title: ".meme Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".meme is Google Registry's suffix for internet culture — for meme and reaction-image communities, memecoin and crypto community projects, meme-driven marketing campaigns, and creator comedy content sites. See live pricing and naming advice, then hunt available .meme names with AI.",
+      intro:
+        ".meme plays the joke in the address itself: meme and reaction-image communities, memecoin and crypto community projects, meme-driven marketing campaigns, and creator comedy sites on name.meme say the culture in one word — meme is internet-native vocabulary, so the suffix alone sets the tone and signals a brand that's in on the joke. The registry is Google (Charleston Road Registry), opened in 2023, and like .day it sits on the HSTS preload list — browsers force HTTPS, so a certificate is mandatory. It divides labor cleanly with the already-listed .lol, .wtf and .moe: .lol names the laugh, .wtf names the rant, .moe names anime cuteness — .meme names the meme itself, so meme sites, memecoins and viral campaigns position sharpest here. Pricing is refreshingly flat: about $11 first year (≈¥78) and $11/yr to renew (≈¥78) — same both ways, no promo trap. Inventory is excellent: meme words, animal words and crypto-circle words all hit. Two cautions: memecoin projects vary wildly in quality, so some security gateways treat .meme links warily — serious projects should ship brand and compliance pages to self-certify; and memes have life cycles — trend-chasing names age fast, so pick evergreen words for the main site. Naming: meme word + .meme (doge.meme) is the mainstream shape; brand or community + .meme (dank.meme) suits communities and content sites.",
+      bestFor: ["Meme & reaction-image communities", "Memecoin & crypto community projects", "Meme-driven marketing campaigns", "Creator comedy content sites"],
+      namingTips: [
+        "Meme word + .meme sets the tone from the suffix alone",
+        "About $11/yr flat to register and renew — no promo trap",
+        "The meme fits .meme; the laugh .lol; the rant .wtf; cuteness .moe",
+        "Trend memes age fast — pick evergreen words for the main site",
+      ],
+    },
+  },
+  quest: {
+    tld: "quest",
+    zh: {
+      title: ".quest 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".quest 是「探索/任务」后缀，适合游戏任务与攻略社区、密室逃脱与解谜活动、学习闯关与技能挑战平台、探险旅行与寻宝项目。查看 .quest 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .quest 域名。",
+      intro:
+        ".quest 把冒险写进域名：游戏任务与攻略社区、密室逃脱与解谜活动、学习闯关与技能挑战平台、探险旅行与寻宝项目用 name.quest，叙事属性一词讲透——quest 是 RPG 游戏与奇幻文学的核心词汇，name.quest 读起来就是「某某的冒险」，做游戏化产品自带故事感。注册局为 XYZ（.xyz 同门），开放注册无资质限制。它与已收录的 .games/.fun/.run 分工清晰：.games 说游戏产品，.fun 说好玩，.run 说跑起来，.quest 直指任务与探索这个过程——闯关、挑战、寻宝叙事用它定位最准。价格是典型首年促销结构：首年约 $2（约 ¥11），续费约 $13/年（约 ¥93）——首年全站最便宜档之一，续费也不贵，试错成本极低。库存极好：动词短语、奇幻词、品牌词全线有货。注意两点：一是 Meta 的 VR 头显产品线同名 Quest，做 VR 相关内容避免用 meta、vr 等组合暗示官方关联；二是 quest 对非游戏用户偏陌生，大众消费品牌配个直白域名跳转更稳。命名上「主题词 + .quest」（dragon.quest 类）最主流，「品牌/动词 + .quest」（learn.quest）适合教育与挑战平台。",
+      bestFor: ["游戏任务与攻略社区", "密室逃脱与解谜活动", "学习闯关与技能挑战平台", "探险旅行与寻宝项目"],
+      namingTips: [
+        "「主题词 + .quest」整个域名读起来就是一段冒险",
+        "首年约 $2、续费约 $13/年，试错成本极低",
+        "任务探索用 .quest，游戏产品用 .games，跑步用 .run",
+        "Meta 头显同名 Quest，VR 内容避免暗示官方关联",
+      ],
+    },
+    en: {
+      title: ".quest Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".quest is the suffix for adventure and missions — for game quest and walkthrough communities, escape rooms and puzzle events, gamified learning and skill-challenge platforms, adventure travel and treasure hunts. See live pricing and naming advice, then hunt available .quest names with AI.",
+      intro:
+        ".quest writes the adventure into the address: game quest and walkthrough communities, escape rooms and puzzle events, gamified learning and skill-challenge platforms, and adventure travel or treasure-hunt projects on name.quest say the journey in one word — quest is core vocabulary of RPGs and fantasy fiction, so name.quest reads as \"the quest for X\", giving gamified products a built-in story. The registry is XYZ (of .xyz fame), with open registration and no eligibility rules. It divides labor cleanly with the already-listed .games, .fun and .run: .games names the product, .fun names the vibe, .run names the motion — .quest names the mission itself, so challenges, level-ups and treasure-hunt narratives position sharpest here. Pricing follows the classic promo structure: about $2 first year (≈¥11) and $13/yr to renew (≈¥93) — one of the cheapest first years on the site and renewal stays modest, so experiments cost almost nothing. Inventory is excellent: verb phrases, fantasy words and brand words all hit. Two cautions: Meta's VR headset line shares the Quest name, so VR-adjacent content should avoid combos like meta or vr that imply official ties; and quest reads niche to non-gamers, so mass-market brands may pair it with a plainer redirect domain. Naming: theme word + .quest (dragon.quest style) is the mainstream shape; brand or verb + .quest (learn.quest) suits education and challenge platforms.",
+      bestFor: ["Game quest & walkthrough communities", "Escape rooms & puzzle events", "Gamified learning & skill-challenge platforms", "Adventure travel & treasure hunts"],
+      namingTips: [
+        "Theme word + .quest makes the domain read as an adventure",
+        "About $2 year one, $13/yr renewal — experiments cost almost nothing",
+        "The mission fits .quest; the product .games; the motion .run",
+        "Meta's headset is named Quest — avoid implying official VR ties",
+      ],
+    },
+  },
+  kids: {
+    tld: "kids",
+    zh: {
+      title: ".kids 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".kids 是儿童友好内容的专属后缀，适合儿童教育与启蒙内容站、童装玩具与母婴电商、少儿兴趣班与夏令营、亲子活动与家庭游乐项目。查看 .kids 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .kids 域名。",
+      intro:
+        ".kids 把儿童友好写进域名：儿童教育与启蒙内容站、童装玩具与母婴电商、少儿兴趣班与夏令营、亲子活动与家庭游乐项目用 name.kids，受众属性一词讲透——后缀本身就是「适合孩子」的承诺，家长看到 .kids 就知道内容面向儿童，信任感先建立。注册局为香港非营利机构 DotKids Foundation，是新顶级域里少见的「带内容公约」后缀：注册即承诺内容儿童友好，注册局可对有害内容投诉处置——这层治理正是它的信任来源。它与已收录的 .baby/.mom/.dad/.toys 分工清晰：.baby 说婴幼儿，.mom/.dad 说家长视角，.toys 说玩具品类，.kids 直指儿童受众整体——K12 内容、童装、少儿培训用它定位最准。价格是典型首年促销结构：首年约 $6（约 ¥41），续费约 $19/年（约 ¥137）——按续费价做长期预算。库存极好：教育词、活动词、品牌词全线有货。注意两点：一是内容公约意味着成人内容与打擦边球都可能被投诉下线，混合受众平台把儿童板块单独放 .kids 更稳；二是多数辖区对儿童数据有专门法规（如 COPPA），收集用户数据前把合规做足。命名上「品类词 + .kids」（coding.kids）最主流，「品牌词 + .kids」（happy.kids）适合机构与电商主站。",
+      bestFor: ["儿童教育与启蒙内容站", "童装玩具与母婴电商", "少儿兴趣班与夏令营", "亲子活动与家庭游乐项目"],
+      namingTips: [
+        "「品类词 + .kids」家长一眼确认内容面向儿童",
+        "首年约 $6、续费约 $19/年，按续费价做预算",
+        "儿童受众用 .kids，婴幼儿用 .baby，玩具品类用 .toys",
+        "儿童数据受 COPPA 类法规约束，合规先行",
+      ],
+    },
+    en: {
+      title: ".kids Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".kids is the dedicated suffix for child-friendly content — for children's education and early-learning sites, kidswear and toy e-commerce, kids' classes and summer camps, family activities and play venues. See live pricing and naming advice, then hunt available .kids names with AI.",
+      intro:
+        ".kids writes child-friendly into the address: children's education and early-learning sites, kidswear and toy e-commerce, kids' classes and summer camps, and family activity or play venues on name.kids say the audience in one word — the suffix itself is a promise that the content suits children, so parents trust the address before the page loads. The registry is DotKids Foundation, a Hong Kong nonprofit, and this is a rare new gTLD with a content pledge: registering means committing to child-friendly content, and the registry can act on complaints about harmful material — that governance is exactly where the trust comes from. It divides labor cleanly with the already-listed .baby, .mom, .dad and .toys: .baby names infancy, .mom and .dad name the parent's view, .toys names the product category — .kids names the child audience as a whole, so K-12 content, kidswear and children's training position sharpest here. Pricing follows the classic promo structure: about $6 first year (≈¥41) and $19/yr to renew (≈¥137) — budget on the renewal. Inventory is excellent: education words, activity words and brand words all hit. Two cautions: the content pledge means adult or borderline material can be taken down on complaint, so mixed-audience platforms should put only the children's section on .kids; and most jurisdictions regulate children's data specifically (COPPA and kin), so get compliance right before collecting anything. Naming: category word + .kids (coding.kids) is the mainstream shape; brand word + .kids (happy.kids) suits institutions and shop main sites.",
+      bestFor: ["Children's education & early-learning sites", "Kidswear & toy e-commerce", "Kids' classes & summer camps", "Family activities & play venues"],
+      namingTips: [
+        "Category word + .kids tells parents the audience at a glance",
+        "About $6 year one, $19/yr renewal — budget on the renewal",
+        "The child audience fits .kids; infancy .baby; the products .toys",
+        "Children's data falls under COPPA-style law — compliance first",
+      ],
+    },
+  },
+  foundation: {
+    tld: "foundation",
+    zh: {
+      title: ".foundation 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".foundation 是基金会与公益组织的专属后缀，适合公益基金会与慈善组织、开源项目基金会、企业社会责任与捐赠页、社区互助与奖学金项目。查看 .foundation 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .foundation 域名。",
+      intro:
+        ".foundation 把使命写进域名：公益基金会与慈善组织、开源项目基金会、企业社会责任与捐赠页、社区互助与奖学金项目用 name.foundation，机构属性一词讲透——foundation 就是「基金会」的英文全称，name.foundation 读起来就是机构全名，捐赠人看到域名即确认对象，这是公益场景里最直白的信任信号。注册局为 Public Interest Registry（PIR）——运营 .org 三十年的非营利注册局，2023 年把 .foundation/.charity/.gives/.giving 收入同一公益序列，背书与 .org 同源。它与已收录的 .org/.fund/.community 分工清晰：.org 说泛非营利，.fund 说资金池，.community 说社群，.foundation 直指基金会这个机构形态——挂「XX 基金会」名号的组织用它定位最准。价格是典型首年促销结构：首年约 $6（约 ¥43），续费约 $23/年（约 ¥163）——按续费价做长期预算。库存极好：姓氏词、使命词、开源项目名全线有货。注意两点：一是十个字母偏长，宣传物料配短域名跳转更顺；二是「基金会」在部分辖区是受监管的法律实体名称，未注册实体前用 project 类措辞更稳。命名上「姓名/品牌 + .foundation」（gates.foundation 类）最主流，「使命词 + .foundation」（ocean.foundation）适合议题型组织。",
+      bestFor: ["公益基金会与慈善组织", "开源项目基金会", "企业社会责任与捐赠页", "社区互助与奖学金项目"],
+      namingTips: [
+        "「姓名/品牌 + .foundation」域名读起来就是机构全名",
+        "首年约 $6、续费约 $23/年，按续费价做预算",
+        "基金会形态用 .foundation，泛非营利用 .org，资金池用 .fund",
+        "「基金会」在部分辖区是受监管名称，注册实体后再启用",
+      ],
+    },
+    en: {
+      title: ".foundation Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".foundation is the dedicated suffix for foundations and philanthropy — for charitable foundations and nonprofits, open-source project foundations, corporate social responsibility and donation pages, community aid and scholarship programs. See live pricing and naming advice, then hunt available .foundation names with AI.",
+      intro:
+        ".foundation writes the mission into the address: charitable foundations and nonprofits, open-source project foundations, corporate social responsibility and donation pages, and community aid or scholarship programs on name.foundation say the institution in one word — foundation is the full institutional noun, so name.foundation reads as the organization's complete name and donors confirm who they're giving to from the address alone, the plainest trust signal in philanthropy. The registry is Public Interest Registry (PIR) — the nonprofit that has run .org for decades, which brought .foundation, .charity, .gives and .giving into the same public-interest family in 2023, so the backing shares .org's pedigree. It divides labor cleanly with the already-listed .org, .fund and .community: .org names nonprofits at large, .fund names the pool of money, .community names the group — .foundation names the institutional form itself, so organizations carrying \"Foundation\" in their name position sharpest here. Pricing follows the classic promo structure: about $6 first year (≈¥43) and $23/yr to renew (≈¥163) — budget on the renewal. Inventory is excellent: surname words, mission words and open-source project names all hit. Two cautions: ten letters is long, so print materials may pair it with a short redirect; and \"foundation\" is a regulated legal-entity name in some jurisdictions, so use project-style wording until the entity is registered. Naming: name or brand + .foundation (gates.foundation style) is the mainstream shape; mission word + .foundation (ocean.foundation) suits cause-driven organizations.",
+      bestFor: ["Charitable foundations & nonprofits", "Open-source project foundations", "CSR & donation pages", "Community aid & scholarship programs"],
+      namingTips: [
+        "Name or brand + .foundation reads as the org's full name",
+        "About $6 year one, $23/yr renewal — budget on the renewal",
+        "The institution fits .foundation; nonprofits .org; the pool .fund",
+        "A regulated entity name in some places — register the entity first",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
