@@ -8124,6 +8124,186 @@ const GUIDES = {
       ],
     },
   },
+  clothing: {
+    tld: "clothing",
+    zh: {
+      title: ".clothing 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".clothing 是服装行业的专属后缀，适合服装品牌与 DTC 独立站、设计师与定制工作室、二手与古着买手店、服装批发与供应链。查看 .clothing 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .clothing 域名。",
+      intro:
+        ".clothing 把「服装」穿进域名：服装品牌与 DTC 独立站、设计师与定制工作室、二手与古着买手店、服装批发与供应链用 name.clothing，卖什么直接写在地址里——顾客搜「品牌 + clothing」时域名与搜索词逐字吻合。它与已收录的 .fashion/.style/.boutique 分工清晰：.fashion 说「时尚」这个概念（媒体、博主也用），.style 说风格与生活方式，.boutique 说精品小店，.clothing 直指「衣服」这个品类——做实打实卖衣服的生意用它定位最准。注册局为 Identity Digital（Binky Moon 组合，2014 年首批新后缀）。价格是典型首年促销结构：首年约 $11（约 ¥78），续费约 $26/年（约 ¥189）——入门便宜，长期按续费价预算。库存极好：品牌词、品类词（denim、vintage 词根组合）全线有货。注意两点：一是 8 个字母的后缀偏长，词根务必短（urban.clothing 已是舒适上限）；二是服装电商竞争激烈，域名之外把退换货政策与尺码表这类信任设施备好。命名上「品牌词 + .clothing」（bold.clothing）最主流，「风格/品类 + .clothing」（vintage.clothing）适合垂直买手店。",
+      bestFor: ["服装品牌与 DTC 独立站", "设计师与定制工作室", "二手与古着买手店", "服装批发与供应链"],
+      namingTips: [
+        "「品牌词 + .clothing」卖什么直接写在地址里",
+        "首年约 $11、续费约 $26/年，按续费价做长期预算",
+        "实体服装生意用 .clothing 比 .fashion/.style 定位更准",
+        "后缀 8 个字母偏长，词根控制在 5–6 字符",
+      ],
+    },
+    en: {
+      title: ".clothing Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".clothing is the dedicated suffix for the apparel trade — for clothing brands and DTC stores, designers and made-to-measure studios, secondhand and vintage shops, apparel wholesale and supply chains. See live pricing and naming advice, then hunt available .clothing names with AI.",
+      intro:
+        ".clothing wears the category right in the address: clothing brands and DTC stores, designers and made-to-measure studios, secondhand and vintage shops, and apparel wholesalers on name.clothing say exactly what they sell — and \"brand + clothing\" is the literal query shoppers type. It divides labor cleanly with the already-listed .fashion, .style and .boutique: .fashion names the concept (media and bloggers use it too), .style names a lifestyle, .boutique names a small shop — .clothing points at the garments themselves, so businesses that actually sell clothes position sharpest here. The registry is Identity Digital (Binky Moon portfolio, from the first 2014 wave). Pricing follows the classic promo structure: about $11 first year (≈¥78) and $26/yr to renew (≈¥189) — cheap to start, budget on the renewal. Inventory is excellent: brand words and category roots (denim, vintage combinations) all hit. Two cautions: the 8-letter suffix leans long, so keep the root short (urban.clothing is about the comfortable limit); and apparel e-commerce is competitive — pair the domain with the trust infrastructure of returns policies and size charts. Naming: brand word + .clothing (bold.clothing) is the mainstream shape; style or category + .clothing (vintage.clothing) suits vertical curators.",
+      bestFor: ["Clothing brands & DTC stores", "Designers & made-to-measure studios", "Secondhand & vintage shops", "Apparel wholesale & supply chains"],
+      namingTips: [
+        "Brand word + .clothing says what you sell in the address",
+        "About $11 year one, $26/yr renewal — budget on the renewal",
+        "Real apparel sellers position sharper here than on .fashion",
+        "The 8-letter suffix needs a root of 5–6 characters",
+      ],
+    },
+  },
+  cooking: {
+    tld: "cooking",
+    zh: {
+      title: ".cooking 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".cooking 是烹饪与美食内容的专属后缀，适合菜谱博客与美食自媒体、烹饪课程与厨艺教室、私厨与烹饪工作室、厨具与食材内容电商。查看 .cooking 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .cooking 域名。",
+      intro:
+        ".cooking 把「下厨」端进域名：菜谱博客与美食自媒体、烹饪课程与厨艺教室、私厨与烹饪工作室、厨具与食材内容电商用 name.cooking，域名读出来就是一句「谁在做菜」——thai.cooking、home.cooking 这类组合天然像栏目名。它与已收录的餐饮系后缀分工清晰：.recipes 说「菜谱」这个交付物，.kitchen 说「厨房」这个场景，.food 说食品大品类，.cooking 说「烹饪」这个动作与技艺——做内容、教学与个人厨艺品牌用它定位最准。注册局为 GoDaddy Registry（原 Minds + Machines 组合）。价格平进平出：注册约 $26（约 ¥189），续费同价——中档年费预算稳定，库存极好：菜系词、人名、风格词全线有货。注意两点：一是 7 个字母的后缀不短，词根务必短（thai.cooking 是理想形态）；二是美食内容的商业化靠课程与带货，域名之外先把内容矩阵与转化路径想清。命名上「菜系/风格 + .cooking」（thai.cooking）最主流，「人名/品牌 + .cooking」适合厨师个人品牌与教学号。",
+      bestFor: ["菜谱博客与美食自媒体", "烹饪课程与厨艺教室", "私厨与烹饪工作室", "厨具与食材内容电商"],
+      namingTips: [
+        "「菜系 + .cooking」读出来就是栏目名",
+        "注册约 $26、续费同价，预算稳定无涨价陷阱",
+        "内容与教学用 .cooking，菜谱交付物用 .recipes",
+        "后缀 7 个字母不短，词根控制在 4–5 字符",
+      ],
+    },
+    en: {
+      title: ".cooking Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".cooking is the dedicated suffix for culinary content — for recipe blogs and food creators, cooking classes and culinary schools, private chefs and cooking studios, cookware and ingredient content commerce. See live pricing and naming advice, then hunt available .cooking names with AI.",
+      intro:
+        ".cooking serves the craft right in the address: recipe blogs and food creators, cooking classes and culinary schools, private chefs and cooking studios, and cookware content commerce on name.cooking get a domain that reads like a show title — thai.cooking and home.cooking sound like channels the moment you say them. It divides labor cleanly with the already-listed dining suffixes: .recipes names the deliverable, .kitchen names the room, .food names the giant category — .cooking names the act and the skill, so content, teaching and personal chef brands position sharpest here. The registry is GoDaddy Registry (from the former Minds + Machines portfolio). Pricing is flat: about $26 to register (≈¥189) and the same to renew — a stable mid-range fee with excellent inventory: cuisine words, personal names and style words all hit. Two cautions: the 7-letter suffix isn't short, so keep the root tight (thai.cooking is the ideal shape); and food content monetizes through courses and affiliate commerce, so plan the content-to-conversion path alongside the domain. Naming: cuisine or style + .cooking (thai.cooking) is the mainstream shape; personal name or brand + .cooking suits chef brands and teaching channels.",
+      bestFor: ["Recipe blogs & food creators", "Cooking classes & culinary schools", "Private chefs & cooking studios", "Cookware & ingredient content commerce"],
+      namingTips: [
+        "Cuisine + .cooking reads like a show title out loud",
+        "About $26 flat per year — stable budgeting, no renewal trap",
+        "Content and teaching fit .cooking; deliverables fit .recipes",
+        "The 7-letter suffix needs a root of 4–5 characters",
+      ],
+    },
+  },
+  gift: {
+    tld: "gift",
+    zh: {
+      title: ".gift 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".gift 是送礼场景的专属后缀，适合礼品电商与礼盒品牌、礼品卡与企业礼赠服务、心愿单与送礼攻略平台、节日营销活动页。查看 .gift 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .gift 域名。",
+      intro:
+        ".gift 把「一份礼物」包进域名：礼品电商与礼盒品牌、礼品卡与企业礼赠服务、心愿单与送礼攻略平台、节日营销活动页用 name.gift，单数形态读出来就是「这是一份礼」——a.gift、perfect.gift 这类组合本身就是广告语。它与已收录的 .gifts 分工微妙：.gifts（复数）说「礼品」这个品类，适合货架式礼品店；.gift（单数）说「送出一份礼」这个动作与场景，做礼品卡、心愿单、活动落地页语感更准——送礼链路的两端各占一个后缀。注册局为 Uniregistry 组合（现归 GoDaddy Registry 运营）。价格平进平出：注册约 $17（约 ¥119），续费同价——低档年费预算轻松，库存极好：场景词、节日词、品牌词全线有货。注意两点：一是 .gift 语义强绑定送礼场景，主业不是礼品的电商别硬蹭；二是节日流量波峰明显，域名之外把常青内容（送礼攻略、礼品清单）做起来才能全年拿流量。命名上「形容词 + .gift」（perfect.gift）最主流，「节日/人群 + .gift」（mom.gift）适合垂直礼赠站。",
+      bestFor: ["礼品电商与礼盒品牌", "礼品卡与企业礼赠服务", "心愿单与送礼攻略平台", "节日营销活动页"],
+      namingTips: [
+        "单数 .gift 读出来就是「这是一份礼」，天然广告语",
+        "注册约 $17、续费同价，低档年费预算轻松",
+        "礼品卡与心愿单用 .gift，货架式礼品店用 .gifts",
+        "节日波峰之外，用常青送礼攻略内容拿全年流量",
+      ],
+    },
+    en: {
+      title: ".gift Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".gift is the dedicated suffix for gifting — for gift e-commerce and gift-box brands, gift cards and corporate gifting services, wishlists and gift-guide platforms, holiday campaign pages. See live pricing and naming advice, then hunt available .gift names with AI.",
+      intro:
+        ".gift wraps the gesture right into the address: gift e-commerce and gift-box brands, gift cards and corporate gifting services, wishlist and gift-guide platforms, and holiday campaign pages on name.gift get the singular form that reads as \"here's a gift\" — a.gift and perfect.gift are ad copy the moment you say them. Against the already-listed .gifts the split is subtle: .gifts (plural) names the merchandise category and suits shelf-style gift shops, while .gift (singular) names the act and the moment — gift cards, wishlists and campaign landing pages read truer here, so the two suffixes cover opposite ends of the gifting funnel. The registry is the Uniregistry portfolio (now operated by GoDaddy Registry). Pricing is flat: about $17 to register (≈¥119) and the same to renew — a light annual fee with excellent inventory: occasion words, holiday words and brand words all hit. Two cautions: .gift binds hard to the gifting moment, so stores whose core business isn't gifts shouldn't force it; and gifting traffic spikes around holidays — build evergreen gift-guide content to earn traffic year-round. Naming: adjective + .gift (perfect.gift) is the mainstream shape; holiday or audience + .gift (mom.gift) suits vertical gifting sites.",
+      bestFor: ["Gift e-commerce & gift-box brands", "Gift cards & corporate gifting services", "Wishlists & gift-guide platforms", "Holiday campaign pages"],
+      namingTips: [
+        "The singular .gift reads as \"here's a gift\" — built-in ad copy",
+        "About $17 flat per year — a light, stable annual fee",
+        "Gift cards and wishlists fit .gift; shelf shops fit .gifts",
+        "Pair holiday spikes with evergreen gift-guide content",
+      ],
+    },
+  },
+  party: {
+    tld: "party",
+    zh: {
+      title: ".party 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".party 是派对与活动场景的专属后缀，适合派对策划与活动执行、生日与主题派对用品电商、夜店与音乐活动品牌、线上活动与邀请函页面。查看 .party 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .party 域名。",
+      intro:
+        ".party 把「开派对」写进域名：派对策划与活动执行、生日与主题派对用品电商、夜店与音乐活动品牌、线上活动与邀请函页面用 name.party，域名读出来就是一句邀请——join.party、summer.party 这类组合自带气氛。它与已收录的 .events/.fun/.club 分工清晰：.events 说「活动」这个正式大词（会议、发布会也用），.fun 说泛泛的好玩，.club 说会员与社群，.party 直指「派对」这个具体场景——做娱乐向活动生意用它气氛最足。注册局为 Blue Sky Registry（Gname 系，原 Famous Four Media 组合）。价格是全站少见的双低结构：注册约 $5（约 ¥33），续费约 $6/年（约 ¥41）——注册与续费都极便宜，做单场活动页、季节性营销页几乎零成本。库存极好：场景词、城市词、主题词全线有货。注意两点：一是 .party 早年低价曾被垃圾注册盯上，部分邮件网关对新后缀敏感，重要通知邮件建议配主流后缀发送；二是语感偏娱乐，婚礼策划这类正式业务可与 .wedding/.events 搭配使用。命名上「主题/季节 + .party」（summer.party）最主流，「城市 + .party」适合本地活动与场地站。",
+      bestFor: ["派对策划与活动执行", "生日与主题派对用品电商", "夜店与音乐活动品牌", "线上活动与邀请函页面"],
+      namingTips: [
+        "「主题 + .party」读出来就是一句邀请",
+        "注册约 $5、续费约 $6/年，双低价格几乎零成本",
+        "娱乐向活动用 .party，正式会议活动用 .events",
+        "重要通知邮件配主流后缀发送，避开网关误判",
+      ],
+    },
+    en: {
+      title: ".party Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".party is the dedicated suffix for celebrations — for party planners and event production, birthday and theme-party supply stores, nightlife and music event brands, online events and invitation pages. See live pricing and naming advice, then hunt available .party names with AI.",
+      intro:
+        ".party writes the celebration into the address: party planners and event production, birthday and theme-party supply stores, nightlife and music event brands, and online invitation pages on name.party get a domain that reads as an invitation — join.party and summer.party bring the mood before the page even loads. It divides labor cleanly with the already-listed .events, .fun and .club: .events is the formal umbrella (conferences and launches use it too), .fun is generic playfulness, .club is membership and community — .party names the specific occasion, so entertainment-first businesses get the most atmosphere here. The registry is Blue Sky Registry (Gname family, from the former Famous Four Media portfolio). Pricing is a rare double-low: about $5 to register (≈¥33) and $6/yr to renew (≈¥41) — cheap in and cheap to hold, so single-event pages and seasonal campaigns cost almost nothing. Inventory is excellent: occasion words, city words and theme words all hit. Two cautions: the early bargain years attracted spam registrations and some mail gateways stay wary of the suffix, so send critical email from a mainstream domain; and the vibe is playful — formal businesses like wedding planning pair it with .wedding or .events. Naming: theme or season + .party (summer.party) is the mainstream shape; city + .party suits local events and venue sites.",
+      bestFor: ["Party planners & event production", "Birthday & theme-party supply stores", "Nightlife & music event brands", "Online events & invitation pages"],
+      namingTips: [
+        "Theme + .party reads as an invitation out loud",
+        "About $5 in, $6/yr to hold — nearly free either way",
+        "Playful events fit .party; formal ones fit .events",
+        "Send critical email from a mainstream domain alongside it",
+      ],
+    },
+  },
+  fishing: {
+    tld: "fishing",
+    zh: {
+      title: ".fishing 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".fishing 是钓鱼行业的专属后缀，适合渔具店与钓具电商、包船海钓与钓鱼向导、钓场与渔家乐、钓鱼内容与社区。查看 .fishing 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fishing 域名。",
+      intro:
+        ".fishing 把「钓鱼」抛进域名：渔具店与钓具电商、包船海钓与钓鱼向导、钓场与渔家乐、钓鱼内容与社区用 name.fishing，钓友搜「地名 + fishing」时域名与搜索词逐字吻合——包船与向导生意几乎全靠这个搜索句式获客。它与已收录的 .surf/.camp/.guide 等户外系后缀分工清晰：.surf 说冲浪，.camp 说露营，.guide 泛指攻略与向导，.fishing 直指钓鱼这个垂直——全球数亿钓鱼爱好者的休闲大品类值得一个专属后缀。注册局为 GoDaddy Registry（原 Minds + Machines 组合）。价格平进平出：注册约 $26（约 ¥189），续费同价——中档年费预算稳定，库存极好：鱼种词（bass、carp）、水域词（lake、reef）、地名全线有货。注意两点：一是 7 个字母的后缀不短，词根务必短（bass.fishing 是理想形态）；二是包船与向导业务季节性强，域名之外把预订系统与旺季档期页备好。命名上「鱼种/水域 + .fishing」（bass.fishing）最主流，「地名 + .fishing」适合本地包船与钓场站。",
+      bestFor: ["渔具店与钓具电商", "包船海钓与钓鱼向导", "钓场与渔家乐", "钓鱼内容与社区"],
+      namingTips: [
+        "「地名 + .fishing」与钓友搜索句式逐字吻合",
+        "注册约 $26、续费同价，预算稳定无涨价陷阱",
+        "鱼种词 + .fishing（bass.fishing）是理想短组合",
+        "包船生意季节性强，预订系统与档期页一起备好",
+      ],
+    },
+    en: {
+      title: ".fishing Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".fishing is the dedicated suffix for the angling trade — for tackle shops and fishing-gear e-commerce, charter boats and fishing guides, fishing camps and lodges, fishing content and communities. See live pricing and naming advice, then hunt available .fishing names with AI.",
+      intro:
+        ".fishing casts the pastime right into the address: tackle shops and gear e-commerce, charter boats and fishing guides, fishing camps and lodges, and fishing content or communities on name.fishing match how anglers actually search — \"place + fishing\" is the literal query, and charter and guide businesses live on exactly that phrase. It divides labor cleanly with the already-listed outdoor suffixes: .surf names the wave, .camp names the tent, .guide covers how-tos of any kind — .fishing points at this one vertical, and a pastime with hundreds of millions of anglers worldwide earns its own suffix. The registry is GoDaddy Registry (from the former Minds + Machines portfolio). Pricing is flat: about $26 to register (≈¥189) and the same to renew — a stable mid-range fee with excellent inventory: species words (bass, carp), water words (lake, reef) and place names all hit. Two cautions: the 7-letter suffix isn't short, so keep the root tight (bass.fishing is the ideal shape); and charter and guide work is seasonal — have the booking system and season calendar ready alongside the domain. Naming: species or water + .fishing (bass.fishing) is the mainstream shape; place + .fishing suits local charters and fishing camps.",
+      bestFor: ["Tackle shops & fishing-gear e-commerce", "Charter boats & fishing guides", "Fishing camps & lodges", "Fishing content & communities"],
+      namingTips: [
+        "Place + .fishing matches angler search queries word for word",
+        "About $26 flat per year — stable budgeting, no renewal trap",
+        "Species + .fishing (bass.fishing) is the ideal short combo",
+        "Charters are seasonal — pair the domain with a booking system",
+      ],
+    },
+  },
+  horse: {
+    tld: "horse",
+    zh: {
+      title: ".horse 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".horse 是马术与马业的专属后缀，适合马术俱乐部与骑术学校、马场与马匹寄养、马匹交易与育种、马具电商与马业媒体。查看 .horse 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .horse 域名。",
+      intro:
+        ".horse 把「马」牵进域名：马术俱乐部与骑术学校、马场与马匹寄养、马匹交易与育种、马具电商与马业媒体用 name.horse，一个词覆盖从骑乘教学到育种交易的整条马业链路——马术是客单价极高的小众行业，专属后缀的辨识度回报也高。它与已收录的 .pet/.dog/.club 分工清晰：.pet/.dog 说家庭宠物，.club 说泛泛的会员组织，.horse 直指马这个物种与产业——马术俱乐部用 name.horse 比 name.club 定位准得多。注册局为 GoDaddy Registry（原 Minds + Machines 组合）。价格平进平出：注册约 $26（约 ¥189），续费同价——中档年费预算稳定，库存极好：马名、马场名、品种词（arabian、pony 词根组合）全线有货。注意两点：一是英语语境里 .horse 也常被用作幽默梗域名，正式品牌落地页要第一屏把专业定位讲清；二是马匹交易与育种重信任，域名之外把血统证明与实拍视频这类信任设施备好。命名上「马场/俱乐部名 + .horse」（willow.horse）最主流，「品种/用途 + .horse」（dressage.horse）适合垂直交易与内容站。",
+      bestFor: ["马术俱乐部与骑术学校", "马场与马匹寄养", "马匹交易与育种", "马具电商与马业媒体"],
+      namingTips: [
+        "「马场名 + .horse」比 .club 定位准得多",
+        "注册约 $26、续费同价，预算稳定无涨价陷阱",
+        "高客单价小众行业，专属后缀辨识度回报高",
+        "交易与育种重信任，血统证明与实拍一起备好",
+      ],
+    },
+    en: {
+      title: ".horse Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".horse is the dedicated suffix for the equestrian world — for riding clubs and riding schools, stables and horse boarding, horse sales and breeding, tack shops and equestrian media. See live pricing and naming advice, then hunt available .horse names with AI.",
+      intro:
+        ".horse leads the animal right into the address: riding clubs and riding schools, stables and boarding barns, horse sales and breeding operations, and tack shops or equestrian media on name.horse cover the whole industry chain from lessons to bloodlines in one word — and in a niche with famously high ticket sizes, a dedicated suffix pays back its recognition fast. It divides labor cleanly with the already-listed .pet, .dog and .club: .pet and .dog name household companions, .club names any membership group — .horse names the species and the industry, so a riding club positions far sharper on name.horse than name.club. The registry is GoDaddy Registry (from the former Minds + Machines portfolio). Pricing is flat: about $26 to register (≈¥189) and the same to renew — a stable mid-range fee with excellent inventory: horse names, barn names and breed words (arabian, pony roots) all hit. Two cautions: in English internet culture .horse also carries a meme streak, so serious brands should state the professional positioning above the fold; and horse sales and breeding run on trust — have pedigree papers and real video ready alongside the domain. Naming: barn or club name + .horse (willow.horse) is the mainstream shape; breed or discipline + .horse (dressage.horse) suits vertical marketplaces and content sites.",
+      bestFor: ["Riding clubs & riding schools", "Stables & horse boarding", "Horse sales & breeding", "Tack shops & equestrian media"],
+      namingTips: [
+        "Barn name + .horse positions far sharper than .club",
+        "About $26 flat per year — stable budgeting, no renewal trap",
+        "A high-ticket niche rewards a dedicated, memorable suffix",
+        "Sales and breeding run on trust — pair pedigree proof with the domain",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

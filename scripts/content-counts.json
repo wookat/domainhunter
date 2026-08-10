@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 270,
+    "count": 276,
     "slugs": [
       "com",
       "net",
@@ -271,7 +271,13 @@
       "spa",
       "food",
       "attorney",
-      "dentist"
+      "dentist",
+      "clothing",
+      "cooking",
+      "gift",
+      "party",
+      "fishing",
+      "horse"
     ]
   },
   "guide": {
