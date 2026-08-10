@@ -8869,6 +8869,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Local Hong Kong businesses & services", "Greater Bay Area & cross-border trade", "Financial services & international business", "Brands targeting Chinese-speaking markets"],
     },
   },
+  "dk-vs-se": {
+    slug: "dk-vs-se",
+    a: "dk",
+    b: "se",
+    zh: {
+      title: ".dk 和 .se 怎么选：丹麦与瑞典两大北欧 ccTLD 的对比",
+      metaDescription: ".dk 是丹麦国家域名、约 $12/年平续、注册需身份验证，自带北欧设计联想；.se 是瑞典国家域名、约 $15/年平续、任何人可注册，自带斯德哥尔摩创新圈联想。对比两者的市场信号、价格与门槛，并用 AI 猎取可注册的名字。",
+      verdict:
+        "北欧海峡两岸的两个高信任 ccTLD，价格与开放度都接近，选择看用户在哥本哈根还是斯德哥尔摩。做丹麦市场 → .dk：非营利注册局 Punktum dk 运营、注册量约 140 万，丹麦是全球数字化程度最高的国家之一，消费者对本土信号非常敏感，name.dk 一眼讲清「丹麦的生意」，本土企业与政府机构的主站几乎都在 .dk 上，Google 也会把 .dk 站点与丹麦地区相关联，丹麦语市场 SEO 有天然加成；乐高与 Bang & Olufsen 的出身还给 .dk 加了一层北欧设计与可持续品牌联想。做瑞典市场 → .se：瑞典互联网基金会运营、注册量约 150 万，是全球最早部署 DNSSEC 的注册局之一；Spotify、Klarna、IKEA 都发家于瑞典，.se 对科技创业与设计品牌自带「斯德哥尔摩创新圈」联想，瑞典消费者同样把 name.se 当本地生意的默认信号。门槛差异是实际考量点：.se 完全开放、任何国家的主体可直接注册、无需本地地址；.dk 同样对全球开放，但注册局要求注册人完成身份验证（丹麦本地用 MitID，海外注册人提交身份证明）——这道门槛让 .dk 的滥用率常年全球最低、库存干净，代价是注册流程多一步。价格都温和平续：.dk 注册约 $12/年（约 ¥85）、续费同价；.se 约 $15/年（约 ¥110）平续，两边都无引流钩子。判断标准：用户在丹麦、或做北欧设计与家居品牌 → .dk；用户在瑞典、或做科技创业与 SaaS → .se；同时深耕两个北欧市场的品牌通常各注册一个做本地门面，谈不上二选一。",
+      pickA: ["丹麦本地企业与服务", "北欧设计与家居品牌", "面向丹麦的电商", "丹麦语内容与媒体站"],
+      pickB: ["瑞典本地企业与服务", "北欧科技创业与 SaaS", "面向瑞典的电商", "要免验证快速注册的主体"],
+    },
+    en: {
+      title: ".dk vs .se: Denmark or Sweden — Two Nordic ccTLDs Compared",
+      metaDescription:
+        ".dk is Denmark's country domain at about $12/yr flat with registry ID validation and a Nordic design halo; .se is Sweden's at about $15/yr flat, open to anyone, with a Stockholm-innovation halo. Compare market signals, pricing and bars, then hunt available names.",
+      verdict:
+        "Two high-trust ccTLDs facing each other across the Øresund, with similar pricing and openness — the choice follows whether your users are in Copenhagen or Stockholm. Denmark-focused → .dk: run by non-profit registry Punktum dk with about 1.4 million registrations; Denmark is among the world's most digitized countries, consumers are strongly attuned to local signals, name.dk says \"a Danish business\" at a glance, Danish companies and government institutions overwhelmingly live on .dk, and Google geo-associates .dk sites with Denmark — a natural boost for Danish-market SEO; the LEGO and Bang & Olufsen heritage adds a Nordic design and sustainable-brand halo. Sweden-focused → .se: run by the Swedish Internet Foundation with about 1.5 million registrations, one of the first registries in the world to deploy DNSSEC; Spotify, Klarna and IKEA all started in Sweden, giving .se a \"Stockholm innovation circle\" halo for tech startups and design brands, and Swedish consumers read name.se as the default local-business signal. The bar is the practical difference: .se is fully open — anyone registers directly with no local address; .dk is equally open worldwide but the registry requires registrant ID validation (MitID for locals, identity documents for foreign registrants) — a step that keeps .dk's abuse rate among the world's lowest and its inventory clean, at the cost of one extra step at signup. Pricing is gentle and flat on both sides: .dk runs about $12/yr (≈¥85) with the same renewal; .se about $15/yr flat (≈¥110) — no teaser games either way. The test: users in Denmark, or a Nordic design and home brand → .dk; users in Sweden, or a tech startup and SaaS → .se; brands serious about both Nordic markets usually register one of each as local front doors — it's rarely either-or.",
+      pickA: ["Local Danish businesses & services", "Nordic design & home brands", "Denmark-facing e-commerce", "Danish-language content & media"],
+      pickB: ["Local Swedish businesses & services", "Nordic tech startups & SaaS", "Sweden-facing e-commerce", "Registrants wanting validation-free instant signup"],
+    },
+  },
+  "fi-vs-se": {
+    slug: "fi-vs-se",
+    a: "fi",
+    b: "se",
+    zh: {
+      title: ".fi 和 .se 怎么选：芬兰与瑞典两大北欧科技圈 ccTLD 的对比",
+      metaDescription: ".fi 是芬兰国家域名、约 $10/年平续、任何人可注册，自带赫尔辛基游戏科技联想；.se 是瑞典国家域名、约 $15/年平续、任何人可注册，自带斯德哥尔摩创新圈联想。对比两者的市场信号、价格与联想，并用 AI 猎取可注册的名字。",
+      verdict:
+        "北欧两大科技重镇的国家域名，都完全开放、都平续无钩子，选择看用户在赫尔辛基还是斯德哥尔摩、行业联想要游戏还是设计。做芬兰市场 → .fi：芬兰交通与通信管理局（Traficom）运营、注册量约 55 万，芬兰消费者对本土信号非常敏感，name.fi 一眼讲清「芬兰的生意」，本土企业与政府机构的主站几乎都在 .fi 上，Google 也会把 .fi 站点与芬兰地区相关联，芬兰语市场 SEO 有天然加成；Nokia、Supercell、Rovio 都发家于芬兰，.fi 对游戏工作室与深科技创业自带「赫尔辛基科技圈」联想。做瑞典市场 → .se：瑞典互联网基金会运营、注册量约 150 万，是全球最早部署 DNSSEC 的注册局之一；瑞典是北欧最大经济体与人口最多的国家，Spotify、Klarna、IKEA 的出身让 .se 对科技创业与北欧设计品牌自带联想，瑞典消费者同样把 name.se 当本地生意的默认信号。资格两边都零门槛：任何国家的个人与机构可直接注册、无需本地地址，2016 年起 .fi 也完全开放。价格差一点：.fi 注册约 $10/年（约 ¥72）、续费同价，由国家机构定价、常年稳定，是北欧 ccTLD 里最便宜的一档；.se 约 $15/年（约 ¥110）平续，两边都无引流钩子。库存都比 .com 充裕，两国英语水平都是全球顶尖，英文词根完全无障碍。判断标准：用户在芬兰、或做游戏与深科技 → .fi 的本地信任与科技联想更对口、年费还更低；用户在瑞典、或做设计与消费品牌 → .se 的市场半径与创新圈联想更浓；同时做两个北欧市场的品牌通常各注册一个做本地门面。",
+      pickA: ["芬兰本地企业与服务", "游戏工作室与深科技创业", "面向芬兰的电商", "要北欧最低平续价的主体"],
+      pickB: ["瑞典本地企业与服务", "北欧设计与生活方式品牌", "面向瑞典的电商", "北欧科技创业与 SaaS"],
+    },
+    en: {
+      title: ".fi vs .se: Finland or Sweden — Two Nordic Tech ccTLDs Compared",
+      metaDescription:
+        ".fi is Finland's country domain at about $10/yr flat, open to anyone, with a Helsinki gaming-tech halo; .se is Sweden's at about $15/yr flat, open to anyone, with a Stockholm-innovation halo. Compare market signals, pricing and connotations, then hunt available names.",
+      verdict:
+        "The country domains of the Nordics' two tech powerhouses — both fully open, both flat-priced with no traps — so the choice follows whether your users are in Helsinki or Stockholm, and whether the halo you want is gaming or design. Finland-focused → .fi: run by the Finnish Transport and Communications Agency (Traficom) with about 550,000 registrations; Finnish consumers hold a strong local preference, name.fi says \"a Finnish business\" at a glance, Finnish companies and government institutions overwhelmingly live on .fi, and Google geo-associates .fi sites with Finland — a natural boost for Finnish-market SEO; Nokia, Supercell and Rovio all started in Finland, giving .fi a \"Helsinki tech circle\" halo for game studios and deep-tech startups. Sweden-focused → .se: run by the Swedish Internet Foundation with about 1.5 million registrations, one of the first registries in the world to deploy DNSSEC; Sweden is the Nordics' largest economy and most populous country, and the Spotify, Klarna and IKEA heritage gives .se a halo for tech startups and Nordic design brands, with Swedish consumers reading name.se as the default local-business signal. Eligibility is a zero bar on both sides: anyone from anywhere registers directly with no local address — .fi has been fully open since 2016. Pricing differs slightly: .fi runs about $10/yr (≈¥72) with the same renewal — set by a national agency, stable for years and the cheapest tier among Nordic ccTLDs; .se about $15/yr flat (≈¥110) — no teaser games either way. Inventory beats .com on both, and with world-leading English proficiency in both countries, English roots work perfectly. The test: users in Finland, or a gaming/deep-tech venture → .fi's local trust and tech halo fit better at a lower fee; users in Sweden, or a design and consumer brand → .se's market radius and innovation halo run denser; brands serious about both Nordic markets usually register one of each as local front doors.",
+      pickA: ["Local Finnish businesses & services", "Game studios & deep-tech startups", "Finland-facing e-commerce", "Registrants wanting the lowest Nordic flat price"],
+      pickB: ["Local Swedish businesses & services", "Nordic design & lifestyle brands", "Sweden-facing e-commerce", "Nordic tech startups & SaaS"],
+    },
+  },
+  "no-vs-dk": {
+    slug: "no-vs-dk",
+    a: "no",
+    b: "dk",
+    zh: {
+      title: ".no 和 .dk 怎么选：挪威本地主体门槛与丹麦开放验证的对比",
+      metaDescription: ".no 是挪威国家域名、约 $15/年平续、需挪威登记组织才能持有；.dk 是丹麦国家域名、约 $12/年平续、任何人可注册（需身份验证）。对比两者的市场信号、资格与价格，并用 AI 猎取可注册的名字。",
+      verdict:
+        "斯堪的纳维亚相邻的两个高信任 ccTLD，价格接近，真正的分水岭在注册资格。做挪威市场 → .no：注册局 Norid 运营、注册量约 85 万，挪威是全球人均 GDP 最高的国家之一，消费者对本土信号极为敏感，name.no 一眼讲清「挪威的生意」，本土企业与政府机构的主站几乎都在 .no 上，Google 也会把 .no 站点与挪威地区相关联，挪威语市场 SEO 有天然加成。但资格是硬门槛：注册人须为在挪威 Brønnøysund 登记册注册的组织（个人限 priv.no 二级），海外企业需先设挪威分支或经本地代理——这道门槛让 .no 几乎没有投机注册，域名与真实挪威业务强绑定，本地信任度在欧洲 ccTLD 中数一数二。做丹麦市场 → .dk：非营利注册局 Punktum dk 运营、注册量约 140 万，丹麦是全球数字化程度最高的国家之一，name.dk 对丹麦消费者是本地生意的默认信号；资格上对全球开放，任何国家的个人与机构都能注册，只需通过注册局身份验证（丹麦本地用 MitID，海外注册人提交身份证明），无需本地主体——门槛比 .no 低一大截，滥用率照样全球最低。价格都温和平续：.no 注册约 $15/年（约 ¥110）、续费同价；.dk 约 $12/年（约 ¥85）平续，两边都无引流钩子。判断标准：用户在挪威且已有（或计划设立）挪威主体 → .no 的强绑定信任无可替代；用户在丹麦、或海外主体想快速拿一个北欧本地门面 → .dk 的开放注册更实际；同时做两个市场的品牌各注册一个，海外企业注意先把挪威主体架构准备好再谈 .no。",
+      pickA: ["挪威本地企业与服务", "进入挪威市场的跨国业务", "油气、海事与渔业相关公司", "挪威语内容与媒体站"],
+      pickB: ["丹麦本地企业与服务", "无本地主体、要快速注册的海外注册人", "北欧设计与家居品牌", "面向丹麦的电商"],
+    },
+    en: {
+      title: ".no vs .dk: Norway's Local-Entity Bar or Denmark's Open Validation",
+      metaDescription:
+        ".no is Norway's country domain at about $15/yr flat, requiring a Norwegian-registered organization; .dk is Denmark's at about $12/yr flat, open to anyone with registry ID validation. Compare market signals, eligibility and pricing, then hunt available names.",
+      verdict:
+        "Two neighboring high-trust Scandinavian ccTLDs with close pricing — the real divide is eligibility. Norway-focused → .no: run by registry Norid with about 850,000 registrations; Norway has one of the world's highest GDPs per capita, consumers are highly attuned to local signals, name.no says \"a Norwegian business\" at a glance, Norwegian companies and government institutions overwhelmingly live on .no, and Google geo-associates .no sites with Norway — a natural boost for Norwegian-market SEO. But eligibility is a hard bar: registrants must be organizations listed in Norway's Brønnøysund Register (individuals only under priv.no), so foreign companies need a Norwegian branch or a local agent first — a bar that leaves .no with virtually no speculative registrations, binding domains to real Norwegian businesses and making its local trust among the highest of any European ccTLD. Denmark-focused → .dk: run by non-profit registry Punktum dk with about 1.4 million registrations; Denmark is among the world's most digitized countries, and name.dk is the default local-business signal for Danish consumers; eligibility is open worldwide — anyone registers with registry ID validation (MitID for locals, identity documents for foreign registrants) and no local entity needed — a far lower bar than .no, yet .dk's abuse rate still ranks among the world's lowest. Pricing is gentle and flat on both sides: .no runs about $15/yr (≈¥110) with the same renewal; .dk about $12/yr flat (≈¥85) — no teaser games either way. The test: users in Norway and a Norwegian entity in hand (or planned) → .no's hard-bound trust is irreplaceable; users in Denmark, or an overseas registrant wanting a Nordic local front door fast → .dk's open registration is more practical; brands serious about both markets take one of each — and foreign companies should set up the Norwegian entity before counting on .no.",
+      pickA: ["Local Norwegian businesses & services", "Multinationals entering the Norwegian market", "Oil & gas, maritime & fisheries companies", "Norwegian-language content & media"],
+      pickB: ["Local Danish businesses & services", "Overseas registrants without a local entity", "Nordic design & home brands", "Denmark-facing e-commerce"],
+    },
+  },
+  "ie-vs-uk": {
+    slug: "ie-vs-uk",
+    a: "ie",
+    b: "uk",
+    zh: {
+      title: ".ie 和 .uk 怎么选：爱尔兰与英国两大英语市场 ccTLD 的对比",
+      metaDescription: ".ie 是爱尔兰国家域名、约 $25/年平续、需证明爱尔兰联系，自带「欧盟 + 英语」双重定位；.uk 是英国国家域名、约 $6/年平续、上千万注册量。对比两者的市场信号、资格与价格，并用 AI 猎取可注册的名字。",
+      verdict:
+        "爱尔兰海两岸的两个英语市场 ccTLD，脱欧之后分工反而更清楚：一个代表欧盟里的英语市场，一个代表欧盟外的英国市场。做爱尔兰市场 → .ie：注册局 .IE 运营、注册量约 33 万，爱尔兰是欧盟唯一以英语为主要语言的大市场，也是 Google、Apple、Meta 等科技巨头的欧洲总部所在地，name.ie 一眼讲清「爱尔兰的生意」，本土企业与政府机构的主站几乎都在 .ie 上，Google 也会把 .ie 站点与爱尔兰地区相关联；脱欧后 .ie 还多了一层用法——面向欧洲的英语业务用它讲「欧盟 + 英语」双重定位，这是 .uk 给不了的。资格有门槛：注册需证明与爱尔兰的真实联系（公民/居民身份或在爱业务证明），审核约一两个工作日，这让 .ie 几乎没有投机注册、库存干净。做英国市场 → .uk：非营利注册局 Nominet 运营超过 25 年、注册量上千万，是全球最大的 ccTLD 之一，英国消费者把 .uk/.co.uk 当「本地生意」的默认信号，2014 年起可直接注册二级 name.uk；资格宽松，只需英国境内送达地址（注册商可代理）。价格差距明显：.ie 注册约 $25/年（约 ¥180）平续；.uk 约 $6/年（约 ¥41）平续，是 ccTLD 里的良心价，两边都无引流钩子。判断标准：用户在爱尔兰、或要「欧盟 + 英语」定位的欧洲业务 → .ie 值回资格审核与年费；用户在英国 → .uk 的认知与价格都无可挑剔；同时做两个市场（都柏林与伦敦双城很常见）的品牌通常各注册一个做本地门面。",
+      pickA: ["爱尔兰本地企业与服务", "在爱设欧洲总部的科技公司", "要「欧盟 + 英语」定位的业务", "面向爱尔兰的电商与品牌"],
+      pickB: ["面向英国市场的电商", "英国本地服务与商铺", "英国媒体与内容站", "预算敏感、要最低平续价的主体"],
+    },
+    en: {
+      title: ".ie vs .uk: Ireland or the UK — Two English-Speaking Markets Compared",
+      metaDescription:
+        ".ie is Ireland's country domain at about $25/yr flat, requiring proof of an Irish connection, with an \"EU + English\" double position; .uk is the UK's at about $6/yr flat with tens of millions of registrations. Compare market signals, eligibility and pricing, then hunt available names.",
+      verdict:
+        "Two English-speaking ccTLDs facing each other across the Irish Sea — and since Brexit the split is clearer than ever: one represents the English-speaking market inside the EU, the other the UK market outside it. Ireland-focused → .ie: run by the .IE registry with about 330,000 registrations; Ireland is the EU's only major English-speaking market and hosts the European headquarters of Google, Apple and Meta, name.ie says \"an Irish business\" at a glance, Irish companies and government institutions overwhelmingly live on .ie, and Google geo-associates .ie sites with Ireland. Post-Brexit, .ie gained an extra use: Europe-facing English-language businesses use it to claim the \"EU + English\" double position — something .uk can no longer offer. Eligibility has a bar: registration requires proof of a real connection to Ireland (citizenship/residency or evidence of trading there), with checks taking a day or two — which leaves .ie with virtually no speculative registrations and clean inventory. UK-focused → .uk: run by non-profit registry Nominet for over 25 years with registrations in the tens of millions — one of the largest ccTLDs on earth; British consumers read .uk/.co.uk as the default local-business signal, and since 2014 you can register directly at name.uk; eligibility is light — just a UK address for service, registrar-proxied. Pricing gaps are visible: .ie runs about $25/yr flat (≈¥180); .uk about $6/yr flat (≈¥41) — honest ccTLD pricing on both sides with no teaser games. The test: users in Ireland, or a European business wanting the \"EU + English\" position → .ie earns its eligibility check and fee; users in the UK → .uk's recognition and price are beyond reproach; brands running both markets (a Dublin-London double act is common) usually register one of each as local front doors.",
+      pickA: ["Local Irish businesses & services", "Tech companies with European HQs in Ireland", "Ventures wanting the \"EU + English\" position", "Ireland-facing e-commerce & brands"],
+      pickB: ["UK-facing e-commerce", "Local British services & shops", "British media & content sites", "Budget-minded registrants wanting the lowest flat renewal"],
+    },
+  },
+  "nz-vs-au": {
+    slug: "nz-vs-au",
+    a: "nz",
+    b: "au",
+    zh: {
+      title: ".nz 和 .au 怎么选：新西兰与澳大利亚两大大洋洲 ccTLD 的对比",
+      metaDescription: ".nz 是新西兰国家域名、约 $20/年平续、任何人可注册，自带纯净新西兰联想；.au 是澳大利亚国家域名、约 $12/年平续、需澳大利亚存在资格、2022 年才开放直注。对比两者的市场信号、资格与库存，并用 AI 猎取可注册的名字。",
+      verdict:
+        "塔斯曼海两岸的两个高信任 ccTLD，价格都温和平续，分水岭在注册资格与库存时间线。做新西兰市场 → .nz：非营利机构 InternetNZ 运营、注册量约 75 万，新西兰消费者对本土信号非常敏感，name.nz 一眼讲清「新西兰的生意」，本土企业与政府机构的主站几乎都在 .nz（或传统的 .co.nz）上，Google 也会把 .nz 站点与新西兰地区相关联；新西兰的「纯净」国家品牌还给 .nz 加了一层旅游、户外与农产品出口联想。资格完全开放：2014 年起开放顶级直注，任何国家的个人与机构可直接注册、无需本地地址——这是它对 .au 的最大优势。做澳大利亚市场 → .au：auDA 管理、注册量超过 400 万，澳洲消费者把 .au 系后缀当「本地生意」的默认信号；2022 年 3 月才开放二级直注，信任是几十年攒下的、好名字库存却是 2022 年才重新洗牌的，不少在 .com 下绝迹的词在 name.au 下仍有机会。但资格是硬门槛：须满足澳大利亚存在要求（公民/居民、ABN 注册企业或在澳商标持有人），海外主体不符合就无法持有。价格接近：.nz 注册约 $20/年（约 ¥145）平续；.au 约 $12/年（约 ¥85）平续，两边都无引流钩子。判断标准：用户在新西兰、或做旅游与农产品出口 → .nz 的本地信任与纯净联想更对口，海外主体也能直接注册；用户在澳大利亚且有澳洲资格 → .au 的本地信任加新鲜库存是难得组合；同时做澳新两个市场（ANZ 打包很常见）的品牌通常各注册一个做本地门面。",
+      pickA: ["新西兰本地企业与服务", "旅游、户外与探险业务", "农产品与食品出口品牌", "无澳洲资格的海外注册人"],
+      pickB: ["面向澳大利亚市场的电商", "澳洲本地服务与事务所", "想抢 2022 年新开放库存的品牌", "有 ABN 或澳洲商标的主体"],
+    },
+    en: {
+      title: ".nz vs .au: New Zealand or Australia — Two Oceanian ccTLDs Compared",
+      metaDescription:
+        ".nz is New Zealand's country domain at about $20/yr flat, open to anyone, with a pure-New-Zealand halo; .au is Australia's at about $12/yr flat, gated by Australian presence rules, with direct registration only since 2022. Compare market signals, eligibility and inventory, then hunt available names.",
+      verdict:
+        "Two high-trust ccTLDs across the Tasman Sea, both gently flat-priced — the divide is eligibility and the inventory timeline. New Zealand-focused → .nz: run by non-profit InternetNZ with about 750,000 registrations; Kiwi consumers hold a strong local preference, name.nz says \"a Kiwi business\" at a glance, New Zealand companies and government institutions overwhelmingly live on .nz (or the traditional .co.nz), and Google geo-associates .nz sites with New Zealand; the country's \"pure\" national brand adds a tourism, outdoor and agri-export halo. Eligibility is fully open: direct second-level registration opened in 2014, and anyone from anywhere registers with no local address — its biggest edge over .au. Australia-focused → .au: governed by auDA with over 4 million registrations; Australian consumers read .au-family suffixes as the default local-business signal; direct second-level registration opened only in March 2022 — trust built over decades, inventory reshuffled in 2022 — so words long gone on .com often remain available at name.au. But eligibility is a hard gate: the Australian presence requirement (citizens/residents, ABN-registered businesses or Australian trademark holders) — overseas entities that don't qualify simply can't hold one. Pricing is close: .nz runs about $20/yr flat (≈¥145); .au about $12/yr flat (≈¥85) — no teaser games either way. The test: users in New Zealand, or a tourism/agri-export venture → .nz's local trust and pure-NZ halo fit better, and overseas registrants sign up directly; users in Australia with Australian eligibility → .au's local trust plus fresh inventory is a rare combination; brands running both markets (the ANZ bundle is common) usually register one of each as local front doors.",
+      pickA: ["Local New Zealand businesses & services", "Tourism, outdoor & adventure ventures", "Agri & food export brands", "Overseas registrants without Australian presence"],
+      pickB: ["Australia-facing e-commerce", "Local Australian services & firms", "Brands hunting the 2022 reshuffled inventory", "Entities with an ABN or Australian trademark"],
+    },
+  },
+  "mx-vs-es": {
+    slug: "mx-vs-es",
+    a: "mx",
+    b: "es",
+    zh: {
+      title: ".mx 和 .es 怎么选：墨西哥与西班牙两大西语市场 ccTLD 的对比",
+      metaDescription: ".mx 是墨西哥国家域名、任何人可注册，首年约 $13 但续费约 $50/年；.es 是西班牙国家域名、注册约 $8、续费约 $10/年、同样零门槛。对比两者的市场信号、续费与西语圈定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "大西洋两岸的两个西语 ccTLD，都对全球开放注册，分工在市场半径与续费结构。做墨西哥与美洲市场 → .mx：Registry MX（NIC México）运营、注册量约 130 万，墨西哥是拉美第二大经济体、全球第一大西语国家（人口约 1.3 亿），电商增速常年位居全球前列，name.mx 一眼讲清「墨西哥的生意」，本土企业与机构的主站大多在 .mx（或传统的 .com.mx）上，Google 也会把 .mx 站点与墨西哥地区相关联；美墨近岸外包浪潮下，制造与供应链业务用 .mx 讲「墨西哥落地」也很自然。做西班牙与欧洲西语市场 → .es：西班牙政府旗下 Red.es 运营、注册量约 200 万，对西班牙消费者 name.es 是本地生意的默认信号；「es」还是西语系动词「是」，面向拉美与美国西语人群的内容站也常拿 .es 讲「西语世界的生意」——但严格的地域信号仍指向西班牙。资格两边都零门槛：任何国家的个人与机构可直接注册、无需本地地址或代理。续费结构是最大反差：.mx 首年常见促销约 $13（约 ¥90）但续费约 $50/年（约 ¥360），预算要按续费价算、别被首年低价钩住；.es 注册约 $8（约 ¥55）、续费约 $10/年（约 ¥72），差价小无钩子，长期持有成本只有 .mx 的五分之一。判断标准：用户在墨西哥、或做美洲市场与近岸制造 → .mx 的本地信任值回续费；用户在西班牙、或做欧洲西语市场 → .es 便宜且信号准；泛西语业务两边都不完美——地域信号各锚定一国，跨美欧的西语品牌通常各注册一个，或搭配通用后缀做全球主站。",
+      pickA: ["墨西哥本地企业与服务", "面向墨西哥的跨境电商", "近岸制造与供应链业务", "面向西语美洲的品牌"],
+      pickB: ["西班牙本地企业与服务", "面向西班牙的电商", "欧洲西语内容与媒体站", "在意长期续费成本的持有者"],
+    },
+    en: {
+      title: ".mx vs .es: Mexico or Spain — Two Spanish-Language ccTLDs Compared",
+      metaDescription:
+        ".mx is Mexico's country domain, open to anyone, at about $13 in year one but ~$50/yr renewal; .es is Spain's at about $8 to register and $10/yr to renew, equally zero-bar. Compare market signals, renewals and Spanish-world positioning, then hunt available names.",
+      verdict:
+        "Two Spanish-language ccTLDs across the Atlantic, both open to worldwide registration — the split is market radius and renewal structure. Mexico and the Americas → .mx: run by Registry MX (NIC México) with about 1.3 million registrations; Mexico is Latin America's second-largest economy and the world's largest Spanish-speaking country (about 130 million people) with e-commerce growth consistently among the fastest anywhere, name.mx says \"a Mexican business\" at a glance, Mexican companies and institutions overwhelmingly live on .mx (or the traditional .com.mx), and Google geo-associates .mx sites with Mexico; amid the US–Mexico nearshoring wave, manufacturing and supply-chain ventures naturally use .mx to signal \"on the ground in Mexico\". Spain and European Spanish markets → .es: run by government-backed Red.es with about 2 million registrations; to Spanish consumers name.es is the default local-business signal, and since \"es\" is the Spanish verb \"is\", content sites targeting Latin America and US Hispanics often pick .es to say \"a Spanish-language business\" — though the strict geo signal still points to Spain. Eligibility is a zero bar on both sides: anyone from anywhere registers directly with no local address or proxy. Renewal structure is the sharpest contrast: .mx runs about $13 in year one (≈¥90) but about $50/yr to renew (≈¥360) — budget on the renewal price and don't get hooked by the teaser; .es runs about $8 to register (≈¥55) and $10/yr to renew (≈¥72), a tiny step-up with no traps — a fifth of .mx's long-term cost. The test: users in Mexico, or an Americas-market and nearshoring venture → .mx's local trust earns its renewal; users in Spain, or European Spanish markets → .es is cheap with an accurate signal; pan-Hispanic ventures find neither perfect — each geo signal anchors to one country, so brands spanning the Americas and Europe usually register one of each, or add a generic suffix as the global main site.",
+      pickA: ["Local Mexican businesses & services", "Mexico-facing cross-border e-commerce", "Nearshoring manufacturing & supply chain", "Brands targeting Spanish-speaking Americas"],
+      pickB: ["Local Spanish businesses & services", "Spain-facing e-commerce", "European Spanish-language content & media", "Holders minding long-term renewal costs"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
