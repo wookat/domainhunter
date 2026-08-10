@@ -762,7 +762,7 @@
     ]
   },
   "vs": {
-    "count": 414,
+    "count": 420,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -1177,7 +1177,13 @@
       "cz-vs-pl",
       "tr-vs-ae",
       "id-vs-sg",
-      "id-vs-me"
+      "id-vs-me",
+      "vn-vs-id",
+      "ph-vs-sg",
+      "gr-vs-tr",
+      "ro-vs-pl",
+      "hu-vs-cz",
+      "cl-vs-mx"
     ]
   }
 }
