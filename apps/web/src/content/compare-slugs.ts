@@ -369,6 +369,12 @@ export const COMPARE_SLUGS = [
   "immo-vs-estate",
   "vin-vs-wine",
   "university-vs-education",
+  "hospital-vs-clinic",
+  "gmbh-vs-company",
+  "condos-vs-apartments",
+  "rehab-vs-care",
+  "nyc-vs-us",
+  "london-vs-uk",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
