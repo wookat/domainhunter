@@ -16988,6 +16988,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  kidswear: {
+    slug: "kidswear",
+    keywords: ["童装品牌", "儿童服饰", "亲子装", "kidswear", "children's clothing"],
+    tlds: [
+      { tld: "clothing", zh: "后缀即品类，童装独立站的货架身份一步到位", en: "The suffix is the category — a kidswear store's shelf identity in one step" },
+      { tld: "store", zh: "独立站零售身份直给，海外家长下单零疑虑", en: "Retail identity stated outright — overseas parents check out without a second thought" },
+      { tld: "shop", zh: "短而通用的电商后缀，主域被注册时的体面替补", en: "Short, universal commerce suffix — the graceful fallback when the primary domain is taken" },
+    ],
+    zh: {
+      label: "童装品牌",
+      title: "童装品牌与儿童服饰独立站怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "童装品牌与儿童服饰命名指南：叠音童趣、成长寓意等思路，巴拉巴拉/Carter's/Mini Rodini 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "童装的名字要同时讨好两代人：掏钱的是家长，穿上身的是孩子——名字既要让家长觉得安心有品质，又要让孩子念得出、喜欢得起来。看行业样本：巴拉巴拉用叠音把「童趣」直接写进发音，四个字念出来就是孩子的语感，森马靠它做出童装第一品牌；Carter's 用创始人姓氏加所有格，把「一家人的老字号」的信任感传了一个多世纪；Mini Rodini 则以「小小的 Rodini」把北欧设计师品牌的调性浓缩进一个形容词——三条路线分别代表「童语发音、家族信任、设计师人格」。童装命名还有个隐藏考点是「成长区间」：名字锁死婴幼儿（如带「婴」「babe」），大童线就接不住；锁定年龄段模糊的童趣词，品牌才能陪孩子长大。独立站出海的童装还要过拼写关——家长在搜索框里凭听写打得出来的名字，才配得上广告费。",
+      namingIdeas: [
+        "叠音与童语发音：巴拉巴拉式的叠音自带孩子的语感——家长念给孩子听、孩子自己也念得出，发音即品类暗号",
+        "成长与陪伴寓意：长、芽、伴、grow——把「陪孩子长大」写进名字，家长买的不只是衣服是成长记录",
+        "家族信任路线：姓氏+所有格（Carter's 式）——童装是信任品类，老字号语感让新品牌也像传了三代",
+        "北欧设计师调性：mini+人名、小写字母、简洁词根——中高端童装借设计师人格溢价，名字先立住审美",
+        "两代人测试：名字念给家长听要安心、念给孩子听要好玩——只过一关的名字只做成一半生意",
+      ],
+      cases: [
+        { name: "巴拉巴拉", takeaway: "叠音四字自带孩子的语感：好念好记、天然童趣，从森马体系里长成中国童装第一品牌——童语发音命名的教科书" },
+        { name: "Carter's", takeaway: "创始人姓氏加所有格：「Carter 家的衣服」把家族信任感传了一个多世纪——童装信任命名的美国老字号样本" },
+        { name: "Mini Rodini", takeaway: "「小小的 Rodini」：一个 mini 把设计师品牌的调性与童装品类同时说清——北欧童装人格化命名的高分卷" },
+        { name: "戴维贝拉", takeaway: "davebella 的音译四字：洋名语感配本土发音习惯，跨境与国内双线都立得住——出海童装双语命名的实用样本" },
+      ],
+      pitfalls: [
+        "锁死婴幼儿区间：名字带「婴」「babe」，大童线与青少年线接不住——成长区间要留白",
+        "只讨好家长忘了孩子：过于成人化的品质词让孩子无感，童装的复购一半来自孩子指名要穿",
+        "生造词拼写翻车：海外家长凭听写打不出的名字，广告点击全漏在搜索框里——出海前先做拼写测试",
+        "与母婴大牌撞词根：mini/kids/bala 类词根拥挤，商标近似驳回率高——注册前先查同类目商标库",
+      ],
+    },
+    en: {
+      label: "Kidswear brands",
+      title: "How to Name a Kidswear Brand or Children's Clothing Store: Strategies, Cases & Domains",
+      metaDescription:
+        "Kidswear and children's clothing naming guide: playful reduplication, grow-with-me meanings, breakdowns of Carter's/Mini Rodini/Hanna Andersson, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A kidswear name must charm two generations at once: the parent pays, the child wears — so the name needs the parent's trust and the child's giggle in the same breath. The benchmarks show three routes: Carter's puts a founder's surname in the possessive and lets \"the Carter family's clothes\" carry a century of trust; Mini Rodini compresses a Scandinavian designer's persona into one adjective — small in size, big in attitude; Hanna Andersson borrows a Swedish grandmother's name to promise heirloom softness. Kidswear naming also hides a growth-span trap: a name locked to babies (anything with \"babe\" or \"infant\") cannot stretch to the tween line — age-neutral playfulness lets the brand grow up with the child. And for a store selling across borders, the name must survive the spelling test: parents typing from memory into a search bar are the real conversion funnel.",
+      namingIdeas: [
+        "Playful reduplication and child-mouth sounds: names a toddler can pronounce become the brand's own jingle — the parent repeats what the child can say",
+        "Grow-with-me meanings: sprout, grow, along — parents buy a record of childhood, not just clothes; write the companionship into the name",
+        "Family-trust possessives: surname + 's (the Carter's route) — kidswear is a trust category, and heritage diction makes even a new brand feel three generations old",
+        "Designer-persona minimalism: mini + a name, lowercase wordmarks — premium kidswear borrows a designer's taste; the name must establish the aesthetic first",
+        "The two-generation test: read the name to a parent for reassurance and to a child for delight — a name that passes only one test builds only half a business",
+      ],
+      cases: [
+        { name: "Carter's", takeaway: "Founder surname in the possessive: \"the Carter family's clothes\" carried trust for over a century — the American heritage template for kidswear" },
+        { name: "Mini Rodini", takeaway: "\"Little Rodini\": one mini fuses the designer's persona with the category — Scandinavian kidswear persona-naming at its sharpest" },
+        { name: "Hanna Andersson", takeaway: "A Swedish grandmother's name promising heirloom softness: provenance and warmth in one signature — origin-story naming for premium basics" },
+        { name: "Jacadi", takeaway: "From the French children's game \"Jacques a dit\" (Simon says): a playground phrase turned Parisian chic — playful roots wearing couture polish" },
+      ],
+      pitfalls: [
+        "Locking into the baby span: names with babe or infant cannot stretch to the tween line — leave the growth span open",
+        "Charming only the parent: adult-toned quality words leave the child cold, and half of kidswear repurchase comes from the child asking by name",
+        "Invented spellings that fail dictation: parents typing from memory miss the search bar — run the spelling test before the ad budget",
+        "Crowding the mini/kids word roots: the category's trademark space is packed — sweep the class registry before falling in love",
+      ],
+    },
+  },
+  cookingclass: {
+    slug: "cookingclass",
+    keywords: ["烹饪教室", "料理课堂", "菜谱教学", "cooking class", "culinary school"],
+    tlds: [
+      { tld: "cooking", zh: "后缀即品类，烹饪教学的域名自带锅气", en: "The suffix is the category — a cooking school's domain arrives with the sizzle" },
+      { tld: "kitchen", zh: "把教室场景写进后缀，「进厨房学做菜」一步到位", en: "The classroom is the kitchen — the suffix puts students at the counter in one step" },
+      { tld: "academy", zh: "教学身份直给，体系化课程与考证班都托得住", en: "The teaching credential stated outright — structured curricula and certification tracks both fit" },
+    ],
+    zh: {
+      label: "烹饪教室",
+      title: "烹饪教室与菜谱教学品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "烹饪教室与菜谱教学命名指南：锅气意象、手作陪伴等思路，新东方烹饪/ABC Cooking Studio/下厨房 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "烹饪教学的名字要先分清卖的是「手艺」还是「生活方式」：职业厨师培训卖前途，名字要像学校一样可信；都市白领的周末料理课卖治愈，名字要像闺蜜的厨房一样亲切。看行业样本：新东方烹饪把「新东方」的教育品牌感嫁接到灶台，「学厨师就到新东方」的广告语喊了三十年，职业培训命名的信任公式是「像学校、有前途」；ABC Cooking Studio 用三个字母把「零基础也能学会」的门槛感降到最低，粉色厨房开进商场中庭，名字与场景一起把烹饪课变成都市生活方式；下厨房则证明菜谱平台的名字要像一句日常口语——「今晚下厨房」是行为也是品牌。命名的关键是把「教」的压迫感换成「会」的成就感：用户报名不是为了上课，是为了端出那盘菜的瞬间——名字要许诺结果而不是过程。",
+      namingIdeas: [
+        "锅气与烟火意象：灶、锅、香、味——烹饪课卖的是热气腾腾的现场感，名字先把厨房的温度传出去",
+        "零门槛暗示：ABC 式的入门语感——都市料理课最大的敌人是「我不会做饭」的自我怀疑，名字先拆门槛",
+        "教育信任嫁接：学院、课堂、academy——职业培训要像学校，名字的机构感直接决定家长替孩子选校的信心",
+        "日常口语路线：下厨房式的行为短语——菜谱与教学内容品牌把「做饭」这个动作占为己有，名字即习惯",
+        "成品瞬间测试：名字要配得上学员晒出第一盘菜的朋友圈——许诺「你会做出来」比「我们教得好」有效",
+      ],
+      cases: [
+        { name: "新东方烹饪", takeaway: "教育品牌感嫁接灶台：「学厨师就到新东方」三十年广告语把职业培训的信任公式说透——像学校、有前途" },
+        { name: "ABC Cooking Studio", takeaway: "三个字母把门槛降到最低：零基础语感配商场里的粉色厨房，烹饪课变成都市生活方式——去门槛命名的日本样本" },
+        { name: "下厨房", takeaway: "一句日常口语做品牌：「今晚下厨房」是行为也是名字，菜谱平台把做饭这个动作占为己有——口语命名的中文范本" },
+        { name: "Le Cordon Bleu", takeaway: "「蓝带」的百年荣誉勋章：一条丝带把法餐正统与职业荣耀写进名字——烹饪教育的奢侈品级信任资产" },
+      ],
+      pitfalls: [
+        "机构感压过烟火气：周末料理课起了个职校名，白领学员拍照都嫌土——先分清卖前途还是卖治愈",
+        "锁死单一菜系：名字绑死烘焙或日料，扩品类时老学员认知转不过来——菜系留给课程名，品牌名管厨房",
+        "「教」字压迫感：培训、特训类词让休闲学员想起补习班——把「教」换成「会」，压迫感变成就感",
+        "忽略连锁与加盟拼写：教室要开分店、课程要上平台，生僻字与长英文在门头与小程序里都费劲",
+      ],
+    },
+    en: {
+      label: "Cooking classes",
+      title: "How to Name a Cooking Class or Recipe Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Cooking class and recipe brand naming guide: sizzle imagery, low-threshold cues, breakdowns of ABC Cooking Studio/Le Cordon Bleu/Sur La Table, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A cooking-education name must first decide what it sells: a trade or a lifestyle. Professional culinary programs sell careers — the name must read like a school; weekend classes for urban professionals sell therapy — the name must feel like a friend's kitchen. The benchmarks map the spectrum: Le Cordon Bleu wears a century-old ribbon of French culinary honor, proof that a heritage emblem can carry institutional trust worldwide; ABC Cooking Studio drops the entry barrier to three letters — beginner-friendly by sound, with pink mall-atrium kitchens turning classes into a lifestyle; Sur La Table (\"on the table\") names the destination of every lesson — the moment the dish lands. The core trick is converting the pressure of \"being taught\" into the pride of \"being able\": students don't enroll for lessons, they enroll for the instant they plate the dish — promise the outcome, not the process.",
+      namingIdeas: [
+        "Sizzle and hearth imagery: pan, flame, savor — cooking classes sell a steaming, hands-on scene; let the name carry the kitchen's warmth first",
+        "Low-threshold cues: ABC-style beginner sounds — the enemy of every enrollment is \"I can't cook\"; dismantle the barrier in the name itself",
+        "Institutional trust grafting: academy, institute, atelier — career programs must read like schools; the name's gravitas decides a parent's tuition confidence",
+        "Everyday-phrase routes: naming the action of cooking itself — recipe and content brands that own the verb become the habit",
+        "The first-plate test: the name must deserve the student's photo of their first finished dish — \"you will make this\" beats \"we teach well\"",
+      ],
+      cases: [
+        { name: "Le Cordon Bleu", takeaway: "A century-old blue ribbon of French culinary honor: heritage emblem as institutional trust, carried from Paris to campuses worldwide — luxury-grade credential naming" },
+        { name: "ABC Cooking Studio", takeaway: "Three letters dropping the barrier to zero: beginner-friendly by sound, lifestyle by setting — Japan's template for de-intimidation naming" },
+        { name: "Sur La Table", takeaway: "\"On the table\": the destination of every lesson named outright — the plated moment as brand, French polish included" },
+        { name: "MasterClass", takeaway: "Mastery + class fused into one premium promise: learning from the very best, category-defining compression — aspiration naming for online education" },
+      ],
+      pitfalls: [
+        "Institution crushing the warmth: a weekend class named like a trade school makes students hide the receipt — decide first whether you sell careers or comfort",
+        "Locking into one cuisine: a name welded to baking or sushi cannot stretch when the curriculum grows — cuisines belong in course names, not the brand",
+        "The pressure of \"training\": bootcamp diction reminds leisure learners of cram school — swap being-taught for being-able and pressure becomes pride",
+        "Ignoring franchise spelling: classrooms multiply and courses go on platforms — obscure words strain on storefronts and booking apps alike",
+      ],
+    },
+  },
+  souvenir: {
+    slug: "souvenir",
+    keywords: ["伴手礼", "特产礼盒", "城市礼物", "souvenir", "local gifts"],
+    tlds: [
+      { tld: "gift", zh: "后缀即品类，伴手礼的心意从域名就开始递出", en: "The suffix is the category — the gift is being handed over from the domain onward" },
+      { tld: "shop", zh: "短而通用的零售后缀，景区门店与线上商城一名通用", en: "Short, universal retail suffix — one name serving the scenic-spot store and the online mall alike" },
+      { tld: "store", zh: "独立站身份直给，特产礼盒的跨境电商也兜得住", en: "Store identity stated outright — cross-border gift-box commerce included" },
+    ],
+    zh: {
+      label: "伴手礼品牌",
+      title: "伴手礼与特产礼盒品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "伴手礼与特产礼盒命名指南：风土记忆、心意表达等思路，微热山丘/白色恋人/東京ばな奈 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "伴手礼的名字要替送礼的人说话：一盒凤梨酥递出去，名字就是那句没说出口的「我去了那里，想着你」。与普通食品品牌不同，伴手礼是「代表一座城」的生意——名字要背得起风土，也要拿得出手。看行业样本：微热山丘把台湾南投的丘陵阳光写进四个字，「微热」是土凤梨的酸甜温度，也是人情的温度，一个名字同时完成风土叙事与心意表达；白色恋人用「恋人」把北海道的雪色浪漫装进饼干盒，名字本身就是送礼的理由；東京ばな奈则直接把城市名焊进品牌——「东京的伴手礼」这个心智位置一旦占住，机场货架就是它的主场。伴手礼命名的隐藏考点是「转述场景」：收礼的人会问「这是什么」，送礼的人转述名字的那句话，就是品牌最重要的一次曝光——名字要让这句转述自带故事。",
+      namingIdeas: [
+        "风土记忆词：山丘、雪、湖、巷——把产地的地貌与气候写进名字，特产的「特」字才立得住",
+        "心意表达路线：恋人、心意、念——伴手礼替人传情，名字直接说出那句没说出口的话",
+        "城市名焊接：東京ばな奈式的「城市+品类」——把「XX 城的伴手礼」心智位置占住，机场与高铁站货架就是主场",
+        "老字号语感：斋、记、堂——特产品类信老味道，传统字号的信任感让新品牌像传了三代",
+        "转述测试：收礼人问「这是什么」时，送礼人转述名字的那句话要自带故事——转述即传播",
+      ],
+      cases: [
+        { name: "微热山丘", takeaway: "台湾南投的丘陵阳光写进四个字：「微热」既是土凤梨的酸甜温度也是人情温度——风土与心意一次说透的命名天花板" },
+        { name: "白色恋人", takeaway: "「恋人」把北海道雪色浪漫装进饼干盒：名字本身就是送礼的理由——心意命名让产品变成表达" },
+        { name: "東京ばな奈", takeaway: "城市名直接焊进品牌：「东京的伴手礼」心智位置一旦占住，机场货架就是主场——城市绑定命名的日本范本" },
+        { name: "稻香村", takeaway: "「稻香」的风土加「村」的烟火：老字号三个字把京味点心的信任传了百年——传统字号语感的活样本" },
+      ],
+      pitfalls: [
+        "只有产地没有品牌：名字全是地名与品类词（XX 特产），公共资产独占不了——风土要配自有品牌词",
+        "礼盒感压过日常感：名字太隆重，游客只在送礼时想起你——伴手礼的复购藏在「自己也想吃」里",
+        "锁死单一品类：凤梨酥卖成了才发现名字装不下麻薯与茶——品类留给产品线，名字管心意",
+        "忽略多语场景：机场货架前的外国游客念不出的名字，错过的是客单价最高的那批人——双语可读性先测",
+      ],
+    },
+    en: {
+      label: "Souvenir brands",
+      title: "How to Name a Souvenir or Local Gift Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Souvenir and local gift naming guide: terroir memory, sentiment-forward names, breakdowns of SunnyHills/Shiroi Koibito/Tokyo Banana, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A souvenir name speaks for the giver: when the box changes hands, the name is the unspoken sentence — \"I was there, and I thought of you.\" Unlike an ordinary food brand, a souvenir represents a place, so the name must carry terroir and still look good being handed over. The benchmarks show the craft: SunnyHills writes Taiwan's Nantou hills and their warm sun into one image — the pineapple cake's tang and human warmth in a single name; Shiroi Koibito (\"white lover\") packs Hokkaido's snowbound romance into a biscuit tin, making the name itself the reason to gift; Tokyo Banana welds the city into the brand — once \"Tokyo's souvenir\" is claimed in the mind, the airport shelf becomes home turf. The hidden exam is the retelling scene: the recipient asks \"what is this?\", and the giver's one-line answer is the brand's most important impression — the name must load that retelling with a story.",
+      namingIdeas: [
+        "Terroir memory words: hill, snow, lake, lane — write the origin's landscape and climate into the name, and \"local\" earns its meaning",
+        "Sentiment-forward routes: lover, thinking of you, keepsake — souvenirs deliver feelings by proxy; let the name say the unspoken sentence outright",
+        "City-welding: the Tokyo Banana formula of city + treat — claim \"this city's souvenir\" in the mind and the airport shelf becomes home turf",
+        "Heritage-shop diction: house, hall, & sons — travelers trust old flavors; heritage cadence makes a new brand feel three generations deep",
+        "The retelling test: when the recipient asks \"what is this?\", the giver's one-line answer must carry a story — the retelling is the marketing",
+      ],
+      cases: [
+        { name: "SunnyHills", takeaway: "Nantou's sunlit hills in one image: the pineapple cake's warm tang and human warmth fused — terroir and sentiment resolved in a single name" },
+        { name: "Shiroi Koibito", takeaway: "\"White lover\": Hokkaido's snowbound romance packed into a biscuit tin — the name itself becomes the reason to gift" },
+        { name: "Tokyo Banana", takeaway: "The city welded into the brand: once \"Tokyo's souvenir\" is claimed in the mind, the airport shelf is home turf — city-binding at its most literal" },
+        { name: "Fortnum & Mason", takeaway: "Two founders' names aged three centuries: heritage cadence turning a hamper into an institution — the gifting trust that only time (or its diction) can buy" },
+      ],
+      pitfalls: [
+        "All origin, no brand: names built purely of place + category (\"X City Specialties\") are public assets no one can own — terroir needs a proprietary word beside it",
+        "Too ceremonial for the everyday: an overly formal name is remembered only at gifting time — repurchase hides in \"I want one for myself\"",
+        "Locking into one treat: the pineapple-cake name that cannot hold mochi or tea — products carry the category, the name carries the sentiment",
+        "Ignoring the multilingual shelf: a name foreign travelers cannot pronounce loses the highest-spending customers at the airport — test bilingual readability first",
+      ],
+    },
+  },
+  partyplanner: {
+    slug: "partyplanner",
+    keywords: ["派对策划", "生日派对", "气球布置", "party planner", "party supplies"],
+    tlds: [
+      { tld: "party", zh: "后缀即品类，派对策划的域名自带彩带与气球", en: "The suffix is the category — a party planner's domain arrives with streamers and balloons" },
+      { tld: "events", zh: "活动策划的行业后缀，企业年会与私人派对一名通吃", en: "The events-industry suffix — corporate galas and private parties under one name" },
+      { tld: "fun", zh: "把「好玩」写进后缀，气氛从网址就开始拉满", en: "Fun written into the suffix — the mood starts building from the URL" },
+    ],
+    zh: {
+      label: "派对策划",
+      title: "派对策划与气球布置工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "派对策划与气球布置命名指南：惊喜时刻、气氛魔法等思路，Party City/Meri Meri/Evite 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "派对策划的名字要在下单前就把气氛给到：客户找你办的是孩子的十岁生日、闺蜜的求婚仪式、公司的百人年会——名字要让人相信「交给你，现场一定好看」。与婚庆和活动策划不同，派对生意的关键词是「惊喜感」：主题、色系、气球拱门、甜品台，全是为了那一声「哇」。看行业样本：Party City 把「派对的城市」四个字变成品类超市的心智——想到派对用品就想到它，品类词+空间词的组合简单粗暴但占位精准；Meri Meri 用重复音节的轻快发音把英伦手作派对纸品的精致感说出来，念一遍就像彩带落下来；Evite 则把 e+invite 压成一个动词，电子邀请函这个品类直接以它命名。派对命名的隐藏考点是「家长转发」：儿童派对的订单藏在家长群转发的九宫格里——名字要在相册水印与群聊推荐里都轻盈上口。",
+      namingIdeas: [
+        "惊喜时刻词：哇、惊喜、surprise——派对卖的是那一声「哇」，把高光时刻直接写进名字",
+        "气氛魔法路线：彩带、气球、星光、糖果——布置类工作室靠视觉吃饭，名字要自带画面与色彩",
+        "品类+空间占位：Party City 式的直给组合——派对用品与一站式策划，名字先把品类心智占住",
+        "轻快发音：Meri Meri 式的重复音节——念出来像彩带落下，家长群转发与孩子复述都零门槛",
+        "相册水印测试：名字印在派对现场照片角落要好看——九宫格转发是派对生意最大的获客渠道",
+      ],
+      cases: [
+        { name: "Party City", takeaway: "「派对的城市」：品类词+空间词的直给组合把派对用品超市的心智占住——想到派对就想到它，占位命名的美国样本" },
+        { name: "Meri Meri", takeaway: "重复音节的轻快发音：念一遍像彩带落下，英伦手作纸品的精致感全在语感里——派对品牌音感命名的高分卷" },
+        { name: "Evite", takeaway: "e+invite 压成一个动词：电子邀请函品类直接以它命名，发邀请=Evite——品类动词化的经典路径" },
+        { name: "Ginger Ray", takeaway: "ginger（姜黄的暖）+ray（一道光）：两个词把英式派对布置的暖调审美说清——色彩通感命名的轻巧样本" },
+      ],
+      pitfalls: [
+        "锁死儿童场景：名字太卡通，企业年会与求婚仪式的高客单订单不敢找你——童趣要留成人余地",
+        "与婚庆混淆：派对策划与婚庆的决策链完全不同，名字太「喜庆」会被当成婚庆公司比价",
+        "堆砌 party 词根：全城工作室一半叫 XX Party，家长群里转发时根本分不清——差异化要在 party 之外",
+        "忽略档期与地域扩张：名字绑死城市或场地，跨城接单与加盟扩张时品牌要重来",
+      ],
+    },
+    en: {
+      label: "Party planners",
+      title: "How to Name a Party Planning or Balloon Styling Studio: Strategies, Cases & Domains",
+      metaDescription:
+        "Party planner and balloon styling naming guide: wow-moment words, festive sound play, breakdowns of Party City/Meri Meri/Evite, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A party planner's name must deliver the mood before the deposit: clients hand you a child's tenth birthday, a best friend's proposal, a hundred-guest company gala — and the name must promise \"give it to us and the room will gasp.\" Unlike weddings or corporate events, the party trade runs on the wow: themes, palettes, balloon arches, dessert tables, all engineered for one collective \"wow.\" The benchmarks map the field: Party City claims the category-supermarket position with a blunt category + place formula — think party supplies, think them; Meri Meri says its handcrafted London-paper-goods refinement through a skipping double syllable that falls like confetti; Evite compresses e + invite into a verb that named the digital-invitation category outright. The hidden exam is the parents' group chat: children's-party bookings live in forwarded photo grids — the name must look light in a watermark and sound easy in a recommendation.",
+      namingIdeas: [
+        "Wow-moment words: wow, surprise, confetti — parties sell that one collective gasp; write the highlight into the name itself",
+        "Festive-magic imagery: streamer, balloon, sparkle, candy — styling studios live on visuals; the name should arrive pre-colored",
+        "Category + place claims: the Party City formula — blunt but precise; own the one-stop-party position in the mind first",
+        "Skipping sound play: Meri Meri-style doubled syllables — spoken like confetti falling, effortless in group-chat forwards and kids' retellings",
+        "The watermark test: the name must look good in the corner of a party photo — forwarded photo grids are the trade's biggest funnel",
+      ],
+      cases: [
+        { name: "Party City", takeaway: "Category + place in one blunt claim: the party-supply supermarket position owned outright — think party, think them; positional naming at its most direct" },
+        { name: "Meri Meri", takeaway: "A skipping double syllable that falls like confetti: London handcrafted paper-goods refinement carried entirely by sound — festive phonetic naming at its best" },
+        { name: "Evite", takeaway: "e + invite compressed into a verb: the digital-invitation category named after itself — sending an invite became Eviting; category-verb naming's classic path" },
+        { name: "Ginger Ray", takeaway: "Warm spice + a ray of light: two words carrying the warm-toned British party aesthetic — lightweight synesthetic naming for a styling brand" },
+      ],
+      pitfalls: [
+        "Locking into kids' parties: a too-cartoonish name scares off proposals and corporate galas — keep adult headroom in the playfulness",
+        "Blurring into weddings: party planning and weddings have entirely different decision chains — an overly bridal name gets you price-compared as a wedding vendor",
+        "Crowding the party root: half the studios in town are called Something Party — differentiation must live outside the category word",
+        "Welding the name to one city or venue: cross-city bookings and franchising force a rebrand — leave the geography open",
+      ],
+    },
+  },
+  seafishing: {
+    slug: "seafishing",
+    keywords: ["海钓包船", "船钓俱乐部", "海钓基地", "sea fishing", "fishing charter"],
+    tlds: [
+      { tld: "fishing", zh: "后缀即品类，海钓包船的域名自带咸腥海风", en: "The suffix is the category — a charter's domain arrives with salt spray" },
+      { tld: "boats", zh: "把「船」写进后缀，包船与船宿业态一眼看懂", en: "The boat written into the suffix — charter and liveaboard formats clear at a glance" },
+      { tld: "club", zh: "会员制钓友社群直给，年卡与船队故事都装得下", en: "The members' fishing community stated outright — season passes and fleet stories both fit" },
+    ],
+    zh: {
+      label: "海钓包船",
+      title: "海钓包船与船钓俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "海钓包船与船钓俱乐部命名指南：渔汛意象、船长人格等思路，禧玛诺/达亿瓦/Penn 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "海钓包船的名字要让钓友在出海前夜就开始兴奋：凌晨四点的码头、满油的双引擎、探鱼器上的鱼群反应——这是一门贩卖肾上腺素与运气的生意，名字要压得住风浪也要接得住空军（无渔获）的自嘲。与淡水渔具店不同，海钓的关键词是「船与船长」：钓友选的不是平台是那条船、那位船长——看行业样本：禧玛诺（Shimano）从自行车零件跨进渔轮，姓氏品牌用五十年的齿轮精度背书「装备可信」；达亿瓦（Daiwa）用「大和」把日本制造的国族工艺写进名字；Penn 则以创始人名字加百年卷线器的传奇，成为大物远征船上的默认装备。包船生意的命名素材藏在海图里：黑潮、涌、汛、礁——渔汛词自带「懂海」的专业感；船长绰号则是最贵的信任资产，「XX 船长」的名号在钓友圈口口相传，比任何广告都值钱。",
+      namingIdeas: [
+        "渔汛与海流词：黑潮、涌、汛、礁——海图上的词自带「懂海」的专业感，老钓友一听就知道你找得到鱼",
+        "船长人格路线：船长绰号+船名——钓友选的是船长不是平台，人格化名号在圈子里口口相传",
+        "大物与目标鱼意象：GT、金枪、旗鱼——远征船以目标鱼定位，名字直接喊出「上大物」的野心",
+        "装备精度借势：禧玛诺式的工艺信任——俱乐部与租赁业务可借「装备可靠」的语感降低新手顾虑",
+        "空军自嘲测试：没鱼的那天，名字在钓友群里被调侃时也要体面——海钓文化一半是渔获一半是段子",
+      ],
+      cases: [
+        { name: "禧玛诺", takeaway: "Shimano 从自行车齿轮跨进渔轮：姓氏品牌用五十年机械精度背书——「装备可信」的语感让海钓人闭眼下单" },
+        { name: "达亿瓦", takeaway: "Daiwa「大和」把日本制造的国族工艺写进名字：渔具品类的信任来自工艺叙事——国族词借势的经典样本" },
+        { name: "Penn", takeaway: "创始人名字加百年卷线器传奇：大物远征船上的默认装备——人名品牌在硬核圈层里的信任复利" },
+        { name: "钓鱼人", takeaway: "三个字把身份认同做成平台名：「我是钓鱼人」的自我称谓即品牌——圈层身份命名的中文范本" },
+      ],
+      pitfalls: [
+        "锁死单一钓场：名字绑死某片海域，渔汛转场与跨城开船时品牌要重来——海域留给航线名",
+        "只有豪横没有专业：「霸王」「至尊」类的名字唬新手可以，老钓友只认渔汛词与船长名号",
+        "忽略安全感：海钓是高风险户外，名字太「浪」会让家属拦人——野性要配可靠感的锚",
+        "与渔具店混淆：包船是服务生意，名字太像卖竿的会被比价——船与航程的意象要压过装备感",
+      ],
+    },
+    en: {
+      label: "Sea fishing charters",
+      title: "How to Name a Sea Fishing Charter or Boat Fishing Club: Strategies, Cases & Domains",
+      metaDescription:
+        "Sea fishing charter naming guide: tide-and-current words, captain personas, breakdowns of Shimano/Daiwa/Penn, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A charter's name should start the adrenaline the night before: the 4 a.m. dock, twin engines fueled, bait tanks humming, the sounder lighting up over structure. This is a trade selling adrenaline and luck — the name must hold up in a gale and take a joke on a skunked day. Unlike a tackle shop, the charter business runs on the boat and the captain: anglers book a skipper, not a platform. The benchmark brands show how trust is built: Shimano crossed from bicycle gears into reels, its surname vouched for by fifty years of machining precision; Daiwa (\"great harmony\") writes Japanese craftsmanship into its name; Penn stacks a founder's name on a century of reel legend until it became the default gear on big-game expeditions. The charter's own naming material hides in the chart: currents, tides, reefs, runs — water-reading words carry instant credibility, and a captain's nickname is the most valuable trust asset in the sport, passed mouth to mouth through the angling circle better than any ad.",
+      namingIdeas: [
+        "Tide-and-current words: gulf stream, run, reef, drift — chart vocabulary signals you can find fish; veterans hear it in one word",
+        "Captain personas: skipper nickname + boat name — anglers book the captain, not the platform; a personal handle compounds through the circle",
+        "Big-game ambitions: GT, tuna, marlin — expedition boats position by target species; shout the trophy into the name",
+        "Precision borrowings: Shimano-grade craft diction — clubs and rental fleets can borrow gear-trust language to calm first-timers",
+        "The skunked-day test: on a fishless day the name must survive the group chat's teasing — this culture is half catch, half banter",
+      ],
+      cases: [
+        { name: "Shimano", takeaway: "From bicycle gears to reels: a surname vouched for by fifty years of machining precision — gear-trust so deep anglers buy on the name alone" },
+        { name: "Daiwa", takeaway: "\"Great harmony\" writing Japanese craftsmanship into the name: tackle trust built on a manufacturing narrative — national-craft borrowing at its cleanest" },
+        { name: "Penn", takeaway: "A founder's name stacked on a century of reel legend: default gear on big-game expeditions — personal-name trust compounding in a hardcore circle" },
+        { name: "Salt Life", takeaway: "Two words claiming an entire identity: the saltwater lifestyle owned as a brand — identity naming that sells decals as much as gear" },
+      ],
+      pitfalls: [
+        "Welding the name to one fishing ground: seasons move and boats relocate — keep waters in the route names, not the brand",
+        "Swagger without seamanship: throne-and-king names impress novices only; veterans trust tide words and captains' handles",
+        "Forgetting the family veto: offshore fishing reads risky — a name too wild gets vetoed at home; anchor the adventure with reliability",
+        "Blurring into a tackle shop: charters sell passage, not rods — let boat-and-voyage imagery outweigh the gear shelf",
+      ],
+    },
+  },
+  horseranch: {
+    slug: "horseranch",
+    keywords: ["马场骑乘", "骑马体验", "度假牧场", "horse ranch", "riding stable"],
+    tlds: [
+      { tld: "horse", zh: "后缀即品类，马场的域名自带蹄声与草场", en: "The suffix is the category — a ranch's domain arrives with hoofbeats and pasture" },
+      { tld: "farm", zh: "「农场」后缀自带牧地与马房意象，真实场地感一秒成立", en: "The farm suffix carries paddock-and-stable imagery — real-acreage credibility lands instantly" },
+      { tld: "club", zh: "会员骑乘社群直给，马主寄养与亲子课都装得下", en: "The riding membership stated outright — livery, boarding and family lessons all fit" },
+    ],
+    zh: {
+      label: "马场骑乘",
+      title: "马场骑乘与度假牧场怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "马场骑乘与度假牧场命名指南：草原意象、牧场传承等思路，King Ranch/牧马人/Polo 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "马场的名字要先把「远方」卖出来：城市客开两小时车来骑马，买的是草场、蹄声与风——名字要在朋友圈定位里就自带旷野滤镜。与马术俱乐部的竞技感不同，度假牧场卖的是体验与疗愈：亲子第一次牵马、情侣的草原日落、企业团建的篝火——名字要松弛不要竞技。看行业样本：King Ranch 用「国王的牧场」把德州 33 万公顷的传奇写成品牌，牧场名反向输出到福特皮卡的顶配内饰——土地叙事的信任可以溢出到任何品类；Jeep 牧马人的中文名把 Wrangler（牧马牛仔）翻译成三个字的旷野人格，证明「牧马」意象在中文语境里自带自由联想；Polo 则让一项马背运动变成衣领上的身份符号——马的意象从场地走进衣柜。马场命名的素材库在草原上：鬃、蹄、牧、原、风——再配一个让家长放心的「稳」字锚点，因为亲子体验课才是现金流。",
+      namingIdeas: [
+        "草原与旷野意象：原、牧、风、鬃——城市客买的是远方，名字先把旷野滤镜给到朋友圈定位",
+        "牧场传承路线：King Ranch 式的土地叙事——「XX 牧场」的真实场地感自带信任，年头与故事都是资产",
+        "自由人格词：牧马人式的旷野人格——骑马是都市人的自由代餐，名字要许诺「风里撒欢」的那一刻",
+        "亲子安心锚点：稳、伴、慢——第一次牵马的家长要的是安全感，野性意象要配一个让人放心的字",
+        "定位打卡测试：名字出现在朋友圈定位与草原合照的水印里要上镜——度假牧场的获客一半靠晒图",
+      ],
+      cases: [
+        { name: "King Ranch", takeaway: "「国王的牧场」写透德州 33 万公顷的传奇：土地叙事的信任溢出到福特皮卡顶配内饰——牧场名反向输出品类的孤例级样本" },
+        { name: "牧马人", takeaway: "Wrangler 的中文名三个字自带旷野人格：「牧马」意象在中文语境里直连自由联想——翻译命名的教科书" },
+        { name: "Polo", takeaway: "一项马背运动变成衣领上的身份符号：马的意象从场地走进衣柜——运动词升维成生活方式的经典路径" },
+        { name: "Mustang", takeaway: "北美野马的名字装进跑车引擎盖：野性、速度与自由一个词说完——动物意象商业化的天花板" },
+      ],
+      pitfalls: [
+        "竞技感吓退体验客：名字太「马术」，亲子与团建客群以为门槛很高——度假牧场要松弛不要奖杯",
+        "只有野性没有安心：家长带娃第一次牵马，名字太狂野会在下单前被劝退——自由要配「稳」的锚",
+        "锁死单一场地：名字绑死某片草原，跨城开分场与轻资产输出时品牌要重来",
+        "与马术俱乐部混淆：会籍制俱乐部与按次体验的牧场是两种生意，名字的贵气程度要对准主力客单",
+      ],
+    },
+    en: {
+      label: "Horse ranches",
+      title: "How to Name a Horse Ranch or Riding Retreat: Strategies, Cases & Domains",
+      metaDescription:
+        "Horse ranch and riding retreat naming guide: open-range imagery, land-heritage names, breakdowns of King Ranch/Mustang/Polo, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A ranch's name must sell the faraway first: city guests drive two hours for pasture, hoofbeats and wind — the name should apply the open-range filter before the first photo is taken. Unlike a competitive equestrian club, a riding retreat sells experience and therapy: a child's first time leading a horse, a couple's grassland sunset, a company bonfire — the name should breathe, not compete. The benchmarks tell the range of the imagery: King Ranch turned 825,000 Texan acres of legend into a brand so trusted it badges the top trim of Ford pickups — land-heritage credibility spills into any category; Mustang put a wild horse under a sports car's hood, compressing wildness, speed and freedom into one word; Polo carried a horseback sport onto a shirt collar and into a lifestyle. The ranch's own word-hoard grazes in the open: mane, hoof, range, prairie, wind — then anchor it with one steady, reassuring word, because family first-ride lessons are the cash flow.",
+      namingIdeas: [
+        "Open-range imagery: range, prairie, wind, mane — city guests buy the faraway; give the photo caption its filter in the name",
+        "Land-heritage routes: the King Ranch formula — a named ranch carries real-acreage trust, and the years become the asset",
+        "Free-spirit persona words: wrangler-class wildness — riding is the city dweller's freedom substitute; promise the wind-in-the-hair moment",
+        "Family-reassurance anchors: steady, gentle, slow — a parent watching a first ride needs calm; pair the wildness with one word that settles nerves",
+        "The geotag test: the name must look good in a check-in pin and a grassland photo watermark — half a retreat's funnel is guests showing off",
+      ],
+      cases: [
+        { name: "King Ranch", takeaway: "825,000 Texan acres of legend in one name: land-heritage trust so deep it badges Ford's top pickup trim — a ranch name exporting into other categories" },
+        { name: "Mustang", takeaway: "A wild horse under the hood: wildness, speed and freedom compressed into one word — animal-imagery commercialization at its ceiling" },
+        { name: "Polo", takeaway: "A horseback sport carried onto a shirt collar: the horse's imagery walking from the field into the wardrobe — sport-to-lifestyle elevation's classic path" },
+        { name: "Wrangler", takeaway: "The horse-herding cowboy as a persona: open-range freedom association strong enough for jeans and 4x4s alike — occupational imagery naming that travels" },
+      ],
+      pitfalls: [
+        "Competition chill on an experience business: a too-equestrian name makes families assume a high bar — retreats need ease, not trophies",
+        "All wild, no reassurance: a parent booking a child's first ride vetoes a name that sounds untamed — anchor the freedom with something steady",
+        "Welding the name to one grassland: branch sites and asset-light expansion force a rebrand — keep the land in the story, not the trademark",
+        "Blurring into an equestrian club: membership clubs and per-ride retreats are different businesses — tune the name's poshness to the real ticket size",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

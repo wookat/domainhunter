@@ -281,7 +281,7 @@
     ]
   },
   "guide": {
-    "count": 272,
+    "count": 278,
     "slugs": [
       "saas",
       "ecommerce",
@@ -554,7 +554,13 @@
       "dayspa",
       "snacks",
       "lawfirm",
-      "orthodontics"
+      "orthodontics",
+      "kidswear",
+      "cookingclass",
+      "souvenir",
+      "partyplanner",
+      "seafishing",
+      "horseranch"
     ]
   },
   "vs": {
