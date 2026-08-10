@@ -353,4 +353,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "letterpress", zh: "活版印刷工作室", en: "Letterpress studios" },
   { slug: "terrarium", zh: "生态瓶工作室", en: "Terrarium studios" },
   { slug: "axethrowing", zh: "飞斧馆", en: "Axe-throwing venues" },
+  { slug: "lasertag", zh: "镭射对战馆", en: "Laser tag arenas" },
+  { slug: "paintball", zh: "彩弹射击场", en: "Paintball fields" },
+  { slug: "mushroomfarm", zh: "菌菇农场", en: "Mushroom farms" },
+  { slug: "neonsign", zh: "霓虹灯工作室", en: "Neon sign studios" },
+  { slug: "millinery", zh: "制帽工作室", en: "Millinery studios" },
+  { slug: "mosaic", zh: "马赛克工作室", en: "Mosaic studios" },
 ];

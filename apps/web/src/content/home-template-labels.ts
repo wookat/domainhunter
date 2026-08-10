@@ -360,4 +360,10 @@ export const TEMPLATE_LABELS: TemplateLabel[] = [
   { slug: "letterpress", labelZh: "活版印刷工作室", labelEn: "Letterpress studio" },
   { slug: "terrarium", labelZh: "生态瓶工作室", labelEn: "Terrarium studio" },
   { slug: "axethrowing", labelZh: "飞斧馆", labelEn: "Axe-throwing venue" },
+  { slug: "lasertag", labelZh: "镭射对战馆", labelEn: "Laser tag arena" },
+  { slug: "paintball", labelZh: "彩弹射击场", labelEn: "Paintball field" },
+  { slug: "mushroomfarm", labelZh: "菌菇农场", labelEn: "Mushroom farm" },
+  { slug: "neonsign", labelZh: "霓虹灯工作室", labelEn: "Neon sign studio" },
+  { slug: "millinery", labelZh: "制帽工作室", labelEn: "Millinery studio" },
+  { slug: "mosaic", labelZh: "马赛克工作室", labelEn: "Mosaic studio" },
 ];

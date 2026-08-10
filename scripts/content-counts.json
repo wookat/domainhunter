@@ -359,7 +359,7 @@
     ]
   },
   "guide": {
-    "count": 350,
+    "count": 356,
     "slugs": [
       "saas",
       "ecommerce",
@@ -710,7 +710,13 @@
       "bookbinding",
       "letterpress",
       "terrarium",
-      "axethrowing"
+      "axethrowing",
+      "lasertag",
+      "paintball",
+      "mushroomfarm",
+      "neonsign",
+      "millinery",
+      "mosaic"
     ]
   },
   "vs": {
