@@ -322,4 +322,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "party-vs-events", a: "party", b: "events", title: { zh: ".party 和 .events 怎么选：热闹直给与全场景专业词", en: ".party vs .events: The Vibe or the Industry" } },
   { slug: "fishing-vs-boats", a: "fishing", b: "boats", title: { zh: ".fishing 和 .boats 怎么选：钓鱼这件事与船这台设备", en: ".fishing vs .boats: The Activity or the Vessel" } },
   { slug: "horse-vs-pet", a: "horse", b: "pet", title: { zh: ".horse 和 .pet 怎么选：马术垂类与宠物大类", en: ".horse vs .pet: The Vertical Blade or the Industry Umbrella" } },
+  { slug: "singles-vs-dating", a: "singles", b: "dating", title: { zh: ".singles 和 .dating 怎么选：人群画像与行业产品", en: ".singles vs .dating: The Demographic or the Industry" } },
+  { slug: "dating-vs-love", a: "dating", b: "love", title: { zh: ".dating 和 .love 怎么选：行业后缀与情感大词", en: ".dating vs .love: The Industry Suffix or the Emotion Word" } },
+  { slug: "luxury-vs-vip", a: "luxury", b: "vip", title: { zh: ".luxury 和 .vip 怎么选：奢侈定位与会员身份", en: ".luxury vs .vip: The Positioning or the Membership" } },
+  { slug: "organic-vs-bio", a: "organic", b: "bio", title: { zh: ".organic 和 .bio 怎么选：有机品类标准与一词双关", en: ".organic vs .bio: The Category Standard or the Continental Shorthand" } },
+  { slug: "tattoo-vs-ink", a: "tattoo", b: "ink", title: { zh: ".tattoo 和 .ink 怎么选：行业直给与意象留白", en: ".tattoo vs .ink: Industry-Direct or Imagery With Room" } },
+  { slug: "casa-vs-house", a: "casa", b: "house", title: { zh: ".casa 和 .house 怎么选：西语的家与英语的房子", en: ".casa vs .house: Home in Spanish or English" } },
 ];

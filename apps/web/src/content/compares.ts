@@ -6889,6 +6889,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Pet shops & supply e-commerce", "Vet clinics & grooming", "Catteries, kennels & boarding", "Platforms that outgrow single species"],
     },
   },
+  "singles-vs-dating": {
+    slug: "singles-vs-dating",
+    a: "singles",
+    b: "dating",
+    zh: {
+      title: ".singles 和 .dating 怎么选：人群画像与行业产品",
+      metaDescription: ".singles 直指单身人群这个画像，同城活动与单身社群用它最准；.dating 说的是婚恋交友这个行业，交友 App 与婚恋平台用它定位最狠。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在单身经济赛道，一个报「人群」，一个报「行业」。.singles 直指单身人群这个画像——同城交友与单身活动组织、单身社群与兴趣俱乐部、脱单课程与情感咨询用 name.singles，用户搜「城市 + singles」找同城活动时域名与搜索词逐字吻合（nyc.singles 张口即是活动主页）；Identity Digital 运营，首年约 $7（约 ¥52）、续费约 $27/年（约 ¥196），入门便宜、长期按续费价预算。.dating 说的是婚恋交友这个行业与产品——交友 App 与婚恋平台、相亲机构与高端红娘、约会攻略内容站用 name.dating 一词讲透行业属性；同为 Identity Digital 运营，首年约 $13（约 ¥93）、续费约 $52/年（约 ¥374），续费在新后缀里偏高，正式产品才值得长期持有。判断标准：生意围着「人群」转——组织活动、运营社群、做课程咨询 → .singles 画像直给，且续费便宜近一半；生意围着「产品」转——做平台、做 App、做撮合服务 → .dating 行业直给，品牌读起来就是赛道名。两者高度相邻（单身社群做大了常演化成交友平台），可按现阶段主营选：先做社群用 .singles，转型平台时再收 .dating 同名。三点注意：一是价差明显（续费 $27 vs $52/年），社群与活动这类现金流轻的业务别扛 .dating 的续费；二是 .singles 7 个字母、.dating 6 个字母都不短，词根务必短；三是交友行业各国监管与应用商店审核趋严，域名之外把实名审核、年龄验证与隐私政策备好。命名上「城市 + .singles」（tokyo.singles）最主流，「品牌词 + .dating」（spark.dating）适合平台产品。",
+      pickA: ["同城交友与单身活动组织", "单身社群与兴趣俱乐部", "脱单课程与情感咨询", "续费预算敏感的轻业务"],
+      pickB: ["交友 App 与婚恋平台", "相亲机构与高端红娘", "约会攻略与情感内容站", "品牌即赛道名的正式产品"],
+    },
+    en: {
+      title: ".singles vs .dating: The Demographic or the Industry",
+      metaDescription:
+        ".singles names the demographic — local events and singles communities fit best; .dating names the industry — dating apps and matchmaking platforms position sharpest. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same singles-economy lane, different subject: one names the demographic, the other the industry. .singles points at the crowd — local singles events and meetup organizers, singles communities and interest clubs, and dating courses or relationship coaching on name.singles match \"city + singles\" searches word for word (nyc.singles sounds like the event homepage); run by Identity Digital at about $7 first year (≈¥52) and $27/yr to renew (≈¥196) — cheap to start, budget on the renewal. .dating names the industry and the product — dating apps and matchmaking platforms, agencies and premium matchmakers, and dating-advice content sites on name.dating say the whole business in one word; also Identity Digital, at about $13 first year (≈¥93) and $52/yr to renew (≈¥374) — a renewal on the high side, so hold it long-term only for a serious product. The test: if the business revolves around the crowd — organizing events, running communities, selling courses → .singles is demographic-direct and renews for nearly half the price; if it revolves around the product — building a platform, an app, a matchmaking service → .dating is industry-direct and the brand reads as the category itself. The two are close neighbors (communities often evolve into platforms), so choose by the current core business: start on .singles, acquire the matching .dating when you become a platform. Three cautions: the price gap is real ($27 vs $52/yr renewal) — light cash-flow businesses like events shouldn't carry .dating's renewal; both suffixes run long (.singles 7 letters, .dating 6), so keep roots tight; and dating faces tightening regulation and app-store review worldwide — pair the domain with identity checks, age verification and a real privacy policy. Naming: city + .singles (tokyo.singles) is the mainstream shape; brand word + .dating (spark.dating) fits platform products.",
+      pickA: ["Local singles events & meetup organizers", "Singles communities & interest clubs", "Dating courses & relationship coaching", "Renewal-budget-sensitive light businesses"],
+      pickB: ["Dating apps & matchmaking platforms", "Matchmaking agencies & premium matchmakers", "Dating-advice & relationship content sites", "Serious products where brand = category"],
+    },
+  },
+  "dating-vs-love": {
+    slug: "dating-vs-love",
+    a: "dating",
+    b: "love",
+    zh: {
+      title: ".dating 和 .love 怎么选：行业后缀与情感大词",
+      metaDescription: ".dating 直指婚恋交友这个行业，平台与服务用它定位最准；.love 是情感浓度拉满的大词，婚礼站、纪念页与「热爱」品牌全装得下。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个说行业，一个说情绪。.dating 直指婚恋交友这个行业——交友 App 与婚恋平台、相亲机构与高端红娘、约会攻略内容站用 name.dating，行业属性一词讲透，用户看到域名就知道这是交友产品；Identity Digital 运营，首年约 $13（约 ¥93）、续费约 $52/年（约 ¥374），续费偏高，正式产品才值得长期持有。.love 是情感浓度拉满的大词——婚礼与求婚站、情侣纪念页、公益项目、粉丝应援与宠物兴趣向的「热爱」品牌用 name.love，域名读出来就有情绪（coffee.love 让品类词直接变成情感宣言）；注册约 $9（约 ¥63）、续费约 $23/年（约 ¥167），温和档。判断标准：做「撮合陌生人认识」的生意——平台、机构、内容站 → .dating 行业直给，商业属性清晰；说「爱」这个情绪本身——婚礼、纪念、公益、热爱型品牌 → .love 情感直给，且续费不到 .dating 一半。两者在婚恋赛道有交集：交友产品本身用 .dating 更专业，成婚后的婚礼站、周年纪念页归 .love——不少婚恋平台就是主站 .dating + 成功故事页 .love 的组合。三点注意：一是价差明显（续费 $52 vs $23/年），情感内容与轻站别扛 .dating 的续费；二是 .love 情感浓度是双刃剑，严肃商业产品用它会显得不够专业，那是 .dating 的地盘；三是交友行业监管趋严，.dating 站点把年龄验证与内容审核备好，.love 的婚礼纪念站记得档期后续费别让域名旁落。命名上「品牌词 + .dating」（spark.dating）最主流，「两人名字/品类 + .love」（emma.love、coffee.love）是 .love 的经典语法。",
+      pickA: ["交友 App 与婚恋平台", "相亲机构与高端红娘", "约会攻略与情感内容站", "商业属性优先的正式产品"],
+      pickB: ["婚礼与求婚站", "情侣纪念页与公益项目", "粉丝应援与「热爱」品牌", "续费预算敏感的情感站点"],
+    },
+    en: {
+      title: ".dating vs .love: The Industry Suffix or the Emotion Word",
+      metaDescription:
+        ".dating names the matchmaking industry — platforms and services position sharpest; .love is the emotion at full volume — wedding sites, tribute pages and passion brands all fit. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One names the industry, the other the emotion. .dating points at the matchmaking business — dating apps and platforms, agencies and premium matchmakers, and dating-advice content sites on name.dating say the whole industry in one word, so users know it's a dating product before the page loads; run by Identity Digital at about $13 first year (≈¥93) and $52/yr to renew (≈¥374) — a renewal on the high side, for serious products only. .love is the emotion at full volume — wedding and proposal sites, couple tribute pages, charity projects, and fan or passion brands on name.love carry feeling in the address itself (coffee.love turns a category word into a declaration); about $9 to register (≈¥63) and $23/yr to renew (≈¥167) — a moderate tier. The test: if the business matches strangers — platforms, agencies, content sites → .dating is industry-direct and commercially unambiguous; if it names the feeling itself — weddings, tributes, charity, passion brands → .love is emotion-direct and renews for less than half. They overlap in the romance lane: the dating product itself reads more professional on .dating, while the wedding site and anniversary pages belong to .love — plenty of platforms run main site .dating + success-story pages on .love. Three cautions: the price gap is real ($52 vs $23/yr renewal) — light emotional sites shouldn't carry .dating's renewal; .love's intensity cuts both ways — a serious commercial product on it reads less professional, and that's .dating territory; and dating regulation is tightening, so .dating sites need age verification and moderation, while .love wedding pages need renewing after the big day so the domain doesn't fall into other hands. Naming: brand word + .dating (spark.dating) is the mainstream shape; two names or a category + .love (emma.love, coffee.love) is .love's classic grammar.",
+      pickA: ["Dating apps & matchmaking platforms", "Matchmaking agencies & premium matchmakers", "Dating-advice & relationship content sites", "Commercially-serious products first"],
+      pickB: ["Wedding & proposal sites", "Couple tributes & charity projects", "Fan pages & passion brands", "Renewal-sensitive emotional sites"],
+    },
+  },
+  "luxury-vs-vip": {
+    slug: "luxury-vs-vip",
+    a: "luxury",
+    b: "vip",
+    zh: {
+      title: ".luxury 和 .vip 怎么选：奢侈定位与会员身份",
+      metaDescription: ".luxury 说的是奢侈这个定位本身，高端品牌与高净值服务用它最准；.vip 说的是会员身份，国内认知高、可备案，会员制产品用它直给。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个说「货有多贵」，一个说「你是谁」。.luxury 说的是奢侈这个定位本身——奢侈品牌与高端定制、高端腕表珠宝与买手店、豪华旅行与高端酒店、高净值服务用 name.luxury，定位声明直接写在地址里，客单价越高后缀传递的档次感越值钱；Luxury Partners LLC 运营，注册约 $26（约 ¥189）、续费同价，曾经年费数百美元的贵族后缀已降到中档价位。.vip 说的是会员身份——会员制产品、粉丝社群、电商会员站、高端服务预约用 name.vip，域名本身就在说「这里是会员专属」；国内认知度极高、已获工信部资质可正常 ICP 备案，注册约 $6（约 ¥40）、续费约 $8/年（约 ¥60），价格亲民且注册量长期位居新后缀前列。判断标准：卖「奢侈」这个定位——高端品牌、买手店、豪华服务，面向国际高净值客群 → .luxury 定位直给，档次感无可替代；卖「会员」这个身份——会员制、粉丝运营、国内市场 → .vip 语义直给，且续费只有 .luxury 的零头、还能备案。两者市场分野明显：.luxury 在欧美语境更有效，.vip 在国内比海外主流得多——面向国内的高端会员业务，.vip 反而比 .luxury 更接地气。三点注意：一是价差悬殊（续费 $26 vs $8/年），但选择标准是目标市场与语义而不是价签；二是「luxury」是定位承诺，站点视觉与服务必须撑得起这个词，否则适得其反；三是 .vip 自带营销气质，严肃奢侈品牌用它会拉低调性，那是 .luxury 的地盘。命名上「品牌词 + .luxury」（maison.luxury）最主流，「品牌/双拼 + .vip」（fans.vip）适合会员与社群站。",
+      pickA: ["奢侈品牌与高端定制", "高端腕表珠宝与买手店", "豪华旅行与高端酒店", "面向国际高净值客群"],
+      pickB: ["会员制产品与电商会员站", "粉丝社群与应援运营", "需要 ICP 备案的国内业务", "续费预算敏感的社群站"],
+    },
+    en: {
+      title: ".luxury vs .vip: The Positioning or the Membership",
+      metaDescription:
+        ".luxury names the positioning itself — high-end brands and high-net-worth services fit best; .vip names membership status — huge recognition in China, ICP-filable, member products read instantly. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One says how expensive the goods are, the other says who you are. .luxury names the positioning itself — luxury brands and haute couture, fine watches, jewelry and curated boutiques, luxury travel and five-star hotels, and high-net-worth services on name.luxury make the claim in the address, and the higher the ticket size the more that signal is worth; run by Luxury Partners LLC at about $26 flat (≈¥189) for registration and renewal — a once-hundreds-per-year aristocrat settled at mid-range. .vip names membership status — member products, fan communities, e-commerce member hubs and premium booking services on name.vip declare \"members only\" in the domain itself; recognition in China is huge, the suffix is MIIT-accredited for ICP filing, and it costs about $6 to register (≈¥40) and $8/yr to renew (≈¥60) — friendly pricing with registration volume long among the top new gTLDs. The test: if you sell the luxury positioning — high-end brands, curators, five-star services for an international high-net-worth audience → .luxury is positioning-direct with unmatched cachet; if you sell the membership identity — member schemes, fan operations, the China market → .vip is semantic-direct, renews for a fraction and can be ICP-filed. Their markets split cleanly: .luxury lands better in Western contexts, .vip is far more mainstream in China than abroad — for China-facing premium member businesses, .vip actually reads more native than .luxury. Three cautions: the price gap is huge ($26 vs $8/yr renewal), but choose by target market and semantics, not the tag; \"luxury\" is a promise — design and service must live up to the word or it backfires; and .vip carries a promotional flavor, so a serious luxury house on it would cheapen the brand — that's .luxury territory. Naming: brand word + .luxury (maison.luxury) is the mainstream shape; brand or pinyin + .vip (fans.vip) fits member and community sites.",
+      pickA: ["Luxury brands & haute couture", "Fine watches, jewelry & curated boutiques", "Luxury travel & five-star hotels", "International high-net-worth audiences"],
+      pickB: ["Member products & e-commerce member hubs", "Fan communities & supporter operations", "China businesses needing ICP filing", "Renewal-sensitive community sites"],
+    },
+  },
+  "organic-vs-bio": {
+    slug: "organic-vs-bio",
+    a: "organic",
+    b: "bio",
+    zh: {
+      title: ".organic 和 .bio 怎么选：有机品类标准与一词双关",
+      metaDescription: ".organic 直指有机这个有认证体系的品类标准，有机食品与农场用它最准；.bio 一词双关，既是个人简介也是欧陆语境的有机标签。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同指「有机」，一个是全球通用的品类标准，一个是带双关的欧陆暗号。.organic 直指有机这个有认证体系背书的品类标准——有机食品品牌与电商、有机农场与生态种植、天然护肤与有机个护用 name.organic，核心卖点直接写在地址里，消费者为「有机」支付溢价，域名先一步完成信任暗示；Identity Digital 运营，首年约 $11（约 ¥78）、续费约 $68/年（约 ¥493），续费在全站属高位，真做有机生意再长期持有。.bio 是一词双关——欧陆语境里 bio 就是「有机」的日常说法（法德意语超市里满货架的 Bio 标签），欧盟不少有机食品品牌就在用 .bio；互联网语境里 bio 又是「个人简介」，创作者的链接聚合页也用它；同为 Identity Digital 运营，首年约 $6（约 ¥41）、续费约 $58/年（约 ¥419）。判断标准：面向英语市场卖有机产品——organic 是英语世界的标准用词，认证体系（USDA Organic）也叫这个名字 → .organic 语义直给无歧义；面向欧陆市场（法德意）——bio 才是当地消费者的日常词，价格还便宜一档 → .bio 更接地气。两者续费都不便宜（$68 vs $58/年），共同的判断是：真做有机生意才值得持有，域名矩阵别铺。三点注意：一是「organic/bio」都是受监管的营销用语，各国对有机宣称有认证要求，认证证书与域名一起亮出来；二是 .bio 的双关是双刃剑，有机品牌用它要把首屏钉死在「有机」上，别让访客误会成个人主页；三是 .organic 7 个字母偏长，词根务必短（tea.organic 是理想形态）。命名上「品牌/农场名 + .organic」（sunrise.organic）最主流，「品牌词 + .bio」（ferme.bio 式）适合欧陆市场品牌。",
+      pickA: ["面向英语市场的有机食品品牌", "有机农场与生态种植", "对标 USDA 等英语认证体系", "天然护肤与有机个护"],
+      pickB: ["面向法德意等欧陆市场", "欧盟 Bio 标签体系下的品牌", "首年与续费预算更敏感", "兼做创始人个人品牌页"],
+    },
+    en: {
+      title: ".organic vs .bio: The Category Standard or the Continental Shorthand",
+      metaDescription:
+        ".organic names the certified category standard — organic food brands and farms fit best; .bio is the double-meaning suffix — Europe's everyday word for organic and the creator's profile page. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both say organic — one is the global category standard, the other continental Europe's everyday shorthand with a pun attached. .organic names the certification-backed category standard — organic food brands and e-commerce, organic farms and ecological growers, and natural skincare on name.organic put the premium claim in the address; consumers pay extra for \"organic\" and the domain starts the trust signal early; run by Identity Digital at about $11 first year (≈¥78) and $68/yr to renew (≈¥493) — one of the higher renewals here, so hold long-term only for a real organic business. .bio carries two meanings — in continental Europe bio IS the everyday word for organic (French, German and Italian supermarket shelves are covered in Bio labels), and plenty of EU organic brands already run on .bio; in internet culture a bio is your profile blurb, so creator link hubs use it too; also Identity Digital, about $6 first year (≈¥41) and $58/yr to renew (≈¥419). The test: selling organic products to English-speaking markets — organic is the standard English term and the certification schemes (USDA Organic) carry the name → .organic is semantic-direct with zero ambiguity; targeting continental Europe — bio is what local consumers actually say, and it costs a tier less → .bio reads more native. Both renewals are steep ($68 vs $58/yr), so the shared rule: hold either only for a genuine organic business, and skip the domain portfolio. Three cautions: \"organic/bio\" are regulated marketing terms with certification requirements in most countries — display the certificates alongside the domain; .bio's pun cuts both ways, so an organic brand must pin the above-the-fold copy to \"organic\" or visitors may read it as a profile page; and .organic runs 7 letters, so keep the root tight (tea.organic is the ideal shape). Naming: brand or farm name + .organic (sunrise.organic) is the mainstream shape; brand word + .bio (ferme.bio-style) suits continental-market brands.",
+      pickA: ["Organic food brands for English markets", "Organic farms & ecological growers", "USDA-style certification alignment", "Natural skincare & organic personal care"],
+      pickB: ["Brands targeting France, Germany & Italy", "EU Bio-label ecosystem brands", "Tighter first-year & renewal budgets", "Doubling as a founder profile page"],
+    },
+  },
+  "tattoo-vs-ink": {
+    slug: "tattoo-vs-ink",
+    a: "tattoo",
+    b: "ink",
+    zh: {
+      title: ".tattoo 和 .ink 怎么选：行业直给与意象留白",
+      metaDescription: ".tattoo 直指纹身这个行业，纹身店与纹身师用它最准；.ink 说的是墨水这个意象，纹身、写作与插画全装得下且更短。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在墨水生意里，一个直报行业，一个留足意象。.tattoo 直指纹身这个行业——纹身店与工作室、纹身师个人作品集、纹身器材电商、图案设计平台用 name.tattoo，行业属性一词讲透，客人搜「纹身师名 + tattoo」时域名与搜索词逐字吻合；GoDaddy Registry 运营，首年约 $2（约 ¥15）、续费约 $31/年（约 ¥226），首年近乎白送、长期按续费价预算。.ink 说的是「墨水」这个意象——纹身圈把 ink 当行话（get inked = 去纹身），刺青师用 name.ink 同样正统，而作家、书法家、插画师、漫画作者与出版项目也全装得下；Top Level Design 运营，首年约 $2（约 ¥15）、续费约 $26/年（约 ¥189），比 .tattoo 还便宜一档，且 ink 只有 3 个字母，name.ink 往往比对应 .com 更短。判断标准：只做纹身这一个行当——店面、作品集、器材、平台 → .tattoo 行业直给，客人零解释成本；身份横跨「用墨」的多个行当——纹身之外还做插画、写作、文创，或者品牌想要一分留白与酷感 → .ink 意象直给且更短更便宜。两者在纹身赛道完全重叠，圈内的微妙差别是：.tattoo 更像招牌（写给客人看），.ink 更像袖标（写给同行看）——大众获客优先选 .tattoo，风格与身份优先选 .ink。三点注意：一是价差不大（续费 $31 vs $26/年），按气质选而不是按价签选；二是 .ink 与 .in（印度）仅差一个字母，口头传播时说清「i-n-k」；三是纹身获客靠作品集与社媒导流，无论选哪个都把 Instagram 作品墙与预约系统接好。命名上「纹身师/店名 + .tattoo」（raven.tattoo）最主流，「风格词 + .ink」（black.ink）最出效果。",
+      pickA: ["纹身店与工作室门面站", "面向大众客人的获客站", "纹身器材与耗材电商", "图案设计与纹身平台"],
+      pickB: ["刺青师个人品牌与袖标感", "横跨插画/写作/文创的创作者", "想要更短域名（name.ink）", "续费预算更敏感"],
+    },
+    en: {
+      title: ".tattoo vs .ink: Industry-Direct or Imagery With Room",
+      metaDescription:
+        ".tattoo names the trade — shops and artists fit best; .ink names the imagery — tattoos, writing and illustration all fit, and it's shorter. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same ink business, different register: one states the trade, the other keeps the imagery open. .tattoo names the industry — tattoo shops and studios, artist portfolios, equipment e-commerce and flash platforms on name.tattoo say the whole trade in one word, and \"artist name + tattoo\" is the literal query clients type; run by GoDaddy Registry at about $2 first year (≈¥15) and $31/yr to renew (≈¥226) — nearly free to try, budget on the renewal. .ink names the imagery — tattoo culture owns the word (get inked), so artists on name.ink wear it just as authentically, while writers, calligraphers, illustrators, comic artists and publishing projects all fit too; run by Top Level Design at about $2 first year (≈¥15) and $26/yr to renew (≈¥189) — a tier cheaper than .tattoo, and ink is only 3 letters, so name.ink often ends up shorter than the matching .com. The test: if the business is tattooing and nothing else — the shop, the portfolio, the gear, the platform → .tattoo is trade-direct with zero explanation cost for clients; if the identity spans several ink trades — tattooing plus illustration, writing or stationery, or the brand wants some cool-factor room → .ink is imagery-direct, shorter and cheaper. In the tattoo lane they overlap completely; the insider nuance: .tattoo reads like the shop sign (written for clients), .ink like the armband (written for peers) — mainstream acquisition favors .tattoo, style and identity favor .ink. Three cautions: the price gap is small ($31 vs $26/yr renewal) — choose by register, not price tag; .ink is one letter from .in (India), so spell out \"i-n-k\" aloud; and tattoo clients arrive via portfolios and social feeds — wire the Instagram wall and booking system to whichever domain you pick. Naming: artist or shop name + .tattoo (raven.tattoo) is the mainstream shape; style word + .ink (black.ink) lands hardest.",
+      pickA: ["Tattoo shop & studio storefront sites", "Mainstream client acquisition", "Tattoo equipment & supply e-commerce", "Flash design & tattoo platforms"],
+      pickB: ["Artist personal brands with armband cool", "Creators spanning illustration & writing", "Wanting the shorter name.ink shape", "Tighter renewal budgets"],
+    },
+  },
+  "casa-vs-house": {
+    slug: "casa-vs-house",
+    a: "casa",
+    b: "house",
+    zh: {
+      title: ".casa 和 .house 怎么选：西语的家与英语的房子",
+      metaDescription: ".casa 是西语「家」，面向西语市场与地中海调性品牌最出彩；.house 是英语「房子」，房产租售、家装与机构系品牌用它直给。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一栋房子，两种语言。.casa 是西语的「家」——西语市场房产与民宿、家居品牌与生活方式电商、餐厅民宿等「Casa」系品牌、室内设计服务用 name.casa，一个词同时说了「房子」与「家的温度」，全球五亿西语人口外加意大利语市场，Casa 开头的品牌名本就遍地都是；GoDaddy Registry 运营，首年约 $2（约 ¥11）、续费约 $11/年（约 ¥78），全站少见的双低价格，做品牌矩阵与落地页几乎零成本。.house 是英语的「房子」——房产经纪与租售平台、家装与家居品牌、民宿短租、建筑与室内设计工作室用 name.house 一眼「跟住有关」，还有一层机构妙用：英文里创意机构、唱片公司、出版社惯用 House 结尾，brand.house 直接等于机构全名；Identity Digital 运营，注册约 $15（约 ¥107）、续费约 $36/年（约 ¥256），中档价位。判断标准：面向西语/意语用户，或品牌走地中海、拉丁调性——民宿、餐厅、生活方式品牌 → .casa 语言直给且便宜得多；面向英语用户的房产与家装，或想借 House 的机构感——中介、家装、设计工作室、创意机构 → .house 认知直给。两者市场几乎不重叠，按目标用户的母语选就对了；双语市场（如美国西语社区）可以两个都拿，反正 .casa 续费只要 $11/年。三点注意：一是价差明显（续费 $11 vs $36/年），但语言匹配优先于价差——英语客群看 casa 认知有限；二是 Casa 系品牌名泛滥，词根要挑有记忆点的（mi.casa、tu.casa 这类短组合早被抢注）；三是房产是强本地生意，「城市 + 后缀」比泛词更能接住本地搜索（tulum.casa、austin.house 都是标准形态）。命名上「品牌词 + .casa」（bella.casa）最主流，「城市 + .house」适合本地租售，「品牌词 + .house」念出来就是机构全名。",
+      pickA: ["西语市场房产与民宿", "地中海/拉丁调性生活方式品牌", "「Casa」系餐厅与民宿品牌", "低成本品牌矩阵与落地页"],
+      pickB: ["英语市场房产经纪与租售平台", "家装与家居品牌", "建筑与室内设计工作室", "借 House 机构感的创意品牌"],
+    },
+    en: {
+      title: ".casa vs .house: Home in Spanish or English",
+      metaDescription:
+        ".casa is Spanish for home — Spanish-market and Mediterranean-vibe brands shine; .house is the English word — real estate, home services and \"House\"-style agencies read instantly. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same building, two languages. .casa is the Spanish word for home — Spanish-market real estate and vacation rentals, home and lifestyle brands, \"Casa\"-named restaurants and guesthouses, and interior design services on name.casa say both \"house\" and \"the warmth of home\" in one word, with half a billion Spanish speakers plus the Italian market where Casa-branded names are everywhere; run by GoDaddy Registry at a rare double-low of about $2 first year (≈¥11) and $11/yr to renew (≈¥78) — brand portfolios and landing pages cost almost nothing. .house is the English word — real-estate agents and rental platforms, home-improvement and furnishing brands, short-stay rentals, and architecture or interior studios on name.house read \"about living\" at a glance, with a bonus register: English creative agencies, record labels and publishers end in House, so brand.house equals the full institution name; run by Identity Digital at about $15 to register (≈¥107) and $36/yr to renew (≈¥256) — mid-range. The test: targeting Spanish or Italian speakers, or a Mediterranean/Latin brand vibe — guesthouses, restaurants, lifestyle brands → .casa is language-direct and far cheaper; targeting English speakers in property or home services, or borrowing the House institution feel — agencies, renovators, design studios, creative houses → .house is recognition-direct. Their markets barely overlap, so choose by your audience's mother tongue; bilingual markets (US Hispanic communities) can hold both — .casa renews at only $11/yr anyway. Three cautions: the price gap is real ($11 vs $36/yr renewal), but language fit outranks it — English audiences barely register casa; Casa-branded names are crowded, so pick a memorable root (short combos like mi.casa and tu.casa went long ago); and property is a local business — city + suffix beats generic words for local search (tulum.casa and austin.house are the standard shapes). Naming: brand word + .casa (bella.casa) is the mainstream shape; city + .house suits local rentals and sales; brand word + .house reads out as the full institution name.",
+      pickA: ["Spanish-market real estate & vacation rentals", "Mediterranean/Latin-vibe lifestyle brands", "\"Casa\"-named restaurants & guesthouses", "Low-cost brand portfolios & landing pages"],
+      pickB: ["English-market agents & rental platforms", "Home-improvement & furnishing brands", "Architecture & interior design studios", "Creative brands borrowing the House register"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

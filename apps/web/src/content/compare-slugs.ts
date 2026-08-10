@@ -315,6 +315,12 @@ export const COMPARE_SLUGS = [
   "party-vs-events",
   "fishing-vs-boats",
   "horse-vs-pet",
+  "singles-vs-dating",
+  "dating-vs-love",
+  "luxury-vs-vip",
+  "organic-vs-bio",
+  "tattoo-vs-ink",
+  "casa-vs-house",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
