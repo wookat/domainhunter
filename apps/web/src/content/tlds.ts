@@ -9744,6 +9744,186 @@ const GUIDES = {
       ],
     },
   },
+  hospital: {
+    tld: "hospital",
+    zh: {
+      title: ".hospital 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".hospital 是医院机构的专属后缀，适合综合医院与专科医院官网、私立诊所与日间医疗中心、康复医院与护理机构、宠物医院与动物医疗中心。查看 .hospital 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .hospital 域名。",
+      intro:
+        ".hospital 把医院身份写进域名：综合医院与专科医院官网、私立诊所与日间医疗中心、康复医院与护理机构、宠物医院与动物医疗中心用 name.hospital，「这是一家医院」一词讲透——医疗是最需要信任的行业，后缀本身就是机构级别的声明，「品牌 + .hospital」读起来就是一块医院门牌。注册局为 Identity Digital（原 Donuts），2016 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .clinic/.care/.surgery 分工清晰：.clinic 说门诊诊所，.care 说照护服务，.surgery 说外科专科——.hospital 说的是「医院这个机构级别」，综合医院与住院机构定位最准。价格中高且平续：注册约 $46/年（约 ¥330），续费同价——无首年促销陷阱，医疗机构的多年持有成本可预期。库存极好：城市词、专科词、品牌词全线有货。注意两点：一是「医院」字样在多数国家受医疗机构执业法规约束，命名与宣传须与实际资质匹配；二是小型门诊 .clinic 语义更贴切，医院级机构才是 .hospital 的主场。命名上「城市/品牌 + .hospital」（riverside.hospital）最主流，读起来就是医院正门，「专科 + .hospital」（eye.hospital）适合专科医院与宠物医院。",
+      bestFor: ["综合医院与专科医院官网", "私立诊所与日间医疗中心", "康复医院与护理机构", "宠物医院与动物医疗中心"],
+      namingTips: [
+        "「城市/品牌 + .hospital」读起来就是医院正门",
+        "注册约 $46/年、续费同价，无首年促销陷阱",
+        "医院级机构用 .hospital，门诊用 .clinic，外科用 .surgery",
+        "「医院」字样受医疗法规约束，宣传须与资质匹配",
+      ],
+    },
+    en: {
+      title: ".hospital Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".hospital is the dedicated suffix for hospital institutions — for general and specialty hospital sites, private clinics and day-care medical centers, rehabilitation hospitals and nursing facilities, and animal hospitals or veterinary medical centers. See live pricing and naming advice, then hunt available .hospital names with AI.",
+      intro:
+        ".hospital writes the institution into the address: general and specialty hospital sites, private clinics and day-care medical centers, rehabilitation hospitals and nursing facilities, and animal hospitals on name.hospital say \"this is a hospital\" in one word — healthcare runs on trust, and the suffix itself is an institutional-grade statement, so brand + .hospital reads like the nameplate on a hospital gate. The registry is Identity Digital (formerly Donuts); open since 2016, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .clinic, .care and .surgery: .clinic names the outpatient practice, .care names caregiving services, .surgery names the surgical specialty — .hospital names the institutional tier, so full hospitals and inpatient facilities position sharpest here. Pricing is upper-mid and flat: about $46/yr to register (≈¥330) and the same to renew — no first-year promo trap, so multi-year costs stay predictable for an institution. Inventory is excellent: city words, specialty words and brand words all hit. Two cautions: the word hospital is regulated under healthcare-facility law in most countries, so naming and marketing must match your actual license; and a small outpatient practice reads truer on .clinic — hospital-tier institutions are this suffix's home turf. Naming: city or brand + .hospital (riverside.hospital) is the mainstream shape and reads like the front gate; specialty + .hospital (eye.hospital) suits specialty and animal hospitals.",
+      bestFor: ["General & specialty hospital sites", "Private clinics & day-care centers", "Rehabilitation & nursing facilities", "Animal hospitals & veterinary centers"],
+      namingTips: [
+        "City or brand + .hospital reads like the hospital's front gate",
+        "About $46/yr flat to register and renew — no promo trap",
+        "Hospitals fit .hospital; outpatient .clinic; surgical .surgery",
+        "The word hospital is regulated — match your actual license",
+      ],
+    },
+  },
+  gmbh: {
+    tld: "gmbh",
+    zh: {
+      title: ".gmbh 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".gmbh 是德语区有限责任公司的专属后缀，适合德国 GmbH 公司官网、奥地利与瑞士德语区企业、德语区子公司与合资公司、面向 DACH 市场的品牌站。查看 .gmbh 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .gmbh 域名。",
+      intro:
+        ".gmbh 把公司形态写进域名：德国 GmbH 公司官网、奥地利与瑞士德语区企业、德语区子公司与合资公司、面向 DACH 市场的品牌站用 name.gmbh，「我们是一家有限责任公司」一词讲透——GmbH 是德语区最常见的公司形态（相当于英语的 LLC/Ltd），后缀与工商注册名同词，德语客户一眼读懂，「品牌 + .gmbh」读起来就是公司注册名的域名版。2016 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .ltd/.llc/.company 分工清晰：.ltd 面向英联邦语境，.llc 面向美国语境，.company 说泛公司——.gmbh 说的是「德语区这个具体市场」，DACH 企业官网定位最准。价格适中且平续：注册约 $37/年（约 ¥265），续费同价——无首年促销陷阱，公司域名的多年持有成本可预期。库存极好：与公司注册名一致的域名大概率有货。注意两点：一是注册政策要求注册人是（或即将成为）依法设立的 GmbH/gGmbH 实体，个人与其他公司形态不符合条件；二是目标市场限于德语区，全球品牌主站 .com 触达更广。命名上「公司名 + .gmbh」（mueller.gmbh）最主流，与工商注册名一一对应，「品牌词 + .gmbh」适合集团旗下德语区子公司。",
+      bestFor: ["德国 GmbH 公司官网", "奥地利与瑞士德语区企业", "德语区子公司与合资公司", "面向 DACH 市场的品牌站"],
+      namingTips: [
+        "「公司名 + .gmbh」与工商注册名一一对应",
+        "注册约 $37/年、续费同价，无首年促销陷阱",
+        "德语区公司用 .gmbh，英联邦用 .ltd，美国用 .llc",
+        "注册政策要求注册人为依法设立的 GmbH 实体",
+      ],
+    },
+    en: {
+      title: ".gmbh Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".gmbh is the dedicated suffix for German-speaking limited companies — for German GmbH company sites, Austrian and Swiss German-market firms, DACH subsidiaries and joint ventures, and brands targeting the DACH market. See live pricing and naming advice, then hunt available .gmbh names with AI.",
+      intro:
+        ".gmbh writes the legal form into the address: German GmbH company sites, Austrian and Swiss German-market firms, DACH subsidiaries and joint ventures, and brands targeting the DACH market on name.gmbh say \"we are a limited company\" in one word — GmbH is the most common company form in the German-speaking world (the equivalent of LLC or Ltd), so the suffix matches the name on the commercial register and German-speaking customers read it instantly; brand + .gmbh is the domain version of the registered company name. Open since 2016, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .ltd, .llc and .company: .ltd speaks Commonwealth, .llc speaks American, .company speaks generic — .gmbh speaks to this specific market, so DACH corporate sites position sharpest here. Pricing is moderate and flat: about $37/yr to register (≈¥265) and the same to renew — no first-year promo trap, so a corporate domain's multi-year costs stay predictable. Inventory is excellent: the name matching your commercial register entry is very likely available. Two cautions: registry policy requires the registrant to be (or be in the process of becoming) a legally established GmbH or gGmbH — individuals and other company forms don't qualify; and the audience is the German-speaking region, so a global flagship still reaches wider on .com. Naming: company name + .gmbh (mueller.gmbh) is the mainstream shape, mapping one-to-one to the register; brand word + .gmbh suits a group's DACH subsidiary.",
+      bestFor: ["German GmbH company sites", "Austrian & Swiss German-market firms", "DACH subsidiaries & joint ventures", "Brands targeting the DACH market"],
+      namingTips: [
+        "Company name + .gmbh maps one-to-one to the register",
+        "About $37/yr flat to register and renew — no promo trap",
+        "DACH firms fit .gmbh; Commonwealth .ltd; US .llc",
+        "Policy requires a legally established GmbH registrant",
+      ],
+    },
+  },
+  condos: {
+    tld: "condos",
+    zh: {
+      title: ".condos 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".condos 是公寓物业的专属后缀，适合公寓楼盘与开发项目官网、公寓销售与租赁中介、度假公寓与短租运营、业主委员会与物业社区。查看 .condos 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .condos 域名。",
+      intro:
+        ".condos 把物业类型写进域名：公寓楼盘与开发项目官网、公寓销售与租赁中介、度假公寓与短租运营、业主委员会与物业社区用 name.condos，「我们卖/租公寓」一词讲透——北美买家搜公寓就用 condo 这个词，后缀与搜索意图同词，「楼盘名 + .condos」读起来就是项目售楼处的门牌。注册局为 Identity Digital（原 Donuts），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .apartments/.homes/.estate 分工清晰：.apartments 说租赁公寓，.homes 说独栋住宅，.estate 说资产大盘——.condos 说的是「产权公寓这个具体品类」，楼盘销售页与度假公寓定位最准。价格中高且平续：注册约 $47/年（约 ¥340），续费同价——无首年促销陷阱，项目周期内持有成本可预期。库存极好：楼盘词、城市词、海滨度假词全线有货。注意两点：一是 condo 是北美用词，欧洲与亚洲市场 .apartments/.immo 认知更高；二是复数形态拼写别漏掉 s，口播时提醒用户带上。命名上「楼盘名 + .condos」（skyline.condos）最主流，读起来就是售楼处，「城市/地段 + .condos」（miami.condos）适合中介与度假公寓运营。",
+      bestFor: ["公寓楼盘与开发项目官网", "公寓销售与租赁中介", "度假公寓与短租运营", "业主委员会与物业社区"],
+      namingTips: [
+        "「楼盘名 + .condos」读起来就是售楼处门牌",
+        "注册约 $47/年、续费同价，无首年促销陷阱",
+        "产权公寓用 .condos，租赁公寓用 .apartments，欧洲用 .immo",
+        "拼写含复数 s，口播场景提醒用户带上",
+      ],
+    },
+    en: {
+      title: ".condos Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".condos is the dedicated suffix for condominium properties — for condo developments and project sites, condo sales and rental agencies, vacation condos and short-stay operators, and owner associations or property communities. See live pricing and naming advice, then hunt available .condos names with AI.",
+      intro:
+        ".condos writes the property type into the address: condo developments and project sites, condo sales and rental agencies, vacation condos and short-stay operators, and owner associations on name.condos say \"we sell or rent condos\" in one word — condo is the exact word North American buyers search with, so the suffix matches search intent, and project name + .condos reads like the sales-office sign of a development. The registry is Identity Digital (formerly Donuts); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .apartments, .homes and .estate: .apartments names rentals, .homes names single-family houses, .estate names property at large — .condos names this specific ownership category, so development sales pages and vacation condos position sharpest here. Pricing is upper-mid and flat: about $47/yr to register (≈¥340) and the same to renew — no first-year promo trap, so costs stay predictable across a project's sales cycle. Inventory is excellent: project words, city words and beach-resort words all hit. Two cautions: condo is a North American term, so European and Asian markets read .apartments or .immo more readily; and the plural s drops easily in speech, so remind listeners it's there. Naming: project name + .condos (skyline.condos) is the mainstream shape and reads like the sales office; city or district + .condos (miami.condos) suits agencies and vacation-condo operators.",
+      bestFor: ["Condo developments & project sites", "Condo sales & rental agencies", "Vacation condos & short-stay operators", "Owner associations & communities"],
+      namingTips: [
+        "Project name + .condos reads like the sales-office sign",
+        "About $47/yr flat to register and renew — no promo trap",
+        "Owned units fit .condos; rentals .apartments; Europe .immo",
+        "The plural s drops easily in speech — call it out",
+      ],
+    },
+  },
+  rehab: {
+    tld: "rehab",
+    zh: {
+      title: ".rehab 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".rehab 是康复语义的专属后缀，适合康复医学与物理治疗诊所、戒瘾治疗与康复中心、运动损伤康复与训练机构、旧物翻新与房屋改造品牌。查看 .rehab 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .rehab 域名。",
+      intro:
+        ".rehab 把康复写进域名：康复医学与物理治疗诊所、戒瘾治疗与康复中心、运动损伤康复与训练机构、旧物翻新与房屋改造品牌用 name.rehab，「我们做康复」一词讲透——rehab 在英语里同时覆盖医疗康复、戒瘾治疗与旧物翻新三层语义，一个后缀三个行业都能用，「品牌 + .rehab」读起来就是一家康复机构的招牌。注册局为 Identity Digital（原 Rightside/Donuts 系），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .clinic/.fitness/.care 分工清晰：.clinic 说门诊机构，.fitness 说健身训练，.care 说照护服务——.rehab 说的是「恢复这个过程」，物理治疗与戒瘾康复定位最准。价格亲民但注意涨幅：首年常见约 $8（约 ¥60），续费约 $29/年（约 ¥210）——首年低价适合试错，长期持有按续费价预算。库存极好：专科词、城市词、品牌词全线有货。注意两点：一是医疗与戒瘾服务受执业资质法规约束，宣传用语须与资质匹配；二是 rehab 一词在部分语境带敏感联想，面向大众品牌注意语气。命名上「专科 + .rehab」（knee.rehab）最主流，读起来就是专科康复门牌，「品牌/城市 + .rehab」（austin.rehab）适合康复中心与改造品牌。",
+      bestFor: ["康复医学与物理治疗诊所", "戒瘾治疗与康复中心", "运动损伤康复与训练机构", "旧物翻新与房屋改造品牌"],
+      namingTips: [
+        "「专科 + .rehab」读起来就是专科康复门牌",
+        "首年约 $8、续费约 $29/年，长期按续费价预算",
+        "康复过程用 .rehab，门诊用 .clinic，健身用 .fitness",
+        "医疗与戒瘾宣传受资质法规约束，用语须匹配",
+      ],
+    },
+    en: {
+      title: ".rehab Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".rehab is the dedicated suffix for rehabilitation — for rehab medicine and physical-therapy clinics, addiction-treatment and recovery centers, sports-injury rehab and training facilities, and restoration or home-renovation brands. See live pricing and naming advice, then hunt available .rehab names with AI.",
+      intro:
+        ".rehab writes recovery into the address: rehab medicine and physical-therapy clinics, addiction-treatment and recovery centers, sports-injury rehab and training facilities, and restoration or home-renovation brands on name.rehab say \"we do rehab\" in one word — in English, rehab spans medical rehabilitation, addiction recovery and restoring old things, so one suffix serves three trades, and brand + .rehab reads like the signboard of a recovery practice. The registry is Identity Digital (via the Rightside/Donuts lineage); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .clinic, .fitness and .care: .clinic names the outpatient practice, .fitness names training, .care names caregiving — .rehab names the recovery process itself, so physical therapy and addiction recovery position sharpest here. Pricing is friendly but watch the step-up: often about $8 for the first year (≈¥60), renewing at about $29/yr (≈¥210) — the cheap first year suits experiments; budget long-term holds at the renewal rate. Inventory is excellent: specialty words, city words and brand words all hit. Two cautions: medical and addiction services are regulated, so marketing must match your actual license; and the word rehab carries sensitive connotations in some contexts, so mind the tone for consumer brands. Naming: specialty + .rehab (knee.rehab) is the mainstream shape and reads like a specialty practice; brand or city + .rehab (austin.rehab) suits recovery centers and renovation brands.",
+      bestFor: ["Rehab medicine & physical-therapy clinics", "Addiction-treatment & recovery centers", "Sports-injury rehab & training facilities", "Restoration & home-renovation brands"],
+      namingTips: [
+        "Specialty + .rehab reads like a specialty practice's sign",
+        "About $8 first year, ~$29/yr renewal — budget the step-up",
+        "The process fits .rehab; practices .clinic; training .fitness",
+        "Medical and addiction marketing must match your license",
+      ],
+    },
+  },
+  nyc: {
+    tld: "nyc",
+    zh: {
+      title: ".nyc 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".nyc 是纽约市的官方城市后缀（需纽约市本地地址），适合纽约本地商家与餐饮门店、纽约创业公司与专业服务、纽约房产与社区项目、面向纽约客的内容与活动站。查看 .nyc 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .nyc 域名。",
+      intro:
+        ".nyc 把城市身份写进域名：纽约本地商家与餐饮门店、纽约创业公司与专业服务、纽约房产与社区项目、面向纽约客的内容与活动站用 name.nyc，「我们在纽约」一词讲透——这是纽约市政府持有的官方城市后缀，2014 年开放注册，且要求注册人在纽约市五区内有实际地址（Nexus 政策），门槛本身就是本地身份的背书，「品牌 + .nyc」读起来就是一家纽约本地机构。它与已收录的 .us/.city/.town 分工清晰：.us 说美国全国，.city 说泛城市语义，.town 说小城镇——.nyc 说的是「纽约这一座城市」，本地商家与纽约客内容定位最准。价格适中且平续：注册约 $26/年（约 ¥190），续费同价——无首年促销陷阱，本地品牌的多年持有成本可预期。库存好：社区词、行业词、街区词仍有大量机会。注意两点：一是 Nexus 政策要求纽约市内地址，注册与持有期间都须满足，无本地地址会被回收；二是受众限于纽约，面向全国的品牌 .com/.us 触达更广。命名上「行业 + .nyc」（pizza.nyc）最主流，读起来就是本地生意，「街区/品牌 + .nyc」（soho.nyc）适合社区项目与本地内容站。",
+      bestFor: ["纽约本地商家与餐饮门店", "纽约创业公司与专业服务", "纽约房产与社区项目", "面向纽约客的内容与活动站"],
+      namingTips: [
+        "「行业 + .nyc」读起来就是纽约本地生意",
+        "注册约 $26/年、续费同价，无首年促销陷阱",
+        "纽约本地用 .nyc，美国全国用 .us，泛城市用 .city",
+        "Nexus 政策要求纽约市内地址，持有期间须满足",
+      ],
+    },
+    en: {
+      title: ".nyc Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".nyc is the official city suffix of New York City (NYC address required) — for local businesses and restaurants, NYC startups and professional services, New York real estate and community projects, and content or events for New Yorkers. See live pricing and naming advice, then hunt available .nyc names with AI.",
+      intro:
+        ".nyc writes the city into the address: local businesses and restaurants, NYC startups and professional services, New York real estate and community projects, and content or events for New Yorkers on name.nyc say \"we're in New York\" in one word — this is the official city suffix held by the City of New York, open since 2014, and its nexus policy requires registrants to have a physical address in the five boroughs, so the bar itself endorses your local identity; brand + .nyc reads like a genuinely local institution. It divides labor cleanly with the already-listed .us, .city and .town: .us names the whole country, .city names cities generically, .town names small towns — .nyc names this one city, so local businesses and New Yorker content position sharpest here. Pricing is moderate and flat: about $26/yr to register (≈¥190) and the same to renew — no first-year promo trap, so a local brand's multi-year costs stay predictable. Inventory is good: neighborhood words, trade words and block names still offer plenty of room. Two cautions: the nexus policy requires an NYC address at registration and throughout the term — domains without one can be reclaimed; and the audience is New York, so national brands reach wider on .com or .us. Naming: trade + .nyc (pizza.nyc) is the mainstream shape and reads like a local business; neighborhood or brand + .nyc (soho.nyc) suits community projects and local content.",
+      bestFor: ["Local businesses & restaurants", "NYC startups & professional services", "New York real estate & community projects", "Content & events for New Yorkers"],
+      namingTips: [
+        "Trade + .nyc reads like a genuinely local NYC business",
+        "About $26/yr flat to register and renew — no promo trap",
+        "NYC fits .nyc; nationwide .us; generic cities .city",
+        "Nexus policy: keep an NYC address throughout the term",
+      ],
+    },
+  },
+  london: {
+    tld: "london",
+    zh: {
+      title: ".london 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".london 是伦敦的官方城市后缀，适合伦敦本地商家与餐饮门店、伦敦创业公司与专业服务、伦敦房产与旅游项目、面向伦敦客群的内容与活动站。查看 .london 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .london 域名。",
+      intro:
+        ".london 把城市身份写进域名：伦敦本地商家与餐饮门店、伦敦创业公司与专业服务、伦敦房产与旅游项目、面向伦敦客群的内容与活动站用 name.london，「我们在伦敦」一词讲透——这是伦敦官方推广机构 London & Partners 旗下的城市后缀，2014 年开放注册，对全球开放无地址门槛，「品牌 + .london」读起来就是一块伦敦门牌，本地信任感与国际都市感兼得。它与已收录的 .uk/.city/.town 分工清晰：.uk 说英国全国，.city 说泛城市语义，.town 说小城镇——.london 说的是「伦敦这一座城市」，本地商家与旅游项目定位最准。价格适中但注意涨幅：首年常见约 $14（约 ¥105），续费约 $28/年（约 ¥200）——首年低价适合试错，长期持有按续费价预算。库存好：街区词、行业词、品牌词仍有大量机会。注意两点：一是后缀拼写长达 6 字符，搭配短品牌词控制总长；二是受众限于伦敦及其客群，面向全英国的品牌 .uk/.co.uk 触达更广。命名上「行业 + .london」（coffee.london）最主流，读起来就是本地生意，「街区/品牌 + .london」（soho.london）适合社区项目与旅游内容站。",
+      bestFor: ["伦敦本地商家与餐饮门店", "伦敦创业公司与专业服务", "伦敦房产与旅游项目", "面向伦敦客群的内容与活动站"],
+      namingTips: [
+        "「行业 + .london」读起来就是伦敦本地生意",
+        "首年约 $14、续费约 $28/年，长期按续费价预算",
+        "伦敦本地用 .london，英国全国用 .uk，泛城市用 .city",
+        "后缀 6 字符偏长，搭配短品牌词控制总长",
+      ],
+    },
+    en: {
+      title: ".london Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".london is the official city suffix of London — for local businesses and restaurants, London startups and professional services, London real estate and tourism projects, and content or events for Londoners. See live pricing and naming advice, then hunt available .london names with AI.",
+      intro:
+        ".london writes the city into the address: local businesses and restaurants, London startups and professional services, London real estate and tourism projects, and content or events for Londoners on name.london say \"we're in London\" in one word — this is the city suffix run under London & Partners, the capital's official promotion agency, open since 2014 and available worldwide with no address requirement, so brand + .london reads like a London nameplate, blending local trust with global-city cachet. It divides labor cleanly with the already-listed .uk, .city and .town: .uk names the whole country, .city names cities generically, .town names small towns — .london names this one city, so local businesses and tourism projects position sharpest here. Pricing is moderate but watch the step-up: often about $14 for the first year (≈¥105), renewing at about $28/yr (≈¥200) — the cheap first year suits experiments; budget long-term holds at the renewal rate. Inventory is good: neighborhood words, trade words and brand words still offer plenty of room. Two cautions: at six characters the suffix runs a bit long, so a short brand word keeps the total manageable; and the audience is London and its visitors, so UK-wide brands reach wider on .uk or .co.uk. Naming: trade + .london (coffee.london) is the mainstream shape and reads like a local business; neighborhood or brand + .london (soho.london) suits community projects and tourism content.",
+      bestFor: ["Local businesses & restaurants", "London startups & professional services", "London real estate & tourism projects", "Content & events for Londoners"],
+      namingTips: [
+        "Trade + .london reads like a genuinely local business",
+        "About $14 first year, ~$28/yr renewal — budget the step-up",
+        "London fits .london; UK-wide .uk; generic cities .city",
+        "At six characters the suffix runs long — keep names short",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
