@@ -245,7 +245,7 @@
     ]
   },
   "guide": {
-    "count": 236,
+    "count": 242,
     "slugs": [
       "saas",
       "ecommerce",
@@ -482,7 +482,13 @@
       "makeupartist",
       "homestaging",
       "yachtcharter",
-      "autoparts"
+      "autoparts",
+      "robotics",
+      "nocode",
+      "badminton",
+      "gokart",
+      "sauna",
+      "pizza"
     ]
   },
   "vs": {

@@ -14756,6 +14756,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  robotics: {
+    slug: "robotics",
+    keywords: ["机器人", "具身智能", "humanoid"],
+    tlds: [
+      { tld: "com", zh: "机器人卖给企业与政府，采购名单上 .com 最有分量", en: "Robots sell to enterprises and governments — .com carries the most weight on a procurement list" },
+      { tld: "ai", zh: "具身智能叙事下，.ai 一个后缀说清技术底色", en: "Under the embodied-AI narrative, .ai states your technical DNA in one suffix" },
+      { tld: "tech", zh: "硬科技公司的品类后缀，工程气质直给", en: "The category suffix for hard-tech companies — engineering energy, straight up" },
+    ],
+    zh: {
+      label: "机器人公司",
+      title: "机器人公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "机器人公司命名指南：动力词根、人格化、场景命名等思路，Boston Dynamics/iRobot/宇树/Figure 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册的机器人域名。",
+      intro:
+        "机器人公司的名字要同时说服两群完全不同的人：一群是拿着预算的企业采购与投资人，他们要在名字里读到「这家公司造得出可靠的机器」；另一群是即将与机器人朝夕相处的普通人，他们要在名字里读到「这台机器不吓人」。这决定了机器人命名的独特张力——工程可信度与人格亲和力必须共存。Boston Dynamics 用「动力学」宣示技术深度，iRobot 用一个小写的 i 把机器人请进客厅，宇树用「树」给四足机器人安了一个自然意象。还有一个时代变量：具身智能让机器人公司同时是 AI 公司，名字要给「从机械臂到通用机器人」的叙事留出纵深，绑死在单一形态（如 XxxArm）上的名字会在下一轮融资叙事里变成负资产。机器人公司生命周期长、融资轮次多，名字会被写进论文、专利与政府采购文件，起名时按二十年公司来起。",
+      namingIdeas: [
+        "动力与运动词根：dynamics、motion、agile、boost——机器人的核心卖点是「会动且动得可靠」，把动力学写进名字是最直接的技术宣言",
+        "人格化降温：机器人天然让人联想到冰冷与替代，用亲和的人名或小写前缀（iRobot 的 i、Pepper）主动给名字降温，尤其是消费与服务机器人",
+        "自然意象借词：宇树（Unitree）、Boston Dynamics 的 Spot（斑点狗）——用动物、植物意象暗示形态与能力，比机械词更好记也更少威胁感",
+        "留叙事纵深：不锁定单一形态或场景，用 general、figure、embodied 等词根为「通用机器人」的故事留空间；具身智能时代形态会换代，名字不能跟着报废",
+        "论文与专利测试：名字放进英文论文引用与专利文件里念一遍——机器人公司的名字会被学术圈高频书写，拗口的造词会在引用里被拼错",
+      ],
+      cases: [
+        { name: "Boston Dynamics", takeaway: "地名 + 学科词：「波士顿」给了 MIT 系的学术出身，「动力学」宣示核心技术——工程可信度拉满的教科书命名，代价是长，靠实力让全世界记住" },
+        { name: "iRobot", takeaway: "一个小写 i 完成的人格化：把 robot 这个略带威胁感的词变成家用电器——扫地机器人卖进千万家庭，名字的「无害化」处理是第一功臣" },
+        { name: "Unitree（宇树）", takeaway: "uni（统一/单一）+ tree：英文名暗合「一棵树般稳定生长」，中文「宇树」把格局推到宇宙尺度——中英文双线都成立的出海命名范本" },
+        { name: "Figure", takeaway: "直接用「人形/身影」一词命名人形机器人公司：品类即品牌，一个常用词赌下整个具身智能叙事——常见词命名配 figure.ai 精准后缀的现代打法" },
+      ],
+      pitfalls: [
+        "名字锁死单一形态：XxxArm、XxxDrone 式命名在产品线扩张后立刻过时，机器人公司的形态迭代比名字寿命快得多",
+        "堆砌 robo/bot 前后缀：RoboXxx 满街都是，辨识度趋零且显得像玩具而非工业级产品",
+        "科幻反派联想失察：机器人命名要主动避开终结者式的冷酷词根（如 Cyberdyne 的教训），名字的威胁感会被媒体放大",
+        "只查 .com 不查学术与专利重名：机器人名字会进论文数据库，与知名实验室项目重名会长期分流你的搜索结果",
+      ],
+    },
+    en: {
+      label: "Robotics companies",
+      title: "How to Name a Robotics Company: Strategies, Cases & Domains",
+      metaDescription:
+        "Robotics naming guide: dynamics roots, personification, narrative headroom, breakdowns of Boston Dynamics/iRobot/Unitree/Figure, recommended TLDs and pitfalls — then hunt an available robotics domain with AI.",
+      intro:
+        "A robotics name has to convince two very different audiences at once: enterprise buyers and investors holding budgets, who need to read \"this company builds reliable machines\" in the name; and the ordinary people about to live and work alongside the robot, who need to read \"this machine is not scary.\" That tension defines robotics naming — engineering credibility and approachable personality must coexist. Boston Dynamics declares technical depth with a physics term; iRobot ushered robots into living rooms with one lowercase i; Unitree hangs a natural image on a quadruped. There is also an era variable: embodied AI makes every robotics company an AI company, so the name needs headroom for the arc from one robot arm to a general-purpose machine — a name welded to a single form factor (SomethingArm) becomes a liability by the next funding narrative. Robotics companies live long lives across many rounds; the name will be written into papers, patents and government procurement files, so name for a twenty-year company.",
+      namingIdeas: [
+        "Dynamics and motion roots: dynamics, motion, agile, boost — the core promise is \"it moves, reliably\"; putting physics into the name is the most direct technical statement",
+        "Personify to de-threaten: robots evoke cold replacement by default — a friendly given name or a lowercase prefix (iRobot's i, Pepper) actively warms the name, especially for consumer and service robots",
+        "Borrow natural imagery: Unitree's tree, Boston Dynamics' Spot — animal and plant images hint at form and capability while staying memorable and unthreatening",
+        "Leave narrative headroom: avoid locking onto one form factor or scene; roots like general, figure, embodied keep room for the general-purpose story — hardware generations change faster than names should",
+        "The paper-and-patent test: read the candidate inside an English academic citation — robotics names get written constantly by researchers, and awkward coinages get misspelled in references",
+      ],
+      cases: [
+        { name: "Boston Dynamics", takeaway: "Place plus discipline: \"Boston\" carries the MIT lineage, \"Dynamics\" declares the core tech — maximum engineering credibility, at the cost of length the products earned back" },
+        { name: "iRobot", takeaway: "Personification via one lowercase i: it turned the vaguely threatening word robot into a home appliance — the name's de-threatening did the heavy lifting for millions of living rooms" },
+        { name: "Unitree", takeaway: "uni + tree: steady organic growth in English, cosmic scale in the Chinese name 宇树 — a template for naming that works on both language tracks at once" },
+        { name: "Figure", takeaway: "The humanoid category named with the plain word for a human form: category as brand, one common word betting the whole embodied-AI narrative — modern common-word + figure.ai precision-TLD play" },
+      ],
+      pitfalls: [
+        "Welding the name to one form factor: SomethingArm / SomethingDrone expires the moment the product line grows — robots iterate faster than names",
+        "Stacking robo/bot affixes: RoboEverything reads like a toy aisle, with near-zero distinctiveness for an industrial-grade company",
+        "Ignoring sci-fi villain echoes: actively avoid terminator-cold roots (the Cyberdyne lesson) — media amplifies any menace a robot name carries",
+        "Clearing only the .com: robotics names enter paper databases — colliding with a famous lab project siphons your search results for years",
+      ],
+    },
+  },
+  nocode: {
+    slug: "nocode",
+    keywords: ["无代码", "低代码", "low-code"],
+    tlds: [
+      { tld: "com", zh: "无代码用户是业务人群而非极客，.com 心智门槛最低", en: "No-code users are business people, not geeks — .com has the lowest mental barrier" },
+      { tld: "io", zh: "偏开发者的低代码平台，.io 圈内认同现成", en: "For developer-leaning low-code platforms, .io credibility comes ready-made" },
+      { tld: "app", zh: "「做出来的就是 app」时后缀即产品说明", en: "When the output is literally an app, the suffix doubles as the product description" },
+    ],
+    zh: {
+      label: "无代码工具",
+      title: "无代码工具怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "无代码/低代码工具命名指南：拟物隐喻、动作词根、去技术化等思路，Zapier/Bubble/Webflow/Retool 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "无代码工具的命名悖论在于：产品的全部卖点是「不用懂技术」，名字却诞生在一个人人堆砌 code、dev、stack 的技术品类里。赢家们的答案出奇一致——把技术词全部扔掉。Bubble（气泡）、Webflow（流动）、Zapier（zap，电光一闪）：这些名字描述的是使用的感受而非实现的原理，因为无代码的目标用户是运营、设计师和小老板，他们对 code 这个词的情绪是敬而远之。所以无代码命名的第一原则是「说人话」：名字要让一个不懂技术的人产生「我也能行」的直觉。第二原则是动作感：无代码卖的是「立刻做出来」的爽感，zap、flow、glide 这类有速度与顺滑感的词根天然契合。第三是留出平台纵深——今天做表单，明天做全栈应用，名字别锁死在单一产出物上。域名层面，这个品类的用户会口口相传给同样不懂技术的同事，好拼好念比酷炫重要十倍。",
+      namingIdeas: [
+        "拟物隐喻优先：Bubble（气泡）、Glide（滑翔）——用轻盈、顺滑的日常意象传达「零门槛」，比任何功能描述都更能让小白用户放下戒备",
+        "动作与速度词根：zap、flow、dash、snap——无代码的核心爽感是「立刻见效」，名字里的速度感就是产品承诺",
+        "彻底去技术化：把 code、dev、stack、api 全部从候选里删掉——你的用户看到这些词的第一反应是「这不是给我用的」",
+        "成对词根嫁接：Webflow = web + flow、Retool = re + tool——一半锚定品类一半注入气质，是这个品类拿得到域名的主力结构",
+        "同事转述测试：想象一个运营对另一个运营说「你用 XX 搭一个就行」——名字在这句话里顺不顺口，决定了病毒传播的摩擦系数",
+      ],
+      cases: [
+        { name: "Zapier", takeaway: "zap（电光一闪）+ -ier：把「自动化」翻译成「咔嚓一下就连上了」的体感，名字自带速度与魔法感——技术产品去技术化命名的标杆" },
+        { name: "Bubble", takeaway: "一个日常到不能再日常的词「气泡」：轻盈、无害、人人认识，精准对冲了「自己做应用」的心理门槛——用词的温度降低品类的难度" },
+        { name: "Webflow", takeaway: "web + flow 的教科书嫁接：品类词锚定「做网站」，flow 注入「顺滑不卡壳」的使用承诺——一个词说清做什么和什么感受" },
+        { name: "Retool", takeaway: "re + tool：「重新造工具」四个字母说清「内部工具不用从头写」的产品定位——面向偏技术用户时，保留 tool 这类中性词反而精准" },
+      ],
+      pitfalls: [
+        "名字里塞 NoCode/LowCode：品类词当名字毫无辨识度，且品类标签一旦过气（行业词汇迭代极快）名字跟着贬值",
+        "用技术黑话吓跑目标用户：stack、api、dev 类词根对业务用户是劝退信号，你的付费用户恰恰是不懂这些词的人",
+        "过度可爱失去专业感：无代码工具最终要卖给公司做正经业务，名字太玩具化会在采购环节被质疑「这能上生产吗」",
+        "忽略教程生态里的可搜索性：无代码用户重度依赖 YouTube 教程与模板市场，名字与常见词完全撞车会让教程搜索一片混战",
+      ],
+    },
+    en: {
+      label: "No-code tools",
+      title: "How to Name a No-code Tool: Strategies, Cases & Domains",
+      metaDescription:
+        "No-code and low-code naming guide: tactile metaphors, action roots, de-jargoning, breakdowns of Zapier/Bubble/Webflow/Retool, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "The naming paradox of no-code: the entire pitch is \"you don't need to be technical,\" yet the name is born into a category drowning in code, dev and stack. The winners all answered the same way — throw out every technical word. Bubble, Webflow, Zapier: these names describe how using the product feels, not how it works, because the target user is an operator, a designer, a small-business owner whose reflex to the word code is polite retreat. So rule one of no-code naming is to speak human: the name should give a non-technical person the instinct \"I could do this.\" Rule two is motion: no-code sells the thrill of \"built it right now,\" and roots with speed and glide in them — zap, flow, snap — are native to that promise. Rule three is platform headroom: forms today, full-stack apps tomorrow; don't weld the name to a single output. On domains, these users refer the product to equally non-technical colleagues, so easy to say and spell beats clever by a factor of ten.",
+      namingIdeas: [
+        "Lead with tactile metaphors: Bubble, Glide — light, frictionless everyday images that disarm the beginner better than any feature description",
+        "Action and speed roots: zap, flow, dash, snap — the core thrill is instant results, and speed in the name is the product promise",
+        "De-jargon ruthlessly: delete code, dev, stack and api from the candidate list — your buyer's first reaction to those words is \"this isn't for me\"",
+        "Graft paired roots: Webflow = web + flow, Retool = re + tool — half anchors the category, half injects the feel; the workhorse structure that still gets you a domain",
+        "The colleague-referral test: picture one marketer telling another \"just build it in X\" — how smoothly the name rides that sentence sets your viral friction",
+      ],
+      cases: [
+        { name: "Zapier", takeaway: "zap + -ier: automation translated into the feel of \"one crackle and it's connected\" — speed and magic built into the name; the benchmark for de-jargoned technical naming" },
+        { name: "Bubble", takeaway: "The most ordinary word imaginable: light, harmless, universally known — precisely offsetting the intimidation of \"build your own app.\" Word warmth lowering category difficulty" },
+        { name: "Webflow", takeaway: "The textbook web + flow graft: the category word anchors \"websites,\" flow promises \"smooth, never stuck\" — what it does and how it feels in one word" },
+        { name: "Retool", takeaway: "re + tool: \"rebuild your tools\" states the internal-tools positioning in six letters — for a developer-leaning audience, keeping a neutral word like tool is precision, not laziness" },
+      ],
+      pitfalls: [
+        "Putting NoCode/LowCode in the name: a category label has zero distinctiveness, and when the label ages out (this industry re-labels fast) the name depreciates with it",
+        "Scaring buyers with jargon: stack, api, dev roots repel business users — your paying customer is exactly the person who doesn't know those words",
+        "Going so cute you lose the boardroom: no-code tools eventually sell to companies for real work; a toy-like name gets asked \"is this production-grade?\" in procurement",
+        "Ignoring tutorial-ecosystem searchability: no-code users live on YouTube tutorials and template markets — a name that collides with a common word turns every tutorial search into a brawl",
+      ],
+    },
+  },
+  badminton: {
+    slug: "badminton",
+    keywords: ["羽毛球", "球馆"],
+    tlds: [
+      { tld: "com", zh: "球馆与培训机构的默认选择，家长与会员最信任", en: "The default for clubs and academies — parents and members trust it most" },
+      { tld: "club", zh: "俱乐部属性直给，会员归属感写进后缀", en: "Club identity stated outright — membership belonging built into the suffix" },
+      { tld: "fun", zh: "面向大众休闲场馆，轻松感先声夺人", en: "For casual-play venues, the lighthearted vibe leads" },
+    ],
+    zh: {
+      label: "羽毛球馆",
+      title: "羽毛球馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "羽毛球馆与羽毛球俱乐部命名指南：速度词根、飞行意象、社群感等思路，Yonex/Victor/李宁/尤尼克斯案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "羽毛球馆的名字活在三个场景里：家长在地图 App 里搜「附近羽毛球培训」时的列表、球友微信群里「明晚 XX 馆走起」的接龙、以及球馆招牌在马路对面被一眼认出的瞬间。这决定了球馆命名的优先级——第一是本地搜索友好，名字要让「羽毛球」这个品类词以某种形式可被联想，纯抽象名会在地图搜索里吃亏；第二是口播顺滑，球友约球高频到几乎每天，名字超过四个字就会被自动缩写，不如一开始就起短的；第三是气质分层：做青少年培训要让家长读出「专业与安全」，做成人俱乐部要让球友读出「热血与归属」。羽毛球自带一流的意象库——飞行、羽毛、扣杀、闪电，这些词根既有画面又有速度感，比「XX 体育」的通用命名强出一个身位。若同时做器材零售或线上约球，记得给名字留出「不只是一块场地」的余量。",
+      namingIdeas: [
+        "速度与爆发词根：smash（扣杀）、swift、闪电、疾风——羽毛球是世界上球速最快的球拍运动，名字里的速度感就是专业感",
+        "飞行与羽毛意象：feather、wing、flight、羽——品类联想一步到位，且比「体育」「运动」类通用词优雅得多",
+        "社群归属命名：俱乐部型球馆用「会员共同体」的口吻起名（XX 部落、XX 联盟），球友要的是「我们馆」的归属感而非商业感",
+        "本地锚点嫁接：城市、街区、地标 + 羽球词根——本地搜索与口碑传播双赢，连锁扩张时换地名即可复制",
+        "接龙测试：把名字放进「明晚 XX 走起，缺二」的微信接龙里念——约球高频口播场景里顺不顺，比招牌好不好看重要",
+      ],
+      cases: [
+        { name: "Yonex（尤尼克斯）", takeaway: "创始人米山（Yoneyama）的姓氏压缩造词：从羊毛纺织转型球拍的日本企业，靠短促有力的四音节成为羽球的代名词——品类心智被一个品牌名占领的罕见样本" },
+        { name: "Victor（胜利）", takeaway: "直接用「胜利者」一词命名：竞技体育里最不会错的情绪词，中文名「胜利」更是零翻译损耗——常用词命名在体育品类的天然优势" },
+        { name: "李宁", takeaway: "奥运冠军的名字就是品牌：体操王子的国民信任直接迁移到装备上——人名命名在体育行业的最强形态，前提是那个名字本身就是成绩单" },
+        { name: "川崎（Kawasaki）", takeaway: "百年日本工业姓氏跨界羽球：重工的「可靠耐造」联想意外契合球拍器材——借势成熟姓氏的品质背书，新球馆可借鉴其「厚重词根」思路" },
+      ],
+      pitfalls: [
+        "「XX 体育」式万金油命名：什么运动都像，什么运动都不像，家长搜羽毛球培训时你排不进联想",
+        "名字超过四个字：球友约球必缩写，「城东羽毛球运动中心」最终只会被叫「城东」——不如自己先起好短名",
+        "只顾中文不查拼音域名与公众号：球馆获客靠公众号预约与地图收录，名字定了才发现同名公众号被占是常见返工",
+        "青少年培训用过于热血的名字：家长要的是「专业教练与安全场地」，杀气腾腾的名字反而让报名的手停一停",
+      ],
+    },
+    en: {
+      label: "Badminton clubs",
+      title: "How to Name a Badminton Club: Strategies, Cases & Domains",
+      metaDescription:
+        "Badminton club and academy naming guide: speed roots, flight imagery, community belonging, breakdowns of Yonex/Victor/Li-Ning/Kawasaki, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A badminton club's name lives in three places: the map-app list when a parent searches \"badminton lessons near me,\" the group-chat roll call of \"XX court tomorrow night, who's in,\" and the moment the signboard is recognized from across the street. That sets the priorities. First, local-search friendliness: the category should be evocable from the name in some form — purely abstract names lose in map search. Second, spoken smoothness: players organize games almost daily, and any name past a few syllables gets abbreviated by the group chat anyway, so start short. Third, tonal layering: a junior academy needs parents to read professional and safe; an adult club needs players to read intensity and belonging. Badminton comes with a first-class image bank — flight, feathers, the smash, lightning — roots with both picture and pace, a full class above generic \"XX Sports\" naming. And if you'll also sell gear or run online court booking, leave the name room to be more than a hall.",
+      namingIdeas: [
+        "Speed and burst roots: smash, swift, bolt, gale — badminton is the fastest racquet sport on earth, and pace in the name reads as professionalism",
+        "Flight and feather imagery: feather, wing, flight — instant category association, and far more elegant than generic sports words",
+        "Name for belonging: club-type venues should sound like a member community (tribe, league, alliance) — regulars want \"our club,\" not a business",
+        "Graft a local anchor: city, district or landmark plus a badminton root — wins local search and word of mouth at once, and chains can clone the formula per location",
+        "The roll-call test: read the name inside \"XX tomorrow 8pm, need two more\" — how it rides the daily group-chat message matters more than how it looks on the sign",
+      ],
+      cases: [
+        { name: "Yonex", takeaway: "The founder's surname Yoneyama compressed into a coinage: a Japanese wool-loom maker turned racquet king, four punchy phonemes that became synonymous with the sport — a rare case of one brand owning a category's mind" },
+        { name: "Victor", takeaway: "Named with the plain word for a winner: the least mistakable emotion in competitive sport, translating losslessly across markets — the native advantage of common-word naming in athletics" },
+        { name: "Li-Ning", takeaway: "An Olympic champion's own name as the brand: the gymnast's national trust transferred straight onto equipment — the strongest form of personal naming in sport, provided the name itself is the trophy shelf" },
+        { name: "Kawasaki", takeaway: "A century-old industrial surname crossing into badminton: heavy-industry reliability lending toughness to racquets — borrowed-surname quality endorsement that new clubs can echo with weighty roots" },
+      ],
+      pitfalls: [
+        "Generic \"XX Sports\" naming: it resembles every sport and owns none — you'll never surface when parents search badminton lessons",
+        "Names past four syllables: players abbreviate mercilessly — \"Eastside Badminton Activity Center\" becomes \"Eastside\" anyway, so pick the short name yourself",
+        "Skipping handle and domain checks: clubs run on booking accounts and map listings — discovering the matching handle is taken after the sign is printed is the classic rework",
+        "Overly aggressive names for junior academies: parents are buying qualified coaches and safe floors — a bloodthirsty name makes the enrolling hand hesitate",
+      ],
+    },
+  },
+  gokart: {
+    slug: "gokart",
+    keywords: ["卡丁车", "赛车场", "karting"],
+    tlds: [
+      { tld: "com", zh: "连锁场馆与团建采购的信任底座，.com 最稳", en: "The trust base for chains and corporate-event buyers — .com is steadiest" },
+      { tld: "club", zh: "会员制赛道俱乐部，归属感与复购写进后缀", en: "For member track clubs, belonging and repeat visits built into the suffix" },
+      { tld: "fun", zh: "娱乐卡丁车馆的气质后缀，家庭客群零门槛", en: "The vibe suffix for entertainment karting — zero barrier for family visitors" },
+    ],
+    zh: {
+      label: "卡丁车馆",
+      title: "卡丁车馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "卡丁车馆与卡丁车俱乐部命名指南：速度词根、赛事借势、荷尔蒙意象等思路，K1 Speed/Andretti/TeamSport/Sodi 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取域名。",
+      intro:
+        "卡丁车馆卖的不是车，是肾上腺素。顾客从刷到短视频到下单团购的决策链极短，名字必须在两秒内完成「快、爽、专业」的情绪注入——这是为什么全球头部品牌的名字里几乎都有速度符号：K1 Speed 直接把「速度」写进名字，Andretti 借传奇车手的姓氏把 F1 血统搬进室内赛道。卡丁车命名有一条独特的分界线：偏娱乐的场馆要让家庭客与团建群体读出「好玩不吓人」，偏竞技的俱乐部要让车迷读出「正经赛道与圈速榜」。两头都想要的名字往往两头落空，先定客群再定名。此外别忽视赛事借势的空间——F1、勒芒的词汇体系（格子旗、杆位、P1）是免费的联想资产，用得巧名字自带引擎声。域名与社交账号要一起查，卡丁车馆的获客主阵地在短视频与点评平台，名字是话题标签的一部分。",
+      namingIdeas: [
+        "速度直给：speed、dash、apex、飙——卡丁车是冲动消费，名字里的速度词就是下单按钮的第一次预热",
+        "赛事词汇借势：格子旗（checkered）、杆位（pole）、P1、apex（弯心）——车迷一眼识别内行，普通客群也能感到「正规赛道」的气场",
+        "传奇姓氏与数字编号：Andretti 式借车手姓氏、K1 式字母数字组合——前者要授权，后者可自造：短、硬、有机械感，天然适合赛道品牌",
+        "荷尔蒙意象降门槛：对家庭娱乐场馆，用「风、闪电、旋风」这类有速度但无危险感的意象，让家长放心让孩子上车",
+        "话题标签测试：名字加 # 放进短视频文案里看效果——卡丁车获客靠抖音与点评，标签里立不住的名字营销费用会打折",
+      ],
+      cases: [
+        { name: "K1 Speed", takeaway: "字母数字 + 速度词的暴力直给：K1 像赛事级别又像杆位编号，Speed 不留任何想象成本——全球最大室内卡丁连锁用最直白的名字跑赢了所有花哨造词" },
+        { name: "Andretti Indoor Karting", takeaway: "传奇车手姓氏的血统迁移：Mario Andretti 的 F1 冠军光环直接给室内赛道镀金——体育场馆借运动员姓氏命名的标准打法，代价是授权与姓氏绑定" },
+        { name: "TeamSport", takeaway: "team + sport 两个通用词的组合：英国最大卡丁连锁把「团队运动」写进名字，精准锚定团建与聚会客群——名字即获客定位的样本" },
+        { name: "Sodikart", takeaway: "Sodi + kart：全球最大卡丁车制造商把品类词 kart 焊进品牌，B 端采购搜「kart」时永远在场——制造商命名与场馆命名的品类词策略殊途同归" },
+      ],
+      pitfalls: [
+        "「XX 赛车」的泛化命名：和汽修、改装、赛车模拟器全部撞车，短视频标签与地图搜索两头失焦",
+        "危险感过载：碰撞、极限、狂暴类词根会吓退家庭客与团建 HR——卡丁车馆一半以上收入来自怕出事的客群",
+        "娱乐竞技定位不清：竞技俱乐部起了个亲子乐园的名字，圈速榜车迷不来；反之家长不敢带孩子来——先定客群再定名",
+        "忽略团购平台与短视频标签查重：点评与抖音是卡丁车馆的获客主场，同名场馆的差评会精准砸到你头上",
+      ],
+    },
+    en: {
+      label: "Go-kart venues",
+      title: "How to Name a Go-kart Venue: Strategies, Cases & Domains",
+      metaDescription:
+        "Go-kart venue and karting club naming guide: speed roots, motorsport borrowing, adrenaline imagery, breakdowns of K1 Speed/Andretti/TeamSport/Sodikart, recommended TLDs and pitfalls — then hunt a domain with AI.",
+      intro:
+        "A karting venue doesn't sell cars — it sells adrenaline. The decision chain from a short-video scroll to a booked session is seconds long, and the name must inject fast, thrilling and legitimate in under two of them. That's why the global leaders wear speed on their sleeves: K1 Speed writes it literally, Andretti moves F1 bloodline indoors with a legendary surname. Karting has one sharp dividing line: entertainment venues need families and team-building groups to read \"fun, not scary,\" while competitive track clubs need enthusiasts to read \"real circuit, real lap board.\" Names that chase both usually land neither — pick your crowd before you pick your name. Don't overlook motorsport's free association bank either: the vocabulary of F1 and Le Mans — checkered flags, pole position, apex — puts engine sound into a name when borrowed well. Clear the domain and social handles together: karting acquisition lives on short video and review platforms, where the name is part of the hashtag.",
+      namingIdeas: [
+        "Speed, stated outright: speed, dash, apex, bolt — karting is an impulse purchase, and a speed word in the name is the first warm-up of the booking button",
+        "Borrow motorsport vocabulary: checkered, pole, P1, apex — enthusiasts recognize an insider instantly, and casual visitors feel the \"real circuit\" aura",
+        "Legend surnames and alphanumerics: the Andretti route needs licensing; the K1 route you can coin yourself — short, hard, mechanical, native to track brands",
+        "Adrenaline without danger: for family venues, use fast-but-safe imagery (wind, lightning, whirlwind) so parents happily strap the kids in",
+        "The hashtag test: put the candidate behind a # in a short-video caption — karting is sold on TikTok and review apps, and a name that fails the hashtag taxes every marketing dollar",
+      ],
+      cases: [
+        { name: "K1 Speed", takeaway: "Alphanumeric plus the word itself: K1 reads like a race class or a pole number, Speed leaves zero interpretive cost — the world's biggest indoor chain outran every clever coinage with the bluntest name" },
+        { name: "Andretti Indoor Karting", takeaway: "Bloodline transfer via a legend's surname: Mario Andretti's championship halo gilds an indoor track — the standard athlete-surname play, priced in licensing and permanent attachment" },
+        { name: "TeamSport", takeaway: "Two generic words fused: the UK's biggest karting chain wrote \"team sport\" into its name and locked onto the party-and-corporate crowd — a sample of name-as-market-positioning" },
+        { name: "Sodikart", takeaway: "Sodi + kart: the world's largest kart manufacturer welded the category word into the brand, forever present when B2B buyers search \"kart\" — the category-word strategy from the manufacturer side" },
+      ],
+      pitfalls: [
+        "Generic \"XX Racing\" naming: you'll collide with repair shops, tuners and sim-racing lounges — hashtags and map search both lose focus",
+        "Overdosing on danger: crash, extreme, savage roots scare off families and the HR person booking the team event — over half of venue revenue comes from the safety-conscious",
+        "Blurring entertainment and competition: a track club named like a kiddie park loses the lap-board crowd, and vice versa — pick the audience first",
+        "Skipping review-platform and hashtag collision checks: karting lives on review apps and short video, where a same-named venue's one-star reviews land squarely on you",
+      ],
+    },
+  },
+  sauna: {
+    slug: "sauna",
+    keywords: ["桑拿", "汗蒸", "spa"],
+    tlds: [
+      { tld: "com", zh: "养生消费重信任，.com 是预订转化的底座", en: "Wellness spending runs on trust — .com is the booking-conversion base" },
+      { tld: "life", zh: "把「生活方式」写进后缀，会员制养生馆气质加成", en: "Lifestyle written into the suffix — a vibe bonus for membership wellness houses" },
+      { tld: "club", zh: "会员社群型汗蒸馆，归属感先行", en: "For community-style sauna houses, belonging leads" },
+    ],
+    zh: {
+      label: "汗蒸桑拿馆",
+      title: "汗蒸桑拿馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "汗蒸馆与桑拿房命名指南：温度意象、仪式感、北欧借词等思路，Othership/Bathhouse/AIRE/Harvia 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "桑拿正在经历一场全球性的品牌升级：从大众浴室的附属设施，变成冷水浴、呼吸课与社交排毒组成的「新养生仪式」。这轮升级的头部玩家在命名上高度一致——卖的不是高温，是状态转换。纽约的 Othership 直译是「另一艘船」，承诺把你渡到另一种意识状态；Bathhouse 反其道用最古老的「澡堂」一词，靠复古直给赢得辨识度。桑拿命名的核心资产是感官意象库：热浪、蒸汽、木头、冷杉、冰湖——这些词自带体感，读到就是体验的预演。另一条路是北欧与在地文化借词：sauna 本身是芬兰语百年原词，löyly（蒸汽仪式）、hygge 类词根天然携带正宗感。定位分层同样关键：社区汗蒸馆要亲切实惠，高端养生俱乐部要仪式感与私密性，名字的温度要和定价的温度一致。这个行业复购与会员制是生命线，名字要经得起「每周都来」的日常称呼。",
+      namingIdeas: [
+        "温度与状态词根：heat、glow、汗、暖——桑拿卖的是「进去一个人出来另一个人」的状态切换，名字要预演这种体感",
+        "北欧正宗性借词：sauna、löyly、fjord、北欧地名——芬兰是桑拿的原产地心智，借词即借百年正宗感，高端定位尤其受用",
+        "仪式感命名：ship、temple、ritual 类意象把一次流汗升维成一场仪式——新式养生馆的溢价全在仪式感里",
+        "复古直给：Bathhouse 式用最老的品类词反差取胜——当所有同行都在造新词时，「澡堂」两个字反而最响",
+        "会员日常测试：把名字放进「我去 XX 了，晚点回」的日常对话里——会员制生意的名字要经得起每周高频称呼，太长太玄都会被缩写",
+      ],
+      cases: [
+        { name: "Othership", takeaway: "other + ship 的造词：「另一艘船」承诺把你渡向另一种状态——把桑拿从洗浴升维到意识体验的命名天花板，品牌故事与呼吸课程全部长在这个词上" },
+        { name: "Bathhouse", takeaway: "直接启用最古老的品类词「澡堂」：在人人造新词的赛道上复古直给，配合工业风门店反而最潮——常见词命名的反差打法" },
+        { name: "AIRE Ancient Baths", takeaway: "AIRE（西语「空气」）+「古法浴场」：把罗马浴场的千年仪式感搬进现代都市，名字自带历史纵深——文化借势命名的高端样本" },
+        { name: "Harvia", takeaway: "芬兰桑拿炉制造商的姓氏品牌：一个芬兰姓氏就是产地证明——桑拿产业链上「正宗性即品牌」的百年注脚，场馆命名可借鉴其北欧词根思路" },
+      ],
+      pitfalls: [
+        "「XX 洗浴中心」式命名：与旧式洗浴的心智捆绑，新客群（年轻养生人群）会直接划走",
+        "过度玄学化：能量、磁场、净化类词堆多了像玄学工作室，养生新客要的是「科学的放松」而非神秘主义",
+        "名字与定价温度不符：社区店起了皇家 SPA 的名字劝退街坊，高端馆起了澡堂价的名字撑不起客单——名字先定价",
+        "忽略预订平台与点评查重：养生消费重度依赖点评与预订平台，同名店铺的卫生差评会精准误伤你",
+      ],
+    },
+    en: {
+      label: "Sauna studios",
+      title: "How to Name a Sauna Studio: Strategies, Cases & Domains",
+      metaDescription:
+        "Sauna and bathhouse naming guide: heat imagery, ritual framing, Nordic authenticity, breakdowns of Othership/Bathhouse/AIRE/Harvia, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Sauna is mid-way through a global rebrand: from a locker-room afterthought to a new wellness ritual of heat, cold plunges, breathwork and social detox. The category leaders name with striking consistency — they sell state change, not temperature. New York's Othership promises to ferry you to another state of consciousness; Bathhouse goes the opposite way, winning distinctiveness with the oldest word in the category. Sauna naming's core asset is a sensory image bank: heat waves, steam, cedar, fir, ice lakes — words that carry body-feel, so reading the name previews the experience. The other route is Nordic and cultural borrowing: sauna is itself a century-old Finnish word, and roots like löyly carry authenticity for free — especially at the premium end. Tonal layering matters too: a neighborhood sweat house should sound warm and affordable, a members' wellness club should sound ritual and private — the name's temperature must match the price's. Repeat visits and memberships are this industry's lifeline, so the name must survive being said every single week.",
+      namingIdeas: [
+        "Heat and state roots: heat, glow, sweat, ember — sauna sells walking out a different person than walked in; the name should preview that shift",
+        "Borrow Nordic authenticity: sauna, löyly, fjord, Nordic place-names — Finland owns the category's origin story, and borrowing the language borrows a century of legitimacy",
+        "Frame the ritual: ship, temple, ritual imagery elevates a sweat into a ceremony — the premium of new-wave wellness lives entirely in that framing",
+        "Go boldly retro: the Bathhouse play — when every competitor coins neologisms, the oldest category word rings loudest against an industrial-chic interior",
+        "The weekly-regular test: put the name into \"heading to X, back by nine\" — a membership business must survive high-frequency casual mention; long or mystical names get abbreviated away",
+      ],
+      cases: [
+        { name: "Othership", takeaway: "other + ship coined: \"another vessel\" promising passage to a different state — the ceiling of sauna naming, with the brand story and breathwork classes all growing out of one word" },
+        { name: "Bathhouse", takeaway: "The oldest category word, reactivated: retro-direct in a lane full of coinages, and suddenly the coolest name on the block — the contrast play of common-word naming" },
+        { name: "AIRE Ancient Baths", takeaway: "AIRE (Spanish for air) plus \"ancient baths\": Roman-bath ritual imported into modern cities, historical depth built into the name — the premium sample of cultural borrowing" },
+        { name: "Harvia", takeaway: "A Finnish surname on the world's sauna stoves: the surname is the certificate of origin — a century-long footnote that in this industry, authenticity is the brand; venues can echo it with Nordic roots" },
+      ],
+      pitfalls: [
+        "Old-school \"XX Bath Center\" naming: it welds you to the dated bathhouse image, and the young wellness crowd swipes past",
+        "Overdoing the mysticism: stack energy, aura and cleanse too high and you read as an occult studio — new wellness customers want science-flavored relaxation",
+        "Mismatching name and price temperature: a royal-spa name scares off the neighborhood, a budget name can't hold a premium ticket — the name sets the price before the menu does",
+        "Skipping booking-platform collision checks: wellness runs on review and booking apps, where a same-named venue's hygiene complaints land straight on you",
+      ],
+    },
+  },
+  pizza: {
+    slug: "pizza",
+    keywords: ["披萨", "意式餐厅"],
+    tlds: [
+      { tld: "com", zh: "外卖与连锁扩张的信任默认值，.com 转化最稳", en: "The trust default for delivery and chain expansion — .com converts steadiest" },
+      { tld: "pizza", zh: "品类专属后缀，名字与品类一体成型", en: "The category's own suffix — name and category cast as one piece" },
+      { tld: "kitchen", zh: "现做与烟火气直给，独立小店气质加成", en: "Fresh-made warmth stated outright — a vibe bonus for independents" },
+    ],
+    zh: {
+      label: "披萨店",
+      title: "披萨店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "披萨店与披萨品牌命名指南：意式借词、速度承诺、窑火意象等思路，Domino's/Blaze/MOD/&pizza 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "披萨店命名先回答一个定位问题：你卖的是「三十分钟送达的碳水快乐」还是「那不勒斯窑火的手作仪式」？外卖派的名字要短促、好记、适合印在保温袋和 App 图标上——Domino's 的骨牌意象讲的是标准化与连锁复制；手作派的名字要有窑火、面团与意大利的画面——Blaze（烈焰）一个词就把明火烤炉搬到了顾客眼前。披萨自带全球最强的品类意象库：火、窑、饼皮、马苏里拉、那不勒斯，词词有画面有食欲。意式借词是这个品类的独门武器——一个意大利语词根（forno 烤炉、fuoco 火焰）就能让街角小店平添正宗感，但要克制：全意大利语的名字英语客群念不出来，外卖 App 里搜不到就是零。名字还要过「口播点单」这一关：电话订餐与柜台点单场景里，两秒内说清、听清、拼清的名字才配得上高频复购的生意。",
+      namingIdeas: [
+        "窑火意象直给：blaze、forno、fire、窑——明火与烤炉是披萨最强的食欲触发器，名字里的火就是菜单的预告片",
+        "意式借词点到为止：一个意大利语词根注入正宗感（forno、napoli），但保证英语客群能念——全意大利语名在外卖搜索里是自杀",
+        "速度与承诺命名：外卖派把「快」写进名字或口号（Domino's 曾以 30 分钟送达立国）——快是外卖披萨唯一不能妥协的承诺",
+        "定制化人格：MOD（Made On Demand）、&pizza 的「&」——新一代快休闲披萨用名字宣示「你的披萨你做主」，符号化命名自带社交传播点",
+        "电话点单测试：把名字放进「你好，我要一个 XX 的大号」里念三遍——披萨是高频口播生意，拗口的名字每天都在流失订单",
+      ],
+      cases: [
+        { name: "Domino's", takeaway: "骨牌意象的连锁哲学：一张接一张倒下的骨牌就是门店复制的隐喻，名字与「标准化扩张」的商业模式互为注脚——快餐连锁命名的原型样本" },
+        { name: "Blaze Pizza", takeaway: "blaze（烈焰）+ 品类词：一个词把明火快烤的现场感拍在顾客脸上，配合「三分钟出炉」的快休闲模式——意象词+品类词的教科书结构" },
+        { name: "MOD Pizza", takeaway: "Made On Demand 的缩写：三个字母承诺「按你的要求现做」，把定制化写进品牌基因——缩写命名在快休闲品类的成功样本，前提是缩写本身好念" },
+        { name: "&pizza", takeaway: "一个「&」符号做品牌：「and」暗示无限搭配与社群连接，符号本身就是门店灯牌与话题标签——符号化命名的大胆实验，辨识度与键盘输入的取舍并存" },
+      ],
+      pitfalls: [
+        "全意大利语命名：正宗感拉满但英语客群念不出、拼不对，外卖 App 搜索直接失联——借词要留一半给可读性",
+        "「XX Pizza House」式泛化：pizza + house/place/hut 的组合已被巨头与几万家小店用尽，辨识度与商标空间双双为零",
+        "名字与出品模式错位：手作窑烤店起了个快餐连锁味的名字，溢价立刻塌方；外卖店起了个米其林名字，顾客嫌贵不点",
+        "忽略外卖平台与社媒查重：披萨订单一半以上来自外卖 App 与社媒引流，同名店铺的差评与你的门店在搜索里混作一团",
+      ],
+    },
+    en: {
+      label: "Pizza shops",
+      title: "How to Name a Pizza Shop: Strategies, Cases & Domains",
+      metaDescription:
+        "Pizza shop naming guide: oven-fire imagery, Italian borrowing, speed promises, breakdowns of Domino's/Blaze/MOD/&pizza, recommended TLDs and pitfalls — then hunt an available pizza domain with AI.",
+      intro:
+        "Pizza naming starts with a positioning question: are you selling thirty-minute carb happiness or the hand-made ritual of a Neapolitan wood fire? Delivery-first names must be short, sticky and at home on a thermal bag and an app icon — Domino's tile imagery is a metaphor for standardized, store-after-store replication. Craft-first names need fire, dough and Italy in the picture — Blaze puts the open-flame oven in front of the customer with a single word. Pizza owns arguably the strongest category image bank in food: fire, oven, crust, mozzarella, Napoli — every word appetizing and visual. Italian borrowing is the category's signature weapon: one Italian root (forno, fuoco) lends a corner shop instant authenticity — but ration it, because an all-Italian name that English-speaking customers can't pronounce is invisible in delivery-app search. Finally the name must pass the phone-order test: spoken, heard and spelled correctly in two seconds — anything less leaks orders daily in a high-frequency repeat business.",
+      namingIdeas: [
+        "Oven-fire imagery, stated outright: blaze, forno, fire, ember — open flame is pizza's strongest appetite trigger, and fire in the name is the menu's trailer",
+        "Italian borrowing, one root at a time: a single Italian root injects authenticity (forno, napoli) while staying pronounceable — an all-Italian name is suicide in delivery search",
+        "Promise speed if you're delivery-first: Domino's built an empire on the thirty-minute promise — speed is the one non-negotiable of delivery pizza, so consider writing it into the name or tagline",
+        "Personalize with symbols: MOD (Made On Demand), the ampersand of &pizza — fast-casual's new wave declares \"your pizza, your rules\" in the name itself, and a symbol doubles as signage and hashtag",
+        "The phone-order test: say \"hi, one large from X please\" three times — pizza is a spoken, high-frequency business, and a clumsy name leaks orders every single day",
+      ],
+      cases: [
+        { name: "Domino's", takeaway: "Chain philosophy in a tile: dominoes falling one after another as the metaphor for store replication — name and business model annotating each other; the archetype of fast-food chain naming" },
+        { name: "Blaze Pizza", takeaway: "blaze + the category word: one word slams the live-fire theater in front of the customer, matching the three-minute fast-casual format — the textbook imagery-word + category-word structure" },
+        { name: "MOD Pizza", takeaway: "Made On Demand, initialized: three letters promising built-to-order, customization written into the brand's genes — the fast-casual acronym done right, because the acronym itself says smoothly" },
+        { name: "&pizza", takeaway: "An ampersand as the brand: \"and\" implying infinite combinations and community connection, the glyph doubling as neon sign and hashtag — a bold symbol-naming experiment trading keyboard friction for recognition" },
+      ],
+      pitfalls: [
+        "Going all-Italian: maximum authenticity, zero pronounceability — English-speaking customers can't spell it, and delivery-app search goes dark",
+        "Generic \"XX Pizza House\" naming: pizza + house/place/hut has been exhausted by giants and ten thousand independents — distinctiveness and trademark room are both zero",
+        "Mismatching name and format: a wood-fire craft shop with a fast-food chain name loses its premium instantly; a delivery joint with a Michelin name reads overpriced",
+        "Skipping delivery-platform and social collision checks: over half of pizza orders arrive via apps and social — a same-named shop's one-star reviews blend into your search results",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
