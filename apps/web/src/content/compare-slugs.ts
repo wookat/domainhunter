@@ -415,3 +415,13 @@ export const COMPARE_SLUGS = [
 
 /** slug → 「.a vs .b」显示文案 */
 export const compareLabel = (slug: string): string => slug.split("-vs-").map((t) => `.${t}`).join(" vs ");
+
+/** 共享任一 TLD 的其它对比：从自身位置之后环绕取最多 max 个（确定性派生，SSR 与客户端一致） */
+export function relatedCompares(slug: string, max = 6): string[] {
+  const idx = COMPARE_SLUGS.indexOf(slug);
+  if (idx < 0) return [];
+  const tlds = slug.split("-vs-");
+  return [...COMPARE_SLUGS.slice(idx + 1), ...COMPARE_SLUGS.slice(0, idx)]
+    .filter((s) => s.split("-vs-").some((t) => tlds.includes(t)))
+    .slice(0, max);
+}

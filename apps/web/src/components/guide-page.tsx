@@ -1,6 +1,8 @@
 import { AlertTriangle, HelpCircle, Lightbulb, Quote, Sparkles } from "lucide-react";
 
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
+import { GUIDE_LABELS } from "@/content/guide-labels";
+import { relatedGuideSlugs } from "@/content/guide-groups";
 import { buildGuideFaq } from "@/content/guide-faq";
 import { readInjectedContent } from "@/content/injected";
 import { NotFoundPage } from "@/components/not-found-page";
@@ -21,6 +23,7 @@ export function GuidePage({ slug }: { slug: string }) {
   const loc = guide[lang];
   const faq = buildGuideFaq(guide, lang);
   const relatedCompares = [...new Set(guide.tlds.flatMap((rec) => COMPARE_SLUGS.filter((s) => s.split("-vs-").includes(rec.tld))))].slice(0, 4);
+  const relatedIndustry = relatedGuideSlugs(slug).map((s) => GUIDE_LABELS.find((g) => g.slug === s)).filter((g): g is (typeof GUIDE_LABELS)[number] => g !== undefined);
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -160,6 +163,24 @@ export function GuidePage({ slug }: { slug: string }) {
           ))}
         </div>
       </div>
+
+      {/* 同组相关行业指南互链 */}
+      {relatedIndustry.length > 0 && (
+        <div className="mt-6">
+          <h2 className="text-sm font-semibold text-txt1">{t("guide.related")}</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {relatedIndustry.map((g) => (
+              <a
+                key={g.slug}
+                href={`/guide/${g.slug}?lang=${lang}`}
+                className="flex min-h-[44px] items-center rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+              >
+                {g[lang]}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </main>
   );
 }
