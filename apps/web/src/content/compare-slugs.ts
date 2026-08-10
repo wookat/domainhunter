@@ -399,6 +399,12 @@ export const COMPARE_SLUGS = [
   "nl-vs-de",
   "kr-vs-jp",
   "hk-vs-sg",
+  "ch-vs-de",
+  "at-vs-de",
+  "be-vs-nl",
+  "se-vs-com",
+  "pl-vs-eu",
+  "tw-vs-hk",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
