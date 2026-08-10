@@ -9564,6 +9564,186 @@ const GUIDES = {
       ],
     },
   },
+  domains: {
+    tld: "domains",
+    zh: {
+      title: ".domains 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".domains 是域名行业的自指后缀，适合域名注册商与经纪服务、域名投资与交易平台、域名工具与监控服务、多品牌域名组合展示页。查看 .domains 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .domains 域名。",
+      intro:
+        ".domains 把行业写进域名本身：域名注册商与经纪服务、域名投资与交易平台、域名工具与监控服务、多品牌域名组合展示页用 name.domains，「做域名生意的」一词讲透——这是少见的自指后缀，站名与业务同词，行业内认知零成本，「品牌 + .domains」读起来就是一家域名服务商的招牌。注册局为 Identity Digital（原 Donuts），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .tools/.exchange/.market 分工清晰：.tools 说通用工具，.exchange 说交易撮合，.market 说泛市场——.domains 说的是「域名这个具体行业」，注册商、经纪与投资人展示页定位最准。价格适中且平续：注册约 $35/年（约 ¥250），续费同价——无首年促销陷阱，多年持有成本可预期。库存极好：品牌词、工具词、行业词全线有货。注意两点：一是受众偏行业内，面向大众消费者的产品 .com/.app 触达更广；二是复数形态拼写别漏掉 s，口播时提醒用户带上。命名上「品牌 + .domains」（acme.domains）最主流，「功能词 + .domains」（track.domains）适合工具与监控服务。",
+      bestFor: ["域名注册商与经纪服务", "域名投资与交易平台", "域名工具与监控服务", "多品牌域名组合展示页"],
+      namingTips: [
+        "「品牌 + .domains」读起来就是域名服务商招牌",
+        "注册约 $35/年、续费同价，无首年促销陷阱",
+        "域名行业用 .domains，通用工具用 .tools，交易用 .exchange",
+        "拼写含复数 s，口播场景提醒用户带上",
+      ],
+    },
+    en: {
+      title: ".domains Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".domains is the self-referential suffix for the domain industry — for registrars and brokerage services, domain investing and trading platforms, domain tools and monitoring services, and multi-brand portfolio showcase pages. See live pricing and naming advice, then hunt available .domains names with AI.",
+      intro:
+        ".domains writes the industry into the address itself: registrars and brokerage services, domain investing and trading platforms, domain tools and monitoring services, and multi-brand portfolio pages on name.domains say \"we work in domains\" in one word — a rare self-referential suffix where the site name and the business are the same word, so recognition inside the industry costs nothing, and brand + .domains reads like the signboard of a domain shop. The registry is Identity Digital (formerly Donuts); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .tools, .exchange and .market: .tools names generic utilities, .exchange names the marketplace mechanics, .market names commerce at large — .domains names this specific trade, so registrars, brokers and investor portfolios position sharpest here. Pricing is moderate and flat: about $35/yr to register (≈¥250) and the same to renew — no first-year promo trap, so multi-year costs stay predictable. Inventory is excellent: brand words, tool words and trade words all hit. Two cautions: the audience skews industry-insider, so consumer products reach wider on .com or .app; and the plural s is easy to drop in speech, so remind listeners it's there. Naming: brand + .domains (acme.domains) is the mainstream shape; function word + .domains (track.domains) suits tools and monitoring services.",
+      bestFor: ["Registrars & brokerage services", "Domain investing & trading platforms", "Domain tools & monitoring services", "Multi-brand portfolio showcases"],
+      namingTips: [
+        "Brand + .domains reads like the signboard of a domain shop",
+        "About $35/yr flat to register and renew — no promo trap",
+        "The trade fits .domains; utilities .tools; markets .exchange",
+        "The plural s drops easily in speech — call it out",
+      ],
+    },
+  },
+  college: {
+    tld: "college",
+    zh: {
+      title: ".college 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".college 是高等教育语义的开放后缀，适合高校与二级学院官网、在线课程与备考培训机构、留学申请与升学咨询服务、校园社区与学生项目。查看 .college 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .college 域名。",
+      intro:
+        ".college 把教育身份写进域名：高校与二级学院官网、在线课程与备考培训机构、留学申请与升学咨询服务、校园社区与学生项目用 name.college，「这是一所学院」一词讲透——与需要资质审核的 .edu 不同，.college 对所有人开放注册，培训机构与在线教育项目也能拿到教育感十足的门牌。注册局为 XYZ Registry（.xyz 同门），2015 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .academy/.education/.university 分工清晰：.academy 说技能训练营，.education 说教育行业全域，.university 说大学层级——.college 说的是「学院这个机构身份」，职业院校、社区学院与备考机构定位最准。价格中高且平续：注册约 $52/年（约 ¥375），续费同价，注册商常有首年大促——教育词后缀的中高价位，与机构获客价值匹配。库存极好：学科词、城市词、品牌词全线有货。注意两点：一是 .college 开放注册不代表办学资质，宣传用语须与实际资质匹配；二是大学层级机构 .university 语义更高，学院层级才是 .college 的主场。命名上「学科 + .college」（coding.college）最主流，读起来就是专科学院，「城市/品牌 + .college」（austin.college）适合本地院校与教育品牌。",
+      bestFor: ["高校与二级学院官网", "在线课程与备考培训机构", "留学申请与升学咨询服务", "校园社区与学生项目"],
+      namingTips: [
+        "「学科 + .college」读起来就是专科学院门牌",
+        "注册约 $52/年、续费同价，注册商常有首年大促",
+        "学院身份用 .college，大学用 .university，训练营用 .academy",
+        "开放注册不代表办学资质，宣传须与资质匹配",
+      ],
+    },
+    en: {
+      title: ".college Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".college is the open suffix for higher education — for colleges and school-within-university sites, online course and test-prep providers, admissions and study-abroad consulting, and campus communities or student projects. See live pricing and naming advice, then hunt available .college names with AI.",
+      intro:
+        ".college writes the educational identity into the address: colleges and school-within-university sites, online course and test-prep providers, admissions and study-abroad consulting, and campus communities or student projects on name.college say \"this is a college\" in one word — and unlike .edu, which requires accreditation, .college is open to everyone, so training providers and online-education projects get an education-grade address too. The registry is XYZ Registry (the .xyz family); open since 2015, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .academy, .education and .university: .academy names the skills bootcamp, .education names the whole industry, .university names the university tier — .college names the institutional identity of a college, so vocational schools, community colleges and test-prep brands position sharpest here. Pricing is upper-mid and flat: about $52/yr to register (≈¥375) and the same to renew, with frequent first-year registrar promos — in line with the acquisition value of an institution. Inventory is excellent: subject words, city words and brand words all hit. Two cautions: open registration is not accreditation, so marketing language must match the actual credentials; and university-tier institutions read higher on .university — the college tier is where .college belongs. Naming: subject + .college (coding.college) is the mainstream shape and reads like a specialist school; city or brand + .college (austin.college) suits local institutions and education brands.",
+      bestFor: ["Colleges & school sites", "Online courses & test-prep providers", "Admissions & study-abroad consulting", "Campus communities & student projects"],
+      namingTips: [
+        "Subject + .college reads like a specialist school's door",
+        "About $52/yr flat to register and renew — promos are common",
+        "The college tier fits .college; universities .university",
+        "Open registration isn't accreditation — match your claims",
+      ],
+    },
+  },
+  actor: {
+    tld: "actor",
+    zh: {
+      title: ".actor 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".actor 是表演者的个人品牌后缀，适合演员个人官网与作品集、配音与声优工作室、经纪公司与选角平台、表演培训与戏剧工作坊。查看 .actor 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .actor 域名。",
+      intro:
+        ".actor 把职业写进域名：演员个人官网与作品集、配音与声优工作室、经纪公司与选角平台、表演培训与戏剧工作坊用 name.actor，「我是演员」一词讲透——演艺行业里人名就是品牌，name.actor 读起来就是一张数字名片，比 name-actor.com 干净得多，选角导演一眼看懂。注册局为 Identity Digital（原 Donuts，经 United TLD/Rightside 并入），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .studio/.show/.movie 分工清晰：.studio 说工作室形态，.show 说节目内容，.movie 说电影项目——.actor 说的是「表演者这个人」，个人品牌与选角展示定位最准。价格适中且平续：注册约 $35/年（约 ¥255），续费同价——无首年促销陷阱，多年持有成本可预期。库存极好：人名资源远比 .com 充裕，艺名、本名全线有货。注意两点：一是后缀单数指向个人，剧团与经纪公司群体品牌可考虑 .studio/.agency；二是人名域名注意与同名艺人区分，先搜再注。命名上「人名 + .actor」（janedoe.actor）最主流，读起来就是演员官网，「工作室名 + .actor」（voicelab.actor）适合配音与培训工作室。",
+      bestFor: ["演员个人官网与作品集", "配音与声优工作室", "经纪公司与选角平台", "表演培训与戏剧工作坊"],
+      namingTips: [
+        "「人名 + .actor」就是一张演员数字名片",
+        "注册约 $35/年、续费同价，无首年促销陷阱",
+        "个人品牌用 .actor，工作室用 .studio，节目用 .show",
+        "先搜同名艺人，避免撞名混淆",
+      ],
+    },
+    en: {
+      title: ".actor Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".actor is the personal-brand suffix for performers — for actor portfolio sites, voice-acting studios, talent agencies and casting platforms, and acting schools or drama workshops. See live pricing and naming advice, then hunt available .actor names with AI.",
+      intro:
+        ".actor writes the profession into the address: actor portfolio sites, voice-acting studios, talent agencies and casting platforms, and acting schools or drama workshops on name.actor say \"I act\" in one word — in show business the name is the brand, and name.actor reads like a digital headshot card, far cleaner than name-actor.com, instantly legible to a casting director. The registry is Identity Digital (formerly Donuts, via the United TLD/Rightside portfolio); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .studio, .show and .movie: .studio names the workspace, .show names the program, .movie names the film project — .actor names the performer, so personal brands and casting profiles position sharpest here. Pricing is moderate and flat: about $35/yr to register (≈¥255) and the same to renew — no first-year promo trap, so multi-year costs stay predictable. Inventory is excellent: personal names are far more available than on .com, stage names and given names both hit. Two cautions: the singular points at one person, so troupes and agencies read better on .studio or .agency; and personal-name domains collide with same-named performers, so search the name first. Naming: name + .actor (janedoe.actor) is the mainstream shape and reads like the actor's official site; studio name + .actor (voicelab.actor) suits voice and training studios.",
+      bestFor: ["Actor portfolio sites", "Voice-acting studios", "Talent agencies & casting platforms", "Acting schools & drama workshops"],
+      namingTips: [
+        "Name + .actor is a digital headshot card",
+        "About $35/yr flat to register and renew — no promo trap",
+        "The performer fits .actor; the workspace .studio; shows .show",
+        "Search same-named performers first to avoid collisions",
+      ],
+    },
+  },
+  immo: {
+    tld: "immo",
+    zh: {
+      title: ".immo 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".immo 是欧洲不动产行业的专属后缀（immobilier/Immobilien 缩写），适合房产中介与经纪公司、房产开发与项目营销、物业管理与租赁服务、房产估价与投资咨询。查看 .immo 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .immo 域名。",
+      intro:
+        ".immo 把行业缩写写进域名：房产中介与经纪公司、房产开发与项目营销、物业管理与租赁服务、房产估价与投资咨询用 name.immo，「做不动产的」一词讲透——immo 是法语 immobilier、德语 Immobilien 的通用缩写，在法国、德国、比利时、瑞士等欧洲市场是家喻户晓的行业词，「城市 + .immo」读起来就是本地房产中介的搜索直达入口。注册局为 Identity Digital（原 Donuts），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .estate/.properties/.homes 分工清晰：.estate 说英语市场的地产，.properties 说物业组合，.homes 说住宅买卖——.immo 说的是「欧洲大陆语境的不动产行业」，面向法语区与德语区客户定位最准。价格亲民且平续：注册约 $28/年（约 ¥205），续费同价——行业词后缀里的实惠价位，多年持有成本可预期。库存极好：城市词、区域词、品牌词全线有货。注意两点：一是 immo 在英语市场认知度低，主打英语客户用 .estate/.homes 更稳；二是四字符超短后缀是加分项，搭配短城市词整体极短好记。命名上「城市 + .immo」（lyon.immo）最主流，本地搜索直达，「品牌 + .immo」（alpina.immo）适合中介与开发品牌。",
+      bestFor: ["房产中介与经纪公司", "房产开发与项目营销", "物业管理与租赁服务", "房产估价与投资咨询"],
+      namingTips: [
+        "「城市 + .immo」是欧洲本地房产搜索的直达入口",
+        "注册约 $28/年、续费同价，行业词里的实惠价位",
+        "欧陆市场用 .immo，英语市场用 .estate/.homes",
+        "四字符超短后缀，搭配短城市词整体极短好记",
+      ],
+    },
+    en: {
+      title: ".immo Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".immo is the dedicated suffix for European real estate (short for immobilier/Immobilien) — for property agencies and brokerages, development and project marketing, property management and rentals, and valuation or investment consulting. See live pricing and naming advice, then hunt available .immo names with AI.",
+      intro:
+        ".immo writes the trade abbreviation into the address: property agencies and brokerages, development and project marketing, property management and rentals, and valuation or investment consulting on name.immo say \"we do real estate\" in one word — immo is the everyday short form of French immobilier and German Immobilien, a household industry word across France, Germany, Belgium and Switzerland, so city + .immo reads like a direct lane from local search to the agency. The registry is Identity Digital (formerly Donuts); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .estate, .properties and .homes: .estate speaks to the English-language market, .properties names the portfolio, .homes names residential sales — .immo names the continental-European real-estate trade, so agencies serving French- and German-speaking clients position sharpest here. Pricing is friendly and flat: about $28/yr to register (≈¥205) and the same to renew — affordable among trade suffixes, so multi-year costs stay predictable. Inventory is excellent: city words, region words and brand words all hit. Two cautions: immo means little in English-speaking markets, so English-first businesses sit safer on .estate or .homes; and the four-letter suffix is a bonus — paired with a short city word the whole name stays tiny and memorable. Naming: city + .immo (lyon.immo) is the mainstream shape for local search; brand + .immo (alpina.immo) suits agency and developer brands.",
+      bestFor: ["Property agencies & brokerages", "Development & project marketing", "Property management & rentals", "Valuation & investment consulting"],
+      namingTips: [
+        "City + .immo is a direct lane from European local search",
+        "About $28/yr flat to register and renew — a friendly price",
+        "Continental Europe fits .immo; English markets .estate/.homes",
+        "Four letters only — short city words keep the name tiny",
+      ],
+    },
+  },
+  vin: {
+    tld: "vin",
+    zh: {
+      title: ".vin 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".vin 是葡萄酒语义的法语后缀，适合酒庄与葡萄园官网、葡萄酒电商与进口商、酒评与品鉴内容站、葡萄酒旅游与酒窖服务。查看 .vin 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .vin 域名。",
+      intro:
+        ".vin 把酒香写进域名：酒庄与葡萄园官网、葡萄酒电商与进口商、酒评与品鉴内容站、葡萄酒旅游与酒窖服务用 name.vin，「这是葡萄酒」一词讲透——vin 是法语「葡萄酒」，全球葡萄酒文化的母语词，比英语 wine 更多一层产地与格调的暗示，「酒庄名 + .vin」读起来就是法式酒标。注册局为 Identity Digital（原 Donuts），2016 年开放注册，与 .wine 同批推出，解析与注册商生态成熟稳定。它与已收录的 .wine/.bar/.menu 分工清晰：.wine 说英语市场的葡萄酒，.bar 说酒吧场景，.menu 说餐单——.vin 说的是「法语语境的葡萄酒」，法国酒庄、进口商与法式品牌定位最准。价格中档且平续：注册约 $48/年（约 ¥345），续费同价——与 .wine 同价位，按品牌价值衡量。库存极好：酒庄名、产区词、品牌词全线有货，比 .wine 更充裕。注意两点：一是三字符后缀在英语里易被读成 VIN 车架号，面向英语大众市场 .wine 歧义更少；二是酒类营销各国监管不一，面向未成年人渠道投放须谨慎。命名上「酒庄/品牌 + .vin」（chateaumont.vin）最主流，读起来就是酒标，「产区 + .vin」（loire.vin）适合产区门户与酒旅项目。",
+      bestFor: ["酒庄与葡萄园官网", "葡萄酒电商与进口商", "酒评与品鉴内容站", "葡萄酒旅游与酒窖服务"],
+      namingTips: [
+        "「酒庄名 + .vin」读起来就是一枚法式酒标",
+        "注册约 $48/年、续费同价，与 .wine 同价位",
+        "法语语境用 .vin，英语市场用 .wine，酒吧用 .bar",
+        "英语里易误读为车架号 VIN，面向英语大众慎选",
+      ],
+    },
+    en: {
+      title: ".vin Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".vin is the French suffix for wine — for wineries and vineyard sites, wine e-commerce and importers, wine-review and tasting content, and wine tourism or cellar services. See live pricing and naming advice, then hunt available .vin names with AI.",
+      intro:
+        ".vin writes the wine into the address: wineries and vineyard sites, wine e-commerce and importers, wine-review and tasting content, and wine tourism or cellar services on name.vin say \"this is wine\" in one word — vin is French for wine, the mother tongue of global wine culture, carrying a hint of terroir and style that English wine doesn't, so estate name + .vin reads like a French wine label. The registry is Identity Digital (formerly Donuts); open since 2016, launched alongside .wine, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .wine, .bar and .menu: .wine speaks to the English-language market, .bar names the venue, .menu names the list — .vin names wine in its French register, so French estates, importers and French-styled brands position sharpest here. Pricing is mid-tier and flat: about $48/yr to register (≈¥345) and the same to renew — the same band as .wine, weighed as a brand asset. Inventory is excellent: estate names, appellation words and brand words all hit, with more room than .wine. Two cautions: in English the three letters read as a VIN vehicle number, so mass-market English brands sit safer on .wine; and alcohol marketing rules vary by country, so mind the channels. Naming: estate or brand + .vin (chateaumont.vin) is the mainstream shape and reads like a label; appellation + .vin (loire.vin) suits region portals and wine-tourism projects.",
+      bestFor: ["Wineries & vineyard sites", "Wine e-commerce & importers", "Wine-review & tasting content", "Wine tourism & cellar services"],
+      namingTips: [
+        "Estate name + .vin reads like a French wine label",
+        "About $48/yr flat to register and renew — same band as .wine",
+        "The French register fits .vin; English markets .wine",
+        "In English it reads as a VIN number — mind the audience",
+      ],
+    },
+  },
+  university: {
+    tld: "university",
+    zh: {
+      title: ".university 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".university 是大学语义的开放后缀，适合大学官网与国际招生页、企业大学与内训学院、在线大学与公开课平台、校友会与大学品牌项目。查看 .university 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .university 域名。",
+      intro:
+        ".university 把最高学府写进域名：大学官网与国际招生页、企业大学与内训学院、在线大学与公开课平台、校友会与大学品牌项目用 name.university，「这是一所大学」一词讲透——与仅限美国认证机构的 .edu 不同，.university 对全球开放注册，企业大学与在线大学也能拿到大学级门牌，「品牌 + .university」读起来就是一所机构的正门。注册局为 Identity Digital（原 Donuts），2014 年开放注册，解析与注册商生态成熟稳定。它与已收录的 .college/.academy/.education 分工清晰：.college 说学院层级，.academy 说技能训练营，.education 说教育行业全域——.university 说的是「大学这个最高机构层级」，企业大学与国际招生页定位最准。价格中高且平续：注册约 $50/年（约 ¥360），续费同价——教育词后缀的中高价位，与机构品牌价值匹配。库存极好：品牌词、城市词、学科词全线有货。注意两点：一是「大学」字样在部分国家受办学资质法规保护，命名与宣传须合规；二是后缀拼写长达 10 字符，搭配短品牌词控制总长。命名上「品牌 + .university」（acme.university）最主流，读起来就是企业大学正门，「城市/学科 + .university」（design.university）适合在线大学与公开课平台。",
+      bestFor: ["大学官网与国际招生页", "企业大学与内训学院", "在线大学与公开课平台", "校友会与大学品牌项目"],
+      namingTips: [
+        "「品牌 + .university」读起来就是机构正门",
+        "注册约 $50/年、续费同价，与机构品牌价值匹配",
+        "大学层级用 .university，学院用 .college，训练营用 .academy",
+        "「大学」字样部分国家受法规保护，命名须合规",
+      ],
+    },
+    en: {
+      title: ".university Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".university is the open suffix for universities — for university sites and international admissions pages, corporate universities and internal academies, online universities and open-course platforms, and alumni associations or university-brand projects. See live pricing and naming advice, then hunt available .university names with AI.",
+      intro:
+        ".university writes the highest tier of learning into the address: university sites and international admissions pages, corporate universities and internal academies, online universities and open-course platforms, and alumni associations or university-brand projects on name.university say \"this is a university\" in one word — unlike .edu, restricted to accredited US institutions, .university is open worldwide, so corporate and online universities get a university-grade address too, and brand + .university reads like the front gate of an institution. The registry is Identity Digital (formerly Donuts); open since 2014, with a mature, stable registrar and DNS ecosystem. It divides labor cleanly with the already-listed .college, .academy and .education: .college names the college tier, .academy names the skills bootcamp, .education names the whole industry — .university names the top institutional tier, so corporate universities and international admissions pages position sharpest here. Pricing is upper-mid and flat: about $50/yr to register (≈¥360) and the same to renew — in line with the brand value of an institution. Inventory is excellent: brand words, city words and subject words all hit. Two cautions: the word university is legally protected in some countries, so naming and marketing must stay compliant; and at ten characters the suffix runs long, so a short brand word keeps the total manageable. Naming: brand + .university (acme.university) is the mainstream shape and reads like a corporate university's gate; city or subject + .university (design.university) suits online universities and open-course platforms.",
+      bestFor: ["University sites & admissions pages", "Corporate universities & academies", "Online universities & open courses", "Alumni associations & brand projects"],
+      namingTips: [
+        "Brand + .university reads like the institution's front gate",
+        "About $50/yr flat to register and renew — brand-tier value",
+        "The top tier fits .university; colleges .college",
+        "The word is legally protected in some countries — comply",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

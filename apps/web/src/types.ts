@@ -422,6 +422,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   vision: { first: 160, renew: 160 },
   tires: { first: 500, renew: 500 },
   surgery: { first: 500, renew: 500 },
+  domains: { first: 250, renew: 250 },
+  college: { first: 375, renew: 375 },
+  actor: { first: 255, renew: 255 },
+  immo: { first: 205, renew: 205 },
+  vin: { first: 345, renew: 345 },
+  university: { first: 360, renew: 360 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
