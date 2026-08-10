@@ -2314,6 +2314,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一家冥想馆与正念工作室，寓意「城市里留给呼吸的那一隅安静」；气质要安静有科学感、不玄学不烧香；场景是午休课预约页、企业团建方案和睡前音频片头里都念得顺、立得住。",
     en: "A meditation and mindfulness studio. The name should carry the quiet corner a city leaves for breathing; the vibe is calm and evidence-minded, no mysticism, no incense; it must book well on the lunch-break class page, sit credibly in the corporate-wellness deck, and open the sleep audio gently.",
   },
+  {
+    slug: "woodworking",
+    labelZh: "木工工作室",
+    labelEn: "Woodworking studio",
+    zh: "一家木工工作室与原木家具定制，寓意「一双手在木头上花掉的那三十天」；气质要匠气可信、慢而不旧；场景是作品底部的激光刻印、定制合同和木作体验课招募帖里都体面好念、立得住。",
+    en: "A woodworking studio and custom furniture maker. The name should carry the thirty days a pair of hands spends inside the wood; the vibe is maker-credible, slow without being dusty; it must laser-brand well on the underside of the piece, hold up on the commission contract, and read warmly in the craft-class post.",
+  },
+  {
+    slug: "soapmaking",
+    labelZh: "手工皂",
+    labelEn: "Soap brand",
+    zh: "一个手工冷制皂品牌，寓意「一块皂里晾了四十五天的植物油香」；气质要天然干净、体面不土气；场景是市集摊位招牌、礼盒烫金和小红书开箱笔记里都好看好念、立得住。",
+    en: "A handmade cold-process soap brand. The name should carry the plant-oil scent cured into the bar over forty-five days; the vibe is natural and clean, dignified without being rustic; it must read well on the market-stall banner, foil-stamp nicely on the gift box, and look lovely in the unboxing post.",
+  },
+  {
+    slug: "modelkit",
+    labelZh: "模型手办店",
+    labelEn: "Model kit store",
+    zh: "一家模型手办店，寓意「放学后想去坐坐的玩家据点」；气质要懂行有暗号感、圈内人一眼认亲；场景是门头招牌、微信群名片和直播间标题里都好打好念、立得住。",
+    en: "A model kit and figure store. The name should carry the clubhouse where the builders drop in after work; the vibe is gear-savvy with an insider handshake, instantly recognised by the tribe; it must read well on the shopfront, type easily in the chat group, and pop in the stream title.",
+  },
+  {
+    slug: "framing",
+    labelZh: "装裱画框店",
+    labelEn: "Framing shop",
+    zh: "一家装裱画框店，寓意「让画成为主角、让框恰到好处地消失」；气质要克制体面、懂分寸；场景是美术馆边的门头、画廊老板的口碑转述和装裱标签上都顺口、立得住。",
+    en: "A custom framing shop. The name should carry the craft of letting the art be the star while the frame disappears just enough; the vibe is restrained and dignified, sure of its place; it must sit well on the shopfront by the museum, travel smoothly in the gallery owner's referral, and sign the backing label with quiet authority.",
+  },
+  {
+    slug: "recordingstudio",
+    labelZh: "录音棚",
+    labelEn: "Recording studio",
+    zh: "一家录音棚与录音工作室，寓意「按下录音键那一刻整个房间的安静」；气质要专业有音色、念出来自带混响；场景是专辑内页 credits、厂牌报价单和音乐人朋友圈转发里都短而有分量、立得住。",
+    en: "A recording studio. The name should carry the hush that falls over the room when the red light goes on; the vibe is professional with a timbre of its own, a little reverb when spoken aloud; it must print short and weighty in the album credits, sit steady on the label's quote, and travel proudly in the artist's repost.",
+  },
+  {
+    slug: "hearingaid",
+    labelZh: "助听器验配",
+    labelEn: "Hearing aid center",
+    zh: "一家助听器验配中心与听力中心，寓意「把孙辈的笑声重新带回饭桌」；气质要专业温和、不说「聋」不丢面子；场景是社区门头、医院转介绍和家庭群转发链接里都可信亲切、立得住。",
+    en: "A hearing aid fitting and audiology center. The name should carry the grandchild's laugh brought back to the dinner table; the vibe is clinically credentialed yet gentle, never saying deaf, never costing dignity; it must read trustworthy on the neighbourhood shopfront, pass well in the hospital referral, and share credibly in the family group chat.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
