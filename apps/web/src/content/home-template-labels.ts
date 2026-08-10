@@ -336,4 +336,10 @@ export const TEMPLATE_LABELS: TemplateLabel[] = [
   { slug: "framing", labelZh: "装裱画框店", labelEn: "Framing shop" },
   { slug: "recordingstudio", labelZh: "录音棚", labelEn: "Recording studio" },
   { slug: "hearingaid", labelZh: "助听器验配", labelEn: "Hearing aid center" },
+  { slug: "watchrepair", labelZh: "钟表维修", labelEn: "Watch repair" },
+  { slug: "beekeeping", labelZh: "蜂蜜品牌", labelEn: "Honey brand" },
+  { slug: "glassblowing", labelZh: "玻璃工作室", labelEn: "Glass studio" },
+  { slug: "bonsai", labelZh: "盆景园", labelEn: "Bonsai studio" },
+  { slug: "recordstore", labelZh: "黑胶唱片店", labelEn: "Record store" },
+  { slug: "embroidery", labelZh: "刺绣工作室", labelEn: "Embroidery studio" },
 ];

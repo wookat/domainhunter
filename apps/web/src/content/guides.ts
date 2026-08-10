@@ -20336,6 +20336,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  watchrepair: {
+    slug: "watchrepair",
+    keywords: ["钟表维修", "手表保养", "名表维修", "watch repair", "watchmaker"],
+    tlds: [
+      { tld: "com", zh: "名表维修客单价高、信任门槛更高，.com 在保修单与报价单上最让人放心", en: "Luxury watch servicing is a high-trust, high-ticket trade — .com reads most reassuring on the warranty slip and the estimate" },
+      { tld: "repair", zh: "品类语义直给，搜索「手表维修」的客户一眼对号入座", en: "Category semantics outright — the customer searching watch repair files you instantly" },
+      { tld: "studio", zh: "把「修表摊」升维成「制表师工作室」，客单价的气质天花板", en: "Elevates the repair counter into a watchmaker's atelier — the price band's temperament ceiling" },
+    ],
+    zh: {
+      label: "钟表维修",
+      title: "钟表维修店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "钟表维修与名表保养命名指南：制表师传承叙事、机芯词根等思路，亨得利/RGM 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "钟表维修店的名字要先解决一个信任悖论：客户把几万甚至几十万的表交到你手上，凭什么？这个品类的核心资产不是店面而是「手艺人的时间」——一块百达翡丽的洗油保养要拆几百个零件，名字必须替这双手提前背书。行业里最硬的信任货币是「师承」：老字号亨得利用一百多年的字号告诉客户「你爷爷的表也是在这修的」；海外独立制表师如 RGM 直接用创始人姓名首字母立牌，把个人声誉抵押给招牌。隐藏考点是业务分层：普通换电池走量、名表维修走利润、古董钟收藏修复走口碑，三层客群对名字的期待完全不同——换电池的要「快与便宜」，修名表的要「专业与保险」，名字要选定主线。另一个现实：这门生意的获客一半靠商场柜台与老客转介绍，名字要在保修卡、维修工单与家庭群「哪里修表靠谱」的转发里都立得住。",
+      namingIdeas: [
+        "师承与字号路线：姓氏+钟表行/表阁——亨得利验证过的百年语法，把「传了几代人的手艺」写进名字",
+        "机芯词根专业直给：擒纵、游丝、陀飞轮、caliber 类词——懂表的客户看到机芯部件名就知道你修得了复杂功能",
+        "时间意象升维：把「修表」说成「照看时间」——恒、准、时光类词根，情感叙事替高客单价铺路",
+        "瑞士基准借力：与制表圣地相关的地名与工艺词——品类的专业想象力全在瑞士，词根借力事半功倍",
+        "服务承诺入名：保、修、复类直给词+专业后缀——「名表维修中心」比「钟表店」在搜索里多接一层精准流量",
+      ],
+      cases: [
+        { name: "亨得利", takeaway: "一百多年的字号本身就是保修卡：老字号的最大资产是「你爷爷的表也在这修」——时间背书无法速成，但可以借鉴其字号气质" },
+        { name: "RGM", takeaway: "创始人 Roland G. Murphy 姓名首字母立牌：美国独立制表的代表——个人声誉抵押给招牌，维修与制表通用的信任语法" },
+        { name: "宝珀 Blancpain", takeaway: "「自 1735 年从未生产过石英表」：把历史与立场写成一句话——名字之外，钟表行业最会用时间叙事的品牌" },
+        { name: "Crown & Caliber", takeaway: "表冠+机芯两个部件词组合：懂行暗号一步到位——部件词根命名在英语市场的教科书示范" },
+      ],
+      pitfalls: [
+        "名字只有「快修」没有「专业」：换电池语感的名字接不住名表客户——快修与名表维修要分招牌运营",
+        "自封「瑞士认证」类误导词：WOSTEP 等认证有严格边界，名字里的虚假专业感被拆穿后信任归零",
+        "字号仿冒老店：蹭「亨得利」类近似名有商标风险，且老客一眼识破——师承叙事要真实可查",
+        "忽略保险与物流场景：名表维修常涉及寄修与保价，名字在快递单与保险单上要正式可查——太俏皮的名字过不了保价审核",
+      ],
+    },
+    en: {
+      label: "Watch repair shops",
+      title: "How to Name a Watch Repair Shop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Watch repair and luxury watch servicing naming guide: watchmaker-lineage narratives, movement-part registers, breakdowns of RGM/Crown & Caliber, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A watch repair shop's name must first resolve a trust paradox: the customer is handing you a five-figure heirloom — on what grounds? The category's core asset is not the storefront but the watchmaker's hours: a full service on a Patek means disassembling hundreds of parts, and the name has to vouch for those hands before the customer walks in. The hardest trust currency in the trade is lineage: century-old houses tell the customer your grandfather's watch was serviced here too, and independent watchmakers like RGM mortgage the founder's own initials to the sign. The hidden exam is the business's three tiers: battery swaps run on volume, luxury servicing runs on margin, antique restoration runs on reputation — and each tier expects a different name. The battery customer wants fast and cheap; the Patek owner wants credentialed and insured; pick your primary register. One more reality: half the trade arrives via mall counters and referrals — the name must hold up on the warranty card, the job sheet and the family group chat asking who can be trusted with grandpa's watch.",
+      namingIdeas: [
+        "The lineage register: surname plus horology/watchworks — the century-house grammar, writing hands passed down generations into the name",
+        "Movement-part jargon: escapement, hairspring, caliber, tourbillon — the knowing customer reads a movement word and trusts you with complications",
+        "Time-keeping imagery elevated: repairing watches restated as keeping time — constancy and precision roots paving the way for the price band",
+        "Swiss-benchmark borrowing: geneva, jura, atelier registers — the category's professional imagination lives in Switzerland, and the roots carry that credit",
+        "Service promise stated: restore, service, care plus a clinical suffix — watch service center out-ranks watch shop for the search that matters",
+      ],
+      cases: [
+        { name: "RGM", takeaway: "The founder's initials on the dial and the door: American independent watchmaking's flag — personal reputation mortgaged to the sign, a grammar repair shares with manufacture" },
+        { name: "Crown & Caliber", takeaway: "Two movement parts joined with an ampersand: the insider handshake in one name — part-word naming's English-market textbook" },
+        { name: "Blancpain", takeaway: "Since 1735, never a quartz watch: history and stance in a single line — outside the name itself, horology's master of time-as-narrative" },
+        { name: "Watchfinder", takeaway: "Verb-plus-noun transparency for the pre-owned trade: what it does is what it's called — proof plain compounds win trust in a wary category" },
+      ],
+      pitfalls: [
+        "A quick-fix register for a luxury trade: battery-swap names can't hold a Patek owner's trust — run the volume counter and the atelier under different signs",
+        "Self-awarded Swiss-certified claims: WOSTEP and brand accreditations have hard edges — fake credentials in the name zero out trust when checked",
+        "Imitating heritage houses: near-miss names of century-old firms carry trademark risk and regulars see through it — lineage must be verifiable",
+        "Ignoring the shipping-and-insurance scene: mail-in repairs live on declared-value forms — a jokey name fails the insurer's sniff test",
+      ],
+    },
+  },
+  beekeeping: {
+    slug: "beekeeping",
+    keywords: ["蜂蜜品牌", "养蜂场", "蜂场直供", "honey brand", "apiary"],
+    tlds: [
+      { tld: "com", zh: "食品品牌的默认信任后缀，礼盒与电商详情页上最稳妥", en: "The default trust suffix for a food brand — safest on the gift box and the product page" },
+      { tld: "farm", zh: "「蜂场直供」语义直给，产地叙事从域名开始", en: "Farm-direct semantics outright — the provenance story starting at the domain" },
+      { tld: "shop", zh: "电商属性明确，蜂蜜礼盒线上销售的轻量归类", en: "Clear retail intent — a light filing for the honey gift box sold online" },
+    ],
+    zh: {
+      label: "蜂蜜品牌",
+      title: "蜂蜜品牌与养蜂场怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "蜂蜜品牌与养蜂场命名指南：蜜源地直给、花期叙事等思路，冠生园/Manuka Health 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "蜂蜜品牌的名字要先回答消费者最大的疑问：真的假的？这个品类被掺假问题伤透了信任，好名字的第一使命是「可溯源感」——蜜源地与花种是最硬的两张牌：麦卢卡（Manuka）本来只是新西兰一种茶树的名字，被做成了全球溢价最高的蜂蜜品类词；国内的椴树蜜、荆条蜜也一样，花种即定位，产地即背书。第二条线是养蜂人叙事：消费者愿意为「一个具体的人守着一片具体的山」付溢价，姓氏+蜂场的命名把人格信任写进名字。隐藏考点是场景分层：自用装看性价比、礼盒装看体面、母婴客群看安全，名字要在淘宝详情页、礼盒烫金与妈妈群转发里都立得住。还有一个容易忽略的点：蜂蜜的英文出海市场对 raw、pure 类词有严格的标签法规，名字里慎用绝对化承诺词。",
+      namingIdeas: [
+        "蜜源地直给：长白山椴树、秦岭土蜂类产地+花种结构——溯源感是品类第一信任货币，产地词自带检测报告气质",
+        "花期与节气叙事：把「等一季花开」写进名字——槐花五月、荆条七月类时间词，稀缺感替溢价铺路",
+        "养蜂人人格路线：姓氏+蜂场/蜂园——「一个具体的人守着一片山」的信任语法，人格背书胜过泛泛的「天然纯正」",
+        "蜂巢与勤劳意象：巢、酿、采类动词词根——把工艺过程写进名字，「酿」字比「产」字多一层时间感",
+        "甜蜜场景升维：把蜂蜜从食材说成生活方式——晨光、暖冬类场景词，礼盒线的气质天花板",
+      ],
+      cases: [
+        { name: "Manuka Health", takeaway: "一种茶树的毛利语名字做成全球品类词：蜜源即品牌——产地花种命名的天花板案例" },
+        { name: "冠生园", takeaway: "老字号字号+蜂蜜大单品：字号的食品安全背书直接迁移——品类信任危机下老字号名字的复利" },
+        { name: "Comvita 康维他", takeaway: "com（蜂巢 comb）+vita（生命）的拉丁词根组合：健康叙事从词源开始——出海命名音意双译的范本" },
+        { name: "等蜂来", takeaway: "三个字把「自然成熟蜜要等」的工艺立场说尽：等字对冲了工业化速成蜜——立场即差异化" },
+      ],
+      pitfalls: [
+        "绝对化承诺词入名：「纯」「真」「无添加」类词在广告法与海外标签法规里都有雷——立场用叙事表达，不用承诺词",
+        "只有甜没有源：泛泛的「蜜语甜心」类名字没有溯源感，撞上品类信任危机等于裸奔——产地花种至少占一样",
+        "锁死单一花种：叫「椴树蜜坊」就难接槐花蜜产品线——花种留给产品名，品牌名留产地或人格",
+        "忽略礼盒场景：蜂蜜一半的生意在送礼，名字要经得起烫金与手提袋——太土或太俏皮的名字上不了台面",
+      ],
+    },
+    en: {
+      label: "Honey brands",
+      title: "How to Name a Honey Brand or Apiary: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Honey brand and apiary naming guide: provenance-first registers, bloom-season narratives, breakdowns of Manuka Health/Comvita, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A honey brand's name must first answer the customer's biggest question: is it real? The category's trust has been burned by adulteration, so a good name's first job is traceability — and the two hardest cards are the floral source and the place. Manuka was just the Māori name of a New Zealand tea tree until it became the world's highest-premium honey category word; linden and acacia honeys work the same way, the bloom is the positioning and the terroir is the endorsement. The second lever is the beekeeper narrative: customers pay a premium for one named person tending one named mountainside, and the surname-plus-apiary grammar writes that personal trust into the brand. The hidden exam is the scene split: the pantry jar buys on value, the gift box buys on dignity, the parenting group buys on safety — and the name must hold up on the product page, the foil stamp and the group-chat forward alike. One more trap: export labels regulate words like raw and pure strictly, so keep absolute promises out of the name itself.",
+      namingIdeas: [
+        "Provenance stated first: place plus bloom — linden ridge, wildflower valley structures; traceability is the category's first trust currency",
+        "Bloom-season narratives: writing the wait for one flowering into the name — May acacia, high-summer thyme; scarcity paving the premium",
+        "The beekeeper's-name register: surname plus apiary — one person, one mountainside; personal endorsement beats a generic pure and natural",
+        "Hive-and-craft imagery: comb, harvest, slow-drawn roots — the process written into the name, with cured carrying more time than made",
+        "Sweetness elevated to scene: morning light and winter-warmth registers — the gift line's temperament ceiling, honey restated as a way of living",
+      ],
+      cases: [
+        { name: "Manuka Health", takeaway: "A tea tree's Māori name built into a global category word: the floral source as the brand — provenance naming's ceiling case" },
+        { name: "Comvita", takeaway: "Comb plus vita in Latin roots: the health narrative starting at etymology — a model of naming that translates across markets" },
+        { name: "Rowse", takeaway: "A founder's surname carried since 1938 into Britain's default honey: personal-name equity compounding for decades — the beekeeper grammar at national scale" },
+        { name: "Bee Maid", takeaway: "A beekeeper co-op's plain-spoken compound: honest, unglamorous, trusted on the prairie shelf — proof the category rewards straightforwardness" },
+      ],
+      pitfalls: [
+        "Absolute promise words in the name: pure, raw and additive-free trip advertising and labelling law at home and abroad — argue provenance, not promises",
+        "Sweetness without a source: a generic honey-darling name has zero traceability in a trust-burned category — carry at least the place or the bloom",
+        "Locking into one bloom: a linden-only name can't stretch to the acacia line — leave the flower to the product name, keep the place or the person for the brand",
+        "Forgetting the gift box: half the trade is gifting, and the name must survive foil-stamping — a rustic or jokey name never makes the counter",
+      ],
+    },
+  },
+  glassblowing: {
+    slug: "glassblowing",
+    keywords: ["玻璃工作室", "吹玻璃体验", "琉璃工艺", "glassblowing studio", "glass art"],
+    tlds: [
+      { tld: "com", zh: "定制委托与商业合作的默认后缀，报价单上最正式", en: "The default suffix for commissions and commercial work — most formal on the quote" },
+      { tld: "studio", zh: "工作室气质直给，体验课与艺术委托共用一块招牌", en: "The studio identity outright — one sign over the taster class and the art commission" },
+      { tld: "art", zh: "把「工艺品」升维成「艺术品」，画廊合作与收藏线的归类", en: "Elevates craft into art — the filing for gallery work and the collector line" },
+    ],
+    zh: {
+      label: "玻璃工作室",
+      title: "玻璃工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "玻璃工作室与吹玻璃体验命名指南：火与光意象、窑炉词根等思路，琉璃工房/Chihuly 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "玻璃工作室的名字要抓住这门手艺最戏剧性的瞬间：一千多度的火里拉出透明的光。火与光是品类独有的意象资产——琉璃工房把中文「琉璃」二字从材料名做成了文化品牌，杨惠姗与张毅用「琉璃」替代「玻璃」，一字之差把工业材料升维成千年工艺；美国的 Chihuly 用艺术家姓名做成了全球玻璃艺术的代名词。隐藏考点是业务的三条线：吹玻璃体验课是流量入口、定制器皿是现金流、艺术委托是天花板，三条线客群完全不同——体验课学员要的是「周末的火焰浪漫」，定制客户要的是「独一无二」，藏家要的是「艺术家署名」。名字要选主线：走体验路线用场景词降低门槛，走艺术路线用人名或意象词抬高身价。另一个现实：玻璃作品的署名往往刻在器底，名字会跟着作品进入客厅与美术馆，太随意的名字配不上作品的命。",
+      namingIdeas: [
+        "火与光意象直给：焰、窑、熔、glow 类词根——品类独有的戏剧性资产，一个字就能让人看见工作室的炉火",
+        "琉璃升维路线：琉璃、颂瓷类古法材料词——琉璃工房验证过的语法，材料改个说法身价翻倍",
+        "艺术家姓名署名：人名+玻璃/工作室——Chihuly 模式，作品刻底署名与品牌名合一，艺术线的默认格式",
+        "透明与形态词根：透、澄、曲、bloom 类词——把玻璃的物性写进名字，工艺气质自带",
+        "窑口地名传统：地名+窑/坊——陶瓷行业验证过的产地语法迁移到玻璃，在地叙事替体验课引流",
+      ],
+      cases: [
+        { name: "琉璃工房", takeaway: "用「琉璃」替代「玻璃」：一字之差把工业材料升维成千年工艺——材料改名即品牌定位的教科书" },
+        { name: "Chihuly", takeaway: "艺术家姓氏做成全球玻璃艺术代名词：署名即品牌——艺术线命名的天花板路径" },
+        { name: "Lalique", takeaway: "René Lalique 的姓氏从首饰跨到玻璃再到水晶：人名品牌的品类延展力——手艺人姓氏是最长期的资产" },
+        { name: "台玻 TG", takeaway: "工业玻璃的地名+品类直给：与工作室路线相反的参照——名字的工业感与手作感一念之差，选错客群全错" },
+      ],
+      pitfalls: [
+        "名字太工业：带「玻璃制品」「玻璃厂」语感的名字接不住体验课与艺术委托——手作线要用工坊、studio 类后缀",
+        "只有意境没有品类：纯意象名（如「澄光」）分不清是玻璃、香薰还是摄影——意象词配一个品类锚",
+        "忽略刻底署名场景：名字会刻在作品底部进入客厅与美术馆，笔画复杂或太长的名字刻不动也记不住",
+        "锁死单一工艺：叫「吹制工房」就难接铸造与灯工产品线——工艺留给课程名，品牌名留材料与意象",
+      ],
+    },
+    en: {
+      label: "Glass studios",
+      title: "How to Name a Glassblowing Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Glassblowing studio and glass art naming guide: fire-and-light imagery, furnace registers, breakdowns of Chihuly/Lalique, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A glass studio's name should seize the craft's most theatrical instant: transparent light pulled out of a two-thousand-degree fire. Fire and light are imagery assets no other category owns. The naming traditions run two ways: the artist-signature route — Chihuly turned a surname into the global synonym for glass art, and Lalique stretched one name from jewellery to glass to crystal across a century — and the material-elevation route, where choosing an older, nobler word for the material itself lifts the whole brand's station. The hidden exam is the studio's three lines: taster classes are the traffic door, commissioned vessels are the cash flow, art commissions are the ceiling — and each audience wants a different name. The Saturday student wants the romance of the flame; the commission client wants one-of-a-kind; the collector wants a signature. Pick your primary line: scene words lower the door for classes, names and imagery raise the price for art. One more truth: the name gets engraved on the foot of every piece and follows it into living rooms and museums — a careless name doesn't deserve the work.",
+      namingIdeas: [
+        "Fire-and-light imagery outright: furnace, ember, glow, molten roots — the category's own theatrical asset; one word and the visitor sees your fire",
+        "Material elevation: older, nobler words for glass — crystal, verre, lume registers; rename the material and the whole studio changes station",
+        "The artist-signature route: surname plus glass/studio — the Chihuly model, where the engraving on the foot and the brand are one",
+        "Transparency-and-form roots: clear, curve, bloom, still words — the material's physics written into the name, craft temperament included",
+        "The kiln-and-place tradition: place plus works/glasshouse — ceramics' terroir grammar migrated to glass, local narrative feeding the class line",
+      ],
+      cases: [
+        { name: "Chihuly", takeaway: "A surname built into the global synonym for glass art: the signature as the brand — the art line's ceiling path" },
+        { name: "Lalique", takeaway: "One name stretched from jewellery to glass to crystal across a century: the maker's surname as the longest-duration asset in craft" },
+        { name: "Corning", takeaway: "A town's name carried from crucibles to Gorilla Glass: place-naming's industrial pole — proof the same grammar reads lab-coat, not atelier; know which register you want" },
+        { name: "Blenko", takeaway: "A founder's surname on American hand-blown colour since 1893: family-name continuity as the collector's provenance — the signature grammar at factory scale" },
+      ],
+      pitfalls: [
+        "An industrial register for a craft studio: glassworks-factory names can't hold taster classes or commissions — the handmade line needs studio and atelier suffixes",
+        "Imagery without an anchor: a pure mood name could be candles, photography or glass — pair the image word with a category anchor",
+        "Forgetting the engraving: the name lives on the foot of every piece in living rooms and museums — long or ornate names neither engrave nor stay remembered",
+        "Locking into one technique: a blown-glass-only name can't stretch to casting and lampwork — leave the technique to the course name, keep material and imagery for the brand",
+      ],
+    },
+  },
+  bonsai: {
+    slug: "bonsai",
+    keywords: ["盆景园", "盆栽工作室", "苔藓微景观", "bonsai studio", "bonsai nursery"],
+    tlds: [
+      { tld: "com", zh: "高价老桩交易与出口生意的默认后缀，藏家询价最信任", en: "The default suffix for high-value specimen sales and export — most trusted when the collector inquires" },
+      { tld: "garden", zh: "「园」的语义直给，盆景园与体验课的自然归类", en: "Garden semantics outright — the native filing for the nursery and the workshop class" },
+      { tld: "studio", zh: "把盆景从花木生意升维成造型艺术工作室", en: "Elevates bonsai from the plant trade into a shaping-art studio" },
+    ],
+    zh: {
+      label: "盆景园",
+      title: "盆景园与盆栽工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "盆景园与盆栽工作室命名指南：园林字号传统、缩龙成寸意象等思路，苏派/岭南盆景等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "盆景园的名字要先想清楚你卖的是「植物」还是「时间的造型艺术」。一盆像样的老桩要养十几年，这个品类的定价逻辑全在时间里——名字必须带出「缩龙成寸、以小见大」的艺术立场，才配得上作品的年轮。中文语境里最现成的资产是园林字号传统：拙政园、留园的「一字园名」语法已经把「园」字养成了文化容器，盆景园取名直接站在这个传统的肩膀上；流派也是命名资源——苏派的文气、岭南的苍劲、川派的虬曲，流派词自带师承与技法背书。隐藏考点是客群分层：老藏家看流派与桩材，年轻人买的是「桌上的一座山」的治愈感，苔藓微景观与文人小品是流量入口——名字要在老藏家的茶桌与年轻人的小红书里都立得住。另一个现实：盆景是典型的「看货」生意，名字会跟着展会铭牌与藏家口碑走，太俗的名字配不上得奖作品的身价。",
+      namingIdeas: [
+        "园林字号传统：一字/二字+园——拙政园语法的盆景版，「园」字是现成的文化容器，字越少气越足",
+        "缩龙成寸意象：寸、微、芥子、须弥类词——把「以小见大」的品类哲学写进名字，文人气质直接拉满",
+        "流派师承直给：苏派、岭南、舍利干类流派与技法词——老藏家看到流派词就知道你的师承与手法",
+        "山水诗词借力：从山水诗里取两个字——盆景是立体的山水画，诗词词根与品类气质天然同频",
+        "治愈场景路线：桌上、掌中、一隅类场景词——年轻客群买的是治愈感，场景词替微景观线降低门槛",
+      ],
+      cases: [
+        { name: "拙政园", takeaway: "「拙政」二字取自「拙者之为政」的自嘲：园林字号的文人语法天花板——盆景园命名最该借力的传统" },
+        { name: "国香园", takeaway: "岭南盆景名园的典型语法：品格词+园——一个「香」字把植物生意升维成品格叙事" },
+        { name: "Bonsai Boy", takeaway: "纽约盆栽电商的反差萌命名：把高冷艺术说成邻家爱好——美式市场降低门槛的实用主义示范" },
+        { name: "塩津植物研究所", takeaway: "日本人气植物品牌用「研究所」替代「园艺店」：专业感换维打击——后缀升维的经典操作" },
+      ],
+      pitfalls: [
+        "名字太像花店：「绿意花坊」类名字接不住老桩藏家——盆景是造型艺术，名字要有时间与山水的分量",
+        "流派词滥用：没有师承却叫「岭南盆景园」，圈内人一问三不知直接翻车——流派词要配得上真手艺",
+        "生僻字立意过深：藏家转介绍靠口口相传，读不出的名字传不动——文气要以能念出来为前提",
+        "锁死盆景单品：微景观、苔藓、庭院设计都是延展线——名字留「园」「景」类容器词，别锁死在「盆」里",
+      ],
+    },
+    en: {
+      label: "Bonsai studios",
+      title: "How to Name a Bonsai Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Bonsai studio and nursery naming guide: garden-name traditions, mountains-in-miniature imagery, breakdowns of classic garden names and modern plant brands, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A bonsai studio's name must first decide whether you sell plants or the sculptural art of time. A worthy specimen takes a decade of training, and the category's entire price logic lives in those years — the name has to carry the mountains-in-miniature stance to deserve the tree's rings. The richest ready-made asset is the classical garden-name tradition: centuries of one-word garden names have cured the word garden into a cultural vessel, and a bonsai nursery names itself standing on that shoulder. Schools are naming resources too — the literati elegance of Suzhou, the rugged deadwood of Lingnan — a school word carries lineage and technique endorsement in one stroke. The hidden exam is the audience split: the old collector reads school and trunk, while the younger customer is buying a mountain on the desk — moss landscapes and literati miniatures are the traffic door, and the name must hold up on the collector's tea table and the lifestyle feed alike. One more truth: bonsai is a see-the-tree trade, and the name travels on exhibition placards and collector word of mouth — a vulgar name can't carry a prize-winning tree.",
+      namingIdeas: [
+        "The garden-name tradition: one or two characters plus garden — the classical grammar where fewer words carry more air",
+        "Mountains-in-miniature imagery: inch, mustard-seed, pocket-mountain roots — the category's philosophy of vastness-in-small written into the name",
+        "School-and-lineage stated: Suzhou, Lingnan, deadwood-style words — the collector reads a school word and knows your teacher and your technique",
+        "Landscape-poetry borrowing: two characters lifted from a mountain-and-water poem — bonsai is a three-dimensional landscape painting, and verse roots share its frequency",
+        "The healing-scene register: desktop, palm-sized, quiet-corner words — the younger customer buys calm, and scene words lower the door for the moss-landscape line",
+      ],
+      cases: [
+        { name: "拙政园 (Humble Administrator's Garden)", takeaway: "Self-deprecation cured into five centuries of elegance: the literati garden-name grammar's ceiling — the tradition a bonsai garden should borrow first" },
+        { name: "国香园 (Guoxiang Garden)", takeaway: "A Lingnan master garden's virtue-word-plus-garden structure: one character of fragrance elevating a plant trade into a character narrative" },
+        { name: "Bonsai Boy", takeaway: "A New York nursery's disarming rhyme: high art restated as a neighbourly hobby — the American market's door-lowering pragmatism" },
+        { name: "塩津植物研究所 (Shiozu Botanical Laboratory)", takeaway: "Laboratory where garden shop was expected: the suffix upgrade as positioning — professionalism by reclassification" },
+      ],
+      pitfalls: [
+        "Sounding like a flower shop: a greenery-and-blooms name can't hold the specimen collector — bonsai is sculpture, and the name needs the weight of time and landscape",
+        "School words without lineage: claiming Lingnan style with no teacher behind it collapses at the first insider question — the school word must be earned",
+        "Obscure characters read by no one: the trade travels by word of mouth, and an unpronounceable name doesn't travel — literati air must stay speakable",
+        "Locking into the pot: moss landscapes, courtyard design and workshops are all extension lines — keep the vessel words garden and scenery, don't seal the name inside the pot",
+      ],
+    },
+  },
+  recordstore: {
+    slug: "recordstore",
+    keywords: ["黑胶唱片店", "唱片行", "二手唱片", "record store", "vinyl shop"],
+    tlds: [
+      { tld: "com", zh: "线上邮购与海淘代购是唱片店的半条命，.com 在跨境订单里最稳", en: "Mail order is half the trade — .com travels steadiest on the cross-border order" },
+      { tld: "shop", zh: "零售属性直给，实体店线上化的轻量归类", en: "Retail intent outright — the light filing for the shop's online counter" },
+      { tld: "club", zh: "唱片店的本质是同好据点，社群语义与品类天然同频", en: "A record store is really a clubhouse — community semantics native to the category" },
+    ],
+    zh: {
+      label: "黑胶唱片店",
+      title: "黑胶唱片店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "黑胶唱片店与唱片行命名指南：淘碟据点叙事、声音物件词根等思路，Rough Trade/Amoeba 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "黑胶唱片店的名字要先承认一个事实：来买碟的人买的不是音乐（流媒体上都有），买的是「翻箱淘碟的下午」与「和老板聊半小时的据点感」。这个品类的名字传统深厚且反叛：伦敦的 Rough Trade 用「粗糙的交易」自嘲起家，最后成了独立音乐的全球图腾；旧金山的 Amoeba（变形虫）用一个生物名词宣告「什么风格都吞」。好名字的共同点是「圈内暗号感」——乐迷看到名字就知道店主是不是自己人。隐藏考点是业务分层：新碟首发走量、二手淘碟走粘性、稀有头版走利润，名字要给「淘」留出想象空间——太精品店气质的名字反而吓跑翻箱客。另一个现实：唱片店一半的生意在 Instagram 与微店上，名字要在到店打卡照、直播标题与快递单上都好认好念，还得给未来的咖啡角与演出角留余地。",
+      namingIdeas: [
+        "声音物件词根：沟槽 groove、转速 33/45、唱针类词——把黑胶的物件迷恋写进名字，乐迷一眼认亲",
+        "据点感直给：仓库、地下室、角落类空间词——「淘碟的下午」需要一个具体空间意象来承载",
+        "自嘲与反叛语法：Rough Trade 式的低姿态命名——独立音乐的气质基因，名字越不装越有信用",
+        "曲名歌词借力：从经典专辑与歌词里取词——乐迷暗号的最高形式，但要避开商标与太热门的撞名",
+        "杂食宣言路线：Amoeba 式的「什么都收」隐喻——二手店的核心承诺是「你会淘到意外」，名字先把胃口说大",
+      ],
+      cases: [
+        { name: "Rough Trade", takeaway: "「粗糙的交易」自嘲起家做成独立音乐图腾：反叛语法的信用积累——名字越不装、圈内信用越高" },
+        { name: "Amoeba Music", takeaway: "变形虫的杂食隐喻：什么风格都吞的二手巨仓——一个生物名词把「淘到意外」的承诺说尽" },
+        { name: "Tower Records", takeaway: "从药店阁楼到全球连锁的「塔」：地标词根的规模想象力——也提醒你连锁化时名字要撑得起体量" },
+        { name: "Disk Union", takeaway: "日本淘碟圣地的「工会」语法：把买卖二手碟说成乐迷互助组织——据点感命名的东京答案" },
+      ],
+      pitfalls: [
+        "名字太精品店：高冷的 select shop 气质吓跑翻箱淘碟客——黑胶的乐趣在「淘」，名字要留出杂乱的想象空间",
+        "锁死单一曲风：叫「爵士角落」就难接摇滚与电子的客群——曲风留给分区标签，品牌名留据点感",
+        "歌词梗撞商标：直接用知名专辑名与乐队名有商标与版权风险——致敬要变形，暗号要原创",
+        "忽略线上场景：一半生意在直播与邮购，名字在快递单与直播标题里要好认——太长的英文名在中文平台会被切断",
+      ],
+    },
+    en: {
+      label: "Record stores",
+      title: "How to Name a Record Store: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Record store and vinyl shop naming guide: crate-digging clubhouse narratives, sound-object registers, breakdowns of Rough Trade/Amoeba, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A record store's name must first admit a truth: nobody comes for the music (streaming has it all) — they come for the crate-digging afternoon and the half-hour chat at the counter. The category's naming tradition is deep and defiant: London's Rough Trade started as self-deprecation and became independent music's global totem; San Francisco's Amoeba declared with one biological noun that it swallows every genre. What the great names share is the insider handshake — a record collector reads the sign and knows instantly whether the owner is one of us. The hidden exam is the trade's three tiers: new releases run on volume, used crates run on loyalty, rare first pressings run on margin — and the name must leave room for the dig; a too-precious boutique name scares off the crate-flipper. One more reality: half the business lives on Instagram and mail order, so the name must read well in the check-in photo, the livestream title and the shipping label — and leave room for the coffee corner and the in-store show to come.",
+      namingIdeas: [
+        "Sound-object roots: groove, 33, spindle, needle words — the vinyl fetish written into the name, collectors recognising kin at a glance",
+        "The clubhouse register: warehouse, basement, corner space words — the digging afternoon needs a concrete room to live in",
+        "The self-deprecating grammar: Rough Trade's low-posture naming — indie credibility compounds the less the name shows off",
+        "Lyric-and-title borrowing: words lifted from beloved albums — the highest form of insider handshake, minded for trademarks and overused picks",
+        "The omnivore's declaration: Amoeba's swallow-everything metaphor — the used store's core promise is you'll find something unexpected, so state the appetite first",
+      ],
+      cases: [
+        { name: "Rough Trade", takeaway: "Self-deprecation built into indie music's totem: the defiant grammar's credit accumulation — the less the name postures, the more the scene trusts it" },
+        { name: "Amoeba Music", takeaway: "A biological noun as the omnivore's promise: every genre swallowed into the mega-crate — you'll dig up something unexpected, said in one word" },
+        { name: "Tower Records", takeaway: "From a drugstore loft to a global chain on one landmark word: scale imagination in the root — and a reminder the name must carry the size you dream of" },
+        { name: "Disk Union", takeaway: "Tokyo's crate-digging temple as a union: buying and selling used records restated as collectors' mutual aid — the clubhouse grammar's Japanese answer" },
+      ],
+      pitfalls: [
+        "A boutique register for a digging trade: select-shop preciousness scares the crate-flipper — vinyl's joy is the dig, and the name must leave room for glorious mess",
+        "Locking into one genre: a jazz-corner name can't hold the punk and techno crowds — leave genres to the bin dividers, keep the clubhouse for the brand",
+        "Lyric references colliding with trademarks: album and band names carry rights risk — transform the homage, keep the handshake original",
+        "Forgetting the online half: mail order and livestreams carry half the trade — the name must survive the shipping label and the stream title without truncation",
+      ],
+    },
+  },
+  embroidery: {
+    slug: "embroidery",
+    keywords: ["刺绣工作室", "苏绣", "手工刺绣定制", "embroidery studio", "hand embroidery"],
+    tlds: [
+      { tld: "com", zh: "高定刺绣与商业合作的默认后缀，报价与合同上最正式", en: "The default suffix for couture commissions and commercial work — most formal on quotes and contracts" },
+      { tld: "studio", zh: "工作室气质直给，刺绣课与定制线共用一块招牌", en: "The studio identity outright — one sign over the stitching class and the commission line" },
+      { tld: "art", zh: "把「绣活」升维成「针尖上的艺术」，收藏与展览线的归类", en: "Elevates needlework into art at the needle's tip — the filing for the collector and exhibition line" },
+    ],
+    zh: {
+      label: "刺绣工作室",
+      title: "刺绣工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "刺绣工作室与苏绣定制命名指南：绣坊字号传统、针线意象等思路，顾绣/Lesage 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "刺绣工作室的名字要替「一针一线的时间」定价：一幅双面绣要绣几个月，这个品类卖的从来不是布和线，而是针尖上的耐心。中文语境里最厚的资产是绣坊字号传统：明代的顾绣以一个家族姓氏成为品类代名词，「顾绣」二字证明了姓氏+绣的语法可以流传四百年；四大名绣（苏、湘、粤、蜀）的地名前缀则是现成的产地背书——但要注意，流派词是公共资产，名字里用「苏绣」占定位，还需要一个私有的字号做记忆点。国际参照系同样清晰：巴黎的 Lesage 绣坊用姓氏服务高定百年，被 Chanel 收编后姓氏依然是招牌。隐藏考点是业务分层：文创小件走量、定制绣品走利润、艺术收藏走名声，名字要在淘宝详情页、高定工作室的合作邮件与美术馆展签上都立得住。",
+      namingIdeas: [
+        "姓氏绣坊传统：姓氏+绣/绣坊——顾绣验证过四百年的语法，手艺人的姓氏是最长期的品牌资产",
+        "针线意象直给：针、线、绷、缕类词根——一个「缕」字就能让人看见丝线在光下的样子",
+        "四大名绣借力：苏、湘、粤、蜀地名前缀+私有字号——流派词占定位，字号做记忆，两层结构缺一不可",
+        "闺阁诗词路线：从咏绣诗词里取字——「慢工出细活」的文人叙事，定制线的气质天花板",
+        "当代转译语法：把刺绣说成「针尖上的绘画」——stitch、thread 类英文词根配现代感，年轻客群与出海线的入口",
+      ],
+      cases: [
+        { name: "顾绣", takeaway: "一个家族姓氏成为品类代名词流传四百年：姓氏+绣的语法天花板——手艺行业最硬的品牌复利证明" },
+        { name: "Lesage", takeaway: "巴黎绣坊姓氏服务高定百年：被 Chanel 收编后姓氏依然是招牌——手艺人姓氏的资产属性跨文化成立" },
+        { name: "Hand & Lock", takeaway: "两个创始家族姓氏用 & 连接：伦敦皇家御用绣坊的合伙语法——历史感与工坊感一次说尽" },
+        { name: "王的手创", takeaway: "姓氏+「手创」的当代转译：非遗手艺接上互联网语感——老手艺年轻化命名的国货示范" },
+      ],
+      pitfalls: [
+        "流派词当私名用：只叫「苏绣坊」等于没有名字，搜索直接淹没在品类词里——公共流派词要配私有字号",
+        "名字太闺秀接不住商单：高定合作与美术馆展览需要正式感——「绣娘小铺」类名字上不了合作合同",
+        "锁死单一绣种：叫「双面绣工作室」就难接珠绣与法绣订单——绣种留给作品线，品牌名留姓氏与意象",
+        "忽略出海场景：刺绣是文化出海的热门品类，名字要有可用的英文对应——拼音全拼太长，提前设计双语方案",
+      ],
+    },
+    en: {
+      label: "Embroidery studios",
+      title: "How to Name an Embroidery Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Embroidery studio and hand-stitching naming guide: family-atelier traditions, needle-and-thread imagery, breakdowns of Lesage/Hand & Lock, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An embroidery studio's name must price the hours in every stitch: a fine double-sided piece takes months, and the category has never sold cloth and thread — it sells patience at the needle's tip. The deepest naming asset is the family-atelier tradition: Paris's Lesage served haute couture under one surname for a century, and even after Chanel acquired the house, the surname stayed on the door; London's Hand & Lock joined two founding families with an ampersand and carries royal warrants on the pair. In the Chinese tradition, Gu family embroidery proved four hundred years ago that a surname-plus-craft grammar can outlive dynasties. Note the two-layer structure the category demands: school and place words (Suzhou embroidery, tambour, goldwork) are public assets that claim a positioning, but the name still needs a private mark to be remembered by. The hidden exam is the tier split: small stitched goods run on volume, commissions run on margin, art pieces run on reputation — and the name must hold up on the product page, in the couture house's commissioning email and on the museum wall label alike.",
+      namingIdeas: [
+        "The family-atelier tradition: surname plus embroidery/atelier — the grammar Lesage and Gu embroidery proved across centuries; the maker's surname is the longest-duration asset",
+        "Needle-and-thread imagery outright: stitch, thread, hoop, filament roots — one thread word and the reader sees silk catching the light",
+        "School-and-place borrowing: Suzhou, tambour, goldwork prefixes plus a private mark — the public school word claims position, the private mark does the remembering",
+        "The slow-work literati register: patience, fine-hours, unhurried roots — the craft's slowness stated as the reason for the price, the commission line's ceiling",
+        "The contemporary translation: embroidery restated as painting with thread — stitch and thread compounds with modern bounce, the door for younger clients and export",
+      ],
+      cases: [
+        { name: "Lesage", takeaway: "A Paris atelier's surname serving haute couture for a century: acquired by Chanel, and the surname stayed the sign — the maker-name asset proven across cultures" },
+        { name: "Hand & Lock", takeaway: "Two founding families joined by an ampersand under royal warrants: the partnership grammar saying history and workshop in one breath" },
+        { name: "顾绣 (Gu Embroidery)", takeaway: "One family surname become the category's synonym for four hundred years: the surname-plus-craft ceiling — craft branding's hardest proof of compounding" },
+        { name: "王的手创 (Wang's Handmade)", takeaway: "A surname wired to a modern handmade suffix: heritage craft meeting internet cadence — the young-translation model for old trades" },
+      ],
+      pitfalls: [
+        "Using the school word as your name: calling yourself Suzhou Embroidery Studio is having no name at all — the search drowns in the category term; pair the public word with a private mark",
+        "Too dainty for the commission desk: couture collaborations and museum walls demand formality — a cutesy stitching-corner name never signs the contract",
+        "Locking into one technique: a double-sided-embroidery name can't take beadwork and tambour orders — leave the technique to the product line, keep the surname and imagery for the brand",
+        "Forgetting the export scene: embroidery is a flagship craft export, and the name needs a workable English counterpart — full pinyin runs long, so design the bilingual pair upfront",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

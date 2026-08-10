@@ -341,7 +341,7 @@
     ]
   },
   "guide": {
-    "count": 326,
+    "count": 332,
     "slugs": [
       "saas",
       "ecommerce",
@@ -668,7 +668,13 @@
       "modelkit",
       "framing",
       "recordingstudio",
-      "hearingaid"
+      "hearingaid",
+      "watchrepair",
+      "beekeeping",
+      "glassblowing",
+      "bonsai",
+      "recordstore",
+      "embroidery"
     ]
   },
   "vs": {

@@ -1307,4 +1307,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家助听器验配中心与听力中心，寓意「把孙辈的笑声重新带回饭桌」；气质要专业温和、不说「聋」不丢面子；场景是社区门头、医院转介绍和家庭群转发链接里都可信亲切、立得住。",
     en: "A hearing aid fitting and audiology center. The name should carry the grandchild's laugh brought back to the dinner table; the vibe is clinically credentialed yet gentle, never saying deaf, never costing dignity; it must read trustworthy on the neighbourhood shopfront, pass well in the hospital referral, and share credibly in the family group chat.",
   },
+  "watchrepair": {
+    zh: "一家钟表维修与名表保养工作室，寓意「把一块传了两代人的表重新调准」；气质要专业沉稳、值得托付；场景是商场柜台招牌、保修卡和家庭群「哪里修表靠谱」的转发里都可信、立得住。",
+    en: "A watch repair and luxury servicing atelier. The name should carry the heirloom watch set right again after two generations; the vibe is credentialed and unhurried, worthy of the trust; it must read reliable on the mall counter, sign the warranty card with authority, and pass credibly in the family group chat asking who can fix a watch.",
+  },
+  "beekeeping": {
+    zh: "一个蜂场直供的蜂蜜品牌，寓意「等一季花开酿成的一罐甜」；气质要天然可溯源、体面不土气；场景是电商详情页、礼盒烫金和妈妈群转发里都可信好念、立得住。",
+    en: "A farm-direct honey brand. The name should carry the jar of sweetness cured from one season's bloom; the vibe is natural and traceable, dignified without being rustic; it must read trustworthy on the product page, foil-stamp nicely on the gift box, and share credibly in the parenting group chat.",
+  },
+  "glassblowing": {
+    zh: "一家玻璃工作室与吹玻璃体验坊，寓意「从一千多度的火里拉出透明的光」；气质要有手作温度、又有艺术分量；场景是工作室门头、体验课海报和刻在作品底部的署名里都好认、立得住。",
+    en: "A glassblowing studio and taster workshop. The name should carry transparent light pulled out of a two-thousand-degree fire; the vibe is warm with craft yet weighty with art; it must read well on the studio door, pop on the class poster, and engrave cleanly on the foot of every piece.",
+  },
+  "bonsai": {
+    zh: "一家盆景园与盆栽工作室，寓意「把一座山养进一只掌心大的盆里」；气质要有文人气、经得起时间；场景是展会铭牌、老藏家的茶桌口碑和年轻人的小红书笔记里都立得住。",
+    en: "A bonsai garden and studio. The name should carry a mountain raised inside a palm-sized pot; the vibe is literati and patient, seasoned by time; it must hold up on the exhibition placard, in the old collector's tea-table word of mouth, and in the younger customer's lifestyle post.",
+  },
+  "recordstore": {
+    zh: "一家黑胶唱片店，寓意「翻箱淘碟的下午和跟老板聊半小时的据点」；气质要懂行有暗号感、不装；场景是门头招牌、到店打卡照和直播间标题里都好认好念、立得住。",
+    en: "A vinyl record store. The name should carry the crate-digging afternoon and the half-hour chat at the counter; the vibe is scene-savvy with an insider handshake, never posturing; it must read well on the shopfront, look right in the check-in photo, and pop in the livestream title.",
+  },
+  "embroidery": {
+    zh: "一家刺绣工作室与手工刺绣定制坊，寓意「针尖上一寸一寸绣出来的时间」；气质要精工文气、接得住高定；场景是作品落款、高定合作邮件和美术馆展签上都体面、立得住。",
+    en: "An embroidery studio and hand-stitching atelier. The name should carry the hours stitched inch by inch at the needle's tip; the vibe is fine-worked and literate, equal to couture; it must sign the finished piece with grace, read formal in the commissioning email, and hold its own on the museum wall label.",
+  },
 };
