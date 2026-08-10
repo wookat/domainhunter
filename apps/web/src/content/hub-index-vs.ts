@@ -316,4 +316,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "food-vs-restaurant", a: "food", b: "restaurant", title: { zh: ".food 和 .restaurant 怎么选：品类总词与门店直给", en: ".food vs .restaurant: The Umbrella or the Storefront" } },
   { slug: "attorney-vs-lawyer", a: "attorney", b: "lawyer", title: { zh: ".attorney 和 .lawyer 怎么选：美式正式与全球通称", en: ".attorney vs .lawyer: The Formal American or the Global Word" } },
   { slug: "dentist-vs-dental", a: "dentist", b: "dental", title: { zh: ".dentist 和 .dental 怎么选：职业身份与行业大词", en: ".dentist vs .dental: The Professional or the Industry" } },
+  { slug: "clothing-vs-fashion", a: "clothing", b: "fashion", title: { zh: ".clothing 和 .fashion 怎么选：卖衣服的品类与说时尚的概念", en: ".clothing vs .fashion: The Garments or the Concept" } },
+  { slug: "cooking-vs-recipes", a: "cooking", b: "recipes", title: { zh: ".cooking 和 .recipes 怎么选：做菜这件事与菜谱这份交付", en: ".cooking vs .recipes: The Act or the Deliverable" } },
+  { slug: "gift-vs-gifts", a: "gift", b: "gifts", title: { zh: ".gift 和 .gifts 怎么选：单数动词感与复数商品感", en: ".gift vs .gifts: The Verb or the Shelf" } },
+  { slug: "party-vs-events", a: "party", b: "events", title: { zh: ".party 和 .events 怎么选：热闹直给与全场景专业词", en: ".party vs .events: The Vibe or the Industry" } },
+  { slug: "fishing-vs-boats", a: "fishing", b: "boats", title: { zh: ".fishing 和 .boats 怎么选：钓鱼这件事与船这台设备", en: ".fishing vs .boats: The Activity or the Vessel" } },
+  { slug: "horse-vs-pet", a: "horse", b: "pet", title: { zh: ".horse 和 .pet 怎么选：马术垂类与宠物大类", en: ".horse vs .pet: The Vertical Blade or the Industry Umbrella" } },
 ];

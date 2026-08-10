@@ -6757,6 +6757,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Dental equipment & supply e-commerce", "Dental labs & trade platforms", "Multi-city chain group sites", "Trade media & B2B businesses"],
     },
   },
+  "clothing-vs-fashion": {
+    slug: "clothing-vs-fashion",
+    a: "clothing",
+    b: "fashion",
+    zh: {
+      title: ".clothing 和 .fashion 怎么选：卖衣服的品类与说时尚的概念",
+      metaDescription: ".clothing 直指「衣服」这个品类，适合实打实卖衣服的品牌与买手店；.fashion 说「时尚」这个概念，媒体与博主也能用。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在穿搭赛道，一个报「货」，一个报「概念」。.clothing 直指「衣服」这个品类——服装品牌与 DTC 独立站、设计师与定制工作室、二手与古着买手店用 name.clothing，卖什么直接写在地址里，顾客搜「品牌 + clothing」时域名与搜索词逐字吻合；Identity Digital 运营，首年约 $11（约 ¥78）、续费约 $26/年（约 ¥189），典型首年促销结构。.fashion 说的是「时尚」这个概念——除了卖衣服的，时尚媒体与博主、造型师与买手、时装周与行业活动都用得名正言顺；GoDaddy Registry 运营，注册约 $26（约 ¥189）、续费同价，平进平出预算一眼算到底。判断标准：业务核心是「卖衣服」——服装电商、设计师品牌、古着店 → .clothing 品类直给，转化路径最短；业务核心是「谈时尚」——媒体、博客、造型服务、行业活动 → .fashion 概念更宽，内容与服务都装得下。三点注意：一是长期成本几乎一样（续费都约 $26/年），差异在语义不在价格，按业务本体选；二是 .clothing 8 个字母偏长，词根务必短（urban.clothing 已是舒适上限），.fashion 7 个字母同样如此；三是服装电商竞争激烈，域名之外把退换货政策与尺码表这类信任设施备好。命名上「品牌词 + .clothing」（bold.clothing）最主流，「风格词 + .fashion」（street.fashion）适合媒体与博主。",
+      pickA: ["服装品牌与 DTC 独立站", "设计师与定制工作室", "二手与古着买手店", "「品牌 + clothing」逐字吻合的电商"],
+      pickB: ["时尚媒体与博主", "造型师与买手服务", "时装周与行业活动", "内容与电商兼营的时尚品牌"],
+    },
+    en: {
+      title: ".clothing vs .fashion: The Garments or the Concept",
+      metaDescription:
+        ".clothing points at the garments — for brands and shops that actually sell clothes; .fashion names the concept — media and bloggers fit too. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same wardrobe lane, different subject: one names the goods, the other the concept. .clothing points at the garments themselves — clothing brands and DTC stores, designers and made-to-measure studios, and secondhand or vintage shops on name.clothing say exactly what they sell, and \"brand + clothing\" is the literal query shoppers type; operated by Identity Digital at about $11 first year (≈¥78) and $26/yr to renew (≈¥189), the classic promo structure. .fashion names the concept — beyond sellers, fashion media and bloggers, stylists and buyers, and fashion-week or trade events all wear it legitimately; operated by GoDaddy Registry at about $26 flat (≈¥189) for registration and renewal, so the price tag is the long-term cost. The test: if the core business is selling clothes — apparel e-commerce, designer brands, vintage shops → .clothing is category-direct with the shortest path to conversion; if the core business is talking fashion — media, blogs, styling services, industry events → .fashion is broad enough to hold content and services alike. Three cautions: long-term costs are nearly identical (both renew around $26/yr), so choose by business substance, not price; both suffixes lean long (.clothing is 8 letters, .fashion 7), so keep roots short (urban.clothing is about the limit); and apparel e-commerce is competitive — pair the domain with the trust infrastructure of returns policies and size charts. Naming: brand word + .clothing (bold.clothing) is the mainstream shape; style word + .fashion (street.fashion) fits media and bloggers.",
+      pickA: ["Clothing brands & DTC stores", "Designers & made-to-measure studios", "Secondhand & vintage shops", "E-commerce matching \"brand + clothing\" verbatim"],
+      pickB: ["Fashion media & bloggers", "Stylists & buyer services", "Fashion weeks & trade events", "Fashion brands mixing content and commerce"],
+    },
+  },
+  "cooking-vs-recipes": {
+    slug: "cooking-vs-recipes",
+    a: "cooking",
+    b: "recipes",
+    zh: {
+      title: ".cooking 和 .recipes 怎么选：做菜这件事与菜谱这份交付",
+      metaDescription: ".cooking 说「做菜」这个动作，适合美食创作者与烹饪教学；.recipes 说「菜谱」这份交付物，适合内容库与合集站。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在下厨赛道，一个说「动作」，一个说「交付物」。.cooking 说的是「做菜」这件事——菜谱博客与美食创作者、烹饪课程与厨艺学校、私厨与烹饪工作室用 name.cooking，域名念出来就像节目名（thai.cooking、home.cooking 张口即是频道）；GoDaddy Registry 运营，注册约 $26（约 ¥189）、续费同价，平进平出预算稳定。.recipes 说的是「菜谱」这份交付——复数形式自带「一批菜谱」的集合感，菜谱库与合集站、食谱 App、按菜系或场景组织的内容站用 name.recipes 最准；Identity Digital 运营，首年约 $7（约 ¥48）、续费约 $62/年（约 ¥449），「首年便宜、续费贵」结构明显。判断标准：主体是「人和教学」——创作者个人品牌、烹饪课、私厨服务 → .cooking 动作直给，频道感最强；主体是「内容和检索」——菜谱数据库、合集站、结构化食谱产品 → .recipes 交付物直给，用户一眼知道能拿到什么。三点注意：一是续费差距巨大（$26 vs $62/年），长期持有 .cooking 便宜一半以上，.recipes 做满一年再决定是否长期投入；二是两个后缀都不短（7 与 7 字母），词根务必短（thai.cooking、easy.recipes 是理想形态）；三是美食内容靠课程与联盟电商变现，域名之外把内容到转化的路径想清楚。命名上「菜系/风格 + .cooking」（thai.cooking）最主流，「场景/人群 + .recipes」（keto.recipes）适合垂直内容库。",
+      pickA: ["美食创作者与个人品牌", "烹饪课程与厨艺学校", "私厨与烹饪工作室", "频道感优先的内容品牌"],
+      pickB: ["菜谱库与合集站", "食谱 App 与结构化产品", "按菜系/场景组织的内容站", "「能拿到菜谱」直给的站点"],
+    },
+    en: {
+      title: ".cooking vs .recipes: The Act or the Deliverable",
+      metaDescription:
+        ".cooking names the act — for food creators and culinary teaching; .recipes names the deliverable — for content libraries and collection sites. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same kitchen lane, different noun: one names the act, the other the deliverable. .cooking names the act and the skill — recipe blogs and food creators, cooking classes and culinary schools, private chefs and cooking studios on name.cooking get a domain that reads like a show title (thai.cooking and home.cooking sound like channels the moment you say them); operated by GoDaddy Registry at about $26 flat (≈¥189) for registration and renewal — stable budgeting. .recipes names the deliverable — the plural form carries a built-in sense of collection, so recipe libraries and compilation sites, recipe apps, and content sites organized by cuisine or occasion read sharpest on name.recipes; operated by Identity Digital at about $7 first year (≈¥48) but $62/yr to renew (≈¥449), a pronounced cheap-in, pricey-renewal structure. The test: if the subject is people and teaching — creator personal brands, cooking courses, private-chef services → .cooking is action-direct with the strongest channel feel; if it's content and retrieval — recipe databases, collection sites, structured recipe products → .recipes tells users exactly what they'll get. Three cautions: the renewal gap is huge ($26 vs $62/yr) — .cooking costs less than half over long holds, so give .recipes a year before committing; both suffixes are 7 letters, so keep roots tight (thai.cooking, easy.recipes are the ideal shapes); and food content monetizes through courses and affiliate commerce, so plan the content-to-conversion path alongside the domain. Naming: cuisine or style + .cooking (thai.cooking) is the mainstream shape; audience or occasion + .recipes (keto.recipes) suits vertical content libraries.",
+      pickA: ["Food creators & personal brands", "Cooking classes & culinary schools", "Private chefs & cooking studios", "Channel-feel-first content brands"],
+      pickB: ["Recipe libraries & collection sites", "Recipe apps & structured products", "Cuisine/occasion-organized content sites", "Sites that promise recipes, verbatim"],
+    },
+  },
+  "gift-vs-gifts": {
+    slug: "gift-vs-gifts",
+    a: "gift",
+    b: "gifts",
+    zh: {
+      title: ".gift 和 .gifts 怎么选：单数动词感与复数商品感",
+      metaDescription: ".gift 单数自带动词感，适合礼品卡、送礼工具与品牌活动；.gifts 复数是商品陈列感，适合礼品电商与选品店。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个词的单复数之差，语感却完全不同——这组对比拼的是场景不是价签。.gift 单数自带动词感：「send a gift」的 gift——礼品卡与兑换平台、企业送礼与员工福利工具、品牌营销活动页用 name.gift，域名本身就像一个动作按钮（send.gift 念出来就是指令）；Uniregistry 组合（现归 GoDaddy Registry 运营），注册约 $17（约 ¥119）、续费同价，低档年费预算轻松。.gifts 复数是商品陈列感：「一批礼物」摆在货架上——礼品电商与选品店、节日礼盒与定制礼品、企业礼品目录用 name.gifts 一眼是店；Identity Digital 运营，首年约 $8（约 ¥59）、续费约 $29/年（约 ¥211），温和的首年促销结构。判断标准：产品是「送礼这个动作」——礼品卡、送礼 SaaS、活动落地页 → .gift 动词感直给，短链与指令式命名占优；产品是「礼物这批货」——电商、选品店、礼盒品牌 → .gifts 商品感直给，店铺气质天然。三点注意：一是长期成本接近（$17 vs $29/年），差异在语感不在价格；二是单复数极易混淆，预算允许时双注册、主站选定位准的一个、另一个 301 防分流；三是礼品业务季节性极强，域名之外把节日流量的承接页提前备好。命名上「动词/品牌词 + .gift」（send.gift）最主流，「品类/节日 + .gifts」（holiday.gifts）适合电商与选品店。",
+      pickA: ["礼品卡与兑换平台", "企业送礼与福利工具", "品牌营销活动页", "指令式短域名（send.gift）"],
+      pickB: ["礼品电商与选品店", "节日礼盒与定制礼品", "企业礼品目录", "店铺陈列感优先的品牌"],
+    },
+    en: {
+      title: ".gift vs .gifts: The Verb or the Shelf",
+      metaDescription:
+        ".gift reads like a verb — for gift cards, gifting tools and campaign pages; .gifts reads like a shelf of goods — for gift e-commerce and curated shops. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One letter of plural, a completely different feel — this matchup is decided by scenario, not the price tag. .gift is singular with a built-in verb feel: the gift of \"send a gift\" — gift-card and redemption platforms, corporate gifting and employee-perk tools, and brand campaign pages on name.gift get a domain that works like an action button (send.gift reads as a command); it's a Uniregistry-portfolio suffix (now operated by GoDaddy Registry) at about $17 flat (≈¥119) for registration and renewal — an easy low-tier budget. .gifts is plural with a shelf-of-goods feel: gift e-commerce and curated shops, holiday boxes and custom gifting, and corporate gift catalogs on name.gifts look like a store at a glance; operated by Identity Digital at about $8 first year (≈¥59) and $29/yr to renew (≈¥211), a mild promo structure. The test: if the product is the act of gifting — gift cards, gifting SaaS, campaign landing pages → .gift is verb-direct and wins with short, imperative names; if the product is the goods — e-commerce, curated shops, gift-box brands → .gifts is merchandise-direct with natural storefront character. Three cautions: long-term costs are close ($17 vs $29/yr), so the difference is feel, not price; singular and plural are easily confused — when budget allows, register both, build on the better fit and 301 the other; and gifting is intensely seasonal, so have holiday landing pages ready alongside the domain. Naming: verb or brand word + .gift (send.gift) is the mainstream shape; category or holiday + .gifts (holiday.gifts) suits e-commerce and curated shops.",
+      pickA: ["Gift-card & redemption platforms", "Corporate gifting & perk tools", "Brand campaign pages", "Imperative short domains (send.gift)"],
+      pickB: ["Gift e-commerce & curated shops", "Holiday boxes & custom gifting", "Corporate gift catalogs", "Storefront-feel-first brands"],
+    },
+  },
+  "party-vs-events": {
+    slug: "party-vs-events",
+    a: "party",
+    b: "events",
+    zh: {
+      title: ".party 和 .events 怎么选：热闹直给与全场景专业词",
+      metaDescription: ".party 自带热闹气氛，适合派对策划与夜生活品牌，注册续费都极便宜；.events 是活动行业的专业总词，会议、婚礼、展览都装得下。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在活动赛道，一个报「气氛」，一个报「行业」。.party 把热闹写进域名——派对策划与气球布置、夜店与夜生活品牌、生日与主题派对服务用 name.party，域名一念出来气氛就到位（neon.party 张口即是场子）；Blue Sky Registry（Gname 系）运营，注册约 $5（约 ¥33）、续费约 $6/年（约 ¥41），全站少见的双低结构，做单场活动页几乎零成本。.events 是活动行业的专业总词——会议与峰会、婚礼与庆典、展览与市集、活动策划公司用 name.events，从 B 端会务到 C 端婚庆全装得下；Identity Digital 运营，注册约 $10（约 ¥70）、续费约 $37/年（约 ¥263），对活动行业客单价来说负担很轻。判断标准：品牌气质是「玩」——派对策划、夜生活、主题活动、单场营销页 → .party 气氛直给，且便宜到可以一场一域名；品牌气质是「办」——活动公司、会议峰会、婚礼庆典、场地方 → .events 专业词覆盖全场景，B 端客户看着也稳。三点注意：一是续费差 6 倍（$6 vs $37/年）但绝对值都不高，按气质选而不是按价签选；二是 .party 历史上有低价滥用记录，认真做品牌就配好独立内容与 HTTPS，别让站点长得像垃圾页；三是活动获客高度依赖社交平台与搜索，域名的任务是报名与详情的稳定落点。命名上「主题词 + .party」（neon.party）最主流，「品牌/城市 + .events」（lisbon.events）适合活动公司与场地方。",
+      pickA: ["派对策划与气球布置", "夜店与夜生活品牌", "生日与主题派对服务", "单场活动页（一场一域名）"],
+      pickB: ["活动策划公司与会务", "会议峰会与展览市集", "婚礼与庆典品牌", "场地方与活动平台"],
+    },
+    en: {
+      title: ".party vs .events: The Vibe or the Industry",
+      metaDescription:
+        ".party carries the vibe — for party planners and nightlife brands, at rock-bottom pricing; .events is the industry's professional umbrella — conferences, weddings and expos all fit. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same occasions lane, different register: one names the vibe, the other the industry. .party writes the fun into the address — party planners and balloon stylists, nightclubs and nightlife brands, and birthday or theme-party services on name.party set the mood the moment it's spoken (neon.party sounds like the venue); operated by Blue Sky Registry (Gname family) at about $5 to register (≈¥33) and $6/yr to renew (≈¥41), one of the site's rare double-low structures — a single-event page costs almost nothing. .events is the profession's umbrella word — conferences and summits, weddings and celebrations, expos and markets, and event agencies on name.events cover everything from B2B conference ops to consumer celebrations; operated by Identity Digital at about $10 to register (≈¥70) and $37/yr to renew (≈¥263), light against event-industry ticket sizes. The test: if the brand's register is play — party planning, nightlife, theme events, one-off campaign pages → .party is vibe-direct and cheap enough for a domain per event; if the register is produce — event agencies, conferences, weddings, venues → .events is the professional word that covers every format and reassures B2B clients. Three cautions: renewals differ 6x ($6 vs $37/yr) but both are cheap in absolute terms — choose by register, not price tag; .party carries a history of low-price abuse, so serious brands should pair it with real content and HTTPS to avoid looking like a throwaway page; and event marketing lives on social platforms and search, so the domain's job is a stable home for registration and details. Naming: theme word + .party (neon.party) is the mainstream shape; brand or city + .events (lisbon.events) suits agencies and venues.",
+      pickA: ["Party planners & balloon stylists", "Nightclubs & nightlife brands", "Birthday & theme-party services", "One-off event pages (a domain per event)"],
+      pickB: ["Event agencies & conference ops", "Summits, expos & markets", "Wedding & celebration brands", "Venues & event platforms"],
+    },
+  },
+  "fishing-vs-boats": {
+    slug: "fishing-vs-boats",
+    a: "fishing",
+    b: "boats",
+    zh: {
+      title: ".fishing 和 .boats 怎么选：钓鱼这件事与船这台设备",
+      metaDescription: ".fishing 直指钓鱼这项活动，适合钓具、渔获内容与钓鱼向导；.boats 说的是船本身，船艇买卖、租赁与码头服务用它最准。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在水上赛道，一个报「活动」，一个报「设备」。.fishing 直指钓鱼这项活动——钓具店与渔具电商、钓鱼内容与渔获博主、钓鱼向导与包船服务用 name.fishing，钓友搜「水域 + fishing」时逐字吻合（lake.fishing、bass.fishing 张口即是频道）；GoDaddy Registry 运营，注册约 $26（约 ¥189）、续费同价，平进平出预算稳定。.boats 说的是船这台设备——船艇经销与二手买卖、游艇租赁与包船、码头与船舶维护服务用 name.boats 一眼是行当；原受限后缀，2022 年由 XYZ 注册局接手并取消行业资质限制，首年约 $2（约 ¥11）、续费约 $13/年（约 ¥93），在垂类行业后缀里属便宜好持有的一档。判断标准：生意围着「钓」转——渔具、钓点内容、向导服务、钓鱼社群 → .fishing 活动直给，钓友一眼认同；生意围着「船」转——买卖、租赁、维护、码头 → .boats 设备直给，且续费便宜一半以上。两者有交集（包船钓鱼），按获客关键词选：客户搜 fishing charter 就用 .fishing，搜 boat rental 就用 .boats。三点注意：一是价差明显（续费 $26 vs $13/年），长期持有 .boats 成本减半，但语义匹配优先于价差；二是 .fishing 7 个字母、.boats 5 个字母，词根都控制在 5–6 字符；三是水上业务季节性强、依赖地图与点评获客，域名的任务是预订与联系方式的稳定落点。命名上「鱼种/水域 + .fishing」（bass.fishing）最主流，「品牌/城市 + .boats」（miami.boats）适合经销与租赁。",
+      pickA: ["钓具店与渔具电商", "钓鱼内容与渔获博主", "钓鱼向导与包船钓鱼", "钓鱼社群与赛事"],
+      pickB: ["船艇经销与二手买卖", "游艇租赁与包船服务", "码头与船舶维护", "「城市 + boats」本地获客"],
+    },
+    en: {
+      title: ".fishing vs .boats: The Activity or the Vessel",
+      metaDescription:
+        ".fishing points at the activity — for tackle shops, catch content and guide services; .boats names the vessel — dealers, rentals and marinas fit best. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same waterfront lane, different subject: one names the activity, the other the vessel. .fishing points at the activity — tackle shops and fishing-gear e-commerce, catch content and angling creators, and fishing guides or charter services on name.fishing match \"water + fishing\" searches word for word (lake.fishing and bass.fishing sound like channels); operated by GoDaddy Registry at about $26 flat (≈¥189) for registration and renewal — stable budgeting. .boats names the vessel — boat dealers and used-boat marketplaces, yacht rentals and charters, and marina or boat-maintenance services on name.boats read as the trade at a glance; a formerly restricted suffix taken over by the XYZ registry in 2022 with the industry-credential requirement dropped, at about $2 first year (≈¥11) and $13/yr to renew (≈¥93) — one of the cheapest verticals to hold. The test: if the business revolves around the catch — tackle, spot content, guide services, angling communities → .fishing is activity-direct and instantly credible to anglers; if it revolves around the boat — sales, rentals, maintenance, marinas → .boats is vessel-direct and renews for less than half. They overlap on fishing charters — choose by the acquisition keyword: customers searching \"fishing charter\" → .fishing; searching \"boat rental\" → .boats. Three cautions: the price gap is real ($26 vs $13/yr renewal) — .boats halves long-term cost, but semantic fit outranks the difference; .fishing is 7 letters and .boats 5, so keep roots to 5–6 characters; and waterfront businesses are seasonal and map-and-review-driven, so the domain's job is a stable home for bookings and contact details. Naming: species or water + .fishing (bass.fishing) is the mainstream shape; brand or city + .boats (miami.boats) suits dealers and rentals.",
+      pickA: ["Tackle shops & gear e-commerce", "Catch content & angling creators", "Fishing guides & charter fishing", "Angling communities & tournaments"],
+      pickB: ["Boat dealers & used-boat marketplaces", "Yacht rentals & charter services", "Marinas & boat maintenance", "City + boats local acquisition"],
+    },
+  },
+  "horse-vs-pet": {
+    slug: "horse-vs-pet",
+    a: "horse",
+    b: "pet",
+    zh: {
+      title: ".horse 和 .pet 怎么选：马术垂类与宠物大类",
+      metaDescription: ".horse 直指马这个垂类，马场、马术俱乐部与马匹交易用它最准；.pet 是宠物行业大词，猫狗生意与宠物服务全装得下。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个是垂类尖刀，一个是行业大伞。.horse 直指马这个垂类——马场与马术俱乐部、马匹交易与繁育、马术装备与赛事用 name.horse，马圈人一眼认同（arabian.horse 张口即是血统）；GoDaddy Registry 运营，注册约 $26（约 ¥189）、续费同价，平进平出预算稳定。.pet 是宠物行业的大词——宠物店与用品电商、宠物医院与美容、猫舍犬舍与寄养服务用 name.pet，猫狗兔鸟全装得下；Identity Digital 运营，注册约 $11（约 ¥78）、续费约 $21/年（约 ¥152），对客单价可观的宠物行业毫无压力。判断标准：业务只围着「马」转——马场、马术教学、马匹交易、马具电商 → .horse 垂类直给，圈内身份感无可替代，马也从来不被当作普通「宠物」，用 .pet 反而降格；业务面向「宠物」这个大类——猫狗为主的店、医院、服务平台 → .pet 大词通吃，扩品类不用换域名。三点注意：一是价差不大（续费 $26 vs $21/年），按品类边界选而不是按价签选；二是 .horse 5 个字母、.pet 3 个字母都不长，词根可以稍放宽，但品种词与服务词仍以短为好；三是马术与宠物业务都重线下与口碑，域名的任务是预约、价目与位置的稳定落点，记得挂到地图与点评平台。命名上「品种/马场名 + .horse」（arabian.horse）最主流，「品牌词 + .pet」（happy.pet）适合宠物店与服务平台。",
+      pickA: ["马场与马术俱乐部", "马匹交易与繁育", "马术装备与赛事", "马圈身份感优先的品牌"],
+      pickB: ["宠物店与用品电商", "宠物医院与美容", "猫舍犬舍与寄养服务", "要扩品类不换域名的平台"],
+    },
+    en: {
+      title: ".horse vs .pet: The Vertical Blade or the Industry Umbrella",
+      metaDescription:
+        ".horse points at the equestrian vertical — stables, riding clubs and horse trading fit best; .pet is the industry umbrella — cat-and-dog businesses and pet services all fit. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One is a vertical blade, the other an industry umbrella. .horse points at the equestrian vertical — stables and riding clubs, horse trading and breeding, and tack shops or equestrian events on name.horse are instantly credible to the horse world (arabian.horse sounds like a bloodline); operated by GoDaddy Registry at about $26 flat (≈¥189) for registration and renewal — stable budgeting. .pet is the industry's umbrella word — pet shops and supply e-commerce, veterinary clinics and grooming, and catteries, kennels or boarding services on name.pet hold cats, dogs, rabbits and birds alike; operated by Identity Digital at about $11 to register (≈¥78) and $21/yr to renew (≈¥152) — painless against pet-industry ticket sizes. The test: if the business revolves entirely around horses — stables, riding instruction, horse trading, tack e-commerce → .horse is vertical-direct with an insider identity nothing else matches, and horses are never really \"pets\", so .pet would actually downgrade the brand; if the business serves the pet category at large — cat-and-dog shops, clinics, service platforms → .pet is the catch-all, and adding species never means changing domains. Three cautions: the price gap is small ($26 vs $21/yr renewal) — choose by category boundary, not price tag; both suffixes are short (.horse 5 letters, .pet 3), so roots can breathe, though breed and service words still work best short; and both equestrian and pet businesses run on local presence and word of mouth — the domain's job is a stable home for booking, pricing and location, linked from maps and review platforms. Naming: breed or stable name + .horse (arabian.horse) is the mainstream shape; brand word + .pet (happy.pet) fits pet shops and service platforms.",
+      pickA: ["Stables & riding clubs", "Horse trading & breeding", "Tack shops & equestrian events", "Insider-identity-first equestrian brands"],
+      pickB: ["Pet shops & supply e-commerce", "Vet clinics & grooming", "Catteries, kennels & boarding", "Platforms that outgrow single species"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
