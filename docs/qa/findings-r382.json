@@ -1,0 +1,858 @@
+{
+  "sitemap_loc_samples": [
+    916,
+    916,
+    916
+  ],
+  "sitemap_dup_locs": 0,
+  "sitemap_cat_counts": {
+    "tld": 294,
+    "guide": 290,
+    "vs": 324,
+    "core": 8
+  },
+  "sitemap_vs_counts_json": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "llms_counts": {
+    "tld": 294,
+    "guide": 290,
+    "vs": 324
+  },
+  "llms_vs_sitemap_equal": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "robots": {
+    "status": 200,
+    "has_sitemap": true,
+    "gptbot": true
+  },
+  "seo_new_pages": {
+    "/guide/craftvodka": {
+      "status": 200,
+      "title": "精酿伏特加品牌怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/craftvodka",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 120942
+    },
+    "/guide/craftvodka?lang=en": {
+      "status": 200,
+      "title": "How to Name a Craft Vodka Brand: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/craftvodka?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 122625
+    },
+    "/guide/futsal": {
+      "status": 200,
+      "title": "五人制足球场馆怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/futsal",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 120903
+    },
+    "/guide/futsal?lang=en": {
+      "status": 200,
+      "title": "How to Name a Futsal or Five-a-Side Venue: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/futsal?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 123024
+    },
+    "/tld/basketball": {
+      "status": 200,
+      "title": ".basketball 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/basketball",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 141532
+    },
+    "/tld/basketball?lang=en": {
+      "status": 200,
+      "title": ".basketball Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/basketball?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 142131
+    },
+    "/tld/win": {
+      "status": 200,
+      "title": ".win 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/win",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 141277
+    },
+    "/tld/win?lang=en": {
+      "status": 200,
+      "title": ".win Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/win?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 142409
+    },
+    "/vs/casino-vs-bet": {
+      "status": 200,
+      "title": ".casino 和 .bet 怎么选：场馆招牌与动作词 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/casino-vs-bet",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 129802
+    },
+    "/vs/casino-vs-bet?lang=en": {
+      "status": 200,
+      "title": ".casino vs .bet: The Venue Sign or the Action Word | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/casino-vs-bet?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 130198
+    },
+    "/vs/moda-vs-fashion": {
+      "status": 200,
+      "title": ".moda 和 .fashion 怎么选：西语的时尚与英语的时尚 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/moda-vs-fashion",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 129606
+    },
+    "/vs/moda-vs-fashion?lang=en": {
+      "status": 200,
+      "title": ".moda vs .fashion: Style in Spanish or English | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/moda-vs-fashion?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 130093
+    }
+  },
+  "new_pages_status": {
+    "/guide/craftvodka": {
+      "status": 200,
+      "bytes": 120942,
+      "faq": true
+    },
+    "/guide/craftvodka?lang=en": {
+      "status": 200,
+      "bytes": 122625,
+      "faq": true
+    },
+    "/guide/esportsnews": {
+      "status": 200,
+      "bytes": 120754,
+      "faq": true
+    },
+    "/guide/esportsnews?lang=en": {
+      "status": 200,
+      "bytes": 123454,
+      "faq": true
+    },
+    "/guide/sportsodds": {
+      "status": 200,
+      "bytes": 120808,
+      "faq": true
+    },
+    "/guide/sportsodds?lang=en": {
+      "status": 200,
+      "bytes": 123058,
+      "faq": true
+    },
+    "/guide/tabletopclub": {
+      "status": 200,
+      "bytes": 120720,
+      "faq": true
+    },
+    "/guide/tabletopclub?lang=en": {
+      "status": 200,
+      "bytes": 122893,
+      "faq": true
+    },
+    "/guide/futsal": {
+      "status": 200,
+      "bytes": 120903,
+      "faq": true
+    },
+    "/guide/futsal?lang=en": {
+      "status": 200,
+      "bytes": 123024,
+      "faq": true
+    },
+    "/guide/fashionbuyer": {
+      "status": 200,
+      "bytes": 120721,
+      "faq": true
+    },
+    "/guide/fashionbuyer?lang=en": {
+      "status": 200,
+      "bytes": 122957,
+      "faq": true
+    },
+    "/tld/basketball": {
+      "status": 200,
+      "bytes": 141532,
+      "faq": true
+    },
+    "/tld/basketball?lang=en": {
+      "status": 200,
+      "bytes": 142131,
+      "faq": true
+    },
+    "/tld/rugby": {
+      "status": 200,
+      "bytes": 141353,
+      "faq": true
+    },
+    "/tld/rugby?lang=en": {
+      "status": 200,
+      "bytes": 141877,
+      "faq": true
+    },
+    "/tld/cricket": {
+      "status": 200,
+      "bytes": 141412,
+      "faq": true
+    },
+    "/tld/cricket?lang=en": {
+      "status": 200,
+      "bytes": 142272,
+      "faq": true
+    },
+    "/tld/fish": {
+      "status": 200,
+      "bytes": 141045,
+      "faq": true
+    },
+    "/tld/fish?lang=en": {
+      "status": 200,
+      "bytes": 142201,
+      "faq": true
+    },
+    "/tld/fan": {
+      "status": 200,
+      "bytes": 141128,
+      "faq": true
+    },
+    "/tld/fan?lang=en": {
+      "status": 200,
+      "bytes": 142211,
+      "faq": true
+    },
+    "/tld/win": {
+      "status": 200,
+      "bytes": 141277,
+      "faq": true
+    },
+    "/tld/win?lang=en": {
+      "status": 200,
+      "bytes": 142409,
+      "faq": true
+    },
+    "/vs/casino-vs-bet": {
+      "status": 200,
+      "bytes": 129802,
+      "faq": true
+    },
+    "/vs/casino-vs-bet?lang=en": {
+      "status": 200,
+      "bytes": 130198,
+      "faq": true
+    },
+    "/vs/bet-vs-poker": {
+      "status": 200,
+      "bytes": 129560,
+      "faq": true
+    },
+    "/vs/bet-vs-poker?lang=en": {
+      "status": 200,
+      "bytes": 129915,
+      "faq": true
+    },
+    "/vs/poker-vs-games": {
+      "status": 200,
+      "bytes": 129502,
+      "faq": true
+    },
+    "/vs/poker-vs-games?lang=en": {
+      "status": 200,
+      "bytes": 129898,
+      "faq": true
+    },
+    "/vs/vodka-vs-wine": {
+      "status": 200,
+      "bytes": 129733,
+      "faq": true
+    },
+    "/vs/vodka-vs-wine?lang=en": {
+      "status": 200,
+      "bytes": 130185,
+      "faq": true
+    },
+    "/vs/futbol-vs-soccer": {
+      "status": 200,
+      "bytes": 130060,
+      "faq": true
+    },
+    "/vs/futbol-vs-soccer?lang=en": {
+      "status": 200,
+      "bytes": 130908,
+      "faq": true
+    },
+    "/vs/moda-vs-fashion": {
+      "status": 200,
+      "bytes": 129606,
+      "faq": true
+    },
+    "/vs/moda-vs-fashion?lang=en": {
+      "status": 200,
+      "bytes": 130093,
+      "faq": true
+    }
+  },
+  "usage_pre": {
+    "days": {
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      }
+    },
+    "cronLast": 1786341659494,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786360424600,
+    "pricesLastFail": 1786352251978
+  },
+  "usage_keys_present": {
+    "pricesLastOk": true,
+    "pricesLastFail": true,
+    "cronLast": true,
+    "indexnowLast": true
+  },
+  "prices_api": {
+    "stale": null,
+    "tldCount": 292,
+    "fetchedAt": 1786360424869,
+    "keys": 292
+  },
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_all": "核验完成：共 295 个，200 个可注册",
+  "template_prefill": {
+    "chip": "电商品牌",
+    "filled": ""
+  },
+  "prices_rows_zh": 294,
+  "prices_live_count": 292,
+  "prices_static_count": 2,
+  "prices_static_slugs": [
+    "cn",
+    "so"
+  ],
+  "prices_new_tld_rows": {
+    "expected_static_fallback": {
+      "basketball": [
+        302,
+        309
+      ],
+      "rugby": [
+        302,
+        309
+      ],
+      "cricket": [
+        152,
+        152
+      ],
+      "fish": [
+        59,
+        256
+      ],
+      "fan": [
+        48,
+        315
+      ],
+      "win": [
+        33,
+        41
+      ]
+    },
+    "got": {
+      "win": [
+        33,
+        41
+      ],
+      "fan": [
+        48,
+        315
+      ],
+      "fish": [
+        59,
+        256
+      ],
+      "cricket": [
+        152,
+        152
+      ],
+      "basketball": [
+        302,
+        309
+      ],
+      "rugby": [
+        302,
+        309
+      ]
+    }
+  },
+  "prices_row_tld_hrefs": {
+    "basketball": true,
+    "rugby": true,
+    "cricket": true,
+    "fish": true,
+    "fan": true,
+    "win": true
+  },
+  "tld_pricecards": {
+    "basketball": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        41.88,
+        42.88
+      ],
+      "prices_href": true
+    },
+    "rugby": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        41.98,
+        42.98
+      ],
+      "prices_href": true
+    },
+    "cricket": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        21.09,
+        21.09
+      ],
+      "prices_href": true
+    },
+    "fish": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        8.24,
+        35.53
+      ],
+      "prices_href": true
+    },
+    "fan": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        6.69,
+        43.77
+      ],
+      "prices_href": true
+    },
+    "win": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        4.61,
+        5.64
+      ],
+      "prices_href": true
+    }
+  },
+  "tld_com_live": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+  "tld_hub_links": 294,
+  "guide_hub_links": 290,
+  "vs_hub_links": 324,
+  "footer_counts": [],
+  "footer_link_counts": {
+    "/tld/": 294,
+    "/guide/": 290,
+    "/vs/": 324
+  },
+  "templates_more_chip": "+280",
+  "why_status": 200,
+  "shortlist_status": 200,
+  "advanced_status": 200,
+  "404_status": 404,
+  "404_tld_status": 404,
+  "404_guide_status": 404,
+  "404_vs_status": 404,
+  "mcp_doc_status": 200,
+  "mcp_doc_tldcount": "860",
+  "mcp_tld_prices": {
+    "tldCount": 294,
+    "priceKeys": 294
+  },
+  "share_create": {
+    "status": 200,
+    "id": "vVKLqSy9BC",
+    "has_token": true
+  },
+  "share_live_domains": {
+    "d1": true,
+    "d2": true
+  },
+  "share_revoke": {
+    "del": 200,
+    "getAfter": 410,
+    "revokedBodyHasItems": false
+  },
+  "share_revoked_ui": true,
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(250, 250, 249)",
+    "persist_after_reload": "rgb(250, 250, 249)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld/basketball": 360,
+    "/vs/casino-vs-bet": 360,
+    "/guide/craftvodka": 360
+  },
+  "usage_post": {
+    "days": {
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      }
+    },
+    "cronLast": 1786341659494,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786360424600,
+    "pricesLastFail": 1786352251978
+  },
+  "usage_days_equal": true,
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r382"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r382"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r382"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r382"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r382"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/vVKLqSy9BC"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/vVKLqSy9BC"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/vVKLqSy9BC"
+    }
+  ]
+}
