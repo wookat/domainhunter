@@ -43,3 +43,31 @@ export function loadSearch(): SavedSearch | null {
     return null;
   }
 }
+
+/** AI 上游配额耗尽标记（sessionStorage，按标签页隔离）：最近一次 AI 搜索撞上 quota 错误时置位，
+ * 首页据此展示非阻断的「AI 暂不可用」横幅；下次 AI 成功产出候选时清除。 */
+const AI_QUOTA_DOWN_KEY = "dh:aiQuotaDown:v1";
+
+export function markAiQuotaDown(): void {
+  try {
+    sessionStorage.setItem(AI_QUOTA_DOWN_KEY, String(Date.now()));
+  } catch {
+    /* 存储满/隐私模式，忽略 */
+  }
+}
+
+export function clearAiQuotaDown(): void {
+  try {
+    sessionStorage.removeItem(AI_QUOTA_DOWN_KEY);
+  } catch {
+    /* 忽略 */
+  }
+}
+
+export function isAiQuotaDown(): boolean {
+  try {
+    return sessionStorage.getItem(AI_QUOTA_DOWN_KEY) !== null;
+  } catch {
+    return false;
+  }
+}

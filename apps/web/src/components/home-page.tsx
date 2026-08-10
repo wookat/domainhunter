@@ -5,7 +5,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { ExpiryNote, WatchCta } from "@/components/domain-row";
 import { addRecentSearch, clearRecentSearches, loadRecentSearches, type RecentSearch } from "@/lib/history";
 import { useI18n, type I18nKey } from "@/lib/i18n";
-import { hasSavedSearch } from "@/lib/persist";
+import { hasSavedSearch, isAiQuotaDown } from "@/lib/persist";
 import { toUsd, usePrices } from "@/lib/prices";
 import { REGISTRARS } from "@/lib/registrars";
 import { cn } from "@/lib/utils";
@@ -2201,6 +2201,11 @@ function descriptionFromQuery(): string {
   return new URLSearchParams(window.location.search).get("q")?.trim().slice(0, MAX_LEN) ?? "";
 }
 
+/** /?mode=exact 预选精确核验模式（AI 不可用时的降级入口） */
+function modeFromQuery(): "ai" | "exact" {
+  return new URLSearchParams(window.location.search).get("mode") === "exact" ? "exact" : "ai";
+}
+
 /** /?style= 与 /?len= 预填风格/长度偏好（分享搜索链接入口）；对不上选项忽略 */
 function optionFromQuery(param: string, options: { value: string }[]): string {
   const q = new URLSearchParams(window.location.search).get(param)?.trim();
@@ -2333,7 +2338,9 @@ export function HomePage({
   const [showCustom, setShowCustom] = useState(false);
   const [showAllTemplates, setShowAllTemplates] = useState(false);
   // 搜索模式分段器：AI 猎名（默认）/ 精确核验（免 AI 额度直接核验现成名字）；批量核验直达高级模式
-  const [searchMode, setSearchMode] = useState<"ai" | "exact">("ai");
+  const [searchMode, setSearchMode] = useState<"ai" | "exact">(modeFromQuery);
+  // AI 不可用横幅：本标签页最近一次 AI 搜索撞上 quota 错误时展示（非阻断，不禁用入口）
+  const [aiDown] = useState(isAiQuotaDown);
 
   const customTlds = tlds.filter((t) => !PRESET_TLDS.includes(t));
   const toggleTld = (t: string) => setTlds((prev) => (prev.includes(t) ? prev.filter((x) => x !== t) : [...prev, t]));
@@ -2645,6 +2652,24 @@ export function HomePage({
             </button>
           </div>
         </div>
+
+        {searchMode === "ai" && (quotaExhausted || aiDown) && (
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2 rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-2.5 text-xs text-txt1">
+            <span>{t("home.aiDownBanner")}</span>
+            <button
+              onClick={() => setSearchMode("exact")}
+              className="inline-flex min-h-[44px] items-center rounded-md border border-line bg-bg1 px-2.5 font-medium text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0 sm:py-1"
+            >
+              {t("home.mode.exact")}
+            </button>
+            <button
+              onClick={onOpenAdvanced}
+              className="inline-flex min-h-[44px] items-center rounded-md border border-line bg-bg1 px-2.5 font-medium text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0 sm:py-1"
+            >
+              {t("home.mode.bulk")}
+            </button>
+          </div>
+        )}
 
         <div className="mt-4 overflow-hidden rounded-2xl border border-line-strong bg-bg2 shadow-[0_24px_48px_-24px_rgba(0,0,0,.5)] focus-within:border-brand-line">
           <textarea
