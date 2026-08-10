@@ -251,7 +251,7 @@
     ]
   },
   "guide": {
-    "count": 242,
+    "count": 248,
     "slugs": [
       "saas",
       "ecommerce",
@@ -494,7 +494,13 @@
       "badminton",
       "gokart",
       "sauna",
-      "pizza"
+      "pizza",
+      "electrician",
+      "landscaping",
+      "painting",
+      "jobboard",
+      "restaurantsupply",
+      "motorcycleparts"
     ]
   },
   "vs": {

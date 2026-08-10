@@ -1767,6 +1767,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个披萨店与披萨品牌，寓意「窑火现烤的碳水快乐」；气质要有明火与饼皮的画面感、带一点意式正宗又保证好念好拼、绝不与万千 Pizza House 撞名；场景是电话点单口播、外卖 App 搜索和保温袋印刷上都立得住。",
     en: "A pizza shop and pizza brand. The name should promise oven-fired carb happiness; the vibe carries open flame and fresh crust with a touch of Italian authenticity while staying easy to say and spell, never colliding with ten thousand Pizza Houses; it must hold up in phone orders, delivery-app search, and printed on the thermal bag.",
   },
+  {
+    slug: "electrician",
+    labelZh: "电工电气服务",
+    labelEn: "Electrical services",
+    zh: "一家电工与电气服务公司，寓意「持证专业、随叫随到」；气质要安全可靠、有执照与规范作业的专业感、绝不轻佻；场景是地图搜索结果、车身广告和报价单抬头上都立得住。",
+    en: "An electrician and electrical services company. The name should promise licensed expertise and rapid response; the vibe is safe, dependable, and code-compliant professional, never flippant; it must hold up in map search results, on a van wrap, and atop a written quote.",
+  },
+  {
+    slug: "landscaping",
+    labelZh: "园林景观",
+    labelEn: "Landscaping company",
+    zh: "一家园林景观设计与养护公司，寓意「四季常青、把院子变成风景」；气质要有生机与设计感、可靠得起全年养护合约；场景是工程车侧身、庭院施工牌和地图搜索里都清晰好认。",
+    en: "A landscaping design and maintenance company. The name should evoke year-round green and turning yards into scenery; the vibe is alive and design-minded yet dependable enough for annual care contracts; it must read clearly on a truck door, a yard sign, and in map search.",
+  },
+  {
+    slug: "painting",
+    labelZh: "油漆粉刷",
+    labelEn: "Painting company",
+    zh: "一家油漆粉刷公司，寓意「焕然一新、说到做到」；气质要整洁专业、有确定性与品质感、不玩过火的双关；场景是工服胸口、报价单抬头和社区口碑转述里都体面可信。",
+    en: "A painting contractor. The name should promise a fresh new look delivered on schedule; the vibe is tidy, professional, and certain, with no overcooked puns; it must look credible stitched on a shirt, printed atop a quote, and passed along in neighborhood referrals.",
+  },
+  {
+    slug: "jobboard",
+    labelZh: "招聘求职平台",
+    labelEn: "Job board",
+    zh: "一个招聘求职平台，寓意「机会真实、人岗相遇」；气质要中性偏正向、对求职者有希望感、对雇主够正规可信；场景是每天输入的域名、招聘预算审批单和「我在这找到工作」的口碑里都成立。",
+    en: "A job board and hiring platform. The name should suggest real openings where people and roles meet; the vibe is neutral-hopeful — encouraging to candidates yet formal enough for employers; it must work as a daily-typed domain, on a hiring-budget form, and in \"I found my job there\" word of mouth.",
+  },
+  {
+    slug: "restaurantsupply",
+    labelZh: "餐饮设备供应",
+    labelEn: "Restaurant supply",
+    zh: "一家餐饮设备与用品供应商，寓意「货全价优、商用等级、当天发货」；气质要像撑得起五万个 SKU 的正经公司、直白高效不绕弯；场景是补货清单、电话报单和批发目录里都好记好念。",
+    en: "A restaurant equipment and supplies dealer. The name should promise everything in stock at commercial grade with fast shipping; the vibe is a serious company that can carry fifty thousand SKUs — literal and efficient, no riddles; it must stay memorable on a restock list, over the phone, and in a wholesale catalog.",
+  },
+  {
+    slug: "motorcycleparts",
+    labelZh: "摩托车配件",
+    labelEn: "Motorcycle parts",
+    zh: "一个摩托车配件与骑行装备品牌，寓意「轰油门的快感与硬核可靠」；气质要够快够硬、有骑士圈层认同、又配得上严谨的车型适配数据；场景是头盔贴纸、油箱 logo 和电商搜索里都够酷够准。",
+    en: "A motorcycle parts and riding gear brand. The name should carry throttle-twisting thrill and forged-metal reliability; the vibe is fast, hard, and tribal enough for rider culture while credible next to precise fitment data; it must look sharp on a helmet sticker, a tank logo, and in marketplace search.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

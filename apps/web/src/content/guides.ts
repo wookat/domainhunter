@@ -15128,6 +15128,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  electrician: {
+    slug: "electrician",
+    keywords: ["电工", "电气服务", "electrical contractor"],
+    tlds: [
+      { tld: "com", zh: "上门服务行业的信任底线，报价单与车身广告都认它", en: "The trust baseline for home services — quotes and van wraps both expect it" },
+      { tld: "contractors", zh: "承包商身份直给，B 端总包与验收方一眼识别", en: "Contractor identity stated outright — GCs and inspectors recognize it at a glance" },
+      { tld: "services", zh: "服务属性明示，本地搜索里语义加成", en: "Service intent made explicit, with a semantic boost in local search" },
+    ],
+    zh: {
+      label: "电工电气服务",
+      title: "电工与电气服务公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "电工电气服务公司命名指南：电流意象、执照信任词、应急响应感等思路，Mr. Electric/Mister Sparky 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "电工的名字要在两个瞬间成立：一是业主家里跳闸断电、手机搜「附近电工」的焦虑瞬间，名字必须让人觉得「这家靠谱、来得快」；二是总包方翻承包商名录的审核瞬间，名字要透出执照、保险与规范作业的专业气场。电气是典型的「高风险信任行业」——接错一根线可能烧掉整栋房子，所以命名的第一优先级永远是安全感与专业感，俏皮和创意都要让位。电流、火花、伏特、回路是这个行业独有的意象库，用得好一秒入题；但「spark/火花」也暗示走火，用前要掂量语境。本地电工的获客主战场是 Google 地图、点评平台与车身广告，名字要短、好拼、含服务地域或品类词，让「城市名+电工」的搜索能命中你。",
+      namingIdeas: [
+        "电流意象词根：volt、amp、current、live wire——伏特与电流是电工独有的词库，一个词根就能把行业写进名字（Voltify、AmpPro）",
+        "人格化师傅形象：Mr. Electric、Mister Sparky 式的「先生/师傅」命名，把无形的服务变成一个可信赖的人——上门行业的经典打法",
+        "执照与规范暗示：certified、pro、master 等词根传递持证作业的专业感——电气是验资质的行业，名字先过审核这一关",
+        "应急响应感：rapid、24/7、rescue 等词根瞄准跳闸断电的急修场景——急单是本地电工利润最高的订单，名字里的「快」就是广告",
+        "地域+品类锚定：城市/城区名+electric 的结构在本地搜索里最直接（Austin Electric），代价是跨区扩张要改名——按扩张野心选结构",
+      ],
+      cases: [
+        { name: "Mr. Electric", takeaway: "「电先生」：把公司拟人成一位可信赖的师傅，franchise 体系里与 Mr. Rooter 等兄弟品牌共用人格化框架——上门服务命名的原型样本" },
+        { name: "Mister Sparky", takeaway: "sparky 是英语俚语里对电工的昵称：行话自称瞬间拉近距离，配合「准时否则免单」的承诺——行话+人格化的双重命中" },
+        { name: "IES Holdings", takeaway: "Integrated Electrical Services 缩写：面向商用与工业市场的缩写命名，B 端大客户要的是体量感与正规感而非亲切感——受众决定命名温度" },
+        { name: "Generac", takeaway: "generator + AC 的合成词：从发电机具体品类造词并成长为品类代名词——设备与服务品牌都适用的「品类词根造词」路线" },
+      ],
+      pitfalls: [
+        "俏皮压过专业：电气是烧房子级别的高风险行业，双关梗名（如 Shockingly Good）在业主的安全焦虑面前是减分项",
+        "spark/shock 用词不看语境：火花与电击既是行业意象也是事故意象，名字让人联想到走火就适得其反",
+        "泛化的 XX Electric Services：electric + services/solutions 的组合在每个城市都有几十家，地图搜索里永远混在一起",
+        "只做口碑不查线上：本地电工一半订单来自地图与点评搜索，注册前不查 Google 地图同名商家，开业就和别人的差评捆绑",
+      ],
+    },
+    en: {
+      label: "Electricians",
+      title: "How to Name an Electrical Business: Strategies, Cases & Domains",
+      metaDescription:
+        "Electrician business naming guide: current-and-voltage roots, licensed-trust signals, emergency-speed cues, breakdowns of Mr. Electric and Mister Sparky, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An electrician's name has to work in two moments: the panicked one, when a homeowner's breaker trips at night and they search \"electrician near me\" — the name must read reliable and fast; and the vetting one, when a general contractor scans a subcontractor list — the name must radiate license, insurance and code-compliant work. Electrical is the definition of a high-stakes trust trade: one miswired circuit can burn down a house, so safety and professionalism outrank cleverness in every naming decision. The trade owns a vivid private lexicon — volts, amps, current, circuits — and one root can write the industry into the name; but spark also connotes fire, so weigh the context before using it. Local electricians win customers on Google Maps, review platforms and van wraps, which argues for names that are short, spellable, and anchored with a service or place word so \"city + electrician\" searches actually find you.",
+      namingIdeas: [
+        "Current-and-voltage roots: volt, amp, current, live wire — the electrician's private word bank; one root writes the trade into the name (Voltify, AmpPro)",
+        "Personify the tradesman: Mr. Electric and Mister Sparky turn an invisible service into a trustworthy person — the classic home-services play",
+        "Signal the license: roots like certified, pro and master carry permitted, code-compliant weight — electrical is a credentials business, and the name is the first credential",
+        "Sell emergency speed: rapid, 24/7, rescue target the tripped-breaker panic call — emergency jobs are the highest-margin work in the trade, and speed in the name is free advertising",
+        "Anchor with geography: the city-name + Electric structure wins local search outright (Austin Electric) at the cost of renaming if you expand — choose the structure by your ambition",
+      ],
+      cases: [
+        { name: "Mr. Electric", takeaway: "The trade personified as a dependable professional, sharing the persona framework with franchise siblings like Mr. Rooter — the archetype of home-service naming" },
+        { name: "Mister Sparky", takeaway: "Sparky is trade slang for an electrician: in-group vocabulary that instantly warms the brand, paired with an on-time-or-free promise — slang plus persona, a double hit" },
+        { name: "IES Holdings", takeaway: "Integrated Electrical Services, initialized: commercial and industrial buyers want scale and formality, not warmth — the audience sets the temperature of the name" },
+        { name: "Generac", takeaway: "A blend of generator and AC that grew into the category shorthand — the category-root coinage route works for service brands as well as equipment makers" },
+      ],
+      pitfalls: [
+        "Letting clever beat competent: electrical work is burn-the-house-down risky — pun names read as red flags against a homeowner's safety anxiety",
+        "Using spark/shock without weighing context: they're trade imagery and accident imagery at once; a name that evokes electrical fire backfires",
+        "Generic XX Electric Services: electric + services/solutions exists by the dozen in every city and blurs together on the map",
+        "Skipping the online collision check: half of local jobs come from Maps and review search — launch without checking same-named listings and you inherit a stranger's one-star reviews",
+      ],
+    },
+  },
+  landscaping: {
+    slug: "landscaping",
+    keywords: ["园林景观", "庭院设计", "lawn care"],
+    tlds: [
+      { tld: "com", zh: "本地服务与商用标书的默认信任后缀", en: "The default trust suffix for local service and commercial bids" },
+      { tld: "garden", zh: "花园意象直给，庭院设计品牌气质加成", en: "Garden imagery stated outright — a vibe bonus for design-led yards" },
+      { tld: "contractors", zh: "工程承包身份明示，商用景观项目对口", en: "Contractor identity made explicit — on target for commercial landscape work" },
+    ],
+    zh: {
+      label: "园林景观",
+      title: "园林景观公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "园林景观公司命名指南：四季常青词、地形词根、设计感与工程感的平衡等思路，BrightView/TruGreen 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "园林景观的名字先要回答定位问题：你是「修剪草坪的维护队」还是「设计庭院的造园师」？维护型业务拼的是可靠与规模，名字要像 BrightView 一样干净、正面、适合印在成排的工程车上；设计型业务卖的是审美与想象力，名字可以走 terra、verde、canopy 这类有画面的词根。这个行业自带全球共通的正面意象库——绿色、生长、四季、土地，几乎不会踩文化雷区，命名素材比大多数行业富裕。难点反而在于同质化：green、lawn、landscape 的组合已被用滥，每个城市都有几家 Green Something。破局思路是往上走一层——不说「草坪」说「风景」，不说「修剪」说「四季常青」，把服务结果而非服务动作写进名字。本地获客依赖地图搜索与邻里口碑，名字要好念好拼，最好能在车身与院子里的施工牌上一眼读清。",
+      namingIdeas: [
+        "常绿与生长词根：evergreen、verde、bloom、grove——绿色生长是这个行业最强的正面联想，词根自带生机",
+        "地形与土地词：terra、field、ridge、canopy——比 lawn/grass 高一个抽象层级，设计型业务的气质之选",
+        "结果承诺命名：BrightView（明亮的景观）、TruGreen（真正的绿）——把客户买到的结果写进名字，比描述服务动作高明",
+        "季节与时间感：four seasons、perennial（多年生）等词根暗示全年养护合约——维护型业务的复购逻辑就藏在名字里",
+        "车队测试：名字印在工程车侧面，30 米外能否读清？园林公司的车就是移动广告牌，笔画繁复的名字在车身上就是浪费",
+      ],
+      cases: [
+        { name: "BrightView", takeaway: "bright + view：不提草坪不提修剪，直接承诺「明亮的景观」这个结果——全美最大商用景观公司用结果词命名，规模化品牌的教科书" },
+        { name: "TruGreen", takeaway: "true 的变形 + green：把「真正的绿」做成承诺，拼写变形一个字母换来商标独占——变形克制、读音不变的正面样本" },
+        { name: "SavATree", takeaway: "save a tree 的缩合：树木养护细分里把使命写进名字，读出来就是一句口号——服务细分+使命感的组合" },
+        { name: "Yardzen", takeaway: "yard + zen：庭院设计线上化品牌，用 zen 把「院子」升维成「禅意空间」，精准命中设计型客群的向往——品类词+气质词的现代造词" },
+      ],
+      pitfalls: [
+        "Green/Lawn 万金油组合：Green Thumb、Perfect Lawn 类名字每城几十家，地图搜索与商标注册双双无路",
+        "定位错配：维护队起了个禅意设计名，客户以为你贵；造园师起了个割草队的名，设计溢价直接归零",
+        "名字锁死品类：叫 XX Lawn Care 之后想接硬质景观与庭院设计，名字成了扩张的天花板",
+        "忽略西语等多语客群与团队：北美园林行业西语雇员与客户占比高，名字在西语里的读音与含义值得预检",
+      ],
+    },
+    en: {
+      label: "Landscaping",
+      title: "How to Name a Landscaping Business: Strategies, Cases & Domains",
+      metaDescription:
+        "Landscaping business naming guide: evergreen roots, terrain words, balancing design flair with contractor trust, breakdowns of BrightView/TruGreen/Yardzen, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A landscaping name starts with a positioning question: are you the maintenance crew that mows on schedule, or the garden designer who reimagines the yard? Maintenance businesses compete on reliability and scale — the name should be clean and positive like BrightView, at home on a fleet of matching trucks. Design businesses sell taste and imagination — roots like terra, verde and canopy carry the picture. The trade enjoys one of the friendliest image banks anywhere: green, growth, seasons, land — nearly impossible to offend in any culture, so raw material is abundant. The real enemy is sameness: green, lawn and landscape combinations are exhausted, and every city has several Green Somethings. The way out is to climb one level of abstraction — sell the view, not the mowing; the year-round result, not the service verb. Local demand arrives via map search and neighborhood word of mouth, so the name must be easy to say, easy to spell, and legible at thirty meters on a truck door and a yard sign.",
+      namingIdeas: [
+        "Evergreen and growth roots: evergreen, verde, bloom, grove — growth is the trade's strongest positive association, and the roots carry life in them",
+        "Terrain and land words: terra, field, ridge, canopy — one abstraction level above lawn/grass, the natural register for design-led firms",
+        "Name the result, not the verb: BrightView and TruGreen promise what the customer ends up with — smarter than describing the mowing",
+        "Season and time cues: four seasons, perennial — roots that imply a year-round care contract; the maintenance business's recurring-revenue logic hidden in the name",
+        "The truck test: print the name on a truck door — can you read it at thirty meters? Landscaping trucks are rolling billboards, and an ornate name wastes the medium",
+      ],
+      cases: [
+        { name: "BrightView", takeaway: "bright + view: no lawn, no mowing — a straight promise of the outcome; America's largest commercial landscaper naming by result, the scaled-brand textbook" },
+        { name: "TruGreen", takeaway: "A one-letter twist on true + green: \"genuinely green\" as a promise, with the misspelling buying trademark ownership while the pronunciation stays intact" },
+        { name: "SavATree", takeaway: "save-a-tree, contracted: a tree-care specialist writing its mission into the name — say it aloud and it's already a slogan; niche plus mission in one stroke" },
+        { name: "Yardzen", takeaway: "yard + zen: the online landscape-design brand elevates the yard into a calm space, hitting exactly what design clients aspire to — category word + quality word, coined the modern way" },
+      ],
+      pitfalls: [
+        "The Green/Lawn filler combo: Green Thumb and Perfect Lawn exist by the dozen per city — dead ends for both map search and trademark",
+        "Mismatched positioning: a mowing crew with a zen design name reads expensive; a garden designer with a mowing-crew name forfeits the design premium",
+        "Locking the category in: name yourself XX Lawn Care and hardscaping or garden design will forever fight the name",
+        "Ignoring Spanish-speaking crews and clients: in North American landscaping both are a large share — check how the name reads and sounds in Spanish before committing",
+      ],
+    },
+  },
+  painting: {
+    slug: "painting",
+    keywords: ["油漆粉刷", "刷墙", "painting contractor"],
+    tlds: [
+      { tld: "com", zh: "本地承包行业的报价单信任默认值", en: "The quote-sheet trust default for local contracting" },
+      { tld: "contractors", zh: "承包商身份直给，与验收和总包语境对齐", en: "Contractor identity stated outright, aligned with GC and inspection contexts" },
+      { tld: "services", zh: "服务属性明示，家政类搜索语义加成", en: "Service intent made explicit, with a semantic edge in home-service search" },
+    ],
+    zh: {
+      label: "油漆粉刷",
+      title: "油漆粉刷公司怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "油漆粉刷公司命名指南：色彩意象、焕新承诺、整洁专业感等思路，CertaPro/Five Star Painting 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "粉刷是「结果看得见」的行业——客户买的不是刷漆动作，而是焕然一新的家。所以名字最好卖的是「新」：fresh、renew、revive 这类焕新词根，比 paint 本身更接近客户的购买动机。第二重信任来自「整洁与守约」：粉刷工程最大的客户焦虑不是刷不好，而是滴漆、拖工期、报价含糊，CertaPro 把 certainty（确定性）写进名字正是对症下药。色彩是这个行业的天然素材库——hue、tone、coat、prism 既有画面又少有人用透。本地粉刷公司的订单一半来自地图搜索与社区口碑，名字要短、好念、印在工服和报价单上都体面；若同时做住宅与商用，名字别把自己锁死在「家庭」气质里。",
+      namingIdeas: [
+        "焕新词根优先：fresh、renew、revive、new coat——客户买的是「像新房一样」的结果，焕新词比 paint 更接近成交动机",
+        "确定性承诺：CertaPro 的 certainty 路线——针对拖工期与模糊报价的行业痛点，把「说到做到」写进名字",
+        "色彩与质感词：hue、tone、prism、palette——色彩词库画面感强且未被用滥，设计感客群尤其吃这一套",
+        "星级与品质暗示：five star、premier、pro 等词根传递品质分层——粉刷报价差距大，名字先把你放进高价区间",
+        "工服测试：名字绣在工服胸口、印在报价单抬头是否体面专业？粉刷是进家门的生意，穿着名字上门的第一印象就是成交率",
+      ],
+      cases: [
+        { name: "CertaPro Painters", takeaway: "certainty + pro：把「确定性」做成品牌核心，直击粉刷行业拖工期与含糊报价的信任痛点——痛点反义词命名的教科书" },
+        { name: "Five Star Painting", takeaway: "五星评级前置：把点评时代的信任货币直接写进名字，客户还没搜评价名字先给了暗示——评级词命名的直白样本" },
+        { name: "WOW 1 DAY Painting", takeaway: "把「一天完工」的服务承诺做成名字：速度是差异化卖点时，最狠的打法就是让名字本身成为承诺书" },
+        { name: "Benjamin Moore", takeaway: "创始人姓名的百年涂料品牌：人名+时间沉淀出的信任无法速成，但说明这个行业里「像人一样可信」是永恒主题——服务商可借人格化路线" },
+      ],
+      pitfalls: [
+        "只描述动作不卖结果：XX Painting Services 说了你做什么，没说客户得到什么——焕新感才是购买动机",
+        "俏皮双关过界：漆色玩笑名（如 Paint It Black）在业主「怕滴漆怕拖期」的焦虑面前不加分反减分",
+        "泛化组合撞名：quality/pro/best + painting 的组合每城几十家，报价单混在一堆同名者里毫无记忆点",
+        "忽略商用市场的气质：名字过于「家庭温馨」，物业与商铺翻新的 B 端询盘会默认你接不了大活",
+      ],
+    },
+    en: {
+      label: "Painting contractors",
+      title: "How to Name a Painting Business: Strategies, Cases & Domains",
+      metaDescription:
+        "Painting contractor naming guide: fresh-start roots, certainty promises, color-word imagery, breakdowns of CertaPro/Five Star/WOW 1 DAY, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Painting is a results-visible trade — customers aren't buying brushstrokes, they're buying a home that feels new again. So the best names sell newness: fresh, renew, revive roots sit closer to the buying motive than the word paint itself. The second trust layer is tidiness and reliability: the biggest customer anxieties are drips, blown schedules and vague quotes — CertaPro writing certainty into its name is a direct antidote. Color is the trade's native word bank — hue, tone, coat, prism are vivid and far from exhausted. Half of a local painter's jobs arrive via map search and neighborhood referrals, so the name must be short, sayable, and presentable stitched on a shirt and printed atop a quote; and if you serve both homes and commercial spaces, don't let the name lock you into a purely domestic register.",
+      namingIdeas: [
+        "Fresh-start roots first: fresh, renew, revive, new coat — the customer is buying \"like a new house,\" and renewal words sit closer to the sale than paint does",
+        "Promise certainty: the CertaPro route — against the trade's blown-schedule, vague-quote reputation, write \"we do what we say\" into the name",
+        "Color and texture words: hue, tone, prism, palette — vivid, underused, and especially persuasive to design-minded clients",
+        "Quality-tier cues: five star, premier, pro — painting quotes span a wide range, and the name places you in the premium bracket before the estimate lands",
+        "The shirt test: does the name look professional stitched on a chest pocket and printed on a quote header? Painting enters people's homes — the name walks in first",
+      ],
+      cases: [
+        { name: "CertaPro Painters", takeaway: "certainty + pro: building the brand on dependability, squarely against the trade's blown-schedule reputation — the textbook of naming by the pain point's antonym" },
+        { name: "Five Star Painting", takeaway: "The review-era trust currency written straight into the name — customers get the five-star suggestion before they ever search the reviews" },
+        { name: "WOW 1 DAY Painting", takeaway: "The service promise as the name itself: when speed is the differentiator, the boldest move is making the name the contract" },
+        { name: "Benjamin Moore", takeaway: "A century of founder-name trust in paint: person-like credibility can't be rushed, but it proves the theme — in this trade, sounding like a trustworthy person is the perennial win" },
+      ],
+      pitfalls: [
+        "Describing the verb, not the result: XX Painting Services says what you do, not what the customer gets — renewal is the actual motive",
+        "Overplaying the pun: paint-joke names read as unserious against a homeowner's drip-and-delay anxiety",
+        "Generic collisions: quality/pro/best + painting exists by the dozen per city — your quote drowns in a stack of near-identical names",
+        "Sounding too domestic: an overly cozy name tells property managers and shopfront clients you can't handle commercial scale",
+      ],
+    },
+  },
+  jobboard: {
+    slug: "jobboard",
+    keywords: ["招聘平台", "求职网站", "careers"],
+    tlds: [
+      { tld: "com", zh: "求职者与雇主双端的信任默认值，投递简历前先看域名", en: "The trust default for both candidates and employers — the domain gets checked before the résumé goes in" },
+      { tld: "careers", zh: "品类专属后缀，域名即说明书", en: "The category's own suffix — the domain is the explanation" },
+      { tld: "work", zh: "短而直给的工作语义，价格亲民适合验证期", en: "Short, literal work semantics at a friendly price — good for the validation phase" },
+    ],
+    zh: {
+      label: "招聘求职平台",
+      title: "招聘求职平台怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "招聘求职平台命名指南：机会意象、垂直行业锚定、双端受众平衡等思路，Indeed/Monster/Lever 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "招聘平台的名字要同时说服两端：求职者要觉得「这里有我的机会」，雇主要觉得「这里有我要的人」。这决定了命名的基调——中性偏正向，既不能像消费品牌那样轻佻（求职是严肃决策），也不能像企业软件那样冰冷（求职者是带着焦虑来的）。Indeed（的确）、Monster（怪兽级机会库）都在传递「量大、真实、有希望」。垂直化是这个赛道最有效的命名杠杆：Dribbble 之于设计师、AngelList 之于创业公司，名字直接圈定人群，比通用平台省一半解释成本。求职者输入域名的场景仍然真实存在（每天查一次新职位），所以拼写必须零歧义；而对雇主端，名字会出现在招聘预算审批单上——好念、正规、可信是底线。",
+      namingIdeas: [
+        "机会与希望意象：indeed、monster、beacon、ladder——求职者带着焦虑来，名字给的第一感觉应该是「机会在这里」",
+        "垂直人群锚定：面向设计师/工程师/蓝领的平台把人群写进名字或用圈内梗（Dribbble 的运球梗）——垂直平台名字本身就是过滤器",
+        "动作与阶梯词：lever（杠杆）、ladder（阶梯）、step——把「职业跃迁」的动作感写进名字，B 端 C 端都能读懂",
+        "双端测试：名字放进「我在 X 上找到了工作」和「我们在 X 上招到了人」两个句子里各念三遍——任何一句别扭都要重来",
+        "避开 job/hire 堆砌：jobs/hire/talent + 通用词的组合已被用尽，且 SEO 上永远打不过 Indeed——造词或借词才有辨识度",
+      ],
+      cases: [
+        { name: "Indeed", takeaway: "副词「的确」做品牌：暗示职位真实、结果确定，且在英语语流里自然出现（yes, indeed）——常用词命名的顶级样本，靠体量把通用词做成了专名" },
+        { name: "Monster", takeaway: "「怪兽级」的机会库：1999 年用夸张意象承诺海量职位，名字自带广告语——夸张词命名在消费级流量生意里的成功案例" },
+        { name: "Lever", takeaway: "「杠杆」：招聘软件把 HR 的效率承诺压进一个五字母单词，B 端工具借物理意象传递「省力」——单音节力量词的典型" },
+        { name: "AngelList", takeaway: "angel（天使投资）+ list：创业生态的圈内词直接圈定人群，求职者与创业公司互相识别——垂直平台命名即过滤器的教科书" },
+      ],
+      pitfalls: [
+        "jobs/hire 万金油组合：JobsHub、HireNow 类名字辨识度为零，SEO 上与巨头正面相撞毫无胜算",
+        "只讨好一端：名字太「员工友好」显得不专业，雇主预算审批过不了；太「企业化」求职者觉得冷漠不来",
+        "轻佻过界：求职是严肃的人生决策，梗名与玩笑名在「我要交简历给你」的信任门槛前减分",
+        "垂直名锁死扩张：叫 DevJobs 之后想扩到设计师市场，名字成了天花板——垂直深耕与横向扩张提前想清楚",
+      ],
+    },
+    en: {
+      label: "Job boards",
+      title: "How to Name a Job Board: Strategies, Cases & Domains",
+      metaDescription:
+        "Job board and hiring platform naming guide: opportunity imagery, vertical anchoring, balancing candidates and employers, breakdowns of Indeed/Monster/Lever/AngelList, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A job board's name must persuade two sides at once: candidates need to feel \"my opportunity lives here,\" employers need to feel \"my hire is in there.\" That sets the register — neutral leaning hopeful: not consumer-brand playful (job hunting is a serious decision) and not enterprise-software cold (candidates arrive anxious). Indeed and Monster both transmit \"vast, real, promising.\" Verticalization is the strongest naming lever in the space: Dribbble for designers, AngelList for startups — the name itself selects the audience and halves the explanation cost. Candidates still literally type job-board domains (the daily new-listings check), so spelling must be ambiguity-free; and on the employer side the name lands on a hiring-budget approval form, where sayable, formal and credible is the floor.",
+      namingIdeas: [
+        "Opportunity and hope imagery: indeed, monster, beacon, ladder — candidates arrive anxious, and the name's first job is to say \"opportunity lives here\"",
+        "Anchor a vertical: platforms for designers, engineers or trade workers write the audience into the name or borrow an in-group joke (Dribbble's dribble) — a vertical name is its own filter",
+        "Action and ladder words: lever, ladder, step — career motion compressed into a word both sides of the market instantly read",
+        "The two-sentence test: say \"I found my job on X\" and \"we hired through X\" three times each — if either stumbles, start over",
+        "Skip the job/hire pileup: jobs/hire/talent + generic-word combos are exhausted and unwinnable against Indeed in search — coin or borrow instead",
+      ],
+      cases: [
+        { name: "Indeed", takeaway: "An adverb as the brand: implying real listings and certain outcomes, and occurring naturally in speech (yes, indeed) — the top tier of common-word naming, scaled until the generic word became a proper noun" },
+        { name: "Monster", takeaway: "A monster-sized pile of openings: 1999's exaggerated imagery promising volume, the name doubling as the tagline — hyperbole naming done right in a consumer-traffic business" },
+        { name: "Lever", takeaway: "Recruiting software compressing an efficiency promise into five letters — a physical-force image telling HR \"less effort, more output\"; the classic single-syllable power word" },
+        { name: "AngelList", takeaway: "angel + list: startup-ecosystem vocabulary that selects its crowd on contact — candidates and startups recognize each other through the name; the textbook of vertical-name-as-filter" },
+      ],
+      pitfalls: [
+        "The jobs/hire filler combo: JobsHub and HireNow carry zero distinctiveness and collide head-on with giants in search",
+        "Courting only one side: too worker-friendly and the employer's budget approval balks; too corporate and anxious candidates stay away",
+        "Overshooting on playfulness: a job search is a life decision — joke names lose points at the \"I'm sending you my résumé\" trust gate",
+        "Vertical names capping expansion: call yourself DevJobs and the designer market will forever fight the name — decide depth versus breadth before naming",
+      ],
+    },
+  },
+  restaurantsupply: {
+    slug: "restaurantsupply",
+    keywords: ["餐饮设备", "厨房用品批发", "food service equipment"],
+    tlds: [
+      { tld: "com", zh: "B2B 采购下单的信任默认值，回头客直接输域名", en: "The B2B ordering trust default — repeat buyers type the domain straight in" },
+      { tld: "supply", zh: "供应商身份直给，域名即业务说明", en: "Supplier identity stated outright — the domain explains the business" },
+      { tld: "equipment", zh: "设备品类明示，重设备采购语境对口", en: "Equipment category made explicit — on target for heavy-gear procurement" },
+    ],
+    zh: {
+      label: "餐饮设备供应",
+      title: "餐饮设备与用品供应商怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "餐饮设备供应商命名指南：一站式承诺、商用耐用感等思路，WebstaurantStore/KaTom 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "餐饮供应是典型的「回头客生意」：餐厅老板认准一家供应商后，炸篮、餐盒、清洁剂会常年从同一处下单。名字的第一使命是「值得被记成默认选项」——好念、好拼、像一家撑得起五万个 SKU 的正经公司。B2B 采购者最在意三件事：货全（一站式省时间）、货真（商用级耐用）、发货快（后厨等不起），命名素材就从这三点里挖：depot、warehouse、direct 传递货全价优，pro、commercial 传递商用等级。这个行业的线上化先行者 WebstaurantStore 用 web + restaurant + store 三个词根直接把「线上餐饮商店」焊进名字，长但零解释成本。区域批发商则常走「人名/地名+supply」的传统路线，信任来自年头。你的名字选哪条路，取决于是做全国电商还是区域深耕。",
+      namingIdeas: [
+        "一站式词根：depot、warehouse、hub、one-stop——采购者最想省的是「跑三家凑不齐」的时间，货全的暗示就是卖点",
+        "商用等级词：pro、commercial、chef grade——家用与商用是两个世界，名字先声明「我们是给专业后厨供货的」",
+        "品类+direct 结构：XX Direct 暗示厂价直供、砍掉中间商——价格敏感的餐饮老板对这个词根天然多看一眼",
+        "拼装式直白命名：WebstaurantStore 式的词根拼接，长但自解释——B2B 语境里「一眼看懂你卖什么」胜过品牌感",
+        "下单场景测试：后厨经理在补货清单上写下你的名字、在电话里报出你的域名——两个场景都顺畅才算过关",
+      ],
+      cases: [
+        { name: "WebstaurantStore", takeaway: "web + restaurant + store 三词根焊接：名字冗长但零解释成本，B2B 电商「自解释压过美感」的极致样本——线上餐饮供应的品类开创者" },
+        { name: "KaTom", takeaway: "创始人女儿 Katherine 与儿子 Tom 的名字缩合：家族叙事注入 B2B 品牌温度，短、独占、有故事——人名缩合的正面案例" },
+        { name: "US Foods", takeaway: "国名+品类的极简结构：体量感与全国覆盖直接写进名字——只有真巨头撑得起这种名字，创业公司模仿反显空洞" },
+        { name: "Restaurant Depot", takeaway: "品类词+仓库词：会员制批发仓的业态说明书，depot 一词把「货全价优自提」三重暗示打包——业态词命名的教科书" },
+      ],
+      pitfalls: [
+        "品牌感压过自解释：B2B 采购者没时间猜你卖什么，抽象美名在批发目录里不如直白名转化高",
+        "泛化到失焦：XX Trading、XX Supplies 什么都像卖，餐饮老板不确定你懂不懂后厨就不会下第一单",
+        "只顾线上忘了电话报单：区域批发的老客户习惯电话下单，拗口域名在口头报单场景里天天流失订单",
+        "忽略 Restaurant Depot 等巨头的搜索阴影：名字与巨头过近，搜索结果永远被压在下面还可能收律师函",
+      ],
+    },
+    en: {
+      label: "Restaurant supply",
+      title: "How to Name a Restaurant Supply Business: Strategies, Cases & Domains",
+      metaDescription:
+        "Restaurant supply and equipment naming guide: one-stop promises, commercial-grade signals, the category + direct structure, breakdowns of WebstaurantStore/KaTom/Restaurant Depot, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Restaurant supply is the definition of a repeat-order business: once an operator trusts a supplier, fry baskets, to-go boxes and degreaser ship from the same place for years. The name's first job is to be worth becoming the default — easy to say, easy to spell, and sounding like a company that can genuinely stock fifty thousand SKUs. B2B buyers care about three things: everything in one place (time), commercial-grade quality (durability), and fast shipping (the kitchen can't wait) — and the naming material mines exactly those: depot, warehouse and direct signal breadth and price; pro and commercial signal duty rating. The category's e-commerce pioneer WebstaurantStore welded web + restaurant + store into one self-explaining name — long, but zero explanation cost. Regional wholesalers take the traditional surname-or-city + supply route, where trust compounds with years. Which road your name takes depends on whether you're building national e-commerce or regional depth.",
+      namingIdeas: [
+        "One-stop roots: depot, warehouse, hub — the buyer's scarcest resource is time lost sourcing from three vendors; implied breadth is the pitch",
+        "Commercial-grade words: pro, commercial, chef grade — home and commercial are different worlds, and the name should declare which kitchen you serve",
+        "The category + direct structure: XX Direct implies factory pricing with the middleman cut out — price-sensitive operators reflexively look twice",
+        "Bolt-together literal naming: the WebstaurantStore approach — long but self-explaining; in B2B, instantly-legible beats beautiful",
+        "The reorder test: a kitchen manager writes your name on a restock list and says your domain over the phone — the name passes only if both are frictionless",
+      ],
+      cases: [
+        { name: "WebstaurantStore", takeaway: "Three roots welded — web + restaurant + store: unwieldy but self-explaining at zero cost; the category's e-commerce pioneer proving legibility beats elegance in B2B" },
+        { name: "KaTom", takeaway: "Katherine and Tom, the founder's children, contracted into one word: family narrative warming a B2B brand — short, ownable, with a story built in" },
+        { name: "US Foods", takeaway: "Country + category minimalism: scale and national reach written directly into the name — only a true giant can carry it; imitation by a startup rings hollow" },
+        { name: "Restaurant Depot", takeaway: "Category word + warehouse word: a membership wholesale format explained in two words — depot bundling breadth, price and cash-and-carry into one root; the textbook of format naming" },
+      ],
+      pitfalls: [
+        "Brand feel over self-explanation: B2B buyers won't guess what you sell — in a wholesale catalog, a literal name outconverts an abstract pretty one",
+        "Generic to the point of blur: XX Trading and XX Supplies could sell anything — if operators can't tell you know kitchens, the first order never comes",
+        "Forgetting the phone order: regional wholesale regulars order by phone, and a tongue-twisting domain leaks orders daily in spoken use",
+        "Ignoring the giants' search shadow: name yourself too close to Restaurant Depot and you'll live under it in search — possibly with a cease-and-desist attached",
+      ],
+    },
+  },
+  motorcycleparts: {
+    slug: "motorcycleparts",
+    keywords: ["摩托车配件", "机车改装", "moto gear"],
+    tlds: [
+      { tld: "com", zh: "跨境电商与回头客采购的信任默认值", en: "The trust default for cross-border e-commerce and repeat buyers" },
+      { tld: "parts", zh: "配件品类直给，域名即货架说明", en: "The parts category stated outright — the domain labels the shelf" },
+      { tld: "shop", zh: "电商属性明示，独立站起步的高性价比之选", en: "Storefront intent made explicit — a cost-effective start for an independent shop" },
+    ],
+    zh: {
+      label: "摩托车配件",
+      title: "摩托车配件品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "摩托车配件品牌命名指南：速度意象、骑士圈层黑话、硬核金属感等思路，RevZilla/Dennis Kirk 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "摩托配件的客户不是「消费者」，是「骑士」——这个身份认同决定了命名的语感：要么够快（rev、throttle、apex），要么够硬（steel、forge、iron），要么够圈内（骑士黑话与改装梗）。RevZilla 把 rev（轰油门）与 Godzilla 缝在一起，轰鸣感与怪兽级选品一次到位，是这个品类命名的天花板。配件生意的另一面是「查得到、配得上」：骑士按车型年份搜配件，品牌名要与专业目录气质相容——过于玩笑的名字会让人怀疑你的配件数据是否严谨。渠道上，摩配高度依赖独立站与电商平台，名字的拼写唯一性直接影响复购时的直接输入；社群上，骑士文化重口碑重圈层，一个能印在贴纸上、绣在骑行服上的名字自带传播力。",
+      namingIdeas: [
+        "油门与速度词根：rev、throttle、apex、torque——轰油门的拟声与赛道术语是骑士的母语，一个词根就完成圈层认证",
+        "金属与锻造意象：steel、forge、iron、chrome——摩托是机械崇拜的圣殿，硬核金属词传递配件的可靠与改装的诚意",
+        "怪兽级夸张缝合：RevZilla 式的词根+怪兽后缀——选品海量、性能凶猛的双重暗示，电商品牌的记忆点打法",
+        "骑士圈层黑话：wrench（扳手/自己动手修）、twist（拧油门）、two wheels——圈内词让老骑士会心一笑，过滤掉的恰好不是你的客户",
+        "贴纸测试：名字做成贴纸贴在头盔与油箱上是否好看好认？摩配品牌的 logo 贴纸是骑士社群里的硬通货",
+      ],
+      cases: [
+        { name: "RevZilla", takeaway: "rev（轰油门）+ Godzilla：拟声词根与怪兽后缀缝合，轰鸣感、海量选品、社群气场一次打包——摩配电商命名的天花板样本" },
+        { name: "Dennis Kirk", takeaway: "创始人全名做品牌：1969 年起家的目录邮购老店，人名+年头沉淀出「配件目录权威」的信任——传统渠道的信誉复利路线" },
+        { name: "Cycle Gear", takeaway: "品类词+装备词的极简直白：连锁门店要的就是路过一眼看懂，牺牲独特性换取零解释成本——线下渠道的实用主义命名" },
+        { name: "Rizoma", takeaway: "意大利语 rhizome（根茎）的变形：意式改装件品牌用母语词根传递设计血统，配件卖到全球仍带着米兰的口音——原产地气质命名" },
+      ],
+      pitfalls: [
+        "玩笑名伤害专业感：配件要按车型精准适配，名字太闹让骑士怀疑你的 fitment 数据不严谨",
+        "moto/bike 万金油堆砌：MotoParts、BikeStuff 类组合辨识度为零，电商平台搜索里永远沉底",
+        "只讨好巡航派或运动派一边：哈雷文化与仿赛文化审美迥异，名字圈层站队前想清楚目标客群",
+        "忽略贴纸与刺绣场景：骑士文化里品牌 logo 要上头盔上骑行服，笔画繁复或过长的名字丧失社群传播力",
+      ],
+    },
+    en: {
+      label: "Motorcycle parts",
+      title: "How to Name a Motorcycle Parts Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Motorcycle parts brand naming guide: throttle-and-speed roots, rider in-group slang, forged-metal imagery, breakdowns of RevZilla/Dennis Kirk/Rizoma, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Motorcycle-parts customers aren't consumers — they're riders, and that identity sets the register: fast (rev, throttle, apex), hard (steel, forge, iron), or in-group (rider slang and wrenching jokes). RevZilla stitched rev onto Godzilla and got engine roar plus monster-sized inventory in one word — the ceiling of naming in this category. The other half of the business is precision: riders search parts by make, model and year, so the brand name must sit comfortably next to a fitment catalog — a name that's all joke makes buyers doubt your data is rigorous. Channel-wise, parts brands live on independent storefronts and marketplaces, where unambiguous spelling drives repeat direct-type traffic; community-wise, rider culture runs on word of mouth and tribal identity, so a name that looks right on a helmet sticker and stitched on a riding jacket markets itself.",
+      namingIdeas: [
+        "Throttle and speed roots: rev, throttle, apex, torque — engine onomatopoeia and track vocabulary are the rider's mother tongue; one root completes the in-group handshake",
+        "Metal and forge imagery: steel, forge, iron, chrome — motorcycling is machine worship, and hard-metal words carry both part reliability and modding sincerity",
+        "Monster-scale stitching: the RevZilla formula — a category root plus a monster suffix, implying vast inventory and ferocious performance at once; the memorability play for e-commerce",
+        "Rider in-group slang: wrench, twist, two wheels — insiders grin, and the people filtered out were never your customers",
+        "The sticker test: does the name look sharp as a die-cut sticker on a helmet and a gas tank? Logo stickers are hard currency in rider communities",
+      ],
+      cases: [
+        { name: "RevZilla", takeaway: "rev + Godzilla: onomatopoeic root stitched to a monster suffix — engine roar, huge inventory and community swagger packed into one coinage; the ceiling of moto e-commerce naming" },
+        { name: "Dennis Kirk", takeaway: "The founder's full name as the brand: a catalog mail-order house since 1969, where a human name plus decades compounds into fitment-catalog authority — the traditional-channel credibility route" },
+        { name: "Cycle Gear", takeaway: "Category word + gear word, maximally literal: a retail chain needs drive-by legibility, trading distinctiveness for zero explanation cost — pragmatist naming for physical channels" },
+        { name: "Rizoma", takeaway: "An Italian twist on rhizome: the Milanese parts maker carries its design bloodline in a mother-tongue root — parts shipped worldwide, accent intact; naming by provenance" },
+      ],
+      pitfalls: [
+        "Jokes eroding precision: parts must fit exact models — a clownish name makes riders doubt your fitment data",
+        "The moto/bike filler pileup: MotoParts and BikeStuff carry zero distinctiveness and sink to the bottom of marketplace search",
+        "Courting only cruisers or only sportbikes: Harley culture and supersport culture have opposite aesthetics — know which tribe the name salutes before committing",
+        "Forgetting stickers and stitching: rider culture puts logos on helmets and jackets, and an ornate or overlong name forfeits that free distribution",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
