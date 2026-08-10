@@ -1403,4 +1403,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家飞斧馆与掷斧运动场馆，寓意「斧刃咬进木靶的那声闷响、把压力扔出去」；气质要野而不吓人、装得下运动加社交；场景是点评页、团建方案和联赛圈里都好记、专业可控。",
     en: "An axe-throwing venue. The name should carry the thunk of a blade biting the target and stress thrown away; the vibe is wild but never menacing, holding sport plus social; it must read memorable on the review page, professional in the team-building deck, and carry swagger in the league.",
   },
+  "lasertag": {
+    zh: "一家镭射对战馆，寓意「一束光划过黑暗战场、全家都能上场的科幻战斗」；气质要酷在科幻不在火药、安全可控；场景是点评页、生日派对邀请函和团建方案里都好记、家长放心。",
+    en: "A laser tag arena. The name should carry a beam cutting across a dark battlefield in a sci-fi fight the whole family can join; the vibe is cool from science fiction and never gunpowder; it must read memorable on the review page, welcoming on the party invitation, and safe to the parent.",
+  },
+  "paintball": {
+    zh: "一家彩弹射击场与真人对抗基地，寓意「彩弹炸开一朵颜色、把对抗玩真的」；气质要够燃又专业可控、别丢了那抹彩色；场景是短视频封面、团建方案和联赛圈里都有记忆点。",
+    en: "A paintball field. The name should carry a paintball bursting into color and opposition played for real; the vibe is burning yet professional, never losing that splash of paint; it must hook on the video thumbnail, read controlled in the HR deck, and carry swagger in the league.",
+  },
+  "mushroomfarm": {
+    zh: "一家菌菇农场与食用菌品牌，寓意「一夜之间从木屑里顶出一簇鲜伞的生长魔法」；气质要有山珍身价、干净可控不猎奇；场景是餐厅菜单、菌包详情页和礼盒上都得体、好记。",
+    en: "A mushroom farm and gourmet fungi brand. The name should carry the growing magic of caps shouldering out of sawdust overnight; the vibe is delicacy-grade, clean and cultivated, never novelty; it must rank on the menu, read playful on the grow-kit page, and sit graceful on the gift box.",
+  },
+  "neonsign": {
+    zh: "一家霓虹灯定制工作室，寓意「一根玻璃管在夜里弯出一句话」；气质要有手工温度与夜色态度、不做灯具店；场景是婚礼背景墙、酒吧门头和工程报价单上都浪漫、专业。",
+    en: "A custom neon sign studio. The name should carry one glass tube bent into a sentence against the night; the vibe is hand-bent warmth with night attitude, never a lamp shop; it must read romantic on the wedding backdrop, cool on the bar front, and professional on the estimate.",
+  },
+  "millinery": {
+    zh: "一家制帽与手工帽子定制工作室，寓意「一顶帽子扣下去、人就变了」的头顶表态；气质要有六百年手艺的身价、场合得体；场景是高定铜牌、电商详情页和赛马会请柬边上都有分量。",
+    en: "A millinery and custom hat studio. The name should carry the statement above the brow — the second the hat settles, the wearer changes; the vibe is six centuries of craft status, graceful for the occasion; it must carry weight on the brass plate, the product page, and beside the race-day invitation.",
+  },
+  "mosaic": {
+    zh: "一家马赛克拼贴艺术工作室，寓意「一万块碎片凑成一幅完整的画、一贴一千年」；气质要立在镶嵌艺术的身位、不显建材感；场景是工程方案、藏家画册和手作课海报上都专业、亲切。",
+    en: "A mosaic art studio. The name should carry ten thousand fragments assembling one whole picture, set once to stay a thousand years; the vibe stands on inlay art, never building materials; it must read professional in the project proposal, collectible in the catalogue, and warm on the class poster.",
+  },
 };

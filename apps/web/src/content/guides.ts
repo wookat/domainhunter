@@ -21824,6 +21824,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  lasertag: {
+    slug: "lasertag",
+    keywords: ["镭射对战馆", "激光枪战", "室内竞技娱乐", "laser tag arena", "laser combat"],
+    tlds: [
+      { tld: "com", zh: "场馆预约与团建报价的默认后缀，页面与合同里最稳", en: "The default suffix for venue bookings and team-building quotes — steadiest on the page and the contract" },
+      { tld: "fun", zh: "娱乐属性直给，亲子与生日派对场景零违和", en: "The fun stated outright — zero friction for family outings and birthday parties" },
+      { tld: "games", zh: "竞技游戏属性直接对位，会员联赛与电竞感的归类", en: "The gaming register aligned outright — the filing for leagues and the e-sports feel" },
+    ],
+    zh: {
+      label: "镭射对战馆",
+      title: "镭射对战馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "镭射对战馆与激光枪战场馆命名指南：光束意象、科幻战场等思路，Laserforce/Zone Laser Tag 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "镭射对战馆的名字要说出「一束光划过黑暗战场的那个瞬间」：这门生意卖的是「零疼痛的战斗」——彩弹会淤青、真人 CS 要装备，镭射对战让八岁的孩子和四十岁的父亲穿上同一件感应背心并肩冲锋，名字要先把这份「全家都能上场的科幻战场」递出去。参照系成熟：Laserforce 用「镭射加力量」的直白拼接做成全球连锁设备商与馆牌；Zone Laser Tag 干脆把「战区」写进名字；Dark Ride、Q-ZAR 则走科幻代号路线。隐藏考点是业务分层：散客与生日派对走点评引流、学校与企业团建走机构合同、会员积分与联赛走复购社群——名字要在点评页上够酷够好记，在家长眼里安全可控，在联赛圈里有竞技味。误区在于把「枪」字做过重：镭射对战的最大客群是家庭与青少年，名字太军事化会让家长与学校却步，酷要酷在科幻，不是火药。",
+      namingIdeas: [
+        "光束意象直给：镭射、光束、光子类词根——品类核心武器直接入名，科幻感与搜索识别一步到位",
+        "战区语法路线：战区、竞技场、arena 类词根——把「场馆即战场」直说，团队对抗的画面语言",
+        "科幻代号借力：星际、量子、赛博类词库——接住品类的科幻血统，青少年圈层的认亲暗号",
+        "零疼痛卖点转译：把「全家都能上场」写进名字——区别于彩弹与真人 CS 的核心买点，家长视角的信任语法",
+        "暗场氛围直给：暗夜、荧光、霓虹类词根——黑光场馆的视觉记忆点，社交平台照片的传播抓手",
+      ],
+      cases: [
+        { name: "Laserforce", takeaway: "「镭射」加「力量」的直白拼接做成全球馆牌：品类词加能量词的命名模板——设备商与场馆一名通吃" },
+        { name: "Zone Laser Tag", takeaway: "一个「战区」把场馆写成战场：空间即玩法的命名直给——连锁扩张时每家店都是一个 zone" },
+        { name: "Q-ZAR", takeaway: "无意义科幻代号的造词示范：字母 Q 加 ZAR 的未来感——不锁品类、好注册、全球商标干净" },
+        { name: "Battle Company", takeaway: "把「战斗」做成公司名的反差幽默：军事词根的轻量化处理——酷而不吓人的分寸示范" },
+      ],
+      pitfalls: [
+        "军事感做过头：满是「狙击、突击、火线」的名字让家长与学校却步——最大客群是家庭，酷在科幻不在火药",
+        "锁死单一玩法：叫「镭射馆」就难装弓箭对战、VR 与桌游的混业空间——玩法留给项目单，品牌名留成长余地",
+        "科幻黑话过深：满是「曲率、跃迁」的名字让散客一头雾水——科幻要有画面，不要考物理",
+        "忽略生日派对场景：派对包场是稳定现金流，名字要在邀请函上活泼得体——太硬核的名字进不了家长群",
+      ],
+    },
+    en: {
+      label: "Laser tag arenas",
+      title: "How to Name a Laser Tag Arena: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Laser tag arena naming guide: beam imagery, sci-fi battlefield grammar, breakdowns of Laserforce/Zone Laser Tag, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A laser tag arena's name must say the instant a beam cuts across a darkened battlefield: this business sells combat with zero pain — paintball bruises and airsoft needs gear, but laser tag puts the eight-year-old and her forty-year-old father in the same sensor vest charging side by side, so the name has to hand over that sci-fi battlefield the whole family can enter. The references are mature: Laserforce spliced laser onto force and became a global equipment maker and marque; Zone Laser Tag wrote the war zone straight into the name; Q-ZAR took the invented sci-fi call sign. The hidden exam is the tier split: walk-ins and birthday parties run on review-platform traffic, schools and corporate team-building run on institutional contracts, and memberships with leagues run on repeat community — the name must read cool and memorable on the review page, safe and controlled to the parent, and carry a competitive edge in the league circle. The failure mode is the gun leaned on too hard: the core crowd is families and teenagers, and a too-military name scares off parents and schools — the cool must come from science fiction, not gunpowder.",
+      namingIdeas: [
+        "Beam imagery outright: laser, beam and photon roots — the category's core weapon named directly, sci-fi register and search recognition in one move",
+        "The war-zone grammar: zone, arena and battleground roots — the venue-as-battlefield said straight, the picture language of team-versus-team",
+        "Borrowing the sci-fi call sign: stellar, quantum and cyber roots — catching the category's science-fiction bloodline, the kinship password of the teenage circle",
+        "Translating the zero-pain sell: the whole family can play written into the name — the core buy that separates laser tag from paintball, the trust grammar of the parent's eye",
+        "The dark-arena atmosphere outright: night, neon and glow roots — the visual hook of the blacklight venue, the share trigger of the social-feed photo",
+      ],
+      cases: [
+        { name: "Laserforce", takeaway: "Laser spliced onto force into a global marque: the category-word-plus-energy-word template — one name serving both the equipment line and the venues" },
+        { name: "Zone Laser Tag", takeaway: "One zone writing the venue as a battlefield: space-as-gameplay said outright — every new location is another zone as the chain expands" },
+        { name: "Q-ZAR", takeaway: "The invented sci-fi call sign: a Q welded to ZAR for the future register — category-free, registrable, trademark-clean worldwide" },
+        { name: "Battle Company", takeaway: "Battle made into a company name, the deadpan contrast: the military root handled lightly — the model of cool that never menaces" },
+      ],
+      pitfalls: [
+        "The military register overdone: a name of snipers-and-firefights scares off parents and schools — the core crowd is families; cool from sci-fi, not gunpowder",
+        "Locking into one game: a bare laser-hall name can't hold archery tag, VR and board games in a mixed venue — leave the games to the menu, keep the brand room to grow",
+        "Sci-fi argot too deep: a name of warp-and-flux leaves the walk-in bewildered — the science fiction must paint a picture, not set a physics exam",
+        "Forgetting the birthday party: party buyouts are the steady cash flow, and the name must read lively and proper on the invitation — a too-hardcore name never enters the parents' group chat",
+      ],
+    },
+  },
+  paintball: {
+    slug: "paintball",
+    keywords: ["彩弹射击场", "真人对抗", "户外拓展基地", "paintball field", "paintball park"],
+    tlds: [
+      { tld: "com", zh: "场地预约与团建报价的默认后缀，页面与合同里最稳", en: "The default suffix for field bookings and team-building quotes — steadiest on the page and the contract" },
+      { tld: "games", zh: "对抗游戏属性直接对位，赛事与玩家社群的归类", en: "The competitive-game register aligned outright — the filing for events and the player community" },
+      { tld: "club", zh: "会员战队与常客社群直给，复购场景的自然后缀", en: "Member squads and the regular crowd stated outright — the natural suffix for repeat play" },
+    ],
+    zh: {
+      label: "彩弹射击场",
+      title: "彩弹射击场怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "彩弹射击场与真人对抗基地命名指南：野战意象、色彩叙事等思路，Delta Force Paintball 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "彩弹射击场的名字要说出「彩弹在护目镜前炸开一朵颜色的那一秒」：这门生意卖的是「有代价的真实对抗」——会痛、会脏、会喘，正因如此肾上腺素才是真的，名字要先把这份「玩真的」递出去。参照系成熟：Delta Force Paintball 借特种部队番号立起英式连锁的军事骨架；Hollywood Sports Park 把电影布景写进场地卖点；国内基地则常挂「真人 CS」的俗称揽客。隐藏考点是业务分层：散客野战走点评与短视频引流、企业团建与拓展走机构合同、战队联赛走玩家社群——名字要在短视频封面上够燃，在 HR 方案里专业可控，在联赛圈里有番号感。误区在于忘了「彩」字：彩弹区别于实弹与镭射的正是那一抹颜色——痛感可以写进故事，但名字若只剩硝烟没有色彩，就把品类最独特的记忆点丢了。",
+      namingIdeas: [
+        "野战意象直给：野战、丛林、阵地类词根——品类的户外对抗血统直接入名，场地画面一秒成像",
+        "色彩叙事借力：彩、色、splat 类词根——彩弹区别于其他射击品类的独家记忆点，名字里的一抹颜色",
+        "番号语法路线：部队番号、代号、军团类词库——战队文化的现成语法，玩家圈层的认亲暗号",
+        "地形卖点转译：把场地特色写进名字——废墟、峡谷、林地的场景词根，选址即卖点的命名杠杆",
+        "肾上腺素直给：冲锋、火线、鏖战类动词词根——「玩真的」的爽感直说，短视频封面的传播抓手",
+      ],
+      cases: [
+        { name: "Delta Force Paintball", takeaway: "借特种部队番号立起连锁骨架：军事血统的命名直给——番号自带纪律感与专业暗示" },
+        { name: "Hollywood Sports Park", takeaway: "把电影布景写进场地名：场景即卖点的命名样本——玩家冲着「在大片里打仗」而来" },
+        { name: "Splatoon", takeaway: "splat 拟声词加卡通后缀的造词神话：把彩弹的「啪叽」做成全球 IP——色彩叙事的天花板示范" },
+        { name: "CQB 训练营", takeaway: "借室内近距离作战术语立店：黑话词库的深挖示范——一个缩写让硬核玩家会心一笑" },
+      ],
+      pitfalls: [
+        "硝烟盖过色彩：名字只剩军事没有「彩」，丢了品类最独特的记忆点——彩弹的身份证是那一抹颜色",
+        "军事感吓退团建单：满是「歼灭、猎杀」的名字让 HR 不敢下单——对抗要真，名字要留专业可控的余地",
+        "锁死单一场地：叫「丛林野战」就难装城市废墟与室内 CQB 场——地形留给场地介绍，品牌名要能搬家",
+        "忽略装备与痛感门槛：名字太硬核会吓退第一次来的散客——老玩家不需要被名字说服，新手需要",
+      ],
+    },
+    en: {
+      label: "Paintball fields",
+      title: "How to Name a Paintball Field: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Paintball field naming guide: skirmish imagery, color narratives, breakdowns of Delta Force Paintball and more, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A paintball field's name must say the second a paintball bursts into color against the goggles: this business sells real opposition with a real price — it stings, it stains, it leaves you gasping, and that is exactly why the adrenaline is genuine, so the name has to hand over that playing-for-real first. The references are mature: Delta Force Paintball raised a British chain on a special-forces call sign; Hollywood Sports Park wrote the movie set into the field's sell; countless local parks trade under the war-game vernacular. The hidden exam is the tier split: walk-in skirmishes run on reviews and short video, corporate team-building runs on institutional contracts, and squad leagues run on the player community — the name must burn on the video thumbnail, read professional and controlled in the HR deck, and carry a call-sign swagger in the league circle. The failure mode is forgetting the paint: what separates paintball from bullets and beams is precisely that burst of color — the sting can live in the story, but a name that is all smoke and no color has thrown away the category's one unmistakable mark.",
+      namingIdeas: [
+        "Skirmish imagery outright: skirmish, jungle and stronghold roots — the category's outdoor-combat bloodline named directly, the field developed in one second",
+        "Borrowing the color narrative: paint, splat and hue roots — the category's exclusive mark against every other shooting sport, a burst of color inside the name",
+        "The call-sign grammar: unit numbers, code names and legion roots — the ready grammar of squad culture, the kinship password of the player circle",
+        "Translating the terrain sell: the field's signature written into the name — ruin, canyon and woodland roots, the naming lever of location-as-sell",
+        "Adrenaline outright: charge, firing-line and pitched-battle verb roots — the thrill of playing for real said straight, the share trigger of the video thumbnail",
+      ],
+      cases: [
+        { name: "Delta Force Paintball", takeaway: "A chain skeleton raised on a special-forces call sign: military bloodline stated outright — the unit name carries its own discipline and professional hint" },
+        { name: "Hollywood Sports Park", takeaway: "The movie set written into the field's name: the naming sample of scenery-as-sell — players come to fight inside a blockbuster" },
+        { name: "Splatoon", takeaway: "The splat onomatopoeia fused with a cartoon suffix into a global IP: the ceiling demonstration of the color narrative — the paintball's thwack made a brand" },
+        { name: "CQB Bootcamp", takeaway: "A venue standing on the close-quarters-battle acronym: the deep-dig model of the argot lexicon — one abbreviation earns the hardcore player's grin" },
+      ],
+      pitfalls: [
+        "Smoke drowning the paint: a name that is all military and no color throws away the category's one unmistakable mark — the paintball's identity card is that burst of hue",
+        "The military register scaring the HR buyer: a name of annihilate-and-hunt kills the team-building order — the opposition is real, but the name must stay professional and controlled",
+        "Locking into one terrain: a jungle-warfare name can't hold the urban ruin and the indoor CQB arena — leave the terrain to the field guide, keep the brand able to move",
+        "Forgetting the first-timer's threshold: a too-hardcore name scares off the walk-in who has never worn the mask — veterans need no convincing from a name; novices do",
+      ],
+    },
+  },
+  mushroomfarm: {
+    slug: "mushroomfarm",
+    keywords: ["菌菇农场", "食用菌种植", "菌包体验", "mushroom farm", "gourmet mushrooms"],
+    tlds: [
+      { tld: "com", zh: "电商与餐厅供货的默认后缀，报价单与包装上最稳", en: "The default suffix for e-commerce and restaurant supply — steadiest on the quote and the packaging" },
+      { tld: "farm", zh: "农场身份直给，产地叙事与溯源信任零违和", en: "The farm stated outright — zero friction for the origin story and traceability trust" },
+      { tld: "shop", zh: "菌包与鲜菇零售直接对位，线上带货场景的归类", en: "Grow kits and fresh retail aligned outright — the filing for the online store" },
+    ],
+    zh: {
+      label: "菌菇农场",
+      title: "菌菇农场怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "菌菇农场与食用菌品牌命名指南：菌丝意象、林下山珍等思路，Smallhold 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "菌菇农场的名字要说出「一夜之间从木屑里顶出来的那簇伞」：这门生意卖的是「看得见的生长魔法」——菌丝在暗处织网数周，然后48小时内爆出一茬鲜菇，名字要先把这份「安静而汹涌的生命力」递出去。词库现成：菌、菇、伞、木、林下、山珍——中文的「山珍」二字更是千年现成的价值背书。参照系新鲜：布鲁克林的 Smallhold 用「小块自留地」的谦辞做成都市菌菇农业的明星品牌，把迷你农场开进超市与餐厅。隐藏考点是业务分层：鲜菇走餐厅供货与菜市场、菌包体验走电商与亲子客群、深加工与菌汤包走礼品线——名字要在餐厅菜单上够格「山珍」，在菌包详情页上亲切好玩，在礼盒上得体有寓意。误区在于撞上「野蘑菇焦虑」：大众对野生菌中毒的警惕是真实的，名字要传递「种出来的、可控的、干净的」，别用「野」字去换猎奇流量。",
+      namingIdeas: [
+        "菌丝意象直给：菌、菇、丝、伞类词根——品类核心直接入名，搜索识别与品类归属零成本",
+        "山珍语法借力：山珍、林下、鲜类词库——中文千年的价值背书现成可用，餐厅供货线的身价语法",
+        "生长魔法转译：把「一夜爆出」的生命力写进名字——菌包体验线的核心看点，亲子客群的画面语言",
+        "都市农业叙事：把「城市里的农场」的反差写进名字——集装箱种菇、垂直农业的新鲜感，媒体报道的传播抓手",
+        "暗处美学路线：暗房、木屑、微光类词根——菌菇生长环境的独特画面，品牌摄影的视觉母题",
+      ],
+      cases: [
+        { name: "Smallhold", takeaway: "「小块自留地」的谦辞做成都市农业明星：小而美的命名反差——迷你农场开进超市的身段" },
+        { name: "云耳山房", takeaway: "菌类古称加山居意象的组合示范：山珍词库的雅化处理——两个词把产地与身价一起立住" },
+        { name: "Fungi Perfecti", takeaway: "拉丁语「完美真菌」的学术腔立店：菌物学血统的命名直给——专业感做成品牌资产" },
+        { name: "北菇南种", takeaway: "四个字讲完一个农业迁移故事：产地叙事的紧凑示范——反差本身就是记忆点" },
+      ],
+      pitfalls: [
+        "「野」字换流量：野生菌中毒的公众警惕是真实的——名字要传递「种出来的、可控的」，猎奇流量接不住信任",
+        "锁死单一菌种：叫「金针菇坊」就难接羊肚菌与灵芝的高端线——菌种留给产品名，品牌名留满菜园的余地",
+        "土味盖过山珍：过度乡土的名字进不了精品超市与餐厅菜单——产地感要有，但身价要立在「珍」上",
+        "忽略菌包体验线：菌包是利润最厚的亲子生意，名字要在详情页上好玩亲切——太学术的名字卖不动「桌上小农场」",
+      ],
+    },
+    en: {
+      label: "Mushroom farms",
+      title: "How to Name a Mushroom Farm: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Mushroom farm and gourmet fungi brand naming guide: mycelium imagery, forest-delicacy grammar, Smallhold case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A mushroom farm's name must say the cluster of caps that shoulders up out of the sawdust overnight: this business sells visible growing magic — the mycelium weaves its web in the dark for weeks, then a flush of mushrooms erupts within forty-eight hours, and the name has to hand over that quiet, surging vitality first. The lexicon is ready: fungus, cap, spore, log and forest-floor — and the Chinese canon supplies 'mountain delicacy', a millennium of ready value endorsement. The references are fresh: Brooklyn's Smallhold took the modest word for a tiny plot and became the star of urban mushroom agriculture, planting mini-farms inside supermarkets and restaurants. The hidden exam is the tier split: fresh mushrooms run on restaurant supply, grow kits run on e-commerce and the family crowd, and dried goods with soup packs run on the gift line — the name must rank as a delicacy on the menu, read warm and playful on the kit's product page, and sit graceful on the gift box. The failure mode is colliding with wild-mushroom anxiety: the public's wariness of foraged poisoning is real, and the name must say cultivated, controlled and clean — never trade the word wild for novelty traffic.",
+      namingIdeas: [
+        "Mycelium imagery outright: fungus, cap, spore and mycelium roots — the category named directly, search recognition and category filing at zero cost",
+        "Borrowing the delicacy grammar: mountain-delicacy, forest-floor and fresh roots — a millennium of Chinese value endorsement ready to use, the status grammar of the restaurant line",
+        "Translating the growing magic: the overnight flush written into the name — the core spectacle of the grow-kit line, the picture language of the family crowd",
+        "The urban-agriculture narrative: the farm inside the city written into the name — the novelty of container growing and vertical farms, the press hook of the media story",
+        "The dark-room aesthetic: grow-room, sawdust and dim-glow roots — the category's singular growing scene, the visual motif of the brand's photography",
+      ],
+      cases: [
+        { name: "Smallhold", takeaway: "The modest word for a tiny plot made an urban-farming star: the naming contrast of small-but-fine — the posture that walks a mini-farm into the supermarket" },
+        { name: "Yun Er Shan Fang (云耳山房)", takeaway: "An archaic fungus name joined to the mountain-lodge image: the delicacy lexicon refined — two words setting origin and status in one move" },
+        { name: "Fungi Perfecti", takeaway: "The Latin 'perfect fungi' as the shop sign: mycology bloodline stated outright — scholarly authority made brand equity" },
+        { name: "Bei Gu Nan Zhong (北菇南种)", takeaway: "A whole agricultural migration told in four characters: the compact model of the origin narrative — the contrast itself is the hook" },
+      ],
+      pitfalls: [
+        "Trading 'wild' for traffic: the public's wariness of foraged poisoning is real — the name must say cultivated and controlled; novelty traffic cannot carry trust",
+        "Locking into one species: an enoki-house name can't take the morel and reishi premium lines — leave the species to the product, keep the brand room for the whole garden",
+        "Rustic drowning the delicacy: an over-folksy name never enters the fine grocer or the restaurant menu — keep the origin, but set the status on the word precious",
+        "Forgetting the grow-kit line: kits are the fattest-margin family business, and the name must read playful on the product page — a too-scholarly name cannot sell a farm on the kitchen table",
+      ],
+    },
+  },
+  neonsign: {
+    slug: "neonsign",
+    keywords: ["霓虹灯工作室", "灯牌定制", "发光字招牌", "neon sign studio", "custom neon"],
+    tlds: [
+      { tld: "com", zh: "定制询价与商业订单的默认后缀，报价单与合同上最稳", en: "The default suffix for custom quotes and commercial orders — steadiest on the estimate and the contract" },
+      { tld: "studio", zh: "工作室气质直给，手作定制与设计感零违和", en: "The studio stated outright — zero friction for the handmade custom register" },
+      { tld: "art", zh: "灯光艺术身位直接对位，展览与艺术合作线的归类", en: "The light-art posture aligned outright — the filing for exhibitions and art collaborations" },
+    ],
+    zh: {
+      label: "霓虹灯工作室",
+      title: "霓虹灯工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "霓虹灯定制与灯牌工作室命名指南：光管意象、夜色叙事等思路，God's Own Junkyard 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "霓虹灯工作室的名字要说出「一根玻璃管在夜里弯出一句话」的浪漫：这门手艺曾照亮整个香港的夜与美国的公路时代，如今以「定制灯牌」的身份回到婚礼背景墙、酒吧门头与直播间——名字要先把这份「老手艺的新夜色」递出去。词库现成：霓、虹、光、夜、管、烧制——「霓虹」二字本身就是从「彩虹」借来的千年好词。参照系鲜明：伦敦的 God's Own Junkyard 用「上帝自己的废品场」的狂想立起霓虹圣地；港式霓虹的「烧鹅、当铺」字牌是一代人的视觉乡愁。隐藏考点是业务分层：商业招牌走 B 端合同、婚礼与家居灯牌走电商定制、灯光艺术走展览与联名——名字要在报价单上专业，在婚礼清单上浪漫，在艺术圈里有态度。误区在于把自己做成「灯具店」：霓虹的溢价在「手工弯管的温度」与「夜色美学的态度」，名字若只剩「灯」字，就把手艺降成了照明。",
+      namingIdeas: [
+        "光管意象直给：霓、虹、光、管类词根——品类核心材料直接入名，「霓虹」二字自带千年彩虹血统",
+        "夜色叙事借力：夜、暗、午夜类词根——霓虹只在黑暗里完整，夜的词库就是品类的舞台说明",
+        "弯管手艺转译：把「玻璃管弯出一句话」的手工感写进名字——区别于 LED 灯带的核心身价，定制线的信任语法",
+        "港式乡愁借力：借港风霓虹的视觉记忆立名——「烧鹅字牌」一代人的集体乡愁，中文工作室的情感杠杆",
+        "狂想语法路线：像 God's Own Junkyard 一样把名字做成宣言——灯光艺术线的态度直给，展览海报的记忆点",
+      ],
+      cases: [
+        { name: "God's Own Junkyard", takeaway: "「上帝自己的废品场」的狂想宣言：把霓虹仓库做成朝圣地——名字本身就是策展态度" },
+        { name: "霓虹黯色", takeaway: "「霓虹」加「黯」的矛盾修辞：港式霓虹消逝史的挽歌语法——文化叙事做成品牌身位" },
+        { name: "Electric Confetti", takeaway: "「通电的彩纸屑」两个词的欢庆拼接：把霓虹的派对属性直说——婚礼与活动线的命名模板" },
+        { name: "Neon Poodle", takeaway: "霓虹加贵宾犬的无厘头组合：定制灯牌的轻快人格——好记、上镜、社媒友好的连锁样本" },
+      ],
+      pitfalls: [
+        "降级成灯具店：名字只剩「灯、亮」就把手艺做成照明——溢价在弯管的手工温度与夜色态度，不在流明",
+        "锁死单一场景：叫「婚礼灯牌」就难接酒吧门头与艺术展——场景留给案例集，品牌名留夜色的全部",
+        "怀旧做成标本：满是「复古、老式」的名字把霓虹钉死在过去——老手艺要活在当代审美里，不做博物馆",
+        "忽略 B 端报价场景：商业招牌是最厚的订单，名字要在合同与发票上专业可信——太玩闹的名字进不了采购流程",
+      ],
+    },
+    en: {
+      label: "Neon sign studios",
+      title: "How to Name a Neon Sign Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Custom neon and sign studio naming guide: glass-tube imagery, night aesthetics, breakdowns of God's Own Junkyard and more, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A neon studio's name must say the romance of one glass tube bent into a sentence against the night: this craft once lit all of Hong Kong's evenings and America's highway age, and it has returned as the custom sign — on wedding backdrops, bar fronts and livestream sets — so the name has to hand over that old craft's new nightfall first. The lexicon is ready: neon, glow, night, tube and flame-bent — and the very word neon descends from the rainbow. The references are vivid: London's God's Own Junkyard raised a neon shrine on a wild proclamation of a name; Hong Kong's roast-goose and pawn-shop signs are a generation's visual homesickness. The hidden exam is the tier split: commercial signage runs on B2B contracts, wedding and home pieces run on e-commerce customization, and light art runs on exhibitions and collaborations — the name must read professional on the estimate, romantic on the wedding checklist, and opinionated in the art circle. The failure mode is becoming a lamp shop: the premium lives in the warmth of the hand-bent tube and the attitude of night aesthetics, and a name that is only 'light' demotes the craft to illumination.",
+      namingIdeas: [
+        "Glass-tube imagery outright: neon, glow and tube roots — the category's core material named directly; the word neon carries the rainbow's bloodline",
+        "Borrowing the night narrative: night, dusk and midnight roots — neon is only complete in darkness, and the night lexicon is the category's stage direction",
+        "Translating the bending craft: a glass tube bent into a sentence written into the name — the core status against the LED strip, the trust grammar of the custom line",
+        "Borrowing the Hong Kong homesickness: naming on the visual memory of the roast-goose sign — a generation's collective nostalgia, the emotional lever of a Chinese studio",
+        "The proclamation grammar: a name made a manifesto, God's Own Junkyard style — the attitude of the light-art line stated outright, the hook of the exhibition poster",
+      ],
+      cases: [
+        { name: "God's Own Junkyard", takeaway: "The wild proclamation of a scrapyard of the divine: a neon warehouse made a pilgrimage site — the name itself is the curatorial stance" },
+        { name: "Neon Fades (霓虹黯色)", takeaway: "Neon joined to fading, the oxymoron: the elegy grammar of Hong Kong's vanishing signs — cultural narrative made brand posture" },
+        { name: "Electric Confetti", takeaway: "Two celebratory nouns spliced: neon's party register said outright — the naming template of the wedding and events line" },
+        { name: "Neon Poodle", takeaway: "Neon against a poodle, the deadpan pairing: the light-hearted persona of the custom sign — memorable, photogenic, the social-friendly chain sample" },
+      ],
+      pitfalls: [
+        "Demoting to a lamp shop: a name that is only light-and-bright makes the craft mere illumination — the premium is the hand-bent warmth and the night attitude, not lumens",
+        "Locking into one scene: a wedding-sign name can't take the bar front and the art show — leave the scene to the portfolio, keep the whole night for the brand",
+        "Nostalgia made a specimen: a name of retro-and-vintage nails neon into the past — the old craft must live in contemporary taste, not a museum case",
+        "Forgetting the B2B estimate: commercial signage is the fattest order, and the name must read credible on the contract and the invoice — a too-playful name never clears procurement",
+      ],
+    },
+  },
+  millinery: {
+    slug: "millinery",
+    keywords: ["制帽工作室", "手工帽子定制", "礼帽设计", "millinery studio", "custom hats"],
+    tlds: [
+      { tld: "com", zh: "定制询价与电商销售的默认后缀，详情页与账单上最稳", en: "The default suffix for commissions and e-commerce — steadiest on the product page and the invoice" },
+      { tld: "studio", zh: "工作室气质直给，手作定制与设计感零违和", en: "The studio stated outright — zero friction for the handmade couture register" },
+      { tld: "boutique", zh: "精品店身位直接对位，高定与礼帽线的身价归类", en: "The boutique posture aligned outright — the status filing for couture and occasion hats" },
+    ],
+    zh: {
+      label: "制帽工作室",
+      title: "制帽工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "制帽与手工帽子定制工作室命名指南：帽楦意象、加冕叙事等思路，Lock & Co./Philip Treacy 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "制帽工作室的名字要说出「一顶帽子扣下去的那一秒，人变了」：帽子是唯一戴在头顶的服饰——离脸最近、离身份最近，赛马会的阔檐、婚礼的头纱帽、街头的巴拿马，每一顶都在替主人说话，名字要先把这份「头顶的表态」递出去。行业血统深厚：millinery 一词源自米兰的服饰商人，伦敦 Lock & Co. 自 1676 年营业至今是世界最老的帽店，Philip Treacy 用一己之名把帽子做成雕塑艺术。隐藏考点是业务分层：高定礼帽走婚礼与赛马会的场合线、成衣帽款走电商与买手店、修复与翻新走老客口碑——名字要在高定工作室的铜牌上有分量，在电商详情页上好记，在时尚编辑的稿子里有态度。误区在于把自己做成「帽子铺」：制帽的溢价在「一人一楦」的手工定制与「场合着装」的礼仪身价，名字若只剩「帽」字的平价感，就辜负了这门六百年的手艺。",
+      namingIdeas: [
+        "帽楦意象直给：楦、檐、冠类词根——制帽工艺的核心工具与部件入名，行家一眼认出手工血统",
+        "加冕语法借力：冠、冕、顶类词库——帽子是平民的加冕，中文「冠冕」词库的千年身价现成可用",
+        "人名招牌路线：以主理人姓名立店——Philip Treacy 到 Stephen Jones 的行业惯例，高定线的信任语法",
+        "场合叙事转译：把赛马会、婚礼的场合感写进名字——礼帽线的核心买点，场合着装的礼仪暗号",
+        "老铺语法借力：号、行、since 类词根——制帽是六百年的手艺，老铺感就是工艺背书的速记",
+      ],
+      cases: [
+        { name: "Lock & Co. Hatters", takeaway: "1676 年至今的世界最老帽店：姓氏加行当的老铺语法——「Hatters」一词就是六百年手艺的落款" },
+        { name: "Philip Treacy", takeaway: "一己之名做成帽子雕塑的代名词：人名招牌的天花板——高定线「买的就是这双手」的信任直给" },
+        { name: "冠上加冠", takeaway: "成语改写的中文示范：「冠」字的加冕语法双倍奉还——喜庆场合线的口彩与记忆点一次拿下" },
+        { name: "Maison Michel", takeaway: "法语「米歇尔之家」的时装屋语法：maison 一词把帽饰抬进高级时装谱系——身价借词的经典样本" },
+      ],
+      pitfalls: [
+        "降级成帽子铺：名字只剩「帽」的平价感就辜负六百年手艺——溢价在一人一楦的定制与场合礼仪的身价",
+        "锁死单一帽型：叫「巴拿马草帽行」就难接礼帽与婚礼头饰——帽型留给产品线，品牌名留整个头顶",
+        "时尚黑话过深：满是「高定、廓形」的名字让电商客群却步——高定线要身价，成衣线要亲切，名字留一扇门",
+        "忽略场合线的礼仪感：赛马会与婚礼是最厚的客单，名字要在请柬边上得体——太街头的名字进不了场合着装清单",
+      ],
+    },
+    en: {
+      label: "Millinery studios",
+      title: "How to Name a Millinery Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Millinery and custom hat studio naming guide: hat-block imagery, coronation grammar, breakdowns of Lock & Co./Philip Treacy, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A millinery studio's name must say the second the hat settles and the wearer becomes someone else: the hat is the only garment worn on the head — nearest the face, nearest the identity — and the racing wide-brim, the bridal percher and the street panama each speak for their owner, so the name has to hand over that statement above the brow first. The bloodline runs deep: the word millinery descends from the merchants of Milan; London's Lock & Co. has traded since 1676 as the world's oldest hat shop; Philip Treacy made a single name synonymous with hats as sculpture. The hidden exam is the tier split: couture occasion pieces run on weddings and race days, ready-to-wear runs on e-commerce and boutiques, and restoration runs on loyal word of mouth — the name must carry weight on the atelier's brass plate, read memorable on the product page, and hold an opinion in the fashion editor's copy. The failure mode is becoming a hat stall: the premium lives in the one-head-one-block commission and the etiquette status of occasion dressing, and a name with only the flat word 'hat' betrays six hundred years of craft.",
+      namingIdeas: [
+        "Hat-block imagery outright: block, brim and crown roots — the craft's core tools and parts named directly; the trade eye spots the handmade bloodline at once",
+        "Borrowing the coronation grammar: crown, coronet and top roots — the hat is the commoner's coronation, and the crown lexicon carries a millennium of ready status",
+        "The name-above-the-door route: the studio standing on the milliner's own name — the trade convention from Philip Treacy to Stephen Jones, the trust grammar of the couture line",
+        "Translating the occasion narrative: race day and wedding written into the name — the core buy of the occasion line, the etiquette password of formal dressing",
+        "Borrowing the old-house grammar: house, establishment and since roots — millinery is a six-century craft, and the old-shop register is shorthand for workmanship",
+      ],
+      cases: [
+        { name: "Lock & Co. Hatters", takeaway: "The world's oldest hat shop, trading since 1676: the surname-plus-trade grammar — the one word Hatters signing six centuries of craft" },
+        { name: "Philip Treacy", takeaway: "A single name made synonymous with hats as sculpture: the ceiling of the name-above-the-door — the couture trust of buying these very hands" },
+        { name: "Guan Shang Jia Guan (冠上加冠)", takeaway: "An idiom rewritten in Chinese: the coronation grammar of the crown character paid double — the festive register and the hook won in one stroke" },
+        { name: "Maison Michel", takeaway: "The French house-of grammar: one maison lifting hats into the couture lineage — the classic sample of borrowed status" },
+      ],
+      pitfalls: [
+        "Demoting to a hat stall: a name with only the flat word hat betrays six hundred years of craft — the premium is the one-head-one-block commission and occasion etiquette",
+        "Locking into one silhouette: a panama-house name can't take the top hat and the bridal percher — leave the silhouette to the line, keep the whole head for the brand",
+        "Fashion argot too deep: a name of couture-and-silhouette jargon turns the e-commerce crowd away — the couture line needs status, the ready line needs warmth; leave a door in the name",
+        "Forgetting the occasion register: race days and weddings are the fattest tickets, and the name must sit graceful beside the invitation — a too-street name never makes the formal-dress list",
+      ],
+    },
+  },
+  mosaic: {
+    slug: "mosaic",
+    keywords: ["马赛克工作室", "马赛克拼贴艺术", "瓷砖拼画", "mosaic studio", "mosaic art"],
+    tlds: [
+      { tld: "com", zh: "商业委托与工程报价的默认后缀，方案与合同上最稳", en: "The default suffix for commissions and project quotes — steadiest on the proposal and the contract" },
+      { tld: "art", zh: "艺术身位直给，公共艺术与藏家线零违和", en: "The art posture stated outright — zero friction for public art and the collector line" },
+      { tld: "studio", zh: "工作室气质直接对位，手作课与定制场景的归类", en: "The studio register aligned outright — the filing for workshops and custom pieces" },
+    ],
+    zh: {
+      label: "马赛克工作室",
+      title: "马赛克工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "马赛克拼贴与瓷砖艺术工作室命名指南：碎片意象、千年拜占庭血统等思路，文化词库与案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "马赛克工作室的名字要说出「一万块碎片凑成一幅完整的画」的哲学：这门手艺从拜占庭教堂的金色穹顶一路铺到高迪的巴塞罗那长椅，再到地铁站的瓷砖壁画——它是最耐久的绘画，一贴上墙就打算待一千年，名字要先把这份「碎片的永恒」递出去。词库现成：碎、拼、片、格、镶嵌——中文「镶嵌」二字自带工艺的郑重，「碎金」「拼图」则是现成的诗意。参照系跨度极大：高迪的 trencadís 碎瓷术是加泰罗尼亚的城市名片，国内的「马赛克」一词又天然连着瓷砖建材的产业带。隐藏考点是业务分层：公共艺术与商业委托走工程合同、家居定制与藏品走高客单、拼贴手作课走体验流量——名字要在工程方案里专业，在藏家眼里有艺术身价，在手作课海报上亲切好玩。误区在于掉进「建材感」：中文语境里「马赛克」常被听成瓷砖建材甚至「打码」的代称——名字要立在「镶嵌艺术」的身位上，别让千年手艺听起来像装修队。",
+      namingIdeas: [
+        "碎片哲学直给：碎、拼、片类词根——「碎片凑成完整」的品类哲学直接入名，一词双关手艺与人生",
+        "镶嵌语法借力：镶、嵌、格类词库——「镶嵌」二字自带工艺郑重感，中文里区隔建材感的身价词根",
+        "拜占庭血统借力：金、穹顶、圣索菲亚类意象——千年教堂穹顶的血统背书，艺术线的谱系暗号",
+        "碎瓷术路线：借高迪 trencadís 的碎瓷词库立名——巴塞罗那的城市名片现成可用，设计圈层的认亲暗号",
+        "永恒叙事转译：把「一贴一千年」的耐久写进名字——区别于绘画与壁纸的核心卖点，公共艺术线的信任语法",
+      ],
+      cases: [
+        { name: "碎金堂", takeaway: "「碎金」加堂号的组合示范：拜占庭金色马赛克的中文转译——碎而贵的身价一词立住" },
+        { name: "Trencadís Studio", takeaway: "直接借高迪碎瓷术命名：设计谱系的认亲直给——一个术语让懂行者立刻对位巴塞罗那" },
+        { name: "Mosaika", takeaway: "mosaic 的女性化变体造词：加拿大公共艺术工作室的命名样本——品类词微调就有了品牌温度" },
+        { name: "拾片社", takeaway: "「拾起碎片」的动作入名：手作课线的亲切示范——把工艺动作做成社群感的邀请" },
+      ],
+      pitfalls: [
+        "掉进建材感：中文「马赛克」常被听成瓷砖甚至「打码」——名字要立在镶嵌艺术的身位，别像装修队",
+        "锁死单一材质：叫「瓷片坊」就难接玻璃、石材与金箔的高端线——材质留给作品说明，品牌名留整个碎片宇宙",
+        "艺术腔吓退手作课：满是「圣殿、穹顶」的名字让体验客群不敢推门——艺术线要身价，课程线要亲切",
+        "忽略工程委托场景：公共艺术与商业墙面是最厚的订单，名字要在工程方案里专业可信——太诗意的名字要配得上施工图",
+      ],
+    },
+    en: {
+      label: "Mosaic studios",
+      title: "How to Name a Mosaic Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Mosaic and tile art studio naming guide: fragment philosophy, Byzantine bloodline, trencadís grammar, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A mosaic studio's name must say the philosophy of ten thousand fragments assembling one whole picture: this craft runs from the gold domes of Byzantine churches down Gaudí's Barcelona benches and into the tiled murals of subway stations — it is the most durable of paintings, intending a thousand years the moment it meets the wall, so the name has to hand over that eternity of fragments first. The lexicon is ready: shard, piece, tessera and inlay — and the Chinese word for inlay carries its own ceremonial weight, while scattered gold and jigsaw offer ready poetry. The references span continents: Gaudí's trencadís broken-tile craft is Catalonia's civic signature, and the mosaic word doubles as an industrial tile term. The hidden exam is the tier split: public art and commercial commissions run on project contracts, home pieces and collectibles run on high tickets, and workshop classes run on experience traffic — the name must read professional in the project proposal, carry art-market status to the collector, and feel warm on the class poster. The failure mode is falling into the building-materials register: in Chinese the word mosaic is often heard as bathroom tile or even pixelation — the name must stand on the inlay-art posture, never letting a thousand-year craft sound like a renovation crew.",
+      namingIdeas: [
+        "The fragment philosophy outright: shard, piece and tessera roots — fragments assembling a whole named directly, one word punning craft and life",
+        "Borrowing the inlay grammar: inlay, set and lattice roots — the inlay word carries its own ceremonial weight, the status root that splits art from building material",
+        "Borrowing the Byzantine bloodline: gold, dome and Hagia Sophia imagery — a millennium of church-ceiling endorsement, the lineage password of the art line",
+        "The trencadís route: naming on Gaudí's broken-tile lexicon — Catalonia's civic signature ready to use, the kinship code of the design circle",
+        "Translating the eternity narrative: set once, stay a thousand years written into the name — the core sell against paint and wallpaper, the trust grammar of the public-art line",
+      ],
+      cases: [
+        { name: "Sui Jin Tang (碎金堂)", takeaway: "Scattered gold joined to a hall name: the Chinese translation of Byzantine gold mosaic — broken yet precious, the status set in one word" },
+        { name: "Trencadís Studio", takeaway: "Naming straight on Gaudí's broken-tile craft: lineage kinship stated outright — one term aligning the studio with Barcelona in the knowing eye" },
+        { name: "Mosaika", takeaway: "The feminized variant of the category word: the naming sample of a Canadian public-art studio — one small inflection and the category word gains warmth" },
+        { name: "Shi Pian She (拾片社)", takeaway: "The act of picking up fragments made a name: the warm model of the workshop line — the craft's gesture turned into a community invitation" },
+      ],
+      pitfalls: [
+        "Falling into the building-materials register: the mosaic word heard as bathroom tile or pixelation — stand on the inlay-art posture; a millennial craft must not sound like a renovation crew",
+        "Locking into one material: a porcelain-shard name can't take the glass, stone and gold-leaf premium lines — leave the material to the piece, keep the whole fragment universe for the brand",
+        "The art register scaring the workshop crowd: a name of basilicas-and-domes stops the beginner at the door — the art line needs status, the class line needs warmth",
+        "Forgetting the project commission: public art and commercial walls are the fattest orders, and the name must read credible in the project proposal — the poetry must be worthy of the construction drawing",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
