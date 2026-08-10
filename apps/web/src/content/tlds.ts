@@ -10824,6 +10824,186 @@ const GUIDES = {
       ],
     },
   },
+  dk: {
+    tld: "dk",
+    zh: {
+      title: ".dk 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".dk 是丹麦国家域名，无资格限制、任何人可注册（需通过注册局身份验证），本地信任度极高，适合面向丹麦市场的品牌、电商与设计业务。查看 .dk 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .dk 域名。",
+      intro:
+        ".dk 是丹麦的国家域名，由非营利注册局 Punktum dk（原 DK Hostmaster）运营，注册量约 140 万。丹麦是全球数字化程度最高的国家之一，消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.dk，「丹麦的生意」一眼讲清，信任度远超一般新后缀——丹麦本土企业与政府机构的主站几乎都在 .dk 上；Google 也会把 .dk 站点与丹麦地区相关联，丹麦语市场 SEO 有天然加成。丹麦还是北欧设计与可持续品牌的重镇——乐高、Bang & Olufsen 都发家于此，.dk 对设计、家居与绿色品牌自带联想。资格上 .dk 完全开放：任何国家的个人与机构都能注册，但注册局要求注册人完成身份验证（丹麦本地用 MitID，海外注册人提交身份证明），这道门槛让 .dk 的滥用率常年全球最低、库存干净。价格温和且平续：注册约 $12/年（约 ¥85），续费同价，无引流钩子。库存比 .com 充裕，丹麦语与英文词根命中率都高。命名上品牌词直接上（brand.dk）最主流；设计与家居品牌可用「品类词 + .dk」借北欧设计联想，本地服务用「行业词 + .dk」。注意受众主要在丹麦本土，纯外部市场业务信号较弱。",
+      bestFor: ["丹麦本地企业与服务", "北欧设计与家居品牌", "面向丹麦的电商", "丹麦语内容与媒体站"],
+      namingTips: [
+        "无资格限制，任何人可注册，但需通过注册局身份验证",
+        "注册续费均约 $12/年，平续无钩子",
+        "身份验证门槛让 .dk 滥用率极低、库存干净",
+        "受众在丹麦本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".dk Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".dk is Denmark's country domain — no eligibility restrictions, anyone can register (with registry ID validation) — with top-tier local trust for Denmark-market brands, e-commerce and design businesses. See live pricing and naming advice, then hunt available .dk names with AI.",
+      intro:
+        ".dk is Denmark's country-code domain, run by non-profit registry Punktum dk (formerly DK Hostmaster) with about 1.4 million registrations. Denmark is among the world's most digitized countries, and consumers are strongly attuned to local signals: name.dk says \"a Danish business\" at a glance, with trust far beyond any new gTLD — Danish companies and government institutions overwhelmingly live on .dk; Google also geo-associates .dk sites with Denmark, a natural boost for Danish-market SEO. Denmark is also a powerhouse of Nordic design and sustainable brands — LEGO and Bang & Olufsen both started here — so .dk carries a design and green-brand halo. On eligibility, .dk is fully open: individuals and organizations from anywhere can register, but the registry requires registrant ID validation (MitID for locals, identity documents for foreign registrants) — a bar that keeps .dk's abuse rate among the lowest in the world and its inventory clean. Pricing is gentle and flat: about $12/yr to register (≈¥85) with the same renewal, no teaser games. Inventory beats .com, and both Danish and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.dk); design and home brands can use category + .dk to borrow the Nordic design halo, and local services fit trade-word + .dk. One caution: the audience is primarily Denmark — the signal is weaker for purely external markets.",
+      bestFor: ["Local Danish businesses & services", "Nordic design & home brands", "Denmark-facing e-commerce", "Danish-language content & media"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, with registry ID validation",
+        "About $12/yr flat to register and renew — no traps",
+        "ID validation keeps .dk abuse rates among the world's lowest",
+        "Audience is primarily Denmark — weaker signal for purely external markets",
+      ],
+    },
+  },
+  fi: {
+    tld: "fi",
+    zh: {
+      title: ".fi 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".fi 是芬兰国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向芬兰市场的品牌、科技与游戏业务。查看 .fi 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fi 域名。",
+      intro:
+        ".fi 是芬兰的国家域名，由芬兰交通与通信管理局（Traficom）运营，注册量约 55 万。芬兰消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.fi，「芬兰的生意」一眼讲清，信任度远超一般新后缀——芬兰本土企业与政府机构的主站几乎都在 .fi 上；Google 也会把 .fi 站点与芬兰地区相关联，芬兰语市场 SEO 有天然加成。芬兰还是全球游戏与移动技术重镇——Nokia、Supercell（部落冲突）、Rovio（愤怒的小鸟）都发家于此，.fi 对游戏工作室与深科技创业自带「赫尔辛基科技圈」联想。资格上 .fi 自 2016 年起完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格便宜且平续：注册约 $10/年（约 ¥72），续费同价，由国家机构定价、常年稳定无钩子。库存比 .com 充裕得多，芬兰语与英文词根命中率都高——芬兰人英语水平极佳，英文词根完全无障碍。命名上品牌词直接上（brand.fi）最主流；游戏与科技类可用「功能词 + .fi」借芬兰科技联想，本地服务用「行业词 + .fi」。注意受众主要在芬兰本土，纯外部市场业务信号较弱。",
+      bestFor: ["芬兰本地企业与服务", "游戏工作室与深科技创业", "面向芬兰的电商", "芬兰语内容与媒体站"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $10/年，国家机构定价、稳定无钩子",
+        "游戏与深科技用 .fi 自带赫尔辛基科技圈联想",
+        "受众在芬兰本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".fi Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".fi is Finland's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Finland-market brands, tech and gaming businesses. See live pricing and naming advice, then hunt available .fi names with AI.",
+      intro:
+        ".fi is Finland's country-code domain, run by the Finnish Transport and Communications Agency (Traficom) with about 550,000 registrations. Finnish consumers have a strong local preference: name.fi says \"a Finnish business\" at a glance, with trust far beyond any new gTLD — Finnish companies and government institutions overwhelmingly live on .fi; Google also geo-associates .fi sites with Finland, a natural boost for Finnish-market SEO. Finland is also a global gaming and mobile-tech powerhouse — Nokia, Supercell (Clash of Clans) and Rovio (Angry Birds) all started here — so .fi carries a \"Helsinki tech circle\" halo for game studios and deep-tech startups. On eligibility, .fi has been fully open since 2016: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is cheap and flat: about $10/yr to register (≈¥72) with the same renewal — set by a national agency, stable for years with no teaser games. Inventory beats .com by a wide margin, and both Finnish and English roots hit well — Finnish English proficiency is excellent, so English roots work perfectly. For naming, a straight brand word is the mainstream shape (brand.fi); gaming and tech ventures can use function words to borrow the Finnish tech halo, and local services fit trade-word + .fi. One caution: the audience is primarily Finland — the signal is weaker for purely external markets.",
+      bestFor: ["Local Finnish businesses & services", "Game studios & deep-tech startups", "Finland-facing e-commerce", "Finnish-language content & media"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $10/yr flat — priced by a national agency, stable with no traps",
+        "Gaming and deep tech on .fi borrow the Helsinki tech-circle halo",
+        "Audience is primarily Finland — weaker signal for purely external markets",
+      ],
+    },
+  },
+  no: {
+    tld: "no",
+    zh: {
+      title: ".no 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".no 是挪威国家域名，需挪威本地注册组织（企业需在 Brønnøysund 登记）才能持有，本地信任度极高，适合真正扎根挪威市场的企业与品牌。查看 .no 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .no 域名。",
+      intro:
+        ".no 是挪威的国家域名，由注册局 Norid 运营，注册量约 85 万。挪威是全球人均 GDP 最高的国家之一，消费者对本土信号极为敏感：本地电商、品牌官网与服务商用 name.no，「挪威的生意」一眼讲清，信任度远超一般新后缀——挪威本土企业与政府机构的主站几乎都在 .no 上；Google 也会把 .no 站点与挪威地区相关联，挪威语市场 SEO 有天然加成。资格上 .no 有硬门槛：注册人须为在挪威 Brønnøysund 登记册注册的组织（个人可在 priv.no 二级下注册），海外企业需先设立挪威分支或通过本地代理持有——这道门槛让 .no 几乎没有投机注册，域名与真实挪威业务强绑定，本地信任度在欧洲 ccTLD 中数一数二。价格中等且平续：注册约 $15/年（约 ¥110），续费同价，无引流钩子。库存干净充裕，挪威语与英文词根命中率都高。命名上品牌词直接上（brand.no）最主流；油气、海事与渔业等挪威优势产业可用「品类词 + .no」讲清出身，本地服务用「行业词 + .no」。注意：没有挪威登记组织就无法直接持有，进入挪威市场前先把主体架构准备好。",
+      bestFor: ["挪威本地企业与服务", "进入挪威市场的跨国业务", "油气、海事与渔业相关公司", "挪威语内容与媒体站"],
+      namingTips: [
+        "需挪威 Brønnøysund 登记组织才能持有（个人限 priv.no）",
+        "注册续费均约 $15/年，平续无钩子",
+        "本地主体门槛让 .no 与真实挪威业务强绑定、信任度极高",
+        "海外企业先设挪威分支或经本地代理再注册",
+      ],
+    },
+    en: {
+      title: ".no Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".no is Norway's country domain — it requires a Norwegian-registered organization (listed in the Brønnøysund Register) to hold — with top-tier local trust for businesses genuinely rooted in the Norwegian market. See live pricing and naming advice, then hunt available .no names with AI.",
+      intro:
+        ".no is Norway's country-code domain, run by registry Norid with about 850,000 registrations. Norway has one of the world's highest GDPs per capita, and consumers are highly attuned to local signals: name.no says \"a Norwegian business\" at a glance, with trust far beyond any new gTLD — Norwegian companies and government institutions overwhelmingly live on .no; Google also geo-associates .no sites with Norway, a natural boost for Norwegian-market SEO. Eligibility is a hard bar: registrants must be organizations listed in Norway's Brønnøysund Register (individuals can register under the priv.no second level), so foreign companies need a Norwegian branch or a local agent to hold one — a bar that leaves .no with virtually no speculative registrations, binding domains to real Norwegian businesses and making its local trust among the highest of any European ccTLD. Pricing is moderate and flat: about $15/yr to register (≈¥110) with the same renewal, no teaser games. Inventory is clean and plentiful, and both Norwegian and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.no); Norway's flagship industries — oil & gas, maritime and fisheries — fit category + .no to claim origin, and local services fit trade-word + .no. One caution: without a Norwegian-registered organization you cannot hold one directly — set up your entity before entering the market.",
+      bestFor: ["Local Norwegian businesses & services", "Multinationals entering the Norwegian market", "Oil & gas, maritime & fisheries companies", "Norwegian-language content & media"],
+      namingTips: [
+        "Requires a Brønnøysund-registered Norwegian organization (individuals: priv.no only)",
+        "About $15/yr flat to register and renew — no traps",
+        "The local-entity bar binds .no to real Norwegian businesses — top-tier trust",
+        "Foreign companies: set up a Norwegian branch or use a local agent first",
+      ],
+    },
+  },
+  ie: {
+    tld: "ie",
+    zh: {
+      title: ".ie 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ie 是爱尔兰国家域名，注册需证明与爱尔兰的真实联系（公民身份或在爱业务），本地信任度极高，适合面向爱尔兰市场的品牌与欧洲总部业务。查看 .ie 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ie 域名。",
+      intro:
+        ".ie 是爱尔兰的国家域名，由注册局 .IE（原 IEDR）运营，注册量约 33 万。爱尔兰是欧盟唯一以英语为主要语言的大市场，也是 Google、Apple、Meta 等科技巨头的欧洲总部所在地：本地电商、品牌官网与服务商用 name.ie，「爱尔兰的生意」一眼讲清，信任度远超一般新后缀——爱尔兰本土企业与政府机构的主站几乎都在 .ie 上；Google 也会把 .ie 站点与爱尔兰地区相关联，本地 SEO 有天然加成。资格上 .ie 有门槛：注册需证明与爱尔兰的真实联系——爱尔兰公民/居民出示身份证明，企业出示在爱业务证明（公司注册号、税号或向爱尔兰市场经营的证据），审核通常一两个工作日。这道门槛让 .ie 几乎没有投机注册，域名与真实爱尔兰业务强绑定。价格中等偏上且平续：注册约 $25/年（约 ¥180），续费同价，无引流钩子。库存干净充裕，英文词根命中率高——爱尔兰市场即英语市场，词根无需翻译。命名上品牌词直接上（brand.ie）最主流；本地服务用「行业词 + .ie」，面向欧洲的英语业务可用 .ie 讲「欧盟 + 英语」双重定位。注意：没有爱尔兰联系无法注册，进入市场前先准备资格材料。",
+      bestFor: ["爱尔兰本地企业与服务", "在爱设欧洲总部的科技公司", "面向爱尔兰的电商与品牌", "英语内容与媒体站"],
+      namingTips: [
+        "需证明爱尔兰联系（公民身份或在爱业务），审核约一两个工作日",
+        "注册续费均约 $25/年，平续无钩子",
+        "资格门槛让 .ie 与真实爱尔兰业务强绑定、库存干净",
+        "欧盟唯一英语大市场，英文词根无需翻译",
+      ],
+    },
+    en: {
+      title: ".ie Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ie is Ireland's country domain — registration requires proof of a real connection to Ireland (citizenship or trading there) — with top-tier local trust for Ireland-market brands and European-HQ businesses. See live pricing and naming advice, then hunt available .ie names with AI.",
+      intro:
+        ".ie is Ireland's country-code domain, run by the .IE registry (formerly IEDR) with about 330,000 registrations. Ireland is the EU's only major English-speaking market and hosts the European headquarters of Google, Apple, Meta and other tech giants: name.ie says \"an Irish business\" at a glance, with trust far beyond any new gTLD — Irish companies and government institutions overwhelmingly live on .ie; Google also geo-associates .ie sites with Ireland, a natural boost for local SEO. Eligibility has a bar: registration requires proof of a real connection to Ireland — citizens/residents show identity documents, businesses show evidence of trading in or with Ireland (company registration number, tax number or market evidence), with checks typically taking a day or two. The bar leaves .ie with virtually no speculative registrations, binding domains to real Irish businesses. Pricing is upper-moderate and flat: about $25/yr to register (≈¥180) with the same renewal, no teaser games. Inventory is clean and plentiful, and English roots hit well — the Irish market is an English market, no translation needed. For naming, a straight brand word is the mainstream shape (brand.ie); local services fit trade-word + .ie, and Europe-facing English businesses can use .ie to claim the \"EU + English\" double position. One caution: without an Irish connection you cannot register — prepare your eligibility documents before entering the market.",
+      bestFor: ["Local Irish businesses & services", "Tech companies with European HQs in Ireland", "Ireland-facing e-commerce & brands", "English-language content & media"],
+      namingTips: [
+        "Requires proof of Irish connection (citizenship or trading there) — checks take a day or two",
+        "About $25/yr flat to register and renew — no traps",
+        "The eligibility bar binds .ie to real Irish businesses — clean inventory",
+        "The EU's only major English market — English roots need no translation",
+      ],
+    },
+  },
+  nz: {
+    tld: "nz",
+    zh: {
+      title: ".nz 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".nz 是新西兰国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向新西兰市场的品牌、旅游与农产品业务。查看 .nz 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .nz 域名。",
+      intro:
+        ".nz 是新西兰的国家域名，由非营利机构 InternetNZ 运营，注册量约 75 万。新西兰消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.nz，「新西兰的生意」一眼讲清，信任度远超一般新后缀——新西兰本土企业与政府机构的主站几乎都在 .nz（或传统的 .co.nz）上；Google 也会把 .nz 站点与新西兰地区相关联，本地 SEO 有天然加成。新西兰的「纯净」国家品牌还让 .nz 对旅游、户外与农产品出口业务自带联想——奇异果、羊毛与《指环王》取景地都是全球名片。资格上 .nz 完全开放：2014 年起开放顶级直注，任何国家的个人与机构都能直接注册，无需本地地址或代理（传统的 .co.nz 同样开放）。价格中等且平续：注册约 $20/年（约 ¥145），续费同价，无引流钩子。库存比 .com 充裕，英文与毛利语词根命中率都高。命名上品牌词直接上（brand.nz）最主流；旅游与农产品业务可用「品类词 + .nz」借纯净新西兰联想，本地服务用「行业词 + .nz」。注意受众主要在新西兰本土，纯外部市场业务信号较弱。",
+      bestFor: ["新西兰本地企业与服务", "旅游、户外与探险业务", "农产品与食品出口品牌", "面向新西兰的电商"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $20/年，平续无钩子",
+        "旅游与农产品用 .nz 自带纯净新西兰联想",
+        "受众在新西兰本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".nz Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".nz is New Zealand's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for New Zealand-market brands, tourism and agri-export businesses. See live pricing and naming advice, then hunt available .nz names with AI.",
+      intro:
+        ".nz is New Zealand's country-code domain, run by non-profit InternetNZ with about 750,000 registrations. New Zealand consumers have a strong local preference: name.nz says \"a Kiwi business\" at a glance, with trust far beyond any new gTLD — New Zealand companies and government institutions overwhelmingly live on .nz (or the traditional .co.nz); Google also geo-associates .nz sites with New Zealand, a natural boost for local SEO. New Zealand's \"pure\" national brand adds a halo for tourism, outdoor and agri-export ventures — kiwifruit, wool and Lord of the Rings filming locations are global calling cards. On eligibility, .nz is fully open: direct second-level registration opened in 2014, and individuals and organizations from anywhere can register with no local address or proxy (the traditional .co.nz is equally open). Pricing is moderate and flat: about $20/yr to register (≈¥145) with the same renewal, no teaser games. Inventory beats .com, and both English and Māori roots hit well. For naming, a straight brand word is the mainstream shape (brand.nz); tourism and agri ventures can use category + .nz to borrow the pure-New-Zealand halo, and local services fit trade-word + .nz. One caution: the audience is primarily New Zealand — the signal is weaker for purely external markets.",
+      bestFor: ["Local New Zealand businesses & services", "Tourism, outdoor & adventure ventures", "Agri & food export brands", "New Zealand-facing e-commerce"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $20/yr flat to register and renew — no traps",
+        "Tourism and agri on .nz borrow the pure-New-Zealand halo",
+        "Audience is primarily New Zealand — weaker signal for purely external markets",
+      ],
+    },
+  },
+  mx: {
+    tld: "mx",
+    zh: {
+      title: ".mx 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".mx 是墨西哥国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向墨西哥与西语美洲市场的品牌与电商。注意首年便宜续费上浮。查看 .mx 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .mx 域名。",
+      intro:
+        ".mx 是墨西哥的国家域名，由 Registry MX（NIC México）运营，注册量约 130 万。墨西哥是拉美第二大经济体、全球第一大西语国家（人口约 1.3 亿），电商增速常年位居全球前列，本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.mx，「墨西哥的生意」一眼讲清，信任度远超一般新后缀——墨西哥本土企业与机构的主站大多在 .mx（或传统的 .com.mx）上；Google 也会把 .mx 站点与墨西哥地区相关联，西语市场 SEO 有天然加成。美墨近岸外包（nearshoring）浪潮下，制造与供应链业务用 .mx 讲「墨西哥落地」也很自然。资格上顶级 .mx 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格要留意：首年常见促销约 $13（约 ¥90），续费约 $50/年（约 ¥360）——注册前把续费价算进预算，别被首年低价钩住。库存比 .com 充裕得多，西语与英文词根命中率都高。命名上品牌词直接上（brand.mx）最主流；本地服务用「行业词 + .mx」，跨境电商与近岸制造可用「品类词 + .mx」讲清市场定位。注意受众主要在墨西哥与西语圈，纯英语市场业务信号较弱。",
+      bestFor: ["墨西哥本地企业与服务", "面向墨西哥的跨境电商", "近岸制造与供应链业务", "西语内容与媒体站"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "首年约 $13 但续费约 $50/年，预算按续费价算",
+        "近岸制造用「品类词 + .mx」讲清墨西哥落地",
+        "受众在墨西哥与西语圈，纯英语市场信号较弱",
+      ],
+    },
+    en: {
+      title: ".mx Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".mx is Mexico's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Mexico and Spanish-speaking-Americas brands and e-commerce. Watch the renewal step-up after a cheap first year. See live pricing and naming advice, then hunt available .mx names with AI.",
+      intro:
+        ".mx is Mexico's country-code domain, run by Registry MX (NIC México) with about 1.3 million registrations. Mexico is Latin America's second-largest economy and the world's largest Spanish-speaking country (about 130 million people), with e-commerce growth consistently among the world's fastest, and local consumers are strongly attuned to local signals: name.mx says \"a Mexican business\" at a glance, with trust far beyond any new gTLD — Mexican companies and institutions overwhelmingly live on .mx (or the traditional .com.mx); Google also geo-associates .mx sites with Mexico, a natural boost for Spanish-market SEO. Amid the US–Mexico nearshoring wave, manufacturing and supply-chain ventures naturally use .mx to signal \"on the ground in Mexico\". On eligibility, top-level .mx is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing needs attention: first-year promos run about $13 (≈¥90) but renewals are about $50/yr (≈¥360) — budget on the renewal price and don't get hooked by the teaser. Inventory beats .com by a wide margin, and both Spanish and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.mx); local services fit trade-word + .mx, and cross-border e-commerce or nearshoring ventures can use category + .mx to claim the market. One caution: the audience is Mexico and the Spanish-speaking sphere — the signal is weaker for purely English markets.",
+      bestFor: ["Local Mexican businesses & services", "Mexico-facing cross-border e-commerce", "Nearshoring manufacturing & supply chain", "Spanish-language content & media"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $13 in year one but ~$50/yr renewal — budget on the renewal price",
+        "Nearshoring ventures use category + .mx to signal on-the-ground Mexico",
+        "Audience is Mexico & the Spanish-speaking sphere — weaker signal for purely English markets",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
