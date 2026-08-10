@@ -63,6 +63,7 @@ export const TLD_LIST = [
   "fr", "it", "es", "nl", "kr", "hk",
   "ch", "at", "be", "se", "pl", "tw",
   "dk", "fi", "no", "ie", "nz", "mx",
+  "br", "pt", "cz", "tr", "ae", "id",
 ] as const;
 
 export type Tld = (typeof TLD_LIST)[number];
