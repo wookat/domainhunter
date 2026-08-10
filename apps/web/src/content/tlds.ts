@@ -11364,6 +11364,186 @@ const GUIDES = {
       ],
     },
   },
+  my: {
+    tld: "my",
+    zh: {
+      title: ".my 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".my 是马来西亚国家域名，向全球开放注册，本地信任度极高，还可读作英文 my（我的），适合面向马来西亚市场的品牌、电商与个人产品。查看 .my 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .my 域名。",
+      intro:
+        ".my 是马来西亚的国家域名，由注册局 MYNIC 运营，注册量约 30 万。马来西亚人口约 3400 万，是东南亚人均收入靠前、数字化程度最高的经济体之一：电商（Shopee、Lazada 深耕多年）、数字支付与跨境贸易发达，英语普及率在东南亚名列前茅。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.my，「马来西亚的生意」一眼讲清，信任度远超一般新后缀——马来西亚本土企业与政府机构的主站几乎都在 .my 体系上；Google 也会把 .my 站点与马来西亚地区相关联，本地 SEO 有天然加成。.my 还有一层跨界彩蛋：它天然读作英文「my（我的）」，个人主页、账号与工具类产品把它当语义后缀用（notes.my、read.my 这类「我的 XX」句式），受众可以完全不限于马来西亚。资格上 .my 顶级直注自 2018 年起向全球开放，任何国家的个人与机构都能直接注册，无需本地地址或代理。价格中等且平续：注册约 $30/年（约 ¥220），续费同价，无引流钩子。马来语用拉丁字母、英语普及率高，英文词根命中率高。命名上品牌词直接上（brand.my）最主流；本地服务用「行业词 + .my」，个人与账号类产品可玩 name.my 的语义双关。注意本地信号与英文 my 语义针对的是两类不同受众，定位想清楚再选词根。",
+      bestFor: ["马来西亚本地企业与服务", "面向马来西亚的跨境电商", "个人主页与账号类产品", "东南亚市场品牌与金融科技"],
+      namingTips: [
+        "2018 年起顶级直注向全球开放，无需本地地址",
+        "注册续费均约 $30/年，平续无钩子",
+        "天然读作英文 my（我的），个人产品可玩语义双关",
+        "本地信号与 my 语义是两类受众，定位想清楚再选词根",
+      ],
+    },
+    en: {
+      title: ".my Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".my is Malaysia's country domain — open to registrants worldwide — with top-tier local trust for Malaysia-market brands and e-commerce, plus a natural English \"my\" reading for personal products. See live pricing and naming advice, then hunt available .my names with AI.",
+      intro:
+        ".my is Malaysia's country-code domain, run by registry MYNIC with about 300,000 registrations. Malaysia has about 34 million people and one of Southeast Asia's highest-income, most digitized economies: e-commerce (Shopee and Lazada both run deep here), digital payments and cross-border trade are well developed, and English proficiency ranks near the top of the region. Local consumers are strongly attuned to local signals: name.my says \"a Malaysian business\" at a glance, with trust far beyond any new gTLD — Malaysian companies and government institutions overwhelmingly live on the .my family; Google also geo-associates .my sites with Malaysia, a natural boost for local SEO. .my also carries a crossover bonus: it naturally reads as English \"my\", so personal pages, account and tool products use it as a semantic suffix (notes.my, read.my — the \"my X\" shape) — an audience not limited to Malaysia at all. On eligibility, direct second-level registration opened worldwide in 2018: individuals and organizations from anywhere can register with no local address or proxy. Pricing is moderate and flat: about $30/yr to register (≈¥220) with the same renewal, no teaser games. Malay uses the Latin alphabet and English proficiency is high, so English roots hit well. For naming, a straight brand word is the mainstream shape (brand.my); local services fit trade-word + .my, and personal or account products can play the name.my semantic pun. One caution: the local signal and the English \"my\" reading target two different audiences — settle your positioning before picking roots.",
+      bestFor: ["Local Malaysian businesses & services", "Malaysia-facing cross-border e-commerce", "Personal pages & account products", "Southeast Asia brands & fintech"],
+      namingTips: [
+        "Direct registration opened worldwide in 2018 — no local address needed",
+        "About $30/yr flat to register and renew — no traps",
+        "Naturally reads as English \"my\" — personal products can play the pun",
+        "Local signal vs. the \"my\" reading target different audiences — settle positioning first",
+      ],
+    },
+  },
+  th: {
+    tld: "th",
+    zh: {
+      title: ".th 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".th 是泰国国家域名，顶级直注需持有与域名一致的泰国注册商标（.co.th 等二级需本地公司），本地信任度极高，适合深耕泰国市场的品牌与电商。查看 .th 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .th 域名。",
+      intro:
+        ".th 是泰国的国家域名，由泰国网络信息中心（THNIC）运营，注册量约 8 万，以 .co.th、.in.th 等二级体系为主。泰国人口约 7200 万，是东南亚第二大经济体：旅游业全球顶级（曼谷常年居全球到访人次前列）、汽车制造是「亚洲底特律」、电商与社交带货渗透率高速增长。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.th 或 name.co.th，「泰国的生意」一眼讲清，信任度远超一般新后缀——泰国本土企业与政府机构的主站几乎都在 .th 体系上；Google 也会把 .th 站点与泰国地区相关联，本地 SEO 有天然加成。资格门槛是东南亚 ccTLD 里最高的一档：顶级直注（name.th）要求持有与域名完全一致的泰国注册商标；.co.th 要求泰国注册公司或泰国商标；个人可退而注册 .in.th（门槛最低）。价格偏高且平续：顶级直注约 $60/年（约 ¥450），.co.th 约 $25/年，续费同价。泰语用自有文字，但旅游与跨境场景英文词根照样好用。命名上品牌词直接上（brand.th）最主流；旅游与电商用「品类词 + .th」讲清市场定位。注意先确认自己符合哪一级的资格，再决定注册 name.th 还是 .co.th/.in.th。",
+      bestFor: ["深耕泰国市场的品牌与企业", "泰国旅游与酒店业务", "面向泰国的跨境电商", "泰国本地服务与内容站"],
+      namingTips: [
+        "顶级直注需与域名一致的泰国商标，.co.th 需本地公司，个人可选 .in.th",
+        "顶级直注约 $60/年、.co.th 约 $25/年，平续无钩子",
+        "泰语有自有文字，旅游与跨境场景英文词根照样好用",
+        "先确认资格等级，再决定注册 name.th 还是 .co.th/.in.th",
+      ],
+    },
+    en: {
+      title: ".th Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".th is Thailand's country domain — direct second-level registration requires a matching Thai trademark (.co.th needs a local company) — with top-tier local trust for Thailand-committed brands and e-commerce. See live pricing and naming advice, then hunt available .th names with AI.",
+      intro:
+        ".th is Thailand's country-code domain, run by THNIC with about 80,000 registrations, mostly under second-level families like .co.th and .in.th. Thailand has about 72 million people and Southeast Asia's second-largest economy: world-class tourism (Bangkok perennially ranks among the most-visited cities on earth), automotive manufacturing that earned it the \"Detroit of Asia\" label, and fast-growing e-commerce and social selling. Local consumers are strongly attuned to local signals: name.th or name.co.th says \"a Thai business\" at a glance, with trust far beyond any new gTLD — Thai companies and government institutions overwhelmingly live on the .th family; Google also geo-associates .th sites with Thailand, a natural boost for local SEO. The eligibility bar is the highest among Southeast Asian ccTLDs: direct second-level registration (name.th) requires a registered Thai trademark exactly matching the domain; .co.th requires a Thai-registered company or Thai trademark; individuals can fall back to .in.th (the lowest bar). Pricing is on the high side and flat: about $60/yr for direct second-level (≈¥450), about $25/yr for .co.th, with the same renewals. Thai has its own script, but English roots work fine in tourism and cross-border contexts. For naming, a straight brand word is the mainstream shape (brand.th); tourism and e-commerce fit category + .th to claim the market. One caution: confirm which eligibility tier you meet before choosing between name.th and .co.th/.in.th.",
+      bestFor: ["Thailand-committed brands & companies", "Thai tourism & hospitality", "Thailand-facing cross-border e-commerce", "Local Thai services & content"],
+      namingTips: [
+        "Direct .th needs a matching Thai trademark; .co.th needs a local company; individuals can use .in.th",
+        "About $60/yr for direct .th, ~$25/yr for .co.th — flat renewals, no traps",
+        "Thai has its own script, but English roots work in tourism and cross-border contexts",
+        "Confirm your eligibility tier before choosing name.th vs .co.th/.in.th",
+      ],
+    },
+  },
+  sk: {
+    tld: "sk",
+    zh: {
+      title: ".sk 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".sk 是斯洛伐克国家域名，无资格限制、任何人可注册，价格便宜平续，本地信任度极高，适合面向斯洛伐克市场的品牌、电商与汽车制造业务。查看 .sk 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .sk 域名。",
+      intro:
+        ".sk 是斯洛伐克的国家域名，由注册局 SK-NIC 运营，注册量约 45 万。斯洛伐克人口约 540 万，是欧元区成员、全球人均汽车产量第一的国家：大众、起亚、Stellantis 与捷豹路虎都在此设厂，布拉迪斯拉发也是中欧的 IT 与共享服务中心。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.sk，「斯洛伐克的生意」一眼讲清，信任度远超一般新后缀——斯洛伐克本土企业与政府机构的主站几乎都在 .sk 上；Google 也会把 .sk 站点与斯洛伐克地区相关联，本地 SEO 有天然加成。资格上 .sk 完全开放：2017 年起取消本地限制，任何国家的个人与机构都能直接注册，无需本地地址或代理。价格便宜且平续：注册约 $14/年（约 ¥100），续费同价，无引流钩子。斯洛伐克语用拉丁字母、与英文词根高度兼容。命名上品牌词直接上（brand.sk）最主流；汽车供应链与电商用「品类词 + .sk」讲清市场定位，本地服务用「行业词 + .sk」。注意受众主要在斯洛伐克本土，纯外部市场业务信号较弱。",
+      bestFor: ["斯洛伐克本地企业与服务", "汽车制造与供应链业务", "面向斯洛伐克的跨境电商", "斯洛伐克语内容与媒体站"],
+      namingTips: [
+        "2017 年起无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $14/年，平续无钩子，欧洲便宜档",
+        "斯洛伐克语用拉丁字母，与英文词根高度兼容",
+        "受众在斯洛伐克本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".sk Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".sk is Slovakia's country domain — no eligibility restrictions, anyone can register — cheap with flat renewals and top-tier local trust for Slovak-market brands, e-commerce and automotive manufacturing. See live pricing and naming advice, then hunt available .sk names with AI.",
+      intro:
+        ".sk is Slovakia's country-code domain, run by registry SK-NIC with about 450,000 registrations. Slovakia has about 5.4 million people, is a eurozone member, and produces more cars per capita than any country on earth: Volkswagen, Kia, Stellantis and Jaguar Land Rover all run plants here, while Bratislava is a Central European hub for IT and shared services. Local consumers are strongly attuned to local signals: name.sk says \"a Slovak business\" at a glance, with trust far beyond any new gTLD — Slovak companies and government institutions overwhelmingly live on .sk; Google also geo-associates .sk sites with Slovakia, a natural boost for local SEO. On eligibility, .sk is fully open: local restrictions were dropped in 2017, and individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is cheap and flat: about $14/yr to register (≈¥100) with the same renewal, no teaser games. Slovak uses the Latin alphabet, highly compatible with English roots. For naming, a straight brand word is the mainstream shape (brand.sk); automotive supply chains and e-commerce fit category + .sk to claim the market, and local services fit trade-word + .sk. One caution: the audience is primarily Slovakia — the signal is weaker for purely external markets.",
+      bestFor: ["Local Slovak businesses & services", "Automotive manufacturing & supply chains", "Slovakia-facing cross-border e-commerce", "Slovak-language content & media"],
+      namingTips: [
+        "No eligibility restrictions since 2017 — anyone can register, no local address needed",
+        "About $14/yr flat to register and renew — cheap for Europe, no traps",
+        "Slovak uses the Latin alphabet — highly compatible with English roots",
+        "Audience is primarily Slovakia — weaker signal for purely external markets",
+      ],
+    },
+  },
+  ua: {
+    tld: "ua",
+    zh: {
+      title: ".ua 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ua 是乌克兰国家域名，顶级直注需持有乌克兰注册商标（.com.ua 等二级开放注册），本地信任度极高，适合面向乌克兰市场的品牌与 IT 外包业务。查看 .ua 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ua 域名。",
+      intro:
+        ".ua 是乌克兰的国家域名，由 Hostmaster 注册局运营，注册量约 55 万（含二级体系）。乌克兰人口约 3700 万，是东欧最大的 IT 外包与工程人才基地之一：Grammarly、GitLab 的创始团队都出自这里，数十万工程师服务全球客户，战后重建也带来大量基建与制造需求。本地消费者对本土信号非常敏感：本地电商（Rozetka 是本土巨头）、品牌官网与服务商用 name.ua 或 name.com.ua，「乌克兰的生意」一眼讲清，信任度远超一般新后缀——乌克兰本土企业与政府机构的主站几乎都在 .ua 体系上；Google 也会把 .ua 站点与乌克兰地区相关联，本地 SEO 有天然加成。资格上分两级：顶级直注（name.ua）要求持有与域名一致的乌克兰注册商标；.com.ua、.in.ua 等二级则完全开放，任何人可注册。价格便宜且平续：顶级直注约 $18/年（约 ¥130），.com.ua 约 $8/年，续费同价。乌克兰语用西里尔字母，但 IT 与跨境场景英文词根命中率高。命名上品牌词直接上（brand.ua）最主流；IT 外包与电商用「品类词 + .ua」讲清市场定位。注意没有乌克兰商标就先用 .com.ua 落地，拿到商标再升级顶级直注。",
+      bestFor: ["乌克兰本地企业与服务", "IT 外包与软件开发团队", "面向乌克兰的跨境电商", "乌克兰语内容与媒体站"],
+      namingTips: [
+        "顶级直注需乌克兰商标，.com.ua/.in.ua 完全开放",
+        "顶级直注约 $18/年、.com.ua 约 $8/年，平续无钩子",
+        "乌克兰语用西里尔字母，IT 与跨境场景英文词根照样好用",
+        "没有商标先用 .com.ua 落地，拿到商标再升级 name.ua",
+      ],
+    },
+    en: {
+      title: ".ua Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ua is Ukraine's country domain — direct second-level registration requires a Ukrainian trademark (.com.ua and other second-level zones are open to all) — with top-tier local trust for Ukrainian-market brands and IT outsourcing. See live pricing and naming advice, then hunt available .ua names with AI.",
+      intro:
+        ".ua is Ukraine's country-code domain, run by the Hostmaster registry with about 550,000 registrations across its zones. Ukraine has about 37 million people and one of Eastern Europe's largest IT outsourcing and engineering talent bases: Grammarly and GitLab both trace their founding teams here, hundreds of thousands of engineers serve global clients, and postwar reconstruction is driving major infrastructure and manufacturing demand. Local consumers are strongly attuned to local signals: name.ua or name.com.ua says \"a Ukrainian business\" at a glance, with trust far beyond any new gTLD — Ukrainian companies (Rozetka is the homegrown e-commerce giant) and government institutions overwhelmingly live on the .ua family; Google also geo-associates .ua sites with Ukraine, a natural boost for local SEO. Eligibility comes in two tiers: direct second-level registration (name.ua) requires a registered Ukrainian trademark matching the domain; second-level zones like .com.ua and .in.ua are fully open to anyone. Pricing is cheap and flat: about $18/yr for direct second-level (≈¥130), about $8/yr for .com.ua, with the same renewals. Ukrainian uses the Cyrillic script, but English roots hit well in IT and cross-border contexts. For naming, a straight brand word is the mainstream shape (brand.ua); IT outsourcing and e-commerce fit category + .ua to claim the market. One caution: without a Ukrainian trademark, start on .com.ua and upgrade to name.ua once the mark is registered.",
+      bestFor: ["Local Ukrainian businesses & services", "IT outsourcing & dev teams", "Ukraine-facing cross-border e-commerce", "Ukrainian-language content & media"],
+      namingTips: [
+        "Direct .ua needs a Ukrainian trademark; .com.ua/.in.ua are open to all",
+        "About $18/yr for direct .ua, ~$8/yr for .com.ua — flat renewals, no traps",
+        "Ukrainian is Cyrillic, but English roots hit well in IT and cross-border contexts",
+        "No trademark yet? Start on .com.ua and upgrade to name.ua later",
+      ],
+    },
+  },
+  ar: {
+    tld: "ar",
+    zh: {
+      title: ".ar 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ar 是阿根廷国家域名，2019 年起开放顶级直注、任何人可注册，本地信任度极高，适合面向阿根廷市场的品牌、电商与农业外贸业务。查看 .ar 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ar 域名。",
+      intro:
+        ".ar 是阿根廷的国家域名，由国家科技部旗下的 NIC Argentina 运营，注册量约 70 万（含 .com.ar 体系）。阿根廷人口约 4600 万，是拉美第三大经济体：全球重要的农产品出口国（大豆、牛肉、葡萄酒），也是拉美科技独角兽的摇篮——Mercado Libre、Globant 都发家于此，工程师人才密度居拉美前列。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.ar 或 name.com.ar，「阿根廷的生意」一眼讲清，信任度远超一般新后缀——阿根廷本土企业与政府机构的主站几乎都在 .ar 体系上；Google 也会把 .ar 站点与阿根廷地区相关联，本地 SEO 有天然加成。资格上 .ar 顶级直注 2019 年起开放：任何国家的个人与机构都能直接注册（需在 NIC Argentina 完成税号/身份登记，多数国际注册商可代办），传统的 .com.ar 也继续开放。价格中等且平续：顶级直注约 $36/年（约 ¥260），续费同价，无引流钩子。西班牙语与英文词根命中率都高。命名上品牌词直接上（brand.ar）最主流；农业外贸与电商用「品类词 + .ar」讲清市场落地，本地服务用「行业词 + .ar」。注意受众主要在阿根廷本土，纯外部市场业务信号较弱。",
+      bestFor: ["阿根廷本地企业与服务", "农产品与葡萄酒外贸", "面向阿根廷的跨境电商", "西语内容与拉美市场品牌"],
+      namingTips: [
+        "2019 年起顶级直注开放，注册需 NIC Argentina 登记（注册商可代办）",
+        "注册续费均约 $36/年，平续无钩子",
+        "西班牙语与英文词根命中率都高",
+        "受众在阿根廷本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".ar Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ar is Argentina's country domain — direct second-level registration opened in 2019 and anyone can register — with top-tier local trust for Argentine-market brands, e-commerce and agricultural trade. See live pricing and naming advice, then hunt available .ar names with AI.",
+      intro:
+        ".ar is Argentina's country-code domain, run by NIC Argentina under the national science ministry, with about 700,000 registrations across its zones including .com.ar. Argentina has about 46 million people and Latin America's third-largest economy: a major global exporter of farm goods (soy, beef, wine) and the cradle of LatAm tech unicorns — Mercado Libre and Globant both started here, with one of the region's highest densities of engineering talent. Local consumers are strongly attuned to local signals: name.ar or name.com.ar says \"an Argentine business\" at a glance, with trust far beyond any new gTLD — Argentine companies and government institutions overwhelmingly live on the .ar family; Google also geo-associates .ar sites with Argentina, a natural boost for local SEO. On eligibility, direct second-level registration opened in 2019: individuals and organizations from anywhere can register (a tax/identity registration with NIC Argentina is required; most international registrars handle it), and the traditional .com.ar remains open too. Pricing is moderate and flat: about $36/yr for direct second-level (≈¥260) with the same renewal, no teaser games. Both Spanish and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.ar); agricultural trade and e-commerce fit category + .ar to claim the market, and local services fit trade-word + .ar. One caution: the audience is primarily Argentina — the signal is weaker for purely external markets.",
+      bestFor: ["Local Argentine businesses & services", "Agricultural & wine export trade", "Argentina-facing cross-border e-commerce", "Spanish-language content & LatAm brands"],
+      namingTips: [
+        "Direct registration opened in 2019 — NIC Argentina registration required (registrars handle it)",
+        "About $36/yr flat to register and renew — no traps",
+        "Both Spanish and English roots hit well",
+        "Audience is primarily Argentina — weaker signal for purely external markets",
+      ],
+    },
+  },
+  ng: {
+    tld: "ng",
+    zh: {
+      title: ".ng 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ng 是尼日利亚国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向尼日利亚市场的品牌、金融科技与电商业务。查看 .ng 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ng 域名。",
+      intro:
+        ".ng 是尼日利亚的国家域名，由注册局 NiRA 运营，注册量约 25 万（含 .com.ng 体系）。尼日利亚人口约 2.2 亿，是非洲第一人口大国与最大经济体之一：拉各斯是非洲的金融科技之都——Flutterwave、Paystack、OPay 都发家于此，非洲独角兽近半出自尼日利亚，年轻人口与移动互联网渗透率的增长曲线全球罕见。本地消费者对本土信号非常敏感：本地电商（Jumia 深耕多年）、品牌官网与服务商用 name.ng 或 name.com.ng，「尼日利亚的生意」一眼讲清，信任度远超一般新后缀——尼日利亚本土企业与政府机构的主站几乎都在 .ng 体系上；Google 也会把 .ng 站点与尼日利亚地区相关联，本地 SEO 有天然加成。资格上 .ng 完全开放：顶级直注与 .com.ng 都对任何国家的个人与机构开放，无需本地地址或代理。价格中等且平续：顶级直注约 $36/年（约 ¥260），.com.ng 约 $10/年，续费同价。英语是官方语言，英文词根无需翻译。命名上品牌词直接上（brand.ng）最主流；金融科技与电商用「品类词 + .ng」讲清市场定位，本地服务用「行业词 + .ng」。注意受众主要在尼日利亚与西非，纯外部市场业务信号较弱。",
+      bestFor: ["尼日利亚本地企业与服务", "金融科技与支付产品", "面向尼日利亚的跨境电商", "非洲市场品牌与创业公司"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "顶级直注约 $36/年、.com.ng 约 $10/年，平续无钩子",
+        "英语是官方语言，英文词根无需翻译",
+        "受众在尼日利亚与西非，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".ng Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ng is Nigeria's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Nigerian-market brands, fintech and e-commerce. See live pricing and naming advice, then hunt available .ng names with AI.",
+      intro:
+        ".ng is Nigeria's country-code domain, run by registry NiRA with about 250,000 registrations across its zones including .com.ng. Nigeria has about 220 million people — Africa's most populous country and one of its largest economies: Lagos is the continent's fintech capital — Flutterwave, Paystack and OPay all started here, nearly half of Africa's unicorns are Nigerian, and the growth curve of its young population and mobile internet penetration is rare anywhere in the world. Local consumers are strongly attuned to local signals: name.ng or name.com.ng says \"a Nigerian business\" at a glance, with trust far beyond any new gTLD — Nigerian companies (Jumia has run deep here for years) and government institutions overwhelmingly live on the .ng family; Google also geo-associates .ng sites with Nigeria, a natural boost for local SEO. On eligibility, .ng is fully open: both direct second-level and .com.ng registrations are open to individuals and organizations from anywhere, with no local address or proxy. Pricing is moderate and flat: about $36/yr for direct second-level (≈¥260), about $10/yr for .com.ng, with the same renewals. English is the official language, so English roots need no translation. For naming, a straight brand word is the mainstream shape (brand.ng); fintech and e-commerce fit category + .ng to claim the market, and local services fit trade-word + .ng. One caution: the audience is primarily Nigeria and West Africa — the signal is weaker for purely external markets.",
+      bestFor: ["Local Nigerian businesses & services", "Fintech & payment products", "Nigeria-facing cross-border e-commerce", "Africa-market brands & startups"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $36/yr for direct .ng, ~$10/yr for .com.ng — flat renewals, no traps",
+        "English is the official language — English roots need no translation",
+        "Audience is primarily Nigeria & West Africa — weaker signal for purely external markets",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
