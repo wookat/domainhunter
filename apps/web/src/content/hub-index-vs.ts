@@ -424,4 +424,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "tr-vs-ae", a: "tr", b: "ae", title: { zh: ".tr 和 .ae 怎么选：土耳其与阿联酋两大欧亚门户 ccTLD 的对比", en: ".tr vs .ae: Türkiye or the UAE — Two Eurasian Gateway ccTLDs Compared" } },
   { slug: "id-vs-sg", a: "id", b: "sg", title: { zh: ".id 和 .sg 怎么选：印尼与新加坡两大东南亚 ccTLD 的对比", en: ".id vs .sg: Indonesia or Singapore — Two Southeast Asian ccTLDs Compared" } },
   { slug: "id-vs-me", a: "id", b: "me", title: { zh: ".id 和 .me 怎么选：两个「身份系」ccTLD 的语义与市场对比", en: ".id vs .me: Two \"Identity\" ccTLDs — Semantics and Markets Compared" } },
+  { slug: "vn-vs-id", a: "vn", b: "id", title: { zh: ".vn 和 .id 怎么选：越南与印尼两大东南亚增长市场 ccTLD 的对比", en: ".vn vs .id: Vietnam or Indonesia — Two High-Growth Southeast Asian ccTLDs Compared" } },
+  { slug: "ph-vs-sg", a: "ph", b: "sg", title: { zh: ".ph 和 .sg 怎么选：菲律宾与新加坡两大英语系东南亚 ccTLD 的对比", en: ".ph vs .sg: The Philippines or Singapore — Two English-Speaking Southeast Asian ccTLDs Compared" } },
+  { slug: "gr-vs-tr", a: "gr", b: "tr", title: { zh: ".gr 和 .tr 怎么选：希腊与土耳其两个地中海邻国 ccTLD 的对比", en: ".gr vs .tr: Greece or Türkiye — Two Mediterranean Neighbors' ccTLDs Compared" } },
+  { slug: "ro-vs-pl", a: "ro", b: "pl", title: { zh: ".ro 和 .pl 怎么选：罗马尼亚与波兰两大东欧 IT 市场 ccTLD 的对比", en: ".ro vs .pl: Romania or Poland — Two Eastern European IT Hub ccTLDs Compared" } },
+  { slug: "hu-vs-cz", a: "hu", b: "cz", title: { zh: ".hu 和 .cz 怎么选：匈牙利与捷克两个中欧制造强国 ccTLD 的对比", en: ".hu vs .cz: Hungary or Czechia — Two Central European Manufacturing ccTLDs Compared" } },
+  { slug: "cl-vs-mx", a: "cl", b: "mx", title: { zh: ".cl 和 .mx 怎么选：智利与墨西哥两个拉美西语市场 ccTLD 的对比", en: ".cl vs .mx: Chile or Mexico — Two Spanish-Speaking Latin American ccTLDs Compared" } },
 ];

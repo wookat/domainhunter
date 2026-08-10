@@ -9133,6 +9133,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Personal homepages & résumé sites", "Developer portfolios", "Verb-phrase product domains (hire.me style)", "Social & productivity products with \"you/me\" narratives"],
     },
   },
+  "vn-vs-id": {
+    slug: "vn-vs-id",
+    a: "vn",
+    b: "id",
+    zh: {
+      title: ".vn 和 .id 怎么选：越南与印尼两大东南亚增长市场 ccTLD 的对比",
+      metaDescription: ".vn 是越南国家域名、约 $40/年平续、对外国注册人开放；.id 是印尼国家域名、任何人可注册、首年约 $8 但续费约 $30/年。对比两者的市场信号、续费结构与东南亚定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "东南亚两个高速增长市场的国家域名，资格都对外国注册人开放，分水岭在市场画像与续费结构。做越南市场 → .vn：VNNIC 运营、注册量约 60 万、居东南亚 ccTLD 前列，越南人口约 1 亿、是全球增长最快的制造业与数字经济体之一，电子、纺织供应链持续从周边转移，电商（Shopee、Lazada、Tiki）渗透率高速攀升，name.vn 一眼讲清「越南的生意」，本土企业与政府机构的主站几乎都在 .vn 体系上，Google 也会把 .vn 站点与越南地区相关联。价格中等偏上但完全平续：约 $40/年（约 ¥290），注册续费同价、无引流钩子，预算一步到位。做印尼市场 → .id：PANDI 运营、注册量约 100 万，印尼人口约 2.8 亿、全球第四人口大国、东南亚最大数字经济体，电商（Tokopedia、Shopee）与数字支付体量远超周边；它还天然读作英文「ID/身份」，账号与开发者工具类产品能玩语义双关。但续费要算清：首年常见促销约 $8（约 ¥60），续费约 $30/年（约 ¥220），预算按续费价算——长期成本反而与 .vn 拉近。判断标准：用户在越南、或做制造供应链与外贸落地 → .vn 平续透明、本地信任高；用户在印尼、或看中 2.8 亿人口的电商体量与「ID」语义 → .id 的市场规模无可替代；同时做越南与印尼两个市场的东南亚品牌通常各注册一个做本地门面——两边语言与地域信号各锚定一国。",
+      pickA: ["越南本地企业与服务", "制造供应链与外贸业务", "面向越南的跨境电商", "在意平续透明价格的持有者"],
+      pickB: ["印尼本地企业与服务", "面向印尼的跨境电商", "身份、账号与开发者工具产品", "看中人口体量的大众消费品牌"],
+    },
+    en: {
+      title: ".vn vs .id: Vietnam or Indonesia — Two High-Growth Southeast Asian ccTLDs Compared",
+      metaDescription:
+        ".vn is Vietnam's country domain at about $40/yr flat, open to foreign registrants; .id is Indonesia's, open to anyone, at about $8 in year one but ~$30/yr renewal. Compare market signals, renewal structure and Southeast Asian positioning, then hunt available names.",
+      verdict:
+        "The country domains of two of Southeast Asia's fastest-growing markets, both open to foreign registrants — the divide is market profile and renewal structure. Vietnam-focused → .vn: run by VNNIC with about 600,000 registrations, among Southeast Asia's largest ccTLDs; Vietnam has about 100 million people and one of the world's fastest-growing manufacturing and digital economies — electronics and textile supply chains keep shifting in, and e-commerce (Shopee, Lazada, Tiki) climbs fast; name.vn says \"a Vietnamese business\" at a glance, Vietnamese companies and government institutions overwhelmingly live on the .vn family, and Google geo-associates .vn sites with Vietnam. Pricing is upper-moderate but fully flat: about $40/yr (≈¥290) to register and renew, no teaser games — budget once and done. Indonesia-focused → .id: run by PANDI with about 1 million registrations; Indonesia has about 280 million people — the world's fourth most populous country and Southeast Asia's largest digital economy, with e-commerce (Tokopedia, Shopee) and digital-payment volume far beyond its neighbors; it also naturally reads as English \"ID / identity\", so account and developer-tool products can play the semantic pun. But do the renewal math: about $8 in year one (≈¥60) yet about $30/yr to renew (≈¥220) — budget on the renewal price, which brings long-term cost close to .vn's. The test: users in Vietnam, or manufacturing supply-chain and trade ventures landing there → .vn is flat, transparent and high-trust; users in Indonesia, or brands chasing a 280-million-person e-commerce base and the \"ID\" semantics → .id's market scale is irreplaceable; Southeast Asian brands running both markets usually register one of each as local front doors — each language and geo signal anchors to one country.",
+      pickA: ["Local Vietnamese businesses & services", "Manufacturing supply chains & trade", "Vietnam-facing cross-border e-commerce", "Holders wanting flat, transparent pricing"],
+      pickB: ["Local Indonesian businesses & services", "Indonesia-facing cross-border e-commerce", "Identity, account & developer-tool products", "Mass-market brands chasing population scale"],
+    },
+  },
+  "ph-vs-sg": {
+    slug: "ph-vs-sg",
+    a: "ph",
+    b: "sg",
+    zh: {
+      title: ".ph 和 .sg 怎么选：菲律宾与新加坡两大英语系东南亚 ccTLD 的对比",
+      metaDescription: ".ph 是菲律宾国家域名、任何人可注册、约 $55/年平续；.sg 是新加坡国家域名、约 $39/年平续、需本地存在（注册商可代理）。对比两者的市场信号、资格与东南亚定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "东南亚两个英语系 ccTLD，一个讲人口与外包体量、一个讲枢纽信任，分水岭在市场画像与注册资格。做菲律宾市场 → .ph：注册局 dotPH 运营，菲律宾人口约 1.2 亿，英语普及率居亚洲前列，是全球商业流程外包（BPO）与客服中心枢纽，社交媒体使用时长常年全球第一，电商（Shopee、Lazada）与数字钱包（GCash）渗透率高速增长；name.ph 一眼讲清「菲律宾的生意」，本土企业与政府机构的主站几乎都在 .ph 体系上，Google 也会把 .ph 站点与菲律宾地区相关联。资格完全开放：任何人可直接注册、无需本地地址。价格中等偏上平续：约 $55/年（约 ¥400），无引流钩子。做区域总部与专业服务 → .sg：SGNIC 运营，新加坡是东南亚的商业与金融枢纽，name.sg 讲的是「以新加坡为基地的正规生意」，在东南亚商圈自带合规与专业联想，金融科技与跨境业务尤其受用。资格有门槛：SGNIC 要求本地存在，海外主体通常由注册商提供本地代理（Vodien、Exabytes 等都支持），注册前确认即可。价格中等平续：约 $39/年（约 ¥280），反而比 .ph 便宜。判断标准：做菲律宾本地消费市场、BPO 与客服外包、或看中亚洲最高英语普及率之一的市场 → .ph 零门槛直注、本地信任高；做东南亚区域总部、金融科技与专业服务、想借新加坡合规信号 → .sg 值回代理门槛；同时做菲律宾与区域两层市场的品牌通常 .ph 做本地门面、.sg 做区域总部站。",
+      pickA: ["菲律宾本地企业与服务", "BPO 与客服外包业务", "面向菲律宾的跨境电商", "想零门槛直注的海外主体"],
+      pickB: ["东南亚区域总部与跨境业务", "金融科技与专业服务", "新加坡本地企业与服务", "想借合规信任信号的品牌"],
+    },
+    en: {
+      title: ".ph vs .sg: The Philippines or Singapore — Two English-Speaking Southeast Asian ccTLDs Compared",
+      metaDescription:
+        ".ph is the Philippines' country domain, open to anyone at about $55/yr flat; .sg is Singapore's at about $39/yr flat, requiring local presence (registrar proxies available). Compare market signals, eligibility and Southeast Asian positioning, then hunt available names.",
+      verdict:
+        "Two English-speaking Southeast Asian ccTLDs — one sells population and outsourcing scale, the other hub trust — and the divide is market profile and eligibility. Philippines-focused → .ph: run by registry dotPH; the Philippines has about 120 million people, some of Asia's highest English proficiency, and a global hub role in business-process outsourcing (BPO) and call centers, with social-media time consistently ranking first worldwide and e-commerce (Shopee, Lazada) plus digital wallets (GCash) growing fast; name.ph says \"a Philippine business\" at a glance, Philippine companies and government institutions overwhelmingly live on the .ph family, and Google geo-associates .ph sites with the Philippines. Eligibility is fully open: anyone registers directly with no local address. Pricing is upper-moderate and flat: about $55/yr (≈¥400), no teaser games. Regional HQ and professional services → .sg: run by SGNIC; Singapore is Southeast Asia's business and financial hub, and name.sg says \"a legitimate business based in Singapore\" — a suffix carrying compliance and professionalism connotations across the region, especially valued by fintech and cross-border ventures. Eligibility has a bar: SGNIC requires local presence, with overseas entities typically served by registrar proxy services (Vodien, Exabytes and others) — confirm before registering. Pricing is moderate and flat: about $39/yr (≈¥280) — actually cheaper than .ph. The test: the Philippine consumer market, BPO and call-center ventures, or brands wanting one of Asia's most English-fluent markets → .ph registers with zero friction and strong local trust; a Southeast Asian regional HQ, fintech or professional services wanting Singapore's compliance signal → .sg earns its proxy step; brands running both layers usually put .ph on the local storefront and .sg on the regional HQ site.",
+      pickA: ["Local Philippine businesses & services", "BPO & call-center services", "Philippines-facing cross-border e-commerce", "Overseas entities wanting zero-friction registration"],
+      pickB: ["Southeast Asian regional HQs & cross-border ventures", "Fintech & professional services", "Local Singaporean businesses & services", "Brands wanting the compliance-trust signal"],
+    },
+  },
+  "gr-vs-tr": {
+    slug: "gr-vs-tr",
+    a: "gr",
+    b: "tr",
+    zh: {
+      title: ".gr 和 .tr 怎么选：希腊与土耳其两个地中海邻国 ccTLD 的对比",
+      metaDescription: ".gr 是希腊国家域名、按两年计费折合约 $14/年、任何人可注册；.tr 是土耳其国家域名、约 $15/年平续、2023 年起任何人可直注。对比两者的市场信号、库存与地中海定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "地中海两个邻国的国家域名，资格都完全开放、单价都便宜，分水岭在市场体量与库存时间线。做希腊市场 → .gr：EETT 监管、FORTH-ICS 运营注册系统、注册量约 85 万，希腊人口约 1000 万，是全球旅游重镇（年游客量约为人口三倍）与航运强国（希腊船东掌握全球约五分之一商船运力），name.gr 一眼讲清「希腊的生意」，本土企业与政府机构的主站几乎都在 .gr 上，Google 也会把 .gr 站点与希腊地区相关联。价格有个特别点：按两年为最小周期计费，两年约 $28（约 ¥200）、折合每年约 $14（约 ¥100），欧洲便宜档、续费同价。做土耳其市场 → .tr：BTK 下属 TRABİS 系统运营、注册量约 70 万，土耳其人口约 8500 万、横跨欧亚、是中东与中亚市场的门户，电商增速常年位居全球前列（Trendyol、Hepsiburada 都是本土巨头），市场体量是希腊的八倍以上。最大利好是库存时间线：2023 年起顶级直注才向所有人开放、无需本地文件，好词根库存明显比老牌 ccTLD 干净。价格约 $15/年（约 ¥110）平续，与 .gr 几乎同档。判断标准：用户在希腊、或做旅游、酒店与航运业务 → .gr 便宜、本地信任高；用户在土耳其、或做面向 8500 万人口大市场的电商与制造外贸、想抢 2023 年新开放库存 → .tr 的体量与库存优势明显；同时做爱琴海两岸生意的品牌通常各注册一个做本地门面——两边语言与地域信号各锚定一国。",
+      pickA: ["希腊本地企业与服务", "旅游、酒店与海岛度假业务", "航运与物流公司", "希腊语内容与媒体站"],
+      pickB: ["土耳其本地企业与服务", "面向土耳其的跨境电商", "制造与外贸业务", "想抢 2023 年新开放库存的品牌"],
+    },
+    en: {
+      title: ".gr vs .tr: Greece or Türkiye — Two Mediterranean Neighbors' ccTLDs Compared",
+      metaDescription:
+        ".gr is Greece's country domain, billed in two-year terms at an effective ~$14/yr, open to anyone; .tr is Türkiye's at about $15/yr flat, open to everyone since 2023. Compare market signals, inventory and Mediterranean positioning, then hunt available names.",
+      verdict:
+        "The country domains of two Mediterranean neighbors, both fully open and cheap per year — the divide is market size and inventory timeline. Greece-focused → .gr: overseen by regulator EETT with the registry run by research institute FORTH-ICS, at about 850,000 registrations; Greece has about 10 million people, a tourism powerhouse (annual visitors run about triple the population) and a shipping giant (Greek owners control roughly a fifth of the world's merchant fleet); name.gr says \"a Greek business\" at a glance, Greek companies and government institutions overwhelmingly live on .gr, and Google geo-associates .gr sites with Greece. Pricing has a quirk: terms are billed in two-year minimums, about $28 per two years (≈¥200) — an effective ~$14/yr (≈¥100), cheap by European standards with flat renewals. Türkiye-focused → .tr: run by the TRABİS system under regulator BTK with about 700,000 registrations; Türkiye has about 85 million people, straddles Europe and Asia as a gateway to Middle Eastern and Central Asian markets, and posts e-commerce growth among the world's fastest (Trendyol and Hepsiburada are homegrown giants) — a market more than eight times Greece's size. The biggest win is the inventory timeline: direct second-level registration opened to everyone only in 2023 with no local documents, so good-root inventory is notably cleaner than older ccTLDs. Pricing is about $15/yr (≈¥110) flat — essentially the same tier as .gr. The test: users in Greece, or tourism, hotel and shipping ventures → .gr is cheap with strong local trust; users in Türkiye, or e-commerce and manufacturing ventures targeting an 85-million-person market hunting the 2023 fresh inventory → .tr's scale and inventory edge are clear; brands trading on both sides of the Aegean usually register one of each as local front doors — each language and geo signal anchors to one country.",
+      pickA: ["Local Greek businesses & services", "Tourism, hotels & island getaways", "Shipping & logistics companies", "Greek-language content & media"],
+      pickB: ["Local Turkish businesses & services", "Türkiye-facing cross-border e-commerce", "Manufacturing & foreign trade", "Brands hunting the 2023 fresh inventory"],
+    },
+  },
+  "ro-vs-pl": {
+    slug: "ro-vs-pl",
+    a: "ro",
+    b: "pl",
+    zh: {
+      title: ".ro 和 .pl 怎么选：罗马尼亚与波兰两大东欧 IT 市场 ccTLD 的对比",
+      metaDescription: ".ro 是罗马尼亚国家域名、约 $13/年平续、任何人可注册；.pl 是波兰国家域名、首年约 $6 但续费约 $25/年、同样零门槛。对比两者的市场信号、续费结构与东欧定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "东欧两个 IT 重镇的国家域名，资格都完全开放，分水岭在市场体量与续费结构。做罗马尼亚市场 → .ro：国家研究院 ICI 布加勒斯特旗下 RoTLD 运营、注册量约 70 万，罗马尼亚人口约 1900 万、是欧盟增长最快的经济体之一，程序员人均密度居欧洲前列（UiPath、Bitdefender 都发家于此），互联网速度长期位居全球第一梯队，name.ro 一眼讲清「罗马尼亚的生意」，本土企业（eMAG 是本土电商巨头）与政府机构的主站几乎都在 .ro 上，Google 也会把 .ro 站点与罗马尼亚地区相关联。价格便宜且平续：约 $13/年（约 ¥95），注册续费同价、无引流钩子。做波兰市场 → .pl：国家研究院 NASK 运营、注册量约 250 万、中东欧最大的 ccTLD，波兰是欧盟第五人口大国、区域第一大经济体，电商增速常年领跑欧洲（本土巨头 Allegro 就在 .pl 上），软件外包与 IT 人才储备深厚，市场体量约为罗马尼亚的两倍。但续费要算清：首年约 $6（约 ¥45）、续费约 $25/年（约 ¥180），预算按续费价算——长期成本几乎是 .ro 的两倍。判断标准：用户在罗马尼亚、或做 IT 外包与软件开发、在意长期续费成本 → .ro 便宜平续、本地信任高；用户在波兰、或做面向中东欧最大电商市场的品牌 → .pl 的体量与本地信任值回续费；同时做罗波两国生意的东欧品牌通常各注册一个做本地门面——两边语言与地域信号各锚定一国。",
+      pickA: ["罗马尼亚本地企业与服务", "IT 外包与软件开发团队", "面向罗马尼亚的跨境电商", "在意长期续费成本的持有者"],
+      pickB: ["波兰本地企业与服务", "面向波兰的跨境电商", "中东欧软件与 IT 服务", "面向区域最大市场的品牌"],
+    },
+    en: {
+      title: ".ro vs .pl: Romania or Poland — Two Eastern European IT Hub ccTLDs Compared",
+      metaDescription:
+        ".ro is Romania's country domain at about $13/yr flat, open to anyone; .pl is Poland's at about $6 in year one but ~$25/yr renewal, equally zero-bar. Compare market signals, renewal structure and Eastern European positioning, then hunt available names.",
+      verdict:
+        "The country domains of two Eastern European IT strongholds, both fully open — the divide is market size versus renewal structure. Romania-focused → .ro: run by the RoTLD registry under national research institute ICI Bucharest with about 700,000 registrations; Romania has about 19 million people, one of the EU's fastest-growing economies, developer density among Europe's highest (UiPath and Bitdefender both started here) and internet speeds in the global top tier; name.ro says \"a Romanian business\" at a glance, Romanian companies (eMAG is the homegrown e-commerce giant) and government institutions overwhelmingly live on .ro, and Google geo-associates .ro sites with Romania. Pricing is cheap and flat: about $13/yr (≈¥95) to register and renew, no teaser games. Poland-focused → .pl: run by national research institute NASK with about 2.5 million registrations, Central and Eastern Europe's largest ccTLD; Poland is the EU's fifth most populous country and the region's biggest economy, with e-commerce growth consistently leading Europe (homegrown giant Allegro lives on .pl) and a deep software-outsourcing and IT talent base — a market roughly twice Romania's size. But do the renewal math: about $6 in year one (≈¥45) yet about $25/yr to renew (≈¥180) — budget on the renewal price, nearly twice .ro's long-term cost. The test: users in Romania, or IT-outsourcing and software ventures minding long-term renewal costs → .ro is cheap, flat and high-trust; users in Poland, or brands targeting the region's largest e-commerce market → .pl's scale and local trust earn the renewal; Eastern European brands running both countries usually register one of each as local front doors — each language and geo signal anchors to one country.",
+      pickA: ["Local Romanian businesses & services", "IT outsourcing & dev teams", "Romania-facing cross-border e-commerce", "Holders minding long-term renewal costs"],
+      pickB: ["Local Polish businesses & services", "Poland-facing cross-border e-commerce", "CEE software & IT services", "Brands targeting the region's largest market"],
+    },
+  },
+  "hu-vs-cz": {
+    slug: "hu-vs-cz",
+    a: "hu",
+    b: "cz",
+    zh: {
+      title: ".hu 和 .cz 怎么选：匈牙利与捷克两个中欧制造强国 ccTLD 的对比",
+      metaDescription: ".hu 是匈牙利国家域名、约 $20/年平续、需欧盟/EEA 身份或匈牙利商标（注册商可代理）；.cz 是捷克国家域名、约 $10/年平续、任何人可注册。对比两者的市场信号、资格与中欧定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "中欧两个制造强国的国家域名，价格都平续，分水岭在注册资格与市场画像。做匈牙利市场 → .hu：匈牙利科学院旗下 ISZT 运营、注册量约 85 万，匈牙利人口约 960 万、地处中欧十字路口，是欧洲汽车与电池制造的重要基地（奥迪、奔驰、宝马与宁德时代都有大型工厂），布达佩斯也是区域科技与共享出行创业中心，name.hu 一眼讲清「匈牙利的生意」，本土企业与政府机构的主站几乎都在 .hu 上，Google 也会把 .hu 站点与匈牙利地区相关联。资格有门槛：需欧盟/EEA 公民或机构身份、或持有匈牙利商标——不过多数国际注册商提供欧盟代理服务，非欧盟主体也能落地。价格约 $20/年（约 ¥145）平续。做捷克市场 → .cz：非营利注册局 CZ.NIC 运营、注册量约 150 万，捷克是中欧制造与工程强国（斯柯达的故乡），布拉格是欧洲重要的软件与游戏开发中心（Avast、Kiwi.com 都诞生于此），CZ.NIC 还是开源 Knot DNS/Knot Resolver 的作者、技术口碑一流。资格完全开放：任何人可直接注册、无需本地地址——这是它对 .hu 的最大优势。价格便宜平续：约 $10/年（约 ¥75），只有 .hu 的一半。判断标准：用户在匈牙利、或做汽车与电池供应链落地 → .hu 的本地信任值回资格门槛；用户在捷克、或做制造工程与软件游戏业务、或海外主体想零门槛进中欧 → .cz 便宜、开放、注册局口碑好；同时做匈捷两国生意的中欧品牌通常各注册一个做本地门面——两边语言与地域信号各锚定一国。",
+      pickA: ["匈牙利本地企业与服务", "汽车与电池制造供应链", "面向匈牙利的跨境电商", "布达佩斯科技与出行创业公司"],
+      pickB: ["捷克本地企业与服务", "制造与工程业务", "软件与游戏开发团队", "无欧盟身份想零门槛直注的主体"],
+    },
+    en: {
+      title: ".hu vs .cz: Hungary or Czechia — Two Central European Manufacturing ccTLDs Compared",
+      metaDescription:
+        ".hu is Hungary's country domain at about $20/yr flat, requiring EU/EEA status or a Hungarian trademark (registrar proxies available); .cz is Czechia's at about $10/yr flat, open to anyone. Compare market signals, eligibility and Central European positioning, then hunt available names.",
+      verdict:
+        "The country domains of two Central European manufacturing powerhouses, both flat-priced — the divide is eligibility and market profile. Hungary-focused → .hu: run by ISZT under the Hungarian Academy of Sciences with about 850,000 registrations; Hungary has about 9.6 million people at the crossroads of Central Europe and is a major base for European automotive and battery manufacturing (Audi, Mercedes, BMW and CATL all run large plants), while Budapest is a regional hub for tech and mobility startups; name.hu says \"a Hungarian business\" at a glance, Hungarian companies and government institutions overwhelmingly live on .hu, and Google geo-associates .hu sites with Hungary. Eligibility has a bar: EU/EEA citizens or organizations, or a Hungarian trademark — but most international registrars offer EU proxy services, so non-EU parties can still land one. Pricing is about $20/yr (≈¥145) flat. Czechia-focused → .cz: run by non-profit registry CZ.NIC with about 1.5 million registrations; Czechia is a Central European manufacturing and engineering powerhouse (home of Škoda), Prague is a major European software and game-development hub (Avast and Kiwi.com were born there), and CZ.NIC authored the open-source Knot DNS/Knot Resolver — a registry with a stellar technical reputation. Eligibility is fully open: anyone registers directly with no local address — its biggest edge over .hu. Pricing is cheap and flat: about $10/yr (≈¥75), half of .hu's. The test: users in Hungary, or automotive and battery supply-chain ventures landing there → .hu's local trust earns the eligibility step; users in Czechia, or manufacturing, engineering, software and game-dev ventures, or non-EU entities wanting zero-friction Central European entry → .cz is cheap, open and backed by a well-regarded registry; Central European brands running both countries usually register one of each as local front doors — each language and geo signal anchors to one country.",
+      pickA: ["Local Hungarian businesses & services", "Automotive & battery supply chains", "Hungary-facing cross-border e-commerce", "Budapest tech & mobility startups"],
+      pickB: ["Local Czech businesses & services", "Manufacturing & engineering ventures", "Software & game studios", "Non-EU entities wanting zero-friction registration"],
+    },
+  },
+  "cl-vs-mx": {
+    slug: "cl-vs-mx",
+    a: "cl",
+    b: "mx",
+    zh: {
+      title: ".cl 和 .mx 怎么选：智利与墨西哥两个拉美西语市场 ccTLD 的对比",
+      metaDescription: ".cl 是智利国家域名、约 $18/年平续、向全球开放（需智利本地联系人，注册商可代办）；.mx 是墨西哥国家域名、任何人可注册、首年约 $13 但续费约 $50/年。对比两者的市场信号、续费结构与拉美定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "拉美两个西语市场的国家域名，资格都对海外注册人友好，分水岭在市场画像与续费结构。做智利市场 → .cl：智利大学旗下 NIC Chile 运营、注册量约 75 万，智利人口约 1900 万、是拉美最稳定、人均收入最高的经济体之一：全球最大的铜与锂出口国（新能源供应链的上游要地），互联网渗透率与电商成熟度居拉美前列（Mercado Libre、Falabella 都深耕于此），name.cl 一眼讲清「智利的生意」，本土企业与政府机构的主站几乎都在 .cl 上，Google 也会把 .cl 站点与智利地区相关联。资格向全球开放：外国注册人只需一位智利本地联系人（多数国际注册商可代办）、无需本地公司。价格便宜偏中等且平续：约 $18/年（约 ¥130），无引流钩子。做墨西哥与北美西语市场 → .mx：Registry MX（NIC México）运营、注册量约 130 万，墨西哥是拉美第二大经济体、全球第一大西语国家（人口约 1.3 亿），美墨近岸外包浪潮下制造与供应链业务用 .mx 讲「墨西哥落地」很自然；资格完全开放、任何人可直注、无需本地地址。但续费要算清：首年约 $13（约 ¥90）、续费约 $50/年（约 ¥360），长期成本接近 .cl 的三倍，预算按续费价算。判断标准：用户在智利、或做矿业、锂铜产业链外贸、在意长期续费成本 → .cl 平续便宜、本地信任高；用户在墨西哥、或做近岸制造与面向北美的西语市场 → .mx 的体量与近岸叙事值回续费；同时做智墨两国生意的拉美品牌通常各注册一个做本地门面——两边地域信号各锚定一国。",
+      pickA: ["智利本地企业与服务", "矿业、锂与铜产业链外贸", "面向智利的跨境电商", "在意长期续费成本的持有者"],
+      pickB: ["墨西哥本地企业与服务", "近岸制造与供应链业务", "面向西语美洲的品牌", "看中 1.3 亿人口体量的消费品牌"],
+    },
+    en: {
+      title: ".cl vs .mx: Chile or Mexico — Two Spanish-Speaking Latin American ccTLDs Compared",
+      metaDescription:
+        ".cl is Chile's country domain at about $18/yr flat, open worldwide (a local Chilean contact is required; registrars provide one); .mx is Mexico's, open to anyone, at about $13 in year one but ~$50/yr renewal. Compare market signals, renewal structure and Latin American positioning, then hunt available names.",
+      verdict:
+        "The country domains of two Spanish-speaking Latin American markets, both friendly to overseas registrants — the divide is market profile and renewal structure. Chile-focused → .cl: run by NIC Chile under the University of Chile with about 750,000 registrations; Chile has about 19 million people and one of Latin America's most stable, highest-income economies — the world's largest copper and lithium exporter (upstream of the whole new-energy supply chain), with internet penetration and e-commerce maturity at the top of the region (Mercado Libre and Falabella both run deep here); name.cl says \"a Chilean business\" at a glance, Chilean companies and government institutions overwhelmingly live on .cl, and Google geo-associates .cl sites with Chile. Eligibility is open worldwide: foreign registrants just need a local Chilean contact (most international registrars provide one) — no local company required. Pricing is low-to-moderate and flat: about $18/yr (≈¥130), no teaser games. Mexico and the North American Spanish market → .mx: run by Registry MX (NIC México) with about 1.3 million registrations; Mexico is Latin America's second-largest economy and the world's largest Spanish-speaking country (about 130 million people), and amid the US–Mexico nearshoring wave, manufacturing and supply-chain ventures naturally use .mx to signal \"on the ground in Mexico\"; eligibility is fully open with direct registration and no local address. But do the renewal math: about $13 in year one (≈¥90) yet about $50/yr to renew (≈¥360) — nearly three times .cl's long-term cost, so budget on the renewal price. The test: users in Chile, or mining, lithium and copper trade ventures minding long-term renewal costs → .cl is flat, affordable and high-trust; users in Mexico, or nearshoring manufacturing and brands targeting the North American Spanish market → .mx's scale and nearshoring story earn the renewal; Latin American brands running both countries usually register one of each as local front doors — each geo signal anchors to one country.",
+      pickA: ["Local Chilean businesses & services", "Mining, lithium & copper trade", "Chile-facing cross-border e-commerce", "Holders minding long-term renewal costs"],
+      pickB: ["Local Mexican businesses & services", "Nearshoring manufacturing & supply chain", "Brands targeting Spanish-speaking Americas", "Mass-market brands chasing a 130M-person market"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
