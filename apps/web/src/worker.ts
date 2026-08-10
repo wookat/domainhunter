@@ -1233,11 +1233,11 @@ function pageOgSvg(kicker: string, title: string, lang: "zh" | "en"): string {
 </svg>`;
 }
 
-/** hreflang alternate 标签：zh-CN / en / x-default，用 ?lang= 区分语言版本 */
+/** hreflang alternate 标签：zh / en / x-default（zh 为默认，URL 与 canonical 规则一致：zh/x-default 指裸路径，en 指 ?lang=en） */
 function hreflangTags(path: string): string {
   const base = `${SITE_ORIGIN}${path}`;
   return [
-    `<link rel="alternate" hreflang="zh-CN" href="${base}?lang=zh" />`,
+    `<link rel="alternate" hreflang="zh" href="${base}" />`,
     `<link rel="alternate" hreflang="en" href="${base}?lang=en" />`,
     `<link rel="alternate" hreflang="x-default" href="${base}" />`,
   ].join("\n    ");
@@ -1789,7 +1789,7 @@ app.get("/sitemap.xml", (c) => {
   const paths = sitemapPaths();
   const alt = (p: string) =>
     [
-      `    <xhtml:link rel="alternate" hreflang="zh-CN" href="${SITE_ORIGIN}${p}?lang=zh" />`,
+      `    <xhtml:link rel="alternate" hreflang="zh" href="${SITE_ORIGIN}${p}" />`,
       `    <xhtml:link rel="alternate" hreflang="en" href="${SITE_ORIGIN}${p}?lang=en" />`,
       `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_ORIGIN}${p}" />`,
     ].join("\n");
