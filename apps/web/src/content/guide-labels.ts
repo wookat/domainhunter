@@ -287,4 +287,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "organicfood", zh: "有机食品电商", en: "Organic food" },
   { slug: "permanentmakeup", zh: "半永久纹绣", en: "Permanent makeup" },
   { slug: "homedecor", zh: "家居饰品", en: "Home decor" },
+  { slug: "craftvodka", zh: "精酿伏特加", en: "Craft vodka" },
+  { slug: "esportsnews", zh: "棋牌电竞资讯", en: "Esports & gaming news" },
+  { slug: "sportsodds", zh: "体育竞猜资讯", en: "Sports odds & analysis" },
+  { slug: "tabletopclub", zh: "桌游俱乐部", en: "Tabletop clubs" },
+  { slug: "futsal", zh: "五人制足球场馆", en: "Futsal venues" },
+  { slug: "fashionbuyer", zh: "快时尚买手店", en: "Fashion select shops" },
 ];

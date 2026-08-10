@@ -2061,6 +2061,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个家居饰品与软装品牌，寓意「把理想生活摆上柜子」；气质要松弛有品、立意能从花瓶延伸到床品；场景是新家九宫格、礼盒卡片和「这是我在 XX 买的」的推荐里都有生活品味。",
     en: "A home decor and soft-furnishing brand. The name should promise the good life placed on the shelf; the vibe is relaxed and tasteful, with a concept that stretches from vase to bedding; it must add taste points in the new-home photo grid, on the gift card, and in the \"I got it at X\".",
   },
+  {
+    slug: "craftvodka",
+    labelZh: "精酿伏特加",
+    labelEn: "Craft vodka",
+    zh: "一个精酿伏特加与小批量蒸馏品牌，寓意「冰点之上的干净想象」；气质要冷冽克制、工艺感能撑起三倍溢价；场景是酒标、冻杯特写和调酒师说「试试 XX」的推荐里都体面好念。",
+    en: "A craft vodka and small-batch distilling brand. The name should promise a clean imagination above the freezing point; the vibe is cool and restrained, with craft enough to carry a triple premium; it must read well on the label, in the frosted-glass close-up, and in the bartender's \"try X\".",
+  },
+  {
+    slug: "esportsnews",
+    labelZh: "棋牌电竞资讯",
+    labelEn: "Esports & gaming news",
+    zh: "一个棋牌电竞赛事资讯与数据媒体，寓意「解说席而不是牌桌」；气质要专业热血、数据感十足且离下注越远越好；场景是赛事快讯标题、数据榜单页眉和主播口播里都权威顺口。",
+    en: "An esports and card-gaming news and data outlet. The name should promise the commentary desk, never the table; the vibe is professional and spirited, data-forward and as far from the wager as possible; it must carry authority in the match headline, the rankings header, and the caster's shoutout.",
+  },
+  {
+    slug: "sportsodds",
+    labelZh: "体育竞猜资讯",
+    labelEn: "Sports odds & analysis",
+    zh: "一个体育赛事数据与赛前分析资讯站，寓意「帮你看懂数字，不替你下注」；气质要冷静专业、快人一步；场景是比分推送、赛前拆解标题和球迷群转发「XX 的分析」里都可信好念。",
+    en: "A sports data and pre-match analysis site. The name should promise help reading the numbers, never placing the bet; the vibe is calm, professional and a beat ahead; it must feel credible in the score push, the preview headline, and the fan-group forward of \"X's breakdown\".",
+  },
+  {
+    slug: "tabletopclub",
+    labelZh: "桌游俱乐部",
+    labelEn: "Tabletop club",
+    zh: "一家桌游俱乐部与桌游吧，寓意「一群人围着一张桌子的晚上」；气质要热闹松弛、新客敢推门；场景是「今晚去哪」的组局群名、店门灯箱和会员卡上都好念有归属感。",
+    en: "A tabletop club and board game cafe. The name should promise an evening of people around one table; the vibe is lively yet easy, unintimidating to first-timers; it must work as the game-night chat title, on the lightbox sign, and on the membership card with belonging built in.",
+  },
+  {
+    slug: "futsal",
+    labelZh: "五人制足球场馆",
+    labelEn: "Futsal venue",
+    zh: "一家五人制足球与笼式球场场馆，寓意「城市里也能踢球的热血」；气质要街头利落、灯光感十足；场景是球队群名、队服背后和朋友圈定位「今晚 XX 见」里都好念带感。",
+    en: "A futsal and caged-pitch venue. The name should promise city football under the floodlights; the vibe is street-sharp with night-game energy; it must roll off in the team chat title, print on the jersey back, and land in the geotagged \"see you at X tonight\".",
+  },
+  {
+    slug: "fashionbuyer",
+    labelZh: "快时尚买手店",
+    labelEn: "Fashion select shop",
+    zh: "一家快时尚买手店与潮流集合店，寓意「替你先挑过一遍的眼光」；气质要有杂志感、品味立得住每周上新；场景是店头招牌、购物袋和「XX 家又上新了」的朋友圈里都有辨识度。",
+    en: "A fast-fashion buyer store and select shop. The name should promise an eye that chose first; the vibe is magazine-grade, with taste that holds up to weekly drops; it must stay distinctive on the storefront, the shopping bag, and in the \"X just dropped new arrivals\" post.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
