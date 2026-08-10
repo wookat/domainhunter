@@ -528,7 +528,7 @@
     ]
   },
   "vs": {
-    "count": 288,
+    "count": 294,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -817,7 +817,13 @@
       "associates-vs-partners",
       "cheap-vs-discount",
       "bargains-vs-deals",
-      "supplies-vs-supply"
+      "supplies-vs-supply",
+      "camp-vs-courses",
+      "camera-vs-photography",
+      "diamonds-vs-jewelry",
+      "theater-vs-show",
+      "accountants-vs-tax",
+      "engineer-vs-engineering"
     ]
   }
 }

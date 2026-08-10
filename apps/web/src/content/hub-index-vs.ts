@@ -298,4 +298,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "cheap-vs-discount", a: "cheap", b: "discount", title: { zh: ".cheap 和 .discount 怎么选：报价格标签还是报打折动作", en: ".cheap vs .discount: The Price Tag or the Markdown" } },
   { slug: "bargains-vs-deals", a: "bargains", b: "deals", title: { zh: ".bargains 和 .deals 怎么选：捡漏乐趣与交易促成", en: ".bargains vs .deals: The Thrill of the Find or the Transaction" } },
   { slug: "supplies-vs-supply", a: "supplies", b: "supply", title: { zh: ".supplies 和 .supply 怎么选：一件件耗材与供给概念", en: ".supplies vs .supply: The Items or the Provisioning" } },
+  { slug: "camp-vs-courses", a: "camp", b: "courses", title: { zh: ".camp 和 .courses 怎么选：沉浸式集训与体系化课程", en: ".camp vs .courses: Immersive Cohorts or Structured Curriculum" } },
+  { slug: "camera-vs-photography", a: "camera", b: "photography", title: { zh: ".camera 和 .photography 怎么选：器材设备与摄影手艺", en: ".camera vs .photography: The Gear or the Craft" } },
+  { slug: "diamonds-vs-jewelry", a: "diamonds", b: "jewelry", title: { zh: ".diamonds 和 .jewelry 怎么选：单一品类锋利度与全品类覆盖", en: ".diamonds vs .jewelry: Category Sharpness or Full-Range Coverage" } },
+  { slug: "theater-vs-show", a: "theater", b: "show", title: { zh: ".theater 和 .show 怎么选：剧场场所感与泛演出内容", en: ".theater vs .show: The Venue or the Program" } },
+  { slug: "accountants-vs-tax", a: "accountants", b: "tax", title: { zh: ".accountants 和 .tax 怎么选：职业身份与业务主题", en: ".accountants vs .tax: The Profession or the Subject" } },
+  { slug: "engineer-vs-engineering", a: "engineer", b: "engineering", title: { zh: ".engineer 和 .engineering 怎么选：个人身份与公司生意", en: ".engineer vs .engineering: The Person or the Practice" } },
 ];

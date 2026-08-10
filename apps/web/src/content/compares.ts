@@ -6361,6 +6361,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Wholesale & supply-chain platforms", "Building-material & industrial vendors", "Streetwear supply naming tradition", "Industry-outfitter brand narrative"],
     },
   },
+  "camp-vs-courses": {
+    slug: "camp-vs-courses",
+    a: "camp",
+    b: "courses",
+    zh: {
+      title: ".camp 和 .courses 怎么选：沉浸式集训与体系化课程",
+      metaDescription: ".camp 报「训练营」的沉浸集训感，适合编程/健身训练营与营地业务；.courses 报「课程」的体系感，适合在线课程平台与网课讲师。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "两个都是教育类后缀，气质却分了家：一个是「集中营地式的沉浸训练」，一个是「按章节推进的体系课程」。.camp 说「来集训」——编程训练营、健身营、写作营用 code.camp、fit.camp，bootcamp 文化让它在科技与技能培训圈自带「短期高强度、出成果」的气氛；它同时还是露营与营地业务的本命后缀，营地、房车公园、夏令营用它域名即场景。Identity Digital 运营，首年约 $12（约 ¥88）、续费约 $55/年（约 ¥398），首年促销、续费跳档，长期持有按续费价预算。.courses 说「这里有课」——在线课程平台、网课讲师个人站、企业培训目录用 name.courses，复数形式暗示「一整套课程清单」，与用户搜「xx courses」的习惯逐字对齐；首年约 $2（约 ¥11）、续费约 $31/年（约 ¥226），首年几乎白送、续费也比 .camp 温和，是两者里持有成本更低的一个。判断标准：产品卖「一段时间的沉浸体验」——集训营、挑战营、线下营地 → .camp 的场景感更强，短词根（code、fit、write）配它读起来就是营名；产品卖「可自选可回放的课程内容」——录播课、课程库、认证培训 → .courses 更直接，「品类 + .courses」贴搜索也贴 SEO。三点注意：一是续费差约 $24/年，长期持有 .courses 便宜近一半；二是 .camp 在英语网络语境另有「刻意夸张」的亚文化含义，正式教育品牌留意语境；三是 .courses 七个字母、.camp 四个字母，口播与拼写 .camp 更利落。命名上「主题 + .camp」适合训练营，「品类 + .courses」适合课程平台，两个都别在词根里重复后缀词。",
+      pickA: ["编程/健身/写作训练营", "露营地与房车公园、夏令营", "短期高强度集训产品", "词根短、要口播利落的品牌"],
+      pickB: ["在线课程平台与课程库", "网课讲师与认证培训", "「品类 + courses」搜索词对齐", "续费预算敏感的长期站点"],
+    },
+    en: {
+      title: ".camp vs .courses: Immersive Cohorts or Structured Curriculum",
+      metaDescription:
+        ".camp carries the bootcamp's immersive-cohort energy — for coding/fitness camps and campgrounds; .courses promises structured curriculum — for online course platforms and instructors. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are education suffixes, but the vibes split: one is the immersive, all-in cohort, the other the structured, chapter-by-chapter curriculum. .camp says \"come train\" — coding bootcamps, fitness camps and writing retreats on code.camp or fit.camp inherit the bootcamp culture's short-intense-results energy; it's also the native suffix for actual camping businesses, where campgrounds, RV parks and summer camps make the domain the scene. Operated by Identity Digital at about $12 first year (≈¥88) and $55/yr to renew (≈¥398) — promo year one, steep renewal, so budget on the renewal for long holds. .courses says \"lessons inside\" — online course platforms, instructor sites and corporate training catalogs on name.courses use the plural to imply a whole catalog, matching how users literally search \"x courses\"; about $2 first year (≈¥11) and $31/yr to renew (≈¥226) — nearly free to start and the gentler renewal of the pair. The test: if you sell a time-boxed immersive experience — cohorts, challenges, physical camps → .camp's scene-setting is stronger, and short roots (code, fit, write) read like camp names; if you sell self-paced, replayable content — recorded courses, course libraries, certification training → .courses is more direct, and category + .courses aligns with search intent and SEO. Three cautions: the renewal gap is about $24/yr, so .courses is nearly half the holding cost long term; in internet English camp also means \"deliberately exaggerated\" as an aesthetic, so formal education brands should mind the context; and .courses runs 7 letters to .camp's crisp 4 — .camp speaks and spells easier. Naming: theme + .camp fits bootcamps; category + .courses fits course platforms; neither root should repeat the suffix word.",
+      pickA: ["Coding, fitness & writing bootcamps", "Campgrounds, RV parks & summer camps", "Short-form intensive cohort products", "Short roots that need crisp word-of-mouth"],
+      pickB: ["Online course platforms & libraries", "Instructors & certification training", "Word-for-word category + courses searches", "Renewal-budget-sensitive long-term sites"],
+    },
+  },
+  "camera-vs-photography": {
+    slug: "camera-vs-photography",
+    a: "camera",
+    b: "photography",
+    zh: {
+      title: ".camera 和 .photography 怎么选：器材设备与摄影手艺",
+      metaDescription: ".camera 说「器材与设备」，适合器材店、租赁行与摄像头硬件品牌；.photography 说「摄影这门手艺」，适合摄影师与工作室。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同属影像族，分工却很清楚：一个说「机器」，一个说「手艺」。.camera 把器材写进域名——相机与镜头器材店、二手器材交易平台、器材租赁行、测评媒体用 name.camera，卖什么一目了然；智能硬件是它的第二战场，行车记录仪、安防摄像头、网络摄像头品牌用 dash.camera、door.camera 域名即品类。Identity Digital 运营，首年约 $13（约 ¥94）、续费约 $52/年（约 ¥374），续费是首年数倍，长期按续费价算账。.photography 说的是摄影这门生意——婚纱写真工作室、独立摄影师、摄影课程与社区用 name.photography，「姓名/城市 + .photography」与客户搜「地名 + photography」的习惯逐字对齐，本地获客属性强；注册约 $6（约 ¥41）、续费约 $29/年（约 ¥211），持有成本约为 .camera 的六成。判断标准：生意围绕「设备」转——卖器材、租器材、评器材、做摄像头硬件 → .camera 语义最准，.photography 反而含糊；生意围绕「拍摄服务与作品」转——约拍、婚礼跟拍、作品集、教学 → .photography 更贴，搜索匹配度也更高。三点注意：一是续费差约 $23/年，纯服务型摄影师选 .photography 更省；二是 .photography 有 11 个字母、.camera 6 个字母，前者词根务必短、后者也不宜长；三是两个都别在词根重复后缀词，避免 camerashop.camera 式冗余。命名上「品牌/场景 + .camera」适合器材与硬件，「姓名/城市 + .photography」是摄影师官网的黄金句式。",
+      pickA: ["相机与镜头器材店、租赁行", "二手器材交易与测评媒体", "摄像头与影像硬件品牌", "域名即品类的硬件单品"],
+      pickB: ["婚纱写真与独立摄影师", "「城市 + photography」本地获客", "摄影课程、社区与作品集", "续费预算敏感的服务型站点"],
+    },
+    en: {
+      title: ".camera vs .photography: The Gear or the Craft",
+      metaDescription:
+        ".camera means the equipment — for gear stores, rental houses and camera hardware brands; .photography means the craft — for photographers and studios. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same imaging family, clean division of labor: one names the machine, the other the craft. .camera writes the gear into the address — camera and lens stores, used-equipment marketplaces, rental houses and review media on name.camera explain themselves at a glance; smart hardware is its second front, where dashcam, security-camera and webcam brands on dash.camera or door.camera make the domain the category. Operated by Identity Digital at about $13 first year (≈¥94) and $52/yr to renew (≈¥374) — several times the intro, so budget on the renewal. .photography names the business of shooting — wedding and portrait studios, independent photographers, photo courses and communities on name.photography, where name or city + .photography matches \"place + photography\" searches word for word, a strong local-lead shape; about $6 to register (≈¥41) and $29/yr to renew (≈¥211), roughly 60% of .camera's holding cost. The test: if the business revolves around equipment — selling, renting, reviewing gear, building camera hardware → .camera is semantically exact where .photography reads vague; if it revolves around shoots and work — bookings, wedding coverage, portfolios, teaching → .photography fits truer and matches search intent better. Three cautions: the renewal gap is about $23/yr, so service photographers save on .photography; .photography runs 11 letters to .camera's 6 — keep roots short on both; and never repeat the suffix word in the root — avoid camerashop.camera redundancy. Naming: brand or scenario + .camera fits gear and hardware; name or city + .photography is the golden shape for photographer sites.",
+      pickA: ["Camera & lens stores, rental houses", "Used-gear marketplaces & review media", "Camera hardware brands", "Single-product hardware where domain = category"],
+      pickB: ["Wedding & portrait photographers", "City + photography local-lead searches", "Photo courses, communities & portfolios", "Renewal-budget-sensitive service sites"],
+    },
+  },
+  "diamonds-vs-jewelry": {
+    slug: "diamonds-vs-jewelry",
+    a: "diamonds",
+    b: "jewelry",
+    zh: {
+      title: ".diamonds 和 .jewelry 怎么选：单一品类锋利度与全品类覆盖",
+      metaDescription: ".diamonds 只说钻石，适合钻石零售、培育钻石与婚戒定制；.jewelry 覆盖全品类首饰，适合综合珠宝店与设计师品牌。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个是单品类的锋利，一个是全品类的覆盖。.diamonds 只说钻石——钻石零售品牌、培育钻石电商、婚戒定制工作室、宝石批发商用 name.diamonds，客户搜「品牌 + diamonds」时逐字吻合；培育钻石赛道爆发后，lab.diamonds、eco.diamonds 这样的名字自带品类故事。Identity Digital 运营，首年约 $50（约 ¥360）、续费约 $52/年（约 ¥374），平进平出无钩子，高价本身筛掉了投机注册。.jewelry 覆盖项链、耳环、手链到定制首饰的全品类——综合珠宝店、设计师首饰品牌、饰品电商用 name.jewelry 空间更大，不会因为品类扩张被域名锁死；首年约 $11（约 ¥78）、续费约 $52/年（约 ¥374），首年便宜、续费与 .diamonds 持平，长期持有成本两者几乎一样。判断标准：品牌主打钻石——钻戒、裸钻、培育钻，客户心智里就是「买钻石找他家」→ .diamonds 定位更锋利，搜索匹配也更准；产品线覆盖多品类或未来会扩——金饰、彩宝、轻奢饰品 → .jewelry 的包容度是刚需，别用 .diamonds 把自己框死。三点注意：一是长期续费两者几乎同价，选型看品类战略而非价格；二是 .diamonds 八个字母、.jewelry 七个字母都不短，词根控制在 4–5 字符；三是高客单价品类信任门槛高，新品牌建议 .com 做主站、品类后缀做垂直站或活动页。命名上「品牌 + .diamonds」适合钻石专门店，「产地/工艺 + .diamonds」（lab、antwerp）适合垂直叙事，「品牌/风格 + .jewelry」适合综合珠宝与设计师品牌。",
+      pickA: ["钻石零售与婚戒定制", "培育钻石电商（lab/eco 叙事）", "宝石批发与供应链商", "「品牌 + diamonds」搜索词吻合"],
+      pickB: ["全品类综合珠宝店", "设计师首饰与轻奢品牌", "未来会扩品类的电商", "首年预算敏感的新品牌"],
+    },
+    en: {
+      title: ".diamonds vs .jewelry: Category Sharpness or Full-Range Coverage",
+      metaDescription:
+        ".diamonds says only diamonds — for diamond retail, lab-grown e-commerce and ring studios; .jewelry covers every ornament — for full-range jewelers and designer brands. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One is single-category sharpness, the other full-range coverage. .diamonds says only diamonds — diamond retail brands, lab-grown diamond e-commerce, engagement-ring studios and gem wholesalers on name.diamonds match \"brand + diamonds\" searches word for word; with the lab-grown boom, names like lab.diamonds or eco.diamonds carry the category story built in. Operated by Identity Digital at about $50 first year (≈¥360) and $52/yr to renew (≈¥374) — flat, no teaser, and the price itself filters out speculative registrations. .jewelry covers everything from necklaces and earrings to custom pieces — full-range jewelers, designer jewelry brands and ornament e-commerce get more room on name.jewelry and won't outgrow the domain as the catalog expands; about $11 first year (≈¥78) and $52/yr to renew (≈¥374) — cheap to start, identical renewal, so long-term holding costs are effectively the same. The test: if the brand is diamond-first — rings, loose stones, lab-grown, and customers think \"diamonds = this shop\" → .diamonds positions sharper and matches search more precisely; if the line spans categories or will expand — gold, gemstones, accessible luxury → .jewelry's breadth is a requirement, and .diamonds would box you in. Three cautions: renewals are near-identical, so decide on category strategy, not price; at 8 and 7 letters neither suffix is short — keep roots to 4–5 characters; and high-ticket categories carry high trust bars, so new brands should pair a .com main site with the category suffix as the vertical or campaign domain. Naming: brand + .diamonds fits diamond specialists; origin or craft + .diamonds (lab, antwerp) fits vertical narratives; brand or style + .jewelry fits full-range and designer brands.",
+      pickA: ["Diamond retail & engagement rings", "Lab-grown e-commerce (lab/eco narrative)", "Gem wholesalers & supply chains", "Word-for-word brand + diamonds searches"],
+      pickB: ["Full-range jewelry stores", "Designer & accessible-luxury brands", "E-commerce that will expand categories", "First-year-budget-sensitive new brands"],
+    },
+  },
+  "theater-vs-show": {
+    slug: "theater-vs-show",
+    a: "theater",
+    b: "show",
+    zh: {
+      title: ".theater 和 .show 怎么选：剧场场所感与泛演出内容",
+      metaDescription: ".theater 报「剧场」的场所感，适合剧院剧团官网与家庭影院方案商；.show 泛指一切「演出/节目」，适合综艺、直播秀与线上节目。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个是「场所」，一个是「节目」。.theater 把剧场搬进域名——剧院与剧团官网、演出季宣传页、戏剧教育机构用 name.theater，观众一眼读懂这是看戏的地方；「城市/街区 + .theater」（downtown.theater）是剧院官网的黄金句式，本地搜索匹配度极高；它还有个务实的第二客群：家庭影院与视听方案商用 home.theater 式命名域名即品类。Identity Digital 运营，首年约 $55（约 ¥396）、续费约 $60/年（约 ¥430），平进平出，成本可预期但绝对值偏高。.show 泛指一切演出与节目——综艺与晚会、直播秀、播客视频节目、时装秀、车展宠物展用 name.show 都成立，语义边界宽得多；注册约 $8（约 ¥59）、续费约 $36/年（约 ¥256），首年便宜、续费也只有 .theater 六成。判断标准：有实体场馆或舞台艺术属性——剧院、剧团、戏剧教育、家庭影院 → .theater 的场所感与行业身份无可替代；做的是「节目内容」本身——线上综艺、直播栏目、播客节目、巡回展会 → .show 更宽容也更上口，「节目名 + .show」读起来就是栏目招牌。三点注意：一是 .theater 是美式拼写，面向英联邦市场留意 theatre 差异；二是续费差约 $24/年，纯内容型节目选 .show 更省；三是 .theater 七个字母、.show 四个字母，口播传播 .show 优势明显。命名上「城市 + .theater」适合场馆，「剧种 + .theater」（puppet.theater）适合垂直剧团，「节目名 + .show」适合内容栏目与活动。",
+      pickA: ["剧院与剧团官网", "演出季与剧目宣传页", "戏剧教育与青少年剧社", "家庭影院与视听方案商"],
+      pickB: ["综艺、直播秀与线上节目", "播客与视频栏目", "时装秀、车展等活动展会", "口播传播多、要短后缀的品牌"],
+    },
+    en: {
+      title: ".theater vs .show: The Venue or the Program",
+      metaDescription:
+        ".theater carries the sense of place — for theaters, troupes and home-theater providers; .show covers any performance or program — for variety shows, live streams and online series. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One names the place, the other the program. .theater moves the stage into the address — theater and troupe websites, season promo pages and drama schools on name.theater tell audiences instantly where the show is; city or district + .theater (downtown.theater) is the golden shape for venue sites with strong local search alignment, and home-theater AV integrators form a pragmatic second audience where home.theater-style names make the domain the category. Operated by Identity Digital at about $55 first year (≈¥396) and $60/yr to renew (≈¥430) — flat and predictable, but the absolute cost runs high. .show covers any performance or program — variety shows and galas, live-stream shows, podcast and video series, fashion shows, auto and pet expos all work on name.show, a much wider semantic range; about $8 to register (≈¥59) and $36/yr to renew (≈¥256) — cheap year one and roughly 60% of .theater's renewal. The test: if there's a physical venue or stage-art identity — theaters, troupes, drama education, home theater → .theater's sense of place and industry identity is irreplaceable; if the product is the program itself — online variety, live shows, podcast series, touring expos → .show is more flexible and speaks easier, and showname.show reads like a marquee. Three cautions: .theater is the American spelling — mind theatre for Commonwealth markets; the renewal gap is about $24/yr, so content-first programs save on .show; and .show's 4 letters beat .theater's 7 for word-of-mouth. Naming: city + .theater fits venues; genre + .theater (puppet.theater) fits specialist troupes; show name + .show fits programs and events.",
+      pickA: ["Theater & troupe websites", "Season & show promo pages", "Drama schools & youth theater", "Home-theater & AV providers"],
+      pickB: ["Variety, live-stream & online shows", "Podcast & video series", "Fashion shows, expos & touring events", "Word-of-mouth-heavy brands needing a short suffix"],
+    },
+  },
+  "accountants-vs-tax": {
+    slug: "accountants-vs-tax",
+    a: "accountants",
+    b: "tax",
+    zh: {
+      title: ".accountants 和 .tax 怎么选：职业身份与业务主题",
+      metaDescription: ".accountants 说「我们是会计师」，适合事务所与注册会计师品牌；.tax 说「税这件事」，适合报税服务与税务软件。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同属专业服务族，视角不同：一个报「人」的身份，一个报「事」的主题。.accountants 说「我们是会计师」——会计师事务所、审计服务、记账代理、注册会计师个人品牌用 name.accountants，客户搜「地名/姓氏 + accountants」时逐字吻合，这正是英语市场找会计师的标准搜法；「城市 + .accountants」（london.accountants）是本地获客利器。Identity Digital 运营，首年约 $85（约 ¥612）、续费约 $90/年（约 ¥648），全族最高价平进平出——高价本身是过滤器，注册者几乎全是真事务所，后缀信誉干净。.tax 说的是「税」这个主题——报税季服务、税务筹划、退税工具、税务软件与内容站用 name.tax，file.tax、crypto.tax 这样的「动词/品类 + .tax」读起来就是产品名；注册约 $8（约 ¥59）、续费约 $54/年（约 ¥389），首年便宜、续费也只有 .accountants 六成。判断标准：主体是「执业者与事务所」——审计、记账、综合财税顾问，品牌要传达职业资质 → .accountants 的身份感无可替代；主体是「税务这个产品或内容」——报税 SaaS、退税服务、税务攻略 → .tax 更短更准，品类词入名的空间也大得多。三点注意：一是 .accountants 有 11 个字母是最长后缀之一，词根务必控制在 4–6 字符，.tax 三个字母口播极佳；二是续费差约 $36/年，工具型产品选 .tax 显著更省；三是两者都属 Identity Digital 高信任专业族，新执业个人可先用 .pro 过渡再升级。命名上「姓氏/城市 + .accountants」延续行业传统，「动词/品类 + .tax」适合工具与服务产品。",
+      pickA: ["会计师事务所与审计服务", "记账代理与财税顾问", "注册会计师个人品牌", "「城市 + accountants」本地获客"],
+      pickB: ["报税 SaaS 与退税工具", "税务筹划与咨询服务", "税务内容与攻略站", "要短后缀、品类词入名的产品"],
+    },
+    en: {
+      title: ".accountants vs .tax: The Profession or the Subject",
+      metaDescription:
+        ".accountants names the people — for firms and CPA brands; .tax names the subject — for tax-filing services and tax software. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same professional-services family, different lens: one names the people, the other the subject. .accountants says \"we are the accountants\" — accounting firms, audit practices, bookkeeping agencies and CPA personal brands on name.accountants match \"place/surname + accountants\" searches word for word, exactly how English-speaking clients look for one; city + .accountants (london.accountants) is a local-lead magnet. Operated by Identity Digital at about $85 first year (≈¥612) and $90/yr to renew (≈¥648) — the family's top price, flat, and the price itself is a filter: registrants are almost all real firms, keeping the suffix's reputation clean. .tax names the subject — tax-season services, planning practices, refund tools, tax software and content sites on name.tax, where verb or category + .tax (file.tax, crypto.tax) reads like a product name; about $8 to register (≈¥59) and $54/yr to renew (≈¥389) — cheap year one and roughly 60% of .accountants' renewal. The test: if the entity is the practitioners — audit, bookkeeping, full-service advisory, where the brand must carry professional identity → .accountants is irreplaceable; if the entity is the tax product or content — filing SaaS, refund services, tax guides → .tax is shorter, sharper, and leaves far more room for category-word names. Three cautions: at 11 letters .accountants is among the longest suffixes, so keep the root to 4–6 characters, while 3-letter .tax speaks beautifully; the renewal gap is about $36/yr, so tool products save meaningfully on .tax; and both sit in Identity Digital's high-trust professional family — new solo CPAs can start on .pro and upgrade later. Naming: surname or city + .accountants continues the industry tradition; verb or category + .tax fits tools and service products.",
+      pickA: ["Accounting firms & audit practices", "Bookkeeping agencies & advisory", "CPA personal brands", "City + accountants local-lead searches"],
+      pickB: ["Tax-filing SaaS & refund tools", "Tax planning & consulting services", "Tax content & guide sites", "Category-word names needing a short suffix"],
+    },
+  },
+  "engineer-vs-engineering": {
+    slug: "engineer-vs-engineering",
+    a: "engineer",
+    b: "engineering",
+    zh: {
+      title: ".engineer 和 .engineering 怎么选：个人身份与公司生意",
+      metaDescription: ".engineer 说「我是工程师」，适合个人品牌与独立顾问；.engineering 说「工程这门生意」，适合工程公司与团队官网。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "单复数式的分工，一字之差定了受众：单数报「人」，动名词报「生意」。.engineer 说「我是工程师」——土木、机械、电气、软件工程师的个人站、作品集、独立咨询业务用 name.engineer，「姓名 + .engineer」就是一张数字名片，比 .com 上早已绝迹的姓名域名好拿得多；「专业方向 + .engineer」（solar.engineer、audio.engineer）适合垂直顾问定位。Identity Digital 运营，首年约 $28（约 ¥202）、续费约 $30/年（约 ¥216），平进平出成本可预期。.engineering 说的是工程这门生意——工程公司、设计院、承包商、工程服务团队用 name.engineering，公司官网用动名词更像「一家公司」而不是「一个人」；注册约 $7（约 ¥48）、续费约 $52/年（约 ¥374），首年便宜但续费比 .engineer 贵约 $22/年，长期持有反而是单数更省。判断标准：主体是「个人」——个人品牌、简历作品集、一人咨询工作室 → .engineer 的身份感无可替代，读出来就是「我是工程师」；主体是「公司或团队」——多人事务所、工程承包、技术服务公司 → .engineering 更正式，客户预期里公司就该用它。三点注意：一是部分国家（如加拿大）engineer 是受法律保护的职业头衔，执业相关站点要符合当地资质规定；二是两个后缀都不短（8/11 个字母），词根务必控制在 4–6 字符；三是续费结构相反——.engineering 首年钩子低但续费高，.engineer 平进平出，按持有年限算总账。命名上「姓名 + .engineer」是标准数字名片，「专业 + .engineer」适合垂直顾问，「品牌/地名 + .engineering」适合公司官网。",
+      pickA: ["工程师个人品牌与作品集", "独立咨询工程师", "「专业 + .engineer」垂直顾问", "长期持有、续费预算敏感"],
+      pickB: ["工程公司与设计院官网", "承包商与工程服务团队", "多人事务所的正式形象", "首年预算敏感的新公司"],
+    },
+    en: {
+      title: ".engineer vs .engineering: The Person or the Practice",
+      metaDescription:
+        ".engineer says \"I am one\" — for personal brands and independent consultants; .engineering names the business — for firms and team sites. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "A singular-versus-gerund split that settles the audience in one letter: the singular names the person, the gerund names the practice. .engineer says \"I am an engineer\" — civil, mechanical, electrical and software engineers running personal sites, portfolios or solo consultancies on name.engineer get a digital business card, and your name is far more likely to be available here than on .com; specialty + .engineer (solar.engineer, audio.engineer) suits vertical consulting positioning. Operated by Identity Digital at about $28 first year (≈¥202) and $30/yr to renew (≈¥216) — flat and predictable. .engineering names the business — engineering firms, design institutes, contractors and service teams on name.engineering read as \"a company\", not \"a person\"; about $7 to register (≈¥48) but $52/yr to renew (≈¥374), so the teaser is cheap while the renewal runs about $22/yr above .engineer — long holds are actually cheaper on the singular. The test: if the entity is an individual — personal brand, résumé portfolio, one-person studio → .engineer's identity is irreplaceable; if the entity is a company or team — multi-partner firms, contracting, technical services → .engineering is the formal shape clients expect. Three cautions: in some countries (Canada notably) engineer is a legally protected title, so practice-related sites must follow local licensing rules; at 8 and 11 letters neither suffix is short — keep roots to 4–6 characters; and the pricing structures are opposites — .engineering hooks cheap and renews high while .engineer stays flat, so do the math over your holding horizon. Naming: yourname.engineer is the standard digital business card; specialty + .engineer fits vertical consultants; brand or place + .engineering fits company sites.",
+      pickA: ["Engineer personal brands & portfolios", "Independent consulting engineers", "Specialty + .engineer vertical consultants", "Long holds, renewal-budget sensitive"],
+      pickB: ["Engineering firms & design institutes", "Contractors & service teams", "Formal multi-partner firm presence", "First-year-budget-sensitive new companies"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
