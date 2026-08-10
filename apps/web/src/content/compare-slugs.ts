@@ -351,6 +351,12 @@ export const COMPARE_SLUGS = [
   "monster-vs-games",
   "pics-vs-photos",
   "mobi-vs-app",
+  "asia-vs-global",
+  "buzz-vs-promo",
+  "fans-vs-fan",
+  "place-vs-space",
+  "report-vs-news",
+  "town-vs-city",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

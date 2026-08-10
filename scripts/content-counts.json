@@ -642,7 +642,7 @@
     ]
   },
   "vs": {
-    "count": 348,
+    "count": 354,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -991,7 +991,13 @@
       "cyou-vs-fun",
       "monster-vs-games",
       "pics-vs-photos",
-      "mobi-vs-app"
+      "mobi-vs-app",
+      "asia-vs-global",
+      "buzz-vs-promo",
+      "fans-vs-fan",
+      "place-vs-space",
+      "report-vs-news",
+      "town-vs-city"
     ]
   }
 }

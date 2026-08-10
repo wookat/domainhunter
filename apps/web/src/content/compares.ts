@@ -7681,6 +7681,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["App homepages & download landing pages", "Web Apps & SaaS products", "Enforced-HTTPS security image", "Primary domain for application products"],
     },
   },
+  "asia-vs-global": {
+    slug: "asia-vs-global",
+    a: "asia",
+    b: "global",
+    zh: {
+      title: ".asia 和 .global 怎么选：区域的官方后缀与全球的宣言",
+      metaDescription: ".asia 是亚太区域的官方后缀，注册续费同价、成本可预期；.global 一词完成全球化宣言但价格是高档。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在说市场范围，分工在半径：一个圈定亚太，一个宣称全球。.asia 赢在区域精准——面向亚洲市场的跨境电商与品牌站、亚太区业务的企业官网、亚洲文化与旅行内容站、区域行业协会与展会活动用 name.asia，一眼锁定亚太；它是 2007 年由香港 DotAsia 机构发起、多个亚太国家注册局背书的区域赞助类顶级域，是少数「代表一个大洲」的官方后缀；价格是少见的平价平续结构：注册约 $12/年（约 ¥85）、续费同价——无首年促销陷阱，多年持有成本可预期。.global 赢在全球叙事——跨国公司国际主站、出海品牌海外阵地、国际组织与联盟、全球物流/支付/招聘服务用 name.global，读出来就是「某某的全球站」；Identity Digital 运营，注册约 $31（约 ¥225）、续费约 $78/年（约 ¥560）——高定价本身在筛选认真做国际业务的注册者，好词存量反而更好。判断标准：业务半径是「亚太多国但不泛全球」——跨境电商主攻东亚东南亚、亚太区总部站 → .asia 圈定的中间层最准，价格也只有 .global 的零头；叙事是「不属于任何单一市场」——多大洲布局、国际组织、全球服务卖点 → .global 的宣言无可替代，预算允许时更显实力。两者常见组合打法：集团用 .global 做国际主站，亚太区域站用 .asia 收拢区域业务。三点注意：一是续费差六倍以上（$12 vs $78/年），批量注册前先算三年总成本；二是 .asia 注册政策要求至少一个亚太联系人（多数注册商可自动满足），.global 无此限制；三是小团队用 .global 口气大于实力时用户反感更强，区域起步用 .asia 更稳。命名上「品牌 + .asia」（acme.asia）与「品牌 + .global」（acme.global）都是直给主流款，别再叠加 world/international 等冗余词。",
+      pickA: ["面向亚洲市场的跨境电商与品牌站", "亚太区业务的企业官网", "亚洲文化与旅行内容站", "预算敏感、要成本可预期的区域业务"],
+      pickB: ["跨国公司国际主站", "出海品牌的全球阵地", "国际组织与行业联盟", "以「全球服务」为卖点的业务"],
+    },
+    en: {
+      title: ".asia vs .global: The Official Region or The Worldwide Claim",
+      metaDescription:
+        ".asia is the official Asia-Pacific suffix with flat register-and-renew pricing; .global declares worldwide reach at a premium price. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both name a market radius; the split is how far: one circles Asia-Pacific, the other claims the world. .asia wins on regional precision — cross-border e-commerce and brands targeting Asian markets, corporate sites with APAC operations, Asian culture and travel content, and regional trade associations on name.asia lock onto the region at a glance; launched in 2007 by the Hong Kong-based DotAsia Organisation and endorsed by many APAC country registries, it is one of the very few suffixes that officially names a continent; pricing is the rare flat shape at about $12/yr (≈¥85) to register and the same to renew — no promo trap, so multi-year costs stay predictable. .global wins on the worldwide story — multinational main sites, international brand outposts, global organisations and alliances, and worldwide logistics, payment or hiring services on name.global read out loud as \"X, globally\"; run by Identity Digital at about $31 to register (≈¥225) and $78/yr to renew (≈¥560) — the premium itself filters for serious international operators, so word inventory is better than cheaper suffixes. The test: the radius is multi-country APAC but not worldwide — East and Southeast Asian commerce, an APAC regional HQ site → .asia marks that middle layer sharpest at a fraction of the cost; the story is belonging to no single market — multi-continent footprint, international bodies, global-service positioning → .global's declaration is irreplaceable when the budget allows. A common combo: .global for the group's international main site, .asia to gather the APAC regional business. Three cautions: renewals differ more than sixfold ($12 vs $78/yr), so price three years before bulk-registering; .asia's charter requires one APAC-based contact (most registrars handle it automatically) while .global has no such rule; and a small team on .global can read as bigger talk than substance — regional starts sit safer on .asia. Naming: brand + .asia (acme.asia) and brand + .global (acme.global) are each side's mainstream shapes — never stack redundant words like world or international.",
+      pickA: ["Cross-border e-commerce & brands for Asian markets", "Corporate sites with APAC operations", "Asian culture & travel content", "Budget-sensitive regional plays with flat costs"],
+      pickB: ["Multinational corporate main sites", "Global outposts of expanding brands", "International organisations & alliances", "Businesses selling worldwide service"],
+    },
+  },
+  "buzz-vs-promo": {
+    slug: "buzz-vs-promo",
+    a: "buzz",
+    b: "promo",
+    zh: {
+      title: ".buzz 和 .promo 怎么选：话题的热度与促销的动作",
+      metaDescription: ".buzz 说「话题热度」，传播导向的活动页首年成本极低；.promo 直说「促销优惠」，转化导向的落地页语义零浪费。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是营销后缀，分工在目标：一个要传播，一个要转化。.buzz 赢在热度语义——营销活动与新品发布落地页、社媒话题与病毒传播项目、娱乐八卦与热点资讯站、蜂业与蜂蜜品牌用 name.buzz，「制造话题」一词说透，create a buzz 是营销圈最熟的短语，养蜂双关还白送；注册局为美国 DotStrategy，2014 年开放，是少数由独立小注册局长期稳定运营的新顶级域；价格是典型促销结构：首年约 $2（约 ¥15）、续费约 $26/年（约 ¥189）——首年几乎白送，按续费价做多年预算。.promo 赢在转化直给——促销活动落地页、优惠码与折扣聚合站、品牌 campaign 微站、达人带货与联盟推广页用 name.promo，「这里有优惠」从地址就说清，比一长串带参数的活动 URL 更好记好读，印在海报与短视频口播里都顺；Identity Digital 运营，注册约 $11（约 ¥78）、续费约 $20/年（约 ¥145）——温和档，长期运营的优惠站持有无压力。判断标准：campaign 的 KPI 是「声量」——社媒裂变、话题榜、新品悬念页 → .buzz 的热度语义直击目标，首年成本也最低；KPI 是「转化」——优惠码、折扣聚合、带货落地页 → .promo 的促销语义零浪费，用户看到域名就知道有便宜可占。两者常见组合打法：预热期用 .buzz 造势，收割期用 .promo 落地转化，同一个活动词两个后缀各管一段。三点注意：一是 .buzz 首年与续费差十倍以上而 .promo 平缓，批量注册前先算三年总成本；二是两者都是营销类后缀，促销邮件用主域名发、这两个后缀只做落地页更稳，避免邮箱过滤器误伤；三是公司主站与产品官网都撑不起长期品牌，它们是主站之外的活动阵地。命名上「话题词 + .buzz」（launch.buzz）与「品牌 + .promo」（acme.promo）各是两边最点题的模式。",
+      pickA: ["社媒话题与病毒传播项目", "新品发布的预热悬念页", "娱乐八卦与热点资讯站", "蜂业与蜂蜜品牌的双关"],
+      pickB: ["促销活动落地页", "优惠码与折扣聚合站", "品牌 campaign 微站", "达人带货与联盟推广页"],
+    },
+    en: {
+      title: ".buzz vs .promo: The Attention Play or The Conversion Play",
+      metaDescription:
+        ".buzz names the hype — spread-first campaign pages start nearly free; .promo says discount outright, zero-waste semantics for conversion landing pages. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are marketing suffixes; the split is the goal: one spreads, the other converts. .buzz wins on hype semantics — campaign and product-launch landing pages, social-media topics and viral projects, entertainment gossip and trending-news sites, and beekeeping or honey brands on name.buzz say \"we make noise\" in one word; create a buzz is marketing's most worn phrase and the bee pun comes free; the registry is DotStrategy of the United States, open since 2014 and one of the few new gTLDs run long-term by a small independent registry; pricing is the classic promo shape at about $2 first year (≈¥15) and $26/yr to renew (≈¥189) — year one is nearly free, so budget on the renewal. .promo wins on conversion bluntness — promo landing pages, coupon and discount aggregators, brand campaign microsites, and influencer or affiliate pages on name.promo say \"deals live here\" from the address on, easier to remember and read aloud than a parameter-laden campaign URL, printing cleanly on posters and speaking cleanly in short video; run by Identity Digital at about $11 to register (≈¥78) and $20/yr to renew (≈¥145) — a gentle tier, painless for a long-running deals site. The test: the campaign KPI is reach — social virality, trending topics, teaser pages → .buzz's hype semantics hit the target at the lowest year-one cost; the KPI is conversion — coupon codes, discount hubs, affiliate landers → .promo wastes zero semantics, users see the domain and expect a deal. A common combo: .buzz builds the noise pre-launch, .promo lands the conversion at harvest — one campaign word, two suffixes, each owning a phase. Three cautions: .buzz renews at more than ten times year one while .promo stays flat, so price three years before bulk-registering; both are marketing suffixes — send promotional email from the main domain and keep these as landing pages to avoid filter suspicion; and neither carries a long-term corporate main site — they are campaign grounds beside the flagship. Naming: topic word + .buzz (launch.buzz) versus brand + .promo (acme.promo) are each side's on-target patterns.",
+      pickA: ["Social-media topics & viral projects", "Product-launch teaser pages", "Entertainment gossip & trending news", "Beekeeping & honey brand puns"],
+      pickB: ["Promo campaign landing pages", "Coupon & discount aggregators", "Brand campaign microsites", "Influencer & affiliate pages"],
+    },
+  },
+  "fans-vs-fan": {
+    slug: "fans-vs-fan",
+    a: "fans",
+    b: "fan",
+    zh: {
+      title: ".fans 和 .fan 怎么选：粉丝群体的复数与粉丝身份的单数",
+      metaDescription: ".fans 说「粉丝群体」，应援站与社群主页读出来就是一句话，续费属最低一档；.fan 说「我是粉丝」的单数身份，三个字母更短。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同一个词的单复数，分工在主体：一个说群体，一个说身份。.fans 赢在集体成句——明星与偶像官方粉丝站、球队与电竞战队应援站、创作者会员与粉丝订阅页、品牌粉丝社区与周边商城用 name.fans，名字在前、fans 在后，天然构成「XX 的粉丝们」的完整短语，官方应援站与社群主页用它定位最准；注册局为香港 ZDNS International，2015 年开放；价格亲民：首年约 $4（约 ¥26）、续费约 $9/年（约 ¥63）——续费在新顶级域里属于最低一档，长期持有无压力。.fan 赢在身份短促——球迷与追星应援站、创作者粉丝社区、粉丝周边电商、影视游戏同好内容站用 name.fan，「我是某某的粉丝」一词讲透，三个字母也更短更好念；Identity Digital 运营，首年约 $7（约 ¥48）、续费约 $44/年（约 ¥315）——续费涨幅明显，按续费价做长期预算。判断标准：站点主体是「群体与组织」——官方应援会、社群主页、会员订阅、周边商城 → .fans 的复数读起来就是社群名，续费还便宜近五倍；主体是「个体与表达」——个人粉丝博客、单人向应援、同好内容输出 → .fan 的单数身份更贴，域名也短一个字母。两者常见组合打法：官方社群主站用 .fans，个人向内容与短链用 .fan；预算有限时以 .fans 为主站、.fan 做保护性注册更划算。三点注意：一是两者续费差近五倍（$9 vs $44/年），长期持有的账要先算；二是单复数并存意味着品牌保护最好两个都注册，至少主站选定一个后把另一个 301 过来；三是涉及明星与 IP 的名字注意商标与姓名权，非官方站要明确标注并避免商用侵权。命名上「偶像/品牌 + .fans」（acme.fans）与「偶像/球队 + .fan」（arsenal.fan）各是两边最点题的模式。",
+      pickA: ["明星与偶像官方粉丝站", "球队与电竞战队应援站", "创作者会员与粉丝订阅页", "长期持有的社群主站（续费最低档）"],
+      pickB: ["个人粉丝博客与单人向应援", "三个字母更短的域名偏好", "影视游戏同好内容站", "作为 .fans 主站的保护性注册"],
+    },
+    en: {
+      title: ".fans vs .fan: The Plural Crowd or The Singular Badge",
+      metaDescription:
+        ".fans names the crowd — supporter hubs read out loud as a sentence, with a bottom-tier renewal; .fan names one supporter's identity in three letters. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "The same word in two numbers; the split is the subject: one names the crowd, the other the badge. .fans wins on the collective sentence — official star and idol fan sites, sports and esports supporter hubs, creator membership and subscription pages, and brand fan communities with merch stores on name.fans put the name first and fans second, so the domain reads out loud as \"the fans of X\" — the sharpest fit for official supporter hubs and community homepages; the registry is ZDNS International of Hong Kong, open since 2015; pricing is friendly at about $4 first year (≈¥26) and $9/yr to renew (≈¥63) — among the cheapest renewals of any new gTLD, painless to hold. .fan wins on the short badge — supporter blogs, single-idol fan pages, fan-merch commerce, and film or game fandom content on name.fan say \"I am X's fan\" in one word, one letter shorter and quicker to say; run by Identity Digital at about $7 first year (≈¥48) and $44/yr to renew (≈¥315) — a steep renewal jump, so budget long-term on the renewal. The test: the site's subject is the group and its organisation — official supporter clubs, community homepages, memberships, merch stores → .fans reads as the community's name and renews nearly five times cheaper; the subject is the individual and the voice — a personal fan blog, one-supporter tributes, fandom content output → .fan wears the singular badge better and runs shorter. A common combo: .fans for the official community main site, .fan for personal content and short links; on a budget, main site on .fans with .fan as the defensive registration is the better deal. Three cautions: renewals differ nearly fivefold ($9 vs $44/yr), so do the long-hold math first; singular and plural coexist, so brand protection ideally registers both — at minimum pick one main and 301 the other; and celebrity and IP names raise trademark and personality-rights questions — unofficial sites should say so clearly and avoid commercial infringement. Naming: idol or brand + .fans (acme.fans) versus idol or team + .fan (arsenal.fan) are each side's on-target patterns.",
+      pickA: ["Official star & idol fan sites", "Sports & esports supporter hubs", "Creator membership & subscriptions", "Long-hold community sites (bottom-tier renewal)"],
+      pickB: ["Personal fan blogs & tributes", "Three-letter shorter domain preference", "Film & game fandom content", "Defensive pairing with a .fans main site"],
+    },
+  },
+  "place-vs-space": {
+    slug: "place-vs-space",
+    a: "place",
+    b: "space",
+    zh: {
+      title: ".place 和 .space 怎么选：具体的场所与抽象的天地",
+      metaDescription: ".place 说「具体的一个场所」，门店与场馆官网注册续费同价；.space 语义开放柔和，个人站与创意项目的低价常青款。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在说空间，分工在虚实：一个是有地址的场所，一个是无边界的天地。.place 赢在具体指向——线下门店与场馆官网、共享空间与工作室预约页、本地生活与目的地指南站、虚拟社区空间用 name.place，「这是一个地方」一词讲透，「品牌 + .place」读起来就是「XX 的地盘」，归属感天然；注册局为 Identity Digital（原 Donuts），2014 年开放；价格是少见的平价平续结构：注册约 $18/年（约 ¥130）、续费同价——无首年促销陷阱，多年持有成本可预期。.space 赢在开放柔和——创作者的「小天地」、个人站与博客、作品集与实验项目、coworking 与艺术空间、航天太空主题用 name.space，读起来不商业、留白感强；价格常年低位：首年约 $2（约 ¥12）、续费约 $24/年（约 ¥170）——首年极低、续费中档，好词命中率高。判断标准：站点背后是「一个具体去处」——门店、场馆、预约页、目的地 → .place 的场所语义直给，平价平续也适合长期挂主页；背后是「一片自留地」——个人表达、创意实验、社区氛围，或者干脆是太空主题 → .space 的抽象柔和更贴，首年成本也最低。两者常见组合打法：实体业务主站用 .place，品牌的创意实验室与社区用 .space 做副阵地。三点注意：一是 .place 平续、.space 首年低续费翻十倍，三年总成本反而接近（$54 vs $50），按持有年限算账再选；二是两者都不自带行业信息，域名前半段要把业务说清楚；三是正式商业主站用 .space 偏轻，认真的门面选 .place 或行业后缀更稳。命名上「场所词 + .place」（studio.place）与「名字 + .space」（maker.space）各是两边最点题的模式。",
+      pickA: ["线下门店与场馆官网", "共享空间与工作室预约页", "本地生活与目的地指南站", "要成本可预期的长期主页"],
+      pickB: ["个人站、博客与作品集", "创意实验与社区项目", "coworking 与艺术空间", "航天与太空主题产品"],
+    },
+    en: {
+      title: ".place vs .space: The Concrete Venue or The Open Room",
+      metaDescription:
+        ".place names one concrete venue — store and venue sites with flat register-and-renew pricing; .space is the soft, open, cheap evergreen for personal sites and creative projects. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both say room; the split is concreteness: one has an address, the other has no walls. .place wins on the concrete pointer — physical stores and venue sites, co-working and studio booking pages, local-living and destination guides, and virtual community venues on name.place say \"this is somewhere\" in one word, and brand + .place reads naturally as \"X's spot\", belonging built in; the registry is Identity Digital (formerly Donuts), open since 2014; pricing is the rare flat shape at about $18/yr (≈¥130) to register and the same to renew — no promo trap, predictable for years. .space wins on the soft open read — a creator's own corner, personal sites and blogs, portfolios and experiments, co-working and art spaces, and aerospace themes on name.space read uncommercial and airy; pricing stays low at about $2 first year (≈¥12) and $24/yr to renew (≈¥170) — a rock-bottom year one with a mid renewal, and good words still hit. The test: behind the site is a concrete destination — a store, a venue, a booking page, a place to visit → .place lands the venue semantics bluntly and its flat pricing suits a long-lived homepage; behind it is a patch of one's own — personal expression, creative experiments, community vibes, or literally outer space → .space reads softer and starts cheapest. A common combo: .place for the physical business main site, .space as the brand's creative-lab and community side ground. Three cautions: .place is flat while .space renews at over ten times year one, so three-year totals nearly converge ($54 vs $50) — do the math on your holding period; neither says an industry, so the left half of the name must state the business; and a formal commercial flagship reads light on .space — serious storefronts sit safer on .place or an industry suffix. Naming: venue word + .place (studio.place) versus name + .space (maker.space) are each side's on-target patterns.",
+      pickA: ["Physical stores & venue sites", "Co-working & studio booking pages", "Local-living & destination guides", "Long-lived homepages with flat costs"],
+      pickB: ["Personal sites, blogs & portfolios", "Creative experiments & communities", "Co-working & art spaces", "Aerospace & outer-space themes"],
+    },
+  },
+  "report-vs-news": {
+    slug: "report-vs-news",
+    a: "report",
+    b: "news",
+    zh: {
+      title: ".report 和 .news 怎么选：深度的报告与时效的资讯",
+      metaDescription: ".report 说「成体系的深度输出」，研究报告与调查内容自带权威感；.news 语义直白「新闻资讯」，垂直媒体与 newsletter 的精准标配。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在做内容，分工在节奏：一个求深，一个求快。.report 赢在体裁权威——行业研究与市场报告站、数据新闻与调查报道项目、企业年报与 ESG 披露页、测评与白皮书发布站用 name.report，「这里出报告」一词讲透，report 同时覆盖「研究报告」与「新闻报道」两层含义，「领域 + .report」读起来就是一份刊物的名字；注册局为 Identity Digital（原 Donuts），2014 年开放；价格适中：首年约 $7（约 ¥48）、续费约 $20/年（约 ¥145）——首年有促销、续费不贵，长期内容站可持续。.news 赢在时效直白——独立媒体、垂直行业资讯站、地方新闻、公司 newsroom、付费 newsletter 用 name.news，看到域名就知道是资讯站，「主题 + .news」本身就是完整的产品名，省掉在名字里再塞 daily、report 这类词；同为 Identity Digital 运营，首年约 $10（约 ¥70）、续费约 $26/年（约 ¥190）——内容类后缀里的温和档。判断标准：内容形态是「成体系的深度输出」——季度报告、调查专题、白皮书、披露页，更新以篇为单位 → .report 的权威感直给，续费也更低；形态是「持续滚动的资讯流」——日更周更、行业快讯、newsletter → .news 的时效语义最准，停更反而伤观感。两者常见组合打法：媒体品牌主站用 .news 跑日常资讯，深度栏目与年度重磅用 .report 单独立站。三点注意：一是两者续费同档（$20 vs $26/年），成本不构成选择因素，按内容节奏选即可；二是「报告」与「新闻」都自带权威预期，内容质量与数据来源要撑得起后缀，否则反噬信任；三是两者都强绑定内容属性，做工具或电商用它们会误导用户预期。命名上「领域 + .report」（energy.report）与「主题 + .news」（ai.news）各是两边最点题的模式。",
+      pickA: ["行业研究与市场报告站", "数据新闻与调查报道项目", "企业年报与 ESG 披露页", "测评与白皮书发布站"],
+      pickB: ["独立媒体与垂直资讯站", "公司 newsroom 与品牌新闻中心", "付费 newsletter 与行业周报", "日更节奏的地方与赛道新闻"],
+    },
+    en: {
+      title: ".report vs .news: The Deep Dive or The Fast Feed",
+      metaDescription:
+        ".report names the systematic deep dive — research and investigative content with built-in authority; .news is the blunt semantic default for vertical media and newsletters. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both publish; the split is tempo: one goes deep, the other goes fast. .report wins on genre authority — industry research and market-report sites, data journalism and investigative projects, annual-report and ESG disclosure pages, and testing or whitepaper publishing on name.report say \"reports live here\" in one word; report spans both the research document and the act of journalism, and field + .report reads like the masthead of a publication; the registry is Identity Digital (formerly Donuts), open since 2014; pricing is moderate at about $7 first year (≈¥48) and $20/yr to renew (≈¥145) — a promo year one and a reasonable renewal, sustainable for a long-running content site. .news wins on blunt immediacy — independent media, vertical industry feeds, local news, corporate newsrooms, and paid newsletters on name.news are recognised as a news site from the address alone; topic + .news is a complete product name by itself, sparing you from stuffing daily or report into the name; also run by Identity Digital, at about $10 first year (≈¥70) and $26/yr to renew (≈¥190) — the gentle tier among content suffixes. The test: the format is the systematic deep dive — quarterly reports, investigative features, whitepapers, disclosures, updated piece by piece → .report lands the authority and renews cheaper; the format is the rolling feed — daily or weekly cadence, industry briefs, newsletters → .news names the tempo sharpest, and a stalled feed there looks worst. A common combo: the media brand's main site runs the daily feed on .news, with flagship deep-dive verticals standing alone on .report. Three cautions: renewals sit in the same tier ($20 vs $26/yr), so cost barely matters — choose by cadence; both \"report\" and \"news\" promise authority, so content quality and data sourcing must carry the suffix or trust backfires; and both bind hard to content — tools or commerce on either misleads user expectations. Naming: field + .report (energy.report) versus topic + .news (ai.news) are each side's on-target patterns.",
+      pickA: ["Industry research & market-report sites", "Data journalism & investigative projects", "Annual-report & ESG disclosure pages", "Testing & whitepaper publishing"],
+      pickB: ["Independent & vertical media feeds", "Corporate newsrooms & brand news hubs", "Paid newsletters & industry weeklies", "Daily-cadence local & niche news"],
+    },
+  },
+  "town-vs-city": {
+    slug: "town-vs-city",
+    a: "town",
+    b: "city",
+    zh: {
+      title: ".town 和 .city 怎么选：小镇的烟火气与城市的大尺度",
+      metaDescription: ".town 说「城镇尺度的社区」，自带熟人社区的亲切感；.city 说城市尺度，本地门户与「××之城」主题站的双线玩法。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在说聚落，分工在尺度：一个是小镇的烟火气，一个是城市的大格局。.town 赢在亲切感——小镇与街区门户站、本地商户与市集导览、文旅小镇与古镇项目、主题社区与游戏小镇用 name.town，town 比 city 小、比 village 大，自带熟人社区的亲切感，「主题词 + .town」还能造出「某某小镇」的世界观，游戏与虚拟社区尤其好用；注册局为 Identity Digital（原 Donuts），2014 年开放；价格是典型促销结构：首年约 $6（约 ¥41）、续费约 $29/年（约 ¥211）——首年低、续费中档，按续费价做多年预算。.city 赢在双线玩法——第一条是地理：城市指南、本地新闻、活动日历、生活服务聚合用「城市名 + .city」，对本地用户的指向性无可替代；第二条是比喻：「××之城」把某个主题做成一座城，游戏社区、垂直内容站、电商专区都能借这个意象；同为 Identity Digital 运营，注册约 $5（约 ¥33）、续费约 $23/年（约 ¥167）——两头都亲民，长期成本更低。判断标准：项目气质是「小而近」——街区门户、古镇文旅、市集导览、像素小镇 → .town 的熟人感与世界观感更贴；气质是「大而全」——城市级门户、本地生活聚合、品类之城 → .city 的尺度与指向性更准，续费还略低。两者常见组合打法：城市级门户用 .city 做主站，下辖街区与文旅小镇用 .town 分站铺开。三点注意：一是两者续费同档（$29 vs $23/年），成本不构成决定因素，按尺度与气质选即可；二是地名域名可能涉及地方政府与商标保护，官方口径的名称要先查清；三是地理型站点重在持续运营，内容停更的城市站与小镇站衰减都极快。命名上「地名 + .town」（dali.town）与「城市名/品类 + .city」（chengdu.city、vitamin.city）各是两边最点题的模式。",
+      pickA: ["小镇与街区门户站", "文旅小镇与古镇项目", "本地商户与市集导览", "主题社区与游戏小镇的世界观"],
+      pickB: ["城市指南与本地新闻门户", "本地生活服务聚合", "「××之城」式主题社区", "城市级活动日历与信息站"],
+    },
+    en: {
+      title: ".town vs .city: The Cozy Scale or The Urban Scale",
+      metaDescription:
+        ".town names the town-scale community with a familiar, neighborly feel; .city names the urban scale, playing both the local portal and the \"city of X\" metaphor. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both name a settlement; the split is scale: one carries the warmth of a town, the other the sweep of a city. .town wins on coziness — town and neighborhood portals, local merchant and market guides, cultural-tourism town projects, and themed communities or game towns on name.town use the word between village and city that carries a familiar, neighborly feel, and theme + .town builds a whole \"X-town\" world — especially handy for games and virtual communities; the registry is Identity Digital (formerly Donuts), open since 2014; pricing is the classic promo shape at about $6 first year (≈¥41) and $29/yr to renew (≈¥211) — cheap up front, mid renewal, so budget on the renewal. .city wins on the double play — first the geography: city guides, local news, event calendars and local-living aggregators on cityname.city point at local users like nothing else; second the metaphor: \"the city of X\" turns a theme into a metropolis, borrowed happily by game communities, vertical content sites and commerce zones; also run by Identity Digital, at about $5 to register (≈¥33) and $23/yr to renew (≈¥167) — friendly at both ends, cheaper to hold long-term. The test: the project's air is small and near — neighborhood portals, heritage-town tourism, market guides, a pixel town → .town wears the neighborly, world-building feel better; the air is big and broad — city-level portals, local-living aggregation, a category metropolis → .city names the scale and the pointer sharper, and renews slightly cheaper. A common combo: the city-level portal runs on .city as the main site, with district and tourism-town subsites spread across .town. Three cautions: renewals sit in the same tier ($29 vs $23/yr), so cost barely decides — choose by scale and air; place names can involve local government and trademark protection, so check official-sounding names first; and geographic sites live on cadence — a stalled city or town portal decays fastest of all. Naming: place name + .town (dali.town) versus city or category + .city (chengdu.city, vitamin.city) are each side's on-target patterns.",
+      pickA: ["Town & neighborhood portals", "Cultural-tourism & heritage-town projects", "Local merchant & market guides", "Themed communities & game-town worlds"],
+      pickB: ["City guides & local news portals", "Local-living service aggregators", "\"City of X\" themed communities", "City-level event calendars & info sites"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
