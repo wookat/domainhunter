@@ -269,4 +269,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "limoservice", zh: "豪车接送", en: "Limo services" },
   { slug: "ticketing", zh: "票务平台", en: "Ticketing platforms" },
   { slug: "flowerdelivery", zh: "鲜花电商", en: "Flower delivery" },
+  { slug: "taproom", zh: "精酿酒馆", en: "Taprooms" },
+  { slug: "izakaya", zh: "居酒屋", en: "Izakayas" },
+  { slug: "dayspa", zh: "水疗会所", en: "Day spas" },
+  { slug: "snacks", zh: "零食品牌", en: "Snack brands" },
+  { slug: "lawfirm", zh: "律师事务所", en: "Law firms" },
+  { slug: "orthodontics", zh: "正畸齿科", en: "Orthodontics" },
 ];

@@ -281,7 +281,7 @@
     ]
   },
   "guide": {
-    "count": 266,
+    "count": 272,
     "slugs": [
       "saas",
       "ecommerce",
@@ -548,7 +548,13 @@
       "customtour",
       "limoservice",
       "ticketing",
-      "flowerdelivery"
+      "flowerdelivery",
+      "taproom",
+      "izakaya",
+      "dayspa",
+      "snacks",
+      "lawfirm",
+      "orthodontics"
     ]
   },
   "vs": {
