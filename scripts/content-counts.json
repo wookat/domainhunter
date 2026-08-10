@@ -263,7 +263,7 @@
     ]
   },
   "guide": {
-    "count": 254,
+    "count": 260,
     "slugs": [
       "saas",
       "ecommerce",
@@ -518,7 +518,13 @@
       "lightingbrand",
       "outlet",
       "watches",
-      "sneakers"
+      "sneakers",
+      "dollarstore",
+      "thriftstore",
+      "officesupplies",
+      "medicalsupplies",
+      "buildingmaterials",
+      "franchise"
     ]
   },
   "vs": {

@@ -1851,6 +1851,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一家球鞋买手店或潮鞋交易平台，寓意「圈内认证、街头血统」；气质要短而独特、有鞋圈黑话的会心一笑、适合做话题标签；场景是社媒标签、店铺门头和鞋盒贴纸里都够酷够认。",
     en: "A sneaker boutique or resale platform. The name should carry tribal certification and street pedigree; the vibe is short, distinct, and knowing enough to make sneakerheads smile — built for hashtags; it must look sharp as a social tag, on a storefront, and on a shoebox sticker.",
   },
+  {
+    slug: "dollarstore",
+    labelZh: "一元折扣店",
+    labelEn: "Dollar store",
+    zh: "一家一元店或折扣百货，寓意「便宜到惊喜、逛店像寻宝」；气质要响亮直给、有捡到便宜的快乐、超值但不寒酸；场景是门头大字招牌、促销海报和「那家店真便宜」的街坊口碑里都一眼认出。",
+    en: "A dollar store or discount variety shop. The name should promise surprising cheapness and treasure-hunt browsing; the vibe is loud, literal and joyful about the deal, great value without shabbiness; it must read instantly on big sign letters, sale posters, and in \"that store is so cheap\" neighborhood word of mouth.",
+  },
+  {
+    slug: "thriftstore",
+    labelZh: "二手循环店",
+    labelEn: "Thrift store",
+    zh: "一家二手店或古着循环商店，寓意「旧物有故事、循环有价值」；气质要温暖有趣、有淘宝的惊喜感、环保而不说教；场景是店招、寄卖小票和「我在那淘到宝了」的转述里都让人想逛。",
+    en: "A thrift or vintage resale shop. The name should turn pre-loved goods into treasures with stories; the vibe is warm and playful with treasure-hunt surprise, sustainable without preaching; it must invite browsing on the shop sign, a consignment slip, and in \"I found a gem there\" retellings.",
+  },
+  {
+    slug: "officesupplies",
+    labelZh: "办公用品",
+    labelEn: "Office supplies",
+    zh: "一家办公用品与耗材供应商，寓意「一次买全、次次不误事」；气质要可靠齐全、高效省心、经得起发票抬头的正式感；场景是采购系统、对账单和行政的「就在他家订」口碑里都稳稳立住。",
+    en: "An office supplies and consumables vendor. The name should promise one-stop ordering that never misses; the vibe is dependable, complete and efficient, formal enough for an invoice header; it must hold steady in procurement systems, monthly statements, and the admin's \"we always order there\" endorsement.",
+  },
+  {
+    slug: "medicalsupplies",
+    labelZh: "医疗用品",
+    labelEn: "Medical supplies",
+    zh: "一家医疗器械与医用耗材商，寓意「专业守护生命、精准可靠」；气质要专业有资质感、又有健康的温度、绝不轻浮；场景是医院采购目录、产品资质文件和家庭护理者的搜索核实里都令人放心。",
+    en: "A medical equipment and supplies business. The name should carry professional guardianship of life with precision and reliability; the vibe is clinical and credentialed yet humanly warm, never flippant; it must reassure in hospital procurement catalogs, compliance documents, and a home caregiver's verification search.",
+  },
+  {
+    slug: "buildingmaterials",
+    labelZh: "建材五金",
+    labelEn: "Building materials",
+    zh: "一家建材店或装修材料商，寓意「材料齐全、房子立得住」；气质要坚固可靠、大而齐全、经得起投标文件的正式感；场景是包工头的电话转介绍、工地送货单和业主群的「他家材料靠谱」里都一遍听清。",
+    en: "A building materials and hardware dealer. The name should promise complete stock and structures that stand; the vibe is solid, abundant and dependable, formal enough for a tender document; it must land in one hearing on a contractor's referral call, a jobsite delivery slip, and the homeowner group's \"their materials hold up\".",
+  },
+  {
+    slug: "franchise",
+    labelZh: "连锁加盟",
+    labelEn: "Franchise brand",
+    zh: "一个连锁加盟品牌，寓意「生意可复制、招牌全国通」；气质要大气正规、县城与一线都成立、能长出 IP 形象；场景是加盟商尽调、门店招牌和招商说明会里都让人觉得总部有实力。",
+    en: "A franchise chain brand. The name should promise a replicable business and a sign that travels; the vibe is credible and big-league, working equally in metro flagships and county towns, with room for a mascot; it must impress in franchisee due diligence, on storefront signage, and at the recruitment pitch.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

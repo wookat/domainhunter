@@ -15872,6 +15872,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  dollarstore: {
+    slug: "dollarstore",
+    keywords: ["一元店", "十元店", "折扣百货", "discount store"],
+    tlds: [
+      { tld: "com", zh: "薄利多销靠回头客，.com 让顾客搜一次就能再找到你", en: "Thin margins live on repeat visits — .com makes you findable on the second search" },
+      { tld: "cheap", zh: "后缀直说「便宜」，域名本身就是价格承诺", en: "The suffix says cheap outright — the domain itself is the price promise" },
+      { tld: "bargains", zh: "捡便宜的兴奋感写进后缀，适合特卖与清仓主题店", en: "The thrill of a bargain baked into the suffix — great for closeout and deal-themed stores" },
+    ],
+    zh: {
+      label: "一元折扣店",
+      title: "一元店与折扣百货怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "一元店与折扣百货命名指南：价格锚点、寻宝惊喜等思路，Dollar Tree/Daiso/Five Below 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "一元店（十元店、折扣百货）的名字是全行业最「诚实」的：Dollar Tree、Five Below、百元店 Daiso——最成功的名字都把价格锚点直接写在招牌上。这不是偷懒，是策略：低价零售的顾客决策链路极短，路过、看见、进店三步完成，名字必须在 0.5 秒内说清「这里的东西便宜到什么程度」。但便宜不等于廉价感——Five Below 用「五美元以下」的俏皮说法替代干巴巴的 Discount，Daiso（大创）用日式品牌感把百元店做出了精品气质。你的名字要在「价格直给」和「逛店乐趣」之间找平衡：价格锚点负责拉新客进门，寻宝感负责让他们逛得开心、下次再来。名字还要经得起大字招牌与促销海报的考验：笔画简单、远看清楚、念出来响亮。",
+      namingIdeas: [
+        "价格锚点入名：Dollar、Five Below、十元优选——把价格上限写进名字，顾客进门前就完成心理定价；本币场景用「元/块」更亲切",
+        "寻宝与惊喜词：treasure、find、蛋糕上的樱桃——低价店的复购靠「今天又淘到什么」的期待感，名字先给出暗示",
+        "量大直给词：tree（长满一树）、land、仓库、堆——用「多到装不下」的意象传达货品丰富，Dollar Tree 的 tree 就是教科书",
+        "俏皮化解廉价感：Five Below 用介词短语替代 discount/cheap 等硬词，同样说便宜，听起来却像朋友间的悄悄话",
+        "招牌可读性测试：名字做成门头大字，隔一条马路能不能一眼读出来？笔画复杂、英文过长的名字先淘汰",
+      ],
+      cases: [
+        { name: "Dollar Tree", takeaway: "dollar（一美元）+ tree（一整树）：价格锚点与「量大丰富」的意象一次说清，两个小学生词汇撑起市值百亿的连锁——直给命名的天花板" },
+        { name: "Five Below", takeaway: "「五美元以下」的口语化表达：说清价格上限却不用 cheap/discount 等掉价词，面向青少年客群反而显得俏皮时髦——价格锚点的高级写法" },
+        { name: "Daiso 大创", takeaway: "日文「大創」（大きく創る，大胆创造）：百元店做出品牌感与品质暗示，证明低价店名字不必自贬——价格之外讲价值的样本" },
+        { name: "Dollarama", takeaway: "dollar + -rama（全景、盛大）后缀：加拿大国民一元店，一个后缀把「便宜」升格成「便宜的嘉年华」——后缀改变气质的经典操作" },
+      ],
+      pitfalls: [
+        "廉价词堆到自贬：Cheap+Junk 式组合让顾客觉得质量也打折——说便宜可以，说破烂不行",
+        "价格锚点锁死定价：叫「一元店」却卖三元商品会被顾客当欺骗，涨价空间先想清楚再入名",
+        "抄大牌改一个字母：DollarTee、Fivee Below 之类擦边名，商标函比开业花篮先到",
+        "只顾中文忽略拼写：线上团购与地图搜索都要输入名字，拼音过长或多音字的名字流量漏一半",
+      ],
+    },
+    en: {
+      label: "Dollar stores",
+      title: "How to Name a Dollar Store or Discount Shop: Strategies, Cases & Domains",
+      metaDescription:
+        "Dollar store and discount retail naming guide: price anchors, treasure-hunt cues, breakdowns of Dollar Tree/Five Below/Daiso/Dollarama, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Dollar store names are retail's most honest: Dollar Tree, Five Below, Daiso — the winners write the price anchor right on the sign. That's strategy, not laziness: the low-price shopper's decision chain is three steps — walk by, see, walk in — so the name must state \"how cheap\" in half a second. But cheap must never read as shabby: Five Below replaces the flat word Discount with a playful \"under five bucks,\" and Daiso gave the hundred-yen store genuine brand polish. Your name has to balance price-direct (pulls new customers through the door) with treasure-hunt fun (keeps them browsing and coming back). And it must survive the storefront test: simple strokes, legible across the street, loud when said aloud.",
+      namingIdeas: [
+        "Put the price anchor in the name: Dollar, Five Below, Ninety-Nine — customers finish their mental pricing before they enter; in local-currency markets, the colloquial unit feels friendlier",
+        "Treasure and surprise words: treasure, find, haul — repeat visits run on \"what will I score today,\" and the name should plant that expectation",
+        "Abundance imagery: tree, land, warehouse — convey shelves overflowing with goods; the tree in Dollar Tree is the textbook example",
+        "Defuse cheapness with wit: Five Below says inexpensive without cheap or discount — the same message, delivered like a friend's tip instead of a markdown sticker",
+        "The storefront legibility test: set the name in big sign letters — if it can't be read from across the street, cut it before you fall in love",
+      ],
+      cases: [
+        { name: "Dollar Tree", takeaway: "dollar + tree: price anchor and abundance imagery in two grade-school words that carry a multi-billion-dollar chain — the ceiling of literal naming" },
+        { name: "Five Below", takeaway: "\"Under five dollars\" said colloquially: states the price cap without cheap or discount, and reads playful to its teen audience — the sophisticated way to write a price anchor" },
+        { name: "Daiso", takeaway: "Japanese 大創, \"create boldly\": a hundred-yen store with brand polish and a quality hint, proving a low-price name needn't put itself down — value beyond price" },
+        { name: "Dollarama", takeaway: "dollar + -rama (spectacle): Canada's national dollar chain — one suffix upgrades \"cheap\" into \"a carnival of cheap.\" A classic case of a suffix changing the vibe" },
+      ],
+      pitfalls: [
+        "Stacking cheap words into self-deprecation: Cheap+Junk combos make shoppers assume the quality is discounted too — say inexpensive, never shoddy",
+        "Letting the price anchor lock your pricing: call it a dollar store and sell three-dollar items and customers cry foul — plan the ceiling before naming it",
+        "One-letter-off big-brand knockoffs: DollarTee and friends get the trademark letter before the grand-opening flowers",
+        "Ignoring spellability: group-buy links and map searches require typing the name — long or ambiguous spellings leak half the foot traffic",
+      ],
+    },
+  },
+  thriftstore: {
+    slug: "thriftstore",
+    keywords: ["二手店", "旧货店", "古着", "循环商店", "vintage"],
+    tlds: [
+      { tld: "com", zh: "线上寄卖与同城转售的信任基本盘，二手交易更需要", en: "The trust baseline for consignment and local resale — secondhand needs it more" },
+      { tld: "store", zh: "实体+线上都是「店」，后缀直接补全业态", en: "Physical or online, it's a store — the suffix completes the picture" },
+      { tld: "cheap", zh: "淘便宜是二手店逛店动机的一半，后缀先把话说透", en: "Half the reason to browse thrift is the deal — the suffix says it upfront" },
+    ],
+    zh: {
+      label: "二手循环店",
+      title: "二手店与古着循环商店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "二手店与古着循环商店命名指南：故事感、环保叙事等思路，Goodwill/ThredUp/多抓鱼案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "二手店的名字要完成一次「价值反转」：把「别人不要的旧货」讲成「有故事的宝贝」。这个行业最成功的名字都不提「旧」——Goodwill（善意）讲捐赠的善念，ThredUp 把 thread（线、衣物）玩出翻新感，多抓鱼用「鱼」的意象把卖书讲成「让书游到下一个读者手里」。今天的二手消费者有两副面孔：省钱的现实派和环保的理想派，好名字最好同时安抚两者——「循环」「再生」类词根既暗示便宜，又给购买行为镀上可持续的光环。古着（vintage）赛道则相反，要往「岁月感、稀缺性」上靠，名字要像一件有出处的老物件。二手交易的信任门槛比新品高，名字之外，域名与社交账号的统一格外重要——顾客一定会先搜后买。",
+      namingIdeas: [
+        "善意与温度词：Goodwill、恩典、暖流——慈善型二手店的名字先讲善念，捐的人体面、买的人安心",
+        "循环与再生词根：re-、循环、多抓鱼的「转手」意象——把二手翻译成可持续，价格优势之外多一层价值观认同",
+        "衣物与材质双关：ThredUp 的 thread、Depop 的 dep(ot)+pop——品类词根玩出新意，圈内人秒懂经营内容",
+        "岁月与出处词（古着向）：vintage、年代、复古——古着店要的不是「便宜」而是「稀缺」，名字往收藏感上靠",
+        "先搜索后命名：二手交易顾客必先搜店核实，名字在地图、闲鱼、小红书上是否已被占用要提前查",
+      ],
+      cases: [
+        { name: "Goodwill", takeaway: "「善意」直接做名字：捐赠者的善举、购买者的实惠、雇佣残障人士的使命三层含义一词打通——公益二手命名的百年标杆" },
+        { name: "ThredUp", takeaway: "thread（衣线）+ up（翻新向上）：在线寄卖平台把「旧衣服」讲成「衣物向上循环」，一个介词完成价值反转——品类词升维的教科书" },
+        { name: "多抓鱼", takeaway: "「书像鱼一样游向下一个读者」：中文二手书电商用意象替代「旧书回收」的陈旧语感，文艺客群一听就有好感——中文意象命名的优等生" },
+        { name: "Depop", takeaway: "depot（仓库）+ pop（流行）：Z 世代古着交易 App，仓库的量感加流行的潮感，两音节朗朗上口——年轻化二手平台的命名样本" },
+      ],
+      pitfalls: [
+        "「旧货、废品」类词自降身价：顾客要的是淘宝的乐趣不是捡破烂的窘迫，词根选「循环」不选「废旧」",
+        "环保词堆砌成说教：green、eco 连用三个不如一个具体意象，价值观是加分项不是卖点本身",
+        "古着店名过度生僻：日文汉字、法文单词看着有格调，顾客拼不出来就搜不到你",
+        "忽略品控联想：二手信任本就脆弱，名字轻佻（如「随便淘」）会让顾客默认没有质检",
+      ],
+    },
+    en: {
+      label: "Thrift stores",
+      title: "How to Name a Thrift Store or Vintage Resale Shop: Strategies, Cases & Domains",
+      metaDescription:
+        "Thrift and vintage resale naming guide: goodwill and circularity cues, story-rich vintage angles, breakdowns of Goodwill/ThredUp/Depop, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A thrift store's name must pull off a value reversal: turning \"stuff someone discarded\" into \"treasures with a story.\" The category's best names never say old — Goodwill sells the kindness of donating, ThredUp spins thread into upward renewal, and Depop makes secondhand feel like pop culture. Today's secondhand shopper wears two faces: the saver and the sustainability idealist, and a great name soothes both — circular and re- roots whisper affordable while gilding the purchase with green virtue. The vintage lane runs the opposite way: lean into age, provenance and scarcity, so the name itself feels like an object with history. Trust runs thinner in secondhand than in new retail, so name-search consistency matters double — customers always search before they buy.",
+      namingIdeas: [
+        "Kindness and warmth words: Goodwill, grace, haven — charity-driven shops lead with the good deed, dignifying both the donor and the buyer",
+        "Circularity roots: re-, loop, cycle — translate secondhand into sustainable, stacking a values halo on top of the price advantage",
+        "Garment and material puns: ThredUp's thread, Depop's depot+pop — category roots twisted fresh, instantly legible to insiders",
+        "Age and provenance words (vintage lane): vintage, era, archive — vintage sells scarcity, not cheapness; name toward collectibility",
+        "Search before you name: secondhand buyers verify the shop first — check maps, resale apps and social handles for collisions before committing",
+      ],
+      cases: [
+        { name: "Goodwill", takeaway: "The word \"goodwill\" as the name: the donor's kindness, the buyer's bargain and the hiring mission fused in one term — the century-old benchmark of charitable resale naming" },
+        { name: "ThredUp", takeaway: "thread + up: an online consignment platform reframing old clothes as clothing cycled upward — one preposition completes the value reversal; the textbook category-word elevation" },
+        { name: "Depop", takeaway: "depot + pop: Gen-Z vintage trading app fusing warehouse abundance with pop-culture cool in two catchy syllables — the model for youth-facing resale naming" },
+        { name: "Buffalo Exchange", takeaway: "An invented proper noun + exchange: the trade mechanic stated plainly while the buffalo builds a memorable Americana brand — mechanics plus mascot in one name" },
+      ],
+      pitfalls: [
+        "Junk and used words that cheapen the hunt: shoppers want treasure-hunt joy, not scavenging shame — pick circular roots over castoff roots",
+        "Stacking eco-words into a sermon: three greens beat none, but one vivid image beats three greens — values are a bonus, not the pitch",
+        "Overly obscure vintage names: that French word looks chic until customers can't spell it into a search bar",
+        "Ignoring the quality-control association: secondhand trust is fragile — a flippant name reads as \"nobody inspected this\"",
+      ],
+    },
+  },
+  officesupplies: {
+    slug: "officesupplies",
+    keywords: ["办公用品", "文具批发", "办公耗材", "stationery b2b"],
+    tlds: [
+      { tld: "com", zh: "企业采购走流程，供应商域名 .com 最不惹疑问", en: "Procurement runs on process — a .com vendor domain raises zero questions" },
+      { tld: "supplies", zh: "后缀即品类，「办公+supplies」域名读起来像一句话", en: "The suffix is the category — office + supplies reads like a sentence" },
+      { tld: "shop", zh: "面向散客与小微企业的零售侧入口，直白好记", en: "The retail-side entrance for walk-ins and small offices — plain and memorable" },
+    ],
+    zh: {
+      label: "办公用品",
+      title: "办公用品与耗材供应商怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "办公用品与耗材供应商命名指南：一站式暗示、可靠交付等思路，Staples/Office Depot/得力案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "办公用品生意的名字要讨好两种截然不同的人：下单的行政（要省事）和批预算的老板（要放心）。这决定了行业命名的主旋律是「一站式 + 可靠感」——Staples 用一个「订书钉」代言全品类（staple 一词双关「主打商品」），Office Depot 直接把「办公仓库」写在门头，得力用两个字承诺「好用」。办公采购是典型的低兴趣决策：没人对买 A4 纸有感情，顾客要的是不出错、不缺货、发票齐全，名字传达的稳定感比创意更值钱。同时这行复购率极高，名字要经得起每月出现在对账单和采购系统里——太花哨的名字在报销单上会显得不专业。如果做垂直细分（如打印耗材、桌面收纳），名字可以更聚焦品类词，换取搜索的精准流量。",
+      namingIdeas: [
+        "一站式意象：depot、mart、万、齐——办公采购最烦「东买西凑」，名字先承诺「一次买全」",
+        "小物件代言全品类：Staples 的订书钉、回形针、便利贴——选一个最日常的办公小物做名字，具体可感又暗含双关",
+        "可靠与效率词：得力、快、稳、准——行政要的是「不用返工」，名字里给出交付承诺",
+        "对账单测试：名字放进发票抬头和采购系统里念一遍，显得轻浮的（如「文具小可爱」）直接淘汰",
+        "细分品类聚焦：只做打印耗材就叫「墨」「印」，只做桌面收纳就往「桌」上靠——垂直生意名字越准，搜索流量越省钱",
+      ],
+      cases: [
+        { name: "Staples", takeaway: "订书钉与「主打商品」的一词双关：最不起眼的办公小物代言全品类，具象、好念、有隐藏含义——办公零售命名的天花板" },
+        { name: "Office Depot", takeaway: "office + depot（仓库）：两个词说清「办公用品的仓库」，量大齐全的意象直接压住「会缺货」的采购焦虑——直给命名的稳妥样本" },
+        { name: "得力 Deli", takeaway: "中文「得力」（得力助手）+ 英文 Deli 双语通吃：两个字把工具的本分说透，从文具做到办公整体方案名字都装得下——中文功能词命名的标杆" },
+        { name: "Quill", takeaway: "鹅毛笔：用书写工具的「祖先」讲传承与专业，B2B 办公供应商里少有的雅致名字——老物件意象在功能行业的成功移植" },
+      ],
+      pitfalls: [
+        "office/supply 素词硬拼：OfficeSupplyPro 类名字毫无记忆点，采购下次想找你时只记得「好像叫 office 什么」",
+        "花哨名进不了采购系统：面向企业客户的名字要经得起发票、合同、招投标文件的正式场合",
+        "品类锁太死：叫「订书钉之家」却想扩品到办公家具，名字会成为天花板——细分名要配扩张预案",
+        "忽略双语场景：外企与出海客户的采购单是英文的，中文名配一个能注册的英文域名再开张",
+      ],
+    },
+    en: {
+      label: "Office supplies",
+      title: "How to Name an Office Supplies Business: Strategies, Cases & Domains",
+      metaDescription:
+        "Office supplies and consumables naming guide: one-stop cues, reliability signals, breakdowns of Staples/Office Depot/Quill, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An office supplies name must please two very different people: the admin who orders (wants zero hassle) and the boss who approves the budget (wants zero risk). That sets the category's keynote — one-stop plus dependable. Staples made a humble fastener stand for the whole catalog (with the \"staple goods\" pun built in), Office Depot wrote the warehouse on the sign, and Quill reached back to the quill pen for professional heritage. Office procurement is the definition of a low-interest purchase: nobody loves buying copy paper; customers want in-stock, on-time and properly invoiced, so steadiness outsells creativity here. It's also a high-repeat business — the name will appear on monthly statements and in procurement systems, where anything too cute reads unprofessional. Going vertical (print consumables, desk organization) rewards a tighter category word with cheaper, sharper search traffic.",
+      namingIdeas: [
+        "One-stop imagery: depot, mart, hub — procurement's biggest pain is piecemeal buying; promise everything in one order in the name",
+        "Let a small object represent the catalog: Staples' fastener, a paperclip, a sticky note — one everyday desk item, concrete and double-meaninged",
+        "Reliability and efficiency words: swift, steady, prime — the admin's dream is no rework; put the delivery promise in the name",
+        "The invoice test: read the name aloud as an invoice header and a vendor-registry entry — anything that sounds frivolous there gets cut",
+        "Vertical focus: ink and toner only? Name toward print. Desk organization? Name toward the desk — the tighter the vertical, the cheaper the search click",
+      ],
+      cases: [
+        { name: "Staples", takeaway: "The fastener/staple-goods double meaning: the humblest desk object standing for the entire catalog — concrete, easy to say, with a hidden layer; the ceiling of office-retail naming" },
+        { name: "Office Depot", takeaway: "office + depot: two words that say warehouse of office goods, the abundance image directly calming the will-they-have-it procurement anxiety — the solid sample of literal naming" },
+        { name: "Quill", takeaway: "The quill pen: writing's ancestor lending heritage and professionalism to a B2B supplier — a rare elegant name in a functional industry" },
+        { name: "Viking", takeaway: "A voyager image for a direct-mail office supplier: bold, one word, utterly un-officelike — proof that a memorable mascot beats a literal label in a commodity market" },
+      ],
+      pitfalls: [
+        "Welding plain words: OfficeSupplyPro has zero recall — next month the buyer only remembers \"office-something\"",
+        "Too cute for the procurement system: B2B names must survive invoices, contracts and tender documents",
+        "Locking the category too tight: \"Stapler House\" caps you the day you add office furniture — pair a narrow name with an expansion plan",
+        "Ignoring the bilingual purchase order: international clients order in English — secure a spellable English domain before opening",
+      ],
+    },
+  },
+  medicalsupplies: {
+    slug: "medicalsupplies",
+    keywords: ["医疗器械", "医用耗材", "康复用品", "medical equipment"],
+    tlds: [
+      { tld: "com", zh: "医院与经销商采购的默认信任后缀，资质感第一", en: "The default trust suffix for hospital and distributor procurement" },
+      { tld: "supplies", zh: "耗材生意后缀自带品类，采购一眼识别经营范围", en: "Consumables in the suffix — buyers read your scope at a glance" },
+      { tld: "health", zh: "面向家用与康复客群时更亲和，健康语义直达", en: "Warmer for home-care and recovery audiences — health said directly" },
+    ],
+    zh: {
+      label: "医疗用品",
+      title: "医疗器械与医用耗材商怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "医疗器械与医用耗材命名指南：专业信任、生命关怀等思路，Medline/鱼跃/欧姆龙案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "医疗用品的名字在两个极端之间走钢丝：太冷会吓到家用客户，太暖会让专业采购怀疑资质。行业头部的解法是「专业词根 + 生命温度」——Medline 用 med（医疗）+ line（产品线/生命线）双关，鱼跃用「鱼跃龙门」的生机意象卖制氧机，欧姆龙以创始地名的中性感通吃血压计市场。先想清楚你的主客群：面向医院和经销商（B 端），名字要像能通过招投标资质审查的样子，med、care、精、康等词根打底；面向家庭护理与康复用户（C 端），名字要卸下白大褂的距离感，往「生活里的健康」靠。这个行业的名字还有一条铁律：绝不暗示疗效——「包治」「神效」类词根不仅违反广告法，也会让专业买家立刻拉黑。",
+      namingIdeas: [
+        "med/康/护 专业词根打底：Medline、康复之家——采购方要在名字里读到「懂行」，专业词根是资质的第一道暗示",
+        "生命与生机意象：鱼跃的跃、心跳、晨光——医疗的本质是守护生命，一个有生命力的意象让冰冷的器械有了温度",
+        "精密与可靠词：精、准、稳——器械与耗材的核心卖点是「不出差错」，名字里给出质量承诺",
+        "场景细分命名：家用康复叫「护」与「家」、手术耗材叫「精」与「械」——B 端 C 端语感差异极大，别用一个名字硬跨",
+        "合规红线自查：疗效暗示、绝对化用词、疾病名入名都是雷区，名字定稿前先过一遍广告法与医疗器械命名规范",
+      ],
+      cases: [
+        { name: "Medline", takeaway: "med + line 的双关：既是「医疗产品线」又是「生命线」，专业与温度一词兼得——全球最大私营医疗耗材商的命名样本" },
+        { name: "鱼跃 Yuwell", takeaway: "「鱼跃龙门」的生机意象：家用医疗器械避开冰冷的「械」字，用跃动的生命力讲健康向上——中文意象在医疗行业的教科书级应用" },
+        { name: "Omron 欧姆龙", takeaway: "源自创始地京都御室（Omuro）：中性地名脱离品类束缚，从继电器做到血压计名字都装得下——技术公司跨界医疗的命名底气" },
+        { name: "Cardinal Health", takeaway: "cardinal（基本的、红衣主教）+ health：一词三关——基础医疗物资、权威感、红色的生命联想，B2B 医疗分销的命名标杆" },
+      ],
+      pitfalls: [
+        "疗效暗示踩合规红线：「速愈」「根治」类名字广告法直接不让过，医疗行业命名先合规再谈创意",
+        "恐惧营销式命名：名字里放病名（如「糖尿病商城」）会让顾客抗拒分享——没人想让购物记录暴露病情",
+        "过度冰冷的器械感：家用客群面对「XX 医疗器械」会心理设防，C 端生意名字要有生活温度",
+        "忽略资质联想：医疗采购查证严格，名字轻浮（谐音梗、网络词）会让 B 端买家默认你没有经营许可",
+      ],
+    },
+    en: {
+      label: "Medical supplies",
+      title: "How to Name a Medical Supplies Business: Strategies, Cases & Domains",
+      metaDescription:
+        "Medical equipment and supplies naming guide: clinical trust, life-affirming imagery, breakdowns of Medline/Omron/Cardinal Health, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A medical supplies name walks a tightrope: too clinical scares home users, too warm makes professional buyers question your credentials. The category leaders solve it with clinical root + human warmth — Medline puns med + line (product line / lifeline), Omron's neutral place-name pedigree carries it from relays to blood pressure monitors, and Cardinal Health layers authority onto care. Decide your primary buyer first: for hospitals and distributors (B2B), the name must look tender-ready — med, care and precision roots signal competence; for home care and recovery users (B2C), take off the white coat and name toward health in daily life. And one iron rule above all: never imply a cure — miracle and heal-all roots violate advertising law in most markets and make professional buyers blacklist you on sight.",
+      namingIdeas: [
+        "Ground it in clinical roots: med, care, clin — procurement reads competence in the name first; the professional root is your first credential",
+        "Life-affirming imagery: pulse, dawn, leap — the business is guarding life, and one living image warms even the coldest device catalog",
+        "Precision and reliability words: exact, steady, sure — the core promise of equipment and consumables is zero error; write it into the name",
+        "Split B2B and B2C naming: surgical consumables want precision and instrument roots; home rehab wants home and care warmth — the registers barely overlap, don't straddle them with one name",
+        "Run the compliance check: cure implications, absolute claims and disease names in the brand are regulatory landmines — clear the name against medical-device naming rules before falling in love",
+      ],
+      cases: [
+        { name: "Medline", takeaway: "The med + line pun: a product line and a lifeline at once, professionalism and warmth in a single word — the naming sample of the largest private medical supplier" },
+        { name: "Omron", takeaway: "From Omuro, Kyoto, its founding district: a neutral place name free of category chains, stretching from relays to blood pressure monitors — the confidence of technical companies crossing into medical" },
+        { name: "Cardinal Health", takeaway: "cardinal + health: fundamental supplies, churchly authority and the red pulse of life in one modifier — the benchmark of B2B medical distribution naming" },
+        { name: "Yuwell", takeaway: "From the Chinese image of a fish leaping the dragon gate: home medical devices named with leaping vitality instead of cold instrumentation — life-affirming imagery done right" },
+      ],
+      pitfalls: [
+        "Cure implications crossing compliance lines: HealFast-style names fail advertising review outright — in medical, compliance precedes creativity",
+        "Fear-based naming: put a disease in the name and customers won't share it — nobody wants their shopping history to disclose a diagnosis",
+        "Over-clinical chill for home buyers: consumers flinch at Medical Instruments Co. — B2C medical names need household warmth",
+        "Ignoring the credentials read: medical procurement verifies everything — a flippant name makes B2B buyers assume the licenses are missing too",
+      ],
+    },
+  },
+  buildingmaterials: {
+    slug: "buildingmaterials",
+    keywords: ["建材店", "五金建材", "装修材料", "hardware store"],
+    tlds: [
+      { tld: "com", zh: "工程报价单与供应商名录里的默认后缀，正规感打底", en: "The default suffix on quotes and vendor lists — formality as a foundation" },
+      { tld: "supplies", zh: "建材即供应，后缀说清「材料在这里备齐」", en: "Building materials are supply — the suffix says stocked here outright" },
+      { tld: "construction", zh: "直接绑定施工场景，工程客户搜索零歧义", en: "Bound straight to the jobsite — zero ambiguity for construction clients" },
+    ],
+    zh: {
+      label: "建材五金",
+      title: "建材店与装修材料商怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "建材与装修材料商命名指南：坚固意象、齐全承诺等思路，Home Depot/Lowe's/东方雨虹案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "建材生意的名字要同时立在两个场景里：工地上包工头的一句「去 XX 拉货」，和业主装修群里的一条「XX 家的瓷砖靠谱」。行业命名的两大母题是「坚固」与「齐全」——Home Depot 用 depot（仓库）承诺「装修所需一站备齐」，东方雨虹用「雨虹」把防水材料讲成「雨后见彩虹」的美好意象，立邦（Nippon Paint 的中文名）借「邦」字传达坚固可靠。建材客单价高、复购周期长，生意本质是「转介绍驱动」：包工头与设计师的口头推荐是最大流量入口，名字必须在嘈杂的工地电话里一遍听清。如果做细分品类（防水、管材、板材），名字绑定品类词能吃到精准搜索；做综合建材城则要往「大而全」的意象走。",
+      namingIdeas: [
+        "坚固与承重意象：磐石、鼎、峰、钢——建材卖的是「房子立得住」的安全感，名字先给出结构强度",
+        "仓库与齐全意象：depot、城、汇、库——装修最怕跑三家店配不齐货，「一站备齐」写进名字就是承诺",
+        "品类美学升维：东方雨虹把防水讲成雨后彩虹——功能品类也能有诗意，美好意象让材料从工地走进业主心里",
+        "工地电话测试：名字在嘈杂环境里喊一遍能不能听清？多音字、绕口的名字在转介绍链路里必然失真",
+        "细分绑品类词：做防水就带「水」、做管材就带「管」——垂直建材商名字越准，工程搜索的流量越精准",
+      ],
+      cases: [
+        { name: "Home Depot", takeaway: "home + depot（仓库）：「家装所需这里全有」一次说清，橙色大仓库的视觉与名字互相成就——建材零售一站式命名的全球标杆" },
+        { name: "Lowe's", takeaway: "创始人姓氏 Lowe：人名做名字自带「街坊老店」的信任感，百年从五金店做到家装巨头——姓氏命名在建材行业的长寿样本" },
+        { name: "东方雨虹", takeaway: "「雨后彩虹」：防水材料最怕的雨天被反转成美好意象，功能焦虑变成情感承诺——中文建材命名里最漂亮的价值反转" },
+        { name: "立邦", takeaway: "Nippon 音译取「立邦」：「立」的坚固与「邦」的宏大兼得，涂料品牌听起来像基建国企——音译汉化选字的教科书" },
+      ],
+      pitfalls: [
+        "建材/五金素词裸奔：「XX 建材」满街都是，没有记忆点的名字在业主群转介绍时会被张冠李戴",
+        "谐音梗消解信任：装修是大额决策，名字抖机灵（如「砖治不服」）会让业主怀疑材料也不正经",
+        "品类锁死扩张路：叫「瓷砖大王」再上卫浴就别扭——细分名要提前想好品类扩张的兼容性",
+        "忽略工程正式场景：名字要经得起投标文件与对公合同，过于口语化的名字在工程单里显得不够格",
+      ],
+    },
+    en: {
+      label: "Building materials",
+      title: "How to Name a Building Materials Business: Strategies, Cases & Domains",
+      metaDescription:
+        "Building materials and hardware naming guide: strength imagery, one-stop promises, breakdowns of Home Depot/Lowe's/Ace Hardware, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A building materials name must stand up in two rooms: the contractor's shout of \"grab it from X\" on a noisy jobsite, and the homeowner group chat's \"the tile from X held up.\" The category's two mother themes are strength and completeness — Home Depot promises everything for the build in one warehouse word, Lowe's banks a century of neighborly trust on a family name, and Ace Hardware makes the humble hardware store sound like the best player on the team. Ticket sizes are high and repeat cycles long, so the business runs on referrals: contractors and designers are the biggest traffic source, and the name must survive one hearing over jobsite noise. Vertical players (waterproofing, pipes, lumber) win precise search by binding the category word; full-line dealers should name toward big and complete.",
+      namingIdeas: [
+        "Strength and load-bearing imagery: rock, anchor, summit, steel — you're selling the certainty that the house stands; put structural confidence in the name",
+        "Warehouse and completeness imagery: depot, yard, hub — the renovation nightmare is three trips to three stores; write one-stop into the name as a promise",
+        "Elevate a functional category: a waterproofing brand named for the rainbow after rain — even commodity materials can carry poetry that moves them from jobsite to homeowner's heart",
+        "The jobsite shout test: yell the name over machinery once — if it garbles, it will mutate in every referral down the chain",
+        "Bind the category word when vertical: pipes want pipe, lumber wants wood — the tighter the vertical name, the sharper the contractor search traffic",
+      ],
+      cases: [
+        { name: "Home Depot", takeaway: "home + depot: everything for the home, all in one warehouse — said in two words, with the big orange box making name and store prove each other; the global benchmark of one-stop building retail" },
+        { name: "Lowe's", takeaway: "The founder's surname: a family name carrying corner-store trust from a 1921 hardware shop to a home-improvement giant — the longevity sample of surname naming in this trade" },
+        { name: "Ace Hardware", takeaway: "ace + the plainest category word: the top-of-the-deck confidence upgrading a neighborhood hardware co-op into a brand — small word, big attitude" },
+        { name: "84 Lumber", takeaway: "Named for its hometown of Eighty Four, Pennsylvania: a number plus the category word, blunt as a 2x4 and impossible to forget — proof that literal can be memorable" },
+      ],
+      pitfalls: [
+        "Naked category words: another \"X Building Materials\" gets misattributed in every homeowner group chat — no hook, no recall",
+        "Pun names that corrode trust: renovation is a five-figure decision — a jokey name makes buyers suspect the materials joke too",
+        "Category lock-in: \"Tile King\" gets awkward the day you stock bathware — pair narrow names with an expansion story",
+        "Forgetting the formal paper trail: the name must hold up in tender documents and B2B contracts; too colloquial reads underqualified",
+      ],
+    },
+  },
+  franchise: {
+    slug: "franchise",
+    keywords: ["加盟", "连锁品牌", "特许经营", "franchising"],
+    tlds: [
+      { tld: "com", zh: "加盟商尽调第一站是官网，.com 是正规连锁的标配", en: "Franchisee due diligence starts at the website — .com is chain-standard" },
+      { tld: "business", zh: "后缀直指「生意机会」，招商语境里语义精准", en: "The suffix says business opportunity — precise in recruitment contexts" },
+      { tld: "limited", zh: "公司体裁后缀自带正式感，适合总部品牌官网", en: "A corporate-register suffix with built-in formality for HQ brand sites" },
+    ],
+    zh: {
+      label: "连锁加盟",
+      title: "连锁加盟品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "连锁加盟品牌命名指南：可复制性、招牌一致性等思路，蜜雪冰城/Subway/7-Eleven 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "加盟品牌的名字是整套「生意复制系统」里最先被复制的资产：它要同时说服两种人——消费者愿意进店，加盟商愿意押上身家。这让加盟命名比普通门店多一重刚性约束：可复制性。名字必须在一线城市与县城同样成立、在南北方言里读音不跑偏、做成招牌在任何街道都醒目——蜜雪冰城的「雪王」形象与三个字名字全国五千个县镇都能落地，7-Eleven 用营业时间做名字在十八个国家通用。加盟命名第二重考验是商标：全国扩张前 45 类商标注册要能拿下，名字被抢注一个类目，加盟体系就多一个漏洞。第三重是「招商语感」：名字要让潜在加盟商听到就觉得「这是个正经品牌、总部有实力」，轻浮的名字招不来愿意投几十万的人。",
+      namingIdeas: [
+        "可复制性优先：名字要在县城招牌与一线商场同样成立——生僻字、地域梗、小圈层黑话都会限制扩张半径",
+        "数字与时间入名：7-Eleven 的营业时间、85°C 的烘焙温度——数字跨语言跨方言，是加盟连锁最保险的通用符号",
+        "IP 形象预留：蜜雪冰城配雪王、肯德基配上校——名字最好能长出一个吉祥物，招牌、周边、短视频都有主角",
+        "商标先行测试：名字候选先查 45 类商标与全国企业名录，加盟生意的名字被抢注就是体系性风险",
+        "招商双场景自检：名字念给消费者听要有食欲/兴趣，念给投资人听要有「总部靠谱」的分量——两个场景都过才算合格",
+      ],
+      cases: [
+        { name: "蜜雪冰城", takeaway: "蜜+雪+冰城：甜、冰、量大三个卖点全在名里，配合雪王 IP 全国复制五千店——名字+形象+主题曲的加盟命名完全体" },
+        { name: "7-Eleven", takeaway: "用营业时间（早 7 晚 11）做名字：数字跨语言零翻译成本，「便利」的承诺具体到小时——全球加盟连锁命名的通用性天花板" },
+        { name: "Subway", takeaway: "subway 一词双关潜艇堡（sub）与地铁：品类与「快捷通勤」场景一次绑定，简单到任何国家的加盟商都会念——全球扩张友好型命名" },
+        { name: "正新鸡排", takeaway: "姓氏辈分字「正新」+品类词「鸡排」：正气的名字压住街边小吃的江湖气，两万家店证明「正规感」是下沉市场加盟的通行证" },
+      ],
+      pitfalls: [
+        "地域梗限制扩张：名字里的方言梗出了本省没人懂，加盟版图画到哪名字就要能走到哪",
+        "商标查册滞后：先招商后注册是加盟业最贵的错误——名字被职业抢注人卡住，改名成本由全体门店承担",
+        "蹭头部品牌近似名：蜜雪冰域、7-Twelve 类擦边名不仅有法律风险，更让加盟商怀疑总部成色",
+        "名字与品类错位：做炸鸡叫「茶语」类错位名，消费者路过十次也不会进——加盟店没有解释的机会，招牌即广告",
+      ],
+    },
+    en: {
+      label: "Franchise brands",
+      title: "How to Name a Franchise Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Franchise brand naming guide: replicability tests, trademark-first strategy, breakdowns of 7-Eleven/Subway/Mixue, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A franchise name is the first asset your business-replication system replicates: it must convince two audiences at once — customers to walk in, and franchisees to bet their savings. That adds a constraint ordinary shop names never face: replicability. The name must work equally in a metro flagship and a county-town storefront, survive every regional accent, and stay legible on any street's signage — 7-Eleven turned its opening hours into a name that travels across eighteen countries, and Mixue's three characters plus Snow King mascot replicate across five thousand towns. The second test is trademark: before national expansion, the full class registration must be winnable — every squatted class is a hole in the franchise system. The third is recruitment gravitas: prospective franchisees should hear the name and think real brand, capable HQ; a flippant name never recruits people investing six figures.",
+      namingIdeas: [
+        "Replicability first: the name must hold up on a county-town sign and a metro mall façade alike — obscure characters, regional in-jokes and niche slang all shrink your expansion radius",
+        "Numbers and time in the name: 7-Eleven's hours, 85°C's baking temperature — digits cross languages and dialects; they're franchising's safest universal symbols",
+        "Leave room for a mascot: Mixue has the Snow King, KFC has the Colonel — the best franchise names can grow a character that stars on signs, merch and short videos",
+        "Trademark before recruitment: screen candidates against all trademark classes and the national business registry first — in franchising, a squatted name is systemic risk, not inconvenience",
+        "The two-room pitch test: said to a customer the name should spark appetite or interest; said to an investor it should sound like a capable HQ — pass both rooms or keep looking",
+      ],
+      cases: [
+        { name: "7-Eleven", takeaway: "Opening hours as the name: digits with zero translation cost, the convenience promise made concrete to the hour — the global ceiling of franchise-name universality" },
+        { name: "Subway", takeaway: "One word punning the sub sandwich and the subway commute: category and speed-scenario bound in a name any franchisee in any country can pronounce — expansion-friendly naming" },
+        { name: "Mixue", takeaway: "Honey + snow + ice city: sweetness, chill and abundance all inside the name, with the Snow King mascot and jingle completing the kit across five thousand stores — the complete form of franchise naming" },
+        { name: "McDonald's", takeaway: "A surname made system: the founder's name plus the golden arches became the world's most replicated storefront — proof that with enough consistency, any name can become the standard" },
+      ],
+      pitfalls: [
+        "Regional jokes that cap expansion: a dialect pun dies one province over — the name must travel as far as your franchise map",
+        "Trademark lag: recruiting before registering is franchising's costliest mistake — when a squatter holds your name, every store pays for the rebrand",
+        "Near-miss names on category leaders: 7-Twelve-style knockoffs carry legal risk and tell franchisees exactly how much substance HQ has",
+        "Name-category mismatch: a fried chicken chain named like a tea house loses the walk-by customer ten times over — a franchise sign gets no second chance to explain",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
