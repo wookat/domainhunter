@@ -26,3 +26,5 @@ description: How to run zero-AI production audits of DomainHunter (hunt.zalize.c
 - To count /prices table rows objectively, count `main a[href^="/?tld="]` (Hunt links) — the table is not a `<table>` element.
 - 375px viewport checks: use CDP `Emulation.setDeviceMetricsOverride` in a separate tab; assert `document.documentElement.scrollWidth <= 375`.
 - Lighthouse CLI with `--chrome-flags="--headless=new --no-sandbox"` works fine against production.
+- The /tld hub has an `input[type=search]` filter (aria-label "Filter TLDs…/筛选后缀…") — fastest way to locate a single TLD and its category.
+- Local `wrangler dev` CAN fetch live Porkbun quotes, so TLD detail pages show live prices rather than static reference prices; to verify `TLD_PRICES`, grep the SSR HTML for「静态参考价：首年 ¥X · 续费 ¥Y/年」.
