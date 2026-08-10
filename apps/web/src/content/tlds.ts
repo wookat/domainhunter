@@ -8484,6 +8484,186 @@ const GUIDES = {
       ],
     },
   },
+  vodka: {
+    tld: "vodka",
+    zh: {
+      title: ".vodka 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".vodka 是伏特加品类的专属后缀，适合伏特加品牌与精酿酒厂、鸡尾酒吧与调酒内容站、烈酒电商与进口商、酒类测评与品鉴社区。查看 .vodka 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .vodka 域名。",
+      intro:
+        ".vodka 把酒瓶上的品类直接倒进域名：伏特加品牌与精酿酒厂、鸡尾酒吧与调酒内容站、烈酒电商与进口商、酒类测评与品鉴社区用 name.vodka，品类属性一词讲透——烈酒是重品牌、重故事的行业，name.vodka 让品牌名与品类读成一句话。它与已收录的 .wine/.beer/.bar 分工清晰：.wine 说葡萄酒，.beer 说啤酒精酿，.bar 说酒吧这个场所，.vodka 直指伏特加这一个品类——做伏特加生意用它定位最准，五个字母也是酒类后缀里少见的短。注册局为 GoDaddy Registry（原 Minds + Machines 组合）。价格是少见的平价结构：注册与续费都约 $26/年（约 ¥189）——没有首年促销陷阱，预算恒定好算。库存极好：品牌词、产地词、鸡尾酒名全线有货。注意两点：一是酒类营销在各国受严格监管（年龄门槛、广告限制），域名之外把年龄验证与合规页备好；二是烈酒消费者也搜品牌大词，主品牌可配 .com 双持。命名上「品牌词 + .vodka」（frost.vodka）最主流，「产地/风格 + .vodka」（potato.vodka）适合精酿故事向品牌。",
+      bestFor: ["伏特加品牌与精酿酒厂", "鸡尾酒吧与调酒内容站", "烈酒电商与进口商", "酒类测评与品鉴社区"],
+      namingTips: [
+        "「品牌词 + .vodka」让品牌名与品类读成一句话",
+        "注册续费同价约 $26/年，预算恒定没有促销陷阱",
+        "伏特加品类用 .vodka，葡萄酒用 .wine，场所用 .bar",
+        "酒类营销受监管，年龄验证与合规页一起备好",
+      ],
+    },
+    en: {
+      title: ".vodka Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".vodka is the dedicated suffix for the vodka category — for vodka brands and craft distilleries, cocktail bars and mixology content sites, spirits e-commerce and importers, tasting and review communities. See live pricing and naming advice, then hunt available .vodka names with AI.",
+      intro:
+        ".vodka pours the label's category straight into the address: vodka brands and craft distilleries, cocktail bars and mixology content sites, spirits e-commerce and importers, and tasting communities on name.vodka say the whole category in one word — spirits is a brand-and-story business, and name.vodka makes brand and category read as one phrase. It divides labor cleanly with the already-listed .wine, .beer and .bar: .wine names wine, .beer names beer and craft brews, .bar names the venue — .vodka names this one spirit, so vodka businesses position sharpest here, and at five letters it's unusually short for a drinks suffix. The registry is GoDaddy Registry (from the former Minds + Machines portfolio). Pricing is refreshingly flat: about $26/yr to register and renew alike (≈¥189) — no first-year promo trap, so budgets stay constant. Inventory is excellent: brand words, origin words and cocktail names all hit. Two cautions: alcohol marketing is tightly regulated everywhere (age gates, ad restrictions), so pair the domain with age verification and compliance pages; and spirits shoppers still search big brand terms, so a flagship brand may hold a .com alongside. Naming: brand word + .vodka (frost.vodka) is the mainstream shape; origin or style + .vodka (potato.vodka) suits craft-story brands.",
+      bestFor: ["Vodka brands & craft distilleries", "Cocktail bars & mixology content sites", "Spirits e-commerce & importers", "Tasting & review communities"],
+      namingTips: [
+        "Brand word + .vodka makes name and category read as one phrase",
+        "About $26/yr flat to register and renew — no promo trap",
+        "The spirit fits .vodka; wine fits .wine; the venue fits .bar",
+        "Alcohol marketing is regulated — ship age gates with the domain",
+      ],
+    },
+  },
+  casino: {
+    tld: "casino",
+    zh: {
+      title: ".casino 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".casino 是博彩娱乐场行业的专属后缀，适合持牌线上娱乐场平台、实体娱乐场与度假村、博彩评测与导航站、社交娱乐场游戏开发商。查看 .casino 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .casino 域名。",
+      intro:
+        ".casino 把「娱乐场」亮进域名：持牌线上娱乐场平台、实体娱乐场与度假村、博彩评测与导航站、社交娱乐场游戏开发商用 name.casino，行业属性一词讲透——博彩是全球千亿美元级的行业，玩家搜「品牌 + casino」时域名与搜索词逐字吻合。它与已收录的 .games/.game/.club 分工清晰：.games/.game 说泛游戏，.club 说会员组织，.casino 直指真金娱乐场这个受监管行业——持牌运营方用它定位最准。注册局为 Identity Digital（Binky Moon 组合）。价格是全站最陡的首年促销结构之一：首年约 $8（约 ¥56），续费约 $129/年（约 ¥931）——续费全站前列，务必按续费价做长期预算。库存极好：品牌词、玩法词、地名全线有货。注意两点：一是博彩在多数司法辖区须持牌运营，无牌照别碰真金业务，域名解决不了合规；二是续费近 $130/年且行业域名易被平台风控盯上，主体资质与域名信息务必一致。命名上「品牌词 + .casino」（lucky.casino）最主流，「地名 + .casino」（vegas.casino 类）适合实体娱乐场与本地导航站。",
+      bestFor: ["持牌线上娱乐场平台", "实体娱乐场与度假村", "博彩评测与导航站", "社交娱乐场游戏开发商"],
+      namingTips: [
+        "「品牌 + .casino」与玩家搜索句式逐字吻合",
+        "首年约 $8、续费约 $129/年，务必按续费价做预算",
+        "真金业务须持牌，域名解决不了合规",
+        "泛游戏用 .games，真金娱乐场才用 .casino",
+      ],
+    },
+    en: {
+      title: ".casino Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".casino is the dedicated suffix for the casino industry — for licensed online casino platforms, land-based casinos and resorts, casino review and affiliate sites, social casino game developers. See live pricing and naming advice, then hunt available .casino names with AI.",
+      intro:
+        ".casino puts the house right on the marquee: licensed online casino platforms, land-based casinos and resorts, review and affiliate sites, and social casino game developers on name.casino say the whole industry in one word — gambling is a hundred-billion-dollar global business, and \"brand + casino\" is the literal query players type. It divides labor cleanly with the already-listed .games, .game and .club: .games and .game name gaming at large, .club names a membership group — .casino names the regulated real-money trade, so licensed operators position sharpest here. The registry is Identity Digital (Binky Moon portfolio). Pricing is one of the steepest promo structures on this site: about $8 first year (≈¥56) but $129/yr to renew (≈¥931) — among the highest renewals we list, so budget strictly on the renewal. Inventory is excellent: brand words, game words and place names all hit. Two cautions: gambling requires licenses in most jurisdictions — without one, stay away from real-money play, because a domain fixes nothing about compliance; and at nearly $130/yr in a heavily-scrutinized industry, keep corporate credentials and WHOIS details consistent. Naming: brand word + .casino (lucky.casino) is the mainstream shape; place + .casino suits land-based venues and local guide sites.",
+      bestFor: ["Licensed online casino platforms", "Land-based casinos & resorts", "Casino review & affiliate sites", "Social casino game developers"],
+      namingTips: [
+        "Brand + .casino matches player search queries word for word",
+        "About $8 year one but $129/yr renewal — budget on the renewal",
+        "Real-money play needs a license — the domain fixes nothing",
+        "Gaming at large fits .games; the real-money trade fits .casino",
+      ],
+    },
+  },
+  bet: {
+    tld: "bet",
+    zh: {
+      title: ".bet 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".bet 是投注行业的短后缀，适合持牌体育投注平台、赛事赔率与数据站、投注技巧与评测内容站、竞猜预测社区。查看 .bet 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .bet 域名。",
+      intro:
+        ".bet 用三个字母把「投注」说完：持牌体育投注平台、赛事赔率与数据站、投注技巧与评测内容站、竞猜预测社区用 name.bet，动词即行业——bet 本身就是玩家嘴里的高频词，域名短、好记、输入零负担。它与同批收录的 .casino 分工清晰：.casino 说娱乐场这个场所与业态（老虎机、桌游），.bet 说投注这个动作（体育博彩、赛事竞猜为主）——做体育投注与预测的生意用 .bet 更贴。注册局为 Identity Digital（原 Afilias 组合）。价格结构温和：首年约 $10（约 ¥69），续费约 $21/年（约 ¥151）——在博彩类后缀里续费最友好，做内容站与社区也扛得住。库存极好：球队词、赛事词、玩法词全线有货。注意两点：一是与 .casino 同理，真金投注在多数司法辖区须持牌，无牌照就做资讯与社区；二是三字母后缀太好记也易被滥用，品牌词要正经，别踩平台风控关键词。命名上「赛事/球类 + .bet」（soccer.bet 类）最主流，「品牌词 + .bet」（swift.bet）适合持牌平台主站。",
+      bestFor: ["持牌体育投注平台", "赛事赔率与数据站", "投注技巧与评测内容站", "竞猜预测社区"],
+      namingTips: [
+        "三个字母动词即行业，输入零负担",
+        "首年约 $10、续费约 $21/年，博彩类里最友好",
+        "投注动作用 .bet，娱乐场业态用 .casino",
+        "无牌照就做资讯与社区，真金业务须持牌",
+      ],
+    },
+    en: {
+      title: ".bet Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".bet is the three-letter suffix for the betting trade — for licensed sportsbooks, odds and data sites, betting tips and review content, prediction and tipster communities. See live pricing and naming advice, then hunt available .bet names with AI.",
+      intro:
+        ".bet says the whole trade in three letters: licensed sportsbooks, odds and data sites, betting tips and review content, and prediction communities on name.bet make the verb the industry — bet is the word players actually say, and the domain is short, memorable and effortless to type. It divides labor cleanly with the same-batch .casino: .casino names the venue and its games (slots, tables), .bet names the act of wagering — sports betting and match prediction first — so sportsbook and tipster businesses fit .bet best. The registry is Identity Digital (from the former Afilias portfolio). Pricing is gentle: about $10 first year (≈¥69) and $21/yr to renew (≈¥151) — the friendliest renewal among gambling suffixes, sustainable even for content sites and communities. Inventory is excellent: team words, event words and market words all hit. Two cautions: as with .casino, real-money wagering requires licenses in most jurisdictions — without one, stick to news and community; and a three-letter suffix this catchy attracts abuse, so keep branding clean and clear of payment-risk keywords. Naming: sport or event + .bet is the mainstream shape; brand word + .bet (swift.bet) suits a licensed platform's main site.",
+      bestFor: ["Licensed sportsbooks", "Odds & data sites", "Betting tips & review content", "Prediction & tipster communities"],
+      namingTips: [
+        "Three letters make the verb the industry — effortless to type",
+        "About $10 year one, $21/yr renewal — friendliest in gambling",
+        "The act of wagering fits .bet; the venue fits .casino",
+        "No license means news and community only — real money needs one",
+      ],
+    },
+  },
+  poker: {
+    tld: "poker",
+    zh: {
+      title: ".poker 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".poker 是扑克垂直的专属后缀，适合线上扑克平台与俱乐部、扑克教学与策略内容站、赛事报道与直播频道、扑克工具与训练软件。查看 .poker 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .poker 域名。",
+      intro:
+        ".poker 把牌桌搬进域名：线上扑克平台与俱乐部、扑克教学与策略内容站、赛事报道与直播频道、扑克工具与训练软件用 name.poker，垂直属性一词讲透——扑克是博彩里最偏技巧与内容生态的分支，教学、直播、工具的受众都极精准。它与同批收录的 .casino/.bet 分工清晰：.casino 说娱乐场全场，.bet 说体育投注，.poker 直指扑克这一张牌桌——做德州扑克生态的生意用它定位最准。注册局为 Identity Digital（原 Afilias 组合）。价格是典型首年促销结构：首年约 $8（约 ¥59），续费约 $54/年（约 ¥389）——介于 .bet 与 .casino 之间，按续费价做长期预算。库存极好：术语词（allin、river、bluff 类）、俱乐部名、人名全线有货。注意两点：一是各司法辖区对真金扑克定性不一（技巧游戏 vs 博彩），跨境运营前把目标市场法规摸清；二是扑克内容生态靠社区与直播导流，域名之外把 Twitch/Discord 阵地一起建好。命名上「术语 + .poker」（allin.poker）最主流，「品牌/俱乐部 + .poker」（ace.poker）适合平台与俱乐部主站。",
+      bestFor: ["线上扑克平台与俱乐部", "扑克教学与策略内容站", "赛事报道与直播频道", "扑克工具与训练软件"],
+      namingTips: [
+        "「术语 + .poker」对牌手一眼即懂",
+        "首年约 $8、续费约 $54/年，按续费价做预算",
+        "扑克垂直用 .poker，全场娱乐用 .casino，体育投注用 .bet",
+        "各地对真金扑克定性不一，跨境前摸清法规",
+      ],
+    },
+    en: {
+      title: ".poker Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".poker is the dedicated suffix for the poker vertical — for online poker platforms and clubs, poker training and strategy content, tournament coverage and streaming channels, poker tools and trainers. See live pricing and naming advice, then hunt available .poker names with AI.",
+      intro:
+        ".poker deals the table straight into the address: online poker platforms and clubs, training and strategy content, tournament coverage and streaming channels, and poker tools on name.poker say the vertical in one word — poker is the most skill-and-content-driven branch of gambling, and its coaching, streaming and software audiences are laser-precise. It divides labor cleanly with the same-batch .casino and .bet: .casino names the whole gaming floor, .bet names sports wagering — .poker names this one table, so businesses in the hold'em ecosystem position sharpest here. The registry is Identity Digital (from the former Afilias portfolio). Pricing follows the classic promo structure: about $8 first year (≈¥59) and $54/yr to renew (≈¥389) — between .bet and .casino, so budget on the renewal. Inventory is excellent: term words (allin, river, bluff), club names and player names all hit. Two cautions: jurisdictions disagree on whether real-money poker is a skill game or gambling, so map the rules of every target market before going cross-border; and the poker content world runs on community and streams — build the Twitch and Discord presence alongside the domain. Naming: term + .poker (allin.poker) is the mainstream shape; brand or club + .poker (ace.poker) suits platform and club main sites.",
+      bestFor: ["Online poker platforms & clubs", "Poker training & strategy content", "Tournament coverage & streaming channels", "Poker tools & trainers"],
+      namingTips: [
+        "Term + .poker reads instantly to card players",
+        "About $8 year one, $54/yr renewal — budget on the renewal",
+        "The vertical fits .poker; the floor fits .casino; sports fit .bet",
+        "Real-money poker's legal status varies — map each market first",
+      ],
+    },
+  },
+  futbol: {
+    tld: "futbol",
+    zh: {
+      title: ".futbol 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".futbol 是西语足球世界的专属后缀，适合西语市场球迷媒体与社区、拉美青训与足球学校、球队球迷会与地方联赛、足球装备与周边电商。查看 .futbol 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .futbol 域名。",
+      intro:
+        ".futbol 用西语把足球喊进域名：西语市场球迷媒体与社区、拉美青训与足球学校、球队球迷会与地方联赛、足球装备与周边电商用 name.futbol，一个词说清「足球」与「说西语」两件事——西语世界是足球最狂热的市场，futbol 是球迷嘴里的原生拼写，域名与受众语言完全同频。它与已收录的 .soccer/.football 分工清晰：.soccer 是美式英语叫法（北美市场），.football 是英式叫法（欧洲及全球），.futbol 直指西语与拉美市场——面向拉美、西班牙球迷的生意用它最出彩。注册局为 Identity Digital（原 Rightside/Donuts 组合）。价格在体育类后缀里数一数二便宜：首年约 $6（约 ¥41），续费约 $14/年（约 ¥100）——比 .soccer/.football 的续费低一截，做球迷站矩阵毫无压力。库存极好：球队词、城市词、术语词全线有货。注意两点：一是英语市场对 futbol 拼写认知有限，主打英语用户时选 .soccer/.football；二是俱乐部官方名多为注册商标，球迷站别蹭官方名，用城市或昵称更安全。命名上「城市/球队昵称 + .futbol」（barrio.futbol）最主流，「术语 + .futbol」（golazo.futbol）适合内容与短视频阵地。",
+      bestFor: ["西语市场球迷媒体与社区", "拉美青训与足球学校", "球队球迷会与地方联赛", "足球装备与周边电商"],
+      namingTips: [
+        "西语原生拼写与拉美球迷语言完全同频",
+        "首年约 $6、续费约 $14/年，体育类里数一数二便宜",
+        "西语市场用 .futbol，北美用 .soccer，欧洲用 .football",
+        "俱乐部官方名多为商标，用城市或昵称更安全",
+      ],
+    },
+    en: {
+      title: ".futbol Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".futbol is the dedicated suffix for Spanish-speaking football — for Spanish-market fan media and communities, Latin American academies and football schools, supporters' clubs and local leagues, football gear and merch e-commerce. See live pricing and naming advice, then hunt available .futbol names with AI.",
+      intro:
+        ".futbol shouts the beautiful game in Spanish: fan media and communities, Latin American academies and football schools, supporters' clubs and local leagues, and gear or merch shops on name.futbol say both \"football\" and \"in Spanish\" in one word — the Spanish-speaking world is the sport's most fervent market, and futbol is the spelling fans actually use, so the domain speaks the audience's native tongue. It divides labor cleanly with the already-listed .soccer and .football: .soccer is the North American term, .football the British and global one — .futbol names the Spanish and Latin American market, so businesses aimed at those fans shine brightest here. The registry is Identity Digital (from the former Rightside/Donuts portfolio). Pricing is among the cheapest in sports suffixes: about $6 first year (≈¥41) and $14/yr to renew (≈¥100) — a notch below .soccer and .football on renewal, so fan-site portfolios cost little. Inventory is excellent: team words, city words and term words all hit. Two cautions: English-market recognition of the futbol spelling is limited, so pick .soccer or .football for English-first audiences; and official club names are registered trademarks — fan sites should use cities or nicknames instead. Naming: city or nickname + .futbol (barrio.futbol) is the mainstream shape; term + .futbol (golazo.futbol) suits content and short-video brands.",
+      bestFor: ["Spanish-market fan media & communities", "Latin American academies & football schools", "Supporters' clubs & local leagues", "Football gear & merch e-commerce"],
+      namingTips: [
+        "The native Spanish spelling speaks the fans' own language",
+        "About $6 year one, $14/yr renewal — among the cheapest in sports",
+        "Spanish markets fit .futbol; North America .soccer; Europe .football",
+        "Official club names are trademarks — use cities or nicknames",
+      ],
+    },
+  },
+  moda: {
+    tld: "moda",
+    zh: {
+      title: ".moda 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".moda 是西语/意语「时尚」的专属后缀，适合拉美与西语市场时尚品牌、意式调性设计师工作室、时尚电商与买手店、穿搭内容与时尚媒体。查看 .moda 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .moda 域名。",
+      intro:
+        ".moda 把西语与意语的「时尚」穿进域名：拉美与西语市场时尚品牌、意式调性设计师工作室、时尚电商与买手店、穿搭内容与时尚媒体用 name.moda，一个词同时说了「时尚」与「拉丁语系调性」——moda 在西语、意语、葡语里通用，四个字母比 fashion 短一半，米兰、圣保罗、墨西哥城的品牌用它读起来就是母语。它与已收录的 .fashion/.style/.boutique 分工清晰：.fashion 是英语大词（全球市场），.style 说个人风格与生活方式，.boutique 说精品小店业态，.moda 直指西语意语世界的时尚——面向拉美、南欧市场或走意式调性的品牌用它最出彩。注册局为 Identity Digital（原 Rightside/Donuts 组合）。价格是典型首年促销结构：首年约 $11（约 ¥78），续费约 $33/年（约 ¥241）——与 .fashion 续费相当，按续费价做长期预算。库存极好：品牌词、风格词、城市词全线有货。注意两点：一是英语市场对 moda 认知有限，主打英语用户时选 .fashion；二是时尚品牌重视觉，域名之外把 Instagram 与 lookbook 阵地一起建好。命名上「品牌词 + .moda」（bella.moda）最主流，「城市/风格 + .moda」（milano.moda）适合买手店与地区时尚媒体。",
+      bestFor: ["拉美与西语市场时尚品牌", "意式调性设计师工作室", "时尚电商与买手店", "穿搭内容与时尚媒体"],
+      namingTips: [
+        "「品牌词 + .moda」四个字母比 fashion 短一半",
+        "首年约 $11、续费约 $33/年，按续费价做预算",
+        "西语意语市场用 .moda，英语大盘用 .fashion",
+        "时尚重视觉，Instagram 与 lookbook 一起建好",
+      ],
+    },
+    en: {
+      title: ".moda Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".moda is fashion in Spanish and Italian — for Latin American and Spanish-market fashion brands, Italian-styled designer studios, fashion e-commerce and boutiques, style content and fashion media. See live pricing and naming advice, then hunt available .moda names with AI.",
+      intro:
+        ".moda wears the Latin word for fashion right in the address: Latin American and Spanish-market fashion brands, Italian-styled designer studios, fashion e-commerce and buyer shops, and style media on name.moda say both \"fashion\" and \"Latin flair\" in one word — moda works across Spanish, Italian and Portuguese, four letters where fashion needs seven, and brands in Milan, São Paulo or Mexico City read it as their mother tongue. It divides labor cleanly with the already-listed .fashion, .style and .boutique: .fashion is the big English word for the global market, .style names personal style and lifestyle, .boutique names the small-shop format — .moda names fashion for the Spanish- and Italian-speaking world, so brands targeting those markets or an Italian vibe shine brightest here. The registry is Identity Digital (from the former Rightside/Donuts portfolio). Pricing follows the classic promo structure: about $11 first year (≈¥78) and $33/yr to renew (≈¥241) — on par with .fashion's renewal, so budget on the renewal. Inventory is excellent: brand words, style words and city words all hit. Two cautions: English-market recognition of moda is limited, so pick .fashion for English-first audiences; and fashion is a visual trade — build the Instagram presence and lookbook alongside the domain. Naming: brand word + .moda (bella.moda) is the mainstream shape; city or style + .moda (milano.moda) suits buyer shops and regional fashion media.",
+      bestFor: ["Latin American & Spanish-market fashion brands", "Italian-styled designer studios", "Fashion e-commerce & boutiques", "Style content & fashion media"],
+      namingTips: [
+        "Brand word + .moda — four letters where fashion needs seven",
+        "About $11 year one, $33/yr renewal — budget on the renewal",
+        "Spanish and Italian markets fit .moda; the global word is .fashion",
+        "Fashion is visual — build Instagram and the lookbook alongside",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
