@@ -7944,6 +7944,186 @@ const GUIDES = {
       ],
     },
   },
+  beer: {
+    tld: "beer",
+    zh: {
+      title: ".beer 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".beer 是啤酒行业的专属后缀，适合精酿啤酒厂与自酿品牌、啤酒吧与酒馆、啤酒电商与订阅盒、啤酒评测与文化媒体。查看 .beer 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .beer 域名。",
+      intro:
+        ".beer 把「啤酒」倒进域名：精酿啤酒厂与自酿品牌、啤酒吧与精酿酒馆、啤酒电商与订阅盒、啤酒评测媒体用 name.beer，酒标上印的域名本身就是品牌故事的一部分——精酿圈最吃这一套。它与已收录的 .bar/.pub/.wine 分工清晰：.bar 说「场所」，.wine 说葡萄酒，.beer 只说啤酒这个品类，做精酿品牌用它定位最准。注册局为 GoDaddy Registry（原 Minds + Machines 组合）。价格是典型首年促销结构：首年约 $2（约 ¥11），续费约 $26/年（约 ¥189）——首年近乎白送，长期按续费价预算，仍属低门槛。库存极好：酒厂名、酒款名、风格词（ipa、stout、lager 词根组合）全线有货。注意两点：一是酒类经营在多数地区需要许可证，线上售酒还要过年龄验证与配送合规；二是 .beer 语感偏休闲与玩趣，正式的集团官网可以主用 .com、拿 .beer 做品牌活动页。命名上「酒厂/品牌词 + .beer」（hoppy.beer）最主流，「城市 + .beer」适合本地精酿地图与酒吧指南。",
+      bestFor: ["精酿啤酒厂与自酿品牌", "啤酒吧与精酿酒馆", "啤酒电商与订阅盒", "啤酒评测与文化媒体"],
+      namingTips: [
+        "「品牌词 + .beer」印上酒标就是品牌故事的一部分",
+        "首年约 $2、续费约 $26/年，按续费价做长期预算",
+        "精酿品类用 .beer 比 .bar/.wine 定位更准",
+        "线上售酒先过许可证、年龄验证与配送合规",
+      ],
+    },
+    en: {
+      title: ".beer Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".beer is the dedicated suffix for the beer trade — for craft breweries and homebrew brands, beer bars and taprooms, beer e-commerce and subscription boxes, beer review media. See live pricing and naming advice, then hunt available .beer names with AI.",
+      intro:
+        ".beer pours the category straight into the address: craft breweries and homebrew brands, beer bars and taprooms, beer e-commerce and subscription boxes, and beer review media on name.beer get a domain that doubles as label copy — and craft-beer culture loves exactly that kind of branding. It divides labor cleanly with the already-listed .bar, .pub and .wine: .bar names the venue, .wine names the grape, .beer names this one category, so craft brands position sharpest here. The registry is GoDaddy Registry (from the former Minds + Machines portfolio). Pricing follows the classic promo structure: about $2 first year (≈¥11) and $26/yr to renew (≈¥189) — nearly free to start, still cheap long-term on the renewal. Inventory is excellent: brewery names, beer names and style words (ipa, stout, lager roots) all hit. Two cautions: alcohol businesses need licenses in most regions, and online sales add age verification and shipping compliance; and .beer reads playful — corporate group sites may keep .com as primary and use .beer for brand campaigns. Naming: brewery or brand word + .beer (hoppy.beer) is the mainstream shape; city + .beer suits local craft maps and taproom guides.",
+      bestFor: ["Craft breweries & homebrew brands", "Beer bars & taprooms", "Beer e-commerce & subscription boxes", "Beer review & culture media"],
+      namingTips: [
+        "Brand word + .beer doubles as label copy on the bottle",
+        "About $2 year one, $26/yr renewal — budget on the renewal",
+        "Beer brands position sharper on .beer than .bar or .wine",
+        "Clear licenses, age gates and shipping rules before selling online",
+      ],
+    },
+  },
+  pub: {
+    tld: "pub",
+    zh: {
+      title: ".pub 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".pub 是酒馆与出版双关的短后缀，适合酒吧与酒馆官网、精酿酒馆连锁、独立出版与 Newsletter、播客与内容发布平台。查看 .pub 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .pub 域名。",
+      intro:
+        ".pub 是少见的一词双关后缀：既是英式酒馆（pub），也是出版（publish/publication）的缩写——酒吧与酒馆官网、精酿酒馆连锁用它说「场所」，独立出版、Newsletter、播客与内容发布平台用它说「发布」，两条赛道都成立。它与已收录的 .bar 分工微妙：.bar 更泛（鸡尾酒吧、酒吧均可），.pub 自带英式酒馆的烟火气，做英式/爱尔兰式酒馆用 .pub 语感更足；内容赛道上它比 .press（偏新闻机构）更轻快，适合个人出版与小型内容品牌。注册局为 Identity Digital。价格平进平出：注册约 $32（约 ¥234），续费同价——中档年费，库存极好：酒馆名、地名、内容品牌词全线有货。注意两点：一是 3 个字母的短后缀是稀缺资产，短词根 + .pub 的整体长度优势明显（six.pub 仅 7 字符）；二是双关也意味着语义不聚焦，若品牌强依赖单一联想（只想说酒馆或只想说出版），落地页要第一屏把定位讲清。命名上「酒馆名/地名 + .pub」（kings.pub）最主流，「内容品牌 + .pub」适合 Newsletter 与独立出版。",
+      bestFor: ["酒吧与酒馆官网", "精酿酒馆与连锁品牌", "独立出版与 Newsletter", "播客与内容发布平台"],
+      namingTips: [
+        "3 字母短后缀稀缺，短词根 + .pub 整体长度优势明显",
+        "注册约 $32、续费同价，预算稳定无涨价陷阱",
+        "英式/爱尔兰式酒馆用 .pub 比 .bar 语感更足",
+        "双关后缀语义不聚焦，落地页第一屏讲清定位",
+      ],
+    },
+    en: {
+      title: ".pub Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".pub is the rare double-meaning short suffix — pubs and taverns on one track, publishing and newsletters on the other: bar websites, taproom chains, indie publications, podcasts and content platforms. See live pricing and naming advice, then hunt available .pub names with AI.",
+      intro:
+        ".pub is that rare suffix with two legitimate readings: the British pub, and publishing — bar and tavern websites and taproom chains take the venue track, while indie publications, newsletters, podcasts and content platforms take the publishing track, and both work. Against the already-listed .bar the split is subtle: .bar is broader (cocktail bars and beyond) while .pub carries the warmth of a British or Irish tavern, so those venues read better here; on the content track it's lighter than .press (which leans newsroom), fitting personal publishing and small content brands. The registry is Identity Digital. Pricing is flat: about $32 to register (≈¥234) and the same to renew — a mid-range fee with excellent inventory: tavern names, place names and content brand words all hit. Two cautions: a 3-letter suffix is scarce real estate, and short root + .pub wins on total length (six.pub is 7 characters); and the double meaning cuts both ways — if your brand depends on a single association, make the positioning explicit above the fold. Naming: tavern or place name + .pub (kings.pub) is the mainstream shape; content brand + .pub suits newsletters and indie publishing.",
+      bestFor: ["Bar & tavern websites", "Taprooms & pub chains", "Indie publishing & newsletters", "Podcasts & content platforms"],
+      namingTips: [
+        "A 3-letter suffix is scarce — short root + .pub wins on length",
+        "About $32 flat per year — stable budgeting, no renewal trap",
+        "British or Irish taverns read warmer on .pub than .bar",
+        "The double meaning needs explicit positioning above the fold",
+      ],
+    },
+  },
+  spa: {
+    tld: "spa",
+    zh: {
+      title: ".spa 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".spa 是水疗与康养行业的专属后缀，适合日间水疗与按摩馆、美容护肤与美甲沙龙、温泉酒店与康养度假村、泳池与家用 SPA 设备商。查看 .spa 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .spa 域名。",
+      intro:
+        ".spa 把「水疗」泡进域名：日间水疗与按摩馆、美容护肤与美甲沙龙、温泉酒店与康养度假村、泳池与家用 SPA 设备商用 name.spa，客人搜「地名 + spa」时域名与搜索词逐字吻合——这是本地康养生意最真实的搜索句式。它与已收录的 .salon/.yoga/.care 分工清晰：.salon 说美发美甲，.yoga 说瑜伽，.spa 覆盖水疗按摩到温泉康养的完整链条，做放松与疗愈类业务用它定位最准。注册局为亚洲水疗及健康促进会（Asia Spa and Wellness Promotion Council），是少见的行业协会注册局。价格平进平出：注册约 $22（约 ¥156），续费同价——中档年费，库存极好：城市名、疗程词、品牌词全线有货。注意两点：一是 3 个字母的短后缀稀缺，短词根 + .spa 的整体长度优势明显（zen.spa 仅 7 字符）；二是本地生意别忘了把域名同步到 Google 商家资料与地图，域名与门店搜索联动才有 SEO 增益。命名上「城市/街区 + .spa」（soho.spa）最主流，「品牌词 + .spa」（zen.spa）适合连锁与高端品牌。",
+      bestFor: ["日间水疗与按摩馆", "美容护肤与美甲沙龙", "温泉酒店与康养度假村", "泳池与家用 SPA 设备商"],
+      namingTips: [
+        "「城市 + .spa」与本地客人搜索句式逐字吻合",
+        "注册约 $22、续费同价，预算稳定无涨价陷阱",
+        "3 字母短后缀稀缺，zen.spa 式短组合值得抢",
+        "域名同步到 Google 商家资料，本地搜索才有增益",
+      ],
+    },
+    en: {
+      title: ".spa Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".spa is the dedicated suffix for wellness — for day spas and massage studios, skincare and nail salons, hot-spring resorts and wellness retreats, pool and home-spa suppliers. See live pricing and naming advice, then hunt available .spa names with AI.",
+      intro:
+        ".spa soaks the service into the address: day spas and massage studios, skincare and nail salons, hot-spring hotels and wellness retreats, and pool or home-spa equipment suppliers on name.spa match the way local customers actually search — \"city + spa\" is the literal query. It divides labor cleanly with the already-listed .salon, .yoga and .care: .salon covers hair and nails, .yoga covers the mat, .spa spans the full relaxation chain from massage to hot-spring resorts, so healing-and-wellness businesses position sharpest here. The registry is the Asia Spa and Wellness Promotion Council — a rare industry-association registry. Pricing is flat: about $22 to register (≈¥156) and the same to renew — a mid-range fee with excellent inventory: city names, treatment words and brand words all hit. Two cautions: a 3-letter suffix is scarce, and short root + .spa wins on total length (zen.spa is 7 characters); and local businesses should sync the domain to their Google Business Profile — the SEO gain comes from pairing the domain with local search. Naming: city or neighborhood + .spa (soho.spa) is the mainstream shape; brand word + .spa (zen.spa) suits chains and premium brands.",
+      bestFor: ["Day spas & massage studios", "Skincare & nail salons", "Hot-spring resorts & wellness retreats", "Pool & home-spa suppliers"],
+      namingTips: [
+        "City + .spa matches local search queries word for word",
+        "About $22 flat per year — stable budgeting, no renewal trap",
+        "A 3-letter suffix is scarce — grab zen.spa-style short combos",
+        "Sync the domain to Google Business Profile for local SEO",
+      ],
+    },
+  },
+  food: {
+    tld: "food",
+    zh: {
+      title: ".food 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".food 是食品与餐饮的品类大词后缀，适合食品品牌与电商、餐饮集团与美食广场、美食媒体与菜谱平台、食品供应链与批发商。查看 .food 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .food 域名。",
+      intro:
+        ".food 把「吃」这个最大品类装进域名：食品品牌与电商、餐饮集团与美食广场、美食媒体与菜谱平台、食品供应链与批发商用 name.food，一个词覆盖从田间到餐桌的整条链路。它与已收录的餐饮系后缀分工清晰：.restaurant/.cafe/.pizza 说「某一种店」，.menu 说「菜单」，.recipes 说「菜谱」，.food 是品类总词——做多品牌餐饮集团、食品电商平台或美食综合媒体，用它一个域名就能装下全部业务线。注册局为 Lifestyle Domain Holdings（.food 于 2023 年才开放注册，属最新一批品类大词）。价格是典型首年促销结构：首年约 $5（约 ¥33），续费约 $31/年（约 ¥226）——入门便宜，长期按续费价预算。库存极好：品类词、菜系词、品牌词全线有货，开放晚意味着好词远多于老后缀。注意两点：一是 .food 语义极宽，单一门店（只开一家披萨店）用 .pizza/.restaurant 更聚焦；二是食品电商涉及食品经营许可与冷链物流，域名之外先把资质备齐。命名上「品牌词 + .food」（fresh.food）最主流，「菜系/品类 + .food」（thai.food）适合垂直平台。",
+      bestFor: ["食品品牌与电商", "餐饮集团与美食广场", "美食媒体与菜谱平台", "食品供应链与批发商"],
+      namingTips: [
+        "品类总词后缀，多业务线餐饮集团一个域名装下",
+        "首年约 $5、续费约 $31/年，按续费价做长期预算",
+        "2023 年才开放注册，好词库存远多于老后缀",
+        "单一门店用 .pizza/.restaurant 更聚焦，别贪大词",
+      ],
+    },
+    en: {
+      title: ".food Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".food is the big category suffix for everything edible — for food brands and e-commerce, restaurant groups and food halls, food media and recipe platforms, food supply chains and wholesalers. See live pricing and naming advice, then hunt available .food names with AI.",
+      intro:
+        ".food packs the biggest category of all into the address: food brands and e-commerce, restaurant groups and food halls, food media and recipe platforms, and supply-chain wholesalers on name.food cover the whole farm-to-table chain in one word. It divides labor cleanly with the already-listed dining suffixes: .restaurant, .cafe and .pizza name one kind of venue, .menu names the card, .recipes names the how-to — .food is the umbrella, so multi-brand restaurant groups, food e-commerce platforms and general food media fit their whole portfolio under one domain. The registry is Lifestyle Domain Holdings, and .food only opened for registration in 2023 — one of the newest big category words. Pricing follows the classic promo structure: about $5 first year (≈¥33) and $31/yr to renew (≈¥226) — cheap to start, budget on the renewal. Inventory is excellent: category words, cuisine words and brand words all hit, and the late launch means far more good roots than older suffixes. Two cautions: .food is semantically huge — a single pizzeria positions sharper on .pizza or .restaurant; and food e-commerce needs operating licenses and cold-chain logistics, so line up compliance before the launch. Naming: brand word + .food (fresh.food) is the mainstream shape; cuisine or category + .food (thai.food) suits vertical platforms.",
+      bestFor: ["Food brands & e-commerce", "Restaurant groups & food halls", "Food media & recipe platforms", "Food supply chains & wholesalers"],
+      namingTips: [
+        "The umbrella suffix — one domain fits a whole restaurant group",
+        "About $5 year one, $31/yr renewal — budget on the renewal",
+        "Opened in 2023, so good roots far outnumber older suffixes",
+        "Single venues position sharper on .pizza or .restaurant",
+      ],
+    },
+  },
+  attorney: {
+    tld: "attorney",
+    zh: {
+      title: ".attorney 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".attorney 是律师职业的专属后缀，适合律师个人品牌与执业官网、律师事务所、诉讼与辩护专项业务、法律咨询获客页。查看 .attorney 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .attorney 域名。",
+      intro:
+        ".attorney 把「律师」写进域名：律师个人品牌与执业官网、律师事务所、诉讼与辩护专项业务、法律咨询获客页用 name.attorney，美国客户搜「城市 + attorney」时域名与搜索词逐字吻合——在美式语境里 attorney 比 lawyer 更正式，出庭律师与执业文书都用这个词。它与已收录的 .lawyer/.law/.legal 分工微妙：.law 有律师资质验证门槛、.legal 泛指法律服务，.lawyer 与 .attorney 同为职业词，主做美国市场、走正式路线用 .attorney 语感更庄重。注册局为 Identity Digital。价格平进平出：注册约 $50（约 ¥360），续费同价——中高档年费替你过滤了投机注册，库存极好：姓氏、城市、专项领域词全线有货。注意两点：一是 8 个字母的后缀偏长，词根务必短（smith.attorney 已是极限）；二是律师广告在美国各州受律师协会规则约束（禁止误导性宣传），域名措辞别踩「最佳」「第一」这类红线。命名上「姓氏 + .attorney」（smith.attorney）最主流，「城市 + 专项 + .attorney」适合获客型专题站。",
+      bestFor: ["律师个人品牌与执业官网", "律师事务所", "诉讼与辩护专项业务", "法律咨询获客页"],
+      namingTips: [
+        "「姓氏 + .attorney」是美式执业官网的标准形态",
+        "注册约 $50、续费同价，预算稳定无涨价陷阱",
+        "主做美国市场走正式路线，.attorney 比 .lawyer 更庄重",
+        "后缀 8 个字母偏长，词根控制在 5–6 字符",
+      ],
+    },
+    en: {
+      title: ".attorney Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".attorney is the dedicated suffix for the legal profession — for attorney personal brands and practice sites, law firms, litigation and defense specialties, legal lead-generation pages. See live pricing and naming advice, then hunt available .attorney names with AI.",
+      intro:
+        ".attorney writes the profession into the address: attorney personal brands and practice sites, law firms, litigation and defense specialties, and legal lead-gen pages on name.attorney match how American clients actually search — \"city + attorney\" is the literal query, and in US usage attorney is the more formal term, the one used in court and on filings. Against the already-listed .lawyer, .law and .legal the split is subtle: .law requires credential verification, .legal covers the broader service industry, and between the two profession words, .attorney reads more formal — the pick for US-focused practices with a buttoned-up brand. The registry is Identity Digital. Pricing is flat: about $50 to register (≈¥360) and the same to renew — an upper-mid fee that filters out speculators, leaving excellent inventory: surnames, cities and specialty words all hit. Two cautions: the 8-letter suffix is long, so keep the root short (smith.attorney is about the limit); and US attorney advertising is governed by state bar rules — avoid \"best\" or \"#1\" claims in the domain itself. Naming: surname + .attorney (smith.attorney) is the mainstream shape; city + specialty + .attorney suits lead-generation sites.",
+      bestFor: ["Attorney personal brands & practice sites", "Law firms", "Litigation & defense specialties", "Legal lead-generation pages"],
+      namingTips: [
+        "Surname + .attorney is the standard US practice-site shape",
+        "About $50 flat per year — stable budgeting, no renewal trap",
+        "US-focused, formal branding reads stronger on .attorney than .lawyer",
+        "The 8-letter suffix needs a root of 5–6 characters",
+      ],
+    },
+  },
+  dentist: {
+    tld: "dentist",
+    zh: {
+      title: ".dentist 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".dentist 是牙医职业的专属后缀，适合牙科诊所与口腔门诊、牙医个人品牌、正畸与种植专项业务、牙科连锁与获客页。查看 .dentist 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .dentist 域名。",
+      intro:
+        ".dentist 把「牙医」写进域名：牙科诊所与口腔门诊、牙医个人品牌、正畸与种植专项业务、牙科连锁与获客页用 name.dentist，患者搜「城市 + dentist」时域名与搜索词逐字吻合——找牙医是本地搜索里意图最强的品类之一，逐字吻合的域名在本地 SEO 里天然占优。它与已收录的 .dental/.clinic/.doctor 分工清晰：.dental 说「牙科」这个行业（器材商、耗材电商也用），.clinic 泛指诊所，.doctor 泛指医生，.dentist 直指牙医这个职业——诊所与个人品牌用它定位最准。注册局为 Identity Digital。价格平进平出：注册约 $52（约 ¥374），续费同价——中高档年费替你过滤了投机注册，库存极好：姓氏、城市、专项词全线有货。注意两点：一是 7 个字母的后缀不短，词根务必短（smile.dentist 是理想形态）；二是医疗广告各地监管严格（资质展示、疗效宣传红线），域名之外先把执业资质页备好。命名上「姓氏/品牌词 + .dentist」（chen.dentist）最主流，「城市 + .dentist」适合本地获客站。",
+      bestFor: ["牙科诊所与口腔门诊", "牙医个人品牌", "正畸与种植专项业务", "牙科连锁与获客页"],
+      namingTips: [
+        "「城市 + .dentist」与患者搜索句式逐字吻合",
+        "注册约 $52、续费同价，预算稳定无涨价陷阱",
+        "诊所与个人品牌用 .dentist，器材电商用 .dental",
+        "医疗广告监管严格，执业资质页与域名一起备好",
+      ],
+    },
+    en: {
+      title: ".dentist Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".dentist is the dedicated suffix for the dental profession — for dental clinics and practices, dentist personal brands, orthodontics and implant specialties, dental chains and patient acquisition pages. See live pricing and naming advice, then hunt available .dentist names with AI.",
+      intro:
+        ".dentist writes the profession into the address: dental clinics and practices, dentist personal brands, orthodontic and implant specialties, and dental chains on name.dentist match how patients actually search — \"city + dentist\" is one of the highest-intent local queries there is, and a word-for-word domain starts local SEO ahead. It divides labor cleanly with the already-listed .dental, .clinic and .doctor: .dental names the industry (equipment vendors and supply shops use it too), .clinic covers any practice, .doctor covers any physician — .dentist points at the profession itself, so clinics and personal brands position sharpest here. The registry is Identity Digital. Pricing is flat: about $52 to register (≈¥374) and the same to renew — an upper-mid fee that filters out speculators, leaving excellent inventory: surnames, cities and specialty words all hit. Two cautions: the 7-letter suffix isn't short, so keep the root tight (smile.dentist is the ideal shape); and healthcare advertising is tightly regulated — have the credentials page ready alongside the domain. Naming: surname or brand word + .dentist (chen.dentist) is the mainstream shape; city + .dentist suits local patient-acquisition sites.",
+      bestFor: ["Dental clinics & practices", "Dentist personal brands", "Orthodontics & implant specialties", "Dental chains & acquisition pages"],
+      namingTips: [
+        "City + .dentist matches patient search queries word for word",
+        "About $52 flat per year — stable budgeting, no renewal trap",
+        "Clinics use .dentist; equipment e-commerce fits .dental better",
+        "Healthcare ads are regulated — pair the domain with a credentials page",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
