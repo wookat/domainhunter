@@ -1355,4 +1355,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家茶器工作室与手作茶具坊，寓意「一只素杯在茶席上被摩挲出的温润」；气质要文气拙朴、经得起落款；场景是电商详情页、茶席口碑和拍卖图录里都有分量、立得住。",
     en: "A teaware studio and artisan tea ceramics atelier. The name should carry the mellow warmth a plain cup earns from years of hands at the tea table; the vibe is literati and unpolished, worthy of the base mark; it must carry weight on the product page, in tea-table word of mouth, and in the auction catalogue.",
   },
+  "kite": {
+    zh: "一家风筝工坊与手作风筝品牌，寓意「一根线牵着天空的轻盈」；气质要有民俗根底、又接得住亲子与文创；场景是电商详情页、体验课海报和风筝节投标书里都好念、立得住。",
+    en: "A kite workshop and artisan kite brand. The name should carry the lightness of one string holding the sky; the vibe is rooted in folk craft yet ready for family classes and gift lines; it must read well on the product page, the class poster, and the kite festival tender.",
+  },
+  "succulent": {
+    zh: "一家多肉植物店与多肉大棚，寓意「桌上一只小胖子的治愈」；气质要呆萌温暖、又接得住贵货直播间；场景是拼单群、电商详情页和组盆课海报里都好念、亲切。",
+    en: "A succulent shop and greenhouse nursery. The name should carry the comfort of a little chubby plant on the desk; the vibe is cute and warm yet dignified enough for the rare-plant livestream; it must read easily in the group-buy chat, on the product page, and on the potting class poster.",
+  },
+  "chocolate": {
+    zh: "一家手工巧克力与 bean to bar 品牌，寓意「掰开一块巧克力时的那声脆响」；气质要浪漫有格调、经得起礼盒烫金；场景是情人节礼盒、风味卡和电商详情页里都体面、立得住。",
+    en: "A craft chocolate and bean-to-bar brand. The name should carry the snap of a bar breaking clean; the vibe is romantic with real polish, worthy of gold foil; it must look dignified on the Valentine gift box, the origin card, and the product page.",
+  },
+  "weaving": {
+    zh: "一家织造工作室与手工织布品牌，寓意「一梭一梭把时间织成物」；气质要有质感文气、经得起展签；场景是电商详情页、画廊展签和面料报价单里都立得住。",
+    en: "A weaving studio and handwoven textile brand. The name should carry time woven into cloth shuttle by shuttle; the vibe is textured and literate, worthy of the gallery label; it must stand on the product page, the exhibition label, and the fabric quotation.",
+  },
+  "puppet": {
+    zh: "一家木偶皮影工作室与偶戏剧团，寓意「一双手让死物开口讲千年的故事」；气质要有戏味民俗根底、又接得住亲子剧场；场景是演出海报、研学手册和文创吊牌上都好认、立得住。",
+    en: "A puppetry and shadow-play studio. The name should carry hands that make dead things speak stories a thousand years old; the vibe is rooted in stage folklore yet ready for family theatre; it must read well on the show poster, the study-trip booklet, and the craft hang tag.",
+  },
+  "birding": {
+    zh: "一家观鸟俱乐部与自然导赏品牌，寓意「举起望远镜那一刻的心跳」；气质要轻盈有野趣、不显器材党沉重；场景是行程海报、学校合作方案和鸟友群里都专业、亲切。",
+    en: "A birding club and nature-guiding brand. The name should carry the heartbeat of raising the binoculars; the vibe is light and wild without gear-head weight; it must read professional on the trip poster, credible in the school proposal, and warm in the birders' chat.",
+  },
 };
