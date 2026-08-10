@@ -504,7 +504,7 @@
     ]
   },
   "vs": {
-    "count": 276,
+    "count": 282,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -781,7 +781,13 @@
       "contractors-vs-construction",
       "equipment-vs-rentals",
       "supply-vs-express",
-      "parts-vs-repair"
+      "parts-vs-repair",
+      "auction-vs-market",
+      "deals-vs-coupons",
+      "discount-vs-sale",
+      "furniture-vs-boutique",
+      "lighting-vs-garden",
+      "lighting-vs-solar"
     ]
   }
 }

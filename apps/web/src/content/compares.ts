@@ -6097,6 +6097,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Auto & specialist repair shops", "Phone & appliance on-site repair", "Quick-fix chain landing pages", "City + category + repair local search phrase"],
     },
   },
+  "auction-vs-market": {
+    slug: "auction-vs-market",
+    a: "auction",
+    b: "market",
+    zh: {
+      title: ".auction 和 .market 怎么选：竞价成交与挂牌交易的分工",
+      metaDescription: ".auction 把「出价成交」写进域名，适合拍卖平台与拍卖行；.market 报的是「市集」这个场所，适合多商家交易平台与垂类市场。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都是撮合买卖的场子，区别在成交方式：一个靠竞价举槌，一个靠挂牌逛摊。.auction 把「出价成交」写进域名——线上拍卖平台、艺术品与收藏品拍卖行、法拍与资产处置机构、慈善义拍活动用 name.auction，买家一眼就知道「这里要出价」，art.auction 或 car.auction 这样的组合自带槌声；Identity Digital 运营，首年约 $11（约 ¥78）、续费约 $28/年（约 ¥204），首年便宜、续费中档，品类词与城市词库存极好。.market 报的是「市集」——多商家入驻的交易平台、垂类二手与批发市场、创作者素材市场用 name.market，farmers.market 式命名不用解释就知道是逛摊的地方；注册与续费同价约 $36/年（约 ¥256），平进平出没有首年甜头，预算好算。判断标准：成交靠竞价与时限——拍品逐件上架、价高者得 → .auction 的动作语义最准，「品类 + .auction」正面接住拍卖搜索，且拍卖涉及资金与竞价规则，站内把资质与担保讲清楚比域名更重要；成交靠挂牌与浏览——多卖家常驻、明码标价 → .market 的场所语义更稳，「品类 + .market」接住市场类搜索，平台生意的核心是供需两端运营，域名只解决「这里是个市场」。三点注意：一是同一平台两种玩法可以并存——主站用 .market，限时竞拍频道用 .auction 分工互链；二是 auction（7 字母）与 market（6 字母）都不算短，线下物料印全称核对拼写；三是普通促销特卖别硬蹭拍卖概念，秒杀折扣站更适合已收录的 .deals。命名上「品类 + .auction」适合垂类拍卖（艺术/汽车/域名），「品类/城市 + .market」适合垂类与本地市场平台。",
+      pickA: ["线上拍卖与竞价平台", "艺术品与收藏品拍卖行", "法拍与资产处置机构", "「品类 + auction」竞拍搜索词"],
+      pickB: ["多商家入驻交易平台", "垂类二手与批发市场", "创作者素材与服务市场", "「品类 + market」市场类搜索词"],
+    },
+    en: {
+      title: ".auction vs .market: Bidding Floor or Open Marketplace",
+      metaDescription:
+        ".auction writes the gavel into the domain — for auction platforms and houses; .market names the venue — for multi-vendor marketplaces and vertical markets. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both match buyers with sellers; the difference is how deals close — by bidding against the clock, or by browsing listed prices. .auction writes the gavel into the domain: online auction platforms, art and collectibles houses, foreclosure and asset-disposal agencies, and charity auctions on name.auction tell buyers instantly that bidding happens here — names like art.auction or car.auction carry the hammer built in. Operated by Identity Digital, about $11 for the first year and $28/yr to renew — cheap to start, mid-priced to hold, with excellent inventory of category and city words. .market names the venue — multi-vendor marketplaces, vertical second-hand and wholesale markets, and creator asset markets on name.market read as a place to browse stalls, farmers.market style, with no explanation needed. Registration and renewal both run about $36/yr — flat pricing with no first-year sweetener, easy to budget. The test: if deals close by bids and deadlines — lots listed one by one, highest bidder wins → .auction's action semantics are truest, category + .auction meets auction searches head-on, and since auctions involve money and bidding rules, on-site licensing and escrow matter more than the domain; if deals close by listings and browsing — resident sellers, posted prices → .market's venue semantics are steadier, category + .market catches marketplace searches, and a platform lives or dies on supply-and-demand operations — the domain only says this is a market. Three cautions: one platform can run both — the main site on .market with a timed-bidding channel on .auction, cross-linked; auction (7 letters) and market (6 letters) aren't short, so print full domains carefully offline; and ordinary flash sales shouldn't borrow the auction concept — they fit the already-listed .deals better. Naming: category + .auction fits vertical auctions (art, cars, domains); category or city + .market fits vertical and local marketplaces.",
+      pickA: ["Online auction & bidding platforms", "Art & collectibles auction houses", "Foreclosure & asset disposal agencies", "Category + auction bidding search phrase"],
+      pickB: ["Multi-vendor marketplaces", "Vertical second-hand & wholesale markets", "Creator asset & service markets", "Category + market marketplace search phrase"],
+    },
+  },
+  "deals-vs-coupons": {
+    slug: "deals-vs-coupons",
+    a: "deals",
+    b: "coupons",
+    zh: {
+      title: ".deals 和 .coupons 怎么选：找便宜与发码的分工",
+      metaDescription: ".deals 把「划算」写进域名，适合折扣聚合与限时特卖；.coupons 报的是「优惠码」本身，适合发码与验码平台。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在帮用户省钱，区别在省钱的载体：一个聚合「哪里便宜」，一个分发「输这个码」。.deals 把「划算」写进域名——折扣聚合与比价网站、秒杀与限时特卖频道、本地优惠信息平台用 name.deals，tech.deals 或 travel.deals 这样的组合自带点击欲，deals 本身就是购物达人每天搜索的高频词；Identity Digital 运营，首年约 $9（约 ¥63）、续费约 $28/年（约 ¥204），首年便宜、续费中档。.coupons 报的是「优惠码」——优惠码聚合与验证站、品牌官方折扣码页、返利与导购平台用 name.coupons，「品牌/品类 + coupons」正是海淘党搜索的原话，fashion.coupons 一看就知道来拿码；首年约 $11（约 ¥78），但续费约 $51/年（约 ¥366），持有成本在两者中明显更高，适合长期主域而非批量囤名。判断标准：内容是折扣信息流——今天哪里打折、限时几点开抢 → .deals 的信息流语义最准，「品类 + .deals」接住找便宜的搜索，时效性是生命线，过期信息最伤口碑；内容是优惠码本身——码能不能用、怎么叠加 → .coupons 的凭证语义更锐，「品牌 + .coupons」正面接住找码搜索，死码比没码更伤信任，验证机制要做扎实。三点注意：一是续费差距要算清——.coupons 续费近 .deals 两倍，做矩阵站时把 .coupons 留给主站；二是发码站涉及大量品牌词，注意商标风险与指示性合理使用；三是两者可以分工并存——信息流主站用 .deals，码库频道用 .coupons 互相导流。命名上「品类/城市 + .deals」适合折扣信息平台，「品牌/品类 + .coupons」适合垂类发码站。",
+      pickA: ["折扣聚合与比价网站", "秒杀与限时特卖频道", "本地优惠信息平台", "「品类 + deals」找便宜搜索词"],
+      pickB: ["优惠码聚合与验证平台", "品牌官方折扣码页", "返利与导购平台", "「品牌 + coupons」找码搜索词"],
+    },
+    en: {
+      title: ".deals vs .coupons: Deal Feeds or Code Distribution",
+      metaDescription:
+        ".deals writes the bargain into the domain — for deal aggregators and flash sales; .coupons names the code itself — for code distribution and verification platforms. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both save shoppers money; the difference is the vehicle — one aggregates where it's cheap, the other hands out the code to type. .deals writes the bargain into the domain: deal aggregators and price-comparison sites, flash-sale and limited-time channels, and local offer platforms on name.deals carry built-in click appeal — tech.deals or travel.deals style — and deals is a phrase bargain hunters search daily. Operated by Identity Digital, about $9 for the first year and $28/yr to renew — cheap to start, mid-priced to hold. .coupons names the code itself — coupon aggregators and verifiers, brand discount-code pages, and cashback platforms on name.coupons match exactly what code hunters search: brand or category + coupons; fashion.coupons needs no explanation. About $11 for the first year but $51/yr to renew — clearly the pricier hold of the two, suited to a long-term main domain rather than bulk registration. The test: if the content is a deal feed — what's discounted today, when the flash sale starts → .deals' feed semantics are truest, category + .deals catches bargain searches, and freshness is the lifeline — stale deals hurt more than none; if the content is the code — does it work, does it stack → .coupons' voucher semantics are sharper, brand + .coupons meets code searches head-on, and dead codes damage trust more than missing ones, so verify relentlessly. Three cautions: do the renewal math — .coupons costs nearly twice .deals to hold, so in a site matrix keep .coupons for the flagship; code sites trade heavily in brand words, so mind trademark risk and nominative fair use; and the two can split duties — a deal-feed main site on .deals with a code-library channel on .coupons, each feeding the other. Naming: category or city + .deals fits deal platforms; brand or category + .coupons fits vertical code sites.",
+      pickA: ["Deal aggregators & price comparison", "Flash-sale & limited-time channels", "Local offer platforms", "Category + deals bargain search phrase"],
+      pickB: ["Coupon aggregators & verifiers", "Brand discount-code pages", "Cashback & shopping-guide platforms", "Brand + coupons code search phrase"],
+    },
+  },
+  "discount-vs-sale": {
+    slug: "discount-vs-sale",
+    a: "discount",
+    b: "sale",
+    zh: {
+      title: ".discount 和 .sale 怎么选：常年折扣与档期特卖的分工",
+      metaDescription: ".discount 把「常年便宜」写进域名，适合折扣店与奥特莱斯；.sale 报的是「特卖档期」，适合大促活动页与清仓频道。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在喊便宜，区别在便宜的时态：一个是常年折扣的定位，一个是这一档特卖的动作。.discount 把「常年便宜」写进域名——折扣店与奥特莱斯电商、尾货与清仓特卖平台、学生与会员专属折扣服务用 name.discount，shoes.discount 或 student.discount 自带「比别处便宜」的价格锚点，后者在海外更是高频搜索词；Identity Digital 运营，首年约 $9（约 ¥63）、续费约 $28/年（约 ¥204），首年便宜、续费中档。.sale 报的是「特卖」这个档期——品牌大促活动页、换季清仓频道、样品与断码特卖用 name.sale，summer.sale 式命名一看就是「现在有活动」；首年约 $4（约 ¥26）、续费约 $31/年（约 ¥226），首年更便宜、续费同档，做一季活动页几乎零成本起步。判断标准：便宜是商业模式——常年低价、天天折扣的零售定位 → .discount 的定位语义最准，「品类/人群 + .discount」接住折扣店搜索，但注意「折扣」定位会拉低品牌溢价预期，品质品牌主站慎用；便宜是营销动作——黑五大促、换季清仓、限时档期 → .sale 的动作语义更锐，「品牌/季节 + .sale」就是活动页本身，档期结束 301 回主站即可。三点注意：一是与近义后缀分工——信息流聚合用 .deals、发码用 .coupons、折扣零售定位用 .discount、档期活动用 .sale；二是 discount 拼写较长（8 字母），线下物料印全称核对；三是活动域名生命周期短，别在 .sale 上沉淀长期外链资产，权重留给主站。命名上「品类/人群 + .discount」适合折扣零售，「品牌/季节 + .sale」适合大促活动专页。",
+      pickA: ["折扣店与奥特莱斯电商", "尾货与清仓特卖平台", "学生与会员专属折扣服务", "「品类 + discount」折扣店搜索词"],
+      pickB: ["品牌大促活动专页", "换季清仓与断码特卖频道", "黑五等档期营销落地页", "「品牌/季节 + sale」活动搜索词"],
+    },
+    en: {
+      title: ".discount vs .sale: Everyday Low Prices or Event Markdowns",
+      metaDescription:
+        ".discount writes everyday-cheap into the domain — for outlet and discount retail; .sale names the event — for promo landing pages and clearance channels. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both shout cheap; the difference is tense — one is a permanent positioning, the other is this season's event. .discount writes everyday-cheap into the domain: outlet and discount-store e-commerce, clearance and overstock platforms, and student or member discount services on name.discount carry a built-in price anchor — shoes.discount or student.discount, the latter a high-volume search phrase abroad. Operated by Identity Digital, about $9 for the first year and $28/yr to renew — cheap to start, mid-priced to hold. .sale names the event — brand promo landing pages, seasonal clearance channels, and sample or odd-size sales on name.sale read as happening now, summer.sale style. About $4 for the first year and $31/yr to renew — an even cheaper start in the same renewal band, nearly free for a one-season campaign page. The test: if cheap is the business model — everyday low prices, permanent discount retail → .discount's positioning semantics are truest, category or audience + .discount catches discount-store searches, but note the positioning lowers premium expectations, so quality-first brands should keep the main site elsewhere; if cheap is a marketing action — Black Friday, seasonal clearance, limited windows → .sale's event semantics are sharper, brand or season + .sale is the campaign page itself, and when the window closes a 301 back to the main site does the job. Three cautions: split duties with the near-synonyms — deal feeds fit .deals, code distribution fits .coupons, discount retail fits .discount, event windows fit .sale; discount is a longer spelling (8 letters), so print full domains carefully offline; and campaign domains are short-lived — don't build long-term backlink equity on .sale, keep that on the main site. Naming: category or audience + .discount fits discount retail; brand or season + .sale fits promo landing pages.",
+      pickA: ["Outlet & discount-store e-commerce", "Clearance & overstock platforms", "Student & member discount services", "Category + discount store search phrase"],
+      pickB: ["Brand promo landing pages", "Seasonal clearance & odd-size channels", "Black Friday & event campaign pages", "Brand + sale campaign search phrase"],
+    },
+  },
+  "furniture-vs-boutique": {
+    slug: "furniture-vs-boutique",
+    a: "furniture",
+    b: "boutique",
+    zh: {
+      title: ".furniture 和 .boutique 怎么选：品类直给与精选气质的取舍",
+      metaDescription: ".furniture 把「家具」写进域名，适合家具品牌与垂类电商；.boutique 报的是「精选小店」的气质，适合设计师买手店与生活方式选品。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个报品类，一个报气质。.furniture 把「家具」直接写进域名——家具品牌与工厂直销站、定制与实木家具工作室、办公家具供应商、二手与中古家具平台用 name.furniture，买家搜「风格/品类 + furniture」时域名就是搜索词本身，oak.furniture 在海外家具电商圈早有成交案例，office.furniture 一看就知道卖什么；Identity Digital 运营，首年约 $12（约 ¥88）、续费约 $97/年（约 ¥700），续费在行业后缀里偏贵，适合客单价高、长期经营的家具生意。.boutique 报的是「精选小店」——设计师买手店、生活方式选品店、小众家居饰品与手作品牌用 name.boutique，后缀自带「小而美、有主理人」的气质，不锁品类，家具之外的软装、灯饰、器物都装得下；首年约 $3（约 ¥19）、续费约 $26/年（约 ¥189），注册持有都便宜得多。判断标准：生意是「家具」这个品类本身——垂类电商、工厂直销、办公家具 B 端 → .furniture 的品类语义最准，「材质/品类 + .furniture」正面接住家具采购搜索，高续费换来的是搜索词级的语义精度；生意是「选品眼光」——买手店、混品类生活方式店、主理人品牌 → .boutique 的气质语义更合身，品类扩张不用换域名，低持有成本适合小店起步。三点注意：一是 furniture 九字母易拼错，线下物料印全称配二维码，boutique 同样有拼写门槛（法语词源），口播场景多的店要测试拼写；二是续费差距近 4 倍，按生意的客单价与生命周期算账；三是杂货家居店可先用已收录的 .store / .shop 起步，两个垂直后缀都留给定位明确的店。命名上「材质/品类 + .furniture」适合垂类家具电商，「主理人/品牌词 + .boutique」适合精选小店。",
+      pickA: ["家具品牌与工厂直销站", "定制与实木家具工作室", "办公家具 B 端供应商", "「品类 + furniture」采购搜索词"],
+      pickB: ["设计师买手店与选品店", "混品类生活方式家居店", "小众饰品与手作主理人品牌", "低成本起步的小店官网"],
+    },
+    en: {
+      title: ".furniture vs .boutique: Category Precision or Curated Character",
+      metaDescription:
+        ".furniture writes the category into the domain — for furniture brands and vertical e-commerce; .boutique names the curated-shop character — for designer select shops and lifestyle stores. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One names the category, the other names the character. .furniture writes the showroom into the domain: furniture brands and factory-direct stores, custom and solid-wood studios, office furniture suppliers, and vintage marketplaces on name.furniture match exactly what buyers search — style or category + furniture — oak.furniture has real sales history in furniture e-commerce, and office.furniture needs no explanation. Operated by Identity Digital, about $12 for the first year and $97/yr to renew — one of the pricier industry suffixes to hold, suited to high-ticket, long-term furniture businesses. .boutique names the curated small shop — designer select shops, lifestyle stores, and niche homeware or handmade brands on name.boutique carry a built-in small-and-curated, owner-run character, and the suffix doesn't lock the category: soft furnishings, lighting and objects all fit alongside furniture. About $3 for the first year and $26/yr to renew — far cheaper to register and hold. The test: if the business is the furniture category itself — vertical e-commerce, factory-direct, office furniture B2B → .furniture's category semantics are truest, material or category + .furniture meets furniture-procurement searches head-on, and the high renewal buys search-phrase-grade precision; if the business is curation — select shops, mixed-category lifestyle stores, owner-led brands → .boutique's character fits better, category expansion needs no domain change, and the low holding cost suits a small shop starting out. Three cautions: furniture is nine letters and typo-prone — print the full domain with a QR code offline — and boutique has its own spelling hurdle (French origins), so test it in spoken channels; the renewal gap is nearly 4x, so budget by ticket size and business lifespan; and general home stores may start on the already-listed .store or .shop, saving both vertical suffixes for clearly positioned shops. Naming: material or category + .furniture fits vertical furniture e-commerce; owner or brand word + .boutique fits curated shops.",
+      pickA: ["Furniture brands & factory-direct stores", "Custom & solid-wood studios", "Office furniture B2B suppliers", "Category + furniture procurement search phrase"],
+      pickB: ["Designer select & curated shops", "Mixed-category lifestyle home stores", "Niche homeware & handmade brands", "Low-cost start for a small shop"],
+    },
+  },
+  "lighting-vs-garden": {
+    slug: "lighting-vs-garden",
+    a: "lighting",
+    b: "garden",
+    zh: {
+      title: ".lighting 和 .garden 怎么选：庭院灯光生意的两个入口",
+      metaDescription: ".lighting 把「照明」写进域名，适合灯具电商与照明设计；.garden 报的是「庭院」这个场景，适合园艺与庭院设计生意。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "庭院灯光这门生意站在两个后缀的交叉点上：一个报专业，一个报场景。.lighting 把「照明」写进域名——灯具品牌与照明电商、照明设计与工程公司、舞台与影视灯光服务、智能照明方案商用 name.lighting，客户搜「场景/品类 + lighting」时域名就是搜索词本身，garden.lighting 或 studio.lighting 一看就知道做什么；Identity Digital 运营，首年约 $6（约 ¥41）、续费约 $20/年（约 ¥143），注册持有都便宜，是行业后缀里少见的低价平款。.garden 报的是「庭院」这个场景——园艺电商与苗圃、庭院设计与养护公司、社区花园与园艺内容站用 name.garden，city.garden 式命名自带绿意；首年约 $2（约 ¥11）、续费约 $26/年（约 ¥189），起步几乎零成本。判断标准：专业深度在「光」——灯具选型、光效设计、工程施工是核心能力，庭院只是场景之一 → .lighting 的专业语义最准，「场景 + .lighting」接住照明采购与设计搜索，室内、商业、舞台项目都装得下；专业深度在「园」——植物、景观、养护是核心能力，灯光只是庭院方案的一项 → .garden 的场景语义更稳，「城市/品类 + .garden」接住园艺与庭院搜索，灯光作为服务项写进站内即可。三点注意：一是 lighting 与 lightning（闪电）只差一个字母，线下物料与口播要防拼错；二是两个后缀都便宜，庭院灯光专营店可以两头拿——「garden + .lighting」做主站、「品牌 + .garden」做场景内容站互链导流；三是照明生意重案例与参数、园艺生意重实拍与季节内容，域名之外把作品集做扎实。命名上「场景 + .lighting」适合照明设计公司，「城市/品类 + .garden」适合园艺与庭院生意。",
+      pickA: ["灯具品牌与照明电商", "照明设计与工程公司", "庭院与景观照明专营", "「场景 + lighting」照明搜索词"],
+      pickB: ["园艺电商与苗圃", "庭院设计与养护公司", "社区花园与园艺内容站", "「城市/品类 + garden」园艺搜索词"],
+    },
+    en: {
+      title: ".lighting vs .garden: Two Doors Into the Outdoor-Lighting Trade",
+      metaDescription:
+        ".lighting writes the glow into the domain — for lamp e-commerce and lighting design; .garden names the scene — for gardening and landscape businesses. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Garden lighting sits at the crossroads of these two suffixes: one names the expertise, the other names the scene. .lighting writes the glow into the domain — lamp brands and lighting e-commerce, lighting design and engineering firms, stage and film lighting services, and smart lighting providers on name.lighting match exactly what clients search: scene or category + lighting; garden.lighting or studio.lighting explains itself. Operated by Identity Digital, about $6 for the first year and $20/yr to renew — cheap both ways, a rare flat-priced bargain among industry suffixes. .garden names the scene — gardening e-commerce and nurseries, garden design and maintenance firms, and community-garden or gardening content sites on name.garden carry the greenery built in, city.garden style. About $2 for the first year and $26/yr to renew — a nearly free start. The test: if the expertise runs through light — fixture selection, photometric design, engineering installs, with gardens as just one scene → .lighting's professional semantics are truest, scene + .lighting catches lighting procurement and design searches, and indoor, commercial and stage work all fit under it; if the expertise runs through the garden — plants, landscaping, maintenance, with lighting as one line item → .garden's scene semantics are steadier, city or category + .garden catches gardening searches, and lighting lives as a service on the site. Three cautions: lighting is one letter from lightning, so guard against typos in print and speech; both suffixes are cheap, so a garden-lighting specialist can hold both — garden + .lighting as the main site and brand + .garden as a scene content site, cross-linked; and lighting sells on portfolios and specs while gardening sells on photos and seasonal content — invest beyond the domain. Naming: scene + .lighting fits lighting design firms; city or category + .garden fits gardening businesses.",
+      pickA: ["Lamp brands & lighting e-commerce", "Lighting design & engineering firms", "Garden & landscape lighting specialists", "Scene + lighting procurement search phrase"],
+      pickB: ["Gardening e-commerce & nurseries", "Garden design & maintenance firms", "Community gardens & gardening content", "City + category + garden search phrase"],
+    },
+  },
+  "lighting-vs-solar": {
+    slug: "lighting-vs-solar",
+    a: "lighting",
+    b: "solar",
+    zh: {
+      title: ".lighting 和 .solar 怎么选：太阳能灯生意站哪边",
+      metaDescription: ".lighting 把「照明」写进域名，适合灯具电商与照明设计；.solar 报的是「太阳能」这个能源品类，适合光伏与太阳能产品生意。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "太阳能灯这门生意两边都沾：一个报「灯」这个产品，一个报「太阳能」这个能源。.lighting 把「照明」写进域名——灯具品牌与照明电商、照明设计与工程公司、舞台与影视灯光服务、智能照明方案商用 name.lighting，客户搜「场景/品类 + lighting」时域名就是搜索词本身，solar.lighting 一看就知道卖太阳能灯；Identity Digital 运营，首年约 $6（约 ¥41）、续费约 $20/年（约 ¥143），注册持有都便宜，是行业后缀里少见的低价平款。.solar 报的是「太阳能」——光伏安装商、太阳能设备经销、储能与离网方案商用 name.solar，city.solar 式命名在海外光伏安装商里已经常见；首年约 $6（约 ¥41），但续费约 $52/年（约 ¥374），续费比 .lighting 贵一倍多，按长期成本预算。判断标准：产品的主角是「灯」——太阳能只是供电方式，客户搜的是庭院灯、路灯、草坪灯 → .lighting 的产品语义最准，「solar + .lighting」这样的组合正面接住太阳能灯搜索，且续费便宜适合长期持有；产品的主角是「能源系统」——光伏板、逆变器、储能一起卖，灯只是产品线之一 → .solar 的能源语义更大，「城市/品牌 + .solar」接住光伏安装与设备搜索，行业认知度也更高。三点注意：一是续费差 2.6 倍，产品线单一的灯具店别为「能源感」多付持有成本；二是 lighting 与 lightning 只差一字母，线下物料防拼错；三是能源综合商可以两头拿——主站用 .solar，照明产品线子站用 .lighting 分工互链。命名上「solar/场景 + .lighting」适合太阳能灯与照明电商，「城市/品牌 + .solar」适合光伏安装与能源方案商。",
+      pickA: ["太阳能灯与庭院灯电商", "灯具品牌与照明设计", "路灯与户外照明工程", "「solar lighting」产品搜索词"],
+      pickB: ["光伏安装与设备经销", "储能与离网能源方案", "太阳能综合能源品牌", "「城市 + solar」安装商搜索词"],
+    },
+    en: {
+      title: ".lighting vs .solar: Where a Solar-Lighting Business Belongs",
+      metaDescription:
+        ".lighting writes the glow into the domain — for lamp e-commerce and lighting design; .solar names the energy category — for PV installers and solar product businesses. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "A solar-lighting business touches both suffixes: one names the lamp, the other names the energy. .lighting writes the glow into the domain — lamp brands and lighting e-commerce, lighting design and engineering firms, and smart lighting providers on name.lighting match exactly what clients search: scene or category + lighting; solar.lighting says solar lamps at a glance. Operated by Identity Digital, about $6 for the first year and $20/yr to renew — cheap both ways, a rare flat-priced bargain among industry suffixes. .solar names the energy — PV installers, solar equipment dealers, and storage or off-grid providers on name.solar are already common among installers abroad, city.solar style. About $6 for the first year but $52/yr to renew — more than double .lighting's holding cost, so budget long-term. The test: if the star of the product is the lamp — solar is just the power source, and customers search for garden lights, street lights, lawn lights → .lighting's product semantics are truest, a name like solar + .lighting meets solar-lamp searches head-on, and the cheap renewal suits a long hold; if the star is the energy system — panels, inverters and storage sold together, with lamps as one product line → .solar's energy semantics are bigger, city or brand + .solar catches installer and equipment searches, and industry recognition is higher. Three cautions: the renewal gap is 2.6x — a lamp-only shop shouldn't pay energy-brand holding costs for vibe; lighting is one letter from lightning, so guard against typos offline; and a full-line energy company can hold both — the main site on .solar with a lighting product-line site on .lighting, cross-linked. Naming: solar or scene + .lighting fits solar-lamp and lighting e-commerce; city or brand + .solar fits PV installers and energy providers.",
+      pickA: ["Solar & garden lamp e-commerce", "Lamp brands & lighting design", "Street & outdoor lighting engineering", "Solar lighting product search phrase"],
+      pickB: ["PV installers & equipment dealers", "Storage & off-grid energy providers", "Full-line solar energy brands", "City + solar installer search phrase"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
