@@ -9001,6 +9001,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Local Spanish businesses & services", "Spain-facing e-commerce", "European Spanish-language content & media", "Holders minding long-term renewal costs"],
     },
   },
+  "br-vs-pt": {
+    slug: "br-vs-pt",
+    a: "br",
+    b: "pt",
+    zh: {
+      title: ".br 和 .pt 怎么选：巴西与葡萄牙两大葡语 ccTLD 的对比",
+      metaDescription: ".br 是巴西国家域名、约 $8/年平续、需巴西税号（CPF/CNPJ）；.pt 是葡萄牙国家域名、约 $15/年平续、任何人可注册。对比两者的市场信号、资格与葡语圈定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "大西洋两岸的两个葡语 ccTLD，价格都平续无钩子，分水岭在注册资格与市场半径。做巴西与美洲葡语市场 → .br：Registro.br（NIC.br 下属）运营、注册量超过 500 万、拉美最大的 ccTLD，巴西是拉美第一大经济体、全球最大葡语国家（人口约 2.1 亿），电商与数字支付（Pix）渗透率高速增长，name.com.br 一眼讲清「巴西的生意」，本土企业与机构的主站几乎都在 .br 体系上，Google 也会把 .br 站点与巴西地区相关联。但资格是硬门槛：注册人必须持有巴西税号（个人 CPF 或企业 CNPJ），外国公司需设本地实体或找代理——这道门槛也让 .br 几乎没有投机注册、库存干净。做葡萄牙与欧洲市场 → .pt：注册局 DNS.PT 运营、注册量约 140 万，里斯本与波尔图聚集大量创业公司与数字游民，name.pt 对葡萄牙消费者是本地生意的默认信号；资格完全开放，任何国家的个人与机构可直接注册、无需本地地址——这是它对 .br 的最大优势。价格都便宜平续：.br 注册续费均约 $8/年（约 ¥60，R$40）；.pt 约 $15/年（约 ¥110），两边都无引流钩子。判断标准：用户在巴西、或做美洲葡语市场且有 CPF/CNPJ（或愿设实体）→ .br 的本地信任与干净库存值回门槛；用户在葡萄牙或欧洲、或海外主体想立刻拿到葡语信号 → .pt 零门槛直接注册；横跨巴葡两个市场的葡语品牌通常各注册一个做本地门面，别指望一个后缀覆盖整个葡语圈——两边的地域信号各锚定一国。",
+      pickA: ["巴西本地企业与服务", "面向巴西的跨境电商", "拉美市场品牌与金融科技", "有 CPF/CNPJ 或本地实体的主体"],
+      pickB: ["葡萄牙本地企业与服务", "旅游、民宿与地产业务", "数字游民与创业公司", "无巴西税号的海外注册人"],
+    },
+    en: {
+      title: ".br vs .pt: Brazil or Portugal — Two Portuguese-Language ccTLDs Compared",
+      metaDescription:
+        ".br is Brazil's country domain at about $8/yr flat, gated by a Brazilian tax ID (CPF/CNPJ); .pt is Portugal's at about $15/yr flat, open to anyone. Compare market signals, eligibility and Portuguese-world positioning, then hunt available names.",
+      verdict:
+        "Two Portuguese-language ccTLDs across the Atlantic, both flat-priced with no teaser games — the divide is eligibility and market radius. Brazil and the Portuguese-speaking Americas → .br: run by Registro.br (under NIC.br) with over 5 million registrations, Latin America's largest ccTLD; Brazil is Latin America's biggest economy and the world's largest Portuguese-speaking country (about 210 million people) with fast-growing e-commerce and digital-payment (Pix) penetration, name.com.br says \"a Brazilian business\" at a glance, Brazilian companies and institutions overwhelmingly live on the .br family, and Google geo-associates .br sites with Brazil. But eligibility is a hard gate: registrants must hold a Brazilian tax ID (CPF for individuals, CNPJ for companies), so foreign companies need a local entity or agent — a bar that also leaves .br with virtually no speculative registrations and clean inventory. Portugal and Europe → .pt: run by registry DNS.PT with about 1.4 million registrations; Lisbon and Porto host a dense startup and digital-nomad scene, and name.pt is the default local-business signal to Portuguese consumers; eligibility is fully open — anyone from anywhere registers directly with no local address, its biggest edge over .br. Pricing is cheap and flat on both sides: .br runs about $8/yr (≈¥60, R$40); .pt about $15/yr (≈¥110) — no hooks either way. The test: users in Brazil, or an Americas Portuguese-market venture with a CPF/CNPJ (or willing to set one up) → .br's local trust and clean inventory earn the bar; users in Portugal or Europe, or an overseas entity wanting a Portuguese-language signal today → .pt registers with zero friction; brands spanning both markets usually register one of each as local front doors — neither suffix covers the whole Portuguese-speaking world, as each geo signal anchors to one country.",
+      pickA: ["Local Brazilian businesses & services", "Brazil-facing cross-border e-commerce", "LatAm brands & fintech", "Entities with a CPF/CNPJ or local presence"],
+      pickB: ["Local Portuguese businesses & services", "Tourism, lodging & real-estate ventures", "Digital nomads & startups", "Overseas registrants without a Brazilian tax ID"],
+    },
+  },
+  "br-vs-mx": {
+    slug: "br-vs-mx",
+    a: "br",
+    b: "mx",
+    zh: {
+      title: ".br 和 .mx 怎么选：拉美两大经济体 ccTLD 的对比",
+      metaDescription: ".br 是巴西国家域名、约 $8/年平续、需巴西税号；.mx 是墨西哥国家域名、任何人可注册、首年约 $13 但续费约 $50/年。对比两者的市场信号、资格与续费结构，并用 AI 猎取可注册的名字。",
+      verdict:
+        "拉美两大经济体的国家域名，市场都又大又热，分水岭在注册资格与续费结构。做巴西市场 → .br：Registro.br 运营、注册量超过 500 万、拉美最大的 ccTLD，巴西是拉美第一大经济体、全球最大葡语国家（人口约 2.1 亿），电商与数字支付（Pix）渗透率高速增长，name.com.br 一眼讲清「巴西的生意」，本土企业与机构的主站几乎都在 .br 体系上，Google 也会把 .br 站点与巴西地区相关联。资格是硬门槛：须持巴西税号（个人 CPF / 企业 CNPJ），外国公司需本地实体或代理——但也因此几乎没有投机注册、库存干净，且价格便宜平续：约 $8/年（约 ¥60，R$40）。做墨西哥与北美西语市场 → .mx：Registry MX（NIC México）运营、注册量约 130 万，墨西哥是拉美第二大经济体、全球第一大西语国家（人口约 1.3 亿），美墨近岸外包浪潮下制造与供应链业务用 .mx 讲「墨西哥落地」很自然；资格完全开放，任何人可直接注册、无需本地地址——这是它对 .br 的最大优势。但续费要算清：首年常见促销约 $13（约 ¥90），续费约 $50/年（约 ¥360），长期持有成本是 .br 的六倍以上，预算按续费价算。判断标准：用户在巴西、或做葡语美洲市场且有税号 → .br 便宜、干净、信任高，值回注册门槛；用户在墨西哥、或做近岸制造与美洲西语市场、或海外主体想零门槛落地拉美 → .mx 直接注册但按 $50/年做预算；同时做巴墨两国的拉美品牌通常各注册一个做本地门面——两边语言与地域信号完全不同，没有互相替代的余地。",
+      pickA: ["巴西本地企业与服务", "葡语美洲市场品牌与电商", "拉美金融科技（有本地实体）", "在意长期续费成本的持有者"],
+      pickB: ["墨西哥本地企业与服务", "近岸制造与供应链业务", "面向西语美洲的品牌", "无巴西税号的海外注册人"],
+    },
+    en: {
+      title: ".br vs .mx: Brazil or Mexico — Latin America's Two Biggest ccTLDs Compared",
+      metaDescription:
+        ".br is Brazil's country domain at about $8/yr flat, gated by a Brazilian tax ID; .mx is Mexico's, open to anyone, at about $13 in year one but ~$50/yr renewal. Compare market signals, eligibility and renewal structure, then hunt available names.",
+      verdict:
+        "The country domains of Latin America's two biggest economies — both markets are large and fast-growing, and the divide is eligibility versus renewal structure. Brazil-focused → .br: run by Registro.br with over 5 million registrations, Latin America's largest ccTLD; Brazil is the region's biggest economy and the world's largest Portuguese-speaking country (about 210 million people) with fast-growing e-commerce and digital-payment (Pix) penetration, name.com.br says \"a Brazilian business\" at a glance, Brazilian companies and institutions overwhelmingly live on the .br family, and Google geo-associates .br sites with Brazil. Eligibility is a hard gate — a Brazilian tax ID (CPF/CNPJ) is required, so foreign companies need a local entity or agent — but that same bar leaves virtually no speculative registrations, and pricing is cheap and flat at about $8/yr (≈¥60, R$40). Mexico and the Spanish-speaking Americas → .mx: run by Registry MX (NIC México) with about 1.3 million registrations; Mexico is Latin America's second-largest economy and the world's largest Spanish-speaking country (about 130 million people), and amid the US–Mexico nearshoring wave, manufacturing and supply-chain ventures naturally use .mx to signal \"on the ground in Mexico\"; eligibility is fully open — anyone registers directly with no local address, its biggest edge over .br. But do the renewal math: about $13 in year one (≈¥90) yet about $50/yr to renew (≈¥360) — over six times .br's long-term cost, so budget on the renewal price. The test: users in Brazil, or a Portuguese-Americas venture with a tax ID → .br is cheap, clean and high-trust, earning its registration bar; users in Mexico, nearshoring ventures, or overseas entities wanting zero-friction LatAm entry → .mx registers instantly but budget $50/yr; brands running both countries usually register one of each as local front doors — the two carry entirely different language and geo signals, with no substituting one for the other.",
+      pickA: ["Local Brazilian businesses & services", "Portuguese-Americas brands & e-commerce", "LatAm fintech with a local entity", "Holders minding long-term renewal costs"],
+      pickB: ["Local Mexican businesses & services", "Nearshoring manufacturing & supply chain", "Brands targeting Spanish-speaking Americas", "Overseas registrants without a Brazilian tax ID"],
+    },
+  },
+  "cz-vs-pl": {
+    slug: "cz-vs-pl",
+    a: "cz",
+    b: "pl",
+    zh: {
+      title: ".cz 和 .pl 怎么选：捷克与波兰两大中欧 ccTLD 的对比",
+      metaDescription: ".cz 是捷克国家域名、约 $10/年平续、任何人可注册；.pl 是波兰国家域名、首年约 $6 但续费约 $25/年、同样零门槛。对比两者的市场信号、续费结构与中欧定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个中欧邻国的 ccTLD，资格都完全开放、任何人可注册，分水岭在市场体量与续费结构。做捷克市场 → .cz：非营利注册局 CZ.NIC 运营、注册量约 150 万，捷克是中欧制造与工程强国（Škoda 总部所在），布拉格也是欧洲重要的软件研发与游戏开发中心（Avast、Kiwi.com 诞生于此），name.cz 一眼讲清「捷克的生意」，本土企业与政府机构的主站几乎都在 .cz 上，Google 也会把 .cz 站点与捷克地区相关联；CZ.NIC 还是开源 DNS 软件（Knot DNS/Knot Resolver）的作者，注册局技术口碑极佳。价格便宜且平续：约 $10/年（约 ¥75），续费同价——在欧洲 ccTLD 里属于最实惠一档。做波兰市场 → .pl：国家研究院 NASK 运营、注册量约 250 万、中东欧最大的 ccTLD，波兰是欧盟人口第五大国、中东欧最大经济体，电商增速常年领跑欧洲（本土巨头 Allegro 主站就在 .pl 上），波兰还是欧洲重要的软件外包与 IT 人才基地。但续费要算清：首年常见促销约 $6（约 ¥45），续费约 $25/年（约 ¥180）——预算按续费价算、别被首年低价钩住，长期成本是 .cz 的两倍多。判断标准：用户在捷克、或做制造工程与游戏软件业务 → .cz 便宜平续、注册局口碑好；用户在波兰、或看中中东欧最大电商市场 → .pl 的市场体量与本地信任值回续费；同时做捷波两国（中欧打包很常见）的品牌通常各注册一个做本地门面——两边语言与地域信号各锚定一国。",
+      pickA: ["捷克本地企业与服务", "制造与工程业务", "软件研发与游戏工作室", "在意长期续费成本的持有者"],
+      pickB: ["波兰本地企业与服务", "面向波兰的跨境电商", "中东欧软件与 IT 服务", "看中中东欧最大市场的品牌"],
+    },
+    en: {
+      title: ".cz vs .pl: Czechia or Poland — Two Central European ccTLDs Compared",
+      metaDescription:
+        ".cz is Czechia's country domain at about $10/yr flat, open to anyone; .pl is Poland's at about $6 in year one but ~$25/yr renewal, equally zero-bar. Compare market signals, renewal structure and Central European positioning, then hunt available names.",
+      verdict:
+        "Two neighboring Central European ccTLDs, both fully open to worldwide registration — the divide is market size versus renewal structure. Czechia-focused → .cz: run by non-profit registry CZ.NIC with about 1.5 million registrations; Czechia is a Central European manufacturing and engineering powerhouse (home of Škoda), Prague is a major European software and game-development hub (Avast and Kiwi.com were born there), name.cz says \"a Czech business\" at a glance, Czech companies and government institutions overwhelmingly live on .cz, and Google geo-associates .cz sites with Czechia; CZ.NIC is also the author of the open-source Knot DNS/Knot Resolver software — a registry with a stellar technical reputation. Pricing is cheap and flat: about $10/yr (≈¥75) with the same renewal — among the most affordable European ccTLDs. Poland-focused → .pl: run by national research institute NASK with about 2.5 million registrations, Central and Eastern Europe's largest ccTLD; Poland is the EU's fifth most populous country and the region's biggest economy, with e-commerce growth consistently leading Europe (homegrown giant Allegro lives on .pl), plus a deep software-outsourcing and IT talent base. But do the renewal math: about $6 in year one (≈¥45) yet about $25/yr to renew (≈¥180) — budget on the renewal price and don't get hooked by the teaser; long-term cost runs over twice .cz's. The test: users in Czechia, or manufacturing, engineering and game-dev ventures → .cz is cheap, flat and backed by a well-regarded registry; users in Poland, or brands targeting the region's largest e-commerce market → .pl's market size and local trust earn the renewal; brands running both countries (a common Central European bundle) usually register one of each as local front doors — each language and geo signal anchors to one country.",
+      pickA: ["Local Czech businesses & services", "Manufacturing & engineering ventures", "Software & game studios", "Holders minding long-term renewal costs"],
+      pickB: ["Local Polish businesses & services", "Poland-facing cross-border e-commerce", "CEE software & IT services", "Brands targeting the region's largest market"],
+    },
+  },
+  "tr-vs-ae": {
+    slug: "tr-vs-ae",
+    a: "tr",
+    b: "ae",
+    zh: {
+      title: ".tr 和 .ae 怎么选：土耳其与阿联酋两大欧亚门户 ccTLD 的对比",
+      metaDescription: ".tr 是土耳其国家域名、约 $15/年平续、2023 年起任何人可直注；.ae 是阿联酋国家域名、约 $35/年平续、同样零门槛。对比两者的市场信号、库存与中东定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个横跨欧亚与中东的门户 ccTLD，资格都完全开放、价格都平续，分水岭在市场画像与价格档位。做土耳其市场 → .tr：BTK 下属 TRABİS 系统运营、注册量约 70 万，土耳其人口约 8500 万、横跨欧亚、是中东与中亚市场的门户，电商增速常年位居全球前列（Trendyol、Hepsiburada 都是本土巨头），name.tr 一眼讲清「土耳其的生意」，本土企业与政府机构的主站几乎都在 .tr 体系上，Google 也会把 .tr 站点与土耳其地区相关联。最大利好是库存时间线：2023 年起顶级直注才向所有人开放、无需本地文件，好词根库存明显比老牌 ccTLD 干净。价格中等平续：约 $15/年（约 ¥110）。做阿联酋与海湾市场 → .ae：TDRA 旗下 .aeDA 运营、注册量约 30 万，迪拜与阿布扎比聚集全球贸易、物流、金融与 Web3 业务，人均 GDP 居世界前列，常住人口近九成是外籍人士——英语是商业通用语，英文词根无需翻译；资格同样完全开放，对计划落地迪拜自贸区的外国公司尤其友好。价格中等偏上平续：约 $35/年（约 ¥250），价格门槛也过滤了投机注册。判断标准：用户在土耳其、或做面向 8500 万人口大市场的电商与制造外贸 → .tr 便宜、库存新、本地信任高；用户在阿联酋与海湾、或做贸易金融与 Web3、想讲「中东落地」→ .ae 的枢纽信号与英语环境值回价差；同时做土耳其与海湾两个市场的品牌通常各注册一个做本地门面——两边的地域信号各锚定一国。",
+      pickA: ["土耳其本地企业与服务", "面向土耳其的跨境电商", "制造与外贸业务", "想抢 2023 年新开放库存的品牌"],
+      pickB: ["阿联酋本地企业与服务", "迪拜/阿布扎比贸易与物流", "中东金融与 Web3 业务", "计划落地海湾自贸区的公司"],
+    },
+    en: {
+      title: ".tr vs .ae: Türkiye or the UAE — Two Eurasian Gateway ccTLDs Compared",
+      metaDescription:
+        ".tr is Türkiye's country domain at about $15/yr flat, open to everyone since 2023; .ae is the UAE's at about $35/yr flat, equally zero-bar. Compare market signals, inventory and Middle East positioning, then hunt available names.",
+      verdict:
+        "Two gateway ccTLDs straddling Europe, Asia and the Middle East, both fully open with flat pricing — the divide is market profile and price tier. Türkiye-focused → .tr: run by the TRABİS system under regulator BTK with about 700,000 registrations; Türkiye has about 85 million people, straddles Europe and Asia as a gateway to Middle Eastern and Central Asian markets, posts e-commerce growth among the world's fastest (Trendyol and Hepsiburada are homegrown giants), name.tr says \"a Turkish business\" at a glance, Turkish companies and government institutions overwhelmingly live on the .tr family, and Google geo-associates .tr sites with Türkiye. The biggest win is the inventory timeline: direct second-level registration opened to everyone only in 2023 with no local documents, so good-root inventory is notably cleaner than older ccTLDs. Pricing is moderate and flat: about $15/yr (≈¥110). UAE and Gulf-focused → .ae: run by .aeDA under regulator TDRA with about 300,000 registrations; Dubai and Abu Dhabi concentrate global trade, logistics, finance and Web3 ventures, GDP per capita ranks among the world's highest, and nearly ninety percent of residents are expatriates — English is the language of business, so English roots need no translation; eligibility is equally open, especially friendly for foreign companies planning a Dubai free-zone launch. Pricing is upper-moderate and flat: about $35/yr (≈¥250), a bar that also filters out speculative registrations. The test: users in Türkiye, or e-commerce and manufacturing ventures targeting an 85-million-person market → .tr is cheaper with fresher inventory and strong local trust; users in the UAE and the Gulf, or trade, finance and Web3 ventures signaling \"on the ground in the Middle East\" → .ae's hub signal and English-speaking environment earn the premium; brands running both markets usually register one of each as local front doors — each geo signal anchors to one country.",
+      pickA: ["Local Turkish businesses & services", "Türkiye-facing cross-border e-commerce", "Manufacturing & foreign trade", "Brands hunting the 2023 fresh inventory"],
+      pickB: ["Local UAE businesses & services", "Dubai/Abu Dhabi trade & logistics", "Middle East finance & Web3 ventures", "Companies planning a Gulf free-zone launch"],
+    },
+  },
+  "id-vs-sg": {
+    slug: "id-vs-sg",
+    a: "id",
+    b: "sg",
+    zh: {
+      title: ".id 和 .sg 怎么选：印尼与新加坡两大东南亚 ccTLD 的对比",
+      metaDescription: ".id 是印度尼西亚国家域名、任何人可注册、首年约 $8 但续费约 $30/年；.sg 是新加坡国家域名、约 $39/年平续、需本地存在（注册商可代理）。对比两者的市场信号、资格与东南亚定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "东南亚的两个代表性 ccTLD，一个讲人口体量、一个讲枢纽信任，分水岭在市场画像与注册资格。做印尼大众市场 → .id：注册局 PANDI 运营、注册量约 100 万、居东南亚 ccTLD 前列，印尼人口约 2.8 亿、全球第四人口大国、东南亚最大数字经济体，电商（Tokopedia、Shopee）与数字支付渗透率高速增长，name.id 一眼讲清「印尼的生意」，本土企业与机构的主站几乎都在 .id 体系上，Google 也会把 .id 站点与印尼地区相关联；它还天然读作英文「ID/身份」，账号与开发者工具类产品能玩语义双关。资格完全开放：2014 年起任何人可直注、无需本地地址。续费要算清：首年常见促销约 $8（约 ¥60），续费约 $30/年（约 ¥220），预算按续费价算。做区域总部与专业服务 → .sg：SGNIC 运营，新加坡是东南亚的商业与金融枢纽，name.sg 讲的是「以新加坡为基地的正规生意」，在东南亚商圈自带合规与专业联想，金融科技与跨境业务尤其受用。资格有门槛：SGNIC 要求本地存在，海外主体通常由注册商提供本地代理（Vodien、Exabytes 等都支持），注册前确认即可。价格中等平续：约 $39/年（约 ¥280），续费同价，价格门槛也让好名字库存干净。判断标准：做印尼本地消费市场、或看中 2.8 亿人口的电商体量 → .id 的本地信任与体量无可替代；做东南亚区域总部、金融科技与专业服务、想借新加坡合规信号 → .sg 值回价格与代理门槛；同时做印尼与区域两层市场的品牌通常 .id 做本地门面、.sg 做区域总部站。",
+      pickA: ["印尼本地企业与服务", "面向印尼的跨境电商", "身份、账号与开发者工具产品", "看中人口体量的大众消费品牌"],
+      pickB: ["东南亚区域总部与跨境业务", "金融科技与专业服务", "新加坡本地企业与服务", "想借合规信任信号的品牌"],
+    },
+    en: {
+      title: ".id vs .sg: Indonesia or Singapore — Two Southeast Asian ccTLDs Compared",
+      metaDescription:
+        ".id is Indonesia's country domain, open to anyone, at about $8 in year one but ~$30/yr renewal; .sg is Singapore's at about $39/yr flat, requiring local presence (registrar proxies available). Compare market signals, eligibility and Southeast Asian positioning, then hunt available names.",
+      verdict:
+        "Two flagship Southeast Asian ccTLDs — one sells population scale, the other hub trust — and the divide is market profile and eligibility. Indonesia's mass market → .id: run by registry PANDI with about 1 million registrations, among Southeast Asia's largest ccTLDs; Indonesia has about 280 million people — the world's fourth most populous country and the region's largest digital economy — with e-commerce (Tokopedia, Shopee) and digital payments growing fast, name.id says \"an Indonesian business\" at a glance, Indonesian companies and institutions overwhelmingly live on the .id family, and Google geo-associates .id sites with Indonesia; it also naturally reads as English \"ID / identity\", so account and developer-tool products can play the semantic pun. Eligibility is fully open: since 2014 anyone registers directly with no local address. Do the renewal math: about $8 in year one (≈¥60) but about $30/yr to renew (≈¥220) — budget on the renewal price. Regional HQ and professional services → .sg: run by SGNIC; Singapore is Southeast Asia's business and financial hub, and name.sg says \"a legitimate business based in Singapore\" — a suffix carrying compliance and professionalism connotations across the region, especially valued by fintech and cross-border ventures. Eligibility has a bar: SGNIC requires local presence, with overseas entities typically served by registrar proxy services (Vodien, Exabytes and other Singapore registrars support this) — confirm before registering. Pricing is moderate and flat: about $39/yr (≈¥280) with the same renewal, a price bar that keeps good-name inventory clean. The test: Indonesia's local consumer market, or brands chasing a 280-million-person e-commerce base → .id's local trust and scale are irreplaceable; a Southeast Asian regional HQ, fintech or professional services wanting Singapore's compliance signal → .sg earns its price and proxy step; brands running both layers usually put .id on the local storefront and .sg on the regional HQ site.",
+      pickA: ["Local Indonesian businesses & services", "Indonesia-facing cross-border e-commerce", "Identity, account & developer-tool products", "Mass-market brands chasing population scale"],
+      pickB: ["Southeast Asian regional HQs & cross-border ventures", "Fintech & professional services", "Local Singaporean businesses & services", "Brands wanting the compliance-trust signal"],
+    },
+  },
+  "id-vs-me": {
+    slug: "id-vs-me",
+    a: "id",
+    b: "me",
+    zh: {
+      title: ".id 和 .me 怎么选：两个「身份系」ccTLD 的语义与市场对比",
+      metaDescription: ".id 是印度尼西亚国家域名、天然读作英文 ID/身份、首年约 $8 但续费约 $30/年；.me 是黑山国家域名、早已通用化为个人品牌后缀、价格与 .com 接近。对比两者的语义玩法、市场信号与续费，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都能「跨界」当语义后缀用的 ccTLD——.id 读作英文「ID/身份」，.me 读作英文「我」，分水岭在语义方向与地域信号的强弱。做身份、账号与凭证类产品 → .id：注册局 PANDI 运营、注册量约 100 万，name.id 对账号系统、身份验证、开发者工具类产品是天然的语义后缀（类似 .me 的玩法）；但要记住它同时是印度尼西亚的国家域名——印尼人口约 2.8 亿、东南亚最大数字经济体，本土企业与机构的主站几乎都在 .id 体系上，Google 也会把 .id 站点与印尼地区相关联，纯语义用法要接受这层本地信号并存。资格完全开放、任何人可直注，续费要算清：首年约 $8（约 ¥60）、续费约 $30/年（约 ¥220）。做个人品牌与「你/我」叙事产品 → .me：黑山的国家域名，但早已通用化为个人品牌的默认后缀——个人主页、简历站、开发者作品集用 name.me 一眼就懂，还有动词短语的独门玩法（about.me、hire.me 式「动词 + .me」把行动指令直接写进域名），Google 也把 .me 按通用后缀对待、无强地域绑定。价格与 .com 接近、库存明显更充裕，常见英文名与昵称命中率远高于 .com。判断标准：产品核心是「身份/凭证/账号」这个名词 → .id 的语义更准，顺带覆盖印尼市场是加分项；产品核心是「个人」叙事或动词短语域名 → .me 的通用化程度高、无地域信号干扰；做印尼本地生意则没有悬念——.id 是唯一带本地信任的选择，.me 讲不了印尼故事。",
+      pickA: ["身份、账号与凭证类产品", "开发者工具与 API 服务", "印尼本地企业与服务", "面向印尼的跨境电商"],
+      pickB: ["个人主页与简历站", "开发者作品集", "动词短语类产品域名（hire.me 式）", "以「你/我」叙事的社交与效率产品"],
+    },
+    en: {
+      title: ".id vs .me: Two \"Identity\" ccTLDs — Semantics and Markets Compared",
+      metaDescription:
+        ".id is Indonesia's country domain that naturally reads as English \"ID/identity\", at about $8 in year one but ~$30/yr renewal; .me is Montenegro's, long genericized as the personal-brand suffix, priced close to .com. Compare semantic plays, market signals and renewals, then hunt available names.",
+      verdict:
+        "Two ccTLDs that both moonlight as semantic suffixes — .id reads as English \"ID / identity\", .me reads as English \"me\" — and the divide is semantic direction and how strong the geo signal remains. Identity, account and credential products → .id: run by registry PANDI with about 1 million registrations; name.id is a natural semantic suffix for account systems, identity verification and developer tools (much like the .me play) — but remember it is also Indonesia's country domain: Indonesia has about 280 million people and Southeast Asia's largest digital economy, Indonesian companies and institutions overwhelmingly live on the .id family, and Google geo-associates .id sites with Indonesia, so a purely semantic use coexists with that local signal. Eligibility is fully open with direct registration for anyone; do the renewal math — about $8 in year one (≈¥60) but about $30/yr to renew (≈¥220). Personal brands and \"you/me\" narrative products → .me: Montenegro's country domain, long genericized into the default personal-brand suffix — personal homepages, résumé sites and developer portfolios on name.me read instantly, plus the signature verb-phrase play (about.me, hire.me — verb + .me writes the call to action into the domain itself), and Google treats .me as a generic suffix with no strong geo binding. Pricing sits close to .com with clearly better inventory — common first names and nicknames hit far more often than on .com. The test: if your product's core noun is \"identity / credential / account\" → .id's semantics are sharper, with Indonesian-market coverage as a bonus; if the core is a personal narrative or a verb-phrase domain → .me is more fully genericized with no geo-signal interference; and for an actual Indonesian business there is no contest — .id is the only choice carrying local trust, a story .me cannot tell.",
+      pickA: ["Identity, account & credential products", "Developer tools & API services", "Local Indonesian businesses & services", "Indonesia-facing cross-border e-commerce"],
+      pickB: ["Personal homepages & résumé sites", "Developer portfolios", "Verb-phrase product domains (hire.me style)", "Social & productivity products with \"you/me\" narratives"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
