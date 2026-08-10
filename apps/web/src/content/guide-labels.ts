@@ -293,4 +293,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "tabletopclub", zh: "桌游俱乐部", en: "Tabletop clubs" },
   { slug: "futsal", zh: "五人制足球场馆", en: "Futsal venues" },
   { slug: "fashionbuyer", zh: "快时尚买手店", en: "Fashion select shops" },
+  { slug: "basketball", zh: "篮球培训", en: "Basketball training" },
+  { slug: "rugby", zh: "橄榄球俱乐部", en: "Rugby clubs" },
+  { slug: "cricket", zh: "板球社区", en: "Cricket communities" },
+  { slug: "aquascaping", zh: "观赏鱼造景", en: "Aquascaping" },
+  { slug: "fanclub", zh: "粉丝应援站", en: "Fan clubs" },
+  { slug: "giveaway", zh: "抽奖活动平台", en: "Giveaway platforms" },
 ];
