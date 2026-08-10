@@ -358,4 +358,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "monster-vs-games", a: "monster", b: "games", title: { zh: ".monster 和 .games 怎么选：猛的气质与行业的品类", en: ".monster vs .games: The Attitude or The Industry" } },
   { slug: "pics-vs-photos", a: "pics", b: "photos", title: { zh: ".pics 和 .photos 怎么选：随手的口语与交付的正装", en: ".pics vs .photos: The Casual Shorthand or The Delivery Front" } },
   { slug: "mobi-vs-app", a: "mobi", b: "app", title: { zh: ".mobi 和 .app 怎么选：移动的场景与应用的形态", en: ".mobi vs .app: The Mobile Context or The Application Form" } },
+  { slug: "asia-vs-global", a: "asia", b: "global", title: { zh: ".asia 和 .global 怎么选：区域的官方后缀与全球的宣言", en: ".asia vs .global: The Official Region or The Worldwide Claim" } },
+  { slug: "buzz-vs-promo", a: "buzz", b: "promo", title: { zh: ".buzz 和 .promo 怎么选：话题的热度与促销的动作", en: ".buzz vs .promo: The Attention Play or The Conversion Play" } },
+  { slug: "fans-vs-fan", a: "fans", b: "fan", title: { zh: ".fans 和 .fan 怎么选：粉丝群体的复数与粉丝身份的单数", en: ".fans vs .fan: The Plural Crowd or The Singular Badge" } },
+  { slug: "place-vs-space", a: "place", b: "space", title: { zh: ".place 和 .space 怎么选：具体的场所与抽象的天地", en: ".place vs .space: The Concrete Venue or The Open Room" } },
+  { slug: "report-vs-news", a: "report", b: "news", title: { zh: ".report 和 .news 怎么选：深度的报告与时效的资讯", en: ".report vs .news: The Deep Dive or The Fast Feed" } },
+  { slug: "town-vs-city", a: "town", b: "city", title: { zh: ".town 和 .city 怎么选：小镇的烟火气与城市的大尺度", en: ".town vs .city: The Cozy Scale or The Urban Scale" } },
 ];
