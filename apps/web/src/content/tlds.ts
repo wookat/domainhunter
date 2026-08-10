@@ -11184,6 +11184,186 @@ const GUIDES = {
       ],
     },
   },
+  vn: {
+    tld: "vn",
+    zh: {
+      title: ".vn 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".vn 是越南国家域名，对外国个人与企业开放注册，本地信任度极高，适合面向越南市场的品牌、电商与制造外贸业务。查看 .vn 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .vn 域名。",
+      intro:
+        ".vn 是越南的国家域名，由越南互联网络信息中心（VNNIC）运营，注册量约 60 万，居东南亚 ccTLD 前列。越南人口约 1 亿，是全球增长最快的制造业与数字经济体之一：电子、纺织等供应链持续从周边转移，电商（Shopee、Lazada、Tiki）与数字支付渗透率高速攀升。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.vn 或 name.com.vn，「越南的生意」一眼讲清，信任度远超一般新后缀——越南本土企业与政府机构的主站几乎都在 .vn 体系上；Google 也会把 .vn 站点与越南地区相关联，本地 SEO 有天然加成。资格上 .vn 对外国注册人开放：任何国家的个人与机构都能通过 VNNIC 授权注册商直接注册，无需本地公司，只需按规提交注册人信息。价格中等偏上且平续：注册约 $40/年（约 ¥290），续费同价，无引流钩子。越南语（去声调拼写）与英文词根命中率都高。命名上品牌词直接上（brand.vn）最主流；制造与外贸业务用「品类词 + .vn」讲清市场落地，本地服务用「行业词 + .vn」。注意受众主要在越南本土，纯外部市场业务信号较弱。",
+      bestFor: ["越南本地企业与服务", "面向越南的跨境电商", "制造供应链与外贸业务", "越南语内容与媒体站"],
+      namingTips: [
+        "对外国注册人开放，经授权注册商即可注册、无需本地公司",
+        "注册续费均约 $40/年，平续无钩子",
+        "越南语词根按去声调拼写，英文词根同样命中率高",
+        "受众在越南本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".vn Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".vn is Vietnam's country domain — open to foreign individuals and companies — with top-tier local trust for Vietnam-market brands, e-commerce and manufacturing trade. See live pricing and naming advice, then hunt available .vn names with AI.",
+      intro:
+        ".vn is Vietnam's country-code domain, run by the Vietnam Internet Network Information Center (VNNIC) with about 600,000 registrations — among Southeast Asia's largest ccTLDs. Vietnam has about 100 million people and one of the world's fastest-growing manufacturing and digital economies: electronics and textile supply chains keep shifting in from neighbors, while e-commerce (Shopee, Lazada, Tiki) and digital payments climb fast. Local consumers are strongly attuned to local signals: name.vn or name.com.vn says \"a Vietnamese business\" at a glance, with trust far beyond any new gTLD — Vietnamese companies and government institutions overwhelmingly live on the .vn family; Google also geo-associates .vn sites with Vietnam, a natural boost for local SEO. On eligibility, .vn is open to foreign registrants: individuals and organizations from anywhere can register through VNNIC-accredited registrars with no local company, just standard registrant details. Pricing is upper-moderate and flat: about $40/yr to register (≈¥290) with the same renewal, no teaser games. Both Vietnamese roots (in de-accented spelling) and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.vn); manufacturing and trade ventures fit category + .vn to claim the market, and local services fit trade-word + .vn. One caution: the audience is primarily Vietnam — the signal is weaker for purely external markets.",
+      bestFor: ["Local Vietnamese businesses & services", "Vietnam-facing cross-border e-commerce", "Manufacturing supply chains & trade", "Vietnamese-language content & media"],
+      namingTips: [
+        "Open to foreign registrants via accredited registrars — no local company needed",
+        "About $40/yr flat to register and renew — no traps",
+        "Vietnamese roots work in de-accented spelling; English roots hit well too",
+        "Audience is primarily Vietnam — weaker signal for purely external markets",
+      ],
+    },
+  },
+  ph: {
+    tld: "ph",
+    zh: {
+      title: ".ph 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ph 是菲律宾国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向菲律宾市场的品牌、电商与外包服务业务。查看 .ph 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ph 域名。",
+      intro:
+        ".ph 是菲律宾的国家域名，由注册局 dotPH 运营。菲律宾人口约 1.2 亿，英语是官方语言之一、普及率居亚洲前列，也是全球商业流程外包（BPO）与客服中心的枢纽；社交媒体使用时长常年全球第一，电商（Shopee、Lazada）与数字钱包（GCash）渗透率高速增长。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.ph 或 name.com.ph，「菲律宾的生意」一眼讲清，信任度远超一般新后缀——菲律宾本土企业与政府机构的主站几乎都在 .ph 体系上；Google 也会把 .ph 站点与菲律宾地区相关联，本地 SEO 有天然加成。英语普及带来额外便利：英文词根无需翻译，全球团队也能直接理解。资格上 .ph 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格中等偏上且平续：注册约 $55/年（约 ¥400），续费同价，无引流钩子。库存比 .com 充裕，短词与行业词命中率高。命名上品牌词直接上（brand.ph）最主流；电商与外包业务用「品类词 + .ph」讲清市场定位，本地服务用「行业词 + .ph」。注意受众主要在菲律宾本土，纯外部市场业务信号较弱。",
+      bestFor: ["菲律宾本地企业与服务", "面向菲律宾的跨境电商", "BPO 与客服外包业务", "面向东南亚英语市场的品牌"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $55/年，平续无钩子",
+        "英语普及率居亚洲前列，英文词根无需翻译",
+        "受众在菲律宾本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".ph Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ph is the Philippines' country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Philippine-market brands, e-commerce and outsourcing services. See live pricing and naming advice, then hunt available .ph names with AI.",
+      intro:
+        ".ph is the Philippines' country-code domain, run by registry dotPH. The Philippines has about 120 million people, English as an official language with some of Asia's highest proficiency, and a global hub role in business-process outsourcing (BPO) and call centers; social-media time consistently ranks first worldwide, and e-commerce (Shopee, Lazada) plus digital wallets (GCash) keep growing fast. Local consumers are strongly attuned to local signals: name.ph or name.com.ph says \"a Philippine business\" at a glance, with trust far beyond any new gTLD — Philippine companies and government institutions overwhelmingly live on the .ph family; Google also geo-associates .ph sites with the Philippines, a natural boost for local SEO. English fluency adds a bonus: English roots need no translation and read instantly for global teams. On eligibility, .ph is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is upper-moderate and flat: about $55/yr to register (≈¥400) with the same renewal, no teaser games. Inventory beats .com, and short words and trade words hit well. For naming, a straight brand word is the mainstream shape (brand.ph); e-commerce and outsourcing ventures fit category + .ph to claim the market, and local services fit trade-word + .ph. One caution: the audience is primarily the Philippines — the signal is weaker for purely external markets.",
+      bestFor: ["Local Philippine businesses & services", "Philippines-facing cross-border e-commerce", "BPO & call-center services", "Southeast Asia English-market brands"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $55/yr flat to register and renew — no traps",
+        "Some of Asia's highest English proficiency — English roots need no translation",
+        "Audience is primarily the Philippines — weaker signal for purely external markets",
+      ],
+    },
+  },
+  gr: {
+    tld: "gr",
+    zh: {
+      title: ".gr 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".gr 是希腊国家域名，无资格限制、任何人可注册，按两年为周期计费、单价便宜，本地信任度极高，适合面向希腊市场的品牌、旅游与航运业务。查看 .gr 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .gr 域名。",
+      intro:
+        ".gr 是希腊的国家域名，由希腊电信与邮政委员会（EETT）监管、FORTH-ICS 研究所运营注册系统，注册量约 85 万。希腊人口约 1000 万，是全球旅游重镇（年游客量约为人口三倍）与航运强国（希腊船东掌握全球约五分之一商船运力）。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.gr，「希腊的生意」一眼讲清，信任度远超一般新后缀——希腊本土企业与政府机构的主站几乎都在 .gr 上；Google 也会把 .gr 站点与希腊地区相关联，本地 SEO 有天然加成。资格上 .gr 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格有个特别点：按两年为最小周期计费，两年约 $28（约 ¥200），折合每年约 $14（约 ¥100），在欧洲 ccTLD 里属于便宜档，续费同价无钩子。希腊语（拉丁转写）与英文词根命中率都高。命名上品牌词直接上（brand.gr）最主流；旅游与航运业务用「品类词 + .gr」讲清市场落地，本地服务用「行业词 + .gr」。注意受众主要在希腊本土，纯外部市场业务信号较弱。",
+      bestFor: ["希腊本地企业与服务", "旅游、酒店与海岛度假业务", "航运与物流公司", "希腊语内容与媒体站"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "按两年计费约 $28/2 年，折合每年约 $14，欧洲便宜档",
+        "希腊语词根用拉丁转写，英文词根同样命中率高",
+        "受众在希腊本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".gr Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".gr is Greece's country domain — no eligibility restrictions, anyone can register — billed in two-year terms at a cheap effective rate, with top-tier local trust for Greek-market brands, tourism and shipping. See live pricing and naming advice, then hunt available .gr names with AI.",
+      intro:
+        ".gr is Greece's country-code domain, overseen by the telecom regulator EETT with the registry system run by the FORTH-ICS research institute, at about 850,000 registrations. Greece has about 10 million people, a tourism powerhouse (annual visitors run about triple the population) and a shipping giant (Greek owners control roughly a fifth of the world's merchant fleet). Local consumers are strongly attuned to local signals: name.gr says \"a Greek business\" at a glance, with trust far beyond any new gTLD — Greek companies and government institutions overwhelmingly live on .gr; Google also geo-associates .gr sites with Greece, a natural boost for local SEO. On eligibility, .gr is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing has a quirk: terms are billed in two-year minimums, about $28 per two years (≈¥200) — an effective ~$14/yr (≈¥100), cheap by European ccTLD standards, with flat renewals and no teaser games. Both Greek roots (in Latin transliteration) and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.gr); tourism and shipping ventures fit category + .gr to claim the market, and local services fit trade-word + .gr. One caution: the audience is primarily Greece — the signal is weaker for purely external markets.",
+      bestFor: ["Local Greek businesses & services", "Tourism, hotels & island getaways", "Shipping & logistics companies", "Greek-language content & media"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "Billed in two-year terms (~$28/2yr) — an effective ~$14/yr, cheap for Europe",
+        "Greek roots work in Latin transliteration; English roots hit well too",
+        "Audience is primarily Greece — weaker signal for purely external markets",
+      ],
+    },
+  },
+  ro: {
+    tld: "ro",
+    zh: {
+      title: ".ro 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ro 是罗马尼亚国家域名，无资格限制、任何人可注册，价格便宜平续，本地信任度极高，适合面向罗马尼亚市场的品牌、电商与 IT 外包业务。查看 .ro 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ro 域名。",
+      intro:
+        ".ro 是罗马尼亚的国家域名，由国家研究院 ICI 布加勒斯特旗下的 RoTLD 注册局运营，注册量约 70 万。罗马尼亚人口约 1900 万，是欧盟增长最快的经济体之一，更是东欧的 IT 重镇：程序员人均密度居欧洲前列，UiPath、Bitdefender 都发家于此，互联网速度长期位居全球第一梯队。本地消费者对本土信号非常敏感：本地电商（eMAG 是本土巨头）、品牌官网与服务商用 name.ro，「罗马尼亚的生意」一眼讲清，信任度远超一般新后缀——罗马尼亚本土企业与政府机构的主站几乎都在 .ro 上；Google 也会把 .ro 站点与罗马尼亚地区相关联，本地 SEO 有天然加成。资格上 .ro 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理（2018 年起从一次性买断改为按年续费制）。价格便宜且平续：注册约 $13/年（约 ¥95），续费同价，无引流钩子。罗马尼亚语是拉丁语族、与英文词根高度兼容。命名上品牌词直接上（brand.ro）最主流；IT 外包与电商用「品类词 + .ro」讲清市场定位，本地服务用「行业词 + .ro」。注意受众主要在罗马尼亚本土，纯外部市场业务信号较弱。",
+      bestFor: ["罗马尼亚本地企业与服务", "IT 外包与软件开发团队", "面向罗马尼亚的跨境电商", "罗马尼亚语内容与媒体站"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $13/年，平续无钩子，欧洲便宜档",
+        "罗马尼亚语属拉丁语族，与英文词根高度兼容",
+        "受众在罗马尼亚本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".ro Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ro is Romania's country domain — no eligibility restrictions, anyone can register — cheap with flat renewals and top-tier local trust for Romanian-market brands, e-commerce and IT outsourcing. See live pricing and naming advice, then hunt available .ro names with AI.",
+      intro:
+        ".ro is Romania's country-code domain, run by the RoTLD registry under the national research institute ICI Bucharest, with about 700,000 registrations. Romania has about 19 million people, one of the EU's fastest-growing economies, and Eastern Europe's IT stronghold: developer density ranks among Europe's highest, UiPath and Bitdefender both started here, and internet speeds sit in the global top tier. Local consumers are strongly attuned to local signals: name.ro says \"a Romanian business\" at a glance, with trust far beyond any new gTLD — Romanian companies (eMAG is the homegrown e-commerce giant) and government institutions overwhelmingly live on .ro; Google also geo-associates .ro sites with Romania, a natural boost for local SEO. On eligibility, .ro is fully open: individuals and organizations from anywhere can register directly with no local address or proxy (since 2018 it moved from one-time purchase to annual renewals). Pricing is cheap and flat: about $13/yr to register (≈¥95) with the same renewal, no teaser games. Romanian is a Romance language, highly compatible with English roots. For naming, a straight brand word is the mainstream shape (brand.ro); IT outsourcing and e-commerce fit category + .ro to claim the market, and local services fit trade-word + .ro. One caution: the audience is primarily Romania — the signal is weaker for purely external markets.",
+      bestFor: ["Local Romanian businesses & services", "IT outsourcing & dev teams", "Romania-facing cross-border e-commerce", "Romanian-language content & media"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $13/yr flat to register and renew — cheap for Europe, no traps",
+        "Romanian is a Romance language — highly compatible with English roots",
+        "Audience is primarily Romania — weaker signal for purely external markets",
+      ],
+    },
+  },
+  hu: {
+    tld: "hu",
+    zh: {
+      title: ".hu 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".hu 是匈牙利国家域名，需欧盟/欧洲经济区身份或匈牙利商标才能注册（注册商可代理），本地信任度极高，适合面向匈牙利市场的品牌、电商与制造业务。查看 .hu 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .hu 域名。",
+      intro:
+        ".hu 是匈牙利的国家域名，由匈牙利科学院旗下的 ISZT（互联网服务委员会）运营，注册量约 85 万。匈牙利人口约 960 万，地处中欧十字路口，是欧洲汽车与电池制造的重要基地（奥迪、奔驰、宝马与宁德时代都有大型工厂），布达佩斯也是区域科技与共享出行创业中心。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.hu，「匈牙利的生意」一眼讲清，信任度远超一般新后缀——匈牙利本土企业与政府机构的主站几乎都在 .hu 上；Google 也会把 .hu 站点与匈牙利地区相关联，本地 SEO 有天然加成。资格上有门槛：注册人需要是欧盟/欧洲经济区的公民或机构，或持有匈牙利商标——不过多数国际注册商提供欧盟代理服务，非欧盟主体也能落地。价格中等且平续：注册约 $20/年（约 ¥145），续费同价，无引流钩子。匈牙利语词根独特（乌拉尔语系），但英文词根在科技与跨境场景同样命中率高。命名上品牌词直接上（brand.hu）最主流；制造与电商用「品类词 + .hu」讲清市场定位，本地服务用「行业词 + .hu」。注意受众主要在匈牙利本土，纯外部市场业务信号较弱。",
+      bestFor: ["匈牙利本地企业与服务", "汽车与电池制造供应链", "面向匈牙利的跨境电商", "匈牙利语内容与媒体站"],
+      namingTips: [
+        "需欧盟/EEA 身份或匈牙利商标，非欧盟主体可走注册商代理",
+        "注册续费均约 $20/年，平续无钩子",
+        "匈牙利语属乌拉尔语系，科技与跨境场景英文词根照样好用",
+        "受众在匈牙利本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".hu Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".hu is Hungary's country domain — registration requires EU/EEA status or a Hungarian trademark (registrar proxy services available) — with top-tier local trust for Hungarian-market brands, e-commerce and manufacturing. See live pricing and naming advice, then hunt available .hu names with AI.",
+      intro:
+        ".hu is Hungary's country-code domain, run by ISZT (the Council of Hungarian Internet Providers) with about 850,000 registrations. Hungary has about 9.6 million people at the crossroads of Central Europe and is a major base for European automotive and battery manufacturing (Audi, Mercedes, BMW and CATL all run large plants), while Budapest is a regional hub for tech and mobility startups. Local consumers are strongly attuned to local signals: name.hu says \"a Hungarian business\" at a glance, with trust far beyond any new gTLD — Hungarian companies and government institutions overwhelmingly live on .hu; Google also geo-associates .hu sites with Hungary, a natural boost for local SEO. Eligibility has a bar: registrants must be EU/EEA citizens or organizations, or hold a Hungarian trademark — but most international registrars offer EU proxy services, so non-EU parties can still land one. Pricing is moderate and flat: about $20/yr to register (≈¥145) with the same renewal, no teaser games. Hungarian roots are distinctive (a Uralic language), but English roots hit just as well in tech and cross-border contexts. For naming, a straight brand word is the mainstream shape (brand.hu); manufacturing and e-commerce fit category + .hu to claim the market, and local services fit trade-word + .hu. One caution: the audience is primarily Hungary — the signal is weaker for purely external markets.",
+      bestFor: ["Local Hungarian businesses & services", "Automotive & battery supply chains", "Hungary-facing cross-border e-commerce", "Hungarian-language content & media"],
+      namingTips: [
+        "Requires EU/EEA status or a Hungarian trademark — registrar proxies work for non-EU parties",
+        "About $20/yr flat to register and renew — no traps",
+        "Hungarian is Uralic, but English roots hit well in tech and cross-border contexts",
+        "Audience is primarily Hungary — weaker signal for purely external markets",
+      ],
+    },
+  },
+  cl: {
+    tld: "cl",
+    zh: {
+      title: ".cl 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".cl 是智利国家域名，向全球开放注册（需提供智利本地联系人，注册商可代办），本地信任度极高，适合面向智利市场的品牌、电商与矿业外贸业务。查看 .cl 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .cl 域名。",
+      intro:
+        ".cl 是智利的国家域名，由智利大学旗下的 NIC Chile 运营，注册量约 75 万。智利人口约 1900 万，是拉美最稳定、人均收入最高的经济体之一：全球最大的铜与锂出口国（新能源供应链的上游要地），互联网渗透率与电商成熟度居拉美前列（Mercado Libre、Falabella 都深耕于此）。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.cl，「智利的生意」一眼讲清，信任度远超一般新后缀——智利本土企业与政府机构的主站几乎都在 .cl 上；Google 也会把 .cl 站点与智利地区相关联，本地 SEO 有天然加成。资格上 .cl 向全球开放：任何国家的个人与机构都能注册，外国注册人只需提供一位智利本地联系人（多数国际注册商可代办），无需本地公司。价格便宜偏中等且平续：注册约 $18/年（约 ¥130），续费同价，无引流钩子。西班牙语与英文词根命中率都高。命名上品牌词直接上（brand.cl）最主流；矿业与外贸业务用「品类词 + .cl」讲清市场落地，本地服务用「行业词 + .cl」。注意受众主要在智利本土，纯外部市场业务信号较弱。",
+      bestFor: ["智利本地企业与服务", "矿业、锂与铜产业链外贸", "面向智利的跨境电商", "西语内容与拉美市场品牌"],
+      namingTips: [
+        "向全球开放，外国注册人需智利本地联系人（注册商可代办）",
+        "注册续费均约 $18/年，平续无钩子",
+        "西班牙语与英文词根命中率都高",
+        "受众在智利本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".cl Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".cl is Chile's country domain — open to registrants worldwide (a local Chilean contact is required; registrars can provide one) — with top-tier local trust for Chilean-market brands, e-commerce and mining trade. See live pricing and naming advice, then hunt available .cl names with AI.",
+      intro:
+        ".cl is Chile's country-code domain, run by NIC Chile under the University of Chile, with about 750,000 registrations. Chile has about 19 million people and one of Latin America's most stable, highest-income economies: the world's largest copper and lithium exporter (upstream of the whole new-energy supply chain), with internet penetration and e-commerce maturity at the top of the region (Mercado Libre and Falabella both run deep here). Local consumers are strongly attuned to local signals: name.cl says \"a Chilean business\" at a glance, with trust far beyond any new gTLD — Chilean companies and government institutions overwhelmingly live on .cl; Google also geo-associates .cl sites with Chile, a natural boost for local SEO. On eligibility, .cl is open worldwide: individuals and organizations from anywhere can register, and foreign registrants just need a local Chilean contact (most international registrars provide one) — no local company required. Pricing is low-to-moderate and flat: about $18/yr to register (≈¥130) with the same renewal, no teaser games. Both Spanish and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.cl); mining and trade ventures fit category + .cl to claim the market, and local services fit trade-word + .cl. One caution: the audience is primarily Chile — the signal is weaker for purely external markets.",
+      bestFor: ["Local Chilean businesses & services", "Mining, lithium & copper trade", "Chile-facing cross-border e-commerce", "Spanish-language content & LatAm brands"],
+      namingTips: [
+        "Open worldwide — foreign registrants need a local Chilean contact (registrars provide one)",
+        "About $18/yr flat to register and renew — no traps",
+        "Both Spanish and English roots hit well",
+        "Audience is primarily Chile — weaker signal for purely external markets",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
