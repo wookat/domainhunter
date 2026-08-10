@@ -381,6 +381,12 @@ export const COMPARE_SLUGS = [
   "healthcare-vs-health",
   "abogado-vs-lawyer",
   "kaufen-vs-shop",
+  "berlin-vs-city",
+  "paris-vs-london",
+  "amsterdam-vs-berlin",
+  "vegas-vs-casino",
+  "immobilien-vs-immo",
+  "tienda-vs-shop",
 ];
 
 /** slug → 「.a vs .b」显示文案 */

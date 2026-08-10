@@ -388,4 +388,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "healthcare-vs-health", a: "healthcare", b: "health", title: { zh: ".healthcare 和 .health 怎么选：行业级声明与泛健康赛道", en: ".healthcare vs .health: The Industry Statement or The Wellness Umbrella" } },
   { slug: "abogado-vs-lawyer", a: "abogado", b: "lawyer", title: { zh: ".abogado 和 .lawyer 怎么选：西语客户与英语客户的执业门牌", en: ".abogado vs .lawyer: The Practice Nameplate in Spanish or English" } },
   { slug: "kaufen-vs-shop", a: "kaufen", b: "shop", title: { zh: ".kaufen 和 .shop 怎么选：德语区的购买动词与全球的店铺门面", en: ".kaufen vs .shop: The German Buy Verb or The Global Storefront" } },
+  { slug: "berlin-vs-city", a: "berlin", b: "city", title: { zh: ".berlin 和 .city 怎么选：柏林门牌与通用城市词的分工", en: ".berlin vs .city: The Berlin Nameplate or The Generic City Word" } },
+  { slug: "paris-vs-london", a: "paris", b: "london", title: { zh: ".paris 和 .london 怎么选：两座欧洲之都的城市门牌", en: ".paris vs .london: Two European Capitals' City Nameplates" } },
+  { slug: "amsterdam-vs-berlin", a: "amsterdam", b: "berlin", title: { zh: ".amsterdam 和 .berlin 怎么选：两座创意之都的城市后缀", en: ".amsterdam vs .berlin: Two Creative Capitals' City Suffixes" } },
+  { slug: "vegas-vs-casino", a: "vegas", b: "casino", title: { zh: ".vegas 和 .casino 怎么选：城市门牌与博彩品类的分工", en: ".vegas vs .casino: The City Nameplate or The Gambling Category" } },
+  { slug: "immobilien-vs-immo", a: "immobilien", b: "immo", title: { zh: ".immobilien 和 .immo 怎么选：德语房产全称与缩写的取舍", en: ".immobilien vs .immo: The German Full Word or The Short Abbreviation" } },
+  { slug: "tienda-vs-shop", a: "tienda", b: "shop", title: { zh: ".tienda 和 .shop 怎么选：西语店铺词与全球店铺门面", en: ".tienda vs .shop: The Spanish Store Word or The Global Storefront" } },
 ];

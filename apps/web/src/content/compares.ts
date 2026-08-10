@@ -8341,6 +8341,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Independent stores & DTC brand shops", "Cross-border & multilingual commerce", "Offline stores' online entrances", "The most recognized e-commerce suffix"],
     },
   },
+  "berlin-vs-city": {
+    slug: "berlin-vs-city",
+    a: "berlin",
+    b: "city",
+    zh: {
+      title: ".berlin 和 .city 怎么选：柏林门牌与通用城市词的分工",
+      metaDescription: ".berlin 是柏林官方城市后缀，本地定位最准，注册约 $42/年续费同价；.city 是通用城市词，任何城市都能用，注册约 $5 续费约 $23/年。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同吃城市流量，分工在专指与通用：一个只说柏林，一个哪座城都能装。.berlin 赢在城市锐度——柏林本地商家与餐饮门店、创业公司与科技团队、文化艺术与活动机构用 name.berlin，「我们在柏林」一词讲透；这是柏林市政府背书的官方城市后缀（注册局 dotBERLIN GmbH，2014 年上线），「行业 + .berlin」（cafe.berlin）读起来就是一块柏林门牌；注册约 $42/年（约 ¥300）、续费同价——无首年促销陷阱，本地品牌的多年持有成本可预期。.city 赢在通用与便宜——城市指南与门户、本地新闻与活动日历、生活服务聚合用 name.city，任何城市名都能装（berlin.city、munich.city），还有「××之城」的比喻用法；注册约 $5（约 ¥33）、续费约 $23/年（约 ¥167）——长期成本只有 .berlin 的一半左右。判断标准：生意扎根柏林一座城——本地门店、柏林创业品牌、面向柏林客群的服务 → .berlin 的官方城市身份是通用词换不来的信任信号；做多城市或泛城市的内容与平台——城市门户矩阵、跨城生活服务 → .city 一个后缀通吃所有城市，续费还便宜得多。两点注意：一是 .berlin 名义上要求与柏林有关联（多数注册商宽松执行），受众也限于柏林及其客群；二是 .berlin 后缀 6 字符偏长，搭配短品牌词控制总长。命名上「行业 + .berlin」（cafe.berlin）与「城市名 + .city」（berlin.city）各是两边最自然的模式。",
+      pickA: ["柏林本地商家与餐饮门店", "柏林创业公司与科技团队", "文化艺术与活动机构", "面向柏林客群的内容与服务站"],
+      pickB: ["多城市矩阵的城市门户", "城市指南与本地新闻站", "生活服务聚合平台", "预算敏感的长期持有"],
+    },
+    en: {
+      title: ".berlin vs .city: The Berlin Nameplate or The Generic City Word",
+      metaDescription:
+        ".berlin is Berlin's official city suffix — sharpest for local positioning at about $42/yr flat; .city is the generic city word for any town, about $5 to register and $23/yr to renew. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both feed on city traffic; the split is specific versus generic: one names only Berlin, the other fits any town. .berlin wins on city sharpness — Berlin's local businesses and restaurants, startups and tech teams, and culture and events organizations on name.berlin say \"we're in Berlin\" in one word; it is the city-endorsed official suffix (registry dotBERLIN GmbH, live since 2014), so trade + .berlin (cafe.berlin) reads like a Berlin nameplate; about $42/yr (≈¥300) flat to register and renew — no promo trap, predictable multi-year costs for a local brand. .city wins on generality and price — city guides and portals, local news and event calendars, and life-service aggregators on name.city fit any city name (berlin.city, munich.city), plus the metaphorical \"city of X\" pattern; about $5 to register (≈¥33) and $23/yr to renew (≈¥167) — roughly half of .berlin's long-term cost. The test: the business is rooted in Berlin itself — local storefronts, Berlin startup brands, services for Berliners → .berlin's official city identity is a trust signal no generic word can buy; the project spans cities or plays the generic-city theme — portal networks, cross-city life services → one .city suffix covers every town at a much cheaper renewal. Two cautions: .berlin nominally asks for a Berlin connection (loosely enforced by most registrars) and its audience is Berlin and its visitors; and at six characters .berlin runs a bit long, so keep the brand word short. Naming: trade + .berlin (cafe.berlin) versus cityname + .city (berlin.city) are each side's most natural shapes.",
+      pickA: ["Berlin local businesses & restaurants", "Berlin startups & tech teams", "Culture & events organizations", "Content & services for Berliners"],
+      pickB: ["Multi-city portal networks", "City guides & local news sites", "Life-service aggregator platforms", "Budget-sensitive long-term holds"],
+    },
+  },
+  "paris-vs-london": {
+    slug: "paris-vs-london",
+    a: "paris",
+    b: "london",
+    zh: {
+      title: ".paris 和 .london 怎么选：两座欧洲之都的城市门牌",
+      metaDescription: ".paris 由巴黎市政府直接持有，注册约 $49/年续费同价；.london 是伦敦官方城市后缀，首年约 $14 续费约 $28/年。对比两者的身份、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同为官方城市后缀，选择只看生意在哪座城，价格结构才是真正的差异点。.paris 赢在城市持有的稀缺身份——巴黎本地商家与餐饮门店、时尚与奢侈品牌、旅游酒店与文化机构用 name.paris，注册局是巴黎市政府本身（Ville de Paris，2014 年开放），是少数由城市直接持有的后缀，时尚之都的身份为品牌加成；注册约 $49/年（约 ¥350）、续费同价——平续无促销陷阱，多年持有成本可预期。.london 赢在价格与市场体量——伦敦本地商家、金融与专业服务、创业公司与地产中介用 name.london，伦敦官方背书，欧洲最大的英语城市市场；首年常见约 $14（约 ¥105）、续费约 $28/年（约 ¥200）——首年低价适合试错，长期续费也只有 .paris 的六成左右。判断标准很简单：客群在巴黎——本地门店、法语市场、时尚旅游品牌 → .paris 与城市身份同词，官方持有的信任感拉满；客群在伦敦——英语市场、金融专业服务、伦敦本地生意 → .london 认知同样官方，价格还更友好。跨两城经营的品牌（旅游、酒店、活动）常见打法是两个都注册：各城获客页用各自后缀，主站用 .com 收口。三点注意：一是两者受众都限于本城及其客群，全国性品牌 .fr/.uk 触达更广；二是 .paris 政策上要求与巴黎有关联（申报制宽松执行），.london 无门槛；三是法语社群对语言表达敏感，.paris 站点的命名与内容宜贴合本地语感。命名上「行业 + .paris」（hotel.paris）与「行业 + .london」（lettings.london）都是本地生意的黄金句式。",
+      pickA: ["巴黎本地商家与餐饮门店", "时尚与奢侈品牌", "旅游酒店与文化机构", "面向法语客群的内容与活动站"],
+      pickB: ["伦敦本地商家与门店", "金融与专业服务", "伦敦创业公司与地产中介", "预算敏感的英语市场生意"],
+    },
+    en: {
+      title: ".paris vs .london: Two European Capitals' City Nameplates",
+      metaDescription:
+        ".paris is held by the City of Paris itself, about $49/yr flat; .london is London's official city suffix at about $14 first year then $28/yr. Compare identity, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both are official city suffixes, so the choice follows where the business lives — the real difference is the pricing structure. .paris wins on the rarity of city ownership — Paris's local businesses and restaurants, fashion and luxury brands, and hotels, tourism and cultural institutions on name.paris ride a registry that is the City of Paris itself (Ville de Paris, open since 2014), one of the few suffixes held directly by a city government, with the fashion-capital identity flattering a brand; about $49/yr (≈¥350) flat — no promo trap, predictable multi-year costs. .london wins on price and market size — London's local businesses, finance and professional services, startups and letting agents on name.london carry the city's official endorsement in Europe's biggest English-speaking urban market; about $14 first year (≈¥105) and $28/yr to renew (≈¥200) — a cheap first year for experiments, and long-term renewal around 60% of .paris's. The test is simple: the audience is Paris — local storefronts, French-speaking markets, fashion and tourism brands → .paris matches the city identity word for word with city-owned trust; the audience is London — English-speaking markets, finance and professional services, London local trade → .london is equally official and friendlier on price. Brands straddling both cities (travel, hotels, events) commonly register both: each city's acquisition page on its own suffix, the main site on .com. Three cautions: both audiences stop at the city limits, so nationwide brands reach wider on .fr or .uk; .paris asks for a Paris link on a loosely-enforced declaration basis while .london has no requirement; and the French-speaking community cares about language register, so .paris naming and content should read natural locally. Naming: trade + .paris (hotel.paris) and trade + .london (lettings.london) are both golden local-business shapes.",
+      pickA: ["Paris local businesses & restaurants", "Fashion & luxury brands", "Hotels, tourism & cultural institutions", "Content & events for French-speaking audiences"],
+      pickB: ["London local businesses & storefronts", "Finance & professional services", "London startups & letting agents", "Budget-sensitive English-market trade"],
+    },
+  },
+  "amsterdam-vs-berlin": {
+    slug: "amsterdam-vs-berlin",
+    a: "amsterdam",
+    b: "berlin",
+    zh: {
+      title: ".amsterdam 和 .berlin 怎么选：两座创意之都的城市后缀",
+      metaDescription: ".amsterdam 由阿姆斯特丹市政府发起、SIDN 运营，注册约 $39/年续费同价；.berlin 是柏林官方后缀，注册约 $42/年续费同价。对比两者的身份、长度与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同为官方城市后缀、价格几乎同档，选择只看生意在哪座城，差异藏在长度与注册门槛里。.amsterdam 赢在开放与基础设施——阿姆斯特丹本地商家与餐饮门店、创业公司与设计工作室、旅游酒店与文化场馆用 name.amsterdam，后缀由市政府发起（2014 年）、技术运营是荷兰国家注册局 SIDN（.nl 的运营方），对全球开放注册、无地址门槛；注册约 $39/年（约 ¥280）、续费同价。.berlin 赢在先发与库存——柏林本地商家、创业公司与科技团队、文化活动机构用 name.berlin，它是全球第一批城市后缀之一（dotBERLIN GmbH，柏林市政府背书），欧洲创业之都的身份自带辨识度；注册约 $42/年（约 ¥300）、续费同价——两者都平续无促销陷阱，成本差距可忽略。判断标准就是城市本身：客群在阿姆斯特丹——运河边的门店、设计创意团队、面向游客的服务 → .amsterdam；客群在柏林——本地生意、柏林科技圈、文化活动 → .berlin，且名义上的柏林关联要求多数注册商宽松执行。真正要权衡的是长度：.amsterdam 九个字符明显偏长，.berlin 六个字符也不短，两边都务必搭配短品牌词控制总长。面向两国全国市场时换 .nl/.de 触达更广。命名上「行业 + 城市后缀」是两边共同的黄金句式（tours.amsterdam、cafe.berlin），「街区 + 后缀」（jordaan.amsterdam、mitte.berlin）适合社区项目与本地内容站。",
+      pickA: ["阿姆斯特丹本地商家与门店", "创业公司与设计工作室", "旅游酒店与文化场馆", "无地址门槛的全球注册"],
+      pickB: ["柏林本地商家与餐饮门店", "柏林创业公司与科技团队", "文化艺术与活动机构", "更短的后缀长度（6 vs 9 字符）"],
+    },
+    en: {
+      title: ".amsterdam vs .berlin: Two Creative Capitals' City Suffixes",
+      metaDescription:
+        ".amsterdam was launched by the City of Amsterdam and run by SIDN, about $39/yr flat; .berlin is Berlin's official suffix at about $42/yr flat. Compare identity, length and fit, then hunt names available on both.",
+      verdict:
+        "Both are official city suffixes in the same price tier, so the choice follows the city — the differences hide in length and registration requirements. .amsterdam wins on openness and infrastructure — Amsterdam's local businesses and restaurants, startups and design studios, and hotels, tourism and cultural venues on name.amsterdam ride a suffix launched by the city government (2014) with technical operations by SIDN, the Dutch national registry behind .nl; registration is open worldwide with no address requirement; about $39/yr (≈¥280) flat. .berlin wins on first-mover identity and inventory — Berlin's local businesses, startups and tech teams, and culture and events organizations on name.berlin use one of the first city suffixes ever launched (dotBERLIN GmbH, city-endorsed), with the identity of Europe's startup capital built in; about $42/yr (≈¥300) flat — both price flat with no promo trap, so the cost gap is negligible. The test is the city itself: the audience is Amsterdam — canal-side storefronts, design and creative teams, visitor services → .amsterdam; the audience is Berlin — local trade, the Berlin tech scene, cultural events → .berlin, whose nominal Berlin-connection requirement most registrars enforce loosely. The real trade-off is length: .amsterdam runs nine characters, distinctly long, and .berlin's six isn't short either — pair both with short brand words. For nationwide reach switch to .nl or .de. Naming: trade + city suffix is the shared golden shape (tours.amsterdam, cafe.berlin); neighborhood + suffix (jordaan.amsterdam, mitte.berlin) suits community projects and local content.",
+      pickA: ["Amsterdam local businesses & storefronts", "Startups & design studios", "Hotels, tourism & cultural venues", "Worldwide registration with no address requirement"],
+      pickB: ["Berlin local businesses & restaurants", "Berlin startups & tech teams", "Culture & events organizations", "The shorter suffix (6 vs 9 characters)"],
+    },
+  },
+  "vegas-vs-casino": {
+    slug: "vegas-vs-casino",
+    a: "vegas",
+    b: "casino",
+    zh: {
+      title: ".vegas 和 .casino 怎么选：城市门牌与博彩品类的分工",
+      metaDescription: ".vegas 是拉斯维加斯的城市后缀，本地与旅游娱乐定位最准，注册约 $53/年续费同价；.casino 是博彩品类词，续费约 $129/年居全站前列。对比两者的语义、价格与合规要点，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同带娱乐气质，分工在地理与品类：一个说「维加斯这座城」，一个说「博彩这门生意」。.vegas 赢在城市与旅游流量——维加斯本地商家与餐饮门店、酒店娱乐与演出场馆、婚礼与活动策划、面向游客的攻略站用 name.vegas，「这就是维加斯」一词讲透，每年四千万游客的搜索心智是天然流量；注册局 Dot Vegas, Inc.（拉斯维加斯市政府支持，2014 年开放），注册约 $53/年（约 ¥380）、续费同价——平续可预期。.casino 赢在品类锐度——线上娱乐场、博彩平台与评测导航站用 name.casino，后缀即行业声明，全球任何市场都读得懂；但价格是硬门槛：首年约 $8（约 ¥56）促销入手，续费约 $129/年（约 ¥931）——续费居全站前列，只适合博彩主营的生意。判断标准：生意围绕维加斯这座城——本地门店、演出与婚礼服务、旅游攻略，哪怕不涉博彩 → .vegas 的城市身份更宽、续费只有 .casino 的四成；生意就是博彩本身——线上娱乐场、投注平台、评测站 → .casino 品类直白，高年费反而挡住投机注册。三点注意：一是博彩在多数司法区受严格牌照与广告法规约束（内华达州对 .vegas 上的博彩内容同样管辖），两个后缀都必须合规先行；二是 .vegas 也常被非博彩生意使用（婚礼、演出、餐饮），别因后缀联想放弃它；三是 .casino 首年促销与续费差近 16 倍，务必按续费价做长期预算。命名上「行业 + .vegas」（shows.vegas）与「品牌 + .casino」各是两边最自然的模式。",
+      pickA: ["维加斯本地商家与演出场馆", "婚礼与活动策划服务", "面向游客的攻略与内容站", "非博彩的维加斯品牌"],
+      pickB: ["线上娱乐场与博彩平台", "博彩评测与导航站", "面向全球市场的博彩品牌", "需要品类即后缀的直白定位"],
+    },
+    en: {
+      title: ".vegas vs .casino: The City Nameplate or The Gambling Category",
+      metaDescription:
+        ".vegas is Las Vegas's city suffix — sharpest for local and tourism brands at about $53/yr flat; .casino names the gambling category with renewals around $129/yr, among the steepest anywhere. Compare semantics, pricing and compliance, then hunt names available on both.",
+      verdict:
+        "Both glow with entertainment; the split is geography versus category: one names the city of Vegas, the other names the gambling business. .vegas wins on city and tourism traffic — local businesses and restaurants, hotels, entertainment and show venues, wedding and event services, and visitor guides on name.vegas say \"this is Vegas\" in one word, with forty million annual visitors' search habits as built-in demand; the registry is Dot Vegas, Inc. (backed by the City of Las Vegas, open since 2014), about $53/yr (≈¥380) flat — predictable holds. .casino wins on category sharpness — online casinos, betting platforms and review portals on name.casino make the suffix itself the industry statement, readable in any market; but price is the gate: about $8 first year (≈¥56) on promo, then about $129/yr to renew (≈¥931) — among the steepest renewals anywhere, viable only when gambling is the core business. The test: the business orbits the city — local storefronts, shows and weddings, visitor content, even with no gambling at all → .vegas reads wider and renews at about 40% of .casino's price; the business is gambling itself — online casinos, betting platforms, review sites → .casino states the category outright, and the high fee usefully filters out speculative registrations. Three cautions: gambling is tightly licensed and advertising-regulated in most jurisdictions (Nevada regulates gambling content on .vegas too), so compliance comes first under either suffix; .vegas is routinely used by non-gambling businesses (weddings, shows, dining) — don't drop it over the association; and .casino's promo-to-renewal gap runs nearly 16x, so budget strictly on the renewal. Naming: trade + .vegas (shows.vegas) and brand + .casino are each side's most natural shapes.",
+      pickA: ["Vegas local businesses & show venues", "Wedding & event services", "Visitor guides & content sites", "Non-gambling Vegas brands"],
+      pickB: ["Online casinos & betting platforms", "Casino review & directory portals", "Gambling brands for global markets", "Category-as-suffix positioning"],
+    },
+  },
+  "immobilien-vs-immo": {
+    slug: "immobilien-vs-immo",
+    a: "immobilien",
+    b: "immo",
+    zh: {
+      title: ".immobilien 和 .immo 怎么选：德语房产全称与缩写的取舍",
+      metaDescription: ".immobilien 是德语「房地产」全称后缀，与中介公司名一一对应，首年约 $8 续费约 $30/年；.immo 是更短的缩写，注册约 $28/年续费同价。对比两者的读感、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同说房地产，分工在全称与缩写：一个是德语行业词的完整拼写，一个是欧洲通行的四字母缩写。.immobilien 赢在与行业称谓同词——德语区房产中介与经纪人、开发商与楼盘项目站、物业管理与租赁平台用 name.immobilien，Immobilien 是德语「房地产」的标准用词，德语区中介以「Müller Immobilien」式命名是行业惯例，「姓氏 + .immobilien」与公司名一一对应，读起来就是一块中介门牌；注册局 Identity Digital（2014 年开放），首年约 $8（约 ¥60）、续费约 $30/年（约 ¥220）——首年低价适合试错，长期按续费价预算。.immo 赢在短与平续——同样的房产生意用 name.immo 只要四个字母，immo 在德语、法语、荷兰语区都是房产的通行缩写，覆盖面比纯德语的全称更宽；注册约 $28/年（约 ¥205）、续费同价——平续无陷阱，长期成本与 .immobilien 几乎打平。判断标准：品牌要与德语区中介的公司名严格对应——「姓氏 + Immobilien」是注册公司名 → .immobilien 全称最正式，域名即公司门牌；要短好记、或客群跨德法荷多语区 → .immo 四字母胜出，名片与广告位上都省空间。真正要权衡的是长度：.immobilien 十个字符是全站最长档，务必搭配短姓氏或短品牌词；.immo 则几乎没有长度负担。两点注意：一是两者受众都在欧洲房产语境，国际平台 .com 更合适；二是德国房产中介受 §34c 营业许可等法规约束，站点须列明资质。命名上「姓氏 + .immobilien」（mueller.immobilien）与「城市 + .immo」（muenchen.immo）各是两边最主流的模式。",
+      pickA: ["德语区房产中介与经纪人", "与「姓氏 Immobilien」公司名对应的门牌", "开发商与楼盘项目站", "物业管理与租赁平台"],
+      pickB: ["要短好记的房产域名", "跨德法荷多语区的房产生意", "区域房产站与获客页", "在意名片与广告位长度"],
+    },
+    en: {
+      title: ".immobilien vs .immo: The German Full Word or The Short Abbreviation",
+      metaDescription:
+        ".immobilien is the full German word for real estate, mapping one-to-one to brokerage firm names, about $8 first year then $30/yr; .immo is the four-letter abbreviation at about $28/yr flat. Compare readability, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both say real estate; the split is full word versus abbreviation: one spells out the German industry term, the other is the four-letter shorthand common across Europe. .immobilien wins on matching the industry's own name — German-market agents and brokerages, developers and property-project sites, and property management and rental platforms on name.immobilien use the standard German word for real estate; German-speaking agencies conventionally trade as \"Müller Immobilien\", so surname + .immobilien maps one-to-one to the firm name and reads like a brokerage nameplate; the registry is Identity Digital (open since 2014), about $8 first year (≈¥60) and $30/yr to renew (≈¥220) — cheap year one for experiments, budget on the renewal. .immo wins on brevity and flat pricing — the same property business on name.immo takes four letters, and immo is the going abbreviation across German, French and Dutch-speaking markets, reaching wider than the purely German full word; about $28/yr (≈¥205) flat — no trap, with long-term costs nearly identical to .immobilien's. The test: the brand must mirror a German brokerage's registered name — surname + Immobilien is the firm name → .immobilien reads most formal, the domain as the company nameplate; you want short and memorable, or clients span German, French and Dutch markets → four-letter .immo wins, saving space on business cards and ad slots. The real trade-off is length: at ten characters .immobilien sits in the longest tier anywhere, so pair it with a short surname or brand word; .immo carries almost no length burden. Two cautions: both live in the European property context — international platforms do better on .com; and German brokerages are bound by §34c licensing and related rules, so sites must display credentials. Naming: surname + .immobilien (mueller.immobilien) versus city + .immo (muenchen.immo) are each side's mainstream shapes.",
+      pickA: ["German-market agents & brokerages", "Nameplates matching a \"Surname Immobilien\" firm name", "Developers & property-project sites", "Property management & rental platforms"],
+      pickB: ["Short, memorable property domains", "Property businesses across German, French & Dutch markets", "Regional property sites & lead pages", "Length-sensitive cards & ad placements"],
+    },
+  },
+  "tienda-vs-shop": {
+    slug: "tienda-vs-shop",
+    a: "tienda",
+    b: "shop",
+    zh: {
+      title: ".tienda 和 .shop 怎么选：西语店铺词与全球店铺门面",
+      metaDescription: ".tienda 是西班牙语「商店」后缀，西语客群定位最准，注册约 $50/年续费同价；.shop 是全球认知最成熟的电商后缀，首年常有低价促销但续费明显更高。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在电商赛道，分工在市场半径：一个说西语世界的「店」，一个说全球的「店」。.tienda 赢在与西语搜索词同词——西语区网店与电商、拉美与西班牙本地零售门店、品牌的西语市场店铺入口、面向西语客群的促销落地页用 name.tienda，tienda 是西班牙语「商店」，全球五亿西语人口一眼读懂，用户搜商品就带这个词（tienda de ropa），「品类 + .tienda」读起来就是一块店铺招牌；注册局 Identity Digital（2014 年开放），注册约 $50/年（约 ¥360）、续费同价——平续无促销陷阱，店铺域名的多年持有成本可预期。.shop 赢在全球认知——独立站与 DTC 品牌商店、跨境与多语言电商、线下店铺的线上入口用 name.shop，「品牌 + .shop」本身就是一句行动号召，全球注册量在电商后缀里最大、任何语言的用户都读得懂；首年常有低价促销但续费明显更高——预算务必按续费价算。判断标准：客群说西语——拉美与西班牙市场、美国西语社区电商，西语搜索流量是主渠道 → .tienda 与用户搜索词逐字吻合，本地化信号比通用后缀强一档；客群在全球——跨境电商、多语言店铺、国际 DTC 品牌 → .shop 的全球认知更稳。常见组合打法：全球店用 .shop 立门面，西语市场入口用「品类/品牌 + .tienda」接西语搜索流量——与德语区的 .kaufen 打法同构。三点注意：一是 .tienda 受众限于西语客群，西语以外的用户读不懂，全球店别拿它当主域名；二是拉美各国与西班牙的电商受各自消费者保护法规约束，促销页须合规；三是两者续费结构相反——.tienda 平续、.shop 首年便宜续费高，多域名矩阵按三年总账算。命名上「品类 + .tienda」（ropa.tienda）与西语搜索词一一对应，「品牌 + .shop」（acme.shop）是全球店的标准门面。",
+      pickA: ["西语区网店与电商", "拉美与西班牙本地零售门店", "品牌的西语市场店铺入口", "面向西语客群的促销落地页"],
+      pickB: ["独立站与 DTC 品牌商店", "跨境与多语言电商", "线下店铺的线上入口", "要用户认知最成熟的电商后缀"],
+    },
+    en: {
+      title: ".tienda vs .shop: The Spanish Store Word or The Global Storefront",
+      metaDescription:
+        ".tienda is Spanish for shop — sharpest for Spanish-speaking customers at about $50/yr flat; .shop is the most recognized e-commerce suffix worldwide, cheap year one with notably higher renewals. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both live in the e-commerce lane; the split is market radius: one says shop to the Spanish-speaking world, the other says shop to everyone. .tienda wins on matching the Spanish search word — Spanish-market online stores, retail storefronts in Latin America and Spain, a brand's Spanish-market shop entrance, and promo landing pages for Spanish-speaking customers on name.tienda use the Spanish word for shop, instantly read by half a billion Spanish speakers and the exact word they search with (tienda de ropa), so category + .tienda reads like a storefront sign; the registry is Identity Digital (open since 2014), about $50/yr (≈¥360) flat — no promo trap, predictable multi-year costs for a store domain. .shop wins on global recognition — independent stores and DTC brand shops, cross-border and multilingual commerce, and offline stores' online entrances on name.shop make brand + .shop a call to action in itself, with the largest registration base among e-commerce suffixes and readability in any language; first-year promos are common while renewals run notably higher — budget strictly on the renewal. The test: the audience speaks Spanish — Latin American and Spanish markets, US Hispanic-community commerce where Spanish search traffic is the main channel → .tienda matches the customer's own search word letter for letter, a localization signal a generic suffix can't send; the audience is global — cross-border commerce, multilingual stores, international DTC brands → .shop's worldwide recognition is steadier. A common combo: the global store fronts on .shop while the Spanish-market entrance stands on category or brand + .tienda to catch Spanish search traffic — the same play as .kaufen in the German market. Three cautions: .tienda's audience is Spanish speakers — users outside it won't read it, so don't make it a global store's primary domain; e-commerce in Latin America and Spain is bound by each country's consumer-protection law, so promo pages must comply; and the renewal structures are opposites — .tienda prices flat while .shop is cheap in year one and dearer to renew, so price a multi-domain portfolio on three years of renewals. Naming: category + .tienda (ropa.tienda) maps one-to-one to the Spanish search phrase; brand + .shop (acme.shop) is the standard global storefront.",
+      pickA: ["Spanish-market online stores & e-commerce", "Retail storefronts in Latin America & Spain", "A brand's Spanish-market shop entrance", "Promo landing pages for Spanish-speaking customers"],
+      pickB: ["Independent stores & DTC brand shops", "Cross-border & multilingual commerce", "Offline stores' online entrances", "The most recognized e-commerce suffix"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
