@@ -446,6 +446,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   vegas: { first: 380, renew: 380 },
   immobilien: { first: 60, renew: 220 },
   tienda: { first: 360, renew: 360 },
+  de: { first: 58, renew: 58 },
+  eu: { first: 55, renew: 72 },
+  ca: { first: 95, renew: 95 },
+  au: { first: 85, renew: 85 },
+  jp: { first: 290, renew: 290 },
+  sg: { first: 280, renew: 280 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {

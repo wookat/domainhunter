@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 342,
+    "count": 348,
     "slugs": [
       "com",
       "net",
@@ -343,7 +343,13 @@
       "amsterdam",
       "vegas",
       "immobilien",
-      "tienda"
+      "tienda",
+      "de",
+      "eu",
+      "ca",
+      "au",
+      "jp",
+      "sg"
     ]
   },
   "guide": {

@@ -10284,6 +10284,186 @@ const GUIDES = {
       ],
     },
   },
+  de: {
+    tld: "de",
+    zh: {
+      title: ".de 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".de 是德国国家域名、全球注册量第一的 ccTLD，本地信任度极高，适合面向德国市场的品牌与业务。查看 .de 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .de 域名。",
+      intro:
+        ".de 是德国的国家域名，由合作社性质的注册局 DENIC 运营，注册量超过 1,700 万，是全球最大的 ccTLD——比 .uk、.cn 都多。对德国消费者而言 .de 是「本地生意」的默认信号：德国用户在地址栏习惯性输入 name.de，本地电商、制造业官网、服务商用 .de 几乎是标配，信任度远超一般新后缀；Google 也会把 .de 站点与德国地区相关联，德语市场 SEO 有天然加成。已收录的 .berlin 服务柏林同城、.immobilien/.kaufen 是德语行业词，而 .de 是整个德国市场的通用入口，覆盖面最广。资格上 DENIC 要求提供德国境内的行政联系地址（Admin-C/送达地址），海外注册人通常由注册商代理提供，主流注册商（如 INWX、united-domains、Porkbun）都支持，注册前确认即可。价格是它的另一大优势：注册约 $8/年（约 ¥58），续费同价——大型 ccTLD 里的良心价，无引流钩子。注意 .de 要求域名至少 1 个字符且解析配置合规（DENIC 有 zone 检查），个别注册商会先做 DNS 预检。命名上德国业务品牌词直接上（brand.de），本地服务可用「城市/行业 + .de」，德语复合词库存也远比 .com 充裕。",
+      bestFor: ["面向德国市场的电商", "德国制造与出口企业官网", "德国本地服务与商铺", "德语内容与媒体站"],
+      namingTips: [
+        "品牌词直接上：brand.de 是德国用户的默认预期",
+        "需德国境内行政联系地址，海外注册确认注册商代理支持",
+        "注册续费均约 $8/年，大型 ccTLD 里的良心价",
+        "德语复合词与「城市/行业 + .de」库存充裕",
+      ],
+    },
+    en: {
+      title: ".de Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".de is Germany's country domain and the world's largest ccTLD, with unmatched local trust for German-market brands and businesses. See live pricing and naming advice, then hunt available .de names with AI.",
+      intro:
+        ".de is Germany's country-code domain, run by the cooperative registry DENIC, with over 17 million registrations — the largest ccTLD on earth, ahead of .uk and .cn. To German consumers, .de is the default signal of a local business: users type name.de by habit, so German e-commerce, manufacturers and service providers treat it as near-mandatory, with trust far beyond any new gTLD; Google also geo-associates .de sites with Germany, a free boost for German-market SEO. Among already-listed suffixes, .berlin serves one city and .immobilien/.kaufen are German industry words — .de is the universal entrance to the whole German market. On eligibility, DENIC requires an administrative contact address in Germany (Admin-C / address for service); overseas registrants usually rely on their registrar to proxy this — mainstream registrars (INWX, united-domains, Porkbun) support it, so confirm before buying. Pricing is the other big advantage: about $8/yr to register (≈¥58) with the same renewal — honest pricing for a major ccTLD, no teaser games. Note DENIC runs zone checks on DNS configuration, and some registrars pre-validate nameservers. For naming, a straight brand word works (brand.de); local services can use city/trade + .de, and German compound words have far better inventory than .com.",
+      bestFor: ["German-market e-commerce", "German manufacturers & exporters", "Local German services & shops", "German-language content & media"],
+      namingTips: [
+        "Straight brand word: brand.de is what German users expect",
+        "German admin contact address required — confirm your registrar proxies it",
+        "About $8/yr flat to register and renew — honest major-ccTLD pricing",
+        "German compounds and city/trade + .de still have plenty of inventory",
+      ],
+    },
+  },
+  eu: {
+    tld: "eu",
+    zh: {
+      title: ".eu 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".eu 是欧盟官方域名，需欧盟/欧洲经济区居民或机构资格，适合泛欧业务与跨境电商。查看 .eu 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .eu 域名。",
+      intro:
+        ".eu 是欧盟的官方域名，由比利时注册局 EURid 运营，注册量约 370 万，欧盟机构自己也用它（europa.eu）。它的定位介于国别与通用之间：想覆盖整个欧洲市场而不绑定单一国家的业务——泛欧电商、SaaS 的欧洲站、跨境物流、欧盟合规服务——用 name.eu 一眼讲清「我们服务全欧洲」，比在 27 国逐个注册 ccTLD 省事得多。资格是硬性的：注册人须为欧盟/欧洲经济区（含挪威、冰岛、列支敦士登）的居民、公民或注册机构，英国脱欧后已不再符合；非欧盟主体需要在欧盟设立实体或使用当地代理，注册前务必确认。这也带来附加信号：.eu 站点默认受 GDPR 等欧盟法规约束，对欧洲用户是一层信任背书。价格温和：注册约 $8（约 ¥55），续费约 $10/年（约 ¥72）——差价很小，无钩子。库存比 .com 充裕，英文与各欧洲语言的品牌词命中率都不错。注意品牌若以单一国家市场为主（只做德国/法国），当地 ccTLD（.de/.fr）信任度更高，.eu 更适合真正的多国经营。命名上「品牌 + .eu」最主流，欧盟合规、跨境服务类可用「功能词 + .eu」（如 vat、customs 类词根）。",
+      bestFor: ["泛欧电商与跨境业务", "SaaS 的欧洲站点", "欧盟合规与专业服务", "欧洲多国经营的品牌"],
+      namingTips: [
+        "需欧盟/EEA 居民或机构资格，英国脱欧后不再符合",
+        "注册约 $8、续费约 $10/年，差价小无钩子",
+        "只做单一国家时当地 ccTLD 信任度更高",
+        "「品牌 + .eu」讲清泛欧定位，合规服务可用功能词",
+      ],
+    },
+    en: {
+      title: ".eu Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".eu is the European Union's official domain, requiring EU/EEA residency or establishment — for pan-European businesses and cross-border e-commerce. See live pricing and naming advice, then hunt available .eu names with AI.",
+      intro:
+        ".eu is the European Union's official domain, run by Belgium-based registry EURid with about 3.7 million registrations — the EU institutions themselves use it (europa.eu). Its position sits between country-code and generic: businesses covering the whole European market without binding to one country — pan-European e-commerce, a SaaS product's European presence, cross-border logistics, EU compliance services — say \"we serve all of Europe\" in one glance with name.eu, far simpler than registering 27 national ccTLDs. Eligibility is strict: registrants must be residents, citizens or registered organizations of the EU/EEA (including Norway, Iceland, Liechtenstein); the UK no longer qualifies post-Brexit, and non-EU entities need an EU establishment or local proxy — confirm before buying. That requirement doubles as a signal: an .eu site is presumed bound by GDPR and EU law, a layer of trust for European users. Pricing is gentle: about $8 to register (≈¥55) and $10/yr to renew (≈¥72) — a tiny step-up, no traps. Inventory beats .com, with good hit rates for brand words across European languages. One caution: if you mainly serve a single country (Germany only, France only), the national ccTLD carries more trust — .eu fits genuinely multi-country operations. Naming: brand + .eu is the mainstream shape; compliance and cross-border services can use function words (vat, customs-style roots).",
+      bestFor: ["Pan-European e-commerce & cross-border trade", "A SaaS product's European presence", "EU compliance & professional services", "Brands operating across multiple EU countries"],
+      namingTips: [
+        "EU/EEA residency or establishment required — UK no longer qualifies",
+        "About $8 to register, $10/yr to renew — tiny step-up, no traps",
+        "Single-country businesses get more trust from the national ccTLD",
+        "Brand + .eu states the pan-European position in one glance",
+      ],
+    },
+  },
+  ca: {
+    tld: "ca",
+    zh: {
+      title: ".ca 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ca 是加拿大国家域名，需满足加拿大存在要求（CPR），本地信任度极高，适合面向加拿大市场的品牌与业务。查看 .ca 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ca 域名。",
+      intro:
+        ".ca 是加拿大的国家域名，由非营利注册局 CIRA 运营，注册量超过 300 万。对加拿大消费者而言 .ca 是「本地生意」的强信号——调查里多数加拿大人表示更信任 .ca 网站并倾向从 .ca 电商下单，本地零售、服务、专业机构用它几乎是标配；Google 也会把 .ca 站点与加拿大地区相关联，本地 SEO 有天然加成。资格是硬性的：CIRA 的加拿大存在要求（Canadian Presence Requirements）规定注册人须为加拿大公民、永久居民、加拿大注册企业或在加持有商标的主体——海外个人无法直接注册，这道门槛反而保证了 .ca 的本地纯度，也让库存好于同级 ccTLD：常见英文词、行业词在 .ca 下命中率明显高于 .com。价格中等且平续：注册约 $13/年（约 ¥95），续费同价，无引流钩子。做加拿大市场的跨境电商若无当地实体，可先在加注册公司或商标满足资格，再拿下 .ca。命名上加拿大业务品牌词直接上（brand.ca），本地服务用「城市/行业 + .ca」（如 torontoplumber.ca 式组合）非常主流；双语市场注意名字在英法两语下都好读。",
+      bestFor: ["面向加拿大市场的电商", "加拿大本地服务与商铺", "加拿大专业机构与事务所", "在加品牌与连锁业务"],
+      namingTips: [
+        "需满足加拿大存在要求（公民/居民/注册企业/在加商标）",
+        "注册续费均约 $13/年，平续无钩子",
+        "「城市/行业 + .ca」是本地服务的主流命名",
+        "双语市场：名字要在英语和法语下都好读",
+      ],
+    },
+    en: {
+      title: ".ca Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ca is Canada's country domain, gated by Canadian Presence Requirements and carrying strong local trust — for brands and businesses targeting Canada. See live pricing and naming advice, then hunt available .ca names with AI.",
+      intro:
+        ".ca is Canada's country-code domain, run by non-profit registry CIRA with over 3 million registrations. To Canadian consumers, .ca is a strong local-business signal — surveys consistently show most Canadians trust .ca sites more and prefer buying from .ca stores — so local retail, services and professional firms treat it as near-mandatory; Google also geo-associates .ca sites with Canada, a free local-SEO boost. Eligibility is strict: CIRA's Canadian Presence Requirements limit registration to Canadian citizens, permanent residents, corporations registered in Canada, or holders of a Canadian trademark — overseas individuals can't register directly. That gate keeps .ca authentically local and keeps inventory healthy: common English words and trade terms hit far more often than on .com. Pricing is moderate and flat: about $13/yr to register (≈¥95) with the same renewal, no teaser games. Cross-border sellers targeting Canada without a local entity can incorporate or file a Canadian trademark first to qualify. For naming, a straight brand word works (brand.ca); city/trade + .ca combos (torontoplumber.ca-style) are the mainstream shape for local services — and in a bilingual market, make sure the name reads well in both English and French.",
+      bestFor: ["Canada-facing e-commerce", "Local Canadian services & shops", "Canadian professional firms", "Brands & franchises operating in Canada"],
+      namingTips: [
+        "Canadian Presence Requirements apply — citizen/resident/corporation/trademark",
+        "About $13/yr flat to register and renew — no traps",
+        "City/trade + .ca is the mainstream local-service shape",
+        "Bilingual market: the name should read well in English and French",
+      ],
+    },
+  },
+  au: {
+    tld: "au",
+    zh: {
+      title: ".au 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".au 是澳大利亚国家域名，2022 年开放二级直注，需澳大利亚存在资格，适合面向澳洲市场的品牌与业务。查看 .au 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .au 域名。",
+      intro:
+        ".au 是澳大利亚的国家域名，由 auDA 管理、注册量超过 400 万。长期以来澳洲企业只能注册 .com.au/.net.au，2022 年 3 月起开放二级直注——name.au 比 name.com.au 短一大截也更现代，是 ccTLD 里少有的「新开放的老牌信任后缀」：信任度是几十年攒下的，好名字的库存却是 2022 年才重新洗牌的，不少在 .com.au 下被占的词在 .au 直注下仍有机会。对澳洲消费者而言 .au 系后缀是「本地生意」的默认信号，本地电商、服务商、事务所用它几乎是标配；Google 也会把 .au 站点与澳大利亚地区相关联，本地 SEO 有天然加成。资格是硬性的：注册人须满足澳大利亚存在要求（Australian presence）——澳洲公民/居民、ABN 注册企业或在澳商标持有人；持有对应 .com.au 的主体在直注开放时有优先权，现在剩余名字先到先得。价格中等且平续：注册约 $12/年（约 ¥85），续费同价，无钩子。注意若对应 .com.au 在他人手里，评估品牌混淆风险，最好两个一起拿。命名上澳洲业务品牌词直接上（brand.au），本地服务用「城市/行业 + .au」很自然。",
+      bestFor: ["面向澳大利亚市场的电商", "澳洲本地服务与商铺", "澳洲专业机构与事务所", "在澳品牌与连锁业务"],
+      namingTips: [
+        "需澳大利亚存在资格（公民/居民/ABN 企业/在澳商标）",
+        "2022 年才开放直注，库存比老 ccTLD 新鲜得多",
+        "注册续费均约 $12/年，平续无钩子",
+        "对应 .com.au 被他人持有时评估混淆风险，最好一起拿",
+      ],
+    },
+    en: {
+      title: ".au Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".au is Australia's country domain — direct second-level registration opened in 2022, gated by Australian presence rules — for brands and businesses targeting Australia. See live pricing and naming advice, then hunt available .au names with AI.",
+      intro:
+        ".au is Australia's country-code domain, governed by auDA with over 4 million registrations. For decades Australians could only register .com.au/.net.au; since March 2022, direct second-level registration is open — name.au is dramatically shorter and more modern than name.com.au, making .au a rare thing among ccTLDs: a decades-old trust signal whose good-name inventory was reshuffled in 2022, so words long taken on .com.au often remain available at the second level. To Australian consumers, .au-family suffixes are the default local-business signal — near-mandatory for local e-commerce, services and firms; Google also geo-associates .au sites with Australia, a free local-SEO boost. Eligibility is strict: registrants must satisfy the Australian presence requirement — citizens/residents, ABN-registered businesses, or Australian trademark holders. Matching .com.au holders had priority during the launch window; remaining names are now first-come first-served. Pricing is moderate and flat: about $12/yr to register (≈¥85) with the same renewal, no traps. One caution: if someone else holds the matching .com.au, weigh the brand-confusion risk — ideally secure both. For naming, a straight brand word works (brand.au); city/trade + .au fits local services naturally.",
+      bestFor: ["Australia-facing e-commerce", "Local Australian services & shops", "Australian professional firms", "Brands & franchises operating in Australia"],
+      namingTips: [
+        "Australian presence required — citizen/resident/ABN business/trademark",
+        "Direct registration only opened in 2022 — fresher inventory than older ccTLDs",
+        "About $12/yr flat to register and renew — no traps",
+        "If .com.au is taken by someone else, weigh confusion risk; ideally get both",
+      ],
+    },
+  },
+  jp: {
+    tld: "jp",
+    zh: {
+      title: ".jp 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".jp 是日本国家域名，需日本境内地址（注册商可代理），本地信任度极高，适合面向日本市场的品牌与业务。查看 .jp 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .jp 域名。",
+      intro:
+        ".jp 是日本的国家域名，由 JPRS 运营，注册量约 170 万，是亚洲信任度最高的 ccTLD 之一。日本消费者对本土信号极为敏感：本地电商、品牌官网、服务商用 name.jp，「日本的生意」一眼讲清，信任度远超一般新后缀——乐天、任天堂等日本巨头的主站都在 .jp 系后缀上；Google 也会把 .jp 站点与日本地区相关联，日语市场 SEO 有天然加成。已收录的 .tokyo 服务东京同城，而 .jp 覆盖整个日本市场，是做日本生意的通用入口。资格上通用 .jp（汎用JP）要求注册人提供日本境内联系地址，海外主体通常由注册商代理提供（如 Gandi、GMO 系注册商都支持），注册前确认即可；更严格的 .co.jp 则须日本注册法人，门槛高一档。价格偏高但平续：注册约 $40/年（约 ¥290），续费同价——比欧美 ccTLD 贵一截，但对认真经营日本市场的品牌不构成障碍，还顺带过滤了投机注册，库存比同级后缀干净。命名上品牌词直接上（brand.jp）最主流；日语罗马字（romaji）词在 .jp 下天然好读，「品类罗马字 + .jp」对日本用户比英文词更亲切。",
+      bestFor: ["面向日本市场的电商", "日本本地服务与门店", "进入日本市场的海外品牌", "日语内容与媒体站"],
+      namingTips: [
+        "需日本境内联系地址，海外注册确认注册商代理支持",
+        "注册续费均约 $40/年，价格过滤投机、库存干净",
+        "日语罗马字词根对日本用户比英文更亲切",
+        ".co.jp 须日本法人，门槛更高但信任度也更高",
+      ],
+    },
+    en: {
+      title: ".jp Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".jp is Japan's country domain — a local contact address is required (registrars can proxy it) — with top-tier local trust for Japan-market brands and businesses. See live pricing and naming advice, then hunt available .jp names with AI.",
+      intro:
+        ".jp is Japan's country-code domain, run by JPRS with about 1.7 million registrations and among the most trusted ccTLDs in Asia. Japanese consumers are highly attuned to local signals: name.jp says \"a Japanese business\" at a glance, with trust far beyond any new gTLD — giants like Rakuten and Nintendo keep their main sites on .jp-family suffixes; Google also geo-associates .jp sites with Japan, a free boost for Japanese-market SEO. Among already-listed suffixes, .tokyo serves one city — .jp covers the entire Japanese market, the universal entrance for doing business in Japan. On eligibility, general-use .jp requires a contact address within Japan; overseas registrants usually rely on their registrar to proxy this (Gandi and GMO-family registrars support it), so confirm before buying. The stricter .co.jp requires a registered Japanese company — a higher bar with correspondingly higher trust. Pricing is on the high side but flat: about $40/yr to register (≈¥290) with the same renewal — pricier than Western ccTLDs, no obstacle for brands serious about Japan, and it filters out speculative registrations, keeping inventory cleaner than comparable suffixes. For naming, a straight brand word is the mainstream shape (brand.jp); Japanese romaji roots read naturally on .jp, and category romaji + .jp feels warmer to Japanese users than English words.",
+      bestFor: ["Japan-facing e-commerce", "Local Japanese services & storefronts", "Overseas brands entering Japan", "Japanese-language content & media"],
+      namingTips: [
+        "Japan contact address required — confirm your registrar proxies it",
+        "About $40/yr flat — the price filters speculation, keeping inventory clean",
+        "Japanese romaji roots feel warmer to local users than English words",
+        ".co.jp needs a registered Japanese company — higher bar, higher trust",
+      ],
+    },
+  },
+  sg: {
+    tld: "sg",
+    zh: {
+      title: ".sg 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".sg 是新加坡国家域名，需本地存在（注册商可代理），适合面向新加坡与东南亚市场的品牌、金融科技与跨境业务。查看 .sg 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .sg 域名。",
+      intro:
+        ".sg 是新加坡的国家域名，由 SGNIC（新加坡资讯通信媒体发展局旗下）运营。新加坡是东南亚的商业与金融枢纽，.sg 的信号价值也随之外溢：不止新加坡本地生意，面向东南亚的区域总部、金融科技、跨境电商用 name.sg，讲的是「以新加坡为基地的正规生意」——这个后缀在东南亚商圈自带合规与专业联想；对新加坡用户搜索，Google 也会把 .sg 站点与新加坡地区相关联，本地 SEO 有加成。资格上 SGNIC 要求注册人有新加坡本地存在：本地个人、注册企业，海外主体通常由注册商提供本地代理服务（如 Vodien、Exabytes 等新加坡注册商都支持），注册前确认即可。价格中等且平续：注册约 $39/年（约 ¥280），续费同价，无引流钩子——与 .jp 类似，价格门槛过滤了投机注册，好名字的库存比同热度后缀干净。两个字符的后缀让整体域名短而利落，英文词根在 .sg 下命中率远高于 .com。注意受众主要在新加坡与东南亚商圈，纯欧美市场的业务信号弱一些。命名上品牌词直接上（brand.sg）最主流，金融科技、跨境服务可用「功能词 + .sg」（如 pay、trade 类词根），本地服务用「行业 + .sg」。",
+      bestFor: ["新加坡本地企业与服务", "东南亚区域总部与跨境业务", "金融科技与专业服务", "进入东南亚市场的品牌"],
+      namingTips: [
+        "需新加坡本地存在，海外注册确认注册商代理支持",
+        "注册续费均约 $39/年，平续无钩子、库存干净",
+        "金融科技用「功能词 + .sg」自带合规联想",
+        "受众在新加坡与东南亚，纯欧美业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".sg Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".sg is Singapore's country domain — local presence required (registrars can proxy it) — for brands, fintech and cross-border businesses targeting Singapore and Southeast Asia. See live pricing and naming advice, then hunt available .sg names with AI.",
+      intro:
+        ".sg is Singapore's country-code domain, run by SGNIC under the Infocomm Media Development Authority. Singapore is Southeast Asia's business and financial hub, and the signal of .sg spills over accordingly: beyond local Singapore businesses, regional headquarters, fintech firms and cross-border commerce targeting Southeast Asia use name.sg to say \"a legitimate business based in Singapore\" — a suffix that carries compliance and professionalism connotations across the region's business circles; Google also geo-associates .sg sites with Singapore, a local-SEO boost. On eligibility, SGNIC requires local presence: Singapore individuals or registered entities, with overseas registrants usually relying on a registrar's local-proxy service (Singapore registrars like Vodien and Exabytes support it) — confirm before buying. Pricing is moderate and flat: about $39/yr to register (≈¥280) with the same renewal, no teaser games — like .jp, the price bar filters speculation, so good-name inventory stays cleaner than comparably popular suffixes. The two-character suffix keeps domains short and crisp, and English roots hit far more often than on .com. One caution: the audience is Singapore and Southeast Asian business circles — the signal is weaker for purely Western-market ventures. Naming: a straight brand word is the mainstream shape (brand.sg); fintech and cross-border services can use function words (pay, trade-style roots), and local services fit trade + .sg.",
+      bestFor: ["Local Singapore businesses & services", "Southeast Asia regional HQs & cross-border trade", "Fintech & professional services", "Brands entering Southeast Asia"],
+      namingTips: [
+        "Singapore local presence required — confirm your registrar proxies it",
+        "About $39/yr flat to register and renew — clean inventory, no traps",
+        "Function words + .sg carry compliance connotations for fintech",
+        "Audience is Singapore & Southeast Asia — weaker signal for purely Western markets",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
