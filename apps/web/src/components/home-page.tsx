@@ -1725,6 +1725,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个汽配与汽车用品品牌，寓意「装得放心，跑得带劲」；气质要有金属感与性能气质、像靠得住的零件、绝不山寨大牌拼写；场景是英文电商 listing、修理厂采购群和改装论坛的口碑里都立得住。",
     en: "An auto parts and accessories brand. The name should promise safe to install and strong on the road; the vibe is metallic with performance energy, reading like a dependable component, never a look-alike of big brands; it must hold up in English marketplace listings, repair-shop procurement chats, and modder-forum word of mouth.",
   },
+  {
+    slug: "robotics",
+    labelZh: "机器人公司",
+    labelEn: "Robotics company",
+    zh: "一个机器人与具身智能公司品牌，寓意「可靠的机器，不吓人的伙伴」；气质要工程可信又有人格温度、经得起从机械臂到通用机器人的叙事扩张、绝不带科幻反派的冷酷感；场景是英文论文引用、政府采购文件和融资 BP 封面上都立得住。",
+    en: "A robotics and embodied-AI company brand. The name should promise reliable machines that aren't scary companions; the vibe balances engineering credibility with human warmth, with headroom from robot arms to general-purpose machines, never sci-fi-villain cold; it must hold up in academic citations, procurement files, and on a pitch-deck cover.",
+  },
+  {
+    slug: "nocode",
+    labelZh: "无代码工具",
+    labelEn: "No-code tool",
+    zh: "一个无代码/低代码搭建工具品牌，寓意「不懂技术也能立刻做出来」；气质要轻盈顺滑有速度感、让运营和设计师产生「我也行」的直觉、绝不堆 code/dev 类技术黑话；场景是同事转述推荐、YouTube 教程标题和模板市场里都立得住。",
+    en: "A no-code / low-code builder brand. The name should promise you can build it right now without being technical; the vibe is light, frictionless and fast, giving marketers and designers the instinct of \"I could do this,\" never stacked with code/dev jargon; it must hold up in colleague referrals, YouTube tutorial titles, and template marketplaces.",
+  },
+  {
+    slug: "badminton",
+    labelZh: "羽毛球馆",
+    labelEn: "Badminton club",
+    zh: "一个羽毛球馆与羽球俱乐部品牌，寓意「快、准、有归属感的主场」；气质要有扣杀的速度感与飞行的轻盈、家长读出专业安全、球友读出热血归属、绝不像万金油体育中心；场景是地图搜索列表、微信约球接龙和马路对面的招牌上都立得住。",
+    en: "A badminton club and academy brand. The name should promise a fast, precise home court with belonging; the vibe carries the pace of a smash and the lightness of flight, reading professional and safe to parents and spirited to players, never a generic sports center; it must hold up in map-search lists, group-chat roll calls, and on the street sign.",
+  },
+  {
+    slug: "gokart",
+    labelZh: "卡丁车馆",
+    labelEn: "Go-kart venue",
+    zh: "一个卡丁车馆与卡丁车俱乐部品牌，寓意「两秒点燃的肾上腺素」；气质要有引擎轰鸣的速度感与正规赛道的专业气场、让家庭客觉得好玩不吓人、绝不与汽修改装店混淆；场景是短视频话题标签、团购页面和赛道圈速榜上都立得住。",
+    en: "A go-kart venue and karting club brand. The name should promise adrenaline ignited in two seconds; the vibe roars with engine speed and real-circuit legitimacy while staying fun-not-scary for families, never mistaken for a repair or tuning shop; it must hold up as a short-video hashtag, on group-buy pages, and atop the lap-time board.",
+  },
+  {
+    slug: "sauna",
+    labelZh: "汗蒸桑拿馆",
+    labelEn: "Sauna studio",
+    zh: "一个汗蒸桑拿与新式养生馆品牌，寓意「进去一个人，出来另一个人」；气质要有热浪与冷杉的体感、仪式感与私密感并存、绝不像旧式洗浴中心也不玄学；场景是预订平台列表、会员周常口播和点评推荐里都立得住。",
+    en: "A sauna and new-wave wellness house brand. The name should promise walking out a different person than walked in; the vibe carries heat waves and cedar with ritual and privacy, never an old-school bath center and never mystical; it must hold up in booking-platform lists, weekly member mentions, and review recommendations.",
+  },
+  {
+    slug: "pizza",
+    labelZh: "披萨店",
+    labelEn: "Pizza shop",
+    zh: "一个披萨店与披萨品牌，寓意「窑火现烤的碳水快乐」；气质要有明火与饼皮的画面感、带一点意式正宗又保证好念好拼、绝不与万千 Pizza House 撞名；场景是电话点单口播、外卖 App 搜索和保温袋印刷上都立得住。",
+    en: "A pizza shop and pizza brand. The name should promise oven-fired carb happiness; the vibe carries open flame and fresh crust with a touch of Italian authenticity while staying easy to say and spell, never colliding with ten thousand Pizza Houses; it must hold up in phone orders, delivery-app search, and printed on the thermal bag.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
