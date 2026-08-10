@@ -380,6 +380,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   party: { first: 33, renew: 41 },
   fishing: { first: 189, renew: 189 },
   horse: { first: 189, renew: 189 },
+  singles: { first: 52, renew: 196 },
+  dating: { first: 93, renew: 374 },
+  luxury: { first: 189, renew: 189 },
+  organic: { first: 78, renew: 493 },
+  tattoo: { first: 15, renew: 226 },
+  casa: { first: 11, renew: 78 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
