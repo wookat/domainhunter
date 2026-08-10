@@ -458,6 +458,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   nl: { first: 65, renew: 72 },
   kr: { first: 290, renew: 290 },
   hk: { first: 180, renew: 180 },
+  ch: { first: 85, renew: 85 },
+  at: { first: 100, renew: 100 },
+  be: { first: 65, renew: 72 },
+  se: { first: 110, renew: 110 },
+  pl: { first: 45, renew: 180 },
+  tw: { first: 200, renew: 200 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {

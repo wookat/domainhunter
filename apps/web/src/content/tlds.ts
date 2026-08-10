@@ -10644,6 +10644,186 @@ const GUIDES = {
       ],
     },
   },
+  ch: {
+    tld: "ch",
+    zh: {
+      title: ".ch 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ch 是瑞士国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向瑞士市场的品牌、金融与精品业务。查看 .ch 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ch 域名。",
+      intro:
+        ".ch 是瑞士的国家域名（来自瑞士的拉丁语国名 Confoederatio Helvetica），由学术网络机构 SWITCH 运营，注册量约 250 万——对一个 900 万人口的国家而言渗透率惊人。瑞士消费者对本土信号极其敏感：本地电商、品牌官网、诊所与服务商用 name.ch，「瑞士的生意」一眼讲清，信任度远超一般新后缀——瑞士本土企业、银行与政府机构的主站几乎都在 .ch 上；Google 也会把 .ch 站点与瑞士地区相关联，德语/法语/意大利语三语市场的本地 SEO 都有加成。「瑞士制造」的全球溢价还让 .ch 带上一层品质联想——做钟表、精密制造、金融、医药类业务，.ch 比通用后缀更能讲清出身。资格上 .ch 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理，是欧洲 ccTLD 里门槛最低的之一。价格温和且平续：注册约 $12/年（约 ¥85），续费同价，无引流钩子。库存比 .com 充裕，德语、法语与英文词根命中率都高。命名上品牌词直接上（brand.ch）最主流；金融、精品类可用「功能词 + .ch」借瑞士品质联想，本地服务用「行业词 + 城市/地区」组合。注意受众主要在瑞士本土，纯外部市场业务信号较弱。",
+      bestFor: ["瑞士本地企业与服务", "金融、钟表与精品品牌", "面向瑞士市场的电商", "德/法/意语内容站"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $12/年，平续无钩子",
+        "金融精品类用「功能词 + .ch」借瑞士品质联想",
+        "受众在瑞士本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".ch Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ch is Switzerland's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Swiss-market brands, finance and premium businesses. See live pricing and naming advice, then hunt available .ch names with AI.",
+      intro:
+        ".ch is Switzerland's country-code domain (from the Latin Confoederatio Helvetica), run by academic-network operator SWITCH with about 2.5 million registrations — remarkable penetration for a country of 9 million. Swiss consumers are strongly attuned to local signals: name.ch says \"a Swiss business\" at a glance, with trust far beyond any new gTLD — Swiss companies, banks and government institutions overwhelmingly live on .ch; Google also geo-associates .ch sites with Switzerland, a local-SEO boost across the German, French and Italian language markets. The global premium of \"Swiss made\" adds a quality halo: for watchmaking, precision manufacturing, finance and pharma ventures, .ch communicates origin better than any generic suffix. On eligibility, .ch is fully open: individuals and organizations from anywhere can register directly with no local address or proxy — one of the lowest bars among European ccTLDs. Pricing is gentle and flat: about $12/yr to register (≈¥85) with the same renewal, no teaser games. Inventory beats .com, and German, French and English roots all hit well. For naming, a straight brand word is the mainstream shape (brand.ch); finance and premium ventures can use function words to borrow the Swiss quality halo, and local services fit trade-word + city/region combos. One caution: the audience is primarily Switzerland — the signal is weaker for purely external markets.",
+      bestFor: ["Local Swiss businesses & services", "Finance, watchmaking & premium brands", "Switzerland-facing e-commerce", "German/French/Italian content sites"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $12/yr flat to register and renew — no traps",
+        "Function words + .ch borrow the Swiss quality halo for finance & premium brands",
+        "Audience is primarily Switzerland — weaker signal for purely external markets",
+      ],
+    },
+  },
+  at: {
+    tld: "at",
+    zh: {
+      title: ".at 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".at 是奥地利国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向奥地利市场的品牌与业务，还能拼出「at」介词短语域名。查看 .at 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .at 域名。",
+      intro:
+        ".at 是奥地利的国家域名，由 nic.at 运营，注册量约 150 万。奥地利消费者对本土信号非常敏感：本地电商、品牌官网、餐饮与服务商用 name.at，「奥地利的生意」一眼讲清，信任度远超一般新后缀——奥地利本土企业与政府机构的主站几乎都在 .at 上；Google 也会把 .at 站点与奥地利地区相关联，德语市场 SEO 有天然加成（奥地利与德国、瑞士共享德语圈，.at 站点对整个 DACH 区域都有辐射）。.at 还有一层通用后缀玩不出的花样：at 本身是英文介词，能拼出 meet.at、stay.at、look.at 这类动词短语域名（domain hack），创意品牌与活动页用起来自然又好记。资格上 .at 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格温和且平续：注册约 $14/年（约 ¥100），续费同价，无引流钩子。库存比 .com 充裕得多，德语与英文词根命中率都高。命名上品牌词直接上（brand.at）最主流；创意项目可用「动词 + .at」拼短语，本地服务用「行业词 + .at」。注意受众主要在奥地利与德语区，纯英语市场业务信号较弱（域名黑客除外）。",
+      bestFor: ["奥地利本地企业与服务", "面向 DACH 德语区的业务", "动词短语域名（meet.at 等）", "德语内容与媒体站"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $14/年，平续无钩子",
+        "at 是英文介词，可拼 meet.at/stay.at 类短语域名",
+        "受众在奥地利与德语区，纯英语业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".at Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".at is Austria's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Austria-market brands, plus preposition domain hacks like meet.at. See live pricing and naming advice, then hunt available .at names with AI.",
+      intro:
+        ".at is Austria's country-code domain, run by nic.at with about 1.5 million registrations. Austrian consumers have a strong local preference: name.at says \"an Austrian business\" at a glance, with trust far beyond any new gTLD — Austrian companies and government institutions overwhelmingly live on .at; Google also geo-associates .at sites with Austria, a natural boost for German-language SEO (Austria shares the German-speaking world with Germany and Switzerland, so .at sites radiate across the whole DACH region). .at also offers a trick no generic suffix can match: \"at\" is an English preposition, enabling verb-phrase domain hacks like meet.at, stay.at and look.at — natural and memorable for creative brands and event pages. On eligibility, .at is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is gentle and flat: about $14/yr to register (≈¥100) with the same renewal, no teaser games. Inventory beats .com by a wide margin, and both German and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.at); creative projects can build verb + .at phrases, and local services fit trade-word + .at. One caution: the audience is Austria and the German-speaking region — the signal is weaker for purely English markets (domain hacks aside).",
+      bestFor: ["Local Austrian businesses & services", "DACH German-speaking market ventures", "Verb-phrase domain hacks (meet.at etc.)", "German-language content & media"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $14/yr flat to register and renew — no traps",
+        "\"at\" is an English preposition — build hacks like meet.at or stay.at",
+        "Audience is Austria & the DACH region — weaker signal for purely English markets",
+      ],
+    },
+  },
+  be: {
+    tld: "be",
+    zh: {
+      title: ".be 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".be 是比利时国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向比利时市场的品牌与业务，还能拼出「be」动词短语域名。查看 .be 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .be 域名。",
+      intro:
+        ".be 是比利时的国家域名，由非营利注册局 DNS Belgium 运营，注册量约 170 万。比利时地处欧盟核心——布鲁塞尔是欧盟与北约总部所在地，本地消费者对本土信号同样敏感：本地电商、品牌官网与服务商用 name.be，「比利时的生意」一眼讲清，信任度远超一般新后缀；Google 也会把 .be 站点与比利时地区相关联，荷语/法语双语市场的本地 SEO 都有加成。.be 还有一层广为人知的玩法：be 是英文动词「是/成为」，能拼出 will.be、to.be、just.be 这类短语域名（YouTube 的短链 youtu.be 就是最著名的例子），个人品牌与创意项目用起来出彩。资格上 .be 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格温和且接近平续：注册约 $9（约 ¥65），续费约 $10/年（约 ¥72），无引流钩子。库存比 .com 充裕得多，荷兰语、法语与英文词根命中率都高。命名上品牌词直接上（brand.be）最主流；创意项目可用「短语 + .be」拼域名黑客，本地服务用「行业词 + .be」。注意受众主要在比利时本土，纯外部市场业务信号较弱（域名黑客除外）。",
+      bestFor: ["比利时本地企业与服务", "面向欧盟机构圈的业务", "动词短语域名（youtu.be 式）", "荷语/法语内容站"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册约 $9、续费约 $10/年，小幅上浮无坑",
+        "be 是英文动词，可拼 will.be/just.be 类短语域名",
+        "受众在比利时本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".be Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".be is Belgium's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Belgium-market brands, plus verb domain hacks like youtu.be. See live pricing and naming advice, then hunt available .be names with AI.",
+      intro:
+        ".be is Belgium's country-code domain, run by non-profit registry DNS Belgium with about 1.7 million registrations. Belgium sits at the heart of the EU — Brussels hosts the EU institutions and NATO headquarters — and local consumers are equally attuned to local signals: name.be says \"a Belgian business\" at a glance, with trust far beyond any new gTLD; Google also geo-associates .be sites with Belgium, a local-SEO boost across both the Dutch- and French-speaking markets. .be also carries a famous trick: \"be\" is the English verb, enabling phrase hacks like will.be, to.be and just.be — YouTube's short link youtu.be is the most celebrated example — which shine for personal brands and creative projects. On eligibility, .be is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is gentle with a tiny step-up: about $9 to register (≈¥65) and $10/yr to renew (≈¥72), no teaser games. Inventory beats .com by a wide margin, and Dutch, French and English roots all hit well. For naming, a straight brand word is the mainstream shape (brand.be); creative projects can build phrase + .be hacks, and local services fit trade-word + .be. One caution: the audience is primarily Belgium — the signal is weaker for purely external markets (domain hacks aside).",
+      bestFor: ["Local Belgian businesses & services", "Ventures around the EU institutional circle", "Verb domain hacks (youtu.be style)", "Dutch/French content sites"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $9 to register, $10/yr to renew — tiny step-up, no traps",
+        "\"be\" is the English verb — build hacks like will.be or just.be",
+        "Audience is primarily Belgium — weaker signal for purely external markets",
+      ],
+    },
+  },
+  se: {
+    tld: "se",
+    zh: {
+      title: ".se 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".se 是瑞典国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向瑞典与北欧市场的品牌、科技与设计业务。查看 .se 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .se 域名。",
+      intro:
+        ".se 是瑞典的国家域名，由非营利机构瑞典互联网基金会（Internetstiftelsen）运营，注册量约 150 万，是全球最早部署 DNSSEC 的注册局之一，技术治理水平业内标杆。瑞典消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.se，「瑞典的生意」一眼讲清，信任度远超一般新后缀——瑞典本土企业与政府机构的主站几乎都在 .se 上；Google 也会把 .se 站点与瑞典地区相关联，瑞典语市场 SEO 有天然加成。瑞典还是欧洲的创新与设计重镇——Spotify、Klarna、IKEA 都发家于此，.se 对科技创业与北欧设计类品牌自带「斯德哥尔摩创新圈」联想。资格上 .se 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格中等且平续：注册约 $15/年（约 ¥110），续费同价，无引流钩子。库存比 .com 充裕，瑞典语与英文词根命中率都高——瑞典人英语水平全球顶尖，英文词根完全无障碍。命名上品牌词直接上（brand.se）最主流；科技与设计类可用「功能词 + .se」借北欧创新联想，本地服务用「行业词 + .se」。注意受众主要在瑞典与北欧，纯外部市场业务信号较弱。",
+      bestFor: ["瑞典本地企业与服务", "北欧科技创业与 SaaS", "北欧设计与生活方式品牌", "瑞典语内容与媒体站"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $15/年，平续无钩子",
+        "瑞典人英语顶尖，英文词根在 .se 下完全无障碍",
+        "受众在瑞典与北欧，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".se Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".se is Sweden's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Sweden and Nordic-market brands, tech and design businesses. See live pricing and naming advice, then hunt available .se names with AI.",
+      intro:
+        ".se is Sweden's country-code domain, run by the non-profit Swedish Internet Foundation (Internetstiftelsen) with about 1.5 million registrations — one of the first registries in the world to deploy DNSSEC, a benchmark for technical governance. Swedish consumers have a strong local preference: name.se says \"a Swedish business\" at a glance, with trust far beyond any new gTLD — Swedish companies and government institutions overwhelmingly live on .se; Google also geo-associates .se sites with Sweden, a natural boost for Swedish-market SEO. Sweden is also Europe's innovation and design powerhouse — Spotify, Klarna and IKEA all started here — so .se carries a \"Stockholm innovation circle\" halo for tech startups and Nordic design brands. On eligibility, .se is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is moderate and flat: about $15/yr to register (≈¥110) with the same renewal, no teaser games. Inventory beats .com, and both Swedish and English roots hit well — Swedish English proficiency is among the world's best, so English roots work perfectly. For naming, a straight brand word is the mainstream shape (brand.se); tech and design ventures can use function words to borrow the Nordic innovation halo, and local services fit trade-word + .se. One caution: the audience is Sweden and the Nordics — the signal is weaker for purely external markets.",
+      bestFor: ["Local Swedish businesses & services", "Nordic tech startups & SaaS", "Nordic design & lifestyle brands", "Swedish-language content & media"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $15/yr flat to register and renew — no traps",
+        "Swedish English proficiency is top-tier — English roots work perfectly on .se",
+        "Audience is Sweden & the Nordics — weaker signal for purely external markets",
+      ],
+    },
+  },
+  pl: {
+    tld: "pl",
+    zh: {
+      title: ".pl 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".pl 是波兰国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向波兰与中东欧市场的品牌与业务。注意首年便宜续费上浮。查看 .pl 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .pl 域名。",
+      intro:
+        ".pl 是波兰的国家域名，由国家研究院 NASK 运营，注册量约 250 万，是中东欧最大的 ccTLD。波兰是欧盟人口第五大国、中东欧最大经济体，电商增速常年领跑欧洲，本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.pl，「波兰的生意」一眼讲清，信任度远超一般新后缀——波兰电商巨头 Allegro 与政府机构的主站都在 .pl 上；Google 也会把 .pl 站点与波兰地区相关联，波兰语市场 SEO 有天然加成。波兰还是欧洲重要的软件外包与 IT 人才基地，科技公司用 .pl 讲「波兰工程力量」也很自然。资格上 .pl 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格要留意：首年常见促销约 $6（约 ¥45），续费约 $25/年（约 ¥180）——注册前把续费价算进预算，别被首年低价钩住。库存比 .com 充裕得多，波兰语与英文词根命中率都高。命名上品牌词直接上（brand.pl）最主流；本地服务用「行业词 + .pl」，跨境电商可用「品类词 + .pl」讲清市场定位。注意受众主要在波兰本土，纯外部市场业务信号较弱。",
+      bestFor: ["波兰本地企业与服务", "面向波兰的跨境电商", "中东欧软件与 IT 服务", "波兰语内容与媒体站"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "首年约 $6 但续费约 $25/年，预算按续费价算",
+        "科技公司用 .pl 讲「波兰工程力量」很自然",
+        "受众在波兰本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".pl Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".pl is Poland's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Poland and CEE-market brands. Watch the renewal step-up after a cheap first year. See live pricing and naming advice, then hunt available .pl names with AI.",
+      intro:
+        ".pl is Poland's country-code domain, run by national research institute NASK with about 2.5 million registrations — the largest ccTLD in Central and Eastern Europe. Poland is the EU's fifth most populous country and the CEE region's biggest economy, with e-commerce growth consistently leading Europe, and local consumers are strongly attuned to local signals: name.pl says \"a Polish business\" at a glance, with trust far beyond any new gTLD — e-commerce giant Allegro and government institutions live on .pl; Google also geo-associates .pl sites with Poland, a natural boost for Polish-market SEO. Poland is also a major European software outsourcing and IT talent hub, so tech companies naturally use .pl to signal \"Polish engineering strength\". On eligibility, .pl is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing needs attention: first-year promos run about $6 (≈¥45) but renewals are about $25/yr (≈¥180) — budget on the renewal price and don't get hooked by the teaser. Inventory beats .com by a wide margin, and both Polish and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.pl); local services fit trade-word + .pl, and cross-border e-commerce can use category + .pl to claim the market. One caution: the audience is primarily Poland — the signal is weaker for purely external markets.",
+      bestFor: ["Local Polish businesses & services", "Poland-facing cross-border e-commerce", "CEE software & IT services", "Polish-language content & media"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $6 in year one but ~$25/yr renewal — budget on the renewal price",
+        "Tech companies use .pl to signal Polish engineering strength",
+        "Audience is primarily Poland — weaker signal for purely external markets",
+      ],
+    },
+  },
+  tw: {
+    tld: "tw",
+    zh: {
+      title: ".tw 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".tw 是台湾地区域名，无资格限制、任何人可注册，本地信任度高，适合面向台湾市场的品牌、电商与科技业务。查看 .tw 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tw 域名。",
+      intro:
+        ".tw 是台湾的地区域名，由财团法人台湾网路资讯中心（TWNIC）管理。台湾是全球半导体与电子制造重镇，也是繁体中文互联网的核心市场之一：本地电商、品牌官网与服务商用 name.tw，「台湾的生意」一眼讲清，信任度远超一般新后缀——台湾本土企业与机构的主站大多在 .tw（或更严格的 .com.tw）上；Google 也会把 .tw 站点与台湾地区相关联，繁中市场 SEO 有天然加成。台湾的科技制造声誉还让 .tw 对硬件、电子与半导体供应链业务带上一层「台湾制造」联想。资格上顶级 .tw 完全开放：任何地区的个人与机构都能直接注册，无需本地地址或代理（二级的 .com.tw 需台湾登记企业，门槛与信任度各高一档）。价格中等偏上且平续：注册约 $28/年（约 ¥200），续费同价，无引流钩子——价格门槛过滤投机注册，库存比同热度后缀干净。命名上品牌词直接上（brand.tw）最主流；繁中市场可用拼音或台语罗马字词根更亲切，硬件与供应链业务可用「品类词 + .tw」讲清出身。注意受众主要在台湾与繁中圈，纯欧美市场业务信号较弱。",
+      bestFor: ["台湾本地企业与服务", "面向台湾的电商与品牌", "硬件、电子与半导体供应链", "繁体中文内容与媒体站"],
+      namingTips: [
+        "顶级 .tw 无资格限制，任何人可直接注册（.com.tw 需台湾企业）",
+        "注册续费均约 $28/年，平续无钩子、库存干净",
+        "硬件供应链用「品类词 + .tw」自带台湾制造联想",
+        "受众在台湾与繁中圈，纯欧美业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".tw Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".tw is Taiwan's regional domain — no eligibility restrictions, anyone can register — with strong local trust for Taiwan-market brands, e-commerce and tech businesses. See live pricing and naming advice, then hunt available .tw names with AI.",
+      intro:
+        ".tw is Taiwan's regional domain, managed by the Taiwan Network Information Center (TWNIC). Taiwan is the world's semiconductor and electronics manufacturing powerhouse and one of the core markets of the Traditional Chinese internet: name.tw says \"a Taiwanese business\" at a glance, with trust far beyond any new gTLD — Taiwanese companies and institutions overwhelmingly live on .tw (or the stricter .com.tw); Google also geo-associates .tw sites with Taiwan, a natural boost for Traditional Chinese SEO. Taiwan's tech manufacturing reputation adds a \"made in Taiwan\" halo for hardware, electronics and semiconductor supply-chain ventures. On eligibility, top-level .tw is fully open: individuals and organizations from anywhere can register directly with no local address or proxy (second-level .com.tw requires a Taiwan-registered company — a higher bar with correspondingly higher trust). Pricing is upper-moderate and flat: about $28/yr to register (≈¥200) with the same renewal, no teaser games — the price bar filters speculation, keeping inventory cleaner than comparably popular suffixes. For naming, a straight brand word is the mainstream shape (brand.tw); pinyin or Taiwanese romanization roots feel warmer in the Traditional Chinese market, and hardware or supply-chain ventures can use category + .tw to claim Taiwanese origin. One caution: the audience is Taiwan and the Traditional Chinese sphere — the signal is weaker for purely Western markets.",
+      bestFor: ["Local Taiwanese businesses & services", "Taiwan-facing e-commerce & brands", "Hardware, electronics & semiconductor supply chain", "Traditional Chinese content & media"],
+      namingTips: [
+        "Top-level .tw has no restrictions — anyone can register (.com.tw needs a Taiwan company)",
+        "About $28/yr flat — the price filters speculation, keeping inventory clean",
+        "Category + .tw carries the made-in-Taiwan halo for hardware supply chains",
+        "Audience is Taiwan & the Traditional Chinese sphere — weaker signal for purely Western markets",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
