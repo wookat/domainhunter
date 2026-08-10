@@ -7417,6 +7417,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Trade associations & standards bodies", "Open-source & knowledge project main sites", "Awareness & renewal-cost priorities", "General nonprofit organization sites"],
     },
   },
+  "wang-vs-cn": {
+    slug: "wang-vs-cn",
+    a: "wang",
+    b: "cn",
+    zh: {
+      title: ".wang 和 .cn 怎么选：说中文的通用后缀与国家域名的正统",
+      metaDescription: ".wang 是拼音「网/王」的中文市场通用后缀，口头传播零成本；.cn 是中国国家域名，国内业务合规最名正言顺。对比两者的定位、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同样面向中文用户，分工在身份：一个是语感，一个是国籍。.wang 赢在中文语感——面向中文用户的工具站与内容站、下沉市场推广落地页、站群与活动页矩阵、姓氏为王的个人品牌站用 name.wang，wang 是「网」与「王」的拼音，中文用户听到域名就能拼出来，口头传播零成本；注册局为黄道科技（Zodiac Wang Limited），已通过工信部备案资质可境内合规建站，首年约 $4（约 ¥30）、续费约 $6/年（约 ¥44）——注册续费都便宜，库存也远好于主流后缀。.cn 赢在正统身份——面向中国用户的产品主站、需要 ICP 备案接入国内主机的网站、政企合作项目用 .cn 天然合规顺畅，备案流程对国家域名完全友好，而部分新顶级域在备案时会遇到限制；价格是主流后缀里最亲民的一档，首年常有活动价、续费也便宜，且大量双拼与行业词在 .com 下早已无货、在 .cn 下仍可注册。判断标准：项目是正式品牌主站、要长期经营并对接政企与备案链路 → .cn 的国家域名身份最名正言顺，双拼配 .cn 是国内用户最熟悉的品牌形态；项目是活动页、站群矩阵或强口头传播的工具站 → .wang 一听就拼得出来，批量持有成本更低。两者常见组合打法：主站用 .cn，推广落地页与站群用 .wang 批量铺开。三点注意：一是两者境内解析建站都需实名认证与 ICP 备案，合规成本相同；二是出海项目两个都慎用——.cn 海外认知有限，.wang 在英文语境无含义甚至有俚语歧义；三是 .cn 的转售与品牌保护体系更成熟，重要品牌词建议 .cn 优先注册。命名上「双拼 + .cn」（国内品牌标准款）与「拼音/行业词 + .wang」（zhuangxiu.wang）各是两边最点题的模式。",
+      pickA: ["推广落地页与站群矩阵", "强口头传播的工具站与内容站", "下沉市场活动页批量持有", "姓氏为王的个人品牌站"],
+      pickB: ["面向中国用户的品牌主站", "需要 ICP 备案的正式网站", "政企合作与长期经营项目", "双拼品牌词的标准归宿"],
+    },
+    en: {
+      title: ".wang vs .cn: The Chinese-Speaking Generic or The Country Code",
+      metaDescription:
+        ".wang is the pinyin generic that spells itself to Chinese users; .cn is China's country-code domain and the most official choice for domestic business. Compare positioning, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both face the Chinese market; the split is identity: one is the accent, the other is the passport. .wang wins on Chinese resonance — tool and content sites for Chinese users, mass-market campaign landing pages, site networks and activity-page portfolios, and personal brands carrying the surname Wang on name.wang use the pinyin for both 网 (web) and 王 (king), so Chinese users can spell the domain the moment they hear it; the registry is Zodiac Wang Limited with MIIT accreditation for compliant mainland hosting, at about $4 first year (≈¥30) and $6/yr to renew (≈¥44) — cheap both ways, with far better inventory than mainstream suffixes. .cn wins on official standing — product main sites for Chinese users, sites needing ICP filing with domestic hosting, and government or enterprise projects run smoothest on the country code, whose filing pipeline is fully supported while some new gTLDs hit restrictions; pricing sits in the friendliest tier among mainstream suffixes, with frequent first-year promos and cheap renewals, and plenty of double-pinyin and industry words long gone on .com are still open on .cn. The test: the project is a formal brand main site with long-term operations and government or filing pipelines → .cn's country-code standing is the most official, and double-pinyin + .cn is the brand shape Chinese users know best; the project is campaign pages, site networks or word-of-mouth tool sites → .wang spells itself on first hearing and costs less to hold in bulk. A common combo: .cn for the main site, .wang spread across campaign pages and networks. Three cautions: both require real-name verification and ICP filing for mainland hosting, so compliance costs match; export-facing projects should hesitate on both — .cn has limited overseas recognition and wang means nothing in English with slang ambiguity besides; and .cn's resale and brand-protection ecosystem is more mature, so register key brand words on .cn first. Naming: double pinyin + .cn (the domestic-brand standard) versus pinyin or industry word + .wang (zhuangxiu.wang) are each side's on-target patterns.",
+      pickA: ["Campaign landing pages & site networks", "Word-of-mouth tool & content sites", "Mass-market activity-page portfolios", "Personal brands with the surname Wang"],
+      pickB: ["Brand main sites for Chinese users", "Formal sites needing ICP filing", "Government & enterprise projects", "The standard home for double-pinyin brands"],
+    },
+  },
+  "day-vs-life": {
+    slug: "day-vs-life",
+    a: "day",
+    b: "life",
+    zh: {
+      title: ".day 和 .life 怎么选：一天的刻度与生活的全景",
+      metaDescription: ".day 把日子当名词，纪念日与打卡应用张口成句；.life 是语义最柔软的后缀，健康与生活方式品牌像一句承诺。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "粒度不同：一个说某一天，一个说整段生活。.day 把日子当名词——节日与纪念日活动站、婚礼与生日邀请页、每日打卡与习惯养成应用、日历与效率工具站用 name.day，读起来就是「某某日」（wedding.day、demo.day 张口成句），这是少见的自带语法的后缀；注册局为 Google（Charleston Road Registry），整个后缀列入 HSTS 预加载名单——浏览器强制 HTTPS，必须配证书；首年约 $11（约 ¥78）、续费约 $11/年（约 ¥78）——注册续费同价，没有促销陷阱。.life 说的是整段生活——健康管理与生活方式品牌、家庭服务、心理与个人成长、保险养老用 name.life，「品牌 + .life」像一句承诺而非一份资质，生活方式博客与 vlog 站用它也比 .com 更有温度；注册局为 Identity Digital，注册链路成熟；首年常见几美元促销、续费约 $25–30/年——典型首年促销结构，长期持有按续费算账。判断标准：产品围绕「某一天」这个时间刻度——纪念日、打卡、日程、活动日 → .day 的语法感直给，域名读出来就是产品；产品围绕「怎么生活」这个话题——健康、家庭、成长、生活美学 → .life 的温度更贴，装得下的场景也宽得多。两者有交集（习惯养成类应用），按叙事选：强调「每天坚持」用 .day，强调「改变生活」用 .life。三点注意：一是 .day 强制 HTTPS，托管平台需支持自动证书（主流平台均可）；二是价格结构相反——.day 恒定 $11/年好算账，.life 首年便宜续费翻倍，预算按续费核；三是 .day 三个字母更短更上口，.life 的认知度与注册量则高一个量级。命名上「场景词 + .day」（demo.day 类）与「品牌/生活词 + .life」（better.life 类）各是两边最点题的模式。",
+      pickA: ["节日纪念日与活动日站点", "婚礼生日邀请页", "每日打卡与习惯养成应用", "日历与效率工具站"],
+      pickB: ["健康与生活方式品牌", "家庭服务与保险养老", "心理与个人成长社区", "生活方式博客与 vlog"],
+    },
+    en: {
+      title: ".day vs .life: The Single Day or The Whole Life",
+      metaDescription:
+        ".day treats the day as a noun — anniversary sites and habit apps speak in full sentences; .life is the warmest suffix — health and lifestyle brands read as a promise. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Different grain: one names a single day, the other names the whole life. .day treats the day as a noun — holiday and anniversary sites, wedding and birthday invitation pages, daily check-in and habit apps, and calendar or productivity tools on name.day read as \"the X day\" (wedding.day, demo.day speak in full sentences), a rare suffix with built-in grammar; the registry is Google (Charleston Road Registry) and the whole TLD sits on the HSTS preload list — browsers force HTTPS, so a certificate is mandatory; about $11 first year (≈¥78) and $11/yr to renew (≈¥78) — flat pricing, no promo traps. .life names the whole life — health and lifestyle brands, family services, mental health and personal growth, and insurance or retirement products on name.life make brand + .life read as a promise rather than a credential, and lifestyle blogs feel warmer here than on .com; run by Identity Digital with a mature registration pipeline; typically a few dollars in year one and $25–30/yr to renew — the classic promo curve, so budget on the renewal. The test: the product orbits a single day — anniversaries, check-ins, schedules, event days → .day's grammar lands instantly and the domain reads as the product; the product orbits how to live — health, family, growth, lifestyle aesthetics → .life's warmth fits truer and holds far more scenarios. They overlap on habit apps — choose by the story: \"show up every day\" → .day; \"change your life\" → .life. Three cautions: .day forces HTTPS, so hosting must support automatic certificates (mainstream platforms all do); the price curves are opposite — .day holds flat at $11/yr while .life renews at several times its promo price, so budget .life on renewal; and .day is shorter and punchier at three letters, while .life has an order more recognition and registrations. Naming: scenario word + .day (demo.day style) versus brand or living word + .life (better.life style) are each side's on-target patterns.",
+      pickA: ["Holiday & anniversary event sites", "Wedding & birthday invitation pages", "Daily check-in & habit apps", "Calendar & productivity tools"],
+      pickB: ["Health & lifestyle brands", "Family services & insurance", "Mental health & personal growth", "Lifestyle blogs & vlogs"],
+    },
+  },
+  "meme-vs-lol": {
+    slug: "meme-vs-lol",
+    a: "meme",
+    b: "lol",
+    zh: {
+      title: ".meme 和 .lol 怎么选：梗的名词与笑的动词",
+      metaDescription: ".meme 直指梗文化本身，梗图社区与迷因币项目用它身份直给；.lol 是全世界最通用的「哈哈哈」，搞笑内容自带笑点。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在玩梗，分工在词性：一个是梗这个名词，一个是笑这个反应。.meme 直指梗文化本身——梗图与表情包社区、迷因币与加密社区项目、玩梗营销活动页、创作者搞笑内容站用 name.meme，meme 是互联网原生词汇，看到后缀就知道内容基调，「会玩」的姿态先立住；注册局为 Google（Charleston Road Registry），2023 年开放注册，列入 HSTS 预加载名单——浏览器强制 HTTPS；首年约 $11（约 ¥78）、续费约 $11/年（约 ¥78）——注册续费同价，没有促销陷阱。.lol 是全世界最通用的「哈哈哈」——梗图与段子站、搞笑视频与整活企划、恶搞与愚人节页面、游戏社区用 name.lol，域名本身就是内容的一部分，英雄联盟社区还能玩双关；注册局为 XYZ（.xyz 同门），首年约 $2（约 ¥11）、续费约 $26/年（约 ¥189）——首年几乎白送、续费回归常价，整活成本忽略不计。判断标准：内容主体是「梗」这个对象——梗图库、迷因币、梗文化社区 → .meme 的身份牌直给，恒定价格也适合长期经营的社区；内容主体是「笑」这个效果——段子、整活、恶搞页、游戏梗 → .lol 三个字母更短更响，首年成本低到可以一梗一域名。两者高度重叠（搞笑内容站都装得下），按持有周期选：长期社区用 .meme 的平价结构，快闪整活页用 .lol 的首年引流价。三点注意：一是两者都与「正经」相斥，金融、医疗、B2B 用它们直接损伤可信度；二是 .lol 续费比 .meme 贵一倍多（$26 vs $11/年），长持项目算清账；三是 .meme 强制 HTTPS，托管平台需支持自动证书。命名上「梗词 + .meme」（doge.meme 类）与「口头禅 + .lol」（bruh.lol 类）各是两边最点题的模式。",
+      pickA: ["梗图与表情包社区", "迷因币与加密社区项目", "玩梗营销活动页", "长期经营的梗文化站"],
+      pickB: ["段子与搞笑视频站", "恶搞与愚人节快闪页", "游戏社区与战队页", "一梗一域名的整活矩阵"],
+    },
+    en: {
+      title: ".meme vs .lol: The Meme Itself or The Laugh It Gets",
+      metaDescription:
+        ".meme names meme culture itself — meme communities and memecoin projects wear it as a badge; .lol is the internet's universal laugh — comedy content gets a built-in punchline. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both play the joke; the split is the part of speech: one names the meme, the other names the laugh. .meme points at meme culture itself — meme and sticker communities, memecoin and crypto projects, meme-driven marketing campaigns, and creators' comedy sites on name.meme use an internet-native word, so the suffix sets the tone on sight and the in-on-the-joke posture lands first; the registry is Google (Charleston Road Registry), opened in 2023 and on the HSTS preload list — browsers force HTTPS; about $11 first year (≈¥78) and $11/yr to renew (≈¥78) — flat pricing, no promo traps. .lol is the internet's universal laugh — meme and joke sites, comedy video projects, prank and April Fools' pages, and gaming communities on name.lol make the domain itself part of the content, with a bonus pun for League of Legends circles; the registry is XYZ (of .xyz fame) at about $2 first year (≈¥11) and $26/yr to renew (≈¥189) — practically free to launch, with renewal back at list price. The test: the subject is the meme as an object — meme libraries, memecoins, meme-culture communities → .meme's badge is direct and the flat price suits communities built to last; the subject is the laugh as an effect — jokes, stunts, prank pages, gaming humor → .lol is shorter and louder at three letters, cheap enough in year one for one domain per gag. They overlap heavily (comedy sites fit both) — choose by holding period: long-term communities take .meme's flat curve, flash stunts take .lol's promo year. Three cautions: both repel seriousness — finance, healthcare or B2B on either actively damages credibility; .lol renews at over twice .meme ($26 vs $11/yr), so do the math on long holds; and .meme forces HTTPS, so hosting must support automatic certificates. Naming: meme word + .meme (doge.meme style) versus catchphrase + .lol (bruh.lol style) are each side's on-target patterns.",
+      pickA: ["Meme & sticker communities", "Memecoin & crypto projects", "Meme-driven marketing campaigns", "Meme-culture sites built to last"],
+      pickB: ["Joke & comedy video sites", "Prank & April Fools' flash pages", "Gaming communities & team pages", "One-domain-per-gag stunt portfolios"],
+    },
+  },
+  "quest-vs-fun": {
+    slug: "quest-vs-fun",
+    a: "quest",
+    b: "fun",
+    zh: {
+      title: ".quest 和 .fun 怎么选：冒险的叙事与好玩的气质",
+      metaDescription: ".quest 把任务写进域名，密室逃脱与学习闯关自带故事感；.fun 是泛娱乐通配符，谁都看得懂的「好玩」。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "一个讲故事，一个给气质。.quest 直指任务与探索——游戏任务与攻略社区、密室逃脱与解谜活动、学习闯关与技能挑战平台、探险旅行与寻宝项目用 name.quest，quest 是 RPG 与奇幻文学的核心词汇，name.quest 读起来就是「某某的冒险」，做游戏化产品自带故事感；注册局为 XYZ（.xyz 同门），首年约 $2（约 ¥11）、续费约 $13/年（约 ¥93）——首年全站最便宜档之一，续费也不贵。.fun 是泛娱乐通配符——小游戏与休闲游戏站、互动营销页与趣味测试、派对与活动策划、玩具与亲子品牌用 name.fun，「好玩」两个字从域名立住，不挑圈层谁都看得懂；首年约 $1（约 ¥10）、续费约 $21/年（约 ¥150）——首年常见引流价，续费回归常价，按续费价做长期预算。判断标准：产品的钩子是「挑战与过程」——闯关、解谜、寻宝、游戏化学习 → .quest 的叙事直给，故事感是 .fun 给不了的；产品的钩子是「轻松与娱乐」——小游戏、趣味测试、派对策划 → .fun 的气质词覆盖面更广，认知门槛也更低。两者有交集（游戏化营销活动），按调性选：想让用户「接受任务」用 .quest，想让用户「玩起来」用 .fun。三点注意：一是 Meta 的 VR 头显与 Quest 同名，VR 相关内容避免 meta、vr 类组合以免暗示官方关系；二是续费 .quest 便宜一档（$13 vs $21/年），长持矩阵优先 .quest；三是两者语义都与「正经」相斥，金融、医疗、B2B 场景不合适。命名上「主题词 + .quest」（dragon.quest 类）与「品牌/玩法词 + .fun」（quiz.fun 类）各是两边最点题的模式。",
+      pickA: ["游戏任务与攻略社区", "密室逃脱与解谜活动", "学习闯关与技能挑战平台", "探险旅行与寻宝项目"],
+      pickB: ["小游戏与休闲游戏站", "互动营销页与趣味测试", "派对与活动策划", "玩具与亲子品牌"],
+    },
+    en: {
+      title: ".quest vs .fun: The Adventure Story or The Playful Vibe",
+      metaDescription:
+        ".quest writes the mission into the address — escape rooms and gamified learning get a built-in story; .fun is the entertainment wildcard everyone reads instantly. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "One tells a story, the other sets a vibe. .quest points at missions and exploration — game quest and walkthrough communities, escape rooms and puzzle events, gamified learning and skill-challenge platforms, and adventure travel or treasure hunts on name.quest use core RPG and fantasy vocabulary, so name.quest reads as \"the quest for X\", giving gamified products a built-in story; the registry is XYZ (of .xyz fame) at about $2 first year (≈¥11) and $13/yr to renew (≈¥93) — one of the cheapest first years on the site with a modest renewal. .fun is the entertainment wildcard — casual game sites, interactive marketing pages and quizzes, party and event planning, and toy or family brands on name.fun plant \"this is fun\" in the address itself, legible to any audience with zero explanation; about $1 first year (≈¥10) and $21/yr to renew (≈¥150) — a classic promo year with renewal back at list price, so budget on the renewal. The test: the hook is the challenge and the journey — levels, puzzles, treasure hunts, gamified learning → .quest's narrative lands instantly, a story .fun can't tell; the hook is lightness and play — casual games, quizzes, party planning → .fun's vibe covers more ground at a lower recognition threshold. They overlap on gamified marketing campaigns — choose by tone: inviting users to accept a mission → .quest; inviting them to just play → .fun. Three cautions: Meta's VR headset line shares the Quest name, so VR-adjacent content should avoid combos like meta or vr implying official ties; .quest renews a tier cheaper ($13 vs $21/yr), so long-hold portfolios lean .quest; and both repel seriousness — finance, healthcare and B2B don't belong on either. Naming: theme word + .quest (dragon.quest style) versus brand or gameplay word + .fun (quiz.fun style) are each side's on-target patterns.",
+      pickA: ["Game quest & walkthrough communities", "Escape rooms & puzzle events", "Gamified learning & skill challenges", "Adventure travel & treasure hunts"],
+      pickB: ["Casual & mini-game sites", "Interactive marketing pages & quizzes", "Party & event planning", "Toy & family brands"],
+    },
+  },
+  "kids-vs-baby": {
+    slug: "kids-vs-baby",
+    a: "kids",
+    b: "baby",
+    zh: {
+      title: ".kids 和 .baby 怎么选：儿童内容的承诺与母婴品类的招牌",
+      metaDescription: ".kids 带内容公约，儿童教育与少儿培训用它自带信任背书；.baby 由强生发起，母婴电商与月子中心一眼锁定客群。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "同在亲子赛道，分工在年龄段与承诺对象：一个面向孩子本人，一个面向孩子的父母。.kids 直指儿童受众——儿童教育与启蒙内容站、少儿兴趣班与夏令营、儿童游戏与娱乐内容、亲子活动项目用 name.kids，后缀本身就是「适合孩子」的承诺；注册局为香港非营利机构 DotKids Foundation，是少见的「带内容公约」后缀——注册即承诺内容儿童友好，注册局可对有害内容投诉处置，这层治理正是它的信任来源；首年约 $6（约 ¥41）、续费约 $19/年（约 ¥137）——按续费价做长期预算。.baby 把客群写进域名——母婴用品电商与品牌、月子中心与产后护理机构、婴幼儿早教与托育、育儿内容与新生儿记录站用 name.baby，目标客群一眼锁定；行业出身很正——最初由强生（Johnson & Johnson）发起、后转入 XYZ 注册局运营，母婴垂直的定位从注册局层面就写死了；注册约 $2（约 ¥11）、续费约 $52/年（约 ¥374）——首年极便宜、续费跳档明显，预算一定按续费价算。判断标准：内容给孩子看、孩子用——K12 内容、少儿培训、儿童游戏 → .kids 的受众承诺与内容公约直给，家长看到后缀就放心；生意做给父母、围绕婴幼儿——母婴电商、月子护理、早教托育 → .baby 的品类招牌更准，「品牌 + .baby」读出来就是产品线。两者有交集（婴幼儿早教），按年龄选：学龄段内容用 .kids，0–3 岁品类用 .baby。三点注意：一是 .kids 的内容公约意味着成人与擦边内容可能被投诉下线，混合受众平台把儿童板块单独放 .kids 更稳；二是多数辖区对儿童数据有专门法规（如 COPPA），两个后缀的项目都要把合规做足；三是续费差近三倍（$19 vs $52/年），预算敏感的项目把账算在续费上。命名上「品类词 + .kids」（coding.kids）与「品牌词 + .baby」（母婴品牌标准款）各是两边最点题的模式。",
+      pickA: ["儿童教育与启蒙内容站", "少儿兴趣班与夏令营", "儿童游戏与娱乐内容", "需要「儿童友好」信任背书"],
+      pickB: ["母婴用品电商与品牌", "月子中心与产后护理", "婴幼儿早教与托育", "育儿内容与新生儿记录"],
+    },
+    en: {
+      title: ".kids vs .baby: The Child-Safe Promise or The Baby-Market Sign",
+      metaDescription:
+        ".kids carries a content pledge — children's education and kids' programs get built-in trust; .baby was launched by Johnson & Johnson — baby commerce locks onto its customers at a glance. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Same family aisle, different age and different promise: one faces the child, the other faces the parents. .kids points at the child audience — children's education and early-learning content, kids' classes and summer camps, children's games and entertainment, and family activity projects on name.kids carry a suffix that is itself a promise the content suits children; the registry is DotKids Foundation, a Hong Kong nonprofit, and this is a rare gTLD with a content pledge — registering commits you to child-friendly content and the registry can act on harmful-content complaints, exactly where the trust comes from; about $6 first year (≈¥41) and $19/yr to renew (≈¥137) — budget on the renewal. .baby writes the customer into the address — baby-product stores and brands, maternity and postpartum care centers, early education and childcare providers, and parenting content or baby-book sites on name.baby lock onto their audience at a glance; the pedigree is unusually on-topic — launched by Johnson & Johnson and now operated by XYZ Registry, the mother-and-baby vertical is baked in at the registry level; about $2 to register (≈¥11) and $52/yr to renew (≈¥374) — a very cheap first year with a steep renewal jump, so budget strictly on the renewal. The test: the content is for children to watch and use — K-12 content, kids' training, children's games → .kids' audience promise and content pledge are direct, and parents relax on sight; the business sells to parents around infants — baby commerce, postpartum care, early childcare → .baby's category sign aims truer, and brand + .baby reads as the product line. They overlap on early education — choose by age: school-age content → .kids; the 0–3 category → .baby. Three cautions: .kids' content pledge means adult or borderline material can be taken down on complaint — mixed-audience platforms should put only the children's section on .kids; most jurisdictions regulate children's data specifically (COPPA and kin) — both suffixes demand full compliance; and renewals differ nearly threefold ($19 vs $52/yr), so budget-sensitive projects do the math on renewal. Naming: category word + .kids (coding.kids) versus brand word + .baby (the baby-brand standard) are each side's on-target patterns.",
+      pickA: ["Children's education & early-learning content", "Kids' classes & summer camps", "Children's games & entertainment", "Child-friendly trust backing"],
+      pickB: ["Baby-product stores & brands", "Maternity & postpartum care", "Early education & childcare", "Parenting content & baby books"],
+    },
+  },
+  "win-vs-vip": {
+    slug: "win-vs-vip",
+    a: "win",
+    b: "vip",
+    zh: {
+      title: ".win 和 .vip 怎么选：赢的情绪与会员的身份",
+      metaDescription: ".win 把「赢」写进域名，竞赛活动页与电竞平台自带情绪；.vip 是会员身份的直给表达，国内认知度极高且可备案。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
+      verdict:
+        "都在给用户「优越感」，来源不同：一个是赢来的，一个是买来的。.win 直指「赢」这个结果——竞赛与抽奖活动页、电竞战队与赛事平台、增长营销与转化落地页、竞技预测与积分工具站用 name.win，win 是英语里最短的胜利动词，name.win 读起来就是一句口号，做活动页自带情绪；Team Internet（GRS Domains）运营，首年约 $5（约 ¥33）、续费约 $6/年（约 ¥41）——注册续费都便宜，做活动页矩阵毫无压力。.vip 说的是会员身份——会员制产品与付费订阅、粉丝社群与应援运营、电商会员站、高端服务预约用 name.vip，域名本身就在说「这里是会员专属」；VIP 概念国人人人皆知，后缀已获工信部资质可正常 ICP 备案，注册约 $6（约 ¥40）、续费约 $8/年（约 ¥60）——价格亲民且注册量长期位居新后缀前列。判断标准：钩子是「赢」这个动作与结果——比赛、抽奖、冲榜、转化活动 → .win 的口号感直给，一场活动一个域名也养得起；钩子是「会员」这个身份与特权——订阅制、粉丝圈、会员中心 → .vip 语义零解释，面向国内更是几乎无认知成本。两者常见组合打法：会员主站用 .vip，拉新活动页用 .win 批量铺开。三点注意：一是 .win 在博彩语境里常被联想，合规敏感的品牌注意语境隔离；二是 .vip 自带营销气质，严肃工具类产品不搭；三是两者续费都在便宜档（$6 vs $8/年），成本几乎不构成选择因素，按语义与市场选即可。命名上「动作/奖品词 + .win」（spin.win 类）与「品牌/双拼 + .vip」（fans.vip 类）各是两边最点题的模式。",
+      pickA: ["竞赛与抽奖活动页", "电竞战队与赛事平台", "增长营销与转化落地页", "竞技预测与积分工具站"],
+      pickB: ["会员制产品与付费订阅", "粉丝社群与应援运营", "电商会员站与会员中心", "需要 ICP 备案的国内业务"],
+    },
+    en: {
+      title: ".win vs .vip: The Thrill of Winning or The Status of Membership",
+      metaDescription:
+        ".win writes winning into the address — contest pages and esports platforms get built-in emotion; .vip states membership status outright, with huge recognition in China and ICP filing support. Compare semantics, pricing and fit, then hunt names available on both.",
+      verdict:
+        "Both hand the user a sense of being above the crowd; the source differs: one is earned, the other is purchased. .win points at winning as an outcome — contest and giveaway pages, esports teams and tournament platforms, growth-marketing and conversion landing pages, and prediction or points tools on name.win use the shortest victory verb in English, so name.win reads as a slogan and campaign pages carry built-in emotion; run by Team Internet (GRS Domains) at about $5 first year (≈¥33) and $6/yr to renew (≈¥41) — cheap both ways, so campaign portfolios cost almost nothing. .vip states membership status — membership products and paid subscriptions, fan communities and supporter operations, e-commerce member sites, and premium booking services on name.vip make the domain itself say \"members only\"; the VIP concept is universally understood in China, the suffix holds MIIT accreditation for normal ICP filing, and at about $6 to register (≈¥40) and $8/yr to renew (≈¥60) it stays friendly while ranking among the most-registered new gTLDs. The test: the hook is the act and outcome of winning — contests, giveaways, leaderboards, conversion campaigns → .win's slogan lands instantly and one domain per campaign is affordable; the hook is the identity and privilege of membership — subscriptions, fan circles, member centers → .vip needs zero explanation, with near-zero recognition cost in China especially. A common combo: .vip for the member main site, .win spread across acquisition campaign pages. Three cautions: .win often gets read in a betting context, so compliance-sensitive brands should mind the framing; .vip carries a promotional air that misfits serious tool products; and both renew in the bargain tier ($6 vs $8/yr), so cost barely matters — choose by semantics and market. Naming: action or prize word + .win (spin.win style) versus brand or pinyin + .vip (fans.vip style) are each side's on-target patterns.",
+      pickA: ["Contest & giveaway pages", "Esports teams & tournament platforms", "Growth-marketing & conversion landing pages", "Prediction & points tools"],
+      pickB: ["Membership products & paid subscriptions", "Fan communities & supporter operations", "E-commerce member sites & member centers", "China-facing business needing ICP filing"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

@@ -339,6 +339,12 @@ export const COMPARE_SLUGS = [
   "quest-vs-games",
   "kids-vs-family",
   "foundation-vs-org",
+  "wang-vs-cn",
+  "day-vs-life",
+  "meme-vs-lol",
+  "quest-vs-fun",
+  "kids-vs-baby",
+  "win-vs-vip",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
