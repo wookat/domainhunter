@@ -1,0 +1,670 @@
+{
+  "sitemap_loc_samples": [
+    844,
+    844,
+    844
+  ],
+  "sitemap_dup_locs": 0,
+  "sitemap_cat_counts": {
+    "tld": 270,
+    "guide": 266,
+    "vs": 300,
+    "core": 8
+  },
+  "sitemap_vs_counts_json": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "llms_counts": {
+    "tld": 270,
+    "guide": 266,
+    "vs": 300
+  },
+  "llms_vs_sitemap_equal": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "robots": {
+    "status": 200,
+    "has_sitemap": true,
+    "gptbot": true
+  },
+  "seo_new_pages": {
+    "/guide/villarental": {
+      "status": 200,
+      "title": "度假别墅与高端民宿短租怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/villarental",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 115601
+    },
+    "/guide/villarental?lang=en": {
+      "status": 200,
+      "title": "How to Name a Villa Rental or Luxury Vacation Stay Brand: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/villarental?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 117365
+    },
+    "/guide/ticketing": {
+      "status": 200,
+      "title": "票务平台与演出订票网站怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/ticketing",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 115659
+    },
+    "/guide/ticketing?lang=en": {
+      "status": 200,
+      "title": "How to Name a Ticketing Platform or Box-Office Brand: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/ticketing?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 117632
+    },
+    "/tld/beer": {
+      "status": 200,
+      "title": ".beer 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/beer",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 133888
+    },
+    "/tld/beer?lang=en": {
+      "status": 200,
+      "title": ".beer Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/beer?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 134577
+    },
+    "/tld/attorney": {
+      "status": 200,
+      "title": ".attorney 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/attorney",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 134142
+    },
+    "/tld/attorney?lang=en": {
+      "status": 200,
+      "title": ".attorney Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/attorney?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 134834
+    }
+  },
+  "new_pages_status": {
+    "/guide/villarental": {
+      "status": 200,
+      "bytes": 115601,
+      "faq": true
+    },
+    "/guide/villarental?lang=en": {
+      "status": 200,
+      "bytes": 117365,
+      "faq": true
+    },
+    "/guide/cruise": {
+      "status": 200,
+      "bytes": 115721,
+      "faq": true
+    },
+    "/guide/cruise?lang=en": {
+      "status": 200,
+      "bytes": 117468,
+      "faq": true
+    },
+    "/guide/customtour": {
+      "status": 200,
+      "bytes": 115880,
+      "faq": true
+    },
+    "/guide/customtour?lang=en": {
+      "status": 200,
+      "bytes": 117958,
+      "faq": true
+    },
+    "/guide/limoservice": {
+      "status": 200,
+      "bytes": 115708,
+      "faq": true
+    },
+    "/guide/limoservice?lang=en": {
+      "status": 200,
+      "bytes": 117862,
+      "faq": true
+    },
+    "/guide/ticketing": {
+      "status": 200,
+      "bytes": 115659,
+      "faq": true
+    },
+    "/guide/ticketing?lang=en": {
+      "status": 200,
+      "bytes": 117632,
+      "faq": true
+    },
+    "/guide/flowerdelivery": {
+      "status": 200,
+      "bytes": 115744,
+      "faq": true
+    },
+    "/guide/flowerdelivery?lang=en": {
+      "status": 200,
+      "bytes": 117627,
+      "faq": true
+    },
+    "/tld/beer": {
+      "status": 200,
+      "bytes": 133888,
+      "faq": true
+    },
+    "/tld/beer?lang=en": {
+      "status": 200,
+      "bytes": 134577,
+      "faq": true
+    },
+    "/tld/pub": {
+      "status": 200,
+      "bytes": 134050,
+      "faq": true
+    },
+    "/tld/pub?lang=en": {
+      "status": 200,
+      "bytes": 134560,
+      "faq": true
+    },
+    "/tld/spa": {
+      "status": 200,
+      "bytes": 134032,
+      "faq": true
+    },
+    "/tld/spa?lang=en": {
+      "status": 200,
+      "bytes": 134549,
+      "faq": true
+    },
+    "/tld/food": {
+      "status": 200,
+      "bytes": 134278,
+      "faq": true
+    },
+    "/tld/food?lang=en": {
+      "status": 200,
+      "bytes": 135063,
+      "faq": true
+    },
+    "/tld/attorney": {
+      "status": 200,
+      "bytes": 134142,
+      "faq": true
+    },
+    "/tld/attorney?lang=en": {
+      "status": 200,
+      "bytes": 134834,
+      "faq": true
+    },
+    "/tld/dentist": {
+      "status": 200,
+      "bytes": 134102,
+      "faq": true
+    },
+    "/tld/dentist?lang=en": {
+      "status": 200,
+      "bytes": 134914,
+      "faq": true
+    }
+  },
+  "usage_pre": {
+    "days": {
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      }
+    },
+    "cronLast": 1786341659494,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786343079904,
+    "pricesLastFail": 1786337426285
+  },
+  "usage_keys_present": {
+    "pricesLastOk": true,
+    "pricesLastFail": true,
+    "cronLast": true,
+    "indexnowLast": true
+  },
+  "prices_api": {
+    "stale": null,
+    "tldCount": 268,
+    "fetchedAt": 1786343080143,
+    "keys": 268
+  },
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_all": "核验完成：共 271 个，200 个可注册",
+  "template_prefill": {
+    "chip": "电商品牌",
+    "filled": ""
+  },
+  "prices_rows_zh": 270,
+  "prices_live_count": 268,
+  "prices_static_count": 2,
+  "prices_static_slugs": [
+    "cn",
+    "so"
+  ],
+  "prices_new_tld_rows": {
+    "expected_static_fallback": {
+      "beer": [
+        11,
+        189
+      ],
+      "pub": [
+        234,
+        234
+      ],
+      "spa": [
+        156,
+        156
+      ],
+      "food": [
+        33,
+        226
+      ],
+      "attorney": [
+        360,
+        360
+      ],
+      "dentist": [
+        374,
+        374
+      ]
+    },
+    "got": {
+      "beer": [
+        11,
+        189
+      ],
+      "food": [
+        33,
+        226
+      ],
+      "spa": [
+        156,
+        156
+      ],
+      "pub": [
+        234,
+        234
+      ],
+      "attorney": [
+        360,
+        360
+      ],
+      "dentist": [
+        374,
+        374
+      ]
+    }
+  },
+  "prices_row_tld_hrefs": {
+    "beer": true,
+    "pub": true,
+    "spa": true,
+    "food": true,
+    "attorney": true,
+    "dentist": true
+  },
+  "tld_pricecards": {
+    "beer": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "prices_href": true
+    },
+    "pub": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "prices_href": true
+    },
+    "spa": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "prices_href": true
+    },
+    "food": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "prices_href": true
+    },
+    "attorney": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "prices_href": true
+    },
+    "dentist": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "prices_href": true
+    }
+  },
+  "tld_com_live": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+  "tld_hub_links": 270,
+  "guide_hub_links": 266,
+  "vs_hub_links": 300,
+  "footer_counts": [],
+  "footer_link_counts": {
+    "/tld/": 270,
+    "/guide/": 266,
+    "/vs/": 300
+  },
+  "templates_more_chip": "+256",
+  "why_status": 200,
+  "shortlist_status": 200,
+  "advanced_status": 200,
+  "404_status": 404,
+  "404_tld_status": 404,
+  "404_guide_status": 404,
+  "404_vs_status": 404,
+  "mcp_doc_status": 200,
+  "mcp_doc_tldcount": "860",
+  "mcp_tld_prices": {
+    "tldCount": 270,
+    "priceKeys": 270
+  },
+  "share_create": {
+    "status": 200,
+    "id": "UjeNQalUQF",
+    "has_token": true
+  },
+  "share_live_domains": {
+    "d1": true,
+    "d2": true
+  },
+  "share_revoke": {
+    "del": 200,
+    "getAfter": 410,
+    "revokedBodyHasItems": false
+  },
+  "share_revoked_ui": true,
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(250, 250, 249)",
+    "persist_after_reload": "rgb(250, 250, 249)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld/beer": 360,
+    "/vs/cruises-vs-travel": 360,
+    "/guide/villarental": 360
+  },
+  "usage_post": {
+    "days": {
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      }
+    },
+    "cronLast": 1786341659494,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786343079904,
+    "pricesLastFail": 1786337426285
+  },
+  "usage_days_equal": true,
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r366"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r366"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r366"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r366"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r366"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/UjeNQalUQF"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/UjeNQalUQF"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/UjeNQalUQF"
+    }
+  ]
+}
