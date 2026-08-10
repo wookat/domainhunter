@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 258,
+    "count": 264,
     "slugs": [
       "com",
       "net",
@@ -259,7 +259,13 @@
       "diamonds",
       "theater",
       "accountants",
-      "engineer"
+      "engineer",
+      "villas",
+      "cruises",
+      "voyage",
+      "limo",
+      "tickets",
+      "flowers"
     ]
   },
   "guide": {
