@@ -18476,6 +18476,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  volleyball: {
+    slug: "volleyball",
+    keywords: ["排球俱乐部", "排球培训", "气排球", "volleyball club", "beach volleyball"],
+    tlds: [
+      { tld: "club", zh: "俱乐部身份直给，会员招募与队服印制都顺手", en: "The club identity stated outright — recruiting and jersey printing both read clean" },
+      { tld: "team", zh: "「队」的归属感先立住，报名页与联赛注册都体面", en: "Team belonging staked up front — dignified on the sign-up page and the league register" },
+      { tld: "fit", zh: "面向大众健身排球时零解释，气排球与亲子班都装得下", en: "Zero explanation for fitness-first volleyball — recreational and family classes both fit" },
+    ],
+    zh: {
+      label: "排球俱乐部",
+      title: "排球俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "排球俱乐部与排球培训命名指南：网上意象、扣杀词根等思路，Kerri Walsh 训练营/AVP/巴西沙排 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "排球俱乐部的名字要在三个场景里同时立住：球馆里教练喊队名点人集合、联赛秩序册上和十几支队伍排在一起、家长群里转发「XX 排球营暑期招生」。排球的气质在网上三米——起跳、滞空、一锤定音，名字最好也带这股「离地」的劲。看行业样本：AVP（美国职业沙排联赛）用三个字母把职业感钉死，机构向命名以简取胜；p1440 是沙排传奇 Kerri Walsh 创立的平台，名字藏着「每天 1440 分钟都在场上」的哲学——数字造词让品牌自带故事；国内的「气排球」社群命名多走亲民路线，「乐动」「悦排」类双字组合把低门槛写进名字。命名的隐藏考点是「室内队与沙排队的分野」：室内排球讲纪律与体系，名字可以像战队；沙滩排球讲阳光与自由，名字要像假期。先想清楚主营场景，再决定名字穿队服还是穿泳装。",
+      namingIdeas: [
+        "网上意象直给：扣杀、拦网、滞空——把排球最燃的瞬间写进名字，球迷一眼认亲",
+        "离地词根：跳、飞、峰、顶——排球是离地面最远的球类之一，名字带起跳的劲",
+        "数字哲学造词：p1440 式的数字梗——把训练理念藏进数字，品牌自带一段可讲的故事",
+        "地名+图腾结构：城市名加动物或自然意象（海鹰、浪、峰），联赛秩序册里立刻有主场感",
+        "亲民气排球路线：乐、悦、汇等低门槛字眼——面向社区与中老年气排球时，名字先把「谁都能来」说清",
+      ],
+      cases: [
+        { name: "AVP", takeaway: "三个字母钉死职业沙排联赛身份：机构向命名以简取胜——缩写命名在体育联盟里的标准打法" },
+        { name: "p1440", takeaway: "Kerri Walsh 把「每天 1440 分钟」写进名字：数字造词让平台自带训练哲学——名字即宣言的范本" },
+        { name: "Volleyball World", takeaway: "国际排联的商业平台直接用品类+世界：全球赛事聚合的定位零解释——大平台的诚实命名" },
+        { name: "海口海之蓝", takeaway: "城市+海洋意象的沙排俱乐部命名：主场感与假期感一次到位——地名图腾结构的中文样本" },
+      ],
+      pitfalls: [
+        "室内沙排混着说：名字既想要战队纪律又想要海滩自由，两头气质打架——先定主营场景",
+        "堆砌「巅峰王者」类大词：青训家长要的是靠谱不是狠话——热血要有，浮夸要收",
+        "忽略口播集合场景：教练在球馆喊队名点人，三秒念不完的名字集合都慢半拍",
+        "只查中文没查拼音域名：俱乐部出联赛要印队服与横幅，拼音域名被占会让官网一步错步步错",
+      ],
+    },
+    en: {
+      label: "Volleyball clubs",
+      title: "How to Name a Volleyball Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Volleyball club and training academy naming guide: above-the-net imagery, spike roots, breakdowns of AVP/p1440/Volleyball World, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A volleyball club's name has to hold up in three rooms at once: the coach calling the squad together across a gym, the league handbook where it sits beside a dozen rivals, and the parents' group chat forwarding the summer camp flyer. Volleyball's character lives a metre above the net — the jump, the hang, the kill — and the best names carry that airborne charge. The benchmarks show the range: AVP nails the professional beach circuit in three letters, institutional naming winning by brevity; p1440, founded by beach legend Kerri Walsh, hides a philosophy in its digits — all 1,440 minutes of the day lived on the sand — a numeric coinage that ships with its own story; Volleyball World, the sport's commercial arm, states category plus scale with zero explanation. The hidden exam is the indoor-versus-beach split: indoor volleyball speaks discipline and systems, so the name can read like a squad; beach volleyball speaks sunshine and freedom, so the name should read like a holiday. Decide which court you live on before deciding whether the name wears a jersey or swim shorts.",
+      namingIdeas: [
+        "Above-the-net imagery stated plainly: spike, block, hang-time — write the sport's hottest instant into the name and fans recognize kin at a glance",
+        "Airborne roots: jump, fly, peak, apex — volleyball lives further off the floor than almost any sport, and the name can carry the lift",
+        "Numeric-philosophy coinage: the p1440 move — fold a training creed into digits and the brand ships with a story worth retelling",
+        "Place plus totem: city name plus an animal or element (hawks, tide, summit) — instant home-court presence in the league handbook",
+        "The recreational register: joy, social and community words for casual and family programmes — say \"everyone's welcome\" before the first serve",
+      ],
+      cases: [
+        { name: "AVP", takeaway: "Three letters nailing the pro beach tour: institutional naming winning by brevity — the standard play for sports league acronyms" },
+        { name: "p1440", takeaway: "Kerri Walsh writing all 1,440 daily minutes into the name: a numeric coinage carrying a training philosophy — the name-as-manifesto template" },
+        { name: "Volleyball World", takeaway: "The sport's commercial platform stating category plus scale: global-event aggregation with zero explanation — honest naming at federation size" },
+        { name: "Wave Volleyball", takeaway: "A San Diego club borrowing the shoreline: beach identity and hometown pride in one word — the place-totem structure at club scale" },
+      ],
+      pitfalls: [
+        "Straddling indoor and beach: squad discipline and holiday freedom fight in one name — pick your main court first",
+        "Piling on \"elite kings\" bravado: youth-programme parents want credible, not fierce — heat is welcome, swagger is not",
+        "Ignoring the gym-echo test: the coach calls the name across the hall at roll call — three seconds or it slows the huddle",
+        "Skipping the social handle check: tournament season lives on shared clips and tags — a name that can't be tagged can't travel",
+      ],
+    },
+  },
+  tabletennis: {
+    slug: "tabletennis",
+    keywords: ["乒乓球俱乐部", "乒乓球培训", "乒乓球馆", "table tennis club", "ping pong"],
+    tlds: [
+      { tld: "club", zh: "俱乐部身份直给，会籍与约球体系一眼归类", en: "The club identity stated outright — memberships and match-making filed at a glance" },
+      { tld: "fit", zh: "面向大众健身乒乓时零解释，成人班亲子班都装得下", en: "Zero explanation for fitness-first table tennis — adult and family classes both fit" },
+      { tld: "academy", zh: "青训体系的身份声明，家长看到就知道走专业路线", en: "The academy identity declared — parents read the professional track at once" },
+    ],
+    zh: {
+      label: "乒乓球俱乐部",
+      title: "乒乓球俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "乒乓球俱乐部与乒乓球培训命名指南：旋转词根、国球传承等思路，SPIN/PingPod/许昕体育 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "乒乓球俱乐部的名字有一道独特的分岔：在国内它是「国球」，名字可以借传承与冠军叙事；在海外它是复兴中的都市社交运动，名字要像酒吧一样好玩。看两边的样本：纽约的 SPIN 用一个单词把「旋转」这个乒乓的灵魂动作变成品牌，由影星 Susan Sarandon 参与创立，把乒乓做成了夜生活——名字的派对气质是刻意选择；PingPod 把「乒乓+舱」拼成无人自助球馆的新物种命名，24 小时扫码进场的模式感全在名字里；国内的「许昕体育」走冠军 IP 路线，运动员的名字就是信任状。命名的隐藏考点是「谁来打」：青训馆的名字要让家长看到体系与出路，社交馆的名字要让年轻人觉得下班来一局很酷，社区馆的名字要让大爷大妈觉得亲切不端着。三种客群三种语感，混着来就谁都不认。",
+      namingIdeas: [
+        "旋转词根直给：旋、转、弧圈、SPIN——乒乓最有辨识度的技术动作，写进名字就是行业暗号",
+        "国球传承叙事：冠军、国字、传承类字眼——青训馆借国球地位立信任，家长最认这套语感",
+        "新物种造词：PingPod 式的「品类+模式」拼接——自助球馆、智能球馆等新业态用名字说清新在哪",
+        "冠军 IP 路线：运动员名字+体育/俱乐部——退役选手开馆的标准打法，名字即信任状",
+        "社交场景语感：面向都市年轻人的球馆可以像酒吧一样命名——好玩、好约、好发朋友圈",
+      ],
+      cases: [
+        { name: "SPIN", takeaway: "「旋转」一词把乒乓的灵魂动作变成品牌：都市社交球馆的派对气质全在名字里——单词命名的体育样本" },
+        { name: "PingPod", takeaway: "乒乓拼上「舱」：24 小时无人自助球馆的新物种感一次说清——品类+模式造词的教科书" },
+        { name: "许昕体育", takeaway: "世界冠军的名字就是信任状：冠军 IP 命名让青训招生自带背书——运动员开馆的标准打法" },
+        { name: "Butterfly", takeaway: "「蝴蝶」写进器材品牌七十年：轻盈意象与球拍的挥动语感天然合拍——器材商命名的传世范本" },
+      ],
+      pitfalls: [
+        "客群语感错配：青训馆起了个酒吧名，家长第一眼就划走——先定谁来打再定语感",
+        "堆砌「乒乓+城市」的通用结构：一个城市几十家同构名字，搜索结果里永远混在一起",
+        "忽略英文场景：乒乓出海与国际赛事都用 table tennis，ping pong 在竞技语境里显业余——双语名要分场合",
+        "只查中文没查商标：冠军姓名与「国球」类字眼有权利与合规边界，挂招牌前先查清",
+      ],
+    },
+    en: {
+      label: "Table tennis clubs",
+      title: "How to Name a Table Tennis Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Table tennis club and academy naming guide: spin roots, social-club registers, breakdowns of SPIN/PingPod/Butterfly, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A table tennis club's name faces a fork few sports see: in China it is the national game, so names can borrow championship lineage and institutional trust; in Western cities it is a reviving social sport, so names should be as fun as a bar's. The benchmarks straddle both worlds: SPIN, the New York club co-founded by Susan Sarandon, turns the sport's soul move into a one-word brand and made ping pong nightlife — the party register is a deliberate choice; PingPod splices ping pong onto pod to name a new species, the 24-hour unstaffed hall whose scan-to-enter model lives entirely in the name; Butterfly has carried a lightness image on paddles for seventy years, proof that equipment houses win with imagery too. The hidden exam is who's playing: a youth academy's name must show parents a system and a pathway, a social hall's name must make after-work games sound cool, and a community club's name must feel warm to retirees. Three crowds, three registers — mix them and none of the three shows up.",
+      namingIdeas: [
+        "Spin roots stated plainly: spin, loop, serve — the sport's most recognizable technique becomes an insider signal the moment it enters the name",
+        "The academy register: champion, legacy and institute words — youth programmes borrow the sport's competitive prestige, and parents trust that grammar most",
+        "New-species coinage: the PingPod move — category plus model in one splice, so unstaffed or smart halls explain their novelty in the name itself",
+        "The champion-IP route: an athlete's name plus club or academy — the standard play for retired pros, where the name is the credential",
+        "The social-club register: for urban after-work crowds, name it like a bar — easy to say, easy to book, easy to post",
+      ],
+      cases: [
+        { name: "SPIN", takeaway: "The sport's soul move turned into a one-word brand: nightlife energy in a table tennis hall — the single-word template for social sport" },
+        { name: "PingPod", takeaway: "Ping pong spliced onto pod: the 24-hour unstaffed hall explained in one coinage — the category-plus-model textbook" },
+        { name: "Butterfly", takeaway: "Seventy years of lightness on a paddle: imagery matched to the stroke itself — the heritage template of equipment naming" },
+        { name: "Ping Pong Parkinson", takeaway: "A therapy nonprofit stating sport plus cause: alliteration making a serious mission approachable — purpose-driven naming done honestly" },
+      ],
+      pitfalls: [
+        "Register mismatch: a youth academy with a bar's name loses the parent at first glance — decide who's playing before choosing the voice",
+        "The generic city-plus-pingpong structure: dozens of clubs share the frame in every city, and search results never separate them",
+        "Ignoring the bilingual split: competitive contexts say table tennis while casual ones say ping pong — a name should know which room it lives in",
+        "Skipping the trademark check: champions' names and national-team registers carry rights boundaries — clear them before the sign goes up",
+      ],
+    },
+  },
+  baseball: {
+    slug: "baseball",
+    keywords: ["棒球培训", "棒球俱乐部", "少儿棒球", "baseball training", "baseball academy"],
+    tlds: [
+      { tld: "team", zh: "「队」的归属感直给，青训招生与联赛注册都体面", en: "Team belonging stated outright — dignified in youth recruiting and league registration" },
+      { tld: "club", zh: "俱乐部身份一眼归类，会员体系与场地预约都顺手", en: "The club identity filed at a glance — memberships and field bookings both read clean" },
+      { tld: "academy", zh: "青训体系的身份声明，家长看到就知道有教学大纲", en: "The academy identity declared — parents read the curriculum at once" },
+    ],
+    zh: {
+      label: "棒球培训",
+      title: "棒球培训机构怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "棒球培训与棒球俱乐部命名指南：本垒意象、美式传统等思路，Driveline/强棒天使/MLB First Pitch 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "棒球培训的名字要同时对三种人说话：孩子听了想挥棒、家长听了觉得这项「聪明人的运动」值得投入、圈内教练听了知道你懂行。棒球的命名语料库得天独厚——本垒打、满垒、九局下半，每个术语都自带戏剧性。看行业样本：Driveline Baseball 用「传动系」的工程词根把数据化训练的定位钉死，名字先于内容宣告「我们用科学练球」；国内的「强棒天使」棒球基地用最直白的中文把「强棒」的热血与公益「天使」的温度拼在一起，困境儿童棒球队的故事让名字有了重量；MLB 在中国的青训项目 First Pitch 借「第一球」的仪式感命名，启蒙定位零解释。命名的隐藏考点是「美式传统与本土化的平衡」：棒球在国内是新兴项目，名字太美式家长看不懂，太本土又丢了棒球的文化魅力——最好的位置是「一听是棒球，一读能懂」。",
+      namingIdeas: [
+        "本垒意象直给：本垒打、满垒、好球——棒球术语自带戏剧性，写进名字就是行业暗号",
+        "工程科学词根：Driveline 式的数据化语感——面向进阶训练时，名字先宣告「我们用科学练球」",
+        "仪式感命名：第一球、开球、九局下半——把棒球的仪式时刻写进名字，启蒙与体验课最好用",
+        "热血+温度拼接：强棒天使式的组合——竞技的狠劲配公益或成长的暖意，家长两头都被说服",
+        "美式传统借词：diamond（内场）、dugout（休息区）、rookie（新秀）——保留棒球文化魅力，但配中文副标释义",
+      ],
+      cases: [
+        { name: "Driveline Baseball", takeaway: "「传动系」的工程词根钉死数据化训练定位：名字先于内容宣告方法论——科学训练机构的命名范本" },
+        { name: "强棒天使", takeaway: "「强棒」的热血拼上「天使」的温度：困境儿童棒球队的故事让名字有了重量——热血+公益的中文样本" },
+        { name: "First Pitch", takeaway: "MLB 中国青训借「第一球」的仪式感：启蒙定位零解释——仪式时刻命名的标准打法" },
+        { name: "Perfect Game", takeaway: "「完全比赛」是棒球最稀有的成就：青少年赛事平台借最高荣誉命名——把行业圣杯写进品牌" },
+      ],
+      pitfalls: [
+        "术语堆到家长看不懂：满垒、triple play 写进名字，圈外人一头雾水——术语要选圈外也能望文生义的",
+        "「棒球+城市」通用结构：一个城市几家同构名字，招生季搜索结果里永远分不清",
+        "只借美式不做本土化：纯英文名在国内招生场景里隔着一层，最好配一个能念响的中文名",
+        "忽略拼音与英文域名双查：棒球机构常做国际交流与赴美营，域名只查一边等于埋雷",
+      ],
+    },
+    en: {
+      label: "Baseball training",
+      title: "How to Name a Baseball Academy: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Baseball training and academy naming guide: home-plate imagery, data-driven registers, breakdowns of Driveline/Perfect Game/First Pitch, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A baseball academy's name speaks to three audiences at once: the kid who should want to swing, the parent weighing an investment in the thinking player's game, and the coaching fraternity that can smell whether you know ball. Few sports hand you a richer lexicon — home run, bases loaded, bottom of the ninth — every term ships with built-in drama. The benchmarks show the range: Driveline Baseball nails the data-driven training position with an engineering root, the name declaring \"we train with science\" before a single rep; Perfect Game borrows the sport's rarest achievement to crown a youth showcase platform — the industry's holy grail written into the brand; MLB's China youth programme First Pitch names itself after the ceremonial moment, a beginner's positioning that needs zero explanation. The hidden exam is the tradition-versus-clarity balance: baseball's culture is its charm, but jargon-heavy names lose the newcomer parent. The sweet spot reads baseball at first glance and explains itself on the second.",
+      namingIdeas: [
+        "Home-plate imagery stated plainly: home run, full count, walk-off — baseball terms carry built-in drama, and the right one becomes an insider signal",
+        "The engineering register: the Driveline move — a data-science root that declares the methodology before the first session",
+        "Ceremonial-moment naming: first pitch, opening day, bottom of the ninth — write a ritual instant into the name; beginner programmes wear it best",
+        "Heat plus warmth: competitive fire spliced with growth or community warmth — the pairing that persuades the kid and the parent at once",
+        "Tradition roots chosen for legibility: diamond, dugout, rookie — keep the culture's charm but pick terms outsiders can still parse",
+      ],
+      cases: [
+        { name: "Driveline Baseball", takeaway: "An engineering root nailing the data-driven position: methodology declared in the name — the template for science-first training brands" },
+        { name: "Perfect Game", takeaway: "The sport's rarest feat crowning a youth showcase platform: the holy grail written into the brand — aspiration naming at industry scale" },
+        { name: "First Pitch", takeaway: "MLB's beginner programme borrowing the ceremonial moment: entry-level positioning with zero explanation — the ritual-instant standard play" },
+        { name: "Dugout Captains", takeaway: "The bench turned into a leadership metaphor: character coaching stated through baseball furniture — culture-borrowing done legibly" },
+      ],
+      pitfalls: [
+        "Jargon past the parent's depth: triple play and 6-4-3 mean nothing outside the fence — pick terms civilians can parse at a glance",
+        "The generic city-plus-baseball frame: several academies per city share it, and recruiting-season search never tells them apart",
+        "All tradition, no clarity: a name that only insiders decode loses the family new to the sport — charm needs a legible surface",
+        "Skipping the cross-border domain check: academies run US camps and exchanges — clear both the English and local-language domains",
+      ],
+    },
+  },
+  boxing: {
+    slug: "boxing",
+    keywords: ["拳击馆", "拳击培训", "搏击健身", "boxing gym", "boxing club"],
+    tlds: [
+      { tld: "fit", zh: "健身拳击的定位直给，白领减压客群一眼归类", en: "Fitness boxing stated outright — the after-work crowd files you at a glance" },
+      { tld: "club", zh: "俱乐部归属感先立住，会籍体系与团课都体面", en: "Club belonging staked first — dignified for memberships and group classes" },
+      { tld: "fitness", zh: "健身房身份零解释，搏击操与私教课都装得下", en: "The fitness identity with zero explanation — boxing conditioning and PT sessions both fit" },
+    ],
+    zh: {
+      label: "拳击馆",
+      title: "拳击馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "拳击馆与搏击健身房命名指南：拳台意象、反差命名等思路，Rumble/Gloveworx/TITLE Boxing 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "拳击馆的名字先要回答一个定位问题：你卖的是「学会打」还是「练着爽」？竞技拳馆的客户要教练履历与拳台，健身拳击的客户要音乐、灯光与出汗后的多巴胺——两种生意的名字语感完全不同。看行业样本：纽约起家的 Rumble 用「轰鸣」一个词把团课拳击做成了夜店——水鼓、金曲、明星会员，名字的躁动是产品的一部分；Gloveworx 把「拳套+工坊」拼在一起，「works」的手艺感把训练变成打磨自己的过程；老牌的 TITLE Boxing 直接借「金腰带头衔」命名，竞技血统写在脸上。命名的隐藏考点是「狠与安全感的平衡」：拳击自带荷尔蒙，但小白与女性客群怕被打——名字要让人肾上腺素上来，又不至于不敢推门。「力量感」可以有，「暴力感」不能有。",
+      namingIdeas: [
+        "拳台意象直给：回合、铃声、护绳——拳击的仪式元素写进名字，行家一眼认亲",
+        "轰鸣造词路线：Rumble 式的声音词——团课拳击卖的是能量场，名字先把音量拉满",
+        "手艺工坊语感：Gloveworx 式的「works」结构——把训练说成打磨自己，白领客群最吃这套叙事",
+        "头衔荣誉借词：金腰带、卫冕、TITLE——竞技拳馆借最高荣誉立血统，学员冲着拳台来",
+        "反差软化命名：拳击+轻盈或幽默元素（如「蝴蝶步」出自阿里名言）——降低女性与小白的推门门槛",
+      ],
+      cases: [
+        { name: "Rumble", takeaway: "「轰鸣」一词把团课拳击做成夜店：能量场写进名字——健身拳击命名的音量范本" },
+        { name: "Gloveworx", takeaway: "拳套拼上工坊：「打磨自己」的手艺叙事让训练有了仪式感——works 结构的搏击样本" },
+        { name: "TITLE Boxing", takeaway: "直接借「金腰带头衔」命名：竞技血统写在脸上——荣誉借词的标准打法" },
+        { name: "Everlast", takeaway: "「永恒持久」写进拳击器材百年：耐用承诺与拳手意志双关——器材命名传世的经典" },
+      ],
+      pitfalls: [
+        "暴力感压过力量感：血、杀、暴类字眼吓退小白与女性客群——荷尔蒙要有，戾气不能有",
+        "竞技健身两头骑墙：名字既想要拳台血统又想要团课欢乐，两种客群都觉得不是为自己开的",
+        "堆砌「王者战神」大词：拳击圈最重真实战绩，名字吹得越狠行家越摇头",
+        "忽略夜跑团课场景：健身拳击靠社交传播，名字要在小红书标题与团课约课页里都好读好记",
+      ],
+    },
+    en: {
+      label: "Boxing gyms",
+      title: "How to Name a Boxing Gym: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Boxing gym and fitness boxing naming guide: ring imagery, roar registers, breakdowns of Rumble/Gloveworx/TITLE Boxing, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A boxing gym's name must answer a positioning question before anything else: are you selling how to fight, or the feeling of the workout? A competitive gym's customers want coach pedigrees and a real ring; boutique fitness boxing sells music, lighting and the dopamine after the last round — and the two businesses speak entirely different registers. The benchmarks show the range: Rumble turned group-class boxing into nightlife with one word — water-filled bags, anthems, celebrity members, the name's roar being part of the product; Gloveworx splices glove onto works, the workshop suffix recasting training as the craft of working on yourself; TITLE Boxing borrows the championship belt outright, competitive bloodline worn on the sign. The hidden exam is balancing menace and welcome: boxing ships with adrenaline, but beginners and women's classes fear getting hit — the name should raise the pulse without barring the door. Power belongs in the name; violence does not.",
+      namingIdeas: [
+        "Ring imagery stated plainly: rounds, the bell, the ropes — boxing's ritual furniture becomes an insider signal in the name",
+        "The roar register: the Rumble move — group-class boxing sells an energy field, so turn the volume up in the name itself",
+        "The workshop grammar: the Gloveworx move — a works suffix recasting training as self-craft; the after-work crowd buys that story first",
+        "Championship borrowing: belt, title, undisputed — competitive gyms stake bloodline with the sport's highest honour",
+        "Softening by contrast: boxing plus lightness or wit (float like a butterfly) — lowering the door for beginners without losing the edge",
+      ],
+      cases: [
+        { name: "Rumble", takeaway: "One word turning group boxing into nightlife: the energy field written into the name — the volume template of fitness boxing" },
+        { name: "Gloveworx", takeaway: "Glove spliced onto works: training recast as the craft of working on yourself — the workshop grammar in combat sports" },
+        { name: "TITLE Boxing", takeaway: "The championship belt borrowed outright: competitive bloodline worn on the sign — honour-borrowing as standard play" },
+        { name: "Everlast", takeaway: "Endurance promised in one word for a century: product durability and fighter's will in a single pun — equipment naming for the ages" },
+      ],
+      pitfalls: [
+        "Menace over power: blood-and-brawl words scare off beginners and women's classes — adrenaline is welcome, hostility is not",
+        "Straddling fight and fitness: ring pedigree and party-class joy fight in one name, and both crowds conclude it isn't for them",
+        "Warrior-king bravado: no sport respects real records more — the harder the name boasts, the harder insiders shake their heads",
+        "Ignoring the class-booking surface: boutique boxing spreads socially — the name must read clean in app listings and post titles",
+      ],
+    },
+  },
+  taekwondo: {
+    slug: "taekwondo",
+    keywords: ["跆拳道馆", "跆拳道培训", "少儿跆拳道", "taekwondo dojang", "martial arts school"],
+    tlds: [
+      { tld: "academy", zh: "道馆的教学体系直给，家长看到就知道有段位大纲", en: "The academy identity stated outright — parents read the belt curriculum at once" },
+      { tld: "club", zh: "俱乐部归属感先立住，考级与会员体系都体面", en: "Club belonging staked first — dignified for gradings and memberships" },
+      { tld: "school", zh: "「学校」的教养语感直给，少儿道馆的招生场景零解释", en: "The school register stated outright — zero explanation for kids' enrolment" },
+    ],
+    zh: {
+      label: "跆拳道馆",
+      title: "跆拳道馆怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "跆拳道馆与少儿跆拳道命名指南：道字辈语感、段位意象等思路，K-Tigers/道volution/尚武 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "跆拳道馆的名字要过一道独特的关：这项运动的招生主力是 4–12 岁孩子的家长，而家长买的从来不只是踢腿——是礼仪、专注力与「向教练鞠躬」的教养。名字要先把「道」的分量立住，再谈「拳」的热血。看行业样本：韩国的 K-Tigers 把国家字母与猛虎拼在一起，表演天团级的品牌让道馆自带偶像气质；国内道馆爱用「尚武」「正道」类双字词，武德叙事直给，家长一眼读懂「这里教规矩」；也有新派道馆走「道+英文」的混搭路线，把传统与潮流缝在一起吸引年轻教练创业客群。命名的隐藏考点是「师承与体系感」：跆拳道有段位、考级、品势的完整体系，名字带「馆、道、院」类字眼就是在宣告体系正统——这是散打健身房借不走的语感资产。",
+      namingIdeas: [
+        "道字辈直给：正道、弘道、尚武——「道」的分量先立住，家长要的教养叙事一眼读懂",
+        "段位意象：黑带、品势、晋级——把体系写进名字，考级路线图从门头就开始",
+        "猛虎图腾路线：K-Tigers 式的动物图腾——热血与偶像气质并存，孩子听了想练",
+        "师承命名：教练姓氏+道馆——韩系传统的标准打法，师父的履历就是信任状",
+        "礼仪价值词：礼、忍、毅——跆拳道精神五常直接入名，「学做人」的承诺写在招牌上",
+      ],
+      cases: [
+        { name: "K-Tigers", takeaway: "国家字母拼上猛虎：表演天团让道馆自带偶像气质——图腾命名在跆拳道的顶配样本" },
+        { name: "Kukkiwon", takeaway: "「国技院」三个字就是段位认证的源头：机构命名以正统立信——体系正宗性的终极背书" },
+        { name: "尚武跆拳道", takeaway: "「尚武」二字把武德叙事直给：家长一眼读懂「这里教规矩」——中文道馆命名的标准结构" },
+        { name: "Master Kim's", takeaway: "师父姓氏即招牌：韩系师承命名的经典——履历与信任直接挂在门头" },
+      ],
+      pitfalls: [
+        "热血压过教养：战、杀、猛类字眼吓退买「礼仪与专注力」的家长——「道」在前「拳」在后",
+        "与散打搏击混淆：名字里没有段位与「道」的语感资产，家长分不清你和格斗馆的区别",
+        "堆砌「国际认证」大词：Kukkiwon 认证要真有，名字先吹后补是招生大忌",
+        "忽略孩子的读感：主力学员是小学生，名字要让孩子念得响、写得出、敢和同学说",
+      ],
+    },
+    en: {
+      label: "Taekwondo schools",
+      title: "How to Name a Taekwondo School: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Taekwondo dojang naming guide: the way register, belt-system imagery, breakdowns of K-Tigers/Kukkiwon/Master Kim's, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A taekwondo school's name must clear a gate unique to the discipline: the enrolling customer is the parent of a 4-to-12-year-old, and parents never buy just the kicks — they buy discipline, focus and the bow at the door. The name must carry the weight of the way before the heat of the fist. The benchmarks show the range: Korea's K-Tigers splice the national letter onto a tiger totem, a demo-team brand giving dojangs idol-grade charisma; Kukkiwon — the world headquarters whose name means national technique institute — is the ultimate proof that institutional gravity certifies itself; Master Kim's and its thousand cousins carry the instructor's surname, the Korean lineage tradition where the master's record is the credential. The hidden exam is system legitimacy: taekwondo owns belts, gradings and poomsae — a complete curriculum architecture — and words like academy, dojang and institute declare that orthodoxy in a way no kickboxing gym can borrow. That register is an asset; spend it deliberately.",
+      namingIdeas: [
+        "The way register stated plainly: way, path, virtue words — stake the discipline narrative first; it's what the enrolling parent actually buys",
+        "Belt-system imagery: black belt, poomsae, grading — write the curriculum into the name and the promotion roadmap starts at the door",
+        "The tiger-totem route: the K-Tigers move — heat and idol charisma in one animal, and the kid wants to train",
+        "Lineage naming: the master's surname plus dojang — the Korean-tradition standard where the instructor's record is the credential",
+        "Tenet words on the sign: courtesy, perseverance, indomitable — taekwondo's five tenets name-ready, the character promise made explicit",
+      ],
+      cases: [
+        { name: "K-Tigers", takeaway: "The national letter spliced onto a tiger: a demo-team brand giving dojangs idol-grade charisma — totem naming at its peak" },
+        { name: "Kukkiwon", takeaway: "The world headquarters named national technique institute: institutional gravity certifying itself — the ultimate orthodoxy endorsement" },
+        { name: "Master Kim's", takeaway: "The instructor's surname as the signboard: Korean lineage naming where the record is the credential — tradition's standard play" },
+        { name: "Tiger Rock", takeaway: "A US franchise fusing totem heat with steadiness: kid-thrilling and parent-reassuring in two syllables — the franchise-scale balance" },
+      ],
+      pitfalls: [
+        "Heat over character: war-and-fury words scare off the parent buying discipline and focus — the way leads, the fist follows",
+        "Blurring into kickboxing: skip the belt-and-way register and parents can't tell you from a fight gym — spend the asset only taekwondo owns",
+        "Unearned certification bravado: claim Kukkiwon affiliation only if it's real — boasting first and qualifying later poisons enrolment",
+        "Forgetting the kid's mouth: the core student is in primary school — the name must be easy to shout, spell and tell a classmate",
+      ],
+    },
+  },
+  fencing: {
+    slug: "fencing",
+    keywords: ["击剑俱乐部", "击剑培训", "少儿击剑", "fencing club", "fencing academy"],
+    tlds: [
+      { tld: "club", zh: "俱乐部身份直给，会籍与剑道预约体系都体面", en: "The club identity stated outright — dignified for memberships and piste bookings" },
+      { tld: "academy", zh: "教学体系的身份声明，家长看到就知道有等级大纲", en: "The academy identity declared — parents read the levels curriculum at once" },
+      { tld: "app", zh: "线上约课与赛事报名工具向时零解释，全后缀强制 HTTPS", en: "Zero explanation for booking and tournament tools; HTTPS enforced zone-wide" },
+    ],
+    zh: {
+      label: "击剑俱乐部",
+      title: "击剑俱乐部怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "击剑俱乐部与击剑培训命名指南：剑种意象、贵族运动语感等思路，万国击剑/En Garde/Blade Club 案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "击剑俱乐部的名字有一笔天生的资产：这是奥运项目里最自带「贵族气质」的运动之一——白衣、面罩、剑道上的敬礼，家长买的是优雅、专注与「像绅士一样竞争」的教养叙事。名字要把这笔气质资产用足，但别用过头变成势利。看行业样本：国内头部的「万国击剑」借「万国」的宏大与国际感立住连锁品牌的架子，名字先把「正规、成体系」说清；法语的 En Garde（预备）是击剑开赛口令，直接拿来命名是全球击剑馆的通用打法——一句行话让圈内人瞬间认亲；纽约的 Fencers Club 创立于 1883 年，用最朴素的「击剑者俱乐部」证明历史本身就是品牌。命名的隐藏考点是「三剑种的取舍」：花剑优雅、重剑沉稳、佩剑凌厉，若道馆主打单一剑种，名字的锋利度要跟着剑种走；全剑种俱乐部则留在「剑」的公约数上，别让名字锁死课表。",
+      namingIdeas: [
+        "开赛口令直给：En Garde、Allez、预备——击剑行话写进名字，圈内人一眼认亲",
+        "剑种意象：花剑的优雅、重剑的沉稳、佩剑的凌厉——主打剑种决定名字的锋利度",
+        "贵族气质借词：绅士、礼、致敬（salute）——优雅竞争的教养叙事，家长最吃这套语感",
+        "历史沉淀路线：Fencers Club 式的朴素命名——越老牌越敢朴素，新馆可借「学院、殿堂」补足体系感",
+        "锋刃词根：刃、锋、点、touché——击剑的「一剑封喉」瞬间写进名字，热血不失优雅",
+      ],
+      cases: [
+        { name: "万国击剑", takeaway: "「万国」的宏大与国际感立住连锁架子：正规成体系的承诺从名字开始——中文击剑品牌的标准结构" },
+        { name: "En Garde", takeaway: "开赛口令直接入名：一句行话让全球剑客瞬间认亲——术语命名的教科书" },
+        { name: "Fencers Club", takeaway: "1883 年的朴素命名活到今天：历史本身就是品牌——老牌俱乐部「敢朴素」的底气样本" },
+        { name: "Absolute Fencing", takeaway: "「绝对」一词把器材商的可靠承诺直给：装备安全无小事——器材命名以稳立信" },
+      ],
+      pitfalls: [
+        "贵族感用过头变势利：名字端到「非富即贵」的高度，把预算型家长挡在门外——优雅要有，门槛感要收",
+        "剑种锁死课表：名字绑死「花剑」，之后开重剑佩剑班就自相矛盾——单剑种馆才这么起名",
+        "与「剑道」「剑术」混淆：击剑（fencing）与日式剑道（kendo）是两个市场，名字要让家长一眼分清",
+        "忽略拼读门槛：épée、sabre 类法语词优雅但难拼，域名与搜索场景里错拼率高——主名用好拼的词根",
+      ],
+    },
+    en: {
+      label: "Fencing clubs",
+      title: "How to Name a Fencing Club: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Fencing club and academy naming guide: on-guard registers, blade imagery, breakdowns of En Garde/Fencers Club/Absolute Fencing, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A fencing club's name inherits an asset few sports can claim: this is the Olympic discipline with nobility built in — the whites, the mask, the salute on the piste — and the enrolling parent is buying elegance, focus and the education of competing like a gentleman. Spend that asset fully, but stop before it curdles into snobbery. The benchmarks show the range: En Garde, the referee's starting call, is the global default for club naming — one phrase of the sport's own language and every insider recognizes kin; New York's Fencers Club, founded in 1883, proves that history itself is a brand, the plainest possible name carried by pedigree; Absolute Fencing stakes an equipment maker's reliability promise in one word, because nothing about protective gear tolerates doubt. The hidden exam is the three-weapon question: foil is elegance, épée is patience, sabre is aggression — a single-weapon school can sharpen its name to match, but a full-curriculum club should stay on the blade's common ground and never let the name lock the timetable.",
+      namingIdeas: [
+        "The starting call stated plainly: en garde, allez, prêt — the sport's own language in the name, and insiders recognize kin at once",
+        "Weapon-register matching: foil's grace, épée's patience, sabre's edge — a single-weapon school sharpens the name to its blade",
+        "The nobility register: salute, gentleman, honour words — the elegant-competition narrative the enrolling parent buys first",
+        "The pedigree route: the Fencers Club move — the older the club, the plainer it dares to be; new schools borrow academy and hall for system weight",
+        "Blade roots: edge, point, touché — the one-touch instant written into the name, heat without losing the whites",
+      ],
+      cases: [
+        { name: "En Garde", takeaway: "The referee's call taken as the name: one phrase of fencing's own language and every insider is kin — the jargon-naming textbook" },
+        { name: "Fencers Club", takeaway: "The plainest name carried since 1883: history itself as the brand — the confidence of pedigree done simply" },
+        { name: "Absolute Fencing", takeaway: "Reliability staked in one word by an equipment house: protective gear tolerating no doubt — steadiness as the naming strategy" },
+        { name: "Touché Fencing", takeaway: "The acknowledged hit turned into a brand: wit and swordplay in one loanword — blade vocabulary at its most charming" },
+      ],
+      pitfalls: [
+        "Nobility curdling into snobbery: a name pitched at old money bars the budget-conscious parent — elegance yes, velvet rope no",
+        "Locking the timetable to one weapon: a foil-bound name contradicts next year's sabre class — sharpen only if you specialize",
+        "Blurring into kendo: fencing and Japanese swordsmanship are different markets — the name must sort them at the parent's first glance",
+        "Spelling-barrier loanwords: épée and prêt are elegant but mistyped daily — keep the primary name on roots people can spell",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

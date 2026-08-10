@@ -305,7 +305,7 @@
     ]
   },
   "guide": {
-    "count": 296,
+    "count": 302,
     "slugs": [
       "saas",
       "ecommerce",
@@ -602,7 +602,13 @@
       "cricket",
       "aquascaping",
       "fanclub",
-      "giveaway"
+      "giveaway",
+      "volleyball",
+      "tabletennis",
+      "baseball",
+      "boxing",
+      "taekwondo",
+      "fencing"
     ]
   },
   "vs": {

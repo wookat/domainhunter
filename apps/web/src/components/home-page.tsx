@@ -2145,6 +2145,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个抽奖活动与营销工具平台，寓意「像公证处一样可信的开奖台」；气质要喜气克制、工具感与公信力并存；场景是商家落地页、开奖倒数口播和活动海报上都体面好念不带赌气。",
     en: "A giveaway and campaign tool platform. The name should promise a drawing stage as trustworthy as a notary's office; the vibe is festive yet restrained, utility and credibility in one; it must hang on a merchant's landing page with dignity, read fast in the countdown, and carry no whiff of the wager.",
   },
+  {
+    slug: "volleyball",
+    labelZh: "排球俱乐部",
+    labelEn: "Volleyball club",
+    zh: "一家排球俱乐部与排球培训机构，寓意「网上三米一锤定音的滞空」；气质要热血利落、离地有劲；场景是球馆点名、联赛秩序册和家长群晒暑期招生里都喊得响、立得住。",
+    en: "A volleyball club and training academy. The name should carry the hang-time of the kill a metre above the net; the vibe is fired-up and clean, with lift built in; it must shout well at gym roll call, hold its own in the league handbook, and read proudly in the summer-camp flyer.",
+  },
+  {
+    slug: "tabletennis",
+    labelZh: "乒乓球俱乐部",
+    labelEn: "Table tennis club",
+    zh: "一家乒乓球俱乐部与培训馆，寓意「一板弧圈拉出的旋转」；气质要专业亲切、国球的底气配得上日常的烟火；场景是考级证书、约球群和球馆门头上都念得顺、认得出。",
+    en: "A table tennis club and training hall. The name should carry the spin of a well-drawn loop; the vibe is expert yet warm, the national game's confidence at everyday scale; it must read smoothly on the grading certificate, in the match-up chat, and over the hall's front door.",
+  },
+  {
+    slug: "baseball",
+    labelZh: "棒球培训",
+    labelEn: "Baseball training",
+    zh: "一家棒球培训与青训基地，寓意「九局下半仍相信下一棒」；气质要美式热血配聪明人的沉稳、孩子想挥棒家长觉得值；场景是球衣背后、开球仪式和家长群转发招生海报里都体面好念。",
+    en: "A baseball training academy. The name should carry the bottom-of-the-ninth faith in the next at-bat; the vibe is American-heat with a thinking player's calm, thrilling the kid and convincing the parent; it must print proudly on the jersey, ring at the first pitch, and read well in the enrolment flyer.",
+  },
+  {
+    slug: "boxing",
+    labelZh: "拳击馆",
+    labelEn: "Boxing gym",
+    zh: "一家拳击馆与搏击健身房，寓意「铃响之后只剩呼吸与脚步」；气质要有力量感不带戾气、小白敢推门行家肯点头；场景是拳台围绳、团课约课页和会员打卡照里都立得住、喊得响。",
+    en: "A boxing gym and fitness boxing studio. The name should promise the ring after the bell, all breath and footwork; the vibe is powerful without menace, easy for beginners to walk into and credible to insiders; it must hold up on the ring apron, the class-booking page, and the member's gym-selfie caption.",
+  },
+  {
+    slug: "taekwondo",
+    labelZh: "跆拳道馆",
+    labelEn: "Taekwondo school",
+    zh: "一家少儿跆拳道馆，寓意「向教练鞠躬时学会的第一课」；气质要有「道」的分量配「拳」的热血、孩子念得响家长读得懂；场景是道服刺绣、考级证书和幼儿园门口的招生易拉宝上都体面立得住。",
+    en: "A kids' taekwondo dojang. The name should carry the first lesson learned in the bow to the instructor; the vibe weighs the way before the fist, easy for a child to shout and a parent to trust; it must embroider well on the dobok, sit with dignity on the grading certificate, and hold up on the enrolment banner.",
+  },
+  {
+    slug: "fencing",
+    labelZh: "击剑俱乐部",
+    labelEn: "Fencing club",
+    zh: "一家击剑俱乐部与青少年击剑培训，寓意「白衣敬礼之后的一剑封喉」；气质要优雅有锋、贵而不势利；场景是剑道旁点名、赛事秩序册和家长群晒等级证书里都念得顺、立得住。",
+    en: "A fencing club and youth academy. The name should promise the one clean touch after the salute in whites; the vibe is elegant with an edge, refined without snobbery; it must call well at the piste, hold its own in the tournament programme, and read proudly beside the level certificate.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */
