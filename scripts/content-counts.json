@@ -534,7 +534,7 @@
     ]
   },
   "vs": {
-    "count": 294,
+    "count": 300,
     "slugs": [
       "com-vs-cn",
       "com-vs-io",
@@ -829,7 +829,13 @@
       "diamonds-vs-jewelry",
       "theater-vs-show",
       "accountants-vs-tax",
-      "engineer-vs-engineering"
+      "engineer-vs-engineering",
+      "villas-vs-rentals",
+      "cruises-vs-travel",
+      "voyage-vs-tours",
+      "limo-vs-taxi",
+      "tickets-vs-events",
+      "flowers-vs-florist"
     ]
   }
 }

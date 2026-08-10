@@ -297,6 +297,12 @@ export const COMPARE_SLUGS = [
   "theater-vs-show",
   "accountants-vs-tax",
   "engineer-vs-engineering",
+  "villas-vs-rentals",
+  "cruises-vs-travel",
+  "voyage-vs-tours",
+  "limo-vs-taxi",
+  "tickets-vs-events",
+  "flowers-vs-florist",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
