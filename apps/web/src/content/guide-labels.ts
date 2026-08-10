@@ -251,4 +251,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "jobboard", zh: "招聘求职平台", en: "Job boards" },
   { slug: "restaurantsupply", zh: "餐饮设备供应", en: "Restaurant supply" },
   { slug: "motorcycleparts", zh: "摩托车配件", en: "Motorcycle parts" },
+  { slug: "auction", zh: "拍卖行", en: "Auction houses" },
+  { slug: "antiques", zh: "古董古玩店", en: "Antique shops" },
+  { slug: "lightingbrand", zh: "灯具照明品牌", en: "Lighting brands" },
+  { slug: "outlet", zh: "折扣特卖店", en: "Outlet & discount stores" },
+  { slug: "watches", zh: "腕表钟表店", en: "Watch brands & dealers" },
+  { slug: "sneakers", zh: "球鞋潮鞋店", en: "Sneaker shops" },
 ];

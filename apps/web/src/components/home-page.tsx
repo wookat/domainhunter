@@ -1809,6 +1809,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一个摩托车配件与骑行装备品牌，寓意「轰油门的快感与硬核可靠」；气质要够快够硬、有骑士圈层认同、又配得上严谨的车型适配数据；场景是头盔贴纸、油箱 logo 和电商搜索里都够酷够准。",
     en: "A motorcycle parts and riding gear brand. The name should carry throttle-twisting thrill and forged-metal reliability; the vibe is fast, hard, and tribal enough for rider culture while credible next to precise fitment data; it must look sharp on a helmet sticker, a tank logo, and in marketplace search.",
   },
+  {
+    slug: "auction",
+    labelZh: "拍卖行",
+    labelEn: "Auction house",
+    zh: "一家拍卖行或在线拍卖平台，寓意「槌起槌落、价高者得」；气质要权威可信、担得起高价拍品、流程感正规；场景是拍卖师口播、图录封面和「我在这拍到的」口碑转述里都一次听清。",
+    en: "An auction house or online bidding platform. The name should carry the gavel's authority and highest-bidder-wins fairness; the vibe is institutional and trustworthy enough for high-value lots; it must land in one hearing when the auctioneer calls it, on a catalog cover, and in \"I won it there\" word of mouth.",
+  },
+  {
+    slug: "antiques",
+    labelZh: "古董古玩店",
+    labelEn: "Antique shop",
+    zh: "一家古董古玩店，寓意「有年头、有来历、值得收藏」；气质要有书卷气与出处感、风雅但好记、不显地摊气；场景是藏家转述、店招牌匾和搜索核实里都立得住。",
+    en: "An antique and vintage shop. The name should evoke age, provenance, and pieces worth collecting; the vibe is storied and refined yet memorable, never flea-market cheap; it must hold up in collector word of mouth, on a shop sign, and in a verification search.",
+  },
+  {
+    slug: "lightingbrand",
+    labelZh: "灯具照明品牌",
+    labelEn: "Lighting brand",
+    zh: "一个灯具与照明品牌，寓意「光定气质、亮得可靠」；气质要有设计感与光的意象、又配得上工程投标的正规感；场景是灯具吊牌、展厅门头和安装师傅的口头推荐里都好念好认。",
+    en: "A lighting and lamp brand. The name should carry the imagery of light setting a room's mood with dependable engineering; the vibe is design-minded yet formal enough for a project tender; it must read well on a fixture hang tag, a showroom front, and in an electrician's spoken referral.",
+  },
+  {
+    slug: "outlet",
+    labelZh: "折扣特卖店",
+    labelEn: "Outlet store",
+    zh: "一家折扣店或奥特莱斯特卖平台，寓意「捡到便宜的快感、超值不寒酸」；气质要响亮直给、有寻宝惊喜感、不显廉价；场景是「今天去逛逛」的日常对话、门头大字和限时特卖页里都好念好拼。",
+    en: "An outlet or discount store. The name should carry the thrill of scoring a bargain — great value without shabbiness; the vibe is loud, literal, and treasure-hunt fun, never cheap-feeling; it must roll off the tongue in \"let's swing by\" small talk, on big storefront letters, and on a flash-sale page.",
+  },
+  {
+    slug: "watches",
+    labelZh: "腕表钟表店",
+    labelEn: "Watch brand",
+    zh: "一个腕表品牌或钟表店，寓意「机芯里的年头与手艺」；气质要庄重有传承感、配得上高价签、全球好念；场景是表盘印字、鉴定证书和买家下单前的搜索核实里都立得住。",
+    en: "A watch brand or dealer. The name should carry the years and handwork inside the movement; the vibe is solemn and heritage-rich, worthy of the price tag, pronounceable worldwide; it must hold up printed on a dial, on an authentication certificate, and in a buyer's pre-purchase search.",
+  },
+  {
+    slug: "sneakers",
+    labelZh: "球鞋潮鞋店",
+    labelEn: "Sneaker shop",
+    zh: "一家球鞋买手店或潮鞋交易平台，寓意「圈内认证、街头血统」；气质要短而独特、有鞋圈黑话的会心一笑、适合做话题标签；场景是社媒标签、店铺门头和鞋盒贴纸里都够酷够认。",
+    en: "A sneaker boutique or resale platform. The name should carry tribal certification and street pedigree; the vibe is short, distinct, and knowing enough to make sneakerheads smile — built for hashtags; it must look sharp as a social tag, on a storefront, and on a shoebox sticker.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

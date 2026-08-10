@@ -15500,6 +15500,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  auction: {
+    slug: "auction",
+    keywords: ["拍卖行", "在线拍卖", "bidding platform"],
+    tlds: [
+      { tld: "com", zh: "大额竞价前买家必查的信任默认值", en: "The trust default buyers check before placing a big bid" },
+      { tld: "auction", zh: "品类专属后缀，域名自带槌声", en: "The category's own suffix — the gavel is in the domain" },
+      { tld: "market", zh: "交易市场语义直给，适合多品类竞价平台", en: "Marketplace semantics stated outright — fits multi-category bidding platforms" },
+    ],
+    zh: {
+      label: "拍卖行",
+      title: "拍卖行与在线拍卖平台怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "拍卖行命名指南：权威姓氏传统、槌声与竞价意象等思路，Sotheby's/eBay/Copart 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "拍卖是「信任先行」的生意：买家把真金白银押在你的鉴定与规则上，卖家把珍藏交给你定价。名字的第一使命是「像一家敢拍槌的机构」——Sotheby's、Christie's 两百年来用创始人姓氏证明了这条路：姓氏+年头=权威。但在线拍卖改写了局面：eBay 用轻快的造词把竞价变成大众娱乐，Copart 用 co+part 说清「车辆残值处置」。你的名字选哪种气质，取决于客单价与品类——百万级艺术品要庄重，日常好物竞拍可以轻快，法拍与资产处置则要「程序正义感」。拍卖还有独特的口头场景：拍卖师报出行号、买家转述「我在 X 拍到的」，名字必须一次听清。竞价有时间压力，域名拼错一次就错过一场——拼写唯一性在这个行业是硬指标。",
+      namingIdeas: [
+        "姓氏与机构传统：创始人姓氏或「姓氏 + 拍卖行」结构（Sotheby's、Bonhams）——艺术品与高客单场景里，姓氏自带年头与担保感",
+        "槌与竞价意象：gavel（槌）、bid、lot（拍品编号）、hammer price——行业词根让藏家一眼识别同类",
+        "垂直品类锚定：车辆、设备、酒类、域名各有专场，品类词+竞价词（CarBid 式结构）直接圈定买家",
+        "轻快造词降门槛：面向大众的好物竞拍平台学 eBay——两三个音节的造词把「拍卖」从殿堂拉进日常",
+        "程序感与公信力词：法拍与资产处置场景用 asset、trust、clear 等词根传递「流程合规、价高者得」",
+      ],
+      cases: [
+        { name: "Sotheby's", takeaway: "创始人姓氏经营近三百年：姓氏+年头把「谁在拍」变成担保本身——高客单拍卖命名的正统路线，权威是最贵的品牌资产" },
+        { name: "Christie's", takeaway: "同样的姓氏打法，与 Sotheby's 双雄并立两个世纪——证明拍卖行业的信任壁垒一旦建立，名字本身就是护城河" },
+        { name: "eBay", takeaway: "Echo Bay 缩合成四个字母：把拍卖从佳士得的殿堂拉到每个人的客厅，轻快造词消解了竞价的距离感——大众化拍卖命名的开山之作" },
+        { name: "Copart", takeaway: "co + part：事故车与残值车拍卖巨头，名字直给「车辆部件/处置」——垂直拍卖平台「品类写进名字」的教科书" },
+      ],
+      pitfalls: [
+        "轻佻名字接高价拍品：百万级艺术品挂在玩笑名下，委托人第一反应是换一家——名字的庄重度要配得上拍品",
+        "auction/bid 万金油堆砌：BidNow、AuctionHub 类组合毫无辨识度，且搜索里永远被巨头压住",
+        "拼写歧义在竞价场景致命：限时竞拍里用户拼错域名一次就错过一场，谐音与变形拼写要格外克制",
+        "只考虑线上忘了拍卖师口播：现场拍卖与直播拍卖里名字被反复念出，拗口的名字每场都在流失下一位买家",
+      ],
+    },
+    en: {
+      label: "Auction houses",
+      title: "How to Name an Auction House or Bidding Platform: Strategies, Cases & Domains",
+      metaDescription:
+        "Auction house and bidding platform naming guide: surname authority, gavel and bid imagery, vertical anchoring, breakdowns of Sotheby's/eBay/Copart, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Auctions are a trust-first business: buyers stake real money on your authentication and rules, and consignors hand you their treasures to price. The name's first job is to sound like an institution that dares to drop the gavel — Sotheby's and Christie's spent two centuries proving the route: surname plus years equals authority. Online auctions rewrote the field: eBay's playful coinage turned bidding into mass entertainment, and Copart's co + part spells out vehicle salvage disposal. Which register your name takes depends on ticket size and category — million-dollar art demands gravity, everyday-goods bidding can be light, and foreclosure or asset disposal needs a sense of procedural fairness. Auctions also have a unique spoken life: auctioneers call out lots and buyers retell \"I won it on X,\" so the name must land in one hearing. And bidding runs on deadlines — one misspelled domain means one missed sale, making spelling uniqueness a hard requirement in this trade.",
+      namingIdeas: [
+        "Surname and institutional tradition: founder surnames or the surname + auctions structure (Sotheby's, Bonhams) — in fine art and high-ticket lots, a surname carries years and guarantee",
+        "Gavel and bid imagery: gavel, bid, lot, hammer price — trade roots that collectors recognize on contact",
+        "Anchor a vertical: vehicles, equipment, wine and domains each run their own salerooms; category word + bidding word selects the buyers directly",
+        "Playful coinage to lower the door: consumer bidding platforms should study eBay — a two-to-three-syllable coinage pulls auctions from the saleroom into the living room",
+        "Procedure and credibility words: foreclosure and asset-disposal contexts lean on asset, trust and clear — signaling compliant process and highest-bidder-wins",
+      ],
+      cases: [
+        { name: "Sotheby's", takeaway: "A founder's surname run for nearly three centuries: surname plus years turning \"who's selling\" into the guarantee itself — the orthodox route for high-ticket auction naming, where authority is the costliest brand asset" },
+        { name: "Christie's", takeaway: "The same surname play, standing beside Sotheby's for two centuries — proof that once an auction trust moat is built, the name itself is the moat" },
+        { name: "eBay", takeaway: "Echo Bay contracted to four letters: pulling auctions from the saleroom into everyone's living room, a light coinage dissolving the distance of bidding — the founding case of mass-market auction naming" },
+        { name: "Copart", takeaway: "co + part: the salvage-vehicle auction giant stating vehicle parts and disposal outright — the textbook of writing the category into a vertical auction platform's name" },
+      ],
+      pitfalls: [
+        "A playful name on million-dollar lots: consignors' first instinct is to walk — the name's gravity must match the merchandise",
+        "The auction/bid filler pileup: BidNow and AuctionHub carry zero distinctiveness and stay buried under giants in search",
+        "Spelling ambiguity is fatal under a countdown: one mistyped domain in a timed sale is one missed lot — be ruthless about puns and warped spellings",
+        "Forgetting the auctioneer's call: in live and livestream sales the name is spoken over and over, and a tongue-twister leaks the next bidder every session",
+      ],
+    },
+  },
+  antiques: {
+    slug: "antiques",
+    keywords: ["古玩店", "古董收藏", "vintage collectibles"],
+    tlds: [
+      { tld: "com", zh: "高价藏品交易前买家必查的信任默认值", en: "The trust default buyers verify before a high-value purchase" },
+      { tld: "gallery", zh: "展陈气质直给，适合精品古董与艺术品商", en: "Curated-display character stated outright — fits fine antiques and art dealers" },
+      { tld: "auction", zh: "竞价出货的古玩商可让域名自带槌声", en: "Dealers who sell by bidding can put the gavel right in the domain" },
+    ],
+    zh: {
+      label: "古董古玩店",
+      title: "古董古玩店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "古董古玩店命名指南：年代与出处意象、堂号斋号传统等思路，1stDibs/Ruby Lane 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "古玩生意卖的是「时间与出处」：一件东西值多少钱，取决于它从哪来、传了几手、你敢不敢担保。名字要先回答「这家店懂行吗」——藏家圈里，一个有讲究的名字就是第一层鉴定书。中文传统里古玩店用堂号斋号（荣宝斋、朵云轩），一个「斋」字自带书卷气与年头；西方同行则爱用 antiques、curiosities 与创始人姓氏的组合。线上化带来了新范式：1stDibs 用「第一手挑选权」的俚语圈定高端买手，Ruby Lane 用一条虚构的小巷唤起淘货的浪漫。你的名字要在两个场景成立：藏家向同好转述时显得有来历，新客搜索时拼得出来。切记这个行业的信任极度依赖「人」——名字可以老派，但不能像地摊；可以风雅，但不能让人记不住。",
+      namingIdeas: [
+        "堂号斋号传统：斋、堂、轩、阁配一个有讲究的字眼——中文古玩命名的正统，一个字的书卷气抵十句自我介绍",
+        "年代与出处词根：vintage、heritage、estate、era——把「有年头、有来历」写进名字，藏家自动多看一眼",
+        "淘货场景意象：lane（小巷）、attic（阁楼）、trove（宝藏）——唤起「在旧物堆里发现珍宝」的浪漫，适合大众向平台",
+        "垂直品类锚定：明清瓷器、老银饰、机械钟表各有圈子，品类词入名直接过滤出对的买家",
+        "圈内俚语借力：1stDibs 的 dibs（优先权）证明——一个只有藏家会心一笑的词，就是最好的圈层暗号",
+      ],
+      cases: [
+        { name: "1stDibs", takeaway: "first dibs（优先挑选权）的俚语：把「买手抢先看好货」的行规写进名字，高端古董电商的圈层认证——俚语命名圈定懂行人的典范" },
+        { name: "Ruby Lane", takeaway: "一条虚构的「红宝石小巷」：用淘货小巷的意象把线上平台变成寻宝地图——场景意象命名在大众古玩市场的成功样本" },
+        { name: "荣宝斋", takeaway: "「以文会友，荣名为宝」缩成三字堂号：三百年老字号证明堂号传统的生命力——书卷气与年头感是中文古玩命名的第一资产" },
+        { name: "Sotheby's", takeaway: "拍卖行姓氏同样统治古董流通的高端：姓氏+年头=出处担保——古玩生意里「谁在卖」永远是名字要回答的第一个问题" },
+      ],
+      pitfalls: [
+        "「捡漏」气质过头：名字像地摊或清仓甩卖，高价藏品挂上去掉价——古玩可以亲民，不能廉价",
+        "生僻字堂号曲高和寡：斋号用了连藏家都读不出的字，口碑转述与搜索输入双双失灵",
+        "old/antique 直白堆砌：OldStuffShop 类名字既无书卷气也无辨识度，在搜索里沉底",
+        "忽略真伪担保的语境：古玩纠纷高发，名字之外要让「保真、可退、有据」看得见——名字再风雅也替代不了出处文件",
+      ],
+    },
+    en: {
+      label: "Antique shops",
+      title: "How to Name an Antique Shop: Strategies, Cases & Domains",
+      metaDescription:
+        "Antique and vintage shop naming guide: age and provenance imagery, treasure-hunt scenes, insider slang, breakdowns of 1stDibs/Ruby Lane/Sotheby's, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "The antiques trade sells time and provenance: what a piece is worth depends on where it came from, how many hands it passed through, and whether you'll stand behind it. The name must first answer \"does this shop know the trade\" — among collectors, a well-chosen name is the first certificate of authenticity. Western dealers pair antiques and curiosities with founder surnames; the online era added new patterns: 1stDibs claims the buyer's right of first pick in trade slang, and Ruby Lane conjures a fictional lane where treasure hunting feels romantic. Your name has to work in two scenes: sounding storied when one collector tells another, and spelling cleanly when a new buyer searches. Remember that trust in this trade hangs on people — the name may be old-fashioned but never flea-market cheap, refined but never forgettable.",
+      namingIdeas: [
+        "Age and provenance roots: vintage, heritage, estate, era — writing years and origin into the name earns the collector's second look",
+        "Treasure-hunt scene imagery: lane, attic, trove — evoking the romance of finding a gem in the pile; fits consumer-facing platforms",
+        "Anchor a vertical: porcelain, silver, mechanical clocks each have their circles — a category word in the name filters for the right buyers",
+        "Borrow insider slang: 1stDibs proves it — a word only collectors smile at is the best tribal password",
+        "Surname and years: the dealer's own name plus decades in trade remains the strongest provenance signal — in antiques, who is selling is the first question a name must answer",
+      ],
+      cases: [
+        { name: "1stDibs", takeaway: "Trade slang for the right of first pick: writing the dealer's-preview custom into the name, the insider credential of high-end antiques e-commerce — the model of slang naming that selects those in the know" },
+        { name: "Ruby Lane", takeaway: "A fictional lane of rubies: treasure-alley imagery turning an online platform into a hunting map — the successful sample of scene naming in the consumer vintage market" },
+        { name: "Sotheby's", takeaway: "The auction surname ruling high-end antique circulation too: surname plus centuries equals provenance guarantee — in this trade, who's selling is always the name's first answer" },
+        { name: "Replacements, Ltd.", takeaway: "A literal promise — replacing discontinued china and silver patterns: the world's largest tableware archive proving that in a service niche, a plain-spoken name outsells a poetic one" },
+      ],
+      pitfalls: [
+        "Overdoing the bargain-bin vibe: a name that smells of clearance cheapens five-figure pieces — antiques can be approachable, never cheap",
+        "Obscure archaisms nobody can read: if even collectors stumble on the name, word of mouth and search input both fail",
+        "The old/antique literal pileup: OldStuffShop-type names carry neither refinement nor distinctiveness and sink in search",
+        "Ignoring the authenticity context: disputes run high in antiques — guarantees, returns and documentation must be visible beyond the name; no elegance substitutes for provenance papers",
+      ],
+    },
+  },
+  lightingbrand: {
+    slug: "lightingbrand",
+    keywords: ["灯具品牌", "照明设计", "lamp store"],
+    tlds: [
+      { tld: "com", zh: "跨境电商与工程采购的信任默认值", en: "The trust default for cross-border e-commerce and project procurement" },
+      { tld: "lighting", zh: "品类专属后缀，域名即灯具货架", en: "The category's own suffix — the domain is the lighting aisle" },
+      { tld: "design", zh: "照明设计工作室的气质对口之选", en: "The register match for lighting design studios" },
+    ],
+    zh: {
+      label: "灯具照明品牌",
+      title: "灯具与照明品牌怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "灯具照明品牌命名指南：光影意象、北欧设计感等思路，Lutron/FLOS/Louis Poulsen 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "灯具是「功能+氛围」的双面生意：一盏灯既是照明设备，也是房间气质的定调者。命名要先选阵营——做工程与智能照明（面向采购与集成商），名字要传递技术可靠（Lutron 的实验室气质）；做设计师灯具（面向家居消费者），名字要传递美学品位（FLOS 在意大利语里就是「花」）。光是人类词库里意象最充沛的领域之一：lux、lumen、glow、ray、aura、halo——词根俯拾皆是，且几乎都自带正面联想，这是灯具命名的天然富矿。北欧与意大利品牌统治设计灯具的心智（Louis Poulsen、Artemide），一个带欧陆气质的名字在这个品类里天然加分。渠道上，灯具高度依赖电商图文与展厅体验，名字要在产品图水印、灯具吊牌与安装师傅的口头推荐里都立得住。",
+      namingIdeas: [
+        "光的词根富矿：lux、lumen、glow、halo、aura、ray——照明是正面意象密度最高的品类，一个光词根就完成气质定调",
+        "欧陆设计借力：意大利语、北欧语的短词自带设计灯具血统（FLOS、Artemide 式）——面向中高端家居市场天然加分",
+        "技术与控制词：面向工程与智能照明用 tron、logic、sense 等词根——采购方要的是「灯光受控可靠」的暗示",
+        "氛围与场景词：dusk、ember、north、studio——卖的不是灯是氛围，名字先把房间的光调出来",
+        "双场景测试：名字印在灯具吊牌上要有品位，出现在工程投标书里要够正规——两个场景都过关才算成立",
+      ],
+      cases: [
+        { name: "Lutron", takeaway: "创始人从 luminous + electron 造词：实验室气质写进名字，调光控制的开创者用「光+电子」宣告技术路线——工程照明命名的标杆" },
+        { name: "FLOS", takeaway: "意大利语「花」：设计灯具是绽放在天花板上的花，一个四字母外语词把美学立场说尽——欧陆借词命名的教科书" },
+        { name: "Louis Poulsen", takeaway: "丹麦创始人全名：北欧设计灯具的百年招牌，人名+年头=设计血统担保——设计师品牌姓氏路线的顶级样本" },
+        { name: "Philips Hue", takeaway: "hue（色相）一个词说清「光有一万种颜色」：智能照明子品牌借色彩学术语完成定位——大厂子品牌精准命名的典范" },
+      ],
+      pitfalls: [
+        "light/lamp 直白堆砌：LightShop、LampWorld 类名字毫无设计感，在讲美学的品类里先输一半",
+        "光词根撞车严重：lux/lumen 是全行业首选词根，注册前先查同行与商标——撞名的光词等于白起",
+        "工程与家居气质错配：给设计师台灯起了个自动化公司的名字，或反过来——先定客群再定语感",
+        "忽略安装与售后场景：灯具重安装重维保，名字在师傅的口头转述与保修卡上也要好念好认",
+      ],
+    },
+    en: {
+      label: "Lighting brands",
+      title: "How to Name a Lighting Brand: Strategies, Cases & Domains",
+      metaDescription:
+        "Lighting brand naming guide: light-word roots, European design borrowing, control and tech signals, breakdowns of Lutron/FLOS/Louis Poulsen/Philips Hue, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Lighting is a two-faced business of function plus atmosphere: a lamp is equipment and it is the room's mood-setter. Naming starts by picking a camp — engineering and smart lighting (sold to procurement and integrators) needs a name that transmits technical reliability (Lutron's laboratory air), while designer lighting (sold to homeowners) needs a name that transmits taste (FLOS is Italian for flower). Light is one of the richest image fields in the language: lux, lumen, glow, ray, aura, halo — roots everywhere, nearly all carrying positive charge; this is lighting's native ore vein. Nordic and Italian houses own the designer-lighting mindshare (Louis Poulsen, Artemide), so a name with continental character starts ahead in this category. Channel-wise, lighting lives on e-commerce imagery and showroom visits: the name must hold up as a watermark on product photos, on a fixture's hang tag, and in an electrician's spoken recommendation.",
+      namingIdeas: [
+        "Mine the light-word vein: lux, lumen, glow, halo, aura, ray — no category has denser positive imagery; one light root sets the register",
+        "Borrow continental design: short Italian or Nordic words carry designer-lighting pedigree (the FLOS, Artemide route) — a natural bonus in the mid-to-high home market",
+        "Tech and control words: for engineering and smart lighting, roots like tron, logic and sense — buyers want the hint that light behaves reliably",
+        "Atmosphere and scene words: dusk, ember, north, studio — you sell mood, not fixtures; let the name dial the room's light first",
+        "The two-scene test: the name must show taste on a fixture hang tag and look formal in an engineering tender — it passes only if both work",
+      ],
+      cases: [
+        { name: "Lutron", takeaway: "Coined from luminous + electron: laboratory character written into the name, the dimming pioneer declaring its technical route with light + electronics — the benchmark of engineering-lighting naming" },
+        { name: "FLOS", takeaway: "Italian for flower: designer lamps as blooms on the ceiling, four foreign letters stating an entire aesthetic — the textbook of continental borrowing" },
+        { name: "Louis Poulsen", takeaway: "The Danish founder's full name: a century-old Nordic lighting marque where surname plus years guarantees design pedigree — the top sample of the designer-surname route" },
+        { name: "Philips Hue", takeaway: "One word — hue — saying light comes in ten thousand colors: a smart-lighting sub-brand positioned with a color-science term — the model of precise big-company sub-branding" },
+      ],
+      pitfalls: [
+        "The light/lamp literal pileup: LightShop and LampWorld carry zero design feel — in an aesthetics-led category, that's half the game lost at the start",
+        "Light-root collisions: lux and lumen are the whole industry's first picks — check competitors and trademarks first; a collided light word is a wasted name",
+        "Mismatching engineering and home registers: an automation-company name on a designer table lamp (or the reverse) — fix the audience before the tone",
+        "Forgetting installation and after-sales: lighting is install-heavy — the name must survive the electrician's spoken referral and the warranty card",
+      ],
+    },
+  },
+  outlet: {
+    slug: "outlet",
+    keywords: ["折扣店", "奥特莱斯", "clearance store"],
+    tlds: [
+      { tld: "com", zh: "回头客直接输入的信任默认值", en: "The trust default repeat bargain hunters type straight in" },
+      { tld: "discount", zh: "折扣定位直给，域名即价格承诺", en: "Discount positioning stated outright — the domain is the price promise" },
+      { tld: "deals", zh: "捡便宜语义自带点击欲，适合特卖频道", en: "Bargain semantics with built-in click appeal — fits flash-sale channels" },
+    ],
+    zh: {
+      label: "折扣特卖店",
+      title: "折扣店与奥特莱斯特卖怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "折扣特卖店命名指南：捡漏惊喜感、价格承诺直给等思路，T.J.Maxx/Costco/Dollar Tree 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "折扣零售的心理学是「捡到便宜的快感」而非「买便宜货的将就」——这是命名的第一原则。T.J.Maxx 卖的是「用三折价买大牌」的寻宝体验，名字里的 Maxx 双写 x 传递「折扣拉满」；Dollar Tree 把「一美元」的价格承诺直接种成一棵树。好的折扣店名字要同时做到两件事：把「便宜」说得响亮（顾客为省钱而来），又不把「廉价」写在脸上（顾客不想觉得自己寒酸）。仓储会员制走另一条路：Costco 的 cost + co 直译「成本公司」，用「按成本卖给你」的暗示建立会员忠诚。折扣生意高频复购、口碑驱动，名字必须极度好念好记——它会出现在「今天去 X 逛逛」的日常对话里；线上特卖则要加一条：域名拼写零歧义，限时折扣等不起输错一次。",
+      namingIdeas: [
+        "价格承诺直给：dollar、half、outlet、wholesale 写进名字——折扣客群第一眼找的就是价格信号，直白就是转化",
+        "拉满与超值暗示：max、plus、extra、mega 等程度词（T.J.Maxx 的双 x）——传递「折扣给到底」的爽感",
+        "寻宝与惊喜意象：treasure、find、haul、hunt——折扣零售卖的是捡漏体验，名字先把寻宝地图画出来",
+        "成本与直供叙事：cost、direct、factory——Costco 式「砍掉中间商按成本卖」的暗示，会员制与工厂店尤其对口",
+        "克制「廉价感」：便宜要说得响亮但不能显得寒酸——cheap 一词慎用，顾客要的是聪明消费不是将就",
+      ],
+      cases: [
+        { name: "T.J.Maxx", takeaway: "Maxx 双写 x：把「折扣拉到最大」的暗示焊进拼写，寻宝式折扣零售的开创者——程度词变形命名的经典，一个字母的冗余换一份记忆点" },
+        { name: "Costco", takeaway: "cost + company：「我们按成本卖」的承诺压进六个字母，会员费才是利润的商业模式先在名字里立了信任——成本叙事命名的巅峰" },
+        { name: "Dollar Tree", takeaway: "价格点+意象词：「一美元」的承诺种成一棵摇钱树，价格锚定与好记意象一次完成——价格承诺命名的教科书" },
+        { name: "Ross Dress for Less", takeaway: "姓氏+广告语直接当店名：Dress for Less 四个词把定位说尽，名字即slogan——折扣零售「名字自带广告」的极致样本" },
+      ],
+      pitfalls: [
+        "廉价感盖过超值感：名字让顾客觉得「我在买便宜货」而非「我会买东西」——折扣客群要的是聪明不是寒酸",
+        "cheap/sale 万金油堆砌：CheapMart、SaleZone 类名字毫无辨识度，且把品牌永远锁死在最低端",
+        "价格点写死限制转型：叫 Dollar 后想卖五美元商品就尴尬（Dollar Tree 涨价风波）——价格入名先想好十年后",
+        "线上特卖忽略拼写：限时折扣的流量高峰里，每一次域名拼错都是白白流失的订单",
+      ],
+    },
+    en: {
+      label: "Outlet & discount stores",
+      title: "How to Name an Outlet or Discount Store: Strategies, Cases & Domains",
+      metaDescription:
+        "Outlet and discount store naming guide: treasure-hunt thrill, price promises, cost narratives, breakdowns of T.J.Maxx/Costco/Dollar Tree/Ross, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "The psychology of discount retail is the thrill of scoring a bargain, never the resignation of buying cheap — that's naming rule one. T.J.Maxx sells the treasure hunt of designer labels at a third of the price, its doubled x whispering discounts maxed out; Dollar Tree plants a one-dollar price promise and grows it into a tree. A good discount name does two things at once: says cheap loudly (customers come to save) without wearing cheapness on its face (nobody wants to feel poor). Warehouse clubs take another road: Costco's cost + co reads literally as the cost company, building member loyalty on the hint that goods sell at cost. Discount retail is high-frequency and word-of-mouth driven, so the name must be effortlessly speakable — it lives in \"let's swing by X today\" small talk. Online flash sales add one more bar: zero spelling ambiguity, because a countdown timer doesn't wait for a mistyped domain.",
+      namingIdeas: [
+        "State the price promise: dollar, half, outlet, wholesale in the name — bargain shoppers scan for price signals first; literal is conversion",
+        "Maxed-out and extra-value hints: degree words like max, plus, extra, mega (T.J.Maxx's double x) — transmitting the rush of discounts pushed to the floor",
+        "Treasure-hunt imagery: treasure, find, haul, hunt — discount retail sells the score, so draw the treasure map in the name",
+        "Cost and direct-supply narratives: cost, direct, factory — the Costco-style hint of cutting the middleman and selling at cost; built for membership clubs and factory outlets",
+        "Restrain the cheapness: say inexpensive loudly without sounding shabby — handle the word cheap with care; customers want smart shopping, not settling",
+      ],
+      cases: [
+        { name: "T.J.Maxx", takeaway: "The doubled x welding maxed-out discounts into the spelling: the pioneer of treasure-hunt retail — a classic of degree-word mutation, one redundant letter buying a permanent memory hook" },
+        { name: "Costco", takeaway: "cost + company: the we-sell-at-cost promise compressed into six letters, a business model where membership fees are the profit — trust established in the name first; the summit of cost-narrative naming" },
+        { name: "Dollar Tree", takeaway: "Price point + image word: a one-dollar promise planted into a money tree, price anchoring and memorability in one stroke — the textbook of price-promise naming" },
+        { name: "Ross Dress for Less", takeaway: "A surname plus the tagline as the store name: Dress for Less says the whole positioning in four words — the extreme sample of a discount name that is its own advertisement" },
+      ],
+      pitfalls: [
+        "Cheapness drowning value: a name that makes customers feel they buy cheap things rather than shop smart — bargain hunters want cleverness, not shabbiness",
+        "The cheap/sale filler pileup: CheapMart and SaleZone carry zero distinctiveness and lock the brand in the bargain basement forever",
+        "A hard-coded price point capping the future: call yourself Dollar and the five-dollar shelf gets awkward (see Dollar Tree's price-hike backlash) — think ten years ahead before pricing the name",
+        "Ignoring spelling in flash sales: at the traffic peak of a timed sale, every mistyped domain is an order handed away",
+      ],
+    },
+  },
+  watches: {
+    slug: "watches",
+    keywords: ["手表品牌", "腕表店", "watch dealer"],
+    tlds: [
+      { tld: "com", zh: "高价腕表交易前买家必查的信任默认值", en: "The trust default buyers verify before a four-figure watch purchase" },
+      { tld: "watch", zh: "品类专属后缀，域名即表盘", en: "The category's own suffix — the domain is the dial" },
+      { tld: "boutique", zh: "精品店气质直给，独立制表与授权零售对口", en: "Boutique character stated outright — on register for independent makers and authorized dealers" },
+    ],
+    zh: {
+      label: "腕表钟表店",
+      title: "腕表品牌与钟表店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "腕表钟表命名指南：制表师姓氏传统、时间意象等思路，Rolex/Hodinkee/Chrono24 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "腕表是「工艺信任」浓度最高的品类之一：一块表卖几千到几十万，买家买的是机芯里的年头与手艺。传统制表用姓氏说话——Patek Philippe、Audemars Piguet，双姓结构本身就是「两位制表师联手」的工艺担保；现代品牌则造词求短——Rolex 五个字母，任何语言都好念，且据说灵感是「royal + excellence」。二级市场与媒体是这个行业的另一半：Chrono24 用「计时+全天候」说清交易平台身份，Hodinkee 借捷克语「小表」的昵称在藏家圈建立亲密感。你的名字先选赛道：做表（姓氏或造词求庄重）、卖表（平台感与信任感）、还是聊表（圈内梗与亲密感）。腕表客群对拼写极其敏感——高价交易前买家一定会搜索核实，名字的拼写唯一性直接影响「查得到你」。",
+      namingIdeas: [
+        "制表师姓氏传统：姓氏或双姓结构（Patek Philippe 式）——手艺生意里人名即担保，独立制表师尤其适用",
+        "时间与计时词根：chrono、tempo、hora、tick——行业词根让表友一眼识别同类，交易平台与媒体通用",
+        "造词求短求庄重：Rolex 式两音节造词，全球好念、词典无义、商标干净——面向国际市场的品牌首选路线",
+        "圈内昵称与黑话：Hodinkee 借小语种昵称、speedy/sub 等表款爱称——聊表社区与藏家生意的圈层暗号",
+        "二手与鉴定信任词：面向二级市场用 authentic、certified、vault 等词根——高价交易的第一道心理安检",
+      ],
+      cases: [
+        { name: "Rolex", takeaway: "五字母造词、任何语言零障碍：词典无义所以全球独占，两音节所以口口相传——奢侈品命名「短造词」路线的百年标杆" },
+        { name: "Patek Philippe", takeaway: "两位制表师的双姓联名：姓氏+年头=机芯里的担保书，「你不曾拥有只是保管」的传承叙事从名字开始——制表姓氏传统的顶点" },
+        { name: "Chrono24", takeaway: "chrono（计时）+ 24（全天候）：全球腕表交易平台把行业词根与在线属性拼成一个名字——垂直平台自解释命名的教科书" },
+        { name: "Hodinkee", takeaway: "捷克语 hodinky（小表）的昵称化拼写：借小语种给腕表媒体注入亲密感与圈内感——表圈第一媒体证明「圈层暗号」的命名威力" },
+      ],
+      pitfalls: [
+        "luxury/royal 万金油堆砌：LuxuryWatchStore 类名字毫无工艺感，在讲传承的品类里像门外汉",
+        "轻佻名字接高价交易：几万块的表挂在玩笑名下，买家第一反应是「是不是假表」——庄重度要配得上价签",
+        "拼写歧义毁掉搜索核实：腕表买家下单前必搜品牌核实，拼不出来的名字直接流失最谨慎（也最有钱）的客户",
+        "表款黑话锁死扩张：名字绑定单一表款爱称（如 sub），想扩品类时名字成了天花板",
+      ],
+    },
+    en: {
+      label: "Watch brands & dealers",
+      title: "How to Name a Watch Brand or Dealer: Strategies, Cases & Domains",
+      metaDescription:
+        "Watch brand and dealer naming guide: watchmaker surname tradition, time roots, insider nicknames, breakdowns of Rolex/Patek Philippe/Chrono24/Hodinkee, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Watches carry the highest concentration of craft trust of almost any category: a piece sells for four to six figures, and the buyer is paying for years and handwork inside the movement. Traditional watchmaking speaks in surnames — Patek Philippe, Audemars Piguet; the double-surname structure is itself a guarantee that two watchmakers joined hands. Modern brands coin short — Rolex, five letters pronounceable in any language, reputedly from royal + excellence. The secondary market and media are the industry's other half: Chrono24 states its trading-platform identity with timing + around-the-clock, and Hodinkee borrows the Czech diminutive for a little watch to build intimacy with collectors. Pick your lane first: making watches (surnames or solemn coinage), selling watches (platform trust), or talking watches (in-group warmth). Watch buyers are ruthless about spelling — before any high-value purchase they search to verify, so spelling uniqueness decides whether the most careful (and richest) customers can find you.",
+      namingIdeas: [
+        "The watchmaker surname tradition: a surname or double-surname structure (the Patek Philippe route) — in a craft trade the maker's name is the guarantee; ideal for independent watchmakers",
+        "Time and chronometry roots: chrono, tempo, hora, tick — trade roots that watch people recognize on sight; works for platforms and media alike",
+        "Coin short and solemn: a Rolex-style two-syllable coinage — globally pronounceable, dictionary-free, trademark-clean; the first-choice route for international brands",
+        "Insider nicknames and slang: Hodinkee's minor-language diminutive, or collector pet names like speedy and sub — tribal passwords for watch communities and collector businesses",
+        "Second-hand trust words: for the secondary market, roots like authentic, certified and vault — the first psychological checkpoint of a high-value trade",
+      ],
+      cases: [
+        { name: "Rolex", takeaway: "A five-letter coinage with zero friction in any language: dictionary-free so globally ownable, two syllables so it travels by mouth — the century benchmark of the short-coinage route in luxury" },
+        { name: "Patek Philippe", takeaway: "Two watchmakers' surnames joined: surname plus years as the warranty written into the movement — \"you never actually own one\" heritage storytelling that begins with the name; the summit of the surname tradition" },
+        { name: "Chrono24", takeaway: "chrono + 24: the global watch marketplace bolting a trade root to an always-on numeral — the textbook of self-explaining vertical-platform naming" },
+        { name: "Hodinkee", takeaway: "A pet-spelling of Czech hodinky (little watch): a minor language lending the leading watch publication its intimacy and in-group warmth — proof of the tribal-password approach" },
+      ],
+      pitfalls: [
+        "The luxury/royal filler pileup: LuxuryWatchStore-type names carry zero craft feel — in a heritage category they read like an outsider",
+        "A playful name on high-value trades: a five-figure watch under a joke name triggers \"is this fake?\" — solemnity must match the price tag",
+        "Spelling ambiguity killing the verification search: watch buyers always search before buying — an unspellable name loses precisely the most careful, best-funded customers",
+        "Model slang capping the brand: bind the name to one reference's nickname (like sub) and every future category fights the name",
+      ],
+    },
+  },
+  sneakers: {
+    slug: "sneakers",
+    keywords: ["球鞋店", "潮鞋买手店", "sneakerhead"],
+    tlds: [
+      { tld: "com", zh: "高价球鞋交易与跨境买手的信任默认值", en: "The trust default for high-value sneaker trades and cross-border buying" },
+      { tld: "shoes", zh: "品类专属后缀，域名即鞋墙", en: "The category's own suffix — the domain is the sneaker wall" },
+      { tld: "store", zh: "买手店属性直给，独立站起步的顺手之选", en: "Boutique retail stated outright — a natural start for an independent shop" },
+    ],
+    zh: {
+      label: "球鞋潮鞋店",
+      title: "球鞋店与潮鞋买手店怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "球鞋潮鞋店命名指南：鞋圈黑话、街头文化梗等思路，StockX/GOAT/Kith 等案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "球鞋是「文化含量」最高的零售品类之一：买家不叫顾客叫 sneakerhead，一双鞋的价值一半在脚上一半在圈子里。名字的第一使命是「圈内认证」——GOAT（Greatest of All Time）借体育圈的至高赞誉命名球鞋交易平台，鞋头看到会心一笑，路人看到不明觉厉，这就是圈层命名的完美状态。二级市场的另一巨头 StockX 反其道行之：把球鞋当股票（stock exchange），用金融隐喻宣告「球鞋是资产」。买手店则讲街头血统：Kith 是俚语 kith and kin（亲友）的截取，纽约起家的它用一个词说清「自己人」。你的名字先定位置：做交易平台（信任与流动性暗示）、做买手店（街头品位与圈内感）、还是做鉴定服务（真假是生死线）。球鞋客群年轻、活在社交媒体上，名字必须适合做话题标签——短、独特、拼写唯一。",
+      namingIdeas: [
+        "鞋圈黑话入名：GOAT、grail（圣杯鞋）、colorway、deadstock——一个圈内词就是最硬的入场券，鞋头自动识别自己人",
+        "金融与资产隐喻：StockX 证明球鞋是「可交易资产」——stock、index、vault 等词根适合交易与寄卖平台",
+        "街头文化与俚语：kith、crep（英式俚语「鞋」）等街头词——买手店的名字要像从街区长出来的",
+        "真假与鉴定信任词：假鞋是行业毒瘤，legit、check、verified 等词根适合鉴定服务与二手平台",
+        "话题标签测试：名字加 # 号发社媒——太长、太通用、拼写有歧义的名字在传播链路第一环就断掉",
+      ],
+      cases: [
+        { name: "GOAT", takeaway: "Greatest of All Time：体育圈至高赞誉借给球鞋平台，四个字母同时完成圈内认证与野心宣言——黑话命名的天花板，且自带动物形象可做视觉" },
+        { name: "StockX", takeaway: "球鞋当股票交易：stock exchange 的金融隐喻宣告「球鞋是资产」，实时行情式的买卖体验从名字开始——品类再定义式命名的教科书" },
+        { name: "Kith", takeaway: "俚语 kith and kin（亲友）的截取：一个词说清「自己人的店」，纽约街头血统与亲密感一次到位——买手店俚语命名的标杆" },
+        { name: "Foot Locker", takeaway: "foot + locker（更衣柜）：把「运动装备储藏格」的意象做成全球连锁，直白但有场景——大众球鞋零售命名的经典样本" },
+      ],
+      pitfalls: [
+        "sneaker/kicks 万金油堆砌：SneakerHub、KicksZone 类名字在鞋圈毫无街头信誉，一眼路人",
+        "蹭大牌鞋款名踩商标线：名字里带 Jordan/Yeezy 等元素，法务函比第一单来得还快",
+        "圈外人视角起名：鞋圈对「装内行」极其敏感，用错黑话比不用黑话更减分——不确定就别用",
+        "忽略真假语境：二手球鞋纠纷高发，名字之外要让鉴定与担保看得见——名字再酷也替代不了 legit check",
+      ],
+    },
+    en: {
+      label: "Sneaker shops",
+      title: "How to Name a Sneaker Shop or Resale Platform: Strategies, Cases & Domains",
+      metaDescription:
+        "Sneaker shop and resale naming guide: sneakerhead slang, asset metaphors, street credibility, breakdowns of GOAT/StockX/Kith/Foot Locker, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "Sneakers are among the most culture-dense categories in retail: buyers aren't customers, they're sneakerheads, and half a shoe's value lives on the foot while the other half lives in the scene. The name's first job is tribal certification — GOAT borrowed sport's highest honorific for a sneaker marketplace; heads smile, outsiders sense gravity, and that's slang naming at its peak. The other resale giant went the opposite way: StockX trades sneakers like equities, a financial metaphor declaring sneakers are assets. Boutiques speak street pedigree: Kith clips the idiom kith and kin, one word telling New York \"we're your people.\" Position first: marketplace (trust and liquidity hints), boutique (street taste and in-group warmth), or authentication service (real-versus-fake is life and death). Sneaker buyers are young and live on social media, so the name must work as a hashtag — short, distinct, spelled one way only.",
+      namingIdeas: [
+        "Sneakerhead slang in the name: GOAT, grail, colorway, deadstock — one insider word is the hardest entry ticket there is; heads recognize their own",
+        "Finance and asset metaphors: StockX proved sneakers trade like assets — roots like stock, index and vault fit marketplaces and consignment",
+        "Street culture and idiom clips: kith, crep — a boutique's name should feel like it grew out of the block",
+        "Authenticity trust words: fakes are the industry's poison — roots like legit, check and verified fit authentication services and resale",
+        "The hashtag test: put a # in front and post it — names too long, too generic or ambiguously spelled break at the first link of the sharing chain",
+      ],
+      cases: [
+        { name: "GOAT", takeaway: "Greatest of All Time: sport's highest honorific lent to a sneaker marketplace, four letters delivering tribal certification and an ambition statement at once — the ceiling of slang naming, with a mascot image built in" },
+        { name: "StockX", takeaway: "Sneakers traded like equities: the stock-exchange metaphor declaring sneakers are assets, ticker-style bid/ask experience beginning at the name — the textbook of category-redefining naming" },
+        { name: "Kith", takeaway: "The idiom kith and kin clipped to one word: a shop for your people, New York street pedigree and intimacy in a single syllable — the benchmark of boutique idiom naming" },
+        { name: "Foot Locker", takeaway: "foot + locker: the gym-locker image scaled into a global chain — literal but scene-rich; the classic sample of mass-market sneaker retail naming" },
+      ],
+      pitfalls: [
+        "The sneaker/kicks filler pileup: SneakerHub and KicksZone carry zero street credibility — instantly read as outsiders",
+        "Riding big-brand model names into trademark fire: put Jordan or Yeezy elements in the name and the legal letter arrives before the first order",
+        "Naming from outside the culture: the scene is merciless about posers — misused slang scores worse than no slang; when unsure, don't",
+        "Ignoring the authenticity context: resale disputes run high — authentication and guarantees must be visible beyond the name; no amount of cool substitutes for the legit check",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
