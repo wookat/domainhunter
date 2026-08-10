@@ -1,0 +1,75 @@
+{
+  "/guide/coffee": {
+    "相关后缀对比": {
+      "ssr": [
+        "/vs/com-vs-cn",
+        "/vs/com-vs-io",
+        "/vs/com-vs-net",
+        "/vs/com-vs-ai"
+      ],
+      "hydrated": [
+        "/vs/com-vs-cn",
+        "/vs/com-vs-io",
+        "/vs/com-vs-net",
+        "/vs/com-vs-ai"
+      ],
+      "equal": true
+    },
+    "相关行业指南": {
+      "ssr": [
+        "/guide/bakery",
+        "/guide/farm",
+        "/guide/brewery",
+        "/guide/foodtruck",
+        "/guide/mealprep",
+        "/guide/bar"
+      ],
+      "hydrated": [
+        "/guide/bakery",
+        "/guide/farm",
+        "/guide/brewery",
+        "/guide/foodtruck",
+        "/guide/mealprep",
+        "/guide/bar"
+      ],
+      "equal": true
+    }
+  },
+  "/vs/com-vs-cn": {
+    "相关行业命名指南": {
+      "ssr": [
+        "/guide/saas",
+        "/guide/ecommerce",
+        "/guide/ai",
+        "/guide/pets"
+      ],
+      "hydrated": [
+        "/guide/saas",
+        "/guide/ecommerce",
+        "/guide/ai",
+        "/guide/pets"
+      ],
+      "equal": true
+    },
+    "相关对比": {
+      "ssr": [
+        "/vs/com-vs-io",
+        "/vs/com-vs-net",
+        "/vs/com-vs-ai",
+        "/vs/com-vs-xyz",
+        "/vs/shop-vs-com",
+        "/vs/com-vs-me"
+      ],
+      "hydrated": [
+        "/vs/com-vs-io",
+        "/vs/com-vs-net",
+        "/vs/com-vs-ai",
+        "/vs/com-vs-xyz",
+        "/vs/shop-vs-com",
+        "/vs/com-vs-me"
+      ],
+      "equal": true
+    }
+  },
+  "all_equal": true
+}
