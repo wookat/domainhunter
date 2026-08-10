@@ -3,6 +3,7 @@ import { VS_HUB_META, compareHubGroups, compareHubPair, compareHubTitle } from "
 import { useI18n } from "@/lib/i18n";
 import { usePageTitle } from "@/lib/use-page-title";
 import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
+import { BackToTop, HubAnchorNav, hubAnchorId } from "./hub-nav";
 
 /** /vs 索引 hub：全部 TLD 对比页，按左侧后缀分组。DOM 与 worker 的 compareHubBlocks 骨架逐字一致。 */
 export function CompareHubPage() {
@@ -33,9 +34,10 @@ export function CompareHubPage() {
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{meta.title}</h1>
       <p className="mt-6 text-[15px] leading-relaxed text-txt1">{meta.intro}</p>
       <HubFilter placeholder={lang === "zh" ? "筛选对比…" : "Filter comparisons…"} value={query} onChange={setQuery} shown={shown} total={total} />
+      <HubAnchorNav lang={lang} items={filtered.map((g) => ({ id: g.tld, label: `.${g.tld}`, count: g.slugs.length }))} />
       {filtered.length === 0 && <HubFilterEmpty lang={lang} onClear={() => setQuery("")} />}
       {filtered.map((g) => (
-        <section key={g.tld} className="mt-8">
+        <section key={g.tld} id={hubAnchorId(g.tld)} className="mt-8 scroll-mt-28">
           <h2 className="font-mono text-base font-bold">
             .{g.tld}
             <span className="tnum ml-2 text-xs font-normal text-txt2">{g.slugs.length}</span>
@@ -53,6 +55,7 @@ export function CompareHubPage() {
           </div>
         </section>
       ))}
+      <BackToTop lang={lang} />
     </main>
   );
 }

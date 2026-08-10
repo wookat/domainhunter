@@ -333,8 +333,19 @@ export const hubCrumbLabel = (hub: "tld" | "guide" | "vs", lang: Lang): string =
 /** hub 页过滤输入框的等高占位（输入框水合后才出现，预留 44px 高度避免布局跳动） */
 const HUB_FILTER_PLACEHOLDER = `<div class="mt-6 h-11"></div>`;
 
-const hubSection = (heading: string, count: number, itemsHtml: string, headingCls = "text-base font-bold") =>
-  `<section class="mt-8"><h2 class="${headingCls}">${escapeHtml(heading)}<span class="tnum ml-2 font-mono text-xs font-normal text-txt2">${count}</span></h2>${itemsHtml}</section>`;
+const hubSection = (id: string, heading: string, count: number, itemsHtml: string, headingCls = "text-base font-bold") =>
+  `<section id="hub-g-${id}" class="mt-8 scroll-mt-28"><h2 class="${headingCls}">${escapeHtml(heading)}<span class="tnum ml-2 font-mono text-xs font-normal text-txt2">${count}</span></h2>${itemsHtml}</section>`;
+
+const HUB_NAV_LABEL = { zh: "分组导航", en: "Group navigation" } as const;
+
+/** 分组锚点导航 chips（与 hub-nav.tsx 的 HubAnchorNav 初始渲染逐字一致） */
+const hubNavChips = (lang: Lang, items: { id: string; label: string; count: number }[]) =>
+  `<nav aria-label="${HUB_NAV_LABEL[lang]}" class="sticky top-14 z-10 -mx-4 mt-4 overflow-x-auto border-b border-line bg-bg0/95 px-4 py-2 backdrop-blur md:-mx-6 md:px-6"><div class="flex w-max gap-2">${items
+    .map(
+      (it) =>
+        `<a href="#hub-g-${it.id}" class="flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:border-brand-line">${escapeHtml(it.label)}<span class="tnum ml-1.5 font-mono text-[10px] text-txt2">${it.count}</span></a>`,
+    )
+    .join("")}</div></nav>`;
 
 const hubCard = (href: string, title: string, oneLiner: string, titleCls: string) =>
   `<a href="${href}" class="flex min-h-[44px] flex-col justify-center rounded-lg border border-line bg-bg1 px-3.5 py-2.5 transition-colors hover:border-brand-line"><span class="${titleCls}">${escapeHtml(title)}</span><span class="mt-0.5 text-xs leading-relaxed text-txt1">${escapeHtml(oneLiner)}</span></a>`;
@@ -342,9 +353,10 @@ const hubCard = (href: string, title: string, oneLiner: string, titleCls: string
 /** /tld 全文正文（tld-hub-page.tsx 首次渲染的静态部分） */
 export function tldHubBlocks(lang: Lang): string[] {
   const meta = HUB_META.tld[lang];
-  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}<a href="/prices?lang=${lang}" class="tap-target inline-block text-brand hover:underline">${escapeHtml(meta.pricesLink)}</a>${lang === "zh" ? "。" : "."}</p>${HUB_FILTER_PLACEHOLDER}`;
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}<a href="/prices?lang=${lang}" class="tap-target inline-block text-brand hover:underline">${escapeHtml(meta.pricesLink)}</a>${lang === "zh" ? "。" : "."}</p>${HUB_FILTER_PLACEHOLDER}${hubNavChips(lang, tldHubGroups().map((g) => ({ id: g.id, label: g[lang], count: g.tlds.length })))}`;
   const sections = tldHubGroups().map((g) =>
     hubSection(
+      g.id,
       g[lang],
       g.tlds.length,
       `<div class="mt-3 grid gap-2 sm:grid-cols-2">${g.tlds.map((tld) => hubCard(`/tld/${tld}?lang=${lang}`, `.${tld}`, tldOneLiner(tld, lang), "font-mono text-sm font-semibold text-brand")).join("")}</div>`,
@@ -356,9 +368,10 @@ export function tldHubBlocks(lang: Lang): string[] {
 /** /guide 全文正文（guide-hub-page.tsx 首次渲染的静态部分） */
 export function guideHubBlocks(lang: Lang): string[] {
   const meta = HUB_META.guide[lang];
-  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>${HUB_FILTER_PLACEHOLDER}`;
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>${HUB_FILTER_PLACEHOLDER}${hubNavChips(lang, guideHubGroups().map((g) => ({ id: g.id, label: g[lang], count: g.slugs.length })))}`;
   const sections = guideHubGroups().map((g) =>
     hubSection(
+      g.id,
       g[lang],
       g.slugs.length,
       `<div class="mt-3 grid gap-2 sm:grid-cols-2">${g.slugs.map((slug) => hubCard(`/guide/${slug}?lang=${lang}`, INDUSTRY_GUIDES[slug][lang].label, guideOneLiner(slug, lang), "text-sm font-semibold text-brand")).join("")}</div>`,
@@ -370,9 +383,9 @@ export function guideHubBlocks(lang: Lang): string[] {
 /** /vs 全文正文（compare-hub-page.tsx 首次渲染的静态部分） */
 export function compareHubBlocks(lang: Lang): string[] {
   const meta = HUB_META.vs[lang];
-  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>${HUB_FILTER_PLACEHOLDER}`;
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>${HUB_FILTER_PLACEHOLDER}${hubNavChips(lang, compareHubGroups().map((g) => ({ id: g.tld, label: `.${g.tld}`, count: g.slugs.length })))}`;
   const sections = compareHubGroups().map((g) =>
-    `<section class="mt-8"><h2 class="font-mono text-base font-bold">.${g.tld}<span class="tnum ml-2 text-xs font-normal text-txt2">${g.slugs.length}</span></h2><div class="mt-3 flex flex-wrap gap-2">${g.slugs
+    `<section id="hub-g-${g.tld}" class="mt-8 scroll-mt-28"><h2 class="font-mono text-base font-bold">.${g.tld}<span class="tnum ml-2 text-xs font-normal text-txt2">${g.slugs.length}</span></h2><div class="mt-3 flex flex-wrap gap-2">${g.slugs
       .map((slug) => `<a href="/vs/${slug}?lang=${lang}" class="flex min-h-[44px] items-center rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">.${TLD_COMPARES[slug].a} vs .${TLD_COMPARES[slug].b}</a>`)
       .join("")}</div></section>`,
   );
