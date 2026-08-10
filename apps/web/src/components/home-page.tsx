@@ -2272,6 +2272,48 @@ const TEMPLATES: { slug: string; labelZh: string; labelEn: string; zh: string; e
     zh: "一家轮滑俱乐部与少儿滑冰培训，寓意「像风一样滑出去、稳稳收住」；气质要飞得酷落得稳、孩子觉得帅家长觉得安全；场景是场边点名、考级证书和商场冰场的招生展架上都念得顺、立得住。",
     en: "A skating club and kids' programme. The name should carry the glide that flies like wind and lands in control; the vibe is cool in flight and safe on landing, thrilling to the kid and reassuring to the parent; it must call well rink-side, sit with dignity on the grading certificate, and hold up on the mall-rink enrolment stand.",
   },
+  {
+    slug: "candle",
+    labelZh: "香薰蜡烛",
+    labelEn: "Candle brand",
+    zh: "一个香薰蜡烛与香氛品牌，寓意「点燃之后那一小时被照亮的情绪」；气质要体面有留白、送礼拿得出手；场景是礼盒烫金、杯身标签和小红书开箱笔记里都好看好念、立得住。",
+    en: "A scented candle and home fragrance brand. The name should carry the hour of lit-up mood that follows the match; the vibe is dignified with room to breathe, worthy of a gift box; it must foil-stamp well on the lid, fit the vessel's slim label, and read beautifully in the unboxing post.",
+  },
+  {
+    slug: "juicebar",
+    labelZh: "果汁轻食吧",
+    labelEn: "Juice bar",
+    zh: "一家鲜榨果汁与轻食吧，寓意「一口下去的新鲜与被按下的活力开关」；气质要干净明亮、健康不说教；场景是外卖首图、杯贴和写字楼午休排队闲聊里都响亮好念、立得住。",
+    en: "A fresh-pressed juice and light-bites bar. The name should carry the first-sip freshness and the energy switch it flips; the vibe is clean and bright, healthy without preaching; it must pop on the delivery-app thumbnail, sit neatly on the cup sleeve, and say easily in the office lunch-line chat.",
+  },
+  {
+    slug: "leathercraft",
+    labelZh: "皮具工作室",
+    labelEn: "Leather workshop",
+    zh: "一家手工皮具工作室与皮革定制品牌，寓意「一双手在植鞣革上花掉的八个小时」；气质要匠气可信、慢而不旧；场景是烫印皮标、定制订单页和体验课招募帖里都体面好念、立得住。",
+    en: "A leathercraft workshop and bespoke leather brand. The name should carry the eight hours a pair of hands spends on veg-tanned hide; the vibe is maker-credible, slow without being dusty; it must hot-stamp well on the leather patch, hold up on the commission page, and read warmly in the craft-class post.",
+  },
+  {
+    slug: "calligraphy",
+    labelZh: "书法工作室",
+    labelEn: "Calligraphy studio",
+    zh: "一家书法工作室与书法培训，寓意「笔锋落纸时那一刻的静与定」；气质要有文气不掉书袋、家长读出坐得住孩子；场景是斋号牌匾、考级证书和作品落款里都体面好念、立得住。",
+    en: "A calligraphy studio and training programme. The name should carry the stillness of the instant the brush meets paper; the vibe is scholarly without pedantry, telling a parent this is where focus is learned; it must sit well on the studio plaque, hold dignity on the grading certificate, and sign gracefully at the corner of the work.",
+  },
+  {
+    slug: "instrumentstore",
+    labelZh: "乐器行",
+    labelEn: "Instrument store",
+    zh: "一家乐器行，寓意「推门进来就听见的那一声好音色」；气质要懂行不高冷、家长信得过老乐手聊得来；场景是门头招牌、老师推荐口碑和直播间评测标题里都响亮好念、立得住。",
+    en: "A music instrument store. The name should carry the good tone you hear the moment the door opens; the vibe is gear-savvy without snobbery, trusted by the parent and talkable for the veteran; it must read well on the shopfront, travel in the teacher's recommendation, and pop in the live-stream review title.",
+  },
+  {
+    slug: "meditation",
+    labelZh: "冥想馆",
+    labelEn: "Meditation studio",
+    zh: "一家冥想馆与正念工作室，寓意「城市里留给呼吸的那一隅安静」；气质要安静有科学感、不玄学不烧香；场景是午休课预约页、企业团建方案和睡前音频片头里都念得顺、立得住。",
+    en: "A meditation and mindfulness studio. The name should carry the quiet corner a city leaves for breathing; the vibe is calm and evidence-minded, no mysticism, no incense; it must book well on the lunch-break class page, sit credibly in the corporate-wellness deck, and open the sleep audio gently.",
+  },
 ];
 
 /** /?tpl=<slug> 预填行业模板（行业命名指南页 CTA 入口）；slug 对不上忽略 */

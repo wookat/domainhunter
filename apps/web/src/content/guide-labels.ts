@@ -317,4 +317,10 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "curling", zh: "冰壶俱乐部", en: "Curling clubs" },
   { slug: "rowing", zh: "赛艇俱乐部", en: "Rowing clubs" },
   { slug: "skating", zh: "轮滑滑冰", en: "Skating clubs" },
+  { slug: "candle", zh: "香薰蜡烛", en: "Candle brands" },
+  { slug: "juicebar", zh: "果汁轻食吧", en: "Juice bars" },
+  { slug: "leathercraft", zh: "皮具工作室", en: "Leather studios" },
+  { slug: "calligraphy", zh: "书法工作室", en: "Calligraphy studios" },
+  { slug: "instrumentstore", zh: "乐器行", en: "Instrument stores" },
+  { slug: "meditation", zh: "冥想馆", en: "Meditation studios" },
 ];
