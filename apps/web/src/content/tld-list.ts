@@ -60,6 +60,7 @@ export const TLD_LIST = [
   "tokyo", "miami", "boston", "healthcare", "abogado", "kaufen",
   "berlin", "paris", "amsterdam", "vegas", "immobilien", "tienda",
   "de", "eu", "ca", "au", "jp", "sg",
+  "fr", "it", "es", "nl", "kr", "hk",
 ] as const;
 
 export type Tld = (typeof TLD_LIST)[number];

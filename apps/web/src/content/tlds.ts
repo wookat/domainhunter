@@ -10464,6 +10464,186 @@ const GUIDES = {
       ],
     },
   },
+  fr: {
+    tld: "fr",
+    zh: {
+      title: ".fr 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".fr 是法国国家域名，需欧盟/EEA 居民或机构资格，本地信任度极高，适合面向法国市场的品牌、电商与服务。查看 .fr 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fr 域名。",
+      intro:
+        ".fr 是法国的国家域名，由非营利注册局 AFNIC 运营，注册量超过 400 万，是欧洲第四大 ccTLD。法国消费者对本土信号非常敏感：本地电商、品牌官网、餐饮与服务商用 name.fr，「法国的生意」一眼讲清，信任度远超一般新后缀——法国本土巨头与政府机构的主站几乎都在 .fr 上；Google 也会把 .fr 站点与法国地区相关联，法语市场 SEO 有天然加成。已收录的 .paris 服务巴黎同城，而 .fr 覆盖整个法国市场，是做法国生意的通用入口。资格上 AFNIC 要求注册人为欧盟/欧洲经济区（含瑞士、挪威、冰岛、列支敦士登）的个人或机构；非欧盟主体需在欧盟设立实体或使用注册商的本地代理服务（Gandi、OVH 等法系注册商都支持），注册前确认即可。价格温和且接近平续：注册约 $9（约 ¥65），续费约 $10/年（约 ¥72），无引流钩子。库存比 .com 充裕得多，法语词根与品牌词命中率高。命名上品牌词直接上（brand.fr）最主流；面向法国用户，法语词根比英文词更亲切，本地服务用「行业法语词 + .fr」很自然。",
+      bestFor: ["面向法国市场的电商", "法国本地服务与门店", "进入法国市场的海外品牌", "法语内容与媒体站"],
+      namingTips: [
+        "需欧盟/EEA 居民或机构资格，海外注册确认注册商代理支持",
+        "注册约 $9、续费约 $10/年，差价小无钩子",
+        "法语词根对法国用户比英文词更亲切",
+        "只做巴黎同城可对比 .paris，全国生意 .fr 更通用",
+      ],
+    },
+    en: {
+      title: ".fr Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".fr is France's country domain — EU/EEA residency or establishment required — with top-tier local trust for France-market brands, e-commerce and services. See live pricing and naming advice, then hunt available .fr names with AI.",
+      intro:
+        ".fr is France's country-code domain, run by the non-profit registry AFNIC with over 4 million registrations — Europe's fourth-largest ccTLD. French consumers are highly attuned to local signals: name.fr says \"a French business\" at a glance, with trust far beyond any new gTLD — France's household brands and government sites live on .fr; Google also geo-associates .fr sites with France, a free boost for French-market SEO. Among already-listed suffixes, .paris serves one city — .fr covers the entire French market, the universal entrance for doing business in France. On eligibility, AFNIC requires registrants to be individuals or organizations in the EU/EEA (plus Switzerland, Norway, Iceland, Liechtenstein); non-EU entities need an EU establishment or a registrar's local-proxy service (French-family registrars like Gandi and OVH support it) — confirm before buying. Pricing is gentle and near-flat: about $9 to register (≈¥65) and $10/yr to renew (≈¥72), no teaser games. Inventory is far better than .com, with strong hit rates for French roots and brand words. For naming, a straight brand word is the mainstream shape (brand.fr); French-language roots feel warmer to local users than English words, and trade-word + .fr fits local services naturally.",
+      bestFor: ["France-facing e-commerce", "Local French services & storefronts", "Overseas brands entering France", "French-language content & media"],
+      namingTips: [
+        "EU/EEA residency or establishment required — confirm your registrar proxies it",
+        "About $9 to register, $10/yr to renew — tiny step-up, no traps",
+        "French-language roots feel warmer to local users than English words",
+        "For Paris-only businesses compare .paris; .fr is the universal national choice",
+      ],
+    },
+  },
+  it: {
+    tld: "it",
+    zh: {
+      title: ".it 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".it 是意大利国家域名，需欧盟/EEA 居民或机构资格，适合面向意大利市场的品牌与业务，也是 IT/科技双关的创意后缀。查看 .it 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .it 域名。",
+      intro:
+        ".it 是意大利的国家域名，由意大利国家研究委员会下属的 Registro .it 运营，注册量约 350 万，是欧洲第五大 ccTLD。它有双重身份：对意大利消费者，name.it 是「本地生意」的默认信号——意大利电商、时尚品牌、餐饮与制造商用它几乎是标配，Google 也会把 .it 站点与意大利地区相关联，本地 SEO 有加成；对全球创业者，.it 恰好是英文单词与「IT/信息技术」的双关，域名黑客（domain hack）玩法层出不穷（如 do.it、make.it 类短语域名），科技产品拿它做创意主域也很常见。资格上 Registro .it 要求注册人为欧盟/欧洲经济区（含瑞士、挪威、冰岛等）的居民或注册机构；非欧盟主体需欧盟实体或注册商本地代理，注册前确认支持情况。价格温和：注册约 $8（约 ¥58），续费约 $10/年（约 ¥72），差价很小无钩子。库存比 .com 充裕，意大利语词根与英文短语的命中率都不错。命名上意大利业务品牌词直接上（brand.it）；做双关创意域名时选「动词/短语 + .it」，读起来是完整英文句子的最加分。",
+      bestFor: ["面向意大利市场的电商", "意大利时尚与制造品牌", "意大利本地服务与门店", "玩转 domain hack 的科技产品"],
+      namingTips: [
+        "需欧盟/EEA 居民或机构资格，海外注册确认注册商代理支持",
+        "注册约 $8、续费约 $10/年，差价小无钩子",
+        "「动词/短语 + .it」的域名黑客读法自然最加分",
+        "意大利语词根对本地用户比英文更亲切",
+      ],
+    },
+    en: {
+      title: ".it Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".it is Italy's country domain — EU/EEA residency required — for Italy-market brands and businesses, and a creative double-meaning suffix for tech products. See live pricing and naming advice, then hunt available .it names with AI.",
+      intro:
+        ".it is Italy's country-code domain, run by Registro .it under Italy's National Research Council with about 3.5 million registrations — Europe's fifth-largest ccTLD. It leads a double life: to Italian consumers, name.it is the default local-business signal — near-mandatory for Italian e-commerce, fashion brands, restaurants and manufacturers, with Google geo-associating .it sites with Italy for a local-SEO boost; to global founders, .it doubles as the English word \"it\" and the abbreviation for information technology, spawning endless domain hacks (do.it, make.it-style phrase domains) — tech products routinely pick it as a creative primary domain. On eligibility, Registro .it requires registrants to be residents or registered organizations of the EU/EEA (plus Switzerland, Norway, Iceland); non-EU entities need an EU establishment or a registrar's local proxy — confirm support before buying. Pricing is gentle: about $8 to register (≈¥58) and $10/yr to renew (≈¥72), a tiny step-up with no traps. Inventory beats .com, with good hit rates for both Italian roots and English phrases. For naming, Italian businesses go straight brand word (brand.it); for domain hacks, pick verb/phrase + .it that reads as a complete English sentence — that's where the suffix shines.",
+      bestFor: ["Italy-facing e-commerce", "Italian fashion & manufacturing brands", "Local Italian services & storefronts", "Tech products playing domain hacks"],
+      namingTips: [
+        "EU/EEA residency or establishment required — confirm your registrar proxies it",
+        "About $8 to register, $10/yr to renew — tiny step-up, no traps",
+        "Verb/phrase + .it that reads as a sentence is the winning domain hack",
+        "Italian-language roots feel warmer to local users than English words",
+      ],
+    },
+  },
+  es: {
+    tld: "es",
+    zh: {
+      title: ".es 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".es 是西班牙国家域名，无资格限制、任何人可注册，适合面向西班牙与西语市场的品牌与业务。查看 .es 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .es 域名。",
+      intro:
+        ".es 是西班牙的国家域名，由西班牙政府旗下的 Red.es 运营，注册量约 200 万。它的一大优势是门槛：与 .fr/.it 等欧洲邻居不同，.es 对注册人没有国籍或地址限制，任何个人与机构都能直接注册，海外主体不需要代理。对西班牙消费者，name.es 是「本地生意」的默认信号——西班牙电商、服务商、餐饮门店用它信任度远超新后缀，Google 也会把 .es 站点与西班牙地区相关联，本地 SEO 有加成。更妙的是语言外溢：「es」恰好是西班牙语系动词「是」，且西语是全球 5 亿人的母语，面向拉美与美国西语人群的内容站、跨境业务也常拿 .es 讲「西语世界的生意」——虽然严格的地域信号仍指向西班牙，做泛西语市场时建议搭配通用后缀评估。价格温和：注册约 $8（约 ¥55），续费约 $10/年（约 ¥72），差价小无钩子。库存比 .com 充裕，西语词根命中率尤其高。命名上品牌词直接上（brand.es）最主流；西语词根对西语用户比英文更亲切，也可玩「英文词 + es」的复数双关（如 tool.es 类读法）。",
+      bestFor: ["面向西班牙市场的电商", "西班牙本地服务与门店", "西语内容与媒体站", "面向西语世界的跨境业务"],
+      namingTips: [
+        "无资格限制，任何人可直接注册，无需本地代理",
+        "注册约 $8、续费约 $10/年，差价小无钩子",
+        "西语词根对西语用户比英文更亲切",
+        "泛西语市场（拉美为主）时搭配通用后缀评估地域信号",
+      ],
+    },
+    en: {
+      title: ".es Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".es is Spain's country domain — no eligibility restrictions, anyone can register — for brands and businesses targeting Spain and the Spanish-speaking market. See live pricing and naming advice, then hunt available .es names with AI.",
+      intro:
+        ".es is Spain's country-code domain, run by government-backed registry Red.es with about 2 million registrations. Its standout advantage is the low bar: unlike European neighbors .fr and .it, .es imposes no nationality or address restrictions — any individual or organization worldwide can register directly, no local proxy needed. To Spanish consumers, name.es is the default local-business signal — Spanish e-commerce, services and storefronts earn trust far beyond any new gTLD, and Google geo-associates .es sites with Spain for a local-SEO boost. There's a language bonus too: \"es\" happens to be the Spanish verb \"is\", and Spanish is the native language of 500 million people — content sites and cross-border businesses targeting Latin America and US Hispanics often pick .es to say \"a Spanish-language business\", though the strict geo signal still points to Spain, so weigh a generic suffix alongside it for pan-Hispanic ventures. Pricing is gentle: about $8 to register (≈¥55) and $10/yr to renew (≈¥72), a tiny step-up with no traps. Inventory beats .com, with especially strong hit rates for Spanish roots. For naming, a straight brand word is the mainstream shape (brand.es); Spanish roots feel warmer to Spanish speakers than English words, and English plural hacks (tool.es-style readings) add a playful option.",
+      bestFor: ["Spain-facing e-commerce", "Local Spanish services & storefronts", "Spanish-language content & media", "Cross-border ventures targeting the Hispanic world"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register directly, no proxy needed",
+        "About $8 to register, $10/yr to renew — tiny step-up, no traps",
+        "Spanish-language roots feel warmer to Spanish speakers than English words",
+        "For pan-Hispanic (LatAm-first) ventures, weigh a generic suffix alongside",
+      ],
+    },
+  },
+  nl: {
+    tld: "nl",
+    zh: {
+      title: ".nl 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".nl 是荷兰国家域名，全球第三大 ccTLD，任何人可注册（需荷兰联系地址，注册商可代理），适合面向荷兰与荷语市场的品牌与业务。查看 .nl 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .nl 域名。",
+      intro:
+        ".nl 是荷兰的国家域名，由注册局 SIDN 运营，注册量超过 630 万——按人口比例是全球渗透率最高的 ccTLD 之一，绝对量仅次于 .de 与 .cn。荷兰消费者的本土偏好极强：本地电商、服务商、事务所用 name.nl 几乎是标配，荷兰电商巨头（bol.com 之外的主流玩家）与政府机构大量使用 .nl，信任度远超新后缀；Google 也会把 .nl 站点与荷兰地区相关联，荷语市场 SEO 有天然加成。荷兰又是欧洲物流与贸易枢纽（鹿特丹港、阿姆斯特丹史基浦），跨境电商、物流与贸易公司拿 .nl 讲「以荷兰为基地的欧洲生意」也很自然。资格上 .nl 对国籍无限制，任何人可注册，但 SIDN 要求提供荷兰境内联系地址——海外主体通常由注册商代理提供（主流欧洲注册商与 Porkbun 等都支持），注册前确认即可。价格温和：注册约 $9（约 ¥65），续费约 $10/年（约 ¥72），差价小无钩子。库存比 .com 充裕，英文与荷语词根命中率都不错（荷兰人英语普及率极高，英文词根完全可用）。命名上品牌词直接上（brand.nl）最主流，本地服务用「行业词 + .nl」，跨境贸易可用「功能词 + .nl」。",
+      bestFor: ["面向荷兰市场的电商", "荷兰本地服务与事务所", "欧洲物流与跨境贸易业务", "荷语内容与媒体站"],
+      namingTips: [
+        "任何人可注册，但需荷兰联系地址——确认注册商代理支持",
+        "注册约 $9、续费约 $10/年，差价小无钩子",
+        "荷兰英语普及率极高，英文词根在 .nl 下完全可用",
+        "物流/贸易业务用「功能词 + .nl」讲清欧洲枢纽定位",
+      ],
+    },
+    en: {
+      title: ".nl Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".nl is the Netherlands' country domain and the world's third-largest ccTLD — open to anyone (Dutch contact address required, registrars can proxy it) — for brands targeting the Dutch market. See live pricing and naming advice, then hunt available .nl names with AI.",
+      intro:
+        ".nl is the Netherlands' country-code domain, run by registry SIDN with over 6.3 million registrations — per capita one of the most deeply penetrated ccTLDs on earth, and third in absolute size behind .de and .cn. Dutch consumers have a strong local preference: name.nl is near-mandatory for local e-commerce, services and firms, with Dutch market leaders and government institutions living on .nl and trust far beyond any new gTLD; Google also geo-associates .nl sites with the Netherlands, a free boost for Dutch-market SEO. The Netherlands is also Europe's logistics and trade hub (Port of Rotterdam, Amsterdam Schiphol), so cross-border e-commerce, logistics and trading companies naturally use .nl to say \"a European business based in the Netherlands\". On eligibility, .nl has no nationality restriction — anyone can register — but SIDN requires a contact address within the Netherlands; overseas registrants usually rely on their registrar to proxy this (mainstream European registrars and Porkbun support it), so confirm before buying. Pricing is gentle: about $9 to register (≈¥65) and $10/yr to renew (≈¥72), a tiny step-up with no traps. Inventory beats .com, and both English and Dutch roots hit well — Dutch English proficiency is among the world's highest, so English roots work perfectly. For naming, a straight brand word is the mainstream shape (brand.nl); trade-word + .nl fits local services, and function words suit logistics and trade ventures.",
+      bestFor: ["Netherlands-facing e-commerce", "Local Dutch services & firms", "European logistics & cross-border trade", "Dutch-language content & media"],
+      namingTips: [
+        "Open to anyone, but a Dutch contact address is required — confirm your registrar proxies it",
+        "About $9 to register, $10/yr to renew — tiny step-up, no traps",
+        "Dutch English proficiency is top-tier — English roots work perfectly on .nl",
+        "Function words + .nl suit logistics/trade ventures claiming the European hub",
+      ],
+    },
+  },
+  kr: {
+    tld: "kr",
+    zh: {
+      title: ".kr 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".kr 是韩国国家域名，需韩国本地联系地址（注册商可代理），本地信任度极高，适合面向韩国市场的品牌与业务。查看 .kr 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .kr 域名。",
+      intro:
+        ".kr 是韩国的国家域名，由韩国互联网振兴院（KISA）旗下的 KRNIC 管理，注册量约 110 万。韩国是全球数字化程度最高的市场之一——电商渗透率、移动支付、网速都居世界前列，而韩国消费者对本土信号同样敏感：本地电商、品牌官网、娱乐与内容站用 name.kr，「韩国的生意」一眼讲清，信任度远超一般新后缀；Naver 与 Google 也会把 .kr 站点与韩国地区相关联，韩语市场 SEO 有天然加成。K-pop、K-beauty、K-food 的全球势能还让 .kr 带上一层「韩流正品」的品牌联想——做韩妆、韩食、韩娱周边的跨境业务，.kr 比通用后缀更能讲清出身。资格上 KRNIC 要求注册人提供韩国境内联系地址，海外主体通常由注册商代理提供（Gabia、Whois.co.kr 等韩国注册商及部分国际注册商支持），注册前确认即可；更严格的 .co.kr 面向企业，门槛与信任度各高一档。价格偏高但平续：注册约 $40/年（约 ¥290），续费同价——与 .jp 类似，价格门槛过滤投机注册，库存比同热度后缀干净。命名上品牌词直接上（brand.kr）最主流；韩语罗马字（romaja）词根对韩国用户比英文更亲切，K 系跨境品牌可用「品类词 + .kr」讲清韩国出身。",
+      bestFor: ["面向韩国市场的电商", "韩国本地服务与门店", "K-beauty/K-food 跨境品牌", "韩语内容与娱乐站"],
+      namingTips: [
+        "需韩国境内联系地址，海外注册确认注册商代理支持",
+        "注册续费均约 $40/年，价格过滤投机、库存干净",
+        "韩语罗马字词根对韩国用户比英文更亲切",
+        ".co.kr 面向企业，门槛更高信任度也更高",
+      ],
+    },
+    en: {
+      title: ".kr Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".kr is South Korea's country domain — a local contact address is required (registrars can proxy it) — with top-tier local trust for Korea-market brands and businesses. See live pricing and naming advice, then hunt available .kr names with AI.",
+      intro:
+        ".kr is South Korea's country-code domain, managed by KRNIC under the Korea Internet & Security Agency (KISA) with about 1.1 million registrations. Korea is one of the world's most digitized markets — e-commerce penetration, mobile payments and network speeds all rank near the top — and Korean consumers are equally attuned to local signals: name.kr says \"a Korean business\" at a glance, with trust far beyond any new gTLD; Naver and Google both geo-associate .kr sites with Korea, a free boost for Korean-market SEO. The global momentum of K-pop, K-beauty and K-food adds a brand halo: for cross-border ventures selling Korean cosmetics, food or entertainment merchandise, .kr communicates authentic Korean origin better than any generic suffix. On eligibility, KRNIC requires a contact address within Korea; overseas registrants usually rely on a registrar's proxy service (Korean registrars like Gabia and Whois.co.kr plus some international ones support it) — confirm before buying. The stricter .co.kr targets companies, a higher bar with correspondingly higher trust. Pricing is on the high side but flat: about $40/yr to register (≈¥290) with the same renewal — like .jp, the price bar filters speculation, keeping inventory cleaner than comparably popular suffixes. For naming, a straight brand word is the mainstream shape (brand.kr); Korean romaja roots feel warmer to local users than English words, and category + .kr claims Korean origin for K-wave cross-border brands.",
+      bestFor: ["Korea-facing e-commerce", "Local Korean services & storefronts", "K-beauty/K-food cross-border brands", "Korean-language content & entertainment"],
+      namingTips: [
+        "Korea contact address required — confirm your registrar proxies it",
+        "About $40/yr flat — the price filters speculation, keeping inventory clean",
+        "Korean romaja roots feel warmer to local users than English words",
+        ".co.kr targets companies — higher bar, higher trust",
+      ],
+    },
+  },
+  hk: {
+    tld: "hk",
+    zh: {
+      title: ".hk 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".hk 是香港地区域名，无资格限制、任何人可注册，适合面向香港与粤港澳大湾区市场的品牌、金融与跨境业务。查看 .hk 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .hk 域名。",
+      intro:
+        ".hk 是香港的地区域名，由非营利机构香港互联网注册管理有限公司（HKIRC）运营。香港是亚洲的金融与贸易枢纽，.hk 的信号价值也随之外溢：不止香港本地生意，面向大湾区与东南亚的贸易公司、金融服务、跨境电商用 name.hk，讲的是「以香港为基地的国际生意」——这个后缀在两岸三地与亚太商圈自带国际化与合规联想；对香港用户搜索，Google 也会把 .hk 站点与香港地区相关联，本地 SEO 有加成。与 .jp/.kr/.sg 等亚洲邻居不同，.hk 对注册人没有资格限制：任何地区的个人与机构都能直接注册，无需本地代理，这让它成为亚洲 ccTLD 里门槛最低的之一（更严格的 .com.hk 需香港注册企业）。价格中等且平续：注册约 $25/年（约 ¥180），续费同价，无引流钩子。两个字符的后缀短而利落，英文与拼音词根在 .hk 下命中率远高于 .com。注意受众主要在香港与大湾区、亚太商圈，纯欧美市场业务信号较弱。命名上品牌词直接上（brand.hk）最主流；贸易、金融类可用「功能词 + .hk」（如 trade、pay 类词根），本地服务用「行业词 + .hk」，中文品牌用粤拼或拼音也很自然。",
+      bestFor: ["香港本地企业与服务", "大湾区与跨境贸易业务", "金融与专业服务", "面向亚太市场的品牌"],
+      namingTips: [
+        "无资格限制，任何人可直接注册（.com.hk 需香港企业）",
+        "注册续费均约 $25/年，平续无钩子",
+        "贸易金融用「功能词 + .hk」自带国际化联想",
+        "受众在香港与大湾区、亚太商圈，纯欧美业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".hk Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".hk is Hong Kong's regional domain — no eligibility restrictions, anyone can register — for brands, finance and cross-border businesses targeting Hong Kong and the Greater Bay Area. See live pricing and naming advice, then hunt available .hk names with AI.",
+      intro:
+        ".hk is Hong Kong's regional domain, run by the non-profit Hong Kong Internet Registration Corporation (HKIRC). Hong Kong is Asia's financial and trading hub, and the signal of .hk spills over accordingly: beyond local Hong Kong businesses, trading companies, financial services and cross-border commerce targeting the Greater Bay Area and Southeast Asia use name.hk to say \"an international business based in Hong Kong\" — a suffix carrying international and compliance connotations across Chinese-speaking and Asia-Pacific business circles; Google also geo-associates .hk sites with Hong Kong, a local-SEO boost. Unlike Asian neighbors .jp, .kr and .sg, .hk has no eligibility restrictions: individuals and organizations from anywhere can register directly with no local proxy — one of the lowest bars among Asian ccTLDs (the stricter .com.hk requires a Hong Kong-registered company). Pricing is moderate and flat: about $25/yr to register (≈¥180) with the same renewal, no teaser games. The two-character suffix keeps domains short and crisp, and English and pinyin roots hit far more often than on .com. One caution: the audience is Hong Kong, the Greater Bay Area and Asia-Pacific business circles — the signal is weaker for purely Western-market ventures. Naming: a straight brand word is the mainstream shape (brand.hk); trade and finance ventures can use function words (trade, pay-style roots), local services fit trade-word + .hk, and Cantonese or Mandarin pinyin works naturally for Chinese brands.",
+      bestFor: ["Local Hong Kong businesses & services", "Greater Bay Area & cross-border trade", "Finance & professional services", "Brands targeting Asia-Pacific markets"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register directly (.com.hk needs a HK company)",
+        "About $25/yr flat to register and renew — no traps",
+        "Function words + .hk carry international connotations for trade & finance",
+        "Audience is Hong Kong, the GBA & Asia-Pacific — weaker signal for purely Western markets",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
