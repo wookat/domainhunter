@@ -346,4 +346,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "quest-vs-games", a: "quest", b: "games", title: { zh: ".quest 和 .games 怎么选：冒险的过程与游戏的行业", en: ".quest vs .games: The Journey or The Industry" } },
   { slug: "kids-vs-family", a: "kids", b: "family", title: { zh: ".kids 和 .family 怎么选：儿童受众与全家归属的分工", en: ".kids vs .family: The Child Audience or The Whole Household" } },
   { slug: "foundation-vs-org", a: "foundation", b: "org", title: { zh: ".foundation 和 .org 怎么选：基金会的全称与非营利的正统", en: ".foundation vs .org: The Institution's Full Name or The Nonprofit Standard" } },
+  { slug: "wang-vs-cn", a: "wang", b: "cn", title: { zh: ".wang 和 .cn 怎么选：说中文的通用后缀与国家域名的正统", en: ".wang vs .cn: The Chinese-Speaking Generic or The Country Code" } },
+  { slug: "day-vs-life", a: "day", b: "life", title: { zh: ".day 和 .life 怎么选：一天的刻度与生活的全景", en: ".day vs .life: The Single Day or The Whole Life" } },
+  { slug: "meme-vs-lol", a: "meme", b: "lol", title: { zh: ".meme 和 .lol 怎么选：梗的名词与笑的动词", en: ".meme vs .lol: The Meme Itself or The Laugh It Gets" } },
+  { slug: "quest-vs-fun", a: "quest", b: "fun", title: { zh: ".quest 和 .fun 怎么选：冒险的叙事与好玩的气质", en: ".quest vs .fun: The Adventure Story or The Playful Vibe" } },
+  { slug: "kids-vs-baby", a: "kids", b: "baby", title: { zh: ".kids 和 .baby 怎么选：儿童内容的承诺与母婴品类的招牌", en: ".kids vs .baby: The Child-Safe Promise or The Baby-Market Sign" } },
+  { slug: "win-vs-vip", a: "win", b: "vip", title: { zh: ".win 和 .vip 怎么选：赢的情绪与会员的身份", en: ".win vs .vip: The Thrill of Winning or The Status of Membership" } },
 ];
