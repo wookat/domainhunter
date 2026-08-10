@@ -1331,4 +1331,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家刺绣工作室与手工刺绣定制坊，寓意「针尖上一寸一寸绣出来的时间」；气质要精工文气、接得住高定；场景是作品落款、高定合作邮件和美术馆展签上都体面、立得住。",
     en: "An embroidery studio and hand-stitching atelier. The name should carry the hours stitched inch by inch at the needle's tip; the vibe is fine-worked and literate, equal to couture; it must sign the finished piece with grace, read formal in the commissioning email, and hold its own on the museum wall label.",
   },
+  "sealcarving": {
+    zh: "一家篆刻工作室与印章定制坊，寓意「方寸石面上一刀一刀刻出的名字」；气质要金石文气、郑重可托付；场景是书画落款、藏家询价邮件和展览图录里都立得住。",
+    en: "A seal carving studio and custom chop atelier. The name should carry a name carved stroke by stroke into a square inch of stone; the vibe is literati with the weight of metal and stone, grave enough to be trusted; it must hold up in the painting colophon, the collector's enquiry email, and the exhibition catalogue.",
+  },
+  "incense": {
+    zh: "一家香道工作室与手工线香品牌，寓意「一炉香点起来满室的安静」；气质要有东方文气、不堆禅字；场景是电商详情页、品香会海报和礼盒烫金上都好念、立得住。",
+    en: "An incense studio and artisan incense brand. The name should carry the hush that fills the room when one stick is lit; the vibe is quietly Eastern without piling on zen words; it must read easily on the product page, carry an air on the tasting-session poster, and foil-stamp nicely on the gift box.",
+  },
+  "papercut": {
+    zh: "一家剪纸工作室与剪纸文创品牌，寓意「一把剪刀在红纸上剪出的年味与纹样」；气质要民俗有根、又接得住当代联名；场景是文创吊牌、美术馆展签和节庆礼盒上都好认、立得住。",
+    en: "A papercut studio and paper-cutting craft brand. The name should carry the festive patterns one pair of scissors cuts from red paper; the vibe is rooted in folklore yet ready for contemporary collabs; it must read well on the co-branded hang tag, the museum wall label, and the festival gift box.",
+  },
+  "lantern": {
+    zh: "一家灯笼工坊与花灯定制工作室，寓意「亮灯那一刻整条街的抬头」；气质要有光影画面、民俗与美陈都接得住；场景是灯会投标书、门头夜景照片和文旅项目合同里都立得住。",
+    en: "A lantern workshop and festival lantern studio. The name should carry the whole street looking up the moment the lanterns come on; the vibe is pictured in light and shadow, at home in both folk festivals and mall installations; it must hold up in the festival tender, the night shopfront photo, and the tourism project contract.",
+  },
+  "quilting": {
+    zh: "一家拼布工作室与手工被服坊，寓意「把碎布头一格一格缝成一床有记忆的被子」；气质要温暖有手感、不显家政气；场景是材料包详情页、拼布课海报和定制纪念被的故事里都亲切、立得住。",
+    en: "A quilting studio and patchwork atelier. The name should carry scraps sewn square by square into a blanket full of memory; the vibe is warm and hand-felt, never mending-shop plain; it must read friendly on the kit product page, the class poster, and the story of a commissioned memory quilt.",
+  },
+  "teaware": {
+    zh: "一家茶器工作室与手作茶具坊，寓意「一只素杯在茶席上被摩挲出的温润」；气质要文气拙朴、经得起落款；场景是电商详情页、茶席口碑和拍卖图录里都有分量、立得住。",
+    en: "A teaware studio and artisan tea ceramics atelier. The name should carry the mellow warmth a plain cup earns from years of hands at the tea table; the vibe is literati and unpolished, worthy of the base mark; it must carry weight on the product page, in tea-table word of mouth, and in the auction catalogue.",
+  },
 };

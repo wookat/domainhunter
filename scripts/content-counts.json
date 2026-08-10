@@ -347,7 +347,7 @@
     ]
   },
   "guide": {
-    "count": 332,
+    "count": 338,
     "slugs": [
       "saas",
       "ecommerce",
@@ -680,7 +680,13 @@
       "glassblowing",
       "bonsai",
       "recordstore",
-      "embroidery"
+      "embroidery",
+      "sealcarving",
+      "incense",
+      "papercut",
+      "lantern",
+      "quilting",
+      "teaware"
     ]
   },
   "vs": {
