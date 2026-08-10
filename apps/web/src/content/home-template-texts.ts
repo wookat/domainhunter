@@ -1379,4 +1379,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家观鸟俱乐部与自然导赏品牌，寓意「举起望远镜那一刻的心跳」；气质要轻盈有野趣、不显器材党沉重；场景是行程海报、学校合作方案和鸟友群里都专业、亲切。",
     en: "A birding club and nature-guiding brand. The name should carry the heartbeat of raising the binoculars; the vibe is light and wild without gear-head weight; it must read professional on the trip poster, credible in the school proposal, and warm in the birders' chat.",
   },
+  "stargazing": {
+    zh: "一家观星俱乐部与天文科普品牌，寓意「抬头那一刻的安静与辽阔」；气质要浪漫轻盈、不显硬核黑话；场景是营地海报、科普课表和器材圈里都专业、好记。",
+    en: "A stargazing club and astronomy-outreach brand. The name should carry the quiet vastness of looking up; the vibe is romantic and light without hardcore argot; it must read professional on the camp poster, the syllabus, and in the gear forums.",
+  },
+  "cidery": {
+    zh: "一家手工苹果酒坊与果酒品牌，寓意「果园到酒杯的那条路」；气质要果香轻快、立住果酒的独立身份；场景是酒标、酒单和果园门口都上镜、好念。",
+    en: "A craft cidery and fruit-wine brand. The name should carry the road from orchard to glass; the vibe is fruit-forward and bright, holding cider's own identity; it must photograph on the label, speak easily on the drinks list, and paint a picture at the orchard gate.",
+  },
+  "bookbinding": {
+    zh: "一家手工装帧与古籍修复工作室，寓意「一本书被郑重对待、传下三代」；气质要有书卷气与手艺人的郑重；场景是定制报价单、市集摊位和图书馆合作方案里都立得住。",
+    en: "A bookbinding and book-restoration studio. The name should carry a book taken seriously enough to pass down three generations; the vibe is bookish with a binder's gravity; it must stand on the commission quote, the market stall, and the library proposal.",
+  },
+  "letterpress": {
+    zh: "一家活版印刷工作室，寓意「铅字压进棉纸的那一下重量」；气质要有手感与当代审美、不做怀旧标本；场景是喜帖清单、市集摊位和体验课海报上都精致、好认。",
+    en: "A letterpress studio. The name should carry the weight of lead type biting into cotton paper; the vibe is tactile and contemporary, never a nostalgia specimen; it must read refined on the wedding checklist, the market stall, and the workshop poster.",
+  },
+  "terrarium": {
+    zh: "一家生态瓶与苔藓微景观工作室，寓意「一只玻璃瓶里装下一个会呼吸的小世界」；气质要有禅意与技术感、不显绿植杂货；场景是详情页、课程海报和礼盒上都有画面、得体。",
+    en: "A terrarium and moss-garden studio. The name should carry a breathing little world folded into one glass jar; the vibe is zen with quiet craft, never plant-shop sundries; it must paint a picture on the product page, the class poster, and the gift box.",
+  },
+  "axethrowing": {
+    zh: "一家飞斧馆与掷斧运动场馆，寓意「斧刃咬进木靶的那声闷响、把压力扔出去」；气质要野而不吓人、装得下运动加社交；场景是点评页、团建方案和联赛圈里都好记、专业可控。",
+    en: "An axe-throwing venue. The name should carry the thunk of a blade biting the target and stress thrown away; the vibe is wild but never menacing, holding sport plus social; it must read memorable on the review page, professional in the team-building deck, and carry swagger in the league.",
+  },
 };

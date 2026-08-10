@@ -354,4 +354,10 @@ export const TEMPLATE_LABELS: TemplateLabel[] = [
   { slug: "weaving", labelZh: "织造工作室", labelEn: "Weaving studio" },
   { slug: "puppet", labelZh: "木偶皮影工作室", labelEn: "Puppetry studio" },
   { slug: "birding", labelZh: "观鸟俱乐部", labelEn: "Birding club" },
+  { slug: "stargazing", labelZh: "观星俱乐部", labelEn: "Stargazing club" },
+  { slug: "cidery", labelZh: "苹果酒坊", labelEn: "Craft cidery" },
+  { slug: "bookbinding", labelZh: "手工装帧工作室", labelEn: "Bookbinding studio" },
+  { slug: "letterpress", labelZh: "活版印刷工作室", labelEn: "Letterpress studio" },
+  { slug: "terrarium", labelZh: "生态瓶工作室", labelEn: "Terrarium studio" },
+  { slug: "axethrowing", labelZh: "飞斧馆", labelEn: "Axe-throwing venue" },
 ];
