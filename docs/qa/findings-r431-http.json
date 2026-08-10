@@ -1,0 +1,784 @@
+{
+  "hreflang_r427": {
+    "/": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/tld": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/guide": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/vs": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/prices": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/prices",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/prices?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/why": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/why",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/why?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/advanced": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/advanced",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/advanced?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/mcp": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/mcp",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/mcp?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/tld/com": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/com",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/com?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/tld/photo": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/photo",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/photo?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/tld/tw": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/tw",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/tw?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/tld/wedding": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/wedding",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/wedding?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/guide/saas": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/saas",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/saas?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/guide/giftcustom": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/giftcustom",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/giftcustom?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/guide/mosaic": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/mosaic",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/mosaic?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/guide/web3": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/web3",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/web3?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/vs/com-vs-cn": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/com-vs-cn",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/com-vs-cn?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/vs/energy-vs-solar": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/energy-vs-solar",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/energy-vs-solar?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/vs/hk-vs-sg": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/hk-vs-sg",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/hk-vs-sg?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    },
+    "/vs/university-vs-education": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/university-vs-education",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/university-vs-education?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3
+      },
+      "pass": true
+    }
+  },
+  "hreflang_r427_all_pass": true,
+  "sitemap_loc_samples": [
+    1120,
+    1120,
+    1120
+  ],
+  "sitemap_dup_locs": 0,
+  "sitemap_cat_counts": {
+    "tld": 360,
+    "guide": 356,
+    "vs": 396,
+    "core": 8
+  },
+  "sitemap_vs_counts_json": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "sitemap_xhtml": {
+    "urls": 1120,
+    "xhtml_total": 3360,
+    "bad": [],
+    "bad_count": 0
+  },
+  "llms_counts": {
+    "tld": 360,
+    "guide": 356,
+    "vs": 396
+  },
+  "llms_vs_sitemap_equal": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "robots": {
+    "status": 200,
+    "has_sitemap": true,
+    "gptbot": true
+  },
+  "inject_sweep": {
+    "total": 1112,
+    "ok": 1112,
+    "bad": {}
+  },
+  "inject_en_sample": {
+    "/tld/photo?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/tld/com?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/tld/tw?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/guide/mosaic?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/guide/giftcustom?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/guide/saas?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/vs/hk-vs-sg?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/vs/com-vs-cn?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    },
+    "/vs/energy-vs-solar?lang=en": {
+      "status": 200,
+      "inject": "ok"
+    }
+  },
+  "seo_deep": {
+    "/tld/com": {
+      "status": 200,
+      "title": ".com 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/com",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/tld/com?lang=en": {
+      "status": 200,
+      "title": ".com Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/com?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/tld/tw": {
+      "status": 200,
+      "title": ".tw 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/tw",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/tld/tw?lang=en": {
+      "status": 200,
+      "title": ".tw Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/tw?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/guide/saas": {
+      "status": 200,
+      "title": "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/saas",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/guide/saas?lang=en": {
+      "status": 200,
+      "title": "How to Name a SaaS Product: Strategies, Case Studies &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/saas?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/guide/mosaic": {
+      "status": 200,
+      "title": "马赛克工作室怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/mosaic",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/guide/mosaic?lang=en": {
+      "status": 200,
+      "title": "How to Name a Mosaic Studio: Strategies, Case Studies &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/mosaic?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/vs/com-vs-cn": {
+      "status": 200,
+      "title": ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/com-vs-cn",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/vs/com-vs-cn?lang=en": {
+      "status": 200,
+      "title": ".com vs .cn: Audience, Compliance &amp; Brand Protection Compared | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/com-vs-cn?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/vs/hk-vs-sg": {
+      "status": 200,
+      "title": ".hk 和 .sg 怎么选：香港与新加坡两大亚洲枢纽的对比 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/hk-vs-sg",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/vs/hk-vs-sg?lang=en": {
+      "status": 200,
+      "title": ".hk vs .sg: Hong Kong or Singapore — Two Asian Hubs Compared | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/hk-vs-sg?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/": {
+      "status": 200,
+      "title": "DomainHunter — AI 域名猎手 | 说出寓意，猎到真正可注册的好域名",
+      "canonical": "https://hunt.zalize.com/",
+      "html_lang": "zh-CN",
+      "og_count": 9,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": false,
+      "hreflang_count": 3
+    },
+    "/?lang=en": {
+      "status": 200,
+      "title": "DomainHunter — AI Domain Hunter | Describe the meaning, hunt truly available names",
+      "canonical": "https://hunt.zalize.com/?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": false,
+      "hreflang_count": 3
+    },
+    "/prices": {
+      "status": 200,
+      "title": "域名后缀价格总览：360 个主流 TLD 注册与续费对比 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/prices",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/prices?lang=en": {
+      "status": 200,
+      "title": "TLD Price Overview: Registration vs Renewal for 360 Popular Suffixes | DomainHunter",
+      "canonical": "https://hunt.zalize.com/prices?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": true,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/tld": {
+      "status": 200,
+      "title": "全部 TLD 注册指南：360 个后缀怎么选 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/tld?lang=en": {
+      "status": 200,
+      "title": "All TLD Registration Guides: How to Choose Among 360 Suffixes | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/guide": {
+      "status": 200,
+      "title": "全部行业命名指南：356 个行业怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/guide?lang=en": {
+      "status": 200,
+      "title": "All Industry Naming Guides: How to Name a Product in 356 Industries | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/vs": {
+      "status": 200,
+      "title": "全部后缀对比：396 组 TLD 怎么选 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/vs?lang=en": {
+      "status": 200,
+      "title": "All TLD Comparisons: 396 Head-to-Head Matchups | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/why": {
+      "status": 200,
+      "title": "为什么选 DomainHunter：好域名都被占了，换个找法 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/why",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    },
+    "/why?lang=en": {
+      "status": 200,
+      "title": "Why DomainHunter: all the good names are taken — hunt differently | DomainHunter",
+      "canonical": "https://hunt.zalize.com/why?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "has_faq_jsonld": false,
+      "has_breadcrumb_jsonld": true,
+      "hreflang_count": 3
+    }
+  },
+  "notfound": {
+    "/nonexistent-r431": 404,
+    "/tld/notatld-r431": 404,
+    "/guide/notaguide-r431": 404,
+    "/vs/nota-vs-r431": 404
+  },
+  "prices_api": {
+    "status": 200,
+    "stale": null,
+    "tldCount": 343,
+    "priceKeys": 343
+  },
+  "mcp_tools": [
+    "check_domains",
+    "tld_prices",
+    "suggest_variants"
+  ],
+  "mcp_check_domains": [
+    {
+      "domain": "google.com",
+      "status": "taken",
+      "expiresAt": "2028-09-14T04:00:00.000Z"
+    },
+    {
+      "domain": "qzxvkw9r431mcp1786396921.com",
+      "status": "available",
+      "expiresAt": null
+    }
+  ],
+  "mcp_tld_prices": {
+    "tldCount": 360,
+    "priceKeys": 360
+  },
+  "mcp_suggest_variants": {
+    "variants": 24
+  }
+}
