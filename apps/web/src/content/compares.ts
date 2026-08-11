@@ -9265,6 +9265,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Local Mexican businesses & services", "Nearshoring manufacturing & supply chain", "Brands targeting Spanish-speaking Americas", "Mass-market brands chasing a 130M-person market"],
     },
   },
+  "my-vs-sg": {
+    slug: "my-vs-sg",
+    a: "my",
+    b: "sg",
+    zh: {
+      title: ".my 和 .sg 怎么选：马来西亚与新加坡两个东南亚枢纽 ccTLD 的对比",
+      metaDescription: ".my 是马来西亚国家域名、约 $30/年平续、2018 年起任何人可注册；.sg 是新加坡国家域名、约 $39/年平续、需本地存在（注册商可代理）。对比两者的市场信号、资格与东南亚定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "东南亚两个邻国枢纽的国家域名，价格都平续，分水岭在注册资格与信号辐射范围。做马来西亚市场 → .my：注册局 MYNIC 运营、注册量约 30 万，马来西亚人口约 3400 万、是东南亚人均收入靠前且数字化程度最高的经济体之一，电商与数字支付发达、英语普及率居区域前列，name.my 一眼讲清「马来西亚的生意」，本土企业与政府机构的主站几乎都在 .my 体系上，Google 也会把 .my 站点与马来西亚地区相关联。资格完全开放：2018 年起顶级直注向全球开放、无需本地地址。价格约 $30/年（约 ¥220）平续。它还有一层彩蛋：天然读作英文「my（我的）」，个人主页与账号类产品可玩 name.my 的语义双关，受众不限于马来西亚。做新加坡与区域总部叙事 → .sg：SGNIC 运营，新加坡是东南亚的商业与金融枢纽，.sg 的信号外溢到整个区域——区域总部、金融科技与跨境业务用 name.sg 讲「以新加坡为基地的正规生意」，合规与专业联想是东南亚商圈公认的。资格有门槛：需新加坡本地存在，海外主体通常由 Vodien、Exabytes 等注册商提供本地代理。价格约 $39/年（约 ¥280）平续，价格门槛也让好名字库存更干净。判断标准：用户在马来西亚、或想零门槛拿东南亚 ccTLD、或个人产品想玩 my 语义 → .my 更便宜、更开放；做区域总部、金融科技与跨境合规叙事 → .sg 的枢纽信号值回代理手续与价差；同时做马新两国生意的品牌通常各注册一个做本地门面——两边地域信号各锚定一国。",
+      pickA: ["马来西亚本地企业与服务", "面向马来西亚的跨境电商", "个人主页与账号类产品", "想零门槛注册的海外主体"],
+      pickB: ["新加坡本地企业与服务", "东南亚区域总部与跨境业务", "金融科技与专业服务", "看重合规与枢纽信号的品牌"],
+    },
+    en: {
+      title: ".my vs .sg: Malaysia or Singapore — Two Southeast Asian Hub ccTLDs Compared",
+      metaDescription:
+        ".my is Malaysia's country domain at about $30/yr flat, open to anyone since 2018; .sg is Singapore's at about $39/yr flat, requiring local presence (registrar proxies available). Compare market signals, eligibility and Southeast Asian positioning, then hunt available names.",
+      verdict:
+        "The country domains of two neighboring Southeast Asian hubs, both flat-priced — the divide is eligibility and how far the signal carries. Malaysia-focused → .my: run by registry MYNIC with about 300,000 registrations; Malaysia has about 34 million people and one of Southeast Asia's highest-income, most digitized economies, with well-developed e-commerce and digital payments and top-tier regional English proficiency; name.my says \"a Malaysian business\" at a glance, Malaysian companies and government institutions overwhelmingly live on the .my family, and Google geo-associates .my sites with Malaysia. Eligibility is fully open: direct registration opened worldwide in 2018 with no local address. Pricing is about $30/yr (≈¥220) flat. It also carries a bonus: it naturally reads as English \"my\", so personal pages and account products can play the name.my pun for an audience well beyond Malaysia. Singapore and the regional-HQ story → .sg: run by SGNIC; Singapore is Southeast Asia's business and financial hub, and the .sg signal spills across the region — regional headquarters, fintech and cross-border ventures use name.sg to say \"a legitimate business based in Singapore\", with compliance and professionalism connotations recognized across Southeast Asian business circles. Eligibility has a bar: local presence is required, with overseas registrants usually relying on registrar proxy services (Vodien, Exabytes). Pricing is about $39/yr (≈¥280) flat, and the price bar keeps good-name inventory cleaner. The test: users in Malaysia, zero-friction Southeast Asian entry, or personal products playing the \"my\" pun → .my is cheaper and fully open; regional HQs, fintech and compliance-minded cross-border ventures → .sg's hub signal earns the proxy step and the price gap; brands running both countries usually register one of each as local front doors — each geo signal anchors to one country.",
+      pickA: ["Local Malaysian businesses & services", "Malaysia-facing cross-border e-commerce", "Personal pages & account products", "Overseas parties wanting zero-friction registration"],
+      pickB: ["Local Singapore businesses & services", "Southeast Asia regional HQs & cross-border trade", "Fintech & professional services", "Brands leaning on the compliance hub signal"],
+    },
+  },
+  "th-vs-vn": {
+    slug: "th-vs-vn",
+    a: "th",
+    b: "vn",
+    zh: {
+      title: ".th 和 .vn 怎么选：泰国与越南两个东南亚大市场 ccTLD 的对比",
+      metaDescription: ".th 是泰国国家域名、顶级直注需泰国商标且约 $60/年（.co.th 约 $25/年）；.vn 是越南国家域名、约 $40/年平续、对外国注册人开放。对比两者的市场信号、资格与东南亚定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "东南亚两个大市场的国家域名，本地信任都极高，分水岭在注册资格与市场画像。做泰国市场 → .th：泰国网络信息中心 THNIC 运营、注册量约 8 万、以 .co.th 等二级体系为主，泰国人口约 7200 万、是东南亚第二大经济体：旅游业全球顶级（曼谷常年居全球到访人次前列）、汽车制造有「亚洲底特律」之称，name.th 或 name.co.th 一眼讲清「泰国的生意」，本土企业与政府机构的主站几乎都在 .th 体系上。但资格是东南亚最高档：顶级直注要求持有与域名完全一致的泰国注册商标、约 $60/年（约 ¥450）；.co.th 需泰国公司或泰国商标、约 $25/年；个人可退而注册 .in.th。做越南市场 → .vn：VNNIC 运营、注册量约 60 万、居东南亚 ccTLD 前列，越南人口约 1 亿、是全球增长最快的制造业与数字经济体之一，电子与纺织供应链持续转入、电商与数字支付渗透率高速攀升。资格对外国注册人开放：经 VNNIC 授权注册商即可直接注册、无需本地公司。价格约 $40/年（约 ¥290）平续。判断标准：已在泰国持有商标或公司、做旅游酒店与汽车供应链 → .th 的本地信任值回资格门槛，个人先用 .in.th 落地；用户在越南、或做制造外贸与面向 1 亿人口增长市场的电商、或海外主体想直接注册 → .vn 更开放、体量更大；同时做泰越两国生意的品牌通常各注册一个做本地门面——两边语言与地域信号各锚定一国。",
+      pickA: ["深耕泰国市场的品牌与企业", "泰国旅游与酒店业务", "汽车制造与供应链", "已持泰国商标或公司的主体"],
+      pickB: ["越南本地企业与服务", "制造供应链与外贸业务", "面向越南的跨境电商", "海外主体想直接注册的品牌"],
+    },
+    en: {
+      title: ".th vs .vn: Thailand or Vietnam — Two Big Southeast Asian Market ccTLDs Compared",
+      metaDescription:
+        ".th is Thailand's country domain — direct registration needs a matching Thai trademark at ~$60/yr (.co.th ~$25/yr); .vn is Vietnam's at about $40/yr flat, open to foreign registrants. Compare market signals, eligibility and Southeast Asian positioning, then hunt available names.",
+      verdict:
+        "The country domains of two big Southeast Asian markets, both carrying top-tier local trust — the divide is eligibility and market profile. Thailand-focused → .th: run by THNIC with about 80,000 registrations, mostly under second-level families like .co.th; Thailand has about 72 million people and Southeast Asia's second-largest economy: world-class tourism (Bangkok perennially ranks among the most-visited cities on earth) and automotive manufacturing dubbed the \"Detroit of Asia\"; name.th or name.co.th says \"a Thai business\" at a glance, and Thai companies and government institutions overwhelmingly live on the .th family. But the eligibility bar is the region's highest: direct second-level registration requires a registered Thai trademark exactly matching the domain at about $60/yr (≈¥450); .co.th needs a Thai company or trademark at about $25/yr; individuals can fall back to .in.th. Vietnam-focused → .vn: run by VNNIC with about 600,000 registrations — among Southeast Asia's largest ccTLDs; Vietnam has about 100 million people and one of the world's fastest-growing manufacturing and digital economies, with electronics and textile supply chains shifting in and e-commerce and digital payments climbing fast. Eligibility is open to foreign registrants: register directly through VNNIC-accredited registrars with no local company. Pricing is about $40/yr (≈¥290) flat. The test: you already hold a Thai trademark or company, or run tourism, hospitality or automotive supply-chain ventures → .th's local trust earns the eligibility step, with .in.th as the personal fallback; users in Vietnam, or manufacturing, trade and e-commerce ventures targeting a 100-million-person growth market, or overseas parties wanting direct registration → .vn is more open with bigger scale; brands running both countries usually register one of each as local front doors — each language and geo signal anchors to one country.",
+      pickA: ["Thailand-committed brands & companies", "Thai tourism & hospitality", "Automotive manufacturing & supply chains", "Parties already holding Thai trademarks or companies"],
+      pickB: ["Local Vietnamese businesses & services", "Manufacturing supply chains & trade", "Vietnam-facing cross-border e-commerce", "Overseas parties wanting direct registration"],
+    },
+  },
+  "sk-vs-cz": {
+    slug: "sk-vs-cz",
+    a: "sk",
+    b: "cz",
+    zh: {
+      title: ".sk 和 .cz 怎么选：斯洛伐克与捷克两个中欧制造邻国 ccTLD 的对比",
+      metaDescription: ".sk 是斯洛伐克国家域名、约 $14/年平续、2017 年起任何人可注册；.cz 是捷克国家域名、约 $10/年平续、同样零门槛。对比两者的市场信号、库存与中欧定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "中欧两个前捷克斯洛伐克邻国的国家域名，资格都完全开放、价格都便宜平续，分水岭在市场体量与产业画像。做斯洛伐克市场 → .sk：注册局 SK-NIC 运营、注册量约 45 万，斯洛伐克人口约 540 万、是欧元区成员、全球人均汽车产量第一的国家（大众、起亚、Stellantis 与捷豹路虎都在此设厂），布拉迪斯拉发也是中欧的 IT 与共享服务中心，name.sk 一眼讲清「斯洛伐克的生意」，本土企业与政府机构的主站几乎都在 .sk 上，Google 也会把 .sk 站点与斯洛伐克地区相关联。资格 2017 年起完全开放、无需本地地址。价格约 $14/年（约 ¥100）平续。做捷克市场 → .cz：非营利注册局 CZ.NIC 运营、注册量约 150 万，捷克是中欧制造与工程强国（斯柯达的故乡），布拉格是欧洲重要的软件与游戏开发中心（Avast、Kiwi.com 都诞生于此），CZ.NIC 还是开源 Knot DNS 的作者、技术口碑一流，市场体量约为斯洛伐克的两倍。资格同样完全开放，价格约 $10/年（约 ¥75）平续、比 .sk 还便宜。判断标准：用户在斯洛伐克、或做汽车制造供应链落地 → .sk 本地信任高、欧元区信号直接；用户在捷克、或做制造工程与软件游戏业务、或看重更大体量与更便宜价格 → .cz 的规模与注册局口碑更强；同时做斯捷两国生意的中欧品牌通常各注册一个做本地门面——两边语言相近但域名信号各锚定一国。",
+      pickA: ["斯洛伐克本地企业与服务", "汽车制造与供应链业务", "面向斯洛伐克的跨境电商", "斯洛伐克语内容与媒体站"],
+      pickB: ["捷克本地企业与服务", "制造与工程业务", "软件与游戏开发团队", "看重体量与价格优势的品牌"],
+    },
+    en: {
+      title: ".sk vs .cz: Slovakia or Czechia — Two Central European Manufacturing Neighbors' ccTLDs Compared",
+      metaDescription:
+        ".sk is Slovakia's country domain at about $14/yr flat, open to anyone since 2017; .cz is Czechia's at about $10/yr flat, equally zero-bar. Compare market signals, inventory and Central European positioning, then hunt available names.",
+      verdict:
+        "The country domains of two former-Czechoslovakia neighbors, both fully open and cheap with flat renewals — the divide is market size and industry profile. Slovakia-focused → .sk: run by registry SK-NIC with about 450,000 registrations; Slovakia has about 5.4 million people, is a eurozone member and produces more cars per capita than any country on earth (Volkswagen, Kia, Stellantis and Jaguar Land Rover all run plants here), while Bratislava is a Central European hub for IT and shared services; name.sk says \"a Slovak business\" at a glance, Slovak companies and government institutions overwhelmingly live on .sk, and Google geo-associates .sk sites with Slovakia. Eligibility has been fully open since 2017 with no local address. Pricing is about $14/yr (≈¥100) flat. Czechia-focused → .cz: run by non-profit registry CZ.NIC with about 1.5 million registrations; Czechia is a Central European manufacturing and engineering powerhouse (home of Škoda), Prague is a major European software and game-development hub (Avast and Kiwi.com were born there), and CZ.NIC authored the open-source Knot DNS — a registry with a stellar technical reputation and a market roughly twice Slovakia's size. Eligibility is equally open, and pricing is about $10/yr (≈¥75) flat — even cheaper than .sk. The test: users in Slovakia, or automotive supply-chain ventures landing there → .sk carries strong local trust and a direct eurozone signal; users in Czechia, or manufacturing, engineering, software and game-dev ventures, or brands wanting bigger scale at a lower price → .cz's size and registry reputation win; Central European brands running both countries usually register one of each as local front doors — the languages are close, but each domain signal anchors to one country.",
+      pickA: ["Local Slovak businesses & services", "Automotive manufacturing & supply chains", "Slovakia-facing cross-border e-commerce", "Slovak-language content & media"],
+      pickB: ["Local Czech businesses & services", "Manufacturing & engineering ventures", "Software & game studios", "Brands wanting bigger scale at a lower price"],
+    },
+  },
+  "ua-vs-pl": {
+    slug: "ua-vs-pl",
+    a: "ua",
+    b: "pl",
+    zh: {
+      title: ".ua 和 .pl 怎么选：乌克兰与波兰两个东欧 IT 邻国 ccTLD 的对比",
+      metaDescription: ".ua 是乌克兰国家域名、顶级直注需乌克兰商标且约 $18/年（.com.ua 约 $8/年开放注册）；.pl 是波兰国家域名、首年约 $6 但续费约 $25/年、任何人可注册。对比两者的市场信号、资格与东欧定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "东欧两个 IT 人才大国的国家域名，分水岭在注册资格与续费结构。做乌克兰市场 → .ua：Hostmaster 注册局运营、注册量约 55 万（含二级体系），乌克兰人口约 3700 万、是东欧最大的 IT 外包与工程人才基地之一（Grammarly、GitLab 的创始团队都出自这里），战后重建带来大量基建与制造需求，name.ua 或 name.com.ua 一眼讲清「乌克兰的生意」，本土企业（Rozetka 是本土电商巨头）与政府机构的主站几乎都在 .ua 体系上。资格分两级：顶级直注需持有与域名一致的乌克兰注册商标、约 $18/年（约 ¥130）；.com.ua 等二级完全开放、约 $8/年，没有商标先用 .com.ua 落地。做波兰市场 → .pl：国家研究院 NASK 运营、注册量约 250 万、中东欧最大的 ccTLD，波兰是欧盟第五人口大国、区域第一大经济体，电商增速常年领跑欧洲（本土巨头 Allegro 就在 .pl 上）。资格完全开放、任何人可直注，但续费要算清：首年约 $6（约 ¥45）、续费约 $25/年（约 ¥180），预算按续费价算。判断标准：用户在乌克兰、或做 IT 外包与重建供应链业务 → .ua 便宜且本地信任高，.com.ua 零门槛起步；用户在波兰、或做面向中东欧最大电商市场的品牌、或想要欧盟主场信号 → .pl 的体量与欧盟身位值回续费；同时做乌波两国生意的东欧品牌通常各注册一个做本地门面——两边语言与地域信号各锚定一国。",
+      pickA: ["乌克兰本地企业与服务", "IT 外包与软件开发团队", "重建基建与制造供应链", "用 .com.ua 零门槛起步的主体"],
+      pickB: ["波兰本地企业与服务", "面向波兰的跨境电商", "中东欧软件与 IT 服务", "想要欧盟主场信号的品牌"],
+    },
+    en: {
+      title: ".ua vs .pl: Ukraine or Poland — Two Eastern European IT Neighbors' ccTLDs Compared",
+      metaDescription:
+        ".ua is Ukraine's country domain — direct registration needs a Ukrainian trademark at ~$18/yr (.com.ua ~$8/yr is open to all); .pl is Poland's at about $6 in year one but ~$25/yr renewal, open to anyone. Compare market signals, eligibility and Eastern European positioning, then hunt available names.",
+      verdict:
+        "The country domains of two Eastern European IT talent powerhouses — the divide is eligibility versus renewal structure. Ukraine-focused → .ua: run by the Hostmaster registry with about 550,000 registrations across its zones; Ukraine has about 37 million people and one of Eastern Europe's largest IT outsourcing and engineering talent bases (Grammarly and GitLab both trace their founding teams here), with postwar reconstruction driving major infrastructure and manufacturing demand; name.ua or name.com.ua says \"a Ukrainian business\" at a glance, and Ukrainian companies (Rozetka is the homegrown e-commerce giant) and government institutions overwhelmingly live on the .ua family. Eligibility comes in two tiers: direct second-level registration requires a matching Ukrainian trademark at about $18/yr (≈¥130); second-level zones like .com.ua are fully open at about $8/yr — start there without a trademark. Poland-focused → .pl: run by national research institute NASK with about 2.5 million registrations, Central and Eastern Europe's largest ccTLD; Poland is the EU's fifth most populous country and the region's biggest economy, with e-commerce growth consistently leading Europe (homegrown giant Allegro lives on .pl). Eligibility is fully open with direct registration, but do the renewal math: about $6 in year one (≈¥45) yet about $25/yr to renew (≈¥180) — budget on the renewal price. The test: users in Ukraine, or IT-outsourcing and reconstruction supply-chain ventures → .ua is cheap and high-trust, with .com.ua as the zero-bar entry; users in Poland, or brands targeting the region's largest e-commerce market wanting an EU home-turf signal → .pl's scale and EU standing earn the renewal; Eastern European brands running both countries usually register one of each as local front doors — each language and geo signal anchors to one country.",
+      pickA: ["Local Ukrainian businesses & services", "IT outsourcing & dev teams", "Reconstruction infrastructure & manufacturing", "Parties starting zero-bar on .com.ua"],
+      pickB: ["Local Polish businesses & services", "Poland-facing cross-border e-commerce", "CEE software & IT services", "Brands wanting an EU home-turf signal"],
+    },
+  },
+  "ar-vs-cl": {
+    slug: "ar-vs-cl",
+    a: "ar",
+    b: "cl",
+    zh: {
+      title: ".ar 和 .cl 怎么选：阿根廷与智利两个南美邻国 ccTLD 的对比",
+      metaDescription: ".ar 是阿根廷国家域名、约 $36/年平续、2019 年起任何人可注册（需 NIC Argentina 登记）；.cl 是智利国家域名、约 $18/年平续、向全球开放（需本地联系人，注册商可代办）。对比两者的市场信号、库存与拉美定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "南美两个安第斯山两侧邻国的国家域名，价格都平续、资格都对海外友好，分水岭在市场画像与库存时间线。做阿根廷市场 → .ar：国家科技部旗下 NIC Argentina 运营、注册量约 70 万（含 .com.ar 体系），阿根廷人口约 4600 万、是拉美第三大经济体：全球重要的农产品出口国（大豆、牛肉、葡萄酒），也是拉美科技独角兽的摇篮——Mercado Libre、Globant 都发家于此，name.ar 或 name.com.ar 一眼讲清「阿根廷的生意」，本土企业与政府机构的主站几乎都在 .ar 体系上。最大利好是库存时间线：顶级直注 2019 年才开放，好词根库存比老牌 ccTLD 干净；注册需在 NIC Argentina 完成税号/身份登记，多数国际注册商可代办。价格约 $36/年（约 ¥260）平续。做智利市场 → .cl：智利大学旗下 NIC Chile 运营、注册量约 75 万，智利人口约 1900 万、是拉美最稳定、人均收入最高的经济体之一：全球最大的铜与锂出口国（新能源供应链的上游要地），互联网渗透率与电商成熟度居拉美前列。资格向全球开放：外国注册人只需一位智利本地联系人（注册商可代办）。价格约 $18/年（约 ¥130）平续、只有 .ar 的一半。判断标准：用户在阿根廷、或做农产品外贸与拉美科技业务、想抢 2019 年新开放库存 → .ar 的体量与库存优势明显；用户在智利、或做矿业与锂铜产业链、在意长期成本 → .cl 更便宜、经济信号更稳；同时做阿智两国生意的拉美品牌通常各注册一个做本地门面——两边地域信号各锚定一国。",
+      pickA: ["阿根廷本地企业与服务", "农产品与葡萄酒外贸", "拉美科技与创业公司", "想抢 2019 年新开放库存的品牌"],
+      pickB: ["智利本地企业与服务", "矿业、锂与铜产业链外贸", "面向智利的跨境电商", "在意长期续费成本的持有者"],
+    },
+    en: {
+      title: ".ar vs .cl: Argentina or Chile — Two Neighboring South American ccTLDs Compared",
+      metaDescription:
+        ".ar is Argentina's country domain at about $36/yr flat, open to anyone since 2019 (NIC Argentina registration required); .cl is Chile's at about $18/yr flat, open worldwide (a local contact is required; registrars provide one). Compare market signals, inventory and Latin American positioning, then hunt available names.",
+      verdict:
+        "The country domains of two neighbors flanking the Andes, both flat-priced and friendly to overseas registrants — the divide is market profile and inventory timeline. Argentina-focused → .ar: run by NIC Argentina under the national science ministry with about 700,000 registrations across its zones including .com.ar; Argentina has about 46 million people and Latin America's third-largest economy: a major global exporter of farm goods (soy, beef, wine) and the cradle of LatAm tech unicorns — Mercado Libre and Globant both started here; name.ar or name.com.ar says \"an Argentine business\" at a glance, and Argentine companies and government institutions overwhelmingly live on the .ar family. The biggest win is the inventory timeline: direct second-level registration only opened in 2019, so good-root inventory is cleaner than older ccTLDs; a tax/identity registration with NIC Argentina is required, and most international registrars handle it. Pricing is about $36/yr (≈¥260) flat. Chile-focused → .cl: run by NIC Chile under the University of Chile with about 750,000 registrations; Chile has about 19 million people and one of Latin America's most stable, highest-income economies — the world's largest copper and lithium exporter (upstream of the new-energy supply chain), with internet penetration and e-commerce maturity at the top of the region. Eligibility is open worldwide: foreign registrants just need a local Chilean contact (registrars provide one). Pricing is about $18/yr (≈¥130) flat — half of .ar's. The test: users in Argentina, or agricultural trade and LatAm tech ventures hunting the 2019 fresh inventory → .ar's scale and inventory edge are clear; users in Chile, or mining, lithium and copper supply-chain ventures minding long-term costs → .cl is cheaper with a steadier economic signal; Latin American brands running both countries usually register one of each as local front doors — each geo signal anchors to one country.",
+      pickA: ["Local Argentine businesses & services", "Agricultural & wine export trade", "LatAm tech & startups", "Brands hunting the 2019 fresh inventory"],
+      pickB: ["Local Chilean businesses & services", "Mining, lithium & copper trade", "Chile-facing cross-border e-commerce", "Holders minding long-term renewal costs"],
+    },
+  },
+  "ng-vs-com": {
+    slug: "ng-vs-com",
+    a: "ng",
+    b: "com",
+    zh: {
+      title: ".ng 和 .com 怎么选：尼日利亚国家域名与全球默认后缀的对比",
+      metaDescription: ".ng 是尼日利亚国家域名、顶级直注约 $36/年（.com.ng 约 $10/年）、任何人可注册；.com 是全球默认商业后缀、约 $10-15/年但好名字几乎注光。对比两者的市场信号、库存与定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "一个是非洲第一人口大国的本土信号，一个是全球默认的商业后缀，分水岭在市场定位与库存现实。做尼日利亚与西非市场 → .ng：注册局 NiRA 运营、注册量约 25 万（含 .com.ng 体系），尼日利亚人口约 2.2 亿、是非洲第一人口大国与最大经济体之一：拉各斯是非洲的金融科技之都——Flutterwave、Paystack、OPay 都发家于此，非洲独角兽近半出自尼日利亚，name.ng 或 name.com.ng 一眼讲清「尼日利亚的生意」，本土企业与政府机构的主站几乎都在 .ng 体系上，Google 也会把 .ng 站点与尼日利亚地区相关联。资格完全开放：任何国家的个人与机构都可注册、无需本地地址。价格中等：顶级直注约 $36/年（约 ¥260）、.com.ng 约 $10/年，平续无钩子；库存也远比 .com 干净，英语是官方语言、英文词根无需翻译。做全球市场 → .com：全球注册量约 1.6 亿、默认商业后缀，任何市场的用户都不需要解释；价格便宜（约 $10-15/年）但好名字几乎注光，短词根要么天价要么在炒家手里。判断标准：用户在尼日利亚与西非、或做金融科技与本地电商 → .ng 的本土信任与干净库存是 .com 给不了的；做全球市场、或品牌要覆盖多个大洲 → .com 仍是默认答案，找不到好名字再用 .ng 等 ccTLD 做区域门面；很多面向非洲的品牌两个都注册——.com 做全球主站、.ng 做尼日利亚本地门面。",
+      pickA: ["尼日利亚本地企业与服务", "金融科技与支付产品", "面向西非的跨境电商", "非洲市场品牌与创业公司"],
+      pickB: ["全球市场的商业品牌", "多大洲覆盖的产品", "需要零解释成本的主站", "预算内能拿到好词根的团队"],
+    },
+    en: {
+      title: ".ng vs .com: Nigeria's Country Domain or the Global Default Compared",
+      metaDescription:
+        ".ng is Nigeria's country domain — direct registration at ~$36/yr (.com.ng ~$10/yr), open to anyone; .com is the global default at ~$10-15/yr but with good names nearly exhausted. Compare market signals, inventory and positioning, then hunt available names.",
+      verdict:
+        "One is the local signal of Africa's most populous country, the other the world's default business suffix — the divide is market positioning versus inventory reality. Nigeria and West Africa → .ng: run by registry NiRA with about 250,000 registrations across its zones including .com.ng; Nigeria has about 220 million people and one of Africa's largest economies: Lagos is the continent's fintech capital — Flutterwave, Paystack and OPay all started here, and nearly half of Africa's unicorns are Nigerian; name.ng or name.com.ng says \"a Nigerian business\" at a glance, Nigerian companies and government institutions overwhelmingly live on the .ng family, and Google geo-associates .ng sites with Nigeria. Eligibility is fully open: anyone registers with no local address. Pricing is moderate: about $36/yr for direct second-level (≈¥260) and about $10/yr for .com.ng, flat with no traps; inventory is far cleaner than .com's, and with English as the official language, English roots need no translation. Global markets → .com: about 160 million registrations worldwide, the default business suffix that no audience anywhere needs explained; pricing is cheap (about $10-15/yr) but good names are nearly exhausted — short roots are either priced astronomically or parked by speculators. The test: users in Nigeria and West Africa, or fintech and local e-commerce ventures → .ng offers local trust and clean inventory .com can't match; global markets or brands spanning continents → .com remains the default answer, falling back to ccTLDs like .ng for regional front doors when good names are gone; many Africa-facing brands register both — .com as the global main site, .ng as the Nigerian local front door.",
+      pickA: ["Local Nigerian businesses & services", "Fintech & payment products", "West Africa-facing cross-border e-commerce", "African-market brands & startups"],
+      pickB: ["Global-market business brands", "Products spanning multiple continents", "Main sites needing zero explanation", "Teams who can still land a good .com root"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */

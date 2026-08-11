@@ -430,4 +430,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "ro-vs-pl", a: "ro", b: "pl", title: { zh: ".ro 和 .pl 怎么选：罗马尼亚与波兰两大东欧 IT 市场 ccTLD 的对比", en: ".ro vs .pl: Romania or Poland — Two Eastern European IT Hub ccTLDs Compared" } },
   { slug: "hu-vs-cz", a: "hu", b: "cz", title: { zh: ".hu 和 .cz 怎么选：匈牙利与捷克两个中欧制造强国 ccTLD 的对比", en: ".hu vs .cz: Hungary or Czechia — Two Central European Manufacturing ccTLDs Compared" } },
   { slug: "cl-vs-mx", a: "cl", b: "mx", title: { zh: ".cl 和 .mx 怎么选：智利与墨西哥两个拉美西语市场 ccTLD 的对比", en: ".cl vs .mx: Chile or Mexico — Two Spanish-Speaking Latin American ccTLDs Compared" } },
+  { slug: "my-vs-sg", a: "my", b: "sg", title: { zh: ".my 和 .sg 怎么选：马来西亚与新加坡两个东南亚枢纽 ccTLD 的对比", en: ".my vs .sg: Malaysia or Singapore — Two Southeast Asian Hub ccTLDs Compared" } },
+  { slug: "th-vs-vn", a: "th", b: "vn", title: { zh: ".th 和 .vn 怎么选：泰国与越南两个东南亚大市场 ccTLD 的对比", en: ".th vs .vn: Thailand or Vietnam — Two Big Southeast Asian Market ccTLDs Compared" } },
+  { slug: "sk-vs-cz", a: "sk", b: "cz", title: { zh: ".sk 和 .cz 怎么选：斯洛伐克与捷克两个中欧制造邻国 ccTLD 的对比", en: ".sk vs .cz: Slovakia or Czechia — Two Central European Manufacturing Neighbors' ccTLDs Compared" } },
+  { slug: "ua-vs-pl", a: "ua", b: "pl", title: { zh: ".ua 和 .pl 怎么选：乌克兰与波兰两个东欧 IT 邻国 ccTLD 的对比", en: ".ua vs .pl: Ukraine or Poland — Two Eastern European IT Neighbors' ccTLDs Compared" } },
+  { slug: "ar-vs-cl", a: "ar", b: "cl", title: { zh: ".ar 和 .cl 怎么选：阿根廷与智利两个南美邻国 ccTLD 的对比", en: ".ar vs .cl: Argentina or Chile — Two Neighboring South American ccTLDs Compared" } },
+  { slug: "ng-vs-com", a: "ng", b: "com", title: { zh: ".ng 和 .com 怎么选：尼日利亚国家域名与全球默认后缀的对比", en: ".ng vs .com: Nigeria's Country Domain or the Global Default Compared" } },
 ];
