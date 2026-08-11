@@ -1091,7 +1091,7 @@ app.get("/advanced", async (c) => {
     );
   html = injectHreflang(html, "/advanced", c.req.query("lang") === "en");
   html = setHtmlLang(html, lang);
-  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx");
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx", "full");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -1318,8 +1318,11 @@ async function assetSize(file: string, assets: Fetcher, origin: string): Promise
  *  正文已全文 SSR，这些数据只在水合时才需要；提前抢占带宽会显著推迟移动端 LCP。 */
 const MODULEPRELOAD_MAX_BYTES = 110_000;
 
-/** SEO 页 SSR 注入懒加载路由 chunk 的 modulepreload，让页面 JS 与主 bundle 并行下载（降低内容 LCP） */
-async function injectModulepreload(html: string, assets: Fetcher, origin: string, entry: string): Promise<string> {
+/** SSR 注入懒加载路由 chunk 的 modulepreload，让页面 JS 与主 bundle 并行下载。
+ *  depth="entry"（内容页默认）只预载路由入口 chunk：正文已全文 SSR，水合非关键路径，
+ *  预载整棵 import 树（十几个小 chunk）会在移动端与 HTML/字体抢带宽、推迟 FCP/LCP；
+ *  depth="full"（首页/advanced 等应用页）预载整棵树，首次渲染依赖这些 chunk。 */
+async function injectModulepreload(html: string, assets: Fetcher, origin: string, entry: string, depth: "entry" | "full" = "entry"): Promise<string> {
   try {
     if (!viteManifest) {
       const res = await assets.fetch(new Request(new URL("/manifest.json", origin)));
@@ -1334,8 +1337,9 @@ async function injectModulepreload(html: string, assets: Fetcher, origin: string
       for (const dep of chunk.imports ?? []) walk(dep);
     };
     walk(entry);
-    const sizes = await Promise.all(files.map((f) => assetSize(f, assets, origin)));
-    const preloadable = files.filter((_, i) => sizes[i] <= MODULEPRELOAD_MAX_BYTES);
+    const candidates = depth === "entry" ? files.slice(0, 1) : files;
+    const sizes = await Promise.all(candidates.map((f) => assetSize(f, assets, origin)));
+    const preloadable = candidates.filter((_, i) => sizes[i] <= MODULEPRELOAD_MAX_BYTES);
     if (preloadable.length === 0) return html;
     const links = preloadable.map((f) => `<link rel="modulepreload" href="/${f}" />`).join("\n    ");
     return html.replace("</head>", `${links}\n  </head>`);
@@ -1488,7 +1492,7 @@ app.get("/", async (c) => {
       );
   }
   html = injectHreflang(html, "/", c.req.query("lang") === "en").replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
-  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/home-page.tsx");
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/home-page.tsx", "full");
   html = setHtmlLang(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
