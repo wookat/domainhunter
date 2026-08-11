@@ -11904,6 +11904,186 @@ const GUIDES = {
       ],
     },
   },
+  lt: {
+    tld: "lt",
+    zh: {
+      title: ".lt 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".lt 是立陶宛国家域名，无资格限制、任何人可注册，价格便宜平续，本地信任度极高，适合面向立陶宛市场的品牌、金融科技与激光制造业务。查看 .lt 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .lt 域名。",
+      intro:
+        ".lt 是立陶宛的国家域名，由考纳斯理工大学（KTU）下属的 DOMREG 注册局运营，注册量约 25 万。立陶宛人口约 280 万，却是欧盟增长最快的金融科技中心之一：维尔纽斯凭借欧盟最快的电子货币与支付牌照发放速度吸引了 Revolut 欧洲总部等数百家 fintech 落户，Vinted（欧洲最大二手服装平台）与 Nord Security（NordVPN）两家独角兽也诞生于此；激光产业更是隐形冠军——全球科研级飞秒激光器约一半产自立陶宛。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.lt，「立陶宛的生意」一眼讲清，信任度远超一般新后缀——本土企业与政府机构的主站几乎都在 .lt 上；Google 也会把 .lt 站点与立陶宛地区相关联，本地 SEO 有天然加成。资格上 .lt 完全开放：任何国家的个人与机构都可注册，无需本地地址或代理。价格便宜且平续：约 $12/年（约 ¥90），续费同价，无引流钩子。英语在商务与科技圈普及率高，英文词根无需翻译。命名上品牌词直接上（brand.lt）最主流；金融科技与 SaaS 用「品类词 + .lt」讲清市场落地，激光与精密制造外贸用行业词根。注意受众主要在立陶宛与波罗的海市场，纯外部市场业务信号较弱。",
+      bestFor: ["立陶宛本地企业与服务", "金融科技与支付牌照公司", "激光与精密制造外贸", "波罗的海市场品牌与电商"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $12/年，便宜且平续",
+        "英语在商务与科技圈普及率高，英文词根无需翻译",
+        "受众在立陶宛与波罗的海市场，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".lt Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".lt is Lithuania's country domain — no eligibility restrictions, anyone can register — cheap with flat renewals and top-tier local trust for Lithuanian-market brands, fintech and laser manufacturing. See live pricing and naming advice, then hunt available .lt names with AI.",
+      intro:
+        ".lt is Lithuania's country-code domain, run by the DOMREG registry at Kaunas University of Technology (KTU) with about 250,000 registrations. Lithuania has about 2.8 million people yet is one of the EU's fastest-growing fintech hubs: Vilnius issues e-money and payment licenses faster than anywhere else in the EU, attracting hundreds of fintechs including Revolut's European headquarters, and both Vinted (Europe's largest second-hand fashion marketplace) and Nord Security (NordVPN) were born here; the laser industry is a hidden champion — roughly half the world's scientific femtosecond lasers are made in Lithuania. Local consumers are strongly attuned to local signals: name.lt says \"a Lithuanian business\" at a glance, with trust far beyond any new gTLD — local companies and government institutions overwhelmingly live on .lt; Google also geo-associates .lt sites with Lithuania, a natural boost for local SEO. On eligibility, .lt is fully open: individuals and organizations from anywhere can register, with no local address or proxy. Pricing is cheap and flat: about $12/yr (≈¥90) with the same renewal, no teaser games. English is widely spoken in business and tech, so English roots need no translation. For naming, a straight brand word is the mainstream shape (brand.lt); fintech and SaaS fit category + .lt to claim the market, and laser or precision-manufacturing trade fits an industry root. One caution: the audience is primarily Lithuania and the Baltics — the signal is weaker for purely external markets.",
+      bestFor: ["Local Lithuanian businesses & services", "Fintech & payment license companies", "Laser & precision manufacturing trade", "Baltic-market brands & e-commerce"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $12/yr flat to register and renew — cheap, no traps",
+        "English is widely spoken in business and tech — English roots need no translation",
+        "Audience is primarily Lithuania and the Baltics — weaker signal for purely external markets",
+      ],
+    },
+  },
+  lv: {
+    tld: "lv",
+    zh: {
+      title: ".lv 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".lv 是拉脱维亚国家域名，无资格限制、任何人可注册，价格适中平续，本地信任度极高，适合面向拉脱维亚市场的品牌、物流与木材外贸业务。查看 .lv 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .lv 域名。",
+      intro:
+        ".lv 是拉脱维亚的国家域名，由拉脱维亚大学数学与计算机科学研究所下属的 NIC.LV 运营，注册量约 15 万。拉脱维亚人口约 190 万，首都里加是波罗的海三国最大的城市与交通枢纽：里加港与文茨皮尔斯港承接俄欧转运与北欧物流，木材与木制品是最大宗出口（森林覆盖率超过一半），airBaltic 把里加做成了区域航空中转站，Printful（按需印刷独角兽）也诞生于此。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.lv，「拉脱维亚的生意」一眼讲清，信任度远超一般新后缀——本土企业与政府机构的主站几乎都在 .lv 上；Google 也会把 .lv 站点与拉脱维亚地区相关联，本地 SEO 有天然加成。资格上 .lv 完全开放：任何国家的个人与机构都可注册，无需本地地址或代理。价格适中且平续：约 $19/年（约 ¥140），续费同价，无引流钩子。英语在商务圈普及，英文词根无需翻译；「lv」在中文互联网还有「路易威登」的联想，时尚类命名可借势但注意商标边界。命名上品牌词直接上（brand.lv）最主流；物流与货运用「品类词 + .lv」讲清市场落地，木材外贸用行业词根。注意受众主要在拉脱维亚与波罗的海市场，纯外部市场业务信号较弱。",
+      bestFor: ["拉脱维亚本地企业与服务", "港口物流与货运代理", "木材与木制品外贸", "波罗的海市场品牌与电商"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $19/年，平续无钩子",
+        "英语在商务圈普及，英文词根无需翻译",
+        "受众在拉脱维亚与波罗的海市场，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".lv Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".lv is Latvia's country domain — no eligibility restrictions, anyone can register — moderately priced with flat renewals and top-tier local trust for Latvian-market brands, logistics and timber trade. See live pricing and naming advice, then hunt available .lv names with AI.",
+      intro:
+        ".lv is Latvia's country-code domain, run by NIC.LV at the Institute of Mathematics and Computer Science of the University of Latvia, with about 150,000 registrations. Latvia has about 1.9 million people, and its capital Riga is the largest city and transport hub of the three Baltic states: the ports of Riga and Ventspils handle Russia-Europe transshipment and Nordic logistics, timber and wood products are the top export (over half the country is forest), airBaltic has made Riga a regional aviation hub, and Printful (the print-on-demand unicorn) was born here. Local consumers are strongly attuned to local signals: name.lv says \"a Latvian business\" at a glance, with trust far beyond any new gTLD — local companies and government institutions overwhelmingly live on .lv; Google also geo-associates .lv sites with Latvia, a natural boost for local SEO. On eligibility, .lv is fully open: individuals and organizations from anywhere can register, with no local address or proxy. Pricing is moderate and flat: about $19/yr (≈¥140) with the same renewal, no teaser games. English is common in business, so English roots need no translation. For naming, a straight brand word is the mainstream shape (brand.lv); logistics and freight fit category + .lv to claim the market, and timber trade fits an industry root. One caution: the audience is primarily Latvia and the Baltics — the signal is weaker for purely external markets.",
+      bestFor: ["Local Latvian businesses & services", "Port logistics & freight forwarding", "Timber & wood products trade", "Baltic-market brands & e-commerce"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $19/yr flat to register and renew — no traps",
+        "English is common in business — English roots need no translation",
+        "Audience is primarily Latvia and the Baltics — weaker signal for purely external markets",
+      ],
+    },
+  },
+  rs: {
+    tld: "rs",
+    zh: {
+      title: ".rs 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".rs 是塞尔维亚国家域名，无资格限制、任何人可注册，本地信任度极高，还是 Rust 语言社区的惯用后缀，适合面向塞尔维亚市场的品牌与 Rust 开源项目。查看 .rs 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .rs 域名。",
+      intro:
+        ".rs 是塞尔维亚的国家域名，由塞尔维亚国家互联网域名注册局（RNIDS）运营，注册量约 11 万。塞尔维亚人口约 660 万，是巴尔干最大的经济体与区域 IT 外包中心：贝尔格莱德与诺维萨德的工程师团队常年服务欧美客户，微软与大陆集团在此设研发中心，Nordeus（Top Eleven 游戏）是本土明星公司。对全球开发者而言 .rs 还有一层特殊身份：它恰好是 Rust 语言源文件的扩展名（.rs），docs.rs、crates 生态与大量 Rust 开源项目都用 .rs 域名——「项目名 + .rs」在 Rust 社区就是身份标识，这让 .rs 拥有远超国别的全球开发者客群。本地消费者对本土信号同样敏感：本地电商、品牌官网与服务商用 name.rs，「塞尔维亚的生意」一眼讲清，信任度远超一般新后缀；Google 也会把 .rs 站点与塞尔维亚地区相关联，本地 SEO 有天然加成。资格上 .rs 完全开放：任何国家的个人与机构都可注册，无需本地地址或代理。价格适中且平续：约 $25/年（约 ¥180），续费同价，无引流钩子。命名上品牌词直接上（brand.rs）最主流；Rust 工具与开源项目用「项目名 + .rs」是社区惯例，IT 外包与本地服务用「品类词 + .rs」讲清市场落地。注意非 Rust 场景下受众主要在塞尔维亚本土，纯外部市场业务信号较弱。",
+      bestFor: ["Rust 语言工具与开源项目", "塞尔维亚本地企业与服务", "巴尔干 IT 外包与工程团队", "面向东南欧市场的品牌"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $25/年，平续无钩子",
+        "Rust 项目用「项目名 + .rs」是社区惯例，全球开发者秒懂",
+        "非 Rust 场景受众在塞尔维亚本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".rs Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".rs is Serbia's country domain — no eligibility restrictions, anyone can register — with top-tier local trust and a special role as the Rust community's go-to suffix. See live pricing and naming advice, then hunt available .rs names with AI.",
+      intro:
+        ".rs is Serbia's country-code domain, run by the Serbian National Internet Domain Registry (RNIDS) with about 110,000 registrations. Serbia has about 6.6 million people and is the Balkans' largest economy and a regional IT outsourcing hub: engineering teams in Belgrade and Novi Sad serve European and American clients year-round, Microsoft and Continental run R&D centers here, and Nordeus (Top Eleven) is the homegrown star. For developers worldwide, .rs carries a second identity: it happens to be the file extension of Rust source code, and docs.rs, the crates ecosystem and countless Rust open-source projects live on .rs domains — \"project + .rs\" is an identity badge in the Rust community, giving .rs a global developer audience far beyond its borders. Local consumers are strongly attuned to local signals too: name.rs says \"a Serbian business\" at a glance, with trust far beyond any new gTLD; Google also geo-associates .rs sites with Serbia, a natural boost for local SEO. On eligibility, .rs is fully open: individuals and organizations from anywhere can register, with no local address or proxy. Pricing is moderate and flat: about $25/yr (≈¥180) with the same renewal, no teaser games. For naming, a straight brand word is the mainstream shape (brand.rs); Rust tools and open-source projects follow the community convention of project + .rs, and IT outsourcing or local services fit category + .rs to claim the market. One caution: outside Rust circles the audience is primarily Serbia — the signal is weaker for purely external markets.",
+      bestFor: ["Rust language tools & open-source projects", "Local Serbian businesses & services", "Balkan IT outsourcing & engineering teams", "Southeast Europe-market brands"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $25/yr flat to register and renew — no traps",
+        "Rust projects use project + .rs by community convention — developers get it instantly",
+        "Outside Rust circles the audience is primarily Serbia — weaker signal for purely external markets",
+      ],
+    },
+  },
+  is: {
+    tld: "is",
+    zh: {
+      title: ".is 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".is 是冰岛国家域名，无资格限制、任何人可注册，还是英语系动词「is」本身，域名黑客玩法一流，适合品牌宣言式命名、冰岛旅游与绿色数据中心业务。查看 .is 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .is 域名。",
+      intro:
+        ".is 是冰岛的国家域名，由 ISNIC 注册局运营，注册量约 8 万。冰岛人口仅约 38 万，却有远超体量的全球存在感：火山、冰川与极光让它常年位居旅行清单头部（游客数量是人口的数倍），近乎 100% 的地热与水电让它成为绿色数据中心与比特币矿场的热门选址，CCP Games（EVE Online）是本土旗舰。但 .is 对全球用户的最大吸引力在后缀本身：「is」就是英语系动词，「name.is」天然读成一句宣言——this.is、life.is 类域名黑客是 .is 的招牌玩法，个人主页服务与品牌宣言站点在全球范围内大量使用。本地信号同样扎实：冰岛本土企业与机构的主站几乎都在 .is 上，Google 也会把 .is 站点与冰岛地区相关联。资格上 .is 完全开放：任何国家的个人与机构都可注册，无需本地地址或代理。价格偏高但平续：约 $62/年（约 ¥450），续费同价，无引流钩子——为一个能当句子读的后缀，这个价换来的辨识度往往值回票价。英语普及率极高，英文词根无需翻译。命名上「词 + .is」读成短句是招牌（brand.is 读作「brand is…」）；冰岛旅游与向导用「主题词 + .is」，绿色算力与数据中心用行业词根。注意长正文场景受众主要在冰岛本土，域名黑客场景则完全全球化。",
+      bestFor: ["品牌宣言与个人主页（name.is 域名黑客）", "冰岛旅游、向导与民宿", "绿色数据中心与算力业务", "面向北欧市场的品牌"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $62/年，偏高但平续无钩子",
+        "「name.is」天然读成一句宣言，域名黑客玩法一流",
+        "本地业务受众在冰岛本土，域名黑客场景则完全全球化",
+      ],
+    },
+    en: {
+      title: ".is Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".is is Iceland's country domain — no eligibility restrictions, anyone can register — and the suffix is the English verb \"is\" itself, making it a first-class domain hack for brand statements, Icelandic tourism and green data centers. See live pricing and naming advice, then hunt available .is names with AI.",
+      intro:
+        ".is is Iceland's country-code domain, run by the ISNIC registry with about 80,000 registrations. Iceland has just 380,000 people yet punches far above its weight globally: volcanoes, glaciers and northern lights keep it atop travel wishlists (tourists outnumber residents several times over), near-100% geothermal and hydro power makes it a favorite site for green data centers and bitcoin mining, and CCP Games (EVE Online) is the homegrown flagship. But the biggest draw of .is is the suffix itself: \"is\" is the English verb, so name.is naturally reads as a statement — domain hacks like this.is and life.is are .is's signature move, used worldwide for personal pages and brand-statement sites. The local signal is solid too: Icelandic companies and institutions overwhelmingly live on .is, and Google geo-associates .is sites with Iceland. On eligibility, .is is fully open: individuals and organizations from anywhere can register, with no local address or proxy. Pricing is on the high side but flat: about $62/yr (≈¥450) with the same renewal, no teaser games — for a suffix that reads as a sentence, the recognition usually pays for itself. English proficiency is very high, so English roots need no translation. For naming, word + .is reading as a phrase is the signature shape (brand.is reads \"brand is…\"); Icelandic tourism and guides fit topic + .is, and green compute or data-center plays fit an industry root. One caution: local-business audiences are primarily Iceland — but the domain-hack use case is fully global.",
+      bestFor: ["Brand statements & personal pages (name.is hacks)", "Icelandic tourism, guides & guesthouses", "Green data centers & compute businesses", "Nordic-market brands"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $62/yr flat to register and renew — pricey but no traps",
+        "name.is reads as a statement — a first-class domain hack",
+        "Local businesses reach mainly Iceland — domain-hack use is fully global",
+      ],
+    },
+  },
+  ge: {
+    tld: "ge",
+    zh: {
+      title: ".ge 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ge 是格鲁吉亚国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向格鲁吉亚市场的品牌、旅游、葡萄酒外贸与数字游民服务。查看 .ge 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ge 域名。",
+      intro:
+        ".ge 是格鲁吉亚的国家域名，由 Caucasus Online 运营注册局职能（nic.ge），注册量约 5 万。格鲁吉亚人口约 370 万，是高加索地区的商业与旅游门户：第比利斯与巴统近年成为数字游民与远程创业者的热门落脚点——一年免签、远程工作签证与全球最简的公司注册流程（世界银行营商环境常年前十）吸引了大量外国创业者落地开公司；8000 年酿酒史让格鲁吉亚葡萄酒（陶罐 Qvevri 工艺入选联合国非遗）成为最具辨识度的出口名片，黑海沿岸与高加索雪山则支撑起快速增长的旅游业。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.ge，「格鲁吉亚的生意」一眼讲清，信任度远超一般新后缀——本土企业与政府机构的主站几乎都在 .ge 上；Google 也会把 .ge 站点与格鲁吉亚地区相关联，本地 SEO 有天然加成。资格上 .ge 完全开放：任何国家的个人与机构都可注册，无需本地地址或代理。价格适中且平续：约 $30/年（约 ¥220），续费同价，无引流钩子。英语在旅游与创业圈通用，英文词根无需翻译。命名上品牌词直接上（brand.ge）最主流；旅游与向导用「主题词 + .ge」，葡萄酒外贸用「品类词 + .ge」讲清市场落地。注意受众主要在格鲁吉亚本土，纯外部市场业务信号较弱。",
+      bestFor: ["格鲁吉亚本地企业与服务", "旅游、向导与民宿", "格鲁吉亚葡萄酒外贸", "数字游民与远程创业服务"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $30/年，平续无钩子",
+        "英语在旅游与创业圈通用，英文词根无需翻译",
+        "受众在格鲁吉亚本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".ge Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ge is Georgia's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Georgian-market brands, tourism, wine trade and digital nomad services. See live pricing and naming advice, then hunt available .ge names with AI.",
+      intro:
+        ".ge is the country-code domain of Georgia (the Caucasus nation), with registry operations run by Caucasus Online (nic.ge) and about 50,000 registrations. Georgia has about 3.7 million people and is the business and tourism gateway of the Caucasus: Tbilisi and Batumi have become favorite bases for digital nomads and remote founders — a one-year visa-free stay, remote-work visas and one of the world's simplest company registration processes (a perennial World Bank ease-of-business top-ten) draw foreign entrepreneurs to incorporate here; 8,000 years of winemaking history make Georgian wine (the qvevri clay-vessel method is UNESCO-listed) its most recognizable export, while Black Sea coastline and Caucasus peaks power fast-growing tourism. Local consumers are strongly attuned to local signals: name.ge says \"a Georgian business\" at a glance, with trust far beyond any new gTLD — local companies and government institutions overwhelmingly live on .ge; Google also geo-associates .ge sites with Georgia, a natural boost for local SEO. On eligibility, .ge is fully open: individuals and organizations from anywhere can register, with no local address or proxy. Pricing is moderate and flat: about $30/yr (≈¥220) with the same renewal, no teaser games. English is common in tourism and startup circles, so English roots need no translation. For naming, a straight brand word is the mainstream shape (brand.ge); tourism and guides fit topic + .ge, and wine trade fits category + .ge to claim the market. One caution: the audience is primarily Georgia — the signal is weaker for purely external markets.",
+      bestFor: ["Local Georgian businesses & services", "Tourism, guides & guesthouses", "Georgian wine trade", "Digital nomad & remote founder services"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $30/yr flat to register and renew — no traps",
+        "English is common in tourism and startup circles — English roots need no translation",
+        "Audience is primarily Georgia — weaker signal for purely external markets",
+      ],
+    },
+  },
+  uy: {
+    tld: "uy",
+    zh: {
+      title: ".uy 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".uy 是乌拉圭国家域名，顶级直注无资格限制、任何人可注册，本地信任度极高，适合面向乌拉圭市场的品牌、软件外包与农牧出口业务。查看 .uy 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .uy 域名。",
+      intro:
+        ".uy 是乌拉圭的国家域名，由乌拉圭共和国大学中央计算机服务处（SeCIU）运营，注册量约 6 万（含 .com.uy 体系）。乌拉圭人口约 340 万，却是拉美最稳定、数字化程度最高的经济体之一：人均软件出口常年居拉美第一，蒙得维的亚聚集了 dLocal（拉美支付独角兽）与 PedidosYa（外卖平台）等明星公司，Globant 等外包巨头在此设大型交付中心；牛肉与农产品出口（人均牛只数量全球前列）是传统支柱，政局稳定与法治水平让它被称为「拉美瑞士」。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.uy 或 name.com.uy，「乌拉圭的生意」一眼讲清，信任度远超一般新后缀——本土企业与政府机构的主站几乎都在 .uy 体系上；Google 也会把 .uy 站点与乌拉圭地区相关联，本地 SEO 有天然加成。资格上顶级直注自 2012 年起完全开放：任何国家的个人与机构都可注册 name.uy，无需本地地址或代理（.com.uy 也对外开放）。价格偏高但平续：约 $53/年（约 ¥380），续费同价，无引流钩子。西班牙语是主要语言，面向本地市场建议用西语词根，科技与外包圈英文词根同样通行。命名上品牌词直接上（brand.uy）最主流；软件外包与 SaaS 用「品类词 + .uy」讲清市场落地，农牧出口用行业词根。注意受众主要在乌拉圭本土，纯外部市场业务信号较弱。",
+      bestFor: ["乌拉圭本地企业与服务", "软件外包与 SaaS 团队", "牛肉与农产品出口", "面向拉美南锥市场的品牌"],
+      namingTips: [
+        "顶级直注无资格限制，任何人可注册、无需本地地址",
+        "注册续费均约 $53/年，偏高但平续无钩子",
+        "本地市场建议西语词根，科技圈英文词根同样通行",
+        "受众在乌拉圭本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".uy Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".uy is Uruguay's country domain — direct second-level registration is open to anyone with no eligibility restrictions — with top-tier local trust for Uruguayan-market brands, software outsourcing and agri-export businesses. See live pricing and naming advice, then hunt available .uy names with AI.",
+      intro:
+        ".uy is Uruguay's country-code domain, run by SeCIU (the central computing service of the Universidad de la República) with about 60,000 registrations across its zones including .com.uy. Uruguay has about 3.4 million people yet is one of Latin America's most stable and digitized economies: it leads the region in software exports per capita, Montevideo hosts stars like dLocal (the Latin American payments unicorn) and PedidosYa (food delivery), and outsourcing giants like Globant run major delivery centers here; beef and agricultural exports (among the world's most cattle per person) are the traditional pillar, and political stability plus rule of law earn it the nickname \"the Switzerland of Latin America.\" Local consumers are strongly attuned to local signals: name.uy or name.com.uy says \"a Uruguayan business\" at a glance, with trust far beyond any new gTLD — local companies and government institutions overwhelmingly live on the .uy family; Google also geo-associates .uy sites with Uruguay, a natural boost for local SEO. On eligibility, direct second-level registration has been fully open since 2012: individuals and organizations from anywhere can register name.uy, with no local address or proxy (.com.uy is open too). Pricing is on the high side but flat: about $53/yr (≈¥380) with the same renewal, no teaser games. Spanish is the main language — use Spanish roots for the local market, while English roots work fine in tech and outsourcing circles. For naming, a straight brand word is the mainstream shape (brand.uy); software outsourcing and SaaS fit category + .uy to claim the market, and agri-export fits an industry root. One caution: the audience is primarily Uruguay — the signal is weaker for purely external markets.",
+      bestFor: ["Local Uruguayan businesses & services", "Software outsourcing & SaaS teams", "Beef & agricultural exports", "Southern Cone-market brands"],
+      namingTips: [
+        "Direct registration is open to anyone — no local address needed",
+        "About $53/yr flat to register and renew — pricey but no traps",
+        "Use Spanish roots for the local market — English works in tech circles",
+        "Audience is primarily Uruguay — weaker signal for purely external markets",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

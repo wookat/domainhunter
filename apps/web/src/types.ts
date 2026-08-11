@@ -500,6 +500,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   pk: { first: 100, renew: 100 },
   lk: { first: 180, renew: 180 },
   ee: { first: 90, renew: 90 },
+  lt: { first: 90, renew: 90 },
+  lv: { first: 140, renew: 140 },
+  rs: { first: 180, renew: 180 },
+  is: { first: 450, renew: 450 },
+  ge: { first: 220, renew: 220 },
+  uy: { first: 380, renew: 380 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
