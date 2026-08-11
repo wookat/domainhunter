@@ -363,14 +363,34 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
 
 /* ---------- 内容枢纽 hub 页（/tld、/guide、/vs） ---------- */
 
-/* 内容页 hub 面包屑 kicker：与 tld-page/guide-page/compare-page 的 kicker DOM 逐字一致（i18n hub.allTld / hub.allGuide / hub.allVs） */
+/* 内容页可见面包屑：与 breadcrumb.tsx（tld-page/guide-page/compare-page 共用）的 DOM 逐字一致（i18n crumb.home / crumb.nav / hub.allTld / hub.allGuide / hub.allVs） */
 const HUB_CRUMB = {
   zh: { tld: "TLD 指南", guide: "行业指南", vs: "后缀对比" },
   en: { tld: "TLD guides", guide: "Industry guides", vs: "TLD comparisons" },
 } as const;
 
-export const hubCrumbKicker = (hub: "tld" | "guide" | "vs", current: string, lang: Lang): string =>
-  `<p class="font-mono text-sm text-brand"><a href="/${hub}?lang=${lang}" class="tap-target inline-block text-txt2 hover:text-brand hover:underline">${escapeHtml(HUB_CRUMB[lang][hub])}</a><span class="mx-1.5 text-txt2">/</span>${escapeHtml(current)}</p>`;
+const CRUMB_STR = {
+  zh: { home: "首页", nav: "面包屑导航" }, // crumb.home / crumb.nav
+  en: { home: "Home", nav: "Breadcrumb" },
+} as const;
+
+const ICON_CHEVRON =
+  '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right mx-1 h-3.5 w-3.5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>';
+
+export const hubCrumbKicker = (hub: "tld" | "guide" | "vs", current: string, lang: Lang): string => {
+  const s = CRUMB_STR[lang];
+  const link = (href: string, label: string) =>
+    `<li class="shrink-0"><a href="${href}" class="tap-target inline-block hover:text-brand hover:underline">${escapeHtml(label)}</a></li>`;
+  const sep = `<li aria-hidden="true" class="shrink-0">${ICON_CHEVRON}</li>`;
+  return (
+    `<nav aria-label="${escapeHtml(s.nav)}"><ol class="flex min-w-0 items-center font-mono text-sm text-txt2">` +
+    link(`/?lang=${lang}`, s.home) +
+    sep +
+    link(`/${hub}?lang=${lang}`, HUB_CRUMB[lang][hub]) +
+    sep +
+    `<li aria-current="page" class="min-w-0 truncate text-brand">${escapeHtml(current)}</li></ol></nav>`
+  );
+};
 
 export const hubCrumbLabel = (hub: "tld" | "guide" | "vs", lang: Lang): string => HUB_CRUMB[lang][hub];
 

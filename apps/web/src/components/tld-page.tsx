@@ -4,6 +4,7 @@ import { buildTldFaq } from "@/content/tld-faq";
 import { readInjectedContent } from "@/content/injected";
 import { relatedTlds } from "@/content/tld-groups";
 import { TLD_LIST } from "@/content/tld-list";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { NotFoundPage } from "@/components/not-found-page";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, toCny, usePrices } from "@/lib/prices";
@@ -28,12 +29,7 @@ export function TldPage({ tld }: { tld: string }) {
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
-      <p className="font-mono text-sm text-brand">
-        <a href={`/tld?lang=${lang}`} className="tap-target inline-block text-txt2 hover:text-brand hover:underline">
-          {t("hub.allTld")}
-        </a>
-        <span className="mx-1.5 text-txt2">/</span>.{tld}
-      </p>
+      <Breadcrumb hub="tld" current={`.${tld}`} />
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{loc.title}</h1>
 
       {/* 价格卡：实时 Porkbun 价，失败回退静态参考价 */}

@@ -3,6 +3,7 @@ import { CheckCircle2, HelpCircle, Scale, Sparkles } from "lucide-react";
 import { buildCompareFaq } from "@/content/compare-faq";
 import { compareLabel, relatedCompares } from "@/content/compare-slugs";
 import { readInjectedContent } from "@/content/injected";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { NotFoundPage } from "@/components/not-found-page";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, usePrices } from "@/lib/prices";
@@ -26,12 +27,7 @@ export function ComparePage({ slug }: { slug: string }) {
 
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 md:px-6">
-      <p className="font-mono text-sm text-brand">
-        <a href={`/vs?lang=${lang}`} className="tap-target inline-block text-txt2 hover:text-brand hover:underline">
-          {t("hub.allVs")}
-        </a>
-        <span className="mx-1.5 text-txt2">/</span>.{cmp.a} vs .{cmp.b}
-      </p>
+      <Breadcrumb hub="vs" current={`.${cmp.a} vs .${cmp.b}`} />
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{loc.title}</h1>
 
       {/* 对比结论 */}
