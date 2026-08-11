@@ -1,0 +1,731 @@
+{
+  "expected_counts": {
+    "tld": 396,
+    "guide": 392,
+    "vs": 432
+  },
+  "modulepreload_r451": {
+    "/": {
+      "status": 200,
+      "preloads": [
+        "/assets/home-page-D8znd-TA.js",
+        "/assets/domain-row-m1bXmOzv.js",
+        "/assets/prices-CkFHhaGt.js",
+        "/assets/check-JNafVKWL.js",
+        "/assets/copy-NfeWE5rZ.js",
+        "/assets/x-DJo4QPyx.js",
+        "/assets/sparkles-HnV6icMD.js",
+        "/assets/rotate-ccw-clock-DHwoDRhy.js",
+        "/assets/rotate-cw-BoWzzpHr.js",
+        "/assets/chevron-down-D2fj0Zrm.js"
+      ],
+      "count": 10,
+      "full_ok": true
+    },
+    "/advanced": {
+      "status": 200,
+      "preloads": [
+        "/assets/advanced-page-D3ebtwZS.js",
+        "/assets/domain-row-m1bXmOzv.js",
+        "/assets/prices-CkFHhaGt.js",
+        "/assets/check-JNafVKWL.js",
+        "/assets/copy-NfeWE5rZ.js",
+        "/assets/results-export-nCUkKIwn.js",
+        "/assets/search-OG4nGlaV.js"
+      ],
+      "count": 7,
+      "full_ok": true
+    },
+    "/prices": {
+      "status": 200,
+      "preloads": [
+        "/assets/prices-page-Ci9E-KNY.js"
+      ],
+      "count": 1,
+      "entry_ok": true
+    }
+  },
+  "hreflang": {
+    "/": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": false,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": false,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/tld": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": false
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": false
+      },
+      "pass": true
+    },
+    "/guide": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": false
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": false
+      },
+      "pass": true
+    },
+    "/vs": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": false
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": false
+      },
+      "pass": true
+    },
+    "/prices": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/prices",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/prices?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/why": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/why",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": false
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/why?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": false
+      },
+      "pass": true
+    },
+    "/advanced": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/advanced",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": false,
+        "has_faq_jsonld": false
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/advanced?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": false,
+        "has_faq_jsonld": false
+      },
+      "pass": true
+    },
+    "/mcp": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/mcp",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": false
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/mcp?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": false
+      },
+      "pass": true
+    },
+    "/tld/com": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/com",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/com?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/tld/press": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/press",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/press?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/tld/ee": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/ee",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/ee?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/tld/id": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/id",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/tld/id?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/guide/saas": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/saas",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/saas?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/guide/wholesale": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/wholesale",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/wholesale?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/guide/jadecarving": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/jadecarving",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/jadecarving?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/guide/web3": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/web3",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/guide/web3?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/vs/com-vs-cn": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/com-vs-cn",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/com-vs-cn?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/vs/golf-vs-club": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/golf-vs-club",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/golf-vs-club?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/vs/kz-vs-tr": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/kz-vs-tr",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/kz-vs-tr?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    },
+    "/vs/builders-vs-construction": {
+      "zh": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/builders-vs-construction",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "en": {
+        "status": 200,
+        "canonical": "https://hunt.zalize.com/vs/builders-vs-construction?lang=en",
+        "canonical_ok": true,
+        "alt_zh_ok": true,
+        "alt_en_ok": true,
+        "alt_xdefault_ok": true,
+        "alt_count": 3,
+        "has_breadcrumb_jsonld": true,
+        "has_faq_jsonld": true
+      },
+      "pass": true
+    }
+  },
+  "hreflang_all_pass": true,
+  "sitemap_loc_samples": [
+    1228,
+    1228,
+    1228
+  ],
+  "sitemap_dup_locs": 0,
+  "sitemap_cat_counts": {
+    "tld": 396,
+    "guide": 392,
+    "vs": 432,
+    "core": 8
+  },
+  "sitemap_vs_counts_json": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "sitemap_xhtml": {
+    "urls": 1228,
+    "xhtml_total": 3684,
+    "bad": [],
+    "bad_count": 0
+  },
+  "llms_counts": {
+    "tld": 396,
+    "guide": 392,
+    "vs": 432
+  },
+  "llms_vs_sitemap_equal": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "robots": {
+    "status": 200,
+    "has_sitemap": true,
+    "gptbot": true
+  },
+  "content_sweep": {
+    "total": 1220,
+    "ok": 1220,
+    "bad": {}
+  },
+  "en_sample": {
+    "/tld/com?lang=en": {
+      "status": 200,
+      "inject_ok": true,
+      "preload_entry_ok": true
+    },
+    "/tld/press?lang=en": {
+      "status": 200,
+      "inject_ok": true,
+      "preload_entry_ok": true
+    },
+    "/tld/ee?lang=en": {
+      "status": 200,
+      "inject_ok": true,
+      "preload_entry_ok": true
+    },
+    "/guide/jadecarving?lang=en": {
+      "status": 200,
+      "inject_ok": true,
+      "preload_entry_ok": true
+    },
+    "/guide/saas?lang=en": {
+      "status": 200,
+      "inject_ok": true,
+      "preload_entry_ok": true
+    },
+    "/guide/wholesale?lang=en": {
+      "status": 200,
+      "inject_ok": true,
+      "preload_entry_ok": true
+    },
+    "/vs/golf-vs-club?lang=en": {
+      "status": 200,
+      "inject_ok": true,
+      "preload_entry_ok": true
+    },
+    "/vs/kz-vs-tr?lang=en": {
+      "status": 200,
+      "inject_ok": true,
+      "preload_entry_ok": true
+    },
+    "/vs/com-vs-cn?lang=en": {
+      "status": 200,
+      "inject_ok": true,
+      "preload_entry_ok": true
+    }
+  },
+  "notfound": {
+    "/nonexistent-r455": 404,
+    "/tld/notatld-r455": 404,
+    "/guide/notaguide-r455": 404,
+    "/vs/nota-vs-r455": 404
+  },
+  "prices_api": {
+    "status": 200,
+    "stale": null,
+    "tldCount": 348,
+    "priceKeys": 348,
+    "missing_live_count": 48,
+    "missing_live": [
+      "ae",
+      "amsterdam",
+      "ar",
+      "at",
+      "be",
+      "berlin",
+      "br",
+      "ch",
+      "cl",
+      "cn",
+      "cz",
+      "dk",
+      "ee",
+      "eg",
+      "es",
+      "fi",
+      "fr",
+      "gr",
+      "hk",
+      "hu",
+      "ie",
+      "il",
+      "it",
+      "jp",
+      "ke",
+      "kr",
+      "kz",
+      "lk",
+      "ma",
+      "ng",
+      "no",
+      "paris",
+      "pe",
+      "pk",
+      "pl",
+      "pt",
+      "qa",
+      "ro",
+      "sa",
+      "se",
+      "sg",
+      "sk",
+      "so",
+      "th",
+      "tr",
+      "ua",
+      "vn",
+      "za"
+    ]
+  },
+  "usage_api": {
+    "status": 200,
+    "days_is_dict": true,
+    "day_keys_shape_ok": true,
+    "cronLast_age_min": 152.7,
+    "pricesLastOk_age_min": 16.1,
+    "indexnowLast_age_h": 20.5
+  },
+  "mcp_tools": [
+    "check_domains",
+    "tld_prices",
+    "suggest_variants"
+  ],
+  "mcp_check_domains": [
+    {
+      "domain": "google.com",
+      "status": "taken"
+    },
+    {
+      "domain": "qzxvkw9r455mcp1786415571.com",
+      "status": "available"
+    }
+  ],
+  "mcp_tld_prices": {
+    "tldCount": 396,
+    "priceKeys": 396
+  }
+}

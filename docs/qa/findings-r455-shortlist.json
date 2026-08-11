@@ -1,0 +1,230 @@
+{
+  "row_buttons": [
+    {
+      "aria": "关闭引导",
+      "text": "",
+      "title": "关闭引导"
+    },
+    {
+      "aria": null,
+      "text": "AI 猎名",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "精确核验",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "批量核验",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": ".com",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": ".cn",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": ".io",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": ".ai",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": ".app",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": ".dev",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "",
+      "title": "自定义 TLD"
+    },
+    {
+      "aria": null,
+      "text": "立即核验",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "直接核验 qzxvkw9r455sl20",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "全部 9",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "可注册 8",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "未知 1",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "",
+      "title": "收藏到候选清单"
+    },
+    {
+      "aria": null,
+      "text": "",
+      "title": "收藏到候选清单"
+    },
+    {
+      "aria": null,
+      "text": "",
+      "title": "收藏到候选清单"
+    },
+    {
+      "aria": null,
+      "text": "",
+      "title": "收藏到候选清单"
+    },
+    {
+      "aria": "重新核验 qzxvkw9r455sl20.app",
+      "text": "",
+      "title": "重新核验 qzxvkw9r455sl20.app"
+    },
+    {
+      "aria": null,
+      "text": "",
+      "title": "收藏到候选清单"
+    },
+    {
+      "aria": null,
+      "text": "",
+      "title": "收藏到候选清单"
+    },
+    {
+      "aria": null,
+      "text": "",
+      "title": "收藏到候选清单"
+    },
+    {
+      "aria": null,
+      "text": "",
+      "title": "收藏到候选清单"
+    },
+    {
+      "aria": null,
+      "text": "查更多后缀 +388",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "复制 8 个可注册",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "SaaS 工具",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "电商品牌",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "AI 产品",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "个人博客",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "宠物",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "金融科技",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "游戏",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "教育学习",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "旅行",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "餐饮美食",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "+382",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "独立开发者的 AI 周报工具",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "宠物营养订阅电商",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "极简冥想 App",
+      "title": null
+    },
+    {
+      "aria": null,
+      "text": "跨境 SaaS 数据看板",
+      "title": null
+    }
+  ],
+  "add": {
+    "found": true,
+    "label": ""
+  },
+  "ls_shortlist": "[{\"domain\":\"qzxvkw9r455sl20.com\",\"label\":\"qzxvkw9r455sl20\",\"tld\":\"com\",\"status\":\"available\",\"addedAt\":1786416032167}]",
+  "panel_shows": true,
+  "monitor": {
+    "found": true,
+    "label": "监控动态"
+  },
+  "ls_monitors": null,
+  "ls_keys": [
+    "domainhunter:lang",
+    "domainhunter:shortlist",
+    "domainhunter:theme"
+  ]
+}
