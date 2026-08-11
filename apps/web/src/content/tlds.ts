@@ -11544,6 +11544,186 @@ const GUIDES = {
       ],
     },
   },
+  il: {
+    tld: "il",
+    zh: {
+      title: ".il 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".il 是以色列国家域名，.co.il 完全开放注册、顶级直注分阶段放开，本地信任度极高，适合面向以色列市场的品牌与科技创业公司。查看 .il 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .il 域名。",
+      intro:
+        ".il 是以色列的国家域名，由注册局 ISOC-IL（以色列互联网协会）运营，注册量约 28 万（含 .co.il 体系）。以色列人口约 970 万，却是全球人均创业密度最高的「创业国度」：特拉维夫是中东的科技之都——Wix、Waze、Mobileye、Check Point 都发家于此，网络安全与 AI 领域的独角兽密度全球罕见。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.co.il，「以色列的生意」一眼讲清，信任度远超一般新后缀——以色列本土企业与政府机构的主站几乎都在 .il 体系上；Google 也会把 .il 站点与以色列地区相关联，本地 SEO 有天然加成。资格上分两级：.co.il、.org.il 等二级完全开放，任何国家的个人与机构可注册；顶级直注（name.il）自 2023 年起分阶段放开（商标持有人优先），逐步向公众开放。价格中等且平续：.co.il 约 $18/年（约 ¥130），顶级直注约 $25/年（约 ¥180），续费同价。希伯来语是官方语言，但科技与跨境场景英文词根命中率极高。命名上品牌词直接上（brand.co.il）最主流；科技创业与电商用「品类词 + .il」讲清市场定位。注意受众主要在以色列本土，纯外部市场业务信号较弱。",
+      bestFor: ["以色列本地企业与服务", "科技创业与网络安全公司", "面向以色列的跨境电商", "希伯来语内容与媒体站"],
+      namingTips: [
+        ".co.il 完全开放注册，顶级直注 2023 年起分阶段放开（商标优先）",
+        ".co.il 约 $18/年、顶级直注约 $25/年，平续无钩子",
+        "希伯来语市场，但科技与跨境场景英文词根命中率极高",
+        "受众在以色列本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".il Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".il is Israel's country domain — .co.il is fully open to all, direct second-level registration is opening in phases — with top-tier local trust for Israeli-market brands and tech startups. See live pricing and naming advice, then hunt available .il names with AI.",
+      intro:
+        ".il is Israel's country-code domain, run by registry ISOC-IL (the Israel Internet Association) with about 280,000 registrations across its zones including .co.il. Israel has about 9.7 million people yet the world's highest startup density per capita — the \"Startup Nation\": Tel Aviv is the Middle East's tech capital, home to Wix, Waze, Mobileye and Check Point, with a globally rare concentration of cybersecurity and AI unicorns. Local consumers are strongly attuned to local signals: name.co.il says \"an Israeli business\" at a glance, with trust far beyond any new gTLD — Israeli companies and government institutions overwhelmingly live on the .il family; Google also geo-associates .il sites with Israel, a natural boost for local SEO. Eligibility comes in two tiers: second-level zones like .co.il and .org.il are fully open to individuals and organizations from anywhere; direct second-level registration (name.il) has been opening in phases since 2023, starting with trademark holders and gradually widening to the public. Pricing is moderate and flat: about $18/yr for .co.il (≈¥130), about $25/yr for direct second-level (≈¥180), with the same renewals. Hebrew is the official language, but English roots hit extremely well in tech and cross-border contexts. For naming, a straight brand word is the mainstream shape (brand.co.il); tech startups and e-commerce fit category + .il to claim the market. One caution: the audience is primarily Israel — the signal is weaker for purely external markets.",
+      bestFor: ["Local Israeli businesses & services", "Tech startups & cybersecurity companies", "Israel-facing cross-border e-commerce", "Hebrew-language content & media"],
+      namingTips: [
+        ".co.il is fully open; direct .il has been opening in phases since 2023 (trademark priority)",
+        "About $18/yr for .co.il, ~$25/yr for direct .il — flat renewals, no traps",
+        "Hebrew market, but English roots hit extremely well in tech and cross-border contexts",
+        "Audience is primarily Israel — weaker signal for purely external markets",
+      ],
+    },
+  },
+  sa: {
+    tld: "sa",
+    zh: {
+      title: ".sa 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".sa 是沙特阿拉伯国家域名，注册需沙特商业登记或注册商标（可由注册商代办），本地信任度极高，适合面向沙特与海湾市场的品牌与电商业务。查看 .sa 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .sa 域名。",
+      intro:
+        ".sa 是沙特阿拉伯的国家域名，由通信、空间与技术委员会（CST）旗下的 SaudiNIC 运营，注册量约 10 万（含 .com.sa 体系）。沙特人口约 3600 万，是海湾最大经济体与 G20 成员：「2030 愿景」推动的经济转型带来空前的数字化投资——NEOM 新城、电商（Noon 深耕本土）、金融科技与旅游业都在高速扩张，政府采购与大企业合作尤其看重本土域名。本地消费者对本土信号非常敏感：品牌官网与服务商用 name.sa 或 name.com.sa，「沙特的生意」一眼讲清，信任度远超一般新后缀——沙特本土企业与政府机构的主站几乎都在 .sa 体系上；Google 也会把 .sa 站点与沙特地区相关联，本地 SEO 有天然加成。资格上有门槛：注册 .sa 或 .com.sa 需持有沙特商业登记（CR）、沙特注册商标或其他官方文件，外国企业通常凭在沙特注册的商标即可，多数国际注册商可代办材料。价格中等且平续：约 $55/年（约 ¥400），续费同价。阿拉伯语是官方语言，但商业场景英文词根照样通行，另有阿拉伯文 IDN 后缀（السعودية.）可选。命名上品牌词直接上（brand.sa）最主流；电商与出海业务用「品类词 + .sa」讲清市场落地。注意没有沙特商标或登记就先准备材料，别裸奔注册。",
+      bestFor: ["沙特本地企业与服务", "面向沙特的跨境电商", "海湾市场品牌与出海业务", "阿拉伯语内容与媒体站"],
+      namingTips: [
+        "注册需沙特商业登记（CR）或沙特注册商标，注册商可代办材料",
+        "注册续费均约 $55/年，平续无钩子",
+        "阿拉伯语市场，商业场景英文词根照样通行，另有阿拉伯文 IDN 后缀",
+        "先备好商标/登记材料再注册，避免资格审核被驳回",
+      ],
+    },
+    en: {
+      title: ".sa Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".sa is Saudi Arabia's country domain — registration requires a Saudi commercial registration or registered trademark (registrars can assist) — with top-tier local trust for Saudi and Gulf-market brands and e-commerce. See live pricing and naming advice, then hunt available .sa names with AI.",
+      intro:
+        ".sa is Saudi Arabia's country-code domain, run by SaudiNIC under the Communications, Space & Technology Commission (CST), with about 100,000 registrations across its zones including .com.sa. Saudi Arabia has about 36 million people, the Gulf's largest economy and a G20 seat: the Vision 2030 transformation is driving unprecedented digital investment — the NEOM megacity, e-commerce (Noon runs deep here), fintech and tourism are all expanding fast, and government procurement and enterprise deals place particular weight on a local domain. Local consumers are strongly attuned to local signals: name.sa or name.com.sa says \"a Saudi business\" at a glance, with trust far beyond any new gTLD — Saudi companies and government institutions overwhelmingly live on the .sa family; Google also geo-associates .sa sites with Saudi Arabia, a natural boost for local SEO. Eligibility has a bar: registering .sa or .com.sa requires a Saudi commercial registration (CR), a trademark registered in Saudi Arabia, or other official documentation — foreign companies usually qualify via a Saudi-registered trademark, and most international registrars handle the paperwork. Pricing is moderate and flat: about $55/yr (≈¥400) with the same renewal. Arabic is the official language, but English roots work fine in business contexts, and an Arabic IDN suffix (السعودية.) is also available. For naming, a straight brand word is the mainstream shape (brand.sa); e-commerce and market-entry businesses fit category + .sa to claim the market. One caution: prepare your trademark or registration documents before applying — eligibility is verified.",
+      bestFor: ["Local Saudi businesses & services", "Saudi-facing cross-border e-commerce", "Gulf-market brands & market entry", "Arabic-language content & media"],
+      namingTips: [
+        "Requires a Saudi commercial registration (CR) or Saudi-registered trademark — registrars can assist",
+        "About $55/yr flat to register and renew — no traps",
+        "Arabic market, but English roots work fine in business contexts; Arabic IDN suffix available",
+        "Prepare trademark/registration documents first — eligibility is verified",
+      ],
+    },
+  },
+  eg: {
+    tld: "eg",
+    zh: {
+      title: ".eg 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".eg 是埃及国家域名，顶级直注与 .com.eg 均可通过授权注册商办理（部分需本地代理），本地信任度极高，适合面向埃及与北非市场的品牌与电商业务。查看 .eg 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .eg 域名。",
+      intro:
+        ".eg 是埃及的国家域名，由国家电信管理局（NTRA）监管、埃及大学网络（EUN）等机构运营注册，注册量约 1 万——盘子小意味着好词存量极高。埃及人口约 1.1 亿，是阿拉伯世界人口第一大国与北非最大经济体：开罗是中东北非（MENA）的内容与创业中心——Fawry、Swvl、MNT-Halan 都发家于此，苏伊士运河与制造业带来大量外贸需求，电商渗透率正处于高速爬坡期。本地消费者对本土信号非常敏感：品牌官网与服务商用 name.eg 或 name.com.eg，「埃及的生意」一眼讲清，信任度远超一般新后缀——埃及本土企业与政府机构的主站几乎都在 .eg 体系上；Google 也会把 .eg 站点与埃及地区相关联，本地 SEO 有天然加成。资格上：顶级直注（name.eg）与 .com.eg 都可通过授权注册商办理，外国企业通常需提供公司文件或经由本地代理，个人注册以 .eg 体系内开放二级为主。价格偏高且平续：约 $90/年（约 ¥650），续费同价——按三年总持有成本算清楚再上。阿拉伯语是官方语言，商业场景英文词根照样通行，另有阿拉伯文 IDN 后缀（مصر.）可选。命名上品牌词直接上（brand.eg）最主流；外贸与电商用「品类词 + .eg」讲清市场落地。注意受众主要在埃及与北非，纯外部市场业务信号较弱。",
+      bestFor: ["埃及本地企业与服务", "面向埃及的跨境电商", "北非与 MENA 市场品牌", "阿拉伯语内容与媒体站"],
+      namingTips: [
+        "顶级直注与 .com.eg 经授权注册商办理，外企通常需公司文件或本地代理",
+        "注册续费均约 $90/年，价格偏高、按三年成本算清楚",
+        "注册量小、好词存量极高，品牌词命中率好",
+        "受众在埃及与北非，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".eg Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".eg is Egypt's country domain — direct second-level and .com.eg registrations go through accredited registrars (foreign companies may need a local agent) — with top-tier local trust for Egyptian and North African-market brands and e-commerce. See live pricing and naming advice, then hunt available .eg names with AI.",
+      intro:
+        ".eg is Egypt's country-code domain, overseen by the national telecom regulator NTRA and administered through the Egyptian Universities Network (EUN), with only about 10,000 registrations — a small base that means excellent inventory of good names. Egypt has about 110 million people, the Arab world's most populous country and North Africa's largest economy: Cairo is the MENA region's content and startup hub — Fawry, Swvl and MNT-Halan all started here — while the Suez Canal and manufacturing drive heavy trade demand, and e-commerce penetration is climbing fast. Local consumers are strongly attuned to local signals: name.eg or name.com.eg says \"an Egyptian business\" at a glance, with trust far beyond any new gTLD — Egyptian companies and government institutions overwhelmingly live on the .eg family; Google also geo-associates .eg sites with Egypt, a natural boost for local SEO. On eligibility: both direct second-level (name.eg) and .com.eg registrations go through accredited registrars; foreign companies usually need company documents or a local agent, and individuals mostly register in the open second-level zones. Pricing is on the high side and flat: about $90/yr (≈¥650) with the same renewal — do the three-year math before committing. Arabic is the official language, English roots work fine in business contexts, and an Arabic IDN suffix (مصر.) is also available. For naming, a straight brand word is the mainstream shape (brand.eg); trade and e-commerce fit category + .eg to claim the market. One caution: the audience is primarily Egypt and North Africa — the signal is weaker for purely external markets.",
+      bestFor: ["Local Egyptian businesses & services", "Egypt-facing cross-border e-commerce", "North Africa & MENA-market brands", "Arabic-language content & media"],
+      namingTips: [
+        "Direct .eg and .com.eg go through accredited registrars — foreign companies may need documents or a local agent",
+        "About $90/yr flat to register and renew — pricey, do the 3-year math",
+        "Tiny registration base — excellent inventory of good brand words",
+        "Audience is primarily Egypt & North Africa — weaker signal for purely external markets",
+      ],
+    },
+  },
+  ke: {
+    tld: "ke",
+    zh: {
+      title: ".ke 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ke 是肯尼亚国家域名，2017 年起开放顶级直注、任何人可注册（.co.ke 更便宜），本地信任度极高，适合面向肯尼亚与东非市场的品牌、金融科技与电商业务。查看 .ke 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ke 域名。",
+      intro:
+        ".ke 是肯尼亚的国家域名，由注册局 KeNIC 运营，注册量约 11 万（含 .co.ke 体系）。肯尼亚人口约 5500 万，是东非最大经济体与「硅谷草原」（Silicon Savannah）：内罗毕是非洲移动支付的发源地——M-Pesa 让肯尼亚成为全球移动货币渗透率最高的国家之一，Twiga、Cellulant 等创业公司与大量国际组织的非洲总部都设在这里。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.ke 或 name.co.ke，「肯尼亚的生意」一眼讲清，信任度远超一般新后缀——肯尼亚本土企业与政府机构的主站几乎都在 .ke 体系上；Google 也会把 .ke 站点与肯尼亚地区相关联，本地 SEO 有天然加成。资格上 .ke 完全开放：顶级直注 2017 年起对任何国家的个人与机构开放，.co.ke 等二级一直开放，无需本地地址或代理。价格分两档且平续：顶级直注约 $50/年（约 ¥360），.co.ke 约 $10/年（约 ¥72），续费同价。英语与斯瓦希里语是官方语言，英文词根无需翻译。命名上品牌词直接上（brand.ke）最主流；金融科技与电商用「品类词 + .ke」讲清市场定位，预算有限先用 .co.ke 落地。注意受众主要在肯尼亚与东非，纯外部市场业务信号较弱。",
+      bestFor: ["肯尼亚本地企业与服务", "移动支付与金融科技产品", "面向肯尼亚的跨境电商", "东非市场品牌与创业公司"],
+      namingTips: [
+        "2017 年起顶级直注开放，任何人可注册、无需本地地址",
+        "顶级直注约 $50/年、.co.ke 约 $10/年，平续无钩子",
+        "英语是官方语言，英文词根无需翻译",
+        "受众在肯尼亚与东非，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".ke Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ke is Kenya's country domain — direct second-level registration opened in 2017 and anyone can register (.co.ke is cheaper) — with top-tier local trust for Kenyan and East African-market brands, fintech and e-commerce. See live pricing and naming advice, then hunt available .ke names with AI.",
+      intro:
+        ".ke is Kenya's country-code domain, run by registry KeNIC with about 110,000 registrations across its zones including .co.ke. Kenya has about 55 million people, East Africa's largest economy and the \"Silicon Savannah\": Nairobi is the birthplace of African mobile money — M-Pesa made Kenya one of the world's highest mobile-money-penetration countries — and home to startups like Twiga and Cellulant plus the Africa headquarters of many international organizations. Local consumers are strongly attuned to local signals: name.ke or name.co.ke says \"a Kenyan business\" at a glance, with trust far beyond any new gTLD — Kenyan companies and government institutions overwhelmingly live on the .ke family; Google also geo-associates .ke sites with Kenya, a natural boost for local SEO. On eligibility, .ke is fully open: direct second-level registration opened in 2017 to individuals and organizations from anywhere, second-level zones like .co.ke have always been open, and no local address or proxy is needed. Pricing comes in two tiers, both flat: about $50/yr for direct second-level (≈¥360), about $10/yr for .co.ke (≈¥72), with the same renewals. English and Swahili are official languages, so English roots need no translation. For naming, a straight brand word is the mainstream shape (brand.ke); fintech and e-commerce fit category + .ke to claim the market, and budget-conscious projects can start on .co.ke. One caution: the audience is primarily Kenya and East Africa — the signal is weaker for purely external markets.",
+      bestFor: ["Local Kenyan businesses & services", "Mobile money & fintech products", "Kenya-facing cross-border e-commerce", "East Africa-market brands & startups"],
+      namingTips: [
+        "Direct registration opened in 2017 — anyone can register, no local address needed",
+        "About $50/yr for direct .ke, ~$10/yr for .co.ke — flat renewals, no traps",
+        "English is an official language — English roots need no translation",
+        "Audience is primarily Kenya & East Africa — weaker signal for purely external markets",
+      ],
+    },
+  },
+  pe: {
+    tld: "pe",
+    zh: {
+      title: ".pe 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".pe 是秘鲁国家域名，无资格限制、任何人可注册，本地信任度极高，还兼具人名后缀的双关玩法，适合面向秘鲁市场的品牌、电商与农矿外贸业务。查看 .pe 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .pe 域名。",
+      intro:
+        ".pe 是秘鲁的国家域名，由注册局 Punto PE（NIC.PE）运营，注册量约 13 万（含 .com.pe 体系）。秘鲁人口约 3400 万，是拉美增长最稳健的经济体之一：全球铜与银的重要产地、蓝莓与牛油果等农产品出口大国，利马的美食与旅游品牌（马丘比丘是全球顶流目的地）也带来大量线上生意。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.pe 或 name.com.pe，「秘鲁的生意」一眼讲清，信任度远超一般新后缀——秘鲁本土企业与政府机构的主站几乎都在 .pe 体系上；Google 也会把 .pe 站点与秘鲁地区相关联，本地 SEO 有天然加成。资格上 .pe 完全开放：顶级直注与 .com.pe 都对任何国家的个人与机构开放，无需本地地址或代理。价格中等且平续：约 $50/年（约 ¥360），续费同价，无引流钩子。西班牙语与英文词根命中率都高，另外「pe」在多种语言里是常见音节，还有 pepe、lupe 等人名域名黑客玩法。命名上品牌词直接上（brand.pe）最主流；农矿外贸与电商用「品类词 + .pe」讲清市场落地，旅游与美食内容站用「主题词 + .pe」。注意受众主要在秘鲁本土，纯外部市场业务信号较弱。",
+      bestFor: ["秘鲁本地企业与服务", "农产品与矿业外贸", "面向秘鲁的跨境电商", "旅游美食内容与拉美品牌"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $50/年，平续无钩子",
+        "西班牙语与英文词根命中率都高，还有人名域名黑客玩法",
+        "受众在秘鲁本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".pe Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".pe is Peru's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Peruvian-market brands, e-commerce and agri/mining trade, plus name-hack potential. See live pricing and naming advice, then hunt available .pe names with AI.",
+      intro:
+        ".pe is Peru's country-code domain, run by registry Punto PE (NIC.PE) with about 130,000 registrations across its zones including .com.pe. Peru has about 34 million people and one of Latin America's steadiest-growing economies: a major global producer of copper and silver, a big exporter of blueberries and avocados, and Lima's food scene plus tourism brands (Machu Picchu is a top global destination) drive plenty of online business. Local consumers are strongly attuned to local signals: name.pe or name.com.pe says \"a Peruvian business\" at a glance, with trust far beyond any new gTLD — Peruvian companies and government institutions overwhelmingly live on the .pe family; Google also geo-associates .pe sites with Peru, a natural boost for local SEO. On eligibility, .pe is fully open: both direct second-level and .com.pe registrations are open to individuals and organizations from anywhere, with no local address or proxy. Pricing is moderate and flat: about $50/yr (≈¥360) with the same renewal, no teaser games. Both Spanish and English roots hit well, \"pe\" is a common syllable in many languages, and name hacks like pepe or lupe add a playful angle. For naming, a straight brand word is the mainstream shape (brand.pe); agri/mining trade and e-commerce fit category + .pe to claim the market, and travel or food content sites fit topic + .pe. One caution: the audience is primarily Peru — the signal is weaker for purely external markets.",
+      bestFor: ["Local Peruvian businesses & services", "Agricultural & mining export trade", "Peru-facing cross-border e-commerce", "Travel & food content, LatAm brands"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $50/yr flat to register and renew — no traps",
+        "Both Spanish and English roots hit well, plus name-hack potential (pepe, lupe)",
+        "Audience is primarily Peru — weaker signal for purely external markets",
+      ],
+    },
+  },
+  kz: {
+    tld: "kz",
+    zh: {
+      title: ".kz 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".kz 是哈萨克斯坦国家域名，任何人可注册但要求域名解析服务器位于哈萨克斯坦境内，本地信任度极高，适合面向哈萨克斯坦与中亚市场的品牌与外贸业务。查看 .kz 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .kz 域名。",
+      intro:
+        ".kz 是哈萨克斯坦的国家域名，由 KazNIC 注册局运营，注册量约 15 万（含 .com.kz 体系）。哈萨克斯坦人口约 2000 万，是中亚最大经济体：全球重要的石油、铀矿与粮食产地，也是「一带一路」中欧班列的核心枢纽，阿拉木图与阿斯塔纳的金融科技生态正快速成长——本土超级应用 Kaspi.kz 就是把整个国家的支付与电商装进一个 App 的现象级样本。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.kz，「哈萨克斯坦的生意」一眼讲清，信任度远超一般新后缀——本土企业与政府机构的主站几乎都在 .kz 体系上；Google 也会把 .kz 站点与哈萨克斯坦地区相关联，本地 SEO 有天然加成。资格上任何国家的个人与机构都可注册，但有一条硬规矩：域名的解析服务器（主 DNS 所指向的服务）需位于哈萨克斯坦境内——用本地主机商或支持哈国节点的 CDN 即可满足，多数本地注册商可代办。价格便宜且平续：约 $12/年（约 ¥90），续费同价。哈萨克语与俄语并行（均用西里尔字母），但外贸与科技场景英文词根照样好用。命名上品牌词直接上（brand.kz）最主流；外贸与物流用「品类词 + .kz」讲清市场落地。注意先确认主机/CDN 能落在哈国境内再注册。",
+      bestFor: ["哈萨克斯坦本地企业与服务", "中亚外贸与物流业务", "面向哈萨克斯坦的跨境电商", "俄语/哈萨克语内容与媒体站"],
+      namingTips: [
+        "任何人可注册，但解析服务器需位于哈萨克斯坦境内（本地主机或 CDN 节点即可）",
+        "注册续费均约 $12/年，便宜且平续",
+        "哈萨克语/俄语用西里尔字母，外贸与科技场景英文词根照样好用",
+        "先确认主机/CDN 能落在哈国境内再注册",
+      ],
+    },
+    en: {
+      title: ".kz Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".kz is Kazakhstan's country domain — anyone can register, but the domain's name servers must be located inside Kazakhstan — with top-tier local trust for Kazakhstan and Central Asia-market brands and trade. See live pricing and naming advice, then hunt available .kz names with AI.",
+      intro:
+        ".kz is Kazakhstan's country-code domain, run by the KazNIC registry with about 150,000 registrations across its zones including .com.kz. Kazakhstan has about 20 million people and Central Asia's largest economy: a major global producer of oil, uranium and grain, a core hub of the Belt-and-Road China–Europe rail corridor, and home to a fast-growing fintech scene in Almaty and Astana — homegrown super-app Kaspi.kz famously packed the whole country's payments and e-commerce into one app. Local consumers are strongly attuned to local signals: name.kz says \"a Kazakhstani business\" at a glance, with trust far beyond any new gTLD — local companies and government institutions overwhelmingly live on the .kz family; Google also geo-associates .kz sites with Kazakhstan, a natural boost for local SEO. On eligibility, individuals and organizations from anywhere can register, with one hard rule: the domain's name servers must be located inside Kazakhstan — a local host or a CDN with Kazakhstan nodes satisfies it, and most local registrars can arrange this. Pricing is cheap and flat: about $12/yr (≈¥90) with the same renewal. Kazakh and Russian are both official (both Cyrillic), but English roots work fine in trade and tech contexts. For naming, a straight brand word is the mainstream shape (brand.kz); trade and logistics fit category + .kz to claim the market. One caution: confirm your hosting/CDN can sit inside Kazakhstan before registering.",
+      bestFor: ["Local Kazakhstani businesses & services", "Central Asia trade & logistics", "Kazakhstan-facing cross-border e-commerce", "Russian/Kazakh-language content & media"],
+      namingTips: [
+        "Anyone can register, but name servers must be located inside Kazakhstan (local host or CDN node works)",
+        "About $12/yr flat to register and renew — cheap, no traps",
+        "Kazakh/Russian are Cyrillic, but English roots work fine in trade and tech contexts",
+        "Confirm your hosting/CDN can sit inside Kazakhstan before registering",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
