@@ -436,4 +436,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "ua-vs-pl", a: "ua", b: "pl", title: { zh: ".ua 和 .pl 怎么选：乌克兰与波兰两个东欧 IT 邻国 ccTLD 的对比", en: ".ua vs .pl: Ukraine or Poland — Two Eastern European IT Neighbors' ccTLDs Compared" } },
   { slug: "ar-vs-cl", a: "ar", b: "cl", title: { zh: ".ar 和 .cl 怎么选：阿根廷与智利两个南美邻国 ccTLD 的对比", en: ".ar vs .cl: Argentina or Chile — Two Neighboring South American ccTLDs Compared" } },
   { slug: "ng-vs-com", a: "ng", b: "com", title: { zh: ".ng 和 .com 怎么选：尼日利亚国家域名与全球默认后缀的对比", en: ".ng vs .com: Nigeria's Country Domain or the Global Default Compared" } },
+  { slug: "sa-vs-ae", a: "sa", b: "ae", title: { zh: ".sa 和 .ae 怎么选：沙特与阿联酋国家域名的海湾对比", en: ".sa vs .ae: Saudi Arabia or the UAE Country Domain Compared" } },
+  { slug: "eg-vs-sa", a: "eg", b: "sa", title: { zh: ".eg 和 .sa 怎么选：埃及与沙特国家域名的中东对比", en: ".eg vs .sa: Egypt or Saudi Arabia Country Domain Compared" } },
+  { slug: "ke-vs-ng", a: "ke", b: "ng", title: { zh: ".ke 和 .ng 怎么选：肯尼亚与尼日利亚国家域名的非洲对比", en: ".ke vs .ng: Kenya or Nigeria Country Domain Compared" } },
+  { slug: "il-vs-com", a: "il", b: "com", title: { zh: ".il 和 .com 怎么选：以色列国家域名与全球默认后缀的对比", en: ".il vs .com: Israel's Country Domain or the Global Default Compared" } },
+  { slug: "pe-vs-cl", a: "pe", b: "cl", title: { zh: ".pe 和 .cl 怎么选：秘鲁与智利国家域名的拉美对比", en: ".pe vs .cl: Peru or Chile Country Domain Compared" } },
+  { slug: "kz-vs-tr", a: "kz", b: "tr", title: { zh: ".kz 和 .tr 怎么选：哈萨克斯坦与土耳其国家域名的欧亚对比", en: ".kz vs .tr: Kazakhstan or Türkiye Country Domain Compared" } },
 ];
