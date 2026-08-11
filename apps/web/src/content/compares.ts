@@ -9397,6 +9397,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Global-market business brands", "Products spanning multiple continents", "Main sites needing zero explanation", "Teams who can still land a good .com root"],
     },
   },
+  "sa-vs-ae": {
+    slug: "sa-vs-ae",
+    a: "sa",
+    b: "ae",
+    zh: {
+      title: ".sa 和 .ae 怎么选：沙特与阿联酋国家域名的海湾对比",
+      metaDescription: ".sa 是沙特国家域名、约 $55/年、注册需沙特商业登记或注册商标；.ae 是阿联酋国家域名、约 $35/年、任何人可注册。对比两者的市场规模、资格门槛与定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "同是海湾核心市场的本土信号，分水岭在资格门槛与市场纵深。做沙特市场 → .sa：注册局 SaudiNIC（隶属 CST）运营、注册量约 10 万，沙特人口约 3600 万、是海湾最大经济体与 G20 成员，「2030 愿景」推动的数字化投资空前——NEOM、电商与金融科技都在高速扩张，政府采购与大企业合作尤其看重 name.sa。但资格有门槛：需持有沙特商业登记（CR）或沙特注册商标（注册商可代办材料）。价格约 $55/年（约 ¥400）、平续无钩子。做阿联酋与泛中东 → .ae：注册局 .aeDA（隶属 TDRA）运营、注册量约 30 万，迪拜与阿布扎比是中东的商业金融枢纽、常住人口近九成是外籍人士，英语即商业通用语；资格完全开放——任何国家的个人与机构可直接注册、无需本地地址，对计划落地迪拜自贸区的外国公司尤其友好。价格约 $35/年（约 ¥250）、平续同价。判断标准：业务落地沙特、要拿政府或大企业订单 → 备好商标/登记材料上 .sa，本土信任无可替代；做泛中东贸易金融、或暂无沙特实体 → .ae 更便宜且零门槛，先落地迪拜再图沙特；深耕海湾的品牌通常两个都注册——.ae 做区域主站、.sa 做沙特本地门面。",
+      pickA: ["沙特本地企业与服务", "政府采购与大企业合作", "面向沙特的跨境电商", "持有沙特商标的出海品牌"],
+      pickB: ["迪拜/阿布扎比贸易与物流", "泛中东金融与 Web3 业务", "暂无沙特实体的出海团队", "预算敏感的海湾市场试水"],
+    },
+    en: {
+      title: ".sa vs .ae: Saudi Arabia or the UAE Country Domain Compared",
+      metaDescription:
+        ".sa is Saudi Arabia's country domain at ~$55/yr, requiring a Saudi commercial registration or trademark; .ae is the UAE's at ~$35/yr, open to anyone. Compare market depth, eligibility and positioning, then hunt available names.",
+      verdict:
+        "Both are local signals of core Gulf markets — the divide is eligibility bar versus market depth. Saudi market → .sa: run by SaudiNIC under the CST with about 100,000 registrations; Saudi Arabia has about 36 million people, the Gulf's largest economy and a G20 seat, and Vision 2030 is driving unprecedented digital investment — NEOM, e-commerce and fintech are all expanding fast, with government procurement and enterprise deals placing particular weight on name.sa. But eligibility has a bar: you need a Saudi commercial registration (CR) or a Saudi-registered trademark (registrars handle the paperwork). Pricing is about $55/yr (≈¥400), flat renewals with no traps. UAE and the wider Middle East → .ae: run by .aeDA under the TDRA with about 300,000 registrations; Dubai and Abu Dhabi are the region's business and financial hub, nearly ninety percent of residents are expatriates and English is the language of business; eligibility is fully open — anyone registers directly with no local address, especially friendly for foreign companies planning a Dubai free-zone launch. Pricing is about $35/yr (≈¥250), same renewal. The test: operations on the ground in Saudi Arabia, chasing government or enterprise deals → prepare your trademark or CR and take .sa, whose local trust nothing replaces; pan-Middle East trade and finance, or no Saudi entity yet → .ae is cheaper with zero bar, landing in Dubai first; Gulf-focused brands often register both — .ae as the regional main site, .sa as the Saudi local front door.",
+      pickA: ["Local Saudi businesses & services", "Government procurement & enterprise deals", "Saudi-facing cross-border e-commerce", "Brands holding Saudi trademarks"],
+      pickB: ["Dubai/Abu Dhabi trade & logistics", "Pan-Middle East finance & Web3 ventures", "Teams without a Saudi entity yet", "Budget-conscious Gulf-market entry"],
+    },
+  },
+  "eg-vs-sa": {
+    slug: "eg-vs-sa",
+    a: "eg",
+    b: "sa",
+    zh: {
+      title: ".eg 和 .sa 怎么选：埃及与沙特国家域名的中东对比",
+      metaDescription: ".eg 是埃及国家域名、约 $90/年、经授权注册商办理（外企或需本地代理）；.sa 是沙特国家域名、约 $55/年、需沙特商业登记或商标。对比两者的人口红利、购买力与定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "一个押人口红利，一个押购买力，分水岭在市场逻辑与总持有成本。做埃及与北非 → .eg：由 NTRA 监管、EUN 等机构运营，注册量仅约 1 万——盘子小意味着好词存量极高。埃及人口约 1.1 亿、是阿拉伯世界人口第一大国与北非最大经济体，开罗是 MENA 的内容与创业中心（Fawry、Swvl、MNT-Halan 都发家于此），电商渗透率正高速爬坡。资格上顶级直注与 .com.eg 都经授权注册商办理，外企通常需公司文件或本地代理。价格偏高：约 $90/年（约 ¥650）、平续同价，按三年总成本算清楚再上。做沙特与海湾 → .sa：SaudiNIC 运营、注册量约 10 万，沙特是海湾最大经济体、人均购买力远高于埃及，「2030 愿景」带来的政府与企业预算是实打实的订单来源；注册需沙特商业登记或注册商标（注册商可代办），价格约 $55/年（约 ¥400）、平续无钩子。判断标准：押未来人口与流量、做大众消费与内容 → .eg 的人口基数与干净库存值得为 $90/年买单；押当下购买力、做 B2B 与高客单 → .sa 的政府订单与企业预算更实在；同时深耕中东两大市场的品牌两个都注册——各做各的本地门面，别用一个后缀硬撑两个市场。",
+      pickA: ["埃及本地企业与服务", "面向北非与 MENA 的内容平台", "大众消费与电商业务", "看重好词存量的品牌"],
+      pickB: ["沙特本地企业与服务", "B2B 与政府采购业务", "高客单价的海湾生意", "持有沙特商标的出海品牌"],
+    },
+    en: {
+      title: ".eg vs .sa: Egypt or Saudi Arabia Country Domain Compared",
+      metaDescription:
+        ".eg is Egypt's country domain at ~$90/yr via accredited registrars (foreign firms may need a local agent); .sa is Saudi Arabia's at ~$55/yr, requiring a Saudi CR or trademark. Compare demographics, purchasing power and positioning, then hunt available names.",
+      verdict:
+        "One bets on demographics, the other on purchasing power — the divide is market logic versus total cost of ownership. Egypt and North Africa → .eg: overseen by the NTRA and administered through the EUN, with only about 10,000 registrations — a tiny base meaning excellent inventory of good names. Egypt has about 110 million people, the Arab world's most populous country and North Africa's largest economy; Cairo is the MENA region's content and startup hub (Fawry, Swvl and MNT-Halan all started here) and e-commerce penetration is climbing fast. Both direct .eg and .com.eg go through accredited registrars, with foreign companies usually needing documents or a local agent. Pricing is on the high side: about $90/yr (≈¥650), same renewal — do the three-year math first. Saudi Arabia and the Gulf → .sa: run by SaudiNIC with about 100,000 registrations; Saudi Arabia is the Gulf's largest economy with per-capita purchasing power far above Egypt's, and Vision 2030 budgets translate into real government and enterprise deals; registration requires a Saudi CR or registered trademark (registrars assist), at about $55/yr (≈¥400) flat. The test: betting on future population and traffic, mass consumer and content plays → .eg's demographic base and clean inventory justify the $90/yr; betting on present purchasing power, B2B and high-ticket business → .sa's government and enterprise budgets are the surer bet; brands working both major Middle East markets register both — one local front door each, never one suffix stretched across two markets.",
+      pickA: ["Local Egyptian businesses & services", "North Africa & MENA-facing content platforms", "Mass consumer & e-commerce plays", "Brands prizing clean name inventory"],
+      pickB: ["Local Saudi businesses & services", "B2B & government procurement", "High-ticket Gulf business", "Brands holding Saudi trademarks"],
+    },
+  },
+  "ke-vs-ng": {
+    slug: "ke-vs-ng",
+    a: "ke",
+    b: "ng",
+    zh: {
+      title: ".ke 和 .ng 怎么选：肯尼亚与尼日利亚国家域名的非洲对比",
+      metaDescription: ".ke 是肯尼亚国家域名、顶级直注约 $50/年（.co.ke 约 $10/年）、任何人可注册；.ng 是尼日利亚国家域名、顶级直注约 $36/年（.com.ng 约 $10/年）、同样开放。对比两大非洲科技市场的定位与价格，并用 AI 猎取可注册的名字。",
+      verdict:
+        "东非「硅谷草原」对西非金融科技之都，分水岭在市场落点——两者资格都完全开放、价格结构也相似。做肯尼亚与东非 → .ke：注册局 KeNIC 运营、注册量约 11 万（含 .co.ke 体系），肯尼亚人口约 5500 万、是东非最大经济体：内罗毕是非洲移动支付的发源地——M-Pesa 让肯尼亚成为全球移动货币渗透率最高的国家之一，大量国际组织的非洲总部也设在这里。顶级直注 2017 年起对所有人开放、约 $50/年（约 ¥360），.co.ke 约 $10/年，平续无钩子。做尼日利亚与西非 → .ng：注册局 NiRA 运营、注册量约 25 万（含 .com.ng 体系），尼日利亚人口约 2.2 亿、是非洲第一人口大国与最大经济体之一：拉各斯是非洲的金融科技之都——Flutterwave、Paystack、OPay 都发家于此，非洲独角兽近半出自尼日利亚。顶级直注约 $36/年（约 ¥260）、.com.ng 约 $10/年，平续同价。两国英语都是官方语言，英文词根无需翻译。判断标准：业务落点在东非、做移动支付与国际组织生态 → .ke；落点在西非、押最大人口与金融科技密度 → .ng；泛非洲品牌通常按市场各注各的——预算有限先用 .co.ke / .com.ng 落地，两个后缀别互相替代。",
+      pickA: ["肯尼亚本地企业与服务", "移动支付与东非金融科技", "国际组织与 NGO 生态业务", "面向东非的跨境电商"],
+      pickB: ["尼日利亚本地企业与服务", "西非金融科技与支付产品", "押人口红利的消费品牌", "面向西非的跨境电商"],
+    },
+    en: {
+      title: ".ke vs .ng: Kenya or Nigeria Country Domain Compared",
+      metaDescription:
+        ".ke is Kenya's country domain — direct registration ~$50/yr (.co.ke ~$10/yr), open to anyone; .ng is Nigeria's — direct ~$36/yr (.com.ng ~$10/yr), equally open. Compare Africa's two tech-market signals and pricing, then hunt available names.",
+      verdict:
+        "East Africa's Silicon Savannah versus West Africa's fintech capital — the divide is which market you land in, since both are fully open with similar price structures. Kenya and East Africa → .ke: run by registry KeNIC with about 110,000 registrations across its zones including .co.ke; Kenya has about 55 million people and East Africa's largest economy: Nairobi is the birthplace of African mobile money — M-Pesa made Kenya one of the world's highest mobile-money-penetration countries — and hosts the Africa headquarters of many international organizations. Direct registration opened to everyone in 2017 at about $50/yr (≈¥360), with .co.ke about $10/yr, flat renewals with no traps. Nigeria and West Africa → .ng: run by registry NiRA with about 250,000 registrations including .com.ng; Nigeria has about 220 million people, Africa's most populous country and one of its largest economies: Lagos is the continent's fintech capital — Flutterwave, Paystack and OPay all started here, and nearly half of Africa's unicorns are Nigerian. Direct registration runs about $36/yr (≈¥260) and .com.ng about $10/yr, same renewals. English is official in both, so English roots need no translation. The test: business landing in East Africa, mobile money and the international-organization ecosystem → .ke; landing in West Africa, betting on the biggest population and fintech density → .ng; pan-African brands register per market — starting on .co.ke / .com.ng when budgets are tight, and never substituting one suffix for the other.",
+      pickA: ["Local Kenyan businesses & services", "Mobile money & East African fintech", "International-organization & NGO ecosystems", "East Africa-facing cross-border e-commerce"],
+      pickB: ["Local Nigerian businesses & services", "West African fintech & payment products", "Consumer brands betting on demographics", "West Africa-facing cross-border e-commerce"],
+    },
+  },
+  "il-vs-com": {
+    slug: "il-vs-com",
+    a: "il",
+    b: "com",
+    zh: {
+      title: ".il 和 .com 怎么选：以色列国家域名与全球默认后缀的对比",
+      metaDescription: ".il 是以色列国家域名，.co.il 约 $18/年完全开放、顶级直注约 $25/年分阶段放开；.com 是全球默认商业后缀、约 $10-15/年但好名字几乎注光。对比两者的市场信号、库存与定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "一个是「创业国度」的本土信号，一个是全球默认的商业后缀，分水岭在市场定位与库存现实。做以色列市场 → .il：注册局 ISOC-IL 运营、注册量约 28 万（含 .co.il 体系），以色列人口约 970 万、却是全球人均创业密度最高的国家：特拉维夫是中东的科技之都——Wix、Waze、Mobileye、Check Point 都发家于此，网络安全与 AI 独角兽密度全球罕见。name.co.il 一眼讲清「以色列的生意」，本土企业与政府机构的主站几乎都在 .il 体系上，Google 也会把 .il 站点与以色列地区相关联。资格分两级：.co.il 完全开放、任何人可注册；顶级直注（name.il）2023 年起分阶段放开（商标优先）。价格中等平续：.co.il 约 $18/年（约 ¥130）、顶级直注约 $25/年（约 ¥180），续费同价；库存也远比 .com 干净，科技与跨境场景英文词根命中率极高。做全球市场 → .com：全球注册量约 1.6 亿、默认商业后缀，任何用户都不需要解释；约 $10-15/年但好名字几乎注光，短词根要么天价要么在炒家手里。判断标准：用户在以色列、或做面向以色列生态的科技与安全产品 → .il 的本土信任与干净库存是 .com 给不了的；做全球市场的产品与品牌 → .com 仍是默认答案；很多以色列创业公司两个都注册——.com 做全球主站、.co.il 做本地门面。",
+      pickA: ["以色列本地企业与服务", "科技创业与网络安全公司", "面向以色列的跨境电商", "希伯来语内容与媒体站"],
+      pickB: ["全球市场的商业品牌", "多大洲覆盖的产品", "需要零解释成本的主站", "预算内能拿到好词根的团队"],
+    },
+    en: {
+      title: ".il vs .com: Israel's Country Domain or the Global Default Compared",
+      metaDescription:
+        ".il is Israel's country domain — .co.il ~$18/yr fully open, direct .il ~$25/yr opening in phases; .com is the global default at ~$10-15/yr but with good names nearly exhausted. Compare market signals, inventory and positioning, then hunt available names.",
+      verdict:
+        "One is the local signal of the Startup Nation, the other the world's default business suffix — the divide is market positioning versus inventory reality. Israeli market → .il: run by registry ISOC-IL with about 280,000 registrations across its zones including .co.il; Israel has about 9.7 million people yet the world's highest startup density per capita: Tel Aviv is the Middle East's tech capital — Wix, Waze, Mobileye and Check Point all started here, with a globally rare concentration of cybersecurity and AI unicorns. name.co.il says \"an Israeli business\" at a glance, Israeli companies and government institutions overwhelmingly live on the .il family, and Google geo-associates .il sites with Israel. Eligibility comes in two tiers: .co.il is fully open to anyone; direct second-level (name.il) has been opening in phases since 2023, trademark holders first. Pricing is moderate and flat: about $18/yr for .co.il (≈¥130) and $25/yr for direct .il (≈¥180), same renewals; inventory is far cleaner than .com's, and English roots hit extremely well in tech and cross-border contexts. Global markets → .com: about 160 million registrations, the default business suffix no audience needs explained; about $10-15/yr but good names are nearly exhausted — short roots are priced astronomically or parked by speculators. The test: users in Israel, or tech and security products plugged into the Israeli ecosystem → .il offers local trust and clean inventory .com can't match; global-market products and brands → .com remains the default answer; many Israeli startups register both — .com as the global main site, .co.il as the local front door.",
+      pickA: ["Local Israeli businesses & services", "Tech startups & cybersecurity companies", "Israel-facing cross-border e-commerce", "Hebrew-language content & media"],
+      pickB: ["Global-market business brands", "Products spanning multiple continents", "Main sites needing zero explanation", "Teams who can still land a good .com root"],
+    },
+  },
+  "pe-vs-cl": {
+    slug: "pe-vs-cl",
+    a: "pe",
+    b: "cl",
+    zh: {
+      title: ".pe 和 .cl 怎么选：秘鲁与智利国家域名的拉美对比",
+      metaDescription: ".pe 是秘鲁国家域名、约 $50/年、无资格限制任何人可注册；.cl 是智利国家域名、约 $18/年、需智利本地联系人（注册商可代办）。对比两个安第斯市场的定位与价格，并用 AI 猎取可注册的名字。",
+      verdict:
+        "同是安第斯资源型经济体的本土信号，分水岭在市场落点与注册成本。做秘鲁市场 → .pe：注册局 Punto PE（NIC.PE）运营、注册量约 13 万（含 .com.pe 体系），秘鲁人口约 3400 万、是拉美增长最稳健的经济体之一：全球铜与银的重要产地、蓝莓与牛油果出口大国，利马美食与马丘比丘旅游也带来大量线上生意。资格完全开放：任何人可直接注册、无需本地地址或代理；价格约 $50/年（约 ¥360）、平续无钩子，「pe」还有 pepe、lupe 等人名域名黑客玩法。做智利市场 → .cl：NIC Chile 运营、注册量约 75 万，智利人口约 1900 万、是拉美最稳定、人均收入最高的经济体之一：全球最大的铜与锂出口国（新能源供应链上游要地），电商成熟度居拉美前列。向全球开放但外国注册人需一位智利本地联系人（多数国际注册商可代办）；价格更便宜：约 $18/年（约 ¥130）、平续同价。两个市场西班牙语与英文词根命中率都高。判断标准：业务落点在秘鲁、做农矿外贸或旅游内容 → .pe 零门槛直接上；落点在智利、做锂铜产业链或高购买力电商 → .cl 更便宜、市场更成熟；覆盖安第斯多国的品牌按市场各注各的，别用一个 ccTLD 硬撑两国。",
+      pickA: ["秘鲁本地企业与服务", "农产品与矿业外贸", "旅游美食内容与拉美品牌", "喜欢人名域名黑客的团队"],
+      pickB: ["智利本地企业与服务", "锂、铜产业链外贸", "面向智利的跨境电商", "预算敏感的拉美市场落地"],
+    },
+    en: {
+      title: ".pe vs .cl: Peru or Chile Country Domain Compared",
+      metaDescription:
+        ".pe is Peru's country domain at ~$50/yr, open to anyone with no restrictions; .cl is Chile's at ~$18/yr, requiring a local Chilean contact (registrars provide one). Compare the two Andean market signals and pricing, then hunt available names.",
+      verdict:
+        "Both are local signals of Andean resource economies — the divide is market landing point and registration cost. Peruvian market → .pe: run by registry Punto PE (NIC.PE) with about 130,000 registrations across its zones including .com.pe; Peru has about 34 million people and one of Latin America's steadiest-growing economies: a major global producer of copper and silver, a big exporter of blueberries and avocados, with Lima's food scene and Machu Picchu tourism driving plenty of online business. Eligibility is fully open: anyone registers directly with no local address or proxy; pricing is about $50/yr (≈¥360), flat with no traps, and \"pe\" adds name hacks like pepe or lupe. Chilean market → .cl: run by NIC Chile with about 750,000 registrations; Chile has about 19 million people and one of Latin America's most stable, highest-income economies: the world's largest copper and lithium exporter (upstream of the new-energy supply chain), with e-commerce maturity at the top of the region. Open worldwide, though foreign registrants need a local Chilean contact (most international registrars provide one); pricing is cheaper at about $18/yr (≈¥130), same renewal. Spanish and English roots hit well in both markets. The test: business landing in Peru, agri/mining trade or travel content → .pe with zero bar; landing in Chile, the lithium-copper supply chain or higher-income e-commerce → .cl is cheaper and the market more mature; brands covering multiple Andean countries register per market — never one ccTLD stretched across two countries.",
+      pickA: ["Local Peruvian businesses & services", "Agricultural & mining export trade", "Travel & food content, LatAm brands", "Teams who like name-hack domains"],
+      pickB: ["Local Chilean businesses & services", "Lithium & copper supply-chain trade", "Chile-facing cross-border e-commerce", "Budget-conscious LatAm market entry"],
+    },
+  },
+  "kz-vs-tr": {
+    slug: "kz-vs-tr",
+    a: "kz",
+    b: "tr",
+    zh: {
+      title: ".kz 和 .tr 怎么选：哈萨克斯坦与土耳其国家域名的欧亚对比",
+      metaDescription: ".kz 是哈萨克斯坦国家域名、约 $12/年、要求解析服务器位于哈国境内；.tr 是土耳其国家域名、约 $15/年、2023 年起任何人可注册。对比两个欧亚门户市场的定位与门槛，并用 AI 猎取可注册的名字。",
+      verdict:
+        "同是欧亚大陆桥上的本土信号，分水岭在市场体量与一条技术硬规矩。做哈萨克斯坦与中亚 → .kz：注册局 KazNIC 运营、注册量约 15 万（含 .com.kz 体系），哈萨克斯坦人口约 2000 万、是中亚最大经济体：全球重要的石油、铀矿与粮食产地，也是「一带一路」中欧班列的核心枢纽，本土超级应用 Kaspi.kz 证明了这个市场的数字化深度。任何人可注册，但有一条硬规矩：域名解析服务器需位于哈国境内——用本地主机商或支持哈国节点的 CDN 即可满足，多数本地注册商可代办。价格便宜：约 $12/年（约 ¥90）、平续同价。做土耳其与泛欧亚 → .tr：TRABİS 系统（隶属 BTK）运营、注册量约 70 万，土耳其人口约 8500 万、横跨欧亚、是中东与中亚市场的门户，电商增速常年全球前列（Trendyol、Hepsiburada 都是本土巨头）。2023 年起顶级直注对所有人开放、无需本地地址或文件，好词根库存比老牌欧洲 ccTLD 干净；价格约 $15/年（约 ¥110）、平续无钩子。判断标准：业务落点在哈萨克斯坦、做中亚外贸物流 → 先确认主机/CDN 能落在哈国境内再上 .kz；落点在土耳其、押 8500 万人口的电商与制造市场 → .tr 零门槛且市场大得多；做整条欧亚走廊生意的品牌两个都注册——各做各的本地门面，价格加起来也不到 $30/年。",
+      pickA: ["哈萨克斯坦本地企业与服务", "中亚外贸与物流业务", "俄语/哈萨克语内容与媒体站", "一带一路沿线业务"],
+      pickB: ["土耳其本地企业与服务", "面向土耳其的跨境电商", "制造与外贸业务", "押人口体量的消费品牌"],
+    },
+    en: {
+      title: ".kz vs .tr: Kazakhstan or Türkiye Country Domain Compared",
+      metaDescription:
+        ".kz is Kazakhstan's country domain at ~$12/yr, requiring name servers located inside Kazakhstan; .tr is Türkiye's at ~$15/yr, open to everyone since 2023. Compare the two Eurasian gateway markets and their bars, then hunt available names.",
+      verdict:
+        "Both are local signals along the Eurasian land bridge — the divide is market size versus one hard technical rule. Kazakhstan and Central Asia → .kz: run by registry KazNIC with about 150,000 registrations across its zones including .com.kz; Kazakhstan has about 20 million people and Central Asia's largest economy: a major global producer of oil, uranium and grain, the core hub of Belt-and-Road rail corridors, and home to super-app Kaspi.kz — proof of the market's digital depth. Anyone can register, but one hard rule applies: the domain's name servers must be located inside Kazakhstan — satisfied with a local host or a CDN with in-country nodes, and most local registrars handle it. Pricing is cheap: about $12/yr (≈¥90), same renewal. Türkiye and wider Eurasia → .tr: run by the TRABİS system under the BTK with about 700,000 registrations; Türkiye has about 85 million people, straddles Europe and Asia as a gateway to Middle Eastern and Central Asian markets, and posts e-commerce growth consistently among the world's fastest (Trendyol and Hepsiburada are homegrown giants). Direct registration opened to everyone in 2023 with no local address or documents, and good-root inventory is cleaner than older European ccTLDs; pricing is about $15/yr (≈¥110), flat with no traps. The test: business landing in Kazakhstan, Central Asian trade and logistics → confirm your host or CDN can sit in-country, then take .kz; landing in Türkiye, betting on an 85-million-person e-commerce and manufacturing market → .tr has zero bar and a far bigger market; brands working the whole Eurasian corridor register both — one local front door each, together still under $30/yr.",
+      pickA: ["Local Kazakhstani businesses & services", "Central Asian trade & logistics", "Russian/Kazakh-language content & media", "Belt-and-Road corridor businesses"],
+      pickB: ["Local Turkish businesses & services", "Türkiye-facing cross-border e-commerce", "Manufacturing & foreign trade", "Consumer brands betting on market size"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
