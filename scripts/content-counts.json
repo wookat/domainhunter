@@ -389,7 +389,7 @@
     ]
   },
   "guide": {
-    "count": 380,
+    "count": 386,
     "slugs": [
       "saas",
       "ecommerce",
@@ -770,7 +770,13 @@
       "papermaking",
       "inkstone",
       "fletching",
-      "gilding"
+      "gilding",
+      "lacquerware",
+      "batik",
+      "horology",
+      "saddlery",
+      "ikebana",
+      "fanmaking"
     ]
   },
   "vs": {

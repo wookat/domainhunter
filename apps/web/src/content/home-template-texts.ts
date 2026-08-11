@@ -1523,4 +1523,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家贴金与金箔工艺工坊，寓意「一张比呼吸还轻的金箔落在该发光的地方」；气质要有千年锻打血统与点睛的分寸感、不显土豪装修队；场景是古建修复方案书里资质可信、画框水金报价单上工艺体面、金箔体验课海报上出片有话题。",
     en: "A gilding and gold-leaf studio. The name should carry a leaf lighter than breath settling exactly where the light belongs; the vibe is a millennium leaf-beating bloodline and the restraint of the finishing touch, never a flashy renovation crew; it must read credentialed in the restoration tender, dignified on the water-gilt quote, and photogenic on the class poster.",
   },
+  "lacquerware": {
+    zh: "一家漆艺与大漆工坊，寓意「一棵树的血，养一只碗八千年」；气质要有百道工序的慢与器物温润的光、不显油漆经销商；场景是拍卖图录上有身价、酒店软装合同上交付可信、漆艺体验课海报上出片有故事。",
+    en: "A lacquerware and urushi studio. The name should carry the blood of a tree nursing a bowl for eight thousand years; the vibe is hundred-coat slowness and the warm gloss of the vessel, never a paint distributor; it must carry status in the auction catalogue, read reliable on the hospitality contract, and stay photogenic on the class poster.",
+  },
+  "batik": {
+    zh: "一家蜡染工坊，寓意「蜡封住的地方蓝进不去，裂开的地方开出冰纹」；气质要有蓝白之间的设计语言与冰纹的不可复制、不显景区摊位；场景是品牌联名合同上版权可谈、文创吊牌上有设计感、蜡染体验课海报上出片好玩。",
+    en: "A batik studio. The name should carry the crackle blooming where the wax breaks — blue held out, ice-veins let in; the vibe is a blue-and-white design language and the uncopyable crackle, never a souvenir stall; it must hold the licensing table, read design-forward on the hang tag, and stay photogenic on the class poster.",
+  },
+  "horology": {
+    zh: "一家独立制表与钟表修复工作室，寓意「一只手工机芯，一年只做得出几枚」；气质要有姓氏签名的郑重与游丝级的克制、不显电子表柜台；场景是拍卖图录上有身价、古董表修复工单上托付可信、钟表内容标题上好念好传播。",
+    en: "An independent watchmaking atelier. The name should carry one handmade movement finished only a few times a year; the vibe is surname-signature solemnity and hairspring restraint, never a mall watch counter; it must carry status in the catalogue, read trustworthy on the restoration docket, and travel well in a video title.",
+  },
+  "saddlery": {
+    zh: "一家马具与手工马鞍工坊，寓意「一副鞍要同时合两个背：马的背与骑手的坐骨」；气质要有双针马缝线的工艺血统与毫米级合身的专业、不显景区租马摊；场景是俱乐部供货单上专业可信、骑手量背预约里郑重、皮具礼盒吊牌上有故事。",
+    en: "A saddlery and bespoke saddle workshop. The name should carry one saddle fitting two backs at once — the horse's spine and the rider's seat; the vibe is saddle-stitch pedigree and millimetre-fit professionalism, never a trail-ride rental stall; it must read professional on the club order, solemn at the fitting, and storied on the gift-box tag.",
+  },
+  "ikebana": {
+    zh: "一家花道与东方插花教室，寓意「剪掉九枝，留下一枝」；气质要有留白的高级与以花修行的安静、不显外卖花店；场景是课程表上体系可信、企业团建报价单上专业、短视频标题上出片好传播。",
+    en: "An ikebana and Eastern flower-arrangement school. The name should carry nine branches cut away and one left standing; the vibe is the refinement of empty space and the quiet of practice through flowers, never a bouquet-delivery shop; it must read systematic on the syllabus, professional on the corporate quote, and photogenic in the short-video title.",
+  },
+  "fanmaking": {
+    zh: "一家制扇与手工折扇工坊，寓意「收进袖中是器物，展开是一幅画」；气质要有怀袖雅物的文人体面与扇骨月余打磨的功夫、不显夜市塑料扇；场景是拍卖图录上有身价、电商详情页上有故事、扇艺体验课海报上出片好玩。",
+    en: "A fan-making and folding-fan studio. The name should carry an object in the sleeve that opens into a painting; the vibe is the literati dignity of the sleeve treasure and a month's polish in the ribs, never a night-market plastic fan; it must carry status in the catalogue, tell a story on the product page, and stay photogenic on the class poster.",
+  },
 };
