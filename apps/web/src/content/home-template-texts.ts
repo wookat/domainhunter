@@ -1595,4 +1595,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家烙画与火笔画工作室，寓意「以火为墨以铁为笔，深浅全凭一秒火候」；气质要有一笔无悔的决绝与焦色九层的功力、不显礼品厂烫印；场景是展签上郑重、定制委托合同上可信、体验课海报上出片解压。",
     en: "A pyrography studio. The name should carry fire as the ink and iron as the brush — every shade hanging on one second of heat; the vibe is the no-regret stroke's resolve and nine shades of scorch, never a gift factory's heat transfer; it must read solemn on the exhibit label, credible on the commission, and calming on the class poster.",
   },
+  "doughsculpture": {
+    zh: "一家面塑与捏面人工作室，寓意「一团面在指尖开出人间百态」；气质要有一印二捏三镶四滚的功力与面人字号的师承、不显早点铺面食；场景是展签上郑重、定制订单上可信、庙会摊头亲切出活。",
+    en: "A dough sculpture studio. The name should carry a ball of dough blossoming into the human comedy at the fingertips; the vibe is the press-pinch-inlay-roll mastery and the Mianren house-name lineage, never a breakfast shop's pastry; it must read solemn on the exhibit label, credible on the commission, and warm at the fair stall.",
+  },
+  "eggcarving": {
+    zh: "一家蛋雕与蛋壳雕刻工作室，寓意「在零点三毫米的壳上走刀，一次呼吸就是一次冒险」；气质要有屏息运刀的决绝与镂空套雕的功力、不显生鲜蛋档；场景是展签上郑重、定制订单上可信、体验课海报上有惊叹。",
+    en: "An egg carving studio. The name should carry the blade walking on three-tenths of a millimetre — every breath a gamble; the vibe is the held-breath resolve and nested-openwork mastery, never a grocer's egg stall; it must read solemn on the exhibit label, credible on the commission, and thrilling on the class poster.",
+  },
+  "nutcarving": {
+    zh: "一家核雕与橄榄核雕工作室，寓意「一枚核里刻下一条船，方寸之间见大千」；气质要有核舟记的文人身价与万刀功夫、不显夜市串摊；场景是拍卖图录上郑重、文玩圈内有暗号、定制合同上可信。",
+    en: "A nut carving studio. The name should carry a boat cut inside one olive pit — a cosmos within a square inch; the vibe is the Nut Boat chronicle's literati status and ten-thousand-cut mastery, never a night-market bead stall; it must read solemn in the catalogue, knowing in the collectors' circle, and credible on the commission.",
+  },
+  "insidepainting": {
+    zh: "一家内画与鼻烟壶内画工作室，寓意「笔在壶内、画在反面，方寸之内另有乾坤」；气质要有反笔作画的绝技与宫廷雅玩的体面、不显景区纪念品；场景是拍卖图录上郑重、礼品合同上可信、体验课海报上有惊叹。",
+    en: "An inside painting studio. The name should carry the brush working inside the bottle and the picture on the far side of the glass — another cosmos within a square inch; the vibe is the reverse-brush feat and court-plaything dignity, never a scenic-spot souvenir; it must read solemn in the catalogue, credible on the gift contract, and thrilling on the class poster.",
+  },
+  "strawpainting": {
+    zh: "一家麦秆画与麦秸画工作室，寓意「一根麦秆剖开烫平，点草成金贴出满纸金光」；气质要有烙色火候的功力与丰收口彩的喜气、不显草编筐篮作坊；场景是展签上郑重、企业礼盒上体面、研学海报上有故事。",
+    en: "A wheat straw painting studio. The name should carry one stalk split and pressed into a sheet of gold — straw turned into gold outright; the vibe is the scorched-shading mastery and bumper-harvest blessing, never a basket-weave workshop; it must read solemn on the exhibit label, dignified on the corporate box, and story-rich on the tour poster.",
+  },
+  "woodblockprint": {
+    zh: "一家木版年画工作室，寓意「一块梨木版刻住一个民族的过年，一版一色拓出年味」；气质要有五大产地的师承与老版家谱的信用、不显打印图文店；场景是展签上郑重、年货礼盒上喜庆、研学海报上有仪式感。",
+    en: "A woodblock New Year print studio. The name should carry one pearwood block holding a whole nation's New Year — one block per colour, the season pulled from the grain; the vibe is the five-homeland lineage and ancestral-block credit, never a print-services counter; it must read solemn on the label, festive on the gift box, and ritual-rich on the tour poster.",
+  },
 };
