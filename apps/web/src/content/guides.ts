@@ -23684,6 +23684,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  lacquerware: {
+    slug: "lacquerware",
+    keywords: ["漆艺工坊", "大漆工艺", "漆器修复", "lacquerware studio", "urushi"],
+    tlds: [
+      { tld: "com", zh: "漆器藏家与酒店软装委托的默认后缀，拍卖图录与订单上最稳", en: "The default suffix for collectors and hospitality commissions — steadiest in the catalogue and on the order" },
+      { tld: "art", zh: "把大漆从「涂料」升维到「艺术」，当代漆画与个展线的身价后缀", en: "Elevating lacquer from coating to art — the status suffix for contemporary lacquer painting and the exhibition line" },
+      { tld: "studio", zh: "工作室气质直给，荫房与推光之间的匠作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between curing room and polish" },
+    ],
+    zh: {
+      label: "漆艺工坊",
+      title: "漆艺工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "漆艺与大漆工坊命名指南：百道工序叙事、漆树血统等思路，漆艺工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "漆艺工坊的名字要说出「一棵树的血，养一只碗八千年」：大漆是从漆树上一刀一刀割下来的活材料，割漆人一年只取十斤，一件脱胎漆器要过灰、裱布、髹涂、推光上百道工序、阴干数月——中国漆器八千年的家谱从河姆渡的朱漆木碗开始，名字要先把这份「以年为单位的慢」递出去。词库现成：漆、髹、朱、犀、螺钿——每个字都带着这门手艺的光泽。隐藏考点是三线业务：藏家与拍卖线认作者与工艺谱系，酒店与品牌软装的定制线认交期与量产稳定性，漆艺体验课的流量线要出片好玩——名字要在图录、合同与海报三个场景都立得住。误区在于化工化：满名的「漆业、涂料、装饰」气质会把八千年手艺念成油漆经销商——这门手艺卖的是时间养出来的温润，不是一桶桶的涂料。",
+      namingIdeas: [
+        "大漆血统直给：漆、髹、朱、黑红类词根——髹是漆艺专属动词，一个字就把行当挑明，朱与黑是漆器最经典的双色",
+        "百道工序叙事：百髹、千磨、推光类工序词——一件漆器上百道工序、数月阴干，把「慢」写进名字就是身价",
+        "漆树源头借力：树、割、汁、山林类词根——「一棵漆树一生只割十斤漆」是这门手艺最独家的源头故事",
+        "螺钿犀皮技法词：螺钿、犀皮、戗金、脱胎类词根——技法名自带工艺等级，藏家一眼认出师承与门派",
+        "器物温度转译：碗、盏、盒、匣类器物词加暖字——漆器是拿在手里用的艺术，器物词让名字落回日常",
+      ],
+      cases: [
+        { name: "千髹堂", takeaway: "工序动词加数字的直译：「千次髹涂」把这门手艺最贵的成本——时间——写进名字，堂字压住老铺身位，藏家线与定制线都接得住" },
+        { name: "福州脱胎漆器", takeaway: "产地加技法的国家级样本：脱胎是福州漆艺的独门绝技——产地即品牌，拍卖图录与非遗名录的资质语法现成" },
+        { name: "漆语", takeaway: "材料拟人的轻巧样本：两个字把「大漆会呼吸、会随岁月变色」的活性说成对话——体验课好念好记，当代漆画线也不违和" },
+        { name: "Urushi Studio", takeaway: "日文借词加工作室直给的西式样本：urushi 是国际藏家圈的通用词——借词立专业，出海线与跨境电商零解释成本" },
+      ],
+      pitfalls: [
+        "化工化：满是「漆业、涂料、装饰」气质的名字把八千年手艺念成油漆经销商——这门手艺卖时间养出的温润，不是桶装涂料",
+        "锁死单一器型：叫「漆碗坊」就难接屏风、首饰与当代漆画的单——器型留给作品集，品牌名留给整个漆案",
+        "真假大漆含糊：用腰果漆或化学漆却名带「大漆、天然漆」会招来藏家信任与合规双重风险——材料等级要在名字之外说清楚",
+        "忽略过敏与养护教育：漆器怕干怕晒、生漆致敏，名字太玄就没地方放使用与养护的科普——流量线要故事，交付线要说明书",
+      ],
+    },
+    en: {
+      label: "Lacquerware studios",
+      title: "How to Name a Lacquerware Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Lacquerware and urushi studio naming guide: hundred-coat narrative, lacquer-tree bloodline imagery, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A lacquerware studio's name must say that the blood of a tree nurses a bowl for eight thousand years: raw lacquer is tapped cut by cut from the lacquer tree — a tapper gathers barely ten pounds a year — and one dry-lacquer vessel survives a hundred rounds of priming, cloth-layering, coating and polishing plus months in the curing room, a lineage running from Hemudu's red-lacquered bowl, so the name must hand over that measured-in-years slowness first. The lexicon is ready: lacquer, coat, vermilion, mother-of-pearl — every word arrives pre-glossed. The hidden exam is the triple business: the collector-and-auction line reads the maker's pedigree; the hospitality bespoke line reads lead time and production stability; the workshop-class traffic line wants photogenic fun — the name must stand in the catalogue, on the contract and on the poster alike. The failure mode is the industrial-coatings register: a paints-and-decor name reads an eight-millennia craft as a paint distributor — this craft sells warmth cured by time, not coating by the bucket.",
+      namingIdeas: [
+        "The lacquer bloodline outright: lacquer, coat, vermilion and black-red roots — coating verbs belong to this craft alone; one word declares the trade, and vermilion-on-black is its classic palette",
+        "The hundred-coat narrative: hundred-coats, thousand-polish and burnish process roots — one vessel takes a hundred steps and months of curing; writing the slowness into the name is the status",
+        "Borrowing the tree at the source: tree, tap, sap and mountain-grove roots — a lacquer tree yields ten pounds in a lifetime, the craft's most exclusive origin story",
+        "Technique code words: mother-of-pearl inlay, marbled-rhino-skin, gold-engraved and dry-lacquer roots — technique names carry the craft grade; collectors read the school at a glance",
+        "Translating the vessel's warmth: bowl, cup, box and case object roots joined to warm characters — lacquerware is art held in the hand; the object word grounds the name in daily life",
+      ],
+      cases: [
+        { name: "Qian Xiu Tang (千髹堂)", takeaway: "Process verb on a number, translated straight: a thousand coats writing the craft's dearest cost — time — into the name; the hall ending sets the heritage-house posture, serving collector and bespoke lines alike" },
+        { name: "Fuzhou Bodiless Lacquer (福州脱胎漆器)", takeaway: "Place name on the technique, the national sample: bodiless lacquer is Fuzhou's signature move — provenance is the brand; the auction-catalogue credential grammar ready-made" },
+        { name: "Qi Yu (漆语)", takeaway: "The material personified, the light sample: two characters casting living lacquer — breathing, deepening with age — as a conversation; easy on the class poster, at home on the contemporary line" },
+        { name: "Urushi Studio", takeaway: "The Japanese loanword on the studio ending, the Western sample: urushi is the international collectors' term — the loanword sets expertise, costing zero explanation on the export line" },
+      ],
+      pitfalls: [
+        "The industrial-coatings register: a paints-and-decor name reads the eight-millennia craft as a paint distributor — this craft sells time-cured warmth, not coating by the bucket",
+        "Locking into one vessel: a lacquer-bowl name can't take the screen, jewellery and lacquer-painting orders — leave the vessel to the portfolio, keep the whole bench for the brand",
+        "Blurring real and synthetic lacquer: naming 'natural urushi' over cashew or chemical lacquer invites collector trust and compliance risk at once — state the material grade outside the name, clearly",
+        "Ignoring allergy and care education: raw lacquer sensitizes and finished ware fears sun and dryness — a too-mystical name leaves no room for the care sheet; story for the traffic line, manual for the delivery line",
+      ],
+    },
+  },
+  batik: {
+    slug: "batik",
+    keywords: ["蜡染工坊", "蜡染工艺", "苗族蜡染", "batik studio", "wax-resist dyeing"],
+    tlds: [
+      { tld: "com", zh: "面料供货与品牌联名委托的默认后缀，订单与联名合同上最稳", en: "The default suffix for fabric supply and brand collaborations — steadiest on the order sheet and the licensing contract" },
+      { tld: "art", zh: "把蜡染从「布料」升维到「艺术」，蜡染画与个展线的身价后缀", en: "Elevating batik from fabric to art — the status suffix for batik painting and the exhibition line" },
+      { tld: "studio", zh: "工作室气质直给，蜡刀与靛缸之间的匠作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between wax pen and indigo vat" },
+    ],
+    zh: {
+      label: "蜡染工坊",
+      title: "蜡染工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "蜡染工坊命名指南：冰纹意象、蜡防叙事等思路，蜡染工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "蜡染工坊的名字要说出「蜡封住的地方，蓝进不去——裂开的地方，开出冰纹」：蜡刀蘸着熔蜡在白布上画线，布进靛缸染蓝，蜡裂处渗进细如发丝的蓝纹，煮蜡脱落后白花现于蓝底——冰纹是蜡染最独家的签名，世上没有两块一样的冰纹布。苗家女儿从小学画蜡，一件嫁衣画上一年，名字要先把这份「以蜡为笔、以缸为砚」的手感递出去。词库现成：蜡、靛、蓝、纹、缬——蜡缬是这门手艺的古名，一个字借来唐代的家谱。隐藏考点是三线业务：品牌联名与面料供货线认花样版权与量产稳定，文创与服饰零售线认设计感，蜡染体验课的流量线要出片好玩——名字要在联名合同、吊牌与海报三个场景都立得住。误区在于土产化：满名的「民族风、特产、山货」气质会把千年手艺念成景区摊位——这门手艺卖的是蓝白之间的设计语言，不是纪念品。",
+      namingIdeas: [
+        "冰纹签名直给：冰、纹、裂、脉类词根加蓝——冰纹是蜡染独家的防伪签名，「世上没有两块一样的冰纹」自带故事",
+        "蜡缬古名借力：缬、蜡、防、封类词根——蜡缬是唐代三缬之一，一个字借来千年的工艺家谱",
+        "靛蓝双色语法：靛、蓝、青、白类色彩词——蓝白是蜡染的全部色谱，把最经典的双色写进名字就是识别度",
+        "蜡刀工序暗号：刀、笔、点、画类工具词——蜡刀是画笔也是刻刀，「以蜡为笔」的画面感是体验课的天然文案",
+        "苗岭源头叙事：山、岭、寨、月亮类词根——丹寨、安顺是蜡染的地理源头，产地词自带非遗背书",
+      ],
+      cases: [
+        { name: "冰纹记", takeaway: "独家签名加记事尾缀的直译：把蜡染最不可复制的冰纹立为品牌——「记」字带着老铺与手账的双重温度，联名线与流量线都接得住" },
+        { name: "丹寨蜡染", takeaway: "产地加品类的国家级样本：丹寨是蜡染的非遗重镇——产地即品牌，联名合同与研学基地的资质语法现成" },
+        { name: "蓝花叙", takeaway: "「蓝底白花」的诗意转译：三个字把蜡染的视觉签名说成一段叙事——文创零售线有设计感，女性客群好转述" },
+        { name: "Batik Boutique", takeaway: "品类加精品店直给的西式样本：马来西亚社会企业——品类词零解释成本，boutique 立零售身位，公平贸易叙事自带传播", },
+      ],
+      pitfalls: [
+        "土产化：满是「民族风、特产、山货」气质的名字把千年手艺念成景区摊位——这门手艺卖蓝白之间的设计语言，不是纪念品",
+        "锁死单一品类：叫「蜡染布庄」就难接服饰、家居与蜡染画的单——品类留给货架，品牌名留给整个蓝白案",
+        "真假蜡染含糊：用印花仿蜡纹却名带「手工蜡染」会招来联名方信任与合规双重风险——工艺等级要在名字之外说清楚",
+        "忽略花样版权身位：联名与供货线最认原创花样——名字太摊位化就压不住版权谈判桌，给设计资产留身位",
+      ],
+    },
+    en: {
+      label: "Batik studios",
+      title: "How to Name a Batik Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Batik studio naming guide: ice-crackle imagery, wax-resist narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A batik studio's name must say that where the wax seals, the blue cannot enter — and where the wax cracks, ice-veins bloom: the wax pen draws molten lines on white cloth, the cloth sinks into the indigo vat, hairline blue seeps into every crack, and when the wax boils away white blossoms stand on a blue ground — the crackle is batik's unforgeable signature, and no two lengths of it are alike. A Miao daughter learns the wax pen as a child and spends a year on one wedding robe, so the name must hand over that wax-for-brush, vat-for-inkstone feel first. The lexicon is ready: wax, indigo, blue, vein and resist — wax-resist is the craft's Tang-dynasty name, one word borrowing a millennium's family tree. The hidden exam is the triple business: the brand-collaboration and fabric-supply line reads pattern copyright and production stability; the retail line reads design sensibility; the workshop-class traffic line wants photogenic fun — the name must stand on the licensing contract, the hang tag and the poster alike. The failure mode is the souvenir-stall register: an ethnic-specialty name reads a millennium craft as a scenic-spot booth — this craft sells a design language in blue and white, not a keepsake.",
+      namingIdeas: [
+        "The crackle signature outright: ice, vein, crackle and marble roots joined to blue — the crackle is batik's own watermark; no two lengths alike carries its own story",
+        "Borrowing the old resist name: resist, wax, seal and block roots — wax-resist was one of the Tang dynasty's three resist arts; one word borrows a thousand-year pedigree",
+        "The indigo two-tone grammar: indigo, blue, azure and white colour roots — blue and white are batik's entire palette; writing the classic pair into the name is the recognition",
+        "Wax-pen code words: pen, blade, dot and draw tool roots — the wax pen is brush and knife at once; wax for a brush is the class poster's copy, ready-made",
+        "The Miao-highlands origin narrative: mountain, ridge, village and moon roots — Danzhai and Anshun are batik's geographic springs; the place word carries heritage endorsement",
+      ],
+      cases: [
+        { name: "Bing Wen Ji (冰纹记)", takeaway: "The exclusive signature on a chronicle ending, translated straight: batik's uncopyable crackle raised into the brand — the journal ending warms both heritage shop and hand-diary registers, serving collaboration and traffic lines alike" },
+        { name: "Danzhai Batik (丹寨蜡染)", takeaway: "Place name on the category, the national sample: Danzhai is batik's heritage stronghold — provenance is the brand; the licensing contract's credential grammar ready-made" },
+        { name: "Lan Hua Xu (蓝花叙)", takeaway: "Blue ground, white blossom, poetically recast: three characters telling batik's visual signature as a narrative — design-forward on the retail line, easy in the customer's retelling" },
+        { name: "Batik Boutique", takeaway: "Category on the shop word outright, the Western sample: the Malaysian social enterprise — the category costs zero explanation, boutique sets the retail posture, and the fair-trade story travels by itself" },
+      ],
+      pitfalls: [
+        "The souvenir-stall register: an ethnic-specialty name reads the millennium craft as a scenic-spot booth — this craft sells a blue-and-white design language, not a keepsake",
+        "Locking into one category: a batik-fabric-house name can't take the apparel, homeware and batik-painting orders — leave the category to the shelf, keep the whole vat for the brand",
+        "Blurring real and printed batik: naming 'hand-drawn batik' over printed imitation invites partner trust and compliance risk at once — state the process grade outside the name, clearly",
+        "Ignoring the pattern-copyright posture: collaboration and supply lines read original patterns first — a stall-like name won't hold the licensing table; leave the name room for the design asset",
+      ],
+    },
+  },
+  horology: {
+    slug: "horology",
+    keywords: ["独立制表工作室", "手工机械表", "钟表修复", "watchmaking atelier", "independent horology"],
+    tlds: [
+      { tld: "com", zh: "藏家订单与拍卖行往来的默认后缀，定金合同与证书上最稳", en: "The default suffix for collector orders and auction-house correspondence — steadiest on the deposit contract and the certificate" },
+      { tld: "studio", zh: "工作室气质直给，目镜与游丝之间的独立制表身位零违和", en: "The studio register stated outright — zero friction for the independent posture between loupe and hairspring" },
+      { tld: "watch", zh: "品类后缀直给，域名本身就把行当挑明，藏家一眼识别", en: "The category suffix outright — the domain itself declares the trade; collectors read it at a glance" },
+    ],
+    zh: {
+      label: "独立制表工作室",
+      title: "独立制表工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "独立制表与钟表修复工作室命名指南：姓氏制表传统、游丝叙事等思路，制表工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "独立制表工作室的名字要说出「一只手工机芯，一年只做得出几枚」：独立制表人一年产量常常不过十只，一根游丝要在目镜下调校数百次，藏家排队三五年只为等一只刻着制表师姓氏的表——这个行当有全世界最强的姓氏传统，Patek、Breguet、Dufour，姓氏即品牌、签名即证书，名字要先把这份「以人格担保精度」的郑重递出去。词库现成：时、摆、轮、游丝、陀飞轮——每个词都带着机芯的节拍。隐藏考点是三线业务：定制与藏家线认制表师本人与获奖履历，古董表修复线认手艺与配件渠道，钟表文化课与内容线要好念好传播——名字要在拍卖图录、维修工单与视频标题三个场景都立得住。误区在于快消化：满名的「潮、酷、极速」气质会把百年手艺念成电子表柜台——这门手艺卖的是一辈子只做几百只的克制，不是货架上的量产。",
+      namingIdeas: [
+        "姓氏签名直给：姓氏加制表尾缀——独立制表是全世界姓氏传统最强的行当，签名即证书，姓氏即品牌资产",
+        "机芯部件借力：游丝、摆轮、擒纵、陀飞轮类词根——部件名自带工艺等级，藏家一眼读出你在机芯里下的功夫",
+        "时间哲学转译：时、刻、恒、瞬类词根——制表是把时间关进方寸的手艺，时间词让名字有表盘之外的余韵",
+        "孤品节奏叙事：一年几枚、编号、孤本类限量词——「一年只做八只」是独立制表最贵的卖点，把稀缺写进名字",
+        "工坊地名语法：山谷、湖畔、老城类地名词——汝拉山谷的地名传统现成，中文语境里工作室所在地一样能立身位",
+      ],
+      cases: [
+        { name: "时慢工房", takeaway: "反效率宣言的直译：在人人求快的行当外把「慢」立为身价——工房尾缀压住手作身位，藏家线郑重、内容线有话题" },
+        { name: "游丝记", takeaway: "机芯最细部件加记事尾缀：游丝细过头发却掌管精度——以最小的零件立最大的功夫，修复线与文化课线都接得住" },
+        { name: "F.P. Journe", takeaway: "姓名缩写加姓氏的行业标准样本：Invenit et Fecit（构思并制作）刻在表盘上——姓氏即签名，独立制表身位的教科书结构" },
+        { name: "MB&F", takeaway: "创始人缩写加朋友们的反叛样本：Max Büsser & Friends 把「制表实验室」写进名字——缩写立现代感，Friends 说出协作制表的新范式" },
+      ],
+      pitfalls: [
+        "快消化：满是「潮、酷、极速」气质的名字把百年手艺念成电子表柜台——这门手艺卖一辈子几百只的克制，不是货架量产",
+        "碰瓷大牌：名字蹭 Patek、Rolex 的字形与读音会招来藏家鄙视与商标诉讼双重风险——独立制表的身价恰恰在「不像任何人」",
+        "锁死单一品类：叫「陀飞轮工作室」就难接三问、万年历与修复的单——复杂功能留给作品，品牌名留给整个机芯案",
+        "忽略修复线的信任语法：太先锋的名字在古董表藏家眼里立不住——创作线要个性，修复线要托付感，名字要给两线都留身位",
+      ],
+    },
+    en: {
+      label: "Watchmaking ateliers",
+      title: "How to Name a Watchmaking Atelier: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Independent watchmaking and horology atelier naming guide: surname-signature tradition, hairspring narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A watchmaking atelier's name must say that one handmade movement emerges only a few times a year: an independent watchmaker often finishes fewer than ten pieces annually, one hairspring is trued hundreds of times under the loupe, and collectors wait years for a dial carrying the maker's surname — no trade holds a stronger surname tradition, from Breguet to Dufour, where the signature is the certificate and the family name is the brand, so the name must hand over that precision-guaranteed-by-a-person solemnity first. The lexicon is ready: balance, wheel, hairspring, tourbillon — every word ticks. The hidden exam is the triple business: the bespoke collector line reads the maker's own record and prizes; the vintage-restoration line reads skill and parts channels; the horology-content line wants a name that travels in a video title — the name must stand in the auction catalogue, on the repair docket and in the thumbnail alike. The failure mode is the fast-fashion register: a hip-and-turbo name reads a centuries-old craft as a mall watch counter — this craft sells the restraint of a few hundred pieces in a lifetime, not shelf volume.",
+      namingIdeas: [
+        "The surname signature outright: the family name on a watchmaking ending — no trade's surname tradition runs stronger; the signature is the certificate, the name the asset",
+        "Borrowing the movement's parts: hairspring, balance, escapement and tourbillon roots — the part name carries the craft grade; collectors read your finishing at a glance",
+        "Translating the philosophy of time: hour, moment, eternal and instant roots — watchmaking cages time in a case; the time word gives the name resonance beyond the dial",
+        "The one-of-few narrative: pieces-per-year, numbered and unique-piece scarcity words — eight a year is independent horology's dearest claim; write the scarcity into the name",
+        "The atelier place grammar: valley, lakeside and old-town roots — the Vallée de Joux tradition is ready-made; the workshop's own place name sets the posture anywhere",
+      ],
+      cases: [
+        { name: "Shi Man (时慢工房)", takeaway: "The anti-speed manifesto, translated straight: slowness raised into status in a trade obsessed with rate — the workshop ending holds the maker posture; solemn for collectors, quotable for content" },
+        { name: "You Si Ji (游丝记)", takeaway: "The movement's finest part on a chronicle ending: the hairspring, thinner than hair yet ruling the rate — the smallest part carrying the largest skill, serving restoration and content lines alike" },
+        { name: "F.P. Journe", takeaway: "Initials on the surname, the industry-standard sample: Invenit et Fecit engraved on the dial — the surname as signature, the textbook structure of the independent posture" },
+        { name: "MB&F", takeaway: "Founder's initials and friends, the rebel sample: Max Büsser & Friends writing the horological lab into the name — initials set the modern register, Friends declares the collaborative paradigm" },
+      ],
+      pitfalls: [
+        "The fast-fashion register: a hip-and-turbo name reads the centuries-old craft as a mall watch counter — this craft sells a-few-hundred-in-a-lifetime restraint, not shelf volume",
+        "Shadowing the great houses: a name echoing Patek or Rolex in shape or sound invites collector contempt and trademark suits at once — independence's whole value is resembling no one",
+        "Locking into one complication: a tourbillon-studio name can't take the repeater, perpetual-calendar and restoration orders — leave the complication to the piece, keep the whole bench for the brand",
+        "Ignoring the restoration line's grammar of trust: a too-avant-garde name won't stand with vintage collectors — personality for the creation line, custody for the restoration line; leave the name room for both",
+      ],
+    },
+  },
+  saddlery: {
+    slug: "saddlery",
+    keywords: ["马具工坊", "手工马鞍", "马术装备定制", "saddlery workshop", "saddle fitting"],
+    tlds: [
+      { tld: "com", zh: "马术俱乐部供货与骑手定制的默认后缀，订单与保养协议上最稳", en: "The default suffix for club supply and rider commissions — steadiest on the order and the care agreement" },
+      { tld: "studio", zh: "工作室气质直给，裁皮刀与马缝线之间的匠作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between round knife and saddle stitch" },
+      { tld: "shop", zh: "零售身位直给，缰绳、肚带与护理用品的配件电商线现成", en: "The retail posture outright — ready-made for the bridle, girth and care-goods accessory line" },
+    ],
+    zh: {
+      label: "马具工坊",
+      title: "马具工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "马具与手工马鞍工坊命名指南：鞍架合背叙事、马缝线工艺等思路，马具工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "马具工坊的名字要说出「一副鞍要同时合两个背：马的背，和骑手的坐骨」：手工马鞍从量背开始——鞍架差一指宽，马就疼一路，骑手就歪一季，鞍匠是马与人之间的翻译官。一副全手工鞍要过百小时的裁皮、塑形与双针马缝线，爱马仕的起家生意就是马具，鞍匠的双针缝法至今是奢侈皮具的工艺祖谱——名字要先把这份「毫米级合身」的郑重递出去。词库现成：鞍、缰、镫、革、御——每个字都带着马房的皮革味。隐藏考点是三线业务：俱乐部与骑手的定制线认量背手艺与调整服务，赛事装备线认安全与规则合规，皮具衍生与礼品线认工艺血统——名字要在量背预约单、赛场装备检录与礼盒吊牌三个场景都立得住。误区在于旅游马场化：满名的「跑马、骑乐、草原风」气质会把百小时手艺念成景区租马摊——这门手艺卖的是马背上的定制西装，不是一小时的骑乘体验。",
+      namingIdeas: [
+        "合背哲学直给：合、贴、承、衬类词根加鞍——「一副鞍合两个背」是这门手艺的核心交付，合身感就是专业感",
+        "双针缝线借力：缝、针、线、革类工艺词——马缝线是奢侈皮具的工艺祖谱，一个缝字借来爱马仕级的家谱",
+        "马房词库转译：鞍、缰、镫、蹄类行当词——行当词自带皮革与马房的气味，骑手一眼认出你是圈内人",
+        "骑士传统语法：御、骑、猎、巡类古典词——马具连着骑士与皇家马厩的传统，古典词立百年老铺的身位",
+        "马匹福利叙事：舒、护、康类词根——现代马术最重马匹福利，「马舒服骑手才稳」是定制线最打动人的理由",
+      ],
+      cases: [
+        { name: "合背坊", takeaway: "核心交付的直译：三个字把量背定制的专业身位挑明——「合」字一语双关（合身与合作），俱乐部供货线与骑手定制线都接得住" },
+        { name: "双针社", takeaway: "工艺暗号加社字尾缀：双针马缝线是手工马具的防伪签名——懂行的骑手一眼识别，皮具衍生线借力工艺血统零成本" },
+        { name: "Hermès", takeaway: "姓氏起家的终极样本：1837 年的巴黎马具铺——姓氏即品牌，马具工艺血统撑起整个奢侈帝国，工艺祖谱的教科书" },
+        { name: "御鞍堂", takeaway: "皇家马厩语法加堂字老铺尾缀：御字借来宫廷鞍辔的血统——赛事装备线有身价，礼品线的吊牌故事现成" },
+      ],
+      pitfalls: [
+        "旅游马场化：满是「跑马、骑乐、草原风」气质的名字把百小时手艺念成景区租马摊——这门手艺卖马背上的定制西装，不是一小时骑乘",
+        "锁死单一鞍型：叫「障碍鞍工坊」就难接舞步鞍、耐力鞍与西部鞍的单——鞍型留给产品线，品牌名留给整个马具案",
+        "忽略调整服务身位：马的背形随季节与训练变化，定制线一半的生意是复检与调整——名字太「一锤子买卖」就丢了长期服务的信任",
+        "真假手工含糊：用机缝量产件却名带「全手工、马缝线」会招来骑手信任与安全双重风险——工艺等级要在名字之外说清楚",
+      ],
+    },
+    en: {
+      label: "Saddlery workshops",
+      title: "How to Name a Saddlery Workshop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Saddlery and bespoke saddle workshop naming guide: fit-two-backs narrative, saddle-stitch craft imagery, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A saddlery's name must say that one saddle has to fit two backs at once — the horse's spine and the rider's seat: bespoke saddlery begins with the back tracing, where a tree one finger too wide means a horse in pain all season and a rider sitting crooked all year, so the saddler is the interpreter between horse and human. One full-handmade saddle takes a hundred hours of cutting, blocking and two-needle saddle stitching — Hermès began as a saddlery, and the saddler's stitch remains luxury leather's founding grammar — so the name must hand over that millimetre-fit solemnity first. The lexicon is ready: saddle, bridle, stirrup, hide and rein — every word smells of the tack room. The hidden exam is the triple business: the club-and-rider bespoke line reads fitting skill and follow-up service; the competition line reads safety and rulebook compliance; the leather-goods gift line reads craft pedigree — the name must stand on the fitting slip, at the tack check and on the gift-box tag alike. The failure mode is the trail-ride register: a pony-fun name reads a hundred-hour craft as a scenic-spot rental stall — this craft sells a tailored suit for horseback, not an hour in the saddle.",
+      namingIdeas: [
+        "The fit-two-backs philosophy outright: fit, true, bear and cradle roots joined to saddle — one saddle, two backs is the craft's core delivery; the sense of fit is the professionalism",
+        "Borrowing the two-needle stitch: stitch, needle, thread and hide craft roots — the saddle stitch is luxury leather's founding grammar; one word borrows an Hermès-grade family tree",
+        "Translating the tack-room lexicon: saddle, bridle, stirrup and hoof trade roots — trade words carry the smell of leather and stable; riders read an insider at a glance",
+        "The equestrian-heritage grammar: royal, ride, hunt and cavalry classical roots — saddlery descends from knights and royal mews; the classical word sets the century-house posture",
+        "The horse-welfare narrative: comfort, guard and sound roots — modern equestrian sport reads welfare first; a comfortable horse makes a steady rider is the bespoke line's best argument",
+      ],
+      cases: [
+        { name: "He Bei Fang (合背坊)", takeaway: "The core delivery, translated straight: three characters declaring the fitting-first posture — the fit character doubles as partnership, serving club supply and rider bespoke lines alike" },
+        { name: "Shuang Zhen She (双针社)", takeaway: "The craft code word on a guild ending: the two-needle stitch is handmade saddlery's watermark — knowing riders read it at a glance, and the leather-goods line borrows the pedigree free" },
+        { name: "Hermès", takeaway: "The surname origin, the ultimate sample: the 1837 Paris harness shop — the family name as brand, saddlery craft carrying an entire luxury empire; the textbook of craft pedigree" },
+        { name: "Yu An Tang (御鞍堂)", takeaway: "Royal-mews grammar on the heritage-hall ending: the imperial character borrowing the palace-tack bloodline — status on the competition line, the gift tag's story ready-made" },
+      ],
+      pitfalls: [
+        "The trail-ride register: a pony-fun name reads the hundred-hour craft as a scenic rental stall — this craft sells a tailored suit for horseback, not an hour's ride",
+        "Locking into one saddle type: a jumping-saddle name can't take the dressage, endurance and western orders — leave the discipline to the product line, keep the whole bench for the brand",
+        "Ignoring the refit-service posture: a horse's back changes with season and training, and half the bespoke business is re-checking and adjustment — a one-sale name forfeits the long-term trust",
+        "Blurring handmade and machine-sewn: naming 'full saddle-stitch' over factory sewing invites rider trust and safety risk at once — state the craft grade outside the name, clearly",
+      ],
+    },
+  },
+  ikebana: {
+    slug: "ikebana",
+    keywords: ["花道教室", "插花教室", "东方插花", "ikebana school", "flower arrangement class"],
+    tlds: [
+      { tld: "com", zh: "企业花艺课与酒店陈设委托的默认后缀，课程合同与账单上最稳", en: "The default suffix for corporate classes and hotel commissions — steadiest on the course contract and the invoice" },
+      { tld: "art", zh: "把插花从「手艺」升维到「艺术」，个展与装置线的身价后缀", en: "Elevating arrangement from craft to art — the status suffix for the exhibition and installation line" },
+      { tld: "studio", zh: "教室与工作室气质直给，剑山与花器之间的身位零违和", en: "The studio register stated outright — zero friction for the posture between kenzan and vessel" },
+    ],
+    zh: {
+      label: "花道教室",
+      title: "花道教室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "花道与东方插花教室命名指南：留白哲学、一枝叙事等思路，花道教室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "花道教室的名字要说出「西式花艺做加法，花道做减法——剪掉九枝，留下一枝」：花道的功夫不在插而在剪，一件作品常常只有三枝花，天、地、人三才各居其位，留白比花更贵——学员买的不是插花技巧，是每周一次「把心静下来」的两小时，名字要先把这份「以花修行」的气质递出去。词库现成：花、枝、器、白、境——每个字都带着花室的安静。中式插花自有家谱：《瓶史》的书斋清供传统比日本花道更早，名字可借文人瓶花的血统立东方身位。隐藏考点是三线业务：常设课程线认体系与师承，企业团建与酒店陈设的商业线认交付与审美稳定，社交媒体的流量线要出片好传播——名字要在课程表、报价单与短视频标题三个场景都立得住。误区在于花店化：满名的「鲜花速递、花坊、花礼」气质会把修行课念成外卖花束——这门生意卖的是两小时的心境，不是一束花的物流。",
+      namingIdeas: [
+        "减法哲学直给：一枝、留白、疏、简类词根——「剪掉九枝留一枝」是花道最独家的方法论，减法气质就是高级感",
+        "瓶史血统借力：瓶、清供、书斋类文人词——袁宏道《瓶史》的中式瓶花传统比花道更早，一个瓶字借来文人家谱",
+        "三才结构转译：天地人、位、势类词根——花道的骨架是三才构图，结构词让名字有课程体系的暗示",
+        "季节心境语法：雪、月、风、晴类时令词——花道随季节换花材，时令词自带「每周不同」的课程新鲜感",
+        "器与花对仗：器、皿、钵类词根加花——花道里花器与花同等重要，器物词立审美身位，衍生花器零售线现成",
+      ],
+      cases: [
+        { name: "一枝社", takeaway: "减法方法论的直译：三个字把「剪掉九枝留一枝」的花道哲学挑明——社字带同好会温度，课程线与流量线都接得住" },
+        { name: "瓶史花塾", takeaway: "文人典籍加塾字尾缀：借袁宏道《瓶史》立中式瓶花的家谱——塾字压住教学身位，与日式花道教室错开赛道" },
+        { name: "草月流", takeaway: "「草与月」的意象加流派尾缀的行业标准样本：日本三大流派之一——两个自然意象立美学纲领，流字即体系即师承" },
+        { name: "留白花室", takeaway: "核心美学加空间尾缀：把花道最贵的「留白」写进名字——花室二字安静克制，企业课报价单与个展海报都立得住" },
+      ],
+      pitfalls: [
+        "花店化：满是「鲜花速递、花坊、花礼」气质的名字把修行课念成外卖花束——这门生意卖两小时的心境，不是一束花的物流",
+        "锁死单一流派：叫「小原流教室」就绑死一家师承，转型自创体系时名字成了枷锁——师承留给简介，品牌名留给整个花案",
+        "过度玄化：满名的「禅、道、悟」堆砌会把入门课吓退——修行感要有，门槛感要无，留白比说破更高级",
+        "忽略商业线身位：太私塾气的名字在企业团建与酒店陈设的报价单上立不住——课程线要清雅，商业线要专业，名字要给两线都留身位",
+      ],
+    },
+    en: {
+      label: "Ikebana schools",
+      title: "How to Name an Ikebana School: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Ikebana and Eastern flower-arrangement school naming guide: subtraction philosophy, one-branch narrative, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An ikebana school's name must say that Western floristry adds while the way of flowers subtracts — nine branches cut away, one left standing: the skill lives in the shears, a finished piece often holds three stems with heaven, earth and human each in place, and the emptiness costs more than the flowers — the student is not buying technique but a weekly two hours of stillness, so the name must hand over that practice-through-flowers temperament first. The lexicon is ready: branch, vessel, blank and season — every word carries the flower room's quiet. The Chinese line has its own pedigree: the scholar's vase tradition of the Ping Shi predates Japanese schools, and a name can borrow that literati bloodline for an Eastern posture. The hidden exam is the triple business: the curriculum line reads system and lineage; the corporate-class and hotel-styling line reads delivery and aesthetic consistency; the social-media traffic line wants photogenic spread — the name must stand on the syllabus, the quote sheet and the short-video title alike. The failure mode is the flower-shop register: a bouquet-delivery name reads a practice class as flower logistics — this business sells two hours of state of mind, not the shipping of a bunch.",
+      namingIdeas: [
+        "The subtraction philosophy outright: one-branch, blank-space, sparse and spare roots — cut nine, keep one is the discipline's most exclusive method; the subtractive register is the refinement",
+        "Borrowing the vase-treatise bloodline: vase, scholar's-offering and studio literati roots — the Chinese vase-flower tradition of the Ping Shi predates ikebana; one vase word borrows the literati family tree",
+        "Translating the three-element frame: heaven-earth-human, position and gesture roots — the triad is ikebana's skeleton; the structural word hints at a real curriculum",
+        "The seasonal-mood grammar: snow, moon, wind and clear-sky roots — materials turn with the season; the season word carries the different-every-week freshness of the course",
+        "Vessel and flower in counterpoint: vessel, dish and bowl roots joined to flower — in this art the container ranks with the bloom; the object word sets the aesthetic posture and readies a vessel retail line",
+      ],
+      cases: [
+        { name: "Yi Zhi She (一枝社)", takeaway: "The subtractive method, translated straight: three characters declaring cut nine, keep one — the society ending warms the register, serving curriculum and traffic lines alike" },
+        { name: "Ping Shi Hua Shu (瓶史花塾)", takeaway: "The literati treatise on a schoolhouse ending: borrowing the Ping Shi to set the Chinese vase-flower pedigree — the academy character holds the teaching posture, running a separate lane from Japanese schools" },
+        { name: "Sogetsu (草月流)", takeaway: "Grass and moon on the school ending, the industry-standard sample: one of Japan's three great schools — two nature images setting an aesthetic manifesto; the school suffix is the system and the lineage at once" },
+        { name: "Liu Bai (留白花室)", takeaway: "The core aesthetic on a room ending: the costliest element — emptiness — written into the name; the flower-room register stays quiet and restrained, standing on the corporate quote and the exhibition poster alike" },
+      ],
+      pitfalls: [
+        "The flower-shop register: a bouquet-delivery name reads the practice class as flower logistics — this business sells two hours of stillness, not the shipping of a bunch",
+        "Locking into one school: a named-lineage classroom binds the brand to one master; the day you found your own system the name becomes the shackle — leave the lineage to the bio, keep the name for the whole practice",
+        "Over-mystifying: a name stacked with zen, way and enlightenment scares off the beginner class — carry the practice, drop the threshold; the blank space says more than the sermon",
+        "Ignoring the commercial posture: a too-private-tutor name won't stand on the corporate team-building and hotel-styling quote — refined for the curriculum line, professional for the business line; leave the name room for both",
+      ],
+    },
+  },
+  fanmaking: {
+    slug: "fanmaking",
+    keywords: ["制扇工坊", "手工折扇", "苏扇工艺", "fan-making studio", "folding fan"],
+    tlds: [
+      { tld: "com", zh: "文玩藏家与礼品团购委托的默认后缀，订单与拍卖图录上最稳", en: "The default suffix for collector and corporate-gift commissions — steadiest on the order and in the catalogue" },
+      { tld: "art", zh: "把扇子从「纳凉物」升维到「艺术」，扇面书画与个展线的身价后缀", en: "Elevating the fan from a cooling tool to art — the status suffix for the painted-leaf and exhibition line" },
+      { tld: "studio", zh: "工作室气质直给，扇骨与扇面之间的匠作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between ribs and leaf" },
+    ],
+    zh: {
+      label: "制扇工坊",
+      title: "制扇工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "制扇与手工折扇工坊命名指南：怀袖雅物叙事、扇骨工艺等思路，制扇工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "制扇工坊的名字要说出「一把扇子收进袖中是器物，展开是一幅画」：折扇自古叫「怀袖雅物」——扇骨要选六年生玉竹，煮、晒、烤、磨过数十道工序，一把十六方的扇骨在竹人手里磨足月余；扇面另开一案，书画名家在扇面上题字作画，成扇即成藏品——明清文人以扇会友，扇子是随身携带的身份证明，名字要先把这份「一开一合之间的体面」递出去。词库现成：扇、骨、竹、面、怀袖——每个字都带着这门手艺的清雅。隐藏考点是三线业务：藏家与拍卖线认扇骨师承与扇面名头，汉服与文创零售线认颜值与价位带，扇艺体验课的流量线要出片好玩——名字要在拍卖图录、电商详情页与课程海报三个场景都立得住。误区在于地摊化：满名的「凉、风、避暑」气质会把怀袖雅物念成夜市塑料扇——这门手艺卖的是掌中把玩的身份感，不是三块钱的风。",
+      namingIdeas: [
+        "怀袖雅物直给：怀、袖、雅、藏类词根——「怀袖雅物」是折扇千年的官方称谓，四个字自带文人身价",
+        "扇骨竹语借力：竹、骨、玉、湘妃类材质词——玉竹与湘妃竹是扇骨的血统证明，材质词让藏家一眼认出等级",
+        "开合哲学转译：开、合、展、收类动作词——「一开一合」是折扇独家的仪式感，动作词自带画面与故事",
+        "扇面书画语法：面、画、题、墨类词根——扇面是可以随身带走的书画，书画词借来整个文人圈的家谱",
+        "苏杭产地叙事：苏、吴、杭类地名词——苏扇是折扇的身价原点，产地词自带非遗与拍卖行的双重背书",
+      ],
+      cases: [
+        { name: "怀袖记", takeaway: "官方称谓加记事尾缀的直译：把折扇千年的雅号立为品牌——文人身价现成，藏家线郑重、文创线好转述" },
+        { name: "王星记", takeaway: "姓氏加记字的百年老铺样本：1875 年的杭州扇庄——姓氏即信誉，记字是老字号的标准尾缀，礼品团购线的信任语法现成" },
+        { name: "十六方", takeaway: "扇骨规格的行话直给：十六方是文人折扇的经典骨数——懂行的藏家一眼识别，以规格立专业身位，体验课上还是现成的知识点" },
+        { name: "竹语扇斋", takeaway: "材质拟人加书斋尾缀：竹会说话、扇有性情——斋字压住文房身位，扇面书画线体面，电商详情页有故事可讲" },
+      ],
+      pitfalls: [
+        "地摊化：满是「凉、风、避暑」气质的名字把怀袖雅物念成夜市塑料扇——这门手艺卖掌中把玩的身份感，不是三块钱的风",
+        "锁死单一扇型：叫「折扇坊」就难接团扇、绢宫扇与扇面装裱的单——扇型留给货架，品牌名留给整个扇案",
+        "真假材质含糊：用普通竹料却名带「湘妃、玉竹」会招来藏家信任与商誉双重风险——材质等级要在名字之外说清楚",
+        "忽略扇面合作身位：成扇的身价一半在扇面书画——名字太作坊气就请不动书画名家题扇，给合作线留体面",
+      ],
+    },
+    en: {
+      label: "Fan-making studios",
+      title: "How to Name a Fan-Making Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Fan-making and folding-fan studio naming guide: sleeve-treasure narrative, bamboo-rib craft imagery, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A fan-making studio's name must say that folded into the sleeve it is an object, and opened it is a painting: the folding fan's ancient title is the elegant thing of the sleeve — its ribs are cut from six-year jade bamboo and pass dozens of rounds of boiling, sunning, roasting and polishing, a sixteen-rib set taking a month under the maker's hands; the leaf opens a second case, where calligraphers and painters inscribe it and a finished fan becomes a collectible — Ming and Qing literati made friends by exchanging fans, a portable proof of standing, so the name must hand over that dignity-in-one-flick feel first. The lexicon is ready: fan, rib, bamboo, leaf and sleeve — every word carries the craft's cool elegance. The hidden exam is the triple business: the collector-and-auction line reads the rib-maker's lineage and the leaf's signature; the hanfu-and-gift retail line reads looks and price band; the fan-craft class traffic line wants photogenic fun — the name must stand in the catalogue, on the product page and on the class poster alike. The failure mode is the night-market register: a cool-breeze name reads the sleeve treasure as a three-yuan plastic fan — this craft sells standing held in the palm, not the wind.",
+      namingIdeas: [
+        "The sleeve treasure outright: sleeve, bosom, elegant and treasure roots — the elegant thing of the sleeve is the folding fan's millennium-old title; four characters carrying literati status ready-made",
+        "Borrowing the bamboo of the ribs: bamboo, rib, jade and mottled-bamboo material roots — jade and phoenix-tail bamboo are the rib's bloodline; the material word lets collectors read the grade at a glance",
+        "Translating the open-and-close philosophy: open, fold, unfurl and gather motion roots — one flick open, one flick closed is the folding fan's own ritual; the motion word carries picture and story",
+        "The painted-leaf grammar: leaf, brush, inscription and ink roots — the leaf is calligraphy you carry; the painting word borrows the whole literati circle's family tree",
+        "The Suzhou-Hangzhou origin narrative: Su, Wu and Hang place roots — the Suzhou fan is the folding fan's origin of status; the place word carries heritage and auction endorsement at once",
+      ],
+      cases: [
+        { name: "Huai Xiu Ji (怀袖记)", takeaway: "The official title on a chronicle ending, translated straight: the fan's thousand-year sobriquet raised into the brand — literati status ready-made; solemn for collectors, easy in the gift line's retelling" },
+        { name: "Wang Xing Ji (王星记)", takeaway: "Surname on the house-record ending, the century-house sample: the 1875 Hangzhou fan house — the family name as credit, the record character the standard heritage suffix; the corporate-gift line's grammar of trust ready-made" },
+        { name: "Shi Liu Fang (十六方)", takeaway: "The rib count in trade argot, stated outright: sixteen ribs is the literati fan's classic build — knowing collectors read it at a glance; the spec sets the expert posture and doubles as the class's first lesson" },
+        { name: "Zhu Yu Shan Zhai (竹语扇斋)", takeaway: "The material personified on a scholar's-studio ending: bamboo that speaks, a fan with temperament — the studio character holds the literati posture; dignified for the painted-leaf line, a story ready for the product page" },
+      ],
+      pitfalls: [
+        "The night-market register: a cool-breeze name reads the sleeve treasure as a plastic stall fan — this craft sells standing held in the palm, not three yuan of wind",
+        "Locking into one fan type: a folding-fan-only name can't take the round-fan, silk-palace-fan and leaf-mounting orders — leave the type to the shelf, keep the whole case for the brand",
+        "Blurring material grades: naming 'mottled bamboo' over plain stock invites collector trust and reputation risk at once — state the material grade outside the name, clearly",
+        "Ignoring the leaf-collaboration posture: half a finished fan's status lives in the painted leaf — a too-workshop name can't invite the master's brush; leave the name dignity for the collaboration line",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
