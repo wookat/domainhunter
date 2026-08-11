@@ -442,4 +442,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "il-vs-com", a: "il", b: "com", title: { zh: ".il 和 .com 怎么选：以色列国家域名与全球默认后缀的对比", en: ".il vs .com: Israel's Country Domain or the Global Default Compared" } },
   { slug: "pe-vs-cl", a: "pe", b: "cl", title: { zh: ".pe 和 .cl 怎么选：秘鲁与智利国家域名的拉美对比", en: ".pe vs .cl: Peru or Chile Country Domain Compared" } },
   { slug: "kz-vs-tr", a: "kz", b: "tr", title: { zh: ".kz 和 .tr 怎么选：哈萨克斯坦与土耳其国家域名的欧亚对比", en: ".kz vs .tr: Kazakhstan or Türkiye Country Domain Compared" } },
+  { slug: "za-vs-ng", a: "za", b: "ng", title: { zh: ".za 和 .ng 怎么选：南非与尼日利亚国家域名的非洲双雄对比", en: ".za vs .ng: South Africa or Nigeria Country Domain Compared" } },
+  { slug: "ma-vs-eg", a: "ma", b: "eg", title: { zh: ".ma 和 .eg 怎么选：摩洛哥与埃及国家域名的北非对比", en: ".ma vs .eg: Morocco or Egypt Country Domain Compared" } },
+  { slug: "qa-vs-ae", a: "qa", b: "ae", title: { zh: ".qa 和 .ae 怎么选：卡塔尔与阿联酋国家域名的海湾对比", en: ".qa vs .ae: Qatar or UAE Country Domain Compared" } },
+  { slug: "pk-vs-in", a: "pk", b: "in", title: { zh: ".pk 和 .in 怎么选：巴基斯坦与印度国家域名的南亚对比", en: ".pk vs .in: Pakistan or India Country Domain Compared" } },
+  { slug: "lk-vs-my", a: "lk", b: "my", title: { zh: ".lk 和 .my 怎么选：斯里兰卡与马来西亚国家域名的印度洋对比", en: ".lk vs .my: Sri Lanka or Malaysia Country Domain Compared" } },
+  { slug: "ee-vs-fi", a: "ee", b: "fi", title: { zh: ".ee 和 .fi 怎么选：爱沙尼亚与芬兰国家域名的波罗的海对比", en: ".ee vs .fi: Estonia or Finland Country Domain Compared" } },
 ];

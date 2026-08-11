@@ -435,6 +435,12 @@ export const COMPARE_SLUGS = [
   "il-vs-com",
   "pe-vs-cl",
   "kz-vs-tr",
+  "za-vs-ng",
+  "ma-vs-eg",
+  "qa-vs-ae",
+  "pk-vs-in",
+  "lk-vs-my",
+  "ee-vs-fi",
 ];
 
 /** slug → 「.a vs .b」显示文案 */
