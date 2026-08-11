@@ -1,0 +1,91 @@
+{
+  "/tld/com": {
+    "ssr_h1": ".com 域名注册指南：适合谁、多少钱、怎么起名",
+    "hyd_h1": ".com 域名注册指南：适合谁、多少钱、怎么起名",
+    "h1_equal": true,
+    "sections_equal": true,
+    "ssr_secs_counts": {
+      "相关后缀对比": 6,
+      "相关 TLD": 6,
+      "相关行业命名指南": 3
+    },
+    "hyd_secs_counts": {
+      "相关后缀对比": 6,
+      "相关 TLD": 6,
+      "相关行业命名指南": 3
+    }
+  },
+  "/tld/ee": {
+    "ssr_h1": ".ee 域名注册指南：适合谁、多少钱、怎么起名",
+    "hyd_h1": ".ee 域名注册指南：适合谁、多少钱、怎么起名",
+    "h1_equal": true,
+    "sections_equal": true,
+    "ssr_secs_counts": {
+      "相关后缀对比": null,
+      "相关 TLD": 6,
+      "相关行业命名指南": null
+    },
+    "hyd_secs_counts": {
+      "相关后缀对比": null,
+      "相关 TLD": 6,
+      "相关行业命名指南": null
+    }
+  },
+  "/guide/saas": {
+    "ssr_h1": "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择",
+    "hyd_h1": "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择",
+    "h1_equal": true,
+    "sections_equal": true,
+    "ssr_secs_counts": {
+      "相关后缀对比": 4,
+      "相关行业指南": 6
+    },
+    "hyd_secs_counts": {
+      "相关后缀对比": 4,
+      "相关行业指南": 6
+    }
+  },
+  "/guide/jadecarving": {
+    "ssr_h1": "玉雕工作室怎么起名：命名思路、好名字拆解与域名选择",
+    "hyd_h1": "玉雕工作室怎么起名：命名思路、好名字拆解与域名选择",
+    "h1_equal": true,
+    "sections_equal": true,
+    "ssr_secs_counts": {
+      "相关后缀对比": 4,
+      "相关行业指南": 6
+    },
+    "hyd_secs_counts": {
+      "相关后缀对比": 4,
+      "相关行业指南": 6
+    }
+  },
+  "/vs/com-vs-cn": {
+    "ssr_h1": ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比",
+    "hyd_h1": ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比",
+    "h1_equal": true,
+    "sections_equal": true,
+    "ssr_secs_counts": {
+      "相关行业命名指南": 4,
+      "相关对比": 6
+    },
+    "hyd_secs_counts": {
+      "相关行业命名指南": 4,
+      "相关对比": 6
+    }
+  },
+  "/vs/kz-vs-tr": {
+    "ssr_h1": ".kz 和 .tr 怎么选：哈萨克斯坦与土耳其国家域名的欧亚对比",
+    "hyd_h1": ".kz 和 .tr 怎么选：哈萨克斯坦与土耳其国家域名的欧亚对比",
+    "h1_equal": true,
+    "sections_equal": true,
+    "ssr_secs_counts": {
+      "相关行业命名指南": null,
+      "相关对比": 2
+    },
+    "hyd_secs_counts": {
+      "相关行业命名指南": null,
+      "相关对比": 2
+    }
+  },
+  "all_equal": true
+}
