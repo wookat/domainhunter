@@ -1,6 +1,6 @@
 {
   "tld": {
-    "count": 384,
+    "count": 390,
     "slugs": [
       "com",
       "net",
@@ -385,7 +385,13 @@
       "sk",
       "ua",
       "ar",
-      "ng"
+      "ng",
+      "il",
+      "sa",
+      "eg",
+      "ke",
+      "pe",
+      "kz"
     ]
   },
   "guide": {
