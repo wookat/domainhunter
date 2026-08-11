@@ -24056,6 +24056,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  bambooweaving: {
+    slug: "bambooweaving",
+    keywords: ["竹编工坊", "手工竹编", "竹器编织", "bamboo weaving studio", "bamboo craft"],
+    tlds: [
+      { tld: "com", zh: "家居买手与酒店软装委托的默认后缀，报价单与外贸询盘上最稳", en: "The default suffix for homeware buyers and hotel-décor commissions — steadiest on the quote and in the export inquiry" },
+      { tld: "art", zh: "把竹编从「筐篮」升维到「竹丝艺术」，美术馆与藏家线的身价后缀", en: "Elevating bamboo weaving from baskets to bamboo-thread art — the status suffix for the gallery and collector line" },
+      { tld: "studio", zh: "工坊气质直给，篾刀与竹丝之间的匠作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between the splitting knife and the bamboo thread" },
+    ],
+    zh: {
+      label: "竹编工坊",
+      title: "竹编工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "竹编与手工竹器工坊命名指南：竹丝经纬叙事、篾刀功夫等思路，竹编工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "竹编工坊的名字要说出「一根竹子在篾刀下分成千丝，再在指间织回一件器物」：选三年生慈竹，刮青、破竹、起篾、匀丝，一根竹要过十几道手才变成毫米级的篾丝，细者可与发丝比肩；经纬穿插的挑压之间，篮、盒、灯、器一件件长出来——从良渚的竹编残片到川西的瓷胎竹编，这门手艺织了几千年，名字要先把这份「化整为零再化零为整」的功夫递出去。词库现成：竹、篾、丝、编、经纬——每个字都带着山野的清气。隐藏考点是三线业务：家居与酒店软装线认设计感与交期，非遗礼品与外贸线认产地与故事，竹编体验课的流量线要出片好玩——名字要在报价单、礼盒卡片与课程海报三个场景都立得住。误区在于农贸化：满名的「筐、篓、便宜耐用」气质会把竹丝艺术念成集市竹筐摊——这门手艺卖的是指尖经纬的时间，不是论斤称的竹器。",
+      namingIdeas: [
+        "竹丝经纬直给：经、纬、丝、织类词根——经纬穿插是竹编的底层语法，织造词自带手艺画面与秩序感",
+        "篾刀功夫借力：篾、青、节、劈类工序词——起篾匀丝是竹编的入行门槛，工序词让懂行的买手一眼认出手工等级",
+        "竹之君子转译：君、虚、节、清类品格词——竹在文人传统里是君子，品格词借来整个东方美学的家谱",
+        "山野产地叙事：山、溪、川、林类自然词——竹生南方山野，产地词自带生态与非遗的双重背书",
+        "器物日用语法：篮、盒、灯、席类器物词根——竹编终究要回到日用，器物词把手艺落回生活场景",
+      ],
+      cases: [
+        { name: "千丝阁", takeaway: "工艺极限的直译：一根竹分成千丝——数字词立住功夫身位，阁字压出雅气，藏家线郑重、体验课上是现成的开场白" },
+        { name: "竹经纬", takeaway: "材质加织造语法的组合：经纬是竹编的骨架动作——三个字说完整门手艺，家居线读出设计感，外贸线好翻译好转述" },
+        { name: "青篾坊", takeaway: "工序行话直给：刮青起篾是竹编的第一课——篾字是行内身份证明，坊字立住工坊身位，懂行的买手一眼识别" },
+        { name: "山下编事", takeaway: "产地加记事的叙事组合：山下有竹、编里有事——把手艺讲成生活方式，短视频线好传播，礼盒卡片上有故事可讲" },
+      ],
+      pitfalls: [
+        "农贸化：满是「筐、篓、便宜耐用」气质的名字把竹丝艺术念成集市竹筐摊——这门手艺卖指尖经纬的时间，不是论斤称的竹器",
+        "锁死单一器型：叫「竹篮坊」就难接竹灯、瓷胎竹编与空间装置的单——器型留给货架，品牌名留给整根竹子",
+        "环保口号化：满名的「绿色、低碳」会把手艺淹进环保标语堆——生态是竹的底色不是卖点，功夫才是",
+        "忽略体验课身位：竹编体验课是流量入口——名字太仓库气就撑不起课程海报，给出片留余地",
+      ],
+    },
+    en: {
+      label: "Bamboo weaving studios",
+      title: "How to Name a Bamboo Weaving Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Bamboo weaving studio naming guide: warp-and-weft narrative, splitting-knife craft imagery, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A bamboo weaving studio's name must say that one bamboo culm splits into a thousand threads under the knife and is woven back into an object between the fingers: three-year culms are scraped, split, drawn and evened through a dozen hands until the strips reach millimetre fineness, the finest rivalling a human hair; between warp and weft, baskets, boxes, lamps and vessels grow one by one — from Liangzhu's woven fragments to Sichuan's porcelain-bodied weave, the craft has been weaving for millennia, so the name must hand over that whole-into-threads-into-whole discipline first. The lexicon is ready: bamboo, strip, thread, weave, warp and weft — every word carries the mountain's clear air. The hidden exam is the triple business: the homeware-and-hotel line reads design sense and lead time; the heritage-gift and export line reads origin and story; the weaving-class traffic line wants photogenic fun — the name must stand on the quote, the gift-box card and the class poster alike. The failure mode is the market-stall register: a cheap-and-sturdy basket name reads bamboo-thread art as a farmers'-market crate — this craft sells time woven at the fingertips, not bamboo by the pound.",
+      namingIdeas: [
+        "Warp and weft outright: warp, weft, thread and weave roots — the over-under crossing is bamboo weaving's base grammar; the weaving word carries the craft's picture and order at once",
+        "Borrowing the splitting knife: strip, skin, node and split process roots — drawing and evening the strips is the craft's entrance exam; the process word lets knowing buyers read the handwork grade at a glance",
+        "Translating the gentleman bamboo: gentleman, hollow, node and clear virtue roots — bamboo is the scholar's gentleman in the literati tradition; the virtue word borrows the whole Eastern aesthetic's family tree",
+        "The mountain origin narrative: mountain, stream, Sichuan and grove nature roots — bamboo grows in southern hills; the origin word carries ecology and heritage endorsement at once",
+        "The daily-object grammar: basket, box, lamp and mat object roots — bamboo weaving returns to daily use in the end; the object word grounds the craft back in living scenes",
+      ],
+      cases: [
+        { name: "Qian Si Ge (千丝阁)", takeaway: "The craft's limit translated straight: one culm into a thousand threads — the number sets the discipline posture, the pavilion character holds the elegance; solemn for collectors, a ready opening line in class" },
+        { name: "Zhu Jing Wei (竹经纬)", takeaway: "Material on the weaving grammar: warp and weft are the craft's skeleton moves — three characters tell the whole trade; the homeware line reads design, the export line translates and retells with ease" },
+        { name: "Qing Mie Fang (青篾坊)", takeaway: "Process argot stated outright: scraping the skin and drawing strips is lesson one — the strip character is the trade's badge, the workshop character holds the maker posture; knowing buyers read it at a glance" },
+        { name: "Shan Xia Bian Shi (山下编事)", takeaway: "Origin on a chronicle ending: bamboo below the mountain, stories in the weave — the craft told as a way of living; easy to spread on short video, a story ready on the gift-box card" },
+      ],
+      pitfalls: [
+        "The market-stall register: a cheap-and-sturdy basket name reads bamboo-thread art as a farmers'-market crate — this craft sells time woven at the fingertips, not bamboo by the pound",
+        "Locking into one form: a basket-only name can't take the lamp, porcelain-bodied and installation commissions — leave the form to the shelf, keep the whole culm for the brand",
+        "Sloganeering the eco line: a name full of green-and-low-carbon drowns the craft in eco-label noise — ecology is bamboo's base coat, not the pitch; the discipline is",
+        "Ignoring the class posture: the weaving class is the traffic gate — a too-warehouse name can't hold the course poster; leave room for the photogenic line",
+      ],
+    },
+  },
+  swordsmith: {
+    slug: "swordsmith",
+    keywords: ["刀剑锻造工坊", "手工锻刀", "龙泉宝剑", "swordsmith forge", "bladesmith"],
+    tlds: [
+      { tld: "com", zh: "藏家与武馆团购委托的默认后缀，订单与鉴定证书上最稳", en: "The default suffix for collector and martial-hall commissions — steadiest on the order and the certificate" },
+      { tld: "art", zh: "把刀剑从「兵器」升维到「锻造艺术」，展览与拍卖线的身价后缀", en: "Elevating the blade from weapon to forged art — the status suffix for the exhibition and auction line" },
+      { tld: "studio", zh: "工作室气质直给，炉火与淬水之间的匠作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between forge fire and quenching water" },
+    ],
+    zh: {
+      label: "刀剑锻造工坊",
+      title: "刀剑锻造工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "刀剑锻造与手工锻刀工坊命名指南：百炼成钢叙事、淬火锋芒等思路，锻刀工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "刀剑锻造工坊的名字要说出「一块铁在炉火里折叠上百次，才配得上一个『剑』字」：折叠锻打让钢里的花纹层层生长，覆土烧刃在刀身上留下一条刃线，淬火的一瞬间决定一把刀的生死——欧冶子铸龙泉的传说讲了两千五百年，日本刀的玉钢体系另立一案，这门手艺横跨东西却讲同一种语言：火候、锤数与时辰，名字要先把这份「百炼」的分量递出去。词库现成：锻、锋、淬、炉、刃——每个字都带着火星。隐藏考点是三线业务：藏家与拍卖线认锻造师承与花纹钢等级，武馆与影视道具线认交期与规格稳定，锻造体验课的流量线要出片过瘾——名字要在鉴定证书、合作合同与课程海报三个场景都立得住。误区在于杀气化：满名的「屠、灭、血」气质会把锻造艺术念成网游装备——这门手艺卖的是炉火里的修行，不是戾气；合规同样是硬约束，名字要立在工艺与文化一侧。",
+      namingIdeas: [
+        "百炼叙事直给：炼、锻、百、折类词根——「百炼成钢」是这门手艺的官方成语，数字词自带功夫的分量",
+        "淬火锋芒借力：淬、锋、刃、霜类词根——淬火是一把刀的成人礼，锋芒词让藏家读出刀条的生命感",
+        "炉火时辰转译：炉、火、晨、夜类时间词——锻造是与火对话的修行，时辰词把手艺讲成日复一日的坚持",
+        "名剑典故语法：龙泉、干将、湛卢类典故词——中国名剑谱系是现成的家谱，典故词自带两千年的背书",
+        "钢纹地理叙事：花纹、大马士革、玉钢类材质词——花纹钢的纹理是刀的指纹，材质词让懂行的买手一眼认出等级",
+      ],
+      cases: [
+        { name: "百炼堂", takeaway: "官方成语加堂号的直译：百炼成钢立为品牌——功夫分量现成，藏家线郑重、鉴定证书上体面，体验课上还是现成的第一课" },
+        { name: "龙泉沈广隆", takeaway: "产地加姓氏的百年剑铺样本：1894 年的龙泉剑庄——产地是身价原点，姓氏即信誉，藏家与团购线的信任语法现成" },
+        { name: "淬语", takeaway: "工序拟人的极简组合：淬火会说话——两个字把最惊险的一瞬立为品牌，短视频线好传播，刀条的生命感直给" },
+        { name: "折花录", takeaway: "花纹钢行话加记事尾缀：折叠出花、录以为证——懂行的藏家一眼识别锻造等级，记事词自带作品档案的郑重感" },
+      ],
+      pitfalls: [
+        "杀气化：满是「屠、灭、血」气质的名字把锻造艺术念成网游装备——这门手艺卖炉火里的修行，不是戾气，合规线上更是硬伤",
+        "锁死单一刀型：叫「武士刀坊」就难接中式剑、厨刀与影视道具的单——刀型留给货架，品牌名留给整座炉子",
+        "真假工艺含糊：机制刀条却名带「手工百炼」会招来藏家信任与商誉双重风险——工艺等级要在名字之外说清楚",
+        "忽略合规身位：刀剑经营有资质与快递限制的硬约束——名字太江湖气会放大平台审核阻力，立在工艺文化一侧才走得远",
+      ],
+    },
+    en: {
+      label: "Swordsmith forges",
+      title: "How to Name a Swordsmith Forge: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Swordsmith and bladesmith forge naming guide: hundred-fold steel narrative, quenching-edge imagery, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A swordsmith forge's name must say that a bar of iron earns the word blade only after a hundred folds in the fire: folding grows the pattern layer by layer in the steel, clay-tempering leaves a temper line along the body, and the instant of quenching decides whether a blade lives or dies — the legend of Longquan's founding smith has been told for twenty-five centuries, and the Japanese tamahagane school opens a second case, yet the craft speaks one language across East and West: heat, hammer counts and hours, so the name must hand over that hundred-refinings weight first. The lexicon is ready: forge, edge, quench, furnace and blade — every word carries sparks. The hidden exam is the triple business: the collector-and-auction line reads the smith's lineage and the pattern-steel grade; the martial-hall and film-prop line reads lead time and spec stability; the forging-class traffic line wants photogenic thrill — the name must stand on the certificate, the contract and the class poster alike. The failure mode is the bloodthirst register: a slaughter-and-doom name reads forged art as game loot — this craft sells discipline in the fire, not menace; and compliance is a hard constraint, so the name must stand on the side of craft and culture.",
+      namingIdeas: [
+        "The hundred refinings outright: refine, forge, hundred and fold roots — steel through a hundred refinings is the craft's official idiom; the number carries the discipline's weight ready-made",
+        "Borrowing the quenched edge: quench, edge, blade and frost roots — quenching is a blade's coming of age; the edge word lets collectors read the life in the steel",
+        "Translating the furnace hours: furnace, fire, dawn and night time roots — forging is a practice of talking with fire; the hour word tells the craft as day-after-day persistence",
+        "The famous-blade allusion grammar: Longquan, Ganjiang and Zhanlu legend roots — China's register of named swords is a ready family tree; the allusion carries two millennia of endorsement",
+        "The pattern-steel narrative: damascus, pattern and tamahagane material roots — the pattern is a blade's fingerprint; the material word lets knowing buyers read the grade at a glance",
+      ],
+      cases: [
+        { name: "Bai Lian Tang (百炼堂)", takeaway: "The official idiom on a hall ending, translated straight: a hundred refinings raised into the brand — the discipline's weight ready-made; solemn for collectors, dignified on the certificate, and the class's first lesson besides" },
+        { name: "Longquan Shen Guanglong (龙泉沈广隆)", takeaway: "Origin on the surname, the century-forge sample: the 1894 Longquan sword house — the place is the origin of status, the family name the credit; the trust grammar for collectors and bulk orders ready-made" },
+        { name: "Cui Yu (淬语)", takeaway: "The process personified, minimal: quenching that speaks — two characters raise the most perilous instant into the brand; easy to spread on short video, the blade's life stated outright" },
+        { name: "Zhe Hua Lu (折花录)", takeaway: "Pattern-steel argot on a chronicle ending: folds that bloom, recorded as proof — knowing collectors read the forging grade at a glance; the record word carries an archive's solemnity" },
+      ],
+      pitfalls: [
+        "The bloodthirst register: a slaughter-and-doom name reads forged art as game loot — this craft sells discipline in the fire, not menace, and it wounds the compliance line besides",
+        "Locking into one blade type: a katana-only name can't take the jian, kitchen-knife and film-prop orders — leave the type to the shelf, keep the whole furnace for the brand",
+        "Blurring the process grade: naming 'hand-folded' over machined stock invites collector trust and reputation risk at once — state the process grade outside the name, clearly",
+        "Ignoring the compliance posture: blades carry licensing and shipping constraints — a too-outlaw name multiplies platform-review friction; standing on craft and culture travels further",
+      ],
+    },
+  },
+  shadowpuppet: {
+    slug: "shadowpuppet",
+    keywords: ["皮影工作室", "皮影戏", "皮影雕刻", "shadow puppet studio", "shadow play"],
+    tlds: [
+      { tld: "com", zh: "文旅演出与研学团购委托的默认后缀，合同与巡演海报上最稳", en: "The default suffix for cultural-tourism shows and study-tour bookings — steadiest on the contract and the tour poster" },
+      { tld: "art", zh: "把皮影从「老戏」升维到「光影艺术」，美术馆与藏家线的身价后缀", en: "Elevating shadow puppetry from old opera to light-and-shadow art — the status suffix for the gallery and collector line" },
+      { tld: "studio", zh: "工作室气质直给，刻刀与幕布之间的创作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between carving knife and screen" },
+    ],
+    zh: {
+      label: "皮影工作室",
+      title: "皮影工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "皮影戏与皮影雕刻工作室命名指南：一口叙千古叙事、光影幕布等思路，皮影工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "皮影工作室的名字要说出「一张牛皮刻透千刀，一盏灯后演尽千军万马」：选上好的牛皮刮到透光，画稿、雕镂、上色、缀结，一个影人要过三千余刀才能上幕；幕布后面五人一台戏，「一口叙说千古事，双手对舞百万兵」——从汉武帝招魂的传说到 2011 年入选人类非遗，这门手艺演了两千年，名字要先把这份「幕布后的千军万马」递出去。词库现成：影、灯、幕、刻、皮——每个字都带着光。隐藏考点是三线业务：文旅演出与巡演线认剧目储备与档期，影人雕刻与藏品线认刻工与皮质，研学体验课的流量线要出片好玩——名字要在演出海报、藏品证书与课程页三个场景都立得住。误区在于陈列馆化：满名的「古、老、遗」气质会把活着的戏念成博物馆标本——这门手艺卖的是幕布上正在动的光影，不是玻璃柜里的旧皮子。",
+      namingIdeas: [
+        "光影幕布直给：影、灯、幕、光类词根——一盏灯一块布是皮影的全部舞台，光影词自带戏剧画面与浪漫",
+        "千刀刻工借力：刻、镂、透、雕类工序词——三千刀成一影人是硬功夫，工序词让藏家一眼认出刻工等级",
+        "一口千古转译：叙、唱、腔、话类说书词——「一口叙说千古事」是皮影的官方对联，说书词把戏味直给",
+        "影人角色语法：生、旦、净、丑类行当词——皮影沿用戏曲行当谱系，行当词借来整个戏台的家谱",
+        "皮质产地叙事：秦、晋、滦州类产地词——陕西华县与河北滦州是皮影两大重镇，产地词自带非遗与流派背书",
+      ],
+      cases: [
+        { name: "一口千古", takeaway: "官方对联的截取直译：一口叙说千古事——四个字把皮影的说书魂立为品牌，演出海报上有戏味，研学课上是现成的开场白" },
+        { name: "灯影班", takeaway: "光影加戏班尾缀的组合：灯下有影、影后有班——班字是戏班的正统尾缀，巡演线读出班社身份，文旅合同上郑重" },
+        { name: "三千刀", takeaway: "刻工数字的直给：一个影人三千刀——数字立住手艺分量，藏品线读出刻工等级，短视频标题上一眼有钩子" },
+        { name: "皮影新社", takeaway: "品类加新社的对冲组合：老手艺新班社——新字把「活着的戏」说明白，年轻观众线好亲近，避开陈列馆气质" },
+      ],
+      pitfalls: [
+        "陈列馆化：满是「古、老、遗」气质的名字把活着的戏念成博物馆标本——这门手艺卖幕布上正在动的光影，不是玻璃柜里的旧皮子",
+        "锁死单一业务：叫「皮影戏班」就难接影人雕刻藏品与文创联名的单——业务留给节目单，品牌名留给整块幕布",
+        "低幼化：满名的「娃娃、乐园」会把两千年的戏念成儿童游乐项目——研学是入口不是全部，藏家与演出线还要体面",
+        "忽略流派身份：华县与滦州刻工语法各成一派——名字含糊流派会让懂行的藏家犹豫，师承要在名字之外说清楚",
+      ],
+    },
+    en: {
+      label: "Shadow puppet studios",
+      title: "How to Name a Shadow Puppet Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Shadow puppetry and carving studio naming guide: one-voice-a-thousand-years narrative, lamp-and-screen imagery, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A shadow puppet studio's name must say that a sheet of hide carved through three thousand cuts marshals a million soldiers behind one lamp: the best cowhide is scraped until it glows, then drafted, pierced, coloured and jointed before a figure may take the screen; behind the cloth five players hold the stage — one voice narrating a thousand years, two hands drilling a million troops, as the craft's own couplet runs — from the Han emperor's séance legend to UNESCO listing in 2011, the play has run two thousand years, so the name must hand over that army-behind-the-screen feel first. The lexicon is ready: shadow, lamp, screen, carve and hide — every word carries light. The hidden exam is the triple business: the cultural-tourism and touring line reads repertoire and calendar; the carved-figure collector line reads knife-work and hide grade; the study-tour class traffic line wants photogenic fun — the name must stand on the show poster, the collection certificate and the course page alike. The failure mode is the display-case register: an ancient-relic name reads a living play as a museum specimen — this craft sells shadows moving on the screen right now, not old hide behind glass.",
+      namingIdeas: [
+        "Lamp and screen outright: shadow, lamp, screen and light roots — one lamp and one cloth are the whole stage; the light word carries theatre and romance at once",
+        "Borrowing the three thousand cuts: carve, pierce, translucent and engrave process roots — three thousand cuts to one figure is hard discipline; the process word lets collectors read the knife-work grade at a glance",
+        "Translating the one-voice couplet: narrate, sing, tune and tale storyteller roots — one voice narrating a thousand years is the craft's official couplet; the storyteller word hands over the theatre soul outright",
+        "The role-type grammar: sheng, dan, jing and chou opera-role roots — shadow figures inherit the opera's role registry; the role word borrows the whole stage's family tree",
+        "The hide-origin narrative: Shaanxi, Shanxi and Luanzhou place roots — Huaxian and Luanzhou are the craft's two capitals; the origin word carries heritage and school endorsement at once",
+      ],
+      cases: [
+        { name: "Yi Kou Qian Gu (一口千古)", takeaway: "The official couplet clipped and translated straight: one voice narrating a thousand years — four characters raise the storyteller soul into the brand; theatrical on the poster, a ready opening line in class" },
+        { name: "Deng Ying Ban (灯影班)", takeaway: "Lamp and shadow on the troupe ending: shadows under the lamp, a troupe behind them — the troupe character is the stage's orthodox suffix; the touring line reads company standing, solemn on the tourism contract" },
+        { name: "San Qian Dao (三千刀)", takeaway: "The knife count stated outright: three thousand cuts to one figure — the number sets the discipline's weight; the collector line reads the carving grade, and the short-video title hooks at a glance" },
+        { name: "Pi Ying Xin She (皮影新社)", takeaway: "Category on a new-troupe ending, the counterweight pairing: old craft, new company — the new character states the living play outright; approachable for young audiences, clear of the display-case register" },
+      ],
+      pitfalls: [
+        "The display-case register: an ancient-relic name reads a living play as a museum specimen — this craft sells shadows moving on the screen right now, not old hide behind glass",
+        "Locking into one business: a troupe-only name can't take the carved-figure collection and merchandise-collab orders — leave the business to the playbill, keep the whole screen for the brand",
+        "The kindergarten register: a name full of kiddie-park sweetness reads a two-thousand-year play as a playground ride — study tours are the gate, not the whole; the collector and touring lines still need dignity",
+        "Blurring the school identity: Huaxian and Luanzhou knife grammars are distinct schools — a school-vague name makes knowing collectors hesitate; state the lineage outside the name, clearly",
+      ],
+    },
+  },
+  guqin: {
+    slug: "guqin",
+    keywords: ["斫琴工坊", "古琴制作", "手工古琴", "guqin workshop", "qin maker"],
+    tlds: [
+      { tld: "com", zh: "琴人藏家与琴馆团购委托的默认后缀，订单与鉴定书上最稳", en: "The default suffix for player-collectors and qin-school bulk orders — steadiest on the order and the appraisal" },
+      { tld: "art", zh: "把古琴从「乐器」升维到「文人艺术」，展览与拍卖线的身价后缀", en: "Elevating the qin from instrument to literati art — the status suffix for the exhibition and auction line" },
+      { tld: "studio", zh: "工作室气质直给，木胎与灰漆之间的斫琴身位零违和", en: "The studio register stated outright — zero friction for the maker posture between wood body and lacquer ground" },
+    ],
+    zh: {
+      label: "斫琴工坊",
+      title: "斫琴工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "斫琴与古琴制作工坊命名指南：桐木灰胎叙事、太古之音等思路，斫琴工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "斫琴工坊的名字要说出「一张琴要斫两年，一声散音等三千年」：选百年老桐做面、梓木做底，木胎阴干经年，鹿角霜和生漆刮出灰胎，上弦调音之前要过上百道工序，两年方成一床琴——古琴是文人四艺之首，伏羲造琴的传说与《流水》遇知音的故事讲了三千年，2003 年入选人类非遗，名字要先把这份「太古之音」的分量递出去。词库现成：琴、桐、丝、徽、音——每个字都带着书斋的安静。隐藏考点是三线业务：琴人藏家线认斫琴师承与老木灰胎等级，琴馆教学团购线认价位带与交期稳定，雅集体验的流量线要有意境出片——名字要在鉴定书、琴馆合同与雅集海报三个场景都立得住。误区在于神秘主义化：满名的「仙、道、玄」气质会把文人乐器念成玄学法器——这门手艺卖的是木与漆里熬出来的音色，不是符咒。",
+      namingIdeas: [
+        "太古之音直给：太古、遗音、希声类词根——「太音希声」是古琴的官方美学，音色词自带三千年的分量",
+        "桐梓木胎借力：桐、梓、木、材类材质词——百年老桐是琴的血统证明，材质词让琴人一眼认出斫琴等级",
+        "斫字身份语法：斫、制、修、髹类工序词——「斫琴」是这门手艺的专属动词，一个斫字就是行内身份证明",
+        "知音典故转译：流水、知音、弦外类典故词——伯牙子期是古琴独家的千年 IP，典故词自带文人圈的家谱",
+        "书斋气质叙事：斋、庐、山房类空间词——琴属书斋不属舞台，空间词把安静与雅气直给",
+      ],
+      cases: [
+        { name: "太古遗音", takeaway: "官方美学的直译：唐琴名品「太古遗音」立为品牌——琴史身价现成，藏家线郑重、鉴定书上体面，雅集海报上意境直给" },
+        { name: "斫木山房", takeaway: "专属动词加书斋尾缀：斫字立行内身份、山房压住书斋气质——琴人一眼识别，教学线读出安静与专业" },
+        { name: "九霄环佩", takeaway: "传世名琴的借力样本：故宫藏唐琴之名——名琴谱系是现成家谱，懂行的藏家一眼认出致敬对象与野心", },
+        { name: "桐言", takeaway: "材质拟人的极简组合：桐木会说话——两个字把音色的生命感立为品牌，短视频线好传播，琴馆合同上也不失体面" },
+      ],
+      pitfalls: [
+        "神秘主义化：满是「仙、道、玄」气质的名字把文人乐器念成玄学法器——这门手艺卖木与漆里熬出来的音色，不是符咒",
+        "锁死单一业务：叫「斫琴坊」就难接琴修复、琴弦配件与琴馆课程的单——业务留给价目表，品牌名留给整床琴",
+        "真假老木含糊：新木仿旧却名带「唐材、老杉」会招来琴人信任与商誉双重风险——木料年份要在名字之外说清楚",
+        "忽略教学身位：琴馆团购与入门课是现金流线——名字太孤高就撑不起课程海报，给亲近感留一扇门",
+      ],
+    },
+    en: {
+      label: "Guqin workshops",
+      title: "How to Name a Guqin Workshop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Guqin making and qin workshop naming guide: paulownia-and-lacquer narrative, sound-of-antiquity imagery, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A guqin workshop's name must say that a qin takes two years to carve and one open note has waited three thousand: century-old paulownia for the face, catalpa for the back, the wood body shade-dried across seasons, deer-horn ash and raw lacquer scraped into the ground coat — a hundred steps before the strings are set, two years before a qin is born. The qin heads the literati's four arts; the legend of Fuxi carving the first and the tale of Flowing Water finding its one listener have run three millennia, and UNESCO listed the art in 2003, so the name must hand over that sound-of-antiquity weight first. The lexicon is ready: qin, paulownia, silk, stud and tone — every word carries the studio's quiet. The hidden exam is the triple business: the player-collector line reads the maker's lineage and the old-wood-and-lacquer grade; the qin-school bulk line reads price band and lead-time stability; the elegant-gathering traffic line wants atmosphere on camera — the name must stand on the appraisal, the school contract and the gathering poster alike. The failure mode is the mysticism register: an immortal-and-occult name reads the literati instrument as a talisman — this craft sells tone simmered out of wood and lacquer, not spells.",
+      namingIdeas: [
+        "The sound of antiquity outright: antiquity, lingering tone and faint sound roots — the great sound is scarcely heard is the qin's official aesthetic; the tone word carries three millennia of weight",
+        "Borrowing paulownia and catalpa: paulownia, catalpa, wood and timber material roots — century paulownia is a qin's bloodline; the material word lets players read the maker's grade at a glance",
+        "The carving-verb grammar: carve, craft, restore and lacquer process roots — zhuo, to carve a qin, is the craft's own verb; one character is the trade's badge",
+        "Translating the one-listener allusion: flowing water, kindred listener and beyond-the-strings legend roots — Boya and Ziqi are the qin's own thousand-year story; the allusion carries the literati circle's family tree",
+        "The scholar-studio narrative: studio, hut and mountain-room space roots — the qin belongs to the study, not the stage; the space word hands over quiet and elegance outright",
+      ],
+      cases: [
+        { name: "Tai Gu Yi Yin (太古遗音)", takeaway: "The official aesthetic translated straight: the famed Tang qin's own name raised into the brand — qin-history status ready-made; solemn for collectors, dignified on the appraisal, atmosphere outright on the gathering poster" },
+        { name: "Zhuo Mu Shan Fang (斫木山房)", takeaway: "The craft's own verb on a studio ending: the carving character sets the trade badge, the mountain-room holds the scholar's quiet — players read it at a glance; the teaching line reads calm professionalism" },
+        { name: "Jiu Xiao Huan Pei (九霄环佩)", takeaway: "Borrowing a surviving masterpiece: the Palace Museum's Tang qin by name — the famous-qin registry is a ready family tree; knowing collectors read the homage and the ambition at once" },
+        { name: "Tong Yan (桐言)", takeaway: "The material personified, minimal: paulownia that speaks — two characters raise the tone's life into the brand; easy to spread on short video, dignified enough for the school contract" },
+      ],
+      pitfalls: [
+        "The mysticism register: an immortal-and-occult name reads the literati instrument as a talisman — this craft sells tone simmered out of wood and lacquer, not spells",
+        "Locking into one business: a making-only name can't take the restoration, string-and-accessory and school-course orders — leave the business to the price list, keep the whole qin for the brand",
+        "Blurring the wood's age: naming 'Tang timber' over new stock invites player trust and reputation risk at once — state the wood's age outside the name, clearly",
+        "Ignoring the teaching posture: school bulk orders and beginner courses are the cash-flow line — a too-aloof name can't hold the course poster; leave one door open for warmth",
+      ],
+    },
+  },
+  brocade: {
+    slug: "brocade",
+    keywords: ["织锦工坊", "云锦织造", "宋锦蜀锦", "brocade weaving studio", "silk brocade"],
+    tlds: [
+      { tld: "com", zh: "高定礼服与礼品团购委托的默认后缀，合同与外贸询盘上最稳", en: "The default suffix for couture and corporate-gift commissions — steadiest on the contract and the export inquiry" },
+      { tld: "art", zh: "把织锦从「面料」升维到「寸锦寸金的艺术」，美术馆与藏家线的身价后缀", en: "Elevating brocade from fabric to inch-of-gold art — the status suffix for the gallery and collector line" },
+      { tld: "studio", zh: "工作室气质直给，花楼织机与金线之间的织造身位零违和", en: "The studio register stated outright — zero friction for the maker posture between the drawloom and the gold thread" },
+    ],
+    zh: {
+      label: "织锦工坊",
+      title: "织锦工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "织锦与云锦宋锦织造工坊命名指南：寸锦寸金叙事、花楼织机等思路，织锦工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "织锦工坊的名字要说出「两个人在一台花楼织机上织一天，只得五厘米」：云锦的大花楼织机高四米，拽花工在楼上提经、织手在楼下妆金敷彩，一天织五六厘米，「寸锦寸金」是市场开的价也是时间开的价；南京云锦、苏州宋锦、成都蜀锦各立门派，皇家织造的家谱写了一千六百年，2009 年云锦入选人类非遗，名字要先把这份「金线里的时间」递出去。词库现成：锦、云、金、织、缎——每个字都自带华彩。隐藏考点是三线业务：高定礼服与文创礼品线认纹样版权与设计感，藏家与博物馆复制线认织造师承与真伪，织造体验课的流量线要出片好玩——名字要在高定合同、鉴定证书与课程海报三个场景都立得住。误区在于布行化：满名的「布、料、批发」气质会把寸锦寸金念成面料市场档口——这门手艺卖的是织机上熬出来的华彩，不是论米卖的布。",
+      namingIdeas: [
+        "寸锦寸金直给：寸、金、锦类词根——「寸锦寸金」是这门手艺的官方定价，四个字自带身价与稀缺",
+        "云霞华彩借力：云、霞、虹、彩类气象词——云锦之名取「灿若云霞」，气象词自带皇家织物的画面感",
+        "花楼织机转译：花楼、提花、经纬类行话词——大花楼织机是这门手艺的活化石，行话词让懂行的买手一眼认出门派",
+        "皇家织造语法：御、贡、造类官府词——江宁织造是现成的历史 IP，官府词自带一千六百年的背书",
+        "三锦门派叙事：云、宋、蜀类流派词——三大名锦各有语法，流派词立住产地身份与织造家谱",
+      ],
+      cases: [
+        { name: "寸锦坊", takeaway: "官方定价的截取直译：寸锦寸金立为品牌——稀缺身价现成，高定线郑重、体验课上是现成的第一课" },
+        { name: "云上花楼", takeaway: "流派加织机的组合：云锦的云、花楼织机的楼——四个字说完门派与手艺，藏家一眼识别，雅集海报上意境直给" },
+        { name: "金缕记", takeaway: "材质加记事尾缀：妆金织彩、记以为证——金缕自带《金缕衣》的诗词家谱，礼品线好转述，外贸线好翻译" },
+        { name: "织造署", takeaway: "官府旧称的借力样本：江宁织造署的皇家背书——历史 IP 现成，博物馆复制线郑重，需在品牌故事里立清当代身份" },
+      ],
+      pitfalls: [
+        "布行化：满是「布、料、批发」气质的名字把寸锦寸金念成面料市场档口——这门手艺卖织机上熬出来的华彩，不是论米卖的布",
+        "锁死单一锦种：叫「云锦坊」就难接宋锦、蜀锦与创新面料的单——锦种留给货架，品牌名留给整台织机",
+        "真假织造含糊：数码印花仿锦却名带「手工织造」会招来藏家信任与商誉双重风险——工艺等级要在名字之外说清楚",
+        "忽略纹样版权身位：高定与文创线吃的是原创纹样——名字太仿古就显不出设计力，给当代原创留位置",
+      ],
+    },
+    en: {
+      label: "Brocade weaving studios",
+      title: "How to Name a Brocade Weaving Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Brocade and silk-weaving studio naming guide: inch-of-gold narrative, drawloom imagery, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A brocade studio's name must say that two weavers at one loom earn five centimetres a day: the yunjin drawloom stands four metres tall, the pattern-puller lifting warps above while the weaver lays gold and colour below, five or six centimetres a day — an inch of brocade, an inch of gold is the market's price and time's price alike; Nanjing yunjin, Suzhou songjin and Chengdu shujin each keep their own house, the imperial weaving registry runs sixteen centuries, and yunjin joined the UNESCO list in 2009, so the name must hand over that time-in-the-gold-thread feel first. The lexicon is ready: brocade, cloud, gold, weave and silk — every word arrives radiant. The hidden exam is the triple business: the couture-and-gift line reads pattern copyright and design sense; the collector and museum-reproduction line reads the weaver's lineage and authenticity; the weaving-class traffic line wants photogenic fun — the name must stand on the couture contract, the certificate and the class poster alike. The failure mode is the fabric-stall register: a cloth-and-wholesale name reads inch-of-gold as a textile-market booth — this craft sells radiance simmered on the loom, not cloth by the metre.",
+      namingIdeas: [
+        "The inch of gold outright: inch, gold and brocade roots — an inch of brocade, an inch of gold is the craft's official price; four characters carrying status and scarcity ready-made",
+        "Borrowing the cloud radiance: cloud, rosy-glow, rainbow and colour sky roots — yunjin is named for shining like clouds at dawn; the sky word carries the imperial fabric's picture",
+        "Translating the drawloom: drawloom, jacquard and warp-weft argot roots — the great drawloom is the craft's living fossil; the argot word lets knowing buyers read the school at a glance",
+        "The imperial-weaving grammar: imperial, tribute and manufactory court roots — the Jiangning Imperial Manufactory is a ready historical IP; the court word carries sixteen centuries of endorsement",
+        "The three-brocade narrative: yun, song and shu school roots — the three famous brocades each keep a grammar; the school word sets origin identity and the weaving family tree",
+      ],
+      cases: [
+        { name: "Cun Jin Fang (寸锦坊)", takeaway: "The official price clipped and translated straight: an inch of brocade, an inch of gold raised into the brand — scarcity status ready-made; solemn for couture, the class's first lesson besides" },
+        { name: "Yun Shang Hua Lou (云上花楼)", takeaway: "School on the loom: yunjin's cloud, the drawloom's tower — four characters tell the school and the craft at once; collectors read it at a glance, atmosphere outright on the poster" },
+        { name: "Jin Lü Ji (金缕记)", takeaway: "Material on a chronicle ending: gold laid in the weave, recorded as proof — the gold-thread name carries the classic poem's family tree; easy in the gift line's retelling, easy in export translation" },
+        { name: "Zhi Zao Shu (织造署)", takeaway: "Borrowing the old court office: the Jiangning Manufactory's imperial endorsement — the historical IP ready-made; solemn for museum reproductions, but the brand story must state its present-day identity clearly" },
+      ],
+      pitfalls: [
+        "The fabric-stall register: a cloth-and-wholesale name reads inch-of-gold as a textile-market booth — this craft sells radiance simmered on the loom, not cloth by the metre",
+        "Locking into one brocade: a yunjin-only name can't take the songjin, shujin and innovation-fabric orders — leave the type to the shelf, keep the whole loom for the brand",
+        "Blurring the weaving grade: naming 'handwoven' over digital print invites collector trust and reputation risk at once — state the process grade outside the name, clearly",
+        "Ignoring the pattern-copyright posture: couture and merchandise live on original patterns — a too-antiquarian name hides the design strength; leave room for contemporary originality",
+      ],
+    },
+  },
+  jadecarving: {
+    slug: "jadecarving",
+    keywords: ["玉雕工作室", "玉石雕刻", "和田玉雕", "jade carving studio", "jade atelier"],
+    tlds: [
+      { tld: "com", zh: "藏家与高端定制委托的默认后缀，订单与鉴定证书上最稳", en: "The default suffix for collector and bespoke commissions — steadiest on the order and the certificate" },
+      { tld: "art", zh: "把玉雕从「玉器买卖」升维到「琢玉艺术」，展览与拍卖线的身价后缀", en: "Elevating jade carving from jade trade to carved art — the status suffix for the exhibition and auction line" },
+      { tld: "studio", zh: "工作室气质直给，砣机与玉料之间的琢玉身位零违和", en: "The studio register stated outright — zero friction for the maker posture between the carving wheel and the raw stone" },
+    ],
+    zh: {
+      label: "玉雕工作室",
+      title: "玉雕工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "玉雕与玉石雕刻工作室命名指南：如切如磋叙事、量料取材等思路，玉雕工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "玉雕工作室的名字要说出「玉不琢不成器，一块料要先读三个月再动第一刀」：玉比钢硬却怕崩，砣机带着解玉砂一点点磨，「琢磨」二字就从这门手艺里来；量料取材、因材施艺是铁律，好玉雕师对着一块籽料读皮色、避绺裂、借巧色，构思常比动刀更久——从红山玉龙到乾隆工，琢玉的家谱写了八千年，「如切如磋，如琢如磨」是《诗经》给的官方文案，名字要先把这份「与石头商量」的敬畏递出去。词库现成：玉、琢、璞、砣、脂——每个字都温润。隐藏考点是三线业务：藏家与拍卖线认雕工师承与料子等级，婚庆与高端礼品线认寓意与体面，玉雕研学的流量线要出片好懂——名字要在鉴定证书、礼盒卡片与课程海报三个场景都立得住。误区在于地摊化：满名的「缘、福、发」气质会把琢玉艺术念成旅游区玉器店——这门手艺卖的是刀下的敬畏与巧思，不是开光符。",
+      namingIdeas: [
+        "如琢如磨直给：琢、磨、切、磋类词根——《诗经》官方文案现成，工序词自带八千年的家谱与君子气",
+        "璞玉巧色借力：璞、皮、巧、绺类行话词——读料辨皮是玉雕的入行门槛，行话词让藏家一眼认出功力",
+        "君子比德转译：德、温、润、佩类品格词——「君子比德于玉」是现成的文化背书，品格词自带东方美学身价",
+        "砣机工序语法：砣、解、碾类古法词——砣机是琢玉八千年的活化石，古法词立住手工身位与门派感",
+        "产地料性叙事：和田、籽、脂类料性词——和田籽料是身价原点，料性词让懂行的买手一眼认出等级",
+      ],
+      cases: [
+        { name: "琢磨堂", takeaway: "手艺母词加堂号的直译：「琢磨」本就出自琢玉——两个字说完整门手艺还带着思考的双关，藏家线郑重、研学课上是现成的第一课" },
+        { name: "读璞", takeaway: "行话动词的极简组合：先读料再动刀——两个字把玉雕师的敬畏立为品牌，懂行的藏家一眼识别功力身位" },
+        { name: "苏工玉作", takeaway: "流派加作坊的组合：苏州工是玉雕精工的代名词——流派词立住雕工等级，高定线读出精工背书，鉴定证书上体面" },
+        { name: "巧色记", takeaway: "绝活加记事尾缀：借皮色成画是玉雕最惊艳的巧思——绝活词自带故事，短视频线好传播，礼盒卡片上有话可讲" },
+      ],
+      pitfalls: [
+        "地摊化：满是「缘、福、发」气质的名字把琢玉艺术念成旅游区玉器店——这门手艺卖刀下的敬畏与巧思，不是开光符",
+        "锁死单一料种：叫「和田玉坊」就难接翡翠、南红与创新玉雕的单——料种留给货架，品牌名留给整张砣机",
+        "真假料性含糊：染色处理料却名带「籽料、羊脂」会招来藏家信任与商誉双重风险——料子等级要在名字之外说清楚",
+        "忽略当代设计身位：年轻藏家吃的是当代玉雕设计——名字太老气就接不住新审美，给创作者身份留位置",
+      ],
+    },
+    en: {
+      label: "Jade carving studios",
+      title: "How to Name a Jade Carving Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Jade carving studio naming guide: cut-and-polish narrative, reading-the-stone imagery, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A jade carving studio's name must say that unpolished jade is no vessel, and a stone is read for three months before the first cut: jade outranks steel in hardness yet shatters at a wrong touch, so the wheel grinds it grain by grain with abrasive sand — the Chinese word for deliberation, zhuomo, was born in this craft. Measuring the stone and following its nature is iron law: a good carver reads the skin, dodges the flaws and borrows the chance colour, and the thinking often outlasts the cutting — from the Hongshan jade dragon to the Qianlong-era master work, the carving registry runs eight millennia, and the Book of Songs wrote the official copy: as if cut, as if filed, as if carved, as if polished — so the name must hand over that negotiating-with-the-stone reverence first. The lexicon is ready: jade, carve, uncut stone, wheel and mutton-fat — every word arrives warm. The hidden exam is the triple business: the collector-and-auction line reads the carver's lineage and the stone's grade; the wedding and high-gift line reads auspicious meaning and dignity; the study-class traffic line wants photogenic clarity — the name must stand on the certificate, the gift-box card and the class poster alike. The failure mode is the tourist-shop register: a luck-and-fortune name reads carved art as a scenic-spot jade counter — this craft sells reverence and wit under the blade, not blessed charms.",
+      namingIdeas: [
+        "Cut and polish outright: carve, polish, cut and file roots — the Book of Songs' official copy is ready-made; the process word carries eight millennia and the gentleman's air at once",
+        "Borrowing the uncut stone: uncut, skin, chance-colour and flaw argot roots — reading the stone is the trade's entrance exam; the argot word lets collectors read the mastery at a glance",
+        "Translating the gentleman's virtue: virtue, warm, moist and pendant character roots — the gentleman mirrors his virtue in jade is a ready cultural endorsement; the virtue word carries Eastern aesthetic status",
+        "The carving-wheel grammar: wheel, cleave and grind old-method roots — the tuo wheel is the craft's eight-thousand-year living fossil; the old-method word sets the handwork posture and the school air",
+        "The stone-grade narrative: Hetian, seed and mutton-fat material roots — Hetian seed jade is the origin of status; the material word lets knowing buyers read the grade at a glance",
+      ],
+      cases: [
+        { name: "Zhuo Mo Tang (琢磨堂)", takeaway: "The craft's mother-word on a hall ending, translated straight: deliberation itself was born of jade carving — two characters tell the whole trade with a pun on thought; solemn for collectors, the class's first lesson besides" },
+        { name: "Du Pu (读璞)", takeaway: "The argot verb, minimal: read the stone before the blade — two characters raise the carver's reverence into the brand; knowing collectors read the mastery posture at a glance" },
+        { name: "Su Gong Yu Zuo (苏工玉作)", takeaway: "School on the workshop ending: Suzhou work is the byword for fine carving — the school word sets the carving grade; the bespoke line reads the precision endorsement, dignified on the certificate" },
+        { name: "Qiao Se Ji (巧色记)", takeaway: "The signature move on a chronicle ending: borrowing the skin's colour into the picture is the craft's most dazzling wit — the move carries its own story; easy to spread on short video, words ready on the gift-box card" },
+      ],
+      pitfalls: [
+        "The tourist-shop register: a luck-and-fortune name reads carved art as a scenic-spot jade counter — this craft sells reverence and wit under the blade, not blessed charms",
+        "Locking into one stone: a Hetian-only name can't take the jadeite, nanhong and contemporary-carving orders — leave the stone to the shelf, keep the whole wheel for the brand",
+        "Blurring the stone's grade: naming 'seed jade, mutton-fat' over treated stock invites collector trust and reputation risk at once — state the stone's grade outside the name, clearly",
+        "Ignoring the contemporary-design posture: young collectors live on contemporary jade design — a too-antique name can't catch the new taste; leave room for the creator identity",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

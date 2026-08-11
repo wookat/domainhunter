@@ -401,7 +401,7 @@
     ]
   },
   "guide": {
-    "count": 386,
+    "count": 392,
     "slugs": [
       "saas",
       "ecommerce",
@@ -788,7 +788,13 @@
       "horology",
       "saddlery",
       "ikebana",
-      "fanmaking"
+      "fanmaking",
+      "bambooweaving",
+      "swordsmith",
+      "shadowpuppet",
+      "guqin",
+      "brocade",
+      "jadecarving"
     ]
   },
   "vs": {

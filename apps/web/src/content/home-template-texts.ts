@@ -1547,4 +1547,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家制扇与手工折扇工坊，寓意「收进袖中是器物，展开是一幅画」；气质要有怀袖雅物的文人体面与扇骨月余打磨的功夫、不显夜市塑料扇；场景是拍卖图录上有身价、电商详情页上有故事、扇艺体验课海报上出片好玩。",
     en: "A fan-making and folding-fan studio. The name should carry an object in the sleeve that opens into a painting; the vibe is the literati dignity of the sleeve treasure and a month's polish in the ribs, never a night-market plastic fan; it must carry status in the catalogue, tell a story on the product page, and stay photogenic on the class poster.",
   },
+  "bambooweaving": {
+    zh: "一家竹编与手工竹器工坊，寓意「一根竹分成千丝，再在指间织回一件器物」；气质要有山野清气与指尖经纬的功夫感、不显集市竹筐摊；场景是家居报价单上有设计感、礼盒卡片上有故事、竹编体验课海报上出片好玩。",
+    en: "A bamboo weaving and handmade bamboo-ware studio. The name should carry one culm split into a thousand threads and woven back into an object; the vibe is mountain-clear air and fingertip warp-and-weft discipline, never a market basket stall; it must read design-forward on the homeware quote, storied on the gift-box card, and photogenic on the class poster.",
+  },
+  "swordsmith": {
+    zh: "一家刀剑锻造与手工锻刀工坊，寓意「一块铁折叠百次方成一剑」；气质要有炉火修行的分量与淬火锋芒、不显网游杀气；场景是鉴定证书上郑重、武馆与影视合作合同上专业、锻造体验课海报上出片过瘾。",
+    en: "A swordsmith and bladesmith forge. The name should carry a bar of iron folded a hundred times before it earns the word blade; the vibe is discipline in the fire and a quenched edge, never game-loot menace; it must read solemn on the certificate, professional on the martial-hall contract, and thrilling on the forging-class poster.",
+  },
+  "shadowpuppet": {
+    zh: "一家皮影戏与皮影雕刻工作室，寓意「一张牛皮三千刀，一盏灯后千军万马」；气质要有幕布光影的戏味与刻刀功夫、不显博物馆标本；场景是演出海报上有戏味、藏品证书上郑重、研学课程页上出片好玩。",
+    en: "A shadow puppetry and carving studio. The name should carry three thousand cuts in one hide and a million soldiers behind one lamp; the vibe is theatre in the lamplight and knife-work discipline, never a museum specimen; it must read theatrical on the show poster, solemn on the collection certificate, and photogenic on the course page.",
+  },
+  "guqin": {
+    zh: "一家斫琴与古琴制作工坊，寓意「一张琴斫两年，一声散音等三千年」；气质要有书斋安静与太古之音的分量、不显玄学法器；场景是鉴定书上郑重、琴馆团购合同上专业、雅集海报上有意境。",
+    en: "A guqin making workshop. The name should carry a qin carved across two years and one open note that waited three millennia; the vibe is the study's quiet and the weight of antiquity's sound, never an occult talisman; it must read solemn on the appraisal, professional on the qin-school contract, and atmospheric on the gathering poster.",
+  },
+  "brocade": {
+    zh: "一家织锦与云锦宋锦织造工坊，寓意「一台花楼织机一天只织五厘米，寸锦寸金」；气质要有金线华彩与皇家织造的体面、不显面料市场档口；场景是高定合同上郑重、鉴定证书上可信、织造体验课海报上出片好玩。",
+    en: "A brocade weaving studio for yunjin and songjin silk. The name should carry five centimetres a day off a four-metre drawloom — an inch of brocade, an inch of gold; the vibe is gold-thread radiance and imperial-manufactory dignity, never a textile-market booth; it must read solemn on the couture contract, credible on the certificate, and photogenic on the class poster.",
+  },
+  "jadecarving": {
+    zh: "一家玉雕与玉石雕刻工作室，寓意「玉不琢不成器，先读料三个月再动第一刀」；气质要有如琢如磨的敬畏与君子温润、不显旅游区玉器店；场景是鉴定证书上郑重、婚庆礼盒卡片上体面、玉雕研学海报上出片好懂。",
+    en: "A jade carving studio. The name should carry unpolished jade is no vessel — the stone read for three months before the first cut; the vibe is cut-and-polish reverence and a gentleman's warmth, never a tourist-spot jade counter; it must read solemn on the certificate, dignified on the wedding gift card, and clear on the study-class poster.",
+  },
 };
