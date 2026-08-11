@@ -2,7 +2,8 @@ import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { ArrowLeft, SlidersHorizontal } from "lucide-react";
 
 import { Header } from "@/components/header";
-import { HomePage, type HomeValues } from "@/components/home-page";
+import type { HomeValues } from "@/components/home-page";
+import { getHomePage, loadHomePage } from "@/components/home-page-loader";
 import type { LogEntry } from "@/components/agent-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
 import { isMockEnabled, runMockStream } from "@/mock";
@@ -34,6 +35,14 @@ function lazyChunk<T, P>(load: () => Promise<T>, pick: (m: T) => React.Component
   });
 }
 
+// 首页组件：预载完成后同步渲染（首次落地 "/" 时 main.tsx 已等 chunk 就绪，不走 Suspense 回退）
+const LazyHomePage = lazyChunk(loadHomePage, (m) => m.HomePage);
+
+// 已预载时同步渲染首页，避免 Suspense 回退帧带来的布局跳变（CLS）
+function HomePageSlot(props: React.ComponentProps<typeof import("@/components/home-page").HomePage>) {
+  const Loaded = getHomePage();
+  return Loaded ? <Loaded {...props} /> : <LazyHomePage {...props} />;
+}
 const SharePage = lazyChunk(() => import("@/components/share-page"), (m) => m.SharePage);
 const TldPage = lazyChunk(() => import("@/components/tld-page"), (m) => m.TldPage);
 const GuidePage = lazyChunk(() => import("@/components/guide-page"), (m) => m.GuidePage);
@@ -54,6 +63,7 @@ const NotFoundPage = lazyChunk(() => import("@/components/not-found-page"), (m) 
 /** 首屏空闲时预取搜索路径的懒 chunk，点「开始猎取」时零等待 */
 function prefetchSearchChunks() {
   const load = () => {
+    void loadHomePage();
     void import("@/components/agent-page");
     void import("@/components/results-page");
   };
@@ -715,7 +725,8 @@ export default function App() {
       )}
 
       {mode === "home" && (
-        <HomePage
+        <Suspense fallback={<PageFallback />}>
+        <HomePageSlot
           initial={values}
           onSubmit={(v) => {
             setValues(v);
@@ -726,6 +737,7 @@ export default function App() {
           shortlist={shortlist}
           quotaExhausted={quotaExhausted}
         />
+        </Suspense>
       )}
       {mode === "agent" && (
         <Suspense fallback={<PageFallback />}>

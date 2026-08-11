@@ -1316,7 +1316,7 @@ async function assetSize(file: string, assets: Fetcher, origin: string): Promise
 
 /** 超过该体积的共享数据 chunk（如全量 TLD/行业指南文案）不做 modulepreload：
  *  正文已全文 SSR，这些数据只在水合时才需要；提前抢占带宽会显著推迟移动端 LCP。 */
-const MODULEPRELOAD_MAX_BYTES = 100_000;
+const MODULEPRELOAD_MAX_BYTES = 110_000;
 
 /** SEO 页 SSR 注入懒加载路由 chunk 的 modulepreload，让页面 JS 与主 bundle 并行下载（降低内容 LCP） */
 async function injectModulepreload(html: string, assets: Fetcher, origin: string, entry: string): Promise<string> {
@@ -1488,6 +1488,7 @@ app.get("/", async (c) => {
       );
   }
   html = injectHreflang(html, "/", c.req.query("lang") === "en").replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/home-page.tsx");
   html = setHtmlLang(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });

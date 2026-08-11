@@ -11,6 +11,7 @@ function routeModule(): Promise<unknown> | null {
   if (/^\/tld\/[a-z0-9-]{2,24}$/i.test(p)) return Promise.all([import("./components/tld-page"), ensureInjectedContent("tld", p.slice(5))]);
   if (/^\/guide\/[a-z0-9-]{2,24}$/i.test(p)) return Promise.all([import("./components/guide-page"), ensureInjectedContent("guide", p.slice(7))]);
   if (/^\/vs\/[a-z0-9-]{2,48}$/i.test(p)) return Promise.all([import("./components/compare-page"), ensureInjectedContent("vs", p.slice(4))]);
+  if (p === "/") return import("./components/home-page-loader").then((m) => m.loadHomePage());
   return null;
 }
 
