@@ -9661,6 +9661,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Local Finnish businesses & services", "Game studios & education tech", "Cleantech & engineering brands", "wi-fi/sci-fi style tech-suffix plays"],
     },
   },
+  "lt-vs-lv": {
+    slug: "lt-vs-lv",
+    a: "lt",
+    b: "lv",
+    zh: {
+      title: ".lt 和 .lv 怎么选：立陶宛与拉脱维亚国家域名的波罗的海对比",
+      metaDescription: ".lt 是立陶宛国家域名、约 $12/年、任何人可注册；.lv 是拉脱维亚国家域名、约 $19/年、同样完全开放。对比两个波罗的海邻国的产业生态与市场信号，并用 AI 猎取可注册的名字。",
+      verdict:
+        "波罗的海两个邻国，资格都完全开放、都平续无钩子，分水岭在产业生态与市场落点。做立陶宛与金融科技 → .lt：DOMREG 注册局（考纳斯理工大学）运营、注册量约 25 万，立陶宛人口约 280 万、却是欧盟增长最快的金融科技中心之一：维尔纽斯的电子货币与支付牌照发放速度欧盟最快，吸引了 Revolut 欧洲总部等数百家 fintech，Vinted 与 Nord Security（NordVPN）两家独角兽都诞生于此，全球约一半科研级飞秒激光器产自立陶宛。任何人可注册、无需本地地址，约 $12/年（约 ¥90）、平续同价。做拉脱维亚与区域物流 → .lv：NIC.LV（拉脱维亚大学）运营、注册量约 15 万，拉脱维亚人口约 190 万，首都里加是波罗的海三国最大的城市与交通枢纽：里加港与文茨皮尔斯港承接北欧物流，木材与木制品是最大宗出口，airBaltic 把里加做成区域航空中转站，Printful（按需印刷独角兽）诞生于此；约 $19/年（约 ¥140）、平续同价；「lv」在中文互联网还有「路易威登」的时尚联想，可借势但注意商标边界。两国英语在商务圈都普及，英文词根无需翻译。判断标准：业务落点在立陶宛、做金融科技支付或激光制造外贸 → .lt 更便宜且 fintech 生态标签更亮；落点在拉脱维亚、做港口物流木材外贸或想借 lv 的时尚联想 → .lv 信号精准；同时做波罗的海三国生意的品牌两个都注册——加起来 $31/年，别用一个 ccTLD 硬跨两国。",
+      pickA: ["立陶宛本地企业与服务", "金融科技与支付牌照公司", "激光与精密制造外贸", "预算敏感的波罗的海创业团队"],
+      pickB: ["拉脱维亚本地企业与服务", "港口物流与货运代理", "木材与木制品外贸", "lv 时尚联想的品牌玩法"],
+    },
+    en: {
+      title: ".lt vs .lv: Lithuania or Latvia Country Domain Compared",
+      metaDescription:
+        ".lt is Lithuania's country domain at ~$12/yr, open to anyone; .lv is Latvia's at ~$19/yr, equally open. Compare the two Baltic neighbors' industry ecosystems and market signals, then hunt available names.",
+      verdict:
+        "Two Baltic neighbors, both fully open with flat renewals and no traps — the divide is industry ecosystem and market landing point. Lithuania and fintech → .lt: run by the DOMREG registry at Kaunas University of Technology with about 250,000 registrations; Lithuania has about 2.8 million people yet is one of the EU's fastest-growing fintech hubs: Vilnius issues e-money and payment licenses faster than anywhere in the EU, attracting hundreds of fintechs including Revolut's European headquarters, both Vinted and Nord Security (NordVPN) were born here, and roughly half the world's scientific femtosecond lasers are made in Lithuania. Anyone registers with no local address at about $12/yr (≈¥90), same renewal. Latvia and regional logistics → .lv: run by NIC.LV at the University of Latvia with about 150,000 registrations; Latvia has about 1.9 million people, and Riga is the largest city and transport hub of the three Baltic states: the ports of Riga and Ventspils handle Nordic logistics, timber is the top export, airBaltic made Riga a regional aviation hub, and Printful (the print-on-demand unicorn) was born here; about $19/yr (≈¥140), same renewal — and \"LV\" carries a Louis Vuitton fashion association worth borrowing carefully around trademark lines. English is common in business in both, so English roots need no translation. The test: business landing in Lithuania, fintech payments or laser-manufacturing trade → .lt is cheaper with the brighter fintech badge; landing in Latvia, port logistics, timber trade or the LV fashion angle → .lv is the precise signal; brands working all three Baltic states register both — $31/yr combined, never one ccTLD stretched across two countries.",
+      pickA: ["Local Lithuanian businesses & services", "Fintech & payment license companies", "Laser & precision manufacturing trade", "Budget-conscious Baltic startups"],
+      pickB: ["Local Latvian businesses & services", "Port logistics & freight forwarding", "Timber & wood products trade", "LV fashion-association brand plays"],
+    },
+  },
+  "lt-vs-ee": {
+    slug: "lt-vs-ee",
+    a: "lt",
+    b: "ee",
+    zh: {
+      title: ".lt 和 .ee 怎么选：立陶宛与爱沙尼亚国家域名的波罗的海对比",
+      metaDescription: ".lt 是立陶宛国家域名、约 $12/年、任何人可直接注册；.ee 是爱沙尼亚国家域名、约 $12/年、非本地注册人需指定境内联系人（注册商可代办）。对比两个波罗的海数字经济体的门槛与生态，并用 AI 猎取可注册的名字。",
+      verdict:
+        "波罗的海两大数字经济体，价格几乎一样（都约 $12/年、平续），分水岭在一条小门槛与生态位差异。做立陶宛与金融科技 → .lt：DOMREG 注册局运营、注册量约 25 万，立陶宛人口约 280 万、是欧盟增长最快的金融科技中心之一：维尔纽斯的支付牌照发放速度欧盟最快、吸引了 Revolut 欧洲总部落户，Vinted 与 Nord Security 两家独角兽诞生于此。任何人可直接注册、无需本地地址或代理，约 $12/年（约 ¥90）、平续同价——零门槛是它对 .ee 的直接优势。做爱沙尼亚与 e-Residency → .ee：Estonian Internet Foundation 运营、注册量约 16 万，爱沙尼亚人口仅约 130 万、却是全球数字化程度最高的国家：99% 政务在线办理，Skype、Wise、Bolt 都诞生于此；e-Residency 让全球超 10 万人远程注册爱沙尼亚公司——这批数字公司正是 .ee 的天然客群。唯一门槛：非本地注册人需指定一位爱沙尼亚境内联系人，多数注册商可代办、e-Residency 持有人天然满足；约 $12/年（约 ¥90）、平续同价。两国英语普及率都很高，英文词根无需翻译。判断标准：业务落点在立陶宛、做金融科技或激光制造、或想要零门槛直注 → .lt 注册量更大且手续最简；注册了爱沙尼亚数字公司、或业务落点在爱沙尼亚 → .ee 是「爱沙尼亚注册」身份的最好注脚；同时做波罗的海生意的品牌两个都注册——加起来 $24/年，比一顿午饭贵不了多少。",
+      pickA: ["立陶宛本地企业与服务", "金融科技与支付牌照公司", "想要零门槛直注的注册人", "激光与精密制造外贸"],
+      pickB: ["爱沙尼亚本地企业与服务", "e-Residency 数字公司官网", "数字政务与 SaaS 产品", "面向爱沙尼亚市场的品牌与电商"],
+    },
+    en: {
+      title: ".lt vs .ee: Lithuania or Estonia Country Domain Compared",
+      metaDescription:
+        ".lt is Lithuania's country domain at ~$12/yr, open to direct registration by anyone; .ee is Estonia's at ~$12/yr, requiring non-local registrants to appoint an in-country contact (registrars arrange it). Compare the two Baltic digital economies' bars and ecosystems, then hunt available names.",
+      verdict:
+        "Two Baltic digital economies at nearly identical prices (both about $12/yr, flat) — the divide is one small bar and different ecological niches. Lithuania and fintech → .lt: run by the DOMREG registry with about 250,000 registrations; Lithuania has about 2.8 million people and is one of the EU's fastest-growing fintech hubs: Vilnius issues payment licenses faster than anywhere in the EU and hosts Revolut's European headquarters, and both Vinted and Nord Security were born here. Anyone registers directly with no local address or proxy at about $12/yr (≈¥90), same renewal — zero bar is its direct edge over .ee. Estonia and e-Residency → .ee: run by the Estonian Internet Foundation with about 160,000 registrations; Estonia has only about 1.3 million people yet the world's most digitized state: 99% of government services are online, and Skype, Wise and Bolt were born here; e-Residency has let over 100,000 people worldwide register Estonian companies remotely — those digital companies are .ee's natural customer base. The only bar: non-local registrants must appoint a contact person in Estonia — most registrars arrange it, and e-residents qualify automatically; about $12/yr (≈¥90), same renewal. English proficiency is high in both, so English roots need no translation. The test: business landing in Lithuania, fintech or laser manufacturing, or wanting zero-bar direct registration → .lt has the bigger base and simplest paperwork; an Estonian digital company via e-Residency, or business landing in Estonia → .ee is the best footnote to \"registered in Estonia\"; brands working both markets register both — $24/yr combined, barely more than lunch.",
+      pickA: ["Local Lithuanian businesses & services", "Fintech & payment license companies", "Registrants wanting zero-bar direct registration", "Laser & precision manufacturing trade"],
+      pickB: ["Local Estonian businesses & services", "e-Residency digital company sites", "Digital government & SaaS products", "Estonia-market brands & e-commerce"],
+    },
+  },
+  "rs-vs-io": {
+    slug: "rs-vs-io",
+    a: "rs",
+    b: "io",
+    zh: {
+      title: ".rs 和 .io 怎么选：Rust 社区后缀与开发者通用后缀对比",
+      metaDescription: ".rs 是塞尔维亚国家域名、约 $25/年，恰好是 Rust 源文件扩展名、是 Rust 社区的身份标识；.io 是开发者圈的通用后缀、注册续费更贵但认知度更广。对比两者的圈层信号与价格，并用 AI 猎取可注册的名字。",
+      verdict:
+        "两个都是开发者后缀，分水岭在圈层精度与认知广度。做 Rust 工具与开源项目 → .rs：塞尔维亚国家域名、RNIDS 注册局运营、注册量约 11 万，但它对全球开发者的意义在后缀本身——.rs 恰好是 Rust 源文件的扩展名，docs.rs、crates 生态与大量 Rust 开源项目都用 .rs 域名，「项目名 + .rs」在 Rust 社区就是身份标识，圈内人秒懂；任何人可注册、无需本地地址，约 $25/年（约 ¥180）、平续同价，比 .io 便宜且好名字库存干净得多。做泛技术品牌 → .io：开发者圈最通用的后缀，GitHub 生态里认知度无可替代，API、SaaS、开发者工具都站得住；代价是注册续费都明显更贵（注册约 $26/年、续费约 $29/年），且热门短词早被扫光。还要算上塞尔维亚的本土加成：贝尔格莱德与诺维萨德是巴尔干 IT 外包中心，本地业务用 .rs 一眼讲清。判断标准：项目用 Rust 写、或面向 Rust 社区 → .rs 是圈内惯例、便宜且库存好；面向更广的技术受众、不想解释后缀含义 → .io 认知度更广；两个都想要的 Rust 明星项目通常 .rs 做文档与社区、.io 或 .com 做商业主站。注意 .rs 在非 Rust、非塞尔维亚场景下信号较弱。",
+      pickA: ["Rust 语言工具与开源项目", "docs.rs 式社区文档站", "塞尔维亚本地企业与 IT 外包", "预算敏感、在意续费的开发者"],
+      pickB: ["泛技术品牌与开发者工具", "API 与 SaaS 产品主站", "面向 GitHub 生态的通用认知", "非 Rust 技术栈的项目"],
+    },
+    en: {
+      title: ".rs vs .io: Rust Community Suffix or Generic Developer Suffix",
+      metaDescription:
+        ".rs is Serbia's country domain at ~$25/yr and happens to be the Rust source-file extension — the Rust community's identity badge; .io is the developer world's generic suffix, pricier but more widely recognized. Compare circle precision vs reach, then hunt available names.",
+      verdict:
+        "Both are developer suffixes — the divide is circle precision versus breadth of recognition. Rust tools and open source → .rs: Serbia's country domain, run by the RNIDS registry with about 110,000 registrations, but its meaning to developers worldwide is the suffix itself — .rs happens to be the file extension of Rust source code, and docs.rs, the crates ecosystem and countless Rust open-source projects live on .rs domains; \"project + .rs\" is an identity badge the Rust community gets instantly. Anyone registers with no local address at about $25/yr (≈¥180), flat renewal — cheaper than .io with far cleaner short-name inventory. Broad tech branding → .io: the developer world's most generic suffix, with irreplaceable recognition in the GitHub ecosystem for APIs, SaaS and dev tools; the cost is noticeably higher registration and renewal (about $26/yr to register, $29/yr to renew) and hot short words long gone. Add Serbia's local bonus: Belgrade and Novi Sad are the Balkans' IT outsourcing hubs, so local businesses read clearly on .rs. The test: your project is written in Rust or faces the Rust community → .rs is the in-circle convention, cheaper with better inventory; a broader technical audience where you'd rather not explain the suffix → .io has wider recognition; star Rust projects often take both — .rs for docs and community, .io or .com for the commercial site. Note .rs signals weakly outside Rust circles and Serbia.",
+      pickA: ["Rust language tools & open-source projects", "docs.rs-style community documentation sites", "Local Serbian businesses & IT outsourcing", "Renewal-cost-sensitive developers"],
+      pickB: ["Broad tech brands & developer tools", "API & SaaS product sites", "GitHub-ecosystem generic recognition", "Non-Rust stack projects"],
+    },
+  },
+  "is-vs-fi": {
+    slug: "is-vs-fi",
+    a: "is",
+    b: "fi",
+    zh: {
+      title: ".is 和 .fi 怎么选：冰岛与芬兰国家域名的北欧对比",
+      metaDescription: ".is 是冰岛国家域名、约 $62/年、还是英语系动词 is 本身，域名黑客玩法一流；.fi 是芬兰国家域名、约 $10/年、任何人可注册。对比两个北欧市场的语义空间与价格差，并用 AI 猎取可注册的名字。",
+      verdict:
+        "北欧两个后缀，资格都完全开放，但价格差六倍（$62 对 $10），分水岭在语义玩法与市场体量。要宣言式命名 → .is：ISNIC 注册局运营、注册量约 8 万，冰岛人口仅约 38 万，但 .is 对全球用户的最大吸引力在后缀本身——「is」就是英语系动词，name.is 天然读成一句宣言，this.is、life.is 类域名黑客是它的招牌玩法，个人主页与品牌宣言站全球通用；冰岛本土的火山极光旅游（游客数倍于人口）与近乎 100% 绿电支撑的数据中心是本地客群。任何人可注册、无需本地地址，约 $62/年（约 ¥450）、平续无钩子——为一个能当句子读的后缀，这个价往往值回票价。做芬兰与北欧市场 → .fi：注册局 Traficom 运营、注册量约 55 万（是 .is 的近七倍），芬兰人口约 550 万：Nokia 的工程底蕴之上长出了 Supercell、Rovio 的游戏帝国，教育与清洁技术是名片，赫尔辛基 Slush 是欧洲最大创投大会之一。2016 年起完全开放、约 $10/年（约 ¥72）、平续无钩子；「fi」还能读出 wi-fi、sci-fi 的科技尾音。两国英语普及率都极高，英文词根无需翻译。判断标准：想要 name.is 读成句子的全球玩法、或做冰岛旅游与绿色算力 → .is 的辨识度独一份；业务落点在芬兰、做游戏教育清洁技术、或预算敏感 → .fi 便宜六倍且注册量大得多；纯看性价比 .fi 完胜，纯看记忆点 .is 无可替代。",
+      pickA: ["品牌宣言与个人主页（name.is 域名黑客）", "冰岛旅游、向导与民宿", "绿色数据中心与算力业务", "想要全球记忆点的品牌"],
+      pickB: ["芬兰本地企业与服务", "游戏工作室与教育科技", "清洁技术与工程品牌", "预算敏感的北欧市场团队"],
+    },
+    en: {
+      title: ".is vs .fi: Iceland or Finland Country Domain Compared",
+      metaDescription:
+        ".is is Iceland's country domain at ~$62/yr and the English verb \"is\" itself — a first-class domain hack; .fi is Finland's at ~$10/yr, open to anyone. Compare the two Nordic markets' word-play room and price gap, then hunt available names.",
+      verdict:
+        "Two Nordic suffixes, both fully open, but a sixfold price gap ($62 vs $10) — the divide is semantic play versus market size. Statement-style naming → .is: run by the ISNIC registry with about 80,000 registrations; Iceland has just 380,000 people, but the biggest draw of .is is the suffix itself — \"is\" is the English verb, so name.is naturally reads as a statement; domain hacks like this.is and life.is are its signature move, used worldwide for personal pages and brand-statement sites; locally, volcano-and-aurora tourism (tourists outnumber residents several times over) and near-100% green-powered data centers form the customer base. Anyone registers with no local address at about $62/yr (≈¥450), flat with no traps — for a suffix that reads as a sentence, the recognition usually pays for itself. Finland and the Nordic market → .fi: run by registry Traficom with about 550,000 registrations (nearly seven times .is); Finland has about 5.5 million people: on Nokia's engineering legacy grew the gaming empires of Supercell and Rovio, education and cleantech are national calling cards, and Helsinki's Slush is one of Europe's biggest startup conferences. Fully open since 2016 at about $10/yr (≈¥72), flat with no traps; \"fi\" also echoes wi-fi and sci-fi. English proficiency is extremely high in both, so English roots need no translation. The test: wanting the global name.is sentence play, or Icelandic tourism and green compute → .is has one-of-a-kind recognition; business landing in Finland, gaming, education or cleantech, or budget-sensitive → .fi is six times cheaper with a far bigger base; on pure value .fi wins outright, on pure memorability .is is irreplaceable.",
+      pickA: ["Brand statements & personal pages (name.is hacks)", "Icelandic tourism, guides & guesthouses", "Green data centers & compute businesses", "Brands wanting a global memory hook"],
+      pickB: ["Local Finnish businesses & services", "Game studios & education tech", "Cleantech & engineering brands", "Budget-conscious Nordic-market teams"],
+    },
+  },
+  "ge-vs-tr": {
+    slug: "ge-vs-tr",
+    a: "ge",
+    b: "tr",
+    zh: {
+      title: ".ge 和 .tr 怎么选：格鲁吉亚与土耳其国家域名的欧亚门户对比",
+      metaDescription: ".ge 是格鲁吉亚国家域名、约 $30/年、任何人可注册；.tr 是土耳其国家域名、约 $15/年、同样完全开放。对比两个欧亚门户市场的体量与定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "同处欧亚十字路口，资格都完全开放、都平续无钩子，分水岭在市场体量与业务落点。做格鲁吉亚与数字游民生意 → .ge：Caucasus Online 运营注册局职能（nic.ge）、注册量约 5 万，格鲁吉亚人口约 370 万、是高加索地区的商业与旅游门户：第比利斯与巴统是数字游民热门落脚点——一年免签、远程工作签证与全球最简的公司注册流程吸引大量外国创业者落地开公司；8000 年酿酒史的格鲁吉亚葡萄酒（Qvevri 工艺入选非遗）是最具辨识度的出口名片。任何人可注册、无需本地地址，约 $30/年（约 ¥220）、平续同价，好名字库存非常干净。做土耳其与更大体量 → .tr：BTK 下属 TRABİS 系统运营、注册量约 70 万（是 .ge 的十四倍），土耳其人口约 8500 万、横跨欧亚、是中东与中亚市场的门户，电商增速常年全球前列（Trendyol、Hepsiburada 都是本土巨头）；完全开放、约 $15/年（约 ¥110）、平续同价，价格只有 .ge 的一半。英语在两国的旅游与创业圈都通用，英文词根无需翻译。判断标准：业务落点在格鲁吉亚、做旅游葡萄酒外贸或服务数字游民与远程创业者 → .ge 信号精准且库存干净；落点在土耳其、做电商制造或辐射中东中亚 → .tr 市场大十倍以上且更便宜；横跨高加索与安纳托利亚做生意的品牌各注各的——加起来 $45/年，别用一个 ccTLD 硬跨两国。",
+      pickA: ["格鲁吉亚本地企业与服务", "旅游、向导与民宿", "格鲁吉亚葡萄酒外贸", "数字游民与远程创业服务"],
+      pickB: ["土耳其本地企业与服务", "面向土耳其的跨境电商", "制造业与外贸 B2B", "辐射中东与中亚的品牌"],
+    },
+    en: {
+      title: ".ge vs .tr: Georgia or Turkey Country Domain Compared",
+      metaDescription:
+        ".ge is Georgia's country domain at ~$30/yr, open to anyone; .tr is Turkey's at ~$15/yr, equally open. Compare the two Eurasian gateway markets' size and positioning, then hunt available names.",
+      verdict:
+        "Both sit at the Eurasian crossroads, both fully open with flat renewals — the divide is market size and business landing point. Georgia and the digital-nomad economy → .ge: registry operations run by Caucasus Online (nic.ge) with about 50,000 registrations; Georgia has about 3.7 million people and is the Caucasus' business and tourism gateway: Tbilisi and Batumi are favorite digital-nomad bases — a one-year visa-free stay, remote-work visas and one of the world's simplest company registration processes draw foreign founders to incorporate here; 8,000 years of winemaking make Georgian wine (the UNESCO-listed qvevri method) its most recognizable export. Anyone registers with no local address at about $30/yr (≈¥220), same renewal, with very clean name inventory. Turkey and the bigger market → .tr: run by the TRABİS system under BTK with about 700,000 registrations (fourteen times .ge); Turkey has about 85 million people, straddles Europe and Asia as the gateway to Middle Eastern and Central Asian markets, and posts world-leading e-commerce growth (Trendyol and Hepsiburada are homegrown giants); fully open at about $15/yr (≈¥110), flat — half the price of .ge. English is common in tourism and startup circles in both, so English roots need no translation. The test: business landing in Georgia, tourism, wine trade or serving digital nomads and remote founders → .ge is the precise signal with clean inventory; landing in Turkey, e-commerce, manufacturing or radiating into the Middle East and Central Asia → .tr has a market over ten times larger and costs half; brands spanning the Caucasus and Anatolia register both — $45/yr combined, never one ccTLD stretched across two countries.",
+      pickA: ["Local Georgian businesses & services", "Tourism, guides & guesthouses", "Georgian wine trade", "Digital nomad & remote founder services"],
+      pickB: ["Local Turkish businesses & services", "Turkey-facing cross-border e-commerce", "Manufacturing & B2B trade", "Brands radiating into the Middle East & Central Asia"],
+    },
+  },
+  "uy-vs-ar": {
+    slug: "uy-vs-ar",
+    a: "uy",
+    b: "ar",
+    zh: {
+      title: ".uy 和 .ar 怎么选：乌拉圭与阿根廷国家域名的拉普拉塔河对比",
+      metaDescription: ".uy 是乌拉圭国家域名、约 $53/年、顶级直注任何人可注册；.ar 是阿根廷国家域名、约 $36/年、同样完全开放。对比拉普拉塔河两岸市场的体量与定位，并用 AI 猎取可注册的名字。",
+      verdict:
+        "拉普拉塔河两岸的邻国，资格都完全开放、都平续无钩子，分水岭在市场体量与产业生态。做乌拉圭与软件出海 → .uy：乌拉圭共和国大学 SeCIU 运营、注册量约 6 万（含 .com.uy 体系），乌拉圭人口约 340 万、却是拉美最稳定数字化程度最高的经济体之一：人均软件出口常年拉美第一，蒙得维的亚聚集了 dLocal（拉美支付独角兽）与 PedidosYa，Globant 等外包巨头在此设大型交付中心，政局稳定被称为「拉美瑞士」。顶级直注 2012 年起完全开放、无需本地地址，约 $53/年（约 ¥380）、平续同价，好名字库存干净。做阿根廷与更大体量 → .ar：国家科技部旗下 NIC Argentina 运营、注册量约 70 万（是 .uy 体系的十倍以上），阿根廷人口约 4600 万、是拉美第三大经济体：全球重要的农产品出口国（大豆、牛肉、葡萄酒），也是拉美科技独角兽的摇篮——Mercado Libre、Globant 都发家于此，工程师人才密度居拉美前列；完全开放、约 $36/年（约 ¥260）、平续同价，比 .uy 便宜三成。两国都说西班牙语，面向本地市场建议西语词根，科技圈英文词根同样通行。判断标准：业务落点在乌拉圭、做软件外包 SaaS 或看重「拉美瑞士」的稳定信号 → .uy 信号精准且库存干净；落点在阿根廷、做农业外贸电商或想要更大的本地市场 → .ar 体量大十倍且更便宜；同时做拉普拉塔河两岸生意的品牌各注各的——加起来 $89/年，别用一个 ccTLD 硬跨两国。",
+      pickA: ["乌拉圭本地企业与服务", "软件外包与 SaaS 团队", "牛肉与农产品出口", "看重稳定营商环境的品牌"],
+      pickB: ["阿根廷本地企业与服务", "农业外贸与跨境电商", "拉美科技创业公司", "预算敏感的南锥市场团队"],
+    },
+    en: {
+      title: ".uy vs .ar: Uruguay or Argentina Country Domain Compared",
+      metaDescription:
+        ".uy is Uruguay's country domain at ~$53/yr with direct second-level registration open to anyone; .ar is Argentina's at ~$36/yr, equally open. Compare the two Río de la Plata markets' size and positioning, then hunt available names.",
+      verdict:
+        "Neighbors across the Río de la Plata, both fully open with flat renewals — the divide is market size and industry ecosystem. Uruguay and software exports → .uy: run by SeCIU at the University of the Republic with about 60,000 registrations across its zones including .com.uy; Uruguay has about 3.4 million people yet is one of Latin America's most stable and digitized economies: per-capita software exports lead the region, Montevideo hosts dLocal (the Latin American payments unicorn) and PedidosYa, outsourcing giants like Globant run major delivery centers here, and political stability earns it the \"Switzerland of Latin America\" tag. Direct second-level registration has been fully open since 2012 with no local address, at about $53/yr (≈¥380), same renewal, with clean name inventory. Argentina and the bigger market → .ar: run by NIC Argentina under the science ministry with about 700,000 registrations (over ten times the .uy system); Argentina has about 46 million people and is Latin America's third-largest economy: a major agricultural exporter (soy, beef, wine) and the cradle of the region's tech unicorns — Mercado Libre and Globant both started here, with top-tier engineering talent density; fully open at about $36/yr (≈¥260), flat — about a third cheaper than .uy. Both are Spanish-speaking: Spanish roots fit local markets, while English roots work fine in tech circles. The test: business landing in Uruguay, software outsourcing, SaaS or valuing the \"Switzerland of Latin America\" stability signal → .uy is the precise signal with clean inventory; landing in Argentina, agri-trade, e-commerce or wanting the much bigger local market → .ar is ten times the size and cheaper; brands working both banks of the Río de la Plata register both — $89/yr combined, never one ccTLD stretched across two countries.",
+      pickA: ["Local Uruguayan businesses & services", "Software outsourcing & SaaS teams", "Beef & agricultural exports", "Brands valuing a stable business climate"],
+      pickB: ["Local Argentine businesses & services", "Agri-trade & cross-border e-commerce", "Latin American tech startups", "Budget-conscious Southern Cone teams"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
