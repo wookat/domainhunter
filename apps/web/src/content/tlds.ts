@@ -12084,6 +12084,186 @@ const GUIDES = {
       ],
     },
   },
+  lu: {
+    tld: "lu",
+    zh: {
+      title: ".lu 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".lu 是卢森堡国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向卢森堡与欧盟市场的基金、金融科技、航天与企业总部业务。查看 .lu 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .lu 域名。",
+      intro:
+        ".lu 是卢森堡的国家域名，由 Restena 基金会（DNS-LU）运营，注册量约 11 万。卢森堡人口只有约 66 万，却是全球第二大基金中心（仅次于美国）、欧洲私人银行与再保险重镇：SES（全球最大卫星运营商之一）、RTL 集团总部在此，亚马逊、PayPal、Skype 都把欧洲总部设在卢森堡，政府近年重点押注航天资源与金融科技，人均 GDP 常年全球第一。本地与欧盟客户对 name.lu 的信任度极高：基金管理公司、律所、家族办公室与本地服务商几乎都用 .lu 做主站，「卢森堡的机构」一眼讲清；Google 也会把 .lu 站点与卢森堡地区相关联，本地 SEO 有天然加成。资格上完全开放：任何国家的个人与机构都可注册，无需本地地址或代理。价格温和且平续：约 $25/年（约 ¥180），续费同价，无引流钩子。法语、德语、卢森堡语并行，金融圈英语完全通行，命名用英文或法文词根都自然。品牌词直接上（brand.lu）最主流；基金与金融服务用「品类词 + .lu」讲清司法辖区落地，航天与科技公司用行业词根。注意受众主要是卢森堡与欧盟机构客户，纯消费级全球业务信号较弱。",
+      bestFor: ["基金与资产管理公司", "金融科技与支付团队", "航天与卫星产业", "欧洲总部与控股公司"],
+      namingTips: [
+        "无资格限制，任何人可注册、无需本地地址",
+        "注册续费均约 $25/年，价格温和平续无钩子",
+        "金融圈英语通行，英文或法文词根都自然",
+        "受众偏机构与欧盟市场，消费级全球业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".lu Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".lu is Luxembourg's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Luxembourg and EU-market funds, fintech, space and corporate-HQ businesses. See live pricing and naming advice, then hunt available .lu names with AI.",
+      intro:
+        ".lu is Luxembourg's country-code domain, run by the Restena Foundation (DNS-LU) with about 110,000 registrations. Luxembourg has only about 660,000 people yet is the world's second-largest fund center (after the US) and a European hub for private banking and reinsurance: SES (one of the world's largest satellite operators) and RTL Group are headquartered here, Amazon, PayPal and Skype all chose Luxembourg for their European HQs, the government is betting big on space resources and fintech, and GDP per capita is perennially the world's highest. Local and EU clients place very high trust in name.lu: fund managers, law firms, family offices and local services overwhelmingly run their main sites on .lu — it says \"a Luxembourg institution\" at a glance; Google also geo-associates .lu sites with Luxembourg, a natural boost for local SEO. Eligibility is fully open: individuals and organizations from anywhere can register, no local address or proxy needed. Pricing is moderate and flat: about $25/yr (≈¥180) with the same renewal, no teaser games. French, German and Luxembourgish coexist, and English is universal in finance circles — English or French roots both feel natural. A straight brand word (brand.lu) is the mainstream shape; funds and financial services fit category + .lu to claim the jurisdiction, and space/tech companies fit an industry root. One caution: the audience skews institutional and EU-focused — the signal is weaker for purely consumer global plays.",
+      bestFor: ["Fund & asset management firms", "Fintech & payments teams", "Space & satellite industry", "European HQs & holding companies"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $25/yr flat to register and renew — moderate with no traps",
+        "English is universal in finance circles — English or French roots both work",
+        "Audience skews institutional/EU — weaker signal for consumer global plays",
+      ],
+    },
+  },
+  la: {
+    tld: "la",
+    zh: {
+      title: ".la 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".la 是老挝国家域名，无资格限制、任何人可注册，长期被作为「洛杉矶（LA）」城市域名推广，适合洛杉矶本地业务、老挝市场品牌与中文「啦/拉」谐音玩法。查看 .la 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .la 域名。",
+      intro:
+        ".la 名义上是老挝的国家域名，但自 2000 年代起注册局便授权国际公司面向全球开放运营，并长期被作为「洛杉矶（Los Angeles，LA）」的城市域名推广——这是它和多数 ccTLD 最大的不同：绝大多数 .la 注册者其实是洛杉矶的商家、律所、餐厅与创意机构，而非老挝本地企业。对洛杉矶业务来说，name.la 比冗长的 losangeles 组合干净得多，本地辨识度直接拉满；对中文互联网，.la 还有「啦/拉」的语气词谐音，社区与娱乐产品的域名黑客玩法不少。老挝本地市场虽小（人口约 760 万），但随着中老铁路开通与旅游业恢复，面向老挝的旅游、物流与外贸业务用 .la 也有真实的本地信号。资格上完全开放：任何国家的个人与机构都可注册，无需本地地址或代理。价格中等且平续：约 $36/年（约 ¥260），续费同价，无引流钩子。命名上洛杉矶业务用「品类词/街区名 + .la」最直观（tacos.la、venice.la 这类形态）；中文产品可用语气词谐音结尾；面向老挝市场用品牌词或行业词根。注意 .la 的「城市域名」定位是市场约定而非官方保证，主流受众在洛杉矶与华语圈。",
+      bestFor: ["洛杉矶本地商家与服务", "创意机构与娱乐产品", "面向老挝市场的旅游与外贸", "中文社区与谐音品牌"],
+      namingTips: [
+        "无资格限制，任何人可注册、无需本地地址",
+        "注册续费均约 $36/年，中等价位平续无钩子",
+        "洛杉矶业务用「品类词/街区名 + .la」最直观",
+        "「城市域名」定位是市场约定而非官方保证",
+      ],
+    },
+    en: {
+      title: ".la Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".la is Laos' country domain — no eligibility restrictions, anyone can register — long marketed as the city domain for Los Angeles (LA), great for LA businesses, Laos-market brands and Chinese phonetic wordplay. See live pricing and naming advice, then hunt available .la names with AI.",
+      intro:
+        ".la is nominally the country-code domain of Laos, but since the 2000s the registry has licensed international operators to run it globally, and it has long been marketed as the city domain for Los Angeles (LA) — the biggest way it differs from most ccTLDs: the majority of .la registrants are actually LA businesses, law firms, restaurants and creative agencies rather than Lao companies. For a Los Angeles business, name.la is far cleaner than a long losangeles compound and instantly reads as local; on the Chinese internet, .la doubles as the cheerful particle \"la\" (啦/拉), enabling playful domain hacks for community and entertainment products. The Lao domestic market is small (about 7.6 million people), but with the China–Laos railway open and tourism recovering, travel, logistics and trade businesses targeting Laos get a genuine local signal from .la too. Eligibility is fully open: individuals and organizations from anywhere can register, no local address or proxy needed. Pricing is mid-range and flat: about $36/yr (≈¥260) with the same renewal, no teaser games. For naming, LA businesses fit category or neighborhood + .la (shapes like tacos.la or venice.la); Chinese products can end on the phonetic particle; Laos-market plays fit a brand word or industry root. One caution: the \"city domain\" positioning is market convention, not an official guarantee — the mainstream audience is Los Angeles and the Chinese-speaking web.",
+      bestFor: ["Los Angeles businesses & services", "Creative agencies & entertainment products", "Laos-market travel & trade", "Chinese communities & phonetic brands"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $36/yr flat to register and renew — mid-range with no traps",
+        "LA businesses fit category or neighborhood + .la shapes",
+        "The city-domain positioning is market convention, not official",
+      ],
+    },
+  },
+  md: {
+    tld: "md",
+    zh: {
+      title: ".md 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".md 是摩尔多瓦国家域名，无资格限制、任何人可注册，后缀恰好是「医学博士（MD）」与 Markdown 文件扩展名，适合医生诊所、医疗健康品牌与开发者文档工具。查看 .md 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .md 域名。",
+      intro:
+        ".md 是摩尔多瓦的国家域名，注册完全开放、任何人可注册，但它真正的注册需求大半来自两个巧合的缩写：在英语世界 MD 是「医学博士（Doctor of Medicine）」的头衔缩写，美国医生名片、诊所招牌上的「John Smith, MD」深入人心，name.md 对医生个人品牌与诊所官网是天然匹配，多年来注册局也一直把它当医疗域名推广；在开发者世界 .md 又是 Markdown 文件的扩展名（README.md 无人不识），文档工具、笔记产品与开源项目用 .md 做域名黑客辨识度极高。摩尔多瓦本地市场不大（人口约 250 万），但葡萄酒出口与 IT 外包是亮点，面向摩尔多瓦的业务用 .md 也有真实本地信号；Google 对 .md 按通用域名对待的场景有限，主要仍地理关联摩尔多瓦。资格上无限制：任何国家的个人与机构都可注册，无需本地地址或代理。价格是明显短板：约 $130/年（约 ¥940），续费同价，在 ccTLD 里属于偏贵的一档，适合品牌预算充足的场景。命名上医生用「姓名/诊所名 + .md」最主流；文档与开发工具用「产品词 + .md」玩 Markdown 梗；医疗品牌用品类词根。注意价格高企，先确认长期使用再入手。",
+      bestFor: ["医生个人品牌与诊所", "医疗健康产品与服务", "文档与笔记工具（Markdown 梗）", "面向摩尔多瓦市场的品牌"],
+      namingTips: [
+        "无资格限制，任何人可注册、无需本地地址",
+        "注册续费均约 $130/年，偏贵但平续无钩子",
+        "医生用「姓名/诊所名 + .md」，开发工具玩 Markdown 梗",
+        "价格高企，先确认长期使用再入手",
+      ],
+    },
+    en: {
+      title: ".md Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".md is Moldova's country domain — no eligibility restrictions, anyone can register — and the suffix doubles as the physician title \"MD\" and the Markdown file extension, ideal for doctors, health brands and developer documentation tools. See live pricing and naming advice, then hunt available .md names with AI.",
+      intro:
+        ".md is Moldova's country-code domain, fully open with no eligibility restrictions — but most of its real registration demand comes from two lucky abbreviations. In the English-speaking world MD is the physician title (Doctor of Medicine): \"John Smith, MD\" is on every American doctor's card and clinic sign, making name.md a natural fit for physician personal brands and clinic websites, and the registry has long marketed it as a medical domain. In the developer world .md is the Markdown file extension (everyone knows README.md), so documentation tools, note-taking products and open-source projects get instant recognition from a .md domain hack. Moldova's domestic market is small (about 2.5 million people), but wine exports and IT outsourcing are bright spots, and Moldova-facing businesses get a genuine local signal; Google still primarily geo-associates .md with Moldova. Eligibility is unrestricted: individuals and organizations from anywhere can register, no local address or proxy needed. Price is the clear drawback: about $130/yr (≈¥940) with the same renewal — one of the pricier ccTLDs, best when the brand budget supports it. For naming, doctors fit name or clinic + .md; docs and dev tools fit product + .md for the Markdown pun; health brands fit a category root. One caution: the price is steep — commit only if you'll use it long-term.",
+      bestFor: ["Physician personal brands & clinics", "Health & medical products", "Docs & note tools (Markdown pun)", "Moldova-market brands"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $130/yr flat to register and renew — pricey but no traps",
+        "Doctors fit name/clinic + .md; dev tools play the Markdown pun",
+        "The price is steep — commit only for long-term use",
+      ],
+    },
+  },
+  am: {
+    tld: "am",
+    zh: {
+      title: ".am 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".am 是亚美尼亚国家域名，无资格限制、任何人可注册，后缀恰好是英语系动词「am」与 AM 广播缩写，域名黑客玩法一流，适合电台音乐产品、个人品牌宣言与亚美尼亚市场业务。查看 .am 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .am 域名。",
+      intro:
+        ".am 是亚美尼亚的国家域名，由亚美尼亚互联网协会（ISOC AM）运营，注册完全开放、任何人可注册。它的全球知名度几乎全靠域名黑客：.am 恰好是英语第一人称系动词「am」，Instagram 早年的短链 instagr.am 是教科书级案例，「I am …」式的个人品牌宣言（例如 who.am、i.am——will.i.am 本人就用它）辨识度极高；同时 AM 又是调幅广播的通用缩写，电台、播客与音乐产品用 .am 自带「广播感」，last.fm 之后不少音频产品选了 .am。亚美尼亚本地则是高加索地区的 IT 亮点：埃里温聚集了 Picsart（图像编辑独角兽）、ServiceTitan 创始团队与大批外包工程师，科技产业占 GDP 比重在独联体国家中名列前茅，面向亚美尼亚与侨民市场（全球侨民约为本土人口三倍）的业务用 .am 本地信任度很高。资格上无限制：任何国家的个人与机构都可注册，无需本地地址或代理。价格中等偏上且平续：约 $60/年（约 ¥430），续费同价，无引流钩子。命名上「动词/短语 + .am」的黑客形态最出彩（instagr.am 式截词）；电台与音乐产品用「品牌词 + .am」；亚美尼亚业务用品牌或行业词根。注意截词玩法要保证读音自然，拼不出来的截词等于白玩。",
+      bestFor: ["电台、播客与音乐产品", "「I am」式个人品牌", "亚美尼亚本地与侨民业务", "域名黑客与创意短链"],
+      namingTips: [
+        "无资格限制，任何人可注册、无需本地地址",
+        "注册续费均约 $60/年，中等偏上平续无钩子",
+        "instagr.am 式截词黑客最出彩，读音必须自然",
+        "AM 广播缩写自带「电台感」，音频产品天然匹配",
+      ],
+    },
+    en: {
+      title: ".am Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".am is Armenia's country domain — no eligibility restrictions, anyone can register — and the suffix is the English verb \"am\" and the AM-radio abbreviation, a first-class domain hack for radio and music products, personal-brand statements and Armenian-market businesses. See live pricing and naming advice, then hunt available .am names with AI.",
+      intro:
+        ".am is Armenia's country-code domain, run by the Internet Society of Armenia (ISOC AM) and fully open to anyone. Its global fame rests almost entirely on domain hacks: .am happens to be the English first-person verb \"am\" — Instagram's early short link instagr.am is the textbook case, and \"I am …\" personal-brand statements (who.am, i.am — will.i.am uses his own) are instantly memorable; AM is also the universal abbreviation for AM radio, so stations, podcasts and music products get a built-in \"broadcast feel\" from .am, and plenty of audio products followed last.fm's lead with it. Domestically, Armenia is the Caucasus' IT bright spot: Yerevan hosts Picsart (the image-editing unicorn), the founding team of ServiceTitan and a deep bench of outsourcing engineers, with tech among the highest GDP shares in the CIS — and businesses targeting Armenia and its diaspora (roughly three times the domestic population worldwide) get strong local trust from .am. Eligibility is unrestricted: individuals and organizations from anywhere can register, no local address or proxy needed. Pricing is upper-mid and flat: about $60/yr (≈¥430) with the same renewal, no teaser games. For naming, the verb/phrase + .am hack is the star shape (instagr.am-style truncation); radio and music products fit brand + .am; Armenian businesses fit a brand or industry root. One caution: truncation hacks must read naturally aloud — an unpronounceable cut is a wasted hack.",
+      bestFor: ["Radio, podcast & music products", "\"I am\"-style personal brands", "Armenian local & diaspora businesses", "Domain hacks & creative short links"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $60/yr flat to register and renew — upper-mid with no traps",
+        "instagr.am-style truncation hacks shine — must read naturally aloud",
+        "The AM-radio abbreviation gives audio products a built-in broadcast feel",
+      ],
+    },
+  },
+  mn: {
+    tld: "mn",
+    zh: {
+      title: ".mn 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".mn 是蒙古国家域名，无资格限制、任何人可注册，本地信任度极高，还是美国明尼苏达州（MN）的州缩写，适合面向蒙古市场的品牌、矿业外贸与明尼苏达本地业务。查看 .mn 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .mn 域名。",
+      intro:
+        ".mn 是蒙古的国家域名，由 Datacom 运营，注册完全开放、任何人可注册。蒙古人口约 350 万，经济高度依赖矿业：奥尤陶勒盖（Oyu Tolgoi）铜金矿是全球最大铜矿之一，煤炭、铜与羊绒出口（占全球羊绒产量约三分之一）是支柱产业，乌兰巴托聚集了全国近半人口，电商与移动支付近年增长很快。本地消费者对 name.mn 的信任度极高：本地银行、电商与媒体的主站几乎都在 .mn 上，「蒙古的生意」一眼讲清；Google 也会把 .mn 站点与蒙古地区相关联，本地 SEO 有天然加成。.mn 还有一层美国玩法：MN 是明尼苏达州的官方州缩写，明尼阿波利斯的本地商家、餐厅与服务用 name.mn 讲「明尼苏达本地」也很直观，注册局亦按此推广过。资格上无限制：任何国家的个人与机构都可注册，无需本地地址或代理。价格中等且平续：约 $45/年（约 ¥320），续费同价，无引流钩子。蒙古语现用西里尔字母，面向本地市场建议用拉丁转写的蒙语词根或英文词根；命名上品牌词直接上（brand.mn）最主流，矿业与羊绒外贸用行业词根，明尼苏达业务用「品类词 + .mn」。注意双重定位需自己讲清：受众要么在蒙古，要么在明尼苏达，混用信号会稀释。",
+      bestFor: ["蒙古本地企业与电商", "矿业与羊绒外贸", "明尼苏达本地业务", "面向中亚草原市场的品牌"],
+      namingTips: [
+        "无资格限制，任何人可注册、无需本地地址",
+        "注册续费均约 $45/年，中等价位平续无钩子",
+        "本地市场用拉丁转写蒙语或英文词根",
+        "蒙古与明尼苏达双重定位，混用会稀释信号",
+      ],
+    },
+    en: {
+      title: ".mn Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".mn is Mongolia's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Mongolian-market brands and mining/cashmere trade, plus a Minnesota (MN) angle for US local businesses. See live pricing and naming advice, then hunt available .mn names with AI.",
+      intro:
+        ".mn is Mongolia's country-code domain, run by Datacom and fully open to anyone. Mongolia has about 3.5 million people and a mining-driven economy: Oyu Tolgoi is one of the world's largest copper mines, coal, copper and cashmere exports (about a third of global cashmere production) are the pillars, nearly half the population lives in Ulaanbaatar, and e-commerce and mobile payments are growing fast. Local consumers place very high trust in name.mn: local banks, e-commerce sites and media overwhelmingly run their main sites on .mn — it says \"a Mongolian business\" at a glance; Google also geo-associates .mn sites with Mongolia, a natural boost for local SEO. There's an American angle too: MN is the official abbreviation of Minnesota, so Minneapolis-area shops, restaurants and services can use name.mn to read as \"Minnesota local,\" and the registry has marketed it that way. Eligibility is unrestricted: individuals and organizations from anywhere can register, no local address or proxy needed. Pricing is mid-range and flat: about $45/yr (≈¥320) with the same renewal, no teaser games. Mongolian is written in Cyrillic today — for the local market use Latin-transliterated Mongolian or English roots; a straight brand word (brand.mn) is the mainstream shape, mining and cashmere trade fit an industry root, and Minnesota businesses fit category + .mn. One caution: the dual positioning is yours to clarify — the audience is either Mongolia or Minnesota, and mixing the two dilutes the signal.",
+      bestFor: ["Local Mongolian businesses & e-commerce", "Mining & cashmere trade", "Minnesota local businesses", "Central Asian steppe-market brands"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $45/yr flat to register and renew — mid-range with no traps",
+        "Use Latin-transliterated Mongolian or English roots for the local market",
+        "Mongolia vs Minnesota is a dual positioning — mixing dilutes the signal",
+      ],
+    },
+  },
+  uz: {
+    tld: "uz",
+    zh: {
+      title: ".uz 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".uz 是乌兹别克斯坦国家域名，任何人可通过授权注册商注册、无需本地地址，本地信任度极高，适合面向乌兹别克斯坦与中亚市场的品牌、电商与 IT 外包业务。查看 .uz 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .uz 域名。",
+      intro:
+        ".uz 是乌兹别克斯坦的国家域名，由国家机构 UZINFOCOM 协调管理、通过授权注册商开放注册。乌兹别克斯坦人口约 3600 万，是中亚人口最多的国家，2017 年起大力改革开放：塔什干 IT Park 以税收优惠吸引了数百家科技公司与外包团队入驻，IT 服务出口连年翻番，Uzum（本土电商与金融科技超级应用）成为该国第一家独角兽，棉花、天然气与黄金出口是传统支柱，中国是其最大贸易伙伴之一。本地消费者对 name.uz 的信任度极高：本地银行、电商与政府服务的主站几乎都在 .uz 上，「乌兹别克斯坦的生意」一眼讲清；Google 也会把 .uz 站点与乌兹别克斯坦地区相关联，本地 SEO 有天然加成。资格上对外国人友好：任何国家的个人与机构都可通过授权注册商注册，无需本地地址（部分海外注册商也支持直接下单）。价格温和且平续：约 $30/年（约 ¥220），续费同价，无引流钩子。乌兹别克语已转用拉丁字母，俄语在商业场景仍通行，命名用拉丁化乌兹别克语词根或俄语、英语词根都可行。品牌词直接上（brand.uz）最主流；电商与外贸用「品类词 + .uz」，IT 外包用行业词根。注意受众主要在乌兹别克斯坦本土，纯外部市场业务信号较弱。",
+      bestFor: ["乌兹别克斯坦本地企业与电商", "IT 外包与科技团队", "棉花与矿产外贸", "面向中亚市场的品牌"],
+      namingTips: [
+        "任何人可经授权注册商注册，无需本地地址",
+        "注册续费均约 $30/年，温和平续无钩子",
+        "拉丁化乌兹别克语、俄语或英语词根都可行",
+        "受众在乌兹别克斯坦本土，纯外部市场信号较弱",
+      ],
+    },
+    en: {
+      title: ".uz Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".uz is Uzbekistan's country domain — anyone can register through accredited registrars with no local address needed — with top-tier local trust for Uzbekistan and Central Asia-market brands, e-commerce and IT outsourcing. See live pricing and naming advice, then hunt available .uz names with AI.",
+      intro:
+        ".uz is Uzbekistan's country-code domain, coordinated by the state agency UZINFOCOM and open through accredited registrars. Uzbekistan has about 36 million people — Central Asia's most populous country — and has been reforming aggressively since 2017: Tashkent's IT Park has drawn hundreds of tech companies and outsourcing teams with tax incentives, IT service exports keep doubling, Uzum (the local e-commerce and fintech super-app) became the country's first unicorn, cotton, natural gas and gold exports remain the traditional pillars, and China is among its largest trading partners. Local consumers place very high trust in name.uz: local banks, e-commerce sites and government services overwhelmingly run on .uz — it says \"an Uzbek business\" at a glance; Google also geo-associates .uz sites with Uzbekistan, a natural boost for local SEO. Eligibility is foreigner-friendly: individuals and organizations from anywhere can register through accredited registrars, no local address needed (some international registrars support it directly). Pricing is moderate and flat: about $30/yr (≈¥220) with the same renewal, no teaser games. Uzbek now uses the Latin alphabet and Russian remains common in business — Latinized Uzbek, Russian or English roots all work. A straight brand word (brand.uz) is the mainstream shape; e-commerce and trade fit category + .uz, and IT outsourcing fits an industry root. One caution: the audience is primarily Uzbekistan — the signal is weaker for purely external markets.",
+      bestFor: ["Local Uzbek businesses & e-commerce", "IT outsourcing & tech teams", "Cotton & minerals trade", "Central Asia-market brands"],
+      namingTips: [
+        "Anyone can register via accredited registrars — no local address needed",
+        "About $30/yr flat to register and renew — moderate with no traps",
+        "Latinized Uzbek, Russian or English roots all work",
+        "Audience is primarily Uzbekistan — weaker signal for purely external markets",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致
