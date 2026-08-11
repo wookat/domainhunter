@@ -5,6 +5,7 @@ import { GUIDE_LABELS } from "@/content/guide-labels";
 import { relatedGuideSlugs } from "@/content/guide-groups";
 import { buildGuideFaq } from "@/content/guide-faq";
 import { readInjectedContent } from "@/content/injected";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { NotFoundPage } from "@/components/not-found-page";
 import { useI18n } from "@/lib/i18n";
 import { priceShort, usePrices } from "@/lib/prices";
@@ -27,13 +28,7 @@ export function GuidePage({ slug }: { slug: string }) {
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
-      <p className="font-mono text-sm text-brand">
-        <a href={`/guide?lang=${lang}`} className="tap-target inline-block text-txt2 hover:text-brand hover:underline">
-          {t("hub.allGuide")}
-        </a>
-        <span className="mx-1.5 text-txt2">/</span>
-        {loc.label}
-      </p>
+      <Breadcrumb hub="guide" current={loc.label} />
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{loc.title}</h1>
 
       <p className="mt-6 text-[15px] leading-relaxed text-txt1">{loc.intro}</p>
