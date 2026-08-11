@@ -11724,6 +11724,186 @@ const GUIDES = {
       ],
     },
   },
+  za: {
+    tld: "za",
+    zh: {
+      title: ".za 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".za 是南非国家域名，主流形态 .co.za 无资格限制、任何人可注册且价格极低，本地信任度极高，适合面向南非与非洲南部市场的品牌、电商与旅游业务。查看 .za 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .za 域名。",
+      intro:
+        ".za 是南非的国家域名，由监管机构 ZADNA 与注册局 ZA Registry Consortium（ZARC）运营，注册量超过 400 万，是非洲规模最大的国家域名。南非人口约 6000 万，是非洲最工业化的经济体：约翰内斯堡是非洲的金融中心，开普敦聚集了旅游与创业生态，Naspers/Takealot 等本土互联网巨头都成长于此。本地消费者对本土信号非常敏感：南非企业与政府机构的主站几乎全部落在 name.co.za 上，「南非的生意」一眼讲清，信任度远超一般新后缀；Google 也会把 .za 站点与南非地区相关联，本地 SEO 有天然加成。资格上主流的 .co.za 完全开放：任何国家的个人与机构都可注册，无需本地地址或代理（.za 顶级不开放直注，商用一律走 .co.za，另有 org.za、web.za 等分区）。价格是它的一大杀手锏：约 $8/年（约 ¥60），续费同价，比大多数国家域名都便宜。英语是通用商务语言，英文词根无需翻译。命名上品牌词直接上（brand.co.za）最主流；旅游、酒庄与野奢营地用「主题词 + .co.za」，电商与本地服务用「品类词 + .co.za」讲清市场落地。注意受众主要在南非与周边市场，纯外部市场业务信号较弱。",
+      bestFor: ["南非本地企业与服务", "面向南非的跨境电商", "旅游、酒庄与野奢营地", "非洲南部市场品牌与创业公司"],
+      namingTips: [
+        "商用主流形态是 .co.za，任何人可注册、无需本地地址",
+        "注册续费均约 $8/年，非洲大 ccTLD 里最便宜的一档",
+        "英语是通用商务语言，英文词根无需翻译",
+        "受众在南非与周边市场，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".za Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".za is South Africa's country domain — the mainstream .co.za form has no eligibility restrictions, anyone can register at a very low price — with top-tier local trust for South African-market brands, e-commerce and tourism. See live pricing and naming advice, then hunt available .za names with AI.",
+      intro:
+        ".za is South Africa's country-code domain, overseen by regulator ZADNA and operated by the ZA Registry Consortium (ZARC), with over 4 million registrations — Africa's largest ccTLD. South Africa has about 60 million people and Africa's most industrialized economy: Johannesburg is the continent's financial capital, Cape Town hosts a thriving tourism and startup scene, and homegrown internet giants like Naspers and Takealot grew up here. Local consumers are strongly attuned to local signals: South African companies and government institutions overwhelmingly live on name.co.za — it says \"a South African business\" at a glance, with trust far beyond any new gTLD; Google also geo-associates .za sites with South Africa, a natural boost for local SEO. On eligibility, the mainstream .co.za zone is fully open: individuals and organizations from anywhere can register with no local address or proxy (direct second-level .za registration isn't offered — commercial use goes through .co.za, with org.za, web.za and other zones available). Price is a killer feature: about $8/yr (≈¥60) with the same renewal — cheaper than most country domains. English is the language of business, so English roots need no translation. For naming, a straight brand word is the mainstream shape (brand.co.za); tourism, wineries and safari lodges fit topic + .co.za, and e-commerce or local services fit category + .co.za to claim the market. One caution: the audience is primarily South Africa and neighboring markets — the signal is weaker for purely external markets.",
+      bestFor: ["Local South African businesses & services", "South Africa-facing cross-border e-commerce", "Tourism, wineries & safari lodges", "Southern Africa-market brands & startups"],
+      namingTips: [
+        "Commercial registrations use .co.za — anyone can register, no local address needed",
+        "About $8/yr flat to register and renew — among the cheapest major ccTLDs",
+        "English is the language of business — English roots need no translation",
+        "Audience is primarily South Africa & neighbors — weaker signal for purely external markets",
+      ],
+    },
+  },
+  ma: {
+    tld: "ma",
+    zh: {
+      title: ".ma 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ma 是摩洛哥国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向摩洛哥与马格里布市场的品牌、电商、旅游与外贸业务。查看 .ma 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ma 域名。",
+      intro:
+        ".ma 是摩洛哥的国家域名，由电信监管局 ANRT 负责管理，注册量约 12 万。摩洛哥人口约 3700 万，是北非最开放的经济体之一：卡萨布兰卡是区域金融中心（Casablanca Finance City），丹吉尔地中海港是非洲吞吐量最大的港口之一，汽车与航空零部件制造、纺织与磷酸盐出口都是支柱产业，马拉喀什与舍夫沙万的旅游热度常年居高不下。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.ma，「摩洛哥的生意」一眼讲清，信任度远超一般新后缀——摩洛哥本土企业与政府机构的主站几乎都在 .ma 上；Google 也会把 .ma 站点与摩洛哥地区相关联，本地 SEO 有天然加成。资格上 .ma 完全开放：任何国家的个人与机构都可注册，无需本地地址或代理。价格中等且平续：约 $30/年（约 ¥220），续费同价，无引流钩子。法语与阿拉伯语是主要商务语言，面向本地市场法语词根命中率更高，外贸与科技场景英文词根照样好用；「ma」在法语里是「我的（阴性）」，还有 cine.ma、panora.ma 等域名黑客玩法。命名上品牌词直接上（brand.ma）最主流；旅游与手工艺电商用「主题词 + .ma」，外贸制造用「品类词 + .ma」讲清市场落地。注意受众主要在摩洛哥与法语区，纯外部市场业务信号较弱。",
+      bestFor: ["摩洛哥本地企业与服务", "旅游与手工艺电商", "汽车/纺织制造与外贸", "面向马格里布与法语区的品牌"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $30/年，平续无钩子",
+        "法语/阿拉伯语是主要商务语言，法语词根命中率更高",
+        "「ma」是法语「我的」，还有 cine.ma 等域名黑客玩法",
+      ],
+    },
+    en: {
+      title: ".ma Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ma is Morocco's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Moroccan and Maghreb-market brands, e-commerce, tourism and trade. See live pricing and naming advice, then hunt available .ma names with AI.",
+      intro:
+        ".ma is Morocco's country-code domain, administered by telecom regulator ANRT with about 120,000 registrations. Morocco has about 37 million people and one of North Africa's most open economies: Casablanca is a regional financial hub (Casablanca Finance City), Tanger Med is among Africa's busiest ports, automotive and aerospace parts manufacturing, textiles and phosphate exports are pillar industries, and Marrakech and Chefchaouen keep tourism demand high year-round. Local consumers are strongly attuned to local signals: name.ma says \"a Moroccan business\" at a glance, with trust far beyond any new gTLD — Moroccan companies and government institutions overwhelmingly live on .ma; Google also geo-associates .ma sites with Morocco, a natural boost for local SEO. On eligibility, .ma is fully open: individuals and organizations from anywhere can register, with no local address or proxy. Pricing is moderate and flat: about $30/yr (≈¥220) with the same renewal, no teaser games. French and Arabic are the main business languages — French roots hit better for the local market, while English roots work fine in trade and tech contexts; \"ma\" is French for \"my\", enabling name hacks like cine.ma or panora.ma. For naming, a straight brand word is the mainstream shape (brand.ma); tourism and craft e-commerce fit topic + .ma, and manufacturing trade fits category + .ma to claim the market. One caution: the audience is primarily Morocco and the Francophone region — the signal is weaker for purely external markets.",
+      bestFor: ["Local Moroccan businesses & services", "Tourism & craft e-commerce", "Automotive/textile manufacturing & trade", "Maghreb & Francophone-market brands"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $30/yr flat to register and renew — no traps",
+        "French/Arabic are the main business languages — French roots hit better locally",
+        "\"ma\" is French for \"my\" — name hacks like cine.ma work nicely",
+      ],
+    },
+  },
+  qa: {
+    tld: "qa",
+    zh: {
+      title: ".qa 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".qa 是卡塔尔国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向卡塔尔与海湾市场的品牌、能源外贸与体育赛事业务。查看 .qa 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .qa 域名。",
+      intro:
+        ".qa 是卡塔尔的国家域名，由通信监管局 CRA 下属的卡塔尔域名注册局（Qatar Domains Registry）运营，注册量约 4 万。卡塔尔人口约 300 万，却是全球人均 GDP 最高的国家之一：全球最大的液化天然气（LNG）出口国，主权基金 QIA 管理数千亿美元资产，多哈凭借 2022 世界杯、半岛媒体网络与卡塔尔航空成为中东的会展与体育之都，Msheireb 与 QSTP 科技园的数字化投入也在快速加码。本地消费者与机构对本土信号非常敏感：本地企业、品牌官网与服务商用 name.qa，「卡塔尔的生意」一眼讲清，信任度远超一般新后缀——卡塔尔本土企业与政府机构的主站几乎都在 .qa 上；Google 也会把 .qa 站点与卡塔尔地区相关联，本地 SEO 有天然加成。资格上 .qa 完全开放：任何国家的个人与机构都可注册，无需本地地址或代理（.com.qa 等二级同样可选）。价格中等且平续：约 $35/年（约 ¥250），续费同价，无引流钩子。阿拉伯语是官方语言，但英语是商务通用语，英文词根无需翻译；「qa」还可读作 QA（质量保证/问答），给测试工具与问答产品留了双关空间。命名上品牌词直接上（brand.qa）最主流；能源外贸与工程服务用「品类词 + .qa」讲清市场落地。注意受众主要在卡塔尔与海湾市场，纯外部市场业务信号较弱。",
+      bestFor: ["卡塔尔本地企业与服务", "能源与工程外贸业务", "体育赛事与会展服务", "面向海湾市场的品牌与咨询"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $35/年，平续无钩子",
+        "英语是商务通用语，英文词根无需翻译",
+        "「qa」可读作 QA（质量保证/问答），测试与问答产品有双关空间",
+      ],
+    },
+    en: {
+      title: ".qa Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".qa is Qatar's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Qatari and Gulf-market brands, energy trade and sports/events businesses. See live pricing and naming advice, then hunt available .qa names with AI.",
+      intro:
+        ".qa is Qatar's country-code domain, run by the Qatar Domains Registry under the Communications Regulatory Authority (CRA), with about 40,000 registrations. Qatar has about 3 million people yet one of the world's highest GDPs per capita: the largest exporter of liquefied natural gas (LNG), a sovereign fund (QIA) managing hundreds of billions of dollars, and Doha — host of the 2022 World Cup, home of the Al Jazeera media network and Qatar Airways — has become the Middle East's capital of events and sport, with digital investment accelerating at Msheireb and the QSTP tech park. Local consumers and institutions are strongly attuned to local signals: name.qa says \"a Qatari business\" at a glance, with trust far beyond any new gTLD — Qatari companies and government institutions overwhelmingly live on .qa; Google also geo-associates .qa sites with Qatar, a natural boost for local SEO. On eligibility, .qa is fully open: individuals and organizations from anywhere can register, with no local address or proxy (second-level zones like .com.qa are also available). Pricing is moderate and flat: about $35/yr (≈¥250) with the same renewal, no teaser games. Arabic is the official language but English is the language of business, so English roots need no translation; \"qa\" also reads as QA (quality assurance / Q&A), a bonus angle for testing tools and Q&A products. For naming, a straight brand word is the mainstream shape (brand.qa); energy trade and engineering services fit category + .qa to claim the market. One caution: the audience is primarily Qatar and the Gulf — the signal is weaker for purely external markets.",
+      bestFor: ["Local Qatari businesses & services", "Energy & engineering trade", "Sports events & conference services", "Gulf-market brands & consultancies"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $35/yr flat to register and renew — no traps",
+        "English is the language of business — English roots need no translation",
+        "\"qa\" reads as QA (quality assurance / Q&A) — a bonus for testing & Q&A products",
+      ],
+    },
+  },
+  pk: {
+    tld: "pk",
+    zh: {
+      title: ".pk 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".pk 是巴基斯坦国家域名，无资格限制、任何人可注册（按两年为周期计费），本地信任度极高，适合面向巴基斯坦市场的品牌、电商与纺织外贸业务。查看 .pk 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .pk 域名。",
+      intro:
+        ".pk 是巴基斯坦的国家域名，由注册局 PKNIC 运营，注册量约 10 万（含 .com.pk 体系）。巴基斯坦人口约 2.4 亿，是全球第五人口大国：纺织与体育用品出口（世界杯足球大多产自锡亚尔科特）是传统支柱，卡拉奇与拉合尔的互联网经济正快速起量——Daraz（阿里旗下）领跑电商，Easypaisa/JazzCash 推动移动支付普及，自由职业者数量常年位居全球前五。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.pk 或 name.com.pk，「巴基斯坦的生意」一眼讲清，信任度远超一般新后缀——巴基斯坦本土企业与政府机构的主站几乎都在 .pk 体系上；Google 也会把 .pk 站点与巴基斯坦地区相关联，本地 SEO 有天然加成。资格上 .pk 完全开放：顶级直注与 .com.pk 都对任何国家的个人与机构开放，无需本地地址或代理。价格便宜，按两年为周期计费：约 $28/两年（合每年约 ¥100），续费同价，无引流钩子。英语是官方语言之一、商务通用，英文词根无需翻译。命名上品牌词直接上（brand.pk）最主流；纺织与体育用品外贸用「品类词 + .pk」讲清市场落地，电商与本地服务预算有限可先用 .com.pk。注意受众主要在巴基斯坦本土，纯外部市场业务信号较弱。",
+      bestFor: ["巴基斯坦本地企业与服务", "纺织与体育用品外贸", "面向巴基斯坦的跨境电商", "移动支付与自由职业平台"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "按两年为周期计费，约 $28/两年（合每年约 ¥100），平续无钩子",
+        "英语是官方语言之一，英文词根无需翻译",
+        "受众在巴基斯坦本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".pk Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".pk is Pakistan's country domain — no eligibility restrictions, anyone can register (billed in two-year terms) — with top-tier local trust for Pakistani-market brands, e-commerce and textile trade. See live pricing and naming advice, then hunt available .pk names with AI.",
+      intro:
+        ".pk is Pakistan's country-code domain, run by registry PKNIC with about 100,000 registrations across its zones including .com.pk. Pakistan has about 240 million people — the world's fifth most populous country: textiles and sporting goods exports (most World Cup footballs come from Sialkot) are traditional pillars, while the internet economy in Karachi and Lahore is scaling fast — Daraz (Alibaba-owned) leads e-commerce, Easypaisa and JazzCash drive mobile payments, and Pakistan consistently ranks among the world's top five freelancer countries. Local consumers are strongly attuned to local signals: name.pk or name.com.pk says \"a Pakistani business\" at a glance, with trust far beyond any new gTLD — Pakistani companies and government institutions overwhelmingly live on the .pk family; Google also geo-associates .pk sites with Pakistan, a natural boost for local SEO. On eligibility, .pk is fully open: both direct second-level and .com.pk registrations are open to individuals and organizations from anywhere, with no local address or proxy. Pricing is cheap and billed in two-year terms: about $28 per two years (≈¥100/yr) with the same renewal, no teaser games. English is an official language and the language of business, so English roots need no translation. For naming, a straight brand word is the mainstream shape (brand.pk); textile and sporting-goods trade fits category + .pk to claim the market, and budget-conscious e-commerce can start on .com.pk. One caution: the audience is primarily Pakistan — the signal is weaker for purely external markets.",
+      bestFor: ["Local Pakistani businesses & services", "Textile & sporting goods trade", "Pakistan-facing cross-border e-commerce", "Mobile payments & freelancer platforms"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "Billed in two-year terms: about $28/2yr (≈¥100/yr) — flat renewals, no traps",
+        "English is an official language — English roots need no translation",
+        "Audience is primarily Pakistan — weaker signal for purely external markets",
+      ],
+    },
+  },
+  lk: {
+    tld: "lk",
+    zh: {
+      title: ".lk 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".lk 是斯里兰卡国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向斯里兰卡市场的品牌、旅游、茶叶与服装外贸业务。查看 .lk 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .lk 域名。",
+      intro:
+        ".lk 是斯里兰卡的国家域名，由 LK Domain Registry 运营，注册量约 5 万。斯里兰卡人口约 2200 万，是印度洋上的贸易与旅游枢纽：锡兰红茶是全球最具辨识度的茶叶品牌之一，服装代工（Victoria's Secret、Nike 的重要产地）与科伦坡港的转运业务是外汇支柱，僧伽罗与康提的世界遗产、南部海滩与高山茶园让旅游业持续复苏。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.lk，「斯里兰卡的生意」一眼讲清，信任度远超一般新后缀——斯里兰卡本土企业与政府机构的主站几乎都在 .lk 上；Google 也会把 .lk 站点与斯里兰卡地区相关联，本地 SEO 有天然加成。资格上 .lk 完全开放：任何国家的个人与机构都可注册，无需本地地址或代理（.com.lk 等二级同样可选）。价格中等且平续：约 $25/年（约 ¥180），续费同价，无引流钩子。英语是商务通用语，英文词根无需翻译。命名上品牌词直接上（brand.lk）最主流；旅游与民宿用「主题词 + .lk」，茶叶与服装外贸用「品类词 + .lk」讲清市场落地。注意受众主要在斯里兰卡本土，纯外部市场业务信号较弱。",
+      bestFor: ["斯里兰卡本地企业与服务", "旅游、民宿与向导服务", "锡兰红茶与服装外贸", "面向南亚市场的品牌与创业公司"],
+      namingTips: [
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $25/年，平续无钩子",
+        "英语是商务通用语，英文词根无需翻译",
+        "受众在斯里兰卡本土，纯外部市场业务信号较弱",
+      ],
+    },
+    en: {
+      title: ".lk Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".lk is Sri Lanka's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Sri Lankan-market brands, tourism, tea and apparel trade. See live pricing and naming advice, then hunt available .lk names with AI.",
+      intro:
+        ".lk is Sri Lanka's country-code domain, run by the LK Domain Registry with about 50,000 registrations. Sri Lanka has about 22 million people and sits at an Indian Ocean crossroads of trade and tourism: Ceylon tea is one of the world's most recognizable tea brands, apparel manufacturing (a key producer for Victoria's Secret and Nike) and Colombo port transshipment are foreign-exchange pillars, and World Heritage sites like Sigiriya and Kandy plus southern beaches and hill-country tea estates keep tourism recovering strongly. Local consumers are strongly attuned to local signals: name.lk says \"a Sri Lankan business\" at a glance, with trust far beyond any new gTLD — Sri Lankan companies and government institutions overwhelmingly live on .lk; Google also geo-associates .lk sites with Sri Lanka, a natural boost for local SEO. On eligibility, .lk is fully open: individuals and organizations from anywhere can register, with no local address or proxy (second-level zones like .com.lk are also available). Pricing is moderate and flat: about $25/yr (≈¥180) with the same renewal, no teaser games. English is the language of business, so English roots need no translation. For naming, a straight brand word is the mainstream shape (brand.lk); tourism and guesthouses fit topic + .lk, and tea or apparel trade fits category + .lk to claim the market. One caution: the audience is primarily Sri Lanka — the signal is weaker for purely external markets.",
+      bestFor: ["Local Sri Lankan businesses & services", "Tourism, guesthouses & guide services", "Ceylon tea & apparel trade", "South Asia-market brands & startups"],
+      namingTips: [
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $25/yr flat to register and renew — no traps",
+        "English is the language of business — English roots need no translation",
+        "Audience is primarily Sri Lanka — weaker signal for purely external markets",
+      ],
+    },
+  },
+  ee: {
+    tld: "ee",
+    zh: {
+      title: ".ee 域名注册指南：适合谁、多少钱、怎么起名",
+      metaDescription: ".ee 是爱沙尼亚国家域名，任何人可注册（非本地注册人需指定一位爱沙尼亚境内联系人，注册商可代办），价格便宜平续，本地信任度极高，适合面向爱沙尼亚市场与 e-Residency 数字公司的品牌与科技业务。查看 .ee 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ee 域名。",
+      intro:
+        ".ee 是爱沙尼亚的国家域名，由 Estonian Internet Foundation（EIS）运营，注册量约 16 万。爱沙尼亚人口仅约 130 万，却是全球数字化程度最高的国家：99% 的政务服务在线办理，Skype、Wise、Bolt 等独角兽在此诞生，人均创业公司数量欧洲第一；其 e-Residency 电子居民计划让全球超过 10 万人远程注册爱沙尼亚公司——这批「数字公司」正是 .ee 域名的天然增量客群。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.ee，「爱沙尼亚的生意」一眼讲清，信任度远超一般新后缀——本土企业与政府机构的主站几乎都在 .ee 上；Google 也会把 .ee 站点与爱沙尼亚地区相关联，本地 SEO 有天然加成。资格上任何国家的个人与机构都可注册，唯一要求是非本地注册人需指定一位爱沙尼亚境内的管理联系人——多数注册商可代办，e-Residency 持有人则天然满足。价格便宜且平续：约 $12/年（约 ¥90），续费同价。英语普及率极高，英文词根无需翻译；「ee」还是英文双元音的常见拼写，free、tree 等词根有域名黑客玩法（fr.ee 形态不可注册，但 brandee.ee 类叠音好记）。命名上品牌词直接上（brand.ee）最主流；数字服务与 SaaS 用「品类词 + .ee」讲清市场落地。注意受众主要在爱沙尼亚与波罗的海市场，纯外部市场业务信号较弱。",
+      bestFor: ["爱沙尼亚本地企业与服务", "e-Residency 数字公司官网", "波罗的海市场品牌与电商", "数字政务与 SaaS 产品"],
+      namingTips: [
+        "任何人可注册，非本地注册人需指定爱沙尼亚境内联系人（注册商可代办）",
+        "注册续费均约 $12/年，便宜且平续",
+        "英语普及率极高，英文词根无需翻译",
+        "e-Residency 数字公司用 .ee 讲清「爱沙尼亚注册」的身份",
+      ],
+    },
+    en: {
+      title: ".ee Domain Guide: Who It's For, Pricing & Naming Tips",
+      metaDescription:
+        ".ee is Estonia's country domain — anyone can register (non-local registrants need to appoint a contact person in Estonia; registrars can arrange this) — cheap with flat renewals and top-tier local trust for Estonian-market brands and e-Residency digital companies. See live pricing and naming advice, then hunt available .ee names with AI.",
+      intro:
+        ".ee is Estonia's country-code domain, run by the Estonian Internet Foundation (EIS) with about 160,000 registrations. Estonia has just 1.3 million people yet is the world's most digitized country: 99% of government services are online, unicorns like Skype, Wise and Bolt were born here, and it leads Europe in startups per capita; its e-Residency program has let over 100,000 people worldwide register Estonian companies remotely — a natural, growing customer base for .ee domains. Local consumers are strongly attuned to local signals: name.ee says \"an Estonian business\" at a glance, with trust far beyond any new gTLD — local companies and government institutions overwhelmingly live on .ee; Google also geo-associates .ee sites with Estonia, a natural boost for local SEO. On eligibility, individuals and organizations from anywhere can register, with one requirement: non-local registrants must appoint an administrative contact person located in Estonia — most registrars can arrange this, and e-Residency holders qualify naturally. Pricing is cheap and flat: about $12/yr (≈¥90) with the same renewal. English proficiency is very high, so English roots need no translation; \"ee\" is also a common English vowel spelling, giving doubled-sound names like brandee.ee a memorable ring. For naming, a straight brand word is the mainstream shape (brand.ee); digital services and SaaS fit category + .ee to claim the market. One caution: the audience is primarily Estonia and the Baltics — the signal is weaker for purely external markets.",
+      bestFor: ["Local Estonian businesses & services", "e-Residency digital company sites", "Baltic-market brands & e-commerce", "Digital government & SaaS products"],
+      namingTips: [
+        "Anyone can register — non-local registrants appoint an Estonia-based contact (registrars can arrange)",
+        "About $12/yr flat to register and renew — cheap, no traps",
+        "English proficiency is very high — English roots need no translation",
+        "e-Residency companies use .ee to signal \"registered in Estonia\"",
+      ],
+    },
+  },
 } satisfies Record<Tld, TldGuide>;
 
 // 声明为 string 索引供路由 slug 查询；satisfies 保证与 TLD_LIST 键集编译期一致

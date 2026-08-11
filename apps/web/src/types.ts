@@ -494,6 +494,12 @@ const TLD_PRICES: Record<string, TldPrice> = {
   ke: { first: 360, renew: 360 },
   pe: { first: 360, renew: 360 },
   kz: { first: 90, renew: 90 },
+  za: { first: 60, renew: 60 },
+  ma: { first: 220, renew: 220 },
+  qa: { first: 250, renew: 250 },
+  pk: { first: 100, renew: 100 },
+  lk: { first: 180, renew: 180 },
+  ee: { first: 90, renew: 90 },
 };
 
 export function tldPrice(tld: string): TldPrice | undefined {
