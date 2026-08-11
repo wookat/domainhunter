@@ -448,4 +448,10 @@ export const COMPARE_INDEX: { slug: string; a: string; b: string; title: Localiz
   { slug: "pk-vs-in", a: "pk", b: "in", title: { zh: ".pk 和 .in 怎么选：巴基斯坦与印度国家域名的南亚对比", en: ".pk vs .in: Pakistan or India Country Domain Compared" } },
   { slug: "lk-vs-my", a: "lk", b: "my", title: { zh: ".lk 和 .my 怎么选：斯里兰卡与马来西亚国家域名的印度洋对比", en: ".lk vs .my: Sri Lanka or Malaysia Country Domain Compared" } },
   { slug: "ee-vs-fi", a: "ee", b: "fi", title: { zh: ".ee 和 .fi 怎么选：爱沙尼亚与芬兰国家域名的波罗的海对比", en: ".ee vs .fi: Estonia or Finland Country Domain Compared" } },
+  { slug: "lt-vs-lv", a: "lt", b: "lv", title: { zh: ".lt 和 .lv 怎么选：立陶宛与拉脱维亚国家域名的波罗的海对比", en: ".lt vs .lv: Lithuania or Latvia Country Domain Compared" } },
+  { slug: "lt-vs-ee", a: "lt", b: "ee", title: { zh: ".lt 和 .ee 怎么选：立陶宛与爱沙尼亚国家域名的波罗的海对比", en: ".lt vs .ee: Lithuania or Estonia Country Domain Compared" } },
+  { slug: "rs-vs-io", a: "rs", b: "io", title: { zh: ".rs 和 .io 怎么选：Rust 社区后缀与开发者通用后缀对比", en: ".rs vs .io: Rust Community Suffix or Generic Developer Suffix" } },
+  { slug: "is-vs-fi", a: "is", b: "fi", title: { zh: ".is 和 .fi 怎么选：冰岛与芬兰国家域名的北欧对比", en: ".is vs .fi: Iceland or Finland Country Domain Compared" } },
+  { slug: "ge-vs-tr", a: "ge", b: "tr", title: { zh: ".ge 和 .tr 怎么选：格鲁吉亚与土耳其国家域名的欧亚门户对比", en: ".ge vs .tr: Georgia or Turkey Country Domain Compared" } },
+  { slug: "uy-vs-ar", a: "uy", b: "ar", title: { zh: ".uy 和 .ar 怎么选：乌拉圭与阿根廷国家域名的拉普拉塔河对比", en: ".uy vs .ar: Uruguay or Argentina Country Domain Compared" } },
 ];
