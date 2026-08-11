@@ -9529,6 +9529,138 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       pickB: ["Local Turkish businesses & services", "Türkiye-facing cross-border e-commerce", "Manufacturing & foreign trade", "Consumer brands betting on market size"],
     },
   },
+  "za-vs-ng": {
+    slug: "za-vs-ng",
+    a: "za",
+    b: "ng",
+    zh: {
+      title: ".za 和 .ng 怎么选：南非与尼日利亚国家域名的非洲双雄对比",
+      metaDescription: ".za 是南非国家域名、主流形态 .co.za 约 $8/年、任何人可注册；.ng 是尼日利亚国家域名、顶级直注约 $36/年（.com.ng 约 $10/年）、同样开放。对比非洲两大经济体的市场信号与价格，并用 AI 猎取可注册的名字。",
+      verdict:
+        "非洲最工业化的经济体对非洲第一人口大国，分水岭在市场落点与价格——两者资格都完全开放。做南非与非洲南部 → .za：监管机构 ZADNA 与注册局 ZARC 运营、注册量超 400 万、是非洲规模最大的国家域名，南非人口约 6000 万：约翰内斯堡是非洲的金融中心，开普敦聚集旅游与创业生态，Naspers、Takealot 等本土巨头都成长于此。商用一律走 .co.za（顶级不开放直注），任何人可注册、无需本地地址；价格是杀手锏：约 $8/年（约 ¥60）、平续同价，非洲大 ccTLD 里最便宜的一档。做尼日利亚与西非 → .ng：注册局 NiRA 运营、注册量约 25 万（含 .com.ng 体系），尼日利亚人口约 2.2 亿：拉各斯是非洲的金融科技之都——Flutterwave、Paystack、OPay 都发家于此，非洲独角兽近半出自尼日利亚。顶级直注约 $36/年（约 ¥260）、.com.ng 约 $10/年，平续无钩子。两国英语都是商务通用语，英文词根无需翻译。判断标准：业务落点在南非、做旅游酒庄与成熟零售市场 → .co.za 便宜且注册量证明了信任基础；落点在西非、押人口红利与金融科技密度 → .ng；泛非洲品牌按市场各注各的——两个加起来一年不到 $45，别用一个 ccTLD 硬跨两个市场。",
+      pickA: ["南非本地企业与服务", "旅游、酒庄与野奢营地", "面向南非的跨境电商", "非洲南部市场品牌与创业公司"],
+      pickB: ["尼日利亚本地企业与服务", "西非金融科技与支付产品", "押人口红利的消费品牌", "面向西非的跨境电商"],
+    },
+    en: {
+      title: ".za vs .ng: South Africa or Nigeria Country Domain Compared",
+      metaDescription:
+        ".za is South Africa's country domain — the mainstream .co.za form ~$8/yr, open to anyone; .ng is Nigeria's — direct ~$36/yr (.com.ng ~$10/yr), equally open. Compare Africa's two biggest economic signals and pricing, then hunt available names.",
+      verdict:
+        "Africa's most industrialized economy versus its most populous country — the divide is market landing point and price, since both are fully open. South Africa and the southern region → .za: overseen by regulator ZADNA and run by the ZA Registry Consortium with over 4 million registrations, Africa's largest ccTLD; South Africa has about 60 million people: Johannesburg is the continent's financial capital, Cape Town hosts a thriving tourism and startup scene, and homegrown giants like Naspers and Takealot grew up here. Commercial use goes through .co.za (direct second-level isn't offered), open to anyone with no local address; price is the killer feature: about $8/yr (≈¥60) flat — among the cheapest major African ccTLDs. Nigeria and West Africa → .ng: run by registry NiRA with about 250,000 registrations including .com.ng; Nigeria has about 220 million people: Lagos is the continent's fintech capital — Flutterwave, Paystack and OPay all started here, and nearly half of Africa's unicorns are Nigerian. Direct registration runs about $36/yr (≈¥260) and .com.ng about $10/yr, flat renewals with no traps. English is the language of business in both, so English roots need no translation. The test: business landing in South Africa, tourism, wineries and a mature retail market → .co.za is cheap and its registration base proves the trust; landing in West Africa, betting on demographics and fintech density → .ng; pan-African brands register per market — together still under $45/yr, and never one ccTLD stretched across two markets.",
+      pickA: ["Local South African businesses & services", "Tourism, wineries & safari lodges", "South Africa-facing cross-border e-commerce", "Southern Africa-market brands & startups"],
+      pickB: ["Local Nigerian businesses & services", "West African fintech & payment products", "Consumer brands betting on demographics", "West Africa-facing cross-border e-commerce"],
+    },
+  },
+  "ma-vs-eg": {
+    slug: "ma-vs-eg",
+    a: "ma",
+    b: "eg",
+    zh: {
+      title: ".ma 和 .eg 怎么选：摩洛哥与埃及国家域名的北非对比",
+      metaDescription: ".ma 是摩洛哥国家域名、约 $30/年、任何人可注册；.eg 是埃及国家域名、约 $90/年、需通过授权注册商办理（部分需本地代理）。对比北非两大市场的定位、门槛与价格，并用 AI 猎取可注册的名字。",
+      verdict:
+        "同是北非门户，分水岭在市场体量、注册门槛与三倍价差。做摩洛哥与马格里布 → .ma：电信监管局 ANRT 管理、注册量约 12 万，摩洛哥人口约 3700 万、是北非最开放的经济体之一：卡萨布兰卡是区域金融中心，丹吉尔地中海港是非洲吞吐量最大的港口之一，汽车与航空零部件制造、旅游都是支柱。资格完全开放：任何人可注册、无需本地地址或代理；价格约 $30/年（约 ¥220）、平续无钩子；法语词根面向本地命中率更高，「ma」还是法语「我的」，有 cine.ma 式域名黑客玩法。做埃及与阿拉伯世界 → .eg：注册局 EgNIC 体系运营、注册量约 1 万，埃及人口约 1.05 亿、是阿拉伯世界第一人口大国：开罗是阿拉伯世界的媒体与文化中心，苏伊士运河扼守全球贸易咽喉，Fawry、Swvl 证明了本土科技市场的深度。门槛更高：顶级直注与 .com.eg 均需通过授权注册商办理、部分场景需要本地代理，价格约 $90/年（约 ¥650）、是 .ma 的三倍。两国均以阿拉伯语为官方语言，埃及市场英语商务可用、摩洛哥法语更吃香。判断标准：业务落点在摩洛哥、做欧非贸易走廊与法语区生意 → .ma 零门槛且便宜得多；落点在埃及、押阿拉伯世界最大单一市场 → 走授权注册商拿 .eg，预算按 $90/年起计；横跨北非的品牌两个都注册——各做各的本地门面，别互相替代。",
+      pickA: ["摩洛哥本地企业与服务", "旅游与手工艺电商", "汽车/纺织制造与外贸", "面向马格里布与法语区的品牌"],
+      pickB: ["埃及本地企业与服务", "面向埃及的跨境电商", "阿拉伯语内容与媒体站", "押阿拉伯世界人口体量的品牌"],
+    },
+    en: {
+      title: ".ma vs .eg: Morocco or Egypt Country Domain Compared",
+      metaDescription:
+        ".ma is Morocco's country domain at ~$30/yr, open to anyone; .eg is Egypt's at ~$90/yr, registered through accredited registrars (some cases need a local proxy). Compare the two North African gateways' bars and pricing, then hunt available names.",
+      verdict:
+        "Both are North African gateways — the divide is market size, registration bar and a threefold price gap. Morocco and the Maghreb → .ma: administered by telecom regulator ANRT with about 120,000 registrations; Morocco has about 37 million people and one of North Africa's most open economies: Casablanca is a regional financial hub, Tanger Med is among Africa's busiest ports, and automotive/aerospace manufacturing and tourism are pillars. Eligibility is fully open: anyone registers with no local address or proxy; pricing is about $30/yr (≈¥220), flat with no traps; French roots hit better locally, and \"ma\" is French for \"my\", enabling name hacks like cine.ma. Egypt and the Arab world → .eg: run through the EgNIC registry system with about 10,000 registrations; Egypt has about 105 million people — the Arab world's most populous country: Cairo is its media and cultural capital, the Suez Canal is a chokepoint of global trade, and Fawry and Swvl prove the depth of the local tech market. The bar is higher: both direct .eg and .com.eg go through accredited registrars, some cases requiring a local proxy, at about $90/yr (≈¥650) — three times the cost of .ma. Arabic is official in both; English works for business in Egypt while French carries further in Morocco. The test: business landing in Morocco, the Europe-Africa trade corridor or Francophone markets → .ma has zero bar and costs far less; landing in Egypt, betting on the Arab world's largest single market → take .eg through an accredited registrar and budget from $90/yr; brands spanning North Africa register both — one local front door each, never substituting one for the other.",
+      pickA: ["Local Moroccan businesses & services", "Tourism & craft e-commerce", "Automotive/textile manufacturing & trade", "Maghreb & Francophone-market brands"],
+      pickB: ["Local Egyptian businesses & services", "Egypt-facing cross-border e-commerce", "Arabic-language content & media", "Brands betting on Arab-world population size"],
+    },
+  },
+  "qa-vs-ae": {
+    slug: "qa-vs-ae",
+    a: "qa",
+    b: "ae",
+    zh: {
+      title: ".qa 和 .ae 怎么选：卡塔尔与阿联酋国家域名的海湾对比",
+      metaDescription: ".qa 是卡塔尔国家域名、约 $35/年、任何人可注册；.ae 是阿联酋国家域名、约 $35/年、同样开放。对比两个海湾富裕市场的定位与信号差异，并用 AI 猎取可注册的名字。",
+      verdict:
+        "同是海湾高净值市场的本土信号，价格几乎一样（都约 $35/年、平续无钩子）、资格都完全开放，分水岭纯粹在市场落点与生态位。做卡塔尔 → .qa：通信监管局 CRA 下属的卡塔尔域名注册局运营、注册量约 4 万，卡塔尔人口约 300 万、却是全球人均 GDP 最高的国家之一：全球最大 LNG 出口国，主权基金 QIA 管理数千亿美元资产，多哈凭借世界杯、半岛媒体与卡塔尔航空成为中东的会展与体育之都。加分项：「qa」还可读作 QA（质量保证/问答），测试工具与问答产品有双关空间。做阿联酋与泛中东 → .ae：注册局 aeDA（TDRA 下属）运营、注册量约 30 万，阿联酋人口约 1000 万：迪拜是中东的商贸、金融与航运枢纽，自由区公司注册全球闻名，DIFC 与 ADGM 聚集了区域金融科技生态——.ae 在整个中东的辐射力远超本国体量，很多面向全中东的品牌直接用 .ae 做区域门面。两国英语都是商务通用语，英文词根无需翻译。判断标准：业务落点在卡塔尔、做能源工程与体育会展生态 → .qa 库存干净且信号精准；落点在阿联酋或整个海湾/中东 → .ae 的区域辐射力与商业认知度更强；同时深耕两国的企业两个都注册——加起来 $70/年，各做各的本地门面。",
+      pickA: ["卡塔尔本地企业与服务", "能源与工程外贸业务", "体育赛事与会展服务", "测试/问答类产品的 QA 双关"],
+      pickB: ["阿联酋本地企业与服务", "迪拜自由区公司与贸易业务", "面向泛中东的区域品牌", "金融科技与航运物流"],
+    },
+    en: {
+      title: ".qa vs .ae: Qatar or UAE Country Domain Compared",
+      metaDescription:
+        ".qa is Qatar's country domain at ~$35/yr, open to anyone; .ae is the UAE's at ~$35/yr, equally open. Compare the two wealthy Gulf markets' positioning and signals, then hunt available names.",
+      verdict:
+        "Both are local signals of high-net-worth Gulf markets, at nearly identical pricing (about $35/yr each, flat with no traps) and fully open eligibility — the divide is purely market landing point and ecological niche. Qatar → .qa: run by the Qatar Domains Registry under the CRA with about 40,000 registrations; Qatar has about 3 million people yet one of the world's highest GDPs per capita: the largest LNG exporter, a sovereign fund managing hundreds of billions, and Doha — via the World Cup, Al Jazeera and Qatar Airways — is the Middle East's capital of events and sport. Bonus: \"qa\" also reads as QA (quality assurance / Q&A), an angle for testing tools and Q&A products. UAE and the wider Middle East → .ae: run by aeDA under the TDRA with about 300,000 registrations; the UAE has about 10 million people: Dubai is the region's hub of commerce, finance and shipping, free-zone company registration is world-famous, and DIFC and ADGM anchor the regional fintech ecosystem — .ae radiates across the Middle East far beyond its home population, and many region-wide brands use .ae as their regional front door. English is the language of business in both, so English roots need no translation. The test: business landing in Qatar, the energy-engineering or sports-events ecosystem → .qa has clean inventory and a precise signal; landing in the UAE or the wider Gulf/Middle East → .ae carries stronger regional reach and commercial recognition; companies working both markets register both — $70/yr combined, one local front door each.",
+      pickA: ["Local Qatari businesses & services", "Energy & engineering trade", "Sports events & conference services", "Testing/Q&A products playing the QA pun"],
+      pickB: ["Local UAE businesses & services", "Dubai free-zone companies & trade", "Region-wide Middle East brands", "Fintech & shipping/logistics"],
+    },
+  },
+  "pk-vs-in": {
+    slug: "pk-vs-in",
+    a: "pk",
+    b: "in",
+    zh: {
+      title: ".pk 和 .in 怎么选：巴基斯坦与印度国家域名的南亚对比",
+      metaDescription: ".pk 是巴基斯坦国家域名、约 $28/两年（合每年约 ¥100）、任何人可注册；.in 是印度国家域名、约 $10/年、完全开放且兼具介词 in 的语义梗。对比两个南亚人口大国的市场信号与价格，并用 AI 猎取可注册的名字。",
+      verdict:
+        "全球第五人口大国对第一人口大国，两者资格都完全开放、价格都在便宜一档，分水岭在市场落点与语义空间。做巴基斯坦 → .pk：注册局 PKNIC 运营、注册量约 10 万（含 .com.pk 体系），巴基斯坦人口约 2.4 亿：纺织与体育用品出口是传统支柱（世界杯足球大多产自锡亚尔科特），Daraz 领跑电商、Easypaisa/JazzCash 推动移动支付，自由职业者数量常年全球前五。任何人可注册、无需本地地址，按两年为周期计费：约 $28/两年（合每年约 ¥100）、平续同价。做印度与全球语义梗 → .in：注册局 NIXI 运营、注册量数百万级、是全球最大的 ccTLD 之一，印度人口超 14 亿、互联网增速全球最快之列：UPI 支付、Flipkart 电商与全球最大的开发者群体都在这里。完全开放、约 $10/年（约 ¥72）、两字母极短；它还是英语介词 in——check.in、log.in 式短语域名全球通用，非印度业务也能靠语义梗站住。两国英语都是官方/商务语言，英文词根无需翻译。判断标准：业务落点在巴基斯坦、做纺织体育用品外贸或本地电商 → .pk 信号精准、按两年计费更省心；落点在印度、或想要介词 in 的全球玩法 → .in 更便宜、库存更深、语义空间更大；同时做两个市场的南亚品牌各注各的——别用一个 ccTLD 硬跨两国。",
+      pickA: ["巴基斯坦本地企业与服务", "纺织与体育用品外贸", "面向巴基斯坦的跨境电商", "移动支付与自由职业平台"],
+      pickB: ["印度本地企业与服务", "面向印度的产品与电商", "check.in 式介词短语域名", "预算敏感的全球创业团队"],
+    },
+    en: {
+      title: ".pk vs .in: Pakistan or India Country Domain Compared",
+      metaDescription:
+        ".pk is Pakistan's country domain at ~$28 per two years (≈¥100/yr), open to anyone; .in is India's at ~$10/yr, fully open and doubling as the English preposition \"in\". Compare the two South Asian population giants' signals and pricing, then hunt available names.",
+      verdict:
+        "The world's fifth most populous country versus the most populous — both fully open, both in the cheap tier, so the divide is market landing point and semantic room. Pakistan → .pk: run by registry PKNIC with about 100,000 registrations across its zones including .com.pk; Pakistan has about 240 million people: textiles and sporting-goods exports are traditional pillars (most World Cup footballs come from Sialkot), Daraz leads e-commerce, Easypaisa and JazzCash drive mobile payments, and the country consistently ranks among the world's top five for freelancers. Anyone registers with no local address, billed in two-year terms: about $28/2yr (≈¥100/yr), same renewal. India and the global word-play angle → .in: run by registry NIXI with millions of registrations, one of the world's largest ccTLDs; India has over 1.4 billion people and one of the fastest-growing internet markets: UPI payments, Flipkart e-commerce and the world's largest developer community all live here. Fully open at about $10/yr (≈¥72), two letters short; it also reads as the English preposition \"in\" — check.in and log.in style phrase domains work globally, so even non-India businesses can stand on the pun. English is official in both, so English roots need no translation. The test: business landing in Pakistan, textile/sporting-goods trade or local e-commerce → .pk is the precise signal with hassle-free two-year billing; landing in India, or wanting the preposition play → .in is cheaper with deeper inventory and more semantic room; South Asian brands working both markets register per market — never one ccTLD stretched across two countries.",
+      pickA: ["Local Pakistani businesses & services", "Textile & sporting goods trade", "Pakistan-facing cross-border e-commerce", "Mobile payments & freelancer platforms"],
+      pickB: ["Local Indian businesses & services", "India-facing products & e-commerce", "check.in-style preposition name hacks", "Budget-conscious global startups"],
+    },
+  },
+  "lk-vs-my": {
+    slug: "lk-vs-my",
+    a: "lk",
+    b: "my",
+    zh: {
+      title: ".lk 和 .my 怎么选：斯里兰卡与马来西亚国家域名的印度洋对比",
+      metaDescription: ".lk 是斯里兰卡国家域名、约 $25/年、任何人可注册；.my 是马来西亚国家域名、约 $30/年、向全球开放且可读作英文 my。对比两个印度洋贸易市场的定位与语义空间，并用 AI 猎取可注册的名字。",
+      verdict:
+        "同在印度洋贸易线上，价格相近（$25 对 $30、都平续无钩子）、资格都开放，分水岭在市场体量与语义空间。做斯里兰卡 → .lk：LK Domain Registry 运营、注册量约 5 万，斯里兰卡人口约 2200 万：锡兰红茶是全球最具辨识度的茶叶品牌之一，服装代工与科伦坡港转运是外汇支柱，世界遗产与南部海滩让旅游持续复苏。任何人可注册、无需本地地址，约 $25/年（约 ¥180）、平续同价，旅游民宿与茶叶外贸的词根库存非常干净。做马来西亚与东南亚 → .my：注册局 MYNIC 运营、注册量约 30 万，马来西亚人口约 3300 万、是东南亚数字经济的重要一极：吉隆坡聚集区域科技公司，Shopee/Lazada 电商生态成熟，清真产业认证辐射全球穆斯林市场。2018 年起向全球开放、约 $30/年（约 ¥220）；王牌是语义：「my」就是英文「我的」——my.salon、diary.my 式的第一人称玩法让它跳出国家域名的框，全球个人产品与工具站都在用。两国英语都是商务通用语，英文词根无需翻译。判断标准：业务落点在斯里兰卡、做旅游民宿或锡兰红茶与服装外贸 → .lk 信号精准且库存干净；落点在马来西亚、或想要「my = 我的」的全球语义 → .my 市场更大、玩法更多；横跨印度洋贸易线的品牌各注各的——两个加起来 $55/年，别互相替代。",
+      pickA: ["斯里兰卡本地企业与服务", "旅游、民宿与向导服务", "锡兰红茶与服装外贸", "面向南亚市场的品牌与创业公司"],
+      pickB: ["马来西亚本地企业与服务", "面向东南亚的跨境电商", "my.salon 式第一人称域名", "清真产业与区域科技品牌"],
+    },
+    en: {
+      title: ".lk vs .my: Sri Lanka or Malaysia Country Domain Compared",
+      metaDescription:
+        ".lk is Sri Lanka's country domain at ~$25/yr, open to anyone; .my is Malaysia's at ~$30/yr, globally open and doubling as the English word \"my\". Compare the two Indian Ocean trade markets' positioning and word-play room, then hunt available names.",
+      verdict:
+        "Both sit on Indian Ocean trade lanes at similar prices ($25 vs $30, both flat with no traps) and open eligibility — the divide is market size and semantic room. Sri Lanka → .lk: run by the LK Domain Registry with about 50,000 registrations; Sri Lanka has about 22 million people: Ceylon tea is one of the world's most recognizable tea brands, apparel manufacturing and Colombo port transshipment are foreign-exchange pillars, and World Heritage sites plus southern beaches keep tourism recovering. Anyone registers with no local address at about $25/yr (≈¥180), same renewal, with very clean root inventory for tourism, guesthouses and tea or apparel trade. Malaysia and Southeast Asia → .my: run by registry MYNIC with about 300,000 registrations; Malaysia has about 33 million people and is a pillar of Southeast Asia's digital economy: Kuala Lumpur hosts regional tech companies, the Shopee/Lazada e-commerce ecosystem is mature, and halal certification radiates across global Muslim markets. Open worldwide since 2018 at about $30/yr (≈¥220); the trump card is semantics: \"my\" is simply the English word \"my\" — my.salon and diary.my style first-person plays lift it beyond a country domain, used by personal products and tool sites globally. English is the language of business in both, so English roots need no translation. The test: business landing in Sri Lanka, tourism, guesthouses or Ceylon tea and apparel trade → .lk is the precise signal with clean inventory; landing in Malaysia, or wanting the \"my = mine\" global angle → .my has the bigger market and more plays; brands spanning the Indian Ocean trade lane register both — $55/yr combined, never substituting one for the other.",
+      pickA: ["Local Sri Lankan businesses & services", "Tourism, guesthouses & guide services", "Ceylon tea & apparel trade", "South Asia-market brands & startups"],
+      pickB: ["Local Malaysian businesses & services", "Southeast Asia-facing cross-border e-commerce", "my.salon-style first-person name hacks", "Halal industry & regional tech brands"],
+    },
+  },
+  "ee-vs-fi": {
+    slug: "ee-vs-fi",
+    a: "ee",
+    b: "fi",
+    zh: {
+      title: ".ee 和 .fi 怎么选：爱沙尼亚与芬兰国家域名的波罗的海对比",
+      metaDescription: ".ee 是爱沙尼亚国家域名、约 $12/年、非本地注册人需指定境内联系人（注册商可代办）；.fi 是芬兰国家域名、约 $10/年、任何人可注册。对比两个数字化标杆市场的定位与门槛，并用 AI 猎取可注册的名字。",
+      verdict:
+        "波罗的海两岸的数字化标杆，价格几乎一样（$12 对 $10、都平续），分水岭在一条小门槛与生态位差异。做爱沙尼亚与 e-Residency → .ee：Estonian Internet Foundation 运营、注册量约 16 万，爱沙尼亚人口仅约 130 万、却是全球数字化程度最高的国家：99% 政务在线办理，Skype、Wise、Bolt 都诞生于此，人均创业公司数量欧洲第一；e-Residency 让全球超 10 万人远程注册爱沙尼亚公司——这批数字公司正是 .ee 的天然客群。唯一门槛：非本地注册人需指定一位爱沙尼亚境内联系人，多数注册商可代办、e-Residency 持有人天然满足；约 $12/年（约 ¥90）、平续同价。做芬兰与北欧 → .fi：注册局 Traficom 运营、注册量约 55 万，芬兰人口约 550 万：Nokia 的工程底蕴之上长出了 Supercell、Rovio 的全球游戏帝国，教育与清洁技术也是名片，赫尔辛基的 Slush 是欧洲最大的创投大会之一。2016 年起完全开放、无需本地地址；约 $10/年（约 ¥72）、平续无钩子；「fi」还能读出 wi-fi、sci-fi 的科技尾音，hifi.fi 式叠音好记。两国英语普及率都极高，英文词根无需翻译。判断标准：注册了爱沙尼亚数字公司、或业务落点在爱沙尼亚与波罗的海 → .ee 是「爱沙尼亚注册」身份的最好注脚；落点在芬兰、做游戏教育与清洁技术 → .fi 零门槛且注册量是 .ee 的三倍多；同时做两岸生意的品牌两个都注册——加起来 $22/年，比一杯机场咖啡贵不了多少。",
+      pickA: ["爱沙尼亚本地企业与服务", "e-Residency 数字公司官网", "波罗的海市场品牌与电商", "数字政务与 SaaS 产品"],
+      pickB: ["芬兰本地企业与服务", "游戏工作室与教育科技", "清洁技术与工程品牌", "wi-fi/sci-fi 式科技尾音玩法"],
+    },
+    en: {
+      title: ".ee vs .fi: Estonia or Finland Country Domain Compared",
+      metaDescription:
+        ".ee is Estonia's country domain at ~$12/yr, requiring non-local registrants to appoint an in-country contact (registrars arrange it); .fi is Finland's at ~$10/yr, open to anyone. Compare the two digital-pioneer markets' bars and positioning, then hunt available names.",
+      verdict:
+        "Digital pioneers on both shores of the Baltic, at nearly identical prices ($12 vs $10, both flat) — the divide is one small bar and different ecological niches. Estonia and e-Residency → .ee: run by the Estonian Internet Foundation with about 160,000 registrations; Estonia has only about 1.3 million people yet the world's most digitized state: 99% of government services are online, Skype, Wise and Bolt were born here, and startup density per capita leads Europe; e-Residency has let over 100,000 people worldwide register Estonian companies remotely — those digital companies are .ee's natural customer base. The only bar: non-local registrants must appoint a contact person in Estonia — most registrars arrange it, and e-residents qualify automatically; about $12/yr (≈¥90), same renewal. Finland and the Nordics → .fi: run by registry Traficom with about 550,000 registrations; Finland has about 5.5 million people: on Nokia's engineering legacy grew the global gaming empires of Supercell and Rovio, education and cleantech are national calling cards, and Helsinki's Slush is one of Europe's biggest startup conferences. Fully open since 2016 with no local address, at about $10/yr (≈¥72), flat with no traps; \"fi\" also echoes wi-fi and sci-fi, with catchy doublings like hifi.fi. English proficiency is extremely high in both, so English roots need no translation. The test: an Estonian digital company via e-Residency, or business landing in Estonia and the Baltics → .ee is the best footnote to \"registered in Estonia\"; landing in Finland, gaming, education or cleantech → .fi has zero bar and more than triple .ee's registration base; brands working both shores register both — $22/yr combined, barely more than an airport coffee.",
+      pickA: ["Local Estonian businesses & services", "e-Residency digital company sites", "Baltic-market brands & e-commerce", "Digital government & SaaS products"],
+      pickB: ["Local Finnish businesses & services", "Game studios & education tech", "Cleantech & engineering brands", "wi-fi/sci-fi style tech-suffix plays"],
+    },
+  },
 };
 
 /** 全部对比页 slug（sitemap / 互链使用） */
