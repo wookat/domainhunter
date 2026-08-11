@@ -407,7 +407,7 @@
     ]
   },
   "guide": {
-    "count": 398,
+    "count": 404,
     "slugs": [
       "saas",
       "ecommerce",
@@ -806,7 +806,13 @@
       "velvetflower",
       "oilpaperumbrella",
       "bronzecasting",
-      "pyrography"
+      "pyrography",
+      "doughsculpture",
+      "eggcarving",
+      "nutcarving",
+      "insidepainting",
+      "strawpainting",
+      "woodblockprint"
     ]
   },
   "vs": {

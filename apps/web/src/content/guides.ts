@@ -24800,6 +24800,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  doughsculpture: {
+    slug: "doughsculpture",
+    keywords: ["面塑工作室", "面人", "捏面人", "dough sculpture studio", "dough figurine art"],
+    tlds: [
+      { tld: "com", zh: "定制订单与文创批发的默认后缀，委托合同与展签上最稳", en: "The default suffix for custom commissions and cultural wholesale — steadiest on the contract and the exhibit label" },
+      { tld: "art", zh: "把面塑从「庙会捏面人」升维到「指尖上的雕塑」，展览与收藏线的身价后缀", en: "Elevating dough sculpture from fairground figurines to sculpture at the fingertips — the status suffix for the exhibition and collector line" },
+      { tld: "studio", zh: "工作室气质直给，一团面与一双手之间的手作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between a ball of dough and two hands" },
+    ],
+    zh: {
+      label: "面塑工作室",
+      title: "面塑工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "面塑与捏面人工作室命名指南：一印二捏三镶四滚叙事、面人汤面人郎流派等思路，面塑工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "面塑工作室的名字要说出「一团面在指尖开出人间百态」：糯米面加蜂蜜蒸熟调色，一印、二捏、三镶、四滚，几分钟里关公的髯、贵妃的鬓、孙悟空的金箍从掌心里长出来——行话叫「文的胸、武的肚、老人的脊背、美人的腰」，人物的魂全在体态一捏之间。家谱现成：汉代已有面人殉葬的记载，北京「面人汤」「面人郎」、山东菏泽面塑各成流派，郎绍安一门三代入了非遗名录。词库温软：面、塑、捏、指、彩——每个字都带着掌心的温度。隐藏考点是三线业务：收藏与展览线认人物开脸与衣纹功力，定制线认生日寿桃与卡通肖像的相似度，庙会与体验课的流量线要现场出活、三分钟捏出一个孩子的笑——名字要在展签、定制订单与庙会摊头三个场景都立得住。误区在于食品化：满名的「馒头、糕点」气质会把指尖雕塑念成早点铺——这门手艺卖的是掌心里的人间百态，不是能吃的面食。",
+      namingIdeas: [
+        "指尖百态直给：指、掌、塑、捏类母词——一团面开出人间百态是这门手艺的身价原点，母词组合自带雕塑门类的体面",
+        "流派字号借力：面人汤、面人郎式的「面人+姓」语法——三代非遗的字号传统是现成信用，姓氏语法立住师承等级",
+        "一印二捏转译：印、捏、镶、滚类工序词——四道工序是入行门槛，工序词让懂行的一眼认出专业身位",
+        "戏文人物叙事：关公、悟空、贵妃类题材词——面塑的题材库就是整部戏文，人物词让定制线有画面可想",
+        "彩面口彩语法：彩、喜、寿、春类吉庆词——寿桃与喜饼面塑自带民俗口彩，吉庆词接得住红白喜事的定制单",
+      ],
+      cases: [
+        { name: "指上春秋", takeaway: "身体部位加时间纵深：指尖捏出千年戏文——四个字把手艺与题材说完，展签上郑重、短视频线有记忆点" },
+        { name: "面人郎", takeaway: "品类加姓氏的字号语法：三代非遗的现成范本——三个字立住师承等级，藏家线郑重、庙会摊头亲切好念" },
+        { name: "一捏堂", takeaway: "核心动作加堂号：几分钟捏出一个人物是这门手艺的心跳——三个字自带现场看点，体验课海报好讲、定制单可信" },
+        { name: "彩塑坊", takeaway: "材料特征加工坊尾缀：彩色面团直给——三个字把品类说清，文创批发线好记、非遗市集招牌上直白" },
+      ],
+      pitfalls: [
+        "食品化：满是「馒头、糕点」气质的名字把指尖雕塑念成早点铺——这门手艺卖掌心里的百态，不是能吃的面食",
+        "锁死单一题材：叫「戏文面塑」就难接卡通肖像与婚庆定制的单——题材留给货架，品牌名留给整双手",
+        "忽略保存焦虑：藏家在意面塑开裂发霉——名字之外要把防裂防霉工艺讲清楚，别让收藏线卡在耐久疑虑上",
+        "庙会气盖过工作室气：只端着「赶集摆摊」的名字接不住美术馆与文创联名的单——给升维留一个体面的身位",
+      ],
+    },
+    en: {
+      label: "Dough sculpture studios",
+      title: "How to Name a Dough Sculpture Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Dough sculpture studio naming guide: fingertip-figures narrative, Mianren Lang lineage lore, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A dough sculpture studio's name must say that a ball of dough blossoms into the whole human comedy at the fingertips: glutinous dough steamed with honey and tinted, then pressed, pinched, inlaid and rolled — in minutes Guan Yu's beard, a consort's chignon and the Monkey King's golden fillet grow out of a palm. The trade's law: the scholar's chest, the warrior's belly, the elder's stooped back, the beauty's waist — a figure's soul lives in one pinch of posture. The registry is ready: dough figurines rode in Han-dynasty tombs, Beijing's Mianren Tang and Mianren Lang and Shandong's Heze school each hold a lineage, and the Lang family carried three generations into the heritage register. The lexicon is warm to the touch: dough, pinch, finger, palm and colour. The hidden exam is the triple business: the collector-and-exhibition line reads the face-opening and drapery mastery; the custom line reads likeness on birthday peaches and cartoon portraits; the fair-and-workshop traffic line wants a child's smile pinched out live in three minutes — the name must stand on the exhibit label, the commission slip and the fair stall alike. The failure mode is the bakery register: a steamed-bun name reads fingertip sculpture as a breakfast shop — this craft sells the human comedy in a palm, not edible pastry.",
+      namingIdeas: [
+        "Fingertip comedy outright: finger, palm, pinch and sculpt mother-roots — a ball of dough blossoming into all walks of life is the craft's origin of status; the mother-word pairing carries a sculpture school's dignity",
+        "Borrowing the lineage house-name: the dough-figure-plus-surname grammar of Mianren Tang and Mianren Lang — three generations of heritage listing are ready credit; the surname grammar sets the lineage grade",
+        "The four steps, translated: press, pinch, inlay and roll process roots — the four-step sequence is the trade's entrance exam; the process word lets the knowing read the professional posture",
+        "The opera-figure narrative: Guan Yu, Monkey King and consort subject roots — the craft's subject bank is a whole opera repertoire; the figure word gives the custom line its image",
+        "The festive-colour grammar: colour, joy, longevity and spring blessing roots — longevity-peach and wedding dough pieces carry ready folk blessings; the festive word catches the ceremony commissions",
+      ],
+      cases: [
+        { name: "Zhi Shang Chun Qiu (指上春秋)", takeaway: "The body part with the depth of ages: a millennium of opera pinched at the fingertips — four characters tell the craft and the repertoire at once; solemn on the label, a hook on short video" },
+        { name: "Mian Ren Lang (面人郎)", takeaway: "The category on a surname, the house-name grammar: the ready template of three heritage generations — three characters set the lineage grade; solemn for collectors, friendly at the fair stall" },
+        { name: "Yi Nie Tang (一捏堂)", takeaway: "The core action on a hall ending: a figure in minutes is the craft's heartbeat — three characters carry the live spectacle; easy to teach on the poster, credible on the commission" },
+        { name: "Cai Su Fang (彩塑坊)", takeaway: "The material trait on a workshop ending: tinted dough stated outright — three characters name the category cleanly; memorable for wholesale, plainspoken on the market sign" },
+      ],
+      pitfalls: [
+        "The bakery register: a steamed-bun name reads fingertip sculpture as a breakfast shop — this craft sells the comedy in a palm, not edible pastry",
+        "Locking into one repertoire: an opera-only name can't take the cartoon-portrait and wedding commissions — leave the subject to the shelf, keep both hands for the brand",
+        "Silence on preservation: collectors mind cracking and mould — state the anti-crack curing clearly outside the name, lest the collector line stall on durability doubts",
+        "The fair drowning the studio: a market-stall-only name can't catch the museum and brand-collab commissions — leave one dignified posture for the climb",
+      ],
+    },
+  },
+  eggcarving: {
+    slug: "eggcarving",
+    keywords: ["蛋雕工作室", "蛋壳雕刻", "蛋雕艺术", "egg carving studio", "eggshell art"],
+    tlds: [
+      { tld: "com", zh: "定制订单与文创批发的默认后缀，委托合同与展签上最稳", en: "The default suffix for custom commissions and cultural wholesale — steadiest on the contract and the exhibit label" },
+      { tld: "art", zh: "把蛋雕从「蛋壳手工」升维到「毫米壳上的微雕艺术」，展览与收藏线的身价后缀", en: "Elevating egg carving from eggshell crafts to micro-sculpture on a millimetre of shell — the status suffix for the exhibition and collector line" },
+      { tld: "studio", zh: "工作室气质直给，刻刀与蛋壳之间的手作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between the burin and the shell" },
+    ],
+    zh: {
+      label: "蛋雕工作室",
+      title: "蛋雕工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "蛋雕与蛋壳雕刻工作室命名指南：毫米之壳叙事、屏息运刀等思路，蛋雕工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "蛋雕工作室的名字要说出「在零点三毫米的壳上走刀，一次呼吸就是一次冒险」：蛋壳最薄处不足半毫米，刻刀落下去只有减法没有回头——浮雕、镂空、套雕层层加码，行话叫「屏息运刀，一刀碎则前功尽弃」，比玉雕更没有容错。家谱有两条线：中式的镂空花鸟承着微雕的文人血脉，西式的 Fabergé 彩蛋把「蛋」做成了皇室重器——一枚蛋壳，东西方各写了一部身价史。词库轻盈：蛋、壳、刻、镂、薄——每个字都踩在易碎的边上。隐藏考点是三线业务：收藏与展览线认镂空层数与题材功力，定制线认肖像蛋雕与纪念日订单的相似度，体验课的流量线要「第一刀不碎」的成就感——名字要在展签、定制订单与课程海报三个场景都立得住。误区在于蛋品化：满名的「土鸡蛋、农场」气质会把毫米微雕念成生鲜档口——这门手艺卖的是屏息之间的刀锋，不是按打卖的蛋。",
+      namingIdeas: [
+        "毫米之壳直给：毫、薄、壳、微类母词——在极限厚度上做艺术是这门手艺的身价原点，母词组合自带微雕门类的体面",
+        "屏息运刀转译：屏息、一刀、无回类决绝词——碎一刀毁全局比玉雕更决绝，决绝词自带悬念与看点",
+        "镂空层数借力：镂、透、层类行话词——镂空套雕的层数是藏家的暗号，行话词让懂行的一眼认出功力",
+        "彩蛋重器叙事：Fabergé 式的珍宝语法——西式彩蛋的皇室身世是现成参照，珍宝词立住礼品线的身价",
+        "光影透壳语法：光、影、透类感官词——蛋雕成品借灯光透壳生辉是独门看点，感官词让展览线有画面可想",
+      ],
+      cases: [
+        { name: "薄刃留光", takeaway: "极限厚度加光影看点：薄壳上留住光——四个字把工艺与陈列效果说完，展签上郑重、短视频线有画面" },
+        { name: "一息刀", takeaway: "呼吸节律加工具直给：屏息运刀是蛋雕的心跳——三个字自带悬念与功力承诺，体验课海报好讲、藏家线懂行" },
+        { name: "镂云格", takeaway: "行话动词加意象收尾：镂空如云是套雕的最高级——三个字让懂行的认出专业身位，委托合同上可信、文创线有雅意" },
+        { name: "壳中乾坤", takeaway: "载体加成语气象：方寸蛋壳里藏大千——四个字把微雕的哲学说完，礼品线有故事、展览海报上立得住" },
+      ],
+      pitfalls: [
+        "蛋品化：满是「土鸡蛋、农场」气质的名字把毫米微雕念成生鲜档口——这门手艺卖屏息之间的刀锋，不是按打卖的蛋",
+        "锁死单一蛋种：叫「鸡蛋雕刻」就难接鸵鸟蛋与鸸鹋蛋的高客单订单——蛋种留给货架，品牌名留给整把刻刀",
+        "忽略运输焦虑：藏家在意易碎品物流——名字之外要把防震包装与破损重制讲清楚，别让电商线卡在下单犹豫上",
+        "手工气盖过艺术气：只端着「DIY 手作」的名字接不住美术馆展览与高端定制的单——给艺术身位留一个体面的台阶",
+      ],
+    },
+    en: {
+      label: "Egg carving studios",
+      title: "How to Name an Egg Carving Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Egg carving studio naming guide: millimetre-shell narrative, held-breath blade lore, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An egg carving studio's name must say that the blade walks on three-tenths of a millimetre, and every breath is a gamble: the shell runs thinner than half a millimetre at its weakest, and the burin knows only subtraction — relief, openwork and nested carving stack the stakes, and the trade's law is carve on a held breath; one crack and all is lost — less mercy than jade ever gave. The registry runs on two lines: the Chinese openwork bird-and-flower school carries the literati micro-carving bloodline, while Fabergé's imperial eggs made the egg a crown treasure in the West — one shell, two civilisations, each writing its own history of status. The lexicon is featherlight: egg, shell, carve, pierce and thin — every word steps along the edge of breaking. The hidden exam is the triple business: the collector-and-exhibition line reads the openwork layers and command of subject; the custom line reads likeness on portrait eggs and anniversary commissions; the workshop traffic line wants the first-cut-didn't-crack thrill — the name must stand on the exhibit label, the commission slip and the class poster alike. The failure mode is the produce register: a farm-fresh name reads millimetre micro-carving as a grocer's stall — this craft sells the blade inside a held breath, not eggs by the dozen.",
+      namingIdeas: [
+        "The millimetre shell outright: thin, shell, micro and hair's-breadth mother-roots — art at the limit of thickness is the craft's origin of status; the mother-word pairing carries a micro-carving school's dignity",
+        "The held breath, translated: held-breath, one-cut and no-return resolve roots — one crack kills the piece, sterner than jade; the resolve word carries suspense and spectacle",
+        "Borrowing the openwork layers: pierce, translucent and nested-layer argot roots — the count of openwork layers is the collectors' password; the argot word lets the knowing read the mastery",
+        "The imperial-egg narrative: the Fabergé treasure grammar — the Western egg's royal pedigree is a ready reference; the treasure word sets the gift line's status",
+        "The light-through-shell grammar: light, glow and translucence sense roots — a carved egg lit from within is the craft's private spectacle; the sense word gives the exhibition line its image",
+      ],
+      cases: [
+        { name: "Bo Ren Liu Guang (薄刃留光)", takeaway: "The limit thickness with the light kept: light held on the thinnest shell — four characters tell the craft and the display at once; solemn on the label, an image on short video" },
+        { name: "Yi Xi Dao (一息刀)", takeaway: "The breath rhythm on the tool outright: the held-breath cut is the craft's heartbeat — three characters carry suspense and the mastery promise; easy to teach on the poster, knowing for collectors" },
+        { name: "Lou Yun Ge (镂云格)", takeaway: "The argot verb on an image ending: openwork like cloud is nested carving's highest grade — three characters let the knowing read the professional posture; credible on the contract, elegant for the gift line" },
+        { name: "Ke Zhong Qian Kun (壳中乾坤)", takeaway: "The canvas on a cosmos idiom: a universe inside one shell — four characters tell the micro-carving philosophy whole; a story for gifts, solid on the exhibition poster" },
+      ],
+      pitfalls: [
+        "The produce register: a farm-fresh name reads millimetre micro-carving as a grocer's stall — this craft sells the blade in a held breath, not eggs by the dozen",
+        "Locking into one shell: a hen's-egg-only name can't take the ostrich and emu high-ticket commissions — leave the shell to the shelf, keep the whole burin for the brand",
+        "Silence on shipping: collectors mind fragile logistics — state the shockproof packing and re-carve guarantee clearly outside the name, lest the e-commerce line stall at checkout",
+        "Craft drowning the art: a DIY-only name can't catch the museum shows and high-end commissions — leave one dignified step up for the art posture",
+      ],
+    },
+  },
+  nutcarving: {
+    slug: "nutcarving",
+    keywords: ["核雕工作室", "橄榄核雕", "核舟", "nut carving studio", "olive pit carving"],
+    tlds: [
+      { tld: "com", zh: "文玩订单与藏家渠道的默认后缀，委托合同与拍卖图录上最稳", en: "The default suffix for collectible commissions and collector channels — steadiest on the contract and the auction catalogue" },
+      { tld: "art", zh: "把核雕从「文玩手串」升维到「方寸核上的微雕艺术」，展览与收藏线的身价后缀", en: "Elevating nut carving from wrist-bead trinkets to micro-sculpture on an inch of pit — the status suffix for the exhibition and collector line" },
+      { tld: "studio", zh: "工作室气质直给，刻刀与橄榄核之间的手作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between the burin and the olive pit" },
+    ],
+    zh: {
+      label: "核雕工作室",
+      title: "核雕工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "核雕与橄榄核雕工作室命名指南：核舟记叙事、方寸大千等思路，核雕工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "核雕工作室的名字要说出「一枚橄榄核里刻下一条船、八扇窗、五个人」：明人王叔远的核舟「长不盈寸」，却有箬篷、楫橹、对联三十四字——《核舟记》把这门手艺写进了课本，「技亦灵怪矣哉」是现成的千古背书。行话叫「方寸之间见大千」：橄榄核质硬纹细，刻刀以毫米计步，一件山水核雕要走刀数万次。家谱清晰：苏州舟山村是核雕原乡，「舟山核雕」入了非遗名录，殷派须派各有师承。词库雅致：核、舟、方寸、微、刀——每个字都带着文人案头的沉香气。隐藏考点是三线业务：藏家线认刀工深浅与包浆潜力，文玩手串线认盘玩上色的物性口碑，定制线认题材翻新与生肖订单——名字要在拍卖图录、文玩市集与定制合同三个场景都立得住。误区在于地摊化：满名的「文玩、批发」气质会把课本里的手艺念成夜市串摊——这门手艺卖的是方寸里的大千，不是按串计价的珠子。",
+      namingIdeas: [
+        "核舟记借力：舟、核、不盈寸类典故词——课本级的千古背书是现成信用，典故词立住文人身价",
+        "方寸大千直给：方寸、大千、微类母词——极小载体刻极大世界是这门手艺的身价原点，母词组合自带微雕门类的体面",
+        "舟山原乡叙事：舟山、苏工类产地词——非遗原乡的师承谱系是现成背书，产地词让藏家一眼认出等级",
+        "万刀功夫转译：万刀、毫厘类功力词——数万次走刀是入行门槛，功力词自带专业承诺与看点",
+        "包浆岁月语法：浆、润、盘类文玩词——橄榄核盘玩变色是独门物性，文玩词接得住手串线的复购",
+      ],
+      cases: [
+        { name: "不盈寸", takeaway: "典故原文的直接取用：核舟记的原句自带课本记忆——三个字让整个受教育人群秒懂身价，拍卖图录上郑重、文创线有故事" },
+        { name: "万刀核坊", takeaway: "功力数字加品类加工坊尾缀：数万次走刀直给——四个字把手艺的重量说完，藏家线可信、市集招牌上直白", },
+        { name: "舟山刻手", takeaway: "原乡加匠人身份：非遗产地的师承直给——四个字立住等级与谱系，委托合同上郑重、文玩圈内有暗号" },
+        { name: "方寸大千", takeaway: "成语级的哲学直给：极小与极大的对撞——四个字把微雕的世界观说完，展签上立得住、短视频线好传播" },
+      ],
+      pitfalls: [
+        "地摊化：满是「文玩、批发」气质的名字把课本里的手艺念成夜市串摊——这门手艺卖方寸里的大千，不是按串计价的珠子",
+        "锁死单一核种：叫「橄榄核雕」就难接桃核与杏核的传统单——核种留给货架，品牌名留给整把刻刀",
+        "忽略物性教育：新手在意开裂花点——名字之外要把防裂保养讲清楚，别让手串线卡在售后纠纷上",
+        "只端藏家不接流量：只做「大师孤品」的名字接不住生肖手串的走量单——给日常文玩线留一个亲切的身位",
+      ],
+    },
+    en: {
+      label: "Nut carving studios",
+      title: "How to Name a Nut Carving Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Nut and olive-pit carving studio naming guide: nut-boat chronicle narrative, inch-wide cosmos lore, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A nut carving studio's name must say that one olive pit holds a boat, eight windows and five figures: Ming carver Wang Shuyuan's nut boat ran under an inch, yet carried a bamboo awning, oars and a thirty-four-character couplet — the classical essay Record of the Nut Boat wrote this craft into the national textbook, and its closing line, the skill verges on the uncanny, is a ready endorsement a thousand years deep. The trade's law: a cosmos within a square inch — olive pit is hard and fine-grained, the burin advances by the millimetre, and one landscape piece takes tens of thousands of cuts. The registry is clear: Zhoushan village in Suzhou is the craft's homeland, Zhoushan nut carving holds a heritage listing, and the Yin and Xu schools each keep a lineage. The lexicon is a scholar's desk: pit, boat, square-inch, micro and blade — every word carries the studio's incense. The hidden exam is the triple business: the collector line reads blade depth and patina potential; the wrist-bead line reads the hand-polish colour change's word of mouth; the custom line reads fresh subjects and zodiac commissions — the name must stand on the auction catalogue, the collectibles market and the commission contract alike. The failure mode is the night-market register: a wholesale-trinket name reads the textbook craft as a bead stall — this craft sells the cosmos in a square inch, not beads by the string.",
+      namingIdeas: [
+        "Borrowing the Nut Boat chronicle: boat, pit and under-an-inch allusion roots — the textbook-grade endorsement is ready credit; the allusion word sets the literati status",
+        "The inch-wide cosmos outright: square-inch, cosmos and micro mother-roots — the greatest world on the smallest canvas is the craft's origin of status; the mother-word pairing carries a micro-carving school's dignity",
+        "The Zhoushan homeland narrative: Zhoushan and Suzhou-work place roots — the heritage homeland's lineage is a ready endorsement; the place word lets collectors read the grade",
+        "The ten-thousand cuts, translated: ten-thousand-blade and hair's-breadth mastery roots — tens of thousands of cuts is the trade's entrance exam; the mastery word carries the promise and the spectacle",
+        "The patina grammar: patina, lustre and hand-polish collector roots — the pit's colour change under handling is its private physics; the collector word catches the wrist-bead line's repeat orders",
+      ],
+      cases: [
+        { name: "Bu Ying Cun (不盈寸)", takeaway: "The allusion quoted straight: the Nut Boat's own phrase carries the textbook memory — three characters make a whole educated public read the status at once; solemn in the catalogue, a story for the gift line" },
+        { name: "Wan Dao He Fang (万刀核坊)", takeaway: "The mastery count on the category and workshop ending: tens of thousands of cuts stated outright — four characters carry the craft's weight; credible for collectors, plainspoken on the market sign" },
+        { name: "Zhou Shan Ke Shou (舟山刻手)", takeaway: "The homeland on the carver's identity: the heritage village's lineage stated outright — four characters set the grade and the pedigree; solemn on the contract, a password in the collectors' circle" },
+        { name: "Fang Cun Da Qian (方寸大千)", takeaway: "The philosophy at idiom grade: the smallest colliding with the greatest — four characters tell the micro-carving worldview whole; solid on the label, spreads on short video" },
+      ],
+      pitfalls: [
+        "The night-market register: a wholesale-trinket name reads the textbook craft as a bead stall — this craft sells the cosmos in a square inch, not beads by the string",
+        "Locking into one pit: an olive-only name can't take the peach-pit and apricot-pit traditional commissions — leave the pit to the shelf, keep the whole burin for the brand",
+        "Silence on the physics: newcomers mind cracking and blemishes — state the anti-crack care clearly outside the name, lest the bead line stall in after-sales disputes",
+        "Collectors drowning the traffic: a master-piece-only name can't catch the zodiac wrist-bead volume — leave one friendly posture for the everyday line",
+      ],
+    },
+  },
+  insidepainting: {
+    slug: "insidepainting",
+    keywords: ["内画工作室", "鼻烟壶内画", "内画壶", "inside painting studio", "snuff bottle inside painting"],
+    tlds: [
+      { tld: "com", zh: "藏家订单与礼品渠道的默认后缀，委托合同与拍卖图录上最稳", en: "The default suffix for collector commissions and gift channels — steadiest on the contract and the auction catalogue" },
+      { tld: "art", zh: "把内画从「工艺品壶」升维到「壶内乾坤的反笔绘画」，展览与收藏线的身价后缀", en: "Elevating inside painting from souvenir bottles to reverse-brush painting in a hidden cosmos — the status suffix for the exhibition and collector line" },
+      { tld: "studio", zh: "工作室气质直给，弯钩笔与水晶壶之间的手作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between the hooked brush and the crystal bottle" },
+    ],
+    zh: {
+      label: "内画工作室",
+      title: "内画工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "内画与鼻烟壶内画工作室命名指南：壶内乾坤叙事、反笔作画等思路，内画工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "内画工作室的名字要说出「笔在壶内、画在反面，方寸之内另有乾坤」：一支带弯钩的细笔从壶口探进去，在磨砂内壁上反着笔序作画——正面看是山水人物，运笔却全是镜像，行话叫「反笔书画，正面成像」，全世界找不出第二种绘画是背着手写字。家谱清晰：清嘉庆年间内画鼻烟壶自宫廷玩物起家，京、冀、鲁、粤四大画派各立门户，衡水内画入了国家级非遗名录。词库精妙：壶、内、乾坤、反笔、毫——每个字都带着掌中把玩的雅气。隐藏考点是三线业务：藏家与拍卖线认画派师承与反笔功力，礼品线认定制肖像与企业纪念壶的相似度，体验课的流量线要「壶里画出第一笔」的惊叹——名字要在拍卖图录、礼品合同与课程海报三个场景都立得住。误区在于旅游纪念品化：满名的「特产、工艺品」气质会把宫廷雅玩念成景区货架——这门手艺卖的是壶内的乾坤，不是流水线上的纪念壶。",
+      namingIdeas: [
+        "壶内乾坤直给：壶、内、乾坤类母词——方寸壶里另有天地是这门手艺的身价原点，母词组合自带雅玩门类的体面",
+        "反笔奇技转译：反笔、逆锋、镜像类奇技词——背着手写字式的绝技是入行门槛，奇技词自带悬念与看点",
+        "四大画派借力：京派、冀派、衡水类师承词——国家级非遗的画派谱系是现成背书，师承词立住藏家等级",
+        "宫廷雅玩叙事：御、贡、雅玩类身世词——嘉庆宫廷的起家身世是现成信用，身世词接得住礼品线的身价",
+        "掌中把玩语法：掌、把玩、袖珍类尺度词——一壶在手的亲密尺度是独门体验，尺度词让礼品线有画面可想",
+      ],
+      cases: [
+        { name: "壶中天", takeaway: "载体加天地意象：壶里另有一片天——三个字把整门手艺的世界观说完，拍卖图录上郑重、文创线有故事" },
+        { name: "反笔堂", takeaway: "核心绝技加堂号：反着笔序作画是内画的心跳——三个字自带悬念与功力承诺，体验课海报好讲、藏家线懂行" },
+        { name: "衡水一毫", takeaway: "非遗产地加极细笔锋：国家级画派的原乡直给——四个字立住师承等级，委托合同上可信、圈内有暗号" },
+        { name: "袖里乾坤", takeaway: "成语的直接借力：袖中藏着大千世界——四个字把掌中雅玩的气质说完，礼品线有彩头、展签上立得住" },
+      ],
+      pitfalls: [
+        "旅游纪念品化：满是「特产、工艺品」气质的名字把宫廷雅玩念成景区货架——这门手艺卖壶内的乾坤，不是流水线纪念壶",
+        "锁死单一器型：叫「鼻烟壶内画」就难接水晶球与香水瓶的新载体单——器型留给货架，品牌名留给整支弯钩笔",
+        "忽略真伪焦虑：藏家在意印刷贴膜假内画——名字之外要把手绘证明讲清楚，别让收藏线卡在真伪疑虑上",
+        "雅气盖过亲切：只端着「宫廷御制」的名字接不住体验课与年轻礼品的单——给流量线留一个轻盈的身位",
+      ],
+    },
+    en: {
+      label: "Inside painting studios",
+      title: "How to Name an Inside Painting Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Inside painting (snuff bottle) studio naming guide: cosmos-in-a-bottle narrative, reverse-brush lore, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An inside painting studio's name must say that the brush works inside the bottle and the picture lives on the far side of the glass — another cosmos within a square inch: a hair-thin brush bent at the tip slips through the neck and paints on the frosted inner wall in reverse stroke order. Seen from outside it is landscape and figure; every stroke underneath is a mirror image — the trade's law is reverse brush, upright image, and no other painting on earth is written behind the back. The registry is clear: inside-painted snuff bottles rose from Qing-court playthings in the Jiaqing era, the Beijing, Hebei, Shandong and Guangdong schools each keep a house, and Hengshui inside painting holds a national heritage listing. The lexicon is exquisite: bottle, within, cosmos, reverse-brush and hair-tip — every word carries the elegance of a palm-held treasure. The hidden exam is the triple business: the collector-and-auction line reads school lineage and reverse-brush mastery; the gift line reads likeness on portrait bottles and corporate commemoratives; the workshop traffic line wants the gasp of the first stroke inside the glass — the name must stand on the auction catalogue, the gift contract and the class poster alike. The failure mode is the souvenir register: a local-specialty name reads the court treasure as a scenic-spot shelf — this craft sells the cosmos inside the bottle, not assembly-line keepsakes.",
+      namingIdeas: [
+        "The cosmos in the bottle outright: bottle, within and cosmos mother-roots — another world inside a square inch is the craft's origin of status; the mother-word pairing carries a connoisseur category's dignity",
+        "The reverse brush, translated: reverse-stroke, mirror and against-the-nib feat roots — painting written behind the back is the trade's entrance exam; the feat word carries suspense and spectacle",
+        "Borrowing the four schools: Beijing-school, Hebei-school and Hengshui lineage roots — the national heritage pedigree is a ready endorsement; the lineage word sets the collector grade",
+        "The court-plaything narrative: imperial, tribute and connoisseur pedigree roots — the Jiaqing court origin is ready credit; the pedigree word catches the gift line's status",
+        "The palm-held grammar: palm, handling and miniature scale roots — one bottle in the hand is the craft's private intimacy; the scale word gives the gift line its image",
+      ],
+      cases: [
+        { name: "Hu Zhong Tian (壶中天)", takeaway: "The vessel on the heaven image: a sky inside the bottle — three characters tell the craft's whole worldview; solemn in the catalogue, a story for the gift line" },
+        { name: "Fan Bi Tang (反笔堂)", takeaway: "The core feat on a hall ending: painting in reverse stroke order is the craft's heartbeat — three characters carry suspense and the mastery promise; easy to teach on the poster, knowing for collectors" },
+        { name: "Heng Shui Yi Hao (衡水一毫)", takeaway: "The heritage homeland on the finest nib: the national school's birthplace stated outright — four characters set the lineage grade; credible on the contract, a password in the circle" },
+        { name: "Xiu Li Qian Kun (袖里乾坤)", takeaway: "The idiom borrowed straight: a universe hidden in a sleeve — four characters tell the palm-treasure register whole; lucky for gifts, solid on the exhibit label" },
+      ],
+      pitfalls: [
+        "The souvenir register: a local-specialty name reads the court treasure as a scenic-spot shelf — this craft sells the cosmos in the bottle, not assembly-line keepsakes",
+        "Locking into one vessel: a snuff-bottle-only name can't take the crystal-ball and perfume-bottle commissions — leave the vessel to the shelf, keep the whole hooked brush for the brand",
+        "Silence on authenticity: collectors mind printed-film fakes — state the hand-painted proof clearly outside the name, lest the collector line stall on authenticity doubts",
+        "Elegance drowning the warmth: an imperial-only name can't catch the workshop classes and young gift buyers — leave one light posture for the traffic line",
+      ],
+    },
+  },
+  strawpainting: {
+    slug: "strawpainting",
+    keywords: ["麦秆画工作室", "麦秸画", "麦草画", "straw painting studio", "wheat straw art"],
+    tlds: [
+      { tld: "com", zh: "文创订单与礼品批发的默认后缀，供货合同与展签上最稳", en: "The default suffix for cultural commissions and gift wholesale — steadiest on the supply contract and the exhibit label" },
+      { tld: "art", zh: "把麦秆画从「农闲手工」升维到「以麦为金的镶嵌绘画」，展览与收藏线的身价后缀", en: "Elevating straw painting from off-season handicraft to inlay painting with wheat for gold — the status suffix for the exhibition and collector line" },
+      { tld: "studio", zh: "工作室气质直给，麦秆与熨斗之间的手作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between the straw and the iron" },
+    ],
+    zh: {
+      label: "麦秆画工作室",
+      title: "麦秆画工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "麦秆画与麦秸画工作室命名指南：点草成金叙事、熨烫烙色等思路，麦秆画工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "麦秆画工作室的名字要说出「一根麦秆剖开烫平，贴出满纸金光」：麦秆有天然蜡质与丝绢光泽，剖、刮、烫、贴十几道工序后，秆皮的明暗随光线流转——行话叫「点草成金」，阳光下的麦秆画自带金箔效果，却一分金粉不用。家谱有底：麦秆画相传起于隋唐宫廷，河南清丰、山东聊城、黑龙江各有流派，多地入了非遗名录；一把熨斗烫出深浅褐色的「烙色」功夫，是这门手艺的火候暗号。词库带着麦香：麦、秆、金、穗、光——每个字都踩在土地与丰收上。隐藏考点是三线业务：展览与收藏线认烙色层次与题材功力，礼品与文创线认「五谷丰登」的口彩与企业定制，乡村文旅线要研学课与农礼盒的在地叙事——名字要在展签、供货合同与研学海报三个场景都立得住。误区在于草编化：满名的「草编、编织」气质会把镶嵌绘画念成筐篮作坊——这门手艺卖的是以麦为金的画，不是编出来的器。",
+      namingIdeas: [
+        "点草成金直给：草、金、点类母词——最贱的秸秆变最贵的金光是这门手艺的身价原点，母词组合自带炼金术般的看点",
+        "烙色火候转译：烫、烙、褐类火候词——熨斗烫出明暗层次是入行门槛，火候词让懂行的一眼认出功力",
+        "麦穗丰收口彩：穗、丰、登类吉庆词——五谷丰登的口彩是现成彩头，吉庆词接得住企业礼品与年节订单",
+        "宫廷身世叙事：隋唐、贡类身世词——宫廷起家的传说是现成背书，身世词立住文创线的等级",
+        "乡土在地语法：田、垛、乡类土地词——从麦田到画框的在地叙事是文旅线的独门故事，土地词让研学课有画面可想",
+      ],
+      cases: [
+        { name: "点草成金", takeaway: "行话成语的直接取用：炼金术式的反差直给——四个字把整门手艺的魔术说完，展签上有看点、短视频线好传播" },
+        { name: "麦光", takeaway: "材料加光泽的极简对撞：麦秆自带丝绢光——两个字把独门物性说完，文创包装上干净、礼品线好记" },
+        { name: "一穗堂", takeaway: "丰收意象加堂号：一穗麦子的口彩与谦逊——三个字自带年节彩头，企业礼盒上体面、研学海报上亲切" },
+        { name: "烫金田", takeaway: "工艺动词加土地收尾：熨斗烫出金色的田——三个字把工艺与乡土说完，文旅线有故事、供货合同上直白" },
+      ],
+      pitfalls: [
+        "草编化：满是「草编、编织」气质的名字把镶嵌绘画念成筐篮作坊——这门手艺卖以麦为金的画，不是编出来的器",
+        "锁死单一题材：叫「麦秆花鸟」就难接肖像定制与现代装饰画的单——题材留给货架，品牌名留给整根麦秆",
+        "忽略保存教育：买家在意受潮虫蛀——名字之外要把防潮防蛀工艺讲清楚，别让礼品线卡在耐久疑虑上",
+        "土味盖过艺术：只端着「农家乐」的名字接不住美术馆展览与高端定制的单——给艺术身位留一个体面的台阶",
+      ],
+    },
+    en: {
+      label: "Straw painting studios",
+      title: "How to Name a Straw Painting Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Wheat straw painting studio naming guide: straw-into-gold narrative, iron-scorched shading lore, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A straw painting studio's name must say that one wheat stalk, split and pressed flat, lays a whole sheet of gold: straw carries a natural wax and a silk-like sheen, and after a dozen steps of splitting, scraping, ironing and pasting, the husk's light shifts as the viewer moves — the trade's law is turning straw into gold, for a straw painting glows like gold leaf in sunlight without a grain of gilt. The registry holds: the craft traces to the Sui-Tang court, the Qingfeng, Liaocheng and Heilongjiang schools each keep a house, and several hold heritage listings; the iron's scorched-shading skill — browns burnt light and dark by one hot press — is the craft's password of heat. The lexicon smells of harvest: wheat, straw, gold, ear and light — every word stands on the land. The hidden exam is the triple business: the exhibition-and-collector line reads the scorch layering and command of subject; the gift-and-cultural line reads the bumper-harvest blessing and corporate commissions; the rural-tourism line wants the field-to-frame story for study tours and farm gift boxes — the name must stand on the exhibit label, the supply contract and the study-tour poster alike. The failure mode is the wickerwork register: a basket-weave name reads inlay painting as a hamper workshop — this craft sells a painting of wheat-for-gold, not woven ware.",
+      namingIdeas: [
+        "Straw into gold outright: straw, gold and transmute mother-roots — the cheapest stalk turned into the richest glow is the craft's origin of status; the mother-word pairing carries an alchemist's spectacle",
+        "The scorched shading, translated: iron, scorch and umber heat roots — shading burnt by one hot press is the trade's entrance exam; the heat word lets the knowing read the mastery",
+        "The harvest blessing: ear, plenty and bumper-crop festive roots — the bumper-harvest pun is a ready blessing; the festive word catches the corporate gift and New Year orders",
+        "The court-pedigree narrative: Sui-Tang and tribute pedigree roots — the court-origin legend is a ready endorsement; the pedigree word sets the cultural line's grade",
+        "The land grammar: field, stack and village earth roots — the field-to-frame story is the tourism line's private narrative; the earth word gives the study tour its image",
+      ],
+      cases: [
+        { name: "Dian Cao Cheng Jin (点草成金)", takeaway: "The trade idiom taken straight: the alchemical reversal stated outright — four characters tell the craft's whole magic; a spectacle on the label, spreads on short video" },
+        { name: "Mai Guang (麦光)", takeaway: "Material on sheen, minimal: straw carries its own silk light — two characters tell the private physics; clean on packaging, memorable for the gift line" },
+        { name: "Yi Sui Tang (一穗堂)", takeaway: "The harvest image on a hall ending: one ear of wheat's blessing and humility — three characters carry the festive luck; dignified on the corporate box, friendly on the tour poster" },
+        { name: "Tang Jin Tian (烫金田)", takeaway: "The process verb on the land ending: a field ironed into gold — three characters tell the craft and the soil at once; a story for tourism, plainspoken on the contract" },
+      ],
+      pitfalls: [
+        "The wickerwork register: a basket-weave name reads inlay painting as a hamper workshop — this craft sells a painting of wheat-for-gold, not woven ware",
+        "Locking into one subject: a bird-and-flower-only name can't take the portrait and modern-decor commissions — leave the subject to the shelf, keep the whole stalk for the brand",
+        "Silence on preservation: buyers mind damp and worm — state the moisture-and-pest-proofing clearly outside the name, lest the gift line stall on durability doubts",
+        "Earthiness drowning the art: a farmstay-only name can't catch the museum shows and high-end commissions — leave one dignified step up for the art posture",
+      ],
+    },
+  },
+  woodblockprint: {
+    slug: "woodblockprint",
+    keywords: ["木版年画工作室", "年画", "木刻年画", "woodblock print studio", "new year print workshop"],
+    tlds: [
+      { tld: "com", zh: "文创订单与年节批发的默认后缀，供货合同与展签上最稳", en: "The default suffix for cultural commissions and festival wholesale — steadiest on the supply contract and the exhibit label" },
+      { tld: "art", zh: "把年画从「年货贴纸」升维到「木版上的民间美术史」，展览与收藏线的身价后缀", en: "Elevating New Year prints from festival stickers to a folk-art history cut in wood — the status suffix for the exhibition and collector line" },
+      { tld: "studio", zh: "工作室气质直给，刻版与刷印之间的手作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between the carved block and the brush pull" },
+    ],
+    zh: {
+      label: "木版年画工作室",
+      title: "木版年画工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "木版年画工作室命名指南：一版一色叙事、杨柳青桃花坞等产地思路，年画工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "木版年画工作室的名字要说出「一块梨木版，刻住一个民族的过年」：画师起稿、刻工奏刀、印工套色，一版一色、几版套印，门神的甲、娃娃的红、灶王的座次全从木纹里拓出来——行话叫「版版有来历，色色有讲究」。家谱是现成的地理课：天津杨柳青、苏州桃花坞、山东杨家埠、四川绵竹、河南朱仙镇五大产地各立门户，全部入了国家级非遗名录，「杨柳青」三个字本身就是品类通货。词库喜庆：年、版、门神、福、红——每个字都带着爆竹的响。隐藏考点是三线业务：收藏与展览线认老版传承与刻工功力，年节礼品线认「福寿平安」的口彩与文创联名，研学体验线要「自己拓一张年画」的仪式感——名字要在展签、年货礼盒与研学海报三个场景都立得住。误区在于印刷品化：满名的「印务、图文」气质会把百年老版念成打印店——这门手艺卖的是木纹里拓出来的年味，不是喷墨机里的贴纸。",
+      namingIdeas: [
+        "五大产地借力：杨柳青、桃花坞、朱仙镇类产地词——国家级非遗的产地谱系是品类通货，产地词让藏家一眼认出等级",
+        "一版一色转译：版、套、拓类工序词——套色印制是入行门槛，工序词让懂行的认出专业身位",
+        "门神谱系叙事：门神、灶王、钟馗类题材词——年画的题材库就是整套民俗神谱，题材词让文创线有画面可想",
+        "年味口彩直给：福、年、红类吉庆词——过年的口彩是现成彩头，吉庆词接得住年货礼盒与联名订单",
+        "老版家谱语法：老版、祖版、传类传承词——一块老版传五代是独门信用，传承词立住收藏线的身价",
+      ],
+      cases: [
+        { name: "一版年", takeaway: "核心工具加节庆直给：一块版印出整个年——三个字把手艺与生意说完，年货礼盒上喜庆、展签上郑重" },
+        { name: "门神家", takeaway: "题材加烟火气收尾：门神是年画的第一主角——三个字自带民俗亲切感，文创联名好谈、研学海报上好讲" },
+        { name: "拓红坊", takeaway: "工艺动词加年色加工坊尾缀：拓出中国红——三个字把工序与年味说完，供货合同上直白、市集招牌上出彩" },
+        { name: "祖版堂", takeaway: "传承信物加堂号：一块祖版传五代——三个字立住收藏等级，拍卖图录上体面、老字号叙事现成" },
+      ],
+      pitfalls: [
+        "印刷品化：满是「印务、图文」气质的名字把百年老版念成打印店——这门手艺卖木纹里的年味，不是喷墨贴纸",
+        "锁死年节档期：叫「年画」也要给全年生意留口——婚庆喜画、文创日历与展览授权都是淡季的现金流",
+        "冒用产地字号：不在杨柳青却叫「杨柳青画庄」，产地保护与信任反噬双重风险——产地词要与真实师承匹配",
+        "忽略年轻化转译：只端着「老年画」的名字接不住国潮联名与盲盒文创的单——给新中式留一个轻盈的身位",
+      ],
+    },
+    en: {
+      label: "Woodblock print studios",
+      title: "How to Name a Woodblock New Year Print Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Woodblock New Year print studio naming guide: one-block-one-colour narrative, Yangliuqing and Taohuawu place lore, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A woodblock New Year print studio's name must say that one pearwood block holds a whole nation's New Year: the painter drafts, the carver cuts, the printer pulls — one block per colour, several blocks per print, and the door god's armour, the baby's red and the Kitchen God's seat all lift out of the wood grain. The trade's law: every block has a pedigree, every colour has a rule. The registry is a ready geography lesson: Tianjin's Yangliuqing, Suzhou's Taohuawu, Shandong's Yangjiabu, Sichuan's Mianzhu and Henan's Zhuxianzhen each keep a house, all five on the national heritage register — the name Yangliuqing is itself category currency. The lexicon crackles like firecrackers: year, block, door god, fortune and red. The hidden exam is the triple business: the collector-and-exhibition line reads old-block lineage and the carver's hand; the festival gift line reads the fortune-and-peace blessing and brand collabs; the study-tour line wants the ritual of pulling your own print — the name must stand on the exhibit label, the festival gift box and the study-tour poster alike. The failure mode is the print-shop register: a printing-services name reads a century-old block as an inkjet counter — this craft sells the New Year lifted from wood grain, not stickers from a nozzle.",
+      namingIdeas: [
+        "Borrowing the five homelands: Yangliuqing, Taohuawu and Zhuxianzhen place roots — the national heritage geography is category currency; the place word lets collectors read the grade",
+        "One block one colour, translated: block, register and pull process roots — multi-block colour printing is the trade's entrance exam; the process word lets the knowing read the professional posture",
+        "The door-god pantheon narrative: door god, Kitchen God and Zhong Kui subject roots — the print's subject bank is a whole folk pantheon; the subject word gives the cultural line its image",
+        "The New Year blessing outright: fortune, year and red festive roots — the holiday's blessings are ready luck; the festive word catches the gift box and collab orders",
+        "The old-block grammar: old-block, ancestral-block and inheritance roots — one block handed down five generations is the craft's private credit; the inheritance word sets the collector line's status",
+      ],
+      cases: [
+        { name: "Yi Ban Nian (一版年)", takeaway: "The core tool on the festival outright: one block prints the whole New Year — three characters tell the craft and the trade at once; festive on the gift box, solemn on the label" },
+        { name: "Men Shen Jia (门神家)", takeaway: "The subject on a hearthside ending: the door god is the print's leading role — three characters carry the folk warmth; easy for brand collabs, easy to teach on the poster" },
+        { name: "Ta Hong Fang (拓红坊)", takeaway: "The process verb on the festival red and workshop ending: pulling the Chinese red — three characters tell the step and the season; plainspoken on the contract, bright on the market sign" },
+        { name: "Zu Ban Tang (祖版堂)", takeaway: "The heirloom on a hall ending: one ancestral block, five generations — three characters set the collector grade; dignified in the catalogue, a ready heritage story" },
+      ],
+      pitfalls: [
+        "The print-shop register: a printing-services name reads the century-old block as an inkjet counter — this craft sells the New Year in the wood grain, not nozzle stickers",
+        "Locking into the festival window: even a New-Year name must leave room for the year-round trade — wedding prints, cultural calendars and exhibition licensing are the off-season's cash flow",
+        "Borrowing a homeland falsely: calling yourself a Yangliuqing house outside Yangliuqing risks both origin protection and trust backlash — match the place word to a real lineage",
+        "Ignoring the young translation: an old-print-only name can't catch the guochao collabs and blind-box merch — leave one light posture for the new-Chinese style",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */
