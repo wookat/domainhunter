@@ -246,9 +246,12 @@ export default function App() {
   // R267：quota（401/402/403）重试必然失败，抑制所有会触发 AI 的入口
   const quotaExhausted = errorKind === "quota";
 
+  // SEO 内容页（/tld/:x、/guide/:x、/vs/:x、/prices 等）提前 return，mode 仍是 "home"，
+  // 不应为纯阅读流量预取搜索 chunk；点 logo 回首页是整页导航，按需加载即可。
+  const isSeoRoute = Boolean(guideTld || guideSlug || compareSlug || isPrices || isTldHub || isGuideHub || isCompareHub || isWhy || isMcp || isNotFound || shareId);
   useEffect(() => {
-    if (mode === "home") prefetchSearchChunks();
-  }, [mode]);
+    if (mode === "home" && !isSeoRoute) prefetchSearchChunks();
+  }, [mode, isSeoRoute]);
 
   useEffect(() => {
     // 只要有已落地（非 checking）的结果就覆盖快照，与所在页面/是否运行中无关：
