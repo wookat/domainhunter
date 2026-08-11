@@ -24428,6 +24428,378 @@ export const INDUSTRY_GUIDES: Record<string, IndustryGuide> = {
       ],
     },
   },
+  claysculpture: {
+    slug: "claysculpture",
+    keywords: ["泥塑工作室", "泥人张", "彩塑", "clay sculpture studio", "clay figurine"],
+    tlds: [
+      { tld: "com", zh: "藏家订单与文创批发的默认后缀，供货合同与展签上最稳", en: "The default suffix for collector orders and cultural-goods wholesale — steadiest on the supply contract and the exhibit label" },
+      { tld: "art", zh: "把泥塑从「捏泥人」升维到「彩塑艺术」，美术馆与拍卖线的身价后缀", en: "Elevating clay sculpture from figurine pinching to painted-sculpture art — the status suffix for the gallery and auction line" },
+      { tld: "studio", zh: "工作室气质直给，泥案与窑炉之间的手作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between the clay bench and the kiln" },
+    ],
+    zh: {
+      label: "泥塑工作室",
+      title: "泥塑工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "泥塑与彩塑工作室命名指南：抟土成人叙事、三分塑七分彩等思路，泥塑工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "泥塑工作室的名字要说出「一把土捏出人间百态，女娲抟土的家谱写了七千年」：一团胶泥在指间起稿、堆大形、开脸、压光，行话叫「三分塑，七分彩」——素坯定骨，彩绘定神；从惠山泥人的「大阿福」到天津泥人张的市井众生，泥塑向来是最贴地气的雕塑，摊开手掌就是整个戏台。词库现成：泥、塑、抟、彩、坯——每个字都带着掌温。隐藏考点是三线业务：藏家与美术馆线认师承与开脸功力，文创伴手礼线认造型讨喜与量产稳定，泥塑体验课的流量线要出片好玩——名字要在展签、礼盒与课程海报三个场景都立得住。误区在于玩具化：满名的「娃、宝、乐」气质会把彩塑艺术念成景区捏面摊——这门手艺卖的是指尖开脸的功力，不是十元一个的快消。",
+      namingIdeas: [
+        "抟土叙事直给：抟、塑、捏、坯类工序词——女娲抟土是现成的创世背书，工序词自带七千年的家谱与掌温",
+        "三分塑七分彩借力：彩、绘、妆、粉类行话词——素坯定骨彩绘定神是入行门槛，行话词让藏家一眼认出功力",
+        "开脸绝活转译：开脸、点睛、传神类点题词——泥人成败全在最后一笔开脸，绝活词自带故事最好传播",
+        "流派堂号语法：张、惠山、凤翔类流派词加堂坊尾缀——泥人张与惠山泥人是身价原点，流派词立住师承等级",
+        "市井百态叙事：百态、众生、戏台类烟火词——泥塑捏的是人间烟火，烟火词让文创线亲切、藏家线有温度",
+      ],
+      cases: [
+        { name: "抟土记", takeaway: "创世母词加记事尾缀：女娲抟土是泥塑的官方起源——两个字把手艺接上七千年家谱，展签上郑重、课程海报上好讲" },
+        { name: "开脸堂", takeaway: "绝活加堂号的组合：泥人最后一笔开脸定生死——绝活词立住功力身位，藏家一眼识别、体验课上是现成的第一课" },
+        { name: "彩塑百工", takeaway: "品类加众生尾缀：三分塑七分彩点出行话，百工说出市井百态——文创批发线读出量产诚意，美术馆线读出题材野心" },
+        { name: "泥言", takeaway: "材料加表达动词的极简组合：让泥巴自己说话——两个字把泥塑从玩具升维为叙事媒介，当代艺术线的身价直给" },
+      ],
+      pitfalls: [
+        "玩具化：满是「娃、宝、乐」气质的名字把彩塑艺术念成景区捏面摊——这门手艺卖指尖开脸的功力，不是十元快消",
+        "锁死单一题材：叫「福娃泥坊」就难接当代雕塑与定制肖像的单——题材留给货架，品牌名留给整双手",
+        "师承冒认：无门无派却名带「泥人张、惠山」会招来行内与商标双重风险——流派要有真师承，故事要在名字之外讲清",
+        "忽略量产文创线：只端着「大师孤品」的名字接不住伴手礼批发的现金流——给量产线留一个亲切的身位",
+      ],
+    },
+    en: {
+      label: "Clay sculpture studios",
+      title: "How to Name a Clay Sculpture Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Clay sculpture studio naming guide: kneading-the-earth narrative, three-parts-sculpt seven-parts-paint lore, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A clay sculpture studio's name must say that one handful of earth pinches out the whole human comedy, and the registry runs seven millennia back to Nüwa kneading mankind from clay: a lump of paste is sketched between the fingers, massed, face-opened and burnished, and the trade's law is three parts sculpting, seven parts painting — the bare body sets the bones, the pigment sets the soul. From Huishan's grinning Big Afu to Tianjin's Clay Figure Zhang and his street-corner multitudes, clay sculpture has always been the most down-to-earth of sculptures — an open palm is a whole opera stage. The lexicon is ready: clay, knead, mould, pigment and blank — every word carries the warmth of the palm. The hidden exam is the triple business: the collector-and-gallery line reads lineage and the face-opening hand; the cultural-gift line reads charm and production steadiness; the workshop-class traffic line wants photogenic fun — the name must stand on the exhibit label, the gift box and the class poster alike. The failure mode is the toy register: a cutesy name reads painted sculpture as a scenic-spot dough stall — this craft sells the mastery of the final face-opening stroke, not ten-yuan fast goods.",
+      namingIdeas: [
+        "Kneading the earth outright: knead, mould, pinch and blank process roots — Nüwa kneading clay is the ready creation-myth endorsement; the process word carries seven millennia and the palm's warmth",
+        "Borrowing the three-and-seven law: pigment, paint, dress and powder argot roots — bones from the blank, soul from the brush is the trade's entrance exam; the argot word lets collectors read the mastery",
+        "Translating the face-opening move: face-opening, eye-dotting and soul-catching roots — a figure lives or dies on the final stroke; the signature-move word carries its own story and spreads best",
+        "The school-and-hall grammar: Zhang, Huishan and Fengxiang school roots on hall endings — Clay Figure Zhang and Huishan figures are the origin of status; the school word sets the lineage grade",
+        "The street-multitude narrative: multitudes, all-walks and opera-stage roots — clay pinches the human fireworks; the street word warms the gift line and gives the collector line its temperature",
+      ],
+      cases: [
+        { name: "Tuan Tu Ji (抟土记)", takeaway: "The creation mother-word on a chronicle ending: Nüwa kneading earth is the craft's official origin — two characters graft the studio onto a seven-millennia registry; solemn on the label, an easy tale on the poster" },
+        { name: "Kai Lian Tang (开脸堂)", takeaway: "The signature move on a hall ending: the figure lives or dies on the face-opening stroke — the move word sets the mastery posture; collectors read it at a glance, the class's first lesson besides" },
+        { name: "Cai Su Bai Gong (彩塑百工)", takeaway: "Category on a multitude ending: three-parts-sculpt seven-parts-paint names the argot, all-trades names the street — the wholesale line reads production sincerity, the gallery line reads ambition of subject" },
+        { name: "Ni Yan (泥言)", takeaway: "Material on a speech verb, minimal: let the clay do the talking — two characters raise clay from toy to narrative medium; the contemporary-art line's status stated outright" },
+      ],
+      pitfalls: [
+        "The toy register: a cutesy doll-and-fun name reads painted sculpture as a scenic-spot dough stall — this craft sells the final stroke's mastery, not ten-yuan fast goods",
+        "Locking into one subject: a lucky-doll name can't take the contemporary-sculpture and portrait commissions — leave the subject to the shelf, keep both hands for the brand",
+        "Faking the lineage: naming 'Clay Figure Zhang' or 'Huishan' without true descent invites trade and trademark risk at once — claim a school only with a real master, tell the story outside the name",
+        "Ignoring the production gift line: a solitary-masterpiece-only name can't catch the souvenir wholesale cash flow — leave one warm posture for the production line",
+      ],
+    },
+  },
+  sugarpainting: {
+    slug: "sugarpainting",
+    keywords: ["糖画工作室", "糖人", "吹糖人", "sugar painting", "sugar art"],
+    tlds: [
+      { tld: "com", zh: "商演与市集订单的默认后缀，活动合同与档期表上最稳", en: "The default suffix for event bookings and market stalls — steadiest on the show contract and the schedule" },
+      { tld: "art", zh: "把糖画从「街头小吃」升维到「以糖为墨的绘画」，展演与文创线的身价后缀", en: "Elevating sugar painting from street snack to painting with molten sugar as ink — the status suffix for the showcase and cultural line" },
+      { tld: "fun", zh: "把「看着画完才舍不得吃」的快乐写进后缀，市集与亲子线的流量直给", en: "Writing the too-pretty-to-eat delight into the suffix — traffic stated outright for the market and family line" },
+    ],
+    zh: {
+      label: "糖画工作室",
+      title: "糖画工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "糖画与吹糖人工作室命名指南：一勺糖一笔成画叙事、龙凤糖谱等思路，糖画工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "糖画工作室的名字要说出「一勺融糖当墨，一气呵成不能回笔」：铜勺舀起琥珀色的糖稀，手腕起落间龙凤鱼虫跃然石板——糖画是唯一「画完能吃」的绘画，可惜没人舍得吃；起稿全在心里，糖凉即定，落勺不能悔，行话叫「糖谱在心，一笔到底」；从唐代「糖供」祭品到川渝庙会的转糖盘，甜味的家谱写了千年。词库现成：糖、画、勺、丝、龙——每个字都发亮。隐藏考点是三线业务：商演与品牌活动线认现场气氛与出活速度，非遗展演线认师承与糖谱全不全，亲子体验课的流量线要出片好玩——名字要在活动合同、展演海报与市集招牌三个场景都立得住。误区在于小吃化：满名的「甜、蜜、香」气质会把糖上作画念成卖麦芽糖的摊——这门手艺卖的是腕上的一气呵成，不是甜味本身。",
+      namingIdeas: [
+        "一笔到底直给：一笔、一气、勺尖类工序词——糖凉即定不能回笔是这门手艺的心跳，工序词自带悬念与看点",
+        "以糖为墨转译：墨、画、书、笔类文人词——把糖稀升维成墨汁，文人词让街头手艺拿到绘画的身价",
+        "龙凤糖谱借力：龙、凤、鱼、蝶类图谱词——转糖盘上龙最大是全国统一的童年记忆，图谱词自带彩头与流量",
+        "琥珀糖丝叙事：琥珀、金丝、亮类质感词——糖稀在灯下发亮是糖画最出片的瞬间，质感词让短视频线有画面",
+        "庙会烟火语法：市、集、庙、转类场景词——转糖盘是糖画的原生场景，场景词让亲子线亲切、商演线有气氛",
+      ],
+      cases: [
+        { name: "一勺龙", takeaway: "工具加图谱王牌的组合：一勺糖稀画出整条龙——三个字把绝活、彩头与画面感说完，市集招牌上最抓眼、商演合同上有记忆点" },
+        { name: "糖墨", takeaway: "材料加文人母词的极简升维：糖稀即墨汁——两个字把街头小吃念成绘画门类，非遗展演线郑重、文创线有身价" },
+        { name: "转糖盘", takeaway: "原生场景直译：转盘定图案是全国统一的童年悬念——三个字自带互动玩法，亲子体验课好讲、短视频线好传播" },
+        { name: "琥珀笔", takeaway: "质感加画具的组合：糖稀灯下如琥珀、铜勺落腕即是笔——质感词出画面，品牌活动线读出审美，礼盒卡片上体面" },
+      ],
+      pitfalls: [
+        "小吃化：满是「甜、蜜、香」气质的名字把糖上作画念成麦芽糖摊——这门手艺卖腕上的一气呵成，不是甜味本身",
+        "锁死单一图谱：叫「糖龙坊」就难接品牌定制与人像糖画的单——图案留给转盘，品牌名留给整只手腕",
+        "忽略商演现金流：只端着「非遗大师」的名字接不住企业年会与商场活动的档期——给商演线留一个有气氛的身位",
+        "健康焦虑失语：亲子线家长在意糖分——名字之外要把「看的艺术」讲清楚，别让品牌被念成儿童糖果商",
+      ],
+    },
+    en: {
+      label: "Sugar painting studios",
+      title: "How to Name a Sugar Painting Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Sugar painting studio naming guide: one-ladle-one-stroke narrative, dragon-and-phoenix pattern lore, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A sugar painting studio's name must say that one ladle of molten sugar is the ink, and the drawing is finished in one unbroken breath: the copper ladle lifts amber syrup, the wrist rises and falls, and a dragon leaps onto the marble slab — sugar painting is the only school of painting you could eat, though nobody ever has the heart to. The sketch lives entirely in the mind; sugar sets as it cools, so no stroke can be taken back — the trade's law is the pattern book in the heart, one stroke to the end. From Tang-dynasty sugar offerings to the spinning pattern wheel of Sichuan temple fairs, the sweet registry runs a thousand years. The lexicon is ready: sugar, ladle, thread, dragon and amber — every word gleams. The hidden exam is the triple business: the corporate-event line reads live spectacle and speed of the hand; the heritage-showcase line reads lineage and how full the pattern book is; the family-class traffic line wants photogenic fun — the name must stand on the event contract, the showcase poster and the market-stall sign alike. The failure mode is the snack register: a sweet-and-honey name reads painting-in-sugar as a malt-candy stall — this craft sells the wrist's unbroken breath, not the sweetness itself.",
+      namingIdeas: [
+        "One stroke to the end outright: one-stroke, one-breath and ladle-tip process roots — sugar sets as it cools and no stroke returns; the process word carries its own suspense and spectacle",
+        "Sugar as ink, translated: ink, painting, script and brush literati roots — raising syrup into ink hands the street craft a painter's status",
+        "Borrowing the dragon pattern book: dragon, phoenix, fish and butterfly pattern roots — the dragon as top prize on the spinning wheel is a nationwide childhood memory; the pattern word carries luck and traffic",
+        "The amber-thread narrative: amber, gold-thread and gleam texture roots — syrup shining under the lamp is the craft's most photogenic instant; the texture word gives the short-video line its image",
+        "The temple-fair grammar: market, fair and spinning-wheel scene roots — the pattern wheel is sugar painting's native stage; the scene word warms the family line and stages the corporate line",
+      ],
+      cases: [
+        { name: "Yi Shao Long (一勺龙)", takeaway: "Tool on the trump pattern: one ladle of syrup draws the whole dragon — three characters tell the move, the luck and the image at once; the market sign's best eye-catcher, a memory hook on the event contract" },
+        { name: "Tang Mo (糖墨)", takeaway: "Material on the literati mother-word, minimal: syrup is the ink — two characters read the street snack as a school of painting; solemn on the heritage stage, status on the cultural line" },
+        { name: "Zhuan Tang Pan (转糖盘)", takeaway: "The native scene translated straight: the spinning wheel decides your pattern, a nationwide childhood suspense — three characters carry their own game; easy to teach in the family class, easy to spread on short video" },
+        { name: "Hu Po Bi (琥珀笔)", takeaway: "Texture on the painting tool: syrup like amber under the lamp, the copper ladle as the brush — the texture word paints the image; the brand-event line reads the taste, dignified on the gift card" },
+      ],
+      pitfalls: [
+        "The snack register: a sweet-and-honey name reads painting-in-sugar as a malt-candy stall — this craft sells the wrist's unbroken breath, not the sweetness",
+        "Locking into one pattern: a sugar-dragon-only name can't take the brand-custom and portrait commissions — leave the pattern to the wheel, keep the whole wrist for the brand",
+        "Ignoring the event cash flow: a heritage-master-only name can't catch the corporate gala and mall-event bookings — leave one festive posture for the show line",
+        "Silence on the sugar worry: family-line parents mind the sugar — say art-for-the-eyes clearly outside the name, lest the brand read as a children's candy maker",
+      ],
+    },
+  },
+  velvetflower: {
+    slug: "velvetflower",
+    keywords: ["绒花工坊", "南京绒花", "缠花", "velvet flower", "ronghua"],
+    tlds: [
+      { tld: "com", zh: "剧组订单与婚庆批发的默认后缀，供货合同与档期表上最稳", en: "The default suffix for production-crew orders and wedding wholesale — steadiest on the supply contract and the schedule" },
+      { tld: "art", zh: "把绒花从「头饰配件」升维到「蚕丝为瓣的雕塑」，展览与收藏线的身价后缀", en: "Elevating velvet flowers from hair accessory to sculpture petalled in silk — the status suffix for the exhibition and collector line" },
+      { tld: "shop", zh: "汉服配饰电商的转化后缀，新中式衣橱的下单动词直给", en: "The conversion suffix for hanfu-accessory ecommerce — the order verb of the new-Chinese wardrobe stated outright" },
+    ],
+    zh: {
+      label: "绒花工坊",
+      title: "绒花工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "绒花与缠花工坊命名指南：蚕丝为瓣叙事、荣华谐音等思路，绒花工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "绒花工坊的名字要说出「蚕丝烧毛为瓣、铜丝为骨，一朵花永不凋谢」：熟绒劈得比发丝细，滚烫的赶条子把丝绒拧上退火铜丝，打尖、传花，一朵含苞的芍药在指尖开成永恒——绒花谐音「荣华」，从唐代宫花到南京绒花的「一事三节」（婚事、年节、端午中秋必戴），彩头的家谱写了一千三百年；《延禧攻略》一夜带火的正是这门手艺。词库现成：绒、花、荣、丝、宫——每个字都柔软发光。隐藏考点是三线业务：剧组与博物馆复原线认工艺全不全，婚庆与汉服电商线认款式与出货稳，绒花体验课的流量线要出片治愈——名字要在剧组合同、婚礼清单与课程海报三个场景都立得住。误区在于饰品店化：满名的「饰、坊、阁」气质会把蚕丝雕塑念成义乌头花档口——这门手艺卖的是指尖开出的荣华，不是九块九包邮。",
+      namingIdeas: [
+        "荣华谐音直给：荣、华、绒类彩头词——绒花即荣华是一千三百年的官方谐音，彩头词在婚庆线自带口彩",
+        "蚕丝为瓣转译：丝、瓣、蕊、绒类材质词——熟绒劈丝比发细是入行门槛，材质词让藏家一眼认出功力",
+        "宫花身世借力：宫、唐、贡类身世词——从唐代宫花到剧组爆款是现成的身价背书，身世词立住复原等级",
+        "永不凋谢叙事：常开、不谢、恒类时间词——绢花会旧绒花不谢，时间词把头饰升维成信物，婚庆线最吃",
+        "打尖传花语法：打尖、传花、赶条类工序词——行话词自带课堂看点，体验课上是现成的第一课",
+      ],
+      cases: [
+        { name: "常开", takeaway: "时间承诺的极简直译：一朵永不凋谢的花——两个字把绒花与鲜花绢花的差异说完，婚礼清单上是信物、礼盒卡片上有话讲" },
+        { name: "荣华记", takeaway: "官方谐音加记事尾缀：绒花即荣华写了一千三百年——彩头直给婚庆线，记事尾缀让品牌像一册家谱，郑重耐读" },
+        { name: "劈丝坊", takeaway: "入行门槛工序加坊号：熟绒劈得比发丝细是功力的第一关——工序词让藏家与剧组一眼识别专业身位，课程海报上好讲" },
+        { name: "宫花手作", takeaway: "身世加身位的组合：唐代宫花是绒花的家谱起点——身世词立住复原等级，博物馆线郑重，汉服电商线有故事可讲" },
+      ],
+      pitfalls: [
+        "饰品店化：满是「饰、阁」气质的名字把蚕丝雕塑念成义乌头花档口——这门手艺卖指尖开出的荣华，不是九块九包邮",
+        "锁死婚庆单场景：叫「囍花坊」就难接剧组复原与当代设计的单——场景留给款式，品牌名留给整门手艺",
+        "蹭剧过气风险：直接蹭「延禧」等剧名会随剧集热度过气还有版权风险——借身世不借剧名，家谱比爆款长寿",
+        "忽略缠花近亲：绒花与缠花工艺不同却常被混称——名字之外要把工艺边界讲清，别让专业藏家读出外行感",
+      ],
+    },
+    en: {
+      label: "Velvet flower studios",
+      title: "How to Name a Velvet Flower Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Velvet flower (ronghua) studio naming guide: silk-as-petal narrative, glory homophone lore, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A velvet flower studio's name must say that boiled silk is the petal and annealed copper the bone, and the flower never wilts: the floss is split finer than hair, the scalding tool twists silk onto wire, and between the tipping and the assembling a peony opens at the fingertip into permanence. Ronghua puns on glory-and-splendour, and from Tang-dynasty palace flowers to Nanjing's rule of one wedding and three festivals, the lucky registry runs thirteen hundred years — one costume drama re-lit the whole craft overnight. The lexicon is ready: velvet, flower, glory, silk and palace — every word is soft and luminous. The hidden exam is the triple business: the production-crew and museum-restoration line reads how complete the technique is; the wedding and hanfu-ecommerce line reads styles and steady shipping; the workshop-class traffic line wants photogenic calm — the name must stand on the crew contract, the wedding checklist and the class poster alike. The failure mode is the trinket register: a hair-accessory-stall name reads silk sculpture as a nine-yuan commodity — this craft sells glory opened at the fingertip, not free shipping.",
+      namingIdeas: [
+        "The glory pun outright: glory, splendour and velvet homophone roots — ronghua as glory is the thirteen-century official pun; the lucky word carries its own blessing on the wedding line",
+        "Silk as petal, translated: silk, petal, stamen and floss material roots — splitting floss finer than hair is the trade's entrance exam; the material word lets collectors read the mastery",
+        "Borrowing the palace pedigree: palace, Tang and tribute pedigree roots — from Tang palace flowers to the drama-fuelled revival is a ready status endorsement; the pedigree word sets the restoration grade",
+        "The never-wilting narrative: ever-blooming, unfading and permanence time roots — silk gauze ages but velvet flowers never wilt; the time word raises the accessory into a token, the wedding line's favourite",
+        "The tipping-and-assembling grammar: tipping, flower-passing and rod-rolling process roots — the argot word carries its own classroom spectacle, the workshop's ready first lesson",
+      ],
+      cases: [
+        { name: "Chang Kai (常开)", takeaway: "The time promise, minimal: a flower that never wilts — two characters tell the whole difference from fresh and gauze flowers; a token on the wedding checklist, words ready on the gift card" },
+        { name: "Rong Hua Ji (荣华记)", takeaway: "The official pun on a chronicle ending: velvet-as-glory has been written for thirteen centuries — the blessing stated outright for weddings; the chronicle ending reads the brand as a family registry, solemn and durable" },
+        { name: "Pi Si Fang (劈丝坊)", takeaway: "The entrance-exam process on a workshop ending: splitting floss finer than hair is mastery's first gate — the process word lets collectors and crews read the professional posture, easy to teach on the poster" },
+        { name: "Gong Hua Shou Zuo (宫花手作)", takeaway: "Pedigree on the maker posture: Tang palace flowers are the craft's registry origin — the pedigree word sets the restoration grade; solemn for museums, a story ready for the hanfu shop" },
+      ],
+      pitfalls: [
+        "The trinket register: an accessory-stall name reads silk sculpture as a nine-yuan hairpin counter — this craft sells glory opened at the fingertip, not free shipping",
+        "Locking into the wedding scene: a double-happiness-only name can't take the crew-restoration and contemporary-design orders — leave the scene to the style, keep the whole craft for the brand",
+        "Riding a fading drama: naming after a hit show fades with the season and courts copyright risk — borrow the pedigree, not the title; the registry outlives the hit",
+        "Blurring the twining cousin: velvet flowers and twined flowers are different crafts often conflated — draw the boundary clearly outside the name, lest expert collectors read amateurism",
+      ],
+    },
+  },
+  oilpaperumbrella: {
+    slug: "oilpaperumbrella",
+    keywords: ["油纸伞工坊", "泸州油纸伞", "纸伞", "oil-paper umbrella", "paper umbrella"],
+    tlds: [
+      { tld: "com", zh: "文旅订单与出口批发的默认后缀，供货合同与展会名片上最稳", en: "The default suffix for tourism orders and export wholesale — steadiest on the supply contract and the trade-fair card" },
+      { tld: "art", zh: "把纸伞从「雨具」升维到「一伞一画的移动画框」，展览与收藏线的身价后缀", en: "Elevating the paper umbrella from rain gear to a walking picture frame — the status suffix for the exhibition and collector line" },
+      { tld: "studio", zh: "工作室气质直给，竹骨与桐油之间的手作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between bamboo ribs and tung oil" },
+    ],
+    zh: {
+      label: "油纸伞工坊",
+      title: "油纸伞工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "油纸伞工坊命名指南：七十二道工序叙事、油纸有子谐音等思路，油纸伞工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "油纸伞工坊的名字要说出「一把伞七十二道工序，桐油刷过就是一方晴雨」：号竹、削骨、穿线、糊纸、绘花、上油，老话讲「工序七十二道半，搬进搬出不肖算」；油纸谐音「有子」，伞骨聚合曰「团圆」，从婚嫁礼器到白娘子借伞的西湖烟雨，彩头与浪漫写满千年家谱。词库现成：伞、纸、竹、油、雨——每个字都带着江南的水汽。隐藏考点是三线业务：文旅与影视布景线认批量与交期，婚庆与出口礼品线认彩头与画工，古镇体验课的流量线要出片有意境——名字要在供货合同、婚礼清单与景区招牌三个场景都立得住。误区在于道具化：满名的「影楼、写真」气质会把七十二道工序念成十块钱的拍照道具——这门手艺卖的是竹骨纸面上的晴雨与团圆，不是一次性布景。",
+      namingIdeas: [
+        "七十二道工序直给：号竹、穿线、上油类工序词——工序之繁是这门手艺的身价原点，工序词自带匠气与看点",
+        "有子团圆借力：有子、团圆、合类彩头词——油纸谐音有子、伞骨聚曰团圆是现成的婚庆口彩，彩头词在礼品线直接变现",
+        "烟雨江南转译：烟、雨、晴、湖类意境词——白娘子借伞是全民共享的浪漫脚本，意境词让文旅线出片、出口线有东方想象",
+        "竹骨纸面叙事：竹、骨、纸、桐类材料词——一伞收尽竹木纸油四种材料，材料词立住手作身位与环保叙事",
+        "开合晴雨语法：开、合、撑、遮类动作词——伞的开合自带仪式感，动作词让品牌有戏、短视频线好传播",
+      ],
+      cases: [
+        { name: "七十二道", takeaway: "工序数量的极简直译：老话「工序七十二道半」是现成文案——四个字把繁复与诚意说完，供货合同上专业、课程海报上好讲" },
+        { name: "借伞", takeaway: "全民浪漫脚本的动词直给：白娘子借伞是刻进文化基因的桥段——两个字自带故事与烟雨画面，文旅线最出片、婚庆线有话讲" },
+        { name: "有子伞坊", takeaway: "官方谐音加坊号：油纸即有子写了千年——彩头直给婚庆与送礼线，坊号立住手作身位，礼盒卡片上体面" },
+        { name: "晴雨集", takeaway: "伞的本职加集市尾缀：一伞遮尽晴雨两季——本职词让品牌不飘，集字暗示款式丰富，电商与展会线都接得住" },
+      ],
+      pitfalls: [
+        "道具化：满是「影楼、写真」气质的名字把七十二道工序念成十元拍照道具——这门手艺卖竹骨纸面上的团圆，不是一次性布景",
+        "锁死古风单场景：叫「汉服伞舍」就难接现代设计与出口礼品的单——场景留给款式，品牌名留给整把伞",
+        "忽略实用性表达：真桐油伞能遮雨、装饰伞不能——名字之外要把用途边界讲清，别让客户拿装饰伞淋一场雨",
+        "产地冒认：非泸州、余杭产却名带产地会招来行内与商誉风险——产地要有真师承，故事要在名字之外讲清",
+      ],
+    },
+    en: {
+      label: "Oil-paper umbrella workshops",
+      title: "How to Name an Oil-Paper Umbrella Workshop: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Oil-paper umbrella workshop naming guide: seventy-two-step narrative, reunion homophone lore, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "An oil-paper umbrella workshop's name must say that one umbrella takes seventy-two steps, and a coat of tung oil holds a whole climate of rain and shine: the bamboo is graded, the ribs shaved, the threads strung, the paper pasted, painted and oiled — the old saying counts seventy-two steps and a half, the hauling not included. Oil-paper puns on bearing sons, and the ribs gathering at the hub is called reunion; from wedding regalia to the White Snake borrowing an umbrella in West Lake mist, luck and romance fill a thousand-year registry. The lexicon is ready: umbrella, paper, bamboo, oil and rain — every word carries the damp air of Jiangnan. The hidden exam is the triple business: the tourism and film-set line reads batch capacity and lead time; the wedding and export-gift line reads blessing and brushwork; the old-town workshop traffic line wants photogenic atmosphere — the name must stand on the supply contract, the wedding checklist and the scenic-spot sign alike. The failure mode is the prop register: a photo-studio name reads seventy-two steps as a ten-yuan photo prop — this craft sells rain, shine and reunion on bamboo bone and paper skin, not disposable scenery.",
+      namingIdeas: [
+        "Seventy-two steps outright: bamboo-grading, thread-stringing and oiling process roots — the sheer count of steps is the craft's origin of status; the process word carries craftsman air and spectacle",
+        "Borrowing sons and reunion: son-bearing, reunion and gathering blessing roots — oil-paper as bearing-sons and the hub as reunion are ready wedding blessings; the lucky word converts on the gift line",
+        "Misty Jiangnan, translated: mist, rain, shine and lake atmosphere roots — the White Snake borrowing an umbrella is the nation's shared romance script; the atmosphere word photographs the tourism line and orients the export imagination",
+        "The bamboo-and-paper narrative: bamboo, rib, paper and tung material roots — one umbrella gathers four materials; the material word sets the maker posture and the sustainability story",
+        "The open-and-close grammar: open, close, hold and shelter action roots — an umbrella's opening carries its own ceremony; the action word gives the brand theatre and the short-video line its motion",
+      ],
+      cases: [
+        { name: "Qi Shi Er Dao (七十二道)", takeaway: "The step count, minimal: the old saying's seventy-two steps and a half is ready copy — four characters tell the intricacy and the sincerity at once; professional on the contract, easy to teach on the poster" },
+        { name: "Jie San (借伞)", takeaway: "The nation's romance script as a verb: the White Snake borrowing an umbrella is carved into the culture's genes — two characters carry story and misty image; the tourism line's best photograph, words ready for weddings" },
+        { name: "You Zi San Fang (有子伞坊)", takeaway: "The official pun on a workshop ending: oil-paper as bearing-sons has been written a thousand years — the blessing stated outright for the wedding and gift line; dignified on the gift card" },
+        { name: "Qing Yu Ji (晴雨集)", takeaway: "The umbrella's day job on a market ending: one canopy shelters both rain and shine — the duty word keeps the brand grounded; the market ending hints at range, holding both the shop and the fair" },
+      ],
+      pitfalls: [
+        "The prop register: a photo-studio name reads seventy-two steps as a ten-yuan photo prop — this craft sells reunion on bamboo bone and paper skin, not disposable scenery",
+        "Locking into the costume scene: a hanfu-only name can't take the modern-design and export-gift orders — leave the scene to the style, keep the whole umbrella for the brand",
+        "Silence on real use: a true tung-oil umbrella keeps off the rain, a decorative one does not — draw the boundary clearly outside the name, lest a customer walk a decorative canopy into a storm",
+        "Faking the origin: naming Luzhou or Yuhang without true descent invites trade and reputation risk — claim an origin only with a real lineage, tell the story outside the name",
+      ],
+    },
+  },
+  bronzecasting: {
+    slug: "bronzecasting",
+    keywords: ["铸铜工坊", "失蜡法", "铜炉", "bronze casting", "lost-wax casting"],
+    tlds: [
+      { tld: "com", zh: "藏家订单与文创批发的默认后缀，委托合同与拍卖图录上最稳", en: "The default suffix for collector orders and cultural wholesale — steadiest on the commission contract and the auction catalogue" },
+      { tld: "art", zh: "把铸铜从「翻模量产」升维到「青铜血脉的雕塑」，美术馆与拍卖线的身价后缀", en: "Elevating bronze casting from mould production to sculpture in the bronze bloodline — the status suffix for the gallery and auction line" },
+      { tld: "studio", zh: "工作室气质直给，蜡模与熔炉之间的手作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between the wax model and the furnace" },
+    ],
+    zh: {
+      label: "铸铜工坊",
+      title: "铸铜工坊怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "铸铜与失蜡法工坊命名指南：以蜡换铜叙事、炉火纯青等思路，铸铜工坊案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "铸铜工坊的名字要说出「一块蜡换一块铜，火里求的是三千年的家谱」：失蜡法先雕蜡模、裹泥成范，烈火把蜡逼走、铜水补位——蜡有多精细，铜就有多精细；从曾侯乙尊盘的鬼工到宣德炉的皮色，再到当代雕塑的翻铜，青铜的家谱从商周写到今天，「炉火纯青」「模范」二词都从这门手艺里来。词库现成：铜、铸、炉、蜡、范——每个字都有分量。隐藏考点是三线业务：藏家与拍卖线认皮色与失蜡功力，寺庙与空间雕塑线认大件工程能力，香道文创线认小件量产与出货稳——名字要在委托合同、工程图纸与礼盒卡片三个场景都立得住。误区在于五金化：满名的「金属、制品」气质会把青铜血脉念成五金加工厂——这门手艺卖的是火里换来的精细与皮色，不是按吨计价的铜料。",
+      namingIdeas: [
+        "以蜡换铜直给：失蜡、蜡、范类工序词——蜡走铜来是这门手艺最惊艳的魔术，工序词自带悬念与专业身位",
+        "炉火纯青借力：炉、火、纯青类成语词——「炉火纯青」是铸铜送给汉语的官方文案，成语词自带三千年背书",
+        "模范母词转译：模、范、铸类源头词——「模范」二字生于铸造，源头词让品牌站上汉语的原点，郑重耐读",
+        "宣德皮色叙事：宣、皮、栗、藏经类色谱词——宣德炉皮色是藏家的暗号，色谱词让高端线一眼认出等级",
+        "青铜家谱语法：鼎、尊、彝类礼器词——商周礼器是青铜的身价原点，礼器词立住收藏线的门第感",
+      ],
+      cases: [
+        { name: "失蜡记", takeaway: "核心工艺加记事尾缀：以蜡换铜的魔术直给——三个字把手艺、悬念与家谱说完，藏家线郑重、体验课上是现成的第一课" },
+        { name: "纯青炉", takeaway: "成语拆用加炉字点题：炉火纯青生于铸铜——三个字自带最高等级的功力承诺，拍卖图录上体面、香道线有暗号" },
+        { name: "模范铸造", takeaway: "汉语源头词的直译组合：模与范都生于翻铸——四个字让品牌站上词源原点，工程线读出规范，文化线读出巧思" },
+        { name: "铜声", takeaway: "材料加感官的极简组合：好铜一敲便知——两个字把品控做成品牌，藏家线懂行、短视频线有声音记忆点" },
+      ],
+      pitfalls: [
+        "五金化：满是「金属、制品」气质的名字把青铜血脉念成五金加工厂——这门手艺卖火里换来的皮色，不是按吨计价的铜料",
+        "锁死单一品类：叫「铜炉坊」就难接雕塑翻铜与空间工程的单——品类留给货架，品牌名留给整座熔炉",
+        "仿古与做旧失语：做旧工艺品与冒充老物是两回事——名字之外要把边界讲清，别让品牌沾上赝品风险",
+        "忽略大件工程线：只端着「文玩小件」的名字接不住寺庙大佛与城市雕塑的工程——给工程能力留一个有分量的身位",
+      ],
+    },
+    en: {
+      label: "Bronze casting studios",
+      title: "How to Name a Bronze Casting Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Bronze casting studio naming guide: lost-wax narrative, furnace-perfection lore, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A bronze casting studio's name must say that a block of wax is traded for a block of bronze, and what the fire is asked for is a three-thousand-year registry: in lost-wax casting the model is carved in wax and jacketed in clay, then the flame drives the wax out and molten bronze takes its place — the bronze is exactly as fine as the wax dared to be. From the impossible openwork of the Zenghouyi altar set to the patina of Xuande censers to contemporary sculpture editions, the bronze registry runs from the Shang dynasty to this morning — and the Chinese words for perfected mastery and for role model were both born at this furnace. The lexicon is ready: bronze, cast, furnace, wax and mould — every word has weight. The hidden exam is the triple business: the collector-and-auction line reads patina and lost-wax mastery; the temple and public-sculpture line reads large-work engineering; the incense-culture gift line reads small-piece production and steady shipping — the name must stand on the commission contract, the engineering drawing and the gift card alike. The failure mode is the hardware register: a metal-products name reads the bronze bloodline as a fittings factory — this craft sells fineness and patina traded out of the fire, not copper priced by the ton.",
+      namingIdeas: [
+        "Wax for bronze outright: lost-wax, wax and investment process roots — wax leaves and bronze arrives, the craft's most dazzling magic; the process word carries suspense and the professional posture",
+        "Borrowing furnace perfection: furnace, fire and pure-blue idiom roots — the idiom for perfected mastery was coined at this furnace; the idiom word carries three millennia of endorsement",
+        "The mould mother-words, translated: mould, pattern and cast origin roots — the Chinese word for role model was born in casting; the origin word sets the brand at the language's source, solemn and durable",
+        "The Xuande patina narrative: Xuande, skin, chestnut and sutra-paper colour roots — censer patina is the collectors' password; the colour word lets the high line read the grade at a glance",
+        "The ritual-vessel grammar: ding, zun and yi vessel roots — Shang-Zhou ritual bronzes are the origin of status; the vessel word sets the collector line's pedigree",
+      ],
+      cases: [
+        { name: "Shi La Ji (失蜡记)", takeaway: "The core process on a chronicle ending: the wax-for-bronze magic stated outright — three characters tell the craft, the suspense and the registry at once; solemn for collectors, the workshop's ready first lesson" },
+        { name: "Chun Qing Lu (纯青炉)", takeaway: "The idiom cut down with the furnace to anchor: perfected mastery was born of casting — three characters carry the highest-grade promise; dignified in the catalogue, a password on the incense line" },
+        { name: "Mo Fan Zhu Zao (模范铸造)", takeaway: "The origin words translated straight: mould and pattern were both born of the foundry — four characters set the brand at the etymological source; the engineering line reads standards, the culture line reads wit" },
+        { name: "Tong Sheng (铜声)", takeaway: "Material on the sense, minimal: good bronze declares itself at one knock — two characters turn quality control into the brand; the collector line hears expertise, the short-video line keeps the ring" },
+      ],
+      pitfalls: [
+        "The hardware register: a metal-products name reads the bronze bloodline as a fittings factory — this craft sells patina traded out of the fire, not copper by the ton",
+        "Locking into one category: a censer-only name can't take the sculpture-edition and public-work commissions — leave the category to the shelf, keep the whole furnace for the brand",
+        "Silence on antiquing: aged finishes and forged antiques are different trades — draw the boundary clearly outside the name, lest the brand catch the forgery's shadow",
+        "Ignoring the large-work line: a desk-trinket-only name can't catch the temple Buddha and city-sculpture engineering — leave one weighty posture for the engineering capability",
+      ],
+    },
+  },
+  pyrography: {
+    slug: "pyrography",
+    keywords: ["烙画工作室", "烫画", "火笔画", "pyrography studio", "wood burning art"],
+    tlds: [
+      { tld: "com", zh: "定制订单与文创批发的默认后缀，委托合同与展签上最稳", en: "The default suffix for custom commissions and cultural wholesale — steadiest on the contract and the exhibit label" },
+      { tld: "art", zh: "把烙画从「工艺品烫花」升维到「以火为墨的绘画」，展览与收藏线的身价后缀", en: "Elevating pyrography from decorative branding to painting with fire as ink — the status suffix for the exhibition and collector line" },
+      { tld: "studio", zh: "工作室气质直给，烙铁与木板之间的手作身位零违和", en: "The studio register stated outright — zero friction for the maker posture between the burning pen and the wood panel" },
+    ],
+    zh: {
+      label: "烙画工作室",
+      title: "烙画工作室怎么起名：命名思路、好名字拆解与域名选择",
+      metaDescription: "烙画与火笔画工作室命名指南：以火为墨叙事、南阳烙花等思路，烙画工作室案例拆解，推荐 TLD 与常见误区，并用 AI 猎取可注册域名。",
+      intro:
+        "烙画工作室的名字要说出「以火为墨、以铁为笔，深浅全凭一秒的火候」：烙铁在木板上走笔，温度与停留决定焦色的九个层次，行话叫「火候即墨分五色」——下笔不能改，烫穿即报废，比水墨更没有退路；从西汉「烙花王」的传说到南阳烙画的贡品身世，火笔的家谱写了两千年。词库现成：烙、火、笔、木、焦——每个字都带着温度。隐藏考点是三线业务：藏家与展览线认火候层次与题材功力，定制礼品线认肖像与宠物订单的相似度，烙画体验课的流量线要出片解压——名字要在展签、委托合同与课程海报三个场景都立得住。误区在于烫花化：满名的「烫印、加工」气质会把以火为墨念成礼品厂的激光刻字——这门手艺卖的是一秒火候里的深浅，不是批量烫印的 logo。",
+      namingIdeas: [
+        "以火为墨直给：火、墨、烙、焦类母词——把火升维成墨是这门手艺的身价原点，母词组合自带绘画门类的体面",
+        "火候五色借力：五色、深浅、焦茶类层次词——焦色九层是入行门槛，层次词让藏家一眼认出功力",
+        "一笔无悔转译：无悔、一笔、不改类决绝词——烫穿即报废比水墨更决绝，决绝词自带悬念与看点",
+        "南阳贡品叙事：宛、贡、烙花类身世词——南阳烙花的贡品身世是现成背书，身世词立住师承等级",
+        "木纹肌理语法：木、纹、板、葫芦类载体词——烙画借木纹作画是独门审美，载体词让定制线有画面可想",
+      ],
+      cases: [
+        { name: "火墨", takeaway: "两个母词的极简对撞：火即是墨——两个字把整门手艺的升维说完，展签上郑重、当代艺术线的身价直给" },
+        { name: "一烙无悔", takeaway: "决绝感的直译：下笔不能改是烙画的心跳——四个字自带悬念与功力承诺，短视频线好传播、课程海报上好讲" },
+        { name: "焦茶九层", takeaway: "行话层次的直给：焦色九层是藏家的暗号——四个字让懂行的一眼认出专业身位，委托合同上可信、体验课上是第一课" },
+        { name: "宛火堂", takeaway: "产地古称加火字加堂号：宛是南阳古称、烙画的贡品原乡——三个字立住师承等级，藏家线郑重、文创线有故事" },
+      ],
+      pitfalls: [
+        "烫花化：满是「烫印、加工」气质的名字把以火为墨念成礼品厂激光刻字——这门手艺卖一秒火候里的深浅，不是批量 logo",
+        "锁死单一载体：叫「木板烙画」就难接葫芦、宣纸与皮革的单——载体留给货架，品牌名留给整支火笔",
+        "忽略定制现金流：只端着「大师题材」的名字接不住肖像与宠物定制的单——给定制线留一个亲切的身位",
+        "安全感失语：体验课家长在意烙铁烫伤——名字之外要把课堂安全讲清楚，别让流量线卡在报名转化上",
+      ],
+    },
+    en: {
+      label: "Pyrography studios",
+      title: "How to Name a Pyrography Studio: Strategies, Case Studies & Domains",
+      metaDescription:
+        "Pyrography studio naming guide: fire-as-ink narrative, nine-shades-of-scorch lore, case breakdowns, recommended TLDs and pitfalls — then hunt an available domain with AI.",
+      intro:
+        "A pyrography studio's name must say that fire is the ink and iron is the brush, and every shade hangs on one second of heat: the burning pen walks the wood, and temperature and dwell decide nine registers of scorch — the trade's law is that heat is ink in five colours. No stroke can be corrected; burn through and the panel is dead — less mercy than ink-wash painting ever gave. From the Western-Han legend of the Scorch-Flower King to Nanyang pyrography's tribute pedigree, the fire-brush registry runs two millennia. The lexicon is ready: scorch, fire, brush, wood and umber — every word arrives warm to the touch. The hidden exam is the triple business: the collector-and-exhibition line reads the layering of heat and command of subject; the custom-gift line reads likeness on portrait and pet commissions; the workshop-class traffic line wants photogenic calm — the name must stand on the exhibit label, the commission contract and the class poster alike. The failure mode is the branding-iron register: a heat-transfer name reads fire-as-ink as a gift factory's laser engraving — this craft sells the shades inside one second of heat, not batch-burned logos.",
+      namingIdeas: [
+        "Fire as ink outright: fire, ink, scorch and umber mother-roots — raising fire into ink is the craft's origin of status; the mother-word pairing carries a painting school's dignity",
+        "Borrowing the five-colour heat: five-colour, shade and umber-tea layer roots — nine registers of scorch is the trade's entrance exam; the layer word lets collectors read the mastery",
+        "The no-regret stroke, translated: no-regret, one-stroke and no-correction resolve roots — burn-through kills the panel, sterner than ink-wash; the resolve word carries suspense and spectacle",
+        "The Nanyang tribute narrative: Wan, tribute and scorch-flower pedigree roots — Nanyang's tribute pedigree is a ready endorsement; the pedigree word sets the lineage grade",
+        "The wood-grain grammar: wood, grain, panel and gourd canvas roots — painting with the grain is the craft's private aesthetic; the canvas word gives the custom line its image",
+      ],
+      cases: [
+        { name: "Huo Mo (火墨)", takeaway: "Two mother-words colliding, minimal: fire is the ink — two characters tell the whole elevation of the craft; solemn on the label, the contemporary line's status stated outright" },
+        { name: "Yi Lao Wu Hui (一烙无悔)", takeaway: "The resolve translated straight: no stroke returns is the craft's heartbeat — four characters carry suspense and the mastery promise; spreads on short video, easy to teach on the poster" },
+        { name: "Jiao Cha Jiu Ceng (焦茶九层)", takeaway: "The argot layers stated outright: nine shades of scorch is the collectors' password — four characters let the knowing read the professional posture; credible on the contract, the class's first lesson" },
+        { name: "Wan Huo Tang (宛火堂)", takeaway: "The ancient place-name with fire on a hall ending: Wan is old Nanyang, the tribute homeland of the craft — three characters set the lineage grade; solemn for collectors, a story for the gift line" },
+      ],
+      pitfalls: [
+        "The branding-iron register: a heat-transfer name reads fire-as-ink as a gift factory's laser engraving — this craft sells the shades in one second of heat, not batch logos",
+        "Locking into one canvas: a wood-panel-only name can't take the gourd, xuan-paper and leather commissions — leave the canvas to the shelf, keep the whole fire-brush for the brand",
+        "Ignoring the custom cash flow: a master-subject-only name can't catch the portrait and pet commissions — leave one warm posture for the custom line",
+        "Silence on classroom safety: workshop parents mind the hot iron — state the class's safety clearly outside the name, lest the traffic line stall at sign-up",
+      ],
+    },
+  },
 };
 
 /** 行业指南 slug 列表（顺序即导航展示顺序） */

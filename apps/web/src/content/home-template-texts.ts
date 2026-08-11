@@ -1571,4 +1571,28 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     zh: "一家玉雕与玉石雕刻工作室，寓意「玉不琢不成器，先读料三个月再动第一刀」；气质要有如琢如磨的敬畏与君子温润、不显旅游区玉器店；场景是鉴定证书上郑重、婚庆礼盒卡片上体面、玉雕研学海报上出片好懂。",
     en: "A jade carving studio. The name should carry unpolished jade is no vessel — the stone read for three months before the first cut; the vibe is cut-and-polish reverence and a gentleman's warmth, never a tourist-spot jade counter; it must read solemn on the certificate, dignified on the wedding gift card, and clear on the study-class poster.",
   },
+  "claysculpture": {
+    zh: "一家泥塑与彩塑工作室，寓意「一把土捏出人间百态，三分塑七分彩」；气质要有抓土成人的掌温与开脸功力、不显景区捏面摊；场景是展签上郑重、文创礼盒上讨喜、体验课海报上出片好玩。",
+    en: "A clay and painted sculpture studio. The name should carry one handful of earth pinching out the human comedy — three parts sculpting, seven parts painting; the vibe is the palm's warmth and the face-opening mastery, never a scenic-spot dough stall; it must read solemn on the exhibit label, charming on the gift box, and photogenic on the class poster.",
+  },
+  "sugarpainting": {
+    zh: "一家糖画与吹糖人工作室，寓意「一勺融糖当墨，一气呵成不能回笔」；气质要有腕上功夫与庙会烟火的快乐、不显麦芽糖摊；场景是商演合同上专业、非遗展演海报上郑重、亲子市集招牌上抓眼好玩。",
+    en: "A sugar painting studio. The name should carry one ladle of molten sugar as ink, finished in one unbroken stroke; the vibe is wrist mastery and temple-fair delight, never a malt-candy stall; it must read professional on the event contract, solemn on the heritage poster, and eye-catching on the market sign.",
+  },
+  "velvetflower": {
+    zh: "一家绒花与缠花工坊，寓意「蚕丝为瓣铜丝为骨，一朵花永不凋谢」；气质要有荣华口彩与宫花身世的体面、不显义乌头花档口；场景是剧组合同上专业、婚礼清单上是信物、体验课海报上出片治愈。",
+    en: "A velvet flower (ronghua) studio. The name should carry silk as the petal and copper as the bone — a flower that never wilts; the vibe is the glory pun's blessing and palace-flower pedigree, never a trinket stall; it must read professional on the crew contract, token-worthy on the wedding checklist, and calming on the class poster.",
+  },
+  "oilpaperumbrella": {
+    zh: "一家油纸伞工坊，寓意「一把伞七十二道工序，油纸有子、伞骨团圆」；气质要有烟雨江南的意境与匠气、不显影楼道具；场景是供货合同上专业、婚礼清单上有彩头、古镇招牌上出片有意境。",
+    en: "An oil-paper umbrella workshop. The name should carry seventy-two steps to one umbrella — sons in the pun, reunion at the hub; the vibe is misty Jiangnan atmosphere and craftsman rigor, never a photo prop; it must read professional on the supply contract, lucky on the wedding checklist, and atmospheric on the old-town sign.",
+  },
+  "bronzecasting": {
+    zh: "一家铸铜与失蜡法工坊，寓意「一块蜡换一块铜，炉火纯青写了三千年」；气质要有青铜血脉的分量与皮色功力、不显五金加工厂；场景是委托合同上郑重、拍卖图录上体面、香道文创礼盒上有暗号。",
+    en: "A bronze and lost-wax casting studio. The name should carry a block of wax traded for a block of bronze — furnace perfection written across three millennia; the vibe is the bronze bloodline's weight and patina mastery, never a fittings factory; it must read solemn on the commission, dignified in the catalogue, and knowing on the incense gift box.",
+  },
+  "pyrography": {
+    zh: "一家烙画与火笔画工作室，寓意「以火为墨以铁为笔，深浅全凭一秒火候」；气质要有一笔无悔的决绝与焦色九层的功力、不显礼品厂烫印；场景是展签上郑重、定制委托合同上可信、体验课海报上出片解压。",
+    en: "A pyrography studio. The name should carry fire as the ink and iron as the brush — every shade hanging on one second of heat; the vibe is the no-regret stroke's resolve and nine shades of scorch, never a gift factory's heat transfer; it must read solemn on the exhibit label, credible on the commission, and calming on the class poster.",
+  },
 };
