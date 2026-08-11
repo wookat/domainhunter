@@ -407,7 +407,7 @@
     ]
   },
   "guide": {
-    "count": 392,
+    "count": 398,
     "slugs": [
       "saas",
       "ecommerce",
@@ -800,7 +800,13 @@
       "shadowpuppet",
       "guqin",
       "brocade",
-      "jadecarving"
+      "jadecarving",
+      "claysculpture",
+      "sugarpainting",
+      "velvetflower",
+      "oilpaperumbrella",
+      "bronzecasting",
+      "pyrography"
     ]
   },
   "vs": {
