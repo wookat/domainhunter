@@ -596,7 +596,7 @@ export function mergeWordSupplement(main: AiCandidate[], extra: AiCandidate[]): 
 export async function generateAiCandidates(
   description: string,
   apiKey: string,
-  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; guard?: GuardStats; baseUrl?: string; model?: string; thinking?: string } = {},
+  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; guard?: GuardStats; baseUrl?: string; model?: string; thinking?: string; descLooksEnglish?: boolean } = {},
 ): Promise<AiCandidate[]> {
   let out: AiCandidate[];
   try {
@@ -628,7 +628,7 @@ export async function generateAiCandidates(
     }
   }
   // R463：zh 拼音/blend 路线配额失守时补发一次（镜像 R224；失败静默不阻塞主结果）
-  if ((opts.lang ?? "zh") === "zh" && !descriptionLooksEnglish(description) && needsPinyinSupplement(out)) {
+  if ((opts.lang ?? "zh") === "zh" && !(opts.descLooksEnglish ?? descriptionLooksEnglish(description)) && needsPinyinSupplement(out)) {
     if (opts.guard) opts.guard.pinyinSupplement = true;
     try {
       const extra = await generateOnce(description, apiKey, {
@@ -1239,6 +1239,7 @@ async function generateOnce(
     baseUrl?: string;
     model?: string;
     thinking?: string;
+    descLooksEnglish?: boolean;
   } = {},
 ): Promise<AiCandidate[]> {
   const count = opts.count ?? 24;
@@ -1365,8 +1366,9 @@ async function generateOnce(
     // blend/word/coined 不强制校验（blend 含英文，无法整体切分）
     let readabilityPenalty = 0;
     // R465（R464 复评）：en 场景丢弃拼音路线候选（英文用户读不出拼音，Top Picks 曾被拼音霸榜），先于拼音合法性校验以免计入其他防线；
-    // lang 取自 UI 语言，中文 UI 下输入纯英文描述同样适用（R465 线上回归发现的路径盲区）
-    if (((opts.lang ?? "zh") === "en" || descriptionLooksEnglish(description)) && theme === "pinyin") {
+    // lang 取自 UI 语言，中文 UI 下输入纯英文描述同样适用（R465 线上回归发现的路径盲区）；
+    // 优先用调用方基于原始描述的判定（worker 会向 description 拼接中文风格/长度偏好后缀，直接判拼接后文本会误判为 zh）
+    if (((opts.lang ?? "zh") === "en" || (opts.descLooksEnglish ?? descriptionLooksEnglish(description))) && theme === "pinyin") {
       dropped.enPinyinRoute++;
       continue;
     }

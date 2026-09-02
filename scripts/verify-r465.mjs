@@ -140,5 +140,17 @@ check("descriptionLooksEnglish: 中英混排 → false", descriptionLooksEnglish
   check("zh-UI 英文描述: enPinyinRoute 计数 = 1", guard.dropped.enPinyinRoute, 1);
 }
 
+// ---------- worker 拼接风格后缀污染：descLooksEnglish opt 覆盖内部判定 ----------
+{
+  const main = [enCand("castloom", "blend"), { label: "rizhi", meaning: "「日志」双字全拼，声调顺口好读好记，读一遍就能拼出来", theme: "pinyin", scores: { length: 90, readability: 90, relevance: 90, brandability: 90 } }];
+  globalThis.fetch = async () => respWith(main);
+  const guard = newGuardStats();
+  const polluted = "a journaling app for developers\n命名风格偏好：极客风"; // worker 拼接后的 description
+  check("污染描述内部判定为 zh（对照组）", descriptionLooksEnglish(polluted), false);
+  const out = await generateAiCandidates(polluted, "k", { lang: "zh", guard, descLooksEnglish: true });
+  check("descLooksEnglish opt: 拼音候选仍被丢弃", out.some((c) => c.label === "rizhi"), false);
+  check("descLooksEnglish opt: enPinyinRoute = 1", guard.dropped.enPinyinRoute, 1);
+}
+
 console.log(failed === 0 ? "\nALL PASS" : `\n${failed} FAILED`);
 process.exit(failed === 0 ? 0 : 1);
