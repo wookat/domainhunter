@@ -262,6 +262,9 @@ export function ResultsPage({
   const moreBlocked = running || moreDisabled || quotaExhausted;
   const [starredCount, setStarredCount] = useState(0);
   const [selectedIdx, setSelectedIdx] = useState(-1);
+  // Space 快捷键两步确认：首次 Space 只预热，3s 内再按才真正发起（避免焦点不在输入框时误触消耗 AI 配额）
+  const [spaceArmed, setSpaceArmed] = useState(false);
+  const spaceArmTimer = useRef<number | undefined>(undefined);
   const listRef = useRef<HTMLDivElement>(null);
 
   const availableRows = useMemo(() => rows.filter((r) => r.status === "available"), [rows]);
@@ -327,8 +330,16 @@ export function ResultsPage({
         });
       } else if (e.key === " " && !moreBlocked) {
         e.preventDefault();
-        if (locked.size > 0) onMoreAroundLocked();
-        else onMore();
+        if (!spaceArmed) {
+          setSpaceArmed(true);
+          window.clearTimeout(spaceArmTimer.current);
+          spaceArmTimer.current = window.setTimeout(() => setSpaceArmed(false), 3000);
+        } else {
+          window.clearTimeout(spaceArmTimer.current);
+          setSpaceArmed(false);
+          if (locked.size > 0) onMoreAroundLocked();
+          else onMore();
+        }
       } else if (selectedIdx >= 0 && selectedIdx < visible.length) {
         const row = visible[selectedIdx];
         if (e.key === "c" || e.key === "C") void navigator.clipboard.writeText(row.domain);
@@ -338,7 +349,7 @@ export function ResultsPage({
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [visible, selectedIdx, moreBlocked, locked, onMore, onMoreAroundLocked, onToggleFavorite]);
+  }, [visible, selectedIdx, moreBlocked, locked, onMore, onMoreAroundLocked, onToggleFavorite, spaceArmed]);
 
   const lockedList = [...locked];
 
@@ -613,6 +624,11 @@ export function ResultsPage({
 
       {/* 底部 sticky：锁定 + 围绕锁定再来一轮 */}
       <div className="fixed inset-x-0 bottom-0 z-20 border-t border-line bg-bg1/90 backdrop-blur-[12px]">
+        {spaceArmed && (
+          <div className="pointer-events-none absolute inset-x-0 -top-9 flex justify-center" role="status">
+            <span className="rounded-md border border-line bg-bg2 px-3 py-1.5 text-xs text-txt0 shadow-sm">{t("results.spaceConfirm")}</span>
+          </div>
+        )}
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-3 sm:gap-3 sm:px-4 md:px-6">
           {quotaExhausted ? (
             <span className="min-w-0 truncate text-[11px] text-txt2 sm:text-xs">{t("results.moreQuota")}</span>
