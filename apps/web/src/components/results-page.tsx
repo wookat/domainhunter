@@ -18,6 +18,7 @@ import {
   Trophy,
 } from "lucide-react";
 
+import { BrandCard } from "@/components/brand-card";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { CopyButton, DomainRow, MeaningText, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
@@ -41,43 +42,6 @@ function sortRows(rows: Row[], sort: SortKey, priceOf?: (tld: string) => number)
     const sb = b.scores ? totalScore(b.scores) : -1;
     return sb - sa;
   });
-}
-
-// 品牌卡预览：按名字哈希确定性选配色与字形，纯 CSS 轻量模拟 logo 视觉（Namelix 式）
-const BRAND_GRADIENTS = [
-  "linear-gradient(135deg,#0ea5e9,#6366f1)",
-  "linear-gradient(135deg,#10b981,#0d9488)",
-  "linear-gradient(135deg,#f59e0b,#ef4444)",
-  "linear-gradient(135deg,#8b5cf6,#ec4899)",
-  "linear-gradient(135deg,#334155,#0f172a)",
-  "linear-gradient(135deg,#14b8a6,#3b82f6)",
-] as const;
-
-function brandHash(label: string): number {
-  let h = 0;
-  for (let i = 0; i < label.length; i++) h = (h * 31 + label.charCodeAt(i)) >>> 0;
-  return h;
-}
-
-function BrandMark({ label }: { label: string }) {
-  const h = brandHash(label);
-  const bg = BRAND_GRADIENTS[h % BRAND_GRADIENTS.length];
-  const variant = (h >> 3) % 3;
-  const text = variant === 0 ? label.toUpperCase() : variant === 1 ? label.charAt(0).toUpperCase() + label.slice(1) : label;
-  return (
-    <div className="grid h-20 place-items-center rounded-lg" style={{ background: bg }} aria-hidden>
-      <span
-        className={cn(
-          "max-w-full truncate px-3 text-white",
-          variant === 0 && "text-sm font-extrabold tracking-[0.22em]",
-          variant === 1 && "font-serif text-xl font-semibold tracking-tight",
-          variant === 2 && "font-mono text-lg font-bold lowercase tracking-tight",
-        )}
-      >
-        {text}
-      </span>
-    </div>
-  );
 }
 
 function TopPickCard({
@@ -126,7 +90,7 @@ function TopPickCard({
         </div>
       </div>
       <div className="mt-3">
-        <BrandMark label={row.label} />
+        <BrandCard label={row.label} size="lg" available={row.status === "available"} />
       </div>
       <div className="mt-3 truncate font-mono text-2xl font-bold tracking-tight">
         {row.label}
@@ -164,6 +128,7 @@ function GridCard({
   const score = row.scores ? totalScore(row.scores) : undefined;
   return (
     <div className="rounded-xl border border-line bg-bg1 p-4">
+      <BrandCard label={row.label} available={row.status === "available"} className="mb-3" />
       <div className="flex items-center justify-between gap-2">
         <span className="truncate font-mono text-lg font-semibold">
           {row.label}
@@ -614,17 +579,19 @@ export function ResultsPage({
           <div role="group" aria-label={t("results.view")} className="flex items-center gap-1 rounded-lg border border-line bg-bg1 p-1">
             <button
               title={t("results.viewRows")}
+              aria-label={t("results.viewRows")}
               aria-pressed={view === "rows"}
               onClick={() => setView("rows")}
-              className={cn("grid h-7 w-7 place-items-center rounded-md", view === "rows" ? "bg-bg3" : "text-txt2 hover:text-txt0")}
+              className={cn("grid h-11 w-11 place-items-center rounded-md sm:h-7 sm:w-7", view === "rows" ? "bg-bg3" : "text-txt2 hover:text-txt0")}
             >
               <Rows3 className="h-3.5 w-3.5" />
             </button>
             <button
               title={t("results.viewGrid")}
+              aria-label={t("results.viewGrid")}
               aria-pressed={view === "grid"}
               onClick={() => setView("grid")}
-              className={cn("grid h-7 w-7 place-items-center rounded-md", view === "grid" ? "bg-bg3" : "text-txt2 hover:text-txt0")}
+              className={cn("grid h-11 w-11 place-items-center rounded-md sm:h-7 sm:w-7", view === "grid" ? "bg-bg3" : "text-txt2 hover:text-txt0")}
             >
               <LayoutGrid className="h-3.5 w-3.5" />
             </button>

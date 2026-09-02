@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Bell, BellOff, BellRing, Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Loader2, Lock, ThumbsDown } from "lucide-react";
 
+import { BrandCard, BrandSwatch } from "@/components/brand-card";
 import { ConfirmLabel } from "@/components/confirm-label";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { ScoreBars } from "@/components/score-bars";
@@ -344,6 +345,17 @@ export function DomainRow({
       ) : (
         <span className={cn("tnum shrink-0 rounded-md bg-bg3 text-center font-mono font-semibold text-txt1", badgeCls)}>—</span>
       )}
+      {!compact && (
+        <button
+          title={t("brand.previewTitle")}
+          aria-label={`${t("brand.previewTitle")}: ${row.label}`}
+          aria-expanded={expanded}
+          className="-mx-1.5 hidden h-11 w-11 shrink-0 place-items-center rounded-md transition-colors hover:bg-bg3 sm:grid"
+          onClick={() => setExpanded((v) => !v)}
+        >
+          <BrandSwatch label={row.label} />
+        </button>
+      )}
       <DomainName row={row} compact={compact} />
       <span className={cn("h-1.5 w-1.5 shrink-0 rounded-full", isUnknown ? "bg-amber2" : "bg-brand")} />
       {isUnknown && (
@@ -430,11 +442,25 @@ export function DomainRow({
     </div>
     {/* 移动端寓意行：桌面寓意在行内，窄屏否则完全不可见（紧凑模式仅桌面，无需此行） */}
     {!compact && row.meaning && <p className="-mt-1.5 mb-2 px-4 pl-14 text-[11px] leading-snug text-txt1 line-clamp-2 sm:hidden"><MeaningText text={row.meaning} /></p>}
-    {expanded && row.scores && (
-      <div className={cn("pb-3", compact ? "px-3 pl-12 pt-1" : "px-4 pl-14")}>
-        {row.meaning && <p className="mb-2 max-w-xl text-xs leading-relaxed text-txt1"><MeaningText text={row.meaning} /></p>}
-        <ScoreBars scores={row.scores} columns={4} className="max-w-md" />
-        <p className="mt-2 max-w-xl text-[11px] leading-relaxed text-txt2">{t("score.explain")}</p>
+    {expanded && (
+      <div className={cn("pb-3", compact ? "px-3 pl-12 pt-1" : "px-4 sm:pl-[104px]")}>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-5">
+          {!compact && (
+            <div className="w-full shrink-0 sm:w-60">
+              <BrandCard label={row.label} size="sm" available={row.status === "available"} />
+              <p className="mt-1.5 text-[11px] leading-snug text-txt2">{t("brand.disclaimer")}</p>
+            </div>
+          )}
+          <div className="min-w-0 flex-1">
+            {row.meaning && <p className="mb-2 max-w-xl text-xs leading-relaxed text-txt1"><MeaningText text={row.meaning} /></p>}
+            {row.scores && (
+              <>
+                <ScoreBars scores={row.scores} columns={4} className="max-w-md" />
+                <p className="mt-2 max-w-xl text-[11px] leading-relaxed text-txt2">{t("score.explain")}</p>
+              </>
+            )}
+          </div>
+        </div>
       </div>
     )}
     </div>
