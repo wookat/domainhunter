@@ -596,50 +596,84 @@ export function mergeWordSupplement(main: AiCandidate[], extra: AiCandidate[]): 
 export async function generateAiCandidates(
   description: string,
   apiKey: string,
-  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; guard?: GuardStats; baseUrl?: string; model?: string; thinking?: string; descLooksEnglish?: boolean } = {},
+  opts: {
+    count?: number;
+    feedback?: RefineFeedback;
+    round?: number;
+    lang?: "zh" | "en";
+    guard?: GuardStats;
+    baseUrl?: string;
+    model?: string;
+    thinking?: string;
+    descLooksEnglish?: boolean;
+    /** R466：传入即主轮走流式，每个通过防线的候选立即回调；补发轮仍整包读取，合并后逐个回调。
+     *  返回值仍是完整候选数组（含补发），且与回调序列逐项一致 */
+    onCandidate?: CandidateSink;
+  } = {},
 ): Promise<AiCandidate[]> {
+  let delivered = 0;
+  const sink: CandidateSink | undefined = opts.onCandidate
+    ? async (c) => {
+        delivered++;
+        await opts.onCandidate!(c);
+      }
+    : undefined;
+  const mainOpts = { ...opts, onCandidate: sink };
   let out: AiCandidate[];
   try {
-    out = await generateOnce(description, apiKey, opts);
-  } catch {
+    out = await generateOnce(description, apiKey, mainOpts);
+  } catch (e) {
+    // 已向下游交出过候选（流中途失败/回调方异常）→ 不重试，避免重复下发
+    if (delivered > 0) throw e;
     // 瞬时错误/超时自动重试一次：带 jitter 退避，避免整次搜索直接报错
     if (opts.guard) opts.guard.retries++;
     await new Promise((r) => setTimeout(r, 400 + Math.random() * 600));
-    out = await generateOnce(description, apiKey, opts);
+    out = await generateOnce(description, apiKey, mainOpts);
   }
+  const supplementOpts = { ...opts, onCandidate: undefined };
+  const deliverExtra = async (merged: AiCandidate[], prevLen: number) => {
+    if (!sink) return;
+    for (const c of merged.slice(prevLen)) await sink(c);
+  };
   // R224：EN word 路线配额失守时补发（R243：过滤后 word 仍为 0 时再重试一次，总上限 2 次；
   // 第二次 prompt 加硬明确要求完整句式 meaning；两次仍 0 不阻塞主结果，失败静默）
   if ((opts.lang ?? "zh") === "en" && needsWordSupplement(out)) {
     if (opts.guard) opts.guard.wordSupplement = true;
     for (let attempt = 1; attempt <= EN_WORD_SUPPLEMENT_MAX_ATTEMPTS; attempt++) {
       if (opts.guard) opts.guard.supplementAttempts = attempt;
+      let merged = out;
       try {
         const extra = await generateOnce(description, apiKey, {
-          ...opts,
+          ...supplementOpts,
           count: EN_WORD_SUPPLEMENT_COUNT,
           wordSupplementExclude: out.map((c) => c.label),
           wordSupplementAttempt: attempt,
         });
-        out = mergeWordSupplement(out, extra);
+        merged = mergeWordSupplement(out, extra);
       } catch {
         // 补发失败不影响主结果
       }
+      await deliverExtra(merged, out.length);
+      out = merged;
       if (countThemes(out).word > 0) break;
     }
   }
   // R463：zh 拼音/blend 路线配额失守时补发一次（镜像 R224；失败静默不阻塞主结果）
   if ((opts.lang ?? "zh") === "zh" && !(opts.descLooksEnglish ?? descriptionLooksEnglish(description)) && needsPinyinSupplement(out)) {
     if (opts.guard) opts.guard.pinyinSupplement = true;
+    let merged = out;
     try {
       const extra = await generateOnce(description, apiKey, {
-        ...opts,
+        ...supplementOpts,
         count: ZH_PINYIN_SUPPLEMENT_COUNT,
         pinyinSupplementExclude: out.map((c) => c.label),
       });
-      out = mergePinyinSupplement(out, extra);
+      merged = mergePinyinSupplement(out, extra);
     } catch {
       // 补发失败不影响主结果
     }
+    await deliverExtra(merged, out.length);
+    out = merged;
   }
   return out;
 }
@@ -1071,6 +1105,113 @@ export function parseCandidateArray(text: string): Partial<AiCandidate>[] {
   throw new Error("llm-bad-json");
 }
 
+// ---------------- 流式增量候选数组解析（R466） ----------------
+// 主轮 chat.completions 改 stream:true 后，模型文本按任意边界分片到达。本解析器按字符扫描
+// （跳过字符串/转义，和 topLevelObjectEnds 同一套规则），数组内深度回到 1 的 "}" 即一个
+// 完整顶层对象 → 立即 JSON.parse 交出；对象解析失败则停止并丢弃其后全部文本
+// （与 parseCandidateArray「抢救坏点之前的对象」语义一致）。finish() 在 0 对象时抛出与
+// parseCandidateArray 同名的 llm-bad-output / llm-bad-json，交上层既有退避重试。
+export class CandidateArrayStreamParser {
+  private buf = "";
+  private depth = 0;
+  private inString = false;
+  private escaped = false;
+  private inObject = false;
+  private started = false;
+  private closed = false;
+  private closedCleanly = false;
+  private count = 0;
+
+  /** 已交出的顶层对象数 */
+  get parsed(): number {
+    return this.count;
+  }
+
+  /** 数组已闭合或遇到坏对象，后续文本全部忽略 */
+  get done(): boolean {
+    return this.closed;
+  }
+
+  push(chunk: string): Partial<AiCandidate>[] {
+    const out: Partial<AiCandidate>[] = [];
+    if (this.closed) return out;
+    for (let i = 0; i < chunk.length; i++) {
+      const ch = chunk[i];
+      if (!this.started) {
+        if (ch === "[") {
+          this.started = true;
+          this.depth = 1;
+        }
+        continue;
+      }
+      if (this.inObject) this.buf += ch;
+      if (this.inString) {
+        if (this.escaped) this.escaped = false;
+        else if (ch === "\\") this.escaped = true;
+        else if (ch === '"') this.inString = false;
+        continue;
+      }
+      if (ch === '"') {
+        this.inString = true;
+      } else if (ch === "{" || ch === "[") {
+        if (this.depth === 1 && ch === "{") {
+          this.inObject = true;
+          this.buf = "{";
+        }
+        this.depth++;
+      } else if (ch === "}" || ch === "]") {
+        this.depth--;
+        if (ch === "}" && this.depth === 1) {
+          this.inObject = false;
+          let v: unknown;
+          try {
+            v = JSON.parse(this.buf);
+          } catch {
+            this.closed = true;
+            return out;
+          }
+          this.buf = "";
+          if (v !== null && typeof v === "object") {
+            this.count++;
+            out.push(v as Partial<AiCandidate>);
+          }
+        } else if (this.depth <= 0) {
+          if (ch === "]" && this.depth === 0 && !this.inObject && this.count === 0) {
+            // "[]" 或前导文本里的杂散 "[…]"：记为干净闭合，继续找下一个 "["
+            this.closedCleanly = true;
+            this.started = false;
+            continue;
+          }
+          this.closed = true;
+          return out;
+        }
+      }
+    }
+    return out;
+  }
+
+  /** 流结束：未见 "[" → llm-bad-output；见到但一个对象都没解出 → llm-bad-json（"[]" 干净闭合除外） */
+  finish(): void {
+    if (this.count > 0 || this.closedCleanly) return;
+    throw new Error(this.started ? "llm-bad-json" : "llm-bad-output");
+  }
+}
+
+/** OpenAI 兼容 SSE 行 → delta.content；非 data 行/心跳/坏行返回 null，[DONE] 返回 false */
+export function sseDeltaContent(line: string): string | null | false {
+  if (!line.startsWith("data:")) return null;
+  const payload = line.slice(5).trim();
+  if (payload === "[DONE]") return false;
+  if (!payload) return null;
+  try {
+    const j = JSON.parse(payload) as { choices?: { delta?: { content?: unknown } }[] };
+    const d = j.choices?.[0]?.delta?.content;
+    return typeof d === "string" ? d : null;
+  } catch {
+    return null;
+  }
+}
+
 // ---------------- EN meaning 连贯性启发式（R196，P1-1） ----------------
 // 生产坏例：反思轮（round≥2）EN meaning 大面积词语碎片堆砌（"alapa vein memory,
 // floor n look, for times shaded privately" 型）。两条保守条件同时不满足才丢弃（宁放过不误杀）：
@@ -1224,6 +1365,197 @@ export function pinyinQuoteMismatch(label: string, meaning: string): boolean {
   return judged > 0;
 }
 
+/** R466：主轮流式模式下每个通过防线的候选立即回调（点踩后缀回填项除外，见 generateOnce 尾部） */
+export type CandidateSink = (c: AiCandidate) => void | Promise<void>;
+
+interface AdmitContext {
+  lang: "zh" | "en";
+  /** en UI 或英文描述 → 拼音路线候选丢弃（R465） */
+  enPinyinDrop: boolean;
+  isWordSupplement: boolean;
+  guardStats: GuardStats;
+  dropped: GuardDropCounts;
+  seen: Set<string>;
+}
+
+const clampScore = (v: unknown) => {
+  const n = Math.round(Number(v));
+  return Number.isFinite(n) ? Math.min(Math.max(n, 0), 100) : 60;
+};
+
+// 单个解析后候选过全部防线（R466 从 generateOnce 循环体抽出，流式/非流式共用同一函数，
+// 保证两种读取方式下防线顺序、丢弃归类与计数完全一致）；通过返回清洗后的候选，丢弃返回 null
+function admitCandidate(c: Partial<AiCandidate>, ctx: AdmitContext): AiCandidate | null {
+  const { dropped, guardStats, seen, isWordSupplement } = ctx;
+  // label 清洗：去首尾空白后必须整体是合法域名主体字符（小写字母/数字/连字符），
+  // 含内部空格或其他非法字符的直接丢弃，不做静默改写
+  const label = String(c.label ?? "").trim().toLowerCase();
+  if (!/^[a-z0-9-]{1,63}$/.test(label)) {
+    dropped.invalidLabel++;
+    return null;
+  }
+  if (seen.has(label)) return null; // 同轮重复不算防线拦截，不计数
+  // R180：知名品牌撞名过滤（完全同名，或长度 ≥5 且编辑距离 ≤1），规避商标法律风险
+  if (isBrandCollision(label)) {
+    dropped.brandCollision++;
+    return null;
+  }
+  seen.add(label);
+  // meaning 为空/全空白的候选直接丢弃（流截断或模型漏字段），不进核验队列；
+  // tried 由上层根据返回值累积，被丢弃项天然不计入
+  const rawMeaning = String(c.meaning ?? "");
+  const meaning = cleanMeaning(rawMeaning);
+  if (!meaning) {
+    dropped.emptyMeaning++;
+    return null;
+  }
+  // R149：括号注释剥离后过短（<6 字符）说明有效寓意几乎全在括号里，整条丢弃
+  if (meaning.length < 6 && PAREN_RE.test(rawMeaning)) {
+    dropped.emptyMeaning++;
+    return null;
+  }
+  // R179：meaning 混入目标语言白名单外的文字（韩文/西里尔/IPA 等）→ 整条丢弃
+  if (!meaningCharsetOk(meaning, ctx.lang)) {
+    dropped.charsetViolation++;
+    if (guardStats.charsetSample === undefined) {
+      guardStats.charsetSample = firstCharsetViolation(meaning, ctx.lang);
+    }
+    return null;
+  }
+  // R179：meaning 引用 label 中不存在的字母（"z from zeus" 式臆造词源）→ 整条丢弃
+  if (citesPhantomLetter(label, meaning)) {
+    dropped.phantomEtymology++;
+    return null;
+  }
+  // R183：meaning 出现命名路线分类元词/元话术（「这是 blend」式）→ 整条丢弃
+  if (containsMetaLanguage(meaning)) {
+    dropped.metaLanguage++;
+    return null;
+  }
+  // R183：meaning 声称的词源片段与 label 拼写不符（"play 与 grow 结合" for plangrow）→ 整条丢弃
+  if (citesPhantomWord(label, meaning)) {
+    dropped.phantomEtymology++;
+    return null;
+  }
+  // R246（R239 P2-4）：zh meaning 引用 label 中不存在且非白名单的独立 ASCII 词（「tedeck 落音笃定」式幻影引用）→ 整条丢弃
+  if (ctx.lang === "zh" && zhCitesPhantomAscii(label, meaning)) {
+    dropped.phantomEtymology++;
+    return null;
+  }
+  // R196（P1-1）：meaning 含问号（犹豫/不成句的确定性信号，现只有 prompt 级约束）→ 整条丢弃
+  if (meaning.includes("?") || meaning.includes("\uff1f")) {
+    dropped.questionMark++;
+    return null;
+  }
+  // R196（P1-1）：EN meaning 连贯性启发式——无 label 词源锤点且无谓语骨架的词语沙拉 → 整条丢弃
+  if (ctx.lang === "en" && enMeaningIncoherent(label, meaning, { wordMetaphor: isWordSupplement })) {
+    dropped.meaningIncoherent++;
+    return null;
+  }
+  const s = c.scores ?? ({} as Partial<AiScores>);
+  const theme = String(c.theme ?? "").toLowerCase();
+  // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
+  // blend/word/coined 不强制校验（blend 含英文，无法整体切分）
+  let readabilityPenalty = 0;
+  // R465（R464 复评）：en 场景丢弃拼音路线候选（英文用户读不出拼音，Top Picks 曾被拼音霸榜），先于拼音合法性校验以免计入其他防线；
+  // lang 取自 UI 语言，中文 UI 下输入纯英文描述同样适用（R465 线上回归发现的路径盲区）
+  if (ctx.enPinyinDrop && theme === "pinyin") {
+    dropped.enPinyinRoute++;
+    return null;
+  }
+  if (theme === "pinyin") {
+    const check = checkPinyinLabel(label);
+    if (!check.ok) {
+      dropped.pinyinInvalid++;
+      return null;
+    }
+    // 歧义切分扣 15 + 语感风险分（R142），叠加后从 readability 扣除
+    readabilityPenalty = (check.ambiguous ? 15 : 0) + check.risk;
+    // R196（P2-2）：声称「全拼」但「」内引用词的逐字拼音与 label 拼写不符（「探方」≠tangfang）→ 整条丢弃
+    if (pinyinQuoteMismatch(label, meaning)) {
+      dropped.pinyinMismatch++;
+      return null;
+    }
+  }
+  // R182：拼音系候选「」内命中生僻字黑名单，按字数从 readability 扣分（不丢弃）
+  if (theme === "pinyin" || theme === "blend") {
+    readabilityPenalty += countRareQuotedChars(meaning) * RARE_CHAR_PENALTY_PER_CHAR;
+  }
+  // R179：theme 缺失/非法时强制归入 coined，保证 theme 永不为空；
+  // R224：补发轮硬指令要求全部为 word 路线，漏标时兜底归入 word（漏标即被丢弃会让补发白跑）
+  let resolvedTheme: AiTheme = THEMES.has(theme) ? (theme as AiTheme) : isWordSupplement ? "word" : "coined";
+  // R250（R239 P3-3）：label 内嵌已收录 TLD 名结尾却标 word（canaryio 型）→ 降级为 coined（不删除）
+  if (resolvedTheme === "word" && wordThemeEmbedsTld(label)) resolvedTheme = "coined";
+  return {
+    label,
+    meaning,
+    theme: resolvedTheme,
+    scores: {
+      length: clampScore(s.length),
+      readability: Math.max(clampScore(s.readability) - readabilityPenalty, 0),
+      relevance: clampScore(s.relevance),
+      brandability: clampScore(s.brandability),
+    },
+  };
+}
+
+// R466：读取 OpenAI 兼容 SSE 流，把 delta.content 喂给增量解析器，每解出一个顶层对象立即回调。
+// 读取中途失败（网络/超时）：已解出 ≥1 对象 → 按截断处理保留已交出的候选（parseCandidateArray
+// 对截断文本的抢救语义）；0 对象 → 原样抛出交上层重试（此时尚无任何候选/计数产生，重试不会重复下发）。
+// 网关未按 SSE 返回（content-type 非 text/event-stream 或无 body）→ 退化为整包 JSON 读取，走同一解析器。
+async function readCandidateStream(res: Response, onObject: (o: Partial<AiCandidate>) => Promise<void>): Promise<void> {
+  const parser = new CandidateArrayStreamParser();
+  const feed = async (text: string) => {
+    for (const o of parser.push(text)) await onObject(o);
+  };
+  const ct = res.headers.get("content-type") ?? "";
+  if (!res.body || !ct.includes("text/event-stream")) {
+    const data = (await res.json()) as { choices?: { message?: { content?: string } }[] };
+    await feed(data.choices?.[0]?.message?.content ?? "");
+    parser.finish();
+    return;
+  }
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let lineBuf = "";
+  let ended = false;
+  while (!ended) {
+    let chunk: ReadableStreamReadResult<Uint8Array>;
+    try {
+      chunk = await reader.read();
+    } catch (e) {
+      if (parser.parsed === 0) throw e;
+      break;
+    }
+    if (chunk.done) break;
+    lineBuf += decoder.decode(chunk.value, { stream: true });
+    let nl: number;
+    while ((nl = lineBuf.indexOf("\n")) >= 0) {
+      const line = lineBuf.slice(0, nl).replace(/\r$/, "");
+      lineBuf = lineBuf.slice(nl + 1);
+      const delta = sseDeltaContent(line);
+      if (delta === false) {
+        ended = true;
+        break;
+      }
+      if (delta) await feed(delta);
+      if (parser.done) {
+        ended = true;
+        break;
+      }
+    }
+  }
+  if (ended) reader.cancel().catch(() => undefined);
+  else {
+    const tail = lineBuf + decoder.decode();
+    if (tail) {
+      const delta = sseDeltaContent(tail.replace(/\r$/, ""));
+      if (delta) await feed(delta);
+    }
+  }
+  parser.finish();
+}
+
 async function generateOnce(
   description: string,
   apiKey: string,
@@ -1240,6 +1572,7 @@ async function generateOnce(
     model?: string;
     thinking?: string;
     descLooksEnglish?: boolean;
+    onCandidate?: CandidateSink;
   } = {},
 ): Promise<AiCandidate[]> {
   const count = opts.count ?? 24;
@@ -1276,144 +1609,74 @@ async function generateOnce(
       // R196（P1-1）：反思轮（round≥2）降温——高温叠加长上下文是词语沙拉的主要来源，首轮保持 1.2 不变
       temperature: (opts.round ?? 1) > 1 ? 0.9 : 1.2,
       max_tokens: 4000,
+      // R466：主轮流式读取（有 onCandidate 时），补发轮保持整包
+      ...(opts.onCandidate ? { stream: true } : {}),
       ...thinkingBodyExtra(opts.thinking),
     }),
   });
   if (!res.ok) throw new Error(`llm-http-${res.status}`);
-  const data = (await res.json()) as { choices: { message: { content: string } }[] };
-  const text = data.choices[0]?.message?.content ?? "";
-  const arr = parseCandidateArray(text);
-  // R238：防线统计——各 continue 丢弃路径按防线归类计数（只计数，不记录被丢弃候选内容）；
+  // R238：防线统计——各丢弃路径按防线归类计数（只计数，不记录被丢弃候选内容）；
   // R243：补发轮丢弃计入 supplementDropped，与主轮分开可观测
   const guardStats = opts.guard ?? newGuardStats();
   const isSupplement = isWordSupplement || opts.pinyinSupplementExclude !== undefined;
   const dropped = isSupplement ? guardStats.supplementDropped : guardStats.dropped;
-  const seen = new Set<string>();
-  const out: AiCandidate[] = [];
-  const clamp = (v: unknown) => {
-    const n = Math.round(Number(v));
-    return Number.isFinite(n) ? Math.min(Math.max(n, 0), 100) : 60;
-  };
-  for (const c of arr) {
-    // label 清洗：去首尾空白后必须整体是合法域名主体字符（小写字母/数字/连字符），
-    // 含内部空格或其他非法字符的直接丢弃，不做静默改写
-    const label = String(c.label ?? "").trim().toLowerCase();
-    if (!/^[a-z0-9-]{1,63}$/.test(label)) {
-      dropped.invalidLabel++;
-      continue;
-    }
-    if (seen.has(label)) continue; // 同轮重复不算防线拦截，不计数
-    // R180：知名品牌撞名过滤（完全同名，或长度 ≥5 且编辑距离 ≤1），规避商标法律风险
-    if (isBrandCollision(label)) {
-      dropped.brandCollision++;
-      continue;
-    }
-    seen.add(label);
-    // meaning 为空/全空白的候选直接丢弃（流截断或模型漏字段），不进核验队列；
-    // tried 由上层根据返回值累积，被丢弃项天然不计入
-    const rawMeaning = String(c.meaning ?? "");
-    const meaning = cleanMeaning(rawMeaning);
-    if (!meaning) {
-      dropped.emptyMeaning++;
-      continue;
-    }
-    // R149：括号注释剥离后过短（<6 字符）说明有效寓意几乎全在括号里，整条丢弃
-    if (meaning.length < 6 && PAREN_RE.test(rawMeaning)) {
-      dropped.emptyMeaning++;
-      continue;
-    }
-    // R179：meaning 混入目标语言白名单外的文字（韩文/西里尔/IPA 等）→ 整条丢弃
-    if (!meaningCharsetOk(meaning, opts.lang ?? "zh")) {
-      dropped.charsetViolation++;
-      if (guardStats.charsetSample === undefined) {
-        guardStats.charsetSample = firstCharsetViolation(meaning, opts.lang ?? "zh");
-      }
-      continue;
-    }
-    // R179：meaning 引用 label 中不存在的字母（"z from zeus" 式臆造词源）→ 整条丢弃
-    if (citesPhantomLetter(label, meaning)) {
-      dropped.phantomEtymology++;
-      continue;
-    }
-    // R183：meaning 出现命名路线分类元词/元话术（「这是 blend」式）→ 整条丢弃
-    if (containsMetaLanguage(meaning)) {
-      dropped.metaLanguage++;
-      continue;
-    }
-    // R183：meaning 声称的词源片段与 label 拼写不符（"play 与 grow 结合" for plangrow）→ 整条丢弃
-    if (citesPhantomWord(label, meaning)) {
-      dropped.phantomEtymology++;
-      continue;
-    }
-    // R246（R239 P2-4）：zh meaning 引用 label 中不存在且非白名单的独立 ASCII 词（「tedeck 落音笃定」式幻影引用）→ 整条丢弃
-    if ((opts.lang ?? "zh") === "zh" && zhCitesPhantomAscii(label, meaning)) {
-      dropped.phantomEtymology++;
-      continue;
-    }
-    // R196（P1-1）：meaning 含问号（犹豫/不成句的确定性信号，现只有 prompt 级约束）→ 整条丢弃
-    if (meaning.includes("?") || meaning.includes("\uff1f")) {
-      dropped.questionMark++;
-      continue;
-    }
-    // R196（P1-1）：EN meaning 连贯性启发式——无 label 词源锤点且无谓语骨架的词语沙拉 → 整条丢弃
-    if ((opts.lang ?? "zh") === "en" && enMeaningIncoherent(label, meaning, { wordMetaphor: isWordSupplement })) {
-      dropped.meaningIncoherent++;
-      continue;
-    }
-    const s = c.scores ?? ({} as Partial<AiScores>);
-    const theme = String(c.theme ?? "").toLowerCase();
-    // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
-    // blend/word/coined 不强制校验（blend 含英文，无法整体切分）
-    let readabilityPenalty = 0;
-    // R465（R464 复评）：en 场景丢弃拼音路线候选（英文用户读不出拼音，Top Picks 曾被拼音霸榜），先于拼音合法性校验以免计入其他防线；
-    // lang 取自 UI 语言，中文 UI 下输入纯英文描述同样适用（R465 线上回归发现的路径盲区）；
+  const ctx: AdmitContext = {
+    lang: opts.lang ?? "zh",
     // 优先用调用方基于原始描述的判定（worker 会向 description 拼接中文风格/长度偏好后缀，直接判拼接后文本会误判为 zh）
-    if (((opts.lang ?? "zh") === "en" || (opts.descLooksEnglish ?? descriptionLooksEnglish(description))) && theme === "pinyin") {
-      dropped.enPinyinRoute++;
-      continue;
-    }
-    if (theme === "pinyin") {
-      const check = checkPinyinLabel(label);
-      if (!check.ok) {
-        dropped.pinyinInvalid++;
-        continue;
-      }
-      // 歧义切分扣 15 + 语感风险分（R142），叠加后从 readability 扣除
-      readabilityPenalty = (check.ambiguous ? 15 : 0) + check.risk;
-      // R196（P2-2）：声称「全拼」但「」内引用词的逐字拼音与 label 拼写不符（「探方」≠tangfang）→ 整条丢弃
-      if (pinyinQuoteMismatch(label, meaning)) {
-        dropped.pinyinMismatch++;
-        continue;
-      }
-    }
-    // R182：拼音系候选「」内命中生僻字黑名单，按字数从 readability 扣分（不丢弃）
-    if (theme === "pinyin" || theme === "blend") {
-      readabilityPenalty += countRareQuotedChars(meaning) * RARE_CHAR_PENALTY_PER_CHAR;
-    }
-    // R179：theme 缺失/非法时强制归入 coined，保证 theme 永不为空；
-    // R224：补发轮硬指令要求全部为 word 路线，漏标时兜底归入 word（漏标即被丢弃会让补发白跑）
-    let resolvedTheme: AiTheme = THEMES.has(theme) ? (theme as AiTheme) : isWordSupplement ? "word" : "coined";
-    // R250（R239 P3-3）：label 内嵌已收录 TLD 名结尾却标 word（canaryio 型）→ 降级为 coined（不删除）
-    if (resolvedTheme === "word" && wordThemeEmbedsTld(label)) resolvedTheme = "coined";
-    out.push({
-      label,
-      meaning,
-      theme: resolvedTheme,
-      scores: {
-        length: clamp(s.length),
-        readability: Math.max(clamp(s.readability) - readabilityPenalty, 0),
-        relevance: clamp(s.relevance),
-        brandability: clamp(s.brandability),
-      },
-    });
-  }
+    enPinyinDrop: (opts.lang ?? "zh") === "en" || (opts.descLooksEnglish ?? descriptionLooksEnglish(description)),
+    isWordSupplement,
+    guardStats,
+    dropped,
+    seen: new Set<string>(),
+  };
+  const out: AiCandidate[] = [];
   // R225：点踩形态硬过滤兜底——prompt 级禁止（buildRefineHint）之外，对解析后的新候选
   // 跑与点踩集的形态相似度检查，共享词根前缀或同后缀模式即丢弃；过滤后不足再回填仅后缀冲突项
   const disliked = opts.feedback?.disliked;
-  if (disliked && disliked.length > 0) {
-    const kept = filterDislikedMorphology(out, disliked);
-    dropped.dislikedMorphology += out.length - kept.length;
-    return kept;
+  const hasDisliked = disliked !== undefined && disliked.length > 0;
+  if (!opts.onCandidate) {
+    const data = (await res.json()) as { choices: { message: { content: string } }[] };
+    const text = data.choices[0]?.message?.content ?? "";
+    for (const c of parseCandidateArray(text)) {
+      const cand = admitCandidate(c, ctx);
+      if (cand) out.push(cand);
+    }
+    if (hasDisliked) {
+      const kept = filterDislikedMorphology(out, disliked);
+      dropped.dislikedMorphology += out.length - kept.length;
+      return kept;
+    }
+    return out;
+  }
+  // 流式：无冲突项即时下发；仅后缀冲突项暂存，流结束后按 filterDislikedMorphology 同一规则回填
+  // （回填与否取决于最终保留数量，只能在流末决定），词根冲突项直接丢弃——最终结果与非流式路径逐项一致
+  const sink = opts.onCandidate;
+  const suffixOnly: AiCandidate[] = [];
+  let rootDropped = 0;
+  await readCandidateStream(res, async (c) => {
+    const cand = admitCandidate(c, ctx);
+    if (!cand) return;
+    if (hasDisliked) {
+      const conflict = dislikedMorphologyConflict(cand.label, disliked);
+      if (conflict === "root") {
+        rootDropped++;
+        return;
+      }
+      if (conflict === "suffix") {
+        suffixOnly.push(cand);
+        return;
+      }
+    }
+    out.push(cand);
+    await sink(cand);
+  });
+  if (hasDisliked) {
+    const backfill = suffixOnly.slice(0, Math.max(0, DISLIKE_FILTER_MIN_KEEP - out.length));
+    for (const cand of backfill) {
+      out.push(cand);
+      await sink(cand);
+    }
+    dropped.dislikedMorphology += rootDropped + (suffixOnly.length - backfill.length);
   }
   return out;
 }
