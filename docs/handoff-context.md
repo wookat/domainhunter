@@ -122,6 +122,7 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
   - **R243–R246 防线修复（针对 R239 发现）**：R243 word 补发二次重试 + 补发轮 guard 独立计数（P1-1/P3-1）；R244 拼音引用校验不再被缺失「全拼」声明绕过（P2-1）；R245 zh 字符白名单纳入拼音声调字符 + charsetViolation 码点样本（P2-2）；R246 EN 前缀锤点收紧 + zh 幻影 ASCII 引用防线（P2-3/P2-4）。
   - **R250 prompt 微调**：theme 标注 few-shot 反例（nundina/canaryio/ledgeledger）+ word 内嵌 TLD 解析后降级 coined 兜底（P3-3）；refine 点踩形态硬禁令前置到 hint 开头 + 强命令式（P3-2）。
   - **部署状态**：生产在线版本 = `deploy/r192-r195` 集成分支 + R222–R246 系列提交（R250 尚未部署）；新工作从该分支切出，PR base 仍为 main。
+- **R468 品牌卡**：`apps/web/src/components/brand-card.tsx` 纯前端确定性品牌卡（FNV-1a → 16 配色 × 4 版式 × 4 字形），Top Picks / Grid / 行内 swatch 三层入口；论证与验收表见 `docs/research/r468-brand-card.md`。新增可见文案走 `brand.*` i18n key。
 - **四道把关**（company-os）：qa-engineer 测试 → user-experience-officer 体验走查 → 内部交叉测试 → 合规与安全审计，全过才交付。
 - **截至本文档更新时的在途工作**（部分已通过 deploy/r192-r195 集成分支上线、PR 待合回 main）：R243–R246 防线修复、R250 prompt 微调（本批，未部署）；用 `gh pr list` 确认实时状态与最新 Rxxx 编号。
 
