@@ -347,7 +347,7 @@ export function ResultsPage({
 
   return (
     <>
-      <main className="mx-auto max-w-6xl overflow-x-clip px-4 py-6 pb-24 md:px-6">
+      <main className="mx-auto w-full max-w-6xl overflow-x-clip px-4 py-6 pb-24 md:px-6">
         {/* 摘要行 */}
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <div>

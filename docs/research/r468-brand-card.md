@@ -43,8 +43,8 @@
 | 多配色 / 首字母 mark + wordmark / 圆角 / 渐变 / 衬线+非衬线 | ✅ | 16 配色（4 渐变）× 4 版式 × 4 字形 × 3 形状，见 `r468-compare-desktop.png` |
 | 无外部字体 / 无外部 API | ✅ | `performance.getEntries` 非本源资源 = `[]`（8 个场景全部） |
 | 入口与布局（说明理由） | ✅ | 上文 §2-B 三层递进 |
-| 移动端 375 无横向溢出 | ✅ | rows / rows-expanded / grid / light-en 四场景 `scrollWidth ≤ clientWidth` |
-| 44px 触点 | ✅（新增控件） | swatch 按钮 44×44（sm+），视图切换 44×44（<sm）；Top Picks 内 32px 图标按钮为既有控件未动 |
+| 移动端 375 无横向溢出 | ✅ | zh/en × rows / rows-expanded / grid / light 全部 `scrollWidth ≤ clientWidth`。测试代理发现 en 行视图基线即有 2px 溢出（base 95b6242 复现 377）：`main` 是 column-flex 子项且 `mx-auto`，按 fit-content 取到 TLD 筛选条的 min-content（en 下 345px）；加 `w-full` 修复 |
+| 44px 触点 | ✅（新增控件 + 移动端入口） | swatch 按钮 44×44（sm+），视图切换 44×44（<sm）；移动端唯一品牌面板入口「评分徽章」由 32×20 扩为 44×44 命中区（视觉徽章不变）；Top Picks 内 32px 图标按钮为既有控件未动 |
 | 暗色/亮色对比度 | ✅ | 卡片配色自带前景色，不依赖主题；`r468-light-en.png` |
 | 双语 i18n | ✅ | `brand.preview` / `brand.previewTitle` / `brand.disclaimer`，`results.viewGrid` 改为「品牌卡视图 / Brand card view」 |
 | 不动 AI/核验/后端/SSE | ✅ | diff 仅 `brand-card.tsx`（新）、`domain-row.tsx`、`results-page.tsx`、`i18n.tsx` + docs |
@@ -55,6 +55,8 @@
 
 ## 4. 已知限制 / 下一步
 
+- 16 套配色下 Top 3 出现同配色同版式的概率约 18%（测试 fixture 里 verbloom/anvil 撞色，仅字形不同）。「同名同外观」是硬约束，不做跨卡去重（去重会让外观依赖邻居）；如后续要降低撞色感，可把 TLD 纳入 hash 或扩配色到 24 套。
+- taken 行走既有紧凑行早返回、Grid 视图过滤 `status !== "taken"`，故 taken 永不渲染品牌卡；「不冒充可注册」实际靠 `unknown/checking` 路径验证（无 ✓）。
 - 衬线字形走系统栈：macOS/iOS 为 Georgia/Songti，Linux 截图机为 DejaVu Serif，观感因平台而异（Namelix 用 Google Fonts，我们主动不引外部字体）。
 - 移动端行视图无 swatch（行宽预算），品牌观感靠 Top Picks + Grid；若后续要在行内也给线索，可考虑把评分徽章与 swatch 合并。
 - 未做真实用户主观评分复测；建议下一轮 R464 同口径匿名盲评（Namelix vs 我们）复核 4.5 vs 4.0 差距是否收敛。

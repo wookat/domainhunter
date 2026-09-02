@@ -316,10 +316,10 @@ export function DomainRow({
         <button
           title={t("score.expandTitle")}
           aria-expanded={expanded}
-          className={cn("tnum w-8 shrink-0 rounded-md py-0.5 text-center font-mono text-xs font-semibold transition-shadow hover:ring-1 hover:ring-line", scoreBadgeClass(score))}
+          className="-mx-1.5 grid h-11 w-11 shrink-0 place-items-center sm:mx-0 sm:h-auto sm:w-8"
           onClick={() => setExpanded((v) => !v)}
         >
-          {score}
+          <span className={cn("tnum block w-8 rounded-md py-0.5 text-center font-mono text-xs font-semibold transition-shadow hover:ring-1 hover:ring-line", scoreBadgeClass(score))}>{score}</span>
         </button>
       ) : (
         <span className="tnum w-8 shrink-0 rounded-md bg-bg3 py-0.5 text-center font-mono text-xs font-semibold text-txt1">—</span>
