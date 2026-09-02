@@ -12,13 +12,16 @@ import {
   LayoutGrid,
   Lock,
   RotateCw,
+  Rows2,
   Rows3,
+  Rows4,
   Trophy,
 } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { CopyButton, DomainRow, MeaningText, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
+import { useDensity, type Density } from "@/lib/density";
 import { exportRows } from "@/lib/export";
 import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
 import { useI18n, type I18nKey } from "@/lib/i18n";
@@ -260,6 +263,8 @@ export function ResultsPage({
   const [themeFilter, setThemeFilter] = useState<Theme | "">("");
   const [sort, setSort] = useState<SortKey>("score");
   const [view, setView] = useState<View>("rows");
+  // R467 行密度：选择持久化 localStorage；compact 仅在 ≥768px 生效（窄屏守 44px 触点）
+  const { density, setDensity, compact } = useDensity();
   const [linkCopied, setLinkCopied] = useState(false);
   const { copied: availCopied, copy: copyAvailable } = useCopyAvailable();
   const moreBlocked = running || moreDisabled || quotaExhausted;
@@ -345,6 +350,8 @@ export function ResultsPage({
     function onKey(e: KeyboardEvent) {
       const target = e.target as HTMLElement;
       if (target.tagName === "TEXTAREA" || target.tagName === "INPUT" || e.metaKey || e.ctrlKey || e.altKey) return;
+      // 焦点在按钮/链接上时 Space/Enter 交给原生激活（否则密度切换等控件无法用键盘操作，且 Space 会误触再来一轮）
+      const onControl = Boolean(target.closest?.("button, a, [role=button]"));
       if (e.key === "ArrowDown" || e.key === "ArrowUp") {
         e.preventDefault();
         setSelectedIdx((i) => {
@@ -353,7 +360,7 @@ export function ResultsPage({
           el?.scrollIntoView({ block: "nearest" });
           return next;
         });
-      } else if (e.key === " " && !moreBlocked) {
+      } else if (e.key === " " && !moreBlocked && !onControl) {
         e.preventDefault();
         if (!spaceArmed) {
           setSpaceArmed(true);
@@ -371,7 +378,7 @@ export function ResultsPage({
         const row = visible[selectedIdx];
         if (e.key === "c" || e.key === "C") void navigator.clipboard.writeText(row.domain);
         else if (e.key === "s" || e.key === "S") onToggleFavorite(row);
-        else if (e.key === "Enter") window.open(`https://www.namecheap.com/domains/registration/results/?domain=${encodeURIComponent(row.domain)}`, "_blank");
+        else if (e.key === "Enter" && !onControl) window.open(`https://www.namecheap.com/domains/registration/results/?domain=${encodeURIComponent(row.domain)}`, "_blank");
       }
     }
     window.addEventListener("keydown", onKey);
@@ -382,7 +389,7 @@ export function ResultsPage({
 
   return (
     <>
-      <main className="mx-auto max-w-6xl overflow-x-clip px-4 py-6 pb-24 md:px-6">
+      <main className="mx-auto w-full min-w-0 max-w-6xl overflow-x-clip px-4 py-6 pb-24 md:px-6">
         {/* 摘要行 */}
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <div>
@@ -523,7 +530,7 @@ export function ResultsPage({
             ))}
           </div>
           {tldCounts.length > 1 && (
-            <div className="flex items-center gap-1 overflow-x-auto rounded-lg border border-line bg-bg1 p-1 no-scrollbar">
+            <div className="flex min-w-0 max-w-full items-center gap-1 overflow-x-auto rounded-lg border border-line bg-bg1 p-1 no-scrollbar">
               <button
                 onClick={() => setTldFilter("")}
                 className={cn("shrink-0 rounded-md px-2 py-1 font-mono text-[11px]", !tldFilter ? "bg-bg3 font-semibold" : "text-txt1 hover:text-txt0")}
@@ -545,7 +552,7 @@ export function ResultsPage({
             </div>
           )}
           {themeCounts.length > 1 && (
-            <div className="flex items-center gap-1 overflow-x-auto rounded-lg border border-line bg-bg1 p-1 no-scrollbar">
+            <div className="flex min-w-0 max-w-full items-center gap-1 overflow-x-auto rounded-lg border border-line bg-bg1 p-1 no-scrollbar">
               {themeCounts.map(([th, n]) => (
                 <button
                   key={th}
@@ -578,9 +585,36 @@ export function ResultsPage({
           <span className="hidden items-center gap-2 text-[11px] text-txt2 lg:flex">
             <kbd>↑↓</kbd>{t("results.kbd")} <kbd>C</kbd>{t("results.kbdCopy")} <kbd>S</kbd>{t("results.kbdFav")} <kbd>⏎</kbd>{t("results.kbdReg")}
           </span>
-          <div className="flex items-center gap-1 rounded-lg border border-line bg-bg1 p-1">
+          {view === "rows" && (
+            <div role="group" aria-label={t("results.density")} className="hidden items-center gap-1 rounded-lg border border-line bg-bg1 p-1 md:flex">
+              {(
+                [
+                  { key: "comfortable", Icon: Rows2, label: t("results.densityComfortable"), title: t("results.densityComfortableTitle") },
+                  { key: "compact", Icon: Rows4, label: t("results.densityCompact"), title: t("results.densityCompactTitle") },
+                ] as { key: Density; Icon: typeof Rows2; label: string; title: string }[]
+              ).map((d) => (
+                <button
+                  key={d.key}
+                  type="button"
+                  title={d.title}
+                  aria-pressed={density === d.key}
+                  data-density-option={d.key}
+                  onClick={() => setDensity(d.key)}
+                  className={cn(
+                    "flex h-7 items-center gap-1 rounded-md px-2 text-[11px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                    density === d.key ? "bg-bg3 font-semibold text-txt0" : "text-txt2 hover:text-txt0",
+                  )}
+                >
+                  <d.Icon className="h-3.5 w-3.5" />
+                  {d.label}
+                </button>
+              ))}
+            </div>
+          )}
+          <div role="group" aria-label={t("results.view")} className="flex items-center gap-1 rounded-lg border border-line bg-bg1 p-1">
             <button
               title={t("results.viewRows")}
+              aria-pressed={view === "rows"}
               onClick={() => setView("rows")}
               className={cn("grid h-7 w-7 place-items-center rounded-md", view === "rows" ? "bg-bg3" : "text-txt2 hover:text-txt0")}
             >
@@ -588,6 +622,7 @@ export function ResultsPage({
             </button>
             <button
               title={t("results.viewGrid")}
+              aria-pressed={view === "grid"}
               onClick={() => setView("grid")}
               className={cn("grid h-7 w-7 place-items-center rounded-md", view === "grid" ? "bg-bg3" : "text-txt2 hover:text-txt0")}
             >
@@ -598,11 +633,20 @@ export function ResultsPage({
 
         {/* 列表 / 网格 */}
         {view === "rows" ? (
-          <div ref={listRef} className="divide-y divide-line rounded-xl border border-line bg-bg1">
+          <div
+            ref={listRef}
+            data-density={compact ? "compact" : "comfortable"}
+            className={cn(
+              "rounded-xl border border-line bg-bg1",
+              // 紧凑模式去掉 1px 分隔线（26px 行距，1080p 去掉顶栏/底栏后一屏完整可见 ≥34 行），改用斑马底辅助横向扫读
+              compact ? "py-1 [&>[data-domain]:nth-child(even)]:bg-bg2/50" : "divide-y divide-line",
+            )}
+          >
             {visible.map((r, i) => (
               <DomainRow
                 key={r.domain}
                 row={r}
+                compact={compact}
                 selected={i === selectedIdx}
                 locked={locked.has(r.domain)}
                 onToggleLock={r.status === "available" ? onToggleLock : undefined}
