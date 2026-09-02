@@ -23,7 +23,7 @@ import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from 
 
 // LLM_API_BASE/LLM_MODEL：LLM 上游基地址与模型名。默认 DeepSeek 官方 + deepseek-chat；
 // 生产可指向 OpenAI 兼容网关（R460：电信 AI 网关），本地 wrangler dev 亦可指向假上游验证错误路径（R264）
-type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace; LLM_API_BASE?: string; LLM_MODEL?: string };
+type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace; LLM_API_BASE?: string; LLM_MODEL?: string; LLM_THINKING?: string };
 
 const app = new Hono<{ Bindings: Bindings }>();
 
@@ -266,7 +266,8 @@ app.post("/api/ai-search", async (c) => {
       let lowYieldHintSent = false;
       const llmBase = c.env.LLM_API_BASE || undefined;
       const llmModel = c.env.LLM_MODEL || undefined;
-      const understandingDone = generateUnderstanding(description, apiKey, lang, llmBase, llmModel)
+      const llmThinking = c.env.LLM_THINKING || undefined;
+      const understandingDone = generateUnderstanding(description, apiKey, lang, llmBase, llmModel, llmThinking)
         .then(async (u) => {
           if (u) await emit({ type: "understanding", ...u });
         })
@@ -291,6 +292,7 @@ app.post("/api/ai-search", async (c) => {
               guard,
               baseUrl: llmBase,
               model: llmModel,
+              thinking: llmThinking,
             });
           } catch (e) {
             // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；
