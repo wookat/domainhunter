@@ -21,8 +21,9 @@ import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
 import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
 import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
 
-// LLM_API_BASE：仅供本地 wrangler dev 指向假上游验证错误路径（R264），生产不设置
-type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace; LLM_API_BASE?: string };
+// LLM_API_BASE/LLM_MODEL：LLM 上游基地址与模型名。默认 DeepSeek 官方 + deepseek-chat；
+// 生产可指向 OpenAI 兼容网关（R460：电信 AI 网关），本地 wrangler dev 亦可指向假上游验证错误路径（R264）
+type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace; LLM_API_BASE?: string; LLM_MODEL?: string };
 
 const app = new Hono<{ Bindings: Bindings }>();
 
@@ -264,7 +265,8 @@ app.post("/api/ai-search", async (c) => {
       let prevAvailableCount = 0;
       let lowYieldHintSent = false;
       const llmBase = c.env.LLM_API_BASE || undefined;
-      const understandingDone = generateUnderstanding(description, apiKey, lang, llmBase)
+      const llmModel = c.env.LLM_MODEL || undefined;
+      const understandingDone = generateUnderstanding(description, apiKey, lang, llmBase, llmModel)
         .then(async (u) => {
           if (u) await emit({ type: "understanding", ...u });
         })
@@ -288,6 +290,7 @@ app.post("/api/ai-search", async (c) => {
               lang,
               guard,
               baseUrl: llmBase,
+              model: llmModel,
             });
           } catch (e) {
             // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；
