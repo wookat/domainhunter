@@ -340,6 +340,8 @@ export interface GuardStats {
   retries: number;
   /** charsetViolation 首个违规字符的 Unicode 码点样本（如 "U+D55C"，R245；只留码点不留候选文本） */
   charsetSample?: string;
+  /** zh 拼音系路线配额补发是否触发（R463；旧数据无此字段） */
+  pinyinSupplement?: boolean;
 }
 
 function newGuardDropCounts(): GuardDropCounts {
@@ -526,6 +528,35 @@ export function needsWordSupplement(candidates: AiCandidate[]): boolean {
   return candidates.length >= EN_WORD_QUOTA_MIN_CANDIDATES && countThemes(candidates).word === 0;
 }
 
+// ---------------- zh 拼音/中文语感路线配额硬保障（R463，R462 对标 P0-2） ----------------
+// 生产坏例：zh 茶叶电商任务 12 个可注册全是 tea+英文词模板，pinyin/blend 为 0——
+// prompt 级软配额（R182）对 LLM 不可靠，镜像 R224 word 补发机制做后端兜底。
+export const ZH_PINYIN_QUOTA_MIN_CANDIDATES = 8;
+export const ZH_PINYIN_SUPPLEMENT_COUNT = 6;
+
+/** zh 拼音系路线配额是否失守：pinyin+blend 合计为 0 且候选数 ≥ 阈值 */
+export function needsPinyinSupplement(candidates: AiCandidate[]): boolean {
+  const t = countThemes(candidates);
+  return candidates.length >= ZH_PINYIN_QUOTA_MIN_CANDIDATES && t.pinyin + t.blend === 0;
+}
+
+/** 拼音补发轮硬指令：每条必须是拼音或拼音+英文混搭路线 */
+export function buildPinyinSupplementDirective(count: number, exclude: string[]): string {
+  return [
+    `路线配额补发（硬指令）：上一批候选的 theme 分布中 pinyin（中文拼音）与 blend（拼音+英文混合）路线合计为 0，不满足中文场景配额。`,
+    `现在请再给出 ${count} 个候选，每一条 label 都必须走拼音系路线：中文寓意词的全拼/双字拼/声母缩写（theme 标 "pinyin"），或拼音词根+轻量英文词混搭（theme 标 "blend"）。`,
+    `meaning 必须包含用「」括起的中文原词并说明读音记忆点；禁止纯英文单词或英文造词。`,
+    `严禁重复输出以下已出现过的名字：${exclude.join(", ")}`,
+  ].join("\n");
+}
+
+/** 合并拼音补发结果：只收 theme 为 pinyin/blend 且 label 未出现过的候选 */
+export function mergePinyinSupplement(main: AiCandidate[], extra: AiCandidate[]): AiCandidate[] {
+  const seen = new Set(main.map((c) => c.label));
+  const picked = extra.filter((c) => (c.theme === "pinyin" || c.theme === "blend") && !seen.has(c.label));
+  return picked.length > 0 ? [...main, ...picked] : main;
+}
+
 /** 补发轮硬指令：每条 label 必须是词典真实存在的完整英文单词，theme 全部标 word；
  * attempt=2（R243 二次重试）时对 meaning 句式加硬指令，避免短句式 meaning 被质量防线拦截 */
 export function buildWordSupplementDirective(count: number, exclude: string[], attempt = 1): string {
@@ -582,6 +613,20 @@ export async function generateAiCandidates(
         // 补发失败不影响主结果
       }
       if (countThemes(out).word > 0) break;
+    }
+  }
+  // R463：zh 拼音/blend 路线配额失守时补发一次（镜像 R224；失败静默不阻塞主结果）
+  if ((opts.lang ?? "zh") === "zh" && needsPinyinSupplement(out)) {
+    if (opts.guard) opts.guard.pinyinSupplement = true;
+    try {
+      const extra = await generateOnce(description, apiKey, {
+        ...opts,
+        count: ZH_PINYIN_SUPPLEMENT_COUNT,
+        pinyinSupplementExclude: out.map((c) => c.label),
+      });
+      out = mergePinyinSupplement(out, extra);
+    } catch {
+      // 补发失败不影响主结果
     }
   }
   return out;
@@ -1177,6 +1222,7 @@ async function generateOnce(
     lang?: "zh" | "en";
     wordSupplementExclude?: string[];
     wordSupplementAttempt?: number;
+    pinyinSupplementExclude?: string[];
     guard?: GuardStats;
     baseUrl?: string;
     model?: string;
@@ -1192,6 +1238,10 @@ async function generateOnce(
   const isWordSupplement = opts.wordSupplementExclude !== undefined;
   if (isWordSupplement) {
     user += `\n\n${buildWordSupplementDirective(count, opts.wordSupplementExclude ?? [], opts.wordSupplementAttempt ?? 1)}`;
+  }
+  // R463：zh 拼音系路线配额补发轮，追加硬指令
+  if (opts.pinyinSupplementExclude !== undefined) {
+    user += `\n\n${buildPinyinSupplementDirective(count, opts.pinyinSupplementExclude)}`;
   }
   const res = await fetch(`${opts.baseUrl ?? DEFAULT_LLM_API_BASE}/chat/completions`, {
     method: "POST",
@@ -1223,7 +1273,8 @@ async function generateOnce(
   // R238：防线统计——各 continue 丢弃路径按防线归类计数（只计数，不记录被丢弃候选内容）；
   // R243：补发轮丢弃计入 supplementDropped，与主轮分开可观测
   const guardStats = opts.guard ?? newGuardStats();
-  const dropped = isWordSupplement ? guardStats.supplementDropped : guardStats.dropped;
+  const isSupplement = isWordSupplement || opts.pinyinSupplementExclude !== undefined;
+  const dropped = isSupplement ? guardStats.supplementDropped : guardStats.dropped;
   const seen = new Set<string>();
   const out: AiCandidate[] = [];
   const clamp = (v: unknown) => {
