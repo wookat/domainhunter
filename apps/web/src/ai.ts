@@ -443,14 +443,16 @@ ${MEANING_REDLINES_EN}
 // LLM 上游基地址：默认 DeepSeek 官方；本地 wrangler dev 可用 LLM_API_BASE 指向假上游
 // 验证错误路径（R264），生产不设此变量时行为与既往完全一致
 export const DEFAULT_LLM_API_BASE = "https://api.deepseek.com";
+// LLM 模型名：默认 DeepSeek 官方 deepseek-chat；经 OpenAI 兼容网关时用 LLM_MODEL 指定网关侧模型名
+export const DEFAULT_LLM_MODEL = "deepseek-chat";
 
-export async function generateUnderstanding(description: string, apiKey: string, lang: "zh" | "en" = "zh", baseUrl: string = DEFAULT_LLM_API_BASE): Promise<AiUnderstanding | null> {
+export async function generateUnderstanding(description: string, apiKey: string, lang: "zh" | "en" = "zh", baseUrl: string = DEFAULT_LLM_API_BASE, model: string = DEFAULT_LLM_MODEL): Promise<AiUnderstanding | null> {
   try {
     const res = await fetch(`${baseUrl}/chat/completions`, {
       method: "POST",
       headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}` },
       body: JSON.stringify({
-        model: "deepseek-chat",
+        model,
         messages: [
           { role: "system", content: lang === "en" ? UNDERSTANDING_PROMPT + EN_UNDERSTANDING_HINT : UNDERSTANDING_PROMPT },
           { role: "user", content: `需求描述：${description}` },
@@ -545,7 +547,7 @@ export function mergeWordSupplement(main: AiCandidate[], extra: AiCandidate[]): 
 export async function generateAiCandidates(
   description: string,
   apiKey: string,
-  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; guard?: GuardStats; baseUrl?: string } = {},
+  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; guard?: GuardStats; baseUrl?: string; model?: string } = {},
 ): Promise<AiCandidate[]> {
   let out: AiCandidate[];
   try {
@@ -1171,6 +1173,7 @@ async function generateOnce(
     wordSupplementAttempt?: number;
     guard?: GuardStats;
     baseUrl?: string;
+    model?: string;
   } = {},
 ): Promise<AiCandidate[]> {
   const count = opts.count ?? 24;
@@ -1188,7 +1191,7 @@ async function generateOnce(
     headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}` },
     signal: AbortSignal.timeout(60_000), // 单次 LLM 调用超时上限，超时走上层重试
     body: JSON.stringify({
-      model: "deepseek-chat",
+      model: opts.model ?? DEFAULT_LLM_MODEL,
       messages: [
         {
           role: "system",
