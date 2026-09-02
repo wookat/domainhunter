@@ -445,8 +445,13 @@ ${MEANING_REDLINES_EN}
 export const DEFAULT_LLM_API_BASE = "https://api.deepseek.com";
 // LLM 模型名：默认 DeepSeek 官方 deepseek-chat；经 OpenAI 兼容网关时用 LLM_MODEL 指定网关侧模型名
 export const DEFAULT_LLM_MODEL = "deepseek-chat";
+// R461：部分网关侧模型（如 deepseek-v4-flash）默认开启思考链，单次调用可达 50s+ 导致超时；
+// 设 LLM_THINKING=disabled 时请求体携带 thinking:{type:"disabled"} 关闭思考链（实测 50s→2s）
+export function thinkingBodyExtra(thinking?: string): { thinking?: { type: "disabled" } } {
+  return thinking === "disabled" ? { thinking: { type: "disabled" } } : {};
+}
 
-export async function generateUnderstanding(description: string, apiKey: string, lang: "zh" | "en" = "zh", baseUrl: string = DEFAULT_LLM_API_BASE, model: string = DEFAULT_LLM_MODEL): Promise<AiUnderstanding | null> {
+export async function generateUnderstanding(description: string, apiKey: string, lang: "zh" | "en" = "zh", baseUrl: string = DEFAULT_LLM_API_BASE, model: string = DEFAULT_LLM_MODEL, thinking?: string): Promise<AiUnderstanding | null> {
   try {
     const res = await fetch(`${baseUrl}/chat/completions`, {
       method: "POST",
@@ -459,6 +464,7 @@ export async function generateUnderstanding(description: string, apiKey: string,
         ],
         temperature: 0.3,
         max_tokens: 200,
+        ...thinkingBodyExtra(thinking),
       }),
     });
     if (!res.ok) return null;
@@ -547,7 +553,7 @@ export function mergeWordSupplement(main: AiCandidate[], extra: AiCandidate[]): 
 export async function generateAiCandidates(
   description: string,
   apiKey: string,
-  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; guard?: GuardStats; baseUrl?: string; model?: string } = {},
+  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; guard?: GuardStats; baseUrl?: string; model?: string; thinking?: string } = {},
 ): Promise<AiCandidate[]> {
   let out: AiCandidate[];
   try {
@@ -1174,6 +1180,7 @@ async function generateOnce(
     guard?: GuardStats;
     baseUrl?: string;
     model?: string;
+    thinking?: string;
   } = {},
 ): Promise<AiCandidate[]> {
   const count = opts.count ?? 24;
@@ -1206,6 +1213,7 @@ async function generateOnce(
       // R196（P1-1）：反思轮（round≥2）降温——高温叠加长上下文是词语沙拉的主要来源，首轮保持 1.2 不变
       temperature: (opts.round ?? 1) > 1 ? 0.9 : 1.2,
       max_tokens: 4000,
+      ...thinkingBodyExtra(opts.thinking),
     }),
   });
   if (!res.ok) throw new Error(`llm-http-${res.status}`);
