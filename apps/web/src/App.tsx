@@ -171,6 +171,8 @@ export default function App() {
   });
   const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : monitorsFromPath() ? "monitors" : advancedFromPath() ? "advanced" : saved ? "results" : "home"));
   const [resumedNotice, setResumedNotice] = useState(() => Boolean(saved) && !shortlistFromPath() && !monitorsFromPath());
+  // R465（R464 复评）：恢复态结果页的「再来一轮」需两步确认，本会话首次真实发起后解除
+  const [restoredGuard, setRestoredGuard] = useState(() => Boolean(saved));
   const [noticeClosing, setNoticeClosing] = useState(false);
   const dismissNotice = () => {
     setNoticeClosing(true);
@@ -341,6 +343,7 @@ export default function App() {
     const { more = false, aroundLocked = false, refinePrefs = refinements } = opts;
     lastRunRef.current = { v, opts };
     setResumedNotice(false);
+    setRestoredGuard(false);
     abortRef.current?.abort();
     const ac = new AbortController();
     abortRef.current = ac;
@@ -790,6 +793,7 @@ export default function App() {
           quotaExhausted={quotaExhausted}
           dislikedHas={(label) => disliked.has(label)}
           onToggleDislike={toggleDislike}
+          restoredGuard={restoredGuard}
         />
         </Suspense>
       )}

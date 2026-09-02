@@ -229,6 +229,7 @@ export function ResultsPage({
   quotaExhausted,
   dislikedHas,
   onToggleDislike,
+  restoredGuard,
 }: {
   rows: Row[];
   description: string;
@@ -249,6 +250,8 @@ export function ResultsPage({
   quotaExhausted?: boolean;
   dislikedHas: (label: string) => boolean;
   onToggleDislike: (label: string) => void;
+  /** 从上次会话恢复的结果页：「再来一轮」需两步确认，防恢复态盲点误触消耗 AI 配额（R465） */
+  restoredGuard?: boolean;
 }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
@@ -265,6 +268,28 @@ export function ResultsPage({
   // Space 快捷键两步确认：首次 Space 只预热，3s 内再按才真正发起（避免焦点不在输入框时误触消耗 AI 配额）
   const [spaceArmed, setSpaceArmed] = useState(false);
   const spaceArmTimer = useRef<number | undefined>(undefined);
+  // 恢复态「再来一轮」按钮两步确认：首次点击只预热，3s 内再点才真正发起
+  const [moreArmed, setMoreArmed] = useState(false);
+  const moreArmTimer = useRef<number | undefined>(undefined);
+  useEffect(
+    () => () => {
+      window.clearTimeout(spaceArmTimer.current);
+      window.clearTimeout(moreArmTimer.current);
+    },
+    [],
+  );
+  const triggerMore = (aroundLocked: boolean) => {
+    if (restoredGuard && !moreArmed) {
+      setMoreArmed(true);
+      window.clearTimeout(moreArmTimer.current);
+      moreArmTimer.current = window.setTimeout(() => setMoreArmed(false), 3000);
+      return;
+    }
+    window.clearTimeout(moreArmTimer.current);
+    setMoreArmed(false);
+    if (aroundLocked) onMoreAroundLocked();
+    else onMore();
+  };
   const listRef = useRef<HTMLDivElement>(null);
 
   const availableRows = useMemo(() => rows.filter((r) => r.status === "available"), [rows]);
@@ -337,6 +362,8 @@ export function ResultsPage({
         } else {
           window.clearTimeout(spaceArmTimer.current);
           setSpaceArmed(false);
+          window.clearTimeout(moreArmTimer.current);
+          setMoreArmed(false);
           if (locked.size > 0) onMoreAroundLocked();
           else onMore();
         }
@@ -439,12 +466,12 @@ export function ResultsPage({
             </DropdownMenu>
             <button
               className="flex h-9 items-center gap-1.5 rounded-lg bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50"
-              onClick={onMore}
+              onClick={() => triggerMore(false)}
               disabled={moreBlocked}
               title={quotaExhausted ? t("results.moreQuota") : undefined}
             >
               <RotateCw className={cn("h-4 w-4", running && "animate-spin")} />
-              {t("results.more")} <kbd className="hidden md:inline" style={{ background: "rgba(0,0,0,.2)", color: "inherit", borderColor: "rgba(0,0,0,.25)" }}>Space</kbd>
+              {moreArmed ? t("results.moreConfirm") : t("results.more")} <kbd className="hidden md:inline" style={{ background: "rgba(0,0,0,.2)", color: "inherit", borderColor: "rgba(0,0,0,.25)" }}>Space</kbd>
             </button>
           </div>
         </div>
@@ -666,12 +693,12 @@ export function ResultsPage({
           </DropdownMenu>
           <button
             className="flex h-11 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg bg-brand px-3.5 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50 sm:px-4 md:h-9"
-            onClick={locked.size > 0 ? onMoreAroundLocked : onMore}
+            onClick={() => triggerMore(locked.size > 0)}
             disabled={moreBlocked}
             title={quotaExhausted ? t("results.moreQuota") : undefined}
           >
             <RotateCw className={cn("h-4 w-4", running && "animate-spin")} />
-            {locked.size > 0 ? t("results.moreAroundLocked") : t("results.more")}
+            {moreArmed ? t("results.moreConfirm") : locked.size > 0 ? t("results.moreAroundLocked") : t("results.more")}
           </button>
         </div>
       </div>

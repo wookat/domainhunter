@@ -325,6 +325,8 @@ export interface GuardDropCounts {
   pinyinMismatch: number;
   /** 与点踩集共享词根前缀或同后缀模式（R225） */
   dislikedMorphology: number;
+  /** en 场景的中文拼音路线候选（英文用户读不出拼音，R465） */
+  enPinyinRoute: number;
 }
 
 /** 单次 AI 生成请求的防线统计：各防线丢弃数 + word 配额补发/重试是否触发 */
@@ -357,6 +359,7 @@ function newGuardDropCounts(): GuardDropCounts {
     pinyinInvalid: 0,
     pinyinMismatch: 0,
     dislikedMorphology: 0,
+    enPinyinRoute: 0,
   };
 }
 
@@ -440,7 +443,8 @@ ${MEANING_REDLINES_EN}
 - theme 标注 few-shot 反例（这些都是错误示范，不要犯）：
   ✗ nundina 标 word —— nundinae 是拉丁词，不在现代英文词典中；word 仅限现代英文常用词（anvil/amazon 式），拉丁/希腊/古语词一律标 coined
   ✗ canaryio 标 word —— label 内嵌 TLD 名 io，组成 canaryio.com 观感怪异，这类内嵌 TLD 名的候选直接不要输出
-  ✗ ledgeledger —— 同词根叠拼（ledger+ledger）低质，不要输出任何同词根叠拼的候选`;
+  ✗ ledgeledger —— 同词根叠拼（ledger+ledger）低质，不要输出任何同词根叠拼的候选
+- 英文场景禁止中文拼音路线：不要输出任何基于汉语拼音的候选（如 chengji、zhixing 式），英文用户读不出拼音也无从理解寓意；theme 一律不得标 pinyin`;
 
 // LLM 上游基地址：默认 DeepSeek 官方；本地 wrangler dev 可用 LLM_API_BASE 指向假上游
 // 验证错误路径（R264），生产不设此变量时行为与既往完全一致
@@ -1352,6 +1356,11 @@ async function generateOnce(
     // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
     // blend/word/coined 不强制校验（blend 含英文，无法整体切分）
     let readabilityPenalty = 0;
+    // R465（R464 复评）：en 场景丢弃拼音路线候选（英文用户读不出拼音，Top Picks 曾被拼音霸榜），先于拼音合法性校验以免计入其他防线
+    if ((opts.lang ?? "zh") === "en" && theme === "pinyin") {
+      dropped.enPinyinRoute++;
+      continue;
+    }
     if (theme === "pinyin") {
       const check = checkPinyinLabel(label);
       if (!check.ok) {
