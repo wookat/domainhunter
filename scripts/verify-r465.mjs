@@ -18,7 +18,7 @@ await build({
   format: "esm",
   outfile: tmp,
 });
-const { generateAiCandidates, newGuardStats } = await import(tmp);
+const { generateAiCandidates, newGuardStats, descriptionLooksEnglish } = await import(tmp);
 rmSync(tmp);
 
 let failed = 0;
@@ -118,6 +118,26 @@ const respWith = (candidates) => ({
   check("en 补发轮: 拼音候选被丢弃", out.some((c) => c.label === "biubiu"), false);
   check("en 补发轮: supplementDropped.enPinyinRoute = 1", guard.supplementDropped.enPinyinRoute, 1);
   check("en 补发轮: 主轮 enPinyinRoute 不被污染", guard.dropped.enPinyinRoute, 0);
+}
+
+// ---------- 描述语言判定（zh-UI + 英文描述路径盲区补丁） ----------
+check("descriptionLooksEnglish: 英文句子 → true", descriptionLooksEnglish("a journaling app for developers"), true);
+check("descriptionLooksEnglish: 中文描述 → false", descriptionLooksEnglish("给独立设计师做的接单协作平台"), false);
+check("descriptionLooksEnglish: 纯拼音输入 → false", descriptionLooksEnglish("chaye dianshang"), false);
+check("descriptionLooksEnglish: 中英混排 → false", descriptionLooksEnglish("想要一个 app 域名"), false);
+
+// ---------- zh UI + 英文描述：拼音候选同样被丢弃 ----------
+{
+  const main = [
+    enCand("castloom", "blend"),
+    enCand("verbloom", "blend"),
+    { label: "rizhi", meaning: "「日志」双字全拼，声调顺口好读好记，读一遍就能拼出来", theme: "pinyin", scores: { length: 90, readability: 90, relevance: 90, brandability: 90 } },
+  ];
+  globalThis.fetch = async () => respWith(main);
+  const guard = newGuardStats();
+  const out = await generateAiCandidates("a journaling app for developers", "k", { lang: "zh", guard });
+  check("zh-UI 英文描述: 拼音候选被丢弃", out.some((c) => c.label === "rizhi"), false);
+  check("zh-UI 英文描述: enPinyinRoute 计数 = 1", guard.dropped.enPinyinRoute, 1);
 }
 
 console.log(failed === 0 ? "\nALL PASS" : `\n${failed} FAILED`);
