@@ -35,7 +35,7 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 
 ### 2.2 Worker API（`apps/web/src/worker.ts`，Hono）
 
-- `POST /api/ai-search` — AI 猎名，NDJSON 流（understanding/round/proposed/结果/done 事件）；限流每 IP 20 次/小时（`rl:{ip}:{hour}`）。
+- `POST /api/ai-search` — AI 猎名，NDJSON 流（understanding/round/proposed/结果/done 事件）；限流每 IP 20 次/小时（`rl:{ip}:{hour}`）。R466 起主轮 LLM 走 `stream:true`：每个通过防线的候选立即发一条 `proposed{items:[x],tlds}`（无 guard）并进入核验队列（候选级并行 3），流结束后再发一条 `proposed{items:[],tlds,guard}` 汇总；事件结构与字段不变，前端零改动。补发轮（word/pinyin）与 understanding 仍为整包非流式。
 - `POST /api/search` — 词根×前后缀×TLD 组合核验，NDJSON 流；也支持 `domains[]` 显式清单（≤200）。
 - `POST /api/check` — 清单复查（≤100 个，`refresh=1`/`refresh:true` 穿透缓存），NDJSON。
 - `GET /api/prices` — Porkbun 实时价（KV 24h 缓存，stale 兜底；彻底无数据回 200 + 空 prices）。
@@ -109,7 +109,7 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
   - P1-1 EN word 配额补发失效 → R243 已加二次重试 + 补发轮独立 guard 计数，未经生产复验；
   - P3-4 zh 偏拼音场景产品结果差（5 轮仅 1 个可注册，双字全拼 .com/.cn 存量枯竭）→ 产品层未动，待评估自动扩 TLD 或提前提示；
   - refine 轮点踩依从性（P3-2）与 theme 标注（P3-3）已在 R250 做 prompt 级强化 + 解析后降级兜底，同样待生产复验。
-- **verify 脚本回归基线**：`scripts/verify-r196/r222–r225/r238/r243–r246/r250.mjs` 全绿；`verify-pinyin.mjs` 与 `verify-meaning-paren.mjs` 用 transformSync 不打包，ai.ts 引入相对依赖（brand-blocklist 等）后已无法单文件加载，属历史遗留失效（其用例已被后续 bundle 式脚本覆盖）。
+- **verify 脚本回归基线**：`scripts/verify-r196/r222–r225/r238/r243–r246/r250/r463/r465/r466.mjs` 全绿（r466 额外把 worker.ts 用 esbuild 打包 + 桩掉 `cloudflare:sockets` 跑 `/api/ai-search` 端到端事件顺序/usage 断言，全程 mock fetch）；`verify-pinyin.mjs` 与 `verify-meaning-paren.mjs` 用 transformSync 不打包，ai.ts 引入相对依赖（brand-blocklist 等）后已无法单文件加载，属历史遗留失效（其用例已被后续 bundle 式脚本覆盖）。
 
 ## 6. 进行中与工作惯例
 
@@ -123,7 +123,7 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
   - **R250 prompt 微调**：theme 标注 few-shot 反例（nundina/canaryio/ledgeledger）+ word 内嵌 TLD 解析后降级 coined 兜底（P3-3）；refine 点踩形态硬禁令前置到 hint 开头 + 强命令式（P3-2）。
   - **部署状态**：生产在线版本 = `deploy/r192-r195` 集成分支 + R222–R246 系列提交（R250 尚未部署）；新工作从该分支切出，PR base 仍为 main。
 - **四道把关**（company-os）：qa-engineer 测试 → user-experience-officer 体验走查 → 内部交叉测试 → 合规与安全审计，全过才交付。
-- **截至本文档更新时的在途工作**（部分已通过 deploy/r192-r195 集成分支上线、PR 待合回 main）：R243–R246 防线修复、R250 prompt 微调（本批，未部署）；用 `gh pr list` 确认实时状态与最新 Rxxx 编号。
+- **截至本文档更新时的在途工作**（部分已通过 deploy/r192-r195 集成分支上线、PR 待合回 main）：R243–R246 防线修复、R250 prompt 微调；R465 en 拼音路线丢弃（生产在线）；**R466 首结果提速（主轮 LLM 流式 + 增量候选解析 + 候选级核验流水，PR base `deploy/r192-r195`，未部署）**——`ai.ts` 新增 `CandidateArrayStreamParser`/`sseDeltaContent`/`admitCandidate`（流式与非流式共用同一防线函数）与 `generateAiCandidates({ onCandidate })`；0 候选时的坏 JSON/网络错误仍走一次退避重试，已交出 ≥1 候选后中断按截断保留不重试。上线后观察点：首结果时间（目标 <10s，以首个 result 事件为准）、`llm-bad-json` 占比是否变化、网关是否按 `text/event-stream` 返回（非 SSE 自动退化整包）。用 `gh pr list` 确认实时状态与最新 Rxxx 编号。
 
 ## 7. 新会话接手 checklist
 

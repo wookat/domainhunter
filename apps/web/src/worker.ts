@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { nanoid } from "nanoid";
 import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
-import { AI_THEMES, classifyAiError, descriptionLooksEnglish, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
+import { AI_THEMES, classifyAiError, descriptionLooksEnglish, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiCandidate, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
@@ -51,6 +51,9 @@ const PRICES_CACHE_CFG: PricesCacheConfig = {
 };
 const SITE_ORIGIN = "https://hunt.zalize.com";
 const FAST_FIRST_ROUND_COUNT = 8; // fast 模式首轮候选数（更快首字节）
+// R466：AI 搜索候选级核验队列并行度（每个候选 = tlds.length 个域名，每批内部再按 checkDomains 并发）；
+// 与改动前整轮一次 checkDomains(concurrency=6) 的上游压力量级相当
+const AI_CHECK_PARALLEL_CANDIDATES = 3;
 const DOMAIN_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62}))+$/;
 
 /** 累计核验计数（KV 非原子，允许少量误差） */
@@ -134,6 +137,7 @@ async function checkDomainsCached(
   domains: string[],
   onResult: (r: CheckResult & { cached?: boolean }) => Promise<void>,
   refresh = false,
+  countStats = true,
 ): Promise<void> {
   let misses = domains;
   if (kv && !refresh) {
@@ -165,7 +169,33 @@ async function checkDomainsCached(
     }
     await onResult(r);
   }, 6, fetch, whoisFallback);
-  await bumpStats(kv, domains.length);
+  if (countStats) await bumpStats(kv, domains.length);
+}
+
+/** R466：有界并行队列——run() 立即返回，任务在最多 limit 个槽位内按入队顺序开始；drain() 等全部完成，首个失败原样抛出 */
+function boundedQueue(limit: number) {
+  let active = 0;
+  const waiting: (() => void)[] = [];
+  const inflight: Promise<void>[] = [];
+  const run = (task: () => Promise<void>) => {
+    const p = (async () => {
+      if (active >= limit) await new Promise<void>((r) => waiting.push(r)); // 槽位由释放方直接移交，不再计数
+      else active++;
+      try {
+        await task();
+      } finally {
+        const next = waiting.shift();
+        if (next) next();
+        else active--;
+      }
+    })();
+    inflight.push(p);
+    p.catch(() => undefined); // 失败留给 drain() 统一抛出，避免入队到 drain 之间被判为未处理拒绝
+  };
+  const drain = async () => {
+    await Promise.all(inflight);
+  };
+  return { run, drain };
 }
 
 interface ShareItem {
@@ -277,12 +307,43 @@ app.post("/api/ai-search", async (c) => {
       try {
         for (let round = 1; round <= MAX_ROUNDS && availableCount < target; round++) {
           await emit({ type: "round", round, availableCount, target, note: round === 1 ? "AI 正在构思名字…" : "可注册的还不够，AI 反思后继续想…" });
-          let candidates;
           // R238：防线统计元数据——按轮汇总各防线丢弃计数与补发/重试触发情况，
           // 随 proposed 事件返回（新增字段，旧前端忽略，不破坏现有结构）；只计数，不含被丢弃候选内容
           const guard = newGuardStats();
+          // R466：首结果提速——LLM 流式返回，每解出一个通过防线的候选立即：跨轮去重 → 单项 proposed 事件
+          // （items 只含该候选，不带 guard）→ 进入核验队列逐域名下发 result；流结束后再发一条 items 为空的
+          // proposed 携带本轮 guard 汇总（前端对同轮多条 proposed 的 filtered 是累加语义，guard 只带一次即不重计）。
+          // 事件结构与字段均未变，旧前端无需适配
+          const meaningByLabel = new Map<string, string>();
+          const themeByLabel = new Map<string, AiTheme | undefined>();
+          const takenThisRound = new Set<string>();
+          let checkedDomains = 0;
+          const checks = boundedQueue(AI_CHECK_PARALLEL_CANDIDATES);
+          const onCandidate = async (x: AiCandidate) => {
+            if (tried.has(x.label)) return;
+            tried.add(x.label);
+            meaningByLabel.set(x.label, x.meaning);
+            themeByLabel.set(x.label, x.theme);
+            await emit({ type: "proposed", round, items: [x], tlds });
+            const domains = tlds.map((t) => `${x.label}.${t}`);
+            checkedDomains += domains.length;
+            checks.run(() =>
+              checkDomainsCached(
+                c.env.CACHE,
+                domains,
+                async (r) => {
+                  const label = r.domain.slice(0, r.domain.indexOf("."));
+                  if (r.status === "available") availableCount++;
+                  else if (r.status === "taken") takenThisRound.add(label);
+                  await emit({ ...r, round, meaning: meaningByLabel.get(label), theme: themeByLabel.get(label) });
+                },
+                false,
+                false,
+              ),
+            );
+          };
           try {
-            candidates = await generateAiCandidates(description, apiKey, {
+            await generateAiCandidates(description, apiKey, {
               count: fast && round === 1 ? FAST_FIRST_ROUND_COUNT : 24,
               // 跨轮去重：把已核验过的全部名字和被注册模式一起反馈给 refine 轮
               feedback:
@@ -296,28 +357,20 @@ app.post("/api/ai-search", async (c) => {
               model: llmModel,
               thinking: llmThinking,
               descLooksEnglish,
+              onCandidate,
             });
           } catch (e) {
             // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；
             // detail 只含既有错误短码（llm-http-402 等），不含 key 与上游响应体
             const errorKind = classifyAiError(e);
+            await checks.drain().catch(() => undefined);
             await emit({ type: "error", round, errorKind, detail: String(e), guard });
             await bumpAiError(c.env.CACHE, errorKind);
             break;
           }
-          const fresh = candidates.filter((x) => !tried.has(x.label));
-          fresh.forEach((x) => tried.add(x.label));
-          const meaningByLabel = new Map(fresh.map((x) => [x.label, x.meaning]));
-          const themeByLabel = new Map(fresh.map((x) => [x.label, x.theme]));
-          const domains = fresh.flatMap((x) => tlds.map((t) => `${x.label}.${t}`));
-          await emit({ type: "proposed", round, items: fresh, tlds, guard });
-          const takenThisRound = new Set<string>();
-          await checkDomainsCached(c.env.CACHE, domains, async (r) => {
-            const label = r.domain.slice(0, r.domain.indexOf("."));
-            if (r.status === "available") availableCount++;
-            else if (r.status === "taken") takenThisRound.add(label);
-            await emit({ ...r, round, meaning: meaningByLabel.get(label), theme: themeByLabel.get(label) });
-          });
+          await emit({ type: "proposed", round, items: [], tlds, guard });
+          await checks.drain();
+          await bumpStats(c.env.CACHE, checkedDomains);
           takenLabels.push(...takenThisRound);
           for (const label of takenThisRound) {
             const theme = themeByLabel.get(label);
