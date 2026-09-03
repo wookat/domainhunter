@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { nanoid } from "nanoid";
 import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
-import { AI_THEMES, classifyAiError, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
+import { AI_THEMES, classifyAiError, descriptionLooksEnglish, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
@@ -219,6 +219,8 @@ app.post("/api/ai-search", async (c) => {
   let description = (body.description ?? "").trim().slice(0, 500);
   const style = (body.style ?? "").trim().slice(0, 50);
   const lengthPref = (body.lengthPref ?? "").trim().slice(0, 50);
+  // R465 补丁：语言判定必须基于拼接风格/长度偏好前的原始描述（后缀含中文会污染判定）
+  const descLooksEnglish = descriptionLooksEnglish(description);
   if (style) description += `\n命名风格偏好：${style}`;
   if (lengthPref) description += `\n名字长度偏好：${lengthPref}`;
   const tlds = (body.tlds ?? ["com", "cn"]).map((t) => t.trim().toLowerCase().replace(/^\./, "")).filter(Boolean);
@@ -293,6 +295,7 @@ app.post("/api/ai-search", async (c) => {
               baseUrl: llmBase,
               model: llmModel,
               thinking: llmThinking,
+              descLooksEnglish,
             });
           } catch (e) {
             // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；

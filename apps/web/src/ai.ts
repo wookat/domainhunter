@@ -325,6 +325,8 @@ export interface GuardDropCounts {
   pinyinMismatch: number;
   /** 与点踩集共享词根前缀或同后缀模式（R225） */
   dislikedMorphology: number;
+  /** en 场景的中文拼音路线候选（英文用户读不出拼音，R465） */
+  enPinyinRoute: number;
 }
 
 /** 单次 AI 生成请求的防线统计：各防线丢弃数 + word 配额补发/重试是否触发 */
@@ -357,6 +359,7 @@ function newGuardDropCounts(): GuardDropCounts {
     pinyinInvalid: 0,
     pinyinMismatch: 0,
     dislikedMorphology: 0,
+    enPinyinRoute: 0,
   };
 }
 
@@ -440,7 +443,8 @@ ${MEANING_REDLINES_EN}
 - theme 标注 few-shot 反例（这些都是错误示范，不要犯）：
   ✗ nundina 标 word —— nundinae 是拉丁词，不在现代英文词典中；word 仅限现代英文常用词（anvil/amazon 式），拉丁/希腊/古语词一律标 coined
   ✗ canaryio 标 word —— label 内嵌 TLD 名 io，组成 canaryio.com 观感怪异，这类内嵌 TLD 名的候选直接不要输出
-  ✗ ledgeledger —— 同词根叠拼（ledger+ledger）低质，不要输出任何同词根叠拼的候选`;
+  ✗ ledgeledger —— 同词根叠拼（ledger+ledger）低质，不要输出任何同词根叠拼的候选
+- 英文场景禁止中文拼音路线：不要输出任何基于汉语拼音的候选（如 chengji、zhixing 式），英文用户读不出拼音也无从理解寓意；theme 一律不得标 pinyin`;
 
 // LLM 上游基地址：默认 DeepSeek 官方；本地 wrangler dev 可用 LLM_API_BASE 指向假上游
 // 验证错误路径（R264），生产不设此变量时行为与既往完全一致
@@ -528,6 +532,14 @@ export function needsWordSupplement(candidates: AiCandidate[]): boolean {
   return candidates.length >= EN_WORD_QUOTA_MIN_CANDIDATES && countThemes(candidates).word === 0;
 }
 
+// ---------------- en 任务语言判定（R465 补丁，R465 线上回归发现） ----------------
+// lang 取自 UI 语言，中文 UI 下输入纯英文需求时拼音过滤会失效。
+// 描述无任何 CJK 字符且含常见英文功能词时，视为英文任务（纯拼音输入如 "chaye dianshang" 不命中，保留 zh 行为）。
+const EN_FUNCTION_WORD_RE = /\b(a|an|the|for|to|of|and|with|app|site|tool|my|our|that|is|in|on)\b/i;
+export function descriptionLooksEnglish(description: string): boolean {
+  return !/[\u3400-\u9fff\uf900-\ufaff]/.test(description) && EN_FUNCTION_WORD_RE.test(description);
+}
+
 // ---------------- zh 拼音/中文语感路线配额硬保障（R463，R462 对标 P0-2） ----------------
 // 生产坏例：zh 茶叶电商任务 12 个可注册全是 tea+英文词模板，pinyin/blend 为 0——
 // prompt 级软配额（R182）对 LLM 不可靠，镜像 R224 word 补发机制做后端兜底。
@@ -584,7 +596,7 @@ export function mergeWordSupplement(main: AiCandidate[], extra: AiCandidate[]): 
 export async function generateAiCandidates(
   description: string,
   apiKey: string,
-  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; guard?: GuardStats; baseUrl?: string; model?: string; thinking?: string } = {},
+  opts: { count?: number; feedback?: RefineFeedback; round?: number; lang?: "zh" | "en"; guard?: GuardStats; baseUrl?: string; model?: string; thinking?: string; descLooksEnglish?: boolean } = {},
 ): Promise<AiCandidate[]> {
   let out: AiCandidate[];
   try {
@@ -616,7 +628,7 @@ export async function generateAiCandidates(
     }
   }
   // R463：zh 拼音/blend 路线配额失守时补发一次（镜像 R224；失败静默不阻塞主结果）
-  if ((opts.lang ?? "zh") === "zh" && needsPinyinSupplement(out)) {
+  if ((opts.lang ?? "zh") === "zh" && !(opts.descLooksEnglish ?? descriptionLooksEnglish(description)) && needsPinyinSupplement(out)) {
     if (opts.guard) opts.guard.pinyinSupplement = true;
     try {
       const extra = await generateOnce(description, apiKey, {
@@ -1227,6 +1239,7 @@ async function generateOnce(
     baseUrl?: string;
     model?: string;
     thinking?: string;
+    descLooksEnglish?: boolean;
   } = {},
 ): Promise<AiCandidate[]> {
   const count = opts.count ?? 24;
@@ -1352,6 +1365,13 @@ async function generateOnce(
     // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
     // blend/word/coined 不强制校验（blend 含英文，无法整体切分）
     let readabilityPenalty = 0;
+    // R465（R464 复评）：en 场景丢弃拼音路线候选（英文用户读不出拼音，Top Picks 曾被拼音霸榜），先于拼音合法性校验以免计入其他防线；
+    // lang 取自 UI 语言，中文 UI 下输入纯英文描述同样适用（R465 线上回归发现的路径盲区）；
+    // 优先用调用方基于原始描述的判定（worker 会向 description 拼接中文风格/长度偏好后缀，直接判拼接后文本会误判为 zh）
+    if (((opts.lang ?? "zh") === "en" || (opts.descLooksEnglish ?? descriptionLooksEnglish(description))) && theme === "pinyin") {
+      dropped.enPinyinRoute++;
+      continue;
+    }
     if (theme === "pinyin") {
       const check = checkPinyinLabel(label);
       if (!check.ok) {
