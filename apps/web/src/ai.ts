@@ -325,6 +325,8 @@ export interface GuardDropCounts {
   questionMark: number;
   /** EN meaning 词语沙拉（无词源锤点且无谓语骨架，R196） */
   meaningIncoherent: number;
+  /** zh meaning 词语沙拉（长从句 + 比喻/叙事词，R496） */
+  zhMeaningIncoherent: number;
   /** 拼音候选无法切分为合法音节/音节过多/语感风险超阈（R124/R142） */
   pinyinInvalid: number;
   /** 声称「全拼」但「」内引用词拼音与 label 拼写不符，含表外字保守拒绝（R196/R222） */
@@ -364,6 +366,7 @@ function newGuardDropCounts(): GuardDropCounts {
     metaLanguage: 0,
     questionMark: 0,
     meaningIncoherent: 0,
+    zhMeaningIncoherent: 0,
     pinyinInvalid: 0,
     pinyinMismatch: 0,
     dislikedMorphology: 0,
@@ -750,6 +753,16 @@ export function filterDislikedMorphology(candidates: AiCandidate[], disliked: Di
   return kept;
 }
 
+// R496（R494 P1-1）：refine/点踩轮 zh coined/blend 路线 meaning 格式硬约束——生产实测轮≥2 的造词候选寓意
+// 成片变成 50–70 字的连环比喻 + 人物情节叙事（moggity/voralini/hapany），归因是造词路线没有像拼音路线那样
+// 的固定句式模板。限定「音节来源 + 一句品牌联想」两段结构与字数，防线 zhMeaningIncoherent 只拦漏网的最坏形态。
+// 不动候选数配额。好例两条已对照全部防线（片段均为 label 子串、无幻影 ASCII、子句 ≤15 字）。
+const ZH_COINED_MEANING_FORMAT = `【coined/blend 造词路线 meaning 格式硬约束】寓意全文 ≤40 字，只允许两段：① 音节来源（每个片段取自哪个词/拼音/拟声，一句带过）；② 一句品牌联想（这个名字对用户意味着什么）。每个逗号分句 ≤15 字；整条最多用一个「像/仿佛/般」，禁止连环比喻，禁止编人物、情节、场景故事（「整体感觉像一个伯爵先生正在柜台后端出鲸吞鲜食的宠与敬」这类一律弃用）。
+好例：
+- woofable：woof 是狗叫声，able 是“能够”的英文后缀，寓意每只狗都值得好好对待，读来轻快好记。
+- mochacat：mocha 是摩卡的柔和奶色，cat 是猫，寓意像摩卡一样温柔的猫咪伙伴，两词直拼好读。
+写完默读一遍：中文创业者能否 3 秒内看懂——看不懂就换候选，不要硬写。`;
+
 /** 把上一轮的失败模式总结成具体反思提示，而非简单罗列名单 */
 function buildRefineHint(fb: RefineFeedback, round: number, lang: "zh" | "en"): string {
   const parts: string[] = [];
@@ -814,6 +827,7 @@ function buildRefineHint(fb: RefineFeedback, round: number, lang: "zh" | "en"): 
       ? `Coherence red line for this round: every meaning must read as ONE grammatical English sentence a native speaker would naturally write — subject, verb, and a clear point. Before outputting, read each meaning aloud in your head; if it reads like disconnected word fragments strung together (e.g. "yonkle as a knoll taken to third power hand, your ridge from low months"), discard that candidate and write a different one you can explain in a plain, coherent sentence.`
       : `本轮 meaning 连贯性红线：每条 meaning 必须是母语者会自然写出的一句通顺中文——主谓完整、意思明确。输出前逐条默读一遍，读起来像词语碎片拼凑、不成句的（如「带给幼想出格的好奇色彩」），直接弃用该候选，换一个你能用一句通顺话讲清楚的。`,
   );
+  if (lang === "zh") parts.push(ZH_COINED_MEANING_FORMAT);
   return parts.join("\n");
 }
 
@@ -1285,6 +1299,35 @@ export function enMeaningIncoherent(label: string, meaning: string, opts: { word
   return !fragmentOk || !predicateOk;
 }
 
+// ---------------- zh meaning 连贯性启发式（R496，R494 P1-1） ----------------
+// 生产坏例（R494 ai-search-03/04 refine 轮 coined）：moggity「…整体感觉像一个伯爵先生正在柜台后端出鲸吞鲜食的宠与敬」、
+// hapany「…两者睡袍般裹在一起正是一个愿意并肩也要鲜肴的半路结盟者」。论证与标注集见
+// docs/research/zh-meaning-coherence.md / scripts/fixtures/zh-meaning-labels.json：沙拉的可观测形态是「长从句」——
+// 末段 ≥22 字不带标点的叙事名词短语，或 ≥2 段 ≥16 字的比喻从句堆叠；正常寓意最长子句 ≤21、≥16 字子句 ≤1。
+// fail-closed：只数汉字（label/英文片段/标点不计），且必须同时出现比喻/叙事引导词，平实的长说明句不拦；
+// 标注集 182 条正常寓意误杀 0，6 条 R494 沙拉全拦；短句沙拉不在本防线能力范围（交 prompt 治本）。
+const ZH_CLAUSE_SPLIT_RE = /[，。；！？：、,;!?:\n]/;
+const ZH_HAN_RE = /[\u4e00-\u9fff]/g;
+const ZH_SALAD_MARKER_RE = /像|仿佛|恰似|如同|宛如|好比|犹如|(?<!一)般|正在|被|讲述|演绎|传奇/;
+const ZH_SALAD_MAX_CLAUSE = 22;
+const ZH_SALAD_LONG_CLAUSE = 16;
+
+export interface ZhMeaningContext {
+  /** 候选路线；规则降级模板句（rule）不判 */
+  theme?: string;
+}
+
+export function zhMeaningIncoherent(_label: string, meaning: string, ctx: ZhMeaningContext = {}): boolean {
+  if (ctx.theme === "rule") return false;
+  const clauses = meaning
+    .split(ZH_CLAUSE_SPLIT_RE)
+    .map((c) => (c.match(ZH_HAN_RE) ?? []).length)
+    .filter((n) => n > 0);
+  if (clauses.length === 0) return false;
+  const longClause = Math.max(...clauses) >= ZH_SALAD_MAX_CLAUSE || clauses.filter((n) => n >= ZH_SALAD_LONG_CLAUSE).length >= 2;
+  return longClause && ZH_SALAD_MARKER_RE.test(meaning);
+}
+
 // ---------------- 拼音引用词与 label 一致性校验（R196，P2-2） ----------------
 // 生产坏例：tangfang 声称「探方」双全拼（实为 tanfang）、sanvei 声称「山味」全拼（实为 shanwei）。
 // 基于内嵌常用字拼音表（R222 扩至 GB2312 全集 6765 字，含多音字）校验：theme 为 pinyin 且
@@ -1465,8 +1508,13 @@ function admitCandidate(c: Partial<AiCandidate>, ctx: AdmitContext): AiCandidate
     dropped.meaningIncoherent++;
     return null;
   }
-  const s = c.scores ?? ({} as Partial<AiScores>);
   const theme = String(c.theme ?? "").toLowerCase();
+  // R496（R494 P1-1）：zh meaning 连贯性启发式——长从句 + 比喻/叙事词的词语沙拉（moggity/hapany 型）→ 整条丢弃
+  if (ctx.lang === "zh" && zhMeaningIncoherent(label, meaning, { theme: ctx.ruleTheme ? "rule" : theme })) {
+    dropped.zhMeaningIncoherent++;
+    return null;
+  }
+  const s = c.scores ?? ({} as Partial<AiScores>);
   // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
   // blend/word/coined 不强制校验（blend 含英文，无法整体切分）
   let readabilityPenalty = 0;
