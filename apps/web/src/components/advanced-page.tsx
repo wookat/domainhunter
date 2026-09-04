@@ -32,7 +32,7 @@ function expandBulk(input: string, tlds: string[]): string[] {
 export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string) => boolean; toggle: (row: Row) => void } }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
-  const { copied: availCopied, copy: copyAvailable } = useCopyAvailable();
+  const { copied: availCopied, failed: availCopyFailed, copy: copyAvailable } = useCopyAvailable();
   const [roots, setRoots] = useState("");
   const [prefixes, setPrefixes] = useState("");
   const [suffixes, setSuffixes] = useState("");
@@ -142,11 +142,11 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
         <div className="mt-6 flex flex-wrap items-center gap-2">
           {available.length >= 2 && (
             <button
-              onClick={() => copyAvailable(available.map((r) => r.domain))}
+              onClick={() => void copyAvailable(available)}
               className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:h-9"
             >
               {availCopied ? <Check className="h-3.5 w-3.5 text-brand" /> : <Copy className="h-3.5 w-3.5" />}
-              {availCopied ? t("results.copiedAvail") : t("results.copyAvailBtn", { n: available.length })}
+              {availCopied ? t("results.copiedAvail") : availCopyFailed ? t("results.copyFailed") : t("results.copyAvailBtn", { n: available.length })}
             </button>
           )}
           <button

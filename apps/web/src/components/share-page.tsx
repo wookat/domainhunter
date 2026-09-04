@@ -24,7 +24,7 @@ export function SharePage({ id }: { id: string }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
   const [state, setState] = useState<LoadState>({ kind: "loading" });
-  const { copied: availCopied, copy: copyAvailable } = useCopyAvailable();
+  const { copied: availCopied, failed: availCopyFailed, copy: copyAvailable } = useCopyAvailable();
 
   useEffect(() => {
     let cancelled = false;
@@ -97,11 +97,11 @@ export function SharePage({ id }: { id: string }) {
         <div className="mt-3 flex flex-wrap items-center gap-2">
           {items.length >= 2 && (
             <button
-              onClick={() => copyAvailable(items.map((it) => it.domain))}
+              onClick={() => void copyAvailable(items)}
               className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:h-9"
             >
               {availCopied ? <Check className="h-3.5 w-3.5 text-brand" /> : <Copy className="h-3.5 w-3.5" />}
-              {availCopied ? t("results.copiedAvail") : t("results.copyAvailBtn", { n: items.length })}
+              {availCopied ? t("results.copiedAvail") : availCopyFailed ? t("results.copyFailed") : t("results.copyAvailBtn", { n: items.length })}
             </button>
           )}
           <button

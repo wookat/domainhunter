@@ -6,6 +6,7 @@ import { ExpiryNote, WatchCta } from "@/components/domain-row";
 import { RegistrarAnchor } from "@/components/registrar-link";
 import { addRecentSearch, clearRecentSearches, loadRecentSearches, type RecentSearch } from "@/lib/history";
 import { useI18n, type I18nKey } from "@/lib/i18n";
+import { useCopyAvailable } from "@/lib/results-export";
 import { hasSavedSearch, isAiQuotaDown } from "@/lib/persist";
 import { toUsd, usePrices } from "@/lib/prices";
 import { primaryRegistrar } from "@/lib/registrars";
@@ -269,8 +270,8 @@ export function HomePage({
   const [quickMoreDone, setQuickMoreDone] = useState(false);
   // quick-check 图例过滤（IDS 式）：按状态筛 chips
   const [quickFilter, setQuickFilter] = useState<"all" | "available" | "taken" | "unknown">("all");
-  const [quickCopied, setQuickCopied] = useState(false);
-  const [variantCopied, setVariantCopied] = useState(false);
+  const { copied: quickCopied, failed: quickCopyFailed, copy: copyQuick } = useCopyAvailable();
+  const { copied: variantCopied, failed: variantCopyFailed, copy: copyVariant } = useCopyAvailable();
   const quickAbortRef = useRef<AbortController | null>(null);
 
   // 变体建议：心仪名字被注册时，用前后缀组合免费核验一批变体（同样不消耗 AI 次数）
@@ -829,19 +830,15 @@ export function HomePage({
                 )}
                 {!quickRunning && quickRows.filter((r) => r.status === "available").length >= 2 && (
                   <button
-                    onClick={() => {
-                      void navigator.clipboard.writeText(
-                        quickRows.filter((r) => r.status === "available").map((r) => r.domain).join("\n"),
-                      );
-                      setQuickCopied(true);
-                      setTimeout(() => setQuickCopied(false), 1500);
-                    }}
+                    onClick={() => void copyQuick(quickRows.filter((r) => r.status === "available"))}
                     className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0"
                   >
                     {quickCopied ? <Check className="h-3 w-3 text-brand" /> : <Copy className="h-3 w-3" />}
                     {quickCopied
                       ? t("home.quickCopied")
-                      : t("home.quickCopyBtn", { n: quickRows.filter((r) => r.status === "available").length })}
+                      : quickCopyFailed
+                        ? t("results.copyFailed")
+                        : t("home.quickCopyBtn", { n: quickRows.filter((r) => r.status === "available").length })}
                   </button>
                 )}
                 {/* 心仪名字被注册：免费变体核验 + 一键转 AI 搜相似寓意的可注册名字（与 chips 同行，展开更多后缀后也可见） */}
@@ -903,19 +900,15 @@ export function HomePage({
                       ))}
                     {!variantRunning && variantRows.filter((r) => r.status === "available").length >= 2 && (
                       <button
-                        onClick={() => {
-                          void navigator.clipboard.writeText(
-                            variantRows.filter((r) => r.status === "available").map((r) => r.domain).join("\n"),
-                          );
-                          setVariantCopied(true);
-                          setTimeout(() => setVariantCopied(false), 1500);
-                        }}
+                        onClick={() => void copyVariant(variantRows.filter((r) => r.status === "available"))}
                         className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0"
                       >
                         {variantCopied ? <Check className="h-3 w-3 text-brand" /> : <Copy className="h-3 w-3" />}
                         {variantCopied
                           ? t("home.quickCopied")
-                          : t("home.quickCopyBtn", { n: variantRows.filter((r) => r.status === "available").length })}
+                          : variantCopyFailed
+                            ? t("results.copyFailed")
+                            : t("home.quickCopyBtn", { n: variantRows.filter((r) => r.status === "available").length })}
                       </button>
                     )}
                   </div>
