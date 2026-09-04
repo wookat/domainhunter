@@ -7,7 +7,7 @@ import { getHomePage, loadHomePage } from "@/components/home-page-loader";
 import type { LogEntry } from "@/components/agent-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
 import { isMockEnabled, runMockStream } from "@/mock";
-import { clearAiQuotaDown, loadSearch, markAiQuotaDown, saveSearch } from "@/lib/persist";
+import { clearAiQuotaDown, loadSearch, markAiQuotaDown, saveSearch, type SavedFallback } from "@/lib/persist";
 import { TLD_LIST } from "@/content/tld-list";
 import { GUIDE_LABELS } from "@/content/guide-labels";
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
@@ -193,7 +193,7 @@ export default function App() {
   // R247：多轮低产出提示（worker 每次搜索至多发一次 hint 事件）
   const [lowYieldHint, setLowYieldHint] = useState(false);
   // R471：AI 不可用时的规则降级（fallback 事件）：结果页顶部挂横幅，候选交互照常
-  const [fallback, setFallback] = useState<{ reason: FallbackReason; count: number } | null>(null);
+  const [fallback, setFallback] = useState<SavedFallback | null>(saved?.fallback ?? null);
   const [logs, setLogs] = useState<LogEntry[]>([]);
   const [elapsedSec, setElapsedSec] = useState<number | undefined>(saved?.elapsedSec);
   const [locked, setLocked] = useState<Set<string>>(() => new Set(saved?.locked ?? []));
@@ -262,9 +262,9 @@ export default function App() {
     // 只要有已落地（非 checking）的结果就覆盖快照，与所在页面/是否运行中无关：
     // 搜索每轮结果落地与最终完成都会写入，恢复条恢复的永远是最近一次搜索。
     if (rows.some((r) => r.status !== "checking")) {
-      saveSearch({ values, rows, rounds, elapsedSec, aiUnderstanding, refinements, triedLabels: triedLabelsRef.current, locked: [...locked] });
+      saveSearch({ values, rows, rounds, elapsedSec, aiUnderstanding, refinements, triedLabels: triedLabelsRef.current, locked: [...locked], fallback });
     }
-  }, [rows, rounds, values, elapsedSec, aiUnderstanding, refinements, locked]);
+  }, [rows, rounds, values, elapsedSec, aiUnderstanding, refinements, locked, fallback]);
 
   function handleEvent(ev: StreamEvent) {
     const round = (ev.round ?? 0) + roundOffsetRef.current;

@@ -1,5 +1,11 @@
 import type { HomeValues } from "@/components/home-page";
-import type { Row, RoundInfo, Understanding } from "@/types";
+import type { FallbackReason, Row, RoundInfo, Understanding } from "@/types";
+
+/** R471：本次结果为规则降级候选（AI 不可用）；随快照恢复，刷新后横幅不丢 */
+export interface SavedFallback {
+  reason: FallbackReason;
+  count: number;
+}
 
 /** 结果页状态持久化（sessionStorage，按标签页隔离）：跳转 /tld、刷新或后退后可恢复，不用重新消耗一次搜索 */
 export interface SavedSearch {
@@ -11,6 +17,8 @@ export interface SavedSearch {
   refinements: string[];
   triedLabels: string[];
   locked: string[];
+  /** 旧快照无此字段 → 视为非降级结果 */
+  fallback?: SavedFallback | null;
 }
 
 const KEY = "dh:lastSearch:v1";

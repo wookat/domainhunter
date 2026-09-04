@@ -443,7 +443,7 @@ const zh = {
   "error.ai.upstream": "AI 服务方暂时故障，可稍后重试",
   "error.ai.network": "连接 AI 服务网络异常，可重试",
   // R471 规则降级横幅
-  "fallback.banner": "AI 暂不可用（{reason}），以下 {count} 个候选为规则生成（描述关键词组合），非 AI 寓意；可稍后重试 AI。",
+  "fallback.banner": "AI 暂不可用（{reason}），以下 {count} 个名字为规则生成（描述关键词组合，已逐个后缀核验），非 AI 寓意；可稍后重试 AI。",
   "fallback.reason.quota": "配额已满",
   "fallback.reason.quota-breaker": "配额已满，熔断中",
   "fallback.reason.rate-limit": "限流",
@@ -879,7 +879,7 @@ const en: Record<I18nKey, string> = {
   "error.ai.upstream": "AI provider is having a temporary hiccup — try again shortly",
   "error.ai.network": "Network issue reaching the AI service — retry",
   // R471 rule-based fallback banner
-  "fallback.banner": "AI is temporarily unavailable ({reason}). The {count} candidates below are rule-based combinations of your description's keywords, not AI meanings — you can retry AI later.",
+  "fallback.banner": "AI is temporarily unavailable ({reason}). The {count} names below are rule-based combinations of your description's keywords (checked on each TLD), not AI meanings — you can retry AI later.",
   "fallback.reason.quota": "quota exhausted",
   "fallback.reason.quota-breaker": "quota exhausted, circuit open",
   "fallback.reason.rate-limit": "rate-limited",
