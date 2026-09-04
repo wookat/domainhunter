@@ -3,6 +3,7 @@ import { nanoid } from "nanoid";
 import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
 import { AI_THEMES, classifyAiError, descriptionLooksEnglish, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiCandidate, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
+import { resolveFallbackUpstream, type LlmProvider } from "./ai-transport";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
@@ -23,7 +24,20 @@ import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from 
 
 // LLM_API_BASE/LLM_MODEL：LLM 上游基地址与模型名。默认 DeepSeek 官方 + deepseek-chat；
 // 生产可指向 OpenAI 兼容网关（R460：电信 AI 网关），本地 wrangler dev 亦可指向假上游验证错误路径（R264）
-type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace; LLM_API_BASE?: string; LLM_MODEL?: string; LLM_THINKING?: string };
+// LLM_FALLBACK_*（R474）：备用上游（任一 OpenAI 兼容端点），主上游额度耗尽/认证失败/5xx/网络失败时自动重发；
+// LLM_FALLBACK_API_KEY 为 secret（wrangler secret put），未配置则 failover 休眠，行为与仅有主上游时完全一致
+type Bindings = {
+  ASSETS: Fetcher;
+  DEEPSEEK_API_KEY: string;
+  CACHE?: KVNamespace;
+  LLM_API_BASE?: string;
+  LLM_MODEL?: string;
+  LLM_THINKING?: string;
+  LLM_FALLBACK_API_KEY?: string;
+  LLM_FALLBACK_API_BASE?: string;
+  LLM_FALLBACK_MODEL?: string;
+  LLM_FALLBACK_THINKING?: string;
+};
 
 const app = new Hono<{ Bindings: Bindings }>();
 
@@ -77,6 +91,8 @@ interface DayUsage {
   shareWriteRetry?: number;
   /** 分享写入最终失败（含换 id 重写仍失败）次数（R305） */
   shareWriteFail?: number;
+  /** 当日 AI 主轮实际应答的 LLM 上游计数（R474：主/备；仅数字；旧数据无此字段） */
+  llmProvider?: Partial<Record<LlmProvider, number>>;
 }
 
 async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: boolean, refine: boolean): Promise<void> {
@@ -99,6 +115,17 @@ async function bumpAiError(kv: KVNamespace | undefined, kind: AiErrorKind): Prom
     const key = `usage:${new Date().toISOString().slice(0, 10)}`;
     const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
     cur.aiErrors = { ...cur.aiErrors, [kind]: (cur.aiErrors?.[kind] ?? 0) + 1 };
+    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
+  } catch { /* 统计失败不影响主流程 */ }
+}
+
+/** 当日 LLM 主轮应答上游计数 +1（R474，仅计数；KV 非原子，允许少量误差） */
+async function bumpLlmProvider(kv: KVNamespace | undefined, provider: LlmProvider): Promise<void> {
+  if (!kv) return;
+  try {
+    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
+    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
+    cur.llmProvider = { ...cur.llmProvider, [provider]: (cur.llmProvider?.[provider] ?? 0) + 1 };
     await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
   } catch { /* 统计失败不影响主流程 */ }
 }
@@ -299,7 +326,14 @@ app.post("/api/ai-search", async (c) => {
       const llmBase = c.env.LLM_API_BASE || undefined;
       const llmModel = c.env.LLM_MODEL || undefined;
       const llmThinking = c.env.LLM_THINKING || undefined;
-      const understandingDone = generateUnderstanding(description, apiKey, lang, llmBase, llmModel, llmThinking)
+      // R474：备用上游（未配 LLM_FALLBACK_API_KEY 时为 undefined，请求层不启用 failover）
+      const llmFallback = resolveFallbackUpstream({
+        apiKey: c.env.LLM_FALLBACK_API_KEY,
+        baseUrl: c.env.LLM_FALLBACK_API_BASE,
+        model: c.env.LLM_FALLBACK_MODEL,
+        thinking: c.env.LLM_FALLBACK_THINKING,
+      });
+      const understandingDone = generateUnderstanding(description, apiKey, lang, llmBase, llmModel, llmThinking, llmFallback)
         .then(async (u) => {
           if (u) await emit({ type: "understanding", ...u });
         })
@@ -356,6 +390,7 @@ app.post("/api/ai-search", async (c) => {
               baseUrl: llmBase,
               model: llmModel,
               thinking: llmThinking,
+              fallback: llmFallback,
               descLooksEnglish,
               onCandidate,
             });
@@ -368,7 +403,9 @@ app.post("/api/ai-search", async (c) => {
             await bumpAiError(c.env.CACHE, errorKind);
             break;
           }
-          await emit({ type: "proposed", round, items: [], tlds, guard });
+          // R474：本轮实际应答的 LLM 上游（primary/fallback）随汇总事件透出（新增尾部字段，旧前端忽略），并计入当日 usage
+          await emit({ type: "proposed", round, items: [], tlds, guard, provider: guard.provider });
+          if (guard.provider) await bumpLlmProvider(c.env.CACHE, guard.provider);
           await checks.drain();
           await bumpStats(c.env.CACHE, checkedDomains);
           takenLabels.push(...takenThisRound);
