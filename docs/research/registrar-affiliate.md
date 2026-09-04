@@ -84,7 +84,7 @@
 
 **方案**（本 PR）：
 1. `Registrar = { id, name, region: "cn"|"global", url(d), affiliate?(d, params), supportsTld?(tld) }`，`REGISTRARS` 为唯一数据源。
-2. 返佣参数是**公开配置、非 secret**：`wrangler.jsonc` → `vars.REGISTRAR_AFFILIATE_JSON`（默认 `"{}"`）→ Worker `GET /api/registrars` 返回 `{affiliate}`（`cache-control: public, max-age=3600`）→ 前端 `lib/affiliate.ts` 启动后拉一次（`useSyncExternalStore`），拉取前/失败/为空都等价于 `{}`。**未配置时所有 href 与基线字节级一致**（单测断言）。
+2. 返佣参数是**公开配置、非 secret**：`wrangler.jsonc` → `vars.REGISTRAR_AFFILIATE_JSON`（默认 `"{}"`）→ Worker `GET /api/registrars` 返回 `{affiliate}`（`cache-control: public, max-age=300`，改配置重新部署后最多滞后 5 分钟生效）→ 前端 `lib/affiliate.ts` 启动后拉一次（`useSyncExternalStore`），拉取前/失败/为空都等价于 `{}`。**未配置时所有 href 与基线字节级一致**（单测断言）。
 3. 参数两种形态，覆盖调研到的两类联盟：
    - `query`：追加到搜索 URL（阿里云/腾讯云类"个人推广码"），hash 路由的 URL 会插在 `#` 前；
    - `redirect`：联盟平台跳转链模板，`{url}` 占位替换为 `encodeURIComponent(搜索 URL)`（Namecheap/Spaceship/GoDaddy/Dynadot 的 Impact/CJ 类）。两者可叠加（先 query 再 redirect）。

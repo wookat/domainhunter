@@ -203,6 +203,8 @@ export function ResultsPage({
     function onKey(e: KeyboardEvent) {
       const target = e.target as HTMLElement;
       if (target.tagName === "TEXTAREA" || target.tagName === "INPUT" || e.metaKey || e.ctrlKey || e.altKey) return;
+      // 下拉菜单（注册商/导出等）打开时 ↑↓/Enter 归菜单自己的焦点管理，不再同时移动行选中
+      if (target.closest?.("[role=menu]")) return;
       // 焦点在按钮/链接上时 Space/Enter 交给原生激活（否则密度切换等控件无法用键盘操作，且 Space 会误触再来一轮）
       const onControl = Boolean(target.closest?.("button, a, [role=button]"));
       if (e.key === "ArrowDown" || e.key === "ArrowUp") {

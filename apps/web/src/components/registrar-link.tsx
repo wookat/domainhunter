@@ -1,27 +1,27 @@
-import type { AnchorHTMLAttributes, ReactNode } from "react";
+import { forwardRef, type AnchorHTMLAttributes, type ReactNode } from "react";
 
 import { trackOutbound, useAffiliateConfig } from "@/lib/affiliate";
 import { useI18n } from "@/lib/i18n";
 import { registrarLink, tldOf, type AffiliateConfig, type Registrar } from "@/lib/registrars";
 
+type Props = { registrar: Registrar; domain: string; children: ReactNode } & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "target" | "rel">;
+
 /**
  * 所有"去注册"外链的唯一出口：href/rel 由 registrarLink() 决定（有返佣 → sponsored），
  * target=_blank、双语 title、点击时发 outbound 计数（不阻塞跳转）。
+ * forwardRef：作为 Radix DropdownMenuItem asChild 的子元素时，菜单的方向键焦点管理依赖该 ref。
  */
-export function RegistrarAnchor({
-  registrar,
-  domain,
-  children,
-  title,
-  onClick,
-  ...rest
-}: { registrar: Registrar; domain: string; children: ReactNode } & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "target" | "rel">) {
+export const RegistrarAnchor = forwardRef<HTMLAnchorElement, Props>(function RegistrarAnchor(
+  { registrar, domain, children, title, onClick, ...rest },
+  ref,
+) {
   const { t } = useI18n();
   const cfg = useAffiliateConfig();
   const link = registrarLink(registrar, domain, cfg);
   return (
     <a
       {...rest}
+      ref={ref}
       href={link.href}
       target="_blank"
       rel={link.rel}
@@ -34,7 +34,7 @@ export function RegistrarAnchor({
       {children}
     </a>
   );
-}
+});
 
 /** 非 <a> 场景（键盘 Enter、批量注册）：先计数再新窗口打开 */
 export function openRegistrar(registrar: Registrar, domain: string, cfg: AffiliateConfig | undefined): void {

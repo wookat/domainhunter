@@ -1183,7 +1183,8 @@ app.get("/api/stats", async (c) => {
 // R480：注册商公开返佣配置（wrangler var REGISTRAR_AFFILIATE_JSON；非法/缺省 → {}，前端即纯搜索链接）
 app.get("/api/registrars", (c) => {
   const affiliate = parseAffiliateJson(c.env.REGISTRAR_AFFILIATE_JSON);
-  return c.json({ affiliate }, 200, { "cache-control": "public, max-age=3600" });
+  // 5 分钟浏览器缓存：改 wrangler var 重新部署后返佣开关最多滞后 5 分钟，同时避免每次导航都打 Worker
+  return c.json({ affiliate }, 200, { "cache-control": "public, max-age=300" });
 });
 
 const CLICK_TLD_RE = /^[a-z0-9-]{1,24}(\.[a-z0-9-]{1,24})?$/;
