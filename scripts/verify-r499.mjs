@@ -153,7 +153,9 @@ try {
 
   globalThis.fetch = async () => llmResponse([pick("harborly"), pick("anchor"), pick("calmroot"), pick("complainter")]);
   const guardEn = newGuardStats();
-  const outEn = await generateAiCandidates("desc", "test-key", { lang: "en", guard: guardEn });
+  // R498 集成后 en 主轮 word 不足会触发补发调用（mock fetch 会原样再返回同一批候选而重复计数）；
+  // 这里只验证 theme 归一，预算置 0 隔离补发路径（补发本身由 verify-r498 覆盖）
+  const outEn = await generateAiCandidates("desc", "test-key", { lang: "en", guard: guardEn, wordSupplementBudget: { remaining: 0 } });
   check("e2e en harborly → coined", outEn.find((c) => c.label === "harborly")?.theme, "coined");
   check("e2e en anchor 保持 word", outEn.find((c) => c.label === "anchor")?.theme, "word");
   check("e2e en calmroot 保持 blend", outEn.find((c) => c.label === "calmroot")?.theme, "blend");

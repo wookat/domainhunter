@@ -108,10 +108,13 @@ try {
   check("R1：guard.wordSupplementReason = low", g1.wordSupplementReason, "low");
   check("R1：supplementAttempts = 1（首次补发即有 word 并入）", g1.supplementAttempts, 1);
   check("R1：补发指令措辞为「仅 1 条」", /word（现成英文单词）路线仅 1 条/.test(prompts[1]), true);
-  check("R1：补发指令排除主轮全部 label", r1.every((c) => prompts[1].includes(c.label)), true);
+  // R497 集成后 complainter（commit + planner: 幻影词源）在主轮即被 phantomEtymology 拦截，不再进入存活集/排除名单
+  const r1Survivors = r1.filter((c) => c.label !== "complainter");
+  check("R1：complainter 被 R497 幻影词源防线拦截（phantomEtymology=1）", g1.dropped.phantomEtymology, 1);
+  check("R1：补发指令排除主轮全部存活 label", r1Survivors.every((c) => prompts[1].includes(c.label)), true);
   check("R1：重复的 anchor 未二次并入", out1.filter((c) => c.label === "anchor").length, 1);
   check("R1：最终 word ≥ 2", countThemes(out1).word >= 2, true);
-  check("R1：主轮 7 条原样保留 + 补发 2 条", out1.length, 9);
+  check("R1：主轮 6 条存活原样保留 + 补发 2 条", out1.length, 8);
   check("R1 后预算剩余 1", budget.remaining, 1);
 
   const g2 = newGuardStats();
