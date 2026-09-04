@@ -25,7 +25,7 @@ import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
 import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
 import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
 import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
-import { PageviewCounter, pvKey, type DayPageviews } from "./pageviews";
+import { PageviewCounter, readDayPageviews, type DayPageviews } from "./pageviews";
 import { INDEXNOW_ENDPOINT, submitIndexNow, summarizeIndexNow } from "./indexnow";
 
 // LLM_API_BASE/LLM_MODEL：LLM 上游基地址与模型名。默认 DeepSeek 官方 + deepseek-chat；
@@ -1241,10 +1241,10 @@ app.get("/api/usage", async (c) => {
     const dates = Array.from({ length: days }, (_, i) => new Date(Date.now() - i * 86400_000).toISOString().slice(0, 10));
     await Promise.all(
       dates.map(async (d) => {
-        // usage:*（搜索漏斗）与 pv:*（HTML 文档计数，R481）分键存储、此处合并输出
+        // usage:*（搜索漏斗）与 pv:*（HTML 文档计数，R481；按 isolate 分片、读时求和，R482）分键存储、此处合并输出
         const [u, pv] = await Promise.all([
           kv.get<DayUsage>(`usage:${d}`, "json").catch(() => null),
-          kv.get<DayPageviews>(pvKey(d), "json").catch(() => null),
+          readDayPageviews(kv, d),
         ]);
         if (u || pv) out[d] = { ...(u ?? { searches: 0, byTld: {}, fast: 0, refine: 0 }), ...(pv ?? {}) };
       }),

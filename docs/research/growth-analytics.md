@@ -108,7 +108,7 @@ Sitemap: https://hunt.zalize.com/sitemap.xml
 |---|---|---|
 | B1 验证 meta 可配置、仅 HTML | `growth-inject.ts` + `worker.ts` 全局后置中间件：`content-type: text/html` 的 GET 响应才处理；vars 空 → 不读 body 原样透传 | `growth-inject.test.ts`；本地字节级对比（§6） |
 | B2 分析脚本可配置 | `ANALYTICS_PROVIDER=cloudflare` + 32 位 hex token → 官方 `<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":…}'>`；SPA 路由自动追踪（§2 官方文档）；无 CSP 无需改；页脚双语隐私一句话 `footer.analyticsNotice` 仅在 DOM 存在 beacon 时渲染 | 单测 + 本地 dev |
-| B3 服务端漏斗计数 | `pageviews.ts`：`classifyPath` → home/results(`/results`,`/s/:id`)/tld/guide/vs/prices/other；`detectBot` → google/bing/baidu/ai/other，命中只计 `bots`；isolate 内 5s 合并一次 KV 写 `pv:{date}`（45 天）；不存 IP/UA；`/api/usage` 合并输出 | `pageviews.test.ts` 11 例；本地 dev 实测 §6 |
+| B3 服务端漏斗计数 | `pageviews.ts`：`classifyPath` → home/results(`/results`,`/s/:id`)/tld/guide/vs/prices/other；`detectBot` → google/bing/baidu/ai/other，命中只计 `bots`；isolate 内 5s 合并一次 KV 写；R482 起写各 isolate 自己的分片键 `pv:{date}:<shard>`（45 天，单写者无竞争），`/api/usage` 读时 list 前缀求和；不存 IP/UA；`/api/usage` 合并输出 | `pageviews.test.ts` 11 例；本地 dev 实测 §6 |
 | B4 IndexNow | §4 | `indexnow.test.ts` |
 
 计数口径说明：① 只统计到达 Worker 的请求——HTML 带 `Cache-Control: public, max-age=600`，10 分钟内重复访问由浏览器缓存应答，不计（测试代理实测：普通回车导航不计、硬刷新计）；② KV 多 PoP 读改写非原子；③ 页脚（含隐私一句话）只在 home/results 模式渲染，`/tld`、`/vs`、`/prices`、`/why` 本就没有页脚。因此 `pv:*` 是**趋势/下界**指标，精确 UV/PV 以 Cloudflare Web Analytics 为准。
