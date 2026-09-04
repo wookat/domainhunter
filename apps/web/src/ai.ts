@@ -391,13 +391,32 @@ export type AiErrorKind = "quota" | "rate-limit" | "upstream" | "network" | "unk
 
 const LLM_HTTP_RE = /llm-http-(\d{3})/;
 
+// 上游非 2xx 时记录状态码 / Retry-After / 响应体前 300 字（不含请求头与密钥），便于在 wrangler tail 中区分账号级限流、网关错误与瞬时 429
+export async function logLlmHttpError(stage: string, res: Response): Promise<string> {
+  let body = "";
+  try {
+    body = (await res.text()).slice(0, 300).replace(/\s+/g, " ");
+  } catch {
+    body = "<unreadable>";
+  }
+  console.warn(`llm-upstream ${stage} status=${res.status} retry-after=${res.headers.get("retry-after") ?? "-"} body=${body}`);
+  return body;
+}
+
+// 部分 OpenAI 兼容网关用 429 承载账号/密钥额度耗尽（如 code=apikey_quota_exhausted），与瞬时限流语义不同，需让 UI 提示“配额已满”而非“稍等重试”
+const QUOTA_BODY_RE = /quota|insufficient_quota|billing|balance|限额|余额/i;
+
+export function llmHttpErrorMessage(status: number, body: string): string {
+  return status === 429 && QUOTA_BODY_RE.test(body) ? `llm-http-${status} quota-exhausted` : `llm-http-${status}`;
+}
+
 export function classifyAiError(e: unknown): AiErrorKind {
   const msg = e instanceof Error ? e.message : String(e);
   const m = LLM_HTTP_RE.exec(msg);
   if (m) {
     const status = Number(m[1]);
     if (status === 401 || status === 402 || status === 403) return "quota";
-    if (status === 429) return "rate-limit";
+    if (status === 429) return msg.includes("quota-exhausted") ? "quota" : "rate-limit";
     return "upstream";
   }
   if (msg.includes("llm-bad-json") || msg.includes("llm-bad-output")) return "upstream";
@@ -473,7 +492,10 @@ export async function generateUnderstanding(description: string, apiKey: string,
         ...thinkingBodyExtra(thinking),
       }),
     });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      await logLlmHttpError("understanding", res);
+      return null;
+    }
     const data = (await res.json()) as { choices: { message: { content: string } }[] };
     const match = (data.choices[0]?.message?.content ?? "").match(/\{[\s\S]*\}/);
     if (!match) return null;
@@ -1614,7 +1636,10 @@ async function generateOnce(
       ...thinkingBodyExtra(opts.thinking),
     }),
   });
-  if (!res.ok) throw new Error(`llm-http-${res.status}`);
+  if (!res.ok) {
+    const body = await logLlmHttpError("candidates", res);
+    throw new Error(llmHttpErrorMessage(res.status, body));
+  }
   // R238：防线统计——各丢弃路径按防线归类计数（只计数，不记录被丢弃候选内容）；
   // R243：补发轮丢弃计入 supplementDropped，与主轮分开可观测
   const guardStats = opts.guard ?? newGuardStats();

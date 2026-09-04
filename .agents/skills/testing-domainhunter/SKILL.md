@@ -36,3 +36,8 @@ description: How to run zero-AI production audits of DomainHunter (hunt.zalize.c
 - CDP `Emulation.setDeviceMetricsOverride` from a Playwright `new_cdp_session` persists after the session detaches; to return to desktop send `Emulation.clearDeviceMetricsOverride` from a NEW session and reload. Emulated 375 viewport in the visible Chrome shows a classic 15px scrollbar (clientWidth 360) — inject `::-webkit-scrollbar{display:none}` before measuring `scrollWidth` if you need true 375 numbers.
 - 375px overflow triage: `main` is a column-flex item with `mx-auto`, so any child's min-content (e.g. the non-wrapping TLD chip strip) widens it unless `main` has `w-full` (fixed in R468). To find the culprit, force `main.style.width='300px'` and list descendants whose right edge exceeds it.
 - Local `wrangler dev` CAN fetch live Porkbun quotes, so TLD detail pages show live prices rather than static reference prices; to verify `TLD_PRICES`, grep the SSR HTML for「静态参考价：首年 ¥X · 续费 ¥Y/年」.
+- R463 起结果页 Space 是两步确认：焦点离开输入框首按只出提示「再按一次空格确认再来一轮」（3s 超时还原），3s 内第二次 Space 才发起下一轮并消耗 AI。测试误触风险已缓解；验证 Space 行为时注意在 3 秒窗口内截图。
+- 结果页 theme chips 只统计「可注册」行（results-page.tsx 只遍历 availableRows）：验证 word/pinyin 配额补发时，若该路线候选全被注册则 chip 不显示，勿据此误判补发失败/未触发。
+- 导航到 hunt 首页前先对该标签页执行 `sessionStorage.clear()`：`dh:lastSearch:v1` 会把上次结果页恢复出来，按首页坐标的盲点击可能命中「再来一轮」并真实消耗 AI 配额（实测踩坑）。
+- R465 起恢复态（从 `dh:lastSearch:v1` 还原的结果页）「再来一轮」按钮也是两步确认：首点只变「再点一次确认」（3s 超时还原），3s 内二次点击才发起；本会话真实发起过一轮后护栏解除，单击直接发起。
+- 构造合成 `dh:lastSearch:v1` 恢复态时，`values.style/lengthPref` 必须用空字符串（UI 默认）：worker 会把任何非空值拼成中文后缀「命名风格偏好：…」进 description，可能改变 `descriptionLooksEnglish()` 语言判定路径（实测踩坑：填 "auto" 导致英文描述照出拼音）。

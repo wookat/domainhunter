@@ -102,6 +102,25 @@ try {
   g.fetch = realFetch;
 }
 
+// ---- 6b. 网关用 429 承载密钥额度耗尽（如 apikey_quota_exhausted）→ quota，且 detail 不泄漏响应体 ----
+g.fetch = async () =>
+  new Response(JSON.stringify({ error: { message: "ApiKey已触发限额", type: "quota_error", code: "apikey_quota_exhausted" } }), { status: 429 });
+try {
+  let kind = null;
+  let detail = "";
+  try {
+    await generateAiCandidates("测试需求", "invalid-key", { guard: newGuardStats() });
+  } catch (e) {
+    kind = classifyAiError(e);
+    detail = String(e);
+  }
+  check("端到端 429+quota 体：分类为 quota", kind, "quota");
+  check("端到端 429+quota 体：detail 不含上游响应体", detail.includes("apikey_quota_exhausted"), false);
+  check("端到端 429+quota 体：detail 不含 key", detail.includes("invalid-key"), false);
+} finally {
+  g.fetch = realFetch;
+}
+
 // ---- 7. 端到端：正常成功路径不受影响 ----
 g.fetch = async () =>
   new Response(
