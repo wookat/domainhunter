@@ -145,14 +145,14 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 - **内容页延迟挂载（R174）**与跳过大数据 chunk preload 是 LCP 关键，改路由/懒加载时别回退。
 - `/guide` hub 标题「N 个行业」现含 6 篇非行业合规指南（R483 已知取舍）；`/tld/com.cn` 无独立路由，只互链 `/tld/cn` 与 `/vs/com-vs-cn`。
 - 微信真机渲染/JS-SDK 行为未验证（R486 只做了 UA 模拟）。
-- verify 脚本基线：`scripts/verify-r196/r222–r225/r238/r243–r246/r250/r264/r463/r465/r466/r473/r474.mjs` 全绿；`verify-pinyin.mjs`、`verify-meaning-paren.mjs` 历史遗留失效（用例已被 bundle 式脚本覆盖）。
+- verify 脚本基线：`scripts/verify-r196/r222–r225/r238/r243–r246/r250/r264/r463/r465/r466/r473/r474/r497.mjs` 全绿（`verify-r497` 离线回放 R494 6 份 NDJSON 走完整准入链）；`verify-pinyin.mjs`、`verify-meaning-paren.mjs` 历史遗留失效（用例已被 bundle 式脚本覆盖）。
 
 ## 10. 进行中 / 待办任务（按优先级）
 
 1. **R487 usage 分片计数**：已部署（version 62107af5）并生产直证：12 并发 `/api/click` → outbound.aliyun 4→16 / cn 3→15 精确 +12；`searches`/`llmProvider` 嵌套 map 经分片合并正确（+1/+3）。已关闭。
 1b. **R488 IndexNow 增量推送**：R488 代码 2026-09-04T20:48Z 才上线，18:00Z 那次 429 仍是旧代码全量推送；`indexnow:lastAttempt` 6h 冷却后首次以新代码推送在 09-05 00:00Z cron（`pushed` 快照为空 → 首轮仍是全量 1270 条，之后才是增量）。看 `/api/usage` 的 `indexnowLastError` 是否清除、`indexnowLast` 是否前进；未验证前不得称 429 已解决。R488 三个 P1 已由 R491/R492 实现并生产验证（见 §11）。
 1c. **R489 中文规则降级**：生产未触达（AI 恰好恢复）；**R493 已用本地 wrangler + `.dev.vars` 无效 key 端到端实测 13 组中文输入**（`docs/audits/zh-fallback-e2e-r493.md`），并修了「云」「ai客服」0 候选、多音字 fail-closed 误伤（大海/告别/客服）、新能源/充电桩碎片化；`scripts/verify-r489.mjs` ALL PASS。生产降级路径仍无真实触达样本。
-2. **R494 AI 质量审计 v5**（`docs/audits/ai-quality-audit-r494.md`，恰 6 次 AI）：6/6 主上游、首可注册 4.1–6.5s、RDAP/WHOIS 复核 11/11 一致；遗留 **P1 中文 coined 候选寓意解释词语沙拉（点踩 refine 出 moggity/voralini/hapany）**、P2 拼音校验绕过（zhongao↔忠）、P2 EN 幻影词源 complainter 穿透、P2 EN word 补发门槛 ≥8 导致少量 word 时静默不补发。**下一批优先修，先离线回放论证再动代码。**
+2. **R494 AI 质量审计 v5**（`docs/audits/ai-quality-audit-r494.md`，恰 6 次 AI）：6/6 主上游、首可注册 4.1–6.5s、RDAP/WHOIS 复核 11/11 一致；遗留 **P1 中文 coined 候选寓意解释词语沙拉（点踩 refine 出 moggity/voralini/hapany）**、P2 EN word 补发门槛 ≥8 导致少量 word 时静默不补发。**下一批优先修，先离线回放论证再动代码。** P2 拼音校验绕过（zhongao↔忠，真因是单字引用整体跳检）、P2 EN 幻影词源 complainter、zh blend waofun 2 字母幻影 ASCII 已由 **R497** 离线修复（`docs/research/pinyin-quote-coverage.md`，`scripts/verify-r497.mjs`），待父会话 ≤1 次生产 AI 复验。
 3. **AI 长期可靠性**：R494 一次 6 次窗口全走 primary，不等于长期稳定；继续看 `aiErrors.quota` 是否再现。
 4. **发帖**（Show HN 等，`docs/launch/launch-checklist.md`）：老板决策，前提 §8 P0 解决。
 5. 观察项：IndexNow 429 是否持续；Baiduspider 来访是否持续（`botsBy.baidu`）；`stale:true` 频率。

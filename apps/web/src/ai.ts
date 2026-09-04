@@ -953,17 +953,34 @@ export function containsMetaLanguage(meaning: string): boolean {
 //   另一词若也不整词出现，则要求它与剩余片段互为前缀（verb↔ver 合法）；
 //   否则拼写对不上（plan↔play）→ 丢弃
 const ZH_ETYMOLOGY_PAIR_RE = /([a-z]{3,})\s*(?:与|和|加|\+)\s*([a-z]{3,})\s*的?\s*(?:结合|组合|混合|拼接|合成)/gi;
-const EN_LEADING_PAIR_RE = /^\s*([a-z]{3,})\s*\+\s*([a-z]{3,})\b/i;
+const EN_LEADING_PAIR_RE = /^\s*([a-z]{3,})\s*[+×]\s*([a-z]{3,})\b/i;
+// R497（R494 P2-2）：句中的构词声明「X + Y:」/「X × Y：」（冒号收尾才算声明，避免误判普通句子里的 "a + b"）
+const EN_PAIR_COLON_RE = /\b([a-z]{3,})\s*[+×]\s*([a-z]{3,})\s*[:：]/gi;
 
 function fragmentAbsent(label: string, word: string): boolean {
   return !label.includes(word) && !label.includes(word.slice(0, 3)) && !label.includes(word.slice(-3));
+}
+
+// R497（R494 P2-2）：两词都只有片段命中时的合法截断规则——label 必须能切成「头词的前缀（≥3 字母）+
+// 尾词的前缀或后缀（≥2 字母）」，允许两片段共享字母（seren+quil → serenquil；plan+ner 型词干截断）；
+// 两种词序都试。commit + planner 对 complainter：头片段只能是 com，剩余 plainter 不是 planner 的前缀/后缀 → 拼不上。
+function partialPairSegmentable(label: string, head: string, tail: string): boolean {
+  let common = 0;
+  while (common < head.length && common < label.length && head[common] === label[common]) common++;
+  for (let k = 3; k <= common; k++) {
+    const rest = label.slice(k);
+    if (rest.length < 2) break;
+    if (tail.startsWith(rest) || tail.endsWith(rest)) return true;
+  }
+  return false;
 }
 
 function pairMismatch(label: string, x: string, y: string): boolean {
   if (fragmentAbsent(label, x) || fragmentAbsent(label, y)) return true;
   const xIn = label.includes(x);
   const yIn = label.includes(y);
-  if (xIn === yIn) return false; // 两词都整词命中（合法）或都只有片段命中（不做二级判断，保守放行）
+  if (xIn && yIn) return false; // 两词都整词命中（合法）
+  if (!xIn && !yIn) return !partialPairSegmentable(label, x, y) && !partialPairSegmentable(label, y, x);
   const exact = xIn ? x : y;
   const other = (xIn ? y : x).toLowerCase();
   const rest = label.replace(exact, "");
@@ -987,6 +1004,10 @@ export function citesPhantomWord(label: string, meaning: string): boolean {
   }
   const lead = EN_LEADING_PAIR_RE.exec(meaning);
   if (lead && pairMismatch(label, lead[1].toLowerCase(), lead[2].toLowerCase())) return true;
+  EN_PAIR_COLON_RE.lastIndex = 0;
+  while ((m = EN_PAIR_COLON_RE.exec(meaning)) !== null) {
+    if (pairMismatch(label, m[1].toLowerCase(), m[2].toLowerCase())) return true;
+  }
   ZH_SOURCE_CITE_RE.lastIndex = 0;
   while ((m = ZH_SOURCE_CITE_RE.exec(meaning)) !== null) {
     const x = m[1].toLowerCase();
@@ -1017,6 +1038,13 @@ const ZH_ASCII_ALLOWED_WORDS = new Set([
   "web", "data", "saas", "api", "seo", "logo", "brand", "startup", "studio", "lab", "labs", "hub", "home", "smart", "max", "mini", "plus", "digital", "mobile", "global", "media", "design", "style", "code", "box", "base", "core", "flow", "pay", "game", "play", "book", "note", "blog", "mail", "chat", "news", "mall", "star", "sun", "sky", "sea", "eco", "bio", "tea", "cafe", "farm", "city", "land", "space",
 ]);
 const ZH_ASCII_WORD_RE = /[a-z]{3,}/gi;
+// R497（R494 zh blend waofun「wo 为犬吠声」）：2 字母引用也判，但只取独立 token（不紧邻任何拉丁字母/变音字母/数字，
+// 避免把 xīng 的 ng、3d 的 d 算作引用），且排除常见英文虚词/缩略词（ai/vr/ui/of/or…）——这些在 zh meaning 里是点题而非引用
+const ZH_ASCII_SHORT_RE = /(?<![a-z0-9\u00c0-\u024f])[a-z]{2}(?![a-z0-9\u00c0-\u024f])/gi;
+const ZH_ASCII_SHORT_ALLOWED = new Set([
+  "ai", "ar", "vr", "xr", "ui", "ux", "pc", "tv", "hr", "it", "io", "ip", "id", "os", "pr", "qa", "ad", "db", "ml", "nb", "ok", "vs", "diy",
+  "of", "or", "in", "to", "is", "an", "at", "by", "on", "up", "us", "we", "no", "go", "do", "be", "me", "my", "so", "if", "as", "he", "hi", "am", "re", "de", "la", "le", "el", "du", "da", "di", "co",
+]);
 // 先剥离已有句式门校验过的来源词：「X 取自/源自/来自 Y1 (Y2)」的 Y 侧、「X 与/和/加/+ Y 结合…」整段
 const ZH_CITE_SOURCE_STRIP_RE = /(?:取自|源自|来自)\s*(?:拉丁语?|希腊语?|英语|英文|法语|法文|西班牙语|德语|意大利语|日语|梵语)?\s*["「『']?\s*[a-z]{3,}(?:\s+[a-z]{3,})?/gi;
 // 中文语言名引导的外语词（"法语 croustillant 的酥脆"）同样是被点名的来源词，剥离后不判
@@ -1041,6 +1069,14 @@ export function zhCitesPhantomAscii(label: string, meaning: string): boolean {
     if (label.includes(w) || w.includes(label)) continue;
     if (ZH_ASCII_ALLOWED_WORDS.has(w)) continue;
     // 只判嵌在中文语境里的词（任一侧紧邻 CJK）；纯英文句子中的词不判
+    const before = nearestNonSpace(stripped, m.index - 1, -1);
+    const after = nearestNonSpace(stripped, m.index + m[0].length, 1);
+    if (CJK_CONTEXT_RE.test(before) || CJK_CONTEXT_RE.test(after)) return true;
+  }
+  ZH_ASCII_SHORT_RE.lastIndex = 0;
+  while ((m = ZH_ASCII_SHORT_RE.exec(stripped)) !== null) {
+    const w = m[0].toLowerCase();
+    if (label.includes(w) || ZH_ASCII_SHORT_ALLOWED.has(w)) continue;
     const before = nearestNonSpace(stripped, m.index - 1, -1);
     const after = nearestNonSpace(stripped, m.index + m[0].length, 1);
     if (CJK_CONTEXT_RE.test(before) || CJK_CONTEXT_RE.test(after)) return true;
@@ -1315,7 +1351,10 @@ function readingVariants(p: string): string[] {
 }
 
 const FULL_PINYIN_CLAIM_RE = /全拼/;
-const QUOTED_CJK_RE = /「([\u3400-\u4dbf\u4e00-\u9fff]{2,4})」/g;
+const QUOTED_CJK_RE = /「([\u3400-\u4dbf\u4e00-\u9fff]{2,6})」/g;
+const QUOTED_SINGLE_CJK_RE = /「([\u3400-\u4dbf\u4e00-\u9fff])」/g;
+// meaning 中的独立 ASCII 片段（不紧邻带变音符号的拉丁字母，避免把 xīng 拆成 x/ng）
+const ASCII_TOKEN_RE = /(?<![a-z\u00c0-\u024f])[a-z]{2,}(?![a-z\u00c0-\u024f])/gi;
 
 // 单字在 label 中允许的贡献形态：全拼各读音（含 ü 写法变体）；宽松模式下再加
 // 首字母与首声母（zh/ch/sh 双字母声母），覆盖「取字首」类合法造型（云慕 → y+m）
@@ -1355,10 +1394,40 @@ function quotedWordMatchesLabel(word: string, label: string, allowInitials = fal
   return joins.includes(label);
 }
 
+// R497（R494 P2-1）：单字引用的覆盖校验——引用字的读音（宽松模式下含首字母/首声母）与 meaning 中点名的
+// ASCII 片段（label 真子串，如 yunhub 的 hub）共同作为音节来源，能完整切分 label 即放行；
+// 剩余音节无任何来源解释（zhongao「忠」的 ao）才判不符。表外字不提供来源（与多字引用的保守拒绝一致）。
+function singleQuotesCoverLabel(chars: string[], label: string, meaning: string, allowInitials: boolean): boolean {
+  const table = pinyinTable();
+  const pieces = new Set<string>();
+  for (const ch of chars) {
+    const readings = table.get(ch);
+    if (readings) for (const v of charContributions(readings, allowInitials)) pieces.add(v);
+  }
+  ASCII_TOKEN_RE.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = ASCII_TOKEN_RE.exec(meaning)) !== null) {
+    const w = m[0].toLowerCase();
+    if (w.length < label.length && label.includes(w)) pieces.add(w);
+  }
+  if (pieces.size === 0) return false;
+  // 从左到右切分：可达位置集合（片段可重用，叠字候选如「咕」→ gugu 也能切）
+  const reach = new Array<boolean>(label.length + 1).fill(false);
+  reach[0] = true;
+  for (let i = 0; i < label.length; i++) {
+    if (!reach[i]) continue;
+    for (const p of pieces) if (label.startsWith(p, i)) reach[i + p.length] = true;
+  }
+  return reach[label.length];
+}
+
 // theme 为 pinyin 且 meaning 含「」中文引用词：引用词与 label 做拼音一致性校验 → 全部不符则 true（丢弃）。
 // R244（R239 审计 P2-1）：「全拼」声明从必要条件改为加严条件——声称全拼时 label 必须等于
 // 逐字全拼拼接（严格）；未声称时放宽为「全拼或首字母/首声母的逐字组合」能完整拼出 label
-// 即放行（弱声称），仍对不上（shuqi「漱石」/pinen「品芩」/duanyou「韫岩」型）才拒绝
+// 即放行（弱声称），仍对不上（shuqi「漱石」/pinen「品芩」/duanyou「韫岩」型）才拒绝。
+// R497（R494 P2-1）：meaning 仅有单字引用（「忠」）时此前整体跳检（zhongao 上线的真实绕过路径，
+// 非「未声称全拼」分支）——现对单字引用做覆盖切分：引用字读音 + meaning 点名的 label 片段能完整切分
+// label 才放行（「云」与 hub → yunhub 合法；「忠」→ zhongao 的 ao 无来源 → 拒绝）。
 export function pinyinQuoteMismatch(label: string, meaning: string): boolean {
   const strict = FULL_PINYIN_CLAIM_RE.test(meaning);
   QUOTED_CJK_RE.lastIndex = 0;
@@ -1368,7 +1437,12 @@ export function pinyinQuoteMismatch(label: string, meaning: string): boolean {
     if (quotedWordMatchesLabel(m[1], label, !strict)) return false;
     judged++;
   }
-  return judged > 0;
+  if (judged > 0) return true;
+  QUOTED_SINGLE_CJK_RE.lastIndex = 0;
+  const singles: string[] = [];
+  while ((m = QUOTED_SINGLE_CJK_RE.exec(meaning)) !== null) singles.push(m[1]);
+  if (singles.length === 0) return false;
+  return !singleQuotesCoverLabel(singles, label, meaning, !strict);
 }
 
 /** R466：主轮流式模式下每个通过防线的候选立即回调（点踩后缀回填项除外，见 generateOnce 尾部） */
