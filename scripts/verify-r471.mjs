@@ -49,7 +49,7 @@ await build({
 const rule = await import(tmpRule);
 const workerMod = await import(tmpWorker);
 const worker = workerMod.default;
-const { LLM_BREAKER_KEY, LLM_BREAKER_TTL_S } = workerMod;
+const { LLM_BREAKER_KEY, LLM_BREAKER_TTL_S } = rule;
 rmSync(tmpRule);
 rmSync(tmpWorker);
 
@@ -70,7 +70,8 @@ const LABEL_RE = /^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/;
 
 // ---------- A. 规则生成纯函数 ----------
 {
-  check("A0 worker 导出熔断常量", [LLM_BREAKER_KEY, LLM_BREAKER_TTL_S], ["dh:llm-breaker:v1", 300]);
+  check("A0 熔断常量（key / TTL 5 分钟）", [LLM_BREAKER_KEY, LLM_BREAKER_TTL_S], ["dh:llm-breaker:v1", 300]);
+  check("A0c worker 入口只导出 default handler（workerd 约束）", Object.keys(workerMod), ["default"]);
   check("A0b 'rule' 不在 LLM 可声明的 theme 白名单内", rule.AI_THEMES.has("rule"), false);
 
   // zh：2 字词拼音（云端/记账 唯一读音）；「中小商家」为泛词被停用；多音字（长/行/重）放弃

@@ -16,7 +16,7 @@ import { HUB_META } from "./content/hubs";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
-import { generateRuleCandidates } from "./rule-fallback";
+import { generateRuleCandidates, LLM_BREAKER_KEY, LLM_BREAKER_TTL_S, type FallbackReason } from "./rule-fallback";
 import { tldPrice } from "./types";
 import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
 import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
@@ -55,13 +55,8 @@ const FAST_FIRST_ROUND_COUNT = 8; // fast 模式首轮候选数（更快首字�
 // R466：AI 搜索候选级核验队列并行度（每个候选 = tlds.length 个域名，每批内部再按 checkDomains 并发）；
 // 与改动前整轮一次 checkDomains(concurrency=6) 的上游压力量级相当
 const AI_CHECK_PARALLEL_CANDIDATES = 3;
-// R471：LLM 额度耗尽熔断——quota 类错误后 5 分钟内所有 /api/ai-search 直接走规则降级，不再打上游
-// （事故形态：网关 key 额度耗尽时每个用户各撞一次上游；rate-limit 是瞬时的，不熔断）
-export const LLM_BREAKER_KEY = "dh:llm-breaker:v1";
-export const LLM_BREAKER_TTL_S = 300;
-/** 触发规则降级的首轮错误类别；unknown 不降级（语义不明，保留原 error 事件） */
+/** R471：触发规则降级的首轮错误类别；unknown 不降级（语义不明，保留原 error 事件） */
 const FALLBACK_ERROR_KINDS: ReadonlySet<AiErrorKind> = new Set<AiErrorKind>(["quota", "rate-limit", "upstream", "network"]);
-export type FallbackReason = AiErrorKind | "quota-breaker";
 const DOMAIN_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62}))+$/;
 
 /** 累计核验计数（KV 非原子，允许少量误差） */

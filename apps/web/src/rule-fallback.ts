@@ -2,8 +2,16 @@
 // 生产事故（R469 P0-A）：网关 API key 额度耗尽 → 每次搜索 0 候选、主路径整站不可用。
 // 本模块只做确定性关键词抽取 + 变体组合，meaning 如实标注「规则生成」，theme 固定 "rule"，
 // 每个候选仍经 admitRuleCandidate 过与 LLM 候选相同的防线，再由 worker 走既有 RDAP 核验流水。
-import { admitRuleCandidate, checkPinyinLabel, pinyinReadingsOf, type AiCandidate, type GuardStats } from "./ai";
+import { admitRuleCandidate, checkPinyinLabel, pinyinReadingsOf, type AiCandidate, type AiErrorKind, type GuardStats } from "./ai";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
+
+// LLM 额度耗尽熔断——quota 类错误后 5 分钟内所有 /api/ai-search 直接走规则降级，不再打上游
+// （事故形态：网关 key 额度耗尽时每个用户各撞一次上游；rate-limit 是瞬时的，不熔断）。
+// 常量放这里而非 worker.ts：workerd 只允许 worker 入口导出 handler。
+export const LLM_BREAKER_KEY = "dh:llm-breaker:v1";
+export const LLM_BREAKER_TTL_S = 300;
+/** 降级原因：首轮 LLM 错误类别，或熔断期内直接降级（quota-breaker，未打上游） */
+export type FallbackReason = AiErrorKind | "quota-breaker";
 
 /** 每次降级最多产出的 label 数（每个 label × tlds 个域名）；对齐 suggest_variants 默认 24 / 上限 48 与 AI 正常轮 24 */
 export const RULE_FALLBACK_MAX_LABELS = 24;
