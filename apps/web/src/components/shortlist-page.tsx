@@ -6,11 +6,13 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Switch } from "@/components/ui/switch";
 import { fetchMonitorChanges, loadWebhook, useMonitor, type MonitorChange } from "@/lib/monitor";
 import { CopyButton, ExpiryNote, RegisterMenu } from "@/components/domain-row";
+import { openRegistrar } from "@/components/registrar-link";
+import { useAffiliateConfig } from "@/lib/affiliate";
 import { ScoreBars } from "@/components/score-bars";
 import { downloadText } from "@/lib/export";
 import { useI18n, type TFunc } from "@/lib/i18n";
 import { priceFull, priceShort, toUsd, usePrices, type PriceMap } from "@/lib/prices";
-import { REGISTRARS } from "@/lib/registrars";
+import { primaryRegistrar } from "@/lib/registrars";
 import { exportResultsCsv } from "@/lib/results-export";
 import { addMyShare, loadMyShares, removeMyShare, type MyShare } from "@/lib/my-shares";
 import { NOTE_MAX_LENGTH, type RecheckResult, type ShortlistItem } from "@/lib/shortlist";
@@ -96,6 +98,7 @@ export function ShortlistPage({
 }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
+  const affiliateCfg = useAffiliateConfig();
   const [sort, setSort] = useState<SortKey>("added");
   const [desc, setDesc] = useState(false);
   const [noteEditing, setNoteEditing] = useState<string | null>(null);
@@ -292,8 +295,9 @@ export function ShortlistPage({
   const myDomains = new Set(items.map((i) => i.domain));
   const relevantChanges = (monitorChanges ?? []).filter((c) => myDomains.has(c.domain));
 
+  // 批量注册：每个域名用自己的首选注册商（.cn → 阿里云，其余 → Porkbun），与注册菜单首项一致
   const batchRegister = () => {
-    for (const it of items.slice(0, 8)) window.open(REGISTRARS[3].url(it.domain), "_blank");
+    for (const it of items.slice(0, 8)) openRegistrar(primaryRegistrar(it.domain), it.domain, affiliateCfg);
   };
 
   async function share() {

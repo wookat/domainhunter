@@ -17,6 +17,7 @@ import { HUB_META } from "./content/hubs";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
+import { isRegistrarId, parseAffiliateJson, type RegistrarId } from "./lib/registrars";
 import { generateRuleCandidates, LLM_BREAKER_KEY, LLM_BREAKER_TTL_S, type FallbackReason } from "./rule-fallback";
 import { tldPrice } from "./types";
 import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
@@ -27,6 +28,8 @@ import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from 
 // 生产可指向 OpenAI 兼容网关（R460：电信 AI 网关），本地 wrangler dev 亦可指向假上游验证错误路径（R264）
 // LLM_FALLBACK_*（R474）：备用上游（任一 OpenAI 兼容端点），主上游额度耗尽/认证失败/5xx/网络失败时自动重发；
 // LLM_FALLBACK_API_KEY 为 secret（wrangler secret put），未配置则 failover 休眠，行为与仅有主上游时完全一致
+// REGISTRAR_AFFILIATE_JSON（R480）：公开的注册商返佣参数（wrangler.jsonc vars，非 secret），经 GET /api/registrars 下发前端；
+// 形如 {"aliyun":{"query":{"userCode":"…"}},"namecheap":{"redirect":"https://namecheap.pxf.io/c/…?u={url}"}}，默认 "{}" = 纯搜索链接
 type Bindings = {
   ASSETS: Fetcher;
   DEEPSEEK_API_KEY: string;
@@ -38,6 +41,7 @@ type Bindings = {
   LLM_FALLBACK_API_BASE?: string;
   LLM_FALLBACK_MODEL?: string;
   LLM_FALLBACK_THINKING?: string;
+  REGISTRAR_AFFILIATE_JSON?: string;
 };
 
 const app = new Hono<{ Bindings: Bindings }>();
@@ -98,6 +102,10 @@ interface DayUsage {
   shareWriteFail?: number;
   /** 当日 AI 主轮实际应答的 LLM 上游计数（R474：主/备；仅数字；旧数据无此字段） */
   llmProvider?: Partial<Record<LlmProvider, number>>;
+  /** 当日注册商外链点击数，按注册商 id 聚合（R480；不含域名/IP；旧数据无此字段） */
+  outbound?: Partial<Record<RegistrarId, number>>;
+  /** 当日注册商外链点击数，按 TLD 聚合（仅 TLD_LIST 内的后缀，其余记 other） */
+  outboundByTld?: Record<string, number>;
 }
 
 async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: boolean, refine: boolean): Promise<void> {
@@ -109,6 +117,20 @@ async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: bool
     if (fast) cur.fast += 1;
     if (refine) cur.refine += 1;
     for (const t of tlds) cur.byTld[t] = (cur.byTld[t] ?? 0) + 1;
+    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
+  } catch { /* 统计失败不影响主流程 */ }
+}
+
+/** 当日注册商外链点击 +1（R480，仅计数；KV 非原子，允许少量误差） */
+async function bumpOutbound(kv: KVNamespace | undefined, registrar: RegistrarId, tld: string): Promise<void> {
+  if (!kv) return;
+  try {
+    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
+    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
+    cur.outbound = { ...cur.outbound, [registrar]: (cur.outbound?.[registrar] ?? 0) + 1 };
+    // 只按已知 TLD 分桶（含站内核验支持的 com.cn），其余归 other，避免 KV 记录被任意字符串撑大
+    const tldKey = tld === "com.cn" || (TLD_LIST as readonly string[]).includes(tld) ? tld : "other";
+    cur.outboundByTld = { ...cur.outboundByTld, [tldKey]: (cur.outboundByTld?.[tldKey] ?? 0) + 1 };
     await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
   } catch { /* 统计失败不影响主流程 */ }
 }
@@ -1156,6 +1178,30 @@ app.get("/api/stats", async (c) => {
     totalChecked = Number((await c.env.CACHE?.get(STATS_KEY)) ?? "0");
   } catch { /* KV 不可用时返回 0 */ }
   return c.json({ totalChecked }, 200, { "cache-control": "public, max-age=60" });
+});
+
+// R480：注册商公开返佣配置（wrangler var REGISTRAR_AFFILIATE_JSON；非法/缺省 → {}，前端即纯搜索链接）
+app.get("/api/registrars", (c) => {
+  const affiliate = parseAffiliateJson(c.env.REGISTRAR_AFFILIATE_JSON);
+  return c.json({ affiliate }, 200, { "cache-control": "public, max-age=3600" });
+});
+
+const CLICK_TLD_RE = /^[a-z0-9-]{1,24}(\.[a-z0-9-]{1,24})?$/;
+
+// R480：注册商外链点击计数。请求体 {registrar, tld}；只接受已知注册商 id 与形如 com / com.cn 的 TLD；
+// 不记录域名、IP 或任何个人信息，仅按日聚合到 usage:YYYY-MM-DD.outbound / outboundByTld
+app.post("/api/click", async (c) => {
+  let body: { registrar?: unknown; tld?: unknown } | null = null;
+  try {
+    body = (await c.req.json()) as { registrar?: unknown; tld?: unknown };
+  } catch {
+    return c.json({ error: "invalid json" }, 400);
+  }
+  const registrar = body?.registrar;
+  const tld = typeof body?.tld === "string" ? body.tld.toLowerCase().replace(/^\./, "") : "";
+  if (!isRegistrarId(registrar) || !CLICK_TLD_RE.test(tld)) return c.json({ error: "invalid click" }, 400);
+  c.executionCtx.waitUntil(bumpOutbound(c.env.CACHE, registrar, tld));
+  return c.body(null, 204, { "cache-control": "no-store" });
 });
 
 // 运营数据：最近 N 天的聚合使用量（仅计数，无任何用户输入/IP）

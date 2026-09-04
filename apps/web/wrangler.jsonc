@@ -5,5 +5,8 @@
   "assets": { "directory": "./dist", "binding": "ASSETS", "run_worker_first": ["/"] },
   "workers_dev": true,
   "kv_namespaces": [{ "binding": "CACHE", "id": "6353705515014ec08fdf693c16f45232" }],
+  // 公开的注册商返佣参数（非 secret；不含任何 key）。填法见 docs/research/registrar-affiliate.md「需老板操作」；
+  // 默认 "{}" = 纯搜索链接，与未配置完全一致
+  "vars": { "REGISTRAR_AFFILIATE_JSON": "{}" },
   "triggers": { "crons": ["0 */6 * * *"] }
 }

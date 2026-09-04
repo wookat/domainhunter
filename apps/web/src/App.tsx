@@ -12,6 +12,7 @@ import { clearAiQuotaDown, loadSearch, markAiQuotaDown, saveSearch, type SavedFa
 import { TLD_LIST } from "@/content/tld-list";
 import { GUIDE_LABELS } from "@/content/guide-labels";
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
+import { useAffiliateActive } from "@/lib/affiliate";
 import { useI18n, type I18nKey } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
 import { cn, errorSpec, httpErrorSpec, UiErrorException, uiErrorText, type UiError } from "@/lib/utils";
@@ -155,6 +156,7 @@ function initialTlds(): string[] {
 
 export default function App() {
   const { t, lang } = useI18n();
+  const affiliateActive = useAffiliateActive();
   const [shareId] = useState<string | null>(shareIdFromPath);
   const [guideTld] = useState<string | null>(tldFromPath);
   const [guideSlug] = useState<string | null>(guideFromPath);
@@ -1043,6 +1045,12 @@ export default function App() {
               ))}
             </div>
           </div>
+          {/* 返佣声明：仅在 Worker 下发了可生效的返佣配置时显示（R480） */}
+          {affiliateActive && (
+            <p className="mx-auto mb-3 max-w-xl px-4 leading-relaxed" data-testid="affiliate-disclosure">
+              {t("registrar.disclosure")}
+            </p>
+          )}
           open-core · MIT ·{" "}
           <a className="underline hover:text-txt1" href="https://github.com/wookat/domainhunter">
             GitHub

@@ -20,12 +20,15 @@ import {
 import { GridCard, TopPickCard } from "@/components/brand-wall";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { DomainRow } from "@/components/domain-row";
+import { openRegistrar } from "@/components/registrar-link";
+import { useAffiliateConfig } from "@/lib/affiliate";
 import { assignBrandVariants, groupByLabel, pickTopGroups, variantOf } from "@/lib/brand-wall";
 import { useDensity, type Density } from "@/lib/density";
 import { exportRows } from "@/lib/export";
 import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
 import { useI18n, type I18nKey } from "@/lib/i18n";
 import { usePrices } from "@/lib/prices";
+import { primaryRegistrar } from "@/lib/registrars";
 import { tldPrice, totalScore, type Row, type Theme } from "@/types";
 import { cn } from "@/lib/utils";
 
@@ -194,7 +197,8 @@ export function ResultsPage({
 
 
 
-  // 键盘导航：↑↓ 选中 / C 复制 / S 收藏 / Enter 注册 / Space 再来一轮
+  // 键盘导航：↑↓ 选中 / C 复制 / S 收藏 / Enter 注册（该域名的首选注册商，与菜单首项一致）/ Space 再来一轮
+  const affiliateCfg = useAffiliateConfig();
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       const target = e.target as HTMLElement;
@@ -227,12 +231,12 @@ export function ResultsPage({
         const row = visible[selectedIdx];
         if (e.key === "c" || e.key === "C") void navigator.clipboard.writeText(row.domain);
         else if (e.key === "s" || e.key === "S") onToggleFavorite(row);
-        else if (e.key === "Enter" && !onControl) window.open(`https://www.namecheap.com/domains/registration/results/?domain=${encodeURIComponent(row.domain)}`, "_blank");
+        else if (e.key === "Enter" && !onControl) openRegistrar(primaryRegistrar(row.domain), row.domain, affiliateCfg);
       }
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [visible, selectedIdx, moreBlocked, locked, onMore, onMoreAroundLocked, onToggleFavorite, spaceArmed]);
+  }, [visible, selectedIdx, moreBlocked, locked, onMore, onMoreAroundLocked, onToggleFavorite, spaceArmed, affiliateCfg]);
 
   const lockedList = [...locked];
 
