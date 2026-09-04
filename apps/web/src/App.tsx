@@ -6,6 +6,7 @@ import type { HomeValues } from "@/components/home-page";
 import { getHomePage, loadHomePage } from "@/components/home-page-loader";
 import type { LogEntry } from "@/components/agent-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
+import { ContextSummary } from "@/components/context-summary";
 import { isMockEnabled, runMockStream } from "@/mock";
 import { clearAiQuotaDown, loadSearch, markAiQuotaDown, saveSearch, type SavedFallback } from "@/lib/persist";
 import { TLD_LIST } from "@/content/tld-list";
@@ -13,7 +14,7 @@ import { GUIDE_LABELS } from "@/content/guide-labels";
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { useI18n, type I18nKey } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
-import { errorSpec, httpErrorSpec, UiErrorException, uiErrorText, type UiError } from "@/lib/utils";
+import { cn, errorSpec, httpErrorSpec, UiErrorException, uiErrorText, type UiError } from "@/lib/utils";
 import type { AiErrorKind, FallbackReason, Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types";
 
 // 按路由懒加载：这些页面不在首屏关键路径上，拆包降低首屏 JS。
@@ -34,6 +35,9 @@ function lazyChunk<T, P>(load: () => Promise<T>, pick: (m: T) => React.Component
     }
   });
 }
+
+// R472：上游瞬时限流（SSE errorKind=rate-limit）后自动重试一次的倒计时秒数
+const AUTO_RETRY_SEC = 30;
 
 // 首页组件：预载完成后同步渲染（首次落地 "/" 时 main.tsx 已等 chunk 就绪，不走 Suspense 回退）
 const LazyHomePage = lazyChunk(loadHomePage, (m) => m.HomePage);
@@ -164,9 +168,10 @@ export default function App() {
   const [isMcp] = useState(mcpFromPath);
   const [saved] = useState(() => {
     if (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() || advancedFromPath() || tldHubFromPath() || guideHubFromPath() || compareHubFromPath()) return null;
-    // /?q= 或 /?tpl= 是显式预填入口（分享搜索链接 / 指南页 CTA），直接进首页预填，不恢复上次结果
+    // /?q= 或 /?tpl= 是显式预填入口（分享搜索链接 / 指南页 CTA），/?mode=exact 是精确核验入口（AI 不可用时的降级 CTA），
+    // 都直接进首页，不恢复上次结果
     const params = new URLSearchParams(window.location.search);
-    if (params.get("q") || params.get("tpl")) return null;
+    if (params.get("q") || params.get("tpl") || params.get("mode") === "exact") return null;
     return loadSearch();
   });
   const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : monitorsFromPath() ? "monitors" : advancedFromPath() ? "advanced" : saved ? "results" : "home"));
@@ -190,6 +195,10 @@ export default function App() {
   const [error, setError] = useState<UiError | null>(null);
   // R264：AI 上游错误类别：quota 类重试无效，不展示重试 CTA
   const [errorKind, setErrorKind] = useState<AiErrorKind | null>(null);
+  // R472：rate-limit 自动重试倒计时（剩余秒数；null = 无倒计时）。
+  // 每个用户显式发起的序列内只自动重试一次；取消或第二次仍限流都退回手动重试。
+  const [autoRetryLeft, setAutoRetryLeft] = useState<number | null>(null);
+  const autoRetriedRef = useRef(false);
   // R247：多轮低产出提示（worker 每次搜索至多发一次 hint 事件）
   const [lowYieldHint, setLowYieldHint] = useState(false);
   // R471：AI 不可用时的规则降级（fallback 事件）：结果页顶部挂横幅，候选交互照常
@@ -318,12 +327,16 @@ export default function App() {
       const kind = ev.errorKind ?? "unknown";
       setErrorKind(kind);
       if (kind === "quota") markAiQuotaDown();
+      const autoRetry = kind === "rate-limit" && !autoRetriedRef.current && lastRunRef.current !== null;
+      if (autoRetry) setAutoRetryLeft(AUTO_RETRY_SEC);
       setError({
         key:
           kind === "quota"
             ? "error.ai.quota"
             : kind === "rate-limit"
-              ? "error.ai.rateLimit"
+              ? autoRetry
+                ? "error.ai.rateLimit"
+                : "error.ai.rateLimitAgain"
               : kind === "upstream"
                 ? "error.ai.upstream"
                 : kind === "network"
@@ -348,9 +361,11 @@ export default function App() {
     }
   }
 
-  async function run(v: HomeValues, opts: { more?: boolean; aroundLocked?: boolean; refinePrefs?: string[] } = {}) {
+  async function run(v: HomeValues, opts: { more?: boolean; aroundLocked?: boolean; refinePrefs?: string[] } = {}, retry = false) {
     const { more = false, aroundLocked = false, refinePrefs = refinements } = opts;
     lastRunRef.current = { v, opts };
+    if (!retry) autoRetriedRef.current = false;
+    setAutoRetryLeft(null);
     setResumedNotice(false);
     setRestoredGuard(false);
     abortRef.current?.abort();
@@ -452,6 +467,44 @@ export default function App() {
       if (!ac.signal.aborted) setMode((m) => (m === "agent" ? "results" : m));
     }
   }
+
+  // 手动「重试本轮」与自动重试共用：lastRunRef 只在 run() 内赋值，而 run() 一进入就解除 R465 恢复态护栏，
+  // 所以到这里必然是用户已显式发起过一轮之后的续接，不会绕过 R463/R465 的两步确认。
+  function retryLast() {
+    const last = lastRunRef.current;
+    if (!last) return;
+    setError(null);
+    setErrorKind(null);
+    void run(last.v, last.opts, true);
+  }
+
+  function cancelAutoRetry() {
+    autoRetriedRef.current = true;
+    setAutoRetryLeft(null);
+  }
+
+  // 倒计时每秒递减；到 0 且页面在前台时发起自动重试，后台标签页等回到前台再发。
+  useEffect(() => {
+    if (autoRetryLeft === null) return;
+    if (autoRetryLeft > 0) {
+      const id = window.setTimeout(() => setAutoRetryLeft((n) => (n === null ? null : n - 1)), 1000);
+      return () => window.clearTimeout(id);
+    }
+    const fire = () => {
+      if (document.hidden) return;
+      autoRetriedRef.current = true;
+      retryLast();
+    };
+    fire();
+    document.addEventListener("visibilitychange", fire);
+    return () => document.removeEventListener("visibilitychange", fire);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoRetryLeft]);
+
+  // 离开结果/进行中页面即放弃自动重试，避免在首页或清单页被动切回 agent 视图
+  useEffect(() => {
+    if (mode !== "agent" && mode !== "results") setAutoRetryLeft(null);
+  }, [mode]);
 
   function refine(pref: string) {
     const next = [...refinements, pref];
@@ -653,17 +706,40 @@ export default function App() {
         onShortlistClick={() => (mode === "shortlist" ? closeShortlist() : openShortlist())}
       />
 
+      {/* header 下的横幅栈：错误横幅（destructive 色系）与 R471 将加入的 fallback 横幅（建议 brand/warning 色系）
+          作为兄弟节点竖向堆叠，互不遮挡；R471 只需在此容器内追加一个 <div>。 */}
       {error && (
-        <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
+        <div className="mx-auto mt-4 w-full max-w-6xl space-y-3 px-4 md:px-6">
           <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5">
-            <p className="text-sm text-destructive">{uiErrorText(error, t)}</p>
+            <p className="text-sm text-destructive">
+              {autoRetryLeft !== null && errorKind === "rate-limit" ? (
+                <>
+                  <span aria-hidden="true">{t("error.ai.rateLimitAuto", { n: autoRetryLeft })}</span>
+                  {/* 读屏播报只在 30/20/10 三个刻度变化，避免每秒打断 */}
+                  <span className="sr-only" aria-live="polite" aria-atomic="true">
+                    {t("error.ai.autoRetryAria", { n: Math.max(10, Math.ceil(autoRetryLeft / 10) * 10) })}
+                  </span>
+                </>
+              ) : (
+                uiErrorText(error, t)
+              )}
+            </p>
             {quotaExhausted && (
               <span className="flex flex-wrap items-center gap-2 text-xs text-txt1">
-                <span>{t("error.ai.fallbackLead")}</span>
+                <a
+                  href="/?mode=exact"
+                  className="inline-flex min-h-[44px] items-center rounded-md border border-brand-line bg-bg1 px-3 text-sm font-semibold text-brand transition-colors hover:bg-brand-dim/60 sm:min-h-0 sm:py-1 sm:text-xs"
+                >
+                  {t("error.ai.quotaQuick")}
+                </a>
+                <a
+                  href="/advanced"
+                  className="inline-flex min-h-[44px] items-center rounded-md border border-brand-line bg-bg1 px-3 text-sm font-semibold text-brand transition-colors hover:bg-brand-dim/60 sm:min-h-0 sm:py-1 sm:text-xs"
+                >
+                  {t("error.ai.quotaBulk")}
+                </a>
                 {(
                   [
-                    { href: "/?mode=exact", key: "error.ai.fallbackQuick" },
-                    { href: "/advanced", key: "error.ai.fallbackBulk" },
                     { href: "/tld", key: "error.ai.fallbackTld" },
                     { href: "/guide", key: "error.ai.fallbackGuide" },
                     { href: "/vs", key: "error.ai.fallbackVs" },
@@ -672,26 +748,33 @@ export default function App() {
                   <a
                     key={l.href}
                     href={l.href}
-                    className="inline-flex min-h-[44px] items-center rounded-md border border-line bg-bg1 px-2.5 font-medium text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-0 sm:py-1"
+                    className="hidden items-center rounded-md border border-line bg-bg1 px-2.5 py-1 font-medium text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:inline-flex"
                   >
                     {t(l.key)}
                   </a>
                 ))}
               </span>
             )}
-            {!running && errorKind !== "quota" && lastRunRef.current && (
+            {autoRetryLeft !== null && errorKind === "rate-limit" ? (
               <button
                 type="button"
-                className="shrink-0 rounded-md border border-destructive/40 px-3 py-1.5 text-sm font-semibold text-destructive transition-colors hover:bg-destructive/20"
-                onClick={() => {
-                  const last = lastRunRef.current!;
-                  setError(null);
-                  setErrorKind(null);
-                  void run(last.v, last.opts);
-                }}
+                className="inline-flex min-h-[44px] shrink-0 items-center rounded-md border border-destructive/40 px-3 text-sm font-semibold text-destructive transition-colors hover:bg-destructive/20 sm:min-h-0 sm:py-1.5"
+                onClick={cancelAutoRetry}
               >
-                {t("error.retry")}
+                {t("error.ai.autoRetryCancel")}
               </button>
+            ) : (
+              !running &&
+              !quotaExhausted &&
+              lastRunRef.current && (
+                <button
+                  type="button"
+                  className="inline-flex min-h-[44px] shrink-0 items-center rounded-md border border-destructive/40 px-3 text-sm font-semibold text-destructive transition-colors hover:bg-destructive/20 sm:min-h-0 sm:py-1.5"
+                  onClick={retryLast}
+                >
+                  {t("error.retry")}
+                </button>
+              )
             )}
           </div>
         </div>
@@ -722,9 +805,27 @@ export default function App() {
         </div>
       )}
 
+      {(mode === "agent" || mode === "results") && (
+        <ContextSummary
+          restored={resumedNotice && mode === "results"}
+          understanding={aiUnderstanding}
+          fallback={understanding}
+          description={values.description}
+          onRefine={refine}
+          running={running}
+          quotaExhausted={quotaExhausted}
+          onNewSearch={() => {
+            setResumedNotice(false);
+            setNoticeClosing(false);
+            setMode("home");
+          }}
+          onDismissRestored={dismissNotice}
+        />
+      )}
+
       {resumedNotice && mode === "results" && (
         <div
-          className={`mx-auto w-full max-w-6xl overflow-hidden px-4 transition-all duration-200 ease-out md:px-6 ${noticeClosing ? "mt-0 max-h-0 opacity-0" : "mt-4 max-h-24"}`}
+          className={`mx-auto hidden w-full max-w-6xl overflow-hidden px-4 transition-all duration-200 ease-out md:block md:px-6 ${noticeClosing ? "mt-0 max-h-0 opacity-0" : "mt-4 max-h-24"}`}
         >
           <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-line bg-bg1 px-4 py-2 text-[13px] text-txt1">
             <span>{t("resume.notice")}</span>
@@ -754,7 +855,7 @@ export default function App() {
       )}
 
       {(mode === "agent" || mode === "results") && (
-        <div className={noticeClosing ? "pointer-events-none" : undefined}>
+        <div className={cn("hidden md:block", noticeClosing && "pointer-events-none")}>
           <UnderstandingBar
             understanding={aiUnderstanding}
             fallback={understanding}

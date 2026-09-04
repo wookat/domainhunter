@@ -284,6 +284,19 @@ export function ResultsPage({
                       : t("results.starAllBtn")}
                 </button>
               )}
+              {/* <sm：顶部操作行（导出 / 再来一轮）与底部 sticky 栏重复，收起以让 Top Picks 进首屏；只保留不重复的「复制链接」 */}
+              <button
+                onClick={() => {
+                  void navigator.clipboard.writeText(searchLink(description, tlds, style, lengthPref));
+                  setLinkCopied(true);
+                  window.setTimeout(() => setLinkCopied(false), 2000);
+                }}
+                title={t("results.copyLinkTitle")}
+                className="inline-flex items-center gap-1 rounded-md border border-line bg-bg1 px-2 py-0.5 font-mono text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:hidden"
+              >
+                {linkCopied ? <Check className="h-3 w-3 text-brand" /> : <Link2 className="h-3 w-3" />}
+                {linkCopied ? t("results.linkCopied") : t("results.copyLink")}
+              </button>
               {visible.length > 0 && (
                 <button
                   onClick={() => exportResultsCsv(visible, lang, prices)}
@@ -295,7 +308,7 @@ export function ResultsPage({
               )}
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="hidden items-center gap-2 sm:flex">
             <button
               className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0"
               title={t("results.copyLinkTitle")}
