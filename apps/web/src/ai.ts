@@ -9,7 +9,8 @@ export interface AiScores {
   brandability: number;
 }
 
-export type AiTheme = "pinyin" | "word" | "coined" | "blend";
+/** 命名路线；"rule" 仅由 R471 规则降级路线产出（LLM 输出该值不接受，仍归 coined） */
+export type AiTheme = "pinyin" | "word" | "coined" | "blend" | "rule";
 
 const THEMES = new Set<string>(["pinyin", "word", "coined", "blend"]);
 export const AI_THEMES: ReadonlySet<string> = THEMES;
@@ -544,7 +545,7 @@ export function wordThemeEmbedsTld(label: string): boolean {
 
 /** 统计候选的 theme 分布 */
 export function countThemes(candidates: AiCandidate[]): Record<AiTheme, number> {
-  const counts: Record<AiTheme, number> = { pinyin: 0, word: 0, coined: 0, blend: 0 };
+  const counts: Record<AiTheme, number> = { pinyin: 0, word: 0, coined: 0, blend: 0, rule: 0 };
   for (const c of candidates) if (c.theme) counts[c.theme]++;
   return counts;
 }
@@ -1325,6 +1326,11 @@ function pinyinTable(): Map<string, string[]> {
   return PINYIN_TABLE;
 }
 
+/** 单个汉字的全部读音（表外字返回 undefined）；R471 规则降级的中文关键词转拼音复用同一张表 */
+export function pinyinReadingsOf(ch: string): readonly string[] | undefined {
+  return pinyinTable().get(ch);
+}
+
 // 单字读音展开 ü 的两种域名写法（表内已写作 v：lv → lv/lue；jun/qu 类表内已是 u 写法）
 function readingVariants(p: string): string[] {
   return p.includes("v") ? [p, p.replace("v", "ue"), p.replace("v", "u")] : [p];
@@ -1398,6 +1404,13 @@ interface AdmitContext {
   guardStats: GuardStats;
   dropped: GuardDropCounts;
   seen: Set<string>;
+  /** R471 规则降级候选：theme 强制为 "rule"（不经 THEMES 白名单） */
+  ruleTheme?: boolean;
+}
+
+/** R471：规则降级候选过与 LLM 候选完全相同的防线（label 合法性/品牌撞名/meaning 字符集与幻影引用等） */
+export function admitRuleCandidate(c: Partial<AiCandidate>, lang: "zh" | "en", guard: GuardStats, seen: Set<string>): AiCandidate | null {
+  return admitCandidate(c, { lang, enPinyinDrop: false, isWordSupplement: false, guardStats: guard, dropped: guard.dropped, seen, ruleTheme: true });
 }
 
 const clampScore = (v: unknown) => {
@@ -1505,7 +1518,7 @@ function admitCandidate(c: Partial<AiCandidate>, ctx: AdmitContext): AiCandidate
   }
   // R179：theme 缺失/非法时强制归入 coined，保证 theme 永不为空；
   // R224：补发轮硬指令要求全部为 word 路线，漏标时兜底归入 word（漏标即被丢弃会让补发白跑）
-  let resolvedTheme: AiTheme = THEMES.has(theme) ? (theme as AiTheme) : isWordSupplement ? "word" : "coined";
+  let resolvedTheme: AiTheme = ctx.ruleTheme ? "rule" : THEMES.has(theme) ? (theme as AiTheme) : isWordSupplement ? "word" : "coined";
   // R250（R239 P3-3）：label 内嵌已收录 TLD 名结尾却标 word（canaryio 型）→ 降级为 coined（不删除）
   if (resolvedTheme === "word" && wordThemeEmbedsTld(label)) resolvedTheme = "coined";
   return {
