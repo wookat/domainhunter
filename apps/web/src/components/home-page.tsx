@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Brain, Check, ChevronDown, Copy, ExternalLink, History, Loader2, Plus, RotateCw, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
+import { ArrowRight, BadgeCheck, BellRing, CalendarClock, Check, ChevronDown, Copy, ExternalLink, History, Loader2, Plus, RotateCw, Ruler, SearchCheck, ShieldCheck, Sparkles, Star, Wand2, X, Zap } from "lucide-react";
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { ExpiryNote, WatchCta } from "@/components/domain-row";
@@ -14,8 +14,8 @@ import { TEMPLATE_LABELS } from "@/content/home-template-labels";
 import { TLD_LIST } from "@/content/tld-list";
 import { tldPrice, type Row } from "@/types";
 
-const EXAMPLES = ["独立开发者的 AI 周报工具", "宠物营养订阅电商", "极简冥想 App", "跨境 SaaS 数据看板"];
-const EXAMPLES_EN = ["AI weekly-report tool for indie devs", "Pet nutrition subscription store", "Minimal meditation app", "Cross-border SaaS dashboard"];
+const EXAMPLES = ["新中式茶叶电商，寓意一杯好茶慢下来，要拼音 .cn", "独立开发者的 AI 周报工具，拼音+英文混搭", "卖景德镇瓷器的跨境电商，老外好读", "Minimal meditation app for remote teams"];
+const EXAMPLES_EN = ["Cross-border store selling Chinese tea, pinyin-English blend", "AI weekly-report tool for indie devs, .cn + .com", "新中式茶饮品牌，寓意温润有人情", "Minimal meditation app"];
 const PRESET_TLDS = ["com", "cn", "io", "ai", "app", "dev"];
 const MAX_LEN = 500;
 const ONBOARD_KEY = "dh:onboardDismissed:v1";
@@ -1031,10 +1031,10 @@ export function HomePage({
           <div className="mt-5 grid gap-4 sm:grid-cols-3">
             {(
               [
-                { icon: Brain, title: "home.how.step1.title", desc: "home.how.step1.desc" },
-                { icon: ShieldCheck, title: "home.how.step2.title", desc: "home.how.step2.desc" },
-                { icon: Sparkles, title: "home.how.step3.title", desc: "home.how.step3.desc" },
-              ] as { icon: typeof Brain; title: I18nKey; desc: I18nKey }[]
+                { icon: BadgeCheck, title: "home.how.step1.title", desc: "home.how.step1.desc" },
+                { icon: CalendarClock, title: "home.how.step2.title", desc: "home.how.step2.desc" },
+                { icon: BellRing, title: "home.how.step3.title", desc: "home.how.step3.desc" },
+              ] as { icon: typeof BadgeCheck; title: I18nKey; desc: I18nKey }[]
             ).map((s, i) => (
               <div key={s.title} className="rounded-xl border border-line bg-bg1 p-5">
                 <div className="flex items-center gap-2">

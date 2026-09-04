@@ -10,7 +10,8 @@ import { buildCompareFaq } from "./content/compare-faq";
 import { buildGuideFaq } from "./content/guide-faq";
 import { buildPricesFaq } from "./content/prices-faq";
 import { buildTldFaq } from "./content/tld-faq";
-import { compareContentBlocks, compareHubBlocks, guideContentBlocks, guideHubBlocks, hubCrumbKicker, hubCrumbLabel, pricesTableSkeleton, tldContentBlocks, tldHubBlocks } from "./content/ssr-html";
+import { compareContentBlocks, compareHubBlocks, guideContentBlocks, guideHubBlocks, homeHeroSkeleton, hubCrumbKicker, hubCrumbLabel, pricesTableSkeleton, tldContentBlocks, tldHubBlocks } from "./content/ssr-html";
+import { HOME_FAQ, HOME_META } from "./content/home-copy";
 import { buildGuideContent, buildTldContent, buildVsContent } from "./content/injected-build";
 import type { InjectedContent } from "./content/injected";
 import { HUB_META } from "./content/hubs";
@@ -1310,7 +1311,7 @@ app.get("/api/og/hub/:kind", (c) => {
 // 产品定位页分享图（须在 /api/og/:id 之前注册）
 app.get("/api/og/why", (c) => {
   const lang = c.req.query("lang") === "en" ? "en" : "zh";
-  const title = lang === "en" ? "The good names are taken? Hunt differently." : "好域名都被占了？换个找法";
+  const title = lang === "en" ? "A domain hunter for Chinese founders" : "中文创业者的域名猎手";
   return new Response(pageOgSvg(lang === "en" ? "Why us" : "产品定位", title, lang), {
     headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
   });
@@ -1319,7 +1320,7 @@ app.get("/api/og/why", (c) => {
 // 首页分享图（静态 og.png 为中文，英文首页用动态 SVG，平台不支持 SVG 时回退 og.png；须在 /api/og/:id 之前注册）
 app.get("/api/og/home", (c) => {
   const lang = c.req.query("lang") === "en" ? "en" : "zh";
-  const title = lang === "en" ? "Describe the meaning — hunt truly available domains" : "说出寓意，猎取真正可注册的好域名";
+  const title = lang === "en" ? "Bilingual naming, verified .cn / .com availability" : "用中文说寓意，猎到真正可注册的 .cn / .com 好域名";
   return new Response(pageOgSvg("DomainHunter", title, lang), {
     headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
   });
@@ -1536,25 +1537,7 @@ async function notFoundShell(res: Response): Promise<Response> {
 }
 
 // 着陆页：SSR 注入 hreflang alternate
-// 首页 FAQPage 结构化数据（与首页 FAQ 区块内容一致，供搜索引擎富摘要；英文文案与 i18n 词典逐字一致）
-const HOME_FAQ = {
-  zh: [
-    { q: "DomainHunter 是什么？", a: "用一句自然语言描述你想要的域名寓意与风格，AI 多轮构思候选并实时核验，直接给出一批真正可注册的好名字。" },
-    { q: "核验结果准确吗？", a: "每个域名经 DNS + RDAP + WHOIS 三级核验，可注册状态来自注册局权威数据；注册前建议在注册商页面再确认一次。" },
-    { q: "使用收费吗？", a: "完全免费。AI 搜索有每小时次数限制；即输即查、更多后缀与前后缀变体核验不限量、不消耗 AI 次数。" },
-    { q: "会自动帮我注册域名吗？", a: "不会。我们只提供核验结果与注册商跳转链接（如 Porkbun），注册和付费在注册商完成。" },
-    { q: "支持哪些后缀？", a: "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu/page/bio/ink/moe/lol/uk/fm/one/cool/red/today/best/wtf/pizza/bar/cafe/money/gold/band/cash/city/estate/expert/farm/blue/pink/black/ninja/rocks/pet/academy/school/coach/care/doctor/restaurant/boutique/clinic/dental/fitness/photos/gallery/salon/yoga/coffee/wine/kitchen/garden/photography/events/solutions/services/consulting/software/marketing/systems/ventures/capital/guru/tips/directory/exchange/institute/international/partners/support/plus/house/market/watch/style/show/website/technology/community/education/training/love/beauty/fashion/work/sale/help/wedding/law/tax/menu/bike/toys/shoes/travel/tours/vacations/holiday/flights/taxi/properties/rentals/apartments/builders/construction/repair/energy/solar/green/eco/earth/engineering/family/baby/mom/dad/dog/gifts/photo/health/fit/dance/guide/reviews/golf/tennis/soccer/football/hockey/surf/ltd/biz/llc/fyi/promo/express/press/stream/movie/pictures/productions/audio/credit/loans/investments/holdings/mortgage/computer/vet/lawyer/legal/delivery/recipes/rent/church/jewelry/cleaning/plumbing/catering/florist。" },
-    { q: "我的搜索会被保存吗？", a: "不保存输入内容和 IP，只记录匿名的聚合次数统计；收藏清单保存在你自己的浏览器本地。" },
-  ],
-  en: [
-    { q: "What is DomainHunter?", a: "Describe the meaning and style you want in one sentence — AI brainstorms candidates over multiple rounds, verifies each one live, and hands you a batch of genuinely registrable names." },
-    { q: "How accurate are the availability checks?", a: "Every domain goes through DNS + RDAP + WHOIS checks against authoritative registry data. We still recommend a final confirmation on the registrar's page before buying." },
-    { q: "Is it free?", a: "Completely free. AI search has an hourly rate limit; instant checks, extra-TLD checks, and prefix/suffix variants are unlimited and never use AI quota." },
-    { q: "Will it register domains for me automatically?", a: "No. We only provide verification results and registrar links (e.g. Porkbun) — registration and payment happen at the registrar." },
-    { q: "Which TLDs are supported?", a: "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu/page/bio/ink/moe/lol/uk/fm/one/cool/red/today/best/wtf/pizza/bar/cafe/money/gold/band/cash/city/estate/expert/farm/blue/pink/black/ninja/rocks/pet/academy/school/coach/care/doctor/restaurant/boutique/clinic/dental/fitness/photos/gallery/salon/yoga/coffee/wine/kitchen/garden/photography/events/solutions/services/consulting/software/marketing/systems/ventures/capital/guru/tips/directory/exchange/institute/international/partners/support/plus/house/market/watch/style/show/website/technology/community/education/training/love/beauty/fashion/work/sale/help/wedding/law/tax/menu/bike/toys/shoes/travel/tours/vacations/holiday/flights/taxi/properties/rentals/apartments/builders/construction/repair/energy/solar/green/eco/earth/engineering/family/baby/mom/dad/dog/gifts/photo/health/fit/dance/guide/reviews/golf/tennis/soccer/football/hockey/surf/ltd/biz/llc/fyi/promo/express/press/stream/movie/pictures/productions/audio/credit/loans/investments/holdings/mortgage/computer/vet/lawyer/legal/delivery/recipes/rent/church/jewelry/cleaning/plumbing/catering/florist via the “more TLDs” button." },
-    { q: "Do you store my searches?", a: "We never store your input or IP — only anonymous aggregate counters. Your shortlist lives in your own browser's local storage." },
-  ],
-} as const;
+// 首页 FAQPage 结构化数据：与首页 FAQ 区块同源（content/home-copy.ts），供搜索引擎富摘要
 
 const homeFaqJsonld = (lang: "zh" | "en") =>
   JSON.stringify({
@@ -1638,32 +1621,26 @@ app.get("/api/og/vs/:slug", (c) => {
   });
 });
 
-// 首页英文 SSR meta（与 i18n 词典 meta.title 一致）
-const HOME_META_EN = {
-  title: "DomainHunter — AI Domain Hunter | Describe the meaning, hunt truly available names",
-  desc: "Describe your idea in one sentence — an AI agent brainstorms names, verifies availability live via RDAP+DNS, then reflects and hunts again until there are enough names you can register right now. Free, open source, no login.",
-  ogTitle: "DomainHunter — AI Domain Hunter",
-  ogDesc: "Describe the meaning — an AI agent reflects over multiple rounds and verifies live. Only truly registrable domains.",
-};
 
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
   const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
   let html = await res.text();
+  const m = HOME_META[lang];
+  html = html
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(m.title)}</title>`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${escapeHtml(m.desc)}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${escapeHtml(m.ogTitle)}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${escapeHtml(m.ogDesc)}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${escapeHtml(m.ogTitle)}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${escapeHtml(m.ogDesc)}" />`);
   if (lang === "en") {
-    const m = HOME_META_EN;
-    html = html
-      .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(m.title)}</title>`)
-      .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${escapeHtml(m.desc)}" />`)
-      .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${escapeHtml(m.ogTitle)}" />`)
-      .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${escapeHtml(m.ogDesc)}" />`)
-      .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${escapeHtml(m.ogTitle)}" />`)
-      .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${escapeHtml(m.ogDesc)}" />`)
-      .replace(
-        /<meta property="og:image" content="[^"]*" \/>/,
-        `<meta property="og:image" content="${SITE_ORIGIN}/api/og/home?lang=en" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
-      );
+    html = html.replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/home?lang=en" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
   }
+  html = homeHeroSkeleton(html, lang);
   html = injectHreflang(html, "/", c.req.query("lang") === "en").replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/home-page.tsx", "full");
   html = setHtmlLang(html, lang);
@@ -1919,12 +1896,12 @@ app.get("/prices", async (c) => {
 // 产品定位页（SPA 路由 + SSR meta）
 const WHY_META = {
   zh: {
-    title: "为什么选 DomainHunter：好域名都被占了，换个找法",
-    desc: `传统域名查询只显示相似名，AI 起名工具不核验可注册。DomainHunter 用 Agent 多轮反思：四路线构思→${TLD_LIST.length} TLD 实时核验→跨轮去重反思再猎，配比价、到期监控、收藏分享、CSV 导出与 MCP 工具链。免费开源。`,
+    title: "为什么选 DomainHunter：中文创业者的域名猎手",
+    desc: `面向中文创业者、独立开发者与出海团队：用中文说寓意，AI 沿拼音/英文/混搭四路线构思，${TLD_LIST.length} TLD 实时核验（.cn / .com.cn 直查 CNNIC），附到期日与价格，支持批量核验、CSV 导出与到期监控。英文通用起名不是我们的主场，对比表如实标出。免费开源。`,
   },
   en: {
-    title: "Why DomainHunter: all the good names are taken — hunt differently",
-    desc: `Classic domain search only shows look-alikes; AI name generators never verify availability. DomainHunter runs an agent loop — four naming routes, live checks across ${TLD_LIST.length} TLDs, cross-round dedup and reflection — plus price comparison, expiry monitoring, shortlist sharing, CSV export and an MCP server. Free and open source.`,
+    title: "Why DomainHunter: a domain hunter for Chinese founders",
+    desc: `Built for Chinese founders, indie developers and teams going global: describe the meaning in Chinese, AI brainstorms pinyin, English and blend candidates along four routes, verified live across ${TLD_LIST.length} TLDs (.cn / .com.cn against CNNIC), with expiry dates, prices, bulk checks, CSV export and expiry monitoring. Generic English naming isn't our home turf — the comparison table says so. Free and open source.`,
   },
 };
 
@@ -1988,7 +1965,7 @@ app.get("/llms.txt", (c) => {
     "## Core pages",
     line("/", "AI domain search (homepage, instant availability quick-check included)"),
     line("/prices", `Domain price overview: registration vs renewal for ${TLD_LIST.length} TLDs, live prices`),
-    line("/why", "Why DomainHunter: agent loop that reflects over rounds and only surfaces registrable names"),
+    line("/why", "Why DomainHunter: a domain hunter for Chinese founders — Chinese meaning in, pinyin/English/blend candidates verified live for .cn / .com, with expiry dates and prices"),
     line("/advanced", "Bulk domain check: paste up to 200 names and stream live availability"),
     "",
     "## TLD guides",

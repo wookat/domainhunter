@@ -184,8 +184,8 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     en: "An AI agent product brand. The name should feel like an AI coworker you can hand work to; the vibe is human-like, delegation-worthy, steady not gimmicky; it must work in \"let X handle it\", on an enterprise security-review list, and in developer-community threads.",
   },
   "crossborder": {
-    zh: "一个跨境电商/出海品牌，寓意「无国界的好货与信任」；气质要国际化、好读好拼、无文化歧义；场景是海外社交广告、亚马逊搜索框和不同母语客人的口口相传里都念得出、记得住。",
-    en: "A cross-border e-commerce brand going global. The name should carry borderless quality and trust; the vibe is international, easy to read and spell, free of cultural landmines; it must survive social ads abroad, the Amazon search box, and word of mouth across native languages.",
+    zh: "一个跨境电商/出海品牌，寓意「无国界的好货与信任」；气质要国际化、好读好拼、无文化歧义，英文词或拼音+英文混搭都可，老外一眼能读；场景是海外社交广告、亚马逊搜索框和不同母语客人的口口相传里都念得出、记得住；.com 为主，最好 .cn 也能一起拿下。",
+    en: "A cross-border e-commerce brand from China going global. The name should carry borderless quality and trust; the vibe is international, easy to read and spell, free of cultural landmines — an English word or a pinyin-English blend that non-Chinese buyers can read at a glance; it must survive social ads abroad, the Amazon search box, and word of mouth across native languages. .com first, ideally with the matching .cn.",
   },
   "escaperoom": {
     zh: "一个剧本杀/密室逃脱/沉浸式娱乐品牌，寓意「推开门就进入另一个世界」；气质要有悬念、有戏剧感、让人好奇；场景是「周六去 X 玩不玩」的组局邀约、点评平台搜索和玩家探店笔记里都抓人好记。",
@@ -324,8 +324,8 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     en: "An aquarium or reptile brand. The name should hold a world in a glass box; the vibe is still, crystal-clear, quietly expert; it must read right titling a tank-journal post, on gear packaging, and in word of mouth among serious keepers.",
   },
   "indiehacker": {
-    zh: "一款独立开发者做的效率小工具，寓意「一个人也能做出很多人爱用的产品」；气质要轻巧、真诚、有极客味；场景是 Product Hunt 发布页、X 帖子和「我做了 X」的自我介绍里都顺口好记。",
-    en: "A productivity tool built by an indie hacker. The name should feel like one person shipping something many people love; the vibe is light, sincere, quietly geeky; it must roll off the tongue on a Product Hunt launch, in an X post, and in \"I built X\".",
+    zh: "一款独立开发者做的效率小工具，寓意「一个人也能做出很多人爱用的产品」；气质要轻巧、真诚、有极客味，短拼音、英文短词或拼音+英文混搭都行；场景是 Product Hunt 发布页、X 帖子、即刻动态和「我做了 X」的自我介绍里都顺口好记；.com / .dev / .cn 至少拿到一个。",
+    en: "A productivity tool built by an indie hacker. The name should feel like one person shipping something many people love; the vibe is light, sincere, quietly geeky — a short pinyin word, an English word or a pinyin-English blend all work; it must roll off the tongue on a Product Hunt launch, in an X post, and in \"I built X\". Land at least one of .com / .dev / .cn.",
   },
   "petsupplies": {
     zh: "一个宠物用品电商品牌，寓意「毛孩子的每一餐每一个玩具都值得认真挑」；气质要温暖、可信、让人愿意月月回购；场景是电商搜索结果、快递箱面单和铲屎官群里的安利都好认好念。",
@@ -900,8 +900,8 @@ export const TEMPLATE_TEXTS: Record<string, { zh: string; en: string }> = {
     en: "A bowling alley and social-entertainment brand. The name should evoke the crack of a strike and the cheer that follows; the vibe is hit-energized and retro-cool, holding birthdays, team outings and dates, never a dated arcade; it must hold up on mall directories, team-outing platforms, and the \"bowling at X this Friday?\" group chat.",
   },
   "tea": {
-    zh: "一个茶叶品牌，寓意「一方山场的滋味落进一盏日常」；气质要有山水感与人文分量、拿得住礼盒也接得住办公室的一杯日饮、绝不像景区纪念品；场景是礼盒柜台、电商详情页和茶桌上「上次喝的 XX 不错」的复述里都立得住。",
-    en: "A tea brand. The name should evoke one terroir settling into an everyday cup; the vibe carries landscape and humanist weight, worthy of the gift box yet at home on an office desk, never a souvenir stall; it must hold up on gift counters, product detail pages, and the tea-table's \"that X we drank was good\".",
+    zh: "一个面向年轻人的新中式茶叶电商品牌，寓意「一方山场的滋味落进一盏日常」；气质要有山水感与人文分量、拿得住礼盒也接得住办公室的一杯日饮、绝不像景区纪念品；优先短拼音或拼音+英文混搭，中文名和域名能对上；场景是礼盒柜台、电商详情页和茶桌上「上次喝的 XX 不错」的复述里都立得住；.cn 和 .com 最好都能注册。",
+    en: "A modern Chinese tea e-commerce brand for young buyers. The name should evoke one terroir settling into an everyday cup; the vibe carries landscape and humanist weight, worthy of the gift box yet at home on an office desk, never a souvenir stall; prefer a short pinyin word or a pinyin-English blend that maps back to a Chinese name; it must hold up on gift counters, product detail pages, and the tea-table's \"that X we drank was good\". Ideally both .cn and .com are available.",
   },
   "hotspring": {
     zh: "一个温泉度假与汤泉品牌，寓意「一池热汤卸下一周疲惫」；气质要有疗愈感与在地风物、经得起预订平台图墙、绝不像洗浴中心；场景是预订列表、周末攻略和「周末去 XX 泡一天」的犒赏计划里都立得住。",
