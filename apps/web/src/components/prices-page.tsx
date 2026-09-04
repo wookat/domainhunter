@@ -124,7 +124,7 @@ export function PricesPage() {
                 <span className="tnum ml-1 hidden text-[11px] text-txt2 sm:inline">¥{r.cnyRenew ?? toCny(r.renew)}</span>
               </span>
               {r.renew >= r.reg * 3 && r.reg > 0 && (
-                <span title={t("prices.trapTip")} className="rounded bg-amber-500/15 px-1 py-0.5 font-sans text-[10px] font-semibold text-amber-500">
+                <span title={t("prices.trapTip")} className="rounded bg-amber2-dim px-1 py-0.5 font-sans text-[10px] font-semibold text-amber2">
                   {t("prices.trap")}
                 </span>
               )}

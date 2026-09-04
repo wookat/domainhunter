@@ -176,9 +176,9 @@ function ChipPrice({ domain }: { domain: string }) {
   const trap = p !== undefined && renew !== undefined && renew >= p.registration * 3;
   const tip = renew !== undefined ? t("quick.renewTip").replace("{price}", `${p ? "" : "≈"}$${renew}`) : undefined;
   return (
-    <i title={tip} className="not-italic font-sans text-[10px] opacity-75">
+    <i title={tip} className="not-italic font-sans text-[10px]">
       {text}
-      {trap && <span className="text-amber-500">↑</span>}
+      {trap && <span className="text-amber2">↑</span>}
     </i>
   );
 }
