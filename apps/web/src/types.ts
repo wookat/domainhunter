@@ -68,6 +68,8 @@ export interface StreamEvent {
   /** fallback 事件（R471）：降级原因与本轮规则候选数 */
   reason?: FallbackReason;
   count?: number;
+  /** 配额类降级的熔断剩余秒数（仅 quota / quota-breaker） */
+  retryAfterS?: number;
   domain?: string;
   status?: Status;
   meaning?: string;

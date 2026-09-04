@@ -259,6 +259,13 @@ export default function App() {
   // R267：quota（401/402/403）重试必然失败，抑制所有会触发 AI 的入口；
   // R471：因 quota / 服务端熔断降级时同样抑制（再来一轮只会再次命中熔断）
   const quotaExhausted = errorKind === "quota" || fallback?.reason === "quota" || fallback?.reason === "quota-breaker";
+  // 降级横幅全文：原因 + 候选数 + （配额类）熔断预计解除时间；恢复快照时熔断已过期则不再给时间提示
+  const fallbackFullText = fallback
+    ? t("fallback.banner", { reason: t(`fallback.reason.${fallback.reason}` as I18nKey), count: fallback.count }) +
+      (fallback.retryAt !== undefined && fallback.retryAt > Date.now()
+        ? " " + t("fallback.retryIn", { min: Math.max(1, Math.ceil((fallback.retryAt - Date.now()) / 60_000)) })
+        : "")
+    : "";
 
   // SEO 内容页（/tld/:x、/guide/:x、/vs/:x、/prices 等）提前 return，mode 仍是 "home"，
   // 不应为纯阅读流量预取搜索 chunk；点 logo 回首页是整页导航，按需加载即可。
@@ -304,7 +311,7 @@ export default function App() {
         ),
       );
       // 规则降级候选不代表 AI 已恢复，不清除首页的 AI 不可用标记
-      if (!ev.items!.some((i) => i.theme === "rule")) clearAiQuotaDown();
+      if (ev.items!.length > 0 && !ev.items!.some((i) => i.theme === "rule")) clearAiQuotaDown();
       triedLabelsRef.current.push(...ev.items!.map((i) => i.label));
       setRows((prev) => {
         const seen = new Set(prev.map((r) => r.domain));
@@ -314,7 +321,11 @@ export default function App() {
       });
     } else if (ev.type === "fallback") {
       const reason = ev.reason ?? "unknown";
-      setFallback({ reason, count: ev.count ?? 0 });
+      setFallback({
+        reason,
+        count: ev.count ?? 0,
+        ...(typeof ev.retryAfterS === "number" ? { retryAt: Date.now() + ev.retryAfterS * 1000 } : {}),
+      });
       setRounds((prev) => prev.map((r) => (r.round === (ev.round ?? 1) ? { ...r, noteKey: "agent.note.fallback" } : r)));
       if (reason === "quota" || reason === "quota-breaker") markAiQuotaDown();
     } else if (ev.type === "hint") {
@@ -784,11 +795,21 @@ export default function App() {
         <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
           <div
             role="status"
-            className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-2.5"
+            className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 sm:py-2.5"
           >
-            <p className="min-w-0 flex-1 text-sm text-txt0">
-              {t("fallback.banner", { reason: t(`fallback.reason.${fallback.reason}` as I18nKey), count: fallback.count })}
-            </p>
+            {/* <640px 一行摘要 + 原生 details 展开全文，避免横幅把首张卡顶出首屏；桌面直接全文 */}
+            <details className="min-w-0 flex-1 sm:hidden">
+              <summary className="flex min-h-[44px] cursor-pointer list-none items-center gap-2 text-sm text-txt0 [&::-webkit-details-marker]:hidden">
+                <span className="min-w-0 flex-1 truncate">
+                  {t("fallback.bannerShort", { reason: t(`fallback.reason.${fallback.reason}` as I18nKey), count: fallback.count })}
+                </span>
+                <span aria-hidden="true" className="shrink-0 text-xs text-txt2">
+                  ▾
+                </span>
+              </summary>
+              <p className="pb-2 text-sm text-txt1">{fallbackFullText}</p>
+            </details>
+            <p className="hidden min-w-0 flex-1 text-sm text-txt0 sm:block">{fallbackFullText}</p>
             {!running && !quotaExhausted && lastRunRef.current && (
               <button
                 type="button"

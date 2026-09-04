@@ -220,7 +220,7 @@ const types = (events) => events.map((e) => e.type ?? (e.domain ? "result" : "?"
   check("B1 /api/ai-search 200", r.status, 200);
   const fb = r.events.filter((e) => e.type === "fallback");
   check("B2 恰一条 fallback 事件", fb.length, 1);
-  check("B2b fallback 字段 {type,round,reason,count}", Object.keys(fb[0]).sort(), ["count", "reason", "round", "type"]);
+  check("B2b fallback 字段 {type,round,reason,count,retryAfterS}（R476：quota 附熔断窗口 300s）", [Object.keys(fb[0]).sort(), fb[0].retryAfterS], [["count", "reason", "retryAfterS", "round", "type"], 300]);
   check("B2c reason=quota、round=1、count≥1", [fb[0].reason, fb[0].round, fb[0].count >= 1], ["quota", 1, true]);
   const proposed = r.events.filter((e) => e.type === "proposed");
   const items = proposed.flatMap((e) => e.items);
@@ -262,6 +262,7 @@ const types = (events) => events.map((e) => e.type ?? (e.domain ? "result" : "?"
   check("C1 熔断期内 /chat/completions 0 次调用（候选 + understanding）", r.llmCalls, 0);
   const fb = r.events.filter((e) => e.type === "fallback");
   check("C2 fallback reason=quota-breaker、count≥1", [fb.length, fb[0]?.reason, fb[0]?.count >= 1], [1, "quota-breaker", true]);
+  check("C2b quota-breaker 附剩余秒数 1≤retryAfterS≤300", fb[0]?.retryAfterS >= 1 && fb[0]?.retryAfterS <= 300, true);
   check("C3 无 understanding 事件、无 error 事件", [r.events.some((e) => e.type === "understanding"), r.events.some((e) => e.type === "error")], [false, false]);
   const items = r.events.filter((e) => e.type === "proposed").flatMap((e) => e.items);
   check("C4 规则候选照常下发并核验", [items.length, r.events.filter((e) => e.domain).length], [fb[0].count, items.length * 2]);

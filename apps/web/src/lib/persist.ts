@@ -5,6 +5,8 @@ import type { FallbackReason, Row, RoundInfo, Understanding } from "@/types";
 export interface SavedFallback {
   reason: FallbackReason;
   count: number;
+  /** 熔断预计解除时刻（ms 时间戳），仅配额类降级有；恢复快照时若已过期则不再提示 */
+  retryAt?: number;
 }
 
 /** 结果页状态持久化（sessionStorage，按标签页隔离）：跳转 /tld、刷新或后退后可恢复，不用重新消耗一次搜索 */

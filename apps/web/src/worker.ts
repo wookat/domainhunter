@@ -371,7 +371,8 @@ app.post("/api/ai-search", async (c) => {
         thinking: c.env.LLM_FALLBACK_THINKING,
       });
       // R471：熔断期内（quota 耗尽后 5 分钟）不打任何上游——理解与候选两路都跳过，直接进规则降级
-      const breakerHit = (await llmBreakerUntil(c.env.CACHE)) !== null;
+      const breakerUntil = await llmBreakerUntil(c.env.CACHE);
+      const breakerHit = breakerUntil !== null;
       const understandingDone = breakerHit
         ? Promise.resolve()
         : generateUnderstanding(description, apiKey, lang, llmBase, llmModel, llmThinking, llmFallback)
@@ -422,7 +423,14 @@ app.post("/api/ai-search", async (c) => {
           // 降级轮结束后不再继续反思轮（上游不可用）
           const runFallback = async (reason: FallbackReason) => {
             const rules = generateRuleCandidates(rawDescription, lang, guard, tried);
-            await emit({ type: "fallback", round, reason, count: rules.length });
+            // 配额类降级附带熔断剩余秒数，前端据此提示「约 N 分钟后可重试 AI」；其他原因不带
+            const retryAfterS =
+              reason === "quota-breaker" && breakerUntil !== null
+                ? Math.max(1, Math.ceil((breakerUntil - Date.now()) / 1000))
+                : reason === "quota"
+                  ? LLM_BREAKER_TTL_S
+                  : undefined;
+            await emit({ type: "fallback", round, reason, count: rules.length, ...(retryAfterS !== undefined ? { retryAfterS } : {}) });
             for (const x of rules) await onCandidate(x);
           };
           let fellBack: FallbackReason | null = null;
