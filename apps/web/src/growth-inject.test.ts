@@ -7,7 +7,16 @@ const CF_TOKEN = "0123456789abcdef0123456789abcdef";
 describe("buildHeadInjection", () => {
   it("默认（vars 全空/缺失/空白）不产生任何注入", () => {
     expect(buildHeadInjection({})).toBe("");
-    expect(buildHeadInjection({ GSC_VERIFICATION: "", BING_VERIFICATION: "  ", ANALYTICS_PROVIDER: "", ANALYTICS_TOKEN: "" })).toBe("");
+    expect(buildHeadInjection({ GSC_VERIFICATION: "", BING_VERIFICATION: "  ", BAIDU_VERIFICATION: "", ANALYTICS_PROVIDER: "", ANALYTICS_TOKEN: "" })).toBe("");
+    expect(injectIntoHead(HTML, buildHeadInjection({ BAIDU_VERIFICATION: undefined }))).toBe(HTML);
+  });
+  it("百度验证值渲染官方 meta 名 baidu-site-verification，且与 GSC/Bing 顺序固定", () => {
+    expect(buildHeadInjection({ BAIDU_VERIFICATION: " codeva-os2v9vP2vB " })).toBe('<meta name="baidu-site-verification" content="codeva-os2v9vP2vB" />');
+    expect(buildHeadInjection({ BING_VERIFICATION: "1234567890ABCDEF1234567890ABCDEF", BAIDU_VERIFICATION: "codeva-os2v9vP2vB" })).toBe(
+      '<meta name="msvalidate.01" content="1234567890ABCDEF1234567890ABCDEF" />' + '<meta name="baidu-site-verification" content="codeva-os2v9vP2vB" />',
+    );
+    expect(buildHeadInjection({ BAIDU_VERIFICATION: 'codeva-x" onload="x' })).toBe("");
+    expect(buildHeadInjection({ BAIDU_VERIFICATION: "short" })).toBe("");
   });
   it("GSC / Bing 验证值分别渲染官方 meta 名", () => {
     const out = buildHeadInjection({ GSC_VERIFICATION: "KTL9D51NIMvR4Dc9YISCfRpjIR2vxOwzEbYsNm1oy_g", BING_VERIFICATION: "1234567890ABCDEF1234567890ABCDEF" });
