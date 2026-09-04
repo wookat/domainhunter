@@ -407,4 +407,11 @@ export const GUIDE_LABELS: { slug: string; zh: string; en: string }[] = [
   { slug: "insidepainting", zh: "内画工作室", en: "Inside painting studios" },
   { slug: "strawpainting", zh: "麦秆画工作室", en: "Straw painting studios" },
   { slug: "woodblockprint", zh: "木版年画工作室", en: "Woodblock print studios" },
+  /* .cn 合规与流程（guides-cn-compliance.ts） */
+  { slug: "cn-realname", zh: ".cn 实名认证", en: ".cn real-name verification" },
+  { slug: "cn-serverhold", zh: "serverHold 解除", en: "Fixing serverHold" },
+  { slug: "cn-icp-beian", zh: "ICP 备案与实名", en: "ICP filing vs real-name" },
+  { slug: "cn-dns-inland-vs-overseas", zh: "境内 vs 境外解析", en: "Inland vs overseas hosting" },
+  { slug: "cn-vs-comcn-registrar", zh: ".cn/.com.cn 与注册商", en: ".cn/.com.cn & registrars" },
+  { slug: "cn-expiry-redemption", zh: ".cn 到期与赎回", en: ".cn expiry & redemption" },
 ];

@@ -11,6 +11,7 @@ export interface GuideFaqItem {
 
 export function buildGuideFaq(guide: IndustryGuide, lang: "zh" | "en"): GuideFaqItem[] {
   const loc = guide[lang];
+  if (loc.faq) return loc.faq;
   const tlds = guide.tlds.map((t) => `.${t.tld}`).join(lang === "en" ? ", " : "、");
   if (lang === "en") {
     return [
