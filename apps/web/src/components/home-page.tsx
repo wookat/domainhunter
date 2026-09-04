@@ -3,11 +3,12 @@ import { ArrowRight, BadgeCheck, BellRing, CalendarClock, Check, ChevronDown, Co
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { ExpiryNote, WatchCta } from "@/components/domain-row";
+import { RegistrarAnchor } from "@/components/registrar-link";
 import { addRecentSearch, clearRecentSearches, loadRecentSearches, type RecentSearch } from "@/lib/history";
 import { useI18n, type I18nKey } from "@/lib/i18n";
 import { hasSavedSearch, isAiQuotaDown } from "@/lib/persist";
 import { toUsd, usePrices } from "@/lib/prices";
-import { REGISTRARS } from "@/lib/registrars";
+import { primaryRegistrar } from "@/lib/registrars";
 import { cn } from "@/lib/utils";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "@/lib/variants";
 import { TEMPLATE_LABELS } from "@/content/home-template-labels";
@@ -742,18 +743,17 @@ export function HomePage({
                 {quickRows.filter((row) => quickFilter === "all" || row.status === quickFilter).map((row) =>
                   row.status === "available" ? (
                     <span key={row.domain} className="inline-flex max-w-full items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
-                      <a
-                        href={REGISTRARS[0].url(row.domain)}
-                        target="_blank"
-                        rel="noreferrer"
-                        title={t("home.quickRegister", { domain: row.domain })}
+                      <RegistrarAnchor
+                        registrar={primaryRegistrar(row.domain)}
+                        domain={row.domain}
+                        title={t("home.quickRegister", { domain: row.domain, registrar: primaryRegistrar(row.domain).name })}
                         className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85 sm:min-h-0"
                       >
                         <span className="min-w-0 truncate">{row.domain}</span>
                         <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
                         <ChipPrice domain={row.domain} />
                         <ExternalLink className="h-3 w-3" />
-                      </a>
+                      </RegistrarAnchor>
                       <button
                         onClick={() => shortlist.toggle(domainToRow(row.domain))}
                         title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
@@ -880,18 +880,17 @@ export function HomePage({
                       .filter((r) => r.status === "available")
                       .map((row) => (
                         <span key={row.domain} className="inline-flex max-w-full items-stretch overflow-hidden rounded-lg border border-brand-line bg-brand-dim font-mono text-xs text-brand">
-                          <a
-                            href={REGISTRARS[0].url(row.domain)}
-                            target="_blank"
-                            rel="noreferrer"
-                            title={t("home.quickRegister", { domain: row.domain })}
+                          <RegistrarAnchor
+                            registrar={primaryRegistrar(row.domain)}
+                            domain={row.domain}
+                            title={t("home.quickRegister", { domain: row.domain, registrar: primaryRegistrar(row.domain).name })}
                             className="inline-flex min-h-[44px] min-w-0 items-center gap-1.5 px-2.5 py-1.5 transition-opacity hover:opacity-85 sm:min-h-0"
                           >
                             <span className="min-w-0 truncate">{row.domain}</span>
                             <i className="not-italic font-sans text-[10px]">{t("status.available")}</i>
                             <ChipPrice domain={row.domain} />
                             <ExternalLink className="h-3 w-3" />
-                          </a>
+                          </RegistrarAnchor>
                           <button
                             onClick={() => shortlist.toggle(domainToRow(row.domain))}
                             title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}

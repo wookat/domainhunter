@@ -4,10 +4,11 @@ import { Bell, BellOff, BellRing, Bookmark, BookmarkCheck, Check, Copy, External
 import { BrandCard, BrandDot, BrandSwatch, type BrandVariant } from "@/components/brand-card";
 import { ConfirmLabel } from "@/components/confirm-label";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { RegistrarAnchor } from "@/components/registrar-link";
 import { ScoreBars } from "@/components/score-bars";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
-import { REGISTRARS } from "@/lib/registrars";
+import { registrarsFor, tldOf } from "@/lib/registrars";
 import { scoreBadgeClass, totalScore, type Row, type Scores } from "@/types";
 import { useMonitor } from "@/lib/monitor";
 import { cn, formatExpiry, isExpiringSoon, isPlausibleExpiry } from "@/lib/utils";
@@ -202,22 +203,22 @@ export function WatchCta({
 
 export function RegisterMenu({ domain, children }: { domain: string; children: React.ReactNode }) {
   const prices = usePrices();
-  const tld = domain.slice(domain.indexOf(".") + 1);
+  const tld = tldOf(domain);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {REGISTRARS.map((r) => {
-          const live = r.key === "porkbun" ? prices?.[tld] : undefined;
+        {registrarsFor(domain).map((r) => {
+          const live = r.id === "porkbun" ? prices?.[tld] : undefined;
           return (
-            <DropdownMenuItem key={r.name} asChild>
-              <a href={r.url(domain)} target="_blank" rel="noreferrer" className="flex w-full items-center justify-between gap-4">
+            <DropdownMenuItem key={r.id} asChild>
+              <RegistrarAnchor registrar={r} domain={domain} className="flex w-full items-center justify-between gap-4">
                 <span className="flex items-center gap-2">
                   {r.name}
                   {live && <span className="tnum font-mono text-[11px] text-brand">${live.registration}</span>}
                 </span>
                 <ExternalLink className="h-3.5 w-3.5 text-txt2" />
-              </a>
+              </RegistrarAnchor>
             </DropdownMenuItem>
           );
         })}

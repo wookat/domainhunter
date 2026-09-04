@@ -3,8 +3,9 @@ import { Bell, BellOff, ExternalLink, Loader2, RotateCw, Search } from "lucide-r
 
 import { ConfirmLabel } from "@/components/confirm-label";
 import { ExpiryNote } from "@/components/domain-row";
+import { RegistrarAnchor } from "@/components/registrar-link";
 import { fetchMonitorList, recheckMonitors, RecheckRateLimitError, useMonitor, type MonitorListEntry } from "@/lib/monitor";
-import { REGISTRARS } from "@/lib/registrars";
+import { primaryRegistrar } from "@/lib/registrars";
 import { useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
@@ -133,7 +134,6 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
     return t("monitors.hoursAgo", { n: Math.floor(mins / 60) });
   };
   const quotaFull = quota !== null && quota.limit > 0 && quota.monitored >= quota.limit;
-  const porkbun = REGISTRARS[0];
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-6 md:px-6">
@@ -243,15 +243,14 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
                     {t("monitors.checkAvailability")}
                   </a>
                   {!loading && entry?.status === "available" && (
-                    <a
+                    <RegistrarAnchor
+                      registrar={primaryRegistrar(domain)}
+                      domain={domain}
                       className="flex h-11 items-center gap-1 text-xs text-brand underline-offset-2 hover:underline sm:h-auto sm:py-1"
-                      href={porkbun.url(domain)}
-                      target="_blank"
-                      rel="noopener noreferrer"
                     >
                       <ExternalLink className="h-3.5 w-3.5" />
-                      {t("common.register")} · {porkbun.name}
-                    </a>
+                      {t("common.register")} · {primaryRegistrar(domain).name}
+                    </RegistrarAnchor>
                   )}
                   {!loading && entry && (
                     <span className="tnum ml-auto font-mono text-[11px] text-txt2 sm:hidden">
