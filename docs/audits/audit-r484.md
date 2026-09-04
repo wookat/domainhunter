@@ -40,7 +40,7 @@
 - 截图：`screenshots-r484/H-contrast-prod-light-1280.png`、`H-contrast-prod-prices-light.png`（修复前）；`H-contrast-local-fix-light-1280.png`、`H-contrast-local-fix-prices-light.png`（修复后本地）
 - 根因文件（源码已核对，非推测）：`apps/web/src/index.css` `.light` 块 `--brand: #059669`（emerald-600，白底仅 3.77）与 `--amber: #b45309`（在 amber 淡底上 4.3）；`apps/web/src/components/home-page.tsx:178-180` 价格 `<i>` 的 `opacity-75` 与硬编码 `text-amber-500`；`apps/web/src/components/prices-page.tsx:127` 硬编码 `text-amber-500` / `bg-amber-500/15`（绕过主题变量，深浅色同一色）
 - 为何 Lighthouse a11y = 1 仍漏掉：Lighthouse 以默认深色主题跑，深色对比度全部达标
-- **已顺手修复（独立 PR `fix(theme): light-theme brand/amber ≥4.5:1`，9 行变更，≤50 行；链接见文末）**，设计论证：
+- **已顺手修复（独立 PR [#448](https://github.com/wookat/domainhunter/pull/448)，10 行变更，≤50 行）**，设计论证：
   - 现状证据：见上，浅色 5/5 页面 axe 均报 `color-contrast`，深色 0 报
   - 方案：仅改 `.light` 变量——`--brand #059669 → #046d4f`（介于 emerald-700/800，白底 6.35、`#fafaf9` 6.08、10% 淡底 ≥4.6、白字 on brand 6.35）、`--brand-strong → #065f46`、`--brand-dim/--brand-line/--glow` 同步换 rgb(4,109,79)；`--amber #b45309 → #92400e`（amber 淡底 6.07）；两处 `text-amber-500` 改为主题色 `text-amber2` / `bg-amber2-dim`（深色仍取 `#fbbf24`，视觉不变）；去掉 chip 价格的 `opacity-75`（否则 10px 字合成后仍 3.38）。深色变量未动
   - 验证：本地 `pnpm --filter web build` → `wrangler dev :8788` → 同一 axe 脚本浅色 ×2 视口 ×5 页 **0 条 `color-contrast`**（`findings-r484-axe-local-fix.json`）；`pnpm -r typecheck` / `pnpm --filter web test`（67 通过）/ `pnpm --filter web build` 全绿；截图对比视觉仍为 emerald 系
@@ -161,7 +161,7 @@
 - 生产 `outbound` 计数因 P2-1 与本轮点击（含 HTTP 直连 2 次 + headless 4 次 + 可见浏览器数次）已被污染，属计数噪声，不影响用户
 - 测试分享已撤销；shortlist/theme/lang 等本地状态已还原并核对相等
 
-## 4. 本地验收（修复分支，PR 链接：见父会话集成记录）
+## 4. 本地验收（修复分支，PR [#448](https://github.com/wookat/domainhunter/pull/448)）
 
 ```
 pnpm -r typecheck            # 通过
