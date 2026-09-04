@@ -1002,6 +1002,15 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       localStorage.setItem(LANG_KEY, lang);
     } catch { /* ignore */ }
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    try {
+      // URL 上显式 ?lang= 与当前语言不一致时同步之，否则刷新会以 URL 为准覆盖切换结果
+      const url = new URL(window.location.href);
+      const q = url.searchParams.get("lang");
+      if ((q === "en" || q === "zh") && q !== lang) {
+        url.searchParams.set("lang", lang);
+        window.history.replaceState(window.history.state, "", url);
+      }
+    } catch { /* ignore */ }
     const path = window.location.pathname;
     if (path === "/prices") document.title = `${dicts[lang]["prices.title"]} | DomainHunter`;
     else if (path === "/why") document.title = `${dicts[lang]["footer.why"]} | DomainHunter`;
