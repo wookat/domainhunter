@@ -17,6 +17,7 @@ import { HUB_META } from "./content/hubs";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
+import { generateRuleCandidates, LLM_BREAKER_KEY, LLM_BREAKER_TTL_S, type FallbackReason } from "./rule-fallback";
 import { tldPrice } from "./types";
 import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
 import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
@@ -68,6 +69,8 @@ const FAST_FIRST_ROUND_COUNT = 8; // fast 模式首轮候选数（更快首字�
 // R466：AI 搜索候选级核验队列并行度（每个候选 = tlds.length 个域名，每批内部再按 checkDomains 并发）；
 // 与改动前整轮一次 checkDomains(concurrency=6) 的上游压力量级相当
 const AI_CHECK_PARALLEL_CANDIDATES = 3;
+/** R471：触发规则降级的首轮错误类别；unknown 不降级（语义不明，保留原 error 事件） */
+const FALLBACK_ERROR_KINDS: ReadonlySet<AiErrorKind> = new Set<AiErrorKind>(["quota", "rate-limit", "upstream", "network"]);
 const DOMAIN_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62}))+$/;
 
 /** 累计核验计数（KV 非原子，允许少量误差） */
@@ -87,6 +90,8 @@ interface DayUsage {
   refine: number;
   /** 当日 AI 上游错误分类计数（R264，仅数字；旧数据无此字段） */
   aiErrors?: Partial<Record<AiErrorKind, number>>;
+  /** 当日规则降级次数（R471，按 fallback 事件 reason 计；quota-breaker = 熔断期内直接降级，未打上游） */
+  fallbacks?: Partial<Record<FallbackReason, number>>;
   /** 分享写入读回校验失败后的重试次数（R305，生产观测；旧数据无此字段） */
   shareWriteRetry?: number;
   /** 分享写入最终失败（含换 id 重写仍失败）次数（R305） */
@@ -128,6 +133,36 @@ async function bumpLlmProvider(kv: KVNamespace | undefined, provider: LlmProvide
     cur.llmProvider = { ...cur.llmProvider, [provider]: (cur.llmProvider?.[provider] ?? 0) + 1 };
     await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
   } catch { /* 统计失败不影响主流程 */ }
+}
+
+/** 当日规则降级计数 +1（R471，仅计数；KV 非原子，允许少量误差） */
+async function bumpFallback(kv: KVNamespace | undefined, reason: FallbackReason): Promise<void> {
+  if (!kv) return;
+  try {
+    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
+    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
+    cur.fallbacks = { ...cur.fallbacks, [reason]: (cur.fallbacks?.[reason] ?? 0) + 1 };
+    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
+  } catch { /* 统计失败不影响主流程 */ }
+}
+
+/** 熔断标记：值为到期时间戳（ms），KV TTL 之外再校验一次时间，避免 TTL 精度/时钟差导致多放行 */
+async function llmBreakerUntil(kv: KVNamespace | undefined): Promise<number | null> {
+  if (!kv) return null;
+  try {
+    const raw = await kv.get(LLM_BREAKER_KEY);
+    const until = Number(raw);
+    return raw && Number.isFinite(until) && until > Date.now() ? until : null;
+  } catch {
+    return null;
+  }
+}
+
+async function tripLlmBreaker(kv: KVNamespace | undefined): Promise<void> {
+  if (!kv) return;
+  try {
+    await kv.put(LLM_BREAKER_KEY, String(Date.now() + LLM_BREAKER_TTL_S * 1000), { expirationTtl: LLM_BREAKER_TTL_S });
+  } catch { /* 熔断写失败退化为每请求各自撞上游（原行为） */ }
 }
 
 /** 分享写入重试/失败计数（R305，仅聚合数字；KV 非原子，允许少量误差） */
@@ -274,6 +309,8 @@ app.post("/api/ai-search", async (c) => {
   const fast = body.fast === true;
   const lang: "zh" | "en" = body.lang === "en" ? "en" : "zh";
   let description = (body.description ?? "").trim().slice(0, 500);
+  // R471：规则降级只从用户原始描述抽词（不含下方拼接的风格/长度偏好后缀）
+  const rawDescription = description;
   const style = (body.style ?? "").trim().slice(0, 50);
   const lengthPref = (body.lengthPref ?? "").trim().slice(0, 50);
   // R465 补丁：语言判定必须基于拼接风格/长度偏好前的原始描述（后缀含中文会污染判定）
@@ -333,11 +370,15 @@ app.post("/api/ai-search", async (c) => {
         model: c.env.LLM_FALLBACK_MODEL,
         thinking: c.env.LLM_FALLBACK_THINKING,
       });
-      const understandingDone = generateUnderstanding(description, apiKey, lang, llmBase, llmModel, llmThinking, llmFallback)
-        .then(async (u) => {
-          if (u) await emit({ type: "understanding", ...u });
-        })
-        .catch(() => undefined);
+      // R471：熔断期内（quota 耗尽后 5 分钟）不打任何上游——理解与候选两路都跳过，直接进规则降级
+      const breakerHit = (await llmBreakerUntil(c.env.CACHE)) !== null;
+      const understandingDone = breakerHit
+        ? Promise.resolve()
+        : generateUnderstanding(description, apiKey, lang, llmBase, llmModel, llmThinking, llmFallback)
+            .then(async (u) => {
+              if (u) await emit({ type: "understanding", ...u });
+            })
+            .catch(() => undefined);
       try {
         for (let round = 1; round <= MAX_ROUNDS && availableCount < target; round++) {
           await emit({ type: "round", round, availableCount, target, note: round === 1 ? "AI 正在构思名字…" : "可注册的还不够，AI 反思后继续想…" });
@@ -376,38 +417,64 @@ app.post("/api/ai-search", async (c) => {
               ),
             );
           };
-          try {
-            await generateAiCandidates(description, apiKey, {
-              count: fast && round === 1 ? FAST_FIRST_ROUND_COUNT : 24,
-              // 跨轮去重：把已核验过的全部名字和被注册模式一起反馈给 refine 轮
-              feedback:
-                round === 1 && tried.size === 0
-                  ? undefined
-                  : { tried: [...tried], taken: takenLabels, takenThemes, disliked: disliked.length > 0 ? disliked : undefined },
-              round,
-              lang,
-              guard,
-              baseUrl: llmBase,
-              model: llmModel,
-              thinking: llmThinking,
-              fallback: llmFallback,
-              descLooksEnglish,
-              onCandidate,
-            });
-          } catch (e) {
-            // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；
-            // detail 只含既有错误短码（llm-http-402 等），不含 key 与上游响应体
-            const errorKind = classifyAiError(e);
-            await checks.drain().catch(() => undefined);
-            await emit({ type: "error", round, errorKind, detail: String(e), guard });
-            await bumpAiError(c.env.CACHE, errorKind);
-            break;
+          // R471：规则降级——熔断命中或首轮 LLM 失败（quota/rate-limit/upstream/network）时，用确定性规则候选走同一条
+          // onCandidate 流水（proposed → RDAP 核验 → result），事件结构与成功路径一致；只多一条 fallback 事件供前端挂横幅。
+          // 降级轮结束后不再继续反思轮（上游不可用）
+          const runFallback = async (reason: FallbackReason) => {
+            const rules = generateRuleCandidates(rawDescription, lang, guard, tried);
+            await emit({ type: "fallback", round, reason, count: rules.length });
+            for (const x of rules) await onCandidate(x);
+          };
+          let fellBack: FallbackReason | null = null;
+          if (breakerHit) {
+            await runFallback("quota-breaker");
+            fellBack = "quota-breaker";
+          } else {
+            try {
+              await generateAiCandidates(description, apiKey, {
+                count: fast && round === 1 ? FAST_FIRST_ROUND_COUNT : 24,
+                // 跨轮去重：把已核验过的全部名字和被注册模式一起反馈给 refine 轮
+                feedback:
+                  round === 1 && tried.size === 0
+                    ? undefined
+                    : { tried: [...tried], taken: takenLabels, takenThemes, disliked: disliked.length > 0 ? disliked : undefined },
+                round,
+                lang,
+                guard,
+                baseUrl: llmBase,
+                model: llmModel,
+                thinking: llmThinking,
+                fallback: llmFallback,
+                descLooksEnglish,
+                onCandidate,
+              });
+            } catch (e) {
+              // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；
+              // detail 只含既有错误短码（llm-http-402 等），不含 key 与上游响应体
+              const errorKind = classifyAiError(e);
+              await bumpAiError(c.env.CACHE, errorKind);
+              // R471：quota 耗尽→写 5 分钟熔断（rate-limit 不写）；首轮失败→规则降级而非直接结束
+              if (errorKind === "quota") await tripLlmBreaker(c.env.CACHE);
+              if (round === 1 && FALLBACK_ERROR_KINDS.has(errorKind)) {
+                await runFallback(errorKind);
+                fellBack = errorKind;
+              } else {
+                await checks.drain().catch(() => undefined);
+                await emit({ type: "error", round, errorKind, detail: String(e), guard });
+                break;
+              }
+            }
           }
           // R474：本轮实际应答的 LLM 上游（primary/fallback）随汇总事件透出（新增尾部字段，旧前端忽略），并计入当日 usage
           await emit({ type: "proposed", round, items: [], tlds, guard, provider: guard.provider });
           if (guard.provider) await bumpLlmProvider(c.env.CACHE, guard.provider);
           await checks.drain();
           await bumpStats(c.env.CACHE, checkedDomains);
+          if (fellBack) {
+            // 核验排完后再计数：避开与 waitUntil(bumpUsage) 对同一 usage 键的读改写竞争（KV 非原子）
+            await bumpFallback(c.env.CACHE, fellBack);
+            break;
+          }
           takenLabels.push(...takenThisRound);
           for (const label of takenThisRound) {
             const theme = themeByLabel.get(label);

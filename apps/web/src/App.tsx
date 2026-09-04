@@ -7,14 +7,14 @@ import { getHomePage, loadHomePage } from "@/components/home-page-loader";
 import type { LogEntry } from "@/components/agent-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
 import { isMockEnabled, runMockStream } from "@/mock";
-import { clearAiQuotaDown, loadSearch, markAiQuotaDown, saveSearch } from "@/lib/persist";
+import { clearAiQuotaDown, loadSearch, markAiQuotaDown, saveSearch, type SavedFallback } from "@/lib/persist";
 import { TLD_LIST } from "@/content/tld-list";
 import { GUIDE_LABELS } from "@/content/guide-labels";
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
-import { useI18n } from "@/lib/i18n";
+import { useI18n, type I18nKey } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
 import { errorSpec, httpErrorSpec, UiErrorException, uiErrorText, type UiError } from "@/lib/utils";
-import type { AiErrorKind, Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types";
+import type { AiErrorKind, FallbackReason, Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types";
 
 // 按路由懒加载：这些页面不在首屏关键路径上，拆包降低首屏 JS。
 // chunk 加载失败（新部署后旧 hashed 文件 404）时自动整页刷新一次拿新版本，避免白屏。
@@ -192,6 +192,8 @@ export default function App() {
   const [errorKind, setErrorKind] = useState<AiErrorKind | null>(null);
   // R247：多轮低产出提示（worker 每次搜索至多发一次 hint 事件）
   const [lowYieldHint, setLowYieldHint] = useState(false);
+  // R471：AI 不可用时的规则降级（fallback 事件）：结果页顶部挂横幅，候选交互照常
+  const [fallback, setFallback] = useState<SavedFallback | null>(saved?.fallback ?? null);
   const [logs, setLogs] = useState<LogEntry[]>([]);
   const [elapsedSec, setElapsedSec] = useState<number | undefined>(saved?.elapsedSec);
   const [locked, setLocked] = useState<Set<string>>(() => new Set(saved?.locked ?? []));
@@ -245,8 +247,9 @@ export default function App() {
     });
 
   const availableCount = rows.filter((r) => r.status === "available").length;
-  // R267：quota（401/402/403）重试必然失败，抑制所有会触发 AI 的入口
-  const quotaExhausted = errorKind === "quota";
+  // R267：quota（401/402/403）重试必然失败，抑制所有会触发 AI 的入口；
+  // R471：因 quota / 服务端熔断降级时同样抑制（再来一轮只会再次命中熔断）
+  const quotaExhausted = errorKind === "quota" || fallback?.reason === "quota" || fallback?.reason === "quota-breaker";
 
   // SEO 内容页（/tld/:x、/guide/:x、/vs/:x、/prices 等）提前 return，mode 仍是 "home"，
   // 不应为纯阅读流量预取搜索 chunk；点 logo 回首页是整页导航，按需加载即可。
@@ -259,9 +262,9 @@ export default function App() {
     // 只要有已落地（非 checking）的结果就覆盖快照，与所在页面/是否运行中无关：
     // 搜索每轮结果落地与最终完成都会写入，恢复条恢复的永远是最近一次搜索。
     if (rows.some((r) => r.status !== "checking")) {
-      saveSearch({ values, rows, rounds, elapsedSec, aiUnderstanding, refinements, triedLabels: triedLabelsRef.current, locked: [...locked] });
+      saveSearch({ values, rows, rounds, elapsedSec, aiUnderstanding, refinements, triedLabels: triedLabelsRef.current, locked: [...locked], fallback });
     }
-  }, [rows, rounds, values, elapsedSec, aiUnderstanding, refinements, locked]);
+  }, [rows, rounds, values, elapsedSec, aiUnderstanding, refinements, locked, fallback]);
 
   function handleEvent(ev: StreamEvent) {
     const round = (ev.round ?? 0) + roundOffsetRef.current;
@@ -291,7 +294,8 @@ export default function App() {
           }),
         ),
       );
-      clearAiQuotaDown();
+      // 规则降级候选不代表 AI 已恢复，不清除首页的 AI 不可用标记
+      if (!ev.items!.some((i) => i.theme === "rule")) clearAiQuotaDown();
       triedLabelsRef.current.push(...ev.items!.map((i) => i.label));
       setRows((prev) => {
         const seen = new Set(prev.map((r) => r.domain));
@@ -299,6 +303,11 @@ export default function App() {
         setRounds((rs) => rs.map((r) => (r.round === round ? { ...r, proposed: r.proposed + fresh.length } : r)));
         return [...prev, ...fresh];
       });
+    } else if (ev.type === "fallback") {
+      const reason = ev.reason ?? "unknown";
+      setFallback({ reason, count: ev.count ?? 0 });
+      setRounds((prev) => prev.map((r) => (r.round === (ev.round ?? 1) ? { ...r, noteKey: "agent.note.fallback" } : r)));
+      if (reason === "quota" || reason === "quota-breaker") markAiQuotaDown();
     } else if (ev.type === "hint") {
       if (ev.kind === "lowYield") setLowYieldHint(true);
     } else if (ev.type === "understanding") {
@@ -363,6 +372,7 @@ export default function App() {
     setLogs([]);
     setError(null);
     setErrorKind(null);
+    setFallback(null);
     setLowYieldHint(false);
     setRunning(true);
     setMode("agent");
@@ -681,6 +691,31 @@ export default function App() {
                 }}
               >
                 {t("error.retry")}
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
+      {fallback && (mode === "results" || mode === "agent") && (
+        <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
+          <div
+            role="status"
+            className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-2.5"
+          >
+            <p className="min-w-0 flex-1 text-sm text-txt0">
+              {t("fallback.banner", { reason: t(`fallback.reason.${fallback.reason}` as I18nKey), count: fallback.count })}
+            </p>
+            {!running && !quotaExhausted && lastRunRef.current && (
+              <button
+                type="button"
+                className="inline-flex min-h-[44px] shrink-0 items-center rounded-md border border-amber-500/40 px-3 text-sm font-semibold text-txt0 transition-colors hover:bg-amber-500/20 sm:min-h-0 sm:py-1.5"
+                onClick={() => {
+                  const last = lastRunRef.current!;
+                  void run(last.v, last.opts);
+                }}
+              >
+                {t("fallback.retryAi")}
               </button>
             )}
           </div>
