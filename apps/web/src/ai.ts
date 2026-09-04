@@ -29,8 +29,11 @@ export interface AiCandidate {
 
 // meaning 质量红线（R179）：首轮 system prompt 与反思轮 refine hint 共享同一份文案，避免措辞漂移
 const MEANING_REDLINES_ZH = `- meaning 必须是定稿文案：一次成稿、语气笃定、语法通顺；禁止问号式犹豫、禁止「其实/等等」式自我修正、禁止括号内猜测拆词；对寓意拆解没把握，就换一个你能笃定解释的候选
-  好例子：「木舟」muzhou，双字全拼，寓意稳载远行，声调平缓，读一遍就能拼出来
+  好例子：「木舟」muzhou，双字全拼，寓意稳载远行，双音节干脆，读一遍就能拼出来
   坏例子：murory，可能是 mu(木?)+rory？也许取自某个人名（不太确定）
+- 禁止描述声调/平仄：不要写「一声/第二声/阴平/去声/平仄相间/先升后平/一升一平/声调上扬」这类声调判断（模型无法可靠判断声调，写错即失信）；说读感只谈音节来源、叠音、声母韵母搭配与联想
+  好例子：「暖趴」nuanpa，暖是温度，趴是伏卧的慵懒姿态，双音节都以 a 韵收尾，读来舒展
+  坏例子：「暖趴」nuanpa，暖字第二声接趴字第一声，先升后平
 - 词源/拆字必须真实：只引用真实存在的汉字、英文单词或词根，禁止臆造不存在的词充当词源；禁止引用 label 中不存在的字母或音节（label 里没有 z 就不能说 z 取自某词）
 - meaning 只使用中文与英文书写，禁止混入韩文、日文假名、西里尔字母、IPA 音标等其他文字
 - 禁止在 meaning 里用括号（()（）[]【】）内嵌拆字/注音/补充解释；拆字与寓意必须融进一句通顺的定稿文案直接说清
@@ -84,8 +87,8 @@ const ZH_PINYIN_HINT = `
 
 拼音候选强化（用户是中文创业者，拼音系候选质量优先）：
 - 路线配额硬要求：每轮候选中 theme 为 pinyin 或 blend 的合计必须 ≥40%（如 24 个候选中至少 10 个），其余才是 word/coined；不足配额视为不合格输出
-- 三种拼音路线都要覆盖，每种至少 2 个：① 简短双字拼（哔哩哔哩 bilibili、知乎 zhihu、豆瓣 douban 式，追求双拼声调节奏与叠音美感）；② 全拼（小红书 xiaohongshu 式，寓意完整直白）；③ 声母缩写或拼音+英文混搭（zlz、tao+bao+hub 式，短而有记忆点）
-- 每个 theme 为 pinyin 或 blend 的候选，meaning 必须包含用「」括起的中文原词，并说明为什么这个拼音好读好记（如声调顺口、叠音、无歧义拼读），例如：「知舟」zhizhou，双字全拼，齿音开头声调上扬，读一遍就能拼出来
+- 三种拼音路线都要覆盖，每种至少 2 个：① 简短双字拼（哔哩哔哩 bilibili、知乎 zhihu、豆瓣 douban 式，追求双拼节奏与叠音美感）；② 全拼（小红书 xiaohongshu 式，寓意完整直白）；③ 声母缩写或拼音+英文混搭（zlz、tao+bao+hub 式，短而有记忆点）
+- 每个 theme 为 pinyin 或 blend 的候选，meaning 必须包含用「」括起的中文原词，并说明为什么这个拼音好读好记（只谈音节来源、叠音、声母韵母搭配、无歧义拼读，不谈声调/平仄），例如：「知舟」zhizhou，双字全拼，zh 声母开头、ou 韵收尾，读一遍就能拼出来
 - 「」内的汉字必须优先用常用字（现代汉语常用 3500 字范围内的直觉），普通人看到拼音要能反推出汉字：木/舟/云/星/禾/悦/途 好，岑/蕨/飏/麓/隰/珩 这类生僻字不要；组词语义要自然（「木舟」「星河」好，「续夸」式牵强搭配不要）
 - 拼音自筛淘汰标准（不达标的直接不要输出）：x/q/zh/c/s 等易歧义声母连串（老外读不出，如 xiqizhi）；超过 4 个音节；含 iu/ui、in/ing、an/ang 等易混易错拼写；整体拼读有多种可能切分产生歧义的组合`;
 
@@ -356,6 +359,10 @@ export interface GuardStats {
   pinyinSupplement?: boolean;
   /** 主轮实际应答的 LLM 上游（R474：primary=主上游，fallback=备用上游）；LLM 调用未成功时无此字段 */
   provider?: LlmProvider;
+  /** 解析后 theme 被规则归一（模型标注与高置信规则冲突）的候选数，含补发轮（R499；旧数据无此字段） */
+  themeNormalized?: number;
+  /** zh meaning 声调/平仄描述子句被删除的候选数，含补发轮（R499；旧数据无此字段） */
+  toneClaimStripped?: number;
 }
 
 function newGuardDropCounts(): GuardDropCounts {
@@ -382,6 +389,8 @@ export function newGuardStats(): GuardStats {
     supplementAttempts: 0,
     supplementDropped: newGuardDropCounts(),
     retries: 0,
+    themeNormalized: 0,
+    toneClaimStripped: 0,
   };
 }
 
@@ -545,6 +554,124 @@ const WORD_TLD_SUFFIX_ALLOW = new Set([
 export function wordThemeEmbedsTld(label: string): boolean {
   if (WORD_TLD_SUFFIX_ALLOW.has(label)) return false;
   return WORD_TLD_EMBED_SUFFIXES.some((t) => label.length > t.length && label.endsWith(t));
+}
+
+// ---------------- 解析后 theme 归一（R499，R494 审计 P3-1） ----------------
+// 生产坏例（R494 6 份 NDJSON 回放）：zhangwubao「账务宝」全拼标 blend；cuddlepup/fluffnest/
+// barkbite/furbuddy/nibblenest/pawlab 等两词拼接标 word；harborly（harbor + -ly）标 blend。
+// theme 决定结果页聚类 chips（R105）与 word 配额计数（R224），标错会让配额补发判断失真。
+// 归一只在规则置信度高时以规则为准，不确定时保留模型标注；不依赖英文词表——证据来源是
+// 模型自己的 meaning：它把 label 拆成了哪些英文词段 / 引用了哪个「」中文词（调研见
+// docs/research/theme-normalization.md）。产品语义沿用 SYSTEM_PROMPT / EN_NAMING_HINT 的定义：
+//   zh：pinyin=中文拼音/缩写；word=现成英文单词；coined=英文合成词/造词；blend=拼音+英文混合
+//   en：word=词典词；blend=两个可辨认英文词段拼接；coined=其余造词
+// 规则：
+//   Z1 zh 非 pinyin 标注，label 可被合法音节完整切分，且 meaning 某「」引用词逐字全拼恰等于 label → pinyin
+//   Z2 zh 标 word，meaning 把 label 无缝拆成 ≥2 个引用词段 → 含「」引用词拼音段则 blend，否则 coined
+//   E1 en 标 word，meaning 把 label 无缝拆成 ≥2 个各 ≥3 字母的引用词段（无派生后缀段）→ blend
+//      Z2/E1 例外：label 本身是已词汇化的真实复合词（WORD_LEXICALIZED_COMPOUNDS，munchkin/wagtail 型）→ 保留 word
+//   S1 标 blend，label = 被引用词干 + 派生后缀（-ly/-ify/-ix/-ora/-io/-ish）且拆不出两词段 → coined（zh 需无「」引用词）
+// 其余情况（含数字/连字符 label、未被 meaning 拆解的合成词、pan 型「既是拼音又是英文词」但未引「」）保留模型标注。
+
+/** 真实词典词但模型常按两段解释的词汇化复合词（回放坏例 munchkin、wagtail；R494 审计判 munchkin 标 word ✓），不归一 */
+const WORD_LEXICALIZED_COMPOUNDS = new Set([
+  "munchkin", "wagtail", "sunflower", "butterfly", "football", "network", "keyboard", "notebook", "passport", "rainbow",
+  "snowball", "sunrise", "sunset", "moonlight", "firefly", "ladybug", "toolbox", "workshop", "bookmark", "hotspot",
+  "homework", "teamwork", "landmark", "lighthouse", "greenhouse", "warehouse", "wildfire", "waterfall", "seashell", "starfish",
+  "catnip", "pawprint", "pushpin", "backpack", "laptop", "desktop", "website", "upstart", "outlook", "overflow",
+]);
+
+/** 派生后缀：不是独立英文词，label = 词干 + 后缀 时按定义不可能是「两词拼接」 */
+const THEME_DERIV_SUFFIXES = ["ify", "ily", "ly", "ix", "ora", "io", "ish"] as const;
+const THEME_QUOTED_CJK_RE = /「([\u3400-\u4dbf\u4e00-\u9fff]{1,6})」/g;
+
+/** meaning 中出现的独立 ASCII 词（小写，≥2 字母） */
+function meaningAsciiTokens(meaning: string): Set<string> {
+  const out = new Set<string>();
+  for (const m of meaning.toLowerCase().matchAll(/[a-z]+/g)) if (m[0].length >= 2) out.add(m[0]);
+  return out;
+}
+
+/**
+ * label 能否被 meaning 中引用的 ASCII 词段按顺序无缝拼出（≥2 段、每段 ≥minPart 字母、段不等于 label 本身）。
+ * 返回段数最少的一种拆分，拆不出返回 null。
+ */
+export function citedSplit(label: string, meaning: string, minPart = 2): string[] | null {
+  if (!/^[a-z]+$/.test(label)) return null;
+  const tokens = meaningAsciiTokens(meaning);
+  tokens.delete(label);
+  const best: (string[] | null)[] = new Array<string[] | null>(label.length + 1).fill(null);
+  best[0] = [];
+  for (let i = 0; i < label.length; i++) {
+    const prefix = best[i];
+    if (!prefix) continue;
+    for (let j = i + minPart; j <= label.length; j++) {
+      const part = label.slice(i, j);
+      if (!tokens.has(part)) continue;
+      const cur = best[j];
+      if (!cur || cur.length > prefix.length + 1) best[j] = [...prefix, part];
+    }
+  }
+  const r = best[label.length];
+  return r && r.length >= 2 ? r : null;
+}
+
+/** meaning 的「」引用词中是否有一个逐字全拼恰等于 target */
+function quotedFullPinyinEquals(target: string, meaning: string): boolean {
+  THEME_QUOTED_CJK_RE.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = THEME_QUOTED_CJK_RE.exec(meaning)) !== null) {
+    if (quotedWordMatchesLabel(m[1], target, false)) return true;
+  }
+  return false;
+}
+
+const hasQuotedCjk = (meaning: string): boolean => {
+  THEME_QUOTED_CJK_RE.lastIndex = 0;
+  return THEME_QUOTED_CJK_RE.test(meaning);
+};
+
+/** label = 词干 + 派生后缀，且词干（≥3 字母）被 meaning 引用 → 返回词干，否则 null */
+function derivedFromCitedStem(label: string, meaning: string): string | null {
+  const tokens = meaningAsciiTokens(meaning);
+  for (const suf of THEME_DERIV_SUFFIXES) {
+    if (label.length > suf.length + 2 && label.endsWith(suf)) {
+      const stem = label.slice(0, -suf.length);
+      if (stem.length >= 3 && tokens.has(stem)) return stem;
+    }
+  }
+  return null;
+}
+
+/**
+ * 解析后 theme 归一：返回应采用的 theme（与 modelTheme 相同即未改动）。
+ * allowPinyin=false（en 场景 / 英文描述，R465）时不做 Z1，避免把候选归一到即将被丢弃的拼音路线。
+ */
+export function normalizeTheme(label: string, meaning: string, modelTheme: AiTheme, lang: "zh" | "en", allowPinyin = lang === "zh"): AiTheme {
+  if (modelTheme === "rule" || !/^[a-z]+$/.test(label)) return modelTheme;
+  // Z1：非 pinyin 标注但「」引用词全拼恰等于 label（zhangwubao「账务宝」标 blend 型）
+  if (lang === "zh" && allowPinyin && modelTheme !== "pinyin" && checkPinyinLabel(label).ok && quotedFullPinyinEquals(label, meaning)) {
+    return "pinyin";
+  }
+  if (modelTheme === "word") {
+    if (WORD_LEXICALIZED_COMPOUNDS.has(label)) return modelTheme;
+    if (lang === "zh") {
+      // Z2：模型自述「A 是…，B 是…」把 label 拆成多段 → 不是现成英文单词
+      const parts = citedSplit(label, meaning, 2);
+      if (parts) return parts.some((p) => quotedFullPinyinEquals(p, meaning)) ? "blend" : "coined";
+      return modelTheme;
+    }
+    // E1：en 两个可辨认英文词段拼接（cuddle + pup 型）按 EN_NAMING_HINT ② 应标 blend
+    const parts = citedSplit(label, meaning, 3);
+    if (parts && !parts.some((p) => (THEME_DERIV_SUFFIXES as readonly string[]).includes(p))) return "blend";
+    return modelTheme;
+  }
+  if (modelTheme === "blend") {
+    // S1：harborly = harbor + -ly——后缀不是词，按定义不是两词拼接；zh 场景 blend 指拼音+英文，有「」引用词时保守不动
+    if (lang === "zh" && hasQuotedCjk(meaning)) return modelTheme;
+    if (derivedFromCitedStem(label, meaning) && !citedSplit(label, meaning, 3)) return "coined";
+  }
+  return modelTheme;
 }
 
 /** 统计候选的 theme 分布 */
@@ -943,6 +1070,44 @@ export const stripParentheticalAnnotations = (m: string): string => {
 
 /** meaning 完整清洗管线：引号归一 → 残留符号清理 → 括号注释剥离 → 去首尾空白 */
 export const cleanMeaning = (m: string): string => stripParentheticalAnnotations(stripUnpairedCjkQuotes(normalizeQuotes(m))).trim();
+
+// ---------------- zh meaning 声调/平仄描述剥离（R499，R494 审计 P3-2） ----------------
+// 生产坏例：lexin「声调一升一平」（实为 4+1）、zhangping「先升后平」（4+2）、nuanpa「暖第二声接趴第一声」
+// （3+1）、huazhi「一升一平」（1+1）——模型自由描述声调不可靠，且中文创业者一眼能看出错。
+// 仓库拼音表（R222）为去声调数据，无法校验声调，故采取保守策略：prompt 禁止描述声调（见 MEANING_REDLINES_ZH），
+// 解析后仍出现的声调/平仄子句整句删除（按 ，；。、 切分的子句），不删整条候选，不留悬空标点；
+// 含「」引用词的子句不删（引用词是拼音一致性校验与前端高亮的依据）。
+export const TONE_CLAIM_RE =
+  /声调|平仄|第[一二三四]声|[一二三四]声(?:字|开头|收尾|结尾|起|收)|(?:读|念|为|是|属|作|接|归)[一二三四]声|阴平|阳平|上声|去声|平声|仄声|升调|降调|平调|先[升降扬抑平]后[升降扬抑平]|一[升降平]一[升降平]|从[平仄升降]到[平仄升降]|由[平仄][到转][平仄]|[平仄](?:相间|交替)|抑扬/;
+const CLAUSE_SPLIT_RE = /([，,；;。！!？?、])/;
+const CLAUSE_JOINERS_RE = /[，,；;、]/;
+const TERMINAL_PUNCT_RE = /[。！!？?]$/;
+
+/** 删除 zh meaning 中描述声调/平仄的子句；stripped=false 时 meaning 原样返回 */
+export function stripToneClaims(meaning: string): { meaning: string; stripped: boolean } {
+  if (!TONE_CLAIM_RE.test(meaning)) return { meaning, stripped: false };
+  const parts = meaning.split(CLAUSE_SPLIT_RE);
+  const kept: string[] = [];
+  let removed = false;
+  for (let i = 0; i < parts.length; i += 2) {
+    const text = parts[i];
+    const delim = parts[i + 1] ?? "";
+    if (TONE_CLAIM_RE.test(text) && !hasQuotedCjk(text)) {
+      removed = true;
+      continue;
+    }
+    kept.push(text + delim);
+  }
+  if (!removed) return { meaning, stripped: false };
+  const terminal = TERMINAL_PUNCT_RE.exec(meaning)?.[0] ?? "";
+  let out = kept.join("").trim();
+  // 删子句后可能出现开头标点、连续标点、句末悬空的逗号 —— 逐一收口
+  while (out.length > 0 && CLAUSE_JOINERS_RE.test(out[0])) out = out.slice(1).trimStart();
+  out = out.replace(/([，,；;、])\s*[，,；;、]+/g, "$1").replace(/[，,；;、]+\s*([。！!？?])/g, "$1").replace(/[，,；;、]+$/, "").trim();
+  if (terminal && !TERMINAL_PUNCT_RE.test(out)) out += terminal;
+  if (out.replace(/[，,；;。！!？?、\s]/g, "").length === 0) return { meaning, stripped: false };
+  return { meaning: out, stripped: true };
+}
 
 // ---------------- meaning 字符白名单（R179） ----------------
 // 生产审计发现反思轮 meaning 偶发混入韩文（코더）、IPA 音标（gɪt）等异文字，整条丢弃。
@@ -1547,7 +1712,7 @@ function admitCandidate(c: Partial<AiCandidate>, ctx: AdmitContext): AiCandidate
   // meaning 为空/全空白的候选直接丢弃（流截断或模型漏字段），不进核验队列；
   // tried 由上层根据返回值累积，被丢弃项天然不计入
   const rawMeaning = String(c.meaning ?? "");
-  const meaning = cleanMeaning(rawMeaning);
+  let meaning = cleanMeaning(rawMeaning);
   if (!meaning) {
     dropped.emptyMeaning++;
     return null;
@@ -1556,6 +1721,14 @@ function admitCandidate(c: Partial<AiCandidate>, ctx: AdmitContext): AiCandidate
   if (meaning.length < 6 && PAREN_RE.test(rawMeaning)) {
     dropped.emptyMeaning++;
     return null;
+  }
+  // R499（R494 P3-2）：zh meaning 的声调/平仄描述子句整句删除（不删候选），拼音表无声调无法校验
+  if (ctx.lang === "zh") {
+    const t = stripToneClaims(meaning);
+    if (t.stripped) {
+      meaning = t.meaning;
+      guardStats.toneClaimStripped = (guardStats.toneClaimStripped ?? 0) + 1;
+    }
   }
   // R179：meaning 混入目标语言白名单外的文字（韩文/西里尔/IPA 等）→ 整条丢弃
   if (!meaningCharsetOk(meaning, ctx.lang)) {
@@ -1596,7 +1769,14 @@ function admitCandidate(c: Partial<AiCandidate>, ctx: AdmitContext): AiCandidate
     return null;
   }
   const s = c.scores ?? ({} as Partial<AiScores>);
-  const theme = String(c.theme ?? "").toLowerCase();
+  const modelTheme = String(c.theme ?? "").toLowerCase();
+  // R499（R494 P3-1）：模型标注与高置信规则冲突时以规则为准（zhangwubao 全拼标 blend / cuddlepup 两词拼接标 word 型），
+  // 先于拼音合法性校验，归一到 pinyin 的候选同样过 R124/R196 拼音防线
+  let theme = modelTheme;
+  if (!ctx.ruleTheme && THEMES.has(modelTheme)) {
+    theme = normalizeTheme(label, meaning, modelTheme as AiTheme, ctx.lang, !ctx.enPinyinDrop);
+    if (theme !== modelTheme) guardStats.themeNormalized = (guardStats.themeNormalized ?? 0) + 1;
+  }
   // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
   // blend/word/coined 不强制校验（blend 含英文，无法整体切分）
   let readabilityPenalty = 0;
