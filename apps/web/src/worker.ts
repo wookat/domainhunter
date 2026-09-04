@@ -23,12 +23,17 @@ import { tldPrice } from "./types";
 import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
 import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
 import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
+import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
+import { PageviewCounter, pvKey, type DayPageviews } from "./pageviews";
+import { INDEXNOW_ENDPOINT, submitIndexNow, summarizeIndexNow } from "./indexnow";
 
 // LLM_API_BASE/LLM_MODEL：LLM 上游基地址与模型名。默认 DeepSeek 官方 + deepseek-chat；
 // 生产可指向 OpenAI 兼容网关（R460：电信 AI 网关），本地 wrangler dev 亦可指向假上游验证错误路径（R264）
 // LLM_FALLBACK_*（R474）：备用上游（任一 OpenAI 兼容端点），主上游额度耗尽/认证失败/5xx/网络失败时自动重发；
 // LLM_FALLBACK_API_KEY 为 secret（wrangler secret put），未配置则 failover 休眠，行为与仅有主上游时完全一致
-type Bindings = {
+// GSC_VERIFICATION / BING_VERIFICATION / ANALYTICS_PROVIDER / ANALYTICS_TOKEN（R481）：站点验证 meta 与分析脚本，
+// 全部可选；为空时 HTML 输出与未配置时字节一致（见 growth-inject.ts）
+type Bindings = GrowthVars & {
   ASSETS: Fetcher;
   DEEPSEEK_API_KEY: string;
   CACHE?: KVNamespace;
@@ -42,6 +47,27 @@ type Bindings = {
 };
 
 const app = new Hono<{ Bindings: Bindings }>();
+
+// HTML 文档统一后处理（R481）：所有 text/html 响应（含 SSR 页面与 ASSETS 直出的 index.html）在此
+// ① 注入验证 meta / 分析 beacon（vars 为空则不读 body，原响应原样透传）；② 服务端 pageviews/bots 计数。
+// 计数器按 isolate 复用，合并窗口内多次请求为一次 KV 写；仅统计 GET + 2xx 的 HTML 文档（404 壳与 API 不计）。
+let pageviewCounter: PageviewCounter | null = null;
+app.use("*", async (c, next) => {
+  await next();
+  const res = c.res;
+  if (c.req.method !== "GET" || !isHtmlDocument(res)) return;
+  if (res.status >= 200 && res.status < 300 && c.env.CACHE) {
+    pageviewCounter ??= new PageviewCounter(c.env.CACHE);
+    c.executionCtx.waitUntil(pageviewCounter.record(new URL(c.req.url).pathname, c.req.header("user-agent")));
+  }
+  const snippet = buildHeadInjection(c.env);
+  if (!snippet) return;
+  const html = injectIntoHead(await res.text(), snippet);
+  const headers = new Headers(res.headers);
+  headers.delete("content-length");
+  headers.delete("content-encoding");
+  c.res = new Response(html, { status: res.status, statusText: res.statusText, headers });
+});
 
 const RATE_LIMIT_PER_HOUR = 20;
 const CACHE_TTL_TAKEN = 24 * 3600; // 已注册结果缓存 24h
@@ -1163,35 +1189,40 @@ app.get("/api/stats", async (c) => {
 app.get("/api/usage", async (c) => {
   const days = Math.min(Math.max(Number(c.req.query("days") ?? "14"), 1), 45);
   const kv = c.env.CACHE;
-  const out: Record<string, DayUsage> = {};
+  const out: Record<string, DayUsage & Partial<DayPageviews>> = {};
   if (kv) {
     const dates = Array.from({ length: days }, (_, i) => new Date(Date.now() - i * 86400_000).toISOString().slice(0, 10));
     await Promise.all(
       dates.map(async (d) => {
-        try {
-          const u = await kv.get<DayUsage>(`usage:${d}`, "json");
-          if (u) out[d] = u;
-        } catch { /* 单天读失败忽略 */ }
+        // usage:*（搜索漏斗）与 pv:*（HTML 文档计数，R481）分键存储、此处合并输出
+        const [u, pv] = await Promise.all([
+          kv.get<DayUsage>(`usage:${d}`, "json").catch(() => null),
+          kv.get<DayPageviews>(pvKey(d), "json").catch(() => null),
+        ]);
+        if (u || pv) out[d] = { ...(u ?? { searches: 0, byTld: {}, fast: 0, refine: 0 }), ...(pv ?? {}) };
       }),
     );
   }
   let cronLast: number | null = null;
   let indexnowLast: number | null = null;
+  let indexnowLastError: IndexNowError | null = null;
   let pricesLastOk: number | null = null;
   let pricesLastFail: number | null = null;
   try {
-    const [cl, il, po, pf] = await Promise.all([
+    const [cl, il, ie, po, pf] = await Promise.all([
       kv?.get("cron:last"),
-      kv?.get("indexnow:last"),
+      kv?.get(INDEXNOW_LAST_KEY),
+      kv?.get<IndexNowError>(INDEXNOW_LAST_ERROR_KEY, "json"),
       kv?.get(PRICES_LAST_OK_KEY),
       kv?.get(PRICES_LAST_FAIL_KEY),
     ]);
     cronLast = cl ? Number(cl) : null;
     indexnowLast = il ? Number(il) : null;
+    indexnowLastError = ie ?? null;
     pricesLastOk = po ? Number(po) : null;
     pricesLastFail = pf ? Number(pf) : null;
   } catch { /* 读失败返回 null */ }
-  return c.json({ days: out, cronLast, indexnowLast, pricesLastOk, pricesLastFail }, 200, { "cache-control": "public, max-age=300" });
+  return c.json({ days: out, cronLast, indexnowLast, indexnowLastError, pricesLastOk, pricesLastFail }, 200, { "cache-control": "public, max-age=300" });
 });
 
 // SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）
@@ -2021,26 +2052,47 @@ app.all("*", async (c) => {
   return notFoundShell(shell);
 });
 
-// IndexNow：向 Bing/Yandex 等搜索引擎主动推送全站 URL（key 按协议公开，对应 /<key>.txt 静态文件）
+// IndexNow：向 Bing/Yandex 等搜索引擎主动推送全站 URL（key 按协议公开，对应 public/<key>.txt 静态文件）
+// 状态键：indexnow:last = 最近一次成功（200/202）时间；indexnow:lastAttempt = 最近一次尝试时间（成功失败都写，
+// 用作 6h 冷却防止失败后每次 cron 都重发）；indexnow:lastError = 最近一次失败详情（成功后清除）。
+// 分批/状态码语义见 indexnow.ts；sitemap 当前 ~1.3k URL，远低于单次 10000 上限。
 const INDEXNOW_KEY = "024aa6c6f88245bbacdac2f60a94e333";
 const INDEXNOW_INTERVAL_MS = 24 * 3600 * 1000;
+const INDEXNOW_RETRY_MS = 6 * 3600 * 1000;
+const INDEXNOW_LAST_KEY = "indexnow:last";
+const INDEXNOW_LAST_ATTEMPT_KEY = "indexnow:lastAttempt";
+const INDEXNOW_LAST_ERROR_KEY = "indexnow:lastError";
+interface IndexNowError {
+  at: number;
+  status: number;
+  message: string;
+  submitted: number;
+}
 
 async function pingIndexNow(env: Bindings): Promise<void> {
   if (!env.CACHE) return;
-  const last = await env.CACHE.get("indexnow:last");
-  if (last && Date.now() - Number(last) < INDEXNOW_INTERVAL_MS) return;
-  await env.CACHE.put("indexnow:last", String(Date.now()));
+  const kv = env.CACHE;
+  const now = Date.now();
+  const [last, lastAttempt] = await Promise.all([kv.get(INDEXNOW_LAST_KEY), kv.get(INDEXNOW_LAST_ATTEMPT_KEY)]);
+  if (last && now - Number(last) < INDEXNOW_INTERVAL_MS) return;
+  if (lastAttempt && now - Number(lastAttempt) < INDEXNOW_RETRY_MS) return;
+  await kv.put(INDEXNOW_LAST_ATTEMPT_KEY, String(now));
   const host = SITE_ORIGIN.replace(/^https?:\/\//, "");
-  await fetch("https://api.indexnow.org/indexnow", {
-    method: "POST",
-    headers: { "content-type": "application/json; charset=utf-8" },
-    body: JSON.stringify({
-      host,
-      key: INDEXNOW_KEY,
-      keyLocation: `${SITE_ORIGIN}/${INDEXNOW_KEY}.txt`,
-      urlList: sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`),
-    }),
+  const results = await submitIndexNow({
+    host,
+    key: INDEXNOW_KEY,
+    keyLocation: `${SITE_ORIGIN}/${INDEXNOW_KEY}.txt`,
+    urls: sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`),
+    endpoint: INDEXNOW_ENDPOINT,
   });
+  const summary = summarizeIndexNow(results);
+  if (summary.ok) {
+    await Promise.all([kv.put(INDEXNOW_LAST_KEY, String(now)), kv.delete(INDEXNOW_LAST_ERROR_KEY)]);
+    return;
+  }
+  const err: IndexNowError = { at: now, status: summary.status, message: summary.message, submitted: summary.submitted };
+  console.error("indexnow failed", JSON.stringify(err));
+  await kv.put(INDEXNOW_LAST_ERROR_KEY, JSON.stringify(err));
 }
 
 export default {

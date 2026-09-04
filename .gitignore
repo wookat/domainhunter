@@ -2,3 +2,9 @@ node_modules
 dist
 .wrangler
 .dev.vars
+
+# QA session artifacts (docs/qa/*.py dump to cwd = repo root); keep out of git
+/storage-*.json
+/test-plan-*.md
+/test-report-*.md
+/ux-audit-*.md

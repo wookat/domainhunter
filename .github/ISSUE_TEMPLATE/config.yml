@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "安全漏洞 / Security vulnerability"
+    url: https://github.com/wookat/domainhunter/security/advisories/new
+    about: "请私密报送，不要开公开 Issue / Report privately via GitHub Security Advisories"
+  - name: "在线体验 / Try it live"
+    url: https://hunt.zalize.com
+    about: "hunt.zalize.com（免费、免登录）"

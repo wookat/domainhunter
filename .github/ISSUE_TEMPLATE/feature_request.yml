@@ -1,0 +1,51 @@
+name: "功能建议 / Feature request"
+description: "新功能、新 TLD、新内容页、体验改进 / New feature, TLD, content page or UX improvement"
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        DomainHunter 的核心利基是「中文创业者的域名猎手」：中文寓意 → 可注册的 .cn/.com。与这条链路相关的建议优先级最高。
+        Our focus is Chinese meaning → registrable .cn/.com domains for founders; proposals close to that path get priority.
+  - type: textarea
+    id: problem
+    attributes:
+      label: "你想解决什么问题？/ What problem are you trying to solve?"
+      description: "描述真实场景：你是谁、在找什么名字、卡在哪。 / Describe the real scenario: who you are, what you're naming, where you got stuck."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "建议方案 / Proposed solution"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: "涉及功能 / Area"
+      options:
+        - "AI 猎名候选质量 / AI candidate quality"
+        - "核验通道或新 TLD / Verification channel or new TLD"
+        - "价格与注册商 / Prices & registrars"
+        - "监控 / Webhook / Monitoring"
+        - "MCP 工具 / MCP tools"
+        - "内容页 / Content pages"
+        - "UI / 移动端 / 无障碍 / UI, mobile, a11y"
+        - "自部署 / 开发体验 / Self-hosting, DX"
+        - "其他 / Other"
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "替代方案 / 现有工具怎么做 / Alternatives or how other tools do it"
+      description: "如有竞品参考请附链接。 / Links to how other tools solve this are welcome."
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: "约束确认 / Constraints"
+      options:
+        - label: "该建议不需要自动注册域名或自动付款 / Does not require automatic registration or payment"
+        - label: "我知道 AI 路径按量计费，建议不会显著增加 AI 调用量 / I understand AI calls are metered and this won't multiply them"

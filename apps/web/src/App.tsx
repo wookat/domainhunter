@@ -144,6 +144,11 @@ function notFoundFromPath(): boolean {
   );
 }
 
+/** 服务端是否注入了分析 beacon（Worker var ANALYTICS_*，见 growth-inject.ts）；仅此时页脚展示隐私说明 */
+function analyticsEnabled(): boolean {
+  return typeof document !== "undefined" && document.querySelector("script[data-cf-beacon]") !== null;
+}
+
 /** 首页默认 TLD：支持 /?tld=xx 或 /?tld=xx,yy 精确预填（TLD 指南页 / 对比页 CTA、分享搜索链接入口），不自动补 com */
 function initialTlds(): string[] {
   const params = new URLSearchParams(window.location.search);
@@ -166,6 +171,7 @@ export default function App() {
   const [isWhy] = useState(whyFromPath);
   const [isNotFound] = useState(notFoundFromPath);
   const [isMcp] = useState(mcpFromPath);
+  const [hasAnalytics] = useState(analyticsEnabled);
   const [saved] = useState(() => {
     if (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() || advancedFromPath() || tldHubFromPath() || guideHubFromPath() || compareHubFromPath()) return null;
     // /?q= 或 /?tpl= 是显式预填入口（分享搜索链接 / 指南页 CTA），/?mode=exact 是精确核验入口（AI 不可用时的降级 CTA），
@@ -1047,6 +1053,7 @@ export default function App() {
           <a className="underline hover:text-txt1" href="https://github.com/wookat/domainhunter">
             GitHub
           </a>
+          {hasAnalytics && <p className="mx-auto mt-3 max-w-md px-4 leading-relaxed">{t("footer.analyticsNotice")}</p>}
         </footer>
       )}
     </div>
