@@ -121,7 +121,7 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 
 全部条目、操作步骤、填法、当前状态与验证方式见 **`docs/owner-actions.md`**。摘要：
 
-- **P0 · LLM 主上游 key 额度耗尽**（网关 429 `apikey_quota_exhausted`，2026-09-04 仍在）：代码侧已做完能做的（R471 规则降级 + 熔断、R472 重试 UX、R474 备用上游 failover、R476 横幅），产品核心 AI 路径仍不可用；需充值/提额或 `wrangler secret put DEEPSEEK_API_KEY`。可选：配 `LLM_FALLBACK_*` 备用上游。**未恢复前不发帖。**
+- **LLM 主上游额度**（曾 P0，网关 429 `apikey_quota_exhausted`，2026-09-04 18:00Z 前仍在）：**2026-09-04 21:01Z 生产 1 次 zh 搜索成功**（`llmProvider.primary` 0→3，无新 aiErrors/fallbacks，3 轮 21 可注册）——老板充值已到账，仅 1 个样本，需继续观察 `aiErrors.quota` 是否再现。历史背景：代码侧已做完能做的（R471 规则降级 + 熔断、R472 重试 UX、R474 备用上游 failover、R476 横幅），产品核心 AI 路径仍不可用；需充值/提额或 `wrangler secret put DEEPSEEK_API_KEY`。可选：配 `LLM_FALLBACK_*` 备用上游。**未恢复前不发帖。**
 - 增长：GSC（网域级 TXT 已存在 3 条，待后台确认）/ Bing / Cloudflare Web Analytics token / 百度站长验证串 + 推送 token —— 均未配置，站点行为与未配置时一致。
 - 变现：注册商联盟 ID（Namecheap / 阿里云 / 腾讯云）—— 未配置，`/api/registrars` 为空。
 - 开源发布：GitHub About（仍是旧定位）/ Topics / Private vulnerability reporting / Social preview。
@@ -149,7 +149,9 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 
 ## 10. 进行中 / 待办任务（按优先级）
 
-1. **R487 usage 分片计数**：已实现（`usage-counter.ts` + `usage-counter.test.ts`，本地 12 并发精确入账），待父会话部署后生产直证 outbound；`searches` 分片正确性待 AI 恢复后验证。
+1. **R487 usage 分片计数**：已部署（version 62107af5）并生产直证：12 并发 `/api/click` → outbound.aliyun 4→16 / cn 3→15 精确 +12；`searches`/`llmProvider` 嵌套 map 经分片合并正确（+1/+3）。已关闭。
+1b. **R488 IndexNow 增量推送**：已部署，等下次 cron（每 6h）后看 `/api/usage` 的 `indexnowLastError` 是否清除、`indexnowLast` 是否前进；未验证前不得称 429 已解决。R488 提出未做的 P1：首页 SSR 站内 `<a>` 为 0、`/why` `/mcp` `/advanced` 孤岛、裸路径 EN 正文 canonical 指 zh + 缺 `Vary: Accept-Language`（见 `docs/audits/seo-tech-audit-r488.md`）。
+1c. **R489 中文规则降级**：已部署但生产未触达（AI 恰好恢复，1 次授权搜索走了主上游）；离线 bench 同输入「茶叶电商，寓意清雅」出 chaya/qingcha/chatea 等 24 条、1 坏例。需 AI 再次不可用或本地无效 key 才能实测。
 2. **R490（本轮）**：老板待办归一 `docs/owner-actions.md` + 本文档同步 + README 事实核对（guide 404→410、AI 行加降级说明）—— PR 待父会话合入 `deploy/r192-r195`。
 3. **AI 恢复后**：R466 首结果时延实测（目标 <10s）；R239 遗留 P1-1/P3-2/P3-3 生产复验；`llm-bad-json` 占比观察。
 4. **发帖**（Show HN 等，`docs/launch/launch-checklist.md`）：老板决策，前提 §8 P0 解决。
