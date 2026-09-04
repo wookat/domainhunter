@@ -4,7 +4,6 @@ import {
   Bookmark,
   BookmarkCheck,
   Check,
-  ChevronDown,
   Copy,
   ChevronRight,
   Download,
@@ -18,16 +17,16 @@ import {
   Trophy,
 } from "lucide-react";
 
-import { BrandCard } from "@/components/brand-card";
+import { GridCard, TopPickCard } from "@/components/brand-wall";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { CopyButton, DomainRow, MeaningText, RegisterMenu } from "@/components/domain-row";
-import { ScoreBars } from "@/components/score-bars";
+import { DomainRow } from "@/components/domain-row";
+import { assignBrandVariants, groupByLabel, pickTopGroups, variantOf } from "@/lib/brand-wall";
 import { useDensity, type Density } from "@/lib/density";
 import { exportRows } from "@/lib/export";
 import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
 import { useI18n, type I18nKey } from "@/lib/i18n";
-import { priceFull, priceShort, usePrices } from "@/lib/prices";
-import { scoreBadgeClass, tldPrice, totalScore, type Row, type Theme } from "@/types";
+import { usePrices } from "@/lib/prices";
+import { tldPrice, totalScore, type Row, type Theme } from "@/types";
 import { cn } from "@/lib/utils";
 
 type StatusFilter = "available" | "all" | "taken";
@@ -42,129 +41,6 @@ function sortRows(rows: Row[], sort: SortKey, priceOf?: (tld: string) => number)
     const sb = b.scores ? totalScore(b.scores) : -1;
     return sb - sa;
   });
-}
-
-function TopPickCard({
-  row,
-  rank,
-  locked,
-  onToggleLock,
-  favorite,
-  onToggleFavorite,
-}: {
-  row: Row;
-  rank: number;
-  locked: boolean;
-  onToggleLock: (domain: string) => void;
-  favorite: boolean;
-  onToggleFavorite: (row: Row) => void;
-}) {
-  const { t, lang } = useI18n();
-  const prices = usePrices();
-  const score = row.scores ? totalScore(row.scores) : 0;
-  return (
-    <div className={cn("rounded-xl border bg-bg1 p-5", rank === 0 ? "border-brand-line" : "border-line")}>
-      <div className="flex items-start justify-between">
-        <span className={cn("tnum rounded-md px-2 py-0.5 font-mono text-sm font-bold", scoreBadgeClass(score))}>{score}</span>
-        <div className="flex gap-1">
-          <button
-            title={t("results.lockTitle")}
-            aria-pressed={locked}
-            onClick={() => onToggleLock(row.domain)}
-            className={cn(
-              "grid h-8 w-8 place-items-center rounded-md border",
-              locked ? "border-brand-line text-brand" : "border-line text-txt2 hover:text-txt0",
-            )}
-          >
-            <Lock className="h-3.5 w-3.5" />
-          </button>
-          <CopyButton domain={row.domain} className="rounded-md border border-line" />
-          <button
-            title={favorite ? t("results.favRemove") : t("results.favAdd")}
-            aria-pressed={favorite}
-            onClick={() => onToggleFavorite(row)}
-            className={cn("grid h-8 w-8 place-items-center rounded-md border border-line", favorite ? "text-brand" : "text-txt2 hover:text-txt0")}
-          >
-            {favorite ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}
-          </button>
-        </div>
-      </div>
-      <div className="mt-3">
-        <BrandCard label={row.label} size="lg" available={row.status === "available"} />
-      </div>
-      <div className="mt-3 truncate font-mono text-2xl font-bold tracking-tight">
-        {row.label}
-        <span className="text-txt2">.{row.tld}</span>
-      </div>
-      {row.meaning && <p className="mt-1.5 text-[13px] leading-relaxed text-txt1"><MeaningText text={row.meaning} /></p>}
-      {row.scores && <ScoreBars scores={row.scores} className="mt-4" />}
-      {priceFull(row.tld, lang, prices) && (
-        <p title={priceFull(row.tld, lang, prices)} className="tnum mt-3 cursor-help text-[11px] text-txt2">{priceFull(row.tld, lang, prices)}</p>
-      )}
-      <RegisterMenu domain={row.domain}>
-        <button className="mt-2 flex h-10 w-full items-center justify-center gap-1.5 rounded-lg bg-brand text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90">
-          {t("common.register")}{priceShort(row.tld, lang, prices) ? ` · ${priceShort(row.tld, lang, prices)}` : ""}
-          <ChevronDown className="h-4 w-4" />
-        </button>
-      </RegisterMenu>
-    </div>
-  );
-}
-
-function GridCard({
-  row,
-  locked,
-  onToggleLock,
-  favorite,
-  onToggleFavorite,
-}: {
-  row: Row;
-  locked: boolean;
-  onToggleLock: (domain: string) => void;
-  favorite: boolean;
-  onToggleFavorite: (row: Row) => void;
-}) {
-  const { t, lang } = useI18n();
-  const score = row.scores ? totalScore(row.scores) : undefined;
-  return (
-    <div className="rounded-xl border border-line bg-bg1 p-4">
-      <BrandCard label={row.label} available={row.status === "available"} className="mb-3" />
-      <div className="flex items-center justify-between gap-2">
-        <span className="truncate font-mono text-lg font-semibold">
-          {row.label}
-          <span className="text-txt2">.{row.tld}</span>
-        </span>
-        {score !== undefined && (
-          <span className={cn("tnum shrink-0 rounded-md px-2 py-0.5 font-mono text-xs font-bold", scoreBadgeClass(score))}>{score}</span>
-        )}
-      </div>
-      {row.meaning && <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-txt1"><MeaningText text={row.meaning} /></p>}
-      {row.scores && <ScoreBars scores={row.scores} columns={4} className="mt-3" />}
-      <div className="mt-3 flex items-center gap-1">
-        <button
-          title={t("results.lockTitle")}
-          aria-pressed={locked}
-          onClick={() => onToggleLock(row.domain)}
-          className={cn("grid h-8 w-8 place-items-center rounded-md border", locked ? "border-brand-line text-brand" : "border-line text-txt2 hover:text-txt0")}
-        >
-          <Lock className="h-3.5 w-3.5" />
-        </button>
-        <CopyButton domain={row.domain} className="rounded-md border border-line" />
-        <button
-          title={favorite ? t("results.favRemove") : t("results.favAdd")}
-          aria-pressed={favorite}
-          onClick={() => onToggleFavorite(row)}
-          className={cn("grid h-8 w-8 place-items-center rounded-md border border-line", favorite ? "text-brand" : "text-txt2 hover:text-txt0")}
-        >
-          {favorite ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}
-        </button>
-        <div className="flex-1" />
-        <RegisterMenu domain={row.domain}>
-          <button className="h-8 rounded-md bg-brand-dim px-3 text-xs font-semibold text-brand transition-opacity hover:opacity-80">{t("common.register")}</button>
-        </RegisterMenu>
-      </div>
-    </div>
-  );
 }
 
 /** 把当前搜索编成可分享的 /?q=…&tld=…&style=…&len=… 链接 */
@@ -278,7 +154,8 @@ export function ResultsPage({
     return [...m.entries()].sort((a, b) => b[1] - a[1]);
   }, [availableRows]);
 
-  const topPicks = useMemo(() => sortRows(availableRows, "score").slice(0, 3), [availableRows]);
+  // R473：Top Picks 3 席 = 3 个不同 label，同名多 TLD 合为一席
+  const topPicks = useMemo(() => pickTopGroups(sortRows(availableRows, "score"), 3), [availableRows]);
 
   const priceOf = useMemo(() => {
     return (tld: string) => {
@@ -297,6 +174,13 @@ export function ResultsPage({
   }, [rows, availableRows, takenRows, statusFilter, tldFilter, themeFilter, sort, priceOf]);
 
   const visibleAvailable = useMemo(() => visible.filter((r) => r.status === "available"), [visible]);
+
+  // R473：Grid 按 label 分组（含 unknown，不含 taken）；变体表按「Top Picks → Grid」顺序一次分配并全页复用
+  const gridGroups = useMemo(() => groupByLabel(visible.filter((r) => r.status !== "taken")), [visible]);
+  const variants = useMemo(
+    () => assignBrandVariants([topPicks.map((g) => g.label), gridGroups.map((g) => g.label)]),
+    [topPicks, gridGroups],
+  );
 
   const unstarredAvailable = useMemo(() => visibleAvailable.filter((r) => !shortlistHas(r.domain)), [visibleAvailable, shortlistHas]);
 
@@ -456,15 +340,16 @@ export function ResultsPage({
               <h2 className="text-sm font-semibold">Top Picks</h2>
               <span className="text-xs text-txt2">{t("results.topPicks", { n: topPicks.length })}</span>
             </div>
-            <div className="mb-8 grid gap-4 md:grid-cols-3">
-              {topPicks.map((r, i) => (
+            <div data-brand-wall="top" className="mb-8 grid gap-4 md:grid-cols-3">
+              {topPicks.map((g, i) => (
                 <TopPickCard
-                  key={r.domain}
-                  row={r}
+                  key={g.rows[0].domain}
+                  group={g}
                   rank={i}
-                  locked={locked.has(r.domain)}
+                  variant={variantOf(variants, g.label)}
+                  locked={locked.has(g.rows[0].domain)}
                   onToggleLock={onToggleLock}
-                  favorite={shortlistHas(r.domain)}
+                  favorite={shortlistHas(g.rows[0].domain)}
                   onToggleFavorite={onToggleFavorite}
                 />
               ))}
@@ -614,6 +499,7 @@ export function ResultsPage({
                 key={r.domain}
                 row={r}
                 compact={compact}
+                variant={variantOf(variants, r.label)}
                 selected={i === selectedIdx}
                 locked={locked.has(r.domain)}
                 onToggleLock={r.status === "available" ? onToggleLock : undefined}
@@ -626,19 +512,18 @@ export function ResultsPage({
             {visible.length === 0 && <p className="px-4 py-8 text-center text-sm text-txt2">{t("results.noMatch")}</p>}
           </div>
         ) : (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {visible
-              .filter((r) => r.status !== "taken")
-              .map((r) => (
-                <GridCard
-                  key={r.domain}
-                  row={r}
-                  locked={locked.has(r.domain)}
-                  onToggleLock={onToggleLock}
-                  favorite={shortlistHas(r.domain)}
-                  onToggleFavorite={onToggleFavorite}
-                />
-              ))}
+          <div data-brand-wall="grid" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {gridGroups.map((g) => (
+              <GridCard
+                key={g.rows[0].domain}
+                group={g}
+                variant={variantOf(variants, g.label)}
+                locked={locked}
+                onToggleLock={onToggleLock}
+                shortlistHas={shortlistHas}
+                onToggleFavorite={onToggleFavorite}
+              />
+            ))}
           </div>
         )}
 

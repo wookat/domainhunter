@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Bell, BellOff, BellRing, Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Loader2, Lock, ThumbsDown } from "lucide-react";
 
-import { BrandCard, BrandSwatch } from "@/components/brand-card";
+import { BrandCard, BrandDot, BrandSwatch, type BrandVariant } from "@/components/brand-card";
 import { ConfirmLabel } from "@/components/confirm-label";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { ScoreBars } from "@/components/score-bars";
@@ -249,6 +249,7 @@ export function DomainRow({
   selected = false,
   animate = false,
   compact = false,
+  variant = 0,
   locked,
   onToggleLock,
   favorite,
@@ -261,6 +262,8 @@ export function DomainRow({
   animate?: boolean;
   /** 紧凑行密度（R467，仅桌面 ≥768px）：26px 行高，寓意一行截断点击展开，次要操作悬停/聚焦显示 */
   compact?: boolean;
+  /** 品牌色变体（R473）：由卡墙布局层按 label 分配，使行视图色点/色块与 Top Picks/Grid 同外观 */
+  variant?: BrandVariant;
   locked?: boolean;
   onToggleLock?: (domain: string) => void;
   favorite?: boolean;
@@ -353,9 +356,10 @@ export function DomainRow({
           className="-mx-1.5 hidden h-11 w-11 shrink-0 place-items-center rounded-md transition-colors hover:bg-bg3 sm:grid"
           onClick={() => setExpanded((v) => !v)}
         >
-          <BrandSwatch label={row.label} />
+          <BrandSwatch label={row.label} variant={variant} />
         </button>
       )}
+      {compact && <BrandDot label={row.label} variant={variant} />}
       <DomainName row={row} compact={compact} />
       <span className={cn("h-1.5 w-1.5 shrink-0 rounded-full", isUnknown ? "bg-amber2" : "bg-brand")} />
       {isUnknown && (
@@ -447,7 +451,7 @@ export function DomainRow({
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-5">
           {!compact && (
             <div className="w-full shrink-0 sm:w-60">
-              <BrandCard label={row.label} size="sm" available={row.status === "available"} />
+              <BrandCard label={row.label} size="sm" variant={variant} available={row.status === "available"} />
               <p className="mt-1.5 text-[11px] leading-snug text-txt2">{t("brand.disclaimer")}</p>
             </div>
           )}
