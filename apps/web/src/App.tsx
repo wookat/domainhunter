@@ -168,9 +168,10 @@ export default function App() {
   const [isMcp] = useState(mcpFromPath);
   const [saved] = useState(() => {
     if (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() || advancedFromPath() || tldHubFromPath() || guideHubFromPath() || compareHubFromPath()) return null;
-    // /?q= 或 /?tpl= 是显式预填入口（分享搜索链接 / 指南页 CTA），直接进首页预填，不恢复上次结果
+    // /?q= 或 /?tpl= 是显式预填入口（分享搜索链接 / 指南页 CTA），/?mode=exact 是精确核验入口（AI 不可用时的降级 CTA），
+    // 都直接进首页，不恢复上次结果
     const params = new URLSearchParams(window.location.search);
-    if (params.get("q") || params.get("tpl")) return null;
+    if (params.get("q") || params.get("tpl") || params.get("mode") === "exact") return null;
     return loadSearch();
   });
   const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : monitorsFromPath() ? "monitors" : advancedFromPath() ? "advanced" : saved ? "results" : "home"));

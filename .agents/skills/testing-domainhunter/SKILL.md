@@ -42,4 +42,7 @@ description: How to run zero-AI production audits of DomainHunter (hunt.zalize.c
 - R465 起恢复态（从 `dh:lastSearch:v1` 还原的结果页）「再来一轮」按钮也是两步确认：首点只变「再点一次确认」（3s 超时还原），3s 内二次点击才发起；本会话真实发起过一轮后护栏解除，单击直接发起。
 - 构造合成 `dh:lastSearch:v1` 恢复态时，`values.style/lengthPref` 必须用空字符串（UI 默认）：worker 会把任何非空值拼成中文后缀「命名风格偏好：…」进 description，可能改变 `descriptionLooksEnglish()` 语言判定路径（实测踩坑：填 "auto" 导致英文描述照出拼音）。
 - 错误态（quota / rate-limit）本地复现不必碰真实 key：Playwright `context.route("**/api/ai-search")` 用 `route.fulfill` 返回 NDJSON `{"type":"round",...}\n{"type":"error","round":1,"errorKind":"rate-limit"|"quota","detail":"llm-http-429"}`；R472 起 rate-limit 会起 30s 倒计时并自动重试一次（拦截路由会再收到一次请求），用 `page.clock.install()` + `clock.runFor(30000)` 推进而不是实等。现成脚本：`docs/qa/r472/errors.js`（70 项断言）与 `measure.js`（首屏几何）。
+- 在可见 Chrome（录屏用）里复现错误态：Playwright `chromium.connectOverCDP("http://localhost:29229")` → `browser.contexts()[0].route("**/api/ai-search", …)` 对默认上下文生效（拦截会打到已打开的标签页），脚本保持进程存活（`process.stdin.resume()`）期间路由一直有效；用 `setsid nohup node … &` 启动、`pkill -f "^node live.js"` 结束（`pkill -f "node live.js"` 会连启动它的 bash 一起杀）。参考 `docs/qa/r472/live.js`。
+- 恢复态两步确认「再点一次确认」只开 3s：在 computer 工具里必须把两次点击放进同一个 actions 批次（click → wait 0.7 → click），中间截图会超时还原。
+- `/?mode=exact` 在 home-page.tsx 预选精确核验 tab，且 R472 起 App.tsx 对 `?mode=exact`（同 `?q`/`?tpl`）跳过 `dh:lastSearch:v1` 恢复（快照保留，回 `/` 仍能恢复）：从恢复态结果页点 quota 横幅「精确核验」必须落到首页精确核验 tab，回到结果页即回归。
 - 375 下的结果页横幅（R472）：恢复条 + AI 理解条 + 微调 chips 折叠成一个 `button[aria-expanded]` 摘要行（`md:hidden`），chips 在展开面板里；桌面仍是原来的独立横幅（`hidden md:block`）。量 375 首屏时不要按桌面 DOM 找 `UnderstandingBar`。

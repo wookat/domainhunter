@@ -143,7 +143,14 @@ const check = (name, cond, detail) => {
       await page.setViewportSize({ width: 1440, height: 900 });
       await page.waitForTimeout(300);
       await page.screenshot({ path: `${out}/quota-desktop-${lang}.png` });
+      await page.setViewportSize({ width: 375, height: 667 });
     }
+    // 精确核验 CTA：结果页存有 dh:lastSearch:v1 时 /?mode=exact 也必须进首页精确核验，而不是被恢复态吞掉
+    await quick.click();
+    await page.waitForLoadState("networkidle");
+    const exactTab = page.locator(`button[aria-pressed="true"]:has-text("${T[lang].quick}")`);
+    check(`${lang}-375 quota exact CTA opens exact-check tab (restore bypassed)`, (await exactTab.count()) === 1 && (await page.locator("h2:has-text('Top Picks')").count()) === 0);
+    check(`${lang}-375 exact CTA keeps lastSearch snapshot`, await page.evaluate(() => Boolean(sessionStorage.getItem("dh:lastSearch:v1"))));
     await ctx.close();
   }
 
