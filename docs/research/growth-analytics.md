@@ -111,6 +111,8 @@ Sitemap: https://hunt.zalize.com/sitemap.xml
 | B3 服务端漏斗计数 | `pageviews.ts`：`classifyPath` → home/results(`/results`,`/s/:id`)/tld/guide/vs/prices/other；`detectBot` → google/bing/baidu/ai/other，命中只计 `bots`；isolate 内 5s 合并一次 KV 写 `pv:{date}`（45 天）；不存 IP/UA；`/api/usage` 合并输出 | `pageviews.test.ts` 11 例；本地 dev 实测 §6 |
 | B4 IndexNow | §4 | `indexnow.test.ts` |
 
+计数口径说明：① 只统计到达 Worker 的请求——HTML 带 `Cache-Control: public, max-age=600`，10 分钟内重复访问由浏览器缓存应答，不计（测试代理实测：普通回车导航不计、硬刷新计）；② KV 多 PoP 读改写非原子；③ 页脚（含隐私一句话）只在 home/results 模式渲染，`/tld`、`/vs`、`/prices`、`/why` 本就没有页脚。因此 `pv:*` 是**趋势/下界**指标，精确 UV/PV 以 Cloudflare Web Analytics 为准。
+
 KV 写量评估：Cloudflare KV 免费额度 1,000 写/天（[limits](https://developers.cloudflare.com/kv/platform/limits/)）；本账号已是付费 KV（GraphQL 实查 domainhunter 命名空间 9-01/9-03 各 27 写、9-02 1,097 写）。5s 合并窗口下 pageview 写量 ≤ 每 isolate 每 5s 一次，正常流量下每日数百次量级；KV 多 PoP 读改写非原子，`pv:*` 是**近似下界**计数，用于趋势判断而非精确审计。
 
 ## 6. 本地验证记录（2026-09-04，`wrangler dev`，零 AI 调用）
@@ -126,6 +128,8 @@ KV 写量评估：Cloudflare KV 免费额度 1,000 写/天（[limits](https://de
 计数实测：Chrome UA 访问 `/`×3、`/tld/com`、`/prices`，Googlebot UA 访 `/tld/cn`，bingbot 访 `/`，GPTBot 访 `/why`，curl 默认 UA 若干 → 7s 后 `/api/usage?days=1` 返回 `pageviews:{home:5,results:2,tld:5,vs:2,prices:3,other:8}, bots:5, botsBy:{other:2,google:1,bing:1,ai:1}`（含 compare.sh 的请求；curl 默认 UA 归 `other` bot；`/api/*`、`/sitemap.xml` 不计）。带 vars 实例响应头保持 `Content-Type: text/html; charset=utf-8` / `Cache-Control: public, max-age=600`，无残留 `content-length`。
 
 `pnpm -r typecheck` / `pnpm --filter web test`（7 文件 47 例）/ `pnpm --filter web build` 全绿。
+
+测试子代理（浏览器实测，零 AI）：无 vars 5 页零注入、有 vars 5 页 meta×2 + beacon×1；页脚隐私句 zh/en × 深浅主题 × 桌面/375px 无溢出（scrollWidth 360 ≤ 375）、不可聚焦不改 Tab 序；`/api/usage`、sitemap、robots 未被改写；浏览器加载 `/`、`/tld/cn`、`/prices` 各 +1，Googlebot UA 访 `/tld/io` → `bots`/`botsBy.google` +1 且 `pageviews.tld` 不变；404 壳不计；`/advanced`、`/shortlist`、`/monitors`、`/mcp`、404 页回归正常。截图见 `screenshots/r481/local-*.png` 与 PR 评论。
 
 ## 7. 需老板操作（一次性，缺口不阻塞：未配置时站点行为与现状完全一致）
 
