@@ -11,7 +11,7 @@ import {
   summarizeBaidu,
 } from "./baidu-push";
 
-const cfg = { site: "https://hunt.zalize.com", token: "edk7ychrEZP9pDQD", dailyMax: BAIDU_PUSH_BATCH_MAX, endpoint: BAIDU_PUSH_ENDPOINT };
+const cfg = { site: "https://hunt.zalize.com", token: "fakeTOKEN0test00", dailyMax: BAIDU_PUSH_BATCH_MAX, endpoint: BAIDU_PUSH_ENDPOINT };
 
 function fakeFetch(responses: Array<{ status: number; body?: unknown } | "throw">) {
   const calls: Array<{ url: string; method: string | undefined; contentType: string | null; body: string }> = [];
@@ -29,26 +29,26 @@ describe("resolveBaiduPush", () => {
   it("site/token 任一缺失、空白或非法 → null（cron 完全不执行）", () => {
     expect(resolveBaiduPush({})).toBeNull();
     expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "https://hunt.zalize.com" })).toBeNull();
-    expect(resolveBaiduPush({ BAIDU_PUSH_TOKEN: "edk7ychrEZP9pDQD" })).toBeNull();
-    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "  ", BAIDU_PUSH_TOKEN: "edk7ychrEZP9pDQD" })).toBeNull();
-    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "https://hunt.zalize.com/path", BAIDU_PUSH_TOKEN: "edk7ychrEZP9pDQD" })).toBeNull();
-    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "hunt.zalize.com&x=1", BAIDU_PUSH_TOKEN: "edk7ychrEZP9pDQD" })).toBeNull();
+    expect(resolveBaiduPush({ BAIDU_PUSH_TOKEN: "fakeTOKEN0test00" })).toBeNull();
+    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "  ", BAIDU_PUSH_TOKEN: "fakeTOKEN0test00" })).toBeNull();
+    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "https://hunt.zalize.com/path", BAIDU_PUSH_TOKEN: "fakeTOKEN0test00" })).toBeNull();
+    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "hunt.zalize.com&x=1", BAIDU_PUSH_TOKEN: "fakeTOKEN0test00" })).toBeNull();
     expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "hunt.zalize.com", BAIDU_PUSH_TOKEN: "short" })).toBeNull();
   });
   it("合法配置：裸域或 https 前缀均可；dailyMax 默认 2000、可收紧、不可超过接口单次上限", () => {
-    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: " www.example.com ", BAIDU_PUSH_TOKEN: " edk7ychrEZP9pDQD " })).toEqual({
+    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: " www.example.com ", BAIDU_PUSH_TOKEN: " fakeTOKEN0test00 " })).toEqual({
       site: "www.example.com",
-      token: "edk7ychrEZP9pDQD",
+      token: "fakeTOKEN0test00",
       dailyMax: 2000,
       endpoint: "http://data.zz.baidu.com/urls",
     });
-    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "https://hunt.zalize.com", BAIDU_PUSH_TOKEN: "edk7ychrEZP9pDQD", BAIDU_PUSH_DAILY_MAX: "10" })?.dailyMax).toBe(10);
-    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "hunt.zalize.com", BAIDU_PUSH_TOKEN: "edk7ychrEZP9pDQD", BAIDU_PUSH_DAILY_MAX: "99999" })?.dailyMax).toBe(2000);
-    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "hunt.zalize.com", BAIDU_PUSH_TOKEN: "edk7ychrEZP9pDQD", BAIDU_PUSH_DAILY_MAX: "abc" })?.dailyMax).toBe(2000);
-    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "hunt.zalize.com", BAIDU_PUSH_TOKEN: "edk7ychrEZP9pDQD", BAIDU_PUSH_DAILY_MAX: "0" })?.dailyMax).toBe(2000);
+    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "https://hunt.zalize.com", BAIDU_PUSH_TOKEN: "fakeTOKEN0test00", BAIDU_PUSH_DAILY_MAX: "10" })?.dailyMax).toBe(10);
+    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "hunt.zalize.com", BAIDU_PUSH_TOKEN: "fakeTOKEN0test00", BAIDU_PUSH_DAILY_MAX: "99999" })?.dailyMax).toBe(2000);
+    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "hunt.zalize.com", BAIDU_PUSH_TOKEN: "fakeTOKEN0test00", BAIDU_PUSH_DAILY_MAX: "abc" })?.dailyMax).toBe(2000);
+    expect(resolveBaiduPush({ BAIDU_PUSH_SITE: "hunt.zalize.com", BAIDU_PUSH_TOKEN: "fakeTOKEN0test00", BAIDU_PUSH_DAILY_MAX: "0" })?.dailyMax).toBe(2000);
   });
   it("BAIDU_PUSH_ENDPOINT 仅接受 http(s) URL（本地 mock 上游），否则回落官方地址", () => {
-    const base = { BAIDU_PUSH_SITE: "hunt.zalize.com", BAIDU_PUSH_TOKEN: "edk7ychrEZP9pDQD" };
+    const base = { BAIDU_PUSH_SITE: "hunt.zalize.com", BAIDU_PUSH_TOKEN: "fakeTOKEN0test00" };
     expect(resolveBaiduPush({ ...base, BAIDU_PUSH_ENDPOINT: "http://127.0.0.1:9999/urls" })?.endpoint).toBe("http://127.0.0.1:9999/urls");
     expect(resolveBaiduPush({ ...base, BAIDU_PUSH_ENDPOINT: "data.zz.baidu.com/urls" })?.endpoint).toBe(BAIDU_PUSH_ENDPOINT);
     expect(resolveBaiduPush({ ...base, BAIDU_PUSH_ENDPOINT: "http://x/urls?site=evil" })?.endpoint).toBe(BAIDU_PUSH_ENDPOINT);
@@ -58,10 +58,10 @@ describe("resolveBaiduPush", () => {
 describe("buildBaiduPushUrl / chunkBaiduUrls / pickPending", () => {
   it("接口地址与官方一致：http + site + token 查询参数", () => {
     expect(BAIDU_PUSH_ENDPOINT).toBe("http://data.zz.baidu.com/urls");
-    expect(buildBaiduPushUrl(cfg)).toBe("http://data.zz.baidu.com/urls?site=https%3A%2F%2Fhunt.zalize.com&token=edk7ychrEZP9pDQD");
-    expect(buildBaiduPushUrl({ site: "www.example.com", token: "edk7ychrEZP9pDQD" })).toBe("http://data.zz.baidu.com/urls?site=www.example.com&token=edk7ychrEZP9pDQD");
-    expect(buildBaiduPushUrl(cfg, "http://127.0.0.1:9999/urls")).toBe("http://127.0.0.1:9999/urls?site=https%3A%2F%2Fhunt.zalize.com&token=edk7ychrEZP9pDQD");
-    expect(buildBaiduPushUrl({ site: "www.example.com", token: "edk7ychrEZP9pDQD" })).not.toContain("https://");
+    expect(buildBaiduPushUrl(cfg)).toBe("http://data.zz.baidu.com/urls?site=https%3A%2F%2Fhunt.zalize.com&token=fakeTOKEN0test00");
+    expect(buildBaiduPushUrl({ site: "www.example.com", token: "fakeTOKEN0test00" })).toBe("http://data.zz.baidu.com/urls?site=www.example.com&token=fakeTOKEN0test00");
+    expect(buildBaiduPushUrl(cfg, "http://127.0.0.1:9999/urls")).toBe("http://127.0.0.1:9999/urls?site=https%3A%2F%2Fhunt.zalize.com&token=fakeTOKEN0test00");
+    expect(buildBaiduPushUrl({ site: "www.example.com", token: "fakeTOKEN0test00" })).not.toContain("https://");
   });
   it("≤2000 一批；超出按 2000 切分", () => {
     expect(chunkBaiduUrls(["a", "b"])).toEqual([["a", "b"]]);
@@ -102,7 +102,7 @@ describe("submitBaidu / summarizeBaidu", () => {
     const res = await submitBaidu({ cfg, urls, fetchImpl: f.impl });
     expect(f.calls).toEqual([
       {
-        url: "http://data.zz.baidu.com/urls?site=https%3A%2F%2Fhunt.zalize.com&token=edk7ychrEZP9pDQD",
+        url: "http://data.zz.baidu.com/urls?site=https%3A%2F%2Fhunt.zalize.com&token=fakeTOKEN0test00",
         method: "POST",
         contentType: "text/plain",
         body: "https://hunt.zalize.com/\nhttps://hunt.zalize.com/tld/com",
