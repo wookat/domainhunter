@@ -337,10 +337,10 @@ export function DomainRow({
         <button
           title={scoreTitle}
           aria-expanded={expanded}
-          className={cn("tnum shrink-0 rounded-md text-center font-mono font-semibold transition-shadow hover:ring-1 hover:ring-line", badgeCls, scoreBadgeClass(score))}
+          className={cn("-mx-1.5 grid h-11 w-11 shrink-0 place-items-center sm:mx-0 sm:h-auto", compact ? "sm:w-7" : "sm:w-8")}
           onClick={() => setExpanded((v) => !v)}
         >
-          {score}
+          <span className={cn("tnum block rounded-md text-center font-mono font-semibold transition-shadow hover:ring-1 hover:ring-line", badgeCls, scoreBadgeClass(score))}>{score}</span>
         </button>
       ) : (
         <span className={cn("tnum shrink-0 rounded-md bg-bg3 text-center font-mono font-semibold text-txt1", badgeCls)}>—</span>
