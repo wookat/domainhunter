@@ -88,7 +88,7 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 
 ## 4. 数据与外部依赖
 
-- **DeepSeek**：`DEEPSEEK_API_KEY`（Worker secret），仅 `/api/ai-search`（构思 + understanding）用；其余全部零 AI。
+- **LLM 上游**（R460/R461 起经 OpenAI 兼容网关）：Worker secret `DEEPSEEK_API_KEY` + 变量 `LLM_API_BASE` / `LLM_MODEL` / `LLM_THINKING`（`disabled` 关闭网关侧思考链，否则 60s 超时），仅 `/api/ai-search`（构思 + understanding）用；其余全部零 AI。上游非 2xx 时 Worker 记 `llm-upstream <stage> status= retry-after= body=`（body ≤300 字、不含请求头），用 `wrangler tail` 查根因（R470）。
 - **Porkbun 价格**：`https://api.porkbun.com/api/json/v3/pricing/get`（公开、免 key），10s 超时；失败回退 `prices:latest` stale（响应带 `stale:true`）；无报价 TLD（cn/so 等）前端/MCP 用静态参考价（`types.ts` `tldPrice`，`USD_TO_CNY=7.2` 估算汇率）。
 - **核验通道**（`packages/core/src/check.ts` + `apps/web/src/whois.ts`）：DoH（cloudflare-dns.com）预筛 → RDAP（IANA bootstrap `data.iana.org/rdap/dns.json`，缓存 24h）→ WHOIS 43 端口 fallback（`cloudflare:sockets`，服务器清单见 `WHOIS_SERVERS`：com/net/cn/io/cc/tv/co/me/xyz/sh/gg/so/us）。taken 但 RDAP 无到期时再查 WHOIS 补 expiresAt（R160）。
 - **localStorage keys**（前端本地数据，无账号）：
@@ -105,6 +105,8 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 - **LCP**：R150 做内容页 SSR 骨架后 /tld LCP 曾持平未改善，R174 用延迟挂载 + 跳过数据 chunk preload 修复；后续改动注意别回退。
 - **旧 KV 核验缓存无 expiresAt**：R160 之前写入的 `d:{domain}` 无 expiresAt 字段，靠 TTL（≤24h）自然过期自愈，无需迁移。
 - sitemap `<lastmod>` 是手写常量 `CONTENT_LASTMOD`（worker.ts），增删内容页记得更新。
+- **上游 key 额度耗尽（2026-09-04 实锤）**：网关用 HTTP 429 + body `code=apikey_quota_exhausted` 表示 key 额度耗尽，`classifyAiError` 现按响应体关键词（quota/billing/限额/余额…）把这种 429 归为 `quota`（其余 429 仍是 `rate-limit`）；代码无法绕过，需在网关控制台充值/提额或换 key（`wrangler secret put DEEPSEEK_API_KEY`）。恢复后需补做 R466 真实时延测试（zh/en 各 ≥1 次，记录首个可注册候选时间）。
+- **R469 匿名竞品复评差距**（报告 `/home/ubuntu/r469-benchmark.md` 在主会话机器，结论摘录）：P0-A 上游不可用即整站 0 产出（→ R471 规则降级+熔断、R474 备用供应商 failover）；P1-A quota/rate-limit 恢复路径同一套「重试本轮」（→ R472）；P1-B 同名多 TLD 重复品牌卡、Top Picks 被同名占席（→ R473）；P1-C 375 首屏第一个域名不可见（→ R472）；P2-A 相邻撞色、P2-B 紧凑行零品牌感（→ R473）。视觉主观分 4.3 vs Namelix 4.5；紧凑态 ≈36 行/屏 vs IDS 45。
 - **R239 审计遗留观察项**（报告见 `docs/qa/audit-r239.md`，修复后待下一轮生产审计复验）：
   - P1-1 EN word 配额补发失效 → R243 已加二次重试 + 补发轮独立 guard 计数，未经生产复验；
   - P3-4 zh 偏拼音场景产品结果差（5 轮仅 1 个可注册，双字全拼 .com/.cn 存量枯竭）→ 产品层未动，待评估自动扩 TLD 或提前提示；
@@ -124,7 +126,7 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
   - **部署状态**：生产在线版本 = `deploy/r192-r195` 集成分支 + R222–R246 系列提交（R250 尚未部署）；新工作从该分支切出，PR base 仍为 main。
 - **R468 品牌卡**：`apps/web/src/components/brand-card.tsx` 纯前端确定性品牌卡（FNV-1a → 16 配色 × 4 版式 × 4 字形），Top Picks / Grid / 行内 swatch 三层入口；论证与验收表见 `docs/research/r468-brand-card.md`。新增可见文案走 `brand.*` i18n key。
 - **四道把关**（company-os）：qa-engineer 测试 → user-experience-officer 体验走查 → 内部交叉测试 → 合规与安全审计，全过才交付。
-- **截至本文档更新时的在途工作**（部分已通过 deploy/r192-r195 集成分支上线、PR 待合回 main）：R243–R246 防线修复、R250 prompt 微调；R465 en 拼音路线丢弃（生产在线）；**R466 首结果提速（主轮 LLM 流式 + 增量候选解析 + 候选级核验流水，PR base `deploy/r192-r195`，未部署）**——`ai.ts` 新增 `CandidateArrayStreamParser`/`sseDeltaContent`/`admitCandidate`（流式与非流式共用同一防线函数）与 `generateAiCandidates({ onCandidate })`；0 候选时的坏 JSON/网络错误仍走一次退避重试，已交出 ≥1 候选后中断按截断保留不重试。上线后观察点：首结果时间（目标 <10s，以首个 result 事件为准）、`llm-bad-json` 占比是否变化、网关是否按 `text/event-stream` 返回（非 SSE 自动退化整包）。用 `gh pr list` 确认实时状态与最新 Rxxx 编号。
+- **截至本文档更新时的在途工作**（部分已通过 deploy/r192-r195 集成分支上线、PR 待合回 main）：R243–R246 防线修复、R250 prompt 微调；R465 en 拼音路线丢弃（生产在线）；R466/R467/R468 已部署生产（version f7933dac）；R470 429 额度分类修复已部署（version 139cf4db，PR #433）；**R471–R474 子会话在途**（AI 降级+KV 熔断 `dh:llm-breaker:v1`、错误 UX+375 折叠、品牌卡墙去重、LLM failover 可选 secret `LLM_FALLBACK_*`），PR base 均为 `deploy/r192-r195`。**R466 首结果提速（主轮 LLM 流式 + 增量候选解析 + 候选级核验流水，PR base `deploy/r192-r195`，未部署）**——`ai.ts` 新增 `CandidateArrayStreamParser`/`sseDeltaContent`/`admitCandidate`（流式与非流式共用同一防线函数）与 `generateAiCandidates({ onCandidate })`；0 候选时的坏 JSON/网络错误仍走一次退避重试，已交出 ≥1 候选后中断按截断保留不重试。上线后观察点：首结果时间（目标 <10s，以首个 result 事件为准）、`llm-bad-json` 占比是否变化、网关是否按 `text/event-stream` 返回（非 SSE 自动退化整包）。用 `gh pr list` 确认实时状态与最新 Rxxx 编号。
 
 ## 7. 新会话接手 checklist
 
