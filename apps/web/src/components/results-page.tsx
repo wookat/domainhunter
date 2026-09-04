@@ -4,7 +4,6 @@ import {
   Bookmark,
   BookmarkCheck,
   Check,
-  ChevronDown,
   Copy,
   ChevronRight,
   Download,
@@ -12,18 +11,25 @@ import {
   LayoutGrid,
   Lock,
   RotateCw,
+  Rows2,
   Rows3,
+  Rows4,
   Trophy,
 } from "lucide-react";
 
+import { GridCard, TopPickCard } from "@/components/brand-wall";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { CopyButton, DomainRow, MeaningText, RegisterMenu } from "@/components/domain-row";
-import { ScoreBars } from "@/components/score-bars";
+import { DomainRow } from "@/components/domain-row";
+import { openRegistrar } from "@/components/registrar-link";
+import { useAffiliateConfig } from "@/lib/affiliate";
+import { assignBrandVariants, groupByLabel, pickTopGroups, variantOf } from "@/lib/brand-wall";
+import { useDensity, type Density } from "@/lib/density";
 import { exportRows } from "@/lib/export";
 import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
 import { useI18n, type I18nKey } from "@/lib/i18n";
-import { priceFull, priceShort, usePrices } from "@/lib/prices";
-import { scoreBadgeClass, tldPrice, totalScore, type Row, type Theme } from "@/types";
+import { usePrices } from "@/lib/prices";
+import { primaryRegistrar } from "@/lib/registrars";
+import { tldPrice, totalScore, type Row, type Theme } from "@/types";
 import { cn } from "@/lib/utils";
 
 type StatusFilter = "available" | "all" | "taken";
@@ -38,165 +44,6 @@ function sortRows(rows: Row[], sort: SortKey, priceOf?: (tld: string) => number)
     const sb = b.scores ? totalScore(b.scores) : -1;
     return sb - sa;
   });
-}
-
-// 品牌卡预览：按名字哈希确定性选配色与字形，纯 CSS 轻量模拟 logo 视觉（Namelix 式）
-const BRAND_GRADIENTS = [
-  "linear-gradient(135deg,#0ea5e9,#6366f1)",
-  "linear-gradient(135deg,#10b981,#0d9488)",
-  "linear-gradient(135deg,#f59e0b,#ef4444)",
-  "linear-gradient(135deg,#8b5cf6,#ec4899)",
-  "linear-gradient(135deg,#334155,#0f172a)",
-  "linear-gradient(135deg,#14b8a6,#3b82f6)",
-] as const;
-
-function brandHash(label: string): number {
-  let h = 0;
-  for (let i = 0; i < label.length; i++) h = (h * 31 + label.charCodeAt(i)) >>> 0;
-  return h;
-}
-
-function BrandMark({ label }: { label: string }) {
-  const h = brandHash(label);
-  const bg = BRAND_GRADIENTS[h % BRAND_GRADIENTS.length];
-  const variant = (h >> 3) % 3;
-  const text = variant === 0 ? label.toUpperCase() : variant === 1 ? label.charAt(0).toUpperCase() + label.slice(1) : label;
-  return (
-    <div className="grid h-20 place-items-center rounded-lg" style={{ background: bg }} aria-hidden>
-      <span
-        className={cn(
-          "max-w-full truncate px-3 text-white",
-          variant === 0 && "text-sm font-extrabold tracking-[0.22em]",
-          variant === 1 && "font-serif text-xl font-semibold tracking-tight",
-          variant === 2 && "font-mono text-lg font-bold lowercase tracking-tight",
-        )}
-      >
-        {text}
-      </span>
-    </div>
-  );
-}
-
-function TopPickCard({
-  row,
-  rank,
-  locked,
-  onToggleLock,
-  favorite,
-  onToggleFavorite,
-}: {
-  row: Row;
-  rank: number;
-  locked: boolean;
-  onToggleLock: (domain: string) => void;
-  favorite: boolean;
-  onToggleFavorite: (row: Row) => void;
-}) {
-  const { t, lang } = useI18n();
-  const prices = usePrices();
-  const score = row.scores ? totalScore(row.scores) : 0;
-  return (
-    <div className={cn("rounded-xl border bg-bg1 p-5", rank === 0 ? "border-brand-line" : "border-line")}>
-      <div className="flex items-start justify-between">
-        <span className={cn("tnum rounded-md px-2 py-0.5 font-mono text-sm font-bold", scoreBadgeClass(score))}>{score}</span>
-        <div className="flex gap-1">
-          <button
-            title={t("results.lockTitle")}
-            aria-pressed={locked}
-            onClick={() => onToggleLock(row.domain)}
-            className={cn(
-              "grid h-8 w-8 place-items-center rounded-md border",
-              locked ? "border-brand-line text-brand" : "border-line text-txt2 hover:text-txt0",
-            )}
-          >
-            <Lock className="h-3.5 w-3.5" />
-          </button>
-          <CopyButton domain={row.domain} className="rounded-md border border-line" />
-          <button
-            title={favorite ? t("results.favRemove") : t("results.favAdd")}
-            aria-pressed={favorite}
-            onClick={() => onToggleFavorite(row)}
-            className={cn("grid h-8 w-8 place-items-center rounded-md border border-line", favorite ? "text-brand" : "text-txt2 hover:text-txt0")}
-          >
-            {favorite ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}
-          </button>
-        </div>
-      </div>
-      <div className="mt-3">
-        <BrandMark label={row.label} />
-      </div>
-      <div className="mt-3 truncate font-mono text-2xl font-bold tracking-tight">
-        {row.label}
-        <span className="text-txt2">.{row.tld}</span>
-      </div>
-      {row.meaning && <p className="mt-1.5 text-[13px] leading-relaxed text-txt1"><MeaningText text={row.meaning} /></p>}
-      {row.scores && <ScoreBars scores={row.scores} className="mt-4" />}
-      {priceFull(row.tld, lang, prices) && (
-        <p title={priceFull(row.tld, lang, prices)} className="tnum mt-3 cursor-help text-[11px] text-txt2">{priceFull(row.tld, lang, prices)}</p>
-      )}
-      <RegisterMenu domain={row.domain}>
-        <button className="mt-2 flex h-10 w-full items-center justify-center gap-1.5 rounded-lg bg-brand text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90">
-          {t("common.register")}{priceShort(row.tld, lang, prices) ? ` · ${priceShort(row.tld, lang, prices)}` : ""}
-          <ChevronDown className="h-4 w-4" />
-        </button>
-      </RegisterMenu>
-    </div>
-  );
-}
-
-function GridCard({
-  row,
-  locked,
-  onToggleLock,
-  favorite,
-  onToggleFavorite,
-}: {
-  row: Row;
-  locked: boolean;
-  onToggleLock: (domain: string) => void;
-  favorite: boolean;
-  onToggleFavorite: (row: Row) => void;
-}) {
-  const { t, lang } = useI18n();
-  const score = row.scores ? totalScore(row.scores) : undefined;
-  return (
-    <div className="rounded-xl border border-line bg-bg1 p-4">
-      <div className="flex items-center justify-between gap-2">
-        <span className="truncate font-mono text-lg font-semibold">
-          {row.label}
-          <span className="text-txt2">.{row.tld}</span>
-        </span>
-        {score !== undefined && (
-          <span className={cn("tnum shrink-0 rounded-md px-2 py-0.5 font-mono text-xs font-bold", scoreBadgeClass(score))}>{score}</span>
-        )}
-      </div>
-      {row.meaning && <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-txt1"><MeaningText text={row.meaning} /></p>}
-      {row.scores && <ScoreBars scores={row.scores} columns={4} className="mt-3" />}
-      <div className="mt-3 flex items-center gap-1">
-        <button
-          title={t("results.lockTitle")}
-          aria-pressed={locked}
-          onClick={() => onToggleLock(row.domain)}
-          className={cn("grid h-8 w-8 place-items-center rounded-md border", locked ? "border-brand-line text-brand" : "border-line text-txt2 hover:text-txt0")}
-        >
-          <Lock className="h-3.5 w-3.5" />
-        </button>
-        <CopyButton domain={row.domain} className="rounded-md border border-line" />
-        <button
-          title={favorite ? t("results.favRemove") : t("results.favAdd")}
-          aria-pressed={favorite}
-          onClick={() => onToggleFavorite(row)}
-          className={cn("grid h-8 w-8 place-items-center rounded-md border border-line", favorite ? "text-brand" : "text-txt2 hover:text-txt0")}
-        >
-          {favorite ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}
-        </button>
-        <div className="flex-1" />
-        <RegisterMenu domain={row.domain}>
-          <button className="h-8 rounded-md bg-brand-dim px-3 text-xs font-semibold text-brand transition-opacity hover:opacity-80">{t("common.register")}</button>
-        </RegisterMenu>
-      </div>
-    </div>
-  );
 }
 
 /** 把当前搜索编成可分享的 /?q=…&tld=…&style=…&len=… 链接 */
@@ -229,6 +76,7 @@ export function ResultsPage({
   quotaExhausted,
   dislikedHas,
   onToggleDislike,
+  restoredGuard,
 }: {
   rows: Row[];
   description: string;
@@ -249,6 +97,8 @@ export function ResultsPage({
   quotaExhausted?: boolean;
   dislikedHas: (label: string) => boolean;
   onToggleDislike: (label: string) => void;
+  /** 从上次会话恢复的结果页：「再来一轮」需两步确认，防恢复态盲点误触消耗 AI 配额（R465） */
+  restoredGuard?: boolean;
 }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
@@ -257,11 +107,38 @@ export function ResultsPage({
   const [themeFilter, setThemeFilter] = useState<Theme | "">("");
   const [sort, setSort] = useState<SortKey>("score");
   const [view, setView] = useState<View>("rows");
+  // R467 行密度：选择持久化 localStorage；compact 仅在 ≥768px 生效（窄屏守 44px 触点）
+  const { density, setDensity, compact } = useDensity();
   const [linkCopied, setLinkCopied] = useState(false);
   const { copied: availCopied, copy: copyAvailable } = useCopyAvailable();
   const moreBlocked = running || moreDisabled || quotaExhausted;
   const [starredCount, setStarredCount] = useState(0);
   const [selectedIdx, setSelectedIdx] = useState(-1);
+  // Space 快捷键两步确认：首次 Space 只预热，3s 内再按才真正发起（避免焦点不在输入框时误触消耗 AI 配额）
+  const [spaceArmed, setSpaceArmed] = useState(false);
+  const spaceArmTimer = useRef<number | undefined>(undefined);
+  // 恢复态「再来一轮」按钮两步确认：首次点击只预热，3s 内再点才真正发起
+  const [moreArmed, setMoreArmed] = useState(false);
+  const moreArmTimer = useRef<number | undefined>(undefined);
+  useEffect(
+    () => () => {
+      window.clearTimeout(spaceArmTimer.current);
+      window.clearTimeout(moreArmTimer.current);
+    },
+    [],
+  );
+  const triggerMore = (aroundLocked: boolean) => {
+    if (restoredGuard && !moreArmed) {
+      setMoreArmed(true);
+      window.clearTimeout(moreArmTimer.current);
+      moreArmTimer.current = window.setTimeout(() => setMoreArmed(false), 3000);
+      return;
+    }
+    window.clearTimeout(moreArmTimer.current);
+    setMoreArmed(false);
+    if (aroundLocked) onMoreAroundLocked();
+    else onMore();
+  };
   const listRef = useRef<HTMLDivElement>(null);
 
   const availableRows = useMemo(() => rows.filter((r) => r.status === "available"), [rows]);
@@ -280,7 +157,8 @@ export function ResultsPage({
     return [...m.entries()].sort((a, b) => b[1] - a[1]);
   }, [availableRows]);
 
-  const topPicks = useMemo(() => sortRows(availableRows, "score").slice(0, 3), [availableRows]);
+  // R473：Top Picks 3 席 = 3 个不同 label，同名多 TLD 合为一席
+  const topPicks = useMemo(() => pickTopGroups(sortRows(availableRows, "score"), 3), [availableRows]);
 
   const priceOf = useMemo(() => {
     return (tld: string) => {
@@ -300,6 +178,13 @@ export function ResultsPage({
 
   const visibleAvailable = useMemo(() => visible.filter((r) => r.status === "available"), [visible]);
 
+  // R473：Grid 按 label 分组（含 unknown，不含 taken）；变体表按「Top Picks → Grid」顺序一次分配并全页复用
+  const gridGroups = useMemo(() => groupByLabel(visible.filter((r) => r.status !== "taken")), [visible]);
+  const variants = useMemo(
+    () => assignBrandVariants([topPicks.map((g) => g.label), gridGroups.map((g) => g.label)]),
+    [topPicks, gridGroups],
+  );
+
   const unstarredAvailable = useMemo(() => visibleAvailable.filter((r) => !shortlistHas(r.domain)), [visibleAvailable, shortlistHas]);
 
   const starAllAvailable = () => {
@@ -312,11 +197,16 @@ export function ResultsPage({
 
 
 
-  // 键盘导航：↑↓ 选中 / C 复制 / S 收藏 / Enter 注册 / Space 再来一轮
+  // 键盘导航：↑↓ 选中 / C 复制 / S 收藏 / Enter 注册（该域名的首选注册商，与菜单首项一致）/ Space 再来一轮
+  const affiliateCfg = useAffiliateConfig();
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       const target = e.target as HTMLElement;
       if (target.tagName === "TEXTAREA" || target.tagName === "INPUT" || e.metaKey || e.ctrlKey || e.altKey) return;
+      // 下拉菜单（注册商/导出等）打开时 ↑↓/Enter 归菜单自己的焦点管理，不再同时移动行选中
+      if (target.closest?.("[role=menu]")) return;
+      // 焦点在按钮/链接上时 Space/Enter 交给原生激活（否则密度切换等控件无法用键盘操作，且 Space 会误触再来一轮）
+      const onControl = Boolean(target.closest?.("button, a, [role=button]"));
       if (e.key === "ArrowDown" || e.key === "ArrowUp") {
         e.preventDefault();
         setSelectedIdx((i) => {
@@ -325,26 +215,36 @@ export function ResultsPage({
           el?.scrollIntoView({ block: "nearest" });
           return next;
         });
-      } else if (e.key === " " && !moreBlocked) {
+      } else if (e.key === " " && !moreBlocked && !onControl) {
         e.preventDefault();
-        if (locked.size > 0) onMoreAroundLocked();
-        else onMore();
+        if (!spaceArmed) {
+          setSpaceArmed(true);
+          window.clearTimeout(spaceArmTimer.current);
+          spaceArmTimer.current = window.setTimeout(() => setSpaceArmed(false), 3000);
+        } else {
+          window.clearTimeout(spaceArmTimer.current);
+          setSpaceArmed(false);
+          window.clearTimeout(moreArmTimer.current);
+          setMoreArmed(false);
+          if (locked.size > 0) onMoreAroundLocked();
+          else onMore();
+        }
       } else if (selectedIdx >= 0 && selectedIdx < visible.length) {
         const row = visible[selectedIdx];
         if (e.key === "c" || e.key === "C") void navigator.clipboard.writeText(row.domain);
         else if (e.key === "s" || e.key === "S") onToggleFavorite(row);
-        else if (e.key === "Enter") window.open(`https://www.namecheap.com/domains/registration/results/?domain=${encodeURIComponent(row.domain)}`, "_blank");
+        else if (e.key === "Enter" && !onControl) openRegistrar(primaryRegistrar(row.domain), row.domain, affiliateCfg);
       }
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [visible, selectedIdx, moreBlocked, locked, onMore, onMoreAroundLocked, onToggleFavorite]);
+  }, [visible, selectedIdx, moreBlocked, locked, onMore, onMoreAroundLocked, onToggleFavorite, spaceArmed, affiliateCfg]);
 
   const lockedList = [...locked];
 
   return (
     <>
-      <main className="mx-auto max-w-6xl overflow-x-clip px-4 py-6 pb-24 md:px-6">
+      <main className="mx-auto w-full min-w-0 max-w-6xl overflow-x-clip px-4 py-6 pb-24 md:px-6">
         {/* 摘要行 */}
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <div>
@@ -390,6 +290,19 @@ export function ResultsPage({
                       : t("results.starAllBtn")}
                 </button>
               )}
+              {/* <sm：顶部操作行（导出 / 再来一轮）与底部 sticky 栏重复，收起以让 Top Picks 进首屏；只保留不重复的「复制链接」 */}
+              <button
+                onClick={() => {
+                  void navigator.clipboard.writeText(searchLink(description, tlds, style, lengthPref));
+                  setLinkCopied(true);
+                  window.setTimeout(() => setLinkCopied(false), 2000);
+                }}
+                title={t("results.copyLinkTitle")}
+                className="inline-flex items-center gap-1 rounded-md border border-line bg-bg1 px-2 py-0.5 font-mono text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:hidden"
+              >
+                {linkCopied ? <Check className="h-3 w-3 text-brand" /> : <Link2 className="h-3 w-3" />}
+                {linkCopied ? t("results.linkCopied") : t("results.copyLink")}
+              </button>
               {visible.length > 0 && (
                 <button
                   onClick={() => exportResultsCsv(visible, lang, prices)}
@@ -401,7 +314,7 @@ export function ResultsPage({
               )}
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="hidden items-center gap-2 sm:flex">
             <button
               className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0"
               title={t("results.copyLinkTitle")}
@@ -428,12 +341,12 @@ export function ResultsPage({
             </DropdownMenu>
             <button
               className="flex h-9 items-center gap-1.5 rounded-lg bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50"
-              onClick={onMore}
+              onClick={() => triggerMore(false)}
               disabled={moreBlocked}
               title={quotaExhausted ? t("results.moreQuota") : undefined}
             >
               <RotateCw className={cn("h-4 w-4", running && "animate-spin")} />
-              {t("results.more")} <kbd className="hidden md:inline" style={{ background: "rgba(0,0,0,.2)", color: "inherit", borderColor: "rgba(0,0,0,.25)" }}>Space</kbd>
+              {moreArmed ? t("results.moreConfirm") : t("results.more")} <kbd className="hidden md:inline" style={{ background: "rgba(0,0,0,.2)", color: "inherit", borderColor: "rgba(0,0,0,.25)" }}>Space</kbd>
             </button>
           </div>
         </div>
@@ -446,15 +359,16 @@ export function ResultsPage({
               <h2 className="text-sm font-semibold">Top Picks</h2>
               <span className="text-xs text-txt2">{t("results.topPicks", { n: topPicks.length })}</span>
             </div>
-            <div className="mb-8 grid gap-4 md:grid-cols-3">
-              {topPicks.map((r, i) => (
+            <div data-brand-wall="top" className="mb-8 grid gap-4 md:grid-cols-3">
+              {topPicks.map((g, i) => (
                 <TopPickCard
-                  key={r.domain}
-                  row={r}
+                  key={g.rows[0].domain}
+                  group={g}
                   rank={i}
-                  locked={locked.has(r.domain)}
+                  variant={variantOf(variants, g.label)}
+                  locked={locked.has(g.rows[0].domain)}
                   onToggleLock={onToggleLock}
-                  favorite={shortlistHas(r.domain)}
+                  favorite={shortlistHas(g.rows[0].domain)}
                   onToggleFavorite={onToggleFavorite}
                 />
               ))}
@@ -485,7 +399,7 @@ export function ResultsPage({
             ))}
           </div>
           {tldCounts.length > 1 && (
-            <div className="flex items-center gap-1 overflow-x-auto rounded-lg border border-line bg-bg1 p-1 no-scrollbar">
+            <div className="flex min-w-0 max-w-full items-center gap-1 overflow-x-auto rounded-lg border border-line bg-bg1 p-1 no-scrollbar">
               <button
                 onClick={() => setTldFilter("")}
                 className={cn("shrink-0 rounded-md px-2 py-1 font-mono text-[11px]", !tldFilter ? "bg-bg3 font-semibold" : "text-txt1 hover:text-txt0")}
@@ -507,7 +421,7 @@ export function ResultsPage({
             </div>
           )}
           {themeCounts.length > 1 && (
-            <div className="flex items-center gap-1 overflow-x-auto rounded-lg border border-line bg-bg1 p-1 no-scrollbar">
+            <div className="flex min-w-0 max-w-full items-center gap-1 overflow-x-auto rounded-lg border border-line bg-bg1 p-1 no-scrollbar">
               {themeCounts.map(([th, n]) => (
                 <button
                   key={th}
@@ -540,18 +454,48 @@ export function ResultsPage({
           <span className="hidden items-center gap-2 text-[11px] text-txt2 lg:flex">
             <kbd>↑↓</kbd>{t("results.kbd")} <kbd>C</kbd>{t("results.kbdCopy")} <kbd>S</kbd>{t("results.kbdFav")} <kbd>⏎</kbd>{t("results.kbdReg")}
           </span>
-          <div className="flex items-center gap-1 rounded-lg border border-line bg-bg1 p-1">
+          {view === "rows" && (
+            <div role="group" aria-label={t("results.density")} className="hidden items-center gap-1 rounded-lg border border-line bg-bg1 p-1 md:flex">
+              {(
+                [
+                  { key: "comfortable", Icon: Rows2, label: t("results.densityComfortable"), title: t("results.densityComfortableTitle") },
+                  { key: "compact", Icon: Rows4, label: t("results.densityCompact"), title: t("results.densityCompactTitle") },
+                ] as { key: Density; Icon: typeof Rows2; label: string; title: string }[]
+              ).map((d) => (
+                <button
+                  key={d.key}
+                  type="button"
+                  title={d.title}
+                  aria-pressed={density === d.key}
+                  data-density-option={d.key}
+                  onClick={() => setDensity(d.key)}
+                  className={cn(
+                    "flex h-7 items-center gap-1 rounded-md px-2 text-[11px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                    density === d.key ? "bg-bg3 font-semibold text-txt0" : "text-txt2 hover:text-txt0",
+                  )}
+                >
+                  <d.Icon className="h-3.5 w-3.5" />
+                  {d.label}
+                </button>
+              ))}
+            </div>
+          )}
+          <div role="group" aria-label={t("results.view")} className="flex items-center gap-1 rounded-lg border border-line bg-bg1 p-1">
             <button
               title={t("results.viewRows")}
+              aria-label={t("results.viewRows")}
+              aria-pressed={view === "rows"}
               onClick={() => setView("rows")}
-              className={cn("grid h-7 w-7 place-items-center rounded-md", view === "rows" ? "bg-bg3" : "text-txt2 hover:text-txt0")}
+              className={cn("grid h-11 w-11 place-items-center rounded-md sm:h-7 sm:w-7", view === "rows" ? "bg-bg3" : "text-txt2 hover:text-txt0")}
             >
               <Rows3 className="h-3.5 w-3.5" />
             </button>
             <button
               title={t("results.viewGrid")}
+              aria-label={t("results.viewGrid")}
+              aria-pressed={view === "grid"}
               onClick={() => setView("grid")}
-              className={cn("grid h-7 w-7 place-items-center rounded-md", view === "grid" ? "bg-bg3" : "text-txt2 hover:text-txt0")}
+              className={cn("grid h-11 w-11 place-items-center rounded-md sm:h-7 sm:w-7", view === "grid" ? "bg-bg3" : "text-txt2 hover:text-txt0")}
             >
               <LayoutGrid className="h-3.5 w-3.5" />
             </button>
@@ -560,11 +504,21 @@ export function ResultsPage({
 
         {/* 列表 / 网格 */}
         {view === "rows" ? (
-          <div ref={listRef} className="divide-y divide-line rounded-xl border border-line bg-bg1">
+          <div
+            ref={listRef}
+            data-density={compact ? "compact" : "comfortable"}
+            className={cn(
+              "rounded-xl border border-line bg-bg1",
+              // 紧凑模式去掉 1px 分隔线（26px 行距，1080p 去掉顶栏/底栏后一屏完整可见 ≥34 行），改用斑马底辅助横向扫读
+              compact ? "py-1 [&>[data-domain]:nth-child(even)]:bg-bg2/50" : "divide-y divide-line",
+            )}
+          >
             {visible.map((r, i) => (
               <DomainRow
                 key={r.domain}
                 row={r}
+                compact={compact}
+                variant={variantOf(variants, r.label)}
                 selected={i === selectedIdx}
                 locked={locked.has(r.domain)}
                 onToggleLock={r.status === "available" ? onToggleLock : undefined}
@@ -577,19 +531,18 @@ export function ResultsPage({
             {visible.length === 0 && <p className="px-4 py-8 text-center text-sm text-txt2">{t("results.noMatch")}</p>}
           </div>
         ) : (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {visible
-              .filter((r) => r.status !== "taken")
-              .map((r) => (
-                <GridCard
-                  key={r.domain}
-                  row={r}
-                  locked={locked.has(r.domain)}
-                  onToggleLock={onToggleLock}
-                  favorite={shortlistHas(r.domain)}
-                  onToggleFavorite={onToggleFavorite}
-                />
-              ))}
+          <div data-brand-wall="grid" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {gridGroups.map((g) => (
+              <GridCard
+                key={g.rows[0].domain}
+                group={g}
+                variant={variantOf(variants, g.label)}
+                locked={locked}
+                onToggleLock={onToggleLock}
+                shortlistHas={shortlistHas}
+                onToggleFavorite={onToggleFavorite}
+              />
+            ))}
           </div>
         )}
 
@@ -613,6 +566,11 @@ export function ResultsPage({
 
       {/* 底部 sticky：锁定 + 围绕锁定再来一轮 */}
       <div className="fixed inset-x-0 bottom-0 z-20 border-t border-line bg-bg1/90 backdrop-blur-[12px]">
+        {spaceArmed && (
+          <div className="pointer-events-none absolute inset-x-0 -top-9 flex justify-center" role="status">
+            <span className="rounded-md border border-line bg-bg2 px-3 py-1.5 text-xs text-txt0 shadow-sm">{t("results.spaceConfirm")}</span>
+          </div>
+        )}
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-3 sm:gap-3 sm:px-4 md:px-6">
           {quotaExhausted ? (
             <span className="min-w-0 truncate text-[11px] text-txt2 sm:text-xs">{t("results.moreQuota")}</span>
@@ -650,12 +608,12 @@ export function ResultsPage({
           </DropdownMenu>
           <button
             className="flex h-11 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg bg-brand px-3.5 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50 sm:px-4 md:h-9"
-            onClick={locked.size > 0 ? onMoreAroundLocked : onMore}
+            onClick={() => triggerMore(locked.size > 0)}
             disabled={moreBlocked}
             title={quotaExhausted ? t("results.moreQuota") : undefined}
           >
             <RotateCw className={cn("h-4 w-4", running && "animate-spin")} />
-            {locked.size > 0 ? t("results.moreAroundLocked") : t("results.more")}
+            {moreArmed ? t("results.moreConfirm") : locked.size > 0 ? t("results.moreAroundLocked") : t("results.more")}
           </button>
         </div>
       </div>

@@ -1,13 +1,14 @@
 import { useMemo, useState } from "react";
-import { HUB_META, guideHubGroups, guideHubLabel, guideOneLiner } from "@/content/hubs";
+import { GUIDE_HUB_META, guideHubGroups, guideHubLabel, guideKeywords, guideOneLiner } from "@/content/hubs-guide";
 import { useI18n } from "@/lib/i18n";
 import { usePageTitle } from "@/lib/use-page-title";
 import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
+import { BackToTop, HubAnchorNav, hubAnchorId } from "./hub-nav";
 
 /** /guide 索引 hub：全部行业命名指南，按大类分组。DOM 与 worker 的 guideHubBlocks 骨架逐字一致。 */
 export function GuideHubPage() {
   const { lang } = useI18n();
-  const meta = HUB_META.guide[lang];
+  const meta = GUIDE_HUB_META[lang];
   usePageTitle(meta.title);
   const [query, setQuery] = useState("");
   const groups = useMemo(() => guideHubGroups(), []);
@@ -18,7 +19,7 @@ export function GuideHubPage() {
         .map((g) => ({
           ...g,
           slugs: g.slugs.filter((slug) =>
-            hubMatch(query, [slug, guideHubLabel(slug, "zh"), guideHubLabel(slug, "en"), guideOneLiner(slug, "zh"), guideOneLiner(slug, "en")]),
+            hubMatch(query, [slug, guideHubLabel(slug, "zh"), guideHubLabel(slug, "en"), guideOneLiner(slug, "zh"), guideOneLiner(slug, "en"), ...guideKeywords(slug)]),
           ),
         }))
         .filter((g) => g.slugs.length > 0),
@@ -32,9 +33,10 @@ export function GuideHubPage() {
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{meta.title}</h1>
       <p className="mt-6 text-[15px] leading-relaxed text-txt1">{meta.intro}</p>
       <HubFilter placeholder={lang === "zh" ? "筛选行业…" : "Filter industries…"} value={query} onChange={setQuery} shown={shown} total={total} />
+      <HubAnchorNav lang={lang} items={filtered.map((g) => ({ id: g.id, label: g[lang], count: g.slugs.length }))} />
       {filtered.length === 0 && <HubFilterEmpty lang={lang} onClear={() => setQuery("")} />}
       {filtered.map((g) => (
-        <section key={g.id} className="mt-8">
+        <section key={g.id} id={hubAnchorId(g.id)} className="mt-8 scroll-mt-32">
           <h2 className="text-base font-bold">
             {g[lang]}
             <span className="tnum ml-2 font-mono text-xs font-normal text-txt2">{g.slugs.length}</span>
@@ -53,6 +55,7 @@ export function GuideHubPage() {
           </div>
         </section>
       ))}
+      <BackToTop lang={lang} />
     </main>
   );
 }

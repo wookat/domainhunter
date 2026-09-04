@@ -1,0 +1,646 @@
+{
+  "sitemap_loc_samples": [
+    796,
+    796,
+    796
+  ],
+  "sitemap_dup_locs": 0,
+  "sitemap_cat_counts": {
+    "tld": 252,
+    "guide": 254,
+    "vs": 282,
+    "core": 8
+  },
+  "sitemap_vs_counts_json": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "llms_counts": {
+    "tld": 252,
+    "guide": 254,
+    "vs": 282
+  },
+  "llms_vs_sitemap_equal": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "robots": {
+    "status": 200,
+    "has_sitemap": true,
+    "gptbot": true
+  },
+  "seo_new_pages": {
+    "/vs/auction-vs-market": {
+      "status": 200,
+      "title": ".auction 和 .market 怎么选：竞价成交与挂牌交易的分工 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/auction-vs-market",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 120927
+    },
+    "/vs/auction-vs-market?lang=en": {
+      "status": 200,
+      "title": ".auction vs .market: Bidding Floor or Open Marketplace | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/auction-vs-market?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 121481
+    },
+    "/vs/lighting-vs-solar": {
+      "status": 200,
+      "title": ".lighting 和 .solar 怎么选：太阳能灯生意站哪边 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/lighting-vs-solar",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 120375
+    },
+    "/vs/lighting-vs-solar?lang=en": {
+      "status": 200,
+      "title": ".lighting vs .solar: Where a Solar-Lighting Business Belongs | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/lighting-vs-solar?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 120560
+    },
+    "/tld/business": {
+      "status": 200,
+      "title": ".business 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/business",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 128663
+    },
+    "/tld/business?lang=en": {
+      "status": 200,
+      "title": ".business Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/business?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 129147
+    },
+    "/tld/supplies": {
+      "status": 200,
+      "title": ".supplies 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/supplies",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 128769
+    },
+    "/tld/supplies?lang=en": {
+      "status": 200,
+      "title": ".supplies Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/supplies?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 129503
+    },
+    "/guide/auction": {
+      "status": 200,
+      "title": "拍卖行与在线拍卖平台怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/auction",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 113305
+    },
+    "/guide/auction?lang=en": {
+      "status": 200,
+      "title": "How to Name an Auction House or Bidding Platform: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/auction?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 115691
+    },
+    "/guide/sneakers": {
+      "status": 200,
+      "title": "球鞋店与潮鞋买手店怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/sneakers",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 113354
+    },
+    "/guide/sneakers?lang=en": {
+      "status": 200,
+      "title": "How to Name a Sneaker Shop or Resale Platform: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/sneakers?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 115292
+    }
+  },
+  "usage_pre": {
+    "days": {
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786320060446,
+    "indexnowLast": 1786255259045,
+    "pricesLastOk": null,
+    "pricesLastFail": 1786330990835
+  },
+  "usage_keys_present": {
+    "pricesLastOk": true,
+    "pricesLastFail": true,
+    "cronLast": true,
+    "indexnowLast": true
+  },
+  "prices_api": {
+    "stale": true,
+    "tldCount": 58,
+    "fetchedAt": 1786167382002,
+    "keys": 58
+  },
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_all": "核验完成：共 253 个，209 个可注册",
+  "prices_rows_zh": 252,
+  "prices_live_count": 58,
+  "prices_static_count": 194,
+  "prices_new_tld_static": {
+    "expected": {
+      "business": [
+        19,
+        115
+      ],
+      "limited": [
+        59,
+        211
+      ],
+      "associates": [
+        85,
+        226
+      ],
+      "cheap": [
+        41,
+        211
+      ],
+      "bargains": [
+        85,
+        174
+      ],
+      "supplies": [
+        145,
+        145
+      ]
+    },
+    "got": {
+      "business": [
+        19,
+        115
+      ],
+      "cheap": [
+        41,
+        211
+      ],
+      "limited": [
+        59,
+        211
+      ],
+      "associates": [
+        85,
+        226
+      ],
+      "bargains": [
+        85,
+        174
+      ],
+      "supplies": [
+        145,
+        145
+      ]
+    },
+    "match": true
+  },
+  "prices_row_tld_hrefs": {
+    "business": true,
+    "limited": true,
+    "associates": true,
+    "cheap": true,
+    "bargains": true,
+    "supplies": true
+  },
+  "tld_pricecards": {
+    "got": {
+      "business": {
+        "first": 19,
+        "renew": 115,
+        "prices_href": true
+      },
+      "limited": {
+        "first": 59,
+        "renew": 211,
+        "prices_href": true
+      },
+      "associates": {
+        "first": 85,
+        "renew": 226,
+        "prices_href": true
+      },
+      "cheap": {
+        "first": 41,
+        "renew": 211,
+        "prices_href": true
+      },
+      "bargains": {
+        "first": 85,
+        "renew": 174,
+        "prices_href": true
+      },
+      "supplies": {
+        "first": 145,
+        "renew": 145,
+        "prices_href": true
+      }
+    },
+    "match": true
+  },
+  "tld_hub_links": 252,
+  "guide_hub_links": 254,
+  "vs_hub_links": 282,
+  "footer_counts": [],
+  "footer_link_counts": {
+    "/tld/": 252,
+    "/guide/": 254,
+    "/vs/": 282
+  },
+  "templates_prefill": {
+    "auction": "An auction house or online bidding platf",
+    "antiques": "An antique and vintage shop. The name sh",
+    "lightingbrand": "A lighting and lamp brand. The name shou",
+    "outlet": "An outlet or discount store. The name sh",
+    "watches": "A watch brand or dealer. The name should",
+    "sneakers": "A sneaker boutique or resale platform. T"
+  },
+  "templates_more_chip": "+244",
+  "404_status": 404,
+  "404_tld_status": 404,
+  "404_guide_status": 404,
+  "404_vs_status": 404,
+  "mcp_doc_status": 200,
+  "mcp_doc_tldcount": "860",
+  "mcp_tld_prices": {
+    "tldCount": 252,
+    "priceKeys": 252
+  },
+  "share_create": {
+    "status": 200,
+    "id": "0wzG9LuJ37",
+    "has_token": true
+  },
+  "share_live_domains": {
+    "d1": true,
+    "d2": true
+  },
+  "share_revoke": {
+    "del": 200,
+    "getAfter": 410,
+    "revokedBodyHasItems": false
+  },
+  "share_revoked_ui": true,
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(250, 250, 249)",
+    "persist_after_reload": "rgb(250, 250, 249)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld/business": 360,
+    "/vs/auction-vs-market": 360,
+    "/guide/sneakers": 360
+  },
+  "usage_post": {
+    "days": {
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786320060446,
+    "indexnowLast": 1786255259045,
+    "pricesLastOk": null,
+    "pricesLastFail": 1786330990835
+  },
+  "usage_days_equal": true,
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r354"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r354"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r354"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r354"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r354"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/0wzG9LuJ37"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/0wzG9LuJ37"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/0wzG9LuJ37"
+    }
+  ]
+}

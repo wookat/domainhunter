@@ -1,0 +1,586 @@
+{
+  "usage_pre": {
+    "days": {
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-10": {
+        "searches": 6,
+        "byTld": {
+          "com": 6,
+          "cn": 6
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 6
+        }
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786406424324,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786414620280,
+    "pricesLastFail": 1786398026862
+  },
+  "chunk_audit": {
+    "/tld/com": {
+      "js_count": 12,
+      "forbidden_loaded": [],
+      "pass": true
+    },
+    "/guide/saas": {
+      "js_count": 10,
+      "forbidden_loaded": [],
+      "pass": true
+    },
+    "/vs/com-vs-cn": {
+      "js_count": 9,
+      "forbidden_loaded": [],
+      "pass": true
+    },
+    "/tld": {
+      "js_count": 5,
+      "forbidden_loaded": [],
+      "pass": true
+    },
+    "/prices": {
+      "js_count": 8,
+      "forbidden_loaded": [],
+      "pass": true
+    }
+  },
+  "chunk_audit_js_lists": {
+    "/tld/com": [
+      "index-CBsFETox.js",
+      "tld-page-BviaIinX.js",
+      "injected-D6SkNnkd.js",
+      "tld-groups-0NBrIg_R.js",
+      "not-found-page-BnMfRGUO.js",
+      "use-page-title-ClSCaZGc.js",
+      "prices-CkFHhaGt.js",
+      "tag-u0fG_fte.js",
+      "circle-check-C0a7MdH6.js",
+      "lightbulb-DKU920xg.js",
+      "circle-question-mark-CRqyc_33.js",
+      "sparkles-HnV6icMD.js"
+    ],
+    "/guide/saas": [
+      "index-CBsFETox.js",
+      "guide-page-D1mdlw10.js",
+      "guide-groups-BoaZzvc8.js",
+      "injected-D6SkNnkd.js",
+      "not-found-page-BnMfRGUO.js",
+      "use-page-title-ClSCaZGc.js",
+      "prices-CkFHhaGt.js",
+      "lightbulb-DKU920xg.js",
+      "sparkles-HnV6icMD.js",
+      "circle-question-mark-CRqyc_33.js"
+    ],
+    "/vs/com-vs-cn": [
+      "compare-page--4pHX6RI.js",
+      "index-CBsFETox.js",
+      "injected-D6SkNnkd.js",
+      "not-found-page-BnMfRGUO.js",
+      "use-page-title-ClSCaZGc.js",
+      "prices-CkFHhaGt.js",
+      "circle-check-C0a7MdH6.js",
+      "circle-question-mark-CRqyc_33.js",
+      "sparkles-HnV6icMD.js"
+    ],
+    "/tld": [
+      "index-CBsFETox.js",
+      "tld-hub-page-B2uDknzC.js",
+      "use-page-title-ClSCaZGc.js",
+      "hub-nav-B7rL92LS.js",
+      "tld-groups-0NBrIg_R.js"
+    ],
+    "/prices": [
+      "index-CBsFETox.js",
+      "prices-page-Ci9E-KNY.js",
+      "prices-CkFHhaGt.js",
+      "hub-nav-B7rL92LS.js",
+      "tag-u0fG_fte.js",
+      "circle-question-mark-CRqyc_33.js",
+      "sparkles-HnV6icMD.js",
+      "arrow-up-DvnctTBL.js"
+    ]
+  },
+  "chunk_audit_all_pass": true,
+  "home_full_preload": {
+    "home_page_loaded": true,
+    "domain_row_loaded": true
+  },
+  "ssr_hydration": {
+    "/tld/com": {
+      "ssr": {
+        "h1": ".com Domain Guide: Who It's For, Pricing & Naming Tips",
+        "p": "TLD guides/.com"
+      },
+      "hydrated": {
+        "h1": ".com 域名注册指南：适合谁、多少钱、怎么起名",
+        "p": "TLD 指南/.com"
+      },
+      "equal": false
+    },
+    "/tld/ee": {
+      "ssr": {
+        "h1": ".ee Domain Guide: Who It's For, Pricing & Naming Tips",
+        "p": "TLD guides/.ee"
+      },
+      "hydrated": {
+        "h1": ".ee 域名注册指南：适合谁、多少钱、怎么起名",
+        "p": "TLD 指南/.ee"
+      },
+      "equal": false
+    },
+    "/guide/saas": {
+      "ssr": {
+        "h1": "How to Name a SaaS Product: Strategies, Case Studies & Domains",
+        "p": "Industry guides/SaaS tools"
+      },
+      "hydrated": {
+        "h1": "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择",
+        "p": "行业指南/SaaS 工具"
+      },
+      "equal": false
+    },
+    "/guide/jadecarving": {
+      "ssr": {
+        "h1": "How to Name a Jade Carving Studio: Strategies, Case Studies & Domains",
+        "p": "Industry guides/Jade carving studios"
+      },
+      "hydrated": {
+        "h1": "玉雕工作室怎么起名：命名思路、好名字拆解与域名选择",
+        "p": "行业指南/玉雕工作室"
+      },
+      "equal": false
+    },
+    "/vs/com-vs-cn": {
+      "ssr": {
+        "h1": null,
+        "p": null
+      },
+      "hydrated": {
+        "h1": ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比",
+        "p": "后缀对比/.com vs .cn"
+      },
+      "equal": false
+    },
+    "/vs/kz-vs-tr": {
+      "ssr": {
+        "h1": ".kz 和 .tr 怎么选：哈萨克斯坦与土耳其国家域名的欧亚对比",
+        "p": "后缀对比/.kz vs .tr"
+      },
+      "hydrated": {
+        "h1": ".kz 和 .tr 怎么选：哈萨克斯坦与土耳其国家域名的欧亚对比",
+        "p": "后缀对比/.kz vs .tr"
+      },
+      "equal": true
+    }
+  },
+  "ssr_hydration_all_equal": false,
+  "home_hard_nav": {
+    "main_text_len": 666,
+    "has_h1": true
+  },
+  "spa_back_home": {
+    "url": "/",
+    "main_text_len": 683,
+    "has_h1": true
+  },
+  "related_hydration": {
+    "/tld/com": {
+      "equal": false,
+      "ssr": {
+        "相关后缀对比": null,
+        "相关 TLD": null,
+        "相关行业命名指南": null
+      }
+    },
+    "/tld/ee": {
+      "equal": true,
+      "ssr": {
+        "相关后缀对比": null,
+        "相关 TLD": 6,
+        "相关行业命名指南": null
+      }
+    },
+    "/guide/saas": {
+      "equal": false,
+      "ssr": {
+        "相关后缀对比": null,
+        "相关行业指南": null
+      }
+    },
+    "/guide/jadecarving": {
+      "equal": false,
+      "ssr": {
+        "相关后缀对比": null,
+        "相关行业指南": null
+      }
+    },
+    "/vs/com-vs-cn": {
+      "equal": false,
+      "ssr": {
+        "相关行业命名指南": null,
+        "相关对比": null
+      }
+    },
+    "/vs/kz-vs-tr": {
+      "equal": false,
+      "ssr": {
+        "相关行业命名指南": null,
+        "相关对比": null
+      }
+    }
+  },
+  "related_hydration_all_equal": false,
+  "prices_r423": {
+    "rows_all": 396,
+    "rows_shop": 2,
+    "rows_none": 0,
+    "empty_state_text": "没有匹配",
+    "rows_restored": 396,
+    "sort": {
+      "present": true,
+      "label": "注册/首年",
+      "before": [
+        "/?tld=bond",
+        "/?tld=click",
+        "/?tld=lol",
+        "/?tld=garden",
+        "/?tld=beauty"
+      ],
+      "after": [
+        "/?tld=tickets",
+        "/?tld=flowers",
+        "/?tld=audio",
+        "/?tld=eg",
+        "/?tld=fm"
+      ],
+      "order_changed": true
+    },
+    "back_to_top": {
+      "visible_after_scroll": true,
+      "size": [
+        44,
+        44
+      ],
+      "at_top": true,
+      "hidden_after_top": true
+    }
+  },
+  "hub_r415": {
+    "/tld": {
+      "hydrated": {
+        "nav_present": true,
+        "chip_count": 9,
+        "section_count": 9,
+        "ids_equal": true
+      },
+      "anchor_jump": {
+        "target": "hub-g-commerce",
+        "hash_ok": true,
+        "nav_bottom": 124,
+        "h2_top": 128,
+        "not_clipped": true,
+        "scrolled": true
+      },
+      "back_to_top": {
+        "visible_after_scroll": true,
+        "size": [
+          44,
+          44
+        ],
+        "at_top": true,
+        "hidden_after_top": true
+      },
+      "filtered": {
+        "chips": 1,
+        "sections": 1,
+        "equal": true
+      },
+      "restored": {
+        "chips": 9,
+        "sections": 9
+      },
+      "no_match": {
+        "nav_gone": true,
+        "sections": 0
+      }
+    },
+    "/guide": {
+      "hydrated": {
+        "nav_present": true,
+        "chip_count": 10,
+        "section_count": 10,
+        "ids_equal": true
+      },
+      "anchor_jump": {
+        "target": "hub-g-health",
+        "hash_ok": true,
+        "nav_bottom": 124,
+        "h2_top": 128,
+        "not_clipped": true,
+        "scrolled": true
+      },
+      "back_to_top": {
+        "visible_after_scroll": true,
+        "size": [
+          44,
+          44
+        ],
+        "at_top": true,
+        "hidden_after_top": true
+      },
+      "filtered": {
+        "chips": 2,
+        "sections": 2,
+        "equal": true
+      },
+      "restored": {
+        "chips": 10,
+        "sections": 10
+      },
+      "no_match": {
+        "nav_gone": true,
+        "sections": 0
+      }
+    },
+    "/vs": {
+      "hydrated": {
+        "nav_present": true,
+        "chip_count": 370,
+        "section_count": 370,
+        "ids_equal": true
+      },
+      "anchor_jump": {
+        "target": "hub-g-investments",
+        "hash_ok": true,
+        "nav_bottom": 124,
+        "h2_top": 128,
+        "not_clipped": true,
+        "scrolled": true
+      },
+      "back_to_top": {
+        "visible_after_scroll": true,
+        "size": [
+          44,
+          44
+        ],
+        "at_top": true,
+        "hidden_after_top": true
+      },
+      "filtered": {
+        "chips": 1,
+        "sections": 1,
+        "equal": true
+      },
+      "restored": {
+        "chips": 370,
+        "sections": 370
+      },
+      "no_match": {
+        "nav_gone": true,
+        "sections": 0
+      }
+    }
+  },
+  "chips_prefill": {
+    "candidates": 1,
+    "pressed": 1,
+    "mentions_shop": true
+  },
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_more_label": "查更多后缀 +388",
+  "quick_all": "核验完成：共 397 个，200 个可注册",
+  "shortlist_flow": {
+    "star_click": {
+      "present": false
+    },
+    "ls_after_add": "[]",
+    "page_shows_domain": false
+  },
+  "monitors_page": {
+    "main_text_len": 138,
+    "has_h1": true,
+    "has_input": false
+  },
+  "themes": {
+    "light": {
+      "cls": "light",
+      "bg": "rgb(250, 250, 249)"
+    },
+    "dark": {
+      "cls": "",
+      "bg": "rgb(11, 12, 14)"
+    }
+  },
+  "themes_distinct": true,
+  "keyboard_tab_chain": [
+    {
+      "tag": "BUTTON",
+      "text": "DomainHunter",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "高级模式",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "候选清单0",
+      "visible": true
+    },
+    {
+      "tag": "A",
+      "text": "",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "EN",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "关闭引导",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "AI 猎名",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "精确核验",
+      "visible": true
+    },
+    {
+      "tag": "BUTTON",
+      "text": "批量核验",
+      "visible": true
+    }
+  ],
+  "mobile_prices_filter": 4,
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld": 360,
+    "/guide": 360,
+    "/vs": 360,
+    "/tld/com": 360,
+    "/vs/com-vs-cn": 360,
+    "/guide/saas": 360
+  },
+  "usage_post": {
+    "days": {
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-10": {
+        "searches": 6,
+        "byTld": {
+          "com": 6,
+          "cn": 6
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 6
+        }
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      }
+    },
+    "cronLast": 1786406424324,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786414620280,
+    "pricesLastFail": 1786398026862
+  },
+  "usage_days_equal": true,
+  "console_errors": []
+}

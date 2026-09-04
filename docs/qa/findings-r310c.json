@@ -1,0 +1,22 @@
+{
+  "quick_all": "核验完成：共 193 个，185 个可注册",
+  "unknown_filter_recheck": {
+    "recheckBtns": 8,
+    "titles": [
+      "重新核验 qzxvkw9r310e.icu",
+      "重新核验 qzxvkw9r310e.lol",
+      "重新核验 qzxvkw9r310e.fm"
+    ]
+  },
+  "unknown_domains_visible": [
+    "qzxvkw9r310e.icu",
+    "qzxvkw9r310e.lol",
+    "qzxvkw9r310e.fm",
+    "qzxvkw9r310e.best",
+    "qzxvkw9r310e.beauty",
+    "qzxvkw9r310e.help",
+    "qzxvkw9r310e.baby",
+    "qzxvkw9r310e.mom"
+  ],
+  "recheck_btns_after": 8
+}

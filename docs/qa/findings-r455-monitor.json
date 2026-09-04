@@ -1,0 +1,15 @@
+{
+  "done": "核验完成：共 9 个，0 个可注册",
+  "watch_click": {
+    "found": true,
+    "visible": true,
+    "label": "一键加入清单并开启监控，掉落即时通知"
+  },
+  "ls_monitor": "[\"google.io\"]",
+  "watching_visible": true,
+  "monitors_page_text": "监控管理\n全局监控名额 3/500\n\n开了监控的域名每 6 小时自动复查，掉落/被注册会记录在监控动态并推送 webhook 通知\n\n立即刷新状态\n最后刷新 刚刚\n我的监控 1 个\ngoogle.io\n已注册\n尚未检查\n取消监控\n查可用性",
+  "stop": {
+    "found": true
+  },
+  "ls_monitor_after_stop": "[]"
+}

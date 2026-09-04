@@ -11,7 +11,7 @@
   - `apps/web` — Hono on Cloudflare Workers（`src/worker.ts`）+ React 18/Vite/Tailwind SPA
 - **部署**：`pnpm deploy`（= `vite build && wrangler deploy`，在 `apps/web` 下执行；根目录 `pnpm deploy` 会 filter 到 web）。wrangler 配置见 `apps/web/wrangler.jsonc`（KV binding `CACHE`、ASSETS、cron `0 */6 * * *`）。
 - **集成分支模式**：并行子会话各自开独立分支 PR；部署前把本批次所有分支合到一个集成分支 `deploy/<batch>`（基于最新 main + 本批全部 PR），从集成分支构建部署，**防止直接从旧 main 部署导致已上线功能回退**。部署后 PR 逐个合回 main（deploy 分支用完即删，远端可能看不到历史 deploy 分支）。
-- **Worker secret**：`DEEPSEEK_API_KEY`（`wrangler secret`，AI 构思用 DeepSeek）。
+- **Worker secret**：`DEEPSEEK_API_KEY`（`wrangler secret`，AI 构思用 DeepSeek）；可选 `LLM_API_BASE` / `LLM_MODEL` / `LLM_THINKING`。R474 起可选备用上游 `LLM_FALLBACK_API_KEY` / `LLM_FALLBACK_API_BASE` / `LLM_FALLBACK_MODEL` / `LLM_FALLBACK_THINKING`（见 §4；**secret 未配置时功能休眠**）。所有 key 只走 `wrangler secret put`，`wrangler.jsonc` 不写任何 key。
 
 ## 2. 架构图谱
 
@@ -35,12 +35,13 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 
 ### 2.2 Worker API（`apps/web/src/worker.ts`，Hono）
 
-- `POST /api/ai-search` — AI 猎名，NDJSON 流（understanding/round/proposed/结果/done 事件）；限流每 IP 20 次/小时（`rl:{ip}:{hour}`）。
+- `POST /api/ai-search` — AI 猎名，NDJSON 流（understanding/round/proposed/结果/done 事件）；限流每 IP 20 次/小时（`rl:{ip}:{hour}`）。R466 起主轮 LLM 走 `stream:true`：每个通过防线的候选立即发一条 `proposed{items:[x],tlds}`（无 guard）并进入核验队列（候选级并行 3），流结束后再发一条 `proposed{items:[],tlds,guard}` 汇总；事件结构与字段不变，前端零改动。补发轮（word/pinyin）与 understanding 仍为整包非流式。R474 起每轮汇总 `proposed{items:[],guard}` 事件尾部增 `provider: "primary" | "fallback"`（本轮实际应答的 LLM 上游；单候选 proposed 事件字段不变）。
 - `POST /api/search` — 词根×前后缀×TLD 组合核验，NDJSON 流；也支持 `domains[]` 显式清单（≤200）。
 - `POST /api/check` — 清单复查（≤100 个，`refresh=1`/`refresh:true` 穿透缓存），NDJSON。
 - `GET /api/prices` — Porkbun 实时价（KV 24h 缓存，stale 兜底；彻底无数据回 200 + 空 prices）。
 - `GET /api/stats` — 累计核验数（`stats:checked`）。
-- `GET /api/usage?days=N` — 最近 N 天（≤45）聚合使用量 + `cronLast` / `indexnowLast` 心跳。
+- `GET /api/usage?days=N` — 最近 N 天（≤45）聚合使用量 + `cronLast` / `indexnowLast` / `indexnowLastError` 心跳；每日项含 `aiErrors`（R264）与 `llmProvider: {primary, fallback}`（R474，每成功主轮 +1；字段可缺，老数据无）；R481 起合并 `pv:{date}` 的 `pageviews:{home,results,tld,guide,vs,prices,other}` + `bots` / `botsBy:{google,bing,baidu,ai,other}`（仅 Worker 成功返回 HTML 文档时计数，爬虫 UA 只计 bots；不存 IP/UA 原文；见 `docs/research/growth-analytics.md`）；R480 起含 `outbound: {porkbun|namecheap|cloudflare|aliyun|tencent: n}` 与 `outboundByTld`（注册外链点击数，非 TLD_LIST/com.cn 的归 `other`）。
+- `GET /api/registrars`（R480）— 返回 `{affiliate}`：wrangler **公开 var** `REGISTRAR_AFFILIATE_JSON`（默认 `"{}"`，非 secret）经 `parseAffiliateJson` 校验后的注册商返佣参数；`cache-control: public, max-age=300`。`POST /api/click {registrar, tld}` → 204，仅累加 `usage.outbound`（不存域名/IP）；非法 id/tld → 400。
 - `POST /api/monitor`、`POST /api/monitor/list`、`GET /api/monitor/changes`、`POST /api/monitor/recheck` — 监控增删/查询/变化记录/手动实时复查（复查限频每 IP 60s）。
 - `POST /api/share`、`GET|DELETE /api/share/:id` — 清单分享快照（≤100 项，30 天 TTL，revokeToken 撤销）。
 - `POST /api/sync`、`GET /api/sync/:code` — 免登录跨设备同步码（8 位 A-Z2-9 去混淆字母，90 天 TTL）。
@@ -56,17 +57,29 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 | `rl:{ip}:{hourBucket}` | AI/check 限流计数，~1h |
 | `rl:recheck:{ip}` | 监控手动复查限频（60s） |
 | `stats:checked` | 累计核验计数（非原子，允许误差） |
-| `usage:{YYYY-MM-DD}` | 每日聚合使用量（仅计数，无输入/IP），45 天 |
+| `usage:{YYYY-MM-DD}` | 每日聚合使用量（仅计数，无输入/IP；R480 起含 `outbound`/`outboundByTld`），45 天 |
 | `monitor:domains` | 监控集合单 key 全局 map（上限 500） |
 | `monitor:changes` | 状态变化记录（保留 100 条） |
 | `prices:v2:{N}` | Porkbun 价格缓存 24h；**key 掺 TLD_LIST.length**，扩容后旧缓存自动失效 |
 | `prices:latest` | 不带版本的 stale 兜底（30 天，每次成功拉取刷新） |
 | `share:{id}` / `sync:{code}` | 分享快照 30 天 / 同步码 90 天 |
-| `cron:last` / `indexnow:last` | cron 心跳 / IndexNow 上次推送时间 |
+| `cron:last` / `indexnow:last` | cron 心跳 / IndexNow 上次**成功**（200/202）推送时间 |
+| `indexnow:lastAttempt` / `indexnow:lastError` | IndexNow 上次尝试时间（失败后 6h 冷却）/ 上次失败详情 JSON（R481） |
+| `pv:{YYYY-MM-DD}` | 每日 HTML 文档访问按路由类别聚合 + bots（R481，isolate 内 5s 合并再落盘，45 天） |
 
 ### 2.4 Cron（`triggers.crons: ["0 */6 * * *"]`，worker `scheduled`）
 
-每 6 小时：① 写 `cron:last` 心跳；② `runMonitorSweep`（全量监控域实时复查，状态变化写 `monitor:changes` + webhook 推送）；③ `pingIndexNow`（≥24h 间隔向 api.indexnow.org 推送 sitemap 全部 URL，key 文件 `/{INDEXNOW_KEY}.txt`）。
+每 6 小时：① 写 `cron:last` 心跳；② `runMonitorSweep`（全量监控域实时复查，状态变化写 `monitor:changes` + webhook 推送）；③ `pingIndexNow`（≥24h 间隔向 api.indexnow.org 推送 sitemap 全部 URL，key 文件 `/{INDEXNOW_KEY}.txt`；R481 起按 10,000/批拆分、仅 200/202 视为成功后才写 `indexnow:last`，失败写 `indexnow:lastError` 并 6h 后重试）。
+
+### 2.5 增长可选 vars（R481，`wrangler.jsonc` `vars` 或 Dashboard 设置；默认全空 = HTML 字节不变、零脚本）
+
+| var | 作用 |
+|---|---|
+| `GSC_VERIFICATION` | Google Search Console HTML tag 的 content 值 → `<meta name="google-site-verification">` |
+| `BING_VERIFICATION` | Bing Webmaster meta 的 content 值 → `<meta name="msvalidate.01">` |
+| `ANALYTICS_PROVIDER` / `ANALYTICS_TOKEN` | 目前仅支持 `cloudflare` + 32 位 hex site token → 注入官方 beacon（SPA 路由默认自动追踪）；启用后页脚显示双语隐私一句话 |
+
+注入由 `worker.ts` 全局后置中间件统一处理（`growth-inject.ts`），只对 `content-type: text/html` 且 2xx/4xx 的 GET 文档生效，JSON/XML/文本/静态资源不触碰。
 
 ## 3. 关键约定与踩坑
 
@@ -88,7 +101,8 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 
 ## 4. 数据与外部依赖
 
-- **DeepSeek**：`DEEPSEEK_API_KEY`（Worker secret），仅 `/api/ai-search`（构思 + understanding）用；其余全部零 AI。
+- **LLM 上游**（R460/R461 起经 OpenAI 兼容网关）：Worker secret `DEEPSEEK_API_KEY` + 变量 `LLM_API_BASE` / `LLM_MODEL` / `LLM_THINKING`（`disabled` 关闭网关侧思考链，否则 60s 超时），仅 `/api/ai-search`（构思 + understanding）用；其余全部零 AI。上游非 2xx 时 Worker 记 `llm-upstream <stage> status= retry-after= body=`（body ≤300 字、不含请求头），用 `wrangler tail` 查根因（R470）。
+- **LLM 备用上游（R474 failover，`apps/web/src/ai-transport.ts`）**：可选 secret `LLM_FALLBACK_API_KEY` / `LLM_FALLBACK_API_BASE` / `LLM_FALLBACK_MODEL` / `LLM_FALLBACK_THINKING`，在 `apps/web` 下 `wrangler secret put LLM_FALLBACK_API_KEY`（其余三个同理）写入。**未配置 `LLM_FALLBACK_API_KEY` 时功能休眠**，请求路径与单上游完全一致。启用后：主上游 401/402/403、429+额度耗尽 body（`apikey_quota_exhausted` 等）、5xx、fetch 抛错/超时 → 用备用配置重发同一请求 1 次（同 messages/temperature/stream，备用自己的 base/model/thinking）；429 瞬时限流与其他 4xx 不切换，走原有重试；备用也失败则按备用那次的错误分类（`classifyAiError`），`console.warn("llm-failover <stage> primary=<status|net:Name> fallback=<…>")` 同时记主/备 status（不含 Authorization；各次非 2xx body ≤300 字由 `logLlmHttpError` 单独记）。候选已下发后的流中途中断不 failover（沿用 R466 截断语义）。推荐备用：DeepSeek 官方（`https://api.deepseek.com` / `deepseek-chat`）、硅基流动（`https://api.siliconflow.cn/v1` / `deepseek-ai/DeepSeek-V3`）、OpenRouter（`https://openrouter.ai/api/v1` / `deepseek/deepseek-chat`）任一 OpenAI 兼容端点。自检：`node scripts/verify-r474.mjs`（全 mock fetch）。
 - **Porkbun 价格**：`https://api.porkbun.com/api/json/v3/pricing/get`（公开、免 key），10s 超时；失败回退 `prices:latest` stale（响应带 `stale:true`）；无报价 TLD（cn/so 等）前端/MCP 用静态参考价（`types.ts` `tldPrice`，`USD_TO_CNY=7.2` 估算汇率）。
 - **核验通道**（`packages/core/src/check.ts` + `apps/web/src/whois.ts`）：DoH（cloudflare-dns.com）预筛 → RDAP（IANA bootstrap `data.iana.org/rdap/dns.json`，缓存 24h）→ WHOIS 43 端口 fallback（`cloudflare:sockets`，服务器清单见 `WHOIS_SERVERS`：com/net/cn/io/cc/tv/co/me/xyz/sh/gg/so/us）。taken 但 RDAP 无到期时再查 WHOIS 补 expiresAt（R160）。
 - **localStorage keys**（前端本地数据，无账号）：
@@ -105,11 +119,13 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 - **LCP**：R150 做内容页 SSR 骨架后 /tld LCP 曾持平未改善，R174 用延迟挂载 + 跳过数据 chunk preload 修复；后续改动注意别回退。
 - **旧 KV 核验缓存无 expiresAt**：R160 之前写入的 `d:{domain}` 无 expiresAt 字段，靠 TTL（≤24h）自然过期自愈，无需迁移。
 - sitemap `<lastmod>` 是手写常量 `CONTENT_LASTMOD`（worker.ts），增删内容页记得更新。
+- **上游 key 额度耗尽（2026-09-04 实锤）**：网关用 HTTP 429 + body `code=apikey_quota_exhausted` 表示 key 额度耗尽，`classifyAiError` 现按响应体关键词（quota/billing/限额/余额…）把这种 429 归为 `quota`（其余 429 仍是 `rate-limit`）；代码无法绕过，需在网关控制台充值/提额或换 key（`wrangler secret put DEEPSEEK_API_KEY`）。恢复后需补做 R466 真实时延测试（zh/en 各 ≥1 次，记录首个可注册候选时间）。
+- **R469 匿名竞品复评差距**（报告 `/home/ubuntu/r469-benchmark.md` 在主会话机器，结论摘录）：P0-A 上游不可用即整站 0 产出（→ R471 规则降级+熔断、R474 备用供应商 failover）；P1-A quota/rate-limit 恢复路径同一套「重试本轮」（→ R472）；P1-B 同名多 TLD 重复品牌卡、Top Picks 被同名占席（→ R473）；P1-C 375 首屏第一个域名不可见（→ R472）；P2-A 相邻撞色、P2-B 紧凑行零品牌感（→ R473）。视觉主观分 4.3 vs Namelix 4.5；紧凑态 ≈36 行/屏 vs IDS 45。
 - **R239 审计遗留观察项**（报告见 `docs/qa/audit-r239.md`，修复后待下一轮生产审计复验）：
   - P1-1 EN word 配额补发失效 → R243 已加二次重试 + 补发轮独立 guard 计数，未经生产复验；
   - P3-4 zh 偏拼音场景产品结果差（5 轮仅 1 个可注册，双字全拼 .com/.cn 存量枯竭）→ 产品层未动，待评估自动扩 TLD 或提前提示；
   - refine 轮点踩依从性（P3-2）与 theme 标注（P3-3）已在 R250 做 prompt 级强化 + 解析后降级兜底，同样待生产复验。
-- **verify 脚本回归基线**：`scripts/verify-r196/r222–r225/r238/r243–r246/r250.mjs` 全绿；`verify-pinyin.mjs` 与 `verify-meaning-paren.mjs` 用 transformSync 不打包，ai.ts 引入相对依赖（brand-blocklist 等）后已无法单文件加载，属历史遗留失效（其用例已被后续 bundle 式脚本覆盖）。
+- **verify 脚本回归基线**：`scripts/verify-r196/r222–r225/r238/r243–r246/r250/r264/r463/r465/r466/r474.mjs` 全绿（r466 额外把 worker.ts 用 esbuild 打包 + 桩掉 `cloudflare:sockets` 跑 `/api/ai-search` 端到端事件顺序/usage 断言，全程 mock fetch）；`verify-pinyin.mjs` 与 `verify-meaning-paren.mjs` 用 transformSync 不打包，ai.ts 引入相对依赖（brand-blocklist 等）后已无法单文件加载，属历史遗留失效（其用例已被后续 bundle 式脚本覆盖）。
 
 ## 6. 进行中与工作惯例
 
@@ -122,8 +138,12 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
   - **R243–R246 防线修复（针对 R239 发现）**：R243 word 补发二次重试 + 补发轮 guard 独立计数（P1-1/P3-1）；R244 拼音引用校验不再被缺失「全拼」声明绕过（P2-1）；R245 zh 字符白名单纳入拼音声调字符 + charsetViolation 码点样本（P2-2）；R246 EN 前缀锤点收紧 + zh 幻影 ASCII 引用防线（P2-3/P2-4）。
   - **R250 prompt 微调**：theme 标注 few-shot 反例（nundina/canaryio/ledgeledger）+ word 内嵌 TLD 解析后降级 coined 兜底（P3-3）；refine 点踩形态硬禁令前置到 hint 开头 + 强命令式（P3-2）。
   - **部署状态**：生产在线版本 = `deploy/r192-r195` 集成分支 + R222–R246 系列提交（R250 尚未部署）；新工作从该分支切出，PR base 仍为 main。
+- **R468 品牌卡**：`apps/web/src/components/brand-card.tsx` 纯前端确定性品牌卡（FNV-1a → 16 配色 × 4 版式 × 4 字形），Top Picks / Grid / 行内 swatch 三层入口；论证与验收表见 `docs/research/r468-brand-card.md`。新增可见文案走 `brand.*` i18n key。
+- **R473 品牌卡墙**（PR base `deploy/r192-r195`）：布局层去重与撞色重排——`lib/brand-look.ts`（从 brand-card 抽出的确定性外观，`brandLook(label, variant 0|1|2)` 只轮换 palette，variant 0 = R468）、`lib/brand-wall.ts`（`groupByLabel`/`pickTopGroups`/`assignBrandVariants`：Top Picks 3 席 3 个不同 label、Grid 一名一卡、variant 以 label 首次出现位置决定并全页复用 ⇒ 同名任何位置同外观）、`components/brand-wall.tsx`（`TopPickCard`/`GridCard` + TLD 胶囊：Top Picks 胶囊直连 `RegisterMenu`，Grid 胶囊切换收藏/锁定的目标域名并显示首年价）、紧凑行 12px `BrandDot`。行视图仍逐域名一行。论证与验收表 `docs/research/r473-brand-wall.md`；纯逻辑回归 `scripts/verify-r473.mjs`；UI 序列化验证脚本 `docs/qa/r473-ui-verify.mjs`（CDP 连会话 Chrome + wrangler dev :8787，合成 `dh:lastSearch:v1`，0 AI）。已知限制：两张都在 Top Picks 定色的 label 在 Grid 被用户重排后相邻同色时不再改（保同外观优先，fixture 量化 0/17446）。
+- **R471–R476 AI 不可用韧性线**（已集成 `deploy/r192-r195` 并部署）：R471 `rule-fallback.ts` 规则降级（首轮 quota/rate-limit/upstream/network 失败 → `fallback` 事件 + `theme:"rule"` 候选走同一条 RDAP 流水）+ KV 熔断 `dh:llm-breaker:v1`（quota 后 300s 内 0 次上游，reason `quota-breaker`）；R472 quota 隐藏重试/rate-limit 30s 自动重试一次 + <768px 恢复条/理解条折叠；R474 `ai-transport.ts` 可选备用供应商（`LLM_FALLBACK_*` secret 缺失则休眠）。R475 生产回归报告 `/home/ubuntu/r475-benchmark.md`（主会话机器）发现 2 P1 已由 R476 修：① 降级轮末尾空 `proposed` 误清 `dh:aiQuotaDown:v1`（App.tsx 现要求 items 非空才清）；② 375px 降级横幅 122px 把首张 Top Pick 顶到 y=471（现 <640px 为 58px 一行摘要 + `<details>` 展开全文，首卡 zh 378 / en 407）。同时 `fallback` 事件新增尾部字段 `retryAfterS`（仅 quota/quota-breaker），前端存 `SavedFallback.retryAt` 并在全文末尾提示「预计约 N 分钟后可重试 AI」。R477 收掉 R475 两个 P2：`brand-look.ts` 4 组配色 accent 对 bg 提到 ≥4.5:1（原 3.83–4.38，accent 是 duotone/stacked 次行与字标字色，verify-r473 E1b 守门）；`brand-wall.ts` 回看代价改为 `LOOKBACK_COST=[0,0,1,2]`（lg 3 列上一行权重最高），Grid 3 列纵向同色 1.44%→0.91%（D3 守门 <2%，2 列 0.90→1.30% 为可接受取舍）。规则 meaning 同模板属降级路径的如实标注，不改。
+- **R480 注册入口单一数据源 + 可配置返佣**（PR base `deploy/r192-r195`）：`lib/registrars.ts` 唯一数据源 `{id, name, region cn|global, url, affiliate?, supportsTld?}`；`registrarsFor(domain)`（.cn/.com.cn → 阿里云、腾讯云优先且隐藏不售 .cn 的 Porkbun/Cloudflare；其余 → Porkbun、Namecheap、Cloudflare 优先）与 `primaryRegistrar` 供 Enter 键/首页速注 chip/监控页注册链/批量注册共用，**禁止再按 `REGISTRARS[i]` 下标取注册商或硬编码注册商 URL**。所有注册外链必须走 `components/registrar-link.tsx`（`RegistrarAnchor`：forwardRef、`target=_blank`、rel 有返佣 `noopener noreferrer sponsored` 否则 `noopener noreferrer`、`registrar.openTitle` 双语 title、点击 `trackOutbound`；`openRegistrar` 用于非 `<a>`）。返佣参数=公开 var `REGISTRAR_AFFILIATE_JSON`（`wrangler.jsonc` `vars`，默认 `"{}"`；形态 `{id: {query?: {k:v}, redirect?: "https://…{url}"}}`，Cloudflare 无 affiliate 实现故配置无效）→ `GET /api/registrars` → `lib/affiliate.ts` 启动拉一次；**未配置时 href 与基线字节级一致**（`lib/registrars.test.ts` 15 例守门）。页脚返佣声明 `registrar.disclosure` 仅 `hasActiveAffiliate` 时渲染。逐家联盟计划一手调研 + 老板申请/填参清单：`docs/research/registrar-affiliate.md`（结论：Porkbun 计划已停止、Cloudflare 未查到、Namecheap 20% 首选、阿里云/腾讯云域名是否返佣未查到、Dynadot 30% 值得下一轮新增）。目前**没有任何返佣账号**，生产即纯链接。
 - **四道把关**（company-os）：qa-engineer 测试 → user-experience-officer 体验走查 → 内部交叉测试 → 合规与安全审计，全过才交付。
-- **截至本文档更新时的在途工作**（部分已通过 deploy/r192-r195 集成分支上线、PR 待合回 main）：R243–R246 防线修复、R250 prompt 微调（本批，未部署）；用 `gh pr list` 确认实时状态与最新 Rxxx 编号。
+- **截至本文档更新时的在途工作**（部分已通过 deploy/r192-r195 集成分支上线、PR 待合回 main）：R243–R246 防线修复、R250 prompt 微调；R465 en 拼音路线丢弃（生产在线）；R466/R467/R468 已部署生产（version f7933dac）；R470 429 额度分类修复已部署（version 139cf4db，PR #433）；**R471–R474 子会话在途**（AI 降级+KV 熔断 `dh:llm-breaker:v1`、错误 UX+375 折叠、品牌卡墙去重、LLM failover 可选 secret `LLM_FALLBACK_*`），PR base 均为 `deploy/r192-r195`。**R466 首结果提速（主轮 LLM 流式 + 增量候选解析 + 候选级核验流水，PR base `deploy/r192-r195`，未部署）**——`ai.ts` 新增 `CandidateArrayStreamParser`/`sseDeltaContent`/`admitCandidate`（流式与非流式共用同一防线函数）与 `generateAiCandidates({ onCandidate })`；0 候选时的坏 JSON/网络错误仍走一次退避重试，已交出 ≥1 候选后中断按截断保留不重试。上线后观察点：首结果时间（目标 <10s，以首个 result 事件为准）、`llm-bad-json` 占比是否变化、网关是否按 `text/event-stream` 返回（非 SSE 自动退化整包）。用 `gh pr list` 确认实时状态与最新 Rxxx 编号。
 
 ## 7. 新会话接手 checklist
 

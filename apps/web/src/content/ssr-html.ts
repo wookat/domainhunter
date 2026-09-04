@@ -9,19 +9,22 @@ import { TLD_COMPARES, comparesForTld, type TldCompare } from "./compares";
 import { buildCompareFaq } from "./compare-faq";
 import { buildGuideFaq } from "./guide-faq";
 import { buildTldFaq } from "./tld-faq";
-import { COMPARE_SLUGS, compareLabel } from "./compare-slugs";
+import { COMPARE_SLUGS, compareLabel, relatedCompares } from "./compare-slugs";
+import { GUIDE_LABELS } from "./guide-labels";
+import { relatedGuideSlugs } from "./guide-groups";
 import { GUIDE_LIST, INDUSTRY_GUIDES, guidesForTld, type IndustryGuide } from "./guides";
+import { HOME_HERO } from "./home-copy";
 import { HUB_META, compareHubGroups, guideHubGroups, guideOneLiner, tldHubGroups, tldOneLiner } from "./hubs";
+import { relatedTlds } from "./tld-groups";
 import { TLD_GUIDES, type TldGuide } from "./tlds";
-import { TLD_LIST, USD_TO_CNY } from "./tld-list";
+import { TLD_LIST } from "./tld-list";
+import { toUsd } from "../lib/currency";
 import { tldPrice } from "../types";
 
 type Lang = "zh" | "en";
 
 export const escapeHtml = (s: string): string =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-
-const toUsd = (cny: number) => Math.round(cny / USD_TO_CNY);
 
 /** lib/prices.ts priceFull 的静态参考价分支（prices 未加载时的首次渲染文案，逐字一致） */
 function staticPriceFull(tld: string, lang: Lang): string | undefined {
@@ -65,6 +68,7 @@ const STR = {
     tldCtaDesc: (tld: string) => `描述你的想法，AI 批量构思并实时核验 .${tld} 下的可注册好名字。`, // tld.ctaDesc
     tldCtaButton: (tld: string) => `开始猎取 .${tld}`, // tld.ctaButton
     others: "其他 TLD 指南", // tld.others
+    relatedTlds: "相关 TLD", // tld.relatedTlds
     relatedGuides: "相关行业命名指南", // tld.relatedGuides
     relatedCompares: "相关后缀对比", // vs.relatedCompares
     verdict: "怎么选", // vs.verdict
@@ -81,6 +85,8 @@ const STR = {
     guideCtaDesc: "一键填入该行业模板，AI 批量构思并实时核验可注册的好域名。", // guide.ctaDesc
     guideCtaButton: "开始猎取", // guide.ctaButton
     guideOthers: "其他行业命名指南", // guide.others
+    guideRelated: "相关行业指南", // guide.related
+    vsRelated: "相关对比", // vs.related
   },
   en: {
     seeAll: `See prices for all ${TLD_LIST.length} TLDs →`,
@@ -91,6 +97,7 @@ const STR = {
     tldCtaDesc: (tld: string) => `Describe your idea — AI brainstorms names in bulk and checks .${tld} availability live.`,
     tldCtaButton: (tld: string) => `Start hunting .${tld}`,
     others: "More TLD guides",
+    relatedTlds: "Related TLDs",
     relatedGuides: "Related industry naming guides",
     relatedCompares: "Related TLD comparisons",
     verdict: "Which to pick",
@@ -107,6 +114,8 @@ const STR = {
     guideCtaDesc: "Prefill the industry template — AI brainstorms in bulk and verifies availability live.",
     guideCtaButton: "Start hunting",
     guideOthers: "More industry naming guides",
+    guideRelated: "Related industry guides", // guide.related
+    vsRelated: "Related comparisons", // vs.related
   },
 } as const;
 
@@ -137,11 +146,11 @@ export function pricesTableSkeleton(lang: Lang): string {
   const rowsHtml = rows
     .map(
       ({ tld }) =>
-        `<div class="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0"><a href="/tld/${tld}?lang=${lang}" class="tap-target font-mono text-sm font-semibold text-txt0 hover:text-brand">.${tld}</a><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><a href="/?tld=${tld}" class="flex min-h-[44px] items-center rounded-lg border border-line px-2.5 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-[36px]">${escapeHtml(s.hunt)}</a></div>`,
+        `<div class="cv-row grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line px-4 py-3 last:border-b-0"><a href="/tld/${tld}?lang=${lang}" class="tap-target font-mono text-sm font-semibold text-txt0 hover:text-brand">.${tld}</a><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><span class="h-5 w-14 animate-pulse rounded bg-bg1"></span><a href="/?tld=${tld}" class="flex min-h-[44px] items-center rounded-lg border border-line px-2.5 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:min-h-[36px]">${escapeHtml(s.hunt)}</a></div>`,
     )
     .join("");
   return (
-    `<input placeholder="${escapeHtml(s.filter)}" class="mt-6 h-10 w-full max-w-xs rounded-lg border border-line bg-bg1 px-3 font-mono text-sm text-txt0 outline-none transition-colors placeholder:font-sans placeholder:text-txt2 focus:border-brand-line" />` +
+    `<div class="relative mt-6 h-11"><input type="search" placeholder="${escapeHtml(s.filter)}" aria-label="${escapeHtml(s.filter)}" class="h-11 w-full rounded-lg border border-line bg-bg2 pl-3.5 pr-24 text-sm text-txt1 outline-none transition-colors placeholder:text-txt2 focus:border-brand-line [&amp;::-webkit-search-cancel-button]:hidden" /><span class="tnum pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 font-mono text-xs text-txt2">${TLD_LIST.length} / ${TLD_LIST.length}</span></div>` +
     `<div class="mt-4 overflow-hidden rounded-xl border border-line"><div class="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-2 border-b border-line bg-bg1 px-4 py-2.5">${th(s.colTld, false)}${th(s.colReg, true)}${th(s.colRenew, false)}<span></span></div>${rowsHtml}</div>`
   );
 }
@@ -175,7 +184,8 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
   const loc = guide[lang];
   const faq = buildTldFaq(tld, loc, lang);
   const relatedGuides = guidesForTld(tld);
-  const relatedCompares = comparesForTld(tld);
+  const relatedCompares = comparesForTld(tld).slice(0, 6);
+  const groupTlds = relatedTlds(tld);
   const priceCard = `<div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-line bg-bg1 px-5 py-4">${ICON_TAG}<span class="text-sm text-txt1">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</span><a href="/prices?lang=${lang}" class="ml-auto inline-flex min-h-[44px] items-center text-xs text-txt2 hover:text-brand hover:underline sm:min-h-[36px]">${escapeHtml(s.seeAll)}</a></div>`;
   const bestFor = sectionH2(ICON_CHECK, s.bestFor) +
     `<ul class="mt-3 grid gap-2 sm:grid-cols-2">${loc.bestFor.map((it) => `<li class="rounded-lg border border-line bg-bg1 px-3.5 py-2.5 text-sm text-txt1">${escapeHtml(it)}</li>`).join("")}</ul>`;
@@ -197,6 +207,17 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
           .join(""),
       )
     : "";
+  const related = groupTlds.length
+    ? chipRow(
+        s.relatedTlds,
+        groupTlds
+          .map((other) => {
+            const price = staticPriceShort(other, lang);
+            return `<a href="/tld/${other}?lang=${lang}" class="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">.${other}${price ? `<span class="tnum ml-1.5 text-[10px] text-txt1">${escapeHtml(price)}</span>` : ""}</a>`;
+          })
+          .join(""),
+      )
+    : "";
   const guides = relatedGuides.length
     ? chipRow(
         s.relatedGuides,
@@ -214,6 +235,7 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
     ctaBlock(s.tldCtaTitle(tld), s.tldCtaDesc(tld), `/?tld=${tld}`, s.tldCtaButton(tld)),
     others,
     compares,
+    related,
     guides,
   ];
 }
@@ -237,6 +259,15 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang): string[] {
     })
     .join("")}</div>`;
   const pricesLink = `<p class="mt-4 text-center"><a href="/prices?lang=${lang}" class="inline-flex min-h-[44px] items-center px-2 text-sm text-txt1 hover:text-brand hover:underline">${escapeHtml(s.seeAll)}</a></p>`;
+  const relatedCmp = relatedCompares(cmp.slug);
+  const related = relatedCmp.length
+    ? chipRow(
+        s.vsRelated,
+        relatedCmp
+          .map((other) => `<a href="/vs/${other}?lang=${lang}" class="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">${escapeHtml(compareLabel(other))}</a>`)
+          .join(""),
+      )
+    : "";
   const guides = relatedGuides.length
     ? chipRow(
         s.relatedGuides,
@@ -266,6 +297,7 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang): string[] {
     ctaBlock(s.vsCtaTitle(cmp.a, cmp.b), s.vsCtaDesc, `/?tld=${cmp.a},${cmp.b}`, s.vsCtaButton),
     pricesLink,
     guides,
+    related,
     others,
   ];
 }
@@ -305,6 +337,17 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
     }).join(""),
     "mt-10",
   );
+  const relatedIndustry = relatedGuideSlugs(guide.slug)
+    .map((other) => GUIDE_LABELS.find((g) => g.slug === other))
+    .filter((g): g is (typeof GUIDE_LABELS)[number] => g !== undefined);
+  const related = relatedIndustry.length
+    ? chipRow(
+        s.guideRelated,
+        relatedIndustry
+          .map((g) => `<a href="/guide/${g.slug}?lang=${lang}" class="flex min-h-[44px] items-center rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">${escapeHtml(g[lang])}</a>`)
+          .join(""),
+      )
+    : "";
   return [
     `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.intro)}</p>`,
     ideas,
@@ -315,27 +358,59 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
     faqBlock(faq, lang),
     ctaBlock(s.guideCtaTitle, s.guideCtaDesc, `/?tpl=${guide.slug}`, s.guideCtaButton),
     others,
+    related,
   ];
 }
 
 /* ---------- 内容枢纽 hub 页（/tld、/guide、/vs） ---------- */
 
-/* 内容页 hub 面包屑 kicker：与 tld-page/guide-page/compare-page 的 kicker DOM 逐字一致（i18n hub.allTld / hub.allGuide / hub.allVs） */
+/* 内容页可见面包屑：与 breadcrumb.tsx（tld-page/guide-page/compare-page 共用）的 DOM 逐字一致（i18n crumb.home / crumb.nav / hub.allTld / hub.allGuide / hub.allVs） */
 const HUB_CRUMB = {
   zh: { tld: "TLD 指南", guide: "行业指南", vs: "后缀对比" },
   en: { tld: "TLD guides", guide: "Industry guides", vs: "TLD comparisons" },
 } as const;
 
-export const hubCrumbKicker = (hub: "tld" | "guide" | "vs", current: string, lang: Lang): string =>
-  `<p class="font-mono text-sm text-brand"><a href="/${hub}?lang=${lang}" class="tap-target inline-block text-txt2 hover:text-brand hover:underline">${escapeHtml(HUB_CRUMB[lang][hub])}</a><span class="mx-1.5 text-txt2">/</span>${escapeHtml(current)}</p>`;
+const CRUMB_STR = {
+  zh: { home: "首页", nav: "面包屑导航" }, // crumb.home / crumb.nav
+  en: { home: "Home", nav: "Breadcrumb" },
+} as const;
+
+const ICON_CHEVRON =
+  '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right mx-1 h-3.5 w-3.5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>';
+
+export const hubCrumbKicker = (hub: "tld" | "guide" | "vs", current: string, lang: Lang): string => {
+  const s = CRUMB_STR[lang];
+  const link = (href: string, label: string) =>
+    `<li class="shrink-0"><a href="${href}" class="tap-target inline-block hover:text-brand hover:underline">${escapeHtml(label)}</a></li>`;
+  const sep = `<li aria-hidden="true" class="shrink-0">${ICON_CHEVRON}</li>`;
+  return (
+    `<nav aria-label="${escapeHtml(s.nav)}"><ol class="flex min-w-0 items-center font-mono text-sm text-txt2">` +
+    link(`/?lang=${lang}`, s.home) +
+    sep +
+    link(`/${hub}?lang=${lang}`, HUB_CRUMB[lang][hub]) +
+    sep +
+    `<li aria-current="page" class="min-w-0 truncate text-brand">${escapeHtml(current)}</li></ol></nav>`
+  );
+};
 
 export const hubCrumbLabel = (hub: "tld" | "guide" | "vs", lang: Lang): string => HUB_CRUMB[lang][hub];
 
 /** hub 页过滤输入框的等高占位（输入框水合后才出现，预留 44px 高度避免布局跳动） */
 const HUB_FILTER_PLACEHOLDER = `<div class="mt-6 h-11"></div>`;
 
-const hubSection = (heading: string, count: number, itemsHtml: string, headingCls = "text-base font-bold") =>
-  `<section class="mt-8"><h2 class="${headingCls}">${escapeHtml(heading)}<span class="tnum ml-2 font-mono text-xs font-normal text-txt2">${count}</span></h2>${itemsHtml}</section>`;
+const hubSection = (id: string, heading: string, count: number, itemsHtml: string, headingCls = "text-base font-bold") =>
+  `<section id="hub-g-${id}" class="mt-8 scroll-mt-32"><h2 class="${headingCls}">${escapeHtml(heading)}<span class="tnum ml-2 font-mono text-xs font-normal text-txt2">${count}</span></h2>${itemsHtml}</section>`;
+
+const HUB_NAV_LABEL = { zh: "分组导航", en: "Group navigation" } as const;
+
+/** 分组锚点导航 chips（与 hub-nav.tsx 的 HubAnchorNav 初始渲染逐字一致） */
+const hubNavChips = (lang: Lang, items: { id: string; label: string; count: number }[]) =>
+  `<nav aria-label="${HUB_NAV_LABEL[lang]}" class="sticky top-14 z-10 -mx-4 mt-4 overflow-x-auto border-b border-line bg-bg0/95 px-4 py-2 backdrop-blur md:-mx-6 md:px-6"><div class="flex w-max gap-2">${items
+    .map(
+      (it) =>
+        `<a href="#hub-g-${it.id}" class="flex min-h-[36px] shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-bg1 px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:border-brand-line">${escapeHtml(it.label)}<span class="tnum ml-1.5 font-mono text-[10px] text-txt2">${it.count}</span></a>`,
+    )
+    .join("")}</div></nav>`;
 
 const hubCard = (href: string, title: string, oneLiner: string, titleCls: string) =>
   `<a href="${href}" class="flex min-h-[44px] flex-col justify-center rounded-lg border border-line bg-bg1 px-3.5 py-2.5 transition-colors hover:border-brand-line"><span class="${titleCls}">${escapeHtml(title)}</span><span class="mt-0.5 text-xs leading-relaxed text-txt1">${escapeHtml(oneLiner)}</span></a>`;
@@ -343,9 +418,10 @@ const hubCard = (href: string, title: string, oneLiner: string, titleCls: string
 /** /tld 全文正文（tld-hub-page.tsx 首次渲染的静态部分） */
 export function tldHubBlocks(lang: Lang): string[] {
   const meta = HUB_META.tld[lang];
-  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}<a href="/prices?lang=${lang}" class="tap-target inline-block text-brand hover:underline">${escapeHtml(meta.pricesLink)}</a>${lang === "zh" ? "。" : "."}</p>${HUB_FILTER_PLACEHOLDER}`;
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}<a href="/prices?lang=${lang}" class="tap-target inline-block text-brand hover:underline">${escapeHtml(meta.pricesLink)}</a>${lang === "zh" ? "。" : "."}</p>${HUB_FILTER_PLACEHOLDER}${hubNavChips(lang, tldHubGroups().map((g) => ({ id: g.id, label: g[lang], count: g.tlds.length })))}`;
   const sections = tldHubGroups().map((g) =>
     hubSection(
+      g.id,
       g[lang],
       g.tlds.length,
       `<div class="mt-3 grid gap-2 sm:grid-cols-2">${g.tlds.map((tld) => hubCard(`/tld/${tld}?lang=${lang}`, `.${tld}`, tldOneLiner(tld, lang), "font-mono text-sm font-semibold text-brand")).join("")}</div>`,
@@ -357,9 +433,10 @@ export function tldHubBlocks(lang: Lang): string[] {
 /** /guide 全文正文（guide-hub-page.tsx 首次渲染的静态部分） */
 export function guideHubBlocks(lang: Lang): string[] {
   const meta = HUB_META.guide[lang];
-  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>${HUB_FILTER_PLACEHOLDER}`;
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>${HUB_FILTER_PLACEHOLDER}${hubNavChips(lang, guideHubGroups().map((g) => ({ id: g.id, label: g[lang], count: g.slugs.length })))}`;
   const sections = guideHubGroups().map((g) =>
     hubSection(
+      g.id,
       g[lang],
       g.slugs.length,
       `<div class="mt-3 grid gap-2 sm:grid-cols-2">${g.slugs.map((slug) => hubCard(`/guide/${slug}?lang=${lang}`, INDUSTRY_GUIDES[slug][lang].label, guideOneLiner(slug, lang), "text-sm font-semibold text-brand")).join("")}</div>`,
@@ -369,11 +446,29 @@ export function guideHubBlocks(lang: Lang): string[] {
 }
 
 /** /vs 全文正文（compare-hub-page.tsx 首次渲染的静态部分） */
+/**
+ * 首页首屏 SSR 骨架（badge / h1 / 副标题）：类名与文案逐字对齐 home-page.tsx hero，
+ * React 挂载后整体替换（createRoot().render，非 hydrate），h1 文本与水合后一致。
+ */
+export function homeHeroSkeleton(html: string, lang: Lang): string {
+  const h = HOME_HERO[lang];
+  const skeleton = [
+    `<div class="flex min-h-screen flex-col">`,
+    `<header class="sticky top-0 z-20 border-b border-line bg-bg0/85"><div class="mx-auto flex h-14 max-w-7xl items-center px-4 md:px-6"><span class="flex items-center gap-2 font-bold tracking-tight"><span class="grid h-7 w-7 place-items-center rounded-lg border border-brand-line bg-brand-dim"></span><span class="max-[430px]:hidden">DomainHunter</span></span></div></header>`,
+    `<main class="relative min-w-0 flex-1"><div class="pointer-events-none absolute inset-x-0 top-0 h-[420px]" style="background:var(--glow)"></div><div class="relative mx-auto max-w-3xl px-4 pb-16 pt-16 md:pt-24">`,
+    `<div class="mb-5 flex justify-center"><span class="inline-flex items-center gap-1.5 rounded-full border border-brand-line bg-brand-dim px-3 py-1.5 text-xs text-brand"><span class="dot-breathe h-1.5 w-1.5 rounded-full bg-brand"></span>${escapeHtml(h.badge)}</span></div>`,
+    `<h1 class="text-center text-4xl font-extrabold leading-[1.12] tracking-[-0.03em] md:text-[52px]" style="text-wrap:balance">${escapeHtml(h.title1)}<br class="md:hidden"><span${lang === "zh" ? ' class="whitespace-nowrap"' : ""}>${escapeHtml(h.title2)}</span><wbr><span class="whitespace-nowrap">${escapeHtml(h.title2b)}</span></h1>`,
+    `<p class="mt-4 text-center text-base text-txt1 md:text-lg">${escapeHtml(h.subtitle)}</p>`,
+    `</div></main></div>`,
+  ].join("");
+  return html.replace('<div id="root"></div>', `<div id="root">${skeleton}</div>`);
+}
+
 export function compareHubBlocks(lang: Lang): string[] {
   const meta = HUB_META.vs[lang];
-  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>${HUB_FILTER_PLACEHOLDER}`;
+  const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>${HUB_FILTER_PLACEHOLDER}${hubNavChips(lang, compareHubGroups().map((g) => ({ id: g.tld, label: `.${g.tld}`, count: g.slugs.length })))}`;
   const sections = compareHubGroups().map((g) =>
-    `<section class="mt-8"><h2 class="font-mono text-base font-bold">.${g.tld}<span class="tnum ml-2 text-xs font-normal text-txt2">${g.slugs.length}</span></h2><div class="mt-3 flex flex-wrap gap-2">${g.slugs
+    `<section id="hub-g-${g.tld}" class="mt-8 scroll-mt-32"><h2 class="font-mono text-base font-bold">.${g.tld}<span class="tnum ml-2 text-xs font-normal text-txt2">${g.slugs.length}</span></h2><div class="mt-3 flex flex-wrap gap-2">${g.slugs
       .map((slug) => `<a href="/vs/${slug}?lang=${lang}" class="flex min-h-[44px] items-center rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">.${TLD_COMPARES[slug].a} vs .${TLD_COMPARES[slug].b}</a>`)
       .join("")}</div></section>`,
   );

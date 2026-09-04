@@ -1,0 +1,84 @@
+name: "Bug 报告 / Bug report"
+description: "生产站 hunt.zalize.com 或本地运行时的缺陷 / Something is broken on hunt.zalize.com or locally"
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。提交前请先搜索已有 Issue；安全漏洞请走 [SECURITY.md](https://github.com/wookat/domainhunter/blob/main/SECURITY.md)，不要在此公开。
+        Thanks for the report. Please search existing issues first; security issues go through SECURITY.md, not here.
+  - type: dropdown
+    id: area
+    attributes:
+      label: "涉及功能 / Area"
+      options:
+        - "AI 猎名 / AI hunting (/, /api/ai-search)"
+        - "精确核验 / Exact check"
+        - "批量核验 / Bulk check (/advanced, /api/search)"
+        - "到期日 / 价格 / Expiry & prices (/prices, /api/prices)"
+        - "监控 + Webhook / Monitoring (/monitors, /api/monitor*)"
+        - "候选清单 / 分享 / 同步 / Shortlist, share, sync"
+        - "MCP 端点 / MCP endpoint (/mcp)"
+        - "内容页 / Content pages (/tld, /guide, /vs)"
+        - "SEO / SSR / sitemap / llms.txt"
+        - "本地开发 / 部署 / Local dev or deploy"
+        - "其他 / Other"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: "现象 / What happened"
+      description: "实际发生了什么？附截图或 curl 输出更好。 / What actually happened? Screenshots or curl output help."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "期望 / Expected behavior"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "复现步骤 / Steps to reproduce"
+      description: "请勿为复现而反复触发 AI 猎名（消耗额度）；如涉及 AI 路径请注明触发次数。 / Please avoid repeatedly triggering AI hunting to reproduce; note how many times you triggered it."
+      placeholder: |
+        1. 打开 https://hunt.zalize.com/advanced
+        2. 粘贴 …
+        3. 点击「核验 N 个域名」
+    validations:
+      required: true
+  - type: input
+    id: domains
+    attributes:
+      label: "涉及域名 / Domains involved（如有）"
+      placeholder: "example.cn, example.com"
+  - type: dropdown
+    id: lang
+    attributes:
+      label: "语言 / Language"
+      options: ["zh", "en", "两者都有 / both"]
+  - type: dropdown
+    id: theme
+    attributes:
+      label: "主题 / Theme"
+      options: ["浅色 / light", "深色 / dark", "两者都有 / both"]
+  - type: input
+    id: env
+    attributes:
+      label: "浏览器与视口 / Browser & viewport"
+      placeholder: "Chrome 129 · 375×667 / 1280×800"
+  - type: dropdown
+    id: where
+    attributes:
+      label: "环境 / Environment"
+      options: ["生产 hunt.zalize.com / production", "本地 wrangler dev / local", "自部署实例 / self-hosted"]
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: "其他信息 / Anything else"
+      description: "控制台报错、网络请求、/api/usage 快照等。 / Console errors, network logs, /api/usage snapshot, etc."

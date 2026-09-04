@@ -2,18 +2,21 @@ import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { ArrowLeft, SlidersHorizontal } from "lucide-react";
 
 import { Header } from "@/components/header";
-import { HomePage, type HomeValues } from "@/components/home-page";
+import type { HomeValues } from "@/components/home-page";
+import { getHomePage, loadHomePage } from "@/components/home-page-loader";
 import type { LogEntry } from "@/components/agent-page";
 import { UnderstandingBar } from "@/components/understanding-bar";
+import { ContextSummary } from "@/components/context-summary";
 import { isMockEnabled, runMockStream } from "@/mock";
-import { loadSearch, saveSearch } from "@/lib/persist";
+import { clearAiQuotaDown, loadSearch, markAiQuotaDown, saveSearch, type SavedFallback } from "@/lib/persist";
 import { TLD_LIST } from "@/content/tld-list";
 import { GUIDE_LABELS } from "@/content/guide-labels";
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
-import { useI18n } from "@/lib/i18n";
+import { useAffiliateActive } from "@/lib/affiliate";
+import { useI18n, type I18nKey } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
-import { friendlyError, friendlyHttpError } from "@/lib/utils";
-import type { AiErrorKind, Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types";
+import { cn, errorSpec, httpErrorSpec, UiErrorException, uiErrorText, type UiError } from "@/lib/utils";
+import type { AiErrorKind, FallbackReason, Row, RoundInfo, StreamEvent, Status, Understanding } from "@/types";
 
 // 按路由懒加载：这些页面不在首屏关键路径上，拆包降低首屏 JS。
 // chunk 加载失败（新部署后旧 hashed 文件 404）时自动整页刷新一次拿新版本，避免白屏。
@@ -34,6 +37,17 @@ function lazyChunk<T, P>(load: () => Promise<T>, pick: (m: T) => React.Component
   });
 }
 
+// R472：上游瞬时限流（SSE errorKind=rate-limit）后自动重试一次的倒计时秒数
+const AUTO_RETRY_SEC = 30;
+
+// 首页组件：预载完成后同步渲染（首次落地 "/" 时 main.tsx 已等 chunk 就绪，不走 Suspense 回退）
+const LazyHomePage = lazyChunk(loadHomePage, (m) => m.HomePage);
+
+// 已预载时同步渲染首页，避免 Suspense 回退帧带来的布局跳变（CLS）
+function HomePageSlot(props: React.ComponentProps<typeof import("@/components/home-page").HomePage>) {
+  const Loaded = getHomePage();
+  return Loaded ? <Loaded {...props} /> : <LazyHomePage {...props} />;
+}
 const SharePage = lazyChunk(() => import("@/components/share-page"), (m) => m.SharePage);
 const TldPage = lazyChunk(() => import("@/components/tld-page"), (m) => m.TldPage);
 const GuidePage = lazyChunk(() => import("@/components/guide-page"), (m) => m.GuidePage);
@@ -54,6 +68,7 @@ const NotFoundPage = lazyChunk(() => import("@/components/not-found-page"), (m) 
 /** 首屏空闲时预取搜索路径的懒 chunk，点「开始猎取」时零等待 */
 function prefetchSearchChunks() {
   const load = () => {
+    void loadHomePage();
     void import("@/components/agent-page");
     void import("@/components/results-page");
   };
@@ -130,6 +145,11 @@ function notFoundFromPath(): boolean {
   );
 }
 
+/** 服务端是否注入了分析 beacon（Worker var ANALYTICS_*，见 growth-inject.ts）；仅此时页脚展示隐私说明 */
+function analyticsEnabled(): boolean {
+  return typeof document !== "undefined" && document.querySelector("script[data-cf-beacon]") !== null;
+}
+
 /** 首页默认 TLD：支持 /?tld=xx 或 /?tld=xx,yy 精确预填（TLD 指南页 / 对比页 CTA、分享搜索链接入口），不自动补 com */
 function initialTlds(): string[] {
   const params = new URLSearchParams(window.location.search);
@@ -141,6 +161,7 @@ function initialTlds(): string[] {
 
 export default function App() {
   const { t, lang } = useI18n();
+  const affiliateActive = useAffiliateActive();
   const [shareId] = useState<string | null>(shareIdFromPath);
   const [guideTld] = useState<string | null>(tldFromPath);
   const [guideSlug] = useState<string | null>(guideFromPath);
@@ -152,15 +173,19 @@ export default function App() {
   const [isWhy] = useState(whyFromPath);
   const [isNotFound] = useState(notFoundFromPath);
   const [isMcp] = useState(mcpFromPath);
+  const [hasAnalytics] = useState(analyticsEnabled);
   const [saved] = useState(() => {
     if (shareIdFromPath() || tldFromPath() || guideFromPath() || compareFromPath() || pricesFromPath() || whyFromPath() || mcpFromPath() || advancedFromPath() || tldHubFromPath() || guideHubFromPath() || compareHubFromPath()) return null;
-    // /?q= 或 /?tpl= 是显式预填入口（分享搜索链接 / 指南页 CTA），直接进首页预填，不恢复上次结果
+    // /?q= 或 /?tpl= 是显式预填入口（分享搜索链接 / 指南页 CTA），/?mode=exact 是精确核验入口（AI 不可用时的降级 CTA），
+    // 都直接进首页，不恢复上次结果
     const params = new URLSearchParams(window.location.search);
-    if (params.get("q") || params.get("tpl")) return null;
+    if (params.get("q") || params.get("tpl") || params.get("mode") === "exact") return null;
     return loadSearch();
   });
   const [mode, setMode] = useState<Mode>(() => (shortlistFromPath() ? "shortlist" : monitorsFromPath() ? "monitors" : advancedFromPath() ? "advanced" : saved ? "results" : "home"));
   const [resumedNotice, setResumedNotice] = useState(() => Boolean(saved) && !shortlistFromPath() && !monitorsFromPath());
+  // R465（R464 复评）：恢复态结果页的「再来一轮」需两步确认，本会话首次真实发起后解除
+  const [restoredGuard, setRestoredGuard] = useState(() => Boolean(saved));
   const [noticeClosing, setNoticeClosing] = useState(false);
   const dismissNotice = () => {
     setNoticeClosing(true);
@@ -174,11 +199,18 @@ export default function App() {
   const [rounds, setRounds] = useState<RoundInfo[]>(saved?.rounds ?? []);
   const [currentRound, setCurrentRound] = useState(0);
   const [running, setRunning] = useState(false);
-  const [error, setError] = useState("");
+  // 错误条存结构化描述（i18n key/params 或服务端 literal），渲染期再 t()，切换语言即重译
+  const [error, setError] = useState<UiError | null>(null);
   // R264：AI 上游错误类别：quota 类重试无效，不展示重试 CTA
   const [errorKind, setErrorKind] = useState<AiErrorKind | null>(null);
+  // R472：rate-limit 自动重试倒计时（剩余秒数；null = 无倒计时）。
+  // 每个用户显式发起的序列内只自动重试一次；取消或第二次仍限流都退回手动重试。
+  const [autoRetryLeft, setAutoRetryLeft] = useState<number | null>(null);
+  const autoRetriedRef = useRef(false);
   // R247：多轮低产出提示（worker 每次搜索至多发一次 hint 事件）
   const [lowYieldHint, setLowYieldHint] = useState(false);
+  // R471：AI 不可用时的规则降级（fallback 事件）：结果页顶部挂横幅，候选交互照常
+  const [fallback, setFallback] = useState<SavedFallback | null>(saved?.fallback ?? null);
   const [logs, setLogs] = useState<LogEntry[]>([]);
   const [elapsedSec, setElapsedSec] = useState<number | undefined>(saved?.elapsedSec);
   const [locked, setLocked] = useState<Set<string>>(() => new Set(saved?.locked ?? []));
@@ -232,20 +264,31 @@ export default function App() {
     });
 
   const availableCount = rows.filter((r) => r.status === "available").length;
-  // R267：quota（401/402/403）重试必然失败，抑制所有会触发 AI 的入口
-  const quotaExhausted = errorKind === "quota";
+  // R267：quota（401/402/403）重试必然失败，抑制所有会触发 AI 的入口；
+  // R471：因 quota / 服务端熔断降级时同样抑制（再来一轮只会再次命中熔断）
+  const quotaExhausted = errorKind === "quota" || fallback?.reason === "quota" || fallback?.reason === "quota-breaker";
+  // 降级横幅全文：原因 + 候选数 + （配额类）熔断预计解除时间；恢复快照时熔断已过期则不再给时间提示
+  const fallbackFullText = fallback
+    ? t("fallback.banner", { reason: t(`fallback.reason.${fallback.reason}` as I18nKey), count: fallback.count }) +
+      (fallback.retryAt !== undefined && fallback.retryAt > Date.now()
+        ? " " + t("fallback.retryIn", { min: Math.max(1, Math.ceil((fallback.retryAt - Date.now()) / 60_000)) })
+        : "")
+    : "";
 
+  // SEO 内容页（/tld/:x、/guide/:x、/vs/:x、/prices 等）提前 return，mode 仍是 "home"，
+  // 不应为纯阅读流量预取搜索 chunk；点 logo 回首页是整页导航，按需加载即可。
+  const isSeoRoute = Boolean(guideTld || guideSlug || compareSlug || isPrices || isTldHub || isGuideHub || isCompareHub || isWhy || isMcp || isNotFound || shareId);
   useEffect(() => {
-    if (mode === "home") prefetchSearchChunks();
-  }, [mode]);
+    if (mode === "home" && !isSeoRoute) prefetchSearchChunks();
+  }, [mode, isSeoRoute]);
 
   useEffect(() => {
     // 只要有已落地（非 checking）的结果就覆盖快照，与所在页面/是否运行中无关：
     // 搜索每轮结果落地与最终完成都会写入，恢复条恢复的永远是最近一次搜索。
     if (rows.some((r) => r.status !== "checking")) {
-      saveSearch({ values, rows, rounds, elapsedSec, aiUnderstanding, refinements, triedLabels: triedLabelsRef.current, locked: [...locked] });
+      saveSearch({ values, rows, rounds, elapsedSec, aiUnderstanding, refinements, triedLabels: triedLabelsRef.current, locked: [...locked], fallback });
     }
-  }, [rows, rounds, values, elapsedSec, aiUnderstanding, refinements, locked]);
+  }, [rows, rounds, values, elapsedSec, aiUnderstanding, refinements, locked, fallback]);
 
   function handleEvent(ev: StreamEvent) {
     const round = (ev.round ?? 0) + roundOffsetRef.current;
@@ -275,6 +318,8 @@ export default function App() {
           }),
         ),
       );
+      // 规则降级候选不代表 AI 已恢复，不清除首页的 AI 不可用标记
+      if (ev.items!.length > 0 && !ev.items!.some((i) => i.theme === "rule")) clearAiQuotaDown();
       triedLabelsRef.current.push(...ev.items!.map((i) => i.label));
       setRows((prev) => {
         const seen = new Set(prev.map((r) => r.domain));
@@ -282,6 +327,15 @@ export default function App() {
         setRounds((rs) => rs.map((r) => (r.round === round ? { ...r, proposed: r.proposed + fresh.length } : r)));
         return [...prev, ...fresh];
       });
+    } else if (ev.type === "fallback") {
+      const reason = ev.reason ?? "unknown";
+      setFallback({
+        reason,
+        count: ev.count ?? 0,
+        ...(typeof ev.retryAfterS === "number" ? { retryAt: Date.now() + ev.retryAfterS * 1000 } : {}),
+      });
+      setRounds((prev) => prev.map((r) => (r.round === (ev.round ?? 1) ? { ...r, noteKey: "agent.note.fallback" } : r)));
+      if (reason === "quota" || reason === "quota-breaker") markAiQuotaDown();
     } else if (ev.type === "hint") {
       if (ev.kind === "lowYield") setLowYieldHint(true);
     } else if (ev.type === "understanding") {
@@ -291,19 +345,23 @@ export default function App() {
     } else if (ev.type === "error") {
       const kind = ev.errorKind ?? "unknown";
       setErrorKind(kind);
-      setError(
-        t(
+      if (kind === "quota") markAiQuotaDown();
+      const autoRetry = kind === "rate-limit" && !autoRetriedRef.current && lastRunRef.current !== null;
+      if (autoRetry) setAutoRetryLeft(AUTO_RETRY_SEC);
+      setError({
+        key:
           kind === "quota"
             ? "error.ai.quota"
             : kind === "rate-limit"
-              ? "error.ai.rateLimit"
+              ? autoRetry
+                ? "error.ai.rateLimit"
+                : "error.ai.rateLimitAgain"
               : kind === "upstream"
                 ? "error.ai.upstream"
                 : kind === "network"
                   ? "error.ai.network"
                   : "error.ai",
-        ),
-      );
+      });
     } else if (ev.domain) {
       const status = ev.status as Status;
       setLogs((prev) => [...prev.slice(-19), { domain: ev.domain!, status, cached: ev.cached }]);
@@ -322,10 +380,13 @@ export default function App() {
     }
   }
 
-  async function run(v: HomeValues, opts: { more?: boolean; aroundLocked?: boolean; refinePrefs?: string[] } = {}) {
+  async function run(v: HomeValues, opts: { more?: boolean; aroundLocked?: boolean; refinePrefs?: string[] } = {}, retry = false) {
     const { more = false, aroundLocked = false, refinePrefs = refinements } = opts;
     lastRunRef.current = { v, opts };
+    if (!retry) autoRetriedRef.current = false;
+    setAutoRetryLeft(null);
     setResumedNotice(false);
+    setRestoredGuard(false);
     abortRef.current?.abort();
     const ac = new AbortController();
     abortRef.current = ac;
@@ -343,8 +404,9 @@ export default function App() {
       roundOffsetRef.current = 0;
     }
     setLogs([]);
-    setError("");
+    setError(null);
     setErrorKind(null);
+    setFallback(null);
     setLowYieldHint(false);
     setRunning(true);
     setMode("agent");
@@ -395,12 +457,12 @@ export default function App() {
         signal: ac.signal,
       });
       if (!res.ok) {
-        let msg = friendlyHttpError(res.status, t);
+        let spec = httpErrorSpec(res.status);
         try {
           const j = (await res.json()) as { message?: string };
-          if (j.message) msg = j.message;
+          if (j.message) spec = { literal: j.message };
         } catch { /* 非 JSON 响应，用默认文案 */ }
-        throw new Error(msg);
+        throw new UiErrorException(spec);
       }
       const reader = res.body!.getReader();
       const decoder = new TextDecoder();
@@ -417,13 +479,51 @@ export default function App() {
         }
       }
     } catch (e) {
-      if ((e as Error).name !== "AbortError") setError(friendlyError(e as Error, t));
+      if ((e as Error).name !== "AbortError") setError(errorSpec(e as Error));
     } finally {
       setRunning(false);
       setElapsedSec(Math.round((Date.now() - startedAtRef.current) / 1000));
       if (!ac.signal.aborted) setMode((m) => (m === "agent" ? "results" : m));
     }
   }
+
+  // 手动「重试本轮」与自动重试共用：lastRunRef 只在 run() 内赋值，而 run() 一进入就解除 R465 恢复态护栏，
+  // 所以到这里必然是用户已显式发起过一轮之后的续接，不会绕过 R463/R465 的两步确认。
+  function retryLast() {
+    const last = lastRunRef.current;
+    if (!last) return;
+    setError(null);
+    setErrorKind(null);
+    void run(last.v, last.opts, true);
+  }
+
+  function cancelAutoRetry() {
+    autoRetriedRef.current = true;
+    setAutoRetryLeft(null);
+  }
+
+  // 倒计时每秒递减；到 0 且页面在前台时发起自动重试，后台标签页等回到前台再发。
+  useEffect(() => {
+    if (autoRetryLeft === null) return;
+    if (autoRetryLeft > 0) {
+      const id = window.setTimeout(() => setAutoRetryLeft((n) => (n === null ? null : n - 1)), 1000);
+      return () => window.clearTimeout(id);
+    }
+    const fire = () => {
+      if (document.hidden) return;
+      autoRetriedRef.current = true;
+      retryLast();
+    };
+    fire();
+    document.addEventListener("visibilitychange", fire);
+    return () => document.removeEventListener("visibilitychange", fire);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoRetryLeft]);
+
+  // 离开结果/进行中页面即放弃自动重试，避免在首页或清单页被动切回 agent 视图
+  useEffect(() => {
+    if (mode !== "agent" && mode !== "results") setAutoRetryLeft(null);
+  }, [mode]);
 
   function refine(pref: string) {
     const next = [...refinements, pref];
@@ -625,31 +725,136 @@ export default function App() {
         onShortlistClick={() => (mode === "shortlist" ? closeShortlist() : openShortlist())}
       />
 
+      {/* header 下的横幅栈：错误横幅（destructive 色系）与 R471 将加入的 fallback 横幅（建议 brand/warning 色系）
+          作为兄弟节点竖向堆叠，互不遮挡；R471 只需在此容器内追加一个 <div>。 */}
       {error && (
-        <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
-          <div className="flex items-center justify-between gap-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5">
-            <p className="text-sm text-destructive">{error}</p>
-            {!running && errorKind !== "quota" && lastRunRef.current && (
+        <div className="mx-auto mt-4 w-full max-w-6xl space-y-3 px-4 md:px-6">
+          <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5">
+            <p className="text-sm text-destructive">
+              {autoRetryLeft !== null && errorKind === "rate-limit" ? (
+                <>
+                  <span aria-hidden="true">{t("error.ai.rateLimitAuto", { n: autoRetryLeft })}</span>
+                  {/* 读屏播报只在 30/20/10 三个刻度变化，避免每秒打断 */}
+                  <span className="sr-only" aria-live="polite" aria-atomic="true">
+                    {t("error.ai.autoRetryAria", { n: Math.max(10, Math.ceil(autoRetryLeft / 10) * 10) })}
+                  </span>
+                </>
+              ) : (
+                uiErrorText(error, t)
+              )}
+            </p>
+            {quotaExhausted && (
+              <span className="flex flex-wrap items-center gap-2 text-xs text-txt1">
+                <a
+                  href="/?mode=exact"
+                  className="inline-flex min-h-[44px] items-center rounded-md border border-brand-line bg-bg1 px-3 text-sm font-semibold text-brand transition-colors hover:bg-brand-dim/60 sm:min-h-0 sm:py-1 sm:text-xs"
+                >
+                  {t("error.ai.quotaQuick")}
+                </a>
+                <a
+                  href="/advanced"
+                  className="inline-flex min-h-[44px] items-center rounded-md border border-brand-line bg-bg1 px-3 text-sm font-semibold text-brand transition-colors hover:bg-brand-dim/60 sm:min-h-0 sm:py-1 sm:text-xs"
+                >
+                  {t("error.ai.quotaBulk")}
+                </a>
+                {(
+                  [
+                    { href: "/tld", key: "error.ai.fallbackTld" },
+                    { href: "/guide", key: "error.ai.fallbackGuide" },
+                    { href: "/vs", key: "error.ai.fallbackVs" },
+                  ] as const
+                ).map((l) => (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    className="hidden items-center rounded-md border border-line bg-bg1 px-2.5 py-1 font-medium text-txt1 transition-colors hover:border-brand-line hover:text-brand sm:inline-flex"
+                  >
+                    {t(l.key)}
+                  </a>
+                ))}
+              </span>
+            )}
+            {autoRetryLeft !== null && errorKind === "rate-limit" ? (
               <button
                 type="button"
-                className="shrink-0 rounded-md border border-destructive/40 px-3 py-1.5 text-sm font-semibold text-destructive transition-colors hover:bg-destructive/20"
+                className="inline-flex min-h-[44px] shrink-0 items-center rounded-md border border-destructive/40 px-3 text-sm font-semibold text-destructive transition-colors hover:bg-destructive/20 sm:min-h-0 sm:py-1.5"
+                onClick={cancelAutoRetry}
+              >
+                {t("error.ai.autoRetryCancel")}
+              </button>
+            ) : (
+              !running &&
+              !quotaExhausted &&
+              lastRunRef.current && (
+                <button
+                  type="button"
+                  className="inline-flex min-h-[44px] shrink-0 items-center rounded-md border border-destructive/40 px-3 text-sm font-semibold text-destructive transition-colors hover:bg-destructive/20 sm:min-h-0 sm:py-1.5"
+                  onClick={retryLast}
+                >
+                  {t("error.retry")}
+                </button>
+              )
+            )}
+          </div>
+        </div>
+      )}
+
+      {fallback && (mode === "results" || mode === "agent") && (
+        <div className="mx-auto mt-4 w-full max-w-6xl px-4 md:px-6">
+          <div
+            role="status"
+            className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 sm:py-2.5"
+          >
+            {/* <640px 一行摘要 + 原生 details 展开全文，避免横幅把首张卡顶出首屏；桌面直接全文 */}
+            <details className="min-w-0 flex-1 sm:hidden">
+              <summary className="flex min-h-[44px] cursor-pointer list-none items-center gap-2 text-sm text-txt0 [&::-webkit-details-marker]:hidden">
+                <span className="min-w-0 flex-1 truncate">
+                  {t("fallback.bannerShort", { reason: t(`fallback.reason.${fallback.reason}` as I18nKey), count: fallback.count })}
+                </span>
+                <span aria-hidden="true" className="shrink-0 text-xs text-txt2">
+                  ▾
+                </span>
+              </summary>
+              <p className="pb-2 text-sm text-txt1">{fallbackFullText}</p>
+            </details>
+            <p className="hidden min-w-0 flex-1 text-sm text-txt0 sm:block">{fallbackFullText}</p>
+            {!running && !quotaExhausted && lastRunRef.current && (
+              <button
+                type="button"
+                className="inline-flex min-h-[44px] shrink-0 items-center rounded-md border border-amber-500/40 px-3 text-sm font-semibold text-txt0 transition-colors hover:bg-amber-500/20 sm:min-h-0 sm:py-1.5"
                 onClick={() => {
                   const last = lastRunRef.current!;
-                  setError("");
-                  setErrorKind(null);
                   void run(last.v, last.opts);
                 }}
               >
-                {t("error.retry")}
+                {t("fallback.retryAi")}
               </button>
             )}
           </div>
         </div>
       )}
 
+      {(mode === "agent" || mode === "results") && (
+        <ContextSummary
+          restored={resumedNotice && mode === "results"}
+          understanding={aiUnderstanding}
+          fallback={understanding}
+          description={values.description}
+          onRefine={refine}
+          running={running}
+          quotaExhausted={quotaExhausted}
+          onNewSearch={() => {
+            setResumedNotice(false);
+            setNoticeClosing(false);
+            setMode("home");
+          }}
+          onDismissRestored={dismissNotice}
+        />
+      )}
+
       {resumedNotice && mode === "results" && (
         <div
-          className={`mx-auto w-full max-w-6xl overflow-hidden px-4 transition-all duration-200 ease-out md:px-6 ${noticeClosing ? "mt-0 max-h-0 opacity-0" : "mt-4 max-h-24"}`}
+          className={`mx-auto hidden w-full max-w-6xl overflow-hidden px-4 transition-all duration-200 ease-out md:block md:px-6 ${noticeClosing ? "mt-0 max-h-0 opacity-0" : "mt-4 max-h-24"}`}
         >
           <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-line bg-bg1 px-4 py-2 text-[13px] text-txt1">
             <span>{t("resume.notice")}</span>
@@ -679,7 +884,7 @@ export default function App() {
       )}
 
       {(mode === "agent" || mode === "results") && (
-        <div className={noticeClosing ? "pointer-events-none" : undefined}>
+        <div className={cn("hidden md:block", noticeClosing && "pointer-events-none")}>
           <UnderstandingBar
             understanding={aiUnderstanding}
             fallback={understanding}
@@ -691,7 +896,8 @@ export default function App() {
       )}
 
       {mode === "home" && (
-        <HomePage
+        <Suspense fallback={<PageFallback />}>
+        <HomePageSlot
           initial={values}
           onSubmit={(v) => {
             setValues(v);
@@ -702,6 +908,7 @@ export default function App() {
           shortlist={shortlist}
           quotaExhausted={quotaExhausted}
         />
+        </Suspense>
       )}
       {mode === "agent" && (
         <Suspense fallback={<PageFallback />}>
@@ -751,6 +958,7 @@ export default function App() {
           quotaExhausted={quotaExhausted}
           dislikedHas={(label) => disliked.has(label)}
           onToggleDislike={toggleDislike}
+          restoredGuard={restoredGuard}
         />
         </Suspense>
       )}
@@ -843,10 +1051,17 @@ export default function App() {
               ))}
             </div>
           </div>
+          {/* 返佣声明：仅在 Worker 下发了可生效的返佣配置时显示（R480） */}
+          {affiliateActive && (
+            <p className="mx-auto mb-3 max-w-xl px-4 leading-relaxed" data-testid="affiliate-disclosure">
+              {t("registrar.disclosure")}
+            </p>
+          )}
           open-core · MIT ·{" "}
           <a className="underline hover:text-txt1" href="https://github.com/wookat/domainhunter">
             GitHub
           </a>
+          {hasAnalytics && <p className="mx-auto mt-3 max-w-md px-4 leading-relaxed">{t("footer.analyticsNotice")}</p>}
         </footer>
       )}
     </div>

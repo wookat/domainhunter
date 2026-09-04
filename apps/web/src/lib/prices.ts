@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
 import { tldPrice } from "@/types";
-import { USD_TO_CNY } from "@/content/tld-list";
+import { toCny, toUsd } from "@/lib/currency";
+
+export { toCny, toUsd };
 
 export interface LivePrice {
   registration: number;
@@ -69,14 +71,6 @@ export function usePricesSettled(): boolean {
 /** 价格元信息：stale 回退标记 + 拉取时间（仅 /prices 页轻提示用） */
 export function usePriceMeta(): PriceMeta | null {
   return usePricesResult()?.meta ?? null;
-}
-
-export function toCny(usd: number): number {
-  return Math.round(usd * USD_TO_CNY);
-}
-
-export function toUsd(cny: number): number {
-  return Math.round(cny / USD_TO_CNY);
 }
 
 /** 紧凑价：实时价优先（Porkbun 美元），失败回退静态参考价；按界面语言展示主币种 */

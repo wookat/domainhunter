@@ -1,8 +1,11 @@
 import { AlertTriangle, HelpCircle, Lightbulb, Quote, Sparkles } from "lucide-react";
 
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
+import { GUIDE_LABELS } from "@/content/guide-labels";
+import { relatedGuideSlugs } from "@/content/guide-groups";
 import { buildGuideFaq } from "@/content/guide-faq";
-import { GUIDE_LIST, INDUSTRY_GUIDES } from "@/content/guides";
+import { readInjectedContent } from "@/content/injected";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { NotFoundPage } from "@/components/not-found-page";
 import { useI18n } from "@/lib/i18n";
 import { priceShort, usePrices } from "@/lib/prices";
@@ -12,24 +15,20 @@ import { cn } from "@/lib/utils";
 export function GuidePage({ slug }: { slug: string }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
-  const guide = INDUSTRY_GUIDES[slug];
+  const content = readInjectedContent("guide", slug);
+  const guide = content?.guide;
   usePageTitle(guide?.[lang].title);
 
-  if (!guide) return <NotFoundPage />;
+  if (!content || !guide) return <NotFoundPage />;
 
   const loc = guide[lang];
   const faq = buildGuideFaq(guide, lang);
   const relatedCompares = [...new Set(guide.tlds.flatMap((rec) => COMPARE_SLUGS.filter((s) => s.split("-vs-").includes(rec.tld))))].slice(0, 4);
+  const relatedIndustry = relatedGuideSlugs(slug).map((s) => GUIDE_LABELS.find((g) => g.slug === s)).filter((g): g is (typeof GUIDE_LABELS)[number] => g !== undefined);
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
-      <p className="font-mono text-sm text-brand">
-        <a href={`/guide?lang=${lang}`} className="tap-target inline-block text-txt2 hover:text-brand hover:underline">
-          {t("hub.allGuide")}
-        </a>
-        <span className="mx-1.5 text-txt2">/</span>
-        {loc.label}
-      </p>
+      <Breadcrumb hub="guide" current={loc.label} />
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{loc.title}</h1>
 
       <p className="mt-6 text-[15px] leading-relaxed text-txt1">{loc.intro}</p>
@@ -145,20 +144,38 @@ export function GuidePage({ slug }: { slug: string }) {
       <div className="mt-10">
         <h2 className="text-sm font-semibold text-txt1">{t("guide.others")}</h2>
         <div className="mt-3 flex flex-wrap gap-2">
-          {GUIDE_LIST.map((other) => (
+          {content.guideLinks.map((other) => (
             <a
-              key={other}
-              href={`/guide/${other}?lang=${lang}`}
+              key={other.slug}
+              href={`/guide/${other.slug}?lang=${lang}`}
               className={cn(
                 "flex min-h-[44px] items-center rounded-lg border px-3 text-xs transition-colors",
-                other === slug ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand",
+                other.slug === slug ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand",
               )}
             >
-              {INDUSTRY_GUIDES[other][lang].label}
+              {other[lang]}
             </a>
           ))}
         </div>
       </div>
+
+      {/* 同组相关行业指南互链 */}
+      {relatedIndustry.length > 0 && (
+        <div className="mt-6">
+          <h2 className="text-sm font-semibold text-txt1">{t("guide.related")}</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {relatedIndustry.map((g) => (
+              <a
+                key={g.slug}
+                href={`/guide/${g.slug}?lang=${lang}`}
+                className="flex min-h-[44px] items-center rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+              >
+                {g[lang]}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </main>
   );
 }

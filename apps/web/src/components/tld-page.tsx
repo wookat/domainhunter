@@ -1,10 +1,10 @@
 import { CheckCircle2, HelpCircle, Lightbulb, Sparkles, Tag } from "lucide-react";
 
-import { TLD_COMPARES, comparesForTld } from "@/content/compares";
 import { buildTldFaq } from "@/content/tld-faq";
-import { INDUSTRY_GUIDES, guidesForTld } from "@/content/guides";
-import { TLD_GUIDES } from "@/content/tlds";
+import { readInjectedContent } from "@/content/injected";
+import { relatedTlds } from "@/content/tld-groups";
 import { TLD_LIST } from "@/content/tld-list";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { NotFoundPage } from "@/components/not-found-page";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, toCny, usePrices } from "@/lib/prices";
@@ -14,25 +14,22 @@ import { cn } from "@/lib/utils";
 export function TldPage({ tld }: { tld: string }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
-  const guide = TLD_GUIDES[tld];
+  const content = readInjectedContent("tld", tld);
+  const guide = content?.guide;
   usePageTitle(guide?.[lang].title);
 
-  if (!guide) return <NotFoundPage />;
+  if (!content || !guide) return <NotFoundPage />;
 
   const loc = guide[lang];
   const live = prices?.[tld];
-  const relatedGuides = guidesForTld(tld);
-  const relatedCompares = comparesForTld(tld);
+  const relatedGuides = content.relatedGuides;
+  const relatedCompares = content.relatedCompares.slice(0, 6);
+  const groupTlds = relatedTlds(tld);
   const faq = buildTldFaq(tld, loc, lang);
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-16 pt-10 md:px-6">
-      <p className="font-mono text-sm text-brand">
-        <a href={`/tld?lang=${lang}`} className="tap-target inline-block text-txt2 hover:text-brand hover:underline">
-          {t("hub.allTld")}
-        </a>
-        <span className="mx-1.5 text-txt2">/</span>.{tld}
-      </p>
+      <Breadcrumb hub="tld" current={`.${tld}`} />
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{loc.title}</h1>
 
       {/* 价格卡：实时 Porkbun 价，失败回退静态参考价 */}
@@ -139,13 +136,32 @@ export function TldPage({ tld }: { tld: string }) {
         <div className="mt-6">
           <h2 className="text-sm font-semibold text-txt1">{t("vs.relatedCompares")}</h2>
           <div className="mt-3 flex flex-wrap gap-2">
-            {relatedCompares.map((slug) => (
+            {relatedCompares.map((cmp) => (
               <a
-                key={slug}
-                href={`/vs/${slug}?lang=${lang}`}
+                key={cmp.slug}
+                href={`/vs/${cmp.slug}?lang=${lang}`}
                 className="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
               >
-                .{TLD_COMPARES[slug].a} vs .{TLD_COMPARES[slug].b}
+                .{cmp.a} vs .{cmp.b}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 同组相关 TLD 互链 */}
+      {groupTlds.length > 0 && (
+        <div className="mt-6">
+          <h2 className="text-sm font-semibold text-txt1">{t("tld.relatedTlds")}</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {groupTlds.map((other) => (
+              <a
+                key={other}
+                href={`/tld/${other}?lang=${lang}`}
+                className="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
+              >
+                .{other}
+                {priceShort(other, lang, prices) && <span className="tnum ml-1.5 text-[10px] text-txt1">{priceShort(other, lang, prices)}</span>}
               </a>
             ))}
           </div>
@@ -157,13 +173,13 @@ export function TldPage({ tld }: { tld: string }) {
         <div className="mt-6">
           <h2 className="text-sm font-semibold text-txt1">{t("tld.relatedGuides")}</h2>
           <div className="mt-3 flex flex-wrap gap-2">
-            {relatedGuides.map((slug) => (
+            {relatedGuides.map((g) => (
               <a
-                key={slug}
-                href={`/guide/${slug}?lang=${lang}`}
+                key={g.slug}
+                href={`/guide/${g.slug}?lang=${lang}`}
                 className="flex min-h-[44px] items-center rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
               >
-                {INDUSTRY_GUIDES[slug][lang].label}
+                {g[lang]}
               </a>
             ))}
           </div>

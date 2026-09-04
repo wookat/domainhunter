@@ -1,0 +1,603 @@
+{
+  "sitemap_loc_samples": [
+    826,
+    826,
+    826
+  ],
+  "sitemap_dup_locs": 0,
+  "sitemap_cat_counts": {
+    "tld": 264,
+    "guide": 260,
+    "vs": 294,
+    "core": 8
+  },
+  "sitemap_vs_counts_json": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "llms_counts": {
+    "tld": 264,
+    "guide": 260,
+    "vs": 294
+  },
+  "llms_vs_sitemap_equal": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "robots": {
+    "status": 200,
+    "has_sitemap": true,
+    "gptbot": true
+  },
+  "seo_new_pages": {
+    "/vs/camp-vs-courses": {
+      "status": 200,
+      "title": ".camp 和 .courses 怎么选：沉浸式集训与体系化课程 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/camp-vs-courses",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 122585
+    },
+    "/vs/camp-vs-courses?lang=en": {
+      "status": 200,
+      "title": ".camp vs .courses: Immersive Cohorts or Structured Curriculum | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/camp-vs-courses?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 122856
+    },
+    "/vs/engineer-vs-engineering": {
+      "status": 200,
+      "title": ".engineer 和 .engineering 怎么选：个人身份与公司生意 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/engineer-vs-engineering",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 122979
+    },
+    "/vs/engineer-vs-engineering?lang=en": {
+      "status": 200,
+      "title": ".engineer vs .engineering: The Person or the Practice | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/engineer-vs-engineering?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 123201
+    },
+    "/tld/villas": {
+      "status": 200,
+      "title": ".villas 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/villas",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 132295
+    },
+    "/tld/villas?lang=en": {
+      "status": 200,
+      "title": ".villas Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/villas?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 132963
+    },
+    "/tld/tickets": {
+      "status": 200,
+      "title": ".tickets 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/tickets",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 132143
+    },
+    "/tld/tickets?lang=en": {
+      "status": 200,
+      "title": ".tickets Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/tickets?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 132794
+    }
+  },
+  "new_pages_status": {
+    "/vs/camp-vs-courses": {
+      "status": 200,
+      "bytes": 122585,
+      "faq": true
+    },
+    "/vs/camera-vs-photography": {
+      "status": 200,
+      "bytes": 122451,
+      "faq": true
+    },
+    "/vs/diamonds-vs-jewelry": {
+      "status": 200,
+      "bytes": 122281,
+      "faq": true
+    },
+    "/vs/theater-vs-show": {
+      "status": 200,
+      "bytes": 122068,
+      "faq": true
+    },
+    "/vs/accountants-vs-tax": {
+      "status": 200,
+      "bytes": 122820,
+      "faq": true
+    },
+    "/vs/engineer-vs-engineering": {
+      "status": 200,
+      "bytes": 122979,
+      "faq": true
+    },
+    "/tld/villas": {
+      "status": 200,
+      "bytes": 132295,
+      "faq": true
+    },
+    "/tld/cruises": {
+      "status": 200,
+      "bytes": 132275,
+      "faq": true
+    },
+    "/tld/voyage": {
+      "status": 200,
+      "bytes": 132379,
+      "faq": true
+    },
+    "/tld/limo": {
+      "status": 200,
+      "bytes": 132296,
+      "faq": true
+    },
+    "/tld/tickets": {
+      "status": 200,
+      "bytes": 132143,
+      "faq": true
+    },
+    "/tld/flowers": {
+      "status": 200,
+      "bytes": 132450,
+      "faq": true
+    }
+  },
+  "usage_pre": {
+    "days": {
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      }
+    },
+    "cronLast": 1786320060446,
+    "indexnowLast": 1786255259045,
+    "pricesLastOk": 1786339083155,
+    "pricesLastFail": 1786337426285
+  },
+  "usage_keys_present": {
+    "pricesLastOk": true,
+    "pricesLastFail": true,
+    "cronLast": true,
+    "indexnowLast": true
+  },
+  "prices_api": {
+    "stale": null,
+    "tldCount": 262,
+    "fetchedAt": 1786339083383,
+    "keys": 262
+  },
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_all": "核验完成：共 265 个，209 个可注册",
+  "prices_rows_zh": 264,
+  "prices_live_count": 262,
+  "prices_static_count": 2,
+  "prices_static_slugs": [
+    "cn",
+    "so"
+  ],
+  "prices_new_tld_rows": {
+    "expected_static_fallback": {
+      "villas": [
+        78,
+        345
+      ],
+      "cruises": [
+        59,
+        323
+      ],
+      "voyage": [
+        41,
+        337
+      ],
+      "limo": [
+        78,
+        315
+      ],
+      "tickets": [
+        2599,
+        2599
+      ],
+      "flowers": [
+        745,
+        745
+      ]
+    },
+    "got": {
+      "voyage": [
+        41,
+        337
+      ],
+      "cruises": [
+        59,
+        323
+      ],
+      "villas": [
+        78,
+        345
+      ],
+      "limo": [
+        78,
+        315
+      ],
+      "flowers": [
+        745,
+        745
+      ],
+      "tickets": [
+        2599,
+        2599
+      ]
+    }
+  },
+  "prices_row_tld_hrefs": {
+    "villas": true,
+    "cruises": true,
+    "voyage": true,
+    "limo": true,
+    "tickets": true,
+    "flowers": true
+  },
+  "tld_pricecards": {
+    "villas": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "prices_href": true
+    },
+    "cruises": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "prices_href": true
+    },
+    "voyage": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "prices_href": true
+    },
+    "limo": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "prices_href": true
+    },
+    "tickets": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "prices_href": true
+    },
+    "flowers": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "prices_href": true
+    }
+  },
+  "tld_com_live": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+  "tld_hub_links": 264,
+  "guide_hub_links": 260,
+  "vs_hub_links": 294,
+  "footer_counts": [],
+  "footer_link_counts": {
+    "/tld/": 264,
+    "/guide/": 260,
+    "/vs/": 294
+  },
+  "templates_more_chip": "+250",
+  "404_status": 404,
+  "404_tld_status": 404,
+  "404_guide_status": 404,
+  "404_vs_status": 404,
+  "mcp_doc_status": 200,
+  "mcp_doc_tldcount": "860",
+  "mcp_tld_prices": {
+    "tldCount": 264,
+    "priceKeys": 264
+  },
+  "share_create": {
+    "status": 200,
+    "id": "5vrK4UEjGK",
+    "has_token": true
+  },
+  "share_live_domains": {
+    "d1": true,
+    "d2": true
+  },
+  "share_revoke": {
+    "del": 200,
+    "getAfter": 410,
+    "revokedBodyHasItems": false
+  },
+  "share_revoked_ui": true,
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(250, 250, 249)",
+    "persist_after_reload": "rgb(250, 250, 249)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld/villas": 360,
+    "/vs/camp-vs-courses": 360,
+    "/guide/franchise": 360
+  },
+  "usage_post": {
+    "days": {
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      }
+    },
+    "cronLast": 1786320060446,
+    "indexnowLast": 1786255259045,
+    "pricesLastOk": 1786339083155,
+    "pricesLastFail": 1786337426285
+  },
+  "usage_days_equal": true,
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r362"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r362"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r362"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r362"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r362"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/5vrK4UEjGK"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/5vrK4UEjGK"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/5vrK4UEjGK"
+    }
+  ]
+}

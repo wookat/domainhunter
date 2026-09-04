@@ -1,0 +1,263 @@
+{
+  "zh-375 rate-limit shows 30s countdown": {
+    "pass": true,
+    "detail": "AI 服务暂时限流，29 秒后自动重试一次\n约 30 秒后自动重试"
+  },
+  "zh-375 cancel button present": {
+    "pass": true
+  },
+  "zh-375 manual retry hidden during countdown": {
+    "pass": true
+  },
+  "zh-375 aria-live unchanged within 10s": {
+    "pass": true,
+    "detail": "约 30 秒后自动重试 | 约 30 秒后自动重试 | visible@5s: AI 服务暂时限流，24 秒后自动重试一次"
+  },
+  "zh-375 aria-live steps to 20 after 10s": {
+    "pass": true,
+    "detail": "约 20 秒后自动重试"
+  },
+  "zh-375 no auto retry before 30s": {
+    "pass": true,
+    "detail": "calls=1"
+  },
+  "zh-375 auto retry fired exactly once at 30s": {
+    "pass": true,
+    "detail": "calls=2"
+  },
+  "zh-375 second rate-limit falls back to manual retry": {
+    "pass": true,
+    "detail": "AI 服务仍被限流，请稍等片刻后手动重试"
+  },
+  "zh-375 no further auto retry": {
+    "pass": true,
+    "detail": "calls=2"
+  },
+  "zh-375 results kept after error": {
+    "pass": true
+  },
+  "zh-desktop rate-limit shows 30s countdown": {
+    "pass": true,
+    "detail": "AI 服务暂时限流，29 秒后自动重试一次\n约 30 秒后自动重试"
+  },
+  "zh-desktop cancel button present": {
+    "pass": true
+  },
+  "zh-desktop manual retry hidden during countdown": {
+    "pass": true
+  },
+  "zh-desktop aria-live unchanged within 10s": {
+    "pass": true,
+    "detail": "约 30 秒后自动重试 | 约 30 秒后自动重试 | visible@5s: AI 服务暂时限流，24 秒后自动重试一次"
+  },
+  "zh-desktop aria-live steps to 20 after 10s": {
+    "pass": true,
+    "detail": "约 20 秒后自动重试"
+  },
+  "zh-desktop no auto retry before 30s": {
+    "pass": true,
+    "detail": "calls=1"
+  },
+  "zh-desktop auto retry fired exactly once at 30s": {
+    "pass": true,
+    "detail": "calls=2"
+  },
+  "zh-desktop second rate-limit falls back to manual retry": {
+    "pass": true,
+    "detail": "AI 服务仍被限流，请稍等片刻后手动重试"
+  },
+  "zh-desktop no further auto retry": {
+    "pass": true,
+    "detail": "calls=2"
+  },
+  "zh-desktop results kept after error": {
+    "pass": true
+  },
+  "en-375 rate-limit shows 30s countdown": {
+    "pass": true,
+    "detail": "AI service is rate-limited — retrying once automatically in 29s\nAutomatic retry in about 30 seconds"
+  },
+  "en-375 cancel button present": {
+    "pass": true
+  },
+  "en-375 manual retry hidden during countdown": {
+    "pass": true
+  },
+  "en-375 aria-live unchanged within 10s": {
+    "pass": true,
+    "detail": "Automatic retry in about 30 seconds | Automatic retry in about 30 seconds | visible@5s: AI service is rate-limited — retrying once automatically in 24s"
+  },
+  "en-375 aria-live steps to 20 after 10s": {
+    "pass": true,
+    "detail": "Automatic retry in about 20 seconds"
+  },
+  "en-375 no auto retry before 30s": {
+    "pass": true,
+    "detail": "calls=1"
+  },
+  "en-375 auto retry fired exactly once at 30s": {
+    "pass": true,
+    "detail": "calls=2"
+  },
+  "en-375 second rate-limit falls back to manual retry": {
+    "pass": true,
+    "detail": "AI service is still rate-limited — wait a moment, then retry manually"
+  },
+  "en-375 no further auto retry": {
+    "pass": true,
+    "detail": "calls=2"
+  },
+  "en-375 results kept after error": {
+    "pass": true
+  },
+  "en-desktop rate-limit shows 30s countdown": {
+    "pass": true,
+    "detail": "AI service is rate-limited — retrying once automatically in 29s\nAutomatic retry in about 30 seconds"
+  },
+  "en-desktop cancel button present": {
+    "pass": true
+  },
+  "en-desktop manual retry hidden during countdown": {
+    "pass": true
+  },
+  "en-desktop aria-live unchanged within 10s": {
+    "pass": true,
+    "detail": "Automatic retry in about 30 seconds | Automatic retry in about 30 seconds | visible@5s: AI service is rate-limited — retrying once automatically in 24s"
+  },
+  "en-desktop aria-live steps to 20 after 10s": {
+    "pass": true,
+    "detail": "Automatic retry in about 20 seconds"
+  },
+  "en-desktop no auto retry before 30s": {
+    "pass": true,
+    "detail": "calls=1"
+  },
+  "en-desktop auto retry fired exactly once at 30s": {
+    "pass": true,
+    "detail": "calls=2"
+  },
+  "en-desktop second rate-limit falls back to manual retry": {
+    "pass": true,
+    "detail": "AI service is still rate-limited — wait a moment, then retry manually"
+  },
+  "en-desktop no further auto retry": {
+    "pass": true,
+    "detail": "calls=2"
+  },
+  "en-desktop results kept after error": {
+    "pass": true
+  },
+  "zh-375 cancel → manual retry button": {
+    "pass": true
+  },
+  "zh-375 cancel → no auto retry": {
+    "pass": true,
+    "detail": "calls=1"
+  },
+  "zh-375 quota wording": {
+    "pass": true,
+    "detail": "AI 配额已用尽，故障已记录、维护者会处理；可先用精确核验 / 批量核验"
+  },
+  "zh-375 quota no retry button": {
+    "pass": true
+  },
+  "zh-375 quota CTA links (44px)": {
+    "pass": true,
+    "detail": "quick=44 bulk=44"
+  },
+  "zh-375 quota keeps results": {
+    "pass": true
+  },
+  "zh-375 quota bottom more disabled": {
+    "pass": true
+  },
+  "zh-375 zero real AI calls (all intercepted)": {
+    "pass": true,
+    "detail": "intercepted=1"
+  },
+  "zh-375 quota exact CTA opens exact-check tab (restore bypassed)": {
+    "pass": true
+  },
+  "zh-375 exact CTA keeps lastSearch snapshot": {
+    "pass": true
+  },
+  "en-375 quota wording": {
+    "pass": true,
+    "detail": "AI quota is exhausted — the outage is logged and the maintainer will handle it; exact and bulk checks still work"
+  },
+  "en-375 quota no retry button": {
+    "pass": true
+  },
+  "en-375 quota CTA links (44px)": {
+    "pass": true,
+    "detail": "quick=44 bulk=44"
+  },
+  "en-375 quota keeps results": {
+    "pass": true
+  },
+  "en-375 quota bottom more disabled": {
+    "pass": true
+  },
+  "en-375 zero real AI calls (all intercepted)": {
+    "pass": true,
+    "detail": "intercepted=1"
+  },
+  "en-375 quota exact CTA opens exact-check tab (restore bypassed)": {
+    "pass": true
+  },
+  "en-375 exact CTA keeps lastSearch snapshot": {
+    "pass": true
+  },
+  "zh-375 summary toggle 44px": {
+    "pass": true,
+    "detail": "h=44"
+  },
+  "zh-375 summary aria-expanded=false": {
+    "pass": true
+  },
+  "zh-375 panel hidden when collapsed": {
+    "pass": true
+  },
+  "zh-375 summary aria-expanded=true": {
+    "pass": true
+  },
+  "zh-375 4 refine chips ≥44px in panel": {
+    "pass": true,
+    "detail": "heights=44,44,44,44"
+  },
+  "zh-375 refine chips enabled when idle": {
+    "pass": true
+  },
+  "zh-375 panel has restore actions": {
+    "pass": true
+  },
+  "zh-375 no horizontal overflow (expanded)": {
+    "pass": true
+  },
+  "en-375 summary toggle 44px": {
+    "pass": true,
+    "detail": "h=44"
+  },
+  "en-375 summary aria-expanded=false": {
+    "pass": true
+  },
+  "en-375 panel hidden when collapsed": {
+    "pass": true
+  },
+  "en-375 summary aria-expanded=true": {
+    "pass": true
+  },
+  "en-375 4 refine chips ≥44px in panel": {
+    "pass": true,
+    "detail": "heights=44,44,44,44"
+  },
+  "en-375 refine chips enabled when idle": {
+    "pass": true
+  },
+  "en-375 panel has restore actions": {
+    "pass": true
+  },
+  "en-375 no horizontal overflow (expanded)": {
+    "pass": true
+  }
+}

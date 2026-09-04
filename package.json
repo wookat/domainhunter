@@ -1,7 +1,36 @@
 {
   "name": "domainhunter",
   "private": true,
+  "description": "中文创业者的域名猎手：说出寓意，猎到真正可注册的 .cn/.com。AI agent domain hunter for Chinese founders with real-time RDAP/WHOIS checks, bulk CSV, expiry, prices, drop monitoring and an MCP endpoint.",
   "license": "MIT",
+  "homepage": "https://hunt.zalize.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wookat/domainhunter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wookat/domainhunter/issues"
+  },
+  "keywords": [
+    "domain",
+    "domain-name",
+    "domain-search",
+    "domain-availability",
+    "domain-generator",
+    "rdap",
+    "whois",
+    "cn-domain",
+    "pinyin",
+    "chinese",
+    "startup-naming",
+    "brand-name",
+    "ai-agent",
+    "mcp",
+    "model-context-protocol",
+    "cloudflare-workers",
+    "hono",
+    "react"
+  ],
   "scripts": {
     "dev": "pnpm --filter web dev",
     "build": "pnpm --filter web build",

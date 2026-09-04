@@ -2,24 +2,76 @@ import { Hono } from "hono";
 import { nanoid } from "nanoid";
 import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
-import { AI_THEMES, classifyAiError, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
+import { AI_THEMES, classifyAiError, descriptionLooksEnglish, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiCandidate, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
+import { resolveFallbackUpstream, type LlmProvider } from "./ai-transport";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
 import { buildGuideFaq } from "./content/guide-faq";
 import { buildPricesFaq } from "./content/prices-faq";
 import { buildTldFaq } from "./content/tld-faq";
-import { compareContentBlocks, compareHubBlocks, guideContentBlocks, guideHubBlocks, hubCrumbKicker, hubCrumbLabel, pricesTableSkeleton, tldContentBlocks, tldHubBlocks } from "./content/ssr-html";
+import { compareContentBlocks, compareHubBlocks, guideContentBlocks, guideHubBlocks, homeHeroSkeleton, hubCrumbKicker, hubCrumbLabel, pricesTableSkeleton, tldContentBlocks, tldHubBlocks } from "./content/ssr-html";
+import { HOME_FAQ, HOME_META } from "./content/home-copy";
+import { buildGuideContent, buildTldContent, buildVsContent } from "./content/injected-build";
+import type { InjectedContent } from "./content/injected";
 import { HUB_META } from "./content/hubs";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
+import { isRegistrarId, parseAffiliateJson, type RegistrarId } from "./lib/registrars";
+import { generateRuleCandidates, LLM_BREAKER_KEY, LLM_BREAKER_TTL_S, type FallbackReason } from "./rule-fallback";
 import { tldPrice } from "./types";
+import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
+import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
+import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
+import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
+import { PageviewCounter, pvKey, type DayPageviews } from "./pageviews";
+import { INDEXNOW_ENDPOINT, submitIndexNow, summarizeIndexNow } from "./indexnow";
 
-// LLM_API_BASE：仅供本地 wrangler dev 指向假上游验证错误路径（R264），生产不设置
-type Bindings = { ASSETS: Fetcher; DEEPSEEK_API_KEY: string; CACHE?: KVNamespace; LLM_API_BASE?: string };
+// LLM_API_BASE/LLM_MODEL：LLM 上游基地址与模型名。默认 DeepSeek 官方 + deepseek-chat；
+// 生产可指向 OpenAI 兼容网关（R460：电信 AI 网关），本地 wrangler dev 亦可指向假上游验证错误路径（R264）
+// LLM_FALLBACK_*（R474）：备用上游（任一 OpenAI 兼容端点），主上游额度耗尽/认证失败/5xx/网络失败时自动重发；
+// LLM_FALLBACK_API_KEY 为 secret（wrangler secret put），未配置则 failover 休眠，行为与仅有主上游时完全一致
+// GSC_VERIFICATION / BING_VERIFICATION / ANALYTICS_PROVIDER / ANALYTICS_TOKEN（R481）：站点验证 meta 与分析脚本，
+// 全部可选；为空时 HTML 输出与未配置时字节一致（见 growth-inject.ts）
+// REGISTRAR_AFFILIATE_JSON（R480）：公开的注册商返佣参数（wrangler.jsonc vars，非 secret），经 GET /api/registrars 下发前端；
+// 形如 {"aliyun":{"query":{"userCode":"…"}},"namecheap":{"redirect":"https://namecheap.pxf.io/c/…?u={url}"}}，默认 "{}" = 纯搜索链接
+type Bindings = GrowthVars & {
+  ASSETS: Fetcher;
+  DEEPSEEK_API_KEY: string;
+  CACHE?: KVNamespace;
+  LLM_API_BASE?: string;
+  LLM_MODEL?: string;
+  LLM_THINKING?: string;
+  LLM_FALLBACK_API_KEY?: string;
+  LLM_FALLBACK_API_BASE?: string;
+  LLM_FALLBACK_MODEL?: string;
+  LLM_FALLBACK_THINKING?: string;
+  REGISTRAR_AFFILIATE_JSON?: string;
+};
 
 const app = new Hono<{ Bindings: Bindings }>();
+
+// HTML 文档统一后处理（R481）：所有 text/html 响应（含 SSR 页面与 ASSETS 直出的 index.html）在此
+// ① 注入验证 meta / 分析 beacon（vars 为空则不读 body，原响应原样透传）；② 服务端 pageviews/bots 计数。
+// 计数器按 isolate 复用，合并窗口内多次请求为一次 KV 写；仅统计 GET + 2xx 的 HTML 文档（404 壳与 API 不计）。
+let pageviewCounter: PageviewCounter | null = null;
+app.use("*", async (c, next) => {
+  await next();
+  const res = c.res;
+  if (c.req.method !== "GET" || !isHtmlDocument(res)) return;
+  if (res.status >= 200 && res.status < 300 && c.env.CACHE) {
+    pageviewCounter ??= new PageviewCounter(c.env.CACHE);
+    c.executionCtx.waitUntil(pageviewCounter.record(new URL(c.req.url).pathname, c.req.header("user-agent")));
+  }
+  const snippet = buildHeadInjection(c.env);
+  if (!snippet) return;
+  const html = injectIntoHead(await res.text(), snippet);
+  const headers = new Headers(res.headers);
+  headers.delete("content-length");
+  headers.delete("content-encoding");
+  c.res = new Response(html, { status: res.status, statusText: res.statusText, headers });
+});
 
 const RATE_LIMIT_PER_HOUR = 20;
 const CACHE_TTL_TAKEN = 24 * 3600; // 已注册结果缓存 24h
@@ -36,13 +88,20 @@ const MONITOR_CHANGES_KEY = "monitor:changes";
 const MAX_MONITOR_DOMAINS = 500; // 全局监控上限
 const MAX_MONITOR_CHANGES = 100; // 变化记录保留条数
 const MONITOR_RECHECK_COOLDOWN_S = 60; // 手动刷新限频：每 IP 60 秒一次
-const PRICES_KEY = `prices:v2:${TLD_LIST.length}`; // key 掺 TLD 数量：指南扩容后旧缓存自动失效
-const PRICES_TTL = 24 * 3600; // Porkbun 价格缓存 24h
-const PRICES_STALE_KEY = "prices:latest"; // 不带版本的 stale 兜底 key：升版冷缓存 + 上游不可达时回退
-const PRICES_STALE_TTL = 30 * 24 * 3600; // stale 兜底保留 30 天（每次成功拉取刷新）
-const PRICES_FETCH_TIMEOUT_MS = 10_000; // Porkbun 拉取超时（原依赖 Workers 默认 ~60s，收紧到 10s）
+// 版本化缓存 key 掺 TLD 数量：指南扩容后旧缓存不再被当作全量数据；迁移/刷新逻辑见 prices-cache.ts
+const PRICES_CACHE_CFG: PricesCacheConfig = {
+  key: `prices:v2:${TLD_LIST.length}`,
+  tldList: TLD_LIST,
+  usdToCny: USD_TO_CNY,
+  timeoutMs: 25_000, // Porkbun 拉取超时：上游全量报价实测 ~13s，10s 会必然超时导致实时价永远拉不到
+};
 const SITE_ORIGIN = "https://hunt.zalize.com";
 const FAST_FIRST_ROUND_COUNT = 8; // fast 模式首轮候选数（更快首字节）
+// R466：AI 搜索候选级核验队列并行度（每个候选 = tlds.length 个域名，每批内部再按 checkDomains 并发）；
+// 与改动前整轮一次 checkDomains(concurrency=6) 的上游压力量级相当
+const AI_CHECK_PARALLEL_CANDIDATES = 3;
+/** R471：触发规则降级的首轮错误类别；unknown 不降级（语义不明，保留原 error 事件） */
+const FALLBACK_ERROR_KINDS: ReadonlySet<AiErrorKind> = new Set<AiErrorKind>(["quota", "rate-limit", "upstream", "network"]);
 const DOMAIN_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62}))+$/;
 
 /** 累计核验计数（KV 非原子，允许少量误差） */
@@ -62,6 +121,18 @@ interface DayUsage {
   refine: number;
   /** 当日 AI 上游错误分类计数（R264，仅数字；旧数据无此字段） */
   aiErrors?: Partial<Record<AiErrorKind, number>>;
+  /** 当日规则降级次数（R471，按 fallback 事件 reason 计；quota-breaker = 熔断期内直接降级，未打上游） */
+  fallbacks?: Partial<Record<FallbackReason, number>>;
+  /** 分享写入读回校验失败后的重试次数（R305，生产观测；旧数据无此字段） */
+  shareWriteRetry?: number;
+  /** 分享写入最终失败（含换 id 重写仍失败）次数（R305） */
+  shareWriteFail?: number;
+  /** 当日 AI 主轮实际应答的 LLM 上游计数（R474：主/备；仅数字；旧数据无此字段） */
+  llmProvider?: Partial<Record<LlmProvider, number>>;
+  /** 当日注册商外链点击数，按注册商 id 聚合（R480；不含域名/IP；旧数据无此字段） */
+  outbound?: Partial<Record<RegistrarId, number>>;
+  /** 当日注册商外链点击数，按 TLD 聚合（仅 TLD_LIST 内的后缀，其余记 other） */
+  outboundByTld?: Record<string, number>;
 }
 
 async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: boolean, refine: boolean): Promise<void> {
@@ -77,6 +148,20 @@ async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: bool
   } catch { /* 统计失败不影响主流程 */ }
 }
 
+/** 当日注册商外链点击 +1（R480，仅计数；KV 非原子，允许少量误差） */
+async function bumpOutbound(kv: KVNamespace | undefined, registrar: RegistrarId, tld: string): Promise<void> {
+  if (!kv) return;
+  try {
+    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
+    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
+    cur.outbound = { ...cur.outbound, [registrar]: (cur.outbound?.[registrar] ?? 0) + 1 };
+    // 只按已知 TLD 分桶（含站内核验支持的 com.cn），其余归 other，避免 KV 记录被任意字符串撑大
+    const tldKey = tld === "com.cn" || (TLD_LIST as readonly string[]).includes(tld) ? tld : "other";
+    cur.outboundByTld = { ...cur.outboundByTld, [tldKey]: (cur.outboundByTld?.[tldKey] ?? 0) + 1 };
+    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
+  } catch { /* 统计失败不影响主流程 */ }
+}
+
 /** 当日 AI 上游错误分类计数 +1（R264，仅计数；KV 非原子，允许少量误差） */
 async function bumpAiError(kv: KVNamespace | undefined, kind: AiErrorKind): Promise<void> {
   if (!kv) return;
@@ -84,6 +169,59 @@ async function bumpAiError(kv: KVNamespace | undefined, kind: AiErrorKind): Prom
     const key = `usage:${new Date().toISOString().slice(0, 10)}`;
     const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
     cur.aiErrors = { ...cur.aiErrors, [kind]: (cur.aiErrors?.[kind] ?? 0) + 1 };
+    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
+  } catch { /* 统计失败不影响主流程 */ }
+}
+
+/** 当日 LLM 主轮应答上游计数 +1（R474，仅计数；KV 非原子，允许少量误差） */
+async function bumpLlmProvider(kv: KVNamespace | undefined, provider: LlmProvider): Promise<void> {
+  if (!kv) return;
+  try {
+    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
+    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
+    cur.llmProvider = { ...cur.llmProvider, [provider]: (cur.llmProvider?.[provider] ?? 0) + 1 };
+    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
+  } catch { /* 统计失败不影响主流程 */ }
+}
+
+/** 当日规则降级计数 +1（R471，仅计数；KV 非原子，允许少量误差） */
+async function bumpFallback(kv: KVNamespace | undefined, reason: FallbackReason): Promise<void> {
+  if (!kv) return;
+  try {
+    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
+    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
+    cur.fallbacks = { ...cur.fallbacks, [reason]: (cur.fallbacks?.[reason] ?? 0) + 1 };
+    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
+  } catch { /* 统计失败不影响主流程 */ }
+}
+
+/** 熔断标记：值为到期时间戳（ms），KV TTL 之外再校验一次时间，避免 TTL 精度/时钟差导致多放行 */
+async function llmBreakerUntil(kv: KVNamespace | undefined): Promise<number | null> {
+  if (!kv) return null;
+  try {
+    const raw = await kv.get(LLM_BREAKER_KEY);
+    const until = Number(raw);
+    return raw && Number.isFinite(until) && until > Date.now() ? until : null;
+  } catch {
+    return null;
+  }
+}
+
+async function tripLlmBreaker(kv: KVNamespace | undefined): Promise<void> {
+  if (!kv) return;
+  try {
+    await kv.put(LLM_BREAKER_KEY, String(Date.now() + LLM_BREAKER_TTL_S * 1000), { expirationTtl: LLM_BREAKER_TTL_S });
+  } catch { /* 熔断写失败退化为每请求各自撞上游（原行为） */ }
+}
+
+/** 分享写入重试/失败计数（R305，仅聚合数字；KV 非原子，允许少量误差） */
+async function bumpShareWrite(kv: KVNamespace | undefined, retries: number, failed: boolean): Promise<void> {
+  if (!kv || (retries <= 0 && !failed)) return;
+  try {
+    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
+    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
+    if (retries > 0) cur.shareWriteRetry = (cur.shareWriteRetry ?? 0) + retries;
+    if (failed) cur.shareWriteFail = (cur.shareWriteFail ?? 0) + 1;
     await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
   } catch { /* 统计失败不影响主流程 */ }
 }
@@ -110,6 +248,7 @@ async function checkDomainsCached(
   domains: string[],
   onResult: (r: CheckResult & { cached?: boolean }) => Promise<void>,
   refresh = false,
+  countStats = true,
 ): Promise<void> {
   let misses = domains;
   if (kv && !refresh) {
@@ -141,7 +280,33 @@ async function checkDomainsCached(
     }
     await onResult(r);
   }, 6, fetch, whoisFallback);
-  await bumpStats(kv, domains.length);
+  if (countStats) await bumpStats(kv, domains.length);
+}
+
+/** R466：有界并行队列——run() 立即返回，任务在最多 limit 个槽位内按入队顺序开始；drain() 等全部完成，首个失败原样抛出 */
+function boundedQueue(limit: number) {
+  let active = 0;
+  const waiting: (() => void)[] = [];
+  const inflight: Promise<void>[] = [];
+  const run = (task: () => Promise<void>) => {
+    const p = (async () => {
+      if (active >= limit) await new Promise<void>((r) => waiting.push(r)); // 槽位由释放方直接移交，不再计数
+      else active++;
+      try {
+        await task();
+      } finally {
+        const next = waiting.shift();
+        if (next) next();
+        else active--;
+      }
+    })();
+    inflight.push(p);
+    p.catch(() => undefined); // 失败留给 drain() 统一抛出，避免入队到 drain 之间被判为未处理拒绝
+  };
+  const drain = async () => {
+    await Promise.all(inflight);
+  };
+  return { run, drain };
 }
 
 interface ShareItem {
@@ -193,8 +358,12 @@ app.post("/api/ai-search", async (c) => {
   const fast = body.fast === true;
   const lang: "zh" | "en" = body.lang === "en" ? "en" : "zh";
   let description = (body.description ?? "").trim().slice(0, 500);
+  // R471：规则降级只从用户原始描述抽词（不含下方拼接的风格/长度偏好后缀）
+  const rawDescription = description;
   const style = (body.style ?? "").trim().slice(0, 50);
   const lengthPref = (body.lengthPref ?? "").trim().slice(0, 50);
+  // R465 补丁：语言判定必须基于拼接风格/长度偏好前的原始描述（后缀含中文会污染判定）
+  const descLooksEnglish = descriptionLooksEnglish(description);
   if (style) description += `\n命名风格偏好：${style}`;
   if (lengthPref) description += `\n名字长度偏好：${lengthPref}`;
   const tlds = (body.tlds ?? ["com", "cn"]).map((t) => t.trim().toLowerCase().replace(/^\./, "")).filter(Boolean);
@@ -241,52 +410,128 @@ app.post("/api/ai-search", async (c) => {
       let prevAvailableCount = 0;
       let lowYieldHintSent = false;
       const llmBase = c.env.LLM_API_BASE || undefined;
-      const understandingDone = generateUnderstanding(description, apiKey, lang, llmBase)
-        .then(async (u) => {
-          if (u) await emit({ type: "understanding", ...u });
-        })
-        .catch(() => undefined);
+      const llmModel = c.env.LLM_MODEL || undefined;
+      const llmThinking = c.env.LLM_THINKING || undefined;
+      // R474：备用上游（未配 LLM_FALLBACK_API_KEY 时为 undefined，请求层不启用 failover）
+      const llmFallback = resolveFallbackUpstream({
+        apiKey: c.env.LLM_FALLBACK_API_KEY,
+        baseUrl: c.env.LLM_FALLBACK_API_BASE,
+        model: c.env.LLM_FALLBACK_MODEL,
+        thinking: c.env.LLM_FALLBACK_THINKING,
+      });
+      // R471：熔断期内（quota 耗尽后 5 分钟）不打任何上游——理解与候选两路都跳过，直接进规则降级
+      const breakerUntil = await llmBreakerUntil(c.env.CACHE);
+      const breakerHit = breakerUntil !== null;
+      const understandingDone = breakerHit
+        ? Promise.resolve()
+        : generateUnderstanding(description, apiKey, lang, llmBase, llmModel, llmThinking, llmFallback)
+            .then(async (u) => {
+              if (u) await emit({ type: "understanding", ...u });
+            })
+            .catch(() => undefined);
       try {
         for (let round = 1; round <= MAX_ROUNDS && availableCount < target; round++) {
           await emit({ type: "round", round, availableCount, target, note: round === 1 ? "AI 正在构思名字…" : "可注册的还不够，AI 反思后继续想…" });
-          let candidates;
           // R238：防线统计元数据——按轮汇总各防线丢弃计数与补发/重试触发情况，
           // 随 proposed 事件返回（新增字段，旧前端忽略，不破坏现有结构）；只计数，不含被丢弃候选内容
           const guard = newGuardStats();
-          try {
-            candidates = await generateAiCandidates(description, apiKey, {
-              count: fast && round === 1 ? FAST_FIRST_ROUND_COUNT : 24,
-              // 跨轮去重：把已核验过的全部名字和被注册模式一起反馈给 refine 轮
-              feedback:
-                round === 1 && tried.size === 0
-                  ? undefined
-                  : { tried: [...tried], taken: takenLabels, takenThemes, disliked: disliked.length > 0 ? disliked : undefined },
-              round,
-              lang,
-              guard,
-              baseUrl: llmBase,
-            });
-          } catch (e) {
-            // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；
-            // detail 只含既有错误短码（llm-http-402 等），不含 key 与上游响应体
-            const errorKind = classifyAiError(e);
-            await emit({ type: "error", round, errorKind, detail: String(e), guard });
-            await bumpAiError(c.env.CACHE, errorKind);
+          // R466：首结果提速——LLM 流式返回，每解出一个通过防线的候选立即：跨轮去重 → 单项 proposed 事件
+          // （items 只含该候选，不带 guard）→ 进入核验队列逐域名下发 result；流结束后再发一条 items 为空的
+          // proposed 携带本轮 guard 汇总（前端对同轮多条 proposed 的 filtered 是累加语义，guard 只带一次即不重计）。
+          // 事件结构与字段均未变，旧前端无需适配
+          const meaningByLabel = new Map<string, string>();
+          const themeByLabel = new Map<string, AiTheme | undefined>();
+          const takenThisRound = new Set<string>();
+          let checkedDomains = 0;
+          const checks = boundedQueue(AI_CHECK_PARALLEL_CANDIDATES);
+          const onCandidate = async (x: AiCandidate) => {
+            if (tried.has(x.label)) return;
+            tried.add(x.label);
+            meaningByLabel.set(x.label, x.meaning);
+            themeByLabel.set(x.label, x.theme);
+            await emit({ type: "proposed", round, items: [x], tlds });
+            const domains = tlds.map((t) => `${x.label}.${t}`);
+            checkedDomains += domains.length;
+            checks.run(() =>
+              checkDomainsCached(
+                c.env.CACHE,
+                domains,
+                async (r) => {
+                  const label = r.domain.slice(0, r.domain.indexOf("."));
+                  if (r.status === "available") availableCount++;
+                  else if (r.status === "taken") takenThisRound.add(label);
+                  await emit({ ...r, round, meaning: meaningByLabel.get(label), theme: themeByLabel.get(label) });
+                },
+                false,
+                false,
+              ),
+            );
+          };
+          // R471：规则降级——熔断命中或首轮 LLM 失败（quota/rate-limit/upstream/network）时，用确定性规则候选走同一条
+          // onCandidate 流水（proposed → RDAP 核验 → result），事件结构与成功路径一致；只多一条 fallback 事件供前端挂横幅。
+          // 降级轮结束后不再继续反思轮（上游不可用）
+          const runFallback = async (reason: FallbackReason) => {
+            const rules = generateRuleCandidates(rawDescription, lang, guard, tried);
+            // 配额类降级附带熔断剩余秒数，前端据此提示「约 N 分钟后可重试 AI」；其他原因不带
+            const retryAfterS =
+              reason === "quota-breaker" && breakerUntil !== null
+                ? Math.max(1, Math.ceil((breakerUntil - Date.now()) / 1000))
+                : reason === "quota"
+                  ? LLM_BREAKER_TTL_S
+                  : undefined;
+            await emit({ type: "fallback", round, reason, count: rules.length, ...(retryAfterS !== undefined ? { retryAfterS } : {}) });
+            for (const x of rules) await onCandidate(x);
+          };
+          let fellBack: FallbackReason | null = null;
+          if (breakerHit) {
+            await runFallback("quota-breaker");
+            fellBack = "quota-breaker";
+          } else {
+            try {
+              await generateAiCandidates(description, apiKey, {
+                count: fast && round === 1 ? FAST_FIRST_ROUND_COUNT : 24,
+                // 跨轮去重：把已核验过的全部名字和被注册模式一起反馈给 refine 轮
+                feedback:
+                  round === 1 && tried.size === 0
+                    ? undefined
+                    : { tried: [...tried], taken: takenLabels, takenThemes, disliked: disliked.length > 0 ? disliked : undefined },
+                round,
+                lang,
+                guard,
+                baseUrl: llmBase,
+                model: llmModel,
+                thinking: llmThinking,
+                fallback: llmFallback,
+                descLooksEnglish,
+                onCandidate,
+              });
+            } catch (e) {
+              // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；
+              // detail 只含既有错误短码（llm-http-402 等），不含 key 与上游响应体
+              const errorKind = classifyAiError(e);
+              await bumpAiError(c.env.CACHE, errorKind);
+              // R471：quota 耗尽→写 5 分钟熔断（rate-limit 不写）；首轮失败→规则降级而非直接结束
+              if (errorKind === "quota") await tripLlmBreaker(c.env.CACHE);
+              if (round === 1 && FALLBACK_ERROR_KINDS.has(errorKind)) {
+                await runFallback(errorKind);
+                fellBack = errorKind;
+              } else {
+                await checks.drain().catch(() => undefined);
+                await emit({ type: "error", round, errorKind, detail: String(e), guard });
+                break;
+              }
+            }
+          }
+          // R474：本轮实际应答的 LLM 上游（primary/fallback）随汇总事件透出（新增尾部字段，旧前端忽略），并计入当日 usage
+          await emit({ type: "proposed", round, items: [], tlds, guard, provider: guard.provider });
+          if (guard.provider) await bumpLlmProvider(c.env.CACHE, guard.provider);
+          await checks.drain();
+          await bumpStats(c.env.CACHE, checkedDomains);
+          if (fellBack) {
+            // 核验排完后再计数：避开与 waitUntil(bumpUsage) 对同一 usage 键的读改写竞争（KV 非原子）
+            await bumpFallback(c.env.CACHE, fellBack);
             break;
           }
-          const fresh = candidates.filter((x) => !tried.has(x.label));
-          fresh.forEach((x) => tried.add(x.label));
-          const meaningByLabel = new Map(fresh.map((x) => [x.label, x.meaning]));
-          const themeByLabel = new Map(fresh.map((x) => [x.label, x.theme]));
-          const domains = fresh.flatMap((x) => tlds.map((t) => `${x.label}.${t}`));
-          await emit({ type: "proposed", round, items: fresh, tlds, guard });
-          const takenThisRound = new Set<string>();
-          await checkDomainsCached(c.env.CACHE, domains, async (r) => {
-            const label = r.domain.slice(0, r.domain.indexOf("."));
-            if (r.status === "available") availableCount++;
-            else if (r.status === "taken") takenThisRound.add(label);
-            await emit({ ...r, round, meaning: meaningByLabel.get(label), theme: themeByLabel.get(label) });
-          });
           takenLabels.push(...takenThisRound);
           for (const label of takenThisRound) {
             const theme = themeByLabel.get(label);
@@ -579,20 +824,22 @@ app.post("/api/share", async (c) => {
   if (rawItems.length > MAX_SHARE_ITEMS) return c.json({ error: "too many items" }, 400);
   const items = rawItems.map(sanitizeShareItem).filter((x): x is ShareItem => x !== null);
   if (items.length === 0) return c.json({ error: "items invalid" }, 400);
-  const id = nanoid(10);
   // revoke token 仅返回给创建者，用于后续撤销；不随 GET 暴露
   const revokeToken = nanoid(24);
-  // KV put 偶发静默丢失（同 colo 立即读也取不到），写后读回校验，失败重写
-  const key = `share:${id}`;
   const payload = JSON.stringify({ items, createdAt: Date.now(), revokeToken });
-  let written = false;
-  for (let attempt = 0; attempt < 3 && !written; attempt++) {
-    await kv.put(key, payload, { expirationTtl: SHARE_TTL });
-    written = (await kv.get(key)) !== null;
+  // KV put 偶发静默丢失：写后读回校验 + 退避重试 + 换 id 重写（详见 share-write.ts）
+  const result = await putShareVerified(kv, () => nanoid(10), () => payload, SHARE_TTL);
+  c.executionCtx.waitUntil(bumpShareWrite(kv, result.retries, !result.ok));
+  if (!result.ok) {
+    // 结构化失败日志（wrangler tail 排查用）：总尝试次数、用过的 id 数、KV 抛错消息摘要
+    console.error(
+      "share_write_failed",
+      JSON.stringify({ attempts: result.retries, ids: SHARE_WRITE_MAX_IDS, kvErrors: result.errors }),
+    );
+    return c.json({ error: "share_write_failed" }, 503);
   }
-  if (!written) return c.json({ error: "share_write_failed" }, 503);
   const origin = new URL(c.req.url).origin;
-  return c.json({ id, url: `${origin}/s/${id}`, revokeToken });
+  return c.json({ id: result.id, url: `${origin}/s/${result.id}`, revokeToken });
 });
 
 interface ShareSnapshotStored {
@@ -688,71 +935,8 @@ app.post("/api/check", async (c) => {
   return new Response(readable, { headers: { "content-type": "application/x-ndjson; charset=utf-8" } });
 });
 
-interface PorkbunPricing {
-  pricing?: Record<string, { registration?: string; renewal?: string }>;
-}
-
-interface PriceEntry {
-  registration: number;
-  renewal: number;
-  /** 静态参考价（无实时报价时回退，仅 MCP tld_prices 补齐时使用） */
-  approx?: true;
-}
-
-/** 上游失败/超时时回退不带版本的 stale key，响应标注 stale:true（TLD 数可少于当前，缺的走前端静态参考价） */
-async function loadStalePayload(kv: KVNamespace | undefined): Promise<string | null> {
-  if (!kv) return null;
-  try {
-    const stale = await kv.get(PRICES_STALE_KEY, "text");
-    if (!stale) return null;
-    const parsed = JSON.parse(stale) as Record<string, unknown>;
-    return JSON.stringify({ ...parsed, stale: true });
-  } catch {
-    return null;
-  }
-}
-
-/** 实时价格负载（JSON 字符串）：Porkbun 公开价格 API（美元），KV 缓存 24h；上游不可达时回退 stale key */
-async function loadPricesPayload(kv: KVNamespace | undefined): Promise<string | null> {
-  if (kv) {
-    try {
-      const cached = await kv.get(PRICES_KEY, "text");
-      if (cached) return cached;
-    } catch { /* 缓存读取失败则实时拉取 */ }
-  }
-  let data: PorkbunPricing;
-  try {
-    const res = await fetch("https://api.porkbun.com/api/json/v3/pricing/get", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: "{}",
-      signal: AbortSignal.timeout(PRICES_FETCH_TIMEOUT_MS),
-    });
-    if (!res.ok) return loadStalePayload(kv);
-    data = (await res.json()) as PorkbunPricing;
-  } catch {
-    return loadStalePayload(kv);
-  }
-  const prices: Record<string, PriceEntry> = {};
-  for (const tld of TLD_LIST) {
-    const p = data.pricing?.[tld];
-    const registration = Number(p?.registration);
-    const renewal = Number(p?.renewal);
-    if (Number.isFinite(registration) && Number.isFinite(renewal)) prices[tld] = { registration, renewal };
-  }
-  if (Object.keys(prices).length === 0) return loadStalePayload(kv);
-  const payload = JSON.stringify({ prices, currency: "USD", usdToCny: USD_TO_CNY, fetchedAt: Date.now(), tldCount: Object.keys(prices).length });
-  if (kv) {
-    try {
-      await kv.put(PRICES_KEY, payload, { expirationTtl: PRICES_TTL });
-      await kv.put(PRICES_STALE_KEY, payload, { expirationTtl: PRICES_STALE_TTL });
-    } catch { /* 缓存写入失败不影响返回 */ }
-  }
-  return payload;
-}
-
 app.get("/api/prices", async (c) => {
-  const payload = await loadPricesPayload(c.env.CACHE);
+  const payload = await loadPricesPayload(c.env.CACHE, PRICES_CACHE_CFG);
   // 彻底无数据也返回 200 + 空 prices（前端全部走 ≈ 静态参考价），不再 502
   if (!payload) {
     return new Response(JSON.stringify({ prices: {}, currency: "USD", usdToCny: USD_TO_CNY, fetchedAt: null, stale: true }), {
@@ -866,7 +1050,7 @@ app.post("/mcp", async (c) => {
   const args = (params?.arguments ?? {}) as Record<string, unknown>;
 
   if (toolName === "tld_prices") {
-    const payload = await loadPricesPayload(c.env.CACHE);
+    const payload = await loadPricesPayload(c.env.CACHE, PRICES_CACHE_CFG);
     if (!payload) return mcpText(id, "pricing upstream unavailable, try again later", true);
     // Porkbun 无报价的后缀（如 cn/so）用静态参考价补齐，带 approx 标记，保证覆盖全部追踪后缀
     const parsed = JSON.parse(payload) as { prices: Record<string, PriceEntry>; stale?: boolean } & Record<string, unknown>;
@@ -939,7 +1123,7 @@ app.post("/mcp", async (c) => {
     // 首年注册价（美元）：实时价优先，静态参考价兜底（与 tld_prices 同口径）
     const priceByTld: Record<string, number> = {};
     try {
-      const payload = await loadPricesPayload(c.env.CACHE);
+      const payload = await loadPricesPayload(c.env.CACHE, PRICES_CACHE_CFG);
       if (payload) {
         const parsed = JSON.parse(payload) as { prices: Record<string, PriceEntry> };
         for (const t of tlds) if (parsed.prices[t]) priceByTld[t] = parsed.prices[t].registration;
@@ -1023,30 +1207,69 @@ app.get("/api/stats", async (c) => {
   return c.json({ totalChecked }, 200, { "cache-control": "public, max-age=60" });
 });
 
+// R480：注册商公开返佣配置（wrangler var REGISTRAR_AFFILIATE_JSON；非法/缺省 → {}，前端即纯搜索链接）
+app.get("/api/registrars", (c) => {
+  const affiliate = parseAffiliateJson(c.env.REGISTRAR_AFFILIATE_JSON);
+  // 5 分钟浏览器缓存：改 wrangler var 重新部署后返佣开关最多滞后 5 分钟，同时避免每次导航都打 Worker
+  return c.json({ affiliate }, 200, { "cache-control": "public, max-age=300" });
+});
+
+const CLICK_TLD_RE = /^[a-z0-9-]{1,24}(\.[a-z0-9-]{1,24})?$/;
+
+// R480：注册商外链点击计数。请求体 {registrar, tld}；只接受已知注册商 id 与形如 com / com.cn 的 TLD；
+// 不记录域名、IP 或任何个人信息，仅按日聚合到 usage:YYYY-MM-DD.outbound / outboundByTld
+app.post("/api/click", async (c) => {
+  let body: { registrar?: unknown; tld?: unknown } | null = null;
+  try {
+    body = (await c.req.json()) as { registrar?: unknown; tld?: unknown };
+  } catch {
+    return c.json({ error: "invalid json" }, 400);
+  }
+  const registrar = body?.registrar;
+  const tld = typeof body?.tld === "string" ? body.tld.toLowerCase().replace(/^\./, "") : "";
+  if (!isRegistrarId(registrar) || !CLICK_TLD_RE.test(tld)) return c.json({ error: "invalid click" }, 400);
+  c.executionCtx.waitUntil(bumpOutbound(c.env.CACHE, registrar, tld));
+  return c.body(null, 204, { "cache-control": "no-store" });
+});
+
 // 运营数据：最近 N 天的聚合使用量（仅计数，无任何用户输入/IP）
 app.get("/api/usage", async (c) => {
   const days = Math.min(Math.max(Number(c.req.query("days") ?? "14"), 1), 45);
   const kv = c.env.CACHE;
-  const out: Record<string, DayUsage> = {};
+  const out: Record<string, DayUsage & Partial<DayPageviews>> = {};
   if (kv) {
     const dates = Array.from({ length: days }, (_, i) => new Date(Date.now() - i * 86400_000).toISOString().slice(0, 10));
     await Promise.all(
       dates.map(async (d) => {
-        try {
-          const u = await kv.get<DayUsage>(`usage:${d}`, "json");
-          if (u) out[d] = u;
-        } catch { /* 单天读失败忽略 */ }
+        // usage:*（搜索漏斗）与 pv:*（HTML 文档计数，R481）分键存储、此处合并输出
+        const [u, pv] = await Promise.all([
+          kv.get<DayUsage>(`usage:${d}`, "json").catch(() => null),
+          kv.get<DayPageviews>(pvKey(d), "json").catch(() => null),
+        ]);
+        if (u || pv) out[d] = { ...(u ?? { searches: 0, byTld: {}, fast: 0, refine: 0 }), ...(pv ?? {}) };
       }),
     );
   }
   let cronLast: number | null = null;
   let indexnowLast: number | null = null;
+  let indexnowLastError: IndexNowError | null = null;
+  let pricesLastOk: number | null = null;
+  let pricesLastFail: number | null = null;
   try {
-    const [cl, il] = await Promise.all([kv?.get("cron:last"), kv?.get("indexnow:last")]);
+    const [cl, il, ie, po, pf] = await Promise.all([
+      kv?.get("cron:last"),
+      kv?.get(INDEXNOW_LAST_KEY),
+      kv?.get<IndexNowError>(INDEXNOW_LAST_ERROR_KEY, "json"),
+      kv?.get(PRICES_LAST_OK_KEY),
+      kv?.get(PRICES_LAST_FAIL_KEY),
+    ]);
     cronLast = cl ? Number(cl) : null;
     indexnowLast = il ? Number(il) : null;
+    indexnowLastError = ie ?? null;
+    pricesLastOk = po ? Number(po) : null;
+    pricesLastFail = pf ? Number(pf) : null;
   } catch { /* 读失败返回 null */ }
-  return c.json({ days: out, cronLast, indexnowLast }, 200, { "cache-control": "public, max-age=300" });
+  return c.json({ days: out, cronLast, indexnowLast, indexnowLastError, pricesLastOk, pricesLastFail }, 200, { "cache-control": "public, max-age=300" });
 });
 
 // SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）
@@ -1120,7 +1343,7 @@ app.get("/advanced", async (c) => {
     );
   html = injectHreflang(html, "/advanced", c.req.query("lang") === "en");
   html = setHtmlLang(html, lang);
-  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx");
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx", "full");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -1166,7 +1389,7 @@ app.get("/api/og/hub/:kind", (c) => {
 // 产品定位页分享图（须在 /api/og/:id 之前注册）
 app.get("/api/og/why", (c) => {
   const lang = c.req.query("lang") === "en" ? "en" : "zh";
-  const title = lang === "en" ? "The good names are taken? Hunt differently." : "好域名都被占了？换个找法";
+  const title = lang === "en" ? "A domain hunter for Chinese founders" : "中文创业者的域名猎手";
   return new Response(pageOgSvg(lang === "en" ? "Why us" : "产品定位", title, lang), {
     headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
   });
@@ -1175,7 +1398,7 @@ app.get("/api/og/why", (c) => {
 // 首页分享图（静态 og.png 为中文，英文首页用动态 SVG，平台不支持 SVG 时回退 og.png；须在 /api/og/:id 之前注册）
 app.get("/api/og/home", (c) => {
   const lang = c.req.query("lang") === "en" ? "en" : "zh";
-  const title = lang === "en" ? "Describe the meaning — hunt truly available domains" : "说出寓意，猎取真正可注册的好域名";
+  const title = lang === "en" ? "Bilingual naming, verified .cn / .com availability" : "用中文说寓意，猎到真正可注册的 .cn / .com 好域名";
   return new Response(pageOgSvg("DomainHunter", title, lang), {
     headers: { "content-type": "image/svg+xml; charset=utf-8", "cache-control": "public, max-age=86400" },
   });
@@ -1262,11 +1485,11 @@ function pageOgSvg(kicker: string, title: string, lang: "zh" | "en"): string {
 </svg>`;
 }
 
-/** hreflang alternate 标签：zh-CN / en / x-default，用 ?lang= 区分语言版本 */
+/** hreflang alternate 标签：zh / en / x-default（zh 为默认，URL 与 canonical 规则一致：zh/x-default 指裸路径，en 指 ?lang=en） */
 function hreflangTags(path: string): string {
   const base = `${SITE_ORIGIN}${path}`;
   return [
-    `<link rel="alternate" hreflang="zh-CN" href="${base}?lang=zh" />`,
+    `<link rel="alternate" hreflang="zh" href="${base}" />`,
     `<link rel="alternate" hreflang="en" href="${base}?lang=en" />`,
     `<link rel="alternate" hreflang="x-default" href="${base}" />`,
   ].join("\n    ");
@@ -1277,6 +1500,13 @@ const injectHreflang = (html: string, path: string, explicitEn = false) => {
   if (explicitEn) html = html.replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}${path}?lang=en" />`);
   return html.replace(/(<link rel="canonical"[^>]*\/>)/, `$1\n    ${hreflangTags(path)}`);
 };
+
+/** 内容页数据随 HTML 注入（window.__DH_CONTENT__）：客户端不再下载全量内容 chunk（见 content/injected.ts） */
+function injectContentData(html: string, payload: InjectedContent | null): string {
+  if (!payload) return html;
+  const json = JSON.stringify(payload).replace(/</g, "\\u003c");
+  return html.replace("</head>", `<script>window.__DH_CONTENT__=${json}</script></head>`);
+}
 
 /** SEO 页 SSR 首屏骨架：把 kicker/标题/首段直接渲染进 #root，LCP 文本不再等 JS 水合（React 挂载后整体替换） */
 function injectSsrSkeleton(html: string, kicker: string, title: string, blocks: string[], kickerHtml?: string, mainWidth = "max-w-3xl"): string {
@@ -1338,10 +1568,13 @@ async function assetSize(file: string, assets: Fetcher, origin: string): Promise
 
 /** 超过该体积的共享数据 chunk（如全量 TLD/行业指南文案）不做 modulepreload：
  *  正文已全文 SSR，这些数据只在水合时才需要；提前抢占带宽会显著推迟移动端 LCP。 */
-const MODULEPRELOAD_MAX_BYTES = 100_000;
+const MODULEPRELOAD_MAX_BYTES = 110_000;
 
-/** SEO 页 SSR 注入懒加载路由 chunk 的 modulepreload，让页面 JS 与主 bundle 并行下载（降低内容 LCP） */
-async function injectModulepreload(html: string, assets: Fetcher, origin: string, entry: string): Promise<string> {
+/** SSR 注入懒加载路由 chunk 的 modulepreload，让页面 JS 与主 bundle 并行下载。
+ *  depth="entry"（内容页默认）只预载路由入口 chunk：正文已全文 SSR，水合非关键路径，
+ *  预载整棵 import 树（十几个小 chunk）会在移动端与 HTML/字体抢带宽、推迟 FCP/LCP；
+ *  depth="full"（首页/advanced 等应用页）预载整棵树，首次渲染依赖这些 chunk。 */
+async function injectModulepreload(html: string, assets: Fetcher, origin: string, entry: string, depth: "entry" | "full" = "entry"): Promise<string> {
   try {
     if (!viteManifest) {
       const res = await assets.fetch(new Request(new URL("/manifest.json", origin)));
@@ -1356,8 +1589,9 @@ async function injectModulepreload(html: string, assets: Fetcher, origin: string
       for (const dep of chunk.imports ?? []) walk(dep);
     };
     walk(entry);
-    const sizes = await Promise.all(files.map((f) => assetSize(f, assets, origin)));
-    const preloadable = files.filter((_, i) => sizes[i] <= MODULEPRELOAD_MAX_BYTES);
+    const candidates = depth === "entry" ? files.slice(0, 1) : files;
+    const sizes = await Promise.all(candidates.map((f) => assetSize(f, assets, origin)));
+    const preloadable = candidates.filter((_, i) => sizes[i] <= MODULEPRELOAD_MAX_BYTES);
     if (preloadable.length === 0) return html;
     const links = preloadable.map((f) => `<link rel="modulepreload" href="/${f}" />`).join("\n    ");
     return html.replace("</head>", `${links}\n  </head>`);
@@ -1381,25 +1615,7 @@ async function notFoundShell(res: Response): Promise<Response> {
 }
 
 // 着陆页：SSR 注入 hreflang alternate
-// 首页 FAQPage 结构化数据（与首页 FAQ 区块内容一致，供搜索引擎富摘要；英文文案与 i18n 词典逐字一致）
-const HOME_FAQ = {
-  zh: [
-    { q: "DomainHunter 是什么？", a: "用一句自然语言描述你想要的域名寓意与风格，AI 多轮构思候选并实时核验，直接给出一批真正可注册的好名字。" },
-    { q: "核验结果准确吗？", a: "每个域名经 DNS + RDAP + WHOIS 三级核验，可注册状态来自注册局权威数据；注册前建议在注册商页面再确认一次。" },
-    { q: "使用收费吗？", a: "完全免费。AI 搜索有每小时次数限制；即输即查、更多后缀与前后缀变体核验不限量、不消耗 AI 次数。" },
-    { q: "会自动帮我注册域名吗？", a: "不会。我们只提供核验结果与注册商跳转链接（如 Porkbun），注册和付费在注册商完成。" },
-    { q: "支持哪些后缀？", a: "AI 搜索支持任意 TLD；即输即查默认覆盖 com/cn/io/ai/app/dev/co/net/me，点「查更多后缀」再覆盖 org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu/page/bio/ink/moe/lol/uk/fm/one/cool/red/today/best/wtf/pizza/bar/cafe/money/gold/band/cash/city/estate/expert/farm/blue/pink/black/ninja/rocks/pet/academy/school/coach/care/doctor/restaurant/boutique/clinic/dental/fitness/photos/gallery/salon/yoga/coffee/wine/kitchen/garden/photography/events/solutions/services/consulting/software/marketing/systems/ventures/capital/guru/tips/directory/exchange/institute/international/partners/support/plus/house/market/watch/style/show/website/technology/community/education/training/love/beauty/fashion/work/sale/help/wedding/law/tax/menu/bike/toys/shoes。" },
-    { q: "我的搜索会被保存吗？", a: "不保存输入内容和 IP，只记录匿名的聚合次数统计；收藏清单保存在你自己的浏览器本地。" },
-  ],
-  en: [
-    { q: "What is DomainHunter?", a: "Describe the meaning and style you want in one sentence — AI brainstorms candidates over multiple rounds, verifies each one live, and hands you a batch of genuinely registrable names." },
-    { q: "How accurate are the availability checks?", a: "Every domain goes through DNS + RDAP + WHOIS checks against authoritative registry data. We still recommend a final confirmation on the registrar's page before buying." },
-    { q: "Is it free?", a: "Completely free. AI search has an hourly rate limit; instant checks, extra-TLD checks, and prefix/suffix variants are unlimited and never use AI quota." },
-    { q: "Will it register domains for me automatically?", a: "No. We only provide verification results and registrar links (e.g. Porkbun) — registration and payment happen at the registrar." },
-    { q: "Which TLDs are supported?", a: "AI search supports any TLD. Instant check covers com/cn/io/ai/app/dev/co/net/me by default, plus org/xyz/info/cc/tv/tech/online/store/site/top/shop/cloud/pro/vip/club/link/live/space/fun/art/design/studio/sh/gg/so/us/in/world/life/agency/games/email/network/digital/media/group/center/works/zone/news/tools/run/codes/company/wiki/blog/team/chat/finance/global/host/social/video/fund/land/click/icu/page/bio/ink/moe/lol/uk/fm/one/cool/red/today/best/wtf/pizza/bar/cafe/money/gold/band/cash/city/estate/expert/farm/blue/pink/black/ninja/rocks/pet/academy/school/coach/care/doctor/restaurant/boutique/clinic/dental/fitness/photos/gallery/salon/yoga/coffee/wine/kitchen/garden/photography/events/solutions/services/consulting/software/marketing/systems/ventures/capital/guru/tips/directory/exchange/institute/international/partners/support/plus/house/market/watch/style/show/website/technology/community/education/training/love/beauty/fashion/work/sale/help/wedding/law/tax/menu/bike/toys/shoes via the “more TLDs” button." },
-    { q: "Do you store my searches?", a: "We never store your input or IP — only anonymous aggregate counters. Your shortlist lives in your own browser's local storage." },
-  ],
-} as const;
+// 首页 FAQPage 结构化数据：与首页 FAQ 区块同源（content/home-copy.ts），供搜索引擎富摘要
 
 const homeFaqJsonld = (lang: "zh" | "en") =>
   JSON.stringify({
@@ -1483,33 +1699,28 @@ app.get("/api/og/vs/:slug", (c) => {
   });
 });
 
-// 首页英文 SSR meta（与 i18n 词典 meta.title 一致）
-const HOME_META_EN = {
-  title: "DomainHunter — AI Domain Hunter | Describe the meaning, hunt truly available names",
-  desc: "Describe your idea in one sentence — an AI agent brainstorms names, verifies availability live via RDAP+DNS, then reflects and hunts again until there are enough names you can register right now. Free, open source, no login.",
-  ogTitle: "DomainHunter — AI Domain Hunter",
-  ogDesc: "Describe the meaning — an AI agent reflects over multiple rounds and verifies live. Only truly registrable domains.",
-};
 
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
   const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
   let html = await res.text();
+  const m = HOME_META[lang];
+  html = html
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(m.title)}</title>`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${escapeHtml(m.desc)}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${escapeHtml(m.ogTitle)}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${escapeHtml(m.ogDesc)}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${escapeHtml(m.ogTitle)}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${escapeHtml(m.ogDesc)}" />`);
   if (lang === "en") {
-    const m = HOME_META_EN;
-    html = html
-      .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(m.title)}</title>`)
-      .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${escapeHtml(m.desc)}" />`)
-      .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${escapeHtml(m.ogTitle)}" />`)
-      .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${escapeHtml(m.ogDesc)}" />`)
-      .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${escapeHtml(m.ogTitle)}" />`)
-      .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${escapeHtml(m.ogDesc)}" />`)
-      .replace(
-        /<meta property="og:image" content="[^"]*" \/>/,
-        `<meta property="og:image" content="${SITE_ORIGIN}/api/og/home?lang=en" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
-      );
+    html = html.replace(
+      /<meta property="og:image" content="[^"]*" \/>/,
+      `<meta property="og:image" content="${SITE_ORIGIN}/api/og/home?lang=en" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
+    );
   }
+  html = homeHeroSkeleton(html, lang);
   html = injectHreflang(html, "/", c.req.query("lang") === "en").replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
+  html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/home-page.tsx", "full");
   html = setHtmlLang(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -1554,6 +1765,7 @@ app.get("/tld/:tld", async (c) => {
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/tld-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
+  html = injectContentData(html, buildTldContent(tld));
   html = injectSsrSkeleton(html, `.${tld}`, loc.title, tldContentBlocks(tld, guide, lang), hubCrumbKicker("tld", `.${tld}`, lang));
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -1598,6 +1810,7 @@ app.get("/guide/:slug", async (c) => {
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/guide-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
+  html = injectContentData(html, buildGuideContent(slug));
   html = injectSsrSkeleton(html, guide[lang].label, loc.title, guideContentBlocks(guide, lang), hubCrumbKicker("guide", guide[lang].label, lang));
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -1642,6 +1855,7 @@ app.get("/vs/:slug", async (c) => {
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/compare-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
+  html = injectContentData(html, buildVsContent(slug));
   html = injectSsrSkeleton(html, `.${cmp.a} vs .${cmp.b}`, loc.title, compareContentBlocks(cmp, lang), hubCrumbKicker("vs", `.${cmp.a} vs .${cmp.b}`, lang), "max-w-4xl");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
@@ -1760,12 +1974,12 @@ app.get("/prices", async (c) => {
 // 产品定位页（SPA 路由 + SSR meta）
 const WHY_META = {
   zh: {
-    title: "为什么选 DomainHunter：好域名都被占了，换个找法",
-    desc: `传统域名查询只显示相似名，AI 起名工具不核验可注册。DomainHunter 用 Agent 多轮反思：四路线构思→${TLD_LIST.length} TLD 实时核验→跨轮去重反思再猎，配比价、到期监控、收藏分享、CSV 导出与 MCP 工具链。免费开源。`,
+    title: "为什么选 DomainHunter：中文创业者的域名猎手",
+    desc: `面向中文创业者、独立开发者与出海团队：用中文说寓意，AI 沿拼音/英文/混搭四路线构思，${TLD_LIST.length} TLD 实时核验（.cn / .com.cn 直查 CNNIC），附到期日与价格，支持批量核验、CSV 导出与到期监控。英文通用起名不是我们的主场，对比表如实标出。免费开源。`,
   },
   en: {
-    title: "Why DomainHunter: all the good names are taken — hunt differently",
-    desc: `Classic domain search only shows look-alikes; AI name generators never verify availability. DomainHunter runs an agent loop — four naming routes, live checks across ${TLD_LIST.length} TLDs, cross-round dedup and reflection — plus price comparison, expiry monitoring, shortlist sharing, CSV export and an MCP server. Free and open source.`,
+    title: "Why DomainHunter: a domain hunter for Chinese founders",
+    desc: `Built for Chinese founders, indie developers and teams going global: describe the meaning in Chinese, AI brainstorms pinyin, English and blend candidates along four routes, verified live across ${TLD_LIST.length} TLDs (.cn / .com.cn against CNNIC), with expiry dates, prices, bulk checks, CSV export and expiry monitoring. Generic English naming isn't our home turf — the comparison table says so. Free and open source.`,
   },
 };
 
@@ -1800,7 +2014,7 @@ app.get("/why", async (c) => {
 });
 
 // 内容最后更新日期（sitemap <lastmod>）：每次内容页增减/改写时更新
-const CONTENT_LASTMOD = "2026-08-09";
+const CONTENT_LASTMOD = "2026-08-10";
 
 const sitemapPaths = () => ["/", "/prices", "/why", "/mcp", "/advanced", "/tld", "/guide", "/vs", ...TLD_LIST.map((t) => `/tld/${t}`), ...GUIDE_LIST.map((s) => `/guide/${s}`), ...COMPARE_LIST.map((s) => `/vs/${s}`)];
 
@@ -1808,7 +2022,7 @@ app.get("/sitemap.xml", (c) => {
   const paths = sitemapPaths();
   const alt = (p: string) =>
     [
-      `    <xhtml:link rel="alternate" hreflang="zh-CN" href="${SITE_ORIGIN}${p}?lang=zh" />`,
+      `    <xhtml:link rel="alternate" hreflang="zh" href="${SITE_ORIGIN}${p}" />`,
       `    <xhtml:link rel="alternate" hreflang="en" href="${SITE_ORIGIN}${p}?lang=en" />`,
       `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_ORIGIN}${p}" />`,
     ].join("\n");
@@ -1829,7 +2043,7 @@ app.get("/llms.txt", (c) => {
     "## Core pages",
     line("/", "AI domain search (homepage, instant availability quick-check included)"),
     line("/prices", `Domain price overview: registration vs renewal for ${TLD_LIST.length} TLDs, live prices`),
-    line("/why", "Why DomainHunter: agent loop that reflects over rounds and only surfaces registrable names"),
+    line("/why", "Why DomainHunter: a domain hunter for Chinese founders — Chinese meaning in, pinyin/English/blend candidates verified live for .cn / .com, with expiry dates and prices"),
     line("/advanced", "Bulk domain check: paste up to 200 names and stream live availability"),
     "",
     "## TLD guides",
@@ -1885,26 +2099,47 @@ app.all("*", async (c) => {
   return notFoundShell(shell);
 });
 
-// IndexNow：向 Bing/Yandex 等搜索引擎主动推送全站 URL（key 按协议公开，对应 /<key>.txt 静态文件）
+// IndexNow：向 Bing/Yandex 等搜索引擎主动推送全站 URL（key 按协议公开，对应 public/<key>.txt 静态文件）
+// 状态键：indexnow:last = 最近一次成功（200/202）时间；indexnow:lastAttempt = 最近一次尝试时间（成功失败都写，
+// 用作 6h 冷却防止失败后每次 cron 都重发）；indexnow:lastError = 最近一次失败详情（成功后清除）。
+// 分批/状态码语义见 indexnow.ts；sitemap 当前 ~1.3k URL，远低于单次 10000 上限。
 const INDEXNOW_KEY = "024aa6c6f88245bbacdac2f60a94e333";
 const INDEXNOW_INTERVAL_MS = 24 * 3600 * 1000;
+const INDEXNOW_RETRY_MS = 6 * 3600 * 1000;
+const INDEXNOW_LAST_KEY = "indexnow:last";
+const INDEXNOW_LAST_ATTEMPT_KEY = "indexnow:lastAttempt";
+const INDEXNOW_LAST_ERROR_KEY = "indexnow:lastError";
+interface IndexNowError {
+  at: number;
+  status: number;
+  message: string;
+  submitted: number;
+}
 
 async function pingIndexNow(env: Bindings): Promise<void> {
   if (!env.CACHE) return;
-  const last = await env.CACHE.get("indexnow:last");
-  if (last && Date.now() - Number(last) < INDEXNOW_INTERVAL_MS) return;
-  await env.CACHE.put("indexnow:last", String(Date.now()));
+  const kv = env.CACHE;
+  const now = Date.now();
+  const [last, lastAttempt] = await Promise.all([kv.get(INDEXNOW_LAST_KEY), kv.get(INDEXNOW_LAST_ATTEMPT_KEY)]);
+  if (last && now - Number(last) < INDEXNOW_INTERVAL_MS) return;
+  if (lastAttempt && now - Number(lastAttempt) < INDEXNOW_RETRY_MS) return;
+  await kv.put(INDEXNOW_LAST_ATTEMPT_KEY, String(now));
   const host = SITE_ORIGIN.replace(/^https?:\/\//, "");
-  await fetch("https://api.indexnow.org/indexnow", {
-    method: "POST",
-    headers: { "content-type": "application/json; charset=utf-8" },
-    body: JSON.stringify({
-      host,
-      key: INDEXNOW_KEY,
-      keyLocation: `${SITE_ORIGIN}/${INDEXNOW_KEY}.txt`,
-      urlList: sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`),
-    }),
+  const results = await submitIndexNow({
+    host,
+    key: INDEXNOW_KEY,
+    keyLocation: `${SITE_ORIGIN}/${INDEXNOW_KEY}.txt`,
+    urls: sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`),
+    endpoint: INDEXNOW_ENDPOINT,
   });
+  const summary = summarizeIndexNow(results);
+  if (summary.ok) {
+    await Promise.all([kv.put(INDEXNOW_LAST_KEY, String(now)), kv.delete(INDEXNOW_LAST_ERROR_KEY)]);
+    return;
+  }
+  const err: IndexNowError = { at: now, status: summary.status, message: summary.message, submitted: summary.submitted };
+  console.error("indexnow failed", JSON.stringify(err));
+  await kv.put(INDEXNOW_LAST_ERROR_KEY, JSON.stringify(err));
 }
 
 export default {
@@ -1914,5 +2149,6 @@ export default {
     ctx.waitUntil(env.CACHE?.put("cron:last", String(Date.now())) ?? Promise.resolve());
     ctx.waitUntil(runMonitorSweep(env));
     ctx.waitUntil(pingIndexNow(env));
+    ctx.waitUntil(refreshPricesIfStale(env.CACHE, PRICES_CACHE_CFG));
   },
 };

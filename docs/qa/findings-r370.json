@@ -1,0 +1,858 @@
+{
+  "sitemap_loc_samples": [
+    862,
+    862,
+    862
+  ],
+  "sitemap_dup_locs": 0,
+  "sitemap_cat_counts": {
+    "tld": 276,
+    "guide": 272,
+    "vs": 306,
+    "core": 8
+  },
+  "sitemap_vs_counts_json": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "llms_counts": {
+    "tld": 276,
+    "guide": 272,
+    "vs": 306
+  },
+  "llms_vs_sitemap_equal": {
+    "tld": true,
+    "guide": true,
+    "vs": true
+  },
+  "robots": {
+    "status": 200,
+    "has_sitemap": true,
+    "gptbot": true
+  },
+  "seo_new_pages": {
+    "/guide/taproom": {
+      "status": 200,
+      "title": "精酿酒馆与打酒站怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/taproom",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 116832
+    },
+    "/guide/taproom?lang=en": {
+      "status": 200,
+      "title": "How to Name a Taproom or Craft Beer Bar: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/taproom?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 118656
+    },
+    "/guide/lawfirm": {
+      "status": 200,
+      "title": "律师事务所怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/lawfirm",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 116741
+    },
+    "/guide/lawfirm?lang=en": {
+      "status": 200,
+      "title": "How to Name a Law Firm: Strategies, Cases &amp; Domains | DomainHunter",
+      "canonical": "https://hunt.zalize.com/guide/lawfirm?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 119312
+    },
+    "/tld/clothing": {
+      "status": 200,
+      "title": ".clothing 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/clothing",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 136191
+    },
+    "/tld/clothing?lang=en": {
+      "status": 200,
+      "title": ".clothing Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/clothing?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 136883
+    },
+    "/tld/party": {
+      "status": 200,
+      "title": ".party 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/party",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 136223
+    },
+    "/tld/party?lang=en": {
+      "status": 200,
+      "title": ".party Domain Guide: Who It's For, Pricing &amp; Naming Tips | DomainHunter",
+      "canonical": "https://hunt.zalize.com/tld/party?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 136943
+    },
+    "/vs/beer-vs-pub": {
+      "status": 200,
+      "title": ".beer 和 .pub 怎么选：品类直给与场所双关 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/beer-vs-pub",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 125176
+    },
+    "/vs/beer-vs-pub?lang=en": {
+      "status": 200,
+      "title": ".beer vs .pub: The Category or the Venue | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/beer-vs-pub?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 125235
+    },
+    "/vs/attorney-vs-lawyer": {
+      "status": 200,
+      "title": ".attorney 和 .lawyer 怎么选：美式正式与全球通称 | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/attorney-vs-lawyer",
+      "html_lang": "zh-CN",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 124877
+    },
+    "/vs/attorney-vs-lawyer?lang=en": {
+      "status": 200,
+      "title": ".attorney vs .lawyer: The Formal American or the Global Word | DomainHunter",
+      "canonical": "https://hunt.zalize.com/vs/attorney-vs-lawyer?lang=en",
+      "html_lang": "en",
+      "og_count": 11,
+      "jsonld_types": [
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer",
+        "Question",
+        "Answer"
+      ],
+      "has_faq_jsonld": true,
+      "bytes": 125043
+    }
+  },
+  "new_pages_status": {
+    "/guide/taproom": {
+      "status": 200,
+      "bytes": 116832,
+      "faq": true
+    },
+    "/guide/taproom?lang=en": {
+      "status": 200,
+      "bytes": 118656,
+      "faq": true
+    },
+    "/guide/izakaya": {
+      "status": 200,
+      "bytes": 116722,
+      "faq": true
+    },
+    "/guide/izakaya?lang=en": {
+      "status": 200,
+      "bytes": 118753,
+      "faq": true
+    },
+    "/guide/dayspa": {
+      "status": 200,
+      "bytes": 116756,
+      "faq": true
+    },
+    "/guide/dayspa?lang=en": {
+      "status": 200,
+      "bytes": 118753,
+      "faq": true
+    },
+    "/guide/snacks": {
+      "status": 200,
+      "bytes": 116702,
+      "faq": true
+    },
+    "/guide/snacks?lang=en": {
+      "status": 200,
+      "bytes": 118533,
+      "faq": true
+    },
+    "/guide/lawfirm": {
+      "status": 200,
+      "bytes": 116741,
+      "faq": true
+    },
+    "/guide/lawfirm?lang=en": {
+      "status": 200,
+      "bytes": 119312,
+      "faq": true
+    },
+    "/guide/orthodontics": {
+      "status": 200,
+      "bytes": 116998,
+      "faq": true
+    },
+    "/guide/orthodontics?lang=en": {
+      "status": 200,
+      "bytes": 118966,
+      "faq": true
+    },
+    "/tld/clothing": {
+      "status": 200,
+      "bytes": 136191,
+      "faq": true
+    },
+    "/tld/clothing?lang=en": {
+      "status": 200,
+      "bytes": 136883,
+      "faq": true
+    },
+    "/tld/cooking": {
+      "status": 200,
+      "bytes": 135825,
+      "faq": true
+    },
+    "/tld/cooking?lang=en": {
+      "status": 200,
+      "bytes": 136633,
+      "faq": true
+    },
+    "/tld/gift": {
+      "status": 200,
+      "bytes": 135867,
+      "faq": true
+    },
+    "/tld/gift?lang=en": {
+      "status": 200,
+      "bytes": 136609,
+      "faq": true
+    },
+    "/tld/party": {
+      "status": 200,
+      "bytes": 136223,
+      "faq": true
+    },
+    "/tld/party?lang=en": {
+      "status": 200,
+      "bytes": 136943,
+      "faq": true
+    },
+    "/tld/fishing": {
+      "status": 200,
+      "bytes": 135720,
+      "faq": true
+    },
+    "/tld/fishing?lang=en": {
+      "status": 200,
+      "bytes": 136676,
+      "faq": true
+    },
+    "/tld/horse": {
+      "status": 200,
+      "bytes": 135877,
+      "faq": true
+    },
+    "/tld/horse?lang=en": {
+      "status": 200,
+      "bytes": 136787,
+      "faq": true
+    },
+    "/vs/beer-vs-pub": {
+      "status": 200,
+      "bytes": 125176,
+      "faq": true
+    },
+    "/vs/beer-vs-pub?lang=en": {
+      "status": 200,
+      "bytes": 125235,
+      "faq": true
+    },
+    "/vs/pub-vs-bar": {
+      "status": 200,
+      "bytes": 125179,
+      "faq": true
+    },
+    "/vs/pub-vs-bar?lang=en": {
+      "status": 200,
+      "bytes": 125128,
+      "faq": true
+    },
+    "/vs/spa-vs-salon": {
+      "status": 200,
+      "bytes": 124538,
+      "faq": true
+    },
+    "/vs/spa-vs-salon?lang=en": {
+      "status": 200,
+      "bytes": 124917,
+      "faq": true
+    },
+    "/vs/food-vs-restaurant": {
+      "status": 200,
+      "bytes": 125608,
+      "faq": true
+    },
+    "/vs/food-vs-restaurant?lang=en": {
+      "status": 200,
+      "bytes": 126068,
+      "faq": true
+    },
+    "/vs/attorney-vs-lawyer": {
+      "status": 200,
+      "bytes": 124877,
+      "faq": true
+    },
+    "/vs/attorney-vs-lawyer?lang=en": {
+      "status": 200,
+      "bytes": 125043,
+      "faq": true
+    },
+    "/vs/dentist-vs-dental": {
+      "status": 200,
+      "bytes": 124881,
+      "faq": true
+    },
+    "/vs/dentist-vs-dental?lang=en": {
+      "status": 200,
+      "bytes": 125371,
+      "faq": true
+    }
+  },
+  "usage_pre": {
+    "days": {
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      },
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      }
+    },
+    "cronLast": 1786341659494,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786348040221,
+    "pricesLastFail": 1786337426285
+  },
+  "usage_keys_present": {
+    "pricesLastOk": true,
+    "pricesLastFail": true,
+    "cronLast": true,
+    "indexnowLast": true
+  },
+  "prices_api": {
+    "stale": null,
+    "tldCount": 274,
+    "fetchedAt": 1786348040436,
+    "keys": 274
+  },
+  "quick_single": "核验完成：共 9 个，9 个可注册",
+  "quick_all": "核验完成：共 277 个，209 个可注册",
+  "template_prefill": {
+    "chip": "电商品牌",
+    "filled": ""
+  },
+  "prices_rows_zh": 276,
+  "prices_live_count": 274,
+  "prices_static_count": 2,
+  "prices_static_slugs": [
+    "cn",
+    "so"
+  ],
+  "prices_new_tld_rows": {
+    "expected_static_fallback": {
+      "clothing": [
+        78,
+        189
+      ],
+      "cooking": [
+        189,
+        189
+      ],
+      "gift": [
+        119,
+        119
+      ],
+      "party": [
+        33,
+        41
+      ],
+      "fishing": [
+        189,
+        189
+      ],
+      "horse": [
+        189,
+        189
+      ]
+    },
+    "got": {
+      "party": [
+        33,
+        41
+      ],
+      "clothing": [
+        78,
+        189
+      ],
+      "gift": [
+        119,
+        119
+      ],
+      "cooking": [
+        189,
+        189
+      ],
+      "fishing": [
+        189,
+        189
+      ],
+      "horse": [
+        189,
+        189
+      ]
+    }
+  },
+  "prices_row_tld_hrefs": {
+    "clothing": true,
+    "cooking": true,
+    "gift": true,
+    "party": true,
+    "fishing": true,
+    "horse": true
+  },
+  "tld_pricecards": {
+    "clothing": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        10.81,
+        26.26
+      ],
+      "prices_href": true
+    },
+    "cooking": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        26.26,
+        26.26
+      ],
+      "prices_href": true
+    },
+    "gift": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        16.58,
+        16.58
+      ],
+      "prices_href": true
+    },
+    "party": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        4.61,
+        5.64
+      ],
+      "prices_href": true
+    },
+    "fishing": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        26.26,
+        26.26
+      ],
+      "prices_href": true
+    },
+    "horse": {
+      "first": null,
+      "renew": null,
+      "live_label": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+      "usd": [
+        26.26,
+        26.26
+      ],
+      "prices_href": true
+    }
+  },
+  "tld_com_live": "Porkbun 实时价 · 人民币按汇率 7.2 估算",
+  "tld_hub_links": 276,
+  "guide_hub_links": 272,
+  "vs_hub_links": 306,
+  "footer_counts": [],
+  "footer_link_counts": {
+    "/tld/": 276,
+    "/guide/": 272,
+    "/vs/": 306
+  },
+  "templates_more_chip": "+262",
+  "why_status": 200,
+  "shortlist_status": 200,
+  "advanced_status": 200,
+  "404_status": 404,
+  "404_tld_status": 404,
+  "404_guide_status": 404,
+  "404_vs_status": 404,
+  "mcp_doc_status": 200,
+  "mcp_doc_tldcount": "860",
+  "mcp_tld_prices": {
+    "tldCount": 276,
+    "priceKeys": 276
+  },
+  "share_create": {
+    "status": 200,
+    "id": "vdANTpAqJw",
+    "has_token": true
+  },
+  "share_live_domains": {
+    "d1": true,
+    "d2": true
+  },
+  "share_revoke": {
+    "del": 200,
+    "getAfter": 410,
+    "revokedBodyHasItems": false
+  },
+  "share_revoked_ui": true,
+  "theme": {
+    "initial": "rgb(11, 12, 14)",
+    "toggled": "rgb(250, 250, 249)",
+    "persist_after_reload": "rgb(250, 250, 249)",
+    "back": "rgb(11, 12, 14)"
+  },
+  "mobile_375_scrollWidth": {
+    "/": 375,
+    "/prices": 360,
+    "/tld/clothing": 360,
+    "/vs/beer-vs-pub": 360,
+    "/guide/taproom": 360
+  },
+  "usage_post": {
+    "days": {
+      "2026-08-06": {
+        "searches": 24,
+        "byTld": {
+          "com": 24,
+          "cn": 18,
+          "ai": 2
+        },
+        "fast": 9,
+        "refine": 15
+      },
+      "2026-08-07": {
+        "searches": 16,
+        "byTld": {
+          "com": 16,
+          "cn": 7,
+          "ai": 2
+        },
+        "fast": 12,
+        "refine": 4
+      },
+      "2026-08-09": {
+        "searches": 7,
+        "byTld": {
+          "com": 7,
+          "cn": 7
+        },
+        "fast": 6,
+        "refine": 0,
+        "aiErrors": {
+          "quota": 4
+        }
+      },
+      "2026-08-08": {
+        "searches": 44,
+        "byTld": {
+          "com": 44,
+          "cn": 23,
+          "io": 13
+        },
+        "fast": 31,
+        "refine": 13
+      }
+    },
+    "cronLast": 1786341659494,
+    "indexnowLast": 1786341659523,
+    "pricesLastOk": 1786348040221,
+    "pricesLastFail": 1786337426285
+  },
+  "usage_days_equal": true,
+  "console_errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r370"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r370"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r370"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r370"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://hunt.zalize.com/nonexistent-r370"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/vdANTpAqJw"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/vdANTpAqJw"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 ()",
+      "url": "https://hunt.zalize.com/s/vdANTpAqJw"
+    }
+  ]
+}
