@@ -45,7 +45,7 @@ Cloudflare Workers + Hono（API/MCP/SSR/cron）· React 18 + TypeScript + Vite +
 | 内容计数 | **TLD 408 / 行业指南 410 / 对比页 444 / sitemap 1,270 URL**（1,262 内容页 + 8 静态页） | `scripts/content-counts.json` 与 `curl sitemap.xml?cb=` 逐类 grep 一致 |
 | cron 心跳 | `cronLast=2026-09-04T18:00:11Z`（每 6h） | `/api/usage` |
 | 价格 | `pricesLastOk=2026-09-04T12:00Z`，`/api/prices` 351 个 TLD 有 Porkbun 报价，非 stale | `/api/prices` |
-| IndexNow | 上次成功 2026-09-03T12:00Z；**18:00 推送遇 429 Too many requests**，6h 冷却后自动重试 | `/api/usage.indexnowLastError` |
+| IndexNow | 上次成功 2026-09-03T12:00Z；09-04 18:00Z（旧代码全量）429；R488 增量代码 20:48Z 上线，首次新代码推送在 09-05 00:00Z cron，结果待查 | `/api/usage.indexnowLastError` |
 | 百度推送 | 未配置（`baiduLast=null`）；但 `botsBy.baidu=6`（Baiduspider 已自发来访，R485 调研时为 0） | `/api/usage` |
 | 验证 meta / analytics beacon | 首页 `<head>` 无 GSC/Bing/Baidu meta、无 cf-beacon | `curl -A Mozilla /` |
 | 注册商返佣 | `/api/registrars` = `{"affiliate":{}}`（纯链接） | — |
@@ -150,15 +150,15 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 ## 10. 进行中 / 待办任务（按优先级）
 
 1. **R487 usage 分片计数**：已部署（version 62107af5）并生产直证：12 并发 `/api/click` → outbound.aliyun 4→16 / cn 3→15 精确 +12；`searches`/`llmProvider` 嵌套 map 经分片合并正确（+1/+3）。已关闭。
-1b. **R488 IndexNow 增量推送**：已部署，等下次 cron（每 6h）后看 `/api/usage` 的 `indexnowLastError` 是否清除、`indexnowLast` 是否前进；未验证前不得称 429 已解决。R488 提出未做的 P1：首页 SSR 站内 `<a>` 为 0、`/why` `/mcp` `/advanced` 孤岛、裸路径 EN 正文 canonical 指 zh + 缺 `Vary: Accept-Language`（见 `docs/audits/seo-tech-audit-r488.md`）。
-1c. **R489 中文规则降级**：已部署但生产未触达（AI 恰好恢复，1 次授权搜索走了主上游）；离线 bench 同输入「茶叶电商，寓意清雅」出 chaya/qingcha/chatea 等 24 条、1 坏例。需 AI 再次不可用或本地无效 key 才能实测。
-2. **R490（本轮）**：老板待办归一 `docs/owner-actions.md` + 本文档同步 + README 事实核对（guide 404→410、AI 行加降级说明）—— PR 待父会话合入 `deploy/r192-r195`。
-3. **AI 恢复后**：R466 首结果时延实测（目标 <10s）；R239 遗留 P1-1/P3-2/P3-3 生产复验；`llm-bad-json` 占比观察。
+1b. **R488 IndexNow 增量推送**：R488 代码 2026-09-04T20:48Z 才上线，18:00Z 那次 429 仍是旧代码全量推送；`indexnow:lastAttempt` 6h 冷却后首次以新代码推送在 09-05 00:00Z cron（`pushed` 快照为空 → 首轮仍是全量 1270 条，之后才是增量）。看 `/api/usage` 的 `indexnowLastError` 是否清除、`indexnowLast` 是否前进；未验证前不得称 429 已解决。R488 三个 P1 已由 R491/R492 实现并生产验证（见 §11）。
+1c. **R489 中文规则降级**：生产未触达（AI 恰好恢复）；**R493 已用本地 wrangler + `.dev.vars` 无效 key 端到端实测 13 组中文输入**（`docs/audits/zh-fallback-e2e-r493.md`），并修了「云」「ai客服」0 候选、多音字 fail-closed 误伤（大海/告别/客服）、新能源/充电桩碎片化；`scripts/verify-r489.mjs` ALL PASS。生产降级路径仍无真实触达样本。
+2. **R494 AI 质量审计 v5**（`docs/audits/ai-quality-audit-r494.md`，恰 6 次 AI）：6/6 主上游、首可注册 4.1–6.5s、RDAP/WHOIS 复核 11/11 一致；遗留 **P1 中文 coined 候选寓意解释词语沙拉（点踩 refine 出 moggity/voralini/hapany）**、P2 拼音校验绕过（zhongao↔忠）、P2 EN 幻影词源 complainter 穿透、P2 EN word 补发门槛 ≥8 导致少量 word 时静默不补发。**下一批优先修，先离线回放论证再动代码。**
+3. **AI 长期可靠性**：R494 一次 6 次窗口全走 primary，不等于长期稳定；继续看 `aiErrors.quota` 是否再现。
 4. **发帖**（Show HN 等，`docs/launch/launch-checklist.md`）：老板决策，前提 §8 P0 解决。
 5. 观察项：IndexNow 429 是否持续；Baiduspider 来访是否持续（`botsBy.baidu`）；`stale:true` 频率。
 6. 候选：新增 Dynadot/Spaceship 注册商（联盟 30%/25%）；`/guide` hub 标题分组文案。
 
-## 11. R231–R486 变化速览（详情看各轮 PR / `docs/research`）
+## 11. R231–R495 变化速览（详情看各轮 PR / `docs/research`）
 
 - **R231–R250**：内容页扩到 120/116/150；显式 404；触控 ≥44px；guard 可观测（R238）；审计 R239/R242；防线修复 R243–R246；R250 prompt 微调。
 - **R2xx–R4xx 内容线**：内容页持续扩容至 408/404/444（R301–R455 各轮审计见 `docs/qa/audit-r*.md`）；hub 分组锚点导航（R415）。
@@ -173,6 +173,12 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 - **R484**：零 AI 全站审计 `docs/audits/audit-r484.md`；浅色主题对比度 AA 修复（PR #448）。
 - **R485**：百度站长接入——`BAIDU_VERIFICATION` meta + 可选普通收录 API 推送 cron；调研 `docs/research/baidu-seo.md`。
 - **R486**：微信分享/打开体验——`/wx-share.png` 缩略图 + SSR 标题、剪贴板回退 `lib/clipboard.ts`、聊天友好复制格式；调研 `docs/research/wechat-share.md`。
+- **R487–R490**：usage 分片计数（`usage-counter.ts`/`sharded-counter.ts`）；SEO 技术审计 `docs/audits/seo-tech-audit-r488.md` + IndexNow 增量推送；中文规则降级质量（`rule-fallback.ts`/`rule-fallback-lexicon.ts`，`docs/research/zh-rule-fallback.md`）；老板待办归一 `docs/owner-actions.md`。
+- **R491**（PR #456）：首页 SSR skeleton footer 注入站内导航（`content/site-links.ts` `siteLinksHtml`/React `SiteLinks`）、内容页 footer 加 /why /mcp /advanced、/why 与 /advanced SSR skeleton（`content/why-copy.ts`）。生产实测：首页 SSR `<a>` 0→25，BFS 从 / 可达 1/1270→1270/1270，零入链页 0。保留 `SSR_CANONICAL_ZH_LINKS=false`（`?lang=zh` 内链是否去参数留待后续）。
+- **R492**（PR #455）：`ssr-lang.ts` `resolveLang`/`injectHreflang`/`withHtmlVary`——canonical 跟最终解析语言（`Accept-Language: en` 裸路径 → canonical `?lang=en`），HTML 响应加 `Vary: Accept-Language`（API/静态资源不加）；`scripts/seo-audit/lang-matrix.sh`。
+- **R493**（PR #457）：见 §10 1c。
+- **R494**（PR #458）：见 §10 2。
+- **R495**：`main.tsx routeModule()` 对 /why /advanced /mcp 也等 chunk 就绪再挂载（R491 skeleton 在慢网下曾闪空 ~0.6s，节流帧捕获 3/3 复现→修后 0/3）；`i18n.tsx` 切换语言时同步 URL 显式 `?lang=`（否则 F5 回退到 URL 语言）。
 
 ## 12. 资源与凭证索引（只写名称，不写值）
 
