@@ -26,7 +26,7 @@ import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./pri
 import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
 import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
 import { PageviewCounter, readDayPageviews, type DayPageviews } from "./pageviews";
-import { INDEXNOW_ENDPOINT, submitIndexNow, summarizeIndexNow } from "./indexnow";
+import { INDEXNOW_ENDPOINT, indexNowDelta, submitIndexNow, summarizeIndexNow, type IndexNowPushed } from "./indexnow";
 import { pickPending, resolveBaiduPush, submitBaidu, summarizeBaidu, type BaiduPushVars } from "./baidu-push";
 
 // LLM_API_BASE/LLM_MODEL：LLM 上游基地址与模型名。默认 DeepSeek 官方 + deepseek-chat；
@@ -2126,7 +2126,9 @@ app.all("*", async (c) => {
 
 // IndexNow：向 Bing/Yandex 等搜索引擎主动推送全站 URL（key 按协议公开，对应 public/<key>.txt 静态文件）
 // 状态键：indexnow:last = 最近一次成功（200/202）时间；indexnow:lastAttempt = 最近一次尝试时间（成功失败都写，
-// 用作 6h 冷却防止失败后每次 cron 都重发）；indexnow:lastError = 最近一次失败详情（成功后清除）。
+// 用作 6h 冷却防止失败后每次 cron 都重发）；indexnow:lastError = 最近一次失败详情（成功后清除）；
+// indexnow:pushed = 最近一次成功推送时的 { lastmod, urls } 快照——协议要求只在 URL 新增/更新/删除时提交，
+// 所以每日只推快照之外的新 URL，CONTENT_LASTMOD 变化时才全量重推；无增量则只刷新 indexnow:last，不发请求。
 // 分批/状态码语义见 indexnow.ts；sitemap 当前 ~1.3k URL，远低于单次 10000 上限。
 const INDEXNOW_KEY = "024aa6c6f88245bbacdac2f60a94e333";
 const INDEXNOW_INTERVAL_MS = 24 * 3600 * 1000;
@@ -2134,6 +2136,7 @@ const INDEXNOW_RETRY_MS = 6 * 3600 * 1000;
 const INDEXNOW_LAST_KEY = "indexnow:last";
 const INDEXNOW_LAST_ATTEMPT_KEY = "indexnow:lastAttempt";
 const INDEXNOW_LAST_ERROR_KEY = "indexnow:lastError";
+const INDEXNOW_PUSHED_KEY = "indexnow:pushed";
 interface IndexNowError {
   at: number;
   status: number;
@@ -2145,21 +2148,36 @@ async function pingIndexNow(env: Bindings): Promise<void> {
   if (!env.CACHE) return;
   const kv = env.CACHE;
   const now = Date.now();
-  const [last, lastAttempt] = await Promise.all([kv.get(INDEXNOW_LAST_KEY), kv.get(INDEXNOW_LAST_ATTEMPT_KEY)]);
+  const [last, lastAttempt, pushed] = await Promise.all([
+    kv.get(INDEXNOW_LAST_KEY),
+    kv.get(INDEXNOW_LAST_ATTEMPT_KEY),
+    kv.get<IndexNowPushed>(INDEXNOW_PUSHED_KEY, "json"),
+  ]);
   if (last && now - Number(last) < INDEXNOW_INTERVAL_MS) return;
   if (lastAttempt && now - Number(lastAttempt) < INDEXNOW_RETRY_MS) return;
   await kv.put(INDEXNOW_LAST_ATTEMPT_KEY, String(now));
+  const all = sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`);
+  const urls = indexNowDelta(pushed, all, CONTENT_LASTMOD);
+  if (urls.length === 0) {
+    await kv.put(INDEXNOW_LAST_KEY, String(now));
+    return;
+  }
   const host = SITE_ORIGIN.replace(/^https?:\/\//, "");
   const results = await submitIndexNow({
     host,
     key: INDEXNOW_KEY,
     keyLocation: `${SITE_ORIGIN}/${INDEXNOW_KEY}.txt`,
-    urls: sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`),
+    urls,
     endpoint: INDEXNOW_ENDPOINT,
   });
   const summary = summarizeIndexNow(results);
   if (summary.ok) {
-    await Promise.all([kv.put(INDEXNOW_LAST_KEY, String(now)), kv.delete(INDEXNOW_LAST_ERROR_KEY)]);
+    const snapshot: IndexNowPushed = { lastmod: CONTENT_LASTMOD, urls: all };
+    await Promise.all([
+      kv.put(INDEXNOW_LAST_KEY, String(now)),
+      kv.put(INDEXNOW_PUSHED_KEY, JSON.stringify(snapshot)),
+      kv.delete(INDEXNOW_LAST_ERROR_KEY),
+    ]);
     return;
   }
   const err: IndexNowError = { at: now, status: summary.status, message: summary.message, submitted: summary.submitted };
