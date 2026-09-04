@@ -2,9 +2,10 @@
 
 - 对象：生产 https://hunt.zalize.com （`deploy/r192-r195` @ `8351a69`），sitemap 1270 URL（`/tld` 408、`/guide` 410、`/vs` 444、核心页 8）
 - 日期：2026-09-04（UTC，抓取 20:19，见 `docs/audits/r488/measurements-2026-09-04.md` 头部时间戳）
-- 方法：**0 AI 调用**（只 GET 生产 HTML / sitemap / `/api/usage`，未触发 `/api/ai-search`；UA `Mozilla/5.0 (compatible; DomainHunterSeoAudit/1.0; +https://github.com/wookat/domainhunter) SiteAuditBot`，被 `pageviews.ts` 归为 `other` 类 bot——见 §2.3 的计数污染说明）；未写入 localStorage / 分享 / 监控，无需 backup/restore
+- 方法：**0 AI 调用**（只 GET 生产 HTML / sitemap / `/api/usage`，未触发 `/api/ai-search`；UA `Mozilla/5.0 (compatible; DomainHunterSeoAudit/1.0; +https://github.com/wookat/domainhunter) SiteAuditBot`，被 `pageviews.ts` 归为 `other` 类 bot——见 §2.2 的计数污染说明）；未写入 localStorage / 分享 / 监控，无需 backup/restore
 - 脚本（不依赖 AI，可复现）：`scripts/seo-audit/`（`fetch.mjs sample --seed 488` → 52 页 zh+en 各一次；`fetch.mjs graph` → 全量 1270 裸路径；`analyze.mjs` → `out/report.{json,md}`）。原始 HTML/graph（33 MB）已 gitignore，本仓库只收录 `docs/audits/r488/measurements-2026-09-04.md`（度量表）与 `sample-seed488.json`（抽样清单）
 - 每条结论标注来源：**[生产实查]** / **[代码事实]** / **[官方文档]** / **[推断]**
+- PR：https://github.com/wookat/domainhunter/pull/454 （base `deploy/r192-r195`；含本报告、脚本与 §4 P1-3 的 IndexNow 增量推送修复）
 
 ## 0. 结论
 
