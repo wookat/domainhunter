@@ -175,6 +175,12 @@
     "pass": true,
     "detail": "intercepted=1"
   },
+  "zh-375 quota exact CTA opens exact-check tab (restore bypassed)": {
+    "pass": true
+  },
+  "zh-375 exact CTA keeps lastSearch snapshot": {
+    "pass": true
+  },
   "en-375 quota wording": {
     "pass": true,
     "detail": "AI quota is exhausted — the outage is logged and the maintainer will handle it; exact and bulk checks still work"
@@ -195,6 +201,12 @@
   "en-375 zero real AI calls (all intercepted)": {
     "pass": true,
     "detail": "intercepted=1"
+  },
+  "en-375 quota exact CTA opens exact-check tab (restore bypassed)": {
+    "pass": true
+  },
+  "en-375 exact CTA keeps lastSearch snapshot": {
+    "pass": true
   },
   "zh-375 summary toggle 44px": {
     "pass": true,

@@ -71,7 +71,7 @@ AI/核验/worker/SSE 事件结构零改动；`Row`/`SavedSearch` 不变；result
 
 ## 3. 验收对照表
 
-证据来源：`screenshots/r472-*.png`、`screenshots/r472-{base,after}-geometry.json`（Playwright `getBoundingClientRect`）、`screenshots/r472-error-checks.json`（70 项自动断言，Playwright 路由拦截 `/api/ai-search` 返回构造 NDJSON `error` 事件 + `page.clock` 虚拟时钟推进 30s）。所有浏览器证据在本地 `wrangler dev --port 8787` 上采集，**真实 AI 调用 0 次**（所有 `/api/ai-search` 请求被 route 拦截，计数见 `aiCalls`/`intercepted`）。
+证据来源：`screenshots/r472-*.png`、`screenshots/r472-{base,after}-geometry.json`（Playwright `getBoundingClientRect`）、`screenshots/r472-error-checks.json`（74 项自动断言，Playwright 路由拦截 `/api/ai-search` 返回构造 NDJSON `error` 事件 + `page.clock` 虚拟时钟推进 30s）。所有浏览器证据在本地 `wrangler dev --port 8787` 上采集，**真实 AI 调用 0 次**（所有 `/api/ai-search` 请求被 route 拦截，计数见 `aiCalls`/`intercepted`）。
 
 | # | 需求 | 结果 | 证据 |
 | --- | --- | --- | --- |
@@ -120,7 +120,7 @@ node scripts/verify-r264.mjs   All checks passed
 node scripts/verify-r238.mjs   ALL PASS
 pnpm -r typecheck              apps/web typecheck: Done（core 无 typecheck 脚本，同基线）
 pnpm --filter web build        ✓ built
-node docs/qa/r472/errors.js        70/70 checks passed（→ screenshots/r472-error-checks.json）
+node docs/qa/r472/errors.js        74/74 checks passed（→ screenshots/r472-error-checks.json）
 node docs/qa/r472/measure.js after 4 视口 aiCalls=0（→ screenshots/r472-after-geometry.json）
 ```
 
@@ -131,3 +131,26 @@ node docs/qa/r472/measure.js after 4 视口 aiCalls=0（→ screenshots/r472-aft
 - `document.hidden` 时到点不发起、回前台再发：逻辑存在，未做自动化断言（headless 下难以真实切换 visibility）。
 - 仓库无 `lint` 脚本与 eslint 配置（`pnpm --filter web lint` → `ERR_PNPM_RECURSIVE_RUN_NO_SCRIPT`），与基线一致，以 typecheck + build 为准。
 - 未部署生产；生产回归待合并后按 SOP-03 走。
+
+## 5. 合并 R471/R473/R474 后复验（2026-09-04，origin/deploy/r192-r195 @ 9cf4d1f）
+
+**冲突解法（App.tsx）**：R471 的 `fallback` state / `type:"fallback"` 事件分支 / `quota-breaker` → `markAiQuotaDown` / 规则候选不 `clearAiQuotaDown` / `quotaExhausted` 含 fallback 原因，全部原样保留；R472 的 rate-limit 倒计时、quota 分流、`ContextSummary` 叠加其上。横幅堆叠顺序（自上而下）：错误横幅（R472）→ fallback 琥珀横幅（R471）→ 375 摘要行 / 桌面恢复条+理解条。fallback 横幅的「重试 AI」走 `run(last.v, last.opts)`（用户主动发起，重置一次性自动重试标记）。SKILL.md 两边条目并存。
+
+**测试代理端到端复核（可见 Chrome 录屏，0 次真实 AI 调用）发现并修复 1 个缺陷**：quota 横幅的「精确核验」CTA 指向 `/?mode=exact`，但 `App.tsx` 只对 `?q`/`?tpl` 跳过 `dh:lastSearch:v1` 恢复，而 quota 横幅只会出现在结果页（必有快照）→ 点击后原样回到结果页，CTA 实际为空操作（R267 起就存在，R472 把它提升为主 CTA 后暴露）。修复：`?mode=exact` 同样跳过恢复（快照保留，回 `/` 仍可恢复）；`errors.js` 新增 4 项断言（zh/en：落到精确核验 tab + 快照仍在）。
+
+```
+node scripts/verify-r471.mjs   ALL PASS
+node scripts/verify-r466.mjs   ALL PASS
+node scripts/verify-r465.mjs   ALL PASS
+node scripts/verify-r463.mjs   ALL PASS
+node scripts/verify-r264.mjs   All checks passed
+node scripts/verify-r238.mjs   ALL PASS
+node scripts/verify-r473.mjs   ALL PASS（顺带）
+node scripts/verify-r474.mjs   ALL PASS（顺带）
+pnpm -r typecheck              Done
+pnpm --filter web build        ✓ built
+node docs/qa/r472/errors.js        74/74（合并后重建 + 重启 wrangler dev）
+node docs/qa/r472/measure.js after 375 zh/en 卡 top 333、域名 bottom 592；桌面 314/378，与合并前一致
+```
+
+测试代理另记一条既有现象（非本轮引入）：出错的轮次仍会让「N 轮」统计 +1（无候选产出）。未改，留给后续。

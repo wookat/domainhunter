@@ -5,7 +5,7 @@
 ```sh
 cd docs/qa/r472 && npm i playwright@1 && npx playwright install chromium
 node measure.js after 8787   # 375×667 / 1440×900 zh+en 首屏几何 + 截图 → shots/after-geometry.json
-node errors.js 8787          # quota / rate-limit 倒计时 / 取消 / 自动重试一次 / 摘要行 a11y，70 项断言 → shots/errors-results.json
+node errors.js 8787          # quota / rate-limit 倒计时 / 取消 / 自动重试一次 / 摘要行 a11y，74 项断言 → shots/errors-results.json
 ```
 
 - `fixture.js`：合成 `dh:lastSearch:v1`（`values.style`/`lengthPref` 为空字符串，11 行含已注册行）。
