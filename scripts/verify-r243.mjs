@@ -139,8 +139,13 @@ const mockFetch = (responses) => {
 }
 
 // ---------- mock 端到端：主轮 word 达标 → 不补发 ----------
+// R498：达标定义改为 word ≥ max(2,⌈n×15%⌉)，8 条需 ≥2 word（原 1 条 word 在新门槛下属 low 触发，见 verify-r498.mjs）
 {
-  const withWord = [...mainBatch.slice(0, 7), { label: "anvil", meaning: "A real English word: the anvil evokes a solid build tool; reads instantly", theme: "word", scores: {} }];
+  const withWord = [
+    ...mainBatch.slice(0, 6),
+    { label: "anvil", meaning: "A real English word: the anvil evokes a solid build tool; reads instantly", theme: "word", scores: {} },
+    { label: "beacon", meaning: "A real English word: a beacon signals status from afar, metaphor for uptime alerts", theme: "word", scores: {} },
+  ];
   const calls = mockFetch([withWord]);
   const guard = newGuardStats();
   await generateAiCandidates("uptime monitor", "test-key", { lang: "en", guard });

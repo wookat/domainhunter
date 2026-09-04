@@ -46,6 +46,10 @@ export interface GuardMeta {
   wordSupplement: boolean;
   /** 补发轮发起次数（R243，旧快照无此字段） */
   supplementAttempts?: number;
+  /** 补发判定命中原因（R498：zero=word 为 0，low=word 低于 max(2,⌈候选×15%⌉)；未命中/旧快照无此字段） */
+  wordSupplementReason?: "zero" | "low";
+  /** 判定命中但本次搜索补发预算耗尽而跳过（R498） */
+  wordSupplementSkipped?: "budget";
   /** 补发轮各防线丢弃计数（R243，与主轮 dropped 分开，旧快照无此字段） */
   supplementDropped?: Record<string, number>;
   retries: number;

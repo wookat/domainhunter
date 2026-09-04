@@ -342,6 +342,10 @@ export interface GuardStats {
   wordSupplement: boolean;
   /** 补发轮实际发起次数（R243，0–2；主轮丢弃计数不含补发轮） */
   supplementAttempts: number;
+  /** R498：本轮 word 路线薄弱判定命中原因（zero=word 为 0；low=word 低于 max(2,⌈候选×15%⌉)）；未命中无此字段 */
+  wordSupplementReason?: WordSupplementReason;
+  /** R498：判定命中但本次搜索的跨轮补发预算已耗尽，本轮未发起补发 */
+  wordSupplementSkipped?: "budget";
   /** 补发轮各防线丢弃计数（R243，与主轮 dropped 分开，修复 R239 P3-1 盲区） */
   supplementDropped: GuardDropCounts;
   /** LLM 调用瞬时失败后的退避重试次数 */
@@ -485,17 +489,41 @@ export async function generateUnderstanding(
   }
 }
 
-// ---------------- EN word 路线配额硬保障（R224，修复 R218 P2-3） ----------------
+// ---------------- EN word 路线配额硬保障（R224，修复 R218 P2-3；R498 重定门槛） ----------------
 // EN_NAMING_HINT 的 prompt 级软配额对 LLM 不可靠（R218 en2 整轮 word=0，R195/R196 也有波动）。
-// 后端兜底：一轮解析完成后统计 theme 分布，word 为 0 且候选数达阈值时，追加一次带硬指令的
-// 补充请求（仅限 1 次，失败不阻塞主结果）。仅在配额失守时触发，正常路径 0 额外成本。
+// 后端兜底：一轮解析完成后统计 theme 分布，word 路线薄弱时追加带硬指令的补充请求（失败不阻塞主结果）。
+// R498（R494 P2-3）：原「候选 ≥8 且 word=0」门槛在 fast 首轮（请求 8 条、防线过滤后常 5–7 条）永不触发，
+// 且 word=1 也算达标；改为「候选 ≥3 且 word < max(2, ⌈候选×15%⌉)」，并以每次搜索跨轮共享的补发预算控 LLM 成本。
+// 论证与历史数据模拟见 docs/research/en-word-supplement.md。
 
-/** 触发补发的最小候选数：整轮产出太少时（如流截断）word=0 属于正常波动，不补发 */
-export const EN_WORD_QUOTA_MIN_CANDIDATES = 8;
-/** 补发请求的候选数：word 路线软配额要求「各至少 2 个」，按 4 个请求留过滤余量 */
+/** 触发补发的最小候选数：整轮 <3 条基本是解析/流截断级失败，word 为 0 不代表路线薄弱，不补发 */
+export const EN_WORD_SUPPLEMENT_MIN_CANDIDATES = 3;
+/** word 路线目标占比：word 少于 ⌈候选×15%⌉ 视为薄弱 */
+export const EN_WORD_SUPPLEMENT_RATIO = 0.15;
+/** word 路线目标条数下限（软配额「各至少 2 个」）：候选再少也要求 ≥2 条 word */
+export const EN_WORD_SUPPLEMENT_MIN_WORDS = 2;
+/** 补发请求的候选数：按 4 个请求留过滤余量 */
 export const EN_WORD_SUPPLEMENT_COUNT = 4;
-/** 补发总次数上限（R243）：首次补发全灭时再重试一次，第二次 prompt 加硬 */
+/** 单轮补发次数上限（R243）：首次补发全灭时再重试一次，第二次 prompt 加硬 */
 export const EN_WORD_SUPPLEMENT_MAX_ATTEMPTS = 2;
+/** 每次搜索（跨轮）补发 LLM 调用总预算（R498）：worker 每次搜索新建一个预算对象传入各轮 */
+export const EN_WORD_SUPPLEMENT_SEARCH_BUDGET = 2;
+
+export type WordSupplementReason = "zero" | "low";
+
+/** 跨轮共享的补发预算（R498）；未传入时退化为仅受单轮上限约束（历史脚本/旧调用方式） */
+export interface WordSupplementBudget {
+  remaining: number;
+}
+
+export function newWordSupplementBudget(): WordSupplementBudget {
+  return { remaining: EN_WORD_SUPPLEMENT_SEARCH_BUDGET };
+}
+
+/** 候选数为 n 时 word 路线应达到的最少条数：max(2, ⌈n×15%⌉) */
+export function wordSupplementFloor(n: number): number {
+  return Math.max(EN_WORD_SUPPLEMENT_MIN_WORDS, Math.ceil(n * EN_WORD_SUPPLEMENT_RATIO));
+}
 
 // ---------------- word theme 内嵌 TLD 降级兜底（R250，R239 P3-3） ----------------
 // 生产坏例：canaryio 标 word——label 内嵌 TLD 名 io，不是词典词。prompt 级反例之外，
@@ -526,9 +554,18 @@ export function countThemes(candidates: AiCandidate[]): Record<AiTheme, number> 
   return counts;
 }
 
-/** word 路线配额是否失守：word 为 0 且候选数 ≥ 阈值时返回 true（需要补发） */
+/** word 路线是否薄弱及原因：候选 <3 → null；word=0 → "zero"；word < max(2,⌈n×15%⌉) → "low"；否则 null */
+export function wordSupplementReason(candidates: AiCandidate[]): WordSupplementReason | null {
+  const n = candidates.length;
+  if (n < EN_WORD_SUPPLEMENT_MIN_CANDIDATES) return null;
+  const word = countThemes(candidates).word;
+  if (word === 0) return "zero";
+  return word < wordSupplementFloor(n) ? "low" : null;
+}
+
+/** word 路线配额是否失守（需要补发） */
 export function needsWordSupplement(candidates: AiCandidate[]): boolean {
-  return candidates.length >= EN_WORD_QUOTA_MIN_CANDIDATES && countThemes(candidates).word === 0;
+  return wordSupplementReason(candidates) !== null;
 }
 
 // ---------------- en 任务语言判定（R465 补丁，R465 线上回归发现） ----------------
@@ -569,10 +606,13 @@ export function mergePinyinSupplement(main: AiCandidate[], extra: AiCandidate[])
 }
 
 /** 补发轮硬指令：每条 label 必须是词典真实存在的完整英文单词，theme 全部标 word；
- * attempt=2（R243 二次重试）时对 meaning 句式加硬指令，避免短句式 meaning 被质量防线拦截 */
-export function buildWordSupplementDirective(count: number, exclude: string[], attempt = 1): string {
+ * attempt=2（R243 二次重试）时对 meaning 句式加硬指令，避免短句式 meaning 被质量防线拦截；
+ * wordCount>0（R498 low 触发）时按「仅 N 条不足配额」措辞 */
+export function buildWordSupplementDirective(count: number, exclude: string[], attempt = 1, wordCount = 0): string {
   const lines = [
-    `路线配额补发（硬指令）：上一批候选的 theme 分布中 word（现成英文单词）路线为 0，不满足配额。`,
+    wordCount > 0
+      ? `路线配额补发（硬指令）：上一批候选的 theme 分布中 word（现成英文单词）路线仅 ${wordCount} 条，不满足配额。`
+      : `路线配额补发（硬指令）：上一批候选的 theme 分布中 word（现成英文单词）路线为 0，不满足配额。`,
     `现在请再给出 ${count} 个候选，每一条都必须满足：label 是词典里真实存在的完整英文单词（隐喻词路线，如 amazon/anvil 式，与需求语义有一层聪明的关联），theme 必须全部标注为 "word"。`,
     `禁止造词、禁止错拼变体、禁止两词拼接。`,
     `严禁重复输出以下已出现过的名字：${exclude.join(", ")}`,
@@ -610,6 +650,8 @@ export async function generateAiCandidates(
     /** R466：传入即主轮走流式，每个通过防线的候选立即回调；补发轮仍整包读取，合并后逐个回调。
      *  返回值仍是完整候选数组（含补发），且与回调序列逐项一致 */
     onCandidate?: CandidateSink;
+    /** R498：同一次搜索各轮共享的 word 补发预算；耗尽后判定命中也不再发起补发（guard 记 wordSupplementSkipped） */
+    wordSupplementBudget?: WordSupplementBudget;
   } = {},
 ): Promise<AiCandidate[]> {
   let delivered = 0;
@@ -636,27 +678,41 @@ export async function generateAiCandidates(
     if (!sink) return;
     for (const c of merged.slice(prevLen)) await sink(c);
   };
-  // R224：EN word 路线配额失守时补发（R243：过滤后 word 仍为 0 时再重试一次，总上限 2 次；
-  // 第二次 prompt 加硬明确要求完整句式 meaning；两次仍 0 不阻塞主结果，失败静默）
-  if ((opts.lang ?? "zh") === "en" && needsWordSupplement(out)) {
-    if (opts.guard) opts.guard.wordSupplement = true;
-    for (let attempt = 1; attempt <= EN_WORD_SUPPLEMENT_MAX_ATTEMPTS; attempt++) {
-      if (opts.guard) opts.guard.supplementAttempts = attempt;
-      let merged = out;
-      try {
-        const extra = await generateOnce(description, apiKey, {
-          ...supplementOpts,
-          count: EN_WORD_SUPPLEMENT_COUNT,
-          wordSupplementExclude: out.map((c) => c.label),
-          wordSupplementAttempt: attempt,
-        });
-        merged = mergeWordSupplement(out, extra);
-      } catch {
-        // 补发失败不影响主结果
+  // R224：EN word 路线配额失守时补发（R243：补发轮全灭时再重试一次，单轮上限 2 次；
+  // 第二次 prompt 加硬明确要求完整句式 meaning；仍 0 不阻塞主结果，失败静默）。
+  // R498：触发改为 wordSupplementReason（zero/low），并受跨轮预算约束；补发轮候选仍走 generateOnce 全部防线
+  const wordReason = (opts.lang ?? "zh") === "en" ? wordSupplementReason(out) : null;
+  if (wordReason) {
+    const budget = opts.wordSupplementBudget;
+    if (opts.guard) opts.guard.wordSupplementReason = wordReason;
+    if (budget && budget.remaining <= 0) {
+      if (opts.guard) opts.guard.wordSupplementSkipped = "budget";
+    } else {
+      if (opts.guard) opts.guard.wordSupplement = true;
+      for (let attempt = 1; attempt <= EN_WORD_SUPPLEMENT_MAX_ATTEMPTS; attempt++) {
+        if (budget) {
+          if (budget.remaining <= 0) break;
+          budget.remaining--;
+        }
+        if (opts.guard) opts.guard.supplementAttempts = attempt;
+        let merged = out;
+        try {
+          const extra = await generateOnce(description, apiKey, {
+            ...supplementOpts,
+            count: EN_WORD_SUPPLEMENT_COUNT,
+            wordSupplementExclude: out.map((c) => c.label),
+            wordSupplementAttempt: attempt,
+            wordSupplementWordCount: countThemes(out).word,
+          });
+          merged = mergeWordSupplement(out, extra);
+        } catch {
+          // 补发失败不影响主结果
+        }
+        const added = merged.length > out.length;
+        await deliverExtra(merged, out.length);
+        out = merged;
+        if (added) break;
       }
-      await deliverExtra(merged, out.length);
-      out = merged;
-      if (countThemes(out).word > 0) break;
     }
   }
   // R463：zh 拼音/blend 路线配额失守时补发一次（镜像 R224；失败静默不阻塞主结果）
@@ -1653,6 +1709,7 @@ async function generateOnce(
     lang?: "zh" | "en";
     wordSupplementExclude?: string[];
     wordSupplementAttempt?: number;
+    wordSupplementWordCount?: number;
     pinyinSupplementExclude?: string[];
     guard?: GuardStats;
     baseUrl?: string;
@@ -1671,7 +1728,7 @@ async function generateOnce(
   // R224：word 路线配额补发轮，追加硬指令（每条必须是真实英文单词且 theme 标 word）
   const isWordSupplement = opts.wordSupplementExclude !== undefined;
   if (isWordSupplement) {
-    user += `\n\n${buildWordSupplementDirective(count, opts.wordSupplementExclude ?? [], opts.wordSupplementAttempt ?? 1)}`;
+    user += `\n\n${buildWordSupplementDirective(count, opts.wordSupplementExclude ?? [], opts.wordSupplementAttempt ?? 1, opts.wordSupplementWordCount ?? 0)}`;
   }
   // R463：zh 拼音系路线配额补发轮，追加硬指令
   if (opts.pinyinSupplementExclude !== undefined) {
