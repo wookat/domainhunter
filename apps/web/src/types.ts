@@ -53,6 +53,8 @@ export interface GuardMeta {
   /** 补发轮各防线丢弃计数（R243，与主轮 dropped 分开，旧快照无此字段） */
   supplementDropped?: Record<string, number>;
   retries: number;
+  /** R500：审计专用被丢弃候选样本，仅请求体 debugDropped:true 时服务端附带；前端不渲染、不入 dh:lastSearch 快照 */
+  droppedSamples?: { reason: string; label: string; meaning: string; theme: string; supplement?: true }[];
 }
 
 export interface StreamEvent {

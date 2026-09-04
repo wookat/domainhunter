@@ -308,7 +308,8 @@ export function countRareQuotedChars(meaning: string): number {
 // ---------------- 防线统计元数据（R238） ----------------
 // R222–R225 上线的多道候选防线只有「结果无坏例」的间接证据，无法直证防线拦截了坏例。
 // GuardStats 按请求聚合各防线的丢弃计数与补发/重试触发情况，随流事件返回给前端与回归脚本。
-// 只计数、不含被丢弃候选的任何内容（label/meaning 一概不带），不含用户数据。
+// 默认只计数、不含被丢弃候选的任何内容（label/meaning 一概不带），不含用户数据；
+// R500 增加审计专用、默认关闭的 droppedSamples 通道（请求体 debugDropped:true 才开）。
 
 /** 各防线丢弃计数（仅计数，不含被丢弃候选内容） */
 export interface GuardDropCounts {
@@ -365,6 +366,38 @@ export interface GuardStats {
   themeNormalized?: number;
   /** zh meaning 声调/平仄描述子句被删除的候选数，含补发轮（R499；旧数据无此字段） */
   toneClaimStripped?: number;
+  /** R500：审计专用被丢弃候选样本通道。仅请求体 `debugDropped:true` 时存在（默认请求无此字段，序列化字节不变）；
+   *  每 reason ≤ DROPPED_SAMPLE_PER_REASON、总量 ≤ DROPPED_SAMPLE_TOTAL，meaning 截断到 DROPPED_SAMPLE_MEANING_MAX 字；
+   *  前端不渲染、不入 dh:lastSearch 快照、不写 KV */
+  droppedSamples?: DroppedSample[];
+}
+
+/** R500：单条被丢弃候选样本（只在 debugDropped 通道内出现） */
+export interface DroppedSample {
+  reason: keyof GuardDropCounts;
+  label: string;
+  /** 清洗后的 meaning，超过 DROPPED_SAMPLE_MEANING_MAX 字时截断并以 … 收尾 */
+  meaning: string;
+  /** 模型原始标注 theme（小写；缺失时为空串） */
+  theme: string;
+  /** 补发轮（word/pinyin 补发）丢弃；主轮无此字段 */
+  supplement?: true;
+}
+
+export const DROPPED_SAMPLE_PER_REASON = 5;
+export const DROPPED_SAMPLE_TOTAL = 20;
+export const DROPPED_SAMPLE_MEANING_MAX = 160;
+
+/** R500：按上限记录一条被丢弃候选样本；通道未开启（droppedSamples 未定义）时什么都不做 */
+export function recordDroppedSample(guard: GuardStats, sample: DroppedSample): void {
+  const list = guard.droppedSamples;
+  if (list === undefined || list.length >= DROPPED_SAMPLE_TOTAL) return;
+  let perReason = 0;
+  for (const s of list) if (s.reason === sample.reason) perReason++;
+  if (perReason >= DROPPED_SAMPLE_PER_REASON) return;
+  const chars = [...sample.meaning];
+  const meaning = chars.length > DROPPED_SAMPLE_MEANING_MAX ? chars.slice(0, DROPPED_SAMPLE_MEANING_MAX).join("") + "…" : sample.meaning;
+  list.push({ ...sample, meaning });
 }
 
 function newGuardDropCounts(): GuardDropCounts {
@@ -385,8 +418,9 @@ function newGuardDropCounts(): GuardDropCounts {
   };
 }
 
-export function newGuardStats(): GuardStats {
-  return {
+/** @param opts.debugDropped R500：开启被丢弃候选样本通道（默认关闭，关闭时返回对象与旧版逐字节一致） */
+export function newGuardStats(opts: { debugDropped?: boolean } = {}): GuardStats {
+  const g: GuardStats = {
     dropped: newGuardDropCounts(),
     wordSupplement: false,
     supplementAttempts: 0,
@@ -395,6 +429,8 @@ export function newGuardStats(): GuardStats {
     themeNormalized: 0,
     toneClaimStripped: 0,
   };
+  if (opts.debugDropped === true) g.droppedSamples = [];
+  return g;
 }
 
 /** 各防线丢弃数合计（前端「本轮过滤 N 个低质候选」展示用） */
@@ -1722,6 +1758,8 @@ interface AdmitContext {
   seen: Set<string>;
   /** R471 规则降级候选：theme 强制为 "rule"（不经 THEMES 白名单） */
   ruleTheme?: boolean;
+  /** R500：补发轮（word/pinyin 补发）；样本标记 supplement */
+  supplement?: boolean;
 }
 
 /** R471：规则降级候选过与 LLM 候选完全相同的防线（label 合法性/品牌撞名/meaning 字符集与幻影引用等） */
@@ -1741,30 +1779,31 @@ function admitCandidate(c: Partial<AiCandidate>, ctx: AdmitContext): AiCandidate
   // label 清洗：去首尾空白后必须整体是合法域名主体字符（小写字母/数字/连字符），
   // 含内部空格或其他非法字符的直接丢弃，不做静默改写
   const label = String(c.label ?? "").trim().toLowerCase();
-  if (!/^[a-z0-9-]{1,63}$/.test(label)) {
-    dropped.invalidLabel++;
+  const rawMeaning = String(c.meaning ?? "");
+  const modelTheme = String(c.theme ?? "").toLowerCase();
+  // 计数 + （R500 debugDropped 通道开启时）记录样本；通道关闭时只计数
+  const reject = (reason: keyof GuardDropCounts, meaning: string): null => {
+    dropped[reason]++;
+    recordDroppedSample(guardStats, {
+      reason,
+      label,
+      meaning,
+      theme: modelTheme,
+      ...(isWordSupplement || (ctx.supplement ?? false) ? { supplement: true as const } : {}),
+    });
     return null;
-  }
+  };
+  if (!/^[a-z0-9-]{1,63}$/.test(label)) return reject("invalidLabel", rawMeaning);
   if (seen.has(label)) return null; // 同轮重复不算防线拦截，不计数
   // R180：知名品牌撞名过滤（完全同名，或长度 ≥5 且编辑距离 ≤1），规避商标法律风险
-  if (isBrandCollision(label)) {
-    dropped.brandCollision++;
-    return null;
-  }
+  if (isBrandCollision(label)) return reject("brandCollision", rawMeaning);
   seen.add(label);
   // meaning 为空/全空白的候选直接丢弃（流截断或模型漏字段），不进核验队列；
   // tried 由上层根据返回值累积，被丢弃项天然不计入
-  const rawMeaning = String(c.meaning ?? "");
   let meaning = cleanMeaning(rawMeaning);
-  if (!meaning) {
-    dropped.emptyMeaning++;
-    return null;
-  }
+  if (!meaning) return reject("emptyMeaning", rawMeaning);
   // R149：括号注释剥离后过短（<6 字符）说明有效寓意几乎全在括号里，整条丢弃
-  if (meaning.length < 6 && PAREN_RE.test(rawMeaning)) {
-    dropped.emptyMeaning++;
-    return null;
-  }
+  if (meaning.length < 6 && PAREN_RE.test(rawMeaning)) return reject("emptyMeaning", rawMeaning);
   // R499（R494 P3-2）：zh meaning 的声调/平仄描述子句整句删除（不删候选），拼音表无声调无法校验
   if (ctx.lang === "zh") {
     const t = stripToneClaims(meaning);
@@ -1775,48 +1814,25 @@ function admitCandidate(c: Partial<AiCandidate>, ctx: AdmitContext): AiCandidate
   }
   // R179：meaning 混入目标语言白名单外的文字（韩文/西里尔/IPA 等）→ 整条丢弃
   if (!meaningCharsetOk(meaning, ctx.lang)) {
-    dropped.charsetViolation++;
     if (guardStats.charsetSample === undefined) {
       guardStats.charsetSample = firstCharsetViolation(meaning, ctx.lang);
     }
-    return null;
+    return reject("charsetViolation", meaning);
   }
   // R179：meaning 引用 label 中不存在的字母（"z from zeus" 式臆造词源）→ 整条丢弃
-  if (citesPhantomLetter(label, meaning)) {
-    dropped.phantomEtymology++;
-    return null;
-  }
+  if (citesPhantomLetter(label, meaning)) return reject("phantomEtymology", meaning);
   // R183：meaning 出现命名路线分类元词/元话术（「这是 blend」式）→ 整条丢弃
-  if (containsMetaLanguage(meaning)) {
-    dropped.metaLanguage++;
-    return null;
-  }
+  if (containsMetaLanguage(meaning)) return reject("metaLanguage", meaning);
   // R183：meaning 声称的词源片段与 label 拼写不符（"play 与 grow 结合" for plangrow）→ 整条丢弃
-  if (citesPhantomWord(label, meaning)) {
-    dropped.phantomEtymology++;
-    return null;
-  }
+  if (citesPhantomWord(label, meaning)) return reject("phantomEtymology", meaning);
   // R246（R239 P2-4）：zh meaning 引用 label 中不存在且非白名单的独立 ASCII 词（「tedeck 落音笃定」式幻影引用）→ 整条丢弃
-  if (ctx.lang === "zh" && zhCitesPhantomAscii(label, meaning)) {
-    dropped.phantomEtymology++;
-    return null;
-  }
+  if (ctx.lang === "zh" && zhCitesPhantomAscii(label, meaning)) return reject("phantomEtymology", meaning);
   // R196（P1-1）：meaning 含问号（犹豫/不成句的确定性信号，现只有 prompt 级约束）→ 整条丢弃
-  if (meaning.includes("?") || meaning.includes("\uff1f")) {
-    dropped.questionMark++;
-    return null;
-  }
+  if (meaning.includes("?") || meaning.includes("\uff1f")) return reject("questionMark", meaning);
   // R196（P1-1）：EN meaning 连贯性启发式——无 label 词源锤点且无谓语骨架的词语沙拉 → 整条丢弃
-  if (ctx.lang === "en" && enMeaningIncoherent(label, meaning, { wordMetaphor: isWordSupplement })) {
-    dropped.meaningIncoherent++;
-    return null;
-  }
-  const modelTheme = String(c.theme ?? "").toLowerCase();
+  if (ctx.lang === "en" && enMeaningIncoherent(label, meaning, { wordMetaphor: isWordSupplement })) return reject("meaningIncoherent", meaning);
   // R496（R494 P1-1）：zh meaning 连贯性启发式——长从句 + 比喻/叙事词的词语沙拉（moggity/hapany 型）→ 整条丢弃
-  if (ctx.lang === "zh" && zhMeaningIncoherent(label, meaning, { theme: ctx.ruleTheme ? "rule" : modelTheme })) {
-    dropped.zhMeaningIncoherent++;
-    return null;
-  }
+  if (ctx.lang === "zh" && zhMeaningIncoherent(label, meaning, { theme: ctx.ruleTheme ? "rule" : modelTheme })) return reject("zhMeaningIncoherent", meaning);
   const s = c.scores ?? ({} as Partial<AiScores>);
   // R499（R494 P3-1）：模型标注与高置信规则冲突时以规则为准（zhangwubao 全拼标 blend / cuddlepup 两词拼接标 word 型），
   // 先于拼音合法性校验，归一到 pinyin 的候选同样过 R124/R196 拼音防线
@@ -1830,23 +1846,14 @@ function admitCandidate(c: Partial<AiCandidate>, ctx: AdmitContext): AiCandidate
   let readabilityPenalty = 0;
   // R465（R464 复评）：en 场景丢弃拼音路线候选（英文用户读不出拼音，Top Picks 曾被拼音霸榜），先于拼音合法性校验以免计入其他防线；
   // lang 取自 UI 语言，中文 UI 下输入纯英文描述同样适用（R465 线上回归发现的路径盲区）
-  if (ctx.enPinyinDrop && theme === "pinyin") {
-    dropped.enPinyinRoute++;
-    return null;
-  }
+  if (ctx.enPinyinDrop && theme === "pinyin") return reject("enPinyinRoute", meaning);
   if (theme === "pinyin") {
     const check = checkPinyinLabel(label);
-    if (!check.ok) {
-      dropped.pinyinInvalid++;
-      return null;
-    }
+    if (!check.ok) return reject("pinyinInvalid", meaning);
     // 歧义切分扣 15 + 语感风险分（R142），叠加后从 readability 扣除
     readabilityPenalty = (check.ambiguous ? 15 : 0) + check.risk;
     // R196（P2-2）：声称「全拼」但「」内引用词的逐字拼音与 label 拼写不符（「探方」≠tangfang）→ 整条丢弃
-    if (pinyinQuoteMismatch(label, meaning)) {
-      dropped.pinyinMismatch++;
-      return null;
-    }
+    if (pinyinQuoteMismatch(label, meaning)) return reject("pinyinMismatch", meaning);
   }
   // R182：拼音系候选「」内命中生僻字黑名单，按字数从 readability 扣分（不丢弃）
   if (theme === "pinyin" || theme === "blend") {
@@ -1983,7 +1990,7 @@ async function generateOnce(
     stream: opts.onCandidate !== undefined,
     timeoutMs: 60_000, // 单次 LLM 调用超时上限，超时走上层重试
   });
-  // R238：防线统计——各丢弃路径按防线归类计数（只计数，不记录被丢弃候选内容）；
+  // R238：防线统计——各丢弃路径按防线归类计数（默认只计数；R500 debugDropped 开启时另记限额样本）；
   // R243：补发轮丢弃计入 supplementDropped，与主轮分开可观测
   const guardStats = opts.guard ?? newGuardStats();
   const isSupplement = isWordSupplement || opts.pinyinSupplementExclude !== undefined;
@@ -1997,7 +2004,16 @@ async function generateOnce(
     guardStats,
     dropped,
     seen: new Set<string>(),
+    supplement: isSupplement,
   };
+  const sampleDisliked = (cand: AiCandidate) =>
+    recordDroppedSample(guardStats, {
+      reason: "dislikedMorphology",
+      label: cand.label,
+      meaning: cand.meaning,
+      theme: cand.theme ?? "",
+      ...(isSupplement ? { supplement: true as const } : {}),
+    });
   const out: AiCandidate[] = [];
   // R225：点踩形态硬过滤兜底——prompt 级禁止（buildRefineHint）之外，对解析后的新候选
   // 跑与点踩集的形态相似度检查，共享词根前缀或同后缀模式即丢弃；过滤后不足再回填仅后缀冲突项
@@ -2013,6 +2029,10 @@ async function generateOnce(
     if (hasDisliked) {
       const kept = filterDislikedMorphology(out, disliked);
       dropped.dislikedMorphology += out.length - kept.length;
+      if (guardStats.droppedSamples !== undefined) {
+        const keptSet = new Set(kept);
+        for (const cand of out) if (!keptSet.has(cand)) sampleDisliked(cand);
+      }
       return kept;
     }
     return out;
@@ -2029,6 +2049,7 @@ async function generateOnce(
       const conflict = dislikedMorphologyConflict(cand.label, disliked);
       if (conflict === "root") {
         rootDropped++;
+        sampleDisliked(cand);
         return;
       }
       if (conflict === "suffix") {
@@ -2045,6 +2066,7 @@ async function generateOnce(
       out.push(cand);
       await sink(cand);
     }
+    for (const cand of suffixOnly.slice(backfill.length)) sampleDisliked(cand);
     dropped.dislikedMorphology += rootDropped + (suffixOnly.length - backfill.length);
   }
   return out;

@@ -280,8 +280,11 @@ app.post("/api/ai-search", async (c) => {
     lengthPref?: string;
     fast?: boolean;
     lang?: string;
+    /** R500：审计专用，严格 === true 才开；guard 事件附带限额的被丢弃候选样本，不写 KV，前端从不发送 */
+    debugDropped?: boolean;
   }>();
   const fast = body.fast === true;
+  const debugDropped = body.debugDropped === true;
   const lang: "zh" | "en" = body.lang === "en" ? "en" : "zh";
   let description = (body.description ?? "").trim().slice(0, 500);
   // R471：规则降级只从用户原始描述抽词（不含下方拼接的风格/长度偏好后缀）
@@ -364,8 +367,8 @@ app.post("/api/ai-search", async (c) => {
         for (let round = 1; round <= MAX_ROUNDS && availableCount < target; round++) {
           await emit({ type: "round", round, availableCount, target, note: round === 1 ? "AI 正在构思名字…" : "可注册的还不够，AI 反思后继续想…" });
           // R238：防线统计元数据——按轮汇总各防线丢弃计数与补发/重试触发情况，
-          // 随 proposed 事件返回（新增字段，旧前端忽略，不破坏现有结构）；只计数，不含被丢弃候选内容
-          const guard = newGuardStats();
+          // 随 proposed 事件返回（新增字段，旧前端忽略，不破坏现有结构）；默认只计数，不含被丢弃候选内容（R500 debugDropped 审计通道除外）
+          const guard = newGuardStats({ debugDropped });
           // R466：首结果提速——LLM 流式返回，每解出一个通过防线的候选立即：跨轮去重 → 单项 proposed 事件
           // （items 只含该候选，不带 guard）→ 进入核验队列逐域名下发 result；流结束后再发一条 items 为空的
           // proposed 携带本轮 guard 汇总（前端对同轮多条 proposed 的 filtered 是累加语义，guard 只带一次即不重计）。
