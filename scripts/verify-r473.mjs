@@ -135,11 +135,24 @@ const randLabel = () => {
 let firstSeenCollision = 0;
 let forcedCollision = 0;
 let adjacentPairs = 0;
+let vertical3 = 0;
+let vertical3Pairs = 0;
+let vertical2 = 0;
+let vertical2Pairs = 0;
 for (let t = 0; t < 1000; t++) {
   const pool = Array.from({ length: 6 + Math.floor(rnd() * 20) }, randLabel);
   const topL = pool.slice(0, 3);
   const gridL = [...pool].sort(() => rnd() - 0.5);
   const m = assignBrandVariants([topL, gridL]);
+  const gp = gridL.map((l) => paletteIndexOf(l, variantOf(m, l)));
+  for (let i = 3; i < gp.length; i++) {
+    vertical3Pairs++;
+    if (gp[i] === gp[i - 3]) vertical3++;
+  }
+  for (let i = 2; i < gp.length; i++) {
+    vertical2Pairs++;
+    if (gp[i] === gp[i - 2]) vertical2++;
+  }
   for (const labels of [topL, gridL]) {
     for (let i = 1; i < labels.length; i++) {
       adjacentPairs++;
@@ -156,6 +169,10 @@ for (let t = 0; t < 1000; t++) {
 }
 check("D1 相邻两张至少一张为本段首次分配时永不撞色（1000 组随机）", firstSeenCollision === 0, `(${firstSeenCollision})`);
 console.log(`INFO D2 两张均已在 Top Picks 定色又乱序相邻的撞色 ${forcedCollision}/${adjacentPairs} 相邻对（${((forcedCollision / adjacentPairs) * 100).toFixed(2)}%，已知限制）`);
+const v3 = (vertical3 / vertical3Pairs) * 100;
+const v2 = (vertical2 / vertical2Pairs) * 100;
+console.log(`INFO D3 Grid 纵向撞色（3 列上下）${vertical3}/${vertical3Pairs}（${v3.toFixed(2)}%），2 列上下 ${vertical2}/${vertical2Pairs}（${v2.toFixed(2)}%）；随机基线约 6.25%`);
+check("D3 lg 3 列 Grid 纵向同色率 < 2%（R477：纵向避色权重高于其他回看位）", v3 < 2, `(${v3.toFixed(2)}%)`);
 
 // ---------- E. 对比度 ----------
 function lum(hex) {
@@ -169,6 +186,8 @@ const ratio = (a, b) => {
 };
 const worst = Math.min(...PALETTES.map((p) => Math.min(ratio(p.fg, p.bg), p.bg2 ? ratio(p.fg, p.bg2) : Infinity)));
 check("E1 16 组配色 fg/bg（含渐变两端）≥ 4.5:1", worst >= 4.5, `(min ${worst.toFixed(2)})`);
+const worstAccent = Math.min(...PALETTES.map((p) => Math.min(ratio(p.accent, p.bg), p.bg2 ? ratio(p.accent, p.bg2) : Infinity)));
+check("E1b 16 组配色 accent/bg ≥ 4.5:1（R477：duotone/stacked 次行与字标字色）", worstAccent >= 4.5, `(min ${worstAccent.toFixed(2)})`);
 check("E2 PALETTES 恰 16 组（& 15 与步长 5 互质假设成立）", PALETTES.length === 16);
 
 console.log(failed === 0 ? "\nALL PASS" : `\n${failed} FAILED`);

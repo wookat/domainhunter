@@ -33,8 +33,11 @@ export function pickTopGroups<R extends { label: string; tld: string }>(sortedRo
 
 export type VariantMap = ReadonlyMap<string, BrandVariant>;
 
-/** 向前看几张卡避色：1 = 只保证线性相邻不撞；3 = 同时尽量避开 3 列网格的上一行（软约束） */
-const LOOKBACK = 3;
+/**
+ * 回看位撞色代价（软约束）：下标 k = 与前第 k 张同色的代价。k=2 是 sm 2 列的上一行，k=3 是 lg 3 列的
+ * 上一行（桌面主视图，权重最高）；k=1 是硬约束不在此列。
+ */
+const LOOKBACK_COST = [0, 0, 1, 2] as const;
 
 /**
  * 相邻撞色重排。`sections` 为各卡墙段（Top Picks、Grid）的 label 序列，段内相邻才算相邻。
@@ -61,8 +64,8 @@ export function assignBrandVariants(sections: readonly (readonly string[])[]): M
           const idx = paletteIndexOf(label, cand);
           if (idx === prev || idx === next) continue;
           let cost = 0;
-          for (let k = 2; k <= LOOKBACK; k++) {
-            if (palettes[palettes.length - k] === idx) cost++;
+          for (let k = 2; k < LOOKBACK_COST.length; k++) {
+            if (palettes[palettes.length - k] === idx) cost += LOOKBACK_COST[k];
           }
           if (cost < bestCost) {
             bestCost = cost;

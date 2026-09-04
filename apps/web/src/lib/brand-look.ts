@@ -1,6 +1,6 @@
 /**
  * 品牌卡外观派生（R468，纯函数、零 React 依赖，供 verify 脚本直接打包）：按名字 FNV-1a 哈希确定性
- * 派生配色 / 版式 / 字形 / 图形，同一名字永远同一外观。所有配色 fg 对 bg ≥ 4.5:1、accent 对 bg ≥ 3:1
+ * 派生配色 / 版式 / 字形 / 图形，同一名字永远同一外观。所有配色 fg / accent 对 bg 均 ≥ 4.5:1（accent 在 duotone/stacked 中作正文色）
  * （大字号），与页面主题无关。
  *
  * R473 `variant`（0/1/2）：只让配色在同一名字内确定性轮换（步长 5 与 16 互质，三个变体两两不同色），
@@ -19,17 +19,17 @@ export const PALETTES: readonly Palette[] = [
   { bg: "#FFD200", fg: "#1E3A8A", accent: "#7C2D12" },
   { bg: "#FFFFFF", fg: "#111827", accent: "#DC2626" },
   { bg: "#251D33", fg: "#F3F0FF", accent: "#C4B5FD" },
-  { bg: "#E11D48", fg: "#FFFFFF", accent: "#FFE4E6" },
-  { bg: "#C2410C", fg: "#FFF7ED", accent: "#FED7AA" },
+  { bg: "#BE123C", fg: "#FFFFFF", accent: "#FFE4E6" },
+  { bg: "#9A3412", fg: "#FFF7ED", accent: "#FED7AA" },
   { bg: "#E7E5E4", fg: "#1C1917", accent: "#57534E" },
   { bg: "#062A44", fg: "#FFFFFF", accent: "#7DD3FC" },
   { bg: "#0A0A0A", fg: "#FFFFFF", accent: "#A3A3A3" },
   { bg: "#D1FAE5", fg: "#064E3B", accent: "#047857" },
   { bg: "#4338CA", fg: "#FFFFFF", accent: "#C7D2FE" },
-  { bg: "#F7EFD9", fg: "#3F2A14", accent: "#B45309" },
-  { bg: "#DBEAFE", fg: "#1E3A8A", accent: "#2563EB" },
+  { bg: "#F7EFD9", fg: "#3F2A14", accent: "#92400E" },
+  { bg: "#DBEAFE", fg: "#1E3A8A", accent: "#1D4ED8" },
   { bg: "#1E1B4B", bg2: "#312E81", fg: "#FFFFFF", accent: "#FDE68A" },
-  { bg: "#7C2D12", bg2: "#B91C1C", fg: "#FFF7ED", accent: "#FDBA74" },
+  { bg: "#7C2D12", bg2: "#B91C1C", fg: "#FFF7ED", accent: "#FED7AA" },
   { bg: "#052E16", bg2: "#14532D", fg: "#ECFDF5", accent: "#86EFAC" },
   { bg: "#0C4A6E", bg2: "#1E3A8A", fg: "#FFFFFF", accent: "#67E8F9" },
 ];
