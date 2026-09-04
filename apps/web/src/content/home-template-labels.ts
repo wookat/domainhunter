@@ -10,6 +10,9 @@ export interface TemplateLabel {
 }
 
 export const TEMPLATE_LABELS: TemplateLabel[] = [
+  { slug: "tea", labelZh: "茶叶品牌", labelEn: "Tea brand" },
+  { slug: "crossborder", labelZh: "跨境电商", labelEn: "Cross-border e-commerce" },
+  { slug: "indiehacker", labelZh: "独立开发者", labelEn: "Indie hacker" },
   { slug: "saas", labelZh: "SaaS 工具", labelEn: "SaaS tool" },
   { slug: "ecommerce", labelZh: "电商品牌", labelEn: "E-commerce brand" },
   { slug: "ai", labelZh: "AI 产品", labelEn: "AI product" },
@@ -55,7 +58,6 @@ export const TEMPLATE_LABELS: TemplateLabel[] = [
   { slug: "eldercare", labelZh: "养老服务", labelEn: "Senior care" },
   { slug: "logistics", labelZh: "物流货运", labelEn: "Logistics & freight" },
   { slug: "agent", labelZh: "AI 智能体", labelEn: "AI agents" },
-  { slug: "crossborder", labelZh: "跨境电商", labelEn: "Cross-border e-commerce" },
   { slug: "escaperoom", labelZh: "剧本杀密室", labelEn: "Escape rooms" },
   { slug: "bakery", labelZh: "烘焙甜品", labelEn: "Bakeries & desserts" },
   { slug: "bookstore", labelZh: "书店出版", labelEn: "Bookstores & publishing" },
@@ -90,7 +92,6 @@ export const TEMPLATE_LABELS: TemplateLabel[] = [
   { slug: "events", labelZh: "活动策划", labelEn: "Event planning" },
   { slug: "moving", labelZh: "搬家服务", labelEn: "Moving services" },
   { slug: "aquarium", labelZh: "水族爬宠", labelEn: "Aquariums & reptiles" },
-  { slug: "indiehacker", labelZh: "独立开发者", labelEn: "Indie hacker" },
   { slug: "petsupplies", labelZh: "宠物用品电商", labelEn: "Pet supplies store" },
   { slug: "preschool", labelZh: "儿童早教", labelEn: "Early education" },
   { slug: "travelshoot", labelZh: "旅拍摄影", labelEn: "Travel photography" },
@@ -234,7 +235,6 @@ export const TEMPLATE_LABELS: TemplateLabel[] = [
   { slug: "icecream", labelZh: "冰淇淋品牌", labelEn: "Ice cream brand" },
   { slug: "hostel", labelZh: "青年旅舍", labelEn: "Hostel" },
   { slug: "bowling", labelZh: "保龄球馆", labelEn: "Bowling alley" },
-  { slug: "tea", labelZh: "茶叶品牌", labelEn: "Tea brand" },
   { slug: "hotspring", labelZh: "温泉度假", labelEn: "Hot spring resort" },
   { slug: "trampoline", labelZh: "蹦床公园", labelEn: "Trampoline park" },
   { slug: "funeral", labelZh: "殡葬服务", labelEn: "Funeral services" },

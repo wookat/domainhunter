@@ -13,6 +13,7 @@ import { COMPARE_SLUGS, compareLabel, relatedCompares } from "./compare-slugs";
 import { GUIDE_LABELS } from "./guide-labels";
 import { relatedGuideSlugs } from "./guide-groups";
 import { GUIDE_LIST, INDUSTRY_GUIDES, guidesForTld, type IndustryGuide } from "./guides";
+import { HOME_HERO } from "./home-copy";
 import { HUB_META, compareHubGroups, guideHubGroups, guideOneLiner, tldHubGroups, tldOneLiner } from "./hubs";
 import { relatedTlds } from "./tld-groups";
 import { TLD_GUIDES, type TldGuide } from "./tlds";
@@ -445,6 +446,24 @@ export function guideHubBlocks(lang: Lang): string[] {
 }
 
 /** /vs 全文正文（compare-hub-page.tsx 首次渲染的静态部分） */
+/**
+ * 首页首屏 SSR 骨架（badge / h1 / 副标题）：类名与文案逐字对齐 home-page.tsx hero，
+ * React 挂载后整体替换（createRoot().render，非 hydrate），h1 文本与水合后一致。
+ */
+export function homeHeroSkeleton(html: string, lang: Lang): string {
+  const h = HOME_HERO[lang];
+  const skeleton = [
+    `<div class="flex min-h-screen flex-col">`,
+    `<header class="sticky top-0 z-20 border-b border-line bg-bg0/85"><div class="mx-auto flex h-14 max-w-7xl items-center px-4 md:px-6"><span class="flex items-center gap-2 font-bold tracking-tight"><span class="grid h-7 w-7 place-items-center rounded-lg border border-brand-line bg-brand-dim"></span><span class="max-[430px]:hidden">DomainHunter</span></span></div></header>`,
+    `<main class="relative min-w-0 flex-1"><div class="pointer-events-none absolute inset-x-0 top-0 h-[420px]" style="background:var(--glow)"></div><div class="relative mx-auto max-w-3xl px-4 pb-16 pt-16 md:pt-24">`,
+    `<div class="mb-5 flex justify-center"><span class="inline-flex items-center gap-1.5 rounded-full border border-brand-line bg-brand-dim px-3 py-1.5 text-xs text-brand"><span class="dot-breathe h-1.5 w-1.5 rounded-full bg-brand"></span>${escapeHtml(h.badge)}</span></div>`,
+    `<h1 class="text-center text-4xl font-extrabold leading-[1.12] tracking-[-0.03em] md:text-[52px]" style="text-wrap:balance">${escapeHtml(h.title1)}<br class="md:hidden"><span${lang === "zh" ? ' class="whitespace-nowrap"' : ""}>${escapeHtml(h.title2)}</span><wbr><span class="whitespace-nowrap">${escapeHtml(h.title2b)}</span></h1>`,
+    `<p class="mt-4 text-center text-base text-txt1 md:text-lg">${escapeHtml(h.subtitle)}</p>`,
+    `</div></main></div>`,
+  ].join("");
+  return html.replace('<div id="root"></div>', `<div id="root">${skeleton}</div>`);
+}
+
 export function compareHubBlocks(lang: Lang): string[] {
   const meta = HUB_META.vs[lang];
   const intro = `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(meta.intro)}</p>${HUB_FILTER_PLACEHOLDER}${hubNavChips(lang, compareHubGroups().map((g) => ({ id: g.tld, label: `.${g.tld}`, count: g.slugs.length })))}`;
