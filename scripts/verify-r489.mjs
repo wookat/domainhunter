@@ -6,6 +6,7 @@
 //   C. 语义组合：行业核心字 × 寓意字 双字短拼音、拼音+英文混搭；纯拼音组合全部过 checkPinyinLabel；禁忌音节不出现；近义字 meaning 如实标注
 //   D. 排序与限额：根词仍在前两位；语义组合紧随根词；泛前后缀 ≤ 8 且仍各有代表；全部候选过 admitRuleCandidate（dropped=0）
 //   E. R471 行为保持：en 输入 / 无词表命中的 zh 输入产出与旧路线一致（无语义组合时不限额）；排除集生效；上限 24
+//   F. R493 端到端审计修复：单字寓意输入（云）不再 0 候选；客/大/告/感 等高频字放行（客服/大海/告别 成词）；新能源/充电桩/客服 入词表不再切碎
 import { rmSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
@@ -150,6 +151,20 @@ const roots = (desc) => rule.extractRuleRoots(desc).map((r) => r.text);
   const noLex = gen("暮雨黄昏", "zh");
   const noLexAffix = noLex.out.filter((c) => /前缀|后缀/.test(c.meaning)).length;
   check("E4 无词表命中的 zh 输入走旧路线（2 根词 + 2 拼接 + 16 泛变体不限额）", [noLex.labels.slice(0, 2), noLexAffix, noLex.labels.length], [["muyu", "huanghun"], 16, 20]);
+}
+
+// ---------- F. R493 端到端审计修复 ----------
+{
+  const yun = gen("云");
+  check("F1 单字寓意「云」退化为寓意字根词，不再 0 候选", [yun.labels[0], yun.labels.includes("yunapp"), yun.labels.length > 0, yun.dropped], ["yun", true, true, 0]);
+  check("F1b 表外单字仍 0 候选（E2 不变）", gen("龘").labels.length, 0);
+  check("F2 高频多音字放行：客服/大海/告别 成词（平台 仍为泛词）", [roots("星辰大海"), roots("宠物殡葬，温暖告别"), roots("客服平台")], [["xingchen", "dahai"], ["chongwu", "binzang", "wennuan", "gaobie"], ["kefu"]]);
+  check("F2b 星辰大海 → 星/海 寓意字组合 xinghai", gen("星辰大海").labels.includes("xinghai"), true);
+  check("F3 新能源/充电桩 成词，无「新能/源充/电桩」碎片", roots("新能源充电桩运营，希望名字有快和稳的感觉"), ["xinnengyuan", "chongdianzhuang", "yunying"]);
+  const ev = gen("新能源充电桩运营，希望名字有快和稳的感觉");
+  check("F3b 快/稳 寓意字 × 行业英文 ev：kuaiev/wenev", ["kuaiev", "wenev"].every((l) => ev.labels.includes(l)), true);
+  const kf = gen("ai客服");
+  check("F4 「ai客服」：ai 为停用词，客服 成根词并有混搭", [kf.labels[0], kf.labels.includes("chatke")], ["kefu", true]);
 }
 
 console.log(failed ? `\n${failed} FAILED` : "\nALL PASS");

@@ -438,8 +438,11 @@ export function generateRuleCandidates(
   exclude: ReadonlySet<string> = new Set(),
   max = RULE_FALLBACK_MAX_LABELS,
 ): AiCandidate[] {
-  const roots = extractRuleRoots(description);
-  const semantic = enumerateSemanticDrafts(analyzeZh(description), roots.filter((r) => r.kind === "ascii"));
+  const sem = analyzeZh(description);
+  let roots = extractRuleRoots(description);
+  // 单字 / 极短中文输入（云、星）抽不出整词根词时，退化为行业核心字 / 寓意字作根词，避免降级 0 候选
+  if (roots.length === 0) roots = [...sem.cores, ...sem.brands].slice(0, RULE_FALLBACK_MAX_ROOTS).map(({ text, kind, hanzi }) => ({ text, kind, hanzi }));
+  const semantic = enumerateSemanticDrafts(sem, roots.filter((r) => r.kind === "ascii"));
   const seen = new Set<string>(exclude);
   const out: AiCandidate[] = [];
   for (const d of enumerateRuleDrafts(roots, max * 3, semantic)) {
