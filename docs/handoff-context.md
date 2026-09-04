@@ -40,7 +40,7 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 - `POST /api/check` — 清单复查（≤100 个，`refresh=1`/`refresh:true` 穿透缓存），NDJSON。
 - `GET /api/prices` — Porkbun 实时价（KV 24h 缓存，stale 兜底；彻底无数据回 200 + 空 prices）。
 - `GET /api/stats` — 累计核验数（`stats:checked`）。
-- `GET /api/usage?days=N` — 最近 N 天（≤45）聚合使用量 + `cronLast` / `indexnowLast` 心跳；每日项含 `aiErrors`（R264）与 `llmProvider: {primary, fallback}`（R474，每成功主轮 +1；字段可缺，老数据无）。
+- `GET /api/usage?days=N` — 最近 N 天（≤45）聚合使用量 + `cronLast` / `indexnowLast` / `indexnowLastError` 心跳；每日项含 `aiErrors`（R264）与 `llmProvider: {primary, fallback}`（R474，每成功主轮 +1；字段可缺，老数据无）；R481 起合并 `pv:{date}` 的 `pageviews:{home,results,tld,guide,vs,prices,other}` + `bots` / `botsBy:{google,bing,baidu,ai,other}`（仅 Worker 成功返回 HTML 文档时计数，爬虫 UA 只计 bots；不存 IP/UA 原文；见 `docs/research/growth-analytics.md`）。
 - `POST /api/monitor`、`POST /api/monitor/list`、`GET /api/monitor/changes`、`POST /api/monitor/recheck` — 监控增删/查询/变化记录/手动实时复查（复查限频每 IP 60s）。
 - `POST /api/share`、`GET|DELETE /api/share/:id` — 清单分享快照（≤100 项，30 天 TTL，revokeToken 撤销）。
 - `POST /api/sync`、`GET /api/sync/:code` — 免登录跨设备同步码（8 位 A-Z2-9 去混淆字母，90 天 TTL）。
@@ -62,11 +62,23 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 | `prices:v2:{N}` | Porkbun 价格缓存 24h；**key 掺 TLD_LIST.length**，扩容后旧缓存自动失效 |
 | `prices:latest` | 不带版本的 stale 兜底（30 天，每次成功拉取刷新） |
 | `share:{id}` / `sync:{code}` | 分享快照 30 天 / 同步码 90 天 |
-| `cron:last` / `indexnow:last` | cron 心跳 / IndexNow 上次推送时间 |
+| `cron:last` / `indexnow:last` | cron 心跳 / IndexNow 上次**成功**（200/202）推送时间 |
+| `indexnow:lastAttempt` / `indexnow:lastError` | IndexNow 上次尝试时间（失败后 6h 冷却）/ 上次失败详情 JSON（R481） |
+| `pv:{YYYY-MM-DD}` | 每日 HTML 文档访问按路由类别聚合 + bots（R481，isolate 内 5s 合并再落盘，45 天） |
 
 ### 2.4 Cron（`triggers.crons: ["0 */6 * * *"]`，worker `scheduled`）
 
-每 6 小时：① 写 `cron:last` 心跳；② `runMonitorSweep`（全量监控域实时复查，状态变化写 `monitor:changes` + webhook 推送）；③ `pingIndexNow`（≥24h 间隔向 api.indexnow.org 推送 sitemap 全部 URL，key 文件 `/{INDEXNOW_KEY}.txt`）。
+每 6 小时：① 写 `cron:last` 心跳；② `runMonitorSweep`（全量监控域实时复查，状态变化写 `monitor:changes` + webhook 推送）；③ `pingIndexNow`（≥24h 间隔向 api.indexnow.org 推送 sitemap 全部 URL，key 文件 `/{INDEXNOW_KEY}.txt`；R481 起按 10,000/批拆分、仅 200/202 视为成功后才写 `indexnow:last`，失败写 `indexnow:lastError` 并 6h 后重试）。
+
+### 2.5 增长可选 vars（R481，`wrangler.jsonc` `vars` 或 Dashboard 设置；默认全空 = HTML 字节不变、零脚本）
+
+| var | 作用 |
+|---|---|
+| `GSC_VERIFICATION` | Google Search Console HTML tag 的 content 值 → `<meta name="google-site-verification">` |
+| `BING_VERIFICATION` | Bing Webmaster meta 的 content 值 → `<meta name="msvalidate.01">` |
+| `ANALYTICS_PROVIDER` / `ANALYTICS_TOKEN` | 目前仅支持 `cloudflare` + 32 位 hex site token → 注入官方 beacon（SPA 路由默认自动追踪）；启用后页脚显示双语隐私一句话 |
+
+注入由 `worker.ts` 全局后置中间件统一处理（`growth-inject.ts`），只对 `content-type: text/html` 且 2xx/4xx 的 GET 文档生效，JSON/XML/文本/静态资源不触碰。
 
 ## 3. 关键约定与踩坑
 

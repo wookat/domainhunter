@@ -420,6 +420,7 @@ const zh = {
   "monitors.confirmCountdown": "{s} 秒内点击生效",
   "footer.industryGuides": "行业命名指南",
   "footer.compares": "后缀对比",
+  "footer.analyticsNotice": "本站使用 Cloudflare Web Analytics 统计归总访问量：不用 Cookie、不识别个人、不跟踪你在其他网站的行为。",
   // AI 理解确认条
   "understand.prefix": "我理解你要的是：",
   "understand.style": "风格",
@@ -878,6 +879,7 @@ const en: Record<I18nKey, string> = {
   "monitors.confirmCountdown": "click within {s}s",
   "footer.industryGuides": "Industry naming guides",
   "footer.compares": "TLD comparisons",
+  "footer.analyticsNotice": "This site uses Cloudflare Web Analytics for aggregate traffic stats only: no cookies, no personal identification, no cross-site tracking.",
   "understand.prefix": "I hear you're after: ",
   "understand.style": "Style",
   "understand.scene": "Scene",
