@@ -6,7 +6,7 @@
  * 本模块被 worker.ts 与前端共用，不得引入 React / DOM。
  */
 
-export type RegistrarId = "porkbun" | "namecheap" | "cloudflare" | "aliyun" | "tencent";
+export type RegistrarId = "porkbun" | "namecheap" | "dynadot" | "cloudflare" | "aliyun" | "tencent";
 export type RegistrarRegion = "cn" | "global";
 
 /**
@@ -33,7 +33,7 @@ export interface Registrar {
   supportsTld?: (tld: string) => boolean;
 }
 
-export const REGISTRAR_IDS: readonly RegistrarId[] = ["porkbun", "namecheap", "cloudflare", "aliyun", "tencent"];
+export const REGISTRAR_IDS: readonly RegistrarId[] = ["porkbun", "namecheap", "dynadot", "cloudflare", "aliyun", "tencent"];
 
 export function isRegistrarId(v: unknown): v is RegistrarId {
   return typeof v === "string" && (REGISTRAR_IDS as readonly string[]).includes(v);
@@ -67,12 +67,14 @@ export function isCnTld(tld: string): boolean {
 const notCn = (tld: string) => !isCnTld(tld);
 
 /**
- * 基础顺序即"非中国后缀"的展示顺序：Porkbun → Namecheap → Cloudflare → 阿里云 → 腾讯云。
- * supportsTld 依据：Porkbun 定价 API 无 cn/com.cn 条目；Cloudflare TLD 政策页数据无 cn/com.cn（均见调研文档）。
+ * 基础顺序即"非中国后缀"的展示顺序：Porkbun → Namecheap → Dynadot → Cloudflare → 阿里云 → 腾讯云。
+ * supportsTld 依据：Porkbun 定价 API 无 cn/com.cn 条目；Namecheap 搜索页对 .cn/.com.cn 返回 "Unsupported TLD"；
+ * Cloudflare TLD 政策页数据无 cn/com.cn；Dynadot 官方 /domain/cn、/domain/com.cn 有售且中文站/人民币可用（均见 docs/research/registrar-affiliate.md §4）。
  */
 const searchUrl = {
   porkbun: (d: string) => `https://porkbun.com/checkout/search?q=${encodeURIComponent(d)}`,
   namecheap: (d: string) => `https://www.namecheap.com/domains/registration/results/?domain=${encodeURIComponent(d)}`,
+  dynadot: (d: string) => `https://www.dynadot.com/domain/search?domain=${encodeURIComponent(d)}`,
   cloudflare: (d: string) => `https://domains.cloudflare.com/?domain=${encodeURIComponent(d)}`,
   aliyun: (d: string) => `https://wanwang.aliyun.com/domain/searchresult/#/?keyword=${encodeURIComponent(d)}`,
   tencent: (d: string) => `https://buy.cloud.tencent.com/domain?domain=${encodeURIComponent(d)}`,
@@ -82,7 +84,9 @@ const withAffiliate = (id: RegistrarId) => (d: string, p: AffiliateParams) => ap
 
 export const REGISTRARS: readonly Registrar[] = [
   { id: "porkbun", name: "Porkbun", region: "global", url: searchUrl.porkbun, affiliate: withAffiliate("porkbun"), supportsTld: notCn },
-  { id: "namecheap", name: "Namecheap", region: "global", url: searchUrl.namecheap, affiliate: withAffiliate("namecheap") },
+  { id: "namecheap", name: "Namecheap", region: "global", url: searchUrl.namecheap, affiliate: withAffiliate("namecheap"), supportsTld: notCn },
+  // Dynadot：唯一同时售 .cn/.com.cn 且提供中文界面 + 人民币/支付宝的海外注册商，是 .cn 菜单里阿里云/腾讯云之外的海外备选
+  { id: "dynadot", name: "Dynadot", region: "global", url: searchUrl.dynadot, affiliate: withAffiliate("dynadot") },
   // Cloudflare Registrar 按成本价售卖、无联盟计划：不定义 affiliate，配置了参数也保持纯链接
   { id: "cloudflare", name: "Cloudflare", region: "global", url: searchUrl.cloudflare, supportsTld: notCn },
   { id: "aliyun", name: "阿里云", region: "cn", url: searchUrl.aliyun, affiliate: withAffiliate("aliyun") },
@@ -100,7 +104,7 @@ export function tldOf(domainOrTld: string): string {
  * 某域名/TLD 应展示的注册商及顺序（确定性、稳定排序）：
  * 1. 过滤掉 supportsTld(tld) === false 的注册商；
  * 2. 中国后缀（isCnTld）：region "cn" 在前（阿里云、腾讯云），其余按基础顺序跟随；
- * 3. 其他后缀：region "global" 在前（Porkbun、Namecheap、Cloudflare），region "cn" 跟随。
+ * 3. 其他后缀：region "global" 在前（Porkbun、Namecheap、Dynadot、Cloudflare），region "cn" 跟随。
  */
 export function registrarsFor(domainOrTld: string): Registrar[] {
   const tld = tldOf(domainOrTld);
