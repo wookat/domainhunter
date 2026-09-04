@@ -40,7 +40,7 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 - `POST /api/check` — 清单复查（≤100 个，`refresh=1`/`refresh:true` 穿透缓存），NDJSON。
 - `GET /api/prices` — Porkbun 实时价（KV 24h 缓存，stale 兜底；彻底无数据回 200 + 空 prices）。
 - `GET /api/stats` — 累计核验数（`stats:checked`）。
-- `GET /api/usage?days=N` — 最近 N 天（≤45）聚合使用量 + `cronLast` / `indexnowLast` / `indexnowLastError` 心跳；每日项含 `aiErrors`（R264）与 `llmProvider: {primary, fallback}`（R474，每成功主轮 +1；字段可缺，老数据无）；R481 起合并 `pv:{date}`（R482 起按 isolate 分片为 `pv:{date}:<shard>`，读侧 list 前缀求和并兼容旧键，消除多 isolate 读改写互相覆盖）的 `pageviews:{home,results,tld,guide,vs,prices,other}` + `bots` / `botsBy:{google,bing,baidu,ai,other}`（仅 Worker 成功返回 HTML 文档时计数，爬虫 UA 只计 bots；不存 IP/UA 原文；见 `docs/research/growth-analytics.md`）；R480 起含 `outbound: {porkbun|namecheap|cloudflare|aliyun|tencent: n}` 与 `outboundByTld`（注册外链点击数，非 TLD_LIST/com.cn 的归 `other`）。
+- `GET /api/usage?days=N` — 最近 N 天（≤45）聚合使用量 + `cronLast` / `indexnowLast` / `indexnowLastError` 心跳；每日项含 `aiErrors`（R264）与 `llmProvider: {primary, fallback}`（R474，每成功主轮 +1；字段可缺，老数据无）；R481 起合并 `pv:{date}`（R482 起按 isolate 分片为 `pv:{date}:<shard>`，读侧 list 前缀求和并兼容旧键，消除多 isolate 读改写互相覆盖）的 `pageviews:{home,results,tld,guide,vs,prices,other}` + `bots` / `botsBy:{google,bing,baidu,ai,other}`（仅 Worker 成功返回 HTML 文档时计数，爬虫 UA 只计 bots；不存 IP/UA 原文；见 `docs/research/growth-analytics.md`）；R480 起含 `outbound: {porkbun|namecheap|cloudflare|aliyun|tencent: n}` 与 `outboundByTld`（注册外链点击数，非 TLD_LIST/com.cn 的归 `other`）。R487 起 `usage:{date}` 的全部计数字段也按 isolate 分片写 `usage:{date}:<shard>`，读侧 `readDayUsage` 深合并旧键 + 分片（嵌套 map 逐键相加），多 isolate 并发不再互相覆盖（R484 审计 4 次外链只入账 3 次；本地双 workerd 12 并发基线只入账 2，修后精确 12）；分片写入后 ≤ 60s KV 最终一致延迟，生产回归前后对比需等 ≥ 60s。
 - `GET /api/registrars`（R480）— 返回 `{affiliate}`：wrangler **公开 var** `REGISTRAR_AFFILIATE_JSON`（默认 `"{}"`，非 secret）经 `parseAffiliateJson` 校验后的注册商返佣参数；`cache-control: public, max-age=300`。`POST /api/click {registrar, tld}` → 204，仅累加 `usage.outbound`（不存域名/IP）；非法 id/tld → 400。
 - `POST /api/monitor`、`POST /api/monitor/list`、`GET /api/monitor/changes`、`POST /api/monitor/recheck` — 监控增删/查询/变化记录/手动实时复查（复查限频每 IP 60s）。
 - `POST /api/share`、`GET|DELETE /api/share/:id` — 清单分享快照（≤100 项，30 天 TTL，revokeToken 撤销）。
@@ -57,7 +57,7 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 | `rl:{ip}:{hourBucket}` | AI/check 限流计数，~1h |
 | `rl:recheck:{ip}` | 监控手动复查限频（60s） |
 | `stats:checked` | 累计核验计数（非原子，允许误差） |
-| `usage:{YYYY-MM-DD}` | 每日聚合使用量（仅计数，无输入/IP；R480 起含 `outbound`/`outboundByTld`），45 天 |
+| `usage:{YYYY-MM-DD}` / `usage:{YYYY-MM-DD}:<shard>` | 每日聚合使用量（仅计数，无输入/IP；R480 起含 `outbound`/`outboundByTld`），45 天。R487 起只写每 isolate 自己的分片键（`usage-counter.ts`，isolate 内 1s 合并再落盘），无分片后缀的旧键仅作为历史数据被读侧合并，不再写入 |
 | `monitor:domains` | 监控集合单 key 全局 map（上限 500） |
 | `monitor:changes` | 状态变化记录（保留 100 条） |
 | `prices:v2:{N}` | Porkbun 价格缓存 24h；**key 掺 TLD_LIST.length**，扩容后旧缓存自动失效 |
@@ -65,7 +65,7 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 | `share:{id}` / `sync:{code}` | 分享快照 30 天 / 同步码 90 天 |
 | `cron:last` / `indexnow:last` | cron 心跳 / IndexNow 上次**成功**（200/202）推送时间 |
 | `indexnow:lastAttempt` / `indexnow:lastError` | IndexNow 上次尝试时间（失败后 6h 冷却）/ 上次失败详情 JSON（R481） |
-| `pv:{YYYY-MM-DD}` | 每日 HTML 文档访问按路由类别聚合 + bots（R481，isolate 内 5s 合并再落盘，45 天） |
+| `pv:{YYYY-MM-DD}` / `pv:{YYYY-MM-DD}:<shard>` | 每日 HTML 文档访问按路由类别聚合 + bots（R481，isolate 内 5s 合并再落盘，R482 起按 isolate 分片，45 天；与 usage 共用 `sharded-counter.ts`） |
 | `baidu:last` / `baidu:lastAttempt` / `baidu:lastError` / `baidu:pushed` | 百度普通收录 API 推送：上次成功（仅 200）/ 上次尝试（失败 6h 冷却）/ 失败详情 / 已被百度计为成功的 URL 列表（R485，仅在 BAIDU_PUSH_* 配置后才会出现） |
 
 ### 2.4 Cron（`triggers.crons: ["0 */6 * * *"]`，worker `scheduled`）

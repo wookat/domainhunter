@@ -26,6 +26,7 @@ import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./pri
 import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
 import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
 import { PageviewCounter, readDayPageviews, type DayPageviews } from "./pageviews";
+import { emptyDayUsage, readDayUsage, usageCounterFor, type DayUsage } from "./usage-counter";
 import { INDEXNOW_ENDPOINT, submitIndexNow, summarizeIndexNow } from "./indexnow";
 import { pickPending, resolveBaiduPush, submitBaidu, summarizeBaidu, type BaiduPushVars } from "./baidu-push";
 
@@ -116,87 +117,12 @@ async function bumpStats(kv: KVNamespace | undefined, n: number): Promise<void> 
   } catch { /* 计数失败不影响主流程 */ }
 }
 
-/** 每日聚合使用统计（仅聚合计数，不存任何用户输入/IP；KV 非原子，允许少量误差） */
-interface DayUsage {
-  searches: number;
-  byTld: Record<string, number>;
-  fast: number;
-  refine: number;
-  /** 当日 AI 上游错误分类计数（R264，仅数字；旧数据无此字段） */
-  aiErrors?: Partial<Record<AiErrorKind, number>>;
-  /** 当日规则降级次数（R471，按 fallback 事件 reason 计；quota-breaker = 熔断期内直接降级，未打上游） */
-  fallbacks?: Partial<Record<FallbackReason, number>>;
-  /** 分享写入读回校验失败后的重试次数（R305，生产观测；旧数据无此字段） */
-  shareWriteRetry?: number;
-  /** 分享写入最终失败（含换 id 重写仍失败）次数（R305） */
-  shareWriteFail?: number;
-  /** 当日 AI 主轮实际应答的 LLM 上游计数（R474：主/备；仅数字；旧数据无此字段） */
-  llmProvider?: Partial<Record<LlmProvider, number>>;
-  /** 当日注册商外链点击数，按注册商 id 聚合（R480；不含域名/IP；旧数据无此字段） */
-  outbound?: Partial<Record<RegistrarId, number>>;
-  /** 当日注册商外链点击数，按 TLD 聚合（仅 TLD_LIST 内的后缀，其余记 other） */
-  outboundByTld?: Record<string, number>;
-}
+// 每日聚合使用统计（仅聚合计数，不存任何用户输入/IP）：结构与计数器见 usage-counter.ts。
+// R487 起所有 usage 计数走每 isolate 一个的 UsageCounter：同 isolate 内先合并再写自己的分片键 usage:{date}:<shard>，
+// 读侧 /api/usage 聚合求和（取代对同一 usage:{date} 键的非原子读改写）。同一请求内的多次计数无需再错开时机。
 
-async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: boolean, refine: boolean): Promise<void> {
-  if (!kv) return;
-  try {
-    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
-    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
-    cur.searches += 1;
-    if (fast) cur.fast += 1;
-    if (refine) cur.refine += 1;
-    for (const t of tlds) cur.byTld[t] = (cur.byTld[t] ?? 0) + 1;
-    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
-  } catch { /* 统计失败不影响主流程 */ }
-}
-
-/** 当日注册商外链点击 +1（R480，仅计数；KV 非原子，允许少量误差） */
-async function bumpOutbound(kv: KVNamespace | undefined, registrar: RegistrarId, tld: string): Promise<void> {
-  if (!kv) return;
-  try {
-    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
-    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
-    cur.outbound = { ...cur.outbound, [registrar]: (cur.outbound?.[registrar] ?? 0) + 1 };
-    // 只按已知 TLD 分桶（含站内核验支持的 com.cn），其余归 other，避免 KV 记录被任意字符串撑大
-    const tldKey = tld === "com.cn" || (TLD_LIST as readonly string[]).includes(tld) ? tld : "other";
-    cur.outboundByTld = { ...cur.outboundByTld, [tldKey]: (cur.outboundByTld?.[tldKey] ?? 0) + 1 };
-    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
-  } catch { /* 统计失败不影响主流程 */ }
-}
-
-/** 当日 AI 上游错误分类计数 +1（R264，仅计数；KV 非原子，允许少量误差） */
-async function bumpAiError(kv: KVNamespace | undefined, kind: AiErrorKind): Promise<void> {
-  if (!kv) return;
-  try {
-    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
-    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
-    cur.aiErrors = { ...cur.aiErrors, [kind]: (cur.aiErrors?.[kind] ?? 0) + 1 };
-    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
-  } catch { /* 统计失败不影响主流程 */ }
-}
-
-/** 当日 LLM 主轮应答上游计数 +1（R474，仅计数；KV 非原子，允许少量误差） */
-async function bumpLlmProvider(kv: KVNamespace | undefined, provider: LlmProvider): Promise<void> {
-  if (!kv) return;
-  try {
-    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
-    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
-    cur.llmProvider = { ...cur.llmProvider, [provider]: (cur.llmProvider?.[provider] ?? 0) + 1 };
-    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
-  } catch { /* 统计失败不影响主流程 */ }
-}
-
-/** 当日规则降级计数 +1（R471，仅计数；KV 非原子，允许少量误差） */
-async function bumpFallback(kv: KVNamespace | undefined, reason: FallbackReason): Promise<void> {
-  if (!kv) return;
-  try {
-    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
-    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
-    cur.fallbacks = { ...cur.fallbacks, [reason]: (cur.fallbacks?.[reason] ?? 0) + 1 };
-    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
-  } catch { /* 统计失败不影响主流程 */ }
-}
+/** 外链点击的 TLD 分桶：只按已知 TLD（含站内核验支持的 com.cn），其余归 other，避免 KV 记录被任意字符串撑大 */
+const outboundTldBucket = (tld: string): string => (tld === "com.cn" || (TLD_LIST as readonly string[]).includes(tld) ? tld : "other");
 
 /** 熔断标记：值为到期时间戳（ms），KV TTL 之外再校验一次时间，避免 TTL 精度/时钟差导致多放行 */
 async function llmBreakerUntil(kv: KVNamespace | undefined): Promise<number | null> {
@@ -215,18 +141,6 @@ async function tripLlmBreaker(kv: KVNamespace | undefined): Promise<void> {
   try {
     await kv.put(LLM_BREAKER_KEY, String(Date.now() + LLM_BREAKER_TTL_S * 1000), { expirationTtl: LLM_BREAKER_TTL_S });
   } catch { /* 熔断写失败退化为每请求各自撞上游（原行为） */ }
-}
-
-/** 分享写入重试/失败计数（R305，仅聚合数字；KV 非原子，允许少量误差） */
-async function bumpShareWrite(kv: KVNamespace | undefined, retries: number, failed: boolean): Promise<void> {
-  if (!kv || (retries <= 0 && !failed)) return;
-  try {
-    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
-    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
-    if (retries > 0) cur.shareWriteRetry = (cur.shareWriteRetry ?? 0) + retries;
-    if (failed) cur.shareWriteFail = (cur.shareWriteFail ?? 0) + 1;
-    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
-  } catch { /* 统计失败不影响主流程 */ }
 }
 
 /** 按 IP 简单限流（KV 计数，按小时桶）；无 KV 绑定时不限流 */
@@ -384,7 +298,10 @@ app.post("/api/ai-search", async (c) => {
     return c.json({ error: "rate_limited", message: msg }, 429);
   }
 
-  c.executionCtx.waitUntil(bumpUsage(c.env.CACHE, tlds, fast, (body.excludeLabels ?? []).length > 0));
+  const usage = usageCounterFor(c.env.CACHE);
+  c.executionCtx.waitUntil(usage.search(tlds, fast, (body.excludeLabels ?? []).length > 0));
+  // 流内产生的计数（aiError/llmProvider/fallback）不阻塞事件下发，统一在流关闭后等待落盘
+  const usageTails: Promise<void>[] = [];
 
   const apiKey = c.env.DEEPSEEK_API_KEY;
   const { readable, writable } = new TransformStream();
@@ -512,7 +429,7 @@ app.post("/api/ai-search", async (c) => {
               // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；
               // detail 只含既有错误短码（llm-http-402 等），不含 key 与上游响应体
               const errorKind = classifyAiError(e);
-              await bumpAiError(c.env.CACHE, errorKind);
+              usageTails.push(usage.aiError(errorKind));
               // R471：quota 耗尽→写 5 分钟熔断（rate-limit 不写）；首轮失败→规则降级而非直接结束
               if (errorKind === "quota") await tripLlmBreaker(c.env.CACHE);
               if (round === 1 && FALLBACK_ERROR_KINDS.has(errorKind)) {
@@ -527,12 +444,11 @@ app.post("/api/ai-search", async (c) => {
           }
           // R474：本轮实际应答的 LLM 上游（primary/fallback）随汇总事件透出（新增尾部字段，旧前端忽略），并计入当日 usage
           await emit({ type: "proposed", round, items: [], tlds, guard, provider: guard.provider });
-          if (guard.provider) await bumpLlmProvider(c.env.CACHE, guard.provider);
+          if (guard.provider) usageTails.push(usage.llmProvider(guard.provider));
           await checks.drain();
           await bumpStats(c.env.CACHE, checkedDomains);
           if (fellBack) {
-            // 核验排完后再计数：避开与 waitUntil(bumpUsage) 对同一 usage 键的读改写竞争（KV 非原子）
-            await bumpFallback(c.env.CACHE, fellBack);
+            usageTails.push(usage.fallback(fellBack));
             break;
           }
           takenLabels.push(...takenThisRound);
@@ -552,6 +468,7 @@ app.post("/api/ai-search", async (c) => {
         await emit({ type: "done", availableCount, target, reachedTarget: availableCount >= target });
       } finally {
         await writer.close();
+        await Promise.allSettled(usageTails);
       }
     })(),
   );
@@ -832,7 +749,7 @@ app.post("/api/share", async (c) => {
   const payload = JSON.stringify({ items, createdAt: Date.now(), revokeToken });
   // KV put 偶发静默丢失：写后读回校验 + 退避重试 + 换 id 重写（详见 share-write.ts）
   const result = await putShareVerified(kv, () => nanoid(10), () => payload, SHARE_TTL);
-  c.executionCtx.waitUntil(bumpShareWrite(kv, result.retries, !result.ok));
+  c.executionCtx.waitUntil(usageCounterFor(kv).shareWrite(result.retries, !result.ok));
   if (!result.ok) {
     // 结构化失败日志（wrangler tail 排查用）：总尝试次数、用过的 id 数、KV 抛错消息摘要
     console.error(
@@ -1231,7 +1148,7 @@ app.post("/api/click", async (c) => {
   const registrar = body?.registrar;
   const tld = typeof body?.tld === "string" ? body.tld.toLowerCase().replace(/^\./, "") : "";
   if (!isRegistrarId(registrar) || !CLICK_TLD_RE.test(tld)) return c.json({ error: "invalid click" }, 400);
-  c.executionCtx.waitUntil(bumpOutbound(c.env.CACHE, registrar, tld));
+  c.executionCtx.waitUntil(usageCounterFor(c.env.CACHE).outbound(registrar, outboundTldBucket(tld)));
   return c.body(null, 204, { "cache-control": "no-store" });
 });
 
@@ -1244,12 +1161,9 @@ app.get("/api/usage", async (c) => {
     const dates = Array.from({ length: days }, (_, i) => new Date(Date.now() - i * 86400_000).toISOString().slice(0, 10));
     await Promise.all(
       dates.map(async (d) => {
-        // usage:*（搜索漏斗）与 pv:*（HTML 文档计数，R481；按 isolate 分片、读时求和，R482）分键存储、此处合并输出
-        const [u, pv] = await Promise.all([
-          kv.get<DayUsage>(`usage:${d}`, "json").catch(() => null),
-          readDayPageviews(kv, d),
-        ]);
-        if (u || pv) out[d] = { ...(u ?? { searches: 0, byTld: {}, fast: 0, refine: 0 }), ...(pv ?? {}) };
+        // usage:*（搜索漏斗，R487 起也按 isolate 分片）与 pv:*（HTML 文档计数，R481/R482）分键存储，各自旧键+分片求和后在此合并输出
+        const [u, pv] = await Promise.all([readDayUsage(kv, d), readDayPageviews(kv, d)]);
+        if (u || pv) out[d] = { ...(u ?? emptyDayUsage()), ...(pv ?? {}) };
       }),
     );
   }
