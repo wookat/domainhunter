@@ -379,6 +379,10 @@ const zh = {
   "guide.ctaButton": "开始猎取",
   "guide.others": "其他行业命名指南",
   "guide.related": "相关行业指南",
+  "guide.relatedTlds": "相关后缀指南",
+  "guide.notes": "注意事项",
+  "guide.sources": "官方依据",
+  "guide.relatedCompliance": "相关合规与流程指南",
   "vs.related": "相关对比",
   // 404 页
   "nf.title": "页面不存在",
@@ -840,6 +844,10 @@ const en: Record<I18nKey, string> = {
   "guide.ctaButton": "Start hunting",
   "guide.others": "More industry naming guides",
   "guide.related": "Related industry guides",
+  "guide.relatedTlds": "Related TLD guides",
+  "guide.notes": "Things to watch",
+  "guide.sources": "Official sources",
+  "guide.relatedCompliance": "Related compliance guides",
   "vs.related": "Related comparisons",
   // 404 page
   "nf.title": "Page not found",

@@ -55,6 +55,10 @@ const ICON_SPARKLES = icon("sparkles", "h-4 w-4", '<path d="M11.017 2.814a1 1 0 
 const ICON_SPARKLES_BRAND = icon("sparkles", "h-4 w-4 text-brand", '<path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle>');
 const ICON_SCALE = icon("scale", "h-4 w-4 text-brand", '<path d="M12 3v18"></path><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"></path><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M7 21h10"></path>');
 const ICON_QUOTE = icon("quote", "h-4 w-4 text-brand", '<path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>');
+const ICON_FILE_TEXT = icon("file-text", "h-4 w-4 shrink-0 text-brand", '<path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path>');
+const ICON_LANDMARK = icon("landmark", "h-4 w-4 text-brand", '<path d="M10 18v-7"></path><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"></path><path d="M14 18v-7"></path><path d="M18 18v-7"></path><path d="M3 22h18"></path><path d="M6 18v-7"></path>');
+const ICON_EXTERNAL = icon("external-link", "h-3.5 w-3.5 shrink-0 text-txt2", '<path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>');
+const ICON_SEARCH_CHECK = icon("search-check", "h-4 w-4", '<path d="m8 11 2 2 4-4"></path><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path>');
 const ICON_ALERT = icon("triangle-alert", "h-4 w-4 text-destructive", '<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path>');
 
 /* 文案硬编码：与 lib/i18n.tsx 词典逐字同源（i18n key 见注释） */
@@ -86,6 +90,10 @@ const STR = {
     guideCtaButton: "开始猎取", // guide.ctaButton
     guideOthers: "其他行业命名指南", // guide.others
     guideRelated: "相关行业指南", // guide.related
+    guideRelatedTlds: "相关后缀指南", // guide.relatedTlds
+    guideNotes: "注意事项", // guide.notes
+    guideSources: "官方依据", // guide.sources
+    guideRelatedCompliance: "相关合规与流程指南", // guide.relatedCompliance
     vsRelated: "相关对比", // vs.related
   },
   en: {
@@ -115,6 +123,10 @@ const STR = {
     guideCtaButton: "Start hunting",
     guideOthers: "More industry naming guides",
     guideRelated: "Related industry guides", // guide.related
+    guideRelatedTlds: "Related TLD guides", // guide.relatedTlds
+    guideNotes: "Things to watch", // guide.notes
+    guideSources: "Official sources", // guide.sources
+    guideRelatedCompliance: "Related compliance guides", // guide.relatedCompliance
     vsRelated: "Related comparisons", // vs.related
   },
 } as const;
@@ -172,8 +184,8 @@ const faqBlock = (faq: { q: string; a: string }[], lang: Lang) =>
     )
     .join("")}</div>`;
 
-const ctaBlock = (title: string, desc: string, href: string, button: string) =>
-  `<div class="mt-10 rounded-2xl border border-brand-line bg-brand-dim p-6 text-center"><h2 class="text-lg font-bold">${escapeHtml(title)}</h2><p class="mx-auto mt-1.5 max-w-md text-sm text-txt1">${escapeHtml(desc)}</p><a href="${href}" class="mt-4 inline-flex h-11 items-center gap-1.5 rounded-xl bg-brand px-5 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90">${ICON_SPARKLES}${escapeHtml(button)}</a></div>`;
+const ctaBlock = (title: string, desc: string, href: string, button: string, iconSvg = ICON_SPARKLES) =>
+  `<div class="mt-10 rounded-2xl border border-brand-line bg-brand-dim p-6 text-center"><h2 class="text-lg font-bold">${escapeHtml(title)}</h2><p class="mx-auto mt-1.5 max-w-md text-sm text-txt1">${escapeHtml(desc)}</p><a href="${href}" class="mt-4 inline-flex h-11 items-center gap-1.5 rounded-xl bg-brand px-5 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90">${iconSvg}${escapeHtml(button)}</a></div>`;
 
 const chipRow = (heading: string, chips: string, mt = "mt-6") =>
   `<div class="${mt}"><h2 class="text-sm font-semibold text-txt1">${escapeHtml(heading)}</h2><div class="mt-3 flex flex-wrap gap-2">${chips}</div></div>`;
@@ -306,14 +318,25 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang): string[] {
 export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
   const s = STR[lang];
   const loc = guide[lang];
+  const compliance = guide.kind === "compliance";
   const faq = buildGuideFaq(guide, lang);
   const relatedCompares = [...new Set(guide.tlds.flatMap((rec) => COMPARE_SLUGS.filter((cs) => cs.split("-vs-").includes(rec.tld))))].slice(0, 4);
-  const ideas = sectionH2(ICON_BULB, s.guideIdeas) + dotList(loc.namingIdeas);
-  const cases = sectionH2(ICON_QUOTE, s.guideCases) +
-    `<div class="mt-3 space-y-2.5">${loc.cases
-      .map((c) => `<div class="rounded-lg border border-line bg-bg1 px-3.5 py-2.5"><p class="font-mono text-sm font-semibold text-txt0">${escapeHtml(c.name)}</p><p class="mt-1 text-sm leading-relaxed text-txt1">${escapeHtml(c.takeaway)}</p></div>`)
-      .join("")}</div>`;
-  const tlds = sectionH2(ICON_SPARKLES_BRAND, s.guideTlds) +
+  /* 合规指南：分节正文；行业指南：命名思路 + 案例（与 guide-page.tsx 分支一致） */
+  const body = compliance
+    ? (loc.sections ?? [])
+        .map(
+          (sec) =>
+            `<section>${sectionH2(ICON_FILE_TEXT, sec.heading)}${sec.paragraphs
+              .map((p) => `<p class="mt-3 text-sm leading-relaxed text-txt1">${escapeHtml(p)}</p>`)
+              .join("")}${sec.bullets ? dotList(sec.bullets) : ""}</section>`,
+        )
+        .join("")
+    : sectionH2(ICON_BULB, s.guideIdeas) + dotList(loc.namingIdeas) +
+      sectionH2(ICON_QUOTE, s.guideCases) +
+      `<div class="mt-3 space-y-2.5">${loc.cases
+        .map((c) => `<div class="rounded-lg border border-line bg-bg1 px-3.5 py-2.5"><p class="font-mono text-sm font-semibold text-txt0">${escapeHtml(c.name)}</p><p class="mt-1 text-sm leading-relaxed text-txt1">${escapeHtml(c.takeaway)}</p></div>`)
+        .join("")}</div>`;
+  const tlds = sectionH2(ICON_SPARKLES_BRAND, compliance ? s.guideRelatedTlds : s.guideTlds) +
     `<div class="mt-3 grid gap-2 sm:grid-cols-3">${guide.tlds
       .map((rec) => {
         const price = staticPriceShort(rec.tld, lang);
@@ -328,7 +351,15 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
           .join(""),
       )
     : "";
-  const pitfalls = sectionH2(ICON_ALERT, s.guidePitfalls) + dotList(loc.pitfalls, "bg-destructive");
+  const pitfalls = sectionH2(ICON_ALERT, compliance ? s.guideNotes : s.guidePitfalls) + dotList(loc.pitfalls, "bg-destructive");
+  const sources = loc.sources?.length
+    ? sectionH2(ICON_LANDMARK, s.guideSources) +
+      `<ul class="mt-3 space-y-2">${loc.sources
+        .map((src) => `<li><a href="${escapeHtml(src.url)}" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-[44px] items-center gap-1.5 text-sm leading-relaxed text-txt1 underline decoration-line underline-offset-4 transition-colors hover:text-brand hover:decoration-brand">${ICON_EXTERNAL}${escapeHtml(src.label)}</a></li>`)
+        .join("")}</ul>`
+    : "";
+  const cta = loc.cta ?? { title: s.guideCtaTitle, desc: s.guideCtaDesc, button: s.guideCtaButton };
+  const ctaHref = compliance ? `/?mode=exact&lang=${lang}` : `/?tpl=${guide.slug}`;
   const others = chipRow(
     s.guideOthers,
     GUIDE_LIST.map((other) => {
@@ -342,7 +373,7 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
     .filter((g): g is (typeof GUIDE_LABELS)[number] => g !== undefined);
   const related = relatedIndustry.length
     ? chipRow(
-        s.guideRelated,
+        compliance ? s.guideRelatedCompliance : s.guideRelated,
         relatedIndustry
           .map((g) => `<a href="/guide/${g.slug}?lang=${lang}" class="flex min-h-[44px] items-center rounded-lg border border-line px-3 text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">${escapeHtml(g[lang])}</a>`)
           .join(""),
@@ -350,13 +381,13 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
     : "";
   return [
     `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.intro)}</p>`,
-    ideas,
-    cases,
+    body,
     tlds,
     compares,
     pitfalls,
     faqBlock(faq, lang),
-    ctaBlock(s.guideCtaTitle, s.guideCtaDesc, `/?tpl=${guide.slug}`, s.guideCtaButton),
+    sources,
+    ctaBlock(cta.title, cta.desc, ctaHref, cta.button, compliance ? ICON_SEARCH_CHECK : ICON_SPARKLES),
     others,
     related,
   ];

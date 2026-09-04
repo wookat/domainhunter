@@ -413,7 +413,7 @@
     ]
   },
   "guide": {
-    "count": 404,
+    "count": 410,
     "slugs": [
       "saas",
       "ecommerce",
@@ -818,7 +818,13 @@
       "nutcarving",
       "insidepainting",
       "strawpainting",
-      "woodblockprint"
+      "woodblockprint",
+      "cn-realname",
+      "cn-serverhold",
+      "cn-icp-beian",
+      "cn-dns-inland-vs-overseas",
+      "cn-vs-comcn-registrar",
+      "cn-expiry-redemption"
     ]
   },
   "vs": {
