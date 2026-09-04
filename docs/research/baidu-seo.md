@@ -144,6 +144,8 @@ curl -A "…Baiduspider/2.0…" https://hunt.zalize.com/tld/cn
 
 ## 5. 需老板操作（按顺序）
 
+> **单一事实源：[`docs/owner-actions.md`](../owner-actions.md)**（R490 起所有老板待办及其当前状态只在那里维护；本节保留为调研证据，不再更新）。
+
 1. **站长平台添加站点**：登录 <https://ziyuan.baidu.com/> → 用户中心 → 站点管理 → 添加网站 `https://hunt.zalize.com`（协议头选 https；站点属性按实际填）。
 2. **HTML 标签验证**：选「HTML 标签验证」，复制 `<meta name="baidu-site-verification" content="codeva-XXXXXXXX" />` 里的 `content` 值 →
    `wrangler.jsonc` `vars` 加 `"BAIDU_VERIFICATION": "codeva-XXXXXXXX"`（或 Dashboard → Settings → Variables），部署后回站长平台点「完成验证」。

@@ -72,7 +72,7 @@
 
 ### 1.9 NameSilo
 - 官方联盟说明：<https://www.namesilo.com/support/v2/articles/account-options/affiliate-program-manager> —— 新客户首单 **10%**（注册/转入），推荐有效期 1 年，账户余额/PayPal 结算。
-- .cn：<https://www.namesilo.com/domain/cn> HTTP 200（有售）；联盟覆盖**未查到**。
+- .cn：<https://www.namesilo.com/domain/cn> HTTP 200（有售；R490 复查该 URL 已 404，页面可能已迁移）；联盟覆盖**未查到**。
 - 结论：比例低，暂不新增。
 
 ## 2. 设计论证（现状 → 方案 → 验证）
@@ -97,6 +97,8 @@
 **验证方式**：`pnpm -r typecheck` / `pnpm --filter web test`（新增 `lib/registrars.test.ts` 15 例：未配置=原链接、query/redirect/叠加、Cloudflare 忽略、.cn 与非 .cn 排序、确定性、大小写、坏配置回落）/ `pnpm --filter web build`；本地 `wrangler dev` 用 curl 验 `/api/registrars`、`/api/click`（含 400 分支）与 `/api/usage.outbound`；UI 截图 results/home/monitors 三处入口（zh、375px + 桌面）。
 
 ## 3. 需老板操作（Owner checklist）
+
+> **单一事实源：[`docs/owner-actions.md`](../owner-actions.md)**（R490 起所有老板待办及其当前状态只在那里维护；本节保留为调研证据，不再更新）。
 
 > 全部是**公开推广参数**，不是 API key，可以直接写进 `apps/web/wrangler.jsonc` 提交（仓库不写任何 secret 的规则不受影响）。没拿到之前什么都不用填，站点行为与现在完全一致。
 

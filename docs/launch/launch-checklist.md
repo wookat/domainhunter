@@ -4,6 +4,8 @@
 
 ## 0. 发帖前检查（全部勾完才发）
 
+> 其中需老板操作的项（AI 额度、GitHub About/Topics/漏洞报告/Social preview、发帖时机）**单一事实源：[`docs/owner-actions.md`](../owner-actions.md)**（R490 起状态只在那里维护）。
+
 - [ ] 生产 `https://hunt.zalize.com/?cb=<随机>` 首页 / `/advanced` / `/mcp` / `/prices` 200 且渲染正常（zh + en、浅 + 深、375px）
 - [ ] `GET /api/usage?days=1` 确认 AI 额度状态；若 DeepSeek 主上游额度耗尽且未配置备用上游，**不要发帖**（首屏 CTA 会失败）
 - [ ] AI 限流 20 次/小时/IP 是否足够承接 HN 流量峰值？评估是否临时放宽或在首页说明

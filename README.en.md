@@ -12,7 +12,7 @@
 [![React 18](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![MCP](https://img.shields.io/badge/MCP-Streamable_HTTP-000000)](https://hunt.zalize.com/mcp?lang=en)
-[![GitHub stars](https://img.shields.io/github/stars/wookat/domainhunter?style=social)](https://github.com/wookat/domainhunter/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/wookat/domainhunter?style=social)](https://github.com/wookat/domainhunter)
 
 <img src="./docs/assets/home-en-dark.png" alt="DomainHunter home (English, dark theme)" width="880" />
 
@@ -34,7 +34,7 @@ Everything below is live in production (routes: `apps/web/src/worker.ts`):
 
 | Feature | Details | Where |
 |---|---|---|
-| **Multi-round AI agent** | Meaning → candidates (pinyin / word / coined / blend) → live check → cross-round dedup & reflection, up to 5 rounds, NDJSON stream; 20 req/h per IP | Home · `POST /api/ai-search` |
+| **Multi-round AI agent** | Meaning → candidates (pinyin / word / coined / blend) → live check → cross-round dedup & reflection, up to 5 rounds, NDJSON stream; 20 req/h per IP; when the upstream LLM is out of quota or rate-limited it degrades to rule-based generation + live checks and offers a retry | Home · `POST /api/ai-search` |
 | **Real-time verification** | DoH prefilter → RDAP (IANA bootstrap) → WHOIS:43 fallback (`com/net/cn/com.cn/io/cc/tv/co/me/xyz/sh/gg/so/us`); results include `expiresAt` | all check paths |
 | **Exact check / type-to-check** | Check a full domain instantly, no AI used | Home → "Exact check" |
 | **Bulk paste + CSV export** | Up to 200 domains per run (newline/comma/space separated); bare names expand by TLD; copy available / export CSV | [/advanced](https://hunt.zalize.com/advanced?lang=en) · `POST /api/search` |
@@ -42,7 +42,7 @@ Everything below is live in production (routes: `apps/web/src/worker.ts`):
 | **Drop monitoring + webhook** | Watch a taken domain; cron rechecks every 6 h and POSTs status changes to your https webhook; manual recheck (60 s per IP) | [/monitors](https://hunt.zalize.com/monitors?lang=en) · `/api/monitor*` |
 | **Shortlist + share / sync** | Local shortlist; read-only share page `/s/:id` (30 days, revocable); 8-char sync code for cross-device sync without login (90 days) | [/shortlist](https://hunt.zalize.com/shortlist?lang=en) · `/api/share` · `/api/sync` |
 | **MCP endpoint** | `POST /mcp` (JSON-RPC 2.0, Streamable HTTP, protocol `2025-03-26`); tools: `check_domains` (≤50), `tld_prices`, `suggest_variants` | [/mcp](https://hunt.zalize.com/mcp?lang=en) |
-| **400+ content pages** | TLD guides `/tld/:tld` (408), industry naming guides `/guide/:slug` (404), TLD comparisons `/vs/:slug` (444); bilingual, SSR meta / JSON-LD / hreflang, `sitemap.xml`, `llms.txt` | e.g. [/tld/cn](https://hunt.zalize.com/tld/cn?lang=en) |
+| **1,200+ content pages** | TLD guides `/tld/:tld` (408), industry naming and .cn compliance guides `/guide/:slug` (410), TLD comparisons `/vs/:slug` (444); bilingual, SSR meta / JSON-LD / hreflang, `sitemap.xml`, `llms.txt` | e.g. [/tld/cn](https://hunt.zalize.com/tld/cn?lang=en) |
 | **Bilingual · dual theme · mobile** | zh/en dictionary (`apps/web/src/lib/i18n.tsx`), light/dark (≥4.5:1 contrast), responsive from 375 px, keyboard accessible | top-right toggles |
 
 <details>
