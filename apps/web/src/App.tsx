@@ -1018,6 +1018,9 @@ export default function App() {
               <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/mcp?lang=${lang}`}>
                 {t("footer.mcp")}
               </a>
+              <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/advanced?lang=${lang}`}>
+                {t("footer.advanced")}
+              </a>
               <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href="/monitors">
                 {t("footer.monitors")}
               </a>

@@ -6,6 +6,7 @@ import { relatedTlds } from "@/content/tld-groups";
 import { TLD_LIST } from "@/content/tld-list";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { NotFoundPage } from "@/components/not-found-page";
+import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, toCny, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";
@@ -185,6 +186,7 @@ export function TldPage({ tld }: { tld: string }) {
           </div>
         </div>
       )}
+      <SiteLinks />
     </main>
   );
 }
