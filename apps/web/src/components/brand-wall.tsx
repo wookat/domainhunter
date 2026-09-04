@@ -46,7 +46,7 @@ function PillLabel({ row, price, selected }: { row: Row; price?: string; selecte
           ?
         </span>
       )}
-      {price && <span className="font-normal text-txt2">{price}</span>}
+      {price && <span className={cn("font-normal", selected ? "text-txt1" : "text-txt2")}>{price}</span>}
     </span>
   );
 }
