@@ -159,6 +159,8 @@
 
 ## 6. 需老板资源
 
+> **单一事实源：[`docs/owner-actions.md`](../owner-actions.md)**（R490 起所有老板待办及其当前状态只在那里维护；本节保留为调研证据，不再更新）。
+
 - **微信认证公众号**（服务号优先）：提供 appId/appSecret 给 worker secret，公众号后台配置 JS 接口安全域名 `hunt.zalize.com`。到位后可用 `updateAppMessageShareData` 把卡片摘要写成「chaxiangji.cn、teabloom.com… 共 N 个可注册」并用 `/api/og/:id` 动态图做缩略图（当前 og 图为 SVG，微信 imgUrl 需 PNG/JPG，届时要加 PNG 输出）。
 
 ## 7. 状态还原

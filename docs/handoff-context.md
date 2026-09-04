@@ -1,161 +1,192 @@
 # DomainHunter 交接文档（handoff-context）
 
-> 依 company-os 交接上下文制度维护。换会话/换负责人时把本文档注入新会话即可接手。最后更新：2026-08-08（R250，生产在线版本为集成分支 `deploy/r192-r195` + R222–R246 系列修复，进行中批次见文末）。
+> 依 company-os 交接上下文制度维护（模板 `company-os/templates/handoff-context.md`）。换会话/换负责人时把本文档注入新会话即可接手。
+> **最后更新：2026-09-04（R490，同步到 R486 现状）**。上一次系统性更新是 R250（2026-08-08），R466–R485 期间只做过局部小节追加（`git log -- docs/handoff-context.md`：e7bbfcb R481、a248e48 R482、79ecd0b R485）。
+> 老板需操作的外部资源全部收口在 **`docs/owner-actions.md`**（单一事实源），本文档不再重复维护那份清单。
 
-## 1. 项目一页纸
+## 1. 项目目标
 
-- **定位**：AI 域名猎手——用一句自然语言说出想要的寓意/风格，Agent 多轮（最多 5 轮）构思→RDAP/DNS/WHOIS 实时核验→跨轮去重反思再猎，**只给真正可注册的名字**。目标用户：中文创业者/独立开发者优先，双语（zh/en）。免费、免登录、open-core（MIT）。
-- **生产 URL**：https://hunt.zalize.com （自定义域）；Worker 直连 https://domainhunter.wookat520.workers.dev
-- **仓库**：wookat/domainhunter（pnpm monorepo）
-  - `packages/core` — 生成 + 核验引擎（纯 TS，`generateCandidates` / `checkDomains` / RDAP bootstrap）
-  - `apps/web` — Hono on Cloudflare Workers（`src/worker.ts`）+ React 18/Vite/Tailwind SPA
-- **部署**：`pnpm deploy`（= `vite build && wrangler deploy`，在 `apps/web` 下执行；根目录 `pnpm deploy` 会 filter 到 web）。wrangler 配置见 `apps/web/wrangler.jsonc`（KV binding `CACHE`、ASSETS、cron `0 */6 * * *`）。
-- **集成分支模式**：并行子会话各自开独立分支 PR；部署前把本批次所有分支合到一个集成分支 `deploy/<batch>`（基于最新 main + 本批全部 PR），从集成分支构建部署，**防止直接从旧 main 部署导致已上线功能回退**。部署后 PR 逐个合回 main（deploy 分支用完即删，远端可能看不到历史 deploy 分支）。
-- **Worker secret**：`DEEPSEEK_API_KEY`（`wrangler secret`，AI 构思用 DeepSeek）；可选 `LLM_API_BASE` / `LLM_MODEL` / `LLM_THINKING`。R474 起可选备用上游 `LLM_FALLBACK_API_KEY` / `LLM_FALLBACK_API_BASE` / `LLM_FALLBACK_MODEL` / `LLM_FALLBACK_THINKING`（见 §4；**secret 未配置时功能休眠**）。所有 key 只走 `wrangler secret put`，`wrangler.jsonc` 不写任何 key。
+- **一句话**：「中文创业者的域名猎手」——中文自然语言寓意 → 拼音/中文/英文/混搭候选 → 实时 RDAP/WHOIS 核验 .cn/.com.cn/.com 等 → 到期时间/价格/批量 CSV/监控捡漏。英文通用场景不声称全面领先（R460/R464 竞品横评实证，见 `docs/research/`、`docs/competitor-*.md`）。
+- **阶段**：已上线运营（hunt.zalize.com），短周期批次迭代（Rxxx 编号）；开源发布素材已备（`docs/launch/launch-checklist.md`）但**未发帖**，阻塞于 AI 上游额度（见 §8）。
+- 免费、免登录、open-core（MIT）。
 
-## 2. 架构图谱
+## 2. 代码与数据位置
 
-### 2.1 前端路由（SPA 客户端路由，`apps/web/src/App.tsx` 手写 pathname 匹配 + lazy chunk）
+- 仓库：`https://github.com/wookat/domainhunter`（默认分支 `main`；**生产部署线 = 集成分支 `deploy/r192-r195`**，所有新 PR 以它为 base）
+- 本地路径（Devin 会话惯例）：`/home/ubuntu/repos/domainhunter`
+- 关键子目录：
+  - `packages/core` — 生成 + 核验引擎（纯 TS：`generateCandidates` / `checkDomains` / RDAP bootstrap）
+  - `apps/web/src/worker.ts` — Hono Worker：**全部 API / MCP / SSR / cron 都在这一个文件**（~2,300 行）；辅助模块 `ai.ts`、`ai-transport.ts`、`rule-fallback.ts`、`pageviews.ts`、`growth-inject.ts`、`prices-fetch.ts`、`prices-cache.ts`、`whois.ts`
+  - `apps/web/src/components|lib|content` — React 18 SPA、i18n（`lib/i18n.tsx`）、内容页数据（`content/tlds.ts`、`guides.ts`、`guides-cn-compliance.ts`、`compares.ts`、`compare-slugs.ts`）
+  - `scripts/` — `content-counts.json`（内容计数事实源）+ `check-content-counts.mjs`、`verify-r*.mjs` 回归脚本
+  - `docs/research/` 调研、`docs/qa/` + `docs/audits/` 审计报告、`docs/launch/` 发布清单、`docs/owner-actions.md` 老板待办
+  - 测试 SKILL（零 AI 生产审计流程、存储备份/还原、踩坑集）：**`.agents/skills/testing-domainhunter/SKILL.md`**
+- 数据：仅 Cloudflare KV（binding `CACHE`，namespace id 见 `apps/web/wrangler.jsonc`），无数据库；用户数据全在浏览器 localStorage/sessionStorage（见 §6.4）。无需备份（全部是缓存/计数/30–90 天 TTL 快照）。
 
-| 路由 | 页面组件（`src/components/`） | 说明 |
+## 3. 技术栈
+
+Cloudflare Workers + Hono（API/MCP/SSR/cron）· React 18 + TypeScript + Vite + Tailwind（shadcn 风格）· pnpm monorepo · vitest · KV `CACHE` · 上游：DoH（cloudflare-dns）/ IANA RDAP / WHOIS:43（`cloudflare:sockets`）/ Porkbun 价格 API / OpenAI 兼容 LLM 网关（DeepSeek）/ IndexNow / 百度普通收录 API（可选）。
+
+## 4. 部署与验收命令
+
+- **本地验收（= 合并标准，公司规则不用 CI）**：`pnpm install` → `pnpm -r typecheck` → `pnpm --filter web test` → `pnpm --filter web build`；改内容页数据还要 `node scripts/check-content-counts.mjs`。R490 基线：typecheck 绿、10 文件 84 例测试绿、build 绿、计数脚本绿。
+- **部署**：`cd apps/web && pnpm deploy`（= `vite build && wrangler deploy`）。只从集成分支 `deploy/r192-r195` 部署，**不要从可能落后的 main 直接 deploy**。部署后用 `?cb=<随机>` 穿透 CDN 回归。
+- **集成分支模式**：并行子会话各开独立分支 PR（base `deploy/r192-r195`）→ 父会话合入集成分支 → 部署 → 生产回归 → PR 合回 main。
+- 本地跑 Worker：`apps/web` 下 `pnpm build && npx wrangler dev --port 8787`（细节与坑见 SKILL）。
+- Secrets 只走 `cd apps/web && npx wrangler secret put <NAME>`；`wrangler.jsonc` 只放公开 vars（当前仅 `REGISTRAR_AFFILIATE_JSON: "{}"`）。
+
+## 5. 当前实时服务状态（2026-09-04 20:15 UTC 实查）
+
+| 项 | 值 | 证据 |
 |---|---|---|
-| `/` | home-page.tsx（+ agent-page / results-page） | AI 猎名主流程 + 即输即查（quick check）；`?q=` 预填搜索 |
-| `/advanced` | advanced-page.tsx | 批量粘贴核验（≤200 个），CSV 导出 |
-| `/shortlist` | shortlist-page.tsx | 收藏清单（本地）+ 分享/同步码；noindex |
-| `/monitors` | monitors-page.tsx | 到期/释放监控管理；noindex |
-| `/prices` | prices-page.tsx | TLD 价格总览（Porkbun 实时 + ≈ 静态参考价兜底） |
-| `/why` | why-page.tsx | 产品定位页 |
-| `/mcp` | mcp-page.tsx | MCP 接入文档页（GET）；同路径 POST 是 MCP server |
-| `/tld/:tld` | tld-page.tsx | TLD 指南内容页（数据 `content/tlds.ts`，120 个，截至 R237） |
-| `/guide/:slug` | guide-page.tsx | 行业命名指南（`content/guides.ts`，116 个，截至 R240） |
-| `/vs/:slug` | compare-page.tsx | TLD 对比页（`content/compares.ts`，150 个，截至 R241） |
-| `/s/:id` | share-page.tsx | 分享快照只读页（SSR 注入动态 og:image） |
+| 线上地址 | https://hunt.zalize.com （自定义域）；Worker 直连 https://domainhunter.wookat520.workers.dev | 首页 200 |
+| 生产 Worker version | `b09d61c3-b447-4e4d-ab99-525ad7ab0828`（deployed 2026-09-04T19:38Z） | `npx wrangler deployments list`（apps/web） |
+| 对应代码 tip | `deploy/r192-r195` @ **8351a69**（含 R478–R486；合并于 15:50Z，早于上述部署） | 公开行为一致：R483 `/guide/cn-realname` 200、R486 `/wx-share.png` 200、sitemap 1,270 条；version→commit 映射 wrangler 未记 message，属推断 |
+| 内容计数 | **TLD 408 / 行业指南 410 / 对比页 444 / sitemap 1,270 URL**（1,262 内容页 + 8 静态页） | `scripts/content-counts.json` 与 `curl sitemap.xml?cb=` 逐类 grep 一致 |
+| cron 心跳 | `cronLast=2026-09-04T18:00:11Z`（每 6h） | `/api/usage` |
+| 价格 | `pricesLastOk=2026-09-04T12:00Z`，`/api/prices` 351 个 TLD 有 Porkbun 报价，非 stale | `/api/prices` |
+| IndexNow | 上次成功 2026-09-03T12:00Z；**18:00 推送遇 429 Too many requests**，6h 冷却后自动重试 | `/api/usage.indexnowLastError` |
+| 百度推送 | 未配置（`baiduLast=null`）；但 `botsBy.baidu=6`（Baiduspider 已自发来访，R485 调研时为 0） | `/api/usage` |
+| 验证 meta / analytics beacon | 首页 `<head>` 无 GSC/Bing/Baidu meta、无 cf-beacon | `curl -A Mozilla /` |
+| 注册商返佣 | `/api/registrars` = `{"affiliate":{}}`（纯链接） | — |
+| **AI 上游** | **不可用**：当日 `aiErrors={rate-limit:4,quota:3}`、`fallbacks={quota:2,quota-breaker:2}`，无成功主轮 | `/api/usage`；详见 §8 |
+| 零 AI 功能实测 | `/api/search` 3 域名 NDJSON 正常（RDAP/WHOIS、expiresAt）；`/api/check refresh` 正常；MCP `tools/list` 3 工具、`check_domains`/`tld_prices`（dict 351）/`suggest_variants` 正常；分享 create→GET 200→DELETE→GET 410 正常（已清理）；`/api/monitor/list`、`/api/monitor/changes` 正常；全部 hub/内容/静态页 200，未知路径 404 | R490 核对，`/api/usage` 前后 `searches` 不变 |
 
-SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 worker 侧做 SSR meta 替换 + hreflang（`?lang=zh|en`）+ JSON-LD（FAQPage/Article/Breadcrumb）+ 首屏 SSR 骨架（`injectSsrSkeleton`）+ CSS 内联 + modulepreload。
+## 6. 架构图谱
 
-### 2.2 Worker API（`apps/web/src/worker.ts`，Hono）
+### 6.1 前端路由（`apps/web/src/App.tsx` 手写 pathname 匹配 + lazy chunk）
 
-- `POST /api/ai-search` — AI 猎名，NDJSON 流（understanding/round/proposed/结果/done 事件）；限流每 IP 20 次/小时（`rl:{ip}:{hour}`）。R466 起主轮 LLM 走 `stream:true`：每个通过防线的候选立即发一条 `proposed{items:[x],tlds}`（无 guard）并进入核验队列（候选级并行 3），流结束后再发一条 `proposed{items:[],tlds,guard}` 汇总；事件结构与字段不变，前端零改动。补发轮（word/pinyin）与 understanding 仍为整包非流式。R474 起每轮汇总 `proposed{items:[],guard}` 事件尾部增 `provider: "primary" | "fallback"`（本轮实际应答的 LLM 上游；单候选 proposed 事件字段不变）。
-- `POST /api/search` — 词根×前后缀×TLD 组合核验，NDJSON 流；也支持 `domains[]` 显式清单（≤200）。
-- `POST /api/check` — 清单复查（≤100 个，`refresh=1`/`refresh:true` 穿透缓存），NDJSON。
-- `GET /api/prices` — Porkbun 实时价（KV 24h 缓存，stale 兜底；彻底无数据回 200 + 空 prices）。
-- `GET /api/stats` — 累计核验数（`stats:checked`）。
-- `GET /api/usage?days=N` — 最近 N 天（≤45）聚合使用量 + `cronLast` / `indexnowLast` / `indexnowLastError` 心跳；每日项含 `aiErrors`（R264）与 `llmProvider: {primary, fallback}`（R474，每成功主轮 +1；字段可缺，老数据无）；R481 起合并 `pv:{date}`（R482 起按 isolate 分片为 `pv:{date}:<shard>`，读侧 list 前缀求和并兼容旧键，消除多 isolate 读改写互相覆盖）的 `pageviews:{home,results,tld,guide,vs,prices,other}` + `bots` / `botsBy:{google,bing,baidu,ai,other}`（仅 Worker 成功返回 HTML 文档时计数，爬虫 UA 只计 bots；不存 IP/UA 原文；见 `docs/research/growth-analytics.md`）；R480 起含 `outbound: {porkbun|namecheap|cloudflare|aliyun|tencent: n}` 与 `outboundByTld`（注册外链点击数，非 TLD_LIST/com.cn 的归 `other`）。
-- `GET /api/registrars`（R480）— 返回 `{affiliate}`：wrangler **公开 var** `REGISTRAR_AFFILIATE_JSON`（默认 `"{}"`，非 secret）经 `parseAffiliateJson` 校验后的注册商返佣参数；`cache-control: public, max-age=300`。`POST /api/click {registrar, tld}` → 204，仅累加 `usage.outbound`（不存域名/IP）；非法 id/tld → 400。
-- `POST /api/monitor`、`POST /api/monitor/list`、`GET /api/monitor/changes`、`POST /api/monitor/recheck` — 监控增删/查询/变化记录/手动实时复查（复查限频每 IP 60s）。
-- `POST /api/share`、`GET|DELETE /api/share/:id` — 清单分享快照（≤100 项，30 天 TTL，revokeToken 撤销）。
-- `POST /api/sync`、`GET /api/sync/:code` — 免登录跨设备同步码（8 位 A-Z2-9 去混淆字母，90 天 TTL）。
-- `POST /mcp` — MCP server（JSON-RPC 2.0，Streamable HTTP 无状态，协议版 2025-03-26）：工具 `check_domains`（≤50，含 expiresAt/expiringSoon，返回 structuredContent）、`tld_prices`（无实时报价的 TLD 用静态参考价补齐 approx:true）、`suggest_variants`（get/my/try/use + app/hq/labs/hub 变体，见 `lib/variants.ts`）。
-- SEO/分享基础设施：`GET /sitemap.xml`、`/llms.txt`、`/robots.txt`、`/api/og/*`（home/advanced/mcp/prices/why/tld/:tld/guide/:slug/vs/:slug/:shareId 动态 SVG 1200×630）。
-- 兜底 `app.all("*")` → ASSETS（静态资源/SPA 壳）。
+| 路由 | 组件 | 说明 |
+|---|---|---|
+| `/` | home-page（+ agent-page / results-page） | AI 猎名主流程 + 精确核验 tab（`?mode=exact`）；`?q=` 预填；R478 起 SSR hero 骨架 + 中文利基文案（`content/home-copy.ts`） |
+| `/advanced` | advanced-page | 批量粘贴核验（≤200），CSV 导出 |
+| `/shortlist` | shortlist-page | 收藏清单 + 分享/同步码；noindex |
+| `/monitors` | monitors-page | 释放监控管理；noindex |
+| `/prices` | prices-page | TLD 价格总览（Porkbun 实时 + ≈ 静态参考价） |
+| `/why` | why-page | 定位页 |
+| `/mcp` | mcp-page | MCP 文档（GET）；同路径 POST 是 MCP server |
+| `/tld` `/guide` `/vs` | hub 页 | 分组 chips 锚点导航（R415）+ `input[type=search]` 筛选 |
+| `/tld/:tld`（408） `/guide/:slug`（410，含 6 篇 `kind:"compliance"` .cn 合规指南 R483） `/vs/:slug`（444） | tld-page / guide-page / compare-page | 内容页；en 通过 `?lang=en` |
+| `/s/:id` | share-page | 分享快照只读页（壳永远 200，语义在 `/api/share/:id`） |
 
-### 2.3 KV（binding `CACHE`）key 约定
+SEO 页 worker 侧 SSR meta + hreflang + JSON-LD + 骨架 + CSS 内联；R486 起分享/首页 `<meta property="og:image">` 兜底 `/wx-share.png`（微信抓图）。
 
-| Key | 用途 / TTL |
-|---|---|
-| `d:{domain}` | 单域核验缓存：taken 24h / available 1h（防抢注误导）；含可选 expiresAt |
-| `rl:{ip}:{hourBucket}` | AI/check 限流计数，~1h |
-| `rl:recheck:{ip}` | 监控手动复查限频（60s） |
-| `stats:checked` | 累计核验计数（非原子，允许误差） |
-| `usage:{YYYY-MM-DD}` | 每日聚合使用量（仅计数，无输入/IP；R480 起含 `outbound`/`outboundByTld`），45 天 |
-| `monitor:domains` | 监控集合单 key 全局 map（上限 500） |
-| `monitor:changes` | 状态变化记录（保留 100 条） |
-| `prices:v2:{N}` | Porkbun 价格缓存 24h；**key 掺 TLD_LIST.length**，扩容后旧缓存自动失效 |
-| `prices:latest` | 不带版本的 stale 兜底（30 天，每次成功拉取刷新） |
-| `share:{id}` / `sync:{code}` | 分享快照 30 天 / 同步码 90 天 |
-| `cron:last` / `indexnow:last` | cron 心跳 / IndexNow 上次**成功**（200/202）推送时间 |
-| `indexnow:lastAttempt` / `indexnow:lastError` | IndexNow 上次尝试时间（失败后 6h 冷却）/ 上次失败详情 JSON（R481） |
-| `pv:{YYYY-MM-DD}` | 每日 HTML 文档访问按路由类别聚合 + bots（R481，isolate 内 5s 合并再落盘，45 天） |
-| `baidu:last` / `baidu:lastAttempt` / `baidu:lastError` / `baidu:pushed` | 百度普通收录 API 推送：上次成功（仅 200）/ 上次尝试（失败 6h 冷却）/ 失败详情 / 已被百度计为成功的 URL 列表（R485，仅在 BAIDU_PUSH_* 配置后才会出现） |
+### 6.2 Worker API（`apps/web/src/worker.ts`）
 
-### 2.4 Cron（`triggers.crons: ["0 */6 * * *"]`，worker `scheduled`）
+- `POST /api/ai-search` — **唯一 AI 路径**。NDJSON 流（understanding/round/proposed/result/fallback/done）；限流每 IP 20 次/h（`rl:{ip}:{hour}`）。R466 主轮流式；R471 首轮失败走 `rule-fallback.ts` 规则降级 + KV 熔断 `dh:llm-breaker:v1`（quota 后 300s）；R472 rate-limit 30s 自动重试一次；R474 `ai-transport.ts` 可选备用上游（`LLM_FALLBACK_*` secret 缺失即休眠）；R476 `fallback.retryAfterS`。
+- `POST /api/search`（词根×前后缀×TLD 或 `domains[]` ≤200，NDJSON）· `POST /api/check`（≤100，`refresh`）· `GET /api/prices` · `GET /api/stats` · `GET /api/usage?days=N`（≤45；字段见 §7.2）
+- `GET /api/registrars`（R480，公开 var `REGISTRAR_AFFILIATE_JSON` 解析结果，`max-age=300`）· `POST /api/click {registrar,tld}` → 204 仅累加 `usage.outbound`
+- `POST /api/monitor` · `POST /api/monitor/list` · `GET /api/monitor/changes` · `POST /api/monitor/recheck`（每 IP 60s；全局 500 名额）
+- `POST /api/share` · `GET|DELETE /api/share/:id`（≤100 项，30d，revokeToken；revoked → 410）· `POST /api/sync` · `GET /api/sync/:code`（8 位，90d）
+- `POST /mcp` — JSON-RPC 2.0 Streamable HTTP 无状态，协议 2025-03-26；工具 `check_domains`（≤50）、`tld_prices`（dict，approx 补齐）、`suggest_variants`
+- `GET /sitemap.xml` `/llms.txt` `/robots.txt` `/api/og/*`（动态 SVG 1200×630）`/{INDEXNOW_KEY}.txt` · 兜底 `app.all("*")` → ASSETS
+- 全局后置中间件 `growth-inject.ts`：仅对 2xx/4xx `text/html` GET 注入可选验证 meta / beacon（R481/R485）；`pageviews.ts` 对成功返回的 HTML 文档计数。
 
-每 6 小时：① 写 `cron:last` 心跳；② `runMonitorSweep`（全量监控域实时复查，状态变化写 `monitor:changes` + webhook 推送）；③ `pingIndexNow`（≥24h 间隔向 api.indexnow.org 推送 sitemap 全部 URL，key 文件 `/{INDEXNOW_KEY}.txt`；R481 起按 10,000/批拆分、仅 200/202 视为成功后才写 `indexnow:last`，失败写 `indexnow:lastError` 并 6h 后重试）；④ `pushBaidu`（R485，仅 `BAIDU_PUSH_SITE` + secret `BAIDU_PUSH_TOKEN` 都配置时运行，否则不读写 KV：≥ 24h 一轮向 `http://data.zz.baidu.com/urls` POST text/plain 每行一 URL，只推 `baidu:pushed` 中尚未成功的 sitemap URL，每轮≤ `BAIDU_PUSH_DAILY_MAX`（默认 2000 = 官方单次上限），仅 200 成功；官方警告重推旧 URL 会降配额，所以不全量重推；见 `docs/research/baidu-seo.md`）。
+### 6.3 Cron（`0 */6 * * *`）
 
-### 2.5 增长可选 vars（R481，`wrangler.jsonc` `vars` 或 Dashboard 设置；默认全空 = HTML 字节不变、零脚本）
+① `cron:last` 心跳 → ② `runMonitorSweep`（全量复查，变化写 `monitor:changes` + https webhook）→ ③ `pingIndexNow`（≥24h；10,000/批；仅 200/202 记成功；失败写 `indexnow:lastError`，6h 冷却）→ ④ `pushBaidu`（R485，仅 `BAIDU_PUSH_SITE` + secret `BAIDU_PUSH_TOKEN` 都在时运行；只推 `baidu:pushed` 中未成功的 URL，每轮 ≤ `BAIDU_PUSH_DAILY_MAX`，默认 2000）。
 
-| var | 作用 |
-|---|---|
-| `GSC_VERIFICATION` | Google Search Console HTML tag 的 content 值 → `<meta name="google-site-verification">` |
-| `BING_VERIFICATION` | Bing Webmaster meta 的 content 值 → `<meta name="msvalidate.01">` |
-| `BAIDU_VERIFICATION` | 百度站长平台 HTML 标签验证的 content 值（`codeva-…`）→ `<meta name="baidu-site-verification">`（R485） |
-| `BAIDU_PUSH_SITE` + secret `BAIDU_PUSH_TOKEN`（`wrangler secret put`）| 百度普通收录 API 推送（见 2.4 ④）；可选 `BAIDU_PUSH_DAILY_MAX` 按站长平台显示的当日配额收紧，`BAIDU_PUSH_ENDPOINT` 仅本地 wrangler dev 指向 mock 上游（R485） |
-| `ANALYTICS_PROVIDER` / `ANALYTICS_TOKEN` | 目前仅支持 `cloudflare` + 32 位 hex site token → 注入官方 beacon（SPA 路由默认自动追踪）；启用后页脚显示双语隐私一句话 |
+### 6.4 浏览器端存储（无账号）
 
-注入由 `worker.ts` 全局后置中间件统一处理（`growth-inject.ts`），只对 `content-type: text/html` 且 2xx/4xx 的 GET 文档生效，JSON/XML/文本/静态资源不触碰。
+localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁移）、`domainhunter:monitor`、`domainhunter:monitor-webhook`、`domainhunter:recent-searches`、`domainhunter:theme`、`domainhunter:lang`、`dh:myShares:v1`、`dh:onboardDismissed:v1`、`dh:density:v1`、`dh:aiQuotaDown:v1`、`dh:chunkReloaded`；sessionStorage：`dh:lastSearch:v1`（结果页恢复快照，含 `SavedFallback.retryAt`）。生产测试若触碰，按 SKILL 的 backup/restore 流程还原。
 
-## 3. 关键约定与踩坑
+## 7. 当前数据概况
 
-- **TLD 扩容同步清单**（新增 TLD 指南时须全部同步，漏一处就不一致）：
-  1. `content/tlds.ts`（TLD_GUIDES 指南全文）
-  2. `content/tld-list.ts`（TLD_LIST，有 `satisfies Record<Tld, TldGuide>` 编译期强校验）
-  3. `components/home-page.tsx` 的 `KNOWN_TLDS`（即输即查识别，含非追踪 TLD，是超集）
-  4. 首页 FAQ「支持哪些后缀」文案（worker.ts `HOME_FAQ` zh+en 两份 + i18n 词典对应文案）
-  5. /prices 页（TLD_LIST 驱动，自动）、sitemap/llms.txt（自动）、页脚 TLD 内链
-  6. KV 价格 key 自动升版（`prices:v2:{N}`），无需手动清
-- **对比页 footer 内链读独立的 `content/compare-slugs.ts`**（轻量清单，避免 compares.ts 全文进主 bundle）——新增 /vs/ 页时**两处都要加**。
-- **llms.txt / sitemap.xml 有 CDN 24h 缓存**（`cache-control: max-age=86400`），发布后立刻 curl 验证要加 `?cb=<随机数>` 穿透。生产回归测试统一用 `?cb=` 防缓存假象。
-- **AI 测试预算纪律**：DeepSeek 按量计费，测试 AI 搜索前后各拉一次 `/api/usage` 全表，确认消耗可解释；日常回归尽量走不消耗 AI 的路径（quick check、/api/check、/advanced、MCP check_domains）。
-- **监控是全局 500 名额**（`monitor:domains` 单 key map，无账号体系），「我的监控」以客户端 localStorage 清单为准、服务端只按清单查。手动 recheck 限频每 IP 60s。
-- **expiresAt 可选 + 哨兵裁剪**：核验结果的 expiresAt 是可选字段；部分注册局返回 9999 年等哨兵值，前端 `lib/utils.ts` 裁剪 **> 当前时间 +15 年** 的不展示（R171）。
-- **内容页延迟挂载**（R174）：/tld 等内容页 defer mount 到路由 chunk ready，且跳过巨型数据 chunk 的 modulepreload，降低 LCP。
-- 部署永远走集成分支 `deploy/<batch>`，不要从可能落后的 main 直接 deploy。
-- `.shop`/`.art` 无可用 WHOIS/RDAP 通道，走 DNS NXDOMAIN 兜底判定（`whois.ts` `DNS_NXDOMAIN_TLDS`）；`sh/gg/so/us` 不在 IANA RDAP bootstrap，WHOIS 是唯一权威通道。
+### 7.1 KV key 清单（binding `CACHE`；R490 按代码 grep 核实）
 
-## 4. 数据与外部依赖
+| Key | 定义位置 | 用途 / TTL |
+|---|---|---|
+| `d:{domain}` | worker.ts | 单域核验缓存：taken 24h / available 1h；含可选 expiresAt |
+| `rl:{ip}:{hourBucket}` · `rl:recheck:{ip}` | worker.ts | AI 限流（20/h）· 监控手动复查限频 60s |
+| `stats:checked` | `STATS_KEY` | 累计核验计数（非原子） |
+| `usage:{YYYY-MM-DD}` | worker.ts `usage:${d}` | 每日聚合：searches/byTld/fast/refine/aiErrors/fallbacks/llmProvider/outbound/outboundByTld，45d。**非原子读改写（P2，见 §9）** |
+| `pv:{YYYY-MM-DD}:{shard}`（+ 兼容旧 `pv:{YYYY-MM-DD}`） | `pageviews.ts` `PV_KEY_PREFIX` | HTML 文档访问按路由类别 + bots/botsBy；R482 起每 isolate 单写者分片，`/api/usage` list 前缀求和；45d；新分片对读侧可见有 ≤60s 延迟 |
+| `monitor:domains` · `monitor:changes` | `MONITOR_KEY` / `MONITOR_CHANGES_KEY` | 全局监控 map（≤500）· 变化记录（保留 100） |
+| `prices:v2:{TLD_LIST.length}` · `prices:latest` · `prices:lastOk` · `prices:lastFail` | worker.ts / `prices-cache.ts` / `prices-fetch.ts` | Porkbun 缓存 24h（key 掺 TLD 数，扩容自动失效）· stale 兜底 30d · 心跳 |
+| `share:{id}` · `sync:{code}` | worker.ts | 分享快照 30d（撤销后写 `{revoked:true}` 同 TTL）· 同步码 90d |
+| `cron:last` | worker.ts | cron 心跳 |
+| `indexnow:last` · `indexnow:lastAttempt` · `indexnow:lastError` | `INDEXNOW_*_KEY` | 上次成功 / 上次尝试 / 失败详情 JSON |
+| `baidu:last` · `baidu:lastAttempt` · `baidu:lastError` · `baidu:pushed` | `BAIDU_*_KEY` | 百度推送状态；**未配置 BAIDU_PUSH_* 时不会出现** |
+| `dh:llm-breaker:v1` | `rule-fallback.ts` `LLM_BREAKER_KEY` | quota 熔断，300s |
 
-- **LLM 上游**（R460/R461 起经 OpenAI 兼容网关）：Worker secret `DEEPSEEK_API_KEY` + 变量 `LLM_API_BASE` / `LLM_MODEL` / `LLM_THINKING`（`disabled` 关闭网关侧思考链，否则 60s 超时），仅 `/api/ai-search`（构思 + understanding）用；其余全部零 AI。上游非 2xx 时 Worker 记 `llm-upstream <stage> status= retry-after= body=`（body ≤300 字、不含请求头），用 `wrangler tail` 查根因（R470）。
-- **LLM 备用上游（R474 failover，`apps/web/src/ai-transport.ts`）**：可选 secret `LLM_FALLBACK_API_KEY` / `LLM_FALLBACK_API_BASE` / `LLM_FALLBACK_MODEL` / `LLM_FALLBACK_THINKING`，在 `apps/web` 下 `wrangler secret put LLM_FALLBACK_API_KEY`（其余三个同理）写入。**未配置 `LLM_FALLBACK_API_KEY` 时功能休眠**，请求路径与单上游完全一致。启用后：主上游 401/402/403、429+额度耗尽 body（`apikey_quota_exhausted` 等）、5xx、fetch 抛错/超时 → 用备用配置重发同一请求 1 次（同 messages/temperature/stream，备用自己的 base/model/thinking）；429 瞬时限流与其他 4xx 不切换，走原有重试；备用也失败则按备用那次的错误分类（`classifyAiError`），`console.warn("llm-failover <stage> primary=<status|net:Name> fallback=<…>")` 同时记主/备 status（不含 Authorization；各次非 2xx body ≤300 字由 `logLlmHttpError` 单独记）。候选已下发后的流中途中断不 failover（沿用 R466 截断语义）。推荐备用：DeepSeek 官方（`https://api.deepseek.com` / `deepseek-chat`）、硅基流动（`https://api.siliconflow.cn/v1` / `deepseek-ai/DeepSeek-V3`）、OpenRouter（`https://openrouter.ai/api/v1` / `deepseek/deepseek-chat`）任一 OpenAI 兼容端点。自检：`node scripts/verify-r474.mjs`（全 mock fetch）。
-- **Porkbun 价格**：`https://api.porkbun.com/api/json/v3/pricing/get`（公开、免 key），10s 超时；失败回退 `prices:latest` stale（响应带 `stale:true`）；无报价 TLD（cn/so 等）前端/MCP 用静态参考价（`types.ts` `tldPrice`，`USD_TO_CNY=7.2` 估算汇率）。
-- **核验通道**（`packages/core/src/check.ts` + `apps/web/src/whois.ts`）：DoH（cloudflare-dns.com）预筛 → RDAP（IANA bootstrap `data.iana.org/rdap/dns.json`，缓存 24h）→ WHOIS 43 端口 fallback（`cloudflare:sockets`，服务器清单见 `WHOIS_SERVERS`：com/net/cn/io/cc/tv/co/me/xyz/sh/gg/so/us）。taken 但 RDAP 无到期时再查 WHOIS 补 expiresAt（R160）。
-- **localStorage keys**（前端本地数据，无账号）：
-  - `dh:lastSearch:v1`（上次搜索快照）、`dh:myShares:v1`（我发出的分享）、`dh:chunkReloaded`（chunk 加载失败自愈标记）
-  - `domainhunter:shortlist`（+ 旧 `domainhunter:favorites` 迁移、`domainhunter:shortlist:checkedAt`）
-  - `domainhunter:monitor`、`domainhunter:monitor-webhook`
-  - `domainhunter:recent-searches`、`domainhunter:theme`、`domainhunter:lang`
-- **IndexNow key**：worker.ts 内 `INDEXNOW_KEY`（按协议公开）+ `public/{key}.txt`。
+### 7.2 `/api/usage` 字段速查
 
-## 5. 已知问题 / 观察项
+顶层：`days{date→…}`、`cronLast`、`indexnowLast`、`indexnowLastError`、`pricesLastOk`、`pricesLastFail`、`baiduLast`、`baiduLastError`。每日项：`searches`、`byTld`、`fast`、`refine`、`aiErrors{quota|rate-limit|network|…}`、`fallbacks{quota|quota-breaker|…}`（R471）、`llmProvider{primary,fallback}`（R474，成功主轮才有）、`outbound`/`outboundByTld`（R480）、`pageviews{home,results,tld,guide,vs,prices,other}`、`bots`、`botsBy{google,bing,baidu,ai,other}`（R481/R482）。全部只计数，不存 IP/UA/输入。
 
-- **Porkbun 上游波动**：偶发超时/挂，已有 stale 兜底 + /prices 全静态参考价 notice（R170）；观察 `stale:true` 出现频率。
-- **drawk.cn 历史监控名额**：早期测试遗留在全局 `monitor:domains` 里占名额，清理需直接改 KV（无管理界面）。
-- **LCP**：R150 做内容页 SSR 骨架后 /tld LCP 曾持平未改善，R174 用延迟挂载 + 跳过数据 chunk preload 修复；后续改动注意别回退。
-- **旧 KV 核验缓存无 expiresAt**：R160 之前写入的 `d:{domain}` 无 expiresAt 字段，靠 TTL（≤24h）自然过期自愈，无需迁移。
-- sitemap `<lastmod>` 是手写常量 `CONTENT_LASTMOD`（worker.ts），增删内容页记得更新。
-- **上游 key 额度耗尽（2026-09-04 实锤）**：网关用 HTTP 429 + body `code=apikey_quota_exhausted` 表示 key 额度耗尽，`classifyAiError` 现按响应体关键词（quota/billing/限额/余额…）把这种 429 归为 `quota`（其余 429 仍是 `rate-limit`）；代码无法绕过，需在网关控制台充值/提额或换 key（`wrangler secret put DEEPSEEK_API_KEY`）。恢复后需补做 R466 真实时延测试（zh/en 各 ≥1 次，记录首个可注册候选时间）。
-- **R469 匿名竞品复评差距**（报告 `/home/ubuntu/r469-benchmark.md` 在主会话机器，结论摘录）：P0-A 上游不可用即整站 0 产出（→ R471 规则降级+熔断、R474 备用供应商 failover）；P1-A quota/rate-limit 恢复路径同一套「重试本轮」（→ R472）；P1-B 同名多 TLD 重复品牌卡、Top Picks 被同名占席（→ R473）；P1-C 375 首屏第一个域名不可见（→ R472）；P2-A 相邻撞色、P2-B 紧凑行零品牌感（→ R473）。视觉主观分 4.3 vs Namelix 4.5；紧凑态 ≈36 行/屏 vs IDS 45。
-- **R239 审计遗留观察项**（报告见 `docs/qa/audit-r239.md`，修复后待下一轮生产审计复验）：
-  - P1-1 EN word 配额补发失效 → R243 已加二次重试 + 补发轮独立 guard 计数，未经生产复验；
-  - P3-4 zh 偏拼音场景产品结果差（5 轮仅 1 个可注册，双字全拼 .com/.cn 存量枯竭）→ 产品层未动，待评估自动扩 TLD 或提前提示；
-  - refine 轮点踩依从性（P3-2）与 theme 标注（P3-3）已在 R250 做 prompt 级强化 + 解析后降级兜底，同样待生产复验。
-- **verify 脚本回归基线**：`scripts/verify-r196/r222–r225/r238/r243–r246/r250/r264/r463/r465/r466/r474.mjs` 全绿（r466 额外把 worker.ts 用 esbuild 打包 + 桩掉 `cloudflare:sockets` 跑 `/api/ai-search` 端到端事件顺序/usage 断言，全程 mock fetch）；`verify-pinyin.mjs` 与 `verify-meaning-paren.mjs` 用 transformSync 不打包，ai.ts 引入相对依赖（brand-blocklist 等）后已无法单文件加载，属历史遗留失效（其用例已被后续 bundle 式脚本覆盖）。
+### 7.3 内容计数
 
-## 6. 进行中与工作惯例
+事实源 `scripts/content-counts.json`：tld 408 / guide 410 / vs 444；`node scripts/check-content-counts.mjs` 守门。生产 sitemap 1,270 条与之一致。**改内容页时必须同步**：§9「TLD 扩容同步清单」。
 
-- **批次迭代**：短周期批次 Rxxx 编号（commit/PR 标题带 `(rNNN)`）。惯常一批 = 多个并行子会话，各自独立分支 + PR → 集成分支 `deploy/<batch>` 构建部署 → 生产真实回归（`?cb=` 防缓存）→ PR 合回 main。
-- **R231–R250 重大变化速览**：
-  - **内容量**：TLD 指南 120 个（R233/R237）、行业命名指南 116 篇（R235/R240）、/vs 对比页 150 个（R234/R236/R241）。
-  - **可靠性/UX**：R230/R231 未知路径与未知 slug 显式 404（noindex）；R232 移动端触控目标 ≥44px。
-  - **guard 可观测性（R238）**：`/api/ai-search` 每轮 proposed 事件带 GuardStats（各防线丢弃计数 + 补发/重试触发），支撑首轮定量审计。
-  - **审计**：R239 AI 猎名质量审计 v4（`docs/qa/audit-r239.md`，首轮 guard 定量，总拦截率 28.3%）；R242 零 AI 全站生产审计。
-  - **R243–R246 防线修复（针对 R239 发现）**：R243 word 补发二次重试 + 补发轮 guard 独立计数（P1-1/P3-1）；R244 拼音引用校验不再被缺失「全拼」声明绕过（P2-1）；R245 zh 字符白名单纳入拼音声调字符 + charsetViolation 码点样本（P2-2）；R246 EN 前缀锤点收紧 + zh 幻影 ASCII 引用防线（P2-3/P2-4）。
-  - **R250 prompt 微调**：theme 标注 few-shot 反例（nundina/canaryio/ledgeledger）+ word 内嵌 TLD 解析后降级 coined 兜底（P3-3）；refine 点踩形态硬禁令前置到 hint 开头 + 强命令式（P3-2）。
-  - **部署状态**：生产在线版本 = `deploy/r192-r195` 集成分支 + R222–R246 系列提交（R250 尚未部署）；新工作从该分支切出，PR base 仍为 main。
-- **R468 品牌卡**：`apps/web/src/components/brand-card.tsx` 纯前端确定性品牌卡（FNV-1a → 16 配色 × 4 版式 × 4 字形），Top Picks / Grid / 行内 swatch 三层入口；论证与验收表见 `docs/research/r468-brand-card.md`。新增可见文案走 `brand.*` i18n key。
-- **R473 品牌卡墙**（PR base `deploy/r192-r195`）：布局层去重与撞色重排——`lib/brand-look.ts`（从 brand-card 抽出的确定性外观，`brandLook(label, variant 0|1|2)` 只轮换 palette，variant 0 = R468）、`lib/brand-wall.ts`（`groupByLabel`/`pickTopGroups`/`assignBrandVariants`：Top Picks 3 席 3 个不同 label、Grid 一名一卡、variant 以 label 首次出现位置决定并全页复用 ⇒ 同名任何位置同外观）、`components/brand-wall.tsx`（`TopPickCard`/`GridCard` + TLD 胶囊：Top Picks 胶囊直连 `RegisterMenu`，Grid 胶囊切换收藏/锁定的目标域名并显示首年价）、紧凑行 12px `BrandDot`。行视图仍逐域名一行。论证与验收表 `docs/research/r473-brand-wall.md`；纯逻辑回归 `scripts/verify-r473.mjs`；UI 序列化验证脚本 `docs/qa/r473-ui-verify.mjs`（CDP 连会话 Chrome + wrangler dev :8787，合成 `dh:lastSearch:v1`，0 AI）。已知限制：两张都在 Top Picks 定色的 label 在 Grid 被用户重排后相邻同色时不再改（保同外观优先，fixture 量化 0/17446）。
-- **R471–R476 AI 不可用韧性线**（已集成 `deploy/r192-r195` 并部署）：R471 `rule-fallback.ts` 规则降级（首轮 quota/rate-limit/upstream/network 失败 → `fallback` 事件 + `theme:"rule"` 候选走同一条 RDAP 流水）+ KV 熔断 `dh:llm-breaker:v1`（quota 后 300s 内 0 次上游，reason `quota-breaker`）；R472 quota 隐藏重试/rate-limit 30s 自动重试一次 + <768px 恢复条/理解条折叠；R474 `ai-transport.ts` 可选备用供应商（`LLM_FALLBACK_*` secret 缺失则休眠）。R475 生产回归报告 `/home/ubuntu/r475-benchmark.md`（主会话机器）发现 2 P1 已由 R476 修：① 降级轮末尾空 `proposed` 误清 `dh:aiQuotaDown:v1`（App.tsx 现要求 items 非空才清）；② 375px 降级横幅 122px 把首张 Top Pick 顶到 y=471（现 <640px 为 58px 一行摘要 + `<details>` 展开全文，首卡 zh 378 / en 407）。同时 `fallback` 事件新增尾部字段 `retryAfterS`（仅 quota/quota-breaker），前端存 `SavedFallback.retryAt` 并在全文末尾提示「预计约 N 分钟后可重试 AI」。R477 收掉 R475 两个 P2：`brand-look.ts` 4 组配色 accent 对 bg 提到 ≥4.5:1（原 3.83–4.38，accent 是 duotone/stacked 次行与字标字色，verify-r473 E1b 守门）；`brand-wall.ts` 回看代价改为 `LOOKBACK_COST=[0,0,1,2]`（lg 3 列上一行权重最高），Grid 3 列纵向同色 1.44%→0.91%（D3 守门 <2%，2 列 0.90→1.30% 为可接受取舍）。规则 meaning 同模板属降级路径的如实标注，不改。
-- **R480 注册入口单一数据源 + 可配置返佣**（PR base `deploy/r192-r195`）：`lib/registrars.ts` 唯一数据源 `{id, name, region cn|global, url, affiliate?, supportsTld?}`；`registrarsFor(domain)`（.cn/.com.cn → 阿里云、腾讯云优先且隐藏不售 .cn 的 Porkbun/Cloudflare；其余 → Porkbun、Namecheap、Cloudflare 优先）与 `primaryRegistrar` 供 Enter 键/首页速注 chip/监控页注册链/批量注册共用，**禁止再按 `REGISTRARS[i]` 下标取注册商或硬编码注册商 URL**。所有注册外链必须走 `components/registrar-link.tsx`（`RegistrarAnchor`：forwardRef、`target=_blank`、rel 有返佣 `noopener noreferrer sponsored` 否则 `noopener noreferrer`、`registrar.openTitle` 双语 title、点击 `trackOutbound`；`openRegistrar` 用于非 `<a>`）。返佣参数=公开 var `REGISTRAR_AFFILIATE_JSON`（`wrangler.jsonc` `vars`，默认 `"{}"`；形态 `{id: {query?: {k:v}, redirect?: "https://…{url}"}}`，Cloudflare 无 affiliate 实现故配置无效）→ `GET /api/registrars` → `lib/affiliate.ts` 启动拉一次；**未配置时 href 与基线字节级一致**（`lib/registrars.test.ts` 15 例守门）。页脚返佣声明 `registrar.disclosure` 仅 `hasActiveAffiliate` 时渲染。逐家联盟计划一手调研 + 老板申请/填参清单：`docs/research/registrar-affiliate.md`（结论：Porkbun 计划已停止、Cloudflare 未查到、Namecheap 20% 首选、阿里云/腾讯云域名是否返佣未查到、Dynadot 30% 值得下一轮新增）。目前**没有任何返佣账号**，生产即纯链接。
-- **R483 .cn 合规与流程指南**（PR base `deploy/r192-r195`）：复用 `/guide/:slug` 基础设施新增 6 篇双语指南（`content/guides-cn-compliance.ts`，slug `cn-realname`/`cn-serverhold`/`cn-icp-beian`/`cn-dns-inland-vs-overseas`/`cn-vs-comcn-registrar`/`cn-expiry-redemption`），`IndustryGuide` 新增可选 `kind:"compliance"` + `sections/faq/sources/cta`；`guide-page.tsx` 与 `ssr-html.ts` 按 `kind` 分支（分节正文 / 官方依据外链 / CTA 指向 `/?mode=exact` 精确核验，0 AI），`buildGuideFaq` 有显式 `faq` 时优先。分组 `compliance`「合规与流程」进 `guide-groups.ts`，标签进 `guide-labels.ts`，hub 索引由 `gen-hub-index.mjs` 重生成，`content-counts.json` guide 404→410。一手规则核实与落位论证：`docs/research/cn-compliance-content.md`（CNNIC/工信部/阿里云/腾讯云/西部数码/WebNIC 链接 + 查阅日期；百度/Google 直采受验证码限制已如实标注）。已知取舍：`/guide` hub 标题「N 个行业」现含 6 篇非行业指南；`/tld/com.cn` 无独立路由故只互链 `/tld/cn` 与 `/vs/com-vs-cn`。
-- **四道把关**（company-os）：qa-engineer 测试 → user-experience-officer 体验走查 → 内部交叉测试 → 合规与安全审计，全过才交付。
-- **截至本文档更新时的在途工作**（部分已通过 deploy/r192-r195 集成分支上线、PR 待合回 main）：R243–R246 防线修复、R250 prompt 微调；R465 en 拼音路线丢弃（生产在线）；R466/R467/R468 已部署生产（version f7933dac）；R470 429 额度分类修复已部署（version 139cf4db，PR #433）；**R471–R474 子会话在途**（AI 降级+KV 熔断 `dh:llm-breaker:v1`、错误 UX+375 折叠、品牌卡墙去重、LLM failover 可选 secret `LLM_FALLBACK_*`），PR base 均为 `deploy/r192-r195`。**R466 首结果提速（主轮 LLM 流式 + 增量候选解析 + 候选级核验流水，PR base `deploy/r192-r195`，未部署）**——`ai.ts` 新增 `CandidateArrayStreamParser`/`sseDeltaContent`/`admitCandidate`（流式与非流式共用同一防线函数）与 `generateAiCandidates({ onCandidate })`；0 候选时的坏 JSON/网络错误仍走一次退避重试，已交出 ≥1 候选后中断按截断保留不重试。上线后观察点：首结果时间（目标 <10s，以首个 result 事件为准）、`llm-bad-json` 占比是否变化、网关是否按 `text/event-stream` 返回（非 SSE 自动退化整包）。用 `gh pr list` 确认实时状态与最新 Rxxx 编号。
+## 8. 外部阻塞（需老板的资源）
 
-## 7. 新会话接手 checklist
+全部条目、操作步骤、填法、当前状态与验证方式见 **`docs/owner-actions.md`**。摘要：
 
-1. `git clone` 后 `pnpm install`，`pnpm typecheck` 确认基线绿。
-2. 读本文档 + `README.md` + `apps/web/src/worker.ts`（全部 API/SEO 逻辑都在这一个文件）。
-3. `gh pr list` 看在途 PR / 批次进度，确认当前最新 Rxxx 编号（新工作顺延编号）。
-4. 核对生产健康：`curl 'https://hunt.zalize.com/api/usage?days=2&cb=<rand>'`（看 cronLast 心跳是否 <6h）、`/api/prices`（是否 stale）、首页 200。
-5. 改动 TLD/内容页时对照 §3 同步清单逐项检查。
-6. 涉及 AI 的测试前后拉 `/api/usage` 全表对账。
-7. 部署：从最新 main + 本批 PR 建 `deploy/<batch>` 集成分支 → `pnpm deploy` → 生产 `?cb=` 回归 → 合 PR。
-8. 完成后按 SOP-04 汇报（结论/证据链接/下一步/需注意），并更新本文档的「在途」「已知问题」小节。
+- **P0 · LLM 主上游 key 额度耗尽**（网关 429 `apikey_quota_exhausted`，2026-09-04 仍在）：代码侧已做完能做的（R471 规则降级 + 熔断、R472 重试 UX、R474 备用上游 failover、R476 横幅），产品核心 AI 路径仍不可用；需充值/提额或 `wrangler secret put DEEPSEEK_API_KEY`。可选：配 `LLM_FALLBACK_*` 备用上游。**未恢复前不发帖。**
+- 增长：GSC（网域级 TXT 已存在 3 条，待后台确认）/ Bing / Cloudflare Web Analytics token / 百度站长验证串 + 推送 token —— 均未配置，站点行为与未配置时一致。
+- 变现：注册商联盟 ID（Namecheap / 阿里云 / 腾讯云）—— 未配置，`/api/registrars` 为空。
+- 开源发布：GitHub About（仍是旧定位）/ Topics / Private vulnerability reporting / Social preview。
+- 微信：认证公众号 appId/appSecret + JS 安全域名（JS-SDK 未实现，等资源）。
+
+## 9. 已知问题 / 坑与注意事项
+
+- **P2 · `usage:{date}` 非原子计数**：多 isolate 并发 get→merge→put 会互相覆盖，`searches`/`aiErrors`/`outbound` 等可能偏低；**R487 在修**（方案方向同 R482 pv 分片）。pv 已于 R482 修复；`stats:checked` 同类问题，允许误差。
+- **IndexNow 429**：2026-09-04 18:00 推送被 api.indexnow.org 限流（`indexnowLastError.status=429`），代码按 6h 冷却重试；若连续多日 `indexnowLast` 不前进再查（可能需降低批量或频率）。
+- **AI 上游额度**：见 §8；`classifyAiError` 按响应体关键词把额度型 429 归 `quota`（其余 429 仍 `rate-limit`）。恢复后需补做 R466 首结果时延实测（zh/en ≥1 次）。
+- **TLD 扩容同步清单**（漏一处就不一致）：`content/tlds.ts` → `content/tld-list.ts`（`satisfies` 强校验）→ `home-page.tsx` `KNOWN_TLDS` → 首页 FAQ「支持哪些后缀」（worker.ts `HOME_FAQ` zh+en + i18n）→ /prices、sitemap、llms.txt 自动 → KV 价格 key 自动升版 → `scripts/content-counts.json`。
+- **新增 /vs 页两处都要加**：`content/compares.ts` + `content/compare-slugs.ts`（footer 内链轻量清单）。
+- **sitemap `<lastmod>` 是手写常量 `CONTENT_LASTMOD`**（worker.ts），增删内容页记得更新。
+- **CDN 缓存**：HTML `max-age=600`，`/api/usage` `max-age=300`，`/api/registrars` `max-age=300`，sitemap/llms.txt `max-age=86400`——生产验证统一加 `?cb=<随机>`；`curl -A Mozilla` 访问 HTML 页本身会计入 `pageviews`。
+- **注册入口单一数据源（R480）**：注册商只能从 `lib/registrars.ts`（`registrarsFor`/`primaryRegistrar`）取，外链只能走 `components/registrar-link.tsx`；**禁止**下标取 `REGISTRARS[i]` 或硬编码注册商 URL。未配置返佣时 href 与基线字节级一致（`lib/registrars.test.ts` 守门）。
+- **Dashboard 改 vars 会被 `wrangler deploy` 覆盖**：公开 vars 一律写 `wrangler.jsonc`。
+- **监控是全局 500 名额**，无账号；「我的监控」以客户端清单为准。早期测试遗留 `drawk.cn` 占名额，清理需直接改 KV。
+- **AI 测试预算纪律**：测 AI 前后各拉一次 `/api/usage` 全表对账；日常回归只走零 AI 路径（quick check、`/api/check`、`/advanced`、MCP）。首页示例 prompt chips 会真实触发 AI，测试时只看不点（SKILL）。
+- **核验通道**：DoH 预筛 → RDAP（IANA bootstrap 24h 缓存）→ WHOIS:43 兜底（com/net/cn/com.cn/io/cc/tv/co/me/xyz/sh/gg/so/us）；`.shop`/`.art` 走 DNS NXDOMAIN 判定；`sh/gg/so/us` 不在 RDAP bootstrap。expiresAt 哨兵（>当前+15 年）前端裁剪。
+- **Porkbun 波动**：偶发超时，`prices:latest` stale 兜底 + /prices 静态参考价 notice；观察 `stale:true`。
+- **内容页延迟挂载（R174）**与跳过大数据 chunk preload 是 LCP 关键，改路由/懒加载时别回退。
+- `/guide` hub 标题「N 个行业」现含 6 篇非行业合规指南（R483 已知取舍）；`/tld/com.cn` 无独立路由，只互链 `/tld/cn` 与 `/vs/com-vs-cn`。
+- 微信真机渲染/JS-SDK 行为未验证（R486 只做了 UA 模拟）。
+- verify 脚本基线：`scripts/verify-r196/r222–r225/r238/r243–r246/r250/r264/r463/r465/r466/r473/r474.mjs` 全绿；`verify-pinyin.mjs`、`verify-meaning-paren.mjs` 历史遗留失效（用例已被 bundle 式脚本覆盖）。
+
+## 10. 进行中 / 待办任务（按优先级）
+
+1. **R487 usage 原子计数**（P2）：`usage:{date}` 改分片或原子写；验收 = 并发压测下 `/api/usage` 计数与请求数一致，`pnpm --filter web test` 新增守门。
+2. **R490（本轮）**：老板待办归一 `docs/owner-actions.md` + 本文档同步 + README 事实核对（guide 404→410、AI 行加降级说明）—— PR 待父会话合入 `deploy/r192-r195`。
+3. **AI 恢复后**：R466 首结果时延实测（目标 <10s）；R239 遗留 P1-1/P3-2/P3-3 生产复验；`llm-bad-json` 占比观察。
+4. **发帖**（Show HN 等，`docs/launch/launch-checklist.md`）：老板决策，前提 §8 P0 解决。
+5. 观察项：IndexNow 429 是否持续；Baiduspider 来访是否持续（`botsBy.baidu`）；`stale:true` 频率。
+6. 候选：新增 Dynadot/Spaceship 注册商（联盟 30%/25%）；`/guide` hub 标题分组文案。
+
+## 11. R231–R486 变化速览（详情看各轮 PR / `docs/research`）
+
+- **R231–R250**：内容页扩到 120/116/150；显式 404；触控 ≥44px；guard 可观测（R238）；审计 R239/R242；防线修复 R243–R246；R250 prompt 微调。
+- **R2xx–R4xx 内容线**：内容页持续扩容至 408/404/444（R301–R455 各轮审计见 `docs/qa/audit-r*.md`）；hub 分组锚点导航（R415）。
+- **R460–R470**：竞品横评定位（R460/R464）；LLM 走 OpenAI 兼容网关（R460/R461）；R463 Space 两步确认；R465 en 拼音路线丢弃；**R466 主轮流式 + 候选级核验流水**；R468 品牌卡（`brand-card.tsx`）；R469 匿名竞品复评；R470 额度型 429 归 quota。
+- **R471–R477 AI 不可用韧性线**：规则降级 + KV 熔断（R471）；错误 UX + 375 折叠（R472）；品牌卡墙去重（R473）；备用上游 failover（R474）；R475 回归 → R476 修 2 P1（`dh:aiQuotaDown:v1` 误清、375 横幅高度）；R477 品牌卡对比度 ≥4.5:1。
+- **R478**：首页中文利基定位文案 + SSR hero 骨架（`content/home-copy.ts`）。
+- **R479**：开源发布准备——README 中英重写、CONTRIBUTING/SECURITY/CODE_OF_CONDUCT/Issue 模板、`docs/launch/launch-checklist.md`。
+- **R480**：注册商单一数据源 `lib/registrars.ts` + 公开 var `REGISTRAR_AFFILIATE_JSON` + `/api/registrars` + `/api/click` 外链计数；联盟调研 `docs/research/registrar-affiliate.md`。
+- **R481**：可配置 GSC/Bing 验证 meta + Cloudflare Web Analytics beacon（`growth-inject.ts`）、服务端 pageviews/bots 日聚合（`pageviews.ts`）、IndexNow 状态校验；调研 `docs/research/growth-analytics.md`。
+- **R482**：pageview 计数按 isolate 分片写 KV，读侧求和（消除多 isolate 互相覆盖）。
+- **R483**：6 篇双语 .cn 合规指南（`guides-cn-compliance.ts`，guide 404→410）；调研 `docs/research/cn-compliance-content.md`。
+- **R484**：零 AI 全站审计 `docs/audits/audit-r484.md`；浅色主题对比度 AA 修复（PR #448）。
+- **R485**：百度站长接入——`BAIDU_VERIFICATION` meta + 可选普通收录 API 推送 cron；调研 `docs/research/baidu-seo.md`。
+- **R486**：微信分享/打开体验——`/wx-share.png` 缩略图 + SSR 标题、剪贴板回退 `lib/clipboard.ts`、聊天友好复制格式；调研 `docs/research/wechat-share.md`。
+
+## 12. 资源与凭证索引（只写名称，不写值）
+
+- Worker secrets：`DEEPSEEK_API_KEY`（主上游，**额度耗尽中**）；可选 `LLM_API_BASE` / `LLM_MODEL` / `LLM_THINKING`；可选 `LLM_FALLBACK_API_KEY` / `LLM_FALLBACK_API_BASE` / `LLM_FALLBACK_MODEL` / `LLM_FALLBACK_THINKING`（未配置=休眠）；可选 `BAIDU_PUSH_TOKEN`（未配置）。
+- 公开 vars（`wrangler.jsonc`）：`REGISTRAR_AFFILIATE_JSON`（当前 `"{}"`）；可选未配置：`GSC_VERIFICATION`、`BING_VERIFICATION`、`BAIDU_VERIFICATION`、`BAIDU_PUSH_SITE`、`BAIDU_PUSH_DAILY_MAX`、`ANALYTICS_PROVIDER`、`ANALYTICS_TOKEN`；仅本地：`BAIDU_PUSH_ENDPOINT`。
+- 公开常量：`INDEXNOW_KEY`（worker.ts + `public/{key}.txt`，按协议公开）。
+- 外部账号（老板持有）：Cloudflare（Workers/KV/DNS zone `zalize.com`）、GitHub `wookat`、LLM 网关、（待开）Namecheap Impact/CJ、阿里云云大使、腾讯云云推官、百度站长、微信公众号 —— 状态见 `docs/owner-actions.md`。
+- 配额：AI 限流 20 次/h/IP（代码）；百度 API 默认 2000/日（可收紧）；IndexNow 无公开配额但会 429。
+
+## 13. 新会话接手 checklist
+
+1. `git clone` → `git checkout deploy/r192-r195` → `pnpm install` → `pnpm -r typecheck` 确认基线绿。
+2. 读本文档 + `README.md` + `.agents/skills/testing-domainhunter/SKILL.md` + `apps/web/src/worker.ts`。
+3. 用内置 git 工具看在途 PR / 最新 Rxxx 编号（新工作顺延编号；PR base = `deploy/r192-r195`）。
+4. 生产健康：`curl -s 'https://hunt.zalize.com/api/usage?days=2&cb=<随机>'`（`cronLast` <6h、`aiErrors`/`fallbacks` 看 AI 是否恢复、`indexnowLastError`）、`/api/prices`（`stale`）、首页 200。
+5. 涉及 AI 的测试前后拉 `/api/usage` 全表对账；日常回归 0 AI。
+6. 改内容页对照 §9 同步清单 + `node scripts/check-content-counts.mjs`。
+7. 需要老板资源 → 只改 `docs/owner-actions.md`，不要再在研究文档里另起清单。
+8. 完成后按 SOP-04 汇报（结论/证据链接/下一步/需注意），并更新本文档 §5/§8/§9/§10。
