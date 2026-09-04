@@ -41,3 +41,5 @@ description: How to run zero-AI production audits of DomainHunter (hunt.zalize.c
 - 导航到 hunt 首页前先对该标签页执行 `sessionStorage.clear()`：`dh:lastSearch:v1` 会把上次结果页恢复出来，按首页坐标的盲点击可能命中「再来一轮」并真实消耗 AI 配额（实测踩坑）。
 - R465 起恢复态（从 `dh:lastSearch:v1` 还原的结果页）「再来一轮」按钮也是两步确认：首点只变「再点一次确认」（3s 超时还原），3s 内二次点击才发起；本会话真实发起过一轮后护栏解除，单击直接发起。
 - 构造合成 `dh:lastSearch:v1` 恢复态时，`values.style/lengthPref` 必须用空字符串（UI 默认）：worker 会把任何非空值拼成中文后缀「命名风格偏好：…」进 description，可能改变 `descriptionLooksEnglish()` 语言判定路径（实测踩坑：填 "auto" 导致英文描述照出拼音）。
+- 错误态（quota / rate-limit）本地复现不必碰真实 key：Playwright `context.route("**/api/ai-search")` 用 `route.fulfill` 返回 NDJSON `{"type":"round",...}\n{"type":"error","round":1,"errorKind":"rate-limit"|"quota","detail":"llm-http-429"}`；R472 起 rate-limit 会起 30s 倒计时并自动重试一次（拦截路由会再收到一次请求），用 `page.clock.install()` + `clock.runFor(30000)` 推进而不是实等。现成脚本：`docs/qa/r472/errors.js`（70 项断言）与 `measure.js`（首屏几何）。
+- 375 下的结果页横幅（R472）：恢复条 + AI 理解条 + 微调 chips 折叠成一个 `button[aria-expanded]` 摘要行（`md:hidden`），chips 在展开面板里；桌面仍是原来的独立横幅（`hidden md:block`）。量 375 首屏时不要按桌面 DOM 找 `UnderstandingBar`。

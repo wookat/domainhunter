@@ -1,0 +1,214 @@
+{
+  "base-375-zh": {
+    "viewport": {
+      "w": 375,
+      "h": 667
+    },
+    "scrollWidth": 375,
+    "header": {
+      "top": 0,
+      "bottom": 57,
+      "height": 57,
+      "text": "DomainHunter候选清单0EN"
+    },
+    "banners": [
+      {
+        "top": 73,
+        "bottom": 117,
+        "height": 44,
+        "text": "已恢复你上次的搜索结果开始新搜索✕"
+      },
+      {
+        "top": 117,
+        "bottom": 322,
+        "height": 205,
+        "text": "我理解你要的是：年轻化新式茶饮品牌，清新自然带国潮感 风格 清新、自然、国潮 场"
+      }
+    ],
+    "h1": {
+      "top": 346,
+      "bottom": 402,
+      "height": 56,
+      "text": "为「面向年轻人的新式茶饮品牌，清新自然，…」猎到 8 个可注册域名"
+    },
+    "topPicksHeading": {
+      "top": 527,
+      "bottom": 547,
+      "height": 20,
+      "text": "Top Picks"
+    },
+    "firstCard": {
+      "top": 559,
+      "bottom": 1033,
+      "height": 474,
+      "text": "89lumoralumora.com「流光」lumi + aura，寓意灵动的光"
+    },
+    "firstDomain": {
+      "top": 787,
+      "bottom": 819,
+      "height": 32,
+      "text": "lumora.com"
+    },
+    "firstDomainInViewport": false,
+    "aiCalls": 0
+  },
+  "base-desktop-zh": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "scrollWidth": 1440,
+    "header": {
+      "top": 0,
+      "bottom": 57,
+      "height": 57,
+      "text": "DomainHunter候选清单0EN"
+    },
+    "banners": [
+      {
+        "top": 73,
+        "bottom": 117,
+        "height": 44,
+        "text": "已恢复你上次的搜索结果开始新搜索✕"
+      },
+      {
+        "top": 117,
+        "bottom": 181,
+        "height": 64,
+        "text": "我理解你要的是：年轻化新式茶饮品牌，清新自然带国潮感 风格 清新、自然、国潮 场"
+      }
+    ],
+    "h1": {
+      "top": 205,
+      "bottom": 233,
+      "height": 28,
+      "text": "为「面向年轻人的新式茶饮品牌，清新自然，…」猎到 8 个可注册域名"
+    },
+    "topPicksHeading": {
+      "top": 282,
+      "bottom": 302,
+      "height": 20,
+      "text": "Top Picks"
+    },
+    "firstCard": {
+      "top": 314,
+      "bottom": 873,
+      "height": 560,
+      "text": "89lumoralumora.com「流光」lumi + aura，寓意灵动的光"
+    },
+    "firstDomain": {
+      "top": 627,
+      "bottom": 659,
+      "height": 32,
+      "text": "lumora.com"
+    },
+    "firstDomainInViewport": true,
+    "aiCalls": 0
+  },
+  "base-375-en": {
+    "viewport": {
+      "w": 375,
+      "h": 667
+    },
+    "scrollWidth": 375,
+    "header": {
+      "top": 0,
+      "bottom": 57,
+      "height": 57,
+      "text": "DomainHunterShortlist0中"
+    },
+    "banners": [
+      {
+        "top": 73,
+        "bottom": 145,
+        "height": 72,
+        "text": "Restored your previous search resultsSta"
+      },
+      {
+        "top": 145,
+        "bottom": 371,
+        "height": 227,
+        "text": "I hear you're after: youthful modern tea"
+      }
+    ],
+    "h1": {
+      "top": 395,
+      "bottom": 451,
+      "height": 56,
+      "text": "Found 8 registrable domains for \"A moder"
+    },
+    "topPicksHeading": {
+      "top": 605,
+      "bottom": 625,
+      "height": 20,
+      "text": "Top Picks"
+    },
+    "firstCard": {
+      "top": 637,
+      "bottom": 1110,
+      "height": 474,
+      "text": "89lumoralumora.comlumi + aura: a glowing"
+    },
+    "firstDomain": {
+      "top": 864,
+      "bottom": 896,
+      "height": 32,
+      "text": "lumora.com"
+    },
+    "firstDomainInViewport": false,
+    "aiCalls": 0
+  },
+  "base-desktop-en": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "scrollWidth": 1440,
+    "header": {
+      "top": 0,
+      "bottom": 57,
+      "height": 57,
+      "text": "DomainHunterShortlist0中"
+    },
+    "banners": [
+      {
+        "top": 73,
+        "bottom": 117,
+        "height": 44,
+        "text": "Restored your previous search resultsSta"
+      },
+      {
+        "top": 117,
+        "bottom": 197,
+        "height": 80,
+        "text": "I hear you're after: youthful modern tea"
+      }
+    ],
+    "h1": {
+      "top": 221,
+      "bottom": 249,
+      "height": 28,
+      "text": "Found 8 registrable domains for \"A moder"
+    },
+    "topPicksHeading": {
+      "top": 346,
+      "bottom": 366,
+      "height": 20,
+      "text": "Top Picks"
+    },
+    "firstCard": {
+      "top": 378,
+      "bottom": 937,
+      "height": 560,
+      "text": "89lumoralumora.comlumi + aura: a glowing"
+    },
+    "firstDomain": {
+      "top": 691,
+      "bottom": 723,
+      "height": 32,
+      "text": "lumora.com"
+    },
+    "firstDomainInViewport": true,
+    "aiCalls": 0
+  }
+}
