@@ -56,6 +56,18 @@ export async function submitIndexNow(opts: IndexNowSubmitOptions): Promise<Index
   return results;
 }
 
+/** 上次成功推送的快照：lastmod 变了视为全站内容更新（全量重推），否则只推尚未推送过的新 URL */
+export interface IndexNowPushed {
+  lastmod: string;
+  urls: string[];
+}
+
+export function indexNowDelta(prev: IndexNowPushed | null, urls: string[], lastmod: string): string[] {
+  if (!prev || prev.lastmod !== lastmod) return urls;
+  const seen = new Set(prev.urls);
+  return urls.filter((u) => !seen.has(u));
+}
+
 export function summarizeIndexNow(results: IndexNowBatchResult[]): { ok: boolean; status: number; message: string; submitted: number } {
   const failed = results.find((r) => !r.ok);
   const submitted = results.reduce((n, r) => n + (r.ok ? r.submitted : 0), 0);

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { chunkUrls, INDEXNOW_BATCH_MAX, submitIndexNow, summarizeIndexNow } from "./indexnow";
+import { chunkUrls, INDEXNOW_BATCH_MAX, indexNowDelta, submitIndexNow, summarizeIndexNow } from "./indexnow";
 
 const base = { host: "hunt.zalize.com", key: "k".repeat(32), keyLocation: "https://hunt.zalize.com/kkk.txt" };
 
@@ -24,6 +24,21 @@ describe("chunkUrls", () => {
     expect(chunks[0].length).toBe(INDEXNOW_BATCH_MAX);
     expect(chunks[1]).toEqual([`u${INDEXNOW_BATCH_MAX}`]);
     expect(chunkUrls([])).toEqual([]);
+  });
+});
+
+describe("indexNowDelta", () => {
+  const urls = ["https://hunt.zalize.com/", "https://hunt.zalize.com/tld/com", "https://hunt.zalize.com/tld/cn"];
+  it("无快照（首次）或 lastmod 变化 → 全量", () => {
+    expect(indexNowDelta(null, urls, "2026-08-10")).toEqual(urls);
+    expect(indexNowDelta({ lastmod: "2026-08-01", urls }, urls, "2026-08-10")).toEqual(urls);
+  });
+  it("lastmod 不变 → 只推快照中没有的新 URL；全部已推则为空", () => {
+    expect(indexNowDelta({ lastmod: "2026-08-10", urls: urls.slice(0, 2) }, urls, "2026-08-10")).toEqual([urls[2]]);
+    expect(indexNowDelta({ lastmod: "2026-08-10", urls }, urls, "2026-08-10")).toEqual([]);
+  });
+  it("已从 sitemap 移除的 URL 不会被重推，也不影响新增判定", () => {
+    expect(indexNowDelta({ lastmod: "2026-08-10", urls: [...urls, "https://hunt.zalize.com/gone"] }, urls, "2026-08-10")).toEqual([]);
   });
 });
 
