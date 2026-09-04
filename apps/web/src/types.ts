@@ -7,7 +7,8 @@ export interface Scores {
   brandability: number;
 }
 
-export type Theme = "pinyin" | "word" | "coined" | "blend";
+/** 命名路线；rule = AI 不可用时的规则降级候选（R471，非 AI 寓意） */
+export type Theme = "pinyin" | "word" | "coined" | "blend" | "rule";
 
 export interface Row {
   domain: string;
@@ -25,7 +26,7 @@ export interface Row {
 export interface RoundInfo {
   round: number;
   /** i18n key（存 key 而非成品字符串，切语言时可重译） */
-  noteKey: "agent.note.first" | "agent.note.more";
+  noteKey: "agent.note.first" | "agent.note.more" | "agent.note.fallback";
   proposed: number;
   checked: number;
   available: number;
@@ -35,6 +36,9 @@ export interface RoundInfo {
 
 /** AI 上游错误类别（R264）：quota 类重试无效，其余可重试 */
 export type AiErrorKind = "quota" | "rate-limit" | "upstream" | "network" | "unknown";
+
+/** 规则降级原因（R471）：首轮 LLM 错误类别，或服务端熔断期内直接降级（quota-breaker，未打上游） */
+export type FallbackReason = AiErrorKind | "quota-breaker";
 
 /** 防线统计元数据（R238）：各防线丢弃计数 + 补发/重试触发，只计数不含候选内容 */
 export interface GuardMeta {
@@ -48,7 +52,7 @@ export interface GuardMeta {
 }
 
 export interface StreamEvent {
-  type?: "round" | "proposed" | "done" | "error" | "understanding" | "hint";
+  type?: "round" | "proposed" | "done" | "error" | "understanding" | "hint" | "fallback";
   /** hint 事件的类型（R247，目前仅 lowYield：连续低产出建议拓宽后缀/命名路线） */
   kind?: "lowYield";
   round?: number;
@@ -61,6 +65,9 @@ export interface StreamEvent {
   detail?: string;
   /** error 事件的上游错误类别（R264，旧事件无此字段） */
   errorKind?: AiErrorKind;
+  /** fallback 事件（R471）：降级原因与本轮规则候选数 */
+  reason?: FallbackReason;
+  count?: number;
   domain?: string;
   status?: Status;
   meaning?: string;
