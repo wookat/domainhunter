@@ -389,13 +389,12 @@ app.post("/api/ai-search", async (c) => {
           const runFallback = async (reason: FallbackReason) => {
             const rules = generateRuleCandidates(rawDescription, lang, guard, tried);
             await emit({ type: "fallback", round, reason, count: rules.length });
-            await bumpFallback(c.env.CACHE, reason);
             for (const x of rules) await onCandidate(x);
           };
-          let fellBack = false;
+          let fellBack: FallbackReason | null = null;
           if (breakerHit) {
             await runFallback("quota-breaker");
-            fellBack = true;
+            fellBack = "quota-breaker";
           } else {
             try {
               await generateAiCandidates(description, apiKey, {
@@ -423,7 +422,7 @@ app.post("/api/ai-search", async (c) => {
               if (errorKind === "quota") await tripLlmBreaker(c.env.CACHE);
               if (round === 1 && FALLBACK_ERROR_KINDS.has(errorKind)) {
                 await runFallback(errorKind);
-                fellBack = true;
+                fellBack = errorKind;
               } else {
                 await checks.drain().catch(() => undefined);
                 await emit({ type: "error", round, errorKind, detail: String(e), guard });
@@ -434,7 +433,11 @@ app.post("/api/ai-search", async (c) => {
           await emit({ type: "proposed", round, items: [], tlds, guard });
           await checks.drain();
           await bumpStats(c.env.CACHE, checkedDomains);
-          if (fellBack) break;
+          if (fellBack) {
+            // 核验排完后再计数：避开与 waitUntil(bumpUsage) 对同一 usage 键的读改写竞争（KV 非原子）
+            await bumpFallback(c.env.CACHE, fellBack);
+            break;
+          }
           takenLabels.push(...takenThisRound);
           for (const label of takenThisRound) {
             const theme = themeByLabel.get(label);

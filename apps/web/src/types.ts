@@ -26,7 +26,7 @@ export interface Row {
 export interface RoundInfo {
   round: number;
   /** i18n key（存 key 而非成品字符串，切语言时可重译） */
-  noteKey: "agent.note.first" | "agent.note.more";
+  noteKey: "agent.note.first" | "agent.note.more" | "agent.note.fallback";
   proposed: number;
   checked: number;
   available: number;

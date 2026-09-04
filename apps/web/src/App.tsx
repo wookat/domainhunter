@@ -306,6 +306,7 @@ export default function App() {
     } else if (ev.type === "fallback") {
       const reason = ev.reason ?? "unknown";
       setFallback({ reason, count: ev.count ?? 0 });
+      setRounds((prev) => prev.map((r) => (r.round === (ev.round ?? 1) ? { ...r, noteKey: "agent.note.fallback" } : r)));
       if (reason === "quota" || reason === "quota-breaker") markAiQuotaDown();
     } else if (ev.type === "hint") {
       if (ev.kind === "lowYield") setLowYieldHint(true);
