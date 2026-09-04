@@ -26,7 +26,7 @@ const {
   mergeWordSupplement,
   buildWordSupplementDirective,
   generateAiCandidates,
-  EN_WORD_QUOTA_MIN_CANDIDATES,
+  EN_WORD_SUPPLEMENT_MIN_CANDIDATES,
   EN_WORD_SUPPLEMENT_COUNT,
 } = await import(tmp);
 rmSync(tmp);
@@ -56,14 +56,15 @@ const noWord = ["alpha", "bravo", "cider", "delta", "eagle", "maple", "gale", "h
 check("countThemes word=0", countThemes(noWord).word, 0);
 check("countThemes coined=4", countThemes(noWord).coined, 4);
 check("needsWordSupplement: word=0 且候选数达阈值 → true", needsWordSupplement(noWord), true);
+// R498：门槛由「≥8 且 word=0」改为「≥3 且 word < max(2,⌈n×15%⌉)」，下面两条断言随新语义更新（见 verify-r498.mjs）
 check(
-  "needsWordSupplement: 含 word 候选 → false",
-  needsWordSupplement([...noWord.slice(0, 7), cand("anvil", "word")]),
+  "needsWordSupplement: word 达标（8 条含 2 word）→ false",
+  needsWordSupplement([...noWord.slice(0, 6), cand("anvil", "word"), cand("beacon", "word")]),
   false,
 );
 check(
-  `needsWordSupplement: 候选数 < 阈值(${EN_WORD_QUOTA_MIN_CANDIDATES}) → false`,
-  needsWordSupplement(noWord.slice(0, EN_WORD_QUOTA_MIN_CANDIDATES - 1)),
+  `needsWordSupplement: 候选数 < 阈值(${EN_WORD_SUPPLEMENT_MIN_CANDIDATES}) → false`,
+  needsWordSupplement(noWord.slice(0, EN_WORD_SUPPLEMENT_MIN_CANDIDATES - 1)),
   false,
 );
 check("needsWordSupplement: 空数组 → false", needsWordSupplement([]), false);
@@ -100,11 +101,11 @@ try {
   check(`补发请求 count=${EN_WORD_SUPPLEMENT_COUNT}`, calls[1].includes(`请给出 ${EN_WORD_SUPPLEMENT_COUNT} 个候选`), true);
   check("补发候选并入结果", out.some((c) => c.label === "anvil"), true);
 
-  // 场景 2：en 但已含 word 候选 → 不补发（仅 1 次调用）
+  // 场景 2：en 且 word 达标（8 条含 2 word，R498 门槛）→ 不补发（仅 1 次调用）
   calls = [];
   globalThis.fetch = async (_url, init) => {
     calls.push(JSON.parse(init.body).messages[1].content);
-    return llmResponse([...noWord.slice(0, 7), cand("anvil", "word")]);
+    return llmResponse([...noWord.slice(0, 6), cand("anvil", "word"), cand("beacon", "word")]);
   };
   out = await generateAiCandidates("desc", "test-key", { lang: "en" });
   check("配额达标不补发：仅 1 次调用", calls.length, 1);

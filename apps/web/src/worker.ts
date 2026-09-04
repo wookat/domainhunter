@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { nanoid } from "nanoid";
 import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
-import { AI_THEMES, classifyAiError, descriptionLooksEnglish, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiCandidate, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
+import { AI_THEMES, classifyAiError, descriptionLooksEnglish, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, newWordSupplementBudget, type AiCandidate, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
 import { resolveFallbackUpstream, type LlmProvider } from "./ai-transport";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
@@ -351,6 +351,8 @@ app.post("/api/ai-search", async (c) => {
       // R471：熔断期内（quota 耗尽后 5 分钟）不打任何上游——理解与候选两路都跳过，直接进规则降级
       const breakerUntil = await llmBreakerUntil(c.env.CACHE);
       const breakerHit = breakerUntil !== null;
+      // R498：EN word 补发预算按整次搜索计（跨轮共享），控制额外 LLM 调用上限
+      const wordSupplementBudget = newWordSupplementBudget();
       const understandingDone = breakerHit
         ? Promise.resolve()
         : generateUnderstanding(description, apiKey, lang, llmBase, llmModel, llmThinking, llmFallback)
@@ -433,6 +435,7 @@ app.post("/api/ai-search", async (c) => {
                 fallback: llmFallback,
                 descLooksEnglish,
                 onCandidate,
+                wordSupplementBudget,
               });
             } catch (e) {
               // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；
