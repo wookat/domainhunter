@@ -2,7 +2,9 @@
 // 只存计数，不存 IP / UA 原文 / 路径原文；机器人 UA 单独计 bots（按家族），不进 pageviews。
 // 写入策略：同一 isolate 内 flushDelayMs 窗口合并后一次读改写（waitUntil 落盘），把 KV 写次数
 // 从「每个页面请求 1 次」压到「每窗口 1 次」，爬虫扫全站 1264 页也只产生少量写。
-// 已知精度边界：KV 非原子 + 多 PoP 并发读改写会互相覆盖，计数是下界近似；精确 PV 以 Cloudflare Web Analytics 为准。
+// 分片（R482）：KV 非原子，多 isolate 对同一键读改写会互相覆盖（生产实测 1s 内 3 页只入账 2 页）；
+// 因此每个 isolate 只写自己的分片键 pv:YYYY-MM-DD:<shard>（单写者，无竞争），读侧 list 前缀求和，
+// 并兼容分片前的旧日键 pv:YYYY-MM-DD。isolate 生命周期以小时计，一天分片数通常在几十到几百量级。
 
 export const PV_CATEGORIES = ["home", "results", "tld", "guide", "vs", "prices", "other"] as const;
 export type PvCategory = (typeof PV_CATEGORIES)[number];
@@ -18,6 +20,9 @@ export interface DayPageviews {
 
 export const PV_KEY_PREFIX = "pv:";
 export const pvKey = (date: string) => `${PV_KEY_PREFIX}${date}`;
+export const pvShardPrefix = (date: string) => `${PV_KEY_PREFIX}${date}:`;
+export const pvShardKey = (date: string, shard: string) => `${pvShardPrefix(date)}${shard}`;
+export const newShardId = () => Math.random().toString(36).slice(2, 10) || "0";
 export const emptyDayPageviews = (): DayPageviews => ({ pageviews: {}, bots: 0, botsBy: {} });
 
 /** 路由类别：results = 分享结果页 /s/:id（首页搜索→结果是同一文档内的状态切换，由 usage.searches 计） */
@@ -88,6 +93,28 @@ export function normalizeDay(raw: Partial<DayPageviews> | null | undefined): Day
 export interface PvKv {
   get<T = unknown>(key: string, type: "json"): Promise<T | null>;
   put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
+  list?(options: { prefix: string; cursor?: string }): Promise<{ keys: { name: string }[]; list_complete: boolean; cursor?: string }>;
+}
+
+/** 读侧汇总：旧日键 + 全部分片键求和；任一读失败按空处理（下界近似，不抛） */
+export async function readDayPageviews(kv: PvKv, date: string, maxPages = 5): Promise<DayPageviews | null> {
+  const legacy = await kv.get<DayPageviews>(pvKey(date), "json").catch(() => null);
+  const shardKeys: string[] = [];
+  if (kv.list) {
+    let cursor: string | undefined;
+    for (let page = 0; page < maxPages; page++) {
+      const res = await kv.list({ prefix: pvShardPrefix(date), cursor }).catch(() => null);
+      if (!res) break;
+      for (const k of res.keys) shardKeys.push(k.name);
+      if (res.list_complete || !res.cursor) break;
+      cursor = res.cursor;
+    }
+  }
+  if (!legacy && shardKeys.length === 0) return null;
+  const shards = await Promise.all(shardKeys.map((k) => kv.get<DayPageviews>(k, "json").catch(() => null)));
+  const total = normalizeDay(legacy);
+  for (const s of shards) if (s) mergeDay(total, normalizeDay(s));
+  return total;
 }
 
 export interface PageviewCounterOptions {
@@ -95,6 +122,8 @@ export interface PageviewCounterOptions {
   flushDelayMs?: number;
   /** 日键保留秒数，与 usage:* 一致（45 天） */
   ttlSeconds?: number;
+  /** 分片 id，默认每个 counter 实例（= isolate）随机一个 */
+  shardId?: string;
   now?: () => number;
   sleep?: (ms: number) => Promise<void>;
 }
@@ -106,6 +135,7 @@ export class PageviewCounter {
   private scheduled: Promise<void> | null = null;
   private readonly flushDelayMs: number;
   private readonly ttlSeconds: number;
+  readonly shardId: string;
   private readonly now: () => number;
   private readonly sleep: (ms: number) => Promise<void>;
   /** 累计成功落盘次数（测试/诊断用） */
@@ -117,6 +147,7 @@ export class PageviewCounter {
   ) {
     this.flushDelayMs = opts.flushDelayMs ?? 5000;
     this.ttlSeconds = opts.ttlSeconds ?? 45 * 86400;
+    this.shardId = opts.shardId ?? newShardId();
     this.now = opts.now ?? Date.now;
     this.sleep = opts.sleep ?? defaultSleep;
   }
@@ -144,8 +175,9 @@ export class PageviewCounter {
     this.pending = new Map();
     for (const [date, delta] of batch) {
       try {
-        const cur = normalizeDay(await this.kv.get<DayPageviews>(pvKey(date), "json"));
-        await this.kv.put(pvKey(date), JSON.stringify(mergeDay(cur, delta)), { expirationTtl: this.ttlSeconds });
+        const key = pvShardKey(date, this.shardId);
+        const cur = normalizeDay(await this.kv.get<DayPageviews>(key, "json"));
+        await this.kv.put(key, JSON.stringify(mergeDay(cur, delta)), { expirationTtl: this.ttlSeconds });
         this.flushes += 1;
       } catch {
         const back = this.pending.get(date);
