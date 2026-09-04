@@ -27,16 +27,19 @@ import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from 
 import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
 import { PageviewCounter, readDayPageviews, type DayPageviews } from "./pageviews";
 import { INDEXNOW_ENDPOINT, submitIndexNow, summarizeIndexNow } from "./indexnow";
+import { pickPending, resolveBaiduPush, submitBaidu, summarizeBaidu, type BaiduPushVars } from "./baidu-push";
 
 // LLM_API_BASE/LLM_MODEL：LLM 上游基地址与模型名。默认 DeepSeek 官方 + deepseek-chat；
 // 生产可指向 OpenAI 兼容网关（R460：电信 AI 网关），本地 wrangler dev 亦可指向假上游验证错误路径（R264）
 // LLM_FALLBACK_*（R474）：备用上游（任一 OpenAI 兼容端点），主上游额度耗尽/认证失败/5xx/网络失败时自动重发；
 // LLM_FALLBACK_API_KEY 为 secret（wrangler secret put），未配置则 failover 休眠，行为与仅有主上游时完全一致
-// GSC_VERIFICATION / BING_VERIFICATION / ANALYTICS_PROVIDER / ANALYTICS_TOKEN（R481）：站点验证 meta 与分析脚本，
+// GSC_VERIFICATION / BING_VERIFICATION / BAIDU_VERIFICATION / ANALYTICS_PROVIDER / ANALYTICS_TOKEN（R481/R485）：站点验证 meta 与分析脚本，
 // 全部可选；为空时 HTML 输出与未配置时字节一致（见 growth-inject.ts）
+// BAIDU_PUSH_SITE（var）+ BAIDU_PUSH_TOKEN（secret）+ BAIDU_PUSH_DAILY_MAX / BAIDU_PUSH_ENDPOINT（var，可选，后者仅本地 mock）（R485）：
+// 百度普通收录 API 推送；site/token 任一缺失则 cron 里的 pushBaidu 直接返回，不读写 KV（见 baidu-push.ts）
 // REGISTRAR_AFFILIATE_JSON（R480）：公开的注册商返佣参数（wrangler.jsonc vars，非 secret），经 GET /api/registrars 下发前端；
 // 形如 {"aliyun":{"query":{"userCode":"…"}},"namecheap":{"redirect":"https://namecheap.pxf.io/c/…?u={url}"}}，默认 "{}" = 纯搜索链接
-type Bindings = GrowthVars & {
+type Bindings = GrowthVars & BaiduPushVars & {
   ASSETS: Fetcher;
   DEEPSEEK_API_KEY: string;
   CACHE?: KVNamespace;
@@ -1255,21 +1258,27 @@ app.get("/api/usage", async (c) => {
   let indexnowLastError: IndexNowError | null = null;
   let pricesLastOk: number | null = null;
   let pricesLastFail: number | null = null;
+  let baiduLast: number | null = null;
+  let baiduLastError: BaiduPushError | null = null;
   try {
-    const [cl, il, ie, po, pf] = await Promise.all([
+    const [cl, il, ie, po, pf, bl, be] = await Promise.all([
       kv?.get("cron:last"),
       kv?.get(INDEXNOW_LAST_KEY),
       kv?.get<IndexNowError>(INDEXNOW_LAST_ERROR_KEY, "json"),
       kv?.get(PRICES_LAST_OK_KEY),
       kv?.get(PRICES_LAST_FAIL_KEY),
+      kv?.get(BAIDU_LAST_KEY),
+      kv?.get<BaiduPushError>(BAIDU_LAST_ERROR_KEY, "json"),
     ]);
     cronLast = cl ? Number(cl) : null;
     indexnowLast = il ? Number(il) : null;
     indexnowLastError = ie ?? null;
     pricesLastOk = po ? Number(po) : null;
     pricesLastFail = pf ? Number(pf) : null;
+    baiduLast = bl ? Number(bl) : null;
+    baiduLastError = be ?? null;
   } catch { /* 读失败返回 null */ }
-  return c.json({ days: out, cronLast, indexnowLast, indexnowLastError, pricesLastOk, pricesLastFail }, 200, { "cache-control": "public, max-age=300" });
+  return c.json({ days: out, cronLast, indexnowLast, indexnowLastError, pricesLastOk, pricesLastFail, baiduLast, baiduLastError }, 200, { "cache-control": "public, max-age=300" });
 });
 
 // SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）
@@ -2142,6 +2151,59 @@ async function pingIndexNow(env: Bindings): Promise<void> {
   await kv.put(INDEXNOW_LAST_ERROR_KEY, JSON.stringify(err));
 }
 
+// 百度普通收录 API 推送（R485）：仅在 BAIDU_PUSH_SITE + BAIDU_PUSH_TOKEN 都配置时运行，否则不读写任何 KV。
+// 状态键：baidu:last = 最近一次成功（200）；baidu:lastAttempt = 最近一次尝试（6h 冷却）；baidu:lastError = 最近失败详情（成功后清除）；
+// baidu:pushed = 已被百度计为成功的 URL 列表（仅保留仍在 sitemap 中的）。
+// 配额策略：官方每日配额按站点动态分配且重推旧 URL 会被降配额，所以每 24h 只推尚未成功推送过的 URL（新增内容页自然进入队列），
+// 按 sitemapPaths 优先级顺序取前 dailyMax 条（默认 2000 = 单次接口上限，可用 BAIDU_PUSH_DAILY_MAX 按站长平台显示的配额收紧）。
+const BAIDU_INTERVAL_MS = 24 * 3600 * 1000;
+const BAIDU_RETRY_MS = 6 * 3600 * 1000;
+const BAIDU_LAST_KEY = "baidu:last";
+const BAIDU_LAST_ATTEMPT_KEY = "baidu:lastAttempt";
+const BAIDU_LAST_ERROR_KEY = "baidu:lastError";
+const BAIDU_PUSHED_KEY = "baidu:pushed";
+interface BaiduPushError {
+  at: number;
+  status: number;
+  message: string;
+  submitted: number;
+  remain: number | null;
+}
+
+async function pushBaidu(env: Bindings): Promise<void> {
+  const cfg = resolveBaiduPush(env);
+  if (!cfg || !env.CACHE) return;
+  const kv = env.CACHE;
+  const now = Date.now();
+  const [last, lastAttempt, pushedRaw] = await Promise.all([
+    kv.get(BAIDU_LAST_KEY),
+    kv.get(BAIDU_LAST_ATTEMPT_KEY),
+    kv.get<string[]>(BAIDU_PUSHED_KEY, "json"),
+  ]);
+  if (last && now - Number(last) < BAIDU_INTERVAL_MS) return;
+  if (lastAttempt && now - Number(lastAttempt) < BAIDU_RETRY_MS) return;
+  const all = sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`);
+  const allSet = new Set(all);
+  const pushed = new Set((Array.isArray(pushedRaw) ? pushedRaw : []).filter((u) => allSet.has(u)));
+  const pending = pickPending(all, pushed, cfg.dailyMax);
+  if (pending.length === 0) {
+    await kv.put(BAIDU_LAST_KEY, String(now));
+    return;
+  }
+  await kv.put(BAIDU_LAST_ATTEMPT_KEY, String(now));
+  const summary = summarizeBaidu(await submitBaidu({ cfg, urls: pending }));
+  for (const u of summary.accepted) pushed.add(u);
+  const writes: Promise<void>[] = [kv.put(BAIDU_PUSHED_KEY, JSON.stringify(all.filter((u) => pushed.has(u))))];
+  if (summary.ok) {
+    writes.push(kv.put(BAIDU_LAST_KEY, String(now)), kv.delete(BAIDU_LAST_ERROR_KEY));
+  } else {
+    const err: BaiduPushError = { at: now, status: summary.status, message: summary.message, submitted: summary.submitted, remain: summary.remain };
+    console.error("baidu push failed", JSON.stringify(err));
+    writes.push(kv.put(BAIDU_LAST_ERROR_KEY, JSON.stringify(err)));
+  }
+  await Promise.all(writes);
+}
+
 export default {
   fetch: app.fetch,
   async scheduled(_event: ScheduledController, env: Bindings, ctx: ExecutionContext) {
@@ -2149,6 +2211,7 @@ export default {
     ctx.waitUntil(env.CACHE?.put("cron:last", String(Date.now())) ?? Promise.resolve());
     ctx.waitUntil(runMonitorSweep(env));
     ctx.waitUntil(pingIndexNow(env));
+    ctx.waitUntil(pushBaidu(env));
     ctx.waitUntil(refreshPricesIfStale(env.CACHE, PRICES_CACHE_CFG));
   },
 };

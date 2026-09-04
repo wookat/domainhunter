@@ -66,10 +66,11 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 | `cron:last` / `indexnow:last` | cron 心跳 / IndexNow 上次**成功**（200/202）推送时间 |
 | `indexnow:lastAttempt` / `indexnow:lastError` | IndexNow 上次尝试时间（失败后 6h 冷却）/ 上次失败详情 JSON（R481） |
 | `pv:{YYYY-MM-DD}` | 每日 HTML 文档访问按路由类别聚合 + bots（R481，isolate 内 5s 合并再落盘，45 天） |
+| `baidu:last` / `baidu:lastAttempt` / `baidu:lastError` / `baidu:pushed` | 百度普通收录 API 推送：上次成功（仅 200）/ 上次尝试（失败 6h 冷却）/ 失败详情 / 已被百度计为成功的 URL 列表（R485，仅在 BAIDU_PUSH_* 配置后才会出现） |
 
 ### 2.4 Cron（`triggers.crons: ["0 */6 * * *"]`，worker `scheduled`）
 
-每 6 小时：① 写 `cron:last` 心跳；② `runMonitorSweep`（全量监控域实时复查，状态变化写 `monitor:changes` + webhook 推送）；③ `pingIndexNow`（≥24h 间隔向 api.indexnow.org 推送 sitemap 全部 URL，key 文件 `/{INDEXNOW_KEY}.txt`；R481 起按 10,000/批拆分、仅 200/202 视为成功后才写 `indexnow:last`，失败写 `indexnow:lastError` 并 6h 后重试）。
+每 6 小时：① 写 `cron:last` 心跳；② `runMonitorSweep`（全量监控域实时复查，状态变化写 `monitor:changes` + webhook 推送）；③ `pingIndexNow`（≥24h 间隔向 api.indexnow.org 推送 sitemap 全部 URL，key 文件 `/{INDEXNOW_KEY}.txt`；R481 起按 10,000/批拆分、仅 200/202 视为成功后才写 `indexnow:last`，失败写 `indexnow:lastError` 并 6h 后重试）；④ `pushBaidu`（R485，仅 `BAIDU_PUSH_SITE` + secret `BAIDU_PUSH_TOKEN` 都配置时运行，否则不读写 KV：≥ 24h 一轮向 `http://data.zz.baidu.com/urls` POST text/plain 每行一 URL，只推 `baidu:pushed` 中尚未成功的 sitemap URL，每轮≤ `BAIDU_PUSH_DAILY_MAX`（默认 2000 = 官方单次上限），仅 200 成功；官方警告重推旧 URL 会降配额，所以不全量重推；见 `docs/research/baidu-seo.md`）。
 
 ### 2.5 增长可选 vars（R481，`wrangler.jsonc` `vars` 或 Dashboard 设置；默认全空 = HTML 字节不变、零脚本）
 
@@ -77,6 +78,8 @@ SEO 页（/、/advanced、/mcp、/prices、/why、/tld、/guide、/vs）在 work
 |---|---|
 | `GSC_VERIFICATION` | Google Search Console HTML tag 的 content 值 → `<meta name="google-site-verification">` |
 | `BING_VERIFICATION` | Bing Webmaster meta 的 content 值 → `<meta name="msvalidate.01">` |
+| `BAIDU_VERIFICATION` | 百度站长平台 HTML 标签验证的 content 值（`codeva-…`）→ `<meta name="baidu-site-verification">`（R485） |
+| `BAIDU_PUSH_SITE` + secret `BAIDU_PUSH_TOKEN`（`wrangler secret put`）| 百度普通收录 API 推送（见 2.4 ④）；可选 `BAIDU_PUSH_DAILY_MAX` 按站长平台显示的当日配额收紧，`BAIDU_PUSH_ENDPOINT` 仅本地 wrangler dev 指向 mock 上游（R485） |
 | `ANALYTICS_PROVIDER` / `ANALYTICS_TOKEN` | 目前仅支持 `cloudflare` + 32 位 hex site token → 注入官方 beacon（SPA 路由默认自动追踪）；启用后页脚显示双语隐私一句话 |
 
 注入由 `worker.ts` 全局后置中间件统一处理（`growth-inject.ts`），只对 `content-type: text/html` 且 2xx/4xx 的 GET 文档生效，JSON/XML/文本/静态资源不触碰。
