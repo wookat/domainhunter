@@ -485,11 +485,13 @@ const runAiSearch = async (env, llm) => {
       { DEEPSEEK_API_KEY: PRIMARY_KEY, LLM_API_BASE: PRIMARY_BASE, CACHE: fake },
       () => new Response(QUOTA_BODY, { status: 429 }),
     );
+    // R471 集成后：首轮 quota 不再发 error 事件，改为 fallback 事件 + 规则候选；llmProvider 仍不计数，aiErrors.quota 仍 +1
     const err = events.find((e) => e.type === "error");
+    const fb = events.find((e) => e.type === "fallback");
     const day = new Date().toISOString().slice(0, 10);
     const usage = JSON.parse(kv.get(`usage:${day}`) ?? "null");
-    check("E8 未配置备用 + 主 quota：error 事件 errorKind=quota（R470 现状），llmProvider 不计数，aiErrors.quota=1", [err?.errorKind, err?.guard?.provider, usage?.llmProvider, usage?.aiErrors], ["quota", undefined, undefined, { quota: 1 }]);
-    check("E8b error detail 不含 key / 响应体", [String(err?.detail).includes(PRIMARY_KEY), String(err?.detail).includes("apikey_quota_exhausted")], [false, false]);
+    check("E8 未配置备用 + 主 quota：无 error 事件、fallback.reason=quota（R471），llmProvider 不计数，aiErrors.quota=1", [err, fb?.reason, usage?.llmProvider, usage?.aiErrors], [undefined, "quota", undefined, { quota: 1 }]);
+    check("E8b 事件流不含 key / 响应体", [JSON.stringify(events).includes(PRIMARY_KEY), JSON.stringify(events).includes("apikey_quota_exhausted")], [false, false]);
   } finally {
     restore();
   }
