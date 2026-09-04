@@ -29,6 +29,7 @@ import { PageviewCounter, readDayPageviews, type DayPageviews } from "./pageview
 import { emptyDayUsage, readDayUsage, usageCounterFor, type DayUsage } from "./usage-counter";
 import { INDEXNOW_ENDPOINT, indexNowDelta, submitIndexNow, summarizeIndexNow, type IndexNowPushed } from "./indexnow";
 import { pickPending, resolveBaiduPush, submitBaidu, summarizeBaidu, type BaiduPushVars } from "./baidu-push";
+import { injectHreflang, resolveLang, SITE_ORIGIN, withHtmlVary } from "./ssr-lang";
 
 // LLM_API_BASE/LLM_MODEL：LLM 上游基地址与模型名。默认 DeepSeek 官方 + deepseek-chat；
 // 生产可指向 OpenAI 兼容网关（R460：电信 AI 网关），本地 wrangler dev 亦可指向假上游验证错误路径（R264）
@@ -57,21 +58,29 @@ type Bindings = GrowthVars & BaiduPushVars & {
 const app = new Hono<{ Bindings: Bindings }>();
 
 // HTML 文档统一后处理（R481）：所有 text/html 响应（含 SSR 页面与 ASSETS 直出的 index.html）在此
-// ① 注入验证 meta / 分析 beacon（vars 为空则不读 body，原响应原样透传）；② 服务端 pageviews/bots 计数。
+// ① 加 `Vary: Accept-Language`（SSR 正文/标题随 Accept-Language 切 zh/en；API 与静态资源不是 text/html，不受影响）；
+// ② 注入验证 meta / 分析 beacon（vars 为空则不读 body，仅换头透传）；③ 服务端 pageviews/bots 计数。
 // 计数器按 isolate 复用，合并窗口内多次请求为一次 KV 写；仅统计 GET + 2xx 的 HTML 文档（404 壳与 API 不计）。
 let pageviewCounter: PageviewCounter | null = null;
 app.use("*", async (c, next) => {
   await next();
   const res = c.res;
-  if (c.req.method !== "GET" || !isHtmlDocument(res)) return;
-  if (res.status >= 200 && res.status < 300 && c.env.CACHE) {
+  const method = c.req.method;
+  if ((method !== "GET" && method !== "HEAD") || !isHtmlDocument(res)) return;
+  if (method === "GET" && res.status >= 200 && res.status < 300 && c.env.CACHE) {
     pageviewCounter ??= new PageviewCounter(c.env.CACHE);
     c.executionCtx.waitUntil(pageviewCounter.record(new URL(c.req.url).pathname, c.req.header("user-agent")));
   }
   const snippet = buildHeadInjection(c.env);
-  if (!snippet) return;
+  if (!snippet) {
+    // 不读 body：仅复制一份可写头的 Response（ASSETS 直出的响应头不可变）
+    const passthrough = new Response(res.body, res);
+    withHtmlVary(passthrough.headers);
+    c.res = passthrough;
+    return;
+  }
   const html = injectIntoHead(await res.text(), snippet);
-  const headers = new Headers(res.headers);
+  const headers = withHtmlVary(new Headers(res.headers));
   headers.delete("content-length");
   headers.delete("content-encoding");
   c.res = new Response(html, { status: res.status, statusText: res.statusText, headers });
@@ -99,7 +108,6 @@ const PRICES_CACHE_CFG: PricesCacheConfig = {
   usdToCny: USD_TO_CNY,
   timeoutMs: 25_000, // Porkbun 拉取超时：上游全量报价实测 ~13s，10s 会必然超时导致实时价永远拉不到
 };
-const SITE_ORIGIN = "https://hunt.zalize.com";
 const FAST_FIRST_ROUND_COUNT = 8; // fast 模式首轮候选数（更快首字节）
 // R466：AI 搜索候选级核验队列并行度（每个候选 = tlds.length 个域名，每批内部再按 checkDomains 并发）；
 // 与改动前整轮一次 checkDomains(concurrency=6) 的上游压力量级相当
@@ -1089,7 +1097,7 @@ app.get("/mcp", async (c) => {
     return new Response("method not allowed: POST JSON-RPC 2.0 (MCP Streamable HTTP, stateless)", { status: 405, headers: { allow: "POST" } });
   }
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
   const loc = MCP_META[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.desc);
@@ -1107,7 +1115,7 @@ app.get("/mcp", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/mcp?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/mcp", c.req.query("lang") === "en").replace(
+  html = injectHreflang(html, "/mcp", lang).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/mcp", lang)}</script></head>`,
   );
@@ -1206,7 +1214,7 @@ app.get("/s/:id", async (c) => {
   const snapshot = c.env.CACHE ? await c.env.CACHE.get<ShareSnapshotStored>(`share:${id}`, "json") : null;
   const items = snapshot && !snapshot.revoked && Array.isArray(snapshot.items) ? snapshot.items : [];
   if (items.length > 0) {
-    const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+    const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
     const preview = items.slice(0, 3).map((it) => it.domain).join(lang === "en" ? ", " : "、") + (items.length > 3 ? (lang === "en" ? " …" : " 等") : "");
     const title = escapeHtml(lang === "en" ? `${items.length} available domain candidates | DomainHunter` : `${items.length} 个可注册域名候选 | DomainHunter`);
     const desc = escapeHtml(lang === "en" ? `${preview} — shared from DomainHunter, re-check availability before registering` : `${preview} —— 来自 DomainHunter 的候选清单，注册前请重新核验`);
@@ -1262,7 +1270,7 @@ const ADVANCED_META = {
 
 app.get("/advanced", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
   const loc = ADVANCED_META[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.desc);
@@ -1280,7 +1288,7 @@ app.get("/advanced", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/advanced?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/advanced", c.req.query("lang") === "en");
+  html = injectHreflang(html, "/advanced", lang);
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx", "full");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
@@ -1423,22 +1431,6 @@ function pageOgSvg(kicker: string, title: string, lang: "zh" | "en"): string {
   <text x="80" y="570" font-family="'Inter',system-ui,sans-serif" font-size="26" fill="#69a884">${tagline}</text>
 </svg>`;
 }
-
-/** hreflang alternate 标签：zh / en / x-default（zh 为默认，URL 与 canonical 规则一致：zh/x-default 指裸路径，en 指 ?lang=en） */
-function hreflangTags(path: string): string {
-  const base = `${SITE_ORIGIN}${path}`;
-  return [
-    `<link rel="alternate" hreflang="zh" href="${base}" />`,
-    `<link rel="alternate" hreflang="en" href="${base}?lang=en" />`,
-    `<link rel="alternate" hreflang="x-default" href="${base}" />`,
-  ].join("\n    ");
-}
-
-const injectHreflang = (html: string, path: string, explicitEn = false) => {
-  // 显式 ?lang=en 访问时 canonical 自指英文版，与 hreflang alternate 一致（仅认 query，不认 Accept-Language）
-  if (explicitEn) html = html.replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}${path}?lang=en" />`);
-  return html.replace(/(<link rel="canonical"[^>]*\/>)/, `$1\n    ${hreflangTags(path)}`);
-};
 
 /** 内容页数据随 HTML 注入（window.__DH_CONTENT__）：客户端不再下载全量内容 chunk（见 content/injected.ts） */
 function injectContentData(html: string, payload: InjectedContent | null): string {
@@ -1641,7 +1633,7 @@ app.get("/api/og/vs/:slug", (c) => {
 
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
   let html = await res.text();
   const m = HOME_META[lang];
   html = html
@@ -1658,7 +1650,7 @@ app.get("/", async (c) => {
     );
   }
   html = homeHeroSkeleton(html, lang);
-  html = injectHreflang(html, "/", c.req.query("lang") === "en").replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
+  html = injectHreflang(html, "/", lang).replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/home-page.tsx", "full");
   html = setHtmlLang(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
@@ -1670,7 +1662,7 @@ app.get("/tld/:tld", async (c) => {
   const guide = TLD_GUIDES[tld];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
   if (!guide) return notFoundShell(res);
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
   const loc = guide[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.metaDescription);
@@ -1697,7 +1689,7 @@ app.get("/tld/:tld", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, `/tld/${tld}`, c.req.query("lang") === "en").replace(
+  html = injectHreflang(html, `/tld/${tld}`, lang).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang, { name: hubCrumbLabel("tld", lang), path: "/tld" })}</script><script type="application/ld+json">${tldFaqJsonld}</script></head>`,
   );
@@ -1715,7 +1707,7 @@ app.get("/guide/:slug", async (c) => {
   const guide = INDUSTRY_GUIDES[slug];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
   if (!guide) return notFoundShell(res);
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
   const loc = guide[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.metaDescription);
@@ -1742,7 +1734,7 @@ app.get("/guide/:slug", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, `/guide/${slug}`, c.req.query("lang") === "en").replace(
+  html = injectHreflang(html, `/guide/${slug}`, lang).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang, { name: hubCrumbLabel("guide", lang), path: "/guide" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${guideFaqJsonld}</script></head>`,
   );
@@ -1760,7 +1752,7 @@ app.get("/vs/:slug", async (c) => {
   const cmp = TLD_COMPARES[slug];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
   if (!cmp) return notFoundShell(res);
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
   const loc = cmp[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.metaDescription);
@@ -1787,7 +1779,7 @@ app.get("/vs/:slug", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, `/vs/${slug}`, c.req.query("lang") === "en").replace(
+  html = injectHreflang(html, `/vs/${slug}`, lang).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang, { name: hubCrumbLabel("vs", lang), path: "/vs" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${cmpFaqJsonld}</script></head>`,
   );
@@ -1809,7 +1801,7 @@ const HUB_ENTRIES = {
 const serveHub = (kind: "tld" | "guide" | "vs") =>
   async (c: { env: Bindings; req: { raw: Request; url: string; query: (k: string) => string | undefined; header: (k: string) => string | undefined } }) => {
     const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-    const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+    const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
     const meta = HUB_META[kind][lang];
     const title = escapeHtml(`${meta.title} | DomainHunter`);
     const desc = escapeHtml(meta.desc);
@@ -1828,7 +1820,7 @@ const serveHub = (kind: "tld" | "guide" | "vs") =>
         /<meta property="og:image" content="[^"]*" \/>/,
         `<meta property="og:image" content="${SITE_ORIGIN}/api/og/hub/${kind}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
       );
-    html = injectHreflang(html, path, c.req.query("lang") === "en").replace(
+    html = injectHreflang(html, path, lang).replace(
       "</head>",
       `<script type="application/ld+json">${breadcrumbJsonld(meta.title, path, lang)}</script></head>`,
     );
@@ -1866,7 +1858,7 @@ const PRICES_KICKER_SVG =
 
 app.get("/prices", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
   const loc = PRICES_META[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.desc);
@@ -1893,7 +1885,7 @@ app.get("/prices", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, "/prices", c.req.query("lang") === "en").replace(
+  html = injectHreflang(html, "/prices", lang).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/prices", lang)}</script><script type="application/ld+json">${pricesFaqJsonld}</script></head>`,
   );
@@ -1924,7 +1916,7 @@ const WHY_META = {
 
 app.get("/why", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
   const loc = WHY_META[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.desc);
@@ -1942,7 +1934,7 @@ app.get("/why", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/why?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/why", c.req.query("lang") === "en").replace(
+  html = injectHreflang(html, "/why", lang).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/why", lang)}</script></head>`,
   );
