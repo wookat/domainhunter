@@ -5,13 +5,15 @@
 //     → out/sample.json + out/html/<id>.zh.html / <id>.en.html（zh=裸路径，en=?lang=en）
 //   node scripts/seo-audit/fetch.mjs graph [--out ...] [--concurrency 6]
 //     → out/graph.json：sitemap 全部 URL（裸路径）的 HTTP 状态 + 站内链接列表（用于 BFS 孤岛分析）
+//   SEO_AUDIT_ORIGIN=http://127.0.0.1:8787 node scripts/seo-audit/fetch.mjs graph --out /tmp/seo-local
+//     → 对本地 wrangler dev 跑同一套抓取（sitemap <loc> 仍为生产 origin，会自动映射到本地）
 //
 // UA 见 lib.mjs：含 SiteAuditBot，被生产按 botsBy.other 计数，不进人类 pageviews。
 // 设 SEO_AUDIT_ORIGIN=http://localhost:8787 可改抓本地 wrangler dev（canonical 期望值仍按生产 SITE_ORIGIN 比对）。
 
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { SITE_ORIGIN, fetchText, internalLinks, mapLimit, rng, sample, sitemapLocs } from "./lib.mjs";
+import { PROD_ORIGIN, SITE_ORIGIN, fetchText, internalLinks, mapLimit, rng, sample, sitemapLocs } from "./lib.mjs";
 
 const args = process.argv.slice(2);
 const mode = args[0];
@@ -31,7 +33,7 @@ const idOf = (p) => (p === "/" ? "home" : p.replace(/^\//, "").replace(/[^a-z0-9
 async function loadSitemap() {
   const sm = await fetchText(`${FETCH_ORIGIN}/sitemap.xml`);
   if (sm.status !== 200) throw new Error(`sitemap ${sm.status}`);
-  const paths = sitemapLocs(sm.text).map((u) => u.replace(SITE_ORIGIN, "") || "/");
+  const paths = sitemapLocs(sm.text).map((u) => u.replace(PROD_ORIGIN, "").replace(SITE_ORIGIN, "") || "/");
   return { xml: sm.text, paths };
 }
 

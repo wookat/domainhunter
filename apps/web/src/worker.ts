@@ -11,6 +11,7 @@ import { buildGuideFaq } from "./content/guide-faq";
 import { buildPricesFaq } from "./content/prices-faq";
 import { buildTldFaq } from "./content/tld-faq";
 import { compareContentBlocks, compareHubBlocks, guideContentBlocks, guideHubBlocks, homeHeroSkeleton, hubCrumbKicker, hubCrumbLabel, pricesTableSkeleton, tldContentBlocks, tldHubBlocks } from "./content/ssr-html";
+import { WHY_COPY } from "./content/why-copy";
 import { HOME_FAQ, HOME_META } from "./content/home-copy";
 import { buildGuideContent, buildTldContent, buildVsContent } from "./content/injected-build";
 import type { InjectedContent } from "./content/injected";
@@ -1292,6 +1293,7 @@ app.get("/advanced", async (c) => {
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx", "full");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
+  html = injectAdvancedSkeleton(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -1439,11 +1441,13 @@ function injectContentData(html: string, payload: InjectedContent | null): strin
   return html.replace("</head>", `<script>window.__DH_CONTENT__=${json}</script></head>`);
 }
 
+const SSR_HEADER = `<header class="sticky top-0 z-20 border-b border-line bg-bg0/85"><div class="mx-auto flex h-14 max-w-7xl items-center px-4 md:px-6"><span class="flex items-center gap-2 font-bold tracking-tight"><span class="grid h-7 w-7 place-items-center rounded-lg border border-brand-line bg-brand-dim"></span><span class="max-[430px]:hidden">DomainHunter</span></span></div></header>`;
+
 /** SEO 页 SSR 首屏骨架：把 kicker/标题/首段直接渲染进 #root，LCP 文本不再等 JS 水合（React 挂载后整体替换） */
 function injectSsrSkeleton(html: string, kicker: string, title: string, blocks: string[], kickerHtml?: string, mainWidth = "max-w-3xl"): string {
   const skeleton = [
     `<div class="flex min-h-screen flex-col">`,
-    `<header class="sticky top-0 z-20 border-b border-line bg-bg0/85"><div class="mx-auto flex h-14 max-w-7xl items-center px-4 md:px-6"><span class="flex items-center gap-2 font-bold tracking-tight"><span class="grid h-7 w-7 place-items-center rounded-lg border border-brand-line bg-brand-dim"></span><span class="max-[430px]:hidden">DomainHunter</span></span></div></header>`,
+    SSR_HEADER,
     `<main class="mx-auto w-full ${mainWidth} flex-1 px-4 pb-16 pt-10 md:px-6">`,
     kickerHtml ?? `<p class="font-mono text-sm text-brand">${escapeHtml(kicker)}</p>`,
     `<h1 class="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">${escapeHtml(title)}</h1>`,
@@ -1454,6 +1458,23 @@ function injectSsrSkeleton(html: string, kicker: string, title: string, blocks: 
 }
 
 const ssrIntroBlock = (intro: string) => `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(intro)}</p>`;
+
+/* /advanced 首屏文案：与 lib/i18n.tsx 词典 adv.title / adv.subtitle 逐字同源 */
+const ADVANCED_SSR = {
+  zh: { title: "高级模式", subtitle: "词根 × 前后缀 × TLD 批量组合生成，逐个核验可注册状态" },
+  en: { title: "Advanced mode", subtitle: "Batch-generate roots × affixes × TLDs and verify availability one by one" },
+} as const;
+
+/** /advanced SSR 首屏骨架：DOM/类名与 advanced-page.tsx 首次渲染的 h1 + 副标题逐字一致（main 宽 max-w-5xl） */
+function injectAdvancedSkeleton(html: string, lang: "zh" | "en"): string {
+  const s = ADVANCED_SSR[lang];
+  const skeleton = `<div class="flex min-h-screen flex-col">${SSR_HEADER}<main class="mx-auto w-full min-w-0 max-w-5xl flex-1 px-4 py-8 md:px-6"><h1 class="text-xl font-bold tracking-tight md:text-2xl">${escapeHtml(s.title)}</h1><p class="mt-1 text-sm text-txt1">${escapeHtml(s.subtitle)}</p></main></div>`;
+  return html.replace('<div id="root"></div>', `<div id="root">${skeleton}</div>`);
+}
+
+/* why-page.tsx kicker 前的 lucide Crosshair 图标（同 path） */
+const ICON_CROSSHAIR =
+  '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair h-4 w-4"><circle cx="12" cy="12" r="10"></circle><line x1="22" x2="18" y1="12" y2="12"></line><line x1="6" x2="2" y1="12" y2="12"></line><line x1="12" x2="12" y1="6" y2="2"></line><line x1="12" x2="12" y1="22" y2="18"></line></svg>';
 
 /** 主样式表内容（hashed 文件名 → CSS 文本），模块级缓存 */
 const inlineCssCache = new Map<string, string>();
@@ -1941,6 +1962,14 @@ app.get("/why", async (c) => {
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/why-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
+  const why = WHY_COPY[lang];
+  html = injectSsrSkeleton(
+    html,
+    why.kicker,
+    why.title,
+    [`<p class="mt-4 leading-relaxed text-txt1">${escapeHtml(why.intro)}</p>`],
+    `<p class="flex items-center gap-1.5 font-mono text-sm text-brand">${ICON_CROSSHAIR}${escapeHtml(why.kicker)}</p>`,
+  );
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 

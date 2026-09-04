@@ -1,7 +1,10 @@
 // R488 SEO 技术审计：纯 Node（无第三方依赖、0 AI）的 HTML 抽取/度量工具。
 // 生产 SSR HTML 由我们自己的 worker 生成、结构稳定，因此用正则做结构化抽取足够（不引入 HTML parser 依赖）。
 
-export const SITE_ORIGIN = "https://hunt.zalize.com";
+/** 生产 origin：sitemap <loc> 与 SSR 绝对链接始终以它为前缀（worker SITE_ORIGIN 常量） */
+export const PROD_ORIGIN = "https://hunt.zalize.com";
+/** 实际抓取的 origin：默认生产；本地验收时 SEO_AUDIT_ORIGIN=http://127.0.0.1:8787 指向 wrangler dev */
+export const SITE_ORIGIN = (process.env.SEO_AUDIT_ORIGIN ?? PROD_ORIGIN).replace(/\/$/, "");
 // UA 含 "SiteAuditBot" → 被 worker pageviews.ts 归入 botsBy.other，不污染人类 pageviews；含 "Mozilla/5.0" 前缀避免 Cloudflare 对裸 curl UA 的 403。
 export const UA = "Mozilla/5.0 (compatible; DomainHunterSeoAudit/1.0; +https://github.com/wookat/domainhunter) SiteAuditBot";
 
@@ -131,7 +134,7 @@ export function internalLinks(html) {
   const out = [];
   for (const m of body.matchAll(/<a\b[^>]*\bhref="([^"#]*)(#[^"]*)?"/gi)) {
     let href = decodeEntities(m[1]);
-    if (href.startsWith(SITE_ORIGIN)) href = href.slice(SITE_ORIGIN.length) || "/";
+    for (const o of [PROD_ORIGIN, SITE_ORIGIN]) if (href.startsWith(o)) href = href.slice(o.length) || "/";
     if (!href.startsWith("/") || href.startsWith("//")) continue;
     if (/\.(js|css|png|svg|ico|woff2?|webmanifest|txt|xml)$/i.test(href.split("?")[0])) continue;
     out.push(href);
