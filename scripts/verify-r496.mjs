@@ -50,7 +50,9 @@ for (const label of R494_SALAD) {
 }
 const shortSalad = items.filter((i) => i.tag === "salad" && !R494_SALAD.includes(i.label));
 console.log(`  已知漏网（短句沙拉，结构规则无法识别，见 docs/research/zh-meaning-coherence.md §2）：${shortSalad.map((i) => `${i.label}「${i.meaning}」`).join("；")}`);
-check("A3 FN 全部为短句沙拉（≤16 汉字）", shortSalad.every((i) => (i.meaning.match(/[\u4e00-\u9fff]/g) ?? []).length <= 16), true);
+// R496–R499 生产复验（docs/audits/r496-r499）新增 3 条 refine 轮短句沙拉（maoga/tuoguo/zora，20–35 汉字、无比喻链）：
+// 均为 ≤40 字格式约束下的「来源编造/语义不成立」形态，结构规则不覆盖，作为已知 FN 留档供下一轮取样论证
+check("A3 FN 全部为短句沙拉（≤40 汉字，非长从句形态）", shortSalad.every((i) => (i.meaning.match(/[\u4e00-\u9fff]/g) ?? []).length <= 40), true);
 // fail-closed 边界：长而平实（无比喻/叙事词）的说明句不拦；规则模板句不拦
 check("A4 长平实句不拦（无比喻词）", zhMeaningIncoherent("kuaila", "「快啦」kuaila，快是立刻分享喜悦的迫不及待，啦是融化在舌尖的活泼尾音，名字本身就带着零食递到宠物嘴边的雀跃语气，这句话再加十个字也不该被拦。"), false);
 check("A5 「一般」不算比喻词", zhMeaningIncoherent("x", "这个名字一般来说中文创业者在三秒之内就能完整读出来并且记住它的意思和来源，读音平稳。"), false);

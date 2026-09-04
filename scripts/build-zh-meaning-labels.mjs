@@ -22,9 +22,28 @@ const R494_BORDERLINE = new Set([
   "pilloway", // 三段比喻堆叠（枕头/脚步/铺床牵手）但每句都成句，冗长
 ]);
 
+// R496–R499 集成后生产复验留档（docs/audits/r496-r499）：防线 0 命中，但 refine 轮 1 仍有
+// 「短句沙拉」——句子 ≤40 字、无比喻链，却音节来源编造 / 语义不成立（R496 启发式只覆盖长从句形态，属已知 FN）
+const R499V_SALAD = new Set([
+  "maoga", // 「毛」的拼音当头发的话加个 ga 就像游戏里的拟声，快乐玩耍毛发飞扬——主谓断裂
+  "tuoguo", // 「脱」与「果」的拼音组合，有可爱又淘气之感——「脱果」无意义
+  "zora", // 暖橙色联想 + 欧洲人名 + 温馨下午慵懒画面感——联想链与宠物零食无关
+]);
+const R499V_BORDERLINE = new Set([
+  "ongo", // ong 是「翁」的古雅气息——音节来源牵强，后半句成句
+  "pingo", // pin 是快乐的相连——来源编造，整体能懂
+  "lino", // 无音节来源，只有联想
+  "mouxiong", // 「某熊」语音，模拟叫唤乖宠时的拟声音节——拗口
+  "xuanwa", // 「选」加「哇」…三调干脆明快——「三调」为声调描述残留
+]);
+
 const out = [];
-for (let i = 1; i <= 6; i++) {
-  const rel = `docs/audits/r494/ai-search-0${i}.ndjson`;
+const sources = [
+  ...[1, 2, 3, 4, 5, 6].map((i) => [`docs/audits/r494/ai-search-0${i}.ndjson`, R494_SALAD, R494_BORDERLINE]),
+  ["docs/audits/r496-r499/ai-search-01-zh.ndjson", R499V_SALAD, R499V_BORDERLINE],
+  ["docs/audits/r496-r499/ai-search-02-zh-refine.ndjson", R499V_SALAD, R499V_BORDERLINE],
+];
+for (const [rel, saladSet, borderlineSet] of sources) {
   const lines = fs.readFileSync(path.join(root, rel), "utf8").split("\n").filter(Boolean);
   const req = JSON.parse(lines[0])._request;
   if (req.lang !== "zh") continue;
@@ -41,7 +60,7 @@ for (let i = 1; i <= 6; i++) {
         label: it.label,
         theme: it.theme,
         meaning: it.meaning,
-        tag: R494_SALAD.has(it.label) ? "salad" : R494_BORDERLINE.has(it.label) ? "borderline" : "coherent",
+        tag: saladSet.has(it.label) ? "salad" : borderlineSet.has(it.label) ? "borderline" : "coherent",
       });
     }
   }

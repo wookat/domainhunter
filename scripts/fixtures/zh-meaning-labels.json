@@ -1,10 +1,10 @@
 {
  "generatedBy": "scripts/build-zh-meaning-labels.mjs",
- "total": 193,
+ "total": 260,
  "counts": {
-  "coherent": 182,
-  "salad": 8,
-  "borderline": 3
+  "coherent": 241,
+  "salad": 11,
+  "borderline": 8
  },
  "items": [
   {
@@ -1255,6 +1255,676 @@
    "label": "qingmuxia",
    "theme": "pinyin",
    "meaning": "「青木夏」qingmuxia，青木与盛夏，茶香清冽如入山林，三音节声调起伏错落，读来清爽明快，拼读顺畅无歧义。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 1,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "warmwoof",
+   "theme": "coined",
+   "meaning": "「暖吠」warmwoof，warm 是温暖陪伴、woof 是狗狗欢快的叫声，合成词兼具温度与活力",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 1,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "treatpal",
+   "theme": "coined",
+   "meaning": "「零食伙伴」treatpal，treat 代表零食奖励、pal 是伙伴，直指猫狗零食与亲近感",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 1,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "pawwoo",
+   "theme": "coined",
+   "meaning": "「爪汪」pawwoo，paw 是爪印、woo 似犬吠又含 woo 的讨喜感，双词根叠出萌宠气质",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 1,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "chongsheng",
+   "theme": "pinyin",
+   "meaning": "「宠声」chongsheng，chong 是宠物的宠、sheng 是声音，寓意宠物相伴的每一声亲昵，全拼清晰无歧义",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 1,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "miaowoo",
+   "theme": "coined",
+   "meaning": "「喵呜」miaowoo，miao 是猫叫、woo 是吠声，猫狗双全的通感，叠韵读来俏皮上口",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 1,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "niwan",
+   "theme": "pinyin",
+   "meaning": "「你玩」niwan，ni 是你、wan 是玩，直白传达宠物玩具的互动乐趣，双拼音节首尾呼应好记",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 1,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "petmom",
+   "theme": "coined",
+   "meaning": "「宠妈」petmom，pet 与 mom 合成，瞄准养宠人视宠物如家人的情感，温暖陪伴的直译",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "zhuaye",
+   "theme": "pinyin",
+   "meaning": "爪与叶的昵称组合，「爪」zhuay 取猫爪狗爪的萌感、ye 取叶片的轻盈，双音节短促好记，寓意小宠物像叶片一样灵动可爱。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "mianwo",
+   "theme": "pinyin",
+   "meaning": "「棉窝」mianwo，绵软的小窝，wo 是窝的清脆收尾，双音节叠韵好读，寓意给猫狗一个温暖安心的家。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "xiaowancan",
+   "theme": "pinyin",
+   "meaning": "「小晚餐」xiaowancan，每个毛孩都值得一顿小小的晚餐，四音节全拼节奏分明，寓意日常喂食的温馨时刻，读起来朗朗上口。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "kuaihuo",
+   "theme": "pinyin",
+   "meaning": "「快活」kuaihuo，huo 与 kuai 皆为开口音，读来舒展明快，寓意宠物与主人共享的快活时光，双字直白好记。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "rougan",
+   "theme": "pinyin",
+   "meaning": "「柔感」rougan，rou 是柔软的触感、gan 是感觉，双音节顺口，寓意宠物零食与玩具的柔和亲肤体验。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "chongle",
+   "theme": "pinyin",
+   "meaning": "「宠乐」chongle，宠是宠物的昵称、le 是欢乐，双音节短促，寓意与宠物共享的每一刻快乐，读来轻快。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "maofeiyu",
+   "theme": "pinyin",
+   "meaning": "「猫肥鱼」maofeiyu，三字全拼，猫吃鱼的天性搭配肥美的联想，音节错落好读，寓意零食让猫咪吃得满足又健康。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "gougoule",
+   "theme": "pinyin",
+   "meaning": "「狗狗乐」gougoule，叠音词开头，le 收尾，读来童趣十足，寓意每只狗狗都能在这里找到快乐，直白好记。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "munchkin",
+   "theme": "coined",
+   "meaning": "「小蹦跶」munchkin，munch 是咀嚼的拟声、kin 是小的亲和后缀，寓意宠物咀嚼零食时的欢脱模样，读来像昵称般亲切。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "sniffeat",
+   "theme": "coined",
+   "meaning": "sniff 是嗅闻的英文，eat 是吃，两词直拼，寓意宠物先嗅后吃的自然习性，读来干脆，突显零食的诱人香气。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "chewaboo",
+   "theme": "coined",
+   "meaning": "chew 是咀嚼、boo 是可爱的发语词，寓意宠物咀嚼玩具时的憨态，叠音收尾好记，读来充满童趣。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "petnosh",
+   "theme": "coined",
+   "meaning": "pet 是宠物，nosh 是英文里吃零食的俚语，寓意宠物专属的零食时刻，读来短促有力，品牌感强。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "furrybon",
+   "theme": "coined",
+   "meaning": "furry 是毛茸茸的、bon 是法语的「好」，寓意毛孩子得到最好的，读来顺口，带一点异国风味的亲切感。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "wigglepaw",
+   "theme": "coined",
+   "meaning": "wiggle 是摇摆、paw 是爪子，寓意宠物摇摆爪子的快乐姿态，读来生动形象，充满动感。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "nibblesnack",
+   "theme": "coined",
+   "meaning": "nibble 是轻咬、snack 是零食，寓意宠物轻咬零食的可爱瞬间，两词直拼好读，画面感强。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "glowpaw",
+   "theme": "coined",
+   "meaning": "glow 是发光、paw 是爪子，寓意宠物健康得发亮，读来明亮上扬，传递活力和信赖感。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "zoobee",
+   "theme": "coined",
+   "meaning": "zoo 是动物乐园、bee 是蜜蜂的活泼感，寓意像乐园一样热闹的宠物世界，读来轻快，充满生命力。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "pawlett",
+   "theme": "coined",
+   "meaning": "paw 是爪子，lett 是小的后缀，寓意小爪子，读来像可爱的昵称，寓意每只小宠物都是心头宝。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "chompkin",
+   "theme": "coined",
+   "meaning": "chomp 是大声咀嚼、kin 是小的后缀，寓意宠物大快朵颐的满足感，读来俏皮，充满食欲。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "purrloom",
+   "theme": "coined",
+   "meaning": "purr 是猫的呼噜声，loom 是织机，寓意像织布机一样源源不断的满足感，读来柔和，传递治愈氛围。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-01-zh.ndjson",
+   "round": 2,
+   "refine": false,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "barkbun",
+   "theme": "coined",
+   "meaning": "bark 是狗吠、bun 是圆面包的可爱联想，寓意狗狗像小面包一样圆润讨喜，读来明快，充满萌感。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "aipet",
+   "theme": "blend",
+   "meaning": "ai 是爱的拼音，pet 是宠物，寓意用爱陪伴每个毛孩子，两个音节都短促好读。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "ongo",
+   "theme": "coined",
+   "meaning": "ong 是「翁」的古雅气息，go 是前行的英文，寓意陪伴宠物一路同行，读音圆润顺口。",
+   "tag": "borderline"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "cuddl",
+   "theme": "coined",
+   "meaning": "cuddle 去掉 e 的变体，意为依偎拥抱，双 l 结尾像小狗的尾巴摆动，读来柔软亲昵。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "maoziyo",
+   "theme": "pinyin",
+   "meaning": "「毛」的拼音 mao 加上「子」和「哟」的语气词，逗弄宠物时发出的亲昵呼唤，三音节顺口有童趣。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "pingo",
+   "theme": "coined",
+   "meaning": "pin 是快乐的相连，go 是出发的英文，寓意宠物和主人一起愉快出行，双音节蹦跳感。",
+   "tag": "borderline"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "maofei",
+   "theme": "pinyin",
+   "meaning": "「毛」与「肥」的拼音组合，形容毛孩子圆润可爱的体态，读来憨态可掬。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "ziniao",
+   "theme": "pinyin",
+   "meaning": "zi 是「子」的拼音，niao 是「鸟」的拼音，寓意把猫狗当孩子一样疼爱，三音节悠扬好读。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "gouling",
+   "theme": "pinyin",
+   "meaning": "「狗」与「灵」的拼音，寓意狗狗通人性、活泼机灵，双音节利落直接。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "mofeel",
+   "theme": "blend",
+   "meaning": "mo 是「摸」的拼音，feel 是感受的英文，合起来寓意用手触摸宠物带来的温柔感觉，东西方语感自然桥接。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "nobbly",
+   "theme": "coined",
+   "meaning": "nob 是小圆块的变体，bly 带来轻柔后缀，暗示小块零食的圆润与好玩，读时有咀嚼感。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "quanshen",
+   "theme": "pinyin",
+   "meaning": "「犬」与「深」的拼音，寓意对狗狗的爱深厚且专注，两字简单明确。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "maoga",
+   "theme": "blend",
+   "meaning": "「毛」的拼音当头发的话加个 ga 就像游戏里的拟声，快乐玩耍毛发飞扬，轻松好读。",
+   "tag": "salad"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "lino",
+   "theme": "coined",
+   "meaning": "油光水滑的联想，lino 读来利落俏皮，暗示健康光泽的宠物毛发与灵巧身形。",
+   "tag": "borderline"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "tuoguo",
+   "theme": "pinyin",
+   "meaning": "「脱」与「果」的拼音组合，有可爱又淘气之感，双字宛如其蹦跳的节奏。",
+   "tag": "salad"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "rexba",
+   "theme": "coined",
+   "meaning": "rex 是国王的拉丁词根，ba 是可爱口癖，整体既有权势感又淘气鲜活。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "mouxiong",
+   "theme": "pinyin",
+   "meaning": "「某熊」语音，模拟叫唤乖宠时的拟声音节，流畅易推广。",
+   "tag": "borderline"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "xuanwa",
+   "theme": "blend",
+   "meaning": "「选」加「哇」结合感受看到挑选好物时发出的赞叹语气词。三调干脆明快。",
+   "tag": "borderline"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 1,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "zora",
+   "theme": "coined",
+   "meaning": "暖橙色联想，zora 是一个真实欧洲人名，有异国情调和温馨下午的慵懒画面感，简洁断音高识别度。",
+   "tag": "salad"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "xunhuan",
+   "theme": "pinyin",
+   "meaning": "「寻欢」xunhuan，xun 是寻找的寻，huan 是欢乐的欢，寓意宠物在玩耍中找回天性里的快乐，叠韵收尾，读来有节奏感，也暗合宠物寻乐的天性。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "tuantuan",
+   "theme": "pinyin",
+   "meaning": "「团团」tuantuan，tu 是团圆的团，叠音词，寓意宠物像圆滚滚的团子一样讨喜，也象征与主人团团圆圆，双音节重复，叫起来亲切顺口。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "weini",
+   "theme": "pinyin",
+   "meaning": "「偎你」weini，wei 是依偎的偎，ni 是你的你，寓意宠物依偎在主人身旁的温暖时刻，全拼好读，情感浓度高，像一句轻声告白。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "tokipet",
+   "theme": "blend",
+   "meaning": "toki 取日语里「此刻」的读音，pet 是宠物，寓意珍惜与宠物相伴的每一刻，两个词直拼，轻快有节奏，读起来像一句俏皮的呼唤。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "zhuazhua",
+   "theme": "pinyin",
+   "meaning": "「爪爪」zhuazhua，zhua 是爪子的爪，叠音词，直接点出宠物最灵动的部位，双音节重复像在逗弄小爪子，活泼又好记。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "mengchong",
+   "theme": "pinyin",
+   "meaning": "「萌宠」mengchong，meng 是呆萌的萌，chong 是宠物的宠，全拼直白，寓意宠物天然散发的可爱气场，音节顺滑，一眼看懂。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "snackle",
+   "theme": "coined",
+   "meaning": "snack 是零食，le 是轻快的语气收尾，寓意宠物零食带来的小小满足感，读起来像咀嚼时清脆的声响，轻巧又讨喜。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "woofan",
+   "theme": "coined",
+   "meaning": "woof 是英文里狗叫的拟声，fan 是热爱的粉丝，寓意狗狗的美食爱好者身份，两个词一拼，既有画面感又带着十足的俏皮味。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "qinzi",
+   "theme": "pinyin",
+   "meaning": "「亲滋」qinzi，qin 是亲密的亲，zi 是滋味的滋，寓意亲密关系里自然流露的滋味，也暗合宠物零食的鲜香，双拼简洁，读来有余味。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "bibei",
+   "theme": "pinyin",
+   "meaning": "「必备」bibei，bi 是必需的必，bei 是备好的备，全拼直白，寓意养宠生活里不可缺少的好物，双音节利落，念起来笃定有力。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "treatsy",
+   "theme": "coined",
+   "meaning": "treat 是英文里款待的意思，sy 是轻快的后缀，寓意用零食款待宠物是日常的小仪式，读起来像裹着糖衣的甜点，让人会心一笑。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "huanwan",
+   "theme": "pinyin",
+   "meaning": "「欢顽」huanwan，huan 是欢快的欢，wan 是顽皮的顽，寓意宠物在玩耍中释放天性，两个音节都以 an 收尾，读来圆润顺畅，透着活泼劲儿。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "maomao",
+   "theme": "pinyin",
+   "meaning": "「毛毛」maomao，mao 是毛发的毛，叠音词，直接描摹宠物柔软的触感，双音节重复像在抚摸绒毛，亲切感十足，过目不忘。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "wowo",
+   "theme": "pinyin",
+   "meaning": "「窝窝」wowo，wo 是窝的窝，叠音词，寓意给宠物一个温暖安心的角落，双音节重复像轻声哄睡，柔软又好记。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "chibei",
+   "theme": "pinyin",
+   "meaning": "「迟备」chibei，chi 是迟到的迟，bei 是备份的备，寓意好物值得提前备好，别让毛孩子等太久，双音节一收一放，读来有紧迫感又带关怀。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "sniffle",
+   "theme": "coined",
+   "meaning": "sniff 是嗅闻的意思，加 le 构成名词，寓意宠物用鼻子探索世界的好奇心，读起来像轻轻抽鼻子的声音，生动又有童趣。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "mimi",
+   "theme": "pinyin",
+   "meaning": "「咪咪」mimi，mi 是猫咪的咪，叠音词，全球通用的猫咪昵称，双音节重复自带撒娇语气，念一遍就记住，亲和力拉满。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "kuaile",
+   "theme": "pinyin",
+   "meaning": "「快乐」kuaile，kuai 是快乐的快，le 是欢乐的乐，全拼直白，寓意宠物与主人共享的简单快乐，双音节明快，念起来嘴角自然上扬。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "zengzeng",
+   "theme": "pinyin",
+   "meaning": "「增增」zengzeng，zeng 是增长的增，叠音词，寓意宠物在爱与美食中健康成长，双音节重复像节节攀升的鼓点，读来有向上的动力。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "chewy",
+   "theme": "coined",
+   "meaning": "chew 是咀嚼的意思，y 是形容词后缀，寓意耐嚼的零食带来长久陪伴，单音节加后缀，读来短促有力，像咬软骨头的脆响。",
+   "tag": "coherent"
+  },
+  {
+   "source": "docs/audits/r496-r499/ai-search-02-zh-refine.ndjson",
+   "round": 2,
+   "refine": true,
+   "description": "宠物用品跨境电商，主打猫狗零食与玩具，寓意温暖陪伴、值得信赖，名字要好读好记，中文创业者能一眼看懂",
+   "label": "haowan",
+   "theme": "pinyin",
+   "meaning": "「好玩」haowan，hao 是好的好，wan 是玩乐的玩，全拼直白，寓意玩具带来的纯粹乐趣，双音节口语化，念起来就像孩子兴奋地说「好玩」！",
    "tag": "coherent"
   },
   {
