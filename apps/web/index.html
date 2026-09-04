@@ -55,6 +55,10 @@
     </script>
   </head>
   <body>
+    <!-- 微信默认分享卡片取页面首张最小边 ≥290px 的可见 <img>（无 JS-SDK 时）；0×0 容器裁掉视觉但不 display:none -->
+    <div aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+      <img src="/wx-share.png" alt="" width="300" height="300" />
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { Bell, BellOff, BellRing, Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Loader2, Lock, ThumbsDown } from "lucide-react";
+import { Bell, BellOff, BellRing, Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Loader2, Lock, ThumbsDown, X } from "lucide-react";
 
 import { BrandCard, BrandDot, BrandSwatch, type BrandVariant } from "@/components/brand-card";
 import { ConfirmLabel } from "@/components/confirm-label";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { RegistrarAnchor } from "@/components/registrar-link";
 import { ScoreBars } from "@/components/score-bars";
+import { copyText } from "@/lib/clipboard";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
 import { registrarsFor, tldOf } from "@/lib/registrars";
@@ -229,18 +230,18 @@ export function RegisterMenu({ domain, children }: { domain: string; children: R
 
 export function CopyButton({ domain, className }: { domain: string; className?: string }) {
   const { t, lang } = useI18n();
-  const [copied, setCopied] = useState(false);
+  const [state, setState] = useState<"idle" | "copied" | "failed">("idle");
   return (
     <button
-      title={t("common.copy")}
+      title={state === "failed" ? t("results.copyFailed") : t("common.copy")}
       className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-md text-txt2 transition-colors hover:bg-bg3 hover:text-txt0", className)}
       onClick={async () => {
-        await navigator.clipboard.writeText(domain);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1200);
+        const ok = await copyText(domain);
+        setState(ok ? "copied" : "failed");
+        setTimeout(() => setState("idle"), ok ? 1200 : 2500);
       }}
     >
-      {copied ? <Check className="h-3.5 w-3.5 text-brand" /> : <Copy className="h-3.5 w-3.5" />}
+      {state === "copied" ? <Check className="h-3.5 w-3.5 text-brand" /> : state === "failed" ? <X className="h-3.5 w-3.5 text-destructive" /> : <Copy className="h-3.5 w-3.5" />}
     </button>
   );
 }

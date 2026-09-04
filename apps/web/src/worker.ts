@@ -1279,6 +1279,22 @@ app.get("/s/:id", async (c) => {
   if (!/^[\w-]{1,32}$/.test(id)) return res;
   let html = await res.text();
   const pageUrl = `${SITE_ORIGIN}/s/${id}`;
+  // 微信/IM 无 JS-SDK 时卡片标题取 <title>，这里按快照写成「N 个候选」而非首页长标题
+  const snapshot = c.env.CACHE ? await c.env.CACHE.get<ShareSnapshotStored>(`share:${id}`, "json") : null;
+  const items = snapshot && !snapshot.revoked && Array.isArray(snapshot.items) ? snapshot.items : [];
+  if (items.length > 0) {
+    const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+    const preview = items.slice(0, 3).map((it) => it.domain).join(lang === "en" ? ", " : "、") + (items.length > 3 ? (lang === "en" ? " …" : " 等") : "");
+    const title = escapeHtml(lang === "en" ? `${items.length} available domain candidates | DomainHunter` : `${items.length} 个可注册域名候选 | DomainHunter`);
+    const desc = escapeHtml(lang === "en" ? `${preview} — shared from DomainHunter, re-check availability before registering` : `${preview} —— 来自 DomainHunter 的候选清单，注册前请重新核验`);
+    html = html
+      .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+      .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
+      .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
+      .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+      .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
+      .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`);
+  }
   html = html
     .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${pageUrl}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${pageUrl}" />`)

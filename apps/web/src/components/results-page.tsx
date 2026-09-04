@@ -25,6 +25,7 @@ import { useAffiliateConfig } from "@/lib/affiliate";
 import { assignBrandVariants, groupByLabel, pickTopGroups, variantOf } from "@/lib/brand-wall";
 import { useDensity, type Density } from "@/lib/density";
 import { exportRows } from "@/lib/export";
+import { copyText } from "@/lib/clipboard";
 import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
 import { useI18n, type I18nKey } from "@/lib/i18n";
 import { usePrices } from "@/lib/prices";
@@ -110,7 +111,7 @@ export function ResultsPage({
   // R467 行密度：选择持久化 localStorage；compact 仅在 ≥768px 生效（窄屏守 44px 触点）
   const { density, setDensity, compact } = useDensity();
   const [linkCopied, setLinkCopied] = useState(false);
-  const { copied: availCopied, copy: copyAvailable } = useCopyAvailable();
+  const { copied: availCopied, failed: availCopyFailed, copy: copyAvailable } = useCopyAvailable();
   const moreBlocked = running || moreDisabled || quotaExhausted;
   const [starredCount, setStarredCount] = useState(0);
   const [selectedIdx, setSelectedIdx] = useState(-1);
@@ -231,7 +232,7 @@ export function ResultsPage({
         }
       } else if (selectedIdx >= 0 && selectedIdx < visible.length) {
         const row = visible[selectedIdx];
-        if (e.key === "c" || e.key === "C") void navigator.clipboard.writeText(row.domain);
+        if (e.key === "c" || e.key === "C") void copyText(row.domain);
         else if (e.key === "s" || e.key === "S") onToggleFavorite(row);
         else if (e.key === "Enter" && !onControl) openRegistrar(primaryRegistrar(row.domain), row.domain, affiliateCfg);
       }
@@ -269,11 +270,11 @@ export function ResultsPage({
               )}
               {visibleAvailable.length >= 2 && (
                 <button
-                  onClick={() => copyAvailable(visibleAvailable.map((r) => r.domain))}
+                  onClick={() => void copyAvailable(visibleAvailable)}
                   className="inline-flex items-center gap-1 rounded-md border border-line bg-bg1 px-2 py-0.5 font-mono text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
                   {availCopied ? <Check className="h-3 w-3 text-brand" /> : <Copy className="h-3 w-3" />}
-                  {availCopied ? t("results.copiedAvail") : t("results.copyAvailBtn", { n: visibleAvailable.length })}
+                  {availCopied ? t("results.copiedAvail") : availCopyFailed ? t("results.copyFailed") : t("results.copyAvailBtn", { n: visibleAvailable.length })}
                 </button>
               )}
               {visibleAvailable.length >= 2 && (
@@ -293,9 +294,11 @@ export function ResultsPage({
               {/* <sm：顶部操作行（导出 / 再来一轮）与底部 sticky 栏重复，收起以让 Top Picks 进首屏；只保留不重复的「复制链接」 */}
               <button
                 onClick={() => {
-                  void navigator.clipboard.writeText(searchLink(description, tlds, style, lengthPref));
-                  setLinkCopied(true);
-                  window.setTimeout(() => setLinkCopied(false), 2000);
+                  void copyText(searchLink(description, tlds, style, lengthPref)).then((ok) => {
+                    if (!ok) return;
+                    setLinkCopied(true);
+                    window.setTimeout(() => setLinkCopied(false), 2000);
+                  });
                 }}
                 title={t("results.copyLinkTitle")}
                 className="inline-flex items-center gap-1 rounded-md border border-line bg-bg1 px-2 py-0.5 font-mono text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:hidden"
@@ -319,9 +322,11 @@ export function ResultsPage({
               className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0"
               title={t("results.copyLinkTitle")}
               onClick={() => {
-                void navigator.clipboard.writeText(searchLink(description, tlds, style, lengthPref));
-                setLinkCopied(true);
-                window.setTimeout(() => setLinkCopied(false), 2000);
+                void copyText(searchLink(description, tlds, style, lengthPref)).then((ok) => {
+                  if (!ok) return;
+                  setLinkCopied(true);
+                  window.setTimeout(() => setLinkCopied(false), 2000);
+                });
               }}
             >
               {linkCopied ? <Check className="h-4 w-4 text-brand" /> : <Link2 className="h-4 w-4" />}
