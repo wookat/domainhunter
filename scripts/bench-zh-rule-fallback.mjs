@@ -1,5 +1,5 @@
 // R489：中文寓意输入 → 规则降级候选的离线横评（0 AI 调用，纯函数，不触发 /api/ai-search）
-// 用法：node scripts/bench-zh-rule-fallback.mjs [--json out.json] [--md] [--labels]
+// 用法：node scripts/bench-zh-rule-fallback.mjs [--json out.json] [--md] [--labels] [--input 描述 ...]（--input 给出时只跑这些输入）
 // 每个输入输出：根词、候选数、构成比例（拼音词 / 寓意短拼音 / 拼音+英文 / 英文 / 泛前后缀）、
 // 坏例（超长 >12 / 含数字连字符 / 元词根「寓意」等 / 跨词碎片 / ≥4 音节纯拼音串）与防线丢弃数。
 // 坏例口径固定，用于改前改后同口径对比；泛前后缀占比单列，不计入坏例。
@@ -27,7 +27,7 @@ await build({
 const rule = await import(tmp);
 rmSync(tmp);
 
-/** 10 个典型中文寓意输入：覆盖 2–4 字寓意词、行业词、抽象寓意 */
+/** 典型中文寓意输入：覆盖 2–4 字寓意词、行业词、抽象寓意；R493 追加 单字 / 口语冗词长句 / 数字英文混写 / 3 字行业词 */
 export const INPUTS = [
   "茶叶电商，寓意清雅",
   "宠物用品，活泼",
@@ -39,12 +39,18 @@ export const INPUTS = [
   "咖啡馆，文艺，慢生活",
   "少儿编程教育，寓意启蒙智慧",
   "健身工作室，活力向上",
+  "云",
+  "星辰大海",
+  "宠物殡葬，温暖告别",
+  "新能源充电桩运营，希望名字有快和稳的感觉",
+  "做一个帮独立开发者卖课的网站，名字要有成长的意思",
+  "想要一个AI客服SaaS的名字，2B，寓意高效",
 ];
 
 /** 描述里的元词（说明寓意/风格，本身不是品牌语义），出现在根词里即坏例 */
 const META_WORDS = new Set(["寓意", "风格", "科技感", "感觉", "气质"]);
 /** 人工标注：10 个输入里 2 字滑窗切出的跨词碎片（不是词） */
-const FRAGMENTS = new Set(["境电", "慢生", "叶电", "物用", "者工", "婴用", "居科", "儿编", "程教", "身工", "作室"]);
+const FRAGMENTS = new Set(["境电", "慢生", "叶电", "物用", "者工", "婴用", "居科", "儿编", "程教", "身工", "作室", "新能", "源充", "电桩"]);
 
 const QUOTED = /「([\u4e00-\u9fff]{1,4})」/g;
 
@@ -97,7 +103,8 @@ const args = process.argv.slice(2);
 const jsonIdx = args.indexOf("--json");
 const md = args.includes("--md");
 const showLabels = args.includes("--labels");
-const rows = INPUTS.map((i) => bench(i));
+const cliInputs = args.filter((a, i) => i > 0 && args[i - 1] === "--input");
+const rows = (cliInputs.length ? cliInputs : INPUTS).map((i) => bench(i));
 if (jsonIdx >= 0) writeFileSync(args[jsonIdx + 1], JSON.stringify(rows, null, 2));
 
 const tot = rows.reduce(

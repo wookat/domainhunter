@@ -14,6 +14,12 @@ export const ZH_PREFERRED_READING: Readonly<Record<string, string>> = {
   亲: "qin", 捷: "jie", 童: "tong", 食: "shi", 宿: "su", 果: "guo", 车: "che", 房: "fang", 摄: "she", 游: "you",
   服: "fu", 餐: "can", 区: "qu", 频: "pin", 招: "zhao", 聘: "pin", 支: "zhi", 零: "ling", 售: "shou", 数: "shu",
   汽: "qi", 培: "pei", 读: "du", 包: "bao", 吃: "chi", 鞋: "xie", 灯: "deng", 园: "yuan", 猫: "mao", 族: "zu",
+  // R493：创业描述高频字里被 R222 罕见读音误伤的（客 ke/qia、大 da/dai/tai、告 gao/ju/gu、平 ping/pian…），日常读音唯一
+  客: "ke", 大: "da", 告: "gao", 感: "gan", 平: "ping", 台: "tai", 洗: "xi", 研: "yan", 税: "shui", 内: "nei", 容: "rong",
+  识: "shi", 广: "guang", 员: "yuan", 戏: "xi", 印: "yin", 洁: "jie", 搬: "ban", 租: "zu", 共: "gong", 团: "tuan", 拼: "pin",
+  积: "ji", 白: "bai", 红: "hong", 硬: "ying", 片: "pian", 机: "ji", 无: "wu", 池: "chi", 露: "lu", 眼: "yan", 幸: "xing",
+  由: "you", 任: "ren", 约: "yue", 古: "gu", 治: "zhi", 伴: "ban", 接: "jie", 注: "zhu", 致: "zhi", 赢: "ying", 洋: "yang",
+  月: "yue", 太: "tai",
 };
 
 /**
@@ -30,6 +36,7 @@ export const ZH_BRAND_CHARS: Readonly<Record<string, string>> = {
   升: "sheng", 跃: "yue", 飞: "fei", 翔: "xiang", 拓: "tuo", 创: "chuang", 巧: "qiao", 灵: "ling", 妙: "miao", 舒: "shu",
   宁: "ning", 静: "jing", 蓝: "lan", 青: "qing", 金: "jin", 玉: "yu", 宝: "bao", 亲: "qin", 潮: "chao", 捷: "jie",
   极: "ji", 速: "su", 快: "kuai", 轻: "qing", 匠: "jiang", 尚: "shang",
+  海: "hai", 天: "tian", 阳: "yang", 森: "sen", 晨: "chen", 山: "shan", 稳: "wen",
 };
 
 /**
@@ -73,6 +80,7 @@ export const ZH_INDUSTRY: Readonly<Record<string, ZhIndustryEntry>> = {
   设计: { en: ["design"] }, 摄影: { core: "影", en: ["photo"] }, 音乐: { en: ["music"], py: "yinyue" }, 游戏: { core: "游", en: ["game", "play"] }, 视频: { en: ["video"] }, 直播: { en: ["live"] },
   服装: { en: ["wear"] }, 服饰: { en: ["wear"] }, 美妆: { core: "妆", en: ["beauty"] }, 护肤: { en: ["skin"] },
   汽车: { core: "车", en: ["car", "auto"] }, 物流: { en: ["ship"] }, 快递: { en: ["ship"] },
+  新能源: { en: ["energy", "ev"] }, 充电桩: { core: "充", en: ["charge"] }, 客服: { core: "客", en: ["chat"] },
   花店: { core: "花", en: ["flower", "bloom"] }, 鲜花: { core: "花", en: ["bloom"] }, 婚礼: { core: "婚", en: ["wed"] }, 婚庆: { core: "婚", en: ["wed"] },
   生活: { en: ["life"] }, 社区: { en: ["club"] }, 社交: { en: ["meet"] }, 招聘: { en: ["hire", "job"] }, 办公: { en: ["work"] }, 笔记: { core: "记", en: ["note"] }, 日程: { en: ["plan"] },
   法律: { core: "法", en: ["law"] }, 文创: { core: "文", en: ["art"] }, 手工: { en: ["craft"] }, 礼品: { core: "礼", en: ["gift"] }, 工作室: { en: ["studio"] },
