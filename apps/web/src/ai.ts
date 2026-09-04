@@ -1,6 +1,11 @@
 import { isBrandCollision } from "./brand-blocklist";
 import { COMMON_CHAR_PINYIN_DATA } from "./pinyin-table";
 import { TLD_LIST } from "./content/tld-list";
+import { DEFAULT_LLM_API_BASE, DEFAULT_LLM_MODEL, llmChatFetch, type LlmProvider, type LlmUpstream } from "./ai-transport";
+
+// R474：LLM HTTP 请求层（默认上游常量 / 脱敏日志 / 错误短码 / failover）迁至 ai-transport.ts，此处 re-export 保持既有导入路径可用
+export { DEFAULT_LLM_API_BASE, DEFAULT_LLM_MODEL, thinkingBodyExtra, logLlmHttpError, llmHttpErrorMessage } from "./ai-transport";
+export type { LlmProvider, LlmUpstream } from "./ai-transport";
 
 export interface AiScores {
   length: number;
@@ -344,6 +349,8 @@ export interface GuardStats {
   charsetSample?: string;
   /** zh 拼音系路线配额补发是否触发（R463；旧数据无此字段） */
   pinyinSupplement?: boolean;
+  /** 主轮实际应答的 LLM 上游（R474：primary=主上游，fallback=备用上游）；LLM 调用未成功时无此字段 */
+  provider?: LlmProvider;
 }
 
 function newGuardDropCounts(): GuardDropCounts {
@@ -390,25 +397,6 @@ export function guardDroppedTotal(guard: GuardStats): number {
 export type AiErrorKind = "quota" | "rate-limit" | "upstream" | "network" | "unknown";
 
 const LLM_HTTP_RE = /llm-http-(\d{3})/;
-
-// 上游非 2xx 时记录状态码 / Retry-After / 响应体前 300 字（不含请求头与密钥），便于在 wrangler tail 中区分账号级限流、网关错误与瞬时 429
-export async function logLlmHttpError(stage: string, res: Response): Promise<string> {
-  let body = "";
-  try {
-    body = (await res.text()).slice(0, 300).replace(/\s+/g, " ");
-  } catch {
-    body = "<unreadable>";
-  }
-  console.warn(`llm-upstream ${stage} status=${res.status} retry-after=${res.headers.get("retry-after") ?? "-"} body=${body}`);
-  return body;
-}
-
-// 部分 OpenAI 兼容网关用 429 承载账号/密钥额度耗尽（如 code=apikey_quota_exhausted），与瞬时限流语义不同，需让 UI 提示“配额已满”而非“稍等重试”
-const QUOTA_BODY_RE = /quota|insufficient_quota|billing|balance|限额|余额/i;
-
-export function llmHttpErrorMessage(status: number, body: string): string {
-  return status === 429 && QUOTA_BODY_RE.test(body) ? `llm-http-${status} quota-exhausted` : `llm-http-${status}`;
-}
 
 export function classifyAiError(e: unknown): AiErrorKind {
   const msg = e instanceof Error ? e.message : String(e);
@@ -465,37 +453,25 @@ ${MEANING_REDLINES_EN}
   ✗ ledgeledger —— 同词根叠拼（ledger+ledger）低质，不要输出任何同词根叠拼的候选
 - 英文场景禁止中文拼音路线：不要输出任何基于汉语拼音的候选（如 chengji、zhixing 式），英文用户读不出拼音也无从理解寓意；theme 一律不得标 pinyin`;
 
-// LLM 上游基地址：默认 DeepSeek 官方；本地 wrangler dev 可用 LLM_API_BASE 指向假上游
-// 验证错误路径（R264），生产不设此变量时行为与既往完全一致
-export const DEFAULT_LLM_API_BASE = "https://api.deepseek.com";
-// LLM 模型名：默认 DeepSeek 官方 deepseek-chat；经 OpenAI 兼容网关时用 LLM_MODEL 指定网关侧模型名
-export const DEFAULT_LLM_MODEL = "deepseek-chat";
-// R461：部分网关侧模型（如 deepseek-v4-flash）默认开启思考链，单次调用可达 50s+ 导致超时；
-// 设 LLM_THINKING=disabled 时请求体携带 thinking:{type:"disabled"} 关闭思考链（实测 50s→2s）
-export function thinkingBodyExtra(thinking?: string): { thinking?: { type: "disabled" } } {
-  return thinking === "disabled" ? { thinking: { type: "disabled" } } : {};
-}
-
-export async function generateUnderstanding(description: string, apiKey: string, lang: "zh" | "en" = "zh", baseUrl: string = DEFAULT_LLM_API_BASE, model: string = DEFAULT_LLM_MODEL, thinking?: string): Promise<AiUnderstanding | null> {
+export async function generateUnderstanding(
+  description: string,
+  apiKey: string,
+  lang: "zh" | "en" = "zh",
+  baseUrl: string = DEFAULT_LLM_API_BASE,
+  model: string = DEFAULT_LLM_MODEL,
+  thinking?: string,
+  fallback?: LlmUpstream,
+): Promise<AiUnderstanding | null> {
   try {
-    const res = await fetch(`${baseUrl}/chat/completions`, {
-      method: "POST",
-      headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}` },
-      body: JSON.stringify({
-        model,
-        messages: [
-          { role: "system", content: lang === "en" ? UNDERSTANDING_PROMPT + EN_UNDERSTANDING_HINT : UNDERSTANDING_PROMPT },
-          { role: "user", content: `需求描述：${description}` },
-        ],
-        temperature: 0.3,
-        max_tokens: 200,
-        ...thinkingBodyExtra(thinking),
-      }),
+    const { res } = await llmChatFetch({ apiKey, baseUrl, model, thinking }, fallback, {
+      stage: "understanding",
+      messages: [
+        { role: "system", content: lang === "en" ? UNDERSTANDING_PROMPT + EN_UNDERSTANDING_HINT : UNDERSTANDING_PROMPT },
+        { role: "user", content: `需求描述：${description}` },
+      ],
+      temperature: 0.3,
+      maxTokens: 200,
     });
-    if (!res.ok) {
-      await logLlmHttpError("understanding", res);
-      return null;
-    }
     const data = (await res.json()) as { choices: { message: { content: string } }[] };
     const match = (data.choices[0]?.message?.content ?? "").match(/\{[\s\S]*\}/);
     if (!match) return null;
@@ -627,6 +603,8 @@ export async function generateAiCandidates(
     baseUrl?: string;
     model?: string;
     thinking?: string;
+    /** R474：备用 LLM 上游；主上游额度耗尽/认证失败/5xx/网络失败时用其重发同一请求，未传则不启用 */
+    fallback?: LlmUpstream;
     descLooksEnglish?: boolean;
     /** R466：传入即主轮走流式，每个通过防线的候选立即回调；补发轮仍整包读取，合并后逐个回调。
      *  返回值仍是完整候选数组（含补发），且与回调序列逐项一致 */
@@ -1593,6 +1571,7 @@ async function generateOnce(
     baseUrl?: string;
     model?: string;
     thinking?: string;
+    fallback?: LlmUpstream;
     descLooksEnglish?: boolean;
     onCandidate?: CandidateSink;
   } = {},
@@ -1611,39 +1590,32 @@ async function generateOnce(
   if (opts.pinyinSupplementExclude !== undefined) {
     user += `\n\n${buildPinyinSupplementDirective(count, opts.pinyinSupplementExclude)}`;
   }
-  const res = await fetch(`${opts.baseUrl ?? DEFAULT_LLM_API_BASE}/chat/completions`, {
-    method: "POST",
-    headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}` },
-    signal: AbortSignal.timeout(60_000), // 单次 LLM 调用超时上限，超时走上层重试
-    body: JSON.stringify({
-      model: opts.model ?? DEFAULT_LLM_MODEL,
-      messages: [
-        {
-          role: "system",
-          content:
-            opts.lang === "en"
-              ? SYSTEM_PROMPT + EN_NAMING_HINT
-              : // R247：偏拼音需求追加变体拓宽指令，降低双字全拼存量枯竭命中率
-                SYSTEM_PROMPT + ZH_PINYIN_HINT + (detectPinyinFocus(description) ? ZH_PINYIN_BROADEN_HINT : ""),
-        },
-        { role: "user", content: user },
-      ],
-      // R196（P1-1）：反思轮（round≥2）降温——高温叠加长上下文是词语沙拉的主要来源，首轮保持 1.2 不变
-      temperature: (opts.round ?? 1) > 1 ? 0.9 : 1.2,
-      max_tokens: 4000,
-      // R466：主轮流式读取（有 onCandidate 时），补发轮保持整包
-      ...(opts.onCandidate ? { stream: true } : {}),
-      ...thinkingBodyExtra(opts.thinking),
-    }),
+  // R474：经统一请求层发出（主上游失败且配置了备用上游时自动重发），成功后记录实际应答的上游
+  const { res, provider } = await llmChatFetch({ apiKey, baseUrl: opts.baseUrl, model: opts.model, thinking: opts.thinking }, opts.fallback, {
+    stage: "candidates",
+    messages: [
+      {
+        role: "system",
+        content:
+          opts.lang === "en"
+            ? SYSTEM_PROMPT + EN_NAMING_HINT
+            : // R247：偏拼音需求追加变体拓宽指令，降低双字全拼存量枯竭命中率
+              SYSTEM_PROMPT + ZH_PINYIN_HINT + (detectPinyinFocus(description) ? ZH_PINYIN_BROADEN_HINT : ""),
+      },
+      { role: "user", content: user },
+    ],
+    // R196（P1-1）：反思轮（round≥2）降温——高温叠加长上下文是词语沙拉的主要来源，首轮保持 1.2 不变
+    temperature: (opts.round ?? 1) > 1 ? 0.9 : 1.2,
+    maxTokens: 4000,
+    // R466：主轮流式读取（有 onCandidate 时），补发轮保持整包
+    stream: opts.onCandidate !== undefined,
+    timeoutMs: 60_000, // 单次 LLM 调用超时上限，超时走上层重试
   });
-  if (!res.ok) {
-    const body = await logLlmHttpError("candidates", res);
-    throw new Error(llmHttpErrorMessage(res.status, body));
-  }
   // R238：防线统计——各丢弃路径按防线归类计数（只计数，不记录被丢弃候选内容）；
   // R243：补发轮丢弃计入 supplementDropped，与主轮分开可观测
   const guardStats = opts.guard ?? newGuardStats();
   const isSupplement = isWordSupplement || opts.pinyinSupplementExclude !== undefined;
+  if (!isSupplement) guardStats.provider = provider;
   const dropped = isSupplement ? guardStats.supplementDropped : guardStats.dropped;
   const ctx: AdmitContext = {
     lang: opts.lang ?? "zh",
