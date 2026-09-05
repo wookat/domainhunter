@@ -108,7 +108,10 @@ function CodeBlock({ code, copyLabel, copiedLabel }: { code: string; copyLabel: 
   const [copied, setCopied] = useState(false);
   return (
     <div className="relative mt-3">
-      <pre className="overflow-x-auto rounded-xl border border-line bg-bg1 p-4 text-[12.5px] leading-relaxed text-txt1">
+      <pre
+        tabIndex={0}
+        className="overflow-x-auto rounded-xl border border-line bg-bg1 p-4 text-[12.5px] leading-relaxed text-txt1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      >
         <code>{code}</code>
       </pre>
       <button

@@ -307,7 +307,7 @@ export function ShortlistPage({
       const res = await fetch("/api/share", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ items: items.map(({ domain, meaning, scores }) => ({ domain, meaning, scores })) }),
+        body: JSON.stringify({ items: items.map(({ domain, meaning, scores, status }) => ({ domain, meaning, scores, status: status === "checking" ? undefined : status })) }),
       });
       if (!res.ok) throw new Error(String(res.status));
       const { id, url, revokeToken } = (await res.json()) as { id: string; url: string; revokeToken?: string };
