@@ -1,0 +1,134 @@
+[
+  {
+    "file": "guide-cn-realname-desktop.report.json",
+    "url": "https://hunt.zalize.com/guide/cn-realname",
+    "formFactor": "desktop",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 92
+    },
+    "metrics": {
+      "first-contentful-paint": "0.5 s",
+      "largest-contentful-paint": "0.6 s",
+      "total-blocking-time": "0 ms",
+      "cumulative-layout-shift": "0",
+      "speed-index": "0.5 s"
+    },
+    "seoFail": [
+      "canonical"
+    ],
+    "lighthouseVersion": "13.4.1"
+  },
+  {
+    "file": "guide-cn-realname-mobile.report.json",
+    "url": "https://hunt.zalize.com/guide/cn-realname",
+    "formFactor": "mobile",
+    "scores": {
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 92
+    },
+    "metrics": {
+      "first-contentful-paint": "1.8 s",
+      "largest-contentful-paint": "2.4 s",
+      "total-blocking-time": "0 ms",
+      "cumulative-layout-shift": "0",
+      "speed-index": "1.8 s"
+    },
+    "seoFail": [
+      "canonical"
+    ],
+    "lighthouseVersion": "13.4.1"
+  },
+  {
+    "file": "home-desktop.report.json",
+    "url": "https://hunt.zalize.com/",
+    "formFactor": "desktop",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 92
+    },
+    "metrics": {
+      "first-contentful-paint": "0.6 s",
+      "largest-contentful-paint": "0.7 s",
+      "total-blocking-time": "0 ms",
+      "cumulative-layout-shift": "0",
+      "speed-index": "0.6 s"
+    },
+    "seoFail": [
+      "canonical"
+    ],
+    "lighthouseVersion": "13.4.1"
+  },
+  {
+    "file": "home-mobile.report.json",
+    "url": "https://hunt.zalize.com/",
+    "formFactor": "mobile",
+    "scores": {
+      "performance": 92,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 92
+    },
+    "metrics": {
+      "first-contentful-paint": "2.4 s",
+      "largest-contentful-paint": "2.9 s",
+      "total-blocking-time": "50 ms",
+      "cumulative-layout-shift": "0",
+      "speed-index": "2.4 s"
+    },
+    "seoFail": [
+      "canonical"
+    ],
+    "lighthouseVersion": "13.4.1"
+  },
+  {
+    "file": "prices-desktop.report.json",
+    "url": "https://hunt.zalize.com/prices",
+    "formFactor": "desktop",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 92
+    },
+    "metrics": {
+      "first-contentful-paint": "0.5 s",
+      "largest-contentful-paint": "0.7 s",
+      "total-blocking-time": "0 ms",
+      "cumulative-layout-shift": "0",
+      "speed-index": "0.5 s"
+    },
+    "seoFail": [
+      "canonical"
+    ],
+    "lighthouseVersion": "13.4.1"
+  },
+  {
+    "file": "prices-mobile.report.json",
+    "url": "https://hunt.zalize.com/prices",
+    "formFactor": "mobile",
+    "scores": {
+      "performance": 93,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 92
+    },
+    "metrics": {
+      "first-contentful-paint": "1.8 s",
+      "largest-contentful-paint": "3.0 s",
+      "total-blocking-time": "40 ms",
+      "cumulative-layout-shift": "0",
+      "speed-index": "1.8 s"
+    },
+    "seoFail": [
+      "canonical"
+    ],
+    "lighthouseVersion": "13.4.1"
+  }
+]

@@ -3,6 +3,7 @@ import { Check, Crosshair, Minus, Sparkles, X } from "lucide-react";
 import { COMPARE_SLUGS } from "@/content/compare-slugs";
 import { GUIDE_LABELS } from "@/content/guide-labels";
 import { TLD_LIST } from "@/content/tld-list";
+import { WHY_COPY } from "@/content/why-copy";
 import { useI18n } from "@/lib/i18n";
 
 const N_TLD = TLD_LIST.length;
@@ -30,10 +31,7 @@ interface WhyCopy {
 
 const COPY: Record<"zh" | "en", WhyCopy> = {
   zh: {
-    kicker: "为什么选 DomainHunter",
-    title: "中文创业者的域名猎手：用中文说寓意，猎到真正可注册的 .cn / .com",
-    intro:
-      "英文通用场景里，Instant Domain Search、Namelix 这类工具已经很好用——我们不在那里争。DomainHunter 专注一件事：中文创业者、独立开发者与出海团队用中文描述寓意，AI 沿拼音、英文、拼音英文混搭多路构思，每个候选实时核验 .cn / .com.cn / .com 等后缀的注册状态，附到期日与价格，只给你能立刻注册的。",
+    ...WHY_COPY.zh,
     painTitle: "为什么中文创业者找域名格外难",
     pains: [
       "英文域名工具按关键词与英文词表拼接，不会把中文寓意翻成拼音或英文去想名字",
@@ -74,10 +72,7 @@ const COPY: Record<"zh" | "en", WhyCopy> = {
     ctaDesc: "免费、开源、无需登录；AI 搜索每小时限次，即输即查与批量核验不限量。",
   },
   en: {
-    kicker: "Why DomainHunter",
-    title: "A domain hunter for Chinese founders: name it in Chinese, register it in .cn / .com",
-    intro:
-      "For generic English naming, tools like Instant Domain Search and Namelix are already excellent — we don't compete there. DomainHunter does one thing: Chinese founders, indie developers and teams going global describe the meaning in Chinese (or English), AI brainstorms pinyin, English and pinyin-English blends, and every candidate is verified live across .cn / .com.cn / .com and more, with expiry dates and prices — only names you can register right now.",
+    ...WHY_COPY.en,
     painTitle: "Why finding a domain is extra hard for Chinese founders",
     pains: [
       "English domain tools combine keywords and English word lists — they don't turn Chinese meaning into pinyin or English names",

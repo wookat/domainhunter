@@ -7,11 +7,28 @@ const STRINGS = {
   en: { empty: "No matching entries. Try another keyword.", clear: "Clear" },
 } as const;
 
-/** 归一化后做包含匹配：任一字段命中即保留 */
+/** 去点后在词边界处包含：`com vs cn` 命中 `.com vs .cn`，但 `io vs ai` 不误中 `.studio vs .ai` */
+const dotlessMatch = (field: string, q: string): boolean => {
+  const fd = field.replace(/\./g, "");
+  for (let i = fd.indexOf(q); i !== -1; i = fd.indexOf(q, i + 1)) {
+    if (i === 0 || !/[a-z0-9]/.test(fd[i - 1])) return true;
+  }
+  return false;
+};
+
+/**
+ * 归一化后做包含匹配：任一字段命中即保留。
+ * 不带点的查询额外按「去点」形式比对（`com vs cn` / `comcn` 也能命中 `.com vs .cn`）；
+ * 带点的查询（如 `.com`）视为精确意图，只按原文匹配，不因去点而扩大到 `com.cn`。
+ */
 export const hubMatch = (query: string, fields: string[]): boolean => {
   const q = query.trim().toLowerCase();
   if (q === "") return true;
-  return fields.some((f) => f.toLowerCase().includes(q));
+  const dotless = !q.includes(".");
+  return fields.some((f) => {
+    const fl = f.toLowerCase();
+    return fl.includes(q) || (dotless && dotlessMatch(fl, q));
+  });
 };
 
 /**

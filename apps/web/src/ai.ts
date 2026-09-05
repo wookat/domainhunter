@@ -29,8 +29,11 @@ export interface AiCandidate {
 
 // meaning 质量红线（R179）：首轮 system prompt 与反思轮 refine hint 共享同一份文案，避免措辞漂移
 const MEANING_REDLINES_ZH = `- meaning 必须是定稿文案：一次成稿、语气笃定、语法通顺；禁止问号式犹豫、禁止「其实/等等」式自我修正、禁止括号内猜测拆词；对寓意拆解没把握，就换一个你能笃定解释的候选
-  好例子：「木舟」muzhou，双字全拼，寓意稳载远行，声调平缓，读一遍就能拼出来
+  好例子：「木舟」muzhou，双字全拼，寓意稳载远行，双音节干脆，读一遍就能拼出来
   坏例子：murory，可能是 mu(木?)+rory？也许取自某个人名（不太确定）
+- 禁止描述声调/平仄：不要写「一声/第二声/阴平/去声/平仄相间/先升后平/一升一平/声调上扬」这类声调判断（模型无法可靠判断声调，写错即失信）；说读感只谈音节来源、叠音、声母韵母搭配与联想
+  好例子：「暖趴」nuanpa，暖是温度，趴是伏卧的慵懒姿态，双音节都以 a 韵收尾，读来舒展
+  坏例子：「暖趴」nuanpa，暖字第二声接趴字第一声，先升后平
 - 词源/拆字必须真实：只引用真实存在的汉字、英文单词或词根，禁止臆造不存在的词充当词源；禁止引用 label 中不存在的字母或音节（label 里没有 z 就不能说 z 取自某词）
 - meaning 只使用中文与英文书写，禁止混入韩文、日文假名、西里尔字母、IPA 音标等其他文字
 - 禁止在 meaning 里用括号（()（）[]【】）内嵌拆字/注音/补充解释；拆字与寓意必须融进一句通顺的定稿文案直接说清
@@ -84,8 +87,8 @@ const ZH_PINYIN_HINT = `
 
 拼音候选强化（用户是中文创业者，拼音系候选质量优先）：
 - 路线配额硬要求：每轮候选中 theme 为 pinyin 或 blend 的合计必须 ≥40%（如 24 个候选中至少 10 个），其余才是 word/coined；不足配额视为不合格输出
-- 三种拼音路线都要覆盖，每种至少 2 个：① 简短双字拼（哔哩哔哩 bilibili、知乎 zhihu、豆瓣 douban 式，追求双拼声调节奏与叠音美感）；② 全拼（小红书 xiaohongshu 式，寓意完整直白）；③ 声母缩写或拼音+英文混搭（zlz、tao+bao+hub 式，短而有记忆点）
-- 每个 theme 为 pinyin 或 blend 的候选，meaning 必须包含用「」括起的中文原词，并说明为什么这个拼音好读好记（如声调顺口、叠音、无歧义拼读），例如：「知舟」zhizhou，双字全拼，齿音开头声调上扬，读一遍就能拼出来
+- 三种拼音路线都要覆盖，每种至少 2 个：① 简短双字拼（哔哩哔哩 bilibili、知乎 zhihu、豆瓣 douban 式，追求双拼节奏与叠音美感）；② 全拼（小红书 xiaohongshu 式，寓意完整直白）；③ 声母缩写或拼音+英文混搭（zlz、tao+bao+hub 式，短而有记忆点）
+- 每个 theme 为 pinyin 或 blend 的候选，meaning 必须包含用「」括起的中文原词，并说明为什么这个拼音好读好记（只谈音节来源、叠音、声母韵母搭配、无歧义拼读，不谈声调/平仄），例如：「知舟」zhizhou，双字全拼，zh 声母开头、ou 韵收尾，读一遍就能拼出来
 - 「」内的汉字必须优先用常用字（现代汉语常用 3500 字范围内的直觉），普通人看到拼音要能反推出汉字：木/舟/云/星/禾/悦/途 好，岑/蕨/飏/麓/隰/珩 这类生僻字不要；组词语义要自然（「木舟」「星河」好，「续夸」式牵强搭配不要）
 - 拼音自筛淘汰标准（不达标的直接不要输出）：x/q/zh/c/s 等易歧义声母连串（老外读不出，如 xiqizhi）；超过 4 个音节；含 iu/ui、in/ing、an/ang 等易混易错拼写；整体拼读有多种可能切分产生歧义的组合`;
 
@@ -305,7 +308,8 @@ export function countRareQuotedChars(meaning: string): number {
 // ---------------- 防线统计元数据（R238） ----------------
 // R222–R225 上线的多道候选防线只有「结果无坏例」的间接证据，无法直证防线拦截了坏例。
 // GuardStats 按请求聚合各防线的丢弃计数与补发/重试触发情况，随流事件返回给前端与回归脚本。
-// 只计数、不含被丢弃候选的任何内容（label/meaning 一概不带），不含用户数据。
+// 默认只计数、不含被丢弃候选的任何内容（label/meaning 一概不带），不含用户数据；
+// R500 增加审计专用、默认关闭的 droppedSamples 通道（请求体 debugDropped:true 才开）。
 
 /** 各防线丢弃计数（仅计数，不含被丢弃候选内容） */
 export interface GuardDropCounts {
@@ -325,6 +329,8 @@ export interface GuardDropCounts {
   questionMark: number;
   /** EN meaning 词语沙拉（无词源锤点且无谓语骨架，R196） */
   meaningIncoherent: number;
+  /** zh meaning 词语沙拉（长从句 + 比喻/叙事词，R496） */
+  zhMeaningIncoherent: number;
   /** 拼音候选无法切分为合法音节/音节过多/语感风险超阈（R124/R142） */
   pinyinInvalid: number;
   /** 声称「全拼」但「」内引用词拼音与 label 拼写不符，含表外字保守拒绝（R196/R222） */
@@ -342,6 +348,10 @@ export interface GuardStats {
   wordSupplement: boolean;
   /** 补发轮实际发起次数（R243，0–2；主轮丢弃计数不含补发轮） */
   supplementAttempts: number;
+  /** R498：本轮 word 路线薄弱判定命中原因（zero=word 为 0；low=word 低于 max(2,⌈候选×15%⌉)）；未命中无此字段 */
+  wordSupplementReason?: WordSupplementReason;
+  /** R498：判定命中但本次搜索的跨轮补发预算已耗尽，本轮未发起补发 */
+  wordSupplementSkipped?: "budget";
   /** 补发轮各防线丢弃计数（R243，与主轮 dropped 分开，修复 R239 P3-1 盲区） */
   supplementDropped: GuardDropCounts;
   /** LLM 调用瞬时失败后的退避重试次数 */
@@ -352,6 +362,42 @@ export interface GuardStats {
   pinyinSupplement?: boolean;
   /** 主轮实际应答的 LLM 上游（R474：primary=主上游，fallback=备用上游）；LLM 调用未成功时无此字段 */
   provider?: LlmProvider;
+  /** 解析后 theme 被规则归一（模型标注与高置信规则冲突）的候选数，含补发轮（R499；旧数据无此字段） */
+  themeNormalized?: number;
+  /** zh meaning 声调/平仄描述子句被删除的候选数，含补发轮（R499；旧数据无此字段） */
+  toneClaimStripped?: number;
+  /** R500：审计专用被丢弃候选样本通道。仅请求体 `debugDropped:true` 时存在（默认请求无此字段，序列化字节不变）；
+   *  每 reason ≤ DROPPED_SAMPLE_PER_REASON、总量 ≤ DROPPED_SAMPLE_TOTAL，meaning 截断到 DROPPED_SAMPLE_MEANING_MAX 字；
+   *  前端不渲染、不入 dh:lastSearch 快照、不写 KV */
+  droppedSamples?: DroppedSample[];
+}
+
+/** R500：单条被丢弃候选样本（只在 debugDropped 通道内出现） */
+export interface DroppedSample {
+  reason: keyof GuardDropCounts;
+  label: string;
+  /** 清洗后的 meaning，超过 DROPPED_SAMPLE_MEANING_MAX 字时截断并以 … 收尾 */
+  meaning: string;
+  /** 模型原始标注 theme（小写；缺失时为空串） */
+  theme: string;
+  /** 补发轮（word/pinyin 补发）丢弃；主轮无此字段 */
+  supplement?: true;
+}
+
+export const DROPPED_SAMPLE_PER_REASON = 5;
+export const DROPPED_SAMPLE_TOTAL = 20;
+export const DROPPED_SAMPLE_MEANING_MAX = 160;
+
+/** R500：按上限记录一条被丢弃候选样本；通道未开启（droppedSamples 未定义）时什么都不做 */
+export function recordDroppedSample(guard: GuardStats, sample: DroppedSample): void {
+  const list = guard.droppedSamples;
+  if (list === undefined || list.length >= DROPPED_SAMPLE_TOTAL) return;
+  let perReason = 0;
+  for (const s of list) if (s.reason === sample.reason) perReason++;
+  if (perReason >= DROPPED_SAMPLE_PER_REASON) return;
+  const chars = [...sample.meaning];
+  const meaning = chars.length > DROPPED_SAMPLE_MEANING_MAX ? chars.slice(0, DROPPED_SAMPLE_MEANING_MAX).join("") + "…" : sample.meaning;
+  list.push({ ...sample, meaning });
 }
 
 function newGuardDropCounts(): GuardDropCounts {
@@ -364,6 +410,7 @@ function newGuardDropCounts(): GuardDropCounts {
     metaLanguage: 0,
     questionMark: 0,
     meaningIncoherent: 0,
+    zhMeaningIncoherent: 0,
     pinyinInvalid: 0,
     pinyinMismatch: 0,
     dislikedMorphology: 0,
@@ -371,14 +418,19 @@ function newGuardDropCounts(): GuardDropCounts {
   };
 }
 
-export function newGuardStats(): GuardStats {
-  return {
+/** @param opts.debugDropped R500：开启被丢弃候选样本通道（默认关闭，关闭时返回对象与旧版逐字节一致） */
+export function newGuardStats(opts: { debugDropped?: boolean } = {}): GuardStats {
+  const g: GuardStats = {
     dropped: newGuardDropCounts(),
     wordSupplement: false,
     supplementAttempts: 0,
     supplementDropped: newGuardDropCounts(),
     retries: 0,
+    themeNormalized: 0,
+    toneClaimStripped: 0,
   };
+  if (opts.debugDropped === true) g.droppedSamples = [];
+  return g;
 }
 
 /** 各防线丢弃数合计（前端「本轮过滤 N 个低质候选」展示用） */
@@ -485,17 +537,41 @@ export async function generateUnderstanding(
   }
 }
 
-// ---------------- EN word 路线配额硬保障（R224，修复 R218 P2-3） ----------------
+// ---------------- EN word 路线配额硬保障（R224，修复 R218 P2-3；R498 重定门槛） ----------------
 // EN_NAMING_HINT 的 prompt 级软配额对 LLM 不可靠（R218 en2 整轮 word=0，R195/R196 也有波动）。
-// 后端兜底：一轮解析完成后统计 theme 分布，word 为 0 且候选数达阈值时，追加一次带硬指令的
-// 补充请求（仅限 1 次，失败不阻塞主结果）。仅在配额失守时触发，正常路径 0 额外成本。
+// 后端兜底：一轮解析完成后统计 theme 分布，word 路线薄弱时追加带硬指令的补充请求（失败不阻塞主结果）。
+// R498（R494 P2-3）：原「候选 ≥8 且 word=0」门槛在 fast 首轮（请求 8 条、防线过滤后常 5–7 条）永不触发，
+// 且 word=1 也算达标；改为「候选 ≥3 且 word < max(2, ⌈候选×15%⌉)」，并以每次搜索跨轮共享的补发预算控 LLM 成本。
+// 论证与历史数据模拟见 docs/research/en-word-supplement.md。
 
-/** 触发补发的最小候选数：整轮产出太少时（如流截断）word=0 属于正常波动，不补发 */
-export const EN_WORD_QUOTA_MIN_CANDIDATES = 8;
-/** 补发请求的候选数：word 路线软配额要求「各至少 2 个」，按 4 个请求留过滤余量 */
+/** 触发补发的最小候选数：整轮 <3 条基本是解析/流截断级失败，word 为 0 不代表路线薄弱，不补发 */
+export const EN_WORD_SUPPLEMENT_MIN_CANDIDATES = 3;
+/** word 路线目标占比：word 少于 ⌈候选×15%⌉ 视为薄弱 */
+export const EN_WORD_SUPPLEMENT_RATIO = 0.15;
+/** word 路线目标条数下限（软配额「各至少 2 个」）：候选再少也要求 ≥2 条 word */
+export const EN_WORD_SUPPLEMENT_MIN_WORDS = 2;
+/** 补发请求的候选数：按 4 个请求留过滤余量 */
 export const EN_WORD_SUPPLEMENT_COUNT = 4;
-/** 补发总次数上限（R243）：首次补发全灭时再重试一次，第二次 prompt 加硬 */
+/** 单轮补发次数上限（R243）：首次补发全灭时再重试一次，第二次 prompt 加硬 */
 export const EN_WORD_SUPPLEMENT_MAX_ATTEMPTS = 2;
+/** 每次搜索（跨轮）补发 LLM 调用总预算（R498）：worker 每次搜索新建一个预算对象传入各轮 */
+export const EN_WORD_SUPPLEMENT_SEARCH_BUDGET = 2;
+
+export type WordSupplementReason = "zero" | "low";
+
+/** 跨轮共享的补发预算（R498）；未传入时退化为仅受单轮上限约束（历史脚本/旧调用方式） */
+export interface WordSupplementBudget {
+  remaining: number;
+}
+
+export function newWordSupplementBudget(): WordSupplementBudget {
+  return { remaining: EN_WORD_SUPPLEMENT_SEARCH_BUDGET };
+}
+
+/** 候选数为 n 时 word 路线应达到的最少条数：max(2, ⌈n×15%⌉) */
+export function wordSupplementFloor(n: number): number {
+  return Math.max(EN_WORD_SUPPLEMENT_MIN_WORDS, Math.ceil(n * EN_WORD_SUPPLEMENT_RATIO));
+}
 
 // ---------------- word theme 内嵌 TLD 降级兜底（R250，R239 P3-3） ----------------
 // 生产坏例：canaryio 标 word——label 内嵌 TLD 名 io，不是词典词。prompt 级反例之外，
@@ -519,6 +595,124 @@ export function wordThemeEmbedsTld(label: string): boolean {
   return WORD_TLD_EMBED_SUFFIXES.some((t) => label.length > t.length && label.endsWith(t));
 }
 
+// ---------------- 解析后 theme 归一（R499，R494 审计 P3-1） ----------------
+// 生产坏例（R494 6 份 NDJSON 回放）：zhangwubao「账务宝」全拼标 blend；cuddlepup/fluffnest/
+// barkbite/furbuddy/nibblenest/pawlab 等两词拼接标 word；harborly（harbor + -ly）标 blend。
+// theme 决定结果页聚类 chips（R105）与 word 配额计数（R224），标错会让配额补发判断失真。
+// 归一只在规则置信度高时以规则为准，不确定时保留模型标注；不依赖英文词表——证据来源是
+// 模型自己的 meaning：它把 label 拆成了哪些英文词段 / 引用了哪个「」中文词（调研见
+// docs/research/theme-normalization.md）。产品语义沿用 SYSTEM_PROMPT / EN_NAMING_HINT 的定义：
+//   zh：pinyin=中文拼音/缩写；word=现成英文单词；coined=英文合成词/造词；blend=拼音+英文混合
+//   en：word=词典词；blend=两个可辨认英文词段拼接；coined=其余造词
+// 规则：
+//   Z1 zh 非 pinyin 标注，label 可被合法音节完整切分，且 meaning 某「」引用词逐字全拼恰等于 label → pinyin
+//   Z2 zh 标 word，meaning 把 label 无缝拆成 ≥2 个引用词段 → 含「」引用词拼音段则 blend，否则 coined
+//   E1 en 标 word，meaning 把 label 无缝拆成 ≥2 个各 ≥3 字母的引用词段（无派生后缀段）→ blend
+//      Z2/E1 例外：label 本身是已词汇化的真实复合词（WORD_LEXICALIZED_COMPOUNDS，munchkin/wagtail 型）→ 保留 word
+//   S1 标 blend，label = 被引用词干 + 派生后缀（-ly/-ify/-ix/-ora/-io/-ish）且拆不出两词段 → coined（zh 需无「」引用词）
+// 其余情况（含数字/连字符 label、未被 meaning 拆解的合成词、pan 型「既是拼音又是英文词」但未引「」）保留模型标注。
+
+/** 真实词典词但模型常按两段解释的词汇化复合词（回放坏例 munchkin、wagtail；R494 审计判 munchkin 标 word ✓），不归一 */
+const WORD_LEXICALIZED_COMPOUNDS = new Set([
+  "munchkin", "wagtail", "sunflower", "butterfly", "football", "network", "keyboard", "notebook", "passport", "rainbow",
+  "snowball", "sunrise", "sunset", "moonlight", "firefly", "ladybug", "toolbox", "workshop", "bookmark", "hotspot",
+  "homework", "teamwork", "landmark", "lighthouse", "greenhouse", "warehouse", "wildfire", "waterfall", "seashell", "starfish",
+  "catnip", "pawprint", "pushpin", "backpack", "laptop", "desktop", "website", "upstart", "outlook", "overflow",
+]);
+
+/** 派生后缀：不是独立英文词，label = 词干 + 后缀 时按定义不可能是「两词拼接」 */
+const THEME_DERIV_SUFFIXES = ["ify", "ily", "ly", "ix", "ora", "io", "ish"] as const;
+const THEME_QUOTED_CJK_RE = /「([\u3400-\u4dbf\u4e00-\u9fff]{1,6})」/g;
+
+/** meaning 中出现的独立 ASCII 词（小写，≥2 字母） */
+function meaningAsciiTokens(meaning: string): Set<string> {
+  const out = new Set<string>();
+  for (const m of meaning.toLowerCase().matchAll(/[a-z]+/g)) if (m[0].length >= 2) out.add(m[0]);
+  return out;
+}
+
+/**
+ * label 能否被 meaning 中引用的 ASCII 词段按顺序无缝拼出（≥2 段、每段 ≥minPart 字母、段不等于 label 本身）。
+ * 返回段数最少的一种拆分，拆不出返回 null。
+ */
+export function citedSplit(label: string, meaning: string, minPart = 2): string[] | null {
+  if (!/^[a-z]+$/.test(label)) return null;
+  const tokens = meaningAsciiTokens(meaning);
+  tokens.delete(label);
+  const best: (string[] | null)[] = new Array<string[] | null>(label.length + 1).fill(null);
+  best[0] = [];
+  for (let i = 0; i < label.length; i++) {
+    const prefix = best[i];
+    if (!prefix) continue;
+    for (let j = i + minPart; j <= label.length; j++) {
+      const part = label.slice(i, j);
+      if (!tokens.has(part)) continue;
+      const cur = best[j];
+      if (!cur || cur.length > prefix.length + 1) best[j] = [...prefix, part];
+    }
+  }
+  const r = best[label.length];
+  return r && r.length >= 2 ? r : null;
+}
+
+/** meaning 的「」引用词中是否有一个逐字全拼恰等于 target */
+function quotedFullPinyinEquals(target: string, meaning: string): boolean {
+  THEME_QUOTED_CJK_RE.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = THEME_QUOTED_CJK_RE.exec(meaning)) !== null) {
+    if (quotedWordMatchesLabel(m[1], target, false)) return true;
+  }
+  return false;
+}
+
+const hasQuotedCjk = (meaning: string): boolean => {
+  THEME_QUOTED_CJK_RE.lastIndex = 0;
+  return THEME_QUOTED_CJK_RE.test(meaning);
+};
+
+/** label = 词干 + 派生后缀，且词干（≥3 字母）被 meaning 引用 → 返回词干，否则 null */
+function derivedFromCitedStem(label: string, meaning: string): string | null {
+  const tokens = meaningAsciiTokens(meaning);
+  for (const suf of THEME_DERIV_SUFFIXES) {
+    if (label.length > suf.length + 2 && label.endsWith(suf)) {
+      const stem = label.slice(0, -suf.length);
+      if (stem.length >= 3 && tokens.has(stem)) return stem;
+    }
+  }
+  return null;
+}
+
+/**
+ * 解析后 theme 归一：返回应采用的 theme（与 modelTheme 相同即未改动）。
+ * allowPinyin=false（en 场景 / 英文描述，R465）时不做 Z1，避免把候选归一到即将被丢弃的拼音路线。
+ */
+export function normalizeTheme(label: string, meaning: string, modelTheme: AiTheme, lang: "zh" | "en", allowPinyin = lang === "zh"): AiTheme {
+  if (modelTheme === "rule" || !/^[a-z]+$/.test(label)) return modelTheme;
+  // Z1：非 pinyin 标注但「」引用词全拼恰等于 label（zhangwubao「账务宝」标 blend 型）
+  if (lang === "zh" && allowPinyin && modelTheme !== "pinyin" && checkPinyinLabel(label).ok && quotedFullPinyinEquals(label, meaning)) {
+    return "pinyin";
+  }
+  if (modelTheme === "word") {
+    if (WORD_LEXICALIZED_COMPOUNDS.has(label)) return modelTheme;
+    if (lang === "zh") {
+      // Z2：模型自述「A 是…，B 是…」把 label 拆成多段 → 不是现成英文单词
+      const parts = citedSplit(label, meaning, 2);
+      if (parts) return parts.some((p) => quotedFullPinyinEquals(p, meaning)) ? "blend" : "coined";
+      return modelTheme;
+    }
+    // E1：en 两个可辨认英文词段拼接（cuddle + pup 型）按 EN_NAMING_HINT ② 应标 blend
+    const parts = citedSplit(label, meaning, 3);
+    if (parts && !parts.some((p) => (THEME_DERIV_SUFFIXES as readonly string[]).includes(p))) return "blend";
+    return modelTheme;
+  }
+  if (modelTheme === "blend") {
+    // S1：harborly = harbor + -ly——后缀不是词，按定义不是两词拼接；zh 场景 blend 指拼音+英文，有「」引用词时保守不动
+    if (lang === "zh" && hasQuotedCjk(meaning)) return modelTheme;
+    if (derivedFromCitedStem(label, meaning) && !citedSplit(label, meaning, 3)) return "coined";
+  }
+  return modelTheme;
+}
+
 /** 统计候选的 theme 分布 */
 export function countThemes(candidates: AiCandidate[]): Record<AiTheme, number> {
   const counts: Record<AiTheme, number> = { pinyin: 0, word: 0, coined: 0, blend: 0, rule: 0 };
@@ -526,9 +720,18 @@ export function countThemes(candidates: AiCandidate[]): Record<AiTheme, number> 
   return counts;
 }
 
-/** word 路线配额是否失守：word 为 0 且候选数 ≥ 阈值时返回 true（需要补发） */
+/** word 路线是否薄弱及原因：候选 <3 → null；word=0 → "zero"；word < max(2,⌈n×15%⌉) → "low"；否则 null */
+export function wordSupplementReason(candidates: AiCandidate[]): WordSupplementReason | null {
+  const n = candidates.length;
+  if (n < EN_WORD_SUPPLEMENT_MIN_CANDIDATES) return null;
+  const word = countThemes(candidates).word;
+  if (word === 0) return "zero";
+  return word < wordSupplementFloor(n) ? "low" : null;
+}
+
+/** word 路线配额是否失守（需要补发） */
 export function needsWordSupplement(candidates: AiCandidate[]): boolean {
-  return candidates.length >= EN_WORD_QUOTA_MIN_CANDIDATES && countThemes(candidates).word === 0;
+  return wordSupplementReason(candidates) !== null;
 }
 
 // ---------------- en 任务语言判定（R465 补丁，R465 线上回归发现） ----------------
@@ -569,10 +772,13 @@ export function mergePinyinSupplement(main: AiCandidate[], extra: AiCandidate[])
 }
 
 /** 补发轮硬指令：每条 label 必须是词典真实存在的完整英文单词，theme 全部标 word；
- * attempt=2（R243 二次重试）时对 meaning 句式加硬指令，避免短句式 meaning 被质量防线拦截 */
-export function buildWordSupplementDirective(count: number, exclude: string[], attempt = 1): string {
+ * attempt=2（R243 二次重试）时对 meaning 句式加硬指令，避免短句式 meaning 被质量防线拦截；
+ * wordCount>0（R498 low 触发）时按「仅 N 条不足配额」措辞 */
+export function buildWordSupplementDirective(count: number, exclude: string[], attempt = 1, wordCount = 0): string {
   const lines = [
-    `路线配额补发（硬指令）：上一批候选的 theme 分布中 word（现成英文单词）路线为 0，不满足配额。`,
+    wordCount > 0
+      ? `路线配额补发（硬指令）：上一批候选的 theme 分布中 word（现成英文单词）路线仅 ${wordCount} 条，不满足配额。`
+      : `路线配额补发（硬指令）：上一批候选的 theme 分布中 word（现成英文单词）路线为 0，不满足配额。`,
     `现在请再给出 ${count} 个候选，每一条都必须满足：label 是词典里真实存在的完整英文单词（隐喻词路线，如 amazon/anvil 式，与需求语义有一层聪明的关联），theme 必须全部标注为 "word"。`,
     `禁止造词、禁止错拼变体、禁止两词拼接。`,
     `严禁重复输出以下已出现过的名字：${exclude.join(", ")}`,
@@ -610,6 +816,8 @@ export async function generateAiCandidates(
     /** R466：传入即主轮走流式，每个通过防线的候选立即回调；补发轮仍整包读取，合并后逐个回调。
      *  返回值仍是完整候选数组（含补发），且与回调序列逐项一致 */
     onCandidate?: CandidateSink;
+    /** R498：同一次搜索各轮共享的 word 补发预算；耗尽后判定命中也不再发起补发（guard 记 wordSupplementSkipped） */
+    wordSupplementBudget?: WordSupplementBudget;
   } = {},
 ): Promise<AiCandidate[]> {
   let delivered = 0;
@@ -636,27 +844,41 @@ export async function generateAiCandidates(
     if (!sink) return;
     for (const c of merged.slice(prevLen)) await sink(c);
   };
-  // R224：EN word 路线配额失守时补发（R243：过滤后 word 仍为 0 时再重试一次，总上限 2 次；
-  // 第二次 prompt 加硬明确要求完整句式 meaning；两次仍 0 不阻塞主结果，失败静默）
-  if ((opts.lang ?? "zh") === "en" && needsWordSupplement(out)) {
-    if (opts.guard) opts.guard.wordSupplement = true;
-    for (let attempt = 1; attempt <= EN_WORD_SUPPLEMENT_MAX_ATTEMPTS; attempt++) {
-      if (opts.guard) opts.guard.supplementAttempts = attempt;
-      let merged = out;
-      try {
-        const extra = await generateOnce(description, apiKey, {
-          ...supplementOpts,
-          count: EN_WORD_SUPPLEMENT_COUNT,
-          wordSupplementExclude: out.map((c) => c.label),
-          wordSupplementAttempt: attempt,
-        });
-        merged = mergeWordSupplement(out, extra);
-      } catch {
-        // 补发失败不影响主结果
+  // R224：EN word 路线配额失守时补发（R243：补发轮全灭时再重试一次，单轮上限 2 次；
+  // 第二次 prompt 加硬明确要求完整句式 meaning；仍 0 不阻塞主结果，失败静默）。
+  // R498：触发改为 wordSupplementReason（zero/low），并受跨轮预算约束；补发轮候选仍走 generateOnce 全部防线
+  const wordReason = (opts.lang ?? "zh") === "en" ? wordSupplementReason(out) : null;
+  if (wordReason) {
+    const budget = opts.wordSupplementBudget;
+    if (opts.guard) opts.guard.wordSupplementReason = wordReason;
+    if (budget && budget.remaining <= 0) {
+      if (opts.guard) opts.guard.wordSupplementSkipped = "budget";
+    } else {
+      if (opts.guard) opts.guard.wordSupplement = true;
+      for (let attempt = 1; attempt <= EN_WORD_SUPPLEMENT_MAX_ATTEMPTS; attempt++) {
+        if (budget) {
+          if (budget.remaining <= 0) break;
+          budget.remaining--;
+        }
+        if (opts.guard) opts.guard.supplementAttempts = attempt;
+        let merged = out;
+        try {
+          const extra = await generateOnce(description, apiKey, {
+            ...supplementOpts,
+            count: EN_WORD_SUPPLEMENT_COUNT,
+            wordSupplementExclude: out.map((c) => c.label),
+            wordSupplementAttempt: attempt,
+            wordSupplementWordCount: countThemes(out).word,
+          });
+          merged = mergeWordSupplement(out, extra);
+        } catch {
+          // 补发失败不影响主结果
+        }
+        const added = merged.length > out.length;
+        await deliverExtra(merged, out.length);
+        out = merged;
+        if (added) break;
       }
-      await deliverExtra(merged, out.length);
-      out = merged;
-      if (countThemes(out).word > 0) break;
     }
   }
   // R463：zh 拼音/blend 路线配额失守时补发一次（镜像 R224；失败静默不阻塞主结果）
@@ -750,6 +972,16 @@ export function filterDislikedMorphology(candidates: AiCandidate[], disliked: Di
   return kept;
 }
 
+// R496（R494 P1-1）：refine/点踩轮 zh coined/blend 路线 meaning 格式硬约束——生产实测轮≥2 的造词候选寓意
+// 成片变成 50–70 字的连环比喻 + 人物情节叙事（moggity/voralini/hapany），归因是造词路线没有像拼音路线那样
+// 的固定句式模板。限定「音节来源 + 一句品牌联想」两段结构与字数，防线 zhMeaningIncoherent 只拦漏网的最坏形态。
+// 不动候选数配额。好例两条已对照全部防线（片段均为 label 子串、无幻影 ASCII、子句 ≤15 字）。
+const ZH_COINED_MEANING_FORMAT = `【coined/blend 造词路线 meaning 格式硬约束】寓意全文 ≤40 字，只允许两段：① 音节来源（每个片段取自哪个词/拼音/拟声，一句带过）；② 一句品牌联想（这个名字对用户意味着什么）。每个逗号分句 ≤15 字；整条最多用一个「像/仿佛/般」，禁止连环比喻，禁止编人物、情节、场景故事（「整体感觉像一个伯爵先生正在柜台后端出鲸吞鲜食的宠与敬」这类一律弃用）。
+好例：
+- woofable：woof 是狗叫声，able 是“能够”的英文后缀，寓意每只狗都值得好好对待，读来轻快好记。
+- mochacat：mocha 是摩卡的柔和奶色，cat 是猫，寓意像摩卡一样温柔的猫咪伙伴，两词直拼好读。
+写完默读一遍：中文创业者能否 3 秒内看懂——看不懂就换候选，不要硬写。`;
+
 /** 把上一轮的失败模式总结成具体反思提示，而非简单罗列名单 */
 function buildRefineHint(fb: RefineFeedback, round: number, lang: "zh" | "en"): string {
   const parts: string[] = [];
@@ -814,6 +1046,7 @@ function buildRefineHint(fb: RefineFeedback, round: number, lang: "zh" | "en"): 
       ? `Coherence red line for this round: every meaning must read as ONE grammatical English sentence a native speaker would naturally write — subject, verb, and a clear point. Before outputting, read each meaning aloud in your head; if it reads like disconnected word fragments strung together (e.g. "yonkle as a knoll taken to third power hand, your ridge from low months"), discard that candidate and write a different one you can explain in a plain, coherent sentence.`
       : `本轮 meaning 连贯性红线：每条 meaning 必须是母语者会自然写出的一句通顺中文——主谓完整、意思明确。输出前逐条默读一遍，读起来像词语碎片拼凑、不成句的（如「带给幼想出格的好奇色彩」），直接弃用该候选，换一个你能用一句通顺话讲清楚的。`,
   );
+  if (lang === "zh") parts.push(ZH_COINED_MEANING_FORMAT);
   return parts.join("\n");
 }
 
@@ -888,6 +1121,44 @@ export const stripParentheticalAnnotations = (m: string): string => {
 /** meaning 完整清洗管线：引号归一 → 残留符号清理 → 括号注释剥离 → 去首尾空白 */
 export const cleanMeaning = (m: string): string => stripParentheticalAnnotations(stripUnpairedCjkQuotes(normalizeQuotes(m))).trim();
 
+// ---------------- zh meaning 声调/平仄描述剥离（R499，R494 审计 P3-2） ----------------
+// 生产坏例：lexin「声调一升一平」（实为 4+1）、zhangping「先升后平」（4+2）、nuanpa「暖第二声接趴第一声」
+// （3+1）、huazhi「一升一平」（1+1）——模型自由描述声调不可靠，且中文创业者一眼能看出错。
+// 仓库拼音表（R222）为去声调数据，无法校验声调，故采取保守策略：prompt 禁止描述声调（见 MEANING_REDLINES_ZH），
+// 解析后仍出现的声调/平仄子句整句删除（按 ，；。、 切分的子句），不删整条候选，不留悬空标点；
+// 含「」引用词的子句不删（引用词是拼音一致性校验与前端高亮的依据）。
+export const TONE_CLAIM_RE =
+  /声调|平仄|第[一二三四]声|[一二三四]声(?:字|开头|收尾|结尾|起|收)|(?:读|念|为|是|属|作|接|归)[一二三四]声|阴平|阳平|上声|去声|平声|仄声|升调|降调|平调|先[升降扬抑平]后[升降扬抑平]|一[升降平]一[升降平]|从[平仄升降]到[平仄升降]|由[平仄][到转][平仄]|[平仄](?:相间|交替)|抑扬/;
+const CLAUSE_SPLIT_RE = /([，,；;。！!？?、])/;
+const CLAUSE_JOINERS_RE = /[，,；;、]/;
+const TERMINAL_PUNCT_RE = /[。！!？?]$/;
+
+/** 删除 zh meaning 中描述声调/平仄的子句；stripped=false 时 meaning 原样返回 */
+export function stripToneClaims(meaning: string): { meaning: string; stripped: boolean } {
+  if (!TONE_CLAIM_RE.test(meaning)) return { meaning, stripped: false };
+  const parts = meaning.split(CLAUSE_SPLIT_RE);
+  const kept: string[] = [];
+  let removed = false;
+  for (let i = 0; i < parts.length; i += 2) {
+    const text = parts[i];
+    const delim = parts[i + 1] ?? "";
+    if (TONE_CLAIM_RE.test(text) && !hasQuotedCjk(text)) {
+      removed = true;
+      continue;
+    }
+    kept.push(text + delim);
+  }
+  if (!removed) return { meaning, stripped: false };
+  const terminal = TERMINAL_PUNCT_RE.exec(meaning)?.[0] ?? "";
+  let out = kept.join("").trim();
+  // 删子句后可能出现开头标点、连续标点、句末悬空的逗号 —— 逐一收口
+  while (out.length > 0 && CLAUSE_JOINERS_RE.test(out[0])) out = out.slice(1).trimStart();
+  out = out.replace(/([，,；;、])\s*[，,；;、]+/g, "$1").replace(/[，,；;、]+\s*([。！!？?])/g, "$1").replace(/[，,；;、]+$/, "").trim();
+  if (terminal && !TERMINAL_PUNCT_RE.test(out)) out += terminal;
+  if (out.replace(/[，,；;。！!？?、\s]/g, "").length === 0) return { meaning, stripped: false };
+  return { meaning: out, stripped: true };
+}
+
 // ---------------- meaning 字符白名单（R179） ----------------
 // 生产审计发现反思轮 meaning 偶发混入韩文（코더）、IPA 音标（gɪt）等异文字，整条丢弃。
 // zh：ASCII 可打印（meaning 常含英文单词）+ 汉字（含扩展A）+ CJK 标点（「」『』、。等）
@@ -934,13 +1205,26 @@ export function citesPhantomLetter(label: string, meaning: string): boolean {
 // 不应出现 blend/coined/造词/混搭 等命名路线分类元词或「这是一个…名字」类元话术。
 // 规则保守：只匹配明确的分类元词与元话术句式，命中整条丢弃。
 const META_LANGUAGE_RES: RegExp[] = [
-  /\b(?:blend|coined|portmanteau)\b/i, // 英文路线分类元词
+  /\b(?:coined|portmanteau)\b/i, // 英文路线分类元词（blend 单独判，见 enBlendIsRouteWord）
   /造词|混搭|拼音路线|命名路线|组合词/, // 中文路线分类元词
   /这是.{0,6}(?:blend|组合|造词|混搭|拼音)/i, // 「这是（一个）blend/组合…」元话术
   /这个名字(?:属于|是)/, // 「这个名字属于…」元话术
 ];
+// R508：生产误杀 reflint「the consonant blend at the end」/ clearbrew「the r sounds blend smoothly」——
+// 语音学名词（辅音丛）与动词用法（声音融合）不是路线分类元词。仅这两种可辨认语境放行，其余 blend 仍按元词拦。
+const META_BLEND_PHONETIC_BEFORE_RE = /\b(?:consonant|vowel|sounds?|letters?|syllables?)\s+$/i;
+const META_BLEND_VERB_AFTER_RE = /^\s+(?:smoothly|seamlessly|together|naturally|nicely|softly|easily|well|into)\b/i;
+export function enBlendIsRouteWord(meaning: string): boolean {
+  for (const m of meaning.matchAll(/\bblend\b/gi)) {
+    const at = m.index ?? 0;
+    if (META_BLEND_PHONETIC_BEFORE_RE.test(meaning.slice(Math.max(0, at - 12), at))) continue;
+    if (META_BLEND_VERB_AFTER_RE.test(meaning.slice(at + m[0].length, at + m[0].length + 14))) continue;
+    return true;
+  }
+  return false;
+}
 export function containsMetaLanguage(meaning: string): boolean {
-  return META_LANGUAGE_RES.some((re) => re.test(meaning));
+  return META_LANGUAGE_RES.some((re) => re.test(meaning)) || enBlendIsRouteWord(meaning);
 }
 
 // ---------------- 臆造词源片段检测（R183，扩展 R179 的单字母版） ----------------
@@ -953,17 +1237,34 @@ export function containsMetaLanguage(meaning: string): boolean {
 //   另一词若也不整词出现，则要求它与剩余片段互为前缀（verb↔ver 合法）；
 //   否则拼写对不上（plan↔play）→ 丢弃
 const ZH_ETYMOLOGY_PAIR_RE = /([a-z]{3,})\s*(?:与|和|加|\+)\s*([a-z]{3,})\s*的?\s*(?:结合|组合|混合|拼接|合成)/gi;
-const EN_LEADING_PAIR_RE = /^\s*([a-z]{3,})\s*\+\s*([a-z]{3,})\b/i;
+const EN_LEADING_PAIR_RE = /^\s*([a-z]{3,})\s*[+×]\s*([a-z]{3,})\b/i;
+// R497（R494 P2-2）：句中的构词声明「X + Y:」/「X × Y：」（冒号收尾才算声明，避免误判普通句子里的 "a + b"）
+const EN_PAIR_COLON_RE = /\b([a-z]{3,})\s*[+×]\s*([a-z]{3,})\s*[:：]/gi;
 
 function fragmentAbsent(label: string, word: string): boolean {
   return !label.includes(word) && !label.includes(word.slice(0, 3)) && !label.includes(word.slice(-3));
+}
+
+// R497（R494 P2-2）：两词都只有片段命中时的合法截断规则——label 必须能切成「头词的前缀（≥3 字母）+
+// 尾词的前缀或后缀（≥2 字母）」，允许两片段共享字母（seren+quil → serenquil；plan+ner 型词干截断）；
+// 两种词序都试。commit + planner 对 complainter：头片段只能是 com，剩余 plainter 不是 planner 的前缀/后缀 → 拼不上。
+function partialPairSegmentable(label: string, head: string, tail: string): boolean {
+  let common = 0;
+  while (common < head.length && common < label.length && head[common] === label[common]) common++;
+  for (let k = 3; k <= common; k++) {
+    const rest = label.slice(k);
+    if (rest.length < 2) break;
+    if (tail.startsWith(rest) || tail.endsWith(rest)) return true;
+  }
+  return false;
 }
 
 function pairMismatch(label: string, x: string, y: string): boolean {
   if (fragmentAbsent(label, x) || fragmentAbsent(label, y)) return true;
   const xIn = label.includes(x);
   const yIn = label.includes(y);
-  if (xIn === yIn) return false; // 两词都整词命中（合法）或都只有片段命中（不做二级判断，保守放行）
+  if (xIn && yIn) return false; // 两词都整词命中（合法）
+  if (!xIn && !yIn) return !partialPairSegmentable(label, x, y) && !partialPairSegmentable(label, y, x);
   const exact = xIn ? x : y;
   const other = (xIn ? y : x).toLowerCase();
   const rest = label.replace(exact, "");
@@ -987,6 +1288,10 @@ export function citesPhantomWord(label: string, meaning: string): boolean {
   }
   const lead = EN_LEADING_PAIR_RE.exec(meaning);
   if (lead && pairMismatch(label, lead[1].toLowerCase(), lead[2].toLowerCase())) return true;
+  EN_PAIR_COLON_RE.lastIndex = 0;
+  while ((m = EN_PAIR_COLON_RE.exec(meaning)) !== null) {
+    if (pairMismatch(label, m[1].toLowerCase(), m[2].toLowerCase())) return true;
+  }
   ZH_SOURCE_CITE_RE.lastIndex = 0;
   while ((m = ZH_SOURCE_CITE_RE.exec(meaning)) !== null) {
     const x = m[1].toLowerCase();
@@ -1017,6 +1322,13 @@ const ZH_ASCII_ALLOWED_WORDS = new Set([
   "web", "data", "saas", "api", "seo", "logo", "brand", "startup", "studio", "lab", "labs", "hub", "home", "smart", "max", "mini", "plus", "digital", "mobile", "global", "media", "design", "style", "code", "box", "base", "core", "flow", "pay", "game", "play", "book", "note", "blog", "mail", "chat", "news", "mall", "star", "sun", "sky", "sea", "eco", "bio", "tea", "cafe", "farm", "city", "land", "space",
 ]);
 const ZH_ASCII_WORD_RE = /[a-z]{3,}/gi;
+// R497（R494 zh blend waofun「wo 为犬吠声」）：2 字母引用也判，但只取独立 token（不紧邻任何拉丁字母/变音字母/数字，
+// 避免把 xīng 的 ng、3d 的 d 算作引用），且排除常见英文虚词/缩略词（ai/vr/ui/of/or…）——这些在 zh meaning 里是点题而非引用
+const ZH_ASCII_SHORT_RE = /(?<![a-z0-9\u00c0-\u024f])[a-z]{2}(?![a-z0-9\u00c0-\u024f])/gi;
+const ZH_ASCII_SHORT_ALLOWED = new Set([
+  "ai", "ar", "vr", "xr", "ui", "ux", "pc", "tv", "hr", "it", "io", "ip", "id", "os", "pr", "qa", "ad", "db", "ml", "nb", "ok", "vs", "diy",
+  "of", "or", "in", "to", "is", "an", "at", "by", "on", "up", "us", "we", "no", "go", "do", "be", "me", "my", "so", "if", "as", "he", "hi", "am", "re", "de", "la", "le", "el", "du", "da", "di", "co",
+]);
 // 先剥离已有句式门校验过的来源词：「X 取自/源自/来自 Y1 (Y2)」的 Y 侧、「X 与/和/加/+ Y 结合…」整段
 const ZH_CITE_SOURCE_STRIP_RE = /(?:取自|源自|来自)\s*(?:拉丁语?|希腊语?|英语|英文|法语|法文|西班牙语|德语|意大利语|日语|梵语)?\s*["「『']?\s*[a-z]{3,}(?:\s+[a-z]{3,})?/gi;
 // 中文语言名引导的外语词（"法语 croustillant 的酥脆"）同样是被点名的来源词，剥离后不判
@@ -1041,6 +1353,14 @@ export function zhCitesPhantomAscii(label: string, meaning: string): boolean {
     if (label.includes(w) || w.includes(label)) continue;
     if (ZH_ASCII_ALLOWED_WORDS.has(w)) continue;
     // 只判嵌在中文语境里的词（任一侧紧邻 CJK）；纯英文句子中的词不判
+    const before = nearestNonSpace(stripped, m.index - 1, -1);
+    const after = nearestNonSpace(stripped, m.index + m[0].length, 1);
+    if (CJK_CONTEXT_RE.test(before) || CJK_CONTEXT_RE.test(after)) return true;
+  }
+  ZH_ASCII_SHORT_RE.lastIndex = 0;
+  while ((m = ZH_ASCII_SHORT_RE.exec(stripped)) !== null) {
+    const w = m[0].toLowerCase();
+    if (label.includes(w) || ZH_ASCII_SHORT_ALLOWED.has(w)) continue;
     const before = nearestNonSpace(stripped, m.index - 1, -1);
     const after = nearestNonSpace(stripped, m.index + m[0].length, 1);
     if (CJK_CONTEXT_RE.test(before) || CJK_CONTEXT_RE.test(after)) return true;
@@ -1220,7 +1540,12 @@ export function sseDeltaContent(line: string): string | null | false {
 //   或含一个与 label 共享 ≥3 字母前缀的单词（lumora ↔ "lumen"）——正常的词源拆解总会提及词源片段
 // 条件 B（谓语锤点）：meaning 需含至少一个词源/释义常见谓语词（means/evokes/suggests/
 //   from/plus/word/root/short for/named after/combines 等）——词语沙拉恰恰缺乏这类谓语骨架
-const EN_PREDICATE_RE = /\b(?:mean(?:s|ing)?|evokes?|suggest(?:s|ing)?|from|plus|words?|roots?|short\s+for|named\s+after|combin(?:es|ed|ing)|echoes|joined|blend(?:s|ed)?|derived|refers?|reads?|sounds?|nod\s+to)\b/i;
+// R508（R500 ②）：词形族补全——生产误杀 changelogist「evoking」（原只收 evokes?）、riffolio「hints at / echo」；
+// 每个新增词形在 scripts/fixtures/en-meaning-labels.json 上单独验证过不放走已标注沙拉（scripts/verify-r508.mjs §2②）。
+// 未采纳：like a/an/the（放走 R218 生产沙拉体 "two strides like a firm led gesture"）、forge*（内容动词非释义谓语，
+// 且会放行 R243 主轮隐喻短句预期）——因此 logsmith「Logs forged … like a blacksmith」仍拦，见 docs/audits/r500/README.md R508 处置。
+export const EN_PREDICATE_RE =
+  /\b(?:mean(?:s|ing|t)?|evok(?:e|es|ed|ing)|suggest(?:s|ed|ing)?|from|plus|words?|roots?|short\s+for|named\s+after|combin(?:e|es|ed|ing)|echo(?:es|ed|ing)?|joined|blend(?:s|ed|ing)?|derived|refers?|reads?|sounds?|nods?\s+to|likened|hint(?:s|ed|ing)?\s+(?:at|of)|calls?\s+to\s+mind|reminiscent)\b/i;
 
 // R223（R218 P2-2）：label 片段若本身是高频英文停用词/功能词（with/that/from 等），
 // 在任何词语沙拉里都会自然出现，不能算词源锤点——besowith 型穿透正是靠子串 "with"。
@@ -1237,10 +1562,31 @@ const EN_FRAGMENT_STOPWORDS = new Set([
 // R243（R239 P1-1）：word 隐喻词补发轮的 meaning 天然短句式（"A real English word: …, metaphor for …"），
 // 常不含 EN_PREDICATE_RE 的词源谓语骨架而被误杀。补发轮不放弃红线（词源锤点条件 A 不变），
 // 仅对谓语锤点条件 B 追加隐喻/释义信号词（metaphor/symbolizes/represents 等）作为等效谓语。
-const EN_WORD_METAPHOR_PREDICATE_RE =
+export const EN_WORD_METAPHOR_PREDICATE_RE =
   /\b(?:metaphor|symbol(?:s|ize[sd]?|izing)?|represent(?:s|ing)?|stands?\s+for|captures?|convey(?:s|ing)?|calls?\s+to\s+mind|real\s+(?:english\s+)?word|dictionary\s+word|literally|imagery?|invokes?|conjures?)\b/i;
 
-export function enMeaningIncoherent(label: string, meaning: string, opts: { wordMetaphor?: boolean } = {}): boolean {
+// R508（R500 ①）：word 路线的真词释义句（"A real English word meaning a factual written account…"）描述词义而不复述 label，
+// 条件 A 必失败（生产 4/7：bushtit/vireo/tessellate/chronicle）。仓库内没有英文词典（已核：apps/web/src、packages/core、
+// /usr/share/dict 均无），「真实英文词」只能用模型声明的 theme=word + meaning 自称真词（R243 已用同一 real/dictionary word
+// 信号）判定；因此放开 A 时要求 B 在剔除自称短语后仍成立（"word" 本身不再充当谓语），沙拉自称真词而无释义谓语仍拦。
+export const EN_REAL_WORD_CLAIM_RE = /\b(?:real\s+(?:english\s+)?word|dictionary\s+word)\b/i;
+
+// R508（R500 ③）：「X + Y: 子句」忠实拆解形态（X/Y 均为 label 子串，条件 A 成立）常无词源谓语，子句本身却是完整句
+// （"riff + folio: …the doubled 'f' gives echo"）。冒号后子句含系动词/常见轻动词、关系从句动词（that carries）或
+// 以第三人称单数动词开头（"scrubs the mess…"）即视为有谓语；名词短语堆叠（"a playful mashup for a well-mixed history"）仍拦。
+const EN_LEADING_PAIR_COLON_RE = /^\s*([a-z]+)\s*\+\s*([a-z]+)\s*[:：]\s*(.+)$/is;
+const EN_CLAUSE_VERB_RE =
+  /\b(?:is|are|isn't|it's|that's|there's|means|gives|makes|turns|keeps|brings|takes|lets|puts|holds|adds|helps|feels|becomes|stays|gets|has|does|looks)\b|\b(?:that|which|who|it)\s+[a-z]{3,}s\b|^[a-z]{3,}s\b/i;
+export function enColonClauseHasVerb(label: string, meaning: string): boolean {
+  const m = EN_LEADING_PAIR_COLON_RE.exec(meaning);
+  if (!m) return false;
+  const [, x, y, clause] = m;
+  if (!label.includes(x.toLowerCase()) || !label.includes(y.toLowerCase())) return false;
+  return EN_CLAUSE_VERB_RE.test(clause.trim());
+}
+
+/** 条件 A（词源锤点）：meaning 含 label / ≥4 字母片段 / 共享前缀实词（R196/R223/R246 规则原样） */
+export function enEtymologyAnchorOk(label: string, meaning: string): boolean {
   const lower = meaning.toLowerCase();
   let fragmentOk = lower.includes(label);
   if (!fragmentOk && label.length >= 4) {
@@ -1280,9 +1626,51 @@ export function enMeaningIncoherent(label: string, meaning: string, opts: { word
       }
     }
   }
-  const predicateOk =
-    EN_PREDICATE_RE.test(meaning) || (opts.wordMetaphor === true && EN_WORD_METAPHOR_PREDICATE_RE.test(meaning));
-  return !fragmentOk || !predicateOk;
+  return fragmentOk;
+}
+
+export function enMeaningIncoherent(
+  label: string,
+  meaning: string,
+  opts: { wordMetaphor?: boolean; theme?: string } = {},
+): boolean {
+  const predicateIn = (text: string): boolean =>
+    EN_PREDICATE_RE.test(text) || (opts.wordMetaphor === true && EN_WORD_METAPHOR_PREDICATE_RE.test(text));
+  if (enEtymologyAnchorOk(label, meaning)) return !(predicateIn(meaning) || enColonClauseHasVerb(label, meaning));
+  if (opts.theme === "word") {
+    const claim = EN_REAL_WORD_CLAIM_RE.exec(meaning);
+    if (claim) return !predicateIn(`${meaning.slice(0, claim.index)} ${meaning.slice(claim.index + claim[0].length)}`);
+  }
+  return true;
+}
+
+// ---------------- zh meaning 连贯性启发式（R496，R494 P1-1） ----------------
+// 生产坏例（R494 ai-search-03/04 refine 轮 coined）：moggity「…整体感觉像一个伯爵先生正在柜台后端出鲸吞鲜食的宠与敬」、
+// hapany「…两者睡袍般裹在一起正是一个愿意并肩也要鲜肴的半路结盟者」。论证与标注集见
+// docs/research/zh-meaning-coherence.md / scripts/fixtures/zh-meaning-labels.json：沙拉的可观测形态是「长从句」——
+// 末段 ≥22 字不带标点的叙事名词短语，或 ≥2 段 ≥16 字的比喻从句堆叠；正常寓意最长子句 ≤21、≥16 字子句 ≤1。
+// fail-closed：只数汉字（label/英文片段/标点不计），且必须同时出现比喻/叙事引导词，平实的长说明句不拦；
+// 标注集 182 条正常寓意误杀 0，6 条 R494 沙拉全拦；短句沙拉不在本防线能力范围（交 prompt 治本）。
+const ZH_CLAUSE_SPLIT_RE = /[，。；！？：、,;!?:\n]/;
+const ZH_HAN_RE = /[\u4e00-\u9fff]/g;
+const ZH_SALAD_MARKER_RE = /像|仿佛|恰似|如同|宛如|好比|犹如|(?<!一)般|正在|被|讲述|演绎|传奇/;
+const ZH_SALAD_MAX_CLAUSE = 22;
+const ZH_SALAD_LONG_CLAUSE = 16;
+
+export interface ZhMeaningContext {
+  /** 候选路线；规则降级模板句（rule）不判 */
+  theme?: string;
+}
+
+export function zhMeaningIncoherent(_label: string, meaning: string, ctx: ZhMeaningContext = {}): boolean {
+  if (ctx.theme === "rule") return false;
+  const clauses = meaning
+    .split(ZH_CLAUSE_SPLIT_RE)
+    .map((c) => (c.match(ZH_HAN_RE) ?? []).length)
+    .filter((n) => n > 0);
+  if (clauses.length === 0) return false;
+  const longClause = Math.max(...clauses) >= ZH_SALAD_MAX_CLAUSE || clauses.filter((n) => n >= ZH_SALAD_LONG_CLAUSE).length >= 2;
+  return longClause && ZH_SALAD_MARKER_RE.test(meaning);
 }
 
 // ---------------- 拼音引用词与 label 一致性校验（R196，P2-2） ----------------
@@ -1315,7 +1703,10 @@ function readingVariants(p: string): string[] {
 }
 
 const FULL_PINYIN_CLAIM_RE = /全拼/;
-const QUOTED_CJK_RE = /「([\u3400-\u4dbf\u4e00-\u9fff]{2,4})」/g;
+const QUOTED_CJK_RE = /「([\u3400-\u4dbf\u4e00-\u9fff]{2,6})」/g;
+const QUOTED_SINGLE_CJK_RE = /「([\u3400-\u4dbf\u4e00-\u9fff])」/g;
+// meaning 中的独立 ASCII 片段（不紧邻带变音符号的拉丁字母，避免把 xīng 拆成 x/ng）
+const ASCII_TOKEN_RE = /(?<![a-z\u00c0-\u024f])[a-z]{2,}(?![a-z\u00c0-\u024f])/gi;
 
 // 单字在 label 中允许的贡献形态：全拼各读音（含 ü 写法变体）；宽松模式下再加
 // 首字母与首声母（zh/ch/sh 双字母声母），覆盖「取字首」类合法造型（云慕 → y+m）
@@ -1355,10 +1746,40 @@ function quotedWordMatchesLabel(word: string, label: string, allowInitials = fal
   return joins.includes(label);
 }
 
+// R497（R494 P2-1）：单字引用的覆盖校验——引用字的读音（宽松模式下含首字母/首声母）与 meaning 中点名的
+// ASCII 片段（label 真子串，如 yunhub 的 hub）共同作为音节来源，能完整切分 label 即放行；
+// 剩余音节无任何来源解释（zhongao「忠」的 ao）才判不符。表外字不提供来源（与多字引用的保守拒绝一致）。
+function singleQuotesCoverLabel(chars: string[], label: string, meaning: string, allowInitials: boolean): boolean {
+  const table = pinyinTable();
+  const pieces = new Set<string>();
+  for (const ch of chars) {
+    const readings = table.get(ch);
+    if (readings) for (const v of charContributions(readings, allowInitials)) pieces.add(v);
+  }
+  ASCII_TOKEN_RE.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = ASCII_TOKEN_RE.exec(meaning)) !== null) {
+    const w = m[0].toLowerCase();
+    if (w.length < label.length && label.includes(w)) pieces.add(w);
+  }
+  if (pieces.size === 0) return false;
+  // 从左到右切分：可达位置集合（片段可重用，叠字候选如「咕」→ gugu 也能切）
+  const reach = new Array<boolean>(label.length + 1).fill(false);
+  reach[0] = true;
+  for (let i = 0; i < label.length; i++) {
+    if (!reach[i]) continue;
+    for (const p of pieces) if (label.startsWith(p, i)) reach[i + p.length] = true;
+  }
+  return reach[label.length];
+}
+
 // theme 为 pinyin 且 meaning 含「」中文引用词：引用词与 label 做拼音一致性校验 → 全部不符则 true（丢弃）。
 // R244（R239 审计 P2-1）：「全拼」声明从必要条件改为加严条件——声称全拼时 label 必须等于
 // 逐字全拼拼接（严格）；未声称时放宽为「全拼或首字母/首声母的逐字组合」能完整拼出 label
-// 即放行（弱声称），仍对不上（shuqi「漱石」/pinen「品芩」/duanyou「韫岩」型）才拒绝
+// 即放行（弱声称），仍对不上（shuqi「漱石」/pinen「品芩」/duanyou「韫岩」型）才拒绝。
+// R497（R494 P2-1）：meaning 仅有单字引用（「忠」）时此前整体跳检（zhongao 上线的真实绕过路径，
+// 非「未声称全拼」分支）——现对单字引用做覆盖切分：引用字读音 + meaning 点名的 label 片段能完整切分
+// label 才放行（「云」与 hub → yunhub 合法；「忠」→ zhongao 的 ao 无来源 → 拒绝）。
 export function pinyinQuoteMismatch(label: string, meaning: string): boolean {
   const strict = FULL_PINYIN_CLAIM_RE.test(meaning);
   QUOTED_CJK_RE.lastIndex = 0;
@@ -1368,7 +1789,12 @@ export function pinyinQuoteMismatch(label: string, meaning: string): boolean {
     if (quotedWordMatchesLabel(m[1], label, !strict)) return false;
     judged++;
   }
-  return judged > 0;
+  if (judged > 0) return true;
+  QUOTED_SINGLE_CJK_RE.lastIndex = 0;
+  const singles: string[] = [];
+  while ((m = QUOTED_SINGLE_CJK_RE.exec(meaning)) !== null) singles.push(m[1]);
+  if (singles.length === 0) return false;
+  return !singleQuotesCoverLabel(singles, label, meaning, !strict);
 }
 
 /** R466：主轮流式模式下每个通过防线的候选立即回调（点踩后缀回填项除外，见 generateOnce 尾部） */
@@ -1384,6 +1810,8 @@ interface AdmitContext {
   seen: Set<string>;
   /** R471 规则降级候选：theme 强制为 "rule"（不经 THEMES 白名单） */
   ruleTheme?: boolean;
+  /** R500：补发轮（word/pinyin 补发）；样本标记 supplement */
+  supplement?: boolean;
 }
 
 /** R471：规则降级候选过与 LLM 候选完全相同的防线（label 合法性/品牌撞名/meaning 字符集与幻影引用等） */
@@ -1403,92 +1831,81 @@ function admitCandidate(c: Partial<AiCandidate>, ctx: AdmitContext): AiCandidate
   // label 清洗：去首尾空白后必须整体是合法域名主体字符（小写字母/数字/连字符），
   // 含内部空格或其他非法字符的直接丢弃，不做静默改写
   const label = String(c.label ?? "").trim().toLowerCase();
-  if (!/^[a-z0-9-]{1,63}$/.test(label)) {
-    dropped.invalidLabel++;
+  const rawMeaning = String(c.meaning ?? "");
+  const modelTheme = String(c.theme ?? "").toLowerCase();
+  // 计数 + （R500 debugDropped 通道开启时）记录样本；通道关闭时只计数
+  const reject = (reason: keyof GuardDropCounts, meaning: string): null => {
+    dropped[reason]++;
+    recordDroppedSample(guardStats, {
+      reason,
+      label,
+      meaning,
+      theme: modelTheme,
+      ...(isWordSupplement || (ctx.supplement ?? false) ? { supplement: true as const } : {}),
+    });
     return null;
-  }
+  };
+  if (!/^[a-z0-9-]{1,63}$/.test(label)) return reject("invalidLabel", rawMeaning);
   if (seen.has(label)) return null; // 同轮重复不算防线拦截，不计数
   // R180：知名品牌撞名过滤（完全同名，或长度 ≥5 且编辑距离 ≤1），规避商标法律风险
-  if (isBrandCollision(label)) {
-    dropped.brandCollision++;
-    return null;
-  }
+  if (isBrandCollision(label)) return reject("brandCollision", rawMeaning);
   seen.add(label);
   // meaning 为空/全空白的候选直接丢弃（流截断或模型漏字段），不进核验队列；
   // tried 由上层根据返回值累积，被丢弃项天然不计入
-  const rawMeaning = String(c.meaning ?? "");
-  const meaning = cleanMeaning(rawMeaning);
-  if (!meaning) {
-    dropped.emptyMeaning++;
-    return null;
-  }
+  let meaning = cleanMeaning(rawMeaning);
+  if (!meaning) return reject("emptyMeaning", rawMeaning);
   // R149：括号注释剥离后过短（<6 字符）说明有效寓意几乎全在括号里，整条丢弃
-  if (meaning.length < 6 && PAREN_RE.test(rawMeaning)) {
-    dropped.emptyMeaning++;
-    return null;
+  if (meaning.length < 6 && PAREN_RE.test(rawMeaning)) return reject("emptyMeaning", rawMeaning);
+  // R499（R494 P3-2）：zh meaning 的声调/平仄描述子句整句删除（不删候选），拼音表无声调无法校验
+  if (ctx.lang === "zh") {
+    const t = stripToneClaims(meaning);
+    if (t.stripped) {
+      meaning = t.meaning;
+      guardStats.toneClaimStripped = (guardStats.toneClaimStripped ?? 0) + 1;
+    }
   }
   // R179：meaning 混入目标语言白名单外的文字（韩文/西里尔/IPA 等）→ 整条丢弃
   if (!meaningCharsetOk(meaning, ctx.lang)) {
-    dropped.charsetViolation++;
     if (guardStats.charsetSample === undefined) {
       guardStats.charsetSample = firstCharsetViolation(meaning, ctx.lang);
     }
-    return null;
+    return reject("charsetViolation", meaning);
   }
   // R179：meaning 引用 label 中不存在的字母（"z from zeus" 式臆造词源）→ 整条丢弃
-  if (citesPhantomLetter(label, meaning)) {
-    dropped.phantomEtymology++;
-    return null;
-  }
+  if (citesPhantomLetter(label, meaning)) return reject("phantomEtymology", meaning);
   // R183：meaning 出现命名路线分类元词/元话术（「这是 blend」式）→ 整条丢弃
-  if (containsMetaLanguage(meaning)) {
-    dropped.metaLanguage++;
-    return null;
-  }
+  if (containsMetaLanguage(meaning)) return reject("metaLanguage", meaning);
   // R183：meaning 声称的词源片段与 label 拼写不符（"play 与 grow 结合" for plangrow）→ 整条丢弃
-  if (citesPhantomWord(label, meaning)) {
-    dropped.phantomEtymology++;
-    return null;
-  }
+  if (citesPhantomWord(label, meaning)) return reject("phantomEtymology", meaning);
   // R246（R239 P2-4）：zh meaning 引用 label 中不存在且非白名单的独立 ASCII 词（「tedeck 落音笃定」式幻影引用）→ 整条丢弃
-  if (ctx.lang === "zh" && zhCitesPhantomAscii(label, meaning)) {
-    dropped.phantomEtymology++;
-    return null;
-  }
+  if (ctx.lang === "zh" && zhCitesPhantomAscii(label, meaning)) return reject("phantomEtymology", meaning);
   // R196（P1-1）：meaning 含问号（犹豫/不成句的确定性信号，现只有 prompt 级约束）→ 整条丢弃
-  if (meaning.includes("?") || meaning.includes("\uff1f")) {
-    dropped.questionMark++;
-    return null;
-  }
+  if (meaning.includes("?") || meaning.includes("\uff1f")) return reject("questionMark", meaning);
   // R196（P1-1）：EN meaning 连贯性启发式——无 label 词源锤点且无谓语骨架的词语沙拉 → 整条丢弃
-  if (ctx.lang === "en" && enMeaningIncoherent(label, meaning, { wordMetaphor: isWordSupplement })) {
-    dropped.meaningIncoherent++;
-    return null;
-  }
+  if (ctx.lang === "en" && enMeaningIncoherent(label, meaning, { wordMetaphor: isWordSupplement, theme: modelTheme })) return reject("meaningIncoherent", meaning);
+  // R496（R494 P1-1）：zh meaning 连贯性启发式——长从句 + 比喻/叙事词的词语沙拉（moggity/hapany 型）→ 整条丢弃
+  if (ctx.lang === "zh" && zhMeaningIncoherent(label, meaning, { theme: ctx.ruleTheme ? "rule" : modelTheme })) return reject("zhMeaningIncoherent", meaning);
   const s = c.scores ?? ({} as Partial<AiScores>);
-  const theme = String(c.theme ?? "").toLowerCase();
+  // R499（R494 P3-1）：模型标注与高置信规则冲突时以规则为准（zhangwubao 全拼标 blend / cuddlepup 两词拼接标 word 型），
+  // 先于拼音合法性校验，归一到 pinyin 的候选同样过 R124/R196 拼音防线
+  let theme = modelTheme;
+  if (!ctx.ruleTheme && THEMES.has(modelTheme)) {
+    theme = normalizeTheme(label, meaning, modelTheme as AiTheme, ctx.lang, !ctx.enPinyinDrop);
+    if (theme !== modelTheme) guardStats.themeNormalized = (guardStats.themeNormalized ?? 0) + 1;
+  }
   // R124：拼音候选做确定性音节校验，不合法的直接丢弃（不进入核验，节省额度）；
   // blend/word/coined 不强制校验（blend 含英文，无法整体切分）
   let readabilityPenalty = 0;
   // R465（R464 复评）：en 场景丢弃拼音路线候选（英文用户读不出拼音，Top Picks 曾被拼音霸榜），先于拼音合法性校验以免计入其他防线；
   // lang 取自 UI 语言，中文 UI 下输入纯英文描述同样适用（R465 线上回归发现的路径盲区）
-  if (ctx.enPinyinDrop && theme === "pinyin") {
-    dropped.enPinyinRoute++;
-    return null;
-  }
+  if (ctx.enPinyinDrop && theme === "pinyin") return reject("enPinyinRoute", meaning);
   if (theme === "pinyin") {
     const check = checkPinyinLabel(label);
-    if (!check.ok) {
-      dropped.pinyinInvalid++;
-      return null;
-    }
+    if (!check.ok) return reject("pinyinInvalid", meaning);
     // 歧义切分扣 15 + 语感风险分（R142），叠加后从 readability 扣除
     readabilityPenalty = (check.ambiguous ? 15 : 0) + check.risk;
     // R196（P2-2）：声称「全拼」但「」内引用词的逐字拼音与 label 拼写不符（「探方」≠tangfang）→ 整条丢弃
-    if (pinyinQuoteMismatch(label, meaning)) {
-      dropped.pinyinMismatch++;
-      return null;
-    }
+    if (pinyinQuoteMismatch(label, meaning)) return reject("pinyinMismatch", meaning);
   }
   // R182：拼音系候选「」内命中生僻字黑名单，按字数从 readability 扣分（不丢弃）
   if (theme === "pinyin" || theme === "blend") {
@@ -1579,6 +1996,7 @@ async function generateOnce(
     lang?: "zh" | "en";
     wordSupplementExclude?: string[];
     wordSupplementAttempt?: number;
+    wordSupplementWordCount?: number;
     pinyinSupplementExclude?: string[];
     guard?: GuardStats;
     baseUrl?: string;
@@ -1597,7 +2015,7 @@ async function generateOnce(
   // R224：word 路线配额补发轮，追加硬指令（每条必须是真实英文单词且 theme 标 word）
   const isWordSupplement = opts.wordSupplementExclude !== undefined;
   if (isWordSupplement) {
-    user += `\n\n${buildWordSupplementDirective(count, opts.wordSupplementExclude ?? [], opts.wordSupplementAttempt ?? 1)}`;
+    user += `\n\n${buildWordSupplementDirective(count, opts.wordSupplementExclude ?? [], opts.wordSupplementAttempt ?? 1, opts.wordSupplementWordCount ?? 0)}`;
   }
   // R463：zh 拼音系路线配额补发轮，追加硬指令
   if (opts.pinyinSupplementExclude !== undefined) {
@@ -1624,7 +2042,7 @@ async function generateOnce(
     stream: opts.onCandidate !== undefined,
     timeoutMs: 60_000, // 单次 LLM 调用超时上限，超时走上层重试
   });
-  // R238：防线统计——各丢弃路径按防线归类计数（只计数，不记录被丢弃候选内容）；
+  // R238：防线统计——各丢弃路径按防线归类计数（默认只计数；R500 debugDropped 开启时另记限额样本）；
   // R243：补发轮丢弃计入 supplementDropped，与主轮分开可观测
   const guardStats = opts.guard ?? newGuardStats();
   const isSupplement = isWordSupplement || opts.pinyinSupplementExclude !== undefined;
@@ -1638,7 +2056,16 @@ async function generateOnce(
     guardStats,
     dropped,
     seen: new Set<string>(),
+    supplement: isSupplement,
   };
+  const sampleDisliked = (cand: AiCandidate) =>
+    recordDroppedSample(guardStats, {
+      reason: "dislikedMorphology",
+      label: cand.label,
+      meaning: cand.meaning,
+      theme: cand.theme ?? "",
+      ...(isSupplement ? { supplement: true as const } : {}),
+    });
   const out: AiCandidate[] = [];
   // R225：点踩形态硬过滤兜底——prompt 级禁止（buildRefineHint）之外，对解析后的新候选
   // 跑与点踩集的形态相似度检查，共享词根前缀或同后缀模式即丢弃；过滤后不足再回填仅后缀冲突项
@@ -1654,6 +2081,10 @@ async function generateOnce(
     if (hasDisliked) {
       const kept = filterDislikedMorphology(out, disliked);
       dropped.dislikedMorphology += out.length - kept.length;
+      if (guardStats.droppedSamples !== undefined) {
+        const keptSet = new Set(kept);
+        for (const cand of out) if (!keptSet.has(cand)) sampleDisliked(cand);
+      }
       return kept;
     }
     return out;
@@ -1670,6 +2101,7 @@ async function generateOnce(
       const conflict = dislikedMorphologyConflict(cand.label, disliked);
       if (conflict === "root") {
         rootDropped++;
+        sampleDisliked(cand);
         return;
       }
       if (conflict === "suffix") {
@@ -1686,6 +2118,7 @@ async function generateOnce(
       out.push(cand);
       await sink(cand);
     }
+    for (const cand of suffixOnly.slice(backfill.length)) sampleDisliked(cand);
     dropped.dislikedMorphology += rootDropped + (suffixOnly.length - backfill.length);
   }
   return out;

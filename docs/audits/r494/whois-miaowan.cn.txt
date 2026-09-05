@@ -1,0 +1,11 @@
+Domain Name: miaowan.cn
+ROID: 20060707s10001s57039329-cn
+Domain Status: ok
+Registrant: 珠海海逸国际旅行社有限公司
+Registrant Contact Email: [redacted]
+Sponsoring Registrar: 北京新网数码信息技术有限公司
+Name Server: ns11.xincache.com
+Name Server: ns12.xincache.com
+Registration Time: 2006-07-07 12:38:00
+Expiration Time: 2029-07-07 12:38:00
+DNSSEC: unsigned

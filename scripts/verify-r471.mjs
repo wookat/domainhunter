@@ -53,6 +53,19 @@ const { LLM_BREAKER_KEY, LLM_BREAKER_TTL_S } = rule;
 rmSync(tmpRule);
 rmSync(tmpWorker);
 
+// R487：usage 按 isolate 分片写 usage:{day}:<shard>，读侧深合并旧键 + 分片（mock KV 无 list，这里直接扫 Map）
+const mergeCounts = (into, from) => {
+  for (const [k, v] of Object.entries(from ?? {})) {
+    if (typeof v === "number") into[k] = (into[k] ?? 0) + v;
+    else if (v && typeof v === "object" && !Array.isArray(v)) into[k] = mergeCounts(into[k] ?? {}, v);
+  }
+  return into;
+};
+const readUsage = (kv, day) => {
+  const keys = [...kv.keys()].filter((k) => k === `usage:${day}` || k.startsWith(`usage:${day}:`));
+  return keys.length ? keys.reduce((acc, k) => mergeCounts(acc, JSON.parse(kv.get(k))), {}) : null;
+};
+
 let failed = 0;
 const check = (name, actual, expected) => {
   const ok = JSON.stringify(actual) === JSON.stringify(expected);
@@ -207,7 +220,7 @@ const runSearch = async ({ llm, kvInit = {}, description = "面向中小商家�
   await Promise.all(pending);
   const events = text.trim().split("\n").filter(Boolean).map((l) => JSON.parse(l));
   const day = new Date().toISOString().slice(0, 10);
-  const usage = JSON.parse(kv.get(`usage:${day}`) ?? "null");
+  const usage = readUsage(kv, day);
   return { status: res.status, events, kv, puts, llmCalls, llmBodies, usage };
 };
 

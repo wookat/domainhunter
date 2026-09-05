@@ -46,9 +46,15 @@ export interface GuardMeta {
   wordSupplement: boolean;
   /** 补发轮发起次数（R243，旧快照无此字段） */
   supplementAttempts?: number;
+  /** 补发判定命中原因（R498：zero=word 为 0，low=word 低于 max(2,⌈候选×15%⌉)；未命中/旧快照无此字段） */
+  wordSupplementReason?: "zero" | "low";
+  /** 判定命中但本次搜索补发预算耗尽而跳过（R498） */
+  wordSupplementSkipped?: "budget";
   /** 补发轮各防线丢弃计数（R243，与主轮 dropped 分开，旧快照无此字段） */
   supplementDropped?: Record<string, number>;
   retries: number;
+  /** R500：审计专用被丢弃候选样本，仅请求体 debugDropped:true 时服务端附带；前端不渲染、不入 dh:lastSearch 快照 */
+  droppedSamples?: { reason: string; label: string; meaning: string; theme: string; supplement?: true }[];
 }
 
 export interface StreamEvent {
@@ -119,7 +125,11 @@ const TLD_PRICES: Record<string, TldPrice> = {
   info: { first: 28, renew: 130 },
   io: { first: 259, renew: 419 },
   ai: { first: 499, renew: 620 },
-  cn: { first: 29, renew: 39 },
+  // cn / com.cn 取腾讯云/阿里云官网标准价中较低者（2026-09-05 抓取，两个后缀两家报价相同）：
+  //   腾讯云 https://buy.cloud.tencent.com/domain/price?type=overview 注册 33（标价 39 划线）/ 续费 38
+  //   阿里云 https://wanwang.aliyun.com/help/price.html 注册 38 / 续费 42
+  cn: { first: 33, renew: 38 },
+  "com.cn": { first: 33, renew: 38 },
   cc: { first: 38, renew: 58 },
   tv: { first: 199, renew: 268 },
   app: { first: 99, renew: 118 },

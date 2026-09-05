@@ -5,6 +5,7 @@ import { compareLabel, relatedCompares } from "@/content/compare-slugs";
 import { readInjectedContent } from "@/content/injected";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { NotFoundPage } from "@/components/not-found-page";
+import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";
@@ -157,6 +158,7 @@ export function ComparePage({ slug }: { slug: string }) {
           ))}
         </div>
       </div>
+      <SiteLinks />
     </main>
   );
 }

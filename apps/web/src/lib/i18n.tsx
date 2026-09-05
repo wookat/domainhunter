@@ -19,6 +19,7 @@ const zh = {
   "common.register": "去注册",
   "registrar.openTitle": "在 {registrar} 注册 {domain}（新窗口打开）",
   "registrar.disclosure": "返佣声明：部分注册商链接为推广链接，经由它们注册本站可能获得佣金，不影响你支付的价格。",
+  "registrar.hint.dynadot": "中文 · 支付宝",
   "common.remove": "移除",
   "common.unlimited": "不限",
   "common.themeToggle": "切换浅色/暗色",
@@ -178,6 +179,7 @@ const zh = {
   "results.stat.elapsed": "{s} 秒",
   "results.copyAvailBtn": "复制 {n} 个可注册",
   "results.copiedAvail": "已复制",
+  "results.copyFailed": "复制失败，请长按选择",
   "results.starAllBtn": "收藏全部可注册",
   "results.starAllDone": "已收藏 {n} 个",
   "results.starAllAll": "已全部收藏",
@@ -338,6 +340,8 @@ const zh = {
   // 分享页
   "share.title": "候选域名清单",
   "share.subtitle": "由 DomainHunter 用户分享 · 快照生成于 {time} · 状态以实时核验为准",
+  "share.copyAllBtn": "复制 {n} 个域名",
+  "share.noStatus": "此快照未记录核验状态，注册前请重新查询",
   "share.cta": "我也要猎名",
   "share.ctaDesc": "说出你的想法，AI 批量构思并实时核验，只给你能注册的好域名。",
   "share.loading": "加载中…",
@@ -379,6 +383,10 @@ const zh = {
   "guide.ctaButton": "开始猎取",
   "guide.others": "其他行业命名指南",
   "guide.related": "相关行业指南",
+  "guide.relatedTlds": "相关后缀指南",
+  "guide.notes": "注意事项",
+  "guide.sources": "官方依据",
+  "guide.relatedCompliance": "相关合规与流程指南",
   "vs.related": "相关对比",
   // 404 页
   "nf.title": "页面不存在",
@@ -395,6 +403,7 @@ const zh = {
   "footer.prices": "价格总览",
   "footer.why": "为什么选 DomainHunter",
   "footer.mcp": "MCP 接入",
+  "footer.advanced": "批量核验",
   "footer.monitors": "监控管理",
   "monitors.title": "监控管理",
   "monitors.hint": "开了监控的域名每 6 小时自动复查，掉落/被注册会记录在监控动态并推送 webhook 通知",
@@ -494,6 +503,7 @@ const en: Record<I18nKey, string> = {
   "common.register": "Register",
   "registrar.openTitle": "Register {domain} at {registrar} (opens in a new tab)",
   "registrar.disclosure": "Affiliate disclosure: some registrar links are affiliate links — we may earn a commission when you register through them, at no extra cost to you.",
+  "registrar.hint.dynadot": "CNY · Alipay",
   "common.remove": "Remove",
   "common.unlimited": "Any",
   "common.themeToggle": "Toggle light/dark",
@@ -646,6 +656,7 @@ const en: Record<I18nKey, string> = {
   "results.stat.elapsed": "{s}s",
   "results.copyAvailBtn": "Copy {n} available",
   "results.copiedAvail": "Copied",
+  "results.copyFailed": "Copy failed — select manually",
   "results.starAllBtn": "Star all available",
   "results.starAllDone": "Starred {n}",
   "results.starAllAll": "All starred",
@@ -802,6 +813,8 @@ const en: Record<I18nKey, string> = {
   "meta.title": HOME_META.en.title,
   "share.title": "Shared domain shortlist",
   "share.subtitle": "Shared by a DomainHunter user · snapshot from {time} · re-check availability before registering",
+  "share.copyAllBtn": "Copy {n} domains",
+  "share.noStatus": "This snapshot has no availability status recorded — re-check before registering",
   "share.cta": "Hunt my own domains",
   "share.ctaDesc": "Describe your idea — AI brainstorms names and verifies them live, showing only what you can register.",
   "share.loading": "Loading…",
@@ -840,6 +853,10 @@ const en: Record<I18nKey, string> = {
   "guide.ctaButton": "Start hunting",
   "guide.others": "More industry naming guides",
   "guide.related": "Related industry guides",
+  "guide.relatedTlds": "Related TLD guides",
+  "guide.notes": "Things to watch",
+  "guide.sources": "Official sources",
+  "guide.relatedCompliance": "Related compliance guides",
   "vs.related": "Related comparisons",
   // 404 page
   "nf.title": "Page not found",
@@ -856,6 +873,7 @@ const en: Record<I18nKey, string> = {
   "footer.prices": "Price overview",
   "footer.why": "Why DomainHunter",
   "footer.mcp": "MCP server",
+  "footer.advanced": "Bulk check",
   "footer.monitors": "Monitors",
   "monitors.title": "Monitors",
   "monitors.hint": "Monitored domains are re-checked every 6 hours — drops and registrations are recorded in Monitor updates and pushed to your webhook",
@@ -990,6 +1008,15 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       localStorage.setItem(LANG_KEY, lang);
     } catch { /* ignore */ }
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    try {
+      // URL 上显式 ?lang= 与当前语言不一致时同步之，否则刷新会以 URL 为准覆盖切换结果
+      const url = new URL(window.location.href);
+      const q = url.searchParams.get("lang");
+      if ((q === "en" || q === "zh") && q !== lang) {
+        url.searchParams.set("lang", lang);
+        window.history.replaceState(window.history.state, "", url);
+      }
+    } catch { /* ignore */ }
     const path = window.location.pathname;
     if (path === "/prices") document.title = `${dicts[lang]["prices.title"]} | DomainHunter`;
     else if (path === "/why") document.title = `${dicts[lang]["footer.why"]} | DomainHunter`;

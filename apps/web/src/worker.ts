@@ -1,8 +1,8 @@
 import { Hono } from "hono";
 import { nanoid } from "nanoid";
-import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
+import { generateCandidates, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
-import { AI_THEMES, classifyAiError, descriptionLooksEnglish, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, type AiCandidate, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
+import { AI_THEMES, classifyAiError, descriptionLooksEnglish, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, newWordSupplementBudget, type AiCandidate, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
 import { resolveFallbackUpstream, type LlmProvider } from "./ai-transport";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
@@ -11,6 +11,7 @@ import { buildGuideFaq } from "./content/guide-faq";
 import { buildPricesFaq } from "./content/prices-faq";
 import { buildTldFaq } from "./content/tld-faq";
 import { compareContentBlocks, compareHubBlocks, guideContentBlocks, guideHubBlocks, homeHeroSkeleton, hubCrumbKicker, hubCrumbLabel, pricesTableSkeleton, tldContentBlocks, tldHubBlocks } from "./content/ssr-html";
+import { WHY_COPY } from "./content/why-copy";
 import { HOME_FAQ, HOME_META } from "./content/home-copy";
 import { buildGuideContent, buildTldContent, buildVsContent } from "./content/injected-build";
 import type { InjectedContent } from "./content/injected";
@@ -22,21 +23,29 @@ import { isRegistrarId, parseAffiliateJson, type RegistrarId } from "./lib/regis
 import { generateRuleCandidates, LLM_BREAKER_KEY, LLM_BREAKER_TTL_S, type FallbackReason } from "./rule-fallback";
 import { tldPrice } from "./types";
 import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
+import { DOMAIN_RE, sanitizeShareItem, shareGoneMeta, shareShellState, shareSsrTitle, type ShareItem } from "./share-items";
+import { sitemapLastmod } from "./sitemap-lastmod";
+import { parseVariantName } from "./mcp-args";
 import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
 import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
 import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
 import { PageviewCounter, readDayPageviews, type DayPageviews } from "./pageviews";
-import { INDEXNOW_ENDPOINT, submitIndexNow, summarizeIndexNow } from "./indexnow";
+import { emptyDayUsage, readDayUsage, usageCounterFor, type DayUsage } from "./usage-counter";
+import { INDEXNOW_BATCH_SIZE, INDEXNOW_ENDPOINT, INDEXNOW_RUN_MAX_BATCHES, acceptedUrls, indexNowDelta, mergePushed, submitIndexNow, summarizeIndexNow, type IndexNowPushed } from "./indexnow";
+import { pickPending, resolveBaiduPush, submitBaidu, summarizeBaidu, type BaiduPushVars } from "./baidu-push";
+import { injectHreflang, resolveLang, resolveSsrLang, SITE_ORIGIN, withHtmlVary } from "./ssr-lang";
 
 // LLM_API_BASE/LLM_MODEL：LLM 上游基地址与模型名。默认 DeepSeek 官方 + deepseek-chat；
 // 生产可指向 OpenAI 兼容网关（R460：电信 AI 网关），本地 wrangler dev 亦可指向假上游验证错误路径（R264）
 // LLM_FALLBACK_*（R474）：备用上游（任一 OpenAI 兼容端点），主上游额度耗尽/认证失败/5xx/网络失败时自动重发；
 // LLM_FALLBACK_API_KEY 为 secret（wrangler secret put），未配置则 failover 休眠，行为与仅有主上游时完全一致
-// GSC_VERIFICATION / BING_VERIFICATION / ANALYTICS_PROVIDER / ANALYTICS_TOKEN（R481）：站点验证 meta 与分析脚本，
+// GSC_VERIFICATION / BING_VERIFICATION / BAIDU_VERIFICATION / ANALYTICS_PROVIDER / ANALYTICS_TOKEN（R481/R485）：站点验证 meta 与分析脚本，
 // 全部可选；为空时 HTML 输出与未配置时字节一致（见 growth-inject.ts）
+// BAIDU_PUSH_SITE（var）+ BAIDU_PUSH_TOKEN（secret）+ BAIDU_PUSH_DAILY_MAX / BAIDU_PUSH_ENDPOINT（var，可选，后者仅本地 mock）（R485）：
+// 百度普通收录 API 推送；site/token 任一缺失则 cron 里的 pushBaidu 直接返回，不读写 KV（见 baidu-push.ts）
 // REGISTRAR_AFFILIATE_JSON（R480）：公开的注册商返佣参数（wrangler.jsonc vars，非 secret），经 GET /api/registrars 下发前端；
 // 形如 {"aliyun":{"query":{"userCode":"…"}},"namecheap":{"redirect":"https://namecheap.pxf.io/c/…?u={url}"}}，默认 "{}" = 纯搜索链接
-type Bindings = GrowthVars & {
+type Bindings = GrowthVars & BaiduPushVars & {
   ASSETS: Fetcher;
   DEEPSEEK_API_KEY: string;
   CACHE?: KVNamespace;
@@ -48,26 +57,36 @@ type Bindings = GrowthVars & {
   LLM_FALLBACK_MODEL?: string;
   LLM_FALLBACK_THINKING?: string;
   REGISTRAR_AFFILIATE_JSON?: string;
+  /** 仅本地 wrangler dev 指向 mock 端点验证 cron 推送路径；生产不配置 = 官方 api.indexnow.org */
+  INDEXNOW_ENDPOINT?: string;
 };
 
 const app = new Hono<{ Bindings: Bindings }>();
 
 // HTML 文档统一后处理（R481）：所有 text/html 响应（含 SSR 页面与 ASSETS 直出的 index.html）在此
-// ① 注入验证 meta / 分析 beacon（vars 为空则不读 body，原响应原样透传）；② 服务端 pageviews/bots 计数。
+// ① 加 `Vary: Accept-Language`（SSR 正文/标题随 Accept-Language 切 zh/en；API 与静态资源不是 text/html，不受影响）；
+// ② 注入验证 meta / 分析 beacon（vars 为空则不读 body，仅换头透传）；③ 服务端 pageviews/bots 计数。
 // 计数器按 isolate 复用，合并窗口内多次请求为一次 KV 写；仅统计 GET + 2xx 的 HTML 文档（404 壳与 API 不计）。
 let pageviewCounter: PageviewCounter | null = null;
 app.use("*", async (c, next) => {
   await next();
   const res = c.res;
-  if (c.req.method !== "GET" || !isHtmlDocument(res)) return;
-  if (res.status >= 200 && res.status < 300 && c.env.CACHE) {
+  const method = c.req.method;
+  if ((method !== "GET" && method !== "HEAD") || !isHtmlDocument(res)) return;
+  if (method === "GET" && res.status >= 200 && res.status < 300 && c.env.CACHE) {
     pageviewCounter ??= new PageviewCounter(c.env.CACHE);
     c.executionCtx.waitUntil(pageviewCounter.record(new URL(c.req.url).pathname, c.req.header("user-agent")));
   }
   const snippet = buildHeadInjection(c.env);
-  if (!snippet) return;
+  if (!snippet) {
+    // 不读 body：仅复制一份可写头的 Response（ASSETS 直出的响应头不可变）
+    const passthrough = new Response(res.body, res);
+    withHtmlVary(passthrough.headers);
+    c.res = passthrough;
+    return;
+  }
   const html = injectIntoHead(await res.text(), snippet);
-  const headers = new Headers(res.headers);
+  const headers = withHtmlVary(new Headers(res.headers));
   headers.delete("content-length");
   headers.delete("content-encoding");
   c.res = new Response(html, { status: res.status, statusText: res.statusText, headers });
@@ -95,14 +114,12 @@ const PRICES_CACHE_CFG: PricesCacheConfig = {
   usdToCny: USD_TO_CNY,
   timeoutMs: 25_000, // Porkbun 拉取超时：上游全量报价实测 ~13s，10s 会必然超时导致实时价永远拉不到
 };
-const SITE_ORIGIN = "https://hunt.zalize.com";
 const FAST_FIRST_ROUND_COUNT = 8; // fast 模式首轮候选数（更快首字节）
 // R466：AI 搜索候选级核验队列并行度（每个候选 = tlds.length 个域名，每批内部再按 checkDomains 并发）；
 // 与改动前整轮一次 checkDomains(concurrency=6) 的上游压力量级相当
 const AI_CHECK_PARALLEL_CANDIDATES = 3;
 /** R471：触发规则降级的首轮错误类别；unknown 不降级（语义不明，保留原 error 事件） */
 const FALLBACK_ERROR_KINDS: ReadonlySet<AiErrorKind> = new Set<AiErrorKind>(["quota", "rate-limit", "upstream", "network"]);
-const DOMAIN_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62}))+$/;
 
 /** 累计核验计数（KV 非原子，允许少量误差） */
 async function bumpStats(kv: KVNamespace | undefined, n: number): Promise<void> {
@@ -113,87 +130,12 @@ async function bumpStats(kv: KVNamespace | undefined, n: number): Promise<void> 
   } catch { /* 计数失败不影响主流程 */ }
 }
 
-/** 每日聚合使用统计（仅聚合计数，不存任何用户输入/IP；KV 非原子，允许少量误差） */
-interface DayUsage {
-  searches: number;
-  byTld: Record<string, number>;
-  fast: number;
-  refine: number;
-  /** 当日 AI 上游错误分类计数（R264，仅数字；旧数据无此字段） */
-  aiErrors?: Partial<Record<AiErrorKind, number>>;
-  /** 当日规则降级次数（R471，按 fallback 事件 reason 计；quota-breaker = 熔断期内直接降级，未打上游） */
-  fallbacks?: Partial<Record<FallbackReason, number>>;
-  /** 分享写入读回校验失败后的重试次数（R305，生产观测；旧数据无此字段） */
-  shareWriteRetry?: number;
-  /** 分享写入最终失败（含换 id 重写仍失败）次数（R305） */
-  shareWriteFail?: number;
-  /** 当日 AI 主轮实际应答的 LLM 上游计数（R474：主/备；仅数字；旧数据无此字段） */
-  llmProvider?: Partial<Record<LlmProvider, number>>;
-  /** 当日注册商外链点击数，按注册商 id 聚合（R480；不含域名/IP；旧数据无此字段） */
-  outbound?: Partial<Record<RegistrarId, number>>;
-  /** 当日注册商外链点击数，按 TLD 聚合（仅 TLD_LIST 内的后缀，其余记 other） */
-  outboundByTld?: Record<string, number>;
-}
+// 每日聚合使用统计（仅聚合计数，不存任何用户输入/IP）：结构与计数器见 usage-counter.ts。
+// R487 起所有 usage 计数走每 isolate 一个的 UsageCounter：同 isolate 内先合并再写自己的分片键 usage:{date}:<shard>，
+// 读侧 /api/usage 聚合求和（取代对同一 usage:{date} 键的非原子读改写）。同一请求内的多次计数无需再错开时机。
 
-async function bumpUsage(kv: KVNamespace | undefined, tlds: string[], fast: boolean, refine: boolean): Promise<void> {
-  if (!kv) return;
-  try {
-    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
-    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
-    cur.searches += 1;
-    if (fast) cur.fast += 1;
-    if (refine) cur.refine += 1;
-    for (const t of tlds) cur.byTld[t] = (cur.byTld[t] ?? 0) + 1;
-    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
-  } catch { /* 统计失败不影响主流程 */ }
-}
-
-/** 当日注册商外链点击 +1（R480，仅计数；KV 非原子，允许少量误差） */
-async function bumpOutbound(kv: KVNamespace | undefined, registrar: RegistrarId, tld: string): Promise<void> {
-  if (!kv) return;
-  try {
-    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
-    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
-    cur.outbound = { ...cur.outbound, [registrar]: (cur.outbound?.[registrar] ?? 0) + 1 };
-    // 只按已知 TLD 分桶（含站内核验支持的 com.cn），其余归 other，避免 KV 记录被任意字符串撑大
-    const tldKey = tld === "com.cn" || (TLD_LIST as readonly string[]).includes(tld) ? tld : "other";
-    cur.outboundByTld = { ...cur.outboundByTld, [tldKey]: (cur.outboundByTld?.[tldKey] ?? 0) + 1 };
-    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
-  } catch { /* 统计失败不影响主流程 */ }
-}
-
-/** 当日 AI 上游错误分类计数 +1（R264，仅计数；KV 非原子，允许少量误差） */
-async function bumpAiError(kv: KVNamespace | undefined, kind: AiErrorKind): Promise<void> {
-  if (!kv) return;
-  try {
-    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
-    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
-    cur.aiErrors = { ...cur.aiErrors, [kind]: (cur.aiErrors?.[kind] ?? 0) + 1 };
-    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
-  } catch { /* 统计失败不影响主流程 */ }
-}
-
-/** 当日 LLM 主轮应答上游计数 +1（R474，仅计数；KV 非原子，允许少量误差） */
-async function bumpLlmProvider(kv: KVNamespace | undefined, provider: LlmProvider): Promise<void> {
-  if (!kv) return;
-  try {
-    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
-    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
-    cur.llmProvider = { ...cur.llmProvider, [provider]: (cur.llmProvider?.[provider] ?? 0) + 1 };
-    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
-  } catch { /* 统计失败不影响主流程 */ }
-}
-
-/** 当日规则降级计数 +1（R471，仅计数；KV 非原子，允许少量误差） */
-async function bumpFallback(kv: KVNamespace | undefined, reason: FallbackReason): Promise<void> {
-  if (!kv) return;
-  try {
-    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
-    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
-    cur.fallbacks = { ...cur.fallbacks, [reason]: (cur.fallbacks?.[reason] ?? 0) + 1 };
-    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
-  } catch { /* 统计失败不影响主流程 */ }
-}
+/** 外链点击的 TLD 分桶：只按已知 TLD（含站内核验支持的 com.cn），其余归 other，避免 KV 记录被任意字符串撑大 */
+const outboundTldBucket = (tld: string): string => (tld === "com.cn" || (TLD_LIST as readonly string[]).includes(tld) ? tld : "other");
 
 /** 熔断标记：值为到期时间戳（ms），KV TTL 之外再校验一次时间，避免 TTL 精度/时钟差导致多放行 */
 async function llmBreakerUntil(kv: KVNamespace | undefined): Promise<number | null> {
@@ -212,18 +154,6 @@ async function tripLlmBreaker(kv: KVNamespace | undefined): Promise<void> {
   try {
     await kv.put(LLM_BREAKER_KEY, String(Date.now() + LLM_BREAKER_TTL_S * 1000), { expirationTtl: LLM_BREAKER_TTL_S });
   } catch { /* 熔断写失败退化为每请求各自撞上游（原行为） */ }
-}
-
-/** 分享写入重试/失败计数（R305，仅聚合数字；KV 非原子，允许少量误差） */
-async function bumpShareWrite(kv: KVNamespace | undefined, retries: number, failed: boolean): Promise<void> {
-  if (!kv || (retries <= 0 && !failed)) return;
-  try {
-    const key = `usage:${new Date().toISOString().slice(0, 10)}`;
-    const cur = (await kv.get<DayUsage>(key, "json")) ?? { searches: 0, byTld: {}, fast: 0, refine: 0 };
-    if (retries > 0) cur.shareWriteRetry = (cur.shareWriteRetry ?? 0) + retries;
-    if (failed) cur.shareWriteFail = (cur.shareWriteFail ?? 0) + 1;
-    await kv.put(key, JSON.stringify(cur), { expirationTtl: 45 * 24 * 3600 });
-  } catch { /* 统计失败不影响主流程 */ }
 }
 
 /** 按 IP 简单限流（KV 计数，按小时桶）；无 KV 绑定时不限流 */
@@ -309,33 +239,6 @@ function boundedQueue(limit: number) {
   return { run, drain };
 }
 
-interface ShareItem {
-  domain: string;
-  label: string;
-  tld: string;
-  meaning?: string;
-  scores?: { length: number; readability: number; relevance: number; brandability: number };
-}
-
-function sanitizeShareItem(raw: unknown): ShareItem | null {
-  if (typeof raw !== "object" || raw === null) return null;
-  const o = raw as Record<string, unknown>;
-  const domain = typeof o.domain === "string" ? o.domain.trim().toLowerCase() : "";
-  if (!DOMAIN_RE.test(domain) || domain.length > 253) return null;
-  const dot = domain.indexOf(".");
-  const item: ShareItem = { domain, label: domain.slice(0, dot), tld: domain.slice(dot + 1) };
-  if (typeof o.meaning === "string" && o.meaning) item.meaning = o.meaning.slice(0, 300);
-  const s = o.scores as Record<string, unknown> | undefined;
-  if (s && typeof s === "object") {
-    const num = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? Math.min(Math.max(Math.round(v), 0), 100) : null);
-    const length = num(s.length), readability = num(s.readability), relevance = num(s.relevance), brandability = num(s.brandability);
-    if (length !== null && readability !== null && relevance !== null && brandability !== null) {
-      item.scores = { length, readability, relevance, brandability };
-    }
-  }
-  return item;
-}
-
 function genSyncCode(): string {
   const bytes = crypto.getRandomValues(new Uint8Array(8));
   let code = "";
@@ -354,8 +257,11 @@ app.post("/api/ai-search", async (c) => {
     lengthPref?: string;
     fast?: boolean;
     lang?: string;
+    /** R500：审计专用，严格 === true 才开；guard 事件附带限额的被丢弃候选样本，不写 KV，前端从不发送 */
+    debugDropped?: boolean;
   }>();
   const fast = body.fast === true;
+  const debugDropped = body.debugDropped === true;
   const lang: "zh" | "en" = body.lang === "en" ? "en" : "zh";
   let description = (body.description ?? "").trim().slice(0, 500);
   // R471：规则降级只从用户原始描述抽词（不含下方拼接的风格/长度偏好后缀）
@@ -381,7 +287,10 @@ app.post("/api/ai-search", async (c) => {
     return c.json({ error: "rate_limited", message: msg }, 429);
   }
 
-  c.executionCtx.waitUntil(bumpUsage(c.env.CACHE, tlds, fast, (body.excludeLabels ?? []).length > 0));
+  const usage = usageCounterFor(c.env.CACHE);
+  c.executionCtx.waitUntil(usage.search(tlds, fast, (body.excludeLabels ?? []).length > 0));
+  // 流内产生的计数（aiError/llmProvider/fallback）不阻塞事件下发，统一在流关闭后等待落盘
+  const usageTails: Promise<void>[] = [];
 
   const apiKey = c.env.DEEPSEEK_API_KEY;
   const { readable, writable } = new TransformStream();
@@ -422,6 +331,8 @@ app.post("/api/ai-search", async (c) => {
       // R471：熔断期内（quota 耗尽后 5 分钟）不打任何上游——理解与候选两路都跳过，直接进规则降级
       const breakerUntil = await llmBreakerUntil(c.env.CACHE);
       const breakerHit = breakerUntil !== null;
+      // R498：EN word 补发预算按整次搜索计（跨轮共享），控制额外 LLM 调用上限
+      const wordSupplementBudget = newWordSupplementBudget();
       const understandingDone = breakerHit
         ? Promise.resolve()
         : generateUnderstanding(description, apiKey, lang, llmBase, llmModel, llmThinking, llmFallback)
@@ -433,8 +344,8 @@ app.post("/api/ai-search", async (c) => {
         for (let round = 1; round <= MAX_ROUNDS && availableCount < target; round++) {
           await emit({ type: "round", round, availableCount, target, note: round === 1 ? "AI 正在构思名字…" : "可注册的还不够，AI 反思后继续想…" });
           // R238：防线统计元数据——按轮汇总各防线丢弃计数与补发/重试触发情况，
-          // 随 proposed 事件返回（新增字段，旧前端忽略，不破坏现有结构）；只计数，不含被丢弃候选内容
-          const guard = newGuardStats();
+          // 随 proposed 事件返回（新增字段，旧前端忽略，不破坏现有结构）；默认只计数，不含被丢弃候选内容（R500 debugDropped 审计通道除外）
+          const guard = newGuardStats({ debugDropped });
           // R466：首结果提速——LLM 流式返回，每解出一个通过防线的候选立即：跨轮去重 → 单项 proposed 事件
           // （items 只含该候选，不带 guard）→ 进入核验队列逐域名下发 result；流结束后再发一条 items 为空的
           // proposed 携带本轮 guard 汇总（前端对同轮多条 proposed 的 filtered 是累加语义，guard 只带一次即不重计）。
@@ -504,12 +415,13 @@ app.post("/api/ai-search", async (c) => {
                 fallback: llmFallback,
                 descLooksEnglish,
                 onCandidate,
+                wordSupplementBudget,
               });
             } catch (e) {
               // R264：上游错误分类透出（errorKind），前端按类别渲染文案与重试 CTA；
               // detail 只含既有错误短码（llm-http-402 等），不含 key 与上游响应体
               const errorKind = classifyAiError(e);
-              await bumpAiError(c.env.CACHE, errorKind);
+              usageTails.push(usage.aiError(errorKind));
               // R471：quota 耗尽→写 5 分钟熔断（rate-limit 不写）；首轮失败→规则降级而非直接结束
               if (errorKind === "quota") await tripLlmBreaker(c.env.CACHE);
               if (round === 1 && FALLBACK_ERROR_KINDS.has(errorKind)) {
@@ -524,12 +436,11 @@ app.post("/api/ai-search", async (c) => {
           }
           // R474：本轮实际应答的 LLM 上游（primary/fallback）随汇总事件透出（新增尾部字段，旧前端忽略），并计入当日 usage
           await emit({ type: "proposed", round, items: [], tlds, guard, provider: guard.provider });
-          if (guard.provider) await bumpLlmProvider(c.env.CACHE, guard.provider);
+          if (guard.provider) usageTails.push(usage.llmProvider(guard.provider));
           await checks.drain();
           await bumpStats(c.env.CACHE, checkedDomains);
           if (fellBack) {
-            // 核验排完后再计数：避开与 waitUntil(bumpUsage) 对同一 usage 键的读改写竞争（KV 非原子）
-            await bumpFallback(c.env.CACHE, fellBack);
+            usageTails.push(usage.fallback(fellBack));
             break;
           }
           takenLabels.push(...takenThisRound);
@@ -549,6 +460,7 @@ app.post("/api/ai-search", async (c) => {
         await emit({ type: "done", availableCount, target, reachedTarget: availableCount >= target });
       } finally {
         await writer.close();
+        await Promise.allSettled(usageTails);
       }
     })(),
   );
@@ -829,7 +741,7 @@ app.post("/api/share", async (c) => {
   const payload = JSON.stringify({ items, createdAt: Date.now(), revokeToken });
   // KV put 偶发静默丢失：写后读回校验 + 退避重试 + 换 id 重写（详见 share-write.ts）
   const result = await putShareVerified(kv, () => nanoid(10), () => payload, SHARE_TTL);
-  c.executionCtx.waitUntil(bumpShareWrite(kv, result.retries, !result.ok));
+  c.executionCtx.waitUntil(usageCounterFor(kv).shareWrite(result.retries, !result.ok));
   if (!result.ok) {
     // 结构化失败日志（wrangler tail 排查用）：总尝试次数、用过的 id 数、KV 抛错消息摘要
     console.error(
@@ -1097,8 +1009,9 @@ app.post("/mcp", async (c) => {
   }
 
   if (toolName === "suggest_variants") {
-    const name = normalizeLabel(String(args.name ?? ""));
-    if (!name || name.length < 2) return mcpText(id, "invalid name: pass a bare label of 2+ chars like acme (no TLD)", true);
+    const parsed = parseVariantName(args.name);
+    if (!parsed.ok) return mcpText(id, parsed.error, true);
+    const name = parsed.name;
     const rawTlds = Array.isArray(args.tlds) && args.tlds.length > 0 ? args.tlds : ["com"];
     const tlds: string[] = [];
     for (const raw of rawTlds) {
@@ -1169,7 +1082,8 @@ app.get("/mcp", async (c) => {
     return new Response("method not allowed: POST JSON-RPC 2.0 (MCP Streamable HTTP, stateless)", { status: 405, headers: { allow: "POST" } });
   }
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = MCP_META[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.desc);
@@ -1187,7 +1101,7 @@ app.get("/mcp", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/mcp?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/mcp", c.req.query("lang") === "en").replace(
+  html = injectHreflang(html, "/mcp", sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/mcp", lang)}</script></head>`,
   );
@@ -1228,7 +1142,7 @@ app.post("/api/click", async (c) => {
   const registrar = body?.registrar;
   const tld = typeof body?.tld === "string" ? body.tld.toLowerCase().replace(/^\./, "") : "";
   if (!isRegistrarId(registrar) || !CLICK_TLD_RE.test(tld)) return c.json({ error: "invalid click" }, 400);
-  c.executionCtx.waitUntil(bumpOutbound(c.env.CACHE, registrar, tld));
+  c.executionCtx.waitUntil(usageCounterFor(c.env.CACHE).outbound(registrar, outboundTldBucket(tld)));
   return c.body(null, 204, { "cache-control": "no-store" });
 });
 
@@ -1241,44 +1155,79 @@ app.get("/api/usage", async (c) => {
     const dates = Array.from({ length: days }, (_, i) => new Date(Date.now() - i * 86400_000).toISOString().slice(0, 10));
     await Promise.all(
       dates.map(async (d) => {
-        // usage:*（搜索漏斗）与 pv:*（HTML 文档计数，R481；按 isolate 分片、读时求和，R482）分键存储、此处合并输出
-        const [u, pv] = await Promise.all([
-          kv.get<DayUsage>(`usage:${d}`, "json").catch(() => null),
-          readDayPageviews(kv, d),
-        ]);
-        if (u || pv) out[d] = { ...(u ?? { searches: 0, byTld: {}, fast: 0, refine: 0 }), ...(pv ?? {}) };
+        // usage:*（搜索漏斗，R487 起也按 isolate 分片）与 pv:*（HTML 文档计数，R481/R482）分键存储，各自旧键+分片求和后在此合并输出
+        const [u, pv] = await Promise.all([readDayUsage(kv, d), readDayPageviews(kv, d)]);
+        if (u || pv) out[d] = { ...(u ?? emptyDayUsage()), ...(pv ?? {}) };
       }),
     );
   }
   let cronLast: number | null = null;
   let indexnowLast: number | null = null;
   let indexnowLastError: IndexNowError | null = null;
+  let indexnowPending: number | null = null;
   let pricesLastOk: number | null = null;
   let pricesLastFail: number | null = null;
+  let baiduLast: number | null = null;
+  let baiduLastError: BaiduPushError | null = null;
   try {
-    const [cl, il, ie, po, pf] = await Promise.all([
+    const [cl, il, ie, ip, po, pf, bl, be] = await Promise.all([
       kv?.get("cron:last"),
       kv?.get(INDEXNOW_LAST_KEY),
       kv?.get<IndexNowError>(INDEXNOW_LAST_ERROR_KEY, "json"),
+      kv?.get<IndexNowPushed>(INDEXNOW_PUSHED_KEY, "json"),
       kv?.get(PRICES_LAST_OK_KEY),
       kv?.get(PRICES_LAST_FAIL_KEY),
+      kv?.get(BAIDU_LAST_KEY),
+      kv?.get<BaiduPushError>(BAIDU_LAST_ERROR_KEY, "json"),
     ]);
     cronLast = cl ? Number(cl) : null;
     indexnowLast = il ? Number(il) : null;
     indexnowLastError = ie ?? null;
+    if (kv) indexnowPending = indexNowDelta(ip ?? null, sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`), CONTENT_LASTMOD).length;
     pricesLastOk = po ? Number(po) : null;
     pricesLastFail = pf ? Number(pf) : null;
+    baiduLast = bl ? Number(bl) : null;
+    baiduLastError = be ?? null;
   } catch { /* 读失败返回 null */ }
-  return c.json({ days: out, cronLast, indexnowLast, indexnowLastError, pricesLastOk, pricesLastFail }, 200, { "cache-control": "public, max-age=300" });
+  return c.json({ days: out, cronLast, indexnowLast, indexnowLastError, indexnowPending, pricesLastOk, pricesLastFail, baiduLast, baiduLastError }, 200, { "cache-control": "public, max-age=300" });
 });
 
 // SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）
+// 已撤销 / 不存在的 id 与 /api/share/:id 同状态码（410 / 404）+ noindex + 中性 title，SPA 壳照常渲染前端的撤销/不存在态
 app.get("/s/:id", async (c) => {
   const id = c.req.param("id");
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  if (!/^[\w-]{1,32}$/.test(id)) return res;
   let html = await res.text();
-  const pageUrl = `${SITE_ORIGIN}/s/${id}`;
+  const idValid = /^[\w-]{1,32}$/.test(id);
+  const pageUrl = `${SITE_ORIGIN}/s/${idValid ? id : ""}`;
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  const snapshot = idValid && c.env.CACHE ? await c.env.CACHE.get<ShareSnapshotStored>(`share:${id}`, "json") : null;
+  const state = shareShellState(idValid, snapshot);
+  const setMeta = (title: string, desc: string): void => {
+    html = html
+      .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+      .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
+      .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
+      .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+      .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
+      .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`);
+  };
+  if (state !== "ready") {
+    const gone = shareGoneMeta(state, lang);
+    setMeta(escapeHtml(gone.title), escapeHtml(gone.desc));
+    html = html
+      .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${pageUrl}" />`)
+      .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${pageUrl}" />`)
+      .replace("</head>", `<meta name="robots" content="noindex" /></head>`);
+    return new Response(html, { status: gone.status, headers: { "content-type": "text/html; charset=utf-8" } });
+  }
+  const items = snapshot!.items!;
+  // 微信/IM 无 JS-SDK 时卡片标题取 <title>，这里按快照写成「N 个候选」而非首页长标题
+  const preview = items.slice(0, 3).map((it) => it.domain).join(lang === "en" ? ", " : "、") + (items.length > 3 ? (lang === "en" ? " …" : " 等") : "");
+  setMeta(
+    escapeHtml(shareSsrTitle(items, lang)),
+    escapeHtml(lang === "en" ? `${preview} — shared from DomainHunter, re-check availability before registering` : `${preview} —— 来自 DomainHunter 的候选清单，注册前请重新核验`),
+  );
   html = html
     .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${pageUrl}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${pageUrl}" />`)
@@ -1323,7 +1272,8 @@ const ADVANCED_META = {
 
 app.get("/advanced", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = ADVANCED_META[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.desc);
@@ -1341,10 +1291,11 @@ app.get("/advanced", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/advanced?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/advanced", c.req.query("lang") === "en");
+  html = injectHreflang(html, "/advanced", sl);
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx", "full");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
+  html = injectAdvancedSkeleton(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -1485,22 +1436,6 @@ function pageOgSvg(kicker: string, title: string, lang: "zh" | "en"): string {
 </svg>`;
 }
 
-/** hreflang alternate 标签：zh / en / x-default（zh 为默认，URL 与 canonical 规则一致：zh/x-default 指裸路径，en 指 ?lang=en） */
-function hreflangTags(path: string): string {
-  const base = `${SITE_ORIGIN}${path}`;
-  return [
-    `<link rel="alternate" hreflang="zh" href="${base}" />`,
-    `<link rel="alternate" hreflang="en" href="${base}?lang=en" />`,
-    `<link rel="alternate" hreflang="x-default" href="${base}" />`,
-  ].join("\n    ");
-}
-
-const injectHreflang = (html: string, path: string, explicitEn = false) => {
-  // 显式 ?lang=en 访问时 canonical 自指英文版，与 hreflang alternate 一致（仅认 query，不认 Accept-Language）
-  if (explicitEn) html = html.replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}${path}?lang=en" />`);
-  return html.replace(/(<link rel="canonical"[^>]*\/>)/, `$1\n    ${hreflangTags(path)}`);
-};
-
 /** 内容页数据随 HTML 注入（window.__DH_CONTENT__）：客户端不再下载全量内容 chunk（见 content/injected.ts） */
 function injectContentData(html: string, payload: InjectedContent | null): string {
   if (!payload) return html;
@@ -1508,11 +1443,13 @@ function injectContentData(html: string, payload: InjectedContent | null): strin
   return html.replace("</head>", `<script>window.__DH_CONTENT__=${json}</script></head>`);
 }
 
+const SSR_HEADER = `<header class="sticky top-0 z-20 border-b border-line bg-bg0/85"><div class="mx-auto flex h-14 max-w-7xl items-center px-4 md:px-6"><span class="flex items-center gap-2 font-bold tracking-tight"><span class="grid h-7 w-7 place-items-center rounded-lg border border-brand-line bg-brand-dim"></span><span class="max-[430px]:hidden">DomainHunter</span></span></div></header>`;
+
 /** SEO 页 SSR 首屏骨架：把 kicker/标题/首段直接渲染进 #root，LCP 文本不再等 JS 水合（React 挂载后整体替换） */
 function injectSsrSkeleton(html: string, kicker: string, title: string, blocks: string[], kickerHtml?: string, mainWidth = "max-w-3xl"): string {
   const skeleton = [
     `<div class="flex min-h-screen flex-col">`,
-    `<header class="sticky top-0 z-20 border-b border-line bg-bg0/85"><div class="mx-auto flex h-14 max-w-7xl items-center px-4 md:px-6"><span class="flex items-center gap-2 font-bold tracking-tight"><span class="grid h-7 w-7 place-items-center rounded-lg border border-brand-line bg-brand-dim"></span><span class="max-[430px]:hidden">DomainHunter</span></span></div></header>`,
+    SSR_HEADER,
     `<main class="mx-auto w-full ${mainWidth} flex-1 px-4 pb-16 pt-10 md:px-6">`,
     kickerHtml ?? `<p class="font-mono text-sm text-brand">${escapeHtml(kicker)}</p>`,
     `<h1 class="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">${escapeHtml(title)}</h1>`,
@@ -1523,6 +1460,23 @@ function injectSsrSkeleton(html: string, kicker: string, title: string, blocks: 
 }
 
 const ssrIntroBlock = (intro: string) => `<p class="mt-6 text-[15px] leading-relaxed text-txt1">${escapeHtml(intro)}</p>`;
+
+/* /advanced 首屏文案：与 lib/i18n.tsx 词典 adv.title / adv.subtitle 逐字同源 */
+const ADVANCED_SSR = {
+  zh: { title: "高级模式", subtitle: "词根 × 前后缀 × TLD 批量组合生成，逐个核验可注册状态" },
+  en: { title: "Advanced mode", subtitle: "Batch-generate roots × affixes × TLDs and verify availability one by one" },
+} as const;
+
+/** /advanced SSR 首屏骨架：DOM/类名与 advanced-page.tsx 首次渲染的 h1 + 副标题逐字一致（main 宽 max-w-5xl） */
+function injectAdvancedSkeleton(html: string, lang: "zh" | "en"): string {
+  const s = ADVANCED_SSR[lang];
+  const skeleton = `<div class="flex min-h-screen flex-col">${SSR_HEADER}<main class="mx-auto w-full min-w-0 max-w-5xl flex-1 px-4 py-8 md:px-6"><h1 class="text-xl font-bold tracking-tight md:text-2xl">${escapeHtml(s.title)}</h1><p class="mt-1 text-sm text-txt1">${escapeHtml(s.subtitle)}</p></main></div>`;
+  return html.replace('<div id="root"></div>', `<div id="root">${skeleton}</div>`);
+}
+
+/* why-page.tsx kicker 前的 lucide Crosshair 图标（同 path） */
+const ICON_CROSSHAIR =
+  '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair h-4 w-4"><circle cx="12" cy="12" r="10"></circle><line x1="22" x2="18" y1="12" y2="12"></line><line x1="6" x2="2" y1="12" y2="12"></line><line x1="12" x2="12" y1="6" y2="2"></line><line x1="12" x2="12" y1="22" y2="18"></line></svg>';
 
 /** 主样式表内容（hashed 文件名 → CSS 文本），模块级缓存 */
 const inlineCssCache = new Map<string, string>();
@@ -1702,7 +1656,8 @@ app.get("/api/og/vs/:slug", (c) => {
 
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   let html = await res.text();
   const m = HOME_META[lang];
   html = html
@@ -1719,7 +1674,7 @@ app.get("/", async (c) => {
     );
   }
   html = homeHeroSkeleton(html, lang);
-  html = injectHreflang(html, "/", c.req.query("lang") === "en").replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
+  html = injectHreflang(html, "/", sl).replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/home-page.tsx", "full");
   html = setHtmlLang(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
@@ -1731,7 +1686,8 @@ app.get("/tld/:tld", async (c) => {
   const guide = TLD_GUIDES[tld];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
   if (!guide) return notFoundShell(res);
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = guide[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.metaDescription);
@@ -1758,7 +1714,7 @@ app.get("/tld/:tld", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, `/tld/${tld}`, c.req.query("lang") === "en").replace(
+  html = injectHreflang(html, `/tld/${tld}`, sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang, { name: hubCrumbLabel("tld", lang), path: "/tld" })}</script><script type="application/ld+json">${tldFaqJsonld}</script></head>`,
   );
@@ -1776,7 +1732,8 @@ app.get("/guide/:slug", async (c) => {
   const guide = INDUSTRY_GUIDES[slug];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
   if (!guide) return notFoundShell(res);
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = guide[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.metaDescription);
@@ -1803,7 +1760,7 @@ app.get("/guide/:slug", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, `/guide/${slug}`, c.req.query("lang") === "en").replace(
+  html = injectHreflang(html, `/guide/${slug}`, sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang, { name: hubCrumbLabel("guide", lang), path: "/guide" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${guideFaqJsonld}</script></head>`,
   );
@@ -1821,7 +1778,8 @@ app.get("/vs/:slug", async (c) => {
   const cmp = TLD_COMPARES[slug];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
   if (!cmp) return notFoundShell(res);
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = cmp[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.metaDescription);
@@ -1848,7 +1806,7 @@ app.get("/vs/:slug", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, `/vs/${slug}`, c.req.query("lang") === "en").replace(
+  html = injectHreflang(html, `/vs/${slug}`, sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang, { name: hubCrumbLabel("vs", lang), path: "/vs" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${cmpFaqJsonld}</script></head>`,
   );
@@ -1870,7 +1828,8 @@ const HUB_ENTRIES = {
 const serveHub = (kind: "tld" | "guide" | "vs") =>
   async (c: { env: Bindings; req: { raw: Request; url: string; query: (k: string) => string | undefined; header: (k: string) => string | undefined } }) => {
     const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-    const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+    const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+    const lang = sl.lang;
     const meta = HUB_META[kind][lang];
     const title = escapeHtml(`${meta.title} | DomainHunter`);
     const desc = escapeHtml(meta.desc);
@@ -1889,7 +1848,7 @@ const serveHub = (kind: "tld" | "guide" | "vs") =>
         /<meta property="og:image" content="[^"]*" \/>/,
         `<meta property="og:image" content="${SITE_ORIGIN}/api/og/hub/${kind}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
       );
-    html = injectHreflang(html, path, c.req.query("lang") === "en").replace(
+    html = injectHreflang(html, path, sl).replace(
       "</head>",
       `<script type="application/ld+json">${breadcrumbJsonld(meta.title, path, lang)}</script></head>`,
     );
@@ -1927,7 +1886,8 @@ const PRICES_KICKER_SVG =
 
 app.get("/prices", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = PRICES_META[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.desc);
@@ -1954,7 +1914,7 @@ app.get("/prices", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, "/prices", c.req.query("lang") === "en").replace(
+  html = injectHreflang(html, "/prices", sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/prices", lang)}</script><script type="application/ld+json">${pricesFaqJsonld}</script></head>`,
   );
@@ -1985,7 +1945,8 @@ const WHY_META = {
 
 app.get("/why", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  const lang = c.req.query("lang") === "en" || (!c.req.query("lang") && (c.req.header("accept-language") ?? "").toLowerCase().startsWith("en")) ? "en" : "zh";
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = WHY_META[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.desc);
@@ -2003,13 +1964,21 @@ app.get("/why", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/why?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/why", c.req.query("lang") === "en").replace(
+  html = injectHreflang(html, "/why", sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/why", lang)}</script></head>`,
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/why-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
+  const why = WHY_COPY[lang];
+  html = injectSsrSkeleton(
+    html,
+    why.kicker,
+    why.title,
+    [`<p class="mt-4 leading-relaxed text-txt1">${escapeHtml(why.intro)}</p>`],
+    `<p class="flex items-center gap-1.5 font-mono text-sm text-brand">${ICON_CROSSHAIR}${escapeHtml(why.kicker)}</p>`,
+  );
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -2027,7 +1996,7 @@ app.get("/sitemap.xml", (c) => {
       `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_ORIGIN}${p}" />`,
     ].join("\n");
   const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${paths
-    .map((p) => `  <url>\n    <loc>${SITE_ORIGIN}${p}</loc>\n    <lastmod>${CONTENT_LASTMOD}</lastmod>\n${alt(p)}\n  </url>`)
+    .map((p) => `  <url>\n    <loc>${SITE_ORIGIN}${p}</loc>\n    <lastmod>${sitemapLastmod(p, CONTENT_LASTMOD)}</lastmod>\n${alt(p)}\n  </url>`)
     .join("\n")}\n</urlset>\n`;
   return new Response(body, { headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=86400" } });
 });
@@ -2101,14 +2070,18 @@ app.all("*", async (c) => {
 
 // IndexNow：向 Bing/Yandex 等搜索引擎主动推送全站 URL（key 按协议公开，对应 public/<key>.txt 静态文件）
 // 状态键：indexnow:last = 最近一次成功（200/202）时间；indexnow:lastAttempt = 最近一次尝试时间（成功失败都写，
-// 用作 6h 冷却防止失败后每次 cron 都重发）；indexnow:lastError = 最近一次失败详情（成功后清除）。
-// 分批/状态码语义见 indexnow.ts；sitemap 当前 ~1.3k URL，远低于单次 10000 上限。
+// 用作 6h 冷却防止失败后每次 cron 都重发）；indexnow:lastError = 最近一次失败详情（成功后清除）；
+// indexnow:pushed = 最近一次成功推送时的 { lastmod, urls } 快照——协议要求只在 URL 新增/更新/删除时提交，
+// 所以每日只推快照之外的新 URL，CONTENT_LASTMOD 变化时才全量重推；无增量则只刷新 indexnow:last，不发请求。
+// 分批/状态码语义见 indexnow.ts：每次 cron 最多推 3×100 URL，成功批次逐批并入快照，积压未清时不写 indexnow:last，
+// 由 lastAttempt 的 6h 门在下次 cron 继续（全站 ~1.3k URL 首次全量约 5 次 cron 推完）。
 const INDEXNOW_KEY = "024aa6c6f88245bbacdac2f60a94e333";
 const INDEXNOW_INTERVAL_MS = 24 * 3600 * 1000;
 const INDEXNOW_RETRY_MS = 6 * 3600 * 1000;
 const INDEXNOW_LAST_KEY = "indexnow:last";
 const INDEXNOW_LAST_ATTEMPT_KEY = "indexnow:lastAttempt";
 const INDEXNOW_LAST_ERROR_KEY = "indexnow:lastError";
+const INDEXNOW_PUSHED_KEY = "indexnow:pushed";
 interface IndexNowError {
   at: number;
   status: number;
@@ -2120,26 +2093,100 @@ async function pingIndexNow(env: Bindings): Promise<void> {
   if (!env.CACHE) return;
   const kv = env.CACHE;
   const now = Date.now();
-  const [last, lastAttempt] = await Promise.all([kv.get(INDEXNOW_LAST_KEY), kv.get(INDEXNOW_LAST_ATTEMPT_KEY)]);
+  const [last, lastAttempt, pushed] = await Promise.all([
+    kv.get(INDEXNOW_LAST_KEY),
+    kv.get(INDEXNOW_LAST_ATTEMPT_KEY),
+    kv.get<IndexNowPushed>(INDEXNOW_PUSHED_KEY, "json"),
+  ]);
   if (last && now - Number(last) < INDEXNOW_INTERVAL_MS) return;
   if (lastAttempt && now - Number(lastAttempt) < INDEXNOW_RETRY_MS) return;
   await kv.put(INDEXNOW_LAST_ATTEMPT_KEY, String(now));
+  const all = sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`);
+  const urls = indexNowDelta(pushed, all, CONTENT_LASTMOD);
+  if (urls.length === 0) {
+    await kv.put(INDEXNOW_LAST_KEY, String(now));
+    return;
+  }
   const host = SITE_ORIGIN.replace(/^https?:\/\//, "");
   const results = await submitIndexNow({
     host,
     key: INDEXNOW_KEY,
     keyLocation: `${SITE_ORIGIN}/${INDEXNOW_KEY}.txt`,
-    urls: sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`),
-    endpoint: INDEXNOW_ENDPOINT,
+    urls,
+    endpoint: env.INDEXNOW_ENDPOINT || INDEXNOW_ENDPOINT,
+    batchSize: INDEXNOW_BATCH_SIZE,
+    maxBatches: INDEXNOW_RUN_MAX_BATCHES,
+    stopOnFail: true,
   });
   const summary = summarizeIndexNow(results);
+  const accepted = acceptedUrls(urls, results, INDEXNOW_BATCH_SIZE);
+  const snapshot = mergePushed(pushed, accepted, all, CONTENT_LASTMOD);
+  const writes: Promise<unknown>[] = [];
+  if (accepted.length > 0) writes.push(kv.put(INDEXNOW_PUSHED_KEY, JSON.stringify(snapshot)));
   if (summary.ok) {
-    await Promise.all([kv.put(INDEXNOW_LAST_KEY, String(now)), kv.delete(INDEXNOW_LAST_ERROR_KEY)]);
+    // 本次全部批次成功：积压清零才算「今日已推送」，否则只靠 lastAttempt 的 6h 门在下次 cron 继续推
+    if (snapshot.urls.length >= all.length) writes.push(kv.put(INDEXNOW_LAST_KEY, String(now)));
+    writes.push(kv.delete(INDEXNOW_LAST_ERROR_KEY));
+    await Promise.all(writes);
     return;
   }
   const err: IndexNowError = { at: now, status: summary.status, message: summary.message, submitted: summary.submitted };
   console.error("indexnow failed", JSON.stringify(err));
-  await kv.put(INDEXNOW_LAST_ERROR_KEY, JSON.stringify(err));
+  writes.push(kv.put(INDEXNOW_LAST_ERROR_KEY, JSON.stringify(err)));
+  await Promise.all(writes);
+}
+
+// 百度普通收录 API 推送（R485）：仅在 BAIDU_PUSH_SITE + BAIDU_PUSH_TOKEN 都配置时运行，否则不读写任何 KV。
+// 状态键：baidu:last = 最近一次成功（200）；baidu:lastAttempt = 最近一次尝试（6h 冷却）；baidu:lastError = 最近失败详情（成功后清除）；
+// baidu:pushed = 已被百度计为成功的 URL 列表（仅保留仍在 sitemap 中的）。
+// 配额策略：官方每日配额按站点动态分配且重推旧 URL 会被降配额，所以每 24h 只推尚未成功推送过的 URL（新增内容页自然进入队列），
+// 按 sitemapPaths 优先级顺序取前 dailyMax 条（默认 2000 = 单次接口上限，可用 BAIDU_PUSH_DAILY_MAX 按站长平台显示的配额收紧）。
+const BAIDU_INTERVAL_MS = 24 * 3600 * 1000;
+const BAIDU_RETRY_MS = 6 * 3600 * 1000;
+const BAIDU_LAST_KEY = "baidu:last";
+const BAIDU_LAST_ATTEMPT_KEY = "baidu:lastAttempt";
+const BAIDU_LAST_ERROR_KEY = "baidu:lastError";
+const BAIDU_PUSHED_KEY = "baidu:pushed";
+interface BaiduPushError {
+  at: number;
+  status: number;
+  message: string;
+  submitted: number;
+  remain: number | null;
+}
+
+async function pushBaidu(env: Bindings): Promise<void> {
+  const cfg = resolveBaiduPush(env);
+  if (!cfg || !env.CACHE) return;
+  const kv = env.CACHE;
+  const now = Date.now();
+  const [last, lastAttempt, pushedRaw] = await Promise.all([
+    kv.get(BAIDU_LAST_KEY),
+    kv.get(BAIDU_LAST_ATTEMPT_KEY),
+    kv.get<string[]>(BAIDU_PUSHED_KEY, "json"),
+  ]);
+  if (last && now - Number(last) < BAIDU_INTERVAL_MS) return;
+  if (lastAttempt && now - Number(lastAttempt) < BAIDU_RETRY_MS) return;
+  const all = sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`);
+  const allSet = new Set(all);
+  const pushed = new Set((Array.isArray(pushedRaw) ? pushedRaw : []).filter((u) => allSet.has(u)));
+  const pending = pickPending(all, pushed, cfg.dailyMax);
+  if (pending.length === 0) {
+    await kv.put(BAIDU_LAST_KEY, String(now));
+    return;
+  }
+  await kv.put(BAIDU_LAST_ATTEMPT_KEY, String(now));
+  const summary = summarizeBaidu(await submitBaidu({ cfg, urls: pending }));
+  for (const u of summary.accepted) pushed.add(u);
+  const writes: Promise<void>[] = [kv.put(BAIDU_PUSHED_KEY, JSON.stringify(all.filter((u) => pushed.has(u))))];
+  if (summary.ok) {
+    writes.push(kv.put(BAIDU_LAST_KEY, String(now)), kv.delete(BAIDU_LAST_ERROR_KEY));
+  } else {
+    const err: BaiduPushError = { at: now, status: summary.status, message: summary.message, submitted: summary.submitted, remain: summary.remain };
+    console.error("baidu push failed", JSON.stringify(err));
+    writes.push(kv.put(BAIDU_LAST_ERROR_KEY, JSON.stringify(err)));
+  }
+  await Promise.all(writes);
 }
 
 export default {
@@ -2149,6 +2196,7 @@ export default {
     ctx.waitUntil(env.CACHE?.put("cron:last", String(Date.now())) ?? Promise.resolve());
     ctx.waitUntil(runMonitorSweep(env));
     ctx.waitUntil(pingIndexNow(env));
+    ctx.waitUntil(pushBaidu(env));
     ctx.waitUntil(refreshPricesIfStale(env.CACHE, PRICES_CACHE_CFG));
   },
 };

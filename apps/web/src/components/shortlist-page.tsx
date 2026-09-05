@@ -13,6 +13,7 @@ import { downloadText } from "@/lib/export";
 import { useI18n, type TFunc } from "@/lib/i18n";
 import { priceFull, priceShort, toUsd, usePrices, type PriceMap } from "@/lib/prices";
 import { primaryRegistrar } from "@/lib/registrars";
+import { copyText } from "@/lib/clipboard";
 import { exportResultsCsv } from "@/lib/results-export";
 import { addMyShare, loadMyShares, removeMyShare, type MyShare } from "@/lib/my-shares";
 import { NOTE_MAX_LENGTH, type RecheckResult, type ShortlistItem } from "@/lib/shortlist";
@@ -219,11 +220,10 @@ export function ShortlistPage({
   const [deleteError, setDeleteError] = useState("");
 
   async function copyShareUrl(record: MyShare) {
-    try {
-      await navigator.clipboard.writeText(record.url);
-      setShareCopiedId(record.id);
-      setTimeout(() => setShareCopiedId((cur) => (cur === record.id ? "" : cur)), 2000);
-    } catch { /* 剪贴板不可用时链接仍可手动选中 */ }
+    // 剪贴板不可用时链接仍可手动选中
+    if (!(await copyText(record.url))) return;
+    setShareCopiedId(record.id);
+    setTimeout(() => setShareCopiedId((cur) => (cur === record.id ? "" : cur)), 2000);
   }
 
   async function deleteShare(record: MyShare) {
@@ -307,17 +307,17 @@ export function ShortlistPage({
       const res = await fetch("/api/share", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ items: items.map(({ domain, meaning, scores }) => ({ domain, meaning, scores })) }),
+        body: JSON.stringify({ items: items.map(({ domain, meaning, scores, status }) => ({ domain, meaning, scores, status: status === "checking" ? undefined : status })) }),
       });
       if (!res.ok) throw new Error(String(res.status));
       const { id, url, revokeToken } = (await res.json()) as { id: string; url: string; revokeToken?: string };
       setShareUrl(url);
       setMyShares(addMyShare({ id, url, createdAt: Date.now(), count: items.length, token: revokeToken }));
-      try {
-        await navigator.clipboard.writeText(url);
+      // 剪贴板不可用时仍展示链接
+      if (await copyText(url)) {
         setShareCopied(true);
         setTimeout(() => setShareCopied(false), 2000);
-      } catch { /* 剪贴板不可用时仍展示链接 */ }
+      }
     } catch {
       setShareError(t("shortlist.shareFailed"));
     } finally {

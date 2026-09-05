@@ -118,13 +118,13 @@ export function PricesPage() {
               {r.live ? "" : "≈"}${r.reg}
               <span className="tnum ml-1 hidden text-[11px] text-txt2 sm:inline">¥{r.cnyReg ?? toCny(r.reg)}</span>
             </span>
-            <span className="tnum flex items-center gap-1.5 font-mono text-sm text-txt1">
-              <span>
+            <span className="tnum flex flex-wrap items-center gap-x-1.5 gap-y-0 font-mono text-sm text-txt1">
+              <span className="whitespace-nowrap">
                 {r.live ? "" : "≈"}${r.renew}
                 <span className="tnum ml-1 hidden text-[11px] text-txt2 sm:inline">¥{r.cnyRenew ?? toCny(r.renew)}</span>
               </span>
               {r.renew >= r.reg * 3 && r.reg > 0 && (
-                <span title={t("prices.trapTip")} className="rounded bg-amber-500/15 px-1 py-0.5 font-sans text-[10px] font-semibold text-amber-500">
+                <span title={t("prices.trapTip")} className="whitespace-nowrap rounded bg-amber2-dim px-1 py-0.5 font-sans text-[10px] font-semibold text-amber2">
                   {t("prices.trap")}
                 </span>
               )}

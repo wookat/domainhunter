@@ -1,0 +1,114 @@
+{
+  "light /": {
+    "htmlClass": "light",
+    "violations": []
+  },
+  "light /tld/cn": {
+    "htmlClass": "light",
+    "violations": []
+  },
+  "light /guide/cn-realname": {
+    "htmlClass": "light",
+    "violations": []
+  },
+  "light /prices": {
+    "htmlClass": "light",
+    "violations": []
+  },
+  "light /why": {
+    "htmlClass": "light",
+    "violations": []
+  },
+  "light /mcp": {
+    "htmlClass": "light",
+    "violations": [
+      {
+        "id": "scrollable-region-focusable",
+        "impact": "serious",
+        "n": 3,
+        "sample": [
+          {
+            "target": ".relative.mt-3:nth-child(13) > pre",
+            "msg": "Element should have focusable content"
+          },
+          {
+            "target": ".relative.mt-3:nth-child(14) > pre",
+            "msg": "Element should have focusable content"
+          },
+          {
+            "target": ".relative.mt-3:nth-child(16) > pre",
+            "msg": "Element should have focusable content"
+          }
+        ]
+      }
+    ]
+  },
+  "light /advanced": {
+    "htmlClass": "light",
+    "violations": []
+  },
+  "light /tld": {
+    "htmlClass": "light",
+    "violations": []
+  },
+  "light /shortlist": {
+    "htmlClass": "light",
+    "violations": []
+  },
+  "dark /": {
+    "htmlClass": "",
+    "violations": []
+  },
+  "dark /tld/cn": {
+    "htmlClass": "",
+    "violations": []
+  },
+  "dark /guide/cn-realname": {
+    "htmlClass": "",
+    "violations": []
+  },
+  "dark /prices": {
+    "htmlClass": "",
+    "violations": []
+  },
+  "dark /why": {
+    "htmlClass": "",
+    "violations": []
+  },
+  "dark /mcp": {
+    "htmlClass": "",
+    "violations": [
+      {
+        "id": "scrollable-region-focusable",
+        "impact": "serious",
+        "n": 3,
+        "sample": [
+          {
+            "target": ".relative.mt-3:nth-child(13) > pre",
+            "msg": "Element should have focusable content"
+          },
+          {
+            "target": ".relative.mt-3:nth-child(14) > pre",
+            "msg": "Element should have focusable content"
+          },
+          {
+            "target": ".relative.mt-3:nth-child(16) > pre",
+            "msg": "Element should have focusable content"
+          }
+        ]
+      }
+    ]
+  },
+  "dark /advanced": {
+    "htmlClass": "",
+    "violations": []
+  },
+  "dark /tld": {
+    "htmlClass": "",
+    "violations": []
+  },
+  "dark /shortlist": {
+    "htmlClass": "",
+    "violations": []
+  }
+}
