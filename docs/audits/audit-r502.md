@@ -234,4 +234,4 @@
 - `pnpm --filter web test` ✓ 18 文件 / 189 用例全过
 - `pnpm --filter web build` ✓（5.4s，仅既有 chunk 体积提示）
 - `node scripts/check-content-counts.mjs` ✓ 408/410/444 与事实源一致
-- 变更范围：`docs/audits/audit-r502.md`、`docs/audits/r502/`（9 个证据文件）、`docs/audits/screenshots-r502/`（20 张）；`git status` 无源码改动
+- 变更范围：`docs/audits/audit-r502.md`、`docs/audits/r502/`（8 个证据文件）、`docs/audits/screenshots-r502/`（20 张）；`git status` 无源码改动
