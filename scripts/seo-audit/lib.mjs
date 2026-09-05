@@ -6,7 +6,8 @@ export const PROD_ORIGIN = "https://hunt.zalize.com";
 /** 实际抓取的 origin：默认生产；本地验收时 SEO_AUDIT_ORIGIN=http://127.0.0.1:8787 指向 wrangler dev */
 export const SITE_ORIGIN = (process.env.SEO_AUDIT_ORIGIN ?? PROD_ORIGIN).replace(/\/$/, "");
 // UA 含 "SiteAuditBot" → 被 worker pageviews.ts 归入 botsBy.other，不污染人类 pageviews；含 "Mozilla/5.0" 前缀避免 Cloudflare 对裸 curl UA 的 403。
-export const UA = "Mozilla/5.0 (compatible; DomainHunterSeoAudit/1.0; +https://github.com/wookat/domainhunter) SiteAuditBot";
+// SEO_AUDIT_UA 可覆盖（如 R512 用 "DomainHunter-audit/…"），仍需保留 SiteAuditBot 标记。
+export const UA = process.env.SEO_AUDIT_UA ?? "Mozilla/5.0 (compatible; DomainHunterSeoAudit/1.0; +https://github.com/wookat/domainhunter) SiteAuditBot";
 
 /** 可复现的伪随机数（mulberry32），同一 seed 抽同一批样本 */
 export function rng(seed) {
