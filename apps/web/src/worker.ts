@@ -23,7 +23,7 @@ import { isRegistrarId, parseAffiliateJson, type RegistrarId } from "./lib/regis
 import { generateRuleCandidates, LLM_BREAKER_KEY, LLM_BREAKER_TTL_S, type FallbackReason } from "./rule-fallback";
 import { tldPrice } from "./types";
 import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
-import { DOMAIN_RE, sanitizeShareItem, shareSsrTitle, type ShareItem } from "./share-items";
+import { DOMAIN_RE, sanitizeShareItem, shareGoneMeta, shareShellState, shareSsrTitle, type ShareItem } from "./share-items";
 import { sitemapLastmod } from "./sitemap-lastmod";
 import { parseVariantName } from "./mcp-args";
 import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
@@ -1193,20 +1193,17 @@ app.get("/api/usage", async (c) => {
 });
 
 // SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）
+// 已撤销 / 不存在的 id 与 /api/share/:id 同状态码（410 / 404）+ noindex + 中性 title，SPA 壳照常渲染前端的撤销/不存在态
 app.get("/s/:id", async (c) => {
   const id = c.req.param("id");
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  if (!/^[\w-]{1,32}$/.test(id)) return res;
   let html = await res.text();
-  const pageUrl = `${SITE_ORIGIN}/s/${id}`;
-  // 微信/IM 无 JS-SDK 时卡片标题取 <title>，这里按快照写成「N 个候选」而非首页长标题
-  const snapshot = c.env.CACHE ? await c.env.CACHE.get<ShareSnapshotStored>(`share:${id}`, "json") : null;
-  const items = snapshot && !snapshot.revoked && Array.isArray(snapshot.items) ? snapshot.items : [];
-  if (items.length > 0) {
-    const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
-    const preview = items.slice(0, 3).map((it) => it.domain).join(lang === "en" ? ", " : "、") + (items.length > 3 ? (lang === "en" ? " …" : " 等") : "");
-    const title = escapeHtml(shareSsrTitle(items, lang));
-    const desc = escapeHtml(lang === "en" ? `${preview} — shared from DomainHunter, re-check availability before registering` : `${preview} —— 来自 DomainHunter 的候选清单，注册前请重新核验`);
+  const idValid = /^[\w-]{1,32}$/.test(id);
+  const pageUrl = `${SITE_ORIGIN}/s/${idValid ? id : ""}`;
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  const snapshot = idValid && c.env.CACHE ? await c.env.CACHE.get<ShareSnapshotStored>(`share:${id}`, "json") : null;
+  const state = shareShellState(idValid, snapshot);
+  const setMeta = (title: string, desc: string): void => {
     html = html
       .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
       .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
@@ -1214,7 +1211,23 @@ app.get("/s/:id", async (c) => {
       .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
       .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
       .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`);
+  };
+  if (state !== "ready") {
+    const gone = shareGoneMeta(state, lang);
+    setMeta(escapeHtml(gone.title), escapeHtml(gone.desc));
+    html = html
+      .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${pageUrl}" />`)
+      .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${pageUrl}" />`)
+      .replace("</head>", `<meta name="robots" content="noindex" /></head>`);
+    return new Response(html, { status: gone.status, headers: { "content-type": "text/html; charset=utf-8" } });
   }
+  const items = snapshot!.items!;
+  // 微信/IM 无 JS-SDK 时卡片标题取 <title>，这里按快照写成「N 个候选」而非首页长标题
+  const preview = items.slice(0, 3).map((it) => it.domain).join(lang === "en" ? ", " : "、") + (items.length > 3 ? (lang === "en" ? " …" : " 等") : "");
+  setMeta(
+    escapeHtml(shareSsrTitle(items, lang)),
+    escapeHtml(lang === "en" ? `${preview} — shared from DomainHunter, re-check availability before registering` : `${preview} —— 来自 DomainHunter 的候选清单，注册前请重新核验`),
+  );
   html = html
     .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${pageUrl}" />`)
     .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${pageUrl}" />`)

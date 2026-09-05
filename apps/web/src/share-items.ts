@@ -35,6 +35,37 @@ export function sanitizeShareItem(raw: unknown): ShareItem | null {
   return item;
 }
 
+/** `/s/:id` SSR 壳的三种状态：有效快照 / 已撤销（KV 留 `{revoked:true}` 占位）/ 不存在或已过期（含非法 id） */
+export type ShareShellState = "ready" | "revoked" | "notFound";
+
+export function shareShellState(idValid: boolean, snapshot: { revoked?: boolean; items?: unknown } | null | undefined): ShareShellState {
+  if (!idValid || !snapshot) return "notFound";
+  if (snapshot.revoked) return "revoked";
+  return Array.isArray(snapshot.items) && snapshot.items.length > 0 ? "ready" : "notFound";
+}
+
+const SHARE_GONE_META = {
+  revoked: {
+    status: 410,
+    zh: { title: "分享已撤销 | DomainHunter", desc: "链接已失效：分享者已删除这份清单。" },
+    en: { title: "This share has been revoked | DomainHunter", desc: "This link is no longer active — the owner deleted this shortlist." },
+  },
+  notFound: {
+    status: 404,
+    zh: { title: "分享不存在或已过期 | DomainHunter", desc: "分享链接不存在或已过期（快照保留 30 天）。" },
+    en: { title: "Share not found or expired | DomainHunter", desc: "This share link doesn't exist or has expired (snapshots last 30 days)." },
+  },
+} as const;
+
+/**
+ * 撤销 / 不存在的分享壳：与 `GET /api/share/:id` 同状态码（410 / 404）+ noindex，
+ * title/描述用中性文案而不是首页长标题，避免爬虫把失效链接当成首页副本收录。
+ */
+export function shareGoneMeta(state: Exclude<ShareShellState, "ready">, lang: "zh" | "en"): { status: 410 | 404; title: string; desc: string } {
+  const m = SHARE_GONE_META[state];
+  return { status: m.status, ...m[lang] };
+}
+
 /**
  * 分享页 <title>/og:title：只有当每条都带 status 且全部 available 时才说「可注册」，
  * 否则用中性的「候选域名」——旧快照无 status，不能把已注册域名也标成可注册。
