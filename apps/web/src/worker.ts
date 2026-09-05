@@ -1163,6 +1163,7 @@ app.get("/api/usage", async (c) => {
   }
   let cronLast: number | null = null;
   let indexnowLast: number | null = null;
+  let indexnowLastAttempt: number | null = null;
   let indexnowLastError: IndexNowError | null = null;
   let indexnowPending: number | null = null;
   let pricesLastOk: number | null = null;
@@ -1170,9 +1171,10 @@ app.get("/api/usage", async (c) => {
   let baiduLast: number | null = null;
   let baiduLastError: BaiduPushError | null = null;
   try {
-    const [cl, il, ie, ip, po, pf, bl, be] = await Promise.all([
+    const [cl, il, ia, ie, ip, po, pf, bl, be] = await Promise.all([
       kv?.get("cron:last"),
       kv?.get(INDEXNOW_LAST_KEY),
+      kv?.get(INDEXNOW_LAST_ATTEMPT_KEY),
       kv?.get<IndexNowError>(INDEXNOW_LAST_ERROR_KEY, "json"),
       kv?.get<IndexNowPushed>(INDEXNOW_PUSHED_KEY, "json"),
       kv?.get(PRICES_LAST_OK_KEY),
@@ -1182,6 +1184,7 @@ app.get("/api/usage", async (c) => {
     ]);
     cronLast = cl ? Number(cl) : null;
     indexnowLast = il ? Number(il) : null;
+    indexnowLastAttempt = ia ? Number(ia) : null;
     indexnowLastError = ie ?? null;
     if (kv) indexnowPending = indexNowDelta(ip ?? null, sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`), CONTENT_LASTMOD).length;
     pricesLastOk = po ? Number(po) : null;
@@ -1189,7 +1192,7 @@ app.get("/api/usage", async (c) => {
     baiduLast = bl ? Number(bl) : null;
     baiduLastError = be ?? null;
   } catch { /* 读失败返回 null */ }
-  return c.json({ days: out, cronLast, indexnowLast, indexnowLastError, indexnowPending, pricesLastOk, pricesLastFail, baiduLast, baiduLastError }, 200, { "cache-control": "public, max-age=300" });
+  return c.json({ days: out, cronLast, indexnowLast, indexnowLastAttempt, indexnowLastError, indexnowPending, pricesLastOk, pricesLastFail, baiduLast, baiduLastError }, 200, { "cache-control": "public, max-age=300" });
 });
 
 // SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）
@@ -2074,10 +2077,12 @@ app.all("*", async (c) => {
 // indexnow:pushed = 最近一次成功推送时的 { lastmod, urls } 快照——协议要求只在 URL 新增/更新/删除时提交，
 // 所以每日只推快照之外的新 URL，CONTENT_LASTMOD 变化时才全量重推；无增量则只刷新 indexnow:last，不发请求。
 // 分批/状态码语义见 indexnow.ts：每次 cron 最多推 3×100 URL，成功批次逐批并入快照，积压未清时不写 indexnow:last，
-// 由 lastAttempt 的 6h 门在下次 cron 继续（全站 ~1.3k URL 首次全量约 5 次 cron 推完）。
+// 由 lastAttempt 的冷却门在下次 cron 继续（全站 ~1.3k URL 首次全量约 5 次 cron 推完）。
+// 冷却/间隔都比 cron 周期（6h / 4×6h）短 1h：lastAttempt 写的是上次 cron 触发时刻，cron 触发有毫秒级抖动，
+// 门槛若正好等于周期，下一次 cron 会以几十毫秒之差被判「未到期」而整轮跳过。
 const INDEXNOW_KEY = "024aa6c6f88245bbacdac2f60a94e333";
-const INDEXNOW_INTERVAL_MS = 24 * 3600 * 1000;
-const INDEXNOW_RETRY_MS = 6 * 3600 * 1000;
+const INDEXNOW_INTERVAL_MS = 23 * 3600 * 1000;
+const INDEXNOW_RETRY_MS = 5 * 3600 * 1000;
 const INDEXNOW_LAST_KEY = "indexnow:last";
 const INDEXNOW_LAST_ATTEMPT_KEY = "indexnow:lastAttempt";
 const INDEXNOW_LAST_ERROR_KEY = "indexnow:lastError";
@@ -2124,7 +2129,7 @@ async function pingIndexNow(env: Bindings): Promise<void> {
   const writes: Promise<unknown>[] = [];
   if (accepted.length > 0) writes.push(kv.put(INDEXNOW_PUSHED_KEY, JSON.stringify(snapshot)));
   if (summary.ok) {
-    // 本次全部批次成功：积压清零才算「今日已推送」，否则只靠 lastAttempt 的 6h 门在下次 cron 继续推
+    // 本次全部批次成功：积压清零才算「今日已推送」，否则只靠 lastAttempt 的冷却门在下次 cron 继续推
     if (snapshot.urls.length >= all.length) writes.push(kv.put(INDEXNOW_LAST_KEY, String(now)));
     writes.push(kv.delete(INDEXNOW_LAST_ERROR_KEY));
     await Promise.all(writes);
@@ -2137,12 +2142,12 @@ async function pingIndexNow(env: Bindings): Promise<void> {
 }
 
 // 百度普通收录 API 推送（R485）：仅在 BAIDU_PUSH_SITE + BAIDU_PUSH_TOKEN 都配置时运行，否则不读写任何 KV。
-// 状态键：baidu:last = 最近一次成功（200）；baidu:lastAttempt = 最近一次尝试（6h 冷却）；baidu:lastError = 最近失败详情（成功后清除）；
+// 状态键：baidu:last = 最近一次成功（200）；baidu:lastAttempt = 最近一次尝试（冷却门，同 IndexNow 比 cron 周期短 1h）；baidu:lastError = 最近失败详情（成功后清除）；
 // baidu:pushed = 已被百度计为成功的 URL 列表（仅保留仍在 sitemap 中的）。
 // 配额策略：官方每日配额按站点动态分配且重推旧 URL 会被降配额，所以每 24h 只推尚未成功推送过的 URL（新增内容页自然进入队列），
 // 按 sitemapPaths 优先级顺序取前 dailyMax 条（默认 2000 = 单次接口上限，可用 BAIDU_PUSH_DAILY_MAX 按站长平台显示的配额收紧）。
-const BAIDU_INTERVAL_MS = 24 * 3600 * 1000;
-const BAIDU_RETRY_MS = 6 * 3600 * 1000;
+const BAIDU_INTERVAL_MS = 23 * 3600 * 1000;
+const BAIDU_RETRY_MS = 5 * 3600 * 1000;
 const BAIDU_LAST_KEY = "baidu:last";
 const BAIDU_LAST_ATTEMPT_KEY = "baidu:lastAttempt";
 const BAIDU_LAST_ERROR_KEY = "baidu:lastError";
