@@ -55,9 +55,9 @@ export function exportResultsCsv(rows: ResultsCsvRow[], lang: "zh" | "en", price
 
 export type CopyRow = Pick<Row, "domain"> & Partial<Pick<Row, "tld">>;
 
-/** 聊天友好的可注册清单：一行一个「域名 · 状态 · 首年价」，方便直接粘贴到微信群 */
-export function buildAvailableText(rows: CopyRow[], lang: "zh" | "en", prices: PriceMap | null, t: TFunc): string {
-  const status = t("status.available");
+/** 聊天友好的可注册清单：一行一个「域名 · 状态 · 首年价」，方便直接粘贴到微信群；statusText 传 "" 则不带状态（如旧分享快照无核验状态） */
+export function buildAvailableText(rows: CopyRow[], lang: "zh" | "en", prices: PriceMap | null, t: TFunc, statusText?: string): string {
+  const status = statusText ?? t("status.available");
   return rows
     .map((r) => {
       const price = priceShort(r.tld ?? r.domain.slice(r.domain.indexOf(".") + 1), lang, prices);
@@ -71,8 +71,8 @@ export function useCopyAvailable() {
   const { lang, t } = useI18n();
   const prices = usePrices();
   const [state, setState] = useState<"idle" | "copied" | "failed">("idle");
-  const copy = async (rows: CopyRow[]) => {
-    const ok = await copyText(buildAvailableText(rows, lang, prices, t));
+  const copy = async (rows: CopyRow[], statusText?: string) => {
+    const ok = await copyText(buildAvailableText(rows, lang, prices, t, statusText));
     setState(ok ? "copied" : "failed");
     setTimeout(() => setState("idle"), ok ? 1500 : 2500);
   };

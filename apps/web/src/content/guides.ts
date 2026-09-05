@@ -53,6 +53,8 @@ export interface IndustryGuide {
   slug: string;
   /** 指南类型：缺省为行业命名指南；"compliance" 为 .cn 合规/流程指南 */
   kind?: "compliance";
+  /** 内容最近更新日（YYYY-MM-DD），用于 sitemap <lastmod>；缺省沿用全站 CONTENT_LASTMOD */
+  updatedAt?: string;
   /** hub 即时过滤的同义搜索词（zh/en 混排，如 日料餐厅→寿司）；仅参与 /guide hub 过滤匹配，不渲染 */
   keywords?: string[];
   /** 推荐 TLD（链接到 /tld/:tld），reason 按语言 */

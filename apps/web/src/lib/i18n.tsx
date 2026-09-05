@@ -340,6 +340,8 @@ const zh = {
   // 分享页
   "share.title": "候选域名清单",
   "share.subtitle": "由 DomainHunter 用户分享 · 快照生成于 {time} · 状态以实时核验为准",
+  "share.copyAllBtn": "复制 {n} 个域名",
+  "share.noStatus": "此快照未记录核验状态，注册前请重新查询",
   "share.cta": "我也要猎名",
   "share.ctaDesc": "说出你的想法，AI 批量构思并实时核验，只给你能注册的好域名。",
   "share.loading": "加载中…",
@@ -811,6 +813,8 @@ const en: Record<I18nKey, string> = {
   "meta.title": HOME_META.en.title,
   "share.title": "Shared domain shortlist",
   "share.subtitle": "Shared by a DomainHunter user · snapshot from {time} · re-check availability before registering",
+  "share.copyAllBtn": "Copy {n} domains",
+  "share.noStatus": "This snapshot has no availability status recorded — re-check before registering",
   "share.cta": "Hunt my own domains",
   "share.ctaDesc": "Describe your idea — AI brainstorms names and verifies them live, showing only what you can register.",
   "share.loading": "Loading…",

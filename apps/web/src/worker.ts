@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { nanoid } from "nanoid";
-import { generateCandidates, normalizeLabel, checkDomains, type CheckResult } from "@domainhunter/core";
+import { generateCandidates, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
 import { AI_THEMES, classifyAiError, descriptionLooksEnglish, generateAiCandidates, generateUnderstanding, isLowYield, newGuardStats, newWordSupplementBudget, type AiCandidate, type AiErrorKind, type AiTheme, type DislikedItem } from "./ai";
 import { resolveFallbackUpstream, type LlmProvider } from "./ai-transport";
@@ -23,6 +23,9 @@ import { isRegistrarId, parseAffiliateJson, type RegistrarId } from "./lib/regis
 import { generateRuleCandidates, LLM_BREAKER_KEY, LLM_BREAKER_TTL_S, type FallbackReason } from "./rule-fallback";
 import { tldPrice } from "./types";
 import { putShareVerified, SHARE_WRITE_MAX_IDS } from "./share-write";
+import { DOMAIN_RE, sanitizeShareItem, shareSsrTitle, type ShareItem } from "./share-items";
+import { sitemapLastmod } from "./sitemap-lastmod";
+import { parseVariantName } from "./mcp-args";
 import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
 import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
 import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
@@ -117,7 +120,6 @@ const FAST_FIRST_ROUND_COUNT = 8; // fast 模式首轮候选数（更快首字�
 const AI_CHECK_PARALLEL_CANDIDATES = 3;
 /** R471：触发规则降级的首轮错误类别；unknown 不降级（语义不明，保留原 error 事件） */
 const FALLBACK_ERROR_KINDS: ReadonlySet<AiErrorKind> = new Set<AiErrorKind>(["quota", "rate-limit", "upstream", "network"]);
-const DOMAIN_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62}))+$/;
 
 /** 累计核验计数（KV 非原子，允许少量误差） */
 async function bumpStats(kv: KVNamespace | undefined, n: number): Promise<void> {
@@ -235,33 +237,6 @@ function boundedQueue(limit: number) {
     await Promise.all(inflight);
   };
   return { run, drain };
-}
-
-interface ShareItem {
-  domain: string;
-  label: string;
-  tld: string;
-  meaning?: string;
-  scores?: { length: number; readability: number; relevance: number; brandability: number };
-}
-
-function sanitizeShareItem(raw: unknown): ShareItem | null {
-  if (typeof raw !== "object" || raw === null) return null;
-  const o = raw as Record<string, unknown>;
-  const domain = typeof o.domain === "string" ? o.domain.trim().toLowerCase() : "";
-  if (!DOMAIN_RE.test(domain) || domain.length > 253) return null;
-  const dot = domain.indexOf(".");
-  const item: ShareItem = { domain, label: domain.slice(0, dot), tld: domain.slice(dot + 1) };
-  if (typeof o.meaning === "string" && o.meaning) item.meaning = o.meaning.slice(0, 300);
-  const s = o.scores as Record<string, unknown> | undefined;
-  if (s && typeof s === "object") {
-    const num = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? Math.min(Math.max(Math.round(v), 0), 100) : null);
-    const length = num(s.length), readability = num(s.readability), relevance = num(s.relevance), brandability = num(s.brandability);
-    if (length !== null && readability !== null && relevance !== null && brandability !== null) {
-      item.scores = { length, readability, relevance, brandability };
-    }
-  }
-  return item;
 }
 
 function genSyncCode(): string {
@@ -1034,8 +1009,9 @@ app.post("/mcp", async (c) => {
   }
 
   if (toolName === "suggest_variants") {
-    const name = normalizeLabel(String(args.name ?? ""));
-    if (!name || name.length < 2) return mcpText(id, "invalid name: pass a bare label of 2+ chars like acme (no TLD)", true);
+    const parsed = parseVariantName(args.name);
+    if (!parsed.ok) return mcpText(id, parsed.error, true);
+    const name = parsed.name;
     const rawTlds = Array.isArray(args.tlds) && args.tlds.length > 0 ? args.tlds : ["com"];
     const tlds: string[] = [];
     for (const raw of rawTlds) {
@@ -1229,7 +1205,7 @@ app.get("/s/:id", async (c) => {
   if (items.length > 0) {
     const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
     const preview = items.slice(0, 3).map((it) => it.domain).join(lang === "en" ? ", " : "、") + (items.length > 3 ? (lang === "en" ? " …" : " 等") : "");
-    const title = escapeHtml(lang === "en" ? `${items.length} available domain candidates | DomainHunter` : `${items.length} 个可注册域名候选 | DomainHunter`);
+    const title = escapeHtml(shareSsrTitle(items, lang));
     const desc = escapeHtml(lang === "en" ? `${preview} — shared from DomainHunter, re-check availability before registering` : `${preview} —— 来自 DomainHunter 的候选清单，注册前请重新核验`);
     html = html
       .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
@@ -2007,7 +1983,7 @@ app.get("/sitemap.xml", (c) => {
       `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_ORIGIN}${p}" />`,
     ].join("\n");
   const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${paths
-    .map((p) => `  <url>\n    <loc>${SITE_ORIGIN}${p}</loc>\n    <lastmod>${CONTENT_LASTMOD}</lastmod>\n${alt(p)}\n  </url>`)
+    .map((p) => `  <url>\n    <loc>${SITE_ORIGIN}${p}</loc>\n    <lastmod>${sitemapLastmod(p, CONTENT_LASTMOD)}</lastmod>\n${alt(p)}\n  </url>`)
     .join("\n")}\n</urlset>\n`;
   return new Response(body, { headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=86400" } });
 });

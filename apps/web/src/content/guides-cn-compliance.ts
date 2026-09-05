@@ -36,6 +36,7 @@ export const CN_COMPLIANCE_GUIDES: Record<string, IndustryGuide> = {
   "cn-realname": {
     slug: "cn-realname",
     kind: "compliance",
+    updatedAt: "2026-09-04",
     keywords: ["实名认证", "实名", "real-name", "CNNIC", "材料"],
     tlds: [CN_TLD],
     zh: {
@@ -177,6 +178,7 @@ export const CN_COMPLIANCE_GUIDES: Record<string, IndustryGuide> = {
   "cn-serverhold": {
     slug: "cn-serverhold",
     kind: "compliance",
+    updatedAt: "2026-09-04",
     keywords: ["serverHold", "serverhold", "clientHold", "暂停解析", "无法访问"],
     tlds: [CN_TLD],
     zh: {
@@ -300,6 +302,7 @@ export const CN_COMPLIANCE_GUIDES: Record<string, IndustryGuide> = {
   "cn-icp-beian": {
     slug: "cn-icp-beian",
     kind: "compliance",
+    updatedAt: "2026-09-04",
     keywords: ["ICP 备案", "备案", "接入商", "备案主体", "工信部", "ICP filing"],
     tlds: [CN_TLD],
     zh: {
@@ -429,6 +432,7 @@ export const CN_COMPLIANCE_GUIDES: Record<string, IndustryGuide> = {
   "cn-dns-inland-vs-overseas": {
     slug: "cn-dns-inland-vs-overseas",
     kind: "compliance",
+    updatedAt: "2026-09-04",
     keywords: ["境内解析", "境外解析", "香港服务器", "不备案", "DNS", "overseas hosting"],
     tlds: [CN_TLD],
     zh: {
@@ -550,6 +554,7 @@ export const CN_COMPLIANCE_GUIDES: Record<string, IndustryGuide> = {
   "cn-vs-comcn-registrar": {
     slug: "cn-vs-comcn-registrar",
     kind: "compliance",
+    updatedAt: "2026-09-04",
     keywords: ["com.cn", ".cn 还是 .com.cn", "注册商", "阿里云", "腾讯云", "西部数码", "海外注册商", "个人注册", "企业注册"],
     tlds: [CN_TLD],
     zh: {
@@ -673,6 +678,7 @@ export const CN_COMPLIANCE_GUIDES: Record<string, IndustryGuide> = {
   "cn-expiry-redemption": {
     slug: "cn-expiry-redemption",
     kind: "compliance",
+    updatedAt: "2026-09-04",
     keywords: ["过期", "赎回期", "续费宽限期", "删除", "重新注册", "抢注", "redemption", "grace period"],
     tlds: [CN_TLD],
     zh: {
