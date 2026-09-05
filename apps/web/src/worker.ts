@@ -30,7 +30,7 @@ import { PageviewCounter, readDayPageviews, type DayPageviews } from "./pageview
 import { emptyDayUsage, readDayUsage, usageCounterFor, type DayUsage } from "./usage-counter";
 import { INDEXNOW_BATCH_SIZE, INDEXNOW_ENDPOINT, INDEXNOW_RUN_MAX_BATCHES, acceptedUrls, indexNowDelta, mergePushed, submitIndexNow, summarizeIndexNow, type IndexNowPushed } from "./indexnow";
 import { pickPending, resolveBaiduPush, submitBaidu, summarizeBaidu, type BaiduPushVars } from "./baidu-push";
-import { injectHreflang, resolveLang, SITE_ORIGIN, withHtmlVary } from "./ssr-lang";
+import { injectHreflang, resolveLang, resolveSsrLang, SITE_ORIGIN, withHtmlVary } from "./ssr-lang";
 
 // LLM_API_BASE/LLM_MODEL：LLM 上游基地址与模型名。默认 DeepSeek 官方 + deepseek-chat；
 // 生产可指向 OpenAI 兼容网关（R460：电信 AI 网关），本地 wrangler dev 亦可指向假上游验证错误路径（R264）
@@ -1106,7 +1106,8 @@ app.get("/mcp", async (c) => {
     return new Response("method not allowed: POST JSON-RPC 2.0 (MCP Streamable HTTP, stateless)", { status: 405, headers: { allow: "POST" } });
   }
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = MCP_META[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.desc);
@@ -1124,7 +1125,7 @@ app.get("/mcp", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/mcp?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/mcp", lang).replace(
+  html = injectHreflang(html, "/mcp", sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/mcp", lang)}</script></head>`,
   );
@@ -1282,7 +1283,8 @@ const ADVANCED_META = {
 
 app.get("/advanced", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = ADVANCED_META[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.desc);
@@ -1300,7 +1302,7 @@ app.get("/advanced", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/advanced?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/advanced", lang);
+  html = injectHreflang(html, "/advanced", sl);
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/advanced-page.tsx", "full");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
@@ -1665,7 +1667,8 @@ app.get("/api/og/vs/:slug", (c) => {
 
 app.get("/", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
-  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   let html = await res.text();
   const m = HOME_META[lang];
   html = html
@@ -1682,7 +1685,7 @@ app.get("/", async (c) => {
     );
   }
   html = homeHeroSkeleton(html, lang);
-  html = injectHreflang(html, "/", lang).replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
+  html = injectHreflang(html, "/", sl).replace("</head>", `<script type="application/ld+json">${homeFaqJsonld(lang)}</script><script type="application/ld+json">${WEBSITE_JSONLD}</script></head>`);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/home-page.tsx", "full");
   html = setHtmlLang(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
@@ -1694,7 +1697,8 @@ app.get("/tld/:tld", async (c) => {
   const guide = TLD_GUIDES[tld];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
   if (!guide) return notFoundShell(res);
-  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = guide[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.metaDescription);
@@ -1721,7 +1725,7 @@ app.get("/tld/:tld", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, `/tld/${tld}`, lang).replace(
+  html = injectHreflang(html, `/tld/${tld}`, sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang, { name: hubCrumbLabel("tld", lang), path: "/tld" })}</script><script type="application/ld+json">${tldFaqJsonld}</script></head>`,
   );
@@ -1739,7 +1743,8 @@ app.get("/guide/:slug", async (c) => {
   const guide = INDUSTRY_GUIDES[slug];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
   if (!guide) return notFoundShell(res);
-  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = guide[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.metaDescription);
@@ -1766,7 +1771,7 @@ app.get("/guide/:slug", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, `/guide/${slug}`, lang).replace(
+  html = injectHreflang(html, `/guide/${slug}`, sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang, { name: hubCrumbLabel("guide", lang), path: "/guide" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${guideFaqJsonld}</script></head>`,
   );
@@ -1784,7 +1789,8 @@ app.get("/vs/:slug", async (c) => {
   const cmp = TLD_COMPARES[slug];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
   if (!cmp) return notFoundShell(res);
-  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = cmp[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.metaDescription);
@@ -1811,7 +1817,7 @@ app.get("/vs/:slug", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, `/vs/${slug}`, lang).replace(
+  html = injectHreflang(html, `/vs/${slug}`, sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang, { name: hubCrumbLabel("vs", lang), path: "/vs" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${cmpFaqJsonld}</script></head>`,
   );
@@ -1833,7 +1839,8 @@ const HUB_ENTRIES = {
 const serveHub = (kind: "tld" | "guide" | "vs") =>
   async (c: { env: Bindings; req: { raw: Request; url: string; query: (k: string) => string | undefined; header: (k: string) => string | undefined } }) => {
     const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-    const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+    const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+    const lang = sl.lang;
     const meta = HUB_META[kind][lang];
     const title = escapeHtml(`${meta.title} | DomainHunter`);
     const desc = escapeHtml(meta.desc);
@@ -1852,7 +1859,7 @@ const serveHub = (kind: "tld" | "guide" | "vs") =>
         /<meta property="og:image" content="[^"]*" \/>/,
         `<meta property="og:image" content="${SITE_ORIGIN}/api/og/hub/${kind}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
       );
-    html = injectHreflang(html, path, lang).replace(
+    html = injectHreflang(html, path, sl).replace(
       "</head>",
       `<script type="application/ld+json">${breadcrumbJsonld(meta.title, path, lang)}</script></head>`,
     );
@@ -1890,7 +1897,8 @@ const PRICES_KICKER_SVG =
 
 app.get("/prices", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = PRICES_META[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.desc);
@@ -1917,7 +1925,7 @@ app.get("/prices", async (c) => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   });
-  html = injectHreflang(html, "/prices", lang).replace(
+  html = injectHreflang(html, "/prices", sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/prices", lang)}</script><script type="application/ld+json">${pricesFaqJsonld}</script></head>`,
   );
@@ -1948,7 +1956,8 @@ const WHY_META = {
 
 app.get("/why", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
+  const lang = sl.lang;
   const loc = WHY_META[lang];
   const title = escapeHtml(`${loc.title} | DomainHunter`);
   const desc = escapeHtml(loc.desc);
@@ -1966,7 +1975,7 @@ app.get("/why", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/why?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  html = injectHreflang(html, "/why", lang).replace(
+  html = injectHreflang(html, "/why", sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, "/why", lang)}</script></head>`,
   );
