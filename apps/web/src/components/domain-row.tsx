@@ -203,6 +203,7 @@ export function WatchCta({
 }
 
 export function RegisterMenu({ domain, children }: { domain: string; children: React.ReactNode }) {
+  const { t } = useI18n();
   const prices = usePrices();
   const tld = tldOf(domain);
   return (
@@ -217,6 +218,7 @@ export function RegisterMenu({ domain, children }: { domain: string; children: R
                 <span className="flex items-center gap-2">
                   {r.name}
                   {live && <span className="tnum font-mono text-[11px] text-brand">${live.registration}</span>}
+                  {r.id === "dynadot" && <span className="text-[11px] text-txt2">{t("registrar.hint.dynadot")}</span>}
                 </span>
                 <ExternalLink className="h-3.5 w-3.5 text-txt2" />
               </RegistrarAnchor>

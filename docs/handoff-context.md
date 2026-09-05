@@ -161,7 +161,7 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 3. **AI 长期可靠性**：R494 一次 6 次窗口全走 primary，不等于长期稳定；继续看 `aiErrors.quota` 是否再现。
 4. **发帖**（Show HN 等，`docs/launch/launch-checklist.md`）：老板决策，前提 §8 P0 解决。
 5. 观察项：IndexNow 429 是否持续；Baiduspider 来访是否持续（`botsBy.baidu`）；`stale:true` 频率。
-6. 候选：新增 Dynadot/Spaceship 注册商（联盟 30%/25%）；`/guide` hub 标题分组文案。
+6. ~~候选：新增 Dynadot/Spaceship 注册商（联盟 30%/25%）~~ → R503 已调研并落地：**只加 Dynadot**（售 .cn/.com.cn、中文站、人民币/支付宝），Spaceship 不售 .cn 不加；Namecheap 实测不售 .cn 已从 .cn 菜单隐藏（`docs/research/registrar-affiliate.md` §4，老板待办第 9 项申请 Ambassador）；`/guide` hub 标题分组文案。
 
 ## 11. R231–R500 变化速览（详情看各轮 PR / `docs/research`）
 
