@@ -35,17 +35,17 @@ Cloudflare Workers + Hono（API/MCP/SSR/cron）· React 18 + TypeScript + Vite +
 - 本地跑 Worker：`apps/web` 下 `pnpm build && npx wrangler dev --port 8787`（细节与坑见 SKILL）。
 - Secrets 只走 `cd apps/web && npx wrangler secret put <NAME>`；`wrangler.jsonc` 只放公开 vars（当前仅 `REGISTRAR_AFFILIATE_JSON: "{}"`）。
 
-## 5. 当前实时服务状态（2026-09-05 15:10 UTC 实查）
+## 5. 当前实时服务状态（2026-09-05 16:05 UTC 实查）
 
 | 项 | 值 | 证据 |
 |---|---|---|
 | 线上地址 | https://hunt.zalize.com （自定义域）；Worker 直连 https://domainhunter.wookat520.workers.dev | 首页 200 |
-| 生产 Worker version | `0ab38935-f7f7-424e-86ca-9b1b89a03e33`（deployed 2026-09-05T14:52Z，含 R501–R509；前一版 `ae9644c1` 14:39Z 含 R507） | `npx wrangler deployments list`（apps/web） |
-| 对应代码 tip | `deploy/r192-r195` @ **326803e**（R509 .cn 参考价提交；#469 R507 / #470 R508 / #471 R506 已合并） | R509 零 AI 回归证据 https://github.com/wookat/domainhunter/pull/471#issuecomment-5552746476 ；R505 回归 https://github.com/wookat/domainhunter/pull/464#issuecomment-5552368944 |
+| 生产 Worker version | `ba3f417b-e061-4452-957e-a4e47c96ff6a`（deployed 2026-09-05T16:01Z，含 R501–R510；前一版 `0ab38935` 14:52Z 含 R501–R509） | `npx wrangler deployments list`（apps/web） |
+| 对应代码 tip | `deploy/r192-r195` @ **64e9f65**（#475 R510 合并提交；#473 R512 / #474 R511 为纯文档，树与部署一致） | R510 生产复验 https://github.com/wookat/domainhunter/pull/475#issuecomment-5553032616 ；R509 零 AI 回归 https://github.com/wookat/domainhunter/pull/471#issuecomment-5552746476 |
 | 内容计数 | **TLD 408 / 行业指南 410 / 对比页 444 / sitemap 1,270 URL**（1,262 内容页 + 8 静态页） | `scripts/content-counts.json` 与 `curl sitemap.xml?cb=` 逐类 grep 一致 |
 | cron 心跳 | `cronLast=2026-09-05T12:00:17Z`（每 6h） | `/api/usage` |
 | 价格 | `pricesLastOk=2026-09-04T12:00Z`，`/api/prices` 351 个 TLD 有 Porkbun 报价，非 stale | `/api/prices` |
-| IndexNow | 上次成功 2026-09-03T12:00Z；09-05 12:00Z cron 仍是旧代码（`lastError` 429/submitted 0，pending 1270）；**R504 分批修复 13:56Z 上线**，首个新代码 cron 09-05 18:00Z：期望 lastError 清空、pending→970，之后每 6h −300，~30h 归 0（**待核对**） | `/api/usage.indexnowPending/indexnowLastError` |
+| IndexNow | 上次成功 2026-09-03T12:00Z；09-05 12:00Z cron 仍是旧代码（`lastError` 429/submitted 0，pending 1270，16:05Z 复查未变）；**R504 分批修复 13:56Z 上线**，首个新代码 cron 09-05 18:00Z：期望 lastError 清空、pending→970，之后每 6h −300，~30h 归 0（**待核对**，见 §10 第 5 项） | `/api/usage.indexnowPending/indexnowLastError` |
 | 百度推送 | 未配置（`baiduLast=null`）；但 `botsBy.baidu=6`（Baiduspider 已自发来访，R485 调研时为 0） | `/api/usage` |
 | 验证 meta / analytics beacon | 首页 `<head>` 无 GSC/Bing/Baidu meta、无 cf-beacon | `curl -A Mozilla /` |
 | 注册商返佣 | `/api/registrars` = `{"affiliate":{}}`（纯链接） | — |
@@ -67,7 +67,7 @@ Cloudflare Workers + Hono（API/MCP/SSR/cron）· React 18 + TypeScript + Vite +
 | `/mcp` | mcp-page | MCP 文档（GET）；同路径 POST 是 MCP server |
 | `/tld` `/guide` `/vs` | hub 页 | 分组 chips 锚点导航（R415）+ `input[type=search]` 筛选 |
 | `/tld/:tld`（408） `/guide/:slug`（410，含 6 篇 `kind:"compliance"` .cn 合规指南 R483） `/vs/:slug`（444） | tld-page / guide-page / compare-page | 内容页；en 通过 `?lang=en` |
-| `/s/:id` | share-page | 分享快照只读页（壳永远 200，语义在 `/api/share/:id`） |
+| `/s/:id` | share-page | 分享快照只读页（R510 起壳与 `/api/share/:id` 同状态：存活 200 / 撤销 410 / 不存在 404，后两者 noindex） |
 
 SEO 页 worker 侧 SSR meta + hreflang + JSON-LD + 骨架 + CSS 内联；R486 起分享/首页 `<meta property="og:image">` 兜底 `/wx-share.png`（微信抓图）。
 
@@ -160,7 +160,9 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
    - **R500 被丢弃候选直证（已部署 version e0ead604，1 次授权 AI，留档 `docs/audits/r500/`）**：R496–R499 观察到 en 首搜 `meaningIncoherent` 丢弃 22/36（R494：5/17），当时**推断**是「X + Y: …」缺尾句谓语被误杀但无直接证据。R500（PR #463）补了审计专用、默认关闭的样本通道——请求体 `debugDropped: true` 时 guard 事件附带 `droppedSamples[{reason,label,meaning≤160 码点,theme,supplement?}]`（每轮每 reason ≤5、总 ≤20，前端不发不渲染、不入 `dh:lastSearch:v1`、不写 KV，默认 `newGuardStats()` 序列化与基线逐字节相同，vitest `ai-dropped-samples.test.ts` 8 条）；离线论证 `docs/research/dropped-observability.md`、`scripts/replay-r500-en-incoherent.mjs`。**生产取样结果（验证）**：同 description 复跑，采到 7 条 `meaningIncoherent` 样本，逐条回放 + 人工读 **7/7 忠实解释、0 沙拉**，分三类：① word 路线 meaning 描述词义不复述 label → 片段检查必失败（4/7：bushtit/vireo/tessellate/chronicle，与 R498 补发直接冲突——补发专出 word 而 word 最易被片段检查误杀）；② 谓语词表词形缺口（2/7：changelogist「evoking」不匹配 `evokes?`、logsmith「forged/like」不在表）；③ 「X + Y:」缺谓语（1/7：riffolio）——原推断成立但**不是主因**。另 `metaLanguage` 4 样本中 reflint/clearbrew 疑似误杀（未回放定位）。**`EN_PREDICATE_RE` 仍未改**；R50x 按三类分别在标注集 + 7 条生产样本 + 历史存活候选上给 P/R 后再动规则（方案见 `docs/audits/r500/README.md` 末节）。
 3. **AI 长期可靠性**：R494 一次 6 次窗口全走 primary，不等于长期稳定；继续看 `aiErrors.quota` 是否再现。
 4. **发帖**（Show HN 等，`docs/launch/launch-checklist.md`）：老板决策，前提 §8 P0 解决。
-5. 观察项：IndexNow 429 是否持续；Baiduspider 来访是否持续（`botsBy.baidu`）；`stale:true` 频率。
+5. 观察项：**R504 IndexNow 首个新代码 cron（09-05 18:00Z）结果尚未观测**——核对口径：`indexnowLastError` 是否清空/`at` 是否前进、`indexnowPending` 是否 1270→~970、`indexnowLast` 仅在全量覆盖后才前进（分批期间保持 09-03 不动是预期，不是故障）；Baiduspider 来访是否持续（`botsBy.baidu`）；`stale:true` 频率。
+5b. **R512 内容矩阵薄内容审计结论待产品决策**（`docs/audits/thin-content-audit-r512.md`，1262 页 zh/en 全抓取、同类页掩码 5-gram Jaccard 无 >0.5 对；不建议 noindex/合并）：建议顺序 ① `/tld` 去 FAQ/正文重复 + 80 个 ccTLD 页补注册局政策事实 ② 全站「全部页 chips」（占正文 47%–74%）缩为相关集 + hub 链接 ③ `/vs` 补组合专属数据（价差/到期分布） ④ `/guide` 暂不动。**未授权前不改内容页。**
+5c. **R511 零 AI 全站审计**（`docs/audits/audit-r511.md`，PR #474）：P0/P1/P2 无；3 个 P3 即 R510 所修（已上线复验通过）；R502 遗留 P2-1/P3-1~4 全部关闭；Lighthouse 8/8 SEO=100、a11y=100；R507 canonical 矩阵 20/20；sitemap 1270=1264+6。观察项：`indexnow:lastAttempt` 未透出 `/api/usage`（内部键，仅可观测性缺口）；R484 安全头观察不变。
 6. ~~候选：新增 Dynadot/Spaceship 注册商（联盟 30%/25%）~~ → R503 已调研并落地：**只加 Dynadot**（售 .cn/.com.cn、中文站、人民币/支付宝），Spaceship 不售 .cn 不加；Namecheap 实测不售 .cn 已从 .cn 菜单隐藏（`docs/research/registrar-affiliate.md` §4，老板待办第 9 项申请 Ambassador）；`/guide` hub 标题分组文案。
 
 ## 11. R231–R500 变化速览（详情看各轮 PR / `docs/research`）
@@ -190,6 +192,8 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 - **R508**（PR #470，R500 遗留）：`enMeaningIncoherent(label, meaning, {wordMetaphor, theme})` 三类误杀修法——theme=word 自称 real/dictionary word 放开片段检查、`EN_PREDICATE_RE` 扩词形族（evoke/echo/hint at/nods to/reminiscent…，**不加** like a/the 与 forge*）、`X + Y:` 子句含谓语才放行；`containsMetaLanguage` 的 blend 改 `enBlendIsRouteWord`（语音学名词/动词用法不算元词）。评估集 `scripts/fixtures/en-meaning-labels.json`（`build-en-meaning-labels.mjs` 复现），`scripts/verify-r508.mjs` ALL PASS；生产+夹具 P 63.2%→92.3%、沙拉召回 12/12 不变、忠实误杀 7/58→1/58。**生产 AI 复验未做**（DeepSeek 不可用）。
 - **R509**：`TLD_PRICES.cn` 29/39 → 33/38（与 com.cn 同源：腾讯云 33/38 vs 阿里云 38/42 取低，2026-09-05 抓取，注释含 URL）。生产：/prices ¥33/¥38、/tld/cn 价格卡、MCP `tld_prices` cn 4.58/5.28 approx。
 - **R510**（R509 生产回归的 3 个 P3，0 AI）：`prices-page.tsx` 续费列 `flex-wrap` + 金额/「续费↑」徽标 `whitespace-nowrap`（375px 徽标 23×64 竖排 → 24px 单行，行高 94→69 与 `.cv-row contain-intrinsic-size` 一致，Lighthouse mobile CLS 0）；`/s/:id` SSR 壳按 `shareShellState()` 分流——撤销（KV 留 `{revoked:true}`）→ **410**、不存在/过期/非法 id → **404**（沿 R230 品牌 404），两者加 `noindex` + `shareGoneMeta()` 中性双语 title/描述（`share-items.ts`），SPA 撤销/不存在 UI 不变，`share-shell.test.ts` 用假 ASSETS/KV 直接跑 worker；`hub-filter.tsx hubMatch()` 不带点的查询额外按「去点 + 词边界」比对（`com vs cn`/`com-vs-cn`/`comcn` 命中 `.com vs .cn`，`io vs ai` 不误中 `.studio vs .ai`），带点查询仍按原文（`.com` 不扩大到 com.cn），`hub-filter.test.ts` 覆盖 /vs /tld /guide。
+- **R511**（PR #474，纯文档）：零 AI 全站审计报告 + 证据 `docs/audits/r511/`、截图 `docs/audits/screenshots-r511/`；结论见 §10 5c。
+- **R512**（PR #473，纯文档 + 可复用脚本）：`scripts/seo-audit/thin-fetch.mjs`（zh/en 全站抓取，`SEO_AUDIT_UA`）/ `thin-analyze.mjs`（掩码 5-gram Jaccard、模板句、链接 chips 占比）→ `docs/audits/r512/{summary.json,pages.csv,nearest-pairs.csv,template-sentences.json,manual-sample.json}`；报告 `docs/audits/thin-content-audit-r512.md`；结论见 §10 5b。
 - **R495**：`main.tsx routeModule()` 对 /why /advanced /mcp 也等 chunk 就绪再挂载（R491 skeleton 在慢网下曾闪空 ~0.6s，节流帧捕获 3/3 复现→修后 0/3）；`i18n.tsx` 切换语言时同步 URL 显式 `?lang=`（否则 F5 回退到 URL 语言）。
 
 ## 12. 资源与凭证索引（只写名称，不写值）
