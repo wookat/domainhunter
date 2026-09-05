@@ -35,17 +35,17 @@ Cloudflare Workers + Hono（API/MCP/SSR/cron）· React 18 + TypeScript + Vite +
 - 本地跑 Worker：`apps/web` 下 `pnpm build && npx wrangler dev --port 8787`（细节与坑见 SKILL）。
 - Secrets 只走 `cd apps/web && npx wrangler secret put <NAME>`；`wrangler.jsonc` 只放公开 vars（当前仅 `REGISTRAR_AFFILIATE_JSON: "{}"`）。
 
-## 5. 当前实时服务状态（2026-09-05 14:10 UTC 实查）
+## 5. 当前实时服务状态（2026-09-05 15:10 UTC 实查）
 
 | 项 | 值 | 证据 |
 |---|---|---|
 | 线上地址 | https://hunt.zalize.com （自定义域）；Worker 直连 https://domainhunter.wookat520.workers.dev | 首页 200 |
-| 生产 Worker version | `0eff3305-6108-41a6-83e2-3ab28dade321`（deployed 2026-09-05T13:56Z，含 R501–R504） | `npx wrangler versions list`（apps/web） |
-| 对应代码 tip | `deploy/r192-r195` @ **0c3caf3**（#467 R504 合并提交；#464/#465/#466 已先合并） | R503 Dynadot 出现在 /shortlist .cn 菜单、`/api/usage.indexnowPending=1270` 生产实查；R505 回归证据 https://github.com/wookat/domainhunter/pull/464#issuecomment-5552368944 |
+| 生产 Worker version | `0ab38935-f7f7-424e-86ca-9b1b89a03e33`（deployed 2026-09-05T14:52Z，含 R501–R509；前一版 `ae9644c1` 14:39Z 含 R507） | `npx wrangler deployments list`（apps/web） |
+| 对应代码 tip | `deploy/r192-r195` @ **326803e**（R509 .cn 参考价提交；#469 R507 / #470 R508 / #471 R506 已合并） | R509 零 AI 回归证据 https://github.com/wookat/domainhunter/pull/471#issuecomment-5552746476 ；R505 回归 https://github.com/wookat/domainhunter/pull/464#issuecomment-5552368944 |
 | 内容计数 | **TLD 408 / 行业指南 410 / 对比页 444 / sitemap 1,270 URL**（1,262 内容页 + 8 静态页） | `scripts/content-counts.json` 与 `curl sitemap.xml?cb=` 逐类 grep 一致 |
-| cron 心跳 | `cronLast=2026-09-04T18:00:11Z`（每 6h） | `/api/usage` |
+| cron 心跳 | `cronLast=2026-09-05T12:00:17Z`（每 6h） | `/api/usage` |
 | 价格 | `pricesLastOk=2026-09-04T12:00Z`，`/api/prices` 351 个 TLD 有 Porkbun 报价，非 stale | `/api/prices` |
-| IndexNow | 上次成功 2026-09-03T12:00Z；R488 增量代码 09-05 00:00Z 仍 429/submitted 0（快照为空→全量 1270 自锁，R502 P2-2）；**R504 分批修复 13:56Z 上线**，`indexnowPending=1270`，首个新代码 cron 09-05 18:00Z：期望 lastError 清空、pending→970，之后每 6h −300，~30h 归 0 | `/api/usage.indexnowPending/indexnowLastError` |
+| IndexNow | 上次成功 2026-09-03T12:00Z；09-05 12:00Z cron 仍是旧代码（`lastError` 429/submitted 0，pending 1270）；**R504 分批修复 13:56Z 上线**，首个新代码 cron 09-05 18:00Z：期望 lastError 清空、pending→970，之后每 6h −300，~30h 归 0（**待核对**） | `/api/usage.indexnowPending/indexnowLastError` |
 | 百度推送 | 未配置（`baiduLast=null`）；但 `botsBy.baidu=6`（Baiduspider 已自发来访，R485 调研时为 0） | `/api/usage` |
 | 验证 meta / analytics beacon | 首页 `<head>` 无 GSC/Bing/Baidu meta、无 cf-beacon | `curl -A Mozilla /` |
 | 注册商返佣 | `/api/registrars` = `{"affiliate":{}}`（纯链接） | — |
@@ -186,6 +186,9 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 - **R500**：被丢弃候选样本通道（已部署 e0ead604，生产取样 7/7 忠实见 `docs/audits/r500/`）（`DroppedSample`/`recordDroppedSample`/`newGuardStats({debugDropped})`，worker 解析 `body.debugDropped === true`），`docs/research/dropped-observability.md`（R238「只计数不含内容」的原始理由 = 内容最小化 + 不带用户数据 + 兼容旧客户端，非 UI 噪音），`scripts/replay-r500-en-incoherent.mjs`（现规则 vs 假设规则的 P/R 表）。
 - **R496–R499**（PR #459–#462，集成解 `ai.ts` 冲突：R496 先判沙拉再 R499 归一 theme）：`zhMeaningIncoherent` + `ZH_COINED_MEANING_FORMAT`（`docs/research/zh-meaning-coherence.md`）；`singleQuotesCoverLabel`/`EN_PAIR_COLON_RE`/`ZH_ASCII_SHORT_RE`（`docs/research/pinyin-quote-coverage.md`）；`needsWordSupplement`/`newWordSupplementBudget`（`docs/research/en-word-supplement.md`）；`normalizeTheme`/声调剥离（`docs/research/theme-normalization.md`）。guard 新字段 `zhMeaningIncoherent`、`wordSupplementReason`、`wordSupplementSkipped`、`themeNormalized`、`toneClaimStripped`。生产复验见 §10 2。
 - **R507**（裁决 R502 P2-1）：canonical 只看 URL、不再跟 Accept-Language 走——`ssr-lang.ts` 新增 `resolveSsrLang()→{lang, canonicalLang}` / `canonicalLangOf()`，`injectHreflang(html, path, ctx)` 按 `ctx.canonicalLang` 决定 canonical；正文协商与 `Vary: Accept-Language` 保留。裸 URL + `Accept-Language: en` 的 Lighthouse SEO 92→100（本地 host-resolver 映射实测）。sitemap 不列 `?lang=en` `<loc>`。论证 `docs/research/seo-lang-canonical.md`；`lang-matrix.sh` 扩为 4 模式。
+- **R506**（PR #471，R502 P3 ×4 + com.cn 参考价）：`/mcp` `<pre>` `tabIndex={0}` + focus-visible ring；分享快照条目可选 `status`（`share-items.ts`），`/s/:id` 有 status 才显示 可注册/已注册/未知 徽章、taken 划线且不给去注册，旧快照（无 status）中性文案「候选列表」+ 琥珀提示；`sitemapLastmod(path, fallback)` + `IndustryGuide.updatedAt`（六篇 .cn 指南 2026-09-04，其余 `CONTENT_LASTMOD`）；MCP `suggest_variants` 带点输入 → `isError:true` 双语提示（`mcp-args.ts`）；`TLD_PRICES` 新增 `com.cn: 33/38`。
+- **R508**（PR #470，R500 遗留）：`enMeaningIncoherent(label, meaning, {wordMetaphor, theme})` 三类误杀修法——theme=word 自称 real/dictionary word 放开片段检查、`EN_PREDICATE_RE` 扩词形族（evoke/echo/hint at/nods to/reminiscent…，**不加** like a/the 与 forge*）、`X + Y:` 子句含谓语才放行；`containsMetaLanguage` 的 blend 改 `enBlendIsRouteWord`（语音学名词/动词用法不算元词）。评估集 `scripts/fixtures/en-meaning-labels.json`（`build-en-meaning-labels.mjs` 复现），`scripts/verify-r508.mjs` ALL PASS；生产+夹具 P 63.2%→92.3%、沙拉召回 12/12 不变、忠实误杀 7/58→1/58。**生产 AI 复验未做**（DeepSeek 不可用）。
+- **R509**：`TLD_PRICES.cn` 29/39 → 33/38（与 com.cn 同源：腾讯云 33/38 vs 阿里云 38/42 取低，2026-09-05 抓取，注释含 URL）。生产：/prices ¥33/¥38、/tld/cn 价格卡、MCP `tld_prices` cn 4.58/5.28 approx。
 - **R495**：`main.tsx routeModule()` 对 /why /advanced /mcp 也等 chunk 就绪再挂载（R491 skeleton 在慢网下曾闪空 ~0.6s，节流帧捕获 3/3 复现→修后 0/3）；`i18n.tsx` 切换语言时同步 URL 显式 `?lang=`（否则 F5 回退到 URL 语言）。
 
 ## 12. 资源与凭证索引（只写名称，不写值）
