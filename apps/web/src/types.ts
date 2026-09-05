@@ -125,10 +125,10 @@ const TLD_PRICES: Record<string, TldPrice> = {
   info: { first: 28, renew: 130 },
   io: { first: 259, renew: 419 },
   ai: { first: 499, renew: 620 },
-  cn: { first: 29, renew: 39 },
-  // com.cn 取腾讯云/阿里云官网标准价中较低者（2026-09-05 抓取）：
+  // cn / com.cn 取腾讯云/阿里云官网标准价中较低者（2026-09-05 抓取，两个后缀两家报价相同）：
   //   腾讯云 https://buy.cloud.tencent.com/domain/price?type=overview 注册 33（标价 39 划线）/ 续费 38
   //   阿里云 https://wanwang.aliyun.com/help/price.html 注册 38 / 续费 42
+  cn: { first: 33, renew: 38 },
   "com.cn": { first: 33, renew: 38 },
   cc: { first: 38, renew: 58 },
   tv: { first: 199, renew: 268 },
