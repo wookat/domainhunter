@@ -1205,13 +1205,26 @@ export function citesPhantomLetter(label: string, meaning: string): boolean {
 // 不应出现 blend/coined/造词/混搭 等命名路线分类元词或「这是一个…名字」类元话术。
 // 规则保守：只匹配明确的分类元词与元话术句式，命中整条丢弃。
 const META_LANGUAGE_RES: RegExp[] = [
-  /\b(?:blend|coined|portmanteau)\b/i, // 英文路线分类元词
+  /\b(?:coined|portmanteau)\b/i, // 英文路线分类元词（blend 单独判，见 enBlendIsRouteWord）
   /造词|混搭|拼音路线|命名路线|组合词/, // 中文路线分类元词
   /这是.{0,6}(?:blend|组合|造词|混搭|拼音)/i, // 「这是（一个）blend/组合…」元话术
   /这个名字(?:属于|是)/, // 「这个名字属于…」元话术
 ];
+// R508：生产误杀 reflint「the consonant blend at the end」/ clearbrew「the r sounds blend smoothly」——
+// 语音学名词（辅音丛）与动词用法（声音融合）不是路线分类元词。仅这两种可辨认语境放行，其余 blend 仍按元词拦。
+const META_BLEND_PHONETIC_BEFORE_RE = /\b(?:consonant|vowel|sounds?|letters?|syllables?)\s+$/i;
+const META_BLEND_VERB_AFTER_RE = /^\s+(?:smoothly|seamlessly|together|naturally|nicely|softly|easily|well|into)\b/i;
+export function enBlendIsRouteWord(meaning: string): boolean {
+  for (const m of meaning.matchAll(/\bblend\b/gi)) {
+    const at = m.index ?? 0;
+    if (META_BLEND_PHONETIC_BEFORE_RE.test(meaning.slice(Math.max(0, at - 12), at))) continue;
+    if (META_BLEND_VERB_AFTER_RE.test(meaning.slice(at + m[0].length, at + m[0].length + 14))) continue;
+    return true;
+  }
+  return false;
+}
 export function containsMetaLanguage(meaning: string): boolean {
-  return META_LANGUAGE_RES.some((re) => re.test(meaning));
+  return META_LANGUAGE_RES.some((re) => re.test(meaning)) || enBlendIsRouteWord(meaning);
 }
 
 // ---------------- 臆造词源片段检测（R183，扩展 R179 的单字母版） ----------------
@@ -1527,7 +1540,12 @@ export function sseDeltaContent(line: string): string | null | false {
 //   或含一个与 label 共享 ≥3 字母前缀的单词（lumora ↔ "lumen"）——正常的词源拆解总会提及词源片段
 // 条件 B（谓语锤点）：meaning 需含至少一个词源/释义常见谓语词（means/evokes/suggests/
 //   from/plus/word/root/short for/named after/combines 等）——词语沙拉恰恰缺乏这类谓语骨架
-const EN_PREDICATE_RE = /\b(?:mean(?:s|ing)?|evokes?|suggest(?:s|ing)?|from|plus|words?|roots?|short\s+for|named\s+after|combin(?:es|ed|ing)|echoes|joined|blend(?:s|ed)?|derived|refers?|reads?|sounds?|nod\s+to)\b/i;
+// R508（R500 ②）：词形族补全——生产误杀 changelogist「evoking」（原只收 evokes?）、riffolio「hints at / echo」；
+// 每个新增词形在 scripts/fixtures/en-meaning-labels.json 上单独验证过不放走已标注沙拉（scripts/verify-r508.mjs §2②）。
+// 未采纳：like a/an/the（放走 R218 生产沙拉体 "two strides like a firm led gesture"）、forge*（内容动词非释义谓语，
+// 且会放行 R243 主轮隐喻短句预期）——因此 logsmith「Logs forged … like a blacksmith」仍拦，见 docs/audits/r500/README.md R508 处置。
+export const EN_PREDICATE_RE =
+  /\b(?:mean(?:s|ing|t)?|evok(?:e|es|ed|ing)|suggest(?:s|ed|ing)?|from|plus|words?|roots?|short\s+for|named\s+after|combin(?:e|es|ed|ing)|echo(?:es|ed|ing)?|joined|blend(?:s|ed|ing)?|derived|refers?|reads?|sounds?|nods?\s+to|likened|hint(?:s|ed|ing)?\s+(?:at|of)|calls?\s+to\s+mind|reminiscent)\b/i;
 
 // R223（R218 P2-2）：label 片段若本身是高频英文停用词/功能词（with/that/from 等），
 // 在任何词语沙拉里都会自然出现，不能算词源锤点——besowith 型穿透正是靠子串 "with"。
@@ -1544,10 +1562,31 @@ const EN_FRAGMENT_STOPWORDS = new Set([
 // R243（R239 P1-1）：word 隐喻词补发轮的 meaning 天然短句式（"A real English word: …, metaphor for …"），
 // 常不含 EN_PREDICATE_RE 的词源谓语骨架而被误杀。补发轮不放弃红线（词源锤点条件 A 不变），
 // 仅对谓语锤点条件 B 追加隐喻/释义信号词（metaphor/symbolizes/represents 等）作为等效谓语。
-const EN_WORD_METAPHOR_PREDICATE_RE =
+export const EN_WORD_METAPHOR_PREDICATE_RE =
   /\b(?:metaphor|symbol(?:s|ize[sd]?|izing)?|represent(?:s|ing)?|stands?\s+for|captures?|convey(?:s|ing)?|calls?\s+to\s+mind|real\s+(?:english\s+)?word|dictionary\s+word|literally|imagery?|invokes?|conjures?)\b/i;
 
-export function enMeaningIncoherent(label: string, meaning: string, opts: { wordMetaphor?: boolean } = {}): boolean {
+// R508（R500 ①）：word 路线的真词释义句（"A real English word meaning a factual written account…"）描述词义而不复述 label，
+// 条件 A 必失败（生产 4/7：bushtit/vireo/tessellate/chronicle）。仓库内没有英文词典（已核：apps/web/src、packages/core、
+// /usr/share/dict 均无），「真实英文词」只能用模型声明的 theme=word + meaning 自称真词（R243 已用同一 real/dictionary word
+// 信号）判定；因此放开 A 时要求 B 在剔除自称短语后仍成立（"word" 本身不再充当谓语），沙拉自称真词而无释义谓语仍拦。
+export const EN_REAL_WORD_CLAIM_RE = /\b(?:real\s+(?:english\s+)?word|dictionary\s+word)\b/i;
+
+// R508（R500 ③）：「X + Y: 子句」忠实拆解形态（X/Y 均为 label 子串，条件 A 成立）常无词源谓语，子句本身却是完整句
+// （"riff + folio: …the doubled 'f' gives echo"）。冒号后子句含系动词/常见轻动词、关系从句动词（that carries）或
+// 以第三人称单数动词开头（"scrubs the mess…"）即视为有谓语；名词短语堆叠（"a playful mashup for a well-mixed history"）仍拦。
+const EN_LEADING_PAIR_COLON_RE = /^\s*([a-z]+)\s*\+\s*([a-z]+)\s*[:：]\s*(.+)$/is;
+const EN_CLAUSE_VERB_RE =
+  /\b(?:is|are|isn't|it's|that's|there's|means|gives|makes|turns|keeps|brings|takes|lets|puts|holds|adds|helps|feels|becomes|stays|gets|has|does|looks)\b|\b(?:that|which|who|it)\s+[a-z]{3,}s\b|^[a-z]{3,}s\b/i;
+export function enColonClauseHasVerb(label: string, meaning: string): boolean {
+  const m = EN_LEADING_PAIR_COLON_RE.exec(meaning);
+  if (!m) return false;
+  const [, x, y, clause] = m;
+  if (!label.includes(x.toLowerCase()) || !label.includes(y.toLowerCase())) return false;
+  return EN_CLAUSE_VERB_RE.test(clause.trim());
+}
+
+/** 条件 A（词源锤点）：meaning 含 label / ≥4 字母片段 / 共享前缀实词（R196/R223/R246 规则原样） */
+export function enEtymologyAnchorOk(label: string, meaning: string): boolean {
   const lower = meaning.toLowerCase();
   let fragmentOk = lower.includes(label);
   if (!fragmentOk && label.length >= 4) {
@@ -1587,9 +1626,22 @@ export function enMeaningIncoherent(label: string, meaning: string, opts: { word
       }
     }
   }
-  const predicateOk =
-    EN_PREDICATE_RE.test(meaning) || (opts.wordMetaphor === true && EN_WORD_METAPHOR_PREDICATE_RE.test(meaning));
-  return !fragmentOk || !predicateOk;
+  return fragmentOk;
+}
+
+export function enMeaningIncoherent(
+  label: string,
+  meaning: string,
+  opts: { wordMetaphor?: boolean; theme?: string } = {},
+): boolean {
+  const predicateIn = (text: string): boolean =>
+    EN_PREDICATE_RE.test(text) || (opts.wordMetaphor === true && EN_WORD_METAPHOR_PREDICATE_RE.test(text));
+  if (enEtymologyAnchorOk(label, meaning)) return !(predicateIn(meaning) || enColonClauseHasVerb(label, meaning));
+  if (opts.theme === "word") {
+    const claim = EN_REAL_WORD_CLAIM_RE.exec(meaning);
+    if (claim) return !predicateIn(`${meaning.slice(0, claim.index)} ${meaning.slice(claim.index + claim[0].length)}`);
+  }
+  return true;
 }
 
 // ---------------- zh meaning 连贯性启发式（R496，R494 P1-1） ----------------
@@ -1830,7 +1882,7 @@ function admitCandidate(c: Partial<AiCandidate>, ctx: AdmitContext): AiCandidate
   // R196（P1-1）：meaning 含问号（犹豫/不成句的确定性信号，现只有 prompt 级约束）→ 整条丢弃
   if (meaning.includes("?") || meaning.includes("\uff1f")) return reject("questionMark", meaning);
   // R196（P1-1）：EN meaning 连贯性启发式——无 label 词源锤点且无谓语骨架的词语沙拉 → 整条丢弃
-  if (ctx.lang === "en" && enMeaningIncoherent(label, meaning, { wordMetaphor: isWordSupplement })) return reject("meaningIncoherent", meaning);
+  if (ctx.lang === "en" && enMeaningIncoherent(label, meaning, { wordMetaphor: isWordSupplement, theme: modelTheme })) return reject("meaningIncoherent", meaning);
   // R496（R494 P1-1）：zh meaning 连贯性启发式——长从句 + 比喻/叙事词的词语沙拉（moggity/hapany 型）→ 整条丢弃
   if (ctx.lang === "zh" && zhMeaningIncoherent(label, meaning, { theme: ctx.ruleTheme ? "rule" : modelTheme })) return reject("zhMeaningIncoherent", meaning);
   const s = c.scores ?? ({} as Partial<AiScores>);
