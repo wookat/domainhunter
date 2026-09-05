@@ -35,17 +35,17 @@ Cloudflare Workers + Hono（API/MCP/SSR/cron）· React 18 + TypeScript + Vite +
 - 本地跑 Worker：`apps/web` 下 `pnpm build && npx wrangler dev --port 8787`（细节与坑见 SKILL）。
 - Secrets 只走 `cd apps/web && npx wrangler secret put <NAME>`；`wrangler.jsonc` 只放公开 vars（当前仅 `REGISTRAR_AFFILIATE_JSON: "{}"`）。
 
-## 5. 当前实时服务状态（2026-09-04 20:15 UTC 实查）
+## 5. 当前实时服务状态（2026-09-05 14:10 UTC 实查）
 
 | 项 | 值 | 证据 |
 |---|---|---|
 | 线上地址 | https://hunt.zalize.com （自定义域）；Worker 直连 https://domainhunter.wookat520.workers.dev | 首页 200 |
-| 生产 Worker version | `b09d61c3-b447-4e4d-ab99-525ad7ab0828`（deployed 2026-09-04T19:38Z） | `npx wrangler deployments list`（apps/web） |
-| 对应代码 tip | `deploy/r192-r195` @ **8351a69**（含 R478–R486；合并于 15:50Z，早于上述部署） | 公开行为一致：R483 `/guide/cn-realname` 200、R486 `/wx-share.png` 200、sitemap 1,270 条；version→commit 映射 wrangler 未记 message，属推断 |
+| 生产 Worker version | `0eff3305-6108-41a6-83e2-3ab28dade321`（deployed 2026-09-05T13:56Z，含 R501–R504） | `npx wrangler versions list`（apps/web） |
+| 对应代码 tip | `deploy/r192-r195` @ **0c3caf3**（#467 R504 合并提交；#464/#465/#466 已先合并） | R503 Dynadot 出现在 /shortlist .cn 菜单、`/api/usage.indexnowPending=1270` 生产实查；R505 回归证据 https://github.com/wookat/domainhunter/pull/464#issuecomment-5552368944 |
 | 内容计数 | **TLD 408 / 行业指南 410 / 对比页 444 / sitemap 1,270 URL**（1,262 内容页 + 8 静态页） | `scripts/content-counts.json` 与 `curl sitemap.xml?cb=` 逐类 grep 一致 |
 | cron 心跳 | `cronLast=2026-09-04T18:00:11Z`（每 6h） | `/api/usage` |
 | 价格 | `pricesLastOk=2026-09-04T12:00Z`，`/api/prices` 351 个 TLD 有 Porkbun 报价，非 stale | `/api/prices` |
-| IndexNow | 上次成功 2026-09-03T12:00Z；09-04 18:00Z（旧代码全量）429；R488 增量代码 20:48Z 上线，首次新代码推送在 09-05 00:00Z cron，结果待查 | `/api/usage.indexnowLastError` |
+| IndexNow | 上次成功 2026-09-03T12:00Z；R488 增量代码 09-05 00:00Z 仍 429/submitted 0（快照为空→全量 1270 自锁，R502 P2-2）；**R504 分批修复 13:56Z 上线**，`indexnowPending=1270`，首个新代码 cron 09-05 18:00Z：期望 lastError 清空、pending→970，之后每 6h −300，~30h 归 0 | `/api/usage.indexnowPending/indexnowLastError` |
 | 百度推送 | 未配置（`baiduLast=null`）；但 `botsBy.baidu=6`（Baiduspider 已自发来访，R485 调研时为 0） | `/api/usage` |
 | 验证 meta / analytics beacon | 首页 `<head>` 无 GSC/Bing/Baidu meta、无 cf-beacon | `curl -A Mozilla /` |
 | 注册商返佣 | `/api/registrars` = `{"affiliate":{}}`（纯链接） | — |
