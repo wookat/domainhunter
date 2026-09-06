@@ -28,6 +28,7 @@ function extractSentences(mainHtml: string): string[] {
   const h = mainHtml
     .replace(/<(script|style|svg|noscript|template)\b[\s\S]*?<\/\1>/gi, " ")
     .replace(/<(header|nav|footer|aside)\b[\s\S]*?<\/\1>/gi, " ")
+    .replace(/<table\b[\s\S]*?<\/table>/gi, " ")
     .replace(/<a\b[^>]*>[\s\S]*?<\/a>/gi, " ")
     .replace(/<\/(p|li|h[1-6]|summary|details|div|section|td|th|tr|dt|dd|blockquote)>/gi, "\n")
     .replace(/<br\s*\/?>/gi, "\n");

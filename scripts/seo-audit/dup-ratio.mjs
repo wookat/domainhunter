@@ -31,7 +31,7 @@ export function extractSentences(html) {
   const main = h.match(/<main\b[\s\S]*?<\/main>/i)?.[0] ?? "";
   h = main.replace(/<(header|nav|footer|aside)\b[\s\S]*?<\/\1>/gi, " ");
   const faqDetails = (h.match(/<details\b/gi) ?? []).length;
-  const proseHtml = h.replace(/<a\b[^>]*>[\s\S]*?<\/a>/gi, " ");
+  const proseHtml = h.replace(/<table\b[\s\S]*?<\/table>/gi, " ").replace(/<a\b[^>]*>[\s\S]*?<\/a>/gi, " ");
   const blocky = proseHtml.replace(/<\/(p|li|h[1-6]|summary|details|div|section|td|th|tr|dt|dd|blockquote)>/gi, "\n").replace(/<br\s*\/?>/gi, "\n");
   const lines = decodeEntities(blocky.replace(/<[^>]+>/g, " "))
     .split("\n")

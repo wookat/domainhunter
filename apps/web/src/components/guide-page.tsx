@@ -13,6 +13,7 @@ import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
 import { priceShort, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";
+import { cn } from "@/lib/utils";
 
 export function GuidePage({ slug }: { slug: string }) {
   const { t, lang } = useI18n();
