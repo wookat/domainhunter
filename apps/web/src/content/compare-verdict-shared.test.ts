@@ -13,6 +13,14 @@
  *
  * 口径按用户/爬虫实际看到的文本：R549 起 verdict 含 `{{price:…}}` 占位，须先经 renderPriceText
  * 以参考价（无实时快照）渲染再分词，否则不同 TLD 的价格句会因占位符同形而被误判为共用片段。
+ *
+ * R556 阈值论证（R553 P3-3：四页在 n=8 仍有 3 个 8–10 词片段，而守门 EN_N=12 为 0）。同口径实测（改前）：
+ *   四页 en：n=8 → 3 spans（[10] au↔de「get trust far beyond any new gtld google also geo-associates」，
+ *   [8] au↔fr「by verisign global registry services in reston virginia」，[8] de↔uk「as the default signal of a local business」）；
+ *   n=9/10 → 1（同一个 10 词）；n≥11 → 0。
+ *   全站 444 页 en：n=8 2065 pairs / n=9 1596 / n=10 1113 / n=11 710 / n=12 566（zh n=24 1274）。
+ * 结论：全站 n=10 基线远非 0（命中绝大多数是同一后缀在多个 /vs 页的注册局事实句），全站棘轮保持 EN_N=12 / ZH_N=24；
+ * 四页严格层改为 n=8（FOUR_EN_N，审计口径），改写后实测 n≥7 均 0（n=6 剩 5 个 6 词通用短语，如「trust far beyond any new gtld」）。
  */
 import { describe, expect, it } from "vitest";
 
@@ -22,9 +30,11 @@ import { pairKeys, sharedSpans, tokenizeEn, tokenizeZh, type SharedSpan, type To
 
 const EN_N = 12;
 const ZH_N = 24;
+/** 四页严格层：R553 审计的词粒度（R550 时为 12） */
+const FOUR_EN_N = 8;
 
-/** R550 改后实测（改前 en 581 / zh 1276）；只能往下调 */
-const MAX_PAIRS = { en: 575, zh: 1276 } as const;
+/** R556 改后实测（R550 改前 en 581 / zh 1276，R550 改后 575 / 1276）；只能往下调 */
+const MAX_PAIRS = { en: 566, zh: 1274 } as const;
 
 const R550_SLUGS = ["uk-vs-com", "de-vs-com", "au-vs-com", "fr-vs-com"] as const;
 
@@ -40,9 +50,20 @@ const pagesOf = (lang: "zh" | "en", slugs?: readonly string[]): TokenPage[] =>
 const fmt = (spans: readonly SharedSpan[]) => spans.map((s) => `[${s.len}] ${s.a} ↔ ${s.b}: "${s.span}"`);
 
 describe("/vs verdict 跨页共用连续片段守门", () => {
-  it(`en: ${R550_SLUGS.join(" / ")} 四页两两不共享 ≥${EN_N} 词连续片段`, () => {
+  it(`en: ${R550_SLUGS.join(" / ")} 四页两两不共享 ≥${FOUR_EN_N} 词连续片段`, () => {
     for (const slug of R550_SLUGS) expect(TLD_COMPARES[slug]?.slug).toBe(slug);
-    expect(fmt(sharedSpans(pagesOf("en", R550_SLUGS), EN_N, " "))).toEqual([]);
+    expect(fmt(sharedSpans(pagesOf("en", R550_SLUGS), FOUR_EN_N, " "))).toEqual([]);
+  });
+
+  it("en: 四页 verdict 不再含 R553 的 3 个 8–10 词共用片段（每个片段至多出现在一页）", () => {
+    for (const re of [
+      /get trust far beyond any new gtld;? google also geo-associates/i,
+      /by verisign global registry services in reston,? virginia/i,
+      /as the default signal of a local business/i,
+    ]) {
+      const hits = R550_SLUGS.filter((slug) => re.test(rendered(TLD_COMPARES[slug], "en")));
+      expect(hits.length, `${re} 仍出现在：${hits.join(", ")}`).toBeLessThanOrEqual(1);
+    }
   });
 
   it("en: 四页 verdict 不再含 R512 模板句「For a global audience, .com's recognition is irreplaceable」", () => {
