@@ -11,12 +11,12 @@ import { FaqAnswer } from "@/components/faq-answer";
 import { NotFoundPage } from "@/components/not-found-page";
 import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
-import { priceFull, usePriceMeta, usePrices } from "@/lib/prices";
+import { pickPrices, priceFull, usePriceMeta, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";
 
 export function ComparePage({ slug }: { slug: string }) {
   const { t, lang } = useI18n();
-  const prices = usePrices();
+  const fetched = usePrices();
   const priceMeta = usePriceMeta();
   const content = readInjectedContent("vs", slug);
   const cmp = content?.cmp;
@@ -33,11 +33,13 @@ export function ComparePage({ slug }: { slug: string }) {
   const others = compareGroupChips(slug);
   // 价格数据表：优先用 SSR 注入的 KV 快照（与首屏 HTML 逐字一致）；注入缺失的兜底路径才用 /api/prices 拉取结果
   const snapshot: ComparePriceSnapshot = content.prices ?? {
-    live: Object.fromEntries(sides.flatMap((tld) => (prices?.[tld] ? [[tld, prices[tld]]] : []))),
+    live: Object.fromEntries(sides.flatMap((tld) => (fetched?.[tld] ? [[tld, fetched[tld]]] : []))),
     fetchedAt: priceMeta?.fetchedAt ?? null,
     stale: priceMeta ? priceMeta.stale : true,
   };
   const priceView = buildComparePriceView(cmp.a, cmp.b, lang, snapshot);
+  // 选型卡价格行：与 SSR compareContentBlocks 同用注入快照（priceFull(tld, lang, snapshot.live)），无快照才用 /api/prices 拉取结果
+  const prices = pickPrices(content.prices, fetched);
 
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 md:px-6">

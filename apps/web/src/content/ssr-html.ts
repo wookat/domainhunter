@@ -35,9 +35,6 @@ export const escapeHtml = (s: string): string =>
 /** 无价格快照时的占位（KV 为空）：全部回落静态参考价，与客户端 /api/prices 尚未返回时的首次渲染一致 */
 const NO_PRICES: ComparePriceSnapshot = { live: {}, fetchedAt: null, stale: true };
 
-/** lib/prices.ts priceFull 的静态参考价分支（/vs 两侧卡：prices 未加载时的首次渲染文案，逐字一致） */
-const staticPriceFull = (tld: string, lang: Lang): string | undefined => priceFull(tld, lang, null);
-
 /* lucide-react v1.27 图标的等价 SVG（与对应组件同 path），保持骨架布局/视觉一致 */
 const icon = (name: string, cls: string, inner: string) =>
   `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-${name} ${cls}">${inner}</svg>`;
@@ -331,7 +328,7 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang, prices: Compar
     .map((tld, i) => {
       const guide = TLD_GUIDES[tld];
       const firstSentence = guide ? guide[lang].intro.split(lang === "zh" ? "。" : ". ")[0] + (lang === "zh" ? "。" : ".") : "";
-      return `<section id="${comparePickAnchor(tld)}" class="scroll-mt-20 rounded-2xl border border-line bg-bg1 p-5"><a href="${langHref(`/tld/${tld}`, lang)}" class="tap-target inline-block font-mono text-lg font-bold text-brand hover:underline">.${tld}</a><p class="tnum mt-1 text-xs text-txt2">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</p>${guide ? `<p class="mt-3 text-sm leading-relaxed text-txt1">${escapeHtml(firstSentence)}</p>` : ""}<h3 class="mt-4 flex items-center gap-1.5 text-sm font-semibold">${ICON_CHECK_SM}${escapeHtml(s.pickWhen(tld))}</h3><ul class="mt-2 space-y-1.5">${picks[i]
+      return `<section id="${comparePickAnchor(tld)}" class="scroll-mt-20 rounded-2xl border border-line bg-bg1 p-5"><a href="${langHref(`/tld/${tld}`, lang)}" class="tap-target inline-block font-mono text-lg font-bold text-brand hover:underline">.${tld}</a><p class="tnum mt-1 text-xs text-txt2">${escapeHtml(priceFull(tld, lang, prices.live) ?? "")}</p>${guide ? `<p class="mt-3 text-sm leading-relaxed text-txt1">${escapeHtml(firstSentence)}</p>` : ""}<h3 class="mt-4 flex items-center gap-1.5 text-sm font-semibold">${ICON_CHECK_SM}${escapeHtml(s.pickWhen(tld))}</h3><ul class="mt-2 space-y-1.5">${picks[i]
         .map((it) => `<li class="flex gap-2 text-sm leading-relaxed text-txt1"><span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand"></span>${escapeHtml(it)}</li>`)
         .join("")}</ul></section>`;
     })

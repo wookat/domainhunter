@@ -7,16 +7,18 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { afterEach, describe, expect, it } from "vitest";
 
+import { ComparePage } from "../components/compare-page";
 import { GuidePage } from "../components/guide-page";
 import { TldPage } from "../components/tld-page";
 import { I18nProvider } from "../lib/i18n";
 import { snapshotFromPayload } from "./compare-prices";
+import { TLD_COMPARES } from "./compares";
 import { GROUP_CHIP_MAX, VIEW_ALL_LABEL, tldGroupChips } from "./group-chips";
 import { INDUSTRY_GUIDES } from "./guides";
-import { buildGuideContent, buildTldContent, guidePriceTlds, tldPriceTlds } from "./injected-build";
+import { buildGuideContent, buildTldContent, buildVsContent, guidePriceTlds, tldPriceTlds } from "./injected-build";
 import type { InjectedContent } from "./injected";
 import { priceFull, priceShort } from "./price-text";
-import { guideContentBlocks, tldContentBlocks } from "./ssr-html";
+import { compareContentBlocks, guideContentBlocks, tldContentBlocks } from "./ssr-html";
 import { relatedTlds } from "./tld-groups";
 import { TLD_GUIDES } from "./tlds";
 
@@ -35,7 +37,7 @@ function renderSpa(content: InjectedContent, lang: Lang, el: React.ReactElement)
   return renderToStaticMarkup(createElement(I18nProvider, null, el));
 }
 
-/** 模拟 /api/prices KV 载荷：.my 实时价与静态参考价（¥220）差 >50%，.com 正常，.cn 无实时价，.us 为 .cn 的相关 TLD */
+/** 模拟 /api/prices KV 载荷：.my 实时价（静态参考价 R531 后为 ¥17/¥188），.com 正常，.cn 无实时价，.us 为 .cn 的相关 TLD */
 const PAYLOAD = JSON.stringify({
   prices: { my: { registration: 2.37, renewal: 26.06 }, com: { registration: 11.08, renewal: 11.08 }, us: { registration: 24.5, renewal: 24.5 } },
   fetchedAt: 1_760_000_000_000,
@@ -96,7 +98,7 @@ describe("/tld 价格：SSR ↔ SPA 共用 KV 快照逐字一致（R528）", () 
     const spa = renderSpa(buildTldContent("my", empty)!, lang, createElement(TldPage, { tld: "my" }));
     const ssr = tldContentBlocks("my", TLD_GUIDES.my, lang).join("");
     expect(priceCard(spa)).toBe(priceCard(ssr));
-    expect(ssr).toContain(lang === "en" ? "Static reference: ≈$31 (¥220) 1st yr" : "静态参考价：首年 ¥220");
+    expect(ssr).toContain(lang === "en" ? "Static reference: ≈$2 (¥17) 1st yr" : "静态参考价：首年 ¥17");
   });
 
   it.each(["zh", "en"] as const)("%s：/guide/saas 推荐 TLD 卡两端相等且取自快照", (lang) => {
@@ -109,6 +111,54 @@ describe("/tld 价格：SSR ↔ SPA 共用 KV 快照逐字一致（R528）", () 
     expect(spa.match(grid)?.[0]).toBeDefined();
     expect(spa.match(grid)?.[0]).toBe(ssr.match(grid)?.[0]);
     for (const [tld, p] of Object.entries(snap.live)) expect(ssr).toContain(priceShort(tld, lang, { [tld]: p })!);
+  });
+});
+
+/** /vs 两侧选型卡的价格行（<p class="tnum mt-1 text-xs text-txt2">） */
+const PICK_PRICE_ROW = /<p class="tnum mt-1 text-xs text-txt2">([^<]*)<\/p>/g;
+const pickPriceRows = (html: string) => [...html.matchAll(PICK_PRICE_ROW)].map((m) => m[1]);
+
+describe("/vs 选型卡价格：SSR ↔ SPA 共用 KV 快照逐字一致（R531）", () => {
+  const VS_PAYLOAD = JSON.stringify({
+    prices: { io: { registration: 28.12, renewal: 51.8 }, dev: { registration: 8.75, renewal: 12.87 }, com: { registration: 11.08, renewal: 11.08 } },
+    fetchedAt: 1_760_000_000_000,
+    stale: false,
+  });
+
+  it.each([
+    ["zh", "io-vs-dev"],
+    ["en", "io-vs-dev"],
+    ["zh", "com-vs-cn"],
+    ["en", "com-vs-cn"],
+  ] as const)("%s：/vs/%s 两侧卡价格行两端相等，快照有价用实时价、无价回落静态参考价", (lang, slug) => {
+    const cmp = TLD_COMPARES[slug];
+    const snap = snapshotFromPayload(VS_PAYLOAD, [cmp.a, cmp.b]);
+    const spa = renderSpa(buildVsContent(slug, snap)!, lang, createElement(ComparePage, { slug }));
+    const ssr = compareContentBlocks(cmp, lang, snap).join("");
+    const rows = pickPriceRows(ssr);
+    expect(rows).toHaveLength(2);
+    expect(pickPriceRows(spa)).toEqual(rows);
+    for (const [i, tld] of [cmp.a, cmp.b].entries()) {
+      expect(rows[i]).toBe(priceFull(tld, lang, snap.live));
+      const live = snap.live[tld];
+      if (live) {
+        expect(rows[i]).toContain(`$${live.registration}`);
+        expect(rows[i]).not.toContain(lang === "en" ? "Static reference" : "静态参考价");
+      } else {
+        expect(rows[i]).toBe(priceFull(tld, lang, null));
+        expect(rows[i]).toContain(lang === "en" ? "Static reference" : "静态参考价");
+      }
+    }
+  });
+
+  it.each(["zh", "en"] as const)("%s：无快照（KV 为空）时 SSR 与 SPA 一致回落静态参考价", (lang) => {
+    const cmp = TLD_COMPARES["io-vs-dev"];
+    const empty = snapshotFromPayload(null, [cmp.a, cmp.b]);
+    const spa = renderSpa(buildVsContent("io-vs-dev", empty)!, lang, createElement(ComparePage, { slug: "io-vs-dev" }));
+    const ssr = compareContentBlocks(cmp, lang).join("");
+    const rows = pickPriceRows(ssr);
+    expect(rows).toEqual([priceFull("io", lang, null), priceFull("dev", lang, null)]);
+    expect(pickPriceRows(spa)).toEqual(rows);
   });
 });
 

@@ -1,0 +1,40 @@
+{
+  "base": "http://localhost:8788",
+  "apiFetchedAt": 1788689931535,
+  "results": [
+    {
+      "path": "/vs/io-vs-dev?lang=zh",
+      "ok": false,
+      "reactMounted": true,
+      "ssr": [
+        "静态参考价：首年 ¥259 · 续费 ¥419/年 · 非实时报价",
+        "静态参考价：首年 ¥88 · 续费 ¥108/年 · 非实时报价"
+      ],
+      "dom": [
+        "Porkbun 实时价：首年 $28.12（≈¥202）· 续费 $51.8/年（汇率 7.2 估算）",
+        "Porkbun 实时价：首年 $8.75（≈¥63）· 续费 $12.87/年（汇率 7.2 估算）"
+      ],
+      "expectedFromApi": [
+        "Porkbun 实时价：首年 $28.12（≈¥202）· 续费 $51.8/年（汇率 7.2 估算）",
+        "Porkbun 实时价：首年 $8.75（≈¥63）· 续费 $12.87/年（汇率 7.2 估算）"
+      ]
+    },
+    {
+      "path": "/vs/com-vs-cn?lang=en",
+      "ok": false,
+      "reactMounted": true,
+      "ssr": [
+        "Static reference: ≈$10 (¥69) 1st yr · ¥85/yr renewal · not a live quote",
+        "Static reference: ≈$5 (¥33) 1st yr · ¥38/yr renewal · not a live quote"
+      ],
+      "dom": [
+        "Porkbun live: $11.08 1st yr (≈¥80) · renews $11.08/yr (¥ est. at 7.2)",
+        "Static reference: ≈$5 (¥33) 1st yr · ¥38/yr renewal · not a live quote"
+      ],
+      "expectedFromApi": [
+        "Porkbun live: $11.08 1st yr (≈¥80) · renews $11.08/yr (¥ est. at 7.2)",
+        null
+      ]
+    }
+  ]
+}
