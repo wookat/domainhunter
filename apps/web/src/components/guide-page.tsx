@@ -11,19 +11,20 @@ import { FaqAnswer } from "@/components/faq-answer";
 import { NotFoundPage } from "@/components/not-found-page";
 import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
-import { priceShort, usePrices } from "@/lib/prices";
+import { pickPrices, priceShort, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";
 import { cn } from "@/lib/utils";
 
 export function GuidePage({ slug }: { slug: string }) {
   const { t, lang } = useI18n();
-  const prices = usePrices();
+  const fetched = usePrices();
   const content = readInjectedContent("guide", slug);
   const guide = content?.guide;
   usePageTitle(guide?.[lang].title);
 
   if (!content || !guide) return <NotFoundPage />;
 
+  const prices = pickPrices(content.prices, fetched);
   const loc = guide[lang];
   const compliance = guide.kind === "compliance";
   const faq = buildGuideFaq(guide, lang);

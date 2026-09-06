@@ -15,7 +15,7 @@ import { buildTldFaq } from "./content/tld-faq";
 import { compareContentBlocks, compareHubBlocks, guideContentBlocks, guideHubBlocks, homeHeroSkeleton, hubCrumbKicker, hubCrumbLabel, pricesTableSkeleton, tldContentBlocks, tldHubBlocks } from "./content/ssr-html";
 import { WHY_COPY } from "./content/why-copy";
 import { HOME_FAQ, HOME_META } from "./content/home-copy";
-import { buildGuideContent, buildTldContent, buildVsContent } from "./content/injected-build";
+import { buildGuideContent, buildTldContent, buildVsContent, guidePriceTlds, tldPriceTlds } from "./content/injected-build";
 import type { InjectedContent } from "./content/injected";
 import { HUB_META } from "./content/hubs";
 import { TLD_GUIDES } from "./content/tlds";
@@ -1723,8 +1723,10 @@ app.get("/tld/:tld", async (c) => {
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/tld-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
-  html = injectContentData(html, buildTldContent(tld));
-  html = injectSsrSkeleton(html, `.${tld}`, loc.title, tldContentBlocks(tld, guide, lang), hubCrumbKicker("tld", `.${tld}`, lang));
+  // 首屏价格卡 + 「相关 TLD」chip 与 /api/prices 同源：只读同一份 KV 缓存（不拉上游），同一快照既渲染 SSR 也注入客户端，水合逐字一致
+  const priceSnapshot = snapshotFromPayload(await peekPricesPayload(c.env.CACHE, PRICES_CACHE_CFG), tldPriceTlds(tld));
+  html = injectContentData(html, buildTldContent(tld, priceSnapshot));
+  html = injectSsrSkeleton(html, `.${tld}`, loc.title, tldContentBlocks(tld, guide, lang, priceSnapshot), hubCrumbKicker("tld", `.${tld}`, lang));
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
@@ -1761,8 +1763,10 @@ app.get("/guide/:slug", async (c) => {
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/guide-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
-  html = injectContentData(html, buildGuideContent(slug));
-  html = injectSsrSkeleton(html, guide[lang].label, loc.title, guideContentBlocks(guide, lang), hubCrumbKicker("guide", guide[lang].label, lang));
+  // 「推荐 TLD」卡价格与 /api/prices 同源（同 /tld）
+  const priceSnapshot = snapshotFromPayload(await peekPricesPayload(c.env.CACHE, PRICES_CACHE_CFG), guidePriceTlds(guide));
+  html = injectContentData(html, buildGuideContent(slug, priceSnapshot));
+  html = injectSsrSkeleton(html, guide[lang].label, loc.title, guideContentBlocks(guide, lang, priceSnapshot), hubCrumbKicker("guide", guide[lang].label, lang));
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
