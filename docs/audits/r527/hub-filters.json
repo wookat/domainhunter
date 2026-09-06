@@ -1,0 +1,6610 @@
+[
+  {
+    "route": "/tld",
+    "lang": "zh",
+    "groups": [
+      {
+        "id": "hub-g-general",
+        "links": [
+          "/tld/com?lang=zh",
+          "/tld/net?lang=zh",
+          "/tld/org?lang=zh",
+          "/tld/co?lang=zh",
+          "/tld/xyz?lang=zh",
+          "/tld/me?lang=zh",
+          "/tld/top?lang=zh",
+          "/tld/pro?lang=zh",
+          "/tld/link?lang=zh",
+          "/tld/info?lang=zh",
+          "/tld/click?lang=zh",
+          "/tld/icu?lang=zh",
+          "/tld/one?lang=zh",
+          "/tld/cool?lang=zh",
+          "/tld/today?lang=zh",
+          "/tld/best?lang=zh",
+          "/tld/plus?lang=zh",
+          "/tld/website?lang=zh",
+          "/tld/help?lang=zh",
+          "/tld/day?lang=zh",
+          "/tld/sbs?lang=zh",
+          "/tld/cyou?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tech",
+        "links": [
+          "/tld/io?lang=zh",
+          "/tld/ai?lang=zh",
+          "/tld/app?lang=zh",
+          "/tld/dev?lang=zh",
+          "/tld/tech?lang=zh",
+          "/tld/cloud?lang=zh",
+          "/tld/sh?lang=zh",
+          "/tld/gg?lang=zh",
+          "/tld/so?lang=zh",
+          "/tld/network?lang=zh",
+          "/tld/digital?lang=zh",
+          "/tld/zone?lang=zh",
+          "/tld/tools?lang=zh",
+          "/tld/run?lang=zh",
+          "/tld/codes?lang=zh",
+          "/tld/wiki?lang=zh",
+          "/tld/host?lang=zh",
+          "/tld/software?lang=zh",
+          "/tld/systems?lang=zh",
+          "/tld/support?lang=zh",
+          "/tld/technology?lang=zh",
+          "/tld/computer?lang=zh",
+          "/tld/mobi?lang=zh",
+          "/tld/domains?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-creative",
+        "links": [
+          "/tld/art?lang=zh",
+          "/tld/design?lang=zh",
+          "/tld/studio?lang=zh",
+          "/tld/page?lang=zh",
+          "/tld/bio?lang=zh",
+          "/tld/ink?lang=zh",
+          "/tld/moe?lang=zh",
+          "/tld/lol?lang=zh",
+          "/tld/red?lang=zh",
+          "/tld/wtf?lang=zh",
+          "/tld/photos?lang=zh",
+          "/tld/gallery?lang=zh",
+          "/tld/photography?lang=zh",
+          "/tld/style?lang=zh",
+          "/tld/beauty?lang=zh",
+          "/tld/fashion?lang=zh",
+          "/tld/photo?lang=zh",
+          "/tld/hair?lang=zh",
+          "/tld/skin?lang=zh",
+          "/tld/makeup?lang=zh",
+          "/tld/camera?lang=zh",
+          "/tld/clothing?lang=zh",
+          "/tld/tattoo?lang=zh",
+          "/tld/moda?lang=zh",
+          "/tld/meme?lang=zh",
+          "/tld/pics?lang=zh",
+          "/tld/graphics?lang=zh",
+          "/tld/actor?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-media",
+        "links": [
+          "/tld/tv?lang=zh",
+          "/tld/live?lang=zh",
+          "/tld/email?lang=zh",
+          "/tld/media?lang=zh",
+          "/tld/news?lang=zh",
+          "/tld/blog?lang=zh",
+          "/tld/chat?lang=zh",
+          "/tld/social?lang=zh",
+          "/tld/video?lang=zh",
+          "/tld/fm?lang=zh",
+          "/tld/band?lang=zh",
+          "/tld/watch?lang=zh",
+          "/tld/show?lang=zh",
+          "/tld/community?lang=zh",
+          "/tld/guide?lang=zh",
+          "/tld/reviews?lang=zh",
+          "/tld/fyi?lang=zh",
+          "/tld/press?lang=zh",
+          "/tld/stream?lang=zh",
+          "/tld/movie?lang=zh",
+          "/tld/pictures?lang=zh",
+          "/tld/productions?lang=zh",
+          "/tld/audio?lang=zh",
+          "/tld/forum?lang=zh",
+          "/tld/review?lang=zh",
+          "/tld/buzz?lang=zh",
+          "/tld/fans?lang=zh",
+          "/tld/report?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-commerce",
+        "links": [
+          "/tld/online?lang=zh",
+          "/tld/store?lang=zh",
+          "/tld/site?lang=zh",
+          "/tld/shop?lang=zh",
+          "/tld/agency?lang=zh",
+          "/tld/group?lang=zh",
+          "/tld/center?lang=zh",
+          "/tld/works?lang=zh",
+          "/tld/company?lang=zh",
+          "/tld/team?lang=zh",
+          "/tld/global?lang=zh",
+          "/tld/expert?lang=zh",
+          "/tld/boutique?lang=zh",
+          "/tld/solutions?lang=zh",
+          "/tld/services?lang=zh",
+          "/tld/consulting?lang=zh",
+          "/tld/marketing?lang=zh",
+          "/tld/guru?lang=zh",
+          "/tld/tips?lang=zh",
+          "/tld/directory?lang=zh",
+          "/tld/international?lang=zh",
+          "/tld/partners?lang=zh",
+          "/tld/market?lang=zh",
+          "/tld/work?lang=zh",
+          "/tld/sale?lang=zh",
+          "/tld/law?lang=zh",
+          "/tld/tax?lang=zh",
+          "/tld/toys?lang=zh",
+          "/tld/shoes?lang=zh",
+          "/tld/gifts?lang=zh",
+          "/tld/ltd?lang=zh",
+          "/tld/biz?lang=zh",
+          "/tld/llc?lang=zh",
+          "/tld/promo?lang=zh",
+          "/tld/express?lang=zh",
+          "/tld/lawyer?lang=zh",
+          "/tld/legal?lang=zh",
+          "/tld/delivery?lang=zh",
+          "/tld/jewelry?lang=zh",
+          "/tld/careers?lang=zh",
+          "/tld/management?lang=zh",
+          "/tld/equipment?lang=zh",
+          "/tld/supply?lang=zh",
+          "/tld/parts?lang=zh",
+          "/tld/auction?lang=zh",
+          "/tld/deals?lang=zh",
+          "/tld/coupons?lang=zh",
+          "/tld/discount?lang=zh",
+          "/tld/business?lang=zh",
+          "/tld/limited?lang=zh",
+          "/tld/associates?lang=zh",
+          "/tld/cheap?lang=zh",
+          "/tld/bargains?lang=zh",
+          "/tld/supplies?lang=zh",
+          "/tld/diamonds?lang=zh",
+          "/tld/accountants?lang=zh",
+          "/tld/attorney?lang=zh",
+          "/tld/gift?lang=zh",
+          "/tld/luxury?lang=zh",
+          "/tld/shopping?lang=zh",
+          "/tld/gmbh?lang=zh",
+          "/tld/abogado?lang=zh",
+          "/tld/kaufen?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-finance",
+        "links": [
+          "/tld/finance?lang=zh",
+          "/tld/fund?lang=zh",
+          "/tld/land?lang=zh",
+          "/tld/money?lang=zh",
+          "/tld/gold?lang=zh",
+          "/tld/cash?lang=zh",
+          "/tld/estate?lang=zh",
+          "/tld/ventures?lang=zh",
+          "/tld/capital?lang=zh",
+          "/tld/exchange?lang=zh",
+          "/tld/properties?lang=zh",
+          "/tld/rentals?lang=zh",
+          "/tld/apartments?lang=zh",
+          "/tld/credit?lang=zh",
+          "/tld/loans?lang=zh",
+          "/tld/investments?lang=zh",
+          "/tld/holdings?lang=zh",
+          "/tld/mortgage?lang=zh",
+          "/tld/rent?lang=zh",
+          "/tld/homes?lang=zh",
+          "/tld/casa?lang=zh",
+          "/tld/bond?lang=zh",
+          "/tld/immo?lang=zh",
+          "/tld/condos?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-lifestyle",
+        "links": [
+          "/tld/vip?lang=zh",
+          "/tld/club?lang=zh",
+          "/tld/space?lang=zh",
+          "/tld/fun?lang=zh",
+          "/tld/world?lang=zh",
+          "/tld/life?lang=zh",
+          "/tld/games?lang=zh",
+          "/tld/pizza?lang=zh",
+          "/tld/bar?lang=zh",
+          "/tld/cafe?lang=zh",
+          "/tld/city?lang=zh",
+          "/tld/farm?lang=zh",
+          "/tld/academy?lang=zh",
+          "/tld/school?lang=zh",
+          "/tld/coach?lang=zh",
+          "/tld/care?lang=zh",
+          "/tld/doctor?lang=zh",
+          "/tld/restaurant?lang=zh",
+          "/tld/clinic?lang=zh",
+          "/tld/dental?lang=zh",
+          "/tld/fitness?lang=zh",
+          "/tld/salon?lang=zh",
+          "/tld/yoga?lang=zh",
+          "/tld/coffee?lang=zh",
+          "/tld/wine?lang=zh",
+          "/tld/kitchen?lang=zh",
+          "/tld/garden?lang=zh",
+          "/tld/events?lang=zh",
+          "/tld/institute?lang=zh",
+          "/tld/house?lang=zh",
+          "/tld/education?lang=zh",
+          "/tld/training?lang=zh",
+          "/tld/love?lang=zh",
+          "/tld/wedding?lang=zh",
+          "/tld/menu?lang=zh",
+          "/tld/bike?lang=zh",
+          "/tld/travel?lang=zh",
+          "/tld/tours?lang=zh",
+          "/tld/vacations?lang=zh",
+          "/tld/holiday?lang=zh",
+          "/tld/flights?lang=zh",
+          "/tld/taxi?lang=zh",
+          "/tld/builders?lang=zh",
+          "/tld/construction?lang=zh",
+          "/tld/repair?lang=zh",
+          "/tld/energy?lang=zh",
+          "/tld/solar?lang=zh",
+          "/tld/green?lang=zh",
+          "/tld/eco?lang=zh",
+          "/tld/earth?lang=zh",
+          "/tld/engineering?lang=zh",
+          "/tld/family?lang=zh",
+          "/tld/baby?lang=zh",
+          "/tld/mom?lang=zh",
+          "/tld/dad?lang=zh",
+          "/tld/dog?lang=zh",
+          "/tld/health?lang=zh",
+          "/tld/fit?lang=zh",
+          "/tld/dance?lang=zh",
+          "/tld/golf?lang=zh",
+          "/tld/tennis?lang=zh",
+          "/tld/soccer?lang=zh",
+          "/tld/football?lang=zh",
+          "/tld/hockey?lang=zh",
+          "/tld/surf?lang=zh",
+          "/tld/vet?lang=zh",
+          "/tld/recipes?lang=zh",
+          "/tld/church?lang=zh",
+          "/tld/cleaning?lang=zh",
+          "/tld/plumbing?lang=zh",
+          "/tld/catering?lang=zh",
+          "/tld/florist?lang=zh",
+          "/tld/courses?lang=zh",
+          "/tld/degree?lang=zh",
+          "/tld/mba?lang=zh",
+          "/tld/study?lang=zh",
+          "/tld/boats?lang=zh",
+          "/tld/autos?lang=zh",
+          "/tld/contractors?lang=zh",
+          "/tld/furniture?lang=zh",
+          "/tld/lighting?lang=zh",
+          "/tld/camp?lang=zh",
+          "/tld/theater?lang=zh",
+          "/tld/engineer?lang=zh",
+          "/tld/villas?lang=zh",
+          "/tld/cruises?lang=zh",
+          "/tld/voyage?lang=zh",
+          "/tld/limo?lang=zh",
+          "/tld/tickets?lang=zh",
+          "/tld/flowers?lang=zh",
+          "/tld/beer?lang=zh",
+          "/tld/pub?lang=zh",
+          "/tld/spa?lang=zh",
+          "/tld/food?lang=zh",
+          "/tld/dentist?lang=zh",
+          "/tld/cooking?lang=zh",
+          "/tld/party?lang=zh",
+          "/tld/fishing?lang=zh",
+          "/tld/horse?lang=zh",
+          "/tld/singles?lang=zh",
+          "/tld/dating?lang=zh",
+          "/tld/organic?lang=zh",
+          "/tld/vodka?lang=zh",
+          "/tld/casino?lang=zh",
+          "/tld/bet?lang=zh",
+          "/tld/poker?lang=zh",
+          "/tld/futbol?lang=zh",
+          "/tld/basketball?lang=zh",
+          "/tld/rugby?lang=zh",
+          "/tld/cricket?lang=zh",
+          "/tld/fish?lang=zh",
+          "/tld/fan?lang=zh",
+          "/tld/win?lang=zh",
+          "/tld/quest?lang=zh",
+          "/tld/kids?lang=zh",
+          "/tld/foundation?lang=zh",
+          "/tld/monster?lang=zh",
+          "/tld/glass?lang=zh",
+          "/tld/vision?lang=zh",
+          "/tld/tires?lang=zh",
+          "/tld/surgery?lang=zh",
+          "/tld/college?lang=zh",
+          "/tld/vin?lang=zh",
+          "/tld/university?lang=zh",
+          "/tld/hospital?lang=zh",
+          "/tld/rehab?lang=zh",
+          "/tld/healthcare?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-geo",
+        "links": [
+          "/tld/cc?lang=zh",
+          "/tld/cn?lang=zh",
+          "/tld/us?lang=zh",
+          "/tld/in?lang=zh",
+          "/tld/uk?lang=zh",
+          "/tld/wang?lang=zh",
+          "/tld/asia?lang=zh",
+          "/tld/place?lang=zh",
+          "/tld/town?lang=zh",
+          "/tld/nyc?lang=zh",
+          "/tld/london?lang=zh",
+          "/tld/tokyo?lang=zh",
+          "/tld/miami?lang=zh",
+          "/tld/boston?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-more",
+        "links": [
+          "/tld/blue?lang=zh",
+          "/tld/pink?lang=zh",
+          "/tld/black?lang=zh",
+          "/tld/ninja?lang=zh",
+          "/tld/rocks?lang=zh",
+          "/tld/pet?lang=zh",
+          "/tld/berlin?lang=zh",
+          "/tld/paris?lang=zh",
+          "/tld/amsterdam?lang=zh",
+          "/tld/vegas?lang=zh",
+          "/tld/immobilien?lang=zh",
+          "/tld/tienda?lang=zh",
+          "/tld/de?lang=zh",
+          "/tld/eu?lang=zh",
+          "/tld/ca?lang=zh",
+          "/tld/au?lang=zh",
+          "/tld/jp?lang=zh",
+          "/tld/sg?lang=zh",
+          "/tld/fr?lang=zh",
+          "/tld/it?lang=zh",
+          "/tld/es?lang=zh",
+          "/tld/nl?lang=zh",
+          "/tld/kr?lang=zh",
+          "/tld/hk?lang=zh",
+          "/tld/ch?lang=zh",
+          "/tld/at?lang=zh",
+          "/tld/be?lang=zh",
+          "/tld/se?lang=zh",
+          "/tld/pl?lang=zh",
+          "/tld/tw?lang=zh",
+          "/tld/dk?lang=zh",
+          "/tld/fi?lang=zh",
+          "/tld/no?lang=zh",
+          "/tld/ie?lang=zh",
+          "/tld/nz?lang=zh",
+          "/tld/mx?lang=zh",
+          "/tld/br?lang=zh",
+          "/tld/pt?lang=zh",
+          "/tld/cz?lang=zh",
+          "/tld/tr?lang=zh",
+          "/tld/ae?lang=zh",
+          "/tld/id?lang=zh",
+          "/tld/vn?lang=zh",
+          "/tld/ph?lang=zh",
+          "/tld/gr?lang=zh",
+          "/tld/ro?lang=zh",
+          "/tld/hu?lang=zh",
+          "/tld/cl?lang=zh",
+          "/tld/my?lang=zh",
+          "/tld/th?lang=zh",
+          "/tld/sk?lang=zh",
+          "/tld/ua?lang=zh",
+          "/tld/ar?lang=zh",
+          "/tld/ng?lang=zh",
+          "/tld/il?lang=zh",
+          "/tld/sa?lang=zh",
+          "/tld/eg?lang=zh",
+          "/tld/ke?lang=zh",
+          "/tld/pe?lang=zh",
+          "/tld/kz?lang=zh",
+          "/tld/za?lang=zh",
+          "/tld/ma?lang=zh",
+          "/tld/qa?lang=zh",
+          "/tld/pk?lang=zh",
+          "/tld/lk?lang=zh",
+          "/tld/ee?lang=zh",
+          "/tld/lt?lang=zh",
+          "/tld/lv?lang=zh",
+          "/tld/rs?lang=zh",
+          "/tld/is?lang=zh",
+          "/tld/ge?lang=zh",
+          "/tld/uy?lang=zh",
+          "/tld/lu?lang=zh",
+          "/tld/la?lang=zh",
+          "/tld/md?lang=zh",
+          "/tld/am?lang=zh",
+          "/tld/mn?lang=zh",
+          "/tld/uz?lang=zh"
+        ]
+      }
+    ],
+    "query": ".cn",
+    "filtered": [
+      "/tld/cn?lang=zh"
+    ],
+    "counter": "1 / 408",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_filter_tld_zh.png"
+  },
+  {
+    "route": "/tld",
+    "lang": "en",
+    "groups": [
+      {
+        "id": "hub-g-general",
+        "links": [
+          "/tld/com?lang=en",
+          "/tld/net?lang=en",
+          "/tld/org?lang=en",
+          "/tld/co?lang=en",
+          "/tld/xyz?lang=en",
+          "/tld/me?lang=en",
+          "/tld/top?lang=en",
+          "/tld/pro?lang=en",
+          "/tld/link?lang=en",
+          "/tld/info?lang=en",
+          "/tld/click?lang=en",
+          "/tld/icu?lang=en",
+          "/tld/one?lang=en",
+          "/tld/cool?lang=en",
+          "/tld/today?lang=en",
+          "/tld/best?lang=en",
+          "/tld/plus?lang=en",
+          "/tld/website?lang=en",
+          "/tld/help?lang=en",
+          "/tld/day?lang=en",
+          "/tld/sbs?lang=en",
+          "/tld/cyou?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tech",
+        "links": [
+          "/tld/io?lang=en",
+          "/tld/ai?lang=en",
+          "/tld/app?lang=en",
+          "/tld/dev?lang=en",
+          "/tld/tech?lang=en",
+          "/tld/cloud?lang=en",
+          "/tld/sh?lang=en",
+          "/tld/gg?lang=en",
+          "/tld/so?lang=en",
+          "/tld/network?lang=en",
+          "/tld/digital?lang=en",
+          "/tld/zone?lang=en",
+          "/tld/tools?lang=en",
+          "/tld/run?lang=en",
+          "/tld/codes?lang=en",
+          "/tld/wiki?lang=en",
+          "/tld/host?lang=en",
+          "/tld/software?lang=en",
+          "/tld/systems?lang=en",
+          "/tld/support?lang=en",
+          "/tld/technology?lang=en",
+          "/tld/computer?lang=en",
+          "/tld/mobi?lang=en",
+          "/tld/domains?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-creative",
+        "links": [
+          "/tld/art?lang=en",
+          "/tld/design?lang=en",
+          "/tld/studio?lang=en",
+          "/tld/page?lang=en",
+          "/tld/bio?lang=en",
+          "/tld/ink?lang=en",
+          "/tld/moe?lang=en",
+          "/tld/lol?lang=en",
+          "/tld/red?lang=en",
+          "/tld/wtf?lang=en",
+          "/tld/photos?lang=en",
+          "/tld/gallery?lang=en",
+          "/tld/photography?lang=en",
+          "/tld/style?lang=en",
+          "/tld/beauty?lang=en",
+          "/tld/fashion?lang=en",
+          "/tld/photo?lang=en",
+          "/tld/hair?lang=en",
+          "/tld/skin?lang=en",
+          "/tld/makeup?lang=en",
+          "/tld/camera?lang=en",
+          "/tld/clothing?lang=en",
+          "/tld/tattoo?lang=en",
+          "/tld/moda?lang=en",
+          "/tld/meme?lang=en",
+          "/tld/pics?lang=en",
+          "/tld/graphics?lang=en",
+          "/tld/actor?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-media",
+        "links": [
+          "/tld/tv?lang=en",
+          "/tld/live?lang=en",
+          "/tld/email?lang=en",
+          "/tld/media?lang=en",
+          "/tld/news?lang=en",
+          "/tld/blog?lang=en",
+          "/tld/chat?lang=en",
+          "/tld/social?lang=en",
+          "/tld/video?lang=en",
+          "/tld/fm?lang=en",
+          "/tld/band?lang=en",
+          "/tld/watch?lang=en",
+          "/tld/show?lang=en",
+          "/tld/community?lang=en",
+          "/tld/guide?lang=en",
+          "/tld/reviews?lang=en",
+          "/tld/fyi?lang=en",
+          "/tld/press?lang=en",
+          "/tld/stream?lang=en",
+          "/tld/movie?lang=en",
+          "/tld/pictures?lang=en",
+          "/tld/productions?lang=en",
+          "/tld/audio?lang=en",
+          "/tld/forum?lang=en",
+          "/tld/review?lang=en",
+          "/tld/buzz?lang=en",
+          "/tld/fans?lang=en",
+          "/tld/report?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-commerce",
+        "links": [
+          "/tld/online?lang=en",
+          "/tld/store?lang=en",
+          "/tld/site?lang=en",
+          "/tld/shop?lang=en",
+          "/tld/agency?lang=en",
+          "/tld/group?lang=en",
+          "/tld/center?lang=en",
+          "/tld/works?lang=en",
+          "/tld/company?lang=en",
+          "/tld/team?lang=en",
+          "/tld/global?lang=en",
+          "/tld/expert?lang=en",
+          "/tld/boutique?lang=en",
+          "/tld/solutions?lang=en",
+          "/tld/services?lang=en",
+          "/tld/consulting?lang=en",
+          "/tld/marketing?lang=en",
+          "/tld/guru?lang=en",
+          "/tld/tips?lang=en",
+          "/tld/directory?lang=en",
+          "/tld/international?lang=en",
+          "/tld/partners?lang=en",
+          "/tld/market?lang=en",
+          "/tld/work?lang=en",
+          "/tld/sale?lang=en",
+          "/tld/law?lang=en",
+          "/tld/tax?lang=en",
+          "/tld/toys?lang=en",
+          "/tld/shoes?lang=en",
+          "/tld/gifts?lang=en",
+          "/tld/ltd?lang=en",
+          "/tld/biz?lang=en",
+          "/tld/llc?lang=en",
+          "/tld/promo?lang=en",
+          "/tld/express?lang=en",
+          "/tld/lawyer?lang=en",
+          "/tld/legal?lang=en",
+          "/tld/delivery?lang=en",
+          "/tld/jewelry?lang=en",
+          "/tld/careers?lang=en",
+          "/tld/management?lang=en",
+          "/tld/equipment?lang=en",
+          "/tld/supply?lang=en",
+          "/tld/parts?lang=en",
+          "/tld/auction?lang=en",
+          "/tld/deals?lang=en",
+          "/tld/coupons?lang=en",
+          "/tld/discount?lang=en",
+          "/tld/business?lang=en",
+          "/tld/limited?lang=en",
+          "/tld/associates?lang=en",
+          "/tld/cheap?lang=en",
+          "/tld/bargains?lang=en",
+          "/tld/supplies?lang=en",
+          "/tld/diamonds?lang=en",
+          "/tld/accountants?lang=en",
+          "/tld/attorney?lang=en",
+          "/tld/gift?lang=en",
+          "/tld/luxury?lang=en",
+          "/tld/shopping?lang=en",
+          "/tld/gmbh?lang=en",
+          "/tld/abogado?lang=en",
+          "/tld/kaufen?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-finance",
+        "links": [
+          "/tld/finance?lang=en",
+          "/tld/fund?lang=en",
+          "/tld/land?lang=en",
+          "/tld/money?lang=en",
+          "/tld/gold?lang=en",
+          "/tld/cash?lang=en",
+          "/tld/estate?lang=en",
+          "/tld/ventures?lang=en",
+          "/tld/capital?lang=en",
+          "/tld/exchange?lang=en",
+          "/tld/properties?lang=en",
+          "/tld/rentals?lang=en",
+          "/tld/apartments?lang=en",
+          "/tld/credit?lang=en",
+          "/tld/loans?lang=en",
+          "/tld/investments?lang=en",
+          "/tld/holdings?lang=en",
+          "/tld/mortgage?lang=en",
+          "/tld/rent?lang=en",
+          "/tld/homes?lang=en",
+          "/tld/casa?lang=en",
+          "/tld/bond?lang=en",
+          "/tld/immo?lang=en",
+          "/tld/condos?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-lifestyle",
+        "links": [
+          "/tld/vip?lang=en",
+          "/tld/club?lang=en",
+          "/tld/space?lang=en",
+          "/tld/fun?lang=en",
+          "/tld/world?lang=en",
+          "/tld/life?lang=en",
+          "/tld/games?lang=en",
+          "/tld/pizza?lang=en",
+          "/tld/bar?lang=en",
+          "/tld/cafe?lang=en",
+          "/tld/city?lang=en",
+          "/tld/farm?lang=en",
+          "/tld/academy?lang=en",
+          "/tld/school?lang=en",
+          "/tld/coach?lang=en",
+          "/tld/care?lang=en",
+          "/tld/doctor?lang=en",
+          "/tld/restaurant?lang=en",
+          "/tld/clinic?lang=en",
+          "/tld/dental?lang=en",
+          "/tld/fitness?lang=en",
+          "/tld/salon?lang=en",
+          "/tld/yoga?lang=en",
+          "/tld/coffee?lang=en",
+          "/tld/wine?lang=en",
+          "/tld/kitchen?lang=en",
+          "/tld/garden?lang=en",
+          "/tld/events?lang=en",
+          "/tld/institute?lang=en",
+          "/tld/house?lang=en",
+          "/tld/education?lang=en",
+          "/tld/training?lang=en",
+          "/tld/love?lang=en",
+          "/tld/wedding?lang=en",
+          "/tld/menu?lang=en",
+          "/tld/bike?lang=en",
+          "/tld/travel?lang=en",
+          "/tld/tours?lang=en",
+          "/tld/vacations?lang=en",
+          "/tld/holiday?lang=en",
+          "/tld/flights?lang=en",
+          "/tld/taxi?lang=en",
+          "/tld/builders?lang=en",
+          "/tld/construction?lang=en",
+          "/tld/repair?lang=en",
+          "/tld/energy?lang=en",
+          "/tld/solar?lang=en",
+          "/tld/green?lang=en",
+          "/tld/eco?lang=en",
+          "/tld/earth?lang=en",
+          "/tld/engineering?lang=en",
+          "/tld/family?lang=en",
+          "/tld/baby?lang=en",
+          "/tld/mom?lang=en",
+          "/tld/dad?lang=en",
+          "/tld/dog?lang=en",
+          "/tld/health?lang=en",
+          "/tld/fit?lang=en",
+          "/tld/dance?lang=en",
+          "/tld/golf?lang=en",
+          "/tld/tennis?lang=en",
+          "/tld/soccer?lang=en",
+          "/tld/football?lang=en",
+          "/tld/hockey?lang=en",
+          "/tld/surf?lang=en",
+          "/tld/vet?lang=en",
+          "/tld/recipes?lang=en",
+          "/tld/church?lang=en",
+          "/tld/cleaning?lang=en",
+          "/tld/plumbing?lang=en",
+          "/tld/catering?lang=en",
+          "/tld/florist?lang=en",
+          "/tld/courses?lang=en",
+          "/tld/degree?lang=en",
+          "/tld/mba?lang=en",
+          "/tld/study?lang=en",
+          "/tld/boats?lang=en",
+          "/tld/autos?lang=en",
+          "/tld/contractors?lang=en",
+          "/tld/furniture?lang=en",
+          "/tld/lighting?lang=en",
+          "/tld/camp?lang=en",
+          "/tld/theater?lang=en",
+          "/tld/engineer?lang=en",
+          "/tld/villas?lang=en",
+          "/tld/cruises?lang=en",
+          "/tld/voyage?lang=en",
+          "/tld/limo?lang=en",
+          "/tld/tickets?lang=en",
+          "/tld/flowers?lang=en",
+          "/tld/beer?lang=en",
+          "/tld/pub?lang=en",
+          "/tld/spa?lang=en",
+          "/tld/food?lang=en",
+          "/tld/dentist?lang=en",
+          "/tld/cooking?lang=en",
+          "/tld/party?lang=en",
+          "/tld/fishing?lang=en",
+          "/tld/horse?lang=en",
+          "/tld/singles?lang=en",
+          "/tld/dating?lang=en",
+          "/tld/organic?lang=en",
+          "/tld/vodka?lang=en",
+          "/tld/casino?lang=en",
+          "/tld/bet?lang=en",
+          "/tld/poker?lang=en",
+          "/tld/futbol?lang=en",
+          "/tld/basketball?lang=en",
+          "/tld/rugby?lang=en",
+          "/tld/cricket?lang=en",
+          "/tld/fish?lang=en",
+          "/tld/fan?lang=en",
+          "/tld/win?lang=en",
+          "/tld/quest?lang=en",
+          "/tld/kids?lang=en",
+          "/tld/foundation?lang=en",
+          "/tld/monster?lang=en",
+          "/tld/glass?lang=en",
+          "/tld/vision?lang=en",
+          "/tld/tires?lang=en",
+          "/tld/surgery?lang=en",
+          "/tld/college?lang=en",
+          "/tld/vin?lang=en",
+          "/tld/university?lang=en",
+          "/tld/hospital?lang=en",
+          "/tld/rehab?lang=en",
+          "/tld/healthcare?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-geo",
+        "links": [
+          "/tld/cc?lang=en",
+          "/tld/cn?lang=en",
+          "/tld/us?lang=en",
+          "/tld/in?lang=en",
+          "/tld/uk?lang=en",
+          "/tld/wang?lang=en",
+          "/tld/asia?lang=en",
+          "/tld/place?lang=en",
+          "/tld/town?lang=en",
+          "/tld/nyc?lang=en",
+          "/tld/london?lang=en",
+          "/tld/tokyo?lang=en",
+          "/tld/miami?lang=en",
+          "/tld/boston?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-more",
+        "links": [
+          "/tld/blue?lang=en",
+          "/tld/pink?lang=en",
+          "/tld/black?lang=en",
+          "/tld/ninja?lang=en",
+          "/tld/rocks?lang=en",
+          "/tld/pet?lang=en",
+          "/tld/berlin?lang=en",
+          "/tld/paris?lang=en",
+          "/tld/amsterdam?lang=en",
+          "/tld/vegas?lang=en",
+          "/tld/immobilien?lang=en",
+          "/tld/tienda?lang=en",
+          "/tld/de?lang=en",
+          "/tld/eu?lang=en",
+          "/tld/ca?lang=en",
+          "/tld/au?lang=en",
+          "/tld/jp?lang=en",
+          "/tld/sg?lang=en",
+          "/tld/fr?lang=en",
+          "/tld/it?lang=en",
+          "/tld/es?lang=en",
+          "/tld/nl?lang=en",
+          "/tld/kr?lang=en",
+          "/tld/hk?lang=en",
+          "/tld/ch?lang=en",
+          "/tld/at?lang=en",
+          "/tld/be?lang=en",
+          "/tld/se?lang=en",
+          "/tld/pl?lang=en",
+          "/tld/tw?lang=en",
+          "/tld/dk?lang=en",
+          "/tld/fi?lang=en",
+          "/tld/no?lang=en",
+          "/tld/ie?lang=en",
+          "/tld/nz?lang=en",
+          "/tld/mx?lang=en",
+          "/tld/br?lang=en",
+          "/tld/pt?lang=en",
+          "/tld/cz?lang=en",
+          "/tld/tr?lang=en",
+          "/tld/ae?lang=en",
+          "/tld/id?lang=en",
+          "/tld/vn?lang=en",
+          "/tld/ph?lang=en",
+          "/tld/gr?lang=en",
+          "/tld/ro?lang=en",
+          "/tld/hu?lang=en",
+          "/tld/cl?lang=en",
+          "/tld/my?lang=en",
+          "/tld/th?lang=en",
+          "/tld/sk?lang=en",
+          "/tld/ua?lang=en",
+          "/tld/ar?lang=en",
+          "/tld/ng?lang=en",
+          "/tld/il?lang=en",
+          "/tld/sa?lang=en",
+          "/tld/eg?lang=en",
+          "/tld/ke?lang=en",
+          "/tld/pe?lang=en",
+          "/tld/kz?lang=en",
+          "/tld/za?lang=en",
+          "/tld/ma?lang=en",
+          "/tld/qa?lang=en",
+          "/tld/pk?lang=en",
+          "/tld/lk?lang=en",
+          "/tld/ee?lang=en",
+          "/tld/lt?lang=en",
+          "/tld/lv?lang=en",
+          "/tld/rs?lang=en",
+          "/tld/is?lang=en",
+          "/tld/ge?lang=en",
+          "/tld/uy?lang=en",
+          "/tld/lu?lang=en",
+          "/tld/la?lang=en",
+          "/tld/md?lang=en",
+          "/tld/am?lang=en",
+          "/tld/mn?lang=en",
+          "/tld/uz?lang=en"
+        ]
+      }
+    ],
+    "query": ".cn",
+    "filtered": [
+      "/tld/cn?lang=en"
+    ],
+    "counter": "1 / 408",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_filter_tld_en.png"
+  },
+  {
+    "route": "/guide",
+    "lang": "zh",
+    "groups": [
+      {
+        "id": "hub-g-tech",
+        "links": [
+          "/guide/saas?lang=zh",
+          "/guide/ai?lang=zh",
+          "/guide/devtools?lang=zh",
+          "/guide/web3?lang=zh",
+          "/guide/hardware?lang=zh",
+          "/guide/security?lang=zh",
+          "/guide/agent?lang=zh",
+          "/guide/drone?lang=zh",
+          "/guide/solar?lang=zh",
+          "/guide/indiehacker?lang=zh",
+          "/guide/opensource?lang=zh",
+          "/guide/indiegame?lang=zh",
+          "/guide/3dprint?lang=zh",
+          "/guide/evcharging?lang=zh",
+          "/guide/energystorage?lang=zh",
+          "/guide/robotics?lang=zh",
+          "/guide/nocode?lang=zh",
+          "/guide/datingapp?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ecommerce",
+        "links": [
+          "/guide/ecommerce?lang=zh",
+          "/guide/fashion?lang=zh",
+          "/guide/resale?lang=zh",
+          "/guide/crossborder?lang=zh",
+          "/guide/usedcar?lang=zh",
+          "/guide/hanfu?lang=zh",
+          "/guide/livestream?lang=zh",
+          "/guide/jewelry?lang=zh",
+          "/guide/toys?lang=zh",
+          "/guide/furniture?lang=zh",
+          "/guide/petsupplies?lang=zh",
+          "/guide/forwarder?lang=zh",
+          "/guide/gearrental?lang=zh",
+          "/guide/sourcing?lang=zh",
+          "/guide/fleamarket?lang=zh",
+          "/guide/vending?lang=zh",
+          "/guide/fragrance?lang=zh",
+          "/guide/upcycling?lang=zh",
+          "/guide/convenience?lang=zh",
+          "/guide/stationery?lang=zh",
+          "/guide/grocery?lang=zh",
+          "/guide/babystore?lang=zh",
+          "/guide/giftcustom?lang=zh",
+          "/guide/wholesale?lang=zh",
+          "/guide/trading?lang=zh",
+          "/guide/coupon?lang=zh",
+          "/guide/flashsale?lang=zh",
+          "/guide/wig?lang=zh",
+          "/guide/autoparts?lang=zh",
+          "/guide/flowerdelivery?lang=zh",
+          "/guide/kidswear?lang=zh",
+          "/guide/souvenir?lang=zh",
+          "/guide/luxuryresale?lang=zh",
+          "/guide/organicfood?lang=zh",
+          "/guide/homedecor?lang=zh",
+          "/guide/fashionbuyer?lang=zh",
+          "/guide/candle?lang=zh",
+          "/guide/instrumentstore?lang=zh",
+          "/guide/soapmaking?lang=zh",
+          "/guide/modelkit?lang=zh",
+          "/guide/recordstore?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-food",
+        "links": [
+          "/guide/food?lang=zh",
+          "/guide/coffee?lang=zh",
+          "/guide/bakery?lang=zh",
+          "/guide/farm?lang=zh",
+          "/guide/brewery?lang=zh",
+          "/guide/foodtruck?lang=zh",
+          "/guide/mealprep?lang=zh",
+          "/guide/bar?lang=zh",
+          "/guide/hotpot?lang=zh",
+          "/guide/dessert?lang=zh",
+          "/guide/noodle?lang=zh",
+          "/guide/teahouse?lang=zh",
+          "/guide/bubbletea?lang=zh",
+          "/guide/bbq?lang=zh",
+          "/guide/catering?lang=zh",
+          "/guide/fruitshop?lang=zh",
+          "/guide/seafood?lang=zh",
+          "/guide/deli?lang=zh",
+          "/guide/winery?lang=zh",
+          "/guide/sushi?lang=zh",
+          "/guide/icecream?lang=zh",
+          "/guide/tea?lang=zh",
+          "/guide/pizza?lang=zh",
+          "/guide/taproom?lang=zh",
+          "/guide/izakaya?lang=zh",
+          "/guide/snacks?lang=zh",
+          "/guide/cookingclass?lang=zh",
+          "/guide/craftvodka?lang=zh",
+          "/guide/juicebar?lang=zh",
+          "/guide/beekeeping?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-content",
+        "links": [
+          "/guide/blog?lang=zh",
+          "/guide/photography?lang=zh",
+          "/guide/podcast?lang=zh",
+          "/guide/newsletter?lang=zh",
+          "/guide/music?lang=zh",
+          "/guide/creator?lang=zh",
+          "/guide/boardgame?lang=zh",
+          "/guide/travelshoot?lang=zh",
+          "/guide/mcn?lang=zh",
+          "/guide/pottery?lang=zh",
+          "/guide/petphoto?lang=zh",
+          "/guide/zine?lang=zh",
+          "/guide/weddingphoto?lang=zh",
+          "/guide/kidsphoto?lang=zh",
+          "/guide/productphoto?lang=zh",
+          "/guide/portrait?lang=zh",
+          "/guide/foodreview?lang=zh",
+          "/guide/shortvideo?lang=zh",
+          "/guide/audiobook?lang=zh",
+          "/guide/postproduction?lang=zh",
+          "/guide/animation?lang=zh",
+          "/guide/documentary?lang=zh",
+          "/guide/newsmedia?lang=zh",
+          "/guide/esportsnews?lang=zh",
+          "/guide/sportsodds?lang=zh",
+          "/guide/fanclub?lang=zh",
+          "/guide/leathercraft?lang=zh",
+          "/guide/woodworking?lang=zh",
+          "/guide/recordingstudio?lang=zh",
+          "/guide/glassblowing?lang=zh",
+          "/guide/embroidery?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-edu",
+        "links": [
+          "/guide/edu?lang=zh",
+          "/guide/courses?lang=zh",
+          "/guide/bookstore?lang=zh",
+          "/guide/studyabroad?lang=zh",
+          "/guide/translation?lang=zh",
+          "/guide/codingschool?lang=zh",
+          "/guide/language?lang=zh",
+          "/guide/preschool?lang=zh",
+          "/guide/knowledgepay?lang=zh",
+          "/guide/swimschool?lang=zh",
+          "/guide/kidsart?lang=zh",
+          "/guide/danceschool?lang=zh",
+          "/guide/drivingschool?lang=zh",
+          "/guide/studytour?lang=zh",
+          "/guide/musicschool?lang=zh",
+          "/guide/chess?lang=zh",
+          "/guide/tutoring?lang=zh",
+          "/guide/calligraphy?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-health",
+        "links": [
+          "/guide/fitness?lang=zh",
+          "/guide/health?lang=zh",
+          "/guide/therapy?lang=zh",
+          "/guide/eldercare?lang=zh",
+          "/guide/yoga?lang=zh",
+          "/guide/dental?lang=zh",
+          "/guide/coach?lang=zh",
+          "/guide/crossfit?lang=zh",
+          "/guide/ski?lang=zh",
+          "/guide/climbing?lang=zh",
+          "/guide/martialarts?lang=zh",
+          "/guide/billiards?lang=zh",
+          "/guide/massage?lang=zh",
+          "/guide/diving?lang=zh",
+          "/guide/skateshop?lang=zh",
+          "/guide/surf?lang=zh",
+          "/guide/golf?lang=zh",
+          "/guide/pharmacy?lang=zh",
+          "/guide/clinic?lang=zh",
+          "/guide/nutrition?lang=zh",
+          "/guide/physio?lang=zh",
+          "/guide/runclub?lang=zh",
+          "/guide/tennis?lang=zh",
+          "/guide/soccer?lang=zh",
+          "/guide/football?lang=zh",
+          "/guide/hockey?lang=zh",
+          "/guide/pickleball?lang=zh",
+          "/guide/pilates?lang=zh",
+          "/guide/equestrian?lang=zh",
+          "/guide/archery?lang=zh",
+          "/guide/bowling?lang=zh",
+          "/guide/trampoline?lang=zh",
+          "/guide/badminton?lang=zh",
+          "/guide/gokart?lang=zh",
+          "/guide/sauna?lang=zh",
+          "/guide/dayspa?lang=zh",
+          "/guide/orthodontics?lang=zh",
+          "/guide/futsal?lang=zh",
+          "/guide/basketball?lang=zh",
+          "/guide/rugby?lang=zh",
+          "/guide/cricket?lang=zh",
+          "/guide/volleyball?lang=zh",
+          "/guide/tabletennis?lang=zh",
+          "/guide/baseball?lang=zh",
+          "/guide/boxing?lang=zh",
+          "/guide/taekwondo?lang=zh",
+          "/guide/fencing?lang=zh",
+          "/guide/gymnastics?lang=zh",
+          "/guide/cheerleading?lang=zh",
+          "/guide/squash?lang=zh",
+          "/guide/lacrosse?lang=zh",
+          "/guide/judo?lang=zh",
+          "/guide/bjj?lang=zh",
+          "/guide/wrestling?lang=zh",
+          "/guide/muaythai?lang=zh",
+          "/guide/handball?lang=zh",
+          "/guide/curling?lang=zh",
+          "/guide/rowing?lang=zh",
+          "/guide/skating?lang=zh",
+          "/guide/meditation?lang=zh",
+          "/guide/hearingaid?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-travel",
+        "links": [
+          "/guide/travel?lang=zh",
+          "/guide/automotive?lang=zh",
+          "/guide/bnb?lang=zh",
+          "/guide/outdoor?lang=zh",
+          "/guide/logistics?lang=zh",
+          "/guide/moving?lang=zh",
+          "/guide/rvtravel?lang=zh",
+          "/guide/bikeshop?lang=zh",
+          "/guide/fishing?lang=zh",
+          "/guide/campgear?lang=zh",
+          "/guide/carrental?lang=zh",
+          "/guide/travelagency?lang=zh",
+          "/guide/hotel?lang=zh",
+          "/guide/towing?lang=zh",
+          "/guide/hostel?lang=zh",
+          "/guide/hotspring?lang=zh",
+          "/guide/yachtcharter?lang=zh",
+          "/guide/villarental?lang=zh",
+          "/guide/cruise?lang=zh",
+          "/guide/customtour?lang=zh",
+          "/guide/limoservice?lang=zh",
+          "/guide/seafishing?lang=zh",
+          "/guide/horseranch?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-local",
+        "links": [
+          "/guide/pets?lang=zh",
+          "/guide/beauty?lang=zh",
+          "/guide/parenting?lang=zh",
+          "/guide/wedding?lang=zh",
+          "/guide/cleaning?lang=zh",
+          "/guide/escaperoom?lang=zh",
+          "/guide/florist?lang=zh",
+          "/guide/interior?lang=zh",
+          "/guide/barber?lang=zh",
+          "/guide/vet?lang=zh",
+          "/guide/gardening?lang=zh",
+          "/guide/events?lang=zh",
+          "/guide/aquarium?lang=zh",
+          "/guide/pettraining?lang=zh",
+          "/guide/nailsalon?lang=zh",
+          "/guide/laundry?lang=zh",
+          "/guide/matchmaking?lang=zh",
+          "/guide/tattoo?lang=zh",
+          "/guide/repair?lang=zh",
+          "/guide/optician?lang=zh",
+          "/guide/carwash?lang=zh",
+          "/guide/petboarding?lang=zh",
+          "/guide/locksmith?lang=zh",
+          "/guide/printshop?lang=zh",
+          "/guide/errand?lang=zh",
+          "/guide/plumber?lang=zh",
+          "/guide/petcafe?lang=zh",
+          "/guide/footspa?lang=zh",
+          "/guide/parcel?lang=zh",
+          "/guide/apartment?lang=zh",
+          "/guide/construction?lang=zh",
+          "/guide/appliancerepair?lang=zh",
+          "/guide/karaoke?lang=zh",
+          "/guide/recycling?lang=zh",
+          "/guide/hvac?lang=zh",
+          "/guide/petgrooming?lang=zh",
+          "/guide/housekeeping?lang=zh",
+          "/guide/kidsplayground?lang=zh",
+          "/guide/pestcontrol?lang=zh",
+          "/guide/roofing?lang=zh",
+          "/guide/selfstorage?lang=zh",
+          "/guide/signage?lang=zh",
+          "/guide/tailor?lang=zh",
+          "/guide/funeral?lang=zh",
+          "/guide/skincare?lang=zh",
+          "/guide/makeupartist?lang=zh",
+          "/guide/homestaging?lang=zh",
+          "/guide/partyplanner?lang=zh",
+          "/guide/singlesevents?lang=zh",
+          "/guide/permanentmakeup?lang=zh",
+          "/guide/tabletopclub?lang=zh",
+          "/guide/aquascaping?lang=zh",
+          "/guide/framing?lang=zh",
+          "/guide/watchrepair?lang=zh",
+          "/guide/bonsai?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-business",
+        "links": [
+          "/guide/fintech?lang=zh",
+          "/guide/game?lang=zh",
+          "/guide/agency?lang=zh",
+          "/guide/realestate?lang=zh",
+          "/guide/legal?lang=zh",
+          "/guide/nonprofit?lang=zh",
+          "/guide/freelance?lang=zh",
+          "/guide/community?lang=zh",
+          "/guide/marketing?lang=zh",
+          "/guide/recruiting?lang=zh",
+          "/guide/insurance?lang=zh",
+          "/guide/esports?lang=zh",
+          "/guide/accounting?lang=zh",
+          "/guide/coworking?lang=zh",
+          "/guide/resume?lang=zh",
+          "/guide/careercoach?lang=zh",
+          "/guide/vr?lang=zh",
+          "/guide/cybercafe?lang=zh",
+          "/guide/realtor?lang=zh",
+          "/guide/propertymgmt?lang=zh",
+          "/guide/equipmentrental?lang=zh",
+          "/guide/retrofit?lang=zh",
+          "/guide/watertreatment?lang=zh",
+          "/guide/companyreg?lang=zh",
+          "/guide/consulting?lang=zh",
+          "/guide/immigration?lang=zh",
+          "/guide/securityguard?lang=zh",
+          "/guide/ipagency?lang=zh",
+          "/guide/ticketing?lang=zh",
+          "/guide/lawfirm?lang=zh",
+          "/guide/giveaway?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-compliance",
+        "links": [
+          "/guide/cn-realname?lang=zh",
+          "/guide/cn-serverhold?lang=zh",
+          "/guide/cn-icp-beian?lang=zh",
+          "/guide/cn-dns-inland-vs-overseas?lang=zh",
+          "/guide/cn-vs-comcn-registrar?lang=zh",
+          "/guide/cn-expiry-redemption?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-more",
+        "links": [
+          "/guide/aiart?lang=zh",
+          "/guide/campsite?lang=zh",
+          "/guide/tcm?lang=zh",
+          "/guide/deskcraft?lang=zh",
+          "/guide/petmemorial?lang=zh",
+          "/guide/postpartum?lang=zh",
+          "/guide/electrician?lang=zh",
+          "/guide/landscaping?lang=zh",
+          "/guide/painting?lang=zh",
+          "/guide/jobboard?lang=zh",
+          "/guide/restaurantsupply?lang=zh",
+          "/guide/motorcycleparts?lang=zh",
+          "/guide/auction?lang=zh",
+          "/guide/antiques?lang=zh",
+          "/guide/lightingbrand?lang=zh",
+          "/guide/outlet?lang=zh",
+          "/guide/watches?lang=zh",
+          "/guide/sneakers?lang=zh",
+          "/guide/dollarstore?lang=zh",
+          "/guide/thriftstore?lang=zh",
+          "/guide/officesupplies?lang=zh",
+          "/guide/medicalsupplies?lang=zh",
+          "/guide/buildingmaterials?lang=zh",
+          "/guide/franchise?lang=zh",
+          "/guide/sealcarving?lang=zh",
+          "/guide/incense?lang=zh",
+          "/guide/papercut?lang=zh",
+          "/guide/lantern?lang=zh",
+          "/guide/quilting?lang=zh",
+          "/guide/teaware?lang=zh",
+          "/guide/kite?lang=zh",
+          "/guide/succulent?lang=zh",
+          "/guide/chocolate?lang=zh",
+          "/guide/weaving?lang=zh",
+          "/guide/puppet?lang=zh",
+          "/guide/birding?lang=zh",
+          "/guide/stargazing?lang=zh",
+          "/guide/cidery?lang=zh",
+          "/guide/bookbinding?lang=zh",
+          "/guide/letterpress?lang=zh",
+          "/guide/terrarium?lang=zh",
+          "/guide/axethrowing?lang=zh",
+          "/guide/lasertag?lang=zh",
+          "/guide/paintball?lang=zh",
+          "/guide/mushroomfarm?lang=zh",
+          "/guide/neonsign?lang=zh",
+          "/guide/millinery?lang=zh",
+          "/guide/mosaic?lang=zh",
+          "/guide/blacksmith?lang=zh",
+          "/guide/distillery?lang=zh",
+          "/guide/kombucha?lang=zh",
+          "/guide/climbinggym?lang=zh",
+          "/guide/stainedglass?lang=zh",
+          "/guide/minigolf?lang=zh",
+          "/guide/taxidermy?lang=zh",
+          "/guide/cheesemaking?lang=zh",
+          "/guide/meadery?lang=zh",
+          "/guide/tufting?lang=zh",
+          "/guide/silversmith?lang=zh",
+          "/guide/falconry?lang=zh",
+          "/guide/lutherie?lang=zh",
+          "/guide/lapidary?lang=zh",
+          "/guide/cooperage?lang=zh",
+          "/guide/kintsugi?lang=zh",
+          "/guide/indigodye?lang=zh",
+          "/guide/penmaking?lang=zh",
+          "/guide/marquetry?lang=zh",
+          "/guide/cloisonne?lang=zh",
+          "/guide/papermaking?lang=zh",
+          "/guide/inkstone?lang=zh",
+          "/guide/fletching?lang=zh",
+          "/guide/gilding?lang=zh",
+          "/guide/lacquerware?lang=zh",
+          "/guide/batik?lang=zh",
+          "/guide/horology?lang=zh",
+          "/guide/saddlery?lang=zh",
+          "/guide/ikebana?lang=zh",
+          "/guide/fanmaking?lang=zh",
+          "/guide/bambooweaving?lang=zh",
+          "/guide/swordsmith?lang=zh",
+          "/guide/shadowpuppet?lang=zh",
+          "/guide/guqin?lang=zh",
+          "/guide/brocade?lang=zh",
+          "/guide/jadecarving?lang=zh",
+          "/guide/claysculpture?lang=zh",
+          "/guide/sugarpainting?lang=zh",
+          "/guide/velvetflower?lang=zh",
+          "/guide/oilpaperumbrella?lang=zh",
+          "/guide/bronzecasting?lang=zh",
+          "/guide/pyrography?lang=zh",
+          "/guide/doughsculpture?lang=zh",
+          "/guide/eggcarving?lang=zh",
+          "/guide/nutcarving?lang=zh",
+          "/guide/insidepainting?lang=zh",
+          "/guide/strawpainting?lang=zh",
+          "/guide/woodblockprint?lang=zh"
+        ]
+      }
+    ],
+    "query": "saas",
+    "filtered": [
+      "/guide/saas?lang=zh",
+      "/guide/recruiting?lang=zh"
+    ],
+    "counter": "2 / 410",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_filter_guide_zh.png"
+  },
+  {
+    "route": "/guide",
+    "lang": "en",
+    "groups": [
+      {
+        "id": "hub-g-tech",
+        "links": [
+          "/guide/saas?lang=en",
+          "/guide/ai?lang=en",
+          "/guide/devtools?lang=en",
+          "/guide/web3?lang=en",
+          "/guide/hardware?lang=en",
+          "/guide/security?lang=en",
+          "/guide/agent?lang=en",
+          "/guide/drone?lang=en",
+          "/guide/solar?lang=en",
+          "/guide/indiehacker?lang=en",
+          "/guide/opensource?lang=en",
+          "/guide/indiegame?lang=en",
+          "/guide/3dprint?lang=en",
+          "/guide/evcharging?lang=en",
+          "/guide/energystorage?lang=en",
+          "/guide/robotics?lang=en",
+          "/guide/nocode?lang=en",
+          "/guide/datingapp?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ecommerce",
+        "links": [
+          "/guide/ecommerce?lang=en",
+          "/guide/fashion?lang=en",
+          "/guide/resale?lang=en",
+          "/guide/crossborder?lang=en",
+          "/guide/usedcar?lang=en",
+          "/guide/hanfu?lang=en",
+          "/guide/livestream?lang=en",
+          "/guide/jewelry?lang=en",
+          "/guide/toys?lang=en",
+          "/guide/furniture?lang=en",
+          "/guide/petsupplies?lang=en",
+          "/guide/forwarder?lang=en",
+          "/guide/gearrental?lang=en",
+          "/guide/sourcing?lang=en",
+          "/guide/fleamarket?lang=en",
+          "/guide/vending?lang=en",
+          "/guide/fragrance?lang=en",
+          "/guide/upcycling?lang=en",
+          "/guide/convenience?lang=en",
+          "/guide/stationery?lang=en",
+          "/guide/grocery?lang=en",
+          "/guide/babystore?lang=en",
+          "/guide/giftcustom?lang=en",
+          "/guide/wholesale?lang=en",
+          "/guide/trading?lang=en",
+          "/guide/coupon?lang=en",
+          "/guide/flashsale?lang=en",
+          "/guide/wig?lang=en",
+          "/guide/autoparts?lang=en",
+          "/guide/flowerdelivery?lang=en",
+          "/guide/kidswear?lang=en",
+          "/guide/souvenir?lang=en",
+          "/guide/luxuryresale?lang=en",
+          "/guide/organicfood?lang=en",
+          "/guide/homedecor?lang=en",
+          "/guide/fashionbuyer?lang=en",
+          "/guide/candle?lang=en",
+          "/guide/instrumentstore?lang=en",
+          "/guide/soapmaking?lang=en",
+          "/guide/modelkit?lang=en",
+          "/guide/recordstore?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-food",
+        "links": [
+          "/guide/food?lang=en",
+          "/guide/coffee?lang=en",
+          "/guide/bakery?lang=en",
+          "/guide/farm?lang=en",
+          "/guide/brewery?lang=en",
+          "/guide/foodtruck?lang=en",
+          "/guide/mealprep?lang=en",
+          "/guide/bar?lang=en",
+          "/guide/hotpot?lang=en",
+          "/guide/dessert?lang=en",
+          "/guide/noodle?lang=en",
+          "/guide/teahouse?lang=en",
+          "/guide/bubbletea?lang=en",
+          "/guide/bbq?lang=en",
+          "/guide/catering?lang=en",
+          "/guide/fruitshop?lang=en",
+          "/guide/seafood?lang=en",
+          "/guide/deli?lang=en",
+          "/guide/winery?lang=en",
+          "/guide/sushi?lang=en",
+          "/guide/icecream?lang=en",
+          "/guide/tea?lang=en",
+          "/guide/pizza?lang=en",
+          "/guide/taproom?lang=en",
+          "/guide/izakaya?lang=en",
+          "/guide/snacks?lang=en",
+          "/guide/cookingclass?lang=en",
+          "/guide/craftvodka?lang=en",
+          "/guide/juicebar?lang=en",
+          "/guide/beekeeping?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-content",
+        "links": [
+          "/guide/blog?lang=en",
+          "/guide/photography?lang=en",
+          "/guide/podcast?lang=en",
+          "/guide/newsletter?lang=en",
+          "/guide/music?lang=en",
+          "/guide/creator?lang=en",
+          "/guide/boardgame?lang=en",
+          "/guide/travelshoot?lang=en",
+          "/guide/mcn?lang=en",
+          "/guide/pottery?lang=en",
+          "/guide/petphoto?lang=en",
+          "/guide/zine?lang=en",
+          "/guide/weddingphoto?lang=en",
+          "/guide/kidsphoto?lang=en",
+          "/guide/productphoto?lang=en",
+          "/guide/portrait?lang=en",
+          "/guide/foodreview?lang=en",
+          "/guide/shortvideo?lang=en",
+          "/guide/audiobook?lang=en",
+          "/guide/postproduction?lang=en",
+          "/guide/animation?lang=en",
+          "/guide/documentary?lang=en",
+          "/guide/newsmedia?lang=en",
+          "/guide/esportsnews?lang=en",
+          "/guide/sportsodds?lang=en",
+          "/guide/fanclub?lang=en",
+          "/guide/leathercraft?lang=en",
+          "/guide/woodworking?lang=en",
+          "/guide/recordingstudio?lang=en",
+          "/guide/glassblowing?lang=en",
+          "/guide/embroidery?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-edu",
+        "links": [
+          "/guide/edu?lang=en",
+          "/guide/courses?lang=en",
+          "/guide/bookstore?lang=en",
+          "/guide/studyabroad?lang=en",
+          "/guide/translation?lang=en",
+          "/guide/codingschool?lang=en",
+          "/guide/language?lang=en",
+          "/guide/preschool?lang=en",
+          "/guide/knowledgepay?lang=en",
+          "/guide/swimschool?lang=en",
+          "/guide/kidsart?lang=en",
+          "/guide/danceschool?lang=en",
+          "/guide/drivingschool?lang=en",
+          "/guide/studytour?lang=en",
+          "/guide/musicschool?lang=en",
+          "/guide/chess?lang=en",
+          "/guide/tutoring?lang=en",
+          "/guide/calligraphy?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-health",
+        "links": [
+          "/guide/fitness?lang=en",
+          "/guide/health?lang=en",
+          "/guide/therapy?lang=en",
+          "/guide/eldercare?lang=en",
+          "/guide/yoga?lang=en",
+          "/guide/dental?lang=en",
+          "/guide/coach?lang=en",
+          "/guide/crossfit?lang=en",
+          "/guide/ski?lang=en",
+          "/guide/climbing?lang=en",
+          "/guide/martialarts?lang=en",
+          "/guide/billiards?lang=en",
+          "/guide/massage?lang=en",
+          "/guide/diving?lang=en",
+          "/guide/skateshop?lang=en",
+          "/guide/surf?lang=en",
+          "/guide/golf?lang=en",
+          "/guide/pharmacy?lang=en",
+          "/guide/clinic?lang=en",
+          "/guide/nutrition?lang=en",
+          "/guide/physio?lang=en",
+          "/guide/runclub?lang=en",
+          "/guide/tennis?lang=en",
+          "/guide/soccer?lang=en",
+          "/guide/football?lang=en",
+          "/guide/hockey?lang=en",
+          "/guide/pickleball?lang=en",
+          "/guide/pilates?lang=en",
+          "/guide/equestrian?lang=en",
+          "/guide/archery?lang=en",
+          "/guide/bowling?lang=en",
+          "/guide/trampoline?lang=en",
+          "/guide/badminton?lang=en",
+          "/guide/gokart?lang=en",
+          "/guide/sauna?lang=en",
+          "/guide/dayspa?lang=en",
+          "/guide/orthodontics?lang=en",
+          "/guide/futsal?lang=en",
+          "/guide/basketball?lang=en",
+          "/guide/rugby?lang=en",
+          "/guide/cricket?lang=en",
+          "/guide/volleyball?lang=en",
+          "/guide/tabletennis?lang=en",
+          "/guide/baseball?lang=en",
+          "/guide/boxing?lang=en",
+          "/guide/taekwondo?lang=en",
+          "/guide/fencing?lang=en",
+          "/guide/gymnastics?lang=en",
+          "/guide/cheerleading?lang=en",
+          "/guide/squash?lang=en",
+          "/guide/lacrosse?lang=en",
+          "/guide/judo?lang=en",
+          "/guide/bjj?lang=en",
+          "/guide/wrestling?lang=en",
+          "/guide/muaythai?lang=en",
+          "/guide/handball?lang=en",
+          "/guide/curling?lang=en",
+          "/guide/rowing?lang=en",
+          "/guide/skating?lang=en",
+          "/guide/meditation?lang=en",
+          "/guide/hearingaid?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-travel",
+        "links": [
+          "/guide/travel?lang=en",
+          "/guide/automotive?lang=en",
+          "/guide/bnb?lang=en",
+          "/guide/outdoor?lang=en",
+          "/guide/logistics?lang=en",
+          "/guide/moving?lang=en",
+          "/guide/rvtravel?lang=en",
+          "/guide/bikeshop?lang=en",
+          "/guide/fishing?lang=en",
+          "/guide/campgear?lang=en",
+          "/guide/carrental?lang=en",
+          "/guide/travelagency?lang=en",
+          "/guide/hotel?lang=en",
+          "/guide/towing?lang=en",
+          "/guide/hostel?lang=en",
+          "/guide/hotspring?lang=en",
+          "/guide/yachtcharter?lang=en",
+          "/guide/villarental?lang=en",
+          "/guide/cruise?lang=en",
+          "/guide/customtour?lang=en",
+          "/guide/limoservice?lang=en",
+          "/guide/seafishing?lang=en",
+          "/guide/horseranch?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-local",
+        "links": [
+          "/guide/pets?lang=en",
+          "/guide/beauty?lang=en",
+          "/guide/parenting?lang=en",
+          "/guide/wedding?lang=en",
+          "/guide/cleaning?lang=en",
+          "/guide/escaperoom?lang=en",
+          "/guide/florist?lang=en",
+          "/guide/interior?lang=en",
+          "/guide/barber?lang=en",
+          "/guide/vet?lang=en",
+          "/guide/gardening?lang=en",
+          "/guide/events?lang=en",
+          "/guide/aquarium?lang=en",
+          "/guide/pettraining?lang=en",
+          "/guide/nailsalon?lang=en",
+          "/guide/laundry?lang=en",
+          "/guide/matchmaking?lang=en",
+          "/guide/tattoo?lang=en",
+          "/guide/repair?lang=en",
+          "/guide/optician?lang=en",
+          "/guide/carwash?lang=en",
+          "/guide/petboarding?lang=en",
+          "/guide/locksmith?lang=en",
+          "/guide/printshop?lang=en",
+          "/guide/errand?lang=en",
+          "/guide/plumber?lang=en",
+          "/guide/petcafe?lang=en",
+          "/guide/footspa?lang=en",
+          "/guide/parcel?lang=en",
+          "/guide/apartment?lang=en",
+          "/guide/construction?lang=en",
+          "/guide/appliancerepair?lang=en",
+          "/guide/karaoke?lang=en",
+          "/guide/recycling?lang=en",
+          "/guide/hvac?lang=en",
+          "/guide/petgrooming?lang=en",
+          "/guide/housekeeping?lang=en",
+          "/guide/kidsplayground?lang=en",
+          "/guide/pestcontrol?lang=en",
+          "/guide/roofing?lang=en",
+          "/guide/selfstorage?lang=en",
+          "/guide/signage?lang=en",
+          "/guide/tailor?lang=en",
+          "/guide/funeral?lang=en",
+          "/guide/skincare?lang=en",
+          "/guide/makeupartist?lang=en",
+          "/guide/homestaging?lang=en",
+          "/guide/partyplanner?lang=en",
+          "/guide/singlesevents?lang=en",
+          "/guide/permanentmakeup?lang=en",
+          "/guide/tabletopclub?lang=en",
+          "/guide/aquascaping?lang=en",
+          "/guide/framing?lang=en",
+          "/guide/watchrepair?lang=en",
+          "/guide/bonsai?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-business",
+        "links": [
+          "/guide/fintech?lang=en",
+          "/guide/game?lang=en",
+          "/guide/agency?lang=en",
+          "/guide/realestate?lang=en",
+          "/guide/legal?lang=en",
+          "/guide/nonprofit?lang=en",
+          "/guide/freelance?lang=en",
+          "/guide/community?lang=en",
+          "/guide/marketing?lang=en",
+          "/guide/recruiting?lang=en",
+          "/guide/insurance?lang=en",
+          "/guide/esports?lang=en",
+          "/guide/accounting?lang=en",
+          "/guide/coworking?lang=en",
+          "/guide/resume?lang=en",
+          "/guide/careercoach?lang=en",
+          "/guide/vr?lang=en",
+          "/guide/cybercafe?lang=en",
+          "/guide/realtor?lang=en",
+          "/guide/propertymgmt?lang=en",
+          "/guide/equipmentrental?lang=en",
+          "/guide/retrofit?lang=en",
+          "/guide/watertreatment?lang=en",
+          "/guide/companyreg?lang=en",
+          "/guide/consulting?lang=en",
+          "/guide/immigration?lang=en",
+          "/guide/securityguard?lang=en",
+          "/guide/ipagency?lang=en",
+          "/guide/ticketing?lang=en",
+          "/guide/lawfirm?lang=en",
+          "/guide/giveaway?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-compliance",
+        "links": [
+          "/guide/cn-realname?lang=en",
+          "/guide/cn-serverhold?lang=en",
+          "/guide/cn-icp-beian?lang=en",
+          "/guide/cn-dns-inland-vs-overseas?lang=en",
+          "/guide/cn-vs-comcn-registrar?lang=en",
+          "/guide/cn-expiry-redemption?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-more",
+        "links": [
+          "/guide/aiart?lang=en",
+          "/guide/campsite?lang=en",
+          "/guide/tcm?lang=en",
+          "/guide/deskcraft?lang=en",
+          "/guide/petmemorial?lang=en",
+          "/guide/postpartum?lang=en",
+          "/guide/electrician?lang=en",
+          "/guide/landscaping?lang=en",
+          "/guide/painting?lang=en",
+          "/guide/jobboard?lang=en",
+          "/guide/restaurantsupply?lang=en",
+          "/guide/motorcycleparts?lang=en",
+          "/guide/auction?lang=en",
+          "/guide/antiques?lang=en",
+          "/guide/lightingbrand?lang=en",
+          "/guide/outlet?lang=en",
+          "/guide/watches?lang=en",
+          "/guide/sneakers?lang=en",
+          "/guide/dollarstore?lang=en",
+          "/guide/thriftstore?lang=en",
+          "/guide/officesupplies?lang=en",
+          "/guide/medicalsupplies?lang=en",
+          "/guide/buildingmaterials?lang=en",
+          "/guide/franchise?lang=en",
+          "/guide/sealcarving?lang=en",
+          "/guide/incense?lang=en",
+          "/guide/papercut?lang=en",
+          "/guide/lantern?lang=en",
+          "/guide/quilting?lang=en",
+          "/guide/teaware?lang=en",
+          "/guide/kite?lang=en",
+          "/guide/succulent?lang=en",
+          "/guide/chocolate?lang=en",
+          "/guide/weaving?lang=en",
+          "/guide/puppet?lang=en",
+          "/guide/birding?lang=en",
+          "/guide/stargazing?lang=en",
+          "/guide/cidery?lang=en",
+          "/guide/bookbinding?lang=en",
+          "/guide/letterpress?lang=en",
+          "/guide/terrarium?lang=en",
+          "/guide/axethrowing?lang=en",
+          "/guide/lasertag?lang=en",
+          "/guide/paintball?lang=en",
+          "/guide/mushroomfarm?lang=en",
+          "/guide/neonsign?lang=en",
+          "/guide/millinery?lang=en",
+          "/guide/mosaic?lang=en",
+          "/guide/blacksmith?lang=en",
+          "/guide/distillery?lang=en",
+          "/guide/kombucha?lang=en",
+          "/guide/climbinggym?lang=en",
+          "/guide/stainedglass?lang=en",
+          "/guide/minigolf?lang=en",
+          "/guide/taxidermy?lang=en",
+          "/guide/cheesemaking?lang=en",
+          "/guide/meadery?lang=en",
+          "/guide/tufting?lang=en",
+          "/guide/silversmith?lang=en",
+          "/guide/falconry?lang=en",
+          "/guide/lutherie?lang=en",
+          "/guide/lapidary?lang=en",
+          "/guide/cooperage?lang=en",
+          "/guide/kintsugi?lang=en",
+          "/guide/indigodye?lang=en",
+          "/guide/penmaking?lang=en",
+          "/guide/marquetry?lang=en",
+          "/guide/cloisonne?lang=en",
+          "/guide/papermaking?lang=en",
+          "/guide/inkstone?lang=en",
+          "/guide/fletching?lang=en",
+          "/guide/gilding?lang=en",
+          "/guide/lacquerware?lang=en",
+          "/guide/batik?lang=en",
+          "/guide/horology?lang=en",
+          "/guide/saddlery?lang=en",
+          "/guide/ikebana?lang=en",
+          "/guide/fanmaking?lang=en",
+          "/guide/bambooweaving?lang=en",
+          "/guide/swordsmith?lang=en",
+          "/guide/shadowpuppet?lang=en",
+          "/guide/guqin?lang=en",
+          "/guide/brocade?lang=en",
+          "/guide/jadecarving?lang=en",
+          "/guide/claysculpture?lang=en",
+          "/guide/sugarpainting?lang=en",
+          "/guide/velvetflower?lang=en",
+          "/guide/oilpaperumbrella?lang=en",
+          "/guide/bronzecasting?lang=en",
+          "/guide/pyrography?lang=en",
+          "/guide/doughsculpture?lang=en",
+          "/guide/eggcarving?lang=en",
+          "/guide/nutcarving?lang=en",
+          "/guide/insidepainting?lang=en",
+          "/guide/strawpainting?lang=en",
+          "/guide/woodblockprint?lang=en"
+        ]
+      }
+    ],
+    "query": "saas",
+    "filtered": [
+      "/guide/saas?lang=en",
+      "/guide/recruiting?lang=en"
+    ],
+    "counter": "2 / 410",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_filter_guide_en.png"
+  },
+  {
+    "route": "/vs",
+    "lang": "zh",
+    "groups": [
+      {
+        "id": "hub-g-abogado",
+        "links": [
+          "/vs/abogado-vs-lawyer?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-academy",
+        "links": [
+          "/vs/academy-vs-school?lang=zh",
+          "/vs/academy-vs-coach?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-accountants",
+        "links": [
+          "/vs/accountants-vs-tax?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-actor",
+        "links": [
+          "/vs/actor-vs-studio?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-agency",
+        "links": [
+          "/vs/agency-vs-co?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ai",
+        "links": [
+          "/vs/ai-vs-dev?lang=zh",
+          "/vs/ai-vs-app?lang=zh",
+          "/vs/ai-vs-tech?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-amsterdam",
+        "links": [
+          "/vs/amsterdam-vs-berlin?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-apartments",
+        "links": [
+          "/vs/apartments-vs-rentals?lang=zh",
+          "/vs/apartments-vs-house?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-app",
+        "links": [
+          "/vs/app-vs-dev?lang=zh",
+          "/vs/app-vs-io?lang=zh",
+          "/vs/app-vs-site?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ar",
+        "links": [
+          "/vs/ar-vs-cl?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-art",
+        "links": [
+          "/vs/art-vs-design?lang=zh",
+          "/vs/art-vs-studio?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-asia",
+        "links": [
+          "/vs/asia-vs-global?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-associates",
+        "links": [
+          "/vs/associates-vs-partners?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-at",
+        "links": [
+          "/vs/at-vs-de?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-attorney",
+        "links": [
+          "/vs/attorney-vs-lawyer?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-au",
+        "links": [
+          "/vs/au-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-auction",
+        "links": [
+          "/vs/auction-vs-market?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-audio",
+        "links": [
+          "/vs/audio-vs-fm?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-autos",
+        "links": [
+          "/vs/autos-vs-repair?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-baby",
+        "links": [
+          "/vs/baby-vs-store?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-band",
+        "links": [
+          "/vs/band-vs-fm?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-bar",
+        "links": [
+          "/vs/bar-vs-cafe?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-bargains",
+        "links": [
+          "/vs/bargains-vs-deals?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-basketball",
+        "links": [
+          "/vs/basketball-vs-team?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-be",
+        "links": [
+          "/vs/be-vs-nl?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-beauty",
+        "links": [
+          "/vs/beauty-vs-salon?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-beer",
+        "links": [
+          "/vs/beer-vs-pub?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-berlin",
+        "links": [
+          "/vs/berlin-vs-city?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-bet",
+        "links": [
+          "/vs/bet-vs-poker?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-bike",
+        "links": [
+          "/vs/bike-vs-fitness?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-bio",
+        "links": [
+          "/vs/bio-vs-me?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-biz",
+        "links": [
+          "/vs/biz-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-black",
+        "links": [
+          "/vs/black-vs-gold?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-blog",
+        "links": [
+          "/vs/blog-vs-com?lang=zh",
+          "/vs/blog-vs-me?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-blue",
+        "links": [
+          "/vs/blue-vs-red?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-boats",
+        "links": [
+          "/vs/boats-vs-travel?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-bond",
+        "links": [
+          "/vs/bond-vs-finance?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-boston",
+        "links": [
+          "/vs/boston-vs-city?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-boutique",
+        "links": [
+          "/vs/boutique-vs-shop?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-br",
+        "links": [
+          "/vs/br-vs-pt?lang=zh",
+          "/vs/br-vs-mx?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-builders",
+        "links": [
+          "/vs/builders-vs-construction?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-business",
+        "links": [
+          "/vs/business-vs-company?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-buzz",
+        "links": [
+          "/vs/buzz-vs-promo?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ca",
+        "links": [
+          "/vs/ca-vs-us?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cafe",
+        "links": [
+          "/vs/cafe-vs-shop?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-camera",
+        "links": [
+          "/vs/camera-vs-photography?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-camp",
+        "links": [
+          "/vs/camp-vs-courses?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-capital",
+        "links": [
+          "/vs/capital-vs-fund?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-care",
+        "links": [
+          "/vs/care-vs-doctor?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-careers",
+        "links": [
+          "/vs/careers-vs-work?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-casa",
+        "links": [
+          "/vs/casa-vs-house?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cash",
+        "links": [
+          "/vs/cash-vs-money?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-casino",
+        "links": [
+          "/vs/casino-vs-bet?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-catering",
+        "links": [
+          "/vs/catering-vs-restaurant?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cc",
+        "links": [
+          "/vs/cc-vs-tv?lang=zh",
+          "/vs/cc-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-center",
+        "links": [
+          "/vs/center-vs-club?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ch",
+        "links": [
+          "/vs/ch-vs-de?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-chat",
+        "links": [
+          "/vs/chat-vs-app?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cheap",
+        "links": [
+          "/vs/cheap-vs-discount?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-church",
+        "links": [
+          "/vs/church-vs-community?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-city",
+        "links": [
+          "/vs/city-vs-world?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cl",
+        "links": [
+          "/vs/cl-vs-mx?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cleaning",
+        "links": [
+          "/vs/cleaning-vs-services?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-click",
+        "links": [
+          "/vs/click-vs-link?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-clinic",
+        "links": [
+          "/vs/clinic-vs-care?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-clothing",
+        "links": [
+          "/vs/clothing-vs-fashion?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cloud",
+        "links": [
+          "/vs/cloud-vs-tech?lang=zh",
+          "/vs/cloud-vs-online?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-club",
+        "links": [
+          "/vs/club-vs-gg?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cn",
+        "links": [
+          "/vs/cn-vs-top?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-co",
+        "links": [
+          "/vs/co-vs-me?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-coach",
+        "links": [
+          "/vs/coach-vs-expert?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-codes",
+        "links": [
+          "/vs/codes-vs-dev?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-coffee",
+        "links": [
+          "/vs/coffee-vs-cafe?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-college",
+        "links": [
+          "/vs/college-vs-academy?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-com",
+        "links": [
+          "/vs/com-vs-cn?lang=zh",
+          "/vs/com-vs-io?lang=zh",
+          "/vs/com-vs-net?lang=zh",
+          "/vs/com-vs-ai?lang=zh",
+          "/vs/com-vs-xyz?lang=zh",
+          "/vs/com-vs-me?lang=zh",
+          "/vs/com-vs-app?lang=zh",
+          "/vs/com-vs-dev?lang=zh",
+          "/vs/com-vs-org?lang=zh",
+          "/vs/com-vs-co?lang=zh",
+          "/vs/com-vs-top?lang=zh",
+          "/vs/com-vs-travel?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-community",
+        "links": [
+          "/vs/community-vs-club?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-company",
+        "links": [
+          "/vs/company-vs-group?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-computer",
+        "links": [
+          "/vs/computer-vs-tech?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-condos",
+        "links": [
+          "/vs/condos-vs-apartments?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-consulting",
+        "links": [
+          "/vs/consulting-vs-expert?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-contractors",
+        "links": [
+          "/vs/contractors-vs-construction?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cooking",
+        "links": [
+          "/vs/cooking-vs-recipes?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cool",
+        "links": [
+          "/vs/cool-vs-fun?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-courses",
+        "links": [
+          "/vs/courses-vs-academy?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-credit",
+        "links": [
+          "/vs/credit-vs-finance?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cricket",
+        "links": [
+          "/vs/cricket-vs-club?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cruises",
+        "links": [
+          "/vs/cruises-vs-travel?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cyou",
+        "links": [
+          "/vs/cyou-vs-fun?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-cz",
+        "links": [
+          "/vs/cz-vs-pl?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-dad",
+        "links": [
+          "/vs/dad-vs-blog?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-dance",
+        "links": [
+          "/vs/dance-vs-studio?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-dating",
+        "links": [
+          "/vs/dating-vs-love?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-day",
+        "links": [
+          "/vs/day-vs-today?lang=zh",
+          "/vs/day-vs-life?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-de",
+        "links": [
+          "/vs/de-vs-com?lang=zh",
+          "/vs/de-vs-eu?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-deals",
+        "links": [
+          "/vs/deals-vs-coupons?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-degree",
+        "links": [
+          "/vs/degree-vs-education?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-delivery",
+        "links": [
+          "/vs/delivery-vs-express?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-dental",
+        "links": [
+          "/vs/dental-vs-doctor?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-dentist",
+        "links": [
+          "/vs/dentist-vs-dental?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-dev",
+        "links": [
+          "/vs/dev-vs-tech?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-diamonds",
+        "links": [
+          "/vs/diamonds-vs-jewelry?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-digital",
+        "links": [
+          "/vs/digital-vs-tech?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-discount",
+        "links": [
+          "/vs/discount-vs-sale?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-dk",
+        "links": [
+          "/vs/dk-vs-se?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-dog",
+        "links": [
+          "/vs/dog-vs-pet?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-domains",
+        "links": [
+          "/vs/domains-vs-tools?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-earth",
+        "links": [
+          "/vs/earth-vs-world?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-eco",
+        "links": [
+          "/vs/eco-vs-earth?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-education",
+        "links": [
+          "/vs/education-vs-academy?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ee",
+        "links": [
+          "/vs/ee-vs-fi?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-eg",
+        "links": [
+          "/vs/eg-vs-sa?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-email",
+        "links": [
+          "/vs/email-vs-net?lang=zh",
+          "/vs/email-vs-cloud?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-energy",
+        "links": [
+          "/vs/energy-vs-solar?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-engineer",
+        "links": [
+          "/vs/engineer-vs-engineering?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-engineering",
+        "links": [
+          "/vs/engineering-vs-tech?lang=zh",
+          "/vs/engineering-vs-dev?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-equipment",
+        "links": [
+          "/vs/equipment-vs-rentals?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-es",
+        "links": [
+          "/vs/es-vs-eu?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-estate",
+        "links": [
+          "/vs/estate-vs-land?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-events",
+        "links": [
+          "/vs/events-vs-live?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-expert",
+        "links": [
+          "/vs/expert-vs-pro?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-express",
+        "links": [
+          "/vs/express-vs-store?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-family",
+        "links": [
+          "/vs/family-vs-com?lang=zh",
+          "/vs/family-vs-life?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fan",
+        "links": [
+          "/vs/fan-vs-club?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fans",
+        "links": [
+          "/vs/fans-vs-fan?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-farm",
+        "links": [
+          "/vs/farm-vs-cafe?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fashion",
+        "links": [
+          "/vs/fashion-vs-style?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fi",
+        "links": [
+          "/vs/fi-vs-se?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-finance",
+        "links": [
+          "/vs/finance-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fish",
+        "links": [
+          "/vs/fish-vs-fishing?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fishing",
+        "links": [
+          "/vs/fishing-vs-boats?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fit",
+        "links": [
+          "/vs/fit-vs-fitness?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fitness",
+        "links": [
+          "/vs/fitness-vs-coach?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-flights",
+        "links": [
+          "/vs/flights-vs-travel?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-florist",
+        "links": [
+          "/vs/florist-vs-garden?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-flowers",
+        "links": [
+          "/vs/flowers-vs-florist?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fm",
+        "links": [
+          "/vs/fm-vs-tv?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-food",
+        "links": [
+          "/vs/food-vs-restaurant?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-football",
+        "links": [
+          "/vs/football-vs-team?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-forum",
+        "links": [
+          "/vs/forum-vs-community?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-foundation",
+        "links": [
+          "/vs/foundation-vs-org?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fr",
+        "links": [
+          "/vs/fr-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fun",
+        "links": [
+          "/vs/fun-vs-club?lang=zh",
+          "/vs/fun-vs-games?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fund",
+        "links": [
+          "/vs/fund-vs-finance?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-furniture",
+        "links": [
+          "/vs/furniture-vs-boutique?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-futbol",
+        "links": [
+          "/vs/futbol-vs-soccer?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-fyi",
+        "links": [
+          "/vs/fyi-vs-info?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-gallery",
+        "links": [
+          "/vs/gallery-vs-art?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-games",
+        "links": [
+          "/vs/games-vs-gg?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-garden",
+        "links": [
+          "/vs/garden-vs-farm?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ge",
+        "links": [
+          "/vs/ge-vs-tr?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-gg",
+        "links": [
+          "/vs/gg-vs-tv?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-gift",
+        "links": [
+          "/vs/gift-vs-gifts?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-gifts",
+        "links": [
+          "/vs/gifts-vs-shop?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-glass",
+        "links": [
+          "/vs/glass-vs-art?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-global",
+        "links": [
+          "/vs/global-vs-world?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-gmbh",
+        "links": [
+          "/vs/gmbh-vs-company?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-gold",
+        "links": [
+          "/vs/gold-vs-vip?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-golf",
+        "links": [
+          "/vs/golf-vs-club?lang=zh",
+          "/vs/golf-vs-travel?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-gr",
+        "links": [
+          "/vs/gr-vs-tr?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-graphics",
+        "links": [
+          "/vs/graphics-vs-design?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-green",
+        "links": [
+          "/vs/green-vs-eco?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-group",
+        "links": [
+          "/vs/group-vs-agency?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-guide",
+        "links": [
+          "/vs/guide-vs-tips?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-guru",
+        "links": [
+          "/vs/guru-vs-expert?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-hair",
+        "links": [
+          "/vs/hair-vs-salon?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-health",
+        "links": [
+          "/vs/health-vs-life?lang=zh",
+          "/vs/health-vs-care?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-healthcare",
+        "links": [
+          "/vs/healthcare-vs-health?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-help",
+        "links": [
+          "/vs/help-vs-support?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-hk",
+        "links": [
+          "/vs/hk-vs-sg?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-hockey",
+        "links": [
+          "/vs/hockey-vs-team?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-holdings",
+        "links": [
+          "/vs/holdings-vs-group?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-homes",
+        "links": [
+          "/vs/homes-vs-house?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-horse",
+        "links": [
+          "/vs/horse-vs-pet?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-hospital",
+        "links": [
+          "/vs/hospital-vs-clinic?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-host",
+        "links": [
+          "/vs/host-vs-cloud?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-house",
+        "links": [
+          "/vs/house-vs-style?lang=zh",
+          "/vs/house-vs-estate?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-hu",
+        "links": [
+          "/vs/hu-vs-cz?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-icu",
+        "links": [
+          "/vs/icu-vs-xyz?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-id",
+        "links": [
+          "/vs/id-vs-sg?lang=zh",
+          "/vs/id-vs-me?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ie",
+        "links": [
+          "/vs/ie-vs-uk?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-il",
+        "links": [
+          "/vs/il-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-immo",
+        "links": [
+          "/vs/immo-vs-estate?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-immobilien",
+        "links": [
+          "/vs/immobilien-vs-immo?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-in",
+        "links": [
+          "/vs/in-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-info",
+        "links": [
+          "/vs/info-vs-org?lang=zh",
+          "/vs/info-vs-net?lang=zh",
+          "/vs/info-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ink",
+        "links": [
+          "/vs/ink-vs-art?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-institute",
+        "links": [
+          "/vs/institute-vs-international?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-investments",
+        "links": [
+          "/vs/investments-vs-fund?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-io",
+        "links": [
+          "/vs/io-vs-ai?lang=zh",
+          "/vs/io-vs-co?lang=zh",
+          "/vs/io-vs-tech?lang=zh",
+          "/vs/io-vs-dev?lang=zh",
+          "/vs/io-vs-sh?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-is",
+        "links": [
+          "/vs/is-vs-fi?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-it",
+        "links": [
+          "/vs/it-vs-de?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-jewelry",
+        "links": [
+          "/vs/jewelry-vs-boutique?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-jp",
+        "links": [
+          "/vs/jp-vs-cn?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-kaufen",
+        "links": [
+          "/vs/kaufen-vs-shop?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ke",
+        "links": [
+          "/vs/ke-vs-ng?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-kids",
+        "links": [
+          "/vs/kids-vs-family?lang=zh",
+          "/vs/kids-vs-baby?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-kitchen",
+        "links": [
+          "/vs/kitchen-vs-restaurant?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-kr",
+        "links": [
+          "/vs/kr-vs-jp?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-kz",
+        "links": [
+          "/vs/kz-vs-tr?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-land",
+        "links": [
+          "/vs/land-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-law",
+        "links": [
+          "/vs/law-vs-pro?lang=zh",
+          "/vs/law-vs-expert?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-lawyer",
+        "links": [
+          "/vs/lawyer-vs-legal?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-legal",
+        "links": [
+          "/vs/legal-vs-law?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-life",
+        "links": [
+          "/vs/life-vs-me?lang=zh",
+          "/vs/life-vs-live?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-lighting",
+        "links": [
+          "/vs/lighting-vs-garden?lang=zh",
+          "/vs/lighting-vs-solar?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-limited",
+        "links": [
+          "/vs/limited-vs-ltd?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-limo",
+        "links": [
+          "/vs/limo-vs-taxi?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-link",
+        "links": [
+          "/vs/link-vs-cc?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-live",
+        "links": [
+          "/vs/live-vs-tv?lang=zh",
+          "/vs/live-vs-online?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-lk",
+        "links": [
+          "/vs/lk-vs-my?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-loans",
+        "links": [
+          "/vs/loans-vs-money?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-lol",
+        "links": [
+          "/vs/lol-vs-gg?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-london",
+        "links": [
+          "/vs/london-vs-uk?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-love",
+        "links": [
+          "/vs/love-vs-me?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-lt",
+        "links": [
+          "/vs/lt-vs-lv?lang=zh",
+          "/vs/lt-vs-ee?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ltd",
+        "links": [
+          "/vs/ltd-vs-llc?lang=zh",
+          "/vs/ltd-vs-co?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-luxury",
+        "links": [
+          "/vs/luxury-vs-vip?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ma",
+        "links": [
+          "/vs/ma-vs-eg?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-makeup",
+        "links": [
+          "/vs/makeup-vs-boutique?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-management",
+        "links": [
+          "/vs/management-vs-consulting?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-market",
+        "links": [
+          "/vs/market-vs-exchange?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-marketing",
+        "links": [
+          "/vs/marketing-vs-agency?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-mba",
+        "links": [
+          "/vs/mba-vs-school?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-me",
+        "links": [
+          "/vs/me-vs-io?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-media",
+        "links": [
+          "/vs/media-vs-studio?lang=zh",
+          "/vs/media-vs-tv?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-meme",
+        "links": [
+          "/vs/meme-vs-fun?lang=zh",
+          "/vs/meme-vs-lol?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-menu",
+        "links": [
+          "/vs/menu-vs-restaurant?lang=zh",
+          "/vs/menu-vs-cafe?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-miami",
+        "links": [
+          "/vs/miami-vs-nyc?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-mobi",
+        "links": [
+          "/vs/mobi-vs-app?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-moda",
+        "links": [
+          "/vs/moda-vs-fashion?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-moe",
+        "links": [
+          "/vs/moe-vs-fun?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-mom",
+        "links": [
+          "/vs/mom-vs-me?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-money",
+        "links": [
+          "/vs/money-vs-finance?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-monster",
+        "links": [
+          "/vs/monster-vs-games?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-mortgage",
+        "links": [
+          "/vs/mortgage-vs-estate?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-movie",
+        "links": [
+          "/vs/movie-vs-tv?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-mx",
+        "links": [
+          "/vs/mx-vs-es?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-my",
+        "links": [
+          "/vs/my-vs-sg?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-net",
+        "links": [
+          "/vs/net-vs-org?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-network",
+        "links": [
+          "/vs/network-vs-tech?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-news",
+        "links": [
+          "/vs/news-vs-media?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ng",
+        "links": [
+          "/vs/ng-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ninja",
+        "links": [
+          "/vs/ninja-vs-dev?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-nl",
+        "links": [
+          "/vs/nl-vs-de?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-no",
+        "links": [
+          "/vs/no-vs-dk?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-nyc",
+        "links": [
+          "/vs/nyc-vs-us?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-nz",
+        "links": [
+          "/vs/nz-vs-au?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-one",
+        "links": [
+          "/vs/one-vs-me?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-online",
+        "links": [
+          "/vs/online-vs-site?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-org",
+        "links": [
+          "/vs/org-vs-co?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-organic",
+        "links": [
+          "/vs/organic-vs-bio?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-page",
+        "links": [
+          "/vs/page-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-paris",
+        "links": [
+          "/vs/paris-vs-london?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-partners",
+        "links": [
+          "/vs/partners-vs-group?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-parts",
+        "links": [
+          "/vs/parts-vs-repair?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-party",
+        "links": [
+          "/vs/party-vs-events?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-pe",
+        "links": [
+          "/vs/pe-vs-cl?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-pet",
+        "links": [
+          "/vs/pet-vs-shop?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ph",
+        "links": [
+          "/vs/ph-vs-sg?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-photo",
+        "links": [
+          "/vs/photo-vs-photography?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-photography",
+        "links": [
+          "/vs/photography-vs-photos?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-photos",
+        "links": [
+          "/vs/photos-vs-gallery?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-pics",
+        "links": [
+          "/vs/pics-vs-photos?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-pictures",
+        "links": [
+          "/vs/pictures-vs-photos?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-pink",
+        "links": [
+          "/vs/pink-vs-me?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-pizza",
+        "links": [
+          "/vs/pizza-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-pk",
+        "links": [
+          "/vs/pk-vs-in?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-pl",
+        "links": [
+          "/vs/pl-vs-eu?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-place",
+        "links": [
+          "/vs/place-vs-space?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-plumbing",
+        "links": [
+          "/vs/plumbing-vs-repair?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-plus",
+        "links": [
+          "/vs/plus-vs-vip?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-poker",
+        "links": [
+          "/vs/poker-vs-games?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-press",
+        "links": [
+          "/vs/press-vs-news?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-pro",
+        "links": [
+          "/vs/pro-vs-co?lang=zh",
+          "/vs/pro-vs-vip?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-productions",
+        "links": [
+          "/vs/productions-vs-studio?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-promo",
+        "links": [
+          "/vs/promo-vs-shop?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-properties",
+        "links": [
+          "/vs/properties-vs-estate?lang=zh",
+          "/vs/properties-vs-rentals?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-pub",
+        "links": [
+          "/vs/pub-vs-bar?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-qa",
+        "links": [
+          "/vs/qa-vs-ae?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-quest",
+        "links": [
+          "/vs/quest-vs-games?lang=zh",
+          "/vs/quest-vs-fun?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-recipes",
+        "links": [
+          "/vs/recipes-vs-menu?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-red",
+        "links": [
+          "/vs/red-vs-vip?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-rehab",
+        "links": [
+          "/vs/rehab-vs-care?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-rent",
+        "links": [
+          "/vs/rent-vs-rentals?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-repair",
+        "links": [
+          "/vs/repair-vs-services?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-report",
+        "links": [
+          "/vs/report-vs-news?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-restaurant",
+        "links": [
+          "/vs/restaurant-vs-cafe?lang=zh",
+          "/vs/restaurant-vs-bar?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-review",
+        "links": [
+          "/vs/review-vs-reviews?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-reviews",
+        "links": [
+          "/vs/reviews-vs-blog?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ro",
+        "links": [
+          "/vs/ro-vs-pl?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-rocks",
+        "links": [
+          "/vs/rocks-vs-fun?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-rs",
+        "links": [
+          "/vs/rs-vs-io?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-rugby",
+        "links": [
+          "/vs/rugby-vs-football?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-run",
+        "links": [
+          "/vs/run-vs-club?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-sa",
+        "links": [
+          "/vs/sa-vs-ae?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-sale",
+        "links": [
+          "/vs/sale-vs-shop?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-salon",
+        "links": [
+          "/vs/salon-vs-studio?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-sbs",
+        "links": [
+          "/vs/sbs-vs-xyz?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-se",
+        "links": [
+          "/vs/se-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-services",
+        "links": [
+          "/vs/services-vs-agency?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-sg",
+        "links": [
+          "/vs/sg-vs-asia?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-sh",
+        "links": [
+          "/vs/sh-vs-dev?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-shoes",
+        "links": [
+          "/vs/shoes-vs-fashion?lang=zh",
+          "/vs/shoes-vs-store?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-shop",
+        "links": [
+          "/vs/shop-vs-store?lang=zh",
+          "/vs/shop-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-shopping",
+        "links": [
+          "/vs/shopping-vs-shop?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-singles",
+        "links": [
+          "/vs/singles-vs-dating?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-site",
+        "links": [
+          "/vs/site-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-sk",
+        "links": [
+          "/vs/sk-vs-cz?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-skin",
+        "links": [
+          "/vs/skin-vs-beauty?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-so",
+        "links": [
+          "/vs/so-vs-io?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-soccer",
+        "links": [
+          "/vs/soccer-vs-football?lang=zh",
+          "/vs/soccer-vs-club?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-social",
+        "links": [
+          "/vs/social-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-software",
+        "links": [
+          "/vs/software-vs-app?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-solutions",
+        "links": [
+          "/vs/solutions-vs-services?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-spa",
+        "links": [
+          "/vs/spa-vs-salon?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-space",
+        "links": [
+          "/vs/space-vs-site?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-store",
+        "links": [
+          "/vs/store-vs-online?lang=zh",
+          "/vs/store-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-stream",
+        "links": [
+          "/vs/stream-vs-live?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-studio",
+        "links": [
+          "/vs/studio-vs-design?lang=zh",
+          "/vs/studio-vs-co?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-study",
+        "links": [
+          "/vs/study-vs-courses?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-supplies",
+        "links": [
+          "/vs/supplies-vs-supply?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-supply",
+        "links": [
+          "/vs/supply-vs-express?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-support",
+        "links": [
+          "/vs/support-vs-center?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-surf",
+        "links": [
+          "/vs/surf-vs-fun?lang=zh",
+          "/vs/surf-vs-travel?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-surgery",
+        "links": [
+          "/vs/surgery-vs-clinic?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-systems",
+        "links": [
+          "/vs/systems-vs-network?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tattoo",
+        "links": [
+          "/vs/tattoo-vs-ink?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tax",
+        "links": [
+          "/vs/tax-vs-finance?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-taxi",
+        "links": [
+          "/vs/taxi-vs-city?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-team",
+        "links": [
+          "/vs/team-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tech",
+        "links": [
+          "/vs/tech-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-technology",
+        "links": [
+          "/vs/technology-vs-tech?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tennis",
+        "links": [
+          "/vs/tennis-vs-coach?lang=zh",
+          "/vs/tennis-vs-club?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-th",
+        "links": [
+          "/vs/th-vs-vn?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-theater",
+        "links": [
+          "/vs/theater-vs-show?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tickets",
+        "links": [
+          "/vs/tickets-vs-events?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tienda",
+        "links": [
+          "/vs/tienda-vs-shop?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tips",
+        "links": [
+          "/vs/tips-vs-blog?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tires",
+        "links": [
+          "/vs/tires-vs-autos?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tokyo",
+        "links": [
+          "/vs/tokyo-vs-asia?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tools",
+        "links": [
+          "/vs/tools-vs-app?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tours",
+        "links": [
+          "/vs/tours-vs-vacations?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-town",
+        "links": [
+          "/vs/town-vs-city?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-toys",
+        "links": [
+          "/vs/toys-vs-shop?lang=zh",
+          "/vs/toys-vs-games?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tr",
+        "links": [
+          "/vs/tr-vs-ae?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-training",
+        "links": [
+          "/vs/training-vs-coach?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-travel",
+        "links": [
+          "/vs/travel-vs-tours?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tv",
+        "links": [
+          "/vs/tv-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-tw",
+        "links": [
+          "/vs/tw-vs-hk?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ua",
+        "links": [
+          "/vs/ua-vs-pl?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-uk",
+        "links": [
+          "/vs/uk-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-university",
+        "links": [
+          "/vs/university-vs-education?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-us",
+        "links": [
+          "/vs/us-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-uy",
+        "links": [
+          "/vs/uy-vs-ar?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-vacations",
+        "links": [
+          "/vs/vacations-vs-holiday?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-vegas",
+        "links": [
+          "/vs/vegas-vs-casino?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-ventures",
+        "links": [
+          "/vs/ventures-vs-capital?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-vet",
+        "links": [
+          "/vs/vet-vs-pet?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-video",
+        "links": [
+          "/vs/video-vs-tv?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-villas",
+        "links": [
+          "/vs/villas-vs-rentals?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-vin",
+        "links": [
+          "/vs/vin-vs-wine?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-vip",
+        "links": [
+          "/vs/vip-vs-club?lang=zh",
+          "/vs/vip-vs-top?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-vision",
+        "links": [
+          "/vs/vision-vs-care?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-vn",
+        "links": [
+          "/vs/vn-vs-id?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-vodka",
+        "links": [
+          "/vs/vodka-vs-wine?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-voyage",
+        "links": [
+          "/vs/voyage-vs-tours?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-wang",
+        "links": [
+          "/vs/wang-vs-com?lang=zh",
+          "/vs/wang-vs-cn?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-watch",
+        "links": [
+          "/vs/watch-vs-show?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-website",
+        "links": [
+          "/vs/website-vs-site?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-wedding",
+        "links": [
+          "/vs/wedding-vs-love?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-wiki",
+        "links": [
+          "/vs/wiki-vs-info?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-win",
+        "links": [
+          "/vs/win-vs-bet?lang=zh",
+          "/vs/win-vs-vip?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-wine",
+        "links": [
+          "/vs/wine-vs-bar?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-work",
+        "links": [
+          "/vs/work-vs-works?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-works",
+        "links": [
+          "/vs/works-vs-studio?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-world",
+        "links": [
+          "/vs/world-vs-com?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-wtf",
+        "links": [
+          "/vs/wtf-vs-lol?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-xyz",
+        "links": [
+          "/vs/xyz-vs-top?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-yoga",
+        "links": [
+          "/vs/yoga-vs-fitness?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-za",
+        "links": [
+          "/vs/za-vs-ng?lang=zh"
+        ]
+      },
+      {
+        "id": "hub-g-zone",
+        "links": [
+          "/vs/zone-vs-site?lang=zh"
+        ]
+      }
+    ],
+    "query": "com vs cn",
+    "filtered": [
+      "/vs/com-vs-cn?lang=zh"
+    ],
+    "counter": "1 / 444",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_filter_vs_zh.png"
+  },
+  {
+    "route": "/vs",
+    "lang": "en",
+    "groups": [
+      {
+        "id": "hub-g-abogado",
+        "links": [
+          "/vs/abogado-vs-lawyer?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-academy",
+        "links": [
+          "/vs/academy-vs-school?lang=en",
+          "/vs/academy-vs-coach?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-accountants",
+        "links": [
+          "/vs/accountants-vs-tax?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-actor",
+        "links": [
+          "/vs/actor-vs-studio?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-agency",
+        "links": [
+          "/vs/agency-vs-co?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ai",
+        "links": [
+          "/vs/ai-vs-dev?lang=en",
+          "/vs/ai-vs-app?lang=en",
+          "/vs/ai-vs-tech?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-amsterdam",
+        "links": [
+          "/vs/amsterdam-vs-berlin?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-apartments",
+        "links": [
+          "/vs/apartments-vs-rentals?lang=en",
+          "/vs/apartments-vs-house?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-app",
+        "links": [
+          "/vs/app-vs-dev?lang=en",
+          "/vs/app-vs-io?lang=en",
+          "/vs/app-vs-site?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ar",
+        "links": [
+          "/vs/ar-vs-cl?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-art",
+        "links": [
+          "/vs/art-vs-design?lang=en",
+          "/vs/art-vs-studio?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-asia",
+        "links": [
+          "/vs/asia-vs-global?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-associates",
+        "links": [
+          "/vs/associates-vs-partners?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-at",
+        "links": [
+          "/vs/at-vs-de?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-attorney",
+        "links": [
+          "/vs/attorney-vs-lawyer?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-au",
+        "links": [
+          "/vs/au-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-auction",
+        "links": [
+          "/vs/auction-vs-market?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-audio",
+        "links": [
+          "/vs/audio-vs-fm?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-autos",
+        "links": [
+          "/vs/autos-vs-repair?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-baby",
+        "links": [
+          "/vs/baby-vs-store?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-band",
+        "links": [
+          "/vs/band-vs-fm?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-bar",
+        "links": [
+          "/vs/bar-vs-cafe?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-bargains",
+        "links": [
+          "/vs/bargains-vs-deals?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-basketball",
+        "links": [
+          "/vs/basketball-vs-team?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-be",
+        "links": [
+          "/vs/be-vs-nl?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-beauty",
+        "links": [
+          "/vs/beauty-vs-salon?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-beer",
+        "links": [
+          "/vs/beer-vs-pub?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-berlin",
+        "links": [
+          "/vs/berlin-vs-city?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-bet",
+        "links": [
+          "/vs/bet-vs-poker?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-bike",
+        "links": [
+          "/vs/bike-vs-fitness?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-bio",
+        "links": [
+          "/vs/bio-vs-me?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-biz",
+        "links": [
+          "/vs/biz-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-black",
+        "links": [
+          "/vs/black-vs-gold?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-blog",
+        "links": [
+          "/vs/blog-vs-com?lang=en",
+          "/vs/blog-vs-me?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-blue",
+        "links": [
+          "/vs/blue-vs-red?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-boats",
+        "links": [
+          "/vs/boats-vs-travel?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-bond",
+        "links": [
+          "/vs/bond-vs-finance?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-boston",
+        "links": [
+          "/vs/boston-vs-city?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-boutique",
+        "links": [
+          "/vs/boutique-vs-shop?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-br",
+        "links": [
+          "/vs/br-vs-pt?lang=en",
+          "/vs/br-vs-mx?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-builders",
+        "links": [
+          "/vs/builders-vs-construction?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-business",
+        "links": [
+          "/vs/business-vs-company?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-buzz",
+        "links": [
+          "/vs/buzz-vs-promo?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ca",
+        "links": [
+          "/vs/ca-vs-us?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cafe",
+        "links": [
+          "/vs/cafe-vs-shop?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-camera",
+        "links": [
+          "/vs/camera-vs-photography?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-camp",
+        "links": [
+          "/vs/camp-vs-courses?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-capital",
+        "links": [
+          "/vs/capital-vs-fund?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-care",
+        "links": [
+          "/vs/care-vs-doctor?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-careers",
+        "links": [
+          "/vs/careers-vs-work?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-casa",
+        "links": [
+          "/vs/casa-vs-house?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cash",
+        "links": [
+          "/vs/cash-vs-money?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-casino",
+        "links": [
+          "/vs/casino-vs-bet?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-catering",
+        "links": [
+          "/vs/catering-vs-restaurant?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cc",
+        "links": [
+          "/vs/cc-vs-tv?lang=en",
+          "/vs/cc-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-center",
+        "links": [
+          "/vs/center-vs-club?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ch",
+        "links": [
+          "/vs/ch-vs-de?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-chat",
+        "links": [
+          "/vs/chat-vs-app?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cheap",
+        "links": [
+          "/vs/cheap-vs-discount?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-church",
+        "links": [
+          "/vs/church-vs-community?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-city",
+        "links": [
+          "/vs/city-vs-world?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cl",
+        "links": [
+          "/vs/cl-vs-mx?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cleaning",
+        "links": [
+          "/vs/cleaning-vs-services?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-click",
+        "links": [
+          "/vs/click-vs-link?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-clinic",
+        "links": [
+          "/vs/clinic-vs-care?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-clothing",
+        "links": [
+          "/vs/clothing-vs-fashion?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cloud",
+        "links": [
+          "/vs/cloud-vs-tech?lang=en",
+          "/vs/cloud-vs-online?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-club",
+        "links": [
+          "/vs/club-vs-gg?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cn",
+        "links": [
+          "/vs/cn-vs-top?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-co",
+        "links": [
+          "/vs/co-vs-me?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-coach",
+        "links": [
+          "/vs/coach-vs-expert?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-codes",
+        "links": [
+          "/vs/codes-vs-dev?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-coffee",
+        "links": [
+          "/vs/coffee-vs-cafe?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-college",
+        "links": [
+          "/vs/college-vs-academy?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-com",
+        "links": [
+          "/vs/com-vs-cn?lang=en",
+          "/vs/com-vs-io?lang=en",
+          "/vs/com-vs-net?lang=en",
+          "/vs/com-vs-ai?lang=en",
+          "/vs/com-vs-xyz?lang=en",
+          "/vs/com-vs-me?lang=en",
+          "/vs/com-vs-app?lang=en",
+          "/vs/com-vs-dev?lang=en",
+          "/vs/com-vs-org?lang=en",
+          "/vs/com-vs-co?lang=en",
+          "/vs/com-vs-top?lang=en",
+          "/vs/com-vs-travel?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-community",
+        "links": [
+          "/vs/community-vs-club?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-company",
+        "links": [
+          "/vs/company-vs-group?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-computer",
+        "links": [
+          "/vs/computer-vs-tech?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-condos",
+        "links": [
+          "/vs/condos-vs-apartments?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-consulting",
+        "links": [
+          "/vs/consulting-vs-expert?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-contractors",
+        "links": [
+          "/vs/contractors-vs-construction?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cooking",
+        "links": [
+          "/vs/cooking-vs-recipes?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cool",
+        "links": [
+          "/vs/cool-vs-fun?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-courses",
+        "links": [
+          "/vs/courses-vs-academy?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-credit",
+        "links": [
+          "/vs/credit-vs-finance?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cricket",
+        "links": [
+          "/vs/cricket-vs-club?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cruises",
+        "links": [
+          "/vs/cruises-vs-travel?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cyou",
+        "links": [
+          "/vs/cyou-vs-fun?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-cz",
+        "links": [
+          "/vs/cz-vs-pl?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-dad",
+        "links": [
+          "/vs/dad-vs-blog?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-dance",
+        "links": [
+          "/vs/dance-vs-studio?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-dating",
+        "links": [
+          "/vs/dating-vs-love?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-day",
+        "links": [
+          "/vs/day-vs-today?lang=en",
+          "/vs/day-vs-life?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-de",
+        "links": [
+          "/vs/de-vs-com?lang=en",
+          "/vs/de-vs-eu?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-deals",
+        "links": [
+          "/vs/deals-vs-coupons?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-degree",
+        "links": [
+          "/vs/degree-vs-education?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-delivery",
+        "links": [
+          "/vs/delivery-vs-express?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-dental",
+        "links": [
+          "/vs/dental-vs-doctor?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-dentist",
+        "links": [
+          "/vs/dentist-vs-dental?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-dev",
+        "links": [
+          "/vs/dev-vs-tech?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-diamonds",
+        "links": [
+          "/vs/diamonds-vs-jewelry?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-digital",
+        "links": [
+          "/vs/digital-vs-tech?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-discount",
+        "links": [
+          "/vs/discount-vs-sale?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-dk",
+        "links": [
+          "/vs/dk-vs-se?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-dog",
+        "links": [
+          "/vs/dog-vs-pet?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-domains",
+        "links": [
+          "/vs/domains-vs-tools?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-earth",
+        "links": [
+          "/vs/earth-vs-world?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-eco",
+        "links": [
+          "/vs/eco-vs-earth?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-education",
+        "links": [
+          "/vs/education-vs-academy?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ee",
+        "links": [
+          "/vs/ee-vs-fi?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-eg",
+        "links": [
+          "/vs/eg-vs-sa?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-email",
+        "links": [
+          "/vs/email-vs-net?lang=en",
+          "/vs/email-vs-cloud?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-energy",
+        "links": [
+          "/vs/energy-vs-solar?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-engineer",
+        "links": [
+          "/vs/engineer-vs-engineering?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-engineering",
+        "links": [
+          "/vs/engineering-vs-tech?lang=en",
+          "/vs/engineering-vs-dev?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-equipment",
+        "links": [
+          "/vs/equipment-vs-rentals?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-es",
+        "links": [
+          "/vs/es-vs-eu?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-estate",
+        "links": [
+          "/vs/estate-vs-land?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-events",
+        "links": [
+          "/vs/events-vs-live?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-expert",
+        "links": [
+          "/vs/expert-vs-pro?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-express",
+        "links": [
+          "/vs/express-vs-store?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-family",
+        "links": [
+          "/vs/family-vs-com?lang=en",
+          "/vs/family-vs-life?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fan",
+        "links": [
+          "/vs/fan-vs-club?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fans",
+        "links": [
+          "/vs/fans-vs-fan?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-farm",
+        "links": [
+          "/vs/farm-vs-cafe?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fashion",
+        "links": [
+          "/vs/fashion-vs-style?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fi",
+        "links": [
+          "/vs/fi-vs-se?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-finance",
+        "links": [
+          "/vs/finance-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fish",
+        "links": [
+          "/vs/fish-vs-fishing?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fishing",
+        "links": [
+          "/vs/fishing-vs-boats?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fit",
+        "links": [
+          "/vs/fit-vs-fitness?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fitness",
+        "links": [
+          "/vs/fitness-vs-coach?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-flights",
+        "links": [
+          "/vs/flights-vs-travel?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-florist",
+        "links": [
+          "/vs/florist-vs-garden?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-flowers",
+        "links": [
+          "/vs/flowers-vs-florist?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fm",
+        "links": [
+          "/vs/fm-vs-tv?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-food",
+        "links": [
+          "/vs/food-vs-restaurant?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-football",
+        "links": [
+          "/vs/football-vs-team?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-forum",
+        "links": [
+          "/vs/forum-vs-community?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-foundation",
+        "links": [
+          "/vs/foundation-vs-org?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fr",
+        "links": [
+          "/vs/fr-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fun",
+        "links": [
+          "/vs/fun-vs-club?lang=en",
+          "/vs/fun-vs-games?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fund",
+        "links": [
+          "/vs/fund-vs-finance?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-furniture",
+        "links": [
+          "/vs/furniture-vs-boutique?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-futbol",
+        "links": [
+          "/vs/futbol-vs-soccer?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-fyi",
+        "links": [
+          "/vs/fyi-vs-info?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-gallery",
+        "links": [
+          "/vs/gallery-vs-art?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-games",
+        "links": [
+          "/vs/games-vs-gg?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-garden",
+        "links": [
+          "/vs/garden-vs-farm?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ge",
+        "links": [
+          "/vs/ge-vs-tr?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-gg",
+        "links": [
+          "/vs/gg-vs-tv?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-gift",
+        "links": [
+          "/vs/gift-vs-gifts?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-gifts",
+        "links": [
+          "/vs/gifts-vs-shop?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-glass",
+        "links": [
+          "/vs/glass-vs-art?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-global",
+        "links": [
+          "/vs/global-vs-world?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-gmbh",
+        "links": [
+          "/vs/gmbh-vs-company?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-gold",
+        "links": [
+          "/vs/gold-vs-vip?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-golf",
+        "links": [
+          "/vs/golf-vs-club?lang=en",
+          "/vs/golf-vs-travel?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-gr",
+        "links": [
+          "/vs/gr-vs-tr?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-graphics",
+        "links": [
+          "/vs/graphics-vs-design?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-green",
+        "links": [
+          "/vs/green-vs-eco?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-group",
+        "links": [
+          "/vs/group-vs-agency?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-guide",
+        "links": [
+          "/vs/guide-vs-tips?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-guru",
+        "links": [
+          "/vs/guru-vs-expert?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-hair",
+        "links": [
+          "/vs/hair-vs-salon?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-health",
+        "links": [
+          "/vs/health-vs-life?lang=en",
+          "/vs/health-vs-care?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-healthcare",
+        "links": [
+          "/vs/healthcare-vs-health?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-help",
+        "links": [
+          "/vs/help-vs-support?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-hk",
+        "links": [
+          "/vs/hk-vs-sg?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-hockey",
+        "links": [
+          "/vs/hockey-vs-team?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-holdings",
+        "links": [
+          "/vs/holdings-vs-group?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-homes",
+        "links": [
+          "/vs/homes-vs-house?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-horse",
+        "links": [
+          "/vs/horse-vs-pet?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-hospital",
+        "links": [
+          "/vs/hospital-vs-clinic?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-host",
+        "links": [
+          "/vs/host-vs-cloud?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-house",
+        "links": [
+          "/vs/house-vs-style?lang=en",
+          "/vs/house-vs-estate?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-hu",
+        "links": [
+          "/vs/hu-vs-cz?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-icu",
+        "links": [
+          "/vs/icu-vs-xyz?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-id",
+        "links": [
+          "/vs/id-vs-sg?lang=en",
+          "/vs/id-vs-me?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ie",
+        "links": [
+          "/vs/ie-vs-uk?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-il",
+        "links": [
+          "/vs/il-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-immo",
+        "links": [
+          "/vs/immo-vs-estate?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-immobilien",
+        "links": [
+          "/vs/immobilien-vs-immo?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-in",
+        "links": [
+          "/vs/in-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-info",
+        "links": [
+          "/vs/info-vs-org?lang=en",
+          "/vs/info-vs-net?lang=en",
+          "/vs/info-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ink",
+        "links": [
+          "/vs/ink-vs-art?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-institute",
+        "links": [
+          "/vs/institute-vs-international?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-investments",
+        "links": [
+          "/vs/investments-vs-fund?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-io",
+        "links": [
+          "/vs/io-vs-ai?lang=en",
+          "/vs/io-vs-co?lang=en",
+          "/vs/io-vs-tech?lang=en",
+          "/vs/io-vs-dev?lang=en",
+          "/vs/io-vs-sh?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-is",
+        "links": [
+          "/vs/is-vs-fi?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-it",
+        "links": [
+          "/vs/it-vs-de?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-jewelry",
+        "links": [
+          "/vs/jewelry-vs-boutique?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-jp",
+        "links": [
+          "/vs/jp-vs-cn?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-kaufen",
+        "links": [
+          "/vs/kaufen-vs-shop?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ke",
+        "links": [
+          "/vs/ke-vs-ng?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-kids",
+        "links": [
+          "/vs/kids-vs-family?lang=en",
+          "/vs/kids-vs-baby?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-kitchen",
+        "links": [
+          "/vs/kitchen-vs-restaurant?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-kr",
+        "links": [
+          "/vs/kr-vs-jp?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-kz",
+        "links": [
+          "/vs/kz-vs-tr?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-land",
+        "links": [
+          "/vs/land-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-law",
+        "links": [
+          "/vs/law-vs-pro?lang=en",
+          "/vs/law-vs-expert?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-lawyer",
+        "links": [
+          "/vs/lawyer-vs-legal?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-legal",
+        "links": [
+          "/vs/legal-vs-law?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-life",
+        "links": [
+          "/vs/life-vs-me?lang=en",
+          "/vs/life-vs-live?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-lighting",
+        "links": [
+          "/vs/lighting-vs-garden?lang=en",
+          "/vs/lighting-vs-solar?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-limited",
+        "links": [
+          "/vs/limited-vs-ltd?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-limo",
+        "links": [
+          "/vs/limo-vs-taxi?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-link",
+        "links": [
+          "/vs/link-vs-cc?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-live",
+        "links": [
+          "/vs/live-vs-tv?lang=en",
+          "/vs/live-vs-online?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-lk",
+        "links": [
+          "/vs/lk-vs-my?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-loans",
+        "links": [
+          "/vs/loans-vs-money?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-lol",
+        "links": [
+          "/vs/lol-vs-gg?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-london",
+        "links": [
+          "/vs/london-vs-uk?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-love",
+        "links": [
+          "/vs/love-vs-me?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-lt",
+        "links": [
+          "/vs/lt-vs-lv?lang=en",
+          "/vs/lt-vs-ee?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ltd",
+        "links": [
+          "/vs/ltd-vs-llc?lang=en",
+          "/vs/ltd-vs-co?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-luxury",
+        "links": [
+          "/vs/luxury-vs-vip?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ma",
+        "links": [
+          "/vs/ma-vs-eg?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-makeup",
+        "links": [
+          "/vs/makeup-vs-boutique?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-management",
+        "links": [
+          "/vs/management-vs-consulting?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-market",
+        "links": [
+          "/vs/market-vs-exchange?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-marketing",
+        "links": [
+          "/vs/marketing-vs-agency?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-mba",
+        "links": [
+          "/vs/mba-vs-school?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-me",
+        "links": [
+          "/vs/me-vs-io?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-media",
+        "links": [
+          "/vs/media-vs-studio?lang=en",
+          "/vs/media-vs-tv?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-meme",
+        "links": [
+          "/vs/meme-vs-fun?lang=en",
+          "/vs/meme-vs-lol?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-menu",
+        "links": [
+          "/vs/menu-vs-restaurant?lang=en",
+          "/vs/menu-vs-cafe?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-miami",
+        "links": [
+          "/vs/miami-vs-nyc?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-mobi",
+        "links": [
+          "/vs/mobi-vs-app?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-moda",
+        "links": [
+          "/vs/moda-vs-fashion?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-moe",
+        "links": [
+          "/vs/moe-vs-fun?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-mom",
+        "links": [
+          "/vs/mom-vs-me?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-money",
+        "links": [
+          "/vs/money-vs-finance?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-monster",
+        "links": [
+          "/vs/monster-vs-games?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-mortgage",
+        "links": [
+          "/vs/mortgage-vs-estate?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-movie",
+        "links": [
+          "/vs/movie-vs-tv?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-mx",
+        "links": [
+          "/vs/mx-vs-es?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-my",
+        "links": [
+          "/vs/my-vs-sg?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-net",
+        "links": [
+          "/vs/net-vs-org?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-network",
+        "links": [
+          "/vs/network-vs-tech?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-news",
+        "links": [
+          "/vs/news-vs-media?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ng",
+        "links": [
+          "/vs/ng-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ninja",
+        "links": [
+          "/vs/ninja-vs-dev?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-nl",
+        "links": [
+          "/vs/nl-vs-de?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-no",
+        "links": [
+          "/vs/no-vs-dk?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-nyc",
+        "links": [
+          "/vs/nyc-vs-us?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-nz",
+        "links": [
+          "/vs/nz-vs-au?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-one",
+        "links": [
+          "/vs/one-vs-me?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-online",
+        "links": [
+          "/vs/online-vs-site?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-org",
+        "links": [
+          "/vs/org-vs-co?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-organic",
+        "links": [
+          "/vs/organic-vs-bio?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-page",
+        "links": [
+          "/vs/page-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-paris",
+        "links": [
+          "/vs/paris-vs-london?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-partners",
+        "links": [
+          "/vs/partners-vs-group?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-parts",
+        "links": [
+          "/vs/parts-vs-repair?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-party",
+        "links": [
+          "/vs/party-vs-events?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-pe",
+        "links": [
+          "/vs/pe-vs-cl?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-pet",
+        "links": [
+          "/vs/pet-vs-shop?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ph",
+        "links": [
+          "/vs/ph-vs-sg?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-photo",
+        "links": [
+          "/vs/photo-vs-photography?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-photography",
+        "links": [
+          "/vs/photography-vs-photos?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-photos",
+        "links": [
+          "/vs/photos-vs-gallery?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-pics",
+        "links": [
+          "/vs/pics-vs-photos?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-pictures",
+        "links": [
+          "/vs/pictures-vs-photos?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-pink",
+        "links": [
+          "/vs/pink-vs-me?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-pizza",
+        "links": [
+          "/vs/pizza-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-pk",
+        "links": [
+          "/vs/pk-vs-in?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-pl",
+        "links": [
+          "/vs/pl-vs-eu?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-place",
+        "links": [
+          "/vs/place-vs-space?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-plumbing",
+        "links": [
+          "/vs/plumbing-vs-repair?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-plus",
+        "links": [
+          "/vs/plus-vs-vip?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-poker",
+        "links": [
+          "/vs/poker-vs-games?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-press",
+        "links": [
+          "/vs/press-vs-news?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-pro",
+        "links": [
+          "/vs/pro-vs-co?lang=en",
+          "/vs/pro-vs-vip?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-productions",
+        "links": [
+          "/vs/productions-vs-studio?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-promo",
+        "links": [
+          "/vs/promo-vs-shop?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-properties",
+        "links": [
+          "/vs/properties-vs-estate?lang=en",
+          "/vs/properties-vs-rentals?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-pub",
+        "links": [
+          "/vs/pub-vs-bar?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-qa",
+        "links": [
+          "/vs/qa-vs-ae?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-quest",
+        "links": [
+          "/vs/quest-vs-games?lang=en",
+          "/vs/quest-vs-fun?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-recipes",
+        "links": [
+          "/vs/recipes-vs-menu?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-red",
+        "links": [
+          "/vs/red-vs-vip?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-rehab",
+        "links": [
+          "/vs/rehab-vs-care?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-rent",
+        "links": [
+          "/vs/rent-vs-rentals?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-repair",
+        "links": [
+          "/vs/repair-vs-services?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-report",
+        "links": [
+          "/vs/report-vs-news?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-restaurant",
+        "links": [
+          "/vs/restaurant-vs-cafe?lang=en",
+          "/vs/restaurant-vs-bar?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-review",
+        "links": [
+          "/vs/review-vs-reviews?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-reviews",
+        "links": [
+          "/vs/reviews-vs-blog?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ro",
+        "links": [
+          "/vs/ro-vs-pl?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-rocks",
+        "links": [
+          "/vs/rocks-vs-fun?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-rs",
+        "links": [
+          "/vs/rs-vs-io?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-rugby",
+        "links": [
+          "/vs/rugby-vs-football?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-run",
+        "links": [
+          "/vs/run-vs-club?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-sa",
+        "links": [
+          "/vs/sa-vs-ae?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-sale",
+        "links": [
+          "/vs/sale-vs-shop?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-salon",
+        "links": [
+          "/vs/salon-vs-studio?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-sbs",
+        "links": [
+          "/vs/sbs-vs-xyz?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-se",
+        "links": [
+          "/vs/se-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-services",
+        "links": [
+          "/vs/services-vs-agency?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-sg",
+        "links": [
+          "/vs/sg-vs-asia?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-sh",
+        "links": [
+          "/vs/sh-vs-dev?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-shoes",
+        "links": [
+          "/vs/shoes-vs-fashion?lang=en",
+          "/vs/shoes-vs-store?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-shop",
+        "links": [
+          "/vs/shop-vs-store?lang=en",
+          "/vs/shop-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-shopping",
+        "links": [
+          "/vs/shopping-vs-shop?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-singles",
+        "links": [
+          "/vs/singles-vs-dating?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-site",
+        "links": [
+          "/vs/site-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-sk",
+        "links": [
+          "/vs/sk-vs-cz?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-skin",
+        "links": [
+          "/vs/skin-vs-beauty?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-so",
+        "links": [
+          "/vs/so-vs-io?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-soccer",
+        "links": [
+          "/vs/soccer-vs-football?lang=en",
+          "/vs/soccer-vs-club?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-social",
+        "links": [
+          "/vs/social-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-software",
+        "links": [
+          "/vs/software-vs-app?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-solutions",
+        "links": [
+          "/vs/solutions-vs-services?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-spa",
+        "links": [
+          "/vs/spa-vs-salon?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-space",
+        "links": [
+          "/vs/space-vs-site?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-store",
+        "links": [
+          "/vs/store-vs-online?lang=en",
+          "/vs/store-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-stream",
+        "links": [
+          "/vs/stream-vs-live?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-studio",
+        "links": [
+          "/vs/studio-vs-design?lang=en",
+          "/vs/studio-vs-co?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-study",
+        "links": [
+          "/vs/study-vs-courses?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-supplies",
+        "links": [
+          "/vs/supplies-vs-supply?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-supply",
+        "links": [
+          "/vs/supply-vs-express?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-support",
+        "links": [
+          "/vs/support-vs-center?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-surf",
+        "links": [
+          "/vs/surf-vs-fun?lang=en",
+          "/vs/surf-vs-travel?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-surgery",
+        "links": [
+          "/vs/surgery-vs-clinic?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-systems",
+        "links": [
+          "/vs/systems-vs-network?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tattoo",
+        "links": [
+          "/vs/tattoo-vs-ink?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tax",
+        "links": [
+          "/vs/tax-vs-finance?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-taxi",
+        "links": [
+          "/vs/taxi-vs-city?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-team",
+        "links": [
+          "/vs/team-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tech",
+        "links": [
+          "/vs/tech-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-technology",
+        "links": [
+          "/vs/technology-vs-tech?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tennis",
+        "links": [
+          "/vs/tennis-vs-coach?lang=en",
+          "/vs/tennis-vs-club?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-th",
+        "links": [
+          "/vs/th-vs-vn?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-theater",
+        "links": [
+          "/vs/theater-vs-show?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tickets",
+        "links": [
+          "/vs/tickets-vs-events?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tienda",
+        "links": [
+          "/vs/tienda-vs-shop?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tips",
+        "links": [
+          "/vs/tips-vs-blog?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tires",
+        "links": [
+          "/vs/tires-vs-autos?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tokyo",
+        "links": [
+          "/vs/tokyo-vs-asia?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tools",
+        "links": [
+          "/vs/tools-vs-app?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tours",
+        "links": [
+          "/vs/tours-vs-vacations?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-town",
+        "links": [
+          "/vs/town-vs-city?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-toys",
+        "links": [
+          "/vs/toys-vs-shop?lang=en",
+          "/vs/toys-vs-games?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tr",
+        "links": [
+          "/vs/tr-vs-ae?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-training",
+        "links": [
+          "/vs/training-vs-coach?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-travel",
+        "links": [
+          "/vs/travel-vs-tours?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tv",
+        "links": [
+          "/vs/tv-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-tw",
+        "links": [
+          "/vs/tw-vs-hk?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ua",
+        "links": [
+          "/vs/ua-vs-pl?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-uk",
+        "links": [
+          "/vs/uk-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-university",
+        "links": [
+          "/vs/university-vs-education?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-us",
+        "links": [
+          "/vs/us-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-uy",
+        "links": [
+          "/vs/uy-vs-ar?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-vacations",
+        "links": [
+          "/vs/vacations-vs-holiday?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-vegas",
+        "links": [
+          "/vs/vegas-vs-casino?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-ventures",
+        "links": [
+          "/vs/ventures-vs-capital?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-vet",
+        "links": [
+          "/vs/vet-vs-pet?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-video",
+        "links": [
+          "/vs/video-vs-tv?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-villas",
+        "links": [
+          "/vs/villas-vs-rentals?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-vin",
+        "links": [
+          "/vs/vin-vs-wine?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-vip",
+        "links": [
+          "/vs/vip-vs-club?lang=en",
+          "/vs/vip-vs-top?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-vision",
+        "links": [
+          "/vs/vision-vs-care?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-vn",
+        "links": [
+          "/vs/vn-vs-id?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-vodka",
+        "links": [
+          "/vs/vodka-vs-wine?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-voyage",
+        "links": [
+          "/vs/voyage-vs-tours?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-wang",
+        "links": [
+          "/vs/wang-vs-com?lang=en",
+          "/vs/wang-vs-cn?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-watch",
+        "links": [
+          "/vs/watch-vs-show?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-website",
+        "links": [
+          "/vs/website-vs-site?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-wedding",
+        "links": [
+          "/vs/wedding-vs-love?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-wiki",
+        "links": [
+          "/vs/wiki-vs-info?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-win",
+        "links": [
+          "/vs/win-vs-bet?lang=en",
+          "/vs/win-vs-vip?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-wine",
+        "links": [
+          "/vs/wine-vs-bar?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-work",
+        "links": [
+          "/vs/work-vs-works?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-works",
+        "links": [
+          "/vs/works-vs-studio?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-world",
+        "links": [
+          "/vs/world-vs-com?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-wtf",
+        "links": [
+          "/vs/wtf-vs-lol?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-xyz",
+        "links": [
+          "/vs/xyz-vs-top?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-yoga",
+        "links": [
+          "/vs/yoga-vs-fitness?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-za",
+        "links": [
+          "/vs/za-vs-ng?lang=en"
+        ]
+      },
+      {
+        "id": "hub-g-zone",
+        "links": [
+          "/vs/zone-vs-site?lang=en"
+        ]
+      }
+    ],
+    "query": "com vs cn",
+    "filtered": [
+      "/vs/com-vs-cn?lang=en"
+    ],
+    "counter": "1 / 444",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/hub_filter_vs_en.png"
+  }
+]

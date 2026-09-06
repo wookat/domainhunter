@@ -1,0 +1,38 @@
+{
+  "tld": [
+    "cyou",
+    "design",
+    "fr",
+    "gallery",
+    "homes",
+    "me",
+    "school",
+    "so",
+    "supply",
+    "watch"
+  ],
+  "guide": [
+    "bar",
+    "cheesemaking",
+    "coach",
+    "distillery",
+    "photography",
+    "physio",
+    "postproduction",
+    "selfstorage",
+    "terrarium",
+    "tutoring"
+  ],
+  "vs": [
+    "abogado-vs-lawyer",
+    "camp-vs-courses",
+    "com-vs-app",
+    "com-vs-net",
+    "deals-vs-coupons",
+    "dental-vs-doctor",
+    "foundation-vs-org",
+    "marketing-vs-agency",
+    "party-vs-events",
+    "pro-vs-vip"
+  ]
+}

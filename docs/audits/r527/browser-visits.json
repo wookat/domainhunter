@@ -1,0 +1,230 @@
+[
+  {
+    "url": "https://hunt.zalize.com/?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/advanced?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/advanced?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/advanced?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/prices?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/prices?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/why?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/why?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/mcp?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/mcp?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/shortlist?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/shortlist?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/monitors?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/monitors?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/tld?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/tld?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/guide?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/guide?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/vs?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/vs?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/tld/com?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/tld/com?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/tld/cn?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/tld/cn?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/tld/at?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/tld/at?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/tld/de?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/tld/de?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/guide/saas?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/guide/saas?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/guide/cn-realname?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/guide/cn-realname?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/guide/ecommerce?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/guide/ecommerce?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/guide/coffee?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/guide/coffee?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/guide/pets?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/guide/pets?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/vs/com-vs-cn?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/vs/com-vs-cn?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/vs/de-vs-com?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/vs/de-vs-com?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/vs/at-vs-de?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/vs/at-vs-de?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/vs/io-vs-ai?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/vs/io-vs-ai?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/prices?lang=zh",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/prices?lang=en",
+    "status": 200
+  },
+  {
+    "url": "https://hunt.zalize.com/nonexistent-r527?lang=zh",
+    "status": 404
+  },
+  {
+    "url": "https://hunt.zalize.com/nonexistent-r527?lang=en",
+    "status": 404
+  },
+  {
+    "url": "https://hunt.zalize.com/s/doesnotexist-r527?lang=zh",
+    "status": 404
+  },
+  {
+    "url": "https://hunt.zalize.com/s/doesnotexist-r527?lang=en",
+    "status": 404
+  },
+  {
+    "url": "https://hunt.zalize.com/s/J7kIie8is3?lang=zh",
+    "status": 410
+  },
+  {
+    "url": "https://hunt.zalize.com/s/J7kIie8is3?lang=en",
+    "status": 410
+  },
+  {
+    "url": "https://hunt.zalize.com/?lang=en",
+    "status": 200
+  }
+]

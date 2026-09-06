@@ -1,0 +1,12 @@
+{
+  "route": "https://hunt.zalize.com/vs/io-vs-ai?lang=en#pick-ai",
+  "before": {
+    "left": 0,
+    "doc": 375
+  },
+  "after": {
+    "left": 52,
+    "doc": 375
+  },
+  "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/17_vs_horizontal_after_375_dark.png"
+}

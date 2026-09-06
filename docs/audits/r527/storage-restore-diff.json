@@ -1,0 +1,24 @@
+{
+  "equal": true,
+  "diff": {
+    "localStorage": {},
+    "sessionStorage": {}
+  },
+  "before": {
+    "localStorage": {
+      "domainhunter:theme": "dark",
+      "domainhunter:shortlist": "[]",
+      "domainhunter:lang": "en"
+    },
+    "sessionStorage": {}
+  },
+  "after": {
+    "localStorage": {
+      "domainhunter:theme": "dark",
+      "domainhunter:shortlist": "[]",
+      "domainhunter:lang": "en"
+    },
+    "sessionStorage": {}
+  },
+  "utc": "2026-09-06T07:59:16.674811+00:00"
+}

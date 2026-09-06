@@ -1,0 +1,162 @@
+[
+  {
+    "cols": 4,
+    "rows": 3,
+    "headers": [
+      "后缀",
+      "注册/首年",
+      "续费/年",
+      "5 年持有成本",
+      ".com",
+      ".cn参考价",
+      "差额（.com − .cn）"
+    ],
+    "wrapperWidth": 341,
+    "wrapperScroll": 396,
+    "overflow": "auto",
+    "documentWidth": 375,
+    "route": "/vs/com-vs-cn",
+    "lang": "zh",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_com-vs-cn_zh_375.png"
+  },
+  {
+    "cols": 4,
+    "rows": 3,
+    "headers": [
+      "TLD",
+      "Register / 1st yr",
+      "Renew / yr",
+      "5-yr total cost",
+      ".com",
+      ".cnreference",
+      "Difference (.com − .cn)"
+    ],
+    "wrapperWidth": 341,
+    "wrapperScroll": 420,
+    "overflow": "auto",
+    "documentWidth": 375,
+    "route": "/vs/com-vs-cn",
+    "lang": "en",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_com-vs-cn_en_375.png"
+  },
+  {
+    "cols": 4,
+    "rows": 3,
+    "headers": [
+      "后缀",
+      "注册/首年",
+      "续费/年",
+      "5 年持有成本",
+      ".de",
+      ".com",
+      "差额（.de − .com）"
+    ],
+    "wrapperWidth": 341,
+    "wrapperScroll": 370,
+    "overflow": "auto",
+    "documentWidth": 375,
+    "route": "/vs/de-vs-com",
+    "lang": "zh",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_de-vs-com_zh_375.png"
+  },
+  {
+    "cols": 4,
+    "rows": 3,
+    "headers": [
+      "TLD",
+      "Register / 1st yr",
+      "Renew / yr",
+      "5-yr total cost",
+      ".de",
+      ".com",
+      "Difference (.de − .com)"
+    ],
+    "wrapperWidth": 341,
+    "wrapperScroll": 394,
+    "overflow": "auto",
+    "documentWidth": 375,
+    "route": "/vs/de-vs-com",
+    "lang": "en",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_de-vs-com_en_375.png"
+  },
+  {
+    "cols": 4,
+    "rows": 3,
+    "headers": [
+      "后缀",
+      "注册/首年",
+      "续费/年",
+      "5 年持有成本",
+      ".at参考价",
+      ".de",
+      "差额（.at − .de）"
+    ],
+    "wrapperWidth": 341,
+    "wrapperScroll": 391,
+    "overflow": "auto",
+    "documentWidth": 375,
+    "route": "/vs/at-vs-de",
+    "lang": "zh",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_at-vs-de_zh_375.png"
+  },
+  {
+    "cols": 4,
+    "rows": 3,
+    "headers": [
+      "TLD",
+      "Register / 1st yr",
+      "Renew / yr",
+      "5-yr total cost",
+      ".atreference",
+      ".de",
+      "Difference (.at − .de)"
+    ],
+    "wrapperWidth": 341,
+    "wrapperScroll": 415,
+    "overflow": "auto",
+    "documentWidth": 375,
+    "route": "/vs/at-vs-de",
+    "lang": "en",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_at-vs-de_en_375.png"
+  },
+  {
+    "cols": 4,
+    "rows": 3,
+    "headers": [
+      "后缀",
+      "注册/首年",
+      "续费/年",
+      "5 年持有成本",
+      ".io",
+      ".ai",
+      "差额（.io − .ai）"
+    ],
+    "wrapperWidth": 341,
+    "wrapperScroll": 369,
+    "overflow": "auto",
+    "documentWidth": 375,
+    "route": "/vs/io-vs-ai",
+    "lang": "zh",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_io-vs-ai_zh_375.png"
+  },
+  {
+    "cols": 4,
+    "rows": 3,
+    "headers": [
+      "TLD",
+      "Register / 1st yr",
+      "Renew / yr",
+      "5-yr total cost",
+      ".io",
+      ".ai",
+      "Difference (.io − .ai)"
+    ],
+    "wrapperWidth": 341,
+    "wrapperScroll": 393,
+    "overflow": "auto",
+    "documentWidth": 375,
+    "route": "/vs/io-vs-ai",
+    "lang": "en",
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/price_table_vs_io-vs-ai_en_375.png"
+  }
+]

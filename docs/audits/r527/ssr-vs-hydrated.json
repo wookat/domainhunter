@@ -1,0 +1,1295 @@
+{
+ "pages": [
+  {
+   "path": "/tld/com",
+   "lang": "zh",
+   "h1": ".com 域名注册指南：适合谁、多少钱、怎么起名",
+   "ssrChips": 40,
+   "hydChips": 40,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 27,
+   "textDriftSample": [
+    [
+     ".net首年 ¥79",
+     ".net首年 $12.52 ≈¥90"
+    ],
+    [
+     ".org首年 ¥79",
+     ".org首年 $7.98 ≈¥57"
+    ],
+    [
+     ".co首年 ¥65",
+     ".co首年 $15.76 ≈¥113"
+    ],
+    [
+     ".xyz首年 ¥8",
+     ".xyz首年 $2.04 ≈¥15"
+    ],
+    [
+     ".me首年 ¥120",
+     ".me首年 $2.73 ≈¥20"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/tld/com",
+   "lang": "en",
+   "h1": ".com Domain Guide: Who It's For, Pricing & Naming Tips",
+   "ssrChips": 40,
+   "hydChips": 40,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 27,
+   "textDriftSample": [
+    [
+     ".net1st yr ≈$11",
+     ".net1st yr $12.52"
+    ],
+    [
+     ".org1st yr ≈$11",
+     ".org1st yr $7.98"
+    ],
+    [
+     ".co1st yr ≈$9",
+     ".co1st yr $15.76"
+    ],
+    [
+     ".xyz1st yr ≈$1",
+     ".xyz1st yr $2.04"
+    ],
+    [
+     ".me1st yr ≈$17",
+     ".me1st yr $2.73"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/tld/cn",
+   "lang": "zh",
+   "h1": ".cn 域名注册指南：适合谁、多少钱、怎么起名",
+   "ssrChips": 30,
+   "hydChips": 30,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 19,
+   "textDriftSample": [
+    [
+     ".cc首年 ¥38",
+     ".cc首年 $3.4 ≈¥24"
+    ],
+    [
+     ".us首年 ¥45",
+     ".us首年 $4.43 ≈¥32"
+    ],
+    [
+     ".in首年 ¥60",
+     ".in首年 $7.83 ≈¥56"
+    ],
+    [
+     ".uk首年 ¥41",
+     ".uk首年 $4.32 ≈¥31"
+    ],
+    [
+     ".wang首年 ¥30",
+     ".wang首年 $4.12 ≈¥30"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/tld/cn",
+   "lang": "en",
+   "h1": ".cn Domain Guide: Who It's For, Pricing & Naming Tips",
+   "ssrChips": 30,
+   "hydChips": 30,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 19,
+   "textDriftSample": [
+    [
+     ".cc1st yr ≈$5",
+     ".cc1st yr $3.4"
+    ],
+    [
+     ".us1st yr ≈$6",
+     ".us1st yr $4.43"
+    ],
+    [
+     ".in1st yr ≈$8",
+     ".in1st yr $7.83"
+    ],
+    [
+     ".uk1st yr ≈$6",
+     ".uk1st yr $4.32"
+    ],
+    [
+     ".wang1st yr ≈$4",
+     ".wang1st yr $4.12"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/tld/at",
+   "lang": "zh",
+   "h1": ".at 域名注册指南：适合谁、多少钱、怎么起名",
+   "ssrChips": 41,
+   "hydChips": 41,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 16,
+   "textDriftSample": [
+    [
+     ".blue首年 ¥94",
+     ".blue首年 $12.87 ≈¥93"
+    ],
+    [
+     ".pink首年 ¥59",
+     ".pink首年 $8.24 ≈¥59"
+    ],
+    [
+     ".black首年 ¥115",
+     ".black首年 $15.96 ≈¥115"
+    ],
+    [
+     ".ninja首年 ¥41",
+     ".ninja首年 $5.66 ≈¥41"
+    ],
+    [
+     ".rocks首年 ¥26",
+     ".rocks首年 $3.6 ≈¥26"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/tld/at",
+   "lang": "en",
+   "h1": ".at Domain Guide: Who It's For, Pricing & Naming Tips",
+   "ssrChips": 41,
+   "hydChips": 41,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 16,
+   "textDriftSample": [
+    [
+     ".blue1st yr ≈$13",
+     ".blue1st yr $12.87"
+    ],
+    [
+     ".pink1st yr ≈$8",
+     ".pink1st yr $8.24"
+    ],
+    [
+     ".black1st yr ≈$16",
+     ".black1st yr $15.96"
+    ],
+    [
+     ".ninja1st yr ≈$6",
+     ".ninja1st yr $5.66"
+    ],
+    [
+     ".rocks1st yr ≈$4",
+     ".rocks1st yr $3.6"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/tld/de",
+   "lang": "zh",
+   "h1": ".de 域名注册指南：适合谁、多少钱、怎么起名",
+   "ssrChips": 46,
+   "hydChips": 46,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 17,
+   "textDriftSample": [
+    [
+     ".blue首年 ¥94",
+     ".blue首年 $12.87 ≈¥93"
+    ],
+    [
+     ".pink首年 ¥59",
+     ".pink首年 $8.24 ≈¥59"
+    ],
+    [
+     ".black首年 ¥115",
+     ".black首年 $15.96 ≈¥115"
+    ],
+    [
+     ".ninja首年 ¥41",
+     ".ninja首年 $5.66 ≈¥41"
+    ],
+    [
+     ".rocks首年 ¥26",
+     ".rocks首年 $3.6 ≈¥26"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/tld/de",
+   "lang": "en",
+   "h1": ".de Domain Guide: Who It's For, Pricing & Naming Tips",
+   "ssrChips": 46,
+   "hydChips": 46,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 17,
+   "textDriftSample": [
+    [
+     ".blue1st yr ≈$13",
+     ".blue1st yr $12.87"
+    ],
+    [
+     ".pink1st yr ≈$8",
+     ".pink1st yr $8.24"
+    ],
+    [
+     ".black1st yr ≈$16",
+     ".black1st yr $15.96"
+    ],
+    [
+     ".ninja1st yr ≈$6",
+     ".ninja1st yr $5.66"
+    ],
+    [
+     ".rocks1st yr ≈$4",
+     ".rocks1st yr $3.6"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/tld/vip",
+   "lang": "zh",
+   "h1": ".vip 域名注册指南：适合谁、多少钱、怎么起名",
+   "ssrChips": 49,
+   "hydChips": 49,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 36,
+   "textDriftSample": [
+    [
+     ".club首年 ¥40",
+     ".club首年 $4.12 ≈¥30"
+    ],
+    [
+     ".space首年 ¥12",
+     ".space首年 $1.96 ≈¥14"
+    ],
+    [
+     ".fun首年 ¥10",
+     ".fun首年 $2.57 ≈¥19"
+    ],
+    [
+     ".world首年 ¥25",
+     ".world首年 $2.57 ≈¥19"
+    ],
+    [
+     ".life首年 ¥20",
+     ".life首年 $2.57 ≈¥19"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/tld/vip",
+   "lang": "en",
+   "h1": ".vip Domain Guide: Who It's For, Pricing & Naming Tips",
+   "ssrChips": 49,
+   "hydChips": 49,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 36,
+   "textDriftSample": [
+    [
+     ".club1st yr ≈$6",
+     ".club1st yr $4.12"
+    ],
+    [
+     ".space1st yr ≈$2",
+     ".space1st yr $1.96"
+    ],
+    [
+     ".fun1st yr ≈$1",
+     ".fun1st yr $2.57"
+    ],
+    [
+     ".world1st yr ≈$3",
+     ".world1st yr $2.57"
+    ],
+    [
+     ".life1st yr ≈$3",
+     ".life1st yr $2.57"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/guide/saas",
+   "lang": "zh",
+   "h1": "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择",
+   "ssrChips": 34,
+   "hydChips": 34,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 3,
+   "textDriftSample": [
+    [
+     ".com首年 ¥69面向企业客户的默认选择，采购与 IT 部门最信任",
+     ".com首年 $11.08 ≈¥80面向企业客户的默认选择，采购与 IT 部门最信任"
+    ],
+    [
+     ".io首年 ¥259技术型 SaaS 的圈内标配，开发者受众零违和",
+     ".io首年 $28.12 ≈¥202技术型 SaaS 的圈内标配，开发者受众零违和"
+    ],
+    [
+     ".app首年 ¥99产品即应用时零解释成本，且全后缀强制 HTTPS",
+     ".app首年 $8.75 ≈¥63产品即应用时零解释成本，且全后缀强制 HTTPS"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/guide/saas",
+   "lang": "en",
+   "h1": "How to Name a SaaS Product: Strategies, Case Studies & Domains",
+   "ssrChips": 34,
+   "hydChips": 34,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 3,
+   "textDriftSample": [
+    [
+     ".com1st yr ≈$10The default for B2B buyers — procurement and IT trust it most",
+     ".com1st yr $11.08The default for B2B buyers — procurement and IT trust it most"
+    ],
+    [
+     ".io1st yr ≈$36The insider standard for technical SaaS aimed at developers",
+     ".io1st yr $28.12The insider standard for technical SaaS aimed at developers"
+    ],
+    [
+     ".app1st yr ≈$14Zero explanation when the product is an app; HTTPS enforced zone-wide",
+     ".app1st yr $8.75Zero explanation when the product is an app; HTTPS enforced zone-wide"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/guide/ecommerce",
+   "lang": "zh",
+   "h1": "电商品牌怎么起名：命名思路、好名字拆解与域名选择",
+   "ssrChips": 47,
+   "hydChips": 47,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 2,
+   "textDriftSample": [
+    [
+     ".com首年 ¥69电商信任是第一货币，.com 仍是转化率最稳的选择",
+     ".com首年 $11.08 ≈¥80电商信任是第一货币，.com 仍是转化率最稳的选择"
+    ],
+    [
+     ".co首年 ¥65品牌感强的新消费品牌常用替身，短一个字母更利落",
+     ".co首年 $15.76 ≈¥113品牌感强的新消费品牌常用替身，短一个字母更利落"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/guide/ecommerce",
+   "lang": "en",
+   "h1": "How to Name an E-commerce Brand: Strategies, Cases & Domains",
+   "ssrChips": 47,
+   "hydChips": 47,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 2,
+   "textDriftSample": [
+    [
+     ".com1st yr ≈$10Trust is currency in commerce — .com still converts most reliably",
+     ".com1st yr $11.08Trust is currency in commerce — .com still converts most reliably"
+    ],
+    [
+     ".co1st yr ≈$9A stylish stand-in for brand-first consumer labels, one letter sleeker",
+     ".co1st yr $15.76A stylish stand-in for brand-first consumer labels, one letter sleeker"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/guide/fintech",
+   "lang": "zh",
+   "h1": "金融科技产品怎么起名：命名思路、好名字拆解与域名选择",
+   "ssrChips": 47,
+   "hydChips": 47,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 3,
+   "textDriftSample": [
+    [
+     ".com首年 ¥69金融的信任门槛最高，.com 几乎是硬性要求",
+     ".com首年 $11.08 ≈¥80金融的信任门槛最高，.com 几乎是硬性要求"
+    ],
+    [
+     ".co首年 ¥65品牌词独特时的体面替身，众多新锐金融品牌验证过",
+     ".co首年 $15.76 ≈¥113品牌词独特时的体面替身，众多新锐金融品牌验证过"
+    ],
+    [
+     ".io首年 ¥259面向开发者的金融 API/基础设施可用 .io",
+     ".io首年 $28.12 ≈¥202面向开发者的金融 API/基础设施可用 .io"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/guide/fintech",
+   "lang": "en",
+   "h1": "How to Name a Fintech Product: Strategies, Cases & Domains",
+   "ssrChips": 47,
+   "hydChips": 47,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 3,
+   "textDriftSample": [
+    [
+     ".com1st yr ≈$10Finance has the highest trust bar — .com is close to mandatory",
+     ".com1st yr $11.08Finance has the highest trust bar — .com is close to mandatory"
+    ],
+    [
+     ".co1st yr ≈$9A respectable stand-in for distinctive brand words, proven by fintech upstarts",
+     ".co1st yr $15.76A respectable stand-in for distinctive brand words, proven by fintech upstarts"
+    ],
+    [
+     ".io1st yr ≈$36Viable for developer-facing financial APIs and infrastructure",
+     ".io1st yr $28.12Viable for developer-facing financial APIs and infrastructure"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/guide/ai",
+   "lang": "zh",
+   "h1": "AI 产品怎么起名：命名思路、好名字拆解与域名选择",
+   "ssrChips": 34,
+   "hydChips": 34,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 3,
+   "textDriftSample": [
+    [
+     ".ai首年 ¥499AI 产品的身份标签，一个后缀完成定位表达",
+     ".ai首年 $82.7 ≈¥595AI 产品的身份标签，一个后缀完成定位表达"
+    ],
+    [
+     ".com首年 ¥69当 AI 只是能力而非全部叙事时，.com 更保品牌纵深",
+     ".com首年 $11.08 ≈¥80当 AI 只是能力而非全部叙事时，.com 更保品牌纵深"
+    ],
+    [
+     ".dev首年 ¥88面向开发者的 AI 工具链，.dev 圈内认同度高",
+     ".dev首年 $8.75 ≈¥63面向开发者的 AI 工具链，.dev 圈内认同度高"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/guide/ai",
+   "lang": "en",
+   "h1": "How to Name an AI Product: Strategies, Case Studies & Domains",
+   "ssrChips": 34,
+   "hydChips": 34,
+   "hrefsEqual": true,
+   "textEqual": false,
+   "textDriftCount": 3,
+   "textDriftSample": [
+    [
+     ".ai1st yr ≈$69The identity badge — the suffix alone states your positioning",
+     ".ai1st yr $82.7The identity badge — the suffix alone states your positioning"
+    ],
+    [
+     ".com1st yr ≈$10When AI is a capability, not the whole story, .com preserves brand depth",
+     ".com1st yr $11.08When AI is a capability, not the whole story, .com preserves brand depth"
+    ],
+    [
+     ".dev1st yr ≈$12For developer-facing AI tooling, .dev earns instant peer credibility",
+     ".dev1st yr $8.75For developer-facing AI tooling, .dev earns instant peer credibility"
+    ]
+   ],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/com-vs-cn",
+   "lang": "zh",
+   "h1": ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比",
+   "ssrChips": 42,
+   "hydChips": 42,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "$11.08¥80",
+      "$11.08¥80",
+      "$55.4¥399",
+      "≈$5¥33",
+      "≈$5¥38",
+      "≈$26¥185",
+      "≈+$6.08+¥47",
+      "≈+$6.08+¥42",
+      "≈+$29.4+¥214"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/com-vs-cn",
+   "lang": "en",
+   "h1": ".com vs .cn: Audience, Compliance & Brand Protection Compared",
+   "ssrChips": 42,
+   "hydChips": 42,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "$11.08¥80",
+      "$11.08¥80",
+      "$55.4¥399",
+      "≈$5¥33",
+      "≈$5¥38",
+      "≈$26¥185",
+      "≈+$6.08+¥47",
+      "≈+$6.08+¥42",
+      "≈+$29.4+¥214"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/de-vs-com",
+   "lang": "zh",
+   "h1": ".de 和 .com 怎么选：德国本地信任与全球默认值的对比",
+   "ssrChips": 41,
+   "hydChips": 41,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "$2.9¥21",
+      "$4.07¥29",
+      "$19.18¥138",
+      "$11.08¥80",
+      "$11.08¥80",
+      "$55.4¥399",
+      "−$8.18−¥59",
+      "−$7.01−¥51",
+      "−$36.22−¥261"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/de-vs-com",
+   "lang": "en",
+   "h1": ".de vs .com: German Local Trust vs the Global Default",
+   "ssrChips": 41,
+   "hydChips": 41,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "$2.9¥21",
+      "$4.07¥29",
+      "$19.18¥138",
+      "$11.08¥80",
+      "$11.08¥80",
+      "$55.4¥399",
+      "−$8.18−¥59",
+      "−$7.01−¥51",
+      "−$36.22−¥261"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/at-vs-de",
+   "lang": "zh",
+   "h1": ".at 和 .de 怎么选：奥地利本地与德国腹地的德语区对比",
+   "ssrChips": 37,
+   "hydChips": 37,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "≈$14¥100",
+      "≈$14¥100",
+      "≈$69¥500",
+      "$2.9¥21",
+      "$4.07¥29",
+      "$19.18¥138",
+      "≈+$11.1+¥79",
+      "≈+$9.93+¥71",
+      "≈+$49.82+¥362"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/at-vs-de",
+   "lang": "en",
+   "h1": ".at vs .de: Austria's Home Turf or the German Heartland",
+   "ssrChips": 37,
+   "hydChips": 37,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "≈$14¥100",
+      "≈$14¥100",
+      "≈$69¥500",
+      "$2.9¥21",
+      "$4.07¥29",
+      "$19.18¥138",
+      "≈+$11.1+¥79",
+      "≈+$9.93+¥71",
+      "≈+$49.82+¥362"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/io-vs-ai",
+   "lang": "zh",
+   "h1": ".io 和 .ai 怎么选：开发者身份与 AI 叙事的对比",
+   "ssrChips": 41,
+   "hydChips": 41,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "$28.12¥202",
+      "$51.8¥373",
+      "$235.32¥1694",
+      "$82.7¥595",
+      "$82.7¥595",
+      "$413.5¥2977",
+      "−$54.58−¥393",
+      "−$30.9−¥222",
+      "−$178.18−¥1283"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/io-vs-ai",
+   "lang": "en",
+   "h1": ".io vs .ai: Developer Badge vs AI Narrative",
+   "ssrChips": 41,
+   "hydChips": 41,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "$28.12¥202",
+      "$51.8¥373",
+      "$235.32¥1694",
+      "$82.7¥595",
+      "$82.7¥595",
+      "$413.5¥2977",
+      "−$54.58−¥393",
+      "−$30.9−¥222",
+      "−$178.18−¥1283"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/jp-vs-cn",
+   "lang": "zh",
+   "h1": ".jp 和 .cn 怎么选：日本与中国两大东亚市场入口的对比",
+   "ssrChips": 39,
+   "hydChips": 39,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "≈$40¥290",
+      "≈$40¥290",
+      "≈$201¥1450",
+      "≈$5¥33",
+      "≈$5¥38",
+      "≈$26¥185",
+      "≈+$35+¥257",
+      "≈+$35+¥252",
+      "≈+$175+¥1265"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/jp-vs-cn",
+   "lang": "en",
+   "h1": ".jp vs .cn: Japan or China — Two East Asian Market Entrances",
+   "ssrChips": 39,
+   "hydChips": 39,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "≈$40¥290",
+      "≈$40¥290",
+      "≈$201¥1450",
+      "≈$5¥33",
+      "≈$5¥38",
+      "≈$26¥185",
+      "≈+$35+¥257",
+      "≈+$35+¥252",
+      "≈+$175+¥1265"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/uy-vs-ar",
+   "lang": "zh",
+   "h1": ".uy 和 .ar 怎么选：乌拉圭与阿根廷国家域名的拉普拉塔河对比",
+   "ssrChips": 33,
+   "hydChips": 33,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "≈$53¥380",
+      "≈$53¥380",
+      "≈$264¥1900",
+      "≈$36¥260",
+      "≈$36¥260",
+      "≈$181¥1300",
+      "≈+$17+¥120",
+      "≈+$17+¥120",
+      "≈+$83+¥600"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/uy-vs-ar",
+   "lang": "en",
+   "h1": ".uy vs .ar: Uruguay or Argentina Country Domain Compared",
+   "ssrChips": 33,
+   "hydChips": 33,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "≈$53¥380",
+      "≈$53¥380",
+      "≈$264¥1900",
+      "≈$36¥260",
+      "≈$36¥260",
+      "≈$181¥1300",
+      "≈+$17+¥120",
+      "≈+$17+¥120",
+      "≈+$83+¥600"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/hk-vs-sg",
+   "lang": "zh",
+   "h1": ".hk 和 .sg 怎么选：香港与新加坡两大亚洲枢纽的对比",
+   "ssrChips": 37,
+   "hydChips": 37,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "≈$25¥180",
+      "≈$25¥180",
+      "≈$125¥900",
+      "≈$39¥280",
+      "≈$39¥280",
+      "≈$194¥1400",
+      "≈−$14−¥100",
+      "≈−$14−¥100",
+      "≈−$69−¥500"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs/hk-vs-sg",
+   "lang": "en",
+   "h1": ".hk vs .sg: Hong Kong or Singapore — Two Asian Hubs Compared",
+   "ssrChips": 37,
+   "hydChips": 37,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 3,
+   "faqLdCount": 3,
+   "faqVisibleEqualsLd": true,
+   "ssrFaqEqualsHyd": true,
+   "tables": [
+    {
+     "cols": 4,
+     "rowHeads": 3,
+     "cells": [
+      "≈$25¥180",
+      "≈$25¥180",
+      "≈$125¥900",
+      "≈$39¥280",
+      "≈$39¥280",
+      "≈$194¥1400",
+      "≈−$14−¥100",
+      "≈−$14−¥100",
+      "≈−$69−¥500"
+     ]
+    }
+   ],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/tld",
+   "lang": "zh",
+   "h1": "全部 TLD 注册指南：408 个后缀怎么选",
+   "ssrChips": 409,
+   "hydChips": 409,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 0,
+   "faqLdCount": 0,
+   "faqVisibleEqualsLd": null,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/tld",
+   "lang": "en",
+   "h1": "All TLD Registration Guides: How to Choose Among 408 Suffixes",
+   "ssrChips": 409,
+   "hydChips": 409,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 0,
+   "faqLdCount": 0,
+   "faqVisibleEqualsLd": null,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/guide",
+   "lang": "zh",
+   "h1": "全部行业命名指南：410 个行业怎么起名",
+   "ssrChips": 410,
+   "hydChips": 410,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 0,
+   "faqLdCount": 0,
+   "faqVisibleEqualsLd": null,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/guide",
+   "lang": "en",
+   "h1": "All Industry Naming Guides: How to Name a Product in 410 Industries",
+   "ssrChips": 410,
+   "hydChips": 410,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 0,
+   "faqLdCount": 0,
+   "faqVisibleEqualsLd": null,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs",
+   "lang": "zh",
+   "h1": "全部后缀对比：444 组 TLD 怎么选",
+   "ssrChips": 444,
+   "hydChips": 444,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 0,
+   "faqLdCount": 0,
+   "faqVisibleEqualsLd": null,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  },
+  {
+   "path": "/vs",
+   "lang": "en",
+   "h1": "All TLD Comparisons: 444 Head-to-Head Matchups",
+   "ssrChips": 444,
+   "hydChips": 444,
+   "hrefsEqual": true,
+   "textEqual": true,
+   "textDriftCount": 0,
+   "textDriftSample": [],
+   "faqCount": 0,
+   "faqLdCount": 0,
+   "faqVisibleEqualsLd": null,
+   "ssrFaqEqualsHyd": true,
+   "tables": [],
+   "ssrTablesEqualHyd": true,
+   "console": [],
+   "pageerror": [],
+   "requestfailed": []
+  }
+ ],
+ "aiSearchRequests": 0
+}

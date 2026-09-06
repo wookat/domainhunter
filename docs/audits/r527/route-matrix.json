@@ -1,0 +1,683 @@
+[
+  {
+    "route": "/advanced",
+    "lang": "zh",
+    "h1": [
+      "高级模式"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/",
+    "lang": "zh",
+    "h1": [
+      "用中文说出寓意，猎到真正可注册的.cn / .com 好域名"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/",
+    "lang": "en",
+    "h1": [
+      "Name it in Chinese or English, hunt .cn / .com domains you can actually register"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_home_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/advanced",
+    "lang": "zh",
+    "h1": [
+      "高级模式"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/advanced",
+    "lang": "en",
+    "h1": [
+      "Advanced mode"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_advanced_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/prices",
+    "lang": "zh",
+    "h1": [
+      "域名后缀价格总览：408 个主流 TLD 注册与续费对比"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/prices",
+    "lang": "en",
+    "h1": [
+      "TLD Price Overview: Registration vs Renewal for 408 Popular Suffixes"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_prices_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/why",
+    "lang": "zh",
+    "h1": [
+      "中文创业者的域名猎手：用中文说寓意，猎到真正可注册的 .cn / .com"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/why",
+    "lang": "en",
+    "h1": [
+      "A domain hunter for Chinese founders: name it in Chinese, register it in .cn / .com"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_why_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/mcp",
+    "lang": "zh",
+    "h1": [
+      "把域名核验接进你的 AI 助手"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/mcp",
+    "lang": "en",
+    "h1": [
+      "Plug domain checking into your AI assistant"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_mcp_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/shortlist",
+    "lang": "zh",
+    "h1": [
+      "候选清单"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/shortlist",
+    "lang": "en",
+    "h1": [
+      "Shortlist"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_shortlist_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/monitors",
+    "lang": "zh",
+    "h1": [
+      "监控管理"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/monitors",
+    "lang": "en",
+    "h1": [
+      "Monitors"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_monitors_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/tld",
+    "lang": "zh",
+    "h1": [
+      "全部 TLD 注册指南：408 个后缀怎么选"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/tld",
+    "lang": "en",
+    "h1": [
+      "All TLD Registration Guides: How to Choose Among 408 Suffixes"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/guide",
+    "lang": "zh",
+    "h1": [
+      "全部行业命名指南：410 个行业怎么起名"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/guide",
+    "lang": "en",
+    "h1": [
+      "All Industry Naming Guides: How to Name a Product in 410 Industries"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/vs",
+    "lang": "zh",
+    "h1": [
+      "全部后缀对比：444 组 TLD 怎么选"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/vs",
+    "lang": "en",
+    "h1": [
+      "All TLD Comparisons: 444 Head-to-Head Matchups"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/tld/com",
+    "lang": "zh",
+    "h1": [
+      ".com 域名注册指南：适合谁、多少钱、怎么起名"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/tld/com",
+    "lang": "en",
+    "h1": [
+      ".com Domain Guide: Who It's For, Pricing & Naming Tips"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_com_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/tld/cn",
+    "lang": "zh",
+    "h1": [
+      ".cn 域名注册指南：适合谁、多少钱、怎么起名"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/tld/cn",
+    "lang": "en",
+    "h1": [
+      ".cn Domain Guide: Who It's For, Pricing & Naming Tips"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_cn_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/tld/at",
+    "lang": "zh",
+    "h1": [
+      ".at 域名注册指南：适合谁、多少钱、怎么起名"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/tld/at",
+    "lang": "en",
+    "h1": [
+      ".at Domain Guide: Who It's For, Pricing & Naming Tips"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_at_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/tld/de",
+    "lang": "zh",
+    "h1": [
+      ".de 域名注册指南：适合谁、多少钱、怎么起名"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/tld/de",
+    "lang": "en",
+    "h1": [
+      ".de Domain Guide: Who It's For, Pricing & Naming Tips"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_tld_de_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/guide/saas",
+    "lang": "zh",
+    "h1": [
+      "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/guide/saas",
+    "lang": "en",
+    "h1": [
+      "How to Name a SaaS Product: Strategies, Case Studies & Domains"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_saas_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/guide/cn-realname",
+    "lang": "zh",
+    "h1": [
+      ".cn 域名实名认证全流程：材料、时限与审核"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/guide/cn-realname",
+    "lang": "en",
+    "h1": [
+      ".cn Real-Name Verification, End to End: Documents, Timelines and Review"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_cn-realname_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/guide/ecommerce",
+    "lang": "zh",
+    "h1": [
+      "电商品牌怎么起名：命名思路、好名字拆解与域名选择"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/guide/ecommerce",
+    "lang": "en",
+    "h1": [
+      "How to Name an E-commerce Brand: Strategies, Cases & Domains"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_ecommerce_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/guide/coffee",
+    "lang": "zh",
+    "h1": [
+      "咖啡馆 / 茶饮品牌怎么起名：场所感、风味联想与域名选择"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/guide/coffee",
+    "lang": "en",
+    "h1": [
+      "How to Name a Café or Tea Brand: Place, Flavor & Domains"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_coffee_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/guide/pets",
+    "lang": "zh",
+    "h1": [
+      "宠物品牌怎么起名：命名思路、好名字拆解与域名选择"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/guide/pets",
+    "lang": "en",
+    "h1": [
+      "How to Name a Pet Brand: Strategies, Case Studies & Domains"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_guide_pets_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/vs/com-vs-cn",
+    "lang": "zh",
+    "h1": [
+      ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/vs/com-vs-cn",
+    "lang": "en",
+    "h1": [
+      ".com vs .cn: Audience, Compliance & Brand Protection Compared"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_com-vs-cn_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/vs/de-vs-com",
+    "lang": "zh",
+    "h1": [
+      ".de 和 .com 怎么选：德国本地信任与全球默认值的对比"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/vs/de-vs-com",
+    "lang": "en",
+    "h1": [
+      ".de vs .com: German Local Trust vs the Global Default"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_de-vs-com_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/vs/at-vs-de",
+    "lang": "zh",
+    "h1": [
+      ".at 和 .de 怎么选：奥地利本地与德国腹地的德语区对比"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/vs/at-vs-de",
+    "lang": "en",
+    "h1": [
+      ".at vs .de: Austria's Home Turf or the German Heartland"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_at-vs-de_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/vs/io-vs-ai",
+    "lang": "zh",
+    "h1": [
+      ".io 和 .ai 怎么选：开发者身份与 AI 叙事的对比"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/vs/io-vs-ai",
+    "lang": "en",
+    "h1": [
+      ".io vs .ai: Developer Badge vs AI Narrative"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_vs_io-vs-ai_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/nonexistent-r527",
+    "lang": "zh",
+    "h1": [
+      "页面不存在"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/nonexistent-r527",
+    "lang": "en",
+    "h1": [
+      "Page not found"
+    ],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_nonexistent-r527_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/s/doesnotexist-r527",
+    "lang": "zh",
+    "h1": [],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/s/doesnotexist-r527",
+    "lang": "en",
+    "h1": [],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_doesnotexist-r527_en_dark_375.png"
+    ]
+  },
+  {
+    "route": "/s/J7kIie8is3",
+    "lang": "zh",
+    "h1": [],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_zh_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_zh_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_zh_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_zh_dark_375.png"
+    ]
+  },
+  {
+    "route": "/s/J7kIie8is3",
+    "lang": "en",
+    "h1": [],
+    "screenshots": [
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_en_light_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_en_dark_1280.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_en_light_375.png",
+      "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/matrix_s_J7kIie8is3_en_dark_375.png"
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+# share lifecycle (API) 2026-09-06T07:50:28Z
+POST /api/share -> {"id":"3kFCT2dNo6","url":"https://hunt.zalize.com/s/3kFCT2dNo6","revokeToken":"<redacted, share revoked>"}
+id=3kFCT2dNo6
+GET /api/share/3kFCT2dNo6 -> 200 {"items":[{"domain":"zalize-r527-audit.com","label":"zalize-r527-audit","tld":"com","meaning":"R527 audit","status":"available"}],"createdAt":1788681028391}
+GET /s/3kFCT2dNo6 shell -> 200 4655B
+<title>1 个可注册域名候选 | DomainHunter</title>
+DELETE /api/share/3kFCT2dNo6 (wrong token) -> {"error":"forbidden"} 403
+DELETE /api/share/3kFCT2dNo6 (no token) -> {"error":"token_required"} 400
+DELETE /api/share/3kFCT2dNo6 (token) -> {"error":"token_required"} 400
+GET /api/share/3kFCT2dNo6 -> {"items":[{"domain":"zalize-r527-audit.com","label":"zalize-r527-audit","tld":"com","meaning":"R527 audit","status":"available"}],"createdAt":1788681028391} 200
+GET /s/3kFCT2dNo6 shell -> 200 4655B
+<title>1 个可注册域名候选 | DomainHunter</title>
+GET /s/doesnotexist-r527 -> 404 4475B
+<meta name="robots" content="noindex" />
+<title>分享不存在或已过期 | DomainHunter</title>
+GET /s/bad!id -> 404
+GET /nonexistent-r527 -> 404 0B
+GET /tld/notatld -> 404 4904B
+<meta name="robots" content="noindex" />
+<title>DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名</title>
+GET /vs/foo-vs-bar -> 404
+GET /guide/nope -> 404
+GET /s/3kFCT2dNo6?lang=en -> 200
+DELETE /api/share/3kFCT2dNo6 (token) -> {"ok":true} 200
+GET /api/share/3kFCT2dNo6 -> {"error":"revoked"} 410
+GET /s/3kFCT2dNo6 shell -> 410 4395B
+<meta name="robots" content="noindex" />
+<title>分享已撤销 | DomainHunter</title>
+DELETE again (idempotent) -> {"ok":true} 200
+GET /nonexistent-r527 (Accept text/html) -> 404 4904B
+content-type: text/html; charset=utf-8
+cache-control: public, max-age=600
+<meta name="robots" content="noindex" />
+<title>DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名</title>
+GET /nonexistent-r527 (Chrome UA) -> 404 4904B
+<title>DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名</title>

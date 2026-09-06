@@ -1,0 +1,8 @@
+en /tld n=408; "More TLD guides" chips median=31 (min 14, max 31); link words median=163, of which More-block=125, price-suffix words in More-block=94, price-suffix words in Related TLDs=18
+baseline >25%: 359
+A. strip price suffix from "More TLD guides" chips only: >25% = 0, median share 14.5%
+B. strip price suffix from More + Related TLDs chips: >25% = 0, median 11.2%
+C. cap More-block at 20 chips (drop chips beyond 20, ~4 words each): >25% = 66
+D. prose +100 words: >25% = 86; +150: 23; +200: 4
+E. A + prose +60 words: >25% = 0
+More-block chip count distribution: {"14":14,"22":22,"24":48,"28":56,"31":268}
