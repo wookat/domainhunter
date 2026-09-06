@@ -694,7 +694,7 @@ export default function App() {
       </button>
     ) : mode === "advanced" || mode === "shortlist" || mode === "monitors" ? (
       <button
-        className="flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0"
+        className="flex h-11 items-center gap-1.5 rounded-lg px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 sm:h-9"
         onClick={() => (mode === "shortlist" ? closeShortlist() : mode === "monitors" ? closeMonitors() : closeAdvanced())}
       >
         <ArrowLeft className="h-4 w-4" />
@@ -1001,27 +1001,27 @@ export default function App() {
           <div className="mx-auto mb-5 max-w-3xl px-4">
             <p className="font-semibold text-txt1">{t("footer.tldGuides")}</p>
             <div className="mt-1.5 flex flex-wrap justify-center gap-x-1 gap-y-0.5">
-              <a className="inline-flex min-h-[44px] items-center px-2 text-brand hover:underline" href={`/tld?lang=${lang}`}>
+              <a className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-2 sm:min-w-0 text-brand hover:underline" href={`/tld?lang=${lang}`}>
                 {t("footer.browseAll")}
               </a>
               {TLD_LIST.map((tld) => (
-                <a key={tld} className="inline-flex min-h-[44px] items-center px-2 font-mono hover:text-brand hover:underline" href={`/tld/${tld}?lang=${lang}`}>
+                <a key={tld} className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-2 sm:min-w-0 font-mono hover:text-brand hover:underline" href={`/tld/${tld}?lang=${lang}`}>
                   .{tld}
                 </a>
               ))}
-              <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/prices?lang=${lang}`}>
+              <a className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-2 sm:min-w-0 hover:text-brand hover:underline" href={`/prices?lang=${lang}`}>
                 {t("footer.prices")}
               </a>
-              <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/why?lang=${lang}`}>
+              <a className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-2 sm:min-w-0 hover:text-brand hover:underline" href={`/why?lang=${lang}`}>
                 {t("footer.why")}
               </a>
-              <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/mcp?lang=${lang}`}>
+              <a className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-2 sm:min-w-0 hover:text-brand hover:underline" href={`/mcp?lang=${lang}`}>
                 {t("footer.mcp")}
               </a>
-              <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/advanced?lang=${lang}`}>
+              <a className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-2 sm:min-w-0 hover:text-brand hover:underline" href={`/advanced?lang=${lang}`}>
                 {t("footer.advanced")}
               </a>
-              <a className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href="/monitors">
+              <a className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-2 sm:min-w-0 hover:text-brand hover:underline" href="/monitors">
                 {t("footer.monitors")}
               </a>
             </div>
@@ -1030,11 +1030,11 @@ export default function App() {
           <div className="mx-auto mb-5 max-w-3xl px-4">
             <p className="font-semibold text-txt1">{t("footer.industryGuides")}</p>
             <div className="mt-1.5 flex flex-wrap justify-center gap-x-1 gap-y-0.5">
-              <a className="inline-flex min-h-[44px] items-center px-2 text-brand hover:underline" href={`/guide?lang=${lang}`}>
+              <a className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-2 sm:min-w-0 text-brand hover:underline" href={`/guide?lang=${lang}`}>
                 {t("footer.browseAll")}
               </a>
               {GUIDE_LABELS.map((g) => (
-                <a key={g.slug} className="inline-flex min-h-[44px] items-center px-2 hover:text-brand hover:underline" href={`/guide/${g.slug}?lang=${lang}`}>
+                <a key={g.slug} className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-2 sm:min-w-0 hover:text-brand hover:underline" href={`/guide/${g.slug}?lang=${lang}`}>
                   {g[lang]}
                 </a>
               ))}
@@ -1044,11 +1044,11 @@ export default function App() {
           <div className="mx-auto mb-5 max-w-3xl px-4">
             <p className="font-semibold text-txt1">{t("footer.compares")}</p>
             <div className="mt-1.5 flex flex-wrap justify-center gap-x-1 gap-y-0.5">
-              <a className="inline-flex min-h-[44px] items-center px-2 text-brand hover:underline" href={`/vs?lang=${lang}`}>
+              <a className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-2 sm:min-w-0 text-brand hover:underline" href={`/vs?lang=${lang}`}>
                 {t("footer.browseAll")}
               </a>
               {COMPARE_SLUGS.map((slug) => (
-                <a key={slug} className="inline-flex min-h-[44px] items-center px-2 font-mono hover:text-brand hover:underline" href={`/vs/${slug}?lang=${lang}`}>
+                <a key={slug} className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-2 sm:min-w-0 font-mono hover:text-brand hover:underline" href={`/vs/${slug}?lang=${lang}`}>
                   {compareLabel(slug)}
                 </a>
               ))}
@@ -1061,7 +1061,7 @@ export default function App() {
             </p>
           )}
           open-core · MIT ·{" "}
-          <a className="underline hover:text-txt1" href="https://github.com/wookat/domainhunter">
+          <a className="tap-target underline hover:text-txt1" href="https://github.com/wookat/domainhunter">
             GitHub
           </a>
           {hasAnalytics && <p className="mx-auto mt-3 max-w-md px-4 leading-relaxed">{t("footer.analyticsNotice")}</p>}

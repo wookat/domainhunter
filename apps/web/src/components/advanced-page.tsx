@@ -105,7 +105,7 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
               <label htmlFor={f.id} className="text-sm font-medium">
                 {f.label}
               </label>
-              <Input id={f.id} name={f.name} aria-label={f.aria} className="mt-2" value={f.value} placeholder={f.placeholder} onChange={(e) => f.set(e.target.value)} />
+              <Input id={f.id} name={f.name} aria-label={f.aria} className="mt-2 h-11 sm:h-10" value={f.value} placeholder={f.placeholder} onChange={(e) => f.set(e.target.value)} />
             </div>
           ))}
         </div>

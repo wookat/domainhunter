@@ -150,7 +150,7 @@ const PRICES_STR = {
 export function pricesTableSkeleton(lang: Lang): string {
   const s = PRICES_STR[lang];
   const th = (label: string, active: boolean) =>
-    `<button class="flex min-h-[32px] items-center gap-1 text-xs font-semibold ${active ? "text-brand" : "text-txt1 hover:text-txt0"}">${escapeHtml(label)}${active ? ICON_ARROW_UP : ICON_ARROW_UP_DOWN}</button>`;
+    `<button class="flex min-h-[44px] items-center gap-1 text-xs font-semibold sm:min-h-[32px] ${active ? "text-brand" : "text-txt1 hover:text-txt0"}">${escapeHtml(label)}${active ? ICON_ARROW_UP : ICON_ARROW_UP_DOWN}</button>`;
   const rows = TLD_LIST.map((tld) => {
     const p = tldPrice(tld);
     return { tld, reg: p ? toUsd(p.first) : Number.MAX_SAFE_INTEGER };
@@ -189,7 +189,7 @@ const faqBlock = (faq: FaqItem[], lang: Lang) =>
   `<div class="mt-3 space-y-2">${faq
     .map(
       (f) =>
-        `<details class="group rounded-xl border border-line bg-bg1 px-4 py-3"><summary class="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&amp;::-webkit-details-marker]:hidden">${escapeHtml(f.q)}</summary><p class="mt-2 text-sm leading-relaxed text-txt1">${faqAnswerHtml(f)}</p></details>`,
+        `<details class="group rounded-xl border border-line bg-bg1 px-4 py-3"><summary class="tap-target flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&amp;::-webkit-details-marker]:hidden">${escapeHtml(f.q)}</summary><p class="mt-2 text-sm leading-relaxed text-txt1">${faqAnswerHtml(f)}</p></details>`,
     )
     .join("")}</div>`;
 
@@ -552,7 +552,7 @@ const HOME_FOOTER_STR = {
 export function homeNavHtml(lang: Lang): string {
   const s = HOME_FOOTER_STR[lang];
   const link = (href: string, label: string, cls = "hover:text-brand hover:underline") =>
-    `<a class="inline-flex min-h-[44px] items-center px-2 ${cls}" href="${href}">${escapeHtml(label)}</a>`;
+    `<a class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-2 sm:min-w-0 ${cls}" href="${href}">${escapeHtml(label)}</a>`;
   const block = (heading: string, links: string) =>
     `<div class="mx-auto mb-5 max-w-3xl px-4"><p class="font-semibold text-txt1">${escapeHtml(heading)}</p><div class="mt-1.5 flex flex-wrap justify-center gap-x-1 gap-y-0.5">${links}</div></div>`;
   const core = SITE_LINKS.filter((l) => ["/prices", "/why", "/mcp", "/advanced"].includes(l.path));
