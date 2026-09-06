@@ -1,7 +1,7 @@
 # DomainHunter 交接文档（handoff-context）
 
 > 依 company-os 交接上下文制度维护（模板 `company-os/templates/handoff-context.md`）。换会话/换负责人时把本文档注入新会话即可接手。
-> **最后更新：2026-09-04（R490，同步到 R486 现状）**。上一次系统性更新是 R250（2026-08-08），R466–R485 期间只做过局部小节追加（`git log -- docs/handoff-context.md`：e7bbfcb R481、a248e48 R482、79ecd0b R485）。
+> **最后更新：2026-09-06 07:40 UTC（R523，同步到 R519–R522 集成上线 version d8e5038b）**。上一次系统性更新 2026-09-04（R490）。上一次系统性更新是 R250（2026-08-08），R466–R485 期间只做过局部小节追加（`git log -- docs/handoff-context.md`：e7bbfcb R481、a248e48 R482、79ecd0b R485）。
 > 老板需操作的外部资源全部收口在 **`docs/owner-actions.md`**（单一事实源），本文档不再重复维护那份清单。
 
 ## 1. 项目目标
@@ -40,8 +40,8 @@ Cloudflare Workers + Hono（API/MCP/SSR/cron）· React 18 + TypeScript + Vite +
 | 项 | 值 | 证据 |
 |---|---|---|
 | 线上地址 | https://hunt.zalize.com （自定义域）；Worker 直连 https://domainhunter.wookat520.workers.dev | 首页 200 |
-| 生产 Worker version | `02404588-f65d-4b7e-a628-63b4eedff804`（deployed 2026-09-06T06:13Z，含 R501–R517；前一版 `3ed4fab4` 09-06 00:15Z 含至 R515） | `npx wrangler deployments list`（apps/web） |
-| 对应代码 tip | `deploy/r192-r195` @ **ccbd8d2**（#480 R517 合并提交） | R510 生产复验 https://github.com/wookat/domainhunter/pull/475#issuecomment-5553032616 ；R509 零 AI 回归 https://github.com/wookat/domainhunter/pull/471#issuecomment-5552746476 |
+| 生产 Worker version | **`d8e5038b-2b91-4c21-8752-be4b30c7d761`**（deployed 2026-09-06T07:12Z，含 R501–R522）；前一版 `02404588` 06:13Z 含至 R517 | `npx wrangler deployments list`（apps/web） |
+| 对应代码 tip | `deploy/r192-r195` @ **b100378**（#486 R519–R522 集成合并提交）；零 AI 生产回归证据 https://github.com/wookat/domainhunter/pull/486#issuecomment-5557768553 | R510 生产复验 https://github.com/wookat/domainhunter/pull/475#issuecomment-5553032616 ；R509 零 AI 回归 https://github.com/wookat/domainhunter/pull/471#issuecomment-5552746476 |
 | 内容计数 | **TLD 408 / 行业指南 410 / 对比页 444 / sitemap 1,270 URL**（1,262 内容页 + 8 静态页） | `scripts/content-counts.json` 与 `curl sitemap.xml?cb=` 逐类 grep 一致 |
 | cron 心跳 | `cronLast=2026-09-06T00:00:58Z`（每 6h） | `/api/usage` |
 | 价格 | `pricesLastOk=2026-09-04T12:00Z`，`/api/prices` 351 个 TLD 有 Porkbun 报价，非 stale | `/api/prices` |
@@ -161,7 +161,7 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 3. **AI 长期可靠性**：R494 一次 6 次窗口全走 primary，不等于长期稳定；继续看 `aiErrors.quota` 是否再现。
 4. **发帖**（Show HN 等，`docs/launch/launch-checklist.md`）：老板决策，前提 §8 P0 解决。
 5. 观察项：**IndexNow 生产仍未成功推送过一批**——09-05 18:00Z 被门跳过（R514 已解）；09-06 00:00:58Z 真尝试但 429（R515 同批重试）；06:00:38Z R515 首发+2 重试仍全 429（`indexnowLastResult{ok:false,429,retries:2}`）→ 探针证实是 Bing 端点对 Workers 出口 IP 限流，非时点/批量（R517 #480 换端点已上线 version 02404588）；**12:00Z cron 是 R517 首次生效**。核对口径：`indexnowLastResult.ok=true` 且 `fallbackHosts=["yandex.com"]`（或其它备用 host）、`retries` 应为 0、`indexnowLastError` 清空、`indexnowPending` 1270→~970、`indexnowLast` 仅在全量覆盖后才前进（分批期间保持 09-03 不动是预期，不是故障）；若 12:00Z 仍 `!ok && retries=2`（四个备用端点也 429），下一步先用探针重新取证再定策略，不要再加等待；Baiduspider 来访是否持续（`botsBy.baidu`）；`stale:true` 频率。
-5b. **R512 内容矩阵薄内容审计结论待产品决策**（`docs/audits/thin-content-audit-r512.md`，1262 页 zh/en 全抓取、同类页掩码 5-gram Jaccard 无 >0.5 对；不建议 noindex/合并）：建议顺序 ① `/tld` 去 FAQ/正文重复 + 80 个 ccTLD 页补注册局政策事实 ② 全站「全部页 chips」（占正文 47%–74%）缩为相关集 + hub 链接 ③ `/vs` 补组合专属数据（价差/到期分布） ④ `/guide` 暂不动。**未授权前不改内容页。**
+5b. **R512 内容矩阵薄内容审计**：建议 ①②③ 已由 R519–R522 落地上线（见 §11）；剩余：14 个 `/vs` 短页补写、80 个 ccTLD `/tld` 页补注册局政策事实（同时解 en `/tld` 链接占比 30.5% 问题）、`/guide` 暂不动。原结论：（`docs/audits/thin-content-audit-r512.md`，1262 页 zh/en 全抓取、同类页掩码 5-gram Jaccard 无 >0.5 对；不建议 noindex/合并）：建议顺序 ① `/tld` 去 FAQ/正文重复 + 80 个 ccTLD 页补注册局政策事实 ② 全站「全部页 chips」（占正文 47%–74%）缩为相关集 + hub 链接 ③ `/vs` 补组合专属数据（价差/到期分布） ④ `/guide` 暂不动。**未授权前不改内容页。**
 5c. **R511 零 AI 全站审计**（`docs/audits/audit-r511.md`，PR #474）：P0/P1/P2 无；3 个 P3 即 R510 所修（已上线复验通过）；R502 遗留 P2-1/P3-1~4 全部关闭；Lighthouse 8/8 SEO=100、a11y=100；R507 canonical 矩阵 20/20；sitemap 1270=1264+6。观察项：~~`indexnow:lastAttempt` 未透出 `/api/usage`~~（R514 已透出）；R484 安全头观察不变。
 6. ~~候选：新增 Dynadot/Spaceship 注册商（联盟 30%/25%）~~ → R503 已调研并落地：**只加 Dynadot**（售 .cn/.com.cn、中文站、人民币/支付宝），Spaceship 不售 .cn 不加；Namecheap 实测不售 .cn 已从 .cn 菜单隐藏（`docs/research/registrar-affiliate.md` §4，老板待办第 9 项申请 Ambassador）；`/guide` hub 标题分组文案。
 
@@ -197,6 +197,14 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 - **R514**（PR #477，0 AI）：`worker.ts` IndexNow/百度推送冷却门 `*_RETRY_MS` 6h→**5h**、日间隔 `*_INTERVAL_MS` 24h→**23h**——门槛与 cron 周期相等时，cron 触发的毫秒级抖动（生产实测 94 ms）会让整轮被判「未到期」跳过；`/api/usage` 新增 `indexnowLastAttempt`。本地 `wrangler dev --test-scheduled` + mock 端点三种种子（−6h+3s 推 / −5h+3s 拦 / −5h−3s 推）验证见 #477 描述；**生产 09-06 00:00:58Z 核对：门已放行（`indexnowLastAttempt == cronLast`）但上游 429 → R515**。
 - **R515**（PR #478，0 AI）：`indexnow.ts` `submitIndexNow` 新增 `retry429{backoffMs,maxRetries,sleep?}`——同批 429 等 60s 重发，最多 2 次（`INDEXNOW_429_BACKOFF_MS/INDEXNOW_429_MAX_RETRIES`），非 429 失败不重试，`stopOnFail` 语义不变，`IndexNowBatchResult.retries`、`countRetries()`；`worker.ts` 新 KV `indexnow:lastResult`（每次真正发请求都写 `{at,ok,status,message,submitted,retries}`）+ `/api/usage.indexnowLastResult`，`indexnowLastError` 加 `retries`。依据：00:00:58Z 生产 `indexnowLastAttempt==cronLast` 且 `lastError{429,submitted:0}` 同时刻 → 不是门 skip 而是真发了且上游 429（整点高峰 + Worker 共享出口是推断，非提供方确认）；最坏 3×2×60s=6 min < cron 15 min wall-time 上限。本地 `--test-scheduled` + mock（首请求 429 其后 200）：00:10:26.899Z 429 → 00:11:26.947Z 同批重发 200 → 后两批 200，pending 1270→970，`lastResult {ok,200,300,retries:1}`，见 #478 描述。**生产 06:00:38Z 核对：首发+2 重试仍全 429 → R517。**
 - **R517**（PR #480，0 AI）：`indexnow.ts` `INDEXNOW_FALLBACK_ENDPOINTS=[yandex, seznam, naver, yep]`、`submitIndexNow` 新增 `fallbackEndpoints`——主端点 429 立刻按序改发同批到备用参与端点（IndexNow FAQ：提交任一参与引擎即共享全部），非 429（成功/403/网络错）就地定案，全部 429 才进入 60s 退避；`IndexNowBatchResult.endpoint`、`fallbackHosts()`；`worker.ts` `indexnow:lastResult.fallbackHosts`，var `INDEXNOW_FALLBACK_ENDPOINTS`（逗号分隔覆盖；只配 `INDEXNOW_ENDPOINT` 的本地 mock 自动不带备用端点；`""` 生产显式关闭）。依据：06:00Z 生产 R515 `retries=2 !ok`；06:06Z 探针 Worker 5 URL → api.indexnow.org/bing 429 而本机同分钟 200、yandex 202/seznam/naver/yep 200（Bing 侧按来源 IP 限流 Workers 共享出口是**证据支持的推断**，非提供方确认）。267 测试全绿（新增 6 例锁定 fallback/非 429 不换/未配置=R515 行为）；本地 mock（主恒 429、备 202）：6 hits 交替、0 sleep、pending 1270→970、`fallbackHosts:["127.0.0.1:9998"]`。**生产效果待 12:00Z cron。**
+- **R519–R522**（集成 PR #486 = #483 + #484 + #482 + #485，全部 0 AI，version d8e5038b）：
+  - R519 `content/tld-faq.ts`/`compare-faq.ts`/`guide-faq.ts` FAQ 第 1 答改「适合谁」摘要、第 3 答改单句 + 页内锚点（`TLD_NAMING_ANCHOR`=#naming、`COMPARE_VERDICT_ANCHOR`=#verdict、`comparePickAnchor(tld)`=#pick-<tld>、`GUIDE_IDEAS_ANCHOR`/`GUIDE_PITFALLS_ANCHOR`），`components/faq-answer.tsx` + `ssr-html.ts faqAnswerHtml` 两端逐字同构；`faq.test.ts` 守门：SSR 可见文本 == FAQPage JSON-LD、2524 页复读率 <5%（口径同 `scripts/seo-audit/dup-ratio.mjs`/`thin-analyze.mjs`，**三处改一处必须同步**）。生产 R512 样本页复读率 10–21% → 0%。
+  - R520 `content/group-chips.ts`（`tldGroupChips`/`guideGroupChips`/`compareGroupChips`、`VIEW_ALL_LABEL`、`viewAllHref`）：底部 chip 由全量改为同组 ≤30（`/vs` 取两侧 TLD 组并集去重、上限 **24**——30 时 en 链接占比 25.9% 超 25% 目标）+「查看全部 N 个 →」指向 hub `#hub-g-<group>`（N 由计数常量派生）；hub 页带 hash 落地时挂载后滚到分组；无组归属 fallback 组 `more`（如 /tld/at，主题性弱，已知）。删除注入数据 `compareLinks`（-2.3 KB/页）。本地内链图 1270/1270 可达、≤2 跳、0 孤岛（`docs/audits/r520/`）。
+  - R521 `content/compare-prices.ts`（`ComparePriceSnapshot`/`buildComparePriceView`/`snapshotFromPayload`，5 年成本 = 首年 + 4×续费，差额 = A − B 正数前者更贵）+ `components/compare-price-table.tsx` + `ssr-html.ts` 同构表格：worker SSR 读与 `/api/prices` 同一份 KV 快照注入 `__DH_CONTENT__.prices`，客户端优先用注入快照（逐字一致），无实时价走 `TLD_PRICES` 静态参考价 + 「参考价」徽标，两侧都缺价不渲染表只给说明。`caption` + `th scope`，375px 容器内横向滚动。
+  - R522 `content/compares.ts` 最短 30 个 `/vs` 页 zh/en 补写组合专属判断段（zh 最小词数 628→1184、en 371→725，`nnMasked` 全部下降，R512 模板句命中 0；事实核对表 22 行 IANA/ICANN/GOV.UK；工信部站点 VM 不可达 → `.cn`/`.top` 相关事实标「未验证」并删 8 处无法一手核实说法）。**剩余 14 页 zh 707–755 词未处理**（候选 R524）。
+  - 集成期修复：`guide-page.tsx` 合并后丢失 `cn` import；复读率/正文口径（`thin-analyze.mjs`、`dup-ratio.mjs`、`faq.test.ts`）排除 `<table>`——R521 表格数值单元格（同价两行、差额 `≈$0 ¥0`×3）被当句子计入使 37 个 `/vs` 页误报 5–12%，表格属结构化数据非正文。
+  - 已知指标变动：R519 删复读句后 `/tld/com` en 正文 453→335 词、链接占比 24.2%→**30.5%**（>25% 目标）——根因 en `/tld` 页正文薄，修法是内容补写（R512 建议的 ccTLD 注册局政策事实），不是继续删链接。
+  - 生产回归（零 AI，见 #486 评论）：P0/P1/P2 无；P3 ×2：`/tld/*` chip 价格文字 SSR 静态参考价 → `/api/prices` 加载后实时价（R520 之前即如此，`staticPriceShort` 设计使然，slug/href 一致）；/tld/at 落 fallback 组。
 - **R495**：`main.tsx routeModule()` 对 /why /advanced /mcp 也等 chunk 就绪再挂载（R491 skeleton 在慢网下曾闪空 ~0.6s，节流帧捕获 3/3 复现→修后 0/3）；`i18n.tsx` 切换语言时同步 URL 显式 `?lang=`（否则 F5 回退到 URL 语言）。
 
 ## 12. 资源与凭证索引（只写名称，不写值）
