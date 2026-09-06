@@ -33,18 +33,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比",
       metaDescription: ".com 国际通用、.cn 面向国内市场且需实名。对比两者的适用人群、注册价格、备案要求与品牌保护策略，并用 AI 直接猎取两个后缀下都可注册的名字。",
       verdict:
-        "看用户在哪里：主要做国内市场、需要 ICP 备案接入国内主机，.cn 是标配且价格便宜得多；面向国际用户或计划出海，.com 的认知度无可替代。预算允许时，成熟品牌通常两个都注册——.com 做主站，.cn 防抢注并 301 跳转。注意 .cn 注册需实名认证，个人与企业均可注册但流程比 .com 多一步。",
-      pickA: ["面向国际用户或计划出海", "品牌主站与长期资产", "不想处理实名/备案流程", "希望转售流动性最好"],
-      pickB: ["主要做国内市场", "需要 ICP 备案接入国内服务器", "预算敏感（首年与续费都便宜）", "拼音品牌词在 .com 已被注册"],
+        "先看用户在哪里、服务器在哪里。.cn 由中国互联网络信息中心（CNNIC）运营，是国内业务最名正言顺的后缀：需要 ICP 备案接入国内主机时，.cn 的流程完全顺畅，而部分新顶级域名在备案时会遇到限制；价格也是主流后缀里最亲民的一档——站内参考价首年 33 元、续费 38 元，不到 .com（首年 69 元、续费 85 元）的一半。.com 由 Verisign 运营，批发价 10.26 美元/年（2024 年 9 月起），是全球用户默认补全的后缀，面向海外市场时认知度无可替代。两者的注册门槛也不同：.cn 要求实名认证，个人与企业都可以注册，但要提交证件、多一步流程；.com 无需实名。库存上 .cn 是国内品牌实打实的机会——大量双拼、三拼、行业词在 .com 下早已无货，在 .cn 下仍可注册。判断方法：主要服务国内用户、需要备案、预算敏感，选 .cn；面向国际用户或计划出海，.com 做主站。预算允许的成熟品牌通常两个都注册：.com 做主站，.cn 防抢注并 301 跳转，或者反过来国内站用 .cn、海外站用 .com。一个提醒：面向海外的业务不建议主用 .cn，海外用户对它的认知与信任有限；面向国内的业务用 .com 则毫无问题，只是备案时多一步域名实名核验。",
+      pickA: ["面向国际用户或计划出海的品牌", "不想处理实名认证与备案流程", "全球认知度与转售流动性优先", "国内外双站中的海外主站"],
+      pickB: ["主要服务国内用户、需要 ICP 备案", "预算敏感（首年与续费都不到 .com 一半）", "双拼/三拼品牌词在 .com 已被注册", "国内外双站中的国内主站"],
     },
     en: {
       title: ".com vs .cn: Audience, Compliance & Brand Protection Compared",
       metaDescription:
         ".com is the global default; .cn targets the Chinese market and requires real-name verification. Compare audiences, pricing and brand strategy, then hunt names available on both.",
       verdict:
-        "It comes down to where your users are. For a China-focused product that needs ICP filing and domestic hosting, .cn is standard and far cheaper. For international audiences, .com's recognition is irreplaceable. Established brands usually register both — .com as the primary site, .cn defensively with a 301. Note .cn requires real-name verification for registration, one extra step compared to .com.",
-      pickA: ["International or global audience", "Primary brand site and long-term asset", "No real-name/ICP paperwork", "Best resale liquidity"],
-      pickB: ["China-focused market", "Need ICP filing with domestic hosting", "Budget-sensitive (cheap first year and renewal)", "Your pinyin brand word is taken on .com"],
+        "Start with where your users and servers are. .cn is operated by the China Internet Network Information Center (CNNIC) and is the most legitimate suffix for China-facing business: when you need ICP filing to host domestically, .cn sails through, while some newer TLDs hit restrictions. It is also among the cheapest mainstream options — the site's reference table lists ¥33 first year / ¥38 renewal, under half of .com's ¥69 / ¥85. .com is Verisign's suffix, wholesale $10.26 a year since September 2024, and the one users worldwide autocomplete by reflex; for overseas markets its recognition is irreplaceable. Registration requirements differ too: .cn requires real-name verification — individuals and companies can both register, but you submit ID and add a step — while .com needs none. Inventory is a genuine opportunity for Chinese brands: countless two- and three-syllable pinyin words and industry terms extinct on .com remain open on .cn. The test: serving mainly Chinese users, needing ICP filing, watching the budget — take .cn; serving international users or planning to go global — make .com the main site. Established brands with budget usually register both: .com as the primary with .cn held defensively and 301-redirected, or a .cn domestic site alongside a .com international site. One caveat each way: an overseas-facing business shouldn't lead with .cn, where recognition and trust abroad are limited; a China-facing business on .com works fine, with just an extra domain verification step during ICP filing.",
+      pickA: ["Brands serving international users or going global", "No appetite for real-name verification or ICP paperwork", "Global recognition and resale liquidity first", "The international site in a two-site setup"],
+      pickB: ["China-focused users who need ICP filing", "Budget-sensitive (under half of .com to register and renew)", "Pinyin brand words already taken on .com", "The domestic site in a two-site setup"],
     },
   },
   "com-vs-io": {
@@ -55,18 +55,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".com 和 .io 怎么选：信任感与极客感的取舍",
       metaDescription: ".com 认知度最高，.io 是开发者圈的身份标识但续费更贵。对比两者的气质、价格与库存差异，并用 AI 猎取两个后缀下都可注册的好名字。",
       verdict:
-        "面向大众就选 .com，面向开发者/技术圈 .io 完全站得住——GitHub 生态里 .io 甚至比 .com 更「圈内」。关键差异在价格与库存：.io 注册和续费都明显更贵，但同样的短词库存好得多；.com 便宜但好名字几乎绝迹。务实策略：先在 .io 上拿到心仪的短名字上线，品牌起量后再收购对应 .com。",
-      pickA: ["面向大众消费者的产品", "预算敏感、在意续费成本", "品牌计划长期持有转售", "非技术行业（电商、线下、内容）"],
-      pickB: ["开发者工具、API、开源项目", "技术圈品牌（.io 自带极客身份）", "心仪短名字 .com 已被注册", "先上线后收购 .com 的策略"],
+        ".io 严格说是英属印度洋领地的国家域名，1997 年授权给 Internet Computer Bureau 运营，却因为 I/O 的极客联想和 GitHub Pages（github.io）被开发者圈层彻底占领；.com 则是 Verisign 运营、用户默认补全的通用后缀。两者价差极大：站内参考价 .io 首年 259 元、续费 419 元，.com 首年 69 元、续费 85 元，也就是 .io 的续费约为 .com 的五倍——十年持有下来是数千元的差距。换来的是库存：短词、动词、造词在 .io 下的可注册率远高于 .com，且两字母后缀让整个域名更短。还有一条 .com 没有的风险要放进决策：2025 年 5 月英国与毛里求斯签署了查戈斯群岛主权条约，一旦条约生效并导致 ISO 3166 移除 IO 代码，ICANN 的国家域名退役政策会启动（有五年过渡窗口）。目前 IANA 记录仍正常、没有任何退役时间表，但做十年以上品牌资产的人应该知道这一点。判断方法：受众是开发者与技术从业者、产品是工具/API/SaaS，.io 的圈内身份值得那笔溢价；面向大众消费者、电商、内容或线下业务，.com 更稳也更便宜。先在 .io 拿到心仪短名上线、品牌起量后再收购对应 .com，是技术公司常走的路径。",
+      pickA: ["面向大众消费者的产品与电商", "续费预算敏感（.io 续费约为 .com 五倍）", "十年以上品牌资产、不想承担 ccTLD 政策风险", "内容、线下与非技术行业"],
+      pickB: ["开发者工具、API 与 SaaS", "技术圈品牌（github.io 一代的身份信号）", "短词/动词在 .com 已绝迹、.io 仍可注册", "先上线再回购 .com 的路径"],
     },
     en: {
       title: ".com vs .io: Trust vs Hacker Credibility",
       metaDescription:
         ".com has universal recognition; .io is the developer world's badge but costs more to renew. Compare vibe, pricing and inventory, then hunt names available on both.",
       verdict:
-        "For a mainstream audience pick .com; for developer-facing products .io holds its own — in the GitHub ecosystem it can read even more native than .com. The real trade-off is price versus inventory: .io registration and renewal cost noticeably more, but short-name availability is far better; .com is cheap but good names are gone. A pragmatic play: launch on the .io you love, then acquire the matching .com once the brand has traction.",
-      pickA: ["Consumer-facing mainstream products", "Renewal-cost sensitive", "Long-term hold and resale value", "Non-technical industries (commerce, offline, content)"],
-      pickB: ["Developer tools, APIs, open source", "Tech-circle branding (.io is the badge)", "Your short name is taken on .com", "Launch-now-acquire-.com-later strategy"],
+        "Strictly speaking .io is the country code of the British Indian Ocean Territory, delegated in 1997 to Internet Computer Bureau, but the I/O pun and GitHub Pages (github.io) let developers claim it outright; .com is Verisign's generic suffix that users autocomplete without thinking. The price gap is large: the site's reference table shows .io at ¥259 first year / ¥419 renewal versus .com at ¥69 / ¥85 — roughly five times the renewal, thousands of yuan over a decade. What you buy is inventory: short words, verbs and coined names are far more available on .io, and the two-letter suffix keeps the whole domain shorter. There is also a risk .com doesn't carry: in May 2025 the UK and Mauritius signed a treaty on the Chagos Archipelago; if it enters into force and the IO code is removed from ISO 3166, ICANN's ccTLD retirement policy would apply, with a five-year transition window. The IANA record is normal today and no retirement date exists, but anyone planning a ten-year brand asset should know it. The test: if your audience is developers and technical professionals and the product is a tool, API or SaaS, the .io badge is worth the premium; for mainstream consumers, e-commerce, content or offline businesses, .com is both safer and cheaper. Launching on the short .io you love and acquiring the matching .com once the brand has traction is the path many technical companies take.",
+      pickA: ["Consumer-facing products and e-commerce", "Renewal-sensitive budgets (.io renews at about 5x .com)", "Decade-scale brand assets that shouldn't carry ccTLD policy risk", "Content, offline and non-technical industries"],
+      pickB: ["Developer tools, APIs and SaaS", "Tech-circle branding (the github.io generation's badge)", "Short words or verbs extinct on .com but open on .io", "Launch on .io now, buy the .com later"],
     },
   },
   "com-vs-net": {
@@ -77,18 +77,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".com 和 .net 怎么选：主选与备选的正确用法",
       metaDescription: ".net 常被当作 .com 的第一备选，但并不总是安全。对比两者的信任度、分流风险与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "两者价格接近，差别在认知：用户默认补全的是 .com，.net 的技术/基础设施气质更重。把 .net 当备选只有在品牌词足够独特时才安全——如果是常见词而 .com 在别人手里，会持续分流并造成品牌混淆。反过来，网络工具、云服务、API 平台这类产品用 .net 名正言顺，且同样的名单在 .net 下命中率高得多。",
-      pickA: ["几乎所有面向大众的正式品牌", "品牌词常见、怕分流混淆", "长期品牌资产与转售", "口头传播场景多（广告、播客）"],
-      pickB: ["网络服务、云、API、基础设施产品", "品牌词非常独特、.com 已被注册", "功能词入名的务实技术产品", "想要更高的可注册命中率"],
+        "两个后缀都由 Verisign 运营、都诞生于 1985 年，而且批发价已经倒挂：按 ICANN 公布的费率表，.com 批发价自 2024 年 9 月起为 10.26 美元/年，.net 自 2024 年 2 月起为 10.91 美元/年——曾经「.net 更便宜」的印象已经过时，站内参考价也反映了这一点（.com 首年 69 元/续费 85 元，.net 首年 79 元/续费 99 元）。价格不再是理由，剩下的只有认知与库存。用户在地址栏里下意识补全的仍是 .com，广告、播客、口头传播场景下 .net 一定会有一部分流量误跑到 .com；如果你的品牌词是常见词而对应 .com 在别人手里，这个漏水会一直持续。反过来，.net 最初就是给网络服务商用的，Verisign 自己的 DNS 基础设施、大量 CDN、云与 API 平台都在 .net 上——网络工具、开发者平台、基础设施产品用它不是妥协，而是气质相符。库存差距是实打实的：同一份候选名单，.net 的可注册命中率通常远高于 .com，常见英文词和双拼在 .net 下还有大量存货。判断方法：面向大众、要做十年品牌资产，或名字要频繁被口述，选 .com；名字独特、产品与「网络/连接/基础设施」相关，或者 .com 的持有者只是停放页而非竞品，.net 就是务实且体面的选择。",
+      pickA: ["面向大众消费者的正式品牌", "品牌词是常见词、担心 .net 被误输成 .com", "十年以上的品牌资产与转售流动性", "广告、播客等大量口头传播的场景"],
+      pickB: ["网络服务、CDN、云与 API 平台", "品牌词独特且 .com 持有者不是竞品", "功能词入名的务实技术产品", "同一份候选名单想要更高命中率"],
     },
     en: {
       title: ".com vs .net: Using the Fallback Right",
       metaDescription:
         ".net is the classic fallback when .com is taken — but it isn't always safe. Compare trust, traffic-leak risk and fit, then hunt names available on both.",
       verdict:
-        "Pricing is similar; the difference is perception. Users autocomplete .com by reflex, while .net reads technical and infrastructural. Using .net as a fallback is only safe when your brand word is distinctive — with a common word whose .com someone else operates, you'll leak traffic and invite confusion indefinitely. Conversely, network services, cloud products and API platforms wear .net naturally, and the same shortlist scores far more available hits on .net.",
-      pickA: ["Almost any mainstream consumer brand", "Common brand words at risk of confusion", "Long-term brand asset and resale", "Heavy word-of-mouth channels (ads, podcasts)"],
-      pickB: ["Network, cloud, API and infrastructure products", "Distinctive brand word whose .com is taken", "Pragmatic technical products with functional names", "Better availability odds for the same list"],
+        "Both suffixes are operated by Verisign, both date to 1985, and their wholesale prices have flipped: per ICANN's published fee schedules, .com costs registrars $10.26 per year (since September 2024) while .net costs $10.91 (since February 2024) — the old \"net is cheaper\" instinct is out of date, and the site's reference table reflects it (.com ¥69 / ¥85, .net ¥79 / ¥99). With price off the table, what remains is perception and inventory. Users still autocomplete .com by reflex, so in ads, podcasts and word of mouth a .net brand will leak some traffic to the .com; if your brand word is common and someone else operates that .com, the leak never stops. On the other hand, .net was created for network providers — Verisign's own DNS infrastructure, plenty of CDNs, cloud and API platforms live there — so networking tools, developer platforms and infrastructure products wear it as a fit, not a compromise. The inventory gap is real: the same shortlist scores far more available hits on .net, where dictionary words and short roots still exist. The test: if you serve a mainstream audience, plan a decade-long brand asset, or the name will be spoken aloud constantly, take .com. If the name is distinctive, the product is about networks, connectivity or infrastructure, or the .com holder is a parked page rather than a competitor, .net is the pragmatic, respectable choice. Both date back to the original 1985 gTLD set and have been run by Verisign for decades, so stability is identical; the whole decision is about recognition and inventory, not registry risk.",
+      pickA: ["Consumer-facing mainstream brands", "Common brand words at risk of .com typo leakage", "Decade-scale brand assets and resale liquidity", "Ads, podcasts and other spoken-name channels"],
+      pickB: ["Network services, CDNs, cloud and API platforms", "Distinctive brand word whose .com holder isn't a competitor", "Pragmatic technical products with functional names", "Better availability odds on the same shortlist"],
     },
   },
   "io-vs-ai": {
@@ -99,18 +99,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".io 和 .ai 怎么选：开发者身份与 AI 叙事的对比",
       metaDescription: ".io 是开发者工具的经典后缀，.ai 是 AI 产品的品类信号但价格更高。对比两者的气质、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "产品核心是 AI 能力就选 .ai——后缀本身就是品类信号，投资人与用户一眼读懂；通用开发者工具、API、开源项目则 .io 更稳，不会把品牌绑死在单一叙事上。价格上 .ai 注册与续费都显著更贵（两年起注），预算敏感要算清楚。注意别为了蹭热点硬用 .ai：产品与 AI 无关时反而显得投机，热潮退去后改名成本更高。",
-      pickA: ["通用开发者工具与 API", "开源项目与技术社区", "不想绑死 AI 叙事的技术品牌", "续费预算敏感"],
-      pickB: ["核心卖点是 AI 的产品", "希望后缀直接传达品类", "融资叙事需要（AI 赛道信号）", "短品牌词在 .io/.com 均已被注册"],
+        "两个都是被科技圈重新定义的小地方国家域名，如今又都由 Identity Digital 体系承载：.io 属于英属印度洋领地，1997 年授权给 Internet Computer Bureau 运营；.ai 属于安圭拉，2025 年 1 月整体迁移到 Identity Digital 平台，注册量已超 60 万。价格上 .ai 又贵了一档：站内参考价 .io 首年 259 元、续费 419 元，.ai 首年 499 元、续费 620 元，且 .ai 多数注册商两年起注，首笔至少一千元出头；两者续费都远高于 .com，.ai 每年再多付约 200 元。叙事上 .io 说「开发者工具」——GitHub Pages（github.io）、socket.io 一代把它推成了技术产品的身份标签，不绑定任何赛道；.ai 说「AI 产品」——OpenAI 之后几乎所有 AI 创业公司都先查它，投资人与用户一眼归类，但也把品牌绑在了单一叙事上。两者还各有一条政策风险：.io 所在领地 2025 年 5 月签署了英国—毛里求斯查戈斯主权条约，若生效并导致 ISO 代码变更，ICANN 的 ccTLD 退役政策会启动（五年过渡窗口），目前没有任何时间表；.ai 的政策由安圭拉政府决定。判断方法：核心卖点是 AI——模型服务、AI 应用、Agent 平台，选 .ai，品类信号值那笔溢价；通用开发者工具、API、开源项目、基础设施，选 .io，不会让品牌在热潮退去后显得投机。两者都不该为了蹭热点硬用：与 AI 无关的产品挂 .ai，改名成本比省下的解释成本高得多。长期品牌资产无论选哪个都建议同步持有对应 .com 兜底。",
+      pickA: ["通用开发者工具、API 与基础设施", "开源项目与技术社区（github.io 一代的信号）", "不想把品牌绑死在 AI 叙事上", "续费预算相对敏感（每年比 .ai 少约 200 元）"],
+      pickB: ["模型服务、AI 应用与 Agent 平台", "融资与媒体叙事需要品类信号", "短词/造词在 .io 与 .com 均已被注册", "愿意接受两年起注的首笔成本"],
     },
     en: {
       title: ".io vs .ai: Developer Badge vs AI Narrative",
       metaDescription:
         ".io is the classic developer-tool suffix; .ai signals the AI category at a premium price. Compare vibe, pricing and fit, then hunt names available on both.",
       verdict:
-        "If AI is the product's core, pick .ai — the suffix itself signals the category to users and investors at a glance. For general developer tools, APIs and open source, .io is the safer badge and doesn't chain your brand to one narrative. On price, .ai costs significantly more to register and renew (two-year minimum), so budget accordingly. And don't force .ai onto a non-AI product — it reads opportunistic now and expensive to rename later.",
-      pickA: ["General developer tools and APIs", "Open source and technical communities", "Tech brands avoiding AI lock-in", "Renewal-budget sensitive"],
-      pickB: ["Products whose core value is AI", "Category signal right in the suffix", "Fundraising narrative in the AI space", "Short brand word taken on .io/.com"],
+        "Both are small-territory country codes that the tech world repurposed, and both now ride the Identity Digital platform: .io belongs to the British Indian Ocean Territory, delegated in 1997 to Internet Computer Bureau; .ai belongs to Anguilla and migrated wholesale to Identity Digital in January 2025 with more than 600,000 names. .ai sits one price tier higher: the site's reference table lists .io at ¥259 first year / ¥419 renewal and .ai at ¥499 / ¥620, and most registrars require a two-year minimum on .ai, so the first bill is at least ¥1,000; both renew far above .com, with .ai costing about ¥200 more a year. In narrative, .io says \"developer tool\" — GitHub Pages (github.io) and the socket.io generation made it the badge of technical products without tying you to any sector; .ai says \"AI product\" — since OpenAI nearly every AI startup checks it first, and investors and users categorize you instantly, but the brand is chained to a single story. Each carries a policy risk: the UK–Mauritius Chagos treaty signed in May 2025 could, if it enters into force and changes the ISO code, trigger ICANN's ccTLD retirement policy for .io (a five-year window; no timetable exists today), while .ai policy is set by Anguilla's government. The test: if AI is the core — model services, AI apps, agent platforms — take .ai, where the category signal earns the premium; for general developer tools, APIs, open source and infrastructure, take .io, which won't read opportunistic once the wave recedes. Don't force either onto a product that doesn't fit; a non-AI product on .ai costs more to rename later than it saves in explanation now. Whichever you pick, hold the matching .com as a backstop for a long-term brand.",
+      pickA: ["General developer tools, APIs and infrastructure", "Open source and technical communities (the github.io generation's signal)", "Brands that refuse AI narrative lock-in", "Renewal-sensitive budgets (about ¥200 a year below .ai)"],
+      pickB: ["Model services, AI apps and agent platforms", "Category signal for fundraising and press", "Short words or coined names taken on both .io and .com", "Willing to absorb the two-year minimum up front"],
     },
   },
   "app-vs-dev": {
@@ -121,18 +121,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".app 和 .dev 怎么选：面向用户还是面向开发者",
       metaDescription: ".app 适合面向最终用户的应用，.dev 适合开发者工具与技术内容，两者都强制 HTTPS。对比适用场景与命名策略，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "同属 Google 注册局、都强制 HTTPS、价格相近，选择只看受众：产品交付物是给最终用户的应用（移动/桌面/Web App）就用 .app，域名即品类；受众是开发者——工具链、SDK、技术博客、文档站——.dev 的圈内感更强。两者库存都远好于 .com，短而准的好名字仍能注册到，是新产品起步性价比很高的选择。",
-      pickA: ["移动/桌面/Web 应用主站", "面向最终用户的 SaaS 产品", "下载/安装转化场景（域名即品类）", "消费级品牌但 .com 无货"],
-      pickB: ["开发者工具与 CLI/SDK", "技术博客、文档与开源主页", "开发者社区与技术品牌", "个人开发者作品集"],
+        "两个后缀都由 Google 旗下的 Charleston Road Registry 运营，也都整段被写进浏览器的 HSTS 预加载名单——任何 name.app / name.dev 不装证书就直接打不开，这一点上没有差别。真正的分界线是「谁来访问」。.app 面向最终用户：下载落地页、Web App、小工具官网，域名本身就在说「这是个应用」，用户不需要懂技术。.dev 面向写代码的人：Google 自己把 web.dev、developers 生态的官方站放在上面，Kubernetes 的 kubernetes.dev 也是，圈内人看到 .dev 就默认「有文档、有 SDK、有 API」。价格相差不大：站内参考价 .app 首年 99 元、续费 118 元，.dev 首年 88 元、续费 108 元，都属于百元档且续费稳定，不像 Radix 系后缀那样首年促销、续费翻倍。库存两边都远好于 .com，短产品词、动词+名词组合仍大量可注册。实操上的分法：产品的安装/打开动作是给普通用户的，选 .app；产品的 README 是第一入口、用户会打开终端，选 .dev；两者都要的团队通常 name.app 做下载页、docs.name.dev 做文档——用同一个注册局，DNS 与证书策略也能统一。别在 .app 的名字里再写 app，别在 .dev 的名字里再写 dev，后缀已经替你说了。.app 2018 年 5 月开放注册，.dev 2019 年 2 月跟进，都是根区里最年轻的一批通用后缀，因此库存比 2014 年前后入根的那批新后缀干净得多，两三个音节的实词大多还在。",
+      pickA: ["移动/桌面/Web 应用的下载与落地页", "面向普通用户的 SaaS 与小工具", "「打开即用」是核心动作的产品", "消费级产品词在 .com 无货、.app 仍可注册"],
+      pickB: ["开发者工具、CLI 与 SDK 官网", "技术文档、开源项目与 API 参考站", "个人技术博客与 yourname.dev 作品集", "用户会打开终端的技术品牌"],
     },
     en: {
       title: ".app vs .dev: End Users or Developers",
       metaDescription:
         ".app suits end-user applications; .dev suits developer tools and technical content — both enforce HTTPS. Compare fit and naming strategy, then hunt names available on both.",
       verdict:
-        "Same Google registry, both HTTPS-enforced, similar pricing — the choice is purely about audience. If you ship an application to end users (mobile, desktop, web), .app makes the category part of the domain. If your audience is developers — toolchains, SDKs, docs, technical blogs — .dev carries stronger insider credibility. Both have far better inventory than .com, so short precise names are still registrable: excellent value for a new product.",
-      pickA: ["Mobile/desktop/web app home", "End-user-facing SaaS", "Download/install conversion flows", "Consumer brand when .com is gone"],
-      pickB: ["Developer tools, CLIs and SDKs", "Docs sites, technical blogs, open source homes", "Developer communities and tech brands", "Personal developer portfolios"],
+        "Both suffixes are run by Google's Charleston Road Registry, and both zones sit on the browser HSTS preload list — a name.app or name.dev without a certificate simply refuses to load, so security is a wash. The real dividing line is who visits. .app talks to end users: download landing pages, web apps and utility tools, where the domain itself says \"this is an application\" and nobody needs to understand the stack. .dev talks to people who write code: Google hosts web.dev and much of its developer ecosystem there, Kubernetes runs kubernetes.dev, and insiders read .dev as \"there will be docs, an SDK and an API\". Pricing is close — the site's reference table lists .app at ¥99 first year / ¥118 renewal and .dev at ¥88 / ¥108, both in the stable hundred-yuan tier rather than the promo-then-double pattern of Radix suffixes. Inventory is far healthier than .com on both sides, with short product words and verb+noun compounds still widely available. The practical split: if the install-or-open action belongs to ordinary users, take .app; if the README is your front door and users open a terminal, take .dev. Teams that want both usually ship name.app as the download page and docs.name.dev for documentation — same registry, so DNS and certificate policy stay uniform. Don't repeat \"app\" inside an .app name or \"dev\" inside a .dev name; the suffix already said it.",
+      pickA: ["Download and landing pages for mobile, desktop or web apps", "End-user SaaS and utility tools", "Products where open-and-use is the core action", "Consumer product words gone on .com but open on .app"],
+      pickB: ["Developer tools, CLIs and SDK homepages", "Docs sites, open-source projects and API references", "Personal engineering blogs and yourname.dev portfolios", "Tech brands whose users live in a terminal"],
     },
   },
   "co-vs-me": {
@@ -143,18 +143,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".co 和 .me 怎么选：品牌简写与个人品牌的对比",
       metaDescription: ".co 是创业公司爱用的 .com 替身，.me 天然适合个人品牌与作品集。对比两者的气质、误输风险与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "两者都短，但气质完全不同：.co 读作 company，是创业公司与新消费品牌的 .com 替身，干脆利落；.me 读作「我」，个人站、简历、作品集、newsletter 用它自然贴切，还能玩出 hire.me、about.me 这类语义梗。用 .co 要注意误输风险——用户手滑打成 .com 的流量会流向别人，品牌词越常见风险越大；.me 则更适合个人而非公司主站。",
-      pickA: ["创业公司与新消费品牌", "追求比 .com 短一个字母的利落感", "品牌词独特、误输风险可控", "国际化公司主站"],
-      pickB: ["个人品牌、简历与作品集", "newsletter 与个人博客", "语义梗域名（hire.me 类）", "独立开发者的个人产品"],
+        "两个都是被重新定义的国家域名：.co 属于哥伦比亚，由该国信息通信技术部（MinTIC）管理、CentralNic 提供技术后端（IANA 技术联系人），2010 年面向全球开放后被读成 company；.me 属于黑山，2007 年授权、registry 站点 domain.me 直接把它当个人后缀经营。价格上 .co 首年更便宜但续费更陡：站内参考价 .co 首年 65 元、续费 199 元，.me 首年 120 元、续费 150 元——第一年 .co 便宜近半，从第二年起反过来每年多付约 50 元。语义分工很清楚：.co 是创业公司与新消费品牌的 .com 替身，Twitter 曾用 t.co 做全站短链，只差一个字母、读起来利落；.me 是「我」，个人主页、简历、作品集、newsletter 用它天然贴切，还能做 hire.me、about.me 这类动词短语。.co 独有的风险是误输：用户手滑打成 .com 的流量会流向 .com 的持有者，品牌词越常见漏得越多，注册前先查对应 .com 在谁手里。.me 的边界则是形态——大型企业官网用它显得不够正式。判断方法：主体是团队/公司、未来要出现在合同与融资材料上，选 .co；主体是一个人、要出现在名片与社交简介里，选 .me。独立开发者常见的组合是个人站 name.me、产品公司 name.co。两者都是重新包装的国家域名：.co 2010 年由 .CO Internet 重开并靠 t.co、g.co 出圈，.me 2008 年开放靠 fb.me、wp.me 走红。",
+      pickA: ["创业公司与新消费品牌的主站", "品牌词独特、对应 .com 非竞品持有", "比 .com 短一个字母的利落感", "首年预算紧、可接受更高续费"],
+      pickB: ["个人主页、简历站与作品集", "newsletter、播客与创作者落地页", "动词短语域名（hire.me、about.me 类）", "长期持有、在意续费（.me 续费低于 .co）"],
     },
     en: {
       title: ".co vs .me: Startup Shorthand or Personal Brand",
       metaDescription:
         ".co is the startup world's .com stand-in; .me is built for personal brands and portfolios. Compare vibe, typo risk and fit, then hunt names available on both.",
       verdict:
-        "Both are short, but the vibes differ completely. .co reads as company — the crisp .com stand-in beloved by startups and consumer brands. .me reads as, well, you — personal sites, résumés, portfolios and newsletters wear it naturally, with room for semantic plays like hire.me. With .co, watch the typo risk: users who autocomplete .com hand traffic to whoever owns it, and the more common your word, the bigger the leak. .me suits people better than company homepages.",
-      pickA: ["Startups and consumer brands", "One letter crisper than .com", "Distinctive brand words with managed typo risk", "International company sites"],
-      pickB: ["Personal brands, résumés, portfolios", "Newsletters and personal blogs", "Semantic-pun domains (hire.me style)", "Indie developers' personal products"],
+        "Both are country codes that the market repurposed. .co belongs to Colombia, administered by its Ministry of ICT (MinTIC) with CentralNic as technical back end (per IANA), and has read as \"company\" since it opened globally in 2010; .me belongs to Montenegro, delegated in 2007, and its registry site domain.me markets it as the personal suffix outright. Pricing runs in opposite directions: the site's reference table lists .co at ¥65 first year / ¥199 renewal and .me at ¥120 / ¥150 — .co is nearly half the price in year one, then costs about ¥50 more every year after. The semantic split is clean. .co is the .com stand-in for startups and consumer brands — Twitter ran its site-wide short links on t.co — one letter shorter and crisp. .me means you: personal pages, résumés, portfolios and newsletters wear it naturally, and verb phrases like hire.me or about.me are its signature move. .co carries a risk .me doesn't: type-in leakage, where users who autocomplete .com hand traffic to whoever holds it, worse the more common your word — check who owns the .com before committing. .me's boundary is scale: a large corporate site looks under-dressed on it. The test: if the subject is a team or company that will appear on contracts and fundraising decks, take .co; if the subject is one person who will appear on business cards and social bios, take .me. Indie developers often run both — name.me for the person, name.co for the product company.",
+      pickA: ["Startup and consumer-brand homepages", "Distinctive brand words whose .com isn't held by a competitor", "One letter crisper than .com", "Tight first-year budget with tolerance for higher renewals"],
+      pickB: ["Personal pages, résumés and portfolios", "Newsletters, podcasts and creator landing pages", "Verb-phrase domains (hire.me, about.me)", "Long holds that care about renewals (.me renews below .co)"],
     },
   },
   "com-vs-ai": {
@@ -165,18 +165,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".com 和 .ai 怎么选：通用信任与 AI 品类信号的取舍",
       metaDescription: ".com 认知度最高，.ai 直接传达 AI 品类但价格贵得多。对比两者的信任度、价格与命名策略，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "产品核心卖点是 AI，.ai 后缀本身就是最短的自我介绍——投资人、媒体与用户一眼归类；其余情况 .com 仍是默认答案，认知与信任无可替代。价格差距要算清：.ai 注册与续费都显著更贵且两年起注，长期持有成本是 .com 的数倍。常见组合打法：主品牌收 .com 做官网，产品线或模型入口用 .ai 分流叙事；预算有限时先拿 .ai 上线、品牌起量后回购 .com。",
-      pickA: ["面向大众的主品牌官网", "长期品牌资产与转售价值", "续费预算敏感", "产品与 AI 弱相关，避免叙事绑定"],
-      pickB: ["核心卖点是 AI 的产品", "融资/媒体叙事需要品类信号", "心仪短词 .com 已被注册", "作为 AI 产品线的独立入口"],
+        "产品核心卖点是 AI，.ai 三个字符就是最短的自我介绍；其余情况 .com 仍是默认答案。.ai 是安圭拉的国家域名，2025 年 1 月起由 Identity Digital 平台承载，注册量已超 60 万，域名收入已是安圭拉政府财政的重要来源——这是一个被 AI 热潮改写了国家财政的后缀。.com 由 Verisign 运营，批发价 10.26 美元/年（2024 年 9 月起），是全球用户默认补全的后缀。价格差距要算清：站内参考价 .ai 首年 499 元、续费 620 元，多数注册商两年起注，也就是首笔至少一千元出头；.com 首年 69 元、续费 85 元。十年持有 .ai 约 6000 元、.com 不到 900 元，相差近七倍。换来的是库存与叙事：短词、动词、两三个音节的造词在 .ai 下仍大量可注册，投资人与媒体一眼归类；.com 下同样的词早已绝迹或要五位数收购。判断方法：模型服务、AI 应用、Agent 平台——AI 是产品身份而不是一个特性，选 .ai；AI 只是功能之一、面向大众或企业的通用产品、要做十年以上品牌资产，选 .com，别让后缀绑架叙事。常见组合是主品牌收 .com 做官网、产品线或模型入口用 brand.ai；预算有限时先拿 .ai 上线、品牌起量后回购 .com。一个提醒：.ai 是国家域名，政策由安圭拉政府决定，长期资产同步持有 .com 兜底更稳。",
+      pickA: ["面向大众的主品牌官网与通用产品", "AI 只是特性之一、不想被叙事绑定", "十年以上品牌资产（续费不到 .ai 七分之一）", "需要转售流动性与全球认知"],
+      pickB: ["模型服务、AI 应用与 Agent 平台", "融资与媒体叙事需要品类信号", "短词/造词在 .com 已绝迹或报价过高", "作为 AI 产品线的独立入口（brand.ai）"],
     },
     en: {
       title: ".com vs .ai: Universal Trust or AI Category Signal",
       metaDescription:
         ".com has the highest recognition; .ai signals the AI category at a much higher price. Compare trust, pricing and naming strategy, then hunt names available on both.",
       verdict:
-        "If AI is the product's core value, .ai is the shortest possible pitch — investors, press and users categorize you at a glance. Otherwise .com remains the default answer with irreplaceable recognition. Do the math on price: .ai costs several times more to register and renew (two-year minimum). A common combo: secure .com for the main brand site and run the AI product line on .ai; on a tight budget, launch on .ai first and buy the .com back once the brand has traction.",
-      pickA: ["Mainstream primary brand site", "Long-term brand asset and resale value", "Renewal-budget sensitive", "Products only loosely related to AI"],
-      pickB: ["Products whose core value is AI", "Category signal for fundraising and press", "Short word taken on .com", "Dedicated entry for an AI product line"],
+        "If AI is the product's core value, the two letters of .ai are the shortest possible pitch; otherwise .com remains the default answer. .ai is Anguilla's country code, served on the Identity Digital platform since January 2025 with more than 600,000 registrations, and domain revenue has become a major source of government income — a suffix that rewrote a nation's budget. .com is Verisign's, wholesale $10.26 a year since September 2024, and the one users worldwide autocomplete. Do the math: the site's reference table lists .ai at ¥499 first year / ¥620 renewal, with most registrars requiring a two-year minimum, so the first bill is at least ¥1,000; .com is ¥69 / ¥85. Over ten years that is roughly ¥6,000 on .ai versus under ¥900 on .com, nearly seven to one. What you buy is inventory and narrative: short words, verbs and two- to three-syllable coined names are still widely available on .ai and investors and press categorize you at a glance, while the same words on .com are extinct or cost five figures. The test: model services, AI apps and agent platforms where AI is the product's identity rather than a feature — take .ai; AI as one feature among many, a general product for consumers or enterprises, a decade-plus brand asset — take .com and don't let the suffix hijack the story. A common combo is .com for the main brand site and brand.ai for the AI product line or model entry; on a tight budget, launch on .ai and buy the .com back once the brand has traction. One caveat: .ai is a ccTLD whose policy is set by Anguilla's government, so holding the .com as a backstop is the safer long-term play.",
+      pickA: ["Mainstream brand sites and general products", "AI as one feature among many, no narrative lock-in", "Decade-plus brand assets (renews at under a seventh of .ai)", "Resale liquidity and global recognition"],
+      pickB: ["Model services, AI apps and agent platforms", "Category signal for fundraising and press", "Short words or coined names extinct or overpriced on .com", "A dedicated entry for the AI product line (brand.ai)"],
     },
   },
   "net-vs-org": {
@@ -187,18 +187,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".net 和 .org 怎么选：技术气质与公信力的对比",
       metaDescription: ".net 偏技术与基础设施，.org 自带非营利与社区公信力。对比两者的气质、误用风险与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "两者都是 1985 年的元老后缀、价格接近，但气质分工明确：.net 读作 network，网络服务、云与基础设施产品用它名正言顺；.org 读作 organization，几十年来被非营利、开源基金会与社区站点塑造成「公益与中立」的信号。商业公司硬用 .org 会有违和感甚至信任反噬；反之开源项目、行业协会、文档与社区用 .org 比 .net 更贴切。两者好名字库存都明显好于 .com。",
-      pickA: ["网络服务、云与基础设施产品", "技术工具与 API 平台", "功能词入名的务实技术品牌", "商业公司的备选后缀"],
-      pickB: ["开源项目与基金会", "非营利组织与公益站点", "行业协会、社区与知识库", "需要中立公信力的内容站"],
+        "两个都是 1985 年入根的元老后缀，分属两家注册局：.net 由 Verisign 运营，.org 由非营利的 Public Interest Registry（PIR）运营、Identity Digital 提供后端。价格几乎一样——站内参考价两者都是首年 79 元、续费 99 元；批发层面 .net 目前 10.91 美元/年，且合同允许 Verisign 每年最多涨 10%；.org 在 2019 年续约时被 ICANN 取消了价格上限（当时收到 3200 余条公众意见反对），理论上也不再有涨价约束。所以价格上分不出高下，选择只看气质。.net 读作 network：CDN、DNS、云与 API 平台、网络工具用它名正言顺；.org 读作 organization，Wikipedia、Mozilla、Apache 这些标杆几十年下来把它塑造成「公益、开源、中立」的信号，用户默认 .org 不是来卖东西的。商业公司硬用 .org 会有违和感，甚至让用户怀疑盈利模式；反过来，开源项目、基金会、行业协会、社区文档用 .org 比 .net 更贴切。两者的好名字库存都明显好于 .com，常见词命中率高。判断方法：产品是基础设施或网络服务、主体是公司，选 .net；主体是项目、社区或组织，收入模式是捐赠/会员/赞助而非售卖，选 .org。开源公司常见的分工：项目站 project.org，商业公司 company.com 或 company.net。.org 自 2003 年起由 Public Interest Registry（互联网协会 ISOC 旗下）运营，2019 年宣布的 Ethos Capital 收购案 2020 年被 ICANN 否决，非营利属性因此被再次确认；.net 与 .com 同属 Verisign，1985 年即已存在。",
+      pickA: ["CDN、DNS、云与 API 等基础设施产品", "网络工具与开发者平台", "主体是公司、收入靠售卖", "功能词入名的务实技术品牌"],
+      pickB: ["开源项目与基金会（wikipedia.org、mozilla.org 同款）", "非营利组织与公益站点", "行业协会、标准组织与社区文档", "收入靠捐赠/会员/赞助的项目"],
     },
     en: {
       title: ".net vs .org: Technical Vibe or Public Trust",
       metaDescription:
         ".net reads technical and infrastructural; .org carries nonprofit and community credibility. Compare vibe, misuse risk and fit, then hunt names available on both.",
       verdict:
-        "Both are 1985 originals with similar pricing, but their vibes divide cleanly. .net reads as network — natural for network services, cloud and infrastructure products. .org reads as organization, shaped by decades of nonprofits, open-source foundations and community sites into a signal of neutrality and public good. A commercial company forcing .org can feel off and even backfire on trust; conversely, open-source projects, associations, docs and communities wear .org better than .net. Both have far better name inventory than .com.",
-      pickA: ["Network, cloud and infrastructure products", "Technical tools and API platforms", "Pragmatic technical brands with functional names", "Commercial fallback suffix"],
-      pickB: ["Open-source projects and foundations", "Nonprofits and public-good sites", "Associations, communities and knowledge bases", "Content sites needing neutral credibility"],
+        "Both are 1985 originals from different registries: .net is operated by Verisign, .org by the non-profit Public Interest Registry (PIR) on Identity Digital's back end. Pricing is nearly identical — the site's reference table lists both at ¥79 first year / ¥99 renewal. At wholesale, .net currently costs $10.91 a year and Verisign's contract allows increases of up to 10% per year; .org lost its price cap in the 2019 ICANN renewal (over 3,200 public comments objected), so neither has a hard ceiling anymore. With price a wash, the choice is about character. .net reads as network: CDNs, DNS, cloud and API platforms and networking tools wear it legitimately. .org reads as organization, shaped over decades by Wikipedia, Mozilla and Apache into a signal of public good, open source and neutrality — visitors assume an .org isn't there to sell them something. A commercial company forcing .org feels off and can even make users question the business model; conversely, open-source projects, foundations, associations and community docs fit .org better than .net. Both have far better inventory than .com, with dictionary words still available. The test: infrastructure or network service run by a company that earns by selling — take .net; a project, community or organization funded by donations, membership or sponsorship — take .org. Open-source companies commonly split: project on project.org, company on company.com or company.net. .org has been run by Public Interest Registry (an Internet Society affiliate) since 2003, and the 2019 Ethos Capital buyout was blocked by ICANN in 2020, reaffirming its nonprofit character; .net sits with .com under Verisign and has existed since 1985.",
+      pickA: ["Infrastructure products: CDN, DNS, cloud and API", "Networking tools and developer platforms", "A company that earns by selling", "Pragmatic technical brands with functional names"],
+      pickB: ["Open-source projects and foundations (the wikipedia.org, mozilla.org pattern)", "Nonprofits and public-interest sites", "Associations, standards bodies and community docs", "Projects funded by donations, membership or sponsorship"],
     },
   },
   "com-vs-xyz": {
@@ -209,18 +209,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".com 和 .xyz 怎么选：默认信任与新锐低价的取舍",
       metaDescription: ".com 是默认信任，.xyz 便宜、库存好、在 Web3 圈有独特身份。对比两者的信任度、续费陷阱与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "谷歌母公司 Alphabet 用 abc.xyz 给了 .xyz 一张最好的名片，加上 Web3 与加密圈的偏爱，.xyz 已从「便宜后缀」长出了自己的新锐气质；库存极好，首年价格常常只要几块钱。但要注意两点：一是续费价通常远高于首年促销价，注册前先看清楚续费；二是部分邮件与安全网关对 .xyz 域名更警惕，正式商务场景可能吃亏。面向大众的正式品牌 .com 仍是稳妥答案。",
-      pickA: ["面向大众的正式品牌", "邮件送达率敏感的业务", "长期品牌资产与转售", "不想解释「为什么不是 .com」"],
-      pickB: ["Web3、加密与新锐科技品牌", "预算极限的试验项目与 side project", "短词/三字母组合在 .com 绝迹", "品牌本身想传达打破常规"],
+        ".xyz 由拉斯维加斯的 XYZ.COM LLC 运营，2014 年入根，次年 Alphabet 用 abc.xyz 做控股公司官网，给了它所有新后缀里最重量级的一张名片；后来 Web3 与加密圈把它当成亚文化标志。.com 是 Verisign 运营的老牌默认后缀。两者的价格结构截然相反：站内参考价 .xyz 首年 8 元、续费 79 元，首年几乎免费但续费是首年的十倍；.com 首年 69 元、续费 85 元，首年贵但续费只多 16 元。也就是说，从第二年开始两者续费只差几元钱——.xyz 的「便宜」只是第一年的事。它真正的优势是库存和态度：短词、三字母组合、梗词在 .xyz 下大量可注册，品牌本身想传达「不走寻常路」时后缀就是宣言。真正的代价在信誉：极低的首年价让 .xyz 长期被垃圾站批量注册，部分邮件服务与企业安全网关对它更敏感，B2B 销售邮件、面向企业客户的正式业务会吃亏。判断方法：面向大众、依赖邮件送达、要做长期资产，选 .com；Web3 项目、创意实验、side project、想要 Alphabet 同款气质，选 .xyz，并把品牌邮件放在另一个主流后缀上。想以极低成本批量验证想法，.xyz 首年价无可替代——但每一个准备长期持有的都要按 79 元的续费算账。abc.xyz 至今仍是 Alphabet 的官方主站，是 .xyz 最常被引用的背书案例。",
+      pickA: ["面向大众的正式品牌与企业官网", "依赖邮件送达率的 B2B 业务", "长期品牌资产与转售流动性", "续费预算稳定优先（续费只比 .xyz 多几元）"],
+      pickB: ["Web3、加密与新锐科技项目", "批量验证想法的 side project（首年 8 元级）", "短词/三字母/梗词在 .com 已绝迹", "品牌想传达 abc.xyz 式的打破常规"],
     },
     en: {
       title: ".com vs .xyz: Default Trust or Edgy Bargain",
       metaDescription:
         ".com is the default trust; .xyz is cheap, well-stocked and carries Web3 credibility. Compare trust, renewal traps and fit, then hunt names available on both.",
       verdict:
-        "Alphabet's abc.xyz gave .xyz the best possible business card, and the Web3/crypto world adopted it as a badge — it has outgrown 'cheap suffix' into a genuinely edgy identity, with excellent inventory and first-year prices often just a couple of dollars. Two cautions: renewal prices usually far exceed the promo price, so check before registering; and some mail and security gateways treat .xyz with more suspicion, which can hurt formal business use. For a mainstream brand, .com remains the safe answer.",
-      pickA: ["Mainstream formal brands", "Email-deliverability-sensitive businesses", "Long-term brand asset and resale", "No appetite for explaining 'why not .com'"],
-      pickB: ["Web3, crypto and edgy tech brands", "Ultra-low-budget experiments and side projects", "Short words/three-letter combos extinct on .com", "Brands that want to signal breaking convention"],
+        ".xyz is run by Las Vegas-based XYZ.COM LLC and entered the root in 2014; the next year Alphabet put its holding-company site on abc.xyz, the heaviest endorsement any new suffix has received, and Web3 and crypto circles later adopted it as a subculture badge. .com is Verisign's legacy default. Their price structures are mirror images: the site's reference table lists .xyz at ¥8 first year / ¥79 renewal — nearly free up front, then ten times that to renew — while .com is ¥69 / ¥85, expensive up front but only ¥16 more to renew. From year two onward the two renew within a few yuan of each other, so .xyz's cheapness is strictly a first-year phenomenon. Its real advantages are inventory and attitude: short words, three-letter combos and meme words are widely available, and when the brand wants to say \"we don't do convention\", the suffix is the statement. The real cost is reputation: rock-bottom intro pricing has made .xyz a favorite of bulk spam registrations, and some mail providers and corporate security gateways treat it warily — B2B outreach email and enterprise-facing businesses feel that. The test: mainstream audience, email-dependent sales, long-term asset — take .com. Web3 project, creative experiment, side project, or the abc.xyz vibe — take .xyz, and keep brand email on a mainstream suffix. For validating many ideas at minimal cost, the .xyz intro price is unbeatable — just budget ¥79 a year for every one you intend to keep.",
+      pickA: ["Mainstream brands and corporate sites", "B2B businesses that depend on email deliverability", "Long-term brand asset and resale liquidity", "Stable renewals (only a few yuan above .xyz's)"],
+      pickB: ["Web3, crypto and edgy tech projects", "Side projects validated in bulk at the ¥8 intro price", "Short words, three-letter combos or memes extinct on .com", "Brands that want the abc.xyz break-with-convention signal"],
     },
   },
   "io-vs-co": {
@@ -253,18 +253,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".ai 和 .dev 怎么选：品类叙事与工程师信誉的对比",
       metaDescription: ".ai 传达 AI 品类叙事但价格高，.dev 便宜可靠且自带工程师信誉。对比两者的定位、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "同样做 AI 相关产品，两个后缀讲的是不同故事：.ai 对外——向用户、投资人与媒体宣告品类；.dev 对内——向工程师传达「这是给你们的工具」。模型产品、AI 应用、面向大众的 AI 服务选 .ai；SDK、CLI、API 文档、开发者平台选 .dev 更贴切且便宜得多（.dev 还强制 HTTPS，Google 注册局）。预算与叙事都想要时，常见做法是 .ai 做产品主站、.dev 做开发者文档与社区入口。",
-      pickA: ["面向大众的 AI 产品与模型服务", "融资与媒体叙事需要品类信号", "AI 是产品的核心卖点", "短品牌词在主流后缀均被注册"],
-      pickB: ["SDK、CLI 与开发者平台", "API 文档站与技术社区", "预算敏感的工程师品牌", "强制 HTTPS 的安全默认"],
+        "同样做 AI 相关产品，两个后缀讲给不同的人听。.ai 是安圭拉的国家域名，2025 年 1 月整体迁移到 Identity Digital 平台，当时注册量已超 60 万，域名收入已是安圭拉政府财政的重要来源；它对外说话——向用户、投资人与媒体宣告品类，OpenAI 之后几乎所有 AI 创业公司都先查 .ai。.dev 由 Google 的 Charleston Road Registry 运营，全后缀 HSTS 预加载、强制 HTTPS；它对内说话——向工程师传达「这是给你们的工具」，web.dev、kubernetes.dev 早已完成用户教育。价格差距是这组对比里最大的：站内参考价 .ai 首年 499 元、续费 620 元，且多数注册商两年起注；.dev 首年 88 元、续费 108 元——.ai 的续费约为 .dev 的六倍。判断方法：模型服务、AI 应用、面向大众或企业客户的 AI 产品，品类信号值这笔钱，选 .ai；SDK、CLI、API 文档、Agent 框架、开发者平台，受众会打开终端，选 .dev，更贴切也便宜得多。两者都要的团队常见分工是 .ai 做产品主站与融资叙事、.dev 做开发者文档与社区入口。别为了蹭热点把纯开发者工具挂到 .ai 上——工程师不需要被告知「这是 AI」，他们更在意文档在哪。.ai 作为安圭拉国家域名 1995 年就已入根，比 .dev 早了二十多年，却直到这轮 AI 浪潮才被当成通用品牌后缀；.dev 2019 年开放，web.dev、flutter.dev 等 Google 自家站点为它背书。",
+      pickA: ["模型服务与面向大众/企业的 AI 应用", "融资与媒体叙事需要品类信号", "AI 是产品的核心身份而非一个特性", "短品牌词在 .com/.io 均已被注册"],
+      pickB: ["SDK、CLI、API 文档与 Agent 框架", "开发者平台与技术社区（kubernetes.dev 同款）", "续费预算敏感（约为 .ai 六分之一）", "看重 HSTS 预加载的安全默认"],
     },
     en: {
       title: ".ai vs .dev: Category Narrative or Engineer Credibility",
       metaDescription:
         ".ai tells the AI category story at a premium; .dev is cheap, reliable and carries engineer credibility. Compare positioning, pricing and fit, then hunt names available on both.",
       verdict:
-        "For AI-adjacent products the two suffixes tell different stories. .ai speaks outward — announcing the category to users, investors and press. .dev speaks inward — telling engineers 'this tool is for you'. Model products, AI apps and consumer AI services fit .ai; SDKs, CLIs, API docs and developer platforms wear .dev better and much cheaper (.dev also enforces HTTPS, Google registry). Want both narrative and budget? A common split: .ai for the product site, .dev for developer docs and community.",
-      pickA: ["Consumer AI products and model services", "Category signal for fundraising and press", "AI as the core selling point", "Short brand words taken on mainstream suffixes"],
-      pickB: ["SDKs, CLIs and developer platforms", "API docs and technical communities", "Budget-conscious engineer brands", "HTTPS-enforced secure default"],
+        "For AI-adjacent products the two suffixes speak to different people. .ai is Anguilla's country code; it migrated wholesale to the Identity Digital platform in January 2025 with more than 600,000 names registered, and domain revenue has become a major source of income for the Anguillan government. It speaks outward — announcing the category to users, investors and press — and since OpenAI nearly every AI startup checks .ai first. .dev is run by Google's Charleston Road Registry with the whole zone HSTS-preloaded and HTTPS enforced; it speaks inward — telling engineers \"this tool is for you\" — and web.dev and kubernetes.dev finished the user education years ago. The price gap is the widest of any comparison here: the site's reference table lists .ai at ¥499 first year / ¥620 renewal, with most registrars requiring a two-year minimum term, versus .dev at ¥88 / ¥108 — .ai renews at roughly six times the rate. The test: model services, AI apps and AI products sold to consumers or enterprises — the category signal earns its cost, take .ai; SDKs, CLIs, API docs, agent frameworks and developer platforms whose users open a terminal — take .dev, a closer fit at a fraction of the price. Teams that want both usually run .ai as the product site and fundraising narrative and .dev for developer docs and community. Don't hang a pure developer tool on .ai to ride the wave — engineers don't need to be told it's AI; they care where the docs are.",
+      pickA: ["Model services and AI apps for consumers or enterprises", "Category signal for fundraising and press", "AI as the product's core identity, not a feature", "Short brand words taken on .com and .io"],
+      pickB: ["SDKs, CLIs, API docs and agent frameworks", "Developer platforms and technical communities (the kubernetes.dev pattern)", "Renewal-sensitive budgets (about one sixth of .ai)", "HSTS-preloaded secure default"],
     },
   },
   "xyz-vs-top": {
@@ -275,18 +275,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".xyz 和 .top 怎么选：两大低价后缀的真实差别",
       metaDescription: ".xyz 与 .top 都以低价著称，但认知圈层完全不同。对比两者的气质、续费与信誉差异，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "都是首年几块钱的低价后缀，差别在认知圈层：.xyz 有 Alphabet（abc.xyz）与 Web3 圈背书，在国际新锐科技圈是「便宜但有态度」；.top 注册量主要在国内，国际认知弱，更多用于短链、活动页与临时项目。两者共同的坑：续费价远高于首年促销价，且低价后缀历史上被滥用较多，部分邮件网关与安全软件更警惕。正式品牌主站建议只把它们当过渡或防御性注册。",
-      pickA: ["Web3 与国际新锐科技项目", "预算极限的 side project", "想要 Alphabet 同款后缀的态度", "短词组合在主流后缀绝迹"],
-      pickB: ["面向国内的活动页与短期项目", "批量防御性注册", "预算最敏感的试验站", "短链与跳转域名"],
+        "都是首年几块钱的低价后缀，认知圈层却几乎不重叠。.xyz 由拉斯维加斯的 XYZ.COM LLC 运营，2014 年入根，Alphabet 的 abc.xyz 与 Web3/加密圈把它塑造成「便宜但有态度」的国际新锐后缀；站内参考价首年 8 元、续费 79 元，续费是首年的十倍。.top 于 2014 年入根，IANA 记录的运营主体现为香港中泽国际（Hong Kong Zhongze International Limited），注册量主要来自中国市场，已取得工信部资质、可正常 ICP 备案，是国内个人站长与中小项目的常见选择；站内参考价首年 12 元、续费 28 元——这是两者最大的分野：.top 的续费只有 .xyz 的三分之一强，是主流后缀里续费最低的一档。两者共同的短板是信誉：极低的价格吸引了大量批量注册与低质站，部分海外邮件服务与安全系统对它们的信任评分偏低，依赖邮件送达的业务要慎重。判断方法：面向国际、做 Web3 或创意实验、想要 abc.xyz 同款态度，选 .xyz；面向国内、需要备案、做排行榜与精选类内容站或批量防御性注册，选 .top，长期成本低得多。两者都不建议做严肃品牌的唯一主站——更合适的角色是过渡、试验或防御性持有，主品牌邮件放在主流后缀上。",
+      pickA: ["Web3、加密与国际新锐科技项目", "面向海外用户的创意实验与 side project", "想要 Alphabet（abc.xyz）同款后缀态度", "短词/三字母组合在主流后缀绝迹"],
+      pickB: ["面向国内、需要 ICP 备案的个人站与内容站", "排行榜、精选与评测类站点（top 语义顺滑）", "批量防御性注册（续费仅 .xyz 三分之一强）", "长期低成本持有的试验项目"],
     },
     en: {
       title: ".xyz vs .top: What Really Separates the Two Budget Suffixes",
       metaDescription:
         ".xyz and .top are both known for rock-bottom prices, but their recognition circles differ completely. Compare vibe, renewals and reputation, then hunt names available on both.",
       verdict:
-        "Both cost a couple of dollars in year one; the difference is who recognizes them. .xyz carries Alphabet (abc.xyz) and Web3 endorsement — 'cheap but with attitude' in international tech circles. .top's registrations concentrate in China with weak international recognition, mostly powering short links, campaign pages and temporary projects. Shared pitfalls: renewals far above the promo price, and budget suffixes' history of abuse makes some mail gateways and security tools warier. For a serious brand's primary site, treat both as transitional or defensive registrations.",
-      pickA: ["Web3 and international edgy tech projects", "Ultra-low-budget side projects", "The Alphabet-style suffix attitude", "Short combos extinct on mainstream suffixes"],
-      pickB: ["China-facing campaign and short-term pages", "Bulk defensive registrations", "Most price-sensitive experiments", "Short-link and redirect domains"],
+        "Both cost a few yuan in year one; their recognition circles barely overlap. .xyz is run by Las Vegas-based XYZ.COM LLC, in the root since 2014, and Alphabet's abc.xyz plus the Web3/crypto scene shaped it into the \"cheap but with attitude\" international suffix; the site's reference table lists ¥8 first year / ¥79 renewal, a ten-fold jump. .top also entered the root in 2014; IANA now lists Hong Kong Zhongze International Limited as its sponsor, its registrations come mostly from the Chinese market, it holds MIIT accreditation for ICP filing, and it is a staple of Chinese webmasters and small projects; the reference table lists ¥12 / ¥28 — the biggest difference between the two: .top renews at little more than a third of .xyz, the lowest renewal tier among mainstream suffixes. Their shared weakness is reputation: rock-bottom pricing attracts bulk registrations and low-quality sites, and some overseas mail and security systems score both lower on trust, so email-dependent businesses should be careful. The test: international audience, Web3 or creative experiments, the abc.xyz attitude — take .xyz; China-facing, ICP filing required, ranking or curated content sites, or bulk defensive registrations — take .top and pay far less over time. Neither is a good sole main site for a serious brand; their natural roles are transitional, experimental or defensive holdings, with brand email kept on a mainstream suffix.",
+      pickA: ["Web3, crypto and edgy international tech projects", "Creative experiments and side projects for overseas users", "The Alphabet (abc.xyz) suffix attitude", "Short words or three-letter combos extinct on mainstream suffixes"],
+      pickB: ["China-facing personal and content sites that need ICP filing", "Rankings, curated lists and review sites (the top semantics fit)", "Bulk defensive registrations (renews at about a third of .xyz)", "Long, low-cost holds for experiments"],
     },
   },
   "shop-vs-store": {
@@ -297,18 +297,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".shop 和 .store 怎么选：电商域名双雄对比",
       metaDescription: ".shop 与 .store 都是电商专属后缀，语义相近但气质与价格不同。对比两者的读感、续费与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "两者语义几乎重叠，差别在读感与价格：.shop 更短、更口语，「品牌 + .shop」读起来就是一句行动号召，全球注册量也明显更大；.store 更像实体「商店」的正式称谓，品牌旗舰店气质更重。价格上两者首年促销都很便宜，但续费都不便宜——注册前务必看清续费价。选择建议：日常电商与 DTC 独立站选 .shop，品牌官方旗舰店或线下品牌线上化选 .store；高客单价场景两者都建议搭配 .com 做信任背书。",
-      pickA: ["DTC 独立站与日常电商", "更短更口语的行动号召感", "国际市场（注册量与认知更大）", "品类词域名（coffee.shop 类）"],
-      pickB: ["品牌官方旗舰店", "线下零售品牌的线上入口", "「商店」正式感更强的定位", "shop 下心仪名字已被注册"],
+        "语义几乎重叠，出身却完全不同。.shop 由日本 GMO Registry 运营——2016 年 1 月它在 ICANN 拍卖中以 4150.1 万美元击败包括 Amazon、Google 在内的竞争者拿下这个后缀，是 ICANN 拍卖史上第二高的成交价（仅次于半年后 .web 的 1.35 亿美元）。.store 由 Radix 运营，2016 年入根，走的是低价引流路线。价格上两者首年都便宜、续费都不低：站内参考价 .shop 首年 12 元、续费 260 元，.store 首年 15 元、续费 380 元——.store 的续费比 .shop 高出约 120 元/年，十年持有差出一千多元。读感上 .shop 更短、更口语，coffee.shop 这种「品类词 + shop」读出来就是行动号召；.store 更像实体「商店」的正式称谓，brand.store 有品牌旗舰店的分量。判断方法：日常电商、DTC 独立站、品类词域名，选 .shop，续费更省；线下零售品牌做线上入口、想要「官方旗舰店」的正式感，选 .store。高客单价品类（珠宝、家具、奢侈品）无论选哪个都建议搭配 .com 做信任背书。两者都能注册时，还可以顺手做一个决定：主体名不要再带 shop/store/mall 字样——后缀已经说了「店」。两者都在 2016 年开放注册：.shop 由日本 GMO 在 ICANN 拍卖中以 4150 万美元拿下，GMO 在日本市场推广力度大；.store 由 Radix 运营，定位品牌旗舰店。首年促销都很激进，从第二年起 .store 每年比 .shop 多付约 120 元。按 IANA 记录，.store 于 2016 年 2 月入根、.shop 于同年 5 月入根，只差三个月，却分属日本与迪拜两家风格迥异的注册局。",
+      pickA: ["DTC 独立站与日常电商", "品类词域名（coffee.shop、sneaker.shop 类）", "续费预算优先（比 .store 少约 120 元/年）", "国际市场（.shop 注册量与认知更大）"],
+      pickB: ["线下零售品牌的线上旗舰店", "「官方商店」正式感更强的定位", "主体名简短、想要 brand.store 的分量", "心仪名字 .shop 已被注册"],
     },
     en: {
       title: ".shop vs .store: The Two E-commerce Suffixes Compared",
       metaDescription:
         ".shop and .store are both e-commerce suffixes with similar meaning but different vibes and pricing. Compare readability, renewals and fit, then hunt names available on both.",
       verdict:
-        "Their meanings nearly overlap; the differences are cadence and price. .shop is shorter and more conversational — 'brand + .shop' reads like a call to action — and has significantly more registrations worldwide. .store reads like the formal word for a physical shop, giving flagship-store gravitas. Both offer cheap first-year promos with much higher renewals, so check renewal pricing before registering. Rule of thumb: everyday e-commerce and DTC sites take .shop; official brand flagships and offline retailers going online take .store. For high-ticket commerce, pair either with a .com for trust.",
-      pickA: ["DTC and everyday e-commerce sites", "Shorter, call-to-action cadence", "International markets (bigger recognition)", "Category-word domains (coffee.shop style)"],
-      pickB: ["Official brand flagship stores", "Offline retailers moving online", "Formal 'store' positioning", "Your name is taken on .shop"],
+        "The meanings almost overlap; the origins don't. .shop is operated by Japan's GMO Registry, which won the suffix at an ICANN auction in January 2016 for $41,501,000 against rivals including Amazon and Google — the second-highest ICANN auction price ever, behind only .web's $135 million six months later. .store is a Radix suffix, in the root since 2016, run on the low-intro-price playbook. Both are cheap up front and neither renews cheaply: the site's reference table lists .shop at ¥12 first year / ¥260 renewal and .store at ¥15 / ¥380 — .store renews about ¥120 a year higher, over a thousand yuan more across a decade. In cadence, .shop is shorter and more conversational; coffee.shop reads like a call to action. .store reads like the formal word for a physical shop, and brand.store carries flagship-store weight. The test: everyday e-commerce, DTC sites and category-word domains take .shop and save on renewals; offline retailers building an online entrance, or brands wanting the official-flagship tone, take .store. For high-ticket categories — jewelry, furniture, luxury — pair either with a .com for trust. And whichever you pick, drop shop, store or mall from the name itself: the suffix already says it. Both opened in 2016: .shop was won by Japan's GMO at ICANN auction for US$41.5 million and GMO markets it heavily in Japan; .store is run by Radix and positioned as the flagship-store suffix. First-year promotions are aggressive on both, but from year two .store costs about ¥120 a year more than .shop.",
+      pickA: ["DTC and everyday e-commerce sites", "Category-word domains (coffee.shop, sneaker.shop)", "Renewal-first budgets (about ¥120 a year below .store)", "International markets where .shop's volume and recognition are larger"],
+      pickB: ["Online flagship store for an offline retailer", "Formal official-store positioning", "Short brand names that want the weight of brand.store", "Your name is taken on .shop"],
     },
   },
   "cloud-vs-tech": {
@@ -319,18 +319,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".cloud 和 .tech 怎么选：云服务与泛科技的定位对比",
       metaDescription: ".cloud 精准指向云与 SaaS，.tech 覆盖一切科技叙事。对比两者的定位精度、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "两者都是科技叙事，精度不同：.cloud 一词就把「云服务/SaaS/托管平台」说完了，产品形态是云交付时几乎零解释成本；.tech 更宽，硬件、初创、社区、黑客松都装得下，但也因此少了一层具体指向。价格上 .tech 首年促销常见极低价、续费高出数倍，.cloud 相对平缓。选择建议：产品核心是云端交付（SaaS、PaaS、托管、存储）用 .cloud；泛科技品牌、硬件、技术社区与活动用 .tech。两者库存都远好于 .com。",
-      pickA: ["SaaS 与云交付产品", "托管、存储与基础设施平台", "「云」是品类关键词的品牌", "定位精准不想解释的场景"],
-      pickB: ["泛科技品牌与硬件产品", "技术社区、活动与黑客松", "科技媒体与内容站", "cloud 下心仪名字已被注册"],
+        "两个后缀来自不同的注册局，价格曲线也完全不同。.cloud 由意大利的 Aruba PEC S.p.A. 运营（2015 年入根），站内参考价首年 60 元、续费 160 元，属于中等且平缓的一档；.tech 由 Radix 运营（2015 年入根），首年 45 元、续费 360 元，续费是首年的八倍、是 .cloud 续费的两倍多——只看第一年会被误导。语义精度也不同。.cloud 一个词就说完了「云服务/SaaS/托管平台」，云厂商还常用它做客户实例域名（customer.product.cloud），扩展性好；面向企业客户时，它比 .io 更正式。.tech 更宽：硬件公司、机器人团队、科技媒体、黑客马拉松都装得下，CES 官网 ces.tech 就是行业级背书，但也因此少了一层具体指向。库存两边都远好于 .com，.tech 因为语义更泛，双词组合几乎随便挑。判断方法：产品交付形态是云端——SaaS、PaaS、托管、存储、DevOps 工具，并且会长期持有，选 .cloud，续费账更好算；品牌是泛科技叙事、面向投资人与媒体，或做硬件与技术社区活动，选 .tech，但注册前把 360 元级的续费写进预算。团队名已含 cloud 或 tech 字样时，选另一个后缀避免重复（如 nimbus.cloud 而非 nimbuscloud.tech）。.tech 2015 年开放、.cloud 2016 年开放；.cloud 的注册局 Aruba 本身就是意大利的主机与云服务商，后缀与主业同向，而 .tech 是 Radix 组合里的通用科技词，靠首年低价走量。",
+      pickA: ["SaaS、PaaS 与托管、存储平台", "面向企业客户、需要比 .io 更正式的云产品", "客户实例子域（customer.product.cloud）", "长期持有、在意续费（.cloud 续费不到 .tech 一半）"],
+      pickB: ["硬科技、硬件与机器人公司", "科技媒体、黑客马拉松与技术社区（ces.tech 同款）", "面向投资人与大众的泛科技品牌", "想要双词组合的充足库存"],
     },
     en: {
       title: ".cloud vs .tech: Precise Cloud Positioning or Broad Tech",
       metaDescription:
         ".cloud points precisely at cloud and SaaS; .tech covers every technology narrative. Compare positioning precision, pricing and fit, then hunt names available on both.",
       verdict:
-        "Both tell a technology story at different precision. .cloud says 'cloud service / SaaS / hosted platform' in one word — near-zero explanation cost when your product is cloud-delivered. .tech is broader: hardware, startups, communities and hackathons all fit, at the cost of specificity. On price, .tech's first-year promos run extremely cheap with renewals several times higher; .cloud is flatter. Rule of thumb: cloud-delivered products (SaaS, PaaS, hosting, storage) take .cloud; broad tech brands, hardware, communities and events take .tech. Both have far better inventory than .com.",
-      pickA: ["SaaS and cloud-delivered products", "Hosting, storage and infrastructure platforms", "Brands where 'cloud' is the category word", "Zero-explanation precise positioning"],
-      pickB: ["Broad tech brands and hardware", "Tech communities, events and hackathons", "Tech media and content sites", "Your name is taken on .cloud"],
+        "The two suffixes come from different registries with very different price curves. .cloud is operated by Italy's Aruba PEC S.p.A. (in the root since 2015) and the site's reference table lists it at ¥60 first year / ¥160 renewal — a moderate, flat tier. .tech is a Radix suffix (also 2015) listed at ¥45 / ¥360: the renewal is eight times the intro price and more than double .cloud's, so judging by year one alone misleads. Semantic precision differs as well. .cloud says \"cloud service / SaaS / hosted platform\" in one word, cloud vendors often use it for customer instance domains (customer.product.cloud), and for enterprise buyers it reads more formal than .io. .tech is broader — hardware companies, robotics teams, tech media and hackathons all fit, and CES running ces.tech is an industry-grade endorsement — but breadth costs specificity. Both have far better inventory than .com; because .tech is looser, two-word combos are almost freely available. The test: if the product is delivered from the cloud — SaaS, PaaS, hosting, storage, DevOps tooling — and you plan to hold it for years, take .cloud and enjoy the simpler renewal math; if the brand is a broad technology story aimed at investors and press, or a hardware or community project, take .tech but write the ¥360-class renewal into the budget first. If your name already contains cloud or tech, pick the other suffix to avoid doubling up (nimbus.cloud, not nimbuscloud.tech).",
+      pickA: ["SaaS, PaaS, hosting and storage platforms", "Enterprise-facing cloud products that need to read more formal than .io", "Customer instance subdomains (customer.product.cloud)", "Long holds that care about renewals (.cloud renews at under half of .tech)"],
+      pickB: ["Hard-tech, hardware and robotics companies", "Tech media, hackathons and developer communities (the ces.tech pattern)", "Broad technology brands aimed at investors and the public", "Two-word combos with wide-open inventory"],
     },
   },
   "pro-vs-co": {
@@ -341,18 +341,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".pro 和 .co 怎么选：专业人士与创业公司的对比",
       metaDescription: ".pro 自带「专业」标签，适合个人专业服务；.co 是创业公司的 .com 替身。对比两者的气质与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "一个说「我是专业的」，一个说「我们是公司」：.pro 天然适合以个人专业能力为卖点的服务——律师、设计师、咨询师、教练、自由职业者，「名字 + .pro」就是一张数字名片；.co 读作 company，适合团队与创业公司的主站。价格上 .pro 首年常有低价促销、续费中等；.co 续费明显更贵且要留意误输 .com 的分流风险。个人品牌选 .pro，公司品牌选 .co，是最省心的分法。",
-      pickA: ["律师、咨询师、设计师等专业服务", "自由职业者与个人工作室", "「专业认证感」是卖点的服务", "个人数字名片站"],
-      pickB: ["创业公司与团队主站", "新消费品牌", "追求比 .com 短一个字母的利落感", "国际化公司形象"],
+        "一个说「我是专业的」，一个说「我们是公司」。.pro 于 2002 年入根、2004 年开放，最初要求注册者提交律师、医生、会计等职业资质，IANA 至今仍把它标为「受限通用顶级域名」，现由 Identity Digital 运营且已放开注册——但「专业」的语义沉淀留了下来，律师、设计师、摄影师、顾问用「姓名/技能 + .pro」就是一张数字名片，产品的付费「Pro 版」也常落在同名 .pro。.co 是哥伦比亚的国家域名，由该国信息通信技术部（MinTIC）管理、CentralNic 提供技术后端（IANA 技术联系人），2010 年面向全球开放后被读成 company，Twitter 用 t.co 做全站短链让它出圈，是创业公司最体面的 .com 替身。价格上 .pro 明显更便宜：站内参考价 .pro 首年 25 元、续费 130 元，.co 首年 65 元、续费 199 元，续费每年差约 70 元。.co 独有的风险是误输——用户手滑打成 .com 的流量会流向 .com 持有者，品牌词越常见漏得越多，注册前先查对应 .com 在谁手里。判断方法：主体是一个人、卖的是个人专业能力（法律、设计、咨询、教练），或者是产品的付费专业版入口，选 .pro；主体是团队与公司、要出现在合同与融资材料上、面向国际市场，选 .co。两者都不建议作为完全陌生品牌的唯一门面——.pro 的通用信任度一般，.co 有误输漏水，成熟做法都是搭配主域名分工：公司站 brand.co 或 brand.com，专业服务或 Pro 版 brand.pro。",
+      pickA: ["律师、设计师、摄影师、顾问等专业服务者", "自由职业者与个人工作室的数字名片", "产品的付费 Pro 版与专业升级页（brand.pro）", "预算优先（续费比 .co 低约 70 元/年）"],
+      pickB: ["创业公司与团队主站", "面向国际市场的新消费品牌", "比 .com 短一个字母、对应 .com 非竞品持有", "要出现在合同与融资材料上的公司身份"],
     },
     en: {
       title: ".pro vs .co: Professional Badge or Startup Shorthand",
       metaDescription:
         ".pro carries a built-in 'professional' badge for individual services; .co is the startup's .com stand-in. Compare vibe and fit, then hunt names available on both.",
       verdict:
-        "One says 'I'm a professional', the other says 'we're a company'. .pro naturally fits services sold on personal expertise — lawyers, designers, consultants, coaches, freelancers — where 'name + .pro' works as a digital business card. .co reads as company, fitting teams and startup homepages. On price, .pro often has cheap first-year promos with moderate renewals; .co renews noticeably higher and carries the .com typo-leak risk. The simplest split: personal brands take .pro, company brands take .co.",
-      pickA: ["Lawyers, consultants, designers and professional services", "Freelancers and solo studios", "Services selling certified expertise", "Personal digital business cards"],
-      pickB: ["Startup and team homepages", "Consumer brands", "One letter crisper than .com", "International company image"],
+        "One says \"I'm a professional\", the other says \"we're a company\". .pro entered the root in 2002 and opened in 2004 with a requirement that registrants prove credentials as lawyers, doctors or accountants; IANA still labels it a restricted generic TLD, and although Identity Digital now runs it with open registration, the professional connotation stuck — lawyers, designers, photographers and consultants use \"name or skill + .pro\" as a digital business card, and a product's paid Pro tier often lands on the matching .pro. .co is Colombia's country code, administered by its Ministry of ICT (MinTIC) with CentralNic as technical back end (per IANA); since opening globally in 2010 it has read as \"company\", Twitter's t.co short links made it mainstream, and it is the most respectable .com stand-in for startups. .pro is clearly cheaper: the site's reference table lists .pro at ¥25 first year / ¥130 renewal and .co at ¥65 / ¥199, about ¥70 a year apart at renewal. .co carries a risk .pro doesn't: type-in leakage, where users who autocomplete .com hand traffic to the .com holder, worse the more common your word — check who owns it first. The test: a single person selling personal expertise (law, design, consulting, coaching), or the paid professional edition of a product — take .pro; a team or company that will appear on contracts and fundraising decks and sells internationally — take .co. Neither should be an unknown brand's only storefront — .pro's general trust is middling and .co leaks typos — so the mature setup pairs them with a main domain: company on brand.co or brand.com, professional services or the Pro tier on brand.pro.",
+      pickA: ["Lawyers, designers, photographers, consultants and other professionals", "Freelancers' and solo studios' digital business cards", "A product's paid Pro tier and upgrade pages (brand.pro)", "Budget-first (renews about ¥70 a year below .co)"],
+      pickB: ["Startup and team homepages", "Consumer brands selling internationally", "One letter shorter than .com, with the .com not held by a competitor", "Company identity on contracts and fundraising decks"],
     },
   },
   "vip-vs-club": {
@@ -363,18 +363,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".vip 和 .club 怎么选：会员体系与社群文化的对比",
       metaDescription: ".vip 主打会员尊享感，.club 主打社群归属感。对比两者的气质、认知圈层与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "都围绕「圈子」，指向不同：.vip 强调分层与尊享——会员体系、付费订阅、高端服务用它顺理成章，且 vip 一词在中文互联网认知度极高，国内会员场景几乎零解释；.club 强调平等与归属——兴趣社群、俱乐部、粉丝组织、线下活动用它更自然，国际化读感也更好。价格上两者首年都便宜、续费中等。选择建议：卖「等级与特权」用 .vip，卖「归属与同好」用 .club。",
-      pickA: ["会员体系与付费订阅服务", "面向国内用户的高端服务", "电商会员与忠诚度计划", "「尊享感」是卖点的品牌"],
-      pickB: ["兴趣社群与俱乐部", "粉丝组织与创作者社群", "线下活动与运动俱乐部", "国际化社群品牌"],
+        "两个后缀如今都归 GoDaddy Registry（IANA 记录的运营主体 Registry Services, LLC）管理，价格结构却不同：站内参考价 .vip 首年 40 元、续费 60 元，.club 首年 40 元、续费 120 元——首年一样，续费 .club 是 .vip 的两倍，长期持有时差距会累积。.vip 于 2015 年入根、2016 年开放注册后迅速在中国市场爆发，「VIP」在中文互联网里人人秒懂，且后缀已取得工信部资质、可正常 ICP 备案，会员体系、付费订阅、粉丝专属内容、电商会员中心用它几乎零解释；代价是海外用户对 .vip 的认知有限，且自带营销味。.club 于 2014 年入根，语义是「圈子」，兴趣社群、读书会、运动俱乐部、创作者粉丝团都成立，英文读感自然、国际化更顺。判断方法：卖「等级与特权」——会员分层、专属价、优先权，选 .vip，尤其面向国内用户时；卖「归属与同好」——大家平等地加入一个圈子，选 .club。同一品牌两者兼有的做法也常见：主站 .com，会员中心 brand.vip，社区 brand.club。注意 .club 在某些词搭配下带有夜店联想，选词时留意语境。.vip 2016 年开放注册，早期增长主要来自国内注册商渠道，国内用户对它最熟；.club 2014 年开放，最初由 .CLUB Domains 独立运营，2021 年才并入 GoDaddy Registry，两者如今同一东家、定位却完全不同。",
+      pickA: ["面向国内用户的会员体系与付费订阅", "需要 ICP 备案的国内会员站", "电商会员中心与忠诚度计划", "「专属/尊享」是卖点、续费预算紧"],
+      pickB: ["兴趣社群、读书会与运动俱乐部", "创作者粉丝团与付费社群", "面向海外的社区品牌（英文读感更顺）", "主站 .com + 社区 brand.club 的分工"],
     },
     en: {
       title: ".vip vs .club: Membership Tiers or Community Belonging",
       metaDescription:
         ".vip sells exclusive membership; .club sells community belonging. Compare vibe, recognition circles and fit, then hunt names available on both.",
       verdict:
-        "Both are about circles, pointed differently. .vip emphasizes tiers and privilege — membership programs, paid subscriptions and premium services wear it naturally, and the word 'vip' has enormous recognition on the Chinese internet, making it near zero-explanation for China-facing membership products. .club emphasizes equality and belonging — hobby communities, clubs, fan organizations and offline events read more natural, with better international cadence. Both are cheap in year one with moderate renewals. Rule of thumb: selling tiers and privilege, take .vip; selling belonging and shared interest, take .club.",
-      pickA: ["Membership programs and paid subscriptions", "China-facing premium services", "E-commerce loyalty programs", "Brands selling exclusivity"],
-      pickB: ["Hobby communities and clubs", "Fan organizations and creator communities", "Offline events and sports clubs", "International community brands"],
+        "Both suffixes now sit under GoDaddy Registry (IANA lists the sponsor as Registry Services, LLC), yet their price curves differ: the site's reference table shows .vip at ¥40 first year / ¥60 renewal and .club at ¥40 / ¥120 — identical up front, but .club renews at twice the rate, and that gap compounds over the years. .vip entered the root in 2015, opened in 2016 and exploded in China, where \"VIP\" needs no translation; the suffix also holds MIIT accreditation for ICP filing, so membership programs, paid subscriptions, fan-exclusive content and e-commerce member centers read instantly to Chinese users. The cost is limited recognition abroad and a built-in promotional flavor. .club, delegated in 2014, means a circle: hobby groups, book clubs, sports clubs and creator fan communities all fit, and it reads naturally in English for international audiences. The test: if you sell tiers and privilege — membership levels, exclusive pricing, priority access — take .vip, especially for a China-facing audience; if you sell belonging and shared interest, where everyone joins as equals, take .club. Running both is common: main site on .com, member center on brand.vip, community on brand.club. One caution — with certain words .club carries nightlife connotations, so read your name in context. IANA now lists the same sponsor — Registry Services, LLC, GoDaddy's registry arm — for both suffixes: .vip entered the root in July 2015 and grew mostly through Chinese registrar channels, while .club was delegated in January 2014 under the independent .CLUB Domains and only joined GoDaddy Registry in 2021. Same owner today, two completely different audiences, and the renewal gap (¥60 versus ¥120 in the site's reference table) still favours .vip.",
+      pickA: ["China-facing membership programs and paid subscriptions", "Member sites that need ICP filing", "E-commerce member centers and loyalty programs", "Exclusivity as the pitch, with a tight renewal budget"],
+      pickB: ["Hobby groups, book clubs and sports clubs", "Creator fan communities and paid circles", "International community brands that read naturally in English", "A .com main site with the community on brand.club"],
     },
   },
   "link-vs-cc": {
@@ -385,18 +385,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".link 和 .cc 怎么选：链接工具与万能简写的对比",
       metaDescription: ".link 语义直白适合链接与导航类产品，.cc 是短小的万能后缀。对比两者的语义、认知与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "一个语义精准，一个短而万能：.link 一词就说清「这是个链接/导航/聚合入口」，bio link、短链服务、资源导航站用它零解释成本；.cc 只有两个字母、无固定语义，创意工作室（creative content）、个人站、社区项目都能用，中文圈也常读作「西西」朗朗上口。价格上 .cc 通常更便宜且续费平缓，.link 续费中等。选择建议：产品核心是「链接」这件事就用 .link；想要短、通用、不被语义绑定就用 .cc。",
-      pickA: ["bio link 与个人主页聚合", "短链与跳转服务", "资源导航与聚合站", "「链接」是产品核心动作"],
-      pickB: ["创意工作室与个人站", "社区与开源项目", "想要两字母短后缀的利落感", "不想被后缀语义绑定"],
+        "一个语义精准，一个短而无语义。.link 是 2014 年入根的新顶级域名，最初属于 Uniregistry，现由 Nova Registry 运营；它一个词就说清「这是链接/导航/聚合入口」，link-in-bio 主页、短链与跳转服务、资源导航站用它零解释成本，产品也常拿更短的同名 .link 做分享域名（主站 .com，分享链接 .link）。.cc 是科科斯（基林）群岛的国家域名，1997 年入根，因为形似 Creative Commons 缩写、又只有两个字符，多年来被当作通用后缀使用；在中文互联网里读作「西西」，社区站、导航站、个人项目用得很多，气质中性——没有 .io 的技术圈层感，也没有 .xyz 的亚文化标签。价格上 .cc 更便宜且平缓：站内参考价 .cc 首年 38 元、续费 58 元，.link 首年 70 元、续费 80 元，两者续费都算稳定，.link 每年多付 22 元。库存两边都好，短词、双拼在 .cc 下命中率尤其高。判断方法：产品的核心动作就是「链接」——聚合、缩短、跳转、导航，选 .link，后缀替你解释；想要两字母的利落、不想被任何语义绑定，做社区、创意工作室、个人站或短品牌名，选 .cc，主体四字符以内读感最佳。做企业级短链服务时注意：部分安全网关对陌生短链域名会多一层审查，无论选哪个都要养域名信誉。",
+      pickA: ["link-in-bio 主页与个人链接聚合", "短链、跳转与分享域名（主站 .com + 同名 .link）", "资源导航与聚合站", "「链接」是产品核心动作、想让后缀自解释"],
+      pickB: ["社区站、导航站与个人项目（中文圈读作「西西」）", "创意工作室与短品牌名（四字符以内最佳）", "不想被后缀语义绑定的通用品牌", "预算优先（续费比 .link 低 22 元/年）"],
     },
     en: {
       title: ".link vs .cc: Literal Link Tools or the Versatile Two-Letter",
       metaDescription:
         ".link says exactly what link products do; .cc is the short versatile suffix with no fixed meaning. Compare semantics, recognition and fit, then hunt names available on both.",
       verdict:
-        "One is semantically precise, the other short and versatile. .link explains itself — bio links, URL shorteners, navigation and aggregator products get zero-explanation domains. .cc is just two letters with no fixed meaning: creative studios, personal sites and community projects all wear it, and it's catchy in Chinese circles too. On price, .cc is usually cheaper with flatter renewals; .link renews moderate. Rule of thumb: if 'the link' is your product's core action, take .link; if you want short, versatile and semantically unbound, take .cc.",
-      pickA: ["Bio-link and profile aggregation pages", "URL shorteners and redirect services", "Resource navigation and aggregator sites", "Products whose core action is the link"],
-      pickB: ["Creative studios and personal sites", "Communities and open-source projects", "Two-letter crispness", "No semantic lock-in"],
+        "One is semantically precise, the other short and meaning-free. .link is a new gTLD that entered the root in 2014, originally under Uniregistry and now operated by Nova Registry; the word says \"this is a link / directory / aggregation entry\", so link-in-bio pages, URL shorteners, redirect services and resource directories get zero-explanation domains, and products often use a shorter matching .link as their sharing domain (main site on .com, share links on .link). .cc is the country code of the Cocos (Keeling) Islands, in the root since 1997, used as a de facto generic for years because it is two characters and loosely evokes Creative Commons; on the Chinese internet it is pronounced \"xi xi\" and widely used by communities, directories and personal projects, with a neutral vibe — none of .io's tech-tribe signal, none of .xyz's subculture edge. .cc is cheaper and flatter: the site's reference table lists .cc at ¥38 first year / ¥58 renewal and .link at ¥70 / ¥80 — both stable, .link costing ¥22 a year more. Inventory is good on both, with short words and pinyin especially available on .cc. The test: if the product's core action is the link — aggregating, shortening, redirecting, navigating — take .link and let the suffix explain; if you want two-letter crispness with no semantic lock-in, for a community, creative studio, personal site or short brand name, take .cc, ideally with a label of four characters or fewer. For enterprise-grade link services, note that some security gateways add scrutiny to unfamiliar short-link domains — reputation has to be built either way.",
+      pickA: ["Link-in-bio pages and personal link hubs", "Shorteners, redirects and sharing domains (.com main site plus matching .link)", "Resource directories and aggregator sites", "Products whose core action is the link and want a self-explaining suffix"],
+      pickB: ["Communities, directories and personal projects (\"xi xi\" in Chinese circles)", "Creative studios and short brand names (four characters or fewer)", "Generic brands with no semantic lock-in", "Budget-first (renews ¥22 a year below .link)"],
     },
   },
   "shop-vs-com": {
@@ -407,18 +407,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".shop 和 .com 怎么选：电商专属与默认信任的取舍",
       metaDescription: ".shop 语义直白是电商天然后缀，.com 是默认信任但好名字难求。对比两者的信任度、库存与组合打法，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "电商场景的经典取舍：.com 信任度无可替代，但短而好的名字几乎绝迹、收购成本高；.shop 语义直白、库存极好，「品牌 + .shop」本身就是行动号召，首年价格常常只要几块钱。要注意 .shop 续费显著高于首年促销价，以及部分高客单价用户对新后缀的信任折扣。务实打法：预算有限先用 .shop 上线卖货，品牌起量后收购对应 .com 做 301；或 .com 做品牌官网、.shop 做促销/活动落地页分工。",
-      pickA: ["预算有限先上线的电商", "「买」是核心动作的落地页", "品类词域名（sneaker.shop 类）", "心仪名字 .com 已被注册"],
-      pickB: ["高客单价与信任敏感品类", "长期品牌资产与转售", "口头传播多的品牌（广告、直播）", "面向所有人群的正式官网"],
+        "电商域名的经典取舍：一个是所有人都认识的后缀，一个是把「店」写进域名的后缀。.com 由 Verisign 运营，批发价 10.26 美元/年（2024 年 9 月起），站内参考价首年 69 元、续费 85 元，续费稳定、转售市场最活跃，但短而好的品牌词几乎绝迹，收购一个像样的 .com 常常要五位数以上。.shop 由日本 GMO Registry 运营，2016 年以 4150.1 万美元的 ICANN 拍卖价拿下，站内参考价首年 12 元、续费 260 元——首年几乎免费，续费却是 .com 的三倍，这是决策里最容易被忽略的一笔。语义上 brand.shop 本身就是一句行动号召，coffee.shop、sneaker.shop 这类品类词域名在 .com 下不可能拿到；库存极好，几乎任何品牌词都还在。信任上 .com 仍有优势：高客单价品类（珠宝、家具、奢侈品）的用户对新后缀会打折扣，且 .com 在广告与口播里不需要解释。判断方法：预算有限、先上线卖货、品类词入名，选 .shop 起步，品牌起量后收购对应 .com 做 301；高客单价、信任敏感、要做长期品牌资产，选 .com 做主站。成熟品牌常见的分工是 .com 做品牌官网、brand.shop 做促销与活动落地页，两个都注册的成本第一年不到百元。两者的年龄差了三十一年：.com 1985 年就已存在，.shop 按 IANA 记录 2016 年 5 月才入根；按站内参考价，.com 首年 69 元、续费 85 元，.shop 首年 12 元、续费 260 元，第一年 .shop 便宜 57 元，从第二年起每年反过来多付 175 元，三年总账 .shop 就已经比 .com 贵。",
+      pickA: ["预算有限、先上线卖货的独立站", "品类词域名（coffee.shop、sneaker.shop 类）", "促销与活动落地页（brand.shop 做分工）", "心仪品牌词 .com 已被注册或报价过高"],
+      pickB: ["高客单价与信任敏感品类（珠宝、家具、奢侈品）", "续费预算稳定优先（.shop 续费约为 .com 三倍）", "广告与直播口播多的品牌", "长期品牌资产与转售流动性"],
     },
     en: {
       title: ".shop vs .com: E-commerce Native or Default Trust",
       metaDescription:
         ".shop is the literal e-commerce suffix with great inventory; .com is default trust with scarce good names. Compare trust, inventory and combo strategies, then hunt names available on both.",
       verdict:
-        "The classic e-commerce trade-off. .com's trust is irreplaceable, but short good names are essentially extinct and expensive to acquire. .shop says what it does, has excellent inventory, and 'brand + .shop' doubles as a call to action — often just a few dollars in year one. Watch two things: .shop renewals run far above the promo price, and some high-ticket shoppers discount newer suffixes on trust. Pragmatic plays: launch and sell on .shop first, acquire the matching .com once the brand has traction; or split duties — .com for the brand site, .shop for promo and campaign landers.",
-      pickA: ["Budget-first e-commerce launches", "Landers where buying is the core action", "Category-word domains (sneaker.shop style)", "Your name is taken on .com"],
-      pickB: ["High-ticket, trust-sensitive categories", "Long-term brand asset and resale", "Word-of-mouth-heavy brands (ads, livestreams)", "Formal primary site for every audience"],
+        "The classic e-commerce trade-off: a suffix everyone recognizes versus a suffix that writes \"shop\" into the domain. .com is Verisign's, wholesale $10.26 a year since September 2024, listed in the site's reference table at ¥69 first year / ¥85 renewal — stable renewals and the most liquid resale market, but short good brand words are essentially extinct and buying a decent one often runs five figures or more. .shop is operated by Japan's GMO Registry, which won it at ICANN auction in 2016 for $41,501,000; the reference table lists ¥12 / ¥260 — nearly free up front, yet three times .com's renewal, the line item most often overlooked. Semantically brand.shop is a call to action in itself, and category-word domains like coffee.shop or sneaker.shop simply don't exist on .com; inventory is excellent, with almost any brand word still open. On trust, .com keeps the edge: shoppers in high-ticket categories — jewelry, furniture, luxury — discount newer suffixes, and .com needs no explanation in ads or spoken promotion. The test: limited budget, launching to sell now, category word in the name — start on .shop and acquire the matching .com with a 301 once the brand has traction; high ticket, trust-sensitive, long-term brand asset — make .com the main site. Mature brands often split: .com for the brand site, brand.shop for promotions and campaign landers, and registering both costs under ¥100 in year one. Thirty-one years separate the two: .com has existed since 1985, while IANA records .shop entering the root in May 2016. On the site's reference table .com is ¥69 to register and ¥85 to renew, .shop ¥12 and ¥260 — cheaper by ¥57 in year one, then ¥175 a year more expensive, so by year three .shop already costs more in total.",
+      pickA: ["Budget-first stores launching to sell now", "Category-word domains (coffee.shop, sneaker.shop)", "Promo and campaign landers (brand.shop as the split)", "Your brand word's .com is taken or overpriced"],
+      pickB: ["High-ticket, trust-sensitive categories (jewelry, furniture, luxury)", "Stable renewals first (.shop renews at about 3x .com)", "Brands heavy on ads and livestream call-outs", "Long-term brand asset and resale liquidity"],
     },
   },
   "com-vs-me": {
@@ -429,18 +429,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".com 和 .me 怎么选：品牌资产与个人表达的取舍",
       metaDescription: ".com 是品牌与商业的默认选择，.me 天然适合个人品牌与作品集。对比两者的气质、价格与语义玩法，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "看主体是「公司」还是「人」：做商业产品、公司官网，.com 的默认信任无可替代；做个人主页、作品集、简历站、newsletter，.me 语义天然——about.me、hire.me 式的表达是 .com 给不了的。价格上 .me 注册与续费都明显高于 .com，纯从成本看不占优，赢在语义。务实策略：个人品牌先用「名字.me」上线，日后商业化再补对应 .com；动词短语（find.me、read.me 类）则 .me 是唯一解。",
-      pickA: ["商业产品与公司官网", "长期品牌资产与转售", "预算敏感、在意续费成本", "面向大众的正式站点"],
-      pickB: ["个人主页、作品集、简历站", "个人 newsletter 或博客", "动词短语域名（hire.me 类）", "心仪名字 .com 已被注册"],
+        "先看主体是「公司」还是「人」。.me 是黑山的国家域名，由黑山政府在 2007 年获得授权后面向全球开放，registry 页面 domain.me 直接把它当个人品牌后缀在推——about.me、hire.me 这类「动词 + .me」域名让整个域名读成一句话，这是 .com 结构上做不到的事。.com 则是 Verisign 运营的最老通用后缀，用户默认补全、转售市场最活跃，公司官网与商业产品用它不需要任何解释。价格是反直觉的一点：.me 不便宜，站内参考价首年 120 元、续费 150 元，明显高于 .com 的 69 元/85 元，所以它赢的是语义而不是成本。库存则是 .me 的强项——常见英文名、昵称、中文双拼在 .com 下早已绝迹，在 .me 下大量可注册。判断方法：如果域名最终要出现在名片、简历、newsletter 签名里，主角是一个人，name.me 比一个生硬的 .com 造词更好记；如果域名要出现在发票、合同、应用商店的开发者名下，主角是一个公司，.com 的默认信任无可替代。个人品牌起步时先用 name.me 上线、日后商业化再补对应 .com，是常见且低成本的路径；而想做 find.me、read.me 这类动词短语，.me 是唯一解。.me 2008 年才向全球开放，运营公司 doMEn 早期靠 fb.me、wp.me 这类大厂短链把后缀带进大众视野，个人化与短链两条用法至今仍是它的主场。",
+      pickA: ["公司官网、商业产品与电商", "域名会出现在合同、发票与应用商店开发者名下", "预算敏感（.me 续费高出 .com 约七成）", "十年以上的品牌资产与转售"],
+      pickB: ["个人主页、简历站与作品集", "个人 newsletter、博客与创作者落地页", "动词短语域名（hire.me、read.me 类）", "英文名/昵称/双拼在 .com 无货"],
     },
     en: {
       title: ".com vs .me: Brand Asset or Personal Expression",
       metaDescription:
         ".com is the default for brands and business; .me is built for personal sites and portfolios. Compare vibe, pricing and semantic hacks, then hunt names available on both.",
       verdict:
-        "It hinges on whether the subject is a company or a person. For commercial products and company sites, .com's default trust is irreplaceable. For personal pages, portfolios, resumes and newsletters, .me is semantically native — about.me and hire.me style phrasing is something .com simply can't do. On price, .me costs more to register and renew, so it wins on meaning, not cost. Pragmatic play: launch your personal brand on name.me and pick up the matching .com if you commercialize; for verb phrases (find.me, read.me), .me is the only answer.",
-      pickA: ["Commercial products and company sites", "Long-term brand asset and resale", "Budget-sensitive, renewal-conscious", "Formal site for a broad audience"],
-      pickB: ["Personal pages, portfolios, resumes", "Personal newsletters or blogs", "Verb-phrase domains (hire.me style)", "Your name is taken on .com"],
+        "Start with whether the subject is a company or a person. .me is Montenegro's country code, opened to the world after the government of Montenegro received the delegation in 2007, and the registry site domain.me markets it squarely as a personal-brand suffix — about.me and hire.me turn the whole domain into a sentence, something .com structurally cannot do. .com is Verisign's oldest generic suffix: users autocomplete it, the resale market is the most liquid, and a company site or commercial product needs no explanation on it. Price is the counter-intuitive part: .me is not the cheap option — the site's reference table lists ¥120 first year / ¥150 renewal against .com's ¥69 / ¥85 — so it wins on meaning, not cost. Inventory is where .me shines: first names, nicknames and Chinese pinyin long extinct on .com are widely available. The test: if the domain will live on a business card, a résumé or a newsletter signature and the protagonist is a person, name.me beats a contorted coined .com; if it will appear on invoices, contracts and an app-store developer listing and the protagonist is a company, .com's default trust is irreplaceable. Launching a personal brand on name.me and adding the matching .com later if it commercializes is a common, low-cost path — and for verb phrases like find.me or read.me, .me is the only answer.",
+      pickA: ["Company sites, commercial products and e-commerce", "Domains that appear on contracts, invoices and app-store listings", "Budget-sensitive (.me renews roughly 70% above .com)", "Decade-scale brand asset and resale"],
+      pickB: ["Personal pages, résumés and portfolios", "Newsletters, blogs and creator landing pages", "Verb-phrase domains (hire.me, read.me)", "First names, nicknames or pinyin taken on .com"],
     },
   },
   "io-vs-tech": {
@@ -473,18 +473,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".online 和 .site 怎么选：两个通用后缀的实用对比",
       metaDescription: ".online 和 .site 都是语义通用、库存极好的后缀。对比两者的读感、长度、价格与续费结构，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "两者定位几乎重叠：语义通用、什么行业都能用、库存都极好、首年都常有低价促销。差别主要在读感与长度：.site 只有 4 个字母，更短更利落，「品牌 + site」读起来像「某某网站」；.online 7 个字母偏长，但「品牌 + online」有「上线了/在线服务」的动词感，做「传统品牌转线上」的叙事更顺。两者续费都显著高于首年促销价，注册前务必看清续费。同名都可注册时，短优先选 .site；讲「线上化」故事选 .online。",
-      pickA: ["「转线上/在线服务」叙事的品牌", "传统行业的线上入口", "首年预算敏感（促销价低）", "心仪名字 .site 已被注册"],
-      pickB: ["想要更短更利落的域名", "通用落地页与项目站", "首年预算敏感（促销价低）", "心仪名字 .online 已被注册"],
+        "两个后缀出自同一家注册局 Radix，2015 年同一天（3 月 6 日）入根，促销节奏几乎同步——首年常见一两美元的引流价——因此比的不是价格而是读感、长度与续费。站内参考价 .online 首年 15 元、续费 260 元，.site 首年 10 元、续费 220 元：.site 每年便宜约 40 元，十年下来差 400 元。长度上 .site 只有 4 个字母，name.site 读成「某某网站」，短而利落；.online 7 个字母偏长，但 brand.online 自带「上线了/在线服务」的动词感，传统企业做数字化门面、线下培训机构转线上课程时叙事更顺。两者都是注册量常年位居新后缀前列的通用后缀，认知度足够，也都因为便宜被大量低质站使用——主体名本身要够专业才撑得起信任。判断方法：讲「我们上线了」的故事、业务本身是「在线服务」（课程、咨询、远程支持），选 .online；只要一个便宜、中性、不带行业暗示的域名做落地页、文档站、工具站或配套子项目，选 .site，更短也更省。两个都可注册时，短优先；两个都不必长期持有时，哪个首年更便宜就用哪个，别忘了续费到期前评估是否续。两者都是 Radix 2015 年推出的后缀，共用同一套注册局后台与促销节奏，注册商价签几乎同步变化，多年来也一直位居 Radix 注册量前列；差别不在运营方，只在字母数、续费与语义暗示。",
+      pickA: ["「转线上/在线服务」叙事的传统企业", "线上课程、远程咨询与培训机构", "brand.online 读成一句话的品牌", "心仪名字 .site 已被注册"],
+      pickB: ["想要更短更利落的 4 字母后缀", "落地页、文档站、工具站等配套子项目", "续费预算优先（每年比 .online 少约 40 元）", "心仪名字 .online 已被注册"],
     },
     en: {
       title: ".online vs .site: A Practical Comparison of Two Generic Suffixes",
       metaDescription:
         ".online and .site are both generic, high-inventory suffixes. Compare readability, length, pricing and renewal structure, then hunt names available on both.",
       verdict:
-        "Their positioning almost fully overlaps: generic meaning, industry-agnostic, excellent inventory, frequent first-year promos. The real differences are readability and length. .site is just four letters — shorter and snappier, 'brand + site' reads as 'the website of X'. .online is seven letters but 'brand + online' has a verb-ish 'now live / online service' feel, which suits a brick-to-click story. Both renew far above the promo price, so check renewals before registering. When the name is free on both, pick .site for brevity or .online for the going-online narrative.",
-      pickA: ["Brands telling a going-online story", "Online entry point for offline businesses", "First-year budget sensitivity (deep promos)", "Your name is taken on .site"],
-      pickB: ["You want the shorter, snappier domain", "Generic landers and project sites", "First-year budget sensitivity (deep promos)", "Your name is taken on .online"],
+        "Both suffixes belong to Radix and entered the root on the same day — 6 March 2015 — so their promo cycles run nearly in sync, with first-year hooks around a dollar or two. That leaves cadence, length and renewal as the deciders. The site's reference table lists .online at ¥15 first year / ¥260 renewal and .site at ¥10 / ¥220: .site is about ¥40 a year cheaper, ¥400 over a decade. On length, .site is four letters and name.site reads as \"the X website\", short and crisp; .online is seven letters, but brand.online carries a verb-like \"we're live / online service\" feel that suits a traditional company building a digital front door or a training center moving its courses online. Both rank among the highest-volume new TLDs, so recognition is fine, and both attract low-quality sites because they are cheap — the name itself has to carry the credibility. The test: telling a \"we're now online\" story, or running an online service (courses, consulting, remote support) — take .online; needing a cheap, neutral, industry-agnostic domain for a landing page, docs site, tool or companion project — take .site, shorter and cheaper. When both are free, shorter wins; when neither will be a long-term hold, take whichever first-year price is lower and reassess before renewal. Both were launched by Radix in 2015, share the same registry backend and promotion calendar, move in lockstep on registrar price tags, and have ranked among Radix's largest TLDs for years; the difference is never the operator, only length, renewal and the implied meaning.",
+      pickA: ["Traditional businesses telling a going-online story", "Online courses, remote consulting and training centers", "Brands where brand.online reads as a sentence", "Your name is taken on .site"],
+      pickB: ["A shorter, crisper four-letter suffix", "Landing pages, docs sites, tools and companion projects", "Renewal-first budgets (about ¥40 a year below .online)", "Your name is taken on .online"],
     },
   },
   "store-vs-online": {
@@ -495,18 +495,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".store 和 .online 怎么选：卖货语义与通用在线的取舍",
       metaDescription: ".store 明确指向「商店」，.online 语义更泛。对比两者的转化语义、适用场景与续费结构，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "核心问题是「你的站点是不是商店」：如果是，.store 语义精准——「品牌 + store」用户一眼知道能买东西，转化语义比 .online 强；如果站点不止卖货（内容 + 服务 + 商城混合），.online 更泛更保险。两者库存都好、首年都有低价促销、续费都明显更贵。电商独立站优先 .store；工具站、服务站或还没想清楚形态的项目选 .online。也有品牌两个都注册：.store 直达商城页，.online 做主站。",
-      pickA: ["电商独立站与品牌商城", "「买」是核心动作的站点", "品类词 + store 的组合打法", "心仪名字 .online 已被注册"],
-      pickB: ["内容/服务/商城混合的站点", "形态未定的早期项目", "「在线服务」叙事的品牌", "心仪名字 .store 已被注册"],
+        "这两个后缀出自同一家注册局——总部在迪拜的 Radix，因此促销节奏、续费结构几乎同步：首年常见 10～15 元的引流价，续费回到 200～400 元区间（站内参考价 .store 首年 15 元/续费 380 元，.online 首年 15 元/续费 260 元）。所以选哪个不用比价，只比语义。.store 的意思只有一个——「这里能买东西」：DTC 独立站、品牌周边店、线下零售的线上入口，brand.store 读出来就是「某某商店」，访客还没进站就带着购物预期。.online 的意思是「我们上线了」：线上课程、远程咨询、虚拟活动、传统企业的数字化门面都合适，它不承诺交易，也不排斥交易。判断方法：把网站首页最显眼的按钮想一遍——如果是「加入购物车/立即购买」，选 .store；如果是「预约/报名/了解更多」，选 .online。别忘了两个后缀的续费差：.store 续费比 .online 高出约三分之一，长期挂主站要按续费算账。成熟品牌常见的分工是主站 .com、商城 brand.store，.online 则更多出现在活动页、发布页这类生命周期短、首年低价就够用的场景。两者都是 Radix 的后缀：.online 2015 年开放注册，多年来位居 Radix 注册量前列；.store 2016 年开放，被 Radix 定位为品牌旗舰店后缀。注册商对两者的首年促销几乎同步，真正的差异只落在第二年起的账单上。",
+      pickA: ["DTC 独立站与品牌周边商店", "「立即购买」是首页主按钮的站点", "线下零售品牌的线上商城入口", "主站在 .com、商城独立域名的分工"],
+      pickB: ["线上课程、远程咨询与服务预约", "虚拟活动、发布页等短生命周期页面", "传统企业「上线了」的数字化门面", "预算优先、续费比 .store 低约三分之一"],
     },
     en: {
       title: ".store vs .online: Commerce Semantics or Generic Presence",
       metaDescription:
         ".store literally means shop; .online is broader. Compare conversion semantics, use cases and renewal structure, then hunt names available on both.",
       verdict:
-        "The core question: is your site a store? If yes, .store is semantically precise — 'brand + store' tells users they can buy at a glance, stronger conversion language than .online. If the site mixes content, services and commerce, .online is broader and safer. Both have great inventory, deep first-year promos and much higher renewals. Standalone e-commerce sites should default to .store; tools, services and still-forming projects fit .online. Some brands register both: .store deep-links to the shop, .online serves as the main site.",
-      pickA: ["Standalone e-commerce and brand shops", "Sites where buying is the core action", "Category-word + store combos", "Your name is taken on .online"],
-      pickB: ["Mixed content/service/shop sites", "Early projects with undecided shape", "Brands telling an online-service story", "Your name is taken on .store"],
+        "Both suffixes come from the same registry — Radix, headquartered in Dubai — so their promo rhythm and renewal structure move almost in lockstep: a ¥10–15 first-year hook, then renewals back in the ¥200–400 band (the site's reference table shows .store at ¥15 / ¥380 and .online at ¥15 / ¥260). Price therefore isn't the decider; meaning is. .store means exactly one thing: you can buy here. DTC brands, merch shops and the online entrance of a physical retailer all read brand.store as \"the X store\", and visitors arrive already expecting a checkout. .online means \"we're live\": online courses, remote consulting, virtual events and the digital storefront of a traditional company all fit, and it neither promises nor rules out a transaction. The test: picture the most prominent button on your homepage. If it says Add to Cart or Buy Now, take .store; if it says Book, Register or Learn More, take .online. Mind the renewal gap too — .store renews roughly a third higher than .online, which matters if the domain becomes a long-lived main site. Mature brands typically pair a .com main site with brand.store for commerce, while .online shows up more on campaign and launch pages, where a cheap first year is all the lifespan requires. Both belong to Radix: .online opened in 2015 and has ranked among Radix's largest TLDs for years; .store followed in 2016 positioned as the flagship-store suffix. Registrars promote the two almost in lockstep, so the real difference shows up on the second-year bill.",
+      pickA: ["DTC stores and brand merch shops", "Sites whose primary button is Buy Now", "Online storefront for a physical retailer", "A .com main site with the shop on its own domain"],
+      pickB: ["Online courses, remote consulting and bookings", "Virtual events and short-lived launch pages", "A traditional company's we're-now-online storefront", "Budget-first, with renewals about a third below .store"],
     },
   },
   "cc-vs-tv": {
@@ -561,18 +561,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".art 和 .design 怎么选：艺术身份与设计职业的取舍",
       metaDescription: ".art 面向艺术家与画廊，.design 面向设计师与设计团队。对比两者的适用人群、价格与库存，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "看你的身份关键词：做「作品」的选 .art，做「职业」的选 .design。艺术家、画廊、展览项目用 .art 更像一张艺术名片；UI/UX、品牌设计师和设计工作室用 .design 则直接把职业写进域名，在简历与邮件签名里辨识度更高。价格上 .art 明显更便宜且续费稳定，.design 定价偏高但库存好；两者的人名、风格词库存都远好于 .com。跨界创意人（既做艺术也接设计单）可以 .art 做作品集、.design 做商单入口。",
-      pickA: ["艺术家个人站与作品集", "画廊、美术馆与艺术机构", "展览与艺术项目页", "预算敏感（价格更低续费稳）"],
-      pickB: ["UI/UX 与品牌设计师个人品牌", "设计工作室与咨询", "公司设计团队子站", "简历/名片上的职业身份域名"],
+        "先问自己卖的是「作品」还是「手艺」，再算十年的账。.art 由 UK Creative Ideas Limited 运营，2016 年入根，注册局多年来专门面向艺术家、画廊与艺术院校推广，是新后缀里少有的「行业自己在用」的例子；站内参考价首年 90 元、续费 110 元，曲线平缓。.design 的续费则是它的三倍多——首年 280 元、续费 380 元，每年比 .art 多付 270 元，十年下来差近三千元；它 2014 年入根，最初由 Top Level Design 运营，2021 年起归 GoDaddy Registry。气质上，.art 是「我是做艺术的」：画家、雕塑家、摄影师、策展人、艺术博览会用它，访客一看就知道页面里是作品而不是报价单；.design 是「我以设计为业」：接商单的设计师、品牌与包装设计顾问、字体与插画商店用它，客户看到后缀就知道你能开发票。判断方法：作品本身是产品——卖画、卖版数、办展、申请驻留，选 .art，价格与语义都更合适；服务是产品——按项目收费、有报价单与合同，选 .design，溢价买的是「专业服务」的暗示。跨界创意人常见的分工是 .art 做作品集、.design 做商单入口。库存上两者的人名、媒介词（oil、clay、ink）、风格词都远好于 .com；.design 七个字母偏长，主体名尽量控制在两个音节内。要面向大众卖原作或周边时，把电商放到 .shop/.store 分工，别把购物车硬塞进作品集域名。",
+      pickA: ["画家、雕塑家、摄影师的作品集站", "画廊、美术馆与艺术博览会", "驻留项目、策展与艺术项目页", "长期持有、预算敏感（续费比 .design 低 270 元/年）"],
+      pickB: ["按项目收费、开发票的设计服务", "品牌、包装与空间设计顾问", "字体、插画与设计素材商店", "客户需要一眼确认「专业服务」的场景"],
     },
     en: {
       title: ".art vs .design: Artistic Identity or Professional Craft",
       metaDescription:
         ".art serves artists and galleries; .design serves designers and studios. Compare audiences, pricing and inventory, then hunt names available on both with AI.",
       verdict:
-        "It comes down to your identity keyword: choose .art for the work, .design for the profession. Artists, galleries and exhibitions read like an art business card on .art; UI/UX and brand designers write their profession into the domain with .design, which stands out on resumes and signatures. On price, .art is notably cheaper with stable renewals, while .design sits at the premium end but with strong inventory — both have far better name availability than .com. Cross-disciplinary creatives can split: portfolio on .art, client work entry on .design.",
-      pickA: ["Artist portfolios & personal sites", "Galleries, museums & institutions", "Exhibition & art project pages", "Budget-minded (cheaper, stable renewals)"],
-      pickB: ["UI/UX & brand designer personal brands", "Design studios & consultancies", "Company design-team sites", "Resume-grade professional identity"],
+        "Decide whether you sell the work or the craft, then do the ten-year math. .art is run by UK Creative Ideas Limited, in the root since 2016; the registry has marketed almost exclusively to artists, galleries and art schools, making it one of the few new TLDs actually adopted by its own industry. The site's reference table lists ¥90 first year / ¥110 renewal — a flat curve. .design renews at more than three times that: ¥280 / ¥380, or ¥270 more per year than .art and close to ¥3,000 over a decade; it entered the root in 2014 under Top Level Design and has belonged to GoDaddy Registry since 2021. In tone, .art says \"I make art\": painters, sculptors, photographers, curators and art fairs use it, and a visitor expects work, not a rate card. .design says \"design is my trade\": freelancers taking client briefs, brand and packaging consultants, type foundries and illustration shops use it, and a client reading the suffix knows you can send an invoice. The test: if the work itself is the product — selling paintings and editions, mounting shows, applying for residencies — take .art, right on both price and meaning; if the service is the product — project fees, quotes and contracts — take .design and pay the premium for the professional-services signal. Cross-disciplinary creatives often split: portfolio on .art, client-work entry on .design. Inventory of personal names, medium words (oil, clay, ink) and style words is far better than .com on both; .design's seven letters are long, so keep the label to two syllables. For selling originals or merch to the public, put commerce on .shop or .store instead of forcing a cart into a portfolio domain.",
+      pickA: ["Portfolios of painters, sculptors and photographers", "Galleries, museums and art fairs", "Residencies, curatorial and art-project pages", "Long-term holds on a budget (renews ¥270 a year below .design)"],
+      pickB: ["Project-fee design services that invoice clients", "Brand, packaging and spatial design consultants", "Type foundries, illustration and design-asset shops", "When a client must read 'professional service' at a glance"],
     },
   },
   "studio-vs-design": {
@@ -583,18 +583,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".studio 和 .design 怎么选：团队形态与职业身份的取舍",
       metaDescription: ".studio 强调团队形态，.design 强调设计职业。对比两者的气质、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "两者都是创意圈好后缀，差别在重心：.studio 说的是「我们是一个小团队」，设计、影像、游戏、播客团队都适用；.design 说的是「我们做设计」，垂直但职业辨识度更高。非设计类创意团队（影像/动画/音频）直接选 .studio；纯设计业务的工作室两个都行，.design 更垂直、.studio 更柔和。价格上 .studio 中等、.design 偏高；都比 .com 库存好得多。一个实用判断：团队名本身已含「design」语义时选 .studio 避免重复（如 mono.studio 而非 monodesign.design）。",
-      pickA: ["影像、动画与音频团队", "游戏与独立开发小团队", "多元创意业务的工作室", "团队名已含 design 语义"],
-      pickB: ["纯设计业务的工作室", "设计师个人品牌", "公司设计团队子站", "想把职业写进域名的辨识度"],
+        "两个都是创意圈的好后缀，注册局、价格与重心各不相同。.studio 由 Identity Digital（原 Donuts）运营，2015 年入根，站内参考价首年 80 元、续费 220 元；.design 原属 Top Level Design，2021 年被 GoDaddy Registry 收购（IANA 记录为 Registry Services, LLC），2014 年入根，首年 280 元、续费 380 元——.design 是垂直后缀里定价偏高的一档，续费比 .studio 高 160 元/年。语义上 .studio 说的是「我们是一个小团队」：设计、影像、动画、游戏、播客与内容制作方都适用，两三人的创意小组用它比 .com 的企业感更贴；.design 说的是「我们做设计」，垂直但职业辨识度更高，在海外 UI/UX 与品牌设计圈使用率高，不少产品公司的设计团队子站就挂在 brand.design 下。判断方法：非设计类的创意团队——影像、动画、音频、游戏——直接选 .studio，.design 语义对不上；纯设计业务两个都成立，设计师个人品牌或公司设计团队子站选 .design（职业写进域名，简历与邮件签名里更醒目），多元业务的工作室选 .studio（更柔和、续费更省）。一个实用规则：团队名本身已含 design 字样时选 .studio 避免重复，如 mono.studio 而非 monodesign.design。两者库存都远好于 .com，风格词、动物词、人名大多可注册；.studio 六个字母、.design 七个字母都不算短，主体名要精炼。",
+      pickA: ["影像、动画与音频制作团队", "游戏与独立开发小团队", "多元创意业务的工作室（续费比 .design 低 160 元/年）", "团队名已含 design 字样、避免重复"],
+      pickB: ["设计师个人品牌（职业写进域名）", "UI/UX 与品牌设计工作室", "产品公司的设计团队子站（brand.design）", "海外设计圈认知度优先"],
     },
     en: {
       title: ".studio vs .design: Team Shape or Professional Label",
       metaDescription:
         ".studio signals a small creative team; .design signals the design profession. Compare vibes, pricing and fit, then hunt names available on both with AI.",
       verdict:
-        "Both are strong creative-scene suffixes; the difference is emphasis. .studio says 'we're a small team' — it fits design, film, game and podcast crews alike. .design says 'we do design' — more vertical, with higher professional recognition. Non-design creative teams (film, animation, audio) should go straight to .studio; design-only shops can use either — .design reads more vertical, .studio softer. Pricing: .studio moderate, .design premium; both have far better inventory than .com. One practical rule: if your team name already carries design semantics, pick .studio to avoid repetition (mono.studio, not monodesign.design).",
-      pickA: ["Film, animation & audio teams", "Game & indie dev crews", "Multi-disciplinary creative shops", "Team names already containing 'design'"],
-      pickB: ["Design-only studios", "Designer personal brands", "Company design-team sites", "Profession-in-the-domain recognition"],
+        "Both are strong creative-scene suffixes with different registries, prices and emphasis. .studio is operated by Identity Digital (formerly Donuts), in the root since 2015, and the site's reference table lists it at ¥80 first year / ¥220 renewal; .design was launched by Top Level Design, acquired by GoDaddy Registry in 2021 (IANA lists Registry Services, LLC), in the root since 2014, at ¥280 / ¥380 — the premium end of vertical TLDs, renewing ¥160 a year above .studio. Semantically .studio says \"we're a small team\": design, film, animation, game, podcast and content producers all fit, and a two- or three-person creative crew reads better here than under .com's corporate neutrality. .design says \"we do design\" — vertical but with higher professional recognition, widely adopted in the UI/UX and brand-design communities abroad, with many product companies hosting design-team sites on brand.design. The test: non-design creative teams — film, animation, audio, games — go straight to .studio, since .design doesn't match; design-only businesses can use either, with designer personal brands and company design-team sites leaning .design (profession in the domain, prominent on résumés and email signatures) and multi-disciplinary shops leaning .studio (softer, cheaper to renew). One practical rule: if the team name already contains \"design\", choose .studio to avoid repetition — mono.studio, not monodesign.design. Inventory on both is far better than .com, with style words, animal words and personal names mostly available; at six and seven letters neither suffix is short, so keep the name tight.",
+      pickA: ["Film, animation and audio production teams", "Game and indie dev crews", "Multi-disciplinary creative shops (renews ¥160 a year below .design)", "Team names that already contain design"],
+      pickB: ["Designer personal brands with the profession in the domain", "UI/UX and brand-design studios", "A product company's design-team site (brand.design)", "Recognition in the international design community first"],
     },
   },
   "live-vs-tv": {
@@ -627,18 +627,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".fun 和 .club 怎么选：好玩体验与归属感社群的取舍",
       metaDescription: ".fun 卖的是好玩体验，.club 卖的是圈子归属感。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "问自己一个问题：用户是来「玩一把」还是来「加入我们」？小游戏、趣味测试、互动营销页选 .fun，体验即产品；兴趣社群、付费会员、粉丝组织选 .club，归属即产品。两者都便宜、库存都好，.fun 首年更极端但续费上浮更多，.club 续费相对温和。注意语境：.fun 与严肃行业相斥，.club 在部分词搭配下有夜店联想。活动型社群（定期组局的兴趣小组）两个都行，看品牌调性：俏皮选 .fun，正经归属选 .club。",
-      pickA: ["小游戏与休闲游戏站", "趣味测试与创意小工具", "互动营销 campaign 页", "俏皮轻快的品牌调性"],
-      pickB: ["兴趣社群与付费社群", "会员修与粉丝俾乐部", "读书会与线下俾乐部", "主品牌的社区子站"],
+        "问用户是来「玩一把」还是来「加入我们」。.fun 由 Radix 运营，2016 年底入根，站内参考价首年 10 元、续费 150 元，是典型的 Radix 曲线：首年极低、续费回升十五倍。.club 现归 GoDaddy Registry，2014 年入根，首年 40 元、续费 120 元——首年贵四倍，续费却比 .fun 便宜 30 元/年，持有三年以上 .club 总成本反而更低。语义分工清楚：.fun 把「好玩」写进域名，小游戏站、趣味测试、互动营销页、派对策划、玩具与亲子品牌用它，体验本身就是产品；.club 说的是「圈子」，兴趣社群、读书会、健身团、创作者粉丝团用它，归属本身就是产品。边界也各有一条：.fun 与严肃行业（金融、医疗、B2B）相斥；.club 在某些词搭配下有夜店联想，选词时注意语境。判断方法：用户与你的关系是一次性的体验——玩完就走、分享给朋友，选 .fun；关系是持续的成员身份——有会员、有活动、有群，选 .club。定期组局的兴趣小组两个都成立，看调性：俏皮选 .fun，正经的成员制选 .club；campaign 页用 .fun 首年价即可，社区主站按 .club 的续费算长期账。.fun 2017 年才由 Radix 推出，是其组合里最年轻的后缀之一；.club 2014 年开放，头几年注册量一度位居新后缀前列，2021 年从 .CLUB Domains 转入 GoDaddy Registry。按站内参考价，.fun 首年 10 元、续费 150 元，.club 首年 40 元、续费 120 元：一个先甜后贵，一个起步稍高但长期更平。",
+      pickA: ["小游戏与休闲游戏站", "趣味测试、互动营销 campaign 页", "派对策划、玩具与亲子品牌", "短生命周期页面（首年 10 元级）"],
+      pickB: ["兴趣社群、读书会与健身团", "会员制与创作者粉丝俱乐部", "长期持有的社区主站（续费低于 .fun）", "主品牌的社区子站（brand.club）"],
     },
     en: {
       title: ".fun vs .club: Playful Experience or Belonging",
       metaDescription:
         ".fun sells a playful experience; .club sells belonging. Compare semantics, pricing and fit, then hunt names available on both with AI.",
       verdict:
-        "Ask one question: do users come to play, or to join? Casual games, quizzes and interactive campaigns belong on .fun — the experience is the product. Interest groups, paid communities and fan organizations belong on .club — belonging is the product. Both are cheap with deep inventory; .fun is more extreme year one but renews higher, .club renews more gently. Mind the context: .fun clashes with serious verticals, and .club can carry nightlife connotations with certain words. Activity-shaped communities work on either — playful brands lean .fun, membership-shaped ones lean .club.",
-      pickA: ["Casual game & entertainment sites", "Quizzes & playful tools", "Interactive marketing campaigns", "Playful, cheeky brand voice"],
-      pickB: ["Interest & paid communities", "Membership & fan clubs", "Book clubs & local clubs", "Brand community companion sites"],
+        "Ask whether users come to play or to join. .fun is a Radix suffix that entered the root in late 2016; the site's reference table lists it at ¥10 first year / ¥150 renewal — the classic Radix curve, rock-bottom intro and a fifteen-fold jump at renewal. .club now sits under GoDaddy Registry, in the root since 2014, at ¥40 / ¥120 — four times the price up front, yet ¥30 a year cheaper to renew, so over three or more years .club costs less in total. The semantic split is clean. .fun writes playfulness into the domain: casual game sites, quizzes, interactive campaigns, party planners, toy and family brands, where the experience is the product. .club means a circle: hobby groups, book clubs, fitness crews and creator fan communities, where belonging is the product. Each has a boundary: .fun clashes with serious verticals (finance, health, B2B); .club carries nightlife connotations with certain words, so read your name in context. The test: if the relationship is a one-off experience — play, leave, share with friends — take .fun; if it is ongoing membership — members, events, a group chat — take .club. Recurring interest groups work on either: playful voice leans .fun, formal membership leans .club; campaign pages can live on .fun's intro price, while a community main site should be budgeted at .club's renewal. .fun was delegated to Radix in November 2016 and only opened in 2017, making it one of the youngest names in the Radix portfolio; .club dates from January 2014, ranked among the largest new gTLDs in its early years, and moved from .CLUB Domains to GoDaddy Registry in 2021. On the site's reference table .fun is ¥10 to register and ¥150 to renew, .club ¥40 and ¥120: one is cheap up front and pricier later, the other starts higher but stays flatter.",
+      pickA: ["Casual and browser game sites", "Quizzes and interactive marketing campaigns", "Party planners, toy and family brands", "Short-lived pages at the ¥10 intro price"],
+      pickB: ["Hobby groups, book clubs and fitness crews", "Membership and creator fan clubs", "Long-held community main sites (renews below .fun)", "A brand's community companion site (brand.club)"],
     },
   },
   "space-vs-site": {
@@ -649,18 +649,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".space 和 .site 怎么选：个人小天地与通用建站的取舍",
       metaDescription: ".space 语义柔和适合创意空间，.site 是最通用的建站后缀。对比两者的气质、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "两者都是便宜能打的通用新后缀，差在气质：.space 读起来有「地方感」——创作者的小天地、团队的空间、社区的聚集地，适合想要一点人情味的个人站与创意项目；.site 则完全中性，「名字 + .site」就是「这是我的网站」，临时页、活动页、工具站都合适但不加分。航天/太空主题产品 .space 语义满分。两者首年都很便宜、续费都上浮，注册前看清续费；库存都深，好词命中率高。要区分度选 .space，要中性百搭选 .site。",
-      pickA: ["个人站与创意实验项目", "协作空间与社区品牌", "航天/太空主题产品", "想要有记忆点的气质后缀"],
-      pickB: ["临时页与活动落地页", "工具站与实用小站", "完全中性的通用建站", "预算极度敏感的项目"],
+        "两个都是 Radix 运营的低价通用后缀，.space 2014 年入根、.site 2015 年入根，促销节奏几乎同步，差别在气质与续费。站内参考价 .space 首年 12 元、续费 170 元，.site 首年 10 元、续费 220 元——首年只差 2 元，续费 .site 反而每年贵 50 元，持有越久 .space 越省。语义上 .space 读起来有「地方感」：创作者的小天地、团队的协作空间、社区的聚集地、coworking 与艺术空间用它柔和不商业，航天与太空主题的产品更是语义满分；.site 则完全中性，name.site 就是「某某网站」，落地页、文档站、工具站、临时项目都合适但不加分，一切靠主体名撑。两者都是注册量常年靠前的新后缀，认知度足够，也都因为便宜被大量低质站使用。判断方法：想要一点人情味或记忆点——个人站、博客、创意实验、社区品牌、太空主题，选 .space，续费还更低；只要一个中性百搭、不带任何暗示的便宜域名——活动页、工具站、给主品牌配套的文档站，选 .site，4 个字母更短。两者都不必长期持有时，首年价谁低用谁；准备挂主站超过两年的，按续费算 .space 更划算。主体名建议：.space 配完整、好读的词让「某某 space」读成一个地方；.site 配造词或直接写清用途（docs、wiki、lab 类组合）。",
+      pickA: ["个人站、博客与创意实验项目", "协作空间、coworking 与社区品牌", "航天/太空主题产品（语义满分）", "持有两年以上、在意续费（比 .site 低 50 元/年）"],
+      pickB: ["活动页、发布页等临时落地页", "工具站与主品牌配套的文档站（docs/wiki/lab 类）", "完全中性、不带任何行业暗示的通用建站", "想要 4 字母更短后缀、首年 10 元级"],
     },
     en: {
       title: ".space vs .site: A Place With Character or a Neutral Website",
       metaDescription:
         ".space reads soft and place-like; .site is the most neutral website suffix. Compare vibes, pricing and fit, then hunt names available on both with AI.",
       verdict:
-        "Both are cheap, capable generic new TLDs; the difference is character. .space reads like a place — a creator's corner, a team's space, a community's gathering spot — great when you want warmth in a personal site or creative project. .site is perfectly neutral: 'name + .site' just means 'this is my website' — fine for landing pages, tools and utilities, but it adds nothing. Space-themed products get perfect semantics on .space for free. Both are cheap year one with higher renewals (check before registering) and deep inventory. Want character, pick .space; want neutral versatility, pick .site.",
-      pickA: ["Personal sites & creative experiments", "Collaborative-space & community brands", "Aerospace / space-themed products", "A suffix with memorable character"],
-      pickB: ["Landing & campaign pages", "Tools & utility sites", "Fully neutral general websites", "Extremely budget-sensitive projects"],
+        "Both are low-priced generic suffixes from Radix — .space entered the root in 2014, .site in 2015 — with near-synchronized promo cycles, so the differences are character and renewal. The site's reference table lists .space at ¥12 first year / ¥170 renewal and .site at ¥10 / ¥220: only ¥2 apart up front, but .site renews ¥50 a year higher, so the longer you hold, the more .space saves. Semantically .space reads like a place — a creator's corner, a team's collaborative space, a community's gathering spot, coworking and art spaces feel soft and non-commercial on it, and space-themed products get perfect semantics for free. .site is fully neutral: name.site just means \"the X website\", fine for landing pages, docs, tools and temporary projects, but it adds nothing and the name does all the work. Both rank among the highest-volume new TLDs, so recognition is fine, and both attract low-quality sites because they are cheap. The test: wanting warmth or a memorable touch — personal sites, blogs, creative experiments, community brands, anything space-themed — take .space, which also renews lower; wanting a neutral, versatile, no-signal cheap domain — campaign pages, tools, a docs site beside your main brand — take .site, four letters and shorter. When neither will be a long hold, take the lower first-year price; when the domain will carry a main site for more than two years, .space pencils out better at renewal. Naming tips: pair .space with a full, readable word so \"X space\" sounds like a place; pair .site with a coined word or make the purpose explicit (docs, wiki, lab combos).",
+      pickA: ["Personal sites, blogs and creative experiments", "Collaborative spaces, coworking and community brands", "Aerospace and space-themed products (perfect semantics)", "Holds of two years or more (renews ¥50 a year below .site)"],
+      pickB: ["Campaign and launch landing pages", "Tools and companion docs sites (docs, wiki, lab combos)", "Fully neutral general websites with no industry hint", "A shorter four-letter suffix at the ¥10 intro price"],
     },
   },
   "live-vs-online": {
@@ -671,18 +671,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".live 和 .online 怎么选：实时现场感与线上存在感的取舍",
       metaDescription: ".live 强调正在发生，.online 强调线上存在。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "语义强度不同：.live 是强语义——「点进来看现场」，直播、活动、实时看板用它自带号召力；.online 是弱语义——「我们在线上」，传统生意的线上化、通用官网都能用，但不制造期待。内容是实时的选 .live，内容只是「在线上」的选 .online。两者首年都便宜、续费都明显上浮（.online 续费尤其高，注意长期持有成本）；库存都好。若两个都可注册且预算有限，优先看产品是否真有「实时」属性——有则 .live 加分，无则 .online 更稳。",
-      pickA: ["直播与实时互动产品", "线上活动与发布会页", "实时数据看板", "需要「看现场」号召力的品牌"],
-      pickB: ["传统生意的线上化官网", "通用产品站与服务页", "无实时属性的线上品牌", "想要最宽泛的语义兼容性"],
+        "语义强度不同，注册局也不同。.live 由 Identity Digital（原 Rightside，后并入 Donuts）运营，2015 年入根，站内参考价首年 20 元、续费 180 元；.online 由 Radix 运营，2015 年入根，首年 15 元、续费 260 元。两者都是首年便宜、续费上浮的新后缀曲线，但 .live 的续费比 .online 低 80 元/年，长期持有 .live 更省——这与「.online 更大众更便宜」的直觉相反。.live 是强语义——「点进来看现场」：直播频道、线上活动、演出与赛事、发布会、实时数据看板与状态页用它自带号召力，主播个人站、播客的直播页都合适。.online 是弱语义——「我们在线上」：传统生意的数字化门面、线上课程、远程服务都能用，它是注册量最大的新后缀之一，认知度足够，但不制造任何期待。判断方法：内容有真正的「实时」属性——有开播时间、有倒计时、有正在变化的数据，选 .live；内容只是「放在线上」——静态官网、课程库、预约页，选 .online。两者都可注册且预算有限时，还可以按持有时长决定：一年内的活动页用 .online 的首年价即可，长期的直播品牌按 .live 的续费算账更划算。常见的分工是主站 .com、直播页同名 .live；把与直播无关的品牌主站挂到 .live 上，会让访客期待一个并不存在的「现场」。",
+      pickA: ["直播频道、演出与赛事页面", "线上发布会、峰会与活动倒计时页", "实时数据看板与状态页（live data）", "长期持有的直播品牌（续费比 .online 低 80 元/年）"],
+      pickB: ["传统生意「上线了」的数字化门面", "线上课程库、预约页等静态服务站", "一年内的活动页（首年 15 元级）", "无实时属性、想要最宽泛语义的线上品牌"],
     },
     en: {
       title: ".live vs .online: Happening Now or Simply Online",
       metaDescription:
         ".live means happening now; .online just means you exist on the internet. Compare semantics, pricing and fit, then hunt names available on both with AI.",
       verdict:
-        "The semantic strength differs: .live is strong — 'come watch now' — with a built-in call to action for streams, events and real-time dashboards. .online is weak — 'we're on the internet' — fine for a traditional business going digital or a generic site, but it sets no expectation. If your content is genuinely real-time, .live earns its keep; if it's merely online, .online is the safer neutral. Both are cheap year one with sharply higher renewals (.online especially — mind the long-term cost) and good inventory. With limited budget and both available, decide on whether your product truly has a live dimension.",
-      pickA: ["Streaming & real-time interaction", "Online events & launch pages", "Live data dashboards", "Brands that need a 'watch now' CTA"],
-      pickB: ["Traditional businesses going digital", "Generic product & service sites", "Online brands without a live dimension", "Broadest semantic compatibility"],
+        "The semantic strength differs, and so do the registries. .live is operated by Identity Digital (originally Rightside, later folded into Donuts), in the root since 2015, and the site's reference table lists it at ¥20 first year / ¥180 renewal; .online is a Radix suffix, also 2015, at ¥15 / ¥260. Both follow the cheap-intro, higher-renewal new-TLD curve, but .live renews ¥80 a year below .online, so a long hold is cheaper on .live — the opposite of the \"online is the mass-market cheap one\" instinct. .live is strong — \"come watch now\": streaming channels, online events, shows and matches, launch events, real-time dashboards and status pages get a built-in call to action, and streamer personal sites and podcast live pages fit naturally. .online is weak — \"we're on the internet\": a traditional business's digital front door, online courses and remote services all work; it is one of the highest-volume new TLDs, so recognition is fine, but it sets no expectation. The test: if the content is genuinely real-time — an air time, a countdown, numbers that change — take .live; if it is merely hosted online — a static site, a course library, a booking page — take .online. With both available and a tight budget, decide by hold length: a campaign page under a year can live on .online's intro price, while a lasting streaming brand pencils out better at .live's renewal. The common split is a .com main site with the live page on the matching .live; putting an unrelated brand's main site on .live makes visitors expect a show that isn't there.",
+      pickA: ["Streaming channels, shows and match pages", "Online launches, summits and countdown pages", "Real-time dashboards and status pages (live data)", "Lasting streaming brands (renews ¥80 a year below .online)"],
+      pickB: ["A traditional business's we're-now-online storefront", "Static service sites such as course libraries and booking pages", "Campaign pages under a year at the ¥15 intro price", "Online brands without a live dimension that want the broadest semantics"],
     },
   },
   "com-vs-app": {
@@ -693,18 +693,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".com 和 .app 怎么选：通用信任与应用属性的取舍",
       metaDescription: ".com 是万能默认，.app 一眼说明「这是个应用」且全后缀强制 HTTPS。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "产品核心是一个 App（移动端或 Web 应用），.app 几乎零解释成本——名字+后缀直接完成自我介绍，且 Google 注册局强制全后缀 HTTPS，安全底线自带；产品不止是应用（内容、服务、电商、公司官网），.com 的通用性更稳。价格上 .app 注册与续费都适中且稳定。常见组合：主品牌 .com 做公司站，产品线用 name.app 做下载/落地页。若两个都可注册且产品确实是应用，.app 的语义加成值得优先考虑。",
-      pickA: ["公司官网与多产品品牌", "内容、电商等非应用业务", "追求最大通用性与转售价值", "面向不熟悉新后缀的大众用户"],
-      pickB: ["移动/Web 应用本体", "应用下载与落地页", "看重强制 HTTPS 的安全属性", "name.com 已被注册但 name.app 可用"],
+        "产品本体是不是一个应用，决定了这组选择。.app 由 Google 的 Charleston Road Registry 运营，2015 年入根、2018 年开放注册，整个后缀预置在浏览器的 HSTS 预加载名单里——name.app 不配 HTTPS 就直接打不开，安全底线由注册局替你守住；用户看到 name.app 就知道这是个应用，下载落地页、Web App、小工具官网零解释成本。.com 由 Verisign 运营，批发价 10.26 美元/年（2024 年 9 月起），是用户默认补全、转售最活跃的通用后缀，公司官网、多产品品牌、内容与电商都装得下。价格接近：站内参考价 .app 首年 99 元、续费 118 元，.com 首年 69 元、续费 85 元，.app 每年多付约 33 元，两者续费都稳定、没有促销陷阱。库存差距明显：干净的产品词、「动词 + 名词」组合在 .com 下早已无货，在 .app 下大量可注册。判断方法：产品交付物就是一个 App（移动、桌面或 Web），用户的核心动作是下载/打开，选 .app，域名即品类，还自带 HTTPS 保证；产品不止是应用——公司站、内容、服务、电商，或者品牌未来会长出多条产品线，选 .com 做主站。成熟团队常见的分工是公司在 brand.com、每个产品在 product.app 做下载页，两个都注册一年不到两百元。命名提醒：.app 的主体名里不要再写 app，name.app 已经说了一切；内容站与企业官网挂 .app 会让用户预期一个不存在的应用。",
+      pickA: ["公司官网与多产品品牌主站", "内容、服务与电商等非应用业务", "面向不熟悉新后缀的大众用户", "最大通用性与转售流动性"],
+      pickB: ["移动/桌面/Web 应用本体与下载页", "看重 HSTS 预加载、强制 HTTPS 的安全属性", "产品词在 .com 无货、.app 仍可注册", "公司 brand.com + 产品 product.app 的分工"],
     },
     en: {
       title: ".com vs .app: Universal Trust or Built-in App Semantics",
       metaDescription:
         ".com is the universal default; .app says 'this is an app' at a glance and enforces HTTPS zone-wide. Compare semantics, pricing and fit, then hunt names available on both.",
       verdict:
-        "If your product is an app (mobile or web), .app introduces itself for free — name plus suffix does the explaining — and Google's registry enforces HTTPS across the whole zone. If you're more than an app (content, commerce, a company site), .com's universality is the safer long-term asset. .app pricing is moderate and stable on both registration and renewal. A common split: the company lives on .com while each product ships on name.app as its download/landing page. If both are free and the product genuinely is an app, the semantic boost of .app is worth taking.",
-      pickA: ["Company sites & multi-product brands", "Content, commerce and non-app businesses", "Maximum universality and resale value", "Mainstream audiences unfamiliar with new TLDs"],
-      pickB: ["The app itself (mobile or web)", "Download & landing pages", "Zone-wide enforced HTTPS", "name.com is taken but name.app is free"],
+        "Whether the product itself is an app decides this one. .app is operated by Google's Charleston Road Registry, entered the root in 2015 and opened in 2018, and the entire zone sits on the browser HSTS preload list — a name.app without HTTPS simply won't load, so the registry holds the security floor for you; users see name.app and know it is an application, making download landing pages, web apps and utility tools zero-explanation. .com is Verisign's, wholesale $10.26 a year since September 2024, the suffix users autocomplete and the most liquid resale market — company sites, multi-product brands, content and commerce all fit. Pricing is close: the site's reference table lists .app at ¥99 first year / ¥118 renewal and .com at ¥69 / ¥85, about ¥33 a year apart, both stable with no promo trap. Inventory differs sharply: clean product words and verb+noun compounds are long gone on .com and widely open on .app. The test: if what you ship is an app — mobile, desktop or web — and the user's core action is download or open, take .app, where the domain is the category and HTTPS comes guaranteed; if you are more than an app — a company site, content, services, commerce, or a brand that will grow several product lines — make .com the main site. Mature teams commonly keep the company on brand.com and each product on product.app as its download page; registering both costs under ¥200 a year. Naming reminders: don't repeat \"app\" inside the label, since name.app already says it, and don't hang a content site or corporate site on .app — visitors will expect an application that isn't there.",
+      pickA: ["Company sites and multi-product brand homepages", "Content, services, commerce and other non-app businesses", "Mainstream audiences unfamiliar with new TLDs", "Maximum universality and resale liquidity"],
+      pickB: ["The app itself and its download page (mobile, desktop or web)", "HSTS-preloaded, HTTPS-enforced security posture", "Product words gone on .com but open on .app", "Company on brand.com, products on product.app"],
     },
   },
   "com-vs-dev": {
@@ -715,18 +715,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".com 和 .dev 怎么选：大众品牌与开发者身份的取舍",
       metaDescription: ".com 面向所有人，.dev 是开发者品牌的身份标识且强制 HTTPS。对比两者的受众、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "看受众是谁：面向开发者的工具、文档、个人技术站，.dev 自带圈内身份——看到后缀就知道「这是给写代码的人的」，且与 .app 同属 Google 注册局、全后缀强制 HTTPS；面向大众或企业客户，.com 仍是默认信任。价格上 .dev 注册续费都适中。很多开发者工具的打法：产品站 name.dev，公司站 name.com，文档 docs.name.dev。若你的用户全是开发者，.dev 不是妥协而是加分项。",
-      pickA: ["面向大众或企业客户的产品", "非技术业务与公司官网", "追求最大认知度与转售流动性", "品牌计划超出开发者圈层"],
-      pickB: ["开发者工具与 API 产品", "技术文档与开源项目站", "个人技术博客与作品集", "圈内身份与强制 HTTPS 加分"],
+        "先看用户会不会打开终端。.dev 由 Google 的 Charleston Road Registry 运营，2014 年入根、2019 年开放注册，整个后缀预置在浏览器 HSTS 名单中，不配 HTTPS 就打不开——Google 把 web.dev 放在上面，Kubernetes 用 kubernetes.dev，Flutter 用 flutter.dev，开发者看到 .dev 默认这里有文档和 SDK。.com 是 Verisign 运营的默认后缀，面向大众与企业客户时无需解释。价格相近：站内参考价 .dev 首年 88 元、续费 108 元，.com 首年 69 元、续费 85 元，.dev 每年多付约 20 元，属于同一档，不是决策因素。库存差距才是：常见英文词、短动词（build、ship、test）在 .com 下早已无货，在 .dev 下大量可注册。判断方法：受众全是开发者——工具链、SDK、CLI、API 文档、个人技术博客——.dev 不是妥协而是加分，圈内人一眼认同；受众包含采购、投资人、非技术用户，或者产品未来要走出开发者圈层，.com 才是稳妥的主站。开发者工具公司常见的分工是公司站 name.com、产品与文档 name.dev / docs.name.dev，两边同时注册也不过百来元。不要为了「显得技术」把消费级产品挂到 .dev 上，它的语义指向太强，会让非技术用户止步。.dev 2019 年 2 月才开放注册，Google 自家把 web.dev、flutter.dev 等开发者站点放在这个后缀下，工程师对它的熟悉度由此而来；.com 则是 1985 年的原始后缀，没有任何受众需要被教育。",
+      pickA: ["面向大众或企业采购方的产品", "非技术业务与公司官网", "品牌计划走出开发者圈层", "追求最大认知度与转售流动性"],
+      pickB: ["开发者工具、SDK、CLI 与 API 文档", "开源项目官网（kubernetes.dev、flutter.dev 同款）", "个人技术博客与 yourname.dev 作品集", "短动词/技术词在 .com 无货、.dev 仍在"],
     },
     en: {
       title: ".com vs .dev: Mainstream Brand or Developer Identity",
       metaDescription:
         ".com speaks to everyone; .dev is a badge for developer-facing brands with enforced HTTPS. Compare audiences, pricing and fit, then hunt names available on both.",
       verdict:
-        "It comes down to who you serve. For developer tools, docs and personal tech sites, .dev is an identity badge — the suffix alone says 'built for people who code' — and like .app it's a Google registry zone with enforced HTTPS. For mainstream or enterprise audiences, .com remains the default trust signal. .dev pricing is moderate on both registration and renewal. A common developer-tool pattern: product on name.dev, company on name.com, docs on docs.name.dev. If your entire audience writes code, .dev is an upgrade, not a compromise.",
-      pickA: ["Mainstream or enterprise-facing products", "Non-technical businesses & company sites", "Maximum recognition and resale liquidity", "Brands that will outgrow the developer niche"],
-      pickB: ["Developer tools & API products", "Docs sites & open-source projects", "Personal tech blogs & portfolios", "Insider identity plus enforced HTTPS"],
+        "Ask whether your users open a terminal. .dev is operated by Google's Charleston Road Registry, entered the root in 2014 and opened in 2019, and the entire zone is HSTS-preloaded in browsers — no HTTPS, no page. Google runs web.dev on it, Kubernetes uses kubernetes.dev, Flutter uses flutter.dev, and developers seeing .dev assume docs and an SDK are waiting. .com is Verisign's default suffix that needs no explanation for mainstream or enterprise audiences. Pricing is close: the site's reference table lists .dev at ¥88 first year / ¥108 renewal and .com at ¥69 / ¥85 — about ¥20 a year apart, same tier, not a deciding factor. Inventory is: dictionary words and short verbs like build, ship and test are long gone on .com and widely open on .dev. The test: if your audience is entirely developers — toolchains, SDKs, CLIs, API docs, personal engineering blogs — .dev is an upgrade, not a compromise, and insiders recognize it instantly; if the audience includes procurement, investors or non-technical users, or the product will outgrow the developer niche, .com is the safer main site. Developer-tool companies commonly split: company on name.com, product and docs on name.dev and docs.name.dev — registering both costs little more than ¥150 a year. Don't hang a consumer product on .dev to look technical; its semantic pull is strong enough to stop non-technical visitors at the door. .dev only opened in February 2019, and Google hosts its own developer properties such as web.dev and flutter.dev there, which is where engineers' familiarity comes from; .com is an original 1985 suffix that no audience needs to be taught.",
+      pickA: ["Products for mainstream users or enterprise buyers", "Non-technical businesses and company sites", "Brands that will outgrow the developer niche", "Maximum recognition and resale liquidity"],
+      pickB: ["Developer tools, SDKs, CLIs and API docs", "Open-source project sites (the kubernetes.dev, flutter.dev pattern)", "Personal engineering blogs and yourname.dev portfolios", "Short verbs or technical words gone on .com but open on .dev"],
     },
   },
   "io-vs-dev": {
@@ -803,18 +803,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".cloud 和 .online 怎么选：云服务属性与通用线上存在的取舍",
       metaDescription: ".cloud 自带云服务与基础设施联想，.online 是最中性的线上后缀。对比两者的语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "语义精确度不同：.cloud 是行业词——云服务、SaaS、基础设施、托管产品用它一眼对味，非云业务用则显得牵强；.online 是万金油——任何「在线上」的业务都能用，但也不传递任何专业信号。产品与云/托管/基础设施相关，.cloud 的语义加成明显；只是需要一个便宜的通用后缀，.online 库存深、首年便宜（注意续费上浮明显）。判断标准很简单：向别人介绍产品时会不会自然说出「云」这个字？会，选 .cloud；不会，.online 或其他中性后缀更合适。",
-      pickA: ["云服务与托管产品", "SaaS 与基础设施工具", "DevOps 与企业 IT 品牌", "「云」是产品叙事的一部分"],
-      pickB: ["通用线上业务与官网", "传统生意的线上化", "预算敏感的落地页", "不想被行业语义绑定"],
+        "一个是行业词，一个是万金油，注册局也不同。.cloud 由意大利的 Aruba PEC S.p.A. 运营，2015 年入根，站内参考价首年 60 元、续费 160 元；.online 由 Radix 运营，2015 年入根，首年 15 元、续费 260 元。第一年 .online 便宜 45 元，第二年起每年反过来贵 100 元——持有两年以上 .cloud 总成本已经更低，这与「.online 更便宜」的直觉相反。语义上 .cloud 一个词就说清「云服务/SaaS/托管/基础设施」，云厂商还常用它给客户实例分配域名（customer.product.cloud）；非云业务用它会显得牵强。.online 则不传递任何行业信号：线上课程、远程咨询、传统生意的数字化门面、活动页都能用，它是注册量最大的新后缀之一，认知度足够，但也因低价被大量低质站使用，信任要靠主体名撑。判断方法很简单：向别人介绍产品时会不会自然说出「云」这个字——托管、部署、存储、SaaS、DevOps——会，选 .cloud，语义加成明显且长期更省；不会，只是需要一个便宜、通用的后缀，.online 首年价合适，但准备长期挂主站前先把 260 元的续费算进去。两者库存都深，功能词、品牌词大多可注册；.cloud 六个字母不算短，主体名要精炼。运营方也不同：.cloud 归意大利的 Aruba S.p.A.，2016 年开放，一家卖虚拟主机与云资源的公司顺手管着这个后缀；.online 归 Radix，2015 年推出，是这家新后缀专业户促销最激进、量最大的产品线之一。",
+      pickA: ["SaaS、托管、存储与 DevOps 工具", "客户实例子域（customer.product.cloud）", "面向企业客户的云产品线", "持有两年以上、在意续费（比 .online 低 100 元/年）"],
+      pickB: ["线上课程、远程咨询等通用线上服务", "传统生意「上线了」的数字化门面", "活动页、发布页等短期项目（首年 15 元级）", "不想被行业语义绑定的通用官网"],
     },
     en: {
       title: ".cloud vs .online: Cloud-Native Semantics or Neutral Web Presence",
       metaDescription:
         ".cloud carries cloud-service and infrastructure connotations; .online is the most neutral web suffix. Compare semantics, pricing and fit, then hunt names available on both.",
       verdict:
-        "The difference is semantic precision. .cloud is an industry word — cloud services, SaaS, infrastructure and hosting products feel instantly at home on it, while unrelated businesses feel forced. .online is the all-purpose neutral: any business that exists on the internet can use it, but it signals nothing. If your product touches cloud, hosting or infrastructure, .cloud's semantic boost is real; if you just need a cheap generic suffix, .online has deep inventory and low first-year pricing (mind the steep renewal). The test is simple: would you naturally say the word 'cloud' when describing the product? If yes, take .cloud; if not, .online or another neutral suffix fits better.",
-      pickA: ["Cloud services & hosting products", "SaaS & infrastructure tools", "DevOps & enterprise IT brands", "'Cloud' is part of the product story"],
-      pickB: ["Generic online businesses & sites", "Traditional businesses going digital", "Budget-sensitive landing pages", "Avoiding industry-specific semantics"],
+        "One is an industry word, the other an all-purpose neutral, and they come from different registries. .cloud is operated by Italy's Aruba PEC S.p.A., in the root since 2015, and the site's reference table lists it at ¥60 first year / ¥160 renewal; .online is a Radix suffix, also 2015, at ¥15 / ¥260. Year one favors .online by ¥45; from year two onward .cloud is ¥100 a year cheaper, so over any hold of two years or more .cloud costs less — the opposite of the \"online is the cheap one\" instinct. Semantically .cloud says \"cloud service / SaaS / hosting / infrastructure\" in a single word, and cloud vendors often assign customer instances on it (customer.product.cloud); an unrelated business looks forced there. .online signals no industry at all: online courses, remote consulting, a traditional business's digital front door and campaign pages all fit; it is one of the highest-volume new TLDs, so recognition is fine, but its low price also draws low-quality sites, so the name has to carry the trust. The test is simple: would you naturally say the word \"cloud\" when describing the product — hosting, deployment, storage, SaaS, DevOps? If yes, take .cloud for the semantic boost and lower long-run cost; if not and you just need a cheap generic suffix, .online's intro price fits — but budget the ¥260 renewal before making it a long-lived main site. Inventory is deep on both; .cloud's six letters aren't short, so keep the name tight.",
+      pickA: ["SaaS, hosting, storage and DevOps tools", "Customer instance subdomains (customer.product.cloud)", "Enterprise-facing cloud product lines", "Holds of two years or more (¥100 a year below .online at renewal)"],
+      pickB: ["Generic online services such as courses and remote consulting", "A traditional business's we're-now-online storefront", "Campaign and launch pages at the ¥15 intro price", "Generic sites that want no industry semantics"],
     },
   },
   "sh-vs-dev": {
@@ -847,18 +847,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".gg 和 .tv 怎么选：游戏圈暗号与直播视频的取舍",
       metaDescription: ".gg 是游戏电竞圈的 good game 暗号，.tv 是直播与视频内容的经典后缀。对比两者的受众、价格与语义边界，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "重叠区在直播——但受众信号不同。.gg 说的是「游戏」：电竞战队、Discord 工具、游戏数据站用它圈内认同拉满，游戏主播用它也顺；.tv 说的是「视频/频道」：直播平台、视频内容、播客视频版用它更直白，非游戏类主播和内容品牌 .tv 明显更贴。价格上两者都是中上档的国家后缀。判断标准：内容以游戏为核心选 .gg，以「频道/节目」为核心选 .tv；两个都做的头部主播，通常 .gg 做社区、.tv 做内容站。",
-      pickA: ["游戏与电竞产品/战队", "Discord 社区与工具", "游戏数据与攻略站", "游戏主播个人品牌"],
-      pickB: ["直播平台与视频内容", "非游戏类主播/频道", "播客与节目品牌", "「频道感」大于「游戏感」的内容"],
+        "两个都是被内容圈层重新定义的小岛国家域名，重叠区在直播，受众信号却不同。.gg 属于根西岛，由 Island Networks 运营，在游戏圈只有一个含义——good game：op.gg 一代的数据站、大量 Discord 生态工具、电竞战队官网都在上面，圈内人看到 .gg 就知道「自己人」。.tv 属于图瓦卢，域名收入长期是该国财政的重要来源；Verisign 运营约二十年后，2022 年起改由 GoDaddy Registry 运营——Twitch.tv 一个案例就足以说明它在视频领域的地位。价格是决策里绕不开的一项：站内参考价 .gg 首年 480 元、续费 520 元，.tv 首年 199 元、续费 268 元，.gg 的续费几乎是 .tv 的两倍，每年多付两百多元。判断方法：内容以游戏为核心——电竞、公会、游戏攻略、Discord 机器人——选 .gg，圈内认同值这个溢价；内容以「频道/节目」为核心——非游戏类主播、播客视频版、直播平台、影视工作室——选 .tv，语义更直白也更便宜。两个都做的头部主播通常 .gg 做社区与工具、.tv 做内容站。此外别忘了两者都是国家域名，政策由所属地区决定，长期品牌资产可以同步持有对应 .com 兜底。Discord 的官方邀请短链 discord.gg 让 .gg 在玩家里家喻户晓，语义已被牢牢锁定在游戏；.tv 的注册局收入则直接进入图瓦卢国家财政，是这个小岛国最知名的出口。",
+      pickA: ["电竞战队、游戏公会与赛事平台", "游戏数据站、攻略站与 Discord 工具（op.gg 同款）", "游戏主播的个人品牌与社区", "圈内身份信号值得溢价的项目"],
+      pickB: ["直播平台与视频内容品牌（twitch.tv 同款）", "非游戏类主播、频道与播客视频版", "影视工作室与节目官网", "续费预算优先（约为 .gg 一半）"],
     },
     en: {
       title: ".gg vs .tv: Gaming Cred or Streaming Heritage",
       metaDescription:
         ".gg is the good-game badge of gaming and esports; .tv is the classic suffix for streaming and video. Compare audiences and semantics, then hunt names available on both.",
       verdict:
-        "They overlap on streaming — but signal different things. .gg says \"gaming\": esports teams, Discord tools and game-stats sites get maximum insider credibility, and gaming streamers wear it naturally. .tv says \"video/channel\": streaming platforms, video content and video podcasts read instantly, and non-gaming streamers and content brands fit .tv much better. Both are mid-to-high-priced ccTLDs. The test: if the content is gaming-first, take .gg; if it's channel-first, take .tv. Big streamers doing both often run community on .gg and the content site on .tv.",
-      pickA: ["Games & esports products/teams", "Discord communities & tools", "Game stats & guide sites", "Gaming streamer personal brands"],
-      pickB: ["Streaming platforms & video content", "Non-gaming streamers/channels", "Podcast & show brands", "Channel-feel over gaming-feel"],
+        "Both are small-island country codes that content communities repurposed; they overlap on streaming but signal different things. .gg belongs to Guernsey and is run by Island Networks; in gaming it means exactly one thing — good game — and the op.gg generation of stats sites, much of the Discord tool ecosystem and esports team sites live there, so insiders read .gg as \"one of us\". .tv belongs to Tuvalu, whose domain revenue has long been a meaningful share of national income; after roughly twenty years under Verisign, the registry moved to GoDaddy Registry in 2022 — and Twitch.tv alone settles its standing in video. Price is unavoidable here: the site's reference table lists .gg at ¥480 first year / ¥520 renewal and .tv at ¥199 / ¥268, so .gg renews at almost twice the rate, more than ¥200 a year extra. The test: if the content is gaming-first — esports, guilds, game guides, Discord bots — take .gg, where the insider recognition earns the premium; if it is channel-first — non-gaming streamers, video podcasts, streaming platforms, production studios — take .tv, more literal and cheaper. Big streamers doing both usually run community and tools on .gg and the content site on .tv. Remember both are ccTLDs whose policy is set by their territories; for a long-term brand asset, hold the matching .com as a backstop.",
+      pickA: ["Esports teams, guilds and tournament platforms", "Game stats, guide sites and Discord tools (the op.gg pattern)", "Gaming streamers' personal brands and communities", "Projects where insider signal justifies the premium"],
+      pickB: ["Streaming platforms and video brands (the twitch.tv pattern)", "Non-gaming streamers, channels and video podcasts", "Production studios and show sites", "Renewal-first budgets (about half of .gg)"],
     },
   },
   "so-vs-io": {
@@ -1001,18 +1001,18 @@ export const TLD_COMPARES: Record<string, TldCompare> = {
       title: ".club 和 .gg 怎么选：泛社区与游戏圈的身份对比",
       metaDescription: ".club 泛社区通用且便宜，.gg 是游戏圈的身份标识但续费更贵。对比两者的圈层语义、价格与适用场景，并用 AI 猎取两个后缀下都可注册的名字。",
       verdict:
-        "都是社区后缀，圈层完全不同。.gg 源自游戏术语「good game」，在电竞、游戏公会、Discord 社区里就是身份证——战队官网、赛事平台用 .gg 无需解释，圈外后缀反而显得外行。.club 语义更泛：会员制社区、兴趣小组、付费社群、线下俱乐部都成立，且注册和续费都便宜得多。价格是关键取舍：.gg 续费是 .club 的数倍，非游戏社区为 .gg 买单不值。判断标准：游戏/电竞相关，闭眼选 .gg；其他类型社区（读书会、会员制、兴趣圈），.club 性价比高得多。",
-      pickA: ["会员制社区与付费社群", "兴趣小组与线下俱乐部", "预算敏感（注册续费都便宜）", "非游戏类社区品牌"],
-      pickB: ["电竞战队与游戏公会", "游戏工具与赛事平台", "Discord 社区与直播周边", "圈内身份信号（gg 即 good game）"],
+        "都是社区后缀，圈层和价格都相差一个量级。.club 现归 GoDaddy Registry（IANA 记录为 Registry Services, LLC），2014 年入根，语义就是「圈子」：会员制社区、兴趣小组、付费社群、读书会、线下俱乐部都成立，站内参考价首年 40 元、续费 120 元。.gg 是根西岛的国家域名，由 Island Networks 运营，在游戏圈只有一个含义——good game：电竞战队、游戏公会、Discord 机器人、赛事平台用它就是身份证，op.gg 一代的数据站把它推成了圈内标配；站内参考价首年 480 元、续费 520 元，续费是 .club 的四倍多。这个价差决定了大部分选择：非游戏社区为 .gg 买单不值，而游戏社区用 .club 会显得外行——在电竞圈，「.gg」三个字符本身就是自己人的握手。判断方法：主题与游戏、电竞、玩家有关，闭眼选 .gg，溢价换的是圈内认同；主题是读书、运动、会员制、创作者粉丝团或任何非游戏兴趣，选 .club，同样的钱能多注册好几个。两者都要注意一条：.gg 是国家域名，政策由根西岛决定，长期品牌资产可以持有对应 .com 兜底；.club 在部分词搭配下带夜店联想，选词时注意语境。游戏工作室常见的组合是产品站 studio.gg、玩家社区 studio.club。.club 2014 年开放，原运营方 .CLUB Domains 于 2021 年把它卖给 GoDaddy Registry，从独立注册局变成大厂产品线之一；.gg 则一直由根西岛的 Island Networks 打理，玩家每天点开的 Discord 邀请链接就挂在这个后缀下，圈层认知不需要再教育。",
+      pickA: ["会员制社区与付费社群", "读书会、运动团与线下俱乐部", "创作者粉丝团等非游戏类社区", "预算敏感（续费约为 .gg 四分之一）"],
+      pickB: ["电竞战队与游戏公会官网", "游戏数据站、Discord 机器人与赛事平台（op.gg 同款）", "游戏工作室的玩家社区", "圈内身份信号值得溢价的项目"],
     },
     en: {
       title: ".club vs .gg: General Community or Gaming Credibility",
       metaDescription:
         ".club is the affordable all-purpose community suffix; .gg is gaming's identity badge at a premium renewal. Compare tribe semantics, pricing and fit, then hunt names available on both.",
       verdict:
-        "Both are community suffixes serving entirely different tribes. .gg comes from the gaming sign-off \"good game\" — in esports, guilds and Discord communities it IS the badge: team sites and tournament platforms on .gg need zero explanation, while an outsider suffix reads amateur. .club is broader: membership communities, hobby groups, paid circles and offline clubs all fit, and both registration and renewal cost far less. Price is the real trade-off — .gg renews at several times .club's rate, hard to justify outside gaming. The test: anything gaming or esports → .gg without hesitation; every other community type (book clubs, memberships, hobby circles) → .club wins on value.",
-      pickA: ["Membership & paid communities", "Hobby groups & offline clubs", "Budget-sensitive (cheap to register and renew)", "Non-gaming community brands"],
-      pickB: ["Esports teams & gaming guilds", "Gaming tools & tournament platforms", "Discord communities & streaming brands", "In-group signal (gg = good game)"],
+        "Both are community suffixes, an order of magnitude apart in tribe and price. .club now sits under GoDaddy Registry (IANA lists Registry Services, LLC), in the root since 2014, and means a circle: membership communities, hobby groups, paid circles, book clubs and offline clubs all fit; the site's reference table lists ¥40 first year / ¥120 renewal. .gg is Guernsey's country code, operated by Island Networks, and in gaming it means exactly one thing — good game: esports teams, guilds, Discord bots and tournament platforms wear it as an ID card, and the op.gg generation of stats sites made it the scene's standard; the reference table lists ¥480 / ¥520, a renewal more than four times .club's. That gap decides most cases: paying .gg money for a non-gaming community isn't worth it, while a gaming community on .club reads amateur — in esports the two letters gg are the insider handshake. The test: anything about games, esports or players — take .gg without hesitation, the premium buys recognition; reading, sports, membership, creator fan groups or any non-gaming interest — take .club and register several for the same money. Two cautions: .gg is a ccTLD whose policy is set by Guernsey, so hold the matching .com as a backstop for a long-term brand; .club carries nightlife connotations with certain words, so read your name in context. Game studios often run both — product on studio.gg, player community on studio.club.",
+      pickA: ["Membership and paid communities", "Book clubs, sports crews and offline clubs", "Creator fan groups and other non-gaming communities", "Budget-sensitive (renews at about a quarter of .gg)"],
+      pickB: ["Esports team and guild sites", "Game stats, Discord bots and tournament platforms (the op.gg pattern)", "A game studio's player community", "Projects where insider signal justifies the premium"],
     },
   },
   "studio-vs-co": {
