@@ -1,0 +1,152 @@
+{
+ "ai_calls": [],
+ "api": [
+  "GET /api/stats",
+  "GET /api/prices",
+  "GET /api/registrars",
+  "POST /api/search",
+  "POST /api/search",
+  "GET /api/registrars",
+  "GET /api/prices",
+  "POST /api/search"
+ ],
+ "more_label": "查更多后缀 +400",
+ "rows_total": 409,
+ "rows_clipped": [],
+ "rows_comcn_cc": [
+  {
+   "text": "chaxiang.com.cn | 已注册 | 2027-06-16 到期",
+   "elW": 299,
+   "elRight": 332,
+   "scrollW": 297,
+   "clientW": 297,
+   "clipped": false,
+   "chipW": 299,
+   "chipH": 46
+  },
+  {
+   "text": "chaxiang.cc | 已注册 | 2026-11-13 到期",
+   "elW": 309,
+   "elRight": 342,
+   "scrollW": 307,
+   "clientW": 307,
+   "clipped": false,
+   "chipW": 309,
+   "chipH": 46
+  }
+ ],
+ "ellipsis_texts": [],
+ "layout": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375
+ },
+ "advanced_result_lines": [
+  "r551known1.com",
+  "r551known2.io",
+  "google.com"
+ ],
+ "p2_6_header_controls": [
+  {
+   "tag": "BUTTON",
+   "text": "DomainHunter",
+   "href": null,
+   "aria": "DomainHunter"
+  },
+  {
+   "tag": "BUTTON",
+   "text": "候选清单\n0",
+   "href": null,
+   "aria": null
+  },
+  {
+   "tag": "A",
+   "text": "",
+   "href": "https://github.com/wookat/domainhunter",
+   "aria": null
+  },
+  {
+   "tag": "BUTTON",
+   "text": "EN",
+   "href": null,
+   "aria": "Switch to English"
+  },
+  {
+   "tag": "BUTTON",
+   "text": "",
+   "href": null,
+   "aria": null
+  },
+  {
+   "tag": "A",
+   "text": "首页",
+   "href": "/?lang=zh",
+   "aria": null
+  },
+  {
+   "tag": "A",
+   "text": "TLD 指南",
+   "href": "/tld?lang=zh",
+   "aria": null
+  },
+  {
+   "tag": "A",
+   "text": "首页",
+   "href": "/?lang=zh",
+   "aria": null
+  },
+  {
+   "tag": "A",
+   "text": "TLD 指南",
+   "href": "/tld?lang=zh",
+   "aria": null
+  },
+  {
+   "tag": "A",
+   "text": "行业指南",
+   "href": "/guide?lang=zh",
+   "aria": null
+  },
+  {
+   "tag": "A",
+   "text": "后缀对比",
+   "href": "/vs?lang=zh",
+   "aria": null
+  },
+  {
+   "tag": "A",
+   "text": "价格总览",
+   "href": "/prices?lang=zh",
+   "aria": null
+  },
+  {
+   "tag": "A",
+   "text": "为什么选 DomainHunter",
+   "href": "/why?lang=zh",
+   "aria": null
+  },
+  {
+   "tag": "A",
+   "text": "MCP 接入",
+   "href": "/mcp?lang=zh",
+   "aria": null
+  },
+  {
+   "tag": "A",
+   "text": "批量核验",
+   "href": "/advanced?lang=zh",
+   "aria": null
+  }
+ ],
+ "p2_6_ctl": {
+  "tag": "BUTTON",
+  "href": null,
+  "text": "候选清单\n0",
+  "url_0.8s": "https://hunt.zalize.com/",
+  "url_3.8s": "https://hunt.zalize.com/",
+  "title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+  "url_after_second_click": "https://hunt.zalize.com/shortlist"
+ },
+ "p2_6_ssr_header_links": []
+}

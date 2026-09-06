@@ -1,0 +1,4 @@
+Scope: 2 of 3 workspace projects
+apps/web typecheck$ tsc --noEmit
+apps/web typecheck: Done
+exit=0

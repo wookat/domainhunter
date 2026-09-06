@@ -1,0 +1,26 @@
+{
+ "ai_calls": [],
+ "row_text": "google.com\n已注册\n2028-09-14 到期\ngoogle.cn\n已注册\n2027-03-17 到期\ngoogle.io\n已注册\n2027-09-30 到期\ngoogle.ai\n已注册\n2027-09-25 到期\ngoogle.app\n已注册\n2027-03-29 到期\ngoogle.dev\n已注册\n2027-06-13 到期\ngoogle.co\n已注册\n2027-02-24 到期\ng",
+ "row_buttons": [
+  "收藏到候选清单",
+  "收藏到候选清单",
+  "收藏到候选清单",
+  "收藏到候选清单",
+  "收藏到候选清单",
+  "收藏到候选清单",
+  "收藏到候选清单",
+  "收藏到候选清单",
+  "收藏到候选清单",
+  "查更多后缀 +400",
+  "免费查 24 个前后缀变体",
+  "被注册了？让 AI 找一批相似寓意、真正可注册的名字"
+ ],
+ "starred_via": "移出候选清单",
+ "shortlist_text": "候选清单\n重新核验\n生成分享链接\n导出\n清空\n批量去注册（1）\n\n本地保存（localStorage，跨会话保留）· 注册前建议重新核验可用性\n\n尚未复查过\n\n监控动态\n\n跨设备同步（免登录）\n\n同步到其他设备\n导入\n排序：\n添加时间\n域名\n首年价\n到期日\n域名\t综合\t长度\t读感\t寓意\t品牌感\t参考价\t监控\t\n\ngoogle.com\n已注册\n2028-09-14 到期\n加备注\n\t—\t—\t—\t—\t—\t首年 $11.08 ≈¥80\t\n\t\n去注册",
+ "google_row_has_price": true,
+ "google_row_has_register": true,
+ "bulk_register_label": [
+  "批量去注册（1）"
+ ],
+ "shortlist_storage_after": "[{\"domain\":\"google.com\",\"label\":\"google\",\"tld\":\"com\",\"status\":\"taken\",\"expiresAt\":\"2028-09-14T04:00:00.000Z\",\"addedAt\":1788710275608}]"
+}

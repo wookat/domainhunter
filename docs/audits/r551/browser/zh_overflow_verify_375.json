@@ -1,0 +1,229 @@
+{
+ "results": [
+  {
+   "innerWidth": 625,
+   "scrollWidth": 625,
+   "clientWidth": 375,
+   "bodyScrollWidth": 625,
+   "path": "/tld/nz",
+   "overflow": true
+  },
+  {
+   "innerWidth": 569,
+   "scrollWidth": 569,
+   "clientWidth": 375,
+   "bodyScrollWidth": 569,
+   "path": "/tld/sa",
+   "overflow": true
+  },
+  {
+   "innerWidth": 511,
+   "scrollWidth": 511,
+   "clientWidth": 375,
+   "bodyScrollWidth": 511,
+   "path": "/vs/education-vs-academy",
+   "overflow": true
+  },
+  {
+   "innerWidth": 489,
+   "scrollWidth": 489,
+   "clientWidth": 375,
+   "bodyScrollWidth": 489,
+   "path": "/vs/clinic-vs-care",
+   "overflow": true
+  },
+  {
+   "innerWidth": 483,
+   "scrollWidth": 483,
+   "clientWidth": 375,
+   "bodyScrollWidth": 483,
+   "path": "/vs/gifts-vs-shop",
+   "overflow": true
+  },
+  {
+   "innerWidth": 444,
+   "scrollWidth": 444,
+   "clientWidth": 375,
+   "bodyScrollWidth": 444,
+   "path": "/vs/tools-vs-app",
+   "overflow": true
+  },
+  {
+   "innerWidth": 439,
+   "scrollWidth": 439,
+   "clientWidth": 375,
+   "bodyScrollWidth": 439,
+   "path": "/vs/info-vs-net",
+   "overflow": true
+  },
+  {
+   "innerWidth": 443,
+   "scrollWidth": 443,
+   "clientWidth": 375,
+   "bodyScrollWidth": 443,
+   "path": "/vs/apartments-vs-house",
+   "overflow": true
+  },
+  {
+   "innerWidth": 438,
+   "scrollWidth": 438,
+   "clientWidth": 375,
+   "bodyScrollWidth": 437,
+   "path": "/vs/repair-vs-services",
+   "overflow": true
+  },
+  {
+   "innerWidth": 404,
+   "scrollWidth": 404,
+   "clientWidth": 375,
+   "bodyScrollWidth": 403,
+   "path": "/vs/wine-vs-bar",
+   "overflow": true
+  },
+  {
+   "innerWidth": 417,
+   "scrollWidth": 417,
+   "clientWidth": 375,
+   "bodyScrollWidth": 416,
+   "path": "/vs/salon-vs-studio",
+   "overflow": true
+  },
+  {
+   "innerWidth": 406,
+   "scrollWidth": 406,
+   "clientWidth": 375,
+   "bodyScrollWidth": 405,
+   "path": "/vs/farm-vs-cafe",
+   "overflow": true
+  },
+  {
+   "innerWidth": 417,
+   "scrollWidth": 417,
+   "clientWidth": 375,
+   "bodyScrollWidth": 416,
+   "path": "/vs/art-vs-studio",
+   "overflow": true
+  },
+  {
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "bodyScrollWidth": 375,
+   "path": "/tld/ke",
+   "overflow": false
+  },
+  {
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "bodyScrollWidth": 375,
+   "path": "/vs/com-vs-org",
+   "overflow": false
+  },
+  {
+   "innerWidth": 399,
+   "scrollWidth": 399,
+   "clientWidth": 375,
+   "bodyScrollWidth": 398,
+   "path": "/vs/software-vs-app",
+   "overflow": true
+  },
+  {
+   "innerWidth": 386,
+   "scrollWidth": 386,
+   "clientWidth": 375,
+   "bodyScrollWidth": 386,
+   "path": "/vs/express-vs-store",
+   "overflow": true
+  },
+  {
+   "innerWidth": 380,
+   "scrollWidth": 380,
+   "clientWidth": 375,
+   "bodyScrollWidth": 380,
+   "path": "/vs/technology-vs-tech",
+   "overflow": true
+  },
+  {
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "bodyScrollWidth": 375,
+   "path": "/vs/travel-vs-tours",
+   "overflow": false
+  },
+  {
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "bodyScrollWidth": 375,
+   "path": "/vs/kitchen-vs-restaurant",
+   "overflow": false
+  },
+  {
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "bodyScrollWidth": 375,
+   "path": "/vs/menu-vs-restaurant",
+   "overflow": false
+  },
+  {
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "bodyScrollWidth": 375,
+   "path": "/vs/flights-vs-travel",
+   "overflow": false
+  },
+  {
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "bodyScrollWidth": 375,
+   "path": "/vs/bio-vs-me",
+   "overflow": false
+  },
+  {
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "bodyScrollWidth": 375,
+   "path": "/vs/blog-vs-me",
+   "overflow": false
+  },
+  {
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "bodyScrollWidth": 375,
+   "path": "/vs/health-vs-care",
+   "overflow": false
+  },
+  {
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "bodyScrollWidth": 375,
+   "path": "/tld/am",
+   "overflow": false
+  },
+  {
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "bodyScrollWidth": 375,
+   "path": "/vs/community-vs-club",
+   "overflow": false
+  },
+  {
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "clientWidth": 375,
+   "bodyScrollWidth": 375,
+   "path": "/tld/lk",
+   "overflow": false
+  }
+ ],
+ "ai_calls": []
+}

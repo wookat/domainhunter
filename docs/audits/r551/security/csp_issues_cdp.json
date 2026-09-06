@@ -1,0 +1,626 @@
+{
+ "/mcp": {
+  "issues_total": 0,
+  "issue_codes": [],
+  "csp_issues": [],
+  "csp_report_posts": [],
+  "securitypolicyviolation_events": []
+ },
+ "/prices": {
+  "issues_total": 0,
+  "issue_codes": [],
+  "csp_issues": [],
+  "csp_report_posts": [],
+  "securitypolicyviolation_events": []
+ },
+ "/": {
+  "issues_total": 0,
+  "issue_codes": [],
+  "csp_issues": [],
+  "csp_report_posts": [],
+  "securitypolicyviolation_events": []
+ },
+ "/vs/uk-vs-com": {
+  "issues_total": 18,
+  "issue_codes": [
+   "ContentSecurityPolicyIssue"
+  ],
+  "csp_issues": [
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "url": "https://hunt.zalize.com/vs/uk-vs-com",
+     "lineNumber": -1,
+     "columnNumber": 0
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/compare-page-IE2ZlKu7.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "url": "https://hunt.zalize.com/vs/uk-vs-com",
+     "lineNumber": 63,
+     "columnNumber": 0
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/site-links-D52nz7j0.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "11",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/guide-groups-C9vnxAkG.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "11",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/tld-groups-B50icMZ7.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "11",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/chevron-right-O0fqDGb1.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "11",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/prices-BCkF3WGt.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "11",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/tag-Dmb1-rLH.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "11",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/not-found-page-CiGZJjAY.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "11",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/use-page-title-CChRkcqr.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "11",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/price-text-DYpuFJB_.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "11",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/circle-check-CZxMe1O-.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "11",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   }
+  ],
+  "csp_report_posts": [],
+  "securitypolicyviolation_events": [
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "disp": "report",
+    "src": "",
+    "line": 0,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/compare-page-IE2ZlKu7.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/vs/uk-vs-com",
+    "line": 64,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/site-links-D52nz7j0.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/guide-groups-C9vnxAkG.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/tld-groups-B50icMZ7.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/chevron-right-O0fqDGb1.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/prices-BCkF3WGt.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/tag-Dmb1-rLH.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/not-found-page-CiGZJjAY.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/use-page-title-CChRkcqr.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/price-text-DYpuFJB_.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/circle-check-CZxMe1O-.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/circle-question-mark-DMvgZklw.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/sparkles-U8Vbi93S.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "connect-src",
+    "b": "https://hunt.zalize.com/api/registrars",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 135,
+    "sample": ""
+   },
+   {
+    "d": "connect-src",
+    "b": "https://hunt.zalize.com/api/registrars",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 135,
+    "sample": ""
+   },
+   {
+    "d": "connect-src",
+    "b": "https://hunt.zalize.com/api/prices",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/prices-BCkF3WGt.js",
+    "line": 1,
+    "sample": ""
+   },
+   {
+    "d": "connect-src",
+    "b": "https://hunt.zalize.com/api/prices",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/prices-BCkF3WGt.js",
+    "line": 1,
+    "sample": ""
+   }
+  ]
+ },
+ "/shortlist": {
+  "issues_total": 19,
+  "issue_codes": [
+   "ContentSecurityPolicyIssue"
+  ],
+  "csp_issues": [
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "url": "https://hunt.zalize.com/shortlist",
+     "lineNumber": -1,
+     "columnNumber": 0
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/shortlist-page-DkEUWm1t.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "9",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/domain-row-DquxG9UI.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "9",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/check-BFsBa-Vq.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "9",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/prices-BCkF3WGt.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "9",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/price-text-DYpuFJB_.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "9",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/external-link-CPsqc8tu.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "9",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/x-D_d-KuXj.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "9",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/copy-UDf544yg.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "9",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/results-export-C6S8BZEa.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "9",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/rotate-cw-S6IKCMOk.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "9",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   },
+   {
+    "blockedURL": "https://hunt.zalize.com/assets/link-2-Bnjw5Zuz.js",
+    "violatedDirective": "script-src-elem",
+    "isReportOnly": true,
+    "contentSecurityPolicyViolationType": "kURLViolation",
+    "sourceCodeLocation": {
+     "scriptId": "9",
+     "url": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+     "lineNumber": 1,
+     "columnNumber": 1672
+    }
+   }
+  ],
+  "csp_report_posts": [],
+  "securitypolicyviolation_events": [
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "disp": "report",
+    "src": "",
+    "line": 0,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/shortlist-page-DkEUWm1t.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/domain-row-DquxG9UI.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/check-BFsBa-Vq.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/prices-BCkF3WGt.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/price-text-DYpuFJB_.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/external-link-CPsqc8tu.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/x-D_d-KuXj.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/copy-UDf544yg.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/results-export-C6S8BZEa.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/rotate-cw-S6IKCMOk.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/link-2-Bnjw5Zuz.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/download-DLZoHDkv.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/sparkles-U8Vbi93S.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "script-src-elem",
+    "b": "https://hunt.zalize.com/assets/arrow-up-CkxyaIE3.js",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 2,
+    "sample": ""
+   },
+   {
+    "d": "connect-src",
+    "b": "https://hunt.zalize.com/api/registrars",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 135,
+    "sample": ""
+   },
+   {
+    "d": "connect-src",
+    "b": "https://hunt.zalize.com/api/registrars",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+    "line": 135,
+    "sample": ""
+   },
+   {
+    "d": "connect-src",
+    "b": "https://hunt.zalize.com/api/prices",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/prices-BCkF3WGt.js",
+    "line": 1,
+    "sample": ""
+   },
+   {
+    "d": "connect-src",
+    "b": "https://hunt.zalize.com/api/prices",
+    "disp": "report",
+    "src": "https://hunt.zalize.com/assets/prices-BCkF3WGt.js",
+    "line": 1,
+    "sample": ""
+   }
+  ]
+ }
+}

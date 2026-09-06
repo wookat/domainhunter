@@ -1,0 +1,301 @@
+{
+ "steps": [
+  {
+   "delta": 1,
+   "expected": 1,
+   "body": "{\"roots\":[\"r551zeroaiaudit\"],\"tlds\":[\"com\",\"cn\",\"io\",\"ai\",\"app\",\"dev\",\"co\",\"net\",\"me\"]}",
+   "name": "quick auto-check after 800ms"
+  },
+  {
+   "delta": 0,
+   "expected": 0,
+   "name": "explicit recheck without change"
+  },
+  {
+   "delta": 1,
+   "expected": 1,
+   "name": "rename"
+  },
+  {
+   "cn_pressed_before": "true",
+   "delta": 1,
+   "expected": 1,
+   "body": "{\"roots\":[\"r551zeroaiauditx\"],\"tlds\":[\"com\",\"io\",\"ai\",\"app\",\"dev\",\"co\",\"net\",\"me\"]}",
+   "name": ".cn toggle + explicit check"
+  },
+  {
+   "io_pressed_before": "false",
+   "delta": 0,
+   "expected": 0,
+   "name": ".io toggle + explicit check"
+  },
+  {
+   "label": "查更多后缀 +401",
+   "delta": 1,
+   "expected": 1,
+   "tlds_in_body": 401,
+   "name": "more suffixes"
+  },
+  {
+   "button": "重新核验 r551zeroaiauditx.ai",
+   "delta": 1,
+   "expected": 1,
+   "body": "{\"domains\":[\"r551zeroaiauditx.ai\"]}",
+   "name": "single-domain retry (unknown row)"
+  },
+  {
+   "fav_buttons": 34,
+   "after_remove_buttons": 1,
+   "expected": ">=1",
+   "name": "star from quick-check"
+  },
+  {
+   "search_posts": 1,
+   "bodies": [
+    "{\"domains\":[\"r551zeroaiaudit.com\",\"r551zeroaiaudit.cn\",\"r551zeroaiaudit.io\",\"google.com\"]}"
+   ],
+   "name": "advanced bulk check"
+  },
+  {
+   "filename": "domainhunter-bulk-20260906.csv",
+   "header": "domain,status,meaning,theme,score,length,readability,relevance,brandability,first_year_price,expires_at",
+   "has_expires_at": true,
+   "rows": 4,
+   "name": "csv export"
+  },
+  {
+   "count": 3,
+   "domains": [
+    "r551zeroaiauditx.com",
+    "r551zeroaiaudit.cn",
+    "r551zeroaiaudit.com"
+   ],
+   "name": "shortlist items"
+  },
+  {
+   "edit_buttons": 0,
+   "note_storage": [],
+   "visible": 0,
+   "name": "shortlist note"
+  },
+  {
+   "order": {
+    "首年价": [
+     "r551zeroaiaudit.cn\n加备注",
+     "r551zeroaiauditx.com\n加备注",
+     "r551zeroaiaudit.com\n加备注"
+    ],
+    "到期日": [
+     "r551zeroaiauditx.com\n加备注",
+     "r551zeroaiaudit.cn\n加备注",
+     "r551zeroaiaudit.com\n加备注"
+    ],
+    "域名": [
+     "r551zeroaiaudit.cn\n加备注",
+     "r551zeroaiaudit.com\n加备注",
+     "r551zeroaiauditx.com\n加备注"
+    ],
+    "添加时间": [
+     "r551zeroaiauditx.com\n加备注",
+     "r551zeroaiaudit.cn\n加备注",
+     "r551zeroaiaudit.com\n加备注"
+    ]
+   },
+   "name": "shortlist sort"
+  },
+  {
+   "code_masked": "48******",
+   "sync_calls": [
+    "POST /api/sync"
+   ],
+   "readback": {
+    "status": 200,
+    "items": 3,
+    "ui_msg": "我的同步码（90 天有效，可反复推送更新）：\n48******"
+   },
+   "note": "sync:<code> KV 记录无删除端点（TTL 90 天），无法清理",
+   "name": "sync push + import"
+  },
+  {
+   "id": "LXK6AoZcVW",
+   "share_calls": [
+    "POST /api/share"
+   ],
+   "page_status": 200,
+   "api_status": 200,
+   "ssr_title": "3 个可注册域名候选 | DomainHunter",
+   "name": "share create"
+  },
+  {
+   "delete_calls": [
+    "DELETE /api/share/LXK6AoZcVW"
+   ],
+   "page_status": 410,
+   "api_status": 410,
+   "ssr_title": "分享已撤销 | DomainHunter",
+   "robots_noindex": true,
+   "name": "share revoke"
+  },
+  {
+   "switch_checked": "true",
+   "calls": [
+    "POST /api/monitor {\"domain\":\"r551zeroaiauditx.com\",\"enabled\":true,\"status\":\"available\",\"webhook\":\"\"}"
+   ],
+   "list_status": 200,
+   "list_body": "{\"entries\":[{\"domain\":\"r551zeroaiauditx.com\",\"status\":\"available\",\"lastChecked\":0}],\"monitored\":3,\"limit\":500}",
+   "name": "monitor add"
+  },
+  {
+   "cancel_buttons": 1,
+   "calls": [
+    "POST /api/monitor {\"domain\":\"r551zeroaiauditx.com\",\"enabled\":false,\"webhook\":\"\"}"
+   ],
+   "list_after": "{\"entries\":[],\"monitored\":2,\"limit\":500}",
+   "remaining_cancel_buttons": 0,
+   "name": "monitor cancel"
+  }
+ ],
+ "api_calls": [
+  {
+   "t": 1788709077.8966188,
+   "m": "GET",
+   "url": "/api/stats",
+   "body": ""
+  },
+  {
+   "t": 1788709077.897247,
+   "m": "GET",
+   "url": "/api/prices",
+   "body": ""
+  },
+  {
+   "t": 1788709077.897376,
+   "m": "GET",
+   "url": "/api/registrars",
+   "body": ""
+  },
+  {
+   "t": 1788709079.4603553,
+   "m": "POST",
+   "url": "/api/search",
+   "body": "{\"roots\":[\"r551zeroaiaudit\"],\"tlds\":[\"com\",\"cn\",\"io\",\"ai\",\"app\",\"dev\",\"co\",\"net\",\"me\"]}"
+  },
+  {
+   "t": 1788709091.6959507,
+   "m": "POST",
+   "url": "/api/search",
+   "body": "{\"roots\":[\"r551zeroaiauditx\"],\"tlds\":[\"com\",\"cn\",\"io\",\"ai\",\"app\",\"dev\",\"co\",\"net\",\"me\"]}"
+  },
+  {
+   "t": 1788709100.3445475,
+   "m": "POST",
+   "url": "/api/search",
+   "body": "{\"roots\":[\"r551zeroaiauditx\"],\"tlds\":[\"com\",\"io\",\"ai\",\"app\",\"dev\",\"co\",\"net\",\"me\"]}"
+  },
+  {
+   "t": 1788709110.3527873,
+   "m": "POST",
+   "url": "/api/search",
+   "body": "{\"roots\":[\"r551zeroaiauditx\"],\"tlds\":[\"cn\",\"com.cn\",\"org\",\"xyz\",\"cc\",\"tv\",\"tech\",\"online\",\"store\",\"site\",\"top\",\"shop\",\"cloud\",\"pro\",\"vip\",\"club\",\"link\",\"live\",\"space\",\"fun\",\"art\",\"design\",\"studio\",\"info\",\"sh\",\"gg\",\"so\",\"us\",\"in\",\"world\",\"life\",\"agency\",\"games\",\"email\",\"network\",\"digital\",\"media\",\"group\",\"center\",\"works\",\"zone\",\"news\",\"tools\",\"run\",\"codes\",\"company\",\"wiki\",\"blog\",\"team\",\"chat\",\"finance\",\"global\",\"host\",\"social\",\"video\",\"fund\",\"land\",\"click\",\"icu\",\"page\",\"bio\",\"ink\",\"moe\",\"lol\",\"uk\",\"fm\",\"one\",\"cool\",\"red\",\"today\",\"best\",\"wtf\",\"pizza\",\"bar\",\"cafe\",\"money\",\"gold\",\"band\",\"cash\",\"city\",\"estate\",\"expert\",\"farm\",\"blue\",\"pink\",\"black\",\"ninja\",\"rocks\",\"pet\",\"academy\",\"school\",\"coach\",\"care\",\"doctor\",\"restaurant\",\"boutique\",\"clinic\",\"dental\",\"fitness\",\"photos\",\"gallery\",\"salon\",\"yoga\",\"coffee\",\"wine\",\"kitchen\",\"garden\",\"photography\",\"events\",\"solutions\",\"services\",\"consulting\",\"software\",\"marketing\",\"systems\",\"ventures\",\"capital\",\"guru\",\"tips\",\"directory\",\"exchange\",\"institute\",\"international\",\"partners\",\"support\",\"plus\",\"house\",\"market\",\"watch\",\"style\",\"show\",\"website\",\"technology\",\"community\",\"education\",\"training\",\"love\",\"beauty\",\"fashion\",\"work\",\"sale\",\"help\",\"wedding\",\"law\",\"tax\",\"menu\",\"bike\",\"toys\",\"shoes\",\"travel\",\"tours\",\"vacations\",\"holiday\",\"flights\",\"taxi\",\"properties\",\"rentals\",\"apartments\",\"builders\",\"construction\",\"repair\",\"energy\",\"solar\",\"green\",\"eco\",\"earth\",\"engineering\",\"family\",\"baby\",\"mom\",\"dad\",\"dog\",\"gifts\",\"photo\",\"health\",\"fit\",\"dance\",\"guide\",\"reviews\",\"golf\",\"tennis\",\"soccer\",\"football\",\"hockey\",\"surf\",\"ltd\",\"biz\",\"llc\",\"fyi\",\"promo\",\"express\",\"press\",\"stream\",\"movie\",\"pictures\",\"productions\",\"audio\",\"credit\",\"loans\",\"investments\",\"holdings\",\"mortgage\",\"computer\",\"vet\",\"lawyer\",\"legal\",\"delivery\",\"recipes\",\"rent\",\"church\",\"jewelry\",\"cleaning\",\"plumbing\",\"catering\",\"florist\",\"courses\",\"degree\",\"mba\",\"study\",\"forum\",\"review\",\"hair\",\"skin\",\"makeup\",\"homes\",\"boats\",\"autos\",\"careers\",\"management\",\"contractors\",\"equipment\",\"supply\",\"parts\",\"auction\",\"deals\",\"coupons\",\"discount\",\"furniture\",\"lighting\",\"business\",\"limited\",\"associates\",\"cheap\",\"bargains\",\"supplies\",\"camp\",\"camera\",\"diamonds\",\"theater\",\"accountants\",\"engineer\",\"villas\",\"cruises\",\"voyage\",\"limo\",\"tickets\",\"flowers\",\"beer\",\"pub\",\"spa\",\"food\",\"attorney\",\"dentist\",\"clothing\",\"cooking\",\"gift\",\"party\",\"fishing\",\"horse\",\"singles\",\"dating\",\"luxury\",\"organic\",\"tattoo\",\"casa\",\"vodka\",\"casino\",\"bet\",\"poker\",\"futbol\",\"moda\",\"basketball\",\"rugby\",\"cricket\",\"fish\",\"fan\",\"win\",\"wang\",\"day\",\"meme\",\"quest\",\"kids\",\"foundation\",\"bond\",\"sbs\",\"cyou\",\"monster\",\"pics\",\"mobi\",\"asia\",\"buzz\",\"fans\",\"place\",\"report\",\"town\",\"shopping\",\"graphics\",\"glass\",\"vision\",\"tires\",\"surgery\",\"domains\",\"college\",\"actor\",\"immo\",\"vin\",\"university\",\"hospital\",\"gmbh\",\"condos\",\"rehab\",\"nyc\",\"london\",\"tokyo\",\"miami\",\"boston\",\"healthcare\",\"abogado\",\"kaufen\",\"berlin\",\"paris\",\"amsterdam\",\"vegas\",\"immobilien\",\"tienda\",\"de\",\"eu\",\"ca\",\"au\",\"jp\",\"sg\",\"fr\",\"it\",\"es\",\"nl\",\"kr\",\"hk\",\"ch\",\"at\",\"be\",\"se\",\"pl\",\"tw\",\"dk\",\"fi\",\"no\",\"ie\",\"nz\",\"mx\",\"br\",\"pt\",\"cz\",\"tr\",\"ae\",\"id\",\"vn\",\"ph\",\"gr\",\"ro\",\"hu\",\"cl\",\"my\",\"th\",\"sk\",\"ua\",\"ar\",\"ng\",\"il\",\"sa\",\"eg\",\"ke\",\"pe\",\"kz\",\"za\",\"ma\",\"qa\",\"pk\",\"lk\",\"ee\",\"lt\",\"lv\",\"rs\",\"is\",\"ge\",\"uy\",\"lu\",\"la\",\"md\",\"am\",\"mn\",\"uz\"]}"
+  },
+  {
+   "t": 1788709133.2432723,
+   "m": "POST",
+   "url": "/api/search",
+   "body": "{\"domains\":[\"r551zeroaiauditx.ai\"]}"
+  },
+  {
+   "t": 1788709137.513037,
+   "m": "GET",
+   "url": "/api/registrars",
+   "body": ""
+  },
+  {
+   "t": 1788709137.5193594,
+   "m": "GET",
+   "url": "/api/prices",
+   "body": ""
+  },
+  {
+   "t": 1788709138.0898094,
+   "m": "POST",
+   "url": "/api/search",
+   "body": "{\"domains\":[\"r551zeroaiaudit.com\",\"r551zeroaiaudit.cn\",\"r551zeroaiaudit.io\",\"google.com\"]}"
+  },
+  {
+   "t": 1788709139.2857852,
+   "m": "GET",
+   "url": "/api/registrars",
+   "body": ""
+  },
+  {
+   "t": 1788709139.3147216,
+   "m": "GET",
+   "url": "/api/prices",
+   "body": ""
+  },
+  {
+   "t": 1788709140.8087368,
+   "m": "POST",
+   "url": "/api/sync",
+   "body": "{\"items\":[{\"domain\":\"r551zeroaiauditx.com\"},{\"domain\":\"r551zeroaiaudit.cn\"},{\"domain\":\"r551zeroaiaudit.com\"}]}"
+  },
+  {
+   "t": 1788709143.9240782,
+   "m": "GET",
+   "url": "/api/sync/48******",
+   "body": ""
+  },
+  {
+   "t": 1788709145.9566777,
+   "m": "POST",
+   "url": "/api/share",
+   "body": "{\"items\":[{\"domain\":\"r551zeroaiauditx.com\",\"status\":\"available\"},{\"domain\":\"r551zeroaiaudit.cn\",\"status\":\"available\"},{\"domain\":\"r551zeroaiaudit.com\",\"status\":\"available\"}]}"
+  },
+  {
+   "t": 1788709149.3566399,
+   "m": "DELETE",
+   "url": "/api/share/LXK6AoZcVW",
+   "body": "{\"token\":\"vticxKDc5UsJA4U0X-p-caMQ\"}"
+  },
+  {
+   "t": 1788709151.9241958,
+   "m": "POST",
+   "url": "/api/monitor",
+   "body": "{\"domain\":\"r551zeroaiauditx.com\",\"enabled\":true,\"status\":\"available\",\"webhook\":\"\"}"
+  },
+  {
+   "t": 1788709154.5320306,
+   "m": "GET",
+   "url": "/api/registrars",
+   "body": ""
+  },
+  {
+   "t": 1788709154.5464919,
+   "m": "POST",
+   "url": "/api/monitor/list",
+   "body": "{\"domains\":[\"r551zeroaiauditx.com\"]}"
+  },
+  {
+   "t": 1788709157.0394099,
+   "m": "POST",
+   "url": "/api/monitor",
+   "body": "{\"domain\":\"r551zeroaiauditx.com\",\"enabled\":false,\"webhook\":\"\"}"
+  }
+ ],
+ "ai_calls": [],
+ "console_errors": [],
+ "cleanup": {
+  "share_status": 410,
+  "monitor_list_after": "{\"entries\":[],\"monitored\":2,\"limit\":500}",
+  "sync_code_left": true
+ },
+ "storage_final_keys": [
+  "domainhunter:sync:code",
+  "domainhunter:lang",
+  "dh:myShares:v1",
+  "domainhunter:monitor",
+  "domainhunter:theme",
+  "domainhunter:shortlist"
+ ]
+}

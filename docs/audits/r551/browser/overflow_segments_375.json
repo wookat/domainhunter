@@ -1,0 +1,54 @@
+{
+ "/tld/sa": [
+  {
+   "tag": "p",
+   "cls": "mt-6 text-[15px] leading-relaxed text-txt1",
+   "segs": [
+    {
+     "beyond": "、.edu.sa、.med.sa、.pub.sa ",
+     "context": "、.com.sa、.net.sa、.gov.sa、.org.sa、.sch.sa、.edu.sa、.med.sa、.pub.sa ",
+     "maxRight": 569
+    }
+   ]
+  }
+ ],
+ "/vs/clinic-vs-care": [
+  {
+   "tag": "p",
+   "cls": "mt-2.5 text-[15px] leading-relaxed text-txt1",
+   "segs": [
+    {
+     "beyond": "al、.vet、.vision ",
+     "context": "tal、.dentist、.doctor、.healthcare、.hospital、.vet、.vision ",
+     "maxRight": 489
+    }
+   ]
+  }
+ ],
+ "/tld/nz": [
+  {
+   "tag": "p",
+   "cls": "mt-6 text-[15px] leading-relaxed text-txt1",
+   "segs": [
+    {
+     "beyond": "i.nz、.maori.nz、.school.nz、.ac.nz ",
+     "context": "nz、.org.nz、.net.nz、.geek.nz、.gen.nz、.kiwi.nz、.maori.nz、.school.nz、.ac.nz ",
+     "maxRight": 625
+    }
+   ]
+  }
+ ],
+ "/vs/technology-vs-tech": [
+  {
+   "tag": "p",
+   "cls": "mt-2.5 text-[15px] leading-relaxed text-txt1",
+   "segs": [
+    {
+     "beyond": "s ",
+     "context": "odes、.digital、.software、.support、.systems ",
+     "maxRight": 380
+    }
+   ]
+  }
+ ]
+}

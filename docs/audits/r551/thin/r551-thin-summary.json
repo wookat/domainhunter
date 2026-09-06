@@ -1,0 +1,1041 @@
+{
+ "baseline": {
+  "R540/R546 vs/en": {
+   "linkShare_median": 0.1984,
+   "gt25": 0,
+   "ge23": 0,
+   "max": 0.2298,
+   "prose_median": 628
+  },
+  "R540/R546 vs/zh": {
+   "linkShare_median": 0.168,
+   "gt25": 0,
+   "prose_median": 1013.5
+  },
+  "R537 tld": {
+   "nnMasked_median_zh": 0.266,
+   "nnMasked_median_en": null,
+   "prose_median_zh": 665
+  }
+ },
+ "full": {
+  "tld/zh": {
+   "linkShare": {
+    "n": 408,
+    "median": 0.1233,
+    "p90": 0.1462,
+    "max": 0.1799,
+    "min": 0.0692
+   },
+   "gt25": 0,
+   "ge23": 0,
+   "prose": {
+    "n": 408,
+    "median": 665.0,
+    "p90": 925,
+    "max": 1229,
+    "min": 531
+   },
+   "nnMasked": {
+    "n": 408,
+    "median": 0.266,
+    "p90": 0.353,
+    "max": 0.45,
+    "min": 0.134
+   },
+   "faqLdMismatch": 0,
+   "dupSentenceRatio_max": 0.0,
+   "top_linkShare": [
+    [
+     "/tld/fun",
+     0.1799
+    ],
+    [
+     "/tld/club",
+     0.1771
+    ],
+    [
+     "/tld/vip",
+     0.1769
+    ],
+    [
+     "/tld/shop",
+     0.1723
+    ],
+    [
+     "/tld/studio",
+     0.1707
+    ]
+   ]
+  },
+  "tld/en": {
+   "linkShare": {
+    "n": 408,
+    "median": 0.153,
+    "p90": 0.184,
+    "max": 0.227,
+    "min": 0.0825
+   },
+   "gt25": 0,
+   "ge23": 0,
+   "prose": {
+    "n": 408,
+    "median": 412.0,
+    "p90": 608,
+    "max": 843,
+    "min": 318
+   },
+   "nnMasked": {
+    "n": 408,
+    "median": 0.205,
+    "p90": 0.267,
+    "max": 0.44,
+    "min": 0.083
+   },
+   "faqLdMismatch": 0,
+   "dupSentenceRatio_max": 0.0,
+   "top_linkShare": [
+    [
+     "/tld/vip",
+     0.227
+    ],
+    [
+     "/tld/fun",
+     0.2238
+    ],
+    [
+     "/tld/club",
+     0.2153
+    ],
+    [
+     "/tld/shop",
+     0.2151
+    ],
+    [
+     "/tld/studio",
+     0.2118
+    ]
+   ]
+  },
+  "guide/zh": {
+   "linkShare": {
+    "n": 410,
+    "median": 0.1836,
+    "p90": 0.2035,
+    "max": 0.2174,
+    "min": 0.0982
+   },
+   "gt25": 0,
+   "ge23": 0,
+   "prose": {
+    "n": 410,
+    "median": 1186.5,
+    "p90": 1339,
+    "max": 1845,
+    "min": 940
+   },
+   "nnMasked": {
+    "n": 410,
+    "median": 0.0785,
+    "p90": 0.109,
+    "max": 0.168,
+    "min": 0.031
+   },
+   "faqLdMismatch": 0,
+   "dupSentenceRatio_max": 0.02,
+   "top_linkShare": [
+    [
+     "/guide/fanclub",
+     0.2174
+    ],
+    [
+     "/guide/newsletter",
+     0.2154
+    ],
+    [
+     "/guide/fashion",
+     0.2153
+    ],
+    [
+     "/guide/taekwondo",
+     0.2152
+    ],
+    [
+     "/guide/photography",
+     0.2143
+    ]
+   ]
+  },
+  "guide/en": {
+   "linkShare": {
+    "n": 410,
+    "median": 0.1683,
+    "p90": 0.188,
+    "max": 0.2122,
+    "min": 0.1032
+   },
+   "gt25": 0,
+   "ge23": 0,
+   "prose": {
+    "n": 410,
+    "median": 728.5,
+    "p90": 826,
+    "max": 1052,
+    "min": 540
+   },
+   "nnMasked": {
+    "n": 410,
+    "median": 0.064,
+    "p90": 0.083,
+    "max": 0.124,
+    "min": 0.007
+   },
+   "faqLdMismatch": 0,
+   "dupSentenceRatio_max": 0.021,
+   "top_linkShare": [
+    [
+     "/guide/juicebar",
+     0.2122
+    ],
+    [
+     "/guide/coffee",
+     0.2076
+    ],
+    [
+     "/guide/candle",
+     0.2035
+    ],
+    [
+     "/guide/food",
+     0.2013
+    ],
+    [
+     "/guide/soapmaking",
+     0.2005
+    ]
+   ]
+  },
+  "vs/zh": {
+   "linkShare": {
+    "n": 444,
+    "median": 0.168,
+    "p90": 0.1914,
+    "max": 0.2073,
+    "min": 0.0956
+   },
+   "gt25": 0,
+   "ge23": 0,
+   "prose": {
+    "n": 444,
+    "median": 1013.5,
+    "p90": 1166,
+    "max": 1252,
+    "min": 740
+   },
+   "nnMasked": {
+    "n": 444,
+    "median": 0.229,
+    "p90": 0.34,
+    "max": 0.458,
+    "min": 0.149
+   },
+   "faqLdMismatch": 0,
+   "dupSentenceRatio_max": 0.023,
+   "top_linkShare": [
+    [
+     "/vs/shoes-vs-store",
+     0.2073
+    ],
+    [
+     "/vs/one-vs-me",
+     0.2043
+    ],
+    [
+     "/vs/mom-vs-me",
+     0.2028
+    ],
+    [
+     "/vs/vip-vs-club",
+     0.2026
+    ],
+    [
+     "/vs/toys-vs-shop",
+     0.2024
+    ]
+   ]
+  },
+  "vs/en": {
+   "linkShare": {
+    "n": 444,
+    "median": 0.1984,
+    "p90": 0.2221,
+    "max": 0.2298,
+    "min": 0.1027
+   },
+   "gt25": 0,
+   "ge23": 0,
+   "prose": {
+    "n": 444,
+    "median": 628.0,
+    "p90": 738,
+    "max": 796,
+    "min": 462
+   },
+   "nnMasked": {
+    "n": 444,
+    "median": 0.173,
+    "p90": 0.246,
+    "max": 0.392,
+    "min": 0.117
+   },
+   "faqLdMismatch": 0,
+   "dupSentenceRatio_max": 0.023,
+   "top_linkShare": [
+    [
+     "/vs/golf-vs-travel",
+     0.2298
+    ],
+    [
+     "/vs/tax-vs-finance",
+     0.2298
+    ],
+    [
+     "/vs/estate-vs-land",
+     0.2298
+    ],
+    [
+     "/vs/fyi-vs-info",
+     0.2297
+    ],
+    [
+     "/vs/gg-vs-tv",
+     0.2294
+    ]
+   ]
+  }
+ },
+ "sample": {
+  "vs/en": {
+   "seed": 551,
+   "n": 40,
+   "linkShare": {
+    "n": 40,
+    "median": 0.2021,
+    "p90": 0.226,
+    "max": 0.2287,
+    "min": 0.1648
+   },
+   "gt25": 0,
+   "ge23": 0,
+   "prose": {
+    "n": 40,
+    "median": 623.0,
+    "p90": 721,
+    "max": 769,
+    "min": 467
+   },
+   "nnMasked": {
+    "n": 40,
+    "median": 0.181,
+    "p90": 0.24,
+    "max": 0.269,
+    "min": 0.121
+   },
+   "pages": [
+    {
+     "path": "/vs/ma-vs-eg",
+     "linkShare": 0.1828,
+     "prose": 657,
+     "nnMasked": 0.191,
+     "nnPath": "/vs/eg-vs-sa",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/rent-vs-rentals",
+     "linkShare": 0.1858,
+     "prose": 596,
+     "nnMasked": 0.165,
+     "nnPath": "/vs/apartments-vs-rentals",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/rs-vs-io",
+     "linkShare": 0.2089,
+     "prose": 625,
+     "nnMasked": 0.132,
+     "nnPath": "/vs/com-vs-io",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/works-vs-studio",
+     "linkShare": 0.1903,
+     "prose": 715,
+     "nnMasked": 0.137,
+     "nnPath": "/vs/work-vs-works",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/video-vs-tv",
+     "linkShare": 0.1725,
+     "prose": 657,
+     "nnMasked": 0.146,
+     "nnPath": "/vs/media-vs-tv",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/dental-vs-doctor",
+     "linkShare": 0.2287,
+     "prose": 499,
+     "nnMasked": 0.153,
+     "nnPath": "/vs/dentist-vs-dental",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/ai-vs-dev",
+     "linkShare": 0.2258,
+     "prose": 559,
+     "nnMasked": 0.182,
+     "nnPath": "/vs/com-vs-ai",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/credit-vs-finance",
+     "linkShare": 0.2111,
+     "prose": 497,
+     "nnMasked": 0.203,
+     "nnPath": "/vs/fund-vs-finance",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/diamonds-vs-jewelry",
+     "linkShare": 0.1997,
+     "prose": 581,
+     "nnMasked": 0.182,
+     "nnPath": "/vs/jewelry-vs-boutique",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/green-vs-eco",
+     "linkShare": 0.2245,
+     "prose": 532,
+     "nnMasked": 0.215,
+     "nnPath": "/vs/eco-vs-earth",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/icu-vs-xyz",
+     "linkShare": 0.2243,
+     "prose": 467,
+     "nnMasked": 0.159,
+     "nnPath": "/vs/com-vs-xyz",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/host-vs-cloud",
+     "linkShare": 0.1779,
+     "prose": 684,
+     "nnMasked": 0.121,
+     "nnPath": "/vs/cloud-vs-online",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/wang-vs-com",
+     "linkShare": 0.2083,
+     "prose": 627,
+     "nnMasked": 0.202,
+     "nnPath": "/vs/wang-vs-cn",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/tech-vs-com",
+     "linkShare": 0.2024,
+     "prose": 662,
+     "nnMasked": 0.136,
+     "nnPath": "/vs/com-vs-xyz",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/me-vs-io",
+     "linkShare": 0.1871,
+     "prose": 721,
+     "nnMasked": 0.179,
+     "nnPath": "/vs/life-vs-me",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/ai-vs-tech",
+     "linkShare": 0.2017,
+     "prose": 649,
+     "nnMasked": 0.148,
+     "nnPath": "/vs/ai-vs-dev",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/com-vs-co",
+     "linkShare": 0.1876,
+     "prose": 641,
+     "nnMasked": 0.132,
+     "nnPath": "/vs/org-vs-co",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/voyage-vs-tours",
+     "linkShare": 0.2042,
+     "prose": 600,
+     "nnMasked": 0.177,
+     "nnPath": "/vs/tours-vs-vacations",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/online-vs-site",
+     "linkShare": 0.1792,
+     "prose": 765,
+     "nnMasked": 0.146,
+     "nnPath": "/vs/space-vs-site",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/eco-vs-earth",
+     "linkShare": 0.2181,
+     "prose": 545,
+     "nnMasked": 0.215,
+     "nnPath": "/vs/green-vs-eco",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/tours-vs-vacations",
+     "linkShare": 0.2279,
+     "prose": 525,
+     "nnMasked": 0.246,
+     "nnPath": "/vs/vacations-vs-holiday",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/sa-vs-ae",
+     "linkShare": 0.214,
+     "prose": 562,
+     "nnMasked": 0.21,
+     "nnPath": "/vs/qa-vs-ae",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/photography-vs-photos",
+     "linkShare": 0.2283,
+     "prose": 490,
+     "nnMasked": 0.197,
+     "nnPath": "/vs/photos-vs-gallery",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/fm-vs-tv",
+     "linkShare": 0.2194,
+     "prose": 484,
+     "nnMasked": 0.222,
+     "nnPath": "/vs/band-vs-fm",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/blog-vs-me",
+     "linkShare": 0.1775,
+     "prose": 769,
+     "nnMasked": 0.178,
+     "nnPath": "/vs/one-vs-me",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/io-vs-ai",
+     "linkShare": 0.204,
+     "prose": 636,
+     "nnMasked": 0.18,
+     "nnPath": "/vs/com-vs-ai",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/academy-vs-school",
+     "linkShare": 0.1893,
+     "prose": 711,
+     "nnMasked": 0.154,
+     "nnPath": "/vs/academy-vs-coach",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/lighting-vs-garden",
+     "linkShare": 0.2028,
+     "prose": 621,
+     "nnMasked": 0.246,
+     "nnPath": "/vs/lighting-vs-solar",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/store-vs-com",
+     "linkShare": 0.2017,
+     "prose": 661,
+     "nnMasked": 0.13,
+     "nnPath": "/vs/com-vs-xyz",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/audio-vs-fm",
+     "linkShare": 0.1648,
+     "prose": 608,
+     "nnMasked": 0.189,
+     "nnPath": "/vs/band-vs-fm",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/singles-vs-dating",
+     "linkShare": 0.191,
+     "prose": 631,
+     "nnMasked": 0.24,
+     "nnPath": "/vs/dating-vs-love",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/lt-vs-lv",
+     "linkShare": 0.1887,
+     "prose": 632,
+     "nnMasked": 0.269,
+     "nnPath": "/vs/lt-vs-ee",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/fishing-vs-boats",
+     "linkShare": 0.2016,
+     "prose": 606,
+     "nnMasked": 0.268,
+     "nnPath": "/vs/fish-vs-fishing",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/surf-vs-fun",
+     "linkShare": 0.2283,
+     "prose": 561,
+     "nnMasked": 0.236,
+     "nnPath": "/vs/surf-vs-travel",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/flights-vs-travel",
+     "linkShare": 0.1827,
+     "prose": 738,
+     "nnMasked": 0.194,
+     "nnPath": "/vs/travel-vs-tours",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/io-vs-sh",
+     "linkShare": 0.1749,
+     "prose": 769,
+     "nnMasked": 0.129,
+     "nnPath": "/vs/app-vs-io",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/space-vs-site",
+     "linkShare": 0.2228,
+     "prose": 579,
+     "nnMasked": 0.146,
+     "nnPath": "/vs/online-vs-site",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/house-vs-estate",
+     "linkShare": 0.226,
+     "prose": 572,
+     "nnMasked": 0.207,
+     "nnPath": "/vs/mortgage-vs-estate",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/mobi-vs-app",
+     "linkShare": 0.1835,
+     "prose": 721,
+     "nnMasked": 0.149,
+     "nnPath": "/vs/app-vs-dev",
+     "faq": "3/3"
+    },
+    {
+     "path": "/vs/properties-vs-estate",
+     "linkShare": 0.2137,
+     "prose": 515,
+     "nnMasked": 0.202,
+     "nnPath": "/vs/estate-vs-land",
+     "faq": "3/3"
+    }
+   ]
+  },
+  "tld/en": {
+   "seed": 551,
+   "n": 20,
+   "linkShare": {
+    "n": 20,
+    "median": 0.1529,
+    "p90": 0.1762,
+    "max": 0.1996,
+    "min": 0.0851
+   },
+   "gt25": 0,
+   "ge23": 0,
+   "prose": {
+    "n": 20,
+    "median": 413.0,
+    "p90": 614,
+    "max": 753,
+    "min": 332
+   },
+   "nnMasked": {
+    "n": 20,
+    "median": 0.2095,
+    "p90": 0.255,
+    "max": 0.275,
+    "min": 0.111
+   },
+   "pages": [
+    {
+     "path": "/tld/meme",
+     "linkShare": 0.1404,
+     "prose": 447,
+     "nnMasked": 0.22,
+     "nnPath": "/tld/day",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/kr",
+     "linkShare": 0.115,
+     "prose": 562,
+     "nnMasked": 0.145,
+     "nnPath": "/tld/sg",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/engineering",
+     "linkShare": 0.1677,
+     "prose": 402,
+     "nnMasked": 0.252,
+     "nnPath": "/tld/green",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/boats",
+     "linkShare": 0.1636,
+     "prose": 414,
+     "nnMasked": 0.275,
+     "nnPath": "/tld/homes",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/vodka",
+     "linkShare": 0.1453,
+     "prose": 441,
+     "nnMasked": 0.217,
+     "nnPath": "/tld/cricket",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/link",
+     "linkShare": 0.1712,
+     "prose": 334,
+     "nnMasked": 0.202,
+     "nnPath": "/tld/studio",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/farm",
+     "linkShare": 0.1786,
+     "prose": 377,
+     "nnMasked": 0.198,
+     "nnPath": "/tld/care",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/hu",
+     "linkShare": 0.1063,
+     "prose": 614,
+     "nnMasked": 0.13,
+     "nnPath": "/tld/sa",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/properties",
+     "linkShare": 0.1523,
+     "prose": 412,
+     "nnMasked": 0.255,
+     "nnPath": "/tld/apartments",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/tax",
+     "linkShare": 0.166,
+     "prose": 392,
+     "nnMasked": 0.24,
+     "nnPath": "/tld/engineering",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/cheap",
+     "linkShare": 0.1594,
+     "prose": 406,
+     "nnMasked": 0.195,
+     "nnPath": "/tld/diamonds",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/photos",
+     "linkShare": 0.1762,
+     "prose": 388,
+     "nnMasked": 0.227,
+     "nnPath": "/tld/photography",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/lu",
+     "linkShare": 0.0851,
+     "prose": 753,
+     "nnMasked": 0.111,
+     "nnPath": "/tld/lk",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/so",
+     "linkShare": 0.1658,
+     "prose": 332,
+     "nnMasked": 0.17,
+     "nnPath": "/tld/cn",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/camera",
+     "linkShare": 0.1535,
+     "prose": 386,
+     "nnMasked": 0.219,
+     "nnPath": "/tld/diamonds",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/shopping",
+     "linkShare": 0.1415,
+     "prose": 443,
+     "nnMasked": 0.268,
+     "nnPath": "/tld/place",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/gift",
+     "linkShare": 0.15,
+     "prose": 425,
+     "nnMasked": 0.193,
+     "nnPath": "/tld/spa",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/academy",
+     "linkShare": 0.1996,
+     "prose": 369,
+     "nnMasked": 0.199,
+     "nnPath": "/tld/school",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/dog",
+     "linkShare": 0.1476,
+     "prose": 433,
+     "nnMasked": 0.252,
+     "nnPath": "/tld/green",
+     "faq": "3/3"
+    },
+    {
+     "path": "/tld/no",
+     "linkShare": 0.1044,
+     "prose": 626,
+     "nnMasked": 0.128,
+     "nnPath": "/tld/dk",
+     "faq": "3/3"
+    }
+   ]
+  }
+ },
+ "r542": {
+  "pages": {
+   "uk-vs-com": {
+    "registrar_in_verdict": true,
+    "opener_first120": "Nominet's registry field definitions list sixteen registrant types for .uk, and three of them — Non-UK Individual, Non-U",
+    "opener59": "nominetsregistryfielddefinitionslistsixteenregistranttypesf",
+    "old_opener_present": false,
+    "shared_later_sentence": true
+   },
+   "de-vs-com": {
+    "registrar_in_verdict": true,
+    "opener_first120": "DENIC's international comparison for 2024 counts more than 2.1 million .de domains held from outside Germany — 11.8% of ",
+    "opener59": "denicsinternationalcomparisonfor2024countsmorethan21million",
+    "old_opener_present": false,
+    "shared_later_sentence": true
+   },
+   "au-vs-com": {
+    "registrar_in_verdict": true,
+    "opener_first120": "auDA's own consumer research, cited on its benefits page, finds seven in ten Australian shoppers choose .au websites to ",
+    "opener59": "audasownconsumerresearchcitedonitsbenefitspagefindssevenint",
+    "old_opener_present": false,
+    "shared_later_sentence": true
+   },
+   "fr-vs-com": {
+    "registrar_in_verdict": true,
+    "opener_first120": "AFNIC's September 2026 milestone note puts .fr at 4.5 million names and reports that 62% of French VSEs and SMEs with a ",
+    "opener59": "afnicsseptember2026milestonenoteputsfrat45millionnamesandre",
+    "old_opener_present": false,
+    "shared_later_sentence": true
+   }
+  },
+  "opener59_pairwise_distinct": true,
+  "shared_sentence_r546": {},
+  "site_wide_en_long_paragraph_first59_shared": {
+   "groups": 234,
+   "examples": [
+    [
+     "lawyerwritestheprofessionintotheaddresspersonalattorneybran",
+     [
+      "abogado-vs-lawyer",
+      "attorney-vs-lawyer",
+      "lawyer-vs-legal"
+     ]
+    ],
+    [
+     "academywritesweteachthisstraightintothedomainonlinecoursepl",
+     [
+      "academy-vs-coach",
+      "academy-vs-school",
+      "college-vs-academy",
+      "courses-vs-academy",
+      "education-vs-academy"
+     ]
+    ],
+    [
+     "coachridesthecoachingeconomyboompersonaltrainerslifecoaches",
+     [
+      "academy-vs-coach",
+      "coach-vs-expert",
+      "fitness-vs-coach",
+      "tennis-vs-coach",
+      "training-vs-coach"
+     ]
+    ],
+    [
+     "thetopcaseforacademyonlinecourseplatformsbootcampstheother4",
+     [
+      "academy-vs-coach",
+      "academy-vs-school"
+     ]
+    ],
+    [
+     "thetopcaseforcoachpersonaltrainerssportscoachestheother4coa",
+     [
+      "academy-vs-coach",
+      "coach-vs-expert"
+     ]
+    ],
+    [
+     "schoolisthemostliteraleducationsuffixthereisaphysicalschool",
+     [
+      "academy-vs-school",
+      "mba-vs-school"
+     ]
+    ],
+    [
+     "taxwritesthebusinessintotheaddresstaxandaccountingfirmsfili",
+     [
+      "accountants-vs-tax",
+      "tax-vs-finance"
+     ]
+    ],
+    [
+     "studiosaysexactlywhatyouaredesignstudiosfilmandphototeamsga",
+     [
+      "actor-vs-studio",
+      "art-vs-studio",
+      "dance-vs-studio",
+      "media-vs-studio",
+      "productions-vs-studio",
+      "salon-vs-studio"
+     ]
+    ],
+    [
+     "agencyisaselfintroducingtlddesignstudiosmarketingandgrowtht",
+     [
+      "agency-vs-co",
+      "group-vs-agency",
+      "marketing-vs-agency",
+      "services-vs-agency"
+     ]
+    ],
+    [
+     "coiscolombiascountrycoderebrandedgloballyasshorthandforcomp",
+     [
+      "agency-vs-co",
+      "co-vs-me",
+      "com-vs-co",
+      "io-vs-co",
+      "ltd-vs-co",
+      "org-vs-co"
+     ]
+    ],
+    [
+     "aiisanguillascountrydomainturnedgoldrushputyourproductonaia",
+     [
+      "ai-vs-app",
+      "ai-vs-dev",
+      "ai-vs-tech",
+      "com-vs-ai",
+      "io-vs-ai"
+     ]
+    ],
+    [
+     "appisoperatedbygoogleandisoneofthefewtldswithahardsecurityg",
+     [
+      "ai-vs-app",
+      "app-vs-dev",
+      "app-vs-io",
+      "app-vs-site",
+      "chat-vs-app",
+      "com-vs-app"
+     ]
+    ],
+    [
+     "devsharesappsgoogleoperatedhttpsenforcedfoundationbutspeaks",
+     [
+      "ai-vs-dev",
+      "app-vs-dev",
+      "codes-vs-dev",
+      "com-vs-dev",
+      "dev-vs-tech",
+      "engineering-vs-dev"
+     ]
+    ],
+    [
+     "thetopcasefortechbroadtechcompanieshardwaresaasroboticstheo",
+     [
+      "ai-vs-tech",
+      "network-vs-tech"
+     ]
+    ],
+    [
+     "berlinwritesthecityintotheaddresslocalbusinessesandrestaura",
+     [
+      "amsterdam-vs-berlin",
+      "berlin-vs-city"
+     ]
+    ]
+   ]
+  },
+  "production_verdict_opener59_guard": {
+   "zh": {
+    "pages": 444,
+    "verdict_missing": [],
+    "shared_prefix_groups": {}
+   },
+   "en": {
+    "pages": 444,
+    "verdict_missing": [],
+    "shared_prefix_groups": {}
+   }
+  }
+ }
+}
