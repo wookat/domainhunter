@@ -103,6 +103,28 @@ describe("compares.ts 占位符全部合法且只引用本页两侧", () => {
     expect(count).toBeGreaterThan(1000);
   });
 
+  it("「X vs Y」两侧价格占位不得引用同一 TLD（R553 发现 win-vs-vip zh 写成 win vs win）", () => {
+    const bad: string[] = [];
+    for (const lang of ["zh", "en"] as const) {
+      for (const { slug, field, text } of texts(lang)) {
+        for (const m of text.matchAll(/\{\{price:([a-z0-9.-]+):[^}]*\}\}\s*vs\s*\{\{price:([a-z0-9.-]+):[^}]*\}\}/g)) {
+          if (m[1] === m[2]) bad.push(`${slug} ${lang} ${field}: ${m[0]}`);
+        }
+      }
+    }
+    expect(bad).toEqual([]);
+  });
+
+  it("单页 ccTLD-vs-com 中「大型 ccTLD 良心价」类描述 ccTLD 定价的句子不得引用 .com 占位（R553 P1：de-vs-com）", () => {
+    for (const lang of ["zh", "en"] as const) {
+      const v = TLD_COMPARES["de-vs-com"][lang].verdict;
+      const sentence = v.split(lang === "zh" ? /[。；]/ : /(?<=[.;])\s+/).find((s) => /ccTLD 里的良心价|honest pricing for a major ccTLD/.test(s));
+      expect(sentence, `${lang} 句子存在`).toBeTruthy();
+      expect(sentence).toMatch(/\{\{price:de:first:usd\}\}/);
+      expect(sentence).not.toMatch(/\{\{price:com:/);
+    }
+  });
+
   it("KV 无数据时所有页面正文仍可完整渲染（无「—」、无残留占位）", () => {
     for (const lang of ["zh", "en"] as const) {
       for (const { slug, field, text } of texts(lang)) {
