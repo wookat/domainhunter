@@ -35,17 +35,17 @@ Cloudflare Workers + Hono（API/MCP/SSR/cron）· React 18 + TypeScript + Vite +
 - 本地跑 Worker：`apps/web` 下 `pnpm build && npx wrangler dev --port 8787`（细节与坑见 SKILL）。
 - Secrets 只走 `cd apps/web && npx wrangler secret put <NAME>`；`wrangler.jsonc` 只放公开 vars（当前仅 `REGISTRAR_AFFILIATE_JSON: "{}"`）。
 
-## 5. 当前实时服务状态（2026-09-05 18:15 UTC 实查）
+## 5. 当前实时服务状态（2026-09-06 00:20 UTC 实查）
 
 | 项 | 值 | 证据 |
 |---|---|---|
 | 线上地址 | https://hunt.zalize.com （自定义域）；Worker 直连 https://domainhunter.wookat520.workers.dev | 首页 200 |
-| 生产 Worker version | `276d3aa2-fb65-4db3-b73c-66c08e8edfc5`（deployed 2026-09-05T18:11Z，含 R501–R514；前一版 `ba3f417b` 16:01Z 含 R501–R510） | `npx wrangler deployments list`（apps/web） |
-| 对应代码 tip | `deploy/r192-r195` @ **2da9bcb**（#477 R514 合并提交；#473 R512 / #474 R511 为纯文档） | R510 生产复验 https://github.com/wookat/domainhunter/pull/475#issuecomment-5553032616 ；R509 零 AI 回归 https://github.com/wookat/domainhunter/pull/471#issuecomment-5552746476 |
+| 生产 Worker version | `3ed4fab4-0e25-4806-9adb-864922e389e1`（deployed 2026-09-06T00:15Z，含 R501–R515；前一版 `276d3aa2` 09-05 18:11Z 含至 R514） | `npx wrangler deployments list`（apps/web） |
+| 对应代码 tip | `deploy/r192-r195` @ **0b78622**（#478 R515 合并提交） | R510 生产复验 https://github.com/wookat/domainhunter/pull/475#issuecomment-5553032616 ；R509 零 AI 回归 https://github.com/wookat/domainhunter/pull/471#issuecomment-5552746476 |
 | 内容计数 | **TLD 408 / 行业指南 410 / 对比页 444 / sitemap 1,270 URL**（1,262 内容页 + 8 静态页） | `scripts/content-counts.json` 与 `curl sitemap.xml?cb=` 逐类 grep 一致 |
-| cron 心跳 | `cronLast=2026-09-05T18:00:17Z`（每 6h） | `/api/usage` |
+| cron 心跳 | `cronLast=2026-09-06T00:00:58Z`（每 6h） | `/api/usage` |
 | 价格 | `pricesLastOk=2026-09-04T12:00Z`，`/api/prices` 351 个 TLD 有 Porkbun 报价，非 stale | `/api/prices` |
-| IndexNow | 上次成功 2026-09-03T12:00Z；**09-05 18:00Z cron 跑了但 IndexNow 一步被跳过**（`indexnowLastAttempt=12:00:17.244Z`，`cronLast=18:00:17.150Z`，差 21,599,906 ms < 6h 冷却门 21,600,000 ms → 94 ms 之差判「未到期」）。**R514（#477）冷却门 6h→5h / 日间隔 24h→23h 已 18:11Z 上线**，首个能真正推送的 cron 是 09-06 00:00Z：期望 `indexnowLastAttempt`≈`cronLast`、`indexnowPending` 1270→970，之后每 6h −300（**待核对**，见 §10 第 5 项） | `/api/usage.indexnowPending/indexnowLastAttempt/indexnowLastError` |
+| IndexNow | 上次成功 2026-09-03T12:00Z；`indexnowPending` 仍 **1270**。09-06 00:00:58Z cron（R514 后首个）**真尝试了**（`indexnowLastAttempt == cronLast`，门已放行）但首批 100 URL 上游 **429**、`submitted 0`（`indexnowLastError.at == cronLast`）；R504 时本机直连 100 URL 曾 200，推断为整点瞬态限流。**R515（#478）同批 60s 退避重试 ≤2 次已 00:15Z 上线**，新增 `indexnowLastResult{ok,status,submitted,retries}`（当前 `null`，首次写入在 06:00Z cron）。期望 06:00Z：`indexnowLastResult.ok=true`、`indexnowPending` 1270→970；若 `retries>0` 说明是靠重试拿到（**待核对**，见 §10 第 5 项） | `/api/usage.indexnowPending/indexnowLastAttempt/indexnowLastError/indexnowLastResult` |
 | 百度推送 | 未配置（`baiduLast=null`）；但 `botsBy.baidu=6`（Baiduspider 已自发来访，R485 调研时为 0） | `/api/usage` |
 | 验证 meta / analytics beacon | 首页 `<head>` 无 GSC/Bing/Baidu meta、无 cf-beacon | `curl -A Mozilla /` |
 | 注册商返佣 | `/api/registrars` = `{"affiliate":{}}`（纯链接） | — |
@@ -105,13 +105,13 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 | `prices:v2:{TLD_LIST.length}` · `prices:latest` · `prices:lastOk` · `prices:lastFail` | worker.ts / `prices-cache.ts` / `prices-fetch.ts` | Porkbun 缓存 24h（key 掺 TLD 数，扩容自动失效）· stale 兜底 30d · 心跳 |
 | `share:{id}` · `sync:{code}` | worker.ts | 分享快照 30d（撤销后写 `{revoked:true}` 同 TTL）· 同步码 90d |
 | `cron:last` | worker.ts | cron 心跳 |
-| `indexnow:last` · `indexnow:lastAttempt` · `indexnow:lastError` | `INDEXNOW_*_KEY` | 上次成功 / 上次尝试 / 失败详情 JSON |
+| `indexnow:last` · `indexnow:lastAttempt` · `indexnow:lastError` · `indexnow:lastResult` | `INDEXNOW_*_KEY` | 上次成功 / 上次尝试 / 失败详情 JSON / 最近一次真正发请求的结果 JSON（含 `retries`，R515） |
 | `baidu:last` · `baidu:lastAttempt` · `baidu:lastError` · `baidu:pushed` | `BAIDU_*_KEY` | 百度推送状态；**未配置 BAIDU_PUSH_* 时不会出现** |
 | `dh:llm-breaker:v1` | `rule-fallback.ts` `LLM_BREAKER_KEY` | quota 熔断，300s |
 
 ### 7.2 `/api/usage` 字段速查
 
-顶层：`days{date→…}`、`cronLast`、`indexnowLast`、`indexnowLastAttempt`（R514）、`indexnowLastError`、`pricesLastOk`、`pricesLastFail`、`baiduLast`、`baiduLastError`。每日项：`searches`、`byTld`、`fast`、`refine`、`aiErrors{quota|rate-limit|network|…}`、`fallbacks{quota|quota-breaker|…}`（R471）、`llmProvider{primary,fallback}`（R474，成功主轮才有）、`outbound`/`outboundByTld`（R480）、`pageviews{home,results,tld,guide,vs,prices,other}`、`bots`、`botsBy{google,bing,baidu,ai,other}`（R481/R482）。全部只计数，不存 IP/UA/输入。
+顶层：`days{date→…}`、`cronLast`、`indexnowLast`、`indexnowLastAttempt`（R514）、`indexnowLastError`（含 `retries`，R515）、`indexnowLastResult`（R515，每次真正发请求都写，成功失败均含 `retries`）、`pricesLastOk`、`pricesLastFail`、`baiduLast`、`baiduLastError`。每日项：`searches`、`byTld`、`fast`、`refine`、`aiErrors{quota|rate-limit|network|…}`、`fallbacks{quota|quota-breaker|…}`（R471）、`llmProvider{primary,fallback}`（R474，成功主轮才有）、`outbound`/`outboundByTld`（R480）、`pageviews{home,results,tld,guide,vs,prices,other}`、`bots`、`botsBy{google,bing,baidu,ai,other}`（R481/R482）。全部只计数，不存 IP/UA/输入。
 
 ### 7.3 内容计数
 
@@ -130,7 +130,7 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 ## 9. 已知问题 / 坑与注意事项
 
 - **`usage:{date}` 非原子计数（P2，R487 已修）**：此前多 isolate 并发 get→merge→put 互相覆盖（R484 审计 4 次外链只入账 3 次；本地双 workerd 12 并发基线只入账 2）。R487 起全部计数字段按 isolate 分片写 `usage:{date}:<shard>`，读侧深合并，本地 12 并发精确 12；生产直证用 `N=12 node scripts/verify-r487-local.mjs https://hunt.zalize.com`（会写 12 次 aliyun/cn 点击，自动等 65s）。pv 已于 R482 修复；`stats:checked` 同类问题，允许误差。
-- **IndexNow 429 / 跳过**：2026-09-04 18:00 全量推送被 api.indexnow.org 限流（R504 改 3×100/cron 已解）；09-05 18:00Z 又因冷却门 = cron 周期被 94 ms 之差跳过（R514 改 5h/23h 已解）。判读：`indexnowLastAttempt` 不随 `cronLast` 前进 = 被门拦住；前进但 `lastError.at` 同步前进 = 尝试了但上游失败。
+- **IndexNow 429 / 跳过**：2026-09-04 18:00 全量推送被 api.indexnow.org 限流（R504 改 3×100/cron 已解）；09-05 18:00Z 又因冷却门 = cron 周期被 94 ms 之差跳过（R514 改 5h/23h 已解）；09-06 00:00:58Z 首批 100 URL 仍 429（R515 同批 60s 退避重试 ≤2 次，**生产效果待 06:00Z cron 核对**）。判读：`indexnowLastAttempt` 不随 `cronLast` 前进 = 被门拦住；前进但 `lastError.at` 同步前进 = 尝试了但上游失败；`indexnowLastResult.retries>0` 且 `ok` = 靠重试拿到；`retries=2` 且 `!ok` = 重试仍 429，需换策略（错开整点 / 更长退避）。
 - **AI 上游额度**：见 §8；`classifyAiError` 按响应体关键词把额度型 429 归 `quota`（其余 429 仍 `rate-limit`）。恢复后需补做 R466 首结果时延实测（zh/en ≥1 次）。
 - **TLD 扩容同步清单**（漏一处就不一致）：`content/tlds.ts` → `content/tld-list.ts`（`satisfies` 强校验）→ `home-page.tsx` `KNOWN_TLDS` → 首页 FAQ「支持哪些后缀」（worker.ts `HOME_FAQ` zh+en + i18n）→ /prices、sitemap、llms.txt 自动 → KV 价格 key 自动升版 → `scripts/content-counts.json`。
 - **新增 /vs 页两处都要加**：`content/compares.ts` + `content/compare-slugs.ts`（footer 内链轻量清单）。
@@ -160,7 +160,7 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
    - **R500 被丢弃候选直证（已部署 version e0ead604，1 次授权 AI，留档 `docs/audits/r500/`）**：R496–R499 观察到 en 首搜 `meaningIncoherent` 丢弃 22/36（R494：5/17），当时**推断**是「X + Y: …」缺尾句谓语被误杀但无直接证据。R500（PR #463）补了审计专用、默认关闭的样本通道——请求体 `debugDropped: true` 时 guard 事件附带 `droppedSamples[{reason,label,meaning≤160 码点,theme,supplement?}]`（每轮每 reason ≤5、总 ≤20，前端不发不渲染、不入 `dh:lastSearch:v1`、不写 KV，默认 `newGuardStats()` 序列化与基线逐字节相同，vitest `ai-dropped-samples.test.ts` 8 条）；离线论证 `docs/research/dropped-observability.md`、`scripts/replay-r500-en-incoherent.mjs`。**生产取样结果（验证）**：同 description 复跑，采到 7 条 `meaningIncoherent` 样本，逐条回放 + 人工读 **7/7 忠实解释、0 沙拉**，分三类：① word 路线 meaning 描述词义不复述 label → 片段检查必失败（4/7：bushtit/vireo/tessellate/chronicle，与 R498 补发直接冲突——补发专出 word 而 word 最易被片段检查误杀）；② 谓语词表词形缺口（2/7：changelogist「evoking」不匹配 `evokes?`、logsmith「forged/like」不在表）；③ 「X + Y:」缺谓语（1/7：riffolio）——原推断成立但**不是主因**。另 `metaLanguage` 4 样本中 reflint/clearbrew 疑似误杀（未回放定位）。**`EN_PREDICATE_RE` 仍未改**；R50x 按三类分别在标注集 + 7 条生产样本 + 历史存活候选上给 P/R 后再动规则（方案见 `docs/audits/r500/README.md` 末节）。
 3. **AI 长期可靠性**：R494 一次 6 次窗口全走 primary，不等于长期稳定；继续看 `aiErrors.quota` 是否再现。
 4. **发帖**（Show HN 等，`docs/launch/launch-checklist.md`）：老板决策，前提 §8 P0 解决。
-5. 观察项：**R504 分批推送在生产尚未发生过一次真实尝试**——18:00Z cron 被 6h 冷却门以 94 ms 之差跳过（R514 #477 已修并上线，`indexnowLastAttempt` 已透出生产实查为 12:00:17.244Z 直接证实）；下一次 09-06 00:00Z cron 才是首次新代码推送。核对口径：`indexnowLastError` 是否清空/`at` 是否前进、`indexnowPending` 是否 1270→~970、`indexnowLast` 仅在全量覆盖后才前进（分批期间保持 09-03 不动是预期，不是故障）；Baiduspider 来访是否持续（`botsBy.baidu`）；`stale:true` 频率。
+5. 观察项：**IndexNow 生产仍未成功推送过一批**——09-05 18:00Z 被门跳过（R514 已解）；09-06 00:00:58Z 真尝试但上游 429（R515 #478 同批重试已上线 version 3ed4fab4）；**06:00Z cron 是 R515 首次生效**。核对口径：`indexnowLastResult` 由 `null` 变为对象且 `ok=true`、`retries` 值、`indexnowLastError` 是否清空、`indexnowPending` 是否 1270→~970、`indexnowLast` 仅在全量覆盖后才前进（分批期间保持 09-03 不动是预期，不是故障）；若 06:00Z 仍 `!ok && retries=2`，下一步候选：把 IndexNow 推送错开整点（cron 内随机延迟 / 独立 cron 表达式如 `17 */6 * * *`）或退避加长；Baiduspider 来访是否持续（`botsBy.baidu`）；`stale:true` 频率。
 5b. **R512 内容矩阵薄内容审计结论待产品决策**（`docs/audits/thin-content-audit-r512.md`，1262 页 zh/en 全抓取、同类页掩码 5-gram Jaccard 无 >0.5 对；不建议 noindex/合并）：建议顺序 ① `/tld` 去 FAQ/正文重复 + 80 个 ccTLD 页补注册局政策事实 ② 全站「全部页 chips」（占正文 47%–74%）缩为相关集 + hub 链接 ③ `/vs` 补组合专属数据（价差/到期分布） ④ `/guide` 暂不动。**未授权前不改内容页。**
 5c. **R511 零 AI 全站审计**（`docs/audits/audit-r511.md`，PR #474）：P0/P1/P2 无；3 个 P3 即 R510 所修（已上线复验通过）；R502 遗留 P2-1/P3-1~4 全部关闭；Lighthouse 8/8 SEO=100、a11y=100；R507 canonical 矩阵 20/20；sitemap 1270=1264+6。观察项：~~`indexnow:lastAttempt` 未透出 `/api/usage`~~（R514 已透出）；R484 安全头观察不变。
 6. ~~候选：新增 Dynadot/Spaceship 注册商（联盟 30%/25%）~~ → R503 已调研并落地：**只加 Dynadot**（售 .cn/.com.cn、中文站、人民币/支付宝），Spaceship 不售 .cn 不加；Namecheap 实测不售 .cn 已从 .cn 菜单隐藏（`docs/research/registrar-affiliate.md` §4，老板待办第 9 项申请 Ambassador）；`/guide` hub 标题分组文案。
@@ -194,7 +194,8 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 - **R510**（R509 生产回归的 3 个 P3，0 AI）：`prices-page.tsx` 续费列 `flex-wrap` + 金额/「续费↑」徽标 `whitespace-nowrap`（375px 徽标 23×64 竖排 → 24px 单行，行高 94→69 与 `.cv-row contain-intrinsic-size` 一致，Lighthouse mobile CLS 0）；`/s/:id` SSR 壳按 `shareShellState()` 分流——撤销（KV 留 `{revoked:true}`）→ **410**、不存在/过期/非法 id → **404**（沿 R230 品牌 404），两者加 `noindex` + `shareGoneMeta()` 中性双语 title/描述（`share-items.ts`），SPA 撤销/不存在 UI 不变，`share-shell.test.ts` 用假 ASSETS/KV 直接跑 worker；`hub-filter.tsx hubMatch()` 不带点的查询额外按「去点 + 词边界」比对（`com vs cn`/`com-vs-cn`/`comcn` 命中 `.com vs .cn`，`io vs ai` 不误中 `.studio vs .ai`），带点查询仍按原文（`.com` 不扩大到 com.cn），`hub-filter.test.ts` 覆盖 /vs /tld /guide。
 - **R511**（PR #474，纯文档）：零 AI 全站审计报告 + 证据 `docs/audits/r511/`、截图 `docs/audits/screenshots-r511/`；结论见 §10 5c。
 - **R512**（PR #473，纯文档 + 可复用脚本）：`scripts/seo-audit/thin-fetch.mjs`（zh/en 全站抓取，`SEO_AUDIT_UA`）/ `thin-analyze.mjs`（掩码 5-gram Jaccard、模板句、链接 chips 占比）→ `docs/audits/r512/{summary.json,pages.csv,nearest-pairs.csv,template-sentences.json,manual-sample.json}`；报告 `docs/audits/thin-content-audit-r512.md`；结论见 §10 5b。
-- **R514**（PR #477，0 AI）：`worker.ts` IndexNow/百度推送冷却门 `*_RETRY_MS` 6h→**5h**、日间隔 `*_INTERVAL_MS` 24h→**23h**——门槛与 cron 周期相等时，cron 触发的毫秒级抖动（生产实测 94 ms）会让整轮被判「未到期」跳过；`/api/usage` 新增 `indexnowLastAttempt`。本地 `wrangler dev --test-scheduled` + mock 端点三种种子（−6h+3s 推 / −5h+3s 拦 / −5h−3s 推）验证见 #477 描述；生产首次真实推送待 09-06 00:00Z cron。
+- **R514**（PR #477，0 AI）：`worker.ts` IndexNow/百度推送冷却门 `*_RETRY_MS` 6h→**5h**、日间隔 `*_INTERVAL_MS` 24h→**23h**——门槛与 cron 周期相等时，cron 触发的毫秒级抖动（生产实测 94 ms）会让整轮被判「未到期」跳过；`/api/usage` 新增 `indexnowLastAttempt`。本地 `wrangler dev --test-scheduled` + mock 端点三种种子（−6h+3s 推 / −5h+3s 拦 / −5h−3s 推）验证见 #477 描述；**生产 09-06 00:00:58Z 核对：门已放行（`indexnowLastAttempt == cronLast`）但上游 429 → R515**。
+- **R515**（PR #478，0 AI）：`indexnow.ts` `submitIndexNow` 新增 `retry429{backoffMs,maxRetries,sleep?}`——同批 429 等 60s 重发，最多 2 次（`INDEXNOW_429_BACKOFF_MS/INDEXNOW_429_MAX_RETRIES`），非 429 失败不重试，`stopOnFail` 语义不变，`IndexNowBatchResult.retries`、`countRetries()`；`worker.ts` 新 KV `indexnow:lastResult`（每次真正发请求都写 `{at,ok,status,message,submitted,retries}`）+ `/api/usage.indexnowLastResult`，`indexnowLastError` 加 `retries`。依据：00:00:58Z 生产 `indexnowLastAttempt==cronLast` 且 `lastError{429,submitted:0}` 同时刻 → 不是门 skip 而是真发了且上游 429（整点高峰 + Worker 共享出口是推断，非提供方确认）；最坏 3×2×60s=6 min < cron 15 min wall-time 上限。本地 `--test-scheduled` + mock（首请求 429 其后 200）：00:10:26.899Z 429 → 00:11:26.947Z 同批重发 200 → 后两批 200，pending 1270→970，`lastResult {ok,200,300,retries:1}`，见 #478 描述。**生产效果待 06:00Z cron。**
 - **R495**：`main.tsx routeModule()` 对 /why /advanced /mcp 也等 chunk 就绪再挂载（R491 skeleton 在慢网下曾闪空 ~0.6s，节流帧捕获 3/3 复现→修后 0/3）；`i18n.tsx` 切换语言时同步 URL 显式 `?lang=`（否则 F5 回退到 URL 语言）。
 
 ## 12. 资源与凭证索引（只写名称，不写值）
