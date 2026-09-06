@@ -1,0 +1,443 @@
+{
+  "generatedAt": "2026-09-06T07:53:12.064Z",
+  "fetchedAt": "2026-09-06T07:52:31.461Z",
+  "origin": "https://hunt.zalize.com",
+  "sitemapCount": 1270,
+  "seed": 527,
+  "groups": {
+    "tld": {
+      "zh": {
+        "pages": 408,
+        "bodyWords": {
+          "median": 839,
+          "p10": 763,
+          "p90": 929,
+          "min": 676
+        },
+        "proseWords": {
+          "median": 661,
+          "p10": 597,
+          "p90": 753,
+          "min": 527
+        },
+        "uniqueSentences": {
+          "median": 35,
+          "p10": 33,
+          "p90": 37
+        },
+        "dupSentenceRatio": {
+          "median": 0,
+          "mean": 0
+        },
+        "faqDetails": {
+          "median": 3,
+          "min": 3,
+          "max": 3,
+          "ldMismatch": 0
+        },
+        "nnMasked": {
+          "median": 0.272,
+          "p90": 0.392,
+          "max": 0.493,
+          "gt08": 0,
+          "gt05": 0,
+          "gt03": 0.343
+        },
+        "nnRaw": {
+          "median": 0.187,
+          "p90": 0.29,
+          "max": 0.348,
+          "gt08": 0,
+          "gt05": 0
+        },
+        "allPairsMasked": {
+          "median": 0.193,
+          "p90": 0.22,
+          "mean": 0.194
+        },
+        "templateShare50": {
+          "median": 0.325,
+          "p90": 0.347
+        },
+        "templateShare10": {
+          "median": 0.37,
+          "p90": 0.406
+        },
+        "templateSentShare": {
+          "median": 0.471,
+          "p90": 0.5,
+          "mean": 0.468
+        }
+      },
+      "en": {
+        "pages": 408,
+        "bodyWords": {
+          "median": 571,
+          "p10": 503,
+          "p90": 621,
+          "min": 424
+        },
+        "proseWords": {
+          "median": 410,
+          "p10": 344,
+          "p90": 460,
+          "min": 316
+        },
+        "uniqueSentences": {
+          "median": 36,
+          "p10": 34,
+          "p90": 38
+        },
+        "dupSentenceRatio": {
+          "median": 0,
+          "mean": 0
+        },
+        "faqDetails": {
+          "median": 3,
+          "min": 3,
+          "max": 3,
+          "ldMismatch": 0
+        },
+        "nnMasked": {
+          "median": 0.212,
+          "p90": 0.299,
+          "max": 0.452,
+          "gt08": 0,
+          "gt05": 0,
+          "gt03": 0.1
+        },
+        "nnRaw": {
+          "median": 0.134,
+          "p90": 0.214,
+          "max": 0.269,
+          "gt08": 0,
+          "gt05": 0
+        },
+        "allPairsMasked": {
+          "median": 0.16,
+          "p90": 0.18,
+          "mean": 0.158
+        },
+        "templateShare50": {
+          "median": 0.268,
+          "p90": 0.306
+        },
+        "templateShare10": {
+          "median": 0.304,
+          "p90": 0.328
+        },
+        "templateSentShare": {
+          "median": 0.421,
+          "p90": 0.457,
+          "mean": 0.419
+        }
+      }
+    },
+    "guide": {
+      "zh": {
+        "pages": 410,
+        "bodyWords": {
+          "median": 1446.5,
+          "p10": 1286,
+          "p90": 1596,
+          "min": 1151
+        },
+        "proseWords": {
+          "median": 1186.5,
+          "p10": 1040,
+          "p90": 1339,
+          "min": 940
+        },
+        "uniqueSentences": {
+          "median": 46,
+          "p10": 42,
+          "p90": 50
+        },
+        "dupSentenceRatio": {
+          "median": 0,
+          "mean": 0
+        },
+        "faqDetails": {
+          "median": 3,
+          "min": 3,
+          "max": 4,
+          "ldMismatch": 0
+        },
+        "nnMasked": {
+          "median": 0.079,
+          "p90": 0.109,
+          "max": 0.168,
+          "gt08": 0,
+          "gt05": 0,
+          "gt03": 0
+        },
+        "nnRaw": {
+          "median": 0.066,
+          "p90": 0.102,
+          "max": 0.164,
+          "gt08": 0,
+          "gt05": 0
+        },
+        "allPairsMasked": {
+          "median": 0.064,
+          "p90": 0.073,
+          "mean": 0.064
+        },
+        "templateShare50": {
+          "median": 0.121,
+          "p90": 0.136
+        },
+        "templateShare10": {
+          "median": 0.126,
+          "p90": 0.146
+        },
+        "templateSentShare": {
+          "median": 0.356,
+          "p90": 0.4,
+          "mean": 0.351
+        }
+      },
+      "en": {
+        "pages": 410,
+        "bodyWords": {
+          "median": 872,
+          "p10": 763,
+          "p90": 974,
+          "min": 664
+        },
+        "proseWords": {
+          "median": 728.5,
+          "p10": 623,
+          "p90": 826,
+          "min": 540
+        },
+        "uniqueSentences": {
+          "median": 46,
+          "p10": 42,
+          "p90": 53
+        },
+        "dupSentenceRatio": {
+          "median": 0,
+          "mean": 0
+        },
+        "faqDetails": {
+          "median": 3,
+          "min": 3,
+          "max": 4,
+          "ldMismatch": 0
+        },
+        "nnMasked": {
+          "median": 0.064,
+          "p90": 0.083,
+          "max": 0.124,
+          "gt08": 0,
+          "gt05": 0,
+          "gt03": 0
+        },
+        "nnRaw": {
+          "median": 0.052,
+          "p90": 0.069,
+          "max": 0.117,
+          "gt08": 0,
+          "gt05": 0
+        },
+        "allPairsMasked": {
+          "median": 0.052,
+          "p90": 0.058,
+          "mean": 0.051
+        },
+        "templateShare50": {
+          "median": 0.097,
+          "p90": 0.115
+        },
+        "templateShare10": {
+          "median": 0.105,
+          "p90": 0.118
+        },
+        "templateSentShare": {
+          "median": 0.28,
+          "p90": 0.333,
+          "mean": 0.272
+        }
+      }
+    },
+    "vs": {
+      "zh": {
+        "pages": 444,
+        "bodyWords": {
+          "median": 1107,
+          "p10": 949,
+          "p90": 1254,
+          "min": 825
+        },
+        "proseWords": {
+          "median": 896.5,
+          "p10": 744,
+          "p90": 1047,
+          "min": 632
+        },
+        "uniqueSentences": {
+          "median": 47,
+          "p10": 44,
+          "p90": 49
+        },
+        "dupSentenceRatio": {
+          "median": 0,
+          "mean": 0
+        },
+        "faqDetails": {
+          "median": 3,
+          "min": 3,
+          "max": 3,
+          "ldMismatch": 0
+        },
+        "nnMasked": {
+          "median": 0.255,
+          "p90": 0.363,
+          "max": 0.485,
+          "gt08": 0,
+          "gt05": 0,
+          "gt03": 0.23
+        },
+        "nnRaw": {
+          "median": 0.237,
+          "p90": 0.327,
+          "max": 0.424,
+          "gt08": 0,
+          "gt05": 0
+        },
+        "allPairsMasked": {
+          "median": 0.146,
+          "p90": 0.169,
+          "mean": 0.149
+        },
+        "templateShare50": {
+          "median": 0.25,
+          "p90": 0.296
+        },
+        "templateShare10": {
+          "median": 0.277,
+          "p90": 0.314
+        },
+        "templateSentShare": {
+          "median": 0.409,
+          "p90": 0.45,
+          "mean": 0.418
+        },
+        "vsReuseFromTld": {
+          "median": 0.133,
+          "p90": 0.194,
+          "max": 0.257,
+          "mean": 0.141
+        }
+      },
+      "en": {
+        "pages": 444,
+        "bodyWords": {
+          "median": 716.5,
+          "p10": 616,
+          "p90": 793,
+          "min": 505
+        },
+        "proseWords": {
+          "median": 559.5,
+          "p10": 457,
+          "p90": 640,
+          "min": 368
+        },
+        "uniqueSentences": {
+          "median": 47,
+          "p10": 43,
+          "p90": 50
+        },
+        "dupSentenceRatio": {
+          "median": 0,
+          "mean": 0
+        },
+        "faqDetails": {
+          "median": 3,
+          "min": 3,
+          "max": 3,
+          "ldMismatch": 0
+        },
+        "nnMasked": {
+          "median": 0.204,
+          "p90": 0.27,
+          "max": 0.394,
+          "gt08": 0,
+          "gt05": 0,
+          "gt03": 0.068
+        },
+        "nnRaw": {
+          "median": 0.199,
+          "p90": 0.275,
+          "max": 0.352,
+          "gt08": 0,
+          "gt05": 0
+        },
+        "allPairsMasked": {
+          "median": 0.122,
+          "p90": 0.143,
+          "mean": 0.121
+        },
+        "templateShare50": {
+          "median": 0.218,
+          "p90": 0.265
+        },
+        "templateShare10": {
+          "median": 0.235,
+          "p90": 0.274
+        },
+        "templateSentShare": {
+          "median": 0.409,
+          "p90": 0.45,
+          "mean": 0.402
+        },
+        "vsReuseFromTld": {
+          "median": 0.143,
+          "p90": 0.204,
+          "max": 0.289,
+          "mean": 0.148
+        }
+      }
+    }
+  },
+  "manualSample": {
+    "tld": [
+      "cyou",
+      "design",
+      "fr",
+      "gallery",
+      "homes",
+      "me",
+      "school",
+      "so",
+      "supply",
+      "watch"
+    ],
+    "guide": [
+      "bar",
+      "cheesemaking",
+      "coach",
+      "distillery",
+      "photography",
+      "physio",
+      "postproduction",
+      "selfstorage",
+      "terrarium",
+      "tutoring"
+    ],
+    "vs": [
+      "abogado-vs-lawyer",
+      "camp-vs-courses",
+      "com-vs-app",
+      "com-vs-net",
+      "deals-vs-coupons",
+      "dental-vs-doctor",
+      "foundation-vs-org",
+      "marketing-vs-agency",
+      "party-vs-events",
+      "pro-vs-vip"
+    ]
+  }
+}

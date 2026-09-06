@@ -1,0 +1,17 @@
+{
+  "text": "For Chinese founders · Live RDAP + WHOIS checks\nName it in Chinese or English, hunt .cn / .com domains you can actually register\n\nFor Chinese founders and teams going global: describe the meaning in Chinese or English, get pinyin, English and blended names, each verified live for .cn / .com.cn / .com — only registrable ones, with expiry dates and prices.\n\n1\nDescribe your idea, or type an exact name\n2\nAI brainstorms in rounds + live RDAP/DNS checks\n3\nYou only see names you can actually register\n\nExact names are checked instantly with no AI quota; describe an idea and AI hunts for you.\n\nAI naming\nExact check\nBulk check\n.com\n.cn\n.io\n.ai\n.app\n.dev\n20/500 · Enter\nCheck now\nLooks like an exact name? Check it directly — no AI quota used:\nCheck zalize-r527-test.* now\n\nCheck complete: 9 of 9 available\n\nAll 9\nAvailable 9\nzalize-r527-test.com\nAvailable\n$11.08\nzalize-r527-test.cn\nAvailable\n≈$5\nzalize-r527-test.io\nAvailable\n$28.12\nzalize-r527-test.ai\nAvailable\n$82.7\nzalize-r527-test.app\nAvailable\n$8.75\nzalize-r527-test.dev\nAvailable\n$8.75\nzalize-r527-test.co\nAvailable\n$15.76\nzalize-r527-test.net\nAvailable\n$12.52\nzalize-r527-test.me\nAvailable\n$2.73↑\nCheck 400 more TLDs\nCopy 9 available\n\nNot sure what to write? Pick an industry template and make it yours:\n\nTea brand\nCross-border e-commerce\nIndie hacker\nSaaS tool\nE-commerce brand\nAI product\nPersonal blog\nPets\nFintech\nGames\n+394\nTry an example in one click:\nCross-border store selling Chinese tea, pinyin-English blend\nAI weekly-report tool for indie devs, .cn + .com\n新中式茶饮品牌，寓意温润有人情\nMinimal meditation app\n\nVerified\n31,994\ndomains so far\nResults stream in as they're verified\nOpen source · MIT\n\nWhy Chinese founders use DomainHunter\n01\nAvailability matches the registry\n\n.cn / .com.cn are checked against CNNIC WHOIS, .com and others against registry RDAP, cross-checked with DNS. Taken names are dropped — no word-list guessing, no stale cache.\n\n02\nExpiry dates and prices, together\n\nTaken names show the registry's expiry date so you can wait for a drop; available names show live registrar and renewal prices, with RMB reference prices for TLDs like .cn.\n\n03\nBulk checks and drop monitoring\n\nPaste up to 200 names for one bulk check and export CSV without using AI quota; watch a taken name you love — it is rechecked every 6 hours and any drop is logged to your monitor feed.\n\nWhere we're stronger — and weaker — than English domain tools and AI name generators →\n\nFAQ\nWhat is DomainHunter?\nHow accurate are the availability checks?\nIs it free?\nWill it register domains for me automatically?\nWhich TLDs are supported?\nDo you store my searches?",
+  "requests": [
+    {
+      "page": "/ zh",
+      "url": "https://hunt.zalize.com/api/search",
+      "method": "POST",
+      "resource": "fetch"
+    },
+    {
+      "page": "/ zh",
+      "url": "https://hunt.zalize.com/api/search",
+      "method": "POST",
+      "resource": "fetch"
+    }
+  ]
+}

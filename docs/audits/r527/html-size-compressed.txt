@@ -1,0 +1,5 @@
+/prices raw=280617 br=18189 gzip=19456
+/tld raw=238194 br=38607 gzip=39270
+/guide raw=222057 br=33276 gzip=34159
+/vs raw=352752 br=24824 gzip=24992
+/vs/hk-vs-sg raw=86498 br=19275 gzip=19341

@@ -1,0 +1,24 @@
+{
+ "create": {
+  "id": "Dbl4uT4zJ6",
+  "url": "https://hunt.zalize.com/s/Dbl4uT4zJ6"
+ },
+ "checks": [
+  {
+   "url": "https://hunt.zalize.com/s/Dbl4uT4zJ6?lang=en",
+   "ssr_title": "1 available domain candidates | DomainHunter",
+   "hydrated_title_0s": "1 available domain candidates | DomainHunter",
+   "hydrated_title_2s": "1 available domain candidates | DomainHunter",
+   "h1": "Shared domain shortlist"
+  },
+  {
+   "url": "https://hunt.zalize.com/s/Dbl4uT4zJ6?lang=zh",
+   "ssr_title": "1 个可注册域名候选 | DomainHunter",
+   "hydrated_title_0s": "1 个可注册域名候选 | DomainHunter",
+   "hydrated_title_2s": "1 个可注册域名候选 | DomainHunter",
+   "h1": "候选域名清单"
+  }
+ ],
+ "delete_status": "200",
+ "get_after_delete": "410"
+}

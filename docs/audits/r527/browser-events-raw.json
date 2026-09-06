@@ -1,0 +1,74 @@
+[
+  {
+    "page": "/ zh",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 410 ()",
+    "url": "https://hunt.zalize.com/s/J7kIie8is3"
+  },
+  {
+    "page": "/ zh",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 410 ()",
+    "url": "https://hunt.zalize.com/s/J7kIie8is3"
+  },
+  {
+    "page": "/nonexistent-r527 zh",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 ()",
+    "url": "https://hunt.zalize.com/nonexistent-r527?lang=zh"
+  },
+  {
+    "page": "/nonexistent-r527 en",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 ()",
+    "url": "https://hunt.zalize.com/nonexistent-r527?lang=en"
+  },
+  {
+    "page": "/s/doesnotexist-r527 zh",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 ()",
+    "url": "https://hunt.zalize.com/s/doesnotexist-r527?lang=zh"
+  },
+  {
+    "page": "/s/doesnotexist-r527 zh",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 ()",
+    "url": "https://hunt.zalize.com/s/doesnotexist-r527?lang=zh"
+  },
+  {
+    "page": "/s/doesnotexist-r527 en",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 ()",
+    "url": "https://hunt.zalize.com/s/doesnotexist-r527?lang=en"
+  },
+  {
+    "page": "/s/doesnotexist-r527 en",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 ()",
+    "url": "https://hunt.zalize.com/s/doesnotexist-r527?lang=en"
+  },
+  {
+    "page": "/s/J7kIie8is3 zh",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 410 ()",
+    "url": "https://hunt.zalize.com/s/J7kIie8is3?lang=zh"
+  },
+  {
+    "page": "/s/J7kIie8is3 zh",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 410 ()",
+    "url": "https://hunt.zalize.com/s/J7kIie8is3?lang=zh"
+  },
+  {
+    "page": "/s/J7kIie8is3 en",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 410 ()",
+    "url": "https://hunt.zalize.com/s/J7kIie8is3?lang=en"
+  },
+  {
+    "page": "/s/J7kIie8is3 en",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 410 ()",
+    "url": "https://hunt.zalize.com/s/J7kIie8is3?lang=en"
+  }
+]

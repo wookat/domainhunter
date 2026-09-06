@@ -1,0 +1,10 @@
+{
+  "text": "高级模式\n\n词根 × 前后缀 × TLD 批量组合生成，逐个核验可注册状态\n\n词根（roots）\n前缀（prefixes）\n后缀（suffixes）\nTLD\n开始检索\n\n批量粘贴核验\n\n把现成名单粘进来（换行/逗号/空格分隔）：带后缀的直接核验，不带后缀的按上方 TLD 展开，一次最多 200 个，不消耗 AI 次数\n\n核验 6 个域名\n已识别 6 个域名\n复制 5 个可注册\n导出 CSV\n可注册（5）\n—\nZ\nzalize-r527-bulk.io\n首年 $28.12 ≈¥202\n去注册\n—\nZ\nzalize-r527-other.com\n首年 $11.08 ≈¥80\n去注册\n—\nZ\nzalize-r527-bulk.cn\n首年 ¥33\n去注册\n—\nZ\nzalize-r527-other.cn\n首年 ¥33\n去注册\n—\nZ\nzalize-r527-bulk.com\n首年 $11.08 ≈¥80\n去注册\n其余候选（1）\n—\ngoogle.com\n已注册\n2028-09-14 到期",
+  "domains": 0,
+  "csv_exists": 1,
+  "note": "Results are cards/rows, not an HTML table; only textarea has overflow auto.",
+  "mobile": {
+    "innerWidth": 375,
+    "scrollWidth": 375
+  }
+}

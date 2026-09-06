@@ -1,0 +1,42 @@
+[
+  {
+    "lang": "zh",
+    "theme": "light",
+    "text": "续费↑",
+    "width": 36.828125,
+    "height": 24,
+    "whiteSpace": "nowrap",
+    "documentWidth": 375,
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/prices_xyz_zh_light_375.png"
+  },
+  {
+    "lang": "zh",
+    "theme": "dark",
+    "text": "续费↑",
+    "width": 36.828125,
+    "height": 24,
+    "whiteSpace": "nowrap",
+    "documentWidth": 375,
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/prices_xyz_zh_dark_375.png"
+  },
+  {
+    "lang": "en",
+    "theme": "light",
+    "text": "renews↑",
+    "width": 52.25,
+    "height": 24,
+    "whiteSpace": "nowrap",
+    "documentWidth": 375,
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/prices_xyz_en_light_375.png"
+  },
+  {
+    "lang": "en",
+    "theme": "dark",
+    "text": "renews↑",
+    "width": 52.25,
+    "height": 24,
+    "whiteSpace": "nowrap",
+    "documentWidth": 375,
+    "screenshot": "/home/ubuntu/repos/domainhunter/docs/audits/screenshots-r527/prices_xyz_en_dark_375.png"
+  }
+]

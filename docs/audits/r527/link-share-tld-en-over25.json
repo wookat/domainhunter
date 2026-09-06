@@ -1,0 +1,2224 @@
+{
+ "over25": [
+  {
+   "path": "/tld/vip",
+   "linkShare": 0.364,
+   "bodyWords": 511,
+   "proseWords": 325
+  },
+  {
+   "path": "/tld/fun",
+   "linkShare": 0.3622,
+   "bodyWords": 508,
+   "proseWords": 324
+  },
+  {
+   "path": "/tld/club",
+   "linkShare": 0.3519,
+   "bodyWords": 520,
+   "proseWords": 337
+  },
+  {
+   "path": "/tld/space",
+   "linkShare": 0.3511,
+   "bodyWords": 487,
+   "proseWords": 316
+  },
+  {
+   "path": "/tld/shop",
+   "linkShare": 0.3505,
+   "bodyWords": 525,
+   "proseWords": 341
+  },
+  {
+   "path": "/tld/team",
+   "linkShare": 0.3456,
+   "bodyWords": 515,
+   "proseWords": 337
+  },
+  {
+   "path": "/tld/life",
+   "linkShare": 0.3454,
+   "bodyWords": 524,
+   "proseWords": 343
+  },
+  {
+   "path": "/tld/games",
+   "linkShare": 0.3446,
+   "bodyWords": 531,
+   "proseWords": 348
+  },
+  {
+   "path": "/tld/world",
+   "linkShare": 0.3436,
+   "bodyWords": 518,
+   "proseWords": 340
+  },
+  {
+   "path": "/tld/online",
+   "linkShare": 0.3417,
+   "bodyWords": 515,
+   "proseWords": 339
+  },
+  {
+   "path": "/tld/live",
+   "linkShare": 0.3414,
+   "bodyWords": 495,
+   "proseWords": 326
+  },
+  {
+   "path": "/tld/studio",
+   "linkShare": 0.3393,
+   "bodyWords": 504,
+   "proseWords": 333
+  },
+  {
+   "path": "/tld/site",
+   "linkShare": 0.3388,
+   "bodyWords": 546,
+   "proseWords": 361
+  },
+  {
+   "path": "/tld/art",
+   "linkShare": 0.338,
+   "bodyWords": 497,
+   "proseWords": 329
+  },
+  {
+   "path": "/tld/care",
+   "linkShare": 0.3346,
+   "bodyWords": 544,
+   "proseWords": 362
+  },
+  {
+   "path": "/tld/store",
+   "linkShare": 0.3315,
+   "bodyWords": 552,
+   "proseWords": 369
+  },
+  {
+   "path": "/tld/academy",
+   "linkShare": 0.3315,
+   "bodyWords": 549,
+   "proseWords": 367
+  },
+  {
+   "path": "/tld/center",
+   "linkShare": 0.3308,
+   "bodyWords": 520,
+   "proseWords": 348
+  },
+  {
+   "path": "/tld/tv",
+   "linkShare": 0.3307,
+   "bodyWords": 514,
+   "proseWords": 344
+  },
+  {
+   "path": "/tld/restaurant",
+   "linkShare": 0.3304,
+   "bodyWords": 560,
+   "proseWords": 375
+  },
+  {
+   "path": "/tld/agency",
+   "linkShare": 0.3295,
+   "bodyWords": 528,
+   "proseWords": 354
+  },
+  {
+   "path": "/tld/design",
+   "linkShare": 0.3272,
+   "bodyWords": 492,
+   "proseWords": 331
+  },
+  {
+   "path": "/tld/group",
+   "linkShare": 0.3258,
+   "bodyWords": 534,
+   "proseWords": 360
+  },
+  {
+   "path": "/tld/city",
+   "linkShare": 0.3251,
+   "bodyWords": 566,
+   "proseWords": 382
+  },
+  {
+   "path": "/tld/coach",
+   "linkShare": 0.3215,
+   "bodyWords": 563,
+   "proseWords": 382
+  },
+  {
+   "path": "/tld/company",
+   "linkShare": 0.3213,
+   "bodyWords": 526,
+   "proseWords": 357
+  },
+  {
+   "path": "/tld/dev",
+   "linkShare": 0.3202,
+   "bodyWords": 484,
+   "proseWords": 329
+  },
+  {
+   "path": "/tld/works",
+   "linkShare": 0.3197,
+   "bodyWords": 538,
+   "proseWords": 366
+  },
+  {
+   "path": "/tld/wine",
+   "linkShare": 0.3193,
+   "bodyWords": 545,
+   "proseWords": 371
+  },
+  {
+   "path": "/tld/blog",
+   "linkShare": 0.3185,
+   "bodyWords": 518,
+   "proseWords": 353
+  },
+  {
+   "path": "/tld/global",
+   "linkShare": 0.3178,
+   "bodyWords": 535,
+   "proseWords": 365
+  },
+  {
+   "path": "/tld/boutique",
+   "linkShare": 0.3168,
+   "bodyWords": 565,
+   "proseWords": 386
+  },
+  {
+   "path": "/tld/tech",
+   "linkShare": 0.3158,
+   "bodyWords": 494,
+   "proseWords": 338
+  },
+  {
+   "path": "/tld/services",
+   "linkShare": 0.3157,
+   "bodyWords": 567,
+   "proseWords": 388
+  },
+  {
+   "path": "/tld/io",
+   "linkShare": 0.3156,
+   "bodyWords": 488,
+   "proseWords": 334
+  },
+  {
+   "path": "/tld/farm",
+   "linkShare": 0.3144,
+   "bodyWords": 547,
+   "proseWords": 375
+  },
+  {
+   "path": "/tld/fitness",
+   "linkShare": 0.3141,
+   "bodyWords": 573,
+   "proseWords": 393
+  },
+  {
+   "path": "/tld/expert",
+   "linkShare": 0.3138,
+   "bodyWords": 564,
+   "proseWords": 387
+  },
+  {
+   "path": "/tld/cafe",
+   "linkShare": 0.3132,
+   "bodyWords": 597,
+   "proseWords": 410
+  },
+  {
+   "path": "/tld/gg",
+   "linkShare": 0.3132,
+   "bodyWords": 479,
+   "proseWords": 329
+  },
+  {
+   "path": "/tld/dental",
+   "linkShare": 0.312,
+   "bodyWords": 532,
+   "proseWords": 366
+  },
+  {
+   "path": "/tld/clinic",
+   "linkShare": 0.3114,
+   "bodyWords": 562,
+   "proseWords": 387
+  },
+  {
+   "path": "/tld/tips",
+   "linkShare": 0.3112,
+   "bodyWords": 543,
+   "proseWords": 374
+  },
+  {
+   "path": "/tld/school",
+   "linkShare": 0.311,
+   "bodyWords": 553,
+   "proseWords": 381
+  },
+  {
+   "path": "/tld/email",
+   "linkShare": 0.3105,
+   "bodyWords": 496,
+   "proseWords": 342
+  },
+  {
+   "path": "/tld/media",
+   "linkShare": 0.3094,
+   "bodyWords": 530,
+   "proseWords": 366
+  },
+  {
+   "path": "/tld/app",
+   "linkShare": 0.3094,
+   "bodyWords": 501,
+   "proseWords": 346
+  },
+  {
+   "path": "/tld/ai",
+   "linkShare": 0.3089,
+   "bodyWords": 492,
+   "proseWords": 340
+  },
+  {
+   "path": "/tld/social",
+   "linkShare": 0.3075,
+   "bodyWords": 491,
+   "proseWords": 340
+  },
+  {
+   "path": "/tld/doctor",
+   "linkShare": 0.3074,
+   "bodyWords": 540,
+   "proseWords": 374
+  },
+  {
+   "path": "/tld/law",
+   "linkShare": 0.3069,
+   "bodyWords": 567,
+   "proseWords": 393
+  },
+  {
+   "path": "/tld/eco",
+   "linkShare": 0.3069,
+   "bodyWords": 554,
+   "proseWords": 384
+  },
+  {
+   "path": "/tld/news",
+   "linkShare": 0.3068,
+   "bodyWords": 541,
+   "proseWords": 375
+  },
+  {
+   "path": "/tld/events",
+   "linkShare": 0.3058,
+   "bodyWords": 569,
+   "proseWords": 395
+  },
+  {
+   "path": "/tld/garden",
+   "linkShare": 0.3053,
+   "bodyWords": 570,
+   "proseWords": 396
+  },
+  {
+   "path": "/tld/guru",
+   "linkShare": 0.3052,
+   "bodyWords": 534,
+   "proseWords": 371
+  },
+  {
+   "path": "/tld/lawyer",
+   "linkShare": 0.3051,
+   "bodyWords": 554,
+   "proseWords": 385
+  },
+  {
+   "path": "/tld/com",
+   "linkShare": 0.305,
+   "bodyWords": 482,
+   "proseWords": 335
+  },
+  {
+   "path": "/tld/diamonds",
+   "linkShare": 0.3047,
+   "bodyWords": 535,
+   "proseWords": 372
+  },
+  {
+   "path": "/tld/travel",
+   "linkShare": 0.3045,
+   "bodyWords": 601,
+   "proseWords": 418
+  },
+  {
+   "path": "/tld/consulting",
+   "linkShare": 0.3043,
+   "bodyWords": 552,
+   "proseWords": 384
+  },
+  {
+   "path": "/tld/black",
+   "linkShare": 0.3041,
+   "bodyWords": 536,
+   "proseWords": 373
+  },
+  {
+   "path": "/tld/marketing",
+   "linkShare": 0.3041,
+   "bodyWords": 536,
+   "proseWords": 373
+  },
+  {
+   "path": "/tld/partners",
+   "linkShare": 0.3035,
+   "bodyWords": 547,
+   "proseWords": 381
+  },
+  {
+   "path": "/tld/pet",
+   "linkShare": 0.3032,
+   "bodyWords": 587,
+   "proseWords": 409
+  },
+  {
+   "path": "/tld/house",
+   "linkShare": 0.3031,
+   "bodyWords": 584,
+   "proseWords": 407
+  },
+  {
+   "path": "/tld/management",
+   "linkShare": 0.303,
+   "bodyWords": 538,
+   "proseWords": 375
+  },
+  {
+   "path": "/tld/ninja",
+   "linkShare": 0.303,
+   "bodyWords": 538,
+   "proseWords": 375
+  },
+  {
+   "path": "/tld/bar",
+   "linkShare": 0.3027,
+   "bodyWords": 588,
+   "proseWords": 410
+  },
+  {
+   "path": "/tld/solutions",
+   "linkShare": 0.3024,
+   "bodyWords": 539,
+   "proseWords": 376
+  },
+  {
+   "path": "/tld/legal",
+   "linkShare": 0.3024,
+   "bodyWords": 549,
+   "proseWords": 383
+  },
+  {
+   "path": "/tld/market",
+   "linkShare": 0.3019,
+   "bodyWords": 573,
+   "proseWords": 400
+  },
+  {
+   "path": "/tld/engineer",
+   "linkShare": 0.3019,
+   "bodyWords": 540,
+   "proseWords": 377
+  },
+  {
+   "path": "/tld/yoga",
+   "linkShare": 0.3019,
+   "bodyWords": 540,
+   "proseWords": 377
+  },
+  {
+   "path": "/tld/family",
+   "linkShare": 0.3014,
+   "bodyWords": 574,
+   "proseWords": 401
+  },
+  {
+   "path": "/tld/network",
+   "linkShare": 0.3013,
+   "bodyWords": 478,
+   "proseWords": 334
+  },
+  {
+   "path": "/tld/de",
+   "linkShare": 0.3012,
+   "bodyWords": 591,
+   "proseWords": 413
+  },
+  {
+   "path": "/tld/tax",
+   "linkShare": 0.3011,
+   "bodyWords": 558,
+   "proseWords": 390
+  },
+  {
+   "path": "/tld/co",
+   "linkShare": 0.301,
+   "bodyWords": 485,
+   "proseWords": 339
+  },
+  {
+   "path": "/tld/cloud",
+   "linkShare": 0.3006,
+   "bodyWords": 479,
+   "proseWords": 335
+  },
+  {
+   "path": "/tld/associates",
+   "linkShare": 0.3002,
+   "bodyWords": 543,
+   "proseWords": 380
+  },
+  {
+   "path": "/tld/auction",
+   "linkShare": 0.2998,
+   "bodyWords": 557,
+   "proseWords": 390
+  },
+  {
+   "path": "/tld/menu",
+   "linkShare": 0.2997,
+   "bodyWords": 584,
+   "proseWords": 409
+  },
+  {
+   "path": "/tld/lol",
+   "linkShare": 0.2996,
+   "bodyWords": 524,
+   "proseWords": 367
+  },
+  {
+   "path": "/tld/org",
+   "linkShare": 0.2996,
+   "bodyWords": 474,
+   "proseWords": 332
+  },
+  {
+   "path": "/tld/engineering",
+   "linkShare": 0.2995,
+   "bodyWords": 571,
+   "proseWords": 400
+  },
+  {
+   "path": "/tld/earth",
+   "linkShare": 0.2995,
+   "bodyWords": 561,
+   "proseWords": 393
+  },
+  {
+   "path": "/tld/me",
+   "linkShare": 0.2992,
+   "bodyWords": 488,
+   "proseWords": 342
+  },
+  {
+   "path": "/tld/sale",
+   "linkShare": 0.2991,
+   "bodyWords": 555,
+   "proseWords": 389
+  },
+  {
+   "path": "/tld/love",
+   "linkShare": 0.299,
+   "bodyWords": 582,
+   "proseWords": 408
+  },
+  {
+   "path": "/tld/video",
+   "linkShare": 0.2987,
+   "bodyWords": 519,
+   "proseWords": 364
+  },
+  {
+   "path": "/tld/toys",
+   "linkShare": 0.2986,
+   "bodyWords": 556,
+   "proseWords": 390
+  },
+  {
+   "path": "/tld/pro",
+   "linkShare": 0.2985,
+   "bodyWords": 469,
+   "proseWords": 329
+  },
+  {
+   "path": "/tld/photos",
+   "linkShare": 0.2982,
+   "bodyWords": 550,
+   "proseWords": 386
+  },
+  {
+   "path": "/tld/construction",
+   "linkShare": 0.2979,
+   "bodyWords": 574,
+   "proseWords": 403
+  },
+  {
+   "path": "/tld/kitchen",
+   "linkShare": 0.2978,
+   "bodyWords": 581,
+   "proseWords": 408
+  },
+  {
+   "path": "/tld/contractors",
+   "linkShare": 0.2977,
+   "bodyWords": 561,
+   "proseWords": 394
+  },
+  {
+   "path": "/tld/international",
+   "linkShare": 0.2973,
+   "bodyWords": 555,
+   "proseWords": 390
+  },
+  {
+   "path": "/tld/bike",
+   "linkShare": 0.2969,
+   "bodyWords": 549,
+   "proseWords": 386
+  },
+  {
+   "path": "/tld/training",
+   "linkShare": 0.2969,
+   "bodyWords": 549,
+   "proseWords": 386
+  },
+  {
+   "path": "/tld/fm",
+   "linkShare": 0.2966,
+   "bodyWords": 536,
+   "proseWords": 377
+  },
+  {
+   "path": "/tld/directory",
+   "linkShare": 0.2963,
+   "bodyWords": 540,
+   "proseWords": 380
+  },
+  {
+   "path": "/tld/tours",
+   "linkShare": 0.2962,
+   "bodyWords": 584,
+   "proseWords": 411
+  },
+  {
+   "path": "/tld/energy",
+   "linkShare": 0.2962,
+   "bodyWords": 574,
+   "proseWords": 404
+  },
+  {
+   "path": "/tld/green",
+   "linkShare": 0.2962,
+   "bodyWords": 574,
+   "proseWords": 404
+  },
+  {
+   "path": "/tld/chat",
+   "linkShare": 0.2961,
+   "bodyWords": 510,
+   "proseWords": 359
+  },
+  {
+   "path": "/tld/discount",
+   "linkShare": 0.296,
+   "bodyWords": 571,
+   "proseWords": 402
+  },
+  {
+   "path": "/tld/pizza",
+   "linkShare": 0.2957,
+   "bodyWords": 558,
+   "proseWords": 393
+  },
+  {
+   "path": "/tld/education",
+   "linkShare": 0.2955,
+   "bodyWords": 582,
+   "proseWords": 410
+  },
+  {
+   "path": "/tld/deals",
+   "linkShare": 0.2955,
+   "bodyWords": 572,
+   "proseWords": 403
+  },
+  {
+   "path": "/tld/salon",
+   "linkShare": 0.2954,
+   "bodyWords": 589,
+   "proseWords": 415
+  },
+  {
+   "path": "/tld/pink",
+   "linkShare": 0.2954,
+   "bodyWords": 562,
+   "proseWords": 396
+  },
+  {
+   "path": "/tld/theater",
+   "linkShare": 0.2953,
+   "bodyWords": 552,
+   "proseWords": 389
+  },
+  {
+   "path": "/tld/shoes",
+   "linkShare": 0.2953,
+   "bodyWords": 569,
+   "proseWords": 401
+  },
+  {
+   "path": "/tld/supply",
+   "linkShare": 0.2953,
+   "bodyWords": 569,
+   "proseWords": 401
+  },
+  {
+   "path": "/tld/builders",
+   "linkShare": 0.2952,
+   "bodyWords": 559,
+   "proseWords": 394
+  },
+  {
+   "path": "/tld/parts",
+   "linkShare": 0.2952,
+   "bodyWords": 559,
+   "proseWords": 394
+  },
+  {
+   "path": "/tld/fashion",
+   "linkShare": 0.2948,
+   "bodyWords": 553,
+   "proseWords": 390
+  },
+  {
+   "path": "/tld/bargains",
+   "linkShare": 0.2946,
+   "bodyWords": 560,
+   "proseWords": 395
+  },
+  {
+   "path": "/tld/equipment",
+   "linkShare": 0.2946,
+   "bodyWords": 560,
+   "proseWords": 395
+  },
+  {
+   "path": "/tld/recipes",
+   "linkShare": 0.2938,
+   "bodyWords": 565,
+   "proseWords": 399
+  },
+  {
+   "path": "/tld/ink",
+   "linkShare": 0.2938,
+   "bodyWords": 548,
+   "proseWords": 387
+  },
+  {
+   "path": "/tld/degree",
+   "linkShare": 0.2937,
+   "bodyWords": 555,
+   "proseWords": 392
+  },
+  {
+   "path": "/tld/delivery",
+   "linkShare": 0.2937,
+   "bodyWords": 555,
+   "proseWords": 392
+  },
+  {
+   "path": "/tld/blue",
+   "linkShare": 0.2936,
+   "bodyWords": 562,
+   "proseWords": 397
+  },
+  {
+   "path": "/tld/repair",
+   "linkShare": 0.2935,
+   "bodyWords": 603,
+   "proseWords": 426
+  },
+  {
+   "path": "/tld/boats",
+   "linkShare": 0.2933,
+   "bodyWords": 583,
+   "proseWords": 412
+  },
+  {
+   "path": "/tld/work",
+   "linkShare": 0.2931,
+   "bodyWords": 580,
+   "proseWords": 410
+  },
+  {
+   "path": "/tld/bet",
+   "linkShare": 0.293,
+   "bodyWords": 587,
+   "proseWords": 415
+  },
+  {
+   "path": "/tld/bio",
+   "linkShare": 0.2928,
+   "bodyWords": 526,
+   "proseWords": 372
+  },
+  {
+   "path": "/tld/au",
+   "linkShare": 0.2928,
+   "bodyWords": 567,
+   "proseWords": 401
+  },
+  {
+   "path": "/tld/camp",
+   "linkShare": 0.2926,
+   "bodyWords": 557,
+   "proseWords": 394
+  },
+  {
+   "path": "/tld/institute",
+   "linkShare": 0.2926,
+   "bodyWords": 557,
+   "proseWords": 394
+  },
+  {
+   "path": "/tld/cheap",
+   "linkShare": 0.2925,
+   "bodyWords": 571,
+   "proseWords": 404
+  },
+  {
+   "path": "/tld/net",
+   "linkShare": 0.2924,
+   "bodyWords": 472,
+   "proseWords": 334
+  },
+  {
+   "path": "/tld/photography",
+   "linkShare": 0.2923,
+   "bodyWords": 544,
+   "proseWords": 385
+  },
+  {
+   "path": "/tld/sh",
+   "linkShare": 0.2923,
+   "bodyWords": 479,
+   "proseWords": 339
+  },
+  {
+   "path": "/tld/limited",
+   "linkShare": 0.292,
+   "bodyWords": 565,
+   "proseWords": 400
+  },
+  {
+   "path": "/tld/courses",
+   "linkShare": 0.2919,
+   "bodyWords": 579,
+   "proseWords": 410
+  },
+  {
+   "path": "/tld/finance",
+   "linkShare": 0.2918,
+   "bodyWords": 514,
+   "proseWords": 364
+  },
+  {
+   "path": "/tld/study",
+   "linkShare": 0.2916,
+   "bodyWords": 559,
+   "proseWords": 396
+  },
+  {
+   "path": "/tld/cruises",
+   "linkShare": 0.2915,
+   "bodyWords": 566,
+   "proseWords": 401
+  },
+  {
+   "path": "/tld/villas",
+   "linkShare": 0.2915,
+   "bodyWords": 566,
+   "proseWords": 401
+  },
+  {
+   "path": "/tld/health",
+   "linkShare": 0.2912,
+   "bodyWords": 601,
+   "proseWords": 426
+  },
+  {
+   "path": "/tld/tickets",
+   "linkShare": 0.291,
+   "bodyWords": 567,
+   "proseWords": 402
+  },
+  {
+   "path": "/tld/info",
+   "linkShare": 0.2905,
+   "bodyWords": 482,
+   "proseWords": 342
+  },
+  {
+   "path": "/tld/zone",
+   "linkShare": 0.2905,
+   "bodyWords": 482,
+   "proseWords": 342
+  },
+  {
+   "path": "/tld/community",
+   "linkShare": 0.2896,
+   "bodyWords": 549,
+   "proseWords": 390
+  },
+  {
+   "path": "/tld/accountants",
+   "linkShare": 0.2895,
+   "bodyWords": 563,
+   "proseWords": 400
+  },
+  {
+   "path": "/tld/attorney",
+   "linkShare": 0.2895,
+   "bodyWords": 570,
+   "proseWords": 405
+  },
+  {
+   "path": "/tld/baby",
+   "linkShare": 0.2894,
+   "bodyWords": 584,
+   "proseWords": 415
+  },
+  {
+   "path": "/tld/supplies",
+   "linkShare": 0.2894,
+   "bodyWords": 584,
+   "proseWords": 415
+  },
+  {
+   "path": "/tld/ltd",
+   "linkShare": 0.2893,
+   "bodyWords": 605,
+   "proseWords": 430
+  },
+  {
+   "path": "/tld/dentist",
+   "linkShare": 0.2892,
+   "bodyWords": 567,
+   "proseWords": 403
+  },
+  {
+   "path": "/tld/florist",
+   "linkShare": 0.2892,
+   "bodyWords": 574,
+   "proseWords": 408
+  },
+  {
+   "path": "/tld/jewelry",
+   "linkShare": 0.2892,
+   "bodyWords": 574,
+   "proseWords": 408
+  },
+  {
+   "path": "/tld/lighting",
+   "linkShare": 0.2892,
+   "bodyWords": 581,
+   "proseWords": 413
+  },
+  {
+   "path": "/tld/so",
+   "linkShare": 0.2891,
+   "bodyWords": 467,
+   "proseWords": 332
+  },
+  {
+   "path": "/tld/coffee",
+   "linkShare": 0.289,
+   "bodyWords": 564,
+   "proseWords": 401
+  },
+  {
+   "path": "/tld/rocks",
+   "linkShare": 0.289,
+   "bodyWords": 564,
+   "proseWords": 401
+  },
+  {
+   "path": "/tld/wtf",
+   "linkShare": 0.2887,
+   "bodyWords": 523,
+   "proseWords": 372
+  },
+  {
+   "path": "/tld/solar",
+   "linkShare": 0.2887,
+   "bodyWords": 575,
+   "proseWords": 409
+  },
+  {
+   "path": "/tld/vacations",
+   "linkShare": 0.2887,
+   "bodyWords": 575,
+   "proseWords": 409
+  },
+  {
+   "path": "/tld/ca",
+   "linkShare": 0.2885,
+   "bodyWords": 565,
+   "proseWords": 402
+  },
+  {
+   "path": "/tld/catering",
+   "linkShare": 0.288,
+   "bodyWords": 566,
+   "proseWords": 403
+  },
+  {
+   "path": "/tld/autos",
+   "linkShare": 0.2879,
+   "bodyWords": 587,
+   "proseWords": 418
+  },
+  {
+   "path": "/tld/express",
+   "linkShare": 0.2876,
+   "bodyWords": 605,
+   "proseWords": 431
+  },
+  {
+   "path": "/tld/top",
+   "linkShare": 0.2875,
+   "bodyWords": 473,
+   "proseWords": 337
+  },
+  {
+   "path": "/tld/coupons",
+   "linkShare": 0.2875,
+   "bodyWords": 567,
+   "proseWords": 404
+  },
+  {
+   "path": "/tld/digital",
+   "linkShare": 0.2872,
+   "bodyWords": 470,
+   "proseWords": 335
+  },
+  {
+   "path": "/tld/land",
+   "linkShare": 0.2872,
+   "bodyWords": 484,
+   "proseWords": 345
+  },
+  {
+   "path": "/tld/business",
+   "linkShare": 0.287,
+   "bodyWords": 575,
+   "proseWords": 410
+  },
+  {
+   "path": "/tld/careers",
+   "linkShare": 0.287,
+   "bodyWords": 575,
+   "proseWords": 410
+  },
+  {
+   "path": "/tld/xyz",
+   "linkShare": 0.2869,
+   "bodyWords": 481,
+   "proseWords": 343
+  },
+  {
+   "path": "/tld/page",
+   "linkShare": 0.2865,
+   "bodyWords": 527,
+   "proseWords": 376
+  },
+  {
+   "path": "/tld/flights",
+   "linkShare": 0.2865,
+   "bodyWords": 569,
+   "proseWords": 406
+  },
+  {
+   "path": "/tld/spa",
+   "linkShare": 0.2865,
+   "bodyWords": 576,
+   "proseWords": 411
+  },
+  {
+   "path": "/tld/fishing",
+   "linkShare": 0.2864,
+   "bodyWords": 590,
+   "proseWords": 421
+  },
+  {
+   "path": "/tld/pub",
+   "linkShare": 0.2862,
+   "bodyWords": 587,
+   "proseWords": 419
+  },
+  {
+   "path": "/tld/sg",
+   "linkShare": 0.2859,
+   "bodyWords": 612,
+   "proseWords": 437
+  },
+  {
+   "path": "/tld/wedding",
+   "linkShare": 0.2855,
+   "bodyWords": 578,
+   "proseWords": 413
+  },
+  {
+   "path": "/tld/band",
+   "linkShare": 0.2854,
+   "bodyWords": 536,
+   "proseWords": 383
+  },
+  {
+   "path": "/tld/soccer",
+   "linkShare": 0.285,
+   "bodyWords": 607,
+   "proseWords": 434
+  },
+  {
+   "path": "/tld/voyage",
+   "linkShare": 0.285,
+   "bodyWords": 579,
+   "proseWords": 414
+  },
+  {
+   "path": "/tld/promo",
+   "linkShare": 0.2848,
+   "bodyWords": 604,
+   "proseWords": 432
+  },
+  {
+   "path": "/tld/gifts",
+   "linkShare": 0.2847,
+   "bodyWords": 590,
+   "proseWords": 422
+  },
+  {
+   "path": "/tld/flowers",
+   "linkShare": 0.2845,
+   "bodyWords": 580,
+   "proseWords": 415
+  },
+  {
+   "path": "/tld/limo",
+   "linkShare": 0.2845,
+   "bodyWords": 580,
+   "proseWords": 415
+  },
+  {
+   "path": "/tld/link",
+   "linkShare": 0.2845,
+   "bodyWords": 464,
+   "proseWords": 332
+  },
+  {
+   "path": "/tld/dad",
+   "linkShare": 0.2845,
+   "bodyWords": 573,
+   "proseWords": 410
+  },
+  {
+   "path": "/tld/cleaning",
+   "linkShare": 0.284,
+   "bodyWords": 574,
+   "proseWords": 411
+  },
+  {
+   "path": "/tld/vet",
+   "linkShare": 0.284,
+   "bodyWords": 574,
+   "proseWords": 411
+  },
+  {
+   "path": "/tld/beauty",
+   "linkShare": 0.2837,
+   "bodyWords": 557,
+   "proseWords": 399
+  },
+  {
+   "path": "/tld/casino",
+   "linkShare": 0.2836,
+   "bodyWords": 596,
+   "proseWords": 427
+  },
+  {
+   "path": "/tld/cooking",
+   "linkShare": 0.2835,
+   "bodyWords": 582,
+   "proseWords": 417
+  },
+  {
+   "path": "/tld/church",
+   "linkShare": 0.2835,
+   "bodyWords": 575,
+   "proseWords": 412
+  },
+  {
+   "path": "/tld/mom",
+   "linkShare": 0.2835,
+   "bodyWords": 575,
+   "proseWords": 412
+  },
+  {
+   "path": "/tld/tools",
+   "linkShare": 0.2834,
+   "bodyWords": 487,
+   "proseWords": 349
+  },
+  {
+   "path": "/tld/dating",
+   "linkShare": 0.2833,
+   "bodyWords": 593,
+   "proseWords": 425
+  },
+  {
+   "path": "/tld/gallery",
+   "linkShare": 0.2832,
+   "bodyWords": 558,
+   "proseWords": 400
+  },
+  {
+   "path": "/tld/taxi",
+   "linkShare": 0.2828,
+   "bodyWords": 594,
+   "proseWords": 426
+  },
+  {
+   "path": "/tld/furniture",
+   "linkShare": 0.2825,
+   "bodyWords": 577,
+   "proseWords": 414
+  },
+  {
+   "path": "/tld/camera",
+   "linkShare": 0.2822,
+   "bodyWords": 535,
+   "proseWords": 384
+  },
+  {
+   "path": "/tld/style",
+   "linkShare": 0.2821,
+   "bodyWords": 553,
+   "proseWords": 397
+  },
+  {
+   "path": "/tld/fr",
+   "linkShare": 0.282,
+   "bodyWords": 578,
+   "proseWords": 415
+  },
+  {
+   "path": "/tld/host",
+   "linkShare": 0.2818,
+   "bodyWords": 479,
+   "proseWords": 344
+  },
+  {
+   "path": "/tld/plumbing",
+   "linkShare": 0.2815,
+   "bodyWords": 579,
+   "proseWords": 416
+  },
+  {
+   "path": "/tld/poker",
+   "linkShare": 0.2809,
+   "bodyWords": 598,
+   "proseWords": 430
+  },
+  {
+   "path": "/tld/beer",
+   "linkShare": 0.2808,
+   "bodyWords": 584,
+   "proseWords": 420
+  },
+  {
+   "path": "/tld/gift",
+   "linkShare": 0.2806,
+   "bodyWords": 588,
+   "proseWords": 423
+  },
+  {
+   "path": "/tld/watch",
+   "linkShare": 0.2806,
+   "bodyWords": 556,
+   "proseWords": 400
+  },
+  {
+   "path": "/tld/it",
+   "linkShare": 0.2806,
+   "bodyWords": 581,
+   "proseWords": 418
+  },
+  {
+   "path": "/tld/estate",
+   "linkShare": 0.2804,
+   "bodyWords": 542,
+   "proseWords": 390
+  },
+  {
+   "path": "/tld/es",
+   "linkShare": 0.2804,
+   "bodyWords": 592,
+   "proseWords": 426
+  },
+  {
+   "path": "/tld/biz",
+   "linkShare": 0.2803,
+   "bodyWords": 610,
+   "proseWords": 439
+  },
+  {
+   "path": "/tld/mba",
+   "linkShare": 0.2801,
+   "bodyWords": 582,
+   "proseWords": 419
+  },
+  {
+   "path": "/tld/cz",
+   "linkShare": 0.2798,
+   "bodyWords": 604,
+   "proseWords": 435
+  },
+  {
+   "path": "/tld/pl",
+   "linkShare": 0.2797,
+   "bodyWords": 615,
+   "proseWords": 443
+  },
+  {
+   "path": "/tld/basketball",
+   "linkShare": 0.2797,
+   "bodyWords": 590,
+   "proseWords": 425
+  },
+  {
+   "path": "/tld/eu",
+   "linkShare": 0.2793,
+   "bodyWords": 605,
+   "proseWords": 436
+  },
+  {
+   "path": "/tld/fit",
+   "linkShare": 0.2793,
+   "bodyWords": 605,
+   "proseWords": 436
+  },
+  {
+   "path": "/tld/hair",
+   "linkShare": 0.2792,
+   "bodyWords": 548,
+   "proseWords": 395
+  },
+  {
+   "path": "/tld/football",
+   "linkShare": 0.279,
+   "bodyWords": 613,
+   "proseWords": 442
+  },
+  {
+   "path": "/tld/ventures",
+   "linkShare": 0.2789,
+   "bodyWords": 484,
+   "proseWords": 349
+  },
+  {
+   "path": "/tld/holiday",
+   "linkShare": 0.2787,
+   "bodyWords": 592,
+   "proseWords": 427
+  },
+  {
+   "path": "/tld/jp",
+   "linkShare": 0.2785,
+   "bodyWords": 596,
+   "proseWords": 430
+  },
+  {
+   "path": "/tld/surf",
+   "linkShare": 0.2781,
+   "bodyWords": 597,
+   "proseWords": 431
+  },
+  {
+   "path": "/tld/fund",
+   "linkShare": 0.2776,
+   "bodyWords": 508,
+   "proseWords": 367
+  },
+  {
+   "path": "/tld/skin",
+   "linkShare": 0.2772,
+   "bodyWords": 552,
+   "proseWords": 399
+  },
+  {
+   "path": "/tld/dog",
+   "linkShare": 0.2768,
+   "bodyWords": 596,
+   "proseWords": 431
+  },
+  {
+   "path": "/tld/rugby",
+   "linkShare": 0.2768,
+   "bodyWords": 596,
+   "proseWords": 431
+  },
+  {
+   "path": "/tld/vn",
+   "linkShare": 0.2767,
+   "bodyWords": 600,
+   "proseWords": 434
+  },
+  {
+   "path": "/tld/show",
+   "linkShare": 0.2766,
+   "bodyWords": 564,
+   "proseWords": 408
+  },
+  {
+   "path": "/tld/moe",
+   "linkShare": 0.2766,
+   "bodyWords": 546,
+   "proseWords": 395
+  },
+  {
+   "path": "/tld/food",
+   "linkShare": 0.2765,
+   "bodyWords": 604,
+   "proseWords": 437
+  },
+  {
+   "path": "/tld/hockey",
+   "linkShare": 0.2764,
+   "bodyWords": 597,
+   "proseWords": 432
+  },
+  {
+   "path": "/tld/tennis",
+   "linkShare": 0.2763,
+   "bodyWords": 608,
+   "proseWords": 440
+  },
+  {
+   "path": "/tld/pt",
+   "linkShare": 0.2758,
+   "bodyWords": 591,
+   "proseWords": 428
+  },
+  {
+   "path": "/tld/golf",
+   "linkShare": 0.2757,
+   "bodyWords": 602,
+   "proseWords": 436
+  },
+  {
+   "path": "/tld/fish",
+   "linkShare": 0.2756,
+   "bodyWords": 595,
+   "proseWords": 431
+  },
+  {
+   "path": "/tld/horse",
+   "linkShare": 0.275,
+   "bodyWords": 600,
+   "proseWords": 435
+  },
+  {
+   "path": "/tld/cricket",
+   "linkShare": 0.2745,
+   "bodyWords": 601,
+   "proseWords": 436
+  },
+  {
+   "path": "/tld/nz",
+   "linkShare": 0.2744,
+   "bodyWords": 594,
+   "proseWords": 431
+  },
+  {
+   "path": "/tld/cl",
+   "linkShare": 0.2744,
+   "bodyWords": 616,
+   "proseWords": 447
+  },
+  {
+   "path": "/tld/fi",
+   "linkShare": 0.2744,
+   "bodyWords": 616,
+   "proseWords": 447
+  },
+  {
+   "path": "/tld/dance",
+   "linkShare": 0.2742,
+   "bodyWords": 598,
+   "proseWords": 434
+  },
+  {
+   "path": "/tld/fan",
+   "linkShare": 0.2742,
+   "bodyWords": 620,
+   "proseWords": 450
+  },
+  {
+   "path": "/tld/win",
+   "linkShare": 0.2741,
+   "bodyWords": 613,
+   "proseWords": 445
+  },
+  {
+   "path": "/tld/amsterdam",
+   "linkShare": 0.2739,
+   "bodyWords": 595,
+   "proseWords": 432
+  },
+  {
+   "path": "/tld/se",
+   "linkShare": 0.2739,
+   "bodyWords": 617,
+   "proseWords": 448
+  },
+  {
+   "path": "/tld/llc",
+   "linkShare": 0.2735,
+   "bodyWords": 607,
+   "proseWords": 441
+  },
+  {
+   "path": "/tld/singles",
+   "linkShare": 0.2732,
+   "bodyWords": 604,
+   "proseWords": 439
+  },
+  {
+   "path": "/tld/vodka",
+   "linkShare": 0.2732,
+   "bodyWords": 604,
+   "proseWords": 439
+  },
+  {
+   "path": "/tld/party",
+   "linkShare": 0.2727,
+   "bodyWords": 605,
+   "proseWords": 440
+  },
+  {
+   "path": "/tld/tr",
+   "linkShare": 0.2726,
+   "bodyWords": 631,
+   "proseWords": 459
+  },
+  {
+   "path": "/tld/mx",
+   "linkShare": 0.2726,
+   "bodyWords": 620,
+   "proseWords": 451
+  },
+  {
+   "path": "/tld/pictures",
+   "linkShare": 0.2722,
+   "bodyWords": 562,
+   "proseWords": 409
+  },
+  {
+   "path": "/tld/dk",
+   "linkShare": 0.2712,
+   "bodyWords": 612,
+   "proseWords": 446
+  },
+  {
+   "path": "/tld/at",
+   "linkShare": 0.2712,
+   "bodyWords": 601,
+   "proseWords": 438
+  },
+  {
+   "path": "/tld/monster",
+   "linkShare": 0.2712,
+   "bodyWords": 601,
+   "proseWords": 438
+  },
+  {
+   "path": "/tld/sk",
+   "linkShare": 0.2712,
+   "bodyWords": 601,
+   "proseWords": 438
+  },
+  {
+   "path": "/tld/ch",
+   "linkShare": 0.2708,
+   "bodyWords": 602,
+   "proseWords": 439
+  },
+  {
+   "path": "/tld/red",
+   "linkShare": 0.2707,
+   "bodyWords": 569,
+   "proseWords": 415
+  },
+  {
+   "path": "/tld/college",
+   "linkShare": 0.2703,
+   "bodyWords": 603,
+   "proseWords": 440
+  },
+  {
+   "path": "/tld/money",
+   "linkShare": 0.2701,
+   "bodyWords": 522,
+   "proseWords": 381
+  },
+  {
+   "path": "/tld/luxury",
+   "linkShare": 0.27,
+   "bodyWords": 611,
+   "proseWords": 446
+  },
+  {
+   "path": "/tld/cash",
+   "linkShare": 0.27,
+   "bodyWords": 500,
+   "proseWords": 365
+  },
+  {
+   "path": "/tld/healthcare",
+   "linkShare": 0.2699,
+   "bodyWords": 604,
+   "proseWords": 441
+  },
+  {
+   "path": "/tld/shopping",
+   "linkShare": 0.2699,
+   "bodyWords": 604,
+   "proseWords": 441
+  },
+  {
+   "path": "/tld/futbol",
+   "linkShare": 0.2696,
+   "bodyWords": 612,
+   "proseWords": 447
+  },
+  {
+   "path": "/tld/makeup",
+   "linkShare": 0.2694,
+   "bodyWords": 568,
+   "proseWords": 415
+  },
+  {
+   "path": "/tld/wiki",
+   "linkShare": 0.2692,
+   "bodyWords": 509,
+   "proseWords": 372
+  },
+  {
+   "path": "/tld/glass",
+   "linkShare": 0.269,
+   "bodyWords": 606,
+   "proseWords": 443
+  },
+  {
+   "path": "/tld/ph",
+   "linkShare": 0.269,
+   "bodyWords": 606,
+   "proseWords": 443
+  },
+  {
+   "path": "/tld/press",
+   "linkShare": 0.2688,
+   "bodyWords": 573,
+   "proseWords": 419
+  },
+  {
+   "path": "/tld/ng",
+   "linkShare": 0.2687,
+   "bodyWords": 629,
+   "proseWords": 460
+  },
+  {
+   "path": "/tld/kr",
+   "linkShare": 0.2685,
+   "bodyWords": 607,
+   "proseWords": 444
+  },
+  {
+   "path": "/tld/ro",
+   "linkShare": 0.2685,
+   "bodyWords": 607,
+   "proseWords": 444
+  },
+  {
+   "path": "/tld/reviews",
+   "linkShare": 0.2685,
+   "bodyWords": 581,
+   "proseWords": 425
+  },
+  {
+   "path": "/tld/review",
+   "linkShare": 0.2682,
+   "bodyWords": 563,
+   "proseWords": 412
+  },
+  {
+   "path": "/tld/quest",
+   "linkShare": 0.2682,
+   "bodyWords": 619,
+   "proseWords": 453
+  },
+  {
+   "path": "/tld/be",
+   "linkShare": 0.2681,
+   "bodyWords": 608,
+   "proseWords": 445
+  },
+  {
+   "path": "/tld/rehab",
+   "linkShare": 0.2681,
+   "bodyWords": 608,
+   "proseWords": 445
+  },
+  {
+   "path": "/tld/vision",
+   "linkShare": 0.2681,
+   "bodyWords": 608,
+   "proseWords": 445
+  },
+  {
+   "path": "/tld/ar",
+   "linkShare": 0.2677,
+   "bodyWords": 620,
+   "proseWords": 454
+  },
+  {
+   "path": "/tld/gr",
+   "linkShare": 0.2677,
+   "bodyWords": 609,
+   "proseWords": 446
+  },
+  {
+   "path": "/tld/tw",
+   "linkShare": 0.2677,
+   "bodyWords": 609,
+   "proseWords": 446
+  },
+  {
+   "path": "/tld/productions",
+   "linkShare": 0.2675,
+   "bodyWords": 572,
+   "proseWords": 419
+  },
+  {
+   "path": "/tld/ae",
+   "linkShare": 0.2674,
+   "bodyWords": 632,
+   "proseWords": 463
+  },
+  {
+   "path": "/tld/systems",
+   "linkShare": 0.2668,
+   "bodyWords": 506,
+   "proseWords": 371
+  },
+  {
+   "path": "/tld/forum",
+   "linkShare": 0.2668,
+   "bodyWords": 566,
+   "proseWords": 415
+  },
+  {
+   "path": "/tld/run",
+   "linkShare": 0.2667,
+   "bodyWords": 525,
+   "proseWords": 385
+  },
+  {
+   "path": "/tld/kids",
+   "linkShare": 0.2663,
+   "bodyWords": 646,
+   "proseWords": 474
+  },
+  {
+   "path": "/tld/clothing",
+   "linkShare": 0.2661,
+   "bodyWords": 575,
+   "proseWords": 422
+  },
+  {
+   "path": "/tld/cool",
+   "linkShare": 0.2657,
+   "bodyWords": 493,
+   "proseWords": 362
+  },
+  {
+   "path": "/tld/rentals",
+   "linkShare": 0.2656,
+   "bodyWords": 576,
+   "proseWords": 423
+  },
+  {
+   "path": "/tld/hospital",
+   "linkShare": 0.2655,
+   "bodyWords": 614,
+   "proseWords": 451
+  },
+  {
+   "path": "/tld/id",
+   "linkShare": 0.2653,
+   "bodyWords": 637,
+   "proseWords": 468
+  },
+  {
+   "path": "/tld/surgery",
+   "linkShare": 0.2646,
+   "bodyWords": 616,
+   "proseWords": 453
+  },
+  {
+   "path": "/tld/tires",
+   "linkShare": 0.2646,
+   "bodyWords": 616,
+   "proseWords": 453
+  },
+  {
+   "path": "/tld/vin",
+   "linkShare": 0.2642,
+   "bodyWords": 617,
+   "proseWords": 454
+  },
+  {
+   "path": "/tld/md",
+   "linkShare": 0.264,
+   "bodyWords": 606,
+   "proseWords": 446
+  },
+  {
+   "path": "/tld/vegas",
+   "linkShare": 0.2638,
+   "bodyWords": 618,
+   "proseWords": 455
+  },
+  {
+   "path": "/tld/exchange",
+   "linkShare": 0.2637,
+   "bodyWords": 512,
+   "proseWords": 377
+  },
+  {
+   "path": "/tld/hk",
+   "linkShare": 0.2635,
+   "bodyWords": 630,
+   "proseWords": 464
+  },
+  {
+   "path": "/tld/nl",
+   "linkShare": 0.2631,
+   "bodyWords": 631,
+   "proseWords": 465
+  },
+  {
+   "path": "/tld/university",
+   "linkShare": 0.2629,
+   "bodyWords": 620,
+   "proseWords": 457
+  },
+  {
+   "path": "/tld/support",
+   "linkShare": 0.2629,
+   "bodyWords": 525,
+   "proseWords": 387
+  },
+  {
+   "path": "/tld/foundation",
+   "linkShare": 0.2625,
+   "bodyWords": 621,
+   "proseWords": 458
+  },
+  {
+   "path": "/tld/kaufen",
+   "linkShare": 0.2625,
+   "bodyWords": 621,
+   "proseWords": 458
+  },
+  {
+   "path": "/tld/no",
+   "linkShare": 0.2625,
+   "bodyWords": 621,
+   "proseWords": 458
+  },
+  {
+   "path": "/tld/uz",
+   "linkShare": 0.2623,
+   "bodyWords": 610,
+   "proseWords": 450
+  },
+  {
+   "path": "/tld/abogado",
+   "linkShare": 0.2621,
+   "bodyWords": 622,
+   "proseWords": 459
+  },
+  {
+   "path": "/tld/codes",
+   "linkShare": 0.262,
+   "bodyWords": 523,
+   "proseWords": 386
+  },
+  {
+   "path": "/tld/capital",
+   "linkShare": 0.2619,
+   "bodyWords": 527,
+   "proseWords": 389
+  },
+  {
+   "path": "/tld/click",
+   "linkShare": 0.2619,
+   "bodyWords": 485,
+   "proseWords": 358
+  },
+  {
+   "path": "/tld/berlin",
+   "linkShare": 0.2618,
+   "bodyWords": 634,
+   "proseWords": 468
+  },
+  {
+   "path": "/tld/br",
+   "linkShare": 0.2618,
+   "bodyWords": 634,
+   "proseWords": 468
+  },
+  {
+   "path": "/tld/hu",
+   "linkShare": 0.2616,
+   "bodyWords": 623,
+   "proseWords": 460
+  },
+  {
+   "path": "/tld/ma",
+   "linkShare": 0.2616,
+   "bodyWords": 623,
+   "proseWords": 460
+  },
+  {
+   "path": "/tld/lt",
+   "linkShare": 0.2614,
+   "bodyWords": 635,
+   "proseWords": 469
+  },
+  {
+   "path": "/tld/lv",
+   "linkShare": 0.2612,
+   "bodyWords": 624,
+   "proseWords": 461
+  },
+  {
+   "path": "/tld/audio",
+   "linkShare": 0.2611,
+   "bodyWords": 586,
+   "proseWords": 433
+  },
+  {
+   "path": "/tld/guide",
+   "linkShare": 0.2611,
+   "bodyWords": 586,
+   "proseWords": 433
+  },
+  {
+   "path": "/tld/photo",
+   "linkShare": 0.2611,
+   "bodyWords": 586,
+   "proseWords": 433
+  },
+  {
+   "path": "/tld/stream",
+   "linkShare": 0.2611,
+   "bodyWords": 586,
+   "proseWords": 433
+  },
+  {
+   "path": "/tld/organic",
+   "linkShare": 0.2611,
+   "bodyWords": 632,
+   "proseWords": 467
+  },
+  {
+   "path": "/tld/paris",
+   "linkShare": 0.2608,
+   "bodyWords": 625,
+   "proseWords": 462
+  },
+  {
+   "path": "/tld/tattoo",
+   "linkShare": 0.2606,
+   "bodyWords": 587,
+   "proseWords": 434
+  },
+  {
+   "path": "/tld/lk",
+   "linkShare": 0.2604,
+   "bodyWords": 626,
+   "proseWords": 463
+  },
+  {
+   "path": "/tld/software",
+   "linkShare": 0.2601,
+   "bodyWords": 519,
+   "proseWords": 384
+  },
+  {
+   "path": "/tld/gmbh",
+   "linkShare": 0.26,
+   "bodyWords": 627,
+   "proseWords": 464
+  },
+  {
+   "path": "/tld/actor",
+   "linkShare": 0.2599,
+   "bodyWords": 581,
+   "proseWords": 430
+  },
+  {
+   "path": "/tld/sa",
+   "linkShare": 0.2598,
+   "bodyWords": 639,
+   "proseWords": 473
+  },
+  {
+   "path": "/tld/movie",
+   "linkShare": 0.2598,
+   "bodyWords": 589,
+   "proseWords": 436
+  },
+  {
+   "path": "/tld/la",
+   "linkShare": 0.2597,
+   "bodyWords": 616,
+   "proseWords": 456
+  },
+  {
+   "path": "/tld/pe",
+   "linkShare": 0.2596,
+   "bodyWords": 628,
+   "proseWords": 465
+  },
+  {
+   "path": "/tld/lu",
+   "linkShare": 0.2589,
+   "bodyWords": 618,
+   "proseWords": 458
+  },
+  {
+   "path": "/tld/ie",
+   "linkShare": 0.2587,
+   "bodyWords": 630,
+   "proseWords": 467
+  },
+  {
+   "path": "/tld/properties",
+   "linkShare": 0.2586,
+   "bodyWords": 553,
+   "proseWords": 410
+  },
+  {
+   "path": "/tld/my",
+   "linkShare": 0.2586,
+   "bodyWords": 642,
+   "proseWords": 476
+  },
+  {
+   "path": "/tld/fyi",
+   "linkShare": 0.2584,
+   "bodyWords": 596,
+   "proseWords": 442
+  },
+  {
+   "path": "/tld/pk",
+   "linkShare": 0.2583,
+   "bodyWords": 631,
+   "proseWords": 468
+  },
+  {
+   "path": "/tld/ua",
+   "linkShare": 0.2583,
+   "bodyWords": 631,
+   "proseWords": 468
+  },
+  {
+   "path": "/tld/ee",
+   "linkShare": 0.2578,
+   "bodyWords": 644,
+   "proseWords": 478
+  },
+  {
+   "path": "/tld/loans",
+   "linkShare": 0.2576,
+   "bodyWords": 524,
+   "proseWords": 389
+  },
+  {
+   "path": "/tld/th",
+   "linkShare": 0.2575,
+   "bodyWords": 633,
+   "proseWords": 470
+  },
+  {
+   "path": "/tld/apartments",
+   "linkShare": 0.2572,
+   "bodyWords": 556,
+   "proseWords": 413
+  },
+  {
+   "path": "/tld/meme",
+   "linkShare": 0.2571,
+   "bodyWords": 599,
+   "proseWords": 445
+  },
+  {
+   "path": "/tld/graphics",
+   "linkShare": 0.2568,
+   "bodyWords": 588,
+   "proseWords": 437
+  },
+  {
+   "path": "/tld/am",
+   "linkShare": 0.256,
+   "bodyWords": 625,
+   "proseWords": 465
+  },
+  {
+   "path": "/tld/mn",
+   "linkShare": 0.2556,
+   "bodyWords": 626,
+   "proseWords": 466
+  },
+  {
+   "path": "/tld/ge",
+   "linkShare": 0.2555,
+   "bodyWords": 638,
+   "proseWords": 475
+  },
+  {
+   "path": "/tld/immobilien",
+   "linkShare": 0.2555,
+   "bodyWords": 638,
+   "proseWords": 475
+  },
+  {
+   "path": "/tld/il",
+   "linkShare": 0.2547,
+   "bodyWords": 640,
+   "proseWords": 477
+  },
+  {
+   "path": "/tld/ke",
+   "linkShare": 0.2547,
+   "bodyWords": 640,
+   "proseWords": 477
+  },
+  {
+   "path": "/tld/gold",
+   "linkShare": 0.2546,
+   "bodyWords": 542,
+   "proseWords": 404
+  },
+  {
+   "path": "/tld/rent",
+   "linkShare": 0.2542,
+   "bodyWords": 531,
+   "proseWords": 396
+  },
+  {
+   "path": "/tld/kz",
+   "linkShare": 0.2539,
+   "bodyWords": 642,
+   "proseWords": 479
+  },
+  {
+   "path": "/tld/za",
+   "linkShare": 0.2535,
+   "bodyWords": 643,
+   "proseWords": 480
+  },
+  {
+   "path": "/tld/report",
+   "linkShare": 0.2534,
+   "bodyWords": 596,
+   "proseWords": 445
+  },
+  {
+   "path": "/tld/moda",
+   "linkShare": 0.2533,
+   "bodyWords": 608,
+   "proseWords": 454
+  },
+  {
+   "path": "/tld/tienda",
+   "linkShare": 0.2531,
+   "bodyWords": 644,
+   "proseWords": 481
+  },
+  {
+   "path": "/tld/pics",
+   "linkShare": 0.2525,
+   "bodyWords": 598,
+   "proseWords": 447
+  },
+  {
+   "path": "/tld/icu",
+   "linkShare": 0.2525,
+   "bodyWords": 503,
+   "proseWords": 376
+  },
+  {
+   "path": "/tld/today",
+   "linkShare": 0.2525,
+   "bodyWords": 503,
+   "proseWords": 376
+  },
+  {
+   "path": "/tld/rs",
+   "linkShare": 0.2523,
+   "bodyWords": 646,
+   "proseWords": 483
+  },
+  {
+   "path": "/tld/is",
+   "linkShare": 0.2512,
+   "bodyWords": 649,
+   "proseWords": 486
+  },
+  {
+   "path": "/tld/credit",
+   "linkShare": 0.2505,
+   "bodyWords": 539,
+   "proseWords": 404
+  },
+  {
+   "path": "/tld/investments",
+   "linkShare": 0.2505,
+   "bodyWords": 539,
+   "proseWords": 404
+  }
+ ]
+}
