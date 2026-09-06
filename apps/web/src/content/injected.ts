@@ -5,6 +5,7 @@
  * （三个模块合计 gzip 后 >2.5MB，曾把内容页 LCP 拖到 13s+）。
  * 注入缺失时由 main.tsx 动态加载 injected-build.ts 兜底构建，渲染结果逐字一致。
  */
+import type { ComparePriceSnapshot } from "./compare-prices";
 import type { TldCompare } from "./compares";
 import type { IndustryGuide } from "./guides";
 import type { TldGuide } from "./tlds";
@@ -44,6 +45,11 @@ export interface InjectedVsContent {
   /** 对比两侧的 TLD 指南（a、b 顺序；无指南时为 null） */
   sideGuides: [TldGuide | null, TldGuide | null];
   relatedGuides: GuideLink[];
+  /**
+   * 价格数据表快照：worker SSR 只读 /api/prices 同一份 KV 缓存写入，客户端据此渲染与 SSR 逐字一致的表格；
+   * 客户端兜底构建（注入缺失）时为 undefined，页面改用 /api/prices 拉取结果
+   */
+  prices?: ComparePriceSnapshot;
 }
 
 export type InjectedContent = InjectedTldContent | InjectedGuideContent | InjectedVsContent;

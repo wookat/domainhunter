@@ -3,6 +3,7 @@
  * 保证两条路径产出的数据逐字一致。
  * 引用了 tlds.ts / guides.ts / compares.ts 全量内容模块——客户端只允许动态 import 本模块。
  */
+import type { ComparePriceSnapshot } from "./compare-prices";
 import { TLD_COMPARES, comparesForTld } from "./compares";
 import { INDUSTRY_GUIDES, guidesForTld } from "./guides";
 import { TLD_GUIDES } from "./tlds";
@@ -40,7 +41,7 @@ export function buildGuideContent(slug: string): InjectedGuideContent | null {
   return { kind: "guide", slug, guide };
 }
 
-export function buildVsContent(slug: string): InjectedVsContent | null {
+export function buildVsContent(slug: string, prices?: ComparePriceSnapshot): InjectedVsContent | null {
   const cmp = TLD_COMPARES[slug];
   if (!cmp) return null;
   return {
@@ -49,5 +50,6 @@ export function buildVsContent(slug: string): InjectedVsContent | null {
     cmp,
     sideGuides: [TLD_GUIDES[cmp.a] ?? null, TLD_GUIDES[cmp.b] ?? null],
     relatedGuides: [...new Set([...guidesForTld(cmp.a), ...guidesForTld(cmp.b)])].slice(0, 4).map(guideLink),
+    ...(prices ? { prices } : {}),
   };
 }

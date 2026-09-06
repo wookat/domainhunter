@@ -7,6 +7,7 @@ import { resolveFallbackUpstream, type LlmProvider } from "./ai-transport";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
+import { snapshotFromPayload } from "./content/compare-prices";
 import { faqJsonld } from "./content/faq";
 import { buildGuideFaq } from "./content/guide-faq";
 import { buildPricesFaq } from "./content/prices-faq";
@@ -28,7 +29,7 @@ import { DOMAIN_RE, sanitizeShareItem, shareGoneMeta, shareShellState, shareSsrT
 import { sitemapLastmod } from "./sitemap-lastmod";
 import { parseVariantName } from "./mcp-args";
 import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
-import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
+import { loadPricesPayload, peekPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
 import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
 import { PageviewCounter, readDayPageviews, type DayPageviews } from "./pageviews";
 import { emptyDayUsage, readDayUsage, usageCounterFor, type DayUsage } from "./usage-counter";
@@ -1798,8 +1799,10 @@ app.get("/vs/:slug", async (c) => {
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/compare-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
-  html = injectContentData(html, buildVsContent(slug));
-  html = injectSsrSkeleton(html, `.${cmp.a} vs .${cmp.b}`, loc.title, compareContentBlocks(cmp, lang), hubCrumbKicker("vs", `.${cmp.a} vs .${cmp.b}`, lang), "max-w-4xl");
+  // 价格数据表与 /api/prices 同源：只读同一份 KV 缓存（不拉上游），同一快照既渲染 SSR 表格也注入客户端，水合逐字一致
+  const priceSnapshot = snapshotFromPayload(await peekPricesPayload(c.env.CACHE, PRICES_CACHE_CFG), [cmp.a, cmp.b]);
+  html = injectContentData(html, buildVsContent(slug, priceSnapshot));
+  html = injectSsrSkeleton(html, `.${cmp.a} vs .${cmp.b}`, loc.title, compareContentBlocks(cmp, lang, priceSnapshot), hubCrumbKicker("vs", `.${cmp.a} vs .${cmp.b}`, lang), "max-w-4xl");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 
