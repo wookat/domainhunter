@@ -2,6 +2,7 @@ import { CheckCircle2, HelpCircle, Scale, Sparkles } from "lucide-react";
 
 import { buildCompareFaq, COMPARE_VERDICT_ANCHOR, comparePickAnchor } from "@/content/compare-faq";
 import { compareLabel, relatedCompares } from "@/content/compare-slugs";
+import { VIEW_ALL_LABEL, compareGroupChips, viewAllHref } from "@/content/group-chips";
 import { readInjectedContent } from "@/content/injected";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { FaqAnswer } from "@/components/faq-answer";
@@ -26,6 +27,7 @@ export function ComparePage({ slug }: { slug: string }) {
   const faq = buildCompareFaq(cmp, lang);
   const relatedGuides = content.relatedGuides;
   const related = relatedCompares(slug);
+  const others = compareGroupChips(slug);
 
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -142,23 +144,25 @@ export function ComparePage({ slug }: { slug: string }) {
         </div>
       )}
 
-      {/* 其他对比页互链 */}
+      {/* 其他对比页互链：两侧 TLD 所属组并集内 ≤30 个 + 『查看全部 N 个』hub 链接（规则见 content/group-chips.ts） */}
       <div className="mt-10">
         <h2 className="text-sm font-semibold text-txt1">{t("vs.others")}</h2>
         <div className="mt-3 flex flex-wrap gap-2">
-          {content.compareLinks.map((other) => (
+          {others.chips.map((other) => (
             <a
-              key={other.slug}
-              href={`/vs/${other.slug}?lang=${lang}`}
-              className={
-                other.slug === slug
-                  ? "flex min-h-[44px] items-center rounded-lg border border-brand-line bg-brand-dim px-3 font-mono text-xs font-semibold text-brand"
-                  : "flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
-              }
+              key={other}
+              href={`/vs/${other}?lang=${lang}`}
+              className="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand"
             >
-              .{other.a} vs .{other.b}
+              {compareLabel(other)}
             </a>
           ))}
+          <a
+            href={viewAllHref("vs", others.anchor, lang)}
+            className="flex min-h-[44px] items-center rounded-lg border border-brand-line px-3 text-xs font-semibold text-brand transition-colors hover:bg-brand-dim"
+          >
+            {VIEW_ALL_LABEL.vs[lang]}
+          </a>
         </div>
       </div>
       <SiteLinks />

@@ -1,0 +1,78 @@
+{
+  "origin": "http://127.0.0.1:8787",
+  "measuredAt": "2026-09-06T06:45:35.145Z",
+  "rows": [
+    {
+      "path": "/tld/com",
+      "lang": "zh",
+      "url": "http://127.0.0.1:8787/tld/com",
+      "status": 200,
+      "bytes": 74878,
+      "bodyWords": 1000,
+      "proseWords": 840,
+      "linkShare": 0.16000000000000003,
+      "bodyLinks": 39,
+      "injectedBytes": 4832
+    },
+    {
+      "path": "/tld/com",
+      "lang": "en",
+      "url": "http://127.0.0.1:8787/tld/com?lang=en",
+      "status": 200,
+      "bytes": 74860,
+      "bodyWords": 598,
+      "proseWords": 453,
+      "linkShare": 0.24247491638795982,
+      "bodyLinks": 39,
+      "injectedBytes": 4832
+    },
+    {
+      "path": "/guide/saas",
+      "lang": "zh",
+      "url": "http://127.0.0.1:8787/guide/saas",
+      "status": 200,
+      "bytes": 80720,
+      "bodyWords": 1657,
+      "proseWords": 1468,
+      "linkShare": 0.11406155703077847,
+      "bodyLinks": 32,
+      "injectedBytes": 7297
+    },
+    {
+      "path": "/guide/saas",
+      "lang": "en",
+      "url": "http://127.0.0.1:8787/guide/saas?lang=en",
+      "status": 200,
+      "bytes": 81324,
+      "bodyWords": 1040,
+      "proseWords": 936,
+      "linkShare": 0.09999999999999998,
+      "bodyLinks": 32,
+      "injectedBytes": 7297
+    },
+    {
+      "path": "/vs/com-vs-cn",
+      "lang": "zh",
+      "url": "http://127.0.0.1:8787/vs/com-vs-cn",
+      "status": 200,
+      "bytes": 76050,
+      "bodyWords": 802,
+      "proseWords": 672,
+      "linkShare": 0.16209476309226933,
+      "bodyLinks": 39,
+      "injectedBytes": 8220
+    },
+    {
+      "path": "/vs/com-vs-cn",
+      "lang": "en",
+      "url": "http://127.0.0.1:8787/vs/com-vs-cn?lang=en",
+      "status": 200,
+      "bytes": 76026,
+      "bodyWords": 484,
+      "proseWords": 372,
+      "linkShare": 0.23140495867768596,
+      "bodyLinks": 39,
+      "injectedBytes": 8220
+    }
+  ]
+}

@@ -100,12 +100,14 @@ if (existsSync(join(out, "graph.json"))) {
   const adjRaw = new Map(g.nodes.map((n) => [n.path, n.links]));
   // 逻辑图：把 ?lang=zh|en 去掉后落到 sitemap 裸路径
   const adjLogical = new Map(g.nodes.map((n) => [n.path, [...new Set(n.links.map(stripLang).map((l) => l.split("?")[0]).filter((l) => sitemap.has(l)))]]));
+  // 返回 Map<path, 跳数>（起点为 0）；Map 的 .size 即可达数
   const bfs = (adj, starts) => {
-    const seen = new Set(starts.filter((s) => adj.has(s)));
-    const q = [...seen];
+    const seen = new Map(starts.filter((s) => adj.has(s)).map((s) => [s, 0]));
+    const q = [...seen.keys()];
     while (q.length) {
       const cur = q.shift();
-      for (const nx of adj.get(cur) ?? []) if (!seen.has(nx)) { seen.add(nx); q.push(nx); }
+      const d = seen.get(cur) + 1;
+      for (const nx of adj.get(cur) ?? []) if (!seen.has(nx)) { seen.set(nx, d); q.push(nx); }
     }
     return seen;
   };
@@ -116,6 +118,20 @@ if (existsSync(join(out, "graph.json"))) {
   const fromHomeExact = bfs(adjRawExact, ["/"]);
   const fromHomeLogical = bfs(adjLogical, ["/"]);
   const fromHubsLogical = bfs(adjLogical, ["/", "/tld", "/guide", "/vs"]);
+  // 从 / 出发的跳数分布（逻辑图）：按 sitemap 分组统计 ≤3 跳可达数与最大跳数（R520：chip 收敛后的可达性证据）
+  const groupOf = (p) => (p.startsWith("/tld/") ? "tld" : p.startsWith("/guide/") ? "guide" : p.startsWith("/vs/") ? "vs" : "core");
+  const hops = {};
+  for (const p of sitemap) {
+    const grp = groupOf(p);
+    const h = hops[grp] ??= { total: 0, reachable: 0, within3: 0, maxHops: 0, hist: {} };
+    h.total++;
+    if (!fromHomeLogical.has(p)) continue;
+    const d = fromHomeLogical.get(p);
+    h.reachable++;
+    if (d <= 3) h.within3++;
+    h.maxHops = Math.max(h.maxHops, d);
+    h.hist[d] = (h.hist[d] ?? 0) + 1;
+  }
   const totalLinks = g.nodes.reduce((n, x) => n + x.links.length, 0);
   const langLinks = g.nodes.reduce((n, x) => n + x.links.filter((l) => /[?&]lang=/.test(l)).length, 0);
   graph = {
@@ -130,6 +146,7 @@ if (existsSync(join(out, "graph.json"))) {
     reachableFromHomeLogical: fromHomeLogical.size,
     reachableFromHubsLogical: fromHubsLogical.size,
     unreachableFromHubsLogical: [...sitemap].filter((p) => !fromHubsLogical.has(p)),
+    hopsFromHome: hops,
     zeroInboundLogical: [...inboundLogical].filter(([, n]) => n === 0).map(([p]) => p),
     inboundStats: { median: median([...inboundLogical.values()]), min: Math.min(...inboundLogical.values()), max: Math.max(...inboundLogical.values()) },
     outLinksPerPage: { median: median(g.nodes.map((n) => n.links.length)), min: Math.min(...g.nodes.map((n) => n.links.length)), max: Math.max(...g.nodes.map((n) => n.links.length)) },
@@ -173,6 +190,11 @@ if (graph) {
   md.push(`- BFS-B（逻辑：去掉 ?lang 参数后落到裸路径）从 / 出发可达：**${graph.reachableFromHomeLogical}/${graph.sitemapCount}**；从 /+/tld+/guide+/vs 出发可达：**${graph.reachableFromHubsLogical}/${graph.sitemapCount}**`);
   md.push(`- BFS-B 下不可达（孤岛）：${graph.unreachableFromHubsLogical.length ? graph.unreachableFromHubsLogical.join(", ") : "无"}；入链为 0 的页：${graph.zeroInboundLogical.length ? graph.zeroInboundLogical.join(", ") : "无"}`);
   md.push(`- 每页入链（逻辑图）min/中位/max：${graph.inboundStats.min}/${graph.inboundStats.median}/${graph.inboundStats.max}；每页出链 min/中位/max：${graph.outLinksPerPage.min}/${graph.outLinksPerPage.median}/${graph.outLinksPerPage.max}`);
+  md.push("", "| 组 | sitemap 页数 | 从 / 可达 | ≤3 跳可达 | 最大跳数 | 跳数分布 |", "|---|---|---|---|---|---|");
+  for (const [grp, h] of Object.entries(graph.hopsFromHome)) {
+    const hist = Object.entries(h.hist).sort(([a], [b]) => a - b).map(([d, n]) => `${d}跳×${n}`).join(" ");
+    md.push(`| ${grp} | ${h.total} | ${h.reachable} | ${h.within3} | ${h.maxHops} | ${hist} |`);
+  }
 }
 await writeFile(join(out, "report.md"), md.join("\n") + "\n");
 console.log(md.join("\n"));
