@@ -82,7 +82,7 @@ export function PricesPage() {
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{t("prices.title")}</h1>
       <p className="mt-3 text-[15px] leading-relaxed text-txt1">{t("prices.intro")}</p>
 
-      <HubFilter placeholder={t("prices.filter")} value={filter} onChange={setFilter} shown={rows.length} total={TLD_LIST.length} />
+      <HubFilter id="prices-filter" placeholder={t("prices.filter")} value={filter} onChange={setFilter} shown={rows.length} total={TLD_LIST.length} />
 
       {rows.length === 0 && <HubFilterEmpty lang={lang} onClear={() => setFilter("")} />}
       <div className={cn("mt-4 overflow-hidden rounded-xl border border-line", rows.length === 0 && "hidden")}>

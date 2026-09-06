@@ -33,7 +33,7 @@ export function GuideHubPage() {
       <p className="font-mono text-sm text-brand">{meta.kicker}</p>
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{meta.title}</h1>
       <p className="mt-6 text-[15px] leading-relaxed text-txt1">{meta.intro}</p>
-      <HubFilter placeholder={lang === "zh" ? "筛选行业…" : "Filter industries…"} value={query} onChange={setQuery} shown={shown} total={total} />
+      <HubFilter id="guide-filter" placeholder={lang === "zh" ? "筛选行业…" : "Filter industries…"} value={query} onChange={setQuery} shown={shown} total={total} />
       <HubAnchorNav lang={lang} items={filtered.map((g) => ({ id: g.id, label: g[lang], count: g.slugs.length }))} />
       {filtered.length === 0 && <HubFilterEmpty lang={lang} onClear={() => setQuery("")} />}
       {filtered.map((g) => (

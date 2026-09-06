@@ -34,7 +34,7 @@ export function TldHubPage() {
         </a>
         {lang === "zh" ? "。" : "."}
       </p>
-      <HubFilter placeholder={lang === "zh" ? "筛选后缀…" : "Filter TLDs…"} value={query} onChange={setQuery} shown={shown} total={total} />
+      <HubFilter id="tld-filter" placeholder={lang === "zh" ? "筛选后缀…" : "Filter TLDs…"} value={query} onChange={setQuery} shown={shown} total={total} />
       <HubAnchorNav lang={lang} items={filtered.map((g) => ({ id: g.id, label: g[lang], count: g.tlds.length }))} />
       {filtered.length === 0 && <HubFilterEmpty lang={lang} onClear={() => setQuery("")} />}
       {filtered.map((g) => (

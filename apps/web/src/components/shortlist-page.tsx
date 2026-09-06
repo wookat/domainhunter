@@ -691,6 +691,9 @@ export function ShortlistPage({
           )}
           <input
             className="h-9 w-44 rounded-lg border border-line bg-bg0 px-3 font-mono text-sm uppercase tracking-widest placeholder:font-sans placeholder:normal-case placeholder:tracking-normal placeholder:text-txt2 focus:border-brand-line focus:outline-none"
+            id="shortlist-sync-code"
+            name="syncCode"
+            aria-label={t("sync.importAria")}
             placeholder={t("sync.importPlaceholder")}
             value={importCode}
             maxLength={8}
