@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { Bell, BellOff, BellRing, Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Loader2, Lock, ThumbsDown, X } from "lucide-react";
+import { Bell, BellOff, BellRing, Bookmark, BookmarkCheck, Check, Copy, ExternalLink, Loader2, Lock, RotateCw, ThumbsDown, X } from "lucide-react";
 
 import { BrandCard, BrandDot, BrandSwatch, type BrandVariant } from "@/components/brand-card";
 import { ConfirmLabel } from "@/components/confirm-label";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { RegistrarAnchor } from "@/components/registrar-link";
 import { ScoreBars } from "@/components/score-bars";
+import { isRetryableUnknown, unknownReason, unknownReasonKey } from "@/lib/check-client";
 import { copyText } from "@/lib/clipboard";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
@@ -52,20 +53,25 @@ export function ExpiryNote({ iso, className }: { iso: string; className?: string
 
 const WATCH_CONFIRM_TIMEOUT_MS = 5000;
 
-/** 临期 taken 域名的就地一键监控 CTA：点击 = 加入 shortlist + 开监控；监控中点击两步确认就地取消，旁边小图标跳 /monitors 管理 */
+/**
+ * taken 域名的就地一键监控 CTA：点击 = 加入 shortlist + 开监控；监控中点击两步确认就地取消，旁边小图标跳 /monitors 管理。
+ * 默认只在 90 天内到期时出现（「监控释放」）；`always` 时任何 taken 行都显示（「开监控」，与清单页 R548 语义一致）
+ */
 export function WatchCta({
   domain,
   expiresAt,
   onAddShortlist,
   variant = "row",
   compact = false,
+  always = false,
 }: {
   domain: string;
-  expiresAt: string;
+  expiresAt?: string;
   onAddShortlist: () => void;
   variant?: "row" | "chip";
   /** 紧凑行密度（仅桌面）：按钮高度收到 24px */
   compact?: boolean;
+  always?: boolean;
 }) {
   const { t } = useI18n();
   const { isMonitored, toggle } = useMonitor();
@@ -84,7 +90,8 @@ export function WatchCta({
     [],
   );
 
-  if (!isExpiringSoon(expiresAt)) return null;
+  const soon = Boolean(expiresAt && isExpiringSoon(expiresAt));
+  if (!soon && !always) return null;
   const watched = isMonitored(domain);
 
   function clearConfirm() {
@@ -188,16 +195,56 @@ export function WatchCta({
     <button
       onClick={() => void start()}
       disabled={pending}
-      title={error ? t(error === "full" ? "monitor.full" : "monitor.failed") : t("watch.ctaTitle")}
-      aria-label={t("watch.ctaTitle")}
+      title={error ? t(error === "full" ? "monitor.full" : "monitor.failed") : t(soon ? "watch.ctaTitle" : "shortlist.monitorCtaTitle")}
+      aria-label={t(soon ? "watch.ctaTitle" : "shortlist.monitorCtaTitle")}
       className={cn(
         "inline-flex shrink-0 items-center gap-1 font-sans text-[11px] font-medium transition-colors",
-        error ? "text-destructive" : "text-amber2 hover:text-txt0",
+        error ? "text-destructive" : soon ? "text-amber2 hover:text-txt0" : "text-txt1 hover:text-txt0",
         chip ? "border-l border-line/70 px-3 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", compact ? "h-6" : "h-11 sm:h-8"),
       )}
     >
       {pending ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Bell className="h-3.5 w-3.5" />}
-      <span className="hidden sm:inline">{error ? t(error === "full" ? "watch.full" : "watch.failed") : t("watch.cta")}</span>
+      <span className="hidden sm:inline">{error ? t(error === "full" ? "watch.full" : "watch.failed") : t(soon ? "watch.cta" : "row.monitorCta")}</span>
+    </button>
+  );
+}
+
+/** 单行「重新核验」：44px 触点（桌面 32px），键盘可达；走 POST /api/check?refresh=1 穿透缓存 */
+export function RecheckButton({
+  domain,
+  onRecheck,
+  rechecking = false,
+  compact = false,
+  variant = "row",
+  withLabel = true,
+  className,
+}: {
+  domain: string;
+  onRecheck: (domain: string) => void;
+  rechecking?: boolean;
+  compact?: boolean;
+  variant?: "row" | "chip";
+  withLabel?: boolean;
+  className?: string;
+}) {
+  const { t } = useI18n();
+  const chip = variant === "chip";
+  return (
+    <button
+      type="button"
+      data-recheck={domain}
+      onClick={() => onRecheck(domain)}
+      disabled={rechecking}
+      title={t("row.recheckTitle", { domain })}
+      aria-label={t("row.recheckTitle", { domain })}
+      className={cn(
+        "inline-flex shrink-0 items-center justify-center gap-1 font-sans text-[11px] font-medium text-txt1 transition-colors hover:text-txt0 disabled:opacity-60",
+        chip ? "min-w-[44px] border-l border-line/70 px-3 sm:min-w-0 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", compact ? "h-6" : "h-11 sm:h-8"),
+        className,
+      )}
+    >
+      <RotateCw className={cn("h-3.5 w-3.5", rechecking && "animate-spin")} />
+      {withLabel && <span className="hidden sm:inline">{rechecking ? t("row.rechecking") : t("row.recheck")}</span>}
     </button>
   );
 }
@@ -260,6 +307,8 @@ export function DomainRow({
   onToggleFavorite,
   disliked,
   onToggleDislike,
+  onRecheck,
+  rechecking = false,
 }: {
   row: Row;
   selected?: boolean;
@@ -274,6 +323,9 @@ export function DomainRow({
   onToggleFavorite?: (row: Row) => void;
   disliked?: boolean;
   onToggleDislike?: (label: string) => void;
+  /** unknown / taken 行的单行「重新核验」（POST /api/check?refresh=1）；不传则不渲染按钮 */
+  onRecheck?: (domain: string) => void;
+  rechecking?: boolean;
 }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
@@ -294,16 +346,18 @@ export function DomainRow({
         <span title={row.domain} className={cn("min-w-16 truncate font-mono text-taken line-through", compact ? "text-[13px]" : "text-[15px]")}>{row.domain}</span>
         <span className={cn("shrink-0 rounded bg-taken-dim text-taken", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>{t("status.taken")}</span>
         {row.expiresAt && <ExpiryNote iso={row.expiresAt} className="shrink truncate" />}
-        {row.expiresAt && onToggleFavorite && (
+        {onToggleFavorite && (
           <WatchCta
             domain={row.domain}
             expiresAt={row.expiresAt}
             compact={compact}
+            always
             onAddShortlist={() => {
               if (!favorite) onToggleFavorite(row);
             }}
           />
         )}
+        {onRecheck && <RecheckButton domain={row.domain} onRecheck={onRecheck} rechecking={rechecking} compact={compact} withLabel={false} />}
         {onToggleFavorite && (
           <button
             title={favorite ? t("results.favRemove") : t("results.favAdd")}
@@ -367,7 +421,14 @@ export function DomainRow({
       <DomainName row={row} compact={compact} />
       <span className={cn("h-1.5 w-1.5 shrink-0 rounded-full", isUnknown ? "bg-amber2" : "bg-brand")} />
       {isUnknown && (
-        <span title={t("home.quickUnknownTip")} className={cn("shrink-0 rounded bg-amber2-dim text-amber2", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>{t("status.unknown")}</span>
+        <span title={t("home.quickUnknownTip")} className={cn("shrink-0 rounded bg-amber2-dim text-amber2", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>
+          {t(row.detail === "reserved" ? "status.reserved" : "status.unknown")}
+        </span>
+      )}
+      {isUnknown && (
+        <span data-unknown-reason={unknownReason(row.detail)} className={cn("min-w-0 truncate text-txt2", compact ? "text-[11px]" : "text-xs")}>
+          {t(unknownReasonKey(row.detail))}
+        </span>
       )}
       {compact ? (
         <button
@@ -436,6 +497,9 @@ export function DomainRow({
         >
           {favorite ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}
         </button>
+      )}
+      {isUnknown && onRecheck && isRetryableUnknown(row.detail) && (
+        <RecheckButton domain={row.domain} onRecheck={onRecheck} rechecking={rechecking} compact={compact} />
       )}
       {!isUnknown && (
         <RegisterMenu domain={row.domain}>

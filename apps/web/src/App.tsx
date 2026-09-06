@@ -13,6 +13,7 @@ import { TLD_LIST } from "@/content/tld-list";
 import { GUIDE_LABELS } from "@/content/guide-labels";
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { useAffiliateActive } from "@/lib/affiliate";
+import { recheckDomains, recheckFailureDetail } from "@/lib/check-client";
 import { useI18n, type I18nKey } from "@/lib/i18n";
 import { useShortlist } from "@/lib/shortlist";
 import { cn, errorSpec, httpErrorSpec, UiErrorException, uiErrorText, type UiError } from "@/lib/utils";
@@ -247,6 +248,26 @@ export default function App() {
     setMode("home");
   };
 
+  const [rechecking, setRechecking] = useState<Set<string>>(new Set());
+  const recheckRow = async (domain: string) => {
+    if (rechecking.has(domain)) return;
+    setRechecking((prev) => new Set(prev).add(domain));
+    try {
+      await recheckDomains([domain], (r) => {
+        if (r.domain !== domain) return;
+        setRows((prev) => prev.map((row) => (row.domain === domain ? { ...row, status: r.status, expiresAt: r.expiresAt, detail: r.detail } : row)));
+      });
+    } catch (err) {
+      setRows((prev) => prev.map((row) => (row.domain === domain && row.status === "unknown" ? { ...row, detail: recheckFailureDetail(err, row.detail) } : row)));
+    } finally {
+      setRechecking((prev) => {
+        const next = new Set(prev);
+        next.delete(domain);
+        return next;
+      });
+    }
+  };
+
   const toggleDislike = (label: string) =>
     setDisliked((prev) => {
       const next = new Set(prev);
@@ -375,7 +396,11 @@ export default function App() {
               : r,
           ),
         );
-        return prev.map((r) => (r.domain === ev.domain ? { ...r, status, meaning: r.meaning ?? ev.meaning, theme: r.theme ?? ev.theme, expiresAt: ev.expiresAt ?? r.expiresAt } : r));
+        return prev.map((r) =>
+          r.domain === ev.domain
+            ? { ...r, status, meaning: r.meaning ?? ev.meaning, theme: r.theme ?? ev.theme, expiresAt: ev.expiresAt ?? r.expiresAt, detail: ev.detail ?? r.detail }
+            : r,
+        );
       });
     }
   }
@@ -958,6 +983,8 @@ export default function App() {
           quotaExhausted={quotaExhausted}
           dislikedHas={(label) => disliked.has(label)}
           onToggleDislike={toggleDislike}
+          onRecheck={(d) => void recheckRow(d)}
+          recheckingHas={(d) => rechecking.has(d)}
           restoredGuard={restoredGuard}
         />
         </Suspense>

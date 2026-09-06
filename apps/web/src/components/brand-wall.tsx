@@ -5,6 +5,7 @@ import { BrandCard, type BrandVariant } from "@/components/brand-card";
 import { CopyButton, MeaningText, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import type { LabelGroup } from "@/lib/brand-wall";
+import { unknownReason, unknownReasonKey } from "@/lib/check-client";
 import { useI18n, type Lang } from "@/lib/i18n";
 import { priceFull, priceShort, toUsd, usePrices, type PriceMap } from "@/lib/prices";
 import { scoreBadgeClass, tldPrice, totalScore, type Row } from "@/types";
@@ -42,7 +43,7 @@ function PillLabel({ row, price, selected }: { row: Row; price?: string; selecte
       {available ? (
         <Check className="h-3 w-3 text-brand" strokeWidth={3} aria-label={t("status.available")} />
       ) : (
-        <span className="text-amber2" title={t("status.unknown")}>
+        <span className="text-amber2" data-unknown-reason={unknownReason(row.detail)} title={`${t("status.unknown")} · ${t(unknownReasonKey(row.detail))}`}>
           ?
         </span>
       )}

@@ -77,6 +77,8 @@ export function ResultsPage({
   quotaExhausted,
   dislikedHas,
   onToggleDislike,
+  onRecheck,
+  recheckingHas,
   restoredGuard,
 }: {
   rows: Row[];
@@ -98,6 +100,9 @@ export function ResultsPage({
   quotaExhausted?: boolean;
   dislikedHas: (label: string) => boolean;
   onToggleDislike: (label: string) => void;
+  /** unknown / taken 行单行重新核验（POST /api/check?refresh=1，不消耗 AI 次数） */
+  onRecheck?: (domain: string) => void;
+  recheckingHas?: (domain: string) => boolean;
   /** 从上次会话恢复的结果页：「再来一轮」需两步确认，防恢复态盲点误触消耗 AI 配额（R465） */
   restoredGuard?: boolean;
 }) {
@@ -531,6 +536,8 @@ export function ResultsPage({
                 onToggleFavorite={onToggleFavorite}
                 disliked={dislikedHas(r.label)}
                 onToggleDislike={r.status !== "taken" ? onToggleDislike : undefined}
+                onRecheck={r.status !== "available" ? onRecheck : undefined}
+                rechecking={recheckingHas?.(r.domain) ?? false}
               />
             ))}
             {visible.length === 0 && <p className="px-4 py-8 text-center text-sm text-txt2">{t("results.noMatch")}</p>}
