@@ -6,7 +6,7 @@ import { AI_THEMES, classifyAiError, descriptionLooksEnglish, generateAiCandidat
 import { resolveFallbackUpstream, type LlmProvider } from "./ai-transport";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
-import { buildCompareFaq } from "./content/compare-faq";
+import { buildCompareFaq, compareMetaDescription } from "./content/compare-faq";
 import { snapshotFromPayload } from "./content/compare-prices";
 import { faqJsonld } from "./content/faq";
 import { buildGuideFaq } from "./content/guide-faq";
@@ -1877,8 +1877,12 @@ app.get("/vs/:slug", async (c) => {
   const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
   const lang = sl.lang;
   const loc = cmp[lang];
+  // 价格快照与 /api/prices 同源：只读同一份 KV 缓存（不拉上游），同一快照既渲染 meta description / Article 描述 / FAQ JSON-LD，
+  // 也渲染 SSR 正文与表格并注入客户端，同页只有一套价格、水合逐字一致
+  const priceSnapshot = snapshotFromPayload(await peekPricesPayload(c.env.CACHE, PRICES_CACHE_CFG), [cmp.a, cmp.b]);
+  const metaDescription = compareMetaDescription(cmp, lang, priceSnapshot);
   const title = escapeHtml(`${loc.title} | DomainHunter`);
-  const desc = escapeHtml(loc.metaDescription);
+  const desc = escapeHtml(metaDescription);
   let html = await res.text();
   html = html
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
@@ -1893,16 +1897,14 @@ app.get("/vs/:slug", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/vs/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  const cmpFaqJsonld = faqJsonld(buildCompareFaq(cmp, lang));
+  const cmpFaqJsonld = faqJsonld(buildCompareFaq(cmp, lang, priceSnapshot));
   html = injectHreflang(html, `/vs/${slug}`, sl).replace(
     "</head>",
-    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang, { name: hubCrumbLabel("vs", lang), path: "/vs" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${cmpFaqJsonld}</script></head>`,
+    `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang, { name: hubCrumbLabel("vs", lang), path: "/vs" })}</script><script type="application/ld+json">${articleJsonld(loc.title, metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${cmpFaqJsonld}</script></head>`,
   );
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/compare-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
-  // 价格数据表与 /api/prices 同源：只读同一份 KV 缓存（不拉上游），同一快照既渲染 SSR 表格也注入客户端，水合逐字一致
-  const priceSnapshot = snapshotFromPayload(await peekPricesPayload(c.env.CACHE, PRICES_CACHE_CFG), [cmp.a, cmp.b]);
   html = injectContentData(html, buildVsContent(slug, priceSnapshot));
   html = injectSsrSkeleton(html, `.${cmp.a} vs .${cmp.b}`, loc.title, compareContentBlocks(cmp, lang, priceSnapshot), hubCrumbKicker("vs", `.${cmp.a} vs .${cmp.b}`, lang), "max-w-4xl");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
