@@ -1,9 +1,10 @@
 import { CheckCircle2, HelpCircle, Scale, Sparkles } from "lucide-react";
 
-import { buildCompareFaq } from "@/content/compare-faq";
+import { buildCompareFaq, COMPARE_VERDICT_ANCHOR, comparePickAnchor } from "@/content/compare-faq";
 import { compareLabel, relatedCompares } from "@/content/compare-slugs";
 import { readInjectedContent } from "@/content/injected";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { FaqAnswer } from "@/components/faq-answer";
 import { NotFoundPage } from "@/components/not-found-page";
 import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
@@ -32,7 +33,7 @@ export function ComparePage({ slug }: { slug: string }) {
       <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-[-0.02em] md:text-4xl">{loc.title}</h1>
 
       {/* 对比结论 */}
-      <div className="mt-6 rounded-xl border border-line bg-bg1 px-5 py-4">
+      <div id={COMPARE_VERDICT_ANCHOR} className="mt-6 scroll-mt-20 rounded-xl border border-line bg-bg1 px-5 py-4">
         <h2 className="flex items-center gap-2 text-base font-bold">
           <Scale className="h-4 w-4 text-brand" />
           {t("vs.verdict")}
@@ -45,7 +46,7 @@ export function ComparePage({ slug }: { slug: string }) {
         {sides.map((tld, i) => {
           const guide = content.sideGuides[i];
           return (
-            <section key={tld} className="rounded-2xl border border-line bg-bg1 p-5">
+            <section key={tld} id={comparePickAnchor(tld)} className="scroll-mt-20 rounded-2xl border border-line bg-bg1 p-5">
               <a href={`/tld/${tld}?lang=${lang}`} className="tap-target inline-block font-mono text-lg font-bold text-brand hover:underline">
                 .{tld}
               </a>
@@ -79,7 +80,9 @@ export function ComparePage({ slug }: { slug: string }) {
             <summary className="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
               {item.q}
             </summary>
-            <p className="mt-2 text-sm leading-relaxed text-txt1">{item.a}</p>
+            <p className="mt-2 text-sm leading-relaxed text-txt1">
+              <FaqAnswer item={item} />
+            </p>
           </details>
         ))}
       </div>

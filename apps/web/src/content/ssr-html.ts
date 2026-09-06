@@ -6,9 +6,11 @@
  * 文案硬编码处与 lib/i18n.tsx 词典逐字同源（修改词典时需同步）。
  */
 import { TLD_COMPARES, comparesForTld, type TldCompare } from "./compares";
-import { buildCompareFaq } from "./compare-faq";
-import { buildGuideFaq } from "./guide-faq";
-import { buildTldFaq } from "./tld-faq";
+import { buildCompareFaq, COMPARE_VERDICT_ANCHOR, comparePickAnchor } from "./compare-faq";
+import type { FaqItem } from "./faq";
+import { splitFaqAnswer } from "./faq";
+import { buildGuideFaq, GUIDE_IDEAS_ANCHOR, GUIDE_PITFALLS_ANCHOR } from "./guide-faq";
+import { buildTldFaq, TLD_NAMING_ANCHOR } from "./tld-faq";
 import { COMPARE_SLUGS, compareLabel, relatedCompares } from "./compare-slugs";
 import { GUIDE_LABELS } from "./guide-labels";
 import { relatedGuideSlugs } from "./guide-groups";
@@ -168,20 +170,28 @@ export function pricesTableSkeleton(lang: Lang): string {
   );
 }
 
-const sectionH2 = (iconSvg: string, label: string) =>
-  `<h2 class="mt-8 flex items-center gap-2 text-base font-bold">${iconSvg}${escapeHtml(label)}</h2>`;
+/** id 存在时同时加 scroll-mt-20（sticky 顶栏 h-14），供 FAQ 答案里的页内锚点跳转；与各 page.tsx 的 <h2> 逐字一致 */
+const sectionH2 = (iconSvg: string, label: string, id?: string) =>
+  `<h2${id ? ` id="${id}"` : ""} class="mt-8 flex items-center gap-2 text-base font-bold${id ? " scroll-mt-20" : ""}">${iconSvg}${escapeHtml(label)}</h2>`;
+
+/** FAQ 答案：纯文本转义；link 片段渲染为页内锚点 <a>（与 components/faq-answer.tsx 逐字一致） */
+export const faqAnswerHtml = (item: FaqItem) => {
+  const parts = splitFaqAnswer(item);
+  if (!parts || !item.link) return escapeHtml(item.a);
+  return `${escapeHtml(parts[0])}<a href="#${item.link.hash}" class="text-brand underline underline-offset-4 hover:opacity-80">${escapeHtml(parts[1])}</a>${escapeHtml(parts[2])}`;
+};
 
 const dotList = (items: readonly string[], dotCls = "bg-brand") =>
   `<ul class="mt-3 space-y-2">${items
     .map((it) => `<li class="flex gap-2 text-sm leading-relaxed text-txt1"><span class="mt-2 h-1 w-1 shrink-0 rounded-full ${dotCls}"></span>${escapeHtml(it)}</li>`)
     .join("")}</ul>`;
 
-const faqBlock = (faq: { q: string; a: string }[], lang: Lang) =>
+const faqBlock = (faq: FaqItem[], lang: Lang) =>
   sectionH2(ICON_HELP, STR[lang].faq) +
   `<div class="mt-3 space-y-2">${faq
     .map(
       (f) =>
-        `<details class="group rounded-xl border border-line bg-bg1 px-4 py-3"><summary class="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&amp;::-webkit-details-marker]:hidden">${escapeHtml(f.q)}</summary><p class="mt-2 text-sm leading-relaxed text-txt1">${escapeHtml(f.a)}</p></details>`,
+        `<details class="group rounded-xl border border-line bg-bg1 px-4 py-3"><summary class="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&amp;::-webkit-details-marker]:hidden">${escapeHtml(f.q)}</summary><p class="mt-2 text-sm leading-relaxed text-txt1">${faqAnswerHtml(f)}</p></details>`,
     )
     .join("")}</div>`;
 
@@ -212,7 +222,7 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
   const priceCard = `<div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-line bg-bg1 px-5 py-4">${ICON_TAG}<span class="text-sm text-txt1">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</span><a href="${langHref(`/prices`, lang)}" class="ml-auto inline-flex min-h-[44px] items-center text-xs text-txt2 hover:text-brand hover:underline sm:min-h-[36px]">${escapeHtml(s.seeAll)}</a></div>`;
   const bestFor = sectionH2(ICON_CHECK, s.bestFor) +
     `<ul class="mt-3 grid gap-2 sm:grid-cols-2">${loc.bestFor.map((it) => `<li class="rounded-lg border border-line bg-bg1 px-3.5 py-2.5 text-sm text-txt1">${escapeHtml(it)}</li>`).join("")}</ul>`;
-  const naming = sectionH2(ICON_BULB, s.naming) + dotList(loc.namingTips);
+  const naming = sectionH2(ICON_BULB, s.naming, TLD_NAMING_ANCHOR) + dotList(loc.namingTips);
   const others = chipRow(
     s.others,
     TLD_LIST.map((other) => {
@@ -272,12 +282,12 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang): string[] {
   const picks = [loc.pickA, loc.pickB] as const;
   const faq = buildCompareFaq(cmp, lang);
   const relatedGuides = [...new Set([...guidesForTld(cmp.a), ...guidesForTld(cmp.b)])].slice(0, 4);
-  const verdict = `<div class="mt-6 rounded-xl border border-line bg-bg1 px-5 py-4"><h2 class="flex items-center gap-2 text-base font-bold">${ICON_SCALE}${escapeHtml(s.verdict)}</h2><p class="mt-2.5 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.verdict)}</p></div>`;
+  const verdict = `<div id="${COMPARE_VERDICT_ANCHOR}" class="mt-6 scroll-mt-20 rounded-xl border border-line bg-bg1 px-5 py-4"><h2 class="flex items-center gap-2 text-base font-bold">${ICON_SCALE}${escapeHtml(s.verdict)}</h2><p class="mt-2.5 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.verdict)}</p></div>`;
   const columns = `<div class="mt-8 grid gap-4 md:grid-cols-2">${sides
     .map((tld, i) => {
       const guide = TLD_GUIDES[tld];
       const firstSentence = guide ? guide[lang].intro.split(lang === "zh" ? "。" : ". ")[0] + (lang === "zh" ? "。" : ".") : "";
-      return `<section class="rounded-2xl border border-line bg-bg1 p-5"><a href="${langHref(`/tld/${tld}`, lang)}" class="tap-target inline-block font-mono text-lg font-bold text-brand hover:underline">.${tld}</a><p class="tnum mt-1 text-xs text-txt2">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</p>${guide ? `<p class="mt-3 text-sm leading-relaxed text-txt1">${escapeHtml(firstSentence)}</p>` : ""}<h3 class="mt-4 flex items-center gap-1.5 text-sm font-semibold">${ICON_CHECK_SM}${escapeHtml(s.pickWhen(tld))}</h3><ul class="mt-2 space-y-1.5">${picks[i]
+      return `<section id="${comparePickAnchor(tld)}" class="scroll-mt-20 rounded-2xl border border-line bg-bg1 p-5"><a href="${langHref(`/tld/${tld}`, lang)}" class="tap-target inline-block font-mono text-lg font-bold text-brand hover:underline">.${tld}</a><p class="tnum mt-1 text-xs text-txt2">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</p>${guide ? `<p class="mt-3 text-sm leading-relaxed text-txt1">${escapeHtml(firstSentence)}</p>` : ""}<h3 class="mt-4 flex items-center gap-1.5 text-sm font-semibold">${ICON_CHECK_SM}${escapeHtml(s.pickWhen(tld))}</h3><ul class="mt-2 space-y-1.5">${picks[i]
         .map((it) => `<li class="flex gap-2 text-sm leading-relaxed text-txt1"><span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand"></span>${escapeHtml(it)}</li>`)
         .join("")}</ul></section>`;
     })
@@ -344,7 +354,7 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
               .join("")}${sec.bullets ? dotList(sec.bullets) : ""}</section>`,
         )
         .join("")
-    : sectionH2(ICON_BULB, s.guideIdeas) + dotList(loc.namingIdeas) +
+    : sectionH2(ICON_BULB, s.guideIdeas, GUIDE_IDEAS_ANCHOR) + dotList(loc.namingIdeas) +
       sectionH2(ICON_QUOTE, s.guideCases) +
       `<div class="mt-3 space-y-2.5">${loc.cases
         .map((c) => `<div class="rounded-lg border border-line bg-bg1 px-3.5 py-2.5"><p class="font-mono text-sm font-semibold text-txt0">${escapeHtml(c.name)}</p><p class="mt-1 text-sm leading-relaxed text-txt1">${escapeHtml(c.takeaway)}</p></div>`)
@@ -364,7 +374,7 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
           .join(""),
       )
     : "";
-  const pitfalls = sectionH2(ICON_ALERT, compliance ? s.guideNotes : s.guidePitfalls) + dotList(loc.pitfalls, "bg-destructive");
+  const pitfalls = sectionH2(ICON_ALERT, compliance ? s.guideNotes : s.guidePitfalls, compliance ? undefined : GUIDE_PITFALLS_ANCHOR) + dotList(loc.pitfalls, "bg-destructive");
   const sources = loc.sources?.length
     ? sectionH2(ICON_LANDMARK, s.guideSources) +
       `<ul class="mt-3 space-y-2">${loc.sources

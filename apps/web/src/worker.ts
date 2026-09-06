@@ -7,6 +7,7 @@ import { resolveFallbackUpstream, type LlmProvider } from "./ai-transport";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
+import { faqJsonld } from "./content/faq";
 import { buildGuideFaq } from "./content/guide-faq";
 import { buildPricesFaq } from "./content/prices-faq";
 import { buildTldFaq } from "./content/tld-faq";
@@ -1713,15 +1714,7 @@ app.get("/tld/:tld", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/tld/${tld}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  const tldFaqJsonld = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: buildTldFaq(tld, loc, lang).map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  });
+  const tldFaqJsonld = faqJsonld(buildTldFaq(tld, loc, lang));
   html = injectHreflang(html, `/tld/${tld}`, sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang, { name: hubCrumbLabel("tld", lang), path: "/tld" })}</script><script type="application/ld+json">${tldFaqJsonld}</script></head>`,
@@ -1759,15 +1752,7 @@ app.get("/guide/:slug", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/guide/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  const guideFaqJsonld = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: buildGuideFaq(guide, lang).map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  });
+  const guideFaqJsonld = faqJsonld(buildGuideFaq(guide, lang));
   html = injectHreflang(html, `/guide/${slug}`, sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang, { name: hubCrumbLabel("guide", lang), path: "/guide" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${guideFaqJsonld}</script></head>`,
@@ -1805,15 +1790,7 @@ app.get("/vs/:slug", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/vs/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  const cmpFaqJsonld = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: buildCompareFaq(cmp, lang).map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  });
+  const cmpFaqJsonld = faqJsonld(buildCompareFaq(cmp, lang));
   html = injectHreflang(html, `/vs/${slug}`, sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang, { name: hubCrumbLabel("vs", lang), path: "/vs" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${cmpFaqJsonld}</script></head>`,

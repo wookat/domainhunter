@@ -3,9 +3,10 @@ import { AlertTriangle, ExternalLink, FileText, HelpCircle, Landmark, Lightbulb,
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { GUIDE_LABELS } from "@/content/guide-labels";
 import { relatedGuideSlugs } from "@/content/guide-groups";
-import { buildGuideFaq } from "@/content/guide-faq";
+import { buildGuideFaq, GUIDE_IDEAS_ANCHOR, GUIDE_PITFALLS_ANCHOR } from "@/content/guide-faq";
 import { readInjectedContent } from "@/content/injected";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { FaqAnswer } from "@/components/faq-answer";
 import { NotFoundPage } from "@/components/not-found-page";
 import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
@@ -65,7 +66,7 @@ export function GuidePage({ slug }: { slug: string }) {
         ))
       ) : (
         <>
-          <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+          <h2 id={GUIDE_IDEAS_ANCHOR} className="mt-8 flex items-center gap-2 text-base font-bold scroll-mt-20">
             <Lightbulb className="h-4 w-4 text-gold" />
             {t("guide.ideas")}
           </h2>
@@ -132,7 +133,7 @@ export function GuidePage({ slug }: { slug: string }) {
         </div>
       )}
 
-      <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+      <h2 id={compliance ? undefined : GUIDE_PITFALLS_ANCHOR} className={cn("mt-8 flex items-center gap-2 text-base font-bold", !compliance && "scroll-mt-20")}>
         <AlertTriangle className="h-4 w-4 text-destructive" />
         {t(compliance ? "guide.notes" : "guide.pitfalls")}
       </h2>
@@ -156,7 +157,9 @@ export function GuidePage({ slug }: { slug: string }) {
             <summary className="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
               {item.q}
             </summary>
-            <p className="mt-2 text-sm leading-relaxed text-txt1">{item.a}</p>
+            <p className="mt-2 text-sm leading-relaxed text-txt1">
+              <FaqAnswer item={item} />
+            </p>
           </details>
         ))}
       </div>

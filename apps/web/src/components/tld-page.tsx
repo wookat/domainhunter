@@ -1,10 +1,11 @@
 import { CheckCircle2, HelpCircle, Lightbulb, Sparkles, Tag } from "lucide-react";
 
-import { buildTldFaq } from "@/content/tld-faq";
+import { buildTldFaq, TLD_NAMING_ANCHOR } from "@/content/tld-faq";
 import { readInjectedContent } from "@/content/injected";
 import { relatedTlds } from "@/content/tld-groups";
 import { TLD_LIST } from "@/content/tld-list";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { FaqAnswer } from "@/components/faq-answer";
 import { NotFoundPage } from "@/components/not-found-page";
 import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
@@ -70,7 +71,7 @@ export function TldPage({ tld }: { tld: string }) {
         ))}
       </ul>
 
-      <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+      <h2 id={TLD_NAMING_ANCHOR} className="mt-8 flex items-center gap-2 text-base font-bold scroll-mt-20">
         <Lightbulb className="h-4 w-4 text-gold" />
         {t("tld.naming")}
       </h2>
@@ -94,7 +95,9 @@ export function TldPage({ tld }: { tld: string }) {
             <summary className="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
               {item.q}
             </summary>
-            <p className="mt-2 text-sm leading-relaxed text-txt1">{item.a}</p>
+            <p className="mt-2 text-sm leading-relaxed text-txt1">
+              <FaqAnswer item={item} />
+            </p>
           </details>
         ))}
       </div>
