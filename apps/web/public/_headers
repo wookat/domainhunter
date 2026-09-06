@@ -1,0 +1,8 @@
+# Workers Static Assets 响应头（R538）。只作用于 Assets 层直出的静态文件（/assets/*、/fonts/*、/favicon.*、/site.webmanifest、*.png、*.txt…）；
+# worker 生成的 HTML / JSON 不受本文件影响（security-headers.ts 负责，取值与此处一致，h.set 幂等）。
+# 语法：https://developers.cloudflare.com/workers/static-assets/headers/
+# 不在此设置 Cache-Control（保持 Assets 默认 public, max-age=0, must-revalidate + ETag）、CSP / HSTS / X-Frame-Options（仅对 HTML 文档有意义，HSTS 按 host 生效）。
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
