@@ -1,7 +1,7 @@
 import { CheckCircle2, HelpCircle, Scale, Sparkles } from "lucide-react";
 
 import { buildCompareFaq, COMPARE_VERDICT_ANCHOR, comparePickAnchor } from "@/content/compare-faq";
-import { buildComparePriceView, type ComparePriceSnapshot } from "@/content/compare-prices";
+import { buildComparePriceView, renderPriceText, type ComparePriceSnapshot } from "@/content/compare-prices";
 import { compareLabel, relatedCompares } from "@/content/compare-slugs";
 import { VIEW_ALL_LABEL, compareGroupChips, viewAllHref } from "@/content/group-chips";
 import { readInjectedContent } from "@/content/injected";
@@ -38,6 +38,9 @@ export function ComparePage({ slug }: { slug: string }) {
     stale: priceMeta ? priceMeta.stale : true,
   };
   const priceView = buildComparePriceView(cmp.a, cmp.b, lang, snapshot);
+  // 正文价格占位：与价格表、SSR compareContentBlocks 同用一份 snapshot 插值（同页只有一套价格）
+  const verdictText = renderPriceText(loc.verdict, lang, snapshot);
+  const pickTexts = picks.map((items) => items.map((it) => renderPriceText(it, lang, snapshot)));
   // 选型卡价格行：与 SSR compareContentBlocks 同用注入快照（priceFull(tld, lang, snapshot.live)），无快照才用 /api/prices 拉取结果
   const prices = pickPrices(content.prices, fetched);
 
@@ -52,7 +55,7 @@ export function ComparePage({ slug }: { slug: string }) {
           <Scale className="h-4 w-4 text-brand" />
           {t("vs.verdict")}
         </h2>
-        <p className="mt-2.5 text-[15px] leading-relaxed text-txt1">{loc.verdict}</p>
+        <p className="mt-2.5 text-[15px] leading-relaxed text-txt1">{verdictText}</p>
       </div>
 
       {/* 组合专属数据表：首年/续费/5 年持有成本与差额（SSR 同源 /api/prices） */}
@@ -74,7 +77,7 @@ export function ComparePage({ slug }: { slug: string }) {
                 {t("vs.pickWhen", { tld })}
               </h3>
               <ul className="mt-2 space-y-1.5">
-                {picks[i].map((item) => (
+                {pickTexts[i].map((item) => (
                   <li key={item} className="flex gap-2 text-sm leading-relaxed text-txt1">
                     <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand" />
                     {item}

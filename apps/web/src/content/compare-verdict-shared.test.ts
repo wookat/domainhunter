@@ -10,9 +10,13 @@
  * Identity Digital / Binky Moon 定价句），本轮范围只改四页 en，故「任意两页 0 共享」在全站层面不可达；
  * 守门分两层：① 本 P3 的四页 en 两两严格 0；② 全站 pair 数只许下降（棘轮上限 = 改后实测值）。
  * 任何新增跨页共用片段会推高 pair 数并使 ② 失败；若是有意为之，需同时收窄别处重复再调整上限。
+ *
+ * 口径按用户/爬虫实际看到的文本：R549 起 verdict 含 `{{price:…}}` 占位，须先经 renderPriceText
+ * 以参考价（无实时快照）渲染再分词，否则不同 TLD 的价格句会因占位符同形而被误判为共用片段。
  */
 import { describe, expect, it } from "vitest";
 
+import { type ComparePriceSnapshot, renderPriceText } from "./compare-prices";
 import { TLD_COMPARES } from "./compares";
 import { pairKeys, sharedSpans, tokenizeEn, tokenizeZh, type SharedSpan, type TokenPage } from "./verdict-shared-spans";
 
@@ -24,10 +28,14 @@ const MAX_PAIRS = { en: 575, zh: 1276 } as const;
 
 const R550_SLUGS = ["uk-vs-com", "de-vs-com", "au-vs-com", "fr-vs-com"] as const;
 
+const REF_SNAPSHOT: ComparePriceSnapshot = { live: {}, fetchedAt: null, stale: true };
+const rendered = (c: { zh: { verdict: string }; en: { verdict: string } }, lang: "zh" | "en") =>
+  renderPriceText(c[lang].verdict, lang, REF_SNAPSHOT);
+
 const pagesOf = (lang: "zh" | "en", slugs?: readonly string[]): TokenPage[] =>
   Object.values(TLD_COMPARES)
     .filter((c) => !slugs || slugs.includes(c.slug))
-    .map((c) => ({ slug: c.slug, tokens: (lang === "en" ? tokenizeEn : tokenizeZh)(c[lang].verdict) }));
+    .map((c) => ({ slug: c.slug, tokens: (lang === "en" ? tokenizeEn : tokenizeZh)(rendered(c, lang)) }));
 
 const fmt = (spans: readonly SharedSpan[]) => spans.map((s) => `[${s.len}] ${s.a} ↔ ${s.b}: "${s.span}"`);
 
@@ -38,7 +46,7 @@ describe("/vs verdict 跨页共用连续片段守门", () => {
   });
 
   it("en: 四页 verdict 不再含 R512 模板句「For a global audience, .com's recognition is irreplaceable」", () => {
-    for (const slug of R550_SLUGS) expect(TLD_COMPARES[slug].en.verdict).not.toMatch(/for a global audience, \.com's recognition is irreplaceable/i);
+    for (const slug of R550_SLUGS) expect(rendered(TLD_COMPARES[slug], "en")).not.toMatch(/for a global audience, \.com's recognition is irreplaceable/i);
   });
 
   for (const [lang, n, joiner] of [
