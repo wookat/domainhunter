@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { DomainRow } from "@/components/domain-row";
+import { parseCheckLine, recheckDomains, recheckFailureDetail } from "@/lib/check-client";
 import { useI18n } from "@/lib/i18n";
 import { usePrices } from "@/lib/prices";
 import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
@@ -41,7 +42,28 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
   const [rows, setRows] = useState<Row[]>([]);
   const [running, setRunning] = useState(false);
   const [error, setError] = useState("");
+  const [rechecking, setRechecking] = useState<Set<string>>(() => new Set());
   const abortRef = useRef<AbortController | null>(null);
+
+  // 单行重新核验：unknown / taken 行走 POST /api/check?refresh=1 穿透缓存，就地替换该行状态，不影响其余结果
+  async function recheck(domain: string) {
+    if (rechecking.has(domain)) return;
+    setRechecking((prev) => new Set(prev).add(domain));
+    try {
+      await recheckDomains([domain], (r) => {
+        if (r.domain !== domain) return;
+        setRows((prev) => prev.map((row) => (row.domain === domain ? { ...row, status: r.status, expiresAt: r.expiresAt, detail: r.detail } : row)));
+      });
+    } catch (err) {
+      setRows((prev) => prev.map((row) => (row.domain === domain && row.status === "unknown" ? { ...row, detail: recheckFailureDetail(err, row.detail) } : row)));
+    } finally {
+      setRechecking((prev) => {
+        const next = new Set(prev);
+        next.delete(domain);
+        return next;
+      });
+    }
+  }
 
   async function run(payload?: { domains: string[] }) {
     abortRef.current?.abort();
@@ -68,12 +90,12 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
         const lines = buf.split("\n");
         buf = lines.pop()!;
         const rs = lines
-          .filter(Boolean)
-          .map((l) => JSON.parse(l) as { domain: string; status: Status; expiresAt?: string; type?: string })
-          .filter((r) => !r.type && r.domain)
+          .map(parseCheckLine)
+          .filter((r): r is NonNullable<typeof r> => r !== null)
           .map((r): Row => {
             const dot = r.domain.indexOf(".");
-            return { domain: r.domain, label: r.domain.slice(0, dot), tld: r.domain.slice(dot + 1), status: r.status, round: 1, expiresAt: r.expiresAt };
+            const status: Status = r.status;
+            return { domain: r.domain, label: r.domain.slice(0, dot), tld: r.domain.slice(dot + 1), status, round: 1, expiresAt: r.expiresAt, detail: r.detail };
           });
         if (rs.length) setRows((prev) => [...prev, ...rs]);
       }
@@ -187,7 +209,14 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
           <h2 className="mt-6 text-sm font-semibold text-txt1">{t("adv.rest", { n: rest.length })}</h2>
           <div className="mt-2 divide-y divide-line rounded-xl border border-line bg-bg1">
             {rest.map((r) => (
-              <DomainRow key={r.domain} row={r} favorite={shortlist.has(r.domain)} onToggleFavorite={shortlist.toggle} />
+              <DomainRow
+                key={r.domain}
+                row={r}
+                favorite={shortlist.has(r.domain)}
+                onToggleFavorite={shortlist.toggle}
+                onRecheck={(d) => void recheck(d)}
+                rechecking={rechecking.has(r.domain)}
+              />
             ))}
           </div>
         </>

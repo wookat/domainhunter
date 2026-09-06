@@ -21,6 +21,8 @@ export interface Row {
   round: number;
   /** 到期时间（ISO 字符串），仅 taken 且数据可得时存在 */
   expiresAt?: string;
+  /** 后端核验短码（如 http-429 / reserved / no-rdap-server），unknown 时用于显示原因 */
+  detail?: string;
 }
 
 export interface RoundInfo {
