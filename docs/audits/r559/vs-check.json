@@ -1,0 +1,489 @@
+[
+ {
+  "slug": "de-vs-com",
+  "lang": "zh",
+  "status": 200,
+  "h1": ".de 和 .com 怎么选：德国本地信任与全球默认值的对比",
+  "table": [
+   [
+    "后缀",
+    "注册/首年",
+    "续费/年",
+    "5 年持有成本"
+   ],
+   [
+    ".de",
+    "$2.9 ¥21",
+    "$4.07 ¥29",
+    "$19.18 ¥138"
+   ],
+   [
+    ".com",
+    "$11.08 ¥80",
+    "$11.08 ¥80",
+    "$55.4 ¥399"
+   ],
+   [
+    "差额（.de − .com）",
+    "−$8.18 −¥59",
+    "−$7.01 −¥51",
+    "−$36.22 −¥261"
+   ]
+  ],
+  "prose_prices": [
+   "$3",
+   "$4"
+  ],
+  "prose": "和所有「ccTLD vs .com」的选择一样，看用户在哪里。主攻德国市场时 .de 几乎是标配：合作社性质的注册局 DENIC 运营、注册量 2026 年 6 月突破 1,800 万（DENIC 新闻稿），是欧洲最大的 ccTLD——德国消费者在地址栏习惯性输入 name.de，把它当「本地生意」的默认信号，本地电商、制造业官网、服务商用 .de 的信任度远超一般新后缀；Google 也会把 .de 站点与德国地区相关联，德语市场 SEO 有天然加成。价格是另一重优势：注册约 $3（21 元）、续费约 $4/年（29 元）——大型 ccTLD 里的良心价，德语复合词的库存也远比 .com 充裕。面向全球用户或计划出海，.com 的认知度无可替代——口头传播默认补全、长期资产流动性最好。预算允许的成熟德国品牌通常两个都拿：.de 做本地门面或防抢注，.com 做国际主站。两条 .de 特有的注意事项：注册时不要求德国地址或 Admin-C，DENIC 域名条款 §3(4) 只规定境外持有人在 DENIC 提出要求时两周内指定一名德国境内的文书送达代表；DENIC 有 zone 检查，个别注册商会先做 DNS 预检。判断标准：用户、物流、合规都在德国 → .de 的本地信任是 .com 给不了的；全球市场 → .com 仍是安全区。 两个注册局建立在不同的法律模型上，这比任何价格对比更值钱。IANA 记录 .de 是国家代码域名，管理者为法兰克福的 DENIC eG，1986 年 11 月登记；eG 这个后缀表明 DENIC 是一家有自身成员结构的注册合作社，其官网描述了注册局锁、防止服务商关系结束时域名意外丢失的 TRANSIT 程序、供权利人使用的 DISPUTE 登记，以及可直接由注册局托管域名的 DENICdirect 等服务。.com 是弗吉尼亚州雷斯顿的 VeriSign Global Registry Services 赞助的通用顶级域，1985 年 1 月登记，在 ICANN 注册局协议下运营，WHOIS 在 whois.verisign-grs.com，没有成员共有的治理结构。落到实际：.de 的政策由德国境内一家对德国注册商负责的合作社制定，条款变化慢、且以德国法律为语境；.com 的政策由一家美国公司与 ICANN 之间的合同制定。场景上：客户、发票与法律住所都在德国的企业，或希望德国用户把它读成本土品牌、并受益于 DENIC 过渡与争议程序的外国品牌 → .de；跨多国销售的品牌、英语产品，或公司扩张到德国市场之外时必须保持中性的域名 → .com。",
+  "opening": "和所有「ccTLD vs .com」的选择一样，看用户在哪里。主攻德国市场时 .de 几乎是标配：合作社性质的注册局 DENIC 运营、注册量 2026 年 6 月突破 1,800 万（DENIC 新闻稿），是欧洲最大的 ccTLD——德国消费者在地址栏习惯性输入 name.de，把它当「本地生意」的默认信号，本地电商",
+  "has_ai_search_link": false
+ },
+ {
+  "slug": "de-vs-com",
+  "lang": "en",
+  "status": 200,
+  "h1": ".de vs .com: German Local Trust vs the Global Default",
+  "table": [
+   [
+    "TLD",
+    "Register / 1st yr",
+    "Renew / yr",
+    "5-yr total cost"
+   ],
+   [
+    ".de",
+    "$2.9 ¥21",
+    "$4.07 ¥29",
+    "$19.18 ¥138"
+   ],
+   [
+    ".com",
+    "$11.08 ¥80",
+    "$11.08 ¥80",
+    "$55.4 ¥399"
+   ],
+   [
+    "Difference (.de − .com)",
+    "−$8.18 −¥59",
+    "−$7.01 −¥51",
+    "−$36.22 −¥261"
+   ]
+  ],
+  "prose_prices": [
+   "$3",
+   "¥21",
+   "$4",
+   "¥29"
+  ],
+  "prose": "DENIC's international comparison for 2024 counts more than 2.1 million .de domains held from outside Germany — 11.8% of the register, led by holders in the USA (27%) and the Netherlands (14%) — so .de travels further than most country codes, yet the other 88% show who it is really built for. For a Germany-focused business, .de is near-mandatory: run by the cooperative registry DENIC with 18 million registrations as of June 2026 — Europe's largest ccTLD — German consumers type name.de by habit and read it as the default signal of a local business, so e-commerce, manufacturers and service providers get trust far beyond any new gTLD; Google also geo-associates .de sites with Germany, a free boost for German-market SEO. Pricing doubles the case: about $3 to register (¥21) and $4/yr to renew (¥29) — honest pricing for a major ccTLD — and German compound words have far better inventory than .com. Once the audience is not German, that compound-word advantage stops mattering: a Dutch or American customer does not parse Fahrradzubehör, and to them a .de suffix reads as a shop located in Germany, so the export site of a German brand almost always lives on .com. What German brands get from the domestic half is a contract most gTLDs cannot offer: under §7(1) of the DENIC Domain Terms the domain contract runs for an indefinite period and the holder may terminate it at any time without notice, while §7(2) lets DENIC terminate only on substantial grounds — there is no registry-level expiry date to miss, although your registrar's own billing cycle still applies. Two .de-specific cautions: no German address or Admin-C is required at registration — §3(4) of the DENIC Domain Terms only obliges a holder not domiciled in Germany to name a German representative for service of documents within two weeks of a request by DENIC; and DENIC runs zone checks on DNS configuration, so some registrars pre-validate nameservers. Two more DENIC rules shape naming: the DENIC Domain Guidelines allow a .de label of one to 63 characters, and forbid a hyphen in both the third and fourth positions — the syntax is set in Frankfurt, not by Verisign. Decision rule: customers, invoices and legal seat in Germany → .de earns trust that .com does not; a product sold in English across borders → .com, with .de redirecting to it. The two registries are built on different legal models, and that is worth more than any price comparison. IANA lists .de as a country-code domain with DENIC eG of Frankfurt am Main as manager, registered in November 1986; the eG suffix marks DENIC as a registered cooperative with its own member structure, and its site describes services such as Registry Lock, a TRANSIT procedure that prevents unwanted loss of a domain when a provider relationship ends, a DISPUTE entry for rights holders and DENICdirect for managing a domain with the registry directly. .com is a generic TLD sponsored by VeriSign Global Registry Services of Reston, Virginia, registered in January 1985 and operated under an ICANN registry agreement, with WHOIS at whois.verisign-grs.com and no member-owned governance. Practically: .de policy is set in Germany by a cooperative accountable to German registrars, so terms change slowly and in German-law terms; .com policy is set by contract between a US company and ICANN. Use-case split: a business whose customers, invoices and legal seat are in Germany, or a foreign brand that wants German users to read it as local and to benefit from DENIC's transit and dispute procedures → .de; a brand selling across many countries, an English-language product, or a domain that must remain neutral as the company expands beyond the German market → .com.",
+  "opening": "DENIC's international comparison for 2024 counts more than 2.1 million .de domains held from outside Germany — 11.8% of the register, led by holders in the USA ",
+  "has_ai_search_link": false
+ },
+ {
+  "slug": "com-vs-io",
+  "lang": "zh",
+  "status": 200,
+  "h1": ".com 和 .io 怎么选：信任感与极客感的取舍",
+  "table": [
+   [
+    "后缀",
+    "注册/首年",
+    "续费/年",
+    "5 年持有成本"
+   ],
+   [
+    ".com",
+    "$11.08 ¥80",
+    "$11.08 ¥80",
+    "$55.4 ¥399"
+   ],
+   [
+    ".io",
+    "$28.12 ¥202",
+    "$51.8 ¥373",
+    "$235.32 ¥1694"
+   ],
+   [
+    "差额（.com − .io）",
+    "−$17.04 −¥122",
+    "−$40.72 −¥293",
+    "−$179.92 −¥1295"
+   ]
+  ],
+  "prose_prices": [],
+  "prose": ".io 严格说是英属印度洋领地的国家域名，1997 年授权给 Internet Computer Bureau 运营，却因为 I/O 的极客联想和 GitHub Pages（github.io）被开发者圈层彻底占领；.com 则是 Verisign 运营、用户默认补全的通用后缀。两者价差极大：按本页价格表，.io 首年 202 元、续费 373 元，.com 首年 80 元、续费 80 元，也就是 .io 的续费约为 .com 的 4.7 倍——十年持有下来差出约 2759 元。换来的是库存：短词、动词、造词在 .io 下的可注册率远高于 .com，且两字母后缀让整个域名更短。还有一条 .com 没有的风险要放进决策：2025 年 5 月英国与毛里求斯签署了查戈斯群岛主权条约，一旦条约生效并导致 ISO 3166 移除 IO 代码，ICANN 的国家域名退役政策会启动（有五年过渡窗口）。目前 IANA 记录仍正常、没有任何退役时间表，但做十年以上品牌资产的人应该知道这一点。判断方法：受众是开发者与技术从业者、产品是工具/API/SaaS，.io 的圈内身份值得那笔溢价；面向大众消费者、电商、内容或线下业务，.com 更稳也更便宜。先在 .io 拿到心仪短名上线、品牌起量后再收购对应 .com，是技术公司常走的路径。",
+  "opening": ".io 严格说是英属印度洋领地的国家域名，1997 年授权给 Internet Computer Bureau 运营，却因为 I/O 的极客联想和 GitHub Pages（github.io）被开发者圈层彻底占领；.com 则是 Verisign 运营、用户默认补全的通用后缀。两者价差极大：按本页价格表，.io 首年",
+  "has_ai_search_link": false
+ },
+ {
+  "slug": "com-vs-io",
+  "lang": "en",
+  "status": 200,
+  "h1": ".com vs .io: Trust vs Hacker Credibility",
+  "table": [
+   [
+    "TLD",
+    "Register / 1st yr",
+    "Renew / yr",
+    "5-yr total cost"
+   ],
+   [
+    ".com",
+    "$11.08 ¥80",
+    "$11.08 ¥80",
+    "$55.4 ¥399"
+   ],
+   [
+    ".io",
+    "$28.12 ¥202",
+    "$51.8 ¥373",
+    "$235.32 ¥1694"
+   ],
+   [
+    "Difference (.com − .io)",
+    "−$17.04 −¥122",
+    "−$40.72 −¥293",
+    "−$179.92 −¥1295"
+   ]
+  ],
+  "prose_prices": [
+   "¥202",
+   "¥373",
+   "¥80",
+   "¥80",
+   "¥2759"
+  ],
+  "prose": "Strictly speaking .io is the country code of the British Indian Ocean Territory, delegated in 1997 to Internet Computer Bureau, but the I/O pun and GitHub Pages (github.io) let developers claim it outright; .com is Verisign's generic suffix that users autocomplete without thinking. The price gap is large: the price table below shows .io at ¥202 first year / ¥373 renewal versus .com at ¥80 / ¥80 — roughly 4.7× the renewal, about ¥2759 more over a decade. What you buy is inventory: short words, verbs and coined names are far more available on .io, and the two-letter suffix keeps the whole domain shorter. There is also a risk .com doesn't carry: in May 2025 the UK and Mauritius signed a treaty on the Chagos Archipelago; if it enters into force and the IO code is removed from ISO 3166, ICANN's ccTLD retirement policy would apply, with a five-year transition window. The IANA record is normal today and no retirement date exists, but anyone planning a ten-year brand asset should know it. The test: if your audience is developers and technical professionals and the product is a tool, API or SaaS, the .io badge is worth the premium; for mainstream consumers, e-commerce, content or offline businesses, .com is both safer and cheaper. Launching on the short .io you love and acquiring the matching .com once the brand has traction is the path many technical companies take.",
+  "opening": "Strictly speaking .io is the country code of the British Indian Ocean Territory, delegated in 1997 to Internet Computer Bureau, but the I/O pun and GitHub Pages",
+  "has_ai_search_link": false
+ },
+ {
+  "slug": "win-vs-vip",
+  "lang": "zh",
+  "status": 200,
+  "h1": ".win 和 .vip 怎么选：赢的情绪与会员的身份",
+  "table": [
+   [
+    "后缀",
+    "注册/首年",
+    "续费/年",
+    "5 年持有成本"
+   ],
+   [
+    ".win",
+    "$4.61 ¥33",
+    "$5.64 ¥41",
+    "$27.17 ¥196"
+   ],
+   [
+    ".vip",
+    "$4.12 ¥30",
+    "$5.15 ¥37",
+    "$24.72 ¥178"
+   ],
+   [
+    "差额（.win − .vip）",
+    "+$0.49 +¥3",
+    "+$0.49 +¥4",
+    "+$2.45 +¥18"
+   ]
+  ],
+  "prose_prices": [
+   "$5",
+   "$6",
+   "$4",
+   "$5",
+   "$5",
+   "$6"
+  ],
+  "prose": "都在给用户「优越感」，来源不同：一个是赢来的，一个是买来的。.win 直指「赢」这个结果——竞赛与抽奖活动页、电竞战队与赛事平台、增长营销与转化落地页、竞技预测与积分工具站用 name.win，win 是英语里最短的胜利动词，name.win 读起来就是一句口号，做活动页自带情绪；Team Internet（GRS Domains）运营，首年约 $5（33 元）、续费约 $6/年（41 元）——注册续费都便宜，做活动页矩阵毫无压力。.vip 说的是会员身份——会员制产品与付费订阅、粉丝社群与应援运营、电商会员站、高端服务预约用 name.vip，域名本身就在说「这里是会员专属」；VIP 概念国人人人皆知，后缀已获工信部资质可正常 ICP 备案，注册约 $4（30 元）、续费约 $5/年（37 元）——价格亲民且注册量长期位居新后缀前列。判断标准：钩子是「赢」这个动作与结果——比赛、抽奖、冲榜、转化活动 → .win 的口号感直给，一场活动一个域名也养得起；钩子是「会员」这个身份与特权——订阅制、粉丝圈、会员中心 → .vip 语义零解释，面向国内更是几乎无认知成本。两者常见组合打法：会员主站用 .vip，拉新活动页用 .win 批量铺开。三点注意：一是 .win 在博彩语境里常被联想，合规敏感的品牌注意语境隔离；二是 .vip 自带营销气质，严肃工具类产品不搭；三是两者续费都在便宜档（$5 vs $6/年），成本几乎不构成选择因素，按语义与市场选即可。命名上「动作/奖品词 + .win」（spin.win 类）与「品牌/双拼 + .vip」（fans.vip 类）各是两边最点题的模式。",
+  "opening": "都在给用户「优越感」，来源不同：一个是赢来的，一个是买来的。.win 直指「赢」这个结果——竞赛与抽奖活动页、电竞战队与赛事平台、增长营销与转化落地页、竞技预测与积分工具站用 name.win，win 是英语里最短的胜利动词，name.win 读起来就是一句口号，做活动页自带情绪；Team Internet（GRS D",
+  "has_ai_search_link": false
+ },
+ {
+  "slug": "win-vs-vip",
+  "lang": "en",
+  "status": 200,
+  "h1": ".win vs .vip: The Thrill of Winning or The Status of Membership",
+  "table": [
+   [
+    "TLD",
+    "Register / 1st yr",
+    "Renew / yr",
+    "5-yr total cost"
+   ],
+   [
+    ".win",
+    "$4.61 ¥33",
+    "$5.64 ¥41",
+    "$27.17 ¥196"
+   ],
+   [
+    ".vip",
+    "$4.12 ¥30",
+    "$5.15 ¥37",
+    "$24.72 ¥178"
+   ],
+   [
+    "Difference (.win − .vip)",
+    "+$0.49 +¥3",
+    "+$0.49 +¥4",
+    "+$2.45 +¥18"
+   ]
+  ],
+  "prose_prices": [
+   "$5",
+   "¥33",
+   "$6",
+   "¥41",
+   "$4",
+   "¥30",
+   "$5",
+   "¥37",
+   "$5",
+   "$6"
+  ],
+  "prose": "Both hand the user a sense of being above the crowd; the source differs: one is earned, the other is purchased. .win points at winning as an outcome — contest and giveaway pages, esports teams and tournament platforms, growth-marketing and conversion landing pages, and prediction or points tools on name.win use the shortest victory verb in English, so name.win reads as a slogan and campaign pages carry built-in emotion; run by Team Internet (GRS Domains) at about $5 first year (¥33) and $6/yr to renew (¥41) — cheap both ways, so campaign portfolios cost almost nothing. .vip states membership status — membership products and paid subscriptions, fan communities and supporter operations, e-commerce member sites, and premium booking services on name.vip make the domain itself say \"members only\"; the VIP concept is universally understood in China, the suffix holds MIIT accreditation for normal ICP filing, and at about $4 to register (¥30) and $5/yr to renew (¥37) it stays friendly while ranking among the most-registered new gTLDs. The test: the hook is the act and outcome of winning — contests, giveaways, leaderboards, conversion campaigns → .win's slogan lands instantly and one domain per campaign is affordable; the hook is the identity and privilege of membership — subscriptions, fan circles, member centers → .vip needs zero explanation, with near-zero recognition cost in China especially. A common combo: .vip for the member main site, .win spread across acquisition campaign pages. Three cautions: .win often gets read in a betting context, so compliance-sensitive brands should mind the framing; .vip carries a promotional air that misfits serious tool products; and both renew in the bargain tier ($5 vs $6/yr), so cost barely matters — choose by semantics and market. Naming: action or prize word + .win (spin.win style) versus brand or pinyin + .vip (fans.vip style) are each side's on-target patterns.",
+  "opening": "Both hand the user a sense of being above the crowd; the source differs: one is earned, the other is purchased. .win points at winning as an outcome — contest a",
+  "has_ai_search_link": false
+ },
+ {
+  "slug": "com-vs-cn",
+  "lang": "zh",
+  "status": 200,
+  "h1": ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比",
+  "table": [
+   [
+    "后缀",
+    "注册/首年",
+    "续费/年",
+    "5 年持有成本"
+   ],
+   [
+    ".com",
+    "$11.08 ¥80",
+    "$11.08 ¥80",
+    "$55.4 ¥399"
+   ],
+   [
+    ".cn 参考价",
+    "≈$5 ¥33",
+    "≈$5 ¥38",
+    "≈$26 ¥185"
+   ],
+   [
+    "差额（.com − .cn）",
+    "≈+$6.08 +¥47",
+    "≈+$6.08 +¥42",
+    "≈+$29.4 +¥214"
+   ]
+  ],
+  "prose_prices": [],
+  "prose": "先看用户在哪里、服务器在哪里。.cn 由中国互联网络信息中心（CNNIC）运营，是国内业务最名正言顺的后缀：需要 ICP 备案接入国内主机时，.cn 的流程完全顺畅，而部分新顶级域名在备案时会遇到限制；价格也是主流后缀里最亲民的一档——按本页价格表，首年 ≈33 元、续费 ≈38 元，明显低于 .com（首年 80 元、续费 80 元）。.com 由 Verisign 运营，批发价 10.26 美元/年（2024 年 9 月起），是全球用户默认补全的后缀，面向海外市场时认知度无可替代。两者的注册门槛也不同：.cn 要求实名认证，个人与企业都可以注册，但要提交证件、多一步流程；.com 无需实名。库存上 .cn 是国内品牌实打实的机会——大量双拼、三拼、行业词在 .com 下早已无货，在 .cn 下仍可注册。判断方法：主要服务国内用户、需要备案、预算敏感，选 .cn；面向国际用户或计划出海，.com 做主站。预算允许的成熟品牌通常两个都注册：.com 做主站，.cn 防抢注并 301 跳转，或者反过来国内站用 .cn、海外站用 .com。一个提醒：面向海外的业务不建议主用 .cn，海外用户对它的认知与信任有限；面向国内的业务用 .com 则毫无问题，只是备案时多一步域名实名核验。",
+  "opening": "先看用户在哪里、服务器在哪里。.cn 由中国互联网络信息中心（CNNIC）运营，是国内业务最名正言顺的后缀：需要 ICP 备案接入国内主机时，.cn 的流程完全顺畅，而部分新顶级域名在备案时会遇到限制；价格也是主流后缀里最亲民的一档——按本页价格表，首年 ≈33 元、续费 ≈38 元，明显低于 .com（首年 80 元",
+  "has_ai_search_link": false
+ },
+ {
+  "slug": "com-vs-cn",
+  "lang": "en",
+  "status": 200,
+  "h1": ".com vs .cn: Audience, Compliance & Brand Protection Compared",
+  "table": [
+   [
+    "TLD",
+    "Register / 1st yr",
+    "Renew / yr",
+    "5-yr total cost"
+   ],
+   [
+    ".com",
+    "$11.08 ¥80",
+    "$11.08 ¥80",
+    "$55.4 ¥399"
+   ],
+   [
+    ".cn reference",
+    "≈$5 ¥33",
+    "≈$5 ¥38",
+    "≈$26 ¥185"
+   ],
+   [
+    "Difference (.com − .cn)",
+    "≈+$6.08 +¥47",
+    "≈+$6.08 +¥42",
+    "≈+$29.4 +¥214"
+   ]
+  ],
+  "prose_prices": [
+   "¥33",
+   "¥38",
+   "¥80",
+   "¥80.",
+   "$10.26"
+  ],
+  "prose": "Start with where your users and servers are. .cn is operated by the China Internet Network Information Center (CNNIC) and is the most legitimate suffix for China-facing business: when you need ICP filing to host domestically, .cn sails through, while some newer TLDs hit restrictions. It is also among the cheapest mainstream options — the price table below lists ≈¥33 first year / ≈¥38 renewal, well below .com's ¥80 / ¥80. .com is Verisign's suffix, wholesale $10.26 a year since September 2024, and the one users worldwide autocomplete by reflex; for overseas markets its recognition is irreplaceable. Registration requirements differ too: .cn requires real-name verification — individuals and companies can both register, but you submit ID and add a step — while .com needs none. Inventory is a genuine opportunity for Chinese brands: countless two- and three-syllable pinyin words and industry terms extinct on .com remain open on .cn. The test: serving mainly Chinese users, needing ICP filing, watching the budget — take .cn; serving international users or planning to go global — make .com the main site. Established brands with budget usually register both: .com as the primary with .cn held defensively and 301-redirected, or a .cn domestic site alongside a .com international site. One caveat each way: an overseas-facing business shouldn't lead with .cn, where recognition and trust abroad are limited; a China-facing business on .com works fine, with just an extra domain verification step during ICP filing.",
+  "opening": "Start with where your users and servers are. .cn is operated by the China Internet Network Information Center (CNNIC) and is the most legitimate suffix for Chin",
+  "has_ai_search_link": false
+ },
+ {
+  "slug": "io-vs-ai",
+  "lang": "zh",
+  "status": 200,
+  "h1": ".io 和 .ai 怎么选：开发者身份与 AI 叙事的对比",
+  "table": [
+   [
+    "后缀",
+    "注册/首年",
+    "续费/年",
+    "5 年持有成本"
+   ],
+   [
+    ".io",
+    "$28.12 ¥202",
+    "$51.8 ¥373",
+    "$235.32 ¥1694"
+   ],
+   [
+    ".ai",
+    "$82.7 ¥595",
+    "$82.7 ¥595",
+    "$413.5 ¥2977"
+   ],
+   [
+    "差额（.io − .ai）",
+    "−$54.58 −¥393",
+    "−$30.9 −¥222",
+    "−$178.18 −¥1283"
+   ]
+  ],
+  "prose_prices": [],
+  "prose": "两个都是被科技圈重新定义的小地方国家域名，如今又都由 Identity Digital 体系承载：.io 属于英属印度洋领地，1997 年授权给 Internet Computer Bureau 运营；.ai 属于安圭拉，2025 年 1 月整体迁移到 Identity Digital 平台，注册量已超 60 万。价格上 .ai 又贵了一档：按本页价格表，.io 首年 202 元、续费 373 元，.ai 首年 595 元、续费 595 元，且 .ai 多数注册商两年起注，首笔至少一千元出头；两者续费都远高于 .com，.ai 每年再多付约 222 元。叙事上 .io 说「开发者工具」——GitHub Pages（github.io）、socket.io 一代把它推成了技术产品的身份标签，不绑定任何赛道；.ai 说「AI 产品」——OpenAI 之后几乎所有 AI 创业公司都先查它，投资人与用户一眼归类，但也把品牌绑在了单一叙事上。两者还各有一条政策风险：.io 所在领地 2025 年 5 月签署了英国—毛里求斯查戈斯主权条约，若生效并导致 ISO 代码变更，ICANN 的 ccTLD 退役政策会启动（五年过渡窗口），目前没有任何时间表；.ai 的政策由安圭拉政府决定。判断方法：核心卖点是 AI——模型服务、AI 应用、Agent 平台，选 .ai，品类信号值那笔溢价；通用开发者工具、API、开源项目、基础设施，选 .io，不会让品牌在热潮退去后显得投机。两者都不该为了蹭热点硬用：与 AI 无关的产品挂 .ai，改名成本比省下的解释成本高得多。长期品牌资产无论选哪个都建议同步持有对应 .com 兜底。",
+  "opening": "两个都是被科技圈重新定义的小地方国家域名，如今又都由 Identity Digital 体系承载：.io 属于英属印度洋领地，1997 年授权给 Internet Computer Bureau 运营；.ai 属于安圭拉，2025 年 1 月整体迁移到 Identity Digital 平台，注册量已超 60 万。价格",
+  "has_ai_search_link": false
+ },
+ {
+  "slug": "io-vs-ai",
+  "lang": "en",
+  "status": 200,
+  "h1": ".io vs .ai: Developer Badge vs AI Narrative",
+  "table": [
+   [
+    "TLD",
+    "Register / 1st yr",
+    "Renew / yr",
+    "5-yr total cost"
+   ],
+   [
+    ".io",
+    "$28.12 ¥202",
+    "$51.8 ¥373",
+    "$235.32 ¥1694"
+   ],
+   [
+    ".ai",
+    "$82.7 ¥595",
+    "$82.7 ¥595",
+    "$413.5 ¥2977"
+   ],
+   [
+    "Difference (.io − .ai)",
+    "−$54.58 −¥393",
+    "−$30.9 −¥222",
+    "−$178.18 −¥1283"
+   ]
+  ],
+  "prose_prices": [
+   "¥202",
+   "¥373",
+   "¥595",
+   "¥595,",
+   "¥1,000",
+   "¥222"
+  ],
+  "prose": "Both are small-territory country codes that the tech world repurposed, and both now ride the Identity Digital platform: .io belongs to the British Indian Ocean Territory, delegated in 1997 to Internet Computer Bureau; .ai belongs to Anguilla and migrated wholesale to Identity Digital in January 2025 with more than 600,000 names. .ai sits one price tier higher: the price table below lists .io at ¥202 first year / ¥373 renewal and .ai at ¥595 / ¥595, and most registrars require a two-year minimum on .ai, so the first bill is at least ¥1,000; both renew far above .com, with .ai costing about ¥222 more a year. In narrative, .io says \"developer tool\" — GitHub Pages (github.io) and the socket.io generation made it the badge of technical products without tying you to any sector; .ai says \"AI product\" — since OpenAI nearly every AI startup checks it first, and investors and users categorize you instantly, but the brand is chained to a single story. Each carries a policy risk: the UK–Mauritius Chagos treaty signed in May 2025 could, if it enters into force and changes the ISO code, trigger ICANN's ccTLD retirement policy for .io (a five-year window; no timetable exists today), while .ai policy is set by Anguilla's government. The test: if AI is the core — model services, AI apps, agent platforms — take .ai, where the category signal earns the premium; for general developer tools, APIs, open source and infrastructure, take .io, which won't read opportunistic once the wave recedes. Don't force either onto a product that doesn't fit; a non-AI product on .ai costs more to rename later than it saves in explanation now. Whichever you pick, hold the matching .com as a backstop for a long-term brand.",
+  "opening": "Both are small-territory country codes that the tech world repurposed, and both now ride the Identity Digital platform: .io belongs to the British Indian Ocean ",
+  "has_ai_search_link": false
+ },
+ {
+  "slug": "com-vs-ai",
+  "lang": "zh",
+  "status": 200,
+  "h1": ".com 和 .ai 怎么选：通用信任与 AI 品类信号的取舍",
+  "table": [
+   [
+    "后缀",
+    "注册/首年",
+    "续费/年",
+    "5 年持有成本"
+   ],
+   [
+    ".com",
+    "$11.08 ¥80",
+    "$11.08 ¥80",
+    "$55.4 ¥399"
+   ],
+   [
+    ".ai",
+    "$82.7 ¥595",
+    "$82.7 ¥595",
+    "$413.5 ¥2977"
+   ],
+   [
+    "差额（.com − .ai）",
+    "−$71.62 −¥515",
+    "−$71.62 −¥515",
+    "−$358.1 −¥2578"
+   ]
+  ],
+  "prose_prices": [],
+  "prose": "产品核心卖点是 AI，.ai 三个字符就是最短的自我介绍；其余情况 .com 仍是默认答案。.ai 是安圭拉的国家域名，2025 年 1 月起由 Identity Digital 平台承载，注册量已超 60 万，域名收入已是安圭拉政府财政的重要来源——这是一个被 AI 热潮改写了国家财政的后缀。.com 由 Verisign 运营，批发价 10.26 美元/年（2024 年 9 月起），是全球用户默认补全的后缀。价格差距要算清：按本页价格表，.ai 首年 595 元、续费 595 元，多数注册商两年起注，也就是首笔至少一千元出头；.com 首年 80 元、续费 80 元。十年持有 .ai 约 5950 元、.com 约 800 元，相差约 5150 元。换来的是库存与叙事：短词、动词、两三个音节的造词在 .ai 下仍大量可注册，投资人与媒体一眼归类；.com 下同样的词早已绝迹或要五位数收购。判断方法：模型服务、AI 应用、Agent 平台——AI 是产品身份而不是一个特性，选 .ai；AI 只是功能之一、面向大众或企业的通用产品、要做十年以上品牌资产，选 .com，别让后缀绑架叙事。常见组合是主品牌收 .com 做官网、产品线或模型入口用 brand.ai；预算有限时先拿 .ai 上线、品牌起量后回购 .com。一个提醒：.ai 是国家域名，政策由安圭拉政府决定，长期资产同步持有 .com 兜底更稳。",
+  "opening": "产品核心卖点是 AI，.ai 三个字符就是最短的自我介绍；其余情况 .com 仍是默认答案。.ai 是安圭拉的国家域名，2025 年 1 月起由 Identity Digital 平台承载，注册量已超 60 万，域名收入已是安圭拉政府财政的重要来源——这是一个被 AI 热潮改写了国家财政的后缀。.com 由 Veris",
+  "has_ai_search_link": false
+ },
+ {
+  "slug": "com-vs-ai",
+  "lang": "en",
+  "status": 200,
+  "h1": ".com vs .ai: Universal Trust or AI Category Signal",
+  "table": [
+   [
+    "TLD",
+    "Register / 1st yr",
+    "Renew / yr",
+    "5-yr total cost"
+   ],
+   [
+    ".com",
+    "$11.08 ¥80",
+    "$11.08 ¥80",
+    "$55.4 ¥399"
+   ],
+   [
+    ".ai",
+    "$82.7 ¥595",
+    "$82.7 ¥595",
+    "$413.5 ¥2977"
+   ],
+   [
+    "Difference (.com − .ai)",
+    "−$71.62 −¥515",
+    "−$71.62 −¥515",
+    "−$358.1 −¥2578"
+   ]
+  ],
+  "prose_prices": [
+   "$10.26",
+   "¥595",
+   "¥595",
+   "¥1,000",
+   "¥80",
+   "¥80.",
+   "¥5950",
+   "¥800",
+   "¥5150."
+  ],
+  "prose": "If AI is the product's core value, the two letters of .ai are the shortest possible pitch; otherwise .com remains the default answer. .ai is Anguilla's country code, served on the Identity Digital platform since January 2025 with more than 600,000 registrations, and domain revenue has become a major source of government income — a suffix that rewrote a nation's budget. .com is Verisign's, wholesale $10.26 a year since September 2024, and the one users worldwide autocomplete. Do the math: the price table below lists .ai at ¥595 first year / ¥595 renewal, with most registrars requiring a two-year minimum, so the first bill is at least ¥1,000; .com is ¥80 / ¥80. Over ten years that is roughly ¥5950 on .ai versus about ¥800 on .com — a gap of about ¥5150. What you buy is inventory and narrative: short words, verbs and two- to three-syllable coined names are still widely available on .ai and investors and press categorize you at a glance, while the same words on .com are extinct or cost five figures. The test: model services, AI apps and agent platforms where AI is the product's identity rather than a feature — take .ai; AI as one feature among many, a general product for consumers or enterprises, a decade-plus brand asset — take .com and don't let the suffix hijack the story. A common combo is .com for the main brand site and brand.ai for the AI product line or model entry; on a tight budget, launch on .ai and buy the .com back once the brand has traction. One caveat: .ai is a ccTLD whose policy is set by Anguilla's government, so holding the .com as a backstop is the safer long-term play.",
+  "opening": "If AI is the product's core value, the two letters of .ai are the shortest possible pitch; otherwise .com remains the default answer. .ai is Anguilla's country ",
+  "has_ai_search_link": false
+ }
+]
