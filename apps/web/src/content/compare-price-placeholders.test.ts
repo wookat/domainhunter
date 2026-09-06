@@ -5,6 +5,9 @@
  * 2) 所有 {{…}} 占位符必须可解析、只引用本页对比两侧、且两侧都有静态参考价（KV 无数据也不会渲染成「—」）；
  * 3) 占位符解析 / 渲染：实时价优先、静态回退加 ≈、缺价「—」、不合法占位原样保留；
  * 4) SSR compareContentBlocks 与客户端同用 renderPriceText + 同一份快照 → 正文数字与价格表单元格同值。
+ * R563（R558 审计 P2-1）：metaDescription 纳入同一套守门（它同时是 meta description / Article 描述 / FAQ 第 1 答 / FAQPage JSON-LD 的来源）：
+ * 5) metaDescription 无硬编码零售价；占位符合法、只引本页两侧；KV 无数据也能渲染（无 {{ 无「—」）；
+ * 6) compareMetaDescription / buildCompareFaq 第 1 答 / SSR 可见 FAQ 三处同快照同值，且与价格表单元格同源。
  */
 import { describe, expect, it } from "vitest";
 
@@ -19,7 +22,9 @@ import {
   renderPriceText,
   type ComparePriceSnapshot,
 } from "./compare-prices";
+import { buildCompareFaq, compareMetaDescription } from "./compare-faq";
 import { TLD_COMPARES } from "./compares";
+import { faqJsonld, firstSentence } from "./faq";
 import { compareContentBlocks, escapeHtml } from "./ssr-html";
 
 const FETCHED_AT = Date.UTC(2026, 8, 6, 6, 0, 49);
@@ -31,7 +36,7 @@ const LIVE: ComparePriceSnapshot = {
 };
 const NO_DATA: ComparePriceSnapshot = { live: {}, fetchedAt: null, stale: true };
 
-const FIELDS = ["verdict", "pickA", "pickB"] as const;
+const FIELDS = ["verdict", "pickA", "pickB", "metaDescription"] as const;
 const texts = (lang: "zh" | "en") =>
   Object.values(TLD_COMPARES).flatMap((c) => FIELDS.map((f) => ({ slug: c.slug, field: f, text: [c[lang][f]].flat().join("\n"), a: c.a, b: c.b })));
 
@@ -53,7 +58,7 @@ const EXPECTED_FACT_HITS = 13;
 
 describe("compares.ts 正文不含硬编码零售价", () => {
   for (const lang of ["zh", "en"] as const) {
-    it(`${lang}: verdict/pickA/pickB 无「NN 元 / ¥NN / $NN」等绝对价（政策/事实金额除外）`, () => {
+    it(`${lang}: verdict/pickA/pickB/metaDescription 无「NN 元 / ¥NN / $NN」等绝对价（政策/事实金额除外）`, () => {
       const offenders: string[] = [];
       let factHits = 0;
       for (const { slug, field, text } of texts(lang)) {
@@ -270,4 +275,86 @@ describe("SSR 正文与价格表同源", () => {
     expect(priceRow("cn", LIVE)!.first.approx).toBe(true);
     expect(priceRow("com", LIVE)!.first.approx).toBe(false);
   });
+});
+
+describe("R563：metaDescription → meta / Article / FAQ 第 1 答 / JSON-LD 同源", () => {
+  /** R558 P2-1 实证页：.mx 静态「首年 $13 续费 $50」vs 实时 35.57/41.23（方向都反了）；.de「$8 平续」vs 实时 2.9/4.07 */
+  const R558_LIVE: ComparePriceSnapshot = {
+    live: { mx: { registration: 35.57, renewal: 41.23 }, es: { registration: 7.65, renewal: 9.5 }, de: { registration: 2.9, renewal: 4.07 }, com: { registration: 11.08, renewal: 11.08 } },
+    fetchedAt: FETCHED_AT,
+    stale: false,
+  };
+
+  it("85 × zh/en 带价页的 metaDescription 全部改为占位（不再有任何硬编码 $N）；无价页原样", () => {
+    let withPlaceholder = 0;
+    for (const c of Object.values(TLD_COMPARES)) {
+      for (const lang of ["zh", "en"] as const) {
+        const m = c[lang].metaDescription;
+        if (PRICE_PLACEHOLDER_RE.test(m)) withPlaceholder += 1;
+        PRICE_PLACEHOLDER_RE.lastIndex = 0;
+      }
+    }
+    expect(withPlaceholder).toBe(170);
+  });
+
+  it("mx-vs-es / de-vs-com：渲染后 meta 数字 = 价格表单元格（R558 两页人工核实的矛盾消失）", () => {
+    const mx = compareMetaDescription(TLD_COMPARES["mx-vs-es"], "en", R558_LIVE);
+    expect(mx).toContain("$36 to register and $41/yr to renew");
+    expect(mx).not.toMatch(/\$13|\$50/);
+    const mxZh = compareMetaDescription(TLD_COMPARES["mx-vs-es"], "zh", R558_LIVE);
+    expect(mxZh).toContain(`首年 ${toCny(35.57)} 元、续费 ${toCny(41.23)} 元/年`);
+    const de = compareMetaDescription(TLD_COMPARES["de-vs-com"], "en", R558_LIVE);
+    expect(de).toContain("$3 to register and $4/yr to renew");
+    expect(de).not.toContain("$8");
+    expect(priceRow("mx", R558_LIVE)!.first.usd).toBe(35.57);
+  });
+
+  it("FAQ 第 1 答首句 == 渲染后 metaDescription 首句；SSR 可见 FAQ 与 FAQPage JSON-LD 用同一快照时逐字一致", () => {
+    for (const slug of ["mx-vs-es", "de-vs-com", "com-vs-io", "th-vs-vn"]) {
+      const cmp = TLD_COMPARES[slug]!;
+      for (const lang of ["zh", "en"] as const) {
+        const meta = compareMetaDescription(cmp, lang, R558_LIVE);
+        const faq = buildCompareFaq(cmp, lang, R558_LIVE);
+        expect(faq[0].a.startsWith(firstSentence(meta, lang))).toBe(true);
+        expect(faq[0].a).not.toMatch(PRICE_PLACEHOLDER_RE);
+        const html = compareContentBlocks(cmp, lang, R558_LIVE).join("");
+        expect(html).toContain(escapeHtml(faq[0].a.replace(/\s*(完整结论见本页|See “)[\s\S]*$/, "")));
+        const ld = JSON.parse(faqJsonld(faq).replace(/<\/script/g, "</script")) as { mainEntity: { acceptedAnswer: { text: string } }[] };
+        expect(ld.mainEntity[0].acceptedAnswer.text).toBe(faq[0].a);
+      }
+    }
+  });
+
+  it("不同快照渲染不同 meta（缺快照回退静态 ≈），任何情况都不留 {{ 与新「—」", () => {
+    for (const c of Object.values(TLD_COMPARES)) {
+      for (const lang of ["zh", "en"] as const) {
+        const out = compareMetaDescription(c, lang, NO_DATA);
+        expect(out, `${c.slug} ${lang}`).not.toMatch(PRICE_PLACEHOLDER_RE);
+        expect(out.split("—").length, `${c.slug} ${lang}`).toBe(c[lang].metaDescription.split("—").length);
+      }
+    }
+    const withLive = compareMetaDescription(TLD_COMPARES["mx-vs-es"], "en", R558_LIVE);
+    const noData = compareMetaDescription(TLD_COMPARES["mx-vs-es"], "en", NO_DATA);
+    expect(withLive).not.toBe(noData);
+    expect(noData).toMatch(/≈\$\d+ to register and ≈\$\d+\/yr to renew/);
+  });
+});
+
+describe("R563：渲染后 meta description 长度守门", () => {
+  /**
+   * Google Search Central「Control your snippets」：meta description 无长度上限，但按设备宽度截断——
+   * zh 全部 ≤160 字（占位改为静态回退「≈NN 元」是最长形态）；
+   * en 改前就有 395/444 页 >160（历史遗留，中位 194、最长 387），本轮只守「不超过改前包络 430」，收缩到 ≤160 另开批次。
+   */
+  const LIMIT = { zh: 160, en: 430 } as const;
+  for (const lang of ["zh", "en"] as const) {
+    it(`${lang}: 全部 444 页 NO_DATA 渲染后 ≤ ${LIMIT[lang]}`, () => {
+      const over: string[] = [];
+      for (const c of Object.values(TLD_COMPARES)) {
+        const n = compareMetaDescription(c, lang, NO_DATA).length;
+        if (n > LIMIT[lang]) over.push(`${c.slug} ${n}`);
+      }
+      expect(over).toEqual([]);
+    });
+  }
 });

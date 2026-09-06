@@ -13,7 +13,7 @@ import { TLD_COMPARES } from "./compares";
 import { faqJsonld, firstSentence, splitFaqAnswer, stripPeriod, type FaqItem } from "./faq";
 import { buildGuideFaq, GUIDE_IDEAS_ANCHOR, GUIDE_PITFALLS_ANCHOR } from "./guide-faq";
 import { INDUSTRY_GUIDES } from "./guides";
-import { compareContentBlocks, faqAnswerHtml, guideContentBlocks, tldContentBlocks } from "./ssr-html";
+import { compareContentBlocks, EMPTY_PRICE_SNAPSHOT, faqAnswerHtml, guideContentBlocks, tldContentBlocks } from "./ssr-html";
 import { buildTldFaq, TLD_NAMING_ANCHOR } from "./tld-faq";
 import { TLD_GUIDES } from "./tlds";
 
@@ -175,7 +175,7 @@ describe("buildCompareFaq（/vs 去复读）", () => {
     const cmp = TLD_COMPARES[slug]!;
     for (const lang of LANGS) {
       const loc = cmp[lang];
-      const [which, a, b] = buildCompareFaq(cmp, lang);
+      const [which, a, b] = buildCompareFaq(cmp, lang, EMPTY_PRICE_SNAPSHOT);
       expect(which.a).not.toBe(loc.verdict);
       expect(which.a).not.toContain(loc.verdict);
       expect(which.link?.hash).toBe(COMPARE_VERDICT_ANCHOR);
@@ -193,7 +193,7 @@ describe("buildCompareFaq（/vs 去复读）", () => {
   it("全部对比 × zh/en：3 问、答案 ≠ verdict、link.label 是答案子串", () => {
     for (const cmp of Object.values(TLD_COMPARES)) {
       for (const lang of LANGS) {
-        const faq = buildCompareFaq(cmp, lang);
+        const faq = buildCompareFaq(cmp, lang, EMPTY_PRICE_SNAPSHOT);
         expect(faq).toHaveLength(3);
         expect(faq[0].a).not.toContain(cmp[lang].verdict);
         for (const f of faq) {
@@ -259,7 +259,7 @@ describe("SSR 正文：锚点真实存在，可见 FAQ 文本 = JSON-LD 文本�
   it.each(SAMPLE_CMPS)("/vs/%s", (slug) => {
     const cmp = TLD_COMPARES[slug]!;
     for (const lang of LANGS) {
-      const faq = buildCompareFaq(cmp, lang);
+      const faq = buildCompareFaq(cmp, lang, EMPTY_PRICE_SNAPSHOT);
       const blocks = compareContentBlocks(cmp, lang);
       for (const f of faq) expectAnchor(blocks, f);
       const data = parseFaqPage(faqJsonld(faq));

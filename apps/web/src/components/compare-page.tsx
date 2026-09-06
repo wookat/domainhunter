@@ -27,7 +27,6 @@ export function ComparePage({ slug }: { slug: string }) {
   const loc = cmp[lang];
   const sides = [cmp.a, cmp.b] as const;
   const picks = [loc.pickA, loc.pickB] as const;
-  const faq = buildCompareFaq(cmp, lang);
   const relatedGuides = content.relatedGuides;
   const related = relatedCompares(slug);
   const others = compareGroupChips(slug);
@@ -38,6 +37,8 @@ export function ComparePage({ slug }: { slug: string }) {
     stale: priceMeta ? priceMeta.stale : true,
   };
   const priceView = buildComparePriceView(cmp.a, cmp.b, lang, snapshot);
+  // FAQ 第 1 答取自 metaDescription（含价格占位），与正文/表格同用同一份 snapshot 渲染，与 SSR FAQPage JSON-LD 逐字一致
+  const faq = buildCompareFaq(cmp, lang, snapshot);
   // 正文价格占位：与价格表、SSR compareContentBlocks 同用一份 snapshot 插值（同页只有一套价格）
   const verdictText = renderPriceText(loc.verdict, lang, snapshot);
   const pickTexts = picks.map((items) => items.map((it) => renderPriceText(it, lang, snapshot)));

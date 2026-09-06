@@ -309,7 +309,7 @@ export function comparePriceTableHtml(view: ComparePriceView): string {
   return `<section class="mt-8">${h2}<div class="mt-3 overflow-x-auto rounded-xl border border-line bg-bg1"><table class="w-full min-w-[320px] text-sm"><caption class="px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2">${escapeHtml(t.caption)}</caption><thead><tr class="border-b border-line text-xs text-txt2">${t.headers.map(th).join("")}</tr></thead><tbody>${rows}${diff}</tbody></table></div>${notes}</section>`;
 }
 
-const EMPTY_PRICE_SNAPSHOT: ComparePriceSnapshot = { live: {}, fetchedAt: null, stale: true };
+export const EMPTY_PRICE_SNAPSHOT: ComparePriceSnapshot = { live: {}, fetchedAt: null, stale: true };
 
 /**
  * /vs/:slug 全文正文（compare-page.tsx 首次渲染的静态部分）。
@@ -322,7 +322,7 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang, prices: Compar
   // 正文价格占位与价格表同用一份快照（renderPriceText），客户端 compare-page.tsx 用同一函数 + 注入的同一份快照渲染，水合逐字一致
   const picks = [loc.pickA, loc.pickB].map((items) => items.map((it) => renderPriceText(it, lang, prices)));
   const verdictText = renderPriceText(loc.verdict, lang, prices);
-  const faq = buildCompareFaq(cmp, lang);
+  const faq = buildCompareFaq(cmp, lang, prices);
   const priceTable = comparePriceTableHtml(buildComparePriceView(cmp.a, cmp.b, lang, prices));
   const relatedGuides = [...new Set([...guidesForTld(cmp.a), ...guidesForTld(cmp.b)])].slice(0, 4);
   const verdict = `<div id="${COMPARE_VERDICT_ANCHOR}" class="mt-6 scroll-mt-20 rounded-xl border border-line bg-bg1 px-5 py-4"><h2 class="flex items-center gap-2 text-base font-bold">${ICON_SCALE}${escapeHtml(s.verdict)}</h2><p class="mt-2.5 text-[15px] leading-relaxed text-txt1">${escapeHtml(verdictText)}</p></div>`;
