@@ -234,7 +234,7 @@ export function ResultsPage({
         const row = visible[selectedIdx];
         if (e.key === "c" || e.key === "C") void copyText(row.domain);
         else if (e.key === "s" || e.key === "S") onToggleFavorite(row);
-        else if (e.key === "Enter" && !onControl) openRegistrar(primaryRegistrar(row.domain), row.domain, affiliateCfg);
+        else if (e.key === "Enter" && !onControl && row.status === "available") openRegistrar(primaryRegistrar(row.domain), row.domain, affiliateCfg);
       }
     }
     window.addEventListener("keydown", onKey);
@@ -528,7 +528,7 @@ export function ResultsPage({
                 locked={locked.has(r.domain)}
                 onToggleLock={r.status === "available" ? onToggleLock : undefined}
                 favorite={shortlistHas(r.domain)}
-                onToggleFavorite={r.status !== "taken" ? onToggleFavorite : undefined}
+                onToggleFavorite={onToggleFavorite}
                 disliked={dislikedHas(r.label)}
                 onToggleDislike={r.status !== "taken" ? onToggleDislike : undefined}
               />

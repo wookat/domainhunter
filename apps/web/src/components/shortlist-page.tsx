@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from "react";
-import { ArrowDown, ArrowUp, ArrowUpDown, Bell, Bookmark, Check, ChevronDown, Copy, Download, ExternalLink, Link2, Loader2, MonitorSmartphone, RotateCw, Sparkles, StickyNote, Trash2 } from "lucide-react";
+import { ArrowDown, ArrowUp, ArrowUpDown, Bell, BellRing, Bookmark, Check, ChevronDown, Copy, Download, ExternalLink, Link2, Loader2, MonitorSmartphone, RotateCw, Sparkles, StickyNote, Trash2 } from "lucide-react";
 
 import { ConfirmLabel } from "@/components/confirm-label";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -49,8 +49,20 @@ const BAR_KEYS = ["length", "readability", "relevance", "brandability"] as const
 
 type SortKey = "added" | "domain" | "price" | "expiry";
 
-/** 首年价（美元）用于排序：实时价优先，回退静态参考价，无价排末尾 */
-function sortPriceUsd(tld: string, prices: PriceMap | null): number {
+/** 只有核验为可注册的域名才适用普通注册价与去注册 CTA；taken 走二级市场，unknown / 旧条目无 status 均不得视为可注册 */
+export function isRegistrable(it: Pick<ShortlistItem, "status">): boolean {
+  return it.status === "available";
+}
+
+/** 批量去注册的对象集：仅 available 项，最多 8 个（浏览器弹窗上限） */
+export function batchRegisterTargets(items: ShortlistItem[]): ShortlistItem[] {
+  return items.filter(isRegistrable).slice(0, 8);
+}
+
+/** 首年价（美元）用于排序：实时价优先，回退静态参考价，无价 / 非可注册项排末尾 */
+function sortPriceUsd(it: ShortlistItem, prices: PriceMap | null): number {
+  if (!isRegistrable(it)) return Number.MAX_SAFE_INTEGER;
+  const tld = it.tld;
   const p = prices?.[tld];
   if (p) return p.registration;
   const s = tldPrice(tld);
@@ -110,7 +122,7 @@ export function ShortlistPage({
     const list = [...items];
     if (sort === "added") list.sort((a, b) => a.addedAt - b.addedAt);
     else if (sort === "domain") list.sort((a, b) => a.domain.localeCompare(b.domain));
-    else if (sort === "price") list.sort((a, b) => sortPriceUsd(a.tld, prices) - sortPriceUsd(b.tld, prices));
+    else if (sort === "price") list.sort((a, b) => sortPriceUsd(a, prices) - sortPriceUsd(b, prices));
     else list.sort((a, b) => (a.expiresAt ? Date.parse(a.expiresAt) : Number.MAX_SAFE_INTEGER) - (b.expiresAt ? Date.parse(b.expiresAt) : Number.MAX_SAFE_INTEGER));
     return desc ? list.reverse() : list;
   }, [items, sort, desc, prices]);
@@ -298,9 +310,10 @@ export function ShortlistPage({
   const myDomains = new Set(items.map((i) => i.domain));
   const relevantChanges = (monitorChanges ?? []).filter((c) => myDomains.has(c.domain));
 
-  // 批量注册：每个域名用自己的首选注册商（.cn → 阿里云，其余 → Porkbun），与注册菜单首项一致
+  // 批量注册：只打开 available 项，每个域名用自己的首选注册商（.cn → 阿里云，其余 → Porkbun），与注册菜单首项一致
+  const registrableCount = items.filter(isRegistrable).length;
   const batchRegister = () => {
-    for (const it of items.slice(0, 8)) openRegistrar(primaryRegistrar(it.domain), it.domain, affiliateCfg);
+    for (const it of batchRegisterTargets(items)) openRegistrar(primaryRegistrar(it.domain), it.domain, affiliateCfg);
   };
 
   async function share() {
@@ -384,22 +397,25 @@ export function ShortlistPage({
     }
   }
 
-  async function recheck() {
+  /** 重新核验：默认全部；传入 only 时只核验该子集（unknown / 旧条目的行内 CTA） */
+  async function recheck(only?: string[]) {
+    const targets = only ? items.filter((i) => only.includes(i.domain)) : items;
+    if (targets.length === 0) return;
     abortRef.current?.abort();
     const ac = new AbortController();
     abortRef.current = ac;
     setRechecking(true);
     setRecheckError("");
     setChanges({});
-    setCheckingDomains(new Set(items.map((i) => i.domain)));
-    const prevStatus = new Map(items.map((i) => [i.domain, i.status]));
+    setCheckingDomains(new Set(targets.map((i) => i.domain)));
+    const prevStatus = new Map(targets.map((i) => [i.domain, i.status]));
     const statuses: Record<string, RecheckResult> = {};
     const newChanges: Record<string, StatusChange> = {};
     try {
       const res = await fetch("/api/check?refresh=1", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ domains: items.map((i) => i.domain), refresh: true }),
+        body: JSON.stringify({ domains: targets.map((i) => i.domain), refresh: true }),
         signal: ac.signal,
       });
       if (!res.ok) throw new Error(String(res.status));
@@ -453,6 +469,69 @@ export function ShortlistPage({
       : change === "becameAvailable"
         ? "bg-brand-dim/40 shadow-[inset_2px_0_0_var(--brand)]"
         : undefined;
+
+  // 参考价列：仅 available 显示普通注册价；taken 不显示任何价（二级市场价无 API），unknown / 旧条目待核验
+  const priceCell = (it: ShortlistItem, mobile: boolean) => {
+    if (isRegistrable(it)) {
+      return (
+        <span title={priceFull(it.tld, lang, prices)} className="tnum font-mono text-xs text-txt1">
+          {priceShort(it.tld, lang, prices) ?? (mobile ? "" : "—")}
+        </span>
+      );
+    }
+    const why = t(it.status === "taken" ? "shortlist.takenNoPrice" : "shortlist.unknownNoPrice");
+    return (
+      <span title={why} aria-label={why} className="cursor-help font-mono text-xs text-txt2">
+        —
+      </span>
+    );
+  };
+
+  // 行内主 CTA：available → 去注册；taken → 开监控（监控中则跳 /monitors）；unknown / 旧条目 → 重新核验
+  const primaryCta = (it: ShortlistItem, mobile: boolean) => {
+    const base = mobile ? "inline-flex h-11 items-center gap-1.5 rounded-md px-4 text-xs font-semibold" : "inline-flex h-8 items-center gap-1.5 rounded-md px-3 text-xs font-semibold";
+    if (isRegistrable(it)) {
+      return (
+        <RegisterMenu domain={it.domain}>
+          <button className={cn(base, mobile ? "bg-brand text-brand-ink" : "bg-brand-dim text-brand transition-opacity hover:opacity-80")}>{t("common.register")}</button>
+        </RegisterMenu>
+      );
+    }
+    if (it.status === "taken") {
+      if (monitor.isMonitored(it.domain)) {
+        return (
+          <a href="/monitors" title={t("watch.manageTitle")} className={cn(base, "border border-brand-line text-brand transition-colors hover:bg-brand-dim")}>
+            <BellRing className="h-3.5 w-3.5" />
+            {t("watch.watching")}
+          </a>
+        );
+      }
+      const pending = monitorPending === it.domain;
+      return (
+        <button
+          title={t("shortlist.monitorCtaTitle")}
+          disabled={monitorPending !== null}
+          onClick={() => void toggleMonitor(it.domain, it.status)}
+          className={cn(base, "bg-amber2-dim text-amber2 transition-opacity hover:opacity-80 disabled:opacity-60")}
+        >
+          {pending ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Bell className="h-3.5 w-3.5" />}
+          {t("shortlist.monitorCta")}
+        </button>
+      );
+    }
+    const checking = checkingDomains.has(it.domain);
+    return (
+      <button
+        title={t("shortlist.recheckOneTitle", { domain: it.domain })}
+        disabled={rechecking}
+        onClick={() => void recheck([it.domain])}
+        className={cn(base, "border border-line text-txt1 transition-colors hover:bg-bg2 hover:text-txt0 disabled:opacity-60")}
+      >
+        <RotateCw className={cn("h-3.5 w-3.5", checking && "animate-spin")} />
+        {checking ? t("shortlist.rechecking") : t("shortlist.recheck")}
+      </button>
+    );
+  };
 
   return (
     <main className="mx-auto w-full min-w-0 max-w-6xl flex-1 px-4 py-6 md:px-6">
@@ -511,11 +590,13 @@ export function ShortlistPage({
               <ConfirmLabel confirmed={confirmClear} label={t("shortlist.clear")} confirmLabel={t("shortlist.clearConfirm")} />
             </button>
             <button
-              className="flex h-9 items-center gap-1.5 rounded-lg bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90"
+              className="flex h-9 items-center gap-1.5 rounded-lg bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50"
+              title={t("shortlist.batchRegisterTitle")}
+              disabled={registrableCount === 0}
               onClick={batchRegister}
             >
               <ExternalLink className="h-4 w-4" />
-              {t("shortlist.batchRegister", { n: items.length })}
+              {t("shortlist.batchRegister", { n: registrableCount })}
             </button>
           </div>
         )}
@@ -784,6 +865,9 @@ export function ShortlistPage({
                           {!change && it.status === "taken" && (
                             <span className="shrink-0 rounded bg-taken-dim px-1.5 py-0.5 text-[11px] font-semibold text-taken">{t("status.taken")}</span>
                           )}
+                          {!change && it.status === "unknown" && (
+                            <span title={t("shortlist.unknownNoPrice")} className="shrink-0 rounded bg-amber2-dim px-1.5 py-0.5 text-[11px] font-semibold text-amber2">{t("status.unknown")}</span>
+                          )}
                           {it.status === "taken" && it.expiresAt && <ExpiryNote iso={it.expiresAt} className="shrink truncate" />}
                         </div>
                         {it.meaning && <div className="mt-0.5 max-w-xs truncate text-xs text-txt1">{it.meaning}</div>}
@@ -808,7 +892,7 @@ export function ShortlistPage({
                           )}
                         </td>
                       ))}
-                      <td title={priceFull(it.tld, lang, prices)} className="tnum px-2 text-right font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? "—"}</td>
+                      <td className="px-2 text-right">{priceCell(it, false)}</td>
                       <td className="px-2 text-center">
                         {monitorPending === it.domain ? (
                           <Loader2 className="inline h-4 w-4 animate-spin text-brand" />
@@ -831,9 +915,7 @@ export function ShortlistPage({
                           >
                             <Trash2 className="h-3.5 w-3.5" />
                           </button>
-                          <RegisterMenu domain={it.domain}>
-                            <button className="h-8 rounded-md bg-brand-dim px-3 text-xs font-semibold text-brand transition-opacity hover:opacity-80">{t("common.register")}</button>
-                          </RegisterMenu>
+                          {primaryCta(it, false)}
                         </span>
                       </td>
                     </tr>
@@ -861,6 +943,9 @@ export function ShortlistPage({
                       {!change && it.status === "taken" && (
                         <span className="shrink-0 rounded bg-taken-dim px-1.5 py-0.5 text-[11px] font-semibold text-taken">{t("status.taken")}</span>
                       )}
+                      {!change && it.status === "unknown" && (
+                        <span title={t("shortlist.unknownNoPrice")} className="shrink-0 rounded bg-amber2-dim px-1.5 py-0.5 text-[11px] font-semibold text-amber2">{t("status.unknown")}</span>
+                      )}
                       {score !== undefined && (
                         <span className={cn("tnum shrink-0 rounded-md px-2 py-0.5 font-mono text-xs font-bold", scoreBadgeClass(score))}>{score}</span>
                       )}
@@ -875,7 +960,7 @@ export function ShortlistPage({
                   {noteLine(it)}
                   {it.scores && <ScoreBars scores={it.scores} columns={4} className="mt-3" />}
                   <div className="mt-3 flex items-center gap-2">
-                    <span title={priceFull(it.tld, lang, prices)} className="tnum flex-1 font-mono text-xs text-txt1">{priceShort(it.tld, lang, prices) ?? ""}</span>
+                    <span className="flex-1">{priceCell(it, true)}</span>
                     <span className="flex items-center gap-1.5 text-[11px] text-txt2" title={t("monitor.toggleTitle")}>
                       {t("monitor.column")}
                       {monitorPending === it.domain ? (
@@ -891,9 +976,7 @@ export function ShortlistPage({
                     >
                       <Trash2 className="h-4 w-4" />
                     </button>
-                    <RegisterMenu domain={it.domain}>
-                      <button className="h-11 rounded-md bg-brand px-4 text-xs font-semibold text-brand-ink">{t("common.register")}</button>
-                    </RegisterMenu>
+                    {primaryCta(it, true)}
                   </div>
                 </div>
               );

@@ -367,7 +367,7 @@ export function DomainRow({
       <DomainName row={row} compact={compact} />
       <span className={cn("h-1.5 w-1.5 shrink-0 rounded-full", isUnknown ? "bg-amber2" : "bg-brand")} />
       {isUnknown && (
-        <span className={cn("shrink-0 rounded bg-amber2-dim text-amber2", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>{t("status.unknown")}</span>
+        <span title={t("home.quickUnknownTip")} className={cn("shrink-0 rounded bg-amber2-dim text-amber2", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>{t("status.unknown")}</span>
       )}
       {compact ? (
         <button
@@ -387,7 +387,7 @@ export function DomainRow({
         <span title={row.meaning} className="hidden flex-1 truncate text-xs text-txt1 sm:block">{row.meaning && <MeaningText text={row.meaning} />}</span>
       )}
       <span className="ml-auto sm:ml-0" />
-      {priceShort(row.tld, lang, prices) && (
+      {!isUnknown && priceShort(row.tld, lang, prices) && (
         <span title={priceFull(row.tld, lang, prices)} className={cn("tnum hidden shrink-0 font-mono text-txt2 md:block", compact ? "text-[11px]" : "text-xs")}>
           {priceShort(row.tld, lang, prices)}
         </span>
@@ -437,16 +437,18 @@ export function DomainRow({
           {favorite ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}
         </button>
       )}
-      <RegisterMenu domain={row.domain}>
-        <button
-          className={cn(
-            "shrink-0 rounded-md bg-brand-dim font-semibold text-brand transition-opacity hover:opacity-80",
-            compact ? "h-5 px-2 text-[11px]" : "h-11 px-3 text-xs sm:h-8",
-          )}
-        >
-          {t("common.register")}
-        </button>
-      </RegisterMenu>
+      {!isUnknown && (
+        <RegisterMenu domain={row.domain}>
+          <button
+            className={cn(
+              "shrink-0 rounded-md bg-brand-dim font-semibold text-brand transition-opacity hover:opacity-80",
+              compact ? "h-5 px-2 text-[11px]" : "h-11 px-3 text-xs sm:h-8",
+            )}
+          >
+            {t("common.register")}
+          </button>
+        </RegisterMenu>
+      )}
     </div>
     {/* 移动端寓意行：桌面寓意在行内，窄屏否则完全不可见（紧凑模式仅桌面，无需此行） */}
     {!compact && row.meaning && <p className="-mt-1.5 mb-2 px-4 pl-14 text-[11px] leading-snug text-txt1 line-clamp-2 sm:hidden"><MeaningText text={row.meaning} /></p>}
