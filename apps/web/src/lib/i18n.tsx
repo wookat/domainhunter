@@ -4,6 +4,7 @@ import { HOME_FAQ, HOME_HERO, HOME_META } from "@/content/home-copy";
 import { NOT_FOUND_META } from "@/content/not-found-copy";
 import { ADVANCED_META, WHY_META } from "@/content/page-meta";
 import { TLD_LIST } from "@/content/tld-list";
+import { applyLangMeta } from "@/lib/page-meta";
 import { shareSsrTitle, type ShareItem, type ShareShellState } from "@/share-items";
 
 const TLD_COUNT = TLD_LIST.length;
@@ -1055,7 +1056,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     try {
       localStorage.setItem(LANG_KEY, lang);
     } catch { /* ignore */ }
-    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    applyLangMeta(document, lang);
     try {
       // URL 上显式 ?lang= 与当前语言不一致时同步之，否则刷新会以 URL 为准覆盖切换结果
       const url = new URL(window.location.href);
