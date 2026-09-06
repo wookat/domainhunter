@@ -2158,29 +2158,40 @@ const GUIDES = {
     tld: "uk",
     zh: {
       title: ".uk 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".uk 是英国国家域名，本地信任度极高，适合面向英国市场的品牌与业务。查看 .uk 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .uk 域名。",
+      metaDescription:
+        ".uk 由非营利注册局 Nominet 管理，2026 年 7 月底二级 .uk 1,493,346 个、三级（co.uk 等）9,086,513 个，注册商 2,000 余家，争议由 Nominet 的 DRS 处理，DomainHunter 实时报价首年 $4.32、续费 $5.66。查看 .uk 注册/续费价格与命名建议，用 AI 猎取可注册的 .uk 域名。",
       intro:
-        ".uk 是英国的国家域名，由非营利注册局 Nominet 运营超过 25 年，是全球注册量最大的 ccTLD 之一（上千万注册量）。对英国消费者而言 .uk/.co.uk 是「本地生意」的默认信号，信任度远超一般新后缀——面向英国市场的电商、本地服务、媒体与品牌用它几乎是标配；对英国用户搜索，Google 也会把 .uk 站点与英国地区相关联，本地 SEO 有天然加成。2014 年起开放直接注册二级 .uk（不必再挂 .co.uk），name.uk 比 name.co.uk 短一截也更现代。注册约 $6（约 ¥41），续费同价——ccTLD 里的良心价，无引流钩子。注意两点：一是 Nominet 要求注册人提供英国境内的送达地址（address for service），海外注册人通常由注册商代理提供，注册前确认注册商支持；二是对应的 .co.uk 若被他人持有，建议评估品牌混淆风险，最好两个一起拿。命名上英国业务品牌词直接上（brand.uk），本地服务可用「城市/行业 + .uk」。",
-      bestFor: ["面向英国市场的电商", "英国本地服务与商铺", "英国媒体与内容站", "在英品牌与机构"],
+        ".uk 是 IANA 根区里最早一批委托的国家代码之一（1985 年 7 月 24 日），管理者 Nominet UK 是一家非营利公司，官网 nominet.uk，RDAP 服务在 rdap.nominet.uk。Nominet 的月度统计（2026 年 7 月末）把名字空间拆成两层：二级直注的 .uk 1,493,346 个，三级域 9,086,513 个，其中 co.uk 独占 8,629,213 个；7 月当月新注册三级 152,796 个、二级 46,979 个——每月 12 万以上的新注册量与 2,000 余家注册商，是 Nominet 官网「UK registry」页给出的规模描述。《2026 年度报告》补充了两组趋势数字：管理中的域名（DUM）1,040 万，上一财年为 1,020 万；续费率从 77% 升至 80%；Nominet 自述 .UK 为全球第三大 ccTLD。争议不走法院也不走 UDRP，而是 Nominet 自营的争议解决服务（DRS）。价格是 .uk 的一项直接优势：DomainHunter 2026 年 9 月 6 日的 /api/prices 实时报价为首年 $4.32、续费 $5.66，续费略高于首年但都在低价档。关于资格，Nominet 官网本轮抓取的页面没有列出本地存在条件，本页不作「任何人可注册」或「需英国地址」的断言，注册前以注册商提示为准。起名建议：先决定用二级 .uk 还是 co.uk——存量上 co.uk 是英国用户最熟悉的形式（860 多万），二级 .uk 更短但普及度以 150 万计；同一名字最好两个都查，避免一方被他人持有造成混淆；英式拼写（colour、organisation）面向英国用户更自然；争议风险方面，DRS 受理商标与商号等权利主张，注册前自查英国知识产权局（UKIPO）商标库。",
+      bestFor: [
+        "面向英国用户的电商与服务",
+        "想用比 co.uk 更短的二级 .uk 的品牌",
+        "预算敏感、看重低续费价的项目",
+        "同时持有 .uk 与 co.uk 的英国企业",
+      ],
       namingTips: [
-        "品牌词直接上：name.uk 比 name.co.uk 短且现代",
-        "英国本地 SEO 天然加成，本地业务几乎标配",
-        "需英国送达地址，海外注册确认注册商代理支持",
-        "对应 .co.uk 被他人持有时评估混淆风险，最好一起拿",
+        "先决定二级 .uk 还是 co.uk：co.uk 存量 860 多万最被熟悉，.uk 更短",
+        "实时报价首年 $4.32、续费 $5.66，均在低价档",
+        "英式拼写（colour、organisation）面向英国用户更自然",
+        "争议由 Nominet DRS 处理，注册前自查 UKIPO 商标库",
       ],
     },
     en: {
       title: ".uk Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".uk is the United Kingdom's country domain with unmatched local trust — for brands and businesses targeting the UK. See live pricing and naming advice, then hunt available .uk names with AI.",
+        ".uk is run by the non-profit registry Nominet; at the end of July 2026 there were 1,493,346 second-level .uk names and 9,086,513 third-level names (co.uk and others), more than 2,000 registrars, disputes go through Nominet's DRS, and DomainHunter's live quote is $4.32 for the first year and $5.66 to renew. See live .uk pricing and naming advice, then hunt available .uk names with AI.",
       intro:
-        ".uk is the United Kingdom's country-code domain, run by non-profit registry Nominet for over 25 years and one of the largest ccTLDs on earth with registrations in the tens of millions. To British consumers, .uk/.co.uk is the default signal of a local business — trust levels far beyond any new gTLD — so UK-facing e-commerce, local services, media and brands treat it as near-mandatory; Google also geo-associates .uk sites with the UK, a free boost for local SEO. Since 2014 you can register directly at the second level (name.uk, no .co.uk needed) — shorter and more modern than name.co.uk. It costs about $6 to register with the same renewal — honest ccTLD pricing, no teaser games. Two cautions: Nominet requires registrants to provide a UK address for service — overseas registrants usually rely on their registrar to proxy this, so confirm support before buying; and if someone else holds the matching .co.uk, weigh the brand-confusion risk — ideally secure both. For naming, a straight brand word works (brand.uk); local services can use city/trade + .uk.",
-      bestFor: ["UK-facing e-commerce", "Local UK services & shops", "British media & content sites", "UK brands & institutions"],
+        ".uk is among the earliest country codes delegated in the IANA root (24 July 1985); its manager, Nominet UK, is a non-profit company with its site at nominet.uk and RDAP at rdap.nominet.uk. Nominet's monthly statistics for the end of July 2026 split the namespace into two layers: 1,493,346 second-level .uk names and 9,086,513 third-level names, of which co.uk alone accounts for 8,629,213; new registrations in July were 152,796 at the third level and 46,979 at the second — the \"over 120,000 new registrations a month\" and \"more than 2,000 registrars\" figures on Nominet's UK registry page describe the same scale. The 2026 Annual Report adds two trend numbers: domains under management of 10.4 million, up from 10.2 million the previous financial year, and a renewal rate that rose from 77% to 80%; Nominet describes .UK as the third-largest ccTLD worldwide. Disputes go neither to court nor to UDRP by default but to Nominet's own Dispute Resolution Service (DRS). Price is a straightforward advantage: DomainHunter's live /api/prices quote on 6 September 2026 was $4.32 for the first year and $5.66 to renew, renewal slightly above year one but both in the low band. On eligibility, the Nominet pages captured in this round did not set out a local-presence condition, so this page makes no claim either way — neither \"anyone can register\" nor \"a UK address is required\" — and the registrar's checkout is the place to confirm. Naming suggestions: decide first between second-level .uk and co.uk — co.uk is the form British users know best, with more than 8.6 million names in stock, while second-level .uk is shorter but counts about 1.5 million; check the same name under both so that a third party holding the other form does not create confusion; British spellings (colour, organisation) read more naturally to UK users; and because the DRS hears trademark and trade-name claims, search the UK Intellectual Property Office (UKIPO) register before registering.",
+      bestFor: [
+        "E-commerce and services for UK users",
+        "Brands wanting a second-level .uk shorter than co.uk",
+        "Budget-sensitive projects that value a low renewal price",
+        "UK companies holding both .uk and co.uk",
+      ],
       namingTips: [
-        "Straight brand word: name.uk is shorter and more modern than name.co.uk",
-        "Free local-SEO boost — near-mandatory for UK-local business",
-        "UK address for service required — confirm your registrar proxies it",
-        "If .co.uk is taken by someone else, weigh confusion risk; ideally get both",
+        "Decide between second-level .uk and co.uk: co.uk has 8.6 million+ names and the recognition, .uk is shorter",
+        "Live quote $4.32 first year / $5.66 renewal, both in the low band",
+        "British spellings (colour, organisation) read naturally to UK users",
+        "Disputes go to Nominet's DRS — search the UKIPO trademark register first",
       ],
     },
   },
@@ -10288,29 +10299,40 @@ const GUIDES = {
     tld: "de",
     zh: {
       title: ".de 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".de 是德国国家域名、全球注册量第一的 ccTLD，本地信任度极高，适合面向德国市场的品牌与业务。查看 .de 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .de 域名。",
+      metaDescription:
+        ".de 由合作社 DENIC eG 管理，2025 年末注册量 17,663,886 个，其中境外持有人 2,167,487 个（12.3%），DENIC 的 FAQ 写明「注册办事处不在德国的个人或机构也可以注册 .de」，DomainHunter 实时报价首年 $2.90、续费 $4.07。查看 .de 注册/续费价格与命名建议，用 AI 猎取可注册的 .de 域名。",
       intro:
-        ".de 是德国的国家域名，由合作社性质的注册局 DENIC 运营，注册量超过 1,700 万，是全球最大的 ccTLD——比 .uk、.cn 都多。对德国消费者而言 .de 是「本地生意」的默认信号：德国用户在地址栏习惯性输入 name.de，本地电商、制造业官网、服务商用 .de 几乎是标配，信任度远超一般新后缀；Google 也会把 .de 站点与德国地区相关联，德语市场 SEO 有天然加成。已收录的 .berlin 服务柏林同城、.immobilien/.kaufen 是德语行业词，而 .de 是整个德国市场的通用入口，覆盖面最广。资格上 DENIC 要求提供德国境内的行政联系地址（Admin-C/送达地址），海外注册人通常由注册商代理提供，主流注册商（如 INWX、united-domains、Porkbun）都支持，注册前确认即可。价格是它的另一大优势：注册约 $8/年（约 ¥58），续费同价——大型 ccTLD 里的良心价，无引流钩子。注意 .de 要求域名至少 1 个字符且解析配置合规（DENIC 有 zone 检查），个别注册商会先做 DNS 预检。命名上德国业务品牌词直接上（brand.de），本地服务可用「城市/行业 + .de」，德语复合词库存也远比 .com 充裕。",
-      bestFor: ["面向德国市场的电商", "德国制造与出口企业官网", "德国本地服务与商铺", "德语内容与媒体站"],
+        "德国的 .de 由 DENIC eG 管理——一家由注册商会员组成的合作社，IANA 委托日期 1986 年 11 月 5 日，官网 denic.de。DENIC《2025 年活动报告》给出的年末数字是 17,663,886 个 .de 域名，其中由德国境外持有人持有的 2,167,487 个（占 12.3%），境外持有人按国家排序美国居首，其后是荷兰、葡萄牙和奥地利；报告同时提到 DENIC 已按 NIS2 要求对注册数据进行合规核验。DENIC 2026 年 6 月 30 日的新闻稿宣布 .de 在当月突破 1,800 万个注册，自述为「继续巩固其全球领先地位」——DENIC 官方并未自称全球规模第一的 ccTLD，其《2025 年活动报告》的 TLD 对比表把 .de（17,663,886）排在 .cn（2024 年末 20,823,037，CNNIC 第 55 次报告为 2,082 万）之后、.uk（10,238,568）之前，所以本页把 .de 定位为欧洲最大的国家域名，而不再沿用「全球第一」的旧说法。资格方面，DENIC 直接注册渠道 DENICdirect 的 FAQ 写明：「注册办事处不在德国的个人或机构可以注册 .de 域名」，DENIC 不对第三方权利做预审——名字是否侵犯他人商标由注册人自行负责。注册时不需要德国境内地址或行政联系人：现行《DENIC 域名条款》第 3 条第 4 款只规定，住所不在德国的域名持有人在 DENIC 提出相应要求后两周内，须指定一名在德国境内、用于接收官方或法院文书送达的授权代表，且该要求以有人申请送达并满足 Dispute 登记条件为前提；条款全文没有「Admin-C」一词。同一份 FAQ 还公开了 DENICdirect 的直接注册价格：首年 116 欧元、之后每年 58 欧元，这是注册局直销渠道的价格，明显高于注册商渠道，可作为价格上限参照。DomainHunter 2026 年 9 月 6 日的 /api/prices 实时报价为首年 $2.90、续费 $4.07，是本站收录 ccTLD 中最低的一档。起名建议：德语复合词是 .de 的天然优势——德语允许把多个词根拼成一个长词，这类名字在 .de 下辨识度高且不易与英文品牌冲突；德语变音字母 ä ö ü ß 的拼法能否注册 IDN 请以 DENIC 现行字符表为准，本轮未逐条核实，通常的做法是同时持有 ae/oe/ue/ss 转写版本；因为 DENIC 不做权利预审，注册前自查德国专利商标局（DPMA）和欧盟知识产权局（EUIPO）商标库，是避免收到律师警告函（Abmahnung）的实际办法；面向德奥瑞三地德语用户的项目可以把 .de 与 .at、.ch 分开持有，三者都对境外注册人开放。",
+      bestFor: [
+        "面向德国用户的电商与服务",
+        "用德语复合词命名的品牌",
+        "注册办事处不在德国、直接注册 .de 的境外主体",
+        "覆盖德奥瑞德语区、分别持有 .de/.at/.ch 的业务",
+      ],
       namingTips: [
-        "品牌词直接上：brand.de 是德国用户的默认预期",
-        "需德国境内行政联系地址，海外注册确认注册商代理支持",
-        "注册续费均约 $8/年，大型 ccTLD 里的良心价",
-        "德语复合词与「城市/行业 + .de」库存充裕",
+        "注册办事处不在德国也可注册（DENIC FAQ），无需 Admin-C；仅在 DENIC 要求时两周内指定德国境内送达代表（域名条款 §3(4)）",
+        "实时报价首年 $2.90、续费 $4.07，本站 ccTLD 最低档",
+        "DENIC 不预审第三方权利，注册前自查 DPMA/EUIPO 商标库以免收到 Abmahnung",
+        "德语变音拼法以 DENIC 字符表为准，通常同时持有 ae/oe/ue/ss 转写版本",
       ],
     },
     en: {
       title: ".de Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".de is Germany's country domain and the world's largest ccTLD, with unmatched local trust for German-market brands and businesses. See live pricing and naming advice, then hunt available .de names with AI.",
+        ".de is administered by the cooperative DENIC eG; the zone held 17,663,886 names at the end of 2025, 2,167,487 of them (12.3%) by holders outside Germany, DENIC's FAQ states that persons or institutions without a registered office in Germany can register .de domains, and DomainHunter's live quote is $2.90 for the first year and $4.07 to renew. See live .de pricing and naming advice, then hunt available .de names with AI.",
       intro:
-        ".de is Germany's country-code domain, run by the cooperative registry DENIC, with over 17 million registrations — the largest ccTLD on earth, ahead of .uk and .cn. To German consumers, .de is the default signal of a local business: users type name.de by habit, so German e-commerce, manufacturers and service providers treat it as near-mandatory, with trust far beyond any new gTLD; Google also geo-associates .de sites with Germany, a free boost for German-market SEO. Among already-listed suffixes, .berlin serves one city and .immobilien/.kaufen are German industry words — .de is the universal entrance to the whole German market. On eligibility, DENIC requires an administrative contact address in Germany (Admin-C / address for service); overseas registrants usually rely on their registrar to proxy this — mainstream registrars (INWX, united-domains, Porkbun) support it, so confirm before buying. Pricing is the other big advantage: about $8/yr to register (≈¥58) with the same renewal — honest pricing for a major ccTLD, no teaser games. Note DENIC runs zone checks on DNS configuration, and some registrars pre-validate nameservers. For naming, a straight brand word works (brand.de); local services can use city/trade + .de, and German compound words have far better inventory than .com.",
-      bestFor: ["German-market e-commerce", "German manufacturers & exporters", "Local German services & shops", "German-language content & media"],
+        "Germany's .de is administered by DENIC eG — a cooperative whose members are registrars — delegated by IANA on 5 November 1986, with its site at denic.de. DENIC's 2025 Activity Report puts the year-end count at 17,663,886 .de names, of which 2,167,487 (12.3%) are held by registrants outside Germany, the United States leading that group followed by the Netherlands, Portugal and Austria; the report also notes that DENIC verifies registration data in line with NIS 2. A DENIC press release dated 30 June 2026 announced that .de passed the 18-million mark that month and described the suffix as \"continuing to strengthen its leading global position\" — DENIC itself does not claim the number-one spot worldwide, and the TLD comparison table in its 2025 Activity Report lists .de (17,663,886) below .cn (20,823,037 at the end of 2024; CNNIC's 55th report gives 20.82 million) and above .uk (10,238,568), so this page calls .de Europe's largest country code and stops short of \"largest in the world\". On eligibility, the FAQ for DENIC's direct-registration channel, DENICdirect, states that persons or institutions that do not have their registered office in Germany can register .de domains, and that DENIC does not pre-check third-party rights — whether a name infringes someone's trademark is the registrant's own responsibility. No German address or administrative contact is needed at registration: §3(4) of the current DENIC Domain Terms and Conditions only says that a domain holder not domiciled in Germany must, within two weeks of a corresponding request by DENIC, name an authorised representative domiciled in Germany for receiving service of official or court documents, and such a request presupposes that someone wants to serve documents and that the conditions for a Dispute entry are met; the term \"Admin-C\" does not appear anywhere in the text. The same FAQ publishes the DENICdirect price of 116 euros for the first year and 58 euros per year thereafter, a registry-direct price that sits well above the registrar channel and serves as an upper reference. DomainHunter's live /api/prices quote on 6 September 2026 was $2.90 for the first year and $4.07 to renew, the lowest band among the ccTLDs listed on this site. Naming suggestions: German compound words are .de's natural strength — the language allows several roots to be fused into one long word, and such names are distinctive under .de and rarely collide with English-language brands; whether spellings with ä, ö, ü or ß can be registered as IDNs should be checked against DENIC's current character table, which this round did not verify line by line, and the usual practice is to hold the ae/oe/ue/ss transliterations as well; because DENIC does no rights screening, searching the German Patent and Trade Mark Office (DPMA) and EU Intellectual Property Office (EUIPO) registers before registering is the practical way to avoid a cease-and-desist letter (Abmahnung); and a project serving German speakers across Germany, Austria and Switzerland can hold .de, .at and .ch separately, since all three are open to registrants abroad.",
+      bestFor: [
+        "E-commerce and services for German users",
+        "Brands built on German compound words",
+        "Entities without a German registered office registering .de directly",
+        "Businesses covering the German-speaking region with separate .de/.at/.ch",
+      ],
       namingTips: [
-        "Straight brand word: brand.de is what German users expect",
-        "German admin contact address required — confirm your registrar proxies it",
-        "About $8/yr flat to register and renew — honest major-ccTLD pricing",
-        "German compounds and city/trade + .de still have plenty of inventory",
+        "No German registered office needed (DENIC FAQ) and no Admin-C; only on DENIC's request must a foreign holder name a German representative for service within two weeks (Domain Terms §3(4))",
+        "Live quote $2.90 first year / $4.07 renewal — the lowest ccTLD band on this site",
+        "DENIC does not pre-check third-party rights — search DPMA/EUIPO first to avoid an Abmahnung",
+        "Check DENIC's character table for umlaut IDNs; hold ae/oe/ue/ss transliterations too",
       ],
     },
   },
@@ -10318,29 +10340,40 @@ const GUIDES = {
     tld: "eu",
     zh: {
       title: ".eu 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".eu 是欧盟官方域名，需欧盟/欧洲经济区居民或机构资格，适合泛欧业务与跨境电商。查看 .eu 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .eu 域名。",
+      metaDescription:
+        ".eu 由 EURid 管理，可由欧盟成员国、冰岛、列支敦士登或挪威的居民或公民，以及在这些国家设立的组织注册，2026 年 8 月域名组合 3,714,548 个，Q2 2026 报告记录 IDN 32,325 个、平均续费率 82.5%，DomainHunter 实时报价首年与续费均 $5.88。查看 .eu 注册/续费价格与命名建议，用 AI 猎取可注册的 .eu 域名。",
       intro:
-        ".eu 是欧盟的官方域名，由比利时注册局 EURid 运营，注册量约 370 万，欧盟机构自己也用它（europa.eu）。它的定位介于国别与通用之间：想覆盖整个欧洲市场而不绑定单一国家的业务——泛欧电商、SaaS 的欧洲站、跨境物流、欧盟合规服务——用 name.eu 一眼讲清「我们服务全欧洲」，比在 27 国逐个注册 ccTLD 省事得多。资格是硬性的：注册人须为欧盟/欧洲经济区（含挪威、冰岛、列支敦士登）的居民、公民或注册机构，英国脱欧后已不再符合；非欧盟主体需要在欧盟设立实体或使用当地代理，注册前务必确认。这也带来附加信号：.eu 站点默认受 GDPR 等欧盟法规约束，对欧洲用户是一层信任背书。价格温和：注册约 $8（约 ¥55），续费约 $10/年（约 ¥72）——差价很小，无钩子。库存比 .com 充裕，英文与各欧洲语言的品牌词命中率都不错。注意品牌若以单一国家市场为主（只做德国/法国），当地 ccTLD（.de/.fr）信任度更高，.eu 更适合真正的多国经营。命名上「品牌 + .eu」最主流，欧盟合规、跨境服务类可用「功能词 + .eu」（如 vat、customs 类词根）。",
-      bestFor: ["泛欧电商与跨境业务", "SaaS 的欧洲站点", "欧盟合规与专业服务", "欧洲多国经营的品牌"],
+        ".eu 是本站收录的欧洲后缀里最年轻的一个：IANA 委托日期 2005 年 4 月 28 日，管理者是设在比利时的非营利组织 EURid vzw，官网 eurid.eu；EURid 的季度报告记录 2006 年 4 月 7 日注册量突破 100 万，2026 年第二季度报告的主题正是「.eu 二十年」。资格写在 EURid 统计页的说明里：.eu 可由欧盟成员国、冰岛、列支敦士登或挪威的居民或公民注册，也可由在这些国家设立的组织注册——名单没有瑞士和英国，这是它与 .it（含瑞士、英国）和 .fr（含瑞士）的差别。数字方面，EURid 统计页显示 2026 年 8 月域名组合 3,714,548 个；《Q2 2026 季度报告》给出季末总注册 3,812,187 个、当季新注册 175,862 个，以及 IDN 明细：合计 32,325 个，其中拉丁字符 29,048 个、西里尔字符 1,204 个、希腊字符 2,076 个——.eu 同时提供拉丁、西里尔（.ею）与希腊（.ευ）三种脚本；EURid 的季度新闻稿另记录 Q2 2026 平均续费率为 82.5%。价格上，DomainHunter 2026 年 9 月 6 日的 /api/prices 实时报价为首年 $5.88、续费 $5.88，两者相同。起名建议：先确认资格——公民身份即可，不要求居住在欧盟，因此持有欧盟成员国国籍的海外居民也符合；面向多国用户的名字最好是跨语言可读的词根或造词，避免只在一种语言里有含义；含变音或西里尔/希腊字母的版本可作为 IDN 注册，同时持有拉丁 ASCII 版本作为主域；如果目标市场只有一国，把 .eu 与该国 ccTLD 分工持有——例如 .eu 放泛欧站、.de 放德国站。",
+      bestFor: [
+        "欧盟/冰岛/列支敦士登/挪威的居民、公民或设立的组织",
+        "面向多个欧洲国家、名字需跨语言可读的品牌",
+        "需要西里尔（.ею）或希腊（.ευ）脚本版本的项目",
+        "把 .eu 与单国 ccTLD 分工持有的泛欧业务",
+      ],
       namingTips: [
-        "需欧盟/EEA 居民或机构资格，英国脱欧后不再符合",
-        "注册约 $8、续费约 $10/年，差价小无钩子",
-        "只做单一国家时当地 ccTLD 信任度更高",
-        "「品牌 + .eu」讲清泛欧定位，合规服务可用功能词",
+        "资格看居民/公民身份或组织设立地（欧盟、冰岛、列支敦士登、挪威），不含瑞士与英国",
+        "实时报价首年 $5.88、续费 $5.88，两者相同",
+        "选跨语言可读的词根或造词，避免只在一种语言里有含义",
+        "可注册拉丁/西里尔/希腊 IDN，以拉丁 ASCII 版本为主域",
       ],
     },
     en: {
       title: ".eu Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".eu is the European Union's official domain, requiring EU/EEA residency or establishment — for pan-European businesses and cross-border e-commerce. See live pricing and naming advice, then hunt available .eu names with AI.",
+        ".eu is administered by EURid and can be registered by residents or citizens of a European Union member state, Iceland, Liechtenstein or Norway and by organisations established there; the portfolio stood at 3,714,548 names in August 2026, the Q2 2026 report records 32,325 IDNs and an average renewal rate of 82.5%, and DomainHunter's live quote is $5.88 for both first year and renewal. See live .eu pricing and naming advice, then hunt available .eu names with AI.",
       intro:
-        ".eu is the European Union's official domain, run by Belgium-based registry EURid with about 3.7 million registrations — the EU institutions themselves use it (europa.eu). Its position sits between country-code and generic: businesses covering the whole European market without binding to one country — pan-European e-commerce, a SaaS product's European presence, cross-border logistics, EU compliance services — say \"we serve all of Europe\" in one glance with name.eu, far simpler than registering 27 national ccTLDs. Eligibility is strict: registrants must be residents, citizens or registered organizations of the EU/EEA (including Norway, Iceland, Liechtenstein); the UK no longer qualifies post-Brexit, and non-EU entities need an EU establishment or local proxy — confirm before buying. That requirement doubles as a signal: an .eu site is presumed bound by GDPR and EU law, a layer of trust for European users. Pricing is gentle: about $8 to register (≈¥55) and $10/yr to renew (≈¥72) — a tiny step-up, no traps. Inventory beats .com, with good hit rates for brand words across European languages. One caution: if you mainly serve a single country (Germany only, France only), the national ccTLD carries more trust — .eu fits genuinely multi-country operations. Naming: brand + .eu is the mainstream shape; compliance and cross-border services can use function words (vat, customs-style roots).",
-      bestFor: ["Pan-European e-commerce & cross-border trade", "A SaaS product's European presence", "EU compliance & professional services", "Brands operating across multiple EU countries"],
+        ".eu is the youngest European suffix listed on this site: IANA delegated it on 28 April 2005 to EURid vzw, a non-profit based in Belgium with its site at eurid.eu; EURid's quarterly reports record the one-million mark being passed on 7 April 2006, and the Q2 2026 report is themed around twenty years of .eu. Eligibility is stated on EURid's statistics page: .eu can be registered by any individual who is a resident or citizen of a European Union member state, Iceland, Liechtenstein or Norway, as well as by any organisation established in one of those states — a list that excludes Switzerland and the United Kingdom, which is where .eu differs from .it (Switzerland and the UK included) and .fr (Switzerland included). On numbers, EURid's statistics page shows a portfolio of 3,714,548 names in August 2026; the Q2 2026 quarterly report gives 3,812,187 total registrations at quarter end, 175,862 new registrations in the quarter, and an IDN breakdown of 32,325 in total — 29,048 Latin, 1,204 Cyrillic and 2,076 Greek — reflecting the three scripts .eu offers, Latin, Cyrillic (.ею) and Greek (.ευ); EURid's quarterly news release also records an average renewal rate of 82.5% for Q2 2026. On price, DomainHunter's live /api/prices quote on 6 September 2026 was $5.88 for the first year and $5.88 to renew, identical figures. Naming suggestions: confirm eligibility first — citizenship alone suffices and residence in the EU is not required, so an EU-member-state citizen living overseas qualifies; a name meant for users in several countries should be a root or coinage that reads across languages rather than one that only means something in a single language; accented, Cyrillic or Greek versions can be registered as IDNs, with the Latin ASCII form held as the primary domain; and if your market is really one country, split .eu from that country's ccTLD — .eu for the pan-European site, .de for the German one, for instance.",
+      bestFor: [
+        "Residents, citizens or established organisations of the EU, Iceland, Liechtenstein or Norway",
+        "Brands for several European countries whose names must read across languages",
+        "Projects needing a Cyrillic (.ею) or Greek (.ευ) script version",
+        "Pan-European businesses splitting .eu from single-country ccTLDs",
+      ],
       namingTips: [
-        "EU/EEA residency or establishment required — UK no longer qualifies",
-        "About $8 to register, $10/yr to renew — tiny step-up, no traps",
-        "Single-country businesses get more trust from the national ccTLD",
-        "Brand + .eu states the pan-European position in one glance",
+        "Eligibility rests on residence/citizenship or establishment in the EU, Iceland, Liechtenstein or Norway — not Switzerland or the UK",
+        "Live quote $5.88 first year / $5.88 renewal — identical",
+        "Pick a root or coinage that reads across languages, not one meaningful in a single language",
+        "Latin, Cyrillic and Greek IDNs are available; keep the Latin ASCII form as the primary domain",
       ],
     },
   },
@@ -10348,29 +10381,40 @@ const GUIDES = {
     tld: "ca",
     zh: {
       title: ".ca 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".ca 是加拿大国家域名，需满足加拿大存在要求（CPR），本地信任度极高，适合面向加拿大市场的品牌与业务。查看 .ca 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ca 域名。",
+      metaDescription:
+        ".ca 由 CIRA 管理，2000 年 11 月 8 日起注册人须满足《加拿大存在要求》（共 18 类，含公民、「通常居住」于加拿大者、加拿大公司、加拿大注册商标精确匹配），2024 财年末注册量 3,392,890 个，DomainHunter 实时报价首年 $8.92、续费 $9.18。查看 .ca 注册/续费价格与命名建议，用 AI 猎取可注册的 .ca 域名。",
       intro:
-        ".ca 是加拿大的国家域名，由非营利注册局 CIRA 运营，注册量超过 300 万。对加拿大消费者而言 .ca 是「本地生意」的强信号——调查里多数加拿大人表示更信任 .ca 网站并倾向从 .ca 电商下单，本地零售、服务、专业机构用它几乎是标配；Google 也会把 .ca 站点与加拿大地区相关联，本地 SEO 有天然加成。资格是硬性的：CIRA 的加拿大存在要求（Canadian Presence Requirements）规定注册人须为加拿大公民、永久居民、加拿大注册企业或在加持有商标的主体——海外个人无法直接注册，这道门槛反而保证了 .ca 的本地纯度，也让库存好于同级 ccTLD：常见英文词、行业词在 .ca 下命中率明显高于 .com。价格中等且平续：注册约 $13/年（约 ¥95），续费同价，无引流钩子。做加拿大市场的跨境电商若无当地实体，可先在加注册公司或商标满足资格，再拿下 .ca。命名上加拿大业务品牌词直接上（brand.ca），本地服务用「城市/行业 + .ca」（如 torontoplumber.ca 式组合）非常主流；双语市场注意名字在英法两语下都好读。",
-      bestFor: ["面向加拿大市场的电商", "加拿大本地服务与商铺", "加拿大专业机构与事务所", "在加品牌与连锁业务"],
+        "加拿大的 .ca 由加拿大互联网注册管理局 CIRA（法文 ACEI）管理，IANA 委托日期 1987 年 5 月 14 日，官网 cira.ca，RDAP 服务在 rdap.ca.fury.ca。资格文件是《加拿大存在要求》（Canadian Presence Requirements for Registrants，现行 1.3 版）：自 2000 年 11 月 8 日起，每个注册人都必须属于其中 18 类之一，包括加拿大公民、「通常居住」于加拿大者（定义为过去 12 个月内在加拿大居住超过 183 天）、加拿大公司与合伙、原住民、以及加拿大注册商标的持有人（只能注册与商标精确匹配的名字）等；注册时需选定所属类别，CIRA 可通过注册人信息核验（RIV）流程要求提供证明。争议依 CDRP（CIRA 域名争议解决政策）处理，投诉人本身也必须满足加拿大存在要求，这一点与 UDRP 不同。IDN 方面，CIRA 在 IANA 登记的法语 IDN 字符表（ca_fr 1.1 版，2022 年 10 月 21 日生效）允许 à â ç é è ê ë î ï ô ù û ü æ œ ÿ 等字符，法语品牌可以按原拼写注册。规模方面，CIRA 2024 财年年报给出的财年末数字是 3,392,890 个 .CA，同比增长 0.9%。价格上，DomainHunter 2026 年 9 月 6 日的 /api/prices 实时报价为首年 $8.92、续费 $9.18。起名建议：先确定自己属于 18 类中的哪一类——非加拿大居民最常见的路径是注册加拿大公司或持有加拿大商标，后者要求域名与商标文字完全一致；加拿大是英法双语市场，名字在两种语言下都要好读，法语拼写可以用 IDN 版本，同时持有 ASCII 版本；注册前自查加拿大知识产权局（CIPO）商标库，因为 CDRP 投诉人同样需要具备加拿大存在，本地权利人才是主要的争议来源。",
+      bestFor: [
+        "加拿大公司、合伙与原住民组织",
+        "加拿大公民或通常居住于加拿大的个人",
+        "持加拿大注册商标、需要精确匹配名字的外国企业",
+        "在英法双语市场同时使用 ASCII 与法语 IDN 的品牌",
+      ],
       namingTips: [
-        "需满足加拿大存在要求（公民/居民/注册企业/在加商标）",
-        "注册续费均约 $13/年，平续无钩子",
-        "「城市/行业 + .ca」是本地服务的主流命名",
-        "双语市场：名字要在英语和法语下都好读",
+        "须属于加拿大存在要求 18 类之一，注册时选类别，CIRA 可经 RIV 要求证明",
+        "法语字符（à ç é è ê œ 等）可按 ca_fr 1.1 字符表注册 IDN，同时持有 ASCII 版本",
+        "实时报价首年 $8.92、续费 $9.18",
+        "CDRP 投诉人也须满足加拿大存在，注册前自查 CIPO 商标库",
       ],
     },
     en: {
       title: ".ca Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".ca is Canada's country domain, gated by Canadian Presence Requirements and carrying strong local trust — for brands and businesses targeting Canada. See live pricing and naming advice, then hunt available .ca names with AI.",
+        ".ca is administered by CIRA; since 8 November 2000 every registrant must meet the Canadian Presence Requirements (18 categories, including citizens, people ordinarily resident in Canada, Canadian corporations and exact-match Canadian trademarks), the register held 3,392,890 names at the end of fiscal 2024, and DomainHunter's live quote is $8.92 for the first year and $9.18 to renew. See live .ca pricing and naming advice, then hunt available .ca names with AI.",
       intro:
-        ".ca is Canada's country-code domain, run by non-profit registry CIRA with over 3 million registrations. To Canadian consumers, .ca is a strong local-business signal — surveys consistently show most Canadians trust .ca sites more and prefer buying from .ca stores — so local retail, services and professional firms treat it as near-mandatory; Google also geo-associates .ca sites with Canada, a free local-SEO boost. Eligibility is strict: CIRA's Canadian Presence Requirements limit registration to Canadian citizens, permanent residents, corporations registered in Canada, or holders of a Canadian trademark — overseas individuals can't register directly. That gate keeps .ca authentically local and keeps inventory healthy: common English words and trade terms hit far more often than on .com. Pricing is moderate and flat: about $13/yr to register (≈¥95) with the same renewal, no teaser games. Cross-border sellers targeting Canada without a local entity can incorporate or file a Canadian trademark first to qualify. For naming, a straight brand word works (brand.ca); city/trade + .ca combos (torontoplumber.ca-style) are the mainstream shape for local services — and in a bilingual market, make sure the name reads well in both English and French.",
-      bestFor: ["Canada-facing e-commerce", "Local Canadian services & shops", "Canadian professional firms", "Brands & franchises operating in Canada"],
+        "Canada's .ca is administered by the Canadian Internet Registration Authority, CIRA (ACEI in French), delegated by IANA on 14 May 1987, with its site at cira.ca and RDAP at rdap.ca.fury.ca. The eligibility document is the Canadian Presence Requirements for Registrants (currently version 1.3): since 8 November 2000 every registrant must fall into one of 18 categories, including Canadian citizens, persons ordinarily resident in Canada (defined as living in Canada for more than 183 days in the past 12 months), Canadian corporations and partnerships, Indigenous peoples, and owners of a Canadian registered trademark (who may register only a name exactly matching the mark); the category is selected at registration, and CIRA may demand proof through its Registrant Information Validation (RIV) process. Disputes follow the CDRP (CIRA Domain Name Dispute Resolution Policy), and unlike UDRP the complainant must itself satisfy the Canadian Presence Requirements. On IDNs, CIRA's French IDN table lodged with IANA (ca_fr version 1.1, effective 21 October 2022) permits à, â, ç, é, è, ê, ë, î, ï, ô, ù, û, ü, æ, œ and ÿ, so a French-language brand can be registered as spelled. On scale, CIRA's fiscal-2024 annual report gives 3,392,890 .CA names at year end, up 0.9%. On price, DomainHunter's live /api/prices quote on 6 September 2026 was $8.92 for the first year and $9.18 to renew. Naming suggestions: work out which of the 18 categories you fit — for non-residents the common paths are incorporating in Canada or holding a Canadian trademark, and the trademark path requires the domain to match the mark text exactly; Canada is a bilingual market, so the name should read well in both English and French, with a French spelling available as an IDN and the ASCII form held alongside; and search the Canadian Intellectual Property Office (CIPO) trademark database before registering, because with CDRP complainants also needing Canadian presence, local rights holders are the main source of disputes.",
+      bestFor: [
+        "Canadian corporations, partnerships and Indigenous organisations",
+        "Canadian citizens and people ordinarily resident in Canada",
+        "Foreign businesses with a Canadian trademark needing an exact-match name",
+        "Brands using ASCII and French-IDN spellings in a bilingual market",
+      ],
       namingTips: [
-        "Canadian Presence Requirements apply — citizen/resident/corporation/trademark",
-        "About $13/yr flat to register and renew — no traps",
-        "City/trade + .ca is the mainstream local-service shape",
-        "Bilingual market: the name should read well in English and French",
+        "Fit one of the 18 Canadian Presence categories; pick it at registration, CIRA may verify via RIV",
+        "French characters (à ç é è ê œ and more) register as IDNs under table ca_fr 1.1 — hold the ASCII form too",
+        "Live quote $8.92 first year / $9.18 renewal",
+        "CDRP complainants must also have Canadian presence — search the CIPO register first",
       ],
     },
   },
@@ -10378,29 +10422,40 @@ const GUIDES = {
     tld: "au",
     zh: {
       title: ".au 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".au 是澳大利亚国家域名，2022 年开放二级直注，需澳大利亚存在资格，适合面向澳洲市场的品牌与业务。查看 .au 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .au 域名。",
+      metaDescription:
+        ".au 由 auDA 管理，所有注册人须满足「澳大利亚存在」要求（ABN/ACN、澳洲公民或永久居民、ARBN 外国公司或澳洲注册商标精确匹配等），2026 年 6 月注册局管理域名 4,387,430 个、其中二级直注 809,561 个，DomainHunter 实时报价首年与续费均 $7.91。查看 .au 注册/续费价格与命名建议，用 AI 猎取可注册的 .au 域名。",
       intro:
-        ".au 是澳大利亚的国家域名，由 auDA 管理、注册量超过 400 万。长期以来澳洲企业只能注册 .com.au/.net.au，2022 年 3 月起开放二级直注——name.au 比 name.com.au 短一大截也更现代，是 ccTLD 里少有的「新开放的老牌信任后缀」：信任度是几十年攒下的，好名字的库存却是 2022 年才重新洗牌的，不少在 .com.au 下被占的词在 .au 直注下仍有机会。对澳洲消费者而言 .au 系后缀是「本地生意」的默认信号，本地电商、服务商、事务所用它几乎是标配；Google 也会把 .au 站点与澳大利亚地区相关联，本地 SEO 有天然加成。资格是硬性的：注册人须满足澳大利亚存在要求（Australian presence）——澳洲公民/居民、ABN 注册企业或在澳商标持有人；持有对应 .com.au 的主体在直注开放时有优先权，现在剩余名字先到先得。价格中等且平续：注册约 $12/年（约 ¥85），续费同价，无钩子。注意若对应 .com.au 在他人手里，评估品牌混淆风险，最好两个一起拿。命名上澳洲业务品牌词直接上（brand.au），本地服务用「城市/行业 + .au」很自然。",
-      bestFor: ["面向澳大利亚市场的电商", "澳洲本地服务与商铺", "澳洲专业机构与事务所", "在澳品牌与连锁业务"],
+        "澳大利亚的 .au 由 .au Domain Administration（auDA）管理，IANA 委托日期 1986 年 3 月 5 日，官网 auda.org.au，RDAP 服务在 rdap.cctld.au。资格是 .au 的核心规则：auDA 的「Australian presence requirement」页与《auDA Rules》（2026 年 6 月注册商版）把「澳大利亚存在」定义为一份列举清单——持有 ABN 或 ACN 的企业、澳洲公民或永久居民、持有 ARBN 的外国公司、以及澳洲注册商标的持有人（商标持有人只能注册与商标精确匹配的名字）等，并在创建、续费、转移三个环节由注册服务商校验。auDA《注册局月度统计》（2026 年 6 月）给出的规模：管理中域名 4,387,430 个，其中二级直注的 .au 809,561 个、com.au 3,289,174 个，6 月新增 66,824 个——存量的四分之三仍在 com.au。争议依 auDRP（.au 争议解决政策）处理，auDA 2026 财年第四季度报告记录 auDRP 累计受理 321 件。价格上，DomainHunter 2026 年 9 月 6 日的 /api/prices 实时报价为首年 $7.91、续费 $7.91，两者相同。起名建议：先对照清单确认自己落在哪一类澳大利亚存在——外国公司通常走 ARBN 或澳洲商标路径，商标路径要求域名与商标精确匹配，所以名字必须和商标文字完全一致；同一名字的 .au 与 com.au 如果分属不同持有人，用户容易混淆，能同时拿到时优先并持；澳大利亚英语沿用英式拼写（colour、organisation），面向本地用户时保持一致。",
+      bestFor: [
+        "持有 ABN/ACN 的澳大利亚企业",
+        "持 ARBN 或澳洲注册商标、需要精确匹配名字的外国公司",
+        "澳洲公民或永久居民的个人项目",
+        "同时持有 .au 与 com.au 的本地品牌",
+      ],
       namingTips: [
-        "需澳大利亚存在资格（公民/居民/ABN 企业/在澳商标）",
-        "2022 年才开放直注，库存比老 ccTLD 新鲜得多",
-        "注册续费均约 $12/年，平续无钩子",
-        "对应 .com.au 被他人持有时评估混淆风险，最好一起拿",
+        "所有注册人须满足澳大利亚存在（ABN/ACN、公民/永久居民、ARBN、澳洲商标精确匹配）",
+        "走商标路径时域名须与商标文字完全一致",
+        "实时报价首年 $7.91、续费 $7.91，两者相同",
+        ".au 与 com.au 能同时拿到时优先并持，避免分属不同持有人",
       ],
     },
     en: {
       title: ".au Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".au is Australia's country domain — direct second-level registration opened in 2022, gated by Australian presence rules — for brands and businesses targeting Australia. See live pricing and naming advice, then hunt available .au names with AI.",
+        ".au is administered by auDA; every registrant must meet the Australian presence requirement (an ABN/ACN, Australian citizenship or permanent residency, an ARBN foreign company or an exact-match Australian trademark, among others), the registry managed 4,387,430 names in June 2026 including 809,561 direct second-level .au, and DomainHunter's live quote is $7.91 for both first year and renewal. See live .au pricing and naming advice, then hunt available .au names with AI.",
       intro:
-        ".au is Australia's country-code domain, governed by auDA with over 4 million registrations. For decades Australians could only register .com.au/.net.au; since March 2022, direct second-level registration is open — name.au is dramatically shorter and more modern than name.com.au, making .au a rare thing among ccTLDs: a decades-old trust signal whose good-name inventory was reshuffled in 2022, so words long taken on .com.au often remain available at the second level. To Australian consumers, .au-family suffixes are the default local-business signal — near-mandatory for local e-commerce, services and firms; Google also geo-associates .au sites with Australia, a free local-SEO boost. Eligibility is strict: registrants must satisfy the Australian presence requirement — citizens/residents, ABN-registered businesses, or Australian trademark holders. Matching .com.au holders had priority during the launch window; remaining names are now first-come first-served. Pricing is moderate and flat: about $12/yr to register (≈¥85) with the same renewal, no traps. One caution: if someone else holds the matching .com.au, weigh the brand-confusion risk — ideally secure both. For naming, a straight brand word works (brand.au); city/trade + .au fits local services naturally.",
-      bestFor: ["Australia-facing e-commerce", "Local Australian services & shops", "Australian professional firms", "Brands & franchises operating in Australia"],
+        "Australia's .au is administered by .au Domain Administration (auDA), delegated by IANA on 5 March 1986, with its site at auda.org.au and RDAP at rdap.cctld.au. Eligibility is the central rule of .au: auDA's Australian presence requirement page and the auDA Rules (Registrar edition, June 2026) define Australian presence as an enumerated list — businesses holding an ABN or ACN, Australian citizens or permanent residents, foreign companies holding an ARBN, and owners of an Australian registered trademark (who may only register a name that exactly matches the trademark), among other categories — and the registrar validates it at creation, renewal and transfer. The auDA Registry Monthly Stats for June 2026 give the scale: 4,387,430 domains under management, of which 809,561 are direct second-level .au and 3,289,174 are com.au, with 66,824 new names added in June — three quarters of the stock is still under com.au. Disputes are handled under the auDRP (the .au Dispute Resolution Policy), and auDA's Q4 FY26 report records 321 auDRP cases to date. On price, DomainHunter's live /api/prices quote on 6 September 2026 was $7.91 for the first year and $7.91 to renew, identical figures. Naming suggestions: identify first which Australian-presence category you fall into — a foreign company usually relies on an ARBN or an Australian trademark, and the trademark route requires the domain to match the mark exactly, so the name must be identical to the trademark text; if the .au and com.au forms of one name end up with different holders, users get confused, so hold both when both are available; and Australian English follows British spelling (colour, organisation), which is worth keeping consistent for a local audience.",
+      bestFor: [
+        "Australian businesses holding an ABN or ACN",
+        "Foreign companies with an ARBN or an exact-match Australian trademark",
+        "Personal projects of Australian citizens or permanent residents",
+        "Local brands holding both .au and com.au",
+      ],
       namingTips: [
-        "Australian presence required — citizen/resident/ABN business/trademark",
-        "Direct registration only opened in 2022 — fresher inventory than older ccTLDs",
-        "About $12/yr flat to register and renew — no traps",
-        "If .com.au is taken by someone else, weigh confusion risk; ideally get both",
+        "Every registrant must meet Australian presence (ABN/ACN, citizen/PR, ARBN, exact-match trademark)",
+        "On the trademark route the domain must match the trademark text exactly",
+        "Live quote $7.91 first year / $7.91 renewal — identical",
+        "Hold .au and com.au together when both are available to avoid split holders",
       ],
     },
   },
@@ -10408,29 +10463,40 @@ const GUIDES = {
     tld: "jp",
     zh: {
       title: ".jp 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".jp 是日本国家域名，需日本境内地址（注册商可代理），本地信任度极高，适合面向日本市场的品牌与业务。查看 .jp 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .jp 域名。",
+      metaDescription:
+        ".jp 由日本レジストリサービス（JPRS）管理，汎用 JP（name.jp）要求注册人在日本国内有可接收通知的住所，属性型 co.jp 须在日本登记且每组织限 1 个，2026 年 8 月 1 日注册总数 1,879,925 个。查看 .jp 注册/续费价格与命名建议，用 AI 猎取可注册的 .jp 域名。",
       intro:
-        ".jp 是日本的国家域名，由 JPRS 运营，注册量约 170 万，是亚洲信任度最高的 ccTLD 之一。日本消费者对本土信号极为敏感：本地电商、品牌官网、服务商用 name.jp，「日本的生意」一眼讲清，信任度远超一般新后缀——乐天、任天堂等日本巨头的主站都在 .jp 系后缀上；Google 也会把 .jp 站点与日本地区相关联，日语市场 SEO 有天然加成。已收录的 .tokyo 服务东京同城，而 .jp 覆盖整个日本市场，是做日本生意的通用入口。资格上通用 .jp（汎用JP）要求注册人提供日本境内联系地址，海外主体通常由注册商代理提供（如 Gandi、GMO 系注册商都支持），注册前确认即可；更严格的 .co.jp 则须日本注册法人，门槛高一档。价格偏高但平续：注册约 $40/年（约 ¥290），续费同价——比欧美 ccTLD 贵一截，但对认真经营日本市场的品牌不构成障碍，还顺带过滤了投机注册，库存比同级后缀干净。命名上品牌词直接上（brand.jp）最主流；日语罗马字（romaji）词在 .jp 下天然好读，「品类罗马字 + .jp」对日本用户比英文词更亲切。",
-      bestFor: ["面向日本市场的电商", "日本本地服务与门店", "进入日本市场的海外品牌", "日语内容与媒体站"],
+        "JP 域名的管理者是株式会社日本レジストリサービス（JPRS），IANA 委托日期 1986 年 8 月 5 日，官网 jprs.jp；所有 JP 域名申请都通过 JPRS 指定的「指定事業者」办理，注册局不直接面向公众。JPRS 官方 FAQ 把资格讲得很具体：JP 域名面向在日本有住所的组织和个人；其中汎用 JP 域名（xxx.jp）只要求在日本国内有一个能接收通知的住所（例如日本办事处），一个主体可注册多个；属性型 JP 域名（co.jp、or.jp、ne.jp 等）则须是在日本登记的对应类型组织，且每个组织限 1 个——co.jp 对应日本登记的株式会社等公司法人。日本語 JP 域名（日本語.jp）同样对在日有住所者开放，数量不限。JPRS 统计页 2026 年 8 月 1 日的数据：JP 域名总计 1,879,925 个，其中汎用 JP 1,293,314 个（含日本語 JP 79,307 个），co.jp 501,583 个——可见约三分之二的存量是二级直注的汎用 JP。关于价格，由于 2026 年 9 月 6 日 /api/prices 抓取时 .jp 没有实时报价，本页采用静态参考价（首年与续费均约 ¥290），在本站收录的 ccTLD 中属于高价档，以注册商为准。起名建议：日语罗马字（romaji）拼写在 .jp 下对日本用户最自然，注意长音与拗音的罗马字写法要统一（例如 ou/o、shi/si）；如果目标用户主要在日本，可以评估日本語.jp 版本一起持有；没有日本住所的团队要先确认注册商是否提供日本住所服务，或先设立日本联络点再申请；打算用 co.jp 的公司要先完成日本法人登记。",
+      bestFor: [
+        "在日本有办事处或法人的企业",
+        "面向日本用户、有日本联络地址的品牌",
+        "用罗马字或日文命名的项目",
+        "需要 co.jp 级别公信力的日本登记公司",
+      ],
       namingTips: [
-        "需日本境内联系地址，海外注册确认注册商代理支持",
-        "注册续费均约 $40/年，价格过滤投机、库存干净",
-        "日语罗马字词根对日本用户比英文更亲切",
-        ".co.jp 须日本法人，门槛更高但信任度也更高",
+        "汎用 JP 需日本国内可接收通知的住所，co.jp 需日本登记法人且每组织限 1 个",
+        "罗马字拼写要统一长音与拗音写法（ou/o、shi/si）",
+        "日本語.jp 与 name.jp 可一起持有，面向日本用户互补",
+        "无实时报价时页面显示参考价（约 ¥290/年，高价档）",
       ],
     },
     en: {
       title: ".jp Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".jp is Japan's country domain — a local contact address is required (registrars can proxy it) — with top-tier local trust for Japan-market brands and businesses. See live pricing and naming advice, then hunt available .jp names with AI.",
+        ".jp is administered by Japan Registry Services (JPRS); general-use JP names (name.jp) require an address in Japan where notices can be received, organisational co.jp names require Japanese registration and are limited to one per organisation, and the registry counted 1,879,925 JP names on 1 August 2026. See .jp pricing and naming advice, then hunt available .jp names with AI.",
       intro:
-        ".jp is Japan's country-code domain, run by JPRS with about 1.7 million registrations and among the most trusted ccTLDs in Asia. Japanese consumers are highly attuned to local signals: name.jp says \"a Japanese business\" at a glance, with trust far beyond any new gTLD — giants like Rakuten and Nintendo keep their main sites on .jp-family suffixes; Google also geo-associates .jp sites with Japan, a free boost for Japanese-market SEO. Among already-listed suffixes, .tokyo serves one city — .jp covers the entire Japanese market, the universal entrance for doing business in Japan. On eligibility, general-use .jp requires a contact address within Japan; overseas registrants usually rely on their registrar to proxy this (Gandi and GMO-family registrars support it), so confirm before buying. The stricter .co.jp requires a registered Japanese company — a higher bar with correspondingly higher trust. Pricing is on the high side but flat: about $40/yr to register (≈¥290) with the same renewal — pricier than Western ccTLDs, no obstacle for brands serious about Japan, and it filters out speculative registrations, keeping inventory cleaner than comparable suffixes. For naming, a straight brand word is the mainstream shape (brand.jp); Japanese romaji roots read naturally on .jp, and category romaji + .jp feels warmer to Japanese users than English words.",
-      bestFor: ["Japan-facing e-commerce", "Local Japanese services & storefronts", "Overseas brands entering Japan", "Japanese-language content & media"],
+        "JP domain names are administered by Japan Registry Services Co., Ltd. (JPRS), delegated by IANA on 5 August 1986 and found at jprs.jp; every JP application goes through a JPRS-designated registrar (\"指定事業者\"), and the registry does not deal with the public directly. The JPRS FAQ is specific about eligibility: JP names are for organisations and individuals with an address in Japan; general-use JP names (xxx.jp) only require an address in Japan where notices can be received — a Japanese office, for instance — and one holder may register several; organisational JP names (co.jp, or.jp, ne.jp and so on) must belong to an organisation of the matching type registered in Japan, with a limit of one per organisation, co.jp being the class for Japanese-registered companies such as kabushiki kaisha. Japanese-script JP names (日本語.jp) are likewise open to anyone with a Japanese address, with no numeric limit. The JPRS statistics page for 1 August 2026 reports 1,879,925 JP names in total, of which 1,293,314 are general-use JP (including 79,307 Japanese-script names) and 501,583 are co.jp — roughly two thirds of the installed base is therefore direct second-level general-use JP. Regarding price, the 6 September 2026 /api/prices pull had no live .jp quote, so this page uses a static reference (about ¥290 for both first year and renewal), which puts .jp in the high-price tier of ccTLDs listed on this site; the registrar page is authoritative. Naming suggestions: romaji spellings of Japanese words are the most natural fit for Japanese users, but keep long vowels and contracted sounds consistent (ou versus o, shi versus si); if your users are mainly in Japan, consider holding the 日本語.jp version alongside the romaji one; a team without a Japanese address should first confirm whether its registrar offers a Japanese address service, or set up a Japanese point of contact before applying; and a company planning on co.jp needs to complete Japanese corporate registration first.",
+      bestFor: [
+        "Companies with an office or legal entity in Japan",
+        "Brands with a Japanese contact address serving Japanese users",
+        "Projects named in romaji or Japanese script",
+        "Japanese-registered companies that need co.jp-level credibility",
+      ],
       namingTips: [
-        "Japan contact address required — confirm your registrar proxies it",
-        "About $40/yr flat — the price filters speculation, keeping inventory clean",
-        "Japanese romaji roots feel warmer to local users than English words",
-        ".co.jp needs a registered Japanese company — higher bar, higher trust",
+        "General-use JP needs an address in Japan for notices; co.jp needs a Japanese-registered entity, one per organisation",
+        "Keep romaji spelling consistent for long vowels and contracted sounds (ou/o, shi/si)",
+        "日本語.jp and name.jp can be held together for a Japanese audience",
+        "Without a live quote the page shows a reference price (≈¥290/yr, high tier)",
       ],
     },
   },
@@ -10438,29 +10504,40 @@ const GUIDES = {
     tld: "sg",
     zh: {
       title: ".sg 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".sg 是新加坡国家域名，需本地存在（注册商可代理），适合面向新加坡与东南亚市场的品牌、金融科技与跨境业务。查看 .sg 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .sg 域名。",
+      metaDescription:
+        ".sg 由新加坡网络信息中心（SGNIC）管理，二级 .sg 所有人可申请但外国申请人须指定新加坡本地代理为行政联系人，com.sg 须有 ACRA 等新加坡登记，行政联系人须通过 Singpass/Corppass 完成 VerifiedID@SG 核验。查看 .sg 注册/续费价格与命名建议，用 AI 猎取可注册的 .sg 域名。",
       intro:
-        ".sg 是新加坡的国家域名，由 SGNIC（新加坡资讯通信媒体发展局旗下）运营。新加坡是东南亚的商业与金融枢纽，.sg 的信号价值也随之外溢：不止新加坡本地生意，面向东南亚的区域总部、金融科技、跨境电商用 name.sg，讲的是「以新加坡为基地的正规生意」——这个后缀在东南亚商圈自带合规与专业联想；对新加坡用户搜索，Google 也会把 .sg 站点与新加坡地区相关联，本地 SEO 有加成。资格上 SGNIC 要求注册人有新加坡本地存在：本地个人、注册企业，海外主体通常由注册商提供本地代理服务（如 Vodien、Exabytes 等新加坡注册商都支持），注册前确认即可。价格中等且平续：注册约 $39/年（约 ¥280），续费同价，无引流钩子——与 .jp 类似，价格门槛过滤了投机注册，好名字的库存比同热度后缀干净。两个字符的后缀让整体域名短而利落，英文词根在 .sg 下命中率远高于 .com。注意受众主要在新加坡与东南亚商圈，纯欧美市场的业务信号弱一些。命名上品牌词直接上（brand.sg）最主流，金融科技、跨境服务可用「功能词 + .sg」（如 pay、trade 类词根），本地服务用「行业 + .sg」。",
-      bestFor: ["新加坡本地企业与服务", "东南亚区域总部与跨境业务", "金融科技与专业服务", "进入东南亚市场的品牌"],
+        "新加坡的 .sg 由 Singapore Network Information Centre (SGNIC) Pte Ltd 管理，IANA 委托日期 1988 年 10 月 19 日，官网 sgnic.sg，RDAP 服务在 rdap.sgnic.sg。SGNIC 的「.sg categories & rules」页按类别列出资格：二级 .sg 所有人都可以申请，但外国申请人必须指定一名新加坡本地代理担任行政联系人；com.sg 须为在新加坡会计与企业管制局（ACRA）或其他法定机构登记的商业实体；其他类别（org.sg、edu.sg、gov.sg 等）各有对应条件。.sg 还有一道在 ccTLD 里少见的身份核验：VerifiedID@SG 要求行政联系人使用 Singpass（个人）或 Corppass（企业）核验注册人身份，这也是外国申请人必须有本地代理的原因——代理人要能完成核验。IDN 方面，SGNIC 的注册规则允许使用中文顶级域 .新加坡 和泰米尔文顶级域 .சிங்கப்பூர்，域名字串本身可含中文字符，适合华语与泰米尔语用户。注册局官网在本轮抓取中没有可直接引用的注册总量，本页不写数字。价格上，因 DomainHunter 2026 年 9 月 6 日抓取 /api/prices 时 .sg 无实时报价，本页只有静态参考价可供参考（首年与续费均约 ¥280），属于高价档，以注册商为准。起名建议：外国团队先确认注册商是否提供本地代理（行政联系人）服务，并了解代理的年费；新加坡是英语、华语、马来语、泰米尔语四语社会，英文名可以配一个 .新加坡 中文版本面向华语用户；打算用 com.sg 的公司先完成 ACRA 登记；因为核验环节由代理人的 Singpass/Corppass 完成，变更代理时要同步更新行政联系人。",
+      bestFor: [
+        "在新加坡设有实体或代理的企业",
+        "面向东南亚、以新加坡为区域总部的品牌",
+        "需要 .新加坡 中文版本的华语业务",
+        "完成 ACRA 登记后使用 com.sg 的公司",
+      ],
       namingTips: [
-        "需新加坡本地存在，海外注册确认注册商代理支持",
-        "注册续费均约 $39/年，平续无钩子、库存干净",
-        "金融科技用「功能词 + .sg」自带合规联想",
-        "受众在新加坡与东南亚，纯欧美业务信号较弱",
+        "二级 .sg 所有人可申请，外国申请人须指定新加坡本地代理为行政联系人",
+        "行政联系人须通过 Singpass/Corppass 完成 VerifiedID@SG 核验",
+        "可配 .新加坡 中文版本面向华语用户，字串可含中文字符",
+        "无实时报价时页面显示参考价（约 ¥280/年，高价档）",
       ],
     },
     en: {
       title: ".sg Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".sg is Singapore's country domain — local presence required (registrars can proxy it) — for brands, fintech and cross-border businesses targeting Singapore and Southeast Asia. See live pricing and naming advice, then hunt available .sg names with AI.",
+        ".sg is administered by the Singapore Network Information Centre (SGNIC); anyone may apply for a second-level .sg but foreign applicants must appoint a Singapore-based local agent as administrative contact, com.sg requires ACRA or similar Singapore registration, and the administrative contact must pass VerifiedID@SG via Singpass or Corppass. See .sg pricing and naming advice, then hunt available .sg names with AI.",
       intro:
-        ".sg is Singapore's country-code domain, run by SGNIC under the Infocomm Media Development Authority. Singapore is Southeast Asia's business and financial hub, and the signal of .sg spills over accordingly: beyond local Singapore businesses, regional headquarters, fintech firms and cross-border commerce targeting Southeast Asia use name.sg to say \"a legitimate business based in Singapore\" — a suffix that carries compliance and professionalism connotations across the region's business circles; Google also geo-associates .sg sites with Singapore, a local-SEO boost. On eligibility, SGNIC requires local presence: Singapore individuals or registered entities, with overseas registrants usually relying on a registrar's local-proxy service (Singapore registrars like Vodien and Exabytes support it) — confirm before buying. Pricing is moderate and flat: about $39/yr to register (≈¥280) with the same renewal, no teaser games — like .jp, the price bar filters speculation, so good-name inventory stays cleaner than comparably popular suffixes. The two-character suffix keeps domains short and crisp, and English roots hit far more often than on .com. One caution: the audience is Singapore and Southeast Asian business circles — the signal is weaker for purely Western-market ventures. Naming: a straight brand word is the mainstream shape (brand.sg); fintech and cross-border services can use function words (pay, trade-style roots), and local services fit trade + .sg.",
-      bestFor: ["Local Singapore businesses & services", "Southeast Asia regional HQs & cross-border trade", "Fintech & professional services", "Brands entering Southeast Asia"],
+        "Singapore's .sg is administered by Singapore Network Information Centre (SGNIC) Pte Ltd, delegated by IANA on 19 October 1988, with its site at sgnic.sg and RDAP at rdap.sgnic.sg. SGNIC's \".sg categories & rules\" page lists eligibility by category: anyone may apply for a second-level .sg, but a foreign applicant must appoint a local agent based in Singapore as administrative contact; com.sg requires a business entity registered with the Accounting and Corporate Regulatory Authority (ACRA) or another statutory body; and the remaining categories (org.sg, edu.sg, gov.sg and others) carry their own conditions. .sg also runs an identity check that is unusual among ccTLDs: VerifiedID@SG requires the administrative contact to verify the registrant's identity using Singpass (individuals) or Corppass (companies), which is precisely why a foreign applicant needs a local agent — someone who can complete that verification. On IDNs, SGNIC's rules of registration allow the Chinese top-level domain .新加坡 and the Tamil top-level domain .சிங்கப்பூர், and the domain string itself may contain Chinese characters, serving Chinese- and Tamil-speaking users. The registry site did not yield a directly quotable total registration count in this round of research, so this page states none. On price, because .sg had no live quote when DomainHunter pulled /api/prices on 6 September 2026, only a static reference is available here (about ¥280 for both first year and renewal), placing .sg in the high-price tier; the registrar page is authoritative. Naming suggestions: a foreign team should first confirm that its registrar offers a local-agent (administrative-contact) service and learn the agent's annual fee; Singapore is a four-language society — English, Mandarin, Malay and Tamil — so an English name can be paired with a .新加坡 Chinese version for Mandarin-speaking users; a company planning on com.sg should complete ACRA registration first; and because verification is tied to the agent's Singpass or Corppass, update the administrative contact whenever the agent changes.",
+      bestFor: [
+        "Companies with a Singapore entity or local agent",
+        "Brands using Singapore as a Southeast Asian regional headquarters",
+        "Chinese-language businesses wanting a .新加坡 version",
+        "Companies using com.sg after ACRA registration",
+      ],
       namingTips: [
-        "Singapore local presence required — confirm your registrar proxies it",
-        "About $39/yr flat to register and renew — clean inventory, no traps",
-        "Function words + .sg carry compliance connotations for fintech",
-        "Audience is Singapore & Southeast Asia — weaker signal for purely Western markets",
+        "Anyone may apply for second-level .sg; foreign applicants must appoint a Singapore-based administrative contact",
+        "The administrative contact must pass VerifiedID@SG via Singpass or Corppass",
+        "Pair with a .新加坡 Chinese version for Mandarin speakers — the string may contain Chinese characters",
+        "Without a live quote the page shows a reference price (≈¥280/yr, high tier)",
       ],
     },
   },
@@ -10468,29 +10545,40 @@ const GUIDES = {
     tld: "fr",
     zh: {
       title: ".fr 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".fr 是法国国家域名，需欧盟/EEA 居民或机构资格，本地信任度极高，适合面向法国市场的品牌、电商与服务。查看 .fr 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fr 域名。",
+      metaDescription:
+        ".fr 由 Afnic 管理，2026 年 7 月 6 日版命名政策第 90 条把注册人限定为居住在欧盟成员国或冰岛/列支敦士登/挪威/瑞士的自然人、或在上述地区设有注册办事处的法人，2025 年 12 月 31 日库存 4,319,120 个。查看 .fr 注册/续费价格与命名建议，用 AI 猎取可注册的 .fr 域名。",
       intro:
-        ".fr 是法国的国家域名，由非营利注册局 AFNIC 运营，注册量超过 400 万，是欧洲第四大 ccTLD。法国消费者对本土信号非常敏感：本地电商、品牌官网、餐饮与服务商用 name.fr，「法国的生意」一眼讲清，信任度远超一般新后缀——法国本土巨头与政府机构的主站几乎都在 .fr 上；Google 也会把 .fr 站点与法国地区相关联，法语市场 SEO 有天然加成。已收录的 .paris 服务巴黎同城，而 .fr 覆盖整个法国市场，是做法国生意的通用入口。资格上 AFNIC 要求注册人为欧盟/欧洲经济区（含瑞士、挪威、冰岛、列支敦士登）的个人或机构；非欧盟主体需在欧盟设立实体或使用注册商的本地代理服务（Gandi、OVH 等法系注册商都支持），注册前确认即可。价格温和且接近平续：注册约 $9（约 ¥65），续费约 $10/年（约 ¥72），无引流钩子。库存比 .com 充裕得多，法语词根与品牌词命中率高。命名上品牌词直接上（brand.fr）最主流；面向法国用户，法语词根比英文词更亲切，本地服务用「行业法语词 + .fr」很自然。",
-      bestFor: ["面向法国市场的电商", "法国本地服务与门店", "进入法国市场的海外品牌", "法语内容与媒体站"],
+        "法国的 .fr 由 Afnic（法国互联网命名合作协会）管理，IANA 委托日期 1986 年 9 月 2 日，官网 nic.fr / afnic.fr，RDAP 服务在 rdap.nic.fr。资格条件写在 Afnic《命名政策》（2026 年 7 月 6 日版）第 90 条：注册人须为居住在欧盟成员国、冰岛、列支敦士登、挪威或瑞士的自然人，或在上述地区设有注册办事处或主要机构的法人——这条规则的历史节点是 2011 年 .fr 向全欧盟开放，此前只对法国主体开放。Afnic 的年度报告《The .FR in 2025》给出了几组数字：2025 年 12 月 31 日库存 4,319,120 个；2025 年新建 853,000 个，同比增长 6.3%，为历史新高；境外持有人占库存的 11.9%，占 2025 年新建的 15.7%——说明欧盟其他国家的注册人是 .fr 增长的重要来源。命名政策也规定了 1–2 字符名的开放范围：该限制适用于 Afnic 管理的海外领地后缀 .pm/.re/.tf/.wf/.yt，.fr 不在此列。报价方面，2026 年 9 月 6 日 DomainHunter 抓取 /api/prices 时 .fr 未返回实时价格，本页价格区退回到静态参考价（首年约 ¥65、续费约 ¥72），以注册商为准。起名建议：先核对资格——在欧盟/冰岛/列支敦士登/挪威/瑞士之外的团队需要先在该范围内设立实体，注册商代为提供地址并不等于满足第 90 条的居住或设立要求，注册前应向注册商确认其做法是否合规；法语词带重音（é è ê à ç）的拼法可以作为品牌拼写的一部分，是否可注册 IDN 请以 Afnic 现行字符表为准，本轮未逐条核实；如果同一名字在 .fr 与 .eu 下都空着，两者的资格范围高度重叠，可以分工持有。",
+      bestFor: [
+        "在法国设有实体或居住的企业与个人",
+        "欧盟/EEA/瑞士范围内面向法国用户的品牌",
+        "法语内容与服务",
+        "把 .fr 与 .eu 分工持有的泛欧业务",
+      ],
       namingTips: [
-        "需欧盟/EEA 居民或机构资格，海外注册确认注册商代理支持",
-        "注册约 $9、续费约 $10/年，差价小无钩子",
-        "法语词根对法国用户比英文词更亲切",
-        "只做巴黎同城可对比 .paris，全国生意 .fr 更通用",
+        "注册人须居住或设立于欧盟成员国、冰岛、列支敦士登、挪威或瑞士（命名政策第 90 条）",
+        "注册商代提供地址不等于满足第 90 条，注册前确认其做法合规",
+        "法语重音拼法能否注册 IDN 以 Afnic 现行字符表为准",
+        "无实时报价时页面显示参考价（首年约 ¥65、续费约 ¥72）",
       ],
     },
     en: {
       title: ".fr Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".fr is France's country domain — EU/EEA residency or establishment required — with top-tier local trust for France-market brands, e-commerce and services. See live pricing and naming advice, then hunt available .fr names with AI.",
+        ".fr is administered by Afnic; article 90 of the naming policy dated 6 July 2026 limits registrants to natural persons residing in an EU member state, Iceland, Liechtenstein, Norway or Switzerland, or legal persons with a registered office there, and the zone held 4,319,120 names on 31 December 2025. See .fr pricing and naming advice, then hunt available .fr names with AI.",
       intro:
-        ".fr is France's country-code domain, run by the non-profit registry AFNIC with over 4 million registrations — Europe's fourth-largest ccTLD. French consumers are highly attuned to local signals: name.fr says \"a French business\" at a glance, with trust far beyond any new gTLD — France's household brands and government sites live on .fr; Google also geo-associates .fr sites with France, a free boost for French-market SEO. Among already-listed suffixes, .paris serves one city — .fr covers the entire French market, the universal entrance for doing business in France. On eligibility, AFNIC requires registrants to be individuals or organizations in the EU/EEA (plus Switzerland, Norway, Iceland, Liechtenstein); non-EU entities need an EU establishment or a registrar's local-proxy service (French-family registrars like Gandi and OVH support it) — confirm before buying. Pricing is gentle and near-flat: about $9 to register (≈¥65) and $10/yr to renew (≈¥72), no teaser games. Inventory is far better than .com, with strong hit rates for French roots and brand words. For naming, a straight brand word is the mainstream shape (brand.fr); French-language roots feel warmer to local users than English words, and trade-word + .fr fits local services naturally.",
-      bestFor: ["France-facing e-commerce", "Local French services & storefronts", "Overseas brands entering France", "French-language content & media"],
+        "France's .fr is administered by Afnic (Association Française pour le Nommage Internet en Coopération), delegated by IANA on 2 September 1986, with sites at nic.fr and afnic.fr and RDAP at rdap.nic.fr. Eligibility is written into article 90 of the Afnic Naming Policy dated 6 July 2026: the registrant must be a natural person residing in a European Union member state, Iceland, Liechtenstein, Norway or Switzerland, or a legal person with its registered office or principal establishment in one of those territories — the historical turning point being 2011, when .fr opened to the whole EU after being reserved for French entities. Afnic's annual review, The .FR in 2025, supplies the numbers: 4,319,120 names in stock on 31 December 2025; 853,000 create operations during 2025, up 6.3% and an all-time record; and holders outside France accounting for 11.9% of the stock and 15.7% of 2025 creations — evidence that registrants from other EU countries are a meaningful source of .fr growth. The naming policy also delimits where one- and two-character names are unavailable: that restriction applies to the overseas suffixes Afnic manages, .pm, .re, .tf, .wf and .yt, and .fr is not on the list. On pricing, .fr returned no live figure when DomainHunter pulled /api/prices on 6 September 2026, so the panel reverts to a static reference (about ¥65 for the first year and about ¥72 to renew); the registrar page is authoritative. Naming suggestions: check eligibility first — a team outside the EU, Iceland, Liechtenstein, Norway or Switzerland needs an entity inside that area, and a registrar lending an address is not the same as meeting article 90's residence or establishment test, so ask the registrar to confirm its practice is compliant; accented French spellings (é, è, ê, à, ç) can be part of the brand's written form, but whether a given accented string is registrable as an IDN should be checked against Afnic's current character table, which this round did not verify line by line; and if one name is free under both .fr and .eu, their eligibility footprints overlap heavily, so the two can be split between a French and a pan-European site.",
+      bestFor: [
+        "Companies and individuals established or resident in France",
+        "Brands within the EU/EEA/Switzerland serving French users",
+        "French-language content and services",
+        "Pan-European businesses splitting .fr and .eu",
+      ],
       namingTips: [
-        "EU/EEA residency or establishment required — confirm your registrar proxies it",
-        "About $9 to register, $10/yr to renew — tiny step-up, no traps",
-        "French-language roots feel warmer to local users than English words",
-        "For Paris-only businesses compare .paris; .fr is the universal national choice",
+        "Registrants must reside or be established in an EU state, Iceland, Liechtenstein, Norway or Switzerland (naming policy art. 90)",
+        "A registrar-supplied address does not satisfy article 90 — confirm the registrar's practice is compliant",
+        "Check Afnic's current character table before relying on an accented French IDN",
+        "Without a live quote the page shows a reference price (≈¥65 first year, ≈¥72 renewal)",
       ],
     },
   },
@@ -10498,29 +10586,40 @@ const GUIDES = {
     tld: "it",
     zh: {
       title: ".it 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".it 是意大利国家域名，需欧盟/EEA 居民或机构资格，适合面向意大利市场的品牌与业务，也是 IT/科技双关的创意后缀。查看 .it 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .it 域名。",
+      metaDescription:
+        ".it 由意大利国家研究委员会信息学与电信研究所（CNR-IIT）运营的 Registro .it 管理，注册人须为成年人，且拥有欧洲经济区、梵蒂冈、圣马力诺、瑞士或英国的国籍、居住地或注册地，2026 年 4 月末注册量 3,578,851 个。查看 .it 注册/续费价格与命名建议，用 AI 猎取可注册的 .it 域名。",
       intro:
-        ".it 是意大利的国家域名，由意大利国家研究委员会下属的 Registro .it 运营，注册量约 350 万，是欧洲第五大 ccTLD。它有双重身份：对意大利消费者，name.it 是「本地生意」的默认信号——意大利电商、时尚品牌、餐饮与制造商用它几乎是标配，Google 也会把 .it 站点与意大利地区相关联，本地 SEO 有加成；对全球创业者，.it 恰好是英文单词与「IT/信息技术」的双关，域名黑客（domain hack）玩法层出不穷（如 do.it、make.it 类短语域名），科技产品拿它做创意主域也很常见。资格上 Registro .it 要求注册人为欧盟/欧洲经济区（含瑞士、挪威、冰岛等）的居民或注册机构；非欧盟主体需欧盟实体或注册商本地代理，注册前确认支持情况。价格温和：注册约 $8（约 ¥58），续费约 $10/年（约 ¥72），差价很小无钩子。库存比 .com 充裕，意大利语词根与英文短语的命中率都不错。命名上意大利业务品牌词直接上（brand.it）；做双关创意域名时选「动词/短语 + .it」，读起来是完整英文句子的最加分。",
-      bestFor: ["面向意大利市场的电商", "意大利时尚与制造品牌", "意大利本地服务与门店", "玩转 domain hack 的科技产品"],
+        "意大利的 .it 由 Registro .it 管理，隶属意大利国家研究委员会的信息学与电信研究所（IIT-CNR），IANA 委托日期 1987 年 12 月 23 日，官网 nic.it；Registro .it 自述 1987 年诞生于 CNR-IIT，是欧洲最早的注册局之一。资格写在 nic.it 的 FAQ 里：注册人仅限成年人，并且须拥有欧洲经济区（EEA）成员国、梵蒂冈、圣马力诺、瑞士或英国的国籍、居住地或注册地——这份名单比 .fr 多了英国与两个微型国家，比 .eu 多了瑞士与英国，是欧洲 ccTLD 里少见地把英国脱欧后仍保留在内的一个。规模来自 Registro .it 的月度通讯《DOT》2026 年第 1 期：2026 年 4 月末 .it 域名 3,578,851 个，较 2025 年末增加 41,300 个（+1.17%），2026 年 1–4 月新注册 198,225 个。本轮抓取的官网页面没有给出可引用的 IDN 字符表与争议程序文本，本页对这两项不作断言，注册前可在 nic.it 查阅现行规则。价格一栏，因 2026 年 9 月 6 日 /api/prices 抓取未返回 .it 实时报价，本页显示的是静态参考价（首年约 ¥58、续费约 ¥72），以注册商为准。起名建议：先核对国籍/居住地/注册地是否在 EEA、梵蒂冈、圣马力诺、瑞士或英国范围内，范围之外的团队需要先在其中一地设立实体；意大利语词以元音结尾、音节清晰，天然适合口头传播，面向意大利用户时优先考虑意大利语原词而非英译；意大利语的重音多落在词尾（如 città、caffè），带重音拼法能否注册请先向注册商确认，并同时持有无重音的 ASCII 版本。",
+      bestFor: [
+        "在意大利设有实体或居住的企业与个人",
+        "EEA、瑞士或英国范围内面向意大利用户的品牌",
+        "意大利语内容、餐饮与设计类项目",
+        "用意大利语原词命名、重视口头传播的业务",
+      ],
       namingTips: [
-        "需欧盟/EEA 居民或机构资格，海外注册确认注册商代理支持",
-        "注册约 $8、续费约 $10/年，差价小无钩子",
-        "「动词/短语 + .it」的域名黑客读法自然最加分",
-        "意大利语词根对本地用户比英文更亲切",
+        "注册人须成年且拥有 EEA/梵蒂冈/圣马力诺/瑞士/英国的国籍、居住地或注册地",
+        "意大利语词以元音结尾、便于口头传播，优先原词而非英译",
+        "带重音拼法（città、caffè）能否注册先向注册商确认，同时持有 ASCII 版本",
+        "无实时报价时页面显示参考价（首年约 ¥58、续费约 ¥72）",
       ],
     },
     en: {
       title: ".it Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".it is Italy's country domain — EU/EEA residency required — for Italy-market brands and businesses, and a creative double-meaning suffix for tech products. See live pricing and naming advice, then hunt available .it names with AI.",
+        ".it is administered by Registro .it, run by the Institute of Informatics and Telematics of Italy's National Research Council (CNR-IIT); registrants must be adults with citizenship, residence or a registered office in the European Economic Area, Vatican City, San Marino, Switzerland or the United Kingdom, and the zone held 3,578,851 names at the end of April 2026. See .it pricing and naming advice, then hunt available .it names with AI.",
       intro:
-        ".it is Italy's country-code domain, run by Registro .it under Italy's National Research Council with about 3.5 million registrations — Europe's fifth-largest ccTLD. It leads a double life: to Italian consumers, name.it is the default local-business signal — near-mandatory for Italian e-commerce, fashion brands, restaurants and manufacturers, with Google geo-associating .it sites with Italy for a local-SEO boost; to global founders, .it doubles as the English word \"it\" and the abbreviation for information technology, spawning endless domain hacks (do.it, make.it-style phrase domains) — tech products routinely pick it as a creative primary domain. On eligibility, Registro .it requires registrants to be residents or registered organizations of the EU/EEA (plus Switzerland, Norway, Iceland); non-EU entities need an EU establishment or a registrar's local proxy — confirm support before buying. Pricing is gentle: about $8 to register (≈¥58) and $10/yr to renew (≈¥72), a tiny step-up with no traps. Inventory beats .com, with good hit rates for both Italian roots and English phrases. For naming, Italian businesses go straight brand word (brand.it); for domain hacks, pick verb/phrase + .it that reads as a complete English sentence — that's where the suffix shines.",
-      bestFor: ["Italy-facing e-commerce", "Italian fashion & manufacturing brands", "Local Italian services & storefronts", "Tech products playing domain hacks"],
+        "Italy's .it is administered by Registro .it, part of the Institute of Informatics and Telematics of the National Research Council (IIT-CNR), delegated by IANA on 23 December 1987, with its site at nic.it; Registro .it describes itself as born at CNR-IIT in 1987, making it one of Europe's oldest registries. Eligibility is set out in the nic.it FAQ: registrants must be adults and must hold citizenship, residence or a registered office in a European Economic Area (EEA) member state, Vatican City, San Marino, Switzerland or the United Kingdom — a list that adds the UK and two microstates compared with .fr, and Switzerland and the UK compared with .eu, making .it one of the few European ccTLDs that kept the United Kingdom eligible after Brexit. Scale comes from Registro .it's monthly newsletter DOT, issue 1 of 2026: 3,578,851 .it names at the end of April 2026, up 41,300 (+1.17%) on the end of 2025, with 198,225 new registrations between January and April 2026. The registry pages captured in this round did not yield a quotable IDN character table or dispute-procedure text, so this page makes no claim on either point; the current rules are available at nic.it before registering. In the price column, the 6 September 2026 /api/prices pull returned no live .it quote, so this page shows a static reference (about ¥58 for the first year and about ¥72 to renew); the registrar page is authoritative. Naming suggestions: verify first that your citizenship, residence or registered office falls within the EEA, Vatican City, San Marino, Switzerland or the UK — a team outside that list needs an entity in one of those places; Italian words end in vowels and have clear syllables, which makes them easy to pass on by word of mouth, so for an Italian audience prefer the original Italian word over an English translation; and because Italian accents often fall on the final syllable (città, caffè), ask your registrar whether an accented spelling can be registered and hold the unaccented ASCII form alongside.",
+      bestFor: [
+        "Companies and individuals established or resident in Italy",
+        "Brands within the EEA, Switzerland or the UK serving Italian users",
+        "Italian-language content, food and design projects",
+        "Businesses named with original Italian words for word of mouth",
+      ],
       namingTips: [
-        "EU/EEA residency or establishment required — confirm your registrar proxies it",
-        "About $8 to register, $10/yr to renew — tiny step-up, no traps",
-        "Verb/phrase + .it that reads as a sentence is the winning domain hack",
-        "Italian-language roots feel warmer to local users than English words",
+        "Registrants must be adults with citizenship, residence or a registered office in the EEA, Vatican City, San Marino, Switzerland or the UK",
+        "Italian words end in vowels and travel well by word of mouth — prefer the original over an English translation",
+        "Ask the registrar about accented spellings (città, caffè) and hold the ASCII form too",
+        "Without a live quote the page shows a reference price (≈¥58 first year, ≈¥72 renewal)",
       ],
     },
   },
@@ -10528,29 +10627,40 @@ const GUIDES = {
     tld: "es",
     zh: {
       title: ".es 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".es 是西班牙国家域名，无资格限制、任何人可注册，适合面向西班牙与西语市场的品牌与业务。查看 .es 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .es 域名。",
+      metaDescription:
+        ".es 由西班牙公共商业实体 Red.es 管理，《国家域名计划》规定任何与西班牙有利益或联系的自然人或法人均有权获得 .es 域名，2007 年 10 月起可注册含 ñ、ç、l·l 等西班牙官方语言字符的 IDN，二级域名长度 3–63 字符。查看 .es 注册/续费价格与命名建议，用 AI 猎取可注册的 .es 域名。",
       intro:
-        ".es 是西班牙的国家域名，由西班牙政府旗下的 Red.es 运营，注册量约 200 万。它的一大优势是门槛：与 .fr/.it 等欧洲邻居不同，.es 对注册人没有国籍或地址限制，任何个人与机构都能直接注册，海外主体不需要代理。对西班牙消费者，name.es 是「本地生意」的默认信号——西班牙电商、服务商、餐饮门店用它信任度远超新后缀，Google 也会把 .es 站点与西班牙地区相关联，本地 SEO 有加成。更妙的是语言外溢：「es」恰好是西班牙语系动词「是」，且西语是全球 5 亿人的母语，面向拉美与美国西语人群的内容站、跨境业务也常拿 .es 讲「西语世界的生意」——虽然严格的地域信号仍指向西班牙，做泛西语市场时建议搭配通用后缀评估。价格温和：注册约 $8（约 ¥55），续费约 $10/年（约 ¥72），差价小无钩子。库存比 .com 充裕，西语词根命中率尤其高。命名上品牌词直接上（brand.es）最主流；西语词根对西语用户比英文更亲切，也可玩「英文词 + es」的复数双关（如 tool.es 类读法）。",
-      bestFor: ["面向西班牙市场的电商", "西班牙本地服务与门店", "西语内容与媒体站", "面向西语世界的跨境业务"],
+        "西班牙的 .es 由 Red.es 管理——一家隶属西班牙数字化转型部门的公共商业实体，IANA 委托日期 1988 年 4 月 14 日，官网 nic.es / dominios.es。资格与规则的法律文本是《「.es」国家域名计划》（Plan Nacional de nombres de dominio），dominios.es 的「Normativa」页转述其要点：任何与西班牙有利益或联系的自然人或法人均有权获得 .es 域名；二级域名长度为 3 至 63 个字符；存在禁用词清单以及六类保留词（例如与国家机构、地理名称相关的词），保留词不能自由注册。IDN 是 .es 的一个明确特色：dominios.es 的「Valores añadidos」页写明，自 2007 年 10 月起可以注册包含西班牙各官方语言字符的域名，包括 á é í ó ú ü ñ ç 以及加泰罗尼亚语的 l·l——ñ 是西班牙语最具标志性的字母，España、niño 一类词可以按原拼写注册。Red.es 在 dominios.es/es/sobre-dominios/estadisticas 按月发布统计 PDF（本轮见到的最新一期为 2026 年 7 月），本轮未从该 PDF 中提取可引用的总量；DENIC《2025 年活动报告》的 TLD 对比表引用的 2025 年末 .es 数字为 2,145,784 个。预算参考：DomainHunter 2026 年 9 月 6 日抓取 /api/prices 时 .es 没有实时报价，本页价格区展示静态参考价（首年约 ¥55、续费约 ¥72），以注册商为准。起名建议：「与西班牙有利益或联系」的表述比 .fr、.it 的居住/设立要求宽，但注册前仍应向注册商确认其对境外申请人的具体做法；含 ñ 或重音的西语词可以注册 IDN，同时持有 n/无重音的 ASCII 版本以防输入错误；避开保留词清单里的地理与机构名；面向拉美用户的项目注意 .es 的定位是西班牙，拉美各国有各自的 ccTLD。",
+      bestFor: [
+        "与西班牙有利益或联系的企业与个人",
+        "用含 ñ、重音或 l·l 的西语/加泰罗尼亚语词命名的品牌",
+        "面向西班牙用户的电商与内容站",
+        "需要 3 字符起短名的项目",
+      ],
       namingTips: [
-        "无资格限制，任何人可直接注册，无需本地代理",
-        "注册约 $8、续费约 $10/年，差价小无钩子",
-        "西语词根对西语用户比英文更亲切",
-        "泛西语市场（拉美为主）时搭配通用后缀评估地域信号",
+        "任何与西班牙有利益或联系的自然人/法人均可注册，注册前向注册商确认境外做法",
+        "2007 年 10 月起可注册 ñ、重音、l·l 等 IDN，同时持有 ASCII 版本",
+        "二级域名 3–63 字符，避开禁用词与六类保留词",
+        "无实时报价时页面显示参考价（首年约 ¥55、续费约 ¥72）",
       ],
     },
     en: {
       title: ".es Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".es is Spain's country domain — no eligibility restrictions, anyone can register — for brands and businesses targeting Spain and the Spanish-speaking market. See live pricing and naming advice, then hunt available .es names with AI.",
+        ".es is administered by Red.es, a Spanish public business entity; the National Domain Name Plan gives any natural or legal person with an interest in or connection to Spain the right to obtain a .es name, IDNs with characters of Spain's official languages such as ñ, ç and l·l have been registrable since October 2007, and second-level names run from 3 to 63 characters. See .es pricing and naming advice, then hunt available .es names with AI.",
       intro:
-        ".es is Spain's country-code domain, run by government-backed registry Red.es with about 2 million registrations. Its standout advantage is the low bar: unlike European neighbors .fr and .it, .es imposes no nationality or address restrictions — any individual or organization worldwide can register directly, no local proxy needed. To Spanish consumers, name.es is the default local-business signal — Spanish e-commerce, services and storefronts earn trust far beyond any new gTLD, and Google geo-associates .es sites with Spain for a local-SEO boost. There's a language bonus too: \"es\" happens to be the Spanish verb \"is\", and Spanish is the native language of 500 million people — content sites and cross-border businesses targeting Latin America and US Hispanics often pick .es to say \"a Spanish-language business\", though the strict geo signal still points to Spain, so weigh a generic suffix alongside it for pan-Hispanic ventures. Pricing is gentle: about $8 to register (≈¥55) and $10/yr to renew (≈¥72), a tiny step-up with no traps. Inventory beats .com, with especially strong hit rates for Spanish roots. For naming, a straight brand word is the mainstream shape (brand.es); Spanish roots feel warmer to Spanish speakers than English words, and English plural hacks (tool.es-style readings) add a playful option.",
-      bestFor: ["Spain-facing e-commerce", "Local Spanish services & storefronts", "Spanish-language content & media", "Cross-border ventures targeting the Hispanic world"],
+        "Spain's .es is administered by Red.es — a public business entity attached to Spain's digital-transformation ministry — delegated by IANA on 14 April 1988, with sites at nic.es and dominios.es. The legal text for eligibility and rules is the National Plan for \".es\" domain names (Plan Nacional de nombres de dominio), summarised on the \"Normativa\" page of dominios.es: any natural or legal person with an interest in or connection to Spain has the right to obtain a .es name; second-level names run from 3 to 63 characters; and there is a list of prohibited terms plus six classes of reserved terms (for example, terms tied to state institutions or geographic names) that cannot be freely registered. IDN support is a distinct feature of .es: the \"Valores añadidos\" page states that since October 2007 names containing characters from Spain's official languages have been registrable, including á, é, í, ó, ú, ü, ñ, ç and the Catalan l·l — ñ being the most emblematic Spanish letter, so words such as España or niño can be registered as spelled. Red.es publishes monthly statistics PDFs at dominios.es/es/sobre-dominios/estadisticas (the latest seen in this round was the July 2026 issue), from which this round did not extract a quotable total; the TLD comparison table in DENIC's 2025 Activity Report cites 2,145,784 .es names at the end of 2025. Budget reference: .es had no live quote when DomainHunter pulled /api/prices on 6 September 2026, so the price panel shows a static reference (about ¥55 for the first year and about ¥72 to renew); the registrar page is authoritative. Naming suggestions: the \"interest in or connection to Spain\" wording is looser than the residence or establishment tests of .fr and .it, but still ask your registrar how it handles applicants abroad before buying; Spanish words with ñ or accents can be registered as IDNs, with the n/unaccented ASCII form held alongside against mistyping; steer clear of the geographic and institutional terms on the reserved list; and if your users are in Latin America, remember that .es is positioned as Spain — each Latin American country has its own ccTLD.",
+      bestFor: [
+        "Companies and individuals with an interest in or connection to Spain",
+        "Brands built on Spanish or Catalan words with ñ, accents or l·l",
+        "E-commerce and content aimed at users in Spain",
+        "Projects wanting short names from 3 characters",
+      ],
       namingTips: [
-        "No eligibility restrictions — anyone can register directly, no proxy needed",
-        "About $8 to register, $10/yr to renew — tiny step-up, no traps",
-        "Spanish-language roots feel warmer to Spanish speakers than English words",
-        "For pan-Hispanic (LatAm-first) ventures, weigh a generic suffix alongside",
+        "Any natural or legal person with an interest in or connection to Spain may register — ask the registrar how it treats applicants abroad",
+        "IDNs with ñ, accents and l·l have been registrable since October 2007; hold the ASCII form too",
+        "Second-level names are 3–63 characters; avoid prohibited and the six classes of reserved terms",
+        "Without a live quote the page shows a reference price (≈¥55 first year, ≈¥72 renewal)",
       ],
     },
   },
@@ -10558,29 +10668,40 @@ const GUIDES = {
     tld: "nl",
     zh: {
       title: ".nl 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".nl 是荷兰国家域名，全球第三大 ccTLD，任何人可注册（需荷兰联系地址，注册商可代理），适合面向荷兰与荷语市场的品牌与业务。查看 .nl 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .nl 域名。",
+      metaDescription:
+        ".nl 由 SIDN 管理，《.nl 注册人通用条款》第 1.1 条写明「居住或设立于世界任何地方的任何人都可以通过注册商申请」，荷兰境外注册人须接受 SIDN 办公地址作为送达地址，注册局自述管理超过 600 万个域名，DomainHunter 实时报价首年与续费均 $7.92。查看 .nl 注册/续费价格与命名建议，用 AI 猎取可注册的 .nl 域名。",
       intro:
-        ".nl 是荷兰的国家域名，由注册局 SIDN 运营，注册量超过 630 万——按人口比例是全球渗透率最高的 ccTLD 之一，绝对量仅次于 .de 与 .cn。荷兰消费者的本土偏好极强：本地电商、服务商、事务所用 name.nl 几乎是标配，荷兰电商巨头（bol.com 之外的主流玩家）与政府机构大量使用 .nl，信任度远超新后缀；Google 也会把 .nl 站点与荷兰地区相关联，荷语市场 SEO 有天然加成。荷兰又是欧洲物流与贸易枢纽（鹿特丹港、阿姆斯特丹史基浦），跨境电商、物流与贸易公司拿 .nl 讲「以荷兰为基地的欧洲生意」也很自然。资格上 .nl 对国籍无限制，任何人可注册，但 SIDN 要求提供荷兰境内联系地址——海外主体通常由注册商代理提供（主流欧洲注册商与 Porkbun 等都支持），注册前确认即可。价格温和：注册约 $9（约 ¥65），续费约 $10/年（约 ¥72），差价小无钩子。库存比 .com 充裕，英文与荷语词根命中率都不错（荷兰人英语普及率极高，英文词根完全可用）。命名上品牌词直接上（brand.nl）最主流，本地服务用「行业词 + .nl」，跨境贸易可用「功能词 + .nl」。",
-      bestFor: ["面向荷兰市场的电商", "荷兰本地服务与事务所", "欧洲物流与跨境贸易业务", "荷语内容与媒体站"],
+        "荷兰的 .nl 由 SIDN（Stichting Internet Domeinregistratie Nederland）管理，IANA 委托日期 1986 年 4 月 25 日，官网 sidn.nl，RDAP 服务在 rdap.sidn.nl。资格条款直接写在《.nl 注册人通用条款》第 1.1 条：「居住或设立于世界任何地方的任何人，都可以通过注册商申请 .nl 域名」；同一份条款要求荷兰境外的申请人接受 SIDN 的办公地址作为法律文书送达地址（domicile address），并规定与注册相关的争议适用荷兰法——这意味着境外注册人不需要荷兰地址，但要接受荷兰法下的送达安排。规模上，SIDN 统计页自述管理「超过 600 万个域名」，其中超过 330 万个启用了 DNSSEC；DENIC《2025 年活动报告》的 TLD 对比表引用的 2025 年末 .nl 数字为 6,058,799 个（该表标注数据来源为 CENTR 等），月度细分数据在 stats.sidnlabs.nl。价格上，DomainHunter 2026 年 9 月 6 日的 /api/prices 实时报价为首年 $7.92、续费 $7.92，两者相同。本轮抓取的 SIDN 页面没有给出可引用的 IDN 字符表与争议程序文本，本页对这两项不作断言。起名建议：荷兰语词里常见的双元音（aa、ee、oo、ij）和辅音丛在英文用户看来拼写陌生，如果目标用户包括荷兰以外的人群，可以选择荷英同形或近形的词（如 water、start）；荷兰是欧洲英语普及率很高的市场，英文品牌词在 .nl 下同样常见；由于争议适用荷兰法，注册前自查比荷卢知识产权局（BOIP）商标库。",
+      bestFor: [
+        "面向荷兰用户的电商与服务",
+        "居住或设立于世界任何地方、通过注册商申请的境外主体",
+        "荷英双语或英文品牌词的项目",
+        "重视 DNSSEC 等技术指标的团队",
+      ],
       namingTips: [
-        "任何人可注册，但需荷兰联系地址——确认注册商代理支持",
-        "注册约 $9、续费约 $10/年，差价小无钩子",
-        "荷兰英语普及率极高，英文词根在 .nl 下完全可用",
-        "物流/贸易业务用「功能词 + .nl」讲清欧洲枢纽定位",
+        "任何人不限所在地都可通过注册商申请（通用条款 1.1）；境外者接受 SIDN 地址为送达地址",
+        "实时报价首年 $7.92、续费 $7.92，两者相同",
+        "面向荷兰以外用户时可选荷英同形词（water、start）避开 ij/aa 等陌生拼写",
+        "争议适用荷兰法，注册前自查 BOIP 商标库",
       ],
     },
     en: {
       title: ".nl Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".nl is the Netherlands' country domain and the world's third-largest ccTLD — open to anyone (Dutch contact address required, registrars can proxy it) — for brands targeting the Dutch market. See live pricing and naming advice, then hunt available .nl names with AI.",
+        ".nl is administered by SIDN; clause 1.1 of the General Terms and Conditions for .nl Registrants states that anyone, living or based anywhere in the world, may apply through a registrar, registrants outside the Netherlands must accept SIDN's office address as their domicile address, the registry describes itself as managing over 6 million names, and DomainHunter's live quote is $7.92 for both first year and renewal. See live .nl pricing and naming advice, then hunt available .nl names with AI.",
       intro:
-        ".nl is the Netherlands' country-code domain, run by registry SIDN with over 6.3 million registrations — per capita one of the most deeply penetrated ccTLDs on earth, and third in absolute size behind .de and .cn. Dutch consumers have a strong local preference: name.nl is near-mandatory for local e-commerce, services and firms, with Dutch market leaders and government institutions living on .nl and trust far beyond any new gTLD; Google also geo-associates .nl sites with the Netherlands, a free boost for Dutch-market SEO. The Netherlands is also Europe's logistics and trade hub (Port of Rotterdam, Amsterdam Schiphol), so cross-border e-commerce, logistics and trading companies naturally use .nl to say \"a European business based in the Netherlands\". On eligibility, .nl has no nationality restriction — anyone can register — but SIDN requires a contact address within the Netherlands; overseas registrants usually rely on their registrar to proxy this (mainstream European registrars and Porkbun support it), so confirm before buying. Pricing is gentle: about $9 to register (≈¥65) and $10/yr to renew (≈¥72), a tiny step-up with no traps. Inventory beats .com, and both English and Dutch roots hit well — Dutch English proficiency is among the world's highest, so English roots work perfectly. For naming, a straight brand word is the mainstream shape (brand.nl); trade-word + .nl fits local services, and function words suit logistics and trade ventures.",
-      bestFor: ["Netherlands-facing e-commerce", "Local Dutch services & firms", "European logistics & cross-border trade", "Dutch-language content & media"],
+        "The Netherlands' .nl is administered by SIDN (Stichting Internet Domeinregistratie Nederland), delegated by IANA on 25 April 1986, with its site at sidn.nl and RDAP at rdap.sidn.nl. Eligibility is written directly into clause 1.1 of the General Terms and Conditions for .nl Registrants: anyone, living or based anywhere in the world, may apply for a .nl domain name through a registrar; the same document requires applicants outside the Netherlands to accept SIDN's office address as their domicile address for the service of legal documents, and makes Dutch law applicable to disputes arising from the registration — so a foreign registrant needs no Dutch address but does accept service arrangements under Dutch law. On scale, SIDN's statistics page describes the registry as managing over 6 million domain names, more than 3.3 million of them secured with DNSSEC; the TLD comparison table in DENIC's 2025 Activity Report cites 6,058,799 .nl names at the end of 2025 (with CENTR and others given as the data source), and monthly breakdowns live at stats.sidnlabs.nl. On price, DomainHunter's live /api/prices quote on 6 September 2026 was $7.92 for the first year and $7.92 to renew, identical figures. The SIDN pages captured in this round did not yield a quotable IDN character table or dispute-procedure text, so this page makes no claim on either point. Naming suggestions: Dutch double vowels (aa, ee, oo, ij) and consonant clusters look unfamiliar to English readers, so if your audience extends beyond the Netherlands, consider words that are identical or close in Dutch and English (water, start); the Netherlands has one of Europe's highest rates of English proficiency, and English brand words are common under .nl; and because disputes fall under Dutch law, search the Benelux Office for Intellectual Property (BOIP) trademark register before registering.",
+      bestFor: [
+        "E-commerce and services for Dutch users",
+        "Entities anywhere in the world applying through a registrar",
+        "Projects using Dutch-English cognates or English brand words",
+        "Teams that value DNSSEC and other technical indicators",
+      ],
       namingTips: [
-        "Open to anyone, but a Dutch contact address is required — confirm your registrar proxies it",
-        "About $9 to register, $10/yr to renew — tiny step-up, no traps",
-        "Dutch English proficiency is top-tier — English roots work perfectly on .nl",
-        "Function words + .nl suit logistics/trade ventures claiming the European hub",
+        "Anyone anywhere may apply through a registrar (clause 1.1); foreign registrants accept SIDN's address for service",
+        "Live quote $7.92 first year / $7.92 renewal — identical",
+        "For audiences beyond the Netherlands, prefer Dutch-English cognates (water, start) over ij/aa spellings",
+        "Disputes fall under Dutch law — search the BOIP trademark register first",
       ],
     },
   },
@@ -10588,29 +10709,40 @@ const GUIDES = {
     tld: "kr",
     zh: {
       title: ".kr 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".kr 是韩国国家域名，需韩国本地联系地址（注册商可代理），本地信任度极高，适合面向韩国市场的品牌与业务。查看 .kr 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .kr 域名。",
+      metaDescription:
+        ".kr 由韩国互联网振兴院（KISA）下属 KRNIC 管理，官方 FAQ 要求注册人在韩国境内有本地存在，提供 english.kr、한글.kr 与 .한국 三种形式，2026 年 7 月 .kr 1,096,362 个、.한국 11,885 个。查看 .kr 注册/续费价格与命名建议，用 AI 猎取可注册的 .kr 域名。",
       intro:
-        ".kr 是韩国的国家域名，由韩国互联网振兴院（KISA）旗下的 KRNIC 管理，注册量约 110 万。韩国是全球数字化程度最高的市场之一——电商渗透率、移动支付、网速都居世界前列，而韩国消费者对本土信号同样敏感：本地电商、品牌官网、娱乐与内容站用 name.kr，「韩国的生意」一眼讲清，信任度远超一般新后缀；Naver 与 Google 也会把 .kr 站点与韩国地区相关联，韩语市场 SEO 有天然加成。K-pop、K-beauty、K-food 的全球势能还让 .kr 带上一层「韩流正品」的品牌联想——做韩妆、韩食、韩娱周边的跨境业务，.kr 比通用后缀更能讲清出身。资格上 KRNIC 要求注册人提供韩国境内联系地址，海外主体通常由注册商代理提供（Gabia、Whois.co.kr 等韩国注册商及部分国际注册商支持），注册前确认即可；更严格的 .co.kr 面向企业，门槛与信任度各高一档。价格偏高但平续：注册约 $40/年（约 ¥290），续费同价——与 .jp 类似，价格门槛过滤投机注册，库存比同热度后缀干净。命名上品牌词直接上（brand.kr）最主流；韩语罗马字（romaja）词根对韩国用户比英文更亲切，K 系跨境品牌可用「品类词 + .kr」讲清韩国出身。",
-      bestFor: ["面向韩国市场的电商", "韩国本地服务与门店", "K-beauty/K-food 跨境品牌", "韩语内容与娱乐站"],
+        "韩国的 .kr 由韩国互联网振兴院（Korea Internet & Security Agency，KISA）管理，具体由其 KRNIC 部门执行，IANA 委托日期 1986 年 9 月 29 日，WHOIS 服务在 whois.kr。KRNIC 英文 FAQ 对资格的表述是「注册人必须在韩国境内有本地存在」（local presence within Korea），并且注册只能通过 KISA 授权的代理机构（registrar）办理——这使 .kr 成为东亚三个主要 ccTLD 中门槛最高的一个：.jp 只要求可接收通知的日本住所，.tw 的泛用型完全不限资格。名字空间有三种形式：英文 english.kr、韩文 한글.kr，以及韩文顶级域 .한국；三级类别（co.kr、ne.kr、re.kr、pe.kr 等）各有资格表，例如 pe.kr 面向个人、co.kr 面向企业。KRNIC 统计页（国家批准一般统计第 329001 号）2026 年 7 月的数据：.kr 1,096,362 个、.한국 11,885 个，合计 1,108,247 个。预算方面：DomainHunter 2026 年 9 月 6 日抓取 /api/prices 未获得 .kr 报价，价格区因此为静态参考价（首年与续费均约 ¥290），属于高价档，以注册商为准。起名建议：先确认能否满足本地存在要求——通常意味着在韩国有法人、分支机构或个人住所，海外团队要先问清授权注册商是否接受其资料；面向韩国用户的品牌可以把韩文 한글.kr 或 .한국 版本与英文版本一起持有，韩文域名在移动端输入更顺手；英文拼写建议用韩语的国语罗马字标准（例如 Busan 而非 Pusan），与政府与地图服务保持一致。",
+      bestFor: [
+        "在韩国设有法人或分支机构的企业",
+        "面向韩国用户、希望用韩文域名的品牌",
+        "有韩国住所的个人项目（pe.kr）",
+        "把 .kr 与 .한국 一起持有的本地业务",
+      ],
       namingTips: [
-        "需韩国境内联系地址，海外注册确认注册商代理支持",
-        "注册续费均约 $40/年，价格过滤投机、库存干净",
-        "韩语罗马字词根对韩国用户比英文更亲切",
-        ".co.kr 面向企业，门槛更高信任度也更高",
+        "注册人须在韩国境内有本地存在，且只能通过 KISA 授权注册商办理",
+        "韩文 한글.kr 与 .한국 可与英文版一起持有，移动端输入更顺",
+        "英文拼写采用国语罗马字标准（Busan 而非 Pusan）",
+        "无实时报价时页面显示参考价（约 ¥290/年，高价档）",
       ],
     },
     en: {
       title: ".kr Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".kr is South Korea's country domain — a local contact address is required (registrars can proxy it) — with top-tier local trust for Korea-market brands and businesses. See live pricing and naming advice, then hunt available .kr names with AI.",
+        ".kr is administered by KRNIC within the Korea Internet & Security Agency (KISA); the official FAQ requires registrants to have a local presence within Korea, three forms are offered (english.kr, 한글.kr and .한국), and July 2026 statistics list 1,096,362 .kr and 11,885 .한국 names. See .kr pricing and naming advice, then hunt available .kr names with AI.",
       intro:
-        ".kr is South Korea's country-code domain, managed by KRNIC under the Korea Internet & Security Agency (KISA) with about 1.1 million registrations. Korea is one of the world's most digitized markets — e-commerce penetration, mobile payments and network speeds all rank near the top — and Korean consumers are equally attuned to local signals: name.kr says \"a Korean business\" at a glance, with trust far beyond any new gTLD; Naver and Google both geo-associate .kr sites with Korea, a free boost for Korean-market SEO. The global momentum of K-pop, K-beauty and K-food adds a brand halo: for cross-border ventures selling Korean cosmetics, food or entertainment merchandise, .kr communicates authentic Korean origin better than any generic suffix. On eligibility, KRNIC requires a contact address within Korea; overseas registrants usually rely on a registrar's proxy service (Korean registrars like Gabia and Whois.co.kr plus some international ones support it) — confirm before buying. The stricter .co.kr targets companies, a higher bar with correspondingly higher trust. Pricing is on the high side but flat: about $40/yr to register (≈¥290) with the same renewal — like .jp, the price bar filters speculation, keeping inventory cleaner than comparably popular suffixes. For naming, a straight brand word is the mainstream shape (brand.kr); Korean romaja roots feel warmer to local users than English words, and category + .kr claims Korean origin for K-wave cross-border brands.",
-      bestFor: ["Korea-facing e-commerce", "Local Korean services & storefronts", "K-beauty/K-food cross-border brands", "Korean-language content & entertainment"],
+        "Korea's .kr is administered by the Korea Internet & Security Agency (KISA) through its KRNIC division, delegated by IANA on 29 September 1986, with WHOIS at whois.kr. The KRNIC English FAQ puts eligibility in one sentence — registrants must have a local presence within Korea — and registration is only possible through registrars authorised by KISA, which makes .kr the most restrictive of East Asia's three major ccTLDs: .jp asks only for a Japanese address where notices can be received, and general-use .tw has no eligibility requirement at all. The namespace comes in three forms: Latin-script english.kr, Hangul 한글.kr, and the Hangul top-level domain .한국; third-level categories (co.kr, ne.kr, re.kr, pe.kr and others) each have their own qualification table, with pe.kr for individuals and co.kr for companies, for example. The KRNIC statistics page (nationally approved general statistic no. 329001) reports 1,096,362 .kr names and 11,885 .한국 names for July 2026, 1,108,247 in total. Budget note: DomainHunter's 6 September 2026 /api/prices pull returned no .kr quote, so the price panel is a static reference (about ¥290 for both first year and renewal), placing .kr in the high-price tier; the registrar page is authoritative. Naming suggestions: first confirm that you can meet the local-presence requirement — in practice a Korean corporation, branch office or personal address — and, if you are an overseas team, ask an authorised registrar whether it will accept your documentation; a brand aimed at Korean users can hold the Hangul 한글.kr or .한국 form alongside the Latin one, since Hangul names are quicker to type on mobile; and for Latin spellings follow the Revised Romanization standard (Busan rather than Pusan) so the name matches government and map services.",
+      bestFor: [
+        "Companies with a Korean corporation or branch office",
+        "Brands serving Korean users that want a Hangul domain",
+        "Personal projects with a Korean address (pe.kr)",
+        "Local businesses holding .kr and .한국 together",
+      ],
       namingTips: [
-        "Korea contact address required — confirm your registrar proxies it",
-        "About $40/yr flat — the price filters speculation, keeping inventory clean",
-        "Korean romaja roots feel warmer to local users than English words",
-        ".co.kr targets companies — higher bar, higher trust",
+        "Registrants need a local presence within Korea and must use a KISA-authorised registrar",
+        "Hold Hangul 한글.kr or .한국 alongside the Latin form — faster to type on mobile",
+        "Use Revised Romanization for Latin spellings (Busan, not Pusan)",
+        "Without a live quote the page shows a reference price (≈¥290/yr, high tier)",
       ],
     },
   },
@@ -10618,29 +10750,40 @@ const GUIDES = {
     tld: "hk",
     zh: {
       title: ".hk 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".hk 是香港地区域名，无资格限制、任何人可注册，适合面向香港与粤港澳大湾区市场的品牌、金融与跨境业务。查看 .hk 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .hk 域名。",
+      metaDescription:
+        ".hk 由香港互联网注册管理有限公司（HKIRC）管理，二级 .hk 与 .香港 对本地及海外的个人与实体开放且一般无需文件，.com.hk / .公司.香港 须提交香港商业登记证或海外公司注册证明，.idv.hk 限持香港身份证者。查看 .hk 注册/续费价格与命名建议，用 AI 猎取可注册的 .hk 域名。",
       intro:
-        ".hk 是香港的地区域名，由非营利机构香港互联网注册管理有限公司（HKIRC）运营。香港是亚洲的金融与贸易枢纽，.hk 的信号价值也随之外溢：不止香港本地生意，面向大湾区与东南亚的贸易公司、金融服务、跨境电商用 name.hk，讲的是「以香港为基地的国际生意」——这个后缀在两岸三地与亚太商圈自带国际化与合规联想；对香港用户搜索，Google 也会把 .hk 站点与香港地区相关联，本地 SEO 有加成。与 .jp/.kr/.sg 等亚洲邻居不同，.hk 对注册人没有资格限制：任何地区的个人与机构都能直接注册，无需本地代理，这让它成为亚洲 ccTLD 里门槛最低的之一（更严格的 .com.hk 需香港注册企业）。价格中等且平续：注册约 $25/年（约 ¥180），续费同价，无引流钩子。两个字符的后缀短而利落，英文与拼音词根在 .hk 下命中率远高于 .com。注意受众主要在香港与大湾区、亚太商圈，纯欧美市场业务信号较弱。命名上品牌词直接上（brand.hk）最主流；贸易、金融类可用「功能词 + .hk」（如 trade、pay 类词根），本地服务用「行业词 + .hk」，中文品牌用粤拼或拼音也很自然。",
-      bestFor: ["香港本地企业与服务", "大湾区与跨境贸易业务", "金融与专业服务", "面向亚太市场的品牌"],
+        "香港的 .hk 由香港互联网注册管理有限公司（HKIRC）管理，IANA 委托日期 1990 年 1 月 3 日，官网 hkirc.hk，注册服务站点 hkdnr.hk。HKIRC 的「Eligibility & required documents」页把各类别的门槛列成一张表：二级 .hk 与中文顶级域 .香港 面向本地或海外的个人与实体，一般不需要提交文件；.com.hk 与 .公司.香港 须提交香港商业登记证（BR），海外或非香港公司则提交公司注册证明；.org.hk、.net.hk、.edu.hk、.gov.hk 各有对应机构类型的要求；.idv.hk 限 11 岁以上持有香港身份证的个人。《Registration Policies, Procedures and Guidelines》第 3.6 节是 com.hk 资格的正式出处。中文域名方面，资格页同时列出了 .香港 与 .公司.香港 两个中文类别，面向香港用户建议用繁体。注册局官网在本轮抓取中没有可直接引用的注册总量，本页不写数字。费用方面，本页为 .hk 显示的是静态参考价——DomainHunter 2026 年 9 月 6 日抓取 /api/prices 时该后缀无实时报价——即（首年与续费均约 ¥180），以注册商为准。起名建议：境外团队直接注册二级 .hk 最省事，不需要香港公司；需要 .com.hk 增强本地公信力的企业先办理香港商业登记，或用海外公司注册证明申请；香港是粤语口语、繁体书面、英文并行的市场，中文名要用粤语读一遍，避免粤语谐音歧义；英文名与 .香港 中文版本可以成对持有，面向内地访客时先向注册商确认简体拼写的处理方式。",
+      bestFor: [
+        "在香港经营的企业与门店",
+        "不需要香港公司、直接注册二级 .hk 的境外团队",
+        "需要 .com.hk 本地公信力、持有商业登记证的公司",
+        "同时使用英文与繁体中文（.香港）域名的品牌",
+      ],
       namingTips: [
-        "无资格限制，任何人可直接注册（.com.hk 需香港企业）",
-        "注册续费均约 $25/年，平续无钩子",
-        "贸易金融用「功能词 + .hk」自带国际化联想",
-        "受众在香港与大湾区、亚太商圈，纯欧美业务信号较弱",
+        "二级 .hk / .香港 对本地与海外的个人与实体开放，一般无需文件",
+        ".com.hk 须香港商业登记证或海外公司注册证明；.idv.hk 限持香港身份证者",
+        "中文名用粤语读一遍，避免粤语谐音歧义；繁体优先",
+        "无实时报价时页面显示参考价（约 ¥180/年），以注册商为准",
       ],
     },
     en: {
       title: ".hk Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".hk is Hong Kong's regional domain — no eligibility restrictions, anyone can register — for brands, finance and cross-border businesses targeting Hong Kong and the Greater Bay Area. See live pricing and naming advice, then hunt available .hk names with AI.",
+        ".hk is administered by the Hong Kong Internet Registration Corporation (HKIRC); second-level .hk and .香港 are open to local and overseas individuals and entities with no documents normally required, .com.hk and .公司.香港 need a Hong Kong Business Registration certificate or overseas company incorporation proof, and .idv.hk is limited to Hong Kong ID card holders. See .hk pricing and naming advice, then hunt available .hk names with AI.",
       intro:
-        ".hk is Hong Kong's regional domain, run by the non-profit Hong Kong Internet Registration Corporation (HKIRC). Hong Kong is Asia's financial and trading hub, and the signal of .hk spills over accordingly: beyond local Hong Kong businesses, trading companies, financial services and cross-border commerce targeting the Greater Bay Area and Southeast Asia use name.hk to say \"an international business based in Hong Kong\" — a suffix carrying international and compliance connotations across Chinese-speaking and Asia-Pacific business circles; Google also geo-associates .hk sites with Hong Kong, a local-SEO boost. Unlike Asian neighbors .jp, .kr and .sg, .hk has no eligibility restrictions: individuals and organizations from anywhere can register directly with no local proxy — one of the lowest bars among Asian ccTLDs (the stricter .com.hk requires a Hong Kong-registered company). Pricing is moderate and flat: about $25/yr to register (≈¥180) with the same renewal, no teaser games. The two-character suffix keeps domains short and crisp, and English and pinyin roots hit far more often than on .com. One caution: the audience is Hong Kong, the Greater Bay Area and Asia-Pacific business circles — the signal is weaker for purely Western-market ventures. Naming: a straight brand word is the mainstream shape (brand.hk); trade and finance ventures can use function words (trade, pay-style roots), local services fit trade-word + .hk, and Cantonese or Mandarin pinyin works naturally for Chinese brands.",
-      bestFor: ["Local Hong Kong businesses & services", "Greater Bay Area & cross-border trade", "Finance & professional services", "Brands targeting Asia-Pacific markets"],
+        "Hong Kong's .hk is administered by Hong Kong Internet Registration Corporation Limited (HKIRC), delegated by IANA on 3 January 1990 and found at hkirc.hk, with a registration-services site at hkdnr.hk. HKIRC's \"Eligibility & required documents\" page lays out the categories in a table: second-level .hk and the Chinese top-level domain .香港 are open to local or overseas individuals and entities, and generally no documents are required; .com.hk and .公司.香港 require a Hong Kong Business Registration certificate (BR), or a certificate of incorporation for overseas and non-Hong Kong companies; .org.hk, .net.hk, .edu.hk and .gov.hk each require the matching type of organisation; and .idv.hk is reserved for individuals aged 11 or over holding a Hong Kong identity card. Section 3.6 of the Registration Policies, Procedures and Guidelines is the formal source for com.hk eligibility. For Chinese-script names, the eligibility page lists both .香港 and .公司.香港 as categories, and Traditional characters are the natural choice for Hong Kong users. The registry site did not yield a directly quotable total registration count in this round of research, so this page states none. For cost, what this page shows for .hk is a static reference — the suffix had no live quote in DomainHunter's 6 September 2026 /api/prices pull — namely (about ¥180 for both first year and renewal); the registrar page is authoritative. Naming suggestions: an overseas team gets the least friction from a second-level .hk, which needs no Hong Kong company; a business that wants the local credibility of .com.hk should obtain a Hong Kong Business Registration or apply with its overseas incorporation certificate; Hong Kong is a market where spoken Cantonese, written Traditional Chinese and English run in parallel, so read any Chinese name aloud in Cantonese to catch unwanted homophones; and an English name can be paired with a .香港 Chinese version, checking with the registrar how Simplified-character input is handled if mainland visitors matter.",
+      bestFor: [
+        "Companies and shops operating in Hong Kong",
+        "Overseas teams registering second-level .hk without a Hong Kong company",
+        "Businesses with a Business Registration certificate wanting .com.hk credibility",
+        "Brands using English and Traditional-Chinese (.香港) domains side by side",
+      ],
       namingTips: [
-        "No eligibility restrictions — anyone can register directly (.com.hk needs a HK company)",
-        "About $25/yr flat to register and renew — no traps",
-        "Function words + .hk carry international connotations for trade & finance",
-        "Audience is Hong Kong, the GBA & Asia-Pacific — weaker signal for purely Western markets",
+        "Second-level .hk and .香港 are open to local and overseas individuals and entities, usually with no documents",
+        ".com.hk needs a Hong Kong BR certificate or overseas incorporation proof; .idv.hk is for HKID holders",
+        "Read Chinese names aloud in Cantonese to avoid unwanted homophones; prefer Traditional characters",
+        "Without a live quote the page shows a reference price (≈¥180/yr); the registrar is authoritative",
       ],
     },
   },
@@ -10648,29 +10791,40 @@ const GUIDES = {
     tld: "ch",
     zh: {
       title: ".ch 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".ch 是瑞士国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向瑞士市场的品牌、金融与精品业务。查看 .ch 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ch 域名。",
+      metaDescription:
+        ".ch 由 SWITCH 依据瑞士联邦通信办公室（OFCOM）2014 年 11 月 5 日的《互联网域名条例》受托运营，通用条款第 2.3 条写明 SWITCH 不审查持有人资格，2025 年 12 月 31 日库存 2,580,972 个。查看 .ch 注册/续费价格与命名建议，用 AI 猎取可注册的 .ch 域名。",
       intro:
-        ".ch 是瑞士的国家域名（来自瑞士的拉丁语国名 Confoederatio Helvetica），由学术网络机构 SWITCH 运营，注册量约 250 万——对一个 900 万人口的国家而言渗透率惊人。瑞士消费者对本土信号极其敏感：本地电商、品牌官网、诊所与服务商用 name.ch，「瑞士的生意」一眼讲清，信任度远超一般新后缀——瑞士本土企业、银行与政府机构的主站几乎都在 .ch 上；Google 也会把 .ch 站点与瑞士地区相关联，德语/法语/意大利语三语市场的本地 SEO 都有加成。「瑞士制造」的全球溢价还让 .ch 带上一层品质联想——做钟表、精密制造、金融、医药类业务，.ch 比通用后缀更能讲清出身。资格上 .ch 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理，是欧洲 ccTLD 里门槛最低的之一。价格温和且平续：注册约 $12/年（约 ¥85），续费同价，无引流钩子。库存比 .com 充裕，德语、法语与英文词根命中率都高。命名上品牌词直接上（brand.ch）最主流；金融、精品类可用「功能词 + .ch」借瑞士品质联想，本地服务用「行业词 + 城市/地区」组合。注意受众主要在瑞士本土，纯外部市场业务信号较弱。",
-      bestFor: ["瑞士本地企业与服务", "金融、钟表与精品品牌", "面向瑞士市场的电商", "德/法/意语内容站"],
+        "瑞士的 .ch 由 SWITCH 基金会管理，IANA 委托日期 1987 年 5 月 20 日，官网 nic.ch；SWITCH 的运营依据是瑞士联邦通信办公室（OFCOM）2014 年 11 月 5 日发布的《互联网域名条例》（OID），注册局职能由联邦委托而非自行取得。SWITCH 通用条款（GTC）第 11 版第 2.3 条明确「SWITCH 不审查持有人资格」，没有瑞士住所或公司登记的条件；条款还有一个少见的设计：域名注册没有固定期限（unlimited period），以持有人删除或转移为终止，续费是注册商层面的合同事务。规模方面，《Switch Registry Report 2025》记录 2025 年 12 月 31 日 .ch 库存 2,580,972 个，2025 年新注册 310,369 个、删除 329,016 个，52.7% 的 .ch 域名已启用 DNSSEC 签名——这是欧洲 ccTLD 里较高的 DNSSEC 比例。争议解决方面，WIPO 的 .CH 页说明 .ch/.li 采用「调解 + 专家程序」两段式：先调解，调解不成再由专家裁决，申诉方需证明域名明显侵犯其在瑞士或列支敦士登法下的知识产权（如商标、商号）。.ch 的报价本页暂无实时数据（DomainHunter 2026 年 9 月 6 日抓取 /api/prices 时未返回该后缀），价格区显示为静态参考价（首年与续费均约 ¥85），以注册商为准。起名建议：瑞士有德、法、意、罗曼什四种官方语言，一个 .ch 名字最好在德语区与法语区都读得顺，或者直接用不依赖语言的造词；带变音符号的拼法能否注册请先向注册商确认（本轮未核实 SWITCH 的 IDN 字符表）；由于 SWITCH 不做资格与权利预审，注册前自查瑞士联邦知识产权局（IGE/IPI）的商标数据库，能避免进入专家程序。",
+      bestFor: [
+        "在瑞士经营的企业与机构",
+        "同时面向德语区与法语区瑞士用户的品牌",
+        "重视 DNSSEC 等技术指标的团队",
+        "无本地存在、希望长期持有名字的境外注册人",
+      ],
       namingTips: [
-        "无资格限制，任何人可直接注册、无需本地地址",
-        "注册续费均约 $12/年，平续无钩子",
-        "金融精品类用「功能词 + .ch」借瑞士品质联想",
-        "受众在瑞士本土，纯外部市场业务信号较弱",
+        "SWITCH 不审查持有人资格，无瑞士住所要求",
+        "名字要在德语区与法语区都读得顺，或用不依赖语言的造词",
+        "注册无固定期限，以删除/转移为终止；续费由注册商合同约定",
+        "先查 IGE/IPI 商标库，避免调解 + 专家程序",
       ],
     },
     en: {
       title: ".ch Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".ch is Switzerland's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Swiss-market brands, finance and premium businesses. See live pricing and naming advice, then hunt available .ch names with AI.",
+        ".ch is operated by SWITCH under the Swiss Federal Office of Communications (OFCOM) Ordinance on Internet Domains of 5 November 2014; clause 2.3 of the SWITCH terms states that SWITCH does not examine holder eligibility, and the zone held 2,580,972 names on 31 December 2025. See .ch pricing and naming advice, then hunt available .ch names with AI.",
       intro:
-        ".ch is Switzerland's country-code domain (from the Latin Confoederatio Helvetica), run by academic-network operator SWITCH with about 2.5 million registrations — remarkable penetration for a country of 9 million. Swiss consumers are strongly attuned to local signals: name.ch says \"a Swiss business\" at a glance, with trust far beyond any new gTLD — Swiss companies, banks and government institutions overwhelmingly live on .ch; Google also geo-associates .ch sites with Switzerland, a local-SEO boost across the German, French and Italian language markets. The global premium of \"Swiss made\" adds a quality halo: for watchmaking, precision manufacturing, finance and pharma ventures, .ch communicates origin better than any generic suffix. On eligibility, .ch is fully open: individuals and organizations from anywhere can register directly with no local address or proxy — one of the lowest bars among European ccTLDs. Pricing is gentle and flat: about $12/yr to register (≈¥85) with the same renewal, no teaser games. Inventory beats .com, and German, French and English roots all hit well. For naming, a straight brand word is the mainstream shape (brand.ch); finance and premium ventures can use function words to borrow the Swiss quality halo, and local services fit trade-word + city/region combos. One caution: the audience is primarily Switzerland — the signal is weaker for purely external markets.",
-      bestFor: ["Local Swiss businesses & services", "Finance, watchmaking & premium brands", "Switzerland-facing e-commerce", "German/French/Italian content sites"],
+        "Switzerland's .ch is administered by the SWITCH foundation, delegated by IANA on 20 May 1987, with its registry site at nic.ch; SWITCH operates under a mandate from the Swiss Federal Office of Communications (OFCOM) based on the Ordinance on Internet Domains (OID) of 5 November 2014, so the registry function is a federal delegation rather than something SWITCH acquired on its own. Clause 2.3 of version 11 of the SWITCH General Terms and Conditions states that SWITCH does not examine the eligibility of holders — there is no Swiss-residence or company-registration condition — and the terms contain a rarely seen design: a domain is registered for an unlimited period and ends only when the holder deletes or transfers it, so renewal is a contractual matter between holder and registrar. On scale, the Switch Registry Report 2025 records 2,580,972 .ch names on 31 December 2025, with 310,369 new registrations and 329,016 deletions during 2025, and 52.7% of .ch names signed with DNSSEC — one of the higher DNSSEC ratios among European ccTLDs. For disputes, WIPO's .CH page describes a two-stage procedure for .ch and .li: conciliation first, then an expert decision if conciliation fails, with the claimant required to show that the domain clearly infringes an intellectual-property right (such as a trademark or trade name) under Swiss or Liechtenstein law. There is no live .ch price on this page (the 6 September 2026 /api/prices pull returned nothing for the suffix); the panel shows a static reference (about ¥85 for both first year and renewal); the registrar page is authoritative. Naming suggestions: Switzerland has four official languages — German, French, Italian and Romansh — so a .ch name should read well in at least the German- and French-speaking regions, or be a coined word that depends on no language; ask your registrar before relying on an accented spelling, since this round did not verify SWITCH's IDN character table; and because SWITCH performs no eligibility or rights screening, a search of the Swiss Federal Institute of Intellectual Property (IGE/IPI) trademark database before registering is the practical way to stay out of the expert procedure.",
+      bestFor: [
+        "Companies and institutions operating in Switzerland",
+        "Brands addressing both German- and French-speaking Swiss users",
+        "Teams that value DNSSEC and other technical indicators",
+        "Foreign registrants wanting a long-term name without local presence",
+      ],
       namingTips: [
-        "No eligibility restrictions — anyone can register, no local address needed",
-        "About $12/yr flat to register and renew — no traps",
-        "Function words + .ch borrow the Swiss quality halo for finance & premium brands",
-        "Audience is primarily Switzerland — weaker signal for purely external markets",
+        "SWITCH does not examine holder eligibility; no Swiss address is required",
+        "Pick a name that reads well in German- and French-speaking Switzerland, or a language-neutral coinage",
+        "Registration has no fixed term and ends by deletion or transfer; renewal is a registrar contract",
+        "Search the IGE/IPI trademark database first to avoid the conciliation-plus-expert procedure",
       ],
     },
   },
@@ -10678,29 +10832,40 @@ const GUIDES = {
     tld: "at",
     zh: {
       title: ".at 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".at 是奥地利国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向奥地利市场的品牌与业务，还能拼出「at」介词短语域名。查看 .at 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .at 域名。",
+      metaDescription:
+        ".at 由 nic.at GmbH 管理，官方 FAQ 写明「任何人都可以注册 .at 域名」（自然人须成年），注册局统计页显示 .at 1,489,169 个、连同 .co.at/.or.at 共 1,530,892 个，适合在奥地利有业务或德语用户的项目。查看 .at 注册/续费价格与命名建议，用 AI 猎取可注册的 .at 域名。",
       intro:
-        ".at 是奥地利的国家域名，由 nic.at 运营，注册量约 150 万。奥地利消费者对本土信号非常敏感：本地电商、品牌官网、餐饮与服务商用 name.at，「奥地利的生意」一眼讲清，信任度远超一般新后缀——奥地利本土企业与政府机构的主站几乎都在 .at 上；Google 也会把 .at 站点与奥地利地区相关联，德语市场 SEO 有天然加成（奥地利与德国、瑞士共享德语圈，.at 站点对整个 DACH 区域都有辐射）。.at 还有一层通用后缀玩不出的花样：at 本身是英文介词，能拼出 meet.at、stay.at、look.at 这类动词短语域名（domain hack），创意品牌与活动页用起来自然又好记。资格上 .at 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格温和且平续：注册约 $14/年（约 ¥100），续费同价，无引流钩子。库存比 .com 充裕得多，德语与英文词根命中率都高。命名上品牌词直接上（brand.at）最主流；创意项目可用「动词 + .at」拼短语，本地服务用「行业词 + .at」。注意受众主要在奥地利与德语区，纯英语市场业务信号较弱（域名黑客除外）。",
-      bestFor: ["奥地利本地企业与服务", "面向 DACH 德语区的业务", "动词短语域名（meet.at 等）", "德语内容与媒体站"],
+        "nic.at GmbH 是 IANA 记录的 .at 管理者（委托日期 1988 年 1 月 20 日），同时负责二级域 .co.at 与 .or.at 的注册。它的官方 FAQ「Legal issues」页把资格说得很直接：「.at 域名任何人都可以注册」，自然人需要成年，没有奥地利住所或公司登记的条件。nic.at 统计页（Statistics and studies）给出的现状：.at 1,489,169 个（其中 IDN 34,086 个）、.co.at 34,154 个、.or.at 7,569 个，合计 1,530,892 个；2025 年新注册按持有人所在国拆分，奥地利 92,332 个、德国 17,844 个、美国 4,420 个——德国持有人是第二大来源，说明德语市场的跨境使用相当普遍。注册指南（Registrierungsrichtlinien）规定域名最短 1 个字符、最长 63 个字符（IDN 按 ACE 字串计），注册时须提供至少 2 台、最多 8 台名称服务器；IDN 允许的字符表发布在 nic.at/idn/zeichen，德语的 ä ö ü ß 都在其中。争议机制是 .at 与多数 ccTLD 的显著差别：nic.at 明确表示「.at 域名一般没有仲裁程序」，注册局不充当仲裁人，庭外和解失败就走普通法院；它提供的是「wait 状态」——第三方提交权利证据后，域名在一个月内（可再延一个月）不得变更持有人，诉讼已进行时可申请 Wait Status 2。现行注册条款为 2026 年版 V7.0。价格区目前用的是静态参考价而非实时报价——DomainHunter 2026 年 9 月 6 日抓取 /api/prices 时没有拿到 .at 的数据——即（首年与续费均约 ¥100），以注册商为准。起名建议：德语词与含 ä ö ü ß 的拼法都可用，同时持有 ASCII 版本；一到两个字符的极短名在 .at 下允许注册，但存量极少；如果业务同时覆盖德国与奥地利，可把 .at 与 .de 配对使用，两者的资格条件都对境外主体开放。",
+      bestFor: [
+        "在奥地利经营的企业与门店",
+        "覆盖德奥两地的德语项目",
+        "用德语词（含 ä ö ü ß）命名的品牌",
+        "寻找 1–2 字符极短名的注册人",
+      ],
       namingTips: [
-        "无资格限制，任何人可直接注册、无需本地地址",
-        "注册续费均约 $14/年，平续无钩子",
-        "at 是英文介词，可拼 meet.at/stay.at 类短语域名",
-        "受众在奥地利与德语区，纯英语业务信号较弱",
+        "任何人都可以注册，自然人须成年，无奥地利住所要求",
+        "没有仲裁程序，争议靠 wait 状态冻结变更后走法院，注册前自查商标",
+        "允许 1–2 字符名与 ä ö ü ß 等 IDN 字符，同时保护 ASCII 拼法",
+        "无实时报价时页面显示参考价（约 ¥100/年），以注册商为准",
       ],
     },
     en: {
       title: ".at Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".at is Austria's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Austria-market brands, plus preposition domain hacks like meet.at. See live pricing and naming advice, then hunt available .at names with AI.",
+        ".at is administered by nic.at GmbH, whose FAQ states that .at domains can be registered by anyone (natural persons must be of age); the registry's statistics page lists 1,489,169 .at names and 1,530,892 including .co.at and .or.at — for projects with business in Austria or German-speaking users. See .at pricing and naming advice, then hunt available .at names with AI.",
       intro:
-        ".at is Austria's country-code domain, run by nic.at with about 1.5 million registrations. Austrian consumers have a strong local preference: name.at says \"an Austrian business\" at a glance, with trust far beyond any new gTLD — Austrian companies and government institutions overwhelmingly live on .at; Google also geo-associates .at sites with Austria, a natural boost for German-language SEO (Austria shares the German-speaking world with Germany and Switzerland, so .at sites radiate across the whole DACH region). .at also offers a trick no generic suffix can match: \"at\" is an English preposition, enabling verb-phrase domain hacks like meet.at, stay.at and look.at — natural and memorable for creative brands and event pages. On eligibility, .at is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is gentle and flat: about $14/yr to register (≈¥100) with the same renewal, no teaser games. Inventory beats .com by a wide margin, and both German and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.at); creative projects can build verb + .at phrases, and local services fit trade-word + .at. One caution: the audience is Austria and the German-speaking region — the signal is weaker for purely English markets (domain hacks aside).",
-      bestFor: ["Local Austrian businesses & services", "DACH German-speaking market ventures", "Verb-phrase domain hacks (meet.at etc.)", "German-language content & media"],
+        "nic.at GmbH is the IANA-recorded manager of .at (delegated 20 January 1988) and also registers the second-level domains .co.at and .or.at. Its \"Legal issues\" FAQ is blunt about eligibility: .at domains can be registered by anyone, natural persons must be of age, and there is no condition about an Austrian address or company registration. The registry's \"Statistics and studies\" page gives the current picture: 1,489,169 .at names (34,086 of them IDNs), 34,154 under .co.at and 7,569 under .or.at, 1,530,892 in total; new registrations in 2025 broken down by holder country were 92,332 from Austria, 17,844 from Germany and 4,420 from the United States — German holders are the second-largest source, a sign that cross-border use across the German-speaking market is routine. The registration guidelines (Registrierungsrichtlinien) allow names from 1 to 63 characters (IDNs counted by their ACE string) and require between 2 and 8 name servers at registration; the permitted IDN character list is published at nic.at/idn/zeichen and includes the German ä, ö, ü and ß. Dispute handling is where .at differs most from other ccTLDs: nic.at states that there is generally no arbitration procedure for .at domains, the registry does not act as arbitrator, and if out-of-court settlement fails the parties go to the ordinary courts; what nic.at offers instead is a \"wait\" status — once a third party submits evidence of its claim, the domain cannot change holder for one month (extendable once by a month), and a Wait Status 2 applies while a lawsuit is pending. The registration terms currently in force are version 7.0 (2026). The price panel here is a static reference rather than a live quote — DomainHunter's 6 September 2026 pull of /api/prices returned no .at data — namely (about ¥100 for both first year and renewal); the registrar page is authoritative. Naming: German words and spellings with ä, ö, ü or ß are all usable, with the ASCII version held alongside; one- and two-character names are permitted under .at but very few remain; and a business covering both Germany and Austria can pair .at with .de, since both are open to registrants abroad.",
+      bestFor: [
+        "Companies and shops operating in Austria",
+        "German-language projects covering Austria and Germany",
+        "Brands built on German words, ä/ö/ü/ß included",
+        "Registrants hunting for a 1–2 character name",
+      ],
       namingTips: [
-        "No eligibility restrictions — anyone can register, no local address needed",
-        "About $14/yr flat to register and renew — no traps",
-        "\"at\" is an English preposition — build hacks like meet.at or stay.at",
-        "Audience is Austria & the DACH region — weaker signal for purely English markets",
+        "Open to anyone worldwide (adults only for individuals), with no Austrian address required",
+        "No arbitration procedure — disputes freeze via wait status then go to court, so check trademarks first",
+        "1–2 character names and ä/ö/ü/ß IDNs are allowed; protect the ASCII spelling too",
+        "Without a live quote the page shows a reference price (≈¥100/yr); the registrar is authoritative",
       ],
     },
   },
@@ -10708,29 +10873,40 @@ const GUIDES = {
     tld: "be",
     zh: {
       title: ".be 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".be 是比利时国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向比利时市场的品牌与业务，还能拼出「be」动词短语域名。查看 .be 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .be 域名。",
+      metaDescription:
+        ".be 由非营利组织 DNS Belgium 管理，自 2000 年底放开以来任何人都可按先到先得原则注册，2025 年新增近 208,000 个、争议由 CEPANI 主持的 ADR 程序处理，适合在比利时有业务或面向荷法德三语用户的项目。查看 .be 注册/续费价格与命名建议，用 AI 猎取可注册的 .be 域名。",
       intro:
-        ".be 是比利时的国家域名，由非营利注册局 DNS Belgium 运营，注册量约 170 万。比利时地处欧盟核心——布鲁塞尔是欧盟与北约总部所在地，本地消费者对本土信号同样敏感：本地电商、品牌官网与服务商用 name.be，「比利时的生意」一眼讲清，信任度远超一般新后缀；Google 也会把 .be 站点与比利时地区相关联，荷语/法语双语市场的本地 SEO 都有加成。.be 还有一层广为人知的玩法：be 是英文动词「是/成为」，能拼出 will.be、to.be、just.be 这类短语域名（YouTube 的短链 youtu.be 就是最著名的例子），个人品牌与创意项目用起来出彩。资格上 .be 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格温和且接近平续：注册约 $9（约 ¥65），续费约 $10/年（约 ¥72），无引流钩子。库存比 .com 充裕得多，荷兰语、法语与英文词根命中率都高。命名上品牌词直接上（brand.be）最主流；创意项目可用「短语 + .be」拼域名黑客，本地服务用「行业词 + .be」。注意受众主要在比利时本土，纯外部市场业务信号较弱（域名黑客除外）。",
-      bestFor: ["比利时本地企业与服务", "面向欧盟机构圈的业务", "动词短语域名（youtu.be 式）", "荷语/法语内容站"],
+        "比利时的 .be 由 DNS Belgium vzw/asbl 管理，这是一家非营利协会，IANA 委托日期 1988 年 8 月 5 日，官网 dnsbelgium.be。注册局统计页写道：「自 2000 年底放开以来，任何人都可以按先到先得原则注册 .be 域名」——2000 年之前 .be 曾有严格的准入条件，放开是它增长的起点。DNS Belgium《2025 年报》给出的年度数据：2025 年新增近 208,000 个 .be，但全年净减少 16,117 个（-0.94%），说明续费流失略高于新增；注册商 350 家，前三大注册商合计占 36.33%。争议解决是 .be 的一个成熟设计：2000 年 DNS.be 委托比利时仲裁与调解中心 CEPANI 制定 ADR 规则，独立第三方裁决人全程在线审理，程序费 €2,000（不含 VAT），申诉方须同时证明域名与其商标/商号/公司名/地理标志/人名相同或近似、持有人无权利或合法利益、且存在恶意，胜诉可选转移或取消域名，DNS Belgium 在 14 天内执行裁决（无上诉或法院中止时）；现行规则 2022 年 1 月 1 日生效。IDN 方面，.be 的拉丁字符 IDN 表 1.1 版于 2018 年 9 月 24 日在 IANA 登记，允许字符清单见 docs.dnsbelgium.be。费用层面，.be 在 DomainHunter 2026 年 9 月 6 日的 /api/prices 抓取结果中缺席，因此这里只能给出静态参考价（首年约 ¥65、续费约 ¥72），以注册商为准。起名建议：比利时有荷兰语、法语、德语三个语言区，一个词在荷法两语下的读音和含义要一起检查，或者干脆用地名/造词避开语言分歧；带变音的拼法可注册 IDN，同时持有 ASCII 版本；先到先得意味着没有预审，注册前自查比荷卢知识产权局（BOIP）的商标数据库，能避免 €2,000 起步的 ADR 风险。",
+      bestFor: [
+        "在比利时经营的企业与机构",
+        "面向荷语区与法语区比利时用户的品牌",
+        "先到先得、无资格门槛的境外注册人",
+        "欧盟机构周边的服务与咨询业务",
+      ],
       namingTips: [
-        "无资格限制，任何人可直接注册、无需本地地址",
-        "注册约 $9、续费约 $10/年，小幅上浮无坑",
-        "be 是英文动词，可拼 will.be/just.be 类短语域名",
-        "受众在比利时本土，纯外部市场业务信号较弱",
+        "任何人可按先到先得注册，2000 年底放开后无资格限制",
+        "名字要同时通过荷兰语与法语的读音/含义检查",
+        "ADR 程序费 €2,000 起，注册前自查 BOIP 商标库",
+        "无实时报价时页面显示参考价（首年约 ¥65、续费约 ¥72）",
       ],
     },
     en: {
       title: ".be Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".be is Belgium's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Belgium-market brands, plus verb domain hacks like youtu.be. See live pricing and naming advice, then hunt available .be names with AI.",
+        ".be is managed by the non-profit DNS Belgium; since liberalisation at the end of 2000 anyone can register on a first-come, first-served basis, close to 208,000 names were added in 2025, and disputes run through a CEPANI-administered ADR procedure — for projects with business in Belgium or users across its Dutch, French and German language regions. See .be pricing and naming advice, then hunt available .be names with AI.",
       intro:
-        ".be is Belgium's country-code domain, run by non-profit registry DNS Belgium with about 1.7 million registrations. Belgium sits at the heart of the EU — Brussels hosts the EU institutions and NATO headquarters — and local consumers are equally attuned to local signals: name.be says \"a Belgian business\" at a glance, with trust far beyond any new gTLD; Google also geo-associates .be sites with Belgium, a local-SEO boost across both the Dutch- and French-speaking markets. .be also carries a famous trick: \"be\" is the English verb, enabling phrase hacks like will.be, to.be and just.be — YouTube's short link youtu.be is the most celebrated example — which shine for personal brands and creative projects. On eligibility, .be is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is gentle with a tiny step-up: about $9 to register (≈¥65) and $10/yr to renew (≈¥72), no teaser games. Inventory beats .com by a wide margin, and Dutch, French and English roots all hit well. For naming, a straight brand word is the mainstream shape (brand.be); creative projects can build phrase + .be hacks, and local services fit trade-word + .be. One caution: the audience is primarily Belgium — the signal is weaker for purely external markets (domain hacks aside).",
-      bestFor: ["Local Belgian businesses & services", "Ventures around the EU institutional circle", "Verb domain hacks (youtu.be style)", "Dutch/French content sites"],
+        "Belgium's .be is managed by DNS Belgium vzw/asbl, a non-profit association, delegated by IANA on 5 August 1988 and found at dnsbelgium.be. The registry's statistics page states that since the liberalisation at the end of 2000 anyone has been able to register a .be domain name under the first-come, first-served principle — before 2000 .be had strict admission conditions, and liberalisation was the starting point of its growth. The DNS Belgium Annual Report 2025 gives the year's figures: close to 208,000 new .be names were created in 2025, yet the zone shrank by a net 16,117 (-0.94%), meaning renewal churn slightly outpaced new registrations; 350 registrars were active, with the three largest holding a combined 36.33%. Dispute resolution is one of .be's mature features: in 2000 DNS.be asked CEPANI, the Belgian centre for arbitration and mediation, to draw up ADR rules; an independent third-party decider hears the case entirely online for a procedural fee of €2,000 excluding VAT, the complainant must show that the domain is identical or confusingly similar to its trademark, trade name, company name, geographical indication or personal name, that the holder has no rights or legitimate interest, and that the registration is in bad faith, and a successful complaint results in transfer or cancellation, which DNS Belgium implements within 14 days unless an appeal or court action intervenes; the current rules took effect on 1 January 2022. On IDNs, the .be Latin-script IDN table version 1.1 was registered with IANA with effect from 24 September 2018, and the allowed-character list is documented at docs.dnsbelgium.be. Cost-wise, .be was absent from the /api/prices results DomainHunter captured on 6 September 2026, so only a static reference is given here (about ¥65 for the first year and about ¥72 to renew); the registrar page is authoritative. Naming suggestions: Belgium has Dutch-, French- and German-speaking regions, so check how a word sounds and what it means in both Dutch and French, or sidestep the language split with a place name or a coinage; accented spellings can be registered as IDNs, with the ASCII version held alongside; and because first-come, first-served means no pre-screening, a search of the Benelux Office for Intellectual Property (BOIP) trademark database before registering is the cheapest insurance against a €2,000 ADR filing.",
+      bestFor: [
+        "Companies and institutions operating in Belgium",
+        "Brands addressing Belgium's Dutch- and French-speaking users",
+        "Foreign registrants who want first-come, first-served with no eligibility gate",
+        "Services and consultancies around the EU institutions",
+      ],
       namingTips: [
-        "No eligibility restrictions — anyone can register, no local address needed",
-        "About $9 to register, $10/yr to renew — tiny step-up, no traps",
-        "\"be\" is the English verb — build hacks like will.be or just.be",
-        "Audience is primarily Belgium — weaker signal for purely external markets",
+        "Anyone may register first-come, first-served; no eligibility test since the end-2000 liberalisation",
+        "Check pronunciation and meaning in both Dutch and French before committing",
+        "ADR costs €2,000 upwards — search the BOIP trademark register first",
+        "Without a live quote the page shows a reference price (≈¥65 first year, ≈¥72 renewal)",
       ],
     },
   },
@@ -10738,29 +10914,40 @@ const GUIDES = {
     tld: "se",
     zh: {
       title: ".se 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".se 是瑞典国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向瑞典与北欧市场的品牌、科技与设计业务。查看 .se 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .se 域名。",
+      metaDescription:
+        ".se 由瑞典互联网基金会 Internetstiftelsen 依据《瑞典顶级域法》(2006:24) 管理，任何持有个人/公司识别号或可通过政府登记识别的自然人与法人都能申请，2026 年 7 月底活跃域名 1,475,495 个。查看 .se 注册/续费价格与命名建议，用 AI 猎取可注册的 .se 域名。",
       intro:
-        ".se 是瑞典的国家域名，由非营利机构瑞典互联网基金会（Internetstiftelsen）运营，注册量约 150 万，是全球最早部署 DNSSEC 的注册局之一，技术治理水平业内标杆。瑞典消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.se，「瑞典的生意」一眼讲清，信任度远超一般新后缀——瑞典本土企业与政府机构的主站几乎都在 .se 上；Google 也会把 .se 站点与瑞典地区相关联，瑞典语市场 SEO 有天然加成。瑞典还是欧洲的创新与设计重镇——Spotify、Klarna、IKEA 都发家于此，.se 对科技创业与北欧设计类品牌自带「斯德哥尔摩创新圈」联想。资格上 .se 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格中等且平续：注册约 $15/年（约 ¥110），续费同价，无引流钩子。库存比 .com 充裕，瑞典语与英文词根命中率都高——瑞典人英语水平全球顶尖，英文词根完全无障碍。命名上品牌词直接上（brand.se）最主流；科技与设计类可用「功能词 + .se」借北欧创新联想，本地服务用「行业词 + .se」。注意受众主要在瑞典与北欧，纯外部市场业务信号较弱。",
-      bestFor: ["瑞典本地企业与服务", "北欧科技创业与 SaaS", "北欧设计与生活方式品牌", "瑞典语内容与媒体站"],
+        ".se 的注册局是 Stiftelsen för Internetinfrastruktur（瑞典互联网基金会，Internetstiftelsen），一家独立的公益基金会，IANA 记录的委托日期为 1986 年 9 月 4 日；它的运营依据是《瑞典顶级域法》(2006:24)，这也是少数把 ccTLD 管理写进国家法律的例子。2026 年 1 月 15 日版《注册条款》第 3.1.1 条规定：任何持有个人识别号或公司识别号、或者能通过政府机关（或行使公权力的组织）维护的登记簿识别的自然人与法人，都可以申请 .se 域名——条款没有瑞典住所要求，境外公司只要能被其本国官方登记识别即符合。分配原则是先到先得，注册局不做事前审查；如果第三方认为自己对某个已注册域名享有权利，可以启动替代性争议解决（ADR，瑞典语 ATF），该程序由 WIPO 仲裁与调解中心管理，申请人需同时证明三点：在瑞典有效的权利（如商标或公司名）、持有人注册或使用时存在恶意、持有人对该名字没有权利或正当利益。数量方面，注册局公开的 registrar-stats JSON 显示 2026 年 7 月月末活跃 .se 域名 1,475,495 个，2023 年报给出的 2023 年末数字是 1,478,955 个，近三年基本持平。至于费用：DomainHunter 在 2026 年 9 月 6 日的 /api/prices 抓取里没拿到 .se 的实时价格，页面上的价格区因而是静态参考价（首年与续费均约 ¥110），下单前以注册商页面为准。起名建议：瑞典语词面向本地用户最自然，含 å ä ö 的拼法可注册 IDN，但同时拿下 ASCII 版本更保险；由于分配不做预审，注册前自查瑞典商标数据库能避开日后的 ATF 争议；面向北欧多国的项目可以把 .se 与 .no、.dk、.fi 分开看——它们的资格规则差别很大，.no 要求挪威身份号或组织登记，而 .se 对境外登记主体开放。",
+      bestFor: [
+        "在瑞典有客户的企业与电商",
+        "能被本国官方登记识别的境外公司",
+        "用瑞典语词（含 å ä ö）命名的品牌",
+        "北欧多国布局中不受本地身份限制的一站",
+      ],
       namingTips: [
-        "无资格限制，任何人可直接注册、无需本地地址",
-        "注册续费均约 $15/年，平续无钩子",
-        "瑞典人英语顶尖，英文词根在 .se 下完全无障碍",
-        "受众在瑞典与北欧，纯外部市场业务信号较弱",
+        "持有个人/公司识别号或可经政府登记识别即可申请，无瑞典住所要求",
+        "先到先得、无预审，注册前自查瑞典商标以避开 ATF 争议",
+        "å ä ö 拼法可注册 IDN，建议同时持有 ASCII 版本",
+        "无实时报价时页面显示参考价（约 ¥110/年），以注册商为准",
       ],
     },
     en: {
       title: ".se Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".se is Sweden's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Sweden and Nordic-market brands, tech and design businesses. See live pricing and naming advice, then hunt available .se names with AI.",
+        ".se is administered by the Swedish Internet Foundation (Internetstiftelsen) under the Swedish Top-level Domains Act (2006:24); any natural or legal person with a personal or corporate identity number, or identifiable through a government register, may apply, and 1,475,495 names were active at the end of July 2026. See .se pricing and naming advice, then hunt available .se names with AI.",
       intro:
-        ".se is Sweden's country-code domain, run by the non-profit Swedish Internet Foundation (Internetstiftelsen) with about 1.5 million registrations — one of the first registries in the world to deploy DNSSEC, a benchmark for technical governance. Swedish consumers have a strong local preference: name.se says \"a Swedish business\" at a glance, with trust far beyond any new gTLD — Swedish companies and government institutions overwhelmingly live on .se; Google also geo-associates .se sites with Sweden, a natural boost for Swedish-market SEO. Sweden is also Europe's innovation and design powerhouse — Spotify, Klarna and IKEA all started here — so .se carries a \"Stockholm innovation circle\" halo for tech startups and Nordic design brands. On eligibility, .se is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is moderate and flat: about $15/yr to register (≈¥110) with the same renewal, no teaser games. Inventory beats .com, and both Swedish and English roots hit well — Swedish English proficiency is among the world's best, so English roots work perfectly. For naming, a straight brand word is the mainstream shape (brand.se); tech and design ventures can use function words to borrow the Nordic innovation halo, and local services fit trade-word + .se. One caution: the audience is Sweden and the Nordics — the signal is weaker for purely external markets.",
-      bestFor: ["Local Swedish businesses & services", "Nordic tech startups & SaaS", "Nordic design & lifestyle brands", "Swedish-language content & media"],
+        "The .se registry is Stiftelsen för Internetinfrastruktur — the Swedish Internet Foundation, Internetstiftelsen — an independent public-interest foundation; IANA records the delegation on 4 September 1986, and the foundation operates under the Swedish Top-level Domains Act (2006:24), one of the few cases where ccTLD administration is written into national law. Clause 3.1.1 of the Terms and Conditions of Registration dated 15 January 2026 says that any natural person or legal entity with a personal identification number or corporate identity number, or that can be identified via a registration designation in a register maintained by a governmental authority (or by an organisation exercising state authority), may apply for a .se name — there is no Swedish-residence requirement, so a foreign company that is identifiable in its home-country official register qualifies. Allocation is first-come, first-served with no preliminary examination; a third party who believes it has a better right to a registered name can start Alternative Dispute Resolution (ADR, known in Swedish as ATF), which is administered by the WIPO Arbitration and Mediation Center and requires the applicant to show all three of: a right valid in Sweden (such as a trademark or company name), bad faith in the holder's registration or use, and the holder's lack of any right or justified interest. On volume, the registry's public registrar-stats JSON reports 1,475,495 active .se names at the end of July 2026, while the 2023 annual report gave 1,478,955 at the end of 2023 — essentially flat over three years. As for fees, DomainHunter's 6 September 2026 pull of /api/prices had no live .se entry, which is why this page's price panel falls back to a static reference (about ¥110 for both first year and renewal); check the registrar page before buying. Naming: Swedish words are the natural choice for a local audience, spellings with å, ä or ö can be registered as IDNs, and holding the ASCII form as well is prudent; because there is no pre-screening, a quick search of the Swedish trademark database before registering helps avoid a later ATF filing; and for a multi-country Nordic footprint, treat .se separately from .no, .dk and .fi — their eligibility rules differ sharply, with .no requiring a Norwegian identity number or organisation registration while .se is open to foreign registered entities.",
+      bestFor: [
+        "Companies and stores with customers in Sweden",
+        "Foreign companies identifiable in their home official register",
+        "Brands built on Swedish words, å/ä/ö included",
+        "The Nordic site that must not depend on local identity numbers",
+      ],
       namingTips: [
-        "No eligibility restrictions — anyone can register, no local address needed",
-        "About $15/yr flat to register and renew — no traps",
-        "Swedish English proficiency is top-tier — English roots work perfectly on .se",
-        "Audience is Sweden & the Nordics — weaker signal for purely external markets",
+        "A personal/corporate identity number or a government-register entry is enough; no Swedish address",
+        "First-come, first-served with no pre-screening — check Swedish trademarks first to avoid ATF",
+        "å/ä/ö spellings register as IDNs; keep the ASCII version too",
+        "Without a live quote the page shows a reference price (≈¥110/yr); the registrar is authoritative",
       ],
     },
   },
@@ -10768,29 +10955,40 @@ const GUIDES = {
     tld: "pl",
     zh: {
       title: ".pl 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".pl 是波兰国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向波兰与中东欧市场的品牌与业务。注意首年便宜续费上浮。查看 .pl 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .pl 域名。",
+      metaDescription:
+        ".pl 由波兰国家研究与学术计算机网络 NASK 管理，个人与机构均可申请、没有本地地址前置条件，2025 年 9 月底活跃域名 2,565,672 个，适合在波兰有客户或团队的业务。查看 .pl 注册/续费价格与命名建议，用 AI 猎取可注册的 .pl 域名。",
       intro:
-        ".pl 是波兰的国家域名，由国家研究院 NASK 运营，注册量约 250 万，是中东欧最大的 ccTLD。波兰是欧盟人口第五大国、中东欧最大经济体，电商增速常年领跑欧洲，本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.pl，「波兰的生意」一眼讲清，信任度远超一般新后缀——波兰电商巨头 Allegro 与政府机构的主站都在 .pl 上；Google 也会把 .pl 站点与波兰地区相关联，波兰语市场 SEO 有天然加成。波兰还是欧洲重要的软件外包与 IT 人才基地，科技公司用 .pl 讲「波兰工程力量」也很自然。资格上 .pl 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格要留意：首年常见促销约 $6（约 ¥45），续费约 $25/年（约 ¥180）——注册前把续费价算进预算，别被首年低价钩住。库存比 .com 充裕得多，波兰语与英文词根命中率都高。命名上品牌词直接上（brand.pl）最主流；本地服务用「行业词 + .pl」，跨境电商可用「品类词 + .pl」讲清市场定位。注意受众主要在波兰本土，纯外部市场业务信号较弱。",
-      bestFor: ["波兰本地企业与服务", "面向波兰的跨境电商", "中东欧软件与 IT 服务", "波兰语内容与媒体站"],
+        ".pl 于 1990 年 7 月 30 日写入 IANA 根区，管理机构是波兰国家研究与学术计算机网络 NASK（Research and Academic Computer Network），注册局官网 dns.pl，RDAP 查询服务在 rdap.dns.pl。NASK 发布的《.pl 域名注册规则》把申请人（Tenderer）定义为「实体或自然人」，没有波兰住所或公司登记的前置条件；规则里另设了订户位于波兰境外时的争议条款，可以据此确认境外申请是被明确预期的。数量方面，NASK 2025 年第三季度英文报告给出 2025 年 9 月 30 日活跃域名 2,565,672 个、来自 22 个国家的 193 家注册商；2026 年第一季度报告称季末活跃名超过 259 万，当季新注册接近 22.6 万，续费率 71.49%。dns.pl/en/IDN 页列出可用的波兰语字符 ą ć ę ł ń ó ś ż ź，波兰语原生词可以带变音符号注册。争议解决有两条路：注册局「Information on disputes」页指向波兰信息技术与电信商会（PIIT）域名仲裁院和华沙国家商会（KIG）仲裁院；当双方都在波兰境外时可选 WIPO 仲裁与调解中心。DomainHunter 于 2026 年 9 月 6 日抓取 /api/prices 时 .pl 没有实时报价，本页价格区因此显示静态参考价（首年约 ¥45、之后约 ¥180/年），两者差距来自注册商促销结构而非注册局定价，下单前请核对注册商页面上的续费一栏。给波兰市场起名时，波兰语词可以同时保护带变音的 IDN 版本和去掉变音的 ASCII 版本；面向中东欧跨境客户的项目用英文词也可行；如果一个名字在 .pl 和 .eu 下都空着，两者可以分工——.pl 放波兰本地站，.eu 放泛欧站。",
+      bestFor: [
+        "在波兰有客户或团队的企业",
+        "中东欧跨境电商的波兰站点",
+        "用波兰语变音字符拼写的品牌",
+        "不想受本地存在要求限制的境外注册人",
+      ],
       namingTips: [
-        "无资格限制，任何人可直接注册、无需本地地址",
-        "首年约 $6 但续费约 $25/年，预算按续费价算",
-        "科技公司用 .pl 讲「波兰工程力量」很自然",
-        "受众在波兰本土，纯外部市场业务信号较弱",
+        "波兰语词可注册 ą ć ę ł ń ó ś ż ź 变音版本，同时保护 ASCII 拼法",
+        "没有波兰地址要求；双方均在境外的争议可选 WIPO",
+        "参考价首年约 ¥45、续费约 ¥180，差价来自注册商促销",
+        "同时持有 .pl 与 .eu 时，前者放本地站、后者放泛欧站",
       ],
     },
     en: {
       title: ".pl Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".pl is Poland's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Poland and CEE-market brands. Watch the renewal step-up after a cheap first year. See live pricing and naming advice, then hunt available .pl names with AI.",
+        ".pl is administered by NASK, Poland's research and academic network; it accepts individuals and organisations without a Polish address and counted 2,565,672 active names on 30 September 2025. See .pl pricing and naming advice, then hunt available .pl names with AI.",
       intro:
-        ".pl is Poland's country-code domain, run by national research institute NASK with about 2.5 million registrations — the largest ccTLD in Central and Eastern Europe. Poland is the EU's fifth most populous country and the CEE region's biggest economy, with e-commerce growth consistently leading Europe, and local consumers are strongly attuned to local signals: name.pl says \"a Polish business\" at a glance, with trust far beyond any new gTLD — e-commerce giant Allegro and government institutions live on .pl; Google also geo-associates .pl sites with Poland, a natural boost for Polish-market SEO. Poland is also a major European software outsourcing and IT talent hub, so tech companies naturally use .pl to signal \"Polish engineering strength\". On eligibility, .pl is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing needs attention: first-year promos run about $6 (≈¥45) but renewals are about $25/yr (≈¥180) — budget on the renewal price and don't get hooked by the teaser. Inventory beats .com by a wide margin, and both Polish and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.pl); local services fit trade-word + .pl, and cross-border e-commerce can use category + .pl to claim the market. One caution: the audience is primarily Poland — the signal is weaker for purely external markets.",
-      bestFor: ["Local Polish businesses & services", "Poland-facing cross-border e-commerce", "CEE software & IT services", "Polish-language content & media"],
+        "The .pl zone was delegated on 30 July 1990 and is administered by NASK (Research and Academic Computer Network), a Polish state research institute; the registry site is dns.pl and its RDAP service answers at rdap.dns.pl. NASK's .pl Domain Name Regulations define the applicant (\"Tenderer\") simply as \"an entity or natural person\" and attach no requirement for a Polish address or company registration; a separate clause covers disputes with subscribers domiciled outside Poland, which is the clearest official confirmation that foreign registrants are expected. The registry publishes quarterly reports: the Q3 2025 English edition counted 2,565,672 active names on 30 September 2025, served by 193 registrars from 22 countries, and the Q1 2026 edition puts the quarter-end figure above 2.59 million, with close to 226 thousand new registrations in the quarter and a 71.49% renewal rate. Internationalised names are supported — the IDN page on dns.pl lists the Polish letters ą, ć, ę, ł, ń, ó, ś, ż and ź — so a Polish-language brand can be registered in its native spelling. For conflicts, NASK's \"Information on disputes\" page names two Polish arbitration bodies, the Court of Conciliation at the Polish Chamber of Information Technology and Telecommunications (PIIT) and the Court of Arbitration at the Polish Chamber of Commerce (KIG), and points parties who are both located outside Poland to the WIPO Arbitration and Mediation Center. On price: when DomainHunter pulled /api/prices on 6 September 2026 there was no live quote for .pl, so the price panel on this page falls back to a static reference (about ¥45 for the first year and about ¥180 per year afterwards); the gap between those two figures comes from registrar promotions rather than registry fees, so read the renewal line before checkout. When naming for Poland, consider a Polish word registered both with diacritics (as an IDN) and in plain-ASCII spelling, or an English word if the audience is cross-border CEE customers; a name that is free under both .pl and .eu can reasonably hold both, with .pl serving the domestic site and .eu the pan-European one.",
+      bestFor: [
+        "Companies with customers or staff in Poland",
+        "CEE cross-border stores with a Polish storefront",
+        "Brands spelled with Polish diacritics",
+        "Foreign registrants who want no local-presence hurdle",
+      ],
       namingTips: [
-        "No eligibility restrictions — anyone can register, no local address needed",
-        "About $6 in year one but ~$25/yr renewal — budget on the renewal price",
-        "Tech companies use .pl to signal Polish engineering strength",
-        "Audience is primarily Poland — weaker signal for purely external markets",
+        "Register Polish words with ą/ć/ę/ł/ń/ó/ś/ż/ź as IDN plus the ASCII spelling",
+        "No Polish address needed; disputes between two foreign parties can go to WIPO",
+        "Reference price ≈¥45 first year vs ≈¥180 renewal — the gap is registrar promotion",
+        "Keep .pl for the domestic site and .eu for the pan-European one",
       ],
     },
   },
@@ -10798,29 +10996,40 @@ const GUIDES = {
     tld: "tw",
     zh: {
       title: ".tw 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".tw 是台湾地区域名，无资格限制、任何人可注册，本地信任度高，适合面向台湾市场的品牌、电商与科技业务。查看 .tw 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tw 域名。",
+      metaDescription:
+        ".tw 由台湾网络信息中心（TWNIC）管理，泛用型域名（ASCII.tw、中文.tw、.台灣）不限申请人资格、先申请先发给，com.tw 须依法登记公司（外国公司亦可）。查看 .tw 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .tw 域名。",
       intro:
-        ".tw 是台湾的地区域名，由财团法人台湾网路资讯中心（TWNIC）管理。台湾是全球半导体与电子制造重镇，也是繁体中文互联网的核心市场之一：本地电商、品牌官网与服务商用 name.tw，「台湾的生意」一眼讲清，信任度远超一般新后缀——台湾本土企业与机构的主站大多在 .tw（或更严格的 .com.tw）上；Google 也会把 .tw 站点与台湾地区相关联，繁中市场 SEO 有天然加成。台湾的科技制造声誉还让 .tw 对硬件、电子与半导体供应链业务带上一层「台湾制造」联想。资格上顶级 .tw 完全开放：任何地区的个人与机构都能直接注册，无需本地地址或代理（二级的 .com.tw 需台湾登记企业，门槛与信任度各高一档）。价格中等偏上且平续：注册约 $28/年（约 ¥200），续费同价，无引流钩子——价格门槛过滤投机注册，库存比同热度后缀干净。命名上品牌词直接上（brand.tw）最主流；繁中市场可用拼音或台语罗马字词根更亲切，硬件与供应链业务可用「品类词 + .tw」讲清出身。注意受众主要在台湾与繁中圈，纯欧美市场业务信号较弱。",
-      bestFor: ["台湾本地企业与服务", "面向台湾的电商与品牌", "硬件、电子与半导体供应链", "繁体中文内容与媒体站"],
+        "台湾网络信息中心（TWNIC）是 IANA 记录的 .tw 管理者，委托日期 1989 年 7 月 31 日，官网 twnic.tw，RDAP 服务在 ccrdap.twnic.tw。TWNIC 的英文 QA 页把泛用型域名的资格说得很宽：ASCII.tw、中文.tw、ASCII.台灣、中文.台灣，以及日、韩、泰、法、德等语言的 IDN.tw，都不限制申请人资格，先申请先发给，一个主体可申请多个；属性型的 com.tw 须为依法登记的公司（外国公司同样可以），idv.tw 面向自然人。TWNIC 已不再对申请人资格做事前审查，但保留事后审查的权利。中文域名有具体的字串规则：字符须在 Big5 范围内，至少包含 2 个连续中文字，禁止繁体与简体夹杂——面向台湾用户的中文域名应统一用繁体。价格上，DomainHunter 2026 年 9 月 6 日的 /api/prices 实时报价为首年 $17.99、续费 $17.99，首年与续费一致。TWNIC 官网在本轮抓取中没有给出可直接引用的注册总量，本页不写数字。起名建议：面向台湾用户的项目可以同时持有 ASCII 版本与繁体中文.tw 版本，中文版便于口头传播、ASCII 版便于国际用户输入；台湾常用的罗马拼音有多种系统（通用拼音、汉语拼音、威妥玛），选定一种后在域名、商标、社交账号上保持一致；打算用 com.tw 的外国公司要准备好公司登记文件以备事后审查；.tw 与 .台灣 是两个不同的顶级域，两者都空着时可按预算决定是否并持。",
+      bestFor: [
+        "面向台湾用户的电商与服务",
+        "想同时持有 ASCII 与繁体中文域名的品牌",
+        "不受资格限制、直接注册泛用型 .tw 的境外团队",
+        "依法登记（含外国公司）后使用 com.tw 的企业",
+      ],
       namingTips: [
-        "顶级 .tw 无资格限制，任何人可直接注册（.com.tw 需台湾企业）",
-        "注册续费均约 $28/年，平续无钩子、库存干净",
-        "硬件供应链用「品类词 + .tw」自带台湾制造联想",
-        "受众在台湾与繁中圈，纯欧美业务信号较弱",
+        "泛用型 .tw 不限资格、先申请先发给；com.tw 须依法登记公司",
+        "中文域名须 Big5 范围、至少 2 个连续中文字、不得繁简夹杂",
+        "实时报价首年 $17.99、续费 $17.99，两者一致",
+        "罗马拼音系统选定一种后在域名、商标、社交账号上保持一致",
       ],
     },
     en: {
       title: ".tw Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".tw is Taiwan's regional domain — no eligibility restrictions, anyone can register — with strong local trust for Taiwan-market brands, e-commerce and tech businesses. See live pricing and naming advice, then hunt available .tw names with AI.",
+        ".tw is administered by the Taiwan Network Information Center (TWNIC); general-use names (ASCII.tw, Chinese.tw and .台灣) have no applicant eligibility requirement and are allocated first-come, first-served, while com.tw requires a legally registered company (foreign companies included). See live .tw pricing and naming advice, then hunt available .tw names with AI.",
       intro:
-        ".tw is Taiwan's regional domain, managed by the Taiwan Network Information Center (TWNIC). Taiwan is the world's semiconductor and electronics manufacturing powerhouse and one of the core markets of the Traditional Chinese internet: name.tw says \"a Taiwanese business\" at a glance, with trust far beyond any new gTLD — Taiwanese companies and institutions overwhelmingly live on .tw (or the stricter .com.tw); Google also geo-associates .tw sites with Taiwan, a natural boost for Traditional Chinese SEO. Taiwan's tech manufacturing reputation adds a \"made in Taiwan\" halo for hardware, electronics and semiconductor supply-chain ventures. On eligibility, top-level .tw is fully open: individuals and organizations from anywhere can register directly with no local address or proxy (second-level .com.tw requires a Taiwan-registered company — a higher bar with correspondingly higher trust). Pricing is upper-moderate and flat: about $28/yr to register (≈¥200) with the same renewal, no teaser games — the price bar filters speculation, keeping inventory cleaner than comparably popular suffixes. For naming, a straight brand word is the mainstream shape (brand.tw); pinyin or Taiwanese romanization roots feel warmer in the Traditional Chinese market, and hardware or supply-chain ventures can use category + .tw to claim Taiwanese origin. One caution: the audience is Taiwan and the Traditional Chinese sphere — the signal is weaker for purely Western markets.",
-      bestFor: ["Local Taiwanese businesses & services", "Taiwan-facing e-commerce & brands", "Hardware, electronics & semiconductor supply chain", "Traditional Chinese content & media"],
+        "The Taiwan Network Information Center (TWNIC) is the IANA-recorded manager of .tw, delegated on 31 July 1989, with its site at twnic.tw and RDAP at ccrdap.twnic.tw. TWNIC's English Q&A page is generous on general-use eligibility: ASCII.tw, Chinese.tw, ASCII.台灣, Chinese.台灣 and IDN.tw names in Japanese, Korean, Thai, French and German all carry no applicant qualification, are allocated first-come, first-served, and may be registered in multiples by one holder; among the category domains, com.tw requires a company registered under the law (foreign companies qualify too) and idv.tw is for natural persons. TWNIC no longer examines applicant qualifications before registration but reserves the right to audit afterwards. Chinese-script names follow concrete string rules: characters must fall within the Big5 range, at least two consecutive Chinese characters are required, and mixing Traditional and Simplified forms is prohibited — so a Chinese .tw name for Taiwanese users should be entirely Traditional. On price, DomainHunter's live /api/prices quote on 6 September 2026 was $17.99 for the first year and $17.99 to renew, identical figures. TWNIC's site did not yield a directly quotable total registration count in this round of research, so this page states none. Naming suggestions: a project for Taiwanese users can hold both an ASCII name and a Traditional-Chinese .tw name, the Chinese one for word of mouth and the ASCII one for international users to type; Taiwan uses several romanisation systems (Tongyong, Hanyu Pinyin, Wade-Giles), so pick one and keep it consistent across the domain, trademark and social handles; a foreign company planning on com.tw should keep its registration documents ready for a post-registration audit; and since .tw and .台灣 are separate top-level domains, decide on budget grounds whether to hold both when both are free.",
+      bestFor: [
+        "E-commerce and services for Taiwanese users",
+        "Brands wanting both an ASCII and a Traditional-Chinese domain",
+        "Overseas teams registering general-use .tw with no eligibility gate",
+        "Legally registered companies (foreign included) using com.tw",
+      ],
       namingTips: [
-        "Top-level .tw has no restrictions — anyone can register (.com.tw needs a Taiwan company)",
-        "About $28/yr flat — the price filters speculation, keeping inventory clean",
-        "Category + .tw carries the made-in-Taiwan halo for hardware supply chains",
-        "Audience is Taiwan & the Traditional Chinese sphere — weaker signal for purely Western markets",
+        "General-use .tw has no eligibility test and is first-come, first-served; com.tw needs a registered company",
+        "Chinese names must be Big5, at least two consecutive Chinese characters, no Traditional/Simplified mixing",
+        "Live quote $17.99 first year / $17.99 renewal — identical",
+        "Choose one romanisation system and keep it consistent across domain, trademark and social handles",
       ],
     },
   },
@@ -10828,29 +11037,40 @@ const GUIDES = {
     tld: "dk",
     zh: {
       title: ".dk 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".dk 是丹麦国家域名，无资格限制、任何人可注册（需通过注册局身份验证），本地信任度极高，适合面向丹麦市场的品牌、电商与设计业务。查看 .dk 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .dk 域名。",
+      metaDescription:
+        ".dk 的管理者是 Dansk Internet Forum，由 Punktum dk A/S 运营，2026 年 7 月 1 日起新注册须经批准的注册商办理并对所有注册人做身份核验，注册局自述管理约 136 万个 .dk 域名，适合在丹麦有业务且能配合核验流程的注册人。查看 .dk 注册/续费价格与命名建议，用 AI 猎取可注册的 .dk 域名。",
       intro:
-        ".dk 是丹麦的国家域名，由非营利注册局 Punktum dk（原 DK Hostmaster）运营，注册量约 140 万。丹麦是全球数字化程度最高的国家之一，消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.dk，「丹麦的生意」一眼讲清，信任度远超一般新后缀——丹麦本土企业与政府机构的主站几乎都在 .dk 上；Google 也会把 .dk 站点与丹麦地区相关联，丹麦语市场 SEO 有天然加成。丹麦还是北欧设计与可持续品牌的重镇——乐高、Bang & Olufsen 都发家于此，.dk 对设计、家居与绿色品牌自带联想。资格上 .dk 完全开放：任何国家的个人与机构都能注册，但注册局要求注册人完成身份验证（丹麦本地用 MitID，海外注册人提交身份证明），这道门槛让 .dk 的滥用率常年全球最低、库存干净。价格温和且平续：注册约 $12/年（约 ¥85），续费同价，无引流钩子。库存比 .com 充裕，丹麦语与英文词根命中率都高。命名上品牌词直接上（brand.dk）最主流；设计与家居品牌可用「品类词 + .dk」借北欧设计联想，本地服务用「行业词 + .dk」。注意受众主要在丹麦本土，纯外部市场业务信号较弱。",
-      bestFor: ["丹麦本地企业与服务", "北欧设计与家居品牌", "面向丹麦的电商", "丹麦语内容与媒体站"],
+        "丹麦的 .dk 在 IANA 记录里由 Dansk Internet Forum 管理（委托日期 1987 年 7 月 14 日），实际运营方是 Punktum dk A/S，官网 punktum.dk；注册局自述管理约 136 万个 .dk 域名，并称丹麦人均域名数居世界前列。.dk 与其他欧洲 ccTLD 最不一样的地方是核验流程：依据丹麦《域名法》第 18 条和 NIS2 相关法律第 11 条，Punktum dk 会对新注册人核验联系信息与身份——丹麦法人需提供 CVR 号，居住在丹麦境外的注册人由风险引擎判定是否触发 ID 核验（通过 AddoSign 完成，期限 25 天），核验完成之前域名不能使用。2026 年 7 月 1 日起，新 .dk 必须经批准的注册商注册；注册条款还要求域名指向至少 2 台已在 Punktum dk 登记的权威名称服务器。IDN 方面，注册局统计页列出支持的特殊字符包括 æ ø å ö ä ü é ß，丹麦语词可以按原拼写注册。注意价格：2026 年 9 月 6 日 DomainHunter 的 /api/prices 抓取没有覆盖 .dk，本页价格区因此展示静态参考价（首年与续费均约 ¥85），以注册商为准。起名建议：丹麦语词直接按 æ ø å 的原拼写注册，并同时持有 ae/oe/aa 转写版本，因为键盘与海外用户输入习惯不同；提前准备好身份文件（个人护照/公司登记）能缩短核验等待；如果域名同时服务丹麦与其他北欧国家，注意 .dk 对境外注册人有核验但没有资格限制，而 .no 有挪威身份号要求。",
+      bestFor: [
+        "在丹麦经营的企业与门店",
+        "面向丹麦用户的电商与服务",
+        "能配合身份核验流程的境外注册人",
+        "用丹麦语词（含 æ ø å）命名的品牌",
+      ],
       namingTips: [
-        "无资格限制，任何人可注册，但需通过注册局身份验证",
-        "注册续费均约 $12/年，平续无钩子",
-        "身份验证门槛让 .dk 滥用率极低、库存干净",
-        "受众在丹麦本土，纯外部市场业务信号较弱",
+        "新注册须经批准注册商办理，注册局对注册人做身份与联系信息核验",
+        "丹麦语 æ ø å 可原拼写注册，同时持有 ae/oe/aa 转写版本",
+        "境外注册人可能触发 ID 核验（AddoSign，25 天内完成），提前备好证件",
+        "无实时报价时页面显示参考价（约 ¥85/年），以注册商为准",
       ],
     },
     en: {
       title: ".dk Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".dk is Denmark's country domain — no eligibility restrictions, anyone can register (with registry ID validation) — with top-tier local trust for Denmark-market brands, e-commerce and design businesses. See live pricing and naming advice, then hunt available .dk names with AI.",
+        ".dk is managed by Dansk Internet Forum and operated by Punktum dk A/S; since 1 July 2026 new names must be registered through an approved registrar and every registrant goes through identity verification, and the registry describes itself as administering about 1.36 million .dk names — for registrants with business in Denmark who can complete the verification process. See .dk pricing and naming advice, then hunt available .dk names with AI.",
       intro:
-        ".dk is Denmark's country-code domain, run by non-profit registry Punktum dk (formerly DK Hostmaster) with about 1.4 million registrations. Denmark is among the world's most digitized countries, and consumers are strongly attuned to local signals: name.dk says \"a Danish business\" at a glance, with trust far beyond any new gTLD — Danish companies and government institutions overwhelmingly live on .dk; Google also geo-associates .dk sites with Denmark, a natural boost for Danish-market SEO. Denmark is also a powerhouse of Nordic design and sustainable brands — LEGO and Bang & Olufsen both started here — so .dk carries a design and green-brand halo. On eligibility, .dk is fully open: individuals and organizations from anywhere can register, but the registry requires registrant ID validation (MitID for locals, identity documents for foreign registrants) — a bar that keeps .dk's abuse rate among the lowest in the world and its inventory clean. Pricing is gentle and flat: about $12/yr to register (≈¥85) with the same renewal, no teaser games. Inventory beats .com, and both Danish and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.dk); design and home brands can use category + .dk to borrow the Nordic design halo, and local services fit trade-word + .dk. One caution: the audience is primarily Denmark — the signal is weaker for purely external markets.",
-      bestFor: ["Local Danish businesses & services", "Nordic design & home brands", "Denmark-facing e-commerce", "Danish-language content & media"],
+        "Denmark's .dk is recorded by IANA under Dansk Internet Forum (delegated 14 July 1987) and operated by Punktum dk A/S at punktum.dk; the registry describes itself as administering about 1.36 million .dk names and notes that Denmark ranks among the countries with the most domains per capita. What sets .dk apart from other European ccTLDs is its verification regime: under section 18 of the Danish Domain Names Act and section 11 of the Danish NIS 2 legislation, Punktum dk checks the contact information and identity of new registrants — Danish legal entities supply a CVR number, registrants living outside Denmark are run through a risk engine that decides whether an ID check is required (completed via AddoSign within 25 days), and the domain cannot be used until verification is finished. From 1 July 2026 all new .dk names must be registered through an approved registrar; the terms also require the domain to point at a minimum of two authoritative name servers already registered with Punktum dk. On IDNs, the registry statistics site lists supported special characters including æ, ø, å, ö, ä, ü, é and ß, so Danish words can be registered in their native spelling. A note on price: the 6 September 2026 /api/prices pull by DomainHunter did not cover .dk, so this page shows a static reference (about ¥85 for both first year and renewal); the registrar page is authoritative. Naming advice: register Danish words with æ, ø and å as spelled, and hold the ae/oe/aa transliterations alongside, because keyboards and overseas users type them differently; have identity documents ready (passport for individuals, company registration for entities) to shorten the verification wait; and if one name is meant to serve Denmark and its Nordic neighbours, remember that .dk verifies foreign registrants without restricting eligibility, whereas .no requires a Norwegian identity number.",
+      bestFor: [
+        "Companies and shops operating in Denmark",
+        "E-commerce and services aimed at Danish users",
+        "Foreign registrants able to complete identity verification",
+        "Brands built on Danish words, æ/ø/å included",
+      ],
       namingTips: [
-        "No eligibility restrictions — anyone can register, with registry ID validation",
-        "About $12/yr flat to register and renew — no traps",
-        "ID validation keeps .dk abuse rates among the world's lowest",
-        "Audience is primarily Denmark — weaker signal for purely external markets",
+        "New names go through an approved registrar, and the registry verifies registrant identity and contact data",
+        "Register Danish æ/ø/å spellings as-is and hold the ae/oe/aa transliterations too",
+        "Foreign registrants may trigger an ID check (AddoSign, 25 days) — have documents ready",
+        "Without a live quote the page shows a reference price (≈¥85/yr); the registrar is authoritative",
       ],
     },
   },
@@ -10858,29 +11078,40 @@ const GUIDES = {
     tld: "fi",
     zh: {
       title: ".fi 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".fi 是芬兰国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向芬兰市场的品牌、科技与游戏业务。查看 .fi 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .fi 域名。",
+      metaDescription:
+        ".fi 由芬兰交通与通信局 Traficom 依据《电子通信服务法》(917/2014) 第 21 章管理，公司、组织与个人不论所在地都可注册，但注册商须录入持有人的身份识别信息。查看 .fi 注册/续费价格与命名建议，用 AI 猎取可注册的 .fi 域名。",
       intro:
-        ".fi 是芬兰的国家域名，由芬兰交通与通信管理局（Traficom）运营，注册量约 55 万。芬兰消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.fi，「芬兰的生意」一眼讲清，信任度远超一般新后缀——芬兰本土企业与政府机构的主站几乎都在 .fi 上；Google 也会把 .fi 站点与芬兰地区相关联，芬兰语市场 SEO 有天然加成。芬兰还是全球游戏与移动技术重镇——Nokia、Supercell（部落冲突）、Rovio（愤怒的小鸟）都发家于此，.fi 对游戏工作室与深科技创业自带「赫尔辛基科技圈」联想。资格上 .fi 自 2016 年起完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格便宜且平续：注册约 $10/年（约 ¥72），续费同价，由国家机构定价、常年稳定无钩子。库存比 .com 充裕得多，芬兰语与英文词根命中率都高——芬兰人英语水平极佳，英文词根完全无障碍。命名上品牌词直接上（brand.fi）最主流；游戏与科技类可用「功能词 + .fi」借芬兰科技联想，本地服务用「行业词 + .fi」。注意受众主要在芬兰本土，纯外部市场业务信号较弱。",
-      bestFor: ["芬兰本地企业与服务", "游戏工作室与深科技创业", "面向芬兰的电商", "芬兰语内容与媒体站"],
+        ".fi 是由国家监管机构直接管理的少数 ccTLD 之一：管理者是芬兰交通与通信局 Traficom，IANA 记录的委托日期为 1986 年 12 月 17 日，官网 domain.fi，RDAP 服务在 rdap.fi。法律依据是《电子通信服务法》(917/2014) 第 21 章，Traficom 另发布《域名条例》（Domain Name Regulation M 68），该条例已按 NIS2 指令的要求更新。资格方面，芬兰政府服务门户 Suomi.fi 的说明是「所有公司、组织和个人都可以注册 fi 域名」，没有芬兰住所限制；但条例要求注册商在域名登记簿中录入持有人的姓名与身份识别码（个人为人口登记号，没有的话录入其他识别信息；组织为商业识别码），并核验这些信息——Traficom 2026 年版注册商指南还提到，位于 EU/EEA 之外的注册商因数据传输限制不能为个人办理 fi 域名，境外个人应通过 EU/EEA 内的注册商。法律列出了受保护的名称与标志：商业登记簿与基金会登记簿中的名称、协会登记簿中的名称、芬兰商标注册簿与欧盟商标注册簿中的标志、公共机构名称等，申请人须自行确认所选名字不侵犯它们；Traficom 维护登记簿并处理争议。Traficom 官网未在本轮抓取中给出可直接引用的注册总量，本页因此不写数字。费用一栏需要说明：.fi 在 2026 年 9 月 6 日的 /api/prices 抓取中没有实时报价，页面显示的是静态参考价（首年与续费均约 ¥72），以注册商为准。起名建议：芬兰语复合词长而独特，在 .fi 下辨识度高；含 ä ö å 的名字可注册 IDN，同时持有 ASCII 版本更稳；注册前先在芬兰专利与注册局（PRH）的商标与商业名称数据库自查，因为受保护名称的侵权认定由法律直接规定；境外个人注意选 EU/EEA 内的注册商。",
+      bestFor: [
+        "在芬兰经营的企业与机构",
+        "面向芬兰用户的电商与服务",
+        "用芬兰语词（含 ä ö å）命名的品牌",
+        "通过 EU/EEA 注册商办理的境外个人",
+      ],
       namingTips: [
-        "无资格限制，任何人可直接注册、无需本地地址",
-        "注册续费均约 $10/年，国家机构定价、稳定无钩子",
-        "游戏与深科技用 .fi 自带赫尔辛基科技圈联想",
-        "受众在芬兰本土，纯外部市场业务信号较弱",
+        "公司、组织、个人不限所在地均可注册，但须录入并核验身份识别信息",
+        "先查 PRH 商标与商业名称库，受保护名称的侵权认定由法律直接规定",
+        "ä ö å 拼法可注册 IDN，建议同时持有 ASCII 版本",
+        "境外个人须通过 EU/EEA 内的注册商办理",
       ],
     },
     en: {
       title: ".fi Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".fi is Finland's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Finland-market brands, tech and gaming businesses. See live pricing and naming advice, then hunt available .fi names with AI.",
+        ".fi is administered by Traficom, the Finnish Transport and Communications Agency, under chapter 21 of the Act on Electronic Communications Services (917/2014); companies, organisations and individuals can register regardless of domicile, but registrars must record the holder's identity details. See .fi pricing and naming advice, then hunt available .fi names with AI.",
       intro:
-        ".fi is Finland's country-code domain, run by the Finnish Transport and Communications Agency (Traficom) with about 550,000 registrations. Finnish consumers have a strong local preference: name.fi says \"a Finnish business\" at a glance, with trust far beyond any new gTLD — Finnish companies and government institutions overwhelmingly live on .fi; Google also geo-associates .fi sites with Finland, a natural boost for Finnish-market SEO. Finland is also a global gaming and mobile-tech powerhouse — Nokia, Supercell (Clash of Clans) and Rovio (Angry Birds) all started here — so .fi carries a \"Helsinki tech circle\" halo for game studios and deep-tech startups. On eligibility, .fi has been fully open since 2016: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is cheap and flat: about $10/yr to register (≈¥72) with the same renewal — set by a national agency, stable for years with no teaser games. Inventory beats .com by a wide margin, and both Finnish and English roots hit well — Finnish English proficiency is excellent, so English roots work perfectly. For naming, a straight brand word is the mainstream shape (brand.fi); gaming and tech ventures can use function words to borrow the Finnish tech halo, and local services fit trade-word + .fi. One caution: the audience is primarily Finland — the signal is weaker for purely external markets.",
-      bestFor: ["Local Finnish businesses & services", "Game studios & deep-tech startups", "Finland-facing e-commerce", "Finnish-language content & media"],
+        ".fi is one of the few ccTLDs run directly by a national regulator: the manager is Traficom, the Finnish Transport and Communications Agency, with an IANA delegation date of 17 December 1986, a registry site at domain.fi and RDAP at rdap.fi. The legal basis is chapter 21 of the Act on Electronic Communications Services (917/2014), supplemented by Traficom's Domain Name Regulation M 68, which has been updated to reflect the NIS 2 Directive. On eligibility, the Finnish public-service portal Suomi.fi states that all companies, organisations and private persons can register a fi-domain name, with no Finnish-residence condition; however, the regulation requires the registrar to enter the holder's name and identifier in the domain name register — a personal identity code for individuals (or other identifying information where none exists) and a business identity code for organisations — and to verify that data. Traficom's 2026 registrar guide adds that registrars located outside the EU/EEA cannot register fi-domain names for private individuals because of data-transfer restrictions, so an individual abroad should use a registrar inside the EU/EEA. The Act lists protected names and marks — names in the trade and foundation registers, names in the register of associations, marks in the Finnish and EU trademark registers, names of public bodies — and the applicant is responsible for checking that the chosen name does not infringe them; Traficom maintains the register and resolves disputes. Traficom's site did not yield a directly quotable total registration count in this round of research, so this page states none. The price line needs a caveat: .fi carried no live quote in the 6 September 2026 /api/prices pull, so the figure on this page is a static reference (about ¥72 for both first year and renewal); the registrar page is authoritative. Naming suggestions: Finnish compound words are long and distinctive and read well under .fi; names with ä, ö or å can be registered as IDNs, with the ASCII spelling held alongside; search the trademark and business-name databases of the Finnish Patent and Registration Office (PRH) before registering, since infringement of protected names is defined directly in law; and if you are an individual outside Finland, pick a registrar inside the EU/EEA.",
+      bestFor: [
+        "Companies and institutions operating in Finland",
+        "E-commerce and services aimed at Finnish users",
+        "Brands built on Finnish words, ä/ö/å included",
+        "Individuals abroad registering through an EU/EEA registrar",
+      ],
       namingTips: [
-        "No eligibility restrictions — anyone can register, no local address needed",
-        "About $10/yr flat — priced by a national agency, stable with no traps",
-        "Gaming and deep tech on .fi borrow the Helsinki tech-circle halo",
-        "Audience is primarily Finland — weaker signal for purely external markets",
+        "Companies, organisations and individuals may register from anywhere, but identity details are recorded and verified",
+        "Search PRH trademark and business-name registers first — protected-name infringement is defined in law",
+        "ä/ö/å spellings register as IDNs; hold the ASCII version too",
+        "Individuals outside Finland must use a registrar inside the EU/EEA",
       ],
     },
   },
@@ -10888,29 +11119,40 @@ const GUIDES = {
     tld: "no",
     zh: {
       title: ".no 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".no 是挪威国家域名，需挪威本地注册组织（企业需在 Brønnøysund 登记）才能持有，本地信任度极高，适合真正扎根挪威市场的企业与品牌。查看 .no 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .no 域名。",
+      metaDescription:
+        ".no 由 Norid AS 管理，申请人须为在挪威中央实体登记簿（Brønnøysund）登记的组织或持 11 位挪威身份号的 18 岁以上个人、并有挪威邮寄地址，组织最多 100 个、个人最多 5 个，现有 .no 域名 883,732 个。查看 .no 注册/续费价格与命名建议，用 AI 猎取可注册的 .no 域名。",
       intro:
-        ".no 是挪威的国家域名，由注册局 Norid 运营，注册量约 85 万。挪威是全球人均 GDP 最高的国家之一，消费者对本土信号极为敏感：本地电商、品牌官网与服务商用 name.no，「挪威的生意」一眼讲清，信任度远超一般新后缀——挪威本土企业与政府机构的主站几乎都在 .no 上；Google 也会把 .no 站点与挪威地区相关联，挪威语市场 SEO 有天然加成。资格上 .no 有硬门槛：注册人须为在挪威 Brønnøysund 登记册注册的组织（个人可在 priv.no 二级下注册），海外企业需先设立挪威分支或通过本地代理持有——这道门槛让 .no 几乎没有投机注册，域名与真实挪威业务强绑定，本地信任度在欧洲 ccTLD 中数一数二。价格中等且平续：注册约 $15/年（约 ¥110），续费同价，无引流钩子。库存干净充裕，挪威语与英文词根命中率都高。命名上品牌词直接上（brand.no）最主流；油气、海事与渔业等挪威优势产业可用「品类词 + .no」讲清出身，本地服务用「行业词 + .no」。注意：没有挪威登记组织就无法直接持有，进入挪威市场前先把主体架构准备好。",
-      bestFor: ["挪威本地企业与服务", "进入挪威市场的跨国业务", "油气、海事与渔业相关公司", "挪威语内容与媒体站"],
+        "挪威的 .no 由 Norid AS 管理，IANA 委托日期 1987 年 3 月 17 日，官网 norid.no，RDAP 服务在 rdap.norid.no。它在本站收录的欧洲 ccTLD 里资格条件最具体：Norid 技术文档「General requirements」规定申请人必须是在挪威中央实体登记簿 Enhetsregisteret（Brønnøysund 登记中心）登记的组织，或者持有 11 位挪威身份号（fødselsnummer 或 D 号）的 18 岁以上个人；申请人还须有挪威邮寄地址。配额也是硬性的：每个组织最多持有 100 个 .no 域名，每个个人最多 5 个——这一限制直接压低了投机注册，也意味着境外公司要先在挪威登记实体才能持有 .no。Norid 关键数据页给出的现状：.no 域名 883,732 个、持有人 341,690 个、注册商 259 家；2004 年 2 月起可注册含挪威语字符（如 æ ø å）的域名，2020 年总量突破 80 万。争议与规则见 Norid 发布的《.no 域名政策》（regelverk for .no）第 5.1、5.2 节。费用一项，2026 年 9 月 6 日 DomainHunter 的 /api/prices 抓取没有 .no 的实时数据，本页仅显示静态参考价（首年与续费均约 ¥110），以注册商为准。起名建议：先确认资格——没有挪威组织登记或身份号的团队无法直接注册，部分注册商提供在挪威设立实体的配套服务但会增加成本；因为个人只有 5 个配额，先把主品牌和最重要的拼写变体排好优先级；挪威语词可带 æ ø å 注册，同时持有 ae/oe/aa 转写版本；面向北欧多国的业务可以让 .no 只承担挪威站，其他国家分别用 .se/.dk/.fi。",
+      bestFor: [
+        "在挪威登记的公司与组织",
+        "持挪威身份号的个人项目（最多 5 个）",
+        "用挪威语词（含 æ ø å）命名的本地品牌",
+        "北欧多国布局中的挪威站点",
+      ],
       namingTips: [
-        "需挪威 Brønnøysund 登记组织才能持有（个人限 priv.no）",
-        "注册续费均约 $15/年，平续无钩子",
-        "本地主体门槛让 .no 与真实挪威业务强绑定、信任度极高",
-        "海外企业先设挪威分支或经本地代理再注册",
+        "须为 Brønnøysund 登记的组织或持挪威身份号的成年个人，且有挪威邮寄地址",
+        "配额：组织 100 个、个人 5 个，先排好主品牌与拼写变体的优先级",
+        "挪威语 æ ø å 可注册，同时持有 ae/oe/aa 转写版本",
+        "无实时报价时页面显示参考价（约 ¥110/年），以注册商为准",
       ],
     },
     en: {
       title: ".no Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".no is Norway's country domain — it requires a Norwegian-registered organization (listed in the Brønnøysund Register) to hold — with top-tier local trust for businesses genuinely rooted in the Norwegian market. See live pricing and naming advice, then hunt available .no names with AI.",
+        ".no is administered by Norid AS; applicants must be an organisation registered in Norway's Central Coordinating Register (Brønnøysund) or an individual aged 18 or over with an 11-digit Norwegian identity number, must have a Norwegian postal address, and are capped at 100 names per organisation and 5 per individual, with 883,732 .no names registered. See .no pricing and naming advice, then hunt available .no names with AI.",
       intro:
-        ".no is Norway's country-code domain, run by registry Norid with about 850,000 registrations. Norway has one of the world's highest GDPs per capita, and consumers are highly attuned to local signals: name.no says \"a Norwegian business\" at a glance, with trust far beyond any new gTLD — Norwegian companies and government institutions overwhelmingly live on .no; Google also geo-associates .no sites with Norway, a natural boost for Norwegian-market SEO. Eligibility is a hard bar: registrants must be organizations listed in Norway's Brønnøysund Register (individuals can register under the priv.no second level), so foreign companies need a Norwegian branch or a local agent to hold one — a bar that leaves .no with virtually no speculative registrations, binding domains to real Norwegian businesses and making its local trust among the highest of any European ccTLD. Pricing is moderate and flat: about $15/yr to register (≈¥110) with the same renewal, no teaser games. Inventory is clean and plentiful, and both Norwegian and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.no); Norway's flagship industries — oil & gas, maritime and fisheries — fit category + .no to claim origin, and local services fit trade-word + .no. One caution: without a Norwegian-registered organization you cannot hold one directly — set up your entity before entering the market.",
-      bestFor: ["Local Norwegian businesses & services", "Multinationals entering the Norwegian market", "Oil & gas, maritime & fisheries companies", "Norwegian-language content & media"],
+        "Norway's .no is administered by Norid AS, delegated by IANA on 17 March 1987, with its site at norid.no and RDAP at rdap.norid.no. Among the European ccTLDs listed on this site it has the most concrete eligibility rules: Norid's technical documentation (\"General requirements\") states that the applicant must be an organisation registered in the Central Coordinating Register for Legal Entities, Enhetsregisteret, at the Brønnøysund Register Centre, or an individual aged 18 or over holding an 11-digit Norwegian identity number (fødselsnummer or D-number), and the applicant must have a Norwegian postal address. Quotas are equally firm: an organisation may hold at most 100 .no names and an individual at most 5 — a limit that directly suppresses speculative registration and means a foreign company has to register a Norwegian entity before it can hold .no. Norid's key-figures page gives the current state: 883,732 .no names, 341,690 holders and 259 registrars; names containing Norwegian characters such as æ, ø and å have been registrable since February 2004, and the zone passed 800,000 names in 2020. Disputes and rules are set out in Norid's .no domain name policy (regelverk for .no), sections 5.1 and 5.2. For fees, DomainHunter's 6 September 2026 /api/prices pull held no live .no data and this page shows only a static reference (about ¥110 for both first year and renewal); the registrar page is authoritative. Naming suggestions: confirm eligibility first — a team without a Norwegian organisation registration or identity number cannot register directly, and while some registrars bundle Norwegian entity formation, that adds cost; because individuals get only five names, rank the main brand and its most important spelling variants before registering; Norwegian words can be registered with æ, ø and å, with the ae/oe/aa transliterations held alongside; and in a multi-country Nordic footprint let .no carry only the Norwegian site, using .se, .dk and .fi for the others.",
+      bestFor: [
+        "Companies and organisations registered in Norway",
+        "Personal projects of Norwegian identity-number holders (5 names max)",
+        "Local brands built on Norwegian words, æ/ø/å included",
+        "The Norwegian site within a multi-country Nordic footprint",
+      ],
       namingTips: [
-        "Requires a Brønnøysund-registered Norwegian organization (individuals: priv.no only)",
-        "About $15/yr flat to register and renew — no traps",
-        "The local-entity bar binds .no to real Norwegian businesses — top-tier trust",
-        "Foreign companies: set up a Norwegian branch or use a local agent first",
+        "Must be a Brønnøysund-registered organisation or an adult with a Norwegian identity number, with a Norwegian postal address",
+        "Quotas: 100 names per organisation, 5 per individual — rank brand and spelling variants first",
+        "Norwegian æ/ø/å can be registered; hold the ae/oe/aa transliterations too",
+        "Without a live quote the page shows a reference price (≈¥110/yr); the registrar is authoritative",
       ],
     },
   },
@@ -10918,29 +11160,40 @@ const GUIDES = {
     tld: "ie",
     zh: {
       title: ".ie 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".ie 是爱尔兰国家域名，注册需证明与爱尔兰的真实联系（公民身份或在爱业务），本地信任度极高，适合面向爱尔兰市场的品牌与欧洲总部业务。查看 .ie 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .ie 域名。",
+      metaDescription:
+        ".ie 由 IE Domain Registry CLG（.IE）管理，注册人须证明与爱尔兰岛的「真实且实质的联系」（如 CRO 公司号、VAT 号，境外者须证明与爱尔兰客户或企业有交易），2018 年 3 月 21 日起取消「对名字的主张」要求。查看 .ie 注册/续费价格与命名建议，用 AI 猎取可注册的 .ie 域名。",
       intro:
-        ".ie 是爱尔兰的国家域名，由注册局 .IE（原 IEDR）运营，注册量约 33 万。爱尔兰是欧盟唯一以英语为主要语言的大市场，也是 Google、Apple、Meta 等科技巨头的欧洲总部所在地：本地电商、品牌官网与服务商用 name.ie，「爱尔兰的生意」一眼讲清，信任度远超一般新后缀——爱尔兰本土企业与政府机构的主站几乎都在 .ie 上；Google 也会把 .ie 站点与爱尔兰地区相关联，本地 SEO 有天然加成。资格上 .ie 有门槛：注册需证明与爱尔兰的真实联系——爱尔兰公民/居民出示身份证明，企业出示在爱业务证明（公司注册号、税号或向爱尔兰市场经营的证据），审核通常一两个工作日。这道门槛让 .ie 几乎没有投机注册，域名与真实爱尔兰业务强绑定。价格中等偏上且平续：注册约 $25/年（约 ¥180），续费同价，无引流钩子。库存干净充裕，英文词根命中率高——爱尔兰市场即英语市场，词根无需翻译。命名上品牌词直接上（brand.ie）最主流；本地服务用「行业词 + .ie」，面向欧洲的英语业务可用 .ie 讲「欧盟 + 英语」双重定位。注意：没有爱尔兰联系无法注册，进入市场前先准备资格材料。",
-      bestFor: ["爱尔兰本地企业与服务", "在爱设欧洲总部的科技公司", "面向爱尔兰的电商与品牌", "英语内容与媒体站"],
+        "爱尔兰的 .ie 由 IE Domain Registry CLG（品牌名 .IE）管理，IANA 委托日期 1988 年 1 月 27 日，官网 weare.ie。它的资格设计和 .uk、.de 这类开放型 ccTLD 不同：注册局的《Registration and Naming Policy》（2023 年版）要求每个注册人证明与爱尔兰岛的「真实且实质的联系」（real and substantive connection），爱尔兰公司通常用 CRO 公司登记号或 VAT 号证明，而境外申请人需要证明与爱尔兰消费者或企业有实际交易（例如面向爱尔兰的发票、合同或营销材料）。2018 年 3 月 21 日的政策放开（liberalisation）取消了此前「必须证明对该名字有主张」的要求——不再要求域名与商号或商标对应，但爱尔兰联系与身份证明保留至今，所以 .ie 仍是「先审后注」的模式。争议依《IE Dispute Resolution Policy》处理。注册局官网在本轮抓取中没有可直接引用的注册总量，本页不写数字。价格提示：.ie 在 2026 年 9 月 6 日的 /api/prices 抓取里没有实时报价，页面价格区因而是静态参考价（首年与续费均约 ¥180），以注册商为准。起名建议：先备齐文件——爱尔兰公司准备 CRO/VAT 号，境外企业准备能证明爱尔兰业务的材料，缺文件是 .ie 申请被退回的主要原因；放开后名字不必与商号一致，因此可以直接用品牌词或描述词；爱尔兰语（Gaeilge）词汇带长音符（á é í ó ú）的拼法需先向注册商确认是否支持 IDN 注册，本轮未在官网核实到 IDN 政策文本；北爱尔兰的注册人同样可以证明与爱尔兰岛的联系。",
+      bestFor: [
+        "有 CRO 或 VAT 号的爱尔兰公司",
+        "能证明与爱尔兰客户有交易的境外企业",
+        "爱尔兰岛（含北爱尔兰）的本地服务与机构",
+        "面向爱尔兰用户、不受商号一致性限制的品牌",
+      ],
       namingTips: [
-        "需证明爱尔兰联系（公民身份或在爱业务），审核约一两个工作日",
-        "注册续费均约 $25/年，平续无钩子",
-        "资格门槛让 .ie 与真实爱尔兰业务强绑定、库存干净",
-        "欧盟唯一英语大市场，英文词根无需翻译",
+        "须证明与爱尔兰岛的真实且实质联系（CRO/VAT 号或交易证明），先审后注",
+        "2018 年放开后名字不必与商号或商标一致，可直接用品牌词",
+        "缺文件是申请被退回的主要原因，提交前备齐证明",
+        "无实时报价时页面显示参考价（约 ¥180/年），以注册商为准",
       ],
     },
     en: {
       title: ".ie Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".ie is Ireland's country domain — registration requires proof of a real connection to Ireland (citizenship or trading there) — with top-tier local trust for Ireland-market brands and European-HQ businesses. See live pricing and naming advice, then hunt available .ie names with AI.",
+        ".ie is administered by IE Domain Registry CLG (.IE); registrants must prove a real and substantive connection to the island of Ireland (a CRO company number or VAT number, or for applicants abroad evidence of trading with Irish customers or businesses), and the claim-to-the-name requirement was dropped on 21 March 2018. See .ie pricing and naming advice, then hunt available .ie names with AI.",
       intro:
-        ".ie is Ireland's country-code domain, run by the .IE registry (formerly IEDR) with about 330,000 registrations. Ireland is the EU's only major English-speaking market and hosts the European headquarters of Google, Apple, Meta and other tech giants: name.ie says \"an Irish business\" at a glance, with trust far beyond any new gTLD — Irish companies and government institutions overwhelmingly live on .ie; Google also geo-associates .ie sites with Ireland, a natural boost for local SEO. Eligibility has a bar: registration requires proof of a real connection to Ireland — citizens/residents show identity documents, businesses show evidence of trading in or with Ireland (company registration number, tax number or market evidence), with checks typically taking a day or two. The bar leaves .ie with virtually no speculative registrations, binding domains to real Irish businesses. Pricing is upper-moderate and flat: about $25/yr to register (≈¥180) with the same renewal, no teaser games. Inventory is clean and plentiful, and English roots hit well — the Irish market is an English market, no translation needed. For naming, a straight brand word is the mainstream shape (brand.ie); local services fit trade-word + .ie, and Europe-facing English businesses can use .ie to claim the \"EU + English\" double position. One caution: without an Irish connection you cannot register — prepare your eligibility documents before entering the market.",
-      bestFor: ["Local Irish businesses & services", "Tech companies with European HQs in Ireland", "Ireland-facing e-commerce & brands", "English-language content & media"],
+        "Ireland's .ie is administered by IE Domain Registry CLG, branded .IE, delegated by IANA on 27 January 1988 and found at weare.ie. Its eligibility design differs from open ccTLDs such as .uk or .de: the registry's Registration and Naming Policy (2023 edition) requires every registrant to demonstrate a real and substantive connection to the island of Ireland — Irish companies usually cite a CRO company registration number or VAT number, and applicants outside Ireland need evidence of actual trading with Irish consumers or businesses, such as invoices, contracts or marketing aimed at Ireland. The liberalisation of 21 March 2018 removed the earlier requirement to prove a claim to the specific name — the domain no longer has to match a business name or trademark — but the Irish-connection and identity checks remain, so .ie still works on a validate-then-register basis. Disputes are handled under the IE Dispute Resolution Policy. The registry site did not yield a directly quotable total registration count in this round of research, so this page states none. Price caveat: .ie had no live quote in the 6 September 2026 /api/prices pull, so the panel on this page is a static reference (about ¥180 for both first year and renewal); the registrar page is authoritative. Naming suggestions: assemble the paperwork first — a CRO or VAT number for Irish companies, evidence of Irish business for foreign firms — because missing documents are the main reason .ie applications are returned; since liberalisation the name need not match a business name, so a brand word or descriptive term is fine; for Irish-language (Gaeilge) words with síneadh fada accents (á, é, í, ó, ú), ask the registrar whether IDN registration is supported, as this round did not locate an IDN policy text on the registry site; and registrants in Northern Ireland can equally demonstrate a connection to the island of Ireland.",
+      bestFor: [
+        "Irish companies with a CRO or VAT number",
+        "Foreign businesses able to show trading with Irish customers",
+        "Local services and institutions across the island of Ireland, Northern Ireland included",
+        "Brands for Irish users, free of the old business-name matching rule",
+      ],
       namingTips: [
-        "Requires proof of Irish connection (citizenship or trading there) — checks take a day or two",
-        "About $25/yr flat to register and renew — no traps",
-        "The eligibility bar binds .ie to real Irish businesses — clean inventory",
-        "The EU's only major English market — English roots need no translation",
+        "Prove a real and substantive connection to the island of Ireland (CRO/VAT or trading evidence); validation comes first",
+        "Since the 2018 liberalisation the name need not match a business name or trademark",
+        "Missing documents are the main reason applications bounce — prepare evidence before submitting",
+        "Without a live quote the page shows a reference price (≈¥180/yr); the registrar is authoritative",
       ],
     },
   },
@@ -10948,29 +11201,40 @@ const GUIDES = {
     tld: "nz",
     zh: {
       title: ".nz 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".nz 是新西兰国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向新西兰市场的品牌、旅游与农产品业务。查看 .nz 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .nz 域名。",
+      metaDescription:
+        ".nz 由 InternetNZ 管理、其子公司 Domain Name Commission 负责监管，申请人只需是 18 岁以上可识别的个人或合法成立的实体，不要求新西兰本地存在，2026 年 2 月注册总数 763,127 个。查看 .nz 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .nz 域名。",
       intro:
-        ".nz 是新西兰的国家域名，由非营利机构 InternetNZ 运营，注册量约 75 万。新西兰消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.nz，「新西兰的生意」一眼讲清，信任度远超一般新后缀——新西兰本土企业与政府机构的主站几乎都在 .nz（或传统的 .co.nz）上；Google 也会把 .nz 站点与新西兰地区相关联，本地 SEO 有天然加成。新西兰的「纯净」国家品牌还让 .nz 对旅游、户外与农产品出口业务自带联想——奇异果、羊毛与《指环王》取景地都是全球名片。资格上 .nz 完全开放：2014 年起开放顶级直注，任何国家的个人与机构都能直接注册，无需本地地址或代理（传统的 .co.nz 同样开放）。价格中等且平续：注册约 $20/年（约 ¥145），续费同价，无引流钩子。库存比 .com 充裕，英文与毛利语词根命中率都高。命名上品牌词直接上（brand.nz）最主流；旅游与农产品业务可用「品类词 + .nz」借纯净新西兰联想，本地服务用「行业词 + .nz」。注意受众主要在新西兰本土，纯外部市场业务信号较弱。",
-      bestFor: ["新西兰本地企业与服务", "旅游、户外与探险业务", "农产品与食品出口品牌", "面向新西兰的电商"],
+        "InternetNZ 是 IANA 记录的 .nz 管理者（委托日期 1987 年 1 月 19 日），日常监管由其子公司 Domain Name Commission Ltd（DNCL）执行，规则文本是《.nz Rules》——2025 年 7 月 1 日生效的 3.1 版和 2026 年 3 月 17 日的 3.2 版都可在 internetnz.nz 下载。规则第 2.2.1 条对申请人的要求只有两点：18 岁以上、可被识别（能提供护照或驾照等证明）的个人，或合法成立的实体；没有新西兰住所、公司注册或本地代理的条款，这是 .nz 与 .au、.ca 在资格上的根本差别。名字空间分三层：可以直接注册二级 anyname.nz；也可以在 .co.nz、.org.nz、.net.nz、.geek.nz、.gen.nz、.kiwi.nz、.maori.nz、.school.nz、.ac.nz 等「非审核二级域」下注册三级名；.govt.nz 等「审核二级域」则有专门的准入审核。InternetNZ 注册局统计页（docs.internetnz.nz/registry/stats）2026 年 2 月的数据：全部 763,127 个，其中直接二级 .nz 165,756 个、.co.nz 542,211 个——多数存量仍在 .co.nz，直接 .nz 是 2014 年之后才开放的较短形式。IDN 方面，2010 年 4 月 6 日起开放带长音符号的毛利语元音（ā ē ī ō ū）注册，同年 7 月 26 日全面放开，用于正确书写 te reo Māori 词汇。争议按《.nz Rules》附表 2 的 Dispute Resolution Service 处理，由 DNCL 管理。价格方面，DomainHunter 2026 年 9 月 6 日 /api/prices 的实时报价为首年 $14.98、续费 $14.99，两者几乎一致。命名建议：如果名字里含毛利语词，把长音符号版本与 ASCII 版本一起注册；面向本地消费者的项目可评估同时持有 .co.nz，因为新西兰用户对它的辨识度更久；面向海外用户的团队直接用二级 .nz 即可。",
+      bestFor: [
+        "面向新西兰用户的电商与服务",
+        "含毛利语词汇（可带长音符）的品牌",
+        "无需本地存在、想拿短名的海外注册人",
+        "同时持有 .co.nz 与 .nz 的本地企业",
+      ],
       namingTips: [
-        "无资格限制，任何人可直接注册、无需本地地址",
-        "注册续费均约 $20/年，平续无钩子",
-        "旅游与农产品用 .nz 自带纯净新西兰联想",
-        "受众在新西兰本土，纯外部市场业务信号较弱",
+        "申请人只需 18 岁以上、可识别，无新西兰住所要求",
+        "毛利语元音 ā ē ī ō ū 可注册，建议连同 ASCII 拼法一起保护",
+        "实时报价首年 $14.98、续费 $14.99，几乎同价",
+        "本地消费者对 .co.nz 更熟悉，预算允许可两者并持",
       ],
     },
     en: {
       title: ".nz Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".nz is New Zealand's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for New Zealand-market brands, tourism and agri-export businesses. See live pricing and naming advice, then hunt available .nz names with AI.",
+        ".nz is managed by InternetNZ and overseen by its subsidiary the Domain Name Commission; the only registrant requirement is being an identifiable individual aged 18 or over or a legally constituted entity, with no New Zealand presence needed, and the register held 763,127 names in February 2026. See live .nz pricing and naming advice, then hunt available .nz names with AI.",
       intro:
-        ".nz is New Zealand's country-code domain, run by non-profit InternetNZ with about 750,000 registrations. New Zealand consumers have a strong local preference: name.nz says \"a Kiwi business\" at a glance, with trust far beyond any new gTLD — New Zealand companies and government institutions overwhelmingly live on .nz (or the traditional .co.nz); Google also geo-associates .nz sites with New Zealand, a natural boost for local SEO. New Zealand's \"pure\" national brand adds a halo for tourism, outdoor and agri-export ventures — kiwifruit, wool and Lord of the Rings filming locations are global calling cards. On eligibility, .nz is fully open: direct second-level registration opened in 2014, and individuals and organizations from anywhere can register with no local address or proxy (the traditional .co.nz is equally open). Pricing is moderate and flat: about $20/yr to register (≈¥145) with the same renewal, no teaser games. Inventory beats .com, and both English and Māori roots hit well. For naming, a straight brand word is the mainstream shape (brand.nz); tourism and agri ventures can use category + .nz to borrow the pure-New-Zealand halo, and local services fit trade-word + .nz. One caution: the audience is primarily New Zealand — the signal is weaker for purely external markets.",
-      bestFor: ["Local New Zealand businesses & services", "Tourism, outdoor & adventure ventures", "Agri & food export brands", "New Zealand-facing e-commerce"],
+        "InternetNZ is the IANA-recorded manager of .nz (delegated 19 January 1987), and day-to-day oversight sits with its subsidiary Domain Name Commission Ltd (DNCL). The governing text is the .nz Rules — version 3.1 took effect on 1 July 2025 and version 3.2 on 17 March 2026, both downloadable from internetnz.nz. Clause 2.2.1 asks two things of an applicant: be an identifiable individual aged 18 or over (able to show a passport or driver licence) or a legally constituted entity; there is no clause about a New Zealand address, company registration or local agent, which is the fundamental difference between .nz and its .au or .ca neighbours. The namespace has three layers: you can register directly at the second level (anyname.nz); you can register a third-level name under the unmoderated second-level domains .co.nz, .org.nz, .net.nz, .geek.nz, .gen.nz, .kiwi.nz, .maori.nz, .school.nz and .ac.nz; and moderated domains such as .govt.nz apply their own admission checks. The InternetNZ registry statistics page (docs.internetnz.nz/registry/stats) for February 2026 shows 763,127 names in total, of which 165,756 are direct second-level .nz and 542,211 are .co.nz — most of the installed base is still under .co.nz, and direct .nz is the shorter form opened after 2014. On IDNs, macronised Māori vowels (ā, ē, ī, ō, ū) became available through a sunrise that opened on 6 April 2010 and general availability from 26 July 2010, so te reo Māori words can be spelled correctly. Disputes go through the Dispute Resolution Service in Schedule 2 of the .nz Rules, administered by DNCL. Pricing: DomainHunter's live /api/prices quote on 6 September 2026 was $14.98 for the first year and $14.99 to renew, effectively flat. Naming advice: if the name contains a Māori word, register the macronised and ASCII spellings together; a consumer-facing New Zealand business may want the matching .co.nz as well, because local users have recognised it for far longer; a team addressing overseas users can simply use the second-level .nz.",
+      bestFor: [
+        "E-commerce and services for New Zealand users",
+        "Brands built on Māori words, with or without macrons",
+        "Overseas registrants who want a short name without local presence",
+        "Local firms holding both .co.nz and .nz",
+      ],
       namingTips: [
-        "No eligibility restrictions — anyone can register, no local address needed",
-        "About $20/yr flat to register and renew — no traps",
-        "Tourism and agri on .nz borrow the pure-New-Zealand halo",
-        "Audience is primarily New Zealand — weaker signal for purely external markets",
+        "Applicants need only be identifiable and 18+; no New Zealand address is required",
+        "Māori vowels ā/ē/ī/ō/ū can be registered — protect the ASCII spelling too",
+        "Live quote $14.98 first year / $14.99 renewal, effectively flat",
+        "Local consumers know .co.nz better; hold both if budget allows",
       ],
     },
   },
@@ -10978,29 +11242,40 @@ const GUIDES = {
     tld: "mx",
     zh: {
       title: ".mx 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".mx 是墨西哥国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向墨西哥与西语美洲市场的品牌与电商。注意首年便宜续费上浮。查看 .mx 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .mx 域名。",
+      metaDescription:
+        ".mx 二级注册不设资格限制，由 Registry .MX（NIC México）在 IANA 委托给蒙特雷科技大学的框架下运营，官方即时统计显示 .mx 直接注册 439,371 个、全部类别 1,447,226 个，适合在墨西哥经营或服务西语用户的项目。查看 .mx 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .mx 域名。",
       intro:
-        ".mx 是墨西哥的国家域名，由 Registry MX（NIC México）运营，注册量约 130 万。墨西哥是拉美第二大经济体、全球第一大西语国家（人口约 1.3 亿），电商增速常年位居全球前列，本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.mx，「墨西哥的生意」一眼讲清，信任度远超一般新后缀——墨西哥本土企业与机构的主站大多在 .mx（或传统的 .com.mx）上；Google 也会把 .mx 站点与墨西哥地区相关联，西语市场 SEO 有天然加成。美墨近岸外包（nearshoring）浪潮下，制造与供应链业务用 .mx 讲「墨西哥落地」也很自然。资格上顶级 .mx 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格要留意：首年常见促销约 $13（约 ¥90），续费约 $50/年（约 ¥360）——注册前把续费价算进预算，别被首年低价钩住。库存比 .com 充裕得多，西语与英文词根命中率都高。命名上品牌词直接上（brand.mx）最主流；本地服务用「行业词 + .mx」，跨境电商与近岸制造可用「品类词 + .mx」讲清市场定位。注意受众主要在墨西哥与西语圈，纯英语市场业务信号较弱。",
-      bestFor: ["墨西哥本地企业与服务", "面向墨西哥的跨境电商", "近岸制造与供应链业务", "西语内容与媒体站"],
+        "IANA 根区数据库把 .mx 的管理者记为 NIC-Mexico（蒙特雷科技大学 ITESM Campus Monterrey），委托日期 1989 年 2 月 1 日；注册局官网 registry.mx 的政策文件进一步说明，2003 年 11 月起由 Network Information Center, S.A. de C.V.（Registry .MX）承担实际管理与注册职能。资格方面，WIPO 的 .MX ccTLD 页转述注册局政策：「.MX 域名注册不受限制，限制只适用于第三级域名」——也就是说 name.mx 任何人可申请，而 .com.mx / .org.mx / .edu.mx / .gob.mx 等分类各有条件，具体条件见注册局《.MX 域名总政策》。注册局的即时统计页（statistics_mx.jsf）给出的总数是 1,447,226 个，其中 .com.mx 963,562 个（66.6%）、直接 .mx 439,371 个（30.4%），其余为 org/edu/gob/net 分类——可见墨西哥本地机构大量沿用 .com.mx，直接 .mx 反而是较新、较短的选项。争议解决适用 LDRP（.MX 域名争议解决政策）及其规程，Registry .MX 指定 WIPO 为受理机构；注册局还维护一份「保留域名」清单，列入的名字不能注册或只能由特定主体注册。价格是 .mx 需要提前算清的一项：DomainHunter 2026 年 9 月 6 日的 /api/prices 实时报价为首年 $35.57、续费 $41.23，属于本站收录 ccTLD 里偏高的一档，且续费略高于首年，按多年持有成本预算更稳妥。命名上，西班牙语词在 .mx 下是自然选择，注意墨西哥西语的常用拼法与西班牙有差异；若目标客户同时包括拉美其他国家，可以用泛西语词而非墨西哥俚语；直接 .mx 与 .com.mx 是两个独立的名字空间，两者都空着时按预算决定是否同时持有。",
+      bestFor: [
+        "在墨西哥经营的企业与门店",
+        "面向墨西哥用户的西语内容站",
+        "拉美跨境电商的墨西哥站点",
+        "想用短于 .com.mx 的名字的本地品牌",
+      ],
       namingTips: [
-        "无资格限制，任何人可直接注册、无需本地地址",
-        "首年约 $13 但续费约 $50/年，预算按续费价算",
-        "近岸制造用「品类词 + .mx」讲清墨西哥落地",
-        "受众在墨西哥与西语圈，纯英语市场信号较弱",
+        "二级 .mx 不设资格限制，.com.mx 等三级分类各有条件",
+        "实时报价首年 $35.57、续费 $41.23，按多年持有成本预算",
+        "西语词优先，注意墨西哥拼法与西班牙拼法的差异",
+        "先查注册局保留域名清单，再决定是否同时持有 .com.mx",
       ],
     },
     en: {
       title: ".mx Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".mx is Mexico's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Mexico and Spanish-speaking-Americas brands and e-commerce. Watch the renewal step-up after a cheap first year. See live pricing and naming advice, then hunt available .mx names with AI.",
+        ".mx has no eligibility restriction at the second level and is operated by Registry .MX (NIC México) under IANA's delegation to ITESM Monterrey, with 439,371 direct .mx names and 1,447,226 across all categories in the registry's live statistics — for projects operating in Mexico or serving Spanish-speaking users. See live .mx pricing and naming advice, then hunt available .mx names with AI.",
       intro:
-        ".mx is Mexico's country-code domain, run by Registry MX (NIC México) with about 1.3 million registrations. Mexico is Latin America's second-largest economy and the world's largest Spanish-speaking country (about 130 million people), with e-commerce growth consistently among the world's fastest, and local consumers are strongly attuned to local signals: name.mx says \"a Mexican business\" at a glance, with trust far beyond any new gTLD — Mexican companies and institutions overwhelmingly live on .mx (or the traditional .com.mx); Google also geo-associates .mx sites with Mexico, a natural boost for Spanish-market SEO. Amid the US–Mexico nearshoring wave, manufacturing and supply-chain ventures naturally use .mx to signal \"on the ground in Mexico\". On eligibility, top-level .mx is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing needs attention: first-year promos run about $13 (≈¥90) but renewals are about $50/yr (≈¥360) — budget on the renewal price and don't get hooked by the teaser. Inventory beats .com by a wide margin, and both Spanish and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.mx); local services fit trade-word + .mx, and cross-border e-commerce or nearshoring ventures can use category + .mx to claim the market. One caution: the audience is Mexico and the Spanish-speaking sphere — the signal is weaker for purely English markets.",
-      bestFor: ["Local Mexican businesses & services", "Mexico-facing cross-border e-commerce", "Nearshoring manufacturing & supply chain", "Spanish-language content & media"],
+        "The IANA root database lists the .mx manager as NIC-Mexico (ITESM Campus Monterrey) with a delegation date of 1 February 1989; the policy documents on registry.mx add that since November 2003 the day-to-day registry and registration functions have been carried out by Network Information Center, S.A. de C.V., trading as Registry .MX. On eligibility, WIPO's ccTLD page for .MX summarises the registry policy in one line: registration of .MX domain names is not restricted, and restrictions apply only to third-level domains — so anyone may apply for name.mx, while .com.mx, .org.mx, .edu.mx and .gob.mx each carry their own conditions, spelled out in the registry's General Policies for .MX domain names. The registry's live statistics page (statistics_mx.jsf) reports 1,447,226 names in total, of which 963,562 (66.6%) sit under .com.mx and 439,371 (30.4%) are direct .mx registrations, with the remainder spread across org, edu, gob and net — a reminder that Mexican organisations still lean heavily on .com.mx, leaving direct .mx as the newer and shorter option. Disputes are governed by the LDRP (the .MX domain name dispute resolution policy) and its procedural rules, and Registry .MX has designated WIPO as the provider; the registry also maintains a list of reserved .MX names that either cannot be registered or are limited to specific entities. Price deserves a line of its own: DomainHunter's live /api/prices quote on 6 September 2026 was $35.57 for the first year and $41.23 to renew, which places .mx in the upper band of the ccTLDs listed on this site, with renewal slightly above the first-year fee — budget on multi-year holding cost. For naming, Spanish words are the natural fit, bearing in mind that Mexican Spanish spelling and vocabulary differ from Peninsular usage; if the audience spans other Latin American markets, prefer pan-Hispanic vocabulary over Mexican slang; and because direct .mx and .com.mx are separate namespaces, decide on budget grounds whether to hold both when both are free.",
+      bestFor: [
+        "Businesses and shops operating in Mexico",
+        "Spanish-language content for Mexican readers",
+        "Latin American cross-border stores with a Mexico site",
+        "Local brands wanting something shorter than .com.mx",
+      ],
       namingTips: [
-        "No eligibility restrictions — anyone can register, no local address needed",
-        "About $13 in year one but ~$50/yr renewal — budget on the renewal price",
-        "Nearshoring ventures use category + .mx to signal on-the-ground Mexico",
-        "Audience is Mexico & the Spanish-speaking sphere — weaker signal for purely English markets",
+        "Second-level .mx is unrestricted; .com.mx and other third-level classes have conditions",
+        "Live quote $35.57 first year / $41.23 renewal — budget on multi-year cost",
+        "Prefer Spanish words, minding Mexican vs Peninsular spelling differences",
+        "Check the registry's reserved-name list, then decide whether to hold .com.mx too",
       ],
     },
   },
@@ -11008,29 +11283,40 @@ const GUIDES = {
     tld: "br",
     zh: {
       title: ".br 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".br 是巴西国家域名，注册需巴西税号（CPF/CNPJ），本地信任度极高，适合面向巴西与葡语美洲市场的品牌与电商。查看 .br 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .br 域名。",
+      metaDescription:
+        ".br 由巴西互联网管理委员会（CGI.br）制定政策、Registro.br 运营，面向持有 CPF 的自然人与持有 CNPJ 的法人且须在巴西合法设立或有合法代表，外国公司可依 CGI.br 2008/008 号决议第 6 条申请临时注册。查看 .br 注册/续费价格与命名建议，用 AI 猎取可注册的 .br 域名。",
       intro:
-        ".br 是巴西的国家域名，由 Registro.br（NIC.br 下属）运营，注册量超过 500 万，是拉美最大的 ccTLD。巴西是拉美第一大经济体、全球最大葡语国家（人口约 2.1 亿），电商与数字支付（Pix）渗透率高速增长，本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.com.br 或 name.br，「巴西的生意」一眼讲清，信任度远超一般新后缀——巴西本土企业与机构的主站几乎都在 .br 体系上；Google 也会把 .br 站点与巴西地区相关联，葡语市场 SEO 有天然加成。资格上有硬门槛：注册人必须持有巴西税号——个人 CPF 或企业 CNPJ，外国公司需在巴西设实体或通过本地代理持有，这道门槛让 .br 几乎没有投机注册，域名与真实巴西业务强绑定。顶级直注（name.br）需在多个二级类别下先有注册记录，多数业务实际落在 .com.br 上。价格便宜且平续：约 $8/年（约 ¥60，R$40），续费同价，无引流钩子。库存干净充裕，葡语与英文词根命中率都高。命名上品牌词直接上（brand.com.br）最主流；本地服务用「行业词 + .com.br」，跨境电商用「品类词 + .br」讲清市场定位。注意：没有 CPF/CNPJ 无法注册，进入市场前先准备本地实体或代理。",
-      bestFor: ["巴西本地企业与服务", "面向巴西的跨境电商", "葡语内容与媒体站", "拉美市场品牌与金融科技"],
+        "巴西的 .br 在 IANA 记录里由巴西互联网管理委员会 Comitê Gestor da Internet no Brasil（CGI.br）管理，委托日期 1989 年 4 月 18 日，日常运营方是 NIC.br 下的 Registro.br，官网 registro.br，RDAP 服务在 rdap.registro.br。资格规则集中在两份文件：Registro.br 的「Regras」页说明 .br 面向在巴西合法设立或有合法代表、且在巴西税务登记状态正常的自然人（CPF）与法人（CNPJ）；CGI.br 2008/008 号决议第 2 条把注册人限定为在巴西合法运作的实体、自由职业者与自然人，第 6 条则允许外国公司在满足该条列出的条件时获得临时注册，具体条件以决议原文为准。技术上，Registro.br 要求域名至少配置 2 台权威 DNS 服务器；字符方面支持 á â ã é ê ç 等葡语重音字符，并做等价性比对——去掉重音后与已注册域名相同的字串视为同一个名字，不能被他人分别注册，这与多数注册局「IDN 与 ASCII 各自独立」的做法不同。Registro.br 的统计页数值依赖前端脚本渲染，本轮未能抓到可引用的总量，本页不写数字。费用：.br 在 DomainHunter 2026 年 9 月 6 日的 /api/prices 抓取中没有实时报价，价格区显示静态参考价（首年与续费均约 ¥60），以注册商为准。起名建议：外国团队要先算清路径——走第 6 条临时注册要先对照决议原文确认自己满足条件，或者干脆先设立巴西法人拿 CNPJ；由于重音等价性规则，注册 açaí 这类词时只需一个版本，其他人无法注册去重音版本；葡语词面向巴西用户最自然，注意巴西葡语与欧洲葡语的拼写差异（如 ação/acção）。",
+      bestFor: [
+        "持有 CNPJ 的巴西法人与持有 CPF 的个人",
+        "按 2008/008 决议第 6 条申请临时注册的外国公司",
+        "面向巴西用户的葡语电商与内容站",
+        "依赖重音等价性保护品牌拼写的项目",
+      ],
       namingTips: [
-        "需巴西税号（个人 CPF / 企业 CNPJ），外国公司先设实体或找本地代理",
-        "注册续费均约 $8/年（R$40），平续无钩子",
-        "多数业务落在 .com.br，顶级直注 name.br 有额外条件",
-        "税号门槛让 .br 与真实巴西业务强绑定、库存干净",
+        "须持 CPF/CNPJ 且在巴西合法设立或有合法代表；外国公司可依 2008/008 决议第 6 条临时注册",
+        "重音字符做等价性比对：açaí 与 acai 视为同名，只需注册一个版本",
+        "注册需至少 2 台权威 DNS 服务器，提前准备好解析",
+        "无实时报价时页面显示参考价（约 ¥60/年），以注册商为准",
       ],
     },
     en: {
       title: ".br Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".br is Brazil's country domain — registration requires a Brazilian tax ID (CPF/CNPJ) — with top-tier local trust for Brazil and Portuguese-speaking-Americas brands and e-commerce. See live pricing and naming advice, then hunt available .br names with AI.",
+        ".br policy is set by the Brazilian Internet Steering Committee (CGI.br) and the registry is operated by Registro.br; it is for natural persons holding a CPF and legal entities holding a CNPJ that are legally established or represented in Brazil, and foreign companies may obtain a provisional registration under article 6 of CGI.br Resolution 2008/008. See .br pricing and naming advice, then hunt available .br names with AI.",
       intro:
-        ".br is Brazil's country-code domain, run by Registro.br (under NIC.br) with over 5 million registrations — Latin America's largest ccTLD. Brazil is Latin America's biggest economy and the world's largest Portuguese-speaking country (about 210 million people), with fast-growing e-commerce and digital-payment (Pix) penetration, and local consumers are strongly attuned to local signals: name.com.br or name.br says \"a Brazilian business\" at a glance, with trust far beyond any new gTLD — Brazilian companies and institutions overwhelmingly live on the .br family; Google also geo-associates .br sites with Brazil, a natural boost for Portuguese-market SEO. Eligibility is a hard bar: registrants must hold a Brazilian tax ID — CPF for individuals or CNPJ for companies — so foreign companies need a Brazilian entity or a local agent to hold one, a bar that leaves .br with virtually no speculative registrations, binding domains to real Brazilian businesses. Direct second-level registration (name.br) has extra prerequisites, so most businesses live on .com.br. Pricing is cheap and flat: about $8/yr (≈¥60, R$40) with the same renewal, no teaser games. Inventory is clean and plentiful, and both Portuguese and English roots hit well. For naming, a straight brand word is the mainstream shape (brand.com.br); local services fit trade-word + .com.br, and cross-border e-commerce can use category + .br to claim the market. One caution: without a CPF/CNPJ you cannot register — set up your entity or agent before entering the market.",
-      bestFor: ["Local Brazilian businesses & services", "Brazil-facing cross-border e-commerce", "Portuguese-language content & media", "LatAm brands & fintech"],
+        "Brazil's .br is recorded by IANA under the Comitê Gestor da Internet no Brasil (CGI.br), delegated on 18 April 1989, and operated day to day by Registro.br within NIC.br, with its site at registro.br and RDAP at rdap.registro.br. Eligibility rests on two documents: the Registro.br rules page (\"Regras\") says .br is for natural persons (CPF) and legal entities (CNPJ) legally established or represented in Brazil whose Brazilian tax registration is in good standing; CGI.br Resolution 2008/008 limits registrants in article 2 to entities, self-employed professionals and natural persons legally operating in Brazil, while article 6 lets a foreign company obtain a provisional registration if it meets the conditions listed in that article — the resolution text itself is the reference for what those conditions are. Technically, Registro.br requires at least two authoritative DNS servers for every domain; on characters, it supports Portuguese accented letters such as á, â, ã, é, ê and ç and applies an equivalence check — a string that matches an existing domain once accents are stripped is treated as the same name and cannot be registered separately by someone else, unlike the usual registry practice of treating IDN and ASCII forms as independent. The Registro.br statistics page renders its figures with front-end scripts, and this round could not capture a quotable total, so this page states none. Fees: .br had no live quote in DomainHunter's /api/prices pull of 6 September 2026, so the price panel shows a static reference (about ¥60 for both first year and renewal); the registrar page is authoritative. Naming suggestions: a foreign team should map its route first — check the article 6 conditions against the resolution text before relying on the provisional path, or set up a Brazilian entity and obtain a CNPJ outright; thanks to the accent-equivalence rule, a word like açaí needs only one registration, since nobody else can take the accent-stripped form; and Portuguese words are the natural fit for Brazilian users, minding Brazilian versus European spelling (ação versus acção).",
+      bestFor: [
+        "Brazilian legal entities with a CNPJ and individuals with a CPF",
+        "Foreign companies seeking provisional registration under Resolution 2008/008 art. 6",
+        "Portuguese-language stores and content for Brazilian users",
+        "Projects relying on accent equivalence to protect a brand spelling",
+      ],
       namingTips: [
-        "Requires a Brazilian tax ID (CPF/CNPJ) — foreign companies need an entity or local agent",
-        "About $8/yr (R$40) flat to register and renew — no traps",
-        "Most businesses live on .com.br — direct name.br has extra prerequisites",
-        "The tax-ID bar binds .br to real Brazilian businesses — clean inventory",
+        "CPF/CNPJ plus legal establishment or representation in Brazil; foreign companies may use the Resolution 2008/008 art. 6 provisional route",
+        "Accents are checked for equivalence: açaí and acai count as one name, so register once",
+        "At least two authoritative DNS servers are required — prepare hosting first",
+        "Without a live quote the page shows a reference price (≈¥60/yr); the registrar is authoritative",
       ],
     },
   },
@@ -11038,29 +11324,40 @@ const GUIDES = {
     tld: "pt",
     zh: {
       title: ".pt 域名注册指南：适合谁、多少钱、怎么起名",
-      metaDescription: ".pt 是葡萄牙国家域名，无资格限制、任何人可注册，本地信任度极高，适合面向葡萄牙市场的品牌、旅游与数字游民业务。查看 .pt 实时注册/续费价格与命名建议，用 AI 猎取可注册的 .pt 域名。",
+      metaDescription:
+        ".pt 由葡萄牙非营利协会 Associação DNS.PT 管理，注册规则第 11 条允许所有个人与法人注册、可直接在 dns.pt 或经认证注册商办理，累计注册 2,126,386 个，适合在葡萄牙及葡语市场经营的项目。查看 .pt 注册/续费价格与命名建议，用 AI 猎取可注册的 .pt 域名。",
       intro:
-        ".pt 是葡萄牙的国家域名，由注册局 DNS.PT 运营，注册量约 140 万。葡萄牙近年是欧洲增长最快的科技与旅游目的地之一：里斯本与波尔图聚集大量创业公司与数字游民，Web Summit 每年在里斯本举办，旅游业占 GDP 比重居欧盟前列。本地消费者对本土信号非常敏感：本地电商、品牌官网与服务商用 name.pt，「葡萄牙的生意」一眼讲清，信任度远超一般新后缀——葡萄牙本土企业与政府机构的主站几乎都在 .pt 上；Google 也会把 .pt 站点与葡萄牙地区相关联，本地 SEO 有天然加成。资格上 .pt 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。价格中等且平续：注册约 $15/年（约 ¥110），续费同价，无引流钩子。库存比 .com 充裕，葡语与英文词根命中率都高——顺带一提，.pt 对面向葡语世界（巴西之外）的业务也是自然选择。命名上品牌词直接上（brand.pt）最主流；旅游与地产业务可用「品类词 + .pt」借葡萄牙热度，本地服务用「行业词 + .pt」。注意受众主要在葡萄牙本土，纯外部市场业务信号较弱。",
-      bestFor: ["葡萄牙本地企业与服务", "旅游、民宿与地产业务", "数字游民与创业公司", "葡语内容与媒体站"],
+        "管理 .pt 的是 Associação DNS.PT，一家葡萄牙非营利协会，IANA 记录的委托日期是 1988 年 6 月 30 日，官网 dns.pt（服务门户 pt.pt）。它的《.pt 注册规则》第 2 条给出两种注册途径：选择 DNS.PT 认证的注册商，或直接在 dns.pt 注册——后者只保证域名分配，不含托管与邮箱，未配置名称服务器的域名会停在「Reserved」状态、不进入 .pt 区文件。第 11 条「Legitimacy」写明「.pt 下的域名可由所有个人或法人实体注册」，.com.pt 同样对所有人开放，.org.pt 则限定给非营利组织与个人；第 12 条规定地理名称（国家名、葡萄牙行政区名、著名外国城市名）只能由对应行政机关或其授权者注册。规则还规定，包含葡语特殊字符（如 ã ç é）的名字即视为 IDN，可以注册。争议解决方面，规则第 26 条允许当事人诉诸 ARBITRARE——葡萄牙的工业产权、域名与商号仲裁中心，DNS.PT 依 .pt 规则接受其管辖。数量方面，dns.pt/en/statistics 页显示累计注册 2,126,386 个，2025 年末为 2,088,072 个。价格方面，2026 年 9 月 6 日 DomainHunter 查询 /api/prices 未返回 .pt 报价，因此价格区显示的是静态参考价（首年与续费均约 ¥110），实际以注册商为准。起名时，葡语词可以带特殊字符注册，但建议同时持有去掉变音的 ASCII 版本以防输入错误；面向巴西用户的项目注意 .pt 与 .br 的受众差异——.br 要求巴西 CPF/CNPJ，而 .pt 对境外申请人开放，这让 .pt 成为一些葡语项目的实际落点；地名类名字要先查第 12 条的限制。",
+      bestFor: [
+        "在葡萄牙经营的企业与机构",
+        "面向葡语用户、由境外团队运营的项目",
+        "用葡语词（可含 ã ç é 等）命名的品牌",
+        "希望直接向注册局注册的技术型用户",
+      ],
       namingTips: [
-        "无资格限制，任何人可直接注册、无需本地地址",
-        "注册续费均约 $15/年，平续无钩子",
-        "旅游与地产用「品类词 + .pt」借葡萄牙热度",
-        "受众在葡萄牙本土，纯外部市场业务信号较弱",
+        "所有个人与法人均可注册，可直接在 dns.pt 或经认证注册商办理",
+        "葡语特殊字符名视为 IDN，建议连同 ASCII 拼法一起持有",
+        "地理名称受第 12 条限制，只能由行政机关或其授权者注册",
+        "无实时报价时页面显示参考价（约 ¥110/年），以注册商为准",
       ],
     },
     en: {
       title: ".pt Domain Guide: Who It's For, Pricing & Naming Tips",
       metaDescription:
-        ".pt is Portugal's country domain — no eligibility restrictions, anyone can register — with top-tier local trust for Portugal-market brands, tourism and digital-nomad businesses. See live pricing and naming advice, then hunt available .pt names with AI.",
+        ".pt is run by the Portuguese non-profit Associação DNS.PT; article 11 of its registration rules allows all individuals and legal entities to register, either directly at dns.pt or through an accredited registrar, and the registry counts 2,126,386 registrations to date — for projects operating in Portugal or the Portuguese-speaking market. See .pt pricing and naming advice, then hunt available .pt names with AI.",
       intro:
-        ".pt is Portugal's country-code domain, run by registry DNS.PT with about 1.4 million registrations. Portugal has been one of Europe's fastest-growing tech and tourism destinations: Lisbon and Porto host a dense startup and digital-nomad scene, Web Summit runs in Lisbon every year, and tourism's share of GDP is among the EU's highest. Local consumers are strongly attuned to local signals: name.pt says \"a Portuguese business\" at a glance, with trust far beyond any new gTLD — Portuguese companies and government institutions overwhelmingly live on .pt; Google also geo-associates .pt sites with Portugal, a natural boost for local SEO. On eligibility, .pt is fully open: individuals and organizations from anywhere can register directly with no local address or proxy. Pricing is moderate and flat: about $15/yr to register (≈¥110) with the same renewal, no teaser games. Inventory beats .com, and both Portuguese and English roots hit well — and .pt is a natural pick for Portuguese-speaking-world businesses beyond Brazil too. For naming, a straight brand word is the mainstream shape (brand.pt); tourism and real-estate ventures can use category + .pt to ride Portugal's momentum, and local services fit trade-word + .pt. One caution: the audience is primarily Portugal — the signal is weaker for purely external markets.",
-      bestFor: ["Local Portuguese businesses & services", "Tourism, lodging & real-estate ventures", "Digital nomads & startups", "Portuguese-language content & media"],
+        "The .pt registry is Associação DNS.PT, a Portuguese non-profit association; IANA records the delegation date as 30 June 1988, and the registry operates dns.pt with a service portal at pt.pt. Article 2 of the .pt Registration Rules offers two routes: choose one of the registrars accredited by DNS.PT, or register directly at dns.pt — the direct route only guarantees allocation of the name and includes no hosting or mail, and a name without configured name servers stays in \"Reserved\" status and is not delegated in the .pt zone. Article 11 (\"Legitimacy\") states that domain names under .pt may be registered by all individual or corporate entities; .com.pt is likewise open to everyone, .org.pt is limited to non-profit organisations and individuals, and article 12 reserves geographic names (country names, Portuguese administrative divisions, well-known foreign cities) to the competent administrative authority or whoever it authorises. The rules also treat any name containing Portuguese special characters such as ã, ç or é as an IDN, and such names can be registered. For disputes, article 26 lets parties turn to ARBITRARE, Portugal's arbitration centre for industrial property, domain names and company names, whose jurisdiction DNS.PT accepts under the .pt rules. The statistics page at dns.pt/en/statistics shows 2,126,386 cumulative registrations, with 2,088,072 at the end of 2025. On cost: the /api/prices pull DomainHunter ran on 6 September 2026 returned nothing for .pt, so what the price panel shows is a static reference (about ¥110 for both the first year and renewal); the registrar's own page is authoritative. When naming, a Portuguese word can be registered with its accents, but holding the plain-ASCII spelling as well guards against mistyping; if your users are in Brazil, note the audience split between .pt and .br — .br requires a Brazilian CPF or CNPJ while .pt is open to foreign applicants, which is why some Portuguese-language projects end up on .pt; and check the article 12 restrictions before choosing a place name.",
+      bestFor: [
+        "Companies and institutions operating in Portugal",
+        "Portuguese-language projects run by teams outside Portugal",
+        "Brands built on Portuguese words, accents included",
+        "Technical users who prefer registering directly with the registry",
+      ],
       namingTips: [
-        "No eligibility restrictions — anyone can register, no local address needed",
-        "About $15/yr flat to register and renew — no traps",
-        "Tourism and real estate use category + .pt to ride Portugal's momentum",
-        "Audience is primarily Portugal — weaker signal for purely external markets",
+        "All individuals and legal entities may register, directly at dns.pt or via an accredited registrar",
+        "Accented Portuguese names count as IDNs — hold the ASCII spelling alongside",
+        "Geographic names fall under article 12 and are reserved to administrative authorities",
+        "Without a live quote the page shows a reference price (≈¥110/yr); the registrar is authoritative",
       ],
     },
   },
