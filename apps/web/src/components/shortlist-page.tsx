@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowDown, ArrowUp, ArrowUpDown, Bell, BellRing, Bookmark, Check, ChevronDown, Copy, Download, ExternalLink, Link2, Loader2, MonitorSmartphone, RotateCw, Sparkles, StickyNote, Trash2 } from "lucide-react";
 
 import { ConfirmLabel } from "@/components/confirm-label";
@@ -69,6 +69,25 @@ function sortPriceUsd(it: ShortlistItem, prices: PriceMap | null): number {
   return s ? toUsd(s.first) : Number.MAX_SAFE_INTEGER;
 }
 
+/** 与 lib/density.ts 同断点：md 以上为桌面；SSR/测试无 window 时按窄屏处理 */
+const DESKTOP_QUERY = "(min-width: 768px)";
+
+function isDesktopViewport(): boolean {
+  return typeof window !== "undefined" && typeof window.matchMedia === "function" && window.matchMedia(DESKTOP_QUERY).matches;
+}
+
+function useIsDesktop(): boolean {
+  const [desktop, setDesktop] = useState(isDesktopViewport);
+  useEffect(() => {
+    if (typeof window.matchMedia !== "function") return;
+    const mq = window.matchMedia(DESKTOP_QUERY);
+    const onChange = (e: MediaQueryListEvent) => setDesktop(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+  return desktop;
+}
+
 const SYNC_CODE_KEY = "domainhunter:sync:code";
 const SYNC_CODE_RE = /^[A-Z0-9]{8}$/;
 
@@ -112,6 +131,7 @@ export function ShortlistPage({
   const { t, lang } = useI18n();
   const prices = usePrices();
   const affiliateCfg = useAffiliateConfig();
+  const desktop = useIsDesktop();
   const [sort, setSort] = useState<SortKey>("added");
   const [desc, setDesc] = useState(false);
   const [noteEditing, setNoteEditing] = useState<string | null>(null);
@@ -533,107 +553,10 @@ export function ShortlistPage({
     );
   };
 
-  return (
-    <main className="mx-auto w-full min-w-0 max-w-6xl flex-1 px-4 py-6 md:px-6">
-      <div className="mb-1 flex flex-wrap items-center justify-between gap-3">
-        <h1 className="text-xl font-bold tracking-tight">{t("shortlist.title")}</h1>
-        {items.length > 0 && (
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50"
-              onClick={() => void recheck()}
-              disabled={rechecking}
-            >
-              <RotateCw className={cn("h-4 w-4", rechecking && "animate-spin")} />
-              {rechecking ? t("shortlist.rechecking") : t("shortlist.recheck")}
-            </button>
-            <button
-              className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50"
-              onClick={() => void share()}
-              disabled={sharing}
-            >
-              {sharing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Link2 className="h-4 w-4" />}
-              {sharing ? t("shortlist.sharing") : t("shortlist.share")}
-            </button>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <button className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0">
-                  <Download className="h-4 w-4" />
-                  {t("common.export")}
-                </button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem onSelect={() => exportShortlist(items, "csv", lang, prices)}>{t("common.exportCsv")}</DropdownMenuItem>
-                <DropdownMenuItem onSelect={() => exportShortlist(items, "txt", lang, prices)}>{t("common.exportTxt")}</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <button
-              className={cn(
-                "flex h-9 items-center gap-1.5 rounded-lg border px-3 text-sm",
-                confirmClear
-                  ? "border-destructive bg-destructive/10 text-destructive"
-                  : "border-line text-txt1 hover:bg-bg2 hover:text-destructive",
-              )}
-              onClick={() => {
-                if (confirmClear) {
-                  window.clearTimeout(confirmTimer.current);
-                  setConfirmClear(false);
-                  onClear();
-                } else {
-                  setConfirmClear(true);
-                  window.clearTimeout(confirmTimer.current);
-                  confirmTimer.current = window.setTimeout(() => setConfirmClear(false), CONFIRM_WINDOW_MS);
-                }
-              }}
-            >
-              <Trash2 className="h-4 w-4" />
-              <ConfirmLabel confirmed={confirmClear} label={t("shortlist.clear")} confirmLabel={t("shortlist.clearConfirm")} />
-            </button>
-            <button
-              className="flex h-9 items-center gap-1.5 rounded-lg bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50"
-              title={t("shortlist.batchRegisterTitle")}
-              disabled={registrableCount === 0}
-              onClick={batchRegister}
-            >
-              <ExternalLink className="h-4 w-4" />
-              {t("shortlist.batchRegister", { n: registrableCount })}
-            </button>
-          </div>
-        )}
-      </div>
-      <p className="mb-2 text-xs text-txt2">{t("shortlist.hint")}</p>
-      {items.length > 0 && <p className="tnum mb-3 text-xs text-txt2">{lastCheckedStr}</p>}
-
-      {shownShareUrl && (
-        <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg border border-brand-line bg-brand-dim/40 px-4 py-2.5 text-sm text-txt1">
-          <Link2 className="h-4 w-4 shrink-0 text-brand" />
-          {t("shortlist.shareReady")}
-          <a href={shownShareUrl} target="_blank" rel="noreferrer" className="break-all font-mono text-xs text-brand underline">
-            {shownShareUrl}
-          </a>
-          {shareCopied && (
-            <span className="flex items-center gap-1 text-xs text-brand">
-              <Check className="h-3.5 w-3.5" />
-              {t("shortlist.shareCopied")}
-            </span>
-          )}
-        </p>
-      )}
-      {(shareError || recheckError || monitorError) && (
-        <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">
-          <span>{shareError || recheckError || monitorError}</span>
-          {shareError && (
-            <button
-              className="rounded-md border border-destructive/40 px-2.5 py-1 text-xs font-semibold text-destructive transition-colors hover:bg-destructive/15 disabled:opacity-50"
-              disabled={sharing}
-              onClick={() => void share()}
-            >
-              {sharing ? t("shortlist.sharing") : t("shortlist.shareRetry")}
-            </button>
-          )}
-        </p>
-      )}
-
+  // 窄屏且有候选时，域名清单先于「监控动态 / 我的分享 / 跨设备同步」渲染（DOM 顺序 = 视觉顺序，Tab 顺序同步）；桌面保持原顺序
+  const listFirst = !desktop && items.length > 0;
+  const secondaryPanels = (
+    <>
       {/* 监控动态：开了监控的域名的掉落/回补记录 */}
       {items.length > 0 && (
         <div className="mb-4 rounded-xl border border-line bg-bg1">
@@ -808,6 +731,111 @@ export function ShortlistPage({
         {importedCount !== null && <p className="mt-2 text-xs text-brand">{t("sync.importDone", { n: importedCount })}</p>}
         {(syncError || importError) && <p className="mt-2 text-xs text-destructive">{syncError || importError}</p>}
       </div>
+    </>
+  );
+
+  return (
+    <main className="mx-auto w-full min-w-0 max-w-6xl flex-1 px-4 py-6 md:px-6">
+      <div className="mb-1 flex flex-wrap items-center justify-between gap-3">
+        <h1 className="text-xl font-bold tracking-tight">{t("shortlist.title")}</h1>
+        {items.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50"
+              onClick={() => void recheck()}
+              disabled={rechecking}
+            >
+              <RotateCw className={cn("h-4 w-4", rechecking && "animate-spin")} />
+              {rechecking ? t("shortlist.rechecking") : t("shortlist.recheck")}
+            </button>
+            <button
+              className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50"
+              onClick={() => void share()}
+              disabled={sharing}
+            >
+              {sharing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Link2 className="h-4 w-4" />}
+              {sharing ? t("shortlist.sharing") : t("shortlist.share")}
+            </button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0">
+                  <Download className="h-4 w-4" />
+                  {t("common.export")}
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onSelect={() => exportShortlist(items, "csv", lang, prices)}>{t("common.exportCsv")}</DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => exportShortlist(items, "txt", lang, prices)}>{t("common.exportTxt")}</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <button
+              className={cn(
+                "flex h-9 items-center gap-1.5 rounded-lg border px-3 text-sm",
+                confirmClear
+                  ? "border-destructive bg-destructive/10 text-destructive"
+                  : "border-line text-txt1 hover:bg-bg2 hover:text-destructive",
+              )}
+              onClick={() => {
+                if (confirmClear) {
+                  window.clearTimeout(confirmTimer.current);
+                  setConfirmClear(false);
+                  onClear();
+                } else {
+                  setConfirmClear(true);
+                  window.clearTimeout(confirmTimer.current);
+                  confirmTimer.current = window.setTimeout(() => setConfirmClear(false), CONFIRM_WINDOW_MS);
+                }
+              }}
+            >
+              <Trash2 className="h-4 w-4" />
+              <ConfirmLabel confirmed={confirmClear} label={t("shortlist.clear")} confirmLabel={t("shortlist.clearConfirm")} />
+            </button>
+            <button
+              className="flex h-9 items-center gap-1.5 rounded-lg bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50"
+              title={t("shortlist.batchRegisterTitle")}
+              disabled={registrableCount === 0}
+              onClick={batchRegister}
+            >
+              <ExternalLink className="h-4 w-4" />
+              {t("shortlist.batchRegister", { n: registrableCount })}
+            </button>
+          </div>
+        )}
+      </div>
+      <p className="mb-2 text-xs text-txt2">{t("shortlist.hint")}</p>
+      {items.length > 0 && <p className="tnum mb-3 text-xs text-txt2">{lastCheckedStr}</p>}
+
+      {shownShareUrl && (
+        <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg border border-brand-line bg-brand-dim/40 px-4 py-2.5 text-sm text-txt1">
+          <Link2 className="h-4 w-4 shrink-0 text-brand" />
+          {t("shortlist.shareReady")}
+          <a href={shownShareUrl} target="_blank" rel="noreferrer" className="break-all font-mono text-xs text-brand underline">
+            {shownShareUrl}
+          </a>
+          {shareCopied && (
+            <span className="flex items-center gap-1 text-xs text-brand">
+              <Check className="h-3.5 w-3.5" />
+              {t("shortlist.shareCopied")}
+            </span>
+          )}
+        </p>
+      )}
+      {(shareError || recheckError || monitorError) && (
+        <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">
+          <span>{shareError || recheckError || monitorError}</span>
+          {shareError && (
+            <button
+              className="rounded-md border border-destructive/40 px-2.5 py-1 text-xs font-semibold text-destructive transition-colors hover:bg-destructive/15 disabled:opacity-50"
+              disabled={sharing}
+              onClick={() => void share()}
+            >
+              {sharing ? t("shortlist.sharing") : t("shortlist.shareRetry")}
+            </button>
+          )}
+        </p>
+      )}
+
+      {!listFirst && secondaryPanels}
 
       {items.length === 0 ? (
         <div className="rounded-xl border border-dashed border-line p-10 text-center">
@@ -984,6 +1012,8 @@ export function ShortlistPage({
           </div>
         </>
       )}
+
+      {listFirst && <div className="mt-6">{secondaryPanels}</div>}
     </main>
   );
 }
