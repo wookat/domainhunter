@@ -16,6 +16,7 @@ import { compareContentBlocks, compareHubBlocks, guideContentBlocks, guideHubBlo
 import { WHY_COPY } from "./content/why-copy";
 import { HOME_FAQ, HOME_META } from "./content/home-copy";
 import { NOT_FOUND_META, notFoundTitle } from "./content/not-found-copy";
+import { ADVANCED_META, WHY_META } from "./content/page-meta";
 import { buildGuideContent, buildTldContent, buildVsContent, guidePriceTlds, tldPriceTlds } from "./content/injected-build";
 import type { InjectedContent } from "./content/injected";
 import { HUB_META } from "./content/hubs";
@@ -1255,6 +1256,7 @@ app.get("/s/:id", async (c) => {
       .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${pageUrl}" />`)
       .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${pageUrl}" />`)
       .replace("</head>", `<meta name="robots" content="noindex" /></head>`);
+    html = setHtmlLang(html, lang);
     return new Response(html, { status: gone.status, headers: { "content-type": "text/html; charset=utf-8" } });
   }
   const items = snapshot!.items!;
@@ -1271,6 +1273,7 @@ app.get("/s/:id", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/${id}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
+  html = setHtmlLang(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
 });
 
@@ -1302,17 +1305,6 @@ app.get("/shortlist", (c) => personalPageShell(c, "/shortlist"));
 app.get("/monitors", (c) => personalPageShell(c, "/monitors"));
 
 // 高级模式（批量粘贴核验）：客户端路由，直链/刷新时回 SPA 壳 + SSR meta
-const ADVANCED_META = {
-  zh: {
-    title: "批量域名核验：粘贴名单一键实时查可注册",
-    desc: "把现成域名名单（裸名/完整域名/带链接混排，最多 200 个）粘进来，一键流式核验可注册状态（RDAP+DNS 实时），免登录免费。",
-  },
-  en: {
-    title: "Bulk domain check: paste a list, verify availability live",
-    desc: "Paste up to 200 names (bare names, full domains or URLs mixed) and stream live availability checks (RDAP+DNS). Free, no login.",
-  },
-};
-
 app.get("/advanced", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
   const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
@@ -1979,17 +1971,6 @@ app.get("/prices", async (c) => {
 });
 
 // 产品定位页（SPA 路由 + SSR meta）
-const WHY_META = {
-  zh: {
-    title: "为什么选 DomainHunter：中文创业者的域名猎手",
-    desc: `面向中文创业者、独立开发者与出海团队：用中文说寓意，AI 沿拼音/英文/混搭四路线构思，${TLD_LIST.length} TLD 实时核验（.cn / .com.cn 直查 CNNIC），附到期日与价格，支持批量核验、CSV 导出与到期监控。英文通用起名不是我们的主场，对比表如实标出。免费开源。`,
-  },
-  en: {
-    title: "Why DomainHunter: a domain hunter for Chinese founders",
-    desc: `Built for Chinese founders, indie developers and teams going global: describe the meaning in Chinese, AI brainstorms pinyin, English and blend candidates along four routes, verified live across ${TLD_LIST.length} TLDs (.cn / .com.cn against CNNIC), with expiry dates, prices, bulk checks, CSV export and expiry monitoring. Generic English naming isn't our home turf — the comparison table says so. Free and open source.`,
-  },
-};
-
 app.get("/why", async (c) => {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
   const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));

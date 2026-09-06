@@ -88,6 +88,12 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
+  /* 中文正文里「.co.nz、.org.nz、.net.nz…」这类以全角顿号相连的 TLD 串被 UAX#14 视为不可断行单元，375px 下会把段落推出视口；
+     overflow-wrap 只在单词本身放不进行框时才生效，不影响正常排版与 nowrap/truncate 元素 */
+  main {
+    overflow-wrap: break-word;
+  }
+
   ::placeholder {
     color: var(--txt-2);
   }
