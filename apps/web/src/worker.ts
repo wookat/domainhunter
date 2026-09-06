@@ -1274,25 +1274,32 @@ app.get("/s/:id", async (c) => {
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
 });
 
-// 候选清单页：客户端路由，直链/刷新时回 SPA 壳（个人数据页，noindex）
-app.get("/shortlist", async (c) => {
+/** /monitors 壳 title 的页面名，与 SPA i18n `monitors.title` 同文，水合后 `${monitors.title} | DomainHunter` 不再跳变 */
+const MONITORS_TITLE: Record<"zh" | "en", string> = { zh: "监控管理", en: "Monitors" };
+
+/**
+ * 个人数据页（/shortlist、/monitors）SPA 壳：noindex、canonical 保持裸路径不随语言变（R507 结论：noindex 页不参与 hreflang/canonical），
+ * 但 `<html lang>` / og:locale / title 按 `?lang` 与 Accept-Language 解析的语言写，首屏与读屏器语言不再等水合才正确。
+ * title 与 SPA 水合后 `document.title` 同源：/shortlist 沿用首页 title（`HOME_TITLE_PATHS`），/monitors 为「监控管理 | DomainHunter」。
+ */
+async function personalPageShell(c: Context<{ Bindings: Bindings }>, path: "/shortlist" | "/monitors"): Promise<Response> {
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  const title = path === "/monitors" ? `${MONITORS_TITLE[lang]} | DomainHunter` : HOME_META[lang].title;
   let html = await res.text();
   html = html
-    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/shortlist" />`)
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(title)}</title>`)
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}${path}" />`)
     .replace("</head>", '<meta name="robots" content="noindex" /></head>');
+  html = setHtmlLang(html, lang);
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
-});
+}
+
+// 候选清单页：客户端路由，直链/刷新时回 SPA 壳（个人数据页，noindex）
+app.get("/shortlist", (c) => personalPageShell(c, "/shortlist"));
 
 // 监控管理页：客户端路由，直链/刷新时回 SPA 壳（个人数据页，noindex）
-app.get("/monitors", async (c) => {
-  const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  let html = await res.text();
-  html = html
-    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE_ORIGIN}/monitors" />`)
-    .replace("</head>", '<meta name="robots" content="noindex" /></head>');
-  return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
-});
+app.get("/monitors", (c) => personalPageShell(c, "/monitors"));
 
 // 高级模式（批量粘贴核验）：客户端路由，直链/刷新时回 SPA 壳 + SSR meta
 const ADVANCED_META = {

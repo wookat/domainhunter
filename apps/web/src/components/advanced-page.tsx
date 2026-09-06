@@ -96,14 +96,16 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
       <Card className="mt-5 p-4 md:p-6">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { label: t("adv.roots"), value: roots, set: setRoots, placeholder: "tizhi, gwy" },
-            { label: t("adv.prefixes"), value: prefixes, set: setPrefixes, placeholder: "get, my" },
-            { label: t("adv.suffixes"), value: suffixes, set: setSuffixes, placeholder: "job, jobs" },
-            { label: "TLD", value: tlds, set: setTlds, placeholder: "com, cn" },
+            { id: "advanced-roots", name: "roots", label: t("adv.roots"), aria: t("adv.rootsAria"), value: roots, set: setRoots, placeholder: "tizhi, gwy" },
+            { id: "advanced-prefixes", name: "prefixes", label: t("adv.prefixes"), aria: t("adv.prefixesAria"), value: prefixes, set: setPrefixes, placeholder: "get, my" },
+            { id: "advanced-suffixes", name: "suffixes", label: t("adv.suffixes"), aria: t("adv.suffixesAria"), value: suffixes, set: setSuffixes, placeholder: "job, jobs" },
+            { id: "advanced-tlds", name: "tlds", label: "TLD", aria: t("adv.tldsAria"), value: tlds, set: setTlds, placeholder: "com, cn" },
           ].map((f) => (
-            <div key={f.label}>
-              <label className="text-sm font-medium">{f.label}</label>
-              <Input className="mt-2" value={f.value} placeholder={f.placeholder} onChange={(e) => f.set(e.target.value)} />
+            <div key={f.id}>
+              <label htmlFor={f.id} className="text-sm font-medium">
+                {f.label}
+              </label>
+              <Input id={f.id} name={f.name} aria-label={f.aria} className="mt-2" value={f.value} placeholder={f.placeholder} onChange={(e) => f.set(e.target.value)} />
             </div>
           ))}
         </div>

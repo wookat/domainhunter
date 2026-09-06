@@ -36,12 +36,15 @@ export const hubMatch = (query: string, fields: string[]): boolean => {
  * 外层固定 h-11 与 SSR 骨架的占位 div 同高，避免水合后布局跳动。
  */
 export function HubFilter({
+  id,
   placeholder,
   value,
   onChange,
   shown,
   total,
 }: {
+  /** 稳定 id（页面前缀-用途，如 `tld-filter`）；表单字段名统一为 `q` */
+  id: string;
   placeholder: string;
   value: string;
   onChange: (v: string) => void;
@@ -56,6 +59,8 @@ export function HubFilter({
     <div className="relative mt-6 h-11">
       <input
         ref={ref}
+        id={id}
+        name="q"
         type="search"
         value={value}
         onChange={(e) => onChange(e.target.value)}
