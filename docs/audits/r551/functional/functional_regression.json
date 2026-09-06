@@ -256,7 +256,7 @@
    "t": 1788709149.3566399,
    "m": "DELETE",
    "url": "/api/share/LXK6AoZcVW",
-   "body": "{\"token\":\"vticxKDc5UsJA4U0X-p-caMQ\"}"
+   "body": "{\"token\":\"<redacted-share-token>\"}"
   },
   {
    "t": 1788709151.9241958,
