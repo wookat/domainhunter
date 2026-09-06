@@ -273,6 +273,10 @@ export function HomePage({
   const { copied: quickCopied, failed: quickCopyFailed, copy: copyQuick } = useCopyAvailable();
   const { copied: variantCopied, failed: variantCopyFailed, copy: copyVariant } = useCopyAvailable();
   const quickAbortRef = useRef<AbortController | null>(null);
+  // 基础核验去重：记录本轮输入已发出（进行中或已成功完成）的「label + 后缀集合」身份；800ms 自动核验与 Enter/按钮显式核验共用，
+  // 身份相同不重发；输入变化清空，后缀集合变化则身份不同自然重发。「查更多」与单域重试不走此判断
+  const quickIssuedKeyRef = useRef<string | null>(null);
+  const quickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // 变体建议：心仪名字被注册时，用前后缀组合免费核验一批变体（同样不消耗 AI 次数）
   const [variantRows, setVariantRows] = useState<{ domain: string; status: "available" | "taken" | "unknown"; expiresAt?: string }[]>([]);
@@ -293,9 +297,17 @@ export function HomePage({
     setVariantChecked(0);
     setVariantTotal(0);
     setVariantRunning(false);
+    quickIssuedKeyRef.current = null;
     if (!quick || quick.label.length < 3) return;
-    const id = setTimeout(() => void runQuickCheck(), 800);
-    return () => clearTimeout(id);
+    const id = setTimeout(() => {
+      quickTimerRef.current = null;
+      void runQuickCheck();
+    }, 800);
+    quickTimerRef.current = id;
+    return () => {
+      clearTimeout(id);
+      if (quickTimerRef.current === id) quickTimerRef.current = null;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [description]);
 
@@ -305,6 +317,16 @@ export function HomePage({
     // 与「查更多后缀 +{n}」按钮计数同口径：排除已有 chip 的后缀
     const checkTlds = more ? QUICK_MORE_TLDS.filter((t) => !quickRows.some((r) => r.domain === `${quick.label}.${t}`)) : baseTlds;
     if (checkTlds.length === 0) return;
+    const issueKey = more ? null : `${quick.label}|${[...baseTlds].sort().join(",")}`;
+    if (issueKey) {
+      // 显式核验落在 800ms 窗口内：取消挂起的自动核验，本次即为唯一一次请求
+      if (quickTimerRef.current) {
+        clearTimeout(quickTimerRef.current);
+        quickTimerRef.current = null;
+      }
+      if (quickIssuedKeyRef.current === issueKey) return;
+      quickIssuedKeyRef.current = issueKey;
+    }
     quickAbortRef.current?.abort();
     const ac = new AbortController();
     quickAbortRef.current = ac;
@@ -332,7 +354,10 @@ export function HomePage({
         body: JSON.stringify({ roots: [quick.label], tlds: checkTlds }),
         signal: ac.signal,
       });
-      if (!res.ok || !res.body) return;
+      if (!res.ok || !res.body) {
+        if (issueKey && quickIssuedKeyRef.current === issueKey) quickIssuedKeyRef.current = null;
+        return;
+      }
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
       let buf = "";
@@ -355,7 +380,8 @@ export function HomePage({
         }
       }
     } catch {
-      /* 中断/网络错误：保留已有结果 */
+      // 中断/网络错误：保留已有结果；网络错误（非主动中断）放开去重，允许再次显式核验
+      if (!ac.signal.aborted && issueKey && quickIssuedKeyRef.current === issueKey) quickIssuedKeyRef.current = null;
     } finally {
       if (!ac.signal.aborted) {
         setQuickRunning(false);
