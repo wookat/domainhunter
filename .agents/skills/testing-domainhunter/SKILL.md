@@ -173,3 +173,11 @@ description: How to run zero-AI production audits of DomainHunter (hunt.zalize.c
 - `vs-shared-ngrams` threshold: the repo test uses EN_N=12 (zh 24). At n=8 the four uk/de/au/fr en pages still share 3 short spans — report the threshold you used.
 - Full-site `/vs` curl scans with a custom UA count as `pageviews.vs`, not `bots`, in `/api/usage`; explain the delta in the report.
 - Every `?lang=en` visit rewrites `domainhunter:lang`; before the final storage diff, restore via the header 「中」 button and re-dump.
+
+## R556–R560 gotchas (/monitors add form, og:locale, font preload, prose word-count measure)
+- `/monitors` **now has an add form** (R557): `POST /api/monitor/add {"domain"}` normalizes `https://www.GOOGLE.com/x` → `google.com`; taken → `added:true` + expiry (counts against the 500 global quota), available → `added:false` and the UI refuses + links to a registrar, bad input → 400 `invalid_domain`, `.notatld`/`com.cn` → 400 `unsupported_tld`. `/api/monitor/list` is **POST-only** (GET → 404). Cancel via the UI two-step 「取消监控 → 确认取消？(5s)」 or `enabled:false`; verify `entries=[]` afterwards.
+- With text in the add input, Tab first lands on the 「清空输入 ×」 button, then the submit; with an empty input Tab goes straight to submit — not a bug.
+- og:locale on `/s/:id` is same-source with html lang/title since R556 (`lib/page-meta.ts`); the R553/R558 "bare zh URL hydrates en_US" did not reproduce on f415f96f. If it appears again, first rule out a stale HTML cache (max-age 600) right after a deploy.
+- Font preload warning (`jetbrains-mono … credentials mode does not match`) can linger in the session Chrome for a few minutes after a deploy because the old `index.html` is cached; verify with a fresh headless profile or after `Network.clearBrowserCache` before filing.
+- Prose word-count baseline for `/vs` (R540/R546/R560) is **whole-page prose** (`main` minus tables/nav/link chips), not the `#verdict` section alone (uk 767 / de 796 / au 748 / fr 749 at R546; 1030 / 1076 / 960 / 990 at R560). Don't file `#verdict`-only counts as failures.
+- Theme state is the `light` class on `<html>` (default dark) when driving the toggle programmatically.
