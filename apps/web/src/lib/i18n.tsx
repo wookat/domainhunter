@@ -1,11 +1,15 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 import { HOME_FAQ, HOME_HERO, HOME_META } from "@/content/home-copy";
+import { NOT_FOUND_META } from "@/content/not-found-copy";
 import { TLD_LIST } from "@/content/tld-list";
 
 const TLD_COUNT = TLD_LIST.length;
 
 const LANG_KEY = "domainhunter:lang";
+
+/** 水合/切语言后 document.title 回落为首页 title 的路径（首页/候选清单/三个 hub）；其余顶层路径视为未知路由 */
+const HOME_TITLE_PATHS: ReadonlySet<string> = new Set(["/", "/shortlist", "/tld", "/guide", "/vs"]);
 
 export type Lang = "zh" | "en";
 
@@ -389,8 +393,8 @@ const zh = {
   "guide.relatedCompliance": "相关合规与流程指南",
   "vs.related": "相关对比",
   // 404 页
-  "nf.title": "页面不存在",
-  "nf.desc": "你访问的链接不存在或已被移除，请检查网址是否正确。",
+  "nf.title": NOT_FOUND_META.zh.title,
+  "nf.desc": NOT_FOUND_META.zh.desc,
   "nf.home": "回到首页",
   "nf.explore": "或者从这些入口继续浏览",
   "footer.tldGuides": "TLD 注册指南",
@@ -859,8 +863,8 @@ const en: Record<I18nKey, string> = {
   "guide.relatedCompliance": "Related compliance guides",
   "vs.related": "Related comparisons",
   // 404 page
-  "nf.title": "Page not found",
-  "nf.desc": "The page you're looking for doesn't exist or has been removed. Please check the URL.",
+  "nf.title": NOT_FOUND_META.en.title,
+  "nf.desc": NOT_FOUND_META.en.desc,
   "nf.home": "Back to home",
   "nf.explore": "Or keep exploring from here",
   "footer.tldGuides": "TLD registration guides",
@@ -1022,7 +1026,9 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     else if (path === "/why") document.title = `${dicts[lang]["footer.why"]} | DomainHunter`;
     else if (path === "/advanced") document.title = `${dicts[lang]["adv.title"]} | DomainHunter`;
     else if (path === "/monitors") document.title = `${dicts[lang]["monitors.title"]} | DomainHunter`;
-    else if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/") && path !== "/mcp") document.title = dicts[lang]["meta.title"];
+    else if (HOME_TITLE_PATHS.has(path)) document.title = dicts[lang]["meta.title"];
+    // 其余顶层路径 = 未知路由（worker 已回 404 壳）：切语言后 title 也保持「页面不存在」，不回落成首页 title
+    else if (!path.startsWith("/tld/") && !path.startsWith("/s/") && !path.startsWith("/guide/") && !path.startsWith("/vs/") && path !== "/mcp") document.title = `${dicts[lang]["nf.title"]} | DomainHunter`;
   }, [lang]);
 
   const t = useCallback<TFunc>((key, vars) => interpolate(dicts[lang][key] ?? zh[key], vars), [lang]);

@@ -1,4 +1,4 @@
-import { Hono } from "hono";
+import { Hono, type Context } from "hono";
 import { nanoid } from "nanoid";
 import { generateCandidates, checkDomains, type CheckResult } from "@domainhunter/core";
 import { whoisFallback } from "./whois";
@@ -15,6 +15,7 @@ import { buildTldFaq } from "./content/tld-faq";
 import { compareContentBlocks, compareHubBlocks, guideContentBlocks, guideHubBlocks, homeHeroSkeleton, hubCrumbKicker, hubCrumbLabel, pricesTableSkeleton, tldContentBlocks, tldHubBlocks } from "./content/ssr-html";
 import { WHY_COPY } from "./content/why-copy";
 import { HOME_FAQ, HOME_META } from "./content/home-copy";
+import { NOT_FOUND_META, notFoundTitle } from "./content/not-found-copy";
 import { buildGuideContent, buildTldContent, buildVsContent, guidePriceTlds, tldPriceTlds } from "./content/injected-build";
 import type { InjectedContent } from "./content/injected";
 import { HUB_META } from "./content/hubs";
@@ -1572,9 +1573,31 @@ const setHtmlLang = (html: string, lang: "zh" | "en"): string =>
         .replace(/<meta property="og:locale" content="[^"]*"/, '<meta property="og:locale" content="en_US"')
     : html;
 
-/** 未知 slug 的 SEO 路由：返回应用壳 + 404 状态 + noindex，避免软 404 被收录 */
-async function notFoundShell(res: Response): Promise<Response> {
-  const html = (await res.text()).replace("</head>", `<meta name="robots" content="noindex" /></head>`);
+/** 页面型路径：非 /api/*、末段不带扩展名（/foo.png、/assets/x.js 这类静态资源路径不算），无论 Accept 都回 404 壳 */
+const isPageLikePath = (pathname: string): boolean => !pathname.startsWith("/api/") && !/\.[a-z0-9]{1,8}$/i.test(pathname);
+
+/**
+ * 未知 slug / 未知顶层路径：返回应用壳 + 404 状态 + noindex，避免软 404 被收录。
+ * title/description/og/twitter 按 `?lang` / Accept-Language 写成「页面不存在 | DomainHunter」（与 SPA `usePageTitle` 同源），
+ * 不再沿用首页长标题；canonical 去掉（noindex 页不该把权重指回首页），og:url 指向请求路径本身。
+ */
+async function notFoundShell(c: Context<{ Bindings: Bindings }>, res: Response): Promise<Response> {
+  const lang = resolveLang(c.req.query("lang"), c.req.header("accept-language"));
+  const title = escapeHtml(notFoundTitle(lang));
+  const desc = escapeHtml(NOT_FOUND_META[lang].desc);
+  const pageUrl = escapeHtml(`${SITE_ORIGIN}${new URL(c.req.url).pathname}`);
+  let html = await res.text();
+  html = html
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${desc}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${title}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${desc}" />`)
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${pageUrl}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${title}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${desc}" />`)
+    .replace(/\s*<link rel="canonical" href="[^"]*" \/>/, "")
+    .replace("</head>", `<meta name="robots" content="noindex" /></head>`);
+  html = setHtmlLang(html, lang);
   return new Response(html, { status: 404, headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 }
 
@@ -1695,7 +1718,7 @@ app.get("/tld/:tld", async (c) => {
   const tld = c.req.param("tld").toLowerCase();
   const guide = TLD_GUIDES[tld];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  if (!guide) return notFoundShell(res);
+  if (!guide) return notFoundShell(c, res);
   const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
   const lang = sl.lang;
   const loc = guide[lang];
@@ -1735,7 +1758,7 @@ app.get("/guide/:slug", async (c) => {
   const slug = c.req.param("slug").toLowerCase();
   const guide = INDUSTRY_GUIDES[slug];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  if (!guide) return notFoundShell(res);
+  if (!guide) return notFoundShell(c, res);
   const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
   const lang = sl.lang;
   const loc = guide[lang];
@@ -1775,7 +1798,7 @@ app.get("/vs/:slug", async (c) => {
   const slug = c.req.param("slug").toLowerCase();
   const cmp = TLD_COMPARES[slug];
   const res = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  if (!cmp) return notFoundShell(res);
+  if (!cmp) return notFoundShell(c, res);
   const sl = resolveSsrLang(c.req.query("lang"), c.req.header("accept-language"));
   const lang = sl.lang;
   const loc = cmp[lang];
@@ -2053,11 +2076,12 @@ app.get("/robots.txt", (c) =>
 app.all("*", async (c) => {
   const res = await c.env.ASSETS.fetch(c.req.raw);
   if (res.status !== 404) return res;
-  // 未知顶层路径：GET 页面请求返回品牌 404 壳（noindex），其余保持原样
+  // 未知路径：GET 页面请求返回品牌 404 壳（noindex）；/api/* 与带扩展名的静态资源路径仍看 Accept（无 text/html 则原样透传 ASSETS 的空 404），其余保持原样
+  if (c.req.method !== "GET") return res;
   const accept = c.req.header("accept") ?? "";
-  if (c.req.method !== "GET" || !accept.includes("text/html")) return res;
+  if (!accept.includes("text/html") && !isPageLikePath(new URL(c.req.url).pathname)) return res;
   const shell = await c.env.ASSETS.fetch(new Request(new URL("/", c.req.url), c.req.raw));
-  return notFoundShell(shell);
+  return notFoundShell(c, shell);
 });
 
 // IndexNow：向 Bing/Yandex 等搜索引擎主动推送全站 URL（key 按协议公开，对应 public/<key>.txt 静态文件）
