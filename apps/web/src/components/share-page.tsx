@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Check, Copy, Crosshair, Download, Loader2, Sparkles } from "lucide-react";
 
-import { RegisterMenu } from "@/components/domain-row";
+import { ExpiryNote, RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
 import { shareDocTitle, useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
@@ -9,10 +9,22 @@ import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
 import { createdAgoLabel } from "@/lib/relative-time";
 import type { ShortlistItem } from "@/lib/shortlist";
 import { scoreBadgeClass, totalScore } from "@/types";
-import { cn } from "@/lib/utils";
+import { cn, formatExpiry } from "@/lib/utils";
 
-/** 快照可能没有 status（旧快照 / 分享时仍在核验）；缺省不得视为「可注册」 */
-type SharedItem = Pick<ShortlistItem, "domain" | "label" | "tld" | "meaning" | "scores"> & { status?: "available" | "taken" | "unknown" };
+/** 快照可能没有 status（旧快照 / 分享时仍在核验）；缺省不得视为「可注册」。expiresAt/note 仅新快照有 */
+type SharedItem = Pick<ShortlistItem, "domain" | "label" | "tld" | "meaning" | "scores" | "expiresAt" | "note"> & {
+  status?: "available" | "taken" | "unknown";
+};
+
+function SharedNote({ note }: { note: string }) {
+  const { t } = useI18n();
+  return (
+    <p className="mt-1 flex min-w-0 items-start gap-1 text-xs text-txt2">
+      <span className="shrink-0">{t("share.noteLabel")}</span>
+      <span className="min-w-0 break-words text-txt1">{note}</span>
+    </p>
+  );
+}
 
 function StatusBadge({ status, t }: { status: NonNullable<SharedItem["status"]>; t: (k: "status.available" | "status.taken" | "status.unknown") => string }) {
   const cls =
@@ -97,7 +109,13 @@ export function SharePage({ id }: { id: string }) {
   // 旧快照全无 status 时维持原行为（顶部已有「未含可用性状态」提示）
   const registrable = (it: SharedItem) => (hasStatus ? it.status === "available" : true);
   const noPriceTitle = (it: SharedItem) => t(it.status === "taken" ? "shortlist.takenNoPrice" : "shortlist.unknownNoPrice");
-  const csvRows = items.map((it) => ({ ...it, status: it.status }));
+  const hasExpiry = items.some((it) => it.status === "taken" && it.expiresAt);
+  const hasNote = items.some((it) => it.note);
+  const csvRows = items.map((it) => ({
+    ...it,
+    status: it.status,
+    expiresAt: it.status === "taken" && it.expiresAt ? formatExpiry(it.expiresAt) ?? undefined : undefined,
+  }));
   const timeStr = new Date(createdAt).toLocaleDateString(lang === "zh" ? "zh-CN" : "en-US", {
     year: "numeric",
     month: "short",
@@ -131,7 +149,7 @@ export function SharePage({ id }: { id: string }) {
             </button>
           )}
           <button
-            onClick={() => exportResultsCsv(csvRows, lang, prices)}
+            onClick={() => exportResultsCsv(csvRows, lang, prices, "domainhunter-results", { expiresAt: hasExpiry, note: hasNote })}
             className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line bg-bg1 px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:h-9"
           >
             <Download className="h-3.5 w-3.5" />
@@ -163,8 +181,10 @@ export function SharePage({ id }: { id: string }) {
                         <span className="text-txt2">.{it.tld}</span>
                       </span>
                       {it.status && <StatusBadge status={it.status} t={t} />}
+                      {it.status === "taken" && it.expiresAt && <ExpiryNote iso={it.expiresAt} />}
                     </div>
                     {it.meaning && <div className="mt-0.5 max-w-md truncate text-xs text-txt1">{it.meaning}</div>}
+                    {it.note && <SharedNote note={it.note} />}
                   </td>
                   <td className="px-3 text-center">
                     <span className={cn("tnum rounded-md px-2 py-0.5 font-mono text-xs font-bold", score !== undefined ? scoreBadgeClass(score) : "bg-bg3 text-txt1")}>
@@ -212,7 +232,13 @@ export function SharePage({ id }: { id: string }) {
                   <span className={cn("tnum shrink-0 rounded-md px-2 py-0.5 font-mono text-xs font-bold", scoreBadgeClass(score))}>{score}</span>
                 )}
               </div>
+              {it.status === "taken" && it.expiresAt && (
+                <div className="mt-1">
+                  <ExpiryNote iso={it.expiresAt} className="text-[11px]" />
+                </div>
+              )}
               {it.meaning && <p className="mt-1 text-xs text-txt1">{it.meaning}</p>}
+              {it.note && <SharedNote note={it.note} />}
               {it.scores && <ScoreBars scores={it.scores} columns={4} className="mt-3" />}
               <div className="mt-3 flex items-center gap-2">
                 {registrable(it) ? (

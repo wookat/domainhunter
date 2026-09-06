@@ -814,7 +814,13 @@ export function HomePage({
                       <span className="inline-flex min-h-[44px] min-w-0 flex-wrap items-center gap-x-1.5 px-2.5 py-1.5 sm:min-h-0">
                         <span title={row.domain} className="min-w-0 truncate line-through">{row.domain}</span>
                         <i className="not-italic font-sans text-[10px] text-taken">{t("status.taken")}</i>
-                        {row.expiresAt && <ExpiryNote iso={row.expiresAt} className="font-sans" />}
+                        {row.expiresAt ? (
+                          <ExpiryNote iso={row.expiresAt} className="font-sans" />
+                        ) : (
+                          <i title={t("expiry.unknownChipTip")} className="not-italic font-sans text-[10px] text-txt2" data-expiry="unknown">
+                            {t("expiry.unknownChip")}
+                          </i>
+                        )}
                       </span>
                       <button
                         onClick={() => shortlist.toggle(domainToRow(row.domain, "taken", row.expiresAt))}

@@ -117,6 +117,8 @@ const MONITOR_CHANGES_KEY = "monitor:changes";
 const MAX_MONITOR_DOMAINS = 500; // 全局监控上限
 const MAX_MONITOR_CHANGES = 100; // 变化记录保留条数
 const MONITOR_RECHECK_COOLDOWN_S = 60; // 手动刷新限频：每 IP 60 秒一次
+const WEBHOOK_TEST_COOLDOWN_S = 30; // 「发送测试」限频：每 IP 30 秒一次（worker 会真实向用户地址 POST）
+const WEBHOOK_TIMEOUT_MS = 5000;
 // 版本化缓存 key 掺 TLD 数量：指南扩容后旧缓存不再被当作全量数据；迁移/刷新逻辑见 prices-cache.ts
 const PRICES_CACHE_CFG: PricesCacheConfig = {
   key: `prices:v2:${TLD_LIST.length}`,
@@ -751,14 +753,17 @@ app.post("/api/monitor/recheck", async (c) => {
   return c.json({ entries, monitored: Object.keys(map).length, limit: MAX_MONITOR_DOMAINS });
 });
 
-/** 状态变化时向用户自备的 webhook 推送一条 JSON 通知（钉钉/飞书/Slack/自建均可） */
-async function sendWebhookNotification(webhook: string, change: MonitorChange): Promise<void> {
-  const event = change.to === "available" ? "dropped" : "regained";
+type WebhookEvent = "dropped" | "regained" | "test";
+
+/** webhook 通知体：真实变化与「发送测试」同一结构，接收端只需按 event 分流 */
+function webhookPayload(event: WebhookEvent, change: MonitorChange): string {
   const text =
     event === "dropped"
       ? `🎉 DomainHunter: ${change.domain} 已释放，现在可以注册了！ / is now available to register!`
-      : `DomainHunter: ${change.domain} 已被注册 / has been registered (${change.from} → ${change.to})`;
-  const body = JSON.stringify({
+      : event === "regained"
+        ? `DomainHunter: ${change.domain} 已被注册 / has been registered (${change.from} → ${change.to})`
+        : `DomainHunter 测试通知：webhook 已连通，监控域名释放/被注册时会收到同格式消息 / test notification: your webhook is connected`;
+  return JSON.stringify({
     source: "domainhunter",
     event,
     domain: change.domain,
@@ -774,17 +779,54 @@ async function sendWebhookNotification(webhook: string, change: MonitorChange): 
     msgtype: "text",
     url: `https://hunt.zalize.com`,
   });
+}
+
+function postWebhook(webhook: string, body: string): Promise<Response> {
+  return fetch(webhook, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body,
+    signal: AbortSignal.timeout(WEBHOOK_TIMEOUT_MS),
+  });
+}
+
+/** 状态变化时向用户自备的 webhook 推送一条 JSON 通知（钉钉/飞书/Slack/自建均可） */
+async function sendWebhookNotification(webhook: string, change: MonitorChange): Promise<void> {
+  const event: WebhookEvent = change.to === "available" ? "dropped" : "regained";
   try {
-    await fetch(webhook, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body,
-      signal: AbortSignal.timeout(5000),
-    });
+    await postWebhook(webhook, webhookPayload(event, change));
   } catch {
     // 通知失败不影响监控主流程
   }
 }
+
+// 「发送测试」：立即向用户填的 https 地址 POST 一条 event=test 通知，回传对方 HTTP 状态；每 IP 限频，不写 KV 监控集合
+// 不回传对方响应体（避免被当代理读取任意 https 内容），只回状态码
+app.post("/api/monitor/webhook-test", async (c) => {
+  const kv = c.env.CACHE;
+  if (!kv) return c.json({ ok: false, error: "monitor_unavailable" }, 503);
+  const body = await c.req.json<{ webhook?: unknown }>().catch(() => null);
+  const webhook = sanitizeWebhook(body?.webhook);
+  if (!webhook) return c.json({ ok: false, error: "invalid_webhook" }, 400);
+  const ip = c.req.header("cf-connecting-ip") ?? c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  const rlKey = `rl:webhook-test:${ip}`;
+  try {
+    const last = Number((await kv.get(rlKey)) ?? "0");
+    // KV expirationTtl 最小 60s，冷却期按时间戳自判
+    if (last > 0 && Date.now() - last < WEBHOOK_TEST_COOLDOWN_S * 1000) {
+      const retryAfter = Math.max(1, Math.ceil((last + WEBHOOK_TEST_COOLDOWN_S * 1000 - Date.now()) / 1000));
+      return c.json({ ok: false, error: "rate_limited", retryAfter }, 429, { "Retry-After": String(retryAfter) });
+    }
+    await kv.put(rlKey, String(Date.now()), { expirationTtl: 60 });
+  } catch { /* 限流读写失败不阻塞测试发送 */ }
+  const change: MonitorChange = { domain: "example.com", from: "taken", to: "available", at: Date.now() };
+  try {
+    const res = await postWebhook(webhook, webhookPayload("test", change));
+    return c.json({ ok: true, delivered: res.ok, status: res.status });
+  } catch {
+    return c.json({ ok: false, error: "unreachable" }, 502);
+  }
+});
 
 // 候选清单分享：存快照到 KV，返回可访问的只读链接
 app.post("/api/share", async (c) => {
@@ -1549,8 +1591,8 @@ const ssrIntroBlock = (intro: string) => `<p class="mt-6 text-[15px] leading-rel
 
 /* /advanced 首屏文案：与 lib/i18n.tsx 词典 adv.title / adv.subtitle 逐字同源 */
 const ADVANCED_SSR = {
-  zh: { title: "高级模式", subtitle: "词根 × 前后缀 × TLD 批量组合生成，逐个核验可注册状态" },
-  en: { title: "Advanced mode", subtitle: "Batch-generate roots × affixes × TLDs and verify availability one by one" },
+  zh: { title: "批量核验", subtitle: "粘贴现成名单，逐个实时核验可注册状态；也可用词根 × 前后缀 × TLD 组合生成后核验，不消耗 AI 次数" },
+  en: { title: "Bulk check", subtitle: "Paste an existing list and verify availability live, one by one; or generate roots × affixes × TLDs and check them — no AI quota used" },
 } as const;
 
 /** /advanced SSR 首屏骨架：DOM/类名与 advanced-page.tsx 首次渲染的 h1 + 副标题逐字一致（main 宽 max-w-5xl） */

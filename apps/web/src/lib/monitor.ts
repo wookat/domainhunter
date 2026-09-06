@@ -4,6 +4,8 @@ import { parseMonitorDomain, type MonitorAddEntry, type MonitorAddReject, type M
 
 const KEY = "domainhunter:monitor";
 const WEBHOOK_KEY = "domainhunter:monitor-webhook";
+/** 与 worker `sanitizeWebhook` 同值 */
+export const WEBHOOK_MAX_LENGTH = 500;
 
 export interface MonitorChange {
   domain: string;
@@ -53,10 +55,11 @@ function saveWebhook(url: string) {
   } catch {
     // ignore
   }
+  window.dispatchEvent(new Event(SYNC_EVENT));
 }
 
 export function isValidWebhook(url: string): boolean {
-  if (url.length > 500) return false;
+  if (url.length > WEBHOOK_MAX_LENGTH) return false;
   try {
     return new URL(url).protocol === "https:";
   } catch {
@@ -64,12 +67,77 @@ export function isValidWebhook(url: string): boolean {
   }
 }
 
+export type WebhookInvalidReason = "scheme" | "length" | "syntax";
+
+/** 给出不合法原因（文案按原因分流）；合法返回 null */
+export function webhookInvalidReason(url: string): WebhookInvalidReason | null {
+  if (url.length > WEBHOOK_MAX_LENGTH) return "length";
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return "syntax";
+  }
+  return parsed.protocol === "https:" ? null : "scheme";
+}
+
+/**
+ * 已配置 webhook 的脱敏展示：飞书/钉钉/Slack 的 webhook 路径本身就是凭证，页面只露出 host 与末 4 位，
+ * 例：`https://open.feishu.cn/open-apis/bot/v2/hook/abcd-…-9f3e` → `https://open.feishu.cn/…9f3e`。
+ * 路径短于 8 字符时没有可隐藏的部分，原样返回；无法解析的字符串按纯文本掐头去尾。
+ */
+export function maskWebhook(url: string): string {
+  const TAIL = 4;
+  try {
+    const u = new URL(url);
+    const rest = url.slice(u.origin.length);
+    if (rest.length <= TAIL * 2) return url;
+    return `${u.origin}/…${rest.slice(-TAIL)}`;
+  } catch {
+    return url.length <= TAIL * 2 ? url : `${url.slice(0, TAIL)}…${url.slice(-TAIL)}`;
+  }
+}
+
+export type WebhookTestResult =
+  | { kind: "delivered"; status: number }
+  | { kind: "rejected"; status: number }
+  | { kind: "unreachable" }
+  | { kind: "invalid" }
+  | { kind: "rateLimited"; retryAfter: number }
+  | { kind: "failed" };
+
+/** 「发送测试」：让 worker 向该地址 POST 一条 event=test 的通知（与真实掉落通知同字段），回传对方 HTTP 状态 */
+export async function sendWebhookTest(url: string, fetchImpl: typeof fetch = fetch): Promise<WebhookTestResult> {
+  const trimmed = url.trim();
+  if (!isValidWebhook(trimmed)) return { kind: "invalid" };
+  const res = await fetchImpl("/api/monitor/webhook-test", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ webhook: trimmed }),
+  }).catch(() => null);
+  if (!res) return { kind: "failed" };
+  const data = (await res.json().catch(() => null)) as { ok?: boolean; error?: string; delivered?: boolean; status?: number; retryAfter?: number } | null;
+  if (res.status === 429) {
+    const header = Number(res.headers.get("Retry-After") ?? "0");
+    const retryAfter = Number.isFinite(header) && header > 0 ? header : typeof data?.retryAfter === "number" ? data.retryAfter : 60;
+    return { kind: "rateLimited", retryAfter };
+  }
+  if (res.status === 400) return { kind: "invalid" };
+  if (res.status === 502 && data?.error === "unreachable") return { kind: "unreachable" };
+  if (!res.ok || !data?.ok || typeof data.status !== "number") return { kind: "failed" };
+  return data.delivered ? { kind: "delivered", status: data.status } : { kind: "rejected", status: data.status };
+}
+
 /** 本地记录哪些域名开了监控；开关时同步到服务端监控集合 */
 export function useMonitor() {
   const [monitored, setMonitored] = useState<Set<string>>(() => new Set(load()));
+  const [webhook, setWebhookState] = useState<string>(() => loadWebhook());
 
   useEffect(() => {
-    const sync = () => setMonitored(new Set(load()));
+    const sync = () => {
+      setMonitored(new Set(load()));
+      setWebhookState(loadWebhook());
+    };
     window.addEventListener(SYNC_EVENT, sync);
     window.addEventListener("storage", sync);
     return () => {
@@ -101,11 +169,12 @@ export function useMonitor() {
     return result;
   }, []);
 
-  /** 保存 webhook 并同步到已监控域名的服务端条目 */
+  /** 保存 webhook（空串 = 清除）并同步到已监控域名的服务端条目 */
   const setWebhook = useCallback(async (url: string): Promise<boolean> => {
     const trimmed = url.trim();
     if (trimmed !== "" && !isValidWebhook(trimmed)) return false;
     saveWebhook(trimmed);
+    setWebhookState(trimmed);
     await Promise.allSettled(
       [...monitored].map((domain) =>
         fetch("/api/monitor", {
@@ -118,7 +187,7 @@ export function useMonitor() {
     return true;
   }, [monitored]);
 
-  return { monitored, isMonitored, toggle, add, setWebhook };
+  return { monitored, isMonitored, toggle, add, webhook, setWebhook };
 }
 
 export type MonitorAddResult =

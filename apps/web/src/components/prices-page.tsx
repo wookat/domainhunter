@@ -39,6 +39,13 @@ function buildRows(prices: ReturnType<typeof usePrices>): PriceRow[] {
   });
 }
 
+/** 精确等于查询的后缀恒在首位（`io` → `.io` 不被 `.studio/.bio` 按价格挤到后面），其余保持传入顺序 */
+export function rankExactTld<T extends { tld: string }>(rows: T[], q: string): T[] {
+  if (!q) return rows;
+  const exact = rows.filter((r) => r.tld === q);
+  return exact.length ? [...exact, ...rows.filter((r) => r.tld !== q)] : rows;
+}
+
 export function PricesPage() {
   const { t, lang } = useI18n();
   const prices = usePrices();
@@ -53,7 +60,7 @@ export function PricesPage() {
     const list = buildRows(prices).filter((r) => !q || r.tld.includes(q));
     if (sort === "tld") list.sort((a, b) => a.tld.localeCompare(b.tld));
     else list.sort((a, b) => (sort === "reg" ? a.reg - b.reg : a.renew - b.renew));
-    return desc ? list.reverse() : list;
+    return rankExactTld(desc ? list.reverse() : list, q);
   }, [prices, sort, desc, filter]);
 
   // 再点同一列切换升/降序，切换列时重置为升序

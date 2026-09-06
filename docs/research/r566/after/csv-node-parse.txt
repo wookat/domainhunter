@@ -1,0 +1,14 @@
+PASS /home/ubuntu/r566/after/domainhunter-bulk-20260906.csv
+header=domain,status,meaning,theme,score,length,readability,relevance,brandability,first_year_price,price_first_year_cny,price_renew_cny,price_first_year_usd,price_renew_usd,price_source,expires_at
+rows=28 statuses={"available":23,"unknown":3,"taken":2} sources={"porkbun_live":17,"static_reference":6}
+4 numeric price fields: bare decimal or blank, no quotes/currency; taken/unknown 5 fields blank; compatibility label quoted; static USD blank.
+example available: ["r566qzv03.io","available","","","","","","","","首年 $28.12 ≈¥202","202","373","28.12","51.8","porkbun_live",""]
+example taken: ["google.com","taken","","","","","","","","","","","","","","2028-09-14"]
+example unknown: ["r566qzv11.cn","unknown","","","","","","","","","","","","","",""]
+PASS /home/ubuntu/r566/after/domainhunter-shortlist-20260906.csv
+header=domain,status,meaning,theme,score,length,readability,relevance,brandability,first_year_price,price_first_year_cny,price_renew_cny,price_first_year_usd,price_renew_usd,price_source,expires_at,note
+rows=4 statuses={"available":2,"taken":1,"unknown":1} sources={"porkbun_live":1,"static_reference":1}
+4 numeric price fields: bare decimal or blank, no quotes/currency; taken/unknown 5 fields blank; compatibility label quoted; static USD blank.
+example available: ["r566qzv03.io","available","","","","","","","","首年 $28.12 ≈¥202","202","373","28.12","51.8","porkbun_live","",""]
+example taken: ["google.com","taken","","","","","","","","","","","","","","2028-09-14",""]
+example unknown: ["r566qzv11.cn","unknown","","","","","","","","","","","","","","",""]
