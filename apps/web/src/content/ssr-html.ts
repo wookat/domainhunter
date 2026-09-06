@@ -7,7 +7,7 @@
  */
 import { TLD_COMPARES, comparesForTld, type TldCompare } from "./compares";
 import { buildCompareFaq, COMPARE_VERDICT_ANCHOR, comparePickAnchor } from "./compare-faq";
-import { buildComparePriceView, type ComparePriceSnapshot, type ComparePriceView, type PriceCell } from "./compare-prices";
+import { buildComparePriceView, renderPriceText, type ComparePriceSnapshot, type ComparePriceView, type PriceCell } from "./compare-prices";
 import { priceFull, priceShort } from "./price-text";
 import type { FaqItem } from "./faq";
 import { splitFaqAnswer } from "./faq";
@@ -319,11 +319,13 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang, prices: Compar
   const s = STR[lang];
   const loc = cmp[lang];
   const sides = [cmp.a, cmp.b] as const;
-  const picks = [loc.pickA, loc.pickB] as const;
+  // 正文价格占位与价格表同用一份快照（renderPriceText），客户端 compare-page.tsx 用同一函数 + 注入的同一份快照渲染，水合逐字一致
+  const picks = [loc.pickA, loc.pickB].map((items) => items.map((it) => renderPriceText(it, lang, prices)));
+  const verdictText = renderPriceText(loc.verdict, lang, prices);
   const faq = buildCompareFaq(cmp, lang);
   const priceTable = comparePriceTableHtml(buildComparePriceView(cmp.a, cmp.b, lang, prices));
   const relatedGuides = [...new Set([...guidesForTld(cmp.a), ...guidesForTld(cmp.b)])].slice(0, 4);
-  const verdict = `<div id="${COMPARE_VERDICT_ANCHOR}" class="mt-6 scroll-mt-20 rounded-xl border border-line bg-bg1 px-5 py-4"><h2 class="flex items-center gap-2 text-base font-bold">${ICON_SCALE}${escapeHtml(s.verdict)}</h2><p class="mt-2.5 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.verdict)}</p></div>`;
+  const verdict = `<div id="${COMPARE_VERDICT_ANCHOR}" class="mt-6 scroll-mt-20 rounded-xl border border-line bg-bg1 px-5 py-4"><h2 class="flex items-center gap-2 text-base font-bold">${ICON_SCALE}${escapeHtml(s.verdict)}</h2><p class="mt-2.5 text-[15px] leading-relaxed text-txt1">${escapeHtml(verdictText)}</p></div>`;
   const columns = `<div class="mt-8 grid gap-4 md:grid-cols-2">${sides
     .map((tld, i) => {
       const guide = TLD_GUIDES[tld];

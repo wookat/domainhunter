@@ -163,6 +163,145 @@ const STR = {
   },
 } as const;
 
+/**
+ * 正文价格占位（R549）：compares.ts 的 verdict / pickA / pickB 不再手写「.io 首年 259 元」这类会漂移的数字，
+ * 而是写占位符，SSR 与客户端用与价格表同一份 ComparePriceSnapshot 插值，保证同页正文与表格同源、水合逐字一致。
+ *
+ *   {{price:io:first:cny}}        .io 首年价（zh「202 元」/ en「¥202」）；:usd → 「$28」（整数美元，正文口径）
+ *   {{price:io:renew:usd}}        .io 续费价
+ *   {{diff:io:com:renew:cny}}     |.io − .com| 续费差额（绝对值；方向由正文措辞表达）
+ *   {{ratio:io:com:renew}}        .io ÷ .com 续费倍数（zh「4.7 倍」/ en「4.7×」）
+ *   {{jump:xyz}}                  .xyz 续费 ÷ 首年（「续费是首年的 N 倍」）
+ *   {{sum:io:com:renew:usd}}      .io + .com 续费合计（「两个都续约 $N/年」）
+ *   {{pair:net:org:renew:usd}}    两侧同一项的区间（「两者续费都在 $25–30 档」；取整后相等只显示一个值）
+ *   {{cost10:ai:cny}}             .ai 十年持有成本 = 首年 + 9 × 续费（costN 通用）
+ *   {{costdiff10:ai:com:cny}}     |.ai − .com| 十年持有成本差额（costdiffN 通用）
+ *
+ * 取值顺序与价格表一致（priceRow）：实时价 → 静态参考价（加 ≈，与表格「参考价」标注同义）→ 两者皆无输出「—」。
+ */
+export const PRICE_PLACEHOLDER_RE = /\{\{(price|diff|ratio|jump|sum|pair|cost\d+|costdiff\d+):([a-z0-9.:-]+)\}\}/g;
+
+type PriceField = "first" | "renew";
+type Currency = "cny" | "usd";
+
+export type PricePlaceholder =
+  | { kind: "price"; tld: string; field: PriceField; currency: Currency }
+  | { kind: "diff"; a: string; b: string; field: PriceField; currency: Currency }
+  | { kind: "ratio"; a: string; b: string; field: PriceField }
+  | { kind: "jump"; tld: string }
+  | { kind: "sum"; a: string; b: string; field: PriceField; currency: Currency }
+  | { kind: "pair"; a: string; b: string; field: PriceField; currency: Currency }
+  | { kind: "cost"; tld: string; years: number; currency: Currency }
+  | { kind: "costdiff"; a: string; b: string; years: number; currency: Currency };
+
+const isField = (x: string | undefined): x is PriceField => x === "first" || x === "renew";
+const isCurrency = (x: string | undefined): x is Currency => x === "cny" || x === "usd";
+const isTld = (x: string | undefined): x is string => typeof x === "string" && /^[a-z][a-z0-9.-]*$/.test(x);
+
+/** 解析单个占位符；形态不合法返回 null */
+export function parsePricePlaceholder(token: string): PricePlaceholder | null {
+  const m = new RegExp(`^${PRICE_PLACEHOLDER_RE.source}$`).exec(token);
+  if (!m) return null;
+  const rawKind = m[1];
+  const args = m[2].split(":");
+  if (rawKind === "price" && args.length === 3 && isTld(args[0]) && isField(args[1]) && isCurrency(args[2])) {
+    return { kind: "price", tld: args[0], field: args[1], currency: args[2] };
+  }
+  if (rawKind === "diff" && args.length === 4 && isTld(args[0]) && isTld(args[1]) && isField(args[2]) && isCurrency(args[3])) {
+    return { kind: "diff", a: args[0], b: args[1], field: args[2], currency: args[3] };
+  }
+  if (rawKind === "ratio" && args.length === 3 && isTld(args[0]) && isTld(args[1]) && isField(args[2])) {
+    return { kind: "ratio", a: args[0], b: args[1], field: args[2] };
+  }
+  if (rawKind === "jump" && args.length === 1 && isTld(args[0])) {
+    return { kind: "jump", tld: args[0] };
+  }
+  if ((rawKind === "sum" || rawKind === "pair") && args.length === 4 && isTld(args[0]) && isTld(args[1]) && isField(args[2]) && isCurrency(args[3])) {
+    return { kind: rawKind, a: args[0], b: args[1], field: args[2], currency: args[3] };
+  }
+  const cost = /^cost(\d+)$/.exec(rawKind);
+  if (cost && args.length === 2 && isTld(args[0]) && isCurrency(args[1])) {
+    const years = Number(cost[1]);
+    if (years >= 1) return { kind: "cost", tld: args[0], years, currency: args[1] };
+  }
+  const costdiff = /^costdiff(\d+)$/.exec(rawKind);
+  if (costdiff && args.length === 3 && isTld(args[0]) && isTld(args[1]) && isCurrency(args[2])) {
+    const years = Number(costdiff[1]);
+    if (years >= 1) return { kind: "costdiff", a: args[0], b: args[1], years, currency: args[2] };
+  }
+  return null;
+}
+
+/** 占位符涉及的 TLD（守门测试：必须是对比两侧且有静态参考价） */
+export const placeholderTlds = (ph: PricePlaceholder): string[] =>
+  ph.kind === "price" || ph.kind === "cost" || ph.kind === "jump" ? [ph.tld] : [ph.a, ph.b];
+
+const NO_PRICE = "—";
+
+function proseAmount(value: number, currency: Currency, lang: Lang, approx: boolean): string {
+  const mark = approx ? "≈" : "";
+  if (currency === "usd") return `${mark}$${Math.round(value)}`;
+  return lang === "zh" ? `${mark}${Math.round(value)} 元` : `${mark}¥${Math.round(value)}`;
+}
+
+function ratioText(ratio: number, lang: Lang): string {
+  const n = ratio >= 10 ? String(Math.round(ratio)) : (Math.round(ratio * 10) / 10).toString();
+  return lang === "zh" ? `${n} 倍` : `${n}×`;
+}
+
+const cellOf = (row: PriceRow, field: PriceField): PriceCell => (field === "first" ? row.first : row.renew);
+const amountOf = (cell: PriceCell, currency: Currency): number => (currency === "usd" ? cell.usd : cell.cny);
+const costOf = (row: PriceRow, years: number, currency: Currency): number =>
+  amountOf(row.first, currency) + (years - 1) * amountOf(row.renew, currency);
+
+function ratioOrNone(num: number, den: number, lang: Lang, approx: boolean): string {
+  if (den <= 0) return NO_PRICE;
+  return `${approx ? "≈" : ""}${ratioText(num / den, lang)}`;
+}
+
+/** 渲染单个占位符（任一侧无实时价也无静态参考价 → 「—」） */
+export function renderPricePlaceholder(ph: PricePlaceholder, lang: Lang, snap: ComparePriceSnapshot): string {
+  const rows: PriceRow[] = [];
+  for (const tld of placeholderTlds(ph)) {
+    const row = priceRow(tld, snap);
+    if (!row) return NO_PRICE;
+    rows.push(row);
+  }
+  const approx = rows.some((r) => !r.live);
+  switch (ph.kind) {
+    case "price":
+      return proseAmount(amountOf(cellOf(rows[0], ph.field), ph.currency), ph.currency, lang, approx);
+    case "diff":
+      return proseAmount(Math.abs(amountOf(cellOf(rows[0], ph.field), ph.currency) - amountOf(cellOf(rows[1], ph.field), ph.currency)), ph.currency, lang, approx);
+    case "ratio":
+      return ratioOrNone(cellOf(rows[0], ph.field).usd, cellOf(rows[1], ph.field).usd, lang, approx);
+    case "jump":
+      return ratioOrNone(rows[0].renew.usd, rows[0].first.usd, lang, approx);
+    case "sum":
+      return proseAmount(amountOf(cellOf(rows[0], ph.field), ph.currency) + amountOf(cellOf(rows[1], ph.field), ph.currency), ph.currency, lang, approx);
+    case "pair": {
+      const x = Math.round(amountOf(cellOf(rows[0], ph.field), ph.currency));
+      const y = Math.round(amountOf(cellOf(rows[1], ph.field), ph.currency));
+      if (x === y) return proseAmount(x, ph.currency, lang, approx);
+      const lo = proseAmount(Math.min(x, y), ph.currency, lang, approx);
+      const hi = Math.max(x, y);
+      return ph.currency === "usd" || lang === "en" ? `${lo}–${hi}` : `${lo.replace(/ 元$/, "")}–${hi} 元`;
+    }
+    case "cost":
+      return proseAmount(costOf(rows[0], ph.years, ph.currency), ph.currency, lang, approx);
+    case "costdiff":
+      return proseAmount(Math.abs(costOf(rows[0], ph.years, ph.currency) - costOf(rows[1], ph.years, ph.currency)), ph.currency, lang, approx);
+  }
+}
+
+/** 把正文里的价格占位符全部替换为与价格表同源的文本；不合法的占位符原样保留（由测试守门） */
+export function renderPriceText(text: string, lang: Lang, snap: ComparePriceSnapshot): string {
+  return text.replace(PRICE_PLACEHOLDER_RE, (token) => {
+    const ph = parsePricePlaceholder(token);
+    return ph ? renderPricePlaceholder(ph, lang, snap) : token;
+  });
+}
+
 /** 数据表视图：两侧都无价 → empty（整表不渲染 + 一句说明）；否则 table（缺一侧时无差额行 + 说明） */
 export function buildComparePriceView(a: string, b: string, lang: Lang, snap: ComparePriceSnapshot): ComparePriceView {
   const s = STR[lang];
