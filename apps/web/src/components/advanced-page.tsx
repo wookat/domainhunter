@@ -103,7 +103,7 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
           ].map((f) => (
             <div key={f.label}>
               <label className="text-sm font-medium">{f.label}</label>
-              <Input className="mt-2" value={f.value} placeholder={f.placeholder} onChange={(e) => f.set(e.target.value)} />
+              <Input className="mt-2 h-11 sm:h-10" value={f.value} placeholder={f.placeholder} onChange={(e) => f.set(e.target.value)} />
             </div>
           ))}
         </div>

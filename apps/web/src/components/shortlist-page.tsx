@@ -125,7 +125,7 @@ export function ShortlistPage({
           setDesc(false);
         }
       }}
-      className={cn("flex min-h-[32px] items-center gap-1 text-xs font-semibold", sort === k ? "text-brand" : "text-txt1 hover:text-txt0")}
+      className={cn("flex min-h-[44px] items-center gap-1 text-xs font-semibold sm:min-h-[32px]", sort === k ? "text-brand" : "text-txt1 hover:text-txt0")}
     >
       {label}
       {sort === k ? (desc ? <ArrowDown className="h-3 w-3" /> : <ArrowUp className="h-3 w-3" />) : <ArrowUpDown className="h-3 w-3" />}
@@ -681,7 +681,7 @@ export function ShortlistPage({
         <div className="mt-2.5 flex flex-wrap items-center gap-2">
           {items.length > 0 && (
             <button
-              className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50"
+              className="flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50 sm:h-9"
               onClick={() => void pushSync()}
               disabled={pushing}
             >
@@ -690,7 +690,7 @@ export function ShortlistPage({
             </button>
           )}
           <input
-            className="h-9 w-44 rounded-lg border border-line bg-bg0 px-3 font-mono text-sm uppercase tracking-widest placeholder:font-sans placeholder:normal-case placeholder:tracking-normal placeholder:text-txt2 focus:border-brand-line focus:outline-none"
+            className="h-11 w-44 rounded-lg border border-line bg-bg0 px-3 font-mono text-sm uppercase tracking-widest placeholder:font-sans placeholder:normal-case placeholder:tracking-normal placeholder:text-txt2 focus:border-brand-line focus:outline-none sm:h-9"
             placeholder={t("sync.importPlaceholder")}
             value={importCode}
             maxLength={8}
@@ -700,7 +700,7 @@ export function ShortlistPage({
             }}
           />
           <button
-            className="flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50"
+            className="flex h-11 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-txt1 hover:bg-bg2 hover:text-txt0 disabled:pointer-events-none disabled:opacity-50 sm:h-9"
             onClick={() => void importSync()}
             disabled={importing || importCode.length === 0}
           >

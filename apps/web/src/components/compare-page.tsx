@@ -94,7 +94,7 @@ export function ComparePage({ slug }: { slug: string }) {
       <div className="mt-3 space-y-2">
         {faq.map((item) => (
           <details key={item.q} className="group rounded-xl border border-line bg-bg1 px-4 py-3">
-            <summary className="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
+            <summary className="tap-target flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
               {item.q}
             </summary>
             <p className="mt-2 text-sm leading-relaxed text-txt1">

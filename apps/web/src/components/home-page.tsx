@@ -608,7 +608,7 @@ export function HomePage({
                     onClick={() => toggleTld(t)}
                     aria-pressed={active}
                     className={cn(
-                      "flex min-h-[44px] shrink-0 items-center rounded-md px-2.5 font-mono text-xs sm:min-h-0 sm:px-2 sm:py-1",
+                      "flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-md px-2.5 font-mono text-xs sm:min-h-0 sm:min-w-0 sm:px-2 sm:py-1",
                       active ? "bg-brand-dim font-semibold text-brand" : "text-txt1 hover:text-txt0",
                     )}
                   >
@@ -1056,7 +1056,7 @@ export function HomePage({
           <div className="mt-5 space-y-2">
             {([1, 2, 3, 4, 5, 6] as const).map((i) => (
               <details key={i} className="group rounded-xl border border-line bg-bg1 px-5 py-4">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium text-txt1 [&::-webkit-details-marker]:hidden">
+                <summary className="tap-target flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium text-txt1 [&::-webkit-details-marker]:hidden">
                   {t(`home.faq.q${i}` as I18nKey)}
                   <ChevronDown className="h-4 w-4 shrink-0 text-txt2 transition-transform group-open:rotate-180" />
                 </summary>
