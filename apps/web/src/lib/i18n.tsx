@@ -3,6 +3,7 @@ import { createContext, useCallback, useContext, useEffect, useState, type React
 import { HOME_FAQ, HOME_HERO, HOME_META } from "@/content/home-copy";
 import { NOT_FOUND_META } from "@/content/not-found-copy";
 import { TLD_LIST } from "@/content/tld-list";
+import { shareSsrTitle, type ShareItem, type ShareShellState } from "@/share-items";
 
 const TLD_COUNT = TLD_LIST.length;
 
@@ -359,6 +360,8 @@ const zh = {
   "share.loading": "加载中…",
   "share.notFound": "分享链接不存在或已过期（快照保留 30 天）",
   "share.revoked": "链接已失效：分享者已删除这份清单",
+  "share.docTitle.revoked": "分享已撤销 | DomainHunter",
+  "share.docTitle.notFound": "分享不存在或已过期 | DomainHunter",
   "share.errCtaDesc": "你也可以用 DomainHunter 创建并分享自己的候选清单。",
   "share.errCta": "去创建自己的候选清单",
   // TLD 指南页
@@ -840,6 +843,8 @@ const en: Record<I18nKey, string> = {
   "share.loading": "Loading…",
   "share.notFound": "This share link doesn't exist or has expired (snapshots last 30 days)",
   "share.revoked": "This link is no longer active — the owner deleted this shortlist",
+  "share.docTitle.revoked": "This share has been revoked | DomainHunter",
+  "share.docTitle.notFound": "Share not found or expired | DomainHunter",
   "share.errCtaDesc": "You can create and share your own shortlist with DomainHunter.",
   "share.errCta": "Create your own shortlist",
   "tld.notFound": "No guide for this TLD",
@@ -1013,6 +1018,16 @@ function loadLang(): Lang {
     if ((navigator.language ?? "").toLowerCase().startsWith("en")) return "en";
   } catch { /* ignore */ }
   return "zh";
+}
+
+/**
+ * /s/:id 水合后的 document.title：与 worker SSR 壳（shareGoneMeta / shareSsrTitle）同一份文案，
+ * 但按 SPA 解析出的语言（?lang → 存储 → navigator.language）重算——SSR 壳只看 Accept-Language，
+ * 两者不一致时壳 title 会留在另一种语言，正文却已是 SPA 语言。
+ */
+export function shareDocTitle(state: ShareShellState, lang: Lang, items: readonly Pick<ShareItem, "status">[] = []): string {
+  if (state === "ready") return shareSsrTitle(items, lang);
+  return dicts[lang][state === "revoked" ? "share.docTitle.revoked" : "share.docTitle.notFound"];
 }
 
 export function interpolate(template: string, vars?: Record<string, string | number>): string {

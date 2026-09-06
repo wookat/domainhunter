@@ -3,7 +3,7 @@ import { Check, Copy, Crosshair, Download, Loader2, Sparkles } from "lucide-reac
 
 import { RegisterMenu } from "@/components/domain-row";
 import { ScoreBars } from "@/components/score-bars";
-import { useI18n } from "@/lib/i18n";
+import { shareDocTitle, useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, usePrices } from "@/lib/prices";
 import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
 import { createdAgoLabel } from "@/lib/relative-time";
@@ -53,6 +53,11 @@ export function SharePage({ id }: { id: string }) {
       cancelled = true;
     };
   }, [id]);
+
+  useEffect(() => {
+    if (state.kind === "loading") return;
+    document.title = shareDocTitle(state.kind, lang, state.kind === "ready" ? state.data.items : []);
+  }, [state, lang]);
 
   if (state.kind === "loading") {
     return (
