@@ -1,0 +1,163 @@
+{
+ "/vs/io-vs-dev?lang=zh": {
+  "equal": {
+   "picks": true
+  },
+  "ssr": {
+   "picks": [
+    "Porkbun 实时价：首年 $28.12（≈¥202）· 续费 $51.8/年（汇率 7.2 估算）",
+    "Porkbun 实时价：首年 $8.75（≈¥63）· 续费 $12.87/年（汇率 7.2 估算）"
+   ]
+  },
+  "dom": {
+   "picks": [
+    "Porkbun 实时价：首年 $28.12（≈¥202）· 续费 $51.8/年（汇率 7.2 估算）",
+    "Porkbun 实时价：首年 $8.75（≈¥63）· 续费 $12.87/年（汇率 7.2 估算）"
+   ]
+  }
+ },
+ "/vs/io-vs-dev?lang=en": {
+  "equal": {
+   "picks": true
+  },
+  "ssr": {
+   "picks": [
+    "Porkbun live: $28.12 1st yr (≈¥202) · renews $51.8/yr (¥ est. at 7.2)",
+    "Porkbun live: $8.75 1st yr (≈¥63) · renews $12.87/yr (¥ est. at 7.2)"
+   ]
+  },
+  "dom": {
+   "picks": [
+    "Porkbun live: $28.12 1st yr (≈¥202) · renews $51.8/yr (¥ est. at 7.2)",
+    "Porkbun live: $8.75 1st yr (≈¥63) · renews $12.87/yr (¥ est. at 7.2)"
+   ]
+  }
+ },
+ "/vs/com-vs-cn?lang=en": {
+  "equal": {
+   "picks": true
+  },
+  "ssr": {
+   "picks": [
+    "Porkbun live: $11.08 1st yr (≈¥80) · renews $11.08/yr (¥ est. at 7.2)",
+    "Static reference: ≈$5 (¥33) 1st yr · ¥38/yr renewal · not a live quote"
+   ]
+  },
+  "dom": {
+   "picks": [
+    "Porkbun live: $11.08 1st yr (≈¥80) · renews $11.08/yr (¥ est. at 7.2)",
+    "Static reference: ≈$5 (¥33) 1st yr · ¥38/yr renewal · not a live quote"
+   ]
+  }
+ },
+ "/vs/com-vs-cn?lang=zh": {
+  "equal": {
+   "picks": true
+  },
+  "ssr": {
+   "picks": [
+    "Porkbun 实时价：首年 $11.08（≈¥80）· 续费 $11.08/年（汇率 7.2 估算）",
+    "静态参考价：首年 ¥33 · 续费 ¥38/年 · 非实时报价"
+   ]
+  },
+  "dom": {
+   "picks": [
+    "Porkbun 实时价：首年 $11.08（≈¥80）· 续费 $11.08/年（汇率 7.2 估算）",
+    "静态参考价：首年 ¥33 · 续费 ¥38/年 · 非实时报价"
+   ]
+  }
+ },
+ "/vs/uy-vs-ar?lang=zh": {
+  "equal": {
+   "picks": true
+  },
+  "ssr": {
+   "picks": [
+    "静态参考价：首年 ¥380 · 续费 ¥380/年 · 非实时报价",
+    "静态参考价：首年 ¥260 · 续费 ¥260/年 · 非实时报价"
+   ]
+  },
+  "dom": {
+   "picks": [
+    "静态参考价：首年 ¥380 · 续费 ¥380/年 · 非实时报价",
+    "静态参考价：首年 ¥260 · 续费 ¥260/年 · 非实时报价"
+   ]
+  }
+ },
+ "/vs/uy-vs-ar?lang=en": {
+  "equal": {
+   "picks": true
+  },
+  "ssr": {
+   "picks": [
+    "Static reference: ≈$53 (¥380) 1st yr · ¥380/yr renewal · not a live quote",
+    "Static reference: ≈$36 (¥260) 1st yr · ¥260/yr renewal · not a live quote"
+   ]
+  },
+  "dom": {
+   "picks": [
+    "Static reference: ≈$53 (¥380) 1st yr · ¥380/yr renewal · not a live quote",
+    "Static reference: ≈$36 (¥260) 1st yr · ¥260/yr renewal · not a live quote"
+   ]
+  }
+ },
+ "/tld/cn?lang=zh": {
+  "equal": {
+   "card": true
+  },
+  "ssr": {
+   "card": "静态参考价：首年 ¥33 · 续费 ¥38/年 · 非实时报价"
+  },
+  "dom": {
+   "card": "静态参考价：首年 ¥33 · 续费 ¥38/年 · 非实时报价"
+  }
+ },
+ "/tld/com?lang=zh": {
+  "equal": {
+   "card": true
+  },
+  "ssr": {
+   "card": "注册 $11.08≈ ¥80续费 $11.08≈ ¥80Porkbun 实时价 · 人民币按汇率 7.2 估算"
+  },
+  "dom": {
+   "card": "注册 $11.08≈ ¥80 续费 $11.08≈ ¥80 Porkbun 实时价 · 人民币按汇率 7.2 估算"
+  }
+ },
+ "/guide/saas?lang=en": {
+  "equal": {
+   "cards": true
+  },
+  "ssr": {
+   "cards": [
+    [
+     "/tld/com?lang=en",
+     ".com1st yr $11.08"
+    ],
+    [
+     "/tld/io?lang=en",
+     ".io1st yr $28.12"
+    ],
+    [
+     "/tld/app?lang=en",
+     ".app1st yr $8.75"
+    ]
+   ]
+  },
+  "dom": {
+   "cards": [
+    [
+     "/tld/com?lang=en",
+     ".com1st yr $11.08"
+    ],
+    [
+     "/tld/io?lang=en",
+     ".io1st yr $28.12"
+    ],
+    [
+     "/tld/app?lang=en",
+     ".app1st yr $8.75"
+    ]
+   ]
+  }
+ }
+}

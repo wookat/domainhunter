@@ -1,0 +1,138 @@
+{
+ "/": {
+  "console_errors_warnings": [],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名"
+ },
+ "/?lang=en": {
+  "console_errors_warnings": [],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": "DomainHunter — Domain hunter for Chinese founders | Bilingual naming, verified .cn / .com availability"
+ },
+ "/vs/io-vs-dev": {
+  "console_errors_warnings": [],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": ".io vs .dev: The Veteran Hacker Suffix or the Purpose-Built One | DomainHunter"
+ },
+ "/vs/com-vs-cn?lang=en": {
+  "console_errors_warnings": [],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": ".com vs .cn: Audience, Compliance & Brand Protection Compared | DomainHunter"
+ },
+ "/vs/uy-vs-ar": {
+  "console_errors_warnings": [],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": ".uy vs .ar: Uruguay or Argentina Country Domain Compared | DomainHunter"
+ },
+ "/tld/cn": {
+  "console_errors_warnings": [],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": ".cn Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter"
+ },
+ "/guide/saas?lang=en": {
+  "console_errors_warnings": [],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": "How to Name a SaaS Product: Strategies, Case Studies & Domains | DomainHunter"
+ },
+ "/shortlist": {
+  "console_errors_warnings": [],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": "DomainHunter — Domain hunter for Chinese founders | Bilingual naming, verified .cn / .com availability"
+ },
+ "/does-not-exist": {
+  "console_errors_warnings": [
+   [
+    "error",
+    "Failed to load resource: the server responded with a status of 404 ()"
+   ]
+  ],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": "Page not found | DomainHunter"
+ },
+ "/tld/does-not-exist?lang=en": {
+  "console_errors_warnings": [
+   [
+    "error",
+    "Failed to load resource: the server responded with a status of 404 ()"
+   ]
+  ],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": "Page not found | DomainHunter"
+ },
+ "/prices": {
+  "console_errors_warnings": [],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": "TLD Price Overview: Registration vs Renewal for 408 Popular Suffixes | DomainHunter"
+ },
+ "/mcp": {
+  "console_errors_warnings": [],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": "Plug domain checking into your AI assistant | DomainHunter"
+ },
+ "/s/nope-r534": {
+  "console_errors_warnings": [
+   [
+    "error",
+    "Failed to load resource: the server responded with a status of 404 ()"
+   ],
+   [
+    "error",
+    "Failed to load resource: the server responded with a status of 404 ()"
+   ]
+  ],
+  "csp_messages": [],
+  "pageerror": [],
+  "requestfailed": [],
+  "ai": [],
+  "csp_post": [],
+  "title": "Share not found or expired | DomainHunter"
+ }
+}
