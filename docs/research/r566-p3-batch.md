@@ -186,3 +186,17 @@ RDAP 规范（RFC 9083 https://datatracker.ietf.org/doc/html/rfc9083 ）本身�
 - `TLD_LIST` 无二级后缀（`com.cn/net.cn/org.cn`），`/prices` 对 `com.cn` 永远空态；若产品要覆盖国内常用二级后缀需另开一轮（含 `tldPrice` 静态价与 `TLD_GUIDES` 编译期约束）。
 - `/advanced` 的 `FULL_RE` 接受 `foo.bar.cn`、`hunt.zalize.com` 这类三级名并整条送去核验（RDAP 会按注册域回答），「已识别 N 个」会让用户以为是 N 个可注册候选。
 - 组合器路径（roots × affixes × TLD）total 由服务端展开，前端只能显示「已核验 x」；若要 `x/N` 需 `/api/search` 首行回传 total（worker 改动，范围外）。
+
+## 9. 改后本地验证（[验证]，PR #530 分支，`wrangler dev :8787`，0 生产/AI 请求；产物 `r566/after/`）
+
+| 项 | 结果 | 证据 |
+|---|---|---|
+| P3-1 `/prices` | 4 个精确查询（`io` 14 行、`com` 4、`.ai` 7、`cn` 1）× 3 列 × 升/降 = 24 组，精确行均在首位且其余保持排序；`com.cn` 0/408 空态 | `after/price-sort-assertions.json`、`after/prices-io.png`、`prices-cn.png`、`prices-com-cn-empty.png` |
+| P3-2 `/advanced` | 375×812 粘贴框 y=282–404 首屏可见（改前 y=752）；h1/导航 zh「批量核验」en「Bulk check」；Tab 可达粘贴框与「核验 28 个域名」 | `after/advanced-375-{light,dark}.png`、`header-bulk-{zh,en}.png`、`mobile-metrics.json` |
+| P3-3 进度 | 28 个唯一带后缀域名 → 「已识别 28 个域名」→ 流式「核验中 x/28」（中间帧 18/28）→「已完成 28/28」，progressbar `aria-valuenow=28 max=28`；组合器 `lingxi × com`：「已核验 0 个」→「已完成，共核验 1 个」，无分母 | `after/bulk-progress-{mid,done}.png`、`generator-progress-done-detail.png` |
+| P3-4 CSV | 批量（28 行）与候选清单（4 行）两份下载均通过 node RFC 4180 解析：4 个数值列全部匹配 `^(\d+(\.\d+)?)?$` 且未加引号；taken/unknown 五列全空；旧列仍为带引号标签；实时价 `porkbun_live` 17 / 静态 `static_reference` 6，静态行 USD 空 | `after/csv-node-parse.txt`、`parse-csv.mjs`、`bulk-export-after.csv` |
+| P3-7 `/shortlist` | 375：排序条 + 域名卡先于监控/我的分享/同步；Tab 顺序：4 个排序键 → 卡片去注册（Enter 弹注册商菜单）→ `#shortlist-sync-code`；桌面仍面板在前；空清单同步块在空态之前 | `after/shortlist-375-{light,dark}.png`、`shortlist-375-empty-sync-first.png`、`shortlist-desktop-panels-first.png` |
+| 溢出 | `/advanced` `/shortlist` × 浅/深：`documentElement.scrollWidth=body.scrollWidth=innerWidth=375`（隐藏经典滚动条后测；未隐藏时 Chrome 桌面模拟报 360/375，是滚动条占宽而非内容溢出） | `after/mobile-metrics.json` |
+| 清理 | 本地测试分享已撤销（GET → 410）；本地 local/sessionStorage 字节级还原 | 测试记录 |
+
+未验证：读屏软件实际播报（只验了 `role=status aria-live=polite` 语义）；候选清单手机卡片本无「复制」按钮，故「卡片复制键可达」不适用。
