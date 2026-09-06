@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { copyText } from "@/lib/clipboard";
+import { CSV_PRICE_COLUMNS, priceCsvCells } from "@/lib/csv";
 import { downloadText } from "@/lib/export";
 import { useI18n, type TFunc } from "@/lib/i18n";
 import { priceShort, usePrices, type PriceMap } from "@/lib/prices";
@@ -15,13 +16,14 @@ export type ResultsCsvRow = Pick<Row, "domain" | "tld" | "meaning" | "theme" | "
   note?: string;
 };
 
-/** 可选附加列；不传时输出与原有结果 CSV 完全一致 */
+/** 可选附加列（追加在固定列之后）；不传时只输出固定列 */
 export interface ResultsCsvOptions {
   expiresAt?: boolean;
   note?: boolean;
 }
 
-const CSV_HEADER = "domain,status,meaning,theme,score,length,readability,relevance,brandability,first_year_price";
+/** `first_year_price` 为带币种标签的可读字符串，R566 起作为兼容列保留一版；机器消费请用其后的数值价格列 */
+const CSV_HEADER = ["domain,status,meaning,theme,score,length,readability,relevance,brandability,first_year_price", ...CSV_PRICE_COLUMNS].join(",");
 
 export function buildResultsCsv(rows: ResultsCsvRow[], lang: "zh" | "en", prices: PriceMap | null, opts?: ResultsCsvOptions): string {
   const esc = (v: string) => `"${v.replace(/"/g, '""')}"`;
@@ -39,6 +41,7 @@ export function buildResultsCsv(rows: ResultsCsvRow[], lang: "zh" | "en", prices
       s?.relevance ?? "",
       s?.brandability ?? "",
       r.status === "available" ? esc(priceShort(r.tld, lang, prices) ?? "") : "",
+      ...priceCsvCells(r.tld, r.status, prices),
     ];
     if (opts?.expiresAt) cells.push(esc(r.expiresAt ?? ""));
     if (opts?.note) cells.push(esc(r.note ?? ""));

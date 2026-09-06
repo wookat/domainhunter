@@ -185,3 +185,30 @@ describe("R548 结果页 DomainRow：unknown 行无价格无去注册；taken �
     expect(html).toMatch(REGISTER_RE);
   });
 });
+
+describe("R566 P3-7 窄屏：域名清单先于监控/分享/同步区块（无 window = 窄屏分支）", () => {
+  it("有候选时，第一张域名卡与排序条都在「跨设备同步」之前；同步区块仍存在", () => {
+    setLang("zh");
+    const html = renderShortlist(ITEMS);
+    const firstCard = html.indexOf("google<span class=\"text-txt2\">.com</span>");
+    const sortBar = html.indexOf(">排序<") >= 0 ? html.indexOf(">排序<") : html.indexOf("shortlist-sort");
+    const sync = html.indexOf('id="shortlist-sync-code"');
+    const monitor = html.indexOf(">监控动态<");
+    expect(firstCard).toBeGreaterThan(-1);
+    expect(sync).toBeGreaterThan(-1);
+    expect(monitor).toBeGreaterThan(-1);
+    expect(firstCard).toBeLessThan(sync);
+    expect(firstCard).toBeLessThan(monitor);
+    if (sortBar >= 0) expect(sortBar).toBeLessThan(sync);
+  });
+
+  it("空清单时「跨设备同步」仍在空态之前（导入同步码是空清单的主要来路）", () => {
+    setLang("zh");
+    const html = renderShortlist([]);
+    const sync = html.indexOf('id="shortlist-sync-code"');
+    const empty = html.indexOf("尚无候选") >= 0 ? html.indexOf("尚无候选") : html.indexOf("border-dashed");
+    expect(sync).toBeGreaterThan(-1);
+    expect(empty).toBeGreaterThan(-1);
+    expect(sync).toBeLessThan(empty);
+  });
+});

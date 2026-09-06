@@ -1,0 +1,194 @@
+[
+  {
+    "query": "io",
+    "column": "后缀",
+    "direction": "asc",
+    "first": "io",
+    "rows": 14,
+    "remaining_sorted": true
+  },
+  {
+    "query": "io",
+    "column": "后缀",
+    "direction": "desc",
+    "first": "io",
+    "rows": 14,
+    "remaining_sorted": true
+  },
+  {
+    "query": "io",
+    "column": "注册/首年",
+    "direction": "asc",
+    "first": "io",
+    "rows": 14,
+    "remaining_sorted": true
+  },
+  {
+    "query": "io",
+    "column": "注册/首年",
+    "direction": "desc",
+    "first": "io",
+    "rows": 14,
+    "remaining_sorted": true
+  },
+  {
+    "query": "io",
+    "column": "续费/年",
+    "direction": "asc",
+    "first": "io",
+    "rows": 14,
+    "remaining_sorted": true
+  },
+  {
+    "query": "io",
+    "column": "续费/年",
+    "direction": "desc",
+    "first": "io",
+    "rows": 14,
+    "remaining_sorted": true
+  },
+  {
+    "query": "com",
+    "column": "后缀",
+    "direction": "asc",
+    "first": "com",
+    "rows": 4,
+    "remaining_sorted": true
+  },
+  {
+    "query": "com",
+    "column": "后缀",
+    "direction": "desc",
+    "first": "com",
+    "rows": 4,
+    "remaining_sorted": true
+  },
+  {
+    "query": "com",
+    "column": "注册/首年",
+    "direction": "asc",
+    "first": "com",
+    "rows": 4,
+    "remaining_sorted": true
+  },
+  {
+    "query": "com",
+    "column": "注册/首年",
+    "direction": "desc",
+    "first": "com",
+    "rows": 4,
+    "remaining_sorted": true
+  },
+  {
+    "query": "com",
+    "column": "续费/年",
+    "direction": "asc",
+    "first": "com",
+    "rows": 4,
+    "remaining_sorted": true
+  },
+  {
+    "query": "com",
+    "column": "续费/年",
+    "direction": "desc",
+    "first": "com",
+    "rows": 4,
+    "remaining_sorted": true
+  },
+  {
+    "query": ".ai",
+    "column": "后缀",
+    "direction": "asc",
+    "first": "ai",
+    "rows": 7,
+    "remaining_sorted": true
+  },
+  {
+    "query": ".ai",
+    "column": "后缀",
+    "direction": "desc",
+    "first": "ai",
+    "rows": 7,
+    "remaining_sorted": true
+  },
+  {
+    "query": ".ai",
+    "column": "注册/首年",
+    "direction": "asc",
+    "first": "ai",
+    "rows": 7,
+    "remaining_sorted": true
+  },
+  {
+    "query": ".ai",
+    "column": "注册/首年",
+    "direction": "desc",
+    "first": "ai",
+    "rows": 7,
+    "remaining_sorted": true
+  },
+  {
+    "query": ".ai",
+    "column": "续费/年",
+    "direction": "asc",
+    "first": "ai",
+    "rows": 7,
+    "remaining_sorted": true
+  },
+  {
+    "query": ".ai",
+    "column": "续费/年",
+    "direction": "desc",
+    "first": "ai",
+    "rows": 7,
+    "remaining_sorted": true
+  },
+  {
+    "query": "cn",
+    "column": "后缀",
+    "direction": "asc",
+    "first": "cn",
+    "rows": 1,
+    "remaining_sorted": true
+  },
+  {
+    "query": "cn",
+    "column": "后缀",
+    "direction": "desc",
+    "first": "cn",
+    "rows": 1,
+    "remaining_sorted": true
+  },
+  {
+    "query": "cn",
+    "column": "注册/首年",
+    "direction": "asc",
+    "first": "cn",
+    "rows": 1,
+    "remaining_sorted": true
+  },
+  {
+    "query": "cn",
+    "column": "注册/首年",
+    "direction": "desc",
+    "first": "cn",
+    "rows": 1,
+    "remaining_sorted": true
+  },
+  {
+    "query": "cn",
+    "column": "续费/年",
+    "direction": "asc",
+    "first": "cn",
+    "rows": 1,
+    "remaining_sorted": true
+  },
+  {
+    "query": "cn",
+    "column": "续费/年",
+    "direction": "desc",
+    "first": "cn",
+    "rows": 1,
+    "remaining_sorted": true
+  }
+]

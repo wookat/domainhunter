@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { DomainRow } from "@/components/domain-row";
 import { parseCheckLine, recheckDomains, recheckFailureDetail } from "@/lib/check-client";
-import { useI18n } from "@/lib/i18n";
+import { useI18n, type TFunc } from "@/lib/i18n";
 import { usePrices } from "@/lib/prices";
 import { exportResultsCsv, useCopyAvailable } from "@/lib/results-export";
 import { formatExpiry, friendlyError, friendlyHttpError } from "@/lib/utils";
@@ -30,6 +30,19 @@ function expandBulk(input: string, tlds: string[]): string[] {
   return [...out].slice(0, MAX_BULK);
 }
 
+export interface BulkProgress {
+  /** 已收到的核验结果行数 */
+  done: number;
+  /** 请求时已知的总数；组合器路径由服务端展开，前端不知 total */
+  total?: number;
+}
+
+/** 进度文案：有 total 时 `x/N`，没有时只报已核验数；结束后改为「已完成」 */
+export function bulkProgressLabel(p: BulkProgress, running: boolean, t: TFunc): string {
+  if (p.total === undefined) return t(running ? "adv.progressOpen" : "adv.progressDoneOpen", { done: p.done });
+  return t(running ? "adv.progress" : "adv.progressDone", { done: p.done, total: p.total });
+}
+
 export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string) => boolean; toggle: (row: Row) => void } }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
@@ -41,6 +54,7 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
   const [bulk, setBulk] = useState("");
   const [rows, setRows] = useState<Row[]>([]);
   const [running, setRunning] = useState(false);
+  const [progress, setProgress] = useState<BulkProgress | null>(null);
   const [error, setError] = useState("");
   const [rechecking, setRechecking] = useState<Set<string>>(() => new Set());
   const abortRef = useRef<AbortController | null>(null);
@@ -71,6 +85,7 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
     abortRef.current = ac;
     setRows([]);
     setError("");
+    setProgress({ done: 0, total: payload?.domains.length });
     setRunning(true);
     try {
       const res = await fetch("/api/search", {
@@ -97,10 +112,16 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
             const status: Status = r.status;
             return { domain: r.domain, label: r.domain.slice(0, dot), tld: r.domain.slice(dot + 1), status, round: 1, expiresAt: r.expiresAt, detail: r.detail };
           });
-        if (rs.length) setRows((prev) => [...prev, ...rs]);
+        if (rs.length) {
+          setRows((prev) => [...prev, ...rs]);
+          setProgress((prev) => (prev ? { ...prev, done: prev.done + rs.length } : { done: rs.length }));
+        }
       }
     } catch (e) {
-      if ((e as Error).name !== "AbortError") setError(friendlyError(e as Error, t));
+      if ((e as Error).name !== "AbortError") {
+        setError(friendlyError(e as Error, t));
+        setProgress(null);
+      }
     } finally {
       setRunning(false);
     }
@@ -108,15 +129,47 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
 
   const available = rows.filter((r) => r.status === "available");
   const rest = rows.filter((r) => r.status !== "available");
-  const bulkDomains = expandBulk(bulk, split(tlds).length > 0 ? split(tlds) : ["com"]);
+  const effectiveTlds = split(tlds).length > 0 ? split(tlds) : ["com"];
+  const bulkDomains = expandBulk(bulk, effectiveTlds);
 
   return (
     <main className="mx-auto w-full min-w-0 max-w-5xl flex-1 px-4 py-8 md:px-6">
       <h1 className="text-xl font-bold tracking-tight md:text-2xl">{t("adv.title")}</h1>
       <p className="mt-1 text-sm text-txt1">{t("adv.subtitle")}</p>
 
+      {/* 批量粘贴核验是本页主路径，放首屏；组合生成器降为高级选项放其后 */}
       <Card className="mt-5 p-4 md:p-6">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <p className="flex items-center gap-1.5 text-sm font-semibold">
+          <ClipboardList className="h-4 w-4 text-brand" />
+          {t("adv.bulkTitle")}
+        </p>
+        <p className="mt-1 text-xs text-txt1">{t("adv.bulkHint", { n: MAX_BULK, tlds: effectiveTlds.join(", ") })}</p>
+        <textarea
+          id="advanced-bulk"
+          name="bulk"
+          value={bulk}
+          onChange={(e) => setBulk(e.target.value)}
+          aria-label={t("adv.bulkAria")}
+          placeholder={t("adv.bulkPlaceholder")}
+          rows={5}
+          className="mt-3 w-full rounded-lg border border-line bg-bg2 px-3 py-2.5 font-mono text-sm text-txt0 placeholder:text-txt2 focus:border-brand-line focus:outline-none"
+        />
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          <Button size="lg" disabled={running || bulkDomains.length === 0} onClick={() => void run({ domains: bulkDomains })}>
+            {running ? <Loader2 className="h-4 w-4 animate-spin" /> : <ClipboardList className="h-4 w-4" />}
+            {running ? t("adv.running") : t("adv.bulkStart", { n: bulkDomains.length })}
+          </Button>
+          <span className="text-xs text-txt2">{t("adv.bulkCount", { n: bulkDomains.length })}</span>
+        </div>
+      </Card>
+
+      <Card className="mt-4 p-4 md:p-6">
+        <p className="flex items-center gap-1.5 text-sm font-semibold">
+          <Search className="h-4 w-4 text-brand" />
+          {t("adv.comboTitle")}
+        </p>
+        <p className="mt-1 text-xs text-txt1">{t("adv.comboHint")}</p>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { id: "advanced-roots", name: "roots", label: t("adv.roots"), aria: t("adv.rootsAria"), value: roots, set: setRoots, placeholder: "tizhi, gwy" },
             { id: "advanced-prefixes", name: "prefixes", label: t("adv.prefixes"), aria: t("adv.prefixesAria"), value: prefixes, set: setPrefixes, placeholder: "get, my" },
@@ -137,31 +190,26 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
         </Button>
       </Card>
 
-      {/* 批量粘贴核验：现成名单直接查，不消耗 AI 次数 */}
-      <Card className="mt-4 p-4 md:p-6">
-        <p className="flex items-center gap-1.5 text-sm font-semibold">
-          <ClipboardList className="h-4 w-4 text-brand" />
-          {t("adv.bulkTitle")}
-        </p>
-        <p className="mt-1 text-xs text-txt1">{t("adv.bulkHint", { n: MAX_BULK })}</p>
-        <textarea
-          id="advanced-bulk"
-          name="bulk"
-          value={bulk}
-          onChange={(e) => setBulk(e.target.value)}
-          aria-label={t("adv.bulkAria")}
-          placeholder={t("adv.bulkPlaceholder")}
-          rows={5}
-          className="mt-3 w-full rounded-lg border border-line bg-bg2 px-3 py-2.5 font-mono text-sm text-txt0 placeholder:text-txt2 focus:border-brand-line focus:outline-none"
-        />
-        <div className="mt-3 flex flex-wrap items-center gap-3">
-          <Button size="lg" disabled={running || bulkDomains.length === 0} onClick={() => void run({ domains: bulkDomains })}>
-            {running ? <Loader2 className="h-4 w-4 animate-spin" /> : <ClipboardList className="h-4 w-4" />}
-            {running ? t("adv.running") : t("adv.bulkStart", { n: bulkDomains.length })}
-          </Button>
-          <span className="text-xs text-txt2">{t("adv.bulkCount", { n: bulkDomains.length })}</span>
+      {progress && (
+        <div className="mt-4 rounded-lg border border-line bg-bg1 px-4 py-2.5" data-testid="bulk-progress">
+          <p role="status" aria-live="polite" className="flex items-center gap-2 font-mono text-xs text-txt1">
+            {running ? <Loader2 className="h-3.5 w-3.5 animate-spin text-brand" /> : <Check className="h-3.5 w-3.5 text-brand" />}
+            {bulkProgressLabel(progress, running, t)}
+          </p>
+          {progress.total !== undefined && progress.total > 0 && (
+            <div
+              role="progressbar"
+              aria-label={t("adv.progressAria")}
+              aria-valuemin={0}
+              aria-valuemax={progress.total}
+              aria-valuenow={Math.min(progress.done, progress.total)}
+              className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-bg2"
+            >
+              <div className="h-full rounded-full bg-brand transition-[width] duration-300" style={{ width: `${Math.min(100, Math.round((progress.done / progress.total) * 100))}%` }} />
+            </div>
+          )}
         </div>
-      </Card>
+      )}
 
       {error && <p className="mt-4 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">{error}</p>}
 

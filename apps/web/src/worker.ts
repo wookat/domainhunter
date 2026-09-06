@@ -1591,8 +1591,8 @@ const ssrIntroBlock = (intro: string) => `<p class="mt-6 text-[15px] leading-rel
 
 /* /advanced 首屏文案：与 lib/i18n.tsx 词典 adv.title / adv.subtitle 逐字同源 */
 const ADVANCED_SSR = {
-  zh: { title: "高级模式", subtitle: "词根 × 前后缀 × TLD 批量组合生成，逐个核验可注册状态" },
-  en: { title: "Advanced mode", subtitle: "Batch-generate roots × affixes × TLDs and verify availability one by one" },
+  zh: { title: "批量核验", subtitle: "粘贴现成名单，逐个实时核验可注册状态；也可用词根 × 前后缀 × TLD 组合生成后核验，不消耗 AI 次数" },
+  en: { title: "Bulk check", subtitle: "Paste an existing list and verify availability live, one by one; or generate roots × affixes × TLDs and check them — no AI quota used" },
 } as const;
 
 /** /advanced SSR 首屏骨架：DOM/类名与 advanced-page.tsx 首次渲染的 h1 + 副标题逐字一致（main 宽 max-w-5xl） */
