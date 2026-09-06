@@ -1,0 +1,10 @@
+('guide', 'en') n=410 >25%=0 >=23%=0 top5 [(0.212, '/guide/juicebar'), (0.208, '/guide/coffee'), (0.204, '/guide/candle'), (0.201, '/guide/soapmaking'), (0.201, '/guide/food')]
+('guide', 'zh') n=410 >25%=0 >=23%=0 top5 [(0.217, '/guide/fanclub'), (0.215, '/guide/taekwondo'), (0.215, '/guide/newsletter'), (0.215, '/guide/fashion'), (0.214, '/guide/photography')]
+('tld', 'en') n=408 >25%=0 >=23%=0 top5 [(0.227, '/tld/vip'), (0.224, '/tld/fun'), (0.215, '/tld/shop'), (0.215, '/tld/club'), (0.212, '/tld/studio')]
+('tld', 'zh') n=408 >25%=0 >=23%=0 top5 [(0.18, '/tld/fun'), (0.177, '/tld/vip'), (0.177, '/tld/club'), (0.172, '/tld/shop'), (0.171, '/tld/studio')]
+('vs', 'en') n=444 >25%=3 >=23%=83 top5 [(0.251, '/vs/page-vs-com'), (0.251, '/vs/fitness-vs-coach'), (0.25, '/vs/clinic-vs-care'), (0.25, '/vs/care-vs-doctor'), (0.249, '/vs/vip-vs-top')]
+('vs', 'zh') n=444 >25%=0 >=23%=1 top5 [(0.23, '/vs/pink-vs-me'), (0.219, '/vs/express-vs-store'), (0.217, '/vs/lol-vs-gg'), (0.216, '/vs/blog-vs-me'), (0.215, '/vs/restaurant-vs-cafe')]
+/vs/uk-vs-com 0.183 737 0
+/vs/academy-vs-coach 0.182 762 0
+/vs/academy-vs-school 0.189 711 0
+/vs/agency-vs-co 0.186 728 0

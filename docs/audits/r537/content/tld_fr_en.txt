@@ -1,0 +1,34 @@
+Home
+TLD guides
+.fr
+.fr Domain Guide: Who It's For, Pricing & Naming Tips
+Static reference: ≈$9 (¥65) 1st yr · ¥72/yr renewal · not a live quoteSee prices for all 408 TLDs →
+France's .fr is administered by Afnic (Association Française pour le Nommage Internet en Coopération), delegated by IANA on 2 September 1986, with sites at nic.fr and afnic.fr and RDAP at rdap.nic.fr. Eligibility is written into article 90 of the Afnic Naming Policy dated 6 July 2026: the registrant must be a natural person residing in a European Union member state, Iceland, Liechtenstein, Norway or Switzerland, or a legal person with its registered office or principal establishment in one of those territories — the historical turning point being 2011, when .fr opened to the whole EU after being reserved for French entities. Afnic's annual review, The .FR in 2025, supplies the numbers: 4,319,120 names in stock on 31 December 2025; 853,000 create operations during 2025, up 6.3% and an all-time record; and holders outside France accounting for 11.9% of the stock and 15.7% of 2025 creations — evidence that registrants from other EU countries are a meaningful source of .fr growth. The naming policy also delimits where one- and two-character names are unavailable: that restriction applies to the overseas suffixes Afnic manages, .pm, .re, .tf, .wf and .yt, and .fr is not on the list. On pricing, .fr returned no live figure when DomainHunter pulled /api/prices on 6 September 2026, so the panel reverts to a static reference (about ¥65 for the first year and about ¥72 to renew); the registrar page is authoritative. Naming suggestions: check eligibility first — a team outside the EU, Iceland, Liechtenstein, Norway or Switzerland needs an entity inside that area, and a registrar lending an address is not the same as meeting article 90's residence or establishment test, so ask the registrar to confirm its practice is compliant; accented French spellings (é, è, ê, à, ç) can be part of the brand's written form, but whether a given accented string is registrable as an IDN should be checked against Afnic's current character table, which this round did not verify line by line; and if one name is free under both .fr and .eu, their eligibility footprints overlap heavily, so the two can be split between a French and a pan-European site.
+Best for
+Companies and individuals established or resident in France
+Brands within the EU/EEA/Switzerland serving French users
+French-language content and services
+Pan-European businesses splitting .fr and .eu
+Naming tips
+Registrants must reside or be established in an EU state, Iceland, Liechtenstein, Norway or Switzerland (naming policy art. 90)
+A registrar-supplied address does not satisfy article 90 — confirm the registrar's practice is compliant
+Check Afnic's current character table before relying on an accented French IDN
+Without a live quote the page shows a reference price (≈¥65 first year, ≈¥72 renewal)
+FAQ
+Who is a .fr domain for?
+.fr is administered by Afnic; article 90 of the naming policy dated 6 July 2026 limits registrants to natural persons residing in an EU member state, Iceland, Liechtenstein, Norway or Switzerland, or legal persons with a registered office there, and the zone held 4,319,120 names on 31 December 2025. Typical fits: Companies and individuals established or resident in France, Brands within the EU/EEA/Switzerland serving French users.
+How do I register a .fr domain?
+Describe your idea on DomainHunter — the AI brainstorms names and verifies .fr availability live via RDAP/DNS/WHOIS. Available names link straight to a registrar with first-year and renewal prices shown, so you can spot renewal traps before buying.
+How do I pick a good .fr name?
+First rule for .fr names — Registrants must reside or be established in an EU state, Iceland, Liechtenstein, Norway or Switzerland (naming policy art. 90). The other 3 tips are under “Naming tips” on this page.
+Hunt a great .fr domain right now
+Describe your idea — AI brainstorms names in bulk and checks .fr availability live.
+Start hunting .fr
+More TLD guides
+.blue.pink.black.ninja.rocks.pet.berlin.paris.amsterdam.vegas.immobilien.tienda.de.eu.ca.au.jp.sg.it.es.nl.kr.hk.ch.at.be.se.pl.tw.dkView all 408 TLD guides →
+Related TLD comparisons
+.fr vs .com
+Related TLDs
+.it1st yr ≈$8.es1st yr ≈$8.nl1st yr $7.92.kr1st yr ≈$40.hk1st yr ≈$25.ch1st yr ≈$12
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

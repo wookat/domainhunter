@@ -1,0 +1,49 @@
+Home
+TLD comparisons
+.com vs .cn
+.com vs .cn: Audience, Compliance & Brand Protection Compared
+Which to pick
+Start with where your users and servers are. .cn is operated by the China Internet Network Information Center (CNNIC) and is the most legitimate suffix for China-facing business: when you need ICP filing to host domestically, .cn sails through, while some newer TLDs hit restrictions. It is also among the cheapest mainstream options — the site's reference table lists ¥33 first year / ¥38 renewal, under half of .com's ¥69 / ¥85. .com is Verisign's suffix, wholesale $10.26 a year since September 2024, and the one users worldwide autocomplete by reflex; for overseas markets its recognition is irreplaceable. Registration requirements differ too: .cn requires real-name verification — individuals and companies can both register, but you submit ID and add a step — while .com needs none. Inventory is a genuine opportunity for Chinese brands: countless two- and three-syllable pinyin words and industry terms extinct on .com remain open on .cn. The test: serving mainly Chinese users, needing ICP filing, watching the budget — take .cn; serving international users or planning to go global — make .com the main site. Established brands with budget usually register both: .com as the primary with .cn held defensively and 301-redirected, or a .cn domestic site alongside a .com international site. One caveat each way: an overseas-facing business shouldn't lead with .cn, where recognition and trust abroad are limited; a China-facing business on .com works fine, with just an extra domain verification step during ICP filing.
+Pricing & 5-year cost of ownership
+.com vs .cn: first-year, renewal and 5-year total cost (USD; CNY estimated at 7.2)
+TLDRegister / 1st yrRenew / yr5-yr total cost
+.com$11.08¥80$11.08¥80$55.4¥399
+.cnreference≈$5¥33≈$5¥38≈$26¥185
+Difference (.com − .cn)≈+$6.08+¥47≈+$6.08+¥42≈+$29.4+¥214
+5-yr total cost = first-year price + 4 × renewal; a positive difference means the former costs more.
+Live prices from Porkbun (fetched 2026-09-06 06:00 UTC); CNY estimated at 7.2. ≈ marks static reference prices, not live quotes. Registrar prices vary — confirm on the registrar page.
+.com
+Porkbun live: $11.08 1st yr (≈¥80) · renews $11.08/yr (¥ est. at 7.2)
+.com is the oldest and most recognized top-level domain — the one users type by reflex.
+Pick .com when
+Brands serving international users or going global
+No appetite for real-name verification or ICP paperwork
+Global recognition and resale liquidity first
+The international site in a two-site setup
+.cn
+Static reference: ≈$5 (¥33) 1st yr · ¥38/yr renewal · not a live quote
+.cn is China's country-code TLD and the most legitimate choice for China-facing business: products serving Chinese users, websites that need ICP filing to go live, and government or enterprise projects all run smoothest on .cn — the filing process fully supports it, while some newer TLDs hit restrictions.
+Pick .cn when
+China-focused users who need ICP filing
+Budget-sensitive (under half of .com to register and renew)
+Pinyin brand words already taken on .com
+The domestic site in a two-site setup
+FAQ
+.com vs .cn: which should I choose?
+.com is the global default; .cn targets the Chinese market and requires real-name verification. See “Which to pick” on this page for the full verdict.
+When should I pick a .com domain?
+The top case for .com — Brands serving international users or going global. The other 3 .com cases are listed under “Pick .com when” on this page.
+When should I pick a .cn domain?
+The top case for .cn — China-focused users who need ICP filing. The other 3 .cn cases are listed under “Pick .cn when” on this page.
+Hunt names on .com and .cn at once
+Describe your idea — AI brainstorms names in bulk and checks availability on both suffixes live, side by side.
+Start hunting
+See prices for all 408 TLDs →
+Related industry naming guides
+SaaS toolsE-commerceAI productsPet brands
+Related comparisons
+.com vs .io.com vs .net.com vs .ai.com vs .xyz.shop vs .com.com vs .me
+More TLD comparisons
+.com vs .net.co vs .me.net vs .org.com vs .xyz.xyz vs .top.pro vs .co.link vs .cc.com vs .me.cn vs .top.us vs .com.in vs .com.info vs .org.com vs .org.com vs .co.info vs .net.click vs .link.icu vs .xyz.uk vs .com.org vs .co.com vs .top.info vs .com.cc vs .com.one vs .me.wang vs .comView all 444 TLD comparisons →
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

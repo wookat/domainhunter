@@ -1,0 +1,34 @@
+Home
+TLD guides
+.ca
+.ca Domain Guide: Who It's For, Pricing & Naming Tips
+Register $8.92≈ ¥64Renew $9.18≈ ¥66Live Porkbun pricing · CNY estimated at 7.2 per USDSee prices for all 408 TLDs →
+Canada's .ca is administered by the Canadian Internet Registration Authority, CIRA (ACEI in French), delegated by IANA on 14 May 1987, with its site at cira.ca and RDAP at rdap.ca.fury.ca. The eligibility document is the Canadian Presence Requirements for Registrants (currently version 1.3): since 8 November 2000 every registrant must fall into one of 18 categories, including Canadian citizens, persons ordinarily resident in Canada (defined as living in Canada for more than 183 days in the past 12 months), Canadian corporations and partnerships, Indigenous peoples, and owners of a Canadian registered trademark (who may register only a name exactly matching the mark); the category is selected at registration, and CIRA may demand proof through its Registrant Information Validation (RIV) process. Disputes follow the CDRP (CIRA Domain Name Dispute Resolution Policy), and unlike UDRP the complainant must itself satisfy the Canadian Presence Requirements. On IDNs, CIRA's French IDN table lodged with IANA (ca_fr version 1.1, effective 21 October 2022) permits à, â, ç, é, è, ê, ë, î, ï, ô, ù, û, ü, æ, œ and ÿ, so a French-language brand can be registered as spelled. On scale, CIRA's fiscal-2024 annual report gives 3,392,890 .CA names at year end, up 0.9%. On price, DomainHunter's live /api/prices quote on 6 September 2026 was $8.92 for the first year and $9.18 to renew. Naming suggestions: work out which of the 18 categories you fit — for non-residents the common paths are incorporating in Canada or holding a Canadian trademark, and the trademark path requires the domain to match the mark text exactly; Canada is a bilingual market, so the name should read well in both English and French, with a French spelling available as an IDN and the ASCII form held alongside; and search the Canadian Intellectual Property Office (CIPO) trademark database before registering, because with CDRP complainants also needing Canadian presence, local rights holders are the main source of disputes.
+Best for
+Canadian corporations, partnerships and Indigenous organisations
+Canadian citizens and people ordinarily resident in Canada
+Foreign businesses with a Canadian trademark needing an exact-match name
+Brands using ASCII and French-IDN spellings in a bilingual market
+Naming tips
+Fit one of the 18 Canadian Presence categories; pick it at registration, CIRA may verify via RIV
+French characters (à ç é è ê œ and more) register as IDNs under table ca_fr 1.1 — hold the ASCII form too
+Live quote $8.92 first year / $9.18 renewal
+CDRP complainants must also have Canadian presence — search the CIPO register first
+FAQ
+Who is a .ca domain for?
+.ca is administered by CIRA; since 8 November 2000 every registrant must meet the Canadian Presence Requirements (18 categories, including citizens, people ordinarily resident in Canada, Canadian corporations and exact-match Canadian trademarks), the register held 3,392,890 names at the end of fiscal 2024, and DomainHunter's live quote is $8.92 for the first year and $9.18 to renew. Typical fits: Canadian corporations, partnerships and Indigenous organisations, Canadian citizens and people ordinarily resident in Canada.
+How do I register a .ca domain?
+Describe your idea on DomainHunter — the AI brainstorms names and verifies .ca availability live via RDAP/DNS/WHOIS. Available names link straight to a registrar with first-year and renewal prices shown, so you can spot renewal traps before buying.
+How do I pick a good .ca name?
+First rule for .ca names — Fit one of the 18 Canadian Presence categories; pick it at registration, CIRA may verify via RIV. The other 3 tips are under “Naming tips” on this page.
+Hunt a great .ca domain right now
+Describe your idea — AI brainstorms names in bulk and checks .ca availability live.
+Start hunting .ca
+More TLD guides
+.blue.pink.black.ninja.rocks.pet.berlin.paris.amsterdam.vegas.immobilien.tienda.de.eu.au.jp.sg.fr.it.es.nl.kr.hk.ch.at.be.se.pl.tw.dkView all 408 TLD guides →
+Related TLD comparisons
+.ca vs .us
+Related TLDs
+.au1st yr $7.91.jp1st yr ≈$40.sg1st yr ≈$39.fr1st yr ≈$9.it1st yr ≈$8.es1st yr ≈$8
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

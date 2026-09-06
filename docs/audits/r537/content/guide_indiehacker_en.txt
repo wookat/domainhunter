@@ -1,0 +1,45 @@
+Home
+Industry guides
+Indie hackers
+How to Name an Indie Hacker Product: Strategies, Cases & Domains
+Indie product names play a different game from big-company names: you have no marketing budget to hammer a mediocre name into recognition, so the name itself must do acquisition work. The indie distribution chain is brutally short — one X post, one Product Hunt launch, one Hacker News title — and users go from seeing the name to visiting the site in a single click. In that one glance the name must both explain what the thing is and look worth clicking. Second, indie is personal-brand business: your personal account usually out-follows the product account, so the name has to sit naturally inside your own narrative — "I built X" must roll off the tongue. Third, think in portfolios: most indie hackers ship more than one product, and names that share a structure (same suffix, same coinage style) let every new launch inherit the trust of the last one. On budget, be pragmatic: most experiments die in validation, so shipping on a $20 .dev or .app and upgrading to the .com after revenue is the standard indie play, not a compromise.
+Naming strategies
+Say the function, add one hook: with zero education budget, state the category plainly and attach one memorable twist — Plausible Analytics turns a stats tool into a stance with a single adjective
+Use identity roots: indie, maker, solo, ship, build — community code words that read natively in an X bio or a Product Hunt tag
+Coin for searchability: indie growth runs on search and word of mouth — a two-syllable coinage with a clean results page beats a collision-prone dictionary word for owning branded search
+Run the "I built X" test: say it aloud three times inside the sentence you'll say most as an indie hacker; if it stumbles, move on
+Design a name family: plan a shared structure (same suffix, same root style) so your second and third products automatically inherit the first one's trust
+Great names, deconstructed
+Nomad List
+Category word + format word, maximally literal: a list for nomads — what it is and who it's for in two words; the textbook of name-as-landing-page indie naming
+Plausible
+A single adjective as an analytics brand: the privacy-friendly, trustworthy positioning is written into the name itself — a one-word differentiation statement against Google Analytics
+Bear
+A one-syllable dictionary word for a notes app: betting brand feel over searchability, anchored by the exact-match bear.app — the classic indie common-word + precise-TLD play
+Tally
+A four-letter word meaning "to count" for a form builder: light, pronounceable, verb-able — "collect signups with Tally" slots the name straight into the workflow
+Recommended TLDs
+.dev1st yr $8.75The identity suffix for indie builders — insiders read 'built by one person' instantly.app1st yr $8.75Zero explanation when the product is an app; HTTPS enforced zone-wide.sh1st yr $31.2Shell-flavored geek suffix — the insider badge for CLI tools and dev-facing products
+Related TLD comparisons
+.app vs .dev.ai vs .dev.com vs .dev.io vs .dev
+Common mistakes
+Choosing a name that needs explaining: every indie exposure is a one-sentence chance — if the name can't carry it, the explanation eats the pitch
+Overpaying for the .com too early: validation-stage products mostly die; ship on a .dev or .app, upgrade after revenue — don't let the domain become your priciest sunk cost
+Skipping the X and GitHub handle check: indie distribution lives on social and open source — a name whose @handle is taken leaks reach at every mention
+Detaching the name from your personal brand: users follow the product because of you; a name that clashes with your narrative abandons indie's biggest distribution lever
+FAQ
+How do I choose a brand name for Indie hackers?
+Start with the first strategy for naming Indie hackers — Say the function, add one hook: with zero education budget, state the category plainly and attach one memorable twist — Plausible Analytics turns a stats tool into a stance with a single adjective. The other 4 strategies are under “Naming strategies” on this page.
+Which domain extension is best for Indie hackers?
+Recommended TLDs: .dev, .app, .sh. .dev — The identity suffix for indie builders — insiders read 'built by one person' instantly .app — Zero explanation when the product is an app; HTTPS enforced zone-wide .sh — Shell-flavored geek suffix — the insider badge for CLI tools and dev-facing products
+What naming mistakes should I avoid for Indie hackers?
+The most common mistake when naming Indie hackers — Choosing a name that needs explaining: every indie exposure is a one-sentence chance — if the name can't carry it, the explanation eats the pitch. The other 3 are under “Common mistakes” on this page.
+Hunt names for this industry with AI
+Prefill the industry template — AI brainstorms in bulk and verifies availability live.
+Start hunting
+More industry naming guides
+SaaS toolsAI productsDev toolsWeb3HardwareCybersecurityAI agentsDrone & aerialSolar & clean energyOpen sourceIndie games3D printingEV chargingEnergy storageRobotics companiesNo-code toolsDating appsView all 410 industry naming guides →
+Related industry guides
+Open sourceIndie games3D printingEV chargingEnergy storageRobotics companies
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

@@ -1,0 +1,51 @@
+首页
+后缀对比
+.academy vs .coach
+.academy 和 .coach 怎么选：课程体系与个人带练的对比
+怎么选
+同做「教人变强」的生意，卖的东西不同。.academy 卖「体系」——name.academy 传达的是成建制的课程：在线课程平台、编程训练营、企业培训与品牌学院用它，用户预期是一套教学产品，规模化交付、多讲师、有课程表；注册约 $12、续费约 $38/年，在培训类后缀里性价比高。.coach 卖「人」——name.coach 传达的是一对一带练的教练本人：健身私教、人生教练、高管教练用它，获客靠个人信任，「人名/细分领域 + .coach」把身份写进域名比任何 slogan 都高效；注册约 $11 与 .academy 相当，但续费约 $62/年明显更贵，预算要按续费核算。判断标准：产品是「课程」（可复制、可规模化、卖内容体系）→ .academy 的机构感更配，也更省；产品是「你这个人」（一对一、小班带练、卖陪伴与反馈）→ .coach 的身份感更准。成长路径也常见：个人教练做大后用 .academy 升级成课程品牌，两个后缀正好是业务的两个阶段。共同注意：都不是资质证明，教练认证（ICF 等）与课程口碑要页面呈现；主体名都要短，academy 七个字母、coach 五个字母，域名整体别过长。两个后缀都由 Binky Moon, LLC 持有、在 Identity Digital 平台运营——.academy 于 2013 年 12 月委派，.coach 于 2014 年 11 月委派——注册局政策、溢价分级与争议处理完全相同，都不要求资质认证。剩下的就是词本身，而它们编码了两种不同的商业模式。academy 是机构：暗示课程体系、班次、一个场所（哪怕是虚拟的），通常还有不止一位讲师，所以扩展到团队与录播课程时域名不会显得不对。coach 是人：暗示一段关系、实时课程与名额有限的日历，所以自然封顶在一位从业者（或一个小团队）能交付的量。这一差别有定价后果——academy 名字支撑产品定价（一门课多少钱），coach 名字支撑时间定价（一节课多少钱）——也有招聘后果，因为建立在一位创始人身上的 .coach 品牌很难交给第二位教练，而 .academy 品牌吸纳新讲师无需改名。场景上：在线课程库、分班训练营、企业培训项目、有年龄组梯队的体育学院、认证备考学校 → .academy；独立高管教练、有月度计划的跑步或力量教练、语言家教、演讲教练、面向单一职业的职业教练 → .coach。想长成机构的教练通常先在 .coach 上起步，在雇下第二位讲师那天注册 .academy。
+价格与 5 年持有成本
+.academy vs .coach 首年价、续费价与 5 年总持有成本对比（美元为准，人民币按汇率 7.2 估算）
+后缀注册/首年续费/年5 年持有成本
+.academy$11.84¥85$37.59¥271$162.2¥1168
+.coach$10.81¥78$62.31¥449$260.05¥1872
+差额（.academy − .coach）+$1.03+¥7−$24.72−¥178−$97.85−¥704
+5 年持有成本 = 首年价 + 4 × 续费价；差额为正表示前者更贵。
+实时价来自 Porkbun（2026-09-06 06:00 UTC 拉取），人民币按汇率 7.2 估算；带 ≈ 为静态参考价，非实时报价。不同注册商价格有差异，以注册商页面为准。
+.academy
+Porkbun 实时价：首年 $11.84（≈¥85）· 续费 $37.59/年（汇率 7.2 估算）
+.academy 把「学院」两个字直接写进域名：在线课程平台、编程训练营、企业培训、体育与艺术培训机构用 name.academy，「这里教东西」的定位一秒传达。
+适合选 .academy 的情况
+在线课程平台与训练营
+企业培训与品牌学院
+多讲师规模化教学产品
+从个人教练升级的课程品牌
+按课定价、可吸纳新讲师的机构
+.coach
+Porkbun 实时价：首年 $10.81（≈¥78）· 续费 $62.31/年（汇率 7.2 估算）
+.coach 踩中了「教练经济」的爆发：健身私教、人生教练（life coach）、职业教练、体育教练、企业高管教练——凡是「一对一带你变强」的生意，name.coach 都是身份即域名。
+适合选 .coach 的情况
+健身私教与运动教练
+人生教练与高管教练
+一对一与小班带练
+「人名 + .coach」的个人 IP
+按节收费的单人从业者
+常见问题
+.academy 和 .coach 怎么选？
+.academy 卖一套课程体系，.coach 卖一个带练的人。完整结论见本页「怎么选」一节。
+什么时候选 .academy？
+.academy 的首选场景是「在线课程平台与训练营」；其余 4 种 .academy 场景见本页「适合选 .academy 的情况」。
+什么时候选 .coach？
+.coach 的首选场景是「健身私教与运动教练」；其余 4 种 .coach 场景见本页「适合选 .coach 的情况」。
+让 AI 同时在 .academy 和 .coach 下猎名
+描述你的想法，AI 批量构思并实时核验两个后缀下的可注册好名字，直接对比。
+开始猎取
+查看全部 408 个后缀价格 →
+相关行业命名指南
+宠物训练知识付费游泳培训职业规划咨询
+相关对比
+.fitness vs .coach.education vs .academy.training vs .coach.tennis vs .coach.courses vs .academy.college vs .academy
+其他后缀对比
+.vip vs .club.fun vs .club.fun vs .games.bar vs .cafe.city vs .world.farm vs .cafe.academy vs .school.care vs .doctor.restaurant vs .cafe.restaurant vs .bar.clinic vs .care.dental vs .doctor.fitness vs .coach.yoga vs .fitness.coffee vs .cafe.wine vs .bar.kitchen vs .restaurant.garden vs .farm.education vs .academy.training vs .coach.wedding vs .love.menu vs .restaurant.bike vs .fitness.menu vs .cafe查看全部 444 个后缀对比 →
+站内导航
+首页TLD 指南行业指南后缀对比价格总览为什么选 DomainHunterMCP 接入批量核验

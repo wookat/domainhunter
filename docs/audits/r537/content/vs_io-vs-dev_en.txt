@@ -1,0 +1,49 @@
+Home
+TLD comparisons
+.io vs .dev
+.io vs .dev: The Veteran Hacker Suffix or the Purpose-Built One
+Which to pick
+Both are mainstream choices for a developer brand; the difference lies in origin and rules. .io is the country code of the British Indian Ocean Territory, delegated in 1997 and managed by Internet Computer Bureau, now listed care of Sure (Diego Garcia); the registry site nic.io says residency in the territory is not required, and its standing was built over more than a decade by products such as itch.io, socket.io and fly.io. .dev is a generic TLD run by Google's Charleston Road Registry, delegated in November 2014, with the whole zone on the browser HSTS preload list — a .dev site without a certificate will not load — and Google's own web.dev plus the registry showcase's arc.dev and mdn.dev are public examples. Those two facts produce three practical differences. First, the security default: enforced HTTPS on .dev is a registry rule that every .dev name inherits, while .io has no such mechanism and leaves it to the site owner. Second, governance and risk: .dev operates under an ICANN generic-TLD agreement, whereas .io's rules are set by the territory's manager and the UK–Mauritius Chagos treaty signed in May 2025 adds a conditional risk — if it enters into force and changes the ISO country code, ICANN's ccTLD retirement policy applies with a five-year transition, though no timetable exists today. Third, price: in the site's reference table .io is high-tier on both first year and renewal, while .dev sits in the stable hundred-yuan tier, a multiple apart (figures below). Decide this way: if the product courts the venture scene, wants the veteran hacker aesthetic of .io, and the team accepts the renewals and the geopolitical variable, take .io; if the product is a developer tool, a docs site or a personal engineering brand and you value enforced HTTPS and predictable long-term cost, take .dev. Short words are far more available than on .com either way, and .dev, being younger, still has two- and three-syllable real words open. Teams already on .io need not migrate, but should put renewal and policy risk on the annual review; for new projects .dev is the steadier default today, and a .io pointing back at the main site can be added later if the insider cachet is ever needed.
+Pricing & 5-year cost of ownership
+.io vs .dev: first-year, renewal and 5-year total cost (USD; CNY estimated at 7.2)
+TLDRegister / 1st yrRenew / yr5-yr total cost
+.io$28.12¥202$51.8¥373$235.32¥1694
+.dev$8.75¥63$12.87¥93$60.23¥434
+Difference (.io − .dev)+$19.37+¥139+$38.93+¥280+$175.09+¥1260
+5-yr total cost = first-year price + 4 × renewal; a positive difference means the former costs more.
+Live prices from Porkbun (fetched 2026-09-06 06:00 UTC); CNY estimated at 7.2. ≈ marks static reference prices, not live quotes. Registrar prices vary — confirm on the registrar page.
+.io
+Porkbun live: $28.12 1st yr (≈¥202) · renews $51.8/yr (¥ est. at 7.2)
+.io is technically the country domain of the British Indian Ocean Territory, but the I/O (input/output) association let developers claim it completely: dev tools, SaaS products, API services and tech communities live on .io, and GitHub Pages (github.io) cemented it as a badge of technical identity.
+Pick .io when
+Startups courting the venture scene with a veteran hacker look
+Product lines already tied to .io that should not migrate
+Aftermarket depth and resale liquidity
+Budgets that absorb high renewals and country-code policy variables
+.dev
+Porkbun live: $8.75 1st yr (≈¥63) · renews $12.87/yr (¥ est. at 7.2)
+.dev shares .app's Google-operated, HTTPS-enforced foundation but speaks to a sharper audience: it is written for developers.
+Pick .dev when
+Homepages for developer tools, CLIs and SDKs
+Docs sites, open-source projects and personal engineering brands
+Sites that want HTTPS enforced at the registry level
+Long-term holds that value stable renewals and predictable cost
+FAQ
+.io vs .dev: which should I choose?
+.io has a decade of startup credibility; .dev is semantically literal and much cheaper. See “Which to pick” on this page for the full verdict.
+When should I pick a .io domain?
+The top case for .io — Startups courting the venture scene with a veteran hacker look. The other 3 .io cases are listed under “Pick .io when” on this page.
+When should I pick a .dev domain?
+The top case for .dev — Homepages for developer tools, CLIs and SDKs. The other 3 .dev cases are listed under “Pick .dev when” on this page.
+Hunt names on .io and .dev at once
+Describe your idea — AI brainstorms names in bulk and checks availability on both suffixes live, side by side.
+Start hunting
+See prices for all 408 TLDs →
+Related industry naming guides
+SaaS toolsFintechGamesAI products
+Related comparisons
+.sh vs .dev.so vs .io.me vs .io.dev vs .tech.app vs .io.codes vs .dev
+More TLD comparisons
+.io vs .ai.app vs .dev.ai vs .dev.cloud vs .tech.io vs .tech.ai vs .app.sh vs .dev.so vs .io.ai vs .tech.network vs .tech.dev vs .tech.app vs .io.digital vs .tech.tools vs .app.codes vs .dev.host vs .cloud.io vs .sh.software vs .app.systems vs .network.technology vs .tech.computer vs .tech.mobi vs .app.domains vs .toolsView all 444 TLD comparisons →
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

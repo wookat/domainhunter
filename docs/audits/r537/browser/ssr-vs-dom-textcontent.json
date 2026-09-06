@@ -1,0 +1,50 @@
+{
+ "/tld/de?lang=zh": {
+  "ssr": 11,
+  "dom": 11,
+  "ssr_minus_dom": {},
+  "dom_minus_ssr": {}
+ },
+ "/tld/de?lang=en": {
+  "ssr": 14,
+  "dom": 14,
+  "ssr_minus_dom": {},
+  "dom_minus_ssr": {}
+ },
+ "/tld/uk?lang=en": {
+  "ssr": 14,
+  "dom": 14,
+  "ssr_minus_dom": {},
+  "dom_minus_ssr": {}
+ },
+ "/tld/uk?lang=zh": {
+  "ssr": 14,
+  "dom": 14,
+  "ssr_minus_dom": {},
+  "dom_minus_ssr": {}
+ },
+ "/vs/uk-vs-com?lang=en": {
+  "ssr": 14,
+  "dom": 14,
+  "ssr_minus_dom": {},
+  "dom_minus_ssr": {}
+ },
+ "/vs/com-vs-cn?lang=zh": {
+  "ssr": 11,
+  "dom": 11,
+  "ssr_minus_dom": {},
+  "dom_minus_ssr": {}
+ },
+ "/tld/cn?lang=zh": {
+  "ssr": 6,
+  "dom": 6,
+  "ssr_minus_dom": {},
+  "dom_minus_ssr": {}
+ },
+ "/guide/saas?lang=en": {
+  "ssr": 3,
+  "dom": 3,
+  "ssr_minus_dom": {},
+  "dom_minus_ssr": {}
+ }
+}

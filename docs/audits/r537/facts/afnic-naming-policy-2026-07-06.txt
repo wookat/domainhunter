@@ -1,0 +1,928 @@
+ 
+ 
+www.afnic.fr | contact@afnic.fr 
+Afnic Naming Policy 
+Rules for registering top-level Internet domains using 
+country-codes for mainland France and the Overseas 
+Departments and Territories 
+Version dated 6 July 2026  
+ 
+
+ 
+2 
+Afnic Naming Policy - Version of 6 July 2026 
+CONTENTS 
+Preamble  .............. 5 
+Chapter 1 - General  .............. 6 
+Article 1.1 - Purpose ................................ ................................ ............... 6 
+1.2 - Components ................................ ................................ ................... 7 
+1.3 - Enforceability ................................ ................................ ................. 7 
+Chapter 2 - Rules relating to domain name  .............. 9 
+Article 2.1 - Domain categories ................................ ..............................  9 
+Article 2.2 - Syntax rules ................................ ................................ ......... 9 
+Article 2.3 - “First Come, First Served” principle ................................ ... 10 
+Article 2.4 - Domain Names subject to prior review .............................  10 
+Article 2.5 - The “gouv.fr” TLD ................................ ..............................  14 
+Article 2.6 - Domain names reserved for the Registry ..........................  15 
+Article 2.7 - Right to the domain name ................................ ................ 15 
+Article 2.8 - Domain name validity period ................................ ............ 16 
+Article 2.9 - Remuneration of the Registry ................................ ........... 17 
+Chapter 3 - Registry  ............ 18 
+Article 3.1 - Role of the Registry ................................ ...........................  18 
+Article 3.2 - Powers of the Registry ................................ ...................... 19 
+Article 3.3 - Responsibility of the Registry ................................ ............ 21 
+Chapter 4 - Registrars  ............ 23 
+ 
+3 
+Afnic Naming Policy - Version of 6 July 2026 
+Article 4.1 - Role of registrars ................................ ...............................  23 
+Article 4.2 - Accreditation of registrars ................................ ................. 23 
+Article 4.3 - Responsibility of registrars ................................ ................ 24 
+Chapter 5 - Rules relating to the holder of the domain name
+  25 
+Article 5.1 - Eligibility of the holder of a domain name ......................... 25 
+Article 5.2 - Administrative and technical contact ................................  26 
+Article 5.3 - Responsibility of the holder ................................ .............. 27 
+Chapter 6 – Operations on a domain name  ............ 28 
+Article 6.1 - Locking of a domain name ................................ ................ 28 
+Article 6.2 - Suspension of a domain name ................................ .......... 28 
+Article 6.3 - Blocking of a domain name ................................ ............... 29 
+Article 6.4 - Voluntary transfer ................................ .............................  30 
+Article 6.5 - Compulsory transfer ................................ ......................... 30 
+Article 6.6 - Change of registrar ................................ ............................  32 
+Article 6.7 - Orphan domain names ................................ ...................... 32 
+Article 6.8 - Deletion of a domain name ................................ ............... 33 
+  
+ 
+4 
+Afnic Naming Policy - Version of 6 July 2026 
+Chapter 7 - Dispute resolution  ............ 35 
+Article 7.1 - Legal proceedings ................................ .............................  35 
+Article 7.2 - Alternative Dispute Resolution procedures ....................... 37 
+Chapter 8 - Personal data and information  ............ 38 
+Article 8.1 - Confidentiality ................................ ................................ ... 38 
+Article 8.2 - “Whois” database ................................ .............................  38 
+Article 8.3 - Personal data ................................ ................................ .... 40 
+Article 8.4 - Restricted publication ................................ ....................... 41 
+Chapter 9 - Other provisions  ............ 43 
+Article 9.1 - Agreement on evidence ................................ .................... 43 
+Article 9.2 - Language ................................ ................................ ........... 43 
+Article 9.3 - Governing law ................................ ................................ ... 43 
+Article 9.4 - Force majeure ................................ ................................ ... 44 
+Article 9.5 - Intellectual property ................................ ......................... 44 
+Chapter 10 – Transitional provisions  ............ 45 
+  
+ 
+5 
+Afnic Naming Policy - Version of 6 July 2026 
+Preamble 
+1. It is hereby stated that this Policy has been adopted pursuant to:  
+- The French Post and Electronic Communications Code (CPCE);  
+- The government decree appointing Afnic dated 1 July2022;  
+- The rules for the alternative dispute resolution procedures as approved by Order of 
+the French Minister of State for the Digital Sector dated 14 March 2016;  
+- The agreement between the French State and Afnic;  
+- The registration agreements signed by and between Afnic and accredited 
+registrars. 
+2. Domain names are assigned and managed in the general interest in accordance with 
+rules that are non-discriminatory and transparent, ensuring respect for freedom of 
+communication, entrepreneurial freedom and intellectual property rights. 
+ 
+6 
+Afnic Naming Policy - Version of 6 July 2026 
+Chapter 1 - General 
+Article 1.1 - Purpose 
+3. This naming policy sets out the conditions for the allocation and management of 
+domain names, centralised by Afnic in its capacity as Registry, namely: 
+.fr Mainland France and Corsica  
+.re Réunion  
+.yt Mayotte  
+.pm Saint Pierre and Miquelon  
+.wf Wallis and Futuna  
+.tf French Southern and Antarctic Territories  
+4. Unless otherwise stipulated, this naming policy applies to any new TLD centralised by 
+Afnic.  
+5. This naming policy does not apply to top-level domain names other than those 
+provided for in this article, in particular:  
+✓ Other country-code top-level domain names (ccTLDs);  
+✓ Other generic top-level domain names (gTLDs);  
+✓ Other domain names for which Afnic may assume the role of back-end registry. 
+ 
+7 
+Afnic Naming Policy - Version of 6 July 2026 
+1.2 - Components 
+6. The Afnic Naming Policy comprises:  
+✓ This document;  
+✓ The dispute resolution policy for French Internet domains;  
+✓ The rules for the alternative dispute resolution procedures;  
+✓ The Mediation rules; 
+✓ The policy on publication of and access to information concerning .fr TLD 
+registrations; 
+✓ The accreditation policy for registrars. 
+1.3 - Enforceability  
+7. Any person requesting the intervention of Afnic in its capacity as Registry is deemed to 
+have read the terms of the Afnic Naming Policy. 
+8. The Naming Policy is published on Afnic’s website at the address www.afnic.fr 
+9. Afnic's Naming Policy is a living document updated to reflect improveme nts, work and 
+agreements between its members and partners. 
+10. The enforceable version of the Afnic Naming Policy is that available on the Afnic 
+website and indicated as the version in force on the date of receipt by its departments 
+of the registration request. 
+ 
+8 
+Afnic Naming Policy - Version of 6 July 2026 
+11. Should the policy be modified, the new version shall be immediately applicable:  
+✓ to all new domain names;  
+✓ to existing domain names should: 
+o a request for administrative action be made; 
+o they be renewed. 
+12. Unless otherwise stipulated by legislation, by decision of the Ministry for Electronic 
+Communications or by a decision of the Board of Trustees, new rules shall be 
+applicable forthwith and not retroactively.  
+13. New provisions will first be notified on the Afnic website and sent directly to registrars 
+so that they can inform their domain name holders of the said amendments.  
+14. Operation requests sent to Afnic in any form whatsoever, and payment of any fees 
+arising from the performance of such operations, shall be considered to be a simple 
+reiteration of the applicant's acceptance of this Naming Policy.  
+  
+ 
+9 
+Afnic Naming Policy - Version of 6 July 2026 
+Chapter 2 - Rules relating to domain name 
+Article 2.1 - Domain categories 
+15. Any decisions to create or delete domain categories are taken by Afnic’s governing 
+bodies in coordination with the consultative committees. 
+16. If domain names are still active within a given domain category, that category may 
+only be deleted after giving the domain name holders affected by this deletion six (6) 
+months’ notice to change their domain names.  
+Article 2.2 - Syntax rules 
+17. ASCII domain names consist only of alphanumeric characters, i.e. the letters of the 
+Latin alphabet, the digits 0 to 9 and the hyphen “-”. (for example: ecole-123.fr). 
+18. “International” or “internationalised” domain names (IDN) consist of characters other 
+than ASCII characters alone. 
+19. The following alphanumeric characters are accepted for use in domain names: a, à, á, 
+â, ã, ä, å, æ, b, c, ç, d, e, è, é, ê, ë, f, g, h, i, ì, í, î, ï, j, k, l, m, n, ñ, o, ò, ó, ô, õ, ö, œ, p, q, r, s, t, u, 
+ù, ú, û, ü, v, w, x, y, ý, ÿ, z, ß, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, - (hyphen; minus sign) 
+20. ASCII and IDN domain names that fall under the following criteria cannot be registered:  
+✓ begin or end with a hyphen “-”; 
+✓ more than 63 characters in length; 
+ 
+10 
+Afnic Naming Policy - Version of 6 July 2026 
+✓ consist of the “-” (hyphen) in the third and fourth position, except for ASCII-
+encoded versions in which the label is prefixed with “xn--”. 
+21. The registration of domain names containing 1 and 2 numeric and/or alphabetic 
+characters is not authorised for the following country codes for mainland  France and 
+the Overseas Departments and Territories: .pm, .re, .tf, .wf, .yt 
+Article 2.3 - “First Come, First Served” 
+principle  
+22. Except where provisions to the contrary are made for certain domain names, and 
+subject to the provisions of the French Post and Electronic Communications Code, 
+operation requests sent to Afnic by registrars are handled on a “first come, first served” 
+basis, meaning that they are processed by chronological order of receipt.  
+Article 2.4 - Domain Names subject to prior 
+review 
+23. Afnic establishes and keeps up to date a list of domain names for which registration is 
+subject to prior review.  
+24. The list is available on the Afnic website. 
+25. This list is a living document and applicants should familiarise themselves with it, it 
+being understood that the list published online is not exhaustive given that the 
+publication of some of these terms may offend certain members of the public.  
+ 
+11 
+Afnic Naming Policy - Version of 6 July 2026 
+26. For this type of domain name, the registrar sends Afnic the necessary supporting 
+documents beforehand to ensure that the applicant is entitled to register the domain 
+name in question and that it is compliant with the provisions of the French Post and 
+Electronic Communications Code. 
+27. In order to register a term subject to prior review, the applicant must ensure that th e 
+domain name: 
+✓ is not liable to disrupt public order or morality, or the rights guaranteed by the 
+French Constitution or French law; 
+✓ is not liable to infringe intellectual property rights or personal rights or is not 
+identical or similar to that of the French Republic, a local authority or grouping of 
+local authorities or a national or local institution or public service unless the 
+applicant provides proof of a legitimate interest and is acting in good faith.  
+28. The provisions of the French Post and Electronic Communications Code are applied to 
+characterise the existence of a “legitimate interest” and “bad faith”.  
+29. When considering the application, Afnic reserves the right to request any supporting 
+evidence or documents it considers necessary. 
+30. If the review is successful, Afnic sends an authorisation code to the registrar, enabling it 
+to register the said domain name. 
+31. In the event of any dispute, the “Legal proceedings” article shall be applied.  
+32. The voluntary transfer of a domain name subject to prior review can only occur after 
+the new holder has obtained authorisation from Afnic to do so under the same 
+conditions. 
+ 
+12 
+Afnic Naming Policy - Version of 6 July 2026 
+33. Deletion of a domain name subject to prior review entails its reinstatement on the 
+original list. 
+34. Similarly, the domain names governed by the naming convention below are subject to 
+prior review under the same conditions:  
+  
+ 
+13 
+Afnic Naming Policy - Version of 6 July 2026 
+Domain name Recommended use Supporting documents 
+agglo-name.tld 
+"name" is the name of the 
+metropolitan area authority  
+Metropolitan area authority  Identifier in the SIRENE 
+enterprise directory 
+cc-name.tld 
+"name" is the officially 
+declared name of the 
+community of municipal 
+authorities 
+Community of municipal 
+authorities  
+Identifier in the SIRENE 
+enterprise directory  
+cg-xx.tld 
+"xx" is the number or name of 
+the officially declared 
+department  
+General councils  Identifier in the SIRENE 
+enterprise directory 
+cr-name.tld  
+"name" is the officially 
+declared name of the 
+regional council 
+Regional councils Identifier in the SIRENE 
+enterprise directory 
+ 
+14 
+Afnic Naming Policy - Version of 6 July 2026 
+mairie-name.tld and ville-
+name.tld  
+"name" is the officially 
+declared name of the 
+municipality  
+Municipalities  Identifier in the SIRENE 
+enterprise directory 
+Article 2.5 - The “gouv.fr” TLD 
+35. The .gouv.fr TLD and its IDN versions are reserved for the French government.  
+36. The following supporting documents are required to receive the necessary 
+authorisation code: 
+✓ An identifier for the SIRENE database or other official document allowing the entity 
+to be identified and, 
+✓ The approval of the Government Information Service (GIS). 
+37. In view of their similarity to the “.gouv.fr” TLD, registration of domain names ending in “-
+gouv.fr” and their IDN versions is prohibited. 
+ 
+15 
+Afnic Naming Policy - Version of 6 July 2026 
+Article 2.6 - Domain names reserved for the 
+Registry 
+38. In order to carry out its duties, the following terms are reserved for Afnic and therefore 
+cannot be registered: 
+fr nic www 
+web w3 whois 
+office-d-enregistrement officedenregistrement office-enregistrement 
+officeenregistrement officenregistrement asso 
+tm gouv com 
+39. Nor can the following domain names be registered: fr.fr, re.fr, pm.fr, yt.fr, tf.fr, wf.fr, nc.fr, 
+pf.fr, mf.fr, bl.fr, gp.fr, mq.fr, gf.fr, co.fr or nh.fr and their IDN versions. 
+40. This list can be expanded in the light of legal, regulatory or technical changes to 
+naming. 
+Article 2.7 - Right to the domain name 
+41. Holders own the registered domain name throughout its validity period in accordance 
+with the terms and conditions of the Naming Policy. The performance of their duties 
+does not grant Afnic or the registrar any intellectual property rights to the domain 
+names they manage. 
+42. This article does not mean that, in the event of failure to comply with the terms of the 
+naming policy, the holder of the domain name cannot be deprived of the domain 
+ 
+16 
+Afnic Naming Policy - Version of 6 July 2026 
+name or of its use in accordance with the legal and constitutional provisions and in 
+accordance with the terms and conditions of this Naming Policy.  
+43. Closed for registration on 15 March 2013, the domain names under the naming zones 
+.tm.fr, .asso.fr, .asso.re, .com.fr and .com.re are maintained;  
+44. For these domain names, however: 
+✓ only applications for operations in accordance with this Policy will be accepted 
+✓ only qualification operations concerning the reachability and the existence of the 
+holder will be carried out.  
+45. The same applies to domain names registered under the .tf and .w f TLDs. 
+Article 2.8 - Domain name validity period 
+46. The domain name has a validity period of between one (1) year and ten (10) years as 
+of its registration.  
+47. The duration of the validity period varies according to the option chosen by the holder 
+with the registrar in charge of the operation. 
+48. The renewal of the domain name is implied unless a request for its deletion is sent by 
+the registrar. 
+ 
+17 
+Afnic Naming Policy - Version of 6 July 2026 
+Article 2.9 - Remuneration of the Registry 
+49. Afnic applies a single fee for all billable operations carried out by registrars on domain 
+names. Any fee changes will come into effect after public consultation and a vote by 
+the Afnic Board of Trustees, both organised at least six (6) months prior to the said 
+changes, after informing the French State and in accordance with the arrangeme nts 
+set out in Article 7 of the State-Afnic Agreement in force. 
+50. These costs are public information and can be consulted on the Afnic website.  
+51. Registrars remain free to fix their own service prices but are required to make them 
+public. 
+52. Invoices are sent to and paid by the registrar. 
+53. Operation request costs are due once the operation is finalised by Afnic.  
+54. It should be noted, however, that the cost of registration is due to Afnic regardless of 
+the outcome of the holder substantiation procedure. 
+55. Afnic shall not be held liable for any non-payment of its services by the registrar with 
+an impact on the administration of the domain name. Any complaints and/or claims 
+arising therefrom shall be exclusively between the registrar and its customer.  
+  
+ 
+18 
+Afnic Naming Policy - Version of 6 July 2026 
+Chapter 3 - Registry  
+Article 3.1 - Role of the Registry 
+56. Domain names are allocated by Afnic, through registrars. For the duration of its 
+assigned duties, Afnic is prohibited from operating as a registrar for domain names; 
+hence why domain name operation requests cannot be sent directly to Afnic.  
+57. Afnic establishes non-discriminatory and transparent rules that guarantee freedom of 
+communication, freedom of enterprise and intellectual property rights.  
+58. Afnic does not conduct any due diligence of applications for registration, with the 
+exception of those relating to the terms subject to prior review as provided by this 
+naming policy. 
+59. Afnic does not research any pre-existing rights to verify if the term chosen is available 
+or if a third party may assert a right of any kind over it.  
+60. Afnic makes available on its website an easily accessible mechanism allowing any 
+person to bring to Afnic’s attention a domain name considered to be unlawful or 
+contrary to public order.  
+61. Reports are made under the sole responsibility of their author, without prejudice to the 
+right of Afnic to inform the competent public authorities.  
+62. Making a report does not constitute a dispute resolution procedure.  
+ 
+19 
+Afnic Naming Policy - Version of 6 July 2026 
+63. The provisions of this Policy which allow Afnic to monitor or make checks shall not be 
+construed as a duty of care or supervision nor as a performance obligation incumbent 
+on Afnic, but simply as permitting it to undertake such activities.  
+Article 3.2 - Powers of the Registry  
+64. The French Post and Electronic Communications Code does not confer Afnic with the 
+power to: 
+✓ Carry out general checks on the validity or legality of the choice of terms requested 
+on registration;   
+✓ Check the legality or compliance of the supporting documents submitted by 
+applicants that form the basis of their application for registration or other operations 
+(“Kbis” Trade & Companies Register extract, receipt from the French National Institute 
+of Industrial Property - INPI, or the Prefecture, etc.). 
+Nonetheless, Afnic reserves the right to enlist accredited third parties in  case of any doubt 
+in order to confirm the legality or compliance of these supporting documents.  
+65. Afnic may carry out checks as part of its qualification operations to ensure the 
+eligibility and/or reachability of the holder of the domain name. This qualifi cation 
+procedure comprises two (2) distinct processes, namely the verification process and 
+the substantiation process. 
+66. The verification process is initiated in several cases: 
+✓ At the initiative of Afnic; 
+ 
+20 
+Afnic Naming Policy - Version of 6 July 2026 
+✓ Further to a report by a third party by means of the verification form available on the 
+Afnic website; 
+✓ At the initiative of the registrar. 
+67. The verification process has no effect on the domain name holder’s portfolio.  
+68. The substantiation process is initiated in several cases: 
+✓ At the initiative of Afnic; 
+✓ After a verification highlighting the implausible nature of the eligibility data and/or 
+the reachability of the holder; 
+✓ When the verification after a report proves to be unsuccessful;  
+✓ As a result of a duly substantiated complaint from a third party by mean s of the 
+verification form available on the Afnic website; this request is made to Afnic with 
+supporting documentation. 
+69. When the substantiation process is initiated, Afnic sends the registrar a substantiation 
+request and informs the holder and the third party of same. Concomitantly, Afnic 
+suspends the portfolio of the holder of the domain name for a maximum period of 
+seven (7) days. 
+✓ If, after this maximum period of seven (7) days, there is no evidence to conclude 
+that the holder complies with the eligibility and reachability rules, Afnic informs the 
+registrar, the holder and the third party and blocks the holder's portfolio for a 
+maximum period of thirty (30) days. 
+ 
+21 
+Afnic Naming Policy - Version of 6 July 2026 
+✓ If, after this maximum period of thirty (30) days, there is no evidence to conclude 
+that the holder complies with the eligibility and reachability rules, Afnic informs the 
+registrar, the holder and the third party and deletes the holder’s portfolio.  
+70. When the substantiation process is initiated by Afnic upon registration of a domain 
+name, Afnic sends the registrar a substantiation request and informs the holder of 
+same. Concomitantly, Afnic suspends the publication of the domain name in the DNS 
+for a maximum period of seven (7) days. 
+✓ If, after this maximum period of seven (7) days, there is no eviden ce to conclude 
+that the holder complies with the eligibility and reachability rules, Afnic informs the 
+registrar and the holder and blocks the holder's portfolio for a maximum period of 
+thirty (30) days. 
+✓ If, after this maximum period of thirty (30) days, there is no evidence to conclude 
+that the holder complies with the eligibility and reachability rules, Afnic informs the 
+registrar and the holder and deletes the holder’s portfolio.  
+71. The situation can be rectified at any time by sending supporting evidence, in which 
+case, Afnic closes the current procedure and informs the holder and the third party.  
+Article 3.3 - Responsibility of the Registry  
+72. Pursuant to the French Post and Electronic Communications Code, a domain name is 
+registered under the responsibility of the applicant; hence Afnic cannot be held liable 
+by virtue of the registration and/or use of a domain name, nor for any direct or indirect 
+damage caused by same. 
+ 
+22 
+Afnic Naming Policy - Version of 6 July 2026 
+73. Similarly, a domain name is registered on the basis of statements made by the 
+applicant; for this reason, Afnic cannot be held liable for any erroneous, false, or 
+misleading information or omissions in the Whois database.  
+74. Furthermore, Afnic is bound by a best-efforts obligation only with regard to “Whois”, 
+and cannot be held liable for any temporary inability to access the database, or for 
+modifications or deletions to the same caused by a force majeure, unforeseeable 
+circumstances, fraud, or when it has been provided with incorrect information.  
+75. Afnic solely has a right of use of the “Whois” database, the French State remaining the 
+holder of all the rights to the database. However, Afnic reserves the right to initiate any 
+proceedings of any nature whatsoever to protect the “Whois” database against 
+fraudulent use. 
+76. Pursuant to the French Post and Electronic Communications Code, it is stated that 
+domain names are allocated by the Registry, through the intermediary of registrars. 
+Consequently, Afnic may not be considered to be an “intermediary” or playing such a 
+role, and cannot be held liable for any relations of whatever kind between the registrar 
+and its customers (applicants or holders). 
+77. These provisions do not preclude the possibility of Afnic contacting the holder and/or 
+the administrative contact of a domain name in the special cases mentioned in the 
+Naming Policy (e.g. alternative dispute resolution procedures, orphan domain names, 
+etc.). 
+78. Afnic may in no way be held liable for any relations whatsoever between the domain 
+name holder and the administrative contact. 
+  
+ 
+23 
+Afnic Naming Policy - Version of 6 July 2026 
+Chapter 4 - Registrars 
+Article 4.1 - Role of registrars 
+79. Operation requests sent to Afnic are required to be processed by a registrar, which 
+acts as an intermediary between the applicant or holder and Afnic.  
+80. The term “registrar” refers to legal persons (corporate entities) duly accredited by Afnic 
+and which, as part of a registration agreement concluded with Afni c, provide 
+registration services for domain names. 
+81. Natural and legal persons wishing to register a domain name or make any change to a 
+domain name must choose a registrar from among the accredited registrars on a list 
+kept up to date by Afnic on its website. 
+82. For each request, the registrar provides Afnic with the items of information required to 
+process the said request. 
+Article 4.2 - Accreditation of registrars 
+83. Any person wishing to act as a registrar for domain names encompassed within the 
+scope of the duties assigned to Afnic must be accredited for each top -level domain in 
+question.  
+84. This accreditation is issued by Afnic in accordance with non-discriminatory and 
+transparent rules published on the Afnic website. 
+ 
+24 
+Afnic Naming Policy - Version of 6 July 2026 
+85. The purpose of accreditation is to ensure that the registrar meets the obligations 
+stipulated by the French Post and Electronic Communications Code.  
+86. Accreditation is issued by Afnic on the sole basis of information provided by the 
+registrars. 
+87. Accreditation cannot therefore be construed as a guarantee or seal of quality 
+regarding the activities of the registry.  
+Article 4.3 - Responsibility of registrars 
+88. The registrar has sole responsibility for:  
+✓ the relationship it has with its customers;  
+✓ any third party claims in respect of one or more domain names;  
+✓ the correct technical processing of the operation request to be sent to Afnic, the 
+entry of the data corresponding to the holder’s choices, especially in t erms of 
+personal data, and for the forwarding of those data to Afnic;  
+✓ fulfilling requests and ensuring the proper execution of checks sent to it by Afnic;  
+✓ complying with the holder's wishes, notably as regards the protection of their 
+personal data. 
+89. Afnic cannot be held responsible for the actions of the registrar. 
+  
+ 
+25 
+Afnic Naming Policy - Version of 6 July 2026 
+Chapter 5 - Rules relating to the holder of the 
+domain name 
+Article 5.1 - Eligibility of the holder of a domain 
+name  
+90. The registration or renewal of a domain name can be requested by any natural person 
+residing and any legal person having its registered office or main establishment:  
+✓  in one of the European Union member states;  
+✓  or in one of the following countries: Iceland, Liechtenstein, Norway or Switzerland.  
+91. The domain name holder and the administrative contact must be reachable.  
+92. As such, both the holder and the administrative contact must provide details of and 
+keep in working order a telephone number and email address, as well as accurate 
+information to establish their identities. While the domain name is active, they must 
+ensure that such information is kept up to date at all times through their registrar.  
+ 
+26 
+Afnic Naming Policy - Version of 6 July 2026 
+Article 5.2 - Administrative and technical 
+contact 
+93. The holder of a domain name must imperatively designate an “administrative contact” 
+at the time of applying for registration and maintain this contact throughout the life of 
+the domain name.  
+94. The administrative contact may be the holder or, at the holder’s option, a third party 
+(natural or legal person), including the holder’s registrar. 
+95. Where the administrative contact is not the holder, the administrative contact has no 
+rights to the domain name. 
+96. The same eligibility rules applicable to the holder apply to the administrative contact.  
+97. The holder of a domain name must imperatively designate a “technical contact” at the 
+time of applying for registration and maintain this contact throughout the life of the 
+domain name. 
+98. The technical contact may be the registrar chosen by the holder when registering the 
+domain name.  
+99. The administrative and/or technical contacts are liable to be contacted and/or 
+informed of any operations affecting the domain name. 
+ 
+27 
+Afnic Naming Policy - Version of 6 July 2026 
+Article 5.3 - Responsibility of the holder 
+100. Pursuant to the French Postal and Electronic Communications Code, domain names 
+are registered and renewed on the basis of statements made by the applicant and 
+under said applicant’s responsibility. 
+101. The same applies to the use and exploitation of a domain name, which is the sole 
+responsibility of its holder.  
+102. It is the responsibility of applicants and holders to take all measures to comply with the 
+terms and conditions of the Naming Policy and to duly take account of the information 
+received from Afnic or the registrar in any form whatsoever (manual, online 
+information, contractual information, FAQ, newsletters, etc.). 
+103. It is the responsibility of the holder to choose a registrar accredited by Afnic. Afnic 
+cannot be held responsible for false information or misleading statements.  
+104. The holder shall hold Afnic harmless against any third-party claims, complaints, 
+actions, and objections arising from or in connection with any domain name rights, 
+registrations, uses, or transmissions of domain names. 
+105. Consequently, the holder will be liable for the costs of any damages awarded 
+against Afnic further to litigation, preliminary proceedings, or any other claims, 
+including the costs incurred in defending its interests and counsel fees.  
+  
+ 
+28 
+Afnic Naming Policy - Version of 6 July 2026 
+Chapter 6 – Operations on a domain name  
+Article 6.1 - Locking of a domain name 
+106. The holder may apply to its registrar to benefit from the “domain name protection” 
+option (FR lock). 
+107. This option prevents any intervention on the domain name without the prior 
+confirmation of the registrar and/or the holder of the domain name.  
+108. This option does not hinder any domain name suspension, blocking and compulsory 
+transfer operation required further to a court order, extrajudicial decision or 
+unsuccessful verification procedure as defined below. 
+Article 6.2 - Suspension of a domain name 
+109. A domain name may be subject to a suspension procedure in the following cases:  
+✓ a court decision ordering the suspension of the domain name and meeting the 
+terms and conditions stipulated in the article entitled “Legal proceedings”;  
+✓ the opening of an Alternative Dispute Resolution procedure managed by Afnic;  
+✓ the opening of a verification procedure as referred to in the article “Powers of the 
+Registry”. 
+110. No application for suspension will be entertained in any circumstances other than 
+those described above. 
+ 
+29 
+Afnic Naming Policy - Version of 6 July 2026 
+111. The suspension of a domain name may lead to the cancellation of all the operations 
+currently being processed by Afnic and the corresponding tickets, preventing any 
+future operation request concerning the domain name. 
+112. This operation does not alter access to the services connected with the domain name 
+(website, email, etc.) . 
+Article 6.3 - Blocking of a domain name 
+113. A domain name may be subject to a blocking procedure in the following cases: 
+✓ a court decision ordering the blocking of the domain name and meeting the terms 
+and conditions stipulated in the article entitled “Legal proceedings”;  
+✓ a verification procedure as referred to in the article “Powers of the Registry”;  
+✓ on the order of the administrative authority responsible for competition and 
+consumer affairs pursuant to section 2c) of Article L. 521-3-1 of the French Consumer 
+Code; 
+✓ at the request of the national authority responsible for information systems security, 
+pursuant to Article L. 2321-2-3 of the French Defense Code  
+✓ when the domain name is an orphan and the holder has not chosen a new registrar 
+within thirty (30) days following notification of this need by Afnic. 
+114. No application for blocking will be entertained in any circumstances other than those 
+described above. 
+ 
+30 
+Afnic Naming Policy - Version of 6 July 2026 
+115. The blocking of a domain name may lead to the cancellation of all the operations 
+currently being processed by Afnic and the corresponding tickets, preventing any 
+future operation request concerning the domain name. This does not prevent any 
+technical operation of the domain name. 
+116. Except where provisions to the contrary are made, the blocking is sustained for a 
+maximum period of three months, renewable once. 
+Article 6.4 - Voluntary transfer 
+117. Domain names can be transferred, subject to compliance with the Naming Policy.  
+118. Prior to any voluntary transfer operation, registrars must obtain the consent of both 
+parties involved. 
+119. In the event of liquidation or any other collective insolvency proceedings, the 
+designated administrator has sole authority to give this consent.  
+Article 6.5 - Compulsory transfer 
+120. Afnic carries out compulsory transfers of domain names further to: 
+✓ a transfer decision taken as part of an Alternative Dispute Resolution procedure 
+managed by Afnic; 
+✓ a transfer agreement in a mediation; 
+✓ a court decision ordering the transfer of the domain name and meeting the terms 
+and conditions stipulated in the article entitled “Legal proceedings”; 
+ 
+31 
+Afnic Naming Policy - Version of 6 July 2026 
+✓ an order issued by  the administrative authority responsible for competition and 
+consumer affairs pursuant to section 2c) of Article L. 521-3-1 of the French Consumer 
+Code, for the benefit of the relevant competent authority; 
+✓ a request of the national authority responsible for information systems security, 
+pursuant to Article L. 2321 -2-3 of the French Defense Code , for the benefit of the 
+relevant competent authority;  
+✓ an order issued by the President of the authority for financial market (AMF) pursuant 
+to paragraph IV of Article L621 -13-5 of the French Monetary and Financial Code, for 
+the benefit of the relevant competent authority; 
+✓ a corporate operation (merger, demerger, etc.) if the original holder is no longer 
+able to carry out a voluntary transfer; 
+✓ a situation where the original holder is no longer able to carry out a voluntary 
+transfer and a legal or commercial link is established between the original holder 
+and the new holder. 
+121. The compulsory transfer procedure implies that the new holder in whose favour the 
+decision has been awarded will carry out all the formalities and comply with the 
+identification and eligibility checks. 
+122. Insofar as the new holder is responsible for all technical and administrative fees 
+incurred by a compulsory transfer, the new holder will be liable for recovering such 
+costs from the former holder if necessary. 
+ 
+32 
+Afnic Naming Policy - Version of 6 July 2026 
+Article 6.6 - Change of registrar  
+123. Holders may change registrar subject to compliance with the contractual obligations 
+binding both parties. 
+124. Holders are free to choose a new registrar, which will then deal with the necessary 
+formalities to effect the change. 
+125. The new registrar must ensure that the change in no way affects ownership of the 
+domain name. 
+Article 6.7 - Orphan domain names 
+126. If a registrar can no longer ensure the management of domain names for any reason 
+whatsoever, including: 
+✓ non-renewal of the registration agreement with Afnic or withdrawal of the 
+registrar’s accreditation;  
+✓ collective insolvency proceedings;  
+✓ cessation of trading in the domain concerned;  
+✓ termination of the registration agreement with Afnic, irrespective of the reason;  
+the domain names administered by the said registrar will be considered to be “orphan 
+domain names”, and holders must choose a new registrar. 
+127. The registrar is responsible for notifying its customers and holders of the same in 
+advance. 
+ 
+33 
+Afnic Naming Policy - Version of 6 July 2026 
+128. If the registrar defaults on this obligation, Afnic will notify the holder and, where 
+applicable, the administrative contact of the need to change registrar. 
+129. This measure shall not be construed as a duty of care or supervision nor as a 
+performance obligation incumbent on Afnic, but merely as a contribution provided 
+under exceptional circumstances. 
+Article 6.8 - Deletion of a domain name 
+130. A domain name may be deleted: 
+✓ at the request of the registrar; 
+✓ further to a court decision ordering the deletion of the domain name and meeting 
+the terms and conditions stipulated in the article entitled “Legal proceedings”;  
+✓ further to a transfer decision taken as part of an Alternative Dispute Resolution 
+procedure managed by Afnic; 
+✓ further to a deletion agreement in a mediation; 
+✓ further to an order of the administrative authority responsible for competition and 
+consumer affairs pursuant to section 2c) of Article L. 521-3-1 of the French Consumer 
+Code; 
+✓ further to an order issued by the President of the authority for financial market (AMF) 
+pursuant to paragraph IV of Article L621 -13-5 of the French Monetary and Financial 
+Code; 
+ 
+34 
+Afnic Naming Policy - Version of 6 July 2026 
+✓ after an unsuccessful verification procedure as referred to in the article “Powers of 
+the Registry”; 
+✓ further to an “orphan domain” procedure as referred to in the article entitled “Orphan 
+domain names”. 
+131. No application for deletion will be entertained in any circumstances other than those 
+described above. 
+132. Deletion becomes irreversible when the redemption period allowed for domain names 
+deleted at a registrar's request has elapsed. In other cases of deletion, no redemption 
+delay exists.  
+133. During the redemption period, the domain name can be reactivated with t he same 
+configuration. 
+134. Once deleted, the domain name re-enters the public domain and can be registered by 
+a new applicant.   
+ 
+35 
+Afnic Naming Policy - Version of 6 July 2026 
+Chapter 7 - Dispute resolution 
+135. As part of the resolution of disputes relating to domain names, Afnic may only 
+intervene pursuant to a ruling handed down after legal proceedings or as part of an 
+Alternative Dispute Resolution procedure managed by Afnic. 
+Article 7.1 - Legal proceedings  
+136. Afnic is in no way party to judicial proceedings relating to the domain names for which 
+it is responsible.  
+137. Since Afnic does not have the authority to take precautionary measures, these can 
+only be implemented further to a court order fulfilling the requirements of this article.  
+138. It is therefore the sole responsibility of the third parties concerned to take all the 
+appropriate measures to stop any infringement they claim to their rights.  
+139. Since Afnic is required to implement a court order taken as a result of legal 
+proceedings, it is unnecessary for it to intervene or to ask it to intervene i n such 
+proceedings. This being said, Afnic reserves the right to initiate a request for abuse of 
+process as and when required, and to seek reimbursement of the expenses incurred by 
+the same.  
+140. Afnic satisfies this requirement under the following conditions:   
+✓ After the earliest petitioner has notified Afnic, by bailiff, of an interim court decision 
+in pursuance of Article 514 of the French Code of Civil Procedure and justification 
+that the party has been notified of the decision;  
+ 
+36 
+Afnic Naming Policy - Version of 6 July 2026 
+(Or)  
+✓ After the earliest petitioner has notified Afnic, by bailiff, of an interim court decision 
+in pursuance of Article 515 of the French Code of Civil Procedure and substantiation 
+that the party has been notified of the decision, and upon presentation of any 
+warranty ordered by the judge in pursuance of Article 517 of the French Code of 
+Civil Procedure; 
+(Or)  
+✓ After the earliest petitioner has notified Afnic, by bailiff, of a final court decision that 
+has the force of res judicata, pursuant to Article 500 of the French Code of Civil 
+Procedure, and with due substantiation. For example, the substantiation may 
+comprise the forwarding of a certificate of non-recourse or of the appeal decision. 
+141. Afnic cannot respond to requests that fail to comply with these conditions and shall 
+not be bound by letters, copies of summons or subpoena sent by applicants.  
+142. Should a decision applied by Afnic be amended (further to withdrawal, appeal, 
+reversal of judgement, etc.), Afnic will apply the new decision under the same 
+conditions of service as set out above. 
+143. Afnic shall not be held liable on any grounds whatsoever for the operations it performs 
+pursuant to a court decision, or to a ruling handed down as part of an Alternative 
+Dispute Resolution procedure managed by Afnic, and the applicant shall hol d Afnic 
+harmless against any claims. 
+ 
+37 
+Afnic Naming Policy - Version of 6 July 2026 
+Article 7.2 - Alternative Dispute Resolution 
+procedures 
+144. The holder of a domain name unreservedly undertakes to comply with the 
+alternative disputes resolution procedures managed by Afnic, namely the Syreli and 
+the PARL EXPERT procedures. The alternative disputes resolution procedures are 
+available on the Afnic website. 
+145. Afnic is not bound by any other alternative dispute resolution procedu re. 
+  
+ 
+38 
+Afnic Naming Policy - Version of 6 July 2026 
+Chapter 8 - Personal data and information  
+Article 8.1 - Confidentiality 
+146. The information and documents held by or sent to Afnic, other than those available 
+via the “Whois” database, are considered to be confidential and shall not be disclosed 
+to third parties. 
+147. This provision does not preclude discovery ordered by the court or as part of a request 
+by an authorised authority (French General Directorate for Competition Policy, 
+Consumer Affairs and Fraud Control - DGCCRF, French Data Protection Authority - CNIL, 
+the tax authorities, customs authorities, etc.). 
+Article 8.2 - “Whois” database 
+148. Afnic is responsible for the “Whois” database, consisting of all the data collected that 
+are required to identify natural and legal persons holding domain names and domain 
+name registrations. 
+149. Afnic determines the technical conditions of operation and access to the related 
+services; the conditions of use are set forth in a reference document entitled “Policy on 
+publication of and access to information concerning .fr TLD registrations.”  
+150. However, Afnic shall not be held liable for any technical problems relating to access 
+to the database WHOIS or the functioning of the Internet, to suspended services arising 
+from cases of force majeure or to maintenance operations. 
+ 
+39 
+Afnic Naming Policy - Version of 6 July 2026 
+151. Afnic collects from registrars all types of identification data required to identify natural 
+and legal persons holding domain names. 
+152. The French State holds the rights to the “Whois” database; Afnic has a right of use of 
+the “Whois” database. 
+153. Afnic publishes the list of domain names registered every day by means of the “Whois” 
+database. 
+154. Afnic cannot be held liable for the abusive use by third parties of the identification 
+data that it holds, with particular reference to the data held in the “Whois” database.  
+155. Afnic reserves the right to update the database with information on the status of the 
+domain name or qualification procedures. Thus when a qualification procedure results 
+in the confirmation of the eligibility and/or reachability of the holder, this is entered on 
+the corresponding holder contact object. 
+156. The registrar can also update the “Whois” database at any time and make an entry 
+on the holder contact object confirming the eligibility and/or reachability of its 
+customer. 
+157. Entries made by Afnic to the “Whois” database do not affect the legality or the 
+compliance of the registration or its renewal. 
+158. Domain names subject to a suspension of operations are identified as such in the 
+Whois database.  
+159. Blocked domain names are identified as such in the Whois database. 
+ 
+40 
+Afnic Naming Policy - Version of 6 July 2026 
+Article 8.3 - Personal data 
+160. The processing of personal data carried out for domain name operations falls under 
+two categories of processing according to their main respective purposes:  
+✓ The processing of personal data by the registrar for the provision of services on the 
+domain names; 
+✓ The processing of personal data by Afnic for the administration of the naming zone 
+in question. 
+161. It is up to both Afnic and the registrar to comply with the provisions resulting from the 
+regulations in force applicable to the processing of personal data and, in particular 
+those of Regulation (EU) 2016/679 of the European Parliament and of the Council of 
+27 April 2016 applicable from 25 May 2018 (hereinafter the “General Data Protection 
+Regulation” or “GDPR”), with particular respect to their relations with applicants or 
+holders of domain names.  
+162. Afnic and the registrar are each the data controllers for the processing they perform. 
+Each is also the recipient of personal data processed by the other for the purposes of 
+its own processing operations. 
+163. The persons concerned by processing have personal rights (access, rectification, 
+objection, etc.) that they can exercise with Afnic or the registrar as the case may be. 
+Afnic or the registrar facilitates the exercise of these rights for the persons concerned.  
+164. The personal rights and the procedures for the exercise thereof are set out by Afnic or 
+the registrar on their respective websites with regard to the processing for which they 
+are responsible. 
+ 
+41 
+Afnic Naming Policy - Version of 6 July 2026 
+165. Both Afnic and the registrar provide data subjects, by all relevant means and media, 
+with information and announcements on their respective processing of personal data  
+in clear and simple terms guaranteeing the processing is fair and transparent.  
+166. Afnic is empowered by authorisation No.2007-246 issued by the French Data 
+Protection Authority (CNIL) to draw up an exclusion list, the purpose of which is to 
+combat cybersquatting activities. 
+Article 8.4 - Restricted publication 
+167. The relevance of the “Whois” database requires that all information concerning the 
+domain name holders, administrative and technical contacts, whether they  are natural 
+or legal persons, must be published online and be accessible to all. 
+168. In compliance with the request of the French Data Protection Authority (CNIL) and in 
+application of the GDPR, when a domain name is registered by a natural person, the 
+holder is covered by default by the “restricted publication” option.  
+169. When this option is chosen, no personal data is made available online within the 
+“Whois” database, only technical information (technical contact - registrar details and 
+DNS servers). 
+170. In the case of registration by a natural person, the “restricted publication” option does 
+not apply to the technical contact. 
+171. Nevertheless, it is possible to contact the administrative contact by email, although the 
+contact details are not disclosed to the requesting parties.  
+ 
+42 
+Afnic Naming Policy - Version of 6 July 2026 
+172. The “restricted publication” option is solely limited to registrations under top -level 
+domain categories and under .name.fr domain names (currently closed to 
+registration) registered by a natural person as the holder.  
+173. Personal information required for domain name registrations and under restricted 
+publication may be disclosed, however, by Afnic: 
+✓ Further to a court order, court application or legal requisition, it being understood 
+that there is no need to bring proceedings against Afnic in order to obtain such 
+information; 
+✓ At the request of an authority having a right of communication (DGCCRF, customs 
+authorities, the Treasury, etc.); 
+✓ In response to a request for the lifting of anonymity by means of a form entitled 
+“Request for disclosure of personal data” accessible on the Afnic website. This 
+lifting of anonymity is not, however, automatic, as Afnic reserves the right not to 
+grant the request in view of the applicant’s status or the purpose of the request.  
+  
+ 
+43 
+Afnic Naming Policy - Version of 6 July 2026 
+Chapter 9 - Other provisions  
+Article 9.1 - Agreement on evidence 
+174. It is understood that emails sent by Afnic to registrars and/or holders have evidential 
+value. 
+175. The same applies to technical elements exchanged between the registrar and Afnic 
+when processing applications and operations. 
+176. In the event of a dispute concerning the date of receipt and/or date on which a 
+request is processed, the information contained on Afnic's servers alone shall prevail.  
+Article 9.2 - Language  
+177. This Naming Policy has been drafted in French and in English.  
+178. In the event of any difficulty in interpreting the terms of the naming policy, solely the 
+French language version shall prevail between the parties. 
+Article 9.3 - Governing law  
+179. This Policy is governed by French law. French law shall apply, to the exclusion of any 
+other. 
+ 
+44 
+Afnic Naming Policy - Version of 6 July 2026 
+Article 9.4 - Force majeure 
+180. In cases of force majeure or chance occurrences, Afnic may be required to suspend 
+all or part of the application of this Policy.  
+181. The following events are explicitly considered as force majeure or chance occurrences, 
+including those usually upheld by case law in French courts and tribunals, namely:  
+✓ War, riots, fire, internal or external strikes, lockouts, occupancy of Afnic premises, 
+bad weather, earthquakes, flooding, damage by water, legal or governmental 
+restrictions, legal or regulatory changes in forms of marketing, accidents of all 
+kinds, illness affecting more than 10% of Afnic staff for a period of two consecutive 
+months, lack of energy supply, partial or total shutdown of the Internet and, more 
+generally, telecommunications networks both public and private, the blocking of 
+roads and the impossibility to procure supplies and any other event beyond the 
+control of the parties expressly preventing the normal performance of this 
+Agreement. 
+Article 9.5 - Intellectual property 
+182. The performance of their duties does not grant Afnic or the registrar any intel lectual 
+property rights to the domain names they manage. 
+  
+ 
+45 
+Afnic Naming Policy - Version of 6 July 2026 
+Chapter 10 – Transitional provisions  
+183. As a transitional measure, the following specific rules shall apply to the .gf, .mq, and .gp  
+top level domains, for which Afnic has been entrusted with management in 2026, 
+starting from the date of the technical transfer of their management to Afnic’s 
+infrastructure: 
+✓ No new registration of domain names consisting of 1 or 2 alphanumeric characters 
+will be permitted.  
+✓ No new registration of domain names under existing naming zones within these 
+top-level domains will be allowed, in accordance with the practices implemented 
+by Afnic for the zones “.asso.fr”, “.com.fr”, or “.tm.fr” 1. Holders of domain names 
+registered under naming zones within .gf, .mq, and .gp prior to the date of the 
+technical transfer of these top-level domains to Afnic’s infrastructure may continue 
+to use and renew them. 
+184. This transitional period, intended to allow stakeholder consultations and public 
+consultations on potential amendments to the Naming Policy concerning the .gp, .mq, 
+and .gf domains, shall end no later than September 30, 2027. 
+ 
+ 
+1 See Article 2.7 §43 of the Naming Policy. 

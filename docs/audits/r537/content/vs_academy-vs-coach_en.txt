@@ -1,0 +1,51 @@
+Home
+TLD comparisons
+.academy vs .coach
+.academy vs .coach: A Curriculum or a Person
+Which to pick
+Both are in the business of making people better; they sell different products. .academy sells the program — name.academy promises an organized curriculum: online course platforms, coding bootcamps, corporate training and brand academies use it when the product is a teaching system with scale, multiple instructors and a syllabus; about $12 to register and $38/yr to renew, good value among training suffixes. .coach sells the person — name.coach promises the one-on-one trainer themselves: personal trainers, life coaches and executive coaches acquire clients on personal trust, and writing the identity into the domain (your name or niche + .coach) beats any slogan; registration (~$11) matches .academy, but renewal around $62/yr is clearly higher — budget on the renewal. The test: the product is a course (replicable, scalable, content-led) → .academy's institutional register fits and costs less to keep; the product is you (one-on-one, small groups, accountability and feedback) → .coach's identity signal is sharper. The growth path is common too: a solo coach who scales into a course brand graduates from .coach to .academy — the two suffixes map to two stages of the same business. Shared cautions: neither certifies anything — display coaching credentials (ICF etc.) and course outcomes on the page; and both are long-ish (seven and five letters), so keep the front word short. Both suffixes are sponsored by Binky Moon, LLC and run on Identity Digital's platform — .academy delegated in December 2013, .coach in November 2014 — so the registry policy, premium tiers and dispute handling are identical, and neither asks for accreditation. That leaves the words, which encode two different business models. Academy is an institution: it implies a curriculum, cohorts, a place (even a virtual one) and, usually, more than one instructor, so it scales to a team and to recorded courses without the domain feeling wrong. Coach is a person: it implies a relationship, live sessions and a calendar with limited slots, so it caps naturally at what one practitioner (or a small roster) can deliver. That difference has a pricing consequence — academy names support product pricing (a course costs X), coach names support time pricing (a session costs Y) — and a hiring consequence, because a .coach brand built on one founder is hard to hand to a second coach, while a .academy brand absorbs new instructors without a rename. Use-case split: an online course library, a bootcamp with cohorts, a corporate training programme, a sports academy with age-group squads, a certification prep school → .academy; a solo executive coach, a running or strength coach with a monthly programme, a language tutor, a public-speaking coach, a career coach for one profession → .coach. Coaches who want to grow into an institution usually launch on .coach and register the .academy the day they hire their second instructor.
+Pricing & 5-year cost of ownership
+.academy vs .coach: first-year, renewal and 5-year total cost (USD; CNY estimated at 7.2)
+TLDRegister / 1st yrRenew / yr5-yr total cost
+.academy$11.84¥85$37.59¥271$162.2¥1168
+.coach$10.81¥78$62.31¥449$260.05¥1872
+Difference (.academy − .coach)+$1.03+¥7−$24.72−¥178−$97.85−¥704
+5-yr total cost = first-year price + 4 × renewal; a positive difference means the former costs more.
+Live prices from Porkbun (fetched 2026-09-06 06:00 UTC); CNY estimated at 7.2. ≈ marks static reference prices, not live quotes. Registrar prices vary — confirm on the registrar page.
+.academy
+Porkbun live: $11.84 1st yr (≈¥85) · renews $37.59/yr (¥ est. at 7.2)
+.academy writes "we teach this" straight into the domain: online course platforms, coding bootcamps, corporate training programs, and sports or arts academies on name.academy communicate their purpose instantly.
+Pick .academy when
+Online course platforms & bootcamps
+Corporate training & brand academies
+Scalable multi-instructor programs
+Course brands graduating from solo coaching
+Institutions that price by the course and absorb new instructors
+.coach
+Porkbun live: $10.81 1st yr (≈¥78) · renews $62.31/yr (¥ est. at 7.2)
+.coach rides the coaching-economy boom: personal trainers, life coaches, career coaches, sports coaches, executive coaches — any one-on-one "I make you better" business turns identity into a domain with name.coach.
+Pick .coach when
+Personal trainers & sports coaches
+Life & executive coaches
+One-on-one & small-group training
+Your-name + .coach personal IP
+One practitioner pricing by the session
+FAQ
+.academy vs .coach: which should I choose?
+.academy sells a structured program; .coach sells the person training you. See “Which to pick” on this page for the full verdict.
+When should I pick a .academy domain?
+The top case for .academy — Online course platforms & bootcamps. The other 4 .academy cases are listed under “Pick .academy when” on this page.
+When should I pick a .coach domain?
+The top case for .coach — Personal trainers & sports coaches. The other 4 .coach cases are listed under “Pick .coach when” on this page.
+Hunt names on .academy and .coach at once
+Describe your idea — AI brainstorms names in bulk and checks availability on both suffixes live, side by side.
+Start hunting
+See prices for all 408 TLDs →
+Related industry naming guides
+Pet trainingPaid knowledge & communitiesSwim schoolsCareer coaching
+Related comparisons
+.fitness vs .coach.education vs .academy.training vs .coach.tennis vs .coach.courses vs .academy.college vs .academy
+More TLD comparisons
+.vip vs .club.fun vs .club.fun vs .games.bar vs .cafe.city vs .world.farm vs .cafe.academy vs .school.care vs .doctor.restaurant vs .cafe.restaurant vs .bar.clinic vs .care.dental vs .doctor.fitness vs .coach.yoga vs .fitness.coffee vs .cafe.wine vs .bar.kitchen vs .restaurant.garden vs .farm.education vs .academy.training vs .coach.wedding vs .love.menu vs .restaurant.bike vs .fitness.menu vs .cafeView all 444 TLD comparisons →
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

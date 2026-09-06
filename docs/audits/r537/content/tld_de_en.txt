@@ -1,0 +1,34 @@
+Home
+TLD guides
+.de
+.de Domain Guide: Who It's For, Pricing & Naming Tips
+Register $2.9≈ ¥21Renew $4.07≈ ¥29Live Porkbun pricing · CNY estimated at 7.2 per USDSee prices for all 408 TLDs →
+Germany's .de is administered by DENIC eG — a cooperative whose members are registrars — delegated by IANA on 5 November 1986, with its site at denic.de. DENIC's 2025 Activity Report puts the year-end count at 17,663,886 .de names, of which 2,167,487 (12.3%) are held by registrants outside Germany, the United States leading that group followed by the Netherlands, Portugal and Austria; the report also notes that DENIC verifies registration data in line with NIS 2. A DENIC press release dated 30 June 2026 announced that .de passed the 18-million mark that month and described the suffix as "continuing to strengthen its leading global position" — DENIC itself does not claim the number-one spot worldwide, and the TLD comparison table in its 2025 Activity Report lists .de (17,663,886) below .cn (20,823,037 at the end of 2024; CNNIC's 55th report gives 20.82 million) and above .uk (10,238,568), so this page calls .de Europe's largest country code and stops short of "largest in the world". On eligibility, the FAQ for DENIC's direct-registration channel, DENICdirect, states that persons or institutions that do not have their registered office in Germany can register .de domains, and that DENIC does not pre-check third-party rights — whether a name infringes someone's trademark is the registrant's own responsibility. No German address or administrative contact is needed at registration: §3(4) of the current DENIC Domain Terms and Conditions only says that a domain holder not domiciled in Germany must, within two weeks of a corresponding request by DENIC, name an authorised representative domiciled in Germany for receiving service of official or court documents, and such a request presupposes that someone wants to serve documents and that the conditions for a Dispute entry are met; the term "Admin-C" does not appear anywhere in the text. The same FAQ publishes the DENICdirect price of 116 euros for the first year and 58 euros per year thereafter, a registry-direct price that sits well above the registrar channel and serves as an upper reference. DomainHunter's live /api/prices quote on 6 September 2026 was $2.90 for the first year and $4.07 to renew, the lowest band among the ccTLDs listed on this site. Naming suggestions: German compound words are .de's natural strength — the language allows several roots to be fused into one long word, and such names are distinctive under .de and rarely collide with English-language brands; whether spellings with ä, ö, ü or ß can be registered as IDNs should be checked against DENIC's current character table, which this round did not verify line by line, and the usual practice is to hold the ae/oe/ue/ss transliterations as well; because DENIC does no rights screening, searching the German Patent and Trade Mark Office (DPMA) and EU Intellectual Property Office (EUIPO) registers before registering is the practical way to avoid a cease-and-desist letter (Abmahnung); and a project serving German speakers across Germany, Austria and Switzerland can hold .de, .at and .ch separately, since all three are open to registrants abroad.
+Best for
+E-commerce and services for German users
+Brands built on German compound words
+Entities without a German registered office registering .de directly
+Businesses covering the German-speaking region with separate .de/.at/.ch
+Naming tips
+No German registered office needed (DENIC FAQ) and no Admin-C; only on DENIC's request must a foreign holder name a German representative for service within two weeks (Domain Terms §3(4))
+Live quote $2.90 first year / $4.07 renewal — the lowest ccTLD band on this site
+DENIC does not pre-check third-party rights — search DPMA/EUIPO first to avoid an Abmahnung
+Check DENIC's character table for umlaut IDNs; hold ae/oe/ue/ss transliterations too
+FAQ
+Who is a .de domain for?
+.de is administered by the cooperative DENIC eG; the zone held 17,663,886 names at the end of 2025, 2,167,487 of them (12.3%) by holders outside Germany, DENIC's FAQ states that persons or institutions without a registered office in Germany can register .de domains, and DomainHunter's live quote is $2.90 for the first year and $4.07 to renew. Typical fits: E-commerce and services for German users, Brands built on German compound words.
+How do I register a .de domain?
+Describe your idea on DomainHunter — the AI brainstorms names and verifies .de availability live via RDAP/DNS/WHOIS. Available names link straight to a registrar with first-year and renewal prices shown, so you can spot renewal traps before buying.
+How do I pick a good .de name?
+First rule for .de names — No German registered office needed (DENIC FAQ) and no Admin-C; only on DENIC's request must a foreign holder name a German representative for service within two weeks (Domain Terms §3(4)). The other 3 tips are under “Naming tips” on this page.
+Hunt a great .de domain right now
+Describe your idea — AI brainstorms names in bulk and checks .de availability live.
+Start hunting .de
+More TLD guides
+.blue.pink.black.ninja.rocks.pet.berlin.paris.amsterdam.vegas.immobilien.tienda.eu.ca.au.jp.sg.fr.it.es.nl.kr.hk.ch.at.be.se.pl.tw.dkView all 408 TLD guides →
+Related TLD comparisons
+.de vs .com.de vs .eu.it vs .de.nl vs .de.ch vs .de.at vs .de
+Related TLDs
+.eu1st yr $5.88.ca1st yr $8.92.au1st yr $7.91.jp1st yr ≈$40.sg1st yr ≈$39.fr1st yr ≈$9
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

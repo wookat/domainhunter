@@ -1,0 +1,47 @@
+Home
+Industry guides
+SaaS tools
+How to Name a SaaS Product: Strategies, Case Studies & Domains
+A SaaS name has to work in two rooms at once: it can't sound cheap when a VP says it in a budget meeting, and it should slip into everyday speech as a verb — "just Slack me" is the endgame of SaaS naming. That defines the core trade-off: a clean, pronounceable coined word beats an accurate but clunky feature description every time. Features change; the more literally a name describes today's product, the more your own roadmap will contradict it in three years (imagine Slack launching as TeamChatTool). SaaS growth also leans on word of mouth and search, so the name must survive the "hear it once, spell it right" test — every failed spelling is a leaked referral. And since SaaS has high contract values and long customer lifetimes, the domain is the cheapest brand asset you'll ever buy: paying up for a clean .com or .io is rational, not vain.
+Naming strategies
+Make it verb-able: pick a short word or coinage that works as a verb (Slack, Zoom). Say "just X me" out loud three times — if it stumbles, move on
+Borrow a metaphor: don't describe the feature, evoke the value — Notion (an idea), Asana (a stable yoga pose), Monday (where work starts). Metaphor inventory is far richer than feature-word inventory
+Graft a blend: fuse halves of two short roots (Salesforce, Mailchimp) — you keep the association and can actually register the domain
+Use category suffixes deliberately: -ly, -base, -stack, -kit and friends (Grammarly, Airtable) signal the SaaS category instantly to your buyers
+Ration the misspellings: dropped vowels (the Flickr trick) read dated now and force letter-by-letter spelling in every referral. If you must mutate, change one letter and keep the pronunciation intact
+Great names, deconstructed
+Slack
+Literally "looseness" — counterintuitively injecting calm into work chat; one syllable, verb-able, five letters: close to a perfect score in SaaS naming
+Notion
+An abstract noun that matches the "organize anything" philosophy; by locking onto no feature, it bought a decade of product expansion
+Figma
+Coined from "figure": keeps the visual association while being fully ownable; two syllables ending in -a, nearly impossible to mispronounce globally
+Airtable
+air (light) + table (the category): explains "a lighter spreadsheet" in one second — the textbook quality-word + category-word blend
+Linear
+A common dictionary word, betting brand feel over ownability — and linear.app turns the constraint into an engineering-taste statement. Classic common-word + precise-TLD play
+Recommended TLDs
+.com1st yr $11.08The default for B2B buyers — procurement and IT trust it most.io1st yr $28.12The insider standard for technical SaaS aimed at developers.app1st yr $8.75Zero explanation when the product is an app; HTTPS enforced zone-wide
+Related TLD comparisons
+.com vs .cn.com vs .io.com vs .net.com vs .ai
+Common mistakes
+Naming by feature description (TaskManagerPro et al.): the name expires with the first pivot and has zero trademark strength
+Leaning on filler suffixes like tech/hub/soft — you'll collide with thousands of peers and never own page one of search
+Checking only the .com: for global SaaS, also clear the trademark (USPTO/EUIPO) and the matching X and GitHub handles
+Going past three syllables: word-of-mouth decays fast and typo rates climb with every extra character
+FAQ
+How do I choose a brand name for SaaS tools?
+Start with the first strategy for naming SaaS tools — Make it verb-able: pick a short word or coinage that works as a verb (Slack, Zoom). Say "just X me" out loud three times — if it stumbles, move on. The other 4 strategies are under “Naming strategies” on this page.
+Which domain extension is best for SaaS tools?
+Recommended TLDs: .com, .io, .app. .com — The default for B2B buyers — procurement and IT trust it most .io — The insider standard for technical SaaS aimed at developers .app — Zero explanation when the product is an app; HTTPS enforced zone-wide
+What naming mistakes should I avoid for SaaS tools?
+The most common mistake when naming SaaS tools — Naming by feature description (TaskManagerPro et al.): the name expires with the first pivot and has zero trademark strength. The other 3 are under “Common mistakes” on this page.
+Hunt names for this industry with AI
+Prefill the industry template — AI brainstorms in bulk and verifies availability live.
+Start hunting
+More industry naming guides
+AI productsDev toolsWeb3HardwareCybersecurityAI agentsDrone & aerialSolar & clean energyIndie hackersOpen sourceIndie games3D printingEV chargingEnergy storageRobotics companiesNo-code toolsDating appsView all 410 industry naming guides →
+Related industry guides
+AI productsDev toolsWeb3HardwareCybersecurityAI agents
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

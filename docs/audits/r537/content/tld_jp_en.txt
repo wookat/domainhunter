@@ -1,0 +1,34 @@
+Home
+TLD guides
+.jp
+.jp Domain Guide: Who It's For, Pricing & Naming Tips
+Static reference: ≈$40 (¥290) 1st yr · ¥290/yr renewal · not a live quoteSee prices for all 408 TLDs →
+JP domain names are administered by Japan Registry Services Co., Ltd. (JPRS), delegated by IANA on 5 August 1986 and found at jprs.jp; every JP application goes through a JPRS-designated registrar ("指定事業者"), and the registry does not deal with the public directly. The JPRS FAQ is specific about eligibility: JP names are for organisations and individuals with an address in Japan; general-use JP names (xxx.jp) only require an address in Japan where notices can be received — a Japanese office, for instance — and one holder may register several; organisational JP names (co.jp, or.jp, ne.jp and so on) must belong to an organisation of the matching type registered in Japan, with a limit of one per organisation, co.jp being the class for Japanese-registered companies such as kabushiki kaisha. Japanese-script JP names (日本語.jp) are likewise open to anyone with a Japanese address, with no numeric limit. The JPRS statistics page for 1 August 2026 reports 1,879,925 JP names in total, of which 1,293,314 are general-use JP (including 79,307 Japanese-script names) and 501,583 are co.jp — roughly two thirds of the installed base is therefore direct second-level general-use JP. Regarding price, the 6 September 2026 /api/prices pull had no live .jp quote, so this page uses a static reference (about ¥290 for both first year and renewal), which puts .jp in the high-price tier of ccTLDs listed on this site; the registrar page is authoritative. Naming suggestions: romaji spellings of Japanese words are the most natural fit for Japanese users, but keep long vowels and contracted sounds consistent (ou versus o, shi versus si); if your users are mainly in Japan, consider holding the 日本語.jp version alongside the romaji one; a team without a Japanese address should first confirm whether its registrar offers a Japanese address service, or set up a Japanese point of contact before applying; and a company planning on co.jp needs to complete Japanese corporate registration first.
+Best for
+Companies with an office or legal entity in Japan
+Brands with a Japanese contact address serving Japanese users
+Projects named in romaji or Japanese script
+Japanese-registered companies that need co.jp-level credibility
+Naming tips
+General-use JP needs an address in Japan for notices; co.jp needs a Japanese-registered entity, one per organisation
+Keep romaji spelling consistent for long vowels and contracted sounds (ou/o, shi/si)
+日本語.jp and name.jp can be held together for a Japanese audience
+Without a live quote the page shows a reference price (≈¥290/yr, high tier)
+FAQ
+Who is a .jp domain for?
+.jp is administered by Japan Registry Services (JPRS); general-use JP names (name.jp) require an address in Japan where notices can be received, organisational co.jp names require Japanese registration and are limited to one per organisation, and the registry counted 1,879,925 JP names on 1 August 2026. Typical fits: Companies with an office or legal entity in Japan, Brands with a Japanese contact address serving Japanese users.
+How do I register a .jp domain?
+Describe your idea on DomainHunter — the AI brainstorms names and verifies .jp availability live via RDAP/DNS/WHOIS. Available names link straight to a registrar with first-year and renewal prices shown, so you can spot renewal traps before buying.
+How do I pick a good .jp name?
+First rule for .jp names — General-use JP needs an address in Japan for notices; co.jp needs a Japanese-registered entity, one per organisation. The other 3 tips are under “Naming tips” on this page.
+Hunt a great .jp domain right now
+Describe your idea — AI brainstorms names in bulk and checks .jp availability live.
+Start hunting .jp
+More TLD guides
+.blue.pink.black.ninja.rocks.pet.berlin.paris.amsterdam.vegas.immobilien.tienda.de.eu.ca.au.sg.fr.it.es.nl.kr.hk.ch.at.be.se.pl.tw.dkView all 408 TLD guides →
+Related TLD comparisons
+.jp vs .cn.kr vs .jp
+Related TLDs
+.sg1st yr ≈$39.fr1st yr ≈$9.it1st yr ≈$8.es1st yr ≈$8.nl1st yr $7.92.kr1st yr ≈$40
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

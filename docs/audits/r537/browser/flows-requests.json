@@ -1,0 +1,34 @@
+[
+ [
+  "GET",
+  "https://hunt.zalize.com/api/stats"
+ ],
+ [
+  "GET",
+  "https://hunt.zalize.com/api/prices"
+ ],
+ [
+  "GET",
+  "https://hunt.zalize.com/api/registrars"
+ ],
+ [
+  "POST",
+  "https://hunt.zalize.com/api/search"
+ ],
+ [
+  "POST",
+  "https://hunt.zalize.com/api/search"
+ ],
+ [
+  "GET",
+  "https://hunt.zalize.com/api/registrars"
+ ],
+ [
+  "GET",
+  "https://hunt.zalize.com/api/prices"
+ ],
+ [
+  "POST",
+  "https://hunt.zalize.com/api/search"
+ ]
+]

@@ -1,0 +1,422 @@
+## Page 1: DENIC eG: FAQs for DENICdirect Customers
+URL: https://www.denic.de/en/faq/faqs-for-denicdirect-customers/
+
+DENIC eG: FAQs for DENICdirect Customers
+
+## FAQs for DENICdirect Customers 
+
+ What do I have to do to get an invoice if I have paid DENIC for the administration of my domain? 
+
+As soon as we have received your payment, we will automatically send an invoice to the e-mail address of the domain holder that is stored in our database. 
+
+ My domain is managed by your service DENICdirect. Can you tell me whom to contact if I have any questions? 
+
+You find a wide range of information and all the documents you need on our website under direct.denic.de and in the special FAQs for DENICdirect customers. 
+
+ If you need any information you do not find there, the DENICdirect Customer Service will be glad to help you.
+
+ I am a provider. Is it possible for me to register .de domains on behalf of my customers through DENICdirect? 
+
+Yes. As a provider, you can register .de domains through DENICdirect on behalf of your customers. You will find information about the alternatives of registering online or by registration form on the DENICdirect service center.
+
+ My homepage no longer appears when I try to access it. What can I do? 
+
+If you look up your homepage in your browser and find that it is no longer being displayed, you should contact your provider and explain the problem to him.
+
+ I have called up a .de domain, but I found myself on a DENIC information page instead. What does this mean? 
+
+The information page you see is a special web page set up by DENIC. The domain holder currently has no Internet presence under this URL. If you yourself are the holder of the domain concerned, please get in touch with the customer service of DENIC eG: DENIC eG Theodor-Stern-Kai 1 60596 Frankfurt am Main Germany Our service staff is available from Monday to Thursday, 8:00 to 18:00 CE(S)T and Friday 8:00 to 16:00 CE(S)T: Phone National: (069) 27 235 270 International: +49 69 27 235 270 Fax National: (069) 27 235 238 International: +49 69 27 235 238 e-mail: direct[at]denic[dot]de
+
+ What does it cost to have a .de domain at DENICdirect? 
+
+The DENICdirect service charges 79.00 EUR ford omain administration for one year incl. domain registration. Thereafter, the administration fee is EUR 79.00 per domain and year. For further information, please go to the DENIC Price List. Please note that the DENICdirect service does not include any technical services, such as e-mail account or web space. These services are provided exclusively through Internet service providers. You will find some potential providers on the DENIC List of Members.
+
+ Why are the prices charged by DENICdirect usually higher than those of DENIC members? 
+
+A domain registration through DENICdirect incurs greater costs for DENIC than processing a domain registration submitted by our members. Thus, the prices charged by DENICdirect are often higher than those of providers.
+
+ Is a domain registration through DENICdirect completed faster than through a DENIC member? 
+
+No. It is not possible for a .de domain to be registered faster by going through DENICdirect rather than one of DENIC's members. All registrations are handled by the same electronic registration system on a strict “first come, first served” basis. This procedure ensures that no source requesting a domain registration is given precedence over the others.
+
+ How long does it take for a domain registration to be processed through the DENICdirect service? 
+
+Provided the registration form submitted to us is accurate and complete, processing normally takes no more than 2 working days. Important! The registration form we provide online is not the contractually binding order. It is merely a convenient way of entering the complete necessary data and facilitates trouble-free processing. Please print out the registration form, have it signed by a duly authorized person and send it to the address indicated in this form.
+
+ Do I get a discount when I register multiple domains through DENICdirect? 
+
+DENICdirect does not grant any discount for multiple domain registration.
+
+ I am currently a DENICdirect customer and I would like to move my domain to a provider of my choice. What do I have to do? 
+
+To transfer your .de domain to a provider of your choice, DENICdirect needs a form in order to register an AuthInfo (provider transfer password) for your domain. Please send the form to DENICdirect. Upon receipt of the form, DENICdirect will enter the AuthInfo for your domain in the DENIC database. Please communicate the AuthInfo you selected to your new provider as well, so that the provider can complete the provider transfer.
+
+ What particulars are needed in order to register and administer a .de domain through DENICdirect? 
+
+Of course, you must indicate the name of the domain you want. Apart from that, you must complete the printed application form or online application form with all the requested particulars concerning the domain holder, billing address and the technical data. You will find further explanations about all the particulars we require in the DENIC Domain Guidelines. Note: Please note that the DENICdirect service does not include any technical services, such as e-mail account or web space. These services are provided exclusively through Internet service providers. You will find some potential providers on the DENIC List of Members.
+
+ How can I transfer the administration of my .de domain from my current provider to DENICdirect? 
+
+If you want to have your domain administered by DENICdirect in future, you must complete a procedure called a Provider Change. Responsibility for administering your domain will then be transferred from your provider (or from the DENIC member your provider works with if the provider is not a DENIC member) to DENICdirect. If you want to carry out a Provider Change, you must first give notice on your existing domain contract with your current provider. The provider will send you a provider change password, the AuthInfo. You must communicate this password to DENICdirect who will then implement the provider change with the AuthInfo. To do this, please send DENICdirect a Provider change form that you have filled out completely and signed.
+
+ How long does it take to process a provider transfer if I want to move my domain to DENICdirect? 
+
+Provided your provider transfer request form is accurate, complete and duly signed, processing will normally take no more than two working days.
+
+ What services are offered by DENICdirect and what precisely do these services contain? 
+
+If you wish to register your domain with our service DENICdirect, you can choose between two types of services: "NSEntry" and "Nameserver". 
+
+#### DENIC NSEntry
+
+ This service allows up to five mailexchange- or address-entries within a domain. It is preferred, if you don't want to run your own nameservers. DENICsmall covers www.domain.de, ftp.domain.de and e-mail forwarding. The technical entries for the domain have to be specified. 
+
+#### DENIC Nameserver
+
+ This means delegation of the responsibility for a domain to at least two nameservers, that the customer specifies. All nameserver queries for this domain will be redirected to these responsible nameservers. The technical entries for the domain have to be specified. 
+
+A domain holder can initiate changes at any time (DENIC usually calls this process an UPDATE). We enter such changes into our system immediately. An update job can be used to modify the type of entry (NSEntry or Nameserver) as well as its contents. All updates must be in writing and must be submitted to DENIC as complete jobs. This update service is part of the maintenance covered by the registration fee and is thus not invoiced separately. 
+
+#### Important notice:
+
+Domain registration through DENICdirect does not include any Internet access or any web space. You can only obtain these services from an Internet Service Provider (ISP). There are numerous ISPs to choose from and they also include many of DENIC's members.
+
+ What do I have to do to change my domain data for a domain that is administered by DENICdirect? 
+
+To carry out a data update, we need an update form signed by the domain holder or his legal representative. Please print out the domain update form, and return the accurate and complete, duly signed form to DENICdirect.
+
+ How long does it take to process a change in my domain data for a domain that is administered by the DENICdirect service? 
+
+Provided your update form is accurate, complete and duly signed, processing will normally take no more than two working days.
+
+Please print out and complete the update form, have it signed by a duly authorized person and send it to the address indicated in this form.
+
+ What does it cost to change my domain data for a domain that is administered by DENICdirect? 
+
+The cost of changing the data of a .de domain administered by DENICdirect is included in the administration fee for your domain.
+
+If you would like to change your data, please print out and complete the update form, have it signed by a duly authorized person and send it to the address indicated in this form.
+
+ Can I get technical services from DENICdirect, like e-mail accounts and web space? 
+
+DENIC is not an Internet service provider (ISP), so it does not make any technical services, such as Internet access, e-mail accounts or web space available for third parties. These services are provided exclusively through Internet service providers. You will find some potential providers on the DENIC List of Members.
+
+ I have a domain administered by DENICdirect. What do I have to do if I want to transfer it to a new holder? 
+
+ If you want to transfer a registered domain to a new holder, the first thing DENICdirect needs is a statement of transfer signed by the current domain holder. This must make it perfectly clear that the current domain holder is terminating his/her contract with us and transferring the totality of his/her rights and duties related to the domain to the new domain holder.
+
+From the new domain holder we also
+
+---
+
+## Page 2: DENIC eG: 2025 Activity Report
+URL: https://www.denic.de/en/2025-activity-report/
+
+DENIC eG: 2025 Activity Report
+
+# 2025 Activity Report 
+
+- Instagram 
+- LinkedIn 
+- Bluesky 
+
+### 2025 – A Year of Collaborative Innovation
+
+For DENIC, 2025 was a year of setting important new directions. The focus was on implementing the NIS 2 Directive. Together with the members of our cooperative, we developed and implemented practical solutions.
+
+The new composition of the Executive Board and Supervisory Board has further solidified the development of our cooperative, and Barbara Stolz, as the new Executive Board member, will bring valuable new ideas to the table.
+
+A special highlight of the year was the successful Domain pulse in Dresden, Germany — a valuable platform for exchange and discussion within the Internet community.
+
+ 
+
+ We have further strengthened our international network. Engagement with organizations such as the eco association, ICANN, and CENTR, as well as other international partners, is essential for identifying regulatory and technical developments at an early stage, coordinating our positions, and effectively representing our members’ interests in the international arena.
+
+2025 has shown how much we can achieve together through innovation, close collaboration, and a clear vision of the challenges ahead — true to our motto “.de – for a responsible internet.”
+
+### Total Income
+
+in K€
+
+ Chart could not be rendered. 
+
+ Chart data table 
+
+| Label | Value |
+| --- | --- |
+| 2023 | 51322 |
+| 2024 | 53524 |
+| 2025 | 53200 |
+
+| Income 2025 | in K€ |
+| --- | --- |
+| Turnover Members | 17,793 |
+| Other Operating Income | 167 |
+| Other Operating Turnover | 202 |
+| Total Gross Income | 18,162 |
+| Net Earnings Before Tax (EBT) | 356 |
+| Annual Surplus | 31 |
+
+## Financial Position 
+
+in K€
+
+| Financial Position | 2025 | 2024 |
+| --- | --- | --- |
+| Gross Earnings | 16,849 | 17,239 |
+| Payroll & Material Expenses | 16,074 | 15,940 |
+| Annual Surplus | 31 | 778 |
+
+| 2025 Expenses | in TEUR |
+| --- | --- |
+| Material Expenses | 2,029 |
+| Payroll Expenses | 11,068 |
+| Depreciations | 529 |
+| Other Operating Costs | 5,006 |
+| Total Operating Costs | 18,632 |
+
+## .de in the focus
+
+ In 2025, the German country code .de continued to grow, reaching a total of 17,663,886 domains.
+
+ National 
+
+At the national level, the .de domain has reached 15,496,399 domains. Ten federal states reported growth, particularly Lower Saxony and Brandenburg. North Rhine-Westphalia remains the leader with 3.36 million domains. Of the 400 cities and counties, a total of 188 reported growth in 2025.
+
+ International 
+
+The number of .de domains held by foreign domain owners also continues to grow, reaching 2,167,487 domains (12.3%). The United States leads the list, followed by the Netherlands, Portugal, and Austria.
+
+ Chart could not be rendered. 
+
+ Chart data table 
+
+| Label | Value |
+| --- | --- |
+| 2024 | 17661679 |
+| 2025 | 17663886 |
+
+## .de registrations in Germany and worldwide
+
+ 
+
+ 
+
+## Our Highlights 
+
+ 
+
+### Ready for NIS 2 
+
+Our automated registration system is compliant with the requirements of the NIS 2 Directive. This applies in particular to the data to be provided during domain registration and the verification of that data. The focus was on ensuring that the registration process remained as user-friendly as possible for new registrants. And our domain query / whois is designed to display specific registration details, such as the registration details of legal persons and the domain’s registration date.
+
+### Crisis-proof & certified 
+
+Conducted by an external firm, the crisis management team had to face a realistic exercise. The conclusion: when things get serious, we are well prepared; we were also given some specific recommendations to take on board. Thanks to thorough preparation, from the gap analysis to internal audits, the transition audit to ISO/IEC 27001:2022 at DENIC eG and our subsidiary DENIC Services GmbH & Co. KG went perfectly. Crises cannot always be prevented; what is important is to tackle them in a well-organised manner.
+
+ 
+
+ 
+
+### Straight to the point of contact 
+
+New section for inquiries on our website: We direct visitors straight to the right point of contact. Inquiries can be easily submitted to the appropriate contact person. Another new feature is our partnership with the independent eco-complaints office. An interface forwards inquiries directly, and they can be reliably processed by the complaints office.
+
+ 
+
+## TLDs Compared
+
+Number of Registrations 
+
+End of 2025
+
+Source: centr.org, among others
+
+ *Status of .cn as of the end of 2024
+
+ Chart could not be rendered. 
+
+ Chart data table 
+
+| Label | Value |
+| --- | --- |
+| .pt | 2077297 |
+| .es | 2145784 |
+| .ch | 2580972 |
+| .eu | 3688518 |
+| .fr | 4319120 |
+| .nl | 6058799 |
+| .uk | 10238568 |
+| .org | 11883137 |
+| .net | 12777972 |
+| .de | 17663886 |
+| .cn* | 20823037 |
+| .com | 162363380 |
+
+## Domain pulse Dresden
+
+A particular highlight was the successful Domain Pulse event in Dresden, which impressively demonstrated the innovative strength of the domain community. Despite challenging market conditions, .de remains a stable and trustworthy top level domain. We also remain committed to an open, free, global, and secure internet at both the national and international levels.
+
+Our motto “.de – for a responsible internet” continues to serve as both our guiding principle and our driving force.
+
+ 
+
+#### From Berlin to Brussels to New York
+
+At the national level, DENIC eG has been serving as the secretariat for the IGF-D since late 2022, thereby strengthening the multistakeholder dialogue on internet governance and digital policy issues in Germany. In addition, DENIC played an active role last year in supporting the legislative process for the implementation of the NIS2 Directive.
+
+At the European level, DENIC, in collaboration with CENTR, pursued numerous legislative initiatives, with a particular focus on participating in the e-evidence process as part of a relevant expert group.
+
+Internationally, the United Nations’ WSIS+20 process shaped discussions on Internet governance. The adoption of the WSIS+20 resolution in New York marked a major milestone. As part of the technical community, DENIC actively participated in the consultations through the “A Technical Community Coalition for Multistakeholderism.”
+
+#### “ Internet governance is about establishing rules for the Internet, achieving technical outcomes, and the process of getting there. Multistakeholder dialogue plays a defining and crucial role in this context. As a strong voice for the technical community, DENIC is present and active at the national, European, and global levels.”
+
+Peter Koch Senior Policy Advisor at DENIC
+
+ 
+
+## Online Safety 
+
+In 2025, DENIC’s Technical Department implemented measures to further improve the stability, security, and performance of the infrastructure. A newly introduced “Security Information and Event Management” (SIEM) system centrally records and analyzes security-related events, thereby increasing transparency and responsiveness in the event of security incidents.
+
+In addition, a crisis response exercise was conducted with the Executive Board and management team to test procedures in the event of an emergency and strengthen cross-departmental collaboration.
+
+ 
+
+#### “In 2025, we will continue to ensure that we meet all legal requirements, strengthen operational security, analyze risks and threats, and maintain a robust intrusion detection system.”
+
+Daniel Kremer Head of Information Security
+
+ 
+
+## Strength and Safety
+
+We invest in the professional development of our employees and also take a variety of measures to ensure the health of our workforce, so that we can continue to fulfill the mission of our members and the community through well-trained staff.
+
+ 
+
+## Together for a secure network
+
+DENIC employs 122 staff members (incl. 8 trainees and students) from 10 different countries, of whom approximately 30% are women.
+
+In addition, we remain an IHK-certified training company and thus fulfill our responsibility to train young people.
+
+### Environmental, Social & Corporate Governance
+
+DENIC takes responsibility for environmental, social, and corporate governance issues. In 2025, we further expanded our ESG process. Based on our materiality analysis, we now track our environmental, social, and governance goals using specific KPIs. Issues such as pay equity, professional development, and environmental responsibility are firmly embedded in our daily work.
+
+All teams have actively participated in successfully implementing the ESG process. It is not just a project, but a way of life: We combine measurable success with genuine responsibility for a sustainable digital future.
+
+## Trust that brings us together 
+
+DENICdirect is the first point of contact for .de domain holders; it manages domains in the TRANSIT process, processes WHOIS requests, and supports the community—a service that is also reflected in our key performance indicators.
+
+#### Support Requests 2025
+
+ 20 % 
+
+ of the domains in the transit process were reclaimed by DENIC members 
+
+ 43 % 
+
+ of support requests are made by phone 
+
+ 57 % 
+
+ of support requests are submitted in writing 
+
+## The European ccTLD-Community
+
+DENIC takes on leadership roles at CENTR and in international institutions to drive forward processes and standards for ccTLDs. Our experts are active in a wide range of international bodies and help shape the development of ccTLD standards. Within the CENTR community, we drive more efficient processes, standardized workflows, and data-driven marketing, and as board members, we champion agile, focused working methods.
+
+- Board Member Thomas Keller is Chair of the CENTR Boards 
+- Senior Policy Advisor Peter Koch is a board member of the IGF-D and a member of the ccNSO Council at ICANN IGF-D
+- Sabrina Heber heads the IGF-D Sekretariat
+- Head of Marketing Ulrich Retzlaff is co-chair of the CENTR Marketing Working Group
+- Product Manager Sascha Kämpf is co-chair of the CENTR Working Group
+
+---
+
+## Page 3: Statistics / Japan Registry Services Co., Ltd.
+URL: https://jprs.co.jp/en/stat/
+
+Statistics / Japan Registry Services Co., Ltd.
+
+### Latest Statistics
+
+The number of JP domain name registrations (2026/08/01 Total: 1879925)
+
+General-Use JP Domain Name(Total: 1293314) 
+
+| ASCII | ASCII(Alpha-Numeric) | 1214007 |
+| --- | --- | --- |
+| Japanese | Japanese(Japanese Domain Names) | 79307 |
+
+Prefecture Type JP Domain Name(Total: 9846) 
+
+| ASCII | ASCII(Alpha-Numeric) | 8640 |
+| --- | --- | --- |
+| Japanese | Japanese(Japanese Domain Names) | 1206 |
+
+Organizational Type and Geographic Type JP Domain Name (Total: 576765) 
+
+| AD | Members of JPNIC | 259 |
+| --- | --- | --- |
+| AC | Universities, Technical schools, Incorporated schools | 3916 |
+| CO | Incorporated companies, Limited companies | 501583 |
+| GO | Government organizations, Government-affiliated organizations | 848 |
+| OR | Foundation, Aggregate corporation | 42274 |
+| NE | Network services | 12260 |
+| GR | Arbitrary organization | 5082 |
+| ED | Schools including primary, junior and senior high schools | 6610 |
+| LG | Local Government | 1926 |
+| GEO | Geographic Type | 2007 |
+
+---
+
+## Page 4: Canadian Presence Requirements – CIRA
+URL: https://www.cira.ca/en/legal-policy-and-compliance/canadian-presence-requirements/
+
+Canadian Presence Requirements – CIRA
+
+## Keeping .CA Canadian
+
+The .CA domain is like the Canadian flag on your digital backpack–a unique identifier for Canadian websites. As Canada’s country code top-level domain, .CA is a key public resource for the social and economic development of all Canadians.
+
+How exactly does CIRA ensure that .CA is kept Canadian? Here’s some information that will be helpful if you’re interested in registering a .CA domain to brand your website as proudly Canadian.
+
+## Canadian Presence Requirements (CPR)
+
+When you register a .CA, you enter into a Registrant Agreement and you will be required to select a CPR category to show your connection to Canada. Here’s a few of the commonly-chosen categories:
+
+### Individuals
+
+- Canadian citizen
+- Permanent resident
+- Legal representative
+- Aboriginal peoples
+
+### .CA WHOIS privacy for individuals
+
+For individuals, the contact information provided when you register is not displayed on the .CA WHOIS. This means you don’t need to worry about people using your WHOIS contact information to spam you (as is the case with some other TLDs) or purchase additional privacy protection services from Registrars.
+
+### Non-individuals
+
+- Corporation
+- Trademark registered in Canada
+- Official marks
+- Association
+- Trust
+- Partnership
+- Educational institution
+- Library, archive or museum
+- Hospital
+- Government
+
+Please note this is not a complete list of CPR categories. To learn more about the eighteen possible categories, please refer to the Canadian Presence Requirements policy.
+
+After you register, it’s possible that CIRA may request proof of compliance based on your chosen category through a process called Registrant Information Validation (RIV).
+
+We’re located at
+
+Canadian Internet Registration Authority (CIRA) 319 McRae Avenue, Suite 700 Ottawa, Ontario K1Z 0B9

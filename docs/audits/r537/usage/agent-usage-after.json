@@ -1,0 +1,154 @@
+{
+  "days": {
+    "2026-09-02": {
+      "searches": 20,
+      "byTld": {
+        "com": 20,
+        "cn": 10,
+        "io": 10,
+        "dev": 10
+      },
+      "fast": 15,
+      "refine": 5,
+      "aiErrors": {
+        "quota": 1,
+        "network": 1
+      }
+    },
+    "2026-09-06": {
+      "searches": 0,
+      "byTld": {},
+      "fast": 0,
+      "refine": 0,
+      "cspReports": 2,
+      "pageviews": {
+        "home": 52,
+        "results": 8,
+        "tld": 191,
+        "guide": 80,
+        "vs": 178,
+        "prices": 23,
+        "other": 74
+      },
+      "bots": 14573,
+      "botsBy": {
+        "other": 14332,
+        "ai": 241
+      }
+    },
+    "2026-09-04": {
+      "searches": 20,
+      "byTld": {
+        "com": 20,
+        "cn": 13,
+        "io": 5,
+        "dev": 5
+      },
+      "fast": 17,
+      "refine": 3,
+      "aiErrors": {
+        "rate-limit": 4,
+        "quota": 3
+      },
+      "fallbacks": {
+        "quota": 2,
+        "quota-breaker": 2
+      },
+      "outbound": {
+        "namecheap": 1,
+        "porkbun": 3,
+        "aliyun": 16
+      },
+      "outboundByTld": {
+        "com": 4,
+        "cn": 15,
+        "com.cn": 1
+      },
+      "llmProvider": {
+        "primary": 22
+      },
+      "pageviews": {
+        "home": 234,
+        "guide": 61,
+        "prices": 35,
+        "vs": 27,
+        "other": 138,
+        "tld": 72,
+        "results": 20
+      },
+      "bots": 5576,
+      "botsBy": {
+        "bing": 2,
+        "other": 5472,
+        "ai": 91,
+        "google": 4,
+        "baidu": 7
+      }
+    },
+    "2026-09-05": {
+      "searches": 0,
+      "byTld": {},
+      "fast": 0,
+      "refine": 0,
+      "outbound": {
+        "dynadot": 1
+      },
+      "outboundByTld": {
+        "cn": 1
+      },
+      "pageviews": {
+        "home": 36,
+        "results": 40,
+        "tld": 35,
+        "guide": 20,
+        "vs": 23,
+        "prices": 25,
+        "other": 33
+      },
+      "bots": 5949,
+      "botsBy": {
+        "other": 3031,
+        "ai": 2918
+      }
+    }
+  },
+  "cronLast": 1788674438989,
+  "indexnowLast": 1788436834369,
+  "indexnowLastAttempt": 1788674438989,
+  "indexnowLastError": {
+    "at": 1788674438989,
+    "status": 429,
+    "message": "Too many requests",
+    "submitted": 0,
+    "retries": 2
+  },
+  "indexnowLastResult": {
+    "at": 1788674438989,
+    "ok": false,
+    "status": 429,
+    "message": "Too many requests",
+    "submitted": 0,
+    "retries": 2
+  },
+  "indexnowPending": 1270,
+  "pricesLastOk": 1788674449394,
+  "pricesLastFail": 1786471293486,
+  "baiduLast": null,
+  "baiduLastError": null,
+  "cspSamples": [
+    {
+      "directive": "script-src",
+      "blockedUri": "https://evil.example/x.js",
+      "count": 1,
+      "firstAt": 1788693304250,
+      "lastAt": 1788693304250
+    },
+    {
+      "directive": "font-src",
+      "blockedUri": "https://edge.example/f.woff2",
+      "count": 1,
+      "firstAt": 1788693304754,
+      "lastAt": 1788693304754
+    }
+  ]
+}
