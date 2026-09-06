@@ -30,7 +30,8 @@ import { sitemapLastmod } from "./sitemap-lastmod";
 import { parseVariantName } from "./mcp-args";
 import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
 import { loadPricesPayload, peekPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
-import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
+import { buildHeadInjection, injectIntoHead, isHtmlDocument, resolveAnalytics, type GrowthVars } from "./growth-inject";
+import { addScriptNonce, applyBaseSecurityHeaders, applyHtmlSecurityHeaders, CSP_REPORT_MAX_BYTES, CSP_REPORT_PATH, generateNonce, parseCspReports, readCspSamples, recordCspSamples, type CspSample } from "./security-headers";
 import { PageviewCounter, readDayPageviews, type DayPageviews } from "./pageviews";
 import { emptyDayUsage, readDayUsage, usageCounterFor, type DayUsage } from "./usage-counter";
 import { INDEXNOW_429_BACKOFF_MS, INDEXNOW_429_MAX_RETRIES, INDEXNOW_BATCH_SIZE, INDEXNOW_ENDPOINT, INDEXNOW_FALLBACK_ENDPOINTS, INDEXNOW_RUN_MAX_BATCHES, acceptedUrls, countRetries, fallbackHosts, indexNowDelta, mergePushed, submitIndexNow, summarizeIndexNow, type IndexNowPushed } from "./indexnow";
@@ -69,30 +70,32 @@ const app = new Hono<{ Bindings: Bindings }>();
 
 // HTML 文档统一后处理（R481）：所有 text/html 响应（含 SSR 页面与 ASSETS 直出的 index.html）在此
 // ① 加 `Vary: Accept-Language`（SSR 正文/标题随 Accept-Language 切 zh/en；API 与静态资源不是 text/html，不受影响）；
-// ② 注入验证 meta / 分析 beacon（vars 为空则不读 body，仅换头透传）；③ 服务端 pageviews/bots 计数。
+// ② 注入验证 meta / 分析 beacon；③ 服务端 pageviews/bots 计数；
+// ④（R533）安全响应头：HTML 文档加全套（HSTS/nosniff/Referrer/XFO/Permissions/CSP Report-Only）并给全部可执行 <script> 打 per-request nonce（因此每个 HTML 都要读 body）；
+//   非 HTML（/api/*、/mcp JSON、静态资源、sitemap/robots/llms.txt、OG SVG）只加 nosniff + Referrer-Policy，其余头（含 cache-control）原样。
 // 计数器按 isolate 复用，合并窗口内多次请求为一次 KV 写；仅统计 GET + 2xx 的 HTML 文档（404 壳与 API 不计）。
 let pageviewCounter: PageviewCounter | null = null;
 app.use("*", async (c, next) => {
   await next();
   const res = c.res;
   const method = c.req.method;
-  if ((method !== "GET" && method !== "HEAD") || !isHtmlDocument(res)) return;
+  if ((method !== "GET" && method !== "HEAD") || !isHtmlDocument(res)) {
+    // ASSETS 直出的响应头不可变，统一复制一份可写头的 Response（不读 body）
+    const out = new Response(res.body, res);
+    applyBaseSecurityHeaders(out.headers);
+    c.res = out;
+    return;
+  }
   if (method === "GET" && res.status >= 200 && res.status < 300 && c.env.CACHE) {
     pageviewCounter ??= new PageviewCounter(c.env.CACHE);
     c.executionCtx.waitUntil(pageviewCounter.record(new URL(c.req.url).pathname, c.req.header("user-agent")));
   }
-  const snippet = buildHeadInjection(c.env);
-  if (!snippet) {
-    // 不读 body：仅复制一份可写头的 Response（ASSETS 直出的响应头不可变）
-    const passthrough = new Response(res.body, res);
-    withHtmlVary(passthrough.headers);
-    c.res = passthrough;
-    return;
-  }
-  const html = injectIntoHead(await res.text(), snippet);
+  const nonce = generateNonce();
+  const html = addScriptNonce(injectIntoHead(await res.text(), buildHeadInjection(c.env)), nonce);
   const headers = withHtmlVary(new Headers(res.headers));
   headers.delete("content-length");
   headers.delete("content-encoding");
+  applyHtmlSecurityHeaders(headers, nonce, resolveAnalytics(c.env) !== null);
   c.res = new Response(html, { status: res.status, statusText: res.statusText, headers });
 });
 
@@ -1150,6 +1153,25 @@ app.post("/api/click", async (c) => {
   return c.body(null, 204, { "cache-control": "no-store" });
 });
 
+// CSP（Report-Only）违规上报（R533）：只计当日条数 + 前 20 条去重的 directive/blocked-uri 样本，不存 UA/IP/页面 URL；
+// 能否解析都回 204（浏览器不读响应，也不给探测者信号）；超 16KB 回 413 不解析
+app.post(CSP_REPORT_PATH, async (c) => {
+  const len = Number(c.req.header("content-length") ?? "0");
+  if (len > CSP_REPORT_MAX_BYTES) return c.body(null, 413, { "cache-control": "no-store" });
+  const text = await c.req.text().catch(() => "");
+  if (text.length > CSP_REPORT_MAX_BYTES) return c.body(null, 413, { "cache-control": "no-store" });
+  let payload: unknown = null;
+  try {
+    payload = JSON.parse(text);
+  } catch { /* 非 JSON：当作无记录 */ }
+  const violations = parseCspReports(payload);
+  if (violations.length > 0) {
+    c.executionCtx.waitUntil(usageCounterFor(c.env.CACHE).cspReport(violations.length));
+    if (c.env.CACHE) c.executionCtx.waitUntil(recordCspSamples(c.env.CACHE, violations));
+  }
+  return c.body(null, 204, { "cache-control": "no-store" });
+});
+
 // 运营数据：最近 N 天的聚合使用量（仅计数，无任何用户输入/IP）
 app.get("/api/usage", async (c) => {
   const days = Math.min(Math.max(Number(c.req.query("days") ?? "14"), 1), 45);
@@ -1175,8 +1197,9 @@ app.get("/api/usage", async (c) => {
   let pricesLastFail: number | null = null;
   let baiduLast: number | null = null;
   let baiduLastError: BaiduPushError | null = null;
+  let cspSamples: CspSample[] = [];
   try {
-    const [cl, il, ia, ie, ir, ip, po, pf, bl, be] = await Promise.all([
+    const [cl, il, ia, ie, ir, ip, po, pf, bl, be, cs] = await Promise.all([
       kv?.get("cron:last"),
       kv?.get(INDEXNOW_LAST_KEY),
       kv?.get(INDEXNOW_LAST_ATTEMPT_KEY),
@@ -1187,7 +1210,9 @@ app.get("/api/usage", async (c) => {
       kv?.get(PRICES_LAST_FAIL_KEY),
       kv?.get(BAIDU_LAST_KEY),
       kv?.get<BaiduPushError>(BAIDU_LAST_ERROR_KEY, "json"),
+      kv ? readCspSamples(kv) : Promise.resolve([] as CspSample[]),
     ]);
+    cspSamples = cs;
     cronLast = cl ? Number(cl) : null;
     indexnowLast = il ? Number(il) : null;
     indexnowLastAttempt = ia ? Number(ia) : null;
@@ -1199,7 +1224,7 @@ app.get("/api/usage", async (c) => {
     baiduLast = bl ? Number(bl) : null;
     baiduLastError = be ?? null;
   } catch { /* 读失败返回 null */ }
-  return c.json({ days: out, cronLast, indexnowLast, indexnowLastAttempt, indexnowLastError, indexnowLastResult, indexnowPending, pricesLastOk, pricesLastFail, baiduLast, baiduLastError }, 200, { "cache-control": "public, max-age=300" });
+  return c.json({ days: out, cronLast, indexnowLast, indexnowLastAttempt, indexnowLastError, indexnowLastResult, indexnowPending, pricesLastOk, pricesLastFail, baiduLast, baiduLastError, cspSamples }, 200, { "cache-control": "public, max-age=300" });
 });
 
 // SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）

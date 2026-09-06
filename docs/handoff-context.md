@@ -111,7 +111,7 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 
 ### 7.2 `/api/usage` 字段速查
 
-顶层：`days{date→…}`、`cronLast`、`indexnowLast`、`indexnowLastAttempt`（R514）、`indexnowLastError`（含 `retries`，R515）、`indexnowLastResult`（R515，每次真正发请求都写，成功失败均含 `retries`；R517 加 `fallbackHosts`，仅备用端点成功时有）、`pricesLastOk`、`pricesLastFail`、`baiduLast`、`baiduLastError`。每日项：`searches`、`byTld`、`fast`、`refine`、`aiErrors{quota|rate-limit|network|…}`、`fallbacks{quota|quota-breaker|…}`（R471）、`llmProvider{primary,fallback}`（R474，成功主轮才有）、`outbound`/`outboundByTld`（R480）、`pageviews{home,results,tld,guide,vs,prices,other}`、`bots`、`botsBy{google,bing,baidu,ai,other}`（R481/R482）。全部只计数，不存 IP/UA/输入。
+顶层：`days{date→…}`、`cronLast`、`indexnowLast`、`indexnowLastAttempt`（R514）、`indexnowLastError`（含 `retries`，R515）、`indexnowLastResult`（R515，每次真正发请求都写，成功失败均含 `retries`；R517 加 `fallbackHosts`，仅备用端点成功时有）、`pricesLastOk`、`pricesLastFail`、`baiduLast`、`baiduLastError`。每日项：`searches`、`byTld`、`fast`、`refine`、`aiErrors{quota|rate-limit|network|…}`、`fallbacks{quota|quota-breaker|…}`（R471）、`llmProvider{primary,fallback}`（R474，成功主轮才有）、`outbound`/`outboundByTld`（R480）、`pageviews{home,results,tld,guide,vs,prices,other}`、`bots`、`botsBy{google,bing,baidu,ai,other}`（R481/R482）、`cspReports`（R533，浏览器 CSP Report-Only 上报条数）。顶层另有 `cspSamples[]`（R533，前 20 条去重 `{directive, blockedUri, count, firstAt, lastAt}`，KV `csp:samples:v1`）。全部只计数，不存 IP/UA/输入。
 
 ### 7.3 内容计数
 
@@ -205,6 +205,7 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
   - 集成期修复：`guide-page.tsx` 合并后丢失 `cn` import；复读率/正文口径（`thin-analyze.mjs`、`dup-ratio.mjs`、`faq.test.ts`）排除 `<table>`——R521 表格数值单元格（同价两行、差额 `≈$0 ¥0`×3）被当句子计入使 37 个 `/vs` 页误报 5–12%，表格属结构化数据非正文。
   - 已知指标变动：R519 删复读句后 `/tld/com` en 正文 453→335 词、链接占比 24.2%→**30.5%**（>25% 目标）——根因 en `/tld` 页正文薄，修法是内容补写（R512 建议的 ccTLD 注册局政策事实），不是继续删链接。
   - 生产回归（零 AI，见 #486 评论）：P0/P1/P2 无；P3 ×2：`/tld/*` chip 价格文字 SSR 静态参考价 → `/api/prices` 加载后实时价（R520 之前即如此，`staticPriceShort` 设计使然，slug/href 一致）；/tld/at 落 fallback 组。
+- **R533**（0 AI，未部署；关 R484 P3-3）：`security-headers.ts` + `worker.ts` HTML 后处理中间件——HTML 文档加 HSTS（1 年 + includeSubDomains，不 preload）/ nosniff / Referrer-Policy strict-origin-when-cross-origin / XFO DENY / Permissions-Policy / **CSP Report-Only**（script-src 'self' + per-request nonce，`addScriptNonce()` 给全部可执行 `<script>` 打 nonce；style-src 保留 'unsafe-inline'），非 HTML 响应只加 nosniff + Referrer-Policy；`POST /api/csp-report` 计数进 `usage.cspReports` + 20 条去重样本；`/api/usage` 透出。证据表与 enforce 判据见 `docs/security-headers.md`。已知：静态资源不经 worker（`run_worker_first: ["/"]`），要加头需 `public/_headers`；`/api/*` `/mcp` 本来就没有 CORS 头；Chrome `report-to` 本地未见投递故只用 `report-uri`。
 - **R524–R528**（0 AI，version f648963f；集成 PR #492 = #490 + #491，#494 = #493；R524 #489、R527 #488 直接合并）：
   - R524 `content/compares.ts` 剩余 14 个 `/vs` 短页 zh/en 补写组合专属判断段（verdict + pick），.vip/.ai 措辞改为可一手核实的事实。
   - R525 `content/tlds.ts` 27 个 ccTLD（pl mx nz pt se fi at dk ch be jp kr tw no ie sg hk fr br uk de au ca it nl es eu）改写为注册局事实驱动段落（官方 URL + 抓取日期）；修正 .de 两处旧说法（含 6 个 .de `/vs` 页、`hub-index-tld.ts`）。
