@@ -43,9 +43,10 @@ export function buildGuideFaq(guide: IndustryGuide, lang: "zh" | "en"): GuideFaq
   }
   const ideasLabel = "命名思路";
   const pitfallsLabel = "常见误区";
+  const brandLabel = loc.label.endsWith("品牌") ? loc.label : `${loc.label}品牌`;
   return [
     {
-      q: `${loc.label}品牌怎么起名？`,
+      q: `${brandLabel}怎么起名？`,
       a: `${loc.label}起名的第一条思路——${firstIdea}。其余 ${loc.namingIdeas.length - 1} 条见本页「${ideasLabel}」一节。`,
       link: { hash: GUIDE_IDEAS_ANCHOR, label: ideasLabel },
     },
