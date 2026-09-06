@@ -1,0 +1,11 @@
+typecheck exit 0
+ Test Files  34 passed (34)
+      Tests  402 passed (402)
+test exit 0
+✓ built in 7.45s
+build exit 0
+[content-counts] ✓ TLD（tld-list.ts TLD_LIST）: 408 条，与事实源一致
+[content-counts] ✓ 行业指南（guides.ts GUIDE_LIST）: 410 条，与事实源一致
+[content-counts] ✓ 对比页（compare-slugs.ts COMPARE_SLUGS）: 444 条，与事实源一致
+[content-counts] 全部通过
+content exit 0
