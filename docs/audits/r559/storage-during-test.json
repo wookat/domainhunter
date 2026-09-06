@@ -1,0 +1,11 @@
+{
+  "local": {
+    "dh:myShares:v1": "[]",
+    "domainhunter:lang": "zh",
+    "domainhunter:monitor": "[]",
+    "domainhunter:shortlist": "[]",
+    "domainhunter:sync:code": "<redacted>",
+    "domainhunter:theme": "light"
+  },
+  "session": {}
+}
