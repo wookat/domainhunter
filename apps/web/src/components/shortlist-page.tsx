@@ -15,7 +15,7 @@ import { priceFull, priceShort, toUsd, usePrices, type PriceMap } from "@/lib/pr
 import { primaryRegistrar } from "@/lib/registrars";
 import { copyText } from "@/lib/clipboard";
 import { exportResultsCsv } from "@/lib/results-export";
-import { addMyShare, loadMyShares, removeMyShare, type MyShare } from "@/lib/my-shares";
+import { addMyShare, loadMyShares, removeMyShare, visibleShareUrl, type MyShare } from "@/lib/my-shares";
 import { NOTE_MAX_LENGTH, type RecheckResult, type ShortlistItem } from "@/lib/shortlist";
 import { scoreBadgeClass, tldPrice, totalScore, type Status } from "@/types";
 import { cn, formatExpiry } from "@/lib/utils";
@@ -291,6 +291,9 @@ export function ShortlistPage({
     }
   }
 
+  // 「分享链接已生成」行随本地分享记录与候选数联动：撤销后 / 候选清空后不再展示失效 URL
+  const shownShareUrl = visibleShareUrl(shareUrl, myShares, items.length);
+
   // 只展示与本人清单相关的变化（前端按本地清单过滤）
   const myDomains = new Set(items.map((i) => i.domain));
   const relevantChanges = (monitorChanges ?? []).filter((c) => myDomains.has(c.domain));
@@ -520,12 +523,12 @@ export function ShortlistPage({
       <p className="mb-2 text-xs text-txt2">{t("shortlist.hint")}</p>
       {items.length > 0 && <p className="tnum mb-3 text-xs text-txt2">{lastCheckedStr}</p>}
 
-      {shareUrl && (
+      {shownShareUrl && (
         <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg border border-brand-line bg-brand-dim/40 px-4 py-2.5 text-sm text-txt1">
           <Link2 className="h-4 w-4 shrink-0 text-brand" />
           {t("shortlist.shareReady")}
-          <a href={shareUrl} target="_blank" rel="noreferrer" className="break-all font-mono text-xs text-brand underline">
-            {shareUrl}
+          <a href={shownShareUrl} target="_blank" rel="noreferrer" className="break-all font-mono text-xs text-brand underline">
+            {shownShareUrl}
           </a>
           {shareCopied && (
             <span className="flex items-center gap-1 text-xs text-brand">

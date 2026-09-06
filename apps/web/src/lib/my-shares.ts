@@ -44,3 +44,12 @@ export function removeMyShare(id: string): MyShare[] {
   save(list);
   return list;
 }
+
+/**
+ * 清单页顶部「分享链接已生成」行要展示的 URL：候选已清空不展示；
+ * 对应记录已不在本地列表（已撤销 / 已过期 404 后移除 / 手动移除）也不展示，避免残留 410 的失效链接
+ */
+export function visibleShareUrl(shareUrl: string, myShares: readonly MyShare[], itemCount: number): string {
+  if (!shareUrl || itemCount === 0) return "";
+  return myShares.some((s) => s.url === shareUrl) ? shareUrl : "";
+}

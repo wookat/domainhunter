@@ -5,7 +5,8 @@
  */
 import type { ComparePriceSnapshot } from "./compare-prices";
 import { TLD_COMPARES, comparesForTld } from "./compares";
-import { INDUSTRY_GUIDES, guidesForTld } from "./guides";
+import { INDUSTRY_GUIDES, guidesForTld, type IndustryGuide } from "./guides";
+import { relatedTlds } from "./tld-groups";
 import { TLD_GUIDES } from "./tlds";
 import type { CompareLink, GuideLink, InjectedGuideContent, InjectedTldContent, InjectedVsContent } from "./injected";
 
@@ -23,7 +24,7 @@ const compareLink = (slug: string): CompareLink => ({
 
 /* 「其他行业命名指南 / 其他后缀对比」全量清单不再随页注入（R520）：改由 group-chips.ts 从主 bundle 内的 guide-labels / compare-slugs 派生 */
 
-export function buildTldContent(tld: string): InjectedTldContent | null {
+export function buildTldContent(tld: string, prices?: ComparePriceSnapshot): InjectedTldContent | null {
   const guide = TLD_GUIDES[tld];
   if (!guide) return null;
   return {
@@ -32,13 +33,20 @@ export function buildTldContent(tld: string): InjectedTldContent | null {
     guide,
     relatedGuides: guidesForTld(tld).map(guideLink),
     relatedCompares: comparesForTld(tld).map(compareLink),
+    ...(prices ? { prices } : {}),
   };
 }
 
-export function buildGuideContent(slug: string): InjectedGuideContent | null {
+/** /tld/:tld 页价格快照覆盖的 TLD：本 TLD + 「相关 TLD」chip（同组） */
+export const tldPriceTlds = (tld: string): string[] => [tld, ...relatedTlds(tld)];
+
+/** /guide/:slug 页价格快照覆盖的 TLD：「推荐 TLD」卡 */
+export const guidePriceTlds = (guide: IndustryGuide): string[] => guide.tlds.map((rec) => rec.tld);
+
+export function buildGuideContent(slug: string, prices?: ComparePriceSnapshot): InjectedGuideContent | null {
   const guide = INDUSTRY_GUIDES[slug];
   if (!guide) return null;
-  return { kind: "guide", slug, guide };
+  return { kind: "guide", slug, guide, ...(prices ? { prices } : {}) };
 }
 
 export function buildVsContent(slug: string, prices?: ComparePriceSnapshot): InjectedVsContent | null {

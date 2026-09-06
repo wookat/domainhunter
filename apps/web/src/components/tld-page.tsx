@@ -9,17 +9,19 @@ import { FaqAnswer } from "@/components/faq-answer";
 import { NotFoundPage } from "@/components/not-found-page";
 import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
-import { priceFull, priceShort, toCny, usePrices } from "@/lib/prices";
+import { pickPrices, priceFull, priceShort, toCny, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";
 
 export function TldPage({ tld }: { tld: string }) {
   const { t, lang } = useI18n();
-  const prices = usePrices();
+  const fetched = usePrices();
   const content = readInjectedContent("tld", tld);
   const guide = content?.guide;
   usePageTitle(guide?.[lang].title);
 
   if (!content || !guide) return <NotFoundPage />;
+
+  const prices = pickPrices(content.prices, fetched);
 
   const loc = guide[lang];
   const live = prices?.[tld];
@@ -115,7 +117,7 @@ export function TldPage({ tld }: { tld: string }) {
         </a>
       </div>
 
-      {/* 其他 TLD 指南互链：同组 ≤30 个 + 『查看全部 N 个』hub 链接（规则见 content/group-chips.ts） */}
+      {/* 其他 TLD 指南互链：同组 ≤30 个 + 『查看全部 N 个』hub 链接（规则见 content/group-chips.ts）；只渲染后缀名，价格在目标页首屏 */}
       <div className="mt-10">
         <h2 className="text-sm font-semibold text-txt1">{t("tld.others")}</h2>
         <div className="mt-3 flex flex-wrap gap-2">
@@ -126,7 +128,6 @@ export function TldPage({ tld }: { tld: string }) {
               className="inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0 border-line text-txt1 hover:border-brand-line hover:text-brand"
             >
               .{other}
-              {priceShort(other, lang, prices) && <span className="tnum ml-1.5 text-[10px] text-txt1">{priceShort(other, lang, prices)}</span>}
             </a>
           ))}
           <a
