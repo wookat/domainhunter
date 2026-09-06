@@ -1,6 +1,6 @@
 {
   "origin": "http://127.0.0.1:8787",
-  "measuredAt": "2026-09-06T06:32:33.748Z",
+  "measuredAt": "2026-09-06T06:45:35.145Z",
   "rows": [
     {
       "path": "/tld/com",
@@ -55,11 +55,11 @@
       "lang": "zh",
       "url": "http://127.0.0.1:8787/vs/com-vs-cn",
       "status": 200,
-      "bytes": 77322,
-      "bodyWords": 820,
+      "bytes": 76050,
+      "bodyWords": 802,
       "proseWords": 672,
-      "linkShare": 0.18048780487804883,
-      "bodyLinks": 45,
+      "linkShare": 0.16209476309226933,
+      "bodyLinks": 39,
       "injectedBytes": 8220
     },
     {
@@ -67,11 +67,11 @@
       "lang": "en",
       "url": "http://127.0.0.1:8787/vs/com-vs-cn?lang=en",
       "status": 200,
-      "bytes": 77298,
-      "bodyWords": 502,
+      "bytes": 76026,
+      "bodyWords": 484,
       "proseWords": 372,
-      "linkShare": 0.2589641434262948,
-      "bodyLinks": 45,
+      "linkShare": 0.23140495867768596,
+      "bodyLinks": 39,
       "injectedBytes": 8220
     }
   ]

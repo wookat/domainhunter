@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { COMPARE_SLUGS } from "./compare-slugs";
 import { GUIDE_LABELS } from "./guide-labels";
 import { guideHubGroups } from "./guide-groups";
-import { GROUP_CHIP_MAX, VIEW_ALL_LABEL, compareGroupChips, guideGroupChips, tldGroupChips, viewAllHref } from "./group-chips";
+import { COMPARE_CHIP_MAX, GROUP_CHIP_MAX, VIEW_ALL_LABEL, compareGroupChips, guideGroupChips, tldGroupChips, viewAllHref } from "./group-chips";
 import { tldHubGroups } from "./tld-groups";
 import { TLD_LIST } from "./tld-list";
 
@@ -92,12 +92,12 @@ describe("guideGroupChips", () => {
 describe("compareGroupChips", () => {
   const sidesIn = (slug: string, set: Set<string>) => slug.split("-vs-").every((t) => set.has(t));
 
-  it("两侧同组（com vs net，通用主流）：候选 = 该组内两两对比，COMPARE_SLUGS 顺序、排除自身、≤30", () => {
+  it("两侧同组（com vs net，通用主流）：候选 = 该组内两两对比，COMPARE_SLUGS 顺序、排除自身、≤24", () => {
     const r = compareGroupChips("com-vs-net");
     const u = new Set(tldGroupOf("com").tlds);
     expect(tldGroupOf("net").id).toBe(tldGroupOf("com").id);
     const expected = COMPARE_SLUGS.filter((s) => s !== "com-vs-net" && sidesIn(s, u));
-    expect(r.chips).toEqual(expected.slice(0, GROUP_CHIP_MAX));
+    expect(r.chips).toEqual(expected.slice(0, COMPARE_CHIP_MAX));
     expect(r.total).toBe(expected.length);
     expect(r.anchor).toBe("com");
     expect(r.chips).not.toContain("com-vs-net");
@@ -108,37 +108,43 @@ describe("compareGroupChips", () => {
     expect(tldGroupOf("com").id).not.toBe(tldGroupOf("cn").id);
     const u = new Set([...tldGroupOf("com").tlds, ...tldGroupOf("cn").tlds]);
     const expected = COMPARE_SLUGS.filter((s) => s !== "com-vs-cn" && sidesIn(s, u));
-    expect(r.chips).toEqual(expected.slice(0, GROUP_CHIP_MAX));
-    expect(r.chips).toHaveLength(GROUP_CHIP_MAX);
-    expect(r.total).toBeGreaterThan(GROUP_CHIP_MAX);
+    expect(r.chips).toEqual(expected.slice(0, COMPARE_CHIP_MAX));
+    expect(r.chips).toHaveLength(COMPARE_CHIP_MAX);
+    expect(r.total).toBeGreaterThan(COMPARE_CHIP_MAX);
     expect(r.chips).toContain("com-vs-net");
     expect(r.chips).toContain("us-vs-com");
-    expect(r.chips).toContain("wang-vs-cn");
+    /* 组内地域对比在候选池内但排在前 24 之后 → 被截断，经 hub #hub-g-wang 可达 */
+    expect(expected).toContain("wang-vs-cn");
+    expect(r.chips).not.toContain("wang-vs-cn");
     expect(r.chips).not.toContain("io-vs-ai");
     expect(new Set(r.chips).size).toBe(r.chips.length);
   });
 
   it("无组归属兜底：两侧 TLD 都不在任何组时，以自身为单元素组 → 只保留共享两侧 TLD 的对比；完全没有则为空、只剩 hub 链接", () => {
     const slugs = ["zz-vs-yy", "zz-vs-xx", "yy-vs-zz", "qq-vs-yy", "com-vs-zz", "zz-vs-yy"];
-    const r = compareGroupChips("zz-vs-yy", GROUP_CHIP_MAX, slugs);
+    const r = compareGroupChips("zz-vs-yy", COMPARE_CHIP_MAX, slugs);
     expect(r.chips).toEqual(["yy-vs-zz"]);
     expect(r.total).toBe(1);
     expect(r.anchor).toBe("zz");
-    expect(compareGroupChips("zz-vs-yy", GROUP_CHIP_MAX, ["zz-vs-yy", "com-vs-net"])).toEqual({ chips: [], anchor: "zz", total: 0 });
+    expect(compareGroupChips("zz-vs-yy", COMPARE_CHIP_MAX, ["zz-vs-yy", "com-vs-net"])).toEqual({ chips: [], anchor: "zz", total: 0 });
     expect(compareGroupChips("broken")).toEqual({ chips: [], anchor: null, total: 0 });
   });
 
   it("一侧有组一侧无组：并集 = 有组侧全组 + 无组侧自身", () => {
     const slugs = ["com-vs-zz", "com-vs-net", "net-vs-zz", "zz-vs-io", "io-vs-ai"];
-    const r = compareGroupChips("com-vs-zz", GROUP_CHIP_MAX, slugs);
+    const r = compareGroupChips("com-vs-zz", COMPARE_CHIP_MAX, slugs);
     expect(r.chips).toEqual(["com-vs-net", "net-vs-zz"]);
   });
 
-  it("全部 444 个对比：每页 ≥1 个 chip、≤30、不含自身、锚点为 a 侧 TLD", () => {
+  it("/vs 上限 24 ≤ 通用上限 30", () => {
+    expect(COMPARE_CHIP_MAX).toBeLessThanOrEqual(GROUP_CHIP_MAX);
+  });
+
+  it("全部 444 个对比：每页 ≥1 个 chip、≤24、不含自身、锚点为 a 侧 TLD", () => {
     for (const slug of COMPARE_SLUGS) {
       const r = compareGroupChips(slug);
       expect(r.chips.length, slug).toBeGreaterThan(0);
-      expect(r.chips.length, slug).toBeLessThanOrEqual(GROUP_CHIP_MAX);
+      expect(r.chips.length, slug).toBeLessThanOrEqual(COMPARE_CHIP_MAX);
       expect(r.chips, slug).not.toContain(slug);
       expect(r.anchor).toBe(slug.split("-vs-")[0]);
     }

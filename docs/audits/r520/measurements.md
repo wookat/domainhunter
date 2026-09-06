@@ -19,7 +19,7 @@ node scripts/seo-audit/chip-measure.mjs /tld/com /guide/saas /vs/com-vs-cn --jso
 
 底部「其他 …」全量块（zh 原始 HTML）：/tld/com 118,941 B / 408 `<a>`；/guide/saas 83,407 B / 410 `<a>`；/vs/com-vs-cn 96,160 B / 444 `<a>`。
 
-## 修后（本地 `pnpm --filter web build` + `wrangler dev --port 8787`，commit f264857）
+## 修后（本地 `pnpm --filter web build` + `wrangler dev --port 8787`，PR 分支 devin/1788675882-r520-group-chips）
 
 ```
 SEO_AUDIT_ORIGIN=http://127.0.0.1:8787 node scripts/seo-audit/chip-measure.mjs /tld/com /guide/saas /vs/com-vs-cn --json docs/audits/r520/chip-measure-local-after.json
@@ -31,10 +31,11 @@ SEO_AUDIT_ORIGIN=http://127.0.0.1:8787 node scripts/seo-audit/chip-measure.mjs /
 | /tld/com | en | 74,860 (73.1 KB) | 39 | 598 | 453 | 24.2% | 4,832 |
 | /guide/saas | zh | 80,720 (78.8 KB) | 32 | 1657 | 1468 | 11.4% | 7,297 |
 | /guide/saas | en | 81,324 (79.4 KB) | 32 | 1040 | 936 | 10.0% | 7,297 |
-| /vs/com-vs-cn | zh | 77,322 (75.5 KB) | 45 | 820 | 672 | 18.0% | 8,220 |
-| /vs/com-vs-cn | en | 77,298 (75.5 KB) | 45 | 502 | 372 | 25.9% | 8,220 |
+| /vs/com-vs-cn | zh | 76,050 (74.3 KB) | 39 | 802 | 672 | 16.2% | 8,220 |
+| /vs/com-vs-cn | en | 76,026 (74.2 KB) | 39 | 484 | 372 | 23.1% | 8,220 |
 
-- HTML 全部 <90 KB（−58%～−60%）；链接占比 6 格中 5 格 <25%，/vs/com-vs-cn en 为 25.9%（en 下每个对比 chip「.com vs .cn」计 3 词、正文只有 372 词；zh 同页 18.0%）。
+- HTML 全部 <90 KB（−57%～−60%）；链接占比 6 格全部 <25%。
+- /vs 上限取 24（COMPARE_CHIP_MAX）而非 30：首轮 30 个时 /vs/com-vs-cn en 实测 25.9%（45 链接 / 502 词），因每个对比 chip「.com vs .cn」计 3 词而 en 正文仅 372 词；24 个 → 23.1%。tld/guide 维持 30。
 - 正文词数（proseWords）修前修后逐格相等：只删链接 chip，未动正文。
 
 ## 内链图（本地全量 1270 URL，`seo-graph-local.md`）
@@ -51,9 +52,9 @@ node scripts/seo-audit/analyze.mjs --out ~/r520/seo-local
 | BFS-B 从 / 可达 | 1270/1270 | 1270/1270 |
 | 从 /+/tld+/guide+/vs 可达 | 1270/1270 | 1270/1270 |
 | 孤岛 / 零入链页 | 0 / 0 | 0 / 0 |
-| 全站内链总数 | 561,301 | 65,709 |
-| 每页入链 min/中位/max | 410/416/1264 | 3/25/1264 |
-| 内容页出链 min/中位/max | tld·guide·vs ≈ 426 | tld 33/50/58 · guide 27/55/55 · vs 20/50/55 |
+| 全站内链总数 | 561,301 | 63,645 |
+| 每页入链 min/中位/max | 410/416/1264 | 3/23/1264 |
+| 内容页出链 min/中位/max | tld·guide·vs ≈ 426 | tld 33/50/58 · guide 27/55/55 · vs 20/45/49 |
 
 | 组 | sitemap 页数 | 从 / 可达 | ≤3 跳可达 | 最大跳数 | 跳数分布 |
 |---|---|---|---|---|---|

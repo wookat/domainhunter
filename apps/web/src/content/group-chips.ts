@@ -9,7 +9,8 @@
  *   被截断的同组页仍可经紧随其后的『查看全部 N 个 →』hub 链接（带分组锚点）及 hub 页全量到达，
  *   相邻页另由「相关 TLD / 相关行业指南」（relatedTlds / relatedGuideSlugs，自身之后环绕 6 个）覆盖；
  * - /vs：取两侧 TLD 所属组 TLD 集合的并集 U（无组归属的 TLD 视为单元素组 {tld}，即 U 至少含两侧 TLD 自身），
- *   候选 = COMPARE_SLUGS 中「两侧 TLD 都 ∈ U」的对比（去重、排除自身、保持 COMPARE_SLUGS 顺序），再截断前 30；
+ *   候选 = COMPARE_SLUGS 中「两侧 TLD 都 ∈ U」的对比（去重、排除自身、保持 COMPARE_SLUGS 顺序），再截断前 COMPARE_CHIP_MAX（24）；
+ *   /vs chip 文案「.com vs .cn」计 3 词（tld/guide chip 为 1–2 词），24 个使英文正文最短的 /vs 页链接占比也 <25%（实测 30 个时 25.9%）；
  *   候选为空（两侧都无组且没有其他共享 TLD 的对比）时返回 []，页面只渲染 hub 链接。
  * - N 由现有计数源派生（TLD_LIST / GUIDE_LABELS / COMPARE_SLUGS 长度），不写死。
  */
@@ -22,6 +23,8 @@ import { TLD_LIST } from "./tld-list";
 type Lang = "zh" | "en";
 
 export const GROUP_CHIP_MAX = 30;
+/** /vs 专用上限（≤ GROUP_CHIP_MAX，见文件头说明） */
+export const COMPARE_CHIP_MAX = 24;
 
 /** 同组 chip 选择结果：chips 为最多 max 个 slug；anchor 为对应 hub 页的分组锚点 id（hub-g-<anchor>，无组归属为 null） */
 export interface GroupChips {
@@ -48,10 +51,10 @@ export function guideGroupChips(slug: string, max = GROUP_CHIP_MAX): GroupChips 
 }
 
 /**
- * /vs/:slug 底部「其他后缀对比」：两侧 TLD 所属组并集 U 内的对比（两侧都 ∈ U），COMPARE_SLUGS 顺序、去重、排除自身、前 max 个。
+ * /vs/:slug 底部「其他后缀对比」：两侧 TLD 所属组并集 U 内的对比（两侧都 ∈ U），COMPARE_SLUGS 顺序、去重、排除自身、前 max（默认 24）个。
  * 无组归属的 TLD 以自身为单元素组兜底；anchor 为 a 侧 TLD（/vs hub 按 a 侧 TLD 分组，锚点 hub-g-<a>）。
  */
-export function compareGroupChips(slug: string, max = GROUP_CHIP_MAX, slugs: readonly string[] = COMPARE_SLUGS): GroupChips {
+export function compareGroupChips(slug: string, max = COMPARE_CHIP_MAX, slugs: readonly string[] = COMPARE_SLUGS): GroupChips {
   const [a, b] = slug.split("-vs-");
   if (!a || !b) return { chips: [], anchor: null, total: 0 };
   const groups = tldHubGroups();
