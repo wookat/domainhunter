@@ -1,0 +1,179 @@
+2026-09-06T13:29:36.395Z keeper attached to https://hunt.zalize.com/404-r545-keeper
+2026-09-06T13:29:36.454Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:29:36.494Z CTL applied {"lang": "zh", "viewport": "desktop"}
+2026-09-06T13:33:03.389Z NAV https://hunt.zalize.com/?lang=zh
+2026-09-06T13:33:03.563Z GET https://hunt.zalize.com/api/stats 
+2026-09-06T13:33:03.563Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:33:03.563Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:33:20.727Z POST https://hunt.zalize.com/api/search {"roots":["chaxiang"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:33:21.311Z POST https://hunt.zalize.com/api/search {"roots":["chaxiang"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:33:40.645Z POST https://hunt.zalize.com/api/search {"roots":["chaxiang"],"tlds":["com.cn","org","xyz","cc","tv","tech","online","store","site","top","shop","cloud","pro","vip","club","link","live","space","fun","art","design","studio","info","sh","gg","so","us","in","world","life","agency","games","email","network","digital","media","group","center"
+2026-09-06T13:33:52.657Z POST https://hunt.zalize.com/api/search {"roots":["mingqiancha"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:33:53.244Z POST https://hunt.zalize.com/api/search {"roots":["mingqiancha"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:34:08.082Z POST https://hunt.zalize.com/api/search {"roots":["yeyecha"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:34:08.665Z POST https://hunt.zalize.com/api/search {"roots":["yeyecha"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:34:17.512Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T13:34:38.310Z NAV https://hunt.zalize.com/tld/cn?lang=zh
+2026-09-06T13:34:38.442Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:34:38.449Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:34:49.610Z NAV https://hunt.zalize.com/guide?lang=zh
+2026-09-06T13:34:49.806Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:35:14.484Z NAV https://hunt.zalize.com/guide/tea?lang=zh
+2026-09-06T13:35:14.720Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:35:14.724Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:35:27.359Z CTL applied {"lang": "zh", "viewport": "375"}
+2026-09-06T13:35:30.773Z NAV https://hunt.zalize.com/?lang=zh
+2026-09-06T13:35:30.911Z GET https://hunt.zalize.com/api/stats 
+2026-09-06T13:35:30.912Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:35:30.916Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:36:15.289Z POST https://hunt.zalize.com/api/search {"roots":["chaxiang"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:36:15.881Z POST https://hunt.zalize.com/api/search {"roots":["chaxiang"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:36:43.277Z POST https://hunt.zalize.com/api/search {"roots":["chaxiang"],"tlds":["com.cn","org","xyz","cc","tv","tech","online","store","site","top","shop","cloud","pro","vip","club","link","live","space","fun","art","design","studio","info","sh","gg","so","us","in","world","life","agency","games","email","network","digital","media","group","center"
+2026-09-06T13:37:44.351Z keeper attached to https://hunt.zalize.com/?lang=zh
+2026-09-06T13:37:44.470Z CTL applied {"lang": "zh", "viewport": "375"}
+2026-09-06T13:37:50.935Z POST https://hunt.zalize.com/api/search {"roots":["chaxiang"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:38:13.134Z POST https://hunt.zalize.com/api/search {"roots":["mingqiancha"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:38:20.657Z POST https://hunt.zalize.com/api/search {"roots":["yeyecha"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:38:27.701Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T13:38:49.093Z NAV https://hunt.zalize.com/tld/cn?lang=zh
+2026-09-06T13:38:49.232Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:38:49.241Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:39:00.565Z NAV https://hunt.zalize.com/guide?lang=zh
+2026-09-06T13:39:00.753Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:39:09.931Z NAV https://hunt.zalize.com/guide/tea?lang=zh
+2026-09-06T13:39:10.163Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:39:10.168Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:39:41.452Z CTL applied {"lang": "en", "viewport": "desktop"}
+2026-09-06T13:39:44.812Z NAV https://hunt.zalize.com/?lang=en
+2026-09-06T13:39:44.974Z GET https://hunt.zalize.com/api/stats 
+2026-09-06T13:39:44.974Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:39:44.974Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:39:53.624Z POST https://hunt.zalize.com/api/search {"roots":["stackpilot"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:39:54.210Z POST https://hunt.zalize.com/api/search {"roots":["stackpilot"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:40:16.877Z NAV https://hunt.zalize.com/prices?lang=en
+2026-09-06T13:40:17.035Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:40:17.062Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:40:51.613Z NAV https://hunt.zalize.com/vs?lang=en
+2026-09-06T13:40:51.794Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:41:04.319Z NAV https://hunt.zalize.com/vs/io-vs-ai?lang=en
+2026-09-06T13:41:04.517Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:41:04.517Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:41:29.103Z NAV https://hunt.zalize.com/tld/io?lang=en
+2026-09-06T13:41:29.277Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:41:29.277Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:41:44.963Z NAV https://hunt.zalize.com/tld/ai?lang=en
+2026-09-06T13:41:45.202Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:41:45.202Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:41:55.003Z NAV https://hunt.zalize.com/
+2026-09-06T13:41:55.380Z GET https://hunt.zalize.com/api/stats 
+2026-09-06T13:41:55.381Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:41:55.381Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:42:02.741Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T13:42:20.750Z POST https://hunt.zalize.com/api/click 
+2026-09-06T13:42:48.729Z CTL applied {"lang": "en", "viewport": "375"}
+2026-09-06T13:42:55.340Z NAV https://hunt.zalize.com/?lang=en
+2026-09-06T13:42:55.497Z GET https://hunt.zalize.com/api/stats 
+2026-09-06T13:42:55.497Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:42:55.497Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:43:08.339Z POST https://hunt.zalize.com/api/search {"roots":["stackpilot"],"tlds":["com","cn","io","ai","app","dev","co","net","me"]}
+2026-09-06T13:43:28.150Z NAV https://hunt.zalize.com/prices?lang=en
+2026-09-06T13:43:28.294Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:43:28.344Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:43:50.929Z NAV https://hunt.zalize.com/vs/io-vs-ai?lang=en
+2026-09-06T13:43:51.098Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:43:51.099Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:43:59.871Z NAV https://hunt.zalize.com/tld/io?lang=en
+2026-09-06T13:44:00.075Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:44:00.075Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:44:02.627Z NAV https://hunt.zalize.com/tld/ai?lang=en
+2026-09-06T13:44:02.815Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:44:02.819Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:45:12.135Z NAV https://hunt.zalize.com/shortlist?lang=en
+2026-09-06T13:45:12.282Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:45:12.378Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:45:53.129Z POST https://hunt.zalize.com/api/click 
+2026-09-06T13:46:01.401Z CTL applied {"lang": "zh", "viewport": "desktop"}
+2026-09-06T13:46:05.498Z NAV https://hunt.zalize.com/?lang=zh
+2026-09-06T13:46:05.689Z GET https://hunt.zalize.com/api/stats 
+2026-09-06T13:46:05.690Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:46:05.690Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:47:07.626Z NAV https://hunt.zalize.com/advanced
+2026-09-06T13:47:30.393Z POST https://hunt.zalize.com/api/search {"domains":["lingxicha.com","lingxicha.cn","lingxicha.net","lingxicha.io","lingxicha.ai","yunqiji.com","yunqiji.cn","yunqiji.net","yunqiji.io","yunqiji.ai","shanhetea.com","shanhetea.cn","shanhetea.net","shanhetea.io","shanhetea.ai","mochamo.com","mochamo.cn","mochamo.net","mochamo.io","mochamo.ai",
+2026-09-06T13:48:01.166Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T13:48:17.065Z POST https://hunt.zalize.com/api/share {"items":[{"domain":"chaxiang.com","status":"taken"},{"domain":"chaxiang.cn","status":"taken"},{"domain":"mingqiancha.cn","status":"available"},{"domain":"stackpilot.io","status":"taken"},{"domain":"stackpilot.ai","status":"taken"},{"domain":"lingxicha.ai","status":"available"},{"domain":"lingxicha.
+2026-09-06T13:48:33.747Z NAV https://hunt.zalize.com/s/gSISSiQ0Df
+2026-09-06T13:48:33.939Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:48:33.947Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:48:33.953Z GET https://hunt.zalize.com/api/share/gSISSiQ0Df 
+2026-09-06T13:48:44.468Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T13:48:44.669Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:48:44.696Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:48:50.403Z POST https://hunt.zalize.com/api/sync {"items":[{"domain":"chaxiang.com"},{"domain":"chaxiang.cn"},{"domain":"mingqiancha.cn"},{"domain":"stackpilot.io"},{"domain":"stackpilot.ai"},{"domain":"lingxicha.ai"},{"domain":"lingxicha.io"},{"domain":"lingxicha.net"}]}
+2026-09-06T13:49:00.231Z NAV https://hunt.zalize.com/monitors?lang=zh
+2026-09-06T13:49:00.406Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:49:00.528Z POST https://hunt.zalize.com/api/monitor/list {"domains":[]}
+2026-09-06T13:49:11.884Z NAV https://hunt.zalize.com/advanced?lang=zh
+2026-09-06T13:49:12.238Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:49:12.275Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:49:20.955Z POST https://hunt.zalize.com/api/search {"domains":["mochamo.com"]}
+2026-09-06T13:49:28.612Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T13:49:34.749Z POST https://hunt.zalize.com/api/monitor {"domain":"mochamo.com","enabled":true,"status":"taken","webhook":""}
+2026-09-06T13:49:42.320Z NAV https://hunt.zalize.com/monitors?lang=zh
+2026-09-06T13:49:42.506Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:49:42.526Z POST https://hunt.zalize.com/api/monitor/list {"domains":["mochamo.com"]}
+2026-09-06T13:49:54.100Z POST https://hunt.zalize.com/api/monitor {"domain":"mochamo.com","enabled":false,"webhook":""}
+2026-09-06T13:50:00.206Z NAV https://hunt.zalize.com/why?lang=zh
+2026-09-06T13:50:00.495Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:50:11.966Z GET https://hunt.zalize.com/mcp?lang=zh 
+2026-09-06T13:50:11.998Z NAV https://hunt.zalize.com/mcp?lang=zh
+2026-09-06T13:50:12.142Z GET https://hunt.zalize.com/assets/mcp-page-CvnNCPLO.js 
+2026-09-06T13:50:12.211Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:50:23.756Z NAV https://hunt.zalize.com/this-page-does-not-exist-r545?lang=zh
+2026-09-06T13:50:23.939Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:50:38.264Z CTL applied {"lang": "zh", "viewport": "375"}
+2026-09-06T13:50:42.370Z NAV https://hunt.zalize.com/?lang=zh
+2026-09-06T13:50:42.616Z GET https://hunt.zalize.com/api/stats 
+2026-09-06T13:50:42.617Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:50:42.617Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:50:51.529Z NAV https://hunt.zalize.com/advanced
+2026-09-06T13:51:04.828Z POST https://hunt.zalize.com/api/search {"domains":["lingxicha.com","lingxicha.cn","lingxicha.net","lingxicha.io","lingxicha.ai","yunqiji.com","yunqiji.cn","yunqiji.net","yunqiji.io","yunqiji.ai","shanhetea.com","shanhetea.cn","shanhetea.net","shanhetea.io","shanhetea.ai","mochamo.com","mochamo.cn","mochamo.net","mochamo.io","mochamo.ai",
+2026-09-06T13:52:08.163Z NAV https://hunt.zalize.com/shortlist
+2026-09-06T13:53:31.614Z POST https://hunt.zalize.com/api/share {"items":[{"domain":"chaxiang.com","status":"taken"},{"domain":"chaxiang.cn","status":"taken"},{"domain":"mingqiancha.cn","status":"available"},{"domain":"stackpilot.io","status":"taken"},{"domain":"stackpilot.ai","status":"taken"},{"domain":"lingxicha.ai","status":"available"},{"domain":"lingxicha.
+2026-09-06T13:53:47.310Z NAV https://hunt.zalize.com/s/TeQM0fv62Q?lang=zh
+2026-09-06T13:53:47.529Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:53:47.547Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:53:47.547Z GET https://hunt.zalize.com/api/share/TeQM0fv62Q 
+2026-09-06T13:54:00.864Z NAV https://hunt.zalize.com/
+2026-09-06T13:54:01.127Z GET https://hunt.zalize.com/api/stats 
+2026-09-06T13:54:01.127Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:54:01.127Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:54:15.991Z NAV https://hunt.zalize.com/shortlist?lang=zh
+2026-09-06T13:54:16.282Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:54:16.331Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:54:16.717Z POST https://hunt.zalize.com/api/sync {"code":"XXXXXXXX","items":[{"domain":"chaxiang.com"},{"domain":"chaxiang.cn"},{"domain":"mingqiancha.cn"},{"domain":"stackpilot.io"},{"domain":"stackpilot.ai"},{"domain":"lingxicha.ai"},{"domain":"lingxicha.io"},{"domain":"lingxicha.net"},{"domain":"mochamo.com"},{"domain":"lingxicha.com"},{"domain
+2026-09-06T13:54:23.449Z POST https://hunt.zalize.com/api/sync {"code":"XXXXXXXX","items":[{"domain":"chaxiang.com"},{"domain":"chaxiang.cn"},{"domain":"mingqiancha.cn"},{"domain":"stackpilot.io"},{"domain":"stackpilot.ai"},{"domain":"lingxicha.ai"},{"domain":"lingxicha.io"},{"domain":"lingxicha.net"},{"domain":"mochamo.com"},{"domain":"lingxicha.com"},{"domain
+2026-09-06T13:54:27.960Z POST https://hunt.zalize.com/api/monitor {"domain":"mochamo.com","enabled":true,"status":"taken","webhook":""}
+2026-09-06T13:54:33.503Z NAV https://hunt.zalize.com/monitors?lang=zh
+2026-09-06T13:54:33.734Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:54:33.754Z POST https://hunt.zalize.com/api/monitor/list {"domains":["mochamo.com"]}
+2026-09-06T13:54:47.038Z POST https://hunt.zalize.com/api/monitor {"domain":"mochamo.com","enabled":false,"webhook":""}
+2026-09-06T13:54:56.877Z NAV https://hunt.zalize.com/why?lang=zh
+2026-09-06T13:54:57.116Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:55:07.274Z GET https://hunt.zalize.com/mcp?lang=zh 
+2026-09-06T13:55:07.294Z NAV https://hunt.zalize.com/mcp?lang=zh
+2026-09-06T13:55:07.474Z GET https://hunt.zalize.com/assets/mcp-page-CvnNCPLO.js 
+2026-09-06T13:55:07.573Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:55:23.522Z NAV https://hunt.zalize.com/this-page-does-not-exist-r545?lang=zh
+2026-09-06T13:55:23.732Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:55:31.553Z NAV https://hunt.zalize.com/
+2026-09-06T13:55:31.813Z GET https://hunt.zalize.com/api/stats 
+2026-09-06T13:55:31.813Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:55:31.814Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:55:53.394Z NAV https://hunt.zalize.com/shortlist?lang=zh
+2026-09-06T13:55:53.641Z GET https://hunt.zalize.com/api/registrars 
+2026-09-06T13:55:53.733Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:56:20.801Z CTL applied {"lang": "zh", "viewport": "desktop"}
+2026-09-06T13:56:24.612Z NAV https://hunt.zalize.com/?lang=zh
+2026-09-06T13:56:24.928Z GET https://hunt.zalize.com/api/stats 
+2026-09-06T13:56:24.928Z GET https://hunt.zalize.com/api/prices 
+2026-09-06T13:56:24.928Z GET https://hunt.zalize.com/api/registrars 
