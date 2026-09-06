@@ -1,0 +1,62 @@
+{
+ "en": {
+  "before": {
+   "pages": 444,
+   "linkShareMedian%": 20.12,
+   "linkShare>25%": 0,
+   "linkShare>=23%": 23,
+   "linkShareMax%": 23.42,
+   "proseMedian": 622.5,
+   "proseMin": 457,
+   "nnMaskedMedian": 0.171,
+   "nnMasked>0.8": 0,
+   "dupSentenceMax": 0.023
+  },
+  "after": {
+   "pages": 444,
+   "linkShareMedian%": 19.83,
+   "linkShare>25%": 0,
+   "linkShare>=23%": 1,
+   "linkShareMax%": 23.0,
+   "proseMedian": 627.5,
+   "proseMin": 462,
+   "nnMaskedMedian": 0.173,
+   "nnMasked>0.8": 0,
+   "dupSentenceMax": 0.023
+  },
+  "proseDrop>10%": [],
+  "proseDeltaMedian%": 0.79,
+  "proseDeltaMin%": -0.18,
+  "proseDeltaMax%": 1.91
+ },
+ "zh": {
+  "before": {
+   "pages": 444,
+   "linkShareMedian%": 17.22,
+   "linkShare>25%": 0,
+   "linkShare>=23%": 0,
+   "linkShareMax%": 21.31,
+   "proseMedian": 1006.5,
+   "proseMin": 733,
+   "nnMaskedMedian": 0.217,
+   "nnMasked>0.8": 0,
+   "dupSentenceMax": 0.023
+  },
+  "after": {
+   "pages": 444,
+   "linkShareMedian%": 16.8,
+   "linkShare>25%": 0,
+   "linkShare>=23%": 0,
+   "linkShareMax%": 20.71,
+   "proseMedian": 1012.5,
+   "proseMin": 740,
+   "nnMaskedMedian": 0.228,
+   "nnMasked>0.8": 0,
+   "dupSentenceMax": 0.023
+  },
+  "proseDrop>10%": [],
+  "proseDeltaMedian%": 0.68,
+  "proseDeltaMin%": 0.1,
+  "proseDeltaMax%": 1.45
+ }
+}
