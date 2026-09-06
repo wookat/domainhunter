@@ -70,7 +70,9 @@
 | --- | --- | --- |
 | 四条本地验收 | `pnpm -r typecheck` / `pnpm --filter web test` / `pnpm --filter web build` / `node scripts/check-content-counts.mjs` | 全绿：50 文件 531 tests（含新增 `lib/monitor-webhook.test.ts` 12、`monitor-webhook-test-route.test.ts` 6、`share-items.test.ts` +3）；既有守门 `faq/compare-verdict-opening/compare-price-placeholders/docs-no-share-tokens` 通过 |
 | vitest 覆盖 | URL 校验三原因、`maskWebhook` 脱敏不含路径中段、`sendWebhookTest` 六种映射、worker 端点 payload 字段集/非 2xx 不透传响应体/超时 502/400 不出网/30s 限频与 Retry-After/503、share expiresAt/note 归一与旧快照不变、`formatExpiry` + `expiry.on` zh/en、通知文案含「6 小时」与 `0 */6 * * *` | 通过 |
-| 本地 UI（Playwright/CDP） | 见 PR 描述「本地 UI 验证」与 `docs/research/screenshots/r565-local-*.png` | 见 PR |
+| 本地 UI（`pnpm --filter web build` + `wrangler dev --port 8787`，CDP/Playwright，storage 备份并字节级还原，AI 守卫 0 次） | ① 未配置态在添加表单上方、含「6 小时」文案；② http:// / 乱串 / >500 三种校验各自报错 + `aria-invalid`；③ Enter 保存 → 「已配置」+ 脱敏（中段不可见）→ localStorage 存完整 URL；④ 「发送测试」→ webhook.site 真实收到 POST（`source/event:test/domain/text/msg_type/content.text/msgtype/url` 齐全），UI 显示对方 HTTP 200；立刻再点 → 429 + 剩余秒数；⑤ 修改/Esc、两步清除、空串保存清除；Tab 顺序、焦点环；⑥ EN 文案；⑦ 375px 浅/深 `scrollWidth=360≤375`；⑧ 新开 /shortlist 折叠面板读到同一 URL；⑨ 精确核验 `google.com` → taken chip 「到期 2028-09-14」；⑩ 分享 taken 行桌面/移动均显示到期、CSV `expires_at` 列、备注未出现在请求/页面/CSV；撤销后 GET → 410 | 全部通过；截图 `screenshots/r565-local-*.png`（webhook.site 地址已裁掉） |
+| 本地 UI 发现的问题 | 已打开并展开「监控动态」的 /shortlist 标签页 A，在另一标签页 B 的 /monitors 改 webhook 后，A 的输入框仍显示旧值（其 localStorage 已是新值；刷新/重进正确） | **未修**：`shortlist-page.tsx` 的 `webhookInput` 是只初始化一次的编辑缓冲，基线行为相同（基线根本不监听变化），且 shortlist 面板不在本轮范围；见 §5.5。截图 `r565-local-shortlist-stale-webhook.png` |
+| 未覆盖 | 「到期日待查」分支（本地核验的 taken 域名 RDAP 都返回了日期，DNS 兜底缓存路径没有自然出现） | **未验证**运行时渲染，仅 typecheck + 读代码；生产上该分支即 R559 P3-8 的 `stackpilot.dev` 场景 |
 | 生产 | 只读观察（§1.2），`/api/usage?days=1` 前后 `searches/fast/refine` 0 增量，探针监控已清理 `entries=[]` | 通过 |
 
 ## 5. 记录但不在本轮范围的问题
@@ -79,4 +81,5 @@
 2. `recheckMonitorDomains()` 不把 `expiresAt` 变化写入 `monitor:changes`/推送 → 若产品确需「到期日变化通知」，需新增 event 类型并改 change 结构。
 3. webhook 按域名条目存：换 webhook 时需逐条同步（`setWebhook` 已做），无本地监控域名时保存只落 localStorage，新开监控时由 `toggle/add` 带上——行为正确但服务端没有「用户级」webhook 概念。
 4. 备注是否随分享外发的产品口径（§3.2）。
-5. shortlist 折叠面板里的旧 webhook 输入仍在（本轮未动 shortlist 面板），两处入口读写同一 `localStorage["domainhunter:monitor-webhook"]`，无冲突；后续可收敛为只在 `/monitors` 配置 + shortlist 处放链接。
+5. shortlist 折叠面板里的旧 webhook 输入仍在（本轮未动 shortlist 面板），两处入口读写同一 `localStorage["domainhunter:monitor-webhook"]`，无冲突；但它的输入框只在挂载时读一次，已打开的标签页不会跟随另一标签页的保存刷新（§4 发现）。建议收敛为只在 `/monitors` 配置、shortlist 处改为只读展示 + 链接，顺带消除该陈旧态。
+6. 「Webhook 地址」目前是仅供读屏的 `sr-only` label（视觉上靠 placeholder + 卡片标题承担）；若 UX 认为需要可见 label，改 `NotifyCard` 一处即可。
