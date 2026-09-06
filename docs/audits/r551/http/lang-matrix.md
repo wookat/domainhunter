@@ -1,0 +1,39 @@
+origin: https://hunt.zalize.com  (2026-09-06T15:20:18Z)
+| path | mode | status | html lang | canonical | hreflang | og:locale | Vary | Cache-Control | title lang |
+|---|---|---|---|---|---|---|---|---|---|
+| `/` | bare | 200 | zh-CN | `/` | zh=/ en=/?lang=en x-default=/ | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/` | al-en | 200 | en | `/` | zh=/ en=/?lang=en x-default=/ | en_US | Accept-Language | `public, max-age=600` | en |
+| `/` | al-zh | 200 | zh-CN | `/` | zh=/ en=/?lang=en x-default=/ | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/` | q-en | 200 | en | `/?lang=en` | zh=/ en=/?lang=en x-default=/ | en_US | Accept-Language | `public, max-age=600` | en |
+| `/tld/cn` | bare | 200 | zh-CN | `/tld/cn` | zh=/tld/cn en=/tld/cn?lang=en x-default=/tld/cn | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/tld/cn` | al-en | 200 | en | `/tld/cn` | zh=/tld/cn en=/tld/cn?lang=en x-default=/tld/cn | en_US | Accept-Language | `public, max-age=600` | en |
+| `/tld/cn` | al-zh | 200 | zh-CN | `/tld/cn` | zh=/tld/cn en=/tld/cn?lang=en x-default=/tld/cn | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/tld/cn` | q-en | 200 | en | `/tld/cn?lang=en` | zh=/tld/cn en=/tld/cn?lang=en x-default=/tld/cn | en_US | Accept-Language | `public, max-age=600` | en |
+| `/guide/saas` | bare | 200 | zh-CN | `/guide/saas` | zh=/guide/saas en=/guide/saas?lang=en x-default=/guide/saas | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/guide/saas` | al-en | 200 | en | `/guide/saas` | zh=/guide/saas en=/guide/saas?lang=en x-default=/guide/saas | en_US | Accept-Language | `public, max-age=600` | en |
+| `/guide/saas` | al-zh | 200 | zh-CN | `/guide/saas` | zh=/guide/saas en=/guide/saas?lang=en x-default=/guide/saas | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/guide/saas` | q-en | 200 | en | `/guide/saas?lang=en` | zh=/guide/saas en=/guide/saas?lang=en x-default=/guide/saas | en_US | Accept-Language | `public, max-age=600` | en |
+| `/vs/com-vs-cn` | bare | 200 | zh-CN | `/vs/com-vs-cn` | zh=/vs/com-vs-cn en=/vs/com-vs-cn?lang=en x-default=/vs/com-vs-cn | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/vs/com-vs-cn` | al-en | 200 | en | `/vs/com-vs-cn` | zh=/vs/com-vs-cn en=/vs/com-vs-cn?lang=en x-default=/vs/com-vs-cn | en_US | Accept-Language | `public, max-age=600` | en |
+| `/vs/com-vs-cn` | al-zh | 200 | zh-CN | `/vs/com-vs-cn` | zh=/vs/com-vs-cn en=/vs/com-vs-cn?lang=en x-default=/vs/com-vs-cn | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/vs/com-vs-cn` | q-en | 200 | en | `/vs/com-vs-cn?lang=en` | zh=/vs/com-vs-cn en=/vs/com-vs-cn?lang=en x-default=/vs/com-vs-cn | en_US | Accept-Language | `public, max-age=600` | en |
+| `/prices` | bare | 200 | zh-CN | `/prices` | zh=/prices en=/prices?lang=en x-default=/prices | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/prices` | al-en | 200 | en | `/prices` | zh=/prices en=/prices?lang=en x-default=/prices | en_US | Accept-Language | `public, max-age=600` | en |
+| `/prices` | al-zh | 200 | zh-CN | `/prices` | zh=/prices en=/prices?lang=en x-default=/prices | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/prices` | q-en | 200 | en | `/prices?lang=en` | zh=/prices en=/prices?lang=en x-default=/prices | en_US | Accept-Language | `public, max-age=600` | en |
+| `/why` | bare | 200 | zh-CN | `/why` | zh=/why en=/why?lang=en x-default=/why | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/why` | al-en | 200 | en | `/why` | zh=/why en=/why?lang=en x-default=/why | en_US | Accept-Language | `public, max-age=600` | en |
+| `/why` | al-zh | 200 | zh-CN | `/why` | zh=/why en=/why?lang=en x-default=/why | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/why` | q-en | 200 | en | `/why?lang=en` | zh=/why en=/why?lang=en x-default=/why | en_US | Accept-Language | `public, max-age=600` | en |
+| `/mcp` | bare | 200 | zh-CN | `/mcp` | zh=/mcp en=/mcp?lang=en x-default=/mcp | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/mcp` | al-en | 200 | en | `/mcp` | zh=/mcp en=/mcp?lang=en x-default=/mcp | en_US | Accept-Language | `public, max-age=600` | en |
+| `/mcp` | al-zh | 200 | zh-CN | `/mcp` | zh=/mcp en=/mcp?lang=en x-default=/mcp | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/mcp` | q-en | 200 | en | `/mcp?lang=en` | zh=/mcp en=/mcp?lang=en x-default=/mcp | en_US | Accept-Language | `public, max-age=600` | en |
+| `/advanced` | bare | 200 | zh-CN | `/advanced` | zh=/advanced en=/advanced?lang=en x-default=/advanced | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/advanced` | al-en | 200 | en | `/advanced` | zh=/advanced en=/advanced?lang=en x-default=/advanced | en_US | Accept-Language | `public, max-age=600` | en |
+| `/advanced` | al-zh | 200 | zh-CN | `/advanced` | zh=/advanced en=/advanced?lang=en x-default=/advanced | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/advanced` | q-en | 200 | en | `/advanced?lang=en` | zh=/advanced en=/advanced?lang=en x-default=/advanced | en_US | Accept-Language | `public, max-age=600` | en |
+| `/tld` | bare | 200 | zh-CN | `/tld` | zh=/tld en=/tld?lang=en x-default=/tld | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/tld` | al-en | 200 | en | `/tld` | zh=/tld en=/tld?lang=en x-default=/tld | en_US | Accept-Language | `public, max-age=600` | en |
+| `/tld` | al-zh | 200 | zh-CN | `/tld` | zh=/tld en=/tld?lang=en x-default=/tld | zh_CN | Accept-Language | `public, max-age=600` | zh |
+| `/tld` | q-en | 200 | en | `/tld?lang=en` | zh=/tld en=/tld?lang=en x-default=/tld | en_US | Accept-Language | `public, max-age=600` | en |

@@ -1,0 +1,315 @@
+{
+ "/vs/clinic-vs-care": {
+  "total_over": 18,
+  "roots": [
+   {
+    "tag": "table",
+    "cls": "w-full min-w-[320px] text-sm",
+    "right": 412,
+    "width": 395,
+    "parentOver": false,
+    "ws": "normal",
+    "ow": "normal",
+    "wb": "normal",
+    "text": ".clinic vs .care 首年价、续费价与 5 年总持有成本对比（美元为准，人民币按汇率 7.2 估算） 后缀 注册/首年 续费/年 5 年持有成本 .clinic $10.81 ¥78 $52.01 ¥374 $218.85 ¥1576 .care $11.84 ¥85",
+    "depth": 7
+   }
+  ],
+  "deepest_text": [
+   {
+    "tag": "span",
+    "cls": "block text-txt0",
+    "right": 400,
+    "width": 58,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "$218.85",
+    "depth": 11
+   },
+   {
+    "tag": "span",
+    "cls": "block text-[11px] text-txt2",
+    "right": 400,
+    "width": 58,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "¥1576",
+    "depth": 11
+   },
+   {
+    "tag": "span",
+    "cls": "block text-txt0",
+    "right": 400,
+    "width": 58,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "$153.96",
+    "depth": 11
+   },
+   {
+    "tag": "span",
+    "cls": "block text-[11px] text-txt2",
+    "right": 400,
+    "width": 58,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "¥1109",
+    "depth": 11
+   },
+   {
+    "tag": "span",
+    "cls": "block text-txt0",
+    "right": 400,
+    "width": 58,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "+$64.89",
+    "depth": 11
+   },
+   {
+    "tag": "span",
+    "cls": "block text-[11px] text-txt2",
+    "right": 400,
+    "width": 58,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "+¥467",
+    "depth": 11
+   }
+  ],
+  "metrics": {
+   "innerWidth": 375,
+   "scrollWidth": 489,
+   "clientWidth": 375,
+   "bodyScrollWidth": 489
+  }
+ },
+ "/tld/nz": {
+  "total_over": 0,
+  "roots": [],
+  "deepest_text": [],
+  "metrics": {
+   "innerWidth": 375,
+   "scrollWidth": 625,
+   "clientWidth": 375,
+   "bodyScrollWidth": 625
+  }
+ },
+ "/tld/sa": {
+  "total_over": 0,
+  "roots": [],
+  "deepest_text": [],
+  "metrics": {
+   "innerWidth": 375,
+   "scrollWidth": 569,
+   "clientWidth": 375,
+   "bodyScrollWidth": 569
+  }
+ },
+ "/vs/technology-vs-tech": {
+  "total_over": 18,
+  "roots": [
+   {
+    "tag": "table",
+    "cls": "w-full min-w-[320px] text-sm",
+    "right": 456,
+    "width": 439,
+    "parentOver": false,
+    "ws": "normal",
+    "ow": "normal",
+    "wb": "normal",
+    "text": ".technology vs .tech 首年价、续费价与 5 年总持有成本对比（美元为准，人民币按汇率 7.2 估算） 后缀 注册/首年 续费/年 5 年持有成本 .technology $9.78 ¥70 $23.17 ¥167 $102.46 ¥738 .tech $6.9",
+    "depth": 7
+   }
+  ],
+  "deepest_text": [
+   {
+    "tag": "span",
+    "cls": "block text-txt0",
+    "right": 444,
+    "width": 67,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "$102.46",
+    "depth": 11
+   },
+   {
+    "tag": "span",
+    "cls": "block text-[11px] text-txt2",
+    "right": 444,
+    "width": 67,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "¥738",
+    "depth": 11
+   },
+   {
+    "tag": "span",
+    "cls": "block text-txt0",
+    "right": 444,
+    "width": 67,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "$210.91",
+    "depth": 11
+   },
+   {
+    "tag": "span",
+    "cls": "block text-[11px] text-txt2",
+    "right": 444,
+    "width": 67,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "¥1519",
+    "depth": 11
+   },
+   {
+    "tag": "span",
+    "cls": "block text-txt0",
+    "right": 444,
+    "width": 67,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "−$108.45",
+    "depth": 11
+   },
+   {
+    "tag": "span",
+    "cls": "block text-[11px] text-txt2",
+    "right": 444,
+    "width": 67,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "−¥781",
+    "depth": 11
+   }
+  ],
+  "metrics": {
+   "innerWidth": 375,
+   "scrollWidth": 380,
+   "clientWidth": 375,
+   "bodyScrollWidth": 380
+  }
+ },
+ "/vs/info-vs-net": {
+  "total_over": 12,
+  "roots": [
+   {
+    "tag": "table",
+    "cls": "w-full min-w-[320px] text-sm",
+    "right": 388,
+    "width": 371,
+    "parentOver": false,
+    "ws": "normal",
+    "ow": "normal",
+    "wb": "normal",
+    "text": ".info vs .net 首年价、续费价与 5 年总持有成本对比（美元为准，人民币按汇率 7.2 估算） 后缀 注册/首年 续费/年 5 年持有成本 .info $3.6 ¥26 $22.14 ¥159 $92.16 ¥664 .net $12.52 ¥90 $12.52 ¥9",
+    "depth": 7
+   }
+  ],
+  "deepest_text": [
+   {
+    "tag": "tr",
+    "cls": "border-b border-line",
+    "right": 388,
+    "width": 371,
+    "parentOver": true,
+    "ws": "normal",
+    "ow": "normal",
+    "wb": "normal",
+    "text": ".net $12.52 ¥90 $12.52 ¥90 $62.6 ¥451",
+    "depth": 9
+   },
+   {
+    "tag": "tr",
+    "cls": "bg-bg2/40",
+    "right": 388,
+    "width": 371,
+    "parentOver": true,
+    "ws": "normal",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "差额（.info − .net） −$8.92 −¥64 +$9.62 +¥69 +$29.56 +¥213",
+    "depth": 9
+   },
+   {
+    "tag": "th",
+    "cls": "px-3 py-2 text-right font-medium",
+    "right": 388,
+    "width": 82,
+    "parentOver": true,
+    "ws": "normal",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "5 年持有成本",
+    "depth": 10
+   },
+   {
+    "tag": "td",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "right": 388,
+    "width": 82,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "$92.16 ¥664",
+    "depth": 10
+   },
+   {
+    "tag": "td",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "right": 388,
+    "width": 82,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "$62.6 ¥451",
+    "depth": 10
+   },
+   {
+    "tag": "td",
+    "cls": "tnum whitespace-nowrap px-3 py-2.5 text-right",
+    "right": 388,
+    "width": 82,
+    "parentOver": true,
+    "ws": "nowrap",
+    "ow": "normal",
+    "wb": "normal",
+    "text": "+$29.56 +¥213",
+    "depth": 10
+   }
+  ],
+  "metrics": {
+   "innerWidth": 375,
+   "scrollWidth": 439,
+   "clientWidth": 375,
+   "bodyScrollWidth": 439
+  }
+ }
+}

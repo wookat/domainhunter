@@ -1,0 +1,54 @@
+{
+ "ai_calls": [],
+ "p2_2_tld_ai": {
+  "has_two_year_zh": false,
+  "price_line": [
+   "注册 $82.7≈ ¥595",
+   "续费 $82.7≈ ¥595"
+  ],
+  "has_two_year_en": false
+ },
+ "p2_3_prices_source": [
+  "A cheap first year doesn't mean cheap forever — many suffixes renew at several times the promo price. This table compares registration and renewal for 408 popular TLDs (live Porkbun prices first, ≈ static reference when unavailable). Click headers to sort, click a suffix for its full guide.",
+  "Live prices from Porkbun; CNY estimated at 7.2. ≈ marks static reference prices. Registrar prices vary — confirm on the registrar page."
+ ],
+ "p2_1_more_btn": 0,
+ "p2_1_rows_sample": [],
+ "p2_1_rows_total": 10,
+ "layout": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375
+ },
+ "p3_7_home_chip_price_samples": [
+  "$28.12",
+  "$8.75",
+  "$8.75",
+  "$15.76",
+  "$2.73↑"
+ ],
+ "p3_7_home_has_yen": false,
+ "p2_3_home_source_line": [
+  "被占的域名显示注册局返回的到期日，方便盯着捡漏；可注册的显示注册商实时价与续费价，.cn 等无实时价的给出人民币参考价。"
+ ],
+ "p2_4_advanced": {
+  "title": "高级模式 | DomainHunter",
+  "h1": [
+   "高级模式"
+  ],
+  "paste_box_top": 752,
+  "viewport_h": 812
+ },
+ "p2_5_progress_mid": [
+  "已识别 12 个域名"
+ ],
+ "p2_5_progress_end": [
+  "已识别 12 个域名"
+ ],
+ "p2_5_yen_in_advanced": false,
+ "p2_6": {
+  "controls": 1,
+  "url_after_one_click": "https://hunt.zalize.com/"
+ }
+}

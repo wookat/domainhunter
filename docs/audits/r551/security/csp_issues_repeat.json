@@ -1,0 +1,353 @@
+[
+ {
+  "path": "/vs/uk-vs-com",
+  "try": 0,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e96b14ed6b18c-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "eX/QRJJY",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-eX/QRJJY1r5K+9K5KoJLLw=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report",
+  "script_nonces": [
+   "eX/QRJJY1r5K+9K5KoJLLw==",
+   "eX/QRJJY1r5K+9K5KoJLLw==",
+   "eX/QRJJY1r5K+9K5KoJLLw==",
+   "",
+   "",
+   "",
+   "eX/QRJJY1r5K+9K5KoJLLw=="
+  ],
+  "spv_count": 0,
+  "spv_policy_sample": null,
+  "spv_blocked": [],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/vs/uk-vs-com",
+  "try": 1,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e96c2dc3668f1-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "fwFEi3ng",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-fwFEi3ng8DQ7c4b23/mnUA=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report\nscript-src 'unsafe-inline' 'unsafe-eval'; connect-src 'none'; report-uri https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=ndBD9ZRVHd6vG9S8W5MVNQTR87cHIvXESZGis17j9pw-1788709402.0566857-1.0.1.1-hKdQEZirjQ6GDFqpQNa8lo_D36Lg0Z97wPNhLrQS9QciBUOFiPU4QSKBA1RLUzRriMWBrFznI9sQhBZTazWDTgkH1MZ4XK66qhG3xi.O2zdfPufEtmxwYOi5PLw7Vbdg7PRVEn6Vxe4Nnj_460JybF4BpLxrW6vN2mcpxFpl46dQ9M70LGmLmHug3BOx86_Z; report-to cf-csp-endpoint",
+  "script_nonces": [
+   "fwFEi3ng8DQ7c4b23/mnUA==",
+   "fwFEi3ng8DQ7c4b23/mnUA==",
+   "fwFEi3ng8DQ7c4b23/mnUA==",
+   "",
+   "",
+   "",
+   "fwFEi3ng8DQ7c4b23/mnUA=="
+  ],
+  "spv_count": 18,
+  "spv_policy_sample": "script-src 'unsafe-inline' 'unsafe-eval'; connect-src 'none'; report-uri https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=ndBD9ZRVHd6vG9S8W5MVNQTR87cHIvXESZGis17j9pw-1788709402.0566857-1.0.1.1-hKdQEZirjQ6GDFqpQNa8lo_D36Lg0Z97wPNhLrQS9QciBUOFiPU4QSKBA1RLUzRriMWBrFznI9sQhBZTazWDTgkH1MZ4XK66qhG3xi.O2zdfPufEtmxwYOi5PLw7Vbdg7PRVEn6Vxe4Nnj_460JybF4BpLxrW6vN2mcpxFpl46dQ9M70LGmLmHug3BOx86_Z; report-to cf-csp-endpoint",
+  "spv_blocked": [
+   "https://hunt.zalize.com/api/prices",
+   "https://hunt.zalize.com/api/registrars",
+   "https://hunt.zalize.com/assets/chevron-right-O0fqDGb1.js",
+   "https://hunt.zalize.com/assets/circle-check-CZxMe1O-.js",
+   "https://hunt.zalize.com/assets/circle-question-mark-DMvgZklw.js",
+   "https://hunt.zalize.com/assets/compare-page-IE2ZlKu7.js"
+  ],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/vs/uk-vs-com",
+  "try": 2,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e96d47ee4fef6-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "gwdLnVO0",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-gwdLnVO0cso41kkTYuc9uQ=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report",
+  "script_nonces": [
+   "gwdLnVO0cso41kkTYuc9uQ==",
+   "gwdLnVO0cso41kkTYuc9uQ==",
+   "gwdLnVO0cso41kkTYuc9uQ==",
+   "",
+   "",
+   "",
+   "gwdLnVO0cso41kkTYuc9uQ=="
+  ],
+  "spv_count": 0,
+  "spv_policy_sample": null,
+  "spv_blocked": [],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/shortlist",
+  "try": 0,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e96e5ca96495f-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "NtfljvDE",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-NtfljvDENvXjAOsnUFxylg=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report",
+  "script_nonces": [
+   "NtfljvDENvXjAOsnUFxylg==",
+   "NtfljvDENvXjAOsnUFxylg==",
+   "NtfljvDENvXjAOsnUFxylg=="
+  ],
+  "spv_count": 0,
+  "spv_policy_sample": null,
+  "spv_blocked": [],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/shortlist",
+  "try": 1,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e96f70a55a096-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "4uzMp8KD",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-4uzMp8KDil0S4zeP0ym/6A=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report",
+  "script_nonces": [
+   "4uzMp8KDil0S4zeP0ym/6A==",
+   "4uzMp8KDil0S4zeP0ym/6A==",
+   "4uzMp8KDil0S4zeP0ym/6A=="
+  ],
+  "spv_count": 0,
+  "spv_policy_sample": null,
+  "spv_blocked": [],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/shortlist",
+  "try": 2,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e97082cd3ff06-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "5FPRCtZL",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-5FPRCtZLUt1TZQa1ZVEC9A=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report\nscript-src 'unsafe-inline' 'unsafe-eval'; connect-src 'none'; report-uri https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=Xi0giC.yj6XnmDpwdxi4TrS.9C7qCHdH84PWkZt.Q6Y-1788709413.1465015-1.0.1.1-c4RWiS0y48vAWactP9oO0uAZlzj7uttXiRaTJel4qAy6uhKsL28IPFg1aWkgsJLFqMn2nr3OJdi30vwiq4wAizzXARLD1E7w7dwE22nGvrz7fcxxWgvkQ1mKr9tkOP06t1c23uborG.G_AblACTjIfcu1WoLslJCOfSPGsuHFOWvBpFKV_dJ7duYjy6GtyGN; report-to cf-csp-endpoint",
+  "script_nonces": [
+   "5FPRCtZLUt1TZQa1ZVEC9A==",
+   "5FPRCtZLUt1TZQa1ZVEC9A==",
+   "5FPRCtZLUt1TZQa1ZVEC9A=="
+  ],
+  "spv_count": 19,
+  "spv_policy_sample": "script-src 'unsafe-inline' 'unsafe-eval'; connect-src 'none'; report-uri https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=Xi0giC.yj6XnmDpwdxi4TrS.9C7qCHdH84PWkZt.Q6Y-1788709413.1465015-1.0.1.1-c4RWiS0y48vAWactP9oO0uAZlzj7uttXiRaTJel4qAy6uhKsL28IPFg1aWkgsJLFqMn2nr3OJdi30vwiq4wAizzXARLD1E7w7dwE22nGvrz7fcxxWgvkQ1mKr9tkOP06t1c23uborG.G_AblACTjIfcu1WoLslJCOfSPGsuHFOWvBpFKV_dJ7duYjy6GtyGN; report-to cf-csp-endpoint",
+  "spv_blocked": [
+   "https://hunt.zalize.com/api/prices",
+   "https://hunt.zalize.com/api/registrars",
+   "https://hunt.zalize.com/assets/arrow-up-CkxyaIE3.js",
+   "https://hunt.zalize.com/assets/check-BFsBa-Vq.js",
+   "https://hunt.zalize.com/assets/copy-UDf544yg.js",
+   "https://hunt.zalize.com/assets/domain-row-DquxG9UI.js"
+  ],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/mcp",
+  "try": 0,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e9719694fef38-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "HFHNywkj",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-HFHNywkj0NYXa0zGrx7Mtw=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report\nscript-src 'unsafe-inline' 'unsafe-eval'; connect-src 'none'; report-uri https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=uuCp5w_pAOxKuBrngKIYI5ZsQ4KSzRl8cDtnYIiruFk-1788709415.9074292-1.0.1.1-P64OcgDGP0p52nA3UmXFkaPBLbh_AUK5k7wSU9sd..pqvYZymULn.5cUzgDDdTxi6mQ6u_m1s5aP8GEYJBPRXvOI.VRCkVa94mfTNa9oAjqk03q.JNN2y3Nk8HH31SxX7ixeSzP7h3VqRT8O.Lzk89ypuIoz2PHdp_MiQ75Ii9GEFhghYDNlMC0LrHP2m5L1; report-to cf-csp-endpoint",
+  "script_nonces": [
+   "HFHNywkj0NYXa0zGrx7Mtw==",
+   "HFHNywkj0NYXa0zGrx7Mtw==",
+   "HFHNywkj0NYXa0zGrx7Mtw==",
+   ""
+  ],
+  "spv_count": 7,
+  "spv_policy_sample": "script-src 'unsafe-inline' 'unsafe-eval'; connect-src 'none'; report-uri https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=uuCp5w_pAOxKuBrngKIYI5ZsQ4KSzRl8cDtnYIiruFk-1788709415.9074292-1.0.1.1-P64OcgDGP0p52nA3UmXFkaPBLbh_AUK5k7wSU9sd..pqvYZymULn.5cUzgDDdTxi6mQ6u_m1s5aP8GEYJBPRXvOI.VRCkVa94mfTNa9oAjqk03q.JNN2y3Nk8HH31SxX7ixeSzP7h3VqRT8O.Lzk89ypuIoz2PHdp_MiQ75Ii9GEFhghYDNlMC0LrHP2m5L1; report-to cf-csp-endpoint",
+  "spv_blocked": [
+   "https://hunt.zalize.com/api/registrars",
+   "https://hunt.zalize.com/assets/check-BFsBa-Vq.js",
+   "https://hunt.zalize.com/assets/copy-UDf544yg.js",
+   "https://hunt.zalize.com/assets/index-2iV2dw8a.js",
+   "https://hunt.zalize.com/assets/mcp-page-CE2yklLY.js",
+   "https://hunt.zalize.com/assets/use-page-title-CChRkcqr.js"
+  ],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/mcp",
+  "try": 1,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e972aa882ef5f-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "zjWQ2vvN",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-zjWQ2vvNEe/GYTdNOCSx4Q=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report",
+  "script_nonces": [
+   "zjWQ2vvNEe/GYTdNOCSx4Q==",
+   "zjWQ2vvNEe/GYTdNOCSx4Q==",
+   "zjWQ2vvNEe/GYTdNOCSx4Q==",
+   ""
+  ],
+  "spv_count": 0,
+  "spv_policy_sample": null,
+  "spv_blocked": [],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/mcp",
+  "try": 2,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e973bd86defac-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "Komd6RQd",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-Komd6RQdd/V2sMdaf353Cg=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report",
+  "script_nonces": [
+   "Komd6RQdd/V2sMdaf353Cg==",
+   "Komd6RQdd/V2sMdaf353Cg==",
+   "Komd6RQdd/V2sMdaf353Cg==",
+   ""
+  ],
+  "spv_count": 0,
+  "spv_policy_sample": null,
+  "spv_blocked": [],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/",
+  "try": 0,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e974d0fdb6e10-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "UjbB3mPD",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-UjbB3mPDq/x/q6vr8TGnsg=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report",
+  "script_nonces": [
+   "UjbB3mPDq/x/q6vr8TGnsg==",
+   "UjbB3mPDq/x/q6vr8TGnsg==",
+   "UjbB3mPDq/x/q6vr8TGnsg==",
+   "",
+   ""
+  ],
+  "spv_count": 0,
+  "spv_policy_sample": null,
+  "spv_blocked": [],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/",
+  "try": 1,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e97604c6fc895-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "RH/O59F1",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-RH/O59F1YUXTJea6ddscNg=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report",
+  "script_nonces": [
+   "RH/O59F1YUXTJea6ddscNg==",
+   "RH/O59F1YUXTJea6ddscNg==",
+   "RH/O59F1YUXTJea6ddscNg==",
+   "",
+   ""
+  ],
+  "spv_count": 0,
+  "spv_policy_sample": null,
+  "spv_blocked": [],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/",
+  "try": 2,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e97726cd5da91-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "cqt9CoGF",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-cqt9CoGFPKwskIpCZn+ouA=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report",
+  "script_nonces": [
+   "cqt9CoGFPKwskIpCZn+ouA==",
+   "cqt9CoGFPKwskIpCZn+ouA==",
+   "cqt9CoGFPKwskIpCZn+ouA==",
+   "",
+   ""
+  ],
+  "spv_count": 0,
+  "spv_policy_sample": null,
+  "spv_blocked": [],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/tld/de",
+  "try": 0,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e97848b15fef7-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "nrgHm/Pp",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-nrgHm/PpeXoHMayMx3Pw7Q=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report",
+  "script_nonces": [
+   "nrgHm/PpeXoHMayMx3Pw7Q==",
+   "nrgHm/PpeXoHMayMx3Pw7Q==",
+   "nrgHm/PpeXoHMayMx3Pw7Q==",
+   "",
+   "",
+   "nrgHm/PpeXoHMayMx3Pw7Q=="
+  ],
+  "spv_count": 0,
+  "spv_policy_sample": null,
+  "spv_blocked": [],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/tld/de",
+  "try": 1,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e9795eddc8ce4-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "f2/qpgGN",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-f2/qpgGNdKr6PuJmm/6cPw=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report",
+  "script_nonces": [
+   "f2/qpgGNdKr6PuJmm/6cPw==",
+   "f2/qpgGNdKr6PuJmm/6cPw==",
+   "f2/qpgGNdKr6PuJmm/6cPw==",
+   "",
+   "",
+   "f2/qpgGNdKr6PuJmm/6cPw=="
+  ],
+  "spv_count": 0,
+  "spv_policy_sample": null,
+  "spv_blocked": [],
+  "csp_report_requests": []
+ },
+ {
+  "path": "/tld/de",
+  "try": 2,
+  "status": 200,
+  "cf-cache-status": null,
+  "cf-ray": "a36e97a74de7cb73-PDX",
+  "age": null,
+  "csp_ro_present": true,
+  "csp_ro_nonce": "qGG4M4Br",
+  "csp_ro_header": "default-src 'self'; script-src 'self' 'nonce-qGG4M4BrKsThNEyK5HSpIw=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report",
+  "script_nonces": [
+   "qGG4M4BrKsThNEyK5HSpIw==",
+   "qGG4M4BrKsThNEyK5HSpIw==",
+   "qGG4M4BrKsThNEyK5HSpIw==",
+   "",
+   "",
+   "qGG4M4BrKsThNEyK5HSpIw=="
+  ],
+  "spv_count": 0,
+  "spv_policy_sample": null,
+  "spv_blocked": [],
+  "csp_report_requests": []
+ }
+]

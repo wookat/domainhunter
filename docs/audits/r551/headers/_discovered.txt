@@ -1,0 +1,1 @@
+asset=assets/index-2iV2dw8a.js css=assets/index-Cy7PEpsA.css font=/fonts/inter-latin-var.woff2

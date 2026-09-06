@@ -1,0 +1,68 @@
+{
+ "/vs/travel-vs-tours|zh": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375
+ },
+ "/vs/kitchen-vs-restaurant|zh": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375
+ },
+ "/vs/bio-vs-me|zh": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375
+ },
+ "/vs/flights-vs-travel|zh": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375
+ },
+ "/vs/menu-vs-restaurant|zh": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375
+ },
+ "/tld/es|en": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375
+ },
+ "/tld/es|zh": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375
+ },
+ "/vs/group-vs-agency|en": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "clientWidth": 375,
+  "bodyScrollWidth": 375
+ },
+ "/vs/education-vs-academy|zh": {
+  "innerWidth": 375,
+  "scrollWidth": 511,
+  "clientWidth": 375,
+  "bodyScrollWidth": 511
+ },
+ "/vs/gifts-vs-shop|zh": {
+  "innerWidth": 375,
+  "scrollWidth": 483,
+  "clientWidth": 375,
+  "bodyScrollWidth": 483
+ },
+ "/vs/apartments-vs-house|zh": {
+  "innerWidth": 375,
+  "scrollWidth": 443,
+  "clientWidth": 375,
+  "bodyScrollWidth": 443
+ }
+}

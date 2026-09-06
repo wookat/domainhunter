@@ -1,0 +1,24 @@
+{
+ "/tld/nz": [
+  "docs.internetnz.nz/registry/stats"
+ ],
+ "/tld/sa": [],
+ "/vs/clinic-vs-care": [],
+ "/vs/technology-vs-tech": [],
+ "/vs/info-vs-net": [],
+ "/vs/education-vs-academy": [],
+ "/vs/gifts-vs-shop": [],
+ "/vs/tools-vs-app": [],
+ "/vs/apartments-vs-house": [],
+ "/vs/repair-vs-services": [
+  "rdap.identitydigital.services"
+ ],
+ "/vs/wine-vs-bar": [
+  "whois.tucowsregistry.net"
+ ],
+ "/vs/salon-vs-studio": [],
+ "/vs/farm-vs-cafe": [],
+ "/vs/art-vs-studio": [],
+ "/vs/software-vs-app": [],
+ "/vs/express-vs-store": []
+}

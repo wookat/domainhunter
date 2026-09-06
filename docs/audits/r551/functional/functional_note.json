@@ -1,0 +1,31 @@
+{
+ "ai_calls": [],
+ "api": [
+  "GET /api/stats ",
+  "GET /api/prices ",
+  "GET /api/registrars ",
+  "POST /api/search {\"roots\":[\"r551zeroaiaudit\"],\"tlds\":[\"com\",\"cn\",\"io\",\"ai\",\"app\",\"dev\",\"co\",\"net\",\"me\"]}",
+  "GET /api/registrars ",
+  "GET /api/prices ",
+  "GET /api/registrars ",
+  "GET /api/prices ",
+  "POST /api/share {\"items\":[{\"domain\":\"r551zeroaiaudit.com\",\"status\":\"available\"}]}",
+  "DELETE /api/share/s2_CQ2Eqr9 {\"token\":\"TOUmS2a5RGA1jD48xVC8X-U4\"}"
+ ],
+ "visible_after_enter": 2,
+ "storage": [
+  {
+   "domain": "r551zeroaiaudit.com",
+   "note": "r551 note 备注"
+  }
+ ],
+ "visible_after_reload": "r551 note 备注",
+ "share_snapshot_has_note": false,
+ "share_snapshot_keys": [
+  "domain",
+  "label",
+  "status",
+  "tld"
+ ],
+ "share_after_revoke": 410
+}
