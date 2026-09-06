@@ -1,18 +1,20 @@
 import { describe, expect, it } from "vitest";
-import { acceptedUrls, chunkUrls, countRetries, INDEXNOW_429_BACKOFF_MS, INDEXNOW_429_MAX_RETRIES, INDEXNOW_BATCH_MAX, INDEXNOW_BATCH_SIZE, INDEXNOW_RUN_MAX_BATCHES, indexNowDelta, mergePushed, submitIndexNow, summarizeIndexNow } from "./indexnow";
+import { acceptedUrls, chunkUrls, countRetries, fallbackHosts, INDEXNOW_429_BACKOFF_MS, INDEXNOW_429_MAX_RETRIES, INDEXNOW_BATCH_MAX, INDEXNOW_BATCH_SIZE, INDEXNOW_ENDPOINT, INDEXNOW_FALLBACK_ENDPOINTS, INDEXNOW_RUN_MAX_BATCHES, indexNowDelta, mergePushed, submitIndexNow, summarizeIndexNow } from "./indexnow";
 
 const base = { host: "hunt.zalize.com", key: "k".repeat(32), keyLocation: "https://hunt.zalize.com/kkk.txt" };
 
 function fakeFetch(statuses: number[]) {
   const bodies: unknown[] = [];
+  const urls: string[] = [];
   let i = 0;
-  const impl = (async (_url: RequestInfo | URL, init?: RequestInit) => {
+  const impl = (async (url: RequestInfo | URL, init?: RequestInit) => {
+    urls.push(String(url));
     bodies.push(JSON.parse(String(init?.body)));
     const s = statuses[Math.min(i++, statuses.length - 1)];
     if (s < 0) throw new TypeError("fetch failed");
     return new Response("", { status: s });
   }) as typeof fetch;
-  return { impl, bodies };
+  return { impl, bodies, urls };
 }
 
 describe("chunkUrls", () => {
@@ -155,6 +157,81 @@ describe("R504 小批推送 + 逐批快照", () => {
       const fOld = fakeFetch([429]);
       expect(await submitIndexNow({ ...opts, fetchImpl: fOld.impl })).toEqual([{ status: 429, ok: false, submitted: 100 }]);
       expect(fOld.bodies.length).toBe(1);
+    });
+  });
+
+  // R517：06:00Z 首发+2 次重试仍 429；探针实测 Workers 出口对 api.indexnow.org/bing 恒 429，对 yandex/seznam/naver/yep 正常
+  describe("429 换端点重发", () => {
+    const fb = ["https://a.example/indexnow", "https://b.example/indexnow"];
+    const opts = { ...base, urls: all, batchSize: 100, maxBatches: 3, stopOnFail: true, fallbackEndpoints: fb };
+    function spySleep() {
+      const waits: number[] = [];
+      return { waits, sleep: async (ms: number) => { waits.push(ms); } };
+    }
+    it("默认备用端点：4 个参与引擎、不含主端点，全是 https", () => {
+      expect(INDEXNOW_FALLBACK_ENDPOINTS.length).toBe(4);
+      expect(INDEXNOW_FALLBACK_ENDPOINTS).not.toContain(INDEXNOW_ENDPOINT);
+      expect(new Set(INDEXNOW_FALLBACK_ENDPOINTS.map((e) => new URL(e).host))).toEqual(new Set(["yandex.com", "search.seznam.cz", "searchadvisor.naver.com", "indexnow.yep.com"]));
+    });
+    it("主端点 429 → 立刻改发备用端点 202：不等待、同批同体、记 endpoint；下一批仍从主端点起发", async () => {
+      const f = fakeFetch([429, 202, 429, 202, 429, 202]);
+      const s = spySleep();
+      const res = await submitIndexNow({ ...opts, fetchImpl: f.impl, retry429: { backoffMs: 60_000, maxRetries: 2, sleep: s.sleep } });
+      expect(res).toEqual([
+        { status: 202, ok: true, submitted: 100, endpoint: fb[0] },
+        { status: 202, ok: true, submitted: 100, endpoint: fb[0] },
+        { status: 202, ok: true, submitted: 100, endpoint: fb[0] },
+      ]);
+      expect(s.waits).toEqual([]);
+      expect(f.urls).toEqual([INDEXNOW_ENDPOINT, fb[0], INDEXNOW_ENDPOINT, fb[0], INDEXNOW_ENDPOINT, fb[0]]);
+      expect(f.bodies[0]).toEqual(f.bodies[1]);
+      expect(f.bodies[0]).not.toEqual(f.bodies[2]);
+      expect(countRetries(res)).toBe(0);
+      expect(fallbackHosts(res)).toEqual(["a.example"]);
+      expect(acceptedUrls(all, res, 100)).toEqual(all.slice(0, 300));
+      expect(summarizeIndexNow(res)).toEqual({ ok: true, status: 202, message: "Accepted (key validation pending)", submitted: 300 });
+    });
+    it("主端点成功时不碰备用端点，结果不带 endpoint（旧形状）", async () => {
+      const f = fakeFetch([200]);
+      const res = await submitIndexNow({ ...opts, fetchImpl: f.impl });
+      expect(res).toEqual([{ status: 200, ok: true, submitted: 100 }, { status: 200, ok: true, submitted: 100 }, { status: 200, ok: true, submitted: 100 }]);
+      expect(f.urls.every((u) => u === INDEXNOW_ENDPOINT)).toBe(true);
+      expect(fallbackHosts(res)).toEqual([]);
+    });
+    it("备用端点非 429 失败（403/网络）就地定案：不再换下一个、不重试、不计入快照", async () => {
+      const s = spySleep();
+      const f = fakeFetch([429, 403]);
+      const res = await submitIndexNow({ ...opts, fetchImpl: f.impl, retry429: { backoffMs: 1, maxRetries: 2, sleep: s.sleep } });
+      expect(res).toEqual([{ status: 403, ok: false, submitted: 100, endpoint: fb[0] }]);
+      expect(f.urls).toEqual([INDEXNOW_ENDPOINT, fb[0]]);
+      expect(s.waits).toEqual([]);
+      expect(fallbackHosts(res)).toEqual([]);
+      expect(acceptedUrls(all, res, 100)).toEqual([]);
+      const fNet = fakeFetch([429, -1]);
+      expect(await submitIndexNow({ ...opts, fetchImpl: fNet.impl, retry429: { backoffMs: 1, maxRetries: 2, sleep: s.sleep } })).toEqual([{ status: 0, ok: false, submitted: 100, endpoint: fb[0] }]);
+    });
+    it("全部端点 429 才退避；重试从主端点重新走一遍链；达上限判失败", async () => {
+      const s = spySleep();
+      const f = fakeFetch([429]);
+      const res = await submitIndexNow({ ...opts, fetchImpl: f.impl, retry429: { backoffMs: 60_000, maxRetries: 2, sleep: s.sleep } });
+      expect(res).toEqual([{ status: 429, ok: false, submitted: 100, retries: 2, endpoint: fb[1] }]);
+      expect(f.urls.length).toBe(9);
+      expect(f.urls.slice(0, 3)).toEqual([INDEXNOW_ENDPOINT, fb[0], fb[1]]);
+      expect(s.waits).toEqual([60_000, 60_000]);
+      const f2 = fakeFetch([429, 429, 429, 429, 200]);
+      const s2 = spySleep();
+      const res2 = await submitIndexNow({ ...opts, fetchImpl: f2.impl, retry429: { backoffMs: 60_000, maxRetries: 2, sleep: s2.sleep } });
+      expect(res2[0]).toEqual({ status: 200, ok: true, submitted: 100, retries: 1, endpoint: fb[0] });
+      expect(s2.waits).toEqual([60_000]);
+      expect(fallbackHosts(res2)).toEqual(["a.example"]);
+    });
+    it("未配置 fallbackEndpoints 时行为与 R515 完全一致", async () => {
+      const f = fakeFetch([429]);
+      const s = spySleep();
+      const res = await submitIndexNow({ ...opts, fallbackEndpoints: undefined, fetchImpl: f.impl, retry429: { backoffMs: 60_000, maxRetries: 2, sleep: s.sleep } });
+      expect(res).toEqual([{ status: 429, ok: false, submitted: 100, retries: 2 }]);
+      expect(f.urls.every((u) => u === INDEXNOW_ENDPOINT)).toBe(true);
+      expect(f.urls.length).toBe(3);
     });
   });
 
