@@ -1,0 +1,131 @@
+== sitemap (2026-09-06T17:40:41Z)
+total 1270 unique 1270
+{'static:/': 1, 'static:/prices': 1, 'static:/why': 1, 'static:/mcp': 1, 'static:/advanced': 1, 'static:/tld': 1, 'static:/guide': 1, 'static:/vs': 1, 'tld': 408, 'guide': 410, 'vs': 444}
+alt links 3810 hreflang en 1270 lang=en in loc 0
+== content-counts.json
+{'tld': 408, 'guide': 410, 'vs': 444}
+== 404 shell with different Accept
+  Accept:text/html -> 404 text/html; charset=utf-8 4500
+  Accept:application/json -> 404 text/html; charset=utf-8 4500
+  Accept:*/* -> 404 text/html; charset=utf-8 1360
+  Accept:image/png -> 404 text/html; charset=utf-8 4500
+grep: http/nf_text_html.html: No such file or directory
+  en 404 -> 404
+<html lang="en"
+<title>Page not found | DomainHunter</title>
+  /api/nope:
+  404 ct= size=0
+  /x.js:
+  404 ct= size=0
+  /s/invalid!!:
+  404
+<title>分享不存在或已过期 | DomainHunter</title>
+<link rel="canonical" href="https://hunt.zalize.com/s/"
+  /s/unknown:
+  404
+<title>分享不存在或已过期 | DomainHunter</title>
+<meta name="robots" content="noindex" />
+== share lifecycle
+create 200
+{"id":"zrL8NzekeU","url":"https://hunt.zalize.com/s/zrL8NzekeU","revokeToken":"REDACTED"}
+id=zrL8NzekeU
+api GET 200
+{"items":[{"domain":"r558-audit-probe-xk3.com","label":"r558-audit-probe-xk3","tld":"com","status":"available"},{"domain":"google.com","label":"google","tld":"com","status":"taken"}],"createdAt":1788716442764}
+shell GET 200 4775B
+<title>2 个候选域名 | DomainHunter</title>
+shell GET en 200
+<title>2 domain candidates | DomainHunter</title>
+DELETE 200
+{"ok":true}
+api GET after 410
+{"error":"revoked"}
+shell GET after 410
+<title>分享已撤销 | DomainHunter</title>
+<meta name="robots" content="noindex" />
+shell GET after en 410
+<title>This share has been revoked | DomainHunter</title>
+DELETE wrong-token again 200
+== MCP
+mcp_initialize 200 0.063773s
+mcp_tools_list 200 0.064921s
+mcp_check_domains 200 1.495241s
+mcp_tld_prices 200 0.231982s
+mcp_suggest_variants 200 1.318946s
+mcp_bad_tool 200 0.074146s
+initialize: {'name': 'domainhunter', 'version': '1.0.0'} 2025-03-26
+tools: ['check_domains', 'tld_prices', 'suggest_variants']
+check_domains: {'results': [{'domain': 'google.com', 'status': 'taken', 'expiresAt': '2028-09-14T04:00:00.000Z', 'expiringSoon': False}, {'domain': 'baidu.cn', 'status': 'taken', 'expiresAt': '2029-03-17T12:48:36.000Z', 'expiringSoon': False}, {'domain': 'r558-audit-probe-xk3.com', 'status': 'available'}]}
+tld_prices: type dict n= 408 tldCount= 408 com= {'registration': 11.08, 'renewal': 11.08} cn= {'registration': 4.58, 'renewal': 5.28, 'approx': True}
+suggest_variants keys ['results'] n= 6 {'results': [{'domain': 'r558auditlabs.io', 'status': 'available', 'firstYearPriceUSD': 28.12}, {'domain': 'r558auditapp.io', 'status': 'available', 'firstYearPriceUSD': 28.12}, {'domain': 'r558audithq.io', 'status': 'available', 'firstYearPriceUSD': 28.12}, {'domain': 'r558audithq.com', 'status': '
+bad tool: {'jsonrpc': '2.0', 'id': 6, 'error': {'code': -32602, 'message': 'unknown tool: nope'}}
+== /api/check NDJSON
+api/check 200
+{"domain":"google.com","status":"taken","method":"rdap","expiresAt":"2028-09-14T04:00:00.000Z","cached":true}
+{"domain":"r558-audit-probe-xk3.com","status":"available","method":"rdap","cached":true}
+== /api/search exact (non-AI)
+api/search 200 ct=application/x-ndjson; charset=utf-8
+{"domain":"r558probe.com","status":"available","method":"rdap"}
+
+== HTML sizes (bytes, uncompressed) sample
+/                            200 15972
+/?lang=en                    200 16324
+/advanced                    200 48147
+/shortlist                   200 5012
+/monitors                    200 4922
+/prices                      200 281104
+/why                         200 49314
+/mcp                         200 48321
+/tld                         200 238640
+/guide                       200 222468
+/vs                          200 353163
+/tld/cn                      200 69210
+/tld/de                      200 81018
+/tld/ar                      200 75751
+/tld/uk                      200 72841
+/tld/jp                      200 76027
+/tld/de?lang=en              200 82034
+/guide/saas                  200 78667
+/guide/b2b                   404 4490
+/guide/saas?lang=en          200 78957
+/vs/com-vs-cn                200 83532
+/vs/com-vs-cn?lang=en        200 83772
+/vs/io-vs-dev                200 84944
+/nope-r558                   404 4490
+== /api/search 3 domains (non-AI)
+api/search 3 200 ct=application/x-ndjson; charset=utf-8 0.070797s
+{"domain":"google.com","status":"taken","method":"rdap","expiresAt":"2028-09-14T04:00:00.000Z","cached":true}
+{"domain":"r558-audit-probe-xk3.com","status":"available","method":"rdap","cached":true}
+{"domain":"baidu.cn","status":"taken","method":"whois","expiresAt":"2029-03-17T12:48:36.000Z","cached":true}
+== /api/check refresh=1
+api/check refresh 200 1.025670s
+{"domain":"r558-audit-probe-xk3.com","status":"available","method":"rdap"}
+== /api/monitor/list + changes
+monitor/list 200
+{"entries":[],"monitored":2,"limit":500}
+monitor/changes 200
+{"changes":[]}
+== /api/stats /api/registrars
+{"totalChecked":33825} stats 200
+{"affiliate":{}} registrars 200
+== robots / llms / indexnow key
+robots 200
+User-agent: *
+Allow: /
+
+# AI crawlers welcome — curated site guide at /llms.txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://hunt.zalize.com/sitemap.xml
+llms 200 134045B
+# DomainHunter
+
+> Free, open-source AI domain name hunter: describe your idea in natural language, the AI agent brainstorms names in rounds, verifies availability live via RDAP/DNS/WHOIS, and only surfaces domains you can actually register. Bilingual (English/Chinese), no login required.
+
+## Core pages

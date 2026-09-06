@@ -1,0 +1,26 @@
+name	path	status	strict-transport-security	x-content-type-options	referrer-policy	x-frame-options	permissions-policy	content-security-policy-report-only	content-security-policy	content-type	cache-control	vary	access-control-allow-origin	cross-origin-opener-policy
+home	/?cb=1643620050	200	max-age=31536000; includeSubDomains	nosniff	strict-origin-when-cross-origin	DENY	present(8 features)	present(nonce=1,report-uri=report-uri /api/csp-report)	-	text/html; charset=utf-8	public, max-age=600	Accept-Language	-	-
+home_en	/?lang=en&cb=1643620050	200	max-age=31536000; includeSubDomains	nosniff	strict-origin-when-cross-origin	DENY	present(8 features)	present(nonce=1,report-uri=report-uri /api/csp-report)	-	text/html; charset=utf-8	public, max-age=600	Accept-Language	-	-
+tld_cn	/tld/cn?cb=1643620050	200	max-age=31536000; includeSubDomains	nosniff	strict-origin-when-cross-origin	DENY	present(8 features)	present(nonce=1,report-uri=report-uri /api/csp-report)	-	text/html; charset=utf-8	public, max-age=600	Accept-Language	-	-
+vs_com_cn	/vs/com-vs-cn?lang=en&cb=1643620050	200	max-age=31536000; includeSubDomains	nosniff	strict-origin-when-cross-origin	DENY	present(8 features)	present(nonce=1,report-uri=report-uri /api/csp-report)	-	text/html; charset=utf-8	public, max-age=600	Accept-Language	-	-
+guide_saas	/guide/saas?cb=1643620050	200	max-age=31536000; includeSubDomains	nosniff	strict-origin-when-cross-origin	DENY	present(8 features)	present(nonce=1,report-uri=report-uri /api/csp-report)	-	text/html; charset=utf-8	public, max-age=600	Accept-Language	-	-
+shortlist	/shortlist?cb=1643620050	200	max-age=31536000; includeSubDomains	nosniff	strict-origin-when-cross-origin	DENY	present(8 features)	present(nonce=1,report-uri=report-uri /api/csp-report)	-	text/html; charset=utf-8	-	Accept-Language	-	-
+mcp_doc	/mcp?cb=1643620050	200	max-age=31536000; includeSubDomains	nosniff	strict-origin-when-cross-origin	DENY	present(8 features)	present(nonce=1,report-uri=report-uri /api/csp-report)	-	text/html; charset=utf-8	public, max-age=600	Accept-Language	-	-
+nf_shell	/does-not-exist-r558?cb=1643620050	404	max-age=31536000; includeSubDomains	nosniff	strict-origin-when-cross-origin	DENY	present(8 features)	present(nonce=1,report-uri=report-uri /api/csp-report)	-	text/html; charset=utf-8	public, max-age=600	Accept-Language	-	-
+s_nf	/s/nope-r558?cb=1643620050	404	max-age=31536000; includeSubDomains	nosniff	strict-origin-when-cross-origin	DENY	present(8 features)	present(nonce=1,report-uri=report-uri /api/csp-report)	-	text/html; charset=utf-8	-	Accept-Language	-	-
+api_usage	/api/usage?days=1&cb=1643620050	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	application/json	public, max-age=300	-	-	-
+api_prices	/api/prices?cb=1643620050	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	application/json; charset=utf-8	public, max-age=600	-	-	-
+api_stats	/api/stats?cb=1643620050	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	application/json	public, max-age=60	-	-	-
+api_registrars	/api/registrars?cb=1643620050	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	application/json	public, max-age=300	-	-	-
+api_nf	/api/nope-r558?cb=1643620050	404	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	-	-	-	-	-
+mcp_post	/mcp	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	application/json	-	-	-	-
+sitemap	/sitemap.xml?cb=1643620050	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	application/xml; charset=utf-8	public, max-age=86400	-	-	-
+robots	/robots.txt?cb=1643620050	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	text/plain; charset=utf-8	public, max-age=86400	-	-	-
+llms	/llms.txt?cb=1643620050	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	text/plain; charset=utf-8	public, max-age=86400	-	-	-
+og_tld	/api/og/tld/cn?cb=1643620050	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	image/svg+xml; charset=utf-8	public, max-age=86400	-	-	-
+asset_js	/assets/index-D9KiRPIA.js	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	text/javascript	public, max-age=0, must-revalidate	-	-	-
+asset_css	/assets/index-FFxh39an.css	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	text/css	public, max-age=0, must-revalidate	-	-	-
+favicon	/favicon.svg	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	image/svg+xml	public, max-age=0, must-revalidate	-	-	-
+font	/fonts/inter-latin-var.woff2	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	font/woff2	public, max-age=0, must-revalidate	-	-	-
+wx_share	/wx-share.png	200	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	image/png	public, max-age=0, must-revalidate	-	-	-
+nope_png	/nope-r558.png	404	-	nosniff	strict-origin-when-cross-origin	-	-	-	-	-	-	-	-	-

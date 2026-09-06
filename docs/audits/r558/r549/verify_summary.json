@@ -1,0 +1,33 @@
+{
+ "pages": 888,
+ "pieces_ok": 886,
+ "placeholders_total": 4149,
+ "fetchedAt_values": {
+  "1788674449621": 888
+ },
+ "stale_values": {
+  "False": 888
+ },
+ "kinds": {
+  "price": 3808,
+  "ratio": 79,
+  "diff": 121,
+  "costdiffN": 10,
+  "pair": 61,
+  "jump": 34,
+  "costN": 12,
+  "sum": 24
+ },
+ "pages_per_kind": {
+  "price": 397,
+  "ratio": 39,
+  "diff": 48,
+  "costdiffN": 5,
+  "pair": 23,
+  "jump": 20,
+  "costN": 3,
+  "sum": 13
+ },
+ "failures": 0,
+ "subject_flags": 31
+}
