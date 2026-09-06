@@ -279,4 +279,21 @@ describe("POST /api/csp-report（R533）", () => {
     await settle();
     expect(store.has(CSP_SAMPLES_KEY)).toBe(false);
   });
+
+  it("16KB 上限按字节算：多字节 UTF-8 正文（字符数少于 16K）且无 Content-Length 也 413", async () => {
+    const { env, store } = fakeEnv();
+    const { ctx: ec, settle } = ctx();
+    // 6000 个 3 字节汉字 ≈ 18KB，但 JS 字符数只有 ~6K
+    const json = JSON.stringify({ "csp-report": { "violated-directive": "img-src", "blocked-uri": "https://x.example/", "script-sample": "界".repeat(6000) } });
+    const bytes = new TextEncoder().encode(json);
+    expect(bytes.byteLength).toBeGreaterThan(16 * 1024);
+    expect(json.length).toBeLessThan(16 * 1024);
+    const stream = new ReadableStream<Uint8Array>({ start(ctrl) { ctrl.enqueue(bytes); ctrl.close(); } });
+    const req = new Request("https://hunt.zalize.com/api/csp-report", { method: "POST", headers: { "content-type": "application/csp-report" }, body: stream, duplex: "half" } as RequestInit);
+    expect(req.headers.get("content-length")).toBeNull();
+    const res = await worker.fetch(req, env as never, ec);
+    expect(res.status).toBe(413);
+    await settle();
+    expect(store.has(CSP_SAMPLES_KEY)).toBe(false);
+  });
 });

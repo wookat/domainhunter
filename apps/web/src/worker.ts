@@ -1154,15 +1154,15 @@ app.post("/api/click", async (c) => {
 });
 
 // CSP（Report-Only）违规上报（R533）：只计当日条数 + 前 20 条去重的 directive/blocked-uri 样本，不存 UA/IP/页面 URL；
-// 能否解析都回 204（浏览器不读响应，也不给探测者信号）；超 16KB 回 413 不解析
+// 能否解析都回 204（浏览器不读响应，也不给探测者信号）；超 16KB（按字节，chunked 无 Content-Length 也算）回 413 不解析
 app.post(CSP_REPORT_PATH, async (c) => {
   const len = Number(c.req.header("content-length") ?? "0");
   if (len > CSP_REPORT_MAX_BYTES) return c.body(null, 413, { "cache-control": "no-store" });
-  const text = await c.req.text().catch(() => "");
-  if (text.length > CSP_REPORT_MAX_BYTES) return c.body(null, 413, { "cache-control": "no-store" });
+  const raw = await c.req.arrayBuffer().catch(() => new ArrayBuffer(0));
+  if (raw.byteLength > CSP_REPORT_MAX_BYTES) return c.body(null, 413, { "cache-control": "no-store" });
   let payload: unknown = null;
   try {
-    payload = JSON.parse(text);
+    payload = JSON.parse(new TextDecoder().decode(raw));
   } catch { /* 非 JSON：当作无记录 */ }
   const violations = parseCspReports(payload);
   if (violations.length > 0) {
