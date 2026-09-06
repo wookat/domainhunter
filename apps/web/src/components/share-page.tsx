@@ -88,6 +88,10 @@ export function SharePage({ id }: { id: string }) {
   // 有 status 的快照：只复制/统计 available；旧快照无 status：复制全部且不带「可注册」字样
   const hasStatus = items.some((it) => it.status !== undefined);
   const copyRows = hasStatus ? items.filter((it) => it.status === "available") : items;
+  // 与 /shortlist 口径一致：普通注册价与去注册只给 available；taken（二级市场）/ unknown 不显示价也不给 CTA；
+  // 旧快照全无 status 时维持原行为（顶部已有「未含可用性状态」提示）
+  const registrable = (it: SharedItem) => (hasStatus ? it.status === "available" : true);
+  const noPriceTitle = (it: SharedItem) => t(it.status === "taken" ? "shortlist.takenNoPrice" : "shortlist.unknownNoPrice");
   const csvRows = items.map((it) => ({ ...it, status: it.status }));
   const timeStr = new Date(createdAt).toLocaleDateString(lang === "zh" ? "zh-CN" : "en-US", {
     year: "numeric",
@@ -162,11 +166,17 @@ export function SharePage({ id }: { id: string }) {
                       {score ?? "—"}
                     </span>
                   </td>
-                  <td title={priceFull(it.tld, lang, prices)} className="tnum px-3 text-right font-mono text-xs text-txt1">
-                    {priceShort(it.tld, lang, prices) ?? "—"}
-                  </td>
+                  {registrable(it) ? (
+                    <td title={priceFull(it.tld, lang, prices)} className="tnum px-3 text-right font-mono text-xs text-txt1">
+                      {priceShort(it.tld, lang, prices) ?? "—"}
+                    </td>
+                  ) : (
+                    <td title={noPriceTitle(it)} className="cursor-help px-3 text-right font-mono text-xs text-txt2">
+                      —
+                    </td>
+                  )}
                   <td className="whitespace-nowrap px-4 text-right">
-                    {it.status !== "taken" && (
+                    {registrable(it) && (
                       <RegisterMenu domain={it.domain}>
                         <button className="h-8 rounded-md bg-brand-dim px-3 text-xs font-semibold text-brand transition-opacity hover:opacity-80">
                           {t("common.register")}
@@ -200,10 +210,16 @@ export function SharePage({ id }: { id: string }) {
               {it.meaning && <p className="mt-1 text-xs text-txt1">{it.meaning}</p>}
               {it.scores && <ScoreBars scores={it.scores} columns={4} className="mt-3" />}
               <div className="mt-3 flex items-center gap-2">
-                <span title={priceFull(it.tld, lang, prices)} className="tnum flex-1 font-mono text-xs text-txt1">
-                  {priceShort(it.tld, lang, prices) ?? ""}
-                </span>
-                {it.status !== "taken" && (
+                {registrable(it) ? (
+                  <span title={priceFull(it.tld, lang, prices)} className="tnum flex-1 font-mono text-xs text-txt1">
+                    {priceShort(it.tld, lang, prices) ?? ""}
+                  </span>
+                ) : (
+                  <span title={noPriceTitle(it)} className="flex-1 font-mono text-xs text-txt2">
+                    —
+                  </span>
+                )}
+                {registrable(it) && (
                   <RegisterMenu domain={it.domain}>
                     <button className="h-11 rounded-md bg-brand px-4 text-xs font-semibold text-brand-ink">{t("common.register")}</button>
                   </RegisterMenu>
