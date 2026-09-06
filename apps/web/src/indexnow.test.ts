@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { acceptedUrls, chunkUrls, INDEXNOW_BATCH_MAX, INDEXNOW_BATCH_SIZE, INDEXNOW_RUN_MAX_BATCHES, indexNowDelta, mergePushed, submitIndexNow, summarizeIndexNow } from "./indexnow";
+import { acceptedUrls, chunkUrls, countRetries, INDEXNOW_429_BACKOFF_MS, INDEXNOW_429_MAX_RETRIES, INDEXNOW_BATCH_MAX, INDEXNOW_BATCH_SIZE, INDEXNOW_RUN_MAX_BATCHES, indexNowDelta, mergePushed, submitIndexNow, summarizeIndexNow } from "./indexnow";
 
 const base = { host: "hunt.zalize.com", key: "k".repeat(32), keyLocation: "https://hunt.zalize.com/kkk.txt" };
 
@@ -111,6 +111,53 @@ describe("R504 小批推送 + 逐批快照", () => {
     const gone = mergePushed({ lastmod: "2026-08-10", urls: ["https://hunt.zalize.com/gone", all[0]] }, [all[0], all[1]], all, "2026-08-10");
     expect(gone.urls).toEqual([all[0], all[1]]);
   });
+  // R515：生产 00:00:58Z 首批 100 URL → 429 而同分钟本机直连 200，429 视为瞬态，同批等待后重试
+  describe("429 同批重试", () => {
+    const opts = { ...base, urls: all, batchSize: 100, maxBatches: 3, stopOnFail: true };
+    function spySleep() {
+      const waits: number[] = [];
+      return { waits, sleep: async (ms: number) => { waits.push(ms); } };
+    }
+    it("默认常量：60s 退避、最多重试 2 次", () => {
+      expect(INDEXNOW_429_BACKOFF_MS).toBe(60_000);
+      expect(INDEXNOW_429_MAX_RETRIES).toBe(2);
+    });
+    it("首批 429 → 等待 → 重试 200：本批计成功、retries=1，后续批照常", async () => {
+      const f = fakeFetch([429, 200, 200, 200]);
+      const s = spySleep();
+      const res = await submitIndexNow({ ...opts, fetchImpl: f.impl, retry429: { backoffMs: 60_000, maxRetries: 2, sleep: s.sleep } });
+      expect(res.map((r) => [r.status, r.ok, r.retries ?? 0])).toEqual([[200, true, 1], [200, true, 0], [200, true, 0]]);
+      expect(f.bodies.length).toBe(4);
+      expect(f.bodies[0]).toEqual(f.bodies[1]);
+      expect(s.waits).toEqual([60_000]);
+      expect(countRetries(res)).toBe(1);
+      expect(acceptedUrls(all, res, 100)).toEqual(all.slice(0, 300));
+      expect(summarizeIndexNow(res).ok).toBe(true);
+    });
+    it("连续 429 达上限（首发 + 2 次重试）才判失败并停止", async () => {
+      const f = fakeFetch([429]);
+      const s = spySleep();
+      const res = await submitIndexNow({ ...opts, fetchImpl: f.impl, retry429: { backoffMs: 60_000, maxRetries: 2, sleep: s.sleep } });
+      expect(res).toEqual([{ status: 429, ok: false, submitted: 100, retries: 2 }]);
+      expect(f.bodies.length).toBe(3);
+      expect(s.waits).toEqual([60_000, 60_000]);
+      expect(countRetries(res)).toBe(2);
+      expect(summarizeIndexNow(res)).toEqual({ ok: false, status: 429, message: "Too many requests", submitted: 0 });
+      expect(acceptedUrls(all, res, 100)).toEqual([]);
+    });
+    it("非 429 失败（403/网络）不重试；未配置 retry429 时 429 也不重试（旧行为）", async () => {
+      const s = spySleep();
+      const f403 = fakeFetch([403]);
+      expect((await submitIndexNow({ ...opts, fetchImpl: f403.impl, retry429: { backoffMs: 1, maxRetries: 2, sleep: s.sleep } }))[0].retries).toBeUndefined();
+      const fNet = fakeFetch([-1]);
+      expect((await submitIndexNow({ ...opts, fetchImpl: fNet.impl, retry429: { backoffMs: 1, maxRetries: 2, sleep: s.sleep } }))[0]).toEqual({ status: 0, ok: false, submitted: 100 });
+      expect(s.waits).toEqual([]);
+      const fOld = fakeFetch([429]);
+      expect(await submitIndexNow({ ...opts, fetchImpl: fOld.impl })).toEqual([{ status: 429, ok: false, submitted: 100 }]);
+      expect(fOld.bodies.length).toBe(1);
+    });
+  });
+
   it("积压推完（快照覆盖全站）后 delta 为空，等价于旧「全量成功」状态", async () => {
     let snap: { lastmod: string; urls: string[] } | null = null;
     let runs = 0;

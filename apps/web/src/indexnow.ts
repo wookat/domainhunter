@@ -10,11 +10,18 @@ export const INDEXNOW_BATCH_MAX = 10000;
 // 已成功批次的 URL 计入 pushed 快照，剩余积压由下次 cron（6h 重试门）继续，避免全量批次反复 429 卡死增量。
 export const INDEXNOW_BATCH_SIZE = 100;
 export const INDEXNOW_RUN_MAX_BATCHES = 3;
+// 429 不一定是本站被判 spam：2026-09-06 00:00:58Z Worker 发 100 URL → 429，同一分钟段本机直连同 host/key 发 1 URL 与 100 URL 均 200。
+// 整点是各站 cron 同时打 api.indexnow.org 的高峰，且 Worker 出口 IP 与他人共享，故 429 视为瞬态：同批等 60s 再试一次（最多 2 次），仍 429 才停。
+// cron 单次 wall time 上限 15 min（Cloudflare Workers Limits），等待不计 CPU 时间。
+export const INDEXNOW_429_BACKOFF_MS = 60_000;
+export const INDEXNOW_429_MAX_RETRIES = 2;
 
 export interface IndexNowBatchResult {
   status: number;
   ok: boolean;
   submitted: number;
+  /** 本批因 429 重试的次数（0 = 首发即得出结论） */
+  retries?: number;
 }
 
 export const INDEXNOW_STATUS_TEXT: Record<number, string> = {
@@ -44,7 +51,11 @@ export interface IndexNowSubmitOptions {
   maxBatches?: number;
   /** 首个失败批次后不再继续发送（默认 false 保持旧行为） */
   stopOnFail?: boolean;
+  /** 同批 429 后等待 backoffMs 再重发，最多 maxRetries 次（默认不重试）；sleep 可注入以便测试 */
+  retry429?: { backoffMs: number; maxRetries: number; sleep?: (ms: number) => Promise<void> };
 }
+
+const realSleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 
 /** 按批提交；每批的 HTTP 状态单独返回，网络异常记为 status 0 */
 export async function submitIndexNow(opts: IndexNowSubmitOptions): Promise<IndexNowBatchResult[]> {
@@ -52,18 +63,27 @@ export async function submitIndexNow(opts: IndexNowSubmitOptions): Promise<Index
   const endpoint = opts.endpoint ?? INDEXNOW_ENDPOINT;
   const results: IndexNowBatchResult[] = [];
   const batches = chunkUrls(opts.urls, opts.batchSize ?? INDEXNOW_BATCH_MAX).slice(0, opts.maxBatches ?? Infinity);
+  const retry = opts.retry429;
+  const sleep = retry?.sleep ?? realSleep;
   for (const batch of batches) {
-    try {
-      const res = await doFetch(endpoint, {
-        method: "POST",
-        headers: { "content-type": "application/json; charset=utf-8" },
-        body: JSON.stringify({ host: opts.host, key: opts.key, keyLocation: opts.keyLocation, urlList: batch }),
-      });
-      results.push({ status: res.status, ok: res.status === 200 || res.status === 202, submitted: batch.length });
-    } catch {
-      results.push({ status: 0, ok: false, submitted: batch.length });
+    let result: IndexNowBatchResult = { status: 0, ok: false, submitted: batch.length };
+    for (let attempt = 0; ; attempt++) {
+      try {
+        const res = await doFetch(endpoint, {
+          method: "POST",
+          headers: { "content-type": "application/json; charset=utf-8" },
+          body: JSON.stringify({ host: opts.host, key: opts.key, keyLocation: opts.keyLocation, urlList: batch }),
+        });
+        result = { status: res.status, ok: res.status === 200 || res.status === 202, submitted: batch.length };
+      } catch {
+        result = { status: 0, ok: false, submitted: batch.length };
+      }
+      if (attempt > 0) result.retries = attempt;
+      if (result.status !== 429 || !retry || attempt >= retry.maxRetries) break;
+      await sleep(retry.backoffMs);
     }
-    if (opts.stopOnFail && !results[results.length - 1].ok) break;
+    results.push(result);
+    if (opts.stopOnFail && !result.ok) break;
   }
   return results;
 }
@@ -107,4 +127,9 @@ export function summarizeIndexNow(results: IndexNowBatchResult[]): { ok: boolean
   }
   const message = failed.status === 0 ? "Network error" : (INDEXNOW_STATUS_TEXT[failed.status] ?? `HTTP ${failed.status}`);
   return { ok: false, status: failed.status, message, submitted };
+}
+
+/** 本次运行因 429 重试的总次数（用于 lastError / 可观测性） */
+export function countRetries(results: IndexNowBatchResult[]): number {
+  return results.reduce((n, r) => n + (r.retries ?? 0), 0);
 }
