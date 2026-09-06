@@ -31,7 +31,7 @@ import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from 
 import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
 import { PageviewCounter, readDayPageviews, type DayPageviews } from "./pageviews";
 import { emptyDayUsage, readDayUsage, usageCounterFor, type DayUsage } from "./usage-counter";
-import { INDEXNOW_BATCH_SIZE, INDEXNOW_ENDPOINT, INDEXNOW_RUN_MAX_BATCHES, acceptedUrls, indexNowDelta, mergePushed, submitIndexNow, summarizeIndexNow, type IndexNowPushed } from "./indexnow";
+import { INDEXNOW_429_BACKOFF_MS, INDEXNOW_429_MAX_RETRIES, INDEXNOW_BATCH_SIZE, INDEXNOW_ENDPOINT, INDEXNOW_RUN_MAX_BATCHES, acceptedUrls, countRetries, indexNowDelta, mergePushed, submitIndexNow, summarizeIndexNow, type IndexNowPushed } from "./indexnow";
 import { pickPending, resolveBaiduPush, submitBaidu, summarizeBaidu, type BaiduPushVars } from "./baidu-push";
 import { injectHreflang, resolveLang, resolveSsrLang, SITE_ORIGIN, withHtmlVary } from "./ssr-lang";
 
@@ -1165,17 +1165,19 @@ app.get("/api/usage", async (c) => {
   let indexnowLast: number | null = null;
   let indexnowLastAttempt: number | null = null;
   let indexnowLastError: IndexNowError | null = null;
+  let indexnowLastResult: IndexNowRunResult | null = null;
   let indexnowPending: number | null = null;
   let pricesLastOk: number | null = null;
   let pricesLastFail: number | null = null;
   let baiduLast: number | null = null;
   let baiduLastError: BaiduPushError | null = null;
   try {
-    const [cl, il, ia, ie, ip, po, pf, bl, be] = await Promise.all([
+    const [cl, il, ia, ie, ir, ip, po, pf, bl, be] = await Promise.all([
       kv?.get("cron:last"),
       kv?.get(INDEXNOW_LAST_KEY),
       kv?.get(INDEXNOW_LAST_ATTEMPT_KEY),
       kv?.get<IndexNowError>(INDEXNOW_LAST_ERROR_KEY, "json"),
+      kv?.get<IndexNowRunResult>(INDEXNOW_LAST_RESULT_KEY, "json"),
       kv?.get<IndexNowPushed>(INDEXNOW_PUSHED_KEY, "json"),
       kv?.get(PRICES_LAST_OK_KEY),
       kv?.get(PRICES_LAST_FAIL_KEY),
@@ -1186,13 +1188,14 @@ app.get("/api/usage", async (c) => {
     indexnowLast = il ? Number(il) : null;
     indexnowLastAttempt = ia ? Number(ia) : null;
     indexnowLastError = ie ?? null;
+    indexnowLastResult = ir ?? null;
     if (kv) indexnowPending = indexNowDelta(ip ?? null, sitemapPaths().map((p) => `${SITE_ORIGIN}${p}`), CONTENT_LASTMOD).length;
     pricesLastOk = po ? Number(po) : null;
     pricesLastFail = pf ? Number(pf) : null;
     baiduLast = bl ? Number(bl) : null;
     baiduLastError = be ?? null;
   } catch { /* 读失败返回 null */ }
-  return c.json({ days: out, cronLast, indexnowLast, indexnowLastAttempt, indexnowLastError, indexnowPending, pricesLastOk, pricesLastFail, baiduLast, baiduLastError }, 200, { "cache-control": "public, max-age=300" });
+  return c.json({ days: out, cronLast, indexnowLast, indexnowLastAttempt, indexnowLastError, indexnowLastResult, indexnowPending, pricesLastOk, pricesLastFail, baiduLast, baiduLastError }, 200, { "cache-control": "public, max-age=300" });
 });
 
 // SPA 分享页路由：回 index.html + SSR 注入动态 og:image（SVG 不被支持的平台回退到紧随其后的静态 og.png）
@@ -2073,7 +2076,8 @@ app.all("*", async (c) => {
 
 // IndexNow：向 Bing/Yandex 等搜索引擎主动推送全站 URL（key 按协议公开，对应 public/<key>.txt 静态文件）
 // 状态键：indexnow:last = 最近一次成功（200/202）时间；indexnow:lastAttempt = 最近一次尝试时间（成功失败都写，
-// 用作 6h 冷却防止失败后每次 cron 都重发）；indexnow:lastError = 最近一次失败详情（成功后清除）；
+// 用作 5h 冷却防止失败后每次 cron 都重发）；indexnow:lastError = 最近一次失败详情（成功后清除）；
+// indexnow:lastResult = 最近一次真正发过请求的运行结果（成功失败都写，含 429 同批重试次数 retries，见 indexnow.ts）；
 // indexnow:pushed = 最近一次成功推送时的 { lastmod, urls } 快照——协议要求只在 URL 新增/更新/删除时提交，
 // 所以每日只推快照之外的新 URL，CONTENT_LASTMOD 变化时才全量重推；无增量则只刷新 indexnow:last，不发请求。
 // 分批/状态码语义见 indexnow.ts：每次 cron 最多推 3×100 URL，成功批次逐批并入快照，积压未清时不写 indexnow:last，
@@ -2086,12 +2090,19 @@ const INDEXNOW_RETRY_MS = 5 * 3600 * 1000;
 const INDEXNOW_LAST_KEY = "indexnow:last";
 const INDEXNOW_LAST_ATTEMPT_KEY = "indexnow:lastAttempt";
 const INDEXNOW_LAST_ERROR_KEY = "indexnow:lastError";
+const INDEXNOW_LAST_RESULT_KEY = "indexnow:lastResult";
 const INDEXNOW_PUSHED_KEY = "indexnow:pushed";
 interface IndexNowError {
   at: number;
   status: number;
   message: string;
   submitted: number;
+  /** 本次因 429 重试的总次数 */
+  retries?: number;
+}
+/** 每次真正发过请求的运行都写（成功失败均写），便于判断成功是否靠重试拿到 */
+interface IndexNowRunResult extends IndexNowError {
+  ok: boolean;
 }
 
 async function pingIndexNow(env: Bindings): Promise<void> {
@@ -2122,12 +2133,16 @@ async function pingIndexNow(env: Bindings): Promise<void> {
     batchSize: INDEXNOW_BATCH_SIZE,
     maxBatches: INDEXNOW_RUN_MAX_BATCHES,
     stopOnFail: true,
+    retry429: { backoffMs: INDEXNOW_429_BACKOFF_MS, maxRetries: INDEXNOW_429_MAX_RETRIES },
   });
   const summary = summarizeIndexNow(results);
+  const retries = countRetries(results);
   const accepted = acceptedUrls(urls, results, INDEXNOW_BATCH_SIZE);
   const snapshot = mergePushed(pushed, accepted, all, CONTENT_LASTMOD);
   const writes: Promise<unknown>[] = [];
   if (accepted.length > 0) writes.push(kv.put(INDEXNOW_PUSHED_KEY, JSON.stringify(snapshot)));
+  const run: IndexNowRunResult = { at: now, ok: summary.ok, status: summary.status, message: summary.message, submitted: summary.submitted, retries };
+  writes.push(kv.put(INDEXNOW_LAST_RESULT_KEY, JSON.stringify(run)));
   if (summary.ok) {
     // 本次全部批次成功：积压清零才算「今日已推送」，否则只靠 lastAttempt 的冷却门在下次 cron 继续推
     if (snapshot.urls.length >= all.length) writes.push(kv.put(INDEXNOW_LAST_KEY, String(now)));
@@ -2135,7 +2150,7 @@ async function pingIndexNow(env: Bindings): Promise<void> {
     await Promise.all(writes);
     return;
   }
-  const err: IndexNowError = { at: now, status: summary.status, message: summary.message, submitted: summary.submitted };
+  const err: IndexNowError = { at: now, status: summary.status, message: summary.message, submitted: summary.submitted, retries };
   console.error("indexnow failed", JSON.stringify(err));
   writes.push(kv.put(INDEXNOW_LAST_ERROR_KEY, JSON.stringify(err)));
   await Promise.all(writes);
