@@ -31,7 +31,7 @@ import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from 
 import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
 import { PageviewCounter, readDayPageviews, type DayPageviews } from "./pageviews";
 import { emptyDayUsage, readDayUsage, usageCounterFor, type DayUsage } from "./usage-counter";
-import { INDEXNOW_429_BACKOFF_MS, INDEXNOW_429_MAX_RETRIES, INDEXNOW_BATCH_SIZE, INDEXNOW_ENDPOINT, INDEXNOW_RUN_MAX_BATCHES, acceptedUrls, countRetries, indexNowDelta, mergePushed, submitIndexNow, summarizeIndexNow, type IndexNowPushed } from "./indexnow";
+import { INDEXNOW_429_BACKOFF_MS, INDEXNOW_429_MAX_RETRIES, INDEXNOW_BATCH_SIZE, INDEXNOW_ENDPOINT, INDEXNOW_FALLBACK_ENDPOINTS, INDEXNOW_RUN_MAX_BATCHES, acceptedUrls, countRetries, fallbackHosts, indexNowDelta, mergePushed, submitIndexNow, summarizeIndexNow, type IndexNowPushed } from "./indexnow";
 import { pickPending, resolveBaiduPush, submitBaidu, summarizeBaidu, type BaiduPushVars } from "./baidu-push";
 import { injectHreflang, resolveLang, resolveSsrLang, SITE_ORIGIN, withHtmlVary } from "./ssr-lang";
 
@@ -59,6 +59,8 @@ type Bindings = GrowthVars & BaiduPushVars & {
   REGISTRAR_AFFILIATE_JSON?: string;
   /** 仅本地 wrangler dev 指向 mock 端点验证 cron 推送路径；生产不配置 = 官方 api.indexnow.org */
   INDEXNOW_ENDPOINT?: string;
+  /** 仅本地：逗号分隔的备用端点；配了 INDEXNOW_ENDPOINT 而未配本项 = 不换端点（免得 mock 测试打到真引擎）；生产不配置 = INDEXNOW_FALLBACK_ENDPOINTS */
+  INDEXNOW_FALLBACK_ENDPOINTS?: string;
 };
 
 const app = new Hono<{ Bindings: Bindings }>();
@@ -2077,7 +2079,7 @@ app.all("*", async (c) => {
 // IndexNow：向 Bing/Yandex 等搜索引擎主动推送全站 URL（key 按协议公开，对应 public/<key>.txt 静态文件）
 // 状态键：indexnow:last = 最近一次成功（200/202）时间；indexnow:lastAttempt = 最近一次尝试时间（成功失败都写，
 // 用作 5h 冷却防止失败后每次 cron 都重发）；indexnow:lastError = 最近一次失败详情（成功后清除）；
-// indexnow:lastResult = 最近一次真正发过请求的运行结果（成功失败都写，含 429 同批重试次数 retries，见 indexnow.ts）；
+// indexnow:lastResult = 最近一次真正发过请求的运行结果（成功失败都写，含 429 同批重试次数 retries 与实际落在的备用端点 fallbackHosts，见 indexnow.ts）；
 // indexnow:pushed = 最近一次成功推送时的 { lastmod, urls } 快照——协议要求只在 URL 新增/更新/删除时提交，
 // 所以每日只推快照之外的新 URL，CONTENT_LASTMOD 变化时才全量重推；无增量则只刷新 indexnow:last，不发请求。
 // 分批/状态码语义见 indexnow.ts：每次 cron 最多推 3×100 URL，成功批次逐批并入快照，积压未清时不写 indexnow:last，
@@ -2099,6 +2101,8 @@ interface IndexNowError {
   submitted: number;
   /** 本次因 429 重试的总次数 */
   retries?: number;
+  /** 成功批次因主端点 429 而实际落在的备用端点 host（全走主端点时不写） */
+  fallbackHosts?: string[];
 }
 /** 每次真正发过请求的运行都写（成功失败均写），便于判断成功是否靠重试拿到 */
 interface IndexNowRunResult extends IndexNowError {
@@ -2124,6 +2128,9 @@ async function pingIndexNow(env: Bindings): Promise<void> {
     return;
   }
   const host = SITE_ORIGIN.replace(/^https?:\/\//, "");
+  const fallbackEndpoints = env.INDEXNOW_FALLBACK_ENDPOINTS !== undefined
+    ? env.INDEXNOW_FALLBACK_ENDPOINTS.split(",").map((s) => s.trim()).filter(Boolean)
+    : env.INDEXNOW_ENDPOINT ? [] : INDEXNOW_FALLBACK_ENDPOINTS;
   const results = await submitIndexNow({
     host,
     key: INDEXNOW_KEY,
@@ -2134,14 +2141,17 @@ async function pingIndexNow(env: Bindings): Promise<void> {
     maxBatches: INDEXNOW_RUN_MAX_BATCHES,
     stopOnFail: true,
     retry429: { backoffMs: INDEXNOW_429_BACKOFF_MS, maxRetries: INDEXNOW_429_MAX_RETRIES },
+    fallbackEndpoints,
   });
   const summary = summarizeIndexNow(results);
   const retries = countRetries(results);
+  const hosts = fallbackHosts(results);
   const accepted = acceptedUrls(urls, results, INDEXNOW_BATCH_SIZE);
   const snapshot = mergePushed(pushed, accepted, all, CONTENT_LASTMOD);
   const writes: Promise<unknown>[] = [];
   if (accepted.length > 0) writes.push(kv.put(INDEXNOW_PUSHED_KEY, JSON.stringify(snapshot)));
   const run: IndexNowRunResult = { at: now, ok: summary.ok, status: summary.status, message: summary.message, submitted: summary.submitted, retries };
+  if (hosts.length > 0) run.fallbackHosts = hosts;
   writes.push(kv.put(INDEXNOW_LAST_RESULT_KEY, JSON.stringify(run)));
   if (summary.ok) {
     // 本次全部批次成功：积压清零才算「今日已推送」，否则只靠 lastAttempt 的冷却门在下次 cron 继续推

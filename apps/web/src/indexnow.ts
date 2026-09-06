@@ -15,6 +15,17 @@ export const INDEXNOW_RUN_MAX_BATCHES = 3;
 // cron 单次 wall time 上限 15 min（Cloudflare Workers Limits），等待不计 CPU 时间。
 export const INDEXNOW_429_BACKOFF_MS = 60_000;
 export const INDEXNOW_429_MAX_RETRIES = 2;
+// 2026-09-06 06:00Z 生产 cron 首发+2 次 60s 重试仍 429；06:06Z 用独立探针 Worker 复现：从 Workers 出口发 5 个 URL 到
+// api.indexnow.org / www.bing.com 均 429（"you have sent too many requests to us recently"），同一分钟本机直连 200，
+// 而 yandex 202、seznam/naver/yep 200 —— 是 Bing 侧按来源 IP 限流 Workers 共享出口，与时间/批量无关。
+// 协议规定提交到任一参与引擎即共享给全部引擎（indexnow.org/faq），故主端点 429 时立刻换下一个端点重发同批，
+// 全部 429 才进入 60s 退避重试。顺序按探针实测时延。
+export const INDEXNOW_FALLBACK_ENDPOINTS = [
+  "https://yandex.com/indexnow",
+  "https://search.seznam.cz/indexnow",
+  "https://searchadvisor.naver.com/indexnow",
+  "https://indexnow.yep.com/indexnow",
+];
 
 export interface IndexNowBatchResult {
   status: number;
@@ -22,6 +33,8 @@ export interface IndexNowBatchResult {
   submitted: number;
   /** 本批因 429 重试的次数（0 = 首发即得出结论） */
   retries?: number;
+  /** 本批最终结果来自哪个备用端点（主端点得出结论时不写） */
+  endpoint?: string;
 }
 
 export const INDEXNOW_STATUS_TEXT: Record<number, string> = {
@@ -53,6 +66,8 @@ export interface IndexNowSubmitOptions {
   stopOnFail?: boolean;
   /** 同批 429 后等待 backoffMs 再重发，最多 maxRetries 次（默认不重试）；sleep 可注入以便测试 */
   retry429?: { backoffMs: number; maxRetries: number; sleep?: (ms: number) => Promise<void> };
+  /** 主端点 429 时按序改发的备用端点（默认不换端点） */
+  fallbackEndpoints?: string[];
 }
 
 const realSleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
@@ -63,20 +78,25 @@ export async function submitIndexNow(opts: IndexNowSubmitOptions): Promise<Index
   const endpoint = opts.endpoint ?? INDEXNOW_ENDPOINT;
   const results: IndexNowBatchResult[] = [];
   const batches = chunkUrls(opts.urls, opts.batchSize ?? INDEXNOW_BATCH_MAX).slice(0, opts.maxBatches ?? Infinity);
+  const endpoints = [endpoint, ...(opts.fallbackEndpoints ?? [])];
   const retry = opts.retry429;
   const sleep = retry?.sleep ?? realSleep;
   for (const batch of batches) {
     let result: IndexNowBatchResult = { status: 0, ok: false, submitted: batch.length };
     for (let attempt = 0; ; attempt++) {
-      try {
-        const res = await doFetch(endpoint, {
-          method: "POST",
-          headers: { "content-type": "application/json; charset=utf-8" },
-          body: JSON.stringify({ host: opts.host, key: opts.key, keyLocation: opts.keyLocation, urlList: batch }),
-        });
-        result = { status: res.status, ok: res.status === 200 || res.status === 202, submitted: batch.length };
-      } catch {
-        result = { status: 0, ok: false, submitted: batch.length };
+      for (let i = 0; i < endpoints.length; i++) {
+        try {
+          const res = await doFetch(endpoints[i], {
+            method: "POST",
+            headers: { "content-type": "application/json; charset=utf-8" },
+            body: JSON.stringify({ host: opts.host, key: opts.key, keyLocation: opts.keyLocation, urlList: batch }),
+          });
+          result = { status: res.status, ok: res.status === 200 || res.status === 202, submitted: batch.length };
+        } catch {
+          result = { status: 0, ok: false, submitted: batch.length };
+        }
+        if (i > 0) result.endpoint = endpoints[i];
+        if (result.status !== 429) break;
       }
       if (attempt > 0) result.retries = attempt;
       if (result.status !== 429 || !retry || attempt >= retry.maxRetries) break;
@@ -132,4 +152,15 @@ export function summarizeIndexNow(results: IndexNowBatchResult[]): { ok: boolean
 /** 本次运行因 429 重试的总次数（用于 lastError / 可观测性） */
 export function countRetries(results: IndexNowBatchResult[]): number {
   return results.reduce((n, r) => n + (r.retries ?? 0), 0);
+}
+
+/** 本次运行成功批次实际落在的备用端点 host（去重、保序；全部走主端点则为空） */
+export function fallbackHosts(results: IndexNowBatchResult[]): string[] {
+  const out: string[] = [];
+  for (const r of results) {
+    if (!r.ok || !r.endpoint) continue;
+    const host = new URL(r.endpoint).host;
+    if (!out.includes(host)) out.push(host);
+  }
+  return out;
 }
