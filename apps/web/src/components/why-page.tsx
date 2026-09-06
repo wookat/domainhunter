@@ -23,6 +23,8 @@ interface WhyCopy {
   caps: { title: string; desc: string }[];
   tableTitle: string;
   tableNote: string;
+  /** 首列（对比项）的屏幕阅读器列头 */
+  tableFeatureCol: string;
   cols: string[];
   rows: { feature: string; cells: ("yes" | "no" | "partial")[] }[];
   cta: string;
@@ -57,6 +59,7 @@ const COPY: Record<"zh" | "en", WhyCopy> = {
     ],
     tableTitle: "和其他找名字的方式比：我们强在哪、弱在哪",
     tableNote: "对比对象为常见工具类型的典型能力，具体产品各有差异；英文通用起名不是我们的主场，如实标出。",
+    tableFeatureCol: "对比项",
     cols: ["英文域名搜索工具", "AI 起名工具", "直接问 ChatGPT", "DomainHunter"],
     rows: [
       { feature: "理解中文寓意，沿拼音 / 混搭构思", cells: ["no", "partial", "partial", "yes"] },
@@ -98,6 +101,7 @@ const COPY: Record<"zh" | "en", WhyCopy> = {
     ],
     tableTitle: "Compared with other ways to find a name — where we're stronger and weaker",
     tableNote: "Comparison reflects typical capabilities of each tool category; individual products vary. Generic English naming is not our home turf, and we say so.",
+    tableFeatureCol: "Capability",
     cols: ["English domain search", "AI name generators", "Asking ChatGPT", "DomainHunter"],
     rows: [
       { feature: "Understands Chinese meaning; pinyin / blend routes", cells: ["no", "partial", "partial", "yes"] },
@@ -172,9 +176,11 @@ export function WhyPage() {
         <table className="w-full min-w-[560px] text-sm">
           <thead>
             <tr className="border-b border-line bg-bg1 text-left">
-              <th className="px-3 py-2.5 text-xs font-semibold text-txt1"></th>
+              <th scope="col" className="px-3 py-2.5 text-xs font-semibold text-txt1">
+                <span className="sr-only">{c.tableFeatureCol}</span>
+              </th>
               {c.cols.map((col, i) => (
-                <th key={col} className={`whitespace-nowrap px-3 py-2.5 text-center text-xs font-semibold ${i === c.cols.length - 1 ? "text-brand" : "text-txt1"}`}>
+                <th key={col} scope="col" className={`whitespace-nowrap px-3 py-2.5 text-center text-xs font-semibold ${i === c.cols.length - 1 ? "text-brand" : "text-txt1"}`}>
                   {col}
                 </th>
               ))}
@@ -183,7 +189,7 @@ export function WhyPage() {
           <tbody>
             {c.rows.map((r) => (
               <tr key={r.feature} className="border-b border-line/60 last:border-0">
-                <td className="px-3 py-2.5 text-[13px] text-txt1">{r.feature}</td>
+                <th scope="row" className="px-3 py-2.5 text-left text-[13px] font-normal text-txt1">{r.feature}</th>
                 {r.cells.map((v, i) => (
                   <td key={i} className={`px-3 py-2.5 text-center ${i === r.cells.length - 1 ? "bg-brand-dim/20" : ""}`}>
                     <Cell v={v} />

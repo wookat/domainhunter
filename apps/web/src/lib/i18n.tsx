@@ -2,6 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 import { HOME_FAQ, HOME_HERO, HOME_META } from "@/content/home-copy";
 import { NOT_FOUND_META } from "@/content/not-found-copy";
+import { ADVANCED_META, WHY_META } from "@/content/page-meta";
 import { TLD_LIST } from "@/content/tld-list";
 import { shareSsrTitle, type ShareItem, type ShareShellState } from "@/share-items";
 
@@ -1066,8 +1067,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     } catch { /* ignore */ }
     const path = window.location.pathname;
     if (path === "/prices") document.title = `${dicts[lang]["prices.title"]} | DomainHunter`;
-    else if (path === "/why") document.title = `${dicts[lang]["footer.why"]} | DomainHunter`;
-    else if (path === "/advanced") document.title = `${dicts[lang]["adv.title"]} | DomainHunter`;
+    else if (path === "/why") document.title = `${WHY_META[lang].title} | DomainHunter`;
+    else if (path === "/advanced") document.title = `${ADVANCED_META[lang].title} | DomainHunter`;
     else if (path === "/monitors") document.title = `${dicts[lang]["monitors.title"]} | DomainHunter`;
     else if (HOME_TITLE_PATHS.has(path)) document.title = dicts[lang]["meta.title"];
     // 其余顶层路径 = 未知路由（worker 已回 404 壳）：切语言后 title 也保持「页面不存在」，不回落成首页 title

@@ -7,8 +7,9 @@ import worker from "./worker";
 import { shareGoneMeta, shareShellState } from "./share-items";
 
 // 与 index.html 同结构的最小壳：SSR 路由只做正则替换，这里验证替换后的状态码 / robots / title / description
-const SHELL = `<!doctype html><html><head>
+const SHELL = `<!doctype html><html lang="zh-CN"><head>
     <title>DomainHunter — 首页长标题</title>
+    <meta property="og:locale" content="zh_CN" />
     <meta name="description" content="首页描述" />
     <link rel="canonical" href="https://hunt.zalize.com/" />
     <meta property="og:title" content="DomainHunter — 首页" />
@@ -49,6 +50,8 @@ async function shell(path: string, kv: Record<string, unknown>, headers: Record<
     ogTitle: pick(/<meta property="og:title" content="([^"]*)" \/>/),
     robots: pick(/<meta name="robots" content="([^"]*)" \/>/),
     canonical: pick(/<link rel="canonical" href="([^"]*)" \/>/),
+    htmlLang: pick(/<html lang="([^"]*)"/),
+    ogLocale: pick(/<meta property="og:locale" content="([^"]*)"/),
   };
 }
 
@@ -116,5 +119,23 @@ describe("GET /s/:id SSR 壳（R510）", () => {
     expect(r.title).toBe("2 个可注册域名候选 | DomainHunter");
     expect(r.desc).toContain("zalize.com、zalize.cn");
     expect(r.html).toContain('content="https://hunt.zalize.com/api/og/live1"');
+  });
+
+  it("三态 <html lang> / og:locale 随解析语言（R552）：?lang=en 与 Accept-Language en 为 en/en_US，zh 保持 zh-CN/zh_CN", async () => {
+    for (const [path, kv] of [
+      ["/s/live1", { "share:live1": LIVE }],
+      ["/s/abc123", { "share:abc123": REVOKED }],
+      ["/s/nope-404", {}],
+    ] as const) {
+      const zh = await shell(path, kv);
+      expect(zh.htmlLang).toBe("zh-CN");
+      expect(zh.ogLocale).toBe("zh_CN");
+      const en = await shell(`${path}?lang=en`, kv);
+      expect(en.htmlLang).toBe("en");
+      expect(en.ogLocale).toBe("en_US");
+      const al = await shell(path, kv, { "accept-language": "en-US,en;q=0.9" });
+      expect(al.htmlLang).toBe("en");
+      expect(al.ogLocale).toBe("en_US");
+    }
   });
 });
