@@ -30,12 +30,16 @@ export interface InjectedTldContent {
   guide: TldGuide;
   relatedGuides: GuideLink[];
   relatedCompares: CompareLink[];
+  /** 首屏价格卡 + 「相关 TLD」chip 的价格快照（本 TLD + 同组相关 TLD），与 SSR 同源 /api/prices KV；缺失时客户端回落 /api/prices 拉取 */
+  prices?: ComparePriceSnapshot;
 }
 
 export interface InjectedGuideContent {
   kind: "guide";
   slug: string;
   guide: IndustryGuide;
+  /** 「推荐 TLD」卡的价格快照（guide.tlds），同上 */
+  prices?: ComparePriceSnapshot;
 }
 
 export interface InjectedVsContent {

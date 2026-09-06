@@ -8,6 +8,7 @@
 import { TLD_COMPARES, comparesForTld, type TldCompare } from "./compares";
 import { buildCompareFaq, COMPARE_VERDICT_ANCHOR, comparePickAnchor } from "./compare-faq";
 import { buildComparePriceView, type ComparePriceSnapshot, type ComparePriceView, type PriceCell } from "./compare-prices";
+import { priceFull, priceShort } from "./price-text";
 import type { FaqItem } from "./faq";
 import { splitFaqAnswer } from "./faq";
 import { buildGuideFaq, GUIDE_IDEAS_ANCHOR, GUIDE_PITFALLS_ANCHOR } from "./guide-faq";
@@ -23,7 +24,7 @@ import { HOME_NAV_FEATURED, SITE_LINKS, SITE_LINKS_HEADING, langHref } from "./s
 import { relatedTlds } from "./tld-groups";
 import { TLD_GUIDES, type TldGuide } from "./tlds";
 import { TLD_LIST } from "./tld-list";
-import { toUsd } from "../lib/currency";
+import { toCny, toUsd } from "../lib/currency";
 import { tldPrice } from "../types";
 
 type Lang = "zh" | "en";
@@ -31,21 +32,11 @@ type Lang = "zh" | "en";
 export const escapeHtml = (s: string): string =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-/** lib/prices.ts priceFull 的静态参考价分支（prices 未加载时的首次渲染文案，逐字一致） */
-function staticPriceFull(tld: string, lang: Lang): string | undefined {
-  const s = tldPrice(tld);
-  if (!s) return undefined;
-  return lang === "en"
-    ? `Static reference: ≈$${toUsd(s.first)} (¥${s.first}) 1st yr · ¥${s.renew}/yr renewal · not a live quote`
-    : `静态参考价：首年 ¥${s.first} · 续费 ¥${s.renew}/年 · 非实时报价`;
-}
+/** 无价格快照时的占位（KV 为空）：全部回落静态参考价，与客户端 /api/prices 尚未返回时的首次渲染一致 */
+const NO_PRICES: ComparePriceSnapshot = { live: {}, fetchedAt: null, stale: true };
 
-/** lib/prices.ts priceShort 的静态参考价分支（逐字一致） */
-function staticPriceShort(tld: string, lang: Lang): string | undefined {
-  const s = tldPrice(tld);
-  if (!s) return undefined;
-  return lang === "en" ? `1st yr ≈$${toUsd(s.first)}` : `首年 ¥${s.first}`;
-}
+/** lib/prices.ts priceFull 的静态参考价分支（/vs 两侧卡：prices 未加载时的首次渲染文案，逐字一致） */
+const staticPriceFull = (tld: string, lang: Lang): string | undefined => priceFull(tld, lang, null);
 
 /* lucide-react v1.27 图标的等价 SVG（与对应组件同 path），保持骨架布局/视觉一致 */
 const icon = (name: string, cls: string, inner: string) =>
@@ -76,6 +67,10 @@ const STR = {
     tldCtaTitle: (tld: string) => `马上猎一个 .${tld} 好域名`, // tld.ctaTitle
     tldCtaDesc: (tld: string) => `描述你的想法，AI 批量构思并实时核验 .${tld} 下的可注册好名字。`, // tld.ctaDesc
     tldCtaButton: (tld: string) => `开始猎取 .${tld}`, // tld.ctaButton
+    priceReg: "注册", // tld.priceReg
+    priceRenew: "续费", // tld.priceRenew
+    priceSource: "Porkbun 实时价 · 人民币按汇率 7.2 估算", // tld.priceSource
+    priceLoading: "价格加载中…", // tld.priceLoading
     others: "其他 TLD 指南", // tld.others
     relatedTlds: "相关 TLD", // tld.relatedTlds
     relatedGuides: "相关行业命名指南", // tld.relatedGuides
@@ -109,6 +104,10 @@ const STR = {
     tldCtaTitle: (tld: string) => `Hunt a great .${tld} domain right now`,
     tldCtaDesc: (tld: string) => `Describe your idea — AI brainstorms names in bulk and checks .${tld} availability live.`,
     tldCtaButton: (tld: string) => `Start hunting .${tld}`,
+    priceReg: "Register",
+    priceRenew: "Renew",
+    priceSource: "Live Porkbun pricing · CNY estimated at 7.2 per USD",
+    priceLoading: "Loading prices…",
     others: "More TLD guides",
     relatedTlds: "Related TLDs",
     relatedGuides: "Related industry naming guides",
@@ -217,15 +216,24 @@ export function siteLinksHtml(lang: Lang): string {
   ).join("")}</div></nav>`;
 }
 
-/** /tld/:tld 全文正文（tld-page.tsx 首次渲染的静态部分） */
-export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): string[] {
+/** 首屏价格卡内容：快照有实时价 → 注册/续费两段 + 来源；否则静态参考价一句（DOM 与 tld-page.tsx 逐字一致） */
+function tldPriceCardInner(tld: string, lang: Lang, prices: ComparePriceSnapshot): string {
+  const s = STR[lang];
+  const live = prices.live[tld];
+  if (!live) return `<span class="text-sm text-txt1">${escapeHtml(priceFull(tld, lang, prices.live) ?? s.priceLoading)}</span>`;
+  const amount = (usd: number) => `<b class="tnum font-mono">$${usd}</b><span class="tnum ml-1 text-xs text-txt2">≈ ¥${toCny(usd)}</span>`;
+  return `<span class="text-sm">${escapeHtml(s.priceReg)} ${amount(live.registration)}</span><span class="text-sm">${escapeHtml(s.priceRenew)} ${amount(live.renewal)}</span><span class="text-[11px] text-txt2">${escapeHtml(s.priceSource)}</span>`;
+}
+
+/** /tld/:tld 全文正文（tld-page.tsx 首次渲染；价格取自与 /api/prices 同源的 KV 快照，快照缺价时回落静态参考价） */
+export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang, prices: ComparePriceSnapshot = NO_PRICES): string[] {
   const s = STR[lang];
   const loc = guide[lang];
   const faq = buildTldFaq(tld, loc, lang);
   const relatedGuides = guidesForTld(tld);
   const relatedCompares = comparesForTld(tld).slice(0, 6);
   const groupTlds = relatedTlds(tld);
-  const priceCard = `<div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-line bg-bg1 px-5 py-4">${ICON_TAG}<span class="text-sm text-txt1">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</span><a href="${langHref(`/prices`, lang)}" class="ml-auto inline-flex min-h-[44px] items-center text-xs text-txt2 hover:text-brand hover:underline sm:min-h-[36px]">${escapeHtml(s.seeAll)}</a></div>`;
+  const priceCard = `<div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-line bg-bg1 px-5 py-4">${ICON_TAG}${tldPriceCardInner(tld, lang, prices)}<a href="${langHref(`/prices`, lang)}" class="ml-auto inline-flex min-h-[44px] items-center text-xs text-txt2 hover:text-brand hover:underline sm:min-h-[36px]">${escapeHtml(s.seeAll)}</a></div>`;
   const bestFor = sectionH2(ICON_CHECK, s.bestFor) +
     `<ul class="mt-3 grid gap-2 sm:grid-cols-2">${loc.bestFor.map((it) => `<li class="rounded-lg border border-line bg-bg1 px-3.5 py-2.5 text-sm text-txt1">${escapeHtml(it)}</li>`).join("")}</ul>`;
   const naming = sectionH2(ICON_BULB, s.naming, TLD_NAMING_ANCHOR) + dotList(loc.namingTips);
@@ -233,10 +241,7 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
   const others = chipRow(
     s.others,
     otherChips.chips
-      .map((other) => {
-        const price = staticPriceShort(other, lang);
-        return `<a href="${langHref(`/tld/${other}`, lang)}" class="inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0 border-line text-txt1 hover:border-brand-line hover:text-brand">.${other}${price ? `<span class="tnum ml-1.5 text-[10px] text-txt1">${escapeHtml(price)}</span>` : ""}</a>`;
-      })
+      .map((other) => `<a href="${langHref(`/tld/${other}`, lang)}" class="inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0 border-line text-txt1 hover:border-brand-line hover:text-brand">.${other}</a>`)
       .join("") + viewAllChip(viewAllHref("tld", otherChips.anchor, lang), VIEW_ALL_LABEL.tld[lang]),
     "mt-10",
   );
@@ -253,7 +258,7 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
         s.relatedTlds,
         groupTlds
           .map((other) => {
-            const price = staticPriceShort(other, lang);
+            const price = priceShort(other, lang, prices.live);
             return `<a href="${langHref(`/tld/${other}`, lang)}" class="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">.${other}${price ? `<span class="tnum ml-1.5 text-[10px] text-txt1">${escapeHtml(price)}</span>` : ""}</a>`;
           })
           .join(""),
@@ -372,8 +377,8 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang, prices: Compar
   ];
 }
 
-/** /guide/:slug 全文正文（guide-page.tsx 首次渲染的静态部分） */
-export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
+/** /guide/:slug 全文正文（guide-page.tsx 首次渲染；「推荐 TLD」卡价格取自与 /api/prices 同源的 KV 快照） */
+export function guideContentBlocks(guide: IndustryGuide, lang: Lang, prices: ComparePriceSnapshot = NO_PRICES): string[] {
   const s = STR[lang];
   const loc = guide[lang];
   const compliance = guide.kind === "compliance";
@@ -397,7 +402,7 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
   const tlds = sectionH2(ICON_SPARKLES_BRAND, compliance ? s.guideRelatedTlds : s.guideTlds) +
     `<div class="mt-3 grid gap-2 sm:grid-cols-3">${guide.tlds
       .map((rec) => {
-        const price = staticPriceShort(rec.tld, lang);
+        const price = priceShort(rec.tld, lang, prices.live);
         return `<a href="${langHref(`/tld/${rec.tld}`, lang)}" class="flex min-h-[44px] flex-col justify-center rounded-lg border border-line bg-bg1 px-3.5 py-2.5 transition-colors hover:border-brand-line"><span class="font-mono text-sm font-semibold text-brand">.${rec.tld}${price ? `<span class="tnum ml-1.5 text-[10px] font-normal text-txt2">${escapeHtml(price)}</span>` : ""}</span><span class="mt-0.5 text-xs leading-relaxed text-txt1">${escapeHtml(rec[lang])}</span></a>`;
       })
       .join("")}</div>`;

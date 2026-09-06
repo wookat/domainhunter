@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 
-import { tldPrice } from "@/types";
+import type { ComparePriceSnapshot } from "@/content/compare-prices";
+import { priceFull, priceShort, type LivePrice, type PriceMap } from "@/content/price-text";
 import { toCny, toUsd } from "@/lib/currency";
 
-export { toCny, toUsd };
+export { priceFull, priceShort, toCny, toUsd, type LivePrice, type PriceMap };
 
-export interface LivePrice {
-  registration: number;
-  renewal: number;
+/** 内容页价格：优先 SSR 注入的 KV 快照（与首屏 HTML 逐字一致）；注入缺失或 KV 为空（fetchedAt null）才用 /api/prices 拉取结果 */
+export function pickPrices(snapshot: ComparePriceSnapshot | undefined, fetched: PriceMap | null): PriceMap | null {
+  return snapshot && snapshot.fetchedAt !== null ? snapshot.live : fetched;
 }
-
-export type PriceMap = Record<string, LivePrice>;
 
 export interface PriceMeta {
   /** 后端回退了 stale 缓存（或完全无数据） */
@@ -71,28 +70,4 @@ export function usePricesSettled(): boolean {
 /** 价格元信息：stale 回退标记 + 拉取时间（仅 /prices 页轻提示用） */
 export function usePriceMeta(): PriceMeta | null {
   return usePricesResult()?.meta ?? null;
-}
-
-/** 紧凑价：实时价优先（Porkbun 美元），失败回退静态参考价；按界面语言展示主币种 */
-export function priceShort(tld: string, lang: "zh" | "en", prices: PriceMap | null): string | undefined {
-  const p = prices?.[tld];
-  if (p) return lang === "en" ? `1st yr $${p.registration}` : `首年 $${p.registration} ≈¥${toCny(p.registration)}`;
-  const s = tldPrice(tld);
-  if (!s) return undefined;
-  return lang === "en" ? `1st yr ≈$${toUsd(s.first)}` : `首年 ¥${s.first}`;
-}
-
-/** 完整价（tooltip）：带来源标记——Porkbun 实时价 vs 静态参考价 */
-export function priceFull(tld: string, lang: "zh" | "en", prices: PriceMap | null): string | undefined {
-  const p = prices?.[tld];
-  if (p) {
-    return lang === "en"
-      ? `Porkbun live: $${p.registration} 1st yr (≈¥${toCny(p.registration)}) · renews $${p.renewal}/yr (¥ est. at 7.2)`
-      : `Porkbun 实时价：首年 $${p.registration}（≈¥${toCny(p.registration)}）· 续费 $${p.renewal}/年（汇率 7.2 估算）`;
-  }
-  const s = tldPrice(tld);
-  if (!s) return undefined;
-  return lang === "en"
-    ? `Static reference: ≈$${toUsd(s.first)} (¥${s.first}) 1st yr · ¥${s.renew}/yr renewal · not a live quote`
-    : `静态参考价：首年 ¥${s.first} · 续费 ¥${s.renew}/年 · 非实时报价`;
 }
