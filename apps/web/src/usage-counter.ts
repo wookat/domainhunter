@@ -28,6 +28,8 @@ export interface DayUsage {
   outbound?: Partial<Record<RegistrarId, number>>;
   /** 当日注册商外链点击数，按 TLD 聚合（仅 TLD_LIST 内的后缀，其余记 other） */
   outboundByTld?: Record<string, number>;
+  /** 当日浏览器上报的 CSP（Report-Only）违规条数（R533；仅数字，样本见 csp:samples:v1；旧数据无此字段） */
+  cspReports?: number;
 }
 
 export const USAGE_KEY_PREFIX = "usage:";
@@ -126,6 +128,14 @@ export class UsageCounter extends ShardedDayCounter<DayUsage> {
     return this.add((d) => {
       if (retries > 0) d.shareWriteRetry = (d.shareWriteRetry ?? 0) + retries;
       if (failed) d.shareWriteFail = (d.shareWriteFail ?? 0) + 1;
+    });
+  }
+
+  /** 一次 POST /api/csp-report 里解析出的违规条数 */
+  cspReport(count: number): Promise<void> {
+    if (count <= 0) return Promise.resolve();
+    return this.add((d) => {
+      d.cspReports = (d.cspReports ?? 0) + count;
     });
   }
 }
