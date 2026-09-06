@@ -581,8 +581,11 @@ export function HomePage({
 
         <div className="mt-4 overflow-hidden rounded-2xl border border-line-strong bg-bg2 shadow-[0_24px_48px_-24px_rgba(0,0,0,.5)] focus-within:border-brand-line">
           <textarea
+            id="home-description"
+            name="description"
             rows={3}
             className="w-full resize-none bg-transparent px-5 pb-2 pt-4 text-[15px] leading-relaxed outline-none"
+            aria-label={t(searchMode === "exact" ? "home.descriptionAriaExact" : "home.descriptionAria")}
             placeholder={t(searchMode === "exact" ? "home.placeholderExact" : "home.placeholder")}
             value={description}
             maxLength={MAX_LEN}

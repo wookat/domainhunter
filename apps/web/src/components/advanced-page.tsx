@@ -121,8 +121,11 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
         </p>
         <p className="mt-1 text-xs text-txt1">{t("adv.bulkHint", { n: MAX_BULK })}</p>
         <textarea
+          id="advanced-bulk"
+          name="bulk"
           value={bulk}
           onChange={(e) => setBulk(e.target.value)}
+          aria-label={t("adv.bulkAria")}
           placeholder={t("adv.bulkPlaceholder")}
           rows={5}
           className="mt-3 w-full rounded-lg border border-line bg-bg2 px-3 py-2.5 font-mono text-sm text-txt0 placeholder:text-txt2 focus:border-brand-line focus:outline-none"
