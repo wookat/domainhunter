@@ -1,0 +1,386 @@
+[
+  {
+    "at": "2026-09-06T18:01:34.484709+00:00",
+    "method": "GET",
+    "path": "/api/stats",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:01:34.492026+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:01:34.504608+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:01:35.426031+00:00",
+    "method": "POST",
+    "path": "/api/search",
+    "body": "{\"roots\":[\"google\"],\"tlds\":[\"com\",\"cn\",\"io\",\"ai\",\"app\",\"dev\",\"co\",\"net\",\"me\"]}"
+  },
+  {
+    "at": "2026-09-06T18:01:50.961252+00:00",
+    "method": "POST",
+    "path": "/api/search",
+    "body": "{\"roots\":[\"r558qa7k3x\"],\"tlds\":[\"com\",\"cn\",\"io\",\"ai\",\"app\",\"dev\",\"co\",\"net\",\"me\"]}"
+  },
+  {
+    "at": "2026-09-06T18:02:16.977574+00:00",
+    "method": "POST",
+    "path": "/api/search",
+    "body": "{\"domains\":[\"r558qa7k3x.ai\"]}"
+  },
+  {
+    "at": "2026-09-06T18:02:25.398537+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:02:25.524508+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:02:46.968883+00:00",
+    "method": "POST",
+    "path": "/api/click",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:02:47.013834+00:00",
+    "method": "POST",
+    "path": "/api/click",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:03:16.038765+00:00",
+    "method": "POST",
+    "path": "/api/click",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:03:16.068194+00:00",
+    "method": "POST",
+    "path": "/api/click",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:03:50.736289+00:00",
+    "method": "POST",
+    "path": "/api/share",
+    "body": "{\"items\":[{\"domain\":\"google.com\",\"status\":\"taken\"},{\"domain\":\"r558qa7k3x.com\",\"status\":\"available\"},{\"domain\":\"r558qa7k3x.cn\",\"status\":\"available\"}]}"
+  },
+  {
+    "at": "2026-09-06T18:04:00.437794+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:00.472712+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:00.475496+00:00",
+    "method": "GET",
+    "path": "/api/share/zRTK4rCk4o",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:11.207326+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:11.246328+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:11.246775+00:00",
+    "method": "GET",
+    "path": "/api/share/zRTK4rCk4o",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:25.900746+00:00",
+    "method": "DELETE",
+    "path": "/api/share/zRTK4rCk4o",
+    "body": "{\"token\":\"zJoVAX_og4TO26-j5Tq5OPUI\"}"
+  },
+  {
+    "at": "2026-09-06T18:04:26.868126+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:26.904483+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:26.904881+00:00",
+    "method": "GET",
+    "path": "/api/share/zRTK4rCk4o",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:32.713718+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:32.737985+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:32.738382+00:00",
+    "method": "GET",
+    "path": "/api/share/zRTK4rCk4o",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:48.883551+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:48.921449+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:04:54.380736+00:00",
+    "method": "POST",
+    "path": "/api/search",
+    "body": "{\"domains\":[\"google.com\",\"baidu.cn\",\"r558qa7k3x.com\",\"r558qa7k3x.cn\",\"r558zz9q1.net\"]}"
+  },
+  {
+    "at": "2026-09-06T18:05:38.080043+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:05:38.108816+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:05:42.411447+00:00",
+    "method": "POST",
+    "path": "/api/click",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:05:42.466758+00:00",
+    "method": "POST",
+    "path": "/api/click",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:05:42.473961+00:00",
+    "method": "POST",
+    "path": "/api/click",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:05:44.981307+00:00",
+    "method": "POST",
+    "path": "/api/v2/ingestion/pixel",
+    "body": "[{\"pixel_id\":\"43877a48-bfec-409d-a4c2-3a07c000bdf0\",\"ad_network_placement_id\":\"\",\"subscriber_id\":\"\",\"profile_id\":\"6b348ba6-b6b6-4bd9-9734-e8e81ecc9c3a\",\"event\":\"pageview\",\"timestamp\":1788717944721,\"landed_timestamp\":1788717944721,\"sent_timestamp\":1788717944721,\"event_id\":\"03b3d800-87a5-4ba4-9c46-57c7371df4af\",\"url\":\"https://porkbun.com/checkout/search\",\"user_agent\":\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36; Devin/1.0; +devin.ai\",\"script_version\":\"2.3.0\",\"email_hash_sha256\":\"\",\"email_hash_sha1\":\"\"}]"
+  },
+  {
+    "at": "2026-09-06T18:05:57.587924+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:05:57.636938+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:05:57.924793+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:05:57.996444+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:06:33.206744+00:00",
+    "method": "POST",
+    "path": "/api/click",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:06:54.269942+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:06:54.306963+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:07:01.597833+00:00",
+    "method": "POST",
+    "path": "/api/check?refresh=1",
+    "body": "{\"domains\":[\"r558qa7k3x.ai\"],\"refresh\":true}"
+  },
+  {
+    "at": "2026-09-06T18:07:20.843649+00:00",
+    "method": "POST",
+    "path": "/api/share",
+    "body": "{\"items\":[{\"domain\":\"google.com\",\"status\":\"taken\"},{\"domain\":\"r558qa7k3x.com\",\"status\":\"available\"},{\"domain\":\"r558qa7k3x.cn\",\"status\":\"available\"},{\"domain\":\"r558zz9q1.net\",\"status\":\"available\"},{\"domain\":\"r558qa7k3x.ai\",\"status\":\"unknown\"}]}"
+  },
+  {
+    "at": "2026-09-06T18:07:22.025096+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:07:22.076777+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:07:22.077303+00:00",
+    "method": "GET",
+    "path": "/api/share/lKHjpUxO6d",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:07:31.541053+00:00",
+    "method": "DELETE",
+    "path": "/api/share/lKHjpUxO6d",
+    "body": "{\"token\":\"rD_33ByMijmYY67COVUqQtz7\"}"
+  },
+  {
+    "at": "2026-09-06T18:07:32.245226+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:07:32.280983+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:07:32.281508+00:00",
+    "method": "GET",
+    "path": "/api/share/lKHjpUxO6d",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:07:32.933297+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:07:32.935668+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:07:33.012510+00:00",
+    "method": "POST",
+    "path": "/api/search",
+    "body": "{\"domains\":[\"r558qa7k3x.ai\"]}"
+  },
+  {
+    "at": "2026-09-06T18:07:56.196017+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:07:56.231585+00:00",
+    "method": "POST",
+    "path": "/api/monitor/list",
+    "body": "{\"domains\":[]}"
+  },
+  {
+    "at": "2026-09-06T18:08:01.986575+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:08:02.041224+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:08:02.097384+00:00",
+    "method": "POST",
+    "path": "/api/monitor",
+    "body": "{\"domain\":\"google.com\",\"enabled\":true,\"status\":\"taken\",\"webhook\":\"\"}"
+  },
+  {
+    "at": "2026-09-06T18:08:03.261645+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:08:03.294156+00:00",
+    "method": "POST",
+    "path": "/api/monitor/list",
+    "body": "{\"domains\":[\"google.com\"]}"
+  },
+  {
+    "at": "2026-09-06T18:08:11.243392+00:00",
+    "method": "POST",
+    "path": "/api/monitor",
+    "body": "{\"domain\":\"google.com\",\"enabled\":false,\"webhook\":\"\"}"
+  },
+  {
+    "at": "2026-09-06T18:08:20.587741+00:00",
+    "method": "GET",
+    "path": "/api/registrars",
+    "body": null
+  },
+  {
+    "at": "2026-09-06T18:08:20.644130+00:00",
+    "method": "GET",
+    "path": "/api/prices",
+    "body": null
+  }
+]

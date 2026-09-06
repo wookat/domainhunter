@@ -1,0 +1,32 @@
+slug	lang	piece	token	last_mentioned_tld	context
+academy-vs-coach	en	verdict	{{price:coach:renew:usd}}	academy	about {{price:coach:first:usd}}) matches .academy, but renewal around ▶$62
+academy-vs-coach	zh	verdict	{{price:coach:renew:usd}}	academy	注册约 {{price:coach:first:usd}} 与 .academy 相当，但续费约 ▶$62
+blog-vs-com	en	verdict	{{price:blog:first:usd}}	com	urname.blog and coffee.blog went extinct on .com years ago), at about ▶$3
+blog-vs-com	en	verdict	{{price:blog:renew:usd}}	com	on .com years ago), at about {{price:blog:first:usd}} first year and ▶$21
+blog-vs-com	zh	verdict	{{price:blog:first:usd}}	com	某的博客」，人名、笔名、主题词在这里大多还能注册（yourname.blog、coffee.blog 这类在 .com 下早已绝迹），首年 ▶$3
+blog-vs-com	zh	verdict	{{price:blog:renew:usd}}	com	e.blog、coffee.blog 这类在 .com 下早已绝迹），首年 {{price:blog:first:usd}} 上下、续费约 ▶$21
+casino-vs-bet	zh	verdict	{{price:casino:renew:usd}}	bet	二是 .casino 与 .bet 的价差主要在续费（ ▶$129
+com-vs-ai	en	verdict	{{cost10:ai:cny}}	com	first:cny}} / {{price:com:renew:cny}}. Over ten years that is roughly ▶¥5950
+com-vs-ai	en	verdict	{{cost10:com:cny}}	ai	Over ten years that is roughly {{cost10:ai:cny}} on .ai versus about ▶¥800
+day-vs-today	en	verdict	{{price:today:renew:usd}}	day	five years .day's flat pricing costs less ({{price:day:renew:usd}} vs ▶$23
+day-vs-today	zh	verdict	{{price:today:renew:usd}}	day	三是五年账本 .day 平进平出更省（{{price:day:renew:usd}} vs ▶$23
+foundation-vs-org	en	verdict	{{price:foundation:renew:usd}}	org	and .org renews a tier cheaper ({{price:org:renew:usd}} vs ▶$23
+foundation-vs-org	zh	verdict	{{price:foundation:renew:usd}}	org	三是续费 .org 便宜一档（{{price:org:renew:usd}} vs ▶$23
+hospital-vs-clinic	en	verdict	{{price:clinic:renew:usd}}	hospital	ally renews slightly above .hospital ({{price:hospital:renew:usd}} vs ▶$52
+kids-vs-family	en	verdict	{{price:family:renew:usd}}	kids	and .kids renews a tier cheaper ({{price:kids:renew:usd}} vs ▶$31
+kids-vs-family	zh	verdict	{{price:family:renew:usd}}	kids	三是续费 .kids 便宜一档（{{price:kids:renew:usd}} vs ▶$31
+law-vs-expert	en	verdict	{{price:expert:renew:usd}}	law	the price structure: about {{price:law:renew:usd}}/yr on .law versus ▶$50
+meme-vs-fun	en	verdict	{{price:fun:renew:usd}}	meme	.meme's flat pricing costs slightly less ({{price:meme:renew:usd}} vs ▶$31
+meme-vs-fun	zh	verdict	{{price:fun:renew:usd}}	meme	三是五年账本 .meme 平进平出略省（{{price:meme:renew:usd}} vs ▶$31
+meme-vs-lol	en	verdict	{{price:lol:renew:usd}}	meme	.lol renews about {{ratio:lol:meme:renew}} .meme ( ▶$26
+meme-vs-lol	zh	verdict	{{price:lol:renew:usd}}	meme	二是 .lol 续费约为 .meme 的 {{ratio:lol:meme:renew}}（ ▶$26
+menu-vs-cafe	en	verdict	{{price:cafe:renew:usd}}	menu	g-term holding runs about {{price:menu:renew:usd}}/yr on .menu versus ▶$42
+place-vs-space	en	verdict	{{cost3:place:usd}}	space	at about {{jump:space}} year one, so three-year totals come to about ▶$54
+place-vs-space	zh	verdict	{{cost3:place:usd}}	space	三点注意：一是 .place 平续、.space 首年低续费回升约 {{jump:space}}，三年总成本约 ▶$54
+quest-vs-fun	en	verdict	{{price:fun:renew:usd}}	quest	.quest renews a tier cheaper ({{price:quest:renew:usd}} vs ▶$31
+quest-vs-fun	zh	verdict	{{price:fun:renew:usd}}	quest	二是续费 .quest 便宜一档（{{price:quest:renew:usd}} vs ▶$31
+shoes-vs-fashion	en	verdict	{{price:shoes:renew:usd}}	fashion	-term ledger: about {{price:fashion:renew:usd}}/yr on .fashion versus ▶$52
+tech-vs-com	en	verdict	{{price:tech:renew:usd}}	com	nd renewals cost more than .com (promo first years snap back to about ▶$51
+vision-vs-care	en	verdict	{{price:care:renew:usd}}	vision	and .vision actually renews cheaper ({{price:vision:renew:usd}} vs ▶$36
+vision-vs-care	zh	verdict	{{price:care:renew:usd}}	vision	三是续费 .vision 反而更省（{{price:vision:renew:usd}} vs ▶$36
+vodka-vs-wine	en	verdict	{{cost3:vodka:usd}}	wine	) — over three years that is about {{cost3:wine:usd}} on .wine versus ▶$79

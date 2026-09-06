@@ -1,0 +1,71 @@
+{
+  "values": {
+    "description": "R558 real exact-check response replay (no AI)",
+    "tlds": [
+      "com",
+      "cn",
+      "net",
+      "ai"
+    ],
+    "style": "",
+    "lengthPref": ""
+  },
+  "rows": [
+    {
+      "domain": "google.com",
+      "status": "taken",
+      "method": "rdap",
+      "expiresAt": "2028-09-14T04:00:00.000Z",
+      "cached": true,
+      "label": "google",
+      "tld": "com"
+    },
+    {
+      "domain": "baidu.cn",
+      "status": "taken",
+      "method": "whois",
+      "expiresAt": "2029-03-17T12:48:36.000Z",
+      "cached": true,
+      "label": "baidu",
+      "tld": "cn"
+    },
+    {
+      "domain": "r558qa7k3x.com",
+      "status": "available",
+      "method": "rdap",
+      "cached": true,
+      "label": "r558qa7k3x",
+      "tld": "com"
+    },
+    {
+      "domain": "r558qa7k3x.cn",
+      "status": "available",
+      "method": "whois",
+      "cached": true,
+      "label": "r558qa7k3x",
+      "tld": "cn"
+    },
+    {
+      "domain": "r558zz9q1.net",
+      "status": "available",
+      "method": "rdap",
+      "label": "r558zz9q1",
+      "tld": "net"
+    },
+    {
+      "domain": "r558qa7k3x.ai",
+      "status": "unknown",
+      "method": "rdap",
+      "detail": "http-429",
+      "label": "r558qa7k3x",
+      "tld": "ai"
+    }
+  ],
+  "rounds": [],
+  "elapsedSec": 0,
+  "aiUnderstanding": null,
+  "refinements": [],
+  "triedLabels": [],
+  "locked": [],
+  "fallback": null
+}

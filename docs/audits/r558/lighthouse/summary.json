@@ -1,0 +1,138 @@
+[
+ {
+  "file": "desktop_home.json",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "fails": [],
+  "metrics": {
+   "largest-contentful-paint": "0.7 s",
+   "cumulative-layout-shift": "0",
+   "total-blocking-time": "0 ms",
+   "first-contentful-paint": "0.6 s",
+   "speed-index": "0.6 s"
+  }
+ },
+ {
+  "file": "desktop_prices.json",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "fails": [],
+  "metrics": {
+   "largest-contentful-paint": "0.8 s",
+   "cumulative-layout-shift": "0",
+   "total-blocking-time": "0 ms",
+   "first-contentful-paint": "0.5 s",
+   "speed-index": "0.5 s"
+  }
+ },
+ {
+  "file": "desktop_tld_de.json",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "fails": [],
+  "metrics": {
+   "largest-contentful-paint": "0.6 s",
+   "cumulative-layout-shift": "0",
+   "total-blocking-time": "0 ms",
+   "first-contentful-paint": "0.5 s",
+   "speed-index": "0.5 s"
+  }
+ },
+ {
+  "file": "desktop_vs_de-vs-com.json",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "fails": [],
+  "metrics": {
+   "largest-contentful-paint": "0.5 s",
+   "cumulative-layout-shift": "0",
+   "total-blocking-time": "0 ms",
+   "first-contentful-paint": "0.4 s",
+   "speed-index": "0.4 s"
+  }
+ },
+ {
+  "file": "mobile_home.json",
+  "scores": {
+   "performance": 92,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "fails": [],
+  "metrics": {
+   "largest-contentful-paint": "2.9 s",
+   "cumulative-layout-shift": "0",
+   "total-blocking-time": "30 ms",
+   "first-contentful-paint": "2.4 s",
+   "speed-index": "2.4 s"
+  }
+ },
+ {
+  "file": "mobile_prices.json",
+  "scores": {
+   "performance": 91,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "fails": [],
+  "metrics": {
+   "largest-contentful-paint": "3.3 s",
+   "cumulative-layout-shift": "0",
+   "total-blocking-time": "100 ms",
+   "first-contentful-paint": "1.9 s",
+   "speed-index": "1.9 s"
+  }
+ },
+ {
+  "file": "mobile_tld_de.json",
+  "scores": {
+   "performance": 89,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "fails": [],
+  "metrics": {
+   "largest-contentful-paint": "3.3 s",
+   "cumulative-layout-shift": "0",
+   "total-blocking-time": "0 ms",
+   "first-contentful-paint": "2.5 s",
+   "speed-index": "2.5 s"
+  }
+ },
+ {
+  "file": "mobile_vs_de-vs-com.json",
+  "scores": {
+   "performance": 97,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "fails": [],
+  "metrics": {
+   "largest-contentful-paint": "2.3 s",
+   "cumulative-layout-shift": "0",
+   "total-blocking-time": "20 ms",
+   "first-contentful-paint": "1.9 s",
+   "speed-index": "1.9 s"
+  }
+ }
+]

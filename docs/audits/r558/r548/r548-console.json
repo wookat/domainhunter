@@ -1,0 +1,52 @@
+[
+  {
+    "at": "2026-09-06T18:02:49.659826+00:00",
+    "type": "log",
+    "text": "%c [UTS] [] [e_c] Initialized: web v1.0.0 color: green;"
+  },
+  {
+    "at": "2026-09-06T18:03:18.491647+00:00",
+    "type": "log",
+    "text": "%c [UTS] [] [e_c] Initialized: web v1.0.0 color: green;"
+  },
+  {
+    "at": "2026-09-06T18:04:26.806132+00:00",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 410 ()"
+  },
+  {
+    "at": "2026-09-06T18:04:26.908554+00:00",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 410 ()"
+  },
+  {
+    "at": "2026-09-06T18:04:32.657876+00:00",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 410 ()"
+  },
+  {
+    "at": "2026-09-06T18:04:32.738878+00:00",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 410 ()"
+  },
+  {
+    "at": "2026-09-06T18:05:45.406767+00:00",
+    "type": "log",
+    "text": "%c [UTS] [] [e_c] Initialized: web v1.0.0 color: green;"
+  },
+  {
+    "at": "2026-09-06T18:05:45.666281+00:00",
+    "type": "warning",
+    "text": "[Meta Pixel] - Invalid parameter format for currency. Please refer https://developers.facebook.com/docs/meta-pixel/reference/ for valid parameter specifications."
+  },
+  {
+    "at": "2026-09-06T18:07:32.183843+00:00",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 410 ()"
+  },
+  {
+    "at": "2026-09-06T18:07:32.297927+00:00",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 410 ()"
+  }
+]
