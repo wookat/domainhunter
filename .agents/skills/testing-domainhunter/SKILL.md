@@ -181,3 +181,7 @@ description: How to run zero-AI production audits of DomainHunter (hunt.zalize.c
 - Font preload warning (`jetbrains-mono … credentials mode does not match`) can linger in the session Chrome for a few minutes after a deploy because the old `index.html` is cached; verify with a fresh headless profile or after `Network.clearBrowserCache` before filing.
 - Prose word-count baseline for `/vs` (R540/R546/R560) is **whole-page prose** (`main` minus tables/nav/link chips), not the `#verdict` section alone (uk 767 / de 796 / au 748 / fr 749 at R546; 1030 / 1076 / 960 / 990 at R560). Don't file `#verdict`-only counts as failures.
 - Theme state is the `light` class on `<html>` (default dark) when driving the toggle programmatically.
+
+## R562 gotcha (share revoke tokens in committed artifacts)
+- Never commit raw share revoke tokens. They appear in `POST /api/share` responses, `DELETE /api/share/:id` request bodies (`{"token":"…"}`) and the `dh:myShares:v1` localStorage dump. Before archiving any request log / storage dump under `docs/audits` or `docs/qa`, replace the value with `<redacted-share-token>`; `apps/web/src/docs-no-share-tokens.test.ts` fails the suite otherwise. GitGuardian flags them as Generic High Entropy Secret on the deploy→main PR (#450), and a live token lets anyone revoke that share.
+- Always finish a run by revoking every test share (`DELETE /api/share/:id` with its token) and confirming `GET /api/share/:id` → 410. R545 left two shares live for weeks; R562 revoked them.

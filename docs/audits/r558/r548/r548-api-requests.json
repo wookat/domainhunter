@@ -117,7 +117,7 @@
     "at": "2026-09-06T18:04:25.900746+00:00",
     "method": "DELETE",
     "path": "/api/share/zRTK4rCk4o",
-    "body": "{\"token\":\"zJoVAX_og4TO26-j5Tq5OPUI\"}"
+    "body": "{\"token\":\"<redacted-share-token>\"}"
   },
   {
     "at": "2026-09-06T18:04:26.868126+00:00",
@@ -285,7 +285,7 @@
     "at": "2026-09-06T18:07:31.541053+00:00",
     "method": "DELETE",
     "path": "/api/share/lKHjpUxO6d",
-    "body": "{\"token\":\"rD_33ByMijmYY67COVUqQtz7\"}"
+    "body": "{\"token\":\"<redacted-share-token>\"}"
   },
   {
     "at": "2026-09-06T18:07:32.245226+00:00",
