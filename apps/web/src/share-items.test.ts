@@ -25,6 +25,28 @@ describe("sanitizeShareItem：status 可选，且兼容旧快照", () => {
   });
 });
 
+describe("sanitizeShareItem：R565 expiresAt / note 透传", () => {
+  it("taken + 可解析日期 → 归一为 ISO；非 taken 或不可解析 → 不落字段", () => {
+    expect(sanitizeShareItem({ domain: "stackpilot.dev", status: "taken", expiresAt: "2027-04-06T10:59:44.720Z" })?.expiresAt).toBe("2027-04-06T10:59:44.720Z");
+    expect(sanitizeShareItem({ domain: "stackpilot.dev", status: "taken", expiresAt: "2027-04-06" })?.expiresAt).toBe("2027-04-06T00:00:00.000Z");
+    expect(sanitizeShareItem({ domain: "zalize.com", status: "available", expiresAt: "2027-04-06T00:00:00Z" })?.expiresAt).toBeUndefined();
+    expect(sanitizeShareItem({ domain: "zalize.com", expiresAt: "2027-04-06T00:00:00Z" })?.expiresAt).toBeUndefined();
+    expect(sanitizeShareItem({ domain: "zalize.com", status: "taken", expiresAt: "soon" })?.expiresAt).toBeUndefined();
+    expect(sanitizeShareItem({ domain: "zalize.com", status: "taken", expiresAt: 123 })?.expiresAt).toBeUndefined();
+  });
+
+  it("note：trim 并截到 120 字符；空白/非字符串不落字段", () => {
+    expect(sanitizeShareItem({ domain: "zalize.com", note: "  首选，老板拍板  " })?.note).toBe("首选，老板拍板");
+    expect(sanitizeShareItem({ domain: "zalize.com", note: "x".repeat(200) })?.note?.length).toBe(120);
+    expect(sanitizeShareItem({ domain: "zalize.com", note: "   " })?.note).toBeUndefined();
+    expect(sanitizeShareItem({ domain: "zalize.com", note: 42 })?.note).toBeUndefined();
+  });
+
+  it("旧快照（无新字段）序列化结果不变", () => {
+    expect(sanitizeShareItem({ domain: "zalize.com", status: "taken" })).toEqual({ domain: "zalize.com", label: "zalize", tld: "com", status: "taken" });
+  });
+});
+
 describe("shareSsrTitle：只有全部 available 才说「可注册」", () => {
   it("新快照全 available → 可注册文案", () => {
     const items = [{ status: "available" as const }, { status: "available" as const }];

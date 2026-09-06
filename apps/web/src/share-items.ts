@@ -6,6 +6,9 @@ export const DOMAIN_RE = /^[a-z0-9]([a-z0-9-]{0,62})(\.[a-z0-9]([a-z0-9-]{0,62})
 export type ShareStatus = "available" | "taken" | "unknown";
 const SHARE_STATUSES: readonly ShareStatus[] = ["available", "taken", "unknown"];
 
+/** 分享备注上限，与候选清单 `NOTE_MAX_LENGTH` 同值 */
+export const SHARE_NOTE_MAX_LENGTH = 120;
+
 export interface ShareItem {
   domain: string;
   label: string;
@@ -13,6 +16,10 @@ export interface ShareItem {
   meaning?: string;
   scores?: { length: number; readability: number; relevance: number; brandability: number };
   status?: ShareStatus;
+  /** 到期日（ISO），仅 taken 且分享时已有数据 */
+  expiresAt?: string;
+  /** 分享者的备注（≤120 字符） */
+  note?: string;
 }
 
 export function sanitizeShareItem(raw: unknown): ShareItem | null {
@@ -32,6 +39,14 @@ export function sanitizeShareItem(raw: unknown): ShareItem | null {
     }
   }
   if (typeof o.status === "string" && (SHARE_STATUSES as readonly string[]).includes(o.status)) item.status = o.status as ShareStatus;
+  if (item.status === "taken" && typeof o.expiresAt === "string") {
+    const ts = Date.parse(o.expiresAt);
+    if (Number.isFinite(ts)) item.expiresAt = new Date(ts).toISOString();
+  }
+  if (typeof o.note === "string") {
+    const note = o.note.trim().slice(0, SHARE_NOTE_MAX_LENGTH);
+    if (note) item.note = note;
+  }
   return item;
 }
 

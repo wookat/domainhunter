@@ -323,7 +323,16 @@ export function ShortlistPage({
       const res = await fetch("/api/share", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ items: items.map(({ domain, meaning, scores, status }) => ({ domain, meaning, scores, status: status === "checking" ? undefined : status })) }),
+        // 备注按 shortlist.notePlaceholder 的承诺（仅存本机）不外发；到期日是公开 RDAP 数据，随快照带出
+        body: JSON.stringify({
+          items: items.map(({ domain, meaning, scores, status, expiresAt }) => ({
+            domain,
+            meaning,
+            scores,
+            status: status === "checking" ? undefined : status,
+            expiresAt: status === "taken" ? expiresAt : undefined,
+          })),
+        }),
       });
       if (!res.ok) throw new Error(String(res.status));
       const { id, url, revokeToken } = (await res.json()) as { id: string; url: string; revokeToken?: string };
