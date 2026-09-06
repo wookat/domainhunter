@@ -12,7 +12,8 @@ import { buildTldFaq } from "./tld-faq";
 import { COMPARE_SLUGS, compareLabel, relatedCompares } from "./compare-slugs";
 import { GUIDE_LABELS } from "./guide-labels";
 import { relatedGuideSlugs } from "./guide-groups";
-import { GUIDE_LIST, INDUSTRY_GUIDES, guidesForTld, type IndustryGuide } from "./guides";
+import { VIEW_ALL_LABEL, compareGroupChips, guideGroupChips, tldGroupChips, viewAllHref } from "./group-chips";
+import { INDUSTRY_GUIDES, guidesForTld, type IndustryGuide } from "./guides";
 import { HOME_HERO } from "./home-copy";
 import { HUB_META, compareHubGroups, guideHubGroups, guideOneLiner, tldHubGroups, tldOneLiner } from "./hubs";
 import { HOME_NAV_FEATURED, SITE_LINKS, SITE_LINKS_HEADING, langHref } from "./site-links";
@@ -191,6 +192,10 @@ const ctaBlock = (title: string, desc: string, href: string, button: string, ico
 const chipRow = (heading: string, chips: string, mt = "mt-6") =>
   `<div class="${mt}"><h2 class="text-sm font-semibold text-txt1">${escapeHtml(heading)}</h2><div class="mt-3 flex flex-wrap gap-2">${chips}</div></div>`;
 
+/** 「其他 …」chip 行末尾的『查看全部 N 个 →』hub 链接（与 tld-page / guide-page / compare-page 同 class） */
+const viewAllChip = (href: string, label: string) =>
+  `<a href="${href}" class="flex min-h-[44px] items-center rounded-lg border border-brand-line px-3 text-xs font-semibold text-brand transition-colors hover:bg-brand-dim">${escapeHtml(label)}</a>`;
+
 /**
  * 内容页末尾「站内导航」：首页 / 三个 hub / 价格 / why / mcp / advanced（让 sitemap 内每一页都有 SSR 入链）。
  * DOM 与 components/site-links.tsx 的 SiteLinks 逐字一致，React 挂载后零跳变。
@@ -213,13 +218,15 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
   const bestFor = sectionH2(ICON_CHECK, s.bestFor) +
     `<ul class="mt-3 grid gap-2 sm:grid-cols-2">${loc.bestFor.map((it) => `<li class="rounded-lg border border-line bg-bg1 px-3.5 py-2.5 text-sm text-txt1">${escapeHtml(it)}</li>`).join("")}</ul>`;
   const naming = sectionH2(ICON_BULB, s.naming) + dotList(loc.namingTips);
+  const otherChips = tldGroupChips(tld);
   const others = chipRow(
     s.others,
-    TLD_LIST.map((other) => {
-      const cls = other === tld ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand";
-      const price = staticPriceShort(other, lang);
-      return `<a href="${langHref(`/tld/${other}`, lang)}" class="inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0 ${cls}">.${other}${price ? `<span class="tnum ml-1.5 text-[10px] text-txt1">${escapeHtml(price)}</span>` : ""}</a>`;
-    }).join(""),
+    otherChips.chips
+      .map((other) => {
+        const price = staticPriceShort(other, lang);
+        return `<a href="${langHref(`/tld/${other}`, lang)}" class="inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0 border-line text-txt1 hover:border-brand-line hover:text-brand">.${other}${price ? `<span class="tnum ml-1.5 text-[10px] text-txt1">${escapeHtml(price)}</span>` : ""}</a>`;
+      })
+      .join("") + viewAllChip(viewAllHref("tld", otherChips.anchor, lang), VIEW_ALL_LABEL.tld[lang]),
     "mt-10",
   );
   const compares = relatedCompares.length
@@ -301,17 +308,12 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang): string[] {
         "mt-10",
       )
     : "";
+  const otherChips = compareGroupChips(cmp.slug);
   const others = chipRow(
     s.vsOthers,
-    Object.values(TLD_COMPARES)
-      .map((other) => {
-        const cls =
-          other.slug === cmp.slug
-            ? "flex min-h-[44px] items-center rounded-lg border border-brand-line bg-brand-dim px-3 font-mono text-xs font-semibold text-brand"
-            : "flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand";
-        return `<a href="${langHref(`/vs/${other.slug}`, lang)}" class="${cls}">.${other.a} vs .${other.b}</a>`;
-      })
-      .join(""),
+    otherChips.chips
+      .map((other) => `<a href="${langHref(`/vs/${other}`, lang)}" class="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">${compareLabel(other)}</a>`)
+      .join("") + viewAllChip(viewAllHref("vs", otherChips.anchor, lang), VIEW_ALL_LABEL.vs[lang]),
     "mt-10",
   );
   return [
@@ -373,12 +375,13 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
     : "";
   const cta = loc.cta ?? { title: s.guideCtaTitle, desc: s.guideCtaDesc, button: s.guideCtaButton };
   const ctaHref = compliance ? langHref("/?mode=exact", lang) : `/?tpl=${guide.slug}`;
+  const otherChips = guideGroupChips(guide.slug);
+  const labelOf = (other: string) => GUIDE_LABELS.find((g) => g.slug === other)?.[lang] ?? INDUSTRY_GUIDES[other][lang].label;
   const others = chipRow(
     s.guideOthers,
-    GUIDE_LIST.map((other) => {
-      const cls = other === guide.slug ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand";
-      return `<a href="${langHref(`/guide/${other}`, lang)}" class="flex min-h-[44px] items-center rounded-lg border px-3 text-xs transition-colors ${cls}">${escapeHtml(INDUSTRY_GUIDES[other][lang].label)}</a>`;
-    }).join(""),
+    otherChips.chips
+      .map((other) => `<a href="${langHref(`/guide/${other}`, lang)}" class="flex min-h-[44px] items-center rounded-lg border px-3 text-xs transition-colors border-line text-txt1 hover:border-brand-line hover:text-brand">${escapeHtml(labelOf(other))}</a>`)
+      .join("") + viewAllChip(viewAllHref("guide", otherChips.anchor, lang), VIEW_ALL_LABEL.guide[lang]),
     "mt-10",
   );
   const relatedIndustry = relatedGuideSlugs(guide.slug)

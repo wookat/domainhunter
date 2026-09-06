@@ -35,8 +35,6 @@ export interface InjectedGuideContent {
   kind: "guide";
   slug: string;
   guide: IndustryGuide;
-  /** 页脚全部行业指南互链（GUIDE_LIST 顺序） */
-  guideLinks: GuideLink[];
 }
 
 export interface InjectedVsContent {
@@ -46,8 +44,6 @@ export interface InjectedVsContent {
   /** 对比两侧的 TLD 指南（a、b 顺序；无指南时为 null） */
   sideGuides: [TldGuide | null, TldGuide | null];
   relatedGuides: GuideLink[];
-  /** 页脚全部对比页互链（TLD_COMPARES 插入顺序） */
-  compareLinks: CompareLink[];
 }
 
 export type InjectedContent = InjectedTldContent | InjectedGuideContent | InjectedVsContent;

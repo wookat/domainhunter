@@ -1,16 +1,15 @@
 import { CheckCircle2, HelpCircle, Lightbulb, Sparkles, Tag } from "lucide-react";
 
 import { buildTldFaq } from "@/content/tld-faq";
+import { VIEW_ALL_LABEL, tldGroupChips, viewAllHref } from "@/content/group-chips";
 import { readInjectedContent } from "@/content/injected";
 import { relatedTlds } from "@/content/tld-groups";
-import { TLD_LIST } from "@/content/tld-list";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { NotFoundPage } from "@/components/not-found-page";
 import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
 import { priceFull, priceShort, toCny, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";
-import { cn } from "@/lib/utils";
 
 export function TldPage({ tld }: { tld: string }) {
   const { t, lang } = useI18n();
@@ -26,6 +25,7 @@ export function TldPage({ tld }: { tld: string }) {
   const relatedGuides = content.relatedGuides;
   const relatedCompares = content.relatedCompares.slice(0, 6);
   const groupTlds = relatedTlds(tld);
+  const others = tldGroupChips(tld);
   const faq = buildTldFaq(tld, loc, lang);
 
   return (
@@ -112,23 +112,26 @@ export function TldPage({ tld }: { tld: string }) {
         </a>
       </div>
 
-      {/* 其他 TLD 指南互链 */}
+      {/* 其他 TLD 指南互链：同组 ≤30 个 + 『查看全部 N 个』hub 链接（规则见 content/group-chips.ts） */}
       <div className="mt-10">
         <h2 className="text-sm font-semibold text-txt1">{t("tld.others")}</h2>
         <div className="mt-3 flex flex-wrap gap-2">
-          {TLD_LIST.map((other) => (
+          {others.chips.map((other) => (
             <a
               key={other}
               href={`/tld/${other}?lang=${lang}`}
-              className={cn(
-                "inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0",
-                other === tld ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand",
-              )}
+              className="inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0 border-line text-txt1 hover:border-brand-line hover:text-brand"
             >
               .{other}
               {priceShort(other, lang, prices) && <span className="tnum ml-1.5 text-[10px] text-txt1">{priceShort(other, lang, prices)}</span>}
             </a>
           ))}
+          <a
+            href={viewAllHref("tld", others.anchor, lang)}
+            className="flex min-h-[44px] items-center rounded-lg border border-brand-line px-3 text-xs font-semibold text-brand transition-colors hover:bg-brand-dim"
+          >
+            {VIEW_ALL_LABEL.tld[lang]}
+          </a>
         </div>
       </div>
 
