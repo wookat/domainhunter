@@ -1,7 +1,7 @@
 # DomainHunter 交接文档（handoff-context）
 
 > 依 company-os 交接上下文制度维护（模板 `company-os/templates/handoff-context.md`）。换会话/换负责人时把本文档注入新会话即可接手。
-> **最后更新：2026-09-06 07:40 UTC（R523，同步到 R519–R522 集成上线 version d8e5038b）**。上一次系统性更新 2026-09-04（R490）。上一次系统性更新是 R250（2026-08-08），R466–R485 期间只做过局部小节追加（`git log -- docs/handoff-context.md`：e7bbfcb R481、a248e48 R482、79ecd0b R485）。
+> **最后更新：2026-09-06 10:15 UTC（R529，同步到 R524–R528 上线 version f648963f）**。上一次 2026-09-06 07:40（R523，version d8e5038b）。上一次系统性更新 2026-09-04（R490）。上一次系统性更新是 R250（2026-08-08），R466–R485 期间只做过局部小节追加（`git log -- docs/handoff-context.md`：e7bbfcb R481、a248e48 R482、79ecd0b R485）。
 > 老板需操作的外部资源全部收口在 **`docs/owner-actions.md`**（单一事实源），本文档不再重复维护那份清单。
 
 ## 1. 项目目标
@@ -40,8 +40,8 @@ Cloudflare Workers + Hono（API/MCP/SSR/cron）· React 18 + TypeScript + Vite +
 | 项 | 值 | 证据 |
 |---|---|---|
 | 线上地址 | https://hunt.zalize.com （自定义域）；Worker 直连 https://domainhunter.wookat520.workers.dev | 首页 200 |
-| 生产 Worker version | **`d8e5038b-2b91-4c21-8752-be4b30c7d761`**（deployed 2026-09-06T07:12Z，含 R501–R522）；前一版 `02404588` 06:13Z 含至 R517 | `npx wrangler deployments list`（apps/web） |
-| 对应代码 tip | `deploy/r192-r195` @ **b100378**（#486 R519–R522 集成合并提交）；零 AI 生产回归证据 https://github.com/wookat/domainhunter/pull/486#issuecomment-5557768553 | R510 生产复验 https://github.com/wookat/domainhunter/pull/475#issuecomment-5553032616 ；R509 零 AI 回归 https://github.com/wookat/domainhunter/pull/471#issuecomment-5552746476 |
+| 生产 Worker version | **`f648963f-a54c-4898-81ab-01b79c3aee3a`**（deployed 2026-09-06T~09:58Z，含 R501–R528）；前一版 `25d23c2a` 08:59Z 含至 #492（R525/R528），`d8e5038b` 07:12Z 含至 R522。注：09:5x 另有一次 `4d91a81c` 部署与 25d23c2a 同树（merge 命令误判后重放，无内容差异） | `npx wrangler deployments list`（apps/web） |
+| 对应代码 tip | `deploy/r192-r195` @ **83f1e4e**（#494 R526 集成合并提交，上一个集成 #492 = R525+R528）；零 AI 生产回归证据 https://github.com/wookat/domainhunter/pull/494#issuecomment-5558480170 （R524–R528 一次覆盖，报告 `docs/qa/r528-regression.md`）；上一轮 #486 评论 https://github.com/wookat/domainhunter/pull/486#issuecomment-5557768553 | R510 生产复验 https://github.com/wookat/domainhunter/pull/475#issuecomment-5553032616 ；R509 零 AI 回归 https://github.com/wookat/domainhunter/pull/471#issuecomment-5552746476 |
 | 内容计数 | **TLD 408 / 行业指南 410 / 对比页 444 / sitemap 1,270 URL**（1,262 内容页 + 8 静态页） | `scripts/content-counts.json` 与 `curl sitemap.xml?cb=` 逐类 grep 一致 |
 | cron 心跳 | `cronLast=2026-09-06T00:00:58Z`（每 6h） | `/api/usage` |
 | 价格 | `pricesLastOk=2026-09-04T12:00Z`，`/api/prices` 351 个 TLD 有 Porkbun 报价，非 stale | `/api/prices` |
@@ -161,7 +161,7 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
 3. **AI 长期可靠性**：R494 一次 6 次窗口全走 primary，不等于长期稳定；继续看 `aiErrors.quota` 是否再现。
 4. **发帖**（Show HN 等，`docs/launch/launch-checklist.md`）：老板决策，前提 §8 P0 解决。
 5. 观察项：**IndexNow 生产仍未成功推送过一批**——09-05 18:00Z 被门跳过（R514 已解）；09-06 00:00:58Z 真尝试但 429（R515 同批重试）；06:00:38Z R515 首发+2 重试仍全 429（`indexnowLastResult{ok:false,429,retries:2}`）→ 探针证实是 Bing 端点对 Workers 出口 IP 限流，非时点/批量（R517 #480 换端点已上线 version 02404588）；**12:00Z cron 是 R517 首次生效**。核对口径：`indexnowLastResult.ok=true` 且 `fallbackHosts=["yandex.com"]`（或其它备用 host）、`retries` 应为 0、`indexnowLastError` 清空、`indexnowPending` 1270→~970、`indexnowLast` 仅在全量覆盖后才前进（分批期间保持 09-03 不动是预期，不是故障）；若 12:00Z 仍 `!ok && retries=2`（四个备用端点也 429），下一步先用探针重新取证再定策略，不要再加等待；Baiduspider 来访是否持续（`botsBy.baidu`）；`stale:true` 频率。
-5b. **R512 内容矩阵薄内容审计**：建议 ①②③ 已由 R519–R522 落地上线（见 §11）；剩余：14 个 `/vs` 短页补写、80 个 ccTLD `/tld` 页补注册局政策事实（同时解 en `/tld` 链接占比 30.5% 问题）、`/guide` 暂不动。原结论：（`docs/audits/thin-content-audit-r512.md`，1262 页 zh/en 全抓取、同类页掩码 5-gram Jaccard 无 >0.5 对；不建议 noindex/合并）：建议顺序 ① `/tld` 去 FAQ/正文重复 + 80 个 ccTLD 页补注册局政策事实 ② 全站「全部页 chips」（占正文 47%–74%）缩为相关集 + hub 链接 ③ `/vs` 补组合专属数据（价差/到期分布） ④ `/guide` 暂不动。**未授权前不改内容页。**
+5b. **R512 内容矩阵薄内容审计**：建议 ①②③ 已由 R519–R522 落地；④ 14 个 `/vs` 短页补写（R524）与 ⑤ 67 个 ccTLD `/tld` 页注册局事实改写（R525 27 页 + R526 40 页）也已上线（version f648963f）；en `/tld` 链接占比 >25% 页 370→**0**（中位 28.2%→15.3%，R528 chip 去价为主因）。剩余：vs/en 链接占比 >25% 仍 52 页（66→52）、`/guide` 暂不动。原结论：（`docs/audits/thin-content-audit-r512.md`，1262 页 zh/en 全抓取、同类页掩码 5-gram Jaccard 无 >0.5 对；不建议 noindex/合并）：建议顺序 ① `/tld` 去 FAQ/正文重复 + 80 个 ccTLD 页补注册局政策事实 ② 全站「全部页 chips」（占正文 47%–74%）缩为相关集 + hub 链接 ③ `/vs` 补组合专属数据（价差/到期分布） ④ `/guide` 暂不动。**未授权前不改内容页。**
 5c. **R511 零 AI 全站审计**（`docs/audits/audit-r511.md`，PR #474）：P0/P1/P2 无；3 个 P3 即 R510 所修（已上线复验通过）；R502 遗留 P2-1/P3-1~4 全部关闭；Lighthouse 8/8 SEO=100、a11y=100；R507 canonical 矩阵 20/20；sitemap 1270=1264+6。观察项：~~`indexnow:lastAttempt` 未透出 `/api/usage`~~（R514 已透出）；R484 安全头观察不变。
 6. ~~候选：新增 Dynadot/Spaceship 注册商（联盟 30%/25%）~~ → R503 已调研并落地：**只加 Dynadot**（售 .cn/.com.cn、中文站、人民币/支付宝），Spaceship 不售 .cn 不加；Namecheap 实测不售 .cn 已从 .cn 菜单隐藏（`docs/research/registrar-affiliate.md` §4，老板待办第 9 项申请 Ambassador）；`/guide` hub 标题分组文案。
 
@@ -205,6 +205,13 @@ localStorage：`domainhunter:shortlist`（+ `:checkedAt`、旧 `favorites` 迁�
   - 集成期修复：`guide-page.tsx` 合并后丢失 `cn` import；复读率/正文口径（`thin-analyze.mjs`、`dup-ratio.mjs`、`faq.test.ts`）排除 `<table>`——R521 表格数值单元格（同价两行、差额 `≈$0 ¥0`×3）被当句子计入使 37 个 `/vs` 页误报 5–12%，表格属结构化数据非正文。
   - 已知指标变动：R519 删复读句后 `/tld/com` en 正文 453→335 词、链接占比 24.2%→**30.5%**（>25% 目标）——根因 en `/tld` 页正文薄，修法是内容补写（R512 建议的 ccTLD 注册局政策事实），不是继续删链接。
   - 生产回归（零 AI，见 #486 评论）：P0/P1/P2 无；P3 ×2：`/tld/*` chip 价格文字 SSR 静态参考价 → `/api/prices` 加载后实时价（R520 之前即如此，`staticPriceShort` 设计使然，slug/href 一致）；/tld/at 落 fallback 组。
+- **R524–R528**（0 AI，version f648963f；集成 PR #492 = #490 + #491，#494 = #493；R524 #489、R527 #488 直接合并）：
+  - R524 `content/compares.ts` 剩余 14 个 `/vs` 短页 zh/en 补写组合专属判断段（verdict + pick），.vip/.ai 措辞改为可一手核实的事实。
+  - R525 `content/tlds.ts` 27 个 ccTLD（pl mx nz pt se fi at dk ch be jp kr tw no ie sg hk fr br uk de au ca it nl es eu）改写为注册局事实驱动段落（官方 URL + 抓取日期）；修正 .de 两处旧说法（含 6 个 .de `/vs` 页、`hub-index-tld.ts`）。
+  - R526 `content/tlds.ts` 40 个 ccTLD（cz tr ae id vn ph gr ro hu cl my th sk ua ar ng il sa eg ke pe kz za ma qa pk lk ee lt lv rs is ge uy lu la md am mn uz）同类改写；`/vs/uy-vs-ar` .ar 资格改为「非居民可注册但需公证/认证文件人工验证」（nic.ar）。子会话报告 nnMasked 中位 zh 0.388→0.162、en 0.269→0.130；模板句正文命中 0（R512 tld 模板句全是组件级骨架，不在正文）。
+  - R527 `docs/audits/audit-r527.md` + `docs/audits/r527/`：零 AI 全站审计（R514–R522 后），P0/P1/P2 无；量化 `/tld` chip 价格水合漂移 CLS 0–0.005（不值得为 CLS 修）但 SSR 静态价与实时价偏差 >50% 的 TLD 38/351；en `/tld` 链接占比 >25% 370/408 根因是「更多 TLD 指南」chip 带价格后缀。
+  - R528 `content/price-text.ts`（`priceShort/priceFull` 抽出供 worker/客户端共用）、`ssr-html.ts`/`worker.ts`：`/tld` `/guide` 首屏价格卡 + 「相关 TLD」chip SSR 复用 R521 KV 价格快照（`peekPricesPayload`→`snapshotFromPayload`，同一快照注入客户端 `pickPrices` 初始化）→ SSR == 水合、SSR 价 == `/api/prices`；无快照回落静态参考价并保留「参考」标识。「更多 TLD 指南」chip 去价格后缀（slug/href 816/816 不变）。`shortlist-page.tsx` `visibleShareUrl`：撤销分享/候选清空后不再残留失效 URL。
+  - 生产回归（零 AI，#494 评论）：10 条 `/tld` `/guide` 路由 SSR==DOM 0 漂移；tld/en 链接占比中位 28.2%→15.3%、>25% 370→0；tld/zh 12→0；nnMasked>0.8 全 0；分享撤销/清空生命周期 410+noindex；Lighthouse SEO/a11y 100、CLS ≤0.0003；console 0。P3：品牌 404 壳沿用首页 title；vs/en 链接占比 >25% 仍 52 页。
 - **R495**：`main.tsx routeModule()` 对 /why /advanced /mcp 也等 chunk 就绪再挂载（R491 skeleton 在慢网下曾闪空 ~0.6s，节流帧捕获 3/3 复现→修后 0/3）；`i18n.tsx` 切换语言时同步 URL 显式 `?lang=`（否则 F5 回退到 URL 语言）。
 
 ## 12. 资源与凭证索引（只写名称，不写值）
