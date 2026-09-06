@@ -55,7 +55,8 @@ function extract(html) {
   h = main.replace(/<(header|nav|footer|aside)\b[\s\S]*?<\/\1>/gi, " ");
   const faqDetails = (h.match(/<details\b/gi) ?? []).length;
   const bodyText = stripTags(h);
-  const proseHtml = h.replace(/<a\b[^>]*>[\s\S]*?<\/a>/gi, " ");
+  // 链接文字与 <table>（结构化数据单元格，非正文）不计入正文/句子
+  const proseHtml = h.replace(/<table\b[\s\S]*?<\/table>/gi, " ").replace(/<a\b[^>]*>[\s\S]*?<\/a>/gi, " ");
   const proseText = stripTags(proseHtml);
   // 块级边界 → 换行，用于断句
   const blocky = proseHtml.replace(/<\/(p|li|h[1-6]|summary|details|div|section|td|th|tr|dt|dd|blockquote)>/gi, "\n").replace(/<br\s*\/?>/gi, "\n");

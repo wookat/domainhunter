@@ -3,9 +3,11 @@ import { AlertTriangle, ExternalLink, FileText, HelpCircle, Landmark, Lightbulb,
 import { COMPARE_SLUGS, compareLabel } from "@/content/compare-slugs";
 import { GUIDE_LABELS } from "@/content/guide-labels";
 import { relatedGuideSlugs } from "@/content/guide-groups";
-import { buildGuideFaq } from "@/content/guide-faq";
+import { buildGuideFaq, GUIDE_IDEAS_ANCHOR, GUIDE_PITFALLS_ANCHOR } from "@/content/guide-faq";
+import { VIEW_ALL_LABEL, guideGroupChips, viewAllHref } from "@/content/group-chips";
 import { readInjectedContent } from "@/content/injected";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { FaqAnswer } from "@/components/faq-answer";
 import { NotFoundPage } from "@/components/not-found-page";
 import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
@@ -26,7 +28,11 @@ export function GuidePage({ slug }: { slug: string }) {
   const compliance = guide.kind === "compliance";
   const faq = buildGuideFaq(guide, lang);
   const relatedCompares = [...new Set(guide.tlds.flatMap((rec) => COMPARE_SLUGS.filter((s) => s.split("-vs-").includes(rec.tld))))].slice(0, 4);
-  const relatedIndustry = relatedGuideSlugs(slug).map((s) => GUIDE_LABELS.find((g) => g.slug === s)).filter((g): g is (typeof GUIDE_LABELS)[number] => g !== undefined);
+  const toLabel = (s: string) => GUIDE_LABELS.find((g) => g.slug === s);
+  const isLabel = (g: (typeof GUIDE_LABELS)[number] | undefined): g is (typeof GUIDE_LABELS)[number] => g !== undefined;
+  const relatedIndustry = relatedGuideSlugs(slug).map(toLabel).filter(isLabel);
+  const others = guideGroupChips(slug);
+  const otherGuides = others.chips.map(toLabel).filter(isLabel);
   const cta = loc.cta ?? { title: t("guide.ctaTitle"), desc: t("guide.ctaDesc"), button: t("guide.ctaButton") };
   const ctaHref = compliance ? `/?mode=exact&lang=${lang}` : `/?tpl=${slug}`;
   const CtaIcon = compliance ? SearchCheck : Sparkles;
@@ -65,7 +71,7 @@ export function GuidePage({ slug }: { slug: string }) {
         ))
       ) : (
         <>
-          <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+          <h2 id={GUIDE_IDEAS_ANCHOR} className="mt-8 flex items-center gap-2 text-base font-bold scroll-mt-20">
             <Lightbulb className="h-4 w-4 text-gold" />
             {t("guide.ideas")}
           </h2>
@@ -132,7 +138,7 @@ export function GuidePage({ slug }: { slug: string }) {
         </div>
       )}
 
-      <h2 className="mt-8 flex items-center gap-2 text-base font-bold">
+      <h2 id={compliance ? undefined : GUIDE_PITFALLS_ANCHOR} className={cn("mt-8 flex items-center gap-2 text-base font-bold", !compliance && "scroll-mt-20")}>
         <AlertTriangle className="h-4 w-4 text-destructive" />
         {t(compliance ? "guide.notes" : "guide.pitfalls")}
       </h2>
@@ -156,7 +162,9 @@ export function GuidePage({ slug }: { slug: string }) {
             <summary className="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&::-webkit-details-marker]:hidden">
               {item.q}
             </summary>
-            <p className="mt-2 text-sm leading-relaxed text-txt1">{item.a}</p>
+            <p className="mt-2 text-sm leading-relaxed text-txt1">
+              <FaqAnswer item={item} />
+            </p>
           </details>
         ))}
       </div>
@@ -199,22 +207,25 @@ export function GuidePage({ slug }: { slug: string }) {
         </a>
       </div>
 
-      {/* 其他行业指南互链 */}
+      {/* 其他行业指南互链：同组 ≤30 个 + 『查看全部 N 个』hub 链接（规则见 content/group-chips.ts） */}
       <div className="mt-10">
         <h2 className="text-sm font-semibold text-txt1">{t("guide.others")}</h2>
         <div className="mt-3 flex flex-wrap gap-2">
-          {content.guideLinks.map((other) => (
+          {otherGuides.map((other) => (
             <a
               key={other.slug}
               href={`/guide/${other.slug}?lang=${lang}`}
-              className={cn(
-                "flex min-h-[44px] items-center rounded-lg border px-3 text-xs transition-colors",
-                other.slug === slug ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand",
-              )}
+              className="flex min-h-[44px] items-center rounded-lg border px-3 text-xs transition-colors border-line text-txt1 hover:border-brand-line hover:text-brand"
             >
               {other[lang]}
             </a>
           ))}
+          <a
+            href={viewAllHref("guide", others.anchor, lang)}
+            className="flex min-h-[44px] items-center rounded-lg border border-brand-line px-3 text-xs font-semibold text-brand transition-colors hover:bg-brand-dim"
+          >
+            {VIEW_ALL_LABEL.guide[lang]}
+          </a>
         </div>
       </div>
 

@@ -1,8 +1,12 @@
 import { describe, expect, it } from "vitest";
 
+import { COMPARE_SLUGS } from "./compare-slugs";
 import { TLD_COMPARES } from "./compares";
+import { GROUP_CHIP_MAX, VIEW_ALL_LABEL, compareGroupChips, guideGroupChips, tldGroupChips } from "./group-chips";
+import { GUIDE_LABELS } from "./guide-labels";
 import { INDUSTRY_GUIDES } from "./guides";
 import { HOME_NAV_FEATURED, SITE_LINKS } from "./site-links";
+import { TLD_LIST } from "./tld-list";
 import { TLD_GUIDES } from "./tlds";
 import { compareContentBlocks, guideContentBlocks, homeHeroSkeleton, homeNavHtml, siteLinksHtml, tldContentBlocks } from "./ssr-html";
 
@@ -56,6 +60,25 @@ describe("siteLinksHtml", () => {
     const bare = hrefs(html).map(stripLang);
     expect(bare).toEqual(SITE_LINKS.map((l) => l.path));
     for (const l of SITE_LINKS) expect(html).toContain(`>${l[lang]}</a>`);
+  });
+
+  it.each(["zh", "en"] as const)("%s：「其他 …」chip 行 = 同组 ≤30 个（排除自身）+ 指向 hub 分组锚点的『查看全部 N 个 →』（R520）", (lang) => {
+    const cases = [
+      { html: tldContentBlocks("com", TLD_GUIDES.com, lang).join(""), self: "/tld/com", hub: `/tld?lang=${lang}#hub-g-`, pick: tldGroupChips("com"), label: VIEW_ALL_LABEL.tld[lang], n: TLD_LIST.length },
+      { html: guideContentBlocks(INDUSTRY_GUIDES.saas, lang).join(""), self: "/guide/saas", hub: `/guide?lang=${lang}#hub-g-`, pick: guideGroupChips("saas"), label: VIEW_ALL_LABEL.guide[lang], n: GUIDE_LABELS.length },
+      { html: compareContentBlocks(TLD_COMPARES["com-vs-cn"], lang).join(""), self: "/vs/com-vs-cn", hub: `/vs?lang=${lang}#hub-g-`, pick: compareGroupChips("com-vs-cn"), label: VIEW_ALL_LABEL.vs[lang], n: COMPARE_SLUGS.length },
+    ];
+    for (const c of cases) {
+      const row = c.html.match(/<div class="mt-10"><h2 class="text-sm font-semibold text-txt1">[^<]*<\/h2><div class="mt-3 flex flex-wrap gap-2">(?:<a\b[^>]*>(?:(?!<\/a>).)*<\/a>)*<\/div><\/div>/gs)?.find((r) => r.includes(c.hub));
+      expect(row, c.self).toBeDefined();
+      const links = [...row!.matchAll(/<a\b[^>]*\bhref="([^"]*)"/g)].map((m) => m[1]);
+      expect(links.length).toBe(c.pick.chips.length + 1);
+      expect(links.length).toBeLessThanOrEqual(GROUP_CHIP_MAX + 1);
+      expect(links.map(stripLang)).not.toContain(c.self);
+      expect(links[links.length - 1]).toBe(`${c.hub}${c.pick.anchor}`);
+      expect(row).toContain(`>${c.label}</a>`);
+      expect(c.label).toContain(String(c.n));
+    }
   });
 
   it("三类内容页 blocks 末尾都追加了站内导航（/why /mcp /advanced 获得入链）", () => {

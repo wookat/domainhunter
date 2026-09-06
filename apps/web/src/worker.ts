@@ -7,6 +7,8 @@ import { resolveFallbackUpstream, type LlmProvider } from "./ai-transport";
 import { COMPARE_LIST, TLD_COMPARES } from "./content/compares";
 import { GUIDE_LIST, INDUSTRY_GUIDES } from "./content/guides";
 import { buildCompareFaq } from "./content/compare-faq";
+import { snapshotFromPayload } from "./content/compare-prices";
+import { faqJsonld } from "./content/faq";
 import { buildGuideFaq } from "./content/guide-faq";
 import { buildPricesFaq } from "./content/prices-faq";
 import { buildTldFaq } from "./content/tld-faq";
@@ -27,7 +29,7 @@ import { DOMAIN_RE, sanitizeShareItem, shareGoneMeta, shareShellState, shareSsrT
 import { sitemapLastmod } from "./sitemap-lastmod";
 import { parseVariantName } from "./mcp-args";
 import { PRICES_LAST_FAIL_KEY, PRICES_LAST_OK_KEY, type PriceEntry } from "./prices-fetch";
-import { loadPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
+import { loadPricesPayload, peekPricesPayload, refreshPricesIfStale, type PricesCacheConfig } from "./prices-cache";
 import { buildHeadInjection, injectIntoHead, isHtmlDocument, type GrowthVars } from "./growth-inject";
 import { PageviewCounter, readDayPageviews, type DayPageviews } from "./pageviews";
 import { emptyDayUsage, readDayUsage, usageCounterFor, type DayUsage } from "./usage-counter";
@@ -1713,15 +1715,7 @@ app.get("/tld/:tld", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/tld/${tld}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  const tldFaqJsonld = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: buildTldFaq(tld, loc, lang).map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  });
+  const tldFaqJsonld = faqJsonld(buildTldFaq(tld, loc, lang));
   html = injectHreflang(html, `/tld/${tld}`, sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/tld/${tld}`, lang, { name: hubCrumbLabel("tld", lang), path: "/tld" })}</script><script type="application/ld+json">${tldFaqJsonld}</script></head>`,
@@ -1759,15 +1753,7 @@ app.get("/guide/:slug", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/guide/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  const guideFaqJsonld = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: buildGuideFaq(guide, lang).map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  });
+  const guideFaqJsonld = faqJsonld(buildGuideFaq(guide, lang));
   html = injectHreflang(html, `/guide/${slug}`, sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/guide/${slug}`, lang, { name: hubCrumbLabel("guide", lang), path: "/guide" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/guide/${slug}`, lang, `/api/og/guide/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${guideFaqJsonld}</script></head>`,
@@ -1805,15 +1791,7 @@ app.get("/vs/:slug", async (c) => {
       /<meta property="og:image" content="[^"]*" \/>/,
       `<meta property="og:image" content="${SITE_ORIGIN}/api/og/vs/${slug}?lang=${lang}" />\n    <meta property="og:image:type" content="image/svg+xml" />\n    <meta property="og:image" content="${SITE_ORIGIN}/og.png" />`,
     );
-  const cmpFaqJsonld = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: buildCompareFaq(cmp, lang).map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  });
+  const cmpFaqJsonld = faqJsonld(buildCompareFaq(cmp, lang));
   html = injectHreflang(html, `/vs/${slug}`, sl).replace(
     "</head>",
     `<script type="application/ld+json">${breadcrumbJsonld(loc.title, `/vs/${slug}`, lang, { name: hubCrumbLabel("vs", lang), path: "/vs" })}</script><script type="application/ld+json">${articleJsonld(loc.title, loc.metaDescription, `/vs/${slug}`, lang, `/api/og/vs/${slug}?lang=${lang}`)}</script><script type="application/ld+json">${cmpFaqJsonld}</script></head>`,
@@ -1821,8 +1799,10 @@ app.get("/vs/:slug", async (c) => {
   html = setHtmlLang(html, lang);
   html = await injectModulepreload(html, c.env.ASSETS, c.req.url, "src/components/compare-page.tsx");
   html = await inlineStylesheet(html, c.env.ASSETS, c.req.url);
-  html = injectContentData(html, buildVsContent(slug));
-  html = injectSsrSkeleton(html, `.${cmp.a} vs .${cmp.b}`, loc.title, compareContentBlocks(cmp, lang), hubCrumbKicker("vs", `.${cmp.a} vs .${cmp.b}`, lang), "max-w-4xl");
+  // 价格数据表与 /api/prices 同源：只读同一份 KV 缓存（不拉上游），同一快照既渲染 SSR 表格也注入客户端，水合逐字一致
+  const priceSnapshot = snapshotFromPayload(await peekPricesPayload(c.env.CACHE, PRICES_CACHE_CFG), [cmp.a, cmp.b]);
+  html = injectContentData(html, buildVsContent(slug, priceSnapshot));
+  html = injectSsrSkeleton(html, `.${cmp.a} vs .${cmp.b}`, loc.title, compareContentBlocks(cmp, lang, priceSnapshot), hubCrumbKicker("vs", `.${cmp.a} vs .${cmp.b}`, lang), "max-w-4xl");
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=600" } });
 });
 

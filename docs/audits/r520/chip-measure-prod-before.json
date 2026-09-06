@@ -1,0 +1,78 @@
+{
+  "origin": "https://hunt.zalize.com",
+  "measuredAt": "2026-09-06T06:24:12.805Z",
+  "rows": [
+    {
+      "path": "/tld/com",
+      "lang": "zh",
+      "url": "https://hunt.zalize.com/tld/com",
+      "status": 200,
+      "bytes": 187404,
+      "bodyWords": 2539,
+      "proseWords": 840,
+      "linkShare": 0.6691610870421425,
+      "bodyLinks": 425,
+      "injectedBytes": 4832
+    },
+    {
+      "path": "/tld/com",
+      "lang": "en",
+      "url": "https://hunt.zalize.com/tld/com?lang=en",
+      "status": 200,
+      "bytes": 187853,
+      "bodyWords": 2141,
+      "proseWords": 453,
+      "linkShare": 0.7884166277440449,
+      "bodyLinks": 425,
+      "injectedBytes": 4832
+    },
+    {
+      "path": "/guide/saas",
+      "lang": "zh",
+      "url": "https://hunt.zalize.com/guide/saas",
+      "status": 200,
+      "bytes": 187404,
+      "bodyWords": 3396,
+      "proseWords": 1468,
+      "linkShare": 0.5677267373380448,
+      "bodyLinks": 424,
+      "injectedBytes": 34369
+    },
+    {
+      "path": "/guide/saas",
+      "lang": "en",
+      "url": "https://hunt.zalize.com/guide/saas?lang=en",
+      "status": 200,
+      "bytes": 189394,
+      "bodyWords": 1881,
+      "proseWords": 936,
+      "linkShare": 0.5023923444976077,
+      "bodyLinks": 424,
+      "injectedBytes": 34369
+    },
+    {
+      "path": "/vs/com-vs-cn",
+      "lang": "zh",
+      "url": "https://hunt.zalize.com/vs/com-vs-cn",
+      "status": 200,
+      "bytes": 188294,
+      "bodyWords": 2052,
+      "proseWords": 672,
+      "linkShare": 0.672514619883041,
+      "bodyLinks": 458,
+      "injectedBytes": 29693
+    },
+    {
+      "path": "/vs/com-vs-cn",
+      "lang": "en",
+      "url": "https://hunt.zalize.com/vs/com-vs-cn?lang=en",
+      "status": 200,
+      "bytes": 188274,
+      "bodyWords": 1739,
+      "proseWords": 372,
+      "linkShare": 0.7860839562967222,
+      "bodyLinks": 458,
+      "injectedBytes": 29693
+    }
+  ]
+}

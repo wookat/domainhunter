@@ -3,8 +3,9 @@
  * 保证两条路径产出的数据逐字一致。
  * 引用了 tlds.ts / guides.ts / compares.ts 全量内容模块——客户端只允许动态 import 本模块。
  */
+import type { ComparePriceSnapshot } from "./compare-prices";
 import { TLD_COMPARES, comparesForTld } from "./compares";
-import { GUIDE_LIST, INDUSTRY_GUIDES, guidesForTld } from "./guides";
+import { INDUSTRY_GUIDES, guidesForTld } from "./guides";
 import { TLD_GUIDES } from "./tlds";
 import type { CompareLink, GuideLink, InjectedGuideContent, InjectedTldContent, InjectedVsContent } from "./injected";
 
@@ -19,6 +20,8 @@ const compareLink = (slug: string): CompareLink => ({
   a: TLD_COMPARES[slug].a,
   b: TLD_COMPARES[slug].b,
 });
+
+/* 「其他行业命名指南 / 其他后缀对比」全量清单不再随页注入（R520）：改由 group-chips.ts 从主 bundle 内的 guide-labels / compare-slugs 派生 */
 
 export function buildTldContent(tld: string): InjectedTldContent | null {
   const guide = TLD_GUIDES[tld];
@@ -35,10 +38,10 @@ export function buildTldContent(tld: string): InjectedTldContent | null {
 export function buildGuideContent(slug: string): InjectedGuideContent | null {
   const guide = INDUSTRY_GUIDES[slug];
   if (!guide) return null;
-  return { kind: "guide", slug, guide, guideLinks: GUIDE_LIST.map(guideLink) };
+  return { kind: "guide", slug, guide };
 }
 
-export function buildVsContent(slug: string): InjectedVsContent | null {
+export function buildVsContent(slug: string, prices?: ComparePriceSnapshot): InjectedVsContent | null {
   const cmp = TLD_COMPARES[slug];
   if (!cmp) return null;
   return {
@@ -47,6 +50,6 @@ export function buildVsContent(slug: string): InjectedVsContent | null {
     cmp,
     sideGuides: [TLD_GUIDES[cmp.a] ?? null, TLD_GUIDES[cmp.b] ?? null],
     relatedGuides: [...new Set([...guidesForTld(cmp.a), ...guidesForTld(cmp.b)])].slice(0, 4).map(guideLink),
-    compareLinks: Object.keys(TLD_COMPARES).map(compareLink),
+    ...(prices ? { prices } : {}),
   };
 }

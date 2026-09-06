@@ -3,13 +3,14 @@ import { VS_HUB_META, compareHubGroups, compareHubPair, compareHubTitle } from "
 import { useI18n } from "@/lib/i18n";
 import { usePageTitle } from "@/lib/use-page-title";
 import { HubFilter, HubFilterEmpty, hubMatch } from "./hub-filter";
-import { BackToTop, HubAnchorNav, hubAnchorId } from "./hub-nav";
+import { BackToTop, HubAnchorNav, hubAnchorId, useHubHashScroll } from "./hub-nav";
 
 /** /vs 索引 hub：全部 TLD 对比页，按左侧后缀分组。DOM 与 worker 的 compareHubBlocks 骨架逐字一致。 */
 export function CompareHubPage() {
   const { lang } = useI18n();
   const meta = VS_HUB_META[lang];
   usePageTitle(meta.title);
+  useHubHashScroll();
   const [query, setQuery] = useState("");
   const groups = useMemo(() => compareHubGroups(), []);
   const total = useMemo(() => groups.reduce((n, g) => n + g.slugs.length, 0), [groups]);

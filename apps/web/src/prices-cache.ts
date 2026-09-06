@@ -101,6 +101,19 @@ export async function loadPricesPayload(kv: PricesKv | undefined, cfg: PricesCac
   return payload;
 }
 
+/**
+ * 只读当前缓存（版本 key → stale 兜底 key），绝不请求上游：供内容页 SSR 与 /api/prices 同源渲染价格，
+ * 不让 Porkbun 拉取（含重试最长数十秒）阻塞 HTML 响应；KV 全空返回 null（调用方按 fetchedAt=null 处理）。
+ */
+export async function peekPricesPayload(kv: PricesKv | undefined, cfg: PricesCacheConfig): Promise<string | null> {
+  if (!kv) return null;
+  try {
+    const cached = await kv.get(cfg.key);
+    if (cached) return cached;
+  } catch { /* 读取失败回退 stale 兜底 */ }
+  return loadStalePayload(kv);
+}
+
 /** cron 周期内价格缓存超过阈值（含缓存缺失、stale 迁移快照）时主动重拉一次，避免长期 stale */
 export async function refreshPricesIfStale(kv: PricesKv | undefined, cfg: PricesCacheConfig): Promise<void> {
   if (!kv) return;

@@ -6,13 +6,17 @@
  * 文案硬编码处与 lib/i18n.tsx 词典逐字同源（修改词典时需同步）。
  */
 import { TLD_COMPARES, comparesForTld, type TldCompare } from "./compares";
-import { buildCompareFaq } from "./compare-faq";
-import { buildGuideFaq } from "./guide-faq";
-import { buildTldFaq } from "./tld-faq";
+import { buildCompareFaq, COMPARE_VERDICT_ANCHOR, comparePickAnchor } from "./compare-faq";
+import { buildComparePriceView, type ComparePriceSnapshot, type ComparePriceView, type PriceCell } from "./compare-prices";
+import type { FaqItem } from "./faq";
+import { splitFaqAnswer } from "./faq";
+import { buildGuideFaq, GUIDE_IDEAS_ANCHOR, GUIDE_PITFALLS_ANCHOR } from "./guide-faq";
+import { buildTldFaq, TLD_NAMING_ANCHOR } from "./tld-faq";
 import { COMPARE_SLUGS, compareLabel, relatedCompares } from "./compare-slugs";
 import { GUIDE_LABELS } from "./guide-labels";
 import { relatedGuideSlugs } from "./guide-groups";
-import { GUIDE_LIST, INDUSTRY_GUIDES, guidesForTld, type IndustryGuide } from "./guides";
+import { VIEW_ALL_LABEL, compareGroupChips, guideGroupChips, tldGroupChips, viewAllHref } from "./group-chips";
+import { INDUSTRY_GUIDES, guidesForTld, type IndustryGuide } from "./guides";
 import { HOME_HERO } from "./home-copy";
 import { HUB_META, compareHubGroups, guideHubGroups, guideOneLiner, tldHubGroups, tldOneLiner } from "./hubs";
 import { HOME_NAV_FEATURED, SITE_LINKS, SITE_LINKS_HEADING, langHref } from "./site-links";
@@ -168,20 +172,28 @@ export function pricesTableSkeleton(lang: Lang): string {
   );
 }
 
-const sectionH2 = (iconSvg: string, label: string) =>
-  `<h2 class="mt-8 flex items-center gap-2 text-base font-bold">${iconSvg}${escapeHtml(label)}</h2>`;
+/** id 存在时同时加 scroll-mt-20（sticky 顶栏 h-14），供 FAQ 答案里的页内锚点跳转；与各 page.tsx 的 <h2> 逐字一致 */
+const sectionH2 = (iconSvg: string, label: string, id?: string) =>
+  `<h2${id ? ` id="${id}"` : ""} class="mt-8 flex items-center gap-2 text-base font-bold${id ? " scroll-mt-20" : ""}">${iconSvg}${escapeHtml(label)}</h2>`;
+
+/** FAQ 答案：纯文本转义；link 片段渲染为页内锚点 <a>（与 components/faq-answer.tsx 逐字一致） */
+export const faqAnswerHtml = (item: FaqItem) => {
+  const parts = splitFaqAnswer(item);
+  if (!parts || !item.link) return escapeHtml(item.a);
+  return `${escapeHtml(parts[0])}<a href="#${item.link.hash}" class="text-brand underline underline-offset-4 hover:opacity-80">${escapeHtml(parts[1])}</a>${escapeHtml(parts[2])}`;
+};
 
 const dotList = (items: readonly string[], dotCls = "bg-brand") =>
   `<ul class="mt-3 space-y-2">${items
     .map((it) => `<li class="flex gap-2 text-sm leading-relaxed text-txt1"><span class="mt-2 h-1 w-1 shrink-0 rounded-full ${dotCls}"></span>${escapeHtml(it)}</li>`)
     .join("")}</ul>`;
 
-const faqBlock = (faq: { q: string; a: string }[], lang: Lang) =>
+const faqBlock = (faq: FaqItem[], lang: Lang) =>
   sectionH2(ICON_HELP, STR[lang].faq) +
   `<div class="mt-3 space-y-2">${faq
     .map(
       (f) =>
-        `<details class="group rounded-xl border border-line bg-bg1 px-4 py-3"><summary class="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&amp;::-webkit-details-marker]:hidden">${escapeHtml(f.q)}</summary><p class="mt-2 text-sm leading-relaxed text-txt1">${escapeHtml(f.a)}</p></details>`,
+        `<details class="group rounded-xl border border-line bg-bg1 px-4 py-3"><summary class="flex min-h-[28px] cursor-pointer list-none items-center text-sm font-semibold text-txt0 [&amp;::-webkit-details-marker]:hidden">${escapeHtml(f.q)}</summary><p class="mt-2 text-sm leading-relaxed text-txt1">${faqAnswerHtml(f)}</p></details>`,
     )
     .join("")}</div>`;
 
@@ -190,6 +202,10 @@ const ctaBlock = (title: string, desc: string, href: string, button: string, ico
 
 const chipRow = (heading: string, chips: string, mt = "mt-6") =>
   `<div class="${mt}"><h2 class="text-sm font-semibold text-txt1">${escapeHtml(heading)}</h2><div class="mt-3 flex flex-wrap gap-2">${chips}</div></div>`;
+
+/** 「其他 …」chip 行末尾的『查看全部 N 个 →』hub 链接（与 tld-page / guide-page / compare-page 同 class） */
+const viewAllChip = (href: string, label: string) =>
+  `<a href="${href}" class="flex min-h-[44px] items-center rounded-lg border border-brand-line px-3 text-xs font-semibold text-brand transition-colors hover:bg-brand-dim">${escapeHtml(label)}</a>`;
 
 /**
  * 内容页末尾「站内导航」：首页 / 三个 hub / 价格 / why / mcp / advanced（让 sitemap 内每一页都有 SSR 入链）。
@@ -212,14 +228,16 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
   const priceCard = `<div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-line bg-bg1 px-5 py-4">${ICON_TAG}<span class="text-sm text-txt1">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</span><a href="${langHref(`/prices`, lang)}" class="ml-auto inline-flex min-h-[44px] items-center text-xs text-txt2 hover:text-brand hover:underline sm:min-h-[36px]">${escapeHtml(s.seeAll)}</a></div>`;
   const bestFor = sectionH2(ICON_CHECK, s.bestFor) +
     `<ul class="mt-3 grid gap-2 sm:grid-cols-2">${loc.bestFor.map((it) => `<li class="rounded-lg border border-line bg-bg1 px-3.5 py-2.5 text-sm text-txt1">${escapeHtml(it)}</li>`).join("")}</ul>`;
-  const naming = sectionH2(ICON_BULB, s.naming) + dotList(loc.namingTips);
+  const naming = sectionH2(ICON_BULB, s.naming, TLD_NAMING_ANCHOR) + dotList(loc.namingTips);
+  const otherChips = tldGroupChips(tld);
   const others = chipRow(
     s.others,
-    TLD_LIST.map((other) => {
-      const cls = other === tld ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand";
-      const price = staticPriceShort(other, lang);
-      return `<a href="${langHref(`/tld/${other}`, lang)}" class="inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0 ${cls}">.${other}${price ? `<span class="tnum ml-1.5 text-[10px] text-txt1">${escapeHtml(price)}</span>` : ""}</a>`;
-    }).join(""),
+    otherChips.chips
+      .map((other) => {
+        const price = staticPriceShort(other, lang);
+        return `<a href="${langHref(`/tld/${other}`, lang)}" class="inline-flex min-h-[44px] items-center rounded-lg border px-3 py-1.5 font-mono text-xs transition-colors sm:min-h-0 border-line text-txt1 hover:border-brand-line hover:text-brand">.${other}${price ? `<span class="tnum ml-1.5 text-[10px] text-txt1">${escapeHtml(price)}</span>` : ""}</a>`;
+      })
+      .join("") + viewAllChip(viewAllHref("tld", otherChips.anchor, lang), VIEW_ALL_LABEL.tld[lang]),
     "mt-10",
   );
   const compares = relatedCompares.length
@@ -264,20 +282,51 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
   ];
 }
 
-/** /vs/:slug 全文正文（compare-page.tsx 首次渲染的静态部分） */
-export function compareContentBlocks(cmp: TldCompare, lang: Lang): string[] {
+const ICON_TAG_BRAND = icon("tag", "h-4 w-4 text-brand", '<path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle>');
+
+const priceCellHtml = (c: PriceCell) =>
+  `<td class="tnum whitespace-nowrap px-3 py-2.5 text-right"><span class="block text-txt0">${escapeHtml(c.usdText)}</span><span class="block text-[11px] text-txt2">${escapeHtml(c.cnyText)}</span></td>`;
+
+/** 价格数据表：DOM/类名与 components/compare-price-table.tsx 逐字一致（两端同一份 ComparePriceView） */
+export function comparePriceTableHtml(view: ComparePriceView): string {
+  const heading = view.kind === "empty" ? view.heading : view.table.heading;
+  const h2 = `<h2 class="flex items-center gap-2 text-base font-bold">${ICON_TAG_BRAND}${escapeHtml(heading)}</h2>`;
+  if (view.kind === "empty") return `<section class="mt-8">${h2}<p class="mt-2.5 text-sm leading-relaxed text-txt1">${escapeHtml(view.note)}</p></section>`;
+  const t = view.table;
+  const th = (label: string, i: number) => `<th scope="col" class="${i === 0 ? "px-4 py-2 text-left font-medium" : "px-3 py-2 text-right font-medium"}">${escapeHtml(label)}</th>`;
+  const rows = t.rows
+    .map(
+      (r) =>
+        `<tr class="border-b border-line"><th scope="row" class="whitespace-nowrap px-4 py-2.5 text-left font-mono font-semibold text-brand">.${escapeHtml(r.tld)}${r.live ? "" : `<span class="ml-1.5 rounded bg-bg2 px-1 font-sans text-[10px] font-normal text-txt2">${escapeHtml(t.refBadge)}</span>`}</th>${priceCellHtml(r.first)}${priceCellHtml(r.renew)}${priceCellHtml(r.fiveYear)}</tr>`,
+    )
+    .join("");
+  const diff = t.diff
+    ? `<tr class="bg-bg2/40"><th scope="row" class="whitespace-nowrap px-4 py-2.5 text-left text-xs font-semibold text-txt1">${escapeHtml(t.diff.label)}</th>${priceCellHtml(t.diff.first)}${priceCellHtml(t.diff.renew)}${priceCellHtml(t.diff.fiveYear)}</tr>`
+    : "";
+  const notes = `<ul class="mt-2 space-y-1 text-[11px] leading-relaxed text-txt2">${t.notes.map((n) => `<li>${escapeHtml(n)}</li>`).join("")}</ul>`;
+  return `<section class="mt-8">${h2}<div class="mt-3 overflow-x-auto rounded-xl border border-line bg-bg1"><table class="w-full min-w-[320px] text-sm"><caption class="px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2">${escapeHtml(t.caption)}</caption><thead><tr class="border-b border-line text-xs text-txt2">${t.headers.map(th).join("")}</tr></thead><tbody>${rows}${diff}</tbody></table></div>${notes}</section>`;
+}
+
+const EMPTY_PRICE_SNAPSHOT: ComparePriceSnapshot = { live: {}, fetchedAt: null, stale: true };
+
+/**
+ * /vs/:slug 全文正文（compare-page.tsx 首次渲染的静态部分）。
+ * prices 为 worker 从 /api/prices 同一 KV 缓存只读的快照（与注入客户端的同一份）；缺省按无数据处理。
+ */
+export function compareContentBlocks(cmp: TldCompare, lang: Lang, prices: ComparePriceSnapshot = EMPTY_PRICE_SNAPSHOT): string[] {
   const s = STR[lang];
   const loc = cmp[lang];
   const sides = [cmp.a, cmp.b] as const;
   const picks = [loc.pickA, loc.pickB] as const;
   const faq = buildCompareFaq(cmp, lang);
+  const priceTable = comparePriceTableHtml(buildComparePriceView(cmp.a, cmp.b, lang, prices));
   const relatedGuides = [...new Set([...guidesForTld(cmp.a), ...guidesForTld(cmp.b)])].slice(0, 4);
-  const verdict = `<div class="mt-6 rounded-xl border border-line bg-bg1 px-5 py-4"><h2 class="flex items-center gap-2 text-base font-bold">${ICON_SCALE}${escapeHtml(s.verdict)}</h2><p class="mt-2.5 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.verdict)}</p></div>`;
+  const verdict = `<div id="${COMPARE_VERDICT_ANCHOR}" class="mt-6 scroll-mt-20 rounded-xl border border-line bg-bg1 px-5 py-4"><h2 class="flex items-center gap-2 text-base font-bold">${ICON_SCALE}${escapeHtml(s.verdict)}</h2><p class="mt-2.5 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.verdict)}</p></div>`;
   const columns = `<div class="mt-8 grid gap-4 md:grid-cols-2">${sides
     .map((tld, i) => {
       const guide = TLD_GUIDES[tld];
       const firstSentence = guide ? guide[lang].intro.split(lang === "zh" ? "。" : ". ")[0] + (lang === "zh" ? "。" : ".") : "";
-      return `<section class="rounded-2xl border border-line bg-bg1 p-5"><a href="${langHref(`/tld/${tld}`, lang)}" class="tap-target inline-block font-mono text-lg font-bold text-brand hover:underline">.${tld}</a><p class="tnum mt-1 text-xs text-txt2">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</p>${guide ? `<p class="mt-3 text-sm leading-relaxed text-txt1">${escapeHtml(firstSentence)}</p>` : ""}<h3 class="mt-4 flex items-center gap-1.5 text-sm font-semibold">${ICON_CHECK_SM}${escapeHtml(s.pickWhen(tld))}</h3><ul class="mt-2 space-y-1.5">${picks[i]
+      return `<section id="${comparePickAnchor(tld)}" class="scroll-mt-20 rounded-2xl border border-line bg-bg1 p-5"><a href="${langHref(`/tld/${tld}`, lang)}" class="tap-target inline-block font-mono text-lg font-bold text-brand hover:underline">.${tld}</a><p class="tnum mt-1 text-xs text-txt2">${escapeHtml(staticPriceFull(tld, lang) ?? "")}</p>${guide ? `<p class="mt-3 text-sm leading-relaxed text-txt1">${escapeHtml(firstSentence)}</p>` : ""}<h3 class="mt-4 flex items-center gap-1.5 text-sm font-semibold">${ICON_CHECK_SM}${escapeHtml(s.pickWhen(tld))}</h3><ul class="mt-2 space-y-1.5">${picks[i]
         .map((it) => `<li class="flex gap-2 text-sm leading-relaxed text-txt1"><span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand"></span>${escapeHtml(it)}</li>`)
         .join("")}</ul></section>`;
     })
@@ -301,21 +350,17 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang): string[] {
         "mt-10",
       )
     : "";
+  const otherChips = compareGroupChips(cmp.slug);
   const others = chipRow(
     s.vsOthers,
-    Object.values(TLD_COMPARES)
-      .map((other) => {
-        const cls =
-          other.slug === cmp.slug
-            ? "flex min-h-[44px] items-center rounded-lg border border-brand-line bg-brand-dim px-3 font-mono text-xs font-semibold text-brand"
-            : "flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand";
-        return `<a href="${langHref(`/vs/${other.slug}`, lang)}" class="${cls}">.${other.a} vs .${other.b}</a>`;
-      })
-      .join(""),
+    otherChips.chips
+      .map((other) => `<a href="${langHref(`/vs/${other}`, lang)}" class="flex min-h-[44px] items-center rounded-lg border border-line px-3 font-mono text-xs text-txt1 transition-colors hover:border-brand-line hover:text-brand">${compareLabel(other)}</a>`)
+      .join("") + viewAllChip(viewAllHref("vs", otherChips.anchor, lang), VIEW_ALL_LABEL.vs[lang]),
     "mt-10",
   );
   return [
     verdict,
+    priceTable,
     columns,
     faqBlock(faq, lang),
     ctaBlock(s.vsCtaTitle(cmp.a, cmp.b), s.vsCtaDesc, `/?tld=${cmp.a},${cmp.b}`, s.vsCtaButton),
@@ -344,7 +389,7 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
               .join("")}${sec.bullets ? dotList(sec.bullets) : ""}</section>`,
         )
         .join("")
-    : sectionH2(ICON_BULB, s.guideIdeas) + dotList(loc.namingIdeas) +
+    : sectionH2(ICON_BULB, s.guideIdeas, GUIDE_IDEAS_ANCHOR) + dotList(loc.namingIdeas) +
       sectionH2(ICON_QUOTE, s.guideCases) +
       `<div class="mt-3 space-y-2.5">${loc.cases
         .map((c) => `<div class="rounded-lg border border-line bg-bg1 px-3.5 py-2.5"><p class="font-mono text-sm font-semibold text-txt0">${escapeHtml(c.name)}</p><p class="mt-1 text-sm leading-relaxed text-txt1">${escapeHtml(c.takeaway)}</p></div>`)
@@ -364,7 +409,7 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
           .join(""),
       )
     : "";
-  const pitfalls = sectionH2(ICON_ALERT, compliance ? s.guideNotes : s.guidePitfalls) + dotList(loc.pitfalls, "bg-destructive");
+  const pitfalls = sectionH2(ICON_ALERT, compliance ? s.guideNotes : s.guidePitfalls, compliance ? undefined : GUIDE_PITFALLS_ANCHOR) + dotList(loc.pitfalls, "bg-destructive");
   const sources = loc.sources?.length
     ? sectionH2(ICON_LANDMARK, s.guideSources) +
       `<ul class="mt-3 space-y-2">${loc.sources
@@ -373,12 +418,13 @@ export function guideContentBlocks(guide: IndustryGuide, lang: Lang): string[] {
     : "";
   const cta = loc.cta ?? { title: s.guideCtaTitle, desc: s.guideCtaDesc, button: s.guideCtaButton };
   const ctaHref = compliance ? langHref("/?mode=exact", lang) : `/?tpl=${guide.slug}`;
+  const otherChips = guideGroupChips(guide.slug);
+  const labelOf = (other: string) => GUIDE_LABELS.find((g) => g.slug === other)?.[lang] ?? INDUSTRY_GUIDES[other][lang].label;
   const others = chipRow(
     s.guideOthers,
-    GUIDE_LIST.map((other) => {
-      const cls = other === guide.slug ? "border-brand-line bg-brand-dim font-semibold text-brand" : "border-line text-txt1 hover:border-brand-line hover:text-brand";
-      return `<a href="${langHref(`/guide/${other}`, lang)}" class="flex min-h-[44px] items-center rounded-lg border px-3 text-xs transition-colors ${cls}">${escapeHtml(INDUSTRY_GUIDES[other][lang].label)}</a>`;
-    }).join(""),
+    otherChips.chips
+      .map((other) => `<a href="${langHref(`/guide/${other}`, lang)}" class="flex min-h-[44px] items-center rounded-lg border px-3 text-xs transition-colors border-line text-txt1 hover:border-brand-line hover:text-brand">${escapeHtml(labelOf(other))}</a>`)
+      .join("") + viewAllChip(viewAllHref("guide", otherChips.anchor, lang), VIEW_ALL_LABEL.guide[lang]),
     "mt-10",
   );
   const relatedIndustry = relatedGuideSlugs(guide.slug)

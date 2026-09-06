@@ -1,0 +1,779 @@
+{
+  "origin": "https://hunt.zalize.com",
+  "at": "2026-09-06T06:23:49.497Z",
+  "rows": [
+    {
+      "path": "/tld/com",
+      "lang": "zh",
+      "status": 200,
+      "total": 37,
+      "unique": 33,
+      "dup": "10.8%",
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true
+    },
+    {
+      "path": "/tld/com",
+      "lang": "en",
+      "status": 200,
+      "total": 42,
+      "unique": 35,
+      "dup": "16.7%",
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true
+    },
+    {
+      "path": "/tld/at",
+      "lang": "zh",
+      "status": 200,
+      "total": 48,
+      "unique": 38,
+      "dup": "20.8%",
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true
+    },
+    {
+      "path": "/tld/at",
+      "lang": "en",
+      "status": 200,
+      "total": 45,
+      "unique": 36,
+      "dup": "20.0%",
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true
+    },
+    {
+      "path": "/vs/com-vs-cn",
+      "lang": "zh",
+      "status": 200,
+      "total": 40,
+      "unique": 36,
+      "dup": "10.0%",
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true
+    },
+    {
+      "path": "/vs/com-vs-cn",
+      "lang": "en",
+      "status": 200,
+      "total": 42,
+      "unique": 37,
+      "dup": "11.9%",
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true
+    },
+    {
+      "path": "/guide/saas",
+      "lang": "zh",
+      "status": 200,
+      "total": 59,
+      "unique": 53,
+      "dup": "10.2%",
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true
+    },
+    {
+      "path": "/guide/saas",
+      "lang": "en",
+      "status": 200,
+      "total": 58,
+      "unique": 51,
+      "dup": "12.1%",
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true
+    }
+  ],
+  "detail": [
+    {
+      "url": "https://hunt.zalize.com/tld/com",
+      "total": 37,
+      "unique": 33,
+      "dupSentenceRatio": 0.108,
+      "dups": [
+        {
+          "s": ".com 是互联网上历史最久、认知度最高的顶级域名，用户在地址栏里下意识补全的就是它。",
+          "n": 2
+        },
+        {
+          "s": "做面向大众的产品、企业官网、电商或任何需要长期经营的品牌，.com 依然是第一选择：它自带信任感，转售市场也最活跃，好的 .com 域名本身就是资产。",
+          "n": 2
+        },
+        {
+          "s": "代价是优质短词几乎被注册殆尽——常见英文单词、两三个字母的组合基本无货，捡漏要靠造词、合成词或拼音组合。",
+          "n": 2
+        },
+        {
+          "s": "如果你的首选名字 .com 已被注册，与其加连字符或数字，不如换一个更独特的造词——这正是 AI 批量构思加实时核验能帮上忙的地方。",
+          "n": 2
+        }
+      ],
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true,
+      "sentences": [
+        ".com 域名注册指南：适合谁、多少钱、怎么起名",
+        "静态参考价：首年 ¥69 · 续费 ¥85/年 · 非实时报价",
+        ".com 是互联网上历史最久、认知度最高的顶级域名，用户在地址栏里下意识补全的就是它。",
+        "做面向大众的产品、企业官网、电商或任何需要长期经营的品牌，.com 依然是第一选择：它自带信任感，转售市场也最活跃，好的 .com 域名本身就是资产。",
+        "代价是优质短词几乎被注册殆尽——常见英文单词、两三个字母的组合基本无货，捡漏要靠造词、合成词或拼音组合。",
+        "如果你的首选名字 .com 已被注册，与其加连字符或数字，不如换一个更独特的造词——这正是 AI 批量构思加实时核验能帮上忙的地方。",
+        "适合什么",
+        "企业官网与品牌主站",
+        "面向大众的消费产品",
+        "电商与跨境业务",
+        "需要长期持有的品牌资产",
+        "命名建议",
+        "优先 6–10 字符的独特造词（如合成词、辅音+元音交替），常见单词基本已无货",
+        "避免连字符与数字：影响口头传播，也显得不专业",
+        "拼音品牌面向国内用户可行，但要选好读的双拼（如 zhituo、mofa）",
+        "如果预算允许，注册时把对应 .net/.org 一起保护性注册",
+        "常见问题",
+        ".com 域名适合谁？",
+        ".com 是互联网上历史最久、认知度最高的顶级域名，用户在地址栏里下意识补全的就是它。",
+        "做面向大众的产品、企业官网、电商或任何需要长期经营的品牌，.com 依然是第一选择：它自带信任感，转售市场也最活跃，好的 .com 域名本身就是资产。",
+        "代价是优质短词几乎被注册殆尽——常见英文单词、两三个字母的组合基本无货，捡漏要靠造词、合成词或拼音组合。",
+        "如果你的首选名字 .com 已被注册，与其加连字符或数字，不如换一个更独特的造词——这正是 AI 批量构思加实时核验能帮上忙的地方。",
+        "典型场景：企业官网与品牌主站；",
+        "面向大众的消费产品；",
+        "电商与跨境业务；",
+        "需要长期持有的品牌资产。",
+        "如何注册 .com 域名？",
+        "在 DomainHunter 描述你的想法，AI 批量构思并通过 RDAP/DNS/WHOIS 实时核验 .com 可注册状态；",
+        "可注册的名字直接跳转注册商，页面同时展示首年价与续费价，避免「首年便宜续费贵」的坑。",
+        ".com 域名怎么起名？",
+        "优先 6–10 字符的独特造词（如合成词、辅音+元音交替），常见单词基本已无货 避免连字符与数字：影响口头传播，也显得不专业 拼音品牌面向国内用户可行，但要选好读的双拼（如 zhituo、mofa） 如果预算允许，注册时把对应 .net/.org 一起保护性注册",
+        "马上猎一个 .com 好域名",
+        "描述你的想法，AI 批量构思并实时核验 .com 下的可注册好名字。",
+        "其他 TLD 指南",
+        "相关后缀对比",
+        "相关 TLD",
+        "相关行业命名指南"
+      ]
+    },
+    {
+      "url": "https://hunt.zalize.com/tld/com?lang=en",
+      "total": 42,
+      "unique": 35,
+      "dupSentenceRatio": 0.167,
+      "dups": [
+        {
+          "s": ".com is the oldest and most recognized top-level domain — the one users type by reflex.",
+          "n": 2
+        },
+        {
+          "s": "For consumer products, company websites, e-commerce, or any brand you plan to build for years, .com remains the default choice: it carries instant credibility and has by far the most liquid resale market, so a good .com is an asset in itself.",
+          "n": 2
+        },
+        {
+          "s": "The catch is scarcity — dictionary words and short letter combos are long gone.",
+          "n": 2
+        },
+        {
+          "s": "Winning today means invented words, compound names, or creative blends.",
+          "n": 2
+        },
+        {
+          "s": "If your first-choice name is taken on .com, resist hyphens and digits;",
+          "n": 2
+        },
+        {
+          "s": "generate a more distinctive coined name instead — exactly what AI brainstorming plus live availability checking is built for.",
+          "n": 2
+        },
+        {
+          "s": "Aim for distinctive coined names of 6–10 characters;",
+          "n": 2
+        }
+      ],
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true,
+      "sentences": [
+        ".com Domain Guide: Who It's For, Pricing & Naming Tips",
+        "Static reference: ≈$10 (¥69) 1st yr · ¥85/yr renewal · not a live quote",
+        ".com is the oldest and most recognized top-level domain — the one users type by reflex.",
+        "For consumer products, company websites, e-commerce, or any brand you plan to build for years, .com remains the default choice: it carries instant credibility and has by far the most liquid resale market, so a good .com is an asset in itself.",
+        "The catch is scarcity — dictionary words and short letter combos are long gone.",
+        "Winning today means invented words, compound names, or creative blends.",
+        "If your first-choice name is taken on .com, resist hyphens and digits;",
+        "generate a more distinctive coined name instead — exactly what AI brainstorming plus live availability checking is built for.",
+        "Best for",
+        "Company & brand websites",
+        "Consumer-facing products",
+        "E-commerce and global business",
+        "Long-term brand assets",
+        "Naming tips",
+        "Aim for distinctive coined names of 6–10 characters;",
+        "dictionary words are gone",
+        "Avoid hyphens and digits — they hurt word-of-mouth and look less professional",
+        "Blends and compounds (brand + verb, two short roots) still have inventory",
+        "If budget allows, defensively register the matching .net/.org",
+        "Who is a .com domain for?",
+        ".com is the oldest and most recognized top-level domain — the one users type by reflex.",
+        "For consumer products, company websites, e-commerce, or any brand you plan to build for years, .com remains the default choice: it carries instant credibility and has by far the most liquid resale market, so a good .com is an asset in itself.",
+        "The catch is scarcity — dictionary words and short letter combos are long gone.",
+        "Winning today means invented words, compound names, or creative blends.",
+        "If your first-choice name is taken on .com, resist hyphens and digits;",
+        "generate a more distinctive coined name instead — exactly what AI brainstorming plus live availability checking is built for.",
+        "Typical fits: Company & brand websites;",
+        "Consumer-facing products;",
+        "E-commerce and global business;",
+        "Long-term brand assets.",
+        "How do I register a .com domain?",
+        "Describe your idea on DomainHunter — the AI brainstorms names and verifies .com availability live via RDAP/DNS/WHOIS.",
+        "Available names link straight to a registrar with first-year and renewal prices shown, so you can spot renewal traps before buying.",
+        "How do I pick a good .com name?",
+        "Aim for distinctive coined names of 6–10 characters;",
+        "dictionary words are gone Avoid hyphens and digits — they hurt word-of-mouth and look less professional Blends and compounds (brand + verb, two short roots) still have inventory If budget allows, defensively register the matching .net/.org",
+        "Hunt a great .com domain right now",
+        "Describe your idea — AI brainstorms names in bulk and checks .com availability live.",
+        "More TLD guides",
+        "Related TLD comparisons",
+        "Related TLDs",
+        "Related industry naming guides"
+      ]
+    },
+    {
+      "url": "https://hunt.zalize.com/tld/at",
+      "total": 48,
+      "unique": 38,
+      "dupSentenceRatio": 0.208,
+      "dups": [
+        {
+          "s": ".at 是奥地利的国家域名，由 nic.at 运营，注册量约 150 万。",
+          "n": 2
+        },
+        {
+          "s": "奥地利消费者对本土信号非常敏感：本地电商、品牌官网、餐饮与服务商用 name.at，「奥地利的生意」一眼讲清，信任度远超一般新后缀——奥地利本土企业与政府机构的主站几乎都在 .at 上；",
+          "n": 2
+        },
+        {
+          "s": "Google 也会把 .at 站点与奥地利地区相关联，德语市场 SEO 有天然加成（奥地利与德国、瑞士共享德语圈，.at 站点对整个 DACH 区域都有辐射）。",
+          "n": 2
+        },
+        {
+          "s": ".at 还有一层通用后缀玩不出的花样：at 本身是英文介词，能拼出 meet.at、stay.at、look.at 这类动词短语域名（domain hack），创意品牌与活动页用起来自然又好记。",
+          "n": 2
+        },
+        {
+          "s": "资格上 .at 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。",
+          "n": 2
+        },
+        {
+          "s": "价格温和且平续：注册约 $14/年（约 ¥100），续费同价，无引流钩子。",
+          "n": 2
+        },
+        {
+          "s": "库存比 .com 充裕得多，德语与英文词根命中率都高。",
+          "n": 2
+        },
+        {
+          "s": "命名上品牌词直接上（brand.at）最主流；",
+          "n": 2
+        },
+        {
+          "s": "创意项目可用「动词 + .at」拼短语，本地服务用「行业词 + .at」。",
+          "n": 2
+        },
+        {
+          "s": "注意受众主要在奥地利与德语区，纯英语市场业务信号较弱（域名黑客除外）。",
+          "n": 2
+        }
+      ],
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true,
+      "sentences": [
+        ".at 域名注册指南：适合谁、多少钱、怎么起名",
+        "静态参考价：首年 ¥100 · 续费 ¥100/年 · 非实时报价",
+        ".at 是奥地利的国家域名，由 nic.at 运营，注册量约 150 万。",
+        "奥地利消费者对本土信号非常敏感：本地电商、品牌官网、餐饮与服务商用 name.at，「奥地利的生意」一眼讲清，信任度远超一般新后缀——奥地利本土企业与政府机构的主站几乎都在 .at 上；",
+        "Google 也会把 .at 站点与奥地利地区相关联，德语市场 SEO 有天然加成（奥地利与德国、瑞士共享德语圈，.at 站点对整个 DACH 区域都有辐射）。",
+        ".at 还有一层通用后缀玩不出的花样：at 本身是英文介词，能拼出 meet.at、stay.at、look.at 这类动词短语域名（domain hack），创意品牌与活动页用起来自然又好记。",
+        "资格上 .at 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。",
+        "价格温和且平续：注册约 $14/年（约 ¥100），续费同价，无引流钩子。",
+        "库存比 .com 充裕得多，德语与英文词根命中率都高。",
+        "命名上品牌词直接上（brand.at）最主流；",
+        "创意项目可用「动词 + .at」拼短语，本地服务用「行业词 + .at」。",
+        "注意受众主要在奥地利与德语区，纯英语市场业务信号较弱（域名黑客除外）。",
+        "适合什么",
+        "奥地利本地企业与服务",
+        "面向 DACH 德语区的业务",
+        "动词短语域名（meet.at 等）",
+        "德语内容与媒体站",
+        "命名建议",
+        "无资格限制，任何人可直接注册、无需本地地址",
+        "注册续费均约 $14/年，平续无钩子",
+        "at 是英文介词，可拼 meet.at/stay.at 类短语域名",
+        "受众在奥地利与德语区，纯英语业务信号较弱",
+        "常见问题",
+        ".at 域名适合谁？",
+        ".at 是奥地利的国家域名，由 nic.at 运营，注册量约 150 万。",
+        "奥地利消费者对本土信号非常敏感：本地电商、品牌官网、餐饮与服务商用 name.at，「奥地利的生意」一眼讲清，信任度远超一般新后缀——奥地利本土企业与政府机构的主站几乎都在 .at 上；",
+        "Google 也会把 .at 站点与奥地利地区相关联，德语市场 SEO 有天然加成（奥地利与德国、瑞士共享德语圈，.at 站点对整个 DACH 区域都有辐射）。",
+        ".at 还有一层通用后缀玩不出的花样：at 本身是英文介词，能拼出 meet.at、stay.at、look.at 这类动词短语域名（domain hack），创意品牌与活动页用起来自然又好记。",
+        "资格上 .at 完全开放：任何国家的个人与机构都能直接注册，无需本地地址或代理。",
+        "价格温和且平续：注册约 $14/年（约 ¥100），续费同价，无引流钩子。",
+        "库存比 .com 充裕得多，德语与英文词根命中率都高。",
+        "命名上品牌词直接上（brand.at）最主流；",
+        "创意项目可用「动词 + .at」拼短语，本地服务用「行业词 + .at」。",
+        "注意受众主要在奥地利与德语区，纯英语市场业务信号较弱（域名黑客除外）。",
+        "典型场景：奥地利本地企业与服务；",
+        "面向 DACH 德语区的业务；",
+        "动词短语域名（meet.at 等）；",
+        "德语内容与媒体站。",
+        "如何注册 .at 域名？",
+        "在 DomainHunter 描述你的想法，AI 批量构思并通过 RDAP/DNS/WHOIS 实时核验 .at 可注册状态；",
+        "可注册的名字直接跳转注册商，页面同时展示首年价与续费价，避免「首年便宜续费贵」的坑。",
+        ".at 域名怎么起名？",
+        "无资格限制，任何人可直接注册、无需本地地址 注册续费均约 $14/年，平续无钩子 at 是英文介词，可拼 meet.at/stay.at 类短语域名 受众在奥地利与德语区，纯英语业务信号较弱",
+        "马上猎一个 .at 好域名",
+        "描述你的想法，AI 批量构思并实时核验 .at 下的可注册好名字。",
+        "其他 TLD 指南",
+        "相关后缀对比",
+        "相关 TLD"
+      ]
+    },
+    {
+      "url": "https://hunt.zalize.com/tld/at?lang=en",
+      "total": 45,
+      "unique": 36,
+      "dupSentenceRatio": 0.2,
+      "dups": [
+        {
+          "s": ".at is Austria's country-code domain, run by nic.at with about 1.5 million registrations.",
+          "n": 2
+        },
+        {
+          "s": "Austrian consumers have a strong local preference: name.at says \"an Austrian business\" at a glance, with trust far beyond any new gTLD — Austrian companies and government institutions overwhelmingly live on .at;",
+          "n": 2
+        },
+        {
+          "s": "Google also geo-associates .at sites with Austria, a natural boost for German-language SEO (Austria shares the German-speaking world with Germany and Switzerland, so .at sites radiate across the whole DACH region). .at also offers a trick no generic suffix can match: \"at\" is an English preposition, enabling verb-phrase domain hacks like meet.at, stay.at and look.at — natural and memorable for creative brands and event pages.",
+          "n": 2
+        },
+        {
+          "s": "On eligibility, .at is fully open: individuals and organizations from anywhere can register directly with no local address or proxy.",
+          "n": 2
+        },
+        {
+          "s": "Pricing is gentle and flat: about $14/yr to register (≈¥100) with the same renewal, no teaser games.",
+          "n": 2
+        },
+        {
+          "s": "Inventory beats .com by a wide margin, and both German and English roots hit well.",
+          "n": 2
+        },
+        {
+          "s": "For naming, a straight brand word is the mainstream shape (brand.at);",
+          "n": 2
+        },
+        {
+          "s": "creative projects can build verb + .at phrases, and local services fit trade-word + .at.",
+          "n": 2
+        },
+        {
+          "s": "One caution: the audience is Austria and the German-speaking region — the signal is weaker for purely English markets (domain hacks aside).",
+          "n": 2
+        }
+      ],
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true,
+      "sentences": [
+        ".at Domain Guide: Who It's For, Pricing & Naming Tips",
+        "Static reference: ≈$14 (¥100) 1st yr · ¥100/yr renewal · not a live quote",
+        ".at is Austria's country-code domain, run by nic.at with about 1.5 million registrations.",
+        "Austrian consumers have a strong local preference: name.at says \"an Austrian business\" at a glance, with trust far beyond any new gTLD — Austrian companies and government institutions overwhelmingly live on .at;",
+        "Google also geo-associates .at sites with Austria, a natural boost for German-language SEO (Austria shares the German-speaking world with Germany and Switzerland, so .at sites radiate across the whole DACH region). .at also offers a trick no generic suffix can match: \"at\" is an English preposition, enabling verb-phrase domain hacks like meet.at, stay.at and look.at — natural and memorable for creative brands and event pages.",
+        "On eligibility, .at is fully open: individuals and organizations from anywhere can register directly with no local address or proxy.",
+        "Pricing is gentle and flat: about $14/yr to register (≈¥100) with the same renewal, no teaser games.",
+        "Inventory beats .com by a wide margin, and both German and English roots hit well.",
+        "For naming, a straight brand word is the mainstream shape (brand.at);",
+        "creative projects can build verb + .at phrases, and local services fit trade-word + .at.",
+        "One caution: the audience is Austria and the German-speaking region — the signal is weaker for purely English markets (domain hacks aside).",
+        "Best for",
+        "Local Austrian businesses & services",
+        "DACH German-speaking market ventures",
+        "Verb-phrase domain hacks (meet.at etc.)",
+        "German-language content & media",
+        "Naming tips",
+        "No eligibility restrictions — anyone can register, no local address needed",
+        "About $14/yr flat to register and renew — no traps",
+        "\"at\" is an English preposition — build hacks like meet.at or stay.at",
+        "Audience is Austria & the DACH region — weaker signal for purely English markets",
+        "Who is a .at domain for?",
+        ".at is Austria's country-code domain, run by nic.at with about 1.5 million registrations.",
+        "Austrian consumers have a strong local preference: name.at says \"an Austrian business\" at a glance, with trust far beyond any new gTLD — Austrian companies and government institutions overwhelmingly live on .at;",
+        "Google also geo-associates .at sites with Austria, a natural boost for German-language SEO (Austria shares the German-speaking world with Germany and Switzerland, so .at sites radiate across the whole DACH region). .at also offers a trick no generic suffix can match: \"at\" is an English preposition, enabling verb-phrase domain hacks like meet.at, stay.at and look.at — natural and memorable for creative brands and event pages.",
+        "On eligibility, .at is fully open: individuals and organizations from anywhere can register directly with no local address or proxy.",
+        "Pricing is gentle and flat: about $14/yr to register (≈¥100) with the same renewal, no teaser games.",
+        "Inventory beats .com by a wide margin, and both German and English roots hit well.",
+        "For naming, a straight brand word is the mainstream shape (brand.at);",
+        "creative projects can build verb + .at phrases, and local services fit trade-word + .at.",
+        "One caution: the audience is Austria and the German-speaking region — the signal is weaker for purely English markets (domain hacks aside).",
+        "Typical fits: Local Austrian businesses & services;",
+        "DACH German-speaking market ventures;",
+        "Verb-phrase domain hacks (meet.at etc.);",
+        "German-language content & media.",
+        "How do I register a .at domain?",
+        "Describe your idea on DomainHunter — the AI brainstorms names and verifies .at availability live via RDAP/DNS/WHOIS.",
+        "Available names link straight to a registrar with first-year and renewal prices shown, so you can spot renewal traps before buying.",
+        "How do I pick a good .at name?",
+        "No eligibility restrictions — anyone can register, no local address needed About $14/yr flat to register and renew — no traps \"at\" is an English preposition — build hacks like meet.at or stay.at Audience is Austria & the DACH region — weaker signal for purely English markets",
+        "Hunt a great .at domain right now",
+        "Describe your idea — AI brainstorms names in bulk and checks .at availability live.",
+        "More TLD guides",
+        "Related TLD comparisons",
+        "Related TLDs"
+      ]
+    },
+    {
+      "url": "https://hunt.zalize.com/vs/com-vs-cn",
+      "total": 40,
+      "unique": 36,
+      "dupSentenceRatio": 0.1,
+      "dups": [
+        {
+          "s": "看用户在哪里：主要做国内市场、需要 ICP 备案接入国内主机，.cn 是标配且价格便宜得多；",
+          "n": 2
+        },
+        {
+          "s": "面向国际用户或计划出海，.com 的认知度无可替代。",
+          "n": 2
+        },
+        {
+          "s": "预算允许时，成熟品牌通常两个都注册——.com 做主站，.cn 防抢注并 301 跳转。",
+          "n": 2
+        },
+        {
+          "s": "注意 .cn 注册需实名认证，个人与企业均可注册但流程比 .com 多一步。",
+          "n": 2
+        }
+      ],
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true,
+      "sentences": [
+        ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比",
+        "看用户在哪里：主要做国内市场、需要 ICP 备案接入国内主机，.cn 是标配且价格便宜得多；",
+        "面向国际用户或计划出海，.com 的认知度无可替代。",
+        "预算允许时，成熟品牌通常两个都注册——.com 做主站，.cn 防抢注并 301 跳转。",
+        "注意 .cn 注册需实名认证，个人与企业均可注册但流程比 .com 多一步。",
+        "静态参考价：首年 ¥69 · 续费 ¥85/年 · 非实时报价",
+        ".com 是互联网上历史最久、认知度最高的顶级域名，用户在地址栏里下意识补全的就是它。",
+        "适合选 .com 的情况",
+        "面向国际用户或计划出海",
+        "品牌主站与长期资产",
+        "不想处理实名/备案流程",
+        "希望转售流动性最好",
+        "静态参考价：首年 ¥33 · 续费 ¥38/年 · 非实时报价",
+        ".cn 是中国的国家顶级域名，也是国内业务最名正言顺的选择：面向中国用户的产品、需要 ICP 备案上线的网站、政企合作项目，用 .cn 天然合规顺畅——备案流程对 .cn 完全友好，而部分新顶级域名在备案时会遇到限制。",
+        "适合选 .cn 的情况",
+        "主要做国内市场",
+        "需要 ICP 备案接入国内服务器",
+        "预算敏感（首年与续费都便宜）",
+        "拼音品牌词在 .com 已被注册",
+        "常见问题",
+        ".com 和 .cn 怎么选？",
+        "看用户在哪里：主要做国内市场、需要 ICP 备案接入国内主机，.cn 是标配且价格便宜得多；",
+        "面向国际用户或计划出海，.com 的认知度无可替代。",
+        "预算允许时，成熟品牌通常两个都注册——.com 做主站，.cn 防抢注并 301 跳转。",
+        "注意 .cn 注册需实名认证，个人与企业均可注册但流程比 .com 多一步。",
+        "什么时候选 .com？",
+        "更适合选 .com 的场景：面向国际用户或计划出海；",
+        "品牌主站与长期资产；",
+        "不想处理实名/备案流程；",
+        "希望转售流动性最好。",
+        "什么时候选 .cn？",
+        "更适合选 .cn 的场景：主要做国内市场；",
+        "需要 ICP 备案接入国内服务器；",
+        "预算敏感（首年与续费都便宜）；",
+        "拼音品牌词在 .com 已被注册。",
+        "让 AI 同时在 .com 和 .cn 下猎名",
+        "描述你的想法，AI 批量构思并实时核验两个后缀下的可注册好名字，直接对比。",
+        "相关行业命名指南",
+        "相关对比",
+        "其他后缀对比"
+      ]
+    },
+    {
+      "url": "https://hunt.zalize.com/vs/com-vs-cn?lang=en",
+      "total": 42,
+      "unique": 37,
+      "dupSentenceRatio": 0.119,
+      "dups": [
+        {
+          "s": "It comes down to where your users are.",
+          "n": 2
+        },
+        {
+          "s": "For a China-focused product that needs ICP filing and domestic hosting, .cn is standard and far cheaper.",
+          "n": 2
+        },
+        {
+          "s": "For international audiences, .com's recognition is irreplaceable.",
+          "n": 2
+        },
+        {
+          "s": "Established brands usually register both — .com as the primary site, .cn defensively with a 301.",
+          "n": 2
+        },
+        {
+          "s": "Note .cn requires real-name verification for registration, one extra step compared to .com.",
+          "n": 2
+        }
+      ],
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true,
+      "sentences": [
+        ".com vs .cn: Audience, Compliance & Brand Protection Compared",
+        "Which to pick",
+        "It comes down to where your users are.",
+        "For a China-focused product that needs ICP filing and domestic hosting, .cn is standard and far cheaper.",
+        "For international audiences, .com's recognition is irreplaceable.",
+        "Established brands usually register both — .com as the primary site, .cn defensively with a 301.",
+        "Note .cn requires real-name verification for registration, one extra step compared to .com.",
+        "Static reference: ≈$10 (¥69) 1st yr · ¥85/yr renewal · not a live quote",
+        ".com is the oldest and most recognized top-level domain — the one users type by reflex.",
+        "Pick .com when",
+        "International or global audience",
+        "Primary brand site and long-term asset",
+        "No real-name/ICP paperwork",
+        "Best resale liquidity",
+        "Static reference: ≈$5 (¥33) 1st yr · ¥38/yr renewal · not a live quote",
+        ".cn is China's country-code TLD and the most legitimate choice for China-facing business: products serving Chinese users, websites that need ICP filing to go live, and government or enterprise projects all run smoothest on .cn — the filing process fully supports it, while some newer TLDs hit restrictions.",
+        "Pick .cn when",
+        "China-focused market",
+        "Need ICP filing with domestic hosting",
+        "Budget-sensitive (cheap first year and renewal)",
+        "Your pinyin brand word is taken on .com",
+        ".com vs .cn: which should I choose?",
+        "It comes down to where your users are.",
+        "For a China-focused product that needs ICP filing and domestic hosting, .cn is standard and far cheaper.",
+        "For international audiences, .com's recognition is irreplaceable.",
+        "Established brands usually register both — .com as the primary site, .cn defensively with a 301.",
+        "Note .cn requires real-name verification for registration, one extra step compared to .com.",
+        "When should I pick a .com domain?",
+        ".com is the better fit for: International or global audience;",
+        "Primary brand site and long-term asset;",
+        "No real-name/ICP paperwork;",
+        "Best resale liquidity.",
+        "When should I pick a .cn domain?",
+        ".cn is the better fit for: China-focused market;",
+        "Need ICP filing with domestic hosting;",
+        "Budget-sensitive (cheap first year and renewal);",
+        "Your pinyin brand word is taken on .com.",
+        "Hunt names on .com and .cn at once",
+        "Describe your idea — AI brainstorms names in bulk and checks availability on both suffixes live, side by side.",
+        "Related industry naming guides",
+        "Related comparisons",
+        "More TLD comparisons"
+      ]
+    },
+    {
+      "url": "https://hunt.zalize.com/guide/saas",
+      "total": 59,
+      "unique": 53,
+      "dupSentenceRatio": 0.102,
+      "dups": [
+        {
+          "s": "SaaS 的名字要在两个场景里同时成立：一是老板在预算会议上说出来不掉价，二是用户在日常对话里能把它当动词用——「你 Slack 我一下」是 SaaS 命名的最高境界。",
+          "n": 2
+        },
+        {
+          "s": "这决定了 SaaS 命名的核心取舍：宁要好读好拼的造词，不要准确但拗口的功能描述。",
+          "n": 2
+        },
+        {
+          "s": "功能会迭代，名字描述得越具体，三年后被自己的路线图打脸的概率越大（想象 Slack 若叫 TeamChatTool 会怎样）。",
+          "n": 2
+        },
+        {
+          "s": "同时 SaaS 获客高度依赖口碑与搜索，名字必须「听一遍就能拼出来」，否则每一次口头推荐都在漏水。",
+          "n": 2
+        },
+        {
+          "s": "预算上，SaaS 客单价高、生命周期长，域名是最便宜的品牌投资，值得为一个干净的 .com 或 .io 多花预算。",
+          "n": 2
+        },
+        {
+          "s": "若变形，只动一个字母且保持读音不变",
+          "n": 2
+        }
+      ],
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true,
+      "sentences": [
+        "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择",
+        "SaaS 的名字要在两个场景里同时成立：一是老板在预算会议上说出来不掉价，二是用户在日常对话里能把它当动词用——「你 Slack 我一下」是 SaaS 命名的最高境界。",
+        "这决定了 SaaS 命名的核心取舍：宁要好读好拼的造词，不要准确但拗口的功能描述。",
+        "功能会迭代，名字描述得越具体，三年后被自己的路线图打脸的概率越大（想象 Slack 若叫 TeamChatTool 会怎样）。",
+        "同时 SaaS 获客高度依赖口碑与搜索，名字必须「听一遍就能拼出来」，否则每一次口头推荐都在漏水。",
+        "预算上，SaaS 客单价高、生命周期长，域名是最便宜的品牌投资，值得为一个干净的 .com 或 .io 多花预算。",
+        "命名思路",
+        "动词化命名：选一个能当动词用的短词或造词（Slack、Zoom），用户说「你 X 我一下」时品牌就赢了；",
+        "测试方法是造句念三遍，别扭就换",
+        "隐喻借词：不描述功能，借一个意象表达价值——Notion（概念）、Asana（瑜伽体式，稳定）、Monday（每周的开始）；",
+        "隐喻词库存远比功能词充裕",
+        "合成词嫁接：两个短词根各取一半拼接（Salesforce = sales + force、Mailchimp = mail + chimp），既保留联想又拿得到域名",
+        "尾缀造词：在词根后加 -ly、-io、-base、-stack、-kit 等 SaaS 惯用尾缀（Grammarly、Airtable），圈内人一眼识别品类",
+        "拼写变形要克制：删元音（Flickr 式）在 2025 年已显过时，且口头传播必须逐字母拼写；",
+        "若变形，只动一个字母且保持读音不变",
+        "好名字拆解",
+        "Slack",
+        "本义「松弛」，反直觉地给「工作沟通」注入轻松感；",
+        "单音节、能当动词、5 个字母，几乎是 SaaS 命名的满分卷",
+        "Notion",
+        "抽象名词「概念/想法」，完美匹配「万物皆可组织」的产品哲学；",
+        "不锁定任何功能，给了产品十年扩张空间",
+        "Figma",
+        "从 figure（图形）造词，保留视觉联想又完全独占；",
+        "两音节以 -a 结尾，全球用户发音几乎不会出错",
+        "Airtable",
+        "air（轻盈）+ table（表格）：一秒说清「更轻快的表格」，合成词里教科书级的「气质词+品类词」结构",
+        "Linear",
+        "直接用常见词「线性的」，赌的是品牌感压过通用性；",
+        "配合 linear.app 域名反而强化了「工程审美」人设——常见词+精准 TLD 的经典打法",
+        "推荐 TLD",
+        "相关后缀对比",
+        "常见误区",
+        "用功能描述当名字（TaskManagerPro 类）：功能一变名字就过期，且毫无商标性可言",
+        "堆砌 tech/hub/soft 等万金油后缀：和几千个同行撞车，搜索结果里永远挤不进第一屏",
+        "只查了 .com 没查商标与社交账号：SaaS 出海必查 USPTO/EUIPO 与 X、GitHub 同名账号",
+        "名字超过 3 个音节：口碑传播衰减明显，输入 URL 时的错拼率也随长度上升",
+        "常见问题",
+        "SaaS 工具品牌怎么起名？",
+        "SaaS 的名字要在两个场景里同时成立：一是老板在预算会议上说出来不掉价，二是用户在日常对话里能把它当动词用——「你 Slack 我一下」是 SaaS 命名的最高境界。",
+        "这决定了 SaaS 命名的核心取舍：宁要好读好拼的造词，不要准确但拗口的功能描述。",
+        "功能会迭代，名字描述得越具体，三年后被自己的路线图打脸的概率越大（想象 Slack 若叫 TeamChatTool 会怎样）。",
+        "同时 SaaS 获客高度依赖口碑与搜索，名字必须「听一遍就能拼出来」，否则每一次口头推荐都在漏水。",
+        "预算上，SaaS 客单价高、生命周期长，域名是最便宜的品牌投资，值得为一个干净的 .com 或 .io 多花预算。",
+        "可操作的思路：动词化命名：选一个能当动词用的短词或造词（Slack、Zoom），用户说「你 X 我一下」时品牌就赢了；",
+        "测试方法是造句念三遍，别扭就换隐喻借词：不描述功能，借一个意象表达价值——Notion（概念）、Asana（瑜伽体式，稳定）、Monday（每周的开始）；",
+        "隐喻词库存远比功能词充裕合成词嫁接：两个短词根各取一半拼接（Salesforce = sales + force、Mailchimp = mail + chimp），既保留联想又拿得到域名尾缀造词：在词根后加 -ly、-io、-base、-stack、-kit 等 SaaS 惯用尾缀（Grammarly、Airtable），圈内人一眼识别品类拼写变形要克制：删元音（Flickr 式）在 2025 年已显过时，且口头传播必须逐字母拼写；",
+        "若变形，只动一个字母且保持读音不变",
+        "SaaS 工具适合用什么域名后缀？",
+        "推荐后缀：.com、.io、.app。",
+        ".com——面向企业客户的默认选择，采购与 IT 部门最信任；",
+        ".io——技术型 SaaS 的圈内标配，开发者受众零违和；",
+        ".app——产品即应用时零解释成本，且全后缀强制 HTTPS。",
+        "SaaS 工具起名有哪些常见误区？",
+        "用功能描述当名字（TaskManagerPro 类）：功能一变名字就过期，且毫无商标性可言堆砌 tech/hub/soft 等万金油后缀：和几千个同行撞车，搜索结果里永远挤不进第一屏只查了 .com 没查商标与社交账号：SaaS 出海必查 USPTO/EUIPO 与 X、GitHub 同名账号名字超过 3 个音节：口碑传播衰减明显，输入 URL 时的错拼率也随长度上升",
+        "用 AI 按这个行业猎名",
+        "一键填入该行业模板，AI 批量构思并实时核验可注册的好域名。",
+        "其他行业命名指南",
+        "相关行业指南"
+      ]
+    },
+    {
+      "url": "https://hunt.zalize.com/guide/saas?lang=en",
+      "total": 58,
+      "unique": 51,
+      "dupSentenceRatio": 0.121,
+      "dups": [
+        {
+          "s": "A SaaS name has to work in two rooms at once: it can't sound cheap when a VP says it in a budget meeting, and it should slip into everyday speech as a verb — \"just Slack me\" is the endgame of SaaS naming.",
+          "n": 2
+        },
+        {
+          "s": "That defines the core trade-off: a clean, pronounceable coined word beats an accurate but clunky feature description every time.",
+          "n": 2
+        },
+        {
+          "s": "Features change;",
+          "n": 2
+        },
+        {
+          "s": "the more literally a name describes today's product, the more your own roadmap will contradict it in three years (imagine Slack launching as TeamChatTool).",
+          "n": 2
+        },
+        {
+          "s": "SaaS growth also leans on word of mouth and search, so the name must survive the \"hear it once, spell it right\" test — every failed spelling is a leaked referral.",
+          "n": 2
+        },
+        {
+          "s": "And since SaaS has high contract values and long customer lifetimes, the domain is the cheapest brand asset you'll ever buy: paying up for a clean .com or .io is rational, not vain.",
+          "n": 2
+        },
+        {
+          "s": "If you must mutate, change one letter and keep the pronunciation intact",
+          "n": 2
+        }
+      ],
+      "faqDetails": 3,
+      "faqLd": 3,
+      "faqLdValid": true,
+      "sentences": [
+        "How to Name a SaaS Product: Strategies, Case Studies & Domains",
+        "A SaaS name has to work in two rooms at once: it can't sound cheap when a VP says it in a budget meeting, and it should slip into everyday speech as a verb — \"just Slack me\" is the endgame of SaaS naming.",
+        "That defines the core trade-off: a clean, pronounceable coined word beats an accurate but clunky feature description every time.",
+        "Features change;",
+        "the more literally a name describes today's product, the more your own roadmap will contradict it in three years (imagine Slack launching as TeamChatTool).",
+        "SaaS growth also leans on word of mouth and search, so the name must survive the \"hear it once, spell it right\" test — every failed spelling is a leaked referral.",
+        "And since SaaS has high contract values and long customer lifetimes, the domain is the cheapest brand asset you'll ever buy: paying up for a clean .com or .io is rational, not vain.",
+        "Naming strategies",
+        "Make it verb-able: pick a short word or coinage that works as a verb (Slack, Zoom).",
+        "Say \"just X me\" out loud three times — if it stumbles, move on",
+        "Borrow a metaphor: don't describe the feature, evoke the value — Notion (an idea), Asana (a stable yoga pose), Monday (where work starts).",
+        "Metaphor inventory is far richer than feature-word inventory",
+        "Graft a blend: fuse halves of two short roots (Salesforce, Mailchimp) — you keep the association and can actually register the domain",
+        "Use category suffixes deliberately: -ly, -base, -stack, -kit and friends (Grammarly, Airtable) signal the SaaS category instantly to your buyers",
+        "Ration the misspellings: dropped vowels (the Flickr trick) read dated now and force letter-by-letter spelling in every referral.",
+        "If you must mutate, change one letter and keep the pronunciation intact",
+        "Great names, deconstructed",
+        "Slack",
+        "Literally \"looseness\" — counterintuitively injecting calm into work chat;",
+        "one syllable, verb-able, five letters: close to a perfect score in SaaS naming",
+        "Notion",
+        "An abstract noun that matches the \"organize anything\" philosophy;",
+        "by locking onto no feature, it bought a decade of product expansion",
+        "Figma",
+        "Coined from \"figure\": keeps the visual association while being fully ownable;",
+        "two syllables ending in -a, nearly impossible to mispronounce globally",
+        "Airtable",
+        "air (light) + table (the category): explains \"a lighter spreadsheet\" in one second — the textbook quality-word + category-word blend",
+        "Linear",
+        "A common dictionary word, betting brand feel over ownability — and linear.app turns the constraint into an engineering-taste statement.",
+        "Classic common-word + precise-TLD play",
+        "Recommended TLDs",
+        "Related TLD comparisons",
+        "Common mistakes",
+        "Naming by feature description (TaskManagerPro et al.): the name expires with the first pivot and has zero trademark strength",
+        "Leaning on filler suffixes like tech/hub/soft — you'll collide with thousands of peers and never own page one of search",
+        "Checking only the .com: for global SaaS, also clear the trademark (USPTO/EUIPO) and the matching X and GitHub handles",
+        "Going past three syllables: word-of-mouth decays fast and typo rates climb with every extra character",
+        "How do I choose a brand name for SaaS tools?",
+        "A SaaS name has to work in two rooms at once: it can't sound cheap when a VP says it in a budget meeting, and it should slip into everyday speech as a verb — \"just Slack me\" is the endgame of SaaS naming.",
+        "That defines the core trade-off: a clean, pronounceable coined word beats an accurate but clunky feature description every time.",
+        "Features change;",
+        "the more literally a name describes today's product, the more your own roadmap will contradict it in three years (imagine Slack launching as TeamChatTool).",
+        "SaaS growth also leans on word of mouth and search, so the name must survive the \"hear it once, spell it right\" test — every failed spelling is a leaked referral.",
+        "And since SaaS has high contract values and long customer lifetimes, the domain is the cheapest brand asset you'll ever buy: paying up for a clean .com or .io is rational, not vain.",
+        "Practical approaches: Make it verb-able: pick a short word or coinage that works as a verb (Slack, Zoom).",
+        "Say \"just X me\" out loud three times — if it stumbles, move on Borrow a metaphor: don't describe the feature, evoke the value — Notion (an idea), Asana (a stable yoga pose), Monday (where work starts).",
+        "Metaphor inventory is far richer than feature-word inventory Graft a blend: fuse halves of two short roots (Salesforce, Mailchimp) — you keep the association and can actually register the domain Use category suffixes deliberately: -ly, -base, -stack, -kit and friends (Grammarly, Airtable) signal the SaaS category instantly to your buyers Ration the misspellings: dropped vowels (the Flickr trick) read dated now and force letter-by-letter spelling in every referral.",
+        "If you must mutate, change one letter and keep the pronunciation intact",
+        "Which domain extension is best for SaaS tools?",
+        "Recommended TLDs: .com, .io, .app. .com — The default for B2B buyers — procurement and IT trust it most .io — The insider standard for technical SaaS aimed at developers .app — Zero explanation when the product is an app;",
+        "HTTPS enforced zone-wide",
+        "What naming mistakes should I avoid for SaaS tools?",
+        "Naming by feature description (TaskManagerPro et al.): the name expires with the first pivot and has zero trademark strength Leaning on filler suffixes like tech/hub/soft — you'll collide with thousands of peers and never own page one of search Checking only the .com: for global SaaS, also clear the trademark (USPTO/EUIPO) and the matching X and GitHub handles Going past three syllables: word-of-mouth decays fast and typo rates climb with every extra character",
+        "Hunt names for this industry with AI",
+        "Prefill the industry template — AI brainstorms in bulk and verifies availability live.",
+        "More industry naming guides",
+        "Related industry guides"
+      ]
+    }
+  ]
+}
