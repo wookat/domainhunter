@@ -22,6 +22,7 @@ import type { InjectedContent } from "./content/injected";
 import { HUB_META } from "./content/hubs";
 import { TLD_GUIDES } from "./content/tlds";
 import { TLD_LIST, USD_TO_CNY } from "./content/tld-list";
+import { parseMonitorDomain } from "./lib/monitor-add";
 import { VARIANT_PREFIXES, VARIANT_SUFFIXES } from "./lib/variants";
 import { isRegistrarId, parseAffiliateJson, type RegistrarId } from "./lib/registrars";
 import { generateRuleCandidates, LLM_BREAKER_KEY, LLM_BREAKER_TTL_S, type FallbackReason } from "./rule-fallback";
@@ -594,6 +595,56 @@ app.post("/api/monitor", async (c) => {
   }
   await kv.put(MONITOR_KEY, JSON.stringify(map));
   return c.json({ ok: true, enabled, monitored: Object.keys(map).length });
+});
+
+// R557 直接添加监控：先做一次实时核验（穿透缓存，非 AI），可注册的域名不进监控集合（added=false，前端提示去注册）；
+// taken / unknown 入集合并带上本次核验的 status / expiresAt / lastChecked，列表无需等 cron 即可显示到期日
+app.post("/api/monitor/add", async (c) => {
+  const kv = c.env.CACHE;
+  if (!kv) return c.json({ ok: false, error: "monitor_unavailable" }, 503);
+  const body = await c.req.json<{ domain?: string; webhook?: string }>().catch(() => null);
+  const parsed = parseMonitorDomain(typeof body?.domain === "string" ? body.domain : "");
+  if (!parsed.ok) {
+    if (parsed.reason === "tld") return c.json({ ok: false, error: "unsupported_tld", tld: parsed.tld }, 400);
+    return c.json({ ok: false, error: "invalid_domain" }, 400);
+  }
+  const { domain } = parsed;
+  const map = await loadMonitorMap(kv);
+  const monitored = Object.keys(map).length;
+  if (!map[domain] && monitored >= MAX_MONITOR_DOMAINS) {
+    return c.json({ ok: false, error: "monitor_full", monitored, limit: MAX_MONITOR_DOMAINS }, 429);
+  }
+  const results: CheckResult[] = [];
+  try {
+    await checkDomainsCached(kv, [domain], async (r) => {
+      results.push(r);
+    }, true);
+  } catch { /* 核验异常按 check_failed 返回 */ }
+  const result = results[0];
+  if (!result) return c.json({ ok: false, error: "check_failed" }, 502);
+  const now = Date.now();
+  const status = result.status === "available" || result.status === "taken" ? result.status : "unknown";
+  if (status === "available") {
+    return c.json({ ok: true, added: false, entry: { domain, status, lastChecked: now }, monitored, limit: MAX_MONITOR_DOMAINS });
+  }
+  const entry: MonitorEntry = map[domain] ?? { domain, status, lastChecked: now };
+  if (status !== "unknown") entry.status = status;
+  entry.lastChecked = now;
+  if (status === "taken" && result.expiresAt) entry.expiresAt = result.expiresAt;
+  if (body && "webhook" in body) {
+    const webhook = sanitizeWebhook(body.webhook);
+    if (webhook) entry.webhook = webhook;
+    else delete entry.webhook;
+  }
+  map[domain] = entry;
+  await kv.put(MONITOR_KEY, JSON.stringify(map));
+  return c.json({
+    ok: true,
+    added: true,
+    entry: { domain, status: entry.status, lastChecked: entry.lastChecked, ...(entry.expiresAt ? { expiresAt: entry.expiresAt } : {}) },
+    monitored: Object.keys(map).length,
+    limit: MAX_MONITOR_DOMAINS,
+  });
 });
 
 // 监控清单：按客户端本地清单批量查服务端监控条目（监控集合是单 key 全局 map，无账号体系，「我的监控」以客户端本地清单为准）

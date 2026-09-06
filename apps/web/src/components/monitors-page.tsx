@@ -1,15 +1,18 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { Bell, BellOff, ExternalLink, Loader2, RotateCw, Search } from "lucide-react";
+import { useCallback, useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from "react";
+import { Bell, BellOff, BellPlus, ExternalLink, Loader2, RotateCw, Search, X } from "lucide-react";
 
 import { ConfirmLabel } from "@/components/confirm-label";
 import { ExpiryNote } from "@/components/domain-row";
 import { RegistrarAnchor } from "@/components/registrar-link";
-import { fetchMonitorList, recheckMonitors, RecheckRateLimitError, useMonitor, type MonitorListEntry } from "@/lib/monitor";
+import { Input } from "@/components/ui/input";
+import { TLD_LIST } from "@/content/tld-list";
+import { fetchMonitorList, recheckMonitors, RecheckRateLimitError, useMonitor, type MonitorAddResult, type MonitorListEntry } from "@/lib/monitor";
 import { primaryRegistrar } from "@/lib/registrars";
 import { useI18n } from "@/lib/i18n";
-import { cn } from "@/lib/utils";
+import { cn, formatExpiry } from "@/lib/utils";
 
 const CONFIRM_TIMEOUT_MS = 6000;
+const ADDED_HIGHLIGHT_MS = 4000;
 
 function statusBadgeClass(status: string): string {
   if (status === "available") return "bg-brand-dim text-brand";
@@ -32,6 +35,13 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
   const [pending, setPending] = useState<string | null>(null);
   const [confirming, setConfirming] = useState<string | null>(null);
   const [confirmLeft, setConfirmLeft] = useState(0);
+  const [addInput, setAddInput] = useState("");
+  const [adding, setAdding] = useState(false);
+  // 存结果而非文案：渲染时翻译，切语言后提示同步
+  const [addResult, setAddResult] = useState<MonitorAddResult | null>(null);
+  const [justAdded, setJustAdded] = useState<string | null>(null);
+  const addInputRef = useRef<HTMLInputElement>(null);
+  const addedTimer = useRef<number | undefined>(undefined);
   const confirmTimer = useRef<number | undefined>(undefined);
   const confirmTick = useRef<number | undefined>(undefined);
   const refreshingRef = useRef(false);
@@ -88,9 +98,68 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
     () => () => {
       window.clearTimeout(confirmTimer.current);
       window.clearInterval(confirmTick.current);
+      window.clearTimeout(addedTimer.current);
     },
     [],
   );
+
+  async function submitAdd(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (adding) return;
+    setAdding(true);
+    setAddResult(null);
+    try {
+      const r = await monitor.add(addInput);
+      setAddResult(r);
+      if (r.kind === "added") {
+        setEntries((prev) => ({ ...prev, [r.entry.domain]: r.entry }));
+        setQuota({ monitored: r.monitored, limit: r.limit });
+        setAddInput("");
+        setJustAdded(r.entry.domain);
+        window.clearTimeout(addedTimer.current);
+        addedTimer.current = window.setTimeout(() => setJustAdded(null), ADDED_HIGHLIGHT_MS);
+      } else if (r.kind === "available" || r.kind === "full") {
+        if (typeof r.monitored === "number" && typeof r.limit === "number") setQuota({ monitored: r.monitored, limit: r.limit });
+      }
+    } finally {
+      setAdding(false);
+      addInputRef.current?.focus();
+    }
+  }
+
+  function clearAdd() {
+    setAddInput("");
+    setAddResult(null);
+    addInputRef.current?.focus();
+  }
+
+  // Esc 清空输入与提示；输入框已空时不拦截，交给页面默认行为
+  function onAddKeyDown(e: KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Escape" && (addInput !== "" || addResult !== null)) {
+      e.preventDefault();
+      clearAdd();
+    }
+  }
+
+  function addFeedback(r: MonitorAddResult): { tone: "ok" | "info" | "error"; text: string; registerFor?: string } {
+    switch (r.kind) {
+      case "added": {
+        const date = r.entry.status === "taken" && r.entry.expiresAt ? formatExpiry(r.entry.expiresAt) : null;
+        if (r.entry.status === "unknown") return { tone: "ok", text: t("monitors.add.addedUnknown", { domain: r.entry.domain }) };
+        return { tone: "ok", text: date ? t("monitors.add.addedExpiry", { domain: r.entry.domain, date }) : t("monitors.add.added", { domain: r.entry.domain }) };
+      }
+      case "available":
+        return { tone: "info", text: t("monitors.add.available", { domain: r.entry.domain }), registerFor: r.entry.domain };
+      case "rejected":
+        if (r.reason === "tld") return { tone: "error", text: t("monitors.add.err.tld", { tld: r.tld ?? "", count: TLD_LIST.length }) };
+        if (r.reason === "duplicate") return { tone: "error", text: t("monitors.add.err.duplicate", { domain: r.domain }) };
+        return { tone: "error", text: t(r.reason === "empty" ? "monitors.add.err.empty" : "monitors.add.err.syntax") };
+      case "full":
+        return { tone: "error", text: t("monitors.add.err.full", { limit: r.limit ?? quota?.limit ?? "" }) };
+      case "failed":
+        return { tone: "error", text: t(r.error === "check" ? "monitors.add.err.check" : "monitors.add.err.network") };
+    }
+  }
 
   function clearConfirm() {
     window.clearTimeout(confirmTimer.current);
@@ -134,6 +203,7 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
     return t("monitors.hoursAgo", { n: Math.floor(mins / 60) });
   };
   const quotaFull = quota !== null && quota.limit > 0 && quota.monitored >= quota.limit;
+  const feedback = addResult ? addFeedback(addResult) : null;
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-6 md:px-6">
@@ -145,7 +215,84 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
           </span>
         )}
       </div>
-      <p className="mb-2 text-xs text-txt2">{t("monitors.hint")}</p>
+      <p className="mb-3 text-xs text-txt2">{t("monitors.hint")}</p>
+
+      <form className="mb-4 rounded-xl border border-line bg-bg1 p-4" onSubmit={(e) => void submitAdd(e)} noValidate>
+        <label htmlFor="monitor-add-input" className="flex items-center gap-1.5 text-sm font-semibold">
+          <BellPlus className="h-4 w-4 text-brand" />
+          {t("monitors.add.label")}
+        </label>
+        <p id="monitor-add-hint" className="mt-1 text-xs text-txt2">{t("monitors.add.hint")}</p>
+        <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+          <div className="relative min-w-0 flex-1">
+            <Input
+              id="monitor-add-input"
+              ref={addInputRef}
+              name="domain"
+              className={cn("h-11 pr-10 font-mono sm:h-10", feedback?.tone === "error" && "border-destructive focus-visible:ring-destructive")}
+              value={addInput}
+              placeholder={t("monitors.add.placeholder")}
+              autoComplete="off"
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck={false}
+              inputMode="url"
+              enterKeyHint="go"
+              maxLength={253}
+              readOnly={adding}
+              aria-describedby={feedback ? "monitor-add-hint monitor-add-feedback" : "monitor-add-hint"}
+              aria-invalid={feedback?.tone === "error" || undefined}
+              onChange={(e) => {
+                setAddInput(e.target.value);
+                if (addResult) setAddResult(null);
+              }}
+              onKeyDown={onAddKeyDown}
+            />
+            {addInput !== "" && !adding && (
+              <button
+                type="button"
+                className="absolute inset-y-0 right-0 flex w-10 items-center justify-center text-txt2 hover:text-txt0"
+                aria-label={t("monitors.add.clear")}
+                onClick={clearAdd}
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
+          </div>
+          <button
+            type="submit"
+            className="flex h-11 shrink-0 items-center justify-center gap-1.5 rounded-lg bg-brand px-4 text-sm font-semibold text-brand-ink transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-50 sm:h-10"
+            disabled={adding || quotaFull}
+          >
+            {adding ? <Loader2 className="h-4 w-4 animate-spin" /> : <BellPlus className="h-4 w-4" />}
+            {adding ? t("monitors.add.submitting") : t("monitors.add.submit")}
+          </button>
+        </div>
+        {feedback && (
+          <div
+            id="monitor-add-feedback"
+            role={feedback.tone === "error" ? "alert" : "status"}
+            className={cn(
+              "mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 rounded-lg border px-3 py-2 text-sm break-words",
+              feedback.tone === "error" && "border-destructive/30 bg-destructive/10 text-destructive",
+              feedback.tone === "ok" && "border-brand/30 bg-brand-dim/40 text-txt0",
+              feedback.tone === "info" && "border-line bg-bg2 text-txt0",
+            )}
+          >
+            <span className="min-w-0 break-words">{feedback.text}</span>
+            {feedback.registerFor && (
+              <RegistrarAnchor
+                registrar={primaryRegistrar(feedback.registerFor)}
+                domain={feedback.registerFor}
+                className="flex h-11 items-center gap-1 text-sm font-semibold text-brand underline-offset-2 hover:underline sm:h-auto sm:py-1"
+              >
+                <ExternalLink className="h-3.5 w-3.5" />
+                {t("common.register")} · {primaryRegistrar(feedback.registerFor).name}
+              </RegistrarAnchor>
+            )}
+          </div>
+        )}
+      </form>
 
       <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2">
         <button
@@ -191,7 +338,10 @@ export function MonitorsPage({ onStart }: { onStart: () => void }) {
             const entry = entries[domain];
             const confirmed = confirming === domain;
             return (
-              <li key={domain} className="flex flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3.5">
+              <li
+                key={domain}
+                className={cn("flex flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3.5 transition-colors", justAdded === domain && "bg-brand-dim/40 shadow-[inset_2px_0_0_var(--brand)]")}
+              >
                 <span className="min-w-0 break-all font-mono text-[15px] font-semibold">{domain}</span>
                 {loading ? (
                   <Loader2 className="h-3.5 w-3.5 animate-spin text-txt2" />

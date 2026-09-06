@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 
+import { parseMonitorDomain, type MonitorAddEntry, type MonitorAddReject, type MonitorAddResponse } from "./monitor-add";
+
 const KEY = "domainhunter:monitor";
 const WEBHOOK_KEY = "domainhunter:monitor-webhook";
 
@@ -92,6 +94,13 @@ export function useMonitor() {
     return { ok: true };
   }, []);
 
+  /** 直接添加监控：核验通过且已注册才写入本地清单 */
+  const add = useCallback(async (raw: string): Promise<MonitorAddResult> => {
+    const result = await requestMonitorAdd(raw, load(), loadWebhook());
+    if (result.kind === "added") setMonitored(mutate(result.entry.domain, true));
+    return result;
+  }, []);
+
   /** 保存 webhook 并同步到已监控域名的服务端条目 */
   const setWebhook = useCallback(async (url: string): Promise<boolean> => {
     const trimmed = url.trim();
@@ -109,7 +118,43 @@ export function useMonitor() {
     return true;
   }, [monitored]);
 
-  return { monitored, isMonitored, toggle, setWebhook };
+  return { monitored, isMonitored, toggle, add, setWebhook };
+}
+
+export type MonitorAddResult =
+  | { kind: "added"; entry: MonitorAddEntry; monitored: number; limit: number }
+  | { kind: "available"; entry: MonitorAddEntry; monitored: number; limit: number }
+  | { kind: "rejected"; reason: MonitorAddReject; domain: string; tld?: string }
+  | { kind: "full"; monitored?: number; limit?: number }
+  | { kind: "failed"; error: "network" | "check" };
+
+/**
+ * 本地校验（语法 / TLD_LIST / 与本地清单重复）→ POST /api/monitor/add 实时核验一次。
+ * taken/unknown → added（调用方负责写本地清单）；available → 不入清单，由 UI 提示去注册。
+ */
+export async function requestMonitorAdd(
+  raw: string,
+  monitored: Iterable<string>,
+  webhook: string,
+  fetchImpl: typeof fetch = fetch,
+): Promise<MonitorAddResult> {
+  const parsed = parseMonitorDomain(raw, monitored);
+  if (!parsed.ok) return { kind: "rejected", reason: parsed.reason, domain: parsed.domain, tld: parsed.tld };
+  const res = await fetchImpl("/api/monitor/add", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ domain: parsed.domain, webhook }),
+  }).catch(() => null);
+  if (!res) return { kind: "failed", error: "network" };
+  const data = (await res.json().catch(() => null)) as MonitorAddResponse | null;
+  if (!data || !data.ok) {
+    if (res.status === 429) return { kind: "full", monitored: data?.monitored, limit: data?.limit };
+    if (data?.error === "unsupported_tld") return { kind: "rejected", reason: "tld", domain: parsed.domain, tld: data.tld };
+    if (data?.error === "invalid_domain") return { kind: "rejected", reason: "syntax", domain: parsed.domain };
+    return { kind: "failed", error: data?.error === "check_failed" ? "check" : "network" };
+  }
+  if (!data.added) return { kind: "available", entry: data.entry, monitored: data.monitored, limit: data.limit };
+  return { kind: "added", entry: data.entry, monitored: data.monitored, limit: data.limit };
 }
 
 export interface MonitorListEntry {
