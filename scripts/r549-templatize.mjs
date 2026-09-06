@@ -11,6 +11,7 @@
  * 由 r549-overrides.mjs 逐条精确替换（每条必须恰好命中一次，否则脚本报错）。产物已人工逐条复核（docs/audits/r549）。
  *
  * 用法：node scripts/r549-templatize.mjs --prices /tmp/r549/api_prices_before.json --manual /tmp/r549/manual.md [--write]
+ *       重放：--src <改前 compares.ts> --out <输出路径> --write（不动工作区）
  */
 import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
@@ -23,7 +24,6 @@ const root = resolve(new URL("..", import.meta.url).pathname);
 const require = createRequire(join(root, "apps/web/package.json"));
 const { build } = require(require.resolve("esbuild", { paths: [require.resolve("vite", { paths: [join(root, "apps/web")] })] }));
 const srcDir = join(root, "apps/web/src");
-const file = join(srcDir, "content/compares.ts");
 
 const args = process.argv.slice(2);
 const optValue = (name, dflt) => {
@@ -37,6 +37,10 @@ const optValue = (name, dflt) => {
 const pricesFile = optValue("prices", null);
 const manualFile = optValue("manual", null);
 const write = Boolean(optValue("write", false));
+const srcOverride = optValue("src", null);
+const outOverride = optValue("out", null);
+const file = srcOverride ? resolve(srcOverride) : join(srcDir, "content/compares.ts");
+const outFile = outOverride ? resolve(outOverride) : file;
 
 const tmp = mkdtempSync(join(tmpdir(), "r549t-"));
 const entry = join(tmp, "entry.ts");
@@ -574,7 +578,7 @@ const result = outLines.join("\n");
   const bad = OVERRIDES.filter(([s, l, from]) => (overrideHits.get(`${s}|${l}|${from}`) ?? 0) !== 1);
   if (bad.length) throw new Error(`override 未命中：\n${bad.map(([s, l, from]) => `  ${s} ${l} ${from}`).join("\n")}`);
 }
-if (write) writeFileSync(file, result);
+if (write) writeFileSync(outFile, result);
 if (manualFile) {
   const byReason = new Map();
   for (const x of manual) byReason.set(x.reason.split(" ")[0], (byReason.get(x.reason.split(" ")[0]) ?? 0) + 1);

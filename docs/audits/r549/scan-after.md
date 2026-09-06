@@ -39,7 +39,7 @@ abs 数字总数 0，其中可归属到两侧 TLD_PRICES 首年/续费 0，未�
 
 ## 占位符（方案 B）
 
-- 总数 4140；按类型：price=3804，ratio=79，diff=121，cost=12，costdiff=5，pair=61，jump=34，sum=24
+- 总数 4145；按类型：price=3804，ratio=79，costdiff=10，diff=121，cost=12，pair=61，jump=34，sum=24
 - 不合法/越界 0
 
 ## abs 句清单（0）

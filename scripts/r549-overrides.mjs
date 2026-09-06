@@ -124,4 +124,14 @@ export const OVERRIDES = [
   ["ge-vs-tr", "en", "flat — half the price of .ge", "flat — far cheaper than .ge"],
   ["mx-vs-es", "zh", "长期持有成本只有 .mx 的五分之一", "长期持有成本远低于 .mx"],
   ["fishing-vs-boats", "zh", "长期持有 .boats 成本减半", "长期持有 .boats 成本明显更低"],
+  // —— 中文数词/英文 thousand 写法的十年差额（不含阿拉伯数字，abs 正则抓不到）→ costdiff10 ——
+  ["com-vs-io", "zh", "十年持有下来是数千元的差距", "十年持有下来差出约 {{costdiff10:io:com:cny}}"],
+  ["com-vs-io", "en", "thousands of yuan over a decade", "about {{costdiff10:io:com:cny}} more over a decade"],
+  ["shop-vs-store", "zh", "十年持有差出一千多元", "十年持有差出约 {{costdiff10:store:shop:cny}}"],
+  ["shop-vs-store", "en", "over a thousand yuan more across a decade", "about {{costdiff10:store:shop:cny}} more across a decade"],
+  ["art-vs-design", "zh", "十年下来差近三千元", "十年下来差约 {{costdiff10:design:art:cny}}"],
+  // —— 数字前的上下界词（more than / close to / 不到）与实时值不再匹配 → 改「约」 ——
+  ["gg-vs-tv", "en", "more than ¥200 a year extra", "about {{diff:gg:tv:renew:cny}} a year extra"],
+  ["art-vs-design", "en", "close to ¥3,000 over a decade", "about {{costdiff10:design:art:cny}} over a decade"],
+  ["kz-vs-tr", "zh", "价格加起来也不到 $30/年", "价格加起来也只要约 {{sum:kz:tr:renew:usd}}/年"],
 ];
