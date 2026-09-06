@@ -1,0 +1,34 @@
+Home
+TLD guides
+.ar
+.ar Domain Guide: Who It's For, Pricing & Naming Tips
+Static reference: ≈$36 (¥260) 1st yr · ¥260/yr renewal · not a live quoteSee prices for all 408 TLDs →
+The most common misreading of .ar is that it is fully open. NIC Argentina's No residentes page says something different: people who do not reside in Argentina can register, but they must first have their identity documents notarised or apostilled in their country of origin (with a translation where needed), email them to NIC Argentina for validation, and wait for a manual review before a registration account is created — workable, but not an instant checkout, so a foreign company should budget time for the notary and the review. NIC Argentina sits under the Presidency's Legal and Technical Secretariat, and the IANA root database dates the .ar delegation to 23 September 1987. The official Dominios y Aranceles page prices everything in Argentine pesos: an open-zone name (a direct name.ar) costs ARS 25,500 to register, ARS 25,500 per year to renew and ARS 25,500 to transfer; .com.ar and .net.ar cost ARS 8,500 for each of those actions; a registration is valid for one year and renewable annually; and filing a dispute costs ARS 28,800 across all zones. Because the peso moves quickly, DomainHunter's static reference of about ¥260 per year is an order-of-magnitude guide only — the registrar's dollar quote at checkout is what counts. On 6 September 2026 DomainHunter checked a fixed sample over RDAP: only 1 of 20 common English words was available directly under .ar and 19 were taken, while all 10 pinyin sample words were free. For disputes NIC Argentina runs its own official procedure (the ARS 28,800 line item above), which rights holders can use to claim a name. Who it suits: agricultural and wine exporters with an Argentine entity or agent, e-commerce and services for Argentine consumers (mostly on .com.ar), Buenos Aires software and outsourcing firms, and international brands willing to go through the notarisation route for brand.ar.
+Best for
+Agri & wine exporters with an Argentine entity/agent
+Argentine-market e-commerce & services (.com.ar)
+Buenos Aires software & outsourcing firms
+Global brands willing to notarise for brand.ar
+Naming tips
+Non-residents must notarise/apostille ID documents and pass NIC's manual check — allow time for it
+A top-level .ar costs ARS 25,500/yr officially; .com.ar is ARS 8,500 — start there if budget matters
+Only 1 of 20 English sample words was free; all 10 pinyin words were available on RDAP
+Disputes cost a flat ARS 28,800 — check the INPI trademark register before you file
+FAQ
+Who is a .ar domain for?
+.ar is run by NIC Argentina: non-residents may register, but only after submitting notarised or apostilled identity documents that NIC verifies manually before issuing an account. Typical fits: Agri & wine exporters with an Argentine entity/agent, Argentine-market e-commerce & services (.com.ar).
+How do I register a .ar domain?
+Describe your idea on DomainHunter — the AI brainstorms names and verifies .ar availability live via RDAP/DNS/WHOIS. Available names link straight to a registrar with first-year and renewal prices shown, so you can spot renewal traps before buying.
+How do I pick a good .ar name?
+First rule for .ar names — Non-residents must notarise/apostille ID documents and pass NIC's manual check — allow time for it. The other 3 tips are under “Naming tips” on this page.
+Hunt a great .ar domain right now
+Describe your idea — AI brainstorms names in bulk and checks .ar availability live.
+Start hunting .ar
+More TLD guides
+.blue.pink.black.ninja.rocks.pet.berlin.paris.amsterdam.vegas.immobilien.tienda.de.eu.ca.au.jp.sg.fr.it.es.nl.kr.hk.ch.at.be.se.pl.twView all 408 TLD guides →
+Related TLD comparisons
+.ar vs .cl.uy vs .ar
+Related TLDs
+.ng1st yr ≈$36.il1st yr ≈$25.sa1st yr ≈$56.eg1st yr ≈$90.ke1st yr ≈$50.pe1st yr ≈$50
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

@@ -1,0 +1,51 @@
+首页
+后缀对比
+.academy vs .school
+.academy 和 .school 怎么选：体系化学院与日常学校的对比
+怎么选
+同属 Identity Digital 的教育后缀，说的却是两种「教」。.academy 讲「体系」——academy 一词在英语里自带成建制、专业化的意味，Khan Academy 把它在教育界的认知推到顶点：在线课程平台、编程训练营、企业培训与品牌学院（brand academy）用 name.academy，传达的是「一套课程体系」而非单节课；注册约 $12、续费约 $38/年。.school 讲「日常」——它是教育后缀里最直白的一个，name.school 读出来就是一所学校，气质亲切，幼儿园、K12 课外班、驾校舞校、兴趣班这类面向孩子与家长的场景刚好，「学一门手艺」的项目（sourdough.school 式）用它也出彩；注册约 $6、续费约 $29/年，两头都比 .academy 便宜。判断标准：课程成体系、面向成人或企业、想立「专业进阶」人设 → .academy 的进阶感更配；面向孩子家长、气质要亲切、或预算敏感 → .school 更实。共同注意：两者都不是办学资质，正规资质要页面另行呈现；且都是长后缀（7 与 6 个字母），主体名务必要短。两个后缀都由 Binky Moon, LLC 持有、在 Identity Digital 平台运营——.academy 于 2013 年 12 月在首批关键词后缀中委派，.school 于 2015 年 2 月委派——政策、溢价分级与争议处理完全相同，都不要求任何形式的资质认证。最后这一点正是 .school 一侧的陷阱：在很多国家 school 一词带有法律分量（注册学校、督导制度、儿童保护规则），未获认证的课程品牌挂 .school 可能招来同一品牌挂 .academy 不会有的质询。academy 则几百年来一直是个宽泛、不受监管的词——骑术学院、警察学院、可汗学院——没有监管者会期待一个 academy 是一所学校。两个词对学习者的暗示也不同：school 暗示人生阶段，主要是儿童与青少年；academy 暗示任何年龄都可追求的所选学科。场景上：编程训练营、企业内部销售培训、成人音乐或舞蹈学院、认证备考课程、武馆 → .academy；真正的中小学、有实体校园的语言学校、驾校、课后辅导中心、家庭教育互助组 → .school。同时运营员工学院与公开课程目录的公司，可以把两者放在两个后缀上，避免 HR 与客户混在一起。
+价格与 5 年持有成本
+.academy vs .school 首年价、续费价与 5 年总持有成本对比（美元为准，人民币按汇率 7.2 估算）
+后缀注册/首年续费/年5 年持有成本
+.academy$11.84¥85$37.59¥271$162.2¥1168
+.school$5.66¥41$29.35¥211$123.06¥886
+差额（.academy − .school）+$6.18+¥44+$8.24+¥60+$39.14+¥282
+5 年持有成本 = 首年价 + 4 × 续费价；差额为正表示前者更贵。
+实时价来自 Porkbun（2026-09-06 06:00 UTC 拉取），人民币按汇率 7.2 估算；带 ≈ 为静态参考价，非实时报价。不同注册商价格有差异，以注册商页面为准。
+.academy
+Porkbun 实时价：首年 $11.84（≈¥85）· 续费 $37.59/年（汇率 7.2 估算）
+.academy 把「学院」两个字直接写进域名：在线课程平台、编程训练营、企业培训、体育与艺术培训机构用 name.academy，「这里教东西」的定位一秒传达。
+适合选 .academy 的情况
+在线课程平台与训练营
+企业培训与品牌学院
+面向成人的体系化课程
+「专业进阶」的品牌人设
+任何年龄可学、无需监管背书的学科
+.school
+Porkbun 实时价：首年 $5.66（≈¥41）· 续费 $29.35/年（汇率 7.2 估算）
+.school 是教育后缀里最直白的一个：不管是实体学校、课外培训班、驾校舞校，还是在线学习项目，name.school 读出来就是「一所学校」。
+适合选 .school 的情况
+幼儿园与 K12 课外班
+驾校舞校与兴趣班
+「学一门手艺」的轻量项目
+预算敏感的教育创业
+有校园、学生与督导的真正学校
+常见问题
+.academy 和 .school 怎么选？
+.academy 自带体系化、专业化的进阶感，.school 直白亲切适合面向孩子与家长。完整结论见本页「怎么选」一节。
+什么时候选 .academy？
+.academy 的首选场景是「在线课程平台与训练营」；其余 4 种 .academy 场景见本页「适合选 .academy 的情况」。
+什么时候选 .school？
+.school 的首选场景是「幼儿园与 K12 课外班」；其余 4 种 .school 场景见本页「适合选 .school 的情况」。
+让 AI 同时在 .academy 和 .school 下猎名
+描述你的想法，AI 批量构思并实时核验两个后缀下的可注册好名字，直接对比。
+开始猎取
+查看全部 408 个后缀价格 →
+相关行业命名指南
+宠物训练知识付费游泳培训驾校驾培
+相关对比
+.academy vs .coach.education vs .academy.courses vs .academy.mba vs .school.college vs .academy
+其他后缀对比
+.vip vs .club.fun vs .club.fun vs .games.bar vs .cafe.city vs .world.farm vs .cafe.care vs .doctor.restaurant vs .cafe.academy vs .coach.restaurant vs .bar.clinic vs .care.dental vs .doctor.fitness vs .coach.yoga vs .fitness.coffee vs .cafe.wine vs .bar.kitchen vs .restaurant.garden vs .farm.education vs .academy.training vs .coach.wedding vs .love.menu vs .restaurant.bike vs .fitness.menu vs .cafe查看全部 444 个后缀对比 →
+站内导航
+首页TLD 指南行业指南后缀对比价格总览为什么选 DomainHunterMCP 接入批量核验

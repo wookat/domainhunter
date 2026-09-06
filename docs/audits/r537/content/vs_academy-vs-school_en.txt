@@ -1,0 +1,51 @@
+Home
+TLD comparisons
+.academy vs .school
+.academy vs .school: Structured Curriculum or Everyday Classroom
+Which to pick
+Both are Identity Digital education suffixes, but they teach in different registers. .academy says structure — the word carries a sense of organized, professional curriculum, an association Khan Academy pushed to its peak: online course platforms, coding bootcamps, corporate training and brand academies on name.academy promise a program, not a single lesson; about $12 to register and $38/yr to renew. .school says everyday — the most literal education suffix there is, name.school reads as exactly what it is, warm and approachable: kindergartens, after-school programs, driving and dance schools, and hobby classes aimed at kids and parents fit perfectly, and learn-a-craft projects (the sourdough.school pattern) charm on it too; about $6 to register and $29/yr to renew — cheaper on both ends. The test: a structured curriculum for adults or companies, positioning as professional advancement → .academy's register fits; a kids-and-parents audience, a warm tone, or a tight budget → .school does more with less. Shared cautions: neither is an accreditation — formal credentials belong on the page; and both are long suffixes (seven and six letters), so keep the subject word short. Both suffixes are sponsored by Binky Moon, LLC and operated on Identity Digital's platform — .academy delegated in December 2013 among the first keyword gTLDs, .school in February 2015 — so policy, premium tiers and dispute handling are identical, and neither requires accreditation of any kind. That last point is the trap on the .school side: in many countries the word school carries legal weight (registered schools, inspection regimes, child-safeguarding rules), so an unaccredited course brand on .school may draw questions that the same brand on .academy would not. Academy, by contrast, has been a loose, unregulated word for centuries — riding academies, police academies, Khan Academy — and no regulator expects an academy to be a school. The words also differ in what they imply about the learner: school suggests a stage of life, mostly children and teenagers, while academy suggests a chosen discipline pursued at any age. Use-case split: a coding bootcamp, a sales-training programme inside a company, a music or dance academy for adults, a certification prep course, a martial-arts dojo → .academy; an actual primary or secondary school, a language school with a physical campus, a driving school, an after-school tutoring centre, a homeschooling co-op → .school. A company that runs both an employee academy and a public course catalogue can keep them on the two suffixes and avoid confusing HR with customers.
+Pricing & 5-year cost of ownership
+.academy vs .school: first-year, renewal and 5-year total cost (USD; CNY estimated at 7.2)
+TLDRegister / 1st yrRenew / yr5-yr total cost
+.academy$11.84¥85$37.59¥271$162.2¥1168
+.school$5.66¥41$29.35¥211$123.06¥886
+Difference (.academy − .school)+$6.18+¥44+$8.24+¥60+$39.14+¥282
+5-yr total cost = first-year price + 4 × renewal; a positive difference means the former costs more.
+Live prices from Porkbun (fetched 2026-09-06 06:00 UTC); CNY estimated at 7.2. ≈ marks static reference prices, not live quotes. Registrar prices vary — confirm on the registrar page.
+.academy
+Porkbun live: $11.84 1st yr (≈¥85) · renews $37.59/yr (¥ est. at 7.2)
+.academy writes "we teach this" straight into the domain: online course platforms, coding bootcamps, corporate training programs, and sports or arts academies on name.academy communicate their purpose instantly.
+Pick .academy when
+Online course platforms & bootcamps
+Corporate training & brand academies
+Structured programs for adults
+Professional-advancement positioning
+Disciplines pursued at any age without a regulator's blessing
+.school
+Porkbun live: $5.66 1st yr (≈¥41) · renews $29.35/yr (¥ est. at 7.2)
+.school is the most literal education suffix there is: a physical school, an after-school program, a driving or dance school, or an online learning project on name.school reads exactly as what it is.
+Pick .school when
+Kindergartens & K-12 after-school programs
+Driving, dance & hobby schools
+Learn-a-craft side projects
+Budget-sensitive education startups
+Actual schools with campuses, pupils and inspections
+FAQ
+.academy vs .school: which should I choose?
+.academy signals structured, professional curriculum; .school reads warm and literal for kids-and-parents audiences. See “Which to pick” on this page for the full verdict.
+When should I pick a .academy domain?
+The top case for .academy — Online course platforms & bootcamps. The other 4 .academy cases are listed under “Pick .academy when” on this page.
+When should I pick a .school domain?
+The top case for .school — Kindergartens & K-12 after-school programs. The other 4 .school cases are listed under “Pick .school when” on this page.
+Hunt names on .academy and .school at once
+Describe your idea — AI brainstorms names in bulk and checks availability on both suffixes live, side by side.
+Start hunting
+See prices for all 408 TLDs →
+Related industry naming guides
+Pet trainingPaid knowledge & communitiesSwim schoolsDriving schools
+Related comparisons
+.academy vs .coach.education vs .academy.courses vs .academy.mba vs .school.college vs .academy
+More TLD comparisons
+.vip vs .club.fun vs .club.fun vs .games.bar vs .cafe.city vs .world.farm vs .cafe.care vs .doctor.restaurant vs .cafe.academy vs .coach.restaurant vs .bar.clinic vs .care.dental vs .doctor.fitness vs .coach.yoga vs .fitness.coffee vs .cafe.wine vs .bar.kitchen vs .restaurant.garden vs .farm.education vs .academy.training vs .coach.wedding vs .love.menu vs .restaurant.bike vs .fitness.menu vs .cafeView all 444 TLD comparisons →
+Site navigation
+HomeTLD guidesIndustry guidesTLD comparisonsPrice overviewWhy DomainHunterMCP serverBulk check

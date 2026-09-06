@@ -1,0 +1,368 @@
+## Page 1: Canadian Presence Requirements for Registrants – CIRA
+URL: https://www.cira.ca/en/resources/documents/domains/canadian-presence-requirements-registrants/
+Published: 2019-04-30T18:08:52.000Z
+
+Canadian Presence Requirements for Registrants – CIRA
+
+- .CA domains
+
+# Canadian Presence Requirements for Registrants
+
+Search
+
+CIRA Canadian Internet Registration Authority
+
+{( translate(state.status) )}
+
+Search
+
+Loading…
+
+Those wishing to register a .CA domain must comply with Canadian presence requirements.
+
+These ensure that the .CA domain space can be used and developed as a key public resource for the social and economic development of all Canadians.
+
+Accessible version follows:
+
+### CIRA POLICIES, RULES, AND PROCEDURES
+
+#### Canadian Presence Requirements For Registrants Version 1.3
+
+1. Overview. After public consultation, CIRA has determined that the .ca domain space should be developed as a key public resource for the social and economic development of all Canadians. Accordingly, persons who wish to register a .ca domain name or sub-domain name on and after November 8, 2000 must meet certain Canadian Presence Requirements.
+
+While the Canadian Presence Requirements for Registrants set out below still require a connection to Canada, they will enable a much broader group of persons to register a .ca domain name than under the rules of the University of British Columbia (UBC) registry.
+
+Existing Registrants under the UBC system will not have to meet these Canadian presence requirements when they apply to re-register with CIRA a domain name that is the subject of an existing registration. CIRA hopes this will make it easier for existing registrants of the registry operated by UBC when they apply to CIRA for a new registration.
+
+CIRA is committed to reviewing these Canadian Presence Requirements from time to time in order to ensure they remain in the best interests of Canadians and the .ca registry.
+
+2. Canadian Presence Requirements. On and after November 8, 2000 only the following individuals and entities will be permitted to apply to CIRA (through a CIRA certified registrar) for the registration of, and to hold and maintain the registration of, a .ca domain name:
+
+1. Canadian citizen. A Canadian citizen of the age of majority under the laws of the province or territory in Canada in which he or she resides or last resided;
+2. Permanent resident. A permanent resident as defined in the Immigration and Refugee Protection Act, (Canada) S.C. 2001, c. 27, as amended from time to time, who is ordinarily resident in Canada (as defined below) and of the age of majority under the laws of the province or territory in Canada in which he or she resides or last resided;(amended June 5, 2003)
+3. Legal representative. An executor, administrator or other legal representative of a Person listed in paragraph (a) and (b) above;
+4. Corporation. A corporation under the laws of Canada or any province or territory of Canada;
+5. Trust. A trust established and subsisting under the laws of a province or territory of Canada, more than 66.6% of whose trustees meet one of the conditions set out in paragraphs (a) to (d) above;
+6. Partnership. A partnership, more than 66.6% of whose partners meet one of the conditions set out in paragraphs (a) to (e) above, which is registered as a partnership under the laws of any province or territory of Canada;
+7. Association. An unincorporated organization, association or club:
+8. 1. at least 80% of whose members: (A) are ordinarily resident in Canada (if such members are individuals); or (B) meet one of the conditions set out in paragraphs (a) to (f) above (if such members are not individuals); and
+2. at least 80% of whose directors, officers, employees, managers, administrators or other representatives are ordinarily resident in Canada;
+9. Trade union. A trade union which is recognized by a labour board under the laws of Canada or any province or territory of Canada and which has its head office in Canada;
+10. Political party. A political party registered under a relevant electoral law of Canada or any province or territory of Canada;
+11. Educational institution. Any of the following:
+12. 1. a university or college which is located in Canada and which is authorized or recognized as a university or college under an Act of the legislature of a province or territory of Canada; or
+2. a college, post-secondary school, vocational school, secondary school, pre-school or other school or educational institution which is located in Canada and which is recognized by the educational authorities of a province or territory of Canada or licensed under or maintained by an Act of Parliament of Canada or of the legislature of a province or territory of Canada;
+13. Library, Archive or Museum. An institution, whether or not incorporated, that:
+14. 1. is located in Canada; and
+2. is not established or conducted for profit or does not form part of, or is not administered or directly or indirectly controlled by, a body that is established or conducted for profit, in which is held and maintained a collection of documents and other materials that is open to the public or to researchers;
+15. Hospital. A hospital which is located in Canada and which is licensed, authorized or approved to operate as a hospital under an Act of the legislature of a province or territory of Canada;
+16. Her Majesty the Queen. Her Majesty Queen Elizabeth the Second and her successors;
+17. Indian band. Any Indian band as defined in the Indian Act, R.S.C. 1985, c. I-5, as amended from time to time, and any group of Indian bands;
+18. Aboriginal Peoples. Any Inuit, First Nation, Metis or other people indigenous to Canada, any individual belonging to any Inuit, First Nation, Metis or other people indigenous to Canada and any collectivity of such Aboriginal peoples;
+19. Government. Her Majesty the Queen in right of Canada, a province or a territory; an agent of Her Majesty the Queen in right of Canada, of a province or of a territory; a federal, provincial or territorial Crown corporation, government agency or government entity; or a regional, municipal or local area government;
+20. Trade-mark registered in Canada. A Person which does not meet any of the foregoing conditions, but which is the owner of a trade-mark which is the subject of a registration under the Trade-marks Act (Canada) R.S.C. 1985, c.T-13 as amended from time to time, but in this case such permission is limited to an application to register a .ca domain name consisting of or including the exact word component of that registered trade-mark; or
+21. Official marks. A Person which does not meet any of the foregoing conditions, but which is a Person intended to be protected by Subsection 9(1) of the TradeMarks Act (Canada) at whose request the Registrar of Trade-marks has published notice of adoption of any badge, crest, emblem, official mark or other mark pursuant to Subsection 9(1), but in this case such permission is limited to an application to register a .ca domain name consisting of or including the exact word component of such badge, crest, emblem, official mark or other mark in respect of which such Person requested publications.
+
+3. For the purposes of this policy:
+
+Notwithstanding paragraph 1 above, each registrant of a .ca domain name or subdomain name registration which is registered in the .ca registry operated by UBC prior to November 8, 2000 shall be deemed to satisfy the Canadian presence requirements described in paragraph 1 above with respect only to an application by such registrant to CIRA to register such .ca domain name or sub-domain name.
+
+1. “ordinarily resident in Canada” means an individual who resides in Canada for more than 183 days in the twelve month period immediately preceding the date of the applicable application for registration of the .ca domain name or sub-domain name and in each twelve month period thereafter for the duration of the domain name registration; and
+2. “Person” includes an individual, a corporation, a partnership, a trust, an unincorporated organization, association or club, the government of a country or any political subdivision thereof, or any agency or department of any such government, and the executors, administrators or other legal representatives of an individual in such capacity, a “person” as defined in the Trade-marks Act (Canada) and a Person intended to be protected by Subsection 9(1) of the Trademarks Act (Canada).
+
+4. Notwithstanding paragraph 1 above, each registrant of a .ca domain name or subdomain name registration which is registered in the .ca registry operated by UBC prior to November 8, 2000 shall be deemed to satisfy the Canadian presence requirements described in paragraph 1 above with respect only to an application by such registrant to CIRA to register such .ca domain name or sub-domain name.
+
+## A .CA domain declares your business is proudly Canadian
+
+Search
+
+CIRA Canadian Internet Registration Authority
+
+{( translate(state.status) )}
+
+Search
+
+Loading…
+
+## Related documents →
+
+Previous
+
+Next
+
+The definitive guide to bringing your business online Read Guide / How-to
+
+CIRA DNSSEC Practice Statement for .CA Read Policy document
+
+CIRA Domain Name Dispute Resolution Rules Read Policy document
+
+.CA Insights Report - Q4 2021 Read Report
+
+.CA Insights Report - Q3 2021 Read Report
+
+The ultimate guide to starting a business in Canada Read Guide / How-to
+
+Stay tuned See more documents Read
+
+CIRA Canadian Internet Registration Authority
+
+{( translate(state.status) )}
+
+Search
+
+Loading…
+
+Close
+
+Close
+
+---
+
+## Page 2: .de Domain Delegation Data
+URL: https://www.iana.org/domains/root/db/de.html
+
+.de Domain Delegation Data
+
+# Delegation Record for .DE
+
+(Country-code top-level domain)
+
+## ccTLD Manager
+
+DENIC eG Theodor-Stern-Kai 1Frankfurt am Main 60596 Germany
+
+## Administrative Contact
+
+Vorstand DENIC eG DENIC eG Theodor-Stern-Kai 1Frankfurt am Main 60596 Germany Email: ianacontact@denic.de Voice: +49 69 27235 0 Fax: +49 69 27235 235
+
+## Technical Contact
+
+Business Services DENIC eG Theodor-Stern-Kai 1Frankfurt am Main 60596 Germany Email: dbs@denic.de Voice: +49 69 27235 272 Fax: +49 69 27235 234
+
+## Name Servers
+
+| Host Name | IP Address(es) |
+| --- | --- |
+| a.nic.de | 194.0.0.532001:678:2:0:0:0:0:53 |
+| f.nic.de | 81.91.164.52a02:568:0:2:0:0:0:53 |
+| l.de.net | 77.67.63.1052001:668:1f:11:0:0:0:105 |
+| n.de.net | 194.146.107.62001:67c:1011:1:0:0:0:53 |
+| s.de.net | 195.243.137.262003:8:14:0:0:0:0:53 |
+| z.nic.de | 194.246.96.12a02:568:fe02:0:0:0:0:de |
+
+## Registry Information
+
+URL for registration services: http://www.denic.de/ WHOIS Server: whois.denic.de
+
+Record last updated 2026-08-04. Registration date 1986-11-05.
+
+---
+
+## Page 3: Afnic Naming Policy
+URL: https://www.afnic.fr/wp-media/uploads/2026/07/afnic-naming-policy-2026-07-06.pdf
+
+www.afnic.fr | contact@afnic.fr
+
+## Afnic Naming Policy
+
+##### Rules for registering top-level Internet domains using country-codes for mainland France and the Overseas Departments and Territories
+
+##### Version dated 6 July 2026
+
+##### CONTENTS
+
+Preamble ... 5
+
+Chapter 1 - General ... 6 
+Article 1.1 - Purpose ... 6 
+1.2 - Components ... 7 
+1.3 - Enforceability ... 7 
+Chapter 2 - Rules relating to domain name ... 9 
+Article 2.1 - Domain categories ... 9 
+Article 2.2 - Syntax rules ... 9 
+Article 2.3 - “First Come, First Served” principle ... 10 
+Article 2.4 - Domain Names subject to prior review ... 10 
+Article 2.5 - The “gouv.fr” TLD ... 14 
+Article 2.6 - Domain names reserved for the Registry ... 15 
+Article 2.7 - Right to the domain name ... 15 
+Article 2.8 - Domain name validity period ... 16 
+Article 2.9 - Remuneration of the Registry ... 17 
+Chapter 3 - Registry ... 18 
+Article 3.1 - Role of the Registry ... 18 
+Article 3.2 - Powers of the Registry ... 19 
+Article 3.3 - Responsibility of the Registry ... 21 
+Chapter 4 - Registrars ... 23 
+
+Article 4.1 - Role of registrars ... 23 
+Article 4.2 - Accreditation of registrars ... 23 
+Article 4.3 - Responsibility of registrars ... 24 
+
+##### Chapter 5 - Rules relating to the holder of the domain name
+
+25 
+Article 5.1 - Eligibility of the holder of a domain name ... 25 
+Article 5.2 - Administrative and technical contact ... 26 
+Article 5.3 - Responsibility of the holder ... 27 
+Chapter 6 – Operations on a domain name ... 28 
+Article 6.1 - Locking of a domain name ... 28 
+Article 6.2 - Suspension of a domain name ... 28 
+Article 6.3 - Blocking of a domain name ... 29 
+Article 6.4 - Voluntary transfer ... 30 
+Article 6.5 - Compulsory transfer ... 30 
+Article 6.6 - Change of registrar ... 32 
+Article 6.7 - Orphan domain names ... 32 
+Article 6.8 - Deletion of a domain name ... 33 
+
+Chapter 7 - Dispute resolution ... 35 
+Article 7.1 - Legal proceedings ... 35 
+Article 7.2 - Alternative Dispute Resolution procedures ... 37 
+Chapter 8 - Personal data and information ... 38 
+Article 8.1 - Confidentiality ... 38 
+Article 8.2 - “Whois” database ... 38 
+Article 8.3 - Personal data ... 40 
+Article 8.4 - Restricted publication ... 41 
+Chapter 9 - Other provisions ... 43 
+Article 9.1 - Agreement on evidence ... 43 
+Article 9.2 - Language ... 43 
+Article 9.3 - Governing law ... 43 
+Article 9.4 - Force majeure ... 44 
+Article 9.5 - Intellectual property ... 44 
+Chapter 10 – Transitional provisions ... 45 
+
+#### Preamble
+
+1. It is hereby stated that this Policy has been adopted pursuant to:
+
+- The French Post and Electronic Communications Code (CPCE);
+
+- The government decree appointing Afnic dated 1 July2022;
+
+- The rules for the alternative dispute resolution procedures as approved by Order of the French Minister of State for the Digital Sector dated 14 March 2016;
+
+- The agreement between the French State and Afnic;
+
+- The registration agreements signed by and between Afnic and accredited registrars.
+
+2. Domain names are assigned and managed in the general interest in accordance with rules that are non-discriminatory and transparent, ensuring respect for freedom of communication, entrepreneurial freedom and intellectual property rights.
+
+#### Chapter 1 - General
+
+### Article 1.1 - Purpose
+
+3. This naming policy sets out the conditions for the allocation and management of domain names, centralised by Afnic in its capacity as Registry, namely:
+
+.fr Mainland France and Corsica .re Réunion .yt Mayotte .pm Saint Pierre and Miquelon .wf Wallis and Futuna .tf French Southern and Antarctic Territories
+
+4. Unless otherwise stipulated, this naming policy applies to any new TLD centralised by Afnic.
+
+5. This naming policy does not apply to top-level domain names other than those provided for in this article, in particular:
+
+✓ Other country-code top-level domain names (ccTLDs); 
+✓ Other generic top-level domain names (gTLDs); 
+✓ Other domain names for which Afnic may assume the role of back-end registry. 
+
+### 1.2 - Components
+
+6. The Afnic Naming Policy comprises:
+
+✓ This document;
+
+✓ The dispute resolution policy for French Internet domains;
+
+✓ The rules for the alternative dispute resolution procedures;
+
+✓ The Mediation rules;
+
+✓ The policy on publication of and access to information concerning .fr TLD registrations;
+
+✓ The accreditation policy for registrars.
+
+### 1.3 - Enforceability
+
+7. Any person requesting the intervention of Afnic in its capacity as Registry is deemed to have read the terms of the Afnic Naming Policy.
+
+##### 8. The Naming Policy is published on Afnic’s website at the address www.afnic.fr
+
+9. Afnic's Naming Policy is a living document updated to reflect improvements, work and agreements between its members and partners.
+
+10. The enforceable version of the Afnic Naming Policy is that available on the Afnic website and indicated as the version in force on the date of receipt by its departments of the registration request.
+
+11. Should the policy be modified, the new version shall be immediately applicable:
+
+✓ to all new domain names;
+
+✓ to existing domain names should:
+
+o a request for administrative action be made;
+
+o they be renewed.
+
+12. Unless otherwise stipulated by legislation, by decision of the Ministry for Electronic Communications or by a decision of the Board of Trustees, new rules shall be applicable forthwith and not retroactively.
+
+13. New provisions will first be notified on the Afnic website and sent directly to registrars so that they can inform their domain name holders of the said amendments.
+
+14. Operation requests sent to Afnic in any form whatsoever, and payment of any fees arising from the performance of such operations, shall be considered to be a simple reiteration of the applicant's acceptance of this Naming Policy.
+
+#### Chapter 2 - Rules relating to domain name
+
+### Article 2.1 - Domain categories
+
+15. Any decisions to create or delete domain categories are taken by Afnic’s governing bodies in coordination with the consultative committees.
+
+16. If domain names are still active within a given domain category, that category may only be deleted after giving the domain name holders affected by this deletion six (6) months’ notice to change their domain names.
+
+### Article 2.2 - Syntax rules
+
+17. ASCII domain names consist only of alphanumeric characters, i.e. the letters of the Latin alphabet, the digits 0 to 9 and the hyphen “-”. (for example: ecole-123.fr).
+
+18. “International” or “internationalised” domain names (IDN) consist of characters other than ASCII characters alone.
+
+19. The following alphanumeric characters are accepted for use in domain names: a, à, á, â, ã, ä, å, æ, b, c, ç, d, e, è, é, ê, ë, f, g, h, i, ì, í, î, ï, j, k, l, m, n, ñ, o, ò, ó, ô, õ, ö, œ, p, q, r, s, t, u, ù, ú, û, ü, v, w, x, y, ý, ÿ, z, ß, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, - (hyphen; minus sign)
+
+20. ASCII and IDN domain names that fall under the following criteria cannot be registered:
+
+✓ begin or end with a hyphen “-”;
+
+✓ more than 63 characters in length;
+
+10 Afnic Naming Policy - Version of 6 July 2026 ✓ consist of the “-” (hyphen) in the third and fourth position, except for ASCII encoded versions in which the label is prefixed with “xn--”.
+
+21. The registration of domain names containing 1 and 2 numeric and/or alphabetic characters is not authorised for the following country codes for mainland France and the Overseas Departments and Territories: .pm, .re, .tf, .wf, .yt
+
+### Article 2.3 - “First Come, First Served”
+
+### principle
+
+22. Except where provisions to the contrary are made for certain domain names, and subject to the provisions of the French Post and Electronic Communications Code, operation requests sent to Afnic by registrars are handled on a “first come, first served” basis, meaning that they are processed by chronological order of receipt.
+
+### Article 2.4 - Domain Names subject to prior
+
+### review
+
+23. Afnic establishes and keeps up to date a list of domain names for which registration is subject to prior review.
+
+24. The list is available on the Afnic website.
+
+25. This list is a living document and applicants should familiarise themselves with it, it being understood that the list published online is not exhaustive given that the publication of some of these terms may offend certain members of the public.
+
+26. For this type of domain name, the registrar sends Afnic the necessary supporting documents beforehand to ensure that the applicant is entitled to register the domain name in question and that it is compliant with the provisions of the French Post and Electronic Communications Code.
+
+27. In order to register a term subject to prior review, the applicant must ensure that the domain name:
+
+✓ is not liable to disrupt public order or morality, or the rights guaranteed by the French Constitution or French law;
+
+✓ is not liable to infringe intellectual property rights or personal rights or is not identical or similar to that of the French Republic, a local authority or grouping of local authorities or a national or local institution or public service unless the applicant provides proof of a legitimate interest and is acting in good faith.
+
+28. The provisions of the French Post and Electronic Communications Code are applied to characterise the existence of a “legitimate interest” and “bad faith”.
+
+29. When considering the application, Afnic reserves the right to request any supporting evidence or documents it considers necessary.
+
+30. If the review is successful, Afnic sends an authorisation code to the registrar, enabling it to register the said domain name.
+
+31. In the event of any dispute, the “Legal proceedings” article shall be applied.
+
+32. The voluntary transfer of a domain name subject to prior review can only occur after the new holder has obtained authorisation from Afnic to do so under the same conditions.
+
+33. Deletion of a domain name subject to prior review entails its reinstatement on the original list.
+
+34. Similarly, the dom

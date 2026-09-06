@@ -1,0 +1,1286 @@
+[
+ {
+  "route": "/",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+  "dom_title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+  "ssr_h1": [
+   "用中文说出寓意，猎到真正可注册的.cn / .com 好域名"
+  ],
+  "dom_h1": [
+   "用中文说出寓意，猎到真正可注册的.cn / .com 好域名"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 90,
+  "dom_words": 2314,
+  "html_bytes": 14997
+ },
+ {
+  "route": "/",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "DomainHunter — Domain hunter for Chinese founders | Bilingual naming, verified .cn / .com availability",
+  "dom_title": "DomainHunter — Domain hunter for Chinese founders | Bilingual naming, verified .cn / .com availability",
+  "ssr_h1": [
+   "Name it in Chinese or English, hunt .cn / .com domains you can actually register"
+  ],
+  "dom_h1": [
+   "Name it in Chinese or English, hunt .cn / .com domains you can actually register"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 154,
+  "dom_words": 3090,
+  "html_bytes": 15349
+ },
+ {
+  "route": "/advanced",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "批量域名核验：粘贴名单一键实时查可注册 | DomainHunter",
+  "dom_title": "高级模式 | DomainHunter",
+  "ssr_h1": [
+   "高级模式"
+  ],
+  "dom_h1": [
+   "高级模式"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 17,
+  "dom_words": 31,
+  "html_bytes": 47835
+ },
+ {
+  "route": "/advanced",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "Bulk domain check: paste a list, verify availability live | DomainHunter",
+  "dom_title": "Advanced mode | DomainHunter",
+  "ssr_h1": [
+   "Advanced mode"
+  ],
+  "dom_h1": [
+   "Advanced mode"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 32,
+  "dom_words": 65,
+  "html_bytes": 47720
+ },
+ {
+  "route": "/shortlist",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+  "dom_title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+  "ssr_h1": [],
+  "dom_h1": [
+   "候选清单"
+  ],
+  "h1_equal": false,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 15,
+  "dom_words": 12,
+  "html_bytes": 5012
+ },
+ {
+  "route": "/shortlist",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+  "dom_title": "DomainHunter — Domain hunter for Chinese founders | Bilingual naming, verified .cn / .com availability",
+  "ssr_h1": [],
+  "dom_h1": [
+   "Shortlist"
+  ],
+  "h1_equal": false,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 15,
+  "dom_words": 42,
+  "html_bytes": 5012
+ },
+ {
+  "route": "/monitors",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+  "dom_title": "监控管理 | DomainHunter",
+  "ssr_h1": [],
+  "dom_h1": [
+   "监控管理"
+  ],
+  "h1_equal": false,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 15,
+  "dom_words": 18,
+  "html_bytes": 5011
+ },
+ {
+  "route": "/monitors",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "DomainHunter — 中文创业者的域名猎手 | 用中文说寓意，猎到真正可注册的 .cn / .com 好域名",
+  "dom_title": "Monitors | DomainHunter",
+  "ssr_h1": [],
+  "dom_h1": [
+   "Monitors"
+  ],
+  "h1_equal": false,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 15,
+  "dom_words": 66,
+  "html_bytes": 5011
+ },
+ {
+  "route": "/prices",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "域名后缀价格总览：408 个主流 TLD 注册与续费对比 | DomainHunter",
+  "dom_title": "域名后缀价格总览：408 个主流 TLD 注册与续费对比 | DomainHunter",
+  "ssr_h1": [
+   "域名后缀价格总览：408 个主流 TLD 注册与续费对比"
+  ],
+  "dom_h1": [
+   "域名后缀价格总览：408 个主流 TLD 注册与续费对比"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 124,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [
+   "$1.34",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.63",
+   "$1.73",
+   "$1.96",
+   "$1.96",
+   "$1.96",
+   "$1.96",
+   "$10.81",
+   "$10.81",
+   "$14.21",
+   "$14.21",
+   "$14.21",
+   "$14.21",
+   "$14.21",
+   "$14.21",
+   "$14.21"
+  ],
+  "ssr_root_words": 846,
+  "dom_words": 1522,
+  "html_bytes": 280716
+ },
+ {
+  "route": "/prices",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "TLD Price Overview: Registration vs Renewal for 408 Popular Suffixes | DomainHunter",
+  "dom_title": "TLD Price Overview: Registration vs Renewal for 408 Popular Suffixes | DomainHunter",
+  "ssr_h1": [
+   "TLD Price Overview: Registration vs Renewal for 408 Popular Suffixes"
+  ],
+  "dom_h1": [
+   "TLD Price Overview: Registration vs Renewal for 408 Popular Suffixes"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 120,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [
+   "$1.34",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.54",
+   "$1.63",
+   "$1.73",
+   "$1.96",
+   "$1.96",
+   "$1.96",
+   "$10.81",
+   "$10.81",
+   "$14.21",
+   "$14.21",
+   "$14.21",
+   "$14.21",
+   "$14.21",
+   "$14.21",
+   "$14.21",
+   "$14.21"
+  ],
+  "ssr_root_words": 906,
+  "dom_words": 1636,
+  "html_bytes": 280107
+ },
+ {
+  "route": "/why",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "为什么选 DomainHunter：中文创业者的域名猎手 | DomainHunter",
+  "dom_title": "为什么选 DomainHunter | DomainHunter",
+  "ssr_h1": [
+   "中文创业者的域名猎手：用中文说寓意，猎到真正可注册的 .cn / .com"
+  ],
+  "dom_h1": [
+   "中文创业者的域名猎手：用中文说寓意，猎到真正可注册的 .cn / .com"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 29,
+  "dom_words": 164,
+  "html_bytes": 49002
+ },
+ {
+  "route": "/why",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "Why DomainHunter: a domain hunter for Chinese founders | DomainHunter",
+  "dom_title": "Why DomainHunter | DomainHunter",
+  "ssr_h1": [
+   "A domain hunter for Chinese founders: name it in Chinese, register it in .cn / .com"
+  ],
+  "dom_h1": [
+   "A domain hunter for Chinese founders: name it in Chinese, register it in .cn / .com"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 107,
+  "dom_words": 657,
+  "html_bytes": 49259
+ },
+ {
+  "route": "/mcp",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "把域名核验接进你的 AI 助手 | DomainHunter",
+  "dom_title": "把域名核验接进你的 AI 助手 | DomainHunter",
+  "ssr_h1": [
+   "把域名核验接进你的 AI 助手"
+  ],
+  "dom_h1": [
+   "把域名核验接进你的 AI 助手"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 29,
+  "dom_words": 153,
+  "html_bytes": 48009
+ },
+ {
+  "route": "/mcp",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "Plug domain checking into your AI assistant | DomainHunter",
+  "dom_title": "Plug domain checking into your AI assistant | DomainHunter",
+  "ssr_h1": [
+   "Plug domain checking into your AI assistant"
+  ],
+  "dom_h1": [
+   "Plug domain checking into your AI assistant"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 62,
+  "dom_words": 294,
+  "html_bytes": 47978
+ },
+ {
+  "route": "/tld",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "全部 TLD 注册指南：408 个后缀怎么选 | DomainHunter",
+  "dom_title": "全部 TLD 注册指南：408 个后缀怎么选 | DomainHunter",
+  "ssr_h1": [
+   "全部 TLD 注册指南：408 个后缀怎么选"
+  ],
+  "dom_h1": [
+   "全部 TLD 注册指南：408 个后缀怎么选"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 1448,
+  "dom_words": 1431,
+  "html_bytes": 238328
+ },
+ {
+  "route": "/tld",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "All TLD Registration Guides: How to Choose Among 408 Suffixes | DomainHunter",
+  "dom_title": "All TLD Registration Guides: How to Choose Among 408 Suffixes | DomainHunter",
+  "ssr_h1": [
+   "All TLD Registration Guides: How to Choose Among 408 Suffixes"
+  ],
+  "dom_h1": [
+   "All TLD Registration Guides: How to Choose Among 408 Suffixes"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 10187,
+  "dom_words": 10164,
+  "html_bytes": 245767
+ },
+ {
+  "route": "/guide",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "全部行业命名指南：410 个行业怎么起名 | DomainHunter",
+  "dom_title": "全部行业命名指南：410 个行业怎么起名 | DomainHunter",
+  "ssr_h1": [
+   "全部行业命名指南：410 个行业怎么起名"
+  ],
+  "dom_h1": [
+   "全部行业命名指南：410 个行业怎么起名"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 1366,
+  "dom_words": 1351,
+  "html_bytes": 222156
+ },
+ {
+  "route": "/guide",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "All Industry Naming Guides: How to Name a Product in 410 Industries | DomainHunter",
+  "dom_title": "All Industry Naming Guides: How to Name a Product in 410 Industries | DomainHunter",
+  "ssr_h1": [
+   "All Industry Naming Guides: How to Name a Product in 410 Industries"
+  ],
+  "dom_h1": [
+   "All Industry Naming Guides: How to Name a Product in 410 Industries"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 4926,
+  "dom_words": 4901,
+  "html_bytes": 213438
+ },
+ {
+  "route": "/vs",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "全部后缀对比：444 组 TLD 怎么选 | DomainHunter",
+  "dom_title": "全部后缀对比：444 组 TLD 怎么选 | DomainHunter",
+  "ssr_h1": [
+   "全部后缀对比：444 组 TLD 怎么选"
+  ],
+  "dom_h1": [
+   "全部后缀对比：444 组 TLD 怎么选"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 2883,
+  "dom_words": 2496,
+  "html_bytes": 352851
+ },
+ {
+  "route": "/vs",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "All TLD Comparisons: 444 Head-to-Head Matchups | DomainHunter",
+  "dom_title": "All TLD Comparisons: 444 Head-to-Head Matchups | DomainHunter",
+  "ssr_h1": [
+   "All TLD Comparisons: 444 Head-to-Head Matchups"
+  ],
+  "dom_h1": [
+   "All TLD Comparisons: 444 Head-to-Head Matchups"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 2923,
+  "dom_words": 2534,
+  "html_bytes": 352920
+ },
+ {
+  "route": "/tld/cn",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".cn 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+  "dom_title": ".cn 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+  "ssr_h1": [
+   ".cn 域名注册指南：适合谁、多少钱、怎么起名"
+  ],
+  "dom_h1": [
+   ".cn 域名注册指南：适合谁、多少钱、怎么起名"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 14,
+  "dom_price_n": 14,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 178,
+  "dom_words": 150,
+  "html_bytes": 68865
+ },
+ {
+  "route": "/tld/cn",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".cn Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+  "dom_title": ".cn Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+  "ssr_h1": [
+   ".cn Domain Guide: Who It's For, Pricing & Naming Tips"
+  ],
+  "dom_h1": [
+   ".cn Domain Guide: Who It's For, Pricing & Naming Tips"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 9,
+  "dom_price_n": 9,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 459,
+  "dom_words": 354,
+  "html_bytes": 68955
+ },
+ {
+  "route": "/tld/de",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".de 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+  "dom_title": ".de 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+  "ssr_h1": [
+   ".de 域名注册指南：适合谁、多少钱、怎么起名"
+  ],
+  "dom_h1": [
+   ".de 域名注册指南：适合谁、多少钱、怎么起名"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 19,
+  "dom_price_n": 17,
+  "ssr_prices_missing_in_dom": [
+   "$2.90",
+   "$4.07"
+  ],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 322,
+  "dom_words": 277,
+  "html_bytes": 80676
+ },
+ {
+  "route": "/tld/de",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".de Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+  "dom_title": ".de Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+  "ssr_h1": [
+   ".de Domain Guide: Who It's For, Pricing & Naming Tips"
+  ],
+  "dom_h1": [
+   ".de Domain Guide: Who It's For, Pricing & Naming Tips"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 16,
+  "dom_price_n": 14,
+  "ssr_prices_missing_in_dom": [
+   "$2.90",
+   "$4.07"
+  ],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 965,
+  "dom_words": 790,
+  "html_bytes": 81692
+ },
+ {
+  "route": "/tld/jp",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".jp 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+  "dom_title": ".jp 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+  "ssr_h1": [
+   ".jp 域名注册指南：适合谁、多少钱、怎么起名"
+  ],
+  "dom_h1": [
+   ".jp 域名注册指南：适合谁、多少钱、怎么起名"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 11,
+  "dom_price_n": 11,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 244,
+  "dom_words": 204,
+  "html_bytes": 75682
+ },
+ {
+  "route": "/tld/jp",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".jp Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+  "dom_title": ".jp Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+  "ssr_h1": [
+   ".jp Domain Guide: Who It's For, Pricing & Naming Tips"
+  ],
+  "dom_h1": [
+   ".jp Domain Guide: Who It's For, Pricing & Naming Tips"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 11,
+  "dom_price_n": 11,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 737,
+  "dom_words": 582,
+  "html_bytes": 76472
+ },
+ {
+  "route": "/tld/uk",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".uk 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+  "dom_title": ".uk 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+  "ssr_h1": [
+   ".uk 域名注册指南：适合谁、多少钱、怎么起名"
+  ],
+  "dom_h1": [
+   ".uk 域名注册指南：适合谁、多少钱、怎么起名"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 22,
+  "dom_price_n": 20,
+  "ssr_prices_missing_in_dom": [
+   "$4.32",
+   "$5.66"
+  ],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 278,
+  "dom_words": 223,
+  "html_bytes": 72496
+ },
+ {
+  "route": "/tld/uk",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".uk Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+  "dom_title": ".uk Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+  "ssr_h1": [
+   ".uk Domain Guide: Who It's For, Pricing & Naming Tips"
+  ],
+  "dom_h1": [
+   ".uk Domain Guide: Who It's For, Pricing & Naming Tips"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 16,
+  "dom_price_n": 14,
+  "ssr_prices_missing_in_dom": [
+   "$4.32",
+   "$5.66"
+  ],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 726,
+  "dom_words": 569,
+  "html_bytes": 73263
+ },
+ {
+  "route": "/tld/ar",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".ar 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+  "dom_title": ".ar 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+  "ssr_h1": [
+   ".ar 域名注册指南：适合谁、多少钱、怎么起名"
+  ],
+  "dom_h1": [
+   ".ar 域名注册指南：适合谁、多少钱、怎么起名"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 9,
+  "dom_price_n": 9,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 240,
+  "dom_words": 201,
+  "html_bytes": 75406
+ },
+ {
+  "route": "/tld/ar",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".ar Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+  "dom_title": ".ar Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+  "ssr_h1": [
+   ".ar Domain Guide: Who It's For, Pricing & Naming Tips"
+  ],
+  "dom_h1": [
+   ".ar Domain Guide: Who It's For, Pricing & Naming Tips"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 10,
+  "dom_price_n": 10,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 701,
+  "dom_words": 573,
+  "html_bytes": 75708
+ },
+ {
+  "route": "/tld/cz",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".cz 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+  "dom_title": ".cz 域名注册指南：适合谁、多少钱、怎么起名 | DomainHunter",
+  "ssr_h1": [
+   ".cz 域名注册指南：适合谁、多少钱、怎么起名"
+  ],
+  "dom_h1": [
+   ".cz 域名注册指南：适合谁、多少钱、怎么起名"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 11,
+  "dom_price_n": 11,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 233,
+  "dom_words": 197,
+  "html_bytes": 74887
+ },
+ {
+  "route": "/tld/cz",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".cz Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+  "dom_title": ".cz Domain Guide: Who It's For, Pricing & Naming Tips | DomainHunter",
+  "ssr_h1": [
+   ".cz Domain Guide: Who It's For, Pricing & Naming Tips"
+  ],
+  "dom_h1": [
+   ".cz Domain Guide: Who It's For, Pricing & Naming Tips"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 11,
+  "dom_price_n": 11,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 695,
+  "dom_words": 573,
+  "html_bytes": 75364
+ },
+ {
+  "route": "/guide/saas",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+  "dom_title": "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+  "ssr_h1": [
+   "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择"
+  ],
+  "dom_h1": [
+   "SaaS 产品怎么起名：命名思路、好名字拆解与域名选择"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 6,
+  "dom_price_n": 6,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 217,
+  "dom_words": 186,
+  "html_bytes": 78322
+ },
+ {
+  "route": "/guide/saas",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "How to Name a SaaS Product: Strategies, Case Studies & Domains | DomainHunter",
+  "dom_title": "How to Name a SaaS Product: Strategies, Case Studies & Domains | DomainHunter",
+  "ssr_h1": [
+   "How to Name a SaaS Product: Strategies, Case Studies & Domains"
+  ],
+  "dom_h1": [
+   "How to Name a SaaS Product: Strategies, Case Studies & Domains"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 3,
+  "dom_price_n": 3,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 836,
+  "dom_words": 681,
+  "html_bytes": 78612
+ },
+ {
+  "route": "/guide/nocode",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "无代码工具怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+  "dom_title": "无代码工具怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+  "ssr_h1": [
+   "无代码工具怎么起名：命名思路、好名字拆解与域名选择"
+  ],
+  "dom_h1": [
+   "无代码工具怎么起名：命名思路、好名字拆解与域名选择"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 6,
+  "dom_price_n": 6,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 172,
+  "dom_words": 148,
+  "html_bytes": 79187
+ },
+ {
+  "route": "/guide/nocode",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "How to Name a No-code Tool: Strategies, Cases & Domains | DomainHunter",
+  "dom_title": "How to Name a No-code Tool: Strategies, Cases & Domains | DomainHunter",
+  "ssr_h1": [
+   "How to Name a No-code Tool: Strategies, Cases & Domains"
+  ],
+  "dom_h1": [
+   "How to Name a No-code Tool: Strategies, Cases & Domains"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 3,
+  "dom_price_n": 3,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 882,
+  "dom_words": 727,
+  "html_bytes": 79482
+ },
+ {
+  "route": "/guide/robotics",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "机器人公司怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+  "dom_title": "机器人公司怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+  "ssr_h1": [
+   "机器人公司怎么起名：命名思路、好名字拆解与域名选择"
+  ],
+  "dom_h1": [
+   "机器人公司怎么起名：命名思路、好名字拆解与域名选择"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 6,
+  "dom_price_n": 6,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 177,
+  "dom_words": 153,
+  "html_bytes": 79637
+ },
+ {
+  "route": "/guide/robotics",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "How to Name a Robotics Company: Strategies, Cases & Domains | DomainHunter",
+  "dom_title": "How to Name a Robotics Company: Strategies, Cases & Domains | DomainHunter",
+  "ssr_h1": [
+   "How to Name a Robotics Company: Strategies, Cases & Domains"
+  ],
+  "dom_h1": [
+   "How to Name a Robotics Company: Strategies, Cases & Domains"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 3,
+  "dom_price_n": 3,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 881,
+  "dom_words": 719,
+  "html_bytes": 80098
+ },
+ {
+  "route": "/guide/lawfirm",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": "律师事务所怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+  "dom_title": "律师事务所怎么起名：命名思路、好名字拆解与域名选择 | DomainHunter",
+  "ssr_h1": [
+   "律师事务所怎么起名：命名思路、好名字拆解与域名选择"
+  ],
+  "dom_h1": [
+   "律师事务所怎么起名：命名思路、好名字拆解与域名选择"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 6,
+  "dom_price_n": 6,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 153,
+  "dom_words": 132,
+  "html_bytes": 80624
+ },
+ {
+  "route": "/guide/lawfirm",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": "How to Name a Law Firm: Strategies, Cases & Domains | DomainHunter",
+  "dom_title": "How to Name a Law Firm: Strategies, Cases & Domains | DomainHunter",
+  "ssr_h1": [
+   "How to Name a Law Firm: Strategies, Cases & Domains"
+  ],
+  "dom_h1": [
+   "How to Name a Law Firm: Strategies, Cases & Domains"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 3,
+  "dom_price_n": 3,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 858,
+  "dom_words": 705,
+  "html_bytes": 81433
+ },
+ {
+  "route": "/vs/com-vs-cn",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比 | DomainHunter",
+  "dom_title": ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比 | DomainHunter",
+  "ssr_h1": [
+   ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比"
+  ],
+  "dom_h1": [
+   ".com 和 .cn 怎么选：面向人群、备案与品牌保护对比"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 28,
+  "dom_price_n": 28,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 332,
+  "dom_words": 295,
+  "html_bytes": 83048
+ },
+ {
+  "route": "/vs/com-vs-cn",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".com vs .cn: Audience, Compliance & Brand Protection Compared | DomainHunter",
+  "dom_title": ".com vs .cn: Audience, Compliance & Brand Protection Compared | DomainHunter",
+  "ssr_h1": [
+   ".com vs .cn: Audience, Compliance & Brand Protection Compared"
+  ],
+  "dom_h1": [
+   ".com vs .cn: Audience, Compliance & Brand Protection Compared"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 29,
+  "dom_price_n": 29,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 807,
+  "dom_words": 708,
+  "html_bytes": 83301
+ },
+ {
+  "route": "/vs/io-vs-dev",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".io 和 .dev 怎么选：极客老牌与开发者新贵的对比 | DomainHunter",
+  "dom_title": ".io 和 .dev 怎么选：极客老牌与开发者新贵的对比 | DomainHunter",
+  "ssr_h1": [
+   ".io 和 .dev 怎么选：极客老牌与开发者新贵的对比"
+  ],
+  "dom_h1": [
+   ".io 和 .dev 怎么选：极客老牌与开发者新贵的对比"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 24,
+  "dom_price_n": 24,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 361,
+  "dom_words": 324,
+  "html_bytes": 84604
+ },
+ {
+  "route": "/vs/io-vs-dev",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".io vs .dev: The Veteran Hacker Suffix or the Purpose-Built One | DomainHunter",
+  "dom_title": ".io vs .dev: The Veteran Hacker Suffix or the Purpose-Built One | DomainHunter",
+  "ssr_h1": [
+   ".io vs .dev: The Veteran Hacker Suffix or the Purpose-Built One"
+  ],
+  "dom_h1": [
+   ".io vs .dev: The Veteran Hacker Suffix or the Purpose-Built One"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 24,
+  "dom_price_n": 24,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 949,
+  "dom_words": 845,
+  "html_bytes": 84986
+ },
+ {
+  "route": "/vs/uk-vs-com",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".uk 和 .com 怎么选：英国本地信任与全球默认值的对比 | DomainHunter",
+  "dom_title": ".uk 和 .com 怎么选：英国本地信任与全球默认值的对比 | DomainHunter",
+  "ssr_h1": [
+   ".uk 和 .com 怎么选：英国本地信任与全球默认值的对比"
+  ],
+  "dom_h1": [
+   ".uk 和 .com 怎么选：英国本地信任与全球默认值的对比"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 25,
+  "dom_price_n": 25,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 374,
+  "dom_words": 338,
+  "html_bytes": 88913
+ },
+ {
+  "route": "/vs/uk-vs-com",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".uk vs .com: British Local Trust vs the Global Default | DomainHunter",
+  "dom_title": ".uk vs .com: British Local Trust vs the Global Default | DomainHunter",
+  "ssr_h1": [
+   ".uk vs .com: British Local Trust vs the Global Default"
+  ],
+  "dom_h1": [
+   ".uk vs .com: British Local Trust vs the Global Default"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 25,
+  "dom_price_n": 25,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 979,
+  "dom_words": 880,
+  "html_bytes": 89118
+ },
+ {
+  "route": "/vs/pizza-vs-com",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".pizza 和 .com 怎么选：品类直给与通用信任的对比 | DomainHunter",
+  "dom_title": ".pizza 和 .com 怎么选：品类直给与通用信任的对比 | DomainHunter",
+  "ssr_h1": [
+   ".pizza 和 .com 怎么选：品类直给与通用信任的对比"
+  ],
+  "dom_h1": [
+   ".pizza 和 .com 怎么选：品类直给与通用信任的对比"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 24,
+  "dom_price_n": 24,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 329,
+  "dom_words": 295,
+  "html_bytes": 86200
+ },
+ {
+  "route": "/vs/pizza-vs-com",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".pizza vs .com: Category Punch or Universal Trust | DomainHunter",
+  "dom_title": ".pizza vs .com: Category Punch or Universal Trust | DomainHunter",
+  "ssr_h1": [
+   ".pizza vs .com: Category Punch or Universal Trust"
+  ],
+  "dom_h1": [
+   ".pizza vs .com: Category Punch or Universal Trust"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 24,
+  "dom_price_n": 24,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 935,
+  "dom_words": 832,
+  "html_bytes": 86588
+ },
+ {
+  "route": "/vs/ai-vs-tech",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".ai 和 .tech 怎么选：品类信号与泛科技的取舍 | DomainHunter",
+  "dom_title": ".ai 和 .tech 怎么选：品类信号与泛科技的取舍 | DomainHunter",
+  "ssr_h1": [
+   ".ai 和 .tech 怎么选：品类信号与泛科技的取舍"
+  ],
+  "dom_h1": [
+   ".ai 和 .tech 怎么选：品类信号与泛科技的取舍"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 24,
+  "dom_price_n": 24,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 332,
+  "dom_words": 294,
+  "html_bytes": 84519
+ },
+ {
+  "route": "/vs/ai-vs-tech",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".ai vs .tech: Category Precision or Broad-Tech Flexibility | DomainHunter",
+  "dom_title": ".ai vs .tech: Category Precision or Broad-Tech Flexibility | DomainHunter",
+  "ssr_h1": [
+   ".ai vs .tech: Category Precision or Broad-Tech Flexibility"
+  ],
+  "dom_h1": [
+   ".ai vs .tech: Category Precision or Broad-Tech Flexibility"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 24,
+  "dom_price_n": 24,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 879,
+  "dom_words": 781,
+  "html_bytes": 84928
+ },
+ {
+  "route": "/vs/me-vs-io",
+  "lang": "zh",
+  "status": 200,
+  "ssr_title": ".me 和 .io 怎么选：个人品牌与技术身份的对比 | DomainHunter",
+  "dom_title": ".me 和 .io 怎么选：个人品牌与技术身份的对比 | DomainHunter",
+  "ssr_h1": [
+   ".me 和 .io 怎么选：个人品牌与技术身份的对比"
+  ],
+  "dom_h1": [
+   ".me 和 .io 怎么选：个人品牌与技术身份的对比"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 24,
+  "dom_price_n": 24,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 334,
+  "dom_words": 298,
+  "html_bytes": 84566
+ },
+ {
+  "route": "/vs/me-vs-io",
+  "lang": "en",
+  "status": 200,
+  "ssr_title": ".me vs .io: Personal Brand or Technical Identity | DomainHunter",
+  "dom_title": ".me vs .io: Personal Brand or Technical Identity | DomainHunter",
+  "ssr_h1": [
+   ".me vs .io: Personal Brand or Technical Identity"
+  ],
+  "dom_h1": [
+   ".me vs .io: Personal Brand or Technical Identity"
+  ],
+  "h1_equal": true,
+  "ssr_price_n": 24,
+  "dom_price_n": 24,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 953,
+  "dom_words": 858,
+  "html_bytes": 85163
+ },
+ {
+  "route": "/nope-r537-browser",
+  "lang": "zh",
+  "status": 404,
+  "ssr_title": "页面不存在 | DomainHunter",
+  "dom_title": "页面不存在 | DomainHunter",
+  "ssr_h1": [],
+  "dom_h1": [
+   "页面不存在"
+  ],
+  "h1_equal": false,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 9,
+  "dom_words": 14,
+  "html_bytes": 4498
+ },
+ {
+  "route": "/nope-r537-browser",
+  "lang": "en",
+  "status": 404,
+  "ssr_title": "Page not found | DomainHunter",
+  "dom_title": "Page not found | DomainHunter",
+  "ssr_h1": [],
+  "dom_h1": [
+   "Page not found"
+  ],
+  "h1_equal": false,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 11,
+  "dom_words": 39,
+  "html_bytes": 4519
+ },
+ {
+  "route": "/s/V_-LuRIDhc",
+  "lang": "zh",
+  "status": 410,
+  "ssr_title": "分享已撤销 | DomainHunter",
+  "dom_title": "分享已撤销 | DomainHunter",
+  "ssr_h1": [],
+  "dom_h1": [],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 9,
+  "dom_words": 9,
+  "html_bytes": 4494
+ },
+ {
+  "route": "/s/V_-LuRIDhc",
+  "lang": "en",
+  "status": 410,
+  "ssr_title": "This share has been revoked | DomainHunter",
+  "dom_title": "This share has been revoked | DomainHunter",
+  "ssr_h1": [],
+  "dom_h1": [],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 13,
+  "dom_words": 30,
+  "html_bytes": 4578
+ },
+ {
+  "route": "/s/unknownr537",
+  "lang": "zh",
+  "status": 404,
+  "ssr_title": "分享不存在或已过期 | DomainHunter",
+  "dom_title": "分享不存在或已过期 | DomainHunter",
+  "ssr_h1": [],
+  "dom_h1": [],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 9,
+  "dom_words": 11,
+  "html_bytes": 4562
+ },
+ {
+  "route": "/s/unknownr537",
+  "lang": "en",
+  "status": 404,
+  "ssr_title": "Share not found or expired | DomainHunter",
+  "dom_title": "Share not found or expired | DomainHunter",
+  "ssr_h1": [],
+  "dom_h1": [],
+  "h1_equal": true,
+  "ssr_price_n": 0,
+  "dom_price_n": 0,
+  "ssr_prices_missing_in_dom": [],
+  "dom_prices_not_in_ssr": [],
+  "ssr_root_words": 13,
+  "dom_words": 30,
+  "html_bytes": 4586
+ }
+]

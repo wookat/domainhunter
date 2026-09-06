@@ -1,0 +1,252 @@
+[
+ {
+  "route": "/shortlist?lang=en",
+  "items": [
+   {
+    "tag": "button",
+    "cls": "flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm text-t",
+    "text": "Back",
+    "h": 36,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   },
+   {
+    "tag": "button",
+    "cls": "flex h-9 items-center gap-1.5 rounded-lg border border-line ",
+    "text": "Import",
+    "h": 36,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   },
+   {
+    "tag": "button",
+    "cls": "mt-5 inline-flex h-10 items-center gap-1.5 rounded-lg bg-bra",
+    "text": "Start hunting",
+    "h": 40,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   }
+  ]
+ },
+ {
+  "route": "/mcp?lang=en",
+  "items": [
+   {
+    "tag": "button",
+    "cls": "absolute right-2 top-2 inline-flex h-8 items-center gap-1 ro",
+    "text": "Copy",
+    "h": 32,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   },
+   {
+    "tag": "button",
+    "cls": "absolute right-2 top-2 inline-flex h-8 items-center gap-1 ro",
+    "text": "Copy",
+    "h": 32,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   },
+   {
+    "tag": "button",
+    "cls": "absolute right-2 top-2 inline-flex h-8 items-center gap-1 ro",
+    "text": "Copy",
+    "h": 32,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   },
+   {
+    "tag": "button",
+    "cls": "absolute right-2 top-2 inline-flex h-8 items-center gap-1 ro",
+    "text": "Copy",
+    "h": 32,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   }
+  ]
+ },
+ {
+  "route": "/prices?lang=en",
+  "items": [
+   {
+    "tag": "button",
+    "cls": "flex min-h-[32px] items-center gap-1 text-xs font-semibold t",
+    "text": "TLD",
+    "h": 32,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   },
+   {
+    "tag": "button",
+    "cls": "flex min-h-[32px] items-center gap-1 text-xs font-semibold t",
+    "text": "Register / 1st yr",
+    "h": 32,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   },
+   {
+    "tag": "button",
+    "cls": "flex min-h-[32px] items-center gap-1 text-xs font-semibold t",
+    "text": "Renew / yr",
+    "h": 32,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   },
+   {
+    "tag": "a",
+    "cls": "tap-target font-mono text-sm font-semibold text-txt0 hover:t",
+    "text": ".bond",
+    "h": 20,
+    "tapTarget": true,
+    "beforeContent": "\"\"",
+    "beforeInset": "10px 0px -34px"
+   },
+   {
+    "tag": "a",
+    "cls": "tap-target font-mono text-sm font-semibold text-txt0 hover:t",
+    "text": ".click",
+    "h": 20,
+    "tapTarget": true,
+    "beforeContent": "\"\"",
+    "beforeInset": "10px 0px -34px"
+   },
+   {
+    "tag": "a",
+    "cls": "tap-target font-mono text-sm font-semibold text-txt0 hover:t",
+    "text": ".lol",
+    "h": 20,
+    "tapTarget": true,
+    "beforeContent": "\"\"",
+    "beforeInset": "10px 0px -34px"
+   },
+   {
+    "tag": "a",
+    "cls": "tap-target font-mono text-sm font-semibold text-txt0 hover:t",
+    "text": ".garden",
+    "h": 20,
+    "tapTarget": true,
+    "beforeContent": "\"\"",
+    "beforeInset": "10px 0px -34px"
+   },
+   {
+    "tag": "a",
+    "cls": "tap-target font-mono text-sm font-semibold text-txt0 hover:t",
+    "text": ".beauty",
+    "h": 20,
+    "tapTarget": true,
+    "beforeContent": "\"\"",
+    "beforeInset": "10px 0px -34px"
+   },
+   {
+    "tag": "a",
+    "cls": "tap-target font-mono text-sm font-semibold text-txt0 hover:t",
+    "text": ".help",
+    "h": 20,
+    "tapTarget": true,
+    "beforeContent": "\"\"",
+    "beforeInset": "10px 0px -34px"
+   },
+   {
+    "tag": "a",
+    "cls": "tap-target font-mono text-sm font-semibold text-txt0 hover:t",
+    "text": ".baby",
+    "h": 20,
+    "tapTarget": true,
+    "beforeContent": "\"\"",
+    "beforeInset": "10px 0px -34px"
+   },
+   {
+    "tag": "a",
+    "cls": "tap-target font-mono text-sm font-semibold text-txt0 hover:t",
+    "text": ".mom",
+    "h": 20,
+    "tapTarget": true,
+    "beforeContent": "\"\"",
+    "beforeInset": "10px 0px -34px"
+   },
+   {
+    "tag": "a",
+    "cls": "tap-target font-mono text-sm font-semibold text-txt0 hover:t",
+    "text": ".surf",
+    "h": 20,
+    "tapTarget": true,
+    "beforeContent": "\"\"",
+    "beforeInset": "10px 0px -34px"
+   }
+  ]
+ },
+ {
+  "route": "/tld/de?lang=en",
+  "items": [
+   {
+    "tag": "a",
+    "cls": "tap-target inline-block hover:text-brand hover:underline",
+    "text": "Home",
+    "h": 20,
+    "tapTarget": true,
+    "beforeContent": "\"\"",
+    "beforeInset": "10px 0px -34px"
+   },
+   {
+    "tag": "a",
+    "cls": "tap-target inline-block hover:text-brand hover:underline",
+    "text": "TLD guides",
+    "h": 20,
+    "tapTarget": true,
+    "beforeContent": "\"\"",
+    "beforeInset": "10px 0px -34px"
+   },
+   {
+    "tag": "summary",
+    "cls": "flex min-h-[28px] cursor-pointer list-none items-center text",
+    "text": "Who is a .de domain ",
+    "h": 28,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   },
+   {
+    "tag": "summary",
+    "cls": "flex min-h-[28px] cursor-pointer list-none items-center text",
+    "text": "How do I register a ",
+    "h": 28,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   },
+   {
+    "tag": "summary",
+    "cls": "flex min-h-[28px] cursor-pointer list-none items-center text",
+    "text": "How do I pick a good",
+    "h": 28,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   }
+  ]
+ },
+ {
+  "route": "/monitors?lang=en",
+  "items": [
+   {
+    "tag": "button",
+    "cls": "flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm text-t",
+    "text": "Back",
+    "h": 36,
+    "tapTarget": false,
+    "beforeContent": "none",
+    "beforeInset": "auto"
+   }
+  ]
+ }
+]
