@@ -1,18 +1,21 @@
 import { CheckCircle2, HelpCircle, Scale, Sparkles } from "lucide-react";
 
 import { buildCompareFaq } from "@/content/compare-faq";
+import { buildComparePriceView, type ComparePriceSnapshot } from "@/content/compare-prices";
 import { compareLabel, relatedCompares } from "@/content/compare-slugs";
 import { readInjectedContent } from "@/content/injected";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { ComparePriceTable } from "@/components/compare-price-table";
 import { NotFoundPage } from "@/components/not-found-page";
 import { SiteLinks } from "@/components/site-links";
 import { useI18n } from "@/lib/i18n";
-import { priceFull, usePrices } from "@/lib/prices";
+import { priceFull, usePriceMeta, usePrices } from "@/lib/prices";
 import { usePageTitle } from "@/lib/use-page-title";
 
 export function ComparePage({ slug }: { slug: string }) {
   const { t, lang } = useI18n();
   const prices = usePrices();
+  const priceMeta = usePriceMeta();
   const content = readInjectedContent("vs", slug);
   const cmp = content?.cmp;
   usePageTitle(cmp?.[lang].title);
@@ -25,6 +28,13 @@ export function ComparePage({ slug }: { slug: string }) {
   const faq = buildCompareFaq(cmp, lang);
   const relatedGuides = content.relatedGuides;
   const related = relatedCompares(slug);
+  // 价格数据表：优先用 SSR 注入的 KV 快照（与首屏 HTML 逐字一致）；注入缺失的兜底路径才用 /api/prices 拉取结果
+  const snapshot: ComparePriceSnapshot = content.prices ?? {
+    live: Object.fromEntries(sides.flatMap((tld) => (prices?.[tld] ? [[tld, prices[tld]]] : []))),
+    fetchedAt: priceMeta?.fetchedAt ?? null,
+    stale: priceMeta ? priceMeta.stale : true,
+  };
+  const priceView = buildComparePriceView(cmp.a, cmp.b, lang, snapshot);
 
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 md:px-6">
@@ -39,6 +49,9 @@ export function ComparePage({ slug }: { slug: string }) {
         </h2>
         <p className="mt-2.5 text-[15px] leading-relaxed text-txt1">{loc.verdict}</p>
       </div>
+
+      {/* 组合专属数据表：首年/续费/5 年持有成本与差额（SSR 同源 /api/prices） */}
+      <ComparePriceTable view={priceView} />
 
       {/* 双列：各自的定位、价格与适用场景 */}
       <div className="mt-8 grid gap-4 md:grid-cols-2">

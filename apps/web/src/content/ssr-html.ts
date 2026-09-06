@@ -7,6 +7,7 @@
  */
 import { TLD_COMPARES, comparesForTld, type TldCompare } from "./compares";
 import { buildCompareFaq } from "./compare-faq";
+import { buildComparePriceView, type ComparePriceSnapshot, type ComparePriceView, type PriceCell } from "./compare-prices";
 import { buildGuideFaq } from "./guide-faq";
 import { buildTldFaq } from "./tld-faq";
 import { COMPARE_SLUGS, compareLabel, relatedCompares } from "./compare-slugs";
@@ -264,13 +265,44 @@ export function tldContentBlocks(tld: string, guide: TldGuide, lang: Lang): stri
   ];
 }
 
-/** /vs/:slug 全文正文（compare-page.tsx 首次渲染的静态部分） */
-export function compareContentBlocks(cmp: TldCompare, lang: Lang): string[] {
+const ICON_TAG_BRAND = icon("tag", "h-4 w-4 text-brand", '<path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle>');
+
+const priceCellHtml = (c: PriceCell) =>
+  `<td class="tnum whitespace-nowrap px-3 py-2.5 text-right"><span class="block text-txt0">${escapeHtml(c.usdText)}</span><span class="block text-[11px] text-txt2">${escapeHtml(c.cnyText)}</span></td>`;
+
+/** 价格数据表：DOM/类名与 components/compare-price-table.tsx 逐字一致（两端同一份 ComparePriceView） */
+export function comparePriceTableHtml(view: ComparePriceView): string {
+  const heading = view.kind === "empty" ? view.heading : view.table.heading;
+  const h2 = `<h2 class="flex items-center gap-2 text-base font-bold">${ICON_TAG_BRAND}${escapeHtml(heading)}</h2>`;
+  if (view.kind === "empty") return `<section class="mt-8">${h2}<p class="mt-2.5 text-sm leading-relaxed text-txt1">${escapeHtml(view.note)}</p></section>`;
+  const t = view.table;
+  const th = (label: string, i: number) => `<th scope="col" class="${i === 0 ? "px-4 py-2 text-left font-medium" : "px-3 py-2 text-right font-medium"}">${escapeHtml(label)}</th>`;
+  const rows = t.rows
+    .map(
+      (r) =>
+        `<tr class="border-b border-line"><th scope="row" class="whitespace-nowrap px-4 py-2.5 text-left font-mono font-semibold text-brand">.${escapeHtml(r.tld)}${r.live ? "" : `<span class="ml-1.5 rounded bg-bg2 px-1 font-sans text-[10px] font-normal text-txt2">${escapeHtml(t.refBadge)}</span>`}</th>${priceCellHtml(r.first)}${priceCellHtml(r.renew)}${priceCellHtml(r.fiveYear)}</tr>`,
+    )
+    .join("");
+  const diff = t.diff
+    ? `<tr class="bg-bg2/40"><th scope="row" class="whitespace-nowrap px-4 py-2.5 text-left text-xs font-semibold text-txt1">${escapeHtml(t.diff.label)}</th>${priceCellHtml(t.diff.first)}${priceCellHtml(t.diff.renew)}${priceCellHtml(t.diff.fiveYear)}</tr>`
+    : "";
+  const notes = `<ul class="mt-2 space-y-1 text-[11px] leading-relaxed text-txt2">${t.notes.map((n) => `<li>${escapeHtml(n)}</li>`).join("")}</ul>`;
+  return `<section class="mt-8">${h2}<div class="mt-3 overflow-x-auto rounded-xl border border-line bg-bg1"><table class="w-full min-w-[320px] text-sm"><caption class="px-4 pb-1 pt-3 text-left text-xs leading-relaxed text-txt2">${escapeHtml(t.caption)}</caption><thead><tr class="border-b border-line text-xs text-txt2">${t.headers.map(th).join("")}</tr></thead><tbody>${rows}${diff}</tbody></table></div>${notes}</section>`;
+}
+
+const EMPTY_PRICE_SNAPSHOT: ComparePriceSnapshot = { live: {}, fetchedAt: null, stale: true };
+
+/**
+ * /vs/:slug 全文正文（compare-page.tsx 首次渲染的静态部分）。
+ * prices 为 worker 从 /api/prices 同一 KV 缓存只读的快照（与注入客户端的同一份）；缺省按无数据处理。
+ */
+export function compareContentBlocks(cmp: TldCompare, lang: Lang, prices: ComparePriceSnapshot = EMPTY_PRICE_SNAPSHOT): string[] {
   const s = STR[lang];
   const loc = cmp[lang];
   const sides = [cmp.a, cmp.b] as const;
   const picks = [loc.pickA, loc.pickB] as const;
   const faq = buildCompareFaq(cmp, lang);
+  const priceTable = comparePriceTableHtml(buildComparePriceView(cmp.a, cmp.b, lang, prices));
   const relatedGuides = [...new Set([...guidesForTld(cmp.a), ...guidesForTld(cmp.b)])].slice(0, 4);
   const verdict = `<div class="mt-6 rounded-xl border border-line bg-bg1 px-5 py-4"><h2 class="flex items-center gap-2 text-base font-bold">${ICON_SCALE}${escapeHtml(s.verdict)}</h2><p class="mt-2.5 text-[15px] leading-relaxed text-txt1">${escapeHtml(loc.verdict)}</p></div>`;
   const columns = `<div class="mt-8 grid gap-4 md:grid-cols-2">${sides
@@ -316,6 +348,7 @@ export function compareContentBlocks(cmp: TldCompare, lang: Lang): string[] {
   );
   return [
     verdict,
+    priceTable,
     columns,
     faqBlock(faq, lang),
     ctaBlock(s.vsCtaTitle(cmp.a, cmp.b), s.vsCtaDesc, `/?tld=${cmp.a},${cmp.b}`, s.vsCtaButton),
