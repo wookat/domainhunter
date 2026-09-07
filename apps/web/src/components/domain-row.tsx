@@ -165,7 +165,7 @@ export function WatchCta({
             "inline-flex items-center gap-1 font-sans text-[11px] font-medium transition-colors",
             compact ? "h-6" : "h-11",
             confirming ? "text-destructive" : "text-brand hover:opacity-80",
-            chip ? "px-3 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", !compact && "sm:h-8"),
+            chip ? "min-w-[44px] justify-center px-3 sm:min-w-0 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", !compact && "min-w-11 sm:h-8 sm:min-w-0"),
           )}
         >
           {pending ? (
@@ -191,8 +191,8 @@ export function WatchCta({
           title={t("watch.manageTitle")}
           aria-label={t("watch.manageTitle")}
           className={cn(
-            "inline-flex w-8 items-center justify-center text-txt2 transition-colors hover:text-txt0",
-            compact ? "h-6" : "h-11",
+            "inline-flex items-center justify-center text-txt2 transition-colors hover:text-txt0",
+            compact ? "h-6 w-8" : "h-11 w-11 sm:w-8",
             !chip && cn("rounded-md hover:bg-bg3", !compact && "sm:h-8"),
           )}
         >
@@ -210,7 +210,7 @@ export function WatchCta({
       className={cn(
         "inline-flex shrink-0 items-center gap-1 font-sans text-[11px] font-medium transition-colors",
         error ? "text-destructive" : soon ? "text-amber2 hover:text-txt0" : "text-txt1 hover:text-txt0",
-        chip ? "border-l border-line/70 px-3 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", compact ? "h-6" : "h-11 sm:h-8"),
+        chip ? "min-w-[44px] justify-center border-l border-line/70 px-3 sm:min-w-0 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", compact ? "h-6" : "h-11 min-w-11 sm:h-8 sm:min-w-0"),
       )}
     >
       {pending ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Bell className="h-3.5 w-3.5" />}
@@ -359,7 +359,8 @@ export function DomainRow({
         )}
       >
         <span className={cn("tnum shrink-0 rounded-md bg-taken-dim text-center font-mono text-taken", badgeCls)}>—</span>
-        <span title={row.domain} className={cn("min-w-16 truncate font-mono text-taken line-through", compact ? "text-[13px]" : "text-[15px]")}>{row.domain}</span>
+        {/* flex-wrap 下 item 先换行再收缩，域名要 basis-0（flex-1）才会在首行内截断而不是把收藏挤到下一行 */}
+        <span title={row.domain} className={cn("min-w-16 truncate font-mono text-taken line-through", compact ? "text-[13px]" : "flex-1 text-[15px] sm:flex-none")}>{row.domain}</span>
         <span className={cn("shrink-0 rounded bg-taken-dim text-taken", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>{t("status.taken")}</span>
         {/* <sm 且非紧凑：到期日/待查 chip + 开监控 + 重新核验 换到第二行（对齐域名），域名不再被挤成 `google…`；≥sm `contents` 让包装消失、行内顺序不变 */}
         <span data-taken-meta="" className={cn("flex min-w-0 items-center", compact ? "gap-2" : "order-last basis-full gap-3 pl-11 sm:contents")}>
@@ -416,7 +417,13 @@ export function DomainRow({
 
   return (
     <div data-domain={row.domain} className={cn("group", animate && "fade-up", selected && "bg-bg2 shadow-[inset_2px_0_0_var(--brand)]")}>
-    <div className={cn("flex items-center px-4", rowH, compact ? "gap-2 px-3" : "gap-2 sm:gap-3")}>
+    <div
+      className={cn(
+        "flex items-center px-4",
+        compact ? cn(rowH, "gap-2 px-3") : "gap-2 sm:gap-3",
+        !compact && (isUnknown ? "min-h-12 flex-wrap gap-y-0 py-1.5 sm:h-12 sm:flex-nowrap sm:py-0" : rowH),
+      )}
+    >
       {row.scores && score !== undefined ? (
         <button
           title={scoreTitle}
@@ -441,7 +448,7 @@ export function DomainRow({
         </button>
       )}
       {compact && <BrandDot label={row.label} variant={variant} />}
-      <DomainName row={row} compact={compact} />
+      <DomainName row={row} compact={compact} className={cn(!compact && isUnknown && "flex-1 sm:flex-none")} />
       <span className={cn("h-1.5 w-1.5 shrink-0 rounded-full", isUnknown ? "bg-amber2" : "bg-brand")} />
       {isUnknown && (
         <span title={t("home.quickUnknownTip")} className={cn("shrink-0 rounded bg-amber2-dim text-amber2", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>
@@ -449,8 +456,16 @@ export function DomainRow({
         </span>
       )}
       {isUnknown && (
-        <span data-unknown-reason={unknownReason(row.detail)} className={cn("min-w-0 truncate text-txt2", compact ? "text-[11px]" : "text-xs")}>
-          {t(unknownReasonKey(row.detail))}
+        <span
+          data-unknown-meta=""
+          className={cn("min-w-0 items-center", compact ? "contents" : "order-last flex basis-full gap-2 pl-10 sm:contents")}
+        >
+          <span data-unknown-reason={unknownReason(row.detail)} className={cn("min-w-0 truncate text-txt2", compact ? "text-[11px]" : "flex-1 text-xs sm:flex-none")}>
+            {t(unknownReasonKey(row.detail))}
+          </span>
+          {onRecheck && isRetryableUnknown(row.detail) && (
+            <RecheckButton domain={row.domain} onRecheck={onRecheck} rechecking={rechecking} compact={compact} className="order-last" />
+          )}
         </span>
       )}
       {compact ? (
@@ -520,9 +535,6 @@ export function DomainRow({
         >
           {favorite ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}
         </button>
-      )}
-      {isUnknown && onRecheck && isRetryableUnknown(row.detail) && (
-        <RecheckButton domain={row.domain} onRecheck={onRecheck} rechecking={rechecking} compact={compact} />
       )}
       {!isUnknown && (
         <RegisterMenu domain={row.domain}>

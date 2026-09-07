@@ -804,7 +804,7 @@ export function HomePage({
                         onClick={() => shortlist.toggle(domainToRow(row.domain))}
                         title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                         aria-pressed={shortlist.has(row.domain)}
-                        className="border-l border-brand-line/50 px-3 transition-opacity hover:opacity-85 sm:px-2"
+                        className="inline-flex min-w-[44px] items-center justify-center border-l border-brand-line/50 px-3 transition-opacity hover:opacity-85 sm:min-w-0 sm:px-2"
                       >
                         <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                       </button>
@@ -827,7 +827,7 @@ export function HomePage({
                         title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                         aria-label={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                         aria-pressed={shortlist.has(row.domain)}
-                        className={cn("border-l border-line/70 px-3 transition-colors hover:text-txt0 sm:px-2", shortlist.has(row.domain) && "text-taken")}
+                        className={cn("inline-flex min-w-[44px] items-center justify-center border-l border-line/70 px-3 transition-colors hover:text-txt0 sm:min-w-0 sm:px-2", shortlist.has(row.domain) && "text-taken")}
                       >
                         <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                       </button>
@@ -941,7 +941,7 @@ export function HomePage({
                             onClick={() => shortlist.toggle(domainToRow(row.domain))}
                             title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                             aria-pressed={shortlist.has(row.domain)}
-                            className="border-l border-brand-line/50 px-3 transition-opacity hover:opacity-85 sm:px-2"
+                            className="inline-flex min-w-[44px] items-center justify-center border-l border-brand-line/50 px-3 transition-opacity hover:opacity-85 sm:min-w-0 sm:px-2"
                           >
                             <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                           </button>
@@ -978,7 +978,7 @@ export function HomePage({
                             title={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                             aria-label={shortlist.has(row.domain) ? t("results.favRemove") : t("results.favAdd")}
                             aria-pressed={shortlist.has(row.domain)}
-                            className={cn("border-l border-line/70 px-3 transition-colors hover:text-txt0 sm:px-2", shortlist.has(row.domain) && "text-taken")}
+                            className={cn("inline-flex min-w-[44px] items-center justify-center border-l border-line/70 px-3 transition-colors hover:text-txt0 sm:min-w-0 sm:px-2", shortlist.has(row.domain) && "text-taken")}
                           >
                             <Star className={cn("h-3.5 w-3.5", shortlist.has(row.domain) && "fill-current")} />
                           </button>
