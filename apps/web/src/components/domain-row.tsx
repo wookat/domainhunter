@@ -249,7 +249,7 @@ export function RecheckButton({
       aria-label={t("row.recheckTitle", { domain })}
       className={cn(
         "inline-flex shrink-0 items-center justify-center gap-1 font-sans text-[11px] font-medium text-txt1 transition-colors hover:text-txt0 disabled:opacity-60",
-        chip ? "min-w-[44px] border-l border-line/70 px-3 sm:min-w-0 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", compact ? "h-6" : "h-11 sm:h-8"),
+        chip ? "min-w-[44px] border-l border-line/70 px-3 sm:min-w-0 sm:px-2" : cn("rounded-md px-2 hover:bg-bg3", compact ? "h-6" : "h-11 min-w-11 sm:h-8 sm:min-w-0"),
         className,
       )}
     >
@@ -351,23 +351,36 @@ export function DomainRow({
 
   if (row.status === "taken") {
     return (
-      <div data-domain={row.domain} className={cn("flex items-center gap-3 px-4 opacity-60", rowH, compact && "gap-2 px-3")}>
+      <div
+        data-domain={row.domain}
+        className={cn(
+          "flex items-center gap-3 px-4 opacity-60",
+          compact ? cn(rowH, "gap-2 px-3") : "min-h-12 flex-wrap gap-y-0 py-1.5 sm:h-12 sm:flex-nowrap sm:py-0",
+        )}
+      >
         <span className={cn("tnum shrink-0 rounded-md bg-taken-dim text-center font-mono text-taken", badgeCls)}>—</span>
         <span title={row.domain} className={cn("min-w-16 truncate font-mono text-taken line-through", compact ? "text-[13px]" : "text-[15px]")}>{row.domain}</span>
         <span className={cn("shrink-0 rounded bg-taken-dim text-taken", compact ? "px-1 text-[10px]" : "px-1.5 py-0.5 text-[11px]")}>{t("status.taken")}</span>
-        {row.expiresAt ? <ExpiryNote iso={row.expiresAt} className="shrink truncate" /> : <ExpiryUnknownChip className="min-w-0 shrink truncate whitespace-nowrap" />}
-        {onToggleFavorite && (
-          <WatchCta
-            domain={row.domain}
-            expiresAt={row.expiresAt}
-            compact={compact}
-            always
-            onAddShortlist={() => {
-              if (!favorite) onToggleFavorite(row);
-            }}
-          />
-        )}
-        {onRecheck && <RecheckButton domain={row.domain} onRecheck={onRecheck} rechecking={rechecking} compact={compact} />}
+        {/* <sm 且非紧凑：到期日/待查 chip + 开监控 + 重新核验 换到第二行（对齐域名），域名不再被挤成 `google…`；≥sm `contents` 让包装消失、行内顺序不变 */}
+        <span data-taken-meta="" className={cn("flex min-w-0 items-center", compact ? "gap-2" : "order-last basis-full gap-3 pl-11 sm:contents")}>
+          {row.expiresAt ? (
+            <ExpiryNote iso={row.expiresAt} className={compact ? "shrink truncate" : "min-w-0 shrink truncate sm:shrink-0"} />
+          ) : (
+            <ExpiryUnknownChip className="min-w-0 shrink truncate whitespace-nowrap" />
+          )}
+          {onToggleFavorite && (
+            <WatchCta
+              domain={row.domain}
+              expiresAt={row.expiresAt}
+              compact={compact}
+              always
+              onAddShortlist={() => {
+                if (!favorite) onToggleFavorite(row);
+              }}
+            />
+          )}
+          {onRecheck && <RecheckButton domain={row.domain} onRecheck={onRecheck} rechecking={rechecking} compact={compact} />}
+        </span>
         {onToggleFavorite && (
           <button
             title={favorite ? t("results.favRemove") : t("results.favAdd")}

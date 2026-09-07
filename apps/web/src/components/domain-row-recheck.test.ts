@@ -134,6 +134,21 @@ describe("DomainRow taken 行 R574：桌面「重新核验」带文字 + 缺到�
     expect(render(row("zqxwv.com", "unknown"))).not.toContain('data-expiry="unknown"');
   });
 
+  it("375 布局（R577 P2）：taken 行到期/待查 + 开监控 + 重新核验 包在第二行容器（basis-full，≥sm contents），重新核验触点 min-w-11", () => {
+    const html = render(row("nic.cn", "taken"));
+    const meta = html.match(/<span data-taken-meta="" class="([^"]*)"/);
+    expect(meta).not.toBeNull();
+    for (const cls of ["order-last", "basis-full", "pl-11", "sm:contents"]) expect(meta![1].split(" ")).toContain(cls);
+    // 待查 chip 与开监控/重新核验都在容器内
+    const inner = html.slice(html.indexOf("data-taken-meta"));
+    expect(inner.indexOf('data-expiry="unknown"')).toBeGreaterThan(0);
+    expect(inner.indexOf('data-recheck="nic.cn"')).toBeGreaterThan(inner.indexOf('data-expiry="unknown"'));
+    expect(html).toMatch(/data-recheck="nic\.cn"[^>]*class="[^"]*\bmin-w-11\b[^"]*\bsm:min-w-0\b/);
+    // 行容器 <sm 可换行、≥sm 单行 48px
+    const rowCls = html.match(/<div data-domain="nic\.cn" class="([^"]*)"/)![1].split(" ");
+    for (const cls of ["flex-wrap", "min-h-12", "sm:h-12", "sm:flex-nowrap"]) expect(rowCls).toContain(cls);
+  });
+
   it("英文：expiry pending + Re-check 文字", () => {
     setLang("en");
     const html = render(row("nic.cn", "taken"));
