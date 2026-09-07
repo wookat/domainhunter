@@ -35,12 +35,30 @@ export interface BulkProgress {
   done: number;
   /** 请求时已知的总数；组合器路径由服务端展开，前端不知 total */
   total?: number;
+  /** 进度区唯一的完成判定：末条结果到达（done ≥ total）或流结束时置位，与请求是否仍在进行无关 */
+  finished: boolean;
 }
 
 /** 进度文案：有 total 时 `x/N`，没有时只报已核验数；结束后改为「已完成」 */
-export function bulkProgressLabel(p: BulkProgress, running: boolean, t: TFunc): string {
+export function bulkProgressLabel(p: Pick<BulkProgress, "done" | "total">, running: boolean, t: TFunc): string {
   if (p.total === undefined) return t(running ? "adv.progressOpen" : "adv.progressDoneOpen", { done: p.done });
   return t(running ? "adv.progress" : "adv.progressDone", { done: p.done, total: p.total });
+}
+
+export function startBulkProgress(total?: number): BulkProgress {
+  return { done: 0, total, finished: false };
+}
+
+/** 收到 `received` 条结果：累加 done，凑齐 total 的那条同一次更新里直接置 finished，不等流结束 */
+export function advanceBulkProgress(prev: BulkProgress | null, received: number): BulkProgress {
+  const done = (prev?.done ?? 0) + received;
+  const total = prev?.total;
+  return { done, total, finished: total !== undefined && done >= total };
+}
+
+/** 流结束（含未知 total 的组合器路径、提前断流）：未完成的进度补置 finished，已完成的原样返回不触发重渲染 */
+export function finishBulkProgress(prev: BulkProgress | null): BulkProgress | null {
+  return prev === null || prev.finished ? prev : { ...prev, finished: true };
 }
 
 export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string) => boolean; toggle: (row: Row) => void } }) {
@@ -85,7 +103,7 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
     abortRef.current = ac;
     setRows([]);
     setError("");
-    setProgress({ done: 0, total: payload?.domains.length });
+    setProgress(startBulkProgress(payload?.domains.length));
     setRunning(true);
     try {
       const res = await fetch("/api/search", {
@@ -114,7 +132,7 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
           });
         if (rs.length) {
           setRows((prev) => [...prev, ...rs]);
-          setProgress((prev) => (prev ? { ...prev, done: prev.done + rs.length } : { done: rs.length }));
+          setProgress((prev) => advanceBulkProgress(prev, rs.length));
         }
       }
     } catch (e) {
@@ -123,7 +141,10 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
         setProgress(null);
       }
     } finally {
-      setRunning(false);
+      if (abortRef.current === ac) {
+        setProgress(finishBulkProgress);
+        setRunning(false);
+      }
     }
   }
 
@@ -193,8 +214,8 @@ export function AdvancedPage({ shortlist }: { shortlist: { has: (domain: string)
       {progress && (
         <div className="mt-4 rounded-lg border border-line bg-bg1 px-4 py-2.5" data-testid="bulk-progress">
           <p role="status" aria-live="polite" className="flex items-center gap-2 font-mono text-xs text-txt1">
-            {running ? <Loader2 className="h-3.5 w-3.5 animate-spin text-brand" /> : <Check className="h-3.5 w-3.5 text-brand" />}
-            {bulkProgressLabel(progress, running, t)}
+            {progress.finished ? <Check className="h-3.5 w-3.5 text-brand" /> : <Loader2 className="h-3.5 w-3.5 animate-spin text-brand" />}
+            {bulkProgressLabel(progress, !progress.finished, t)}
           </p>
           {progress.total !== undefined && progress.total > 0 && (
             <div
