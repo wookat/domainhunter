@@ -100,3 +100,45 @@ describe("DomainRow taken 行：开监控 + 重新核验，不出现注册 CTA�
     expect(html).not.toContain("data-recheck=");
   });
 });
+
+describe("DomainRow taken 行 R574：桌面「重新核验」带文字 + 缺到期日显示「到期日待查」chip（与首页 quick-check 同源）", () => {
+  beforeAll(() => setLang("zh"));
+
+  it("重新核验按钮 ≥sm 显示文字（hidden sm:inline），<sm 仍靠 aria-label（R570 P3-1）", () => {
+    const html = render(row("nic.cn", "taken"));
+    expect(html).toContain('data-recheck="nic.cn"');
+    expect(html).toMatch(/data-recheck="nic\.cn"[^>]*>(?:(?!<\/button>).)*<span class="hidden sm:inline">重新核验<\/span>/s);
+    expect(html).toContain('aria-label="重新核验 nic.cn');
+  });
+
+  it("unknown 行的重新核验同样带文字（三处一致）", () => {
+    const html = render(row("lingxicha.ai", "unknown", { detail: "http-429" }));
+    expect(html).toMatch(/data-recheck="lingxicha\.ai"[^>]*>(?:(?!<\/button>).)*<span class="hidden sm:inline">重新核验<\/span>/s);
+  });
+
+  it("无 expiresAt 的 taken 行 → data-expiry=unknown chip「到期日待查」+ tooltip（R570 P3-2）", () => {
+    const html = render(row("nic.cn", "taken"));
+    expect(html).toContain('data-expiry="unknown"');
+    expect(html).toContain(">到期日待查<");
+    expect(html).toContain("注册局 RDAP 未返回到期日");
+  });
+
+  it("有 expiresAt 的 taken 行 → 到期日文本，不出现待查 chip", () => {
+    const html = render(row("google.com", "taken", { expiresAt: "2028-09-14T04:00:00.000Z" }));
+    expect(html).toContain("2028-09-14");
+    expect(html).not.toContain('data-expiry="unknown"');
+  });
+
+  it("available / unknown 行不渲染待查 chip（只针对 taken）", () => {
+    expect(render(row("zqxwv-avail.com", "available"))).not.toContain('data-expiry="unknown"');
+    expect(render(row("zqxwv.com", "unknown"))).not.toContain('data-expiry="unknown"');
+  });
+
+  it("英文：expiry pending + Re-check 文字", () => {
+    setLang("en");
+    const html = render(row("nic.cn", "taken"));
+    expect(html).toContain(">expiry pending<");
+    expect(html).toContain('<span class="hidden sm:inline">Re-check</span>');
+    setLang("zh");
+  });
+});
