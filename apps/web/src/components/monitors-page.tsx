@@ -220,7 +220,7 @@ function NotifyCard({ webhook, onSave }: { webhook: string; onSave: (url: string
               ref={inputRef}
               type="url"
               name="webhook"
-              className={cn("h-11 min-w-0 flex-1 font-mono text-xs sm:h-10", showError && "border-destructive focus-visible:ring-destructive")}
+              className={cn("h-11 min-h-11 w-full min-w-0 font-mono text-xs sm:h-10 sm:min-h-0 sm:flex-1", showError && "border-destructive focus-visible:ring-destructive")}
               value={input}
               placeholder={t("monitor.webhookPlaceholder")}
               autoComplete="off"
