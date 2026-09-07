@@ -1,0 +1,107 @@
+[
+  {
+    "utc": "2026-09-07T13:01:48.290088+00:00",
+    "time": 1788786108.290104,
+    "method": "GET",
+    "url": "https://hunt.zalize.com/api/stats",
+    "body": ""
+  },
+  {
+    "utc": "2026-09-07T13:01:48.295239+00:00",
+    "time": 1788786108.2952495,
+    "method": "GET",
+    "url": "https://hunt.zalize.com/api/prices",
+    "body": ""
+  },
+  {
+    "utc": "2026-09-07T13:01:48.297242+00:00",
+    "time": 1788786108.297251,
+    "method": "GET",
+    "url": "https://hunt.zalize.com/api/registrars",
+    "body": ""
+  },
+  {
+    "utc": "2026-09-07T13:01:48.306975+00:00",
+    "time": 1788786108.3069837,
+    "method": "POST",
+    "url": "https://hunt.zalize.com/api/search",
+    "body": "{\"roots\":[\"chaxiang\"],\"tlds\":[\"com\",\"cn\",\"io\",\"ai\",\"app\",\"dev\",\"co\",\"net\",\"me\"]}"
+  },
+  {
+    "utc": "2026-09-07T13:02:15.594686+00:00",
+    "time": 1788786135.5946999,
+    "method": "GET",
+    "url": "https://hunt.zalize.com/api/registrars",
+    "body": ""
+  },
+  {
+    "utc": "2026-09-07T13:02:15.604694+00:00",
+    "time": 1788786135.604703,
+    "method": "GET",
+    "url": "https://hunt.zalize.com/api/prices",
+    "body": ""
+  },
+  {
+    "utc": "2026-09-07T13:02:22.001389+00:00",
+    "time": 1788786142.0014017,
+    "method": "POST",
+    "url": "https://hunt.zalize.com/api/search",
+    "body": "{\"domains\":[\"chaxiang.com\",\"nic.cn\",\"google.de\",\"google.com\"]}"
+  },
+  {
+    "utc": "2026-09-07T13:02:22.044661+00:00",
+    "time": 1788786142.0446708,
+    "method": "POST",
+    "url": "https://hunt.zalize.com/api/csp-report",
+    "body": "{\"csp-report\":{\"document-uri\":\"https://hunt.zalize.com/advanced?lang=zh&cb=r574-followup\",\"referrer\":\"\",\"violated-directive\":\"script-src\",\"effective-directive\":\"script-src\",\"original-policy\":\"default-src 'self'; script-src 'self' 'nonce-I/uStSUbhri6LGRC1Dg1fw=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report\",\"disposition\":\"report\",\"blocked-uri\":\"eval\",\"line-number\":4,\"column-number\":60,\"status-code\":200,\"script-sample\":\"\"}}"
+  },
+  {
+    "utc": "2026-09-07T13:02:51.132414+00:00",
+    "time": 1788786171.1324272,
+    "method": "POST",
+    "url": "https://hunt.zalize.com/api/search",
+    "body": "{\"domains\":[\"google.com\",\"baidu.cn\",\"example.org\",\"wikipedia.org\",\"github.com\",\"r575-zz-probe-a1.com\",\"r575-zz-probe-a2.net\",\"r575-zz-probe-a3.org\",\"r575-zz-probe-a4.io\",\"r575-zz-probe-a5.co\",\"r575-zz-probe-a6.dev\",\"r575-zz-probe-a7.app\",\"r575-zz-probe-a8.ai\",\"r575-zz-probe-a9.cn\",\"r575-zz-probe-b1.com.cn\",\"r575-zz-probe-b2.xyz\",\"r575-zz-probe-b3.me\",\"r575-zz-probe-b4.info\",\"r575-zz-probe-b5.top\",\"r575-zz-probe-b6.cc\"]}"
+  },
+  {
+    "utc": "2026-09-07T13:04:16.715873+00:00",
+    "time": 1788786256.7158911,
+    "method": "POST",
+    "url": "https://hunt.zalize.com/api/search",
+    "body": "{\"domains\":[\"google.com\",\"baidu.cn\",\"example.org\",\"wikipedia.org\",\"github.com\",\"r575-zz-probe-a1.com\",\"r575-zz-probe-a2.net\",\"r575-zz-probe-a3.org\",\"r575-zz-probe-a4.io\",\"r575-zz-probe-a5.co\",\"r575-zz-probe-a6.dev\",\"r575-zz-probe-a7.app\",\"r575-zz-probe-a8.ai\",\"r575-zz-probe-a9.cn\",\"r575-zz-probe-b1.com.cn\",\"r575-zz-probe-b2.xyz\",\"r575-zz-probe-b3.me\",\"r575-zz-probe-b4.info\",\"r575-zz-probe-b5.top\",\"r575-zz-probe-b6.cc\"]}"
+  },
+  {
+    "utc": "2026-09-07T13:04:29.839206+00:00",
+    "time": 1788786269.8392181,
+    "method": "POST",
+    "url": "https://hunt.zalize.com/api/csp-report",
+    "body": "{\"csp-report\":{\"document-uri\":\"https://hunt.zalize.com/advanced?lang=en&cb=r574-followup\",\"referrer\":\"\",\"violated-directive\":\"script-src\",\"effective-directive\":\"script-src\",\"original-policy\":\"default-src 'self'; script-src 'self' 'nonce-I/uStSUbhri6LGRC1Dg1fw=='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report\",\"disposition\":\"report\",\"blocked-uri\":\"eval\",\"line-number\":4,\"column-number\":60,\"status-code\":200,\"script-sample\":\"\"}}"
+  },
+  {
+    "utc": "2026-09-07T13:05:02.532821+00:00",
+    "time": 1788786302.5328474,
+    "method": "GET",
+    "url": "https://hunt.zalize.com/api/registrars",
+    "body": ""
+  },
+  {
+    "utc": "2026-09-07T13:05:02.563212+00:00",
+    "time": 1788786302.5632226,
+    "method": "GET",
+    "url": "https://hunt.zalize.com/api/prices",
+    "body": ""
+  },
+  {
+    "utc": "2026-09-07T13:05:43.061089+00:00",
+    "time": 1788786343.0611029,
+    "method": "GET",
+    "url": "https://hunt.zalize.com/api/registrars",
+    "body": ""
+  },
+  {
+    "utc": "2026-09-07T13:05:43.201521+00:00",
+    "time": 1788786343.2015321,
+    "method": "POST",
+    "url": "https://hunt.zalize.com/api/monitor/list",
+    "body": "{\"domains\":[]}"
+  }
+]

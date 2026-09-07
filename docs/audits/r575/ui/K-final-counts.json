@@ -1,0 +1,13 @@
+{
+  "apiCheck": [
+    {
+      "time": 1788784903.7856977,
+      "method": "POST",
+      "url": "https://hunt.zalize.com/api/check?refresh=1",
+      "body": "{\"domains\":[\"chaxiang.com\"],\"refresh\":true}"
+    }
+  ],
+  "apiAI": [],
+  "blocked": [],
+  "webhookEmpty": true
+}

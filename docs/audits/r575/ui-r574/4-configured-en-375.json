@@ -1,0 +1,59 @@
+{
+  "utc": "2026-09-07T13:05:45.325Z",
+  "url": "https://hunt.zalize.com/monitors?lang=en&cb=r574-followup",
+  "lang": "en",
+  "innerWidth": 375,
+  "docW": 375,
+  "badge": "Configured",
+  "controls": [
+    {
+      "tag": "BUTTON",
+      "text": "Send test",
+      "id": "",
+      "rect": {
+        "x": 33,
+        "y": 418.5,
+        "width": 110.515625,
+        "height": 44,
+        "top": 418.5,
+        "right": 143.515625,
+        "bottom": 462.5,
+        "left": 33
+      },
+      "computedHeight": "44px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Edit",
+      "id": "",
+      "rect": {
+        "x": 151.515625,
+        "y": 418.5,
+        "width": 72.96875,
+        "height": 44,
+        "top": 418.5,
+        "right": 224.484375,
+        "bottom": 462.5,
+        "left": 151.515625
+      },
+      "computedHeight": "44px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Remove",
+      "id": "",
+      "rect": {
+        "x": 33,
+        "y": 470.5,
+        "width": 123.109375,
+        "height": 44,
+        "top": 470.5,
+        "right": 156.109375,
+        "bottom": 514.5,
+        "left": 33
+      },
+      "computedHeight": "44px"
+    }
+  ],
+  "masked": "https://example.invalid/r575"
+}

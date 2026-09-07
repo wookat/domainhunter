@@ -1,0 +1,150 @@
+[
+ {
+  "route": "/vs/fr-vs-com",
+  "lang": "zh",
+  "visible_interactive": 58,
+  "under44_any": 6,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 32,
+    "h": 28,
+    "hitH": 44,
+    "text": ".fr",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 43,
+    "h": 28,
+    "hitH": 44,
+    "text": ".com",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/fr-vs-com",
+  "lang": "en",
+  "visible_interactive": 58,
+  "under44_any": 6,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 32,
+    "h": 28,
+    "hitH": 44,
+    "text": ".fr",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 43,
+    "h": 28,
+    "hitH": 44,
+    "text": ".com",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/au-vs-com",
+  "lang": "zh",
+  "visible_interactive": 58,
+  "under44_any": 6,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 28,
+    "h": 20,
+    "hitH": 44,
+    "text": "首页",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 32,
+    "h": 28,
+    "hitH": 44,
+    "text": ".au",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 43,
+    "h": 28,
+    "hitH": 44,
+    "text": ".com",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ },
+ {
+  "route": "/vs/au-vs-com",
+  "lang": "en",
+  "visible_interactive": 58,
+  "under44_any": 6,
+  "under44_inline_text_links": 3,
+  "under44_controls_h": [],
+  "under44_controls_w_only": [
+   {
+    "tag": "a",
+    "w": 34,
+    "h": 20,
+    "hitH": 44,
+    "text": "Home",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 32,
+    "h": 28,
+    "hitH": 44,
+    "text": ".au",
+    "inline": false,
+    "tap": true
+   },
+   {
+    "tag": "a",
+    "w": 43,
+    "h": 28,
+    "hitH": 44,
+    "text": ".com",
+    "inline": false,
+    "tap": true
+   }
+  ]
+ }
+]

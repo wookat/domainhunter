@@ -1,0 +1,75 @@
+{
+  "utc": "2026-09-07T13:05:45.670Z",
+  "url": "https://hunt.zalize.com/monitors?lang=en&cb=r574-followup",
+  "lang": "en",
+  "innerWidth": 375,
+  "docW": 375,
+  "badge": "Configured",
+  "controls": [
+    {
+      "tag": "INPUT",
+      "text": "",
+      "id": "monitor-webhook-input",
+      "rect": {
+        "x": 33,
+        "y": 378.5,
+        "width": 309,
+        "height": 44,
+        "top": 378.5,
+        "right": 342,
+        "bottom": 422.5,
+        "left": 33
+      },
+      "computedHeight": "44px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Save",
+      "id": "",
+      "rect": {
+        "x": 33,
+        "y": 430.5,
+        "width": 87.15625,
+        "height": 44,
+        "top": 430.5,
+        "right": 120.15625,
+        "bottom": 474.5,
+        "left": 33
+      },
+      "computedHeight": "44px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Send test",
+      "id": "",
+      "rect": {
+        "x": 128.15625,
+        "y": 430.5,
+        "width": 110.515625,
+        "height": 44,
+        "top": 430.5,
+        "right": 238.671875,
+        "bottom": 474.5,
+        "left": 128.15625
+      },
+      "computedHeight": "44px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cancel",
+      "id": "",
+      "rect": {
+        "x": 246.671875,
+        "y": 430.5,
+        "width": 71.921875,
+        "height": 44,
+        "top": 430.5,
+        "right": 318.59375,
+        "bottom": 474.5,
+        "left": 246.671875
+      },
+      "computedHeight": "44px"
+    }
+  ],
+  "masked": null
+}

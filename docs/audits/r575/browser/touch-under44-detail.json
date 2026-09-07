@@ -1,0 +1,10056 @@
+{
+"/prices": [
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".bond",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".click",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".lol",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".garden",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".beauty",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".help",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".baby",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".mom",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".surf",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".courses",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".study",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".forum",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".hair",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".skin",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".makeup",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".homes",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".boats",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".autos",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".beer",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".casa",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": ".quest",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 101,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 101,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 101,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 118,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 101,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 101,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 109,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 101,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 20,
+"text": "",
+"cls": "tap-target font-mono text-sm font-semibold text-tx",
+"parent": "div"
+},
+{
+"tag": "summary",
+"w": 309,
+"h": 40,
+"text": "Why is the renewal price highe",
+"cls": "tap-target flex min-h-[28px] cursor-pointer list-n",
+"parent": "details"
+},
+{
+"tag": "summary",
+"w": 309,
+"h": 40,
+"text": "Which domain extension is the ",
+"cls": "tap-target flex min-h-[28px] cursor-pointer list-n",
+"parent": "details"
+},
+{
+"tag": "summary",
+"w": 309,
+"h": 28,
+"text": "Where do these prices come fro",
+"cls": "tap-target flex min-h-[28px] cursor-pointer list-n",
+"parent": "details"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".com vs .cn",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".com vs .io",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".com vs .net",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".io vs .ai",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".app vs .dev",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".co vs .me",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".com vs .ai",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".net vs .org",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".com vs .xyz",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".io vs .co",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".ai vs .dev",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".xyz vs .top",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".shop vs .store",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".cloud vs .tech",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".pro vs .co",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".vip vs .club",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".link vs .cc",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".shop vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".com vs .me",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".io vs .tech",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".online vs .site",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".store vs .online",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".cc vs .tv",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".cn vs .top",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".art vs .design",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".studio vs .design",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".live vs .tv",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".fun vs .club",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".space vs .site",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".live vs .online",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".com vs .app",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".com vs .dev",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".io vs .dev",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".ai vs .app",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".pro vs .vip",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".cloud vs .online",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".sh vs .dev",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".gg vs .tv",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".so vs .io",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".us vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".in vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".info vs .org",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".com vs .org",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".com vs .co",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".club vs .gg",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".studio vs .co",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".me vs .io",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".ai vs .tech",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".world vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".life vs .me",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".agency vs .co",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".games vs .gg",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".email vs .net",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".network vs .tech",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".life vs .live",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".email vs .cloud",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".dev vs .tech",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".app vs .io",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".info vs .net",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".fun vs .games",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".digital vs .tech",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".media vs .studio",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".group vs .agency",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".center vs .club",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".works vs .studio",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".zone vs .site",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".news vs .media",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".tools vs .app",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".run vs .club",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".codes vs .dev",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".company vs .group",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".wiki vs .info",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".site vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".tech vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".store vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".vip vs .top",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".art vs .studio",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".media vs .tv",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".blog vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".team vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".chat vs .app",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".finance vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".global vs .world",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".host vs .cloud",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".social vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".video vs .tv",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".fund vs .finance",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".land vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".click vs .link",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".icu vs .xyz",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".page vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".bio vs .me",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".ink vs .art",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".moe vs .fun",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".lol vs .gg",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".uk vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".io vs .sh",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".blog vs .me",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".org vs .co",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".app vs .site",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".com vs .top",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".info vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".cc vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".tv vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".fm vs .tv",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".one vs .me",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".cool vs .fun",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".red vs .vip",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".bar vs .cafe",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".cafe vs .shop",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".pizza vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".money vs .finance",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".gold vs .vip",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".wtf vs .lol",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".band vs .fm",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".cash vs .money",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".city vs .world",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".estate vs .land",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".expert vs .pro",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".farm vs .cafe",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".ninja vs .dev",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".pet vs .shop",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".blue vs .red",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".black vs .gold",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".rocks vs .fun",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".pink vs .me",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".academy vs .school",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".care vs .doctor",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".coach vs .expert",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".restaurant vs .cafe",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".academy vs .coach",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".restaurant vs .bar",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".clinic vs .care",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".dental vs .doctor",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".fitness vs .coach",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".photos vs .gallery",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".boutique vs .shop",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".gallery vs .art",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".salon vs .studio",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".yoga vs .fitness",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".coffee vs .cafe",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".wine vs .bar",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 182,
+"h": 40,
+"text": ".kitchen vs .restaurant",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".garden vs .farm",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 182,
+"h": 40,
+"text": ".photography vs .photos",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".events vs .live",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 182,
+"h": 40,
+"text": ".solutions vs .services",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 174,
+"h": 40,
+"text": ".consulting vs .expert",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".software vs .app",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".services vs .agency",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".marketing vs .agency",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".capital vs .fund",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".guru vs .expert",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".systems vs .network",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".ventures vs .capital",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".tips vs .blog",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".market vs .exchange",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".watch vs .show",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".house vs .style",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 218,
+"h": 40,
+"text": ".institute vs .international",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".partners vs .group",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".support vs .center",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".website vs .site",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".technology vs .tech",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".community vs .club",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 174,
+"h": 40,
+"text": ".education vs .academy",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".training vs .coach",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".love vs .me",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".beauty vs .salon",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".fashion vs .style",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".work vs .works",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".sale vs .shop",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".help vs .support",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".wedding vs .love",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".law vs .pro",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".tax vs .finance",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".menu vs .restaurant",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".bike vs .fitness",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".toys vs .shop",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".shoes vs .fashion",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".plus vs .vip",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".house vs .estate",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".shoes vs .store",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".toys vs .games",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".menu vs .cafe",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".law vs .expert",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".com vs .travel",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".travel vs .tours",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 174,
+"h": 40,
+"text": ".vacations vs .holiday",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".flights vs .travel",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".tours vs .vacations",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".taxi vs .city",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 174,
+"h": 40,
+"text": ".properties vs .estate",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 182,
+"h": 40,
+"text": ".apartments vs .rentals",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 182,
+"h": 40,
+"text": ".properties vs .rentals",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 203,
+"h": 40,
+"text": ".builders vs .construction",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".repair vs .services",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".apartments vs .house",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".energy vs .solar",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".green vs .eco",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".eco vs .earth",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".earth vs .world",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".engineering vs .tech",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".engineering vs .dev",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".family vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".baby vs .store",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".mom vs .me",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".dad vs .blog",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".dog vs .pet",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".gifts vs .shop",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 174,
+"h": 40,
+"text": ".photo vs .photography",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".health vs .life",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".fit vs .fitness",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".dance vs .studio",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".guide vs .tips",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".reviews vs .blog",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".golf vs .club",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".tennis vs .coach",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".soccer vs .football",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".hockey vs .team",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".surf vs .fun",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".golf vs .travel",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".tennis vs .club",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".soccer vs .club",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".football vs .team",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".health vs .care",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".family vs .life",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".surf vs .travel",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".ltd vs .llc",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".ltd vs .co",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".biz vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".fyi vs .info",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".promo vs .shop",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".express vs .store",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".press vs .news",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".stream vs .live",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".movie vs .tv",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".pictures vs .photos",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 182,
+"h": 40,
+"text": ".productions vs .studio",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".audio vs .fm",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".credit vs .finance",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".loans vs .money",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".investments vs .fund",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".holdings vs .group",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".mortgage vs .estate",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".computer vs .tech",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".lawyer vs .legal",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".vet vs .pet",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".delivery vs .express",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".recipes vs .menu",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".rent vs .rentals",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".legal vs .law",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".jewelry vs .boutique",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 174,
+"h": 40,
+"text": ".cleaning vs .services",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".plumbing vs .repair",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 189,
+"h": 40,
+"text": ".catering vs .restaurant",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".florist vs .garden",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".church vs .community",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".courses vs .academy",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".degree vs .education",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".mba vs .school",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".study vs .courses",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".forum vs .community",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".review vs .reviews",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".hair vs .salon",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".skin vs .beauty",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".makeup vs .boutique",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".homes vs .house",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".boats vs .travel",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".autos vs .repair",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".careers vs .work",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 203,
+"h": 40,
+"text": ".management vs .consulting",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 225,
+"h": 40,
+"text": ".contractors vs .construction",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 174,
+"h": 40,
+"text": ".equipment vs .rentals",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".supply vs .express",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".parts vs .repair",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".auction vs .market",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".deals vs .coupons",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".discount vs .sale",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 182,
+"h": 40,
+"text": ".furniture vs .boutique",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".lighting vs .garden",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".lighting vs .solar",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".business vs .company",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".limited vs .ltd",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 189,
+"h": 40,
+"text": ".associates vs .partners",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".cheap vs .discount",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".bargains vs .deals",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".supplies vs .supply",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".camp vs .courses",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 182,
+"h": 40,
+"text": ".camera vs .photography",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".diamonds vs .jewelry",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".theater vs .show",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".accountants vs .tax",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 196,
+"h": 40,
+"text": ".engineer vs .engineering",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".villas vs .rentals",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".cruises vs .travel",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".voyage vs .tours",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".limo vs .taxi",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".tickets vs .events",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".flowers vs .florist",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".beer vs .pub",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".pub vs .bar",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".spa vs .salon",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".food vs .restaurant",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".attorney vs .lawyer",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".dentist vs .dental",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".clothing vs .fashion",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".cooking vs .recipes",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".gift vs .gifts",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".party vs .events",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".fishing vs .boats",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".horse vs .pet",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".singles vs .dating",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".dating vs .love",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".luxury vs .vip",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".organic vs .bio",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".tattoo vs .ink",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".casa vs .house",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".casino vs .bet",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".bet vs .poker",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".poker vs .games",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".vodka vs .wine",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".futbol vs .soccer",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".moda vs .fashion",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".basketball vs .team",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".rugby vs .football",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".cricket vs .club",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".fish vs .fishing",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".fan vs .club",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".win vs .bet",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".wang vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".day vs .today",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".meme vs .fun",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".quest vs .games",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".kids vs .family",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".foundation vs .org",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".wang vs .cn",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".day vs .life",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".meme vs .lol",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".quest vs .fun",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".kids vs .baby",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".win vs .vip",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".bond vs .finance",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".sbs vs .xyz",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".cyou vs .fun",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".monster vs .games",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".pics vs .photos",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".mobi vs .app",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".asia vs .global",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".buzz vs .promo",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".fans vs .fan",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".place vs .space",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".report vs .news",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".town vs .city",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".shopping vs .shop",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".graphics vs .design",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".glass vs .art",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".vision vs .care",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".tires vs .autos",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".surgery vs .clinic",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 146,
+"h": 40,
+"text": ".domains vs .tools",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".college vs .academy",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".actor vs .studio",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".immo vs .estate",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 40,
+"text": ".vin vs .wine",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 196,
+"h": 40,
+"text": ".university vs .education",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".hospital vs .clinic",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".gmbh vs .company",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 174,
+"h": 40,
+"text": ".condos vs .apartments",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".rehab vs .care",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".nyc vs .us",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".london vs .uk",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 124,
+"h": 40,
+"text": ".tokyo vs .asia",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 117,
+"h": 40,
+"text": ".miami vs .nyc",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".boston vs .city",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 174,
+"h": 40,
+"text": ".healthcare vs .health",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 153,
+"h": 40,
+"text": ".abogado vs .lawyer",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".kaufen vs .shop",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".berlin vs .city",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".paris vs .london",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 167,
+"h": 40,
+"text": ".amsterdam vs .berlin",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 138,
+"h": 40,
+"text": ".vegas vs .casino",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 160,
+"h": 40,
+"text": ".immobilien vs .immo",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 131,
+"h": 40,
+"text": ".tienda vs .shop",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".de vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".de vs .eu",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".ca vs .us",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".au vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".jp vs .cn",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 40,
+"text": ".sg vs .asia",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".fr vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".it vs .de",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".es vs .eu",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".nl vs .de",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".kr vs .jp",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".hk vs .sg",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".ch vs .de",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".at vs .de",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".be vs .nl",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".se vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".pl vs .eu",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".tw vs .hk",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".dk vs .se",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".fi vs .se",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".no vs .dk",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".ie vs .uk",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".nz vs .au",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".mx vs .es",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".br vs .pt",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".br vs .mx",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".cz vs .pl",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".tr vs .ae",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".id vs .sg",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".id vs .me",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".vn vs .id",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".ph vs .sg",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".gr vs .tr",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".ro vs .pl",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".hu vs .cz",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".cl vs .mx",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".my vs .sg",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".th vs .vn",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".sk vs .cz",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".ua vs .pl",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".ar vs .cl",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".ng vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".sa vs .ae",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".eg vs .sa",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".ke vs .ng",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 95,
+"h": 40,
+"text": ".il vs .com",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".pe vs .cl",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".kz vs .tr",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".za vs .ng",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".ma vs .eg",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".qa vs .ae",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".pk vs .in",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".lk vs .my",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".ee vs .fi",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".lt vs .lv",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".lt vs .ee",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".rs vs .io",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".is vs .fi",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".ge vs .tr",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 40,
+"text": ".uy vs .ar",
+"cls": "inline-flex min-h-[40px] items-center px-2 font-mo",
+"parent": "div"
+}
+],
+"/vs": [
+{
+"tag": "a",
+"w": 91,
+"h": 36,
+"text": ".abogado 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 93,
+"h": 36,
+"text": ".academy 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 111,
+"h": 36,
+"text": ".accountants 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 71,
+"h": 36,
+"text": ".actor 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 83,
+"h": 36,
+"text": ".agency 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 51,
+"h": 36,
+"text": ".ai 3",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 105,
+"h": 36,
+"text": ".amsterdam 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 106,
+"h": 36,
+"text": ".apartments 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 63,
+"h": 36,
+"text": ".app 3",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 53,
+"h": 36,
+"text": ".ar 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 57,
+"h": 36,
+"text": ".art 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 64,
+"h": 36,
+"text": ".asia 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 36,
+"text": ".associates 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 52,
+"h": 36,
+"text": ".at 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 36,
+"text": ".attorney 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".au 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 83,
+"h": 36,
+"text": ".auction 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".audio 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".autos 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 70,
+"h": 36,
+"text": ".baby 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 70,
+"h": 36,
+"text": ".band 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 60,
+"h": 36,
+"text": ".bar 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 90,
+"h": 36,
+"text": ".bargains 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 99,
+"h": 36,
+"text": ".basketball 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".be 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 81,
+"h": 36,
+"text": ".beauty 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 67,
+"h": 36,
+"text": ".beer 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".berlin 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 60,
+"h": 36,
+"text": ".bet 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 65,
+"h": 36,
+"text": ".bike 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 59,
+"h": 36,
+"text": ".bio 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 58,
+"h": 36,
+"text": ".biz 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 72,
+"h": 36,
+"text": ".black 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".blog 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".blue 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".boats 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 70,
+"h": 36,
+"text": ".bond 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 80,
+"h": 36,
+"text": ".boston 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 91,
+"h": 36,
+"text": ".boutique 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 53,
+"h": 36,
+"text": ".br 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 87,
+"h": 36,
+"text": ".builders 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 36,
+"text": ".business 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 69,
+"h": 36,
+"text": ".buzz 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".ca 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".cafe 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 36,
+"text": ".camera 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".camp 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 36,
+"text": ".capital 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".care 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 36,
+"text": ".careers 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 68,
+"h": 36,
+"text": ".casa 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 69,
+"h": 36,
+"text": ".cash 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 36,
+"text": ".casino 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 36,
+"text": ".catering 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".cc 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 78,
+"h": 36,
+"text": ".center 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".ch 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".chat 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 77,
+"h": 36,
+"text": ".cheap 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 81,
+"h": 36,
+"text": ".church 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 62,
+"h": 36,
+"text": ".city 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 51,
+"h": 36,
+"text": ".cl 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 90,
+"h": 36,
+"text": ".cleaning 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 68,
+"h": 36,
+"text": ".click 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 71,
+"h": 36,
+"text": ".clinic 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 87,
+"h": 36,
+"text": ".clothing 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".cloud 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".club 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".cn 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".co 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".coach 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".codes 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 78,
+"h": 36,
+"text": ".coffee 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 83,
+"h": 36,
+"text": ".college 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 72,
+"h": 36,
+"text": ".com 12",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 105,
+"h": 36,
+"text": ".community 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 94,
+"h": 36,
+"text": ".company 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 96,
+"h": 36,
+"text": ".computer 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 83,
+"h": 36,
+"text": ".condos 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 100,
+"h": 36,
+"text": ".consulting 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 107,
+"h": 36,
+"text": ".contractors 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 87,
+"h": 36,
+"text": ".cooking 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".cool 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 87,
+"h": 36,
+"text": ".courses 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".credit 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 80,
+"h": 36,
+"text": ".cricket 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 83,
+"h": 36,
+"text": ".cruises 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 69,
+"h": 36,
+"text": ".cyou 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".cz 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 63,
+"h": 36,
+"text": ".dad 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".dance 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 77,
+"h": 36,
+"text": ".dating 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 62,
+"h": 36,
+"text": ".day 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".de 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 72,
+"h": 36,
+"text": ".deals 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 81,
+"h": 36,
+"text": ".degree 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 87,
+"h": 36,
+"text": ".delivery 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 77,
+"h": 36,
+"text": ".dental 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 80,
+"h": 36,
+"text": ".dentist 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 62,
+"h": 36,
+"text": ".dev 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 97,
+"h": 36,
+"text": ".diamonds 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".digital 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 90,
+"h": 36,
+"text": ".discount 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".dk 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 63,
+"h": 36,
+"text": ".dog 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 90,
+"h": 36,
+"text": ".domains 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 71,
+"h": 36,
+"text": ".earth 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 63,
+"h": 36,
+"text": ".eco 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 98,
+"h": 36,
+"text": ".education 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".ee 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".eg 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 72,
+"h": 36,
+"text": ".email 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 81,
+"h": 36,
+"text": ".energy 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 91,
+"h": 36,
+"text": ".engineer 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 109,
+"h": 36,
+"text": ".engineering 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 36,
+"text": ".equipment 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".es 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".estate 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 36,
+"text": ".events 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 78,
+"h": 36,
+"text": ".expert 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 86,
+"h": 36,
+"text": ".express 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".family 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 60,
+"h": 36,
+"text": ".fan 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".fans 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 68,
+"h": 36,
+"text": ".farm 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 83,
+"h": 36,
+"text": ".fashion 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 49,
+"h": 36,
+"text": ".fi 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 36,
+"text": ".finance 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 62,
+"h": 36,
+"text": ".fish 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 80,
+"h": 36,
+"text": ".fishing 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 53,
+"h": 36,
+"text": ".fit 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 36,
+"text": ".fitness 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".flights 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".florist 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 83,
+"h": 36,
+"text": ".flowers 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".fm 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 67,
+"h": 36,
+"text": ".food 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 36,
+"text": ".football 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 75,
+"h": 36,
+"text": ".forum 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 36,
+"text": ".foundation 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 50,
+"h": 36,
+"text": ".fr 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 60,
+"h": 36,
+"text": ".fun 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 67,
+"h": 36,
+"text": ".fund 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 90,
+"h": 36,
+"text": ".furniture 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".futbol 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".fyi 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 80,
+"h": 36,
+"text": ".gallery 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 36,
+"text": ".games 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 81,
+"h": 36,
+"text": ".garden 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".ge 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".gg 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 60,
+"h": 36,
+"text": ".gift 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".gifts 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 71,
+"h": 36,
+"text": ".glass 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".global 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".gmbh 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".gold 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 63,
+"h": 36,
+"text": ".golf 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 53,
+"h": 36,
+"text": ".gr 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 91,
+"h": 36,
+"text": ".graphics 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".green 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 75,
+"h": 36,
+"text": ".group 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".guide 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 68,
+"h": 36,
+"text": ".guru 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 63,
+"h": 36,
+"text": ".hair 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 77,
+"h": 36,
+"text": ".health 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 102,
+"h": 36,
+"text": ".healthcare 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".help 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".hk 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 82,
+"h": 36,
+"text": ".hockey 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 90,
+"h": 36,
+"text": ".holdings 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 80,
+"h": 36,
+"text": ".homes 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".horse 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 86,
+"h": 36,
+"text": ".hospital 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".host 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".house 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".hu 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 58,
+"h": 36,
+"text": ".icu 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 52,
+"h": 36,
+"text": ".id 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 51,
+"h": 36,
+"text": ".ie 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 47,
+"h": 36,
+"text": ".il 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".immo 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 103,
+"h": 36,
+"text": ".immobilien 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 51,
+"h": 36,
+"text": ".in 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 63,
+"h": 36,
+"text": ".info 3",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 58,
+"h": 36,
+"text": ".ink 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 86,
+"h": 36,
+"text": ".institute 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 110,
+"h": 36,
+"text": ".investments 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 52,
+"h": 36,
+"text": ".io 5",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 51,
+"h": 36,
+"text": ".is 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 48,
+"h": 36,
+"text": ".it 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 82,
+"h": 36,
+"text": ".jewelry 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 52,
+"h": 36,
+"text": ".jp 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 80,
+"h": 36,
+"text": ".kaufen 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".ke 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 65,
+"h": 36,
+"text": ".kids 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 83,
+"h": 36,
+"text": ".kitchen 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 53,
+"h": 36,
+"text": ".kr 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".kz 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".land 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 61,
+"h": 36,
+"text": ".law 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 36,
+"text": ".lawyer 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 68,
+"h": 36,
+"text": ".legal 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 58,
+"h": 36,
+"text": ".life 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 83,
+"h": 36,
+"text": ".lighting 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 36,
+"text": ".limited 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 65,
+"h": 36,
+"text": ".limo 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 61,
+"h": 36,
+"text": ".link 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 61,
+"h": 36,
+"text": ".live 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 51,
+"h": 36,
+"text": ".lk 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 72,
+"h": 36,
+"text": ".loans 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 54,
+"h": 36,
+"text": ".lol 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 80,
+"h": 36,
+"text": ".london 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 65,
+"h": 36,
+"text": ".love 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 48,
+"h": 36,
+"text": ".lt 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".ltd 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 77,
+"h": 36,
+"text": ".luxury 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 59,
+"h": 36,
+"text": ".ma 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 86,
+"h": 36,
+"text": ".makeup 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 115,
+"h": 36,
+"text": ".management 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 81,
+"h": 36,
+"text": ".market 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 98,
+"h": 36,
+"text": ".marketing 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".mba 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 59,
+"h": 36,
+"text": ".me 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".media 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".meme 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".menu 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 75,
+"h": 36,
+"text": ".miami 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 69,
+"h": 36,
+"text": ".mobi 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".moda 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".moe 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 70,
+"h": 36,
+"text": ".mom 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 80,
+"h": 36,
+"text": ".money 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 36,
+"text": ".monster 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 96,
+"h": 36,
+"text": ".mortgage 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".movie 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 59,
+"h": 36,
+"text": ".mx 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 59,
+"h": 36,
+"text": ".my 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 59,
+"h": 36,
+"text": ".net 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 88,
+"h": 36,
+"text": ".network 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 71,
+"h": 36,
+"text": ".news 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".ng 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 68,
+"h": 36,
+"text": ".ninja 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 51,
+"h": 36,
+"text": ".nl 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".no 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 62,
+"h": 36,
+"text": ".nyc 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".nz 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 63,
+"h": 36,
+"text": ".one 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".online 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 60,
+"h": 36,
+"text": ".org 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 36,
+"text": ".organic 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 70,
+"h": 36,
+"text": ".page 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 70,
+"h": 36,
+"text": ".paris 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 89,
+"h": 36,
+"text": ".partners 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 71,
+"h": 36,
+"text": ".parts 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 71,
+"h": 36,
+"text": ".party 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".pe 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 60,
+"h": 36,
+"text": ".pet 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".ph 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".photo 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 114,
+"h": 36,
+"text": ".photography 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 80,
+"h": 36,
+"text": ".photos 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 65,
+"h": 36,
+"text": ".pics 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 87,
+"h": 36,
+"text": ".pictures 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 65,
+"h": 36,
+"text": ".pink 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 72,
+"h": 36,
+"text": ".pizza 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".pk 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 52,
+"h": 36,
+"text": ".pl 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 72,
+"h": 36,
+"text": ".place 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 94,
+"h": 36,
+"text": ".plumbing 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 65,
+"h": 36,
+"text": ".plus 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".poker 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".press 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 60,
+"h": 36,
+"text": ".pro 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 109,
+"h": 36,
+"text": ".productions 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 78,
+"h": 36,
+"text": ".promo 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 100,
+"h": 36,
+"text": ".properties 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 63,
+"h": 36,
+"text": ".pub 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 56,
+"h": 36,
+"text": ".qa 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".quest 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 83,
+"h": 36,
+"text": ".recipes 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 60,
+"h": 36,
+"text": ".red 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".rehab 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 64,
+"h": 36,
+"text": ".rent 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".repair 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".report 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 99,
+"h": 36,
+"text": ".restaurant 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 36,
+"text": ".review 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 85,
+"h": 36,
+"text": ".reviews 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 53,
+"h": 36,
+"text": ".ro 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".rocks 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 52,
+"h": 36,
+"text": ".rs 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".rugby 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 60,
+"h": 36,
+"text": ".run 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".sa 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 64,
+"h": 36,
+"text": ".sale 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 72,
+"h": 36,
+"text": ".salon 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 61,
+"h": 36,
+"text": ".sbs 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".se 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 89,
+"h": 36,
+"text": ".services 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".sg 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".sh 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 75,
+"h": 36,
+"text": ".shoes 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 69,
+"h": 36,
+"text": ".shop 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 94,
+"h": 36,
+"text": ".shopping 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 81,
+"h": 36,
+"text": ".singles 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 62,
+"h": 36,
+"text": ".site 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 54,
+"h": 36,
+"text": ".sk 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 64,
+"h": 36,
+"text": ".skin 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".so 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 80,
+"h": 36,
+"text": ".soccer 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".social 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 91,
+"h": 36,
+"text": ".software 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 92,
+"h": 36,
+"text": ".solutions 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 62,
+"h": 36,
+"text": ".spa 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".space 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 70,
+"h": 36,
+"text": ".store 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 80,
+"h": 36,
+"text": ".stream 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".studio 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".study 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 89,
+"h": 36,
+"text": ".supplies 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 36,
+"text": ".supply 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 85,
+"h": 36,
+"text": ".support 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 64,
+"h": 36,
+"text": ".surf 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 85,
+"h": 36,
+"text": ".surgery 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 89,
+"h": 36,
+"text": ".systems 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 74,
+"h": 36,
+"text": ".tattoo 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 59,
+"h": 36,
+"text": ".tax 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 62,
+"h": 36,
+"text": ".taxi 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 70,
+"h": 36,
+"text": ".team 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".tech 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 105,
+"h": 36,
+"text": ".technology 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".tennis 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 52,
+"h": 36,
+"text": ".th 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 82,
+"h": 36,
+"text": ".theater 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 79,
+"h": 36,
+"text": ".tickets 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".tienda 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 62,
+"h": 36,
+"text": ".tips 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 66,
+"h": 36,
+"text": ".tires 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".tokyo 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 69,
+"h": 36,
+"text": ".tools 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 70,
+"h": 36,
+"text": ".tours 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 69,
+"h": 36,
+"text": ".town 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 65,
+"h": 36,
+"text": ".toys 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 50,
+"h": 36,
+"text": ".tr 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 84,
+"h": 36,
+"text": ".training 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".travel 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 52,
+"h": 36,
+"text": ".tv 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".tw 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".ua 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".uk 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 97,
+"h": 36,
+"text": ".university 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".us 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".uy 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 96,
+"h": 36,
+"text": ".vacations 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 75,
+"h": 36,
+"text": ".vegas 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 91,
+"h": 36,
+"text": ".ventures 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 59,
+"h": 36,
+"text": ".vet 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".video 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 70,
+"h": 36,
+"text": ".villas 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 58,
+"h": 36,
+"text": ".vin 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 58,
+"h": 36,
+"text": ".vip 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 75,
+"h": 36,
+"text": ".vision 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".vn 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".vodka 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 83,
+"h": 36,
+"text": ".voyage 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 72,
+"h": 36,
+"text": ".wang 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".watch 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 85,
+"h": 36,
+"text": ".website 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 90,
+"h": 36,
+"text": ".wedding 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 64,
+"h": 36,
+"text": ".wiki 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 61,
+"h": 36,
+"text": ".win 2",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 68,
+"h": 36,
+"text": ".wine 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 70,
+"h": 36,
+"text": ".work 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 76,
+"h": 36,
+"text": ".works 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 73,
+"h": 36,
+"text": ".world 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 59,
+"h": 36,
+"text": ".wtf 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 61,
+"h": 36,
+"text": ".xyz 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 69,
+"h": 36,
+"text": ".yoga 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 55,
+"h": 36,
+"text": ".za 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+},
+{
+"tag": "a",
+"w": 69,
+"h": 36,
+"text": ".zone 1",
+"cls": "flex min-h-[36px] shrink-0 items-center whitespace",
+"parent": "div"
+}
+],
+"/?q=chaxiang": [
+{
+"tag": "button",
+"w": 40,
+"h": 44,
+"text": "Bulk check",
+"cls": "flex h-11 items-center gap-1.5 rounded-lg px-3 tex",
+"parent": "div"
+},
+{
+"tag": "button",
+"w": 39,
+"h": 44,
+"text": "Add to shortlist",
+"cls": "border-l border-line/70 px-3 transition-colors hov",
+"parent": "span"
+},
+{
+"tag": "button",
+"w": 39,
+"h": 44,
+"text": "Start monitoring: re-checked e",
+"cls": "inline-flex shrink-0 items-center gap-1 font-sans ",
+"parent": "span"
+},
+{
+"tag": "button",
+"w": 39,
+"h": 44,
+"text": "Add to shortlist",
+"cls": "border-l border-line/70 px-3 transition-colors hov",
+"parent": "span"
+},
+{
+"tag": "button",
+"w": 39,
+"h": 44,
+"text": "Start monitoring: re-checked e",
+"cls": "inline-flex shrink-0 items-center gap-1 font-sans ",
+"parent": "span"
+},
+{
+"tag": "button",
+"w": 39,
+"h": 44,
+"text": "",
+"cls": "border-l border-brand-line/50 px-3 transition-opac",
+"parent": "span"
+},
+{
+"tag": "button",
+"w": 39,
+"h": 44,
+"text": "",
+"cls": "border-l border-brand-line/50 px-3 transition-opac",
+"parent": "span"
+},
+{
+"tag": "button",
+"w": 39,
+"h": 44,
+"text": "",
+"cls": "border-l border-brand-line/50 px-3 transition-opac",
+"parent": "span"
+},
+{
+"tag": "button",
+"w": 39,
+"h": 44,
+"text": "",
+"cls": "border-l border-brand-line/50 px-3 transition-opac",
+"parent": "span"
+},
+{
+"tag": "button",
+"w": 39,
+"h": 44,
+"text": "",
+"cls": "border-l border-brand-line/50 px-3 transition-opac",
+"parent": "span"
+},
+{
+"tag": "button",
+"w": 39,
+"h": 44,
+"text": "Add to shortlist",
+"cls": "border-l border-line/70 px-3 transition-colors hov",
+"parent": "span"
+},
+{
+"tag": "button",
+"w": 39,
+"h": 44,
+"text": "Start monitoring: re-checked e",
+"cls": "inline-flex shrink-0 items-center gap-1 font-sans ",
+"parent": "span"
+},
+{
+"tag": "button",
+"w": 39,
+"h": 44,
+"text": "",
+"cls": "border-l border-brand-line/50 px-3 transition-opac",
+"parent": "span"
+},
+{
+"tag": "summary",
+"w": 301,
+"h": 20,
+"text": "What is DomainHunter?",
+"cls": "tap-target flex cursor-pointer list-none items-cen",
+"parent": "details"
+},
+{
+"tag": "summary",
+"w": 301,
+"h": 40,
+"text": "How accurate are the availabil",
+"cls": "tap-target flex cursor-pointer list-none items-cen",
+"parent": "details"
+},
+{
+"tag": "summary",
+"w": 301,
+"h": 20,
+"text": "Is it free?",
+"cls": "tap-target flex cursor-pointer list-none items-cen",
+"parent": "details"
+},
+{
+"tag": "summary",
+"w": 301,
+"h": 40,
+"text": "Will it register domains for m",
+"cls": "tap-target flex cursor-pointer list-none items-cen",
+"parent": "details"
+},
+{
+"tag": "summary",
+"w": 301,
+"h": 20,
+"text": "Which TLDs are supported?",
+"cls": "tap-target flex cursor-pointer list-none items-cen",
+"parent": "details"
+},
+{
+"tag": "summary",
+"w": 301,
+"h": 20,
+"text": "Do you store my searches?",
+"cls": "tap-target flex cursor-pointer list-none items-cen",
+"parent": "details"
+},
+{
+"tag": "a",
+"w": 39,
+"h": 15,
+"text": "GitHub",
+"cls": "tap-target underline hover:text-txt1",
+"parent": "footer"
+}
+]
+}

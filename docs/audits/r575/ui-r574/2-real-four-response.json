@@ -1,0 +1,19 @@
+{
+  "utc": "2026-09-07T13:02:22.031599+00:00",
+  "url": "https://hunt.zalize.com/api/search",
+  "status": 200,
+  "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-ray": "a375e84b89288b10-PDX",
+    "content-type": "application/x-ndjson; charset=utf-8",
+    "date": "Mon, 07 Sep 2026 13:02:22 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "priority": "u=1,i",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=uZ6J6J629QEmkDnZEOVMHQog79JRYSqRyHIt7fCTpEc5AVczNMrQTWobeb49yXQUIjrskojKmofENXXsHkAZoW1HWm94e27Yi3UoSR24DFKfrRwfigFbGStN%2BWkhi%2FYl9tQ%3D\"}]}",
+    "server": "cloudflare",
+    "server-timing": "cfExtPri",
+    "x-content-type-options": "nosniff"
+  },
+  "body": "{\"domain\":\"chaxiang.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-05-13T18:26:54.000Z\",\"cached\":true}\n{\"domain\":\"nic.cn\",\"status\":\"taken\",\"method\":\"dns\",\"cached\":true}\n{\"domain\":\"google.de\",\"status\":\"taken\",\"method\":\"dns\",\"cached\":true}\n{\"domain\":\"google.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2028-09-14T04:00:00.000Z\",\"cached\":true}\n"
+}

@@ -1,0 +1,58 @@
+ssr keys ['route', 'lang', 'status', 'ssr_title', 'dom_title', 'title_equal', 'ssr_h1', 'dom_h1', 'h1_equal', 'ssr_chunks40', 'dom_chars', 'ssr_chunks_found_in_dom', 'ssr_chunk_coverage', 'ssr_price_n', 'dom_price_n', 'ssr_prices_missing_in_dom', 'dom_prices_not_in_ssr', 'html_bytes', 'braces']
+kbd keys ['route', 'lang', 'tab_seq', 'unique_focused', 'body_hits', 'no_focus_visible', 'zero_size_focused']
+/                    zh titleEq=None h1="['用中文说出寓意，猎到真正可注册的.cn / ."  h1eq=True cov=0.3636 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=23 bodyHits=0 firstFocus=None
+/                    en titleEq=None h1="['Name it in Chinese or E"  h1eq=True cov=0.5 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=23 bodyHits=0 firstFocus=None
+/?q=chaxiang         zh titleEq=None h1="['用中文说出寓意，猎到真正可注册的.cn / ."  h1eq=True cov=0.3636 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=16 bodyHits=0 firstFocus=None
+/?q=chaxiang         en titleEq=None h1="['Name it in Chinese or E"  h1eq=True cov=0.5 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=16 bodyHits=0 firstFocus=None
+/advanced            zh titleEq=None h1="['批量核验']"                   h1eq=True cov=0.25 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=12 bodyHits=2 firstFocus=None
+/advanced            en titleEq=None h1="['Bulk check']"             h1eq=True cov=0.5 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=12 bodyHits=2 firstFocus=None
+/shortlist           zh titleEq=None h1='[]'                         h1eq=False cov=0.0 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=9 bodyHits=2 firstFocus=None
+/shortlist           en titleEq=None h1='[]'                         h1eq=False cov=0.0 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=9 bodyHits=2 firstFocus=None
+/monitors            zh titleEq=None h1='[]'                         h1eq=False cov=0.0 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=12 bodyHits=2 firstFocus=None
+/monitors            en titleEq=None h1='[]'                         h1eq=False cov=0.0 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=12 bodyHits=2 firstFocus=None
+/prices              zh titleEq=None h1="['域名后缀价格总览：408 个主流 TLD 注册"  h1eq=True cov=0.023 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=15 bodyHits=0 firstFocus=None
+/prices              en titleEq=None h1="['TLD Price Overview: Reg"  h1eq=True cov=0.0789 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=15 bodyHits=0 firstFocus=None
+/why                 zh titleEq=None h1="['中文创业者的域名猎手：用中文说寓意，猎到真正可"  h1eq=True cov=0.625 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=7 bodyHits=3 firstFocus=None
+/why                 en titleEq=None h1="['A domain hunter for Chi"  h1eq=True cov=0.8 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=7 bodyHits=3 firstFocus=None
+/mcp                 zh titleEq=None h1="['把域名核验接进你的 AI 助手']"        h1eq=True cov=0.6667 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=10 bodyHits=1 firstFocus=None
+/mcp                 en titleEq=None h1="['Plug domain checking in"  h1eq=True cov=0.6667 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=10 bodyHits=1 firstFocus=None
+/tld                 zh titleEq=None h1="['全部 TLD 注册指南：408 个后缀怎么选'"  h1eq=True cov=0.9934 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/tld                 en titleEq=None h1="['All TLD Registration Gu"  h1eq=True cov=0.998 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/guide               zh titleEq=None h1="['全部行业命名指南：410 个行业怎么起名']"   h1eq=True cov=0.9899 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/guide               en titleEq=None h1="['All Industry Naming Gui"  h1eq=True cov=0.9964 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/vs                  zh titleEq=None h1="['全部后缀对比：444 组 TLD 怎么选']"   h1eq=True cov=0.9894 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/vs                  en titleEq=None h1="['All TLD Comparisons: 44"  h1eq=True cov=0.9896 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/tld/cn              zh titleEq=None h1="['.cn 域名注册指南：适合谁、多少钱、怎么起名"  h1eq=True cov=0.8966 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/tld/cn              en titleEq=None h1='[".cn Domain Guide: Who I'  h1eq=True cov=0.9661 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/tld/de              zh titleEq=None h1="['.de 域名注册指南：适合谁、多少钱、怎么起名"  h1eq=True cov=0.9474 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/tld/de              en titleEq=None h1='[".de Domain Guide: Who I'  h1eq=True cov=0.9836 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/tld/ai              zh titleEq=None h1="['.ai 域名注册指南：适合谁、多少钱、怎么起名"  h1eq=True cov=0.9062 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/tld/ai              en titleEq=None h1='[".ai Domain Guide: Who I'  h1eq=True cov=0.9655 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/guide/saas          zh titleEq=None h1="['SaaS 产品怎么起名：命名思路、好名字拆解与"  h1eq=True cov=0.9388 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/guide/saas          en titleEq=None h1="['How to Name a SaaS Prod"  h1eq=True cov=0.9811 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/guide/ecommerce     zh titleEq=None h1="['电商品牌怎么起名：命名思路、好名字拆解与域名选"  h1eq=True cov=0.9375 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/guide/ecommerce     en titleEq=None h1="['How to Name an E-commer"  h1eq=True cov=0.9821 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/guide/legal         zh titleEq=None h1="['法律服务品牌怎么起名：命名思路、好名字拆解与域"  h1eq=True cov=0.9302 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/guide/legal         en titleEq=None h1="['How to Name a Legal Bra"  h1eq=True cov=0.9808 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/vs/de-vs-com        zh titleEq=None h1="['.de 和 .com 怎么选：德国本地信任与全"  h1eq=True cov=0.9508 braces={'ssr_html': 12, 'dom_text': 0, 'dom_html': 12} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/vs/de-vs-com        en titleEq=None h1="['.de vs .com: German Loc"  h1eq=True cov=0.9861 braces={'ssr_html': 12, 'dom_text': 0, 'dom_html': 12} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/vs/mx-vs-es         zh titleEq=None h1="['.mx 和 .es 怎么选：墨西哥与西班牙两大"  h1eq=True cov=0.9423 braces={'ssr_html': 24, 'dom_text': 0, 'dom_html': 24} priceMiss=None | tab_uniq=24 bodyHits=0 firstFocus=None
+/vs/mx-vs-es         en titleEq=None h1="['.mx vs .es: Mexico or S"  h1eq=True cov=0.981 braces={'ssr_html': 24, 'dom_text': 0, 'dom_html': 24} priceMiss=None | tab_uniq=24 bodyHits=0 firstFocus=None
+/vs/com-vs-io        zh titleEq=None h1="['.com 和 .io 怎么选：信任感与极客感的"  h1eq=True cov=0.94 braces={'ssr_html': 14, 'dom_text': 0, 'dom_html': 14} priceMiss=None | tab_uniq=24 bodyHits=0 firstFocus=None
+/vs/com-vs-io        en titleEq=None h1="['.com vs .io: Trust vs H"  h1eq=True cov=0.9677 braces={'ssr_html': 14, 'dom_text': 0, 'dom_html': 14} priceMiss=None | tab_uniq=24 bodyHits=0 firstFocus=None
+/vs/shop-vs-store    zh titleEq=None h1="['.shop 和 .store 怎么选：电商域名"  h1eq=True cov=0.9565 braces={'ssr_html': 16, 'dom_text': 0, 'dom_html': 16} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/vs/shop-vs-store    en titleEq=None h1="['.shop vs .store: The Tw"  h1eq=True cov=0.9837 braces={'ssr_html': 16, 'dom_text': 0, 'dom_html': 16} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/vs/net-vs-org       zh titleEq=None h1="['.net 和 .org 怎么选：技术气质与公信"  h1eq=True cov=0.9434 braces={'ssr_html': 4, 'dom_text': 0, 'dom_html': 4} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/vs/net-vs-org       en titleEq=None h1="['.net vs .org: Technical"  h1eq=True cov=0.9706 braces={'ssr_html': 4, 'dom_text': 0, 'dom_html': 4} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/nope-r575-browser   zh titleEq=None h1='[]'                         h1eq=False cov=0.0 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=11 bodyHits=2 firstFocus=None
+/nope-r575-browser   en titleEq=None h1='[]'                         h1eq=False cov=0.0 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=11 bodyHits=2 firstFocus=None
+/s/86mKLJRJmB        zh titleEq=None h1='[]'                         h1eq=False cov=0.0 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=9 bodyHits=2 firstFocus=None
+/s/86mKLJRJmB        en titleEq=None h1='[]'                         h1eq=False cov=0.0 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=9 bodyHits=2 firstFocus=None
+/s/u5QFymuLnu        zh titleEq=None h1='[]'                         h1eq=True cov=0.0 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=7 bodyHits=3 firstFocus=None
+/s/u5QFymuLnu        en titleEq=None h1='[]'                         h1eq=True cov=0.0 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=7 bodyHits=3 firstFocus=None
+/s/unknownr575       zh titleEq=None h1='[]'                         h1eq=True cov=0.0 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=7 bodyHits=3 firstFocus=None
+/s/unknownr575       en titleEq=None h1='[]'                         h1eq=True cov=0.0 braces={'ssr_html': 0, 'dom_text': 0, 'dom_html': 0} priceMiss=None | tab_uniq=7 bodyHits=3 firstFocus=None
+/vs/fr-vs-com        zh titleEq=None h1="['.fr 和 .com 怎么选：法国本地信任与全"  h1eq=True cov=0.9483 braces={'ssr_html': 12, 'dom_text': 0, 'dom_html': 12} priceMiss=None | tab_uniq=24 bodyHits=0 firstFocus=None
+/vs/fr-vs-com        en titleEq=None h1="['.fr vs .com: French Loc"  h1eq=True cov=0.9853 braces={'ssr_html': 12, 'dom_text': 0, 'dom_html': 12} priceMiss=None | tab_uniq=24 bodyHits=0 firstFocus=None
+/vs/au-vs-com        zh titleEq=None h1="['.au 和 .com 怎么选：澳洲本地信任与全"  h1eq=True cov=0.9508 braces={'ssr_html': 8, 'dom_text': 0, 'dom_html': 8} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None
+/vs/au-vs-com        en titleEq=None h1="['.au vs .com: Australian"  h1eq=True cov=0.9853 braces={'ssr_html': 8, 'dom_text': 0, 'dom_html': 8} priceMiss=None | tab_uniq=25 bodyHits=0 firstFocus=None

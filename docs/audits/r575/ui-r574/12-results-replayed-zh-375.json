@@ -1,0 +1,173 @@
+{
+  "utc": "2026-09-07T13:05:13.420Z",
+  "url": "https://hunt.zalize.com/?lang=zh&cb=r574-replayed",
+  "lang": "zh-CN",
+  "innerWidth": 375,
+  "docW": 375,
+  "rows": [
+    {
+      "domain": "chaxiang.com",
+      "rowText": "—\nchaxiang.com\n已注册\n2027-05-13 到期",
+      "reason": null,
+      "rect": {
+        "x": 264,
+        "y": 383,
+        "width": 30,
+        "height": 44,
+        "top": 383,
+        "right": 294,
+        "bottom": 427,
+        "left": 264
+      },
+      "aria": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "nic.cn",
+      "rowText": "—\nnic.cn\n已注册\n到期日待查",
+      "reason": null,
+      "rect": {
+        "x": 264,
+        "y": 431.5,
+        "width": 30,
+        "height": 44,
+        "top": 431.5,
+        "right": 294,
+        "bottom": 475.5,
+        "left": 264
+      },
+      "aria": "重新核验 nic.cn（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 nic.cn（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "expiry": {
+        "text": "到期日待查",
+        "title": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
+        "display": "block",
+        "rect": {
+          "x": 210,
+          "y": 446,
+          "width": 0,
+          "height": 15,
+          "top": 446,
+          "right": 210,
+          "bottom": 461,
+          "left": 210
+        }
+      }
+    },
+    {
+      "domain": "google.de",
+      "rowText": "—\ngoogle.de\n已注册\n到期日待查",
+      "reason": null,
+      "rect": {
+        "x": 264,
+        "y": 479.5,
+        "width": 30,
+        "height": 44,
+        "top": 479.5,
+        "right": 294,
+        "bottom": 523.5,
+        "left": 264
+      },
+      "aria": "重新核验 google.de（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 google.de（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "expiry": {
+        "text": "到期日待查",
+        "title": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
+        "display": "block",
+        "rect": {
+          "x": 210,
+          "y": 494,
+          "width": 0,
+          "height": 15,
+          "top": 494,
+          "right": 210,
+          "bottom": 509,
+          "left": 210
+        }
+      }
+    },
+    {
+      "domain": "google.com",
+      "rowText": "—\ngoogle.com\n已注册\n2028-09-14 到期",
+      "reason": null,
+      "rect": {
+        "x": 264,
+        "y": 527.5,
+        "width": 30,
+        "height": 44,
+        "top": 527.5,
+        "right": 294,
+        "bottom": 571.5,
+        "left": 264
+      },
+      "aria": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "expiry": null
+    }
+  ]
+}

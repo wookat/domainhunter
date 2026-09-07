@@ -1,0 +1,804 @@
+{
+  "files": [
+    {
+      "path": "/home/ubuntu/r575/ui/A-landing.json",
+      "bytes": 957,
+      "sha256": "18a46d1147eb732b5e6a0cc24eb9283d9682cceb058c00512b060c17d7d976e1"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/A-mobile-final-width.json",
+      "bytes": 198,
+      "sha256": "bad224470a363b0da9c53bf294bf7237b4cecc14eab7e3e04cb76959abf9e843"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/A-mobile-hidden-scrollbar.json",
+      "bytes": 199,
+      "sha256": "37ccc590b1ab63fef6277941a5e5a47fc4ec429598cfe96d948f9ffd11912585"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/A-mobile.json",
+      "bytes": 191,
+      "sha256": "fd1dc5ba9a9f3b98c8b1318c44b09b70e71b7c0c19f8fa4e9612804d0ed8e5d8"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/A-native-mobile-after-emulation.json",
+      "bytes": 199,
+      "sha256": "37ccc590b1ab63fef6277941a5e5a47fc4ec429598cfe96d948f9ffd11912585"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/A-native-mobile-landing.json",
+      "bytes": 877,
+      "sha256": "31be7da96e45920160cdad8b6b031a7d30654b2492ee3de1932aaaaa6ebdddf1"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/A-true375.json",
+      "bytes": 199,
+      "sha256": "8c130af0b7fe73a839ec26d00f8edad80e5de03791a773c00b629d09407a2576"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/B-advanced.json",
+      "bytes": 38,
+      "sha256": "d52b3043fd35f2e097c78f8bc844cc2ff3ab2763083c8168594be01bee578505"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/B-home.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/C-advanced-rows.json",
+      "bytes": 5731,
+      "sha256": "48e672c5def1215b55db1fd1fbb3597bd1dbefa5c49056cfc3e548a01bc9e637"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/C-home-taken.json",
+      "bytes": 2403,
+      "sha256": "40fb9e0b1927251d2aa560a7b02d3791efd00c4aec974d4bb0092ad7022a4cf6"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/C-recheck.json",
+      "bytes": 187,
+      "sha256": "e13938412f89b3dd2e332ed3c4ce9871fdac449d9eba55bc74d78721cd4a054b"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/D-csv-validation.json",
+      "bytes": 422,
+      "sha256": "4030d80d30d337caf8cd3cc1974660d68347b3193a98e68e41df90ccd051e91b"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/D-mobile.json",
+      "bytes": 188,
+      "sha256": "f6a6e05a4cf3922f6d0622538637ad337b80b2253c44fe40319b203ccb28bf39"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/D-native-mobile.json",
+      "bytes": 188,
+      "sha256": "369766e874f0b5309cce8fb7c9b7e34976e94116f4e41598a5128497cef10e06"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/D-nav-en.json",
+      "bytes": 63,
+      "sha256": "01c439187bbf4dd50914ecdf6e75c9357ce676ea6cdf50e08f248a9894470251"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/D-network.json",
+      "bytes": 593,
+      "sha256": "e85bf107c3b9faa02880b5636a02f48ca21422a87e17661413cd03bae6254632"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/D-order.json",
+      "bytes": 128,
+      "sha256": "520059e37aabe52c2d415251d820be79bb62fff58d4f6bfad1f7277ee97a4849"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/D-progress.json",
+      "bytes": 5139,
+      "sha256": "52115d30f03e342990b0e1639c1b212efdc78a2053d0bcf34e6081557568e16c"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/D-responsive-progress.json",
+      "bytes": 1032,
+      "sha256": "9d00c2b532bc286b1114ac5167bbc0ff04a094be363aeef687ebf760940a4a69"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/E-multi-match.json",
+      "bytes": 845,
+      "sha256": "3559788ca4cee4c6cb28d0684496594a7fedbd01d1677e6c07b105cdf75a0294"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/E-prices.json",
+      "bytes": 149237,
+      "sha256": "94729e3c604a5c3841569cafeeffdd1f50a779d64b1aac87cd6fe2a4bef33aac"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/E-true375.json",
+      "bytes": 1126,
+      "sha256": "496d1402d801922c0aa5d6bffe68610f19888cc552165eda42890c1bdf73862e"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/F-375-order.json",
+      "bytes": 846,
+      "sha256": "63088bcece7ebd5c1ef7fbca0121542ec7727f566293b9d21df8cae41c9ba06f"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/F-share-order.json",
+      "bytes": 985,
+      "sha256": "75fc2b469e5bfde248ec64342434ea76379d779f630ccc9e693dc113d8e636a9"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/F-share-revoked-headers.txt",
+      "bytes": 586,
+      "sha256": "134214c2f8787a331db15725309b4e074b40f0e4cc73f8871c270fda89e5b16c"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/F-share-revoked.json",
+      "bytes": 19,
+      "sha256": "535bd9dde0c301392c84460654b9e4e70ccb1ebc8075be41392b2213885239ec"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-1280-en-configured.json",
+      "bytes": 746,
+      "sha256": "ed1d4dddc720dac11d868bb11e006cd5243a7c6a869f52e2e24bb4db3423e2fc"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-1280-en-editing.json",
+      "bytes": 878,
+      "sha256": "a49fe2a1149f79425375b2cef8ce7e6a8260d095756d5fc90130654fbdad433b"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-1280-en-unconfigured.json",
+      "bytes": 738,
+      "sha256": "306500a6b77effedfc6abe3cbace2262113b9cdbe843aa31f1dbdc9497318025"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-1280-zh-configured.json",
+      "bytes": 728,
+      "sha256": "853d12c82e7043c2b5fa381da5f20e77565b80a23be3d2a2eec708c41fc60522"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-1280-zh-editing.json",
+      "bytes": 848,
+      "sha256": "f2589d69531b4b252dfe90d9adc21bfb080c23e23541b31ed2aa692c8de0b130"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-1280-zh-unconfigured.json",
+      "bytes": 709,
+      "sha256": "97c35edd8282111e5ddc15a2d6ae4df0d2a4926afdd70ac095ca8880dfacf774"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-375-en-configured-dark.json",
+      "bytes": 744,
+      "sha256": "216c80e626762d8073746a71e0e1e11fa939c113a7fddaed9c0669c0180adf50"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-375-en-configured.json",
+      "bytes": 744,
+      "sha256": "216c80e626762d8073746a71e0e1e11fa939c113a7fddaed9c0669c0180adf50"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-375-en-editing.json",
+      "bytes": 870,
+      "sha256": "5759cc8078423f6f208c4f4dc07a0ad6a5818a5bba83dac049028f4d6241608d"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-375-en-unconfigured.json",
+      "bytes": 729,
+      "sha256": "46d06e21f096ff501963437a69ccff3f3c9317d3c8d097ef274ecb99cf30db31"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-375-zh-configured.json",
+      "bytes": 726,
+      "sha256": "f73cb2a0ac3df32c06419aedb1e11760ce57208dc287c908bb426997de924e3a"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-375-zh-editing.json",
+      "bytes": 846,
+      "sha256": "a25ffa127bfe3831b1402c4050d8ad377d6afe3f7e6ed4acbbd725a05af46d90"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-375-zh-unconfigured.json",
+      "bytes": 707,
+      "sha256": "ac147fffee497febe56aa90fb091c6588720ffd1919fdd25c1db85674f101489"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-size-table.json",
+      "bytes": 16795,
+      "sha256": "878485f99d17db367b0f4528a987eec85597ad6539d831616e0f7c658e7f195e"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-true375-en-configured.json",
+      "bytes": 744,
+      "sha256": "10c48d921e8815925aefaef5fc41d08ce7489e2bd227868cf6c7955b1367dbdd"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-true375-en-editing.json",
+      "bytes": 870,
+      "sha256": "137bca821051943eb37ddfc7ef56d68a8c82b7b9b1c1e31867671ec22c77ee84"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-true375-en-unconfigured.json",
+      "bytes": 729,
+      "sha256": "bf0bd345681df7ace7870e4a6db3514d24946d56adeb18325d6bc63ed50e938b"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-true375-zh-configured.json",
+      "bytes": 726,
+      "sha256": "f8fe881fdd801fe874fd26de85d73d666f8f9ceb7d6c40f0bd5ac21d8f34897a"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-true375-zh-editing.json",
+      "bytes": 846,
+      "sha256": "3fe66846a049194d54a88eb955ea1d0800698f3411eff04c0ec5dd021bd8ef76"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/G-true375-zh-unconfigured.json",
+      "bytes": 707,
+      "sha256": "0560869ee527213a6f4f50760ef1d5e4317d9ed509d5c0f7b42d5e9415ae0711"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/H-validation.json",
+      "bytes": 161,
+      "sha256": "3868f958043e0393fa40e80b8109f3363dc771e45201993f87f7acc316ec47ab"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/I-webhook-test.json",
+      "bytes": 932,
+      "sha256": "36244df1b7403798d90d254151bc72fffcc967bcb88d77a0a7cf2ca9ba4f3725"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/J-sync-cleared.json",
+      "bytes": 310,
+      "sha256": "df99965c26c0c7e063a49c41625190174e39173dfe7a8dc65906fa715107f9f7"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/J-sync-configured.json",
+      "bytes": 1903,
+      "sha256": "ddaa4145f0379006dbaf9fc046aadb975aa3ab52fd346e663f10696308f9f403"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/K-final-cleanup.json",
+      "bytes": 1387,
+      "sha256": "857a3283354189e9de4476f8f8bc54238416f5d0ef448a020d42208a13550960"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/K-final-counts.json",
+      "bytes": 275,
+      "sha256": "9e1a33e66fc41cb2df8d06d6bcc3b2871c07cf1cb8832fe7f49cb1793e734c12"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/K-monitor-list-final.json",
+      "bytes": 40,
+      "sha256": "6cd2783a97834c9fb6b19401d3ba61fa89497fe4ffef55403a79196987e51feb"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/K-monitor-list-get-headers.txt",
+      "bytes": 557,
+      "sha256": "93589f9db94c1f49b4f066df3a0f077aa28da1c802aff88f2850ae5bf84536ba"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/K-monitor-list-get.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/K-monitor-list-post-headers.txt",
+      "bytes": 594,
+      "sha256": "6da896660732f843c30bee61efeb95c42e6aaec465f12db962a5b4b1e3c974e8"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/K-monitor-list-post.json",
+      "bytes": 40,
+      "sha256": "6cd2783a97834c9fb6b19401d3ba61fa89497fe4ffef55403a79196987e51feb"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/K-ui-cleanup.json",
+      "bytes": 1107,
+      "sha256": "c4550fa47c9479653b9ac8a34b9654139b261bc094ff391dd42b748f5d24d7ab"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/advanced.csv",
+      "bytes": 1743,
+      "sha256": "20882b2e51bbcc7f363143e6ade59a52a0bcf49217b7455002eae4c4bbcd4966"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/cmd.py",
+      "bytes": 171,
+      "sha256": "d94afc6b346fb34562bb518277f447a65ad4696d161f2dce3fd52614fc80f1b7"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/driver.py",
+      "bytes": 5047,
+      "sha256": "7a14d3bd2f8d0f3a10ed5460c2fa427ca216cb92a518e6650b358549a692dd0d"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/network.json",
+      "bytes": 7655,
+      "sha256": "e122a5877cb5aa4efcb5846475bbefc97429e6773afdbbc4d63a0e8ae9d82315"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/plan.md",
+      "bytes": 3701,
+      "sha256": "60b2aa3f4206793fb2f8676dfa9ceb63d807f81485c93d0edfb46244921ef6b8"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/report.md",
+      "bytes": 23737,
+      "sha256": "b6dfee8be324897ca0824e9edf52396957127d646ada4169295e4c57ebd75dd0"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/responses.json",
+      "bytes": 47222,
+      "sha256": "836054732fbd2a6a81b873ac57cea9f2b341f4e25d899c83afd80a489c277ca6"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/A-1280-en.png",
+      "bytes": 157228,
+      "sha256": "4df4e82bed44a854be2b6b95f52eb5a39f617c995a1d49a91cd58db5963dccce"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/A-1280-zh-light.png",
+      "bytes": 194319,
+      "sha256": "9fbdbdcfcacfa3e860707c8a72a70ef82e7910b01b3f6c8aad4f6d7b3544e2f0"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/A-1280-zh.png",
+      "bytes": 192850,
+      "sha256": "a513c4430b5f4380601ae123d70e969100dd3d549a93243b6dcf05797d94fc75"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/A-375-en.png",
+      "bytes": 69720,
+      "sha256": "c34a0b1847f6e6f6a93a5b068dbabe00b7a8532416dd242badedbfc64b61968a"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/A-375-zh.png",
+      "bytes": 75441,
+      "sha256": "a4ffd812a9dd444221b206a130c34b6e43c5c05491511fc49324cfcca1f6ddad"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/A-exact375-en.png",
+      "bytes": 66918,
+      "sha256": "8cee3641295b55c823a8a7efa3feefc75c62191cc28385bb8b02d5154ceafb4c"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/A-exact375-zh.png",
+      "bytes": 75415,
+      "sha256": "6b7478b7b53c524189beb9c63a2ffeff08393ea914f699e45c1000ac24e2831f"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/A-native375-en-after-emulation.png",
+      "bytes": 68983,
+      "sha256": "107360101695e63db80444afdb7f7d50b3b04796d4b7d8a8a03c969bfa319e36"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/A-native375-en.png",
+      "bytes": 68983,
+      "sha256": "107360101695e63db80444afdb7f7d50b3b04796d4b7d8a8a03c969bfa319e36"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/A-native375-zh.png",
+      "bytes": 75384,
+      "sha256": "9c45a513659cb5f8799a0145ad9c259d3a00d045399423604cc1c2078643f1e3"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/A-true375-en.png",
+      "bytes": 68792,
+      "sha256": "92f3152e66533befb633fce15ff10b5caad2afff8d4403b556eabdaff35a667f"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/A-true375-zh.png",
+      "bytes": 75415,
+      "sha256": "6b7478b7b53c524189beb9c63a2ffeff08393ea914f699e45c1000ac24e2831f"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/C-recheck-zh.png",
+      "bytes": 153622,
+      "sha256": "9f4c669dd680f94c33e1edd486f63c3c623221074d6b8ed2493e66d4516b7edf"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/C-starred.png",
+      "bytes": 155282,
+      "sha256": "fde23b6efb2d5d084380e5d3a6d56fb6afa4561d288e3c5f8790376c2649608c"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-completed-1280-en.png",
+      "bytes": 113467,
+      "sha256": "606d0a50c310468d808fcda0be7a7b801bc8f49aa0950e91e1ac793b2a7475b8"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-completed-1280-zh.png",
+      "bytes": 111279,
+      "sha256": "5b4a0344d1263e649ba44afc4737f1332f452d49c95664073de562184646f24b"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-completed-375-en.png",
+      "bytes": 57658,
+      "sha256": "4c5ef091d30bc977dfc12f77cfca0392d6406afdf7e25d999482d32ae15c7e03"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-completed-375-zh.png",
+      "bytes": 65294,
+      "sha256": "562b302829b88f0a7ee49b210d88194a16e57abb93484edeaa713ff174d0fc7c"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-completed-native375-en.png",
+      "bytes": 45705,
+      "sha256": "3193d16496749401ac6f2cfcc56a7859e55ee8fa0aa7e82299503120912715d3"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-completed-native375-zh.png",
+      "bytes": 49823,
+      "sha256": "0170dd9597f3200814b0bd0fff4cc864aa272f73c22dac1806addda7e3495885"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-paste-zh.png",
+      "bytes": 99998,
+      "sha256": "c9e52b77e1560d5d1be298f1e83d545d78cfcecd842f7c8f69a21ad5f9202c09"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-progress-1280-en-slow-network.png",
+      "bytes": 89603,
+      "sha256": "32537b16d08967399283c1454a20b2d4d8ca018383020ef93b7b041d2f968c0c"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-progress-1280-zh-slow-network.png",
+      "bytes": 101538,
+      "sha256": "26eced62fb9a60565bb1b0eb8c87d98e2e4a828d7d9b0978a77044bddd0732aa"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-progress-1280-zh.png",
+      "bytes": 107173,
+      "sha256": "0e67c2be16e97cfa9b9e261da34e76f095a2a105592d283d052a8b12b4ba5fba"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-progress-375-en-slow-network.png",
+      "bytes": 51988,
+      "sha256": "fa81f398506e6470f38fbaebb69ebe605757b4c318c07095414421da078cfee9"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-progress-375-zh-slow-network.png",
+      "bytes": 63493,
+      "sha256": "b60ab61a5fd1a73c9303af1fde1245df381f37ba71b503c12687a807ee3841d3"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-taken-1280-en.png",
+      "bytes": 141000,
+      "sha256": "b131343103f266cd743f29521cae26f76ff1f1774ab6e0f6c27b512f3d0e0342"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-taken-1280-zh.png",
+      "bytes": 144739,
+      "sha256": "b68c6cd35ddb7a130ea78a1082e11dcca2cfdb4d7cfd6553bd7e1b0f70f133ad"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/D-taken-375-zh.png",
+      "bytes": 61065,
+      "sha256": "ef3fcd509bd60218be04219e5cdfd688ec39e3c0bc789092ec704b5170db40aa"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-1280-en-cn.png",
+      "bytes": 99487,
+      "sha256": "12c8544323e8d668b4651d4ac9039ef755c5e4a56dbdfc5fe423fb2547185415"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-1280-en-com.cn.png",
+      "bytes": 105551,
+      "sha256": "e3fd137c6cf65fffc96b5ad4a90c8a0c82ce8a5d362fe7600ad968723c4725dd"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-1280-zh-cn.png",
+      "bytes": 109430,
+      "sha256": "6954fac299cde97edac8d9d47e7e892734e51cc8d875bc251200c55153258be9"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-1280-zh-com.cn.png",
+      "bytes": 112058,
+      "sha256": "6c8e1930dc8cd6b1b486fb52fab6b4c0d5a85ab3ba28f45530b00ff350e366a1"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-375-en-cn.png",
+      "bytes": 66198,
+      "sha256": "7b12abeeb6108edea74d03e8c714a3f7ceec8a33852b79df5b6e03509f32d0e4"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-375-en-com.cn.png",
+      "bytes": 68894,
+      "sha256": "53b21073cc4197cc809455cc9705038697e7501a3e3feab4cd7cfdf407733a6e"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-375-zh-cn.png",
+      "bytes": 81087,
+      "sha256": "686b15596dd6882c26274408bd4844ade9a4423ec568f7dd531fd9d9e8543889"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-375-zh-com.cn.png",
+      "bytes": 76533,
+      "sha256": "bf467ab68edbff0146754fd426b61d6f46e4abb48f272b5172f6f89e3c0cf607"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-com-multi-match.png",
+      "bytes": 106612,
+      "sha256": "9ebf05126b6800d748c82d9002e3ab9f2d9d50fd1b415b6a66d3293c8a33bf49"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-true375-en-cn.png",
+      "bytes": 63885,
+      "sha256": "f22d9dd27cf5c597b3968dfa66d04636097ee88dbdb914f6dfc8308942c10f0b"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-true375-en-com.cn.png",
+      "bytes": 62449,
+      "sha256": "1aa2c3c7ac800d0413b3793257caa98374b43b625572f2813c31f6327060ec6e"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-true375-zh-cn.png",
+      "bytes": 81162,
+      "sha256": "f29c9c203a7a8e20b6fb6010753bdee6670fb2eb7e295ed46586a4deb9db1397"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/E-true375-zh-com.cn.png",
+      "bytes": 80408,
+      "sha256": "b980332b34ae647c033c0d4332a3bf719f3594a95fbbc848f206de0aebb5cdc0"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/F-1280-dark.png",
+      "bytes": 88639,
+      "sha256": "8c78933b1fd085fa61b7c44385e657e27816f80d9f82507880c57f2cdc9cfe8c"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/F-1280-light.png",
+      "bytes": 89117,
+      "sha256": "113b2b23bc8fa0f73b22f4fc796c319a2a35d03a05572c707a3c1774eae019f2"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/F-1280-share-dark.png",
+      "bytes": 114145,
+      "sha256": "1f349466f5a9e5d68a6e36f2f443736d4dc0a94e51848f306c22118cefdbdb5c"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/F-375-dark.png",
+      "bytes": 59443,
+      "sha256": "315316bfd7a2456459418083c9dc75edeaf509c290a80c396d1597182cae4ab9"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/F-375-light.png",
+      "bytes": 59527,
+      "sha256": "6e2db64cca985828b7aa000af1ae74b53268778f8aa738926fdf51fa6b05e402"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/F-375-panels-dark.png",
+      "bytes": 51936,
+      "sha256": "0bbf1b8203496b0d6c596d107d731eb3ea9045a10b1d4774e0d04da545b76b68"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/F-375-share-dark.png",
+      "bytes": 58434,
+      "sha256": "565c73b549822f66a0ce7a67f6d8332dde3e5b80b59382b8e0b582dde034f807"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/F-375-share-light.png",
+      "bytes": 58016,
+      "sha256": "899e4cddfcc8130c95f310f323f33771ab7c3a5025890c1dd41f25ba514b6f33"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/F-share-revoked.png",
+      "bytes": 89037,
+      "sha256": "3a8e6ff78e7dc85b8a16e993392c38e6d16a45ea3528de0eeb40f8599a9ef19b"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/F-true375-dark.png",
+      "bytes": 58771,
+      "sha256": "ee535e4690a8cae1003371be276d99f47c24ee01abfad7c59a68659da3f769bb"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/F-true375-light.png",
+      "bytes": 58976,
+      "sha256": "b97d21278db26f148cb9b227aa35dadc808b1b82e347bee83ee4d0c11ef15370"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-1280-en-configured.png",
+      "bytes": 97030,
+      "sha256": "b393abd046a233f3a79d525cfaabe8c22029f14ecec95d4ff22dcd1389f31c0b"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-1280-en-editing.png",
+      "bytes": 103102,
+      "sha256": "ee6a4d13d4d081856b6194490b3e0b6d666270597b577ea02be0be83bc49036a"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-1280-en-unconfigured.png",
+      "bytes": 106065,
+      "sha256": "075ccaf41645f1cc6641c4e12c897a8832b47dff64a53c5f8cd71c0b693165e9"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-1280-zh-configured.png",
+      "bytes": 105677,
+      "sha256": "891edd06644d10eac7346cfd8a614b9157aa9272c8215b6842a2d77d00c88146"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-1280-zh-editing.png",
+      "bytes": 110986,
+      "sha256": "91da6bf5ea0a369fff0427771e7b3a981e3e33dd085c5598491846cc867338d5"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-1280-zh-unconfigured.png",
+      "bytes": 116099,
+      "sha256": "d61536d8f25477e380458997a1f7741504b082a457aa74eac6ed0b7e45d2c897"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-375-en-configured-dark.png",
+      "bytes": 71669,
+      "sha256": "d21c3607d6a0ab177e6f993ebc85e359734d8a141002c4dee760ec460eb50930"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-375-en-configured.png",
+      "bytes": 72137,
+      "sha256": "380090f99d2cd2d97130230b6b8953d42e0e5b94f3eb85e501558776c227b2f4"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-375-en-editing.png",
+      "bytes": 77235,
+      "sha256": "1c979115c905c851ab87f8b8f6944e527a27d395b2bed54caf72c52a8a7c55bb"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-375-en-unconfigured.png",
+      "bytes": 75582,
+      "sha256": "7c27f6db81192de893af97170053ebfec63e200a523b1376567a6c79b677541c"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-375-zh-configured.png",
+      "bytes": 83766,
+      "sha256": "c96483b397ba3c5f3c158272e99ff26440df408ea87f617ad19f1a59d40203e7"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-375-zh-editing.png",
+      "bytes": 89394,
+      "sha256": "b23a42b57c10f7fe41b00aa94feac7a852c1c5b9c306f643347e9ce74dfd7ff7"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-375-zh-unconfigured.png",
+      "bytes": 89846,
+      "sha256": "df56b6343a98703422015f154e67832d84eb997177199804e72380e4f30c207a"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-true375-en-configured-dark.png",
+      "bytes": 70753,
+      "sha256": "1ae4b52ae006c92a6776ec8e799cbdd0d273c219fd9bff86b395fc5848c63b35"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-true375-en-configured.png",
+      "bytes": 69968,
+      "sha256": "54d29ff5276270d940e71bcaa963ef1d97c2cfd20809ac687bcafc5c3368736b"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-true375-en-editing.png",
+      "bytes": 74858,
+      "sha256": "e55e2e8e5f250511d041d41542aa22d45e29c6b8d418c1f225092575c5a8c055"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-true375-en-unconfigured.png",
+      "bytes": 74470,
+      "sha256": "5ab43c55981a9dc8d9eaf7943c0c292439eec537fbb4335faaa29581078227f1"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-true375-zh-configured.png",
+      "bytes": 82807,
+      "sha256": "a01136bbd381ff1ed75d4e7f517bb6d40bd8870482e46c27078d5fc9be922de6"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-true375-zh-editing.png",
+      "bytes": 88001,
+      "sha256": "b0250748d22142fb1601009ba3e137b73f92afb41489e55406972f266463c200"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/G-true375-zh-unconfigured.png",
+      "bytes": 93484,
+      "sha256": "c552a7727fea7fbc5cb3bc2d1583dd613ac7c876a654436d6ff0831629c2e511"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/H-invalid-375-en.png",
+      "bytes": 73964,
+      "sha256": "5d53b76edb0753ef775d46ccc30eb6a78cdb9067c9ab29f6516f208ab0a1f611"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/H-invalid-375-zh.png",
+      "bytes": 89717,
+      "sha256": "ac7b0c25a4a384b14c3248d0200e972e11fb81a5ff78873978fff775af1ef052"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/I-first-success-zh.png",
+      "bytes": 87345,
+      "sha256": "998110e98f8c20607df3e6f5de2eb596f0dd26f66ac4655e32937b4b8d3783a5"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/I-second-rate-limited-en.png",
+      "bytes": 71314,
+      "sha256": "ca949b81d71bec8db58e020901942f203e175db7b4bbaf1d2ecccf3d9c1eb1ea"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/I-second-rate-limited-zh.png",
+      "bytes": 83626,
+      "sha256": "0aa8117da7a554aaa432f1f5f4d46c79f1960f821bfd5acbfce8a18e525d9f29"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/J-monitors-added.png",
+      "bytes": 84505,
+      "sha256": "9a9c44d3871c30277faad44657b9477dec93ee89b9b24672ff300d7b4bb0f496"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/J-monitors-cleared.png",
+      "bytes": 93947,
+      "sha256": "53f665b978f7dd48fe234b21c95ca3273b931dcff67a4452707be06afd06d100"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/J-shortlist-monitor-enabled.png",
+      "bytes": 59998,
+      "sha256": "3dfd6598e082496d05cd5a5554cd4677f4662711984daef1b41723ee5168c30b"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/J-shortlist-webhook-cleared.png",
+      "bytes": 65612,
+      "sha256": "6be6108b3c68af4ec4204154b1c6d7c41c36ac8772b2982dbf4c8436cb663e52"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/J-shortlist-webhook-configured.png",
+      "bytes": 60836,
+      "sha256": "715a8412cad7ef75334c4bcb0ebb6950b6ebd51baddadbba1032aa6de41c1bbb"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/K-final-cleared-desktop.png",
+      "bytes": 116099,
+      "sha256": "d61536d8f25477e380458997a1f7741504b082a457aa74eac6ed0b7e45d2c897"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/K-monitors-empty.png",
+      "bytes": 116099,
+      "sha256": "d61536d8f25477e380458997a1f7741504b082a457aa74eac6ed0b7e45d2c897"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/shots/K-true375-cleanup.png",
+      "bytes": 78733,
+      "sha256": "5277ec622c5c3dfc026cee6d34ecce57a631c04e0eb9209cb39e0b2ba3151184"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/skill-suggestion/SKILL.md",
+      "bytes": 68943,
+      "sha256": "00b83651acc87d77cd10919892534d4acd2cde28137b85b89f98c9c0613bb12e"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/summary.json",
+      "bytes": 976,
+      "sha256": "779c34ee6c36e651f3574a4872d00149570d36276982cbdff2865212b07ef1d5"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/usage-after.json",
+      "bytes": 1999,
+      "sha256": "bbd8aaa9dedbe031fd386fc88ac48db5da3c9781e99b4ea4fb679a82ffbcc838"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/usage-before.json",
+      "bytes": 1998,
+      "sha256": "4ab5c70ad7717279a69546a71388f9f81c3e82c309773fab58b5b7e499450557"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/usage-diff.json",
+      "bytes": 616,
+      "sha256": "e0dd9b298c675d295c5e8270c260639dbcbd64fb167a5859c04c0bb273e98539"
+    },
+    {
+      "path": "/home/ubuntu/r575/ui/webhook_received.json",
+      "bytes": 909,
+      "sha256": "f3c87c22a2112a280ae66304f2de7b96e72911235257f6818573a949a4d21c3c"
+    },
+    {
+      "path": "/home/ubuntu/screencasts/r575-ui/r575-ui-full-annotated.mp4",
+      "bytes": 6434486,
+      "sha256": "e526dbe0fadb16eb4f43102aa0825cf549f7fbbf111c969d406ec0627146c216"
+    }
+  ],
+  "secretUUIDLeaks": [],
+  "excluded": [
+    "webhook_site_token.json"
+  ],
+  "recording": "/home/ubuntu/screencasts/r575-ui/r575-ui-edited.mp4"
+}

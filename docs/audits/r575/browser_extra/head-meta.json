@@ -1,0 +1,182 @@
+[
+ {
+  "route": "/vs/fr-vs-com",
+  "lang": "zh",
+  "status": 200,
+  "html_lang": "zh-CN",
+  "title": ".fr 和 .com 怎么选：法国本地信任与全球默认值的对比 | DomainHunter",
+  "canonical": "https://hunt.zalize.com/vs/fr-vs-com",
+  "hreflang": [
+   [
+    "zh",
+    "https://hunt.zalize.com/vs/fr-vs-com"
+   ],
+   [
+    "en",
+    "https://hunt.zalize.com/vs/fr-vs-com?lang=en"
+   ],
+   [
+    "x-default",
+    "https://hunt.zalize.com/vs/fr-vs-com"
+   ]
+  ],
+  "robots": null,
+  "og_locale": "zh_CN",
+  "ld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "ListItem",
+   "ListItem",
+   "Article",
+   "Organization",
+   "Organization",
+   "ImageObject",
+   "FAQPage",
+   "Question",
+   "Answer",
+   "Question"
+  ],
+  "dom_lang": "zh-CN",
+  "dom_title": ".fr 和 .com 怎么选：法国本地信任与全球默认值的对比 | DomainHunter",
+  "dom_canonical": "https://hunt.zalize.com/vs/fr-vs-com",
+  "dom_robots": null,
+  "dom_og_locale": "zh_CN",
+  "dom_hreflang_n": 3,
+  "dom_ld_n": 3
+ },
+ {
+  "route": "/vs/fr-vs-com",
+  "lang": "en",
+  "status": 200,
+  "html_lang": "en",
+  "title": ".fr vs .com: French Local Trust vs the Global Default | DomainHunter",
+  "canonical": "https://hunt.zalize.com/vs/fr-vs-com?lang=en",
+  "hreflang": [
+   [
+    "zh",
+    "https://hunt.zalize.com/vs/fr-vs-com"
+   ],
+   [
+    "en",
+    "https://hunt.zalize.com/vs/fr-vs-com?lang=en"
+   ],
+   [
+    "x-default",
+    "https://hunt.zalize.com/vs/fr-vs-com"
+   ]
+  ],
+  "robots": null,
+  "og_locale": "en_US",
+  "ld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "ListItem",
+   "ListItem",
+   "Article",
+   "Organization",
+   "Organization",
+   "ImageObject",
+   "FAQPage",
+   "Question",
+   "Answer",
+   "Question"
+  ],
+  "dom_lang": "en",
+  "dom_title": ".fr vs .com: French Local Trust vs the Global Default | DomainHunter",
+  "dom_canonical": "https://hunt.zalize.com/vs/fr-vs-com?lang=en",
+  "dom_robots": null,
+  "dom_og_locale": "en_US",
+  "dom_hreflang_n": 3,
+  "dom_ld_n": 3
+ },
+ {
+  "route": "/vs/au-vs-com",
+  "lang": "zh",
+  "status": 200,
+  "html_lang": "zh-CN",
+  "title": ".au 和 .com 怎么选：澳洲本地信任与全球默认值的对比 | DomainHunter",
+  "canonical": "https://hunt.zalize.com/vs/au-vs-com",
+  "hreflang": [
+   [
+    "zh",
+    "https://hunt.zalize.com/vs/au-vs-com"
+   ],
+   [
+    "en",
+    "https://hunt.zalize.com/vs/au-vs-com?lang=en"
+   ],
+   [
+    "x-default",
+    "https://hunt.zalize.com/vs/au-vs-com"
+   ]
+  ],
+  "robots": null,
+  "og_locale": "zh_CN",
+  "ld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "ListItem",
+   "ListItem",
+   "Article",
+   "Organization",
+   "Organization",
+   "ImageObject",
+   "FAQPage",
+   "Question",
+   "Answer",
+   "Question"
+  ],
+  "dom_lang": "zh-CN",
+  "dom_title": ".au 和 .com 怎么选：澳洲本地信任与全球默认值的对比 | DomainHunter",
+  "dom_canonical": "https://hunt.zalize.com/vs/au-vs-com",
+  "dom_robots": null,
+  "dom_og_locale": "zh_CN",
+  "dom_hreflang_n": 3,
+  "dom_ld_n": 3
+ },
+ {
+  "route": "/vs/au-vs-com",
+  "lang": "en",
+  "status": 200,
+  "html_lang": "en",
+  "title": ".au vs .com: Australian Local Trust vs the Global Default | DomainHunter",
+  "canonical": "https://hunt.zalize.com/vs/au-vs-com?lang=en",
+  "hreflang": [
+   [
+    "zh",
+    "https://hunt.zalize.com/vs/au-vs-com"
+   ],
+   [
+    "en",
+    "https://hunt.zalize.com/vs/au-vs-com?lang=en"
+   ],
+   [
+    "x-default",
+    "https://hunt.zalize.com/vs/au-vs-com"
+   ]
+  ],
+  "robots": null,
+  "og_locale": "en_US",
+  "ld_types": [
+   "BreadcrumbList",
+   "ListItem",
+   "ListItem",
+   "ListItem",
+   "Article",
+   "Organization",
+   "Organization",
+   "ImageObject",
+   "FAQPage",
+   "Question",
+   "Answer",
+   "Question"
+  ],
+  "dom_lang": "en",
+  "dom_title": ".au vs .com: Australian Local Trust vs the Global Default | DomainHunter",
+  "dom_canonical": "https://hunt.zalize.com/vs/au-vs-com?lang=en",
+  "dom_robots": null,
+  "dom_og_locale": "en_US",
+  "dom_hreflang_n": 3,
+  "dom_ld_n": 3
+ }
+]

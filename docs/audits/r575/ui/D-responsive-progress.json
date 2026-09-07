@@ -1,0 +1,34 @@
+{
+  "artificialDownloadBytesPerSecond": 200,
+  "states": [
+    {
+      "w": 375,
+      "lang": "en",
+      "text": "Checking 0/20"
+    },
+    {
+      "w": 375,
+      "lang": "zh",
+      "text": "核验中 0/20"
+    },
+    {
+      "w": 1280,
+      "lang": "zh",
+      "text": "核验中 0/20"
+    },
+    {
+      "w": 1280,
+      "lang": "en",
+      "text": "Checking 0/20"
+    }
+  ],
+  "requests": [
+    {
+      "time": 1788785294.8678174,
+      "method": "POST",
+      "url": "https://hunt.zalize.com/api/search",
+      "body": "{\"domains\":[\"google.com\",\"baidu.cn\",\"example.org\",\"wikipedia.org\",\"github.com\",\"r575-zz-probe-a1.com\",\"r575-zz-probe-a2.net\",\"r575-zz-probe-a3.org\",\"r575-zz-probe-a4.io\",\"r575-zz-probe-a5.co\",\"r575-zz-probe-a6.dev\",\"r575-zz-probe-a7.app\",\"r575-zz-probe-a8.ai\",\"r575-zz-probe-a9.cn\",\"r575-zz-probe-b1.com.cn\",\"r575-zz-probe-b2.xyz\",\"r575-zz-probe-b3.me\",\"r575-zz-probe-b4.info\",\"r575-zz-probe-b5.top\",\"r575-zz-probe-b6.cc\"]}"
+    }
+  ],
+  "final": "Done 20/20"
+}

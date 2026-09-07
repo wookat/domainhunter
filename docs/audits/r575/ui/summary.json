@@ -1,0 +1,35 @@
+{
+  "browserApiCounts": {
+    "GET /api/stats": 2,
+    "GET /api/prices": 10,
+    "GET /api/registrars": 14,
+    "POST /api/search": 4,
+    "POST /api/check?refresh=1": 1,
+    "POST /api/share": 1,
+    "DELETE /api/share/EZFiuxnOaK": 1,
+    "POST /api/monitor/list": 4,
+    "POST /api/monitor/webhook-test": 2,
+    "POST /api/monitor": 3,
+    "GET /api/monitor/changes": 2
+  },
+  "checkRequests": [
+    {
+      "time": 1788784903.7856977,
+      "method": "POST",
+      "url": "https://hunt.zalize.com/api/check?refresh=1",
+      "body": "{\"domains\":[\"chaxiang.com\"],\"refresh\":true}"
+    }
+  ],
+  "aiRequests": [],
+  "startedUTC": "2026-09-07T12:40:24.039507+00:00",
+  "lastBrowserApiUTC": "2026-09-07T12:50:20.899340+00:00",
+  "finalMonitorList": {
+    "entries": [],
+    "monitored": 2,
+    "limit": 500
+  },
+  "shareId": "EZFiuxnOaK",
+  "shareGetStatus": 410,
+  "secretScan": "no full receiver UUID outside protected owner-provided file",
+  "receiverRequestCount": 1
+}

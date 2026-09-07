@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-07T13:06:11.447Z",
+  "url": "https://hunt.zalize.com/monitors?lang=zh&cb=r574-followup",
+  "badge": "未配置",
+  "webhook": "",
+  "local": {
+    "domainhunter:shortlist": "[]"
+  },
+  "hasSnapshot": false,
+  "assets": [
+    "https://hunt.zalize.com/assets/index-FGNuJFLR.js",
+    "https://hunt.zalize.com/assets/index-Enl61yQp.css",
+    "https://hunt.zalize.com/assets/monitors-page-DNQoBewd.js",
+    "https://hunt.zalize.com/assets/domain-row-DNLN-WBF.js",
+    "https://hunt.zalize.com/assets/check-7ZY7ELz6.js",
+    "https://hunt.zalize.com/assets/prices-CGUr0JAu.js",
+    "https://hunt.zalize.com/assets/price-text-DR_mkUTK.js",
+    "https://hunt.zalize.com/assets/external-link-SIMaG9j3.js",
+    "https://hunt.zalize.com/assets/x-5hHDWEbI.js",
+    "https://hunt.zalize.com/assets/copy-DMh6bGIb.js",
+    "https://hunt.zalize.com/assets/input-CCK2sRHv.js",
+    "https://hunt.zalize.com/assets/pencil-DyoiKSNy.js",
+    "https://hunt.zalize.com/assets/trash-2-B_mh13-f.js"
+  ]
+}

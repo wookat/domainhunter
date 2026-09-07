@@ -1,0 +1,111 @@
+{
+  "utc": "2026-09-07T13:01:50.196Z",
+  "url": "https://hunt.zalize.com/?q=chaxiang&lang=zh&cb=r574-followup",
+  "lang": "zh-CN",
+  "innerWidth": 1280,
+  "docW": 1265,
+  "rows": [
+    {
+      "domain": "chaxiang.com",
+      "rowText": "chaxiang.com\n已注册\n2027-05-13 到期\n开监控\n重新核验",
+      "reason": null,
+      "rect": {
+        "x": 617.4375,
+        "y": 113.703125,
+        "width": 79,
+        "height": 28,
+        "top": 113.703125,
+        "right": 696.4375,
+        "bottom": 141.703125,
+        "left": 617.4375
+      },
+      "aria": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 644.4375,
+          "y": 119.703125,
+          "width": 44,
+          "height": 16,
+          "top": 119.703125,
+          "right": 688.4375,
+          "bottom": 135.703125,
+          "left": 644.4375
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "chaxiang.cn",
+      "rowText": "chaxiang.cn\n已注册\n2026-12-11 到期\n开监控\n重新核验",
+      "reason": null,
+      "rect": {
+        "x": 610.234375,
+        "y": 151.703125,
+        "width": 79,
+        "height": 28,
+        "top": 151.703125,
+        "right": 689.234375,
+        "bottom": 179.703125,
+        "left": 610.234375
+      },
+      "aria": "重新核验 chaxiang.cn（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 chaxiang.cn（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 637.234375,
+          "y": 157.703125,
+          "width": 44,
+          "height": 16,
+          "top": 157.703125,
+          "right": 681.234375,
+          "bottom": 173.703125,
+          "left": 637.234375
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "chaxiang.net",
+      "rowText": "chaxiang.net\n已注册\n2027-09-04 到期\n开监控\n重新核验",
+      "reason": null,
+      "rect": {
+        "x": 848.234375,
+        "y": 227.703125,
+        "width": 79,
+        "height": 28,
+        "top": 227.703125,
+        "right": 927.234375,
+        "bottom": 255.703125,
+        "left": 848.234375
+      },
+      "aria": "重新核验 chaxiang.net（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 chaxiang.net（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 875.234375,
+          "y": 233.703125,
+          "width": 44,
+          "height": 16,
+          "top": 233.703125,
+          "right": 919.234375,
+          "bottom": 249.703125,
+          "left": 875.234375
+        }
+      },
+      "expiry": null
+    }
+  ]
+}

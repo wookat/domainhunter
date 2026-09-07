@@ -1,0 +1,294 @@
+[
+  {
+    "utc": "2026-09-07T13:01:48.345998+00:00",
+    "url": "https://hunt.zalize.com/api/registrars",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "public, max-age=300",
+      "cf-ray": "a375e778ed928b10-PDX",
+      "content-length": "16",
+      "content-type": "application/json",
+      "date": "Mon, 07 Sep 2026 13:01:48 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=u7tNdXYFLPBKFjvb0RNsMN8Dq7ednOvC%2BatfW1x8DBsra22I2IjuNbuP7lEs6vegN0FK6MEUBva1dYm8mrgmdMU8VXapN7d5%2FHUfiDFKBe%2BFq5qDPmdjdDkcudqiuEGZW8Q%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "utc": "2026-09-07T13:01:48.454746+00:00",
+    "url": "https://hunt.zalize.com/api/prices",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "public, max-age=600",
+      "cf-ray": "a375e778ed918b10-PDX",
+      "content-encoding": "zstd",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Mon, 07 Sep 2026 13:01:48 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=9p2IyECUhSEUqdtP87zydOVAPpObYOw%2B6lOC0yfaciOFr7Z0UJhlWJvzAc0oe34A8RexTLeXAiKJVQzq4kAQg%2F3d27CCwy1ZbrSZD2IBQ2XV2X%2FQDUgQkaNhh8WLtADJQIk%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "utc": "2026-09-07T13:01:48.455197+00:00",
+    "url": "https://hunt.zalize.com/api/stats",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "public, max-age=60",
+      "cf-ray": "a375e778dd908b10-PDX",
+      "content-length": "22",
+      "content-type": "application/json",
+      "date": "Mon, 07 Sep 2026 13:01:48 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=E7FPROtIc1BBafYx2yXI%2BCfChhqadpRUt3Uv5cJbcOrRmYL6HFmORg6WoVGKjGlwaW6z36bvkgHLw3h8UyCXRq9Vf4eQWVA%2FWe7F0soeM1YXaXu8fL2n0dUkWU1EUUFoR5E%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "utc": "2026-09-07T13:01:48.350042+00:00",
+    "url": "https://hunt.zalize.com/api/search",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-ray": "a375e778ed938b10-PDX",
+      "content-type": "application/x-ndjson; charset=utf-8",
+      "date": "Mon, 07 Sep 2026 13:01:48 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=oRV8CLc%2B0q%2BfvtVZjEvFRlgLwhoQBH2I0auJ%2B%2Bx8189KksGsxZaq0lNfZz1TPPNt6YWauL7MSFE19IknesuoppGgpTWh%2BzNhfrISsWYwENwQ9eq3%2BIfVWf2S9wx2gBTDlMA%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    },
+    "body": "{\"domain\":\"chaxiang.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-05-13T18:26:54.000Z\",\"cached\":true}\n{\"domain\":\"chaxiang.cn\",\"status\":\"taken\",\"method\":\"whois\",\"expiresAt\":\"2026-12-11T16:06:44.000Z\",\"cached\":true}\n{\"domain\":\"chaxiang.io\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"chaxiang.ai\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"chaxiang.app\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"chaxiang.dev\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"chaxiang.co\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"chaxiang.net\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-09-04T18:36:19.000Z\",\"cached\":true}\n{\"domain\":\"chaxiang.me\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n"
+  },
+  {
+    "utc": "2026-09-07T13:02:15.625819+00:00",
+    "url": "https://hunt.zalize.com/api/registrars",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "public, max-age=300",
+      "cf-ray": "a375e823781b8b10-PDX",
+      "content-length": "16",
+      "content-type": "application/json",
+      "date": "Mon, 07 Sep 2026 13:02:15 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ZQrU4gnPg7Mv07YrNinSgjCaKQ3ArGA0pvwD%2F%2FejsvmgQJP4ip1Fkd5gFMroyxQ3Dar0U1sqp1f8f29HQMrXizS5OVgT3LJLa%2FhDc%2FMLHfvuIyTEclXN5dSA5zfhmRhpcs0%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "utc": "2026-09-07T13:02:15.636440+00:00",
+    "url": "https://hunt.zalize.com/api/prices",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "public, max-age=600",
+      "cf-ray": "a375e823881d8b10-PDX",
+      "content-encoding": "zstd",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Mon, 07 Sep 2026 13:02:15 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=qk7AMZKd0jG02bi%2Bb%2BYa1niwzQD1Mx%2FQ1xPfcv8Xr%2F7isRZ1d7yXju8ae7JDmGtn0lJBxR1lM4XOWZNsQmW3gVV9fa%2Fy8dC2%2B1QvY5HSbyQUJTM8EfKHvxkC6jK%2Fw9hF8wg%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "utc": "2026-09-07T13:02:22.062248+00:00",
+    "url": "https://hunt.zalize.com/api/csp-report",
+    "status": 204,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "no-store",
+      "cf-ray": "a375e84bc92a8b10-PDX",
+      "date": "Mon, 07 Sep 2026 13:02:22 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=4,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=NDV5p4it6gVkmXfV4aD%2FIN30qmGPhg1mghReL1NtmY1Sb3meFMHaCoUH8gB9cXPFeW4FiiJfQZPovVRRpd7Y6PJcl6Zg6k%2By9CAjyV8dmdN%2BSa5ujLoB1efWkffCv3VDeyg%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "utc": "2026-09-07T13:02:22.031599+00:00",
+    "url": "https://hunt.zalize.com/api/search",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-ray": "a375e84b89288b10-PDX",
+      "content-type": "application/x-ndjson; charset=utf-8",
+      "date": "Mon, 07 Sep 2026 13:02:22 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=uZ6J6J629QEmkDnZEOVMHQog79JRYSqRyHIt7fCTpEc5AVczNMrQTWobeb49yXQUIjrskojKmofENXXsHkAZoW1HWm94e27Yi3UoSR24DFKfrRwfigFbGStN%2BWkhi%2FYl9tQ%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    },
+    "body": "{\"domain\":\"chaxiang.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-05-13T18:26:54.000Z\",\"cached\":true}\n{\"domain\":\"nic.cn\",\"status\":\"taken\",\"method\":\"dns\",\"cached\":true}\n{\"domain\":\"google.de\",\"status\":\"taken\",\"method\":\"dns\",\"cached\":true}\n{\"domain\":\"google.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2028-09-14T04:00:00.000Z\",\"cached\":true}\n"
+  },
+  {
+    "utc": "2026-09-07T13:02:59.441933+00:00",
+    "url": "https://hunt.zalize.com/api/search",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-ray": "a375e9019d298b10-PDX",
+      "content-type": "application/x-ndjson; charset=utf-8",
+      "date": "Mon, 07 Sep 2026 13:02:51 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=rvd3c3OVZlz%2FaOlig6r9PHtatO%2B%2BIgmPPOWNyVcsvkgzLD1h%2F%2BZYveHLs1IsvfCct37wkNnk8VkiWAW580jN%2FU5TvkKOlg3ihVK99fzl2CbG%2BiHg5XnZdBH%2BXmeUEvFJUOE%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    },
+    "body": "{\"domain\":\"google.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2028-09-14T04:00:00.000Z\",\"cached\":true}\n{\"domain\":\"baidu.cn\",\"status\":\"taken\",\"method\":\"whois\",\"expiresAt\":\"2029-03-17T12:48:36.000Z\",\"cached\":true}\n{\"domain\":\"example.org\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-08-30T04:00:00.000Z\",\"cached\":true}\n{\"domain\":\"wikipedia.org\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-01-13T00:12:14.000Z\",\"cached\":true}\n{\"domain\":\"github.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2028-10-09T18:20:50.000Z\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a1.com\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a2.net\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a3.org\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a4.io\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a5.co\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a6.dev\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a7.app\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a9.cn\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b1.com.cn\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b2.xyz\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b3.me\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b5.top\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b6.cc\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a8.ai\",\"status\":\"available\",\"method\":\"rdap\"}\n{\"domain\":\"r575-zz-probe-b4.info\",\"status\":\"available\",\"method\":\"rdap\"}\n"
+  },
+  {
+    "utc": "2026-09-07T13:04:25.013838+00:00",
+    "url": "https://hunt.zalize.com/api/search",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-ray": "a375eb189fe0e22a-PDX",
+      "content-type": "application/x-ndjson; charset=utf-8",
+      "date": "Mon, 07 Sep 2026 13:04:16 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Q31zEC2jZGF%2Fec3q4%2BGDcd7ypC1g1z18hKl9%2B54BfSLKsIGSFd3NLqbN8SJZa6tFLHWKe046g9J%2BmHi4avmkhT3Q5%2FH4wktcXkrU%2FlsiPcJGcPPZIbE6dD7OH4iNe2zdXK4%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    },
+    "body": "{\"domain\":\"google.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2028-09-14T04:00:00.000Z\",\"cached\":true}\n{\"domain\":\"baidu.cn\",\"status\":\"taken\",\"method\":\"whois\",\"expiresAt\":\"2029-03-17T12:48:36.000Z\",\"cached\":true}\n{\"domain\":\"example.org\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-08-30T04:00:00.000Z\",\"cached\":true}\n{\"domain\":\"wikipedia.org\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-01-13T00:12:14.000Z\",\"cached\":true}\n{\"domain\":\"github.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2028-10-09T18:20:50.000Z\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a1.com\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a2.net\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a3.org\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a4.io\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a5.co\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a6.dev\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a7.app\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a8.ai\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a9.cn\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b1.com.cn\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b2.xyz\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b3.me\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b4.info\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b5.top\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b6.cc\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n"
+  },
+  {
+    "utc": "2026-09-07T13:04:33.855654+00:00",
+    "url": "https://hunt.zalize.com/api/csp-report",
+    "status": 204,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "no-store",
+      "cf-ray": "a375eb6a892de22a-PDX",
+      "date": "Mon, 07 Sep 2026 13:04:29 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=4,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Xfq3%2FD7LahYjf48F8fU8PZHQPqQ3v2tu3dCXvwB%2FnCCrskn9kB%2B9N17lwzJOYL6EIw7zlXjjfUEPehMRBawlPX%2Bi17ai5sa8hAjotzv1LrR79P3C5Rk%2F3aM0v5Xdo0whPXs%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "utc": "2026-09-07T13:05:02.566917+00:00",
+    "url": "https://hunt.zalize.com/api/registrars",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "public, max-age=300",
+      "cf-ray": "a375ec36db910055-PDX",
+      "content-length": "16",
+      "content-type": "application/json",
+      "date": "Mon, 07 Sep 2026 13:05:02 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=vQg7a7CYi1MntxH5FOpQFXmnllJV8BfYUjQn29ms4TYy0VweFEcA2G%2BJ%2B3fulDde%2FHwr7BBQawy3owd5nD93CtAm%2F339fZzVGyFpqBl9zya0M3EEc6aFI5dh9MoWFGoKRfA%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "utc": "2026-09-07T13:05:02.706815+00:00",
+    "url": "https://hunt.zalize.com/api/prices",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "public, max-age=600",
+      "cf-ray": "a375ec370b960055-PDX",
+      "content-encoding": "zstd",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Mon, 07 Sep 2026 13:05:02 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Dt5cH%2FijyZY9ibw6GmEDGOOB%2FVV452AC%2F5KZbuwT%2Bu7OtHYKGIpY9PY4d9niIUB37vSOaGMvMboGKwweKkBq9RL7fPc%2BmbV6VMIG0Cm4iLoWmav3HUeHlqAnWV%2BnTeiUgMo%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "utc": "2026-09-07T13:05:43.094985+00:00",
+    "url": "https://hunt.zalize.com/api/registrars",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "public, max-age=300",
+      "cf-ray": "a375ed342ccd3d49-PDX",
+      "content-length": "16",
+      "content-type": "application/json",
+      "date": "Mon, 07 Sep 2026 13:05:43 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=dPkZohietvCPeSwp27igQe6g3DjD1%2Fn5OfTcRIFztG4CwYP4t6Vwt2DZACKc87DMPZ4OzBmmW%2Fald%2FTgwfNaKImWQt5FV%2BvBqA5we0q%2B8H0Z7%2FAkefykyCP6IStU7cereHw%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  {
+    "utc": "2026-09-07T13:05:43.340243+00:00",
+    "url": "https://hunt.zalize.com/api/monitor/list",
+    "status": 200,
+    "headers": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-ray": "a375ed350cd03d49-PDX",
+      "content-length": "40",
+      "content-type": "application/json",
+      "date": "Mon, 07 Sep 2026 13:05:43 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "priority": "u=1,i",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xPTgCsSQarGexV%2B7HfvkT9%2F439ACKXh%2BfjykQBA3KfWlhECgizUcCHe42HLQWiSbIagSISABlfT2iguQ2LmInkeEjjleABubyO2q%2BzrNTBgPGMPtQ34UixWZUUtOY7evI4w%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfExtPri",
+      "x-content-type-options": "nosniff"
+    },
+    "body": "{\"entries\":[],\"monitored\":2,\"limit\":500}"
+  }
+]

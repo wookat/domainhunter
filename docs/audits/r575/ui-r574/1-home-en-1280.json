@@ -1,0 +1,111 @@
+{
+  "utc": "2026-09-07T13:01:51.329Z",
+  "url": "https://hunt.zalize.com/?q=chaxiang&lang=en&cb=r574-followup",
+  "lang": "en",
+  "innerWidth": 1280,
+  "docW": 1265,
+  "rows": [
+    {
+      "domain": "chaxiang.com",
+      "rowText": "chaxiang.com\nTaken\nexpires 2027-05-13\nMonitor\nRe-check",
+      "reason": null,
+      "rect": {
+        "x": 637.71875,
+        "y": -0.296875,
+        "width": 85.453125,
+        "height": 28,
+        "top": -0.296875,
+        "right": 723.171875,
+        "bottom": 27.703125,
+        "left": 637.71875
+      },
+      "aria": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 664.71875,
+          "y": 5.703125,
+          "width": 50.453125,
+          "height": 16,
+          "top": 5.703125,
+          "right": 715.171875,
+          "bottom": 21.703125,
+          "left": 664.71875
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "chaxiang.cn",
+      "rowText": "chaxiang.cn\nTaken\nexpires 2026-12-11\nMonitor\nRe-check",
+      "reason": null,
+      "rect": {
+        "x": 630.515625,
+        "y": 37.703125,
+        "width": 85.453125,
+        "height": 28,
+        "top": 37.703125,
+        "right": 715.96875,
+        "bottom": 65.703125,
+        "left": 630.515625
+      },
+      "aria": "Re-check chaxiang.cn (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check chaxiang.cn (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 657.515625,
+          "y": 43.703125,
+          "width": 50.453125,
+          "height": 16,
+          "top": 43.703125,
+          "right": 707.96875,
+          "bottom": 59.703125,
+          "left": 657.515625
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "chaxiang.net",
+      "rowText": "chaxiang.net\nTaken\nexpires 2027-09-04\nMonitor\nRe-check",
+      "reason": null,
+      "rect": {
+        "x": 637.71875,
+        "y": 151.703125,
+        "width": 85.453125,
+        "height": 28,
+        "top": 151.703125,
+        "right": 723.171875,
+        "bottom": 179.703125,
+        "left": 637.71875
+      },
+      "aria": "Re-check chaxiang.net (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check chaxiang.net (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 664.71875,
+          "y": 157.703125,
+          "width": 50.453125,
+          "height": 16,
+          "top": 157.703125,
+          "right": 715.171875,
+          "bottom": 173.703125,
+          "left": 664.71875
+        }
+      },
+      "expiry": null
+    }
+  ]
+}

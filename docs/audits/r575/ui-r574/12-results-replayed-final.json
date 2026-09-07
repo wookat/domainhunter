@@ -1,0 +1,173 @@
+{
+  "utc": "2026-09-07T13:05:14.980Z",
+  "url": "https://hunt.zalize.com/?lang=en&cb=r574-replayed",
+  "lang": "en",
+  "innerWidth": 375,
+  "docW": 375,
+  "rows": [
+    {
+      "domain": "chaxiang.com",
+      "rowText": "—\nchaxiang.com\nTaken\nexpires 2027-05-13",
+      "reason": null,
+      "rect": {
+        "x": 262.1875,
+        "y": 383,
+        "width": 30,
+        "height": 44,
+        "top": 383,
+        "right": 292.1875,
+        "bottom": 427,
+        "left": 262.1875
+      },
+      "aria": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check chaxiang.com (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "nic.cn",
+      "rowText": "—\nnic.cn\nTaken\nexpiry pending",
+      "reason": null,
+      "rect": {
+        "x": 262.1875,
+        "y": 431.5,
+        "width": 30,
+        "height": 44,
+        "top": 431.5,
+        "right": 292.1875,
+        "bottom": 475.5,
+        "left": 262.1875
+      },
+      "aria": "Re-check nic.cn (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check nic.cn (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "expiry": {
+        "text": "expiry pending",
+        "title": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
+        "display": "block",
+        "rect": {
+          "x": 208.1875,
+          "y": 446,
+          "width": 0,
+          "height": 15,
+          "top": 446,
+          "right": 208.1875,
+          "bottom": 461,
+          "left": 208.1875
+        }
+      }
+    },
+    {
+      "domain": "google.de",
+      "rowText": "—\ngoogle.de\nTaken\nexpiry pending",
+      "reason": null,
+      "rect": {
+        "x": 262.1875,
+        "y": 479.5,
+        "width": 30,
+        "height": 44,
+        "top": 479.5,
+        "right": 292.1875,
+        "bottom": 523.5,
+        "left": 262.1875
+      },
+      "aria": "Re-check google.de (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check google.de (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "expiry": {
+        "text": "expiry pending",
+        "title": "Only the DNS result came back this time — the registry RDAP did not return an expiry date; use “Re-check” on the right to bypass the cache",
+        "display": "block",
+        "rect": {
+          "x": 208.1875,
+          "y": 494,
+          "width": 0,
+          "height": 15,
+          "top": 494,
+          "right": 208.1875,
+          "bottom": 509,
+          "left": 208.1875
+        }
+      }
+    },
+    {
+      "domain": "google.com",
+      "rowText": "—\ngoogle.com\nTaken\nexpires 2028-09-14",
+      "reason": null,
+      "rect": {
+        "x": 262.1875,
+        "y": 527.5,
+        "width": 30,
+        "height": 44,
+        "top": 527.5,
+        "right": 292.1875,
+        "bottom": 571.5,
+        "left": 262.1875
+      },
+      "aria": "Re-check google.com (bypasses cache, queries the registry, no AI call)",
+      "title": "Re-check google.com (bypasses cache, queries the registry, no AI call)",
+      "icon": true,
+      "label": {
+        "text": "Re-check",
+        "class": "hidden sm:inline",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "expiry": null
+    }
+  ]
+}

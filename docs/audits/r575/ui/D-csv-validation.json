@@ -1,0 +1,24 @@
+{
+  "headers": [
+    "domain",
+    "status",
+    "meaning",
+    "theme",
+    "score",
+    "length",
+    "readability",
+    "relevance",
+    "brandability",
+    "first_year_price",
+    "price_first_year_cny",
+    "price_renew_cny",
+    "price_first_year_usd",
+    "price_renew_usd",
+    "price_source",
+    "expires_at"
+  ],
+  "rowCount": 20,
+  "nonEmptyNumericCells": 48,
+  "badNumericCells": [],
+  "legacyPresent": true
+}

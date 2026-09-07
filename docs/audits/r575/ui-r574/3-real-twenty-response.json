@@ -1,0 +1,19 @@
+{
+  "utc": "2026-09-07T13:04:25.013838+00:00",
+  "url": "https://hunt.zalize.com/api/search",
+  "status": 200,
+  "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-ray": "a375eb189fe0e22a-PDX",
+    "content-type": "application/x-ndjson; charset=utf-8",
+    "date": "Mon, 07 Sep 2026 13:04:16 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "priority": "u=1,i",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Q31zEC2jZGF%2Fec3q4%2BGDcd7ypC1g1z18hKl9%2B54BfSLKsIGSFd3NLqbN8SJZa6tFLHWKe046g9J%2BmHi4avmkhT3Q5%2FH4wktcXkrU%2FlsiPcJGcPPZIbE6dD7OH4iNe2zdXK4%3D\"}]}",
+    "server": "cloudflare",
+    "server-timing": "cfExtPri",
+    "x-content-type-options": "nosniff"
+  },
+  "body": "{\"domain\":\"google.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2028-09-14T04:00:00.000Z\",\"cached\":true}\n{\"domain\":\"baidu.cn\",\"status\":\"taken\",\"method\":\"whois\",\"expiresAt\":\"2029-03-17T12:48:36.000Z\",\"cached\":true}\n{\"domain\":\"example.org\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-08-30T04:00:00.000Z\",\"cached\":true}\n{\"domain\":\"wikipedia.org\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2027-01-13T00:12:14.000Z\",\"cached\":true}\n{\"domain\":\"github.com\",\"status\":\"taken\",\"method\":\"rdap\",\"expiresAt\":\"2028-10-09T18:20:50.000Z\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a1.com\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a2.net\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a3.org\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a4.io\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a5.co\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a6.dev\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a7.app\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a8.ai\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-a9.cn\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b1.com.cn\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b2.xyz\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b3.me\",\"status\":\"available\",\"method\":\"whois\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b4.info\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b5.top\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n{\"domain\":\"r575-zz-probe-b6.cc\",\"status\":\"available\",\"method\":\"rdap\",\"cached\":true}\n"
+}

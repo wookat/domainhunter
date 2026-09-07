@@ -1,0 +1,173 @@
+{
+  "utc": "2026-09-07T13:05:13.020Z",
+  "url": "https://hunt.zalize.com/?lang=zh&cb=r574-replayed",
+  "lang": "zh-CN",
+  "innerWidth": 1280,
+  "docW": 1265,
+  "rows": [
+    {
+      "domain": "chaxiang.com",
+      "rowText": "—\nchaxiang.com\n已注册\n2027-05-13 到期\n开监控\n重新核验",
+      "reason": null,
+      "rect": {
+        "x": 495.515625,
+        "y": 340.5,
+        "width": 78,
+        "height": 32,
+        "top": 340.5,
+        "right": 573.515625,
+        "bottom": 372.5,
+        "left": 495.515625
+      },
+      "aria": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 chaxiang.com（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 521.515625,
+          "y": 348.25,
+          "width": 44,
+          "height": 16.5,
+          "top": 348.25,
+          "right": 565.515625,
+          "bottom": 364.75,
+          "left": 521.515625
+        }
+      },
+      "expiry": null
+    },
+    {
+      "domain": "nic.cn",
+      "rowText": "—\nnic.cn\n已注册\n到期日待查\n开监控\n重新核验",
+      "reason": null,
+      "rect": {
+        "x": 415.5,
+        "y": 389,
+        "width": 78,
+        "height": 32,
+        "top": 389,
+        "right": 493.5,
+        "bottom": 421,
+        "left": 415.5
+      },
+      "aria": "重新核验 nic.cn（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 nic.cn（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 441.5,
+          "y": 396.75,
+          "width": 44,
+          "height": 16.5,
+          "top": 396.75,
+          "right": 485.5,
+          "bottom": 413.25,
+          "left": 441.5
+        }
+      },
+      "expiry": {
+        "text": "到期日待查",
+        "title": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
+        "display": "block",
+        "rect": {
+          "x": 274.5,
+          "y": 397.5,
+          "width": 50,
+          "height": 15,
+          "top": 397.5,
+          "right": 324.5,
+          "bottom": 412.5,
+          "left": 274.5
+        }
+      }
+    },
+    {
+      "domain": "google.de",
+      "rowText": "—\ngoogle.de\n已注册\n到期日待查\n开监控\n重新核验",
+      "reason": null,
+      "rect": {
+        "x": 432.515625,
+        "y": 437,
+        "width": 78,
+        "height": 32,
+        "top": 437,
+        "right": 510.515625,
+        "bottom": 469,
+        "left": 432.515625
+      },
+      "aria": "重新核验 google.de（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 google.de（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 458.515625,
+          "y": 444.75,
+          "width": 44,
+          "height": 16.5,
+          "top": 444.75,
+          "right": 502.515625,
+          "bottom": 461.25,
+          "left": 458.515625
+        }
+      },
+      "expiry": {
+        "text": "到期日待查",
+        "title": "本次只拿到 DNS 占用结果，注册局 RDAP 未返回到期日；点右侧「重新核验」穿透缓存重查",
+        "display": "block",
+        "rect": {
+          "x": 291.515625,
+          "y": 445.5,
+          "width": 50,
+          "height": 15,
+          "top": 445.5,
+          "right": 341.515625,
+          "bottom": 460.5,
+          "left": 291.515625
+        }
+      }
+    },
+    {
+      "domain": "google.com",
+      "rowText": "—\ngoogle.com\n已注册\n2028-09-14 到期\n开监控\n重新核验",
+      "reason": null,
+      "rect": {
+        "x": 477.515625,
+        "y": 485,
+        "width": 78,
+        "height": 32,
+        "top": 485,
+        "right": 555.515625,
+        "bottom": 517,
+        "left": 477.515625
+      },
+      "aria": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）",
+      "title": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）",
+      "icon": true,
+      "label": {
+        "text": "重新核验",
+        "class": "hidden sm:inline",
+        "display": "block",
+        "rect": {
+          "x": 503.515625,
+          "y": 492.75,
+          "width": 44,
+          "height": 16.5,
+          "top": 492.75,
+          "right": 547.515625,
+          "bottom": 509.25,
+          "left": 503.515625
+        }
+      },
+      "expiry": null
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+[
+  {
+    "domain": "google.com",
+    "aria": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）",
+    "text": "—\ngoogle.com\n已注册\n2028-09-14 到期\n开监控",
+    "buttons": [
+      {
+        "text": "开监控",
+        "title": "开启监控：每 6 小时自动复查，释放可注册时通知你",
+        "aria": "开启监控：每 6 小时自动复查，释放可注册时通知你"
+      },
+      {
+        "text": "",
+        "title": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）",
+        "aria": "重新核验 google.com（穿透缓存直查注册局，不调用 AI）"
+      },
+      {
+        "text": "",
+        "title": "收藏到候选清单",
+        "aria": "收藏到候选清单"
+      }
+    ],
+    "links": []
+  },
+  {
+    "domain": "baidu.cn",
+    "aria": "重新核验 baidu.cn（穿透缓存直查注册局，不调用 AI）",
+    "text": "—\nbaidu.cn\n已注册\n2029-03-17 到期\n开监控",
+    "buttons": [
+      {
+        "text": "开监控",
+        "title": "开启监控：每 6 小时自动复查，释放可注册时通知你",
+        "aria": "开启监控：每 6 小时自动复查，释放可注册时通知你"
+      },
+      {
+        "text": "",
+        "title": "重新核验 baidu.cn（穿透缓存直查注册局，不调用 AI）",
+        "aria": "重新核验 baidu.cn（穿透缓存直查注册局，不调用 AI）"
+      },
+      {
+        "text": "",
+        "title": "收藏到候选清单",
+        "aria": "收藏到候选清单"
+      }
+    ],
+    "links": []
+  },
+  {
+    "domain": "example.org",
+    "aria": "重新核验 example.org（穿透缓存直查注册局，不调用 AI）",
+    "text": "—\nexample.org\n已注册\n2027-08-30 到期\n开监控",
+    "buttons": [
+      {
+        "text": "开监控",
+        "title": "开启监控：每 6 小时自动复查，释放可注册时通知你",
+        "aria": "开启监控：每 6 小时自动复查，释放可注册时通知你"
+      },
+      {
+        "text": "",
+        "title": "重新核验 example.org（穿透缓存直查注册局，不调用 AI）",
+        "aria": "重新核验 example.org（穿透缓存直查注册局，不调用 AI）"
+      },
+      {
+        "text": "",
+        "title": "收藏到候选清单",
+        "aria": "收藏到候选清单"
+      }
+    ],
+    "links": []
+  },
+  {
+    "domain": "github.com",
+    "aria": "重新核验 github.com（穿透缓存直查注册局，不调用 AI）",
+    "text": "—\ngithub.com\n已注册\n2028-10-09 到期\n开监控",
+    "buttons": [
+      {
+        "text": "开监控",
+        "title": "开启监控：每 6 小时自动复查，释放可注册时通知你",
+        "aria": "开启监控：每 6 小时自动复查，释放可注册时通知你"
+      },
+      {
+        "text": "",
+        "title": "重新核验 github.com（穿透缓存直查注册局，不调用 AI）",
+        "aria": "重新核验 github.com（穿透缓存直查注册局，不调用 AI）"
+      },
+      {
+        "text": "",
+        "title": "收藏到候选清单",
+        "aria": "收藏到候选清单"
+      }
+    ],
+    "links": []
+  },
+  {
+    "domain": "wikipedia.org",
+    "aria": "重新核验 wikipedia.org（穿透缓存直查注册局，不调用 AI）",
+    "text": "—\nwikipedia.org\n已注册\n2027-01-13 到期\n开监控",
+    "buttons": [
+      {
+        "text": "开监控",
+        "title": "开启监控：每 6 小时自动复查，释放可注册时通知你",
+        "aria": "开启监控：每 6 小时自动复查，释放可注册时通知你"
+      },
+      {
+        "text": "",
+        "title": "重新核验 wikipedia.org（穿透缓存直查注册局，不调用 AI）",
+        "aria": "重新核验 wikipedia.org（穿透缓存直查注册局，不调用 AI）"
+      },
+      {
+        "text": "",
+        "title": "收藏到候选清单",
+        "aria": "收藏到候选清单"
+      }
+    ],
+    "links": []
+  },
+  {
+    "domain": "r575-zz-probe-a8.ai",
+    "aria": "重新核验 r575-zz-probe-a8.ai（穿透缓存直查注册局，不调用 AI）",
+    "text": "—\nR\nr575-zz-probe-a8.ai\n未知\n注册局限流，稍后重试\n重新核验",
+    "buttons": [
+      {
+        "text": "R",
+        "title": "展开品牌预览与评分",
+        "aria": "展开品牌预览与评分: r575-zz-probe-a8"
+      },
+      {
+        "text": "",
+        "title": "复制",
+        "aria": null
+      },
+      {
+        "text": "",
+        "title": "收藏到候选清单",
+        "aria": null
+      },
+      {
+        "text": "重新核验",
+        "title": "重新核验 r575-zz-probe-a8.ai（穿透缓存直查注册局，不调用 AI）",
+        "aria": "重新核验 r575-zz-probe-a8.ai（穿透缓存直查注册局，不调用 AI）"
+      }
+    ],
+    "links": []
+  },
+  {
+    "domain": "r575-zz-probe-b4.info",
+    "aria": "重新核验 r575-zz-probe-b4.info（穿透缓存直查注册局，不调用 AI）",
+    "text": "—\nR\nr575-zz-probe-b4.info\n未知\n注册局限流，稍后重试\n重新核验",
+    "buttons": [
+      {
+        "text": "R",
+        "title": "展开品牌预览与评分",
+        "aria": "展开品牌预览与评分: r575-zz-probe-b4"
+      },
+      {
+        "text": "",
+        "title": "复制",
+        "aria": null
+      },
+      {
+        "text": "",
+        "title": "收藏到候选清单",
+        "aria": null
+      },
+      {
+        "text": "重新核验",
+        "title": "重新核验 r575-zz-probe-b4.info（穿透缓存直查注册局，不调用 AI）",
+        "aria": "重新核验 r575-zz-probe-b4.info（穿透缓存直查注册局，不调用 AI）"
+      }
+    ],
+    "links": []
+  }
+]
